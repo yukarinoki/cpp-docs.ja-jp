@@ -1,5 +1,5 @@
 ---
-title: C++ (DllImport 属性) で明示的な PInvoke を使用して |Microsoft ドキュメント
+title: C++ (DllImport 属性) で明示的な PInvoke を使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 82215e4815d25dd116cf930be9cc0f40da761bf8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bbaaee5845124dda45b4fe11ff44033e8c6a9f17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33169505"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444269"
 ---
 # <a name="using-explicit-pinvoke-in-c-dllimport-attribute"></a>C++ での明示的な PInvoke (DllImport 属性) の使用方法 
-.NET Framework では、明示的なプラットフォーム呼び出し (PInvoke) 機能に、マネージ アプリケーションが DLL 内部にパッケージ化されているアンマネージ関数を呼び出すことができるようにする `Dllimport` 属性を備えています。 明示的な PInvoke は、アンマネージ API が DLL としてパッケージ化され、ソース コードが利用できない場合に必要です。 たとえば、Win32 関数の呼び出しには、PInvoke が必要です。 それ以外の場合、暗黙的な P を使用して {Invoke; 参照してください[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)詳細についてはします。  
-  
- PInvoke を機能させるには、<xref:System.Runtime.InteropServices.DllImportAttribute> を使用します。 この属性は、その最初の引数として DLL 名を使用し、使用する各 DLL エントリ ポイントの関数宣言の前に置かれます。 関数のシグネチャは、DLL によってエクスポートされた関数名に一致する必要があります (ただし、型変換によっては、マネージ型を使用して `DllImport` 宣言を定義することで、暗黙的に実行できるものもあります)。  
-  
- その結果、これは、必要な遷移コード (または、サンク) と単純データ変換を含む各ネイティブ DLL 関数のマネージ エントリ ポイントになります。 その後、マネージ関数は、これらのエントリ ポイントを介して DLL を呼び出します。 PInvoke の結果として、モジュールに挿入されたコードは完全に管理します。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
-  
--   [マネージ コードからのネイティブ関数の呼び出し](../dotnet/calling-native-functions-from-managed-code.md)  
-  
--   [方法: PInvoke を使用してマネージ コードからネイティブ DLL を呼び出す](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)  
-  
--   [方法: PInvoke を使用して文字列をマーシャリングする](../dotnet/how-to-marshal-strings-using-pinvoke.md)  
-  
--   [方法: PInvoke を使用して構造体をマーシャリングする](../dotnet/how-to-marshal-structures-using-pinvoke.md)  
-  
--   [方法: PInvoke を使用して配列をマーシャリングする](../dotnet/how-to-marshal-arrays-using-pinvoke.md)  
-  
--   [方法: PInvoke を使用して関数ポインターをマーシャリングする](../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)  
-  
--   [方法: PInvoke を使用して埋め込みポインターをマーシャリングする](../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md)  
-  
-## <a name="see-also"></a>関連項目  
- [マネージ コードからのネイティブ関数の呼び出し](../dotnet/calling-native-functions-from-managed-code.md)
+
+.NET Framework では、明示的なプラットフォーム呼び出し (PInvoke) 機能に、マネージド アプリケーションが DLL 内部にパッケージ化されているアンマネージド 関数を呼び出すことができるようにする `Dllimport` 属性を備えています。 明示的な PInvoke は、アンマネージ API が DLL としてパッケージ化され、ソース コードが利用できない場合に必要です。 たとえば、Win32 関数の呼び出しには、PInvoke が必要です。 それ以外の場合、使用して、暗黙の P {Invoke; を参照してください[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)詳細については。
+
+PInvoke を機能させるには、<xref:System.Runtime.InteropServices.DllImportAttribute> を使用します。 この属性は、その最初の引数として DLL 名を使用し、使用する各 DLL エントリ ポイントの関数宣言の前に置かれます。 関数のシグネチャは、DLL によってエクスポートされた関数名に一致する必要があります (ただし、型変換によっては、マネージド型を使用して `DllImport` 宣言を定義することで、暗黙的に実行できるものもあります)。
+
+その結果、これは、必要な遷移コード (または、サンク) と単純データ変換を含む各ネイティブ DLL 関数のマネージド エントリ ポイントになります。 その後、マネージド関数は、これらのエントリ ポイントを介して DLL を呼び出します。 PInvoke の結果として、モジュールに挿入されたコードが完全に管理されます。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+- [マネージド コードからのネイティブ関数の呼び出し](../dotnet/calling-native-functions-from-managed-code.md)
+
+- [方法: PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)
+
+- [方法: PInvoke を使用して文字列をマーシャリングする](../dotnet/how-to-marshal-strings-using-pinvoke.md)
+
+- [方法: PInvoke を使用して構造体をマーシャリングする](../dotnet/how-to-marshal-structures-using-pinvoke.md)
+
+- [方法: PInvoke を使用して配列をマーシャリングする](../dotnet/how-to-marshal-arrays-using-pinvoke.md)
+
+- [方法: PInvoke を使用して関数ポインターをマーシャリングする](../dotnet/how-to-marshal-function-pointers-using-pinvoke.md)
+
+- [方法: PInvoke を使用して埋め込みポインターをマーシャリングする](../dotnet/how-to-marshal-embedded-pointers-using-pinvoke.md)
+
+## <a name="see-also"></a>関連項目
+
+[マネージド コードからのネイティブ関数の呼び出し](../dotnet/calling-native-functions-from-managed-code.md)

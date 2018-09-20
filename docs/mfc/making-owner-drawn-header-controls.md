@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca5545f7ebf828a04321db999d74aaa0d8a42187
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 899d51cf20d911d5ef0e46400330a59865cdd9af
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43214734"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435078"
 ---
 # <a name="making-owner-drawn-header-controls"></a>オーナー描画ヘッダー コントロールの作成
-ヘッダー コントロールの個々 の項目を定義することができます ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) オーナー描画項目にします。 詳細については、次を参照してください。[ヘッダー コントロールのオーナー](/windows/desktop/Controls/header-controls) Windows SDK に含まれています。  
-  
-## <a name="see-also"></a>関連項目  
- [Cheaderctrl の使い方](../mfc/using-cheaderctrl.md)   
- [コントロール](../mfc/controls-mfc.md)
+
+ヘッダー コントロールの個々 の項目を定義することができます ([CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)) オーナー描画項目にします。 詳細については、次を参照してください。[ヘッダー コントロールのオーナー](/windows/desktop/Controls/header-controls) Windows SDK に含まれています。
+
+## <a name="see-also"></a>関連項目
+
+[CHeaderCtrl の使い方](../mfc/using-cheaderctrl.md)<br/>
+[コントロール](../mfc/controls-mfc.md)
 

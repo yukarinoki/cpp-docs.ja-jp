@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa06eaf8f16a80b849ce911468fc0001366b9e29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3f4517125121c0129da028437bc7ce367f9f96b2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725466"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373923"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (強制インクルード ファイルの名前の指定)
 
@@ -59,7 +59,7 @@ ms.locfileid: "45725466"
 
 ## <a name="see-also"></a>関連項目
 
-[出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)
+[出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)<br/>
 [コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
 [パス名の指定](../../build/reference/specifying-the-pathname.md)

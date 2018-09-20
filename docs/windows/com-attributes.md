@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e18f64d48b357ed691f42fc900f68c8e8054776
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 71ff4e3fdb80b48e306e543bdb683c3dd2b26ec3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317252"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443333"
 ---
 # <a name="com-attributes"></a>COM 属性
 COM 属性は、COM の開発と .NET Framework 共通言語ランタイムによる開発のさまざまな領域をサポートするためにコードを挿入します。 領域はこれらカスタム インターフェイスの実装と既存のインターフェイスのサポートからストック プロパティ、メソッド、およびイベントをサポートする範囲。 さらに、複合デバイスと ActiveX コントロールの実装のサポートを確認できます。
@@ -44,4 +44,5 @@ COM 属性は、COM の開発と .NET Framework 共通言語ランタイムに�
 |[vi_progid](../windows/vi-progid.md)|コントロールのバージョンに依存しないプログラム Id を定義します。|
   
 ## <a name="see-also"></a>関連項目
- [グループ別の属性](../windows/attributes-by-group.md)
+
+[グループ別の属性](../windows/attributes-by-group.md)

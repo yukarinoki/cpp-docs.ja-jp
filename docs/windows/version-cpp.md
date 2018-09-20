@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87186ee70b5863f51a7cd91f8695052f361bd11c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 60a5ad42f83d9e9528fd5bdc4c8d3e62254a3677
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222533"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438737"
 ---
 # <a name="version-c"></a>version (C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "43222533"
 
 ### <a name="parameters"></a>パラメーター
 
-*version*  
+*version*<br/>
 バージョン番号、`coclass`します。 指定しない場合、1.0 は .idl ファイルに配置されます。
 
 ## <a name="remarks"></a>Remarks
@@ -65,5 +65,5 @@ ms.locfileid: "43222533"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ属性](../windows/compiler-attributes.md)  
+[コンパイラ属性](../windows/compiler-attributes.md)<br/>
 [クラス属性](../windows/class-attributes.md)  

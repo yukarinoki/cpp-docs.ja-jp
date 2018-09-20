@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5a73d5bb3ef67469ad1cc12b2a2c2757cf1ce137
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a2e61616ae6a481925bdb8b9b135f0a6a9fdfff7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712838"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407947"
 ---
 # <a name="ctabbedpane-class"></a>CTabbedPane クラス
 
@@ -183,9 +183,9 @@ virtual BOOL DetachPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*  
+[in]*pBar*
 
-[in]*bHide*  
+[in]*bHide*
 
 ### <a name="return-value"></a>戻り値
 
@@ -225,9 +225,9 @@ virtual BOOL FloatTab(
 ### <a name="parameters"></a>パラメーター
 
 *pBar*<br/>
-[in][in]*nTabID*  
+[in][in]*nTabID*
 *dockMethod*<br/>
-[in][in]*bHide*  
+[in][in]*bHide*
 
 ### <a name="return-value"></a>戻り値
 
@@ -308,6 +308,7 @@ AFX_IMPORT_DATA static BOOL m_bTabsAlwaysTop;
 既定値は FALSE です。
 
 ##  <a name="m_ptabwndrtc"></a>  CTabbedPane::m_pTabWndRTC
+
 カスタムの `CMFCTabCtrl` から派生したオブジェクトに関するランタイム クラス情報。
 
 ```
@@ -351,8 +352,8 @@ static void SetTabAutoColors(const CArray<COLORREF, COLORREF>& arColors);
 
 ## <a name="see-also"></a>関連項目
 
-[階層図](../../mfc/hierarchy-chart.md)  
-[クラス](../../mfc/reference/mfc-classes.md)  
-[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)  
-[CBaseTabbedPane クラス](../../mfc/reference/cbasetabbedpane-class.md)  
-[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)  
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[クラス](../../mfc/reference/mfc-classes.md)<br/>
+[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)<br/>
+[CBaseTabbedPane クラス](../../mfc/reference/cbasetabbedpane-class.md)<br/>
+[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)

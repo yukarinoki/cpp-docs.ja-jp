@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: abf78644f7cad90d25d365f6237407aeaeb6917b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 78daa0ad22ad3bb6a63900d4c2f69d5eafb5cb6b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42575704"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372124"
 ---
 # <a name="comptrrefoperator-operator"></a>ComPtrRef::operator== 演算子
 
@@ -57,10 +57,10 @@ bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*a*  
+*a*<br/>
 参照を**ComPtrRef**オブジェクト。
 
-*b*  
+*b*<br/>
 別の参照**ComPtrRef**オブジェクト、または匿名型へのポインター (`void*`)。
 
 ## <a name="return-value"></a>戻り値
@@ -83,5 +83,5 @@ bool operator==(
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)  
+[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)<br/>
 [ComPtrRef クラス](../windows/comptrref-class.md)

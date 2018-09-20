@@ -1,5 +1,5 @@
 ---
-title: 'TN016: MFC での C++ の多重継承の使用 |Microsoft ドキュメント'
+title: 'TN016: MFC での C++ の多重継承の使用 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,34 +18,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 059e239f549f8da79207e5ff6a485643252d6d6b
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 4c0ed5c1bc73f58bec1f9ad0d6a790fe3d3c0239
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37123358"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444686"
 ---
 # <a name="tn016-using-c-multiple-inheritance-with-mfc"></a>テクニカル ノート 16: MFC における C++ の多重継承
 
-ここでは、Microsoft Foundation Classes で複数継承 (MI) を使用する方法について説明します。 多重継承の使用は、MFC で必要はありません。 MI は、すべての MFC クラスでは使用されませんし、クラス ライブラリを作成する必要はありません。
+ここでは、Microsoft Foundation Classes を多重継承 (MI) を使用する方法について説明します。 多重継承の使用は、MFC では必要ありません。 MI は、すべての MFC クラスで使用されていないと、クラス ライブラリを作成する必要はありません。
 
-次のサブトピックでは、MI が使用する一般的な MFC の表現方法と同様の多重継承の制限事項のいくつか取り上げますに与える影響について説明します。 これらの制限の一部は、C++ の一般的な制限です。 MFC アーキテクチャによって他のユーザーが適用されます。
+次のサブトピックでは、MI が一般的な MFC の表現方法だけでなく MI の制限のいくつかの使用に与える影響について説明します。 これらの制限の一部は C++ の一般的な制限です。 他のユーザーは、MFC アーキテクチャによって課されます。
 
-このテクニカル ノートの最後には、多重継承を使用する完全な MFC アプリケーションを紹介します。
+このテクニカル ノートの最後には、多重継承を使用する完全な MFC アプリケーションが表示されます。
 
 ## <a name="cruntimeclass"></a>CRuntimeClass
 
-永続性と MFC の使用の動的なオブジェクトの作成のメカニズム、 [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)クラスを一意に識別するデータ構造です。 MFC は、これらの構造体のいずれかが、アプリケーションの各動的やシリアル化可能なクラスに関連付けます。 これらの構造体は、特別な種類の静的オブジェクトを使用して、アプリケーションの起動時に初期化されます`AFX_CLASSINIT`です。
+永続化と MFC の使用の動的オブジェクトの作成メカニズム、 [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)クラスを一意に識別するデータ構造体。 MFC は、これらの構造体のいずれかが、アプリケーションの各動的やシリアル化可能なクラスに関連付けます。 型の場合は、特別な静的オブジェクトを使用して、アプリケーションの起動時にこれらの構造体が初期化される`AFX_CLASSINIT`します。
 
-現在の実装`CRuntimeClass`MI ランタイム型情報をサポートしていません。 これは、ないわけでは、MFC アプリケーションで多重継承を使用することはできません。 ただし、1 つ以上の基本クラスを持つオブジェクトを操作するときに、いくつかの注意があります。
+現在の実装`CRuntimeClass`MI ランタイム型情報をサポートしていません。 これは、MFC アプリケーションで多重継承を使うことはできませんという意味ではありません。 ただし、1 つ以上の基底クラスのオブジェクトを使用する場合は、特定の責任があります。
 
-[使うため](../mfc/reference/cobject-class.md#iskindof)メソッドは正しく型を決定できませんオブジェクトの複数の基底クラスがある場合。 したがって、使用することはできません[CObject](../mfc/reference/cobject-class.md)仮想基底クラス、およびすべての呼び出しとして`CObject`などのメンバー関数[cobject::serialize](../mfc/reference/cobject-class.md#serialize)と[CObject::operator 新しい](../mfc/reference/cobject-class.md#operator_new)その C++ は、適切な関数呼び出しを区別できますので、スコープ修飾子があります。 プログラムでは、MFC 内で多重継承を使用する場合、クラスを格納している、`CObject`基底クラスが基底クラスの一覧で、左端のクラスをする必要があります。
+[使うため](../mfc/reference/cobject-class.md#iskindof)メソッドは正確に判定オブジェクトの型が複数の基底クラス。 そのため、使用することはできません[CObject](../mfc/reference/cobject-class.md)仮想基底クラス、およびすべての呼び出しとして`CObject`などの関数メンバー [cobject::serialize](../mfc/reference/cobject-class.md#serialize)と[CObject::operator 新しい](../mfc/reference/cobject-class.md#operator_new)その C++ は、適切な関数呼び出しを区別できますので、スコープ修飾子をいる必要があります。 プログラムでは、MFC 内で多重継承を使用する場合、クラスを格納している、`CObject`基底クラスを基底クラスの一覧の一番左のクラスである必要があります。
 
-代わりに使用するが、`dynamic_cast`演算子。 その基本クラスのいずれかに多重継承を持つオブジェクトをキャストすると、関数を使用して、指定された基本クラスのコンパイラは必ずです。 詳細については、次を参照してください。 [dynamic_cast 演算子](../cpp/dynamic-cast-operator.md)です。
+代わりに使用するが、`dynamic_cast`演算子。 その基本クラスのいずれかに MI を持つオブジェクトをキャストすると、コンパイラに指定された基底クラスの関数が使用されます。 詳細については、次を参照してください。 [dynamic_cast Operator](../cpp/dynamic-cast-operator.md)します。
 
 ## <a name="cobject---the-root-of-all-classes"></a>CObject のすべてのクラスのルート
 
-すべての重要なクラスがクラスから直接または間接的に派生`CObject`です。 `CObject` メンバーのデータがありませんが一部の既定の機能です。 多重継承を使用して、2 つ以上から継承は通常する`CObject`-クラスを派生します。 次の例がクラスから継承されるしくみを示しています、 [CFrameWnd](../mfc/reference/cframewnd-class.md)と[CObList](../mfc/reference/coblist-class.md):
+すべての重要なクラスがクラスから直接的または間接的に派生`CObject`します。 `CObject` メンバー データがありませんが、いくつかの既定の機能が。 多重継承を使用する場合は通常を継承する 2 つ以上の`CObject`-クラスを派生します。 次の例がクラスから継承されるしくみを示しています、 [CFrameWnd](../mfc/reference/cframewnd-class.md)と[CObList](../mfc/reference/coblist-class.md):
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -55,15 +55,15 @@ class CListWnd : public CFrameWnd, public CObList
 CListWnd myListWnd;
 ```
 
-ここでは`CObject`2 回は含まれています。 つまりへの参照のあいまいさを解消する方法が必要`CObject`メソッドまたは演算子。 **New 演算子**と[演算子 delete](../mfc/reference/cobject-class.md#operator_delete) 2 つの演算子は、明確にする必要があります。 別の例としては、次のコードは、コンパイル時に、エラーを発生します。
+ここで`CObject`2 つの時刻が含まれています。 参照のあいまいさを解消する方法を必要とされる、この`CObject`メソッドまたは演算子。 **演算子 new**と[delete 演算子](../mfc/reference/cobject-class.md#operator_delete)2 つの演算子は、あいまいさを解決する必要があります。 別の例としては、次のコードは、コンパイル時に、エラーを発生します。
 
 ```cpp
 myListWnd.Dump(afxDump); // compile time error, CFrameWnd::Dump or CObList::Dump
 ```
 
-## <a name="reimplementing-cobject-methods"></a>CObject のメソッドを再実装
+## <a name="reimplementing-cobject-methods"></a>CObject メソッドを再実装
 
-2 つ以上の新しいクラスを作成する場合が`CObject`、基底クラスを派生する必要があります、`CObject`メソッドを使用するには、他のユーザーをします。 演算子**新しい**と**削除**は必須と[ダンプ](../mfc/reference/cobject-class.md#dump)をお勧めします。 次の例 reimplements、**新しい**と**削除**演算子および`Dump`メソッド。
+2 つ以上を搭載する新しいクラスを作成する場合`CObject`、基本クラスを派生する必要があります、`CObject`メソッドを使用するには、他のユーザーします。 演算子**新しい**と**削除**は必須と[ダンプ](../mfc/reference/cobject-class.md#dump)をお勧めします。 次の例 reimplements、**新しい**と**削除**演算子および`Dump`メソッド。
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -88,13 +88,13 @@ public:
 
 ## <a name="virtual-inheritance-of-cobject"></a>CObject の仮想継承
 
-そのほとんどを継承するように思えます`CObject`関数のあいまいさの問題を解決が、その場合ではありません。 メンバーのデータがないため`CObject`、基底クラス メンバー データの複数のコピーを防ぐために仮想継承する必要はありません。 以前に表示された最初の例では、`Dump`は異なる方法で実装されるため、仮想メソッドがあいまいです。`CFrameWnd`と`CObList`です。 あいまいさを排除する最善の方法では、前のセクションで説明した推奨事項に従います。
+その仮想継承するかもしれませんが`CObject`関数のあいまいさの問題を解決するが、そうでないです。 メンバーのデータがないため`CObject`、仮想継承の基本クラスのメンバー データの複数のコピーを回避する必要はありません。 以前に示した最初の例で、`Dump`は異なる方法で実装されるため、仮想メソッドがあいまいです。`CFrameWnd`と`CObList`します。 あいまいさを排除する最善の方法では、前のセクションで提示された推奨事項に従ってください。
 
 ## <a name="cobjectiskindof-and-run-time-typing"></a>使うため、実行時の入力
 
-MFC でサポートされている、実行時入力メカニズム`CObject`DECLARE_DYNAMIC、IMPLEMENT_DYNAMIC、DECLARE_DYNCREATE、IMPLEMENT_DYNCREATE、DECLARE_SERIAL および IMPLEMENT_SERIAL マクロを使用します。 これらのマクロは、安全なキャストを保証するために、実行時の型チェックを実行できます。
+MFC でサポートされる実行時入力メカニズム`CObject`DECLARE_DYNAMIC、IMPLEMENT_DYNAMIC、DECLARE_DYNCREATE、IMPLEMENT_DYNCREATE、DECLARE_SERIAL および IMPLEMENT_SERIAL マクロを使用します。 これらのマクロは、安全なダウン キャストを実行時の型チェックを実行できます。
 
-これらのマクロは、1 つの基本クラスのみをサポートしは多重継承クラスの限定された方法で動作します。 IMPLEMENT_DYNAMIC または IMPLEMENT_SERIAL で指定する基本クラスは、最初 (または最も左) の基本クラスにする必要があります。 この配置を使用すると、型の左端の基底クラスのみを確認できます。 実行時の型システムを使用して、他の基本クラスはわかりません。 次の例では、実行時のシステムの作業型に対してチェック`CFrameWnd`、に関するが何もないが、`CObList`です。
+これらのマクロは、1 つの基底クラスのみをサポートを多重継承クラスの限定された方法で動作します。 新規クラスまたは IMPLEMENT_SERIAL で指定する基本クラスは、最初 (または、左端の) 基底クラスである必要があります。 この配置では、型チェックの一番左の基底クラスのみを実行することを有効になります。 実行時の型システムを使用して、他の基本クラスはわかりません。 実行時のシステムを実行する次の例では、型に対してチェック`CFrameWnd`、について何も知ってされますが、`CObList`します。
 
 ```cpp
 class CListWnd : public CFrameWnd, public CObList
@@ -107,13 +107,13 @@ IMPLEMENT_DYNAMIC(CListWnd, CFrameWnd)
 
 ## <a name="cwnd-and-message-maps"></a>CWnd とメッセージ マップ
 
-正常に動作するには、MFC メッセージ マップ システムには、次の 2 つの追加要件があります。
+正常に機能するには、MFC メッセージ マップ システムには、2 つの追加要件があります。
 
-- 1 つだけあります`CWnd`-基本クラスを派生します。
+- 1 つだけあります`CWnd`-基底クラスを派生します。
 
-- `CWnd`-派生の基本クラスは、最初 (または最も左) の基本クラスである必要があります。
+- `CWnd`-派生の基本クラスは、最初 (または、左端の) の基本クラスである必要があります。
 
-動作しなくなりますいくつかの例を次に示します。
+ここでは動作しないいくつかの例に示します。
 
 ```cpp
 class CTwoWindows : public CFrameWnd, public CEdit
@@ -123,9 +123,9 @@ class CListEdit : public CObList, public CEdit
 { /* ... */ }; // error : CEdit (derived from CWnd) must be first
 ```
 
-## <a name="a-sample-program-using-mi"></a>多重継承を使用したサンプル プログラム
+## <a name="a-sample-program-using-mi"></a>多重継承を使用してサンプル プログラム
 
-次のサンプルは、1 つから派生クラスで構成されるスタンドアロン アプリケーション`CFrameWnd`と[CWinApp](../mfc/reference/cwinapp-class.md)です。 この方法でアプリケーションを構成するが、これは、1 つのクラスを含む最小の MFC アプリケーションの例はお勧めできません。
+次のサンプルは、スタンドアロン アプリケーションの 1 つから派生クラスで構成される`CFrameWnd`と[CWinApp](../mfc/reference/cwinapp-class.md)します。 この方法でアプリケーションを構成するが、これは、1 つのクラスを含む最小の MFC アプリケーションの例はお勧めできません。
 
 ```cpp
 #include <afxwin.h>
@@ -194,5 +194,5 @@ CHelloAppAndFrame theHelloAppAndFrame;
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)  
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)  
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)

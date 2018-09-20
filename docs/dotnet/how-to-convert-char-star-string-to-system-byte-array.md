@@ -18,47 +18,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1afb7548af704fc81d7cab8ac4e1a2476d661717
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 5485d52b54375f39cdc7fc4655c71e4877879062
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39209444"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375947"
 ---
 # <a name="how-to-convert-char--string-to-systembyte-array"></a>方法: char に変換\*system::byte 配列に文字列
-`char *` 文字列を <xref:System.Byte> 配列に変換する最も効率的な方法は、<xref:System.Runtime.InteropServices.Marshal> クラスを使用することです。  
-  
-## <a name="example"></a>例  
-  
-```  
-// convert_native_string_to_Byte_array.cpp  
-// compile with: /clr  
-#include <string.h>  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-  
-int main() {  
-   char buf[] = "Native String";  
-   int len = strlen(buf);  
-  
-   array< Byte >^ byteArray = gcnew array< Byte >(len + 2);  
-  
-   // convert native pointer to System::IntPtr with C-Style cast  
-   Marshal::Copy((IntPtr)buf,byteArray, 0, len);  
-  
-   for ( int i = byteArray->GetLowerBound(0); i <= byteArray->GetUpperBound(0); i++ ) {  
-      char dc =  *(Byte^)   byteArray->GetValue(i);  
-      Console::Write((Char)dc);  
-   }  
-  
-   Console::WriteLine();  
-}  
-```  
-  
-```  
-Native String  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)
+
+`char *` 文字列を <xref:System.Byte> 配列に変換する最も効率的な方法は、<xref:System.Runtime.InteropServices.Marshal> クラスを使用することです。
+
+## <a name="example"></a>例
+
+```
+// convert_native_string_to_Byte_array.cpp
+// compile with: /clr
+#include <string.h>
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+
+int main() {
+   char buf[] = "Native String";
+   int len = strlen(buf);
+
+   array< Byte >^ byteArray = gcnew array< Byte >(len + 2);
+
+   // convert native pointer to System::IntPtr with C-Style cast
+   Marshal::Copy((IntPtr)buf,byteArray, 0, len);
+
+   for ( int i = byteArray->GetLowerBound(0); i <= byteArray->GetUpperBound(0); i++ ) {
+      char dc =  *(Byte^)   byteArray->GetValue(i);
+      Console::Write((Char)dc);
+   }
+
+   Console::WriteLine();
+}
+```
+
+```Output
+Native String
+```
+
+## <a name="see-also"></a>関連項目
+
+[C++ Interop (暗黙の PInvoke) の使用](../dotnet/using-cpp-interop-implicit-pinvoke.md)

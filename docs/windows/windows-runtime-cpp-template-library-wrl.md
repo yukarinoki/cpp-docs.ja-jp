@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c758226935151bd11faec12aed459aeb2606ca9
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684825"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401804"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL)
 
@@ -50,43 +50,43 @@ Windows ランタイム C++ テンプレート ライブラリと C + + CX さ�
 
 Windows ランタイム C++ テンプレート ライブラリとすぐに作業を取得するのに役立つリソースを次に示します。
 
-[Windows ランタイム ライブラリ (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)  
+[Windows ランタイム ライブラリ (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 この Channel 9 ビデオで詳細については、Windows ランタイム C++ テンプレート ライブラリがどのように役立つかを作成および Windows ランタイム コンポーネントを使用する方法とユニバーサル Windows プラットフォーム (UWP) アプリを記述します。
 
-[方法: アクティブ化し、Windows ランタイム コンポーネントの使用](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)  
+[方法: アクティブ化し、Windows ランタイム コンポーネントの使用](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
 Windows ランタイム C++ テンプレート ライブラリを使用してライセンス認証し、Windows ランタイム コンポーネントを使用して、Windows ランタイムを初期化する方法を示しています。
 
-[方法: 非同期操作を完了](../windows/how-to-complete-asynchronous-operations-using-wrl.md)  
+[方法: 非同期操作を完了](../windows/how-to-complete-asynchronous-operations-using-wrl.md)<br/>
 Windows ランタイム C++ テンプレート ライブラリを使用して非同期操作を開始し、操作の完了時に、作業を実行する方法を示しています。
 
-[方法: イベントを処理します。](../windows/how-to-handle-events-using-wrl.md)  
+[方法: イベントを処理します。](../windows/how-to-handle-events-using-wrl.md)<br/>
 Windows ランタイム C++ テンプレート ライブラリを使用してサブスクライブして、Windows ランタイム オブジェクトのイベントを処理する方法を示しています。
 
-[チュートリアル: WRL および Media Foundation を使用した UWP アプリの作成](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)  
+[チュートリアル: WRL および Media Foundation を使用した UWP アプリの作成](../windows/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation.md)<br/>
 使用する UWP アプリを作成する方法について説明します[Microsoft メディア ファンデーション](/windows/desktop/medfound/microsoft-media-foundation-sdk)します。
 
-[方法: 従来の COM コンポーネントの作成](../windows/how-to-create-a-classic-com-component-using-wrl.md)  
+[方法: 従来の COM コンポーネントの作成](../windows/how-to-create-a-classic-com-component-using-wrl.md)<br/>
 Windows ランタイム C++ テンプレート ライブラリを使用して、基本的な COM コンポーネントと登録してデスクトップ アプリから COM コンポーネントを使用する基本的な方法を作成する方法を示します。
 
-[方法: WRL コンポーネントを直接インスタンス化する](../windows/how-to-instantiate-wrl-components-directly.md)  
+[方法: WRL コンポーネントを直接インスタンス化する](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
 使用する方法について説明します、 [Microsoft::WRL::Make](../windows/make-function.md)と[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)関数を定義しているモジュールからコンポーネントをインスタンス化します。
 
-[方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデータから .h ファイルを作成する](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)  
+[方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデータから .h ファイルを作成する](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 .winmd メタデータから IDL ファイルを作成して、WRL からカスタム Windows ランタイム コンポーネントを使用する方法を示します。
 
-[チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)  
+[チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 使用する方法を示しています、 [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)と[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) UWP アプリで web サービスに HTTP GET および POST 要求を送信するタスクとのインターフェイス。
 
-[Bing マップ トリップ オプティマイザーのサンプル](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)  
+[Bing マップ トリップ オプティマイザーのサンプル](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 使用して、`HttpRequest`クラスで定義されている[チュートリアル: を使用してタスクの接続および XML HTTP 要求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)完全な UWP アプリのコンテキストでします。
 
-[C++ のサンプルを使用した Windows ランタイム DLL コンポーネントの作成](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)  
+[C++ のサンプルを使用した Windows ランタイム DLL コンポーネントの作成](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Windows ランタイム C++ テンプレート ライブラリを使用してインプロセス DLL コンポーネントを作成し、C + から使用する方法を示しています。/cli/CX、JavaScript、および C# の場合。
 
-[DirectX の marble maze ゲームのサンプル](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)  
+[DirectX の marble maze ゲームのサンプル](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Windows ランタイム C++ テンプレート ライブラリを使用して、3-D ゲーム全体のコンテキストで DirectX や Media Foundation などの COM コンポーネントの有効期間を管理する方法を示します。
 
-[デスクトップ アプリのサンプルからのトースト通知を送信します。](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)  
+[デスクトップ アプリのサンプルからのトースト通知を送信します。](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Windows ランタイム C++ テンプレート ライブラリを使用してデスクトップ アプリからのトースト通知を操作する方法を示します。
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows ランタイム C++ テンプレートのライブラリと ATL の比較

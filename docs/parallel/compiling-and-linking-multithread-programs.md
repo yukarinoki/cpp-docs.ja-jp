@@ -20,38 +20,39 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4ab667e372c8118a83b7a93444abbfbc5c19b6e0
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 7d9dcb1d7cbda7eebcede4d25de276948d638034
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131519"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412926"
 ---
 # <a name="compiling-and-linking-multithread-programs"></a>マルチスレッド プログラムのコンパイルとリンク
-Bounce.c プログラムがで導入された[マルチ スレッドの C サンプル プログラム](sample-multithread-c-program.md)します。  
-  
-プログラムはコンパイルが既定でマルチ スレッドです。  
-  
-### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>開発環境内でマルチ スレッド プログラム Bounce.c のコンパイルおよびリンクするには  
-  
-1.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
-  
-2.  **プロジェクトの種類**ウィンドウで、をクリックして**Win32**します。  
-  
-3.  **テンプレート**ウィンドウで、をクリックして**Win32 コンソール アプリケーション**、プロジェクト名とします。  
-  
-4.  プロジェクトに C ソース コードを含むファイルを追加します。  
-  
-5.  **ビルド** メニューをクリックして、プロジェクトをビルド、**ビルド**コマンド。  
-  
-### <a name="to-compile-and-link-the-multithread-program-bouncec-from-the-command-line"></a>コマンドラインからのマルチ スレッド プログラム Bounce.c コンパイルおよびリンクするには  
-  
-1.  コンパイルし、プログラムをリンクします。  
-  
-    ```  
-    CL BOUNCE.C  
-    ```  
-  
+
+Bounce.c プログラムがで導入された[マルチ スレッドの C サンプル プログラム](sample-multithread-c-program.md)します。
+
+プログラムはコンパイルが既定でマルチ スレッドです。
+
+### <a name="to-compile-and-link-the-multithread-program-bouncec-from-within-the-development-environment"></a>開発環境内でマルチ スレッド プログラム Bounce.c のコンパイルおよびリンクするには
+
+1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
+
+1. **プロジェクトの種類**ウィンドウで、をクリックして**Win32**します。
+
+1. **テンプレート**ウィンドウで、をクリックして**Win32 コンソール アプリケーション**、プロジェクト名とします。
+
+1. プロジェクトに C ソース コードを含むファイルを追加します。
+
+1. **ビルド** メニューをクリックして、プロジェクトをビルド、**ビルド**コマンド。
+
+### <a name="to-compile-and-link-the-multithread-program-bouncec-from-the-command-line"></a>コマンドラインからのマルチ スレッド プログラム Bounce.c コンパイルおよびリンクするには
+
+1. コンパイルし、プログラムをリンクします。
+
+    ```
+    CL BOUNCE.C
+    ```
+
 ## <a name="see-also"></a>関連項目
 
 [C と Win32 を使用するマルチスレッド](multithreading-with-c-and-win32.md)

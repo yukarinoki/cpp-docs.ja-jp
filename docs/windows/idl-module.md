@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 73047962daf32eae6c01bb0ea6f6688a83e19402
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0539275a09a64e31a9ecad17cab899368701e353
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715534"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412216"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -46,31 +46,31 @@ function declaration
 
 ### <a name="parameters"></a>パラメーター
 
-*name*  
+*name*<br/>
 .Idl ファイルに表示されるコード ブロックのユーザー定義の名前。
 
-*dllname*  
+*dllname*<br/>
 (省略可能)エクスポートを含む .dll ファイルです。
 
-*uuid*  
+*uuid*<br/>
 (省略可能)一意の id。
 
-*helpstring*  
+*helpstring*<br/>
 (省略可能)タイプ ライブラリを記述するために使用する文字の文字列。
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 (省略可能).Hlp や .chm ファイル内のヘルプ トピックの ID。
 
-*helpcontext*  
+*helpcontext*<br/>
 (省略可能)このタイプ ライブラリのヘルプ ID です。
 
-*hidden*  
+*hidden*<br/>
 (省略可能)ライブラリが表示されないようにするパラメーター。 参照してください、[隠し](/windows/desktop/Midl/hidden)MIDL 属性に関する詳細について説明します。
 
-*restricted*  
+*restricted*<br/>
 (省略可能)ライブラリのメンバーは任意に呼び出すことができません。 参照してください、[制限](/windows/desktop/Midl/restricted)MIDL 属性に関する詳細について説明します。
 
-*関数の宣言*  
+*関数の宣言*<br/>
 この関数を定義します。
 
 ## <a name="remarks"></a>Remarks
@@ -111,6 +111,6 @@ void FuncName(int i);
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[スタンドアロン属性](../windows/stand-alone-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[スタンドアロン属性](../windows/stand-alone-attributes.md)<br/>
 [entry](../windows/entry.md)  

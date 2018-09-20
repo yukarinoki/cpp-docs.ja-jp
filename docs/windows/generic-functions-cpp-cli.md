@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bc930fdc142dc7b044b4dbd60cfd459b7ce52aea
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709151"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398860"
 ---
 # <a name="generic-functions-ccli"></a>ジェネリック関数 (C++/CLI)
 
@@ -63,28 +63,28 @@ return-type identifier<type-parameter identifier(s)>
 
 ### <a name="parameters"></a>パラメーター
 
-*属性*  
+*属性*<br/>
 (省略可能)追加の宣言情報。 属性と属性クラスの詳細については、属性を参照してください。
 
-*修飾子*  
+*修飾子*<br/>
 (省略可能)静的などの関数の修飾子です。  **仮想**仮想メソッドをジェネリックにすることはできないためには許可されません。
 
-*戻り値の型*  
+*戻り値の型*<br/>
 メソッドによって返される型。 戻り値の型が void の場合は、戻り値は必要ありません。
 
-*identifier*  
+*identifier*<br/>
 関数名。
 
-*型パラメーターの識別子*  
+*型パラメーターの識別子*<br/>
 識別子のコンマ区切りリスト。
 
-*仮パラメーター*  
+*仮パラメーター*<br/>
 (省略可能)パラメーター リストです。
 
-*型パラメーター制約句*  
+*型パラメーター制約句*<br/>
 これは、型の引数として使用できる型での制限を指定しますで指定された形式の[ジェネリック型パラメーターの制約 (C +/cli CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)します。
 
-*関数本体*  
+*関数本体*<br/>
 型パラメーターの識別子を参照する、メソッドの本体。
 
 ### <a name="remarks"></a>Remarks
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)  
+[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [ジェネリック](../windows/generics-cpp-component-extensions.md)

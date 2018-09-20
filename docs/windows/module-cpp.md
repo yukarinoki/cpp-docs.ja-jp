@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ac443927c2dcbb00cc01dd3cd63a95441a4a1bf0
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ea891ce5ee5c3570577edf7c2122b2cd39b5c64d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711816"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378565"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -52,7 +52,7 @@ ms.locfileid: "45711816"
 
 ### <a name="parameters"></a>パラメーター
 
-*type*  
+*type*<br/>
 (省略可能)次のいずれかを指定できます。
 
 - `dll` 結果の DLL がインプロセス COM サーバーとして機能できるようにする関数およびクラスを追加します。 これが既定値です。
@@ -63,50 +63,50 @@ ms.locfileid: "45711816"
 
 - `unspecified` モジュール属性に関連する ATL コードの挿入を無効にします。 の ATL モジュール クラス、グローバル インスタンス _AtlModule およびエントリ ポイント関数。 プロジェクト内のその他の属性による ATL コードの挿入は無効になりせん。
 
-*name*  
+*name*<br/>
 (省略可能)ライブラリ ブロックの名前。
 
-*version*  
+*version*<br/>
 (省略可能)ライブラリ ブロックを割り当てるバージョン番号です。 既定値は 1.0 です。
 
-*uuid*  
+*uuid*<br/>
 ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 取得する必要があります、 *uuid* 、識別子を使用して行うことができます、ライブラリ ブロックの **_ _uuidof (** *libraryname* **)** します。
 
-*lcid*  
+*lcid*<br/>
 ローカリゼーション パラメーターです。 参照してください[lcid](/windows/desktop/Midl/lcid)詳細についてはします。
 
-*control*  
+*control*<br/>
 (省略可能)ライブラリ内のすべてのコクラスのコントロールを指定します。
 
-*helpstring*  
+*helpstring*<br/>
 タイプ ライブラリを指定します。
 
-*helpstringdll*  
+*helpstringdll*<br/>
 (省略可能)使用してドキュメントの文字列検索を実行する .dll ファイルの名前を設定します。 参照してください[helpstringdll](/windows/desktop/Midl/helpstringdll)詳細についてはします。
 
-*helpfile*  
+*helpfile*<br/>
 (省略可能)名前、**ヘルプ**タイプ ライブラリ ファイル。
 
-*helpcontext*  
+*helpcontext*<br/>
 (省略可能)**ヘルプ ID**このタイプ ライブラリ。
 
-*helpstringcontext*  
+*helpstringcontext*<br/>
 (省略可能)参照してください[helpstringcontext](../windows/helpstringcontext.md)詳細についてはします。
 
-*hidden*  
+*hidden*<br/>
 (省略可能)ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 参照してください、[隠し](/windows/desktop/Midl/hidden)MIDL 属性に関する詳細について説明します。
 
-*restricted*  
+*restricted*<br/>
 (省略可能)ライブラリのメンバーは、任意に呼び出すことはできません。 参照してください、[制限](/windows/desktop/Midl/restricted)MIDL 属性に関する詳細について説明します。
 
-*custom*  
+*custom*<br/>
 (省略可能)1 つまたは複数の属性です。これに似ています、[カスタム](../windows/custom-cpp.md)属性。 最初のパラメーター*カスタム*属性の GUID です。 例えば:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
 ```
 
-*resource_name*  
+*resource_name*<br/>
 DLL、実行可能ファイルまたはサービスの登録に使用される .rgs ファイルの文字列リソース ID です。 モジュールがタイプ サービスである場合、この引数はサービス名を含む文字列の ID の取得にも使用されます。
 
 > [!NOTE]
@@ -188,13 +188,13 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
-[スタンドアロン属性](../windows/stand-alone-attributes.md)  
-[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[usesgetlasterror](../windows/usesgetlasterror.md)  
-[ライブラリ](/windows/desktop/Midl/library)  
-[helpcontext](../windows/helpcontext.md)  
-[helpstring](../windows/helpstring.md)  
-[helpfile](../windows/helpfile.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
+[スタンドアロン属性](../windows/stand-alone-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[usesgetlasterror](../windows/usesgetlasterror.md)<br/>
+[ライブラリ](/windows/desktop/Midl/library)<br/>
+[helpcontext](../windows/helpcontext.md)<br/>
+[helpstring](../windows/helpstring.md)<br/>
+[helpfile](../windows/helpfile.md)<br/>
 [version](../windows/version-cpp.md)  

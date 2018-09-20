@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9c0b2c53bf06a748be522606f5904f307cc00df8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 555dcfe83ab114db48942a5be604ff344dafa8ed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591357"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398722"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "42591357"
 
 ### <a name="parameters"></a>パラメーター
 
-*com_interface_entry*  
+*com_interface_entry*<br/>
 エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、次を参照してください。 [COM_INTERFACE_ENTRY マクロ](../atl/reference/com-interface-entry-macros.md)します。
 
 ## <a name="remarks"></a>Remarks
@@ -122,7 +122,7 @@ END_COM_MAP()
 |||
 |-|-|
 |**対象**|**クラス**、**構造体**|
-|**反復可能**|[はい]|
+|**反復可能**|はい|
 |**必要な属性**|次のいずれかまたは: `coclass`、 `progid`、または`vi_progid`します。|
 |**無効な属性**|なし|
 
@@ -130,6 +130,6 @@ END_COM_MAP()
 
 ## <a name="see-also"></a>関連項目
 
-[COM 属性](../windows/com-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
+[COM 属性](../windows/com-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  

@@ -1,5 +1,5 @@
 ---
-title: STL/CLR コンテナー要素の要件 |Microsoft ドキュメント
+title: STL/CLR コンテナー要素の要件 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,27 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 523b3e8d3f9c04a933f37032fcea670d75dafccf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fcba36fdf280cef31efb9a84288475fcbb82b291
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33162437"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46400427"
 ---
 # <a name="requirements-for-stlclr-container-elements"></a>STL/CLR コンテナー要素の要件
-STL/CLR コンテナーに挿入されるすべての参照型が必要ですには、少なくとも、次の要素。  
-  
--   パブリックのコピー コンス トラクターです。  
-  
--   パブリックの代入演算子。  
-  
--   パブリック デストラクターです。  
-  
- さらなどの連想コンテナー[設定](../dotnet/set-stl-clr.md)と[マップ](../dotnet/map-stl-clr.md)はパブリック比較演算子が定義されている必要があります`operator<`既定です。 コンテナーに対する一部の操作は、パブリックの既定のコンス トラクターとパブリックな等価演算子を定義する必要もがあります。  
-  
- 参照するには、参照型、値型およびハンドルのような連想コンテナーに挿入するのには、型が必要、比較演算子など`operator<`定義します。 値の型またはハンドル型を参照するには、パブリックのコピー コンス トラクター、パブリック代入演算子、およびパブリック デストラクターの要件は存在しません。  
-  
-## <a name="see-also"></a>関連項目  
- [C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)
+
+STL/CLR コンテナーに挿入されたすべての参照型が必要には、少なくとも次の要素です。
+
+- 公開コピー コンス トラクターです。
+
+- パブリックの代入演算子です。
+
+- パブリック デストラクターです。
+
+さらなどの連想コンテナー[設定](../dotnet/set-stl-clr.md)と[マップ](../dotnet/map-stl-clr.md)はパブリックの比較演算子が定義されている必要があります`operator<`既定。 コンテナーの操作の一部は、パブリックの既定のコンス トラクターとパブリックな等価演算子を定義する必要もがあります。
+
+参照型、値型およびハンドルが参照するように、連想コンテナーに挿入する型で必要があります、比較演算子など`operator<`定義します。 パブリックのコピー コンス トラクターをパブリックの代入演算子、およびパブリック デストラクターの要件は、値の型またはハンドル型を参照するには存在しません。
+
+## <a name="see-also"></a>関連項目
+
+[C++ 標準ライブラリ リファレンス](../standard-library/cpp-standard-library-reference.md)

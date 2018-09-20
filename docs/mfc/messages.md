@@ -1,5 +1,5 @@
 ---
-title: メッセージ |Microsoft ドキュメント
+title: メッセージ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,18 +15,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d7544d92d55ec4a1f6d15f3c1d4358970bf2deb
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: f25c9cc70cec598f975bbd242af83597311bdc7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36928342"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392256"
 ---
 # <a name="messages"></a>メッセージ
-メッセージ ループで、`Run`クラスのメンバー関数`CWinApp`取得には、さまざまなイベントによって生成されたメッセージがキューに登録します。 たとえば、ユーザーには、マウスがクリックすると、Windows は WM_LBUTTONDOWN マウスの左ボタンが押されたときに、マウスの左ボタンが離されるとしたなど、いくつかのマウスに関連するメッセージを送信します。 アプリケーション メッセージ ループのフレームワークの実装では、目的のウィンドウ メッセージをディスパッチします。  
-  
- メッセージの重要なカテゴリの記載[メッセージ カテゴリ](../mfc/message-categories.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)
+
+メッセージ ループで、`Run`クラスのメンバー関数`CWinApp`を取得しますがさまざまなイベントによって生成されたメッセージをキューに登録します。 たとえば、ユーザーには、マウスがクリックすると、Windows は WM_LBUTTONDOWN マウスの左ボタンが押されたときに、マウスの左ボタンが離されたとき、WM_LBUTTONUP など、いくつかのマウス関連メッセージを送信します。 アプリケーション メッセージ ループのフレームワークの実装では、適切なウィンドウにメッセージをディスパッチします。
+
+メッセージの重要なカテゴリが記載されて[メッセージ カテゴリ](../mfc/message-categories.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[フレームワークのメッセージとコマンド](../mfc/messages-and-commands-in-the-framework.md)
 

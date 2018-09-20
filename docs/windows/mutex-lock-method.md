@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 38bd11620f8d403bbd1667ab6fa4f3f827362c88
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8bb04b8be33f81931106574152d0ccb6ba535295
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600874"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427837"
 ---
 # <a name="mutexlock-method"></a>Mutex::Lock メソッド
 
@@ -43,10 +43,10 @@ static SyncLock Lock(
 
 ### <a name="parameters"></a>パラメーター
 
-*(ミリ秒)*  
+*(ミリ秒)*<br/>
 タイムアウト間隔 (ミリ秒単位)。 既定値は、INFINITE で、無期限に待機します。
 
-*h*  
+*h*<br/>
 ハンドルを**ミュー テックス**オブジェクト。
 
 ## <a name="return-value"></a>戻り値
@@ -58,4 +58,5 @@ static SyncLock Lock(
 **Namespace:** Microsoft::WRL::Wrappers
 
 ## <a name="see-also"></a>関連項目
+
 [Mutex クラス](../windows/mutex-class1.md)

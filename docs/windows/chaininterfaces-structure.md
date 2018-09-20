@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f0fc65d2aeab01de022e23d0645682800a7d555d
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 88ddd3dd59000b629f6e72933b1a0b02cc582c89
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602366"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46409872"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 構造体
 
@@ -63,43 +63,43 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 
 ### <a name="parameters"></a>パラメーター
 
-*I0*  
+*I0*<br/>
 (必須)インターフェイス ID は 0 です。
 
-*I1*  
+*I1*<br/>
 (必須)ID 1 のインターフェイスです。
 
-*I2*  
+*I2*<br/>
 (省略可能)インターフェイス ID 2 です。
 
-*I3*  
+*I3*<br/>
 (省略可能)インターフェイス ID 3 です。
 
-*I4*  
+*I4*<br/>
 (省略可能)ID 4 のインターフェイスです。
 
-*I5*  
+*I5*<br/>
 (省略可能)ID 5 のインターフェイスです。
 
-*I6*  
+*I6*<br/>
 (省略可能)ID 6 のインターフェイスです。
 
-*I7*  
+*I7*<br/>
 (省略可能)インターフェイス ID 7 です。
 
-*I8*  
+*I8*<br/>
 (省略可能)インターフェイス ID 8 です。
 
-*I9*  
+*I9*<br/>
 (省略可能)インターフェイス ID は 9 です。
 
-*DerivedType*  
+*DerivedType*<br/>
 派生型。
 
-*BaseType*  
+*BaseType*<br/>
 派生型の基本型。
 
-*hasImplements*  
+*hasImplements*<br/>
 ブール値の場合に**true**、ため使用できません、 [MixIn](../windows/mixin-structure.md)構造から派生していないクラスを使用して、[実装](../windows/implements-structure.md)構造体。
 
 ## <a name="members"></a>メンバー
@@ -115,7 +115,7 @@ struct ChainInterfaces<MixIn<DerivedType, BaseType, hasImplements>, I1, I2, I3, 
 
 ### <a name="protected-constants"></a>保護されている定数
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[ChainInterfaces::IidCount 定数](../windows/chaininterfaces-iidcount-constant.md)|インターフェイスのテンプレート パラメーターで指定されたインターフェイスに含まれている Id の合計数*I0*を通じて*I9*します。|
 

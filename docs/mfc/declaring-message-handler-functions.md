@@ -1,5 +1,5 @@
 ---
-title: メッセージ ハンドラー関数の宣言 |Microsoft ドキュメント
+title: メッセージ ハンドラー関数の宣言 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,24 +14,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4556323236897c6b3a48aa60d96a01c909a0576d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 82a95cea3a2674ca00c8a1dd20361e5b6a176d9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341711"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385158"
 ---
 # <a name="declaring-message-handler-functions"></a>メッセージ ハンドラー関数の宣言
-特定の規則と規約は、メッセージ ハンドラー関数の名前を制御します。 これは、プロセスは、次のトピックの説明に従ってメッセージの種類とは異なります。  
-  
--   [標準 Windows メッセージのハンドラー](../mfc/handlers-for-standard-windows-messages.md)  
-  
--   [コマンドとコントロール通知のハンドラー](../mfc/handlers-for-commands-and-control-notifications.md)  
-  
--   [範囲内のメッセージ ハンドラー](../mfc/handlers-for-message-map-ranges.md)  
-  
--   [反映されたメッセージの処理](../mfc/handling-reflected-messages.md)  
-  
-## <a name="see-also"></a>関連項目  
- [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
+
+特定の規則と規約は、メッセージ ハンドラー関数の名前を制御します。 これらは、ように、次のトピックで説明されている場合に、メッセージの種類に依存します。
+
+- [標準 Windows メッセージのハンドラー](../mfc/handlers-for-standard-windows-messages.md)
+
+- [コマンドとコントロール通知のハンドラー](../mfc/handlers-for-commands-and-control-notifications.md)
+
+- [範囲内のメッセージ ハンドラー](../mfc/handlers-for-message-map-ranges.md)
+
+- [反映されたメッセージの処理](../mfc/handling-reflected-messages.md)
+
+## <a name="see-also"></a>関連項目
+
+[メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
 

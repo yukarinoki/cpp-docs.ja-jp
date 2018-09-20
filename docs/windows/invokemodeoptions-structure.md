@@ -1,5 +1,5 @@
 ---
-title: InvokeModeOptions 構造 |Microsoft ドキュメント
+title: InvokeModeOptions 構造体 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
 ms.technology:
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5b1eb0e7f6cf49a7c6ac12a4810ae1622e263e2f
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ea549db29f7fcb67e4d59e341bf7d5ad085b6d7f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33882838"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392711"
 ---
 # <a name="invokemodeoptions-structure"></a>InvokeModeOptions 構造体
 
-デリゲート キュー内のすべてのイベントを発生させるか、エラーが発生した後の発生を停止するかどうかを指定します。 使用可能値が指定されて、`InvokeMode`列挙型。
+デリゲート キュー内のすべてのイベントを発生させる、またはエラーが発生した後の発生を停止するかどうかを指定します。 許容値がで指定された、`InvokeMode`列挙型。
 
 ## <a name="syntax"></a>構文
 
@@ -51,5 +51,5 @@ struct InvokeModeOptions
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft::wrl Namespace](../windows/microsoft-wrl-namespace.md)
+[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)<br/>
 [Microsoft::WRL::AgileEventSource クラス](../windows/agileeventsource-class.md)

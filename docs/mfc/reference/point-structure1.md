@@ -18,38 +18,43 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: de172814db04ab8d057f84a29ce505896f89adc9
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 82955bb42ae68cb7f07fb89be94a7fcf424ee81c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335335"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416098"
 ---
 # <a name="point-structure1"></a>ポイント Structure1
-`POINT`構造体の定義、x*-* と点の y 座標。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-typedef struct tagPOINT {  
-    LONG x;  
-    LONG y;  
-} POINT;  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- *x*  
- 点の x 座標を指定します。  
-  
- *y*  
- 点の y 座標を指定します。  
-  
-## <a name="example"></a>例  
- [!code-cpp[NVC_MFC_Utilities#37](../../mfc/codesnippet/cpp/point-structure1_1.cpp)]  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** windef.h  
-  
-## <a name="see-also"></a>関連項目  
- [構造体、スタイル、コールバック、およびメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)   
- [CPoint クラス](../../atl-mfc-shared/reference/cpoint-class.md)
+
+`POINT`構造体の定義、x*-* と点の y 座標。
+
+## <a name="syntax"></a>構文
+
+```
+typedef struct tagPOINT {
+    LONG x;
+    LONG y;
+} POINT;
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*x*<br/>
+点の x 座標を指定します。
+
+*y*<br/>
+点の y 座標を指定します。
+
+## <a name="example"></a>例
+
+[!code-cpp[NVC_MFC_Utilities#37](../../mfc/codesnippet/cpp/point-structure1_1.cpp)]
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** windef.h
+
+## <a name="see-also"></a>関連項目
+
+[構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
+[CPoint クラス](../../atl-mfc-shared/reference/cpoint-class.md)

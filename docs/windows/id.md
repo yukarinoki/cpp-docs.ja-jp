@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9b5250a730b0ce80cbbe9698b4b5e636a85986b6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 13ddef5b6bb83de16c72438e2b9f2bb3d4e8d635
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223187"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386354"
 ---
 # <a name="id"></a>ID
 
@@ -38,7 +38,7 @@ ms.locfileid: "43223187"
 
 ### <a name="parameters"></a>パラメーター
 
-*dispid*  
+*dispid*<br/>
 インターフェイス メソッドのディスパッチ ID。
 
 ## <a name="remarks"></a>Remarks
@@ -64,9 +64,9 @@ ms.locfileid: "43223187"
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[メソッド属性](../windows/method-attributes.md)  
-[データ メンバー属性](../windows/data-member-attributes.md)  
-[defaultvalue](../windows/defaultvalue.md)  
-[in](../windows/in-cpp.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[メソッド属性](../windows/method-attributes.md)<br/>
+[データ メンバー属性](../windows/data-member-attributes.md)<br/>
+[defaultvalue](../windows/defaultvalue.md)<br/>
+[in](../windows/in-cpp.md)<br/>
 [out](../windows/out-cpp.md)  

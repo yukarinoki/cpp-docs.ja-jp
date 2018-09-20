@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f1ed792407160c1d025dabb3b8cc01a2ebc7330
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8de12d1b421fd78fb9ed2a45cc14826541f72757
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314327"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441695"
 ---
 # <a name="creating-a-new-toolbar-button-c"></a>新しいツール バー ボタン (C++) を作成します。
 
@@ -71,6 +71,6 @@ MFC または ATL
 
 ## <a name="see-also"></a>関連項目
 
-[ツール バー ボタンのプロパティ](../windows/toolbar-button-properties.md)  
-[ツール バー ボタンの作成、移動、および編集](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[ツール バー ボタンのプロパティ](../windows/toolbar-button-properties.md)<br/>
+[ツール バー ボタンの作成、移動、および編集](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [ツール バー エディター](../windows/toolbar-editor.md)

@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 847a93efc74c4e6111f49679219e1b26a70022f6
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ab72225287eab71180e80a059bc320829c24b5f7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707514"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419270"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (自動並行化レポート作成レベル)
 
@@ -53,7 +53,7 @@ ms.locfileid: "45707514"
 
 ## <a name="see-also"></a>関連項目
 
-[/Q オプション (低水準の操作)](../../build/reference/q-options-low-level-operations.md)
+[/Q オプション (低水準の操作)](../../build/reference/q-options-low-level-operations.md)<br/>
 [コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
 [ネイティブ コードでの並列プログラミング](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

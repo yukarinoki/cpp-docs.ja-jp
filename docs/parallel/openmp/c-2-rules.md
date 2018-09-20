@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb83b35a03608e272e9af67159b61e5dbf4e1ec6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755022"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46404775"
 ---
 # <a name="c2-rules"></a>C.2 規則
+
 表記法は、C 規格の 6.1 で説明します。 この文章の付録では、OpenMP C および C++ のディレクティブの基本言語の文法を拡張機能を示します。
 
 **/\* C++ (ISO/IEC 14882:1998) \*/**
@@ -100,7 +101,7 @@ ms.locfileid: "43755022"
 &nbsp;&nbsp;&nbsp;&nbsp;**スケジュール (** *スケジュールの種類* **、** *式* **)**
 
 *スケジュールの種類*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**静的**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**static**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**動的**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**ガイド付き**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**ランタイム**
@@ -194,7 +195,7 @@ ms.locfileid: "43755022"
 
 **/\* 標準の宣言 \*/**
 
-*宣言*:<br/>
+*declaration*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*threadprivate ディレクティブ*
 
 *threadprivate ディレクティブ*:<br/>
@@ -217,7 +218,7 @@ ms.locfileid: "43755022"
 **/\* C で \*/**
 
 *変数リスト*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*識別子*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*変数リスト* **、** *識別子*
 
 **/\* C++ では \*/**

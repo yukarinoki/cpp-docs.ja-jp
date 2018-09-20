@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46b09b5cbe74849c3dc08e8faee3ee4ca645a55b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602935"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46432410"
 ---
 # <a name="delegate--c-component-extensions"></a>delegate (C++ コンポーネント拡張)
 
@@ -57,16 +57,16 @@ delegate-type-identifier
 
 ### <a name="parameters"></a>パラメーター
 
-*access*  
+*access*<br/>
 (省略可能)代理人のユーザー補助**パブリック**(既定値) または**プライベート**します。 関数プロトタイプを修飾することができますも、 **const**または**揮発性**キーワード。
 
-*戻り値の型*  
+*戻り値の型*<br/>
 関数プロトタイプの戻り値の型。
 
-*デリゲート型の識別子*  
+*デリゲート型の識別子*<br/>
 宣言されたデリゲート型の名前。
 
-*パラメーター*  
+*パラメーター*<br/>
 (省略可能)型および関数プロトタイプの識別子。
 
 ### <a name="remarks"></a>Remarks
@@ -91,10 +91,10 @@ function_declaration
 
 ### <a name="parameters"></a>パラメーター
 
-*access*  
+*access*<br/>
 (省略可能)アセンブリの外部でデリゲートのアクセシビリティは、パブリックまたはプライベートにできます。  既定値はプライベートです。  デリゲートは、クラス内任意のアクセシビリティを持つことができます。
 
-*function_declaration*  
+*function_declaration*<br/>
 デリゲートにバインドできる関数のシグネチャ。 デリゲートの戻り値の型は、任意のマネージ型を指定できます。 相互運用性の理由から、CLS 型、デリゲートの戻り値の型であることをお勧めします。
 
 最初のパラメーターにバインドされていないデリゲートを定義する*function_declaration*型にする必要があります、**この**オブジェクトへのポインター。

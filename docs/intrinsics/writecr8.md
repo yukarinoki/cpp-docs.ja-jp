@@ -16,42 +16,46 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7369261efb43cdf9cd92f0924d1043cde50ac440
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a06b34ee7d38e5c0e99181c4af81d925b681ce75
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704016"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46417307"
 ---
 # <a name="writecr8"></a>__writecr8
-**Microsoft 固有の仕様**  
-  
- 値を書き込みます`Data`CR8 登録します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void writecr8(   
-   unsigned __int64 Data   
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+**Microsoft 固有の仕様**
+
+値を書き込みます`Data`CR8 登録します。
+
+## <a name="syntax"></a>構文
+
+```
+void writecr8( 
+   unsigned __int64 Data 
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *データ*<br/>
-[in]CR8 レジスタに書き込む値。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__writecr8`|X64|  
-  
- **ヘッダー ファイル** \<intrin.h >  
-  
-## <a name="remarks"></a>Remarks  
- この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[in]CR8 レジスタに書き込む値。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__writecr8`|X64|
+
+**ヘッダー ファイル** \<intrin.h >
+
+## <a name="remarks"></a>Remarks
+
+この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

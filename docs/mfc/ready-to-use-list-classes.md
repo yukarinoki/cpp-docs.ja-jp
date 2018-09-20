@@ -1,5 +1,5 @@
 ---
-title: すぐに使用できるリスト クラス |Microsoft ドキュメント
+title: すぐに使用できるリスト クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,25 +18,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 014c3aabb770dc35fdbf106f9a225e52285d201b
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: e3e00bdc0af7a29aef04092ef045d2693a65f8be
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929677"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399913"
 ---
 # <a name="ready-to-use-list-classes"></a>使用可能なリスト クラス
-次のクラスは、すぐに使用できるリスト クラスです。  
-  
- [CObList](../mfc/reference/coblist-class.md)  
- クラスのオブジェクトへのポインターを格納`CObject`から派生したクラスのオブジェクトに`CObject`リンク リストです。  
-  
- [CPtrList](../mfc/reference/cptrlist-class.md)  
- ポインターを格納**void** (ジェネリック ポインター) をリンク リストです。  
-  
- [CStringList](../mfc/reference/cstringlist-class.md)  
- ストア`CString`リンク リスト内のオブジェクト。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../mfc/class-library-overview.md)
+
+次のクラスは、すぐに使用できるリスト クラスです。
+
+[CObList](../mfc/reference/coblist-class.md)<br/>
+クラスのオブジェクトへのポインターを格納`CObject`から派生したクラスのオブジェクトに`CObject`リンクのリスト。
+
+[CPtrList](../mfc/reference/cptrlist-class.md)<br/>
+ポインターを格納**void** (ジェネリック ポインター) をリンクのリスト。
+
+[CStringList](../mfc/reference/cstringlist-class.md)<br/>
+ストア`CString`リンク リスト内のオブジェクト。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../mfc/class-library-overview.md)
 

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e93d8debbab26dc61b4c27de713b94d7bc6c417
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1b40f7b4fff1d6df6f5fb818e090ce687f12a7b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711959"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412788"
 ---
 # <a name="zo-enhance-optimized-debugging"></a>/Zo (最適化されたデバッグ機能の強化)
 
@@ -58,6 +58,6 @@ ms.locfileid: "45711959"
 
 ## <a name="see-also"></a>関連項目
 
-[/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)
-[/Z7、/Zi、/ZI (デバッグ情報の形式)](../../build/reference/z7-zi-zi-debug-information-format.md)
+[/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)<br/>
+[/Z7、/Zi、/ZI (デバッグ情報の形式)](../../build/reference/z7-zi-zi-debug-information-format.md)<br/>
 [エディット コンティニュ](/visualstudio/debugger/edit-and-continue)

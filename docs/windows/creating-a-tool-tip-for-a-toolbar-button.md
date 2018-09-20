@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e5fef71d3fa2ad76192a06603ed9e22d52eef71
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2d03b71f862e31a2bef25d89c0347c95da240642
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317824"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422676"
 ---
 # <a name="creating-a-tool-tip-for-a-toolbar-button-c"></a>ツール ヒント (C++) のツール バー ボタンの作成
 
@@ -59,5 +59,5 @@ MFC または ATL
 
 ## <a name="see-also"></a>関連項目
 
-[ツール バー ボタンの作成、移動、および編集](../windows/creating-moving-and-editing-toolbar-buttons.md)  
+[ツール バー ボタンの作成、移動、および編集](../windows/creating-moving-and-editing-toolbar-buttons.md)<br/>
 [ツール バー エディター](../windows/toolbar-editor.md)

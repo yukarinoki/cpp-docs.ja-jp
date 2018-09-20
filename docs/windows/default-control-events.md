@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7a57cb6c72d7d444c345140f4a738a3d4a3232c0
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 95c3d15414dbb312c60029a86707c1d32df56adc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315614"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405516"
 ---
 # <a name="default-control-events"></a>既定のコントロール イベント
 
@@ -63,9 +63,9 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ コントロールのメンバー変数の定義](../windows/defining-member-variables-for-dialog-controls.md)  
-[ユーザー インターフェイス オブジェクトに関連付けられたメッセージ](../mfc/reference/message-types-associated-with-user-interface-objects.md)  
-[メッセージ ハンドラーの編集](../mfc/reference/editing-a-message-handler.md)  
-[リフレクション メッセージ用のメッセージ ハンドラーの定義](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)  
-[新しいコントロール クラスに基づいた変数の宣言](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)  
+[ダイアログ コントロールのメンバー変数の定義](../windows/defining-member-variables-for-dialog-controls.md)<br/>
+[ユーザー インターフェイス オブジェクトに関連付けられたメッセージ](../mfc/reference/message-types-associated-with-user-interface-objects.md)<br/>
+[メッセージ ハンドラーの編集](../mfc/reference/editing-a-message-handler.md)<br/>
+[リフレクション メッセージ用のメッセージ ハンドラーの定義](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)<br/>
+[新しいコントロール クラスに基づいた変数の宣言](../mfc/reference/declaring-a-variable-based-on-your-new-control-class.md)<br/>
 [仮想関数のオーバーライド](../ide/overriding-a-virtual-function-visual-cpp.md)

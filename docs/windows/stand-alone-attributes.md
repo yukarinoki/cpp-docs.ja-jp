@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5d395053231f54570e1bf86ba79f6237b89681fc
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c44223dad2ac4d6306bf3896cd8ec7be84a5a2b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315549"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407765"
 ---
 # <a name="stand-alone-attributes"></a>スタンドアロン属性
 スタンドアロン属性は C++ キーワードについては動作しませんが、行のコードのようにします。 スタンドアロン属性ステートメントには、行の末尾にセミコロンが必要です。
@@ -45,4 +45,5 @@ ms.locfileid: "44315549"
 |[pragma](../windows/pragma.md)|生成された .idl ファイルに、引用符なしの指定した文字列を出力します。|
   
 ## <a name="see-also"></a>関連項目
- [使用法別の属性](../windows/attributes-by-usage.md)
+
+[使用法別の属性](../windows/attributes-by-usage.md)

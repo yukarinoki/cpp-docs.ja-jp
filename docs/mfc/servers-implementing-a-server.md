@@ -1,5 +1,5 @@
 ---
-title: 'サーバー: サーバーの実装 |Microsoft ドキュメント'
+title: 'サーバー: サーバーの実装 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,43 +15,45 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0ea51d6cd811572d73b0de64072f3d335e2682fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: d024c9468b06291ba93c4e404674925202fabcad
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381694"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46406796"
 ---
 # <a name="servers-implementing-a-server"></a>サーバー : サーバーの実装
-この記事では、MFC アプリケーション ウィザード ビジュアル編集サーバー アプリケーション用に作成するコードについて説明します。 アプリケーションのウィザードを使用していない場合、この記事には、サーバー アプリケーションを実装するコードを記述する必要があります、領域が一覧表示します。  
-  
- 新しいサーバー アプリケーションを作成するアプリケーションのウィザードを使用している場合は、大量のサーバーに固有のコードを提供します。 ビジュアル編集サーバーの機能を追加する、既存のアプリケーションには、必要なサーバー コードの残りの部分を追加する前に、アプリケーションのウィザードが提供したコードを複製する必要があります。  
-  
- アプリケーション ウィザードで提供されるサーバー コードは、複数のカテゴリに分類されます。  
-  
--   サーバーのリソースを定義します。  
-  
-    -   メニュー リソースをサーバーが、独自のウィンドウで埋め込みアイテムを編集するときに使用します。  
-  
-    -   メニューとツールバーのリソースを場所に、サーバーがアクティブな場合に使用します。  
-  
-     これらのリソースの詳細については、次を参照してください。[メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)です。  
-  
--   派生した item クラスを定義する`COleServerItem`です。 サーバーのアイテムの詳細については、次を参照してください。[サーバー: サーバー アイテム](../mfc/servers-server-items.md)です。  
-  
--   ドキュメント クラスの基本クラスを変更する`COleServerDoc`です。 詳細については、次を参照してください。[サーバー: サーバー ドキュメントの実装](../mfc/servers-implementing-server-documents.md)です。  
-  
--   派生したフレーム ウィンドウ クラスを定義する`COleIPFrameWnd`です。 詳細については、次を参照してください。[サーバー: 埋め込み先フレーム ウィンドウの実装](../mfc/servers-implementing-in-place-frame-windows.md)です。  
-  
--   Windows レジストリ データベースに、サーバー アプリケーションのエントリを作成して、OLE システムへのサーバーの新しいインスタンスを登録します。 このトピックの情報については、次を参照してください。[登録](../mfc/registration.md)です。  
-  
--   初期化し、サーバー アプリケーションを起動します。 このトピックの情報については、次を参照してください。[登録](../mfc/registration.md)です。  
-  
- 詳細については、次を参照してください。 [COleServerItem](../mfc/reference/coleserveritem-class.md)、 [COleServerDoc](../mfc/reference/coleserverdoc-class.md)、および[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)で、*クラス ライブラリ リファレンス*です。  
-  
-## <a name="see-also"></a>関連項目  
- [サーバー](../mfc/servers.md)   
- [コンテナー](../mfc/containers.md)   
- [メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)   
- [登録](../mfc/registration.md)
+
+この記事では、ビジュアル編集サーバー アプリケーションの MFC アプリケーション ウィザードを作成するコードについて説明します。 アプリケーション ウィザードを使用していない場合、この記事では、サーバー アプリケーションを実装するコードを記述する必要があります、領域を示します。
+
+新しいサーバー アプリケーションを作成するアプリケーション ウィザードを使用する場合の大量のサーバー固有のコードを提供します。 ビジュアル編集サーバーの機能を既存のアプリケーションに追加する場合は、アプリケーション ウィザードが必要なサーバー コードの残りの部分を追加する前に指定するコードを複製する必要があります。
+
+アプリケーション ウィザードで提供されるサーバー コードは、いくつかのカテゴリに分類されます。
+
+- サーバーのリソースを定義するには。
+
+   - メニュー リソースをサーバーが、独自のウィンドウで埋め込みアイテムを編集するときに使用します。
+
+   - メニューとツールバーのリソースを場所に、サーバーがアクティブなときに使用します。
+
+     これらのリソースの詳細については、次を参照してください。[メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)します。
+
+- 派生した item クラスを定義する`COleServerItem`します。 サーバーのアイテムの詳細については、次を参照してください。[サーバー: サーバー アイテム](../mfc/servers-server-items.md)します。
+
+- ドキュメント クラスの基本クラスを変更する`COleServerDoc`します。 詳細については、次を参照してください。[サーバー: サーバー ドキュメントの実装](../mfc/servers-implementing-server-documents.md)します。
+
+- 派生したフレーム ウィンドウ クラスを定義する`COleIPFrameWnd`します。 詳細については、次を参照してください。[サーバー: を実装する、インプレース フレーム Windows](../mfc/servers-implementing-in-place-frame-windows.md)します。
+
+- Windows の登録データベースにサーバー アプリケーションのエントリを作成し、OLE システム、サーバーの新しいインスタンスを登録します。 このトピックでは、次を参照してください。[登録](../mfc/registration.md)します。
+
+- 初期化とサーバー アプリケーションを起動します。 このトピックでは、次を参照してください。[登録](../mfc/registration.md)します。
+
+詳細については、次を参照してください。 [COleServerItem](../mfc/reference/coleserveritem-class.md)、 [COleServerDoc](../mfc/reference/coleserverdoc-class.md)、および[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)で、*クラス ライブラリ リファレンス*します。
+
+## <a name="see-also"></a>関連項目
+
+[サーバー](../mfc/servers.md)<br/>
+[コンテナー](../mfc/containers.md)<br/>
+[メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)<br/>
+[登録](../mfc/registration.md)
 

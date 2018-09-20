@@ -1,5 +1,5 @@
 ---
-title: ホット キー コントロールの使い方 |Microsoft ドキュメント
+title: ホット キー コントロールを使用して |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,29 +15,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4442d45cffdae63600fa3a405e29a139b149175
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: be0d27016204724672c23f04fdee38f01b69e6a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382945"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46372291"
 ---
 # <a name="using-a-hot-key-control"></a>ホット キー コントロールの使い方
-ホット キー コントロールの一般的な使用方法は、次のパターンを次に示します。  
-  
--   コントロールが作成されます。 コントロールがダイアログ ボックスのテンプレートで指定されている場合、ダイアログ ボックスの作成時に作成は自動です。 (必要、 [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)ホット キー コントロールに対応するダイアログ クラスのメンバーです)。また、使用することができます、[作成](../mfc/reference/chotkeyctrl-class.md#create)メンバー関数を任意のウィンドウの子ウィンドウとして、コントロールを作成します。  
-  
--   コントロールの既定値を設定する場合は、呼び出し、 [SetHotKey](../mfc/reference/chotkeyctrl-class.md#sethotkey)メンバー関数。 Shift キーを押し、特定の状態を禁止する場合は、呼び出す[SetRules](../mfc/reference/chotkeyctrl-class.md#setrules)です。 良いこれを行うには、ダイアログ ボックスで、コントロール ダイアログ ボックスの[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)関数。  
-  
--   ユーザーは、ホット キー コントロールにフォーカスがあるときに、ホット キーの組み合わせを押すことによって、コントロールとやり取りします。 ユーザーし、何らかの理由でことを示しますこのタスクが完了したこと、おそらく、ダイアログ ボックスにボタンをクリックします。  
-  
--   このメンバー関数を使用する必要があります、プログラムが通知され、ユーザーがホット キーを選択したこと、 [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey)ホット キー コントロールから仮想キーと shift キーを押し状態の値を取得します。  
-  
--   説明する方法のいずれかを使用して、ホット キーを設定することができます、ユーザーが選択したキーがわかったら、[ホット キーの設定](../mfc/setting-a-hot-key.md)です。  
-  
--   ホット キー コントロールがダイアログ ボックスでは、場合、および`CHotKeyCtrl`オブジェクトは自動的に破棄されます。 かどうか、する必要はありません、両方のコントロールをことを確認して、`CHotKeyCtrl`オブジェクトが破棄されました。  
-  
-## <a name="see-also"></a>関連項目  
- [CHotKeyCtrl の使い方](../mfc/using-chotkeyctrl.md)   
- [コントロール](../mfc/controls-mfc.md)
+
+ホット キー コントロールの一般的な使用方法では、次のパターンに従います。
+
+- コントロールが作成されます。 コントロールがダイアログ ボックスのテンプレートで指定されている場合、ダイアログ ボックスが作成されると作成は自動です。 (必要、 [CHotKeyCtrl](../mfc/reference/chotkeyctrl-class.md)ホット キー コントロールに対応するダイアログ クラスのメンバーです)。また、使用することができます、[作成](../mfc/reference/chotkeyctrl-class.md#create)メンバー関数は、すべてのウィンドウの子ウィンドウとして、コントロールを作成します。
+
+- コントロールの既定値を設定する場合は、呼び出し、 [SetHotKey](../mfc/reference/chotkeyctrl-class.md#sethotkey)メンバー関数。 特定のシフト状態を禁止する場合は、呼び出す[SetRules](../mfc/reference/chotkeyctrl-class.md#setrules)します。 これを行う適切な時刻は] ダイアログ ボックスで、[コントロール] ダイアログ ボックスの[OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)関数。
+
+- ユーザーは、ホット キー コントロールにフォーカスがある場合は、ホット キーの組み合わせを押すと、コントロールと対話します。 ユーザー、何らかの方法であることを示しますこのタスク完了すると、おそらく ダイアログ ボックスのボタンをクリックしています。
+
+- メンバー関数を使用するときに、プログラムには、ユーザーのホット キーが選択されている通知、 [GetHotKey](../mfc/reference/chotkeyctrl-class.md#gethotkey)ホット キー コントロールから、仮想キーと shift キーの状態の値を取得します。
+
+- 説明する方法のいずれかを使用して、ホット キーを設定することができます、ユーザーが選択したキーがわかったら、[ホット キーの設定](../mfc/setting-a-hot-key.md)します。
+
+- ホット キー コントロールがダイアログ ボックスでは、場合、および`CHotKeyCtrl`オブジェクトが自動的に破棄されます。 かどうか、する必要があることに、両方のコントロールを確認し、`CHotKeyCtrl`オブジェクトが破棄されました。
+
+## <a name="see-also"></a>関連項目
+
+[CHotKeyCtrl の使い方](../mfc/using-chotkeyctrl.md)<br/>
+[コントロール](../mfc/controls-mfc.md)
 

@@ -344,14 +344,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d3c5f68d35c4cf77073de3f8d2e6090f62a6dae2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050100"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46435533"
 ---
 # <a name="colecontrol-class"></a>COleControl クラス
+
 OLE コントロールを開発するための強力な基底クラスです。
 
 ## <a name="syntax"></a>構文
@@ -1440,15 +1441,13 @@ void FireReadyStateChange();
 
 準備完了状態には、次の値のいずれかを指定できます。
 
-既定の READYSTATE_UNINITIALIZED 初期化状態
-
-そのプロパティが現在読み込んでいる READYSTATE_LOADING コントロール
-
-READYSTATE_LOADED のコントロールが初期化されています。
-
-READYSTATE_INTERACTIVE コントロールが対話型にするための十分なデータが、非同期データがまだ読み込まれています。
-
-READYSTATE_COMPLETE コントロールがそのすべてのデータ
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|既定の初期化状態|
+|READYSTATE_LOADING|コントロールがそのプロパティを現在読み込んでください。|
+|READYSTATE_LOADED|コントロールが初期化されています。|
+|READYSTATE_INTERACTIVE|コントロールが対話型にするための十分なデータが、非同期データがまだ読み込まれています。|
+|READYSTATE_COMPLETE|コントロールがそのすべてのデータ|
 
 使用[GetReadyState](#getreadystate)コントロールの現在の対応状況を判断します。
 
@@ -1466,11 +1465,11 @@ virtual DWORD GetActivationPolicy();
 
 POINTERINACTIVE 列挙フラグの組み合わせ。 使用できるフラグは次のとおりです。
 
-POINTERINACTIVE_ACTIVATEONENTRY オブジェクトには、インプレース、マウスがマウスの移動操作中になったときにアクティブ化される必要があります。
-
-移動の操作を POINTERINACTIVE_DEACTIVATEONLEAVE マウス中に、オブジェクトからマウスが離れるときに、オブジェクトを非アクティブ化する必要があります。
-
-POINTERINACTIVE_ACTIVATEONDRAG オブジェクトは、インプレース アクティブ化されますドラッグ中に上にマウスをドラッグするアンド ドロップ操作する必要があります。
+|||
+|-|-|
+|POINTERINACTIVE_ACTIVATEONENTRY|オブジェクトには、インプレース、マウスがマウスの移動操作中になったときにアクティブ化される必要があります。|
+|POINTERINACTIVE_DEACTIVATEONLEAVE|オブジェクトは、マウスの移動操作中に、オブジェクトからマウスが離れるときに、非アクティブ化する必要があります。|
+|POINTERINACTIVE_ACTIVATEONDRAG|オブジェクトは、インプレース アクティブ化されますドラッグ中に上にマウスをドラッグするアンド ドロップ操作する必要があります。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -1915,15 +1914,13 @@ long GetReadyState();
 
 次の値のいずれかと、コントロールの準備状態:
 
-既定の READYSTATE_UNINITIALIZED 初期化状態
-
-そのプロパティが現在読み込んでいる READYSTATE_LOADING コントロール
-
-READYSTATE_LOADED のコントロールが初期化されています。
-
-READYSTATE_INTERACTIVE コントロールが対話型にするための十分なデータが、非同期データがまだ読み込まれています。
-
-READYSTATE_COMPLETE コントロールがそのすべてのデータ
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|既定の初期化状態|
+|READYSTATE_LOADING|コントロールがそのプロパティを現在読み込んでください。|
+|READYSTATE_LOADED|コントロールが初期化されています。|
+|READYSTATE_INTERACTIVE|コントロールが対話型にするための十分なデータが、非同期データがまだ読み込まれています。|
+|READYSTATE_COMPLETE|コントロールがそのすべてのデータ|
 
 ### <a name="remarks"></a>Remarks
 
@@ -2065,15 +2062,13 @@ void InternalSetReadyState(long lNewReadyState);
 *lNewReadyState*<br/>
 コントロールの場合、次の値のいずれかを設定する準備の状態:
 
-既定の READYSTATE_UNINITIALIZED 初期化状態
-
-そのプロパティが現在読み込んでいる READYSTATE_LOADING コントロール
-
-READYSTATE_LOADED のコントロールが初期化されています。
-
-READYSTATE_INTERACTIVE コントロールが対話型にするための十分なデータが、非同期データがまだ読み込まれています。
-
-READYSTATE_COMPLETE コントロールがそのすべてのデータ
+|||
+|-|-|
+|READYSTATE_UNINITIALIZED|既定の初期化状態|
+|READYSTATE_LOADING|コントロールがそのプロパティを現在読み込んでください。|
+|READYSTATE_LOADED|コントロールが初期化されています。|
+|READYSTATE_INTERACTIVE|コントロールが対話型にするための十分なデータが、非同期データがまだ読み込まれています。|
+|READYSTATE_COMPLETE|コントロールがそのすべてのデータ|
 
 ### <a name="remarks"></a>Remarks
 
@@ -2848,13 +2843,12 @@ virtual DWORD OnGetViewStatus();
 
 成功した場合は、な VIEWSTATUS 列挙の値のいずれかそれ以外の場合 0 を返します。 値には、次の任意の組み合わせがあります。
 
-VIEWSTATUS_OPAQUE オブジェクトが完全に不透明です。 このビットが設定されていない場合、オブジェクトには、透明な部分が含まれています。 このビットには、コンテンツに関連する側面にのみ、DVASPECT_ICON または DVASPECT_DOCPRINT が適用されます。
-
-VIEWSTATUS_SOLIDBKGND オブジェクトには、純色の背景 (単色のブラシ パターンではないので構成される) があります。 このビットは、VIEWSTATUS_OPAQUE が設定されていて、DVASPECT_ICON または DVASPECT_DOCPRINT およびコンテンツに関連する側面にのみ適用される場合にのみ有効です。
-
-VIEWSTATUS_DVASPECTOPAQUE オブジェクトは、DVASPECT_OPAQUE をサポートします。 パラメーターは、この側面で呼び出すことができます、描画範囲を受け取るすべての IViewObjectEx メソッド。
-
-VIEWSTATUS_DVASPECTTRANSPARENT オブジェクトは、DVASPECT_TRANSPARENT をサポートします。 すべて`IViewObjectEx`パラメーターは、この側面で呼び出すことができます、描画の外観を取るメソッド。
+|||
+|-|-|
+|VIEWSTATUS_OPAQUE|オブジェクトは、完全に不透明です。 このビットが設定されていない場合、オブジェクトには、透明な部分が含まれています。 このビットには、コンテンツに関連する側面にのみ、DVASPECT_ICON または DVASPECT_DOCPRINT が適用されます。|
+|VIEWSTATUS_SOLIDBKGND|オブジェクトには、純色の背景 (単色のブラシ パターンではないので構成される) があります。 このビットは、VIEWSTATUS_OPAQUE が設定されていて、DVASPECT_ICON または DVASPECT_DOCPRINT およびコンテンツに関連する側面にのみ適用される場合にのみ有効です。|
+|VIEWSTATUS_DVASPECTOPAQUE|オブジェクトは、DVASPECT_OPAQUE をサポートします。 パラメーターは、この側面で呼び出すことができます、描画範囲を受け取るすべての IViewObjectEx メソッド。|
+|VIEWSTATUS_DVASPECTTRANSPARENT|オブジェクトは、DVASPECT_TRANSPARENT をサポートします。 すべて`IViewObjectEx`パラメーターは、この側面で呼び出すことができます、描画の外観を取るメソッド。|
 
 ### <a name="remarks"></a>Remarks
 

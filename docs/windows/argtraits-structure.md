@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e3eade86404bcd4fef7ce3356d36a43ac6a59a8f
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42597756"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418399"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 構造体
 
@@ -120,37 +120,37 @@ struct ArgTraits<HRESULT (STDMETHODCALLTYPE TDelegateInterface::*)(TArg1, TArg2,
 
 ### <a name="parameters"></a>パラメーター
 
-*TMemberFunction*  
+*TMemberFunction*<br/>
 Typename パラメーターことはできませんと一致する ArgTraits 構造体の`Invoke`メソッド シグネチャ。
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 デリゲートのインターフェイスです。
 
-*TArg1*  
+*TArg1*<br/>
 最初の引数の型、`Invoke`メソッド。
 
-*TArg2*  
+*TArg2*<br/>
 2 番目の引数の型、`Invoke`メソッド。
 
-*TArg3*  
+*TArg3*<br/>
 3 番目の引数の型、`Invoke`メソッド。
 
-*TArg4*  
+*TArg4*<br/>
 4 番目の引数の型、`Invoke`メソッド。
 
-*TArg5*  
+*TArg5*<br/>
 5 番目の引数の型、`Invoke`メソッド。
 
-*TArg6*  
+*TArg6*<br/>
 6 番目の引数の型、`Invoke`メソッド。
 
-*TArg7*  
+*TArg7*<br/>
 7 番目の引数の型、`Invoke`メソッド。
 
-*TArg8*  
+*TArg8*<br/>
 8 番目の引数の型、`Invoke`メソッド。
 
-*TArg9*  
+*TArg9*<br/>
 9 番目の引数の型、`Invoke`メソッド。
 
 ## <a name="remarks"></a>Remarks
@@ -175,7 +175,7 @@ Typename パラメーターことはできませんと一致する ArgTraits 構
 
 ### <a name="public-constants"></a>パブリック定数
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[ArgTraits::args 定数](../windows/argtraits-args-constant.md)|パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。|
 

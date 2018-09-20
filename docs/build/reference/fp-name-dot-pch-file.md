@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54968c551a79dbda1f81af682222e22ced5fdf0f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0a851f93ae845d56b9c986e822e94970ad5cccd5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700088"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427135"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (.pch ファイルの名前の指定)
 
@@ -80,7 +80,7 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 
 ## <a name="see-also"></a>関連項目
 
-[出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)
+[出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)<br/>
 [コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
 [パス名の指定](../../build/reference/specifying-the-pathname.md)

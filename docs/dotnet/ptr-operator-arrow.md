@@ -1,5 +1,5 @@
 ---
-title: ptr::operator-&gt; |Microsoft ドキュメント
+title: ptr::operator-&gt; |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,156 +20,163 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 6f18329bc7d3e1d3e76074e9fdb20c7f6dbe10c5
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: ec7844f6c26f219588d147052fd43437e2a1e8c7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33160017"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438783"
 ---
 # <a name="ptroperator-gt"></a>ptr::operator-&gt;
-メンバー アクセス演算子、所有されている COM オブジェクトでメソッドを呼び出すために使用します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-_detail::smart_com_ptr<_interface_type> operator->();  
-```  
-  
-## <a name="return-value"></a>戻り値  
- A `smart_com_ptr` COM オブジェクトにします。  
-  
-## <a name="exceptions"></a>例外  
- 内部的には、`QueryInterface`所有されている COM オブジェクトおよびすべてのエラーで呼び出される`HRESULT`で例外に変換<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>です。  
-  
-## <a name="remarks"></a>コメント  
- この演算子を使用すると、所有されている COM オブジェクトのメソッドを呼び出すことができます。 一時的な返します`smart_com_ptr`自動的に処理する独自`AddRef`と`Release`です。  
-  
-## <a name="example"></a>例  
- この例を使用して CLR クラスを実装して、`com::ptr`をそのプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 `WriteDocument`関数を使用して`operator->`を呼び出して、`get_firstChild`ドキュメント オブジェクトのメンバーです。  
-  
-```  
-// comptr_op_member.cpp  
-// compile with: /clr /link msxml2.lib  
-#include <msxml2.h>  
-#include <msclr\com\ptr.h>  
-  
-#import <msxml3.dll> raw_interfaces_only  
-  
-using namespace System;  
-using namespace System::Runtime::InteropServices;  
-using namespace msclr;  
-  
-// a ref class that uses a com::ptr to contain an   
-// IXMLDOMDocument object  
-ref class XmlDocument {  
-public:  
-   // construct the internal com::ptr with a null interface  
-   // and use CreateInstance to fill it  
-   XmlDocument(String^ progid) {  
-      m_ptrDoc.CreateInstance(progid);     
-   }  
-  
-   // add a reference to and return the COM object  
-   // but keep an internal reference to the object  
-   IXMLDOMDocument* GetDocument() {  
-      return m_ptrDoc.GetInterface();  
-   }  
-  
-   // simplified function that only writes the first node  
-   void WriteDocument() {  
-      IXMLDOMNode* pNode = NULL;  
-      BSTR bstr = NULL;  
-  
-      try {  
-         // use operator -> to call XML Doc member  
-         Marshal::ThrowExceptionForHR(m_ptrDoc->get_firstChild(&pNode));  
-         if (NULL != pNode) {  
-            // write out the xml  
-            Marshal::ThrowExceptionForHR(pNode->get_nodeName(&bstr));  
-            String^ strName = gcnew String(bstr);  
-            Console::Write("<{0}>", strName);  
-            ::SysFreeString(bstr);  
-            bstr = NULL;  
-  
-            Marshal::ThrowExceptionForHR(pNode->get_text(&bstr));  
-            Console::Write(gcnew String(bstr));  
-            ::SysFreeString(bstr);  
-            bstr = NULL;  
-  
-            Console::WriteLine("</{0}>", strName);  
-         }  
-      }  
-      finally {  
-         if (NULL != pNode) {  
-            pNode->Release();  
-         }  
-         ::SysFreeString(bstr);  
-      }  
-   }  
-  
-   // note that the destructor will call the com::ptr destructor  
-   // and automatically release the reference to the COM object  
-  
-private:  
-   com::ptr<IXMLDOMDocument> m_ptrDoc;  
-};  
-  
-// unmanaged function that loads XML into a raw XML DOM Document object  
-HRESULT LoadXml(IXMLDOMDocument* pDoc, BSTR bstrXml) {  
-   HRESULT hr = S_OK;  
-   VARIANT_BOOL bSuccess;  
-   hr = pDoc->loadXML(bstrXml, &bSuccess);  
-   if (S_OK == hr && !bSuccess) {  
-      hr = E_FAIL;  
-   }  
-   return hr;  
-}  
-  
-// use the ref class to handle an XML DOM Document object  
-int main() {  
-   IXMLDOMDocument* pDoc = NULL;  
-   BSTR bstrXml = NULL;  
-  
-   try {  
-      // create the class from a progid string  
-      XmlDocument doc("Msxml2.DOMDocument.3.0");  
-  
-      bstrXml = ::SysAllocString(L"<word>persnickety</word>");  
-      if (NULL == bstrXml) {  
-         throw gcnew OutOfMemoryException("bstrXml");  
-      }  
-      // detach the document object from the ref class  
-      pDoc = doc.GetDocument();  
-      // use unmanaged function and raw object to load xml  
-      Marshal::ThrowExceptionForHR(LoadXml(pDoc, bstrXml));  
-      // release reference to document object (but ref class still references it)  
-      pDoc->Release();  
-      pDoc = NULL;  
-  
-      // call another function on the ref class  
-      doc.WriteDocument();  
-   }  
-   catch (Exception^ e) {  
-      Console::WriteLine(e);     
-   }  
-   finally {  
-      if (NULL != pDoc) {  
-         pDoc->Release();  
-      }  
-  
-   }  
-}  
-```  
-  
-```Output  
-<word>persnickety</word>  
-```  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー ファイル** \<msclr\com\ptr.h >  
-  
- **Namespace** msclr::com  
-  
-## <a name="see-also"></a>関連項目  
- [ptr のメンバー](../dotnet/ptr-members.md)
+
+メンバー アクセス演算子で所有されている COM オブジェクトでメソッドを呼び出すために使用します。
+
+## <a name="syntax"></a>構文
+
+```
+_detail::smart_com_ptr<_interface_type> operator->();
+```
+
+## <a name="return-value"></a>戻り値
+
+A `smart_com_ptr` COM オブジェクトにします。
+
+## <a name="exceptions"></a>例外
+
+内部的には、`QueryInterface`所有されている COM オブジェクトおよびすべてのエラーで呼び出される`HRESULT`で例外に変換されます<xref:System.Runtime.InteropServices.Marshal.ThrowExceptionForHR%2A>します。
+
+## <a name="remarks"></a>Remarks
+
+この演算子を使用して、所有されている COM オブジェクトのメソッドを呼び出すことができます。 一時的な返します`smart_com_ptr`自動的に処理する独自`AddRef`と`Release`します。
+
+## <a name="example"></a>例
+
+この例の実装を使用する CLR クラス、`com::ptr`のプライベート メンバーをラップする`IXMLDOMDocument`オブジェクト。 `WriteDocument`関数は`operator->`を呼び出す、`get_firstChild`ドキュメント オブジェクトのメンバー。
+
+```
+// comptr_op_member.cpp
+// compile with: /clr /link msxml2.lib
+#include <msxml2.h>
+#include <msclr\com\ptr.h>
+
+#import <msxml3.dll> raw_interfaces_only
+
+using namespace System;
+using namespace System::Runtime::InteropServices;
+using namespace msclr;
+
+// a ref class that uses a com::ptr to contain an
+// IXMLDOMDocument object
+ref class XmlDocument {
+public:
+   // construct the internal com::ptr with a null interface
+   // and use CreateInstance to fill it
+   XmlDocument(String^ progid) {
+      m_ptrDoc.CreateInstance(progid);
+   }
+
+   // add a reference to and return the COM object
+   // but keep an internal reference to the object
+   IXMLDOMDocument* GetDocument() {
+      return m_ptrDoc.GetInterface();
+   }
+
+   // simplified function that only writes the first node
+   void WriteDocument() {
+      IXMLDOMNode* pNode = NULL;
+      BSTR bstr = NULL;
+
+      try {
+         // use operator -> to call XML Doc member
+         Marshal::ThrowExceptionForHR(m_ptrDoc->get_firstChild(&pNode));
+         if (NULL != pNode) {
+            // write out the xml
+            Marshal::ThrowExceptionForHR(pNode->get_nodeName(&bstr));
+            String^ strName = gcnew String(bstr);
+            Console::Write("<{0}>", strName);
+            ::SysFreeString(bstr);
+            bstr = NULL;
+
+            Marshal::ThrowExceptionForHR(pNode->get_text(&bstr));
+            Console::Write(gcnew String(bstr));
+            ::SysFreeString(bstr);
+            bstr = NULL;
+
+            Console::WriteLine("</{0}>", strName);
+         }
+      }
+      finally {
+         if (NULL != pNode) {
+            pNode->Release();
+         }
+         ::SysFreeString(bstr);
+      }
+   }
+
+   // note that the destructor will call the com::ptr destructor
+   // and automatically release the reference to the COM object
+
+private:
+   com::ptr<IXMLDOMDocument> m_ptrDoc;
+};
+
+// unmanaged function that loads XML into a raw XML DOM Document object
+HRESULT LoadXml(IXMLDOMDocument* pDoc, BSTR bstrXml) {
+   HRESULT hr = S_OK;
+   VARIANT_BOOL bSuccess;
+   hr = pDoc->loadXML(bstrXml, &bSuccess);
+   if (S_OK == hr && !bSuccess) {
+      hr = E_FAIL;
+   }
+   return hr;
+}
+
+// use the ref class to handle an XML DOM Document object
+int main() {
+   IXMLDOMDocument* pDoc = NULL;
+   BSTR bstrXml = NULL;
+
+   try {
+      // create the class from a progid string
+      XmlDocument doc("Msxml2.DOMDocument.3.0");
+
+      bstrXml = ::SysAllocString(L"<word>persnickety</word>");
+      if (NULL == bstrXml) {
+         throw gcnew OutOfMemoryException("bstrXml");
+      }
+      // detach the document object from the ref class
+      pDoc = doc.GetDocument();
+      // use unmanaged function and raw object to load xml
+      Marshal::ThrowExceptionForHR(LoadXml(pDoc, bstrXml));
+      // release reference to document object (but ref class still references it)
+      pDoc->Release();
+      pDoc = NULL;
+
+      // call another function on the ref class
+      doc.WriteDocument();
+   }
+   catch (Exception^ e) {
+      Console::WriteLine(e);
+   }
+   finally {
+      if (NULL != pDoc) {
+         pDoc->Release();
+      }
+
+   }
+}
+```
+
+```Output
+<word>persnickety</word>
+```
+
+## <a name="requirements"></a>要件
+
+**ヘッダー ファイル** \<msclr\com\ptr.h >
+
+**Namespace** msclr::com
+
+## <a name="see-also"></a>関連項目
+
+[ptr のメンバー](../dotnet/ptr-members.md)

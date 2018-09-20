@@ -1,5 +1,5 @@
 ---
-title: initonly (C + + CLI) |Microsoft ドキュメント
+title: initonly (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,33 +18,35 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 49c52c4c17c3e54bfba0ac7188b3300b132213cc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 1c98c2ab1391f65d31e64a60bf0bd86485776ad6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33130556"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429962"
 ---
 # <a name="initonly-ccli"></a>initonly (C++/CLI)
-**initonly**をその変数の代入を示す状況依存のキーワードが、同じクラスの静的コンス トラクターまたは宣言の一部としてのみ実行します。  
-  
- `initionly` を使用する方法を次の例に示します。  
-  
-```  
-// mcpp_initonly.cpp  
-// compile with: /clr /c  
-ref struct Y1 {  
-   initonly  
-   static int staticConst1;  
-  
-   initonly  
-   static int staticConst2 = 0;  
-  
-   static Y1() {  
-      staticConst1 = 0;  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)
+
+**initonly**はその変数の代入を示す状況依存のキーワードは、同じクラスの静的コンス トラクターまたは宣言の一部としてのみ発生することができます。
+
+`initionly` を使用する方法を次の例に示します。
+
+```
+// mcpp_initonly.cpp
+// compile with: /clr /c
+ref struct Y1 {
+   initonly
+   static int staticConst1;
+
+   initonly
+   static int staticConst2 = 0;
+
+   static Y1() {
+      staticConst1 = 0;
+   }
+};
+```
+
+## <a name="see-also"></a>関連項目
+
+[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)

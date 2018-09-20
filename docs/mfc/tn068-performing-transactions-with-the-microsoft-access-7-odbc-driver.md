@@ -1,5 +1,5 @@
 ---
-title: 'TN068: Microsoft Access 7 ODBC ドライバーでのトランザクションを実行する |Microsoft ドキュメント'
+title: 'TN068: Microsoft Access 7 ODBC ドライバーを使用したトランザクションの実行 |Microsoft Docs'
 ms.custom: ''
 ms.date: 06/28/2018
 ms.technology:
@@ -18,41 +18,41 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b3db4c30eceb47d0f9169195fd131b4334d25cd
-ms.sourcegitcommit: 208d445fd7ea202de1d372d3f468e784e77bd666
+ms.openlocfilehash: 4006ee6953342fd55b644eeb2a8e8f30c1d80285
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2018
-ms.locfileid: "37122347"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46395844"
 ---
 # <a name="tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver"></a>テクニカル ノート 68: Microsoft Access 7 ODBC ドライバーでのトランザクションの実行
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
 
-ここでは、MFC ODBC データベース クラスと Microsoft ODBC Driver パックでデスクトップ バージョン 3.0 に含まれる Microsoft Access 7.0 の ODBC ドライバーを使用する場合は、トランザクションを実行する方法について説明します。
+ここでは、MFC ODBC データベース クラスと Microsoft ODBC Desktop ドライバー Pack バージョン 3.0 に含まれる Microsoft Access 7.0 ODBC ドライバーを使用する場合は、トランザクションを実行する方法について説明します。
 
 ## <a name="overview"></a>概要
 
-データベース アプリケーションでは、トランザクションを実行する場合がありますを呼び出す`CDatabase::BeginTrans`と`CRecordset::Open`アプリケーションで、正しい順序で。 Microsoft Access 7.0 ドライバーは、Microsoft Jet データベース エンジンを使用し、Jet は、アプリケーションでは、開いているカーソルのある任意のデータベースでトランザクションを開始できないことが必要です。 開いているカーソルが開いているようになります、MFC ODBC データベース クラスの`CRecordset`オブジェクト。
+データベース アプリケーションでは、トランザクションを実行する場合に呼び出す注意する必要があります`CDatabase::BeginTrans`と`CRecordset::Open`アプリケーションで、正しい順序で。 Microsoft Access 7.0 ドライバーは、Microsoft Jet データベース エンジンを使用して、Jet では、アプリケーションでは、開いているカーソルのある任意のデータベースでトランザクションを開始できないことが必要です。 MFC ODBC データベース クラスの開いているカーソルは、オープンに割り当てられる総合`CRecordset`オブジェクト。
 
-呼び出しの前にレコード セットを開く場合`BeginTrans`、すべてのエラー メッセージが表示されない場合があります。 ただし、すべてのレコード セットが更新呼び出した後に永続的に、アプリケーションが`CRecordset::Update`、更新プログラムはロールバックされませんを呼び出して、`Rollback`です。 この問題を避けるためには、呼び出す必要があります`BeginTrans`最初し、レコード セットを開きます。
+呼び出しの前にレコード セットを開く場合`BeginTrans`、すべてのエラー メッセージが表示されない場合があります。 ただし、すべてのレコード セットは更新呼び出した後に永続的に、アプリケーションが`CRecordset::Update`、更新プログラムはロールバックされませんを呼び出して、`Rollback`します。 この問題を回避するために呼び出す必要がある`BeginTrans`最初し、レコード セットを開きます。
 
-MFC では、commit および rollback のカーソルの動作のドライバーの機能を確認します。 クラス`CDatabase`2 つのメンバー関数を提供`GetCursorCommitBehavior`と`GetCursorRollbackBehavior`に、開いているすべてのトランザクションの効果を判断`CRecordset`オブジェクト。 これらのメンバー関数が返す、Microsoft Access 7.0 の ODBC ドライバーの`SQL_CB_CLOSE`Access ドライバーがカーソル位置の保存をサポートしていないためです。 そのため、呼び出す必要があります`CRecordset::Requery`次、`CommitTrans`または`Rollback`操作します。
+MFC は、カーソルのコミットとロールバックの動作のドライバーの機能を確認します。 クラス`CDatabase`2 つのメンバー関数は、`GetCursorCommitBehavior`と`GetCursorRollbackBehavior`、開くときに、トランザクションの効果を確認するには、`CRecordset`オブジェクト。 これらのメンバー関数が返す、Microsoft Access 7.0 の ODBC ドライバーの`SQL_CB_CLOSE`Access ドライバーがカーソル位置の保持をサポートしていないためです。 そのため、呼び出す必要がある`CRecordset::Requery`次、`CommitTrans`または`Rollback`操作。
 
-複数のトランザクションを 1 つずつ実行する必要がある場合を呼び出せません`Requery`最初のトランザクション次のいずれかから開始からします。 [次へ] 呼び出しの前に、レコード セットを閉じる必要があります`BeginTrans`Jet の要件を満たすためにします。 このテクニカル ノートでは、このような状況を処理する 2 つの方法について説明します。
+複数のトランザクションを 1 つずつ実行する必要がある場合を呼び出すことはできません`Requery`後、最初のトランザクションと次の 1 つを開始します。 [次へ] 呼び出しの前に、レコード セットを閉じる必要があります`BeginTrans`Jet の要件を満たすためにします。 このテクニカル ノートには、このような状況を処理する 2 つの方法について説明します。
 
-- それぞれの後に、レコード セットを閉じる`CommitTrans`または`Rollback`操作します。
+- それぞれの後、レコード セットを閉じる`CommitTrans`または`Rollback`操作。
 
-- ODBC API 関数を使用して`SQLFreeStmt`です。
+- ODBC API 関数を使用して`SQLFreeStmt`します。
 
 ## <a name="closing-the-recordset-after-each-committrans-or-rollback-operation"></a>各 CommitTrans またはロールバック操作の後に、レコード セットを閉じる
 
-トランザクションを開始する前に、レコード セット オブジェクトが閉じられていることを確認します。 呼び出した後`BeginTrans`、レコード セットを呼び出す`Open`メンバー関数。 レコード セットを呼び出した後すぐに閉じる`CommitTrans`または`Rollback`です。 繰り返しレコード セットの開閉によってアプリケーションのパフォーマンスが低下することに注意してください。
+トランザクションを開始する前に、レコード セット オブジェクトが閉じられていることを確認します。 呼び出した後`BeginTrans`を呼び出して、レコード セットの`Open`メンバー関数。 レコード セットを呼び出した後すぐに閉じる`CommitTrans`または`Rollback`します。 繰り返しレコード セットの開閉がアプリケーションのパフォーマンスを低下することに注意してください。
 
-## <a name="using-sqlfreestmt"></a>SQLFreeStmt を使用します。
+## <a name="using-sqlfreestmt"></a>SQLFreeStmt の使用
 
-ODBC API 関数を使用することもできます。`SQLFreeStmt`を明示的にトランザクションの終了後にカーソルを閉じます。 別のトランザクションを開始するには、呼び出す`BeginTrans`続く`CRecordset::Requery`です。 呼び出すときに`SQLFreeStmt`、レコード セットの HSTMT を最初のパラメーターとして指定する必要がありますと*SQL_CLOSE* 2 番目のパラメーターです。 このメソッドが終了し、すべてのトランザクションの先頭のレコード セットを開くよりも高速です。 次のコードでは、この手法を実装する方法を示します。
+ODBC API 関数を使用することもできます。`SQLFreeStmt`を明示的にトランザクションを終了した後、カーソルを閉じます。 別のトランザクションを開始するには、呼び出す`BeginTrans`続けて`CRecordset::Requery`します。 呼び出すときに`SQLFreeStmt`、レコード セットの HSTMT は最初のパラメーターとして指定する必要がありますと*SQL_CLOSE* 2 番目のパラメーター。 このメソッドが終了し、すべてのトランザクションの先頭のレコード セットを開くよりも高速です。 次のコードでは、この手法を実装する方法を示します。
 
 ```cpp
 CMyDatabase db;
@@ -86,11 +86,11 @@ rs.Close();
 db.Close();
 ```
 
-この手法を実装する別の方法は、新しい関数を記述する`RequeryWithBeginTrans`、1 つ目のロールバックまたはコミットした後、次のトランザクションを開始するに呼び出せるです。 このような関数を記述するには、次の手順を行います。
+この手法を実装する別の方法は、新しい関数を記述する`RequeryWithBeginTrans`、1 つ目のロールバックまたはコミットした後、[次へ] のトランザクションの開始を呼び出すことができます。 このような関数を記述するには、次の手順を実行します。
 
-1. コードをコピー`CRecordset::Requery( )`新しい関数にします。
+1. コードをコピーし`CRecordset::Requery( )`新しい関数をします。
 
-2. 呼び出しの直後に次の行を追加`SQLFreeStmt`:
+2. 次の行を追加する呼び出しのすぐ後`SQLFreeStmt`:
 
    `m_pDatabase->BeginTrans( );`
 
@@ -119,9 +119,9 @@ db.CommitTrans();   // or Rollback()
 ```
 
 > [!NOTE]
-> レコード セットのメンバー変数を変更する必要がある場合は、この手法を使用しないでください*か*または*レコード*トランザクション間でします。 その場合は、それぞれの後に、レコード セットを閉じる必要があります`CommitTrans`または`Rollback`操作します。
+> レコード セットのメンバー変数を変更する必要がある場合は、この手法を使用しないでください*か*または*レコード*トランザクション間で。 その場合は、それぞれの後、レコード セットを閉じる必要があります`CommitTrans`または`Rollback`操作。
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)  
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)  
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)

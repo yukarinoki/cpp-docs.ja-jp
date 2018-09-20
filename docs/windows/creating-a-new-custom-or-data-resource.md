@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6a92e7904b3b42422bebf5a80e0f1b03dd818f86
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2e2939c7f0a68401b4c1a8c43b5c6335a0acfcb3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314583"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403944"
 ---
 # <a name="creating-a-new-custom-or-data-resource-c"></a>新しいカスタム リソースまたはデータ リソース (C++) を作成します。
 
@@ -40,9 +40,9 @@ ms.locfileid: "44314583"
 
 3. **コンパイル時ディレクティブ**ボックスに、入力、`#include`カスタム リソースを含むファイルの名前を指定するステートメント。 例えば:
 
-```cpp
+    ```cpp
     #include mydata.rc
- ```
+    ```
 
    入力する構文とスペルが正しいことを確認します。 **[コンパイル時に追加するファイル]** ボックスの内容が、入力したとおりにリソース スクリプト ファイルに挿入されます。
 

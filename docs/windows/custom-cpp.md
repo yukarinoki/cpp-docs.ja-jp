@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 848ea415d0638b6135c69cd14e442f45dab40237
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: ec3ba8280ab481211d98c9dc5256c94e76e193e2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220362"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396450"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -39,10 +39,10 @@ ms.locfileid: "43220362"
 
 ### <a name="parameters"></a>パラメーター
 
-*uuid*  
+*uuid*<br/>
 一意の ID。
 
-*値*  
+*値*<br/>
 バリアントを入れる値。
 
 ## <a name="remarks"></a>Remarks
@@ -58,7 +58,7 @@ ms.locfileid: "43220362"
 |||
 |-|-|
 |**対象**|非 COM**インターフェイス**、**クラス**、**列挙**s、`idl_module`メソッド、インターフェイスのメンバー、インターフェイスのパラメーター、 **typedef**、s**共用体**s、**構造体**s|
-|**反復可能**|[はい]|
+|**反復可能**|はい|
 |**必要な属性**|**コクラス**(クラスで使用) 場合|
 |**無効な属性**|なし|
 
@@ -66,10 +66,10 @@ ms.locfileid: "43220362"
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[スタンドアロン属性](../windows/stand-alone-attributes.md)  
-[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)  
-[パラメーター属性](../windows/parameter-attributes.md)  
-[メソッド属性](../windows/method-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[スタンドアロン属性](../windows/stand-alone-attributes.md)<br/>
+[Typedef、Enum、Union、および Struct 型の属性](../windows/typedef-enum-union-and-struct-attributes.md)<br/>
+[パラメーター属性](../windows/parameter-attributes.md)<br/>
+[メソッド属性](../windows/method-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
 [インターフェイス属性](../windows/interface-attributes.md)  

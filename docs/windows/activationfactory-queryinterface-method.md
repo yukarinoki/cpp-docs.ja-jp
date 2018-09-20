@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8783d30aa018e0b29705c4c6bdda3b9e2a47af4a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b4fa728039010ec30748773a51579ad8aabfac0f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613233"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46398782"
 ---
 # <a name="activationfactoryqueryinterface-method"></a>ActivationFactory::QueryInterface メソッド
 
@@ -38,10 +38,10 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*riid*  
+*riid*<br/>
 インターフェイス ID。
 
-*ppvObject*  
+*ppvObject*<br/>
 この操作が完了すると、パラメーターで指定されたインターフェイスへのポインター *riid*します。
 
 ## <a name="return-value"></a>戻り値

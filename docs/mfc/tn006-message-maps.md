@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6faa29858e94c7d80d6039e35278b6a7ae263a85
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 69aecab15ffb1914dbc8a6a6ae15fca307bc77ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43213978"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46386253"
 ---
 # <a name="tn006-message-maps"></a>テクニカル ノート 6: メッセージ マップ
 
@@ -87,7 +87,7 @@ protected:
 > [!NOTE]
 > ClassWizard では、使用することが必要です、 **afx_msg**メッセージ マップのハンドラーの宣言でキーワード。
 
- これらの関数シグネチャは、単純な規則を使用して取得しました。 関数の名前は常に始まる`"On`"。 大文字で入力の各単語の最初の文字を削除「wm _」の Windows メッセージの名前は、この後にします。 パラメーターの順序付けは*wParam*続けて`LOWORD`(*lParam*) し、 `HIWORD`(*lParam*)。 使用されていないパラメーターは渡されません。 MFC クラスによってラップされているすべてのハンドルは、適切な MFC オブジェクトへのポインターに変換されます。 次の例では、WM_PAINT メッセージを処理し、発生する方法を示しています、`CMyWnd::OnPaint`に呼び出される関数。
+これらの関数シグネチャは、単純な規則を使用して取得しました。 関数の名前は常に始まる`"On`"。 大文字で入力の各単語の最初の文字を削除「wm _」の Windows メッセージの名前は、この後にします。 パラメーターの順序付けは*wParam*続けて`LOWORD`(*lParam*) し、 `HIWORD`(*lParam*)。 使用されていないパラメーターは渡されません。 MFC クラスによってラップされているすべてのハンドルは、適切な MFC オブジェクトへのポインターに変換されます。 次の例では、WM_PAINT メッセージを処理し、発生する方法を示しています、`CMyWnd::OnPaint`に呼び出される関数。
 
 ```cpp
 BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
@@ -97,7 +97,7 @@ BEGIN_MESSAGE_MAP(CMyWnd, CMyParentWndClass)
 END_MESSAGE_MAP()
 ```
 
- 任意の関数またはクラス定義のスコープ外メッセージ マップのテーブルを定義する必要があります。 Extern"C"ブロックで配置する必要があります。
+任意の関数またはクラス定義のスコープ外メッセージ マップのテーブルを定義する必要があります。 Extern"C"ブロックで配置する必要があります。
 
 > [!NOTE]
 > ClassWizard の間に発生するメッセージ マップ エントリを変更、//{{と//}} コメントの角かっこです。
@@ -223,7 +223,7 @@ ON_UPDATE_COMMAND_UI(id, memberFxn)
     }
     ```
 
- 高度なユーザーは 1 つのコマンド ハンドラーを使用してさまざまなコマンドを処理することができます: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)または ON_COMMAND_RANGE_EX します。 これらのマクロの詳細については、製品ドキュメントを参照してください。
+高度なユーザーは 1 つのコマンド ハンドラーを使用してさまざまなコマンドを処理することができます: [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)または ON_COMMAND_RANGE_EX します。 これらのマクロの詳細については、製品ドキュメントを参照してください。
 
 > [!NOTE]
 > ClassWizard ON_COMMAND とハンドラーの作成をサポートしていますが、ON_COMMAND_EX または割り当てるにはハンドラーの作成をサポートしていません。 ただし、クラス ウィザードが解析され、4 つのコマンド ハンドラーのすべてのバリエーションを参照することができます。
@@ -251,5 +251,5 @@ Windows コモン コントロールを使用して、強力な[WM_NOTIFY](https
 
 ## <a name="see-also"></a>関連項目
 
-[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)  
-[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)  
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)

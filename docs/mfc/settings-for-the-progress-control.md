@@ -1,5 +1,5 @@
 ---
-title: プログレス コントロールの設定 |Microsoft ドキュメント
+title: プログレス コントロールの設定 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,23 +15,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26afdcb58a64f2d2042596349acc4496aa530468
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b6b11189e3e0a8381ade372841e6c7b25a5a9fa0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380010"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46434636"
 ---
 # <a name="settings-for-the-progress-control"></a>プログレス コントロールの設定
-プログレス コントロールの基本設定 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) は、範囲と現在の位置。 範囲は、操作の全体の時間を表します。 現在の位置では、アプリケーションが加えた操作の完了に向けた進行状況を表します。 範囲または位置への変更が発生する進行状況コントロール自体を再描画をします。  
-  
- 既定では、範囲が設定されて 0 - 100、および最初の位置が 0 に設定します。 プログレス コントロールの現在の範囲の設定を取得するを使用して、 [GetRange](../mfc/reference/cprogressctrl-class.md#getrange)メンバー関数。 範囲を変更するには、使用、 [SetRange](../mfc/reference/cprogressctrl-class.md#setrange)メンバー関数。  
-  
- 位置を設定するには、使用[SetPos](../mfc/reference/cprogressctrl-class.md#setpos)です。 新しい値を指定せず、現在の位置を取得する[GetPos](../mfc/reference/cprogressctrl-class.md#getpos)です。 たとえば、現在の操作の状態を簡単にことができます。  
-  
- プログレス コントロールの現在の位置をステップを使用して[StepIt](../mfc/reference/cprogressctrl-class.md#stepit)です。 各手順の量を設定するには、使用[SetStep](../mfc/reference/cprogressctrl-class.md#setstep)  
-  
-## <a name="see-also"></a>関連項目  
- [CProgressCtrl の使い方](../mfc/using-cprogressctrl.md)   
- [コントロール](../mfc/controls-mfc.md)
+
+プログレス コントロールの基本設定 ([CProgressCtrl](../mfc/reference/cprogressctrl-class.md)) は、範囲と現在の位置。 範囲は、操作の全体の期間を表します。 現在の位置は、アプリケーションによって、操作の完了に向けた準備された進行状況を表します。 範囲や位置を変更するには、進行状況コントロール自体を再描画するが発生します。
+
+既定で範囲を設定する 0 - 100、および初期位置が 0 に設定されます。 プログレス コントロールの現在の範囲の設定を取得するには、使用、 [GetRange](../mfc/reference/cprogressctrl-class.md#getrange)メンバー関数。 範囲を変更するには、使用、 [SetRange](../mfc/reference/cprogressctrl-class.md#setrange)メンバー関数。
+
+位置を設定する[SetPos](../mfc/reference/cprogressctrl-class.md#setpos)します。 新しい値を指定せず、現在の位置を取得する[GetPos](../mfc/reference/cprogressctrl-class.md#getpos)します。 たとえば、単純に現在の操作の状態に対してクエリを実行します。
+
+プログレス コントロールの現在の位置を手順を使用して[StepIt](../mfc/reference/cprogressctrl-class.md#stepit)します。 ステップごとの量を設定する[SetStep](../mfc/reference/cprogressctrl-class.md#setstep)
+
+## <a name="see-also"></a>関連項目
+
+[CProgressCtrl の使い方](../mfc/using-cprogressctrl.md)<br/>
+[コントロール](../mfc/controls-mfc.md)
 

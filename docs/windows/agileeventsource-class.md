@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8efebf67d87decef1fb6e53f2efa42acc9ac487c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f8ef724c78bdc61ef470199fbb5e956e374493f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068521"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46405254"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource クラス
 
@@ -83,10 +83,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>パラメーター
 
-*delegateInterface*  
+*delegateInterface*<br/>
 イベント ハンドラーを表すデリゲート オブジェクトのインターフェイスです。
 
-*token*  
+*token*<br/>
 この操作の完了時、イベントを表すハンドルです。 パラメーターとしてこのトークンを使用して、`Remove()`メソッドをイベント ハンドラーを破棄します。
 
 ### <a name="return-value"></a>戻り値

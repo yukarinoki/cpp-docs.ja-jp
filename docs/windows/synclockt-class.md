@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8589c43d49709842a745464d2727860ccd2c1e2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d557b7ee6e6a0ae627ec7cc9a6b40b5b9dbb872c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42609678"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379568"
 ---
 # <a name="synclockt-class"></a>SyncLockT クラス
 
@@ -39,7 +39,7 @@ class SyncLockT;
 
 ### <a name="parameters"></a>パラメーター
 
-*SyncTraits*  
+*SyncTraits*<br/>
 この型は、リソースの所有権を取得できます。
 
 ## <a name="remarks"></a>Remarks
@@ -72,7 +72,7 @@ class SyncLockT;
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[SyncLockT::sync_ データ メンバー](../windows/synclockt-sync-data-member.md)|によって表される、基になるリソースを保持、 **SyncLockT**クラス。|
 
@@ -88,5 +88,5 @@ class SyncLockT;
 
 ## <a name="see-also"></a>関連項目
 
-[Microsoft::WRL::Wrappers::Details 名前空間](../windows/microsoft-wrl-wrappers-details-namespace.md)  
+[Microsoft::WRL::Wrappers::Details 名前空間](../windows/microsoft-wrl-wrappers-details-namespace.md)<br/>
 [SRWLock クラス](../windows/srwlock-class.md)

@@ -1,5 +1,5 @@
 ---
-title: 'TN051: 今後の CTL3D の使い方 |Microsoft ドキュメント'
+title: 'TN051: 今後の CTL3D の使い方 |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,17 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a19077bcba252d252418b6c3554c6172ed1aaa2c
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: dfffe63e80160cab1c85ef19de321b361e1c26cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382273"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388643"
 ---
 # <a name="tn051-using-ctl3d-now-and-in-the-future"></a>テクニカル ノート 51: 今後の CTL3D の使い方
-まで CTL3D と MFC に説明した、このテクニカル ノートでは廃止されました。 コントロールの 3D 効果は、MFC によって自動的に実装されます。  
-  
-## <a name="see-also"></a>関連項目  
- [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
- [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+
+CTL3D と MFC を既に説明した、このテクニカル ノートでは廃止されました。 コントロールの 3D 効果は、MFC によって自動的に実装されます。
+
+## <a name="see-also"></a>関連項目
+
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

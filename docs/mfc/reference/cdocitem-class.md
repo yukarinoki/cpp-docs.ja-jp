@@ -20,77 +20,88 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c30418f886cd791a7119367c5ddbccc19003fa
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: 6d67b6b19c6fe54189ac482e3ce7ad9b92bd9b84
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37335582"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413686"
 ---
 # <a name="cdocitem-class"></a>CDocItem クラス
-ドキュメント アイテムの基底クラスであり、ドキュメント データのコンポーネントです。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class CDocItem : public CCmdTarget  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-methods"></a>パブリック メソッド  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[CDocItem::GetDocument](#getdocument)|項目を含むドキュメントを返します。|  
-|[CDocItem::IsBlank](#isblank)|アイテムにすべての情報が含まれるかどうかを判断します。|  
-  
-## <a name="remarks"></a>Remarks  
- `CDocItem` オブジェクトは、クライアントとサーバーの両方の文書で OLE 項目を表すために使用されます。  
-  
- 詳細については、この記事を参照してください。[コンテナー: コンテナーの実装](../../mfc/containers-implementing-a-container.md)します。  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- `CDocItem`  
-  
-## <a name="requirements"></a>必要条件  
- **ヘッダー:** afxole.h  
-  
-##  <a name="getdocument"></a>  CDocItem::GetDocument  
- 項目を含むドキュメントを取得するには、この関数を呼び出します。  
-  
-```  
-CDocument* GetDocument() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
- 項目を含むドキュメントへのポインターアイテム、ドキュメントの一部でない場合は NULL です。  
-  
-### <a name="remarks"></a>Remarks  
- この関数は、派生クラスでオーバーライドされる[COleClientItem](../../mfc/reference/coleclientitem-class.md)と[COleServerItem](../../mfc/reference/coleserveritem-class.md)、いずれかにポインターを返す、 [COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)、または[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)オブジェクト。  
-  
-##  <a name="isblank"></a>  CDocItem::IsBlank  
- 既定のシリアル化が発生したときに、フレームワークによって呼び出されます。  
-  
-```  
-virtual BOOL IsBlank() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
- アイテムに情報が含まれていない場合は 0 以外それ以外の場合 0 を返します。  
-  
-### <a name="remarks"></a>Remarks  
- 既定では、`CDocItem`オブジェクトは空ではありません。 [COleClientItem](../../mfc/reference/coleclientitem-class.md)オブジェクトから直接派生するためにも空白`CDocItem`します。 ただし、 [COleServerItem](../../mfc/reference/coleserveritem-class.md)オブジェクトが空では常にします。 既定で含まれている OLE アプリケーション`COleClientItem`x または y を持たないオブジェクト エクステントがシリアル化します。 これでのオーバーライドから TRUE が返された`IsBlank`ときに、項目がない x または y エクステント。  
-  
- シリアル化中に他のアクションを実装する場合は、この関数をオーバーライドします。  
-  
-## <a name="see-also"></a>関連項目  
- [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)   
- [階層図](../../mfc/hierarchy-chart.md)   
- [COleDocument クラス](../../mfc/reference/coledocument-class.md)   
- [COleServerItem クラス](../../mfc/reference/coleserveritem-class.md)   
- [COleClientItem クラス](../../mfc/reference/coleclientitem-class.md)
+
+ドキュメント アイテムの基底クラスであり、ドキュメント データのコンポーネントです。
+
+## <a name="syntax"></a>構文
+
+```
+class CDocItem : public CCmdTarget
+```
+
+## <a name="members"></a>メンバー
+
+### <a name="public-methods"></a>パブリック メソッド
+
+|名前|説明|
+|----------|-----------------|
+|[CDocItem::GetDocument](#getdocument)|項目を含むドキュメントを返します。|
+|[CDocItem::IsBlank](#isblank)|アイテムにすべての情報が含まれるかどうかを判断します。|
+
+## <a name="remarks"></a>Remarks
+
+`CDocItem` オブジェクトは、クライアントとサーバーの両方の文書で OLE 項目を表すために使用されます。
+
+詳細については、この記事を参照してください。[コンテナー: コンテナーの実装](../../mfc/containers-implementing-a-container.md)します。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+`CDocItem`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afxole.h
+
+##  <a name="getdocument"></a>  CDocItem::GetDocument
+
+項目を含むドキュメントを取得するには、この関数を呼び出します。
+
+```
+CDocument* GetDocument() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+項目を含むドキュメントへのポインターアイテム、ドキュメントの一部でない場合は NULL です。
+
+### <a name="remarks"></a>Remarks
+
+この関数は、派生クラスでオーバーライドされる[COleClientItem](../../mfc/reference/coleclientitem-class.md)と[COleServerItem](../../mfc/reference/coleserveritem-class.md)、いずれかにポインターを返す、 [COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)、または[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)オブジェクト。
+
+##  <a name="isblank"></a>  CDocItem::IsBlank
+
+既定のシリアル化が発生したときに、フレームワークによって呼び出されます。
+
+```
+virtual BOOL IsBlank() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+アイテムに情報が含まれていない場合は 0 以外それ以外の場合 0 を返します。
+
+### <a name="remarks"></a>Remarks
+
+既定では、`CDocItem`オブジェクトは空ではありません。 [COleClientItem](../../mfc/reference/coleclientitem-class.md)オブジェクトから直接派生するためにも空白`CDocItem`します。 ただし、 [COleServerItem](../../mfc/reference/coleserveritem-class.md)オブジェクトが空では常にします。 既定で含まれている OLE アプリケーション`COleClientItem`x または y を持たないオブジェクト エクステントがシリアル化します。 これでのオーバーライドから TRUE が返された`IsBlank`ときに、項目がない x または y エクステント。
+
+シリアル化中に他のアクションを実装する場合は、この関数をオーバーライドします。
+
+## <a name="see-also"></a>関連項目
+
+[CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[COleDocument クラス](../../mfc/reference/coledocument-class.md)<br/>
+[COleServerItem クラス](../../mfc/reference/coleserveritem-class.md)<br/>
+[COleClientItem クラス](../../mfc/reference/coleclientitem-class.md)

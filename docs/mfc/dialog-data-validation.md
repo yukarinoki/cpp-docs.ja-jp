@@ -1,5 +1,5 @@
 ---
-title: ダイアログ データ バリデーション |Microsoft ドキュメント
+title: ダイアログ データ検証 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 229b4a5ffb32f4a167dcc8393a269bbb2e35b500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83c1208d3001739ca78186972c629ea8a094c8d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344881"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430892"
 ---
 # <a name="dialog-data-validation"></a>ダイアログ データ検証
-例に示すように、DDV 関数を呼び出すことによりデータ交換だけでなく検証を指定できます[ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange.md)です。 `DDV_MaxChars`呼び出しの例では、テキスト ボックス コントロールに入力した文字列が 20 文字を超えていないことを検証します。 DDV 関数は、通常、ユーザーに警告、メッセージ ボックスで検証が失敗するし、データを再入力できるように、問題のあるコントロールにフォーカスを設定します。 特定のコントロールの DDV 関数は、同じコントロールに対して、DDX 関数の直後後に呼び出される必要があります。  
-  
- 独自のカスタムの DDX ルーチンおよび DDV ルーチンを定義することもできます。 これと DDX ルーチンおよび DDV の他の側面の詳細については、次を参照してください。 [MFC テクニカル ノート 26](../mfc/tn026-ddx-and-ddv-routines.md)です。  
-  
- [変数の追加メンバー ウィザード](../ide/add-member-variable-wizard.md)をすべて、DDX の記述および DDV 呼び出しがデータ マップにします。  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ データ交換と検証](../mfc/dialog-data-exchange-and-validation.md)   
- [ダイアログ ボックスのライフ サイクル](../mfc/life-cycle-of-a-dialog-box.md)   
- [ダイアログ データ エクスチェンジ](../mfc/dialog-data-exchange.md)
+
+例で示すように、DDV 関数の呼び出しでデータ交換だけでなく検証を指定できます[ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange.md)します。 `DDV_MaxChars`呼び出しの例では、テキスト ボックス コントロールに入力した文字列が 20 文字より長くしないことを検証します。 検証が失敗すると、データを再入力できるように、問題のあるコントロールにフォーカスを設定、DDV 関数は通常メッセージ ボックスにユーザーを警告します。 同じコントロールの DDX 関数後すぐに、特定のコントロールの DDV 関数を呼び出す必要があります。
+
+独自のカスタムの DDX ルーチンおよび DDV ルーチンを定義することもできます。 これと DDX ルーチンおよび DDV の他の側面の詳細については、次を参照してください。 [MFC テクニカル ノート 26](../mfc/tn026-ddx-and-ddv-routines.md)します。
+
+[追加メンバー変数のウィザード](../ide/add-member-variable-wizard.md)DDX のすべてを記述および DDV 呼び出しがデータ マップにできます。
+
+## <a name="see-also"></a>関連項目
+
+[ダイアログ データ エクスチェンジとダイアログ データ検証](../mfc/dialog-data-exchange-and-validation.md)<br/>
+[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[ダイアログ データ エクスチェンジ](../mfc/dialog-data-exchange.md)
 

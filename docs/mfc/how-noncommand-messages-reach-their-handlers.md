@@ -1,5 +1,5 @@
 ---
-title: 非コマンドのメッセージのハンドラー検索方法 |Microsoft ドキュメント
+title: コマンド メッセージのハンドラー方法 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,18 +17,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3999c74bf7a612acb998e7a044c12948d7679d9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b5c38a1d4294993170cfeff64be6a83700fa7497
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343883"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373439"
 ---
 # <a name="how-noncommand-messages-reach-their-handlers"></a>コマンド以外のメッセージのハンドラー検索方法
-コマンドとは異なり標準 Windows メッセージは、チェーン コマンド ターゲットを通じてルーティングされませんが、Windows メッセージを送信する先ウィンドウによって処理される通常。 ウィンドウには、メイン フレーム ウィンドウ、MDI 子ウィンドウ、標準のコントロール、ダイアログ ボックス、ビュー、またはその他の何らかの子ウィンドウがあります。  
-  
- 実行時に、Windows の各ウィンドウがウィンドウのオブジェクトにアタッチ (から直接または間接的に派生`CWnd`) を持つ独自の関連するメッセージ マップおよびハンドラー関数。 フレームワークは、メッセージ マップを使用: コマンドです: 受信メッセージをハンドラーにマップします。  
-  
-## <a name="see-also"></a>関連項目  
- [フレームワークがハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)
+
+コマンドとは異なりは、標準 Windows メッセージは、チェーン コマンド ターゲットでルーティングされませんが、Windows メッセージを送信する先のウィンドウで、通常は処理されます。 メイン フレーム ウィンドウ、MDI 子ウィンドウ、標準のコントロール、ダイアログ ボックス、ビュー、または他の種類の子ウィンドウのウィンドウがあります。
+
+実行時に、各 Windows ウィンドウがウィンドウのオブジェクトにアタッチ (から直接または間接的に派生した`CWnd`) を持つ独自の関連付けられているメッセージ マップおよびハンドラー関数。 フレームワークは、メッセージ マップを使用: コマンドと、メッセージの受信ハンドラーをマッピングします。
+
+## <a name="see-also"></a>関連項目
+
+[フレームワークがハンドラーを呼び出す方法](../mfc/how-the-framework-calls-a-handler.md)
 

@@ -16,57 +16,63 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 15c166f51e8d512dd0c5ef8d98bf1e6cf991664f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 10e848321f105f60643f579c12772f6a40edebeb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714208"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383520"
 ---
 # <a name="shiftright128"></a>__shiftright128
-**Microsoft 固有の仕様**  
-  
- 64 ビットの 2 つの数 `LowPart` および `HighPart` で表される 128 ビットの数を、`Shift` で指定されたビット数だけ右にシフトし、結果の下位 64 ビットを返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-unsigned __int64 __shiftright128(   
-   unsigned __int64 LowPart,   
-   unsigned __int64 HighPart,   
-   unsigned char Shift   
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+**Microsoft 固有の仕様**
+
+64 ビットの 2 つの数 `LowPart` および `HighPart` で表される 128 ビットの数を、`Shift` で指定されたビット数だけ右にシフトし、結果の下位 64 ビットを返します。
+
+## <a name="syntax"></a>構文
+
+```
+unsigned __int64 __shiftright128( 
+   unsigned __int64 LowPart, 
+   unsigned __int64 HighPart, 
+   unsigned char Shift 
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *下位*<br/>
-[in]シフトする 128 ビット数の下位 64 ビット。  
-  
+[in]シフトする 128 ビット数の下位 64 ビット。
+
 *上位*<br/>
-[in]シフトする 128 ビット数の上位 64 ビット。  
-  
+[in]シフトする 128 ビット数の上位 64 ビット。
+
 *Shift*<br/>
-[in]シフトするビット数。  
-  
-## <a name="return-value"></a>戻り値  
- 結果の下位 64 ビット。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__shiftright128`|X64|  
-  
- **ヘッダー ファイル** \<intrin.h >  
-  
-## <a name="remarks"></a>Remarks  
- `Shift` の値は常にモジュロ 64 です。このため、たとえば `__shiftright128(0, 1, 64)` をコールすると、上位部分が `0` ビット右にシフトされ、下位部分である `0` が返されます。`1` ではありません。  
-  
-## <a name="example"></a>例  
- 例については、次を参照してください。 [_ _shiftleft128](../intrinsics/shiftleft128.md)します。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_ _shiftleft128](../intrinsics/shiftleft128.md)   
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[in]シフトするビット数。
+
+## <a name="return-value"></a>戻り値
+
+結果の下位 64 ビット。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__shiftright128`|X64|
+
+**ヘッダー ファイル** \<intrin.h >
+
+## <a name="remarks"></a>Remarks
+
+`Shift` の値は常にモジュロ 64 です。このため、たとえば `__shiftright128(0, 1, 64)` をコールすると、上位部分が `0` ビット右にシフトされ、下位部分である `0` が返されます。`1` ではありません。
+
+## <a name="example"></a>例
+
+例については、次を参照してください。 [_ _shiftleft128](../intrinsics/shiftleft128.md)します。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[__shiftleft128](../intrinsics/shiftleft128.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

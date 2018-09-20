@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0506d5b4f264a2bdbecf30a7732c93c927bf18
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 29f487f77fac6c3f6def51b69715d1d47257dd7c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767983"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374224"
 ---
 # <a name="cpoint-class"></a>CPoint クラス
 
@@ -352,9 +352,9 @@ A `CSize` 2 つのポイント間の違いは、`CPoint`オフセット、サイ
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル MDI](../../visual-cpp-samples.md)   
-[階層図](../../mfc/hierarchy-chart.md)   
-[POINT 構造体](../../mfc/reference/point-structure1.md)   
-[CRect クラス](../../atl-mfc-shared/reference/crect-class.md)   
+[MFC サンプル MDI](../../visual-cpp-samples.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)<br/>
+[POINT 構造体](../../mfc/reference/point-structure1.md)<br/>
+[CRect クラス](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize クラス](../../atl-mfc-shared/reference/csize-class.md)
 

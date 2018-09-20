@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a6c8d05d326e11ecfef4df8d22cbf2b8d92bd77
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: cbb90d36ea3da8e443eede8a3d74a35246077d52
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42538841"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410268"
 ---
 # <a name="inlinedepth"></a>inline_depth
 関数がインライン展開されない場合よりも大きい (呼び出し先) の深さではするようにインライン ヒューリスティック検索の深さを指定します*n*します。  
@@ -53,5 +53,5 @@ ms.locfileid: "42538841"
   
 ## <a name="see-also"></a>関連項目  
  
-[プラグマ ディレクティブと _ _pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)   
+[プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [inline_recursion](../preprocessor/inline-recursion.md)

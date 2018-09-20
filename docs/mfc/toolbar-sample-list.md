@@ -1,5 +1,5 @@
 ---
-title: ツールバーのサンプル一覧 |Microsoft ドキュメント
+title: ツールバーのサンプル一覧 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -14,22 +14,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2c6cab9cd5d7a47689696d58afce780887770e0
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e235b491193da873aba31870574a9bfb6c4d653
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381525"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383075"
 ---
 # <a name="toolbar-sample-list"></a>ツール バーのサンプル一覧
-MFC のツールバーの使用方法を説明する次のサンプル プログラムを参照してください。  
-  
--   [SCRIBBLE](../visual-cpp-samples.md)  
-  
--   [CTRLBARS](../visual-cpp-samples.md)  
-  
--   [DOCKTOOL](../visual-cpp-samples.md)  
-  
-## <a name="see-also"></a>関連項目  
- [ツールバー](../mfc/toolbars.md)
+
+MFC のツールバーを使用するかを示す次のサンプル プログラムを参照してください。
+
+- [SCRIBBLE](../visual-cpp-samples.md)
+
+- [CTRLBARS](../visual-cpp-samples.md)
+
+- [DOCKTOOL](../visual-cpp-samples.md)
+
+## <a name="see-also"></a>関連項目
+
+[ツールバー](../mfc/toolbars.md)
 

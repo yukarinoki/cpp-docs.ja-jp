@@ -1,5 +1,5 @@
 ---
-title: メッセージの処理とコマンド ターゲット |Microsoft ドキュメント
+title: メッセージ処理とコマンドのターゲット |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,45 +19,47 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc0f00e4f660036e73e96d4beb999d37453bdf26
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 61ed4375121dafe198dce84b155858c0e7b0a8cb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36929357"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414148"
 ---
 # <a name="message-handling-and-command-targets"></a>メッセージ処理とコマンド ターゲット
-コマンドのディスパッチ インターフェイス`IOleCommandTarget`クエリおよびコマンドを実行する単純で拡張可能なメカニズムを定義します。 このメカニズムは、Automation のよりも簡単`IDispatch`コマンドの引数を持つことはほとんどありませんコマンドの標準セットに完全に依存しているためと、型情報は必要ありません (タイプ セーフはコマンドの引数も低下)。  
-  
- コマンドのディスパッチ インターフェイスのデザインで各コマンド グループに属している、"コマンド"は、それ自体で識別される、 **GUID**です。 したがって、新しいグループを定義でき、Microsoft と連携するすべての必要性や、他のベンダーなしには、そのグループ内のすべてのコマンドを定義するすべてのユーザーができます。 (これは、本質的には、同じ手段として定義、 **dispinterface** plus **Dispid** Automation でします。 オーバー ラップがあるここでは、このコマンド ルーティング メカニズムはコマンド ルーティングにのみ、大規模な環境でのスクリプティング/プログラミングではなくオートメーションのハンドルとしてです。)  
-  
- `IOleCommandTarget` 次のシナリオを処理します。  
-  
--   オブジェクトが、インプレース アクティブ化、通常は、オブジェクトのツールバーを表示し、オブジェクトのツールバーでは、いくつかのようにコンテナーのコマンドのボタンがあります専用**印刷**、**印刷プレビュー**、 **保存**、**新規**、**ズーム**、およびその他。 (インプレースのアクティブ化の標準の推奨オブジェクトを削除するにまたは、ツールバーからこのようなボタンは、少なくとも無効にします。 この設計でそれらのコマンドを有効にし、右側のハンドラーにまだルーティングされます。)現時点では、オブジェクトをコンテナーにこれらのコマンドをディスパッチするためのメカニズムはありません。  
-  
--   コマンドを送信するこのようなコンテナーが必要があります (Office バインダー) などの active ドキュメント コンテナーでは、アクティブなドキュメントが埋め込まれているときに**印刷**、**ページ セットアップ**、**プロパティ**、およびその他のユーザーが含まれているアクティブなドキュメントです。  
-  
- 既存のオートメーション標準を介して処理することがこの単純なコマンド ルーティングおよび`IDispatch`です。 ただし、オーバーヘッドに含まれている`IDispatch`は、ここでは、必要に応じてより多くなってように`IOleCommandTarget`は、同じ結果を実現するためにシンプルな手段を提供します。  
-  
-```  
-interface IOleCommandTarget : IUnknown  
-    {  
-    HRESULT QueryStatus(  
-        [in] GUID *pguidCmdGroup,  
-        [in] ULONG cCmds,  
-        [in,out][size_is(cCmds)] OLECMD *prgCmds,  
-        [in,out] OLECMDTEXT *pCmdText);  
-    HRESULT Exec(  
-        [in] GUID *pguidCmdGroup,  
-        [in] DWORD nCmdID,  
-        [in] DWORD nCmdExecOpt,  
-        [in] VARIANTARG *pvaIn,  
-        [in,out] VARIANTARG *pvaOut);  
-    }  
-```  
-  
- `QueryStatus`メソッドをここでは、特定の一連のコマンド セットで識別されるかどうかを検査、 **GUID**はサポートされています。 この呼び出しの配列に格納**OLECMD**コマンドだけでなく、コマンドまたは状態情報の名前を記述するテキストを返すのサポートされている一覧の値 (構造体)。 コマンドを渡すことができます、呼び出し元がコマンドを呼び出すしようとすると、ときに (とセット**GUID**) に`Exec`デスクトップのオプションと引数と共に値を取得戻り値。  
-  
-## <a name="see-also"></a>関連項目  
- [Active ドキュメント コンテナー](../mfc/active-document-containers.md)
+
+コマンドのディスパッチ インターフェイス`IOleCommandTarget`シンプルかつ拡張可能なクエリを実行し、コマンドを実行するメカニズムを定義します。 このメカニズムは、オートメーションのより単純な`IDispatch`コマンドの標準セットを完全に依存するためのコマンドの引数を持つことはほとんどなく、型情報は必要ありません (タイプ セーフはコマンドの引数も低下)。
+
+コマンドのディスパッチ インターフェイスの設計では、各コマンドがで識別される自体「コマンド グループ」に属している、 **GUID**します。 そのため、新しいグループを定義し、Microsoft との協力する必要や、他のベンダーには、そのグループ内のすべてのコマンドを定義するすべてのユーザーできます。 (これは、同じ手段として定義の本質的には、 **dispinterface** plus **Dispid** Automation でします。 オーバー ラップがあるここでは、このコマンドのルーティング メカニズムはコマンドのルーティングにのみ、大規模なスケールでのスクリプト/プログラミングではなく Automation ハンドルとしてです。)
+
+`IOleCommandTarget` 次のシナリオを処理します。
+
+- インプレース アクティブ化されるだけでは、通常、オブジェクトのツールバーを表示し、オブジェクトのツールバーでは、いくつかのように、コンテナーのコマンドのボタンがありますが、オブジェクトの場合**印刷**、**印刷プレビュー**、 **保存**、**新規**、**ズーム**、およびその他。 (オブジェクトを削除する、インプレース アクティベーション標準をお勧めしますから、ツールバー、またはこのようなボタンは、少なくとも無効にします。 この設計により、これらのコマンドを有効にし、まだ適切なハンドラーにルーティングされます。)現時点では、オブジェクトがコンテナーにこれらのコマンドをディスパッチするメカニズムはありません。
+
+- コンテナーは、コマンドを送信するこのような必要があります (Office バインダー) などの active ドキュメント コンテナーでは、アクティブ ドキュメントが埋め込まれているときに**印刷**、**ページ セットアップ**、**プロパティ**、およびその他のユーザーが含まれているアクティブなドキュメントです。
+
+既存の Automation 標準を通じてこの単純なコマンドのルーティングを処理でき、`IDispatch`します。 ただし、オーバーヘッドが伴う`IDispatch`ここでは、必要なより多くなっていますので`IOleCommandTarget`同じ結果を実現するために簡単な手段を提供します。
+
+```
+interface IOleCommandTarget : IUnknown
+    {
+    HRESULT QueryStatus(
+        [in] GUID *pguidCmdGroup,
+        [in] ULONG cCmds,
+        [in,out][size_is(cCmds)] OLECMD *prgCmds,
+        [in,out] OLECMDTEXT *pCmdText);
+    HRESULT Exec(
+        [in] GUID *pguidCmdGroup,
+        [in] DWORD nCmdID,
+        [in] DWORD nCmdExecOpt,
+        [in] VARIANTARG *pvaIn,
+        [in,out] VARIANTARG *pvaOut);
+    }
+```
+
+`QueryStatus`メソッドをここでは、特定の一連のコマンド セットがで識別されているかどうかをテスト、 **GUID**はサポートされています。 この呼び出しは、配列を格納**OLECMD**コマンドや状態情報の名前を記述するテキストを返すだけでなくコマンドのサポートされている一連の値 (構造体)。 コマンドを渡すことができます、呼び出し元がコマンドを呼び出す必要がある、ときに (とセット**GUID**) に`Exec`戻り値の戻すオプションと引数と。
+
+## <a name="see-also"></a>関連項目
+
+[Active ドキュメント コンテナー](../mfc/active-document-containers.md)
 

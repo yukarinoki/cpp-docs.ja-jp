@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c0c4c306191af519103c65b39e3bb89afdb47f9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 7f4c3da16181dca4a3a0722f96f61ce02863d369
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313482"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378725"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>透明または不透明な背景の選択 (アイコン用イメージ エディター)
 
@@ -57,5 +57,5 @@ ms.locfileid: "44313482"
 
 ## <a name="see-also"></a>関連項目
 
-[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)  
+[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [カラーを使用します。](../windows/working-with-color-image-editor-for-icons.md)

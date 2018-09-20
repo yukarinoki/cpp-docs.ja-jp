@@ -1,5 +1,5 @@
 ---
-title: MFC プロジェクトに ATL サポートの追加 |Microsoft ドキュメント
+title: MFC プロジェクトに ATL サポートの追加 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,42 +17,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2d7794d5c3777a208fef6371009771fc5b43c97
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bc0d21202478a02980dbc94dc866b769c3c71a9b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33347069"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429735"
 ---
 # <a name="adding-atl-support-to-your-mfc-project"></a>MFC プロジェクトへの ATL サポートの追加
-既に MFC ベースのアプリケーションを作成した場合、サポートを追加できますアクティブ テンプレート ライブラリ (ATL) を簡単に MFC プロジェクト ウィザードに ATL サポートを追加を実行しています。  
-  
+
+MFC ベースのアプリケーションを既に作成している場合、サポートを追加できます Active Template Library (ATL) の簡単に ATL サポートを追加する MFC プロジェクト ウィザードを実行しています。
+
 > [!NOTE]
->  ATL および MFC は一般にサポートされていません Visual Studio の Express edition でします。  
-  
+>  ATL および MFC は一般にサポートされていません Visual Studio の Express edition でします。
+
 > [!NOTE]
->  このサポートは、MFC の実行可能ファイルまたは DLL プロジェクトに追加する単純なの COM オブジェクトにのみ適用されます。 MFC プロジェクトに他の COM オブジェクト (ActiveX コントロールを含む) を追加することができますが、オブジェクトが想定どおりに動作しません。  
-  
-### <a name="to-add-atl-support-to-your-mfc-project"></a>MFC プロジェクトに ATL サポートを追加するには  
-  
-1.  ソリューション エクスプ ローラーでは、ATL サポートを追加するプロジェクトを右クリックします。  
-  
-2.  ショートカット メニューをクリックして**追加**、クリックして**クラスの追加**です。  
-  
-3.  選択、 **MFC プロジェクトへの ATL サポートの追加**アイコン。  
-  
+>  このサポートは、MFC の実行可能ファイルまたは DLL プロジェクトに追加された単純な COM オブジェクトにのみ適用されます。 MFC プロジェクトに他の COM オブジェクト (ActiveX コントロールを含む) を追加できますが、オブジェクトが想定どおりに動作しません。
+
+### <a name="to-add-atl-support-to-your-mfc-project"></a>MFC プロジェクトに ATL サポートを追加するには
+
+1. ソリューション エクスプ ローラーでは、ATL サポートを追加するプロジェクトを右クリックします。
+
+1. ショートカット メニューで、**追加**、 をクリックし、**クラスの追加**します。
+
+1. 選択、 **MFC プロジェクトへの ATL サポートの追加**アイコン。
+
     > [!NOTE]
-    >  このアイコンがで ATL フォルダーにある、**カテゴリ**ウィンドウです。  
-  
-4.  メッセージが表示されたら、 をクリックして**はい**ATL サポートを追加します。  
-  
- MFC プロジェクトのコード変更 ATL サポートを追加する方法の詳細については、次を参照してください[詳細の ATL サポートを追加、ATL ウィザードで。](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの追加](../../ide/adding-a-class-visual-cpp.md)   
- [コード ウィザードによる機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)   
- [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)   
- [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [クラス各部へ](../../ide/navigating-the-class-structure-visual-cpp.md)
+    >  このアイコンは、ATL フォルダーにある、**カテゴリ**ウィンドウ。
+
+1. メッセージが表示されたら、クリックして**はい**ATL サポートを追加します。
+
+MFC プロジェクトのコード変更 ATL サポートを追加する方法の詳細については、次を参照してください[詳細の ATL サポートを追加、ATL ウィザードによって。](../../mfc/reference/details-of-atl-support-added-by-the-atl-wizard.md)
+
+## <a name="see-also"></a>関連項目
+
+[クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
+[コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)

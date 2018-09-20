@@ -1,5 +1,5 @@
 ---
-title: CToolTipCtrl を使用して作成して CToolTipCtrl オブジェクトを操作する |Microsoft ドキュメント
+title: CToolTipCtrl を使用して作成して CToolTipCtrl オブジェクトを操作する |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2143ea37cfe9448e43aacfa75622beab93d2fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 186972164496889b471ebfc11e19017129ad943b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382335"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378983"
 ---
 # <a name="using-ctooltipctrl-to-create-and-manipulate-a-ctooltipctrl-object"></a>CToolTipCtrl を使用して CToolTipCtrl オブジェクトを作成および操作する方法
-例を次に示します[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)使用状況。  
-  
-### <a name="to-create-and-manipulate-a-ctooltipctrl"></a>作成して、CToolTipCtrl を操作するには  
-  
-1.  構築、`CToolTipCtrl`オブジェクト。  
-  
-2.  呼び出す[作成](../mfc/reference/ctooltipctrl-class.md#create)Windows ツール ヒントの一般的なコントロールを作成しをアタッチする、`CToolTipCtrl`オブジェクト。  
-  
-3.  呼び出す[AddTool](../mfc/reference/ctooltipctrl-class.md#addtool)ツールの上にカーソルがある場合、ツール ヒントに格納されている情報が表示されないように、ツール ヒント コントロールでツールを登録します。  
-  
-4.  呼び出す[SetToolInfo](../mfc/reference/ctooltipctrl-class.md#settoolinfo)ツールに対して、ツール ヒントが保持している情報を設定します。  
-  
-5.  呼び出す[SetToolRect](../mfc/reference/ctooltipctrl-class.md#settoolrect)ツールの新しい外接する四角形を設定します。  
-  
-6.  呼び出す[HitTest](../mfc/reference/ctooltipctrl-class.md#hittest)場合と指定したツールの外接する四角形内にあるかどうかを判断する点をテストするには、ツールに関する情報を取得します。  
-  
-7.  呼び出す[GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount)ツール ヒント コントロールに登録されているツールの数を取得します。  
-  
-## <a name="see-also"></a>関連項目  
- [CToolTipCtrl の使い方](../mfc/using-ctooltipctrl.md)   
- [コントロール](../mfc/controls-mfc.md)
+
+次の例に示します[CToolTipCtrl](../mfc/reference/ctooltipctrl-class.md)使用状況。
+
+### <a name="to-create-and-manipulate-a-ctooltipctrl"></a>作成し、CToolTipCtrl を操作するには
+
+1. 構築、`CToolTipCtrl`オブジェクト。
+
+1. 呼び出す[作成](../mfc/reference/ctooltipctrl-class.md#create)Windows ツール ヒントの一般的なコントロールを作成してに接続する、`CToolTipCtrl`オブジェクト。
+
+1. 呼び出す[AddTool](../mfc/reference/ctooltipctrl-class.md#addtool)ツールのカーソルがあるときにツール ヒントに格納されている情報が表示されるようにツール ヒント コントロールで、ツールを登録します。
+
+1. 呼び出す[SetToolInfo](../mfc/reference/ctooltipctrl-class.md#settoolinfo)ツール ヒントが保持するツールの情報を設定します。
+
+1. 呼び出す[SetToolRect](../mfc/reference/ctooltipctrl-class.md#settoolrect)ツールの新しい外接する四角形を設定します。
+
+1. 呼び出す[HitTest](../mfc/reference/ctooltipctrl-class.md#hittest)場合と指定したツールの外接する四角形内にあるかどうかを判断する点をテストするには、ツールに関する情報を取得します。
+
+1. 呼び出す[GetToolCount](../mfc/reference/ctooltipctrl-class.md#gettoolcount)ツール ヒント コントロールに登録されているツールの数を取得します。
+
+## <a name="see-also"></a>関連項目
+
+[CToolTipCtrl の使い方](../mfc/using-ctooltipctrl.md)<br/>
+[コントロール](../mfc/controls-mfc.md)
 

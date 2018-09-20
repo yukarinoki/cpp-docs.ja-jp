@@ -1,5 +1,5 @@
 ---
-title: 典型的な Gopher クライアント アプリケーションでの手順 |Microsoft ドキュメント
+title: 典型的な Gopher クライアント アプリケーションでのステップ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,29 +17,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a85e178f59eab88844b1990922870f52463f54a8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: 7c547d5b2a0bc9755fdf968fc1c42643e96e6fa6
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36955623"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392412"
 ---
 # <a name="steps-in-a-typical-gopher-client-application"></a>典型的な Gopher クライアント アプリケーションの作成手順
-次の表は、典型的な gopher クライアント アプリケーションで必要な手順を示します。  
-  
-|目標|操作を実行します。|効果|  
-|---------------|----------------------|-------------|  
-|Gopher セッションを開始します。|作成、 [CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクト。|WinInet を初期化し、サーバーに接続します。|  
-|Gopher サーバーに接続します。|使用して[代わり](../mfc/reference/cinternetsession-class.md#getgopherconnection)です。|返します、[関数](../mfc/reference/cgopherconnection-class.md)オブジェクト。|  
-|Gopher 内の最初のリソースを検索します。|使用して[CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile)です。|最初のファイルを検索します。 ファイルが見つからない場合は、FALSE を返します。|  
-|Gopher で次のリソースを検索します。|使用して[CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile)です。|次のファイルを検索します。 ファイルが見つからない場合は、FALSE を返します。|  
-|によって検出されたファイルを開く`FindFile`または`FindNextFile`の読み取りにします。|使用して gopher ロケーターを取得[なった](../mfc/reference/cgopherfilefind-class.md#getlocator)です。 使用して[CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile)です。|ロケーターに指定されたファイルを開きます。 `OpenFile` 返します、 [CGopherFile](../mfc/reference/cgopherfile-class.md)オブジェクト。|  
-|指定した gopher ロケーターを使用してファイルを開きます。|使用して、gopher ロケーターを作成[CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator)です。 使用して[CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile)です。|ロケーターに指定されたファイルを開きます。 `OpenFile` 返します、 [CGopherFile](../mfc/reference/cgopherfile-class.md)オブジェクト。|  
-|ファイルから読み取られました。|使用して[CGopherFile](../mfc/reference/cgopherfile-class.md)です。|指定した入力バッファーを使用して、バイト数を読み取ります。|  
-|例外を処理する|使用して、 [CInternetException](../mfc/reference/cinternetexception-class.md)クラスです。|すべての一般的なインターネット例外タイプを処理します。|  
-|Gopher セッションを終了します。|破棄、 [CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクト。|開いているファイル ハンドルと接続を自動的にクリーンアップします。|  
-  
-## <a name="see-also"></a>関連項目  
- [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)   
- [インターネット クライアント クラスの前提条件](../mfc/prerequisites-for-internet-client-classes.md)   
- [MFC WinInet クラスを使ってインターネット クライアント アプリケーションを作成する方法](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)
+
+次の表に、典型的な gopher クライアント アプリケーションでの手順を示します。
+
+|目標|操作を実行します。|効果|
+|---------------|----------------------|-------------|
+|Gopher セッションを開始します。|作成、 [CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクト。|WinInet を初期化し、サーバーに接続します。|
+|Gopher サーバーに接続します。|使用[代わり](../mfc/reference/cinternetsession-class.md#getgopherconnection)します。|返します、 [CGopherConnection](../mfc/reference/cgopherconnection-class.md)オブジェクト。|
+|Gopher で最初のリソースを検索します。|使用[CGopherFileFind::FindFile](../mfc/reference/cgopherfilefind-class.md#findfile)します。|最初のファイルを検索します。 ファイルが見つからない場合は FALSE を返します。|
+|Gopher、次のリソースを検索します。|使用[CGopherFileFind::FindNextFile](../mfc/reference/cgopherfilefind-class.md#findnextfile)します。|次のファイルを検索します。 ファイルが見つからない場合は FALSE を返します。|
+|によって検出されたファイルを開く`FindFile`または`FindNextFile`読み取り用です。|使用して gopher ロケーターを取得[なった](../mfc/reference/cgopherfilefind-class.md#getlocator)します。 使用[CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile)します。|ロケーターによって指定されたファイルを開きます。 `OpenFile` 返します、 [CGopherFile](../mfc/reference/cgopherfile-class.md)オブジェクト。|
+|指定した gopher ロケーターを使用してファイルを開きます。|使用して、gopher ロケーターを作成[CGopherConnection::CreateLocator](../mfc/reference/cgopherconnection-class.md#createlocator)します。 使用[CGopherConnection::OpenFile](../mfc/reference/cgopherconnection-class.md#openfile)します。|ロケーターによって指定されたファイルを開きます。 `OpenFile` 返します、 [CGopherFile](../mfc/reference/cgopherfile-class.md)オブジェクト。|
+|ファイルから読み取ります。|使用[CGopherFile](../mfc/reference/cgopherfile-class.md)します。|指定した数の指定したバッファーを使用してバイトを読み取ります。|
+|例外を処理する|使用して、 [CInternetException](../mfc/reference/cinternetexception-class.md)クラス。|すべての一般的なインターネット例外タイプを処理します。|
+|Gopher セッションを終了します。|破棄、 [CInternetSession](../mfc/reference/cinternetsession-class.md)オブジェクト。|開いているファイル ハンドルと接続を自動的にクリーンアップします。|
+
+## <a name="see-also"></a>関連項目
+
+[Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
+[インターネット クライアント クラスの必要条件](../mfc/prerequisites-for-internet-client-classes.md)<br/>
+[MFC WinInet クラスを使ってインターネット クライアント アプリケーションを作成する方法](../mfc/writing-an-internet-client-application-using-mfc-wininet-classes.md)

@@ -18,58 +18,63 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98c4c82bcf858215ceba31e2ddd0770511446f72
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 89114c96beb49c8f843ec8a04b08802632c61ca1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075645"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46401512"
 ---
 # <a name="simplepartitioner-class"></a>simple_partitioner クラス
-`simple_partitioner` クラスは、`parallel_for` によって反復処理される範囲の静的パーティション分割を表します。 パーティショナーは範囲をチャンクに分割します。各チャンクには、少なくともチャンク サイズによって指定された数のイテレーションが含まれます。  
-  
-## <a name="syntax"></a>構文  
-  
+
+`simple_partitioner` クラスは、`parallel_for` によって反復処理される範囲の静的パーティション分割を表します。 パーティショナーは範囲をチャンクに分割します。各チャンクには、少なくともチャンク サイズによって指定された数のイテレーションが含まれます。
+
+## <a name="syntax"></a>構文
+
 ```
 class simple_partitioner;
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[simple_partitioner](#ctor)|`simple_partitioner` オブジェクトを構築します。|  
-|[~ simple_partitioner デストラクター](#dtor)|`simple_partitioner` オブジェクトを破棄します。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `simple_partitioner`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** ppl.h  
-  
- **名前空間:** concurrency  
-  
-##  <a name="dtor"></a> ~simple_partitioner 
+```
 
- `simple_partitioner` オブジェクトを破棄します。  
-  
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[simple_partitioner](#ctor)|`simple_partitioner` オブジェクトを構築します。|
+|[~ simple_partitioner デストラクター](#dtor)|`simple_partitioner` オブジェクトを破棄します。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`simple_partitioner`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** ppl.h
+
+**名前空間:** concurrency
+
+##  <a name="dtor"></a> ~simple_partitioner
+
+`simple_partitioner` オブジェクトを破棄します。
+
 ```
 ~simple_partitioner();
-```  
-  
-##  <a name="ctor"></a> simple_partitioner 
+```
 
- `simple_partitioner` オブジェクトを構築します。  
-  
+##  <a name="ctor"></a> simple_partitioner
+
+`simple_partitioner` オブジェクトを構築します。
+
 ```
 explicit simple_partitioner(_Size_type _Chunk_size);
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *_Chunk_size*<br/>
 パーティションの最小サイズ。
-  
-## <a name="see-also"></a>関連項目  
- [concurrency 名前空間](concurrency-namespace.md)
+
+## <a name="see-also"></a>関連項目
+
+[コンカレンシー名前空間](concurrency-namespace.md)

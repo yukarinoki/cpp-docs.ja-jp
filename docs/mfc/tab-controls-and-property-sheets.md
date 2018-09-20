@@ -1,5 +1,5 @@
 ---
-title: タブ コントロールとプロパティ シート |Microsoft ドキュメント
+title: タブ コントロールとプロパティ シート |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 096c61a62ea382639356eca81483c9aacfe04b2d
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: fc03427847a64330d1ff2814d268997f63fac6bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385873"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46382545"
 ---
 # <a name="tab-controls-and-property-sheets"></a>タブ コントロールとプロパティ シート
-プロパティ シートは、複数のページのダイアログや「タブ ダイアログ ボックス」を最大で 24 のダイアログ テンプレート リソース ユーザーを表示できます。 プロパティ シートの例については、Windows の表示プロパティ ダイアログ ボックスまたは次の MFC サンプル アプリケーションを参照してください。  
-  
- [CMNCTRL1: 示しますコモン コントロール クラス、パート 1](../visual-cpp-samples.md)  
-  
- [CMNCTRL2: 示しますコモン コントロール クラス、パート 2](../visual-cpp-samples.md)  
-  
- プロパティ シートを簡単に実装する MFC クラス[CPropertySheet](../mfc/reference/cpropertysheet-class.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [CTabCtrl の使い方](../mfc/using-ctabctrl.md)   
- [コントロール](../mfc/controls-mfc.md)
+
+プロパティ シートは、複数のページのダイアログや、最大で 24 のダイアログ テンプレート リソースをユーザーに表示できる「タブ ダイアログ」です。 プロパティ シートの例については、Windows の表示プロパティ ダイアログ ボックスまたは次の MFC サンプル アプリケーションを参照してください。
+
+[CMNCTRL1: 一般的なコントロールのクラス、第 1 部を示します](../visual-cpp-samples.md)
+
+[CMNCTRL2: 一般的なコントロールのクラス、パート 2 に示します](../visual-cpp-samples.md)
+
+プロパティ シートに簡単に実装できる MFC クラスを使用して[CPropertySheet](../mfc/reference/cpropertysheet-class.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[CTabCtrl の使い方](../mfc/using-ctabctrl.md)<br/>
+[コントロール](../mfc/controls-mfc.md)
 

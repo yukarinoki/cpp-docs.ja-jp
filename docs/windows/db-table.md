@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6e084a0f876d0b2598a5317e15057162c602474a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aa64b7b4785f8865a372a256ecc5c9d3f8738dcb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717120"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385860"
 ---
 # <a name="dbtable"></a>db_table
 
@@ -41,16 +41,16 @@ OLE DB、テーブルを開きます。
 
 #### <a name="parameters"></a>パラメーター
 
-*db_table*  
+*db_table*<br/>
 ("Products") などのデータベース テーブルの名前を指定する文字列。
 
-*name*  
+*name*<br/>
 (省略可能)テーブルを操作に使用するためのハンドルの名前。 結果の 1 つ以上の行を取得する場合は、このパラメーターを指定する必要があります。 **db_table** 、指定した変数が生成されます*名前*行セットの走査または複数のアクション クエリを実行できます。
 
-*source_name*  
+*source_name*<br/>
 (省略可能)`CSession`変数またはを持つクラスのインスタンス、`db_source`コマンドが実行されることに適用される属性。 「 [db_source](../windows/db-source.md)」をご覧ください。
 
-*hresult*  
+*hresult*<br/>
 (省略可能)このデータベース コマンドの HRESULT を受け取る変数を識別します。 変数が存在しない場合は、属性によって自動的に挿入されます。
 
 ## <a name="remarks"></a>Remarks

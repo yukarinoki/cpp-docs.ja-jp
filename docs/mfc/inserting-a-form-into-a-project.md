@@ -1,5 +1,5 @@
 ---
-title: プロジェクトにフォームの挿入 |Microsoft ドキュメント
+title: プロジェクトにフォームの挿入 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,38 +16,40 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e62618301e09ad4c44fb91608976ecab972a59da
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 83606041250dafed0ef57eb4eea18d7314e0bbef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344134"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429267"
 ---
 # <a name="inserting-a-form-into-a-project"></a>プロジェクトへのフォームの挿入
-形式は、コントロールの便利なコンテナーを提供します。 簡単に、アプリケーションは、MFC ライブラリをサポートしている限り、MFC ベースのフォームをアプリケーションに挿入できます。  
-  
-### <a name="to-insert-a-form-into-your-project"></a>プロジェクトにフォームを挿入するには  
-  
-1.  クラス ビュー、フォームを追加するプロジェクトを選択し、マウスの右ボタンをクリックします。  
-  
-2.  ショートカット メニューから **[追加]** をクリックし、**クラスの追加**です。  
-  
-     場合、**新しいフォーム**コマンドではないプロジェクトは、アクティブ テンプレート ライブラリ (ATL) に基づく可能性があります場合、。 ATL プロジェクトにフォームを追加するにする必要があります[特定の設定を指定](../atl/reference/application-settings-atl-project-wizard.md)プロジェクトを作成しているとき。  
-  
-3.  **MFC**フォルダーで、をクリックして**MFC クラス**です。  
-  
-4.  MFC クラス ウィザードを使用すると、新しいクラスから派生[CFormView](../mfc/reference/cformview-class.md)です。  
-  
- Visual C フォーム アプリケーションへの追加を開始することができるように、ダイアログ エディター内開くコントロールの追加とその全体的な設計に使用します。  
-  
- (この機能は、ダイアログ ベースのアプリケーションでは該当しません)、次の手順を実行することがあります。  
-  
-1.  上書き、`OnUpdate`メンバー関数。  
-  
-2.  ビューからデータをドキュメントに移動するメンバー関数を実装します。  
-  
-3.  作成、`OnPrint`メンバー関数。  
-  
-## <a name="see-also"></a>関連項目  
- [フォーム ビュー](../mfc/form-views-mfc.md)
+
+フォームは、コントロールの便利なコンテナーを提供します。 簡単に、アプリケーションが MFC ライブラリをサポートしていれば、MFC ベースのフォームをアプリケーションに挿入できます。
+
+### <a name="to-insert-a-form-into-your-project"></a>プロジェクトにフォームを挿入するには
+
+1. クラス ビュー、フォームを追加するプロジェクトを選択し、マウスの右ボタンをクリックします。
+
+1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**クラスの追加**します。
+
+     場合、**新しいフォーム**コマンドは使用できません、プロジェクトは、Active Template Library (ATL) に基づく可能性があります。 ATL プロジェクトには、フォームを追加するにする必要があります[特定の設定を指定](../atl/reference/application-settings-atl-project-wizard.md)プロジェクトを作成しているとき。
+
+1. **MFC**フォルダー、をクリックして**MFC クラス**します。
+
+1. 派生する新しいクラスを MFC クラス ウィザードを使用する[CFormView](../mfc/reference/cformview-class.md)します。
+
+Visual C から開始できるように、ダイアログ エディター内で開くアプリケーションには、フォームが追加コントロールを追加し、その全体的な設計に取り組んでいます。
+
+(この機能は、ダイアログ ベースのアプリケーションには適用されません)、次の手順を実行する可能性があります。
+
+1. 上書き、`OnUpdate`メンバー関数。
+
+1. ビューからデータをドキュメントに移動するメンバー関数を実装します。
+
+1. 作成、`OnPrint`メンバー関数。
+
+## <a name="see-also"></a>関連項目
+
+[フォーム ビュー](../mfc/form-views-mfc.md)
 

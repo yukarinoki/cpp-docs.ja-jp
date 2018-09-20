@@ -1,5 +1,5 @@
 ---
-title: コメントの例 |Microsoft ドキュメント
+title: コメントの例 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,25 +17,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6e0f0b69964ac8cadc3518e0540f4e51545fb
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 681c927a7e0e7960cb483e21ed2ff1e2e4b3c5f5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340885"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442345"
 ---
 # <a name="an-example-of-the-comments"></a>コメントの例
-クラスの次の部分的なリスト`CChildFrame`の使用方法でクラスのメンバーを除算するそのクラスで MFC を使用する標準のコメントのほとんどを使用します。  
-  
- [!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]  
-  
- これらのコメントは、クラス メンバーのような種類が含まれるクラス宣言のセクションを一貫してマークします。 これらが MFC 規則であることに注意してください、ルールを設定できません。  
-  
-## <a name="see-also"></a>関連項目  
- [MFC ソース ファイルを使用します。](../mfc/using-the-mfc-source-files.md)   
- [//Implementation コメント](../mfc/decrement-implementation-comment.md)   
- [//Constructors コメント](../mfc/decrement-constructors-comment.md)   
- [//Attributes コメント](../mfc/decrement-attributes-comment.md)   
- [//Operations コメント](../mfc/decrement-operations-comment.md)   
- [//Overridables コメント](../mfc/decrement-overridables-comment.md)
+
+クラスの次の部分的なリスト`CChildFrame`クラスのメンバーを使用する方法による除算をそのクラスで MFC を使用する標準的なコメントのほとんどを使用します。
+
+[!code-cpp[NVC_MFCListView#5](../atl/reference/codesnippet/cpp/an-example-of-the-comments_1.h)]
+
+これらのコメントは、一貫した方法のような種類クラスのメンバーにはが含まれているクラス宣言のセクションをマークします。 これらは MFC 規則であることに注意してください、ルールを設定できません。
+
+## <a name="see-also"></a>関連項目
+
+[MFC ソース ファイルの利用](../mfc/using-the-mfc-source-files.md)<br/>
+[//Implementation コメント](../mfc/decrement-implementation-comment.md)<br/>
+[//Constructors コメント](../mfc/decrement-constructors-comment.md)<br/>
+[//Attributes コメント](../mfc/decrement-attributes-comment.md)<br/>
+[//Operations コメント](../mfc/decrement-operations-comment.md)<br/>
+[//Overridables コメント](../mfc/decrement-overridables-comment.md)
 

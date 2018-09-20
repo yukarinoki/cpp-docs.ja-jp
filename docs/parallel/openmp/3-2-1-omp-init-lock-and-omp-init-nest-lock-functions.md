@@ -1,5 +1,5 @@
 ---
-title: 3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数 |Microsoft ドキュメント
+title: 3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,20 +12,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f14e182e6c981cd5de7a4cf92d8c285a4b49c66
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4303eb3ccfcb1c449022a4be32f94b9f91e6e80c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33695799"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387004"
 ---
 # <a name="321-ompinitlock-and-ompinitnestlock-functions"></a>3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数
-これらの関数は、ロックの初期化の唯一の手段を提供します。 各関数は、パラメーターに関連付けられているロック、初期化*ロック*後続の呼び出しで使用するためです。 形式は次のとおりです。  
-  
-```  
-#include <omp.h>  
-void omp_init_lock(omp_lock_t *lock);  
-void omp_init_nest_lock(omp_nest_lock_t *lock);  
-```  
-  
- 初期状態のロックが解除されている (つまり、スレッド ロックを所有していません)。 入れ子にできるロックでは、最初の入れ子になった数は 0 です。 これらのルーチンは既に初期化されているロック変数のいずれかを呼び出さない非準拠であります。
+
+これらの関数は、ロックの初期化の唯一の手段を提供します。 各関数の初期化パラメーターに関連付けられているロック*ロック*後続の呼び出しで使用します。 形式は次のとおりです。
+
+```
+#include <omp.h>
+void omp_init_lock(omp_lock_t *lock);
+void omp_init_nest_lock(omp_nest_lock_t *lock);
+```
+
+初期状態がロックされている (つまり、スレッド ロックを所有していません)。 入れ子にできるロックでは、入れ子の最初の数は 0 です。 これらのルーチンには、既に初期化されているロック変数のいずれかを呼び出さない非準拠になります。

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bbb5bfb19d56ae41d743de795788961690f327b0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: d6e507fbb352279d406861b7ae1b2cf29aaa943c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42583417"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394908"
 ---
 # <a name="cropping-or-extending-an-entire-image-image-editor-for-icons"></a>イメージ全体のトリミングまたは拡張 (アイコン用イメージ エディター)
 
@@ -46,5 +46,5 @@ ms.locfileid: "42583417"
 
 ## <a name="see-also"></a>関連項目
 
-[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)  
+[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [イメージのサイズ変更](../windows/resizing-an-image-image-editor-for-icons.md)

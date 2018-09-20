@@ -1,5 +1,5 @@
 ---
-title: 構造体、スタイル、コールバック、およびメッセージ マップ |Microsoft ドキュメント
+title: 構造体、スタイル、コールバック、およびメッセージ マップ |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,35 +19,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0b4a296ddad00b284dc9de5be7f4027adfd3406
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: a8499fd02e9338d518eae9c3f7ea4d4cb077fedb
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33371101"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46403606"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>構造体、スタイル、コールバック関数とメッセージ マップ
-このセクションでは、構造体、スタイル、および Microsoft Foundation Class ライブラリで使用されるコールバック関数を文書化し MFC メッセージ マップです。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [MFC が使用する構造体](../../mfc/reference/structures-used-by-mfc.md)  
- さまざまなメンバー関数から呼び出された構造体へのリンクを提供します。  
-  
- [MFC で使用するスタイル](../../mfc/reference/styles-used-by-mfc.md)  
- MFC オブジェクトを作成するときに使用するスタイルへのリンクを提供します。  
-  
- [MFC で使われているコールバック関数](../../mfc/reference/callback-functions-used-by-mfc.md)  
- MFC ライブラリに表示されているコールバック関数へのリンクを提供します。  
-  
- [メッセージ マップ](../../mfc/reference/message-maps-mfc.md)  
- メッセージ マップ マクロについて説明し、`CWnd`メッセージ マップ エントリです。  
-  
-## <a name="related-sections"></a>関連項目  
- [クラス ライブラリの概要](../../mfc/class-library-overview.md)  
- MFC ライブラリのクラスをカテゴリ別に一覧表示します。  
-  
- [MFC のサンプル](../../visual-cpp-samples.md)  
- MFC ライブラリの使用方法を示すサンプルへのリンクを提供します。
+
+このセクションの構造体、スタイル、および Microsoft Foundation Class ライブラリで使用されるコールバック関数の文書化し、MFC メッセージ マップです。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+[MFC が使用する構造体](../../mfc/reference/structures-used-by-mfc.md)<br/>
+さまざまなメンバー関数から呼び出される構造体へのリンクを提供します。
+
+[MFC で使用するスタイル](../../mfc/reference/styles-used-by-mfc.md)<br/>
+MFC オブジェクトを作成するときに使用するスタイルへのリンクを提供します。
+
+[MFC で使われているコールバック関数](../../mfc/reference/callback-functions-used-by-mfc.md)<br/>
+MFC ライブラリに表示されているコールバック関数へのリンクを提供します。
+
+[メッセージ マップ](../../mfc/reference/message-maps-mfc.md)<br/>
+メッセージ マップ マクロについて説明し、`CWnd`メッセージ マップ エントリ。
+
+## <a name="related-sections"></a>関連項目
+
+[クラス ライブラリの概要](../../mfc/class-library-overview.md)<br/>
+MFC ライブラリのクラスをカテゴリ別に一覧表示します。
+
+[MFC のサンプル](../../visual-cpp-samples.md)<br/>
+MFC ライブラリの使用方法を示すサンプルへのリンクを提供します。
 
 
 

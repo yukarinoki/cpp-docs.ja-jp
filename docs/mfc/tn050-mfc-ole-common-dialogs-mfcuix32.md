@@ -1,5 +1,5 @@
 ---
-title: 'TN050: MFC OLE コモン ダイアログ (MFCUIx32) |Microsoft ドキュメント'
+title: 'TN050: MFC/OLE コモン ダイアログ (MFCUIx32) |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4307c1a28ffcc6de7b4607f22b7be65935c54f4
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: bb48bca667de56a05a38843f339c11dd7e2a74b4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380904"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46410716"
 ---
 # <a name="tn050-mfcole-common-dialogs-mfcuix32"></a>テクニカル ノート 50: MFC/OLE コモン ダイアログ (MFCUIx32)
-このメモは、最初、いくつかの問題と提供され、MFC で使用する OLE コモン ダイアログの将来について説明します。 OLE コモン ダイアログが (OLEDLG システムに組み込まれてコンポーネントとして提供されるようになりました。DLL) と、製品ドキュメントに記載されています。  
-  
-## <a name="see-also"></a>関連項目  
- [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
- [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+
+当初、この注は、いくつかの問題、MFC が提供および使用の OLE コモン ダイアログの将来について説明します。 OLE コモン ダイアログは (OLEDLG システムに組み込まれているコンポーネントとして提供されます。DLL) と、製品ドキュメントに記載されています。
+
+## <a name="see-also"></a>関連項目
+
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

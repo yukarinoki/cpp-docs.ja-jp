@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2872f1639a11d537dd79b878a166a3afb5fd8667
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 65794dafe5e45cbd4c0e2a7eb49c34377009deee
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719171"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46392984"
 ---
 # <a name="safecast"></a>SafeCast
 
@@ -67,6 +67,6 @@ T および U のテンプレートの種類の詳細については、次を参
 
 ## <a name="see-also"></a>関連項目
 
-[SafeInt 関数](../windows/safeint-functions.md)  
-[SafeInt ライブラリ](../windows/safeint-library.md)  
+[SafeInt 関数](../windows/safeint-functions.md)<br/>
+[SafeInt ライブラリ](../windows/safeint-library.md)<br/>
 [SafeInt クラス](../windows/safeint-class.md)

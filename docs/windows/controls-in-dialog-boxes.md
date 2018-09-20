@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8128859f2b136fb945376eeea8afa0d1ef8e6e1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: f00fd37f41461933221996c8940c333bd71620ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317109"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388688"
 ---
 # <a name="controls-in-dialog-box-ces"></a>Es を制御 ダイアログ ボックス (C++)
 
@@ -64,6 +64,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)  
-[ダイアログ ボックス コントロールおよび変数の型](../ide/dialog-box-controls-and-variable-types.md)  
+[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
+[ダイアログ ボックス コントロールおよび変数の型](../ide/dialog-box-controls-and-variable-types.md)<br/>
 [ダイアログ エディター](../windows/dialog-editor.md)

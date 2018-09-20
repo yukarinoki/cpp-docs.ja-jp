@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c43139dd1d927d9e6173d9e78765d0fcdbddae6a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8faad93ae57e42e0e28bcb697ed300c11e766136
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716015"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376916"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -40,13 +40,13 @@ ms.locfileid: "45716015"
 
 ### <a name="parameters"></a>パラメーター
 
-*db_source*  
+*db_source*<br/>
 データ ソースに接続するために使用する接続文字列。 接続文字列の形式の場合、次を参照してください。[データ リンクの接続文字列と](/previous-versions/windows/desktop/ms718376\(v=vs.85\))で、Microsoft Data Access Components (MDAC) SDK。
 
-*name*  
+*name*<br/>
 (省略可能)使用すると**db_source**クラスで*名前*を持つデータ ソース オブジェクトのインスタンスです、 **db_source**属性 (例 1 を参照してください) を適用します。 使用すると**db_source**インライン メソッドの実装で*名前*データにアクセスするために使用される変数 (ローカル メソッド) は、ソース (例 2 を参照してください)。 これを渡す*名前*を*source_name*のパラメーター`db_command`にデータ ソースを関連付けるコマンド。
 
-*hresult*  
+*hresult*<br/>
 (省略可能)このデータベース コマンドの HRESULT を受け取る変数を識別します。 変数が存在しない場合は、属性によって自動的に挿入されます。
 
 ## <a name="remarks"></a>Remarks

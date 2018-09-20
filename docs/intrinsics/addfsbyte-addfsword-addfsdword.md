@@ -23,57 +23,61 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08a9948bb986ae57e42e37253b3b54737cf4d3f9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 5831d109301fe400cf75110221c3c37204bf5b26
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714221"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414967"
 ---
 # <a name="addfsbyte-addfsword-addfsdword"></a>__addfsbyte、__addfsword、__addfsdword
-**Microsoft 固有の仕様**  
-  
- 先頭の相対オフセットで指定されたメモリ位置に値を追加、`FS`セグメント。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void __addfsbyte(   
-   unsigned long Offset,   
-   unsigned char Data   
-);  
-void __addfsword(   
-   unsigned long Offset,   
-   unsigned short Data   
-);  
-void __addfsdword(   
-   unsigned long Offset,   
-   unsigned long Data   
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+**Microsoft 固有の仕様**
+
+先頭の相対オフセットで指定されたメモリ位置に値を追加、`FS`セグメント。
+
+## <a name="syntax"></a>構文
+
+```
+void __addfsbyte( 
+   unsigned long Offset, 
+   unsigned char Data 
+);
+void __addfsword( 
+   unsigned long Offset, 
+   unsigned short Data 
+);
+void __addfsdword( 
+   unsigned long Offset, 
+   unsigned long Data 
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *オフセット*<br/>
-[in]先頭からのオフセット`FS`します。  
-  
+[in]先頭からのオフセット`FS`します。
+
 *データ*<br/>
-[in]メモリ位置に追加する値。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__addfsbyte`|x86|  
-|`__addfsword`|x86|  
-|`__addfsdword`|x86|  
-  
-## <a name="remarks"></a>Remarks  
- これらのルーチンは組み込みとしてのみ使用できます。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [_ _incfsbyte、 \__incfsword、 \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)   
- [_ _readfsbyte、 \__readfsdword、 \__readfsqword、 \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)   
- [_ _writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)   
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[in]メモリ位置に追加する値。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__addfsbyte`|x86|
+|`__addfsword`|x86|
+|`__addfsdword`|x86|
+
+## <a name="remarks"></a>Remarks
+
+これらのルーチンは組み込みとしてのみ使用できます。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[_ _incfsbyte、 \__incfsword、 \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)<br/>
+[_ _readfsbyte、 \__readfsdword、 \__readfsqword、 \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)<br/>
+[_ _writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

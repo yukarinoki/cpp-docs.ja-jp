@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 832ea689b2db9a34b55664b695747079ac277bae
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 24e57be50c2138cb9e772f6e6a2527300c9296ea
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702560"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46446479"
 ---
 # <a name="o1-o2-minimize-size-maximize-speed"></a>/O1、/O2 (プログラム サイズ、実行速度)
 
@@ -69,7 +69,7 @@ ms.locfileid: "45702560"
 
 ## <a name="see-also"></a>関連項目
 
-[/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)
+[/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)<br/>
 [コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
 [/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)

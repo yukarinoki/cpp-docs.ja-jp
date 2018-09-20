@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6734391e56f076f247bd8887a7fdb61142b3669
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fa4d894fb3fc436abab84bfee11199f59bd66f78
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317863"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402396"
 ---
 # <a name="defining-member-variables-for-dialog-controls-c"></a>ダイアログ コントロール (C++) のメンバー変数の定義
 
@@ -55,11 +55,11 @@ MFC
 
 ## <a name="see-also"></a>関連項目
 
-[マップ (関数にメッセージを)](../mfc/reference/mapping-messages-to-functions.md)  
-[コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)  
-[MFC クラス ウィザード](../mfc/reference/mfc-class-wizard.md)  
-[クラスの追加](../ide/adding-a-class-visual-cpp.md)  
-[メンバー関数の追加](../ide/adding-a-member-function-visual-cpp.md)  
-[メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)  
-[仮想関数のオーバーライド](../ide/overriding-a-virtual-function-visual-cpp.md)  
+[マップ (関数にメッセージを)](../mfc/reference/mapping-messages-to-functions.md)<br/>
+[コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[MFC クラス ウィザード](../mfc/reference/mfc-class-wizard.md)<br/>
+[クラスの追加](../ide/adding-a-class-visual-cpp.md)<br/>
+[メンバー関数の追加](../ide/adding-a-member-function-visual-cpp.md)<br/>
+[メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[仮想関数のオーバーライド](../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
 [MFC メッセージ ハンドラー](../mfc/reference/adding-an-mfc-message-handler.md)

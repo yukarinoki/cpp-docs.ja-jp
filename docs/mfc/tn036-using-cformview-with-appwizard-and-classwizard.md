@@ -1,5 +1,5 @@
 ---
-title: 'TN036: を使って CFormView AppWizard と ClassWizard |Microsoft ドキュメント'
+title: 'TN036: AppWizard と ClassWizard を使って CFormView |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,17 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ae6939a480b58744d949b136c8fc244def90e32
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 162b9f3f16c496a7ab027499d7b0d58123fd48fc
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33379876"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383780"
 ---
 # <a name="tn036-using-cformview-with-appwizard-and-classwizard"></a>テクニカル ノート 36: AppWizard と ClassWizard を使って CFormView を利用する方法
-このテクニカル ノートには、使用するために、AppWizard が生成されたアプリケーションを変更する方法が説明されている、 `CFormView` 、既定ではなく`CView`ビューのメイン クラスです。 これは、このバージョンの Visual C と直接はサポートされています。  
-  
-## <a name="see-also"></a>関連項目  
- [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)   
- [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
+
+このテクニカル ノートには、使用するために、AppWizard が生成されたアプリケーションを変更する方法が説明されている、 `CFormView` 、既定ではなく`CView`メイン ビュー クラス。 これは、このバージョンの Visual C で直接サポートされます。
+
+## <a name="see-also"></a>関連項目
+
+[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
+[カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
 

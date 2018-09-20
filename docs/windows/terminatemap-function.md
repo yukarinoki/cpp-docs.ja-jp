@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e56e3f48a3a58f25d03053867c195d11970893f9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f844d63bc04deb4294203f04aef30db48f195fd9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601408"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46438068"
 ---
 # <a name="terminatemap-function"></a>TerminateMap 関数
 
@@ -39,13 +39,13 @@ inline bool TerminateMap(
 
 ### <a name="parameters"></a>パラメーター
 
-*モジュール*  
+*モジュール*<br/>
 A[モジュール](../windows/module-class.md)します。
 
-*サーバー名*  
+*サーバー名*<br/>
 パラメーターで指定されたモジュールでクラス ファクトリのサブセットの名前*モジュール*します。
 
-*forceTerminate*  
+*forceTerminate*<br/>
 **true**クラスを終了するに関係なく、ファクトリがアクティブです。**false**クラス ファクトリを終了しない場合は、ファクトリがアクティブにします。
 
 ## <a name="return-value"></a>戻り値

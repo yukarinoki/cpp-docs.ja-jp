@@ -1,5 +1,5 @@
 ---
-title: コード ウィザードを使用したコントロールにタイプ セーフ アクセス |Microsoft ドキュメント
+title: コード ウィザードを使用したコントロールへのタイプ セーフ アクセス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,33 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88f86a8f22bae990261be5150755a26d50d4bef8
-ms.sourcegitcommit: c6b095c5f3de7533fd535d679bfee0503e5a1d91
+ms.openlocfilehash: e96f7b3ab0875c233241ee0f6dacfcf51ab79564
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2018
-ms.locfileid: "36950462"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377540"
 ---
 # <a name="type-safe-access-to-controls-with-code-wizards"></a>コード ウィザードを使用した、コントロールへのタイプ セーフ アクセス
-DDX 機能を使い慣れている場合でコントロール プロパティを使用することができます、[変数の追加メンバー ウィザード](../ide/add-member-variable-wizard.md): タイプ セーフなアクセスを作成します。 この方法は、コード ウィザードを使用しないコントロールを作成するよりも簡単です。  
-  
- 単純にする場合、コントロールの値へのアクセス、DDX を使用してください。 複数のコントロールの値にアクセスする場合は、メンバー変数の追加ウィザードを使用して、ダイアログ クラスに、適切なクラスのメンバー変数を追加します。 このメンバー変数をコントロールのプロパティにアタッチします。  
-  
- メンバー変数は、値のプロパティではなく、コントロール プロパティを持つことができます。 Value プロパティを指すように、コントロールから返されるデータの種類`CString`または**int**です。コントロールのプロパティを使用して、データ型を持つメンバー MFC では、コントロール クラスのいずれかなどを使用してコントロールに直接アクセスする`CButton`または`CEdit`です。  
-  
+
+DDX の機能に慣れている場合でコントロール プロパティを使用することができます、[追加メンバー変数のウィザード](../ide/add-member-variable-wizard.md)タイプ セーフなアクセスを作成します。 このアプローチは、コード ウィザードを使用しないコントロールを作成するよりも簡単です。
+
+単にコントロールの値にアクセスする場合、DDX によって提供します。 コントロールの値をアクセス以上の場合は、ダイアログ クラスに適切なクラスのメンバー変数を追加するメンバー変数の追加ウィザードを使用します。 このメンバー変数をコントロール プロパティにアタッチします。
+
+メンバー変数には、値プロパティの代わりに、コントロールのプロパティを持つことができます。 Value プロパティを指すように、コントロールから返されるデータの種類`CString`または**int**します。コントロールのプロパティにより、型がなどでは、MFC コントロール クラスのいずれかがデータ メンバーを使用してコントロールに直接アクセスする`CButton`または`CEdit`します。
+
 > [!NOTE]
->  特定のコントロールでのする場合は、したプロパティの値と最大でコントロールのプロパティを持つ 1 つのメンバー変数を持つ複数のメンバー変数できます。 1 つだけの MFC オブジェクトがコントロール、またはその他のウィンドウにアタッチされている複数のオブジェクトは、メッセージ マップのあいまいさにつながるために、コントロールにマップされていることができます。  
-  
- このオブジェクトを使用して、コントロール オブジェクトのメンバー関数を呼び出すことができます。 このような呼び出しでは、ダイアログ ボックスのコントロールに影響します。 たとえば、チェック ボックス コントロールの変数で表された、 *m_Checkbox*、型の`CButton`、呼び出す可能性があります。  
-  
- [!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]  
-  
- ここでは、メンバー変数*m_Checkbox*メンバー関数として同じ目的を果たします`GetMyCheckbox`に示すように[コード ウィザードなしのコントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-without-code-wizards.md)です。 チェック ボックスは、自動チェック ボックスではない、ボタンがクリックされたときのハンドラーは BN_CLICKED コントロール通知メッセージのダイアログ クラスで必要なります。  
-  
- コントロールの詳細については、次を参照してください。[コントロール](../mfc/controls-mfc.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ ボックスのコントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)   
- [ダイアログ ボックスのライフ サイクル](../mfc/life-cycle-of-a-dialog-box.md)   
- [コード ウィザードを使用しない、コントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-without-code-wizards.md)
+>  特定のコントロールのことができますを希望する場合があるプロパティの値と最大コントロール プロパティに 1 つのメンバー変数を持つ複数のメンバー変数。 1 つだけの MFC オブジェクトをコントロール、またはその他のウィンドウにアタッチされている複数のオブジェクトは、メッセージ マップで、あいまいさにつながるため、コントロールにマップされていることができます。
+
+このオブジェクトを使用して、コントロール オブジェクトのメンバー関数を呼び出すことができます。 このような呼び出しでは、ダイアログ ボックスのコントロールに影響します。 たとえば、チェック ボックス コントロールの変数で表される、 *m_Checkbox*、型の`CButton`、呼び出すことができます。
+
+[!code-cpp[NVC_MFCControlLadenDialog#52](../mfc/codesnippet/cpp/type-safe-access-to-controls-with-code-wizards_1.cpp)]
+
+ここでは、メンバー変数*m_Checkbox*メンバー関数として同じ目的を果たします`GetMyCheckbox`に示すように[コード ウィザードなしコントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-without-code-wizards.md)します。 チェック ボックスは、自動チェック ボックスではない、ボタンがクリックされたときに、ハンドラーは BN_CLICKED コントロール通知メッセージのダイアログ クラスで必要は。
+
+コントロールの詳細については、次を参照してください。[コントロール](../mfc/controls-mfc.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[ダイアログ ボックスのコントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-in-a-dialog-box.md)<br/>
+[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)<br/>
+[コード ウィザードを使用しない、コントロールへのタイプ セーフ アクセス](../mfc/type-safe-access-to-controls-without-code-wizards.md)
 

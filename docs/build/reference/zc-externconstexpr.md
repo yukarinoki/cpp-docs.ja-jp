@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34aea466a3e673c3eebb3b415d544d9299fed615
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ac52c073135ecc88536b6aaa2beee7308ba53b9c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713142"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419127"
 ---
 # <a name="zcexternconstexpr-enable-extern-constexpr-variables"></a>/Zc: externconstexpr (外部 constexpr 変数の有効化)
 
@@ -48,5 +48,5 @@ ms.locfileid: "45713142"
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](../../build/reference/zc-conformance.md)
+[/Zc (準拠)](../../build/reference/zc-conformance.md)<br/>
 [auto キーワード](../../cpp/auto-keyword.md)

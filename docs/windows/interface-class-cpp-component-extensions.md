@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 775fbe39edc9478b1fce3afb39ee2bf1f6d5ed36
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0c7ebdf83730b661cbd855ba730da1abeee936c5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714312"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46377072"
 ---
 # <a name="interface-class--c-component-extensions"></a>インターフェイス クラス (C++ コンポーネント拡張)
 
@@ -36,21 +36,21 @@ ms.locfileid: "45714312"
 ```cpp
 interface_access
 interface class
- name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
+name :  inherit_accessbase_interface{};interface_accessinterface structname :  inherit_accessbase_interface{};
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*interface_access*  
+*interface_access*<br/>
 アセンブリの外部インターフェイスのアクセシビリティ。  指定できる値は**パブリック**と**プライベート**します。  **プライベート**既定値です。 入れ子になったインターフェイスを持つことはできません、 *interface_access*指定子。
 
-*name*  
+*name*<br/>
 インターフェイスの名前。
 
-*inherit_access*  
+*inherit_access*<br/>
 ユーザー補助*base_interface*します。  許可されるユーザー補助の基底インターフェイスが**パブリック**(既定)。
 
-*base_interface*  
+*base_interface*<br/>
 (省略可能)インターフェイスの基本インターフェイス*名前*します。
 
 ### <a name="remarks"></a>Remarks

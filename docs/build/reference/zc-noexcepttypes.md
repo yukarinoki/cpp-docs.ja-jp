@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78657b293562e82e4691ae54f8ee60d490d78ba7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fab79c1e3c28a3768b7eff856c16e5c0746c963f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716678"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430996"
 ---
 # <a name="zcnoexcepttypes-c17-noexcept-rules"></a>/Zc: noexcepttypes (c++ 17 noexcept ルール)
 
@@ -90,6 +90,6 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](../../build/reference/zc-conformance.md)
+[/Zc (準拠)](../../build/reference/zc-conformance.md)<br/>
 [noexcept](../../cpp/noexcept-cpp.md)<br/>
 [例外の仕様 (スロー)](../../cpp/exception-specifications-throw-cpp.md)

@@ -1,5 +1,5 @@
 ---
-title: ディレクティブの入れ子になった A.18 |Microsoft ドキュメント
+title: ディレクティブの入れ子になった A.18 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,51 +12,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c0f52baeaa4b6c37f0da1b818a5ae2b8471dabc9
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 4a4e8a984a111d409e07d55c0c1f6e6adbed91e4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690869"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46433570"
 ---
 # <a name="a18---nested-for-directives"></a>A.18 入れ子になった for ディレクティブ
-次の例の`for`ディレクティブの入れ子 ([セクション 2.9](../../parallel/openmp/2-9-directive-nesting.md) 33 ページ上) は準拠していませんので内側と外側`for`ディレクティブが別々 の並行領域にバインドします。  
-  
-```  
-#pragma omp parallel default(shared)  
-{  
-    #pragma omp for  
-        for (i=0; i<n; i++)   
-        {  
-            #pragma omp parallel shared(i, n)  
-            {  
-                #pragma omp for  
-                    for (j=0; j<n; j++)  
-                        work(i, j);  
-            }  
-        }  
-}  
-```  
-  
- 次の例のバリエーションがあるが準拠しています。  
-  
-```  
-#pragma omp parallel default(shared)  
-{  
-    #pragma omp for  
-        for (i=0; i<n; i++)  
-            work1(i, n);  
-}  
-  
-void work1(int i, int n)  
-{  
-    int j;  
-    #pragma omp parallel default(shared)  
-    {  
-        #pragma omp for  
-            for (j=0; j<n; j++)  
-                work2(i, j);  
-    }  
-    return;  
-}  
+
+次の例の`for`ディレクティブの入れ子 ([セクション 2.9](../../parallel/openmp/2-9-directive-nesting.md) 33 ページの) が準拠しているため、内側と外側`for`ディレクティブは、並列の異なるリージョンにバインドします。
+
+```
+#pragma omp parallel default(shared)
+{
+    #pragma omp for
+        for (i=0; i<n; i++)
+        {
+            #pragma omp parallel shared(i, n)
+            {
+                #pragma omp for
+                    for (j=0; j<n; j++)
+                        work(i, j);
+            }
+        }
+}
+```
+
+次の例のバリエーションが準拠してもです。
+
+```
+#pragma omp parallel default(shared)
+{
+    #pragma omp for
+        for (i=0; i<n; i++)
+            work1(i, n);
+}
+
+void work1(int i, int n)
+{
+    int j;
+    #pragma omp parallel default(shared)
+    {
+        #pragma omp for
+            for (j=0; j<n; j++)
+                work2(i, j);
+    }
+    return;
+}
 ```

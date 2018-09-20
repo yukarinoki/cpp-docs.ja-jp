@@ -1,5 +1,5 @@
 ---
-title: auto_gcroot::operator bool |Microsoft ドキュメント
+title: auto_gcroot::operator bool |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -21,62 +21,67 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 8dbb38ecfa7f1a60af44a59ccd1953b6d6e787fd
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6e21626b9b69d1c25ca638f659b6d8cc1a850594
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33104231"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421220"
 ---
 # <a name="autogcrootoperator-bool"></a>auto_gcroot::operator bool
-使用するための演算子`auto_gcroot`条件式でします。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-operator bool() const;  
-```  
-  
-## <a name="return-value"></a>戻り値  
- `true` ラップされたオブジェクトが無効である場合`false`それ以外の場合。  
-  
-## <a name="remarks"></a>コメント  
- この演算子は実際に変換`_detail_class::_safe_bool`よりも安全である`bool`整数型に変換できないためです。  
-  
-## <a name="example"></a>例  
-  
-```  
-// msl_auto_gcroot_operator_bool.cpp  
-// compile with: /clr  
-#include <msclr\auto_gcroot.h>  
-  
-using namespace System;  
-using namespace msclr;  
-  
-int main() {  
-   auto_gcroot<String^> s;  
-   if ( s ) Console::WriteLine( "s is valid" );  
-   if ( !s ) Console::WriteLine( "s is invalid" );  
-   s = "something";  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-   s.reset();  
-   if ( s ) Console::WriteLine( "now s is valid" );  
-   if ( !s ) Console::WriteLine( "now s is invalid" );  
-}  
-```  
-  
-```Output  
-s is invalid  
-now s is valid  
-now s is invalid  
-```  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー ファイル** \<msclr\auto_gcroot.h >  
-  
- **Namespace** msclr  
-  
-## <a name="see-also"></a>関連項目  
- [auto_gcroot メンバー](../dotnet/auto-gcroot-members.md)   
- [auto_gcroot::operator!](../dotnet/auto-gcroot-operator-logical-not.md)
+
+使用するための演算子`auto_gcroot`条件式。
+
+## <a name="syntax"></a>構文
+
+```
+operator bool() const;
+```
+
+## <a name="return-value"></a>戻り値
+
+`true` ラップされたオブジェクトが無効である場合`false`それ以外の場合。
+
+## <a name="remarks"></a>Remarks
+
+実際にこの演算子の変換`_detail_class::_safe_bool`よりも安全である`bool`整数型に変換できないためです。
+
+## <a name="example"></a>例
+
+```
+// msl_auto_gcroot_operator_bool.cpp
+// compile with: /clr
+#include <msclr\auto_gcroot.h>
+
+using namespace System;
+using namespace msclr;
+
+int main() {
+   auto_gcroot<String^> s;
+   if ( s ) Console::WriteLine( "s is valid" );
+   if ( !s ) Console::WriteLine( "s is invalid" );
+   s = "something";
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+   s.reset();
+   if ( s ) Console::WriteLine( "now s is valid" );
+   if ( !s ) Console::WriteLine( "now s is invalid" );
+}
+```
+
+```Output
+s is invalid
+now s is valid
+now s is invalid
+```
+
+## <a name="requirements"></a>要件
+
+**ヘッダー ファイル** \<msclr\auto_gcroot.h >
+
+**Namespace** msclr
+
+## <a name="see-also"></a>関連項目
+
+[auto_gcroot のメンバー](../dotnet/auto-gcroot-members.md)<br/>
+[auto_gcroot::operator!](../dotnet/auto-gcroot-operator-logical-not.md)

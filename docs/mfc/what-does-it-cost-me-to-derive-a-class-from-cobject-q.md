@@ -16,15 +16,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ffff35cdef6cf2f730687334bbb56bc078371a7
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e41f9060ce24b89a0a7faae54ca6207c740475f3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33381678"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443242"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>CObject からクラスを派生するときのオーバーヘッド
-クラスから派生することで、オーバーヘッド[CObject](../mfc/reference/cobject-class.md)は最小限にします。 4 つだけの仮想関数と 1 つの派生クラスの継承[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)オブジェクト。  
-  
-## <a name="see-also"></a>関連項目  
- [CObject クラス: Q & A 集](../mfc/cobject-class-frequently-asked-questions.md)
+
+クラスから派生するオーバーヘッド[CObject](../mfc/reference/cobject-class.md)は最小限です。 派生クラスは、4 つだけの仮想関数と、1 つを継承[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)オブジェクト。
+
+## <a name="see-also"></a>関連項目
+
+[CObject クラス: Q & A 集](../mfc/cobject-class-frequently-asked-questions.md)

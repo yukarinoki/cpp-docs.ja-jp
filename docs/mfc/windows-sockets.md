@@ -1,5 +1,5 @@
 ---
-title: Windows ソケット |Microsoft ドキュメント
+title: Windows Sockets |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,16 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d9a438c2bbdae64e17715aa398685e6600d9886a
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da8c1e6e524771c3176b17a26bd639f36a9e867e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382542"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423248"
 ---
 # <a name="windows-sockets"></a>Windows ソケット
-この一連のトピックでは、Windows ソケットの MFC 実装について説明します。 MFC では、Windows ソケット API でのネットワーク アプリケーションのプログラミングをサポートするために 2 つのクラスを提供します。 クラス[CAsyncSocket](../mfc/reference/casyncsocket-class.md)最も性能と柔軟性に高度なネットワーク プログラマを与える 1 つのいずれかの Windows ソケット API をカプセル化します。 クラス[CSocket](../mfc/reference/csocket-class.md)との間にデータをシリアル化するための簡略化されたインターフェイスを提供する[CArchive](../mfc/reference/carchive-class.md)オブジェクト。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)
+
+この一連のトピックでは、Windows ソケットの MFC 実装について説明します。 MFC では、Windows ソケット API を使用したネットワーク アプリケーションのプログラミングをサポートするために 2 つのクラスを提供します。 クラス[CAsyncSocket](../mfc/reference/casyncsocket-class.md)最大のパワーと柔軟性、高度なネットワーク プログラマを与える 1 つは、いずれかの Windows ソケット API をカプセル化します。 クラス[CSocket](../mfc/reference/csocket-class.md)との間にデータをシリアル化するための使いやすいインターフェイスを提供します、 [CArchive](../mfc/reference/carchive-class.md)オブジェクト。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+[MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)
 

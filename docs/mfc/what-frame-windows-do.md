@@ -1,5 +1,5 @@
 ---
-title: フレーム ウィンドウの操作 |Microsoft ドキュメント
+title: フレームの Windows の実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,34 +16,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ed903238a812188d73093211265c9c8c028b0ab
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: b86b65d43fee16a0a2a8f03353c9700d6f0a5428
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33382568"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423599"
 ---
 # <a name="what-frame-windows-do"></a>フレーム ウィンドウの機能
-だけでなく、ビューをフレームだけで、フレーム ウィンドウは、ビューと、アプリケーションのフレームの調整に関連するさまざまなタスクを担当します。 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)と[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)から継承[CFrameWnd](../mfc/reference/cframewnd-class.md)であるため、`CFrameWnd`機能だけではなく、それらを追加する新しい機能です。 子ウィンドウの例には、ビュー、ボタン、リスト ボックス、およびコントロール バー、ツールバー、ステータス バー、およびダイアログ バーを含むなどのコントロールが含まれます。  
-  
- フレーム ウィンドウは、その子ウィンドウのレイアウトの管理を担当します。 MFC フレームワークでは、フレーム ウィンドウは、コントロール バーは、すべて、ビュー、およびその他の子ウィンドウのクライアント領域の内側に配置します。  
-  
- また、フレーム ウィンドウ、コマンドをビューに転送し、windows のコントロールから通知メッセージに応答できます。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
-  
--   [コントロール バーを (それらにどのように適合フレーム ウィンドウ)](../mfc/control-bars.md)  
-  
--   [メニューのコントロール バー、およびアクセラレータの管理 (これらにどのように適合フレーム ウィンドウ)](../mfc/managing-menus-control-bars-and-accelerators.md)  
-  
--   [(そのビューおよびその他のコマンド ターゲットをフレーム ウィンドウ) からのコマンド ルーティング](../mfc/command-routing.md)  
-  
--   [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)  
-  
--   [コントロール バー](../mfc/control-bars.md)  
-  
--   [コントロール](../mfc/controls-mfc.md)  
-  
-## <a name="see-also"></a>関連項目  
- [フレーム ウィンドウ](../mfc/frame-windows.md)
+
+フレーム ウィンドウは単に、ビューのフレーム化、だけでなく、そのビューと、アプリケーションのフレームの調整に関連する多数のタスクを担当します。 [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)と[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)継承[CFrameWnd](../mfc/reference/cframewnd-class.md)があるため、`CFrameWnd`機能だけではなく、新しい機能を追加します。 子ウィンドウの例には、ビュー、ボタン、リスト ボックス、およびコントロール バー、ツールバー、ステータス バー、およびダイアログ バーを含むなどのコントロールが含まれます。
+
+フレーム ウィンドウは、その子ウィンドウのレイアウトの管理を担当します。 MFC フレームワークでは、フレーム ウィンドウは、クライアント領域内で、コントロール バー、ビュー、およびその他の子ウィンドウを配置します。
+
+また、フレーム ウィンドウ、コマンドをビューに転送し、windows のコントロールから通知メッセージに応答できます。
+
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+
+- [(これらに適合させる方法、フレーム ウィンドウ) コントロール バー](../mfc/control-bars.md)
+
+- [メニューのコントロール バー、およびアクセラレータ (それらに適合させる方法、フレーム ウィンドウ) の管理](../mfc/managing-menus-control-bars-and-accelerators.md)
+
+- [(そのビューを他のコマンド ターゲット フレーム ウィンドウ) からのコマンド ルーティング](../mfc/command-routing.md)
+
+- [ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)
+
+- [コントロール バー](../mfc/control-bars.md)
+
+- [コントロール](../mfc/controls-mfc.md)
+
+## <a name="see-also"></a>関連項目
+
+[フレーム ウィンドウ](../mfc/frame-windows.md)
 

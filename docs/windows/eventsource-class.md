@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 08347b4ccfa44d8645acc2bd5e96775bab4e7740
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: cd9ab28ccce14c5ac0975b7050588ee6524cfcc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601497"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408350"
 ---
 # <a name="eventsource-class"></a>EventSource クラス
 
@@ -53,7 +53,7 @@ class EventSource;
 
 ### <a name="parameters"></a>パラメーター
 
-*TDelegateInterface*  
+*TDelegateInterface*<br/>
 イベント ハンドラーを表すデリゲートのインターフェイスです。
 
 ## <a name="members"></a>メンバー
@@ -104,10 +104,10 @@ HRESULT Add(
 
 ### <a name="parameters"></a>パラメーター
 
-*delegateInterface*  
+*delegateInterface*<br/>
 イベント ハンドラーを表すデリゲート オブジェクトのインターフェイスです。
 
-*token*  
+*token*<br/>
 この操作の完了時、イベントを表すハンドルです。 パラメーターとしてこのトークンを使用して、 [Remove()](#remove)メソッドをイベント ハンドラーを破棄します。
 
 ### <a name="return-value"></a>戻り値
@@ -302,64 +302,64 @@ void InvokeAll(
 
 ### <a name="parameters"></a>パラメーター
 
-*T0*  
+*T0*<br/>
 0 番目のイベント ハンドラーの引数の型。
 
-*T1*  
+*T1*<br/>
 最初のイベント ハンドラーの引数の型。
 
-*T2*  
+*T2*<br/>
 2 番目のイベント ハンドラーの引数の型。
 
-*T3*  
+*T3*<br/>
 3 番目のイベント ハンドラーの引数の型。
 
-*T4*  
+*T4*<br/>
 4 番目のイベント ハンドラーの引数の型。
 
-*T5*  
+*T5*<br/>
 5 番目のイベント ハンドラーの引数の型。
 
-*T6*  
+*T6*<br/>
 6 番目のイベント ハンドラーの引数の型。
 
-*T7*  
+*T7*<br/>
 7 番目のイベント ハンドラーの引数の型。
 
-*T8*  
+*T8*<br/>
 8 番目のイベント ハンドラーの引数の型。
 
-*T9*  
+*T9*<br/>
 9 番目のイベント ハンドラーの引数の型。
 
-*arg0*  
+*arg0*<br/>
 0 番目のイベント ハンドラーの引数。
 
-*arg1*  
+*arg1*<br/>
 最初のイベント ハンドラーの引数。
 
-*Arg2*  
+*Arg2*<br/>
 2 番目のイベント ハンドラーの引数。
 
-*arg3…*  
+*arg3…*<br/>
 3 番目のイベント ハンドラーの引数。
 
-*arg4*  
+*arg4*<br/>
 4 番目のイベント ハンドラーの引数。
 
-*arg5*  
+*arg5*<br/>
 5 番目のイベント ハンドラーの引数。
 
-*arg6*  
+*arg6*<br/>
 6 番目のイベント ハンドラーの引数。
 
-*arg7*  
+*arg7*<br/>
 7 番目のイベント ハンドラーの引数。
 
-*arg8*  
+*arg8*<br/>
 8 番目のイベント ハンドラーの引数。
 
-*arg9*  
+*arg9*<br/>
 9 番目のイベント ハンドラーの引数。
 
 ## <a name="remove"></a>Eventsource::remove
@@ -374,7 +374,7 @@ HRESULT Remove(
 
 ### <a name="parameters"></a>パラメーター
 
-*token*  
+*token*<br/>
 イベント ハンドラーを表すハンドル。 このトークンはイベント ハンドラーの登録時に返された、 [Add()](#add)メソッド。
 
 ### <a name="return-value"></a>戻り値

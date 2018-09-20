@@ -19,184 +19,206 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46a1607b0d69be21e38cace117ec2c0e248827be
-ms.sourcegitcommit: 6408139d5f5ff8928f056bde93d20eecb3520361
+ms.openlocfilehash: bd0a0a25e1607b3b4318fdfca1f68f272cd02173
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2018
-ms.locfileid: "37339398"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380192"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>淡色表示 (灰色) ビットマップ関数とディザリングされたビットマップ関数
-**淡色表示 (灰色) ビットマップ関数**  
-  
- MFC には、ビットマップのコントロールが無効になっていることを示すための 2 つの関数が用意されています。  
-  
- ![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
-  
-|||  
-|-|-|  
-|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|灰色のバージョンのビットマップを描画します。|  
-|[AfxGetGrayBitmap](#afxgetgraybitmap)|灰色のバージョンのビットマップをコピーします。|  
-  
- **淡色表示 (灰色) ビットマップ関数**  
-  
- MFC には、ビットマップの背景をディザリングされたパターンに置き換える 2 つの関数も用意されています。  
-  
- ![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
-  
-|||  
-|-|-|  
-|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|背景がディザリングされたビットマップを描画します。|  
-|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|背景がディザリングされたビットマップをコピーします。|  
-  
-##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap  
- 灰色のバージョンのビットマップを描画します。  
-  
-```   
+
+**淡色表示 (灰色) ビットマップ関数**
+
+MFC には、ビットマップのコントロールが無効になっていることを示すための 2 つの関数が用意されています。
+
+![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+
+|||
+|-|-|
+|[AfxDrawGrayBitmap](#afxdrawgraybitmap)|灰色のバージョンのビットマップを描画します。|
+|[AfxGetGrayBitmap](#afxgetgraybitmap)|灰色のバージョンのビットマップをコピーします。|
+
+**淡色表示 (灰色) ビットマップ関数**
+
+MFC には、ビットマップの背景をディザリングされたパターンに置き換える 2 つの関数も用意されています。
+
+![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+
+|||
+|-|-|
+|[AfxDrawDitheredBitmap](#afxdrawditheredbitmap)|背景がディザリングされたビットマップを描画します。|
+|[AfxGetDitheredBitmap](#afxgetditheredbitmap)|背景がディザリングされたビットマップをコピーします。|
+
+##  <a name="afxdrawgraybitmap"></a>  AfxDrawGrayBitmap
+
+灰色のバージョンのビットマップを描画します。
+
+```
 void AFXAPI AfxDrawGrayBitmap(
-    CDC* pDC,  
-    int x,  
-    int y,  
-    const CBitmap& rSrc,  
-    COLORREF crBackground); 
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *pDC*  
- 宛先 DC を示します。  
-  
- *x*  
- 宛先の x 座標。  
-  
- *y*  
- 宛先の y 座標。  
-  
- *rSrc*  
- 元のビットマップ。  
-  
- *crBackground*  
- 新しい背景色 (通常は COLOR_MENU などの灰色)。  
-  
-### <a name="remarks"></a>Remarks  
- `AfxDrawGrayBitmap` で描画されるビットマップの外観は、無効なコントロールになります。  
-  
- ![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
-  
-### <a name="example"></a>例  
- [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]  
+    CDC* pDC,
+    int x,
+    int y,
+    const CBitmap& rSrc,
+    COLORREF crBackground);
+```
 
-### <a name="requirements"></a>必要条件  
- **ヘッダー:** afxwin.h  
+### <a name="parameters"></a>パラメーター
 
-##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap  
- 灰色のバージョンのビットマップをコピーします。  
-  
-```   
+*pDC*<br/>
+宛先 DC を示します。
+
+*x*<br/>
+宛先の x 座標。
+
+*y*<br/>
+宛先の y 座標。
+
+*rSrc*<br/>
+元のビットマップ。
+
+*crBackground*<br/>
+新しい背景色 (通常は COLOR_MENU などの灰色)。
+
+### <a name="remarks"></a>Remarks
+
+`AfxDrawGrayBitmap` で描画されるビットマップの外観は、無効なコントロールになります。
+
+![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+
+### <a name="example"></a>例
+
+[!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]
+
+### <a name="requirements"></a>要件
+
+**ヘッダー:** afxwin.h
+
+##  <a name="afxgetgraybitmap"></a>  AfxGetGrayBitmap
+
+灰色のバージョンのビットマップをコピーします。
+
+```
 void AFXAPI AfxGetGrayBitmap(
-    const CBitmap& rSrc,  
-    CBitmap* pDest,  
-    COLORREF crBackground); 
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *rSrc*  
- 元のビットマップ。  
-  
- *pDest*  
- コピー先のビットマップ。  
-  
- *crBackground*  
- 新しい背景色 (通常は COLOR_MENU などの灰色)。  
-  
-### <a name="remarks"></a>Remarks  
- `AfxGetGrayBitmap` でコピーされるビットマップの外観は、無効なコントロールのようになります。  
-  
- ![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")  
-  
-### <a name="example"></a>例  
- [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]  
+    const CBitmap& rSrc,
+    CBitmap* pDest,
+    COLORREF crBackground);
+```
 
-### <a name="requirements"></a>必要条件  
- **ヘッダー:** afxwin.h  
-  
-##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap  
- その背景をディザリングされた (チェッカー) パターンに置き換えて、ビットマップを描画します。  
-  
-```   
+### <a name="parameters"></a>パラメーター
+
+*rSrc*<br/>
+元のビットマップ。
+
+*pDest*<br/>
+コピー先のビットマップ。
+
+*crBackground*<br/>
+新しい背景色 (通常は COLOR_MENU などの灰色)。
+
+### <a name="remarks"></a>Remarks
+
+`AfxGetGrayBitmap` でコピーされるビットマップの外観は、無効なコントロールのようになります。
+
+![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+
+### <a name="example"></a>例
+
+[!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]
+
+### <a name="requirements"></a>要件
+
+**ヘッダー:** afxwin.h
+
+##  <a name="afxdrawditheredbitmap"></a>  AfxDrawDitheredBitmap
+
+その背景をディザリングされた (チェッカー) パターンに置き換えて、ビットマップを描画します。
+
+```
 void AFXAPI AfxDrawDitheredBitmap(
-    CDC* pDC,  
-    int x,  
-    int y,  
-    const CBitmap& rSrc,  
-    COLORREF cr1  ,  
-    COLORREF cr2); 
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *pDC*  
- 宛先 DC を示します。  
-  
- *x*  
- 宛先の x 座標。  
-  
- *y*  
- 宛先の y 座標。  
-  
- *rSrc*  
- 元のビットマップ。  
-  
- *cr1*  
- 2 つのディザー カラーのいずれかの通常白します。  
-  
- *cr2*  
- その他のディザー色、通常は明るい灰色 (COLOR_MENU)。  
-  
-### <a name="remarks"></a>Remarks  
- 2 色でレプリケート先 DC に元のビットマップが描画されます (*cr1*と*cr2*) 格子模様のパターン ビットマップの背景を置換します。 ソース ビットマップの背景は、その白いピクセル、左上隅にあるビットマップのピクセルの色と一致するすべてのピクセルとして定義されます。  
-  
- ![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
-  
-### <a name="example"></a>例  
- [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]  
+    CDC* pDC,
+    int x,
+    int y,
+    const CBitmap& rSrc,
+    COLORREF cr1  ,
+    COLORREF cr2);
+```
 
-### <a name="requirements"></a>必要条件  
- **ヘッダー:** afxwin.h  
+### <a name="parameters"></a>パラメーター
+
+*pDC*<br/>
+宛先 DC を示します。
+
+*x*<br/>
+宛先の x 座標。
+
+*y*<br/>
+宛先の y 座標。
+
+*rSrc*<br/>
+元のビットマップ。
+
+*cr1*<br/>
+2 つのディザー カラーのいずれかの通常白します。
+
+*cr2*<br/>
+その他のディザー色、通常は明るい灰色 (COLOR_MENU)。
+
+### <a name="remarks"></a>Remarks
+
+2 色でレプリケート先 DC に元のビットマップが描画されます (*cr1*と*cr2*) 格子模様のパターン ビットマップの背景を置換します。 ソース ビットマップの背景は、その白いピクセル、左上隅にあるビットマップのピクセルの色と一致するすべてのピクセルとして定義されます。
+
+![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+
+### <a name="example"></a>例
+
+[!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]
+
+### <a name="requirements"></a>要件
+
+**ヘッダー:** afxwin.h
 
 
-##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap  
- その背景をディザリングされた (チェッカー) パターンに置き換えて、ビットマップをコピーします。  
-  
-```   
+##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
+
+その背景をディザリングされた (チェッカー) パターンに置き換えて、ビットマップをコピーします。
+
+```
 void AFXAPI AfxGetDitheredBitmap(
-    const CBitmap& rSrc,  
-    CBitmap* pDest,  
-    COLORREF cr1  ,  
-    COLORREF cr2); 
-```  
-  
-### <a name="parameters"></a>パラメーター  
- *rSrc*  
- 元のビットマップ。  
-  
- *pDest*  
- コピー先のビットマップ。  
-  
- *cr1*  
- 2 つのディザー カラーのいずれかの通常白します。  
-  
- *cr2*  
- その他のディザー色、通常は明るい灰色 (COLOR_MENU)。  
-  
-### <a name="remarks"></a>Remarks  
- ソース ビットマップは 2 色でコピー先ビットマップにコピー (*cr1*と*cr2*) ソース ビットマップの背景を置き換える格子模様のパターン。 ソース ビットマップの背景は、その白いピクセル、左上隅にあるビットマップのピクセルの色と一致するすべてのピクセルとして定義されます。  
-  
- ![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")  
-  
-### <a name="example"></a>例  
- [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]  
+    const CBitmap& rSrc,
+    CBitmap* pDest,
+    COLORREF cr1  ,
+    COLORREF cr2);
+```
 
-### <a name="requirements"></a>必要条件  
- **ヘッダー:** afxwin.h  
-  
-## <a name="see-also"></a>関連項目  
- [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
+### <a name="parameters"></a>パラメーター
+
+*rSrc*<br/>
+元のビットマップ。
+
+*pDest*<br/>
+コピー先のビットマップ。
+
+*cr1*<br/>
+2 つのディザー カラーのいずれかの通常白します。
+
+*cr2*<br/>
+その他のディザー色、通常は明るい灰色 (COLOR_MENU)。
+
+### <a name="remarks"></a>Remarks
+
+ソース ビットマップは 2 色でコピー先ビットマップにコピー (*cr1*と*cr2*) ソース ビットマップの背景を置き換える格子模様のパターン。 ソース ビットマップの背景は、その白いピクセル、左上隅にあるビットマップのピクセルの色と一致するすべてのピクセルとして定義されます。
+
+![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+
+### <a name="example"></a>例
+
+[!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]
+
+### <a name="requirements"></a>要件
+
+**ヘッダー:** afxwin.h
+
+## <a name="see-also"></a>関連項目
+
+[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)

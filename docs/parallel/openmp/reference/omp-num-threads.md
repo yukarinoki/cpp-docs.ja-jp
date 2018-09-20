@@ -16,46 +16,50 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39f45b9c81d5339b2b6afe4c77fdc9bac6b5d731
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9612eefaf2b5706a4034dc027c0fc43618fd048a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091167"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46436859"
 ---
 # <a name="ompnumthreads"></a>OMP_NUM_THREADS
-によってオーバーライドされない限り、並列の領域でスレッドの最大数を設定[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)または[num_threads](../../../parallel/openmp/reference/num-threads.md)します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-set OMP_NUM_THREADS[=num]  
-```  
-  
+
+によってオーバーライドされない限り、並列の領域でスレッドの最大数を設定[omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)または[num_threads](../../../parallel/openmp/reference/num-threads.md)します。
+
+## <a name="syntax"></a>構文
+
+```
+set OMP_NUM_THREADS[=num]
+```
+
 ### <a name="parameters"></a>パラメーター
-  
+
 *num*<br/>
-Visual C の実装では 64 まで、並列領域で必要なスレッドの最大数。  
-  
-## <a name="remarks"></a>Remarks  
- **OMP_NUM_THREADS**で環境変数をオーバーライドできます、 [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)関数または[num_threads](../../../parallel/openmp/reference/num-threads.md)します。  
-  
- 既定値`num`Visual C の OpenMP 標準の実装は、ハイパー スレッド Cpu などの仮想プロセッサの数。  
-  
- 詳細については、次を参照してください。 [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)します。  
-  
-## <a name="example"></a>例  
- 次のコマンド セット、 **OMP_NUM_THREADS**環境変数を 16。  
-  
-```  
-set OMP_NUM_THREADS=16  
-```  
-  
- 次のコマンドの現在の設定の表示、 **OMP_NUM_THREADS**環境変数。  
-  
-```  
-set OMP_NUM_THREADS  
-```  
-  
-## <a name="see-also"></a>関連項目  
- [環境変数](../../../parallel/openmp/reference/openmp-environment-variables.md)
+Visual C の実装では 64 まで、並列領域で必要なスレッドの最大数。
+
+## <a name="remarks"></a>Remarks
+
+**OMP_NUM_THREADS**で環境変数をオーバーライドできます、 [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)関数または[num_threads](../../../parallel/openmp/reference/num-threads.md)します。
+
+既定値`num`Visual C の OpenMP 標準の実装は、ハイパー スレッド Cpu などの仮想プロセッサの数。
+
+詳細については、次を参照してください。 [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)します。
+
+## <a name="example"></a>例
+
+次のコマンド セット、 **OMP_NUM_THREADS**環境変数を 16。
+
+```
+set OMP_NUM_THREADS=16
+```
+
+次のコマンドの現在の設定の表示、 **OMP_NUM_THREADS**環境変数。
+
+```
+set OMP_NUM_THREADS
+```
+
+## <a name="see-also"></a>関連項目
+
+[環境変数](../../../parallel/openmp/reference/openmp-environment-variables.md)

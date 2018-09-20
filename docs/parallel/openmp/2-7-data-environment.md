@@ -1,5 +1,5 @@
 ---
-title: 2.7 データ環境 |Microsoft ドキュメント
+title: 2.7 データ環境 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,16 +12,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1b0f253ce14ffc5d3740e582a9a51feea56ad32
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 17c60c621defa15c034f57d0af8f14637db54f03
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33690066"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378138"
 ---
 # <a name="27-data-environment"></a>2.7 データ環境
-このセクションでは、ディレクティブと次のように、並行領域の実行中に、データの環境を制御するためのいくつかの句が表示されます。  
-  
--   A **threadprivate**するため、ファイル スコープ、名前空間スコープ、または静的ブロック スコープ変数をこのスレッドにローカル ディレクティブのものは (次のセクションを参照してください)。  
-  
--   属性を制御、共有変数の並列または work-sharing コンス トラクターの実行中のディレクティブで指定できる句は「[セクション 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) 25 ページ。
+
+このセクションでは、ディレクティブと次のように、並行領域の実行中にデータ環境を制御するためのいくつかの句では。
+
+- A **threadprivate**ディレクティブは、作成、ファイル スコープ、名前空間スコープ、または静的のブロック スコープ変数をこのスレッドにローカルに提供されます (次のセクションを参照してください)。
+
+- 並列または動作共有のコンストラクトの実行中の変数の共有の属性を制御するディレクティブで指定できる句が記載されて[セクション 2.7.2](../../parallel/openmp/2-7-2-data-sharing-attribute-clauses.md) 25 ページにします。

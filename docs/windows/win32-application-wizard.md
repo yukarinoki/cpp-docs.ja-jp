@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bdcd101759b35490451bf46bd6e222db469a3fba
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 26282ef73f6a979cd564bd7597f8418c6535179a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42581243"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390520"
 ---
 # <a name="win32-application-wizard"></a>Win32 アプリケーション ウィザード
 
@@ -31,11 +31,11 @@ Visual C++ の Win32 アプリケーション ウィザードを使用すると�
 
 |アプリケーションの種類|コンソール アプリケーション|実行可能 (Windows) アプリケーション|ダイナミック リンク ライブラリ|スタティック ライブラリ|
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|
-|**空のプロジェクト**|[はい]|[はい]|[はい]|いいえ|
+|**空のプロジェクト**|はい|[はい]|[はい]|いいえ|
 |**シンボルのエクスポート**|いいえ|×|はい|いいえ|
-|**プリコンパイル済みヘッダー**|いいえ|×|×|[はい]|
-|**ATL サポート**|[はい]|×|×|いいえ|
-|**MFC サポート**|[はい]|×|×|[はい]|
+|**プリコンパイル済みヘッダー**|いいえ|×|×|はい|
+|**ATL サポート**|はい|×|×|いいえ|
+|**MFC サポート**|はい|×|×|はい|
 
 ## <a name="overview"></a>概要
 
@@ -62,5 +62,5 @@ Windows デスクトップ アプリケーションを作成したら、 [汎用
 
 ## <a name="see-also"></a>関連項目
 
-[空の Windows デスクトップ アプリケーションの作成](../windows/creating-an-empty-windows-desktop-application.md)  
+[空の Windows デスクトップ アプリケーションの作成](../windows/creating-an-empty-windows-desktop-application.md)<br/>
 [Visual C++ プロジェクトの種類](../ide/visual-cpp-project-types.md)

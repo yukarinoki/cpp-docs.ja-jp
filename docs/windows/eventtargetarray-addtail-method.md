@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6609bba6d7adbddda152007e4db45c82f8039bc0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ab0219c8893ff7ad35e29f9dd8b18be18caf8eb9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42603679"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378125"
 ---
 # <a name="eventtargetarrayaddtail-method"></a>EventTargetArray::AddTail メソッド
 
@@ -38,7 +38,7 @@ void AddTail(
 
 ### <a name="parameters"></a>パラメーター
 
-*要素*  
+*要素*<br/>
 追加するイベント ハンドラーへのポインター。
 
 ## <a name="remarks"></a>Remarks
@@ -55,5 +55,5 @@ void AddTail(
 
 ## <a name="see-also"></a>関連項目
 
-[EventTargetArray クラス](../windows/eventtargetarray-class.md)  
+[EventTargetArray クラス](../windows/eventtargetarray-class.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

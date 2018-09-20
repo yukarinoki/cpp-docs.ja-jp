@@ -1,5 +1,5 @@
 ---
-title: COleControlModule クラス |Microsoft ドキュメント
+title: COleControlModule クラス |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,44 +19,49 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 597639145385f4aabcba0e83fef855f7a0779f9b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 8139f9d2249e2ed4293c5aad7c87f4f59142b393
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33369740"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388996"
 ---
 # <a name="colecontrolmodule-class"></a>COleControlModule クラス
-OLE コントロール モジュール オブジェクトを派生するための基底クラスです。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-class COleControlModule : public CWinApp  
-```  
-  
-## <a name="remarks"></a>コメント  
- このクラスは、コントロール モジュールを初期化するためのメンバー関数を提供します。 Microsoft Foundation classes を使用する各 OLE コントロール モジュールがから派生した 1 つのオブジェクトを含めることができますのみ`COleControlModule`です。 その他の C++ のグローバル オブジェクトが構築されるときに、このオブジェクトが構築されます。 宣言、派生`COleControlModule`グローバル レベルのオブジェクト。  
-  
- 使用する方法について、`COleControlModule`クラスを参照してください、 [CWinApp](../../mfc/reference/cwinapp-class.md)クラス」および「 [ActiveX コントロール](../../mfc/mfc-activex-controls.md)です。  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- [CObject](../../mfc/reference/cobject-class.md)  
-  
- [CCmdTarget](../../mfc/reference/ccmdtarget-class.md)  
-  
- [CWinThread](../../mfc/reference/cwinthread-class.md)  
-  
- [CWinApp](../../mfc/reference/cwinapp-class.md)  
-  
- `COleControlModule`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** afxctl.h  
-  
-## <a name="see-also"></a>関連項目  
- [MFC サンプル TESTHELP](../../visual-cpp-samples.md)   
- [階層図](../../mfc/hierarchy-chart.md)
+
+OLE コントロール モジュール オブジェクトを派生するための基底クラスです。
+
+## <a name="syntax"></a>構文
+
+```
+class COleControlModule : public CWinApp
+```
+
+## <a name="remarks"></a>Remarks
+
+このクラスは、コントロール、モジュールを初期化するためのメンバー関数を提供します。 Microsoft Foundation classes を使用する各 OLE コントロール モジュールがから派生した 1 つのオブジェクトを含めることができますのみ`COleControlModule`します。 その他の C++ のグローバル オブジェクトが作成されるときに、このオブジェクトが構築されます。 派生宣言`COleControlModule`グローバル レベルのオブジェクト。
+
+使用しての詳細については、`COleControlModule`クラスを参照してください、 [CWinApp](../../mfc/reference/cwinapp-class.md)クラスと、アーティクル[ActiveX コントロール](../../mfc/mfc-activex-controls.md)します。
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+[CObject](../../mfc/reference/cobject-class.md)
+
+[CCmdTarget](../../mfc/reference/ccmdtarget-class.md)
+
+[CWinThread](../../mfc/reference/cwinthread-class.md)
+
+[CWinApp](../../mfc/reference/cwinapp-class.md)
+
+`COleControlModule`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** afxctl.h
+
+## <a name="see-also"></a>関連項目
+
+[MFC サンプル TESTHELP](../../visual-cpp-samples.md)<br/>
+[階層図](../../mfc/hierarchy-chart.md)
 
 
 

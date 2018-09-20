@@ -17,14 +17,15 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50696d8f6ee0aa1c61374c0758905a5bb7063ab5
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 732fab9e0f9f0233de6de7db6328c2e6736db5d0
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42606938"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46437728"
 ---
 # <a name="mfc-database-programming-symbols"></a>MFC データベース プログラミングのシンボル
+
 このテーブル内のシンボルは、データベースのサポートが追加されたときに、MFC プロジェクトでのみ表示されます。 SQL server とデータベース プログラミングへの接続を MFC をサポートしています。
   
 |||
@@ -45,8 +46,10 @@ ms.locfileid: "42606938"
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
   
 ## <a name="requirements"></a>要件
- MFC
+
+MFC
   
 ## <a name="see-also"></a>関連項目
- [MFC の定義済みシンボル](../windows/mfc-predefined-symbols.md)  
- [シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)
+
+[MFC の定義済みシンボル](../windows/mfc-predefined-symbols.md)<br/>
+[シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)

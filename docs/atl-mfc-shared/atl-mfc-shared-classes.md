@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2080aae34a69b18286953bfa48a269b81a5a5e65
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1d6feb80c93298d5fe3d2cb23f9b34727bced57d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43761814"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442228"
 ---
 # <a name="atlmfc-shared-classes"></a>ATL/MFC 共有クラス
 
@@ -44,16 +44,16 @@ ms.locfileid: "43761814"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[MFC と ATL で共有クラス](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)  
+[MFC と ATL で共有クラス](../atl-mfc-shared/reference/classes-shared-by-mfc-and-atl.md)<br/>
 MFC と ATL で共有されるクラスへのリンクを提供します。
 
 ## <a name="related-sections"></a>関連項目
 
-[Active Template Library (ATL) のリファレンス](../atl/atl-com-desktop-components.md)  
+[Active Template Library (ATL) のリファレンス](../atl/atl-com-desktop-components.md)<br/>
 COM オブジェクトのプログラミングを簡単にする、ATL ライブラリ (テンプレート ベースの C++ クラスの集合) の一覧があります。
 
-[Microsoft Foundation クラス ライブラリ (MFC) リファレンス](../mfc/mfc-desktop-applications.md)  
+[Microsoft Foundation クラス ライブラリ (MFC) リファレンス](../mfc/mfc-desktop-applications.md)<br/>
 一連のクラスには、Windows API 用に記述されたアプリケーションのフレームワークであるアプリケーション フレームワークを構成、MFC ライブラリのリファレンスを提供します。
 
-[デバッグ](/visualstudio/debugger/debugging-in-visual-studio)  
+[デバッグ](/visualstudio/debugger/debugging-in-visual-studio)<br/>
 Visual Studio デバッガーを使用してアプリケーションやストアド プロシージャの論理エラーを修正する方法を説明するトピックへのリンクがあります。

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b26d070728a45ba34013276b92ba3f5677c53a6b
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0418eadb23e7e188bd29328bccf5b58316585c29
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318942"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46445101"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC の定義済みシンボル
 
@@ -224,5 +224,5 @@ MFC
 
 ## <a name="see-also"></a>関連項目
 
-[定義済みシンボル ID](../windows/predefined-symbol-ids.md)  
+[定義済みシンボル ID](../windows/predefined-symbol-ids.md)<br/>
 [シンボル: リソース識別子](../windows/symbols-resource-identifiers.md)

@@ -16,38 +16,42 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c87dfc47f7f2554e75567a1de4ea9cb2e06eaa00
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7124e51b604a55d049be13d3bbcccc4e5810ca67
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028195"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412835"
 ---
 # <a name="lastprivate"></a>lastprivate
-変数の外側のコンテキストのバージョンを最後の反復処理 (for ループ コンストラクト) または最後のセクション (#pragma セクション) を実行したスレッドのプライベート バージョンと同じに設定されているを指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-lastprivate(var)  
-```  
-  
+
+変数の外側のコンテキストのバージョンを最後の反復処理 (for ループ コンストラクト) または最後のセクション (#pragma セクション) を実行したスレッドのプライベート バージョンと同じに設定されているを指定します。
+
+## <a name="syntax"></a>構文
+
+```
+lastprivate(var)
+```
+
 ### <a name="parameters"></a>パラメーター
-  
+
 *var*<br/>
-どのスレッドのプライベート バージョンと等しく設定する変数では、最後の反復処理 (for ループ コンストラクト) または最後のセクション (#pragma セクション) を実行します。  
-  
-## <a name="remarks"></a>Remarks  
- `lastprivate` 次のディレクティブに適用されます。  
-  
--   [for](../../../parallel/openmp/reference/for-openmp.md)  
-  
--   [sections](../../../parallel/openmp/reference/sections-openmp.md)  
-  
- 詳細については、次を参照してください。 [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)します。  
-  
-## <a name="example"></a>例  
- 参照してください[スケジュール](../../../parallel/openmp/reference/schedule.md)の使用例については`lastprivate`句。  
-  
-## <a name="see-also"></a>関連項目  
- [句](../../../parallel/openmp/reference/openmp-clauses.md)
+どのスレッドのプライベート バージョンと等しく設定する変数では、最後の反復処理 (for ループ コンストラクト) または最後のセクション (#pragma セクション) を実行します。
+
+## <a name="remarks"></a>Remarks
+
+`lastprivate` 次のディレクティブに適用されます。
+
+- [for](../../../parallel/openmp/reference/for-openmp.md)
+
+- [sections](../../../parallel/openmp/reference/sections-openmp.md)
+
+詳細については、次を参照してください。 [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)します。
+
+## <a name="example"></a>例
+
+参照してください[スケジュール](../../../parallel/openmp/reference/schedule.md)の使用例については`lastprivate`句。
+
+## <a name="see-also"></a>関連項目
+
+[句](../../../parallel/openmp/reference/openmp-clauses.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 907a249090ec58d6379cb58f3d63e15826c1f6ad
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 15db0be600d61992d48c2f1cf90d6543057b5090
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610361"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46376073"
 ---
 # <a name="runtimeclassbasetgetimplementediids-method"></a>RuntimeClassBaseT::GetImplementedIIDS メソッド
 
@@ -41,16 +41,16 @@ __forceinline static HRESULT GetImplementedIIDS(
 
 ### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 種類、*実装*パラメーター。
 
-*実装*  
+*実装*<br/>
 パラメーターで指定された型へのポインター *T*します。
 
-*iidCount*  
+*iidCount*<br/>
 取得するインターフェイス Id の最大数。
 
-*iid*  
+*iid*<br/>
 この操作があるインターフェイスの型によって実装された Id の配列では正常に完了する場合*T*します。
 
 ## <a name="return-value"></a>戻り値

@@ -1,5 +1,5 @@
 ---
-title: 2.4 動作共有のコンストラクト |Microsoft ドキュメント
+title: 2.4 動作共有のコンストラクト |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,22 +12,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c00eb94055f26954a283a6172f69228804832ac4
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: 719b33698b708761f0cd56e65a70a6ea8fa3b053
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33689637"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411119"
 ---
 # <a name="24-work-sharing-constructs"></a>2.4 動作共有のコンストラクト
-Work-sharing コンス トラクターは、これを検出した、チームのメンバーのうち、関連するステートメントの実行を配布します。 動作共有ディレクティブでは、新しいスレッドが起動しないと、work-sharing コンス トラクターへのエントリに暗黙のバリアはありません。  
-  
- 動作共有のシーケンスの構築と**バリア**で発生するディレクティブは、チームの各スレッドで同じである必要があります。  
-  
- OpenMP には、次の work-sharing コンス トラクターを定義し、これらは後に続くセクションで説明。  
-  
--   **デ**ィレクティブ  
-  
--   **セクションでは**ディレクティブ  
-  
--   **1 つ**ディレクティブ
+
+Work-sharing コンス トラクターは、これを検出したチームのメンバーの間で関連付けられているステートメントの実行を配布します。 動作共有ディレクティブは、新しいスレッドを起動しないと、エントリ work-sharing コンス トラクターを暗黙の壁がなくなります。
+
+作業の共有のシーケンスを構築し、**バリア**で発生するディレクティブは、チーム内のすべてのスレッドで同じである必要があります。
+
+OpenMP は、次動作共有のコンストラクトを定義し、これらは、次のセクションで説明されています。
+
+- **ディ**レクティブ
+
+- **セクション**ディレクティブ
+
+- **1 つ**ディレクティブ

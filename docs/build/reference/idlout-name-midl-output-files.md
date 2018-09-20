@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a6749b59a1c12b5d7c3116a925adc727ad6f7ab5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6ef4f8b418edcdb903fa8f807cb5e08d63eaeeed
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721839"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46441630"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (MIDL 出力ファイルの指定)
 
@@ -82,6 +82,6 @@ MIDL コンパイラによって作成された .idl ファイルの名前を指
 
 [リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
 [リンカー オプション](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (を MIDL に挿入に属性を処理しない)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
-[/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)
+[/IGNOREIDL (属性を MIDL に挿入しない)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
 [属性付きプログラムの作成](../../windows/building-an-attributed-program.md)

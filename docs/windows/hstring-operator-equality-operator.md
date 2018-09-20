@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ed3a93ac964841028b252aa09a6b70c18ed202e9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: dee6fd7b50d116264ea6b8b9a6b7bac3936e95cf
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602989"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413719"
 ---
 # <a name="hstringoperator-operator"></a>HString::Operator== 演算子
 
@@ -52,10 +52,10 @@ inline bool operator==(
 
 ### <a name="parameters"></a>パラメーター
 
-*lhs*  
+*lhs*<br/>
 比較する最初のパラメーター。 *lhs*できます、 **HString**または`HStringReference`オブジェクト、または、HSTRING ハンドル。
 
-*rhs*  
+*rhs*<br/>
 比較する 2 番目のパラメーター。*rhs*できます、 **HString**または`HStringReference`オブジェクト、または、HSTRING ハンドル。
 
 ## <a name="return-value"></a>戻り値

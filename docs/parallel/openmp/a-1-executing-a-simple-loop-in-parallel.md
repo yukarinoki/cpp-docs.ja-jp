@@ -1,5 +1,5 @@
 ---
-title: 単純なループを並列に実行される A.1 |Microsoft ドキュメント
+title: A.1 単純ループの並列実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,18 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98b2fbac6ce31d2dbc56a4ef6d9fe87c14d5ee16
-ms.sourcegitcommit: 7019081488f68abdd5b2935a3b36e2a5e8c571f8
+ms.openlocfilehash: b5446f72cc5ee0577385527be24bc912297aec0d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33686127"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418946"
 ---
 # <a name="a1---executing-a-simple-loop-in-parallel"></a>A.1 単純ループの並列実行
-次の例を使用して、単純なループを並列化する方法を示します、`parallel for`ディレクティブ ([セクション 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) [16] ページ)。 ループの反復変数は既定では、プライベート private 句で明示的に指定する必要はありません。  
-  
-```  
-#pragma omp parallel for  
-    for (i=1; i<n; i++)  
-        b[i] = (a[i] + a[i-1]) / 2.0;  
+
+次の例では、単純なループを使用して、並列化する方法、`parallel for`ディレクティブ ([セクション 2.5.1](../../parallel/openmp/2-5-1-parallel-for-construct.md) [16] ページ)。 ループの反復変数は既定では、プライベートなは、明示的に private 句で指定する必要はありませんが。
+
+```
+#pragma omp parallel for
+    for (i=1; i<n; i++)
+        b[i] = (a[i] + a[i-1]) / 2.0;
 ```

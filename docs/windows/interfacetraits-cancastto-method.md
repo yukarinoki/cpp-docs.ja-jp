@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aea326149c9748ff480d523a1078f54ba733cb14
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 705b495e3f6d626a742fd1a63989c8cc658446a4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42610421"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46379666"
 ---
 # <a name="interfacetraitscancastto-method"></a>InterfaceTraits::CanCastTo メソッド
 
@@ -41,13 +41,13 @@ static __forceinline bool CanCastTo(
 
 ### <a name="parameters"></a>パラメーター
 
-*ptr*  
+*ptr*<br/>
 型へのポインターの名前。
 
-*riid*  
+*riid*<br/>
 インターフェイス ID`Base`します。
 
-*ppv*  
+*ppv*<br/>
 この操作が成功すると場合、 *ppv*で指定されたインターフェイスを指す`Base`します。 それ以外の場合、 *ppv*に設定されている**nullptr**します。
 
 ## <a name="return-value"></a>戻り値
@@ -68,5 +68,5 @@ static __forceinline bool CanCastTo(
 
 ## <a name="see-also"></a>関連項目
 
-[InterfaceTraits 構造体](../windows/interfacetraits-structure.md)  
+[InterfaceTraits 構造体](../windows/interfacetraits-structure.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

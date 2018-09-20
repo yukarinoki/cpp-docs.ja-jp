@@ -1,5 +1,5 @@
 ---
-title: ツール ヒント |Microsoft ドキュメント
+title: ツール ヒント |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,22 +18,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9eab52d09e9910cb4cce92d487c26fdb90d5647
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6f9169f0548bb58ffa063f3b3e947f16e877758e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33380579"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439992"
 ---
 # <a name="tool-tips"></a>ツール ヒント
-MFC クラスから派生した windows に含まれるコントロールにツールヒントを追加するは、手順が異なる[CFrameWnd](../mfc/reference/cframewnd-class.md) windows から派生していないと`CFrameWnd`です。  
-  
-## <a name="what-do-you-want-to-know-more-about"></a>詳しくは次のトピックをクリックしてください。  
- ツール ヒント コントロールでは、ウィンドウを:  
-  
--   [ツールバーのヒント (CFrameWnd から派生)](../mfc/toolbar-tool-tips.md)  
-  
--   [CFrameWnd から派生していないウィンドウのツールヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)  
-  
-## <a name="see-also"></a>関連項目  
- [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)
+
+MFC クラスから派生した追加のツール ヒント コントロールに windows に含まれているは、手順が異なる[CFrameWnd](../mfc/reference/cframewnd-class.md) windows から派生していないと`CFrameWnd`します。
+
+## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
+
+ウィンドウのコントロールのツール ヒント:
+
+- [ツールバーのヒント (CFrameWnd から派生)](../mfc/toolbar-tool-tips.md)
+
+- [CFrameWnd から派生していない Windows でのヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)
+
+## <a name="see-also"></a>関連項目
+
+[ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)

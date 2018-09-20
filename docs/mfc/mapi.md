@@ -1,5 +1,5 @@
 ---
-title: MAPI |Microsoft ドキュメント
+title: MAPI |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,27 +20,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1df0d00aa6356fa1741e7f4fc34d8063782da859
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: b2ca182da3a0300604415b790c0aba138c8fd7a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36930675"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46439108"
 ---
 # <a name="mapi"></a>MAPI
-この記事では、クライアント メッセージ アプリケーションの開発者向けの Microsoft メッセージング アプリケーション プログラミング インターフェイス (MAPI) について説明します。 MFC クラスで MAPI のサブセットのサポートを提供する`CDocument`API 全体をカプセル化しないが、します。 詳細については、次を参照してください。 [MFC での MAPI サポート](../mfc/mapi-support-in-mfc.md)です。  
-  
- MAPI は、一連のメールとメール対応のアプリケーションを作成、操作、転送、およびメール メッセージの保存に使用する関数です。 アプリケーション開発者の目的とメール メッセージの内容を定義するためのツールを使用して、保存したメール メッセージの管理の柔軟性を提供します。 MAPI には、アプリケーション開発者は、メールが有効なを作成に使用できる共通のインターフェイスと、基になるメッセージング システムの独立したメールに対応するアプリケーションも用意されています。  
-  
- メッセージング クライアントは、Microsoft Windows メッセージング システム (WMS) との対話のためのヒューマン インターフェイスを提供します。 この連携では、メッセージ ストアとアドレス帳などの MAPI 準拠のプロバイダーからサービスを要求する通常含まれています。  
-  
- MAPI の詳細については、Windows SDK のガイドで Win32 MAPI (Messaging) の下にある記事を参照してください。  
-  
-## <a name="in-this-section"></a>このセクションの内容  
- [MAPI サポート (MFC で)](../mfc/mapi-support-in-mfc.md)  
-  
-## <a name="see-also"></a>関連項目  
- [CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)   
- [CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)   
- [COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
+
+この記事では、クライアント アプリケーション開発者はメッセージを Microsoft メッセージング アプリケーション プログラミング インターフェイス (MAPI) について説明します。 MFC クラスで MAPI のサブセットのサポートを提供する`CDocument`API 全体をカプセル化しないが、します。 詳細については、次を参照してください。 [MFC での MAPI サポート](../mfc/mapi-support-in-mfc.md)します。
+
+MAPI は、一連のメールが有効なメール対応のアプリケーションを作成、操作、転送、およびメール メッセージの格納に使用する関数です。 メール メッセージの内容と目的を定義するためのツールを使用するには、アプリケーション開発者と、保存したメール メッセージの管理の柔軟性を提供します。 MAPI には、アプリケーション開発者は、メールが有効な作成に使用できる共通のインターフェイスと基になるメッセージング システムの独立したメールに対応するアプリケーションも用意されています。
+
+メッセージング クライアントは、Microsoft Windows メッセージング システム (WMS) との対話のヒューマン インターフェイスを提供します。 この操作には、通常、メッセージ ストアとアドレス帳などの MAPI 互換のプロバイダーからのサービスを要求が含まれます。
+
+MAPI の詳細については、Windows SDK のガイドで Win32 MAPI (Messaging) 中の記事を参照してください。
+
+## <a name="in-this-section"></a>このセクションの内容
+
+[MAPI サポート (MFC で)](../mfc/mapi-support-in-mfc.md)
+
+## <a name="see-also"></a>関連項目
+
+[CDocument::OnFileSendMail](../mfc/reference/cdocument-class.md#onfilesendmail)<br/>
+[CDocument::OnUpdateFileSendMail](../mfc/reference/cdocument-class.md#onupdatefilesendmail)<br/>
+[COleDocument::OnFileSendMail](../mfc/reference/coledocument-class.md#onfilesendmail)
 

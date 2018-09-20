@@ -19,33 +19,35 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23727ed40b12506ddd47a03055eaf8514d5685c5
-ms.sourcegitcommit: a41c4d096afca1e9b619bbbce045b77135d32ae2
+ms.openlocfilehash: fcb8859f00724eb7865198c662850a60314ffdc3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2018
-ms.locfileid: "42540701"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419985"
 ---
 # <a name="int2c"></a>__int2c
-**Microsoft 固有の仕様**  
-  
- 生成、`int 2c`命令で、トリガー、`2c`割り込みです。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void __int2c(void);  
-```  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__int2c`|x86、x64|  
-  
- **ヘッダー ファイル** \<intrin.h >  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+
+**Microsoft 固有の仕様**
+
+生成、`int 2c`命令で、トリガー、`2c`割り込みです。
+
+## <a name="syntax"></a>構文
+
+```
+void __int2c(void);
+```
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__int2c`|x86、x64|
+
+**ヘッダー ファイル** \<intrin.h >
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

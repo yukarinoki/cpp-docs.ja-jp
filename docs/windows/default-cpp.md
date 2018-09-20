@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6baefb7ef0af5054cb46ed4ad74b6a6bf80fbb61
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28b162b63ad1fbd2363b4519817d466055e96bc9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699922"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429280"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -41,7 +41,7 @@ ms.locfileid: "45699922"
 
 ### <a name="parameters"></a>パラメーター
 
-*interface1*  
+*interface1*<br/>
 **default** 属性で定義されているクラスに基づいてオブジェクトを作成するスクリプト環境で使用可能になる既定のインターフェイス。
 
 既定のインターフェイスが指定されていない場合は、最初に見つかったソース以外のインターフェイスが既定値として使用されます。
@@ -125,6 +125,6 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
-[クラス属性](../windows/class-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
+[クラス属性](../windows/class-attributes.md)<br/>
 [coclass](../windows/coclass.md)  

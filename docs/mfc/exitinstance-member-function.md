@@ -1,5 +1,5 @@
 ---
-title: ExitInstance メンバー関数は、|Microsoft ドキュメント
+title: ExitInstance メンバー関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,17 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 954d2248061ec571d9d2ba8804c1f7c97275cbfc
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: da411fbecdea0a1e7b8976ca119057204693a9bd
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33343500"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387862"
 ---
 # <a name="exitinstance-member-function"></a>ExitInstance メンバー関数
-[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance)クラスのメンバー関数[CWinApp](../mfc/reference/cwinapp-class.md)関数が呼び出されるアプリケーションのコピーによって終了した、通常、ユーザー、アプリケーションを終了します。  
-  
- オーバーライド`ExitInstance`グラフィック デバイス インターフェイス (GDI) のリソースの解放や、プログラムの実行時に使用されるメモリを解放するなどの特別なクリーンアップ処理を必要があるかどうか。 ただし、ドキュメントやビューなど、標準的なアイテムのクリーンアップは、これらのオブジェクトに固有のクリーンアップを行うためのオーバーライド可能な他の関数と、フレームワークによって提供されます。  
-  
-## <a name="see-also"></a>関連項目  
- [CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+
+[ExitInstance](../mfc/reference/cwinapp-class.md#exitinstance)クラスのメンバー関数[CWinApp](../mfc/reference/cwinapp-class.md)アプリケーションのコピーを終了すると、通常、ユーザーがアプリケーションの終了結果として毎回と呼びます。
+
+オーバーライド`ExitInstance`グラフィックス デバイス インターフェイス (GDI) のリソースを解放することや、プログラムの実行中に使用されるメモリの割り当てを解除などの特別なクリーンアップ処理を必要があるかどうか。 ただし、ドキュメント、ビューなどの標準的なアイテムのクリーンアップは、これらのオブジェクトに固有のクリーンアップを行うためのオーバーライド可能な他の関数と、フレームワークによって提供されます。
+
+## <a name="see-also"></a>関連項目
+
+[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)

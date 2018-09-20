@@ -1,5 +1,5 @@
 ---
-title: CTreeCtrl の vs です。CTreeView |Microsoft ドキュメント
+title: CTreeCtrl とCtreeview の比較 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,21 +20,23 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d71048b6f03f7f1b4400c0a88c178d1b97acdf2f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: e8acaecbdfb99b8ae0b27023145a0ef6aee1f219
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33342034"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399152"
 ---
-# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl の vs です。CTreeView
-MFC には、ツリー コントロールをカプセル化する 2 つのクラスが用意されています: [CTreeCtrl](../mfc/reference/ctreectrl-class.md)と[CTreeView](../mfc/reference/ctreeview-class.md)です。 各クラスは、さまざまな状況で役に立ちます。  
-  
- 使用して`CTreeCtrl`プレーンな子ウィンドウ コントロールである必要がある場合、ダイアログ ボックスでのインスタンス。 使用する場合は特に`CTreeCtrl`がある場合以外の子コントロール ウィンドウで、一般的なダイアログ ボックスと同様にします。  
-  
- 使用して`CTreeView`する必要がある場合、ツリーのコントロールだけでなく、ツリー コントロールにドキュメント/ビュー アーキテクチャ [ビュー] ウィンドウと同様に動作します。 A`CTreeView`のフレーム ウィンドウまたは分割ウィンドウ全体のクライアント領域を占有します。 自動的にサイズを変更、親ウィンドウのサイズを変更し、メニューのアクセラレータ キー、およびツールバーからコマンド メッセージを処理するときにします。 ツリー コントロールにツリーを表示するために必要なデータが含まれているため、対応するドキュメント オブジェクトする必要はありません複雑になる — も[CDocument](../mfc/reference/cdocument-class.md)ドキュメント テンプレートにドキュメントの種類として。  
-  
-## <a name="see-also"></a>関連項目  
- [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)   
- [コントロール](../mfc/controls-mfc.md)
+# <a name="ctreectrl-vs-ctreeview"></a>CTreeCtrl とCTreeView
+
+MFC には、ツリーのコントロールをカプセル化する 2 つのクラスが用意されています: [CTreeCtrl](../mfc/reference/ctreectrl-class.md)と[CTreeView](../mfc/reference/ctreeview-class.md)します。 各クラスは、さまざまな状況で役立ちます。
+
+使用`CTreeCtrl`プレーンな子ウィンドウ コントロールである必要がある場合、ダイアログ ボックスで、します。 使用することが特に`CTreeCtrl`他の子コントロールが一般的なダイアログ ボックスのように、ウィンドウ内にある場合。
+
+使用`CTreeView`ドキュメント/ビュー アーキテクチャでビュー ウィンドウと同様に動作するツリー コントロールとツリー コントロールたい場合。 A`CTreeView`のフレーム ウィンドウまたはスプリッター ウィンドウ全体のクライアント領域を占有します。 自動的にサイズを調整する親ウィンドウのサイズを変更し、メニューのアクセラレータ キー、およびツールバーからコマンド メッセージを処理するときにします。 ツリー コントロールにツリーを表示するために必要なデータが格納されているため、対応するドキュメント オブジェクトを複雑になるにはありません-使用することもできます[CDocument](../mfc/reference/cdocument-class.md)ドキュメント テンプレートにドキュメントの種類として。
+
+## <a name="see-also"></a>関連項目
+
+[CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
+[コントロール](../mfc/controls-mfc.md)
 

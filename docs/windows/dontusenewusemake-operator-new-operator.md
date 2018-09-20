@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6c2de62df47e46183c1169956a18ddc10822b22a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 99e82de06f64816521c47c78648108a9ae815279
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611922"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46443229"
 ---
 # <a name="dontusenewusemakeoperator-new-operator"></a>DontUseNewUseMake::operator new 演算子
 
@@ -39,10 +39,10 @@ void* operator new(
 
 ### <a name="parameters"></a>パラメーター
 
-*_ _unnamed0*  
+*_ _unnamed0*<br/>
 割り当てるメモリのバイト数を指定する名前のないパラメーター。
 
-*placement*  
+*placement*<br/>
 割り当てられる型。
 
 ## <a name="return-value"></a>戻り値
@@ -61,5 +61,5 @@ void* operator new(
 
 ## <a name="see-also"></a>関連項目
 
-[DontUseNewUseMake クラス](../windows/dontusenewusemake-class.md)  
+[DontUseNewUseMake クラス](../windows/dontusenewusemake-class.md)<br/>
 [Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)

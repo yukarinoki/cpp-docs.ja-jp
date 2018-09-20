@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a79f731ef0080e38e2c1b60d8e4924a5bf75089e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fdea60808118ecd7caa04fab3421c481d908e833
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600296"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391814"
 ---
 # <a name="idlquote"></a>idl_quote
 
@@ -38,7 +38,7 @@ Visual C の現在のバージョンでサポートされていない IDL コン
 
 ### <a name="parameters"></a>パラメーター
 
-*テキスト*  
+*テキスト*<br/>
 コンパイラ エラーを返さずに生成された .idl ファイルに渡す Visual C コンパイラが意図されている属性名。
 
 ## <a name="remarks"></a>Remarks
@@ -99,5 +99,5 @@ __interface IStatic{
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](../windows/idl-attributes.md)  
+[IDL 属性](../windows/idl-attributes.md)<br/>
 [スタンドアロン属性](../windows/stand-alone-attributes.md)  

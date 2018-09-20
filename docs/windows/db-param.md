@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b599e5f25449dfef3b37d7811db572ee4299b241
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bfd96962cebd4b94e9b1b50ca588ada9af69779
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719109"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418386"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -44,10 +44,10 @@ ms.locfileid: "45719109"
 
 ### <a name="parameters"></a>パラメーター
 
-*序数*  
+*序数*<br/>
 データをバインドする行セット内のフィールドに対応する列数 (DBCOLUMNINFO 序数)。
 
-*paramtype*  
+*paramtype*<br/>
 (省略可能)パラメーターに設定する型。 プロバイダーは、基になるデータ ソースでサポートされているパラメーター I/O 型のみをサポートします。 種類は、次の 1 つまたは複数の値の組み合わせです。
 
 - DBPARAMIO_INPUT 入力パラメーター。
@@ -56,19 +56,19 @@ ms.locfileid: "45719109"
 
 - DBPARAMIO_NOTPARAM アクセサーにパラメーターがありません。 設定`eParamIO`行では、この値にアクセサー ユーザーに通知するパラメーターは無視されます。
 
-*dbtype*  
+*dbtype*<br/>
 (省略可能)OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列エントリにします。
 
-*precision*  
+*precision*<br/>
 (省略可能)列のエントリに使用する有効桁数です。 詳細については、説明を参照してください`bPrecision`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*スケール*  
+*スケール*<br/>
 (省略可能)列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
 
-*status*  
+*status*<br/>
 (省略可能)この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
-*length*  
+*length*<br/>
 (省略可能)メンバー変数 (バイト単位)、列のサイズを保持するために使用します。
 
 ## <a name="remarks"></a>Remarks

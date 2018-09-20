@@ -1,5 +1,5 @@
 ---
-title: 'ルート クラス: CObject |Microsoft ドキュメント'
+title: 'ルート クラス: CObject |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -19,22 +19,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2398f1e775dfa8b9331a4abc0137207c85531aff
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0804397888d64ac5b6cab9a60f9912b27358bc43
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33385071"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46373322"
 ---
 # <a name="root-class-cobject"></a>ルート クラス: CObject
-Microsoft Foundation Class (MFC) ライブラリ内のクラスのほとんどは、クラス階層のルートにある 1 つの基本クラスから派生します。 `CObject` さまざまなオーバーヘッドが少なく、そこから派生したすべてのクラスに便利な機能を提供します。 詳細については`CObject`し、その機能を参照してください[を使用して CObject](../mfc/using-cobject.md)です。  
-  
- [CObject](../mfc/reference/cobject-class.md)  
- ほとんどの MFC クラスの基本クラスです。 データをシリアル化して、ランタイム クラス情報の取得をサポートします。  
-  
- [CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)  
- 構造体の実行時にオブジェクトの正確なクラスを判別するために使用します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスの概要](../mfc/class-library-overview.md)
+
+Microsoft Foundation Class (MFC) ライブラリ内のクラスのほとんどは、クラス階層のルートにある単一の基本クラスから派生します。 `CObject` 多数の非常に少ないオーバーヘッドで、そこから派生したすべてのクラスへの便利な機能を提供します。 詳細については`CObject`、機能を参照してくださいと[を使用して CObject](../mfc/using-cobject.md)します。
+
+[CObject](../mfc/reference/cobject-class.md)<br/>
+ほとんどの MFC クラスの最終的な基本クラス。 データをシリアル化して、ランタイム クラス情報の取得をサポートします。
+
+[CRuntimeClass](../mfc/reference/cruntimeclass-structure.md)<br/>
+構造体の実行時にオブジェクトの正確なクラスを判別するために使用します。
+
+## <a name="see-also"></a>関連項目
+
+[クラスの概要](../mfc/class-library-overview.md)
 

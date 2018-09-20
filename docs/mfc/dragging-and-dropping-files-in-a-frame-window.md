@@ -1,5 +1,5 @@
 ---
-title: ドラッグ アンド ドロップ ファイルをフレーム ウィンドウを |Microsoft ドキュメント
+title: ドラッグして、フレーム ウィンドウ内のファイルの削除 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -20,18 +20,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa326dba7772ddcdccb304900df4460ce9754665
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 6fc68923de531240a2d59336c79e54f6562b369c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33345574"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46380530"
 ---
 # <a name="dragging-and-dropping-files-in-a-frame-window"></a>ファイルのフレーム ウィンドウへのドラッグ アンド ドロップ
-フレーム ウィンドウは、ファイル エクスプ ローラーまたはファイル マネージャーとの関係を管理します。  
-  
- オーバーライドで呼び出し、いくつかの初期化を追加する、`CWinApp`メンバー関数は、 `InitInstance`」の説明に従って、 [CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)、フレーム ウィンドウ ファイルからドラッグされたファイルを直接開くことができますエクスプ ローラーまたはファイル マネージャーおよびフレーム ウィンドウにドロップします。 参照してください[ファイル マネージャーでのドラッグ アンド ドロップ](../mfc/special-cwinapp-services.md)です。  
-  
-## <a name="see-also"></a>関連項目  
- [フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
+
+フレーム ウィンドウは、ファイル エクスプ ローラーまたはファイル マネージャーとの関係を管理します。
+
+オーバーライドで呼び出し、いくつかの初期化を追加、`CWinApp`メンバー関数は`InitInstance`」の説明に従って、 [CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)、ファイルからドラッグされたファイルを直接開く、フレーム ウィンドウは使用できますエクスプ ローラーまたはファイル マネージャーと、フレーム ウィンドウにドロップします。 参照してください[ファイル マネージャーでのドラッグ アンド ドロップ](../mfc/special-cwinapp-services.md)します。
+
+## <a name="see-also"></a>関連項目
+
+[フレーム ウィンドウの使用](../mfc/using-frame-windows.md)
 

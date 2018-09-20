@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 04a632e657b57519d02c013d9c03e558b9aec8e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726623"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448377"
 ---
 # <a name="classes-and-structs--c-component-extensions"></a>クラスと構造体 (C++ コンポーネント拡張)
 
@@ -46,19 +46,19 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>パラメーター
 
-*class_access*  
+*class_access*<br/>
 (省略可能)クラスまたはアセンブリの外側の構造体のアクセシビリティ。 指定できる値は**パブリック**と**プライベート**(**プライベート**は既定です)。 入れ子になったクラスまたは構造体を含めることはできません、 *class_access*指定子。
 
-*name*  
+*name*<br/>
 クラスまたは構造体の名前。
 
-*修飾子*  
+*修飾子*<br/>
 (省略可能)[抽象](../windows/abstract-cpp-component-extensions.md)と[シール](../windows/sealed-cpp-component-extensions.md)は有効な修飾子。
 
-*inherit_access*  
+*inherit_access*<br/>
 (省略可能)ユーザー補助*base_type*します。 のみ許可されているアクセシビリティが**パブリック**(**パブリック**は既定です)。
 
-*base_type*  
+*base_type*<br/>
 (省略可能)基本型です。 ただし、値型を基本型として使用することはできません。
 
 詳細については、Windows ランタイムと共通言語 Runtimesections で、このパラメーターの言語固有の説明を参照してください。
@@ -97,7 +97,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>パラメーター
 
-*base_type*  
+*base_type*<br/>
 (省略可能)基本型です。 A **ref クラス**または**ref 構造体**0 個以上のインターフェイスと 0 または 1 個から継承できます**ref**型。 A**値クラス**または**値構造体**0 個以上のインターフェイスからのみ継承できます。
 
 使用してオブジェクトを宣言するときに、 **ref クラス**または**ref 構造体**キーワードによって、オブジェクトにアクセス オブジェクトを識別するハンドル。 つまり、オブジェクトへの参照カウンター ポインター。 宣言された変数がスコープ外になると、コンパイラは自動的に基になるオブジェクトを削除します。 そのオブジェクトが呼び出しのパラメーターとして使用されているか、変数に格納されている場合は、実際にそのオブジェクトのハンドルが渡されるか格納されます。
@@ -116,7 +116,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ### <a name="parameters"></a>パラメーター
 
-*base_type*  
+*base_type*<br/>
 (省略可能)基本型です。 A **ref クラス**または**ref 構造体**0 から継承できますまたは複数の管理対象インターフェイスおよび 0 個または 1 つの ref 型。 A**値クラス**または**値構造体**0 個以上のマネージ インターフェイスからのみ継承できます。
 
 **Ref クラス**と**ref 構造体**キーワードをクラスまたは構造体は、ヒープに割り当てられるように、コンパイラに指示します。 そのオブジェクトが呼び出しのパラメーターとして使用されているか、変数に格納されている場合は、実際にそのオブジェクトへの参照が渡されるか格納されます。

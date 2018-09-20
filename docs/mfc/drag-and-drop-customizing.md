@@ -1,5 +1,5 @@
 ---
-title: 'ドラッグ アンド ドロップ: カスタマイズ |Microsoft ドキュメント'
+title: 'ドラッグ アンド ドロップ: カスタマイズ |Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,29 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59ec5a5a493106750fa7bb8c7ec31b8dbb011070
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 7dd7e88d6843ec3d95538e482c6c05a3d853f4d1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33344244"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390768"
 ---
 # <a name="drag-and-drop-customizing"></a>ドラッグ アンド ドロップ: カスタマイズ
-ドラッグ アンド ドロップ機能の既定の実装は、ほとんどのアプリケーションです。 ただし、一部のアプリケーションでは、この標準動作を変更する必要があります。 この記事では、これらの既定値を変更するための手順について説明します。 さらに、ドロップ ソースとしての複合ドキュメントをサポートしていないアプリケーションを確立するためにこの手法を使用することができます。  
-  
- 標準の OLE ドラッグ アンド ドロップの動作をカスタマイズしている、または非 OLE アプリケーションがある場合、作成する必要が、`COleDataSource`データを格納するオブジェクト。 ユーザーは、ドラッグ アンド ドロップ操作を起動するときに、コードを呼び出す必要があります、`DoDragDrop`ドラッグ アンド ドロップ操作をサポートする他のクラスからの代わりに、このオブジェクトからの関数。  
-  
- 必要に応じて、作成することができます、`COleDropSource`オブジェクトを削除を制御し、いくつかの動作の変更対象の種類によってはその関数をオーバーライドします。 このドロップ ソース オブジェクトに渡され`COleDataSource::DoDragDrop`をこれらの関数の既定の動作を変更します。 これらのさまざまなオプションでは、アプリケーションでドラッグ アンド ドロップ操作をサポートする方法の柔軟性が大幅に向上できるようにします。 データ ソースの詳細については、記事を参照してください。[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)です。  
-  
- ドラッグ アンド ドロップ操作をカスタマイズするには、次の関数をオーバーライドできます。  
-  
-|上書き|カスタマイズするには|  
-|--------------|------------------|  
-|`OnBeginDrag`|どのようにドラッグを開始を呼び出した後`DoDragDrop`です。|  
-|`GiveFeedback`|ドロップの結果に、カーソルの外観などの視覚的フィードバックします。|  
-|`QueryContinueDrag`|ドラッグ アンド ドロップ操作の終了。 この関数では、ドラッグ操作中に修飾子キーの状態を確認することができます。|  
-  
-## <a name="see-also"></a>関連項目  
- [ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)   
- [COleDropSource クラス](../mfc/reference/coledropsource-class.md)   
- [COleDataSource クラス](../mfc/reference/coledatasource-class.md)
+
+ドラッグ アンド ドロップ機能の既定の実装では、ほとんどのアプリケーションにとって十分です。 ただし、一部のアプリケーションでは、この標準の動作を変更する必要があります。 この記事では、これらの既定値を変更するために必要な手順について説明します。 さらに、ドロップ ソースとしての複合ドキュメント サポートしていないアプリケーションを確立するために、この手法を使用することができます。
+
+標準の OLE ドラッグ アンド ドロップ動作をカスタマイズするまたは非 OLE アプリケーションを作成する必要が、`COleDataSource`データを格納するオブジェクト。 ユーザーは、ドラッグ アンド ドロップ操作を起動するときに、コードを呼び出す必要があります、`DoDragDrop`ドラッグ アンド ドロップ操作をサポートする他のクラスの代わりにこのオブジェクトからの関数。
+
+必要に応じて、作成、`COleDropSource`ドロップを制御し、変更する動作の種類に応じて、機能の一部をオーバーライドするオブジェクト。 このドロップ ソース オブジェクトに渡されます`COleDataSource::DoDragDrop`をこれらの関数の既定の動作を変更します。 これらのさまざまなオプションは、多くのアプリケーションでドラッグ アンド ドロップ操作をサポートする方法の柔軟性を許可します。 データ ソースの詳細については、記事を参照してください。[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)します。
+
+ドラッグ アンド ドロップ操作をカスタマイズするには、次の関数をオーバーライドすることができます。
+
+|オーバーライド|カスタマイズするには|
+|--------------|------------------|
+|`OnBeginDrag`|どのドラッグの開始を呼び出した後`DoDragDrop`します。|
+|`GiveFeedback`|ドロップの結果に、カーソルの外観などの視覚的フィードバック。|
+|`QueryContinueDrag`|ドラッグ アンド ドロップ操作の終了。 この関数では、ドラッグ操作中に修飾子キーの状態を確認することができます。|
+
+## <a name="see-also"></a>関連項目
+
+[ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)<br/>
+[COleDropSource クラス](../mfc/reference/coledropsource-class.md)<br/>
+[COleDataSource クラス](../mfc/reference/coledatasource-class.md)

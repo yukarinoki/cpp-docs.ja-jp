@@ -18,57 +18,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2120f274dd783da00a43106338476c43cc0a9dad
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 65937e1daee2bcd75300f5dc6b19c444ee542f64
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021747"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412614"
 ---
 # <a name="invalidlinktarget-class"></a>invalid_link_target クラス
-このクラスは、メッセージング ブロックの `link_target` メソッドが呼び出されたときに、そのメッセージング ブロックがターゲットにリンクできない場合にスローされる例外を表します。 この例外の原因としては、メッセージング ブロックのリンク数の上限を超えた場合、または特定のターゲットを同じソースに 2 回リンクしようとした場合があります。  
-  
-## <a name="syntax"></a>構文  
-  
+
+このクラスは、メッセージング ブロックの `link_target` メソッドが呼び出されたときに、そのメッセージング ブロックがターゲットにリンクできない場合にスローされる例外を表します。 この例外の原因としては、メッセージング ブロックのリンク数の上限を超えた場合、または特定のターゲットを同じソースに 2 回リンクしようとした場合があります。
+
+## <a name="syntax"></a>構文
+
 ```
 class invalid_link_target : public std::exception;
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="public-constructors"></a>パブリック コンストラクター  
-  
-|名前|説明|  
-|----------|-----------------|  
-|[invalid_link_target](#ctor)|オーバーロードされます。 `invalid_link_target` オブジェクトを構築します。|  
-  
-## <a name="inheritance-hierarchy"></a>継承階層  
- `exception`  
-  
- `invalid_link_target`  
-  
-## <a name="requirements"></a>要件  
- **ヘッダー:** concrt.h  
-  
- **名前空間:** concurrency  
-  
-##  <a name="ctor"></a> invalid_link_target 
+```
 
- `invalid_link_target` オブジェクトを構築します。  
-  
+## <a name="members"></a>メンバー
+
+### <a name="public-constructors"></a>パブリック コンストラクター
+
+|名前|説明|
+|----------|-----------------|
+|[invalid_link_target](#ctor)|オーバーロードされます。 `invalid_link_target` オブジェクトを構築します。|
+
+## <a name="inheritance-hierarchy"></a>継承階層
+
+`exception`
+
+`invalid_link_target`
+
+## <a name="requirements"></a>要件
+
+**ヘッダー:** concrt.h
+
+**名前空間:** concurrency
+
+##  <a name="ctor"></a> invalid_link_target
+
+`invalid_link_target` オブジェクトを構築します。
+
 ```
 explicit _CRTIMP invalid_link_target(_In_z_ const char* _Message) throw();
 
 invalid_link_target() throw();
-```  
-  
-### <a name="parameters"></a>パラメーター  
+```
+
+### <a name="parameters"></a>パラメーター
+
 *メッセージ (_m)*<br/>
-エラーの説明メッセージ。  
-  
-## <a name="see-also"></a>関連項目  
- [同時実行 Namespace](concurrency-namespace.md)   
- [非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)
+エラーの説明メッセージ。
 
+## <a name="see-also"></a>関連項目
 
+[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)
 

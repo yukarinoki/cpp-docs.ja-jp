@@ -15,35 +15,37 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 701e6f2912c3f9a8b5f138d8f188003f9db43021
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4517c2131e3a8825968d287ef7c1f5725721c17a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096145"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46422091"
 ---
 # <a name="how-to-create-a-message-map-for-a-template-class"></a>方法 : テンプレート クラスのメッセージ マップを作成する
-MFC でのメッセージ マッピングでは、適切な C++ オブジェクトのインスタンスに Windows メッセージを効率的な方法を提供します。 MFC メッセージ マップのターゲットの例には、アプリケーションのクラス、ドキュメントとビュー クラス、コントロールのクラスおよびなどが含まれます。  
-  
- 従来の MFC メッセージ マップを使用して宣言は、 [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map)マクロをメッセージ マップ マクロ エントリを各メッセージ ハンドラー クラスのメソッドの開始を宣言し、最後に、 [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)マクロをメッセージ マップの最後を宣言します。  
-  
- 1 つの制限事項、 [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map)マクロは、テンプレート引数を含むクラスと組み合わせて使用した場合に発生します。 テンプレート クラスと共に使用するとこのマクロでは、マクロの展開時にテンプレートのパラメーターが不足しているため、コンパイル時エラーが発生します。 [同じよう](reference/message-map-macros-mfc.md#begin_template_message_map)マクロが、独自のメッセージを宣言する 1 つのテンプレート引数を含むクラスのマップを許可するように設計します。  
-  
-## <a name="example"></a>例  
- 例を考えて、MFC [CListBox](../mfc/reference/clistbox-class.md)外部データ ソースとの同期を提供するクラスを拡張します。 架空`CSyncListBox`クラスに次のように宣言されます。  
-  
- [!code-cpp[NVC_MFC_CListBox#42](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_1.h)]  
-  
- `CSyncListBox`クラスは、データ ソースと同期することを説明する 1 つの型で template 宣言されます。 クラスのメッセージ マップに参加する 3 つのメソッドも宣言されています: `OnPaint`、 `OnDestroy`、および`OnSynchronize`します。 `OnSynchronize`メソッドは次のように実装されます。  
-  
- [!code-cpp[NVC_MFC_CListBox#43](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_2.cpp)]  
-  
- 上記の実装を使用、`CSyncListBox`クラスを実装する任意のクラス型に特殊化する、`GetCount`メソッドなど`CArray`、 `CList`、および`CMap`します。 `StringizeElement`関数は、以下にプロトタイプ宣言されたテンプレート関数です。  
-  
- [!code-cpp[NVC_MFC_CListBox#44](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_3.cpp)]  
-  
- 通常、このクラスのメッセージ マップとして定義します。  
-  
+
+MFC でのメッセージ マッピングでは、適切な C++ オブジェクトのインスタンスに Windows メッセージを効率的な方法を提供します。 MFC メッセージ マップのターゲットの例には、アプリケーションのクラス、ドキュメントとビュー クラス、コントロールのクラスおよびなどが含まれます。
+
+従来の MFC メッセージ マップを使用して宣言は、 [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map)マクロをメッセージ マップ マクロ エントリを各メッセージ ハンドラー クラスのメソッドの開始を宣言し、最後に、 [END_MESSAGE_MAP](reference/message-map-macros-mfc.md#end_message_map)マクロをメッセージ マップの最後を宣言します。
+
+1 つの制限事項、 [BEGIN_MESSAGE_MAP](reference/message-map-macros-mfc.md#begin_message_map)マクロは、テンプレート引数を含むクラスと組み合わせて使用した場合に発生します。 テンプレート クラスと共に使用するとこのマクロでは、マクロの展開時にテンプレートのパラメーターが不足しているため、コンパイル時エラーが発生します。 [同じよう](reference/message-map-macros-mfc.md#begin_template_message_map)マクロが、独自のメッセージを宣言する 1 つのテンプレート引数を含むクラスのマップを許可するように設計します。
+
+## <a name="example"></a>例
+
+例を考えて、MFC [CListBox](../mfc/reference/clistbox-class.md)外部データ ソースとの同期を提供するクラスを拡張します。 架空`CSyncListBox`クラスに次のように宣言されます。
+
+[!code-cpp[NVC_MFC_CListBox#42](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_1.h)]
+
+`CSyncListBox`クラスは、データ ソースと同期することを説明する 1 つの型で template 宣言されます。 クラスのメッセージ マップに参加する 3 つのメソッドも宣言されています: `OnPaint`、 `OnDestroy`、および`OnSynchronize`します。 `OnSynchronize`メソッドは次のように実装されます。
+
+[!code-cpp[NVC_MFC_CListBox#43](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_2.cpp)]
+
+上記の実装を使用、`CSyncListBox`クラスを実装する任意のクラス型に特殊化する、`GetCount`メソッドなど`CArray`、 `CList`、および`CMap`します。 `StringizeElement`関数は、以下にプロトタイプ宣言されたテンプレート関数です。
+
+[!code-cpp[NVC_MFC_CListBox#44](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_3.cpp)]
+
+通常、このクラスのメッセージ マップとして定義します。
+
 ```cpp
 BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)
   ON_WM_PAINT()
@@ -51,24 +53,25 @@ BEGIN_MESSAGE_MAP(CSyncListBox, CListBox)
   ON_MESSAGE(LBN_SYNCHRONIZE, OnSynchronize)
 END_MESSAGE_MAP()
 ```
-  
- 場所**LBN_SYNCHRONIZE**など、アプリケーションで定義されたカスタム ユーザー メッセージします。  
-  
- [!code-cpp[NVC_MFC_CListBox#45](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_4.cpp)]  
-  
- 上記のマクロのマップはコンパイルされません原因という事実にテンプレートの仕様、`CSyncListBox`クラスはマクロの展開中に失われます。 **同じよう**マクロが展開されたマクロのマップに指定されたテンプレート パラメーターを組み込むことによってこれを解決します。 このクラスのメッセージ マップになります。  
-  
- [!code-cpp[NVC_MFC_CListBox#46](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_5.cpp)]  
-  
- 次の使用例を示します、`CSyncListBox`クラスを使用して、`CStringList`オブジェクト。  
-  
- [!code-cpp[NVC_MFC_CListBox#47](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_6.cpp)]  
-  
- テストを完了する、`StringizeElement`関数を使用する特殊化する必要があります、`CStringList`クラス。  
-  
- [!code-cpp[NVC_MFC_CListBox#48](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_7.cpp)]  
-  
-## <a name="see-also"></a>関連項目  
- [同じよう](reference/message-map-macros-mfc.md#begin_template_message_map)   
- [メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
+
+場所**LBN_SYNCHRONIZE**など、アプリケーションで定義されたカスタム ユーザー メッセージします。
+
+[!code-cpp[NVC_MFC_CListBox#45](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_4.cpp)]
+
+上記のマクロのマップはコンパイルされません原因という事実にテンプレートの仕様、`CSyncListBox`クラスはマクロの展開中に失われます。 **同じよう**マクロが展開されたマクロのマップに指定されたテンプレート パラメーターを組み込むことによってこれを解決します。 このクラスのメッセージ マップになります。
+
+[!code-cpp[NVC_MFC_CListBox#46](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_5.cpp)]
+
+次の使用例を示します、`CSyncListBox`クラスを使用して、`CStringList`オブジェクト。
+
+[!code-cpp[NVC_MFC_CListBox#47](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_6.cpp)]
+
+テストを完了する、`StringizeElement`関数を使用する特殊化する必要があります、`CStringList`クラス。
+
+[!code-cpp[NVC_MFC_CListBox#48](../mfc/codesnippet/cpp/how-to-create-a-message-map-for-a-template-class_7.cpp)]
+
+## <a name="see-also"></a>関連項目
+
+[同じよう](reference/message-map-macros-mfc.md#begin_template_message_map)<br/>
+[メッセージの処理とマップ](../mfc/message-handling-and-mapping.md)
 

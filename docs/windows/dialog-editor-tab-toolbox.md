@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2fa16a2cf15d5004ff80dda3188d79ffcba72ec1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4b6e05e654b66c2178b7dc6e772c95df89512d1d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316212"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399848"
 ---
 # <a name="dialog-editor-tab-toolbox-c"></a>ダイアログ エディター タブ、ツールボックス (C++)
 
@@ -100,10 +100,10 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[コントロール](../mfc/controls-mfc.md)  
-[コントロール クラス](../mfc/control-classes.md)  
-[ダイアログ ボックス クラス](../mfc/dialog-box-classes.md)  
-[スクロール バー スタイル](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)  
-[リッチ エディット コントロールの例](../mfc/rich-edit-control-examples.md)  
-[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[コントロール](../mfc/controls-mfc.md)<br/>
+[コントロール クラス](../mfc/control-classes.md)<br/>
+[ダイアログ ボックス クラス](../mfc/dialog-box-classes.md)<br/>
+[スクロール バー スタイル](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)<br/>
+[リッチ エディット コントロールの例](../mfc/rich-edit-control-examples.md)<br/>
+[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [ダイアログ ボックス コントロールおよび変数の型](../ide/dialog-box-controls-and-variable-types.md)

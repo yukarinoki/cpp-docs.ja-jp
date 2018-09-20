@@ -463,14 +463,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d06bac8aef674472b817817fde4191f1d655365e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 575f21e03659f973a25b1ad2e7aae211f9dae187
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723230"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412107"
 ---
 # <a name="reference-concurrency-runtime"></a>参照 (同時実行ランタイム)
+
 このセクションには、同時実行ランタイムに関するリファレンス情報が含まれています。
 
 > [!Note]
@@ -478,7 +479,8 @@ ms.locfileid: "45723230"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[同時実行 Namespace](concurrency-namespace.md) concurrency 名前空間のクラスを提供して、同時実行ランタイム、C++ の同時実行のプログラミング フレームワークへのアクセスを提供する関数。 詳細については、「[同時実行ランタイム](../concurrency-runtime.md)」を参照してください。
+[コンカレンシー名前空間](concurrency-namespace.md)<br/>
+Concurrency 名前空間のクラスを提供して、同時実行ランタイム、C++ の同時実行のプログラミング フレームワークへのアクセスを提供する関数。 詳細については、「[コンカレンシー ランタイム](../concurrency-runtime.md)」を参照してください。
 
 [std 名前空間](std-namespace.md)
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 092cb7c33aab2805ca40410cac404d43ba5c9274
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 32258a05cade33f20546acfc02b98370ada2b073
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313248"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46387134"
 ---
 # <a name="how-to-create-a-resource-script-file-c"></a>方法: リソース スクリプト ファイル (C++) の作成
 
@@ -55,5 +55,5 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[リソース ファイル](../windows/resource-files-visual-studio.md)  
+[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
 [リソース エディター](../windows/resource-editors.md)
