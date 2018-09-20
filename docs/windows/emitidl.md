@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e1cb0a77c04a1bfea03f742686e1b28a6e2f04c
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0c1704bf6ea5d8eaa2fc76db61fe0143c06b46ae
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687851"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46429644"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -36,7 +36,7 @@ ms.locfileid: "43687851"
 
 ### <a name="parameters"></a>パラメーター
 
-*state*  
+*state*<br/>
 これらの使用可能な値のいずれか: `true`、 `false`、 `forced`、 `restricted`、 `push`、または`pop`します。
 
 - 場合`true`、ソース コード ファイルで検出された IDL カテゴリ属性は、生成された .idl ファイルに配置されます。 既定の設定は、この**emitidl**します。
@@ -77,5 +77,5 @@ ms.locfileid: "43687851"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ属性](../windows/compiler-attributes.md)  
+[コンパイラ属性](../windows/compiler-attributes.md)<br/>
 [スタンドアロン属性](../windows/stand-alone-attributes.md)  
