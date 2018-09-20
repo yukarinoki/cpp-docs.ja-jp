@@ -1,5 +1,5 @@
 ---
-title: モードレス ダイアログ ボックスの作成 |Microsoft ドキュメント
+title: モードレス ダイアログ ボックスの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,16 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2055312c7418b14c9b274649db8faa297554257e
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 77b80f66f2956e71b90e4d939a0fb74aef28edb1
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340994"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407037"
 ---
 # <a name="creating-modeless-dialog-boxes"></a>モードレス ダイアログ ボックスの作成
-モードレス ダイアログ ボックスのダイアログ クラスに、独自のパブリック コンス トラクターを提供する必要があります。 モードレス ダイアログ ボックスを作成する、パブリック コンス トラクターを呼び出すし、ダイアログ オブジェクトを呼び出す[作成](../mfc/reference/cdialog-class.md#create)ダイアログ リソースを読み込むためのメンバー関数。 呼び出すことができます**作成**中またはコンス トラクターの呼び出し後です。 ダイアログ リソースに、プロパティが設定されている場合**WS_VISIBLE**、ダイアログ ボックスがすぐに表示されます。 場合は、呼び出す必要があります、 [ShowWindow](../mfc/reference/cwnd-class.md#showwindow)メンバー関数。  
-  
-## <a name="see-also"></a>関連項目  
- [ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
+
+モードレス ダイアログ ボックスのダイアログ クラスで独自のパブリック コンス トラクターを提供する必要があります。 モードレス ダイアログ ボックスを作成する、パブリック コンス トラクターを呼び出すし、呼び出してダイアログ オブジェクトの[作成](../mfc/reference/cdialog-class.md#create)メンバー関数は、ダイアログ リソースを読み込めません。 呼び出すことができます**作成**中またはコンス トラクターの呼び出し後。 ダイアログ リソースに、プロパティが設定されている場合**WS_VISIBLE**、ダイアログ ボックスがすぐに表示されます。 呼び出す必要があるそうでない場合、 [ShowWindow](../mfc/reference/cwnd-class.md#showwindow)メンバー関数。
+
+## <a name="see-also"></a>関連項目
+
+[ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
 

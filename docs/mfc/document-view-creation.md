@@ -1,5 +1,5 @@
 ---
-title: ドキュメント ビューの作成 |Microsoft ドキュメント
+title: ドキュメント ビューの作成 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -22,28 +22,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 894bb5a0b3a4c86d764fc6f4a0e4b9ae18422669
-ms.sourcegitcommit: 060f381fe0807107ec26c18b46d3fcb859d8d2e7
+ms.openlocfilehash: 0deb187a6540af71a1dc72b730347374bc25f963
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2018
-ms.locfileid: "36931854"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46423072"
 ---
 # <a name="documentview-creation"></a>ドキュメントおよびビューの作成
-フレームワークの実装を提供する、**新規**と**開く**コマンド (など) を使って、**ファイル**メニュー。 新しいドキュメントおよび関連するビューとフレーム ウィンドウの作成は、アプリケーション オブジェクト、ドキュメント テンプレート、新しく作成されたドキュメント、および新しく作成されたフレーム ウィンドウの連係です。 次の表では、どのオブジェクトの作成内容をまとめたものです。  
-  
-### <a name="object-creators"></a>オブジェクトの作成内容  
-  
-|Creator|作成します。|  
-|-------------|-------------|  
-|Application オブジェクト|ドキュメント テンプレート|  
-|ドキュメント テンプレート|ドキュメント|  
-|ドキュメント テンプレート|フレーム ウィンドウ|  
-|フレーム ウィンドウ|表示|  
-  
-## <a name="see-also"></a>関連項目  
- [ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)   
- [ドキュメント テンプレートの作成](../mfc/document-template-creation.md)   
- [MFC オブジェクト間の関係](../mfc/relationships-among-mfc-objects.md)   
- [新しいドキュメント、ウィンドウ、ビューの作成](../mfc/creating-new-documents-windows-and-views.md)
+
+フレームワークの実装を提供する、**新規**と**オープン**でコマンドを (特に)、**ファイル**メニュー。 新しいドキュメントとその関連するビューとフレーム ウィンドウの作成は、アプリケーション オブジェクト、ドキュメント テンプレートを新しく作成されたドキュメント、および新しく作成されたフレーム ウィンドウの間で協調的です。 次の表は、オブジェクトの作成内容をまとめたものです。
+
+### <a name="object-creators"></a>オブジェクトの作成者
+
+|Creator|作成します|
+|-------------|-------------|
+|Application オブジェクト|ドキュメント テンプレート|
+|ドキュメント テンプレート|ドキュメント|
+|ドキュメント テンプレート|フレーム ウィンドウ|
+|フレーム ウィンドウ|表示|
+
+## <a name="see-also"></a>関連項目
+
+[ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)<br/>
+[ドキュメント テンプレートの作成](../mfc/document-template-creation.md)<br/>
+[各種 MFC オブジェクト間の関係](../mfc/relationships-among-mfc-objects.md)<br/>
+[新しいドキュメント、ウィンドウ、ビューの作成](../mfc/creating-new-documents-windows-and-views.md)
 

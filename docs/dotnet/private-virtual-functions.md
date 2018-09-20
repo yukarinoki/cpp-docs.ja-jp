@@ -1,5 +1,5 @@
 ---
-title: プライベート仮想関数 |Microsoft ドキュメント
+title: プライベート仮想関数 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -18,48 +18,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 97b4d7d9f47901fa69aa50bfc6f405355cf378b8
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0058d023268fa4d9ca5abe802ff45856e9855dc7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33162339"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418074"
 ---
 # <a name="private-virtual-functions"></a>プライベート仮想関数
-派生クラスでプライベート仮想関数の処理方法は、Visual C を c++ マネージ拡張から変更されました。  
-  
- マネージ拡張で、仮想関数のアクセス レベルは、派生クラス内でオーバーライドされるように機能を制限しません。 新しい構文では、仮想関数はアクセスできない基底クラスの仮想関数をオーバーライドできません。 例えば:  
-  
-```  
-__gc class MyBaseClass {  
-   // inaccessible to a derived class   
-   virtual void g();  
-};  
-  
-__gc class MyDerivedClass : public MyBaseClass {  
-public:  
-   // okay in Managed Extensions; g() overrides MyBaseClass::g()  
-   // error in new syntax; cannot override: MyBaseClass::g() is inaccessible  
-   void g();  
-};  
-```  
-  
- このような新しい構文にデザインの実際のマッピングはありません。 1 つは、基本クラスのメンバー アクセスできるようにするには、非プライベート単にあります。 継承されたメソッドは、同じアクセス許可に注意する必要はありません。 この例では、影響を最小限の変更が MyBaseClass メンバーにするのには`protected`します。 このように MyBaseClass を通じてメソッドへの一般的なプログラムのアクセスはまだ禁止されています。  
-  
-```  
-ref class MyBaseClass {  
-protected:  
-   virtual void g();  
-};  
-  
-ref class MyDerivedClass : MyBaseClass {  
-public:  
-   virtual void g() override;  
-};  
-```  
-  
- なおがない場合、明示的な`virtual`新しい構文では、基本クラスのキーワードは、警告メッセージを生成します。  
-  
-## <a name="see-also"></a>関連項目  
- [クラスまたはインターフェイス内でのメンバー宣言 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)   
- 
+
+派生クラスにプライベート仮想関数の処理方法は、Visual c の C++ マネージ拡張から変更されました。
+
+マネージ拡張で、仮想関数のアクセス レベルは、派生クラス内でオーバーライドするには、その機能を制限しません。 新しい構文では、仮想関数はアクセスできない基底クラスの仮想関数をオーバーライドできません。 例えば:
+
+```
+__gc class MyBaseClass {
+   // inaccessible to a derived class
+   virtual void g();
+};
+
+__gc class MyDerivedClass : public MyBaseClass {
+public:
+   // okay in Managed Extensions; g() overrides MyBaseClass::g()
+   // error in new syntax; cannot override: MyBaseClass::g() is inaccessible
+   void g();
+};
+```
+
+この種の設計を新しい構文の実際のマッピングはありません。 基本クラスのメンバー アクセスできるようにするには、プライベートでない 1 つだけですが。 継承されたメソッドは、同じアクセスを持つ必要はありません。 この例では、影響を最小限変更 MyBaseClass メンバーにするのには`protected`します。 この方法 MyBaseClass を通じてメソッドへの一般的なプログラムのアクセスが禁止されたままです。
+
+```
+ref class MyBaseClass {
+protected:
+   virtual void g();
+};
+
+ref class MyDerivedClass : MyBaseClass {
+public:
+   virtual void g() override;
+};
+```
+
+なお、休暇の明示的な`virtual`新しい構文では、基本クラスのキーワードには、警告メッセージが生成されます。
+
+## <a name="see-also"></a>関連項目
+
+[クラスまたはインターフェイス内でのメンバー宣言 (C++/CLI)](../dotnet/member-declarations-within-a-class-or-interface-cpp-cli.md)

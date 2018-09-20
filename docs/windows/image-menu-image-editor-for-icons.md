@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ca37981352ddcef639b3e8ed5bbd00a14f56f126
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 07541c31b99959616320d0b4a9526eb2ec5493a2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700714"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425549"
 ---
 # <a name="image-menu-c-image-editor-for-icons"></a>[イメージ] メニュー (アイコン用イメージ エディターを C++)
 
@@ -102,5 +102,5 @@ ms.locfileid: "45700714"
 
 ## <a name="see-also"></a>関連項目
 
-[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)  
+[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)

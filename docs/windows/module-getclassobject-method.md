@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3e0c8996823de35bbfd85d595556db933f34238a
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 90a1b527d12e581c42fc9519e56d453f845e0b63
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599223"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46419721"
 ---
 # <a name="modulegetclassobject-method"></a>Module::GetClassObject メソッド
 
@@ -31,7 +31,7 @@ ms.locfileid: "42599223"
 ## <a name="syntax"></a>構文
 
 ```cpp
- HRESULT GetClassObject(
+HRESULT GetClassObject(
    REFCLSID clsid,
    REFIID riid,
    _Deref_out_ void **ppv,
@@ -41,16 +41,16 @@ ms.locfileid: "42599223"
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*  
+*clsid*<br/>
 クラスの id。
 
-*riid*  
+*riid*<br/>
 要求したインターフェイス ID です。
 
-*ppv*  
+*ppv*<br/>
 返されるオブジェクトへのポインター。
 
-*サーバー名*  
+*サーバー名*<br/>
 いずれかで指定されているサーバー名、 `ActivatableClassWithFactory`、 `ActivatableClassWithFactoryEx`、または`ActivatableClass`マクロ; または**nullptr**を既定のサーバー名を取得します。
 
 ## <a name="return-value"></a>戻り値
@@ -66,4 +66,5 @@ ms.locfileid: "42599223"
 **名前空間:** Microsoft::WRL
 
 ## <a name="see-also"></a>関連項目
+
 [Module クラス](../windows/module-class.md)

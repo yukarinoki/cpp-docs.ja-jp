@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de318ab79638f63fae98856987340ad62534f695
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 723dbb3cec2281815c5733b8f2f0fff8f636a3a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721346"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46402565"
 ---
 # <a name="safeintsafeint"></a>SafeInt::SafeInt
 
@@ -85,6 +85,6 @@ U に格納されたデータの種類、 **SafeInt**します。 ブール値�
 
 ## <a name="see-also"></a>関連項目
 
-[SafeInt ライブラリ](../windows/safeint-library.md)  
-[SafeInt クラス](../windows/safeint-class.md)  
+[SafeInt ライブラリ](../windows/safeint-library.md)<br/>
+[SafeInt クラス](../windows/safeint-class.md)<br/>
 [SafeIntException クラス](../windows/safeintexception-class.md)

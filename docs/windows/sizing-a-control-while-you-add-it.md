@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da998c748a3471f053c922e0a80c33d1526b2055
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e60803ec9696e541376aa8530cb4c01d32b9e569
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313144"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46418862"
 ---
 # <a name="sizing-a-control-while-you-add-it"></a>コントロールの追加時のサイズ変更
 
@@ -49,6 +49,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)  
-[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)  
+[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)<br/>
+[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)<br/>
 [ダイアログ ボックス コントロールおよび変数の型](../ide/dialog-box-controls-and-variable-types.md)

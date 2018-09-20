@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3fd2fcc5fc8603f265fa2d213325227baecd7f5d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6c66f7074269e99b35785299800665be48cebef9
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313769"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46415721"
 ---
 # <a name="creating-pop-up-menus-c"></a>ショートカット メニュー (C++) の作成
 
@@ -52,5 +52,5 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[ショートカット メニューとアプリケーションの関連付け](../windows/connecting-a-pop-up-menu-to-your-application.md)  
+[ショートカット メニューとアプリケーションの関連付け](../windows/connecting-a-pop-up-menu-to-your-application.md)<br/>
 [メニュー エディター](../windows/menu-editor.md)

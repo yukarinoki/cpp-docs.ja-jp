@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3ce2f65fd740fd2bf133d65b25cbb52838c53dd2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601213"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408948"
 ---
 # <a name="explicit-overrides--c-component-extensions"></a>明示的なオーバーライド (C++ Component Extensions)
 
@@ -37,16 +37,16 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ### <a name="parameters"></a>パラメーター
 
-*オーバーライドする関数宣言*  
+*オーバーライドする関数宣言*<br/>
 オーバーライド関数の戻り値の型、名、および引数リスト。  オーバーライドされる関数と同じ名前を指定する、オーバーライドする関数がないことに注意してください。
 
-*type*  
+*type*<br/>
 オーバーライドする関数を含む基本型。
 
-*function*  
+*function*<br/>
 オーバーライドする 1 つまたは複数の関数名のコンマ区切りのリスト。
 
-*オーバーライドする関数定義*  
+*オーバーライドする関数定義*<br/>
 オーバーライドする関数を定義する関数本体のステートメント。
 
 ### <a name="remarks"></a>Remarks

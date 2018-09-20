@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8847083fe134c36f506e7080772b1e5f0e2a873c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: fbae13c6ce70533b8338d47893b6007a3032abab
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590183"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416306"
 ---
 # <a name="activationfactorygetruntimeclassname-method"></a>ActivationFactory::GetRuntimeClassName メソッド
 
@@ -38,7 +38,7 @@ STDMETHOD(
 
 ### <a name="parameters"></a>パラメーター
 
-*runtimeName*  
+*runtimeName*<br/>
 ときにこの操作が完了すると、オブジェクトのランタイム クラス名を含む文字列を識別するハンドルを現在**ActivationFactory**をインスタンス化します。
 
 ## <a name="return-value"></a>戻り値

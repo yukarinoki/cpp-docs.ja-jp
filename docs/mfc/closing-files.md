@@ -1,5 +1,5 @@
 ---
-title: ファイルを閉じる |Microsoft ドキュメント
+title: ファイルを閉じる |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -15,22 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97bd910ae4cb514cda07dd319f37a05a32712909
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 9c392ef728e1d796a02cfa32edc2c3e8c74d083b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33341027"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46426238"
 ---
 # <a name="closing-files"></a>ファイルを閉じる
-通常どおり I/O 操作で、ファイルを終了すると、閉じてください。  
-  
-#### <a name="to-close-a-file"></a>ファイルを閉じる  
-  
-1.  使用して、**閉じる**メンバー関数。 この関数は、ファイル システム ファイルを閉じ、必要な場合は、バッファーをフラッシュします。  
-  
- 割り当てた場合、 [CFile](../mfc/reference/cfile-class.md)フレーム上のオブジェクト (に示す例のように[ファイルを開く](../mfc/opening-files.md))、オブジェクトが自動的に終了して、スコープ外になったときに破棄されるあります。 削除することに注意してください、`CFile`オブジェクトには、ファイル システムで物理ファイルは削除されません。  
-  
-## <a name="see-also"></a>関連項目  
- [ファイル](../mfc/files-in-mfc.md)
+
+通常どおり、I/O 操作でファイルを終了すると閉じてください。
+
+#### <a name="to-close-a-file"></a>ファイルを閉じる
+
+1. 使用して、**閉じる**メンバー関数。 この関数は、ファイル システムのファイルを閉じ、必要な場合は、バッファーをフラッシュします。
+
+割り当て済みの場合、 [CFile](../mfc/reference/cfile-class.md)フレーム上のオブジェクト (に示す例のように[ファイルを開く](../mfc/opening-files.md))、オブジェクトが自動的に閉じてスコープ外になったときに破棄されます。 削除することに注意してください、`CFile`オブジェクトには、ファイル システムで物理ファイルは削除されません。
+
+## <a name="see-also"></a>関連項目
+
+[ファイル](../mfc/files-in-mfc.md)
 

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c44028f834d2b3200b970fdc613d0bf4d4efd29
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7d9ab5157bb39b890c867c90e3b6a77cf189c9ef
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702859"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421272"
 ---
 # <a name="tlbout-name-tlb-file"></a>/TLBOUT (.TLB ファイル名の指定)
 
@@ -68,6 +68,6 @@ MIDL コンパイラによって作成された .tlb ファイルの名前を指
 
 [リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
 [リンカー オプション](../../build/reference/linker-options.md)<br/>
-[/IGNOREIDL (を MIDL に挿入に属性を処理しない)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)
-[/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)
+[/IGNOREIDL (属性を MIDL に挿入しない)](../../build/reference/ignoreidl-don-t-process-attributes-into-midl.md)<br/>
+[/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
 [属性付きプログラムの作成](../../windows/building-an-attributed-program.md)

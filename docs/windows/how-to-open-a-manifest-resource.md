@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7bb55c18bf577e8ef7bbf1f9504af1df0e1ebe7f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0825e34515a458d49b8353f3053654094d8b9526
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315523"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46407284"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>方法: マニフェスト リソースを開く
 
@@ -49,6 +49,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[マニフェスト リソース](../windows/manifest-resources.md)  
-[コントロール](../mfc/controls-mfc.md)  
+[マニフェスト リソース](../windows/manifest-resources.md)<br/>
+[コントロール](../mfc/controls-mfc.md)<br/>
 [リソース ファイルの操作](../windows/working-with-resource-files.md)

@@ -1,28 +1,38 @@
 ---
 title: ClassFactory クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/13/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::ClassFactory
+- module/Microsoft::WRL::ClassFactory::AddRef
+- module/Microsoft::WRL::ClassFactory::ClassFactory
+- module/Microsoft::WRL::ClassFactory::LockServer
+- module/Microsoft::WRL::ClassFactory::QueryInterface
+- module/Microsoft::WRL::ClassFactory::Release
 dev_langs:
 - C++
 helpviewer_keywords:
-- ClassFactory class
+- Microsoft::WRL::ClassFactory class
+- Microsoft::WRL::ClassFactory::AddRef method
+- Microsoft::WRL::ClassFactory::ClassFactory, constructor
+- Microsoft::WRL::ClassFactory::LockServer method
+- Microsoft::WRL::ClassFactory::QueryInterface method
+- Microsoft::WRL::ClassFactory::Release method
 ms.assetid: f13e6bce-722b-4f18-b7cf-3ffa6345c1db
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0f033fc20fac656e6b9fcfa9ac822099ea929d62
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bfaf95a477917fc417cfe3c296822233eca77c09
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611806"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413069"
 ---
 # <a name="classfactory-class"></a>ClassFactory クラス
 
@@ -48,18 +58,18 @@ class ClassFactory : public Details::RuntimeClass<
 
 ### <a name="parameters"></a>パラメーター
 
-*I0*  
+*I0*<br/>
 0 番目のインターフェイスです。
 
-*I1*  
+*I1*<br/>
 最初のインターフェイス。
 
-*I2*  
+*I2*<br/>
 2 番目のインターフェイス。
 
 ## <a name="remarks"></a>Remarks
 
-利用**ClassFactory**工場出荷時のユーザー定義の実装を提供します。
+利用`ClassFactory`工場出荷時のユーザー定義の実装を提供します。
 
 次のプログラミングのパターンが使用する方法を示します、[実装](../windows/implements-structure.md)構造体をクラス ファクトリを複数の 3 つのインターフェイスを指定します。
 
@@ -69,18 +79,18 @@ class ClassFactory : public Details::RuntimeClass<
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
-|----------|-----------------|
-|[ClassFactory::ClassFactory コンストラクター](../windows/classfactory-classfactory-constructor.md)||
+名前                                        | 説明
+------------------------------------------- | -----------
+[Classfactory::classfactory](#classfactory) |
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[ClassFactory::AddRef メソッド](../windows/classfactory-addref-method.md)|現在の参照カウントをインクリメント**ClassFactory**オブジェクト。|
-|[ClassFactory::LockServer メソッド](../windows/classfactory-lockserver-method.md)|ずつインクリメントまたはデクリメントし、現在追跡されるオブジェクトの基になる数**ClassFactory**オブジェクト。|
-|[ClassFactory::QueryInterface メソッド](../windows/classfactory-queryinterface-method.md)|パラメーターで指定されたインターフェイスへのポインターを取得します。|
-|[ClassFactory::Release メソッド](../windows/classfactory-release-method.md)|参照が現在のカウントをデクリメント**ClassFactory**オブジェクト。|
+名前                                            | 説明
+----------------------------------------------- | ----------------------------------------------------------------------------------------------------------------
+[Classfactory::addref](#addref)                 | 現在の参照カウントをインクリメント`ClassFactory`オブジェクト。
+[Classfactory::lockserver](#lockserver)         | ずつインクリメントまたはデクリメントし、現在追跡されるオブジェクトの基になる数`ClassFactory`オブジェクト。
+[Classfactory::queryinterface](#queryinterface) | パラメーターで指定されたインターフェイスへのポインターを取得します。
+[Classfactory::release](#release)               | 参照が現在のカウントをデクリメント`ClassFactory`オブジェクト。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -110,7 +120,83 @@ class ClassFactory : public Details::RuntimeClass<
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="addref"></a>Classfactory::addref
 
-[Microsoft::WRL 名前空間](../windows/microsoft-wrl-namespace.md)  
-[RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)
+現在の参照カウントをインクリメント`ClassFactory`オブジェクト。
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   AddRef
+)();
+```
+
+### <a name="return-value"></a>戻り値
+
+成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。
+
+## <a name="classfactory"></a>Classfactory::classfactory
+
+```cpp
+WRL_NOTHROW ClassFactory();
+```
+
+## <a name="lockserver"></a>Classfactory::lockserver
+
+ずつインクリメントまたはデクリメントし、現在追跡されるオブジェクトの基になる数`ClassFactory`オブジェクト。
+
+```cpp
+STDMETHOD(
+   LockServer
+)(BOOL fLock);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*群れ*<br/>
+`true` 追跡対象のオブジェクトの数をインクリメントします。 `false` 追跡対象のオブジェクトの数をデクリメントします。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合は s_ok を返します。それ以外の場合、E_FAIL します。
+
+### <a name="remarks"></a>Remarks
+
+`ClassFactory` 基になるインスタンス内のオブジェクトの追跡、[モジュール](../windows/module-class.md)クラス。
+
+## <a name="queryinterface"></a>Classfactory::queryinterface
+
+パラメーターで指定されたインターフェイスへのポインターを取得します。
+
+```cpp
+STDMETHOD(
+   QueryInterface
+)(REFIID riid, _Deref_out_ void **ppvObject);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*riid*<br/>
+インターフェイス ID。
+
+*ppvObject*<br/>
+ときにこの操作が完了すると、パラメーターで指定されたインターフェイスへのポインター *riid*します。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。
+
+## <a name="release"></a>Classfactory::release
+
+参照が現在のカウントをデクリメント`ClassFactory`オブジェクト。
+
+```cpp
+STDMETHOD_(
+   ULONG,
+   Release
+)();
+```
+
+### <a name="return-value"></a>戻り値
+
+成功した場合は S_OK、そうでない場合は失敗を示す HRESULT。

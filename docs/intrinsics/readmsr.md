@@ -18,47 +18,52 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26fb2637c5a92a430d72e496cabeb8f5749ccaa1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d21d33d1e90d7c4aac9ea833d0c5bd80f5172312
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711802"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46416605"
 ---
 # <a name="readmsr"></a>__readmsr
-**Microsoft 固有の仕様**  
-  
- 生成、`rdmsr`命令で指定されたモデルに固有のレジスタの読み取りが`register`し、その値を返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-__int64 __readmsr(   
-   int register   
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+**Microsoft 固有の仕様**
+
+生成、`rdmsr`命令で指定されたモデルに固有のレジスタの読み取りが`register`し、その値を返します。
+
+## <a name="syntax"></a>構文
+
+```
+__int64 __readmsr( 
+   int register 
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *register*<br/>
-[in]読み取りモデル専用レジスタ。  
-  
-## <a name="return-value"></a>戻り値  
- 指定されたレジスタの値。  
-  
-## <a name="requirements"></a>要件  
-  
-|組み込み|アーキテクチャ|  
-|---------------|------------------|  
-|`__readmsr`|x86、x64|  
-  
- **ヘッダー ファイル** \<intrin.h >  
-  
-## <a name="remarks"></a>Remarks  
- この関数はのみカーネル モードで利用でき、ルーチンは組み込みとして使用できるのみです。  
-  
- 詳細については、AMD のマニュアルを参照してください。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[in]読み取りモデル専用レジスタ。
+
+## <a name="return-value"></a>戻り値
+
+指定されたレジスタの値。
+
+## <a name="requirements"></a>要件
+
+|組み込み|アーキテクチャ|
+|---------------|------------------|
+|`__readmsr`|x86、x64|
+
+**ヘッダー ファイル** \<intrin.h >
+
+## <a name="remarks"></a>Remarks
+
+この関数はのみカーネル モードで利用でき、ルーチンは組み込みとして使用できるのみです。
+
+詳細については、AMD のマニュアルを参照してください。
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

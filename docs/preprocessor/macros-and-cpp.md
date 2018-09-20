@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d81fb8f8f41a57fc2bd1a87c6726b92756bf26b5
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 58f3be857e0a77a62a5f2d4d1d0b650f02fd391b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539859"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425523"
 ---
 # <a name="macros-and-c"></a>マクロと C++
 C++ にはいくつかの新機能がありますが、その一部は ANSI C プリプロセッサが提供する機能に代替します。 これらの新機能によって、次のように言語のタイプ セーフと予測可能性が向上します。  
@@ -39,5 +39,5 @@ C++ にはいくつかの新機能がありますが、その一部は ANSI C �
   
 ## <a name="see-also"></a>関連項目  
  
-[定義済みマクロ](../preprocessor/predefined-macros.md)   
+[定義済みマクロ](../preprocessor/predefined-macros.md)<br/>
 [マクロ (C/C++)](../preprocessor/macros-c-cpp.md)

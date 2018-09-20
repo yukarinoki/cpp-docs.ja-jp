@@ -1,5 +1,5 @@
 ---
-title: リフレクション メッセージ用のメッセージ ハンドラーの定義 |Microsoft ドキュメント
+title: リフレクション メッセージ用のメッセージ ハンドラーの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,51 +17,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ed941816824c77f14a3364b06af0b3da171ee8f
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33373170"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46413745"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>リフレクション メッセージ用のメッセージ ハンドラーの定義
-新しい MFC コントロール クラスを作成した後は、そのメッセージ ハンドラーを定義できます。 リフレクション メッセージ ハンドラーは、親でメッセージを受信する前に、独自のメッセージを処理するコントロール クラスを使用できます。 MFC を使用する[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)コントロールから親ウィンドウにメッセージを送信する関数。  
-  
- その (オーナー描画) を行うには、親ウィンドウで証明書利用者のではなく、作成できますが、たとえば、この機能により、自身を再描画するリスト ボックスを作成します。 リフレクション メッセージの詳細については、次を参照してください。[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)です。  
-  
- 作成する、 [ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)、同じ機能を持つ ActiveX コントロールのプロジェクトを作成する必要があります。  
-  
+
+新しい MFC コントロール クラスを作成すると、そのメッセージ ハンドラーを定義できます。 リフレクション メッセージ ハンドラーは、親によってメッセージの受信前に、独自のメッセージを処理するコントロール クラスを使用できます。 MFC を使用する[CWnd::SendMessage](../../mfc/reference/cwnd-class.md#sendmessage)コントロールから親ウィンドウにメッセージを送信する関数。
+
+(オーナー描画) を実行する親ウィンドウに依存するのではなくなどのことがこの機能により、自身を再描画するリスト ボックスを作成します。 反映されたメッセージの詳細については、次を参照してください。[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)します。
+
+作成する、 [ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)、同じ機能を持つ ActiveX コントロールのプロジェクトを作成する必要があります。
+
 > [!NOTE]
->  リフレクション メッセージを追加することはできません (ocm _*メッセージ*) ActiveX の制御 [プロパティ] ウィンドウを使用して以下のとおりです。 これらのメッセージを手動で追加する必要があります。  
-  
-### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>[プロパティ] ウィンドウから反映されたメッセージのメッセージ ハンドラーを定義するには  
-  
-1.  リストなどのコントロール、rebar コントロール、ツールバー、またはツリー コントロールを MFC プロジェクトに追加します。  
-  
-2.  クラス ビュー で、コントロール クラスの名前をクリックします。  
-  
-3.  [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)、コントロールのクラス名に表示されます、**クラス名** ボックスの一覧です。  
-  
-4.  クリックして、**メッセージ**コントロールに追加できる Windows メッセージを表示するボタンをクリックします。  
-  
-5.  見出しが表示されるまでは、[プロパティ] ウィンドウ内のメッセージの一覧をスクロールして**反映済み**です。 または、クリックして、**カテゴリ**ボタンをクリックし、表示するビューを折りたたんだり、**反映済み**見出し。  
-  
-6.  リフレクション メッセージ ハンドラーを定義するを選択します。 リフレクション メッセージは、等号 (=) でマークされます。  
-  
-7.  プロパティ ウィンドウに、ハンドラーの名前を表示するには、右側の列のセルをクリックして\<追加 >*HandlerName*です。 (たとえば、 **= WM_CTLCOLOR**メッセージ ハンドラーを提案\<追加 >**CtlColor**)。  
-  
-8.  受け入れるように推奨される名前をクリックします。 ハンドラーは、プロジェクトに追加されます。  
-  
-     リフレクション メッセージ ウィンドウの右側の列に追加されているメッセージ ハンドラーの名前が表示されます。  
-  
-9. を編集またはメッセージのハンドラーを削除するには、手順 4 ~ 7 を繰り返します。 編集または削除し、適切なタスクをクリックして、ハンドラーの名前を含むセルをクリックします。  
-  
-## <a name="see-also"></a>関連項目  
- [関数へのメッセージの割り当てください。](../../mfc/reference/mapping-messages-to-functions.md)   
- [コード ウィザードによる機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)   
- [クラスの追加](../../ide/adding-a-class-visual-cpp.md)   
- [メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)   
- [メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)   
- [仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)   
- [MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)   
- [クラス各部へ](../../ide/navigating-the-class-structure-visual-cpp.md)
+>  リフレクション メッセージを追加することはできません (ocm _*メッセージ*) の ActiveX を使用して制御プロパティ ウィンドウで、次のようです。 これらのメッセージを手動で追加する必要があります。
+
+### <a name="to-define-a-message-handler-for-a-reflected-message-from-the-properties-window"></a>[プロパティ] ウィンドウから反映されたメッセージのメッセージ ハンドラーを定義するには
+
+1. リストなどのコントロールや rebar コントロール、ツールバー、ツリー コントロールを MFC プロジェクトに追加します。
+
+1. クラス ビューで、コントロール クラスの名前をクリックします。
+
+1. [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)、コントロール クラス名が表示されます、**クラス名**一覧。
+
+1. をクリックして、**メッセージ**コントロールに追加できる Windows メッセージを表示するボタンをクリックします。
+
+1. 見出しが表示されるまでは、[プロパティ] ウィンドウ内のメッセージの一覧をスクロールして**反映済み**します。 または、クリックして、**カテゴリ**ボタンをクリックし、表示するビューを折りたたんだり、**反映済み**見出し。
+
+1. リフレクションにハンドラーを定義するメッセージを選択します。 反映されたメッセージは、等号 (=) でマークされます。
+
+1. ハンドラーとしての推奨される名前を表示する [プロパティ] ウィンドウで、右側の列のセルをクリックして\<追加 >*HandlerName*します。 (たとえば、 **= WM_CTLCOLOR**メッセージ ハンドラーを提案\<追加 >**CtlColor**)。
+
+1. 受け入れるように推奨される名前をクリックします。 ハンドラーは、プロジェクトに追加されます。
+
+     リフレクション メッセージ ウィンドウの右側の列に追加したメッセージ ハンドラー名が表示されます。
+
+9. を編集またはメッセージ ハンドラーを削除するには、手順 4 ~ 7 を繰り返します。 編集または削除、および適切なタスクをクリックします。 ハンドラー名を含むセルをクリックします。
+
+## <a name="see-also"></a>関連項目
+
+[マップ (関数にメッセージを)](../../mfc/reference/mapping-messages-to-functions.md)<br/>
+[コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
+[クラスの追加](../../ide/adding-a-class-visual-cpp.md)<br/>
+[メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)<br/>
+[メンバー変数の追加](../../ide/adding-a-member-variable-visual-cpp.md)<br/>
+[仮想関数のオーバーライド](../../ide/overriding-a-virtual-function-visual-cpp.md)<br/>
+[MFC メッセージ ハンドラー](../../mfc/reference/adding-an-mfc-message-handler.md)<br/>
+[クラス各部へのジャンプ](../../ide/navigating-the-class-structure-visual-cpp.md)
