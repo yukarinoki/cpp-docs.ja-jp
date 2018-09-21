@@ -1,7 +1,7 @@
 ---
 title: -clr (共通言語ランタイムのコンパイル) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -23,12 +23,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b46f61ef727c1b283137bb3d537d2dbad416c1d8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dcd5739f2fb0663609ce7bcabc920cc3aa20d8e1
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703821"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494414"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (共通言語ランタイムのコンパイル)
 
@@ -45,15 +45,15 @@ ms.locfileid: "45703821"
 
 - none
 
-   オプションなしで **/clr**アプリケーションのメタデータを作成します。 このメタデータは、他の CLR アプリケーションで使用できます。また、このメタデータによって、他の CLR コンポーネントのメタデータの型とデータをアプリケーションで使用できるようになります。 詳細については、次を参照してください。[混在 (ネイティブおよびマネージ) アセンブリ](../../dotnet/mixed-native-and-managed-assemblies.md)と[方法:/clr:pure に移行](../../dotnet/how-to-migrate-to-clr.md)します。
+   オプションなしで **/clr**アプリケーションのメタデータを作成します。 このメタデータは、他の CLR アプリケーションで使用できます。また、このメタデータによって、他の CLR コンポーネントのメタデータの型とデータをアプリケーションで使用できるようになります。 詳細については、次を参照してください。[混在 (ネイティブおよびマネージ) アセンブリ](../../dotnet/mixed-native-and-managed-assemblies.md)します。
 
 - **純粋です**
 
-   **/clr:/clr:pure は非推奨**します。 コンパイラの将来のバージョンでこのオプションがサポートされない可能性があります。 純粋 MSIL にする必要があるコードは、C# に移植することをお勧めします。
+   **/clr:/clr:pure は非推奨**します。 Visual Studio 2017 では、オプションが削除されます。 純粋 MSIL にする必要があるコードは、C# に移植することをお勧めします。
 
 - **safe**
 
-   **/clr:safe は非推奨**します。 コンパイラの将来のバージョンでこのオプションがサポートされない可能性があります。 C# に安全な MSIL にする必要があるコードを移植することをお勧めします。
+   **/clr:safe は非推奨**します。 Visual Studio 2017 では、オプションが削除されます。 C# に安全な MSIL にする必要があるコードを移植することをお勧めします。
 
 - **noAssembly**
 
@@ -112,31 +112,6 @@ class {} x;
 ```
 
 メタデータを表示するには、ildasm.exe を使用します。
-
-## <a name="managed-extensions-for-c"></a>C++ マネージド拡張
-
-Visual C++ では、 **/clr:oldsyntax** オプションがサポートされなくなっています。 このオプションは Visual Studio 2005 で非推奨とされました。 C++ でのマネージド コードの記述でサポートされている構文は、C++/CLI です。 詳細については、「 [Component Extensions for Runtime Platforms](../../windows/component-extensions-for-runtime-platforms.md)」を参照してください。
-
-C++ のマネージド拡張を使用するコードを使用している場合は、移植して C++/CLI 構文を使用することをお勧めします。 コードの移植方法の詳細については、「 [C++/CLI Migration Primer](../../dotnet/cpp-cli-migration-primer.md)」を参照してください。
-
-#### <a name="to-set-this-compiler-option-in-visual-studio"></a>このコンパイラ オプションを Visual Studio で使用するには
-
-1. **ソリューション エクスプローラー**でプロジェクト名を右クリックし、 **[プロパティ]** をクリックして、プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。
-
-1. 選択、**構成プロパティ** > **全般**プロパティ ページ。
-
-1. 変更、**共通言語ランタイム サポート**プロパティ。
-
-   > [!NOTE]
-   > **/clr** が **[プロパティ ページ]** ダイアログ ボックスで有効になっている場合は、 **/clr** と互換性のないコンパイラ オプション プロパティも必要に応じて調整されます。 たとえば、 **/RTC** が設定された後で **/clr** が有効になった場合、 **/RTC** はオフになります。
-   >
-   >  また、 **/clr** アプリケーションをデバッグする場合、 **[デバッガーの種類]** プロパティを **[混合]** または **[マネージドのみ]** に設定します。 詳細については、次を参照してください。 [C++ デバッグ構成のプロジェクト設定](/visualstudio/debugger/project-settings-for-a-cpp-debug-configuration)します。
-
-   方法については、モジュールの作成を参照してください[/NOASSEMBLY (MSIL モジュールの作成)](../../build/reference/noassembly-create-a-msil-module.md)します。
-
-#### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
-
-- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.CompileAsManaged%2A>
 
 ## <a name="see-also"></a>関連項目
 
