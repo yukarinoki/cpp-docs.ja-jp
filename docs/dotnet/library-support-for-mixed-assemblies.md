@@ -1,7 +1,7 @@
 ---
-title: 混在アセンブリのライブラリのサポート |Microsoft ドキュメント
+title: 混在アセンブリのライブラリのサポート |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -18,42 +18,41 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: d4b584e0bacb1cb93cad33efdff807bb5fa9c8e2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 868cae6701e17c79c9856b3a16c63c1e25b67bda
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704112"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494518"
 ---
 # <a name="library-support-for-mixed-assemblies"></a>混在アセンブリのためのライブラリ サポート
 
-Visual C、C++ 標準ライブラリ、C ランタイム ライブラリ (CRT) の使用をサポートする ATL、およびでコンパイルされたアプリケーションの MFC [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)です。 これにより、既存のアプリケーションも .NET Framework の機能を使用するためにこれらのライブラリを使用できます。
+Visual C、C++ 標準ライブラリ、C ランタイム ライブラリ (CRT) の使用をサポートする、ATL と MFC でコンパイルされたアプリケーションの[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。 これにより、既存のアプリケーションも .NET Framework の機能を使用するためにこれらのライブラリを使用できます。
 
 > [!IMPORTANT]
-> **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+> **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 このサポートには、次の DLL とインポート ライブラリが含まれています。
 
-- コンパイルする場合、Msvcmrt [d] .lib **/clr**です。 このインポート ライブラリへのリンクを混在アセンブリ。
+- 使用してコンパイルする場合、Msvcmrt [d] .lib **/clr**します。 このインポート ライブラリへのリンクを混在アセンブリ。
 
 このサポートは、関連するいくつかの利点を提供します。
 
-- CRT および C++ 標準ライブラリは、混合コードを使用できます。 提供されている C++ 標準ライブラリ、CRT は検証不能です。最終的には、呼び出しはネイティブ コードから使用するとも同じ CRT および C++ 標準ライブラリにルーティングされます。
+- CRT と C++ 標準ライブラリは、混合コードを利用します。 CRT と C++ 標準ライブラリが提供されているは検証可能な; できません。最終的には、呼び出しはネイティブ コードから使用するため引き続き同じ CRT と C++ 標準ライブラリにルーティングされます。
 
-- 統一された例外処理、混合イメージを修正します。
+- 混合イメージで統一された例外の処理を修正します。
 
-- 混合イメージでの C++ の変数の静的な初期化します。
+- 混合イメージ内の C++ 変数の静的な初期化します。
 
 - マネージ コードで、AppDomain ごとと、プロセスごとの変数をサポートします。
 
-- Visual Studio 2003 以前のバージョンでコンパイルされた混在モード Dll に適用されるローダー ロックに関する問題を解決します。
+- 混在モード Dll を Visual Studio 2003 以前のバージョンでのコンパイルに適用されるローダー ロックに関する問題を解決します。
 
 さらに、このサポートには、次の制限事項が表示されます。
 
-- コンパイルされたコードの CRT DLL モデルのみがサポートされて **/clr**です。 サポートする静的な CRT ライブラリがありません。 **/clr**を構築します。
+- コンパイルされるコードに、CRT DLL モデルのみがサポートされている **/clr**します。 サポートする静的な CRT ライブラリがない **/clr**をビルドします。
 
-以前のバージョンで動作する保証はありません、現在のバージョンに、共通言語ランタイム (CLR) を更新してください。 CLR のバージョンではこれらの変更でビルドされたコードが実行されない 1.x です。
 
 ## <a name="see-also"></a>関連項目
 
-- [混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)
+- [混在 (ネイティブおよびマネージド) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)
