@@ -27,38 +27,42 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd67abc48af35b5e538b8ad1928269d10f9a71aa
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d239820221c696dbb8d27e2824ed871a7e2d5ad8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389131"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46063056"
 ---
 # <a name="lccollatecpfunc"></a>___lc_collate_cp_func
-内部 CRT 関数。 スレッドの現在の照合順序コード ページを取得します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-UINT ___lc_codepage_func(void);  
-```  
-  
-## <a name="return-value"></a>戻り値  
- スレッドの現在の照合順序コード ページ。  
-  
-## <a name="remarks"></a>コメント  
- `___lc_collate_cp_func` は、CRT データのスレッド ローカル ストレージから現在の照合順序コード ページを取得するために、他の CRT 関数によって使用される内部 CRT 関数です。 この情報は、[_get_current_locale](../c-runtime-library/reference/get-current-locale.md) 関数を使用して取得することもできます。  
-  
- 内部 CRT 関数は実装固有であり、各リリースでの変更の対象です。 コード内では使用しないことをお勧めします。  
-  
-## <a name="requirements"></a>必要条件  
-  
-|ルーチンによって返される値|必須ヘッダー|  
-|-------------|---------------------|  
-|`___lc_collate_cp_func`|crt\src\setlocal.h|  
-  
-## <a name="see-also"></a>参照  
- [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)   
- [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)   
- [_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)   
- [_free_locale](../c-runtime-library/reference/free-locale.md)
+
+内部 CRT 関数。 スレッドの現在の照合順序コード ページを取得します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+UINT ___lc_codepage_func(void);
+```
+
+## <a name="return-value"></a>戻り値
+
+スレッドの現在の照合順序コード ページ。
+
+## <a name="remarks"></a>コメント
+
+`___lc_collate_cp_func` は、CRT データのスレッド ローカル ストレージから現在の照合順序コード ページを取得するために、他の CRT 関数によって使用される内部 CRT 関数です。 この情報は、[_get_current_locale](../c-runtime-library/reference/get-current-locale.md) 関数を使用して取得することもできます。
+
+内部 CRT 関数は実装固有であり、各リリースでの変更の対象です。 コード内では使用しないことをお勧めします。
+
+## <a name="requirements"></a>必要条件
+
+|ルーチンによって返される値|必須ヘッダー|
+|-------------|---------------------|
+|`___lc_collate_cp_func`|crt\src\setlocal.h|
+
+## <a name="see-also"></a>参照
+
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[_free_locale](../c-runtime-library/reference/free-locale.md)

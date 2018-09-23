@@ -14,27 +14,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12fee7eadecbd81e3c4e410d254de50bcf3a9ac0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7da654321dfae520f458374654a21a9e8ebb98f5
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208827"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45706655"
 ---
 # <a name="idl-attributes-add-property-wizard"></a>[IDL 属性] (プロパティの追加ウィザード)
 プロパティの追加ウィザードのこのページでは、プロパティのインターフェイス定義言語 (IDL) の設定を指定します。  
   
- **ID**  
- プロパティを識別する数値 ID を設定します。 このオプションは、カスタム インターフェイスのプロパティでは使用できません。 *MIDL リファレンス*の [id](/windows/desktop/Midl/id) に関するページを参照してください。  
+- **ID**
+
+   プロパティを識別する数値 ID を設定します。 このオプションは、カスタム インターフェイスのプロパティでは使用できません。 *MIDL リファレンス*の [id](/windows/desktop/Midl/id) に関するページを参照してください。  
   
- **helpcontext**  
- コンテキスト ID を指定します。ユーザーはヘルプ ファイルでこのプロパティに関する情報を参照できます。 *MIDL リファレンス*の [helpcontext](/windows/desktop/Midl/helpcontext) に関するページを参照してください。  
+- **helpcontext**
+
+   コンテキスト ID を指定します。ユーザーはヘルプ ファイルでこのプロパティに関する情報を参照できます。 *MIDL リファレンス*の [helpcontext](/windows/desktop/Midl/helpcontext) に関するページを参照してください。  
   
- **helpstring**  
- 適用先となる要素を記述するために使用される文字列を指定します。 既定では、"プロパティ <*プロパティ名*>" に設定されます。 *MIDL リファレンス*の [helpstring](/windows/desktop/Midl/helpstring) に関するページを参照してください。  
+- **helpstring**
+
+   適用先となる要素を記述するために使用される文字列を指定します。 既定では、"プロパティ <*プロパティ名*>" に設定されます。 *MIDL リファレンス*の [helpstring](/windows/desktop/Midl/helpstring) に関するページを参照してください。  
   
 ## <a name="other-options"></a>その他のオプション  
- すべてのオプションをすべてのプロパティの種類で使用できるわけではありません。  
+
+すべてのオプションをすべてのプロパティの種類で使用できるわけではありません。  
   
 |オプション|説明|  
 |------------|-----------------|  

@@ -27,34 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70520b60ccfaf1af5b223bcb4ea1a90639aa484
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e311c27d61eca82019f8069b0984557af02c74a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385554"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028208"
 ---
 # <a name="abnormaltermination"></a>_abnormal_termination
-システムが終了ハンドラーの内部リストの実行中に、[try-finally ステートメント](../cpp/try-finally-statement.md)の `__finally` ブロックが入力されているかどうかを示します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-int   _abnormal_termination(  
-   );  
-```  
-  
-## <a name="return-value"></a>戻り値  
- システムがスタックを*アンワインド*する場合は `true`、それ以外は `false` です。  
-  
-## <a name="remarks"></a>コメント  
- これは、アンワインドの例外を管理するために使用される内部関数で、ユーザー コードから呼び出されるものではありません。  
-  
-## <a name="requirements"></a>必要条件  
-  
-|ルーチンによって返される値|必須ヘッダー|  
-|-------------|---------------------|  
-|_abnormal_termination|excpt.h|  
-  
-## <a name="see-also"></a>参照  
- [try-finally ステートメント](../cpp/try-finally-statement.md)
+
+システムが終了ハンドラーの内部リストの実行中に、[try-finally ステートメント](../cpp/try-finally-statement.md)の `__finally` ブロックが入力されているかどうかを示します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+int   _abnormal_termination(
+   );
+```
+
+## <a name="return-value"></a>戻り値
+
+システムがスタックを*アンワインド*する場合は `true`、それ以外は `false` です。
+
+## <a name="remarks"></a>コメント
+
+これは、アンワインドの例外を管理するために使用される内部関数で、ユーザー コードから呼び出されるものではありません。
+
+## <a name="requirements"></a>必要条件
+
+|ルーチンによって返される値|必須ヘッダー|
+|-------------|---------------------|
+|_abnormal_termination|excpt.h|
+
+## <a name="see-also"></a>参照
+
+[try-finally ステートメント](../cpp/try-finally-statement.md)

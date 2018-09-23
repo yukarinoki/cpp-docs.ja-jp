@@ -24,25 +24,27 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc259a75ab12352a7d0029241496aea22803152a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2522761389a7f97acf4157683f8fce19e94429d8
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384201"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100531"
 ---
 # <a name="multibyte-and-wide-characters"></a>マルチバイト文字とワイド文字
-マルチバイト文字は 1 つ以上のバイトのシーケンスで構成される文字です。 各バイト シーケンスは、拡張文字セットの 1 つの文字を表します。 マルチバイト文字は、漢字などの文字セットで使用されます。  
-  
- ワイド文字は、常に 16 ビットの多言語文字コードです。 文字定数の型は `char` です。ワイド文字の場合、型は `wchar_t` です。 ワイド文字は常に固定サイズであるため、ワイド文字を使用すると、各種言語の文字セットを使ったプログラミングが簡単になります。  
-  
- ワイド文字の文字列リテラル `L"hello"` は型 `wchar_t` の 6 つの整数の配列になります。  
-  
-```  
-{L'h', L'e', L'l', L'l', L'o', 0}  
-```  
-  
- Unicode 仕様はワイド文字の仕様です。 マルチバイト文字とワイド文字の相互変換用のランタイム ライブラリ ルーチンには、`mbstowcs`、`mbtowc`、`wcstombs`、および `wctomb` があります。  
-  
-## <a name="see-also"></a>参照  
- [C の識別子](../c-language/c-identifiers.md)
+
+マルチバイト文字は 1 つ以上のバイトのシーケンスで構成される文字です。 各バイト シーケンスは、拡張文字セットの 1 つの文字を表します。 マルチバイト文字は、漢字などの文字セットで使用されます。
+
+ワイド文字は、常に 16 ビットの多言語文字コードです。 文字定数の型は `char` です。ワイド文字の場合、型は `wchar_t` です。 ワイド文字は常に固定サイズであるため、ワイド文字を使用すると、各種言語の文字セットを使ったプログラミングが簡単になります。
+
+ワイド文字の文字列リテラル `L"hello"` は型 `wchar_t` の 6 つの整数の配列になります。
+
+```
+{L'h', L'e', L'l', L'l', L'o', 0}
+```
+
+Unicode 仕様はワイド文字の仕様です。 マルチバイト文字とワイド文字の相互変換用のランタイム ライブラリ ルーチンには、`mbstowcs`、`mbtowc`、`wcstombs`、および `wctomb` があります。
+
+## <a name="see-also"></a>参照
+
+[C の識別子](../c-language/c-identifiers.md)

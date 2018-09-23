@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 804039142e63af838ddd7e8a899d616657596f66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 08b92dcf1e51a58255254f36df5c140ea36343f2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383450"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46023372"
 ---
 # <a name="operands-and-expressions"></a>オペランドおよび式
-"オペランド" とは、演算子の処理対象のエンティティです。 "式" とは、次の処理の任意の組み合わせを実行する演算子とオペランドのシーケンスです。  
-  
--   値の計算  
-  
--   オブジェクトまたは関数の指定  
-  
--   副作用の生成  
-  
- C のオペランドには、定数、識別子、文字列、関数呼び出し、添字式、メンバー選択式、および演算子とオペランドを結合するか、オペランドをかっこで囲んだ複雑な式が含まれます。 これらのオペランドの構文については、「[1 次式](../c-language/c-primary-expressions.md)」を参照してください。  
-  
-## <a name="see-also"></a>参照  
- [式と代入](../c-language/expressions-and-assignments.md)
+
+"オペランド" とは、演算子の処理対象のエンティティです。 "式" とは、次の処理の任意の組み合わせを実行する演算子とオペランドのシーケンスです。
+
+- 値の計算
+
+- オブジェクトまたは関数の指定
+
+- 副作用の生成
+
+C のオペランドには、定数、識別子、文字列、関数呼び出し、添字式、メンバー選択式、および演算子とオペランドを結合するか、オペランドをかっこで囲んだ複雑な式が含まれます。 これらのオペランドの構文については、「[1 次式](../c-language/c-primary-expressions.md)」を参照してください。
+
+## <a name="see-also"></a>参照
+
+[式と代入](../c-language/expressions-and-assignments.md)

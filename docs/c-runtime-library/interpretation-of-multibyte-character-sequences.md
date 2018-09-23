@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d52a8b3572f398a97c902cf0bcd647a3752cee8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 86fc93b74f661ac0829c0ed5925cb9cf78a8876e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32390012"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103634"
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>マルチバイト文字のシーケンスの解釈
 
@@ -43,4 +43,4 @@ Microsoft ランタイム ライブラリにあるほとんどのマルチバイ
 ## <a name="see-also"></a>参照
 
 [国際化](../c-runtime-library/internationalization.md)<br/>
- [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
