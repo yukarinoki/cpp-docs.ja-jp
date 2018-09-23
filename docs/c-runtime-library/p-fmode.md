@@ -27,33 +27,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c520f81062f1bbbb295f17c6bc041afb8b5f2877
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c4dcea9e3f35bf5fd8dbfbed9273562ac3db551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389837"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46056340"
 ---
 # <a name="pfmode"></a>__p__fmode
-ファイルの入出力操作に対して既定の*ファイル変換モード*を指定する `_fmode` グローバル変数を指し示します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-int* __p__fmode(  
-   );  
-```  
-  
-## <a name="return-value"></a>戻り値  
- `_fmode` グローバル変数へのポインター。  
-  
-## <a name="remarks"></a>コメント  
- `__p__fmode` 関数は内部使用専用であり、ユーザー コードから呼び出すことはできません。  
-  
- ファイル変換モードは、[_open](../c-runtime-library/reference/open-wopen.md) および [_pipe](../c-runtime-library/reference/pipe.md) 入出力操作に対して `binary` または `text` の変換を指定します。 詳細については、「[_fmode](../c-runtime-library/fmode.md)」をご覧ください。  
-  
-## <a name="requirements"></a>必要条件  
-  
-|ルーチンによって返される値|必須ヘッダー|  
-|-------------|---------------------|  
+
+ファイルの入出力操作に対して既定の*ファイル変換モード*を指定する `_fmode` グローバル変数を指し示します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+int* __p__fmode(
+   );
+```
+
+## <a name="return-value"></a>戻り値
+
+`_fmode` グローバル変数へのポインター。
+
+## <a name="remarks"></a>コメント
+
+`__p__fmode` 関数は内部使用専用であり、ユーザー コードから呼び出すことはできません。
+
+ファイル変換モードは、[_open](../c-runtime-library/reference/open-wopen.md) および [_pipe](../c-runtime-library/reference/pipe.md) 入出力操作に対して `binary` または `text` の変換を指定します。 詳細については、「[_fmode](../c-runtime-library/fmode.md)」をご覧ください。
+
+## <a name="requirements"></a>必要条件
+
+|ルーチンによって返される値|必須ヘッダー|
+|-------------|---------------------|
 |__p\__fmode|stdlib.h|
