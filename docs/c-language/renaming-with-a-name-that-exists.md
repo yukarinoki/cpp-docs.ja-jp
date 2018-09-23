@@ -12,17 +12,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 50571a42d9b1115020cf63fb430cebcc85267825
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 10b9a9c4e42356a087c8cb6c10a470ba68acd4ba
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386525"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46067755"
 ---
 # <a name="renaming-with-a-name-that-exists"></a>存在する名前を使用した名前変更
-**ANSI 4.9.4.2** **rename** 関数の呼び出し前に新しい名前のファイルが存在する場合の効果  
-  
- 既存の名前を使用してファイルの名前を変更しようとすると、**rename** 関数は失敗し、エラー コードを返します。  
-  
-## <a name="see-also"></a>参照  
- [ライブラリ関数](../c-language/library-functions.md)
+
+**ANSI 4.9.4.2** **rename** 関数の呼び出し前に新しい名前のファイルが存在する場合の効果
+
+既存の名前を使用してファイルの名前を変更しようとすると、**rename** 関数は失敗し、エラー コードを返します。
+
+## <a name="see-also"></a>参照
+
+[ライブラリ関数](../c-language/library-functions.md)

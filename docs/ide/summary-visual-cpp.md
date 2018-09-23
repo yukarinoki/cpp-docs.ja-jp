@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47b7063dc9156e8feb41d447283ee457a13f1f4d
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dae0eef25b11d49e5f869d88862e602d862135c1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692303"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082249"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 \<summary> タグは、型または型のメンバーの説明に使用します。 型の説明に補足情報を追加するには、[\<remarks>](../ide/remarks-visual-cpp.md) タグを使用します。  
@@ -35,8 +35,8 @@ ms.locfileid: "43692303"
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- `description`  
- オブジェクトの概要。  
+*description*<br/>
+オブジェクトの概要。  
   
 ## <a name="remarks"></a>コメント  
  \<summary> タグのテキストは、IntelliSense の型に関する唯一のソースで、[オブジェクト ブラウザー](/visualstudio/ide/viewing-the-structure-of-code)とコード コメント Web レポートにも表示されます。  

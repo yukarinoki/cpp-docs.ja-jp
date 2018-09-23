@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f360cd075ac4a86c39f5c33391e974e62f481455
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 29976d0535d29fce926d7a12b920234548c8a98d
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613483"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46017290"
 ---
 # <a name="windows-platforms-crt"></a>Windows プラットフォーム (CRT)
 
@@ -37,4 +37,4 @@ Visual Studio の C ランタイム ライブラリでは最新バージョン�
 
 ## <a name="see-also"></a>関連項目
 
-[互換性](../c-runtime-library/compatibility.md)  
+[互換性](../c-runtime-library/compatibility.md)

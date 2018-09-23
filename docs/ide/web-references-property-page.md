@@ -19,31 +19,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dac300f08a9b02ce6e9f4aec66618350b46af952
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 0ff2a9ccec1dac6be41727b4a829bf4e63669f40
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692201"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45699648"
 ---
 # <a name="web-references-property-page"></a>[Web 参照] プロパティ ページ
 **[Web 参照]** プロパティ ページでは、XML Web サービス プロキシ クラスの生成方法が指定されます。 プロジェクトに Web 参照を追加した場合、XML Web サービス プロキシ クラスが生成されます。  
   
  **[Web 参照]** プロパティ ページには、以下のプロパティがあります。  
   
- **出力ファイル**  
- XML Web サービス プロキシ クラスを格納するファイルの名前。  
+- **出力ファイル**
+
+   XML Web サービス プロキシ クラスを格納するファイルの名前。  
   
- **著作権情報の非表示**  
- Web サービス記述言語ツール (Wsdl.exe) の著作権情報を表示しません。  
+- **著作権情報の非表示**
+
+   Web サービス記述言語ツール (Wsdl.exe) の著作権情報を表示しません。  
   
- **名前空間**  
- 生成される Web プロキシの名前を指定します。  
+- **名前空間**
+
+   生成される Web プロキシの名前を指定します。  
   
- **その他のリソース**  
- プロキシ DLL によって参照される追加 DLL を指定します。  
+- **その他のリソース**
+
+   プロキシ DLL によって参照される追加 DLL を指定します。  
   
- **[Web 参照]** プロパティ ページにアクセスする方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
+**[Web 参照]** プロパティ ページにアクセスする方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [プロパティ ページ](../ide/property-pages-visual-cpp.md)

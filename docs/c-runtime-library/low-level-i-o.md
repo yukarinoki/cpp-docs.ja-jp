@@ -20,18 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ce75fa9670f28079774f4ba564657d0b4614ac
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391283"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018315"
 ---
 # <a name="low-level-io"></a>下位入出力
 
 これらの関数は、ストリーム入出力の操作より低レベルの操作に対してオペレーティング システムを直接呼び出します。 低レベル入出力の呼び出しでは、データはバッファリングまたは書式設定されません。
 
- 低レベル ルーチンでは、次の事前定義済みのファイル記述子を使用して、プログラムの起動時に開かれる標準ストリームにアクセスできます。
+低レベル ルーチンでは、次の事前定義済みのファイル記述子を使用して、プログラムの起動時に開かれる標準ストリームにアクセスできます。
 
 |ストリーム|ファイル記述子|
 |------------|---------------------|
@@ -39,7 +39,7 @@ ms.locfileid: "32391283"
 |**stdout**|1|
 |**stderr**|2|
 
- 低レベル入出力ルーチンでは、エラー発生時に [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) グローバル変数が設定されます。 ファイルの終端を示すインジケーター (**EOF**) などの STDIO.H で定義された定数が、お使いのプログラムで必要な場合に限り、低レベル関数を使用する際に STDIO.H をインクルードする必要があります。
+低レベル入出力ルーチンでは、エラー発生時に [errno](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) グローバル変数が設定されます。 ファイルの終端を示すインジケーター (**EOF**) などの STDIO.H で定義された定数が、お使いのプログラムで必要な場合に限り、低レベル関数を使用する際に STDIO.H をインクルードする必要があります。
 
 ## <a name="low-level-io-functions"></a>低レベル入出力関数
 
@@ -64,5 +64,5 @@ ms.locfileid: "32391283"
 ## <a name="see-also"></a>参照
 
 [入出力](../c-runtime-library/input-and-output.md)<br/>
- [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [システム コール](../c-runtime-library/system-calls.md)<br/>
+[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[システム コール](../c-runtime-library/system-calls.md)<br/>

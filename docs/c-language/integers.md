@@ -14,23 +14,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e68a70a0fb6d202d1ba8c7f13c5a16e4318ca5ba
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 559e7e2ab80e904677f77d64ad378c2b88fd2c66
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383957"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097589"
 ---
 # <a name="integers"></a>整数
--   [整数値の範囲](../c-language/range-of-integer-values.md)  
-  
--   [整数の下位変換](../c-language/demotion-of-integers.md)  
-  
--   [符号付きビット処理演算](../c-language/signed-bitwise-operations.md)  
-  
--   [剰余](../c-language/remainders.md)  
-  
--   [右シフト](../c-language/right-shifts.md)  
-  
-## <a name="see-also"></a>参照  
- [実装で定義された動作](../c-language/implementation-defined-behavior.md)
+
+- [整数値の範囲](../c-language/range-of-integer-values.md)
+
+- [整数の下位変換](../c-language/demotion-of-integers.md)
+
+- [符号付きビット処理演算](../c-language/signed-bitwise-operations.md)
+
+- [剰余](../c-language/remainders.md)
+
+- [右シフト](../c-language/right-shifts.md)
+
+## <a name="see-also"></a>参照
+
+[実装で定義された動作](../c-language/implementation-defined-behavior.md)
