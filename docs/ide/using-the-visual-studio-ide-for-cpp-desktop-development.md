@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0678afc9d79499e4581feeca03b1a5bf9b7b963
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: 4aa276c0e9d97cd5b723499a21432290772a49a7
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43131307"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46390306"
 ---
 # <a name="using-the-visual-studio-ide-for-c-desktop-development"></a>C++ デスクトップ開発のための Visual Studio IDE の使用
 
@@ -31,7 +31,7 @@ Visual Studio をまだインストールしていない場合、この機会に
 
 一連のチュートリアルは、Visual Studio、Visual C++ 言語、Windows デスクトップ開発に必要なコンポーネントをインストールしていることを前提としています。 C++ 言語の基礎について理解していることも前提としています。 C++ について学習する必要がある場合、さまざまな書籍や Web リソースをご利用いただけます。 Standard C++ Foundation Web サイトの [Get Started](https://isocpp.org/get-started) ページが入門としてお勧めです。
 
-Visual Studio をまだインストールしていない場合、この機会にインストールしてください。 
+Visual Studio をまだインストールしていない場合、この機会にインストールしてください。
 
 **Visual Studio 2017 のインストール**
 
@@ -39,9 +39,9 @@ Visual Studio 2017 は [Visual Studio のダウンロード](http://www.visualst
 
 **Visual Studio 2015 のインストール**
 
- Visual Studio 2015 をインストールするには、[以前のバージョンの Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動してください。 セットアップ プログラムを実行し、**カスタム インストール**で C++ コンポーネントを選択します。 
+Visual Studio 2015 をインストールするには、[以前のバージョンの Visual Studio のダウンロード](https://www.visualstudio.com/vs/older-downloads/) ページに移動してください。 セットアップ プログラムを実行し、**カスタム インストール**で C++ コンポーネントを選択します。
 
- 一般に、Visual Studio 2015 のコンパイラを使用してコードをコンパイルする必要がある場合でも、Visual Studio 2017 を使用することを強くお勧めします。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](../porting/use-native-multi-targeting.md)」を参照してください。
+一般に、Visual Studio 2015 のコンパイラを使用してコードをコンパイルする必要がある場合でも、Visual Studio 2017 を使用することを強くお勧めします。 詳細については、「[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](../porting/use-native-multi-targeting.md)」を参照してください。
 
 Visual Studio がインストールできたら、次へお進みください。
 

@@ -1,26 +1,32 @@
 ---
 title: RuntimeClassBaseT 構造体 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::RuntimeClassBaseT
+- implements/Microsoft::WRL::Details::RuntimeClassBaseT::AsIID
+- implements/Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS
 dev_langs:
 - C++
+helpviewer_keywords:
+- Microsoft::WRL::Details::RuntimeClassBaseT structure
+- Microsoft::WRL::Details::RuntimeClassBaseT::AsIID method
+- Microsoft::WRL::Details::RuntimeClassBaseT::GetImplementedIIDS method
 ms.assetid: a62775fb-3359-4f45-9ff1-c07fa8da464b
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bcfce810dff7862c60fca853b216eeb05d09dd0f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c9e7f5b38d3434e8753646db4733218978e7e766
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414902"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169711"
 ---
 # <a name="runtimeclassbaset-structure"></a>RuntimeClassBaseT 構造体
 
@@ -46,6 +52,13 @@ friend struct Details::RuntimeClassBaseT;
 
 ## <a name="members"></a>メンバー
 
+### <a name="protected-methods"></a>プロテクト メソッド
+
+名前                                                         | 説明
+------------------------------------------------------------ | -----------------------------------------------------------------------------
+[Runtimeclassbaset::asiid](#asiid)                           | 指定したインターフェイス ID へのポインターを取得します。
+[Runtimeclassbaset::getimplementediids](#getimplementediids) | インターフェイスの指定された型で実装されている Id の配列を取得します。
+
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `RuntimeClassBaseT`
@@ -56,6 +69,72 @@ friend struct Details::RuntimeClassBaseT;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>関連項目
+## <a name="asiid"></a>Runtimeclassbaset::asiid
 
-[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+template<typename T>
+__forceinline static HRESULT AsIID(
+   _In_ T* implements,
+   REFIID riid,
+   _Deref_out_ void **ppvObject
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*T*<br/>
+パラメーターで指定されたインターフェイス ID を実装する型*riid*します。
+
+*実装*<br/>
+テンプレート パラメーターで指定された型の変数*T*します。
+
+*riid*<br/>
+取得するインターフェイス ID。
+
+*ppvObject*<br/>
+ポインター-に-、- へのポインター、インターフェイスがパラメーターで指定されたこの操作が成功した場合は、 *riid*します。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合は s_ok を返します。それ以外の場合、エラーを示す HRESULT。
+
+### <a name="remarks"></a>Remarks
+
+指定したインターフェイス ID へのポインターを取得します。
+
+## <a name="getimplementediids"></a>Runtimeclassbaset::getimplementediids
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+template<typename T>
+__forceinline static HRESULT GetImplementedIIDS(
+   _In_ T* implements,
+   _Out_ ULONG *iidCount,
+   _Deref_out_ _Deref_post_cap_(*iidCount) IID **iids
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*T*<br/>
+種類、*実装*パラメーター。
+
+*実装*<br/>
+パラメーターで指定された型へのポインター *T*します。
+
+*iidCount*<br/>
+取得するインターフェイス Id の最大数。
+
+*iid*<br/>
+この操作があるインターフェイスの型によって実装された Id の配列では正常に完了する場合*T*します。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合は s_ok を返します。それ以外の場合、エラーを示す HRESULT。
+
+### <a name="remarks"></a>Remarks
+
+インターフェイスの指定された型で実装されている Id の配列を取得します。

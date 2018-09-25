@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: MFC プロジェクトへのアニメーションの追加 |Microsoft Docs'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfcab237070b401d78c3fc52fc765930272832da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 326535395599a76f521100475cfc80b014ba6cd9
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439277"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169438"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>チュートリアル: MFC プロジェクトへのアニメーションの追加
 
@@ -50,27 +50,27 @@ ms.locfileid: "46439277"
 
 1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
-2. **新しいプロジェクト** ダイアログ ボックスで、下の左ペインで**インストールされたテンプレート**、展開**Visual C**選び**MFC**。 中央のペインで選択**MFC アプリケーション**します。 **名前**ボックスに「 *MFCAnimationWalkthrough*します。 **[OK]** をクリックします。
+1. **新しいプロジェクト** ダイアログ ボックスで、下の左ペインで**インストールされたテンプレート**、展開**Visual C**選び**MFC**。 中央のペインで選択**MFC アプリケーション**します。 **名前**ボックスに「 *MFCAnimationWalkthrough*します。 **[OK]** をクリックします。
 
-3. **MFC アプリケーション ウィザード** ダイアログ ボックスで、いることを確認**アプリケーションの種類**は**複数のドキュメント**、**プロジェクト スタイル**は、**Visual Studio**、および**ドキュメント/ビュー アーキテクチャ サポート**オプションを選択します。 **[完了]** をクリックします。
+1. **MFC アプリケーション ウィザード** ダイアログ ボックスで、いることを確認**アプリケーションの種類**は**複数のドキュメント**、**プロジェクト スタイル**は、**Visual Studio**、および**ドキュメント/ビュー アーキテクチャ サポート**オプションを選択します。 **[完了]** をクリックします。
 
 ### <a name="to-add-a-menu-and-then-add-commands-to-start-and-stop-an-animation"></a>メニューを追加し、開始およびアニメーションを停止するコマンドを追加するには
 
 1. **ビュー**メニューで、**その他の Windows**  をクリックし、**リソース ビュー**します。
 
-2. **リソース ビュー**に移動し、**メニュー**フォルダーを開きます。 ダブルクリックして、`IDR_MFCAnimationWalTYPE`リソース変更用に開きます。
+1. **リソース ビュー**に移動し、**メニュー**フォルダーを開きます。 ダブルクリックして、 **IDR_MFCAnimationWalkthroughTYPE**リソース変更用に開きます。
 
-3. メニュー バーで、**ここへ入力**ボックスに「 *& nimation*アニメーション メニューを作成します。
+1. メニュー バーで、**ここへ入力**ボックスに「 *& nimation*アニメーション メニューを作成します。
 
-4. **アニメーション**の**ここへ入力**ボックスに「*開始 (&) 転送*フォワード開始コマンドを作成します。
+1. **アニメーション**の**ここへ入力**ボックスに「*開始 (&) 転送*フォワード開始コマンドを作成します。
 
-5. **フォワード開始**の**ここへ入力**ボックスに「*の開始日と下位*します。
+1. **フォワード開始**の**ここへ入力**ボックスに「*の開始日と下位*します。
 
-6. **旧バージョンと開始**の**ここへ入力**ボックスに「 *S (& t)* を停止するコマンドを作成しますします。
+1. **旧バージョンと開始**の**ここへ入力**ボックスに「 *S (& t)* を停止するコマンドを作成しますします。
 
-7. MFCAnimationWalkthrough.rc を保存して閉じます。
+1. MFCAnimationWalkthrough.rc を保存して閉じます。
 
-8. **ソリューション エクスプ ローラー**変更用に開きます MainFrm.cpp をダブルクリックします。 `CMainFrame::OnCreate`メソッドへのいくつかの呼び出しがあるセクションを見つけます`lstBasicCommands.AddTail`します。 このセクションでは、直後後には、次のコードを追加します。
+1. **ソリューション エクスプ ローラー**変更用に開きます MainFrm.cpp をダブルクリックします。 `CMainFrame::OnCreate`メソッドへのいくつかの呼び出しがあるセクションを見つけます`lstBasicCommands.AddTail`します。 このセクションでは、直後後には、次のコードを追加します。
 
     ```cpp
     lstBasicCommands.AddTail(ID_ANIMATION_STARTFORWARD);
@@ -78,29 +78,29 @@ ms.locfileid: "46439277"
     lstBasicCommands.AddTail(ID_ANIMATION_STOP);
     ```
 
-9. ファイルを保存して閉じます。
+1. ファイルを保存して閉じます。
 
 ### <a name="to-create-handlers-for-the-start-and-stop-commands"></a>最初のハンドラーを作成し、コマンドを停止するには
 
 1. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
 
-2. **MFC クラス ウィザード****クラス名**、 `CMFCAnimationWalkthroughView`。
+1. **MFC クラス ウィザード****クラス名**、 **CMFCAnimationWalkthroughView**。
 
-3. **コマンド** タブで、**オブジェクト Id**ボックスで、 `ID_ANIMATION_STARTFORWARD`、し、**メッセージ**ボックスで、`COMMAND`します。 クリックして**ハンドラーを追加**します。
+1. **コマンド** タブで、**オブジェクト Id**ボックスで、 **ID_ANIMATION_STARTFORWARD**、し、**メッセージ**ボックスで、の選択**コマンド**します。 クリックして**ハンドラーを追加**します。
 
-4. **メンバー関数を追加**ダイアログ ボックスで、をクリックして**OK**。
+1. **メンバー関数を追加**ダイアログ ボックスで、をクリックして**OK**。
 
-5. **オブジェクト Id**ボックスで、 `ID_ANIMATION_STARTBACKWARD`、し、**メッセージ**ボックスで、`COMMAND`します。 クリックして**ハンドラーを追加**します。
+1. **オブジェクト Id**ボックスで、 **ID_ANIMATION_STARTBACKWARD**、し、**メッセージ**ボックスで、**コマンド**します。 クリックして**ハンドラーを追加**します。
 
-6. **メンバー関数を追加**ダイアログ ボックスで、をクリックして**OK**。
+1. **メンバー関数を追加**ダイアログ ボックスで、をクリックして**OK**。
 
-7. **オブジェクト Id**ボックスで、 `ID_ANIMATION_STOP`、し、**メッセージ**ボックスで、`COMMAND`します。 クリックして**ハンドラーの追加**順にクリックします**OK**します。
+1. **オブジェクト Id**ボックスで、 **ID_ANIMATION_STOP**、し、**メッセージ**ボックスで、**コマンド**します。 クリックして**ハンドラーの追加**順にクリックします**OK**します。
 
-8. **メンバー関数を追加**ダイアログ ボックスで、をクリックして**OK**。
+1. **メンバー関数を追加**ダイアログ ボックスで、をクリックして**OK**。
 
-9. **MFC クラス ウィザード**、 をクリックして**OK**します。
+1. **MFC クラス ウィザード**、 をクリックして**OK**します。
 
-10. MFCAnimationWalkthroughView.cpp、これは、エディターで開く、保存しますが、終了しません。
+1. MFCAnimationWalkthroughView.cpp、これは、エディターで開く、保存しますが、終了しません。
 
 ### <a name="to-add-an-animated-object-to-the-project"></a>アニメーション化するオブジェクトをプロジェクトに追加するには
 
@@ -123,7 +123,7 @@ ms.locfileid: "46439277"
     };
     ```
 
-2. 最後に、`CMFCAnimationWalkthroughView`クラスで、次のコードを追加します。
+1. 最後に、`CMFCAnimationWalkthroughView`クラスで、次のコードを追加します。
 
     ```cpp
     CCustomAnimationController m_animationController;
@@ -131,22 +131,22 @@ ms.locfileid: "46439277"
     CAnimationRect m_animationRect;
     ```
 
-3. 後に、`DECLARE_MESSAGE_MAP()`行に、次のコードを追加します。
+1. 後に、`DECLARE_MESSAGE_MAP()`行に、次のコードを追加します。
 
     ```cpp
     void Animate(BOOL bDirection);
     ```
 
-4. ファイルを保存して閉じます。
+1. ファイルを保存して閉じます。
 
-5. 後のファイルの上部にある、MFCAnimationWalkthroughView.cpp で、`#include`ステートメントがいずれかのクラスのメソッドでは、前に、次のコードを追加します。
+1. 後のファイルの上部にある、MFCAnimationWalkthroughView.cpp で、`#include`ステートメントがいずれかのクラスのメソッドでは、前に、次のコードを追加します。
 
     ```cpp
     static int nAnimationGroup = 0;
     static int nInfoAreaHeight = 40;
     ```
 
-6. コンス トラクターの末尾に`CMFCAnimationWalkthroughView`、次のコードを追加します。
+1. コンス トラクターの末尾に`CMFCAnimationWalkthroughView`、次のコードを追加します。
 
     ```cpp
     m_animationController.EnableAnimationTimerEventHandler();
@@ -159,7 +159,7 @@ ms.locfileid: "46439277"
     m_animationController.AddAnimationObject(&m_animationRect);
     ```
 
-7. 検索、`CAnimationWalthroughView::PreCreateWindow`メソッドと、次のコードに置き換えます。
+1. 検索、`CAnimationWalthroughView::PreCreateWindow`メソッドと、次のコードに置き換えます。
 
     ```cpp
     BOOL CMFCAnimationWalkthroughView::PreCreateWindow(CREATESTRUCT& cs)
@@ -172,7 +172,7 @@ ms.locfileid: "46439277"
     }
     ```
 
-8. 検索、`CAnimationWalkthroughView::OnDraw`メソッドと、次のコードに置き換えます。
+1. 検索、`CAnimationWalkthroughView::OnDraw`メソッドと、次のコードに置き換えます。
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnDraw(CDC* pDC)
@@ -209,7 +209,7 @@ ms.locfileid: "46439277"
     }
     ```
 
-9. ファイルの末尾には、次のコードを追加します。
+1. ファイルの末尾には、次のコードを追加します。
 
     ```cpp
     void CMFCAnimationWalkthroughView::Animate(BOOL bDirection)
@@ -219,9 +219,9 @@ ms.locfileid: "46439277"
         static BYTE nStartColor = 50;
         static BYTE nEndColor = 255;
 
-        BYTE nRedColorFinal = bDirection  nStartColor : nEndColor;
-        BYTE nGreenColorFinal = bDirection  nStartColor : nEndColor;
-        BYTE nBlueColorFinal = bDirection  nStartColor : nEndColor;
+        BYTE nRedColorFinal = bDirection ? nStartColor : nEndColor;
+        BYTE nGreenColorFinal = bDirection ? nStartColor : nEndColor;
+        BYTE nBlueColorFinal = bDirection ? nStartColor : nEndColor;
 
         CLinearTransition* pRedTransition =
             new CLinearTransition(duration, (DOUBLE)nRedColorFinal);
@@ -278,13 +278,13 @@ ms.locfileid: "46439277"
     }
     ```
 
-10. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
+1. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
 
-11. **MFC クラス ウィザード****クラス名**、 `CMFCAnimationWalkthroughView`。
+1. **MFC クラス ウィザード****クラス名**、 **CMFCAnimationWalkthroughView**。
 
-12. **メッセージ** タブで、**メッセージ**ボックスで、 `WM_ERASEBKGND`、 をクリックして**ハンドラーの追加**、順にクリックします**OK**。
+1. **メッセージ** タブで、**メッセージ**ボックスで、 **WM_ERASEBKGND**、 をクリックして**ハンドラーの追加**、 をクリックし、 **ok**.
 
-13. MFCAnimationWalkthroughView.cpp での実装を置き換える`OnEraseBkgnd`を次のコードが再描画されるときにアニメーション化されたオブジェクトのちらつきを軽減します。
+1. MFCAnimationWalkthroughView.cpp での実装を置き換える`OnEraseBkgnd`を次のコードが再描画されるときにアニメーション化されたオブジェクトのちらつきを軽減します。
 
     ```cpp
     BOOL CMFCAnimationWalkthroughView::OnEraseBkgnd(CDC* /*pDC*/)
@@ -293,7 +293,7 @@ ms.locfileid: "46439277"
     }
     ```
 
-14. 実装を置き換える`CMFCAnimationWalkthroughView::OnAnimationStartforward`、 `CMFCAnimationWalkthroughView::OnAnimationStartbackward`、および`CMFCAnimationWalkthroughView::OnAnimationStop`を次のコード。
+1. 実装を置き換える`CMFCAnimationWalkthroughView::OnAnimationStartforward`、 `CMFCAnimationWalkthroughView::OnAnimationStartbackward`、および`CMFCAnimationWalkthroughView::OnAnimationStop`を次のコード。
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnAnimationStartforward()
@@ -317,7 +317,7 @@ ms.locfileid: "46439277"
     }
     ```
 
-15. ファイルを保存して閉じます。
+1. ファイルを保存して閉じます。
 
 ### <a name="to-center-the-animated-object-in-the-window"></a>ウィンドウのアニメーション化されたオブジェクトを中央に
 
@@ -327,15 +327,15 @@ ms.locfileid: "46439277"
     BOOL m_bCurrentDirection;
     ```
 
-2. ファイルを保存して閉じます。
+1. ファイルを保存して閉じます。
 
-3. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
+1. **プロジェクト** メニューのをクリックして**クラス ウィザード**します。
 
-4. **MFC クラス ウィザード****クラス名**、 `CMFCAnimationWalkthroughView`。
+1. **MFC クラス ウィザード****クラス名**、 **CMFCAnimationWalkthroughView**。
 
-5. **メッセージ** タブで、**メッセージ**ボックスで、 `WM_SIZE`、 をクリックして**ハンドラーの追加**、順にクリックします**OK**。
+1. **メッセージ** タブで、**メッセージ**ボックスで、 **WM_SIZE**、 をクリックして**ハンドラーの追加**、 をクリックし、 **ok**.
 
-6. MFCAnimationWalkthroughView.cpp でのコードに書き換えます`CMFCAnimationWalkthroughView::OnSize`を次のコード。
+1. MFCAnimationWalkthroughView.cpp でのコードに書き換えます`CMFCAnimationWalkthroughView::OnSize`を次のコード。
 
     ```cpp
     void CMFCAnimationWalkthroughView::OnSize(UINT nType, int cx, int cy)
@@ -358,19 +358,19 @@ ms.locfileid: "46439277"
     }
     ```
 
-7. コンス トラクターの先頭に`CMFCAnimationWalkthroughView`、次のコードを追加します。
+1. コンス トラクターの先頭に`CMFCAnimationWalkthroughView`、次のコードを追加します。
 
     ```cpp
     m_bCurrentDirection = TRUE;
     ```
 
-8. 先頭に、`CMFCAnimationWalkthroughView::Animate`メソッドでは、次のコードを追加します。
+1. 先頭に、`CMFCAnimationWalkthroughView::Animate`メソッドでは、次のコードを追加します。
 
     ```cpp
     m_bCurrentDirection = bDirection;
     ```
 
-9. ファイルを保存して閉じます。
+1. ファイルを保存して閉じます。
 
 ### <a name="to-verify-the-results"></a>結果を確認するには
 

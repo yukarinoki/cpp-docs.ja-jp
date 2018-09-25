@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b98825719e7b3c0d8eb760a2ec50644b5eddd54e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 75037ea542a5bd2160d9a89138b12f82867002a5
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328410"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46388447"
 ---
 # <a name="convert-to-raw-string-literal"></a>生文字列に変換
 **機能:** あらゆる文字列を C++ 生文字に変換できます。
@@ -37,6 +37,6 @@ ms.locfileid: "33328410"
      * コードを右クリックし、**[クイック アクションとリファクタリング]** メニューを選択し、コンテキスト メニューから **[生文字列に変換]** を選択します。
      * 左の余白に表示されている![電球](images/bulb.png)アイコンをクリックし、コンテキスト メニューから **[生文字列に変換]** を選択します。
 
-1. 直後に文字列が生文字列に変換されます。  
+1. 直後に文字列が生文字列に変換されます。
 
    ![生文字列の結果](images/stringliteral_result.png)

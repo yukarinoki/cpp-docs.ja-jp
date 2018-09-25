@@ -18,55 +18,59 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c6be247c6c756557e7173c4b295197d9e4267cb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e596d38b52e36c20c28eaab66e24805696865b17
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110966"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421662"
 ---
 # <a name="ltexamplegt-visual-c"></a>&lt;example&gt; (Visual C++)
-\<example> タグでは、メソッドまたはその他のライブラリ メンバーの使用例を指定できます。 この場合、通常は [\<code>](../ide/code-visual-cpp.md) タグも使用する必要があります。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-<example>description</example>  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+
+\<example> タグでは、メソッドまたはその他のライブラリ メンバーの使用例を指定できます。 この場合、通常は [\<code>](../ide/code-visual-cpp.md) タグも使用する必要があります。
+
+## <a name="syntax"></a>構文
+
+```
+<example>description</example>
+```
+
+#### <a name="parameters"></a>パラメーター
+
 *description*<br/>
-コード例の説明です。  
-  
-## <a name="remarks"></a>コメント  
- コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。  
-  
-## <a name="example"></a>例  
-  
-```  
-// xml_example_tag.cpp  
-// compile with: /clr /doc /LD  
-// post-build command: xdcmake xml_example_tag.dll  
-  
-/// Text for class MyClass.  
-public ref class MyClass {  
-public:  
-   /// <summary>  
-   /// GetZero method  
-   /// </summary>  
-   /// <example> This sample shows how to call the GetZero method.  
-   /// <code>  
-   /// int main()   
-   /// {  
-   ///    return GetZero();  
-   /// }  
-   /// </code>  
-   /// </example>  
-   static int GetZero() {  
-      return 0;  
-   }  
-};  
-```  
-  
-## <a name="see-also"></a>参照  
- [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)
+コード例の説明です。
+
+## <a name="remarks"></a>コメント
+
+コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
+
+## <a name="example"></a>例
+
+```
+// xml_example_tag.cpp
+// compile with: /clr /doc /LD
+// post-build command: xdcmake xml_example_tag.dll
+
+/// Text for class MyClass.
+public ref class MyClass {
+public:
+   /// <summary>
+   /// GetZero method
+   /// </summary>
+   /// <example> This sample shows how to call the GetZero method.
+   /// <code>
+   /// int main()
+   /// {
+   ///    return GetZero();
+   /// }
+   /// </code>
+   /// </example>
+   static int GetZero() {
+      return 0;
+   }
+};
+```
+
+## <a name="see-also"></a>参照
+
+[XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

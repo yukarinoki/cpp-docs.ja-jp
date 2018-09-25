@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c20b9b6e8c1e96736485f302203156f627ef6794
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: bc789cb37b51f89022a83d1ba34bb67ae32a206e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578388"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46391593"
 ---
 # <a name="porting-data-applications"></a>データ アプリケーションの移植
 長年にわたって、Visual C ++ ではデータベースを操作するいくつかの方法を提供してきました。 2011 年に Microsoft は、ネイティブ コードから SQL Server 製品にアクセスするのに望ましいテクノロジである ODBC に合わせて調整中であると発表しました。 ODBC は業界標準であり、これを使用することで、複数のプラットフォームおよびデータ ソースでのコードの最大の移植性が得られます。 ほとんどの SQL データベース製品および多くの NoSQL 製品で ODBC がサポートされます。 ODBC は、低レベルの ODBC API を呼び出して直接使用できます。あるいは、MFC ODBC ラッパー クラス、またはサードパーティの C++ ラッパー ライブラリを使用することもできます。 
@@ -42,6 +42,6 @@ Microsoft Windows でのデータ アクセス テクノロジの歴史の詳細
 
 ## <a name="see-also"></a>参照  
  
-[Visual C++ でのデータ アクセス](../data/data-access-in-cpp.md)  
-[Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)  
+[Visual C++ でのデータ アクセス](../data/data-access-in-cpp.md)<br/>
+[Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
 [データ アクセス テクノロジのロードマップ](https://msdn.microsoft.com/library/ms810810.aspx)  

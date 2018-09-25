@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: afce516f2718a76658846ed4f992aeabff75330b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 234ae9a67bcbc60ea156fbacb5169d0bd1573a91
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328027"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46442761"
 ---
 # <a name="implement-pure-virtuals"></a>純粋仮想の実装
-**機能:** クラスですべての純粋仮想を実装するために必要なコードをすぐに生成できます。 
+**機能:** クラスですべての純粋仮想を実装するために必要なコードをすぐに生成できます。
 
-**条件:** 純粋仮想関数のクラスからの継承が望まれるとき。  
+**条件:** 純粋仮想関数のクラスからの継承が望まれるとき。
 
 **理由:** すべての純粋仮想関数は 1 つずつ手動で実装できますが、この機能ではすべてのメソッド シグネチャが自動的に生成されます。
 
