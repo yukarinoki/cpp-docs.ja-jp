@@ -18,28 +18,31 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e88f7ccf6f510ad5bcc7178af87714ca22a97252
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 58d2b1eaee54ac33e687d457830372f2bef06230
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688612"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45718511"
 ---
 # <a name="managed-resources-property-page"></a>[マネージド リソース] プロパティ ページ
 リソース コンパイラの設定を有効にします。  
   
  **[マネージド リソース]** プロパティ ページには、以下のプロパティが含まれます。  
   
- **リソース論理名**  
- 生成された中間 .resources ファイルの*論理名* を指定します。 論理名は、リソースの読み込みに使用される名前です。 論理名が指定されていない場合は、リソース (.resx) ファイル名が論理名として使用されます。  
+- **リソース論理名**
+
+   生成された中間 .resources ファイルの*論理名* を指定します。 論理名は、リソースの読み込みに使用される名前です。 論理名が指定されていない場合は、リソース (.resx) ファイル名が論理名として使用されます。  
   
- **出力ファイル名**  
- リソース (.resx) ファイルによって決定する最終出力ファイルの名前を指定します。  
+- **出力ファイル名**
+
+   リソース (.resx) ファイルによって決定する最終出力ファイルの名前を指定します。  
   
- **既定のローカライズされたリソース**  
- 特定の .resx ファイルが既定のリソースまたはサテライト .dll に変更を与えるかどうかを指定します。  
+- **既定のローカライズされたリソース**
+
+   特定の .resx ファイルが既定のリソースまたはサテライト .dll に変更を与えるかどうかを指定します。  
   
- **[マネージド リソース]** プロパティ ページにアクセスする方法については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
+**[マネージド リソース]** プロパティ ページにアクセスする方法については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [RC の使用 (RC コマンドライン)](/windows/desktop/menurc/using-rc-the-rc-command-line-)   

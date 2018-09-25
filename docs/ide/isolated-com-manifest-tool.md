@@ -17,34 +17,38 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59b19a35a70b3bdadd935f06ff7d9ae1ce7d7d95
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 5439e04fdb2563748bc21fb494cc09fd7bd5c929
+ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216381"
+ms.lasthandoff: 09/17/2018
+ms.locfileid: "45720097"
 ---
 # <a name="isolated-com-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>[分離された COM] ([&lt;プロジェクト名&gt; プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])
 このダイアログ ボックスを使用して、[Mt.exe](https://msdn.microsoft.com/library/aa375649) の**分離された COM** オプションを指定します。  
   
- このプロパティ ページ ダイアログ ボックスにアクセスするには、自分のプロジェクトまたはプロパティ シートのプロパティ ページを開きます。 **[共通プロパティ]** の下で **[マニフェスト ツール]** ノードを展開して、**[分離された COM]** を選択します。  
+このプロパティ ページ ダイアログ ボックスにアクセスするには、自分のプロジェクトまたはプロパティ シートのプロパティ ページを開きます。 **[共通プロパティ]** の下で **[マニフェスト ツール]** ノードを展開して、**[分離された COM]** を選択します。  
   
 ## <a name="task-list"></a>タスク一覧  
   
 -   [方法 : COM コンポーネントを使用する分離アプリケーションをビルドする](../build/how-to-build-isolated-applications-to-consume-com-components.md)  
   
 ## <a name="uielement-list"></a>UIElement の一覧  
- **タイプ ライブラリ ファイル**  
- /tlb オプションを使用し、マニフェスト ツールによってマニフェスト ファイルの生成に利用されるタイプ ライブラリ ファイル (.tlb ファイル) の名前を指定します。  
+- **タイプ ライブラリ ファイル**
+
+   /tlb オプションを使用し、マニフェスト ツールによってマニフェスト ファイルの生成に利用されるタイプ ライブラリ ファイル (.tlb ファイル) の名前を指定します。  
   
- **レジスタ スクリプト ファイル**  
- /rgs オプションを使用し、マニフェスト ツールによってマニフェスト ファイルの生成に利用されるレジスタ スクリプト ファイル (.rgs ファイル) の名前を指定します。  
+- **レジスタ スクリプト ファイル**
+
+   /rgs オプションを使用し、マニフェスト ツールによってマニフェスト ファイルの生成に利用されるレジスタ スクリプト ファイル (.rgs ファイル) の名前を指定します。  
   
- **コンポーネント ファイル名**  
- /dll オプションを使用し、マニフェスト ツールによって生成されるリソースの名前を指定します。 **タイプ ライブラリ ファイル**か**レジスタ スクリプト ファイル**の値が指定されるとき、このプロパティの値を入力する必要があります。  
+- **コンポーネント ファイル名**
+
+   /dll オプションを使用し、マニフェスト ツールによって生成されるリソースの名前を指定します。 **タイプ ライブラリ ファイル**か**レジスタ スクリプト ファイル**の値が指定されるとき、このプロパティの値を入力する必要があります。  
   
- **置換ファイル**  
- /replacements オプションを使用し、.rgs ファイルの置換可能文字列の値が含まれるファイルの完全パスを指定します。  
+- **置換ファイル**
+
+   /replacements オプションを使用し、.rgs ファイルの置換可能文字列の値が含まれるファイルの完全パスを指定します。  
   
 ## <a name="see-also"></a>参照  
  [分離アプリケーション](/windows/desktop/SbsCs/isolated-applications)   
