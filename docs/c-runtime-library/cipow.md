@@ -29,30 +29,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5c3500c0bd17b2638026f45c23b047e2bee411cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c09801841e25b5de2f98e64c01bf48b1eea9992b
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386999"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052089"
 ---
 # <a name="cipow"></a>_CIpow
-スタックのトップ値に基づいて、*x* の *y* 乗を計算します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-void __cdecl _CIpow();  
-```  
-  
-## <a name="remarks"></a>コメント  
- このバージョンの `pow` 関数には、コンパイラで認識される特殊な呼び出し規則があります。 コピーの生成を防ぎ、レジスタ割り当てが容易になるため、実行時間が短縮されます。  
-  
- 結果の値は、スタックのトップにプッシュされます。  
-  
-## <a name="requirements"></a>必要条件  
- **プラットフォーム:** x86  
-  
-## <a name="see-also"></a>参照  
- [関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [pow、powf、powl](../c-runtime-library/reference/pow-powf-powl.md)
+
+スタックのトップ値に基づいて、*x* の *y* 乗を計算します。
+
+## <a name="syntax"></a>構文
+
+```
+void __cdecl _CIpow();
+```
+
+## <a name="remarks"></a>コメント
+
+このバージョンの `pow` 関数には、コンパイラで認識される特殊な呼び出し規則があります。 コピーの生成を防ぎ、レジスタ割り当てが容易になるため、実行時間が短縮されます。
+
+結果の値は、スタックのトップにプッシュされます。
+
+## <a name="requirements"></a>必要条件
+ **プラットフォーム:** x86
+
+## <a name="see-also"></a>参照
+
+[関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[pow、powf、powl](../c-runtime-library/reference/pow-powf-powl.md)

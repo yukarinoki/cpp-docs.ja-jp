@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fba53f16fad9321701e641020ed01349b13a5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ab13141c573ad302528a09b74cb3a5e2aaa0382
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418104"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46035228"
 ---
 # <a name="stream-io"></a>ストリーム入出力
 
@@ -89,23 +89,23 @@ ms.locfileid: "32418104"
 |[_vsnprintf、_vsnwprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md)、[vsnprintf_s、_vsnprintf_s、_vsnprintf_s_l、_vsnwprintf_s、_vsnwprintf_s_l](../c-runtime-library/reference/vsnprintf-s-vsnprintf-s-vsnprintf-s-l-vsnwprintf-s-vsnwprintf-s-l.md)|指定された長さの書式付きデータをバッファーに書き込む|
 |[vsprintf、vswprintf](../c-runtime-library/reference/vsprintf-vsprintf-l-vswprintf-vswprintf-l-vswprintf-l.md)、[vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l](../c-runtime-library/reference/vsprintf-s-vsprintf-s-l-vswprintf-s-vswprintf-s-l.md)|バッファーに書式付きデータを書き込む|
 
- プログラムの実行を開始すると、スタートアップ コードは自動的に複数のストリームを開きます。すなわち、標準入力 (**stdin** が指す)、標準出力 (**stdout** が指す)、および標準エラー (**stderr** が指す) です。 これらのストリームは既定でコンソール (キーボードと画面) に送られます。 ディスク ファイルまたはデバイスに **stdin**、**stdout**、または **stderr** をリダイレクトするには **freopen** を使用します。
+プログラムの実行を開始すると、スタートアップ コードは自動的に複数のストリームを開きます。すなわち、標準入力 (**stdin** が指す)、標準出力 (**stdout** が指す)、および標準エラー (**stderr** が指す) です。 これらのストリームは既定でコンソール (キーボードと画面) に送られます。 ディスク ファイルまたはデバイスに **stdin**、**stdout**、または **stderr** をリダイレクトするには **freopen** を使用します。
 
- ストリーム ルーチンを使用して開くファイルは、既定でバッファリングされます。 いっぱいになった場合、またはキャラクター デバイスに書き込みを行う場合、各ライブラリ呼び出しの後に **stdout** および **stderr** の関数はフラッシュされます。 プログラムが異常に終了した場合、出力バッファーがフラッシュされず、データが失われる可能性があります。 **fflush** または **_flushall** を使用して、特定のファイルに関連付けられているバッファー、または開いているすべてのバッファーが必ずオペレーティング システムにフラッシュされるようにします。データをディスクに書き込む前に、オペレーティング システムはデータをキャッシュすることができます。 ディスクへのコミットの機能により、フラッシュされるバッファーの内容がシステム障害時に失われないようにすることができます。
+ストリーム ルーチンを使用して開くファイルは、既定でバッファリングされます。 いっぱいになった場合、またはキャラクター デバイスに書き込みを行う場合、各ライブラリ呼び出しの後に **stdout** および **stderr** の関数はフラッシュされます。 プログラムが異常に終了した場合、出力バッファーがフラッシュされず、データが失われる可能性があります。 **fflush** または **_flushall** を使用して、特定のファイルに関連付けられているバッファー、または開いているすべてのバッファーが必ずオペレーティング システムにフラッシュされるようにします。データをディスクに書き込む前に、オペレーティング システムはデータをキャッシュすることができます。 ディスクへのコミットの機能により、フラッシュされるバッファーの内容がシステム障害時に失われないようにすることができます。
 
- バッファーの内容をディスクにコミットする 2 つの方法があります。
+バッファーの内容をディスクにコミットする 2 つの方法があります。
 
--   ファイル COMMODE.OBJ とリンクして、グローバル コミット フラグを設定します。 グローバル フラグの既定の設定は、**n** ("コミットなし") です。
+- ファイル COMMODE.OBJ とリンクして、グローバル コミット フラグを設定します。 グローバル フラグの既定の設定は、**n** ("コミットなし") です。
 
--   モード フラグを **fopen** または **_fdopen** で **c** に設定します。
+- モード フラグを **fopen** または **_fdopen** で **c** に設定します。
 
- **c** または **n** フラグで開かれるファイルは、グローバル コミット/コミットなしのフラグの状態にかかわらず、フラグに従って動作します。
+**c** または **n** フラグで開かれるファイルは、グローバル コミット/コミットなしのフラグの状態にかかわらず、フラグに従って動作します。
 
- プログラムが明示的にストリームを閉じない場合、ストリームはプログラムが終了するときに自動的に閉じます。 ただし、一度に開くことのできるストリームの数は限られているため、プログラムがストリームの作業を終了したら、そのストリームを閉じる必要があります。 この制限については、 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) を参照してください。
+プログラムが明示的にストリームを閉じない場合、ストリームはプログラムが終了するときに自動的に閉じます。 ただし、一度に開くことのできるストリームの数は限られているため、プログラムがストリームの作業を終了したら、そのストリームを閉じる必要があります。 この制限については、 [_setmaxstdio](../c-runtime-library/reference/setmaxstdio.md) を参照してください。
 
- 出力の直後に入力を行うには、**fflush** またはファイル ポジショニング関数 (**fseek****fsetpos**、または **rewind**) の呼び出しを間に挟まなければなりません。 入力操作がファイルの末尾に達した場合、ファイル ポジショニング関数の呼び出しを間に挟まなくても、入力の直後に出力を行うことができます。
+出力の直後に入力を行うには、**fflush** またはファイル ポジショニング関数 (**fseek****fsetpos**、または **rewind**) の呼び出しを間に挟まなければなりません。 入力操作がファイルの末尾に達した場合、ファイル ポジショニング関数の呼び出しを間に挟まなくても、入力の直後に出力を行うことができます。
 
 ## <a name="see-also"></a>参照
 
 [入出力](../c-runtime-library/input-and-output.md)<br/>
- [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

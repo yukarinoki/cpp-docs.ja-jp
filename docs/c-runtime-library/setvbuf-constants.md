@@ -23,33 +23,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0d4292ae29602b5890a167a3e2c29e460d65373f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a367522c2f22007abcf24cdf74ada467d94b104
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407965"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46032823"
 ---
 # <a name="setvbuf-constants"></a>setvbuf 定数
-## <a name="syntax"></a>構文  
-  
-```  
-  
-#include <stdio.h>  
-  
-```  
-  
-## <a name="remarks"></a>コメント  
- これらの定数は、`setvbuf` のバッファーの種類を表します。  
-  
- 使用可能な値は、次のマニフェスト定数によって与えられます。  
-  
-|定数|説明|  
-|--------------|-------------|  
-|`_IOFBF`|フル バッファリング: `setvbuf` の呼び出しで指定したバッファーが使用され、そのサイズは `setvbuf` の呼び出しで指定したとおりになります。 バッファー ポインターが **NULL** の場合は、指定したサイズで自動的に割り当てられたバッファーが使用されます。|  
-|`_IOLBF`|`_IOFBF` と同じ。|  
-|`_IONBF`|`setvbuf` 呼び出しの引数に関係なく、バッファーは使用されません。|  
-  
-## <a name="see-also"></a>参照  
- [setbuf](../c-runtime-library/reference/setbuf.md)   
- [グローバル定数](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>構文
+
+```
+
+#include <stdio.h>
+
+```
+
+## <a name="remarks"></a>コメント
+
+これらの定数は、`setvbuf` のバッファーの種類を表します。
+
+使用可能な値は、次のマニフェスト定数によって与えられます。
+
+|定数|説明|
+|--------------|-------------|
+|`_IOFBF`|フル バッファリング: `setvbuf` の呼び出しで指定したバッファーが使用され、そのサイズは `setvbuf` の呼び出しで指定したとおりになります。 バッファー ポインターが **NULL** の場合は、指定したサイズで自動的に割り当てられたバッファーが使用されます。|
+|`_IOLBF`|`_IOFBF` と同じ。|
+|`_IONBF`|`setvbuf` 呼び出しの引数に関係なく、バッファーは使用されません。|
+
+## <a name="see-also"></a>参照
+
+[setbuf](../c-runtime-library/reference/setbuf.md)<br/>
+[グローバル定数](../c-runtime-library/global-constants.md)
