@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c0ab24a55cddc13b743a28a022475b0c0b84e77
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6703b774c60799234d49e359cf6faca69b85b955
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389729"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46052128"
 ---
 # <a name="directory-control"></a>ディレクトリ制御
 
@@ -46,5 +46,5 @@ ms.locfileid: "32389729"
 ## <a name="see-also"></a>参照
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
- [ファイル処理](../c-runtime-library/file-handling.md)<br/>
- [システム コール](../c-runtime-library/system-calls.md)<br/>
+[ファイル処理](../c-runtime-library/file-handling.md)<br/>
+[システム コール](../c-runtime-library/system-calls.md)<br/>

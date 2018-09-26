@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a54e0ba354e76996d03503e116008aa200b0905b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a471d6743da0cf803de72a9f257dfa67bc0dcbd1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43199358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46036359"
 ---
 # <a name="file-handling"></a>ファイル処理
 
@@ -86,7 +86,7 @@ C ランタイム ライブラリには、同時に開くことのできるフ�
 |[_get_osfhandle](../c-runtime-library/reference/get-osfhandle.md)|C ランタイムの既存のファイル記述子に関連付けられたオペレーティング システムのファイル ハンドルを返します。|
 |[_open_osfhandle](../c-runtime-library/reference/open-osfhandle.md)|C ランタイム ファイル記述子を既存のオペレーティング システムのファイル ハンドルに関連付けます。|
 
- ファイルおよびパイプは、次の Win32 関数でも開くことができます。
+ファイルおよびパイプは、次の Win32 関数でも開くことができます。
 
 - [CreateFile](/windows/desktop/api/fileapi/nf-fileapi-createfilea)
 

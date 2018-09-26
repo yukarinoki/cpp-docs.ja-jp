@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 44211105429e33c136999a7877ac6ee42af29f17
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5058e0b3bab1fb5fb5e8d52b55e3fa7c37fd8a4e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33327841"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46430060"
 ---
 # <a name="move-definition-location"></a>定義の場所の移動
 **機能:** それに対応するヘッダー ファイルに関数定義をすぐに移動できます。
 
-**条件:** ヘッダー ファイルへの移動が望まれる関数があるとき。  
+**条件:** ヘッダー ファイルへの移動が望まれる関数があるとき。
 
 **理由:** 関数は手動で移動できますが、この機能では関数が自動的に移動され、必要に応じてヘッダー ファイルが作成されます。
 

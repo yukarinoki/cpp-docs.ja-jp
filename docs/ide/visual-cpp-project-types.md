@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 80ac3479338dcb7f6be9e7e5f3f150cc8e15a9a9
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 45b62d5ce8f49b023721cf7323dc42e1c65c2109
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339983"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46396689"
 ---
 # <a name="visual-c-project-types"></a>Visual C++ プロジェクトの種類
 
 プロジェクト テンプレートを使用して、基本的なプログラムの構造、メニュー、ツール バー、アイコン、参照、および作成するプロジェクトの種類に適した `#include` ステートメントを作成できます。 Visual Studio には、数種類の Visual C++ プロジェクト テンプレートが含まれ、これらのテンプレートの多くにはウィザードが用意されているため、プロジェクトを作成しながらカスタマイズを行うことができます。 プロジェクトを作成したらすぐにプロジェクトをビルドし、アプリケーションを実行できます。アプリケーションを開発しながら、断続的にビルドすることをお勧めします。
 
-プロジェクトの作成にテンプレートを使用する必要はありませんが、多くの場合、テンプレートを使用した方が効率的です。用意されたプロジェクト ファイルおよび構造を修正する方が、初めから作成するよりも簡単なためです。  
-  
+プロジェクトの作成にテンプレートを使用する必要はありませんが、多くの場合、テンプレートを使用した方が効率的です。用意されたプロジェクト ファイルおよび構造を修正する方が、初めから作成するよりも簡単なためです。
+
 > [!NOTE]
 > C++ プロジェクト テンプレートを使用して C 言語プロジェクトを作成できます。 生成されたプロジェクトで、.cpp ファイル名拡張子を持つファイルを検索して .c に変更します。 次に、プロジェクト (ソリューションではない) の **[プロジェクトのプロパティ]** ページで、 **[構成プロパティ]**、 **[C/C++]** の順に展開し、 **[詳細]** を選択します。 **[コンパイル言語の選択]** 設定を **[C コードとしてコンパイル (/TC)]** に変更します。
 
@@ -42,8 +42,8 @@ Visual Studio に含まれるプロジェクト テンプレートは、製品�
 
 ### <a name="windows-desktop"></a>Windows デスクトップ
 
-|プロジェクト テンプレート|説明|  
-|----------------------|-----------------------------| 
+|プロジェクト テンプレート|説明|
+|----------------------|-----------------------------|
 |[Windows コンソール アプリケーション](../windows/creating-a-console-application.md)|Windows コンソール アプリケーションを作成するためのプロジェクトです。|
 |[Windows デスクトップ アプリケーション](../windows/walkthrough-creating-windows-desktop-applications-cpp.md)|Windows デスクトップ (Win32) アプリケーションを作成するためのプロジェクトです。|
 |[ダイナミック リンク ライブラリ](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)|ダイナミック リンク ライブラリ (DLL) を作成するためのプロジェクトです。|
@@ -104,4 +104,4 @@ C++ でのユニバーサル Windows アプリの概要については、「[ユ
 
 ## <a name="see-also"></a>参照
 
-[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../ide/creating-desktop-projects-by-using-application-wizards.md)   
+[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../ide/creating-desktop-projects-by-using-application-wizards.md)

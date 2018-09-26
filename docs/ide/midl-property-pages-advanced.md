@@ -26,49 +26,51 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed9d6ba12e65eac325008cb2a448abdab087ee46
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 11c7d4b437e77e5acfe363fd3b4125477eceb0f2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43197961"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394968"
 ---
 # <a name="midl-property-pages-advanced"></a>[詳細] ([MIDL] プロパティ ページ)
-**MIDL** フォルダーの **[詳細]** プロパティ ページでは、次の MIDL コンパイラ オプションを指定します。  
-  
--   エラー チェックを有効にする ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   割り当てのチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   範囲のチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   列挙型の範囲のチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   参照ポインターのチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   スタブ データのチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))  
-  
--   パラメーターの確認 ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363))\*  
-  
--   構造体メンバーの配置 ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))  
-  
--   出力先の変更 ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))  
-  
--   C プリプロセス オプション ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))  
-  
--   指定したプリプロセッサ定義の無効化 ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))  
-  
- \* /robust は、Windows 2000 以降のコンピューター向けとしてビルドするときにのみ使用されます。 ATL プロジェクトをビルドするとき、/robust を使用する場合、dlldatax.c ファイルでこの行を変更します。  
-  
-```  
-#define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM  
-to   
-#define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM  
-```  
-  
- **MIDL** フォルダーの **[詳細]** プロパティ ページにアクセスする方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
-  
- C++ プロジェクト用の MIDL オプションにプログラムでアクセスする方法の詳細については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>」を参照してください。  
-  
-## <a name="see-also"></a>参照  
- [[MIDL] プロパティ ページ](../ide/midl-property-pages.md)
+
+**MIDL** フォルダーの **[詳細]** プロパティ ページでは、次の MIDL コンパイラ オプションを指定します。
+
+- エラー チェックを有効にする ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- 割り当てのチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- 範囲のチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- 列挙型の範囲のチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- 参照ポインターのチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- スタブ データのチェック ([/error](https://msdn.microsoft.com/library/windows/desktop/aa367324))
+
+- パラメーターの確認 ([/robust](https://msdn.microsoft.com/library/windows/desktop/aa367363))\*
+
+- 構造体メンバーの配置 ([/Zp](https://msdn.microsoft.com/library/windows/desktop/aa367388))
+
+- 出力先の変更 ([/o](https://msdn.microsoft.com/library/windows/desktop/aa367351))
+
+- C プリプロセス オプション ([/cpp_opt](https://msdn.microsoft.com/library/windows/desktop/aa367318))
+
+- 指定したプリプロセッサ定義の無効化 ([/U](https://msdn.microsoft.com/library/windows/desktop/aa367373))
+
+\* /robust は、Windows 2000 以降のコンピューター向けとしてビルドするときにのみ使用されます。 ATL プロジェクトをビルドするとき、/robust を使用する場合、dlldatax.c ファイルでこの行を変更します。
+
+```
+#define _WIN32_WINNT 0x0400   //for Windows NT 4.0 or Windows 95 with DCOM
+to
+#define _WIN32_WINNT 0x0500   //for Windows NT 4.0 or Windows 95 with DCOM
+```
+
+**MIDL** フォルダーの **[詳細]** プロパティ ページにアクセスする方法については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。
+
+C++ プロジェクト用の MIDL オプションにプログラムでアクセスする方法の詳細については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>」を参照してください。
+
+## <a name="see-also"></a>参照
+
+[[MIDL] プロパティ ページ](../ide/midl-property-pages.md)

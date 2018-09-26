@@ -1,28 +1,36 @@
 ---
 title: ModuleBase クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::ModuleBase
+- implements/Microsoft::WRL::Details::ModuleBase::DecrementObjectCount
+- implements/Microsoft::WRL::Details::ModuleBase::IncrementObjectCount
+- implements/Microsoft::WRL::Details::ModuleBase::ModuleBase
+- implements/Microsoft::WRL::Details::ModuleBase::~ModuleBase
 dev_langs:
 - C++
 helpviewer_keywords:
 - ModuleBase class
+- Microsoft::WRL::Details::ModuleBase::DecrementObjectCount method
+- Microsoft::WRL::Details::ModuleBase::IncrementObjectCount method
+- Microsoft::WRL::Details::ModuleBase::ModuleBase, constructor
+- Microsoft::WRL::Details::ModuleBase::~ModuleBase, destructor
 ms.assetid: edce7591-6893-46f7-94a7-382827775548
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e6d60e5114d189ddede87899bb55fba25a296c57
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: a87b5d617663e87e8c69596e6b1eedca61996b80
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42601472"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169555"
 ---
 # <a name="modulebase-class"></a>ModuleBase クラス
 
@@ -42,18 +50,17 @@ class ModuleBase;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
-|----------|-----------------|
-|[ModuleBase::ModuleBase コンストラクター](../windows/modulebase-modulebase-constructor.md)|
-          `Module` クラスのインスタンスを初期化します。|
-|[ModuleBase::~ModuleBase デストラクター](../windows/modulebase-tilde-modulebase-destructor.md)|現在のインスタンスの初期化を解除、`Module`クラス。|
+名前                                         | 説明
+-------------------------------------------- | ---------------------------------------------------------
+[Modulebase::modulebase](#modulebase)        | `Module` クラスのインスタンスを初期化します。
+[ModuleBase:: ~ ModuleBase](#tilde-modulebase) | 現在のインスタンスの初期化を解除、`Module`クラス。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[ModuleBase::DecrementObjectCount メソッド](../windows/modulebase-decrementobjectcount-method.md)|実装された場合、デクリメント オブジェクトの数によって追跡モジュール。|
-|[ModuleBase::IncrementObjectCount メソッド](../windows/modulebase-incrementobjectcount-method.md)|実装された場合、モジュールによって追跡されるオブジェクトの数をインクリメントします。|
+名前                                                      | 説明
+--------------------------------------------------------- | -------------------------------------------------------------------------
+[Modulebase::decrementobjectcount](#decrementobjectcount) | 実装された場合、デクリメント オブジェクトの数によって追跡モジュール。
+[Modulebase::incrementobjectcount](#incrementobjectcount) | 実装された場合、モジュールによって追跡されるオブジェクトの数をインクリメントします。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -65,6 +72,58 @@ class ModuleBase;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>関連項目
+## <a name="tilde-modulebase"></a>ModuleBase:: ~ ModuleBase
 
-[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+virtual ~ModuleBase();
+```
+
+### <a name="remarks"></a>Remarks
+
+現在のインスタンスの初期化を解除、`ModuleBase`クラス。
+
+## <a name="decrementobjectcount"></a>Modulebase::decrementobjectcount
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+virtual long DecrementObjectCount() = 0;
+```
+
+### <a name="return-value"></a>戻り値
+
+デクリメント操作の前にカウントします。
+
+### <a name="remarks"></a>Remarks
+
+実装された場合、デクリメント オブジェクトの数によって追跡モジュール。
+
+## <a name="incrementobjectcount"></a>Modulebase::incrementobjectcount
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+virtual long IncrementObjectCount() = 0;
+```
+
+### <a name="return-value"></a>戻り値
+
+インクリメント操作の前にカウントします。
+
+### <a name="remarks"></a>Remarks
+
+実装された場合、モジュールによって追跡されるオブジェクトの数をインクリメントします。
+
+## <a name="modulebase"></a>Modulebase::modulebase
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+ModuleBase();
+```
+
+### <a name="remarks"></a>Remarks
+
+`Module` クラスのインスタンスを初期化します。

@@ -12,14 +12,15 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb8f7d4835fe50dba2cb7eb6d4e7cb6a54efdbba
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: e204e8dcc0d846294393edf9bf73b86360b40de2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578427"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46421987"
 ---
 # <a name="floating-point-migration-issues"></a>浮動小数点の移行に関する問題  
+
   
 新しいバージョンの Visual Studio にプロジェクトをアップグレードすると、特定の浮動小数点演算の結果が変わることがあります。 これは一般的に、利用できるプロセッサをより効果的に活用するためにコード生成が変更されたか、C ランタイム ライブラリ (CRT) の数学関数で使用されるアルゴリズムが修正または変更されたことにより発生します。 一般的に、言語標準で指定される制限内では、新しい結果が正しくなります。 後続のセクションでは、変更内容と以前の関数結果を得る方法を紹介します。重要と思われる場合は参考にしてください。  
 
@@ -41,6 +42,6 @@ Visual Studio のさまざまな浮動小数点モードでコード生成が修
   
 ## <a name="see-also"></a>関連項目  
   
-[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[アップグレードに関する潜在的な問題 (Visual C++) の概要](overview-of-potential-upgrade-issues-visual-cpp.md)  
+[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[アップグレードに関する潜在的な問題 (Visual C++) の概要](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [2003 から 2015 の Visual C++ の履歴の変更](visual-cpp-change-history-2003-2015.md)  

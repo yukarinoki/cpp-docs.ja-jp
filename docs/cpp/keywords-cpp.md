@@ -1,7 +1,7 @@
 ---
 title: キーワード (C++) |Microsoft Docs
 ms.custom: index-page
-ms.date: 09/18/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,19 +18,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9773334afb2f5ce1ed770a8e2de5ff9e2c05917c
-ms.sourcegitcommit: bb8958c5a5c3d069ef54a97238742119d1a65434
+ms.openlocfilehash: 38808ea3874964db7983c0f7193c919b9df05391
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/21/2018
-ms.locfileid: "46560537"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169607"
 ---
 # <a name="keywords-c"></a>キーワード (C++)
 
 キーワードは、特別な意味を持つ定義済みおよび予約済みの識別子です。 プログラムでは、キーワードを識別子として使用することはできません。 次のキーワードは Microsoft C++ 用に予約されています。 先頭にアンダースコアが付いているキーワードは Microsoft の拡張機能です。
 
-||||
-|-|-|-|
+|||||
+|-|-|-|-|
 |[_ _abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[__alignof 演算子](alignof-operator.md)|[__asm](../assembler/inline/asm.md)|[__assume](../intrinsics/assume.md)|
 |[__based](based-pointers-cpp.md)|[_ _box](../dotnet/value-type-semantics.md) <sup>2</sup>|[__cdecl](cdecl.md)|[__declspec](declspec.md)|
 |[_ _delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[__except](try-except-statement.md)|[__fastcall](fastcall.md)|
@@ -39,8 +39,9 @@ ms.locfileid: "46560537"
 |[__int16](int8-int16-int32-int64.md)|[__int32](int8-int16-int32-int64.md)|[__int64](int8-int16-int32-int64.md)|[__int8](int8-int16-int32-int64.md)|
 |[__interface](interface.md)|[__leave](try-finally-statement.md)|[__m128](m128.md)|[__m128d](m128d.md)|
 |[__m128i](m128i.md)|[__m64](m64.md)|[_ _multiple_inheritance](inheritance-keywords.md)|[_ _nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
-|[__noop](../intrinsics/noop.md)|**_ _pin** <sup>2</sup>|**_ _property** <sup>2</sup>|[__raise](raise.md)|**_ _sealed** <sup>2</sup>|[_ _single_inheritance](inheritance-keywords.md)|[__stdcall](stdcall.md)|[__super](super.md)|
-|[__thiscall](thiscall.md)|[_ _try/\__except](try-except-statement.md)| [_ _try/\__finally](try-finally-statement.md)|[_ _try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|
+|[__noop](../intrinsics/noop.md)|**_ _pin** <sup>2</sup>|**_ _property** <sup>2</sup>|[__raise](raise.md)|
+|**_ _sealed** <sup>2</sup>|[_ _single_inheritance](inheritance-keywords.md)|[__stdcall](stdcall.md)|[__super](super.md)|
+|[__thiscall](thiscall.md)|[_ _try/\__except](try-except-statement.md)|[_ _try/\__finally](try-finally-statement.md)|[_ _try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|
 |[__unaligned](unaligned.md)|[_ _unhook](unhook.md) <sup>3</sup>|[_ _uuidof](uuidof-operator.md)|[_ _value](../dotnet/value-type-semantics.md) <sup>2</sup>|
 |[_ _virtual_inheritance](inheritance-keywords.md)|[__w64](w64.md)|[_ _wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
 |[alignas](align-cpp.md)|[array](../windows/arrays-cpp-component-extensions.md)|[auto](auto-keyword.md)|[bool](bool-cpp.md)|
@@ -52,25 +53,25 @@ ms.locfileid: "46560537"
 |[dynamic_cast](dynamic-cast-operator.md)|[else](if-else-statement-cpp.md)|[enum](enumerations-cpp.md)|[列挙型クラス](../windows/enum-class-cpp-component-extensions.md)|
 |[列挙型の構造体](../windows/enum-class-cpp-component-extensions.md)|[event](../windows/event-cpp-component-extensions.md)|[explicit](user-defined-type-conversions-cpp.md)|[extern](using-extern-to-specify-linkage.md)|
 |[false](false-cpp.md)|[finally](../dotnet/finally.md)|[float](fundamental-types-cpp.md)|[for](for-statement-cpp.md)|
-|[は for each](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|
-|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|[汎用](../windows/generics-cpp-component-extensions.md)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|
-|[initonly](../dotnet/initonly-cpp-cli.md)|[インライン](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)|
-|[インターフェイス構造体](../windows/interface-class-cpp-component-extensions.md)|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|[リテラル](../windows/literal-cpp-component-extensions.md)|[long](fundamental-types-cpp.md)|
-|[変更可能です](mutable-data-members-cpp.md)|[naked](naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|
-|[new](new-operator-cpp.md)|[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|
-|[nothrow](nothrow-cpp.md) <sup>1</sup>|[novtable](novtable.md) <sup>1</sup>|[nullptr](nullptr.md)|[operator](operator-overloading.md)|
-|[private](private-cpp.md)|[プロパティ](../windows/property-cpp-component-extensions.md)|[プロパティ](property-cpp.md) <sup>1</sup>|[protected](protected-cpp.md)|
-|[public](public-cpp.md)|[ref クラス](../windows/classes-and-structs-cpp-component-extensions.md)|[ref 構造体](../windows/classes-and-structs-cpp-component-extensions.md)|[register](storage-classes-cpp.md#register)|
-|[reinterpret_cast](reinterpret-cast-operator.md)|[return](return-statement-cpp.md)|[safecast](../windows/safe-cast-cpp-component-extensions.md)|[sealed](../windows/sealed-cpp-component-extensions.md)|
-|[selectany](selectany.md) <sup>1</sup>|[short](fundamental-types-cpp.md)|[signed](fundamental-types-cpp.md)|[sizeof](sizeof-operator.md)|
-|[static](storage-classes-cpp.md)|[static_assert](static-assert.md)|[static_cast](static-cast-operator.md)|[struct](struct-cpp.md)|
-|[switch](switch-statement-cpp.md)|[テンプレート](templates-cpp.md)|[this](this-pointer.md)|[スレッド](thread.md) <sup>1</sup>|
-|[throw](try-throw-and-catch-statements-cpp.md)|[true](true-cpp.md)|[try](try-throw-and-catch-statements-cpp.md)|[typedef](aliases-and-typedefs-cpp.md)|
-|[typeid](typeid-operator.md)|[typeid](../windows/typeid-cpp-component-extensions.md)|[typename](typename.md)|[union](unions.md)|
-|[unsigned](fundamental-types-cpp.md)|[使用して](using-declaration.md)宣言|[使用して](namespaces-cpp.md#using_directives)ディレクティブ|
-|[uuid](uuid-cpp.md) <sup>1</sup>|[値クラス](../windows/classes-and-structs-cpp-component-extensions.md)|[値構造体](../windows/classes-and-structs-cpp-component-extensions.md)|
-|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
+|[は for each](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
+|[汎用](../windows/generics-cpp-component-extensions.md)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|[initonly](../dotnet/initonly-cpp-cli.md)|
+|[インライン](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)|[インターフェイス構造体](../windows/interface-class-cpp-component-extensions.md)|
+|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|[リテラル](../windows/literal-cpp-component-extensions.md)|[long](fundamental-types-cpp.md)|[変更可能です](mutable-data-members-cpp.md)|
+|[naked](naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|[new](new-operator-cpp.md)|
+|[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|[nothrow](nothrow-cpp.md) <sup>1</sup>|
+|[novtable](novtable.md) <sup>1</sup>|[nullptr](nullptr.md)|[operator](operator-overloading.md)|[private](private-cpp.md)|
+|[プロパティ](../windows/property-cpp-component-extensions.md)|[プロパティ](property-cpp.md) <sup>1</sup>|[protected](protected-cpp.md)|[public](public-cpp.md)|
+|[ref クラス](../windows/classes-and-structs-cpp-component-extensions.md)|[ref 構造体](../windows/classes-and-structs-cpp-component-extensions.md)|[register](storage-classes-cpp.md#register)|[reinterpret_cast](reinterpret-cast-operator.md)|
+|[return](return-statement-cpp.md)|[safecast](../windows/safe-cast-cpp-component-extensions.md)|[sealed](../windows/sealed-cpp-component-extensions.md)|[selectany](selectany.md) <sup>1</sup>|
+|[short](fundamental-types-cpp.md)|[signed](fundamental-types-cpp.md)|[sizeof](sizeof-operator.md)|[static](storage-classes-cpp.md)|
+|[static_assert](static-assert.md)|[static_cast](static-cast-operator.md)|[struct](struct-cpp.md)|[switch](switch-statement-cpp.md)|
+|[テンプレート](templates-cpp.md)|[this](this-pointer.md)|[スレッド](thread.md) <sup>1</sup>|[throw](try-throw-and-catch-statements-cpp.md)|
+|[true](true-cpp.md)|[try](try-throw-and-catch-statements-cpp.md)|[typedef](aliases-and-typedefs-cpp.md)|[typeid](typeid-operator.md)|
+|[typeid](../windows/typeid-cpp-component-extensions.md)|[typename](typename.md)|[union](unions.md)|[unsigned](fundamental-types-cpp.md)|
+|[使用して](using-declaration.md)宣言|[使用して](namespaces-cpp.md#using_directives)ディレクティブ|[uuid](uuid-cpp.md) <sup>1</sup>|[値クラス](../windows/classes-and-structs-cpp-component-extensions.md)|
+|[値構造体](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
 |[while](while-statement-cpp.md)|
+
 
 1 の拡張属性、 **_ _declspec**キーワード。
 

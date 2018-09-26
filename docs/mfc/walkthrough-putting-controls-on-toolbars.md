@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: ツールバーにコントロールを配置する |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/20/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c50be81cbddb30752f401ca7a1784cfe428c379b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384561"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169750"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>チュートリアル: ツール バーへのコントロールの追加
 
@@ -30,11 +30,11 @@ ms.locfileid: "46384561"
 
 ツール バーにコントロールを追加するには、次の手順を実行します。
 
-1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。 Visual Studio のツール バー エディターを使用してボタンを作成する方法の詳細については、次を参照してください。、[ツール バー エディター](../windows/toolbar-editor.md)トピック。
+1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。 使用してボタンを作成する方法について、**ツール バー エディター** Visual Studio で、次を参照してください。、[ツール バー エディター](../windows/toolbar-editor.md)トピック。
 
 1. 親ツール バーのすべてのビットマップでボタンのツール バー イメージ (ボタン アイコン) を予約します。
 
-1. AFX_WM_RESETTOOLBAR メッセージを処理するメッセージ ハンドラーで、次の手順を実行します。
+1. `AFX_WM_RESETTOOLBAR` メッセージを処理するメッセージ ハンドラーで、次の操作を行います。
 
    1. `CMFCToolbarButton` 派生クラスを使用して、ボタン コントロールを作成します。
 
@@ -55,22 +55,22 @@ ms.locfileid: "46384561"
 
 ### <a name="creating-the-find-control"></a>Find コントロールの作成
 
-まず、`Find` コンボ ボックス コントロールを作成します。
+最初に、作成、**検索**コンボ ボックス コントロール。
 
 1. アプリケーション リソースにボタンとコマンドを追加します。
 
    1. アプリケーション リソースで、`ID_EDIT_FIND` コマンド ID を持つ新しいボタンをアプリケーションのツール バー、およびツール バーに関連付けられたビットマップに追加します。
 
-   1. ID_EDIT_FIND コマンド ID を使用して新しいメニュー項目を作成します。
+   1. 新しいメニュー項目を作成、`ID_EDIT_FIND`コマンド ID
 
-   1. 新しい文字列 "Find the text\nFind" を文字列テーブルに追加し、`ID_EDIT_FIND_COMBO` コマンド ID を割り当てます。 この ID は、`Find` コンボ ボックスのコマンド ID として使用されます。
+   1. 新しい文字列 "Find the text\nFind" を文字列テーブルに追加し、`ID_EDIT_FIND_COMBO` コマンド ID を割り当てます。 この ID がのコマンド ID として使用される、**検索**コンボ ボックス ボタンをクリックします。
 
         > [!NOTE]
-        >  `ID_EDIT_FIND` は `CEditView` によって処理される標準のコマンドであるため、このコマンド用の特別なハンドラーを実装する必要はありません。  ただし、新しいコマンド `ID_EDIT_FIND_COMBO` のハンドラーを実装する必要があります。
+        > `ID_EDIT_FIND` は `CEditView` によって処理される標準のコマンドであるため、このコマンド用の特別なハンドラーを実装する必要はありません。  ただし、新しいコマンド `ID_EDIT_FIND_COMBO` のハンドラーを実装する必要があります。
 
 1. 新しいクラスを作成`CFindComboBox`から派生した[CComboBox クラス](../mfc/reference/ccombobox-class.md)します。
 
-1. `CFindComboBox` クラスで、`PreTranslateMessage` 仮想メソッドをオーバーライドします。 このメソッドは、処理するコンボ ボックスを有効になります、 [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)メッセージ。 ユーザーが Esc キーを押す (`VK_ESCAPE`) と、フォーカスがメイン フレーム ウィンドウに戻ります。 ユーザーが Enter キーを押す場合 (`VK_ENTER`) を含む WM_COMMAND メッセージをメイン フレーム ウィンドウに投稿、`ID_EDIT_FIND_COMBO`コマンド ID
+1. `CFindComboBox` クラスで、`PreTranslateMessage` 仮想メソッドをオーバーライドします。 このメソッドは、処理するコンボ ボックスを有効になります、 [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)メッセージ。 ユーザーが Esc キーを押す (`VK_ESCAPE`) と、フォーカスがメイン フレーム ウィンドウに戻ります。 ユーザーが Enter キーを押す (`VK_ENTER`) と、`WM_COMMAND` コマンド ID を含む `ID_EDIT_FIND_COMBO` メッセージがメイン フレーム ウィンドウにポストされます。
 
 1. クラスを作成、**検索**から派生した、コンボ ボックス ボタン[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)します。 この例では、 `CFindComboButton`という名前が付いています。
 
@@ -88,7 +88,7 @@ ms.locfileid: "46384561"
 
 1. ドキュメント ビューで `ID_EDIT_FIND_COMBO` ハンドラーを実装します。 使用[CMFCToolBar::GetCommandButtons](../mfc/reference/cmfctoolbar-class.md#getcommandbuttons)で`ID_EDIT_FIND_COMBO`をすべて取得する**検索**コンボ ボックス ボタン。 カスタマイズにより、同じコマンド ID を持つ複数のボタンが存在する可能性があります。
 
-9. ID_EDIT_FIND メッセージ ハンドラーで`OnFind`を使用して、 [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton)から検索 コマンドが送信されたかどうかを判断する、**検索**コンボ ボックス ボタンをクリックします。 該当する場合は、テキストを検索し、検索文字列をコンボ ボックスに追加します。
+1. `ID_EDIT_FIND`メッセージ ハンドラー`OnFind`を使用して、 [CMFCToolBar::IsLastCommandFromButton](../mfc/reference/cmfctoolbar-class.md#islastcommandfrombutton)から検索 コマンドが送信されたかどうかを判断する、**検索**コンボ ボックス ボタンをクリックします。 該当する場合は、テキストを検索し、検索文字列をコンボ ボックスに追加します。
 
 ### <a name="adding-the-find-control-to-the-main-toolbar"></a>メイン ツール バーへの Find コントロールの追加
 
@@ -97,16 +97,16 @@ ms.locfileid: "46384561"
 1. メイン フレーム ウィンドウに `AFX_WM_RESETTOOLBAR` メッセージ ハンドラー `OnToolbarReset` を実装します。
 
     > [!NOTE]
-    >  アプリケーションの起動中にツール バーが初期化されたとき、またはカスタマイズ中にツール バーがリセットされたときに、フレームワークはこのメッセージをメイン フレーム ウィンドウに送信します。 いずれの場合も、カスタムの標準ツール バー ボタンを置き換える必要があります**検索**コンボ ボックス ボタンをクリックします。
+    > アプリケーションの起動中にツール バーが初期化されたとき、またはカスタマイズ中にツール バーがリセットされたときに、フレームワークはこのメッセージをメイン フレーム ウィンドウに送信します。 いずれの場合も、カスタムの標準ツール バー ボタンを置き換える必要があります**検索**コンボ ボックス ボタンをクリックします。
 
 1. `AFX_WM_RESETTOOLBAR`ハンドラー、つまり、ツールバー ID を調べて、 *WPARAM* AFX_WM_RESETTOOLBAR メッセージの。 ツールバー ID が入っているツールバーの場合、**検索**コンボ ボックス ボタン、呼び出し[CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton)を置き換える、**検索**ボタン (これは、コマンド ID を持つボタン`ID_EDIT_FIND)`で、`CFindComboButton`オブジェクト。
 
     > [!NOTE]
-    >  `CFindComboBox` はボタン オブジェクトをコピーしてそのコピーを保持するため、開発者はスタックで `ReplaceButton` オブジェクトを作成できます。
+    > `CFindComboBox` はボタン オブジェクトをコピーしてそのコピーを保持するため、開発者はスタックで `ReplaceButton` オブジェクトを作成できます。
 
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>[カスタマイズ] ダイアログ ボックスへの Find コントロールの追加
 
-カスタマイズ ハンドラーで`OnViewCustomize`、呼び出す[CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton)を置き換える、**検索**ボタン (コマンド ID を持つボタン`ID_EDIT_FIND)`で`CFindComboButton`オブジェクト。
+カスタマイズ ハンドラーで`OnViewCustomize`、呼び出す[CMFCToolBarsCustomizeDialog::ReplaceButton](../mfc/reference/cmfctoolbarscustomizedialog-class.md#replacebutton)を置き換える、**検索**ボタン (コマンド ID を持つボタン`ID_EDIT_FIND`)、で`CFindComboButton`オブジェクト。
 
 ## <a name="see-also"></a>関連項目
 
