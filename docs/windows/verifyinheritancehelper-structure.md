@@ -1,28 +1,30 @@
 ---
 title: VerifyInheritanceHelper 構造体 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::VerifyInheritanceHelper
+- implements/Microsoft::WRL::Details::VerifyInheritanceHelper::Verify
 dev_langs:
 - C++
 helpviewer_keywords:
-- VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper structure
+- Microsoft::WRL::Details::VerifyInheritanceHelper::Verify method
 ms.assetid: 8a48a702-0f71-4807-935b-8311f0a7a8b6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ddd358c3eb20439f87de8614d80af01537ae31e6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6231345b837cae8f36e8441173300d804c0ea167
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396574"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169634"
 ---
 # <a name="verifyinheritancehelper-structure"></a>VerifyInheritanceHelper 構造体
 
@@ -58,9 +60,9 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[VerifyInheritanceHelper::Verify メソッド](../windows/verifyinheritancehelper-verify-method.md)|現在のテンプレート パラメーターで指定された 2 つのインターフェイスをテストし、1 つのインターフェイスは、その他から派生されているかどうかを決定します。|
+名前                                       | 説明
+------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------
+[Verifyinheritancehelper::verify](#verify) | 現在のテンプレート パラメーターで指定された 2 つのインターフェイスをテストし、1 つのインターフェイスは、その他から派生されているかどうかを決定します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -72,6 +74,16 @@ struct VerifyInheritanceHelper<I, Nil>;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>関連項目
+## <a name="verify"></a>Verifyinheritancehelper::verify
 
-[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+static void Verify();
+```
+
+### <a name="remarks"></a>Remarks
+
+現在のテンプレート パラメーターで指定された 2 つのインターフェイスをテストし、1 つのインターフェイスは、その他から派生されているかどうかを決定します。
+
+1 つのインターフェイスは、その他から派生していない場合は、エラーが生成されます。
