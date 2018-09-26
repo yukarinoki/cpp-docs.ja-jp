@@ -1,28 +1,34 @@
 ---
 title: InvokeHelper 構造体 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::InvokeHelper
+- event/Microsoft::WRL::Details::InvokeHelper::callback_
+- event/Microsoft::WRL::Details::InvokeHelper::Invoke
+- event/Microsoft::WRL::Details::InvokeHelper::InvokeHelper
 dev_langs:
 - C++
 helpviewer_keywords:
-- InvokeHelper structure
+- Microsoft::WRL::Details::InvokeHelper structure
+- Microsoft::WRL::Details::callback_ data member
+- Microsoft::WRL::Details::Invoke method
+- Microsoft::WRL::Details::InvokeHelper, constructor
 ms.assetid: 555ad2bc-4dd6-4e65-a2e2-1242c395f0e5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ffef0c6a55116bf3a228d7d5da4bd698607d7fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6eccc9a7eacf9cdd3b98796f575d966b7b566864
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431035"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169538"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 構造体
 
@@ -96,7 +102,7 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 イベント ハンドラー関数の型。
 
 *について*<br/>
-引数の数、 **InvokeHelper**特殊化します。
+引数の数、`InvokeHelper`特殊化します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -106,27 +112,27 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
-|----------|-----------------|
-|`Traits`|各イベント ハンドラーの引数の型を定義するクラスのシノニムです。|
+名前     | 説明
+-------- | -----------------------------------------------------------------------------
+`Traits` | 各イベント ハンドラーの引数の型を定義するクラスのシノニムです。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
-|----------|-----------------|
-|[InvokeHelper::InvokeHelper コンストラクター](../windows/invokehelper-invokehelper-constructor.md)|新しいインスタンスを初期化、 **InvokeHelper**クラス。|
+名前                                        | 説明
+------------------------------------------- | -------------------------------------------------------
+[Invokehelper::invokehelper](#invokehelper) | `InvokeHelper` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[InvokeHelper::Invoke メソッド](../windows/invokehelper-invoke-method.md)|指定した数の引数を含むシグネチャを持つイベント ハンドラーを呼び出します。|
+名前                            | 説明
+------------------------------- | -----------------------------------------------------------------------------------
+[Invokehelper::invoke](#invoke) | 指定した数の引数を含むシグネチャを持つイベント ハンドラーを呼び出します。
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
-|名前|説明|
-|----------|-----------------|
-|[InvokeHelper::callback_ データ メンバー](../windows/invokehelper-callback-data-member.md)|イベントが発生したときに呼び出すイベント ハンドラーを表します。|
+名前                                 | 説明
+------------------------------------ | ----------------------------------------------------------
+[Invokehelper::callback _](#callback) | イベントが発生したときに呼び出すイベント ハンドラーを表します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -138,6 +144,111 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> : Microsoft::WRL::RuntimeC
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>関連項目
+## <a name="callback"></a>Invokehelper::callback _
 
-[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+TCallback callback_;
+```
+
+### <a name="remarks"></a>Remarks
+
+イベントが発生したときに呼び出すイベント ハンドラーを表します。
+
+`TCallback`テンプレート パラメーターは、イベント ハンドラーの種類を指定します。
+
+## <a name="invoke"></a>Invokehelper::invoke
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+STDMETHOD(
+   Invoke
+)();
+STDMETHOD(
+   Invoke
+)(typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+STDMETHOD(
+   Invoke
+)( typename Traits;
+```
+
+### <a name="parameters"></a>パラメーター
+
+*arg1*<br/>
+引数 1 です。
+
+*Arg2*<br/>
+引数 2 を指定します。
+
+*arg3…*<br/>
+引数 3 です。
+
+*arg4*<br/>
+4 の引数。
+
+*arg5*<br/>
+5 の引数。
+
+*arg6*<br/>
+引数 6 です。
+
+*arg7*<br/>
+7 の引数。
+
+*arg8*<br/>
+8 の引数。
+
+*arg9*<br/>
+9 の引数。
+
+### <a name="return-value"></a>戻り値
+
+成功した場合は s_ok を返します。それ以外の場合、エラーを示す HRESULT。
+
+### <a name="remarks"></a>Remarks
+
+指定した数の引数を含むシグネチャを持つイベント ハンドラーを呼び出します。
+
+## <a name="invokehelper"></a>Invokehelper::invokehelper
+
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+explicit InvokeHelper(
+   TCallback callback
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*コールバック*<br/>
+イベント ハンドラー。
+
+### <a name="remarks"></a>Remarks
+
+`InvokeHelper` クラスの新しいインスタンスを初期化します。
+
+`TCallback`テンプレート パラメーターは、イベント ハンドラーの種類を指定します。

@@ -1,7 +1,7 @@
 ---
 title: STL/CLR ライブラリ リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/18/2018"
 ms.technology:
 - cpp-cli
 ms.topic: reference
@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 78dc5c57ca000dfa03dba640c46cec16aaca133f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 14217396801731505753be121e98f0aebf5b5f22
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429476"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494390"
 ---
 # <a name="stlclr-library-reference"></a>STL/CLR ライブラリ リファレンス
 
-STL/CLR ライブラリは、C++ と .NET Framework 共通言語ランタイム (CLR) で使用するためには、C++ 標準ライブラリのサブセットをパッケージ化します。 Stl/clr では、すべてのコンテナー、反復子、および管理された環境で、標準ライブラリのアルゴリズムを使用することができます。
+STL/CLR ライブラリでは、C++ と .NET Framework 共通言語ランタイム (CLR) で使用するため、C++ 標準ライブラリ コンテナーに似たインターフェイスを提供します。 STL/CLR は、C++ 標準ライブラリの Microsoft 実装から完全に分離します。 STL/CLR では、レガシ サポートのために維持されますが、C++ 標準の最新の状態が保持されません。 ネイティブの使用を強くお勧め[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)STL/CLR 可能な限りではなくコンテナー。
 
 STL/CLR を使用するには
 
@@ -34,7 +34,7 @@ STL/CLR を使用するには
 
 - ライブラリ名は、`cliext::` ではなく `std::` で修飾します。
 
-STL/CLR では、.NET アセンブリのアセンブリ間シナリオで使用されるジェネリック型とインターフェイスを公開します。 **Microsoft.VisualC.STLCLR.dll**します。 この DLL は、.NET Framework 3.5 に含まれています。 STL/CLR を使用するアプリケーションを再配布する場合、.NET Framework 3.5 とプロジェクトで使用する他のすべての Visual C++ ライブラリをセットアップ プロジェクトの依存関係セクションに含める必要があります。
+STL/CLR ライブラリは、C++ と .NET Framework 共通言語ランタイム (CLR) で使用するため、STL のようなインターフェイスを提供します。 このライブラリは、レガシ サポートのために維持されますが、C++ 標準の最新の状態が保持されません。 ネイティブの使用を強くお勧め[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)STL/CLR ではなくコンテナー。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

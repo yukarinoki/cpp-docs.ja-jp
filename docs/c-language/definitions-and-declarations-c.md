@@ -14,58 +14,60 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d44a98fee82e41252b27fa5a1605b04a15af9115
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5ae97ecc055ed7e6a448f2f820e762cafb2c5798
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383486"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46028676"
 ---
 # <a name="definitions-and-declarations-c"></a>定義と宣言 (C)
-**Microsoft 固有の仕様**  
-  
- DLL インターフェイスは、システム内のプログラムによってエクスポートされることがわかっているすべての項目 (関数とデータ)、つまり、**dllimport** または `dllexport` として宣言されたすべての項目を参照します。 DLL インターフェイスに含まれるすべての宣言では、**dllimport** か `dllexport` の属性を指定する必要があります。 ただし、定義で指定できるのは `dllexport` 属性のみです。 たとえば、次の関数定義はコンパイラ エラーになります。  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-#define DllExport   __declspec( dllexport )  
-  
-DllImport int func()    /* Error; dllimport prohibited in */  
-                        /* definition. */  
-{  
-   return 1;  
-}  
-```  
-  
- 次のコードでも、エラーが生成します。  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-#define DllExport   __declspec( dllexport )  
-  
-DllImport int i = 10;      /* Error; this is a definition. */  
-```  
-  
- ただし、次に示す構文は、正しい構文です。  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-#define DllExport   __declspec( dllexport )  
-  
-DllExport int i = 10;      /* Okay: this is an export definition. */  
-```  
-  
- `dllexport` の使用は定義を意味し、**dllimport** は宣言を意味します。 宣言を強制するには、`extern` と共に `dllexport` キーワードを使用する必要があります。このようにしない場合、暗黙の定義になります。  
-  
-```  
-#define DllImport   __declspec( dllimport )  
-#define DllExport   __declspec( dllexport )  
-  
-extern DllImport int k;   /* These are correct and imply */  
-Dllimport int j;          /* a declaration. */      
-```  
-  
- **Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>参照  
- [DLL インポートおよびエクスポート関数](../c-language/dll-import-and-export-functions.md)
+
+**Microsoft 固有の仕様**
+
+DLL インターフェイスは、システム内のプログラムによってエクスポートされることがわかっているすべての項目 (関数とデータ)、つまり、**dllimport** または `dllexport` として宣言されたすべての項目を参照します。 DLL インターフェイスに含まれるすべての宣言では、**dllimport** か `dllexport` の属性を指定する必要があります。 ただし、定義で指定できるのは `dllexport` 属性のみです。 たとえば、次の関数定義はコンパイラ エラーになります。
+
+```
+#define DllImport   __declspec( dllimport )
+#define DllExport   __declspec( dllexport )
+
+DllImport int func()    /* Error; dllimport prohibited in */
+                        /* definition. */
+{
+   return 1;
+}
+```
+
+次のコードでも、エラーが生成します。
+
+```
+#define DllImport   __declspec( dllimport )
+#define DllExport   __declspec( dllexport )
+
+DllImport int i = 10;      /* Error; this is a definition. */
+```
+
+ただし、次に示す構文は、正しい構文です。
+
+```
+#define DllImport   __declspec( dllimport )
+#define DllExport   __declspec( dllexport )
+
+DllExport int i = 10;      /* Okay: this is an export definition. */
+```
+
+`dllexport` の使用は定義を意味し、**dllimport** は宣言を意味します。 宣言を強制するには、`extern` と共に `dllexport` キーワードを使用する必要があります。このようにしない場合、暗黙の定義になります。
+
+```
+#define DllImport   __declspec( dllimport )
+#define DllExport   __declspec( dllexport )
+
+extern DllImport int k;   /* These are correct and imply */
+Dllimport int j;          /* a declaration. */
+```
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>参照
+
+[DLL インポートおよびエクスポート関数](../c-language/dll-import-and-export-functions.md)

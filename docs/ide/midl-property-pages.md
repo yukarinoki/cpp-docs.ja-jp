@@ -16,23 +16,25 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f4b32aaa7626bcb5cfabc59e0d3b9554d73379e5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1151f342c62dd0d657fecc82f4bff75164718a6e
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33328075"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46378938"
 ---
 # <a name="midl-property-pages"></a>[MIDL] プロパティ ページ
-**MIDL** ノードには、複数のプロパティ ページが含まれています。 アクセスするには、 **ソリューション エクスプローラー**で .idl ファイルを右クリックします。  
-  
--   [[全般] ([MIDL] プロパティ ページ)](../ide/midl-property-pages-general.md)  
-  
--   [[出力] ([MIDL] プロパティ ページ)](../ide/midl-property-pages-output.md)  
-  
--   [[詳細] ([MIDL] プロパティ ページ)](../ide/midl-property-pages-advanced.md)  
-  
- C++ プロジェクト用の MIDL オプションにプログラムでアクセスする方法の詳細については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>」を参照してください。  
-  
-## <a name="see-also"></a>参照  
- [プロパティ ページ](../ide/property-pages-visual-cpp.md)
+
+**MIDL** ノードには、複数のプロパティ ページが含まれています。 アクセスするには、 **ソリューション エクスプローラー**で .idl ファイルを右クリックします。
+
+- [[全般] ([MIDL] プロパティ ページ)](../ide/midl-property-pages-general.md)
+
+- [[出力] ([MIDL] プロパティ ページ)](../ide/midl-property-pages-output.md)
+
+- [[詳細] ([MIDL] プロパティ ページ)](../ide/midl-property-pages-advanced.md)
+
+C++ プロジェクト用の MIDL オプションにプログラムでアクセスする方法の詳細については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCMidlTool>」を参照してください。
+
+## <a name="see-also"></a>参照
+
+[プロパティ ページ](../ide/property-pages-visual-cpp.md)

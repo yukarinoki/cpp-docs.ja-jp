@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: aba3fc80e13504485cc5a4f93fb3ad35031d4ef7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9858ebe9affb47d61114bde072645f7002849ec7
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440044"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169464"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>チュートリアル: WRL および Media Foundation を使用して UWP アプリの作成
 
@@ -29,7 +29,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 > [!NOTE]
 > C# の代わりに、JavaScript、Visual Basic、または C++ でカスタム変換コンポーネントを使用することもできます。
 
-ほとんどの場合にを使用することが C +/cli CX Windows ランタイムを作成する)。 ただし、場合によって、WRL を使用する必要があります。 などの Microsoft メディア ファンデーションのメディア拡張機能を作成するときに、COM および Windows ランタイムの両方のインターフェイスを実装するコンポーネントを作成する必要があります。 ため、C + + CX は Windows ランタイム オブジェクトを作成できるのみ、COM および Windows ランタイムの両方のインターフェイスの実装を可能にするため、メディア拡張機能を作成する、WRL を使用する必要があります。
+ほとんどの場合にを使用することが C +/cli/CX を Windows ランタイムを作成します。 ただし、場合によって、WRL を使用する必要があります。 などの Microsoft メディア ファンデーションのメディア拡張機能を作成するときに、COM および Windows ランタイムの両方のインターフェイスを実装するコンポーネントを作成する必要があります。 ため、C + + CX は Windows ランタイム オブジェクトを作成できるのみ、COM および Windows ランタイムの両方のインターフェイスの実装を可能にするため、メディア拡張機能を作成する、WRL を使用する必要があります。
 
 > [!NOTE]
 > このコード例は長いですが、役に立つメディア ファンデーション変換を作成するために必要な最低限のコードを示しています。 独自のカスタム変換を作成するための出発点として、このコード例を使用することができます。 この例の出典元は、[メディア拡張機能サンプル](http://code.msdn.microsoft.com/windowsapps/Media-extensions-sample-7b466096)ビデオへの適用を使用してメディア拡張機能の効果、ビデオのデコード、メディア ストリームを生成するスキーム ハンドラーを作成します。
@@ -52,7 +52,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 
 - [InspectableClass](../windows/inspectableclass-macro.md)マクロは、参照カウントなどの COM 基本機能を実装し、`QueryInterface`メソッド、およびランタイム クラス名と信頼レベルを設定します。
 
-- 使用の microsoft::wrl::[モジュール クラス](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe/locales/en-US)など DLL エントリ ポイント関数を実装する[DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx)、 [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)します。
+- 使用の microsoft::wrl::[モジュール クラス](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe)など DLL エントリ ポイント関数を実装する[DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx)、 [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)します。
 
 - コンポーネント DLL を runtimeobject.lib にリンクします。 指定することも[/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) Windows メタデータを生成するリンカー行にします。
 
@@ -62,29 +62,29 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 
 1. Visual Studio で、作成、**空のソリューション**プロジェクト。 など、プロジェクトの名前*MediaCapture*します。
 
-2. 追加、 **DLL (ユニバーサル Windows)** プロジェクトがソリューションにします。 など、プロジェクトの名前*GrayscaleTransform*します。
+1. 追加、 **DLL (ユニバーサル Windows)** プロジェクトがソリューションにします。 など、プロジェクトの名前*GrayscaleTransform*します。
 
-3. 追加、 **Midl ファイル (.idl)** ファイルをプロジェクトにします。 など、ファイルの名前*GrayscaleTransform.idl*します。
+1. 追加、 **Midl ファイル (.idl)** ファイルをプロジェクトにします。 など、ファイルの名前*GrayscaleTransform.idl*します。
 
-4. 次のコードを GrayscaleTransform.idl に追加します。
+1. このコードを GrayscaleTransform.idl に追加します。
 
    [!code-cpp[wrl-media-capture#1](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_1.idl)]
 
-5. 次のコードを使用して、内容を置き換える`pch.h`します。
+1. 次のコードを使用して、内容を置き換える`pch.h`:
 
    [!code-cpp[wrl-media-capture#2](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_2.h)]
 
-6. プロジェクトに新しいヘッダー ファイルを追加、名前を付けます`BufferLock.h`、このコードを追加します。
+1. プロジェクトに新しいヘッダー ファイルを追加、名前を付けます`BufferLock.h`、し、内容を次のコードに置き換えます。
 
    [!code-cpp[wrl-media-capture#3](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_3.h)]
 
-7. `GrayscaleTransform.h` この例では使用されません。 このファイルは必要に応じてプロジェクトから削除できます。
+1. `GrayscaleTransform.h` この例では使用されません。 このファイルは必要に応じてプロジェクトから削除できます。
 
-8. 次のコードを使用して、内容を置き換える`GrayscaleTransform.cpp`します。
+1. 次のコードを使用して、内容を置き換える`GrayscaleTransform.cpp`:
 
    [!code-cpp[wrl-media-capture#4](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_4.cpp)]
 
-9. プロジェクトに新しいモジュール定義ファイルを追加、名前を付けます`GrayscaleTransform.def`、このコードを追加します。
+1. プロジェクトに新しいモジュール定義ファイルを追加、名前を付けます`GrayscaleTransform.def`、このコードを追加します。
 
    ```
    EXPORTS
@@ -93,31 +93,31 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
        DllGetClassObject                   PRIVATE
    ```
 
-10. 次のコードを使用して、内容を置き換える`dllmain.cpp`します。
+1. 次のコードを使用して、内容を置き換える`dllmain.cpp`:
 
    [!code-cpp[wrl-media-capture#6](../windows/codesnippet/CPP/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_6.cpp)]
 
-11. プロジェクトの**プロパティ ページ** ダイアログ ボックスで、次の設定、**リンカー**プロパティ。
+1. プロジェクトの**プロパティ ページ** ダイアログ ボックスで、次の設定、**リンカー**プロパティ。
 
    1. **入力**、用、**モジュール定義ファイル**、指定`GrayScaleTransform.def`します。
 
-   2. また**入力**、追加`runtimeobject.lib`、 `mfuuid.lib`、および`mfplat.lib`を**追加の依存関係**プロパティ。
+   1. また**入力**、追加`runtimeobject.lib`、 `mfuuid.lib`、および`mfplat.lib`を**追加の依存関係**プロパティ。
 
-   3. **Windows メタデータ**設定**Windows メタデータの生成**に**はい (/WINMD)** します。
+   1. **Windows メタデータ**設定**Windows メタデータの生成**に**はい (/WINMD)** します。
 
 ### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>WRL c# アプリからカスタム メディア ファンデーション コンポーネントを使用するには
 
-1. 新しい追加**c# 空白アプリ (XAML)** プロジェクトを`MediaCapture`ソリューション。 など、プロジェクトの名前*MediaCapture*します。
+1. 新しい追加**c# 空白アプリ (ユニバーサル Windows)** プロジェクトを`MediaCapture`ソリューション。 など、プロジェクトの名前*MediaCapture*します。
 
-2. **MediaCapture**プロジェクトへの参照を追加、`GrayscaleTransform`プロジェクト。 についてを参照してください[方法: 追加または参照マネージャーを使用して参照を削除する](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)します。
+1. **MediaCapture**プロジェクトへの参照を追加、`GrayscaleTransform`プロジェクト。 についてを参照してください[方法: 追加または参照マネージャーを使用して参照を削除する](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)します。
 
-3. `Package.appxmanifest`の**機能**] タブで [**マイク**と**web カメラ**します。 Web カメラから写真をキャプチャするために、両方の機能が必要です。
+1. `Package.appxmanifest`の**機能**] タブで [**マイク**と**web カメラ**します。 Web カメラから写真をキャプチャするために、両方の機能が必要です。
 
-4. `MainPage.xaml`、ルートにこのコードを追加[グリッド](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)要素。
+1. `MainPage.xaml`、ルートにこのコードを追加[グリッド](https://msdn.microsoft.com/library/windows/apps/xaml/windows.ui.xaml.controls.grid.aspx)要素。
 
    [!code-xml[wrl-media-capture#7](../windows/codesnippet/Xaml/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_7.xaml)]
 
-5. 次のコードを使用して、内容を置き換える`MainPage.xaml.cs`します。
+1. 次のコードを使用して、内容を置き換える`MainPage.xaml.cs`:
 
    [!code-cs[wrl-media-capture#8](../windows/codesnippet/CSharp/walkthrough-creating-a-windows-store-app-using-wrl-and-media-foundation_8.cs)]
 

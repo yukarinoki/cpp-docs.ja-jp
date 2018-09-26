@@ -1,7 +1,7 @@
 ---
 title: 方法:-clr に移行 |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/18/2018
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 818b6e102d9da759aa8889779515917b96e22c89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 210cf8d3183e9fcd94cfa51d875a0b26e4a8fa07
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412965"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029659"
 ---
 # <a name="how-to-migrate-to-clr"></a>方法: /clr に移行する
 
-このトピックでは、ネイティブ コードをコンパイルするときに発生する問題を説明 **/clr** (を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細については)。 **/clr** Visual C モジュールを呼び出すし、アンマネージ モジュールとの互換性を維持しながら .NET アセンブリから呼び出すことができます。 参照してください[混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)と[ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)を使用してコンパイルの利点の詳細についての **/clr**します。
+このトピックでは、ネイティブ コードをコンパイルするときに発生する問題を説明 **/clr** (を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細については)。 **/clr**ネイティブの C++ コードを呼び出し、その他のネイティブ C++ コードだけでなく、.NET アセンブリから呼び出すことができます。 参照してください[混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)と[ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)を使用してコンパイルの利点の詳細についての **/clr**します。
 
 ## <a name="known-issues-compiling-library-projects-with-clr"></a>/clr でライブラリ プロジェクトをコンパイルする場合の既知の問題
 
@@ -86,8 +86,6 @@ NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 
 C コードの識別子で、C++ のキーワードとなっているもの (`virtual`、`new`、`delete`、`bool`、`true`、`false` など) は名前を変更する必要があります。 これは一般的に、単純な検索置換操作だけで行うことができます。
 
-最後に、C スタイルの COM の呼び出しが v テーブルの明示的な使用が必要ですと`this`ポインター、C++ はありません。
-
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code
 COMObj2->Method(args);  // C++ equivalent
@@ -132,7 +130,7 @@ COMObj2->Method(args);  // C++ equivalent
 
 ### <a name="loader-lock-deadlock"></a>ローダー ロックのデッドロック
 
-Visual Studio 2010 以降では、「ローダー ロックのデッドロック」が発生することが以前のバージョンでは決定論的でありが検出され、実行時に報告します。 参照してください[混在アセンブリの初期化](../dotnet/initialization-of-mixed-assemblies.md)に関する背景、ガイダンス、およびソリューションの。
+「ローダー ロックのデッドロック」が発生する可能性しますが、決定的しが検出され、実行時に報告されます。 参照してください[混在アセンブリの初期化](../dotnet/initialization-of-mixed-assemblies.md)に関する背景、ガイダンス、およびソリューションの。
 
 ### <a name="data-exports"></a>データのエクスポート
 

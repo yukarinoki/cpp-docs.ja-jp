@@ -14,17 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0a63bf8980ea9022a1cd06bc890512db8ba85a5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9c7c09bccda07358384ca6b0be8d3ea824bc99e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32383944"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46055144"
 ---
 # <a name="registers-availability-of-registers"></a>レジスタ: レジスタの可用性
-**ANSI 3.5.1** register ストレージ クラス指定子を使用してオブジェクトをレジスタに実際に配置できる範囲  
-  
- コンパイラは、レジスタ変数に対するユーザーの要求を考慮しません。 代わりに、最適化時に独自の選択を行います。  
-  
-## <a name="see-also"></a>参照  
- [実装で定義された動作](../c-language/implementation-defined-behavior.md)
+
+**ANSI 3.5.1** register ストレージ クラス指定子を使用してオブジェクトをレジスタに実際に配置できる範囲
+
+コンパイラは、レジスタ変数に対するユーザーの要求を考慮しません。 代わりに、最適化時に独自の選択を行います。
+
+## <a name="see-also"></a>参照
+
+[実装で定義された動作](../c-language/implementation-defined-behavior.md)

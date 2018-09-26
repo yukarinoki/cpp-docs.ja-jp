@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: アプリケーションへの CTaskDialog の追加 |Microsoft Docs'
 ms.custom: ''
-ms.date: 06/28/2018
+ms.date: 09/19/2018
 ms.technology:
 - cpp-mfc
 ms.topic: conceptual
@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0f803af896c1bb2a0e5f58e45f4ef9f588f4e66d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 48efa5d85ac6c7ba7e989cc55196f12fb391fa6d
+ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420485"
+ms.lasthandoff: 09/25/2018
+ms.locfileid: "47169724"
 ---
 # <a name="walkthrough-adding-a-ctaskdialog-to-an-application"></a>チュートリアル: アプリケーションへの CTaskDialog の追加
 
@@ -49,11 +49,11 @@ ms.locfileid: "46420485"
 
 1. 既定の設定で、新しい MFC アプリケーション プロジェクトを作成します。 呼び出す*MyProject*します。
 
-2. **ソリューション エクスプローラー** を使用して、MyProject.cpp ファイルを開きます。
+1. **ソリューション エクスプローラー** を使用して、MyProject.cpp ファイルを開きます。
 
-3. 一連の include の末尾に、 `#include "afxtaskdialog.h"` を追加します。
+1. 一連の include の末尾に、 `#include "afxtaskdialog.h"` を追加します。
 
-4. `CMyProjectApp::InitInstance`メソッドを探します。 次のコード行を `return TRUE;` ステートメントの前に挿入します。 このコードにより、Windows メッセージ ボックスまたは `CTaskDialog`で使用する文字列が作成されます。
+1. `CMyProjectApp::InitInstance`メソッドを探します。 次のコード行を `return TRUE;` ステートメントの前に挿入します。 このコードにより、Windows メッセージ ボックスまたは `CTaskDialog`で使用する文字列が作成されます。
 
     ```cpp
     CString message("My message to the user");
@@ -61,7 +61,7 @@ ms.locfileid: "46420485"
     CString emptyString;
     ```
 
-5. 手順 4. のコードの後に、次のコードを追加します。 このコードによって、ユーザーのコンピューターで `CTaskDialog`がサポートされることが保証されます。 このダイアログがサポートされない場合は、代わりに Windows メッセージ ボックスが表示されます。
+1. 手順 4. のコードの後に、次のコードを追加します。 このコードによって、ユーザーのコンピューターで `CTaskDialog`がサポートされることが保証されます。 このダイアログがサポートされない場合は、代わりに Windows メッセージ ボックスが表示されます。
 
     ```cpp
     if (CTaskDialog::IsSupported())
@@ -74,19 +74,19 @@ ms.locfileid: "46420485"
     }
     ```
 
-6. 手順 5. の `if` ステートメントの後にあるかっこ内に、次のコードを挿入します。 このコードによって、 `CTaskDialog`が作成されます。
+1. 手順 5. の `if` ステートメントの後にあるかっこ内に、次のコードを挿入します。 このコードによって、 `CTaskDialog`が作成されます。
 
     ```cpp
     CTaskDialog taskDialog(message, emptyString, dialogTitle, TDCBF_OK_BUTTON);
     ```
 
-7. その次の行に、次のコードを追加します。 このコードによって、警告アイコンが設定されます。
+1. その次の行に、次のコードを追加します。 このコードによって、警告アイコンが設定されます。
 
     ```cpp
     taskDialog.SetMainIcon(TD_WARNING_ICON);
     ```
 
-8. その次の行に、次のコードを追加します。 このコードによって、タスク ダイアログ ボックスが表示されます。
+1. その次の行に、次のコードを追加します。 このコードによって、タスク ダイアログ ボックスが表示されます。
 
     ```cpp
     taskDialog.DoModal();
@@ -104,15 +104,15 @@ ms.locfileid: "46420485"
 
 1. **[リソース ビュー]** 移動します。 **[リソース ビュー]** が表示されていない場合は、 **[表示]** メニューから開くことができます。
 
-2. **[リソース ビュー]** を展開して、 **[ストリング テーブル]** フォルダーを選択します。 そのフォルダーを展開し、 **[ストリング テーブル]** エントリをダブルクリックします。
+1. **[リソース ビュー]** を展開して、 **[ストリング テーブル]** フォルダーを選択します。 そのフォルダーを展開し、 **[ストリング テーブル]** エントリをダブルクリックします。
 
-3. ストリング テーブルの一番下までスクロールし、新しいエントリを追加します。 ID を `TEMP_LINE1`に変更します。 キャプションを「 **Command Line 1**」に設定します。
+1. ストリング テーブルの一番下までスクロールし、新しいエントリを追加します。 ID を `TEMP_LINE1`に変更します。 キャプションを「 **Command Line 1**」に設定します。
 
-4. 新しいエントリをもう 1 つ追加します。 ID を `TEMP_LINE2`に変更します。 キャプションを「 **Command Line 2**」に設定します。
+1. 新しいエントリをもう 1 つ追加します。 ID を `TEMP_LINE2`に変更します。 キャプションを「 **Command Line 2**」に設定します。
 
-5. MyProject.cpp に戻ります。
+1. MyProject.cpp に戻ります。
 
-6. `CString emptyString;`の後に、次のコードを追加します。
+1. `CString emptyString;`の後に、次のコードを追加します。
 
     ```cpp
     CString expandedLabel("Hide extra information");
@@ -120,7 +120,7 @@ ms.locfileid: "46420485"
     CString expansionInfo("This is the additional information to the user,\nextended over two lines.");
     ```
 
-7. `taskDialog.DoModal()` ステートメントを探し、そのステートメントを次のコードに置き換えます。 このコードによってタスク ダイアログ ボックスが更新され、新しいコントロールが追加されます。
+1. `taskDialog.DoModal()` ステートメントを探し、そのステートメントを次のコードに置き換えます。 このコードによってタスク ダイアログ ボックスが更新され、新しいコントロールが追加されます。
 
     ```cpp
     taskDialog.SetMainInstruction(L"Warning");
@@ -133,13 +133,13 @@ ms.locfileid: "46420485"
     taskDialog.SetVerificationCheckboxText(L"Remember your selection");
     ```
 
-8. ユーザーにタスク ダイアログ ボックスを表示し、ユーザーの選択内容を取得する次のコード行を追加します。
+1. ユーザーにタスク ダイアログ ボックスを表示し、ユーザーの選択内容を取得する次のコード行を追加します。
 
     ```cpp
     INT_PTR result = taskDialog.DoModal();
     ```
 
-9. 次のコードを `taskDialog.DoModal()`の呼び出しの後に挿入します。 このコード セクションで、ユーザーの入力が処理されます。
+1. 次のコードを `taskDialog.DoModal()`の呼び出しの後に挿入します。 このコード セクションで、ユーザーの入力が処理されます。
 
     ```cpp
     if (taskDialog.GetVerificationCheckboxState())
@@ -171,7 +171,7 @@ ms.locfileid: "46420485"
     }
     ```
 
-手順 9. のコード内で、PROCESS IF で始まるコメント行を、指定された条件で実行するコードに置き換えます。
+手順 9 でのコードで始まるコメントを置き換える`PROCESS IF`を指定された条件下で実行するコードにします。
 
 アプリケーションをコンパイルして実行します。 新しいコントロールと追加した情報を使用するタスク ダイアログ ボックスが表示されます。
 
@@ -183,9 +183,9 @@ ms.locfileid: "46420485"
 
 1. MyProject.cpp ファイルが開いていない場合は、そのファイルを開きます。
 
-2. `if (CTaskDialog::IsSupported())` ステートメントの右角かっこにカーソルを移動します。
+1. `if (CTaskDialog::IsSupported())` ステートメントの右角かっこにカーソルを移動します。
 
-3. `if` ステートメントの右角かっこの直前 ( `else` ブロックの前) に、次のコードを挿入します。
+1. `if` ステートメントの右角かっこの直前 ( `else` ブロックの前) に、次のコードを挿入します。
 
     ```cpp
     HRESULT result2 = CTaskDialog::ShowDialog(L"My error message",
@@ -195,7 +195,7 @@ ms.locfileid: "46420485"
         TEMP_LINE2);
     ```
 
-アプリケーションをコンパイルして実行します。 2 つのタスク ダイアログ ボックスが表示されます。 最初のダイアログ ボックスは「CTaskDialog に機能を追加するには」の手順で作成したものです。今回の手順で作成したのは 2 番目のダイアログ ボックスです。
+アプリケーションをコンパイルして実行します。 2 つのタスク ダイアログ ボックスが表示されます。 最初のダイアログ ボックスが、**機能への CTaskDialog の追加を**プロシージャ; 2 番目のダイアログ ボックスは、前の手順から。
 
 上記の例では、 `CTaskDialog`で使用できるオプションの一部しか紹介していませんが、開発を始めるうえで参考になるでしょう。 このクラスの詳細については、「 [CTaskDialog Class](../mfc/reference/ctaskdialog-class.md) 」を参照してください。
 

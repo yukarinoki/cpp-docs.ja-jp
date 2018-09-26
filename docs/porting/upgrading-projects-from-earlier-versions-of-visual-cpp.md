@@ -15,14 +15,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed8a8ab088f3fbb10b5f477d125dbf3f2a7ac932
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 8091bbba7dcee344677c54a7944708679f2ff867
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578209"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46411847"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>旧バージョンの Visual C++ からのプロジェクトのアップグレード
+
 ほとんどの場合、旧バージョンの Visual Studio で作成されたプロジェクトを開くことができます。 ただし、こうしたプロジェクトは、開くときにアップグレードされます。 アップグレードされたプロジェクトを保存すると、旧バージョンの Visual Studio では開くことができなくなります。  
   
 > [!IMPORTANT]
@@ -44,7 +45,7 @@ ms.locfileid: "42578209"
   
 ## <a name="see-also"></a>参照  
 
-[ビルド システムの変更点](../build/build-system-changes.md)  
-[Visual Studio 2017 での Visual C++ の新機能](../what-s-new-for-visual-cpp-in-visual-studio.md) 
-[Visual C++ の変更履歴 (2003 ～ 2015 年)](../porting/visual-cpp-change-history-2003-2015.md)   
+[ビルド システムの変更点](../build/build-system-changes.md)<br/>
+[Visual Studio 2017 の Visual C++ の新機能](../what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[2003 から 2015 の Visual C++ の履歴の変更](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [非標準動作](../cpp/nonstandard-behavior.md)

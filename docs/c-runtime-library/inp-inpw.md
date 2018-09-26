@@ -30,18 +30,19 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1049965d7edd880027eaff264fffe56fc1cdb1f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8734f2dbca04287652a6a59f633f8c872f2b00a1
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32388923"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46040987"
 ---
 # <a name="inp-inpw"></a>inp、inpw
-これらの POSIX 関数は非推奨とされました。 代わりに、ISO C++ に準拠する [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) を使用します。  
-  
+
+これらの POSIX 関数は非推奨とされました。 代わりに、ISO C++ に準拠する [_inp, _inpw, _inpd](../c-runtime-library/inp-inpw-inpd.md) を使用します。
+
 > [!IMPORTANT]
->  これらは古い関数です。 Visual Studio 2015 以降では、CRT で使用できません。  
-  
+>  これらは古い関数です。 Visual Studio 2015 以降では、CRT で使用できません。
+
 > [!IMPORTANT]
 >  この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。

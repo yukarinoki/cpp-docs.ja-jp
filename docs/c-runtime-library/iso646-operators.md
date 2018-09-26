@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94f95a824dfe2e2e0c3e5193ad125dfc9744af2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1105541fc0d048554cfe65408d1bb7451b59a381
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32392433"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46097719"
 ---
 # <a name="iso646-operators"></a>ISO646 の演算子
 
@@ -42,4 +42,4 @@ ms.locfileid: "32392433"
 ## <a name="see-also"></a>参照
 
 [国際化](../c-runtime-library/internationalization.md)<br/>
- [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

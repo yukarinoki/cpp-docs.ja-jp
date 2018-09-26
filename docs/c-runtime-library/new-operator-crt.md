@@ -25,12 +25,13 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd143c97a95ebe5f1e156a469c1536ae762c0c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9ad3531403542ab0b8a553865f2da1d80dd0cd96
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32389872"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46026570"
 ---
 # <a name="operator-newcrt"></a>演算子 new(CRT)
-Visual Studio 2013 以降では、Universal C ランタイム (UCRT) で C++ 固有の演算子 new と演算子の delete 関数が使用できなくなりました。 現在は、C++ 標準ライブラリに組み込まれています。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../cpp/new-and-delete-operators.md)」と「[new 演算子](../cpp/new-operator-cpp.md)」の説明をご覧ください。 
+
+Visual Studio 2013 以降では、Universal C ランタイム (UCRT) で C++ 固有の演算子 new と演算子の delete 関数が使用できなくなりました。 現在は、C++ 標準ライブラリに組み込まれています。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../cpp/new-and-delete-operators.md)」と「[new 演算子](../cpp/new-operator-cpp.md)」の説明をご覧ください。

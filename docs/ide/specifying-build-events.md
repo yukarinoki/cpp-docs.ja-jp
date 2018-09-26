@@ -25,12 +25,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5940f0d6efaec402a4a85ed659f42d7eab1bf91d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: dfdedf01c6203c483c1aa30d5d2934caa66e76d2
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33334965"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46375969"
 ---
 # <a name="specifying-build-events"></a>ビルド イベントの指定
 
@@ -64,6 +64,6 @@ ms.locfileid: "33334965"
 
 ## <a name="see-also"></a>関連項目
 
-[カスタム ビルド ステップとビルド イベントについて](../ide/understanding-custom-build-steps-and-build-events.md)  
-[ビルドのコマンドとプロパティの共通マクロ](../ide/common-macros-for-build-commands-and-properties.md)  
-[ビルドのカスタマイズのトラブルシューティング](../ide/troubleshooting-build-customizations.md)  
+[カスタム ビルド ステップとビルド イベントについて](../ide/understanding-custom-build-steps-and-build-events.md)<br>
+[ビルドのコマンドとプロパティの共通マクロ](../ide/common-macros-for-build-commands-and-properties.md)<br>
+[ビルドのカスタマイズのトラブルシューティング](../ide/troubleshooting-build-customizations.md)

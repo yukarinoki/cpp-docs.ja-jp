@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df30bdea71a890eed25f546a53e7f329fa330762
-ms.sourcegitcommit: f7703076b850c717c33d72fb0755fbb2215c5ddc
+ms.openlocfilehash: d4e7742afd3fecc4dd115624da0c1650dc662004
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2018
-ms.locfileid: "43132021"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46412523"
 ---
 # <a name="ide-and-tools-for-visual-c-development"></a>IDE と Visual C++ 開発用ツール
 
@@ -29,7 +29,7 @@ Visual Studio IDE の共有ツールに加えて、MSVC には、ネイティブ
 
 ## <a name="creating-a-solution-and-projects"></a>ソリューションとプロジェクトの作成
 
-*プロジェクト* は基本的には、実行可能ファイルに組み込まれている、イメージやデータ ファイルなどの一連のソース コード ファイルとリソースです。 
+*プロジェクト* は基本的には、実行可能ファイルに組み込まれている、イメージやデータ ファイルなどの一連のソース コード ファイルとリソースです。
 
 Visual Studio 2015 では、MSBuild プロジェクトのサポートを提供します。 Qt や CMake などの他のビルド システム向けの Visual Studio 拡張機能をダウンロードすることができます。
 
@@ -119,7 +119,7 @@ Visual Studio には、[C++ Core Guidelines](https://github.com/isocpp/CppCoreGu
 
 ## <a name="deploy-completed-applications"></a>完成したアプリケーションの配置
 
-UWP アプリは、Microsoft Store の **[プロジェクト]** > **[ストア]** メニュー オプションを通じて顧客向けに配置できます。 CRT の配置は、水面下で自動的に処理されます。 詳細については、「[Publish Windows apps and games](/windows/uwp/publish/)」(Windows のアプリとゲームを公開する) を参照してください。 
+UWP アプリは、Microsoft Store の **[プロジェクト]** > **[ストア]** メニュー オプションを通じて顧客向けに配置できます。 CRT の配置は、水面下で自動的に処理されます。 詳細については、「[Publish Windows apps and games](/windows/uwp/publish/)」(Windows のアプリとゲームを公開する) を参照してください。
 
 ネイティブ C++ デスクトップ アプリケーションを別のコンピューターに配置する場合、アプリケーション自体と、そのアプリケーションが依存するすべてのライブラリ ファイルをインストールする必要があります。 アプリケーションと共にユニバーサル C++ ランタイム (UCRT) を配置する方法として、集中配置、ローカル配置、静的リンクの 3 とおりの方法があります。 詳細については、「[デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)」を参照してください。
 

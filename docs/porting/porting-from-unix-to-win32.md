@@ -20,14 +20,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18217b1d4574f6591287ab6cb83e28c67fe95537
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a5dddac6d5e8b5be1b99d9c8004fcaa36d6b0b30
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43218125"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394037"
 ---
 # <a name="porting-from-unix-to-win32"></a>UNIX から Win32 への移植
+
 アプリケーションを UNIX から Windows に移行するときにいくつかのオプションがあります。  
   
 - UNIX のライブラリを使用して UNIX から Win32 にアプリケーションを移植する  
@@ -84,6 +85,6 @@ UNIX プログラマが確認するもう 1 つのオプション は、Windows 
   
 ## <a name="see-also"></a>参照  
  
-[Visual C++ 移植とアップグレードのガイド](visual-cpp-change-history-2003-2015.md)   
-[UNIX](../c-runtime-library/unix.md)   
+[Visual C++ 移植とアップグレードのガイド](visual-cpp-change-history-2003-2015.md)<br/>
+[UNIX](../c-runtime-library/unix.md)<br/>
 [推論規則](../build/inference-rules.md)

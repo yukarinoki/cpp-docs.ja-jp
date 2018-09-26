@@ -1,28 +1,36 @@
 ---
 title: Module::methodreleasenotifier クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Module::MethodReleaseNotifier
+- module/Microsoft::WRL::Module::MethodReleaseNotifier::Invoke
+- module/Microsoft::WRL::Module::MethodReleaseNotifier::method_
+- module/Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier
+- module/Microsoft::WRL::Module::MethodReleaseNotifier::object_
 dev_langs:
 - C++
 helpviewer_keywords:
-- MethodReleaseNotifier class
+- Microsoft::WRL::Module::MethodReleaseNotifier class
+- Microsoft::WRL::Module::MethodReleaseNotifier::Invoke method
+- Microsoft::WRL::Module::MethodReleaseNotifier::method_ data member
+- Microsoft::WRL::Module::MethodReleaseNotifier::MethodReleaseNotifier, constructor
+- Microsoft::WRL::Module::MethodReleaseNotifier::object_ data member
 ms.assetid: 5c2902be-964b-488f-9f1c-adf504995cbc
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e223ce02fa8a50ac39298d1f45f1f531dbf1f97
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e78542e016ab0ba8ef33a5655b72fcdff45ccc4
+ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411327"
+ms.lasthandoff: 09/20/2018
+ms.locfileid: "46494453"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier クラス
 
@@ -44,22 +52,22 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
-|----------|-----------------|
-|[Module::MethodReleaseNotifier::MethodReleaseNotifier コンストラクター](../windows/module-methodreleasenotifier-methodreleasenotifier-constructor.md)|新しいインスタンスを初期化、 **module::methodreleasenotifier**クラス。|
+名前                                                                                                 | 説明
+---------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------
+[Module::MethodReleaseNotifier::MethodReleaseNotifier](#methodreleasenotifier-methodreleasenotifier) | `Module::MethodReleaseNotifier` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[Module::MethodReleaseNotifier::Invoke メソッド](../windows/module-methodreleasenotifier-invoke-method.md)|現在関連付けられているイベント ハンドラーを呼び出す**module::methodreleasenotifier**オブジェクト。|
+名前                                                                   | 説明
+---------------------------------------------------------------------- | -------------------------------------------------------------------------------------------
+[Module::methodreleasenotifier:: 呼び出し](#methodreleasenotifier-invoke) | 現在関連付けられているイベント ハンドラーを呼び出す`Module::MethodReleaseNotifier`オブジェクト。
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
-|名前|説明|
-|----------|-----------------|
-|[Module::MethodReleaseNotifier::method_ データ メンバー](../windows/module-methodreleasenotifier-method-data-member.md)|現在のイベント ハンドラーへのポインターを保持**module::methodreleasenotifier**オブジェクト。|
-|[Module::MethodReleaseNotifier::object_ データ メンバー](../windows/module-methodreleasenotifier-object-data-member.md)|メンバー関数は、現在のイベント ハンドラー オブジェクトへのポインターを保持**module::methodreleasenotifier**オブジェクト。|
+名前                                                                    | 説明
+----------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------
+[Module::MethodReleaseNotifier::method_](#methodreleasenotifier-method) | 現在のイベント ハンドラーへのポインターを保持`Module::MethodReleaseNotifier`オブジェクト。
+[Module::MethodReleaseNotifier::object_](#methodreleasenotifier-object) | メンバー関数は、現在のイベント ハンドラー オブジェクトへのポインターを保持`Module::MethodReleaseNotifier`オブジェクト。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -73,6 +81,50 @@ class MethodReleaseNotifier : public ReleaseNotifier;
 
 **名前空間:** Microsoft::WRL
 
-## <a name="see-also"></a>関連項目
+## <a name="methodreleasenotifier-invoke"></a>Module::methodreleasenotifier:: 呼び出し
 
-[Module クラス](../windows/module-class.md)
+現在関連付けられているイベント ハンドラーを呼び出す`Module::MethodReleaseNotifier`オブジェクト。
+
+```cpp
+void Invoke();
+```
+
+## <a name="methodreleasenotifier-method"></a>Module::MethodReleaseNotifier::method_
+
+現在のイベント ハンドラーへのポインターを保持`Module::MethodReleaseNotifier`オブジェクト。
+
+```cpp
+void (T::* method_)();
+```
+
+## <a name="methodreleasenotifier-methodreleasenotifier"></a>Module::MethodReleaseNotifier::MethodReleaseNotifier
+
+`Module::MethodReleaseNotifier` クラスの新しいインスタンスを初期化します。
+
+```cpp
+MethodReleaseNotifier(
+   _In_ T* object,
+   _In_ void (T::* method)(),
+   bool release) throw() :
+            ReleaseNotifier(release), object_(object),
+            method_(method);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*object*  
+メンバー関数は、イベント ハンドラー オブジェクト。
+
+*method*  
+パラメーターのメンバー関数は、*オブジェクト*イベント ハンドラーは。
+
+*release*  
+指定`true`、基になる呼び出しを有効にする[モジュール:: ReleaseNotifier::Release()](../windows/module-releasenotifier-class.md#releasenotifier-release)メソッド。 それ以外の場合、指定`false`します。
+
+## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
+
+メンバー関数は、現在のイベント ハンドラー オブジェクトへのポインターを保持`Module::MethodReleaseNotifier`オブジェクト。
+
+```cpp
+T* object_;
+```

@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4d46582266234b4208a768fc7b2045af824349
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18e0750a2c0b8747da432efd9fc465b83e01a490
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32391419"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46018276"
 ---
 # <a name="console-and-port-io"></a>コンソール入出力とポート入出力
 
@@ -55,4 +55,4 @@ ms.locfileid: "32391419"
 ## <a name="see-also"></a>参照
 
 [入出力](../c-runtime-library/input-and-output.md)<br/>
- [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
+[カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

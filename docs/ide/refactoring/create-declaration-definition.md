@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60d583ec47a3f9c5b61599a5945e3cfa0d375b1d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 383691a5c2da2af6e4a992ab8766cd99ffa3d781
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33331284"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46408389"
 ---
 # <a name="create-declaration--definition"></a>宣言/定義の作成
 **機能:** 関数の宣言または定義をすぐに生成できます。
 
-**条件:** 宣言を必要とする関数があるときか、関数を必要とする宣言があるとき。  
+**条件:** 宣言を必要とする関数があるときか、関数を必要とする宣言があるとき。
 
 **理由:** 宣言/定義は手動で作成できますが、この機能では自動で作成され、必要に応じて、ヘッダー/コード ファイルが作成されます。
 

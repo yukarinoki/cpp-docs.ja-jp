@@ -10,17 +10,17 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f913f0b3065b136f626ef15cc2a77dce8d0254f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0007cf50eafa7b61e48b550172eb2d316270c61f
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33335092"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46448332"
 ---
 # <a name="change-signature"></a>シグネチャの変更
 **機能:** 関数のパラメーターを変更できます。
 
-**条件:** さまざまな場所で現在使用されている関数のパラメーターを並べ替え、追加、削除、変更するとき。  
+**条件:** さまざまな場所で現在使用されている関数のパラメーターを並べ替え、追加、削除、変更するとき。
 
 **理由:** パラメーターは自分で手動変更し、その関数の呼び出しをすべて検索し、1 つずつ変更できますが、その方法ではエラーにつながることがあります。  このリファクタリング ツールは、タスクを自動的に実行します。
 

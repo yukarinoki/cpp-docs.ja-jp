@@ -15,16 +15,16 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: bbc19b4c8e698c520be2283376ac5297cdae33df
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 88f5ef5379d597a81456dab7f3dd28a73a4df84b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900513"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46394921"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake プロジェクトを構成する
 
-**Visual Studio 2017 バージョン 15.4 以降**  
+**Visual Studio 2017 バージョン 15.4 以降**<br/>
 Visual Studio に Linux C++ ワークロードをインストールすると、Linux の CMake サポートが既定で選択されます。 Visual Studio プロジェクトに変換しなくても、CMake を利用する既存のコード ベースで作業できるようになりました。 コード ベースがクロス プラットフォームの場合、Visual Studio 内から Windows と Linux の両方をターゲット設定できます。
 
 このトピックは、Visual Studio の CMake サポートに関する基本的な知識が読者にあるものとして作成されています。 詳細については、「[CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md)」 (Visual C++ の CMake ツール) をご覧ください。 CMake 自体の詳細については、「[Build, Test and Package Your Software With CMake](https://cmake.org/)」 (CMake でソフトウェアをビルド、テスト、パッケージ化する) を参照してください。
@@ -65,7 +65,7 @@ Linux ターゲットを指定すると、ソースが Linux マシンにコピ�
 
 ![Linux で CMake キャッシュを生成する](media/cmake-linux-1.png "Linux で CMake キャッシュを生成する")
 
-**Visual Studio 2017 バージョン 15.7 以降:**  
+**Visual Studio 2017 バージョン 15.7 以降:**<br/>
 リモート ヘッダーの IntelliSense サポートを提供するため、Visual Studio によってローカルの Windows コンピューター上のディレクトリに自動的にコピーされます。 詳細については、[リモート ヘッダーの IntelliSense](configure-a-linux-project.md#remote_intellisense) のセクションを参照してください。
 
 ## <a name="debug-the-project"></a>プロジェクトをデバッグする
@@ -164,5 +164,5 @@ cmake -E capabilities
 
 ## <a name="see-also"></a>参照
 
-[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)  
+[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)<br/>
 [Visual C++ 用の CMake ツール](../ide/cmake-tools-for-visual-cpp.md)  

@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c1dc831dff6d1e3dbef4fc762712e8125a5b20e1
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c24ed9328f77d26a8ad11a6ff6bdbf47bad9fbe3
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339710"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46381414"
 ---
 # <a name="property-pages-visual-c"></a>プロパティ ページ (Visual C++)
 
@@ -117,7 +117,7 @@ Windows 以外のプロジェクトについては、「[Linux C++ Property Page
 
 [[リンカー] プロパティ ページ](../ide/linker-property-pages.md)
 
-[[マネージ リソース] プロパティ ページ](../ide/managed-resources-property-page.md)
+[[マネージド リソース] プロパティ ページ](../ide/managed-resources-property-page.md)
 
 [[マニフェスト ツール] プロパティ ページ](../ide/manifest-tool-property-pages.md)
 
@@ -143,5 +143,5 @@ Windows 以外のプロジェクトについては、「[Linux C++ Property Page
 
 ## <a name="see-also"></a>関連項目
 
-[方法 : プロジェクトの依存関係を作成および削除する](/visualstudio/ide/how-to-create-and-remove-project-dependencies)  
-[方法 : 構成を作成および編集する](/visualstudio/ide/how-to-create-and-edit-configurations)  
+[方法 : プロジェクトの依存関係を作成および削除する](/visualstudio/ide/how-to-create-and-remove-project-dependencies)<br>
+[方法 : 構成を作成および編集する](/visualstudio/ide/how-to-create-and-edit-configurations)

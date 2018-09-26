@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 019e63009706fd5d0ab22044642449c5bce3c3a6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 84aded46176c1c286ce5270254a0455dfce39d5d
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222382"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427879"
 ---
 # <a name="porting-guide-spy"></a>移植のガイド: Spy++
+
 この移植のケース スタディは、一般的な移植プロジェクトのアイデア、発生する可能性がある問題の種類、および移植の問題に対応するための一般的なヒントとコツを理解できるように設計されています。 プロジェクトの移植に関するエクスペリエンスは、コードの仕様により大きく依存するため、移植をわかりやすく案内するためのものではありません。  
   
 ## <a name="spy"></a>Spy++  
@@ -74,7 +75,7 @@ C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\atlmfc\include\afxv_w32.h
   
 Windows XP は Microsoft によってサポートされなくなったので、Visual Studio 2015 で対象にすることが許可されていても、アプリケーションでのサポートを段階的に停止し、新しいバージョンの Windows を採用するようユーザーに推奨してください。  
   
- エラーを解消するには、**[プロジェクトのプロパティ]** の設定を、現在対象にしている Windows の最小バージョンに更新します。 さまざまな Windows リリースの値を示した表については、[ここ](/windows/desktop/WinProg/using-the-windows-headers)を参照してください。  
+エラーを解消するには、**[プロジェクトのプロパティ]** の設定を、現在対象にしている Windows の最小バージョンに更新します。 さまざまな Windows リリースの値を示した表については、[ここ](/windows/desktop/WinProg/using-the-windows-headers)を参照してください。  
   
 stdafx.h ファイルには、これらのマクロ定義のいくつかが含まれていました。  
   
@@ -551,7 +552,7 @@ wsprintf(szTmp, _T("%d.%2.2d.%4.4d"), rmj, rmm, rup);
   
 _T マクロでは、MBCS または UNICODE の設定に応じて、**char** 文字列または **wchar_t** 文字列として文字列リテラルをコンパイルするという効果があります。 Visual Studio ですべての文字列を with _T に置き換えるには、最初に **[クイック置換]** (キーボード: **Ctrl**+**F**) ボックスまたは **[フォルダーを指定して置換]** (キーボード: **Ctrl**+**Shift**+**H**) を開いてから、**[正規表現の使用]** チェック ボックスを選択します。 `((\".*?\")|('.+?'))` を検索文字列として入力し、`_T($1)` を置換テキストとして入力します。 _T マクロが既に一部の文字列の周囲にある場合は、この手順でもう一度追加され、`#include` を使用しているときなど、_T が必要ないケースもあるため、**[すべて置換]** ではなく、**[次を置換]** を使用してください。  
   
- この特定の関数 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) は、実際に Windows のヘッダーで定義されていて、これに関するドキュメントでは、バッファー オーバーランの可能性があるため、使用しないことが推奨されています。 `szTmp` バッファーに対してサイズが指定されていないため、書き込まれるすべてのデータをバッファーが保持できるか関数でチェックする方法はありません。 Secure CRT への移植については、次のセクションを参照してください。次のセクションでは他の同様の問題も修正します。 最後に [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) に置換して終了します。  
+この特定の関数 [wsprintf](/windows/desktop/api/winuser/nf-winuser-wsprintfa) は、実際に Windows のヘッダーで定義されていて、これに関するドキュメントでは、バッファー オーバーランの可能性があるため、使用しないことが推奨されています。 `szTmp` バッファーに対してサイズが指定されていないため、書き込まれるすべてのデータをバッファーが保持できるか関数でチェックする方法はありません。 Secure CRT への移植については、次のセクションを参照してください。次のセクションでは他の同様の問題も修正します。 最後に [_stprintf_s](../c-runtime-library/reference/sprintf-s-sprintf-s-l-swprintf-s-swprintf-s-l.md) に置換して終了します。  
   
 Unicode への変換でよく発生する別の一般的なエラーは、次のとおりです。  
   
@@ -680,5 +681,5 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
   
 ## <a name="see-also"></a>参照  
 
-[移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)   
+[移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [前のケース スタディ: COM Spy](../porting/porting-guide-com-spy.md)

@@ -6,7 +6,7 @@ ms.custom: mvc
 ms.date: 09/17/2018
 ms.topic: tutorial
 ms.technology:
-- devlang-C++
+- cpp-tools
 ms.devlang: C++
 dev_langs:
 - C++
@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c905df6fb406b9189bd46d20c6f199d3d90a722
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 80e84bb7c81ccd9c3347989e68041125993ee73c
+ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441942"
+ms.lasthandoff: 09/24/2018
+ms.locfileid: "47029633"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ のサポートをインストール
 

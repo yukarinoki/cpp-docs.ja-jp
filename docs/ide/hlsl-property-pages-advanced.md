@@ -15,24 +15,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58dca91d5ab3bf0cf28d30a04d33ae8bf5819401
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: fa1a15f6542da165b615970591f384b875dd588b
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33321195"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46444555"
 ---
 # <a name="hlsl-property-pages-advanced"></a>[詳細] ([HLSL] プロパティ ページ)
-HLSL コンパイラ (fxc.exe) の次のプロパティを構成するには、その **[詳細]** プロパティ ページを使用します。 HLSL フォルダーの **[詳細]** プロパティ ページにアクセスする方法については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
-  
-## <a name="uielement-list"></a>UIElement の一覧  
- **著作権情報の非表示**  
- 著作権情報および情報メッセージを非表示にする場合は、**[はい (/nologo)]**、それ以外の場合は、**[いいえ]**。 既定のこの値は **[はい (/nologo)]**。  
-  
- **警告をエラーとして扱う**  
- コンパイラが生成する警告をすべてエラーと見なす場合は、**[はい (/WX)]**、それ以外の場合は、**[いいえ]**。  
-  
-## <a name="see-also"></a>参照  
- [[HLSL] プロパティ ページ](../ide/hlsl-property-pages.md)   
- [[全般] ([HLSL] プロパティ ページ)](../ide/hlsl-property-pages-general.md)   
- [[HLSL] プロパティ ページ: 出力ファイル](../ide/hlsl-property-pages-output-files.md)
+
+HLSL コンパイラ (fxc.exe) の次のプロパティを構成するには、その **[詳細]** プロパティ ページを使用します。 HLSL フォルダーの **[詳細]** プロパティ ページにアクセスする方法については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。
+
+## <a name="uielement-list"></a>UIElement の一覧
+
+- **著作権情報の非表示**
+
+   著作権情報および情報メッセージを非表示にする場合は、**[はい (/nologo)]**、それ以外の場合は、**[いいえ]**。 既定のこの値は **[はい (/nologo)]**。
+
+- **警告をエラーとして扱う**
+
+   コンパイラが生成する警告をすべてエラーと見なす場合は、**[はい (/WX)]**、それ以外の場合は、**[いいえ]**。
+
+## <a name="see-also"></a>参照
+
+[[HLSL] プロパティ ページ](../ide/hlsl-property-pages.md)<br>
+[[全般] ([HLSL] プロパティ ページ)](../ide/hlsl-property-pages-general.md)<br>
+[[HLSL] プロパティ ページ: 出力ファイル](../ide/hlsl-property-pages-output-files.md)
