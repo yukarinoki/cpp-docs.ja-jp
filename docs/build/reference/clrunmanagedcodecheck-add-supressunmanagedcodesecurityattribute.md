@@ -1,5 +1,5 @@
 ---
-title: /CLRUNMANAGEDCODECHECK (Supressunmanagedcodesecurityattribute) |Microsoft ドキュメント
+title: /CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute を追加) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -17,48 +17,48 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d0a70ea74851d3a10f9d46b8289098d6fb3fe22
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
+ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705375"
+ms.lasthandoff: 09/28/2018
+ms.locfileid: "47429762"
 ---
-# <a name="clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (SupressUnmanagedCodeSecurityAttribute の追加)
+# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute を追加)
 
-**/CLRUNMANAGEDCODECHECK**リンカーを適用するかどうかを指定<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>リンカーによって生成されたに`PInvoke`マネージ コードからネイティブ Dll への呼び出しです。
+**/CLRUNMANAGEDCODECHECK**リンカーが適用されるかどうかを指定します。<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>リンカーによって生成されたに`PInvoke`マネージ コードからネイティブ Dll への呼び出し。
 
 ## <a name="syntax"></a>構文
 
-> **/CLRUNMANAGEDCODECHECK****[: いいえ]**
+> **/CLRUNMANAGEDCODECHECK****[: NO]**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-既定では、リンカーが適用されます、 **SuppressUnmanagedCodeSecurityAttribute**リンカーによって生成されたに`PInvoke`呼び出しです。 ときに **/CLRUNMANAGEDCODECHECK**が有効で**SuppressUnmanagedCodeSecurityAttribute**は適用されません。
+既定では、リンカーが適用されます、 **SuppressUnmanagedCodeSecurityAttribute**リンカーによって生成されたに`PInvoke`呼び出し。 ときに **/CLRUNMANAGEDCODECHECK**が有効で**SuppressUnmanagedCodeSecurityAttribute**は適用されません。
 
-リンカーは、コンパイルされたオブジェクトに属性を追加するだけ **/clr**または **/clr: 純粋な**します。 ただし、 **/clr: 純粋な**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+リンカーは、コンパイルされたオブジェクトに属性を追加するだけ **/clr**または **/clr: 純粋な**します。 ただし、 **/clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-A`PInvoke`呼び出しは、リンカーは、マネージ呼び出し元からの参照を満たすためにマネージ シンボルを検索することはできませんが、その参照を満たすためにネイティブ シンボルを検索することができる場合、リンカーによって生成されます。 詳細については`PInvoke`を参照してください[マネージ コードからネイティブ関数を呼び出して](../../dotnet/calling-native-functions-from-managed-code.md)です。
+A`PInvoke`リンカーは、マネージ呼び出し元からの参照を満たすためにマネージ シンボルを見つけることができませんが、その参照を満たすためにネイティブのシンボルを検索できる場合に呼び出しがリンカーによって生成されます。 詳細については`PInvoke`を参照してください[マネージ コードからネイティブ関数の呼び出し](../../dotnet/calling-native-functions-from-managed-code.md)します。
 
-使用する場合は、 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> 、コードでは明示的に設定する **/CLRUNMANAGEDCODECHECK**です。 イメージに、SuppressUnmanagedCodeSecurity と AllowPartiallyTrustedCallers 属性が含まれている場合は、潜在的なセキュリティの脆弱性を勧めします。
+使用する場合に注意する<xref:System.Security.AllowPartiallyTrustedCallersAttribute>、コードにする必要があります明示的に設定する **/CLRUNMANAGEDCODECHECK**します。 イメージには、SuppressUnmanagedCodeSecurity と AllowPartiallyTrustedCallers 属性が含まれている場合は、潜在的なセキュリティの脆弱性を勧めします。
 
-参照してください[安全なコーディングのガイドライン、アンマネージ コード](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)を使用する場合の影響の詳細については**SuppressUnmanagedCodeSecurityAttribute**です。
+参照してください[アンマネージ コードのコーディング ガイドラインをセキュリティで保護された](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)を使用する影響の詳細については**SuppressUnmanagedCodeSecurityAttribute**します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[のプロジェクト プロパティの操作](../../ide/working-with-project-properties.md)です。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
-1. 展開して、**構成プロパティ**ノード。
+1. **[構成プロパティ]** ノードを展開します。
 
-1. 展開して、**リンカー**ノード。
+1. 展開、**リンカー**ノード。
 
 1. 選択、**詳細**プロパティ ページ。
 
-1. 変更、 **CLR アンマネージ コード チェック**プロパティです。
+1. 変更、 **CLR アンマネージド コード チェック**プロパティ。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-1. 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>」を参照してください。
+1. 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.CLRUnmanagedCodeCheck%2A>
 
 ## <a name="see-also"></a>関連項目
 
