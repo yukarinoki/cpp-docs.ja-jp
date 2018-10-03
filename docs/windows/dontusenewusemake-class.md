@@ -1,28 +1,30 @@
 ---
 title: DontUseNewUseMake クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::DontUseNewUseMake
+- implements/Microsoft::WRL::Details::DontUseNewUseMake::operator new
 dev_langs:
 - C++
 helpviewer_keywords:
-- DontUseNewUseMake class
+- Microsoft::WRL::Details::DontUseNewUseMake class
+- Microsoft::WRL::Details::DontUseNewUseMake::operator new operator
 ms.assetid: 8b38d07b-fc14-4cea-afb9-4c1a7dde0093
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dc2b2f03cfbd488de8358b2e4b123716efcbfe15
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9c1f3a57401a3ab2efd45cab2dace127010c24e6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431310"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235283"
 ---
 # <a name="dontusenewusemake-class"></a>DontUseNewUseMake クラス
 
@@ -36,15 +38,15 @@ class DontUseNewUseMake;
 
 ## <a name="remarks"></a>Remarks
 
-演算子を使用できないように**新しい**で`RuntimeClass`します。 したがって、使用する必要があります、[関数](../windows/make-function.md)代わりにします。
+演算子を使用できないように`new`で`RuntimeClass`します。 したがって、使用する必要があります、[関数](../windows/make-function.md)代わりにします。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
-|----------|-----------------|
-|[DontUseNewUseMake::operator new 演算子](../windows/dontusenewusemake-operator-new-operator.md)|演算子をオーバー ロード**新しい**しで使用されていることを防ぎます`RuntimeClass`します。|
+名前                                             | 説明
+------------------------------------------------ | ---------------------------------------------------------------------------
+[Dontusenewusemake::operator 新しい](#operator-new) | 演算子をオーバー ロード`new`しで使用されていることを防ぎます`RuntimeClass`します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -56,7 +58,29 @@ class DontUseNewUseMake;
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>関連項目
+## <a name="operator-new"></a>Dontusenewusemake::operator 新しい
 
-[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)<br/>
-[Make 関数](../windows/make-function.md)
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+void* operator new(
+   size_t,
+   _In_ void* placement
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*_ _unnamed0*<br/>
+割り当てるメモリのバイト数を指定する名前のないパラメーター。
+
+*placement*<br/>
+割り当てられる型。
+
+### <a name="return-value"></a>戻り値
+
+演算子をオーバー ロードする場合は、追加の引数を渡す方法を提供します`new`します。
+
+### <a name="remarks"></a>Remarks
+
+演算子をオーバー ロード`new`しで使用されていることを防ぎます`RuntimeClass`します。

@@ -1,7 +1,7 @@
 ---
 title: ATL プロパティ ページ ウィザード |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b5a150a81ea26e34e05cbfb9199c734a1ccad9b7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 206fe83407421a7aabfd920214590a86e4727714
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094196"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250420"
 ---
 # <a name="atl-property-page-wizard"></a>ATL プロパティ ページ ウィザード
 
 このウィザード[ATL プロジェクトにプロパティ ページを追加します。](../../atl/reference/adding-an-atl-property-page.md)または ATL サポートを MFC プロジェクトへです。 ATL プロパティ ページのプロパティを設定するためのユーザー インターフェイスを提供する (またはメソッドの呼び出し) の 1 つまたは複数の COM オブジェクト。
+
+> [!WARNING]
+> Visual Studio 2017 バージョン 15.9 でこのコード ウィザードは非推奨し、Visual Studio の将来のバージョンで削除される予定です。 このウィザードはほとんど使用されません。 ATL と MFC の一般的なサポートは、このウィザードの削除による影響はありません。 この非推奨に関するご意見を共有する場合は、完了[このアンケート](https://www.surveymonkey.com/r/QDWKKCN)します。 ご意見、ご意見が重要です。
 
 ## <a name="remarks"></a>Remarks
 

@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 017dac5f9cba676980629109b53f4b2aec4af940
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 57f6e24ec664128a47813c29ce07a4272ce4a771
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713220"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250368"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page コンポーネント ウィザード
 
 このウィザードでは、Active Server Pages (ASP) コンポーネントをプロジェクトに挿入します。 Microsoft インターネット インフォメーション サービス (IIS) では、その強化された Web ページ開発アーキテクチャの一部として ASP のコンポーネントを使用します。
 
 このウィザードを使用して、コンポーネントのスレッド モデルとその集計のサポートを指定できます。 エラー情報インターフェイス、コネクション ポイント、および、フリー スレッドにマーシャ リングのサポートも指定できます。
+
+> [!WARNING]
+> Visual Studio 2017 バージョン 15.9 でこのコード ウィザードは非推奨し、Visual Studio の将来のバージョンで削除される予定です。 このウィザードはほとんど使用されません。 ATL と MFC の一般的なサポートは、このウィザードの削除による影響はありません。 この非推奨に関するご意見を共有する場合は、完了[このアンケート](https://www.surveymonkey.com/r/QDWKKCN)します。 ご意見、ご意見が重要です。
 
 ## <a name="remarks"></a>Remarks
 

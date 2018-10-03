@@ -1,7 +1,7 @@
 ---
 title: ATL COM + 1.0 コンポーネント ウィザード |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -17,18 +17,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dcf97c08680583dde686c68fb7e26f323e22716e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 102ec4f85c8915cf6afb70f03d470cec4e9e807f
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717913"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250407"
 ---
 # <a name="atl-com-10-component-wizard"></a>ATL COM+ 1.0 コンポーネント ウィザード
 
 このウィザードを使用すると、オブジェクトを COM + 1.0 サービス、トランザクションを含むをサポートするプロジェクトに追加します。
 
 オブジェクトがデュアル インターフェイスやオートメーションをサポートするかどうかを指定することができます。 エラー情報インターフェイス、オブジェクトの拡張コントロール、トランザクション、および非同期メッセージ キューのサポートも指定できます。
+
+> [!WARNING]
+> Visual Studio 2017 バージョン 15.9 でこのコード ウィザードは非推奨し、Visual Studio の将来のバージョンで削除される予定です。 このウィザードはほとんど使用されません。 ATL と MFC の一般的なサポートは、このウィザードの削除による影響はありません。 この非推奨に関するご意見を共有する場合は、完了[このアンケート](https://www.surveymonkey.com/r/QDWKKCN)します。 ご意見、ご意見が重要です。
 
 ## <a name="remarks"></a>Remarks
 

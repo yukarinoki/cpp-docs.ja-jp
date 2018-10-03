@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f46153400744b4a6d0350b97fa7158ea9f69c34
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 7a3be65e867c243bd6a32dd35dd3128872a1f8d1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38957109"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234113"
 ---
 # <a name="valuecompare-class"></a>value_compare クラス
 
@@ -31,16 +31,16 @@ ms.locfileid: "38957109"
 
 ```cpp
 class value_compare
- : std::public binary_function<value_type, value_type, bool>
+    : std::public binary_function<value_type, value_type, bool>
 {
 public:
     bool operator()(
-    const value_type& left,
-    const value_type& right) const
- {
-    return (comp(left.first, right.first));
+        const value_type& left,
+        const value_type& right) const
+    {
+        return (comp(left.first, right.first));
+    }
 
-}
 protected:
     value_compare(const key_compare& c) : comp (c) { }
     key_compare comp;
@@ -57,7 +57,7 @@ hash_set と hash_multiset (キーの値が要素の値を同一である単純�
 
 value_compare の宣言方法や使用方法の例については、[hash_map::value_comp](../standard-library/hash-map-class.md#value_comp) の例を参照してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** \<hash_map>
 

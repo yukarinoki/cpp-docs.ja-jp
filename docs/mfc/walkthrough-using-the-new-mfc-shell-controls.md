@@ -14,16 +14,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e1cffc9d1231cd9e8e91b445f05eb7dbbbc4ce4
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 47b169371b8551622650687e5d7bd8c06f560725
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169620"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236050"
 ---
 # <a name="walkthrough-using-the-new-mfc-shell-controls"></a>チュートリアル : 新しい MFC シェル コントロールの使用
 
-このチュートリアルでは、ファイル エクスプローラーのような外観のアプリケーションを作成します。 ここでは、2 つのペインのあるウィンドウを作成します。 左側のウィンドウには、 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)階層ビューで、デスクトップを表示するオブジェクト。 右側のウィンドウには、 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)左側のウィンドウで選択されているフォルダーにファイルを表示します。
+このチュートリアルでは、ファイル エクスプ ローラーのようなアプリケーションを作成します。 2 つのペインのあるウィンドウを作成します。 左側のウィンドウを保持する、 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)階層ビューで、デスクトップを表示するオブジェクト。 右側のウィンドウを保持する、 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)左側のウィンドウで選択されているフォルダーにファイルを表示します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -39,15 +39,15 @@ ms.locfileid: "47169620"
 
     1. **複合ドキュメント サポート**ペインで、 **None**します。
 
-    1. 変更を加えないでください、**ドキュメント テンプレート文字列**ウィンドウ。
+    1. 変更しないように、**ドキュメント テンプレート文字列**ウィンドウ。
 
-    1. **データベース サポート**ペイン (Visual Studio 2015 以前) を選択**None**このアプリケーションでは、データベースが使用されないためです。 
+    1. **データベース サポート** ウィンドウ (Visual Studio 2015 以前) を選択します**None**アプリケーションは、データベースを使用しないためです。 
 
     1. **ユーザー インターフェイス機能**ウィンドウで、ことを確認します、**メニュー バーとツールバーを使用して、** オプションを選択します。 その他のオプションはそのままにします。 
 
-    1. **高度な機能**ウィンドウで、**機能を高度な**、のみを選択します**ActiveX コントロール**と**コモン コントロール マニフェスト**。 **フレーム ウィンドウを高度な**、のみを選択、**ナビゲーション ウィンドウ**オプション。 これにより、ウィンドウの左側に、`CMFCShellTreeCtrl` が埋め込まれた状態でナビゲーション ウィンドウが作成されます。 
+    1. **高度な機能**ウィンドウで、**機能を高度な**、のみを選択します**ActiveX コントロール**と**コモン コントロール マニフェスト**。 **フレーム ウィンドウを高度な**、のみを選択、**ナビゲーション ウィンドウ**オプション。 ウィンドウの左側のウィンドウを作成するウィザードが発生、`CMFCShellTreeCtrl`埋め込まれています。 
 
-    1. 変更を加えることはできません、**生成されたクラス**ウィンドウ。 そのため、をクリックして**完了**新しい MFC プロジェクトを作成します。
+    1. 何も変更するつもり、**生成されたクラス** ウィンドウをクリックします**完了**新しい MFC プロジェクトを作成します。
 
 1. アプリケーションをビルドして実行することにより、アプリケーションが正常に作成されたことを確認します。 アプリケーションを構築する、**ビルド**メニューの **ソリューションのビルド**します。 アプリケーションが正常にビルドする場合を選択してアプリケーションを実行**デバッグの開始**から、**デバッグ**メニュー。
 
@@ -55,7 +55,7 @@ ms.locfileid: "47169620"
 
 ### <a name="to-add-the-shell-list-control-to-the-document-view"></a>シェル リスト コントロールをドキュメント ビューに追加するには
 
-1. ここでは、ウィザードによって作成されたビューに `CMFCShellListCtrl` のインスタンスを追加します。 ビューのヘッダー ファイルをダブルクリックして開きます**MFCShellControlsView.h**で、**ソリューション エクスプ ローラー**します。
+1. このセクションでは、インスタンスを追加します`CMFCShellListCtrl`ウィザードで作成したビューにします。 ビューのヘッダー ファイルをダブルクリックして開きます**MFCShellControlsView.h**で、**ソリューション エクスプ ローラー**します。
 
    ヘッダー ファイルの先頭部分にある `#pragma once` ディレクティブを探します。 その直後に、次のコードを追加して、`CMFCShellListCtrl` のヘッダー ファイルをインクルードします。
 
@@ -69,14 +69,14 @@ ms.locfileid: "47169620"
    // Generated message map functions
    ```
 
-   そのコメントの直前に、次のコードを追加します。
+   すぐに、そのコメントには、このコードを追加します。
 
    ```cpp
    private:
    CMFCShellListCtrl m_wndList;
    ```
 
-1. **MFC アプリケーション ウィザード**既に作成されて、`CMFCShellTreeCtrl`オブジェクト、`CMainFrame`クラスが、保護されたメンバーであります。 後で、このオブジェクトにアクセスします。 したがって、ここでアクセサーを作成します。 ダブルクリックして、MainFrm.h ヘッダー ファイルを開き、**ソリューション エクスプ ローラー**します。 次のコメントを探します。
+1. **MFC アプリケーション ウィザード**既に作成されて、`CMFCShellTreeCtrl`オブジェクト、`CMainFrame`がクラスのプロテクト メンバー。 後で、オブジェクトにアクセスをそのためのアクセサーを今すぐ作成おをします。 ダブルクリックして、MainFrm.h ヘッダー ファイルを開き、**ソリューション エクスプ ローラー**します。 次のコメントを探します。
 
    ```cpp
    // Attributes
@@ -100,9 +100,9 @@ ms.locfileid: "47169620"
 
 1. `CMFCShellControlsView` Windows メッセージを処理するように `WM_CREATE` クラスを更新します。 開く、**クラス ビュー**ウィンドウと選択、`CMFCShellControlsView`クラス。 右クリックして**プロパティ**します。
 
-    次に、**プロパティ**ウィンドウで、をクリックして、**メッセージ**アイコン。 スクロール ダウンして `WM_CREATE` メッセージを探します。 横のリスト ドロップダウンから`WM_CREATE`、 **\<追加 > OnCreate**します。 これにより、メッセージ ハンドラーが作成され、MFC メッセージ マップが自動的に更新されます。
+    次に、**プロパティ**ウィンドウで、をクリックして、**メッセージ**アイコン。 スクロール ダウンして `WM_CREATE` メッセージを探します。 次に、ドロップダウン リストからリスト`WM_CREATE`、 **\<追加 > OnCreate**します。 コマンドは、私たちにとってメッセージ ハンドラーを作成し、MFC メッセージ マップが自動的に更新します。
 
-   `OnCreate` メソッドで、独自の `CMFCShellListCtrl` オブジェクトを作成します。 MFCShellControlsView.cpp ソース ファイルで `OnCreate` メソッド定義を探し、その実装を次のコードに置き換えます。
+   `OnCreate`メソッドを今すぐ作成、`CMFCShellListCtrl`オブジェクト。 MFCShellControlsView.cpp ソース ファイルで `OnCreate` メソッド定義を探し、その実装を次のコードに置き換えます。
 
     ```cpp
     int CMFCShellControlsView::OnCreate(LPCREATESTRUCT lpCreateStruct)
@@ -119,7 +119,7 @@ ms.locfileid: "47169620"
     }
     ```
 
-1. `WM_SIZE` メッセージについて、前の手順を繰り返します。 これにより、ユーザーがアプリケーション ウィンドウのサイズを変更するたびにアプリケーションのビューが再描画されるようになります。 `OnSize` メソッドの定義を次のコードに置き換えます。
+1. `WM_SIZE` メッセージについて、前の手順を繰り返します。 アプリケーションのビューをユーザーがアプリケーション ウィンドウのサイズを変更するたびに再描画が発生します。 `OnSize` メソッドの定義を次のコードに置き換えます。
 
     ```cpp
     void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)
@@ -131,7 +131,7 @@ ms.locfileid: "47169620"
     }
     ```
 
-1. 最後の手順が接続するには、`CMFCShellTreeCtrl`と`CMFCShellListCtrl`オブジェクトを使用して、 [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist)メソッド。 このメソッドを呼び出すと、`CMFCShellListCtrl` で選択された項目の内容が自動的に `CMFCShellTreeCtrl` に表示されます。 行いますが、`OnActivateView`からオーバーライドされるメソッドは、 [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview)します。
+1. 最後の手順が接続するには、`CMFCShellTreeCtrl`と`CMFCShellListCtrl`オブジェクトを使用して、 [CMFCShellTreeCtrl::SetRelatedList](../mfc/reference/cmfcshelltreectrl-class.md#setrelatedlist)メソッド。 呼び出した後`CMFCShellTreeCtrl::SetRelatedList`、`CMFCShellListCtrl`で選択した項目の内容が自動的に表示されます、`CMFCShellTreeCtrl`します。 接続内のオブジェクト、`OnActivateView`からオーバーライドされるメソッドは、 [CView::OnActivateView](../mfc/reference/cview-class.md#onactivateview)します。
 
    MFCShellControlsView.h ヘッダー ファイルの `CMFCShellControlsView` クラス宣言に、次のメソッド宣言を追加します。
 
@@ -142,7 +142,7 @@ ms.locfileid: "47169620"
         CView* pDeactiveView);
     ```
 
-   次に、このメソッドの定義を MFCShellControlsView.cpp ソース ファイルに追加します。
+   次に、メソッドの定義を MFCShellControlsView.cpp ソース ファイルに追加します。
 
     ```cpp
     void CMFCShellControlsView::OnActivateView(BOOL bActivate,
@@ -160,7 +160,7 @@ ms.locfileid: "47169620"
     }
     ```
 
-   `CMainFrame` クラスのメソッドを呼び出すため、MFCShellControlsView.cpp ソース ファイルの先頭部分に次の `#include` ディレクティブを追加する必要があります。
+   メソッドを呼び出していますので、`CMainFrame`クラスを追加する必要があります、 `#include` MFCShellControlsView.cpp ソース ファイルの上部にあるディレクティブ。
 
     ```cpp
     #include "MainFrm.h"
@@ -170,11 +170,11 @@ ms.locfileid: "47169620"
 
    `CMFCShellTreeCtrl` で選択されている項目の詳細が、ビュー ペインに表示されるようになりました。 `CMFCShellTreeCtrl` でノードをクリックすると、`CMFCShellListCtrl` が自動的に更新されます。 また、`CMFCShellListCtrl` でフォルダーをダブルクリックすると、`CMFCShellTreeCtrl` が自動的に更新されます。
 
-   ツリー コントロールまたはリスト コントロールの任意の項目を右クリックします。 実際を使用していた場合、同じコンテキスト メニューを取得することに注意してください。**ファイル エクスプ ローラー**します。
+   ツリー コントロールで、またはリスト コントロールで項目を右クリックします。 実際を使用した場合と同じコンテキスト メニューを取得する**ファイル エクスプ ローラー**します。
 
 ## <a name="next-steps"></a>次の手順
 
-- ウィザードでは、両方で Outlook バーが作成された、**フォルダー**ウィンドウと**カレンダー**ウィンドウ。 おそらくは無意味に、**カレンダー**ペインで、**エクスプ ローラー**ウィンドウ。 したがって、このペインを削除します。
+- ウィザードでは、両方で Outlook バーが作成された、**フォルダー**ウィンドウと**カレンダー**ウィンドウ。 おそらくが意味をなさない、**カレンダー**ペインで、**エクスプ ローラー**ウィンドウで、のでこのペインを削除します。
 
 - `CMFCShellListCtrl`の異なるモードでファイルの表示をサポート**大きいアイコン**、**小さいアイコン**、**一覧**、および**詳細**します。 アプリケーションを更新して、この機能を実装します。 ヒント: を参照してください[Visual C のサンプル](../visual-cpp-samples.md)します。
 

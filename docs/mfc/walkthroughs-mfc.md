@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 05255f71f304b32de95faf96eaa23f5ce3da9f96
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 9d96ce9ade06c849716a680bd3c0c8bb6feeccc6
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169412"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235660"
 ---
 # <a name="walkthroughs-mfc"></a>チュートリアル (MFC)
 
@@ -28,7 +28,7 @@ ms.locfileid: "47169412"
 ## <a name="in-this-section"></a>このセクションの内容
 
 [チュートリアル: 新しい MFC シェル コントロールの使用](../mfc/walkthrough-using-the-new-mfc-shell-controls.md)<br/>
-このチュートリアルでは、ファイル エクスプローラーのような外観のアプリケーションを作成します。 ここでは、2 つのペインのあるウィンドウを作成します。 左側のウィンドウには、 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)階層ビューで、デスクトップを表示するオブジェクト。 右側のウィンドウには、 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)を左側のウィンドウで選択されているフォルダーにファイルが表示されます。
+このチュートリアルでは、ファイル エクスプ ローラーのようなアプリケーションを作成します。 2 つのペインを含むウィンドウを作成します。 左側のウィンドウには、 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)階層ビューで、デスクトップを表示するオブジェクト。 右側のウィンドウが、 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)を左側のウィンドウで選択されているフォルダーにファイルが表示されます。
 
 [チュートリアル: ツール バーへのコントロールの追加](../mfc/walkthrough-putting-controls-on-toolbars.md)<br/>
 最新の MFC ツール バーは、単純なボタン以外のコントロールをホストできます。 この記事では、その方法を説明します。

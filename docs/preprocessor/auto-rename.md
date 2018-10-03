@@ -16,31 +16,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e55b9afd3a6254182f1bb0a94fb2136d036c32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 52147dcf79c73e1f931a3e9b52241308def864c4
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413498"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234426"
 ---
 # <a name="autorename"></a>auto_rename
-**C++ 固有の仕様**  
-  
-潜在的な名前の競合を解決するため、変数名に 2 つのアンダースコア (__) を追加して C++ の予約語の名前を変更します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-auto_rename  
-```  
-  
-## <a name="remarks"></a>Remarks 
 
-この属性は、変数名として C++ の予約語 (キーワードまたはマクロ) を使用しているタイプ ライブラリをインポートするときに使用します。  
-  
- **END C 固有の仕様**  
-  
-## <a name="see-also"></a>関連項目 
+**C++ 固有の仕様**
+
+潜在的な名前の競合を解決するため、変数名に 2 つのアンダースコア (__) を追加して C++ の予約語の名前を変更します。
+
+## <a name="syntax"></a>構文
+
+```
+auto_rename
+```
+
+## <a name="remarks"></a>Remarks
+
+この属性は、変数名として C++ の予約語 (キーワードまたはマクロ) を使用しているタイプ ライブラリをインポートするときに使用します。
+
+**END C 固有の仕様**
+
+## <a name="see-also"></a>関連項目
 
 [#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)
