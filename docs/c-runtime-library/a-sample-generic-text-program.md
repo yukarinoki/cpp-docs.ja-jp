@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dbb02f426e839eff20a1dcd37ab41d4a08640599
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3adde04ba8fe259c25f3439cef247192eea175f2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081534"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233680"
 ---
 # <a name="a-sample-generic-text-program"></a>汎用テキストのプログラム例
 
@@ -31,7 +31,7 @@ ms.locfileid: "46081534"
 
 次のプログラム GENTEXT.C は、TCHAR.H で定義された汎用テキスト マップの使用のより詳細な図を提供します。
 
-```
+```C
 // GENTEXT.C
 // use of generic-text mappings defined in TCHAR.H
 
@@ -67,12 +67,11 @@ int __cdecl _tmain(int argc, _TCHAR **argv, _TCHAR **envp)
    _tprintf(_T("'%s'\n"), _tcsrev(_tcsdup(str)));
    return 0;
 }
-
 ```
 
 `_MBCS` が定義されている場合、GENTEXT.C は次の MBCS プログラムに割り当てられます。
 
-```
+```C
 // crt_mbcsgtxt.c
 
 /*
@@ -110,7 +109,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 
 `_UNICODE` が定義されている場合、GENTEXT.C は次のプログラムの Unicode バージョンに割り当てられます。 Unicode プログラムで `main` の代わりに `wmain` を使用する詳細については、「*C 言語リファレンス*」の「[wmain の使用](../c-language/using-wmain.md)」を参照してください。
 
-```
+```C
 // crt_unicgtxt.c
 
 /*
@@ -148,7 +147,7 @@ int __cdecl wmain(int argc, wchar_t **argv, wchar_t **envp)
 
 `_MBCS` と `_UNICODE` のいずれも定義されていない場合、GENTEXT.C は次のように 1 バイトの ASCII コードに割り当てられます。
 
-```
+```C
 // crt_sbcsgtxt.c
 /*
  * Use of generic-text mappings defined in TCHAR.H
@@ -183,7 +182,7 @@ int __cdecl main(int argc, char **argv, char **envp)
 }
 ```
 
- **Microsoft 固有の仕様はここまで**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>参照
 
