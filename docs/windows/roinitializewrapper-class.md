@@ -1,26 +1,34 @@
 ---
 title: RoInitializeWrapper クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 05/20/2018
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper
+- corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::HRESULT
+- corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper
+- corewrappers/Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper
 dev_langs:
 - C++
+helpviewer_keywords:
+- Microsoft::WRL::Wrappers::RoInitializeWrapper class
+- Microsoft::WRL::Wrappers::RoInitializeWrapper::operator HRESULT operator
+- Microsoft::WRL::Wrappers::RoInitializeWrapper::RoInitializeWrapper, constructor
+- Microsoft::WRL::Wrappers::RoInitializeWrapper::~RoInitializeWrapper, destructor
 ms.assetid: 4055fbe0-63a7-4c06-b5a0-414fda5640e5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f5c47ac34d8b159e75acf672ba57ca8c1ebac1e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 22271435db3a66095da5b6065a6b9cc9463b3de2
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42592830"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233750"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper クラス
 
@@ -34,22 +42,22 @@ class RoInitializeWrapper
 
 ## <a name="remarks"></a>Remarks
 
-**RoInitializeWrapper**は利便性には、Windows ランタイムを初期化し、操作が成功したかどうかを示す HRESULT を返します。 クラスのデストラクターを呼び出すため、 `::Windows::Foundation::Uninitialize`、インスタンスの**RoInitializeWrapper**グローバルまたは最上位のスコープで宣言する必要があります。
+`RoInitializeWrapper` Windows ランタイムを初期化し、操作が成功したかどうかを示す HRESULT を返す便利です。 クラスのデストラクターを呼び出すため、 `::Windows::Foundation::Uninitialize`、インスタンスの`RoInitializeWrapper`グローバルまたは最上位のスコープで宣言する必要があります。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
-|----------|-----------------|
-|[RoInitializeWrapper::RoInitializeWrapper コンストラクター](../windows/roinitializewrapper-roinitializewrapper-constructor.md)|新しいインスタンスを初期化、 **RoInitializeWrapper**クラス。|
-|[RoInitializeWrapper::~RoInitializeWrapper デストラクター](../windows/roinitializewrapper-tilde-roinitializewrapper-destructor.md)|現在のインスタンスを破棄、 **RoInitializeWrapper**クラス。|
+名前                                                                    | 説明
+----------------------------------------------------------------------- | -----------------------------------------------------------------
+[Roinitializewrapper::roinitializewrapper](#roinitializewrapper)        | `RoInitializeWrapper` クラスの新しいインスタンスを初期化します。
+[RoInitializeWrapper:: ~ RoInitializeWrapper](#tilde-roinitializewrapper) | 現在のインスタンスを破棄、`RoInitializeWrapper`クラス。
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
-|----------|-----------------|
-|[RoInitializeWrapper::HRESULT() 演算子](../windows/roinitializewrapper-hresult-parens-operator.md)|によって生成された HRESULT を取得、 **RoInitializeWrapper**コンス トラクター。|
+名前                                       | 説明
+------------------------------------------ | ------------------------------------------------------------------------
+[Roinitializewrapper::hresult()](#hresult) | によって生成された HRESULT を取得、`RoInitializeWrapper`コンス トラクター。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -61,6 +69,39 @@ class RoInitializeWrapper
 
 **Namespace:** Microsoft::WRL::Wrappers
 
-## <a name="see-also"></a>関連項目
+## <a name="hresult"></a>Roinitializewrapper::hresult()
 
-[Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)
+最後のによって生成された HRESULT 値を取得します`RoInitializeWrapper`コンス トラクター。
+
+```cpp
+operator HRESULT()  
+```
+
+## <a name="roinitializewrapper"></a>Roinitializewrapper::roinitializewrapper
+
+`RoInitializeWrapper` クラスの新しいインスタンスを初期化します。
+
+```cpp
+RoInitializeWrapper(   RO_INIT_TYPE flags)  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*flags*<br/>
+RO_INIT_TYPE の列挙体は、Windows ランタイムによって提供されるサポートの 1 つ。
+
+### <a name="remarks"></a>Remarks
+
+`RoInitializeWrapper`クラスを呼び出す`Windows::Foundation::Initialize(flags)`します。
+
+## <a name="tilde-roinitializewrapper"></a>RoInitializeWrapper:: ~ RoInitializeWrapper
+
+Windows ランタイムの初期化を解除します。
+
+```cpp
+~RoInitializeWrapper()  
+```
+
+### <a name="remarks"></a>Remarks
+
+`RoInitializeWrapper`クラスを呼び出す`Windows::Foundation::Uninitialize()`します。

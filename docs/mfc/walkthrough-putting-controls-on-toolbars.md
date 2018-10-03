@@ -15,26 +15,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8267704e6bb1b43a13cc05d21d0572695365fd6
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 1995d3472f175872e084e2654531a2e72a90f950
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169750"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235517"
 ---
 # <a name="walkthrough-putting-controls-on-toolbars"></a>チュートリアル: ツール バーへのコントロールの追加
 
-このトピックでは、Windows コントロールを含むツール バー ボタンをツール バーに追加する方法を説明します。 Mfc では、ツール バー ボタンがある必要があります、 [CMFCToolBarButton クラス](../mfc/reference/cmfctoolbarbutton-class.md)-たとえば、クラスを派生[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)、 [CMFCToolBarEditBoxButton クラス](../mfc/reference/cmfctoolbareditboxbutton-class.md)、[CMFCDropDownToolbarButton クラス](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)、または[CMFCToolBarMenuButton クラス](../mfc/reference/cmfctoolbarmenubutton-class.md)します。
+この記事では、ツールバーに、Windows コントロールを含むツール バー ボタンを追加する方法について説明します。 Mfc では、ツール バー ボタンがある必要があります、 [CMFCToolBarButton クラス](../mfc/reference/cmfctoolbarbutton-class.md)-たとえば、クラスを派生[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)、 [CMFCToolBarEditBoxButton クラス](../mfc/reference/cmfctoolbareditboxbutton-class.md)、[CMFCDropDownToolbarButton クラス](../mfc/reference/cmfcdropdowntoolbarbutton-class.md)、または[CMFCToolBarMenuButton クラス](../mfc/reference/cmfctoolbarmenubutton-class.md)します。
 
 ## <a name="adding-controls-to-toolbars"></a>ツール バーへのコントロールの追加
 
 ツール バーにコントロールを追加するには、次の手順を実行します。
 
-1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。 使用してボタンを作成する方法について、**ツール バー エディター** Visual Studio で、次を参照してください。、[ツール バー エディター](../windows/toolbar-editor.md)トピック。
+1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。 使用してボタンを作成する方法について、**ツール バー エディター** Visual Studio で、次を参照してください。、[ツール バー エディター](../windows/toolbar-editor.md)記事。
 
 1. 親ツール バーのすべてのビットマップでボタンのツール バー イメージ (ボタン アイコン) を予約します。
 
-1. `AFX_WM_RESETTOOLBAR` メッセージを処理するメッセージ ハンドラーで、次の操作を行います。
+1. 処理するメッセージ ハンドラーで、`AFX_WM_RESETTOOLBAR`メッセージで、次の手順を実行します。
 
    1. `CMFCToolbarButton` 派生クラスを使用して、ボタン コントロールを作成します。
 
@@ -72,7 +72,7 @@ ms.locfileid: "47169750"
 
 1. `CFindComboBox` クラスで、`PreTranslateMessage` 仮想メソッドをオーバーライドします。 このメソッドは、処理するコンボ ボックスを有効になります、 [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)メッセージ。 ユーザーが Esc キーを押す (`VK_ESCAPE`) と、フォーカスがメイン フレーム ウィンドウに戻ります。 ユーザーが Enter キーを押す (`VK_ENTER`) と、`WM_COMMAND` コマンド ID を含む `ID_EDIT_FIND_COMBO` メッセージがメイン フレーム ウィンドウにポストされます。
 
-1. クラスを作成、**検索**から派生した、コンボ ボックス ボタン[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)します。 この例では、 `CFindComboButton`という名前が付いています。
+1. クラスを作成、**検索**から派生した、コンボ ボックス ボタン[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)します。 この例では、名前付き`CFindComboButton`します。
 
 1. `CMFCToolbarComboBoxButton` のコンストラクターは、3 つのパラメーター (ボタンのコマンド ID、ボタン イメージのインデックス、およびコンボ ボックスのスタイル) を受け取ります。 これらのパラメーターを次のように設定します。
 

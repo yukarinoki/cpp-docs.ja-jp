@@ -1,7 +1,7 @@
 ---
 title: path クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 09/10/2018
+ms.date: 09/27/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -14,16 +14,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd8fa524d0c41d437575a61ff4e4456fd9933404
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725310"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235465"
 ---
 # <a name="path-class"></a>path クラス
 
-**パス**クラス型のオブジェクトを格納する`string_type`という`myname`パス名として使用するための適切な説明の目的でここをクリックします。 `string_type` シノニムです`basic_string<value_type>`ここで、`value_type`のシノニムです**char** Windows 下または**wchar_t** Posix の下。
+**パス**クラス型のオブジェクトを格納する`string_type`という`myname`パス名として使用するための適切な説明の目的でここをクリックします。 `string_type` シノニムです`basic_string<value_type>`ここで、`value_type`のシノニムです**wchar_t**で Windows または**char** POSIX にします。
 
 詳細およびコード例については、[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md) に関する記事を参照してください。
 
@@ -39,7 +39,7 @@ class path;
 |-|-|
 |[path](#path)|`path` を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|

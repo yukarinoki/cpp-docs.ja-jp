@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2355a5341259978e402ecc6f8de5c684c9435e3a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5867f9524d897657641ab9db392d77585117a465
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433063"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234992"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト
 
@@ -56,7 +56,7 @@ Windows フォームと MFC を示すサンプル アプリケーションの場
 
 1. `CDialog` をサブクラスとして持つ新しいクラスを追加します。
 
-     プロジェクト名を右クリックし、`CDialog` をサブクラスとして持つ (CHostForWinForm という名前の) MFC クラスを追加します。 ダイアログ ボックスのリソースは不要なので、リソース ID を削除できます。この操作を行うには、[リソース ビュー] を選択し、[ダイアログ] フォルダーを展開して、IDD_HOSTFORWINFORM リソースを削除します。  次に、コード内のこの ID への参照を削除します。
+     プロジェクト名を右クリックし、`CDialog` をサブクラスとして持つ (CHostForWinForm という名前の) MFC クラスを追加します。 ダイアログ ボックスのリソースを使用する必要はありません、ために、リソース ID を削除することができます (選択**リソース ビュー**、展開、**ダイアログ**フォルダーおよび delete`IDD_HOSTFORWINFORM`リソース。  次に、コード内のこの ID への参照を削除します。
 
 1. CHostForWinForm.h ファイルと CHostForWinForm.cpp ファイル内にある `CDialog` を `CWinFormsDialog<WindowsControlLibrary1::UserControl1>` に置き換えます。
 

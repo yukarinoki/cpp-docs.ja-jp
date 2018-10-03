@@ -1,7 +1,7 @@
 ---
 title: クラス追加ウィザードの Typelib |マイクロソフトのドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/03/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -17,16 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d60d8558758ba67afaa03eef5fbfbd83d8ebea70
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a54948fd98b5a5445aa1fdfafcf0fcd015bbf08
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415513"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250381"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Typelib クラス追加ウィザード
 
 このウィザードを使用すると、使用可能なタイプ ライブラリからの MFC クラスを追加します。 ウィザードでは、各インターフェイス、選択したタイプ ライブラリからを追加するためのクラスを作成します。
+
+> [!WARNING]
+> Visual Studio 2017 バージョン 15.9 でこのコード ウィザードは非推奨し、Visual Studio の将来のバージョンで削除される予定です。 このウィザードはほとんど使用されません。 ATL と MFC の一般的なサポートは、このウィザードの削除による影響はありません。 この非推奨に関するご意見を共有する場合は、完了[このアンケート](https://www.surveymonkey.com/r/QDWKKCN)します。 ご意見、ご意見が重要です。
 
 - **クラスを追加します。**
 

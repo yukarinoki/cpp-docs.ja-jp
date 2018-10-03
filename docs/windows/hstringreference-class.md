@@ -1,26 +1,42 @@
 ---
 title: HStringReference クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/25/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HStringReference
+- corewrappers/Microsoft::WRL::Wrappers::HStringReference::CopyTo
+- corewrappers/Microsoft::WRL::Wrappers::HStringReference::Get
+- corewrappers/Microsoft::WRL::Wrappers::HStringReference::HStringReference
+- corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator=
+- corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator==
+- corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator!=
+- corewrappers/Microsoft::WRL::Wrappers::HStringReference::operator<
 dev_langs:
 - C++
+helpviewer_keywords:
+- Microsoft::WRL::Wrappers::HStringReference class
+- Microsoft::WRL::Wrappers::HStringReference::CopyTo method
+- Microsoft::WRL::Wrappers::HStringReference::Get method
+- Microsoft::WRL::Wrappers::HStringReference::HStringReference, constructor
+- Microsoft::WRL::Wrappers::HStringReference::operator= operator
+- Microsoft::WRL::Wrappers::HStringReference::operator== operator
+- Microsoft::WRL::Wrappers::HStringReference::operator!= operator
+- Microsoft::WRL::Wrappers::HStringReference::operator< operator
 ms.assetid: 9bf823b1-17eb-4ac4-8c5d-27d27c7a4150
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b80ae92671b2ee78cd2f48e9a35958c89232e4e5
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 70663c43c6d3bc7b661f339ce679d3faf16c9aae
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43683042"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235862"
 ---
 # <a name="hstringreference-class"></a>HStringReference クラス
 
@@ -40,24 +56,25 @@ class HStringReference;
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
-|----------|-----------------|
-|[HStringReference::HStringReference コンストラクター](../windows/hstringreference-hstringreference-constructor.md)|新しいインスタンスを初期化、 **HStringReference**クラス。|
+名前                                                    | 説明
+------------------------------------------------------- | -----------------------------------------------------------
+[Hstringreference::hstringreference](#hstringreference) | `HStringReference` クラスの新しいインスタンスを初期化します。
 
-### <a name="members"></a>メンバー
+### <a name="public-methods"></a>パブリック メソッド
 
-|メンバー|説明|
-|------------|-----------------|
-|[HStringReference::CopyTo メソッド](../windows/hstringreference-copyto-method.md)|現在のコピー **HStringReference**オブジェクトを HSTRING オブジェクトにします。|
-|[HStringReference::Get メソッド](../windows/hstringreference-get-method.md)|基になる HSTRING ハンドルの値を取得します。|
+メンバー                              | 説明
+----------------------------------- | ------------------------------------------------------------------
+[Hstringreference::copyto](#copyto) | 現在のコピー`HStringReference`オブジェクトを HSTRING オブジェクトにします。
+[Hstringreference::get](#get)       | 基になる HSTRING ハンドルの値を取得します。
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
-|----------|-----------------|
-|[HStringReference::Operator= 演算子](../windows/hstringreference-operator-assign-operator.md)|別の値を移動**HStringReference**現在オブジェクト**HStringReference**オブジェクト。|
-|[HStringReference::Operator== 演算子](../windows/hstringreference-operator-equality-operator.md)|2 つのパラメーターが等しいかどうかを示します。|
-|[HStringReference::Operator!= 演算子](../windows/hstringreference-operator-inequality-operator.md)|2 つのパラメーターが異なるかどうかを示します。|
+名前                                                  | 説明
+----------------------------------------------------- | ----------------------------------------------------------------------------------------------
+[Hstringreference::operator =](#operator-assign)       | 別の値を移動`HStringReference`現在オブジェクト`HStringReference`オブジェクト。
+[Hstringreference::operator = =](#operator-equality)    | 2 つのパラメーターが等しいかどうかを示します。
+[Hstringreference::operator! =](#operator-inequality)  | 2 つのパラメーターが異なるかどうかを示します。
+[Hstringreference::operator&lt;](#operator-less-than) | 最初のパラメーターがかどうかが 2 番目のパラメーターを未満を示します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -69,6 +86,169 @@ class HStringReference;
 
 **Namespace:** Microsoft::WRL::Wrappers
 
-## <a name="see-also"></a>関連項目
+## <a name="copyto"></a>Hstringreference::copyto
 
-[Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)
+現在のコピー`HStringReference`オブジェクトを HSTRING オブジェクトにします。
+
+```cpp
+HRESULT CopyTo(
+   _Out_ HSTRING *str
+   ) const throw();
+```
+
+### <a name="parameters"></a>パラメーター
+
+*str*<br/>
+コピーを受信する HSTRING です。
+
+### <a name="remarks"></a>Remarks
+
+このメソッドは、 [WindowsDuplicateString](https://msdn.microsoft.com/library/br224634.aspx)関数。
+
+## <a name="get"></a>Hstringreference::get
+
+基になる HSTRING ハンドルの値を取得します。
+
+```cpp
+HSTRING Get() const throw()  
+```
+
+### <a name="return-value"></a>戻り値
+
+基になる HSTRING ハンドルの値。
+
+## <a name="hstringreference"></a>Hstringreference::hstringreference
+
+`HStringReference` クラスの新しいインスタンスを初期化します。
+
+```cpp
+template<unsigned int sizeDest>
+HStringReference(wchar_t const (&str)[ sizeDest]) throw();
+
+template<unsigned int sizeDest>
+HStringReference(wchar_t const (&str)[ sizeDest],
+                 unsigned int len) throw();
+
+HStringReference(HStringReference&& other) throw();
+```
+
+### <a name="parameters"></a>パラメーター
+
+*sizeDest*<br/>
+変換先のサイズを指定するテンプレート パラメーター`HStringReference`バッファー。
+
+*str*<br/>
+ワイド文字の文字列への参照。
+
+*len*<br/>
+最大長、 *str*この操作で使用するパラメーターのバッファー。 場合、 *len*パラメーターが指定されていない全体*str*パラメーターを使用します。 場合*len*がより大きい*sizeDest*、 *len*に設定されている*sizeDest*-1。
+
+*other*<br/>
+もう 1 つ`HStringReference`オブジェクト。
+
+### <a name="remarks"></a>Remarks
+
+最初のコンス トラクターによって初期化新しい`HStringReference`オブジェクトをパラメーターとして、同じサイズ*str*します。
+
+2 番目のコンス トラクターによって初期化新しい`HStringReference`オブジェクトをパラメーターでサイズ specifeid *len*します。
+
+3 番目のコンス トラクターによって初期化、新しい`HStringReference`オブジェクトの値を*他*パラメーター、し、その後破棄、*他*パラメーター。
+
+## <a name="operator-assign"></a>Hstringreference::operator =
+
+別の値を移動`HStringReference`現在オブジェクト`HStringReference`オブジェクト。
+
+```cpp
+HStringReference& operator=(HStringReference&& other) throw()  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*other*<br/>
+既存の `HStringReference` オブジェクト。
+
+### <a name="remarks"></a>Remarks
+
+既存の値*他*現在にオブジェクトがコピーされます`HStringReference`オブジェクト、し、*他*オブジェクトが破棄されます。
+
+## <a name="operator-equality"></a>Hstringreference::operator = =
+
+2 つのパラメーターが等しいかどうかを示します。
+
+```cpp
+inline bool operator==(
+               const HStringReference& lhs,
+               const HStringReference& rhs) throw()
+
+inline bool operator==(
+               const HSTRING& lhs,
+               const HStringReference& rhs) throw()
+
+inline bool operator==(
+               const HStringReference& lhs,
+               const HSTRING& rhs) throw()  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*lhs*<br/>
+比較する最初のパラメーター。 *lhs*できます、`HStringReference`オブジェクトまたは HSTRING ハンドル。
+
+*rhs*<br/>
+比較する 2 番目のパラメーター。  *rhs*できます、`HStringReference`オブジェクトまたは HSTRING ハンドル。
+
+### <a name="return-value"></a>戻り値
+
+`true` 場合、 *lhs*と*rhs*パラメーターは、それ以外の`false`します。
+
+## <a name="operator-inequality"></a>Hstringreference::operator! =
+
+2 つのパラメーターが異なるかどうかを示します。
+
+```cpp
+inline bool operator!=(
+               const HStringReference& lhs,
+               const HStringReference& rhs) throw()
+
+inline bool operator!=(
+               const HSTRING& lhs,
+               const HStringReference& rhs) throw()
+
+inline bool operator!=(
+               const HStringReference& lhs,
+               const HSTRING& rhs) throw()  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*lhs*<br/>
+比較する最初のパラメーター。 *lhs*できます、`HStringReference`オブジェクトまたは HSTRING ハンドル。
+
+*rhs*<br/>
+比較する 2 番目のパラメーター。  *rhs*できます、`HStringReference`オブジェクトまたは HSTRING ハンドル。
+
+### <a name="return-value"></a>戻り値
+
+`true` 場合、 *lhs*と*rhs*パラメーターが、それ以外の`false`します。
+
+## <a name="operator-less-than"></a>Hstringreference::operator&lt;
+
+最初のパラメーターがかどうかが 2 番目のパラメーターを未満を示します。
+
+```cpp
+inline bool operator<(
+    const HStringReference& lhs,
+    const HStringReference& rhs) throw()  
+```
+
+### <a name="parameters"></a>パラメーター
+
+*lhs*<br/>
+比較する最初のパラメーター。 *lhs*への参照を指定できます、`HStringReference`します。
+
+*rhs*<br/>
+比較する 2 番目のパラメーター。  *rhs*への参照を指定できます、`HStringReference`します。
+
+### <a name="return-value"></a>戻り値
+
+`true` 場合、 *lhs*パラメーターより小さい*rhs*パラメーター、それ以外の`false`します。

@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2349beadb5983c85059be83ee5a933689913886
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 65d873c4e7188b3000cee65e03c4ce6edcad8046
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722723"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235335"
 ---
 # <a name="submatch-class"></a>sub_match クラス
 
@@ -46,7 +46,7 @@ ms.locfileid: "45722723"
 ```cpp
 template <class BidIt>
 class sub_match
- : public std::pair<BidIt, BidIt>
+    : public std::pair<BidIt, BidIt>
 ```
 
 ## <a name="parameters"></a>パラメーター
@@ -66,7 +66,7 @@ class sub_match
 
 "b(a*)b" は、ターゲット シーケンス "bb" と一致します。キャプチャ グループ 1 に対応する `sub_match` オブジェクトは、両方がシーケンスの 2 つ目の文字を指す反復子を保持します。
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|

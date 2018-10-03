@@ -1,28 +1,34 @@
 ---
 title: クラスのセマフォ |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/25/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::Semaphore
+- corewrappers/Microsoft::WRL::Wrappers::Semaphore::Lock
+- corewrappers/Microsoft::WRL::Wrappers::Semaphore::operator=
+- corewrappers/Microsoft::WRL::Wrappers::Semaphore::Semaphore
 dev_langs:
 - C++
 helpviewer_keywords:
-- Semaphore class
+- Microsoft::WRL::Wrappers::Semaphore class
+- Microsoft::WRL::Wrappers::Semaphore::Lock method
+- Microsoft::WRL::Wrappers::Semaphore::operator= operator
+- Microsoft::WRL::Wrappers::Semaphore::Semaphore, constructor
 ms.assetid: ded53526-17b4-4381-9c60-ea5e77363db6
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: bb0b3d5dff91bcb1fb1688c7b1a9314fe7ebf00c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 269b3229a0755e88d55fc4fa5d14b843345ccc44
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42598416"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234454"
 ---
 # <a name="semaphore-class"></a>Semaphore クラス
 
@@ -38,33 +44,27 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
-|----------|-----------------|
-|`SyncLock`|同期ロックをサポートするクラスのシノニムです。|
+名前       | 説明
+---------- | ------------------------------------------------------
+`SyncLock` | 同期ロックをサポートするクラスのシノニムです。
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
-|----------|-----------------|
-|[Semaphore::Semaphore コンストラクター](../windows/semaphore-semaphore-constructor.md)|新しいインスタンスを初期化、**セマフォ**クラス。|
+名前                               | 説明
+---------------------------------- | ----------------------------------------------------
+[Semaphore::semaphore](#semaphore) | `Semaphore` クラスの新しいインスタンスを初期化します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[InvokeHelper::Invoke メソッド](../windows/invokehelper-invoke-method.md)|指定した数の引数を含むシグネチャを持つイベント ハンドラーを呼び出します。|
-
-### <a name="public-data-members"></a>パブリック データ メンバー
-
-|名前|説明|
-|----------|-----------------|
-|[Semaphore::Lock メソッド](../windows/semaphore-lock-method.md)|シグナルの状態にある現在のオブジェクトまたは指定したハンドルに関連付けられたオブジェクトまでの待機、または指定されたタイムアウト期間が経過しました。|
+名前                     | 説明
+------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------
+[Semaphore::lock](#lock) | シグナルの状態にある現在のオブジェクトまたは指定したハンドルに関連付けられたオブジェクトまでの待機、または指定されたタイムアウト期間が経過しました。
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
-|----------|-----------------|
-|[Semaphore::operator= 演算子](../windows/semaphore-operator-assign-operator.md)|指定したハンドルの移動、**セマフォ**現在オブジェクト**セマフォ**オブジェクト。|
+名前                                     | 説明
+---------------------------------------- | ---------------------------------------------------------------------------------------
+[Semaphore::operator =](#operator-assign) | 指定したハンドルの移動、`Semaphore`現在オブジェクト`Semaphore`オブジェクト。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -76,6 +76,67 @@ class Semaphore : public HandleT<HandleTraits::SemaphoreTraits>
 
 **Namespace:** Microsoft::WRL::Wrappers
 
-## <a name="see-also"></a>関連項目
+## <a name="lock"></a>Semaphore::lock
 
-[Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)
+現在のオブジェクトまでの待機、または`Semaphore`オブジェクトに関連付けられている指定したハンドルがシグナル状態で、または指定されたタイムアウト期間が経過しました。
+
+```cpp
+SyncLock Lock(
+   DWORD milliseconds = INFINITE
+);
+
+static SyncLock Lock(
+   HANDLE h,
+   DWORD milliseconds = INFINITE
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*(ミリ秒)*<br/>
+タイムアウト間隔 (ミリ秒単位)。 既定値は、INFINITE で、無期限に待機します。
+
+*h*<br/>
+識別するハンドルを`Semaphore`オブジェクト。
+
+### <a name="return-value"></a>戻り値
+
+`Details::SyncLockWithStatusT<HandleTraits::SemaphoreTraits>`。
+
+## <a name="operator-assign"></a>Semaphore::operator =
+
+指定したハンドルの移動、`Semaphore`現在オブジェクト`Semaphore`オブジェクト。
+
+```cpp
+Semaphore& operator=(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*h*<br/>
+右辺値参照を`Semaphore`オブジェクト。
+
+### <a name="return-value"></a>戻り値
+
+現在への参照を`Semaphore`オブジェクト。
+
+## <a name="semaphore"></a>Semaphore::semaphore
+
+`Semaphore` クラスの新しいインスタンスを初期化します。
+
+```cpp
+explicit Semaphore(
+   HANDLE h
+);
+
+WRL_NOTHROW Semaphore(
+   _Inout_ Semaphore&& h
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*h*<br/>
+ハンドルまたはへの右辺値参照を`Semaphore`オブジェクト。

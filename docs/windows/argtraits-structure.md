@@ -1,28 +1,30 @@
 ---
 title: ArgTraits 構造体 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/21/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Details::ArgTraits
+- event/Microsoft::WRL::Details::ArgTraits::args
 dev_langs:
 - C++
 helpviewer_keywords:
-- ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits structure
+- Microsoft::WRL::Details::ArgTraits::args constant
 ms.assetid: 58ae4115-c1bc-48c8-b01b-e60554841c30
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 047754338566d476fa8e832d58dd2d4cd0776a63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b84658271793b5f8c48ad54df44aec27022ea5a1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418399"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48236076"
 ---
 # <a name="argtraits-structure"></a>ArgTraits 構造体
 
@@ -155,29 +157,29 @@ Typename パラメーターことはできませんと一致する ArgTraits 構
 
 ## <a name="remarks"></a>Remarks
 
-**ArgTraits**構造体は、インターフェイス、およびパラメーターの数が指定された匿名のメンバー関数に指定したデリゲートを宣言します。
+`ArgTraits`構造体は、インターフェイス、およびパラメーターの数が指定された匿名のメンバー関数に指定したデリゲートを宣言します。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
-|----------|-----------------|
-|`Arg1Type`|TArg1 の typedef。|
-|`Arg2Type`|TArg2 の typedef。|
-|`Arg3Type`|TArg3 の typedef。|
-|`Arg4Type`|TArg4 の typedef。|
-|`Arg5Type`|TArg5 の typedef。|
-|`Arg6Type`|TArg6 の typedef。|
-|`Arg7Type`|TArg7 の typedef。|
-|`Arg8Type`|TArg8 の typedef。|
-|`Arg9Type`|TArg9 の typedef。|
+名前       | 説明
+---------- | ----------------------
+`Arg1Type` | TArg1 の typedef。
+`Arg2Type` | TArg2 の typedef。
+`Arg3Type` | TArg3 の typedef。
+`Arg4Type` | TArg4 の typedef。
+`Arg5Type` | TArg5 の typedef。
+`Arg6Type` | TArg6 の typedef。
+`Arg7Type` | TArg7 の typedef。
+`Arg8Type` | TArg8 の typedef。
+`Arg9Type` | TArg9 の typedef。
 
 ### <a name="public-constants"></a>パブリック定数
 
-|名前|説明|
-|----------|-----------------|
-|[ArgTraits::args 定数](../windows/argtraits-args-constant.md)|パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。|
+名前                     | 説明
+------------------------ | ---------------------------------------------------------------------------------------
+[Argtraits::args](#args) | パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -189,6 +191,14 @@ Typename パラメーターことはできませんと一致する ArgTraits 構
 
 **Namespace:** Microsoft::WRL::Details
 
-## <a name="see-also"></a>関連項目
+## <a name="args"></a>Argtraits::args
 
-[Microsoft::WRL::Details 名前空間](../windows/microsoft-wrl-details-namespace.md)
+WRL インフラストラクチャをサポートし、コードから直接使用するものではありません。
+
+```cpp
+static const int args = -1;
+```
+
+### <a name="remarks"></a>Remarks
+
+パラメーターの数のカウントを保持、`Invoke`デリゲート インターフェイスのメソッド。 ときに`args`-1 とに一致することができますなし、`Invoke`メソッド シグネチャ。

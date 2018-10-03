@@ -1,28 +1,32 @@
 ---
 title: CriticalSectionTraits 構造体 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
-- CriticalSectionTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::GetInvalidValue method
+- Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6d15f65ecc2253556a6812cfb90ef78f90c7fb29
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 420ab1019dfa2e95e00e366c64509178ad20e685
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42594735"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234347"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 構造体
 
@@ -38,16 +42,16 @@ struct CriticalSectionTraits;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
-|----------|-----------------|
-|`Type`|A **typedef**クリティカル セクションを指すポインターを定義します。 `Type` 見なさ`typedef CRITICAL_SECTION* Type;`します。|
+名前   | 説明
+------ | -----------------------------------------------------------------------------------------------------------------
+`Type` | A`typedef`クリティカル セクションを指すポインターを定義します。 `Type` 見なさ`typedef CRITICAL_SECTION* Type;`します。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[CriticalSectionTraits::GetInvalidValue メソッド](../windows/criticalsectiontraits-getinvalidvalue-method.md)|専門、`CriticalSection`テンプレート、テンプレートが常に有効なされないようにします。|
-|[CriticalSectionTraits::Unlock メソッド](../windows/criticalsectiontraits-unlock-method.md)|専門、`CriticalSection`その it サポート、クリティカル セクションを指定したオブジェクトの所有権を解放するためのテンプレート。|
+名前                                                       | 説明
+---------------------------------------------------------- | -----------------
+[Criticalsectiontraits::getinvalidvalue](#getinvalidvalue) | 専門、`CriticalSection`テンプレート、テンプレートが常に有効なされないようにします。
+[Criticalsectiontraits::unlock](#unlock)                   | 専門、`CriticalSection`その it サポート、クリティカル セクションを指定したオブジェクトの所有権を解放するためのテンプレート。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -59,6 +63,39 @@ struct CriticalSectionTraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>関連項目
+## <a name="getinvalidvalue"></a>Criticalsectiontraits::getinvalidvalue
 
-[Microsoft::WRL::Wrappers::HandleTraits 名前空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+専門、`CriticalSection`テンプレート、テンプレートが常に有効なされないようにします。
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+### <a name="return-value"></a>戻り値
+
+常に無効な重要なセクションにポインターを返します。
+
+### <a name="remarks"></a>Remarks
+
+`Type`として修飾子が定義されている`typedef CRITICAL_SECTION* Type;`します。
+
+## <a name="unlock"></a>Criticalsectiontraits::unlock
+
+専門、`CriticalSection`その it サポート、クリティカル セクションを指定したオブジェクトの所有権を解放するためのテンプレート。
+
+```cpp
+inline static void Unlock(
+   _In_ Type cs
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*cs*<br/>
+クリティカル セクション オブジェクトへのポインター。
+
+### <a name="remarks"></a>Remarks
+
+`Type`として修飾子が定義されている`typedef CRITICAL_SECTION* Type;`します。
+
+詳細については、次を参照してください。**により関数**で、**同期関数**Windows API のドキュメントの「します。

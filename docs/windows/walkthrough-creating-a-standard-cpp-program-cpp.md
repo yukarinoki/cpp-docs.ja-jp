@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d5481b9391d47887d85ca43746f1a6aff5f6eb92
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 342716f3197713a584e2f0a1d20e4de75ece474b
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029620"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234324"
 ---
 # <a name="walkthrough-creating-a-standard-c-program-c"></a>チュートリアル: 標準の C++ プログラム (C++) の作成
 
@@ -32,7 +32,7 @@ Visual Studio の Visual C++ の統合開発環境 (IDE: Integrated Development 
 
 独自の C++ プログラムを入力するか、サンプル プログラムを使用できます。 このチュートリアルのサンプル プログラムは、コンソール アプリケーションです。 このアプリケーションを使用して、 `set` C++ 標準ライブラリ内のコンテナー。
 
-Visual C がこれらの主な例外を除き、2003 C++ 標準に準拠している。 2 段階名前検索、例外の仕様、およびエクスポートします。 さらに、Visual C では、いくつかの c++ 0 x 機能、たとえば、ラムダ、auto、static_assert、rvalue 参照、および extern テンプレートをサポートしています。
+Visual C がこれらの主な例外を除き、2003 C++ 標準に従います。 2 段階名前検索、例外の仕様、およびエクスポートします。 さらに、Visual C では、いくつかの c++ 0 x 機能、たとえば、ラムダ、auto、static_assert、rvalue 参照、および extern テンプレートをサポートしています。
 
 > [!NOTE]
 > 標準への準拠が必要な場合は、`/Za` コンパイラ オプションを使用して、標準に対する Microsoft 拡張機能を無効にします。 詳細については、次を参照してください。 [/Za、/Ze (言語拡張を無効にする)](../build/reference/za-ze-disable-language-extensions.md)します。
@@ -59,7 +59,7 @@ Visual C がこれらの主な例外を除き、2003 C++ 標準に準拠して�
    > [!NOTE]
    > Visual Studio 2017 より前のバージョンは、完了、 **Win32 アプリケーション ウィザード**します。 をクリックして**次**、ことを確認します**コンソール アプリケーション**が選択されているし、オフにします、**プリコンパイル済みヘッダー**ボックス。 **[完了]** をクリックします。
 
-1. 場合**ソリューション エクスプ ローラー**が表示されない、**ビュー**  メニューのをクリックして**ソリューション エクスプ ローラー**します。
+1. 場合**ソリューション エクスプ ローラー**で、表示されていない、**ビュー**  メニューのをクリックして**ソリューション エクスプ ローラー**します。
 
 1. 次のように、プロジェクトに新しいソース ファイルを追加します。
 
