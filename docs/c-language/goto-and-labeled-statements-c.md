@@ -18,35 +18,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cf56a409f9a76cdf401323d1425ee28fc6cf286b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cadad9f2f025db4f7c3a63a7948a6cbbcfbd3ac3
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32386415"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43761431"
 ---
 # <a name="goto-and-labeled-statements-c"></a>goto ステートメントとラベル付きステートメント (C)
 `goto` ステートメントは、特定のラベルに制御を移します。 この特定のラベルは、同じ関数内に存在する必要があり、同じ関数内の 1 つのステートメントの前にのみ指定できます。  
   
-## <a name="syntax"></a>構文  
- *statement*:  
- *labeled-statement*  
+## <a name="syntax"></a>構文
+
+*statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*labeled-statement*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*jump-statement*
+
+*jump-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**goto**  *identifier*  **;**
+
+*labeled-statement*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*identifier*  **:**  *statement*
+
+ステートメント ラベルは `goto` ステートメントに対してのみ意味を持ちます。他のコンテキストでは、ラベル付きステートメントはラベルに関係なく実行されます。  
   
- *jump-statement*  
+*jump-statement* は同じ関数に存在する必要があり、同じ関数の特定のステートメントの前にのみ指定できます。 `goto` に続く *identifier* の名前のセットには独自の名前空間があるため、名前が他の識別子に干渉することはありません。 ラベルは再宣言できません。 詳細については、「[名前空間](../c-language/name-spaces.md)」を参照してください。  
   
- *jump-statement*:  
- **goto**  *identifier*  **;**  
+可能な限り、`goto` より **break**、**continue**、および `return` ステートメントを使用することをお勧めします。 **break** ステートメントは、ループの 1 つのレベルから抜けるだけであるため、`goto` は、深い入れ子になっているループ内からループを終了する場合に必要になることがあります。  
   
- *labeled-statement*:  
- *identifier*  **:**  *statement*  
-  
- ステートメント ラベルは `goto` ステートメントに対してのみ意味を持ちます。他のコンテキストでは、ラベル付きステートメントはラベルに関係なく実行されます。  
-  
- *jump-statement* は同じ関数に存在する必要があり、同じ関数の特定のステートメントの前にのみ指定できます。 `goto` に続く *identifier* の名前のセットには独自の名前空間があるため、名前が他の識別子に干渉することはありません。 ラベルは再宣言できません。 詳細については、「[名前空間](../c-language/name-spaces.md)」を参照してください。  
-  
- 可能な限り、`goto` より **break**、**continue**、および `return` ステートメントを使用することをお勧めします。 **break** ステートメントは、ループの 1 つのレベルから抜けるだけであるため、`goto` は、深い入れ子になっているループ内からループを終了する場合に必要になることがあります。  
-  
- `goto` ステートメントの例を次に示します。  
+`goto` ステートメントの例を次に示します。  
   
 ```  
 // goto.c  
@@ -74,7 +74,7 @@ int main()
 }  
 ```  
   
- この例で `goto` ステートメントは、`i` が 5 に等しい場合に、`stop` というラベルの位置に制御を移します。  
+この例で `goto` ステートメントは、`i` が 5 に等しい場合に、`stop` というラベルの位置に制御を移します。  
   
 ## <a name="see-also"></a>参照  
- [ステートメント](../c-language/statements-c.md)
+[ステートメント](../c-language/statements-c.md)
