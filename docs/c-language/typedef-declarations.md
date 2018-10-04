@@ -16,14 +16,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ba98340f9670229e7be0d56beac482d7ad994fb6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: a7af5e89e66b179b4527fd35a042caf8ddb1c644
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43765786"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46100579"
 ---
 # <a name="typedef-declarations"></a>typedef 宣言
+
 typedef 宣言は、ストレージ クラスとしての typedef による宣言です。 宣言子は、新しい型になります。 typedef 宣言を使用して、既に C で定義されている型や、宣言した型に対して、より短い、またはわかりやすい名前を作成できます。 Typedef 名を使用して、変更可能な実装の詳細をカプセル化できます。
 
 typedef 宣言は、変数または関数宣言と同様に解釈されますが、宣言によって指定された型を想定する代わりに識別子は型のシノニムになります。
@@ -113,6 +114,7 @@ pfv signal( int, pfv );    /* Uses typedef type */
 ```
 
 ## <a name="examples"></a>使用例
+
 typedef 宣言の例を次に示します。
 
 ```C

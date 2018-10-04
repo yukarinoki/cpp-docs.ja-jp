@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ee1c3be0ecc06dd2ccfb28882b6dc99912d7e13
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d776adab3404bf1244c7365e905866b4d041fc00
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762477"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46091914"
 ---
 # <a name="array-declarations"></a>配列の宣言
 
@@ -48,9 +48,9 @@ ms.locfileid: "43762477"
 
 *constant-expression* は省略可能であるため、構文には以下の 2 つの形式があります。
 
--   最初の形式は、配列変数の定義です。 角かっこ内の *constant-expression* 引数には、配列内の要素数を指定します。 *constant-expression* は、存在する場合、0 より大きい整数型の値を持つ必要があります。 各要素は、*type-specifier* で指定した型になります。これには、`void` を除く任意の型を指定できます。 配列の要素を関数型にすることはできません。
+- 最初の形式は、配列変数の定義です。 角かっこ内の *constant-expression* 引数には、配列内の要素数を指定します。 *constant-expression* は、存在する場合、0 より大きい整数型の値を持つ必要があります。 各要素は、*type-specifier* で指定した型になります。これには、`void` を除く任意の型を指定できます。 配列の要素を関数型にすることはできません。
 
--   2 番目の形式は、別の場所で定義されている変数の宣言です。 この場合、角かっこ内の *constant-expression* 引数を省略しますが、角かっこは必要です。 この形式を使用できるのは、以前に配列を初期化しているか、パラメーターとして宣言している場合、または、プログラム内の他の場所で明示的に定義された配列への参照として宣言している場合だけです。
+- 2 番目の形式は、別の場所で定義されている変数の宣言です。 この場合、角かっこ内の *constant-expression* 引数を省略しますが、角かっこは必要です。 この形式を使用できるのは、以前に配列を初期化しているか、パラメーターとして宣言している場合、または、プログラム内の他の場所で明示的に定義された配列への参照として宣言している場合だけです。
 
 どちらの形式でも、*direct-declarator* で変数に名前を付け、変数の型を変更できます。 *direct-declarator* の後に続く角かっこ (**[ ]**) により、宣言子が配列型に変更されます。
 
@@ -75,6 +75,7 @@ char A[2][3];
 配列の個々の要素を参照するには、「[Postfix Operators](../c-language/postfix-operators.md)」 (後置形式の演算子) の説明に従って添字式を使用します。
 
 ## <a name="examples"></a>使用例
+
 これらの例は配列宣言を示しています。
 
 ```C

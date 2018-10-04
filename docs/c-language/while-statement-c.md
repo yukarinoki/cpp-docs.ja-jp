@@ -17,26 +17,26 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1aa9c72cbb8724da00b2d370884bd7ddbf7264cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4dfda5807aab0c9930780b8374ffc934dde001c0
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763241"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46096809"
 ---
 # <a name="while-statement-c"></a>while ステートメント (C)
 
-`while` ステートメントを使用して、指定した式が false になるまでステートメントを繰り返すことができます。  
-  
+`while` ステートメントを使用して、指定した式が false になるまでステートメントを繰り返すことができます。
+
 ## <a name="syntax"></a>構文
 
 *iteration-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**while (**  *expression*  **)**  *statement*
-  
-*expression* は演算型またはポインター型であることが必要です。 次のように実行されます。  
-  
-1. *expression* が評価されます。  
-  
+
+*expression* は演算型またはポインター型であることが必要です。 次のように実行されます。
+
+1. *expression* が評価されます。
+
 2. 最初の時点で *expression* が false の場合、`while` ステートメントの本体は実行されず、`while` ステートメントからプログラムの次のステートメントへ制御が渡されます。
 
    *expression* が true (0 以外) の場合はステートメントの本体が実行され、手順 1 からプロセスが繰り返されます。

@@ -16,41 +16,44 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71fa5ae717963d8ab2afc0b290bb42a3de72c0b6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 6ac5fb523e1b1340d031cd5256995568b9b9e2a2
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760358"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46034125"
 ---
 # <a name="switch-statement-c"></a>switch ステートメント (C)
-`switch` および **case** ステートメントを使用すると、複雑な条件付き処理や分岐処理を制御しやすくなります。 `switch` ステートメントは、本体内のステートメントに制御を移します。  
-  
+
+`switch` および **case** ステートメントを使用すると、複雑な条件付き処理や分岐処理を制御しやすくなります。 `switch` ステートメントは、本体内のステートメントに制御を移します。
+
 ## <a name="syntax"></a>構文
 
 *selection-statement*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**switch (** *expression* **)** *statement*  
-  
+&nbsp;&nbsp;&nbsp;&nbsp;**switch (** *expression* **)** *statement*
+
 *labeled-statement*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**case**  *constant-expression*  **:**  *statement*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*  
-  
-**case** *constant-expression* が **switch (** *expression* **)** の値と一致するステートメントに制御が移ります。 `switch` ステートメントには、**case** のインスタンスをいくつでも含めることができますが、同じ `switch` ステートメント内の 2 つの case 定数を同じ値にすることはできません。 ステートメント本体の実行は選択されたステートメントで始まり、本体の最後まで、または **break** ステートメントで制御が本体の外部に移されるまで続きます。  
-  
-通常、`switch` ステートメントは次のように使用します。  
+&nbsp;&nbsp;&nbsp;&nbsp;**default :**  *statement*
 
-**switch** ( *expression* )  
-**{**  
-&nbsp;&nbsp;&nbsp;&nbsp;*declarations*  
-&nbsp;&nbsp;&nbsp;&nbsp;/\* . である必要があります。 である必要があります。 \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;**case** *constant-expression* **:**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* expression がこの constant-expression の値と \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* 等しい場合に実行されるステートメント \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**break;**  
-&nbsp;&nbsp;&nbsp;&nbsp;**default :**  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* expression がどの case constant-expression の値とも \*/  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/\* 等しくない場合に実行されるステートメント \*/  
-**}**
+**case** *constant-expression* が **switch (** *expression* **)** の値と一致するステートメントに制御が移ります。 `switch` ステートメントには、**case** のインスタンスをいくつでも含めることができますが、同じ `switch` ステートメント内の 2 つの case 定数を同じ値にすることはできません。 ステートメント本体の実行は選択されたステートメントで始まり、本体の最後まで、または **break** ステートメントで制御が本体の外部に移されるまで続きます。
+
+通常、`switch` ステートメントは次のように使用します。
+
+```C
+switch ( expression )
+{
+    // declarations
+    // . . .
+    case constant_expression:
+        // statements executed if the expression equals the
+        // value of this constant_expression
+        break;
+    default:
+        // statements executed if expression does not equal
+        // any case constant_expression
+}
+```
 
 **break** ステートメントを使用して、`switch` ステートメント内の特定の case の処理を終了したり、`switch` ステートメントの最後に分岐したりすることができます。 **break** がない場合、プログラムは次の case まで続き、**break** またはステートメントの最後に達するまでステートメントが実行されます。 状況によっては、この継続が望ましい場合もあります。
 
@@ -94,29 +97,29 @@ switch( i )
 }
 ```
 
-この例では、**break** ステートメントは `switch` 本体の各ステートメントに続きます。 **break** ステートメントによって、1 つのステートメントの実行後にステートメント本体を終了することが強制されます。 `i` が -1 と等しい場合、`n` だけがインクリメントされます。 `n++;` ステートメントに続く **break** により、残りのステートメントをバイパスして、実行制御をステートメント本体の外部に渡すことが強制されます。 同様に、`i` が 0 と等しい場合は `z` だけがインクリメントされ、`i` が 1 と等しい場合は `p` だけがインクリメントされます。 複合ステートメントの最後に制御は本体の外部に移るため、**break** ステートメントは厳密には必要ありませんが、一貫性を持たせるために含まれています。  
-  
-次の例に示すように、1 つのステートメントに複数の **case** ラベルを含めることができます。  
-  
+この例では、**break** ステートメントは `switch` 本体の各ステートメントに続きます。 **break** ステートメントによって、1 つのステートメントの実行後にステートメント本体を終了することが強制されます。 `i` が -1 と等しい場合、`n` だけがインクリメントされます。 `n++;` ステートメントに続く **break** により、残りのステートメントをバイパスして、実行制御をステートメント本体の外部に渡すことが強制されます。 同様に、`i` が 0 と等しい場合は `z` だけがインクリメントされ、`i` が 1 と等しい場合は `p` だけがインクリメントされます。 複合ステートメントの最後に制御は本体の外部に移るため、**break** ステートメントは厳密には必要ありませんが、一貫性を持たせるために含まれています。
+
+次の例に示すように、1 つのステートメントに複数の **case** ラベルを含めることができます。
+
 ```C
-case 'a' :  
-case 'b' :  
-case 'c' :  
-case 'd' :  
-case 'e' :  
-case 'f' :  hexcvt(c);  
-```  
-  
-この例では、*constant-expression* が `'a'` から `'f'` の間の文字に等しい場合に `hexcvt` 関数が呼び出されます。  
-  
-**Microsoft 固有の仕様**  
-  
-Microsoft C では、`switch` ステートメントの case 値の数を制限していません。 この数は、使用できるメモリによってのみ制限されます。 ANSI C では、1 つの `switch` ステートメント内に 257 個までの case ラベルを使用できます。  
-  
-Microsoft C の既定では、Microsoft 拡張機能が有効になっています。 これらの拡張機能を無効にするには、/Za コンパイラ オプションを使用します。  
-  
-**Microsoft 固有の仕様はここまで**  
-  
+case 'a' :
+case 'b' :
+case 'c' :
+case 'd' :
+case 'e' :
+case 'f' :  hexcvt(c);
+```
+
+この例では、*constant-expression* が `'a'` から `'f'` の間の文字に等しい場合に `hexcvt` 関数が呼び出されます。
+
+**Microsoft 固有の仕様**
+
+Microsoft C では、`switch` ステートメントの case 値の数を制限していません。 この数は、使用できるメモリによってのみ制限されます。 ANSI C では、1 つの `switch` ステートメント内に 257 個までの case ラベルを使用できます。
+
+Microsoft C の既定では、Microsoft 拡張機能が有効になっています。 これらの拡張機能を無効にするには、/Za コンパイラ オプションを使用します。
+
+**Microsoft 固有の仕様はここまで**
+
 ## <a name="see-also"></a>参照
 
 [switch ステートメント (C++)](../cpp/switch-statement-cpp.md)
