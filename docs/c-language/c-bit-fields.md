@@ -15,34 +15,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af47bbebdf3b3a71e2b63b07a1fa467801728061
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6b3e828af6232dec6ebfb4558fdb8501c7f90abb
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32385677"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43757488"
 ---
 # <a name="c-bit-fields"></a>C ビット フィールド
 構造体または共用体のメンバーの宣言子に加えて、構造体の宣言子も "ビット フィールド" と呼ばれる指定のビット数になります。 その長さは、フィールド名の宣言子からコロンによって区切られます。 ビット フィールドは整数型として解釈されます。  
   
-## <a name="syntax"></a>構文  
- *struct-declarator*:  
- *declarator*  
+## <a name="syntax"></a>構文
+
+*struct-declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
   
- *type-specifier declarator* opt **:** *constant-expression*  
+*constant-expression* は、フィールドの幅 (ビット単位) を指定します。 `declarator` の *type-specifier* は、`unsigned int`、**signed int**、または `int` である必要があります。*constant-expression* は負ではない整数値である必要があります。 値がゼロの場合、宣言には `declarator` がありません。 ビット フィールド、ビット フィールドへのポインター、およびビット フィールドを返す関数の配列は使用できません。 省略可能な `declarator` はビット フィールドの名前を指定します。 ビット フィールドは構造体の一部としてしか宣言できません。 アドレス演算子 (**&**) は、ビット フィールド コンポーネントに適用できません。  
   
- *constant-expression* は、フィールドの幅 (ビット単位) を指定します。 `declarator` の *type-specifier* は、`unsigned int`、**signed int**、または `int` である必要があります。*constant-expression* は負ではない整数値である必要があります。 値がゼロの場合、宣言には `declarator` がありません。 ビット フィールド、ビット フィールドへのポインター、およびビット フィールドを返す関数の配列は使用できません。 省略可能な `declarator` はビット フィールドの名前を指定します。 ビット フィールドは構造体の一部としてしか宣言できません。 アドレス演算子 (**&**) は、ビット フィールド コンポーネントに適用できません。  
+名前のないビット フィールドは参照できません。実行時の内容は予測できません。 これらはアラインメントのために "ダミー" フィールドとして使用できます。 幅が 0 として指定された、名前のないビット フィールドは、*struct-declaration-list* 内でそれに続くメンバーのストレージが、`int` 境界で開始されることを保証します。  
   
- 名前のないビット フィールドは参照できません。実行時の内容は予測できません。 これらはアラインメントのために "ダミー" フィールドとして使用できます。 幅が 0 として指定された、名前のないビット フィールドは、*struct-declaration-list* 内でそれに続くメンバーのストレージが、`int` 境界で開始されることを保証します。  
-  
- ビット フィールドは、ビット パターンを含めるための十分な長さを持つ必要があります。 たとえば、次の 2 つのステートメントは正しくありません。  
+ビット フィールドは、ビット パターンを含めるための十分な長さを持つ必要があります。 たとえば、次の 2 つのステートメントは正しくありません。  
   
 ```  
 short a:17;        /* Illegal! */  
 int long y:33;     /* Illegal! */  
 ```  
   
- 次の例では、`screen` という名前の構造体の 2 次元配列を定義します。  
+次の例では、`screen` という名前の構造体の 2 次元配列を定義します。  
   
 ```  
 struct   
@@ -54,15 +54,15 @@ struct
 } screen[25][80];  
 ```  
   
- 配列には 2,000 の要素が含まれます。 各要素は、`icon`、`color`、`underline`、および `blink` の 4 つのビット フィールド メンバーを含む個別の構造体です。 各構造体のサイズは 2 バイトです。  
+配列には 2,000 の要素が含まれます。 各要素は、`icon`、`color`、`underline`、および `blink` の 4 つのビット フィールド メンバーを含む個別の構造体です。 各構造体のサイズは 2 バイトです。  
   
- ビット フィールドには、整数型と同じセマンティクスがあります。 これは、ビット フィールドにあるビット数にかかわらず、同じ基本型の変数が使用される場合とまったく同じように、式でビット フィールドが使用されることを意味します。  
+ビット フィールドには、整数型と同じセマンティクスがあります。 これは、ビット フィールドにあるビット数にかかわらず、同じ基本型の変数が使用される場合とまったく同じように、式でビット フィールドが使用されることを意味します。  
   
- **Microsoft 固有の仕様**  
+**Microsoft 固有の仕様**  
   
- `int` として定義されたビット フィールドは、符号付きとして扱われます。 ANSI C 規格への Microsoft 拡張機能を使用すると、ビット フィールドに対して `char` および **long** 型 (**Signed** と `unsigned` の両方) が許されます。 **long**、**short**、または `char` (**Signed** または `unsigned`) 基本型の名前のないビット フィールドは、基本型に適した境界に強制的にアラインメントされます。  
+`int` として定義されたビット フィールドは、符号付きとして扱われます。 ANSI C 規格への Microsoft 拡張機能を使用すると、ビット フィールドに対して `char` および **long** 型 (**Signed** と `unsigned` の両方) が許されます。 **long**、**short**、または `char` (**Signed** または `unsigned`) 基本型の名前のないビット フィールドは、基本型に適した境界に強制的にアラインメントされます。  
   
- ビット フィールドは、整数内で最下位ビットから最上位ビットへと割り当てられます。 次のコードでは、  
+ビット フィールドは、整数内で最下位ビットから最上位ビットへと割り当てられます。 次のコードでは、  
   
 ```  
 struct mybitfields  
@@ -80,16 +80,16 @@ int main( void );
 }  
 ```  
   
- ビットは次のように配置されます。  
+ビットは次のように配置されます。  
   
 ```  
 00000001 11110010  
 cccccccb bbbbaaaa  
 ```  
   
- 8086 ファミリのプロセッサは整数値の下位バイトを上位バイトの前に格納するため、上記の整数 `0x01F2` は、後に `0xF2` が続く `0x01` として物理メモリに格納されます。  
+8086 ファミリのプロセッサは整数値の下位バイトを上位バイトの前に格納するため、上記の整数 `0x01F2` は、後に `0xF2` が続く `0x01` として物理メモリに格納されます。  
   
- **Microsoft 固有の仕様はここまで**  
+**Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>参照  
- [構造体宣言](../c-language/structure-declarations.md)
+[構造体宣言](../c-language/structure-declarations.md)

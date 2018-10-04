@@ -18,67 +18,61 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ffb239db12111f80e894c68cff568338bb3ed038
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 2448a34f85ab33c1a8d587b0eb44530e5e2417a7
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43207271"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43754047"
 ---
 # <a name="structure-declarations"></a>構造体宣言
 "構造体宣言" では、型に名前を付け、異なる型を持つことのできる変数値のシーケンス (構造体の "メンバー" または "フィールド" と呼びます) を指定します。 "タグ" と呼ばれる省略可能な識別子で構造体の型に名前を付けると、その後はタグを使用してその構造体型を参照できます。 構造体型の変数は、その型で定義されているシーケンス全体を保持します。 C の構造体は、他の言語で "レコード" と呼ばれる型に似ています。  
   
-## <a name="syntax"></a>構文  
- *struct-or-union-specifier*:  
- *struct-or-union identifier* opt **{** *struct-declaration-list* **}**  
+## <a name="syntax"></a>構文
+
+*struct-or-union-specifier*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*<sub>opt</sub> **{** *struct-declaration-list* **}**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union* *identifier*
+
+*struct-or-union*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**struct**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**union**
+
+*struct-declaration-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declaration-list* *struct-declaration*
+
+*struct-declaration*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*specifier-qualifier-list* *struct-declarator-list* **;**
+
+*specifier-qualifier-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *specifier-qualifier-list*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-qualifier* *specifier-qualifier-list*<sub>opt</sub>
+
+*struct-declarator-list*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*struct-declarator* *struct-declarator-list* **,** *struct-declarator*
+
+*struct-declarator*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declarator*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*type-specifier* *declarator*<sub>opt</sub> **:** *constant-expression*
   
- *struct-or-union identifier*  
+構造体型の宣言では、構造体の領域は確保されません。 これは、後で構造体変数を宣言するためのテンプレートにすぎません。  
   
- *struct-or-union*:  
- **struct**  
+以前に定義済みの *identifier* (タグ) を使用して、他の場所で定義された構造体型を参照することができます。 この場合、定義が参照可能である限り、*struct-declaration-list* を繰り返すことはできません。 構造体へのポインターの宣言や構造体型の typedef では、構造体型を定義する前に構造体タグを使用できます。 ただし、構造体の定義は、フィールドのサイズが実際に使用される前に検出される必要があります。 この状態では、型および型のタグの定義は不完全です。 この定義を完全なものにするには、同じスコープ内に後で型定義を記述する必要があります。  
   
- **union**  
+*struct-declaration-list* は構造体メンバーの型と名前を指定します。 *struct-declaration-list* 引数は、1 つまたは複数の変数またはビット フィールドの宣言を含みます。  
   
- *struct-declaration-list*:  
- *struct-declaration*  
+*struct-declaration-list* で宣言された各変数は構造体型のメンバーとして定義されます。 *struct-declaration-list* 内での変数宣言は、このセクションで説明されている他の変数宣言と同じ形式ですが、ストレージ クラスの指定子または初期化子を含むことはできません。 構造体メンバーは、`void`、不完全な型、または関数型を除く任意の変数型を持つことができます。  
   
- *struct-declaration-list struct-declaration*  
+メンバーを、そのメンバーを含む構造体の型を持つように宣言することはできません。 ただし、構造体型にタグがある場合は、メンバーを、そのメンバーを含む構造体型へのポインターとして宣言できます。 これにより、構造体のリンク リストを作成できます。  
   
- 構造体の内容は、次のように定義されます。  
+構造体は、他の識別子と同じスコープに従います。 構造体の識別子は、同じ可視性を持つ他の構造体タグ、共用体タグ、および列挙タグとは異なる必要があります。  
   
- *struct-declaration*:  
- *specifier-qualifier-list struct-declarator-list*  **;**  
+*struct-declaration-list* 内の各 *struct-declaration* は、リスト内で一意である必要があります。 ただし、*struct-declaration-list* 内の識別子名は、通常の変数名や他の構造体宣言リストの識別子と別にする必要はありません。  
   
- *specifier-qualifier-list*:  
- *type-specifier specifier-qualifier-list* opt  
+入れ子構造にも、ファイル スコープ レベルで宣言されているかのようにアクセスできます。 たとえば、次の宣言があるとします。  
   
- *type-qualifier specifier-qualifier-list* opt  
-  
- *struct-declarator-list*:  
- *struct-declarator*  
-  
- *struct-declarator-list*  **,**  *struct-declarator*  
-  
- *struct-declarator*:  
- `declarator`  
-  
- 構造体型の宣言では、構造体の領域は確保されません。 これは、後で構造体変数を宣言するためのテンプレートにすぎません。  
-  
- 以前に定義済みの *identifier* (タグ) を使用して、他の場所で定義された構造体型を参照することができます。 この場合、定義が参照可能である限り、*struct-declaration-list* を繰り返すことはできません。 構造体へのポインターの宣言や構造体型の typedef では、構造体型を定義する前に構造体タグを使用できます。 ただし、構造体の定義は、フィールドのサイズが実際に使用される前に検出される必要があります。 この状態では、型および型のタグの定義は不完全です。 この定義を完全なものにするには、同じスコープ内に後で型定義を記述する必要があります。  
-  
- *struct-declaration-list* は構造体メンバーの型と名前を指定します。 *struct-declaration-list* 引数は、1 つまたは複数の変数またはビット フィールドの宣言を含みます。  
-  
- *struct-declaration-list* で宣言された各変数は構造体型のメンバーとして定義されます。 *struct-declaration-list* 内での変数宣言は、このセクションで説明されている他の変数宣言と同じ形式ですが、ストレージ クラスの指定子または初期化子を含むことはできません。 構造体メンバーは、`void`、不完全な型、または関数型を除く任意の変数型を持つことができます。  
-  
- メンバーを、そのメンバーを含む構造体の型を持つように宣言することはできません。 ただし、構造体型にタグがある場合は、メンバーを、そのメンバーを含む構造体型へのポインターとして宣言できます。 これにより、構造体のリンク リストを作成できます。  
-  
- 構造体は、他の識別子と同じスコープに従います。 構造体の識別子は、同じ可視性を持つ他の構造体タグ、共用体タグ、および列挙タグとは異なる必要があります。  
-  
- *struct-declaration-list* 内の各 *struct-declaration* は、リスト内で一意である必要があります。 ただし、*struct-declaration-list* 内の識別子名は、通常の変数名や他の構造体宣言リストの識別子と別にする必要はありません。  
-  
- 入れ子構造にも、ファイル スコープ レベルで宣言されているかのようにアクセスできます。 たとえば、次の宣言があるとします。  
-  
-```  
+```C
 struct a  
 {  
     int x;  
@@ -89,17 +83,17 @@ struct a
 } var1;  
 ```  
   
- 次の宣言は、どちらも有効です。  
+次の宣言は、どちらも有効です。  
   
-```  
+```C
 struct a var3;  
 struct b var4;  
 ```  
   
 ## <a name="examples"></a>使用例  
- 以下の各例は、構造体宣言を示しています。  
+以下の各例は、構造体宣言を示しています。  
   
-```  
+```C
 struct employee   /* Defines a structure variable named temp */  
 {  
     char name[20];  
@@ -108,24 +102,24 @@ struct employee   /* Defines a structure variable named temp */
 } temp;  
 ```  
   
- `employee` 構造体は、3 つのメンバー、`name`、`id`、`class` を持ちます。 `name` メンバーは 20 要素の配列で、`id` と `class` は、それぞれ `int` 型と **long** 型を持つ単純なメンバーです。 識別子 `employee` は構造体識別子です。  
+`employee` 構造体は、3 つのメンバー、`name`、`id`、`class` を持ちます。 `name` メンバーは 20 要素の配列で、`id` と `class` は、それぞれ `int` 型と **long** 型を持つ単純なメンバーです。 識別子 `employee` は構造体識別子です。  
   
-```  
+```C
 struct employee student, faculty, staff;  
 ```  
   
- この例では、3 種類の構造体変数 (`student`、`faculty`、および `staff`) を定義しています。 各構造体は、3 つのメンバーで構成される同じリストを持ちます。 メンバーは、前の例で定義した構造体型 `employee` を持つように宣言されています。  
+この例では、3 種類の構造体変数 (`student`、`faculty`、および `staff`) を定義しています。 各構造体は、3 つのメンバーで構成される同じリストを持ちます。 メンバーは、前の例で定義した構造体型 `employee` を持つように宣言されています。  
   
-```  
+```C
 struct           /* Defines an anonymous struct and a */  
 {                /* structure variable named complex  */  
     float x, y;  
 } complex;  
 ```  
   
- `complex` 構造体は、**float** 型の 2 つのメンバー、`x` および `y` を持ちます。 この構造体型にはタグがないため、無名または匿名になります。  
+`complex` 構造体は、**float** 型の 2 つのメンバー、`x` および `y` を持ちます。 この構造体型にはタグがないため、無名または匿名になります。  
   
-```  
+```C
 struct sample   /* Defines a structure named x */  
 {  
     char c;  
@@ -134,11 +128,11 @@ struct sample   /* Defines a structure named x */
 } x;  
 ```  
   
- この構造体の最初の 2 つのメンバーは `char` 変数と **float** 値へのポインターです。 3 番目のメンバー `next` は、定義されている構造体型へのポインターとして宣言されています (`sample`)。  
+この構造体の最初の 2 つのメンバーは `char` 変数と **float** 値へのポインターです。 3 番目のメンバー `next` は、定義されている構造体型へのポインターとして宣言されています (`sample`)。  
   
- 無名構造体は、名前が付いたタグが不要な場合に便利です。 1 つの宣言ですべての構造体インスタンスが定義される場合は、これに該当します。 例:  
+無名構造体は、名前が付いたタグが不要な場合に便利です。 1 つの宣言ですべての構造体インスタンスが定義される場合は、これに該当します。 例:  
   
-```  
+```C
 struct  
 {  
     int x;  
@@ -146,9 +140,9 @@ struct
 } mystruct;  
 ```  
   
- 多くの場合、埋め込み構造体は無名です。  
+多くの場合、埋め込み構造体は無名です。  
   
-```  
+```C
 struct somestruct  
 {  
     struct    /* Anonymous structure */  
@@ -159,17 +153,17 @@ struct somestruct
 } w;  
 ```  
   
- **Microsoft 固有の仕様**  
+**Microsoft 固有の仕様**  
   
- コンパイラは、構造体の最後のメンバーとして可変長配列またはサイズが 0 の配列を許可します。 これは、使用されるさまざまな状況によって定数配列のサイズが異なるときに便利な場合があります。 このような構造体の宣言は次のようになります。  
+コンパイラは、構造体の最後のメンバーとして可変長配列またはサイズが 0 の配列を許可します。 これは、使用されるさまざまな状況によって定数配列のサイズが異なるときに便利な場合があります。 このような構造体の宣言は次のようになります。  
   
 **struct** *identifier* **{** *set-of-declarations* *type* <em>array-name</em>**\[]; };**  
   
- 可変長配列は、構造体の最後のメンバーとしてのみ使用できます。 可変長配列宣言を含む構造体は、外側のどの構造体でもそれ以上メンバーが宣言されていなければ、他の構造体内に入れ子にできます。 ただし、そのような構造体を配列にすることはできません。 この型の変数またはこの型自体に `sizeof` 演算子を適用すると、可変長配列のサイズには 0 が想定されます。  
+可変長配列は、構造体の最後のメンバーとしてのみ使用できます。 可変長配列宣言を含む構造体は、外側のどの構造体でもそれ以上メンバーが宣言されていなければ、他の構造体内に入れ子にできます。 ただし、そのような構造体を配列にすることはできません。 この型の変数またはこの型自体に `sizeof` 演算子を適用すると、可変長配列のサイズには 0 が想定されます。  
   
- 構造体宣言は、別の構造体または共用体のメンバーである場合は、宣言子なしで指定できます。 フィールド名は、外側を囲む構造に昇格されます。 たとえば、無名の構造体では次のようになります。  
-  
-```  
+構造体宣言は、別の構造体または共用体のメンバーである場合は、宣言子なしで指定できます。 フィールド名は、外側を囲む構造に昇格されます。 たとえば、無名の構造体では次のようになります。
+
+```C
 struct s  
 {  
     float y;  
@@ -185,9 +179,9 @@ struct s
 p_s->b = 100;  /* A reference to a field in the s structure */  
 ```  
   
- 構造体の参照については、「[Structure and Union Members (構造体と共用体のメンバー)](../c-language/structure-and-union-members.md)」を参照してください。  
+構造体の参照については、「[Structure and Union Members (構造体と共用体のメンバー)](../c-language/structure-and-union-members.md)」を参照してください。  
   
- **Microsoft 固有の仕様はここまで**  
+**Microsoft 固有の仕様はここまで**  
   
 ## <a name="see-also"></a>参照  
- [宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)
+[宣言子と変数宣言](../c-language/declarators-and-variable-declarations.md)

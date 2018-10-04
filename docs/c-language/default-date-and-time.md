@@ -15,17 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5d66059ddabac7edb2001f154173e6367355815
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8646e612505099476b39109c3ef5f9084f7403ab
+ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32382742"
+ms.lasthandoff: 09/05/2018
+ms.locfileid: "43752159"
 ---
 # <a name="default-date-and-time"></a>既定の日付と時刻
-**ANSI 3.8.8** 翻訳の日時が使用できない場合の _DATE\_ と _TIME\_ の定義  
+
+**ANSI 3.8.8** 翻訳の日付と時刻がそれぞれ使用できない場合の、`__DATE__` と `__TIME__` の定義  
   
- オペレーティング システムが翻訳の日時を提供しないと、_DATE\_ および _TIME\_ の既定値は `May 03 1957` および `17:00:00"` になります。  
+オペレーティング システムが翻訳の日付と時刻を提供しない場合、`__DATE__` および `__TIME__` の既定値は `May 03 1957` および `17:00:00` になります。  
   
-## <a name="see-also"></a>参照  
- [プリプロセス ディレクティブ](../c-language/preprocessing-directives.md)
+## <a name="see-also"></a>参照
+
+[プリプロセス ディレクティブ](../c-language/preprocessing-directives.md)
