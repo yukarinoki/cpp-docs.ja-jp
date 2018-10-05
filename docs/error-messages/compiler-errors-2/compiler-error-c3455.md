@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d26a8f3e404eaa19a102be4cb3f11350c4fe674
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a10c91f34cd00b8524a047131e9a39b901c83fce
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46089360"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788592"
 ---
 # <a name="compiler-error-c3455"></a>コンパイラ エラー C3455
 
 'attribute': どの属性コンストラクターも引数に一致しませんでした
 
-無効な値が属性の宣言に使用されました。  詳細については、「 [attribute](../../windows/attribute.md) 」を参照してください。
+無効な値が属性の宣言に使用されました。  参照してください[属性](../../windows/attributes/attribute.md)詳細についてはします。
 
 ## <a name="example"></a>例
 

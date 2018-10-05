@@ -1,7 +1,7 @@
 ---
 title: ComPtrRef クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e19b8bb5ecf1215c3f9c4eb74cf36eb9d7fc7200
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: a674d63c52f6f204d0bb69c69cd5814cd6d9761a
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235803"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48788943"
 ---
 # <a name="comptrref-class"></a>ComPtrRef クラス
 
@@ -49,9 +49,7 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 ## <a name="syntax"></a>構文
 
 ```cpp
-template <
-   typename T
->
+template <typename T>
 class ComPtrRef : public ComPtrRefBase<T>;
 ```
 

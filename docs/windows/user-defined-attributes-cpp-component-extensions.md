@@ -1,7 +1,7 @@
 ---
 title: ユーザー定義の属性 (C++ コンポーネント拡張) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/02/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 605759e241498e83174f4d6b16435c3119c56671
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42600382"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789229"
 ---
 # <a name="user-defined-attributes--c-component-extensions"></a>ユーザー定義の属性 (C++ コンポーネント拡張)
 
@@ -47,7 +47,7 @@ C + + CX 属性のプロパティのみをサポートがない属性のコン�
 
 ### <a name="remarks"></a>Remarks
 
-情報と、このトピックで示した構文で説明する情報を置き換えるものでは[属性](../windows/attribute.md)します。
+情報と、このトピックで示した構文で説明する情報を置き換えるものでは[属性](attributes/attribute.md)します。
 
 カスタム属性を定義するには、型を定義して<xref:System.Attribute>型と、必要に応じて、基本クラスを適用する、<xref:System.AttributeUsageAttribute>属性。
 
@@ -55,9 +55,9 @@ C + + CX 属性のプロパティのみをサポートがない属性のコン�
 
 詳細については、次のトピックを参照してください。
 
-- [属性の対象](../windows/attribute-targets-cpp-component-extensions.md)
+- [属性の対象](attribute-targets-cpp-component-extensions.md)
 
-- [属性パラメーターの型](../windows/attribute-parameter-types-cpp-component-extensions.md)
+- [属性パラメーターの型](attribute-parameter-types-cpp-component-extensions.md)
 
 Visual C でのアセンブリへの署名については、次を参照してください。[厳密な名前のアセンブリ (アセンブリ署名) (C +/cli CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)します。
 
@@ -177,7 +177,7 @@ Service Access = Read
 
 属性の引数はコンパイル時定数である必要があります。ほとんどの場合、定数リテラルを使用する必要があります。
 
-参照してください[typeid](../windows/typeid-cpp-component-extensions.md)については、カスタム属性ブロックからの system::type の値を返す方法。
+参照してください[typeid](typeid-cpp-component-extensions.md)については、カスタム属性ブロックからの system::type の値を返す方法。
 
 ```cpp
 // extending_metadata_e.cpp
@@ -216,4 +216,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[ランタイム プラットフォームのコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)
