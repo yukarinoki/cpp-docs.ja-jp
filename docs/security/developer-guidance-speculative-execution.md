@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28d1df72efcc1fa7408922876ad91bafcd2b005a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ba89aadc8e1c617ed8e101a226560b80cb9e431
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422669"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821401"
 ---
 # <a name="c-developer-guidance-for-speculative-execution-side-channels"></a>予測実行のサイド チャネルの C++ の開発者ガイド
 
@@ -73,7 +73,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ## <a name="what-software-scenarios-can-be-impacted"></a>どのようなソフトウェアのシナリオの影響を受けることができますか。
 
-ようなプロセスを使用してセキュリティで保護されたソフトウェアの開発、 [Security Development Lifecycle](https://www.microsoft.com/en-us/sdl/) (SDL) には、通常、アプリケーション内に存在する信頼の境界を識別するために開発者が必要です。 信頼境界は、アプリケーションがシステム上の別のプロセスまたはカーネル モード デバイス ドライバーの場合、管理者以外のユーザー モード プロセスなど、信頼度の低いコンテキストによって提供されるデータを対話の場所に存在します。 予測実行のサイド チャネルに関連する脆弱性の新しいクラスでは、コードと、デバイス上のデータを分離する既存のソフトウェア セキュリティ モデル内の信頼境界の多くに関連します。
+ようなプロセスを使用してセキュリティで保護されたソフトウェアの開発、 [Security Development Lifecycle](https://www.microsoft.com/sdl/) (SDL) には、通常、アプリケーション内に存在する信頼の境界を識別するために開発者が必要です。 信頼境界は、アプリケーションがシステム上の別のプロセスまたはカーネル モード デバイス ドライバーの場合、管理者以外のユーザー モード プロセスなど、信頼度の低いコンテキストによって提供されるデータを対話の場所に存在します。 予測実行のサイド チャネルに関連する脆弱性の新しいクラスでは、コードと、デバイス上のデータを分離する既存のソフトウェア セキュリティ モデル内の信頼境界の多くに関連します。
 
 次の表では、開発者が発生しているこれらの脆弱性について心配する必要があります、ソフトウェアのセキュリティ モデルの概要を示します。
 
@@ -341,7 +341,7 @@ unsigned char ReadByte(unsigned char *buffer, unsigned int buffer_size, unsigned
 
 ### <a name="speculation-barrier-via-compiler-time-instrumentation"></a>コンパイラにインストルメンテーションを使用して、推論バリア
 
-(バージョン 15.5.5 以降)、Visual Studio 2017 の Visual C コンパイラにはサポートが含まれています、`/Qspectre`限られた可能性がある脆弱性のあるコーディング パターン推論バリアを自動的に挿入するスイッチに関連する CVE 2017-5753 に対する。 ドキュメント、 [/Qspectre](https://docs.microsoft.com/en-us/cpp/build/reference/qspectre)フラグの効果と使用状況の詳細を提供します。 このフラグが可能性のある脆弱性のあるコーディング パターンのすべてに対応することはできませんとよう開発者に依存しないでください、このクラスの脆弱性を包括的な緩和するために重要です。
+(バージョン 15.5.5 以降)、Visual Studio 2017 の Visual C コンパイラにはサポートが含まれています、`/Qspectre`限られた可能性がある脆弱性のあるコーディング パターン推論バリアを自動的に挿入するスイッチに関連する CVE 2017-5753 に対する。 ドキュメント、 [/Qspectre](https://docs.microsoft.com/cpp/build/reference/qspectre)フラグの効果と使用状況の詳細を提供します。 このフラグが可能性のある脆弱性のあるコーディング パターンのすべてに対応することはできませんとよう開発者に依存しないでください、このクラスの脆弱性を包括的な緩和するために重要です。
 
 ### <a name="masking-array-indices"></a>配列のインデックスのマスク
 

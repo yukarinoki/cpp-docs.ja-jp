@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cbcc791d4e39f58146ed13bb41c8ec43941d3527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 32fcf4f8f99f80e44758c107a8941c51bd8a767f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087813"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821167"
 ---
 # <a name="switch-statement-c"></a>switch ステートメント (C++)
 
@@ -119,14 +119,14 @@ int main()
 **Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): switch ステートメントが紹介し、スコープは、switch ステートメントのブロックに限定する変数を初期化する場合があります。
 
 ```cpp
-switch (Gadget gadget(args); auto s = gadget.get_status())
-        {
-        case status::good:
-            gadget.zip();
-            break;
-        case status::bad:
-            throw BadGadget();
-        };
+    switch (Gadget gadget(args); auto s = gadget.get_status())
+    {
+    case status::good:
+        gadget.zip();
+        break;
+    case status::bad:
+        throw BadGadget();
+    };
 ```
 
 内側のブロックを**切り替える**が到達可能な限り、ステートメントで初期化の定義を含めることができます: ないは、すべての実行可能なパスではバイパスされます。 これらの宣言を使用して導入された名前にはローカル スコープがあります。 例えば:
@@ -138,35 +138,35 @@ switch (Gadget gadget(args); auto s = gadget.get_status())
 using namespace std;
 int main(int argc, char *argv[])
 {
-   switch( tolower( *argv[1] ) )
-   {
-       // Error. Unreachable declaration.
-       char szChEntered[] = "Character entered was: ";
+    switch( tolower( *argv[1] ) )
+    {
+        // Error. Unreachable declaration.
+        char szChEntered[] = "Character entered was: ";
 
-   case 'a' :
-       {
-       // Declaration of szChEntered OK. Local scope.
-       char szChEntered[] = "Character entered was: ";
-       cout << szChEntered << "a\n";
-       }
-       break;
+    case 'a' :
+        {
+        // Declaration of szChEntered OK. Local scope.
+        char szChEntered[] = "Character entered was: ";
+        cout << szChEntered << "a\n";
+        }
+        break;
 
-   case 'b' :
-       // Value of szChEntered undefined.
-       cout << szChEntered << "b\n";
-       break;
+    case 'b' :
+        // Value of szChEntered undefined.
+        cout << szChEntered << "b\n";
+        break;
 
-   default:
-       // Value of szChEntered undefined.
-       cout << szChEntered << "neither a nor b\n";
-       break;
-   }
+    default:
+        // Value of szChEntered undefined.
+        cout << szChEntered << "neither a nor b\n";
+        break;
+    }
 }
 ```
 
 A**切り替える**ステートメントは入れ子にできます。 このような場合、**ケース**または**既定**ラベルは、最も近いと関連付ける**切り替える**そのすぐ外側のステートメント。
 
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+**Microsoft 固有の仕様**
 
 Microsoft C では、case 値の数は制限されませんが、**切り替える**ステートメント。 この数は、使用できるメモリによってのみ制限されます。 ANSI C には、少なくとも 257 が必要がありますの case ラベルを使用できる、**切り替える**ステートメント。
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ceb0d29a5e49efa4f387f2949a0aa670082a62ab
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 64a42a65e112930767aa27f94612d06b7fb2d34a
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021942"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821635"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右辺値参照宣言子: &amp;&amp;
 
@@ -63,7 +63,7 @@ int main()
 
 Visual C 2010 では、前に各呼び出しに**operator +** 関数割り当てを一時的な返します`string`オブジェクト (右辺値)。 **operator +** ソース文字列が左辺値または右辺値であるかどうかがわからないために、他に 1 つの文字列を追加できません。 ソース文字列が両方とも左辺値である場合、それらのソース文字列はプログラム内の他の場所で参照されている場合があるため、変更しないでください。 右辺値参照を使用して**operator +** をプログラムでは他の場所で参照できませんが、右辺値を変更できます。 そのため、 **operator +** 別に 1 つの文字列を追加できるようになりました。 これによって、`string` クラスが実行する必要がある動的メモリ割り当ての数を大幅に減らすことができます。 詳細については、`string`クラスを参照してください[basic_string クラス](../standard-library/basic-string-class.md)します。
 
-また、コンパイラが戻り値の最適化 (RVO) または名前付き戻り値の最適化 (NRVO) を使用できない場合に、移動セマンティクスが役立ちます。 このような場合、型が移動コンストラクターを定義していれば、コンパイラはその移動コンストラクターを呼び出します。 という名前の戻り値の最適化の詳細については、次を参照してください。 [Named Return Value Optimization Visual c 2005 で](https://msdn.microsoft.com/en-us/library/ms364057.aspx)します。
+また、コンパイラが戻り値の最適化 (RVO) または名前付き戻り値の最適化 (NRVO) を使用できない場合に、移動セマンティクスが役立ちます。 このような場合、型が移動コンストラクターを定義していれば、コンパイラはその移動コンストラクターを呼び出します。 という名前の戻り値の最適化の詳細については、次を参照してください。 [Named Return Value Optimization Visual c 2005 で](https://msdn.microsoft.com/library/ms364057.aspx)します。
 
 移動セマンティクスをより深く理解するために、`vector` オブジェクトに要素を挿入する例について考えてみましょう。 `vector` オブジェクトの容量が超過した場合、`vector` オブジェクトは、挿入された要素の領域を作成するために、各要素にメモリを再割り当てして、別のメモリ位置に各要素をコピーする必要があります。 挿入操作が要素をコピーするときは、新しい要素を作成し、コピー コンストラクターを呼び出して前の要素から新しい要素にデータをコピーした後、前の要素を破棄します。 移動セマンティクスを使用すると、負荷の高いメモリ割り当てとコピー操作を実行する必要がなく、オブジェクトを直接移動できます。
 

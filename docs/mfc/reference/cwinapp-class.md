@@ -202,12 +202,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8a901b7bd102736bfbeec95a1afe8e44dc26ae3b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86adc1e2337b32ced77cafda92229ed9724ba548
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412185"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821518"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -367,7 +367,7 @@ Microsoft Foundation classes を使用する各アプリケーションから派
 
 - `CWinApp`主要 overridables します。
 
-`m_hPrevInstance`データ メンバーが存在しません。 以前のインスタンスを検出する方法について`CWinApp`でサポート技術情報の記事「する方法を識別、前のインスタンスのアプリケーションへ」(KB106385) を参照してください[ http://support.microsoft.com/default.aspxscid=kb; en-ご; 106385](http://support.microsoft.com/default.aspxscid=kb;en-us;106385)。
+`m_hPrevInstance`データ メンバーが存在しません。 前のインスタンスの検出について`CWinApp`でサポート技術情報の記事「する方法を識別、前のインスタンスのアプリケーションへ」(KB106385) を参照してください[ http://support.microsoft.com/default.aspxscid=kb106385;](http://support.microsoft.com/default.aspxscid=kb;106385)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -1073,7 +1073,7 @@ virtual BOOL InitInstance();
 オーバーライド`InitInstance`を Windows で実行されているアプリケーションの新しいインスタンスを初期化します。 通常、オーバーライドする`InitInstance`をメイン ウィンドウ オブジェクトを構築し、設定、`CWinThread::m_pMainWnd`データ メンバーは、そのウィンドウをポイントします。 このメンバー関数のオーバーライドの詳細については、次を参照してください。 [CWinApp: アプリケーション クラス](../../mfc/cwinapp-the-application-class.md)します。
 
 > [!NOTE]
-> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)で、`InitInstance`オーバーライド、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。 詳細については、[prb] を参照してください: MFC アプリケーションとして、マルチ スレッド アパートメント (828643) でアプリケーションを初期化するときの応答を停止[ http://support.microsoft.com/default.aspxscid=kb; en-ご; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)します。
+> MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)で、`InitInstance`オーバーライド、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。 詳細については、[prb] を参照してください: MFC アプリケーションとして、マルチ スレッド アパートメント (828643) でアプリケーションを初期化するときの応答を停止[ http://support.microsoft.com/default.aspxscid=kb828643;](http://support.microsoft.com/default.aspxscid=kb;828643)します。
 
 ### <a name="example"></a>例
 

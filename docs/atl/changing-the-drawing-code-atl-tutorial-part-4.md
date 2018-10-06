@@ -1,7 +1,7 @@
 ---
 title: 描画コード (ATL チュートリアル、パート 4) の変更 |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/26/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0da5f024e8dffd0115ba9bdbd6cf34f3f7c68a0e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ad8be0655d43fac063a3551f43e667a04caa27b
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46065791"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821063"
 ---
 # <a name="changing-the-drawing-code-atl-tutorial-part-4"></a>描画コードの変更 (ATL チュートリアル、パート 4)
 
@@ -37,53 +37,73 @@ ms.locfileid: "46065791"
 
 数値演算関数のサポートを追加することで開始`sin`と`cos`、どちらを使用する多角形の点を計算し、格納する配列を作成して配置します。
 
-#### <a name="to-modify-the-header-file"></a>ヘッダー ファイルを変更するには
+### <a name="to-modify-the-header-file"></a>ヘッダー ファイルを変更するには
 
 1. 行を追加`#include <math.h>`PolyCtl.h の先頭にします。 このよう、ファイルの先頭になります。
 
-     [!code-cpp[NVC_ATL_Windowing#47](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_1.cpp)]
+    [!code-cpp[NVC_ATL_Windowing#47](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_1.cpp)]
 
-2. 多角形の頂点の計算と型の配列に格納されます`POINT`、そのための定義の後に、配列を追加`m_nSides`PolyCtl.h で。
+1. 実装、 `IProvideClassInfo` PolyCtl.h に次のコードを追加することで、コントロールの方法に関する情報を提供するインターフェイス。 `CPolyCtl`クラス、行に置き換えます。
 
-     [!code-cpp[NVC_ATL_Windowing#48](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_2.h)]
+    ```cpp
+    public CComControl<CPolyCtl>
+    ```
+
+    代入
+
+    ```cpp
+    public CComControl<CPolyCtl>,
+    public IProvideClassInfo2Impl<&CLSID_PolyCtl, &DIID__IPolyCtlEvents, &LIBID_PolygonLib>
+    ```
+
+    および`BEGIN_COM_MAP(CPolyCtl)`行を追加します。
+
+    ```cpp
+    COM_INTERFACE_ENTRY(IProvideClassInfo)
+    COM_INTERFACE_ENTRY(IProvideClassInfo2)
+    ```
+
+1. 多角形の頂点の計算と型の配列に格納されます`POINT`、そのため、配列を追加定義ステートメントの後`short m_nSides;`PolyCtl.h で。
+
+    [!code-cpp[NVC_ATL_Windowing#48](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_2.h)]
 
 ## <a name="modifying-the-ondraw-method"></a>OnDraw メソッドを変更します。
 
 変更する必要がありますので、 `OnDraw` PolyCtl.h メソッド。 追加のコードが新しいペンと、多角形を描画するために使用するブラシを作成しを呼び出して、`Ellipse`と`Polygon`実際の描画を実行する Win32 API 関数。
 
-#### <a name="to-modify-the-ondraw-function"></a>OnDraw 関数を変更するには
+### <a name="to-modify-the-ondraw-function"></a>OnDraw 関数を変更するには
 
 1. 既存`OnDraw`PolyCtl.h でメソッドを次のコード。
 
-     [!code-cpp[NVC_ATL_Windowing#49](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_3.cpp)]
+    [!code-cpp[NVC_ATL_Windowing#49](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_3.cpp)]
 
 ## <a name="adding-a-method-to-calculate-the-polygon-points"></a>多角形の点を計算するメソッドを追加します。
 
 というメソッドを追加`CalcPoints`、多角形の境界を形成する点の座標を計算します。 これらの計算は、関数に渡される RECT 変数に基づいて構築します。
 
-#### <a name="to-add-the-calcpoints-method"></a>CalcPoints メソッドを追加するには
+### <a name="to-add-the-calcpoints-method"></a>CalcPoints メソッドを追加するには
 
 1. 宣言を追加`CalcPoints`を`IPolyCtl`のパブリック セクション、 `CPolyCtl` PolyCtl.h でクラス。
 
-     [!code-cpp[NVC_ATL_Windowing#50](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_4.h)]
+    [!code-cpp[NVC_ATL_Windowing#50](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_4.h)]
 
-     パブリック セクションの最後の部分、`CPolyCtl`クラスのようになります。
+    パブリック セクションの最後の部分、`CPolyCtl`クラスのようになります。
 
-     [!code-cpp[NVC_ATL_Windowing#51](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_5.h)]
+    [!code-cpp[NVC_ATL_Windowing#51](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_5.h)]
 
-2. この実装を追加、 `CalcPoints` PolyCtl.cpp の末尾に関数。
+1. この実装を追加、 `CalcPoints` PolyCtl.cpp の末尾に関数。
 
-     [!code-cpp[NVC_ATL_Windowing#52](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_6.cpp)]
+    [!code-cpp[NVC_ATL_Windowing#52](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_6.cpp)]
 
 ## <a name="initializing-the-fill-color"></a>塗りつぶしの色を初期化しています
 
 初期化`m_clrFillColor`既定色を使用します。
 
-#### <a name="to-initialize-the-fill-color"></a>塗りつぶしの色を初期化するには
+### <a name="to-initialize-the-fill-color"></a>塗りつぶしの色を初期化するには
 
 1. この行を追加することで、既定の色として緑を使用して、 `CPolyCtl` PolyCtl.h でコンス トラクター。
 
-     [!code-cpp[NVC_ATL_Windowing#53](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_7.h)]
+    [!code-cpp[NVC_ATL_Windowing#53](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_7.h)]
 
 コンス トラクターは、次のようになります。
 
@@ -93,35 +113,51 @@ ms.locfileid: "46065791"
 
 コントロールを再構築します。 引き続き開くことがある場合、PolyCtl.htm ファイルが閉じられるかどうかを確認し、**多角形のビルド**上、**ビルド**メニュー。 PolyCtl.htm ページで、もう一度からコントロールを表示することが、今度は、ActiveX コントロール テスト コンテナーを使用します。
 
-#### <a name="to-use-the-activex-control-test-container"></a>ActiveX コントロール テスト コンテナーを使用するには
+### <a name="to-use-the-activex-control-test-container"></a>ActiveX コントロール テスト コンテナーを使用するには
 
-1. ビルドし、ActiveX コントロール テスト コンテナーを開始します。 詳細については、次を参照してください。 [TSTCON サンプル: ActiveX コントロール テスト コンテナー](../visual-cpp-samples.md)します。
+1. ビルドし、ActiveX コントロール テスト コンテナーを開始します。 [TSTCON サンプル: ActiveX コントロール テスト コンテナー](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/ole/TstCon) GitHub で確認できます。
 
-2. テスト コンテナーで、上、**編集** メニューのをクリックして**新しいコントロールを挿入**します。
+    > [!NOTE]
+    > 関連するエラーの`ATL::CW2AEX`、Script.Cpp の行に置き換えます`TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT );`で`TRACE( "XActiveScriptSite::GetItemInfo( %s )\n", pszNameT.m_psz );`、および行`TRACE( "Source Text: %s\n", COLE2CT( bstrSourceLineText ) );`で`TRACE( "Source Text: %s\n", bstrSourceLineText );`します。<br/>
+    > 関連するエラーの`HMONITOR`、StdAfx.h で開く、`TCProps`プロジェクトし、置き換えます。
+    > ```
+    > #ifndef WINVER  
+    > #define WINVER 0x0400   
+    > #endif
+    > ```
+    > 代入
+    > ```
+    > #ifndef WINVER  
+    > #define WINVER 0x0500
+    > #define _WIN32_WINNT 0x0500
+    > #endif
+    > ```
 
-3. 呼び出されますコントロールを検索`PolyCtl Class`、 をクリック**OK**します。 円の中の緑の三角形が表示されます。
+1. **テスト コンテナー**の**編集** メニューのをクリックして**新しいコントロールを挿入**します。
 
-次の手順を実行して辺の数を変更してください。 テスト コンテナー内からデュアル インターフェイスのプロパティを変更するには使用**メソッドの呼び出し**します。
+1. 呼び出されますコントロールを検索`PolyCtl class`、 をクリック**OK**します。 円の中の緑の三角形が表示されます。
 
-#### <a name="to-modify-a-controls-property-from-within-the-test-container"></a>テスト コンテナーからコントロールのプロパティを変更するには
+次の手順を実行して辺の数を変更してください。 内からデュアル インターフェイスのプロパティを変更する**テスト コンテナー**を使用して、**メソッドの呼び出し**します。
 
-1. テスト コンテナーで、次のようにクリックします。**メソッドの呼び出し**上、**コントロール**メニュー。
+### <a name="to-modify-a-controls-property-from-within-the-test-container"></a>テスト コンテナーからコントロールのプロパティを変更するには
 
-     **メソッドの呼び出し** ダイアログ ボックスが表示されます。
+1. **テスト コンテナー**、 をクリックして**メソッドの呼び出し**上、**コントロール**メニュー。
 
-2. 選択、 **PropPut**のバージョン、**辺**プロパティから、**メソッド名**ドロップダウン リスト ボックス。
+    **メソッドの呼び出し** ダイアログ ボックスが表示されます。
 
-3. 型`5`で、**パラメーター値**ボックスで、[**値の設定**、] をクリック**Invoke**します。
+1. 選択、 **PropPut**のバージョン、**辺**プロパティから、**メソッド名**ドロップダウン リスト ボックス。
 
-コントロールが変更されないことに注意してください。 辺の数を内部的に設定して変更したにもかかわらず、`m_nSides`変数、これが発生しなかったコントロールに再描画します。 別のアプリケーションに切り替えるし、テスト コンテナーに切り替えての場合は、コントロールが再描画し、正しい辺の数が表示されます。
+1. 型`5`で、**パラメーター値**ボックスで、[**値の設定**、] をクリック**Invoke**します。
+
+コントロールが変更されないことに注意してください。 辺の数を内部的に設定して変更したにもかかわらず、`m_nSides`変数、これが発生しなかったコントロールに再描画します。 別のアプリケーションに切り替えるし、しに切り替えるかどうか**テスト コンテナー**コントロールが再描画し、正しい辺の数が表示されます。
 
 この問題を修正するには、呼び出しを追加、`FireViewChange`で定義された関数`IViewObjectExImpl`辺の数を設定した後、します。 コントロールが、独自のウィンドウで実行されている場合`FireViewChange`が呼び出す、`InvalidateRect`メソッドを直接します。 コントロールが、ウィンドウなしで実行されている場合、`InvalidateRect`コンテナーのサイトのインターフェイスでメソッドが呼び出されます。 これは強制的に再描画コントロールです。
 
-#### <a name="to-add-a-call-to-fireviewchange"></a>FireViewChange への呼び出しを追加するには
+### <a name="to-add-a-call-to-fireviewchange"></a>FireViewChange への呼び出しを追加するには
 
 1. 呼び出しを追加して PolyCtl.cpp を更新`FireViewChange`を`put_Sides`メソッド。 完了したら、`put_Sides`メソッドは、次のようになります。
 
-     [!code-cpp[NVC_ATL_Windowing#55](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_9.cpp)]
+    [!code-cpp[NVC_ATL_Windowing#55](../atl/codesnippet/cpp/changing-the-drawing-code-atl-tutorial-part-4_9.cpp)]
 
 追加した後`FireViewChange`、再構築したり、コントロールの ActiveX コントロール テスト コンテナーにもう一度お試しください。 この時点の辺の数を変更し、をクリックして`Invoke`コントロールのすぐに変更を表示する必要があります。
 
@@ -133,4 +169,3 @@ ms.locfileid: "46065791"
 
 [チュートリアル](../atl/active-template-library-atl-tutorial.md)<br/>
 [テスト コンテナーでのプロパティとイベントのテスト](../mfc/testing-properties-and-events-with-test-container.md)
-

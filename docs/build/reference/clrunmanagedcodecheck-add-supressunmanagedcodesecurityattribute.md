@@ -1,7 +1,7 @@
 ---
-title: /CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute を追加) |Microsoft Docs
+title: /CLRUNMANAGEDCODECHECK (削除 SuppressUnmanagedCodeSecurityAttribute) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -17,16 +17,16 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 679adc527cc70056e1292eb7e639499bd814bca6
-ms.sourcegitcommit: 7838764e09819822a105accf5d773b2e37ffa0ae
+ms.openlocfilehash: 9868f0c35f4a988ac8e0aee8076f232f86c04afd
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/28/2018
-ms.locfileid: "47429762"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820926"
 ---
-# <a name="clrunmanagedcodecheck-add-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute を追加)
+# <a name="clrunmanagedcodecheck-remove-suppressunmanagedcodesecurityattribute"></a>/CLRUNMANAGEDCODECHECK (削除 SuppressUnmanagedCodeSecurityAttribute)
 
-**/CLRUNMANAGEDCODECHECK**リンカーが適用されるかどうかを指定します。<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>リンカーによって生成されたに`PInvoke`マネージ コードからネイティブ Dll への呼び出し。
+**/CLRUNMANAGEDCODECHECK**リンカーが適用されないことを指定します。<xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>リンカーによって生成されたに`PInvoke`マネージ コードからネイティブ Dll への呼び出し。
 
 ## <a name="syntax"></a>構文
 
@@ -34,13 +34,13 @@ ms.locfileid: "47429762"
 
 ## <a name="remarks"></a>Remarks
 
-既定では、リンカーが適用されます、 **SuppressUnmanagedCodeSecurityAttribute**リンカーによって生成されたに`PInvoke`呼び出し。 ときに **/CLRUNMANAGEDCODECHECK**が有効で**SuppressUnmanagedCodeSecurityAttribute**は適用されません。
+既定では、リンカーが適用されます、 **SuppressUnmanagedCodeSecurityAttribute**リンカーによって生成されたに`PInvoke`呼び出し。 ときに **/CLRUNMANAGEDCODECHECK**が有効で**SuppressUnmanagedCodeSecurityAttribute**が削除されます。 明示的に適用する、 **SuppressUnmanagedCodeSecurityAttribute**リンカーによって生成されたに`PInvoke`呼び出しが使用できる **/CLRUNMANAGEDCODECHECK:NO**します。
 
-リンカーは、コンパイルされたオブジェクトに属性を追加するだけ **/clr**または **/clr: 純粋な**します。 ただし、 **/clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+リンカーは、使用してコンパイルされたオブジェクトに属性を追加するだけ **/clr**または **/clr: 純粋な**します。 ただし、 **/clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 A`PInvoke`リンカーは、マネージ呼び出し元からの参照を満たすためにマネージ シンボルを見つけることができませんが、その参照を満たすためにネイティブのシンボルを検索できる場合に呼び出しがリンカーによって生成されます。 詳細については`PInvoke`を参照してください[マネージ コードからネイティブ関数の呼び出し](../../dotnet/calling-native-functions-from-managed-code.md)します。
 
-使用する場合に注意する<xref:System.Security.AllowPartiallyTrustedCallersAttribute>、コードにする必要があります明示的に設定する **/CLRUNMANAGEDCODECHECK**します。 イメージには、SuppressUnmanagedCodeSecurity と AllowPartiallyTrustedCallers 属性が含まれている場合は、潜在的なセキュリティの脆弱性を勧めします。
+使用する場合に注意する<xref:System.Security.AllowPartiallyTrustedCallersAttribute>、コードにする必要があります明示的に設定する **/CLRUNMANAGEDCODECHECK**を削除する、 **SuppressUnmanagedCodeSecurity**属性。 イメージには、両方が含まれている場合は、潜在的なセキュリティの脆弱性、 **SuppressUnmanagedCodeSecurity**と**AllowPartiallyTrustedCallers**属性。
 
 参照してください[アンマネージ コードのコーディング ガイドラインをセキュリティで保護された](/dotnet/framework/security/secure-coding-guidelines-for-unmanaged-code)を使用する影響の詳細については**SuppressUnmanagedCodeSecurityAttribute**します。
 

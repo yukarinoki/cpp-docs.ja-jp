@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 55852c4de4ca85a41eb7396014655f2e90cea393
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: da7093d25e8221ce3fc3ec8d0d13f8bbc5b420d2
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433011"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821323"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver クラス
 
@@ -115,8 +115,8 @@ OLE ディスパッチ インターフェイスでは、オブジェクトのメ
 
 ```
 void AttachDispatch(
-        LPDISPATCH lpDispatch,
-        BOOL bAutoRelease = TRUE);
+    LPDISPATCH lpDispatch,
+    BOOL bAutoRelease = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -142,7 +142,7 @@ void AttachDispatch(
 ```
 COleDispatchDriver();
 COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
-  COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
+COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -174,9 +174,8 @@ COleDispatchDriver(LPDISPATCH lpDispatch, BOOL bAutoRelease = TRUE);
 
 ```
 BOOL CreateDispatch(
-        REFCLSID clsid,
-        COleException* pError = NULL);
-
+    REFCLSID clsid,
+    COleException* pError = NULL);
 
 BOOL CreateDispatch(
     LPCTSTR lpszProgID,
@@ -256,11 +255,11 @@ void GetProperty(
 
 ```
 void AFX_CDECL InvokeHelper(
-        DISPID dwDispID,
-        WORD wFlags,
-        VARTYPE vtRet,
-        void* pvRet,
-        const BYTE* pbParamInfo, ...);
+    DISPID dwDispID,
+    WORD wFlags,
+    VARTYPE vtRet,
+    void* pvRet,
+    const BYTE* pbParamInfo, ...);
 ```
 
 ### <a name="parameters"></a>パラメーター
