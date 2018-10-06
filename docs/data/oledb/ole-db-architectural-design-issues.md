@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e20fce19824cf093625347bca42f55cbad302b61
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f66ff77ef10f45b19a33a286f63f4bf923f639a2
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040610"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820387"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB アーキテクチャのデザインの問題
 
@@ -46,7 +46,7 @@ Microsoft には、これを実現するいくつかのライブラリが用意�
 
 - [Microsoft ヘルプおよびサポート](https://support.microsoft.com/)
 
-- [Microsoft データ アクセス技術記事の概要](https://msdn.microsoft.com/en-us/library/ms810811.aspx)
+- [Microsoft データ アクセス技術記事の概要](https://msdn.microsoft.com/library/ms810811.aspx)
 
 ## <a name="see-also"></a>関連項目
 
