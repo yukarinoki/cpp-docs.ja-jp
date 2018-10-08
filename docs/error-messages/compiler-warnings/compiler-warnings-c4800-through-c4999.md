@@ -105,12 +105,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f0f8e2c5e3feea1c7607b8303bc42cef5b2f21e0
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601614"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861422"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>コンパイラの警告 C4800 C5999 経由
 
@@ -153,6 +153,7 @@ ms.locfileid: "45601614"
 |コンパイラの警告 (レベル 4) C4842|'offsetof' の複数の継承を使用して、型に適用の結果は、コンパイラ リリース間において一貫性は保証されません。|
 |コンパイラの警告 C4843|'*type1*': 配列または関数の型への参照の例外ハンドラーにアクセスできない、使用して'*type2*' 代わりに|
 |コンパイラの警告 C4844|' モジュールがエクスポート*module_name*;' がモジュール インターフェイスを宣言するための構文として推奨|
+|[コンパイラの警告 (レベル 4) C4866](c4866.md)| コンパイラへの呼び出しの左から右の評価順序を強制しない可能性があります*演算子*|
 |[コンパイラの警告 (エラー) C4867](compiler-warning-c4867.md)|'*関数*': 関数呼び出しの引数リストがありません使用して'*呼び出す*' メンバーへのポインターを作成するには。|
 |[コンパイラの警告 (レベル 4) C4868](compiler-warning-c4868.md)|'_ファイル_(*line_number*)' コンパイラは、中かっこで囲んだ初期化リスト内で左から右の評価順序を強制しない可能性があります|
 |コンパイラの警告 (レベル 2) C4872|concurrency::parallel_for_each の呼び出し先をコンパイルするときに 0 による浮動小数点除算: '*場所*'|

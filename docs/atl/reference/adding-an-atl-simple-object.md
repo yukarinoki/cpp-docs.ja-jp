@@ -18,30 +18,30 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d1347fcebc6a3793cbe63ae356f7f9d2e03742cd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f757602459c55b7b66e01d9512d9d4cdeb2f3946
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109770"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861045"
 ---
 # <a name="adding-an-atl-simple-object"></a>ATL シンプル オブジェクトを追加します。
 
 ATL (Active Template Library) オブジェクトをプロジェクトに追加するには、プロジェクトする必要がありますが作成されたら、ATL アプリケーションまたは ATL サポートを含む MFC アプリケーションとして。 ATL アプリケーションを作成するか、[ATL オブジェクトを MFC アプリケーションに追加して](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) MFC アプリケーションの ATL サポートを実装するには、[ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)を利用できます。
 
-最初に作成して、またはを使用して後で追加できる場合、新しい ATL オブジェクトを COM インターフェイスを定義できます、[インターフェイスの実装](../../ide/implement-interface-wizard.md)クラス ビューのショートカット メニューからコマンド。
+最初に作成して、またはを使用して後で追加できる場合、新しい ATL オブジェクトを COM インターフェイスを定義できます、[インターフェイスの実装](../../ide/implement-interface-wizard.md)コマンドから、**クラス ビュー**ショートカット メニュー。
 
-### <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>ATL COM プロジェクトに ATL シンプル オブジェクトを追加するには
+## <a name="to-add-an-atl-simple-object-to-your-atl-com-project"></a>ATL COM プロジェクトに ATL シンプル オブジェクトを追加するには
 
 1. いずれかで**ソリューション エクスプ ローラー**または[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)、ATL シンプル オブジェクトを追加するプロジェクトの名前を右クリックします。
 
-2. ショートカット メニューの **[追加]**、**[クラスの追加]** を順にクリックします。
+1. ショートカット メニューの **[追加]**、**[クラスの追加]** を順にクリックします。
 
-3. [クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスの [テンプレート] ペインで、クリックして**ATL シンプル オブジェクト**、 をクリックし、**オープン**を表示する、 [ATLシンプルオブジェクトウィザード](../../atl/reference/atl-simple-object-wizard.md).
+1. [クラスの追加](../../ide/add-class-dialog-box.md) ダイアログ ボックスで、**テンプレート**ウィンドウで、をクリックして**ATL シンプル オブジェクト**、順にクリックします**オープン**を表示する[ATL シンプル オブジェクト ウィザード](../../atl/reference/atl-simple-object-wizard.md)します。
 
-4. プロジェクトの追加のオプションの設定、[オプション](../../atl/reference/options-atl-simple-object-wizard.md)ATL シンプル オブジェクト ウィザードのページ。
+1. プロジェクトの追加のオプションの設定、[オプション](../../atl/reference/options-atl-simple-object-wizard.md)のページ、 **ATL シンプル オブジェクト**ウィザード。
 
-5. クリックして**完了**オブジェクトをプロジェクトに追加します。
+1. クリックして**完了**オブジェクトをプロジェクトに追加します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -51,4 +51,3 @@ ATL (Active Template Library) オブジェクトをプロジェクトに追加�
 [メソッドの追加](../../ide/adding-a-method-visual-cpp.md)<br/>
 [MFC クラス](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [一般 C++ クラスの追加](../../ide/adding-a-generic-cpp-class.md)
-

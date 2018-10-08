@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 471d6a273bfb4a446dbf5aba1c3b1bb31d988b24
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e167d1a8d6b7faa161edb332f1041659c176b323
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116101"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861786"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0、ATL COM+ 1.0 コンポーネント ウィザード
 
@@ -34,7 +34,7 @@ ATL プロジェクトや ATL COM クラスの詳細については、次を参�
    |オプション|説明|
    |------------|-----------------|
    |**デュアル**|オブジェクトがデュアル インターフェイスをサポートしていることを指定します (その vtable がカスタム インターフェイス関数と遅延バインディング`IDispatch`メソッド)。 COM クライアントおよびオートメーション コント ローラーがオブジェクトへのアクセスを許可します。|
-   |**カスタム**|オブジェクトが (その vtable がカスタム インターフェイス関数) カスタム インターフェイスをサポートするように指定します。 カスタム インターフェイスはプロセスの境界をまたいで、デュアル インターフェイスよりも高速化できます。<br /><br /> -   **互換性のある automation**カスタム インターフェイスをオートメーションのサポートを追加します。 属性付きプロジェクトは、設定、 **oleautomation**コクラスの属性。|
+   |**カスタム**|オブジェクトが (その vtable がカスタム インターフェイス関数) カスタム インターフェイスをサポートするように指定します。 カスタム インターフェイスはプロセスの境界をまたいで、デュアル インターフェイスよりも高速化できます。<br /><br /> - **互換性のある automation**カスタム インターフェイスをオートメーションのサポートを追加します。 属性付きプロジェクトは、設定、 **oleautomation**コクラスの属性。|
 
 - **Queueable**
 

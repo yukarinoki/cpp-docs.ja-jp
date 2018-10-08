@@ -1,5 +1,5 @@
 ---
-title: 構造体 UNWIND_CODE |マイクロソフトのドキュメント
+title: 構造体 UNWIND_CODE |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -12,12 +12,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1da6f078741c598099e71da9164f54b56da3f355
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f5bccddd2ddd5c0f9dfbc828a7da3a66fa13339d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726649"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861721"
 ---
 # <a name="struct-unwindcode"></a>構造体 UNWIND_CODE
 
@@ -112,17 +112,17 @@ MOV を使用して、プッシュではなく、スタック上には、不揮�
 
 1. RIP のリターン アドレスにスタックの一番上からのポップ*Temp*
 
-2. プッシュ SS
+1. プッシュ SS
 
-3. 古い RSP をプッシュします。
+1. 古い RSP をプッシュします。
 
-4. プッシュ立てる
+1. プッシュ立てる
 
-5. プッシュ CS
+1. プッシュ CS
 
-6. プッシュ*Temp*
+1. プッシュ*Temp*
 
-7. (Op 情報では、1 と等しい) 場合は、エラー コードをプッシュします。
+1. (Op 情報では、1 と等しい) 場合は、エラー コードをプッシュします。
 
 シミュレートされた`UWOP_PUSH_MACHFRAME`40 操作デクリメント RSP (op 情報は、0 に等しい) または 48 (op 情報が 1 と等しくなります)。
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 800b3d7d588d1038ac61cb7c9c4b9f1913bec9d4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 509464ba78a6b7693a849d9f753b13328ab868f9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722372"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860746"
 ---
 # <a name="delayload-delay-load-import"></a>/DELAYLOAD (遅延読み込みのインポート)
 
@@ -46,9 +46,9 @@ ms.locfileid: "45722372"
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
-2. **リンカー**フォルダーを選択、**入力**プロパティ ページ。
+1. **リンカー**フォルダーを選択、**入力**プロパティ ページ。
 
-3. 変更、 **Dll の遅延読み込み**プロパティ。
+1. 変更、 **Dll の遅延読み込み**プロパティ。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

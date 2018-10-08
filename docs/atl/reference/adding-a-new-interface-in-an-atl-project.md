@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7d468e6e2770eca3bc01fca95fb585d1753210a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fec98fd785f5e99875c5f73b13ce1082c16add2b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039024"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861760"
 ---
 # <a name="adding-a-new-interface-in-an-atl-project"></a>ATL プロジェクトで新しいインターフェイスの追加
 
@@ -32,23 +32,23 @@ ms.locfileid: "46039024"
 
 2 つの方法のいずれかのコントロールに追加できる新しいインターフェイス: 手動でまたはクラス ビューでコード ウィザードを使用します。
 
-### <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>クラス ビューでコード ウィザードを使用して、既存のオブジェクトまたはコントロールにインターフェイスを追加するには
+## <a name="to-use-code-wizards-in-class-view-to-add-an-interface-to-an-existing-object-or-control"></a>クラス ビューでコード ウィザードを使用して、既存のオブジェクトまたはコントロールにインターフェイスを追加するには
 
 1. [クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)コントロールのクラス名を右クリックします。 たとえば、フル コントロールまたは複合コントロールは、またはそのヘッダー ファイルで、BEGIN_COM_MAP マクロを実装するその他のコントロール クラスにします。
 
-2. ショートカット メニューで、**追加**、 をクリックし、**インターフェイスの実装**します。
+1. ショートカット メニューで、**追加**、 をクリックし、**インターフェイスの実装**します。
 
-3. 実装するインターフェイスを選択して、[インターフェイス実装ウィザード](../../ide/implement-interface-wizard.md)します。 インターフェイスが使用可能なタイプ ライブラリ内に存在しない場合する必要があります、手動で追加する .idl ファイルにします。
+1. 実装するインターフェイスを選択して、[インターフェイス実装ウィザード](../../ide/implement-interface-wizard.md)します。 インターフェイスが使用可能なタイプ ライブラリ内に存在しない場合する必要があります、手動で追加する .idl ファイルにします。
 
-### <a name="to-add-a-new-interface-manually"></a>新しいインターフェイスを手動で追加するには
+## <a name="to-add-a-new-interface-manually"></a>新しいインターフェイスを手動で追加するには
 
 1. .Idl ファイルに新しいインターフェイスの定義を追加します。
 
-2. オブジェクトやコントロールのインターフェイスから派生します。
+1. オブジェクトやコントロールのインターフェイスから派生します。
 
-3. 新規作成[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)インターフェイスの場合、プロジェクトに属性が追加、`coclass`属性。
+1. 新規作成[COM_INTERFACE_ENTRY](com-interface-entry-macros.md#com_interface_entry)インターフェイスの場合、プロジェクトに属性が追加、`coclass`属性。
 
-4. インターフェイスのメソッドを実装します。
+1. インターフェイスのメソッドを実装します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -58,4 +58,3 @@ ms.locfileid: "46039024"
 [ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)
-

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62b49c20248ca4825bcf2c95b6c7adc956a39025
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714527"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860980"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -82,11 +82,11 @@ EXPORTS
 
 1. [方式](../../cpp/dllexport-dllimport.md)ソース コード内のキーワード
 
-2. .DEF ファイルでの `EXPORTS` ステートメント
+1. .DEF ファイルでの `EXPORTS` ステートメント
 
-3. [/Export](../../build/reference/export-exports-a-function.md) LINK コマンド内の指定
+1. [/Export](../../build/reference/export-exports-a-function.md) LINK コマンド内の指定
 
-4. A[コメント](../../preprocessor/comment-c-cpp.md)形式のソース コードにディレクティブ`#pragma comment(linker, "/export: definition ")`します。 次の例は、関数宣言の前に、の #pragma comment ディレクティブ、`PlainFuncName`非装飾の名前と`_PlainFuncName@4`関数の装飾の名前を指定します。
+1. A[コメント](../../preprocessor/comment-c-cpp.md)形式のソース コードにディレクティブ`#pragma comment(linker, "/export: definition ")`します。 次の例は、関数宣言の前に、の #pragma comment ディレクティブ、`PlainFuncName`非装飾の名前と`_PlainFuncName@4`関数の装飾の名前を指定します。
 
     ```cpp
     #pragma comment(linker, "/export:PlainFuncName=_PlainFuncName@4")

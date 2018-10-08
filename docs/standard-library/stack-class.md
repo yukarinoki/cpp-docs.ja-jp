@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4f1f34e43f04d19efb38ba32488b43845d42260
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 166a0fe22669927e0b57f56fae61847eb950537f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110413"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861526"
 ---
 # <a name="stack-class"></a>stack クラス
 
@@ -76,7 +76,7 @@ Stack オブジェクトは、等値比較できる場合、場合にのみを�
 |-|-|
 |[stack](#stack)|空であるか、基本のコンテナー オブジェクトのコピーである `stack` を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -221,7 +221,7 @@ After a pop, the element at the top of the stack is 20.
 
 ## <a name="push"></a>  stack::push
 
-stack の先頭に要素を追加します。
+スタックの先頭に要素を追加します。
 
 ```cpp
 void push(const Type& val);

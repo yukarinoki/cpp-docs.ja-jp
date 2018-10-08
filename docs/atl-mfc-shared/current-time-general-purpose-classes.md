@@ -18,18 +18,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fff4c581b91ed789b501d3866eb9b3b259a662b3
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9edf381864121d4e3f6c5a2b6cf7c01198368e1e
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755464"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860525"
 ---
 # <a name="current-time-general-purpose-classes"></a>現在の時刻: 汎用クラス
 
 次の手順を作成する方法を示しています、`CTime`オブジェクトし、現在の時刻で初期化します。
 
-#### <a name="to-get-the-current-time"></a>現在の時刻を取得するには
+### <a name="to-get-the-current-time"></a>現在の時刻を取得するには
 
 1. 割り当て、`CTime`オブジェクトに、次のようにします。
 
@@ -38,7 +38,7 @@ ms.locfileid: "43755464"
    > [!NOTE]
    > 初期化されていない`CTime`オブジェクトが有効な時刻に初期化されていません。
 
-2. 呼び出す、`CTime::GetCurrentTime`オペレーティング システムから現在の時刻を取得します。 この関数を返します、`CTime`の値を設定するために使用できるオブジェクト`CTime`、次のようにします。
+1. 呼び出す、`CTime::GetCurrentTime`オペレーティング システムから現在の時刻を取得します。 この関数を返します、`CTime`の値を設定するために使用できるオブジェクト`CTime`、次のようにします。
 
    [!code-cpp[NVC_ATLMFC_Utilities#172](../atl-mfc-shared/codesnippet/cpp/current-time-general-purpose-classes_2.cpp)]
 
