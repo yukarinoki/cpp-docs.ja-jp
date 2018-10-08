@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d337d31150b6da1a1556589d63fd60d63842efce
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7a337ceffbbfb1577b58fea2f60213cd79052b00
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098785"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861370"
 ---
 # <a name="options-atl-simple-object-wizard"></a>オプション、ATL シンプル オブジェクト ウィザード
 
@@ -60,7 +60,7 @@ ATL プロジェクトや ATL COM クラスの詳細については、次を参�
    |オプション|説明|
    |------------|-----------------|
    |**デュアル**|オブジェクトがデュアル インターフェイスをサポートしていることを指定します (その vtable がカスタム インターフェイス関数と遅延バインディング`IDispatch`メソッド)。 により、両方の COM クライアントと[オートメーション コント ローラー](../../mfc/automation-clients.md)オブジェクトにアクセスします。 これが既定値です。|
-   |**カスタム**|オブジェクトが (その vtable がカスタム インターフェイス関数) カスタム インターフェイスをサポートするように指定します。 カスタム インターフェイスはプロセスの境界をまたいで、デュアル インターフェイスよりも高速化できます。<br /><br /> -   **互換性のある automation**カスタム インターフェイスのサポートのあるオブジェクトへのアクセスは、オートメーション コント ローラー。|
+   |**カスタム**|オブジェクトが (その vtable がカスタム インターフェイス関数) カスタム インターフェイスをサポートするように指定します。 カスタム インターフェイスはプロセスの境界をまたいで、デュアル インターフェイスよりも高速化できます。<br /><br /> - **互換性のある automation**カスタム インターフェイスのサポートのあるオブジェクトへのアクセスは、オートメーション コント ローラー。|
 
 - **サポート**
 

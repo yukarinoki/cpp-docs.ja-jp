@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 97b5e3ef2e5c14ae93d4fcc3b016f4dbc955edbd
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f2d0e6567f8666df4ec170ad7911ef08f5a1d335
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709164"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861630"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/diagnostics (コンパイラの診断オプション)
 
@@ -56,9 +56,9 @@ Visual Studio 2017 以降、このオプションはサポートされていま�
 
 1. プロジェクトの開く**プロパティ ページ** ダイアログ ボックス。
 
-2. **構成プロパティ**、展開、 **C/C++** フォルダーを選択し、**全般**プロパティ ページ。
+1. **構成プロパティ**、展開、 **C/C++** フォルダーを選択し、**全般**プロパティ ページ。
 
-3. ドロップダウン コントロールを使用して、**診断形式**フィールド、診断を選択するオプションが表示されます。 選択**OK**または**適用**変更を保存します。
+1. ドロップダウン コントロールを使用して、**診断形式**フィールド、診断を選択するオプションが表示されます。 選択**OK**または**適用**変更を保存します。
 
 ## <a name="see-also"></a>関連項目
 

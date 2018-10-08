@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486e7ba1b91f1e5b8a7f99f27b89183ed32608a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409650"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861890"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 
@@ -440,11 +440,11 @@ typedef struct _TBBUTTON {
 
    このボタンのイメージがない場合は-1、ボタンのイメージの 0 から始まるインデックス。
 
--  `idCommand`
+- `idCommand`
 
    ボタンに関連付けられているコマンドの識別子です。 この識別子は、ボタンを選択すると、WM_COMMAND メッセージで送信されます。 場合、`fsStyle`メンバー TBSTYLE_SEP 値には、このメンバーは 0 である必要があります。
 
--  `fsState`
+- `fsState`
 
    ボタンの状態フラグ。 次の値の組み合わせを指定できます。
 

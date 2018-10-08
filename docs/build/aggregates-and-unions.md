@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f0ac55dce5d00f8931ee263be0fc5ab8a8a3a08
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: aac6da94a0786e5cdc2eee4d16f5927f66e0a8d5
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710022"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861188"
 ---
 # <a name="aggregates-and-unions"></a>集約と共用体
 
@@ -29,7 +29,7 @@ ms.locfileid: "45710022"
 
    連続するデータ オブジェクトの順序付きのグループが含まれています。 各オブジェクトには、要素は呼び出されます。 配列内のすべての要素と同じサイズとデータ型であります。
 
--  構造体
+- 構造体
 
    データ オブジェクトの順序付きのグループが含まれています。 、配列の要素とは異なり、構造内のデータ オブジェクトは別のデータの種類とサイズを持つことができます。 構造体の各データ オブジェクトには、メンバーが呼び出されます。
 

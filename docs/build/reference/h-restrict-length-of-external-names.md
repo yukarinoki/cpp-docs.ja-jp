@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 61a931ac5f9793f800157ed02ffcb7ff5071f4df
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c4881ba20e999b13e2a7841161a775eac69638f6
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724400"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861019"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (外部名の長さの制限)
 
@@ -86,9 +86,9 @@ void func2(void) {}
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
-2. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
+1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
-3. コンパイラ オプションを入力して、**追加オプション**ボックス。
+1. コンパイラ オプションを入力して、**追加オプション**ボックス。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 

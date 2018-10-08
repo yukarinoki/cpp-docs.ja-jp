@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 36f8233d7d3683a885fc0f38468ad5a7b9b59c57
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6c9b9cb66e64f85ad8800faf11011e351a3f3539
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030769"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861357"
 ---
 # <a name="data-source-programmatically-configuring-an-odbc-data-source"></a>データ ソース: プログラムにおける ODBC データ ソースの設定
 
@@ -85,7 +85,7 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
 *lpszAttributes*<br/>
 "キー名=値" 形式で指定する属性リスト。 各文字列は NULL ターミネータで区切ります。属性リストの最後には NULL ターミネータを 2 つ続けます。 これらの属性は、主として既定のドライバー固有のエントリであり、新しいデータ ソースのレジストリに入ります。 『ODBC API Reference』には説明されていないこの関数の重要なエントリとして、"DSN (data source name)" があります。DSN では、新しいデータ ソースの名前を指定します。 残りのエントリは、新しいデータ ソースのドライバー固有のエントリです。 エントリをすべて指定する必要はありません。ドライバーは、ダイアログ ボックスを表示してユーザーに新しい値を指定させることができるからです。 (設定*hwndParent*を NULL にします)。ユーザーに値の指定を要求しないときは、明示的に既定値を提供します。  
   
-###### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>ODBC データ ソース アドミニストレーターを使用して lpszDriver パラメーターのドライバー名を指定するには  
+#### <a name="to-determine-the-description-of-a-driver-for-the-lpszdriver-parameter-using-odbc-administrator"></a>ODBC データ ソース アドミニストレーターを使用して lpszDriver パラメーターのドライバー名を指定するには  
   
 1. ODBC データ ソース アドミニストレーターを実行します。  
   
@@ -97,23 +97,23 @@ BOOL SQLConfigDataSource(HWND hwndParent,UINT fRequest, LPCSTR lpszDriver, LPCST
   
 キー名と値を検索する方法の 1 つ、 *lpszAttributes*パラメーターは、(おそらく ODBC 管理者によって構成されているもの) を既に構成されているデータ ソースの Odbc.ini ファイルを確認します。  
   
-###### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>lpszAttributes パラメーターのキー名と値を探すには  
+#### <a name="to-find-keynames-and-values-for-the-lpszattributes-parameter"></a>lpszAttributes パラメーターのキー名と値を探すには  
   
 1. Windows レジストリ エディターを実行します (16 ビットの場合は Odbc.ini ファイルを開きます)。  
   
 1. 次のいずれかの方法を使用して ODBC データ ソース情報を検索します。  
   
-    -   32 ビットの場合、キーを見つける**HKEY_CURRENT_USER\Software\ODBC\ODBC します。データ ソースの INI\ODBC**左側のウィンドウでします。  
+   - 32 ビットの場合、キーを見つける**HKEY_CURRENT_USER\Software\ODBC\ODBC します。データ ソースの INI\ODBC**左側のウィンドウでします。  
   
-         右側のウィンドウには、フォームのエントリが一覧表示されます:"pub: REG_SZ:*<data source name>*"ここで、 *<data source name>* するドライバーに必要な設定を既に構成されているデータ ソース使用します。 たとえば、SQL Server、データ ソースを選択します。 文字列に続く項目"pub:"では順序、keyname と値で使用するは、 *lpszAttributes*パラメーター。  
+      右側のウィンドウには、フォームのエントリが一覧表示されます:"pub: REG_SZ:*<data source name>*"ここで、 *<data source name>* するドライバーに必要な設定を既に構成されているデータ ソース使用します。 たとえば、SQL Server、データ ソースを選択します。 文字列に続く項目"pub:"では順序、keyname と値で使用するは、 *lpszAttributes*パラメーター。  
   
-    -   16 ビットでマークされている Odbc.ini ファイルでセクションを見つけます。 [*\<データ ソース名 >*]。  
+   - 16 ビットでマークされている Odbc.ini ファイルでセクションを見つけます。 [*\<データ ソース名 >*]。  
   
-         この行の後には、"キー名=値" という形式の行が続きます。 使用するエントリのうち、 *lpszAttributes*パラメーター。  
+      この行の後には、"キー名=値" という形式の行が続きます。 使用するエントリのうち、 *lpszAttributes*パラメーター。  
   
 使用する特定のドライバーに関するドキュメントを調べるには、ドライバーのオンライン ヘルプを参照してください。 ドライバーのオンライン ヘルプにアクセスするには、ODBC データ ソース アドミニストレーターを実行します。 これらのヘルプ ファイルは、Windows NT、Windows 3.1、または Windows 95 の通常 \system ディレクトリに配置されます。  
   
-###### <a name="to-obtain-online-help-for-your-odbc-driver"></a>ODBC ドライバーのオンライン ヘルプを参照するには  
+#### <a name="to-obtain-online-help-for-your-odbc-driver"></a>ODBC ドライバーのオンライン ヘルプを参照するには  
   
 1. ODBC データ ソース アドミニストレーターを実行します。  
   

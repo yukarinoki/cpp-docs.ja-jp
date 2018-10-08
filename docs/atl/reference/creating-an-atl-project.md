@@ -19,29 +19,29 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea8d1dcb0d5d3a59eb5f2899baffed18e7d1663f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4adaa1da407d9727db74add14eb517e83a5e610c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054754"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861552"
 ---
 # <a name="creating-an-atl-project"></a>ATL プロジェクトの作成
 
-ATL プロジェクトを作成する最も簡単な方法は、の Win32 プロジェクト フォルダーにある、ATL プロジェクト ウィザードを使用して、**新しいプロジェクト ダイアログ ボックス**します。
+ATL プロジェクトを作成する最も簡単である、ATL プロジェクト ウィザードを使用には、 **Win32 プロジェクト**のフォルダー、**新しいプロジェクト** ダイアログ ボックス。
 
-### <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>ATL プロジェクト ウィザードを使用して ATL プロジェクトを作成するには
+## <a name="to-create-an-atl-project-using-the-atl-project-wizard"></a>ATL プロジェクト ウィザードを使用して ATL プロジェクトを作成するには
 
 1. トピックの指示に従って[Visual C アプリケーションのウィザードでプロジェクトを作成する](../../ide/creating-desktop-projects-by-using-application-wizards.md)します。
 
-2. 選択、 **ATL プロジェクト**ATL プロジェクト ウィザードを開く [テンプレート] ペインでアイコン。
+1. 選択、 **ATL プロジェクト**アイコン、**テンプレート**ウィンドウを開き、 **ATL プロジェクト ウィザード**します。
 
-3. 使用して、アプリケーションの設定を定義、[アプリケーション設定](../../atl/reference/application-settings-atl-project-wizard.md)のページ、`ATL Project Wizard`します。
+1. 使用して、アプリケーションの設定を定義、[アプリケーション設定](../../atl/reference/application-settings-atl-project-wizard.md)のページ、 **ATL プロジェクト ウィザード**します。
 
    > [!NOTE]
    > ウィザードの既定の設定を使用する場合は、この手順を省略します。
 
-4. クリックして**完了**ウィザードを終了し、開発環境で新しいプロジェクトを開きます。
+1. クリックして**完了**ウィザードを終了し、開発環境で新しいプロジェクトを開きます。
 
 作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)します。 新しい ATL プロジェクト、およびそれらを変更する方法の構成の詳細については、次を参照してください。 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)します。
 
@@ -49,4 +49,3 @@ ATL プロジェクトを作成する最も簡単な方法は、の Win32 プロ
 
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [プロパティ ページ](../../ide/property-pages-visual-cpp.md)   
-

@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e95ad940aac14892ac14e8d56ba64f49d0bbf7c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 66cbf25324b71c3fd28bdd344c7a217348cdb5d9
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423833"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861617"
 ---
 # <a name="12-definition-of-terms"></a>1.2 用語の定義
 
@@ -43,7 +43,7 @@ ms.locfileid: "46423833"
 
    ステートメントが構文的に含まれる、*構造化ブロック*します。
 
--  マスタ スレッド
+- マスタ スレッド
 
    チームを作成したスレッドと、*並列領域*を入力します。
 
@@ -75,7 +75,7 @@ ms.locfileid: "46423833"
 
    構造化ブロックは、1 つのエントリと 1 つの終了を持つステートメント (単一または複合) です。 ステートメントには構造化ブロックがないそのステートメントの内外へのジャンプがある場合 (呼び出しを含む**longjmp**(3 C) の使用または**スロー**への呼び出しが、**終了**は許可されて)。 開くときに常にその実行が開始された場合、複合ステートメントは、構造化ブロック **{** 終了で終わる **}** します。 式ステートメントは、選択ステートメント、反復ステートメント、または**お試しください**ブロックは、構造化ブロックで囲まれた対応する複合ステートメントが取得される場合 **{** と **}** 構造化ブロックになります。 ジャンプ ステートメント、ラベル付きステートメント、または宣言ステートメントは、構造化ブロックではないです。
 
--  チーム
+- チーム
 
    1 つ以上のスレッドが、コンス トラクターの実行に協力します。
 

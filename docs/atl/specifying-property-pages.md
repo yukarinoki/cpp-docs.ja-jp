@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0445e83bbcae6baa45d4a482489e6761fa945a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f80abd3b6270f105fecd7ef8b9988a379901b541
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069431"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860213"
 ---
 # <a name="specifying-property-pages"></a>プロパティ ページの指定
 
@@ -32,12 +32,12 @@ ActiveX コントロールを作成するときに、コントロールのプロ
 
 1. クラスを派生[ISpecifyPropertyPagesImpl](../atl/reference/ispecifypropertypagesimpl-class.md)します。
 
-2. エントリを追加`ISpecifyPropertyPages`クラスの COM マップにします。
+1. エントリを追加`ISpecifyPropertyPages`クラスの COM マップにします。
 
-3. 追加、 [PROP_PAGE](reference/property-map-macros.md#prop_page)コントロールに関連付けられた各ページのプロパティ マップするエントリ。
+1. 追加、 [PROP_PAGE](reference/property-map-macros.md#prop_page)コントロールに関連付けられた各ページのプロパティ マップするエントリ。
 
 > [!NOTE]
->  使用して、標準のコントロールを生成するときに、 [ATL コントロール ウィザード](../atl/reference/atl-control-wizard.md)、プロパティ マップに PROP_PAGE エントリを追加する必要がありますのみです。 ウィザードでは、他の手順に必要なコードを生成します。
+> 使用して、標準のコントロールを生成するときに、 [ATL コントロール ウィザード](../atl/reference/atl-control-wizard.md)、プロパティ マップに PROP_PAGE エントリを追加する必要がありますのみです。 ウィザードでは、他の手順に必要なコードを生成します。
 
 コンテナーが正常に動作するプロパティ マップ PROP_PAGE エントリと同じ順序で指定したプロパティ ページが表示されます。 一般に、ユーザーが最初に、コントロールに固有のページを参照しているためは、プロパティ マップで、カスタム ページのエントリの後にページの標準的なプロパティ エントリを配置する必要があります。
 
@@ -51,4 +51,3 @@ ActiveX コントロールを作成するときに、コントロールのプロ
 
 [プロパティ ページ](../atl/atl-com-property-pages.md)<br/>
 [例](../visual-cpp-samples.md)
-

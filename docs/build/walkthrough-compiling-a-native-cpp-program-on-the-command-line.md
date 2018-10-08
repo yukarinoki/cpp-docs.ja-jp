@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d7f8fad0c4676e8dfedcf8e80332c0a239f230cb
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 122d33be06755b92a17db62237787151a0811898
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821193"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860408"
 ---
 # <a name="walkthrough-compiling-a-native-c-program-on-the-command-line"></a>チュートリアル: コマンド ラインでのネイティブ C++ プログラムのコンパイル
 
@@ -53,7 +53,7 @@ C または C++ プログラムを作成するには、コマンドラインで�
 
    異なるバージョンの Visual Studio を使用しているか、異なるバージョンの Windows を実行している場合は、[スタート] メニューでは、ファイルの場所か、開発者コマンド プロンプトのショートカットが含まれる Visual Studio ツール フォルダーのページを開始します。 「開発者コマンド プロンプト」を検索し、Visual Studio のインストールされているバージョンと一致するものを選択して、Windows 検索機能を使用することもできます。 ショートカットを使用して、コマンド プロンプト ウィンドウを開きます。
 
-1. 次に、Visual C の開発者コマンド プロンプトが正しく設定されていることを確認します。 コマンド プロンプト ウィンドウで、入力`cl`し、出力は次のようなもののことを確認します。
+1. 次に、Visual C の開発者コマンド プロンプトが正しく設定されていることを確認します。 コマンド プロンプト ウィンドウで、入力`cl`し、出力は次ようなコードのことを確認します。
 
    ```Output
    C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise>cl
@@ -140,7 +140,7 @@ C または C++ プログラムを作成するには、コマンドラインで�
    > [!NOTE]
    > 別のコンパイラまたはリンカーのエラーまたは警告が発生した場合、エラーを修正し、保存およびコンパイラをもう一度実行するソース コードを確認します。 特定のエラーについては、この MSDN のページで、検索ボックスを使用して、エラー番号を検索します。
 
-7. hello.exe プログラムを実行するには、コマンド プロンプトで `hello`と入力します。
+1. hello.exe プログラムを実行するには、コマンド プロンプトで `hello`と入力します。
 
    プログラムは、次のテキストを表示して終了します。
 

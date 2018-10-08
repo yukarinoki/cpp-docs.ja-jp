@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae9ab3c2e8f077d943b69b419694fbf686ffdf38
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 22b79454b71f4908d71e683d8bebe4611da7cb14
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703860"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861863"
 ---
 # <a name="export-exports-a-function"></a>/EXPORT (関数のエクスポート)
 
@@ -70,9 +70,9 @@ BOOL CALLBACK PlainFuncName( Things * lpParams)
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
 
-2. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
+1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
-3. オプションを入力して、**追加オプション**ボックス。
+1. オプションを入力して、**追加オプション**ボックス。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

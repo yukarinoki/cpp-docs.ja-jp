@@ -30,12 +30,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f6f287f98b542a3d8eb24f9cc2b5e725e27dceb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725973"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860538"
 ---
 # <a name="base-base-address"></a>/BASE (ベース アドレス)
 
@@ -78,9 +78,9 @@ link dlltwo.obj /dll /base:@dlls.txt,two
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
 
-2. 選択、**構成プロパティ** > **リンカー** > **詳細**プロパティ ページ。
+1. 選択、**構成プロパティ** > **リンカー** > **詳細**プロパティ ページ。
 
-3. 変更、**ベース アドレス**プロパティ。
+1. 変更、**ベース アドレス**プロパティ。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

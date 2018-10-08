@@ -1,7 +1,7 @@
 ---
 title: お試しください-ステートメントを除く |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/05/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 107b759345e221ad8100f11d97b79c5bd9fd2b65
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031445"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861929"
 ---
 # <a name="try-except-statement"></a>try-except ステートメント
 
@@ -50,7 +50,14 @@ ms.locfileid: "46031445"
 
 ## <a name="syntax"></a>構文
 
-> **_ _try** {/コードの保護/} **_ _except** (*式*) {//例外ハンドラーのコード}
+> **__try** <br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;保護されたコード<br/>
+> }<br/>
+> **_ _except** (*式*)<br/>
+> {<br/>
+> &nbsp;&nbsp;&nbsp;&nbsp;例外ハンドラーのコード<br/>
+> }<br/>
 
 ## <a name="remarks"></a>Remarks
 
@@ -67,15 +74,15 @@ ms.locfileid: "46031445"
 
 1. 保護されたセクションが実行されます。
 
-2. 実行は、ステートメントの後で続行、保護されたセクションの実行中に例外が発生しない場合、 **_ _except**句。
+1. 実行は、ステートメントの後で続行、保護されたセクションの実行中に例外が発生しない場合、 **_ _except**句。
 
-3. 保護されたセクションの実行中に例外が発生したか、保護されたセクションを呼び出す任意のルーチンで、 **_ _except** *式*(と呼ばれる、*フィルター*式)評価し、値が例外の処理方法を決定します。 次の 3 つの値があります。
+1. 保護されたセクションの実行中に例外が発生したか、保護されたセクションを呼び出す任意のルーチンで、 **_ _except** *式*(と呼ばれる、*フィルター*式)評価し、値が例外の処理方法を決定します。 指定できる値は 3 つあります。
 
-   EXCEPTION_CONTINUE_EXECUTION (-1) の例外が閉じられます。 例外が発生した位置から実行を継続します。
+   - EXCEPTION_CONTINUE_EXECUTION (-1) の例外が閉じられます。 例外が発生した位置から実行を継続します。
 
-   EXCEPTION_CONTINUE_SEARCH (0) の例外が認識されていません。 最初に **try-except** ステートメントを含むハンドラーを検索してから、次に優先順位が最も高いハンドラーについてスタックを検索し続けます。
+   - EXCEPTION_CONTINUE_SEARCH (0) の例外が認識されていません。 最初に **try-except** ステートメントを含むハンドラーを検索してから、次に優先順位が最も高いハンドラーについてスタックを検索し続けます。
 
-   EXCEPTION_EXECUTE_HANDLER (1) の例外が認識されました。 実行によって例外ハンドラーに制御を移動、 **_ _except**複合ステートメントの後の実行を続行し、 **_ _except**ブロックします。
+   - EXCEPTION_EXECUTE_HANDLER (1) の例外が認識されました。 実行によって例外ハンドラーに制御を移動、 **_ _except**複合ステートメントの後の実行を続行し、 **_ _except**ブロックします。
 
 **_ _Except**式は C の式として評価される、単一の値を条件式演算子、またはコンマ演算子に制限されます。 より広範な処理が必要な場合、前に挙げた 3 つの値の 1 つを返すルーチンを式で呼び出すことができます。
 
@@ -83,9 +90,7 @@ ms.locfileid: "46031445"
 
 移動することはできません、 **_ _try**ステートメントを 1 つからのジャンプは無効です。 実行中のプロセスが終了した場合、例外ハンドラーは呼び出されませんが、**を再試行してください-を除く**ステートメント。
 
-詳細については、サポート技術情報「HOW TO: Trap Stack Overflow in a Visual C++ Application (Q315937)」を参照してください。
-
-## <a name="the-leave-keyword"></a>__leave キーワード
+### <a name="the-leave-keyword"></a>__leave キーワード
 
 **_ _Leave**キーワードの保護されたセクション内でのみ有効ですが、**を再試行してください-を除く**ステートメントとその効果は、保護されたセクションの末尾に移動します。 実行は、例外ハンドラーの後の最初のステートメントから続行されます。
 
@@ -170,7 +175,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>出力
+### <a name="output"></a>出力
 
 ```Output
 hello

@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 12982c212cf8ff4fe502638a5c466306bfe15eb1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32456b15cc00d296354016f8769e020f8133b609
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374289"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861734"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd クラス
 
@@ -1103,7 +1103,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*状態*|[in]メニューを表示または非表示にするかどうかを指定します。 *状態*パラメーターは、次の値を持つことができます。<br /><br /> AFX_MBS_VISIBLE (0x01) - 場合は、非表示が表示されている場合は、効果はありませんが、メニューを表示します。<br />AFX_MBS_HIDDEN (0x02) - には、メニューが非表示に、表示されても、非表示になっている場合は、効果がありません。|
+|*状態*|[in]メニューを表示または非表示にするかどうかを指定します。 *状態*パラメーターは、次の値を持つことができます。<br /><br />AFX_MBS_VISIBLE (0x01) - 場合は、非表示が表示されている場合は、効果はありませんが、メニューを表示します。<br />AFX_MBS_HIDDEN (0x02) - には、メニューが非表示に、表示されても、非表示になっている場合は、効果がありません。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -1125,7 +1125,7 @@ virtual void SetMenuBarVisibility(DWORD nStyle);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*nStyle*|[in]かどうか、メニューは既定では、非表示が表示されるやフォーカスがあるを指定します。 *NStyle*パラメーターは、次の値を持つことができます。<br /><br /> AFX_MBV_KEEPVISIBLE (0X01)-<br />     メニューは、常に表示され、既定ではありませんが、フォーカス。<br />AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     既定では、メニューは表示されません。 メニューが表示されない場合は、メニューを表示し、フォーカスに ALT キーを押します。 メニューが表示される場合は、メニューを非表示に alt キーまたは ESC キーを押します。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (ビットごとの組み合わせ (OR)) - 既定では、メニューは表示されません。 メニューが表示されない場合は、メニューを表示し、フォーカスを F10 キーを押します。 メニューが表示される場合は、オンまたはオフ、メニューにフォーカスを切り替える F10 キーを押します。 非表示にする、alt キーまたは ESC キーを押すまで、メニューが表示されます。|
+|*nStyle*|[in]かどうか、メニューは既定では、非表示が表示されるやフォーカスがあるを指定します。 *NStyle*パラメーターは、次の値を持つことができます。<br /><br />AFX_MBV_KEEPVISIBLE (0X01)-<br />     メニューは、常に表示され、既定ではありませんが、フォーカス。<br />AFX_MBV_DISPLAYONFOCUS (0X02)-<br />     既定では、メニューは表示されません。 メニューが表示されない場合は、メニューを表示し、フォーカスに ALT キーを押します。 メニューが表示される場合は、メニューを非表示に alt キーまたは ESC キーを押します。<br />-AFX_MBV_ DISPLAYONFOCUS (0x02) &#124; AFX_MBV_DISPLAYONF10 (0x04)<br />     (ビットごとの組み合わせ (OR)) - 既定では、メニューは表示されません。 メニューが表示されない場合は、メニューを表示し、フォーカスを F10 キーを押します。 メニューが表示される場合は、オンまたはオフ、メニューにフォーカスを切り替える F10 キーを押します。 非表示にする、alt キーまたは ESC キーを押すまで、メニューが表示されます。|
 
 ### <a name="remarks"></a>Remarks
 
