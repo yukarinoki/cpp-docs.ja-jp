@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cb9518f60db98bd590cecdffa09ee7d814241ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ec05f200d81a9753563a654257d9df3dd50a19f
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447909"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861110"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル
 
@@ -36,7 +36,7 @@ Visual Studio で MFC プロジェクトを作成する場合、作成するプ�
 |Dlgproxy.cpp、Dlgproxy.h|ダイアログ ベースのプログラムでは、メイン ダイアログのプロジェクトのオートメーション プロキシ クラスに対する実装およびヘッダー ファイルで。 オートメーションのサポートを選択した場合にのみ使用されます。|
 |<*プロジェクト名*>doc.cpp、<*プロジェクト名*>doc.h|`CProjnameDoc` という名前のドキュメント クラスから派生してそれを実装し、ドキュメントの初期化、ドキュメントのシリアル化 (保存と読み込み)、デバッグ診断の実装を行うためのスケルトン メンバー関数を含みます。|
 |<*プロジェクト名*>set.h/.cpp|データベースをサポートするプログラムを作成した場合に作成され、レコードセット クラスを含みます。|
-|<*プロジェクト名*>view.cpp、<*プロジェクト名*>view.h|ビュー クラス `CProjnameView` を派生して実装し、ドキュメント データの表示と印刷に使用されます。 `CProjnameView` クラスは、次のいずれかの MFC クラスから派生します。<br /><br /> -   [CEditView](../mfc/reference/ceditview-class.md)<br />-   [CFormView](../mfc/reference/cformview-class.md)<br />-   [CRecordView](../mfc/reference/crecordview-class.md)<br />-   [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />-   [CTreeView](../mfc/reference/ctreeview-class.md)<br />-   [CListView](../mfc/reference/clistview-class.md)<br />-   [CRichEditView](../mfc/reference/cricheditview-class.md)<br />-   [CScrollView](../mfc/reference/cscrollview-class.md)<br />-   [CView](../mfc/reference/cview-class.md)<br />-   [CHTMLView](../mfc/reference/chtmlview-class.md)<br />-   [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> プロジェクトのビュー クラスには、ビューを描画し、デバッグ診断を実装する、スケルトン メンバー関数が含まれています。 印刷のサポートを有効にした場合は、印刷、印刷セットアップ、および印刷プレビューのコマンド メッセージに対するメッセージ マップ エントリが追加されます。 これらのエントリは、ビューの基底クラスの対応するメンバー関数を呼び出します。|
+|<*プロジェクト名*>view.cpp、<*プロジェクト名*>view.h|ビュー クラス `CProjnameView` を派生して実装し、ドキュメント データの表示と印刷に使用されます。 `CProjnameView` クラスは、次のいずれかの MFC クラスから派生します。<br /><br />- [CEditView](../mfc/reference/ceditview-class.md)<br />- [CFormView](../mfc/reference/cformview-class.md)<br />- [CRecordView](../mfc/reference/crecordview-class.md)<br />- [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)<br />- [CTreeView](../mfc/reference/ctreeview-class.md)<br />- [CListView](../mfc/reference/clistview-class.md)<br />- [CRichEditView](../mfc/reference/cricheditview-class.md)<br />- [CScrollView](../mfc/reference/cscrollview-class.md)<br />- [CView](../mfc/reference/cview-class.md)<br />- [CHTMLView](../mfc/reference/chtmlview-class.md)<br />- [CHTMLEditView](../mfc/reference/chtmleditview-class.md)<br /><br /> プロジェクトのビュー クラスには、ビューを描画し、デバッグ診断を実装する、スケルトン メンバー関数が含まれています。 印刷のサポートを有効にした場合は、印刷、印刷セットアップ、および印刷プレビューのコマンド メッセージに対するメッセージ マップ エントリが追加されます。 これらのエントリは、ビューの基底クラスの対応するメンバー関数を呼び出します。|
 |<*プロジェクト名*>PropPage.h、<*プロジェクト名*>PropPage.cpp|`CProjnamePropPage` クラスを宣言および実装します。 `CProjnamePropPage` は `COlePropertyPage` から派生し、スケルトン メンバー関数 `DoDataExchange` がデータ交換と検証の実装用に提供されます。|
 |IPframe.cpp、IPframe.h|アプリケーション ウィザードの **[Automation オプション]** ページ (ステップ 3/6) でミニ サーバーまたはフル サーバー オプションが選択された場合に作成されます。 ファイルは、インプレース フレーム ウィンドウ クラス **CInPlaceFrame** を派生して実装し、サーバーがコンテナー プログラムによってインプレース アクティブ化されるときに使われます。|
 |Mainfrm.cpp、Mainfrm.h|[CFrameWnd](../mfc/reference/cframewnd-class.md) (SDI アプリケーションの場合) または [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) (MDI アプリケーションの場合) から **CMainFrame** クラスを派生します。 アプリケーション ウィザードの **[アプリケーション オプション]** ページ (ステップ 4/6) で対応するオプションが選択されている場合、**CMainFrame** クラスはツール バーのボタンとステータス バーの作成を処理します。 **CMainFrame** の使い方については、「[アプリケーション ウィザードで作成されるフレーム ウィンドウ クラス](../mfc/frame-window-classes-created-by-the-application-wizard.md)」をご覧ください。|

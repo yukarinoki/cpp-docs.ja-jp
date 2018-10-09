@@ -15,12 +15,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 88f5ef5379d597a81456dab7f3dd28a73a4df84b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394921"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821050"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake プロジェクトを構成する
 
@@ -72,7 +72,7 @@ Linux ターゲットを指定すると、ソースが Linux マシンにコピ�
 
 リモート システムでコードをデバッグするには、ブレークポイントを設定し、プロジェクト設定の隣にあるツール バー メニューのスタートアップ項目として CMake ターゲットを選び、ツール バーの **[&#x23f5; 実行]** を選択するか、F5 キーを押します。
 
-プログラムのコマンド ライン引数をカスタマイズするには、**ソリューション エクスプローラー**で実行可能ファイルを右クリックし、**[デバッグ設定と起動設定]** を選びます。 これにより、プログラムに関する情報を含んだ launch.vs.json 構成ファイルが開かれるか、作成されます。 追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、「[Open Folder projects in Visual C++ (Visual C++ の [フォルダーを開く] プロジェクト)](https://docs.microsoft.com/en-us/cpp/ide/non-msbuild-projects)」をご覧ください。
+プログラムのコマンド ライン引数をカスタマイズするには、**ソリューション エクスプローラー**で実行可能ファイルを右クリックし、**[デバッグ設定と起動設定]** を選びます。 これにより、プログラムに関する情報を含んだ launch.vs.json 構成ファイルが開かれるか、作成されます。 追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、「[Open Folder projects in Visual C++ (Visual C++ の [フォルダーを開く] プロジェクト)](../ide/non-msbuild-projects.md)」をご覧ください。
 
 ## <a name="configure-cmake-settings-for-linux"></a>Linux の CMake 設定を構成する
 
