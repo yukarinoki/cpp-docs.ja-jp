@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e318687dfa3cc8e841643e5caf6fe1fbcc00d051
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 953473102a42792dc3ae3afa3b1a8caf507e5648
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46080767"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861500"
 ---
 # <a name="precedence-and-order-of-evaluation"></a>優先順位と評価順序
 
@@ -53,7 +53,7 @@ C 演算子の優先順位と結合規則は、式のオペランドのグルー
 
 1. 演算子は優先順位が高いものから順に挙げられています。 複数の演算子が同じ行またはグループ内にある場合、それらの演算子の優先順位は同じです。
 
-2. すべての単純代入演算子と複合代入演算子は優先順位が同じです。
+1. すべての単純代入演算子と複合代入演算子は優先順位が同じです。
 
 式には、優先順位の同じ演算子を複数含めることができます。 このような複数の演算子が式の同じレベルにある場合、評価は演算子の結合規則に従って、右から左または左から右に行われます。 評価の方向は、同じレベルで複数の乗算 (<strong>\*</strong>)、加算 (**+**)、またはバイナリ ビット処理 (**&**、**&#124;**、または **^**) 演算子を含む式の結果には影響しません。 演算の順序は、言語によって定義されていません。 コンパイラは、一貫性のある結果を保証できる場合には、このような式を任意の順序で自由に評価します。
 

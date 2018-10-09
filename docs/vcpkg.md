@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 043ad3a0767cc6769be1d20fe6e6d31cc5c119fb
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42583905"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821432"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows、Linux、および MacOS 用の C++ パッケージ マネージャー
 
@@ -138,7 +138,7 @@ zlib:x86-windows        1.2.11   A compression library
 
 ## <a name="target-linux-from-windows-via-wsl"></a>WSL 経由で Windows から Linux をターゲットにする
 
-Windows Subsystem for Linux (WSL) を使用して、Windows コンピューターから Linux バイナリを生成できます。 指示に従って、[Windows 10 で WSL を設定](https://docs.microsoft.com/en-us/windows/wsl/install-win10)し、[Linux 用の Visual Studio 拡張機能](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)を使って構成します。 Windows と Linux の両方にビルドされたすべてのライブラリを同じフォルダーに配置すると、Windows と WSL の両方からアクセスできます。
+Windows Subsystem for Linux (WSL) を使用して、Windows コンピューターから Linux バイナリを生成できます。 指示に従って、[Windows 10 で WSL を設定](/windows/wsl/install-win10)し、[Linux 用の Visual Studio 拡張機能](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)を使って構成します。 Windows と Linux の両方にビルドされたすべてのライブラリを同じフォルダーに配置すると、Windows と WSL の両方からアクセスできます。
 
 
 ## <a name="export_binaries_per_project"></a> コンパイル済みのバイナリとヘッダーをエクスポートする
@@ -243,4 +243,3 @@ vcpkg インスタンスの内容は次のとおりです。
 |---------|---------|
 |**--triplet \<t>**|ターゲット アーキテクチャのトリプレットを指定します。 (既定値: `%VCPKG_DEFAULT_TRIPLET%`。**vcpkg help triplet** も参照してください)|
 |**--vcpkg-root \<path>**|vcpkg ルート ディレクトリを指定します (既定値: `%VCPKG_ROOT%`)|
-

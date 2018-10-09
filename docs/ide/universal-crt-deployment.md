@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20006118d4bf27c379b78b84dc8807a4fd6c5e6c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: b7fe21753dc4310752c1081d17ddff942bcbd89f
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34256291"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48820998"
 ---
 # <a name="universal-crt-deployment"></a>ユニバーサル CRT の配置
 
@@ -29,7 +29,7 @@ Visual Studio .NET から Visual Studio 2013 では、各メジャー リリー�
 
 ## <a name="central-deployment"></a>集中配置
 
-ユニバーサル CRT を集中インストールするための推奨される方法は、Microsoft Windows Update を使用することです。 ユニバーサル CRT は、サポートされるすべての Microsoft Windows オペレーティング システムに対して推奨される更新プログラムです。したがって、既定では、ほとんどのコンピューターで通常の更新プロセスの一環としてインストールされます。 ユニバーサル CRT の初期リリースは [KB2999226](https://support.microsoft.com/en-us/kb/2999226) です。後続の更新プログラム [KB3118401](https://support.microsoft.com/en-us/kb/3118401) ではさまざまなバグが修正され、追加の更新プログラムではさらにバグが修正され、新機能が提供されました。 より新しい更新プログラムについては、[support.microsoft.com](https://support.microsoft.com) で Universal C ランタイムまたはユニバーサル CRT を検索してください。
+ユニバーサル CRT を集中インストールするための推奨される方法は、Microsoft Windows Update を使用することです。 ユニバーサル CRT は、サポートされるすべての Microsoft Windows オペレーティング システムに対して推奨される更新プログラムです。したがって、既定では、ほとんどのコンピューターで通常の更新プロセスの一環としてインストールされます。 ユニバーサル CRT の初期リリースは [KB2999226](https://support.microsoft.com/kb/2999226) です。後続の更新プログラム [KB3118401](https://support.microsoft.com/kb/3118401) ではさまざまなバグが修正され、追加の更新プログラムではさらにバグが修正され、新機能が提供されました。 より新しい更新プログラムについては、[support.microsoft.com](https://support.microsoft.com) で Universal C ランタイムまたはユニバーサル CRT を検索してください。
 
 すべての Microsoft Windows コンピューターで Windows Update を使用して定期的に更新プログラムがインストールされるわけではありません。一部のコンピューターでは推奨される更新プログラムがすべてインストールされない場合があります。 そのようなコンピューターで Visual Studio 2015 以降の C++ ツールセットを使ってビルドされたアプリケーションの使用をサポートするために、オフライン配布用のユニバーサル CRT 再頒布可能パッケージを利用できます。 これらの再頒布可能パッケージは、上記の KB リンクのいずれかからダウンロードできます。 ユニバーサル CRT の再頒布可能パッケージを利用するには、コンピューターが現在のサービス パックに更新されている必要があることに注意してください。 したがって、たとえば、Windows 7 用の再頒布可能パッケージは、Windows 7 RTM ではなく、Windows 7 SP1 にのみインストールされます。
 
