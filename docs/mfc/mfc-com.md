@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d23a9be38ebb870adf098b34fac79afff6345cd8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394745"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890037"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -57,8 +57,6 @@ Active テクノロジ (など、ActiveX コントロール、Active ドキュ�
 - このセクションの例については、MFC を使用する COM コンポーネントを作成する方法に関する情報も提供します[コネクション ポイント](../mfc/connection-points.md)します。
 
 まだと呼ばれる OLE active テクノロジを今すぐと呼ばれるものと比較の詳細については、トピックを参照してください。 [OLE](../mfc/ole-in-mfc.md)します。
-
-また、サポート技術情報記事 Q248019 を参照してください: HOWTO: ようにサーバー ビジー状態 ダイアログ ボックスから表示中に、時間のかかる COM 操作。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 038c3475a6041dfb719bb2270a87ac2898f8b958
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e4bdc67e13db11949371e2f9e3d8a205b146d701
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036762"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890117"
 ---
 # <a name="compiler-error-c2872"></a>コンパイラ エラー C2872
 
@@ -31,7 +31,11 @@ ms.locfileid: "46036762"
 
 C2872 は、ヘッダー ファイルが含まれている場合に発生することが、[ディレクティブを使用して](../../cpp/namespaces-cpp.md#using_directives)、後続のヘッダー ファイルが含まれるともで指定された名前空間内にある型を含む、`using`ディレクティブ。 指定、`using`後にのみ、ヘッダー ファイルで指定されますディレクティブ`#include`します。
 
-C2872 の詳細については、サポート技術情報の記事をご覧ください[PRB: コンパイラ エラー時に使用する #import Visual c .NET で XML を](http://support.microsoft.com/kb/316317)と["エラー C2872: 'Platform': あいまいなシンボル"を使用すると、エラー メッセージ、。Visual Studio 2013 で名前空間を Windows::Foundation::Metadata](https://support.microsoft.com/kb/2890859)します。
+C2872 は、Visual Studio 2013 で、間の競合により発生することができます、`Windows::Foundation::Metadata::Platform`列挙型と c++/cli CX 定義`Platform`名前空間。 この問題を回避するには、次の手順に従います。
+
+- プロジェクト ファイルから"名前空間 Windows::Foundation::Metadata using"句を削除します。
+
+- この名前空間に含まれている任意の型の完全修飾名を指定します。
 
 ## <a name="example"></a>例
 

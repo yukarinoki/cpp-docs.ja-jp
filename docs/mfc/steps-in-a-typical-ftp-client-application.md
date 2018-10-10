@@ -18,24 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d87682d9110aa37fbb806f7d1dcd70009cf2ad63
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4ac1eef12a3f782f3ad9ba8a9bb526989876251e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406959"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890219"
 ---
 # <a name="steps-in-a-typical-ftp-client-application"></a>典型的な FTP クライアント アプリケーションの作成手順
 
 典型的な FTP クライアント アプリケーションを作成、 [CInternetSession](../mfc/reference/cinternetsession-class.md)と[CFtpConnection](../mfc/reference/cftpconnection-class.md)オブジェクト。 これらの MFC WinInet クラスは制御しない点実際には、プロキシ型の設定に注意してください。IIS では。
-
-また、これらの技術記事を参照してください。
-
-- 方法: FTP の WinInet API を使用して、CERN ベースのプロキシを使用した (アーティクル ID: Q166961)
-
-- サンプル: FTP CERN ベースのパスワードで保護プロキシ (アーティクル ID: Q216214)
-
-- インターネット サービス マネージャーがインストール済みのプロキシ サービスの表示に失敗する (アーティクル ID: Q216802)
 
 次の表に、典型的な FTP クライアント アプリケーションでの手順を示します。
 

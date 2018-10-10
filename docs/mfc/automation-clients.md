@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c4a4327e1c3e4d65c5bdc3b822cf2cdfc1ec0353
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: cdc9b47bbd7b639850a13a77b81ef4802a301ba7
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820595"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890063"
 ---
 # <a name="automation-clients"></a>オートメーション クライアント
 
@@ -46,7 +46,7 @@ Automation により、別のアプリケーションで実装されているオ
 
 ### <a name="handling-events-in-automation-clients"></a>オートメーション クライアントにおけるイベントの処理
 
-オートメーション クライアントでイベントを処理する場合は、シンク インターフェイスを追加する必要があります。 MFC では、他の COM サーバーをサポートしていません、ActiveX コントロール用のシンク インターフェイスを追加するウィザードのサポートを提供します。 ソース インターフェイスの COM サーバーで説明されている MFC クライアントでシンク インターフェイスを追加する方法については、文書を参照してください。: MFC-Based COM クライアント (KB 181845) でシンク インターフェイスを作成で[ http://support.microsoft.com/default.aspxscid=kb181845;](http://support.microsoft.com/default.aspxscid=kb;181845)します。
+オートメーション クライアントでイベントを処理する場合は、シンク インターフェイスを追加する必要があります。 MFC では、他の COM サーバーをサポートしていません、ActiveX コントロール用のシンク インターフェイスを追加するウィザードのサポートを提供します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 888c753920c4c0a858de8ab5bc72a07ff0696d1e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dcbf18656e04e0732dbf377dae960ab0655be82
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429306"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890440"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd クラス
 
@@ -220,8 +220,6 @@ CMDIChildWnd* CreateNewChild(
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_MFCWindowing#15](../../mfc/reference/codesnippet/cpp/cmdiframewnd-class_3.cpp)]
-
-この例は、サポート技術情報記事 Q201045 からの抜粋"HOWTO: 以外のドキュメント/ビュー MDI アプリケーションに複数のウィンドウの種類を追加します"。 サポート技術情報については、「 [ http://support.microsoft.com](http://support.microsoft.com/)します。
 
 ##  <a name="getwindowmenupopup"></a>  CMDIFrameWnd::GetWindowMenuPopup
 

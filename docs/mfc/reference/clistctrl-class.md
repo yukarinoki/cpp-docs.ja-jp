@@ -274,12 +274,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a93294e955dcdc04b320302c573dcbbb827670d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c530a9853aad3e16e5e4094f4d90e30c2643c0d8
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821570"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890895"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 
@@ -457,12 +457,6 @@ class CListCtrl : public CWnd
 - レポート ビュー
 
      各項目は、右側の列に追加の情報を含む独自の行に表示されます。 小さいアイコンとラベルを左端の列が含まれています、2 列目以降は、アプリケーションで指定されたサブ項目を含めることができます。 埋め込みヘッダー コントロール (クラス[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) これらの列を実装します。 ヘッダー コントロールおよびレポート ビューの列の詳細については、次を参照してください。[使い方: 列の追加 (レポート ビュー) のコントロールに](../../mfc/adding-columns-to-the-control-report-view.md)します。
-
-関連項目:
-
-- サポート技術情報記事 Q250614: HOWTO: レポート ビューで CListCtrl の項目を並べ替える
-
-- サポート技術情報記事 Q200054: PRB: OnTimer() がないという繰り返し、リスト コントロール
 
 コントロールの現在のリスト ビューのスタイルは、現在のビューを決定します。 これらのスタイルとその使用方法の詳細については、次を参照してください。[使い方: リスト コントロール スタイルの変更](../../mfc/changing-list-control-styles.md)します。
 

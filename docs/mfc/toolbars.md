@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bcd7e0a1b2786a92d7a0e64b85417ddb82c82871
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fd8738c0dec9771a94ba94aefdcaf2af87fdb09
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437795"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890545"
 ---
 # <a name="toolbars"></a>ツールバー
 
@@ -38,10 +38,7 @@ ms.locfileid: "46437795"
 
 - [サンプル](../mfc/toolbar-sample-list.md)
 
-MFC ツールバーの詳細については、記事を参照して、Q232017"HOWTO:: 追加のテキストをツール バー ボタン、"Microsoft サポート技術情報で http://support.microsoft.comです。
-
 ## <a name="see-also"></a>関連項目
 
 [ユーザー インターフェイス要素](../mfc/user-interface-elements-mfc.md)<br/>
 [ツール バー エディター](../windows/toolbar-editor.md)
-

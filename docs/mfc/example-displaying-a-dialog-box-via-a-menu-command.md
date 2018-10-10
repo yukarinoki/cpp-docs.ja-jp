@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2869e936115317ff34183b55ba16fe8e9cdc4d2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1abb923a52ccce181782d5387636c45491c342cd
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378190"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890206"
 ---
 # <a name="example-displaying-a-dialog-box-via-a-menu-command"></a>例 : メニュー コマンドによるダイアログ ボックスの表示
 
@@ -98,12 +98,7 @@ ms.locfileid: "46378190"
 
          [!code-cpp[NVC_MFCControlLadenDialog#48](../mfc/codesnippet/cpp/example-displaying-a-dialog-box-via-a-menu-command_7.cpp)]
 
-また、次のサポート技術情報の記事を参照してください。
-
-- Q251059: HOWTO: MFC ダイアログ ボックスに、独自のウィンドウ クラスの名前を指定
-
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ ボックス](../mfc/dialog-boxes.md)<br/>
 [モーダルとモードレスのダイアログ ボックス](../mfc/modal-and-modeless-dialog-boxes.md)
-

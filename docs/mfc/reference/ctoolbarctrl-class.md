@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5a71e6f358a682adad2d12f7b567dc0bad3d0f3
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2473f33508274bb0f0aa9aebcb462973ec80b267
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861890"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890817"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 
@@ -731,8 +731,6 @@ void Customize();
 ### <a name="remarks"></a>Remarks
 
 このダイアログ ボックスは、ユーザーの追加と削除ボタンがツールバーをカスタマイズできます。 カスタマイズをサポートするために、ツールバーの親ウィンドウする必要があります、カスタマイズ通知メッセージの処理」の説明に従って[カスタマイズ通知の処理](../../mfc/handling-customization-notifications.md)します。 ツールバーの必要がありますもで作成されているツールのスタイル」の説明に従って[CToolBarCtrl::Create](#create)します。
-
-詳細については、サポート技術情報記事 Q241850 を参照してください: PRB: カスタマイズ ダイアログ表示を呼び出すに CToolBarCtrl::Customize を保持しません。
 
 ##  <a name="deletebutton"></a>  CToolBarCtrl::DeleteButton
 

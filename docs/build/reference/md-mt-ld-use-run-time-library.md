@@ -45,12 +45,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee8e59fbc88e63343d4da75a4cbf95d4f83bf815
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1aefd61d724f7716392b5fd2d15ef3a2f9ff0006
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701364"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890232"
 ---
 # <a name="md-mt-ld-use-run-time-library"></a>/MD、/MT、/LD (ランタイム ライブラリの使用)
 
@@ -80,8 +80,6 @@ C ランタイム ライブラリと指定してコンパイルしたときに�
 リンカーの特定の呼び出しに渡されるすべてのモジュールを同じランタイム ライブラリ コンパイラ オプションでコンパイルする必要があります (**/MD**、 **/MT**、 **/LD**)。
 
 ランタイム ライブラリのデバッグ バージョンを使用する方法の詳細については、次を参照してください。 [C ランタイム ライブラリ リファレンス](../../c-runtime-library/c-run-time-library-reference.md)します。
-
-サポート技術情報の「HOWTO: Link with the Correct C Run-Time (CRT) Library (Q140584)」でも、適切な C ランタイム ライブラリの選択方法を説明しています。
 
 詳細については、Dll は、次を参照してください。 [Visual c の Dll](../../build/dlls-in-visual-cpp.md)します。
 

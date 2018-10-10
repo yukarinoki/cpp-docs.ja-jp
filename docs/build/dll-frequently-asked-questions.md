@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bc42cd1eab4f19c8184ad500b4a4a1871747d6aa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9a68a0ae6392c2a9a64c9ff6c567451c2672c861
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45713090"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890193"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL に関してよく寄せられる質問
 
@@ -39,7 +39,7 @@ ms.locfileid: "45713090"
 
 ## <a name="mfc_multithreaded_1"></a> MFC DLL に複数のスレッドを作成できますか。
 
-初期化中に、MFC の DLL を安全に作成できます複数のスレッド Win32 スレッド ローカル ストレージ (TLS) などの関数を使用する限り、点を除いて**TlsAlloc**スレッド ローカル ストレージを割り当てる。 ただし、MFC の DLL を使用している場合 **_declspec**スレッド ローカル ストレージを割り当てるにクライアント アプリケーションの暗黙的にリンクする DLL です。 クライアント アプリケーションが DLL への呼び出しに明示的にリンク**LoadLibrary** DLL は正常に読み込まれません。 MFC Dll 内の複数のスレッドを作成する方法の詳細については、サポート技術情報の記事、"PRB:: 呼び出し LoadLibrary() に負荷を DLL ことが静的 TLS"(Q118816) を参照してください。 Dll 内のスレッド ローカル変数の詳細については、次を参照してください。[スレッド](../cpp/thread.md)します。
+初期化中に、MFC の DLL を安全に作成できます複数のスレッド Win32 スレッド ローカル ストレージ (TLS) などの関数を使用する限り、点を除いて**TlsAlloc**スレッド ローカル ストレージを割り当てる。 ただし、MFC の DLL を使用している場合 **_declspec**スレッド ローカル ストレージを割り当てるにクライアント アプリケーションの暗黙的にリンクする DLL です。 クライアント アプリケーションが DLL への呼び出しに明示的にリンク**LoadLibrary** DLL は正常に読み込まれません。 Dll 内のスレッド ローカル変数の詳細については、次を参照してください。[スレッド](../cpp/thread.md)します。
 
 スタートアップ中に、新しい MFC スレッドを作成する MFC DLL では、アプリケーションによって読み込まれるときの応答を停止します。 これは、スレッドが呼び出すことによって作成されるたびにも含まれます。`AfxBeginThread`または`CWinThread::CreateThread`内。
 
@@ -49,13 +49,11 @@ ms.locfileid: "45713090"
 
 - 指定された`DllMain`または**まず**MFC 拡張 DLL で機能します。
 
-初期化中にスレッドを作成する方法の詳細については、サポート技術情報の記事、"PRB:: ことはできませんを作成する MFC スレッド中に DLL Startup"(Q142243) を参照してください。
-
 ## <a name="mfc_multithreaded_2"></a> マルチ スレッド アプリケーションは別のスレッド内の MFC DLL にアクセスできますか。
 
 マルチ スレッド アプリケーションでは、MFC と動的にリンクされるレギュラー MFC Dll と MFC 拡張 Dll を別のスレッドからアクセスできます。 Visual c バージョン 4.2 では、アプリケーションは、アプリケーションで作成された複数のスレッドから MFC を静的にリンクされるレギュラー MFC Dll にアクセスします。
 
-前のバージョン 4.2 では、外部の 1 つだけのスレッドは、MFC と静的にリンクされるレギュラー MFC DLL を添付できます。 (Visual C version 4.2) より前の複数のスレッドから MFC と静的にリンクされるレギュラー MFC Dll へのアクセスの制限の詳細については、サポート技術情報の記事を参照してください。"複数のスレッドと MFC にリンクできます"(Q122676)。
+前のバージョン 4.2 では、外部の 1 つだけのスレッドは、MFC と静的にリンクされるレギュラー MFC DLL を添付できます。
 
 USRDLL という用語は、Visual C のドキュメントでは使用されなくに注意してください。 MFC と静的にリンクされるレギュラー MFC DLL は、USRDLL と同じ特性を持ちます。
 

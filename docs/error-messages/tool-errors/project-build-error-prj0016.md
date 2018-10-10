@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01610f888d8afe275b0e52b86e4f4c678f896c9f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: ceb004cba243d6e2e9c44aadcaa40670ef7a0bbb
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820475"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890258"
 ---
 # <a name="project-build-error-prj0016"></a>プロジェクト ビルド エラー PRJ0016
 
@@ -37,8 +37,4 @@ ms.locfileid: "48820475"
 
 このエラーのもう 1 つの原因は、ポリシーの設定は含まれていません VCSpawn.exe HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun レジストリ キーの下でこのユーザー アカウントに許可されているウィンドウ プログラムとしてです。
 
-詳細についてを参照してください。
-
-- 使用されるナレッジ ベース記事 324153、 [ http://support.microsoft.com/default.aspx?scid=kb324153;](http://support.microsoft.com/default.aspx?scid=kb;324153)します。
-
-- [システム ポリシーの設定に準拠する](https://msdn.microsoft.com/library/aa372139)、「許可された Windows アプリケーションだけを実行する」に関するセクション。
+詳細については、次を参照してください。[システム ポリシーの設定に準拠する](https://msdn.microsoft.com/library/aa372139)、"許可された Windows アプリケーションだけを実行する"に関するセクションでします。

@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5bb62a61762c2c4e042777376f4d2b9f3ffc747e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60397fea85e3fd121469ae4568dac18fa6b9ddb1
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429748"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890323"
 ---
 # <a name="import-directive-c"></a>#import ディレクティブ (C++)
 **C++ 固有の仕様**  
@@ -185,11 +185,9 @@ using namespace MyLib;
 実際のファイル名で、 **#import**レジストリに格納されている、コメントは、相互参照されるタイプ ライブラリの完全パス。 不明な型定義が原因のエラーが発生した場合は、.TLH の先頭のコメントを調べて、依存関係のあるどのタイプ ライブラリを最初にインポートする必要があるかを確認します。 .TLI ファイルのコンパイル中に考えられるエラーは、構文エラー (C2143、C2146、C2321 など)、C2501 (decl-specifier の欠落)、または C2433 (データ宣言子内でのインライン禁止) です。  
   
 必要がありますを決定する依存関係のコメントが定義されていないのでは、システム ヘッダーと提供し、 **#import**ディレクティブより前に、の時点で、 **#import**依存のディレクティブエラーを解決するタイプ ライブラリ。  
-  
-詳細については、サポート技術情報の「#import Wrapper Methods May Cause Access Violation (Q242527)」または「Compiler Errors When You Use #import with XML (Q269194)」を参照してください。 MSDN ライブラリ メディアまたはサポート情報記事を見つけることができます[Microsoft サポート](https://support.microsoft.com/)します。  
-  
-##  <a name="_predir_the_23import_directive_import_attributes"></a> #import の属性  
- 
+
+##  <a name="_predir_the_23import_directive_import_attributes"></a> #import の属性
+
 **#import**必要に応じて、1 つまたは複数の属性を含めることができます。 これらの属性は、コンパイラにタイプ ライブラリ ヘッダーの内容を変更するように指示します。 円記号 (**\\**) を 1 つの追加の行を含めるシンボルを使用することができます **#import**ステートメント。 例えば:  
   
 ```  

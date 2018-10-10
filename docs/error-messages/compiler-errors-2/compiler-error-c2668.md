@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c3b318c663bb036629086d0bca9a67641e3c4c4e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 23bb1a6fcf64590670ede2eb6aca232a5a3b4f5c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093754"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889997"
 ---
 # <a name="compiler-error-c2668"></a>コンパイラ エラー C2668
 
@@ -31,15 +31,11 @@ ms.locfileid: "46093754"
 
 このエラーは、テンプレートを使用して取得することもできます。 同じクラスでは、通常のメンバー関数と同じシグネチャを持つ template 宣言されたメンバー関数がある場合、テンプレート化された 1 つは先にする必要があります。 これは、Visual C の現在の実装の制限です。
 
-関数テンプレートの部分的な順序付けの詳細については、サポート技術情報記事 Q240869 を参照してください。
-
-サポートする COM オブジェクトを格納している ATL プロジェクトを構築するかどうか`ISupportErrorInfo`、サポート技術情報記事 Q243298 を参照してください。
-
 ## <a name="example"></a>例
 
 次の例では、C2668 が生成されます。
 
-```
+```cpp
 // C2668.cpp
 struct A {};
 struct B : A {};
@@ -59,7 +55,7 @@ int main() {
 
 このエラーを解決するのには別の方法は、[宣言を使用して](../../cpp/using-declaration.md):
 
-```
+```cpp
 // C2668b.cpp
 // compile with: /EHsc /c
 // C2668 expected
@@ -104,7 +100,7 @@ class MyTestCase : public AppTestCase {
 
 Long 型と void * int の両方への変換が必要なために、0 の定数を使用してキャストの変換はあいまいです。 このエラーを解決するには、0 が使用されている (このコードが Visual Studio .NET 2003 と Visual Studio .NET のバージョンの Visual C で有効になります) 実行する変換が必要ないように、関数のパラメーターの正確な型にキャストします。
 
-```
+```cpp
 // C2668c.cpp
 #include "stdio.h"
 void f(long) {
@@ -126,7 +122,7 @@ int main() {
 
 CRT は float 型とすべての数値演算関数の 2 つのフォームを持つために、このエラーが発生することができます。
 
-```
+```cpp
 // C2668d.cpp
 #include <math.h>
 int main() {
@@ -141,7 +137,7 @@ int main() {
 
 Pow (int, int) は、crt <math.h> から削除されたために、このエラーが発生することができます。
 
-```
+```cpp
 // C2668e.cpp
 #include <math.h>
 int main() {
@@ -154,8 +150,7 @@ int main() {
 
 このコードでは、Visual Studio 2015 で成功しますが、失敗した Visual Studio 2017 と C2668 で後で。 Visual Studio 2015 では、コンパイラは、誤って copy-list-initialization を通常の copy-initialization と同じ方法で処理しました。これは、単なるオーバーロードの解決のためのコンストラクターの変換と見なされます。
 
-```
-C++
+```cpp
 struct A {
     explicit A(int) {}
 };

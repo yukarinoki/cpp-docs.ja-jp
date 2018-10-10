@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7053c72536c0ab91420f1bbc068f39843eb99c1b
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861812"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890661"
 ---
 # <a name="cimage-class"></a>CImage クラス
 
@@ -320,7 +320,7 @@ HBITMAP ハンドル。
 *eOrientation*<br/>
 ビットマップの向きを指定します。 次のいずれかの値を指定します。
 
-- DIBOR_DEFAULT ビットマップの向きは、オペレーティング システムによって決定されます。 ただし、この常がない目的の結果にすべてのオペレーティング システム。 詳細については、これは、次のサポート技術情報の記事を参照してください (**Q186586**): PRB: GetObject() 常に返します正の高さの DIB のセクションでします。
+- DIBOR_DEFAULT ビットマップの向きは、オペレーティング システムによって決定されます。
 
 - DIBOR_BOTTOMUP ビットマップの行は逆の順序で。 これにより、 [CImage::GetBits](#getbits)ビットマップ バッファーの末尾付近のポインターを返すと[CImage::GetPitch](#getpitch)を負の数を返します。
 

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f31d837b4b83a477d6b919f2d5bbd5efa00f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 552252c8826e167b4aaa21aa41e489bbc8179ec3
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381076"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890376"
 ---
 # <a name="cdocobjectserver-class"></a>CDocObjectServer クラス
 
@@ -74,10 +74,6 @@ DocObject サーバーのドキュメントに含めることができます[CDo
 DocObject サーバーをカスタマイズする、独自のクラスから派生させる`CDocObjectServer`そのビューのセットアップ関数をオーバーライドして[OnActivateView](#onactivateview)、 [OnApplyViewState](#onapplyviewstate)、および[OnSaveViewState](#onsaveviewstate). フレームワークの呼び出しに応答クラスの新しいインスタンスを提供する必要があります。
 
 DocObjects については、次を参照してください。 [CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)と[COleCmdUI](../../mfc/reference/colecmdui-class.md)で、 *MFC リファレンス*します。
-
-また、次のサポート技術情報記事を参照してください。
-
-- Q247382: PRB: ActiveX ドキュメント コンテナーでの ActiveX ドキュメント サーバーでコントロールのツールヒントは表示されません
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

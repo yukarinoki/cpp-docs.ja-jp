@@ -344,12 +344,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 292121e95b20061e95e85b49c60d4758bd18a568
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 160d9857097c4cac1912d2ca44b0433905c238f5
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435533"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890869"
 ---
 # <a name="colecontrol-class"></a>COleControl クラス
 
@@ -957,7 +957,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 ### <a name="parameters"></a>パラメーター
 
 *pPX*<br/>
-ポインターを`CPropExchange`オブジェクト。 フレームワークは、方向など、プロパティの exchange のコンテキストを確立するには、このオブジェクトを提供します。
+`CPropExchange` オブジェクトへのポインター。 フレームワークは、方向など、プロパティの exchange のコンテキストを確立するには、このオブジェクトを提供します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1093,7 +1093,7 @@ BOOL ExchangeVersion(
 ### <a name="parameters"></a>パラメーター
 
 *pPX*<br/>
-ポインターを`CPropExchange`オブジェクト。 フレームワークは、方向など、プロパティの exchange のコンテキストを確立するには、このオブジェクトを提供します。
+`CPropExchange` オブジェクトへのポインター。 フレームワークは、方向など、プロパティの exchange のコンテキストを確立するには、このオブジェクトを提供します。
 
 *dwVersionDefault*<br/>
 コントロールの現在のバージョン番号。
@@ -2158,7 +2158,7 @@ BOOL IsInvokeAllowed(DISPID dispid);
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークの実装の`IDispatch::Invoke`呼び出し`IsInvokeAllowed`場合は、特定の関数を判断する (で識別される`dispid`) 呼び出すことができます。 OLE コントロールの既定の動作は、コントロールが初期化されている場合にのみ呼び出されるメソッドをオートメーションを許可するにはただし、`IsInvokeAllowed`は仮想関数であり (たとえば、コントロールは、オートメーション サーバーとして使用されている) 場合、必要に応じてオーバーライドされる可能性があります。 詳細については、サポート技術情報記事 Q166472 を参照してください"HOWTO: オートメーション サーバーとして OLE コントロールを使用します。"。 サポート技術情報については、「 [ http://support.microsoft.com](http://support.microsoft.com/)します。
+フレームワークの実装の`IDispatch::Invoke`呼び出し`IsInvokeAllowed`場合は、特定の関数を判断する (で識別される`dispid`) 呼び出すことができます。 OLE コントロールの既定の動作は、コントロールが初期化されている場合にのみ呼び出されるメソッドをオートメーションを許可するにはただし、`IsInvokeAllowed`は仮想関数であり (たとえば、コントロールは、オートメーション サーバーとして使用されている) 場合、必要に応じてオーバーライドされる可能性があります。
 
 ##  <a name="ismodified"></a>  COleControl::IsModified
 

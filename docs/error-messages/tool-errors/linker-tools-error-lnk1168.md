@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0910c23202b975999e10ef2effaebc470c62fb9d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e8b9f8614feb98f7e21392565aa610b7d42cd512
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821076"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890167"
 ---
 # <a name="linker-tools-error-lnk1168"></a>リンカ ツール エラー LNK1168
 
@@ -38,7 +38,3 @@ Windows SysInternals ユーティリティを使用して[処理](http://technet
 ファイルが検索インデックス作成サービスによってロックされている場合、この問題を解決するには、自動インデックス作成の対象からビルド出力ディレクトリを除外します。 詳細については、インデックス作成サービスのドキュメントを参照してください。 Windows 検索インデックス作成サービスを変更する**インデックスのオプション**、Windows で**コントロール パネルの **します。 詳細については、次を参照してください。[を向上させる Windows 検索インデックスを使用する: よく寄せられる質問](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7)します。
 
 ビルド処理で実行可能ファイルを上書きできない場合、そのファイルは、ファイル エクスプローラーによってロックされている可能性があります。 場合、**アプリケーション エクスペリエンス**サービスが無効で、長時間にわたって実行可能ファイルのハンドルのロックをファイル エクスプ ローラー保持可能性があります。 この問題を解決するには実行**services.msc**を開き、**プロパティ**の ダイアログ ボックス、**アプリケーション エクスペリエンス**サービス。 変更、**スタートアップの種類**から**無効**に**手動**します。
-
-## <a name="see-also"></a>関連項目
-
-[ソリューションまたは Visual C で ActiveX プロジェクトをビルドするときに、"error PRJ0008"または"Fatal error LNK1168"のエラー メッセージを受け取る可能性があります。](http://support.microsoft.com/kb/308358)

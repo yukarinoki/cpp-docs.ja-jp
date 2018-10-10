@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa5cf1be80b22d3577347dbf7de9ee262125aa86
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821362"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890635"
 ---
 # <a name="message-map-macros-mfc"></a>メッセージ マップ マクロ (MFC)
 
@@ -352,7 +352,7 @@ ON_MESSAGE( message, memberFxn )
 メッセージ ハンドラー関数にマップする必要がありますすべてのユーザー定義メッセージのメッセージ マップに ON_MESSAGE マクロ ステートメントは 1 つだけ必要があります。
 
 > [!NOTE]
->  ユーザー定義のメッセージだけでなく ON_MESSAGE はあまり一般的な Windows メッセージを処理します。 詳細については、技術情報の記事を参照してください。 [99848: 情報: ON_MESSAGE() マクロを使用してマップ頻度の低いメッセージを](http://go.microsoft.com/fwlink/p/?linkid=192022)します。
+>  ユーザー定義のメッセージだけでなく ON_MESSAGE はあまり一般的な Windows メッセージを処理します。 詳細については、次を参照してください。[メッセージ マップ](../../mfc/tn006-message-maps.md)します。
 
 詳細と例については、次を参照してください[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)と[ユーザー定義のハンドラー。](user-defined-handlers.md)
 
