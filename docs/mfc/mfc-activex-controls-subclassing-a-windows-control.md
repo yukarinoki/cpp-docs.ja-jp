@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94b989594316f2eac3e65fad2cb5bf419e7ee2eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407543"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890558"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX コントロール : Windows コントロールのサブクラス化
 
@@ -48,10 +48,8 @@ Windows コントロールをサブクラス化するには、次のタスクを
 
 - [コントロールに反映されます (OCM) ActiveX コントロール メッセージを処理します。](#_core_handling_reflected_window_messages)
 
-    > [!NOTE]
-    >  この作業の多くが自動的に実行、ActiveX コントロール ウィザード、サブクラスを使用してコントロールを選択した場合、**親ウィンドウ クラスの選択**ドロップダウン リストで、**コントロール設定**ページ。
-
-コントロールのサブクラス化についての詳細については、サポート技術情報記事 Q243454 を参照してください。
+   > [!NOTE]
+   > この作業の多くが自動的に実行、ActiveX コントロール ウィザード、サブクラスを使用してコントロールを選択した場合、**親ウィンドウ クラスの選択**ドロップダウン リストで、**コントロール設定**ページ。
 
 ##  <a name="_core_overriding_issubclassedcontrol_and_precreatewindow"></a> :Issubclassedcontrol と:precreatewindow-createwindowex のオーバーライド
 

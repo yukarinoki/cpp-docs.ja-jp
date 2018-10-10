@@ -104,12 +104,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2935ac160f5d778faf119390d1f023d00d6d322b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4ae42373ddf70cf4945c540e781397d7d67bd21
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448546"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890752"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -225,11 +225,7 @@ class CEdit : public CWnd
 
 編集コントロール (ES_READONLY) などの特定のスタイルを変更するコントロールを使用する代わりに特定のメッセージを送信する必要があります[は](cwnd-class.md#modifystyle)します。 参照してください[コントロールのスタイルを編集](/windows/desktop/Controls/edit-control-styles)Windows SDK にします。
 
-`CEdit` の詳細については、次を参照してください。
-
-- [コントロール](../../mfc/controls-mfc.md)
-
-- サポート技術情報記事 Q259949: 情報: SetCaretPos() が適切でない CEdit または CRichEditCtrl コントロール
+詳細については`CEdit`を参照してください[コントロール](../../mfc/controls-mfc.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 575ba3786e6639e5d6801ec9555c4a85f9732b20
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13b71838bb4db152fb76fa1115a426e2711422ea
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415734"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890584"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget クラス
 
@@ -223,7 +223,7 @@ void EnableTypeLib();
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数のコンス トラクターを呼び出して、 `CCmdTarget`-派生オブジェクトの種類の情報を提供する場合。 詳細については、サポート技術情報記事 Q185720 を参照してください"HOWTO: MFC オートメーション サーバーから型情報を入力します。"。 サポート技術情報については、「 [ http://support.microsoft.com](http://support.microsoft.com/)します。
+このメンバー関数のコンス トラクターを呼び出して、 `CCmdTarget`-派生オブジェクトの種類の情報を提供する場合。
 
 ##  <a name="endwaitcursor"></a>  CCmdTarget::EndWaitCursor
 
@@ -303,8 +303,6 @@ TRUE の場合は成功しましたが、それ以外の場合は FALSE。 成�
 ### <a name="remarks"></a>Remarks
 
 派生クラスは、このメンバー関数をオーバーライドする必要があります (上書きされない場合、 `GetDispatchIID` FALSE を返します)。 参照してください[COleControl](../../mfc/reference/colecontrol-class.md)します。
-
-詳細については、サポート技術情報記事 Q185720 を参照してください"HOWTO: MFC オートメーション サーバーから型情報を入力します。"。 サポート技術情報については、「 [ http://support.microsoft.com](http://support.microsoft.com/)します。
 
 ##  <a name="getidispatch"></a>  CCmdTarget::GetIDispatch
 
@@ -407,7 +405,7 @@ virtual CTypeLibCache* GetTypeLibCache();
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを`CTypeLibCache`オブジェクト。
+`CTypeLibCache` オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 

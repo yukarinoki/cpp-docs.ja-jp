@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd69813251a96051f844051f27155e1d4ed404d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 27121334345556a744a6fc838c238352ccc36621
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393423"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890532"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -118,8 +118,6 @@ class CControlBar : public CWnd
 - [コントロール バー](../../mfc/control-bars.md)
 
 - [テクニカル ノート 31: コントロール バー](../../mfc/tn031-control-bars.md)します。
-
-- サポート技術情報の文書 Q242577「PRB: Update Command UI Handlers Do Not Work for Menu Attached to a Dialog Box」
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -549,7 +547,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 ### <a name="parameters"></a>パラメーター
 
 *我が物*<br/>
-ポインターを`CWnd`オブジェクト。
+`CWnd` オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 

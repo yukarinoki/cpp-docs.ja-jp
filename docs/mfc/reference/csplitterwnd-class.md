@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e56ab939cd6b3cfcb0601eaec1e450835069705f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 549669841a4b10468679795ca045f5626f5e9101
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389554"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890674"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd クラス
 
@@ -181,11 +181,7 @@ A`CSplitterWnd`オブジェクトが親に埋め込まれた通常[CFrameWnd](..
 
 スプリッター ウィンドウを作成するときに、これらの特殊なスクロール バーを作成します。 たとえば、`CSplitterWnd`を持つ 1 つの行、2 つの列と WS_VSCROLL スタイル、2 つのペインで共有される垂直スクロール バーが表示されます。 ユーザーがスクロール バーを移動すると、WM_VSCROLL メッセージは、両方のウィンドウに送信されます。 ペインには、スクロール バーの位置が設定されている場合は、共有のスクロール バーが設定されます。
 
-分割ウィンドウについてを参照してください。
-
-- [テクニカル ノート 29](../../mfc/tn029-splitter-windows.md)
-
-- サポート技術情報記事 Q262024: HOWTO: CSplitterWnd の子として使用して CPropertySheet
+分割ウィンドウについては、次を参照してください。[テクニカル ノート 29:](../../mfc/tn029-splitter-windows.md)します。
 
 動的分割ウィンドウを作成する方法の詳細についてを参照してください。
 
@@ -898,7 +894,7 @@ virtual void SetActivePane(
 場合*我が物*が NULL でアクティブになるウィンドウで列を指定します。
 
 *我が物*<br/>
-ポインターを`CWnd`オブジェクト。 によって指定された NULL の場合、ウィンドウ*行*と*col*アクティブに設定されます。 NULL 以外の場合は、アクティブに設定されているウィンドウを指定します。
+`CWnd` オブジェクトへのポインター。 によって指定された NULL の場合、ウィンドウ*行*と*col*アクティブに設定されます。 NULL 以外の場合は、アクティブに設定されているウィンドウを指定します。
 
 ### <a name="remarks"></a>Remarks
 

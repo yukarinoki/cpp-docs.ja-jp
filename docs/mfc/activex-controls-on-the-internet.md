@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47d1a5308b379d8bd1923bb9ad1ad805cb6bded3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6004c3acd052d1424004017941a5e4aa110c602c
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432822"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890337"
 ---
 # <a name="activex-controls-on-the-internet"></a>インターネット上の ActiveX コントロール
 
@@ -170,10 +170,6 @@ ActiveX コントロールは、インターネットに限定されません。
 たとえば、のみが 10 バイトが使用可能な読み取りは 1 K ファイルを非同期的に呼び出されます。、読み取りブロックしないが現在使用可能な 10 バイトを返します。
 
 実装する[非同期モニカー](../mfc/asynchronous-monikers-on-the-internet.md)を使用して、`CAsyncMonikerFile`クラス。 ただし、ActiveX コントロールを使用できる、`CDataPathProperty`クラスから派生した`CAsyncMonikerFile`、非同期のコントロールのプロパティを実装するのに役立つ。
-
-ASYNDOWN サンプルでは、タイマーを使用してデータを読み取る非同期のループを設定する方法を示します。 ASYNDOWN で HOWTO:: AsyncDown 示します非同期データのダウンロード (Q177244) サポート技術情報の記事に記載されて、Microsoft ダウンロード センターからダウンロードできます。 (Microsoft ダウンロード センターからファイルをダウンロードする方法の詳細については、「方法を取得 Microsoft サポート オンライン サービスからファイル」(Q119591) では、マイクロソフト サポート技術情報の記事を参照してください)。サポート技術情報の記事を検索する[ http://support.microsoft.com/support](http://support.microsoft.com/support)します。
-
-ASYNDOWN で使用される、基本的な手法、タイマーを設定する**CDataPathProperty::OnDataAvailable**データを使用可能な場合を示します。 タイマー メッセージが受信したときに、アプリケーションが 128 バイトのデータ ブロックの読み取りし、エディット コントロールします。 タイマー メッセージが処理されるときにデータが利用できない、タイマーは無効になります。 `OnDataAvailable` 後でより多くのデータが到着した場合に、タイマーをオンにします。
 
 ## <a name="displaying-a-control-on-a-web-page"></a>Web ページ上のコントロールを表示します。
 

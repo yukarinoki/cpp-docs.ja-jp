@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df67a24fa9bae63bbaf1bba344aa7f684ec91123
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79da071b592a31ea3fe7ca486a7e02abc770f08e
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081911"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890091"
 ---
 # <a name="compiler-error-c2989"></a>コンパイラ エラー C2989
 
@@ -29,11 +29,9 @@ ms.locfileid: "46081911"
 
 ジェネリック クラスまたはテンプレートには、非テンプレートまたは非ジェネリック クラスが再定義します。 ヘッダー ファイルの競合を確認します。
 
-クラス テンプレートの部分的な特殊化を使用している場合は、サポート技術情報記事 Q240866 を参照してください。
-
 次の例では、C2989 が生成されます。
 
-```
+```cpp
 // C2989.cpp
 // compile with: /c
 class C{};
@@ -45,7 +43,7 @@ class C2{};
 
 C2989 は、ジェネリックを使用しているときにも発生します。
 
-```
+```cpp
 // C2989b.cpp
 // compile with: /clr /c
 ref class GC1;

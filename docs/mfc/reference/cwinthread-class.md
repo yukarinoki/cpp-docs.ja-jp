@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2c01336094077cc1f451f2e7b479ca4acf9fb77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 412d9150836511c88b85326d2ce59181a0566c57
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441357"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890598"
 ---
 # <a name="cwinthread-class"></a>CWinThread クラス
 
@@ -455,7 +455,7 @@ BOOL PostThreadMessage(
 投稿されたメッセージは、メッセージ マップ マクロによって、適切なメッセージ ハンドラーにマップされます。
 
 > [!NOTE]
->  Windows を呼び出すときに[次](https://msdn.microsoft.com/library/windows/desktop/ms644946)MFC メッセージ ハンドラーは呼び出されません、MFC アプリケーション内の関数。 詳細については、サポート技術情報の記事、"PRB:: MFC メッセージ ハンドラーしないというで PostThreadMessage()"(Q142415) を参照してください。
+> 呼び出すと[次](https://msdn.microsoft.com/library/windows/desktop/ms644946)メッセージは、スレッドのメッセージ キューに格納されます。 ただし、この方法が記載されたメッセージは、ウィンドウに関連付けられていないため、MFC はディスパッチにメッセージまたはコマンドのハンドラーにします。 これらのメッセージを処理するためにオーバーライド、 `PreTranslateMessage()` CWinApp から派生したは、関数クラスし、手動でメッセージを処理します。
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 
@@ -490,7 +490,7 @@ virtual BOOL ProcessMessageFilter(
 
 ### <a name="parameters"></a>パラメーター
 
-*コード*<br/>
+*code*<br/>
 フック コードを指定します。 このメンバー関数では、コードを使用して、処理する方法を決定*lpMsg します。*
 
 *lpMsg*<br/>

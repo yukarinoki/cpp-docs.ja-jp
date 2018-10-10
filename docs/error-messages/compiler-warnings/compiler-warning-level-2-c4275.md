@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cb8f397243bb6531f33ac5e444914cfa36e5fe1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 55b93d1ebd81850982b4f6ceac1ceb008ed1fa49
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022637"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890284"
 ---
 # <a name="compiler-warning-level-2-c4275"></a>コンパイラの警告 (レベル 2) C4275
 
@@ -42,8 +42,6 @@ ms.locfileid: "46022637"
 - クラスのメソッドがありません (に関係なくインライン展開) EXE および DLL でインスタンス化の静的データの相違点のある型を使用できます。
 
 クラスのインスタンスを作成する仮想関数を持つクラスを定義し、機能する DLL を呼び出すことができますを定義して、型のオブジェクトを削除してエクスポートを回避できます。  仮想関数を型でだけ呼び出すことができます、します。
-
-テンプレートをエクスポートする方法の詳細については、次を参照してください[ http://support.microsoft.com/default.aspx?scid=KB;。EN-US; 168958](http://support.microsoft.com/default.aspx?scid=KB;EN-US;168958)します。
 
 デバッグのリリースをコンパイルする C++ 標準ライブラリ内の型から派生する場合は、Visual C で C4275 を無視できます (**/MTd**)、コンパイラのエラー メッセージは _Container_base を指します。
 
