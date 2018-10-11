@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0cf75e1c0fe2b3ff0d883a8785e69aef489c0545
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e0c42478e5e6ce3c9efe66c45ed32292f2040a83
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056392"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084153"
 ---
 # <a name="argument-definitions"></a>引数定義
 
@@ -45,7 +45,7 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 最初のコマンドライン引数は常に`argv` **[1]** 、最後の 1 つは`argv` **[** `argc` - 1 **]** します。
 
 > [!NOTE]
->  慣例では、`argv`**[0]** は、プログラムが起動されるコマンドです。  ただしを使用してプロセスを起動することは[CreateProcess](https://msdn.microsoft.com/library/windows/desktop/ms683197)最初と 2 つ目の両方の引数を使用する場合 (*lpApplicationName*と*lpCommandLine*)、 `argv`**[0]** 実行可能ファイルができない可能性があります名; を使用して、 [GetModuleFileName](https://msdn.microsoft.com/library/windows/desktop/ms683197)実行可能ファイルの名前とその完全修飾パスを取得します。
+>  慣例では、`argv`**[0]** は、プログラムが起動されるコマンドです。  ただしを使用してプロセスを起動することは[CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)最初と 2 つ目の両方の引数を使用する場合 (*lpApplicationName*と*lpCommandLine*)、 `argv`**[0]** 実行可能ファイルができない可能性があります名; を使用して、 [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)実行可能ファイルの名前とその完全修飾パスを取得します。
 
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様
 

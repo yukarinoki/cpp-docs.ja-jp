@@ -113,12 +113,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8f64fce16201a15936cb97b1961827865c7b917b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2ce23acf1988e88954279f3b8cdbc8fc3c9001af
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446349"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083646"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController クラス
 
@@ -882,7 +882,7 @@ pGroupNew が所有するストーリーボードの優先度が高い場合は 
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_CANCEL を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、競合の管理は読み取り Windows Animation API ドキュメント (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)します。
+このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_CANCEL を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](https://msdn.microsoft.com/library/dd371759)します。
 
 ##  <a name="onhasprioritycompress"></a>  CAnimationController::OnHasPriorityCompress
 
@@ -912,7 +912,7 @@ pGroupNew が所有するストーリーボードの優先度が高い場合は 
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_COMPRESS を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、競合の管理は読み取り Windows Animation API ドキュメント (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)します。
+このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_COMPRESS を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](https://msdn.microsoft.com/library/dd371759)します。
 
 ##  <a name="onhaspriorityconclude"></a>  CAnimationController::OnHasPriorityConclude
 
@@ -942,7 +942,7 @@ pGroupNew が所有するストーリーボードの優先度が高い場合は 
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_CONCLUDE を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、競合の管理は読み取り Windows Animation API ドキュメント (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)します。
+このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_CONCLUDE を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](https://msdn.microsoft.com/library/dd371759)します。
 
 ##  <a name="onhasprioritytrim"></a>  CAnimationController::OnHasPriorityTrim
 
@@ -972,7 +972,7 @@ pGroupNew が所有するストーリーボードの優先度が高い場合は 
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_TRIM を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、競合の管理は読み取り Windows Animation API ドキュメント (https://msdn.microsoft.com/library/dd371759(VS.85).aspx)します。
+このメソッドは、CAnimationController::EnablePriorityComparisonHandler を使用して優先度比較イベントを有効にし、UI_ANIMATION_PHT_TRIM を指定した場合に呼び出されます。 派生クラスでオーバーライドして、アプリケーション固有のアクションを実行できます。 詳細については、読み取り Windows Animation API ドキュメント[競合管理](https://msdn.microsoft.com/library/dd371759)します。
 
 ##  <a name="onstoryboardstatuschanged"></a>  CAnimationController::OnStoryboardStatusChanged
 

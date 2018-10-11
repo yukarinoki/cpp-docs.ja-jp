@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 71ada4927d1a29c2f4d9a95ed93554b0cbffc92d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e999928e2080796c013107e3bc862d19426dbf88
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791410"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083529"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -57,7 +57,7 @@ ms.locfileid: "48791410"
 ライブラリの一意の ID です。 このパラメーターを省略した場合、ライブラリの ID は自動的に生成されます。 取得する必要があります、 *uuid* 、識別子を使用して行うことができます、ライブラリ ブロックの **_ _uuidof (** *libraryname* **)** します。
 
 *lcid*<br/>
-ローカリゼーション パラメーターです。 参照してください[lcid](/windows/desktop/Midl/lcid)詳細についてはします。
+ローカリゼーション パラメーターです。 詳細については、「 [lcid](/windows/desktop/Midl/lcid) 」を参照してください。
 
 *control*<br/>
 (省略可能)ライブラリ内のすべてのコクラスのコントロールを指定します。
@@ -66,7 +66,7 @@ ms.locfileid: "48791410"
 タイプ ライブラリを指定します。
 
 *helpstringdll*<br/>
-(省略可能)使用してドキュメントの文字列検索を実行する .dll ファイルの名前を設定します。 参照してください[helpstringdll](/windows/desktop/Midl/helpstringdll)詳細についてはします。
+(省略可能)使用してドキュメントの文字列検索を実行する .dll ファイルの名前を設定します。 詳細については、「 [helpstringdll](/windows/desktop/Midl/helpstringdll) 」を参照してください。
 
 *helpfile*<br/>
 (省略可能)名前、**ヘルプ**タイプ ライブラリ ファイル。
@@ -78,10 +78,10 @@ ms.locfileid: "48791410"
 (省略可能)参照してください[helpstringcontext](helpstringcontext.md)詳細についてはします。
 
 *hidden*<br/>
-(省略可能)ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 参照してください、[隠し](/windows/desktop/Midl/hidden)MIDL 属性に関する詳細について説明します。
+(省略可能)ライブラリ全体が表示されないようにします。 これは、コントロールと共に使用します。 ホストは、拡張プロパティを使用し、コントロールをラップする新しいタイプ ライブラリを作成する必要があります。 詳細については、「 [hidden](/windows/desktop/Midl/hidden) 」の MIDL 属性に関する説明を参照してください。
 
 *restricted*<br/>
-(省略可能)ライブラリのメンバーは、任意に呼び出すことはできません。 参照してください、[制限](/windows/desktop/Midl/restricted)MIDL 属性に関する詳細について説明します。
+(省略可能)ライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/desktop/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
 
 *custom*<br/>
 (省略可能)1 つまたは複数の属性です。これに似ています、[カスタム](custom-cpp.md)属性。 最初のパラメーター*カスタム*属性の GUID です。 例えば:
@@ -98,9 +98,9 @@ DLL、実行可能ファイルまたはサービスの登録に使用される .
 
 ## <a name="remarks"></a>Remarks
 
-指定しない限り、*制限*パラメーターを[emitidl](emitidl.md)、**モジュール**C++ 属性を使用するすべてのプログラムが必要です。
+*restricted* パラメーターを [emitidl](emitidl.md)に指定した場合を除き、C++ 属性を使用するすべてのプログラムで **module** が必要です。
 
-場合、ライブラリ ブロックが作成に加え、**モジュール**属性に、ソース コードを使用しても[dispinterface](dispinterface.md)、[デュアル](dual.md)、[オブジェクト](object-cpp.md)、またはを意味する属性[コクラス](coclass.md)します。
+ライブラリ ブロックは、ソース コードで、 **module** 属性に加え、 [dispinterface](dispinterface.md)、 [dual](dual.md)、 [object](object-cpp.md)、または [coclass](coclass.md)を意味する属性も使用されている場合に作成されます。
 
 .idl ファイルでは、1 つのライブラリ ブロックが許可されています。 ソース コードに複数のモジュールのエントリがある場合、実装されている最新のパラメーター値と結合されます。
 
@@ -108,15 +108,15 @@ DLL、実行可能ファイルまたはサービスの登録に使用される .
 
 - `type` = **dll**
 
-   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md)基本クラスおよび標準の DLL エントリとして提供される COM サーバーに必要なポイント。 これらのエントリ ポイントは[DllMain](/windows/desktop/Dlls/dllmain)、 [DllRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms682162)、 [DllUnRegisterServer](https://msdn.microsoft.com/library/windows/desktop/ms691457)、 [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および[DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891)します。
+   [CAtlDllModuleT](../../atl/reference/catldllmodulet-class.md) は COM サーバーに必要な基本クラスと標準の DLL エントリ ポイントとして使用されます。 これらのエントリ ポイントは、 [DllMain](/windows/desktop/Dlls/dllmain)、 [DllRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllregisterserver)、 [DllUnRegisterServer](/windows/desktop/api/olectl/nf-olectl-dllunregisterserver)、 [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および [DllGetClassObject](https://msdn.microsoft.com/library/windows/desktop/dd797891)です。
 
 - `type` = **exe**
 
-   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) 、基本クラスおよび標準の実行可能ファイルのエントリ ポイントとして提供される[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)します。
+   [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)として使用されます。
 
 - `type` = **service**
 
-   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) 、基本クラスおよび標準の実行可能ファイルのエントリ ポイントとして提供される[WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)します。
+   [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](https://msdn.microsoft.com/library/windows/desktop/ms633559)として使用されます。
 
 - `type` = **unspecified**
 
@@ -132,7 +132,7 @@ DLL、実行可能ファイルまたはサービスの登録に使用される .
 [module(name="MyLibrary", version="1.2", helpfile="MyHelpFile")];
 ```
 
-次のコードは、 **module**を使用した結果、挿入されたコード内に表示される独自の関数を実装できることを示しています。 参照してください[/Fx](../../build/reference/fx-merge-injected-code.md)挿入されたコードの表示の詳細についてはします。 **module** 属性によって挿入された関数の 1 つをオーバーライドするには、実装した関数を含めるクラスを作成し、そのクラスに **module** 属性を含めます。
+次のコードは、 **module**を使用した結果、挿入されたコード内に表示される独自の関数を実装できることを示しています。 挿入されたコードを参照する方法の詳細については、「 [/Fx](../../build/reference/fx-merge-injected-code.md) 」を参照してください。 **module** 属性によって挿入された関数の 1 つをオーバーライドするには、実装した関数を含めるクラスを作成し、そのクラスに **module** 属性を含めます。
 
 ```cpp
 // cpp_attr_ref_module2.cpp
@@ -168,7 +168,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

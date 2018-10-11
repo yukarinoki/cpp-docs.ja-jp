@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 71e693c09d59643a272a0b2736a5a229ef444aa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ebea06a70f82c8014b52bc8f8db081ca2f0264c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078895"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082996"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB プロバイダー テンプレートのアーキテクチャ
 
@@ -50,7 +50,7 @@ OLE DB プロバイダー テンプレートを提供する、必要なすべて
   
 OLE DB プロバイダー テンプレートは、行と記憶域オブジェクトを実装しないことに注意してください。  
   
-次の表は、上記のオブジェクトの必須および省略可能なインターフェイスに従い、 [OLE DB 2.6 SDK ドキュメント](/previous-versions/windows/desktop/ms722784\(v=vs.85\))します。  
+次の表は、上記のオブジェクトの必須および省略可能なインターフェイスに従い、 [OLE DB 2.6 SDK ドキュメント](/previous-versions/windows/desktop/ms722784)します。  
   
 |コンポーネント|Interface|コメント|  
 |---------------|---------------|-------------|  
@@ -69,4 +69,4 @@ OLE DB プロバイダー テンプレートは、行と記憶域オブジェク
 ## <a name="see-also"></a>関連項目  
 
 [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB インターフェイス](/previous-versions/windows/desktop/ms709709\(v=vs.85\))
+[OLE DB インターフェイス](/previous-versions/windows/desktop/ms709709)

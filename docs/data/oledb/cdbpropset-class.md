@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d62b8d4b033d1b90c753d5de1752f0cb737f0d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e998f0bed867356218e4a1b1c772d396c53afecb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114658"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082983"
 ---
 # <a name="cdbpropset-class"></a>CDBPropSet クラス
 
@@ -138,7 +138,7 @@ bool AddProperty(DWORD dwPropertyID,
 
 ## <a name="cdbpropset"></a> Cdbpropset::cdbpropset
 
-コンストラクターです。 初期化します、 `rgProperties`、 `cProperties`、および`guidPropertySet`のフィールド、 [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体。  
+コンストラクターです。 初期化します、 `rgProperties`、 `cProperties`、および`guidPropertySet`のフィールド、 [DBPROPSET](/previous-versions/windows/desktop/ms714367)構造体。  
   
 ### <a name="syntax"></a>構文  
   
@@ -171,7 +171,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>パラメーター  
 
 *guid*<br/>
-[in]GUID を設定するため、`guidPropertySet`のフィールド、 [DBPROPSET](/previous-versions/windows/desktop/ms714367\(v=vs.85\))構造体。  
+[in]GUID を設定するため、`guidPropertySet`のフィールド、 [DBPROPSET](/previous-versions/windows/desktop/ms714367)構造体。  
   
 ### <a name="remarks"></a>Remarks  
 
@@ -192,5 +192,5 @@ CDBPropSet& operator =(CDBPropSet& propset) throw();
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>
 [CDBPropIDSet クラス](../../data/oledb/cdbpropidset-class.md)<br/>
-[DBPROPSET 構造体](/previous-versions/windows/desktop/ms714367\(v=vs.85\))   
-[DBPROP 構造体](/previous-versions/windows/desktop/ms717970\(v=vs.85\))
+[DBPROPSET 構造体](/previous-versions/windows/desktop/ms714367)   
+[DBPROP 構造体](/previous-versions/windows/desktop/ms717970)

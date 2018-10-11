@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 42545b24bff14daf66f719a78ba414f1ae86c5c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 52b5c5bea282e4ebb4106d8e9c2fede40f375ae3
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791807"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083613"
 ---
 # <a name="dbcolumn"></a>db_column
 
@@ -45,23 +45,23 @@ ms.locfileid: "48791807"
 ```
 
 *dbtype*<br/>
-(省略可能)OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251\(v=vs.85\))列エントリにします。
+(省略可能)OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251)列エントリにします。
 
 *precision*<br/>
-(省略可能)列のエントリに使用する有効桁数です。 詳細については、説明を参照してください、`bPrecision`の要素、 [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(省略可能)列のエントリに使用する有効桁数です。 詳細については、説明を参照してください、`bPrecision`の要素、 [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845)
 
 *スケール*<br/>
-(省略可能)列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845\(v=vs.85\))
+(省略可能)列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845)
 
 *status*<br/>
-(省略可能)この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
+(省略可能)この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617)で、 *OLE DB プログラマーズ リファレンス*します。
 
 *length*<br/>
 (省略可能)メンバー変数 (バイト単位)、列のサイズを保持するために使用します。
 
 ## <a name="remarks"></a>Remarks
 
-**db_column**行セット内の変数に指定したテーブル列をバインドします。 OLE DB に参加できるメンバー データを区切る`IAccessor`-ベースのバインド。 この属性は、通常 OLE DB コンシューマーのマクロを使用して定義されている列のマップを設定[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)、 [END_COLUMN_MAP](../../data/oledb/end-column-map.md)、および[COLUMN_ENTRY](../../data/oledb/column-entry.md)します。 これらの操作、OLE DB [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845\(v=vs.85\))指定された列にバインドします。 各メンバーをマークする、 **db_column**属性は、列のエントリの形式で列のマップで 1 つのエントリを占有します。 したがって、コピー先の場所は列のマップは、コマンドまたはテーブル クラスでこの属性を呼び出します。
+**db_column**行セット内の変数に指定したテーブル列をバインドします。 OLE DB に参加できるメンバー データを区切る`IAccessor`-ベースのバインド。 この属性は、通常 OLE DB コンシューマーのマクロを使用して定義されている列のマップを設定[BEGIN_COLUMN_MAP](../../data/oledb/begin-column-map.md)、 [END_COLUMN_MAP](../../data/oledb/end-column-map.md)、および[COLUMN_ENTRY](../../data/oledb/column-entry.md)します。 これらの操作、OLE DB [DBBINDING 構造体](/previous-versions/windows/desktop/ms716845)指定された列にバインドします。 各メンバーをマークする、 **db_column**属性は、列のエントリの形式で列のマップで 1 つのエントリを占有します。 したがって、コピー先の場所は列のマップは、コマンドまたはテーブル クラスでこの属性を呼び出します。
 
 使用**db_column**いずれかと組み合わせて、 [db_table](db-table.md)または[db_command](db-command.md)属性。
 
@@ -120,7 +120,7 @@ class CProducts {
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

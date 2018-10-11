@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 163949c4421cca8e4d5e414a18bda4ed98f32d3d
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2555bdd9c1de130cd692131c12b7b2afc37537be
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861643"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083048"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB コンシューマー ウィザード
 
@@ -36,7 +36,7 @@ ms.locfileid: "48861643"
 
 - **Data Source**
 
-   **データソース**ボタンを指定した OLE DB プロバイダーを使用して、指定されたデータ ソースを設定することができます。 このボタンをクリックすると、**データ リンク プロパティ** ダイアログ ボックスが表示されます。 接続文字列の作成の詳細については、**データ リンク プロパティ**ダイアログ ボックスを参照してください[Data Link API の概要](/previous-versions/windows/desktop/ms718102\(v=vs.85\))Windows SDK のドキュメント。
+   **データソース**ボタンを指定した OLE DB プロバイダーを使用して、指定されたデータ ソースを設定することができます。 このボタンをクリックすると、**データ リンク プロパティ** ダイアログ ボックスが表示されます。 接続文字列の作成の詳細については、**データ リンク プロパティ**ダイアログ ボックスを参照してください[Data Link API の概要](/previous-versions/windows/desktop/ms718102)Windows SDK のドキュメント。
 
    次の追加情報がタブについて説明します、**データ リンク プロパティ** ダイアログ ボックス。
 
@@ -177,7 +177,7 @@ ms.locfileid: "48861643"
 
 - **サポート**
 
-   (既定値は none です)、コンシューマーでサポートされる更新プログラムの種類を指定するチェック ボックスを選択します。 次の各設定は[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892\(v=vs.85\))の適切なエントリ[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676\(v=vs.85\))プロパティにマップを設定します。
+   (既定値は none です)、コンシューマーでサポートされる更新プログラムの種類を指定するチェック ボックスを選択します。 次の各設定は[DBPROP_IRowsetChange](/previous-versions/windows/desktop/ms715892)の適切なエントリ[DBPROP_UPDATABILITY](/previous-versions/windows/desktop/ms722676)プロパティにマップを設定します。
 
    - **変更**
 
@@ -195,4 +195,4 @@ ms.locfileid: "48861643"
 
 [ATL OLE DB コンシューマー](../../atl/reference/adding-an-atl-ole-db-consumer.md)<br/>
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[接続文字列およびデータ リンク (OLE DB)](/previous-versions/windows/desktop/ms718376\(v=vs.85\))
+[接続文字列およびデータ リンク (OLE DB)](/previous-versions/windows/desktop/ms718376)

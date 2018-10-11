@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aef8b069e9f77b61ee0c6c26d8d9232ee139867d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a7d8f7a55379707282fd5ea9ad2063d00392d7eb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098917"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082619"
 ---
 # <a name="setting-properties-in-your-provider"></a>プロバイダーでのプロパティの設定
 
-対象のプロパティのプロパティ グループとプロパティの ID を検索します。 詳細については、次を参照してください。 [OLE DB プロパティ](/previous-versions/windows/desktop/ms722734\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+対象のプロパティのプロパティ グループとプロパティの ID を検索します。 詳細については、次を参照してください。 [OLE DB プロパティ](/previous-versions/windows/desktop/ms722734)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ウィザードによって生成される、プロバイダー コードでは、プロパティ グループに対応するプロパティ マップを紹介します。 プロパティ グループの名前は、通常は、オブジェクトの名前に対応します。 コマンドまたは行セットでコマンドや行セットのプロパティが見つかりませんデータ ソースと初期化プロパティは、データ ソース オブジェクトで確認できます。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "46098917"
   
 - プロパティに対応するプロパティ ID。 プロパティ名の先頭から最初の 7 文字 (「dbprop _」) を削除する必要があります。 たとえば、追加する`DBPROP_MAXROWS`、渡す`MAXROWS`最初の要素として。 カスタム プロパティの場合は、完全な GUID の名前を渡す (たとえば、 `DBMYPROP_MYPROPERTY`)。  
   
-- プロパティのバリアント型 (で[OLE DB プロパティ](/previous-versions/windows/desktop/ms722734\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*)。 データ型に対応する vt _ を付けます (VT_BOOL VT_I2 など) の種類を入力します。  
+- プロパティのバリアント型 (で[OLE DB プロパティ](/previous-versions/windows/desktop/ms722734)で、 *OLE DB プログラマーズ リファレンス*)。 データ型に対応する vt _ を付けます (VT_BOOL VT_I2 など) の種類を入力します。  
   
 - プロパティが読み取り可能で、書き込み可能なのかどうかとが所属するグループを示すフラグ。 たとえば、次のコードでは、行セットのグループに属している、読み取り/書き込みプロパティを示します。  
   

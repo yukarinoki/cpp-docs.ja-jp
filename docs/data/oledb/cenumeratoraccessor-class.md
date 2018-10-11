@@ -48,12 +48,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d87bcf20957b69577e709c8fcbd2c6a5f3c9b770
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 896c1dd1f1d3a43a3678a086d80e0f95b60b6126
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075924"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083334"
 ---
 # <a name="cenumeratoraccessor-class"></a>CEnumeratorAccessor クラス
 
@@ -97,7 +97,7 @@ VARIANT_BOOL m_bIsParent;
   
 ### <a name="remarks"></a>Remarks  
 
-参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。 
+参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。 
 
 ## <a name="ntype"></a> Cenumeratoraccessor::m_ntype
 
@@ -111,7 +111,7 @@ USHORT m_nType;
   
 ### <a name="remarks"></a>Remarks  
 
-参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
+参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
 ## <a name="szdescription"></a> Cenumeratoraccessor::m_szdescription
 
@@ -125,7 +125,7 @@ WCHAR m_szDescription[129];
   
 ### <a name="remarks"></a>Remarks  
 
-参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
+参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
 ## <a name="szname"></a> Cenumeratoraccessor::m_szname
 
@@ -139,7 +139,7 @@ WCHAR m_szName[129];
   
 ### <a name="remarks"></a>Remarks  
 
-参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。  
+参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。  
 
 ## <a name="szparsename"></a> Cenumeratoraccessor::m_szparsename
 
@@ -153,7 +153,7 @@ WCHAR m_szParseName[129];
   
 ### <a name="remarks"></a>Remarks  
 
-参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。  
+参照してください[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。  
   
 ## <a name="see-also"></a>関連項目  
 

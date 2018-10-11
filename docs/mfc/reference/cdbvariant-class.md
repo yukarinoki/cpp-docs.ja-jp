@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 14e2e646a2b05ba8514f22fb9ffb027aa0a570c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0c3ab06de159722e4aae4e15d93e057b12dc8864
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419647"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083295"
 ---
 # <a name="cdbvariant-class"></a>CDBVariant クラス
 
@@ -226,7 +226,7 @@ TIMESTAMP_STRUCT 型のオブジェクトへのポインターを格納します
 
 `m_pdate`共用体へのデータ メンバーが属しています。 アクセスする前に`m_pdate`、最初の値をチェック[CDBVariant::m_dwType](#m_dwtype)します。 場合`m_dwType`DBVT_DATE に設定し、`m_pdate`の有効なポインターが含まれています。 それ以外の場合、にアクセスする`m_pdate`信頼性のない結果が生成されます。
 
-TIMESTAMP_STRUCT のデータ型の詳細については、トピックを参照してください。 [C データ型](/previous-versions/windows/desktop/ms714556\(v=vs.85\))の付録 d、 *ODBC プログラマ リファレンス*Windows SDK にします。
+TIMESTAMP_STRUCT のデータ型の詳細については、トピックを参照してください。 [C データ型](/previous-versions/windows/desktop/ms714556)の付録 d、 *ODBC プログラマ リファレンス*Windows SDK にします。
 
 ##  <a name="m_pstring"></a>  CDBVariant::m_pstring
 

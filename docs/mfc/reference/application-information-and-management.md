@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9783da47a22260f0edbe5ddf6d8f5021aae31e5c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374374"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083802"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 
@@ -591,7 +591,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 ### <a name="remarks"></a>Remarks
 
-使用できるハンドルを返します[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) DLL 関数のアドレスを取得します。 `AfxLoadLibrary` その他の実行可能モジュールにマップすることも使用できます。
+使用できるハンドルを返します[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) DLL 関数のアドレスを取得します。 `AfxLoadLibrary` その他の実行可能モジュールにマップすることも使用できます。
 
 各プロセスは、各ライブラリが読み込まれたモジュールの参照カウントを保持します。 この参照カウントは毎回`AfxLoadLibrary`と呼びます。 毎回デクリメントされる`AfxFreeLibrary`が呼び出されます。 参照カウントがゼロに達するし、モジュールは、呼び出し元プロセスのアドレス空間からマップされたが、ハンドルが無効になった。
 
@@ -752,7 +752,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Windows Vista では、通常使用されるレジストリにアクセスするアプリケーションの前に、 **HKEY_CLASSES_ROOT**ノード。 ただし、Windows Vista またはそれ以降のオペレーティング システムでは、HKCR への書き込みに管理者特権モードでアプリケーションを実行する必要があります。
 
-このメソッドは、読み取りし、書き込みを HKCU、HKCR からレジストリ アクセスをリダイレクトすることにより、管理者特権モードで実行することがなく、レジストリにアプリケーションを使用します。 詳細については、次を参照してください。[リンカー プロパティ ページ](../../ide/linker-property-pages.md)します。
+このメソッドは、読み取りし、書き込みを HKCU、HKCR からレジストリ アクセスをリダイレクトすることにより、管理者特権モードで実行することがなく、レジストリにアプリケーションを使用します。 詳細については、「 [Linker Property Pages](../../ide/linker-property-pages.md)」を参照してください。
 
 フレームワークが HKCR へのアクセスをリダイレクトするレジストリのリダイレクトを有効にした場合**する**します。 MFC と ATL のフレームワークは、リダイレクトの影響を受けます。
 

@@ -33,12 +33,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2c786783963bf2f3613228b87a7ede23eb75a450
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7f7662fabc53054b7a6712d271d89c2c3451067e
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46025595"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083037"
 ---
 # <a name="idbpropertiesimpl-class"></a>IDBPropertiesImpl クラス
 
@@ -73,7 +73,7 @@ class ATL_NO_VTABLE IDBPropertiesImpl
   
 ## <a name="remarks"></a>Remarks  
 
-[IDBProperties](/previous-versions/windows/desktop/ms719607\(v=vs.85\))はデータ ソース オブジェクトに必要なインターフェイスと列挙子のオプションのインターフェイス。 ただし、列挙子を公開する場合[IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\))、それを公開する必要があります`IDBProperties`します。 `IDBPropertiesImpl` 実装`IDBProperties`によって定義された静的関数を使用して[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)します。  
+[IDBProperties](/previous-versions/windows/desktop/ms719607)はデータ ソース オブジェクトに必要なインターフェイスと列挙子のオプションのインターフェイス。 ただし、列挙子を公開する場合[IDBInitialize](/previous-versions/windows/desktop/ms713706)、それを公開する必要があります`IDBProperties`します。 `IDBPropertiesImpl` 実装`IDBProperties`によって定義された静的関数を使用して[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)します。  
 
 ## <a name="getproperties"></a> Idbpropertiesimpl::getproperties
 
@@ -90,7 +90,7 @@ STDMETHOD(GetProperties)(ULONG cPropertySets,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[idbproperties::getproperties](/previous-versions/windows/desktop/ms714344\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[idbproperties::getproperties](/previous-versions/windows/desktop/ms714344)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBProperties::GetProperties`:  
   
@@ -121,7 +121,7 @@ STDMETHOD(GetPropertyInfo)(ULONG cPropertySets,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[idbproperties::getpropertyinfo](/previous-versions/windows/desktop/ms718175\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[idbproperties::getpropertyinfo](/previous-versions/windows/desktop/ms718175)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBProperties::GetPropertyInfo`:  
   
@@ -147,7 +147,7 @@ STDMETHOD(SetProperties)(ULONG cPropertySets,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[idbproperties::setproperties](/previous-versions/windows/desktop/ms723049\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[idbproperties::setproperties](/previous-versions/windows/desktop/ms723049)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
 
