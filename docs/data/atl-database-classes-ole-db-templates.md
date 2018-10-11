@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8dcefa3068cb27514671094194ba590e99402b05
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6defe70a018fe954a0daa2d1a4b49142a9a37884
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021098"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081945"
 ---
 # <a name="atl-database-classes-ole-db-templates"></a>ATL データベース クラス (OLE DB テンプレート)
 
@@ -40,7 +40,7 @@ OLE DB テンプレートは、OLE DB データベース テクノロジを使�
   
 MFC ライブラリに 1 つのクラスが含まれているメモ[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)コントロールでのデータベース レコードを表示します。 ビューが、フォーム ビューに直接接続されている、`CRowset`オブジェクトし、のフィールドが表示されます、`CRowset`ダイアログ テンプレートのコントロール内のオブジェクト。  
   
-詳細については、次を参照してください。 [OLE DB プログラミング](../data/oledb/ole-db-programming.md)と[OLE DB プログラマ ガイド](/previous-versions/windows/desktop/ms713643\(v=vs.85\))します。  
+詳細については、次を参照してください。 [OLE DB プログラミング](../data/oledb/ole-db-programming.md)と[OLE DB プログラマ ガイド](/previous-versions/windows/desktop/ms713643)します。  
   
 ## <a name="see-also"></a>関連項目  
 

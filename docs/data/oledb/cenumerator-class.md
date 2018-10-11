@@ -33,16 +33,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 22f4aee2ac7cbefee19a33d929ec80b319b537d4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6f85fafe213fa7e53f67fb6a3035f415235c8794
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117479"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082450"
 ---
 # <a name="cenumerator-class"></a>CEnumerator クラス
 
-公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。  
+公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969)インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。  
   
 ## <a name="syntax"></a>構文
 
@@ -61,7 +61,7 @@ class CEnumerator :
   
 |||  
 |-|-|  
-|[検索](#find)|指定した名前のいずれかを探して利用可能なプロバイダー (データ ソース) で検索します。|  
+|[[検索]](#find)|指定した名前のいずれかを探して利用可能なプロバイダー (データ ソース) で検索します。|  
 |[GetMoniker](#getmoniker)|取得、`IMoniker`現在のレコードのインターフェイス。|  
 |[開く](#open)|列挙子を開きます。|  
   
@@ -90,7 +90,7 @@ bool Find(TCHAR* szSearchName) throw();
   
 ### <a name="remarks"></a>Remarks  
 
-この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969\(v=vs.85\))インターフェイス。  
+この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969)インターフェイス。  
   
 ## <a name="getmoniker"></a> Cenumerator::getmoniker
 
@@ -119,7 +119,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker,
 
 ## <a name="open"></a> Cenumerator::open
 
-指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200\(v=vs.85\))します。  
+指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200)します。  
   
 ### <a name="syntax"></a>構文  
   

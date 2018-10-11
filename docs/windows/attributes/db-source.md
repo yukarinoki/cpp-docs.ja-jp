@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa55ba0193f24acdf308888c3ec505c33003292
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 11a58511684a58ebb0b8ec13138bfbdb7afa4729
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791210"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081904"
 ---
 # <a name="dbsource"></a>db_source
 
@@ -37,7 +37,7 @@ ms.locfileid: "48791210"
 ### <a name="parameters"></a>パラメーター
 
 *db_source*<br/>
-データ ソースに接続するために使用する接続文字列。 接続文字列の形式の場合、次を参照してください。[データ リンクの接続文字列と](/previous-versions/windows/desktop/ms718376\(v=vs.85\))で、Microsoft Data Access Components (MDAC) SDK。
+データ ソースに接続するために使用する接続文字列。 接続文字列の形式の場合、次を参照してください。[データ リンクの接続文字列と](/previous-versions/windows/desktop/ms718376)で、Microsoft Data Access Components (MDAC) SDK。
 
 *name*<br/>
 (省略可能)使用すると**db_source**クラスで*名前*を持つデータ ソース オブジェクトのインスタンスです、 **db_source**属性 (例 1 を参照してください) を適用します。 使用すると**db_source**インライン メソッドの実装で*名前*データにアクセスするために使用される変数 (ローカル メソッド) は、ソース (例 2 を参照してください)。 これを渡す*名前*を*source_name*のパラメーター`db_command`にデータ ソースを関連付けるコマンド。
@@ -88,7 +88,7 @@ class CMyCommand {};
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

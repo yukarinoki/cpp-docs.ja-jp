@@ -31,16 +31,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d2d63b4046774bd7e1c427639db3483536e94bc5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9ade96e5d73d86519a067d632a4e05250d1264cf
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095346"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082307"
 ---
 # <a name="irowsetnotifyimpl-class"></a>IRowsetNotifyImpl クラス
 
-実装し、登録[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))コンシューマー (別名「シンク」) の通知を処理できるようにします。  
+実装し、登録[IRowsetNotify](/previous-versions/windows/desktop/ms712959)コンシューマー (別名「シンク」) の通知を処理できるようにします。  
   
 ## <a name="syntax"></a>構文
 
@@ -66,7 +66,7 @@ class ATL_NO_VTABLE IRowsetNotifyImpl : public IRowsetNotify
 
 参照してください[通知の受信](../../data/oledb/receiving-notifications.md)コンシューマーのコネクション ポイントのインターフェイスを実装する方法。  
   
-`IRowsetNotifyImpl` ダミー実装を提供`IRowsetNotify`、空の関数を含む、`IRowsetNotify`メソッド[OnFieldChange](/previous-versions/windows/desktop/ms715961\(v=vs.85\))、 [OnRowChange](/previous-versions/windows/desktop/ms722694\(v=vs.85\))、および[OnRowsetChange](/previous-versions/windows/desktop/ms722669\(v=vs.85\)). 実装する場合、このクラスから継承する場合、`IRowsetNotify`インターフェイスに必要なメソッドのみを実装することができます。 また、自分でその他のメソッドの空の実装を提供する必要があります。  
+`IRowsetNotifyImpl` ダミー実装を提供`IRowsetNotify`、空の関数を含む、`IRowsetNotify`メソッド[OnFieldChange](/previous-versions/windows/desktop/ms715961)、 [OnRowChange](/previous-versions/windows/desktop/ms722694)、および[OnRowsetChange](/previous-versions/windows/desktop/ms722669). 実装する場合、このクラスから継承する場合、`IRowsetNotify`インターフェイスに必要なメソッドのみを実装することができます。 また、自分でその他のメソッドの空の実装を提供する必要があります。  
 
 ## <a name="onfieldchange"></a> Irowsetnotifyimpl::onfieldchange
 
@@ -87,15 +87,15 @@ STDMETHOD(OnFieldChange)(
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[は、](/previous-versions/windows/desktop/ms715961\(v=vs.85\))のパラメーターの説明。  
+参照してください[は、](/previous-versions/windows/desktop/ms715961)のパラメーターの説明。  
   
 ### <a name="return-value"></a>戻り値  
 
-参照してください[は、](/previous-versions/windows/desktop/ms715961\(v=vs.85\))値の説明を返します。  
+参照してください[は、](/previous-versions/windows/desktop/ms715961)値の説明を返します。  
   
 ### <a name="remarks"></a>Remarks  
 
-このメソッドはラップ、[は、](/previous-versions/windows/desktop/ms715961\(v=vs.85\))メソッド。 詳細については、OLE DB プログラマーズ リファレンス、そのメソッドの説明を参照してください。  
+このメソッドはラップ、[は、](/previous-versions/windows/desktop/ms715961)メソッド。 詳細については、OLE DB プログラマーズ リファレンス、そのメソッドの説明を参照してください。  
 
 ## <a name="onrowchange"></a> Irowsetnotifyimpl::onrowchange
 
@@ -115,15 +115,15 @@ STDMETHOD(OnRowChange)(
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[は、](/previous-versions/windows/desktop/ms722694\(v=vs.85\))のパラメーターの説明。  
+参照してください[は、](/previous-versions/windows/desktop/ms722694)のパラメーターの説明。  
   
 ### <a name="return-value"></a>戻り値  
 
-参照してください[は、](/previous-versions/windows/desktop/ms722694\(v=vs.85\))値の説明を返します。  
+参照してください[は、](/previous-versions/windows/desktop/ms722694)値の説明を返します。  
   
 ### <a name="remarks"></a>Remarks  
 
-このメソッドはラップ、[は、](/previous-versions/windows/desktop/ms722694\(v=vs.85\))メソッド。 詳細については、OLE DB プログラマーズ リファレンス、そのメソッドの説明を参照してください。 
+このメソッドはラップ、[は、](/previous-versions/windows/desktop/ms722694)メソッド。 詳細については、OLE DB プログラマーズ リファレンス、そのメソッドの説明を参照してください。 
 
 ## <a name="onrowsetchange"></a> Irowsetnotifyimpl::onrowsetchange
 
@@ -141,19 +141,19 @@ STDMETHOD(OnRowsetChange)(
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[は、](/previous-versions/windows/desktop/ms722669\(v=vs.85\))のパラメーターの説明。  
+参照してください[は、](/previous-versions/windows/desktop/ms722669)のパラメーターの説明。  
   
 ### <a name="return-value"></a>戻り値  
 
-参照してください[は、](/previous-versions/windows/desktop/ms722669\(v=vs.85\))値の説明を返します。  
+参照してください[は、](/previous-versions/windows/desktop/ms722669)値の説明を返します。  
   
 ### <a name="remarks"></a>Remarks  
 
-このメソッドはラップ、[は、](/previous-versions/windows/desktop/ms722669\(v=vs.85\))メソッド。 詳細については、OLE DB プログラマーズ リファレンス、そのメソッドの説明を参照してください。
+このメソッドはラップ、[は、](/previous-versions/windows/desktop/ms722669)メソッド。 詳細については、OLE DB プログラマーズ リファレンス、そのメソッドの説明を参照してください。
   
 ## <a name="see-also"></a>関連項目  
 
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
-[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))   
+[IRowsetNotify](/previous-versions/windows/desktop/ms712959)   
 [IRowsetNotifyCP クラス](../../data/oledb/irowsetnotifycp-class.md)

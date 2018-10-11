@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6e5fa63a0da718b80c2b0d61e5215a947e21d496
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8b2cbe36a933580edc09e8139dca0ed6ec090f90
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101716"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082658"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB テンプレート、属性、およびその他の実装
 
@@ -36,7 +36,7 @@ OLE DB テンプレート、ATL (Active Template Library) の一部である、�
   
 - **OLE DB プロバイダー テンプレート**OLE DB サーバー (プロバイダー) アプリケーションを実装するために使用します。  
   
-OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB に慣れていない場合は、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))します。  
+OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB についてあまり知識がない場合は、『 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)』を参照してください。  
   
 詳細については、次の操作を実行できます。  
   
@@ -48,7 +48,7 @@ OLE DB テンプレートを使用するには、C++ テンプレート、COM、
   
 - 一覧を参照してください。 [OLE DB テンプレート サンプル](https://github.com/Microsoft/VCSamples)します。  
   
-- 参照してください[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))(、Windows SDK) にします。  
+- 参照してください[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)(、Windows SDK) にします。  
   
 ## <a name="ole-db-attributes"></a>OLE DB 属性します。  
 
@@ -56,11 +56,11 @@ OLE DB テンプレートを使用するには、C++ テンプレート、COM、
   
 ## <a name="mfc-ole-db-classes"></a>MFC の OLE DB クラス  
 
-MFC ライブラリの 1 つのクラス ライブラリが[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)コントロールでのデータベース レコードを表示します。 ビューが、フォーム ビューに直接接続されている、`CRowset`オブジェクトし、のフィールドが表示されます、`CRowset`ダイアログ テンプレートのコントロール内のオブジェクト。 移動するための既定の実装も提供に、最初次、前、または最後のレコードとインターフェイス ビューで現在のレコードを更新します。 詳細については、「`COleDBRecordView`」を参照してください。  
+MFC ライブラリの 1 つのクラス ライブラリが[COleDBRecordView](../../mfc/reference/coledbrecordview-class.md)コントロールでのデータベース レコードを表示します。 ビューが、フォーム ビューに直接接続されている、`CRowset`オブジェクトし、のフィールドが表示されます、`CRowset`ダイアログ テンプレートのコントロール内のオブジェクト。 移動するための既定の実装も提供に、最初次、前、または最後のレコードとインターフェイス ビューで現在のレコードを更新します。 詳細については、「 `COleDBRecordView` 」を参照してください。  
   
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK インターフェイス  
 
-OLE DB テンプレートと OLE DB 機能がサポートして場合、OLE DB インターフェイス自体を使用する必要があります。 詳細については、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))Windows SDK に含まれています。  
+OLE DB テンプレートと OLE DB 機能がサポートして場合、OLE DB インターフェイス自体を使用する必要があります。 詳細については、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
 
