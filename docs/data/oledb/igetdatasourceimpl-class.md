@@ -25,16 +25,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9ecc830937e36e213177205549ee4dd4e989e0ed
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0101f0d32ebf5fa5a46d735f64fea03b7e5208da
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118701"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082580"
 ---
 # <a name="igetdatasourceimpl-class"></a>IGetDataSourceImpl クラス
 
-実装を提供、 [IGetDataSource](/previous-versions/windows/desktop/ms709721\(v=vs.85\))オブジェクト。  
+実装を提供、 [IGetDataSource](/previous-versions/windows/desktop/ms709721)オブジェクト。  
   
 ## <a name="syntax"></a>構文
 
@@ -77,7 +77,7 @@ STDMETHOD(GetDataSource)(REFIID riid,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[IGetDataSource::GetDataSource](/previous-versions/windows/desktop/ms725443)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
 

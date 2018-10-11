@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7f148176b8d5d0c85f3e899cfd117bbb381794b0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e4427eede8efcd492e90597efe9488a89e6d4de
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46047396"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082372"
 ---
 # <a name="idbcreatesessionimpl-class"></a>IDBCreateSessionImpl クラス
 
-実装を提供、 [IDBCreateSession](/previous-versions/windows/desktop/ms724076\(v=vs.85\))インターフェイス。  
+実装を提供、 [IDBCreateSession](/previous-versions/windows/desktop/ms724076)インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -80,7 +80,7 @@ STDMETHOD(CreateSession)(IUnknown * pUnkOuter,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[idbcreatesession::createsession](/previous-versions/windows/desktop/ms714942\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。   
+参照してください[idbcreatesession::createsession](/previous-versions/windows/desktop/ms714942)で、 *OLE DB プログラマーズ リファレンス*します。   
   
 ## <a name="see-also"></a>関連項目  
 

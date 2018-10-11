@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 263a90710d2103c4ea97e6c56da67d676ba7366b
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 7f9cbfce7e04040f0e1618148a3c258f21bb84b8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43222081"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083464"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>混在モードから純粋な中間言語へのプロジェクトの変換
 
@@ -84,26 +84,26 @@ ms.locfileid: "43222081"
 
 3. すべてのアンマネージ型を削除します。
 
-   構造への参照にアンマネージ型を置き換える、必要に応じて、[システム](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)名前空間。 一般的なマネージ型は、次の表のとおりです。
+   構造への参照にアンマネージ型を置き換える、必要に応じて、[システム](/dotnet/api/system)名前空間。 一般的なマネージ型は、次の表のとおりです。
 
    |構造体|説明|
    |---------------|-----------------|
-   |[Boolean](https://msdn.microsoft.com/library/system.boolean\(v=vs.140\).aspx)|ブール値を表します。|
-   |[Byte](https://msdn.microsoft.com/library/system.byte\(v=vs.140\).aspx)|8 ビット符号なし整数を表します。|
-   |[Char](https://msdn.microsoft.com/library/system.char\(v=vs.140\).aspx)|Unicode 文字を表します。|
-   |[DateTime](https://msdn.microsoft.com/library/system.datetime.datetime.aspx)|通常、日付や時刻として表現される瞬間を表します。|
-   |[Decimal](https://msdn.microsoft.com/library/system.decimal\(v=vs.140\).aspx)|10 進数を表します。|
-   |[Double](https://msdn.microsoft.com/library/system.double\(v=vs.140\).aspx)|倍精度浮動小数点数を表します。|
-   |[Guid](https://msdn.microsoft.com/library/system.guid\(v=vs.140\).aspx)|グローバル一意識別子 (GUID) を表します。|
-   |[Int16](https://msdn.microsoft.com/library/system.int16\(v=vs.140\).aspx)|16 ビット符号付き整数を表します。|
-   |[Int32](https://msdn.microsoft.com/library/system.int32\(v=vs.140\).aspx)|32 ビット符号付き整数を表します。|
-   |[Int64](https://msdn.microsoft.com/library/system.int64\(v=vs.140\).aspx)|64 ビット符号付き整数を表します。|
-   |[IntPtr](https://msdn.microsoft.com/library/system.intptr\(v=vs.140\).aspx)|ポインターまたはハンドルを表すときに使用されるプラットフォーム固有の型。|
-   |[SByte](https://msdn.microsoft.com/library/system.byte.aspx)|8 ビット符号付き整数を表します。|
-   |[Single](https://msdn.microsoft.com/library/system.single.aspx)|単精度浮動小数点数を表します。|
-   |[TimeSpan](https://msdn.microsoft.com/library/system.timespan\(v=vs.140\).aspx)|時間間隔を表します。|
-   |[UInt16](https://msdn.microsoft.com/library/system.uint16\(v=vs.140\).aspx)|16 ビット符号なし整数を表します。|
-   |[UInt32](https://msdn.microsoft.com/library/system.uint32\(v=vs.140\).aspx)|32 ビット符号なし整数を表します。|
-   |[UInt64](https://msdn.microsoft.com/library/system.uint64\(v=vs.140\).aspx)|64 ビット符号なし整数を表します。|
-   |[UIntPtr](https://msdn.microsoft.com/library/system.uintptr\(v=vs.140\).aspx)|ポインターまたはハンドルを表すときに使用されるプラットフォーム固有の型。|
-   |[void](https://msdn.microsoft.com/library/system.void\(v=vs.140\).aspx)|値を返さないメソッドを示しますメソッドは、void の戻り値の型。|
+   |[Boolean](/dotnet/api/system.boolean)|ブール値を表します。|
+   |[Byte](/dotnet/api/system.byte)|8 ビット符号なし整数を表します。|
+   |[Char](/dotnet/api/system.char)|Unicode 文字を表します。|
+   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|通常、日付や時刻として表現される瞬間を表します。|
+   |[Decimal](/dotnet/api/system.decimal)|10 進数を表します。|
+   |[Double](/dotnet/api/system.double)|倍精度浮動小数点数を表します。|
+   |[Guid](/dotnet/api/system.guid)|グローバル一意識別子 (GUID) を表します。|
+   |[Int16](/dotnet/api/system.int16)|16 ビット符号付き整数を表します。|
+   |[Int32](/dotnet/api/system.int32)|32 ビット符号付き整数を表します。|
+   |[Int64](/dotnet/api/system.int64)|64 ビット符号付き整数を表します。|
+   |[IntPtr](/dotnet/api/system.intptr)|ポインターまたはハンドルを表すときに使用されるプラットフォーム固有の型。|
+   |[SByte](/dotnet/api/system.byte.aspx)|8 ビット符号付き整数を表します。|
+   |[Single](/dotnet/api/system.single.aspx)|単精度浮動小数点数を表します。|
+   |[TimeSpan](/dotnet/api/system.timespan)|時間間隔を表します。|
+   |[UInt16](/dotnet/api/system.uint16)|16 ビット符号なし整数を表します。|
+   |[UInt32](/dotnet/api/system.uint32)|32 ビット符号なし整数を表します。|
+   |[UInt64](/dotnet/api/system.uint64)|64 ビット符号なし整数を表します。|
+   |[UIntPtr](/dotnet/api/system.uintptr)|ポインターまたはハンドルを表すときに使用されるプラットフォーム固有の型。|
+   |[void](/dotnet/api/system.void)|値を返さないメソッドを示しますメソッドは、void の戻り値の型。|

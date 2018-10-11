@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 18bbcf64bc76d26535f9a5c2c51229048422af56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b22f97401900a24ae864174872027b18509dfe0c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021578"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082424"
 ---
 # <a name="ole-db-consumer-templates-c"></a>OLE DB コンシューマー テンプレート (C++)
 
@@ -35,7 +35,7 @@ OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様�
   
 - OLE DB プログラミング用のネイティブの C/C++ データ型。  
   
-OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB に慣れていない場合は、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms718124\(v=vs.85\))します。  
+OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB についてあまり知識がない場合は、『 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms718124)』を参照してください。  
   
 OLE DB テンプレートは、新しいオブジェクト モデルを追加するのではなく、既存の OLE DB オブジェクト モデルをサポートします。 OLE DB コンシューマー テンプレートの最上位クラスは、OLE DB 仕様で定義されたコンポーネントと同等のものです。 OLE DB コンシューマー テンプレートのデザインには、1 つの行セットに対する複数のアクセサーなどの高度な機能が含まれます。 テンプレートと多重継承を使用することで、ライブラリを小型で柔軟なものにすることができます。  
   
@@ -71,5 +71,5 @@ OLE DB コンシューマーは、データベース テーブル内の列をロ
 
 [OLE DB プログラミング](../../data/oledb/ole-db-programming.md)<br/>
 [データ アクセス](../data-access-in-cpp.md)<br/>
-[OLE DB SDK のドキュメント](/previous-versions/windows/desktop/ms722784\(v=vs.85\))   
-[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))
+[OLE DB SDK のドキュメント](/previous-versions/windows/desktop/ms722784)   
+[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)

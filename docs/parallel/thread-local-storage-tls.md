@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6744fdd80e16e292399a261e10dc6b974af1dca4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46371928"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081872"
 ---
 # <a name="thread-local-storage-tls"></a>スレッド ローカル ストレージ (TLS: Thread Local Storage)
 
@@ -114,7 +114,7 @@ __declspec( thread ) int tls_i = 1;
 
      スレッド ローカル ストレージ機能は将来拡張される可能性があるため、C++ ではこのようにスレッド データを動的に初期化することが許可されていません。
 
-- Windows Vista では前に、の Windows オペレーティング システムで`__declspec`(スレッド) がいくつかの制限。 DLL で任意のデータまたはオブジェクトを `__declspec`( thread ) として宣言した場合、動的に読み込まれたときに保護違反が発生する可能性があります。 によって、DLL が読み込まれた後[LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175)、コードで参照されるたびにシステム エラーが発生、 `__declspec`(thread) データ。 スレッドのグローバル変数領域は実行時に割り当てられるため、この領域のサイズは、アプリケーションの要件および静的にリンクされているすべての DLL の要件に基づいて計算されます。 `LoadLibrary` を使用すると、`__declspec`( thread ) を使用して宣言されたスレッド ローカル変数用にこの領域を拡張することはできません。 TLS の Api を使用して[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)、TLS の割り当てに DLL が読み込まれることが場合に、DLL で`LoadLibrary`します。
+- Windows Vista では前に、の Windows オペレーティング システムで`__declspec`(スレッド) がいくつかの制限。 DLL で任意のデータまたはオブジェクトを `__declspec`( thread ) として宣言した場合、動的に読み込まれたときに保護違反が発生する可能性があります。 によって、DLL が読み込まれた後[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)、コードで参照されるたびにシステム エラーが発生、 `__declspec`(thread) データ。 スレッドのグローバル変数領域は実行時に割り当てられるため、この領域のサイズは、アプリケーションの要件および静的にリンクされているすべての DLL の要件に基づいて計算されます。 `LoadLibrary` を使用すると、`__declspec`( thread ) を使用して宣言されたスレッド ローカル変数用にこの領域を拡張することはできません。 TLS の Api を使用して[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)、TLS の割り当てに DLL が読み込まれることが場合に、DLL で`LoadLibrary`します。
 
 ## <a name="see-also"></a>関連項目
 

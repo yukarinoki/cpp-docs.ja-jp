@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4e052de60234b065a137c5528c77d2d6c97490e8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 88272c935c3e610ee633a1e076a2d2d76b5840f2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034852"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082567"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>OLE DB プロバイダーへの文字列の読み込み
 
-`RMyProviderRowset::Execute`関数は、ファイルを開くし、文字列を読み取る。 呼び出して、コンシューマーがプロバイダーにファイル名を渡します[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757\(v=vs.85\))します。 プロバイダーは、ファイル名を受け取るし、メンバー変数に格納`m_szCommandText`します。 `Execute` ファイル名を読み取って`m_szCommandText`します。 ファイル名が無効か、ファイルが使用できない場合`Execute`エラーが返されます。 ファイルと呼び出しを開き、それ以外の場合、`fgets`文字列を取得します。 各セットの文字列の読み取り、`Execute`ユーザー レコードのインスタンスを作成します (`CAgentMan`) と配列に配置します。  
+`RMyProviderRowset::Execute`関数は、ファイルを開くし、文字列を読み取る。 呼び出して、コンシューマーがプロバイダーにファイル名を渡します[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757)します。 プロバイダーは、ファイル名を受け取るし、メンバー変数に格納`m_szCommandText`します。 `Execute` ファイル名を読み取って`m_szCommandText`します。 ファイル名が無効か、ファイルが使用できない場合`Execute`エラーが返されます。 ファイルと呼び出しを開き、それ以外の場合、`fgets`文字列を取得します。 各セットの文字列の読み取り、`Execute`ユーザー レコードのインスタンスを作成します (`CAgentMan`) と配列に配置します。  
   
 ファイルを開けない場合`Execute`DB_E_NOTABLE を返す必要があります。 E_FAIL を代わりに返された場合、プロバイダーが多数のコンシューマーでは動作せず、OLE DB に合格しない[準拠合致テスト](../../data/oledb/testing-your-provider.md)します。  
   

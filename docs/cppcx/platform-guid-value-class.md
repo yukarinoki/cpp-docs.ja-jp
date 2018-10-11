@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e115cf74eaac194c9e5b7154898cc23e10b220eb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b09fe303cb69cb36d04d696af2b83b30b8378f70
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100432"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083451"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 値クラス
 
-表す、 [GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx) Windows ランタイムの型システム内の型。
+[GUID](https://msdn.microsoft.com/library/windows/desktop/aa373931) の種類を、Windows ランタイムの型システムで表します。
 
 ## <a name="syntax"></a>構文
 
@@ -45,7 +45,7 @@ GUID には、 [Platform::Object Class](../cppcx/platform-object-class.md)から
 
 ### <a name="remarks"></a>Remarks
 
-Windows 関数を使用して新しい platform::guid を生成する方法の例については[CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)を参照してください[WinRT コンポーネント: GUID を生成する方法でしょうか。](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)
+Windows の関数 [CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)を使用して新しい Platform::Guid を作成する例については、「 [WinRT コンポーネント: GUID を作成する方法](http://blogs.msdn.com/b/eternalcoding/archive/2013/03/25/winrt-component-how-to-generate-a-guid.aspx)」を参照してください。
 
 ### <a name="requirements"></a>要件
 
@@ -157,7 +157,7 @@ Platform::Guid::operator!=
 
 ## <a name="operator-call"></a> Guid::operator() 演算子
 
-暗黙的に変換を[GUID 構造体](https://msdn.microsoft.com/library/windows/desktop/aa373931\(v=vs.85\).aspx)GUID を platform::guid にします。
+暗黙的に変換を[GUID 構造体](https://msdn.microsoft.com/library/windows/desktop/aa373931)GUID を platform::guid にします。
 
 ### <a name="syntax"></a>構文
 

@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 84050dcf4faed8bb99b871d3b797400c1ed5620e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f5071adcf12bde10a3fc67a5503875dfb264372
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086955"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081605"
 ---
 # <a name="iopenrowsetimpl-class"></a>IOpenRowsetImpl クラス
 
@@ -63,11 +63,11 @@ class IOpenRowsetImpl : public IOpenRowset
   
 ## <a name="remarks"></a>Remarks  
 
-[IOpenRowset](/previous-versions/windows/desktop/ms716946\(v=vs.85\))セッション オブジェクトの必須インターフェイスです。 これによりが表示され、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。  
+[IOpenRowset](/previous-versions/windows/desktop/ms716946)セッション オブジェクトの必須インターフェイスです。 これによりが表示され、1 つのベース テーブルまたはインデックスからすべての行が含まれる行セットを返します。  
   
 ## <a name="createrowset"></a> Iopenrowsetimpl::createrowset
 
-行セット オブジェクトを作成します。 ユーザーが直接呼び出されません。 参照してください[iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス。*  
+行セット オブジェクトを作成します。 ユーザーが直接呼び出されません。 参照してください[iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724)で、 *OLE DB プログラマーズ リファレンス。*  
   
 ### <a name="syntax"></a>構文  
   
@@ -91,7 +91,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 *pRowsetObj*<br/>
 [out]行セット オブジェクトへのポインター。 通常、このパラメーターは使用されませんが COM オブジェクトに渡す前に、行セットに対してより多くの作業を実行する必要がある場合に使用できます。 有効期間*pRowsetObj*連結された*ppRowset*します。  
   
-その他のパラメーターでは、次を参照してください。 [iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス。*  
+その他のパラメーターでは、次を参照してください。 [iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724)で、 *OLE DB プログラマーズ リファレンス。*  
 
 ## <a name="openrowset"></a> Iopenrowsetimpl::openrowset
 
@@ -111,7 +111,7 @@ HRESULT OpenRowset(IUnknown* pUnkOuter,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
 

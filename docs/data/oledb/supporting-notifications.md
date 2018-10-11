@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7ab24f981e90342a679b1a0a542b540192fee06e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a98848799163fd31037dc137b92b94878a1ee675
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107857"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082463"
 ---
 # <a name="supporting-notifications"></a>通知のサポート
 
@@ -33,7 +33,7 @@ ms.locfileid: "46107857"
 
 通知を実装するにはプロバイダー クラスから継承する必要があります[IRowsetNotifyCP](../../data/oledb/irowsetnotifycp-class.md)と[IConnectionPointContainer](../../atl/reference/iconnectionpointcontainerimpl-class.md)します。  
   
-`IRowsetNotifyCP` プロバイダーは、サイト接続ポイントのインターフェイスを実装する[IRowsetNotify](/previous-versions/windows/desktop/ms712959\(v=vs.85\))します。 `IRowsetNotifyCP` 実装は、接続ポイント上のリスナーに通知する関数をブロードキャスト`IID_IRowsetNotify`の行セットの内容の変更。  
+`IRowsetNotifyCP` プロバイダーは、サイト接続ポイントのインターフェイスを実装する[IRowsetNotify](/previous-versions/windows/desktop/ms712959)します。 `IRowsetNotifyCP` 実装は、接続ポイント上のリスナーに通知する関数をブロードキャスト`IID_IRowsetNotify`の行セットの内容の変更。  
   
 実装し、登録する必要がありますので注意`IRowsetNotify`(シンクとも呼ばれます) を使用して、コンシューマーで[IRowsetNotifyImpl](../../data/oledb/irowsetnotifyimpl-class.md)コンシューマーが通知を処理できるようにします。 コンシューマーのコネクション ポイントのインターフェイスを実装する方法の詳細については、次を参照してください。[通知の受信](../../data/oledb/receiving-notifications.md)します。  
   

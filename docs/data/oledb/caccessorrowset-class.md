@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: afae1f91907e8fd22640dd87fe607a067900edfa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1ef9799c65f4932bf314f3c11fd8324e0fb40bf2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024646"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081737"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
 
@@ -82,7 +82,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|コンストラクターです。|  
 |[閉じる](#close)|行セットとすべてのアクセサーを閉じます。|  
 |[FreeRecordMemory](#freerecordmemory)|解放する必要がある現在のレコード内の列を解放します。|  
-|[GetColumnInfo](#getcolumninfo)|実装[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))します。|  
+|[GetColumnInfo](#getcolumninfo)|実装[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704)します。|  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -153,7 +153,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="return-value"></a>戻り値  
 
@@ -163,7 +163,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 ユーザーは、返される列情報と文字列バッファーを解放する必要があります。 使用する場合は、このメソッドの 2 番目のバージョンを使用して[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)バインディングをオーバーライドする必要があります。  
   
-詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ## <a name="see-also"></a>関連項目  
 

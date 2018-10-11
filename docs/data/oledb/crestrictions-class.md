@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c66200acab5fc1be509136fc45895fdf08e40fdb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e850b5ebad231b07ce7d6c7dca79126a9b2ba15
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072083"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082359"
 ---
 # <a name="crestrictions-class"></a>CRestrictions クラス
 
@@ -103,7 +103,7 @@ HRESULT Open(const CSession& session,
 
 スキーマ行セットでは、7 個の制限の最大数を指定できます。  
   
-参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))定義されている制限については、各スキーマ行セットにします。  
+参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)定義されている制限については、各スキーマ行セットにします。  
   
 ## <a name="see-also"></a>関連項目  
 

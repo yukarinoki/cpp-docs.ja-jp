@@ -38,12 +38,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76eb58936082c7efde7e7bc87f17e7326ecc8920
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a541edb478c29fe04619dda319576717a7b9dc6
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071550"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49081846"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset クラス
 
@@ -72,7 +72,7 @@ class CStreamRowset
 |||  
 |-|-|  
 |[CStreamRowset](#cstreamrowset)|コンストラクターです。 インスタンスを作成し、初期化、`CStreamRowset`オブジェクト。|  
-|[閉じる](#close)|リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\))クラスのインターフェイス ポインター。|  
+|[閉じる](#close)|リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035)クラスのインターフェイス ポインター。|  
   
 ## <a name="remarks"></a>Remarks  
 
@@ -105,7 +105,7 @@ CStreamRowset();
 
 ## <a name="close"></a> Cstreamrowset::close
 
-リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\))クラスのインターフェイス ポインター。  
+リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035)クラスのインターフェイス ポインター。  
   
 ### <a name="syntax"></a>構文  
   
