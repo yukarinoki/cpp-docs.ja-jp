@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60c7e33a0a486bf0880b06a2eb159ba02300dec7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f828f21ebdb841d4eca1bb168f908543f990e94
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118246"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082671"
 ---
 # <a name="ole-db-templates"></a>OLE DB テンプレート
 
@@ -41,7 +41,7 @@ OLE DB テンプレートは、簡単に OLE DB データ アクセスを使用�
 [OLE DB プログラミングの概要](../../data/oledb/ole-db-programming-overview.md)<br/>
 OLE DB は、および OLE db Universal Data Access について説明します。  
   
-[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643\(v=vs.85\))  
+[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)  
 OLE DB では、Windows SDK のドキュメントへのリンクを提供します。  
   
 [OLE DB テンプレート サンプル](../../visual-cpp-samples.md)<br/>

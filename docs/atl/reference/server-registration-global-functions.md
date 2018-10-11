@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb3febbbaffc7c3a0de945fc9d30b544fd22188
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c43e28e035691b04181bef2162de828f3271a600
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46023307"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082755"
 ---
 # <a name="server-registration-global-functions"></a>サーバー登録に関するグローバル関数
 
@@ -125,7 +125,7 @@ ATLINLINE ATLAPI AtlComModuleRegisterClassObjects(
 COM モジュールへのポインター。
 
 *dwClsContext*<br/>
-クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 参照してください[CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716)の詳細。
+クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 参照してください[CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx)の詳細。
 
 *dwFlags*<br/>
 クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE は。 参照してください[REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls)の詳細。

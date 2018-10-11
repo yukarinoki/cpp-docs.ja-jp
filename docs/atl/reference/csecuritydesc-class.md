@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3df63cbed5fcb17b01450435aa2d991ca3e0c5a8
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116868"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083919"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc クラス
 
@@ -563,7 +563,7 @@ bool SetControl(
 ### <a name="parameters"></a>パラメーター
 
 *ControlBitsOfInterest*<br/>
-設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、次を参照してください。 [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)します。
+設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、次を参照してください。 [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582)します。
 
 *ControlBitsToSet*<br/>
 によって指定される制御ビットの新しい値を示す SECURITY_DESCRIPTOR_CONTROL マスク、 *ControlBitsOfInterest*マスク。 このパラメーターの一覧表示フラグの組み合わせを指定できます、 *ControlBitsOfInterest*パラメーター。
@@ -574,7 +574,7 @@ bool SetControl(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出す[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)します。
+このメソッドを呼び出す[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582)します。
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 

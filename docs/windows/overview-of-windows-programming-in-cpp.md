@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0ddfd6de46d6d0700265f5308f06458b3cdd984a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: b2870aa742806671e39728c3b73604dcf4e810e9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43677828"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083087"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -54,11 +54,11 @@ Windows 10 では、デスクトップ上だけでなく、タブレットや携
 
 UWP の詳細については一般に、表示[ユニバーサル Windows プラットフォーム (UWP) アプリとは何ですか?](/windows/uwp/get-started/whats-a-uwp)します。
 
-これらすべての概念の詳細については、次を参照してください。 [Windows ユニバーサル アプリに関するガイド](http://go.microsoft.com/fwlink/p/?linkid=534605)します。
+これらすべての概念の詳細については、「 [Windows ユニバーサル アプリに関するガイド](http://go.microsoft.com/fwlink/p/?linkid=534605)」を参照してください。
 
 ##  <a name="BK_Native"></a> デスクトップおよびサーバー アプリケーション
 
-デスクトップの Windows クライアント アプリケーションの作成の基本については、次を参照してください。 [C++ での Windows アプリケーションの開発](https://msdn.microsoft.com/vstudio//hh304489)と[Windows c プログラミングの概要](https://msdn.microsoft.com/library/windows/desktop/ff381398\(v=vs.85\).aspx)します。
+デスクトップの Windows クライアント アプリケーションを記述するための基礎を習得するには、「 [Developing Windows Applications in C++](https://msdn.microsoft.com/vstudio//hh304489) 」 (C++ での Windows アプリケーションの開発) および「 [Windows C++ プログラミングの概要](https://msdn.microsoft.com/library/windows/desktop/ff381398)」を参照してください。
 
 Windows 10 では、さまざまな種類のデスクトップ プログラムを作成するのに Visual C を使用できます。
 
@@ -68,7 +68,7 @@ Windows 10 では、さまざまな種類のデスクトップ プログラム�
 
 - .NET Framework で実行される Enterprise および基幹業務アプリ。 ほとんどの .NET Framework アプリケーションは、c# または Visual Basic で記述されます。 C + を使用する/cli CLI でネイティブの C++ ライブラリを使用する .NET コードを有効にする相互運用機能のレイヤーを作成します。 詳細については、次を参照してください。 [C + での .NET プログラミング/cli (Visual c)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)します。
 
-- ネイティブ コードで実行される SQL データベース クライアント。 詳細については、次を参照してください。 [SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc)します。
+- ネイティブ コードで実行される SQL データベース クライアント。 詳細については、「 [SQL Server Native Client](/sql/relational-databases/native-client/odbc/sql-server-native-client-odbc)」を参照してください。
 
 - Microsoft Office アプリケーション用アドイン。 詳細については、「 [Outlook 2010 の C++ アドインをビルドする](http://go.microsoft.com/fwlink/p/?LinkId=256420)」を参照してください。
 
@@ -76,7 +76,7 @@ Windows 10 では、さまざまな種類のデスクトップ プログラム�
 
 - Windows サービス 詳細については、「 [Introduction to Windows Service Applications](/dotnet/framework/windows-services/introduction-to-windows-service-applications)」を参照してください。
 
-Visual C++ を使用すると、高性能なカスタム機能をほぼ種類に関係なく Win32 DLL または COM DLL にパッケージ化できます。これらは、C++ アプリまたは C# や Visual Basic など他の言語で記述されたアプリで使用できます。 WIn32 DLL の詳細については、「 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)」を参照してください。 COM 開発の詳細については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/component-object-model--com--portal)します。
+Visual C++ を使用すると、高性能なカスタム機能をほぼ種類に関係なく Win32 DLL または COM DLL にパッケージ化できます。これらは、C++ アプリまたは C# や Visual Basic など他の言語で記述されたアプリで使用できます。 WIn32 DLL の詳細については、「 [DLLs in Visual C++](../build/dlls-in-visual-cpp.md)」を参照してください。 COM 開発の詳細については、「 [Component Object Model (COM)](/windows/desktop/com/component-object-model--com--portal)」を参照してください。
 
 ## <a name="games"></a>ゲーム
 
@@ -96,7 +96,7 @@ Microsoft ライブラリは次のとおりです。
 
 - C++ AMP (C++ Accelerated Massive Parallelism): GPU で一般的な計算作業のパフォーマンス向上を可能にするライブラリ。 詳細については、「 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)」を参照してください。
 
-- 同時実行ランタイム: マルチコア デバイスおよびメニーコア デバイス用の並列プログラミングおよび非同期プログラミング作業を簡略化するために役立つライブラリ。 詳細については、「 [Concurrency Runtime](../parallel/concrt/concurrency-runtime.md)」を参照してください。
+- コンカレンシー ランタイム: マルチコア デバイスおよびメニーコア デバイス用の並列プログラミングおよび非同期プログラミング作業を簡略化するために役立つライブラリ。 詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
 
 Windows プログラミングの多くのシナリオでは、Windows SDK も必要になります。これには、Windows オペレーティング システム コンポーネントへのアクセスを可能にするためのヘッダー ファイルが含まれています。 既定では、Visual Studio は、C++ デスクトップ ワークロードでは、ユニバーサル Windows アプリの開発のコンポーネントとして Windows SDK をインストールします。 UWP アプリを開発するには、Windows 10 バージョンの Windows SDK 必要があります。 詳しくは、次を参照してください。 [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)します。 (Windows の以前のバージョンの Windows Sdk の詳細については、次を参照してください。、 [Windows SDK アーカイブ](https://developer.microsoft.com/windows/downloads/sdk-archive))。 
 

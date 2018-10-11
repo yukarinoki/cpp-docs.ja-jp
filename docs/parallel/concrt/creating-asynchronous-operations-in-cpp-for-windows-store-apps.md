@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3461c4965dd40d0aecc7515185592a13f30c08c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4014d0d7cea999c105a5ee513d9dd1be410546f4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423007"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084075"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C++ における UWP アプリ用の非同期操作の作成
 
@@ -61,7 +61,7 @@ Windows ランタイムは、特殊なオペレーティング システム環�
 
 Windows ランタイムを使用すると、さまざまなプログラミング言語の優れた機能を使用し、1 つのアプリに統合できます。 たとえば、JavaScript で UI を作成し、C ++ のコンポーネントで計算量が非常に多い演算を行うことができます。 計算量が非常に多い演算をバックグラウンドで行うことができるのは、UI の応答性を保つための重要な要素です。 `task`クラスは C++ に固有で、(C++ 以外の言語で記述する場合があります) が他のコンポーネントに非同期操作を通信するために、Windows ランタイム インターフェイスを使用する必要があります。 Windows ランタイムには、非同期操作を表すために使用できる 4 つのインターフェイスが用意されています。
 
-[:Iasyncaction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
 非同期アクションを表します。
 
 [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
@@ -113,7 +113,7 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 
 [!code-cpp[concrt-windowsstore-primes#2](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_3.cpp)]
 
-各メソッドは、最初の入力パラメーターが負でないことを確認する検証を実行します。 入力値が負の場合、メソッドはスロー [platform::invalidargumentexception](https://msdn.microsoft.com/library/windows/apps/hh755794\(v=vs.110\).aspx)します。 エラー処理は、このセクションで後述します。
+各メソッドは、最初の入力パラメーターが負でないことを確認する検証を実行します。 入力値が負数の場合、メソッドは [Platform::InvalidArgumentException](https://msdn.microsoft.com/library/windows/apps/hh755794.aspx)をスローします。 エラー処理は、このセクションで後述します。
 
 UWP アプリからこれらのメソッドを使用するには、次を使用して Visual C #/web**空白アプリ (XAML)** 2 番目のプロジェクトを Visual Studio ソリューションに追加するテンプレート。 この例では、プロジェクトの名前を `Primes`とします。 次に、 `Primes` プロジェクトから `PrimesLibrary` プロジェクトへの参照を追加します。
 
@@ -136,7 +136,7 @@ MainPage.xaml で、次のコードを `MainPage` クラスに追加します。
 
 ![Windows ランタイム Primes アプリ](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
 
-使用する例について`create_async`他の言語で使用できる非同期タスクを作成するを参照してください[Bing マップ トリップ オプティマイザーのサンプルを使用して C++](https://msdn.microsoft.com/library/windows/apps/hh699891\(v=vs.110\).aspx)と[PPLでのC++でWindows8の非同期操作。](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d).
+`create_async` を使って他の言語で使用される非同期タスクを作成する例については、「 [Bing Maps Trip Optimizer のサンプルでの C++ の使用](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 」および「 [Windows 8 Asynchronous Operations in C++ with PPL (PPL を使った C++ による Windows 8 の非同期操作)](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)」を参照してください。
 
 ##  <a name="exethread"></a> 実行スレッドを制御する
 
@@ -166,7 +166,7 @@ UI があるアプリケーションでは、ASTA (アプリケーション STA)
 
 ##  <a name="example-app"></a> 例: C++ および XAML での Windows ランタイム アプリでの実行を制御します。
 
-ディスクからファイルを読み込み、そのファイルで最もよく使われている単語を検索し、結果を UI に表示する C++ XAML アプリケーションを考えてみます。 このアプリを作成するには、まず、Visual Studio を作成、**空のアプリ (ユニバーサル Windows)** プロジェクトし、その名前を付け`CommonWords`します。 アプリケーション マニフェストで、 **[ドキュメント ライブラリ]** の機能を指定して、アプリケーションがドキュメント フォルダーにアクセスできるようにします。 また、アプリケーション マニフェストの宣言セクションにテキスト (.txt) ファイルの種類を追加します。 アプリの機能および宣言に関する詳細については、次を参照してください。[アプリ パッケージと展開](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)します。
+ディスクからファイルを読み込み、そのファイルで最もよく使われている単語を検索し、結果を UI に表示する C++ XAML アプリケーションを考えてみます。 このアプリを作成するには、まず、Visual Studio を作成、**空のアプリ (ユニバーサル Windows)** プロジェクトし、その名前を付け`CommonWords`します。 アプリケーション マニフェストで、 **[ドキュメント ライブラリ]** の機能を指定して、アプリケーションがドキュメント フォルダーにアクセスできるようにします。 また、アプリケーション マニフェストの宣言セクションにテキスト (.txt) ファイルの種類を追加します。 アプリケーションの機能および宣言に関する詳細については、「 [アプリ パッケージと展開](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)」を参照してください。
 
 `Grid` 要素と `ProgressRing` 要素を含めるように、MainPage.xaml の `TextBlock` 要素を更新します。 `ProgressRing` は操作が進行中であることを示し、 `TextBlock` は計算の結果を示します。
 

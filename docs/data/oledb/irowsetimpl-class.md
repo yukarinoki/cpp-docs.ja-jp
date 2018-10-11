@@ -102,12 +102,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 17e353f044a3b003736589f52c538101e18fd7ea
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b495a756cbccc88f00c42dc8de78bf80a39f4b7a
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085551"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083361"
 ---
 # <a name="irowsetimpl-class"></a>IRowsetImpl クラス
 
@@ -173,7 +173,7 @@ class ATL_NO_VTABLE IRowsetImpl : public RowsetInterface
   
 ## <a name="remarks"></a>Remarks  
 
-[IRowset](/previous-versions/windows/desktop/ms720986\(v=vs.85\))は行セットの基本インターフェイスです。  
+[IRowset](/previous-versions/windows/desktop/ms720986)は行セットの基本インターフェイスです。  
 
 ## <a name="addrefrows"></a> Irowsetimpl::addrefrows
 
@@ -190,7 +190,7 @@ STDMETHOD(AddRefRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619)で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="createrow"></a> Irowsetimpl::createrow
 
@@ -233,7 +233,7 @@ STDMETHOD(GetData )(HROW hRow,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[irowset::getdata](/previous-versions/windows/desktop/ms716988\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[irowset::getdata](/previous-versions/windows/desktop/ms716988)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IRowset::GetData`:  
   
@@ -266,7 +266,7 @@ virtual DBSTATUS GetDBStatus(RowClass* currentRow,
   
 ### <a name="return-value"></a>戻り値  
 
-[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))列のフラグ。 
+[DBSTATUS](/previous-versions/windows/desktop/ms722617)列のフラグ。 
 
 ## <a name="getnextrows"></a> Irowsetimpl::getnextrows
 
@@ -284,7 +284,7 @@ STDMETHOD(GetNextRows )(HCHAPTER hReserved,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[irowset::getnextrows](/previous-versions/windows/desktop/ms709827\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
+参照してください[irowset::getnextrows](/previous-versions/windows/desktop/ms709827)で、 *OLE DB プログラマーズ リファレンス*します。 
 
 ## <a name="irowsetimpl"></a> Irowsetimpl::irowsetimpl
 
@@ -316,7 +316,7 @@ HRESULT RefRows(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="return-value"></a>戻り値  
 
@@ -338,7 +338,7 @@ STDMETHOD(ReleaseRows )(DBCOUNTITEM cRows,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[::releaserows](/previous-versions/windows/desktop/ms719771\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[::releaserows](/previous-versions/windows/desktop/ms719771)で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="restartposition"></a> Irowsetimpl::restartposition
 
@@ -352,7 +352,7 @@ STDMETHOD(RestartPosition )(HCHAPTER /* hReserved */);
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[irowset::restartposition](/previous-versions/windows/desktop/ms712877\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[irowset::restartposition](/previous-versions/windows/desktop/ms712877)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
 
@@ -373,7 +373,7 @@ virtual HRESULT SetDBStatus(DBSTATUS* statusFlags,
 #### <a name="parameters"></a>パラメーター  
 
 *statusFlags*<br/>
-[DBSTATUS](/previous-versions/windows/desktop/ms722617\(v=vs.85\))列に設定するフラグ。  
+[DBSTATUS](/previous-versions/windows/desktop/ms722617)列に設定するフラグ。  
   
 *currentRow*<br/>
 現在の行。  

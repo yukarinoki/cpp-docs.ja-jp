@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 24701e2bab154f0815408f4e2e3e37e56ad6d823
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5e5972eab67e19752700ac5f8a027288eb6fc43c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092539"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083685"
 ---
 # <a name="odbc-calling-odbc-api-functions-directly"></a>ODBC: ODBC API 関数の直接呼び出し
 
@@ -49,7 +49,7 @@ ms.locfileid: "46092539"
   
 - 完了したときにストレージの割り当てを解除します。  
   
-次の手順の詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](/previous-versions/windows/desktop/ms710252\(v=vs.85\)) MSDN ドキュメント内の SDK です。  
+次の手順の詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](/previous-versions/windows/desktop/ms710252) MSDN ドキュメント内の SDK です。  
   
 この手順に加えて、関数の戻り値のチェック、プログラムが完了する非同期呼び出しを待機していないことを確認する追加の手順を実行する必要があります。 手順についてを使用して、これらの最後の手順を簡略化できます。 詳細については、次を参照してください。[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)で、 *MFC リファレンス*します。  
 

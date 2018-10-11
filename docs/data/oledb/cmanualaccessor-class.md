@@ -43,12 +43,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 223b00f49a04cbc4305bdd14b26cd47bd8afb114
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 63bf2b36477ddc0c4088698c552b8ef734e16986
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46104888"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083737"
 ---
 # <a name="cmanualaccessor-class"></a>CManualAccessor クラス
 
@@ -95,7 +95,7 @@ void AddBindEntry(DBORDINAL nOrdinal,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 *nOrdinal*<br/>
 [in]列番号。  
@@ -136,7 +136,7 @@ void AddParameterEntry(DBORDINAL nOrdinal,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 *nOrdinal*<br/>
 [in]パラメーターの数。  

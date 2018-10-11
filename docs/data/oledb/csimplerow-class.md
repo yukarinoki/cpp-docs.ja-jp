@@ -46,12 +46,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: aa4953c5ba879f5fa0fe8c5b892f91dfa8d15dc9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fb27c7fc401fb27b3677659f4f1b5539c19fda2c
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095216"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082697"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow クラス
 
@@ -112,11 +112,11 @@ HRESULT Compare(CSimpleRow* pRow);
 #### <a name="parameters"></a>パラメーター  
 
 *pRow*<br/>
-ポインターを`CSimpleRow`オブジェクト。  
+`CSimpleRow` オブジェクトへのポインター。  
   
 ### <a name="return-value"></a>戻り値  
 
-HRESULT 値、通常は S_OK を示すは、2 つの行は、同じ行インスタンスまたは 2 つの行を示す S_FALSE は異なります。 参照してください[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*の他の戻り値。 
+HRESULT 値、通常は S_OK を示すは、2 つの行は、同じ行インスタンスまたは 2 つの行を示す S_FALSE は異なります。 参照してください[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629)で、 *OLE DB プログラマーズ リファレンス*の他の戻り値。 
 
 ## <a name="csimplerow"></a> Csimplerow::csimplerow
 

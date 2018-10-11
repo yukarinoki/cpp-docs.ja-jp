@@ -63,16 +63,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41636a0ff93a247b33c3d7fb7c13a65c05e1aa1d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5f04104aadc2897118a402a06d93db27a5a16079
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041468"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082814"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl クラス
 
-実装を提供、 [ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\))インターフェイス。  
+実装を提供、 [ICommand](/previous-versions/windows/desktop/ms709737)インターフェイス。  
   
 ## <a name="syntax"></a>構文
 
@@ -130,7 +130,7 @@ STDMETHOD(Cancel)();
   
 ### <a name="remarks"></a>Remarks  
 
-参照してください[icommand::cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[icommand::cancel](/previous-versions/windows/desktop/ms714402)で、 *OLE DB プログラマーズ リファレンス*します。  
 
 ## <a name="cancelexecution"></a> Icommandimpl::cancelexecution
 
@@ -189,7 +189,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 1 つ以上の行セットを作成するか、別の行セットを作成するための独自の条件を提供するには、別の呼び出しを配置`CreateRowset`内から`Execute`します。  
   
-参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス。*  
+参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095)で、 *OLE DB プログラマーズ リファレンス。*  
 
 ## <a name="execute"></a> Icommandimpl::execute
 
@@ -207,7 +207,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
 
@@ -228,7 +228,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
   
 #### <a name="parameters"></a>パラメーター  
 
-参照してください[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+参照してください[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 ### <a name="remarks"></a>Remarks  
 

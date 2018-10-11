@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6fb948efd63a8392661cc38a80393bc90d5e694
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 163ef22563141b9365bc2c086870877c7ad2bf00
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396466"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083594"
 ---
 # <a name="run-time-object-model-services"></a>ランタイム オブジェクト モデル サービス
 
@@ -92,7 +92,7 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="remarks"></a>Remarks
 
-指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)します。
+指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)します。
 
 ### <a name="requirements"></a>要件
 
@@ -119,7 +119,7 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="remarks"></a>Remarks
 
-指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)します。 このマクロは、AFX_COMCTL32_IF_EXISTS の Unicode バージョンです。
+指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)します。 このマクロは、AFX_COMCTL32_IF_EXISTS の Unicode バージョンです。
 
 ### <a name="requirements"></a>要件
 

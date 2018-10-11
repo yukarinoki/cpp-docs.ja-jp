@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 60bed04015060bd65f4d4c771a228e3b50c3486e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46057106"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083659"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>スキーマ行セットを使用したメタデータの取得
 
@@ -63,7 +63,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 [CRestrictions](../../data/oledb/crestrictions-class.md)クラスは制約がサポートを提供します。 スキーマ行セットのインスタンスを作成した後で呼び出す[crestrictions::open](../../data/oledb/crestrictions-open.md)します。 このメソッドは、指定された制約に基づいて結果セットを返します。  
   
-制限を指定するを参照してください[付録 B スキーマ行セット](/previous-versions/windows/desktop/ms712921\(v=vs.85\))し使用している行セットを検索します。 たとえば、`CColumns`に対応する、 [COLUMNS 行セット](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); そのトピックでは、COLUMNS 行セットの制限列: TABLE_CATALOG、table_schema、TABLE_NAME、COLUMN_NAME します。 制約を指定するときは、この順序に従う必要があります。  
+制限を指定するを参照してください[付録 B スキーマ行セット](/previous-versions/windows/desktop/ms712921)し使用している行セットを検索します。 たとえば、`CColumns`に対応する、 [COLUMNS 行セット](/previous-versions/windows/desktop/ms723052\(v%3dvs.85\)); そのトピックでは、COLUMNS 行セットの制限列: TABLE_CATALOG、table_schema、TABLE_NAME、COLUMN_NAME します。 制約を指定するときは、この順序に従う必要があります。  
   
 そのため、たとえば、テーブル名で制限する場合は、TABLE_NAME が 3 つ目の制限列を呼び出して`Open`、次の例に示すように、3 番目の制限パラメーターとして目的のテーブル名を指定します。  
   
@@ -93,7 +93,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 OLE DB テンプレートのスキーマ行セットの参照の typedef クラスが提供されている (を参照してください[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。  
   
-制限列を含め、OLE DB スキーマ行セットの詳細については、次を参照してください。[付録 b スキーマ行セット](/previous-versions/windows/desktop/ms712921\(v=vs.85\))OLE DB プログラマーズ リファレンス。  
+制限列を含め、OLE DB スキーマ行セットの詳細については、次を参照してください。[付録 b スキーマ行セット](/previous-versions/windows/desktop/ms712921)OLE DB プログラマーズ リファレンス。  
   
 スキーマ行セット クラスを使用する方法のより複雑な例については、次を参照してください。、 [CatDB](https://github.com/Microsoft/VCSamples)と[DBViewer](https://github.com/Microsoft/VCSamples)サンプル。  
   

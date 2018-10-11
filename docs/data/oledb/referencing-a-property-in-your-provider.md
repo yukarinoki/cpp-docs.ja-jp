@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f6730746cbb3da08e52b5a4d9936aa48a8484886
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b250e29acc964e1fb1273d02a3b1ea93c087e5c4
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052563"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49082742"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>プロバイダーでのプロパティの参照
 
-対象のプロパティのプロパティ グループとプロパティの ID を検索します。 詳細については、次を参照してください。 [OLE DB プロパティ](/previous-versions/windows/desktop/ms722734\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+対象のプロパティのプロパティ グループとプロパティの ID を検索します。 詳細については、次を参照してください。 [OLE DB プロパティ](/previous-versions/windows/desktop/ms722734)で、 *OLE DB プログラマーズ リファレンス*します。  
   
 次の例では、行セットからプロパティを取得しようとしていることを前提としています。 セッションまたはコマンドを使用するためのコードは似ていますが、別のインターフェイスを使用します。  
   

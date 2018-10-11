@@ -18,18 +18,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 0c662099f3e7c42b75dc0cf197117144790f9df1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: be82fb1c1f77ae3204bed54257062f362d286844
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46108353"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083828"
 ---
 # <a name="updating-rowsets"></a>更新 (行セットを)
 
 データベースの基本の操作は、データ ストアの更新、つまりデータの書き込みです。 OLE DB の更新機構は単純です。コンシューマー アプリケーションは、バインドされたデータ メンバーの値を設定し、これらの値を行セットに書き込みます。その後、コンシューマーはプロバイダーにデータ ストアの更新を要求します。  
   
-コンシューマーが行セット データに対して実行できる更新の種類は、行内の列値の設定、行の挿入、行の削除です。 OLE DB テンプレート クラスは、これらの操作を実行する[CRowset](../../data/oledb/crowset-class.md)実装、 [IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))インターフェイスし、次のインターフェイス メソッドをオーバーライドします。  
+コンシューマーが行セット データに対して実行できる更新の種類は、行内の列値の設定、行の挿入、行の削除です。 これらの操作を実行するために、OLE DB テンプレート クラスの [CRowset](../../data/oledb/crowset-class.md) は、[IRowsetChange](/previous-versions/windows/desktop/ms715790) インターフェイスを実装し、次のインターフェイス メソッドをオーバーライドします。  
   
 - [SetData](../../data/oledb/crowset-setdata.md) は行セットの行の列値を変更します。これは SQL の UPDATE コマンドに相当します。  
   
@@ -223,4 +223,4 @@ product.Update();                 // Update row 101 now
 
 [OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)<br/>
 [CRowset クラス](../../data/oledb/crowset-class.md)<br/>
-[IRowsetChange](/previous-versions/windows/desktop/ms715790\(v=vs.85\))
+[IRowsetChange](/previous-versions/windows/desktop/ms715790)

@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6bf350b0a129c642678fc6af1bac7d35633fe909
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: b650c2a20d18f3f638f924cce1e4b475f7e33a0d
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860980"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084062"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -67,7 +67,7 @@ EXPORTS
 
 使用することができます\@*序数*数値、および関数名ではなくが DLL のエクスポート テーブルに移動を指定します。 多くの Windows DLL で、レガシ コードをサポートするために序数がエクスポートされます。 DLL のサイズを最小限に抑えるのに役立つため、16 ビットの Windows コードでは序数を使用することが一般的でした。 レガシ サポートのために DLL のクライアントで必要な場合を除き、関数を序数でエクスポートすることはお勧めしません。 .LIB ファイルには序数と関数のマッピングが含まれているため、DLL を使用するプロジェクトでは通常と同様に関数名を使用できます。
 
-オプションを使用して**NONAME**キーワード、序数のみをエクスポートし、結果の DLL のエクスポート テーブルのサイズを小さくことができます。 ただし、使用する場合[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212.aspx) DLL の名前を有効にすることはできないために、序数を知る必要があります。
+オプションを使用して**NONAME**キーワード、序数のみをエクスポートし、結果の DLL のエクスポート テーブルのサイズを小さくことができます。 ただし、使用する場合[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) DLL の名前を有効にすることはできないために、序数を知る必要があります。
 
 省略可能なキーワード**プライベート**防止*entryname* LINK によって生成されるインポート ライブラリに含まれるからです。 同じく LINK によって生成されるイメージ内のエクスポートには影響しません。
 

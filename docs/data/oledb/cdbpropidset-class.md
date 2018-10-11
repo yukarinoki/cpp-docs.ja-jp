@@ -44,12 +44,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 9619ffdf9fd24bd73548fb3992084eb0a5d437a7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 514a013cf3f327c0c73ca8469900693d6a4e5e21
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46114476"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084036"
 ---
 # <a name="cdbpropidset-class"></a>CDBPropIDSet クラス
 
@@ -83,7 +83,7 @@ class CDBPropIDSet : public tagDBPROPIDSET
   
 ## <a name="remarks"></a>Remarks  
 
-OLE DB コンシューマー使用`DBPROPIDSET`をコンシューマーがプロパティの情報を取得するプロパティ Id の配列を渡すための構造体。 1 つで指定されたプロパティ[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体が 1 つのプロパティ セットに属しています。  
+OLE DB コンシューマー使用`DBPROPIDSET`をコンシューマーがプロパティの情報を取得するプロパティ Id の配列を渡すための構造体。 1 つで指定されたプロパティ[コンス トラクターは](/previous-versions/windows/desktop/ms717981)構造体が 1 つのプロパティ セットに属しています。  
 
 ## <a name="addpropertyid"></a> Cdbpropidset::addpropertyid
 
@@ -102,7 +102,7 @@ bool AddPropertyID(DBPROPID propid) throw();
 
 ## <a name="cdbpropidset"></a> Cdbpropidset::cdbpropidset
 
-コンストラクターです。 初期化します、 `rgProperties`、 `cProperties`、および (必要に応じて)`guidPropertySet`のフィールド、[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体。  
+コンストラクターです。 初期化します、 `rgProperties`、 `cProperties`、および (必要に応じて)`guidPropertySet`のフィールド、[コンス トラクターは](/previous-versions/windows/desktop/ms717981)構造体。  
   
 ### <a name="syntax"></a>構文  
   
@@ -135,7 +135,7 @@ void SetGUID(const GUID& guid) throw();
 #### <a name="parameters"></a>パラメーター  
 
 *guid*<br/>
-[in]GUID を設定するため、`guidPropertySet`のフィールド、[コンス トラクターは](/previous-versions/windows/desktop/ms717981\(v=vs.85\))構造体。  
+[in]GUID を設定するため、`guidPropertySet`のフィールド、[コンス トラクターは](/previous-versions/windows/desktop/ms717981)構造体。  
   
 ### <a name="remarks"></a>Remarks  
 
