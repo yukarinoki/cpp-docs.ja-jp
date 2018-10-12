@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e3c80b383c592d3eebf892981c088e26529c515
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 93e02ee27fb8b5a1f4f4f7b2e435a737e1c637a2
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860941"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083844"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>C/C++ side-by-side アセンブリのビルド
 
@@ -30,7 +30,7 @@ Visual C アプリケーションでは、アプリケーションのさまざ�
 既定で、Visual Studio を使用して、DLL のビルド時に、[アプリケーション マニフェスト](/windows/desktop/SbsCs/application-manifests)ID 2 RT_MANIFEST のリソースとして埋め込まれています。 、実行可能ファイルと同じ動作は、このマニフェストは、他のアセンブリでこの DLL の依存関係を記述します。 これには、DLL でサイド バイ サイド アセンブリの一部でないし、この DLL に依存するアプリケーションは、アプリケーション マニフェストを使用して、読み込んでが代わりに、システム パスにこの DLL を検索するオペレーティング システム ローダーに依存するしないことが前提としています。
 
 > [!NOTE]
-> ID 2 のリソースとして埋め込まれたマニフェストに、アプリケーション マニフェストが使用される dll は重要です。 DLL は実行時に動的に読み込まれた場合 (たとえばを使用して、 [LoadLibrary](https://msdn.microsoft.com/library/windows/desktop/ms684175)関数)、オペレーティング システム ローダーが DLL のマニフェストで指定された依存アセンブリを読み込みます。 Dll の外部のアプリケーション マニフェストは、中にはチェックされません、`LoadLibrary`呼び出します。 マニフェストが埋め込まれていない場合、ローダーしようと不適切なバージョンのアセンブリを読み込んだり、依存アセンブリの検索に失敗します。
+> ID 2 のリソースとして埋め込まれたマニフェストに、アプリケーション マニフェストが使用される dll は重要です。 DLL は実行時に動的に読み込まれた場合 (たとえばを使用して、 [LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)関数)、オペレーティング システム ローダーが DLL のマニフェストで指定された依存アセンブリを読み込みます。 Dll の外部のアプリケーション マニフェストは、中にはチェックされません、`LoadLibrary`呼び出します。 マニフェストが埋め込まれていない場合、ローダーしようと不適切なバージョンのアセンブリを読み込んだり、依存アセンブリの検索に失敗します。
 
 1 つまたは複数の関連の Dll が対応するサイド バイ サイド アセンブリに再パッケージ化する[アセンブリ マニフェスト](/windows/desktop/SbsCs/assembly-manifests)ファイルの他のサイド バイ サイド アセンブリの依存関係と同様に、アセンブリを形成するについて説明しますアセンブリ。
 
