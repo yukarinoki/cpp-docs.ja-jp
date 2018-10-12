@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be66658c9452fa97c1971ae6719dccb06dbd836
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9fb14544a799861053c2fdf2a5bb92f210eb5c46
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378222"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163830"
 ---
 # <a name="contexts"></a>コンテキスト
 
 このドキュメントでは、同時実行ランタイムのコンテキストの役割について説明します。 スケジューラに関連付けられているスレッドと呼ばれる、*実行コンテキスト*、または単*コンテキスト*します。 [Concurrency::wait](reference/concurrency-namespace-functions.md#wait)関数と、同時実行::[コンテキスト クラス](../../parallel/concrt/reference/context-class.md)コンテキストの動作を制御できます。 使用して、`wait`関数を指定した時間、現在のコンテキストを中断します。 使用して、`Context`クラス経由で、現在のコンテキストをオーバーサブスク ライブするときにコンテキスト ブロック、ブロックを解除し生成、または詳細に制御する必要があります。
 
 > [!TIP]
->  同時実行ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
+>  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
 
 ## <a name="the-wait-function"></a>Wait 関数
 
@@ -67,7 +67,7 @@ ms.locfileid: "46378222"
 > [!NOTE]
 >  同時実行ランタイムによって作成されたスレッドからのみオーバー サブスクリプションを有効にします。 (メイン スレッドを含む)、ランタイムによって作成されていないスレッドから呼び出された場合は、オーバー サブスクリプションを指定しても効果はありません。
 
-現在のコンテキストでオーバー サブスクリプションを有効にする、 [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)メソッドを`_BeginOversubscription`パラメーターに設定`true`します。 同時実行ランタイムによって作成されたスレッドでオーバー サブスクリプションを有効にすると、1 つ追加のスレッドを作成するランタイムが行われます。 オーバー サブスクリプションの終了日を必要とするすべてのタスクの後に呼び出す`Context::Oversubscribe`で、`_BeginOversubscription`パラメーターに設定`false`します。
+現在のコンテキストでオーバー サブスクリプションを有効にする、 [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)メソッドを`_BeginOversubscription`パラメーターに設定**true**します。 同時実行ランタイムによって作成されたスレッドでオーバー サブスクリプションを有効にすると、1 つ追加のスレッドを作成するランタイムが行われます。 オーバー サブスクリプションの終了日を必要とするすべてのタスクの後に呼び出す`Context::Oversubscribe`で、`_BeginOversubscription`パラメーターに設定**false**します。
 
 複数回から現在のコンテキストでは、オーバー サブスクリプションを有効にすることができますが、有効にしたのと同じ回数で無効にする必要があります。 オーバー サブスクリプションも入れ子になんだことができます。つまり、オーバー サブスクリプションを使用して別のタスクによって作成されるタスクは、そのコンテキストをオーバーサブスク ライブできますも。 ただし、入れ子になったタスクとその親の両方が同じコンテキストに最も外側の呼び出しだけに属している場合`Context::Oversubscribe`追加のスレッドを作成します。
 

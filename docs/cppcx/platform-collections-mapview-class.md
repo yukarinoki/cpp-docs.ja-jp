@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e222ba48121702c2388e64cea5e81da627f324a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e1dd4aab5912b2f15e8c0b36c7e482001809099d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110858"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163908"
 ---
 # <a name="platformcollectionsmapview-class"></a>Platform::Collections::MapView クラス
 
@@ -117,11 +117,11 @@ bool HasKey(K key);
 ### <a name="parameters"></a>パラメーター
 
 *key*<br/>
-MapView 要素の検索に使用するキー。 型`key`typename が*K*します。
+MapView 要素の検索に使用するキー。 型*キー* typename が*K*します。
 
 ### <a name="return-value"></a>戻り値
 
-キーが見つかった場合は `true`。それ以外の場合は `false`。
+**true**キーが見つかった。 それ以外の場合**false**します。
 
 ##  <a name="lookup"></a> Mapview::lookup メソッド
 

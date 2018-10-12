@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c960e73604a915dbb15c0efac958dc229c16b3b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 045cdeab321e9e3f88ee9bd50d337101e8512718
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379538"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163817"
 ---
 # <a name="join-class"></a>join クラス
 
@@ -60,7 +60,7 @@ class join : public propagator_block<single_link_registry<ITarget<std::vector<T>
 
 |名前|説明|
 |----------|-----------------|
-|[join](#ctor)|オーバーロードされます。 構築、`join`メッセージング ブロックします。|
+|[join](#ctor)|オーバーロードされます。 `join` メッセージング ブロックを構築します。|
 |[~ join デストラクター](#dtor)|破棄、`join`ブロックします。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
@@ -138,7 +138,7 @@ virtual message<_OutputType>* consume_message(runtime_object_identity _MsgId);
 
 ##  <a name="ctor"></a> 結合
 
-構築、`join`メッセージング ブロックします。
+`join` メッセージング ブロックを構築します。
 
 ```
 join(
@@ -261,11 +261,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。
+**true**場合は、メッセージが正常に予約された、 **false**それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
 
-後`reserve`と呼ばれる場合は、返された場合`true`, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
+後`reserve`と呼ばれる場合は、返された場合**true**, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f48d3a3bba427bcf0bbb50e2c886a05b8267760
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cc7d6ec822eb4ada342110e3f7979c1d97ff583d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395753"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163947"
 ---
 # <a name="concurrentunorderedmultimap-class"></a>concurrent_unordered_multimap クラス
 
@@ -108,14 +108,14 @@ true>>;
 |[hash_function](#hash_function)|格納されているハッシュ関数オブジェクトを返します。|
 |[insert](#insert)|オーバーロードされます。 要素を `concurrent_unordered_multimap` オブジェクトに追加します。|
 |[key_eq](#key_eq)|格納された等価比較関数のオブジェクトを返します。|
-|[swap](#swap)|2 つの `concurrent_unordered_multimap` オブジェクトのコンテンツを交換します。 このメソッドは同時実行セーフではありません。|
-|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 `concurrent_unordered_multimap` から指定した位置にある要素を削除します。 このメソッドは同時実行セーフではありません。|
+|[swap](#swap)|2 つの `concurrent_unordered_multimap` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。|
+|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 `concurrent_unordered_multimap` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_unordered_multimap` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドは同時実行セーフではありません。|
+|[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_unordered_multimap` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -137,7 +137,7 @@ true>>;
 
 ##  <a name="begin"></a> 開始
 
-同時実行コンテナーの最初の要素を指す反復子を返します。 このメソッドは同時実行セーフです。
+同時実行コンテナーの最初の要素を指す反復子を返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 iterator begin();
@@ -151,7 +151,7 @@ const_iterator begin() const;
 
 ##  <a name="cbegin"></a> cbegin
 
-同時実行コンテナーの最初の要素を指す定数反復子を返します。 このメソッドは同時実行セーフです。
+同時実行コンテナーの最初の要素を指す定数反復子を返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 const_iterator cbegin() const;
@@ -163,7 +163,7 @@ const_iterator cbegin() const;
 
 ##  <a name="cend"></a> cend
 
-同時実行コンテナーの最後の要素の次の位置を指す定数反復子を返します。 このメソッドは同時実行セーフです。
+同時実行コンテナーの最後の要素の次の位置を指す定数反復子を返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 const_iterator cend() const;
@@ -273,7 +273,7 @@ size_type count(const key_type& KVal) const;
 
 ##  <a name="empty"></a> 空
 
-要素が存在しないかどうかをテストします。 このメソッドは同時実行セーフです。
+要素が存在しないかどうかをテストします。 このメソッドはコンカレンシー セーフです。
 
 ```
 bool empty() const;
@@ -281,7 +281,7 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` 同時実行コンテナーが空の場合`false`それ以外の場合。
+**true**同時実行コンテナーが空の場合**false**それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
 
@@ -289,7 +289,7 @@ bool empty() const;
 
 ##  <a name="end"></a> 終わり
 
-同時実行コンテナーの最後の要素の次の位置を指す反復子を返します。 このメソッドは同時実行セーフです。
+同時実行コンテナーの最後の要素の次の位置を指す反復子を返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 iterator end();
@@ -349,7 +349,7 @@ const_iterator find(const key_type& KVal) const;
 
 ##  <a name="get_allocator"></a> get_allocator
 
-この同時実行コンテナーの格納されたアロケーター オブジェクトを返します。 このメソッドは同時実行セーフです。
+この同時実行コンテナーの格納されたアロケーター オブジェクトを返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 allocator_type get_allocator() const;
@@ -477,7 +477,7 @@ void max_load_factor(float _Newmax);
 
 ##  <a name="max_size"></a> max_size
 
-アロケーターによって決定される、同時実行コンテナーの最大サイズを返します。 このメソッドは同時実行セーフです。
+アロケーターによって決定される、同時実行コンテナーの最大サイズを返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 size_type max_size() const;
@@ -493,7 +493,7 @@ size_type max_size() const;
 
 ##  <a name="operator_eq"></a> 演算子 =
 
-別の `concurrent_unordered_multimap` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドは同時実行セーフではありません。
+別の `concurrent_unordered_multimap` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 concurrent_unordered_multimap& operator= (const concurrent_unordered_multimap& _Umap);
@@ -535,7 +535,7 @@ void rehash(size_type _Buckets);
 
 ##  <a name="size"></a> サイズ
 
-この同時実行コンテナーの要素の数を返します。 このメソッドは同時実行セーフです。
+この同時実行コンテナーの要素の数を返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 size_type size() const;
@@ -551,7 +551,7 @@ size_type size() const;
 
 ##  <a name="swap"></a> スワップ
 
-2 つの `concurrent_unordered_multimap` オブジェクトのコンテンツを交換します。 このメソッドは同時実行セーフではありません。
+2 つの `concurrent_unordered_multimap` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 void swap(concurrent_unordered_multimap& _Umap);
@@ -682,7 +682,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ##  <a name="unsafe_erase"></a> unsafe_erase
 
-`concurrent_unordered_multimap` から指定した位置にある要素を削除します。 このメソッドは同時実行セーフではありません。
+`concurrent_unordered_multimap` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 iterator unsafe_erase(
