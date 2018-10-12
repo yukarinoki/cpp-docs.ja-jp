@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 18aeac7767fbd4c1688b202670a812e5738ef62f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: ad7081e22762409682250da0330575885378e8ab
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494427"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161880"
 ---
 # <a name="modulegenericreleasenotifier-class"></a>Module::GenericReleaseNotifier クラス
 
@@ -99,11 +99,11 @@ GenericReleaseNotifier(
 
 ### <a name="parameters"></a>パラメーター
 
-*コールバック*  
+*コールバック*<br/>
 ラムダをファンクター、またはかっこ関数の演算子を呼び出すことができる関数へのポインター イベント ハンドラー (`()`)。
 
-*release*  
-指定`true`、基になる呼び出しを有効にする[モジュール:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)メソッド。 それ以外の場合、指定`false`します。
+*release*<br/>
+指定**true** 、基になる呼び出しを有効にする[モジュール:: ReleaseNotifier::Release()](../windows/module-releasenotifier-release.md)メソッド。 それ以外の場合、指定**false**します。
 
 ## <a name="genericreleasenotifier-invoke"></a>Module::genericreleasenotifier:: 呼び出し
 

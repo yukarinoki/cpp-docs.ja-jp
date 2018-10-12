@@ -1,7 +1,7 @@
 ---
 title: お試しください-ステートメントを除く |Microsoft Docs
 ms.custom: ''
-ms.date: 10/05/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -11,6 +11,7 @@ f1_keywords:
 - EXCEPTION_CONTINUE_SEARCH
 - _exception_info
 - __except
+- _except
 - EXCEPTION_CONTINUE_EXECUTION
 - _exception_code
 - __except_cpp
@@ -35,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e938f5b7e5f25461ae921fbfa3c49920eca86eb
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: af4d14eb3fad691a5ff10665a83879ae4319a3d9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861929"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162036"
 ---
 # <a name="try-except-statement"></a>try-except ステートメント
 
@@ -89,6 +90,8 @@ ms.locfileid: "48861929"
 各アプリケーションが独自の例外ハンドラーを持つ場合があります。
 
 移動することはできません、 **_ _try**ステートメントを 1 つからのジャンプは無効です。 実行中のプロセスが終了した場合、例外ハンドラーは呼び出されませんが、**を再試行してください-を除く**ステートメント。
+
+以前のバージョンとの互換性のため **_try**、 **_except**、および **_leave**のシノニムで **_ _try**、 **_ _except**と **_ _leave**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
 ### <a name="the-leave-keyword"></a>__leave キーワード
 

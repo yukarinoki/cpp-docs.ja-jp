@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20da45d6161f76043c3d06f027192726c3520f44
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 668365cf69fc3457efc615a5fa0da2c24b3cb02e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102552"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162387"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator クラス
 
@@ -124,7 +124,7 @@ VectorIterator operator--(int);
 
 最初の VectorIterator 構文は、現在の VectorIterator の前置デクリメントを実行します。
 
-2 番目の構文は、現在の VectorIterator に後置デクリメントを実行します。 `int` 2 番目の構文で型を後置デクリメント演算、実際の整数オペランドではなくを示します。
+2 番目の構文は、現在の VectorIterator に後置デクリメントを実行します。 2 つ目の構文の `int` 型は、実際の整数オペランドではなく後置デクリメント演算を示します。
 
 ## <a name="operator-dereference"></a>  Vectoriterator::operator\*演算子
 
@@ -157,7 +157,7 @@ bool operator==(const VectorIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-現在の VectorIterator が `true` と等しい場合は `other`。それ以外の場合は `false`。
+**true** 、現在の VectorIterator と等しい場合*他*、それ以外の**false**します。
 
 ## <a name="operator-greater-than"></a>  Vectoriterator::operator&gt;演算子
 
@@ -176,7 +176,7 @@ bool operator>(const VectorIterator& other) const
 
 ### <a name="return-value"></a>戻り値
 
-`true` 現在の VectorIterator がより大きい場合`other`、それ以外の`false`します。
+**true**よりも大きい場合は、現在の VectorIterator*他*、それ以外の**false**します。
 
 ## <a name="operator-greater-than-or-equals"></a>  Vectoriterator::operator&gt;= 演算子
 
@@ -195,7 +195,7 @@ bool operator>=(const VectorIterator& other) const
 
 ### <a name="return-value"></a>戻り値
 
-現在の VectorIterator が `true` 以上の場合は `other`。それ以外の場合は `false`。
+**true**より大きいまたは等しいかどうか、現在の VectorIterator は*他*、それ以外の**false**します。
 
 ## <a name="operator-increment"></a>  Vectoriterator::operator++ 演算子
 
@@ -235,7 +235,7 @@ bool operator!=(const VectorIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` 現在の VectorIterator が等しくない場合`other`、それ以外の`false`します。
+**true** 、現在の VectorIterator が等しくない場合*他*、それ以外の**false**します。
 
 ## <a name="operator-less-than"></a>  Vectoriterator::operator&lt;演算子
 
@@ -254,7 +254,7 @@ bool operator<(const VectorIterator& other) const
 
 ### <a name="return-value"></a>戻り値
 
-現在の VectorIterator が `true` より小さい場合は `other`。それ以外の場合は `false`。
+**true**場合は、現在の VectorIterator より小さい*他*、それ以外の**false**します。
 
 ## <a name="operator-less-than-or-equals"></a>  Vectoriterator::operator&lt;= 演算子
 
@@ -273,7 +273,7 @@ bool operator<=(const VectorIterator& other) const
 
 ### <a name="return-value"></a>戻り値
 
-`true` 現在の VectorIterator と等しいまたはそれよりも小さいかどうか`other`、それ以外の`false`します。
+**true**かどうか、現在の VectorIterator と等しいまたはそれよりも小さく*他*、それ以外の**false**します。
 
 ## <a name="operator-minus"></a>  Vectoriterator::operator-演算子
 
@@ -298,7 +298,7 @@ difference_type operator-(const VectorIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子構文は、VectorIterator オブジェクトを取得する`n`要素が現在の VectorIterator より小さい。 2 番目の演算子構文は、現在の要素の数を返します、 `other` VectorIterator。
+最初の演算子構文は、現在の VectorIterator より `n` 要素少ない VectorIterator オブジェクトを返します。 2 番目の演算子構文は、現在の VectorIterator と `other` VectorIterator の間の要素の数を返します。
 
 ## <a name="operator-plus-assign"></a>  Vectoriterator::operator + = 演算子
 

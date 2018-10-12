@@ -65,12 +65,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a1003553cb0c3fc3abc8c24a6870485816397eaa
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 9647e18af021caf67dea5d946c9e5bf00fb50807
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861955"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162933"
 ---
 # <a name="asyncbase-class"></a>AsyncBase クラス
 
@@ -233,7 +233,7 @@ inline bool ContinueAsyncOperation();
 
 ### <a name="return-value"></a>戻り値
 
-`true` 非同期操作の現在の状態の場合*開始*、つまり、操作を続行する必要があります。 それ以外の場合、 `false`、つまり、操作を停止する必要があります。
+**true**場合は、非同期操作の現在の状態は*開始*、つまり、操作を続行する必要があります。 それ以外の場合、 **false**、つまり、操作を停止する必要があります。
 
 ## <a name="currentstatus"></a>Asyncbase::currentstatus
 
@@ -528,7 +528,7 @@ bool TryTransitionToCompleted(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 非同期操作が完了している場合それ以外の場合、`false`します。
+**true**場合は、非同期の操作が完了するとします。 それ以外の場合、 **false**します。
 
 ## <a name="trytransitiontoerror"></a>Asyncbase::trytransitiontoerror
 
@@ -547,7 +547,7 @@ bool TryTransitionToError(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 内部エラー状態が変更された場合それ以外の場合、`false`します。
+**true**内部エラー状態が変更された。 それ以外の場合**false**します。
 
 ### <a name="remarks"></a>Remarks
 

@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 26ecab69c2c31db51e137ad012bf67541e03a095
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2af59860016835f8e8dfddc9d0a77204ff866bd3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788462"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161854"
 ---
 # <a name="issame-structure"></a>IsSame 構造体
 
@@ -92,4 +92,4 @@ struct IsSame<T1, T1>
 
 1 つの型が別のと同じかどうかを示します。
 
-`value` `true`テンプレート パラメーターでは、同じ場合、`false`テンプレート パラメーターが異なる場合。
+`value` **true**テンプレート パラメーターでは、同じ場合、 **false**テンプレート パラメーターが異なる場合。

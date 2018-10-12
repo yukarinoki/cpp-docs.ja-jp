@@ -61,12 +61,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f549f0737d74829dbd79c280f3f6c1acd9bca6e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12afcfe09335082f873d88e1aa825b4eee3a1ae2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235998"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163232"
 ---
 # <a name="comptr-class"></a>ComPtr クラス
 
@@ -539,9 +539,9 @@ bool operator==(
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子と`true`場合オブジェクト *、* がオブジェクトと等しい*b*、それ以外の`false`します。
+最初の演算子と**true**場合オブジェクト *、* がオブジェクトと等しい*b*、それ以外の**false**します。
 
-2 番目と 3 番目の演算子を生成`true`場合オブジェクト *、* と等しい`nullptr`、それ以外の`false`します。
+2 番目と 3 番目の演算子を生成**true**場合オブジェクト *、* と等しい**nullptr**、それ以外の**false**します。
 
 ## <a name="operator-inequality"></a>Comptr::operator! =
 
@@ -574,9 +574,9 @@ bool operator!=(
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子と`true`場合オブジェクト *、* オブジェクトと等しくない*b*、それ以外の`false`します。
+最初の演算子と**true**場合オブジェクト *、* オブジェクトと等しくない*b*、それ以外の**false**します。
 
-2 番目と 3 番目の演算子を生成`true`場合オブジェクト *、* が等しくない`nullptr`、それ以外の`false`します。
+2 番目と 3 番目の演算子を生成**true**場合オブジェクト *、* が等しくない**nullptr**、それ以外の**false**します。
 
 ## <a name="operator-microsoft-wrl-details-booltype"></a>Comptr::operator:booltype
 
@@ -588,7 +588,7 @@ WRL_NOTHROW operator Microsoft::WRL::Details::BoolType() const;
 
 ### <a name="return-value"></a>戻り値
 
-インターフェイスに関連付けられている場合`ComPtr`のアドレス、 [boolstruct::member](../windows/boolstruct-member-data-member.md)データ メンバー、それ以外の`nullptr`します。
+インターフェイスに関連付けられている場合`ComPtr`のアドレス、 [boolstruct::member](../windows/boolstruct-member-data-member.md)データ メンバー、それ以外の**nullptr**します。
 
 ## <a name="ptr"></a>Comptr::ptr _
 

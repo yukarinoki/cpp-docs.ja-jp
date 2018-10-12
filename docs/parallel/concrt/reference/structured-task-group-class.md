@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa6df9afddc43980818439ee2c7bbd29ca2f848
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a9e87ebd4523b5211c94955b5bec7905ed848946
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446076"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161685"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group クラス
 
@@ -54,7 +54,7 @@ class structured_task_group;
 |名前|説明|
 |----------|-----------------|
 |[キャンセル](#cancel)|このタスク グループをルートとする作業のサブツリーの取り消しを試行する最善の努力は、します。 タスク グループでスケジュールのすべてのタスクはキャンセル推移的に可能な場合。|
-|[is_canceling](#is_canceling)|かどうか、タスク グループは現在キャンセル中、呼び出し元に通知します。 これは必ずしもを`cancel`でメソッドが呼び出された、`structured_task_group`オブジェクト (もちろんを返すには、このメソッドを修飾などが`true`)。 ケースがある可能性があります`structured_task_group`オブジェクトはインラインで実行し、さらに、タスク グループを作業ツリーが取り消されました。 これらの場所などの場合、ランタイムがキャンセルは、このフローは前もって確認できます`structured_task_group`オブジェクト、`true`も返されます。|
+|[is_canceling](#is_canceling)|かどうか、タスク グループは現在キャンセル中、呼び出し元に通知します。 これは必ずしもを`cancel`でメソッドが呼び出された、`structured_task_group`オブジェクト (もちろんを返すには、このメソッドを修飾などが**true**)。 ケースがある可能性があります`structured_task_group`オブジェクトはインラインで実行し、さらに、タスク グループを作業ツリーが取り消されました。 これらの場所などの場合、ランタイムがキャンセルは、このフローは前もって確認できます`structured_task_group`オブジェクト、 **true**も返されます。|
 |[run](#run)|オーバーロードされます。 タスクをスケジュール、`structured_task_group`オブジェクト。 呼び出し元の有効期間の管理、`task_handle`で渡されるオブジェクト、`_Task_handle`パラメーター。 パラメーターを受け取るバージョン`_Placement`タスクがそのパラメーターで指定された場所を実行して重きをさせます。|
 |[run_and_wait](#run_and_wait)|オーバーロードされます。 呼び出し元のコンテキストでのインラインを実行するタスクをスケジュール、`structured_task_group`オブジェクトの完全なキャンセルのサポート。 場合、`task_handle`オブジェクトがパラメーターとして渡される`run_and_wait`の有効期間を管理するため、呼び出し元は、`task_handle`オブジェクト。 すべての作業になるまでにその後、関数が待機、`structured_task_group`オブジェクトが完了したか取り消されました。|
 |[wait](#wait)|すべての作業になるまでの待機、`structured_task_group`が完了またはキャンセルします。|
@@ -97,7 +97,7 @@ void cancel();
 
 ##  <a name="is_canceling"></a> is_canceling
 
-かどうか、タスク グループは現在キャンセル中、呼び出し元に通知します。 これは必ずしもを`cancel`でメソッドが呼び出された、`structured_task_group`オブジェクト (もちろんを返すには、このメソッドを修飾などが`true`)。 ケースがある可能性があります`structured_task_group`オブジェクトはインラインで実行し、さらに、タスク グループを作業ツリーが取り消されました。 これらの場所などの場合、ランタイムがキャンセルは、このフローは前もって確認できます`structured_task_group`オブジェクト、`true`も返されます。
+かどうか、タスク グループは現在キャンセル中、呼び出し元に通知します。 これは必ずしもを`cancel`でメソッドが呼び出された、`structured_task_group`オブジェクト (もちろんを返すには、このメソッドを修飾などが**true**)。 ケースがある可能性があります`structured_task_group`オブジェクトはインラインで実行し、さらに、タスク グループを作業ツリーが取り消されました。 これらの場所などの場合、ランタイムがキャンセルは、このフローは前もって確認できます`structured_task_group`オブジェクト、 **true**も返されます。
 
 ```
 bool is_canceling();

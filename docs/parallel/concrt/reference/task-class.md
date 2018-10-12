@@ -24,14 +24,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e40a98bd546f29cd42629ad991866a85a86852c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bac539fc2826b5628769126d9802688c01f01c7b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399302"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163206"
 ---
-# <a name="task-class-concurrency-runtime"></a>task クラス (同時実行ランタイム)
+# <a name="task-class-concurrency-runtime"></a>task クラス (コンカレンシー ランタイム)
 
 並列パターン ライブラリ (PPL) `task` クラス。 `task` オブジェクトは、非同期的に、他のタスクと同時に実行できる処理、および同時実行ランタイムの並列アルゴリズムによって生成される並列処理を表します。 正常に終了した場合は、型 `_ResultType` の結果が生成されます。 型 `task<void>` のタスクでは結果が作成されません。 タスクは、他のタスクと関係なく待機および取り消しできます。 他のタスクの継続を使用して構成することもできます ( `then`)、および結合 ( `when_all`) と選択の幅 ( `when_any`) パターン。
 
@@ -134,7 +134,7 @@ bool is_apartment_aware() const;
 
 ### <a name="return-value"></a>戻り値
 
-タスクが `true` インターフェイスをラップ解除するか、こうしたタスクの子である場合は `IAsyncInfo` を返します。それ以外の場合は、`false` を返します。
+**true**タスクのラップを解除する場合、`IAsyncInfo`インターフェイスまたはからこのようなタスクは、子孫が**false**それ以外の場合。
 
 ##  <a name="is_done"></a>  task::is_done メソッド (同時実行ランタイム)
 
@@ -169,7 +169,7 @@ bool operator!= (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが異なる基本タスクを参照する場合は `true` を返します。それ以外の場合は `false` を返します。
+**true**オブジェクトが、基になる別のタスク を参照している場合と**false**それ以外の場合。
 
 ##  <a name="operator_eq"></a> 演算子 =
 
@@ -209,7 +209,7 @@ bool operator== (const task<void>& _Rhs) const;
 
 ### <a name="return-value"></a>戻り値
 
-オブジェクトが同じ基本タスクを参照する場合は `true` を返します。それ以外の場合は `false` を返します。
+**true**オブジェクトは、同じ基になるタスクを参照している場合と**false**それ以外の場合。
 
 ##  <a name="scheduler"></a>  task::scheduler メソッド (同時実行ランタイム)
 
@@ -354,7 +354,7 @@ task_status wait() const;
 ### <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
->  ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出さないでください`wait`STA で実行されるコードで それ以外の場合、ランタイム[concurrency::invalid_operation](invalid-operation-class.md)このメソッドは、現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。 ただし、呼び出すことができます、 [::task_canceled](#get)タスク ベースの継続で継続元タスクの結果を受信するメソッド。
+>  ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出さないでください`wait`STA で実行されるコードで そうしないと、このメソッドが現在のスレッドをブロックして、アプリケーションが応答しなくなる場合があるため、ランタイムは [concurrency::invalid_operation](invalid-operation-class.md) をスローします。 ただし、タスク ベースの継続で継続元タスクの結果を受け取るために [concurrency::task::get](#get) のメソッドを呼び出すことができます。
 
 ## <a name="see-also"></a>関連項目
 

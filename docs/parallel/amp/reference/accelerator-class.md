@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7748ae0f3993c1df97dcf97308fd6dfbfafdc8b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a154d266ead19cfef00f30a5327c5b18809a4111
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375878"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163167"
 ---
 # <a name="accelerator-class"></a>accelerator クラス
 
@@ -102,9 +102,9 @@ class accelerator;
 
 |名前|説明|
 |----------|-----------------|
-|[operator!=](#operator_neq)|この `accelerator` オブジェクトを別のオブジェクトと比較し、同じ場合は `false` を返し、それ以外の場合は `true` を返します。|
+|[operator!=](#operator_neq)|これを比較します`accelerator`と他のオブジェクトを返します**false**は同じである場合を返しますそれ以外の場合、 **true**します。|
 |[operator=](#operator_eq)|指定された `accelerator` オブジェクトの内容をこのオブジェクトにコピーします。|
-|[operator==](#operator_eq_eq)|この `accelerator` オブジェクトを別のオブジェクトと比較し、同じ場合は `true` を返し、それ以外の場合は `false` を返します。|
+|[operator==](#operator_eq_eq)|これを比較します`accelerator`と他のオブジェクトを返します**true**は同じである場合を返しますそれ以外の場合、 **false**します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -362,7 +362,7 @@ bool get_has_display() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` がディスプレイに出力できる場合は `accelerator`。それ以外の場合は `false`。
+**true**場合、 `accelerator` ; ディスプレイに出力できる場合は、 **false**します。
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -375,7 +375,7 @@ bool get_is_debug() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` に、広範なエラー レポートに有効なデバッグ レイヤーがある場合、`accelerator`。 それ以外の場合は `false`。
+**true**場合、`accelerator`広範なエラー レポートに有効なデバッグ レイヤーが。 それ以外の場合、 **false**します。
 
 ##  <a name="get_is_emulated"></a> get_is_emulated
 
@@ -388,7 +388,7 @@ bool get_is_emulated() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` がエミュレートされる場合、`accelerator`。 それ以外の場合は `false`。
+**true**場合、`accelerator`はエミュレートされます。 それ以外の場合、 **false**します。
 
 ##  <a name="get_supports_cpu_shared_memory"></a> get_supports_cpu_shared_memory
 
@@ -401,11 +401,11 @@ bool get_supports_cpu_shared_memory() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクセラレータが CPU 共有メモリをサポートする場合は `true`、それ以外の場合は `false`。
+**true**アクセラレータが CPU をサポートしています。 メモリを共有する場合はそれ以外の場合、 **false**します。
 
 ##  <a name="get_supports_double_precision"></a> get_supports_double_precision
 
-アクセラレータが融合型積和演算 (FMA)、除算、逆数、および `int` と `double` 間のキャストなどの倍精度演算をサポートするかどうかを示すブール値を返します。
+アクセラレータが倍精度演算をサポートするかどうかを含むヒューズを示すブール値の積を返します追加 (FMA)、除算、逆数、およびの間でキャスト**int**と**double。**
 
 ```
 bool get_supports_double_precision() const;
@@ -414,11 +414,11 @@ bool get_supports_double_precision() const;
 
 ### <a name="return-value"></a>戻り値
 
-アクセラレータが倍精度演算をサポートする場合は `true`、それ以外の場合は `false`。
+**true**アクセラレータが倍精度演算; をサポートする場合、それ以外の場合**false**します。
 
 ##  <a name="get_supports_limited_double_precision"></a> get_supports_limited_double_precision
 
-アクセラレータの倍精度演算のサポートが制限されているかどうかを示すブール値を返します。 アクセラレータがある一部のみがサポート、乗算定着し (FMA) を追加する場合除算、逆数、およびの間でキャスト`int`と`double`はサポートされていません。
+アクセラレータの倍精度演算のサポートが制限されているかどうかを示すブール値を返します。 アクセラレータがある一部のみがサポート、乗算定着し (FMA) を追加する場合除算、逆数、およびの間でキャスト**int**と**二重**はサポートされていません。
 
 ```
 bool get_supports_limited_double_precision() const;
@@ -427,7 +427,7 @@ bool get_supports_limited_double_precision() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` アクセラレータが倍精度演算; のサポートを制限されている場合それ以外の場合、`false`します。
+**true**アクセラレータの倍精度演算; のサポートが少ない場合それ以外の場合、 **false**します。
 
 ##  <a name="get_version"></a> get_version
 
@@ -468,7 +468,7 @@ __declspec(property(get= get_is_emulated)) bool is_emulated;
 
 ##  <a name="operator_neq"></a> operator!=
 
-この `accelerator` オブジェクトを別のオブジェクトと比較し、同じ場合は `false` を返し、それ以外の場合は `true` を返します。
+これを比較します`accelerator`と他のオブジェクトを返します**false**は同じである場合を返しますそれ以外の場合、 **true**します。
 
 ```
 bool operator!= (const accelerator& _Other) const;
@@ -482,7 +482,7 @@ bool operator!= (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>戻り値
 
-`false` 場合、2 つ`accelerator`オブジェクトが等しい、それ以外の`true`します。
+**false**場合、2 つ`accelerator`オブジェクトが等しい、それ以外の**true**します。
 
 ##  <a name="operator_eq"></a> 演算子 =
 
@@ -503,7 +503,7 @@ accelerator& operator= (const accelerator& _Other);
 
 ##  <a name="operator_eq_eq"></a> 演算子 = =
 
-この `accelerator` オブジェクトを別のオブジェクトと比較し、同じ場合は `true` を返し、それ以外の場合は `false` を返します。
+これを比較します`accelerator`と他のオブジェクトを返します**true**は同じである場合を返しますそれ以外の場合、 **false**します。
 
 ```
 bool operator== (const accelerator& _Other) const;
@@ -517,7 +517,7 @@ bool operator== (const accelerator& _Other) const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合、その他の`accelerator`オブジェクトはこれと同じ`accelerator`オブジェクト。 それ以外の場合、`false`します。
+**true**場合、その他の`accelerator`オブジェクトはこれと同じ`accelerator`オブジェクト。 それ以外の場合、 **false**します。
 
 ##  <a name="set_default"></a> set_default
 
@@ -534,7 +534,7 @@ static inline bool set_default(std::wstring _Path);
 
 ### <a name="return-value"></a>戻り値
 
-既定のアクセラレータの設定で呼び出しが成功した場合、`true`。 それ以外の場合は `false`。
+**true**既定のアクセラレータを設定することで、呼び出しが成功した場合。 それ以外の場合、 **false**します。
 
 ##  <a name="set_default_cpu_access_type"></a> set_default_cpu_access_type
 
@@ -664,7 +664,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>戻り値
 
-ランタイムが自動的に適切なアクセラレータを選択する場合は `true`、それ以外の場合は `false`。
+**true**場合は、ランタイムが適切なアクセラレータ; を選択して自動的にそれ以外の場合、 **false**します。
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
@@ -737,7 +737,7 @@ bool operator!= (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>戻り値
 
-2 つのオブジェクトが同一である場合は `false`。それ以外の場合は `true`。
+**false**場合 2 つのオブジェクトは同じです。 それ以外の場合、 **true**します。
 
 ##  <a name="operator_eq"></a> 演算子 =
 
@@ -758,7 +758,7 @@ accelerator_view& operator= (const accelerator_view& _Other);
 
 ##  <a name="operator_eq_eq"></a> 演算子 = =
 
-この比較[accelerator_view](accelerator-view-class.md)と他のオブジェクトを返します`true`は同じである場合を返しますそれ以外の場合、 `false`。
+これを比較します[accelerator_view](accelerator-view-class.md)と他のオブジェクトを返します**true**は同じである場合を返しますそれ以外の場合、 **false**します。
 
 ```
 bool operator== (const accelerator_view& _Other) const;
@@ -772,7 +772,7 @@ bool operator== (const accelerator_view& _Other) const;
 
 ### <a name="return-value"></a>戻り値
 
-2 つのオブジェクトが同一である場合は `true`。それ以外の場合は `false`。
+**true**場合 2 つのオブジェクトは同じです。 それ以外の場合、 **false**します。
 
 ##  <a name="queuing_mode"></a> queuing_mode
 

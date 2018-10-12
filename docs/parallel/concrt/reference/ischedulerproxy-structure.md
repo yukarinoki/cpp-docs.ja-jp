@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8adba73274fbc9821eb8096e82268b24b41718f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430057"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163141"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 構造体
 
@@ -124,7 +124,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 
 ### <a name="return-value"></a>戻り値
 
-`IExecutionResource`インターフェイスの現在のスレッドの場合、パラメーター `doSubscribeCurrentThread` 、値を持つ`true`します。 値が場合`false`、メソッドを返します`NULL`します。
+`IExecutionResource`インターフェイスの現在のスレッドの場合、パラメーター `doSubscribeCurrentThread` 、値を持つ**true**します。 値が場合**false**NULL が返されます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -132,7 +132,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 
 Resource Manager は、メソッドを呼び出して、スケジューラにリソースを付与[ischeduler::addvirtualprocessors](ischeduler-structure.md#addvirtualprocessors)仮想プロセッサ ルートの一覧。 メソッドには、このメソッドが戻る前に、スケジューラにコールバックとして呼び出さします。
 
-スケジューラがパラメーターを設定して、現在のスレッドのサブスクリプションを要求するかどうか`doSubscribeCurrentThread`に`true`、メソッドを返します、`IExecutionResource`インターフェイス。 使用して、後で、サブスクリプションを終了する必要があります、 [iexecutionresource::remove](iexecutionresource-structure.md#remove)メソッド。
+スケジューラがパラメーターを設定して、現在のスレッドのサブスクリプションを要求するかどうか`doSubscribeCurrentThread`に**true**、メソッドを返します、`IExecutionResource`インターフェイス。 使用して、後で、サブスクリプションを終了する必要があります、 [iexecutionresource::remove](iexecutionresource-structure.md#remove)メソッド。
 
 ハードウェア スレッドが選択されているかを決定するときに、リソース マネージャーはプロセッサ ノード アフィニティを最適化しようとします。 現在のスレッドのサブスクリプションが要求された場合は、現在のスレッドがこのスケジューラに割り当てられている作業に参加することを示しています。 このような場合は、割り当てられた仮想プロセッサ ルートは、現在のスレッドが可能であれば、実行するプロセッサのノードにあります。
 

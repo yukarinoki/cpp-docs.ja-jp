@@ -1,12 +1,14 @@
 ---
 title: _ _unaligned |Microsoft Docs
 ms.custom: ''
-ms.date: 03/09/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __unaligned_cpp
+- __unaligned
+- _unaligned
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9593a0b3c6e6980f5be2ce9dcf13e505e94dcace
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 444bc3372b22676cacb3ee89b9c0ad92000cedcc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040201"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161219"
 ---
 # <a name="unaligned"></a>__unaligned
 
@@ -32,6 +34,8 @@ ms.locfileid: "46040201"
 この修飾子はポインターによってアドレス指定されたデータのアラインメントをについて説明しますポインター自体は、配置すると見なされます。
 
 必要性、 **_ _unaligned**キーワードは、プラットフォームおよび環境によって異なります。 エラー データを適切にマークすると、パフォーマンスの低下からハードウェアの障害に至るまでの問題があります。 **_ _Unaligned**修飾子は無効です、x86 プラットフォーム。
+
+以前のバージョンとの互換性のため **_unaligned**のシノニムです **_ _unaligned**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)指定します。
 
 アラインメントの詳細については、次のトピックを参照してください。
 

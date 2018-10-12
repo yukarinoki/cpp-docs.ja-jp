@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67376497f3c0be84c0e24e403eaa3129ec38b255
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a0aa56c511ac5f7b98ffdd75aebd7f71ef9f21ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110780"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162023"
 ---
 # <a name="platformcollectionsinputiterator-class"></a>Platform::Collections::InputIterator クラス
 
@@ -137,7 +137,7 @@ bool operator== (const InputIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-現在の InputIterator が `true` と等しい場合は `other`。それ以外の場合は `false`。
+**true**現在の InputIterator と等しい場合*他*、それ以外の**false**します。
 
 ## <a name="operator-increment"></a>  Inputiterator::operator++ 演算子
 
@@ -177,7 +177,7 @@ bool operator!=(const InputIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-現在の InputIterator が `true` と等しくない場合は `other`。それ以外の場合は `false`。
+**true**現在の InputIterator が等しくない場合*他*、それ以外の**false**します。
 
 ## <a name="see-also"></a>関連項目
 

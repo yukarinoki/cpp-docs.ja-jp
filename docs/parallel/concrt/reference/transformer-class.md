@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 803cb474edbce6eb3d397e025ecc31bd5332cc92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e5c6b9d15ef2ca456fd91dbd7829d94e33e2c0a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427890"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162231"
 ---
 # <a name="transformer-class"></a>transformer クラス
 
@@ -61,7 +61,7 @@ class transformer : public propagator_block<single_link_registry<ITarget<_Output
 
 |名前|説明|
 |----------|-----------------|
-|[transformer](#ctor)|オーバーロードされます。 構築、`transformer`メッセージング ブロックします。|
+|[transformer](#ctor)|オーバーロードされます。 `transformer` メッセージング ブロックを構築します。|
 |[~ transformer デストラクター](#dtor)|破棄、`transformer`メッセージング ブロックします。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
@@ -205,11 +205,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。
+**true**場合は、メッセージが正常に予約された、 **false**それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
 
-後`reserve`と呼ばれる場合は、返された場合`true`, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
+後`reserve`と呼ばれる場合は、返された場合**true**, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -251,11 +251,11 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>戻り値
 
-`true` ブロックは延期しないため、メッセージを提供します。
+**true**ブロックは延期しないため、メッセージを提供します。
 
 ##  <a name="ctor"></a> トランスフォーマー
 
-構築、`transformer`メッセージング ブロックします。
+`transformer` メッセージング ブロックを構築します。
 
 ```
 transformer(

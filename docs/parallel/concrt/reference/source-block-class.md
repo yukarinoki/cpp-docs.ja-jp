@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f5b84020d9428066bdadfff53500d671233f07d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4a184e0fee76f3aa5bb8f7729250c03b10b9dfc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386731"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163492"
 ---
 # <a name="sourceblock-class"></a>source_block クラス
 
@@ -237,7 +237,7 @@ virtual message<_Target_type>* consume(
 
 メソッドをスロー、 [bad_target](bad-target-class.md)例外場合、パラメーター`_PTarget`というターゲットを表していない`reserve`します。
 
-`consume`メソッドは`accept`への呼び出しでは前に必ず必要がありますが、`reserve`返さ`true`します。
+`consume`メソッドは`accept`への呼び出しでは前に必ず必要がありますが、`reserve`返さ**true**します。
 
 ##  <a name="consume_message"></a> consume_message
 
@@ -427,7 +427,7 @@ virtual bool reserve(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。 予約はなど、多くの理由で失敗します。 メッセージが既に予約またはソースでした、予約を拒否する、など別のターゲットによって受け入れします。
+**true**場合は、メッセージが正常に予約された、 **false**それ以外の場合。 予約はなど、多くの理由で失敗します。 メッセージが既に予約またはソースでした、予約を拒否する、など別のターゲットによって受け入れします。
 
 ### <a name="remarks"></a>Remarks
 
@@ -450,11 +450,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId) = 0;
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。
+**true**場合は、メッセージが正常に予約された、 **false**それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
 
-後`reserve`と呼ばれる場合は、返された場合`true`, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
+後`reserve`と呼ばれる場合は、返された場合**true**, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

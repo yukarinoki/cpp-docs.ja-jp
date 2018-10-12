@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 231eed17f155b9ec184e0cf4fe3bd91e7770a7f4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 608472f3133464137d2d0f96128453e4239b16a2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716860"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162088"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (_penter フック関数の有効化)
 
@@ -43,7 +43,7 @@ ms.locfileid: "45716860"
 明示的に呼び出す予定がない限り`_penter`プロトタイプを提供する必要はありません。 関数は、次のプロトタイプがあった場合とおよびエントリのすべてのレジスタのコンテンツをプッシュし、終了時に変更されていないコンテンツを表示にする必要がありますに記述する必要があります。
 
 ```
-void __declspec(naked) _cdecl _penter( void );
+void __declspec(naked) __cdecl _penter( void );
 ```
 
 この宣言は、64 ビットのプロジェクトで使用可能ではありません。
@@ -66,7 +66,7 @@ void __declspec(naked) _cdecl _penter( void );
 
 コンパイルした場合、次のコード **/Gh**、表示方法`_penter`2 回; と呼ばれる関数を入力するときに 1 回`main`関数を入力するときに 1 回`x`。
 
-```
+```cpp
 // Gh_compiler_option.cpp
 // compile with: /Gh
 // processor: x86
@@ -77,7 +77,7 @@ int main() {
    x();
 }
 
-extern "C" void __declspec(naked) _cdecl _penter( void ) {
+extern "C" void __declspec(naked) __cdecl _penter( void ) {
    _asm {
       push eax
       push ebx

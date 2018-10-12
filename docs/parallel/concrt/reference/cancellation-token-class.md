@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9b438725a5a725597a81f0587936618a06cbb4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 218451b0483e569bf4c944e139aff3446f5925e7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414304"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162075"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token クラス
 
@@ -55,7 +55,7 @@ class cancellation_token;
 |----------|-----------------|
 |[deregister_callback](#deregister_callback)|登録時に返された `register` オブジェクトに基づく `cancellation_token_registration` メソッドによって以前に登録されたコールバックを削除します。|
 |[is_cancelable](#is_cancelable)|このトークンを取り消すことができるかどうかを示す値を返します。|
-|[is_canceled](#is_canceled)|トークンが取り消された場合は `true` を返します。|
+|[is_canceled](#is_canceled)|返します**true**トークンが取り消された場合。|
 |[none](#none)|取り消しの対象とはならないキャンセル トークンを返します。|
 |[register_callback](#register_callback)|コールバック関数をトークンに登録します。 トークンが取り消された場合、コールバックが行われます。 このメソッドが呼び出された時点で既にコールバックが取り消されている場合、コールバックは即座に同期的に行われることに注意してください。|
 
@@ -123,7 +123,7 @@ bool is_cancelable() const;
 
 ##  <a name="is_canceled"></a> is_canceled
 
-トークンが取り消された場合は `true` を返します。
+返します**true**トークンが取り消された場合。
 
 ```
 bool is_canceled() const;
@@ -131,7 +131,7 @@ bool is_canceled() const;
 
 ### <a name="return-value"></a>戻り値
 
-トークンが取り消されている場合は、値 `true` を返します。それ以外の場合は、値 `false` を返します。
+値**true**トークンは取り消された。 それ以外にした場合は、値**false**します。
 
 ##  <a name="none"></a> [なし]
 

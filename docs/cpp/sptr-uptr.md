@@ -1,13 +1,17 @@
 ---
 title: _ _sptr、_ _uptr |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __uptr_cpp
 - __sptr_cpp
+- __uptr
+- __sptr
+- _uptr
+- _sptr
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 269fe70a5a40a90a512c826e98ba2c8ea698a55b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fa67c815fdfeac0f5728ecd671aaa8f04a59ef89
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052518"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163479"
 ---
 # <a name="sptr-uptr"></a>__sptr、__uptr
 
@@ -44,6 +48,8 @@ void MyFunction(char * __uptr __ptr32 myValue);
 ```
 
 使用して、 **_ _sptr**と **_ _uptr**ポインター宣言での修飾子。 位置で、修飾子を使用して、[ポインター型修飾子](../c-language/pointer-declarations.md)、つまり、修飾子は、アスタリスクが従う必要があります。 これらの修飾子を使用することはできません[メンバーへのポインター](../cpp/pointers-to-members.md)します。 これらの修飾子は、ポインター以外の宣言には影響を与えません。
+
+以前のバージョンとの互換性のため **_sptr**と **_uptr**のシノニムで **_ _sptr**と **_ _uptr**コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
 ## <a name="example"></a>例
 

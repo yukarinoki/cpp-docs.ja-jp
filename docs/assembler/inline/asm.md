@@ -1,12 +1,13 @@
 ---
 title: _ _asm |Microsoft Docs
 ms.custom: ''
-ms.date: 08/30/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-masm
 ms.topic: conceptual
 f1_keywords:
 - __asm
+- _asm
 - __asm_cpp
 dev_langs:
 - C++
@@ -18,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bfe0cac0a35c821f3275ec323181f04c1ab982c4
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: dd279a6324aec6eba50c6c3b7ffe846200d45fe1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43693004"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161724"
 ---
 # <a name="asm"></a>__asm
 
@@ -32,7 +33,7 @@ ms.locfileid: "43693004"
 `__asm` キーワードは、インライン アセンブラーを呼び出し、C ステートメントまたは C++ ステートメントが有効である任意の場所に使用できます。 これは、単独では使用できません。 アセンブリ命令、中かっこで囲まれた命令グループ、または少なくとも空の中かっこの後で指定する必要があります。 "`__asm` ブロック" という用語は、ここでは、中かっこに囲まれているかどうかを問わず、命令または命令のグループを示します。
 
 > [!NOTE]
-> Visual C++ による標準 C++ の `asm` キーワードのサポートには、コンパイラがキーワードに関するエラーを生成しないという制限があります。 ただし、`asm` ブロックは意味のあるコードを生成しません。 `__asm` の代わりに `asm` を使用します。
+> Visual C++ による標準 C++ の `asm` キーワードのサポートには、コンパイラがキーワードに関するエラーを生成しないという制限があります。 ただし、`asm` ブロックは意味のあるコードを生成しません。 `__asm` の代わりに `asm`を使用します。
 
 ## <a name="grammar"></a>文法
 
@@ -59,6 +60,8 @@ __asm int 3
 ネイティブでコンパイルした場合に生成されるコードが発生しなかった **/clr**; コンパイラが CLR break 命令を命令を変換します。
 
 `__asm int 3` により現在は、関数のネイティブ コードが生成されるようになりました。 場合は、コードでブレークポイントが発生してする場合は、MSIL にコンパイルされた関数を使用する関数[_ _debugbreak](../../intrinsics/debugbreak.md)します。
+
+以前のバージョンとの互換性のため **_asm**のシノニムです **_ _asm**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
 ## <a name="example"></a>例
 

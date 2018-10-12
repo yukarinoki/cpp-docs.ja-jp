@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 489ff00571c79d89c9e807f0d8796989e7a0f84f
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e9b8ee4c80310c4d94ed432d48ee9702c41f80bf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714989"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161789"
 ---
 # <a name="gh-enable-pexit-hook-function"></a>/GH (_pexit フック関数の有効化)
 
@@ -43,7 +43,7 @@ ms.locfileid: "45714989"
 明示的に呼び出す予定がない限り`_pexit`プロトタイプを提供する必要はありません。 関数は、次のプロトタイプがあった場合とおよびエントリのすべてのレジスタのコンテンツをプッシュし、終了時に変更されていないコンテンツを表示にする必要がありますに記述する必要があります。
 
 ```
-void __declspec(naked) _cdecl _pexit( void );
+void __declspec(naked) __cdecl _pexit( void );
 ```
 
 `_pexit` ような`_penter`; を参照してください[/Gh (有効にする _penter フック関数)](../../build/reference/gh-enable-penter-hook-function.md)を記述する方法の例については、`_pexit`関数。

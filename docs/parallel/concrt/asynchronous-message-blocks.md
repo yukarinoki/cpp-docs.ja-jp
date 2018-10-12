@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e9379dd15dbb0d814da1e617fb1f3f8408d1da0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0b180b1a92defb2c29d0e54b0ecf9700dd299170
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388486"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163427"
 ---
 # <a name="asynchronous-message-blocks"></a>非同期メッセージ ブロック
 
@@ -307,7 +307,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
 
 `timer` クラスでは、メッセージを 1 つのターゲットにのみ送信します。 設定した場合、`_PTarget`パラメーターにコンス トラクターで`NULL`、後で呼び出すことによって、ターゲットを指定できます、 [concurrency::ISource::link_target](reference/source-block-class.md#link_target)メソッド。
 
-`timer` オブジェクトには、繰り返しと非繰り返しがあります。 繰り返しタイマーを作成するには、コンストラクターを呼び出すときに `true` パラメーターに `_Repeating` を渡します。 また、非繰り返しタイマーを作成するには、`false` パラメーターに `_Repeating` を渡します。 タイマーが繰り返しの場合、一定の間隔で同じメッセージをターゲットに送信します。
+`timer` オブジェクトには、繰り返しと非繰り返しがあります。 繰り返しタイマーを作成するには、渡す**true**の`_Repeating`パラメーターは、コンス トラクターを呼び出す場合。 それ以外の場合、渡す**false**の`_Repeating`非繰り返しタイマーを作成するパラメーター。 タイマーが繰り返しの場合、一定の間隔で同じメッセージをターゲットに送信します。
 
 エージェント ライブラリによって、開始されていない状態の `timer` オブジェクトが作成されます。 タイマー オブジェクトを開始するには、呼び出し、 [::start](reference/timer-class.md#start)メソッド。 停止する、`timer`オブジェクトを呼び出し、オブジェクトの破棄、 [concurrency::timer::stop](reference/timer-class.md#stop)メソッド。 繰り返しタイマーを一時停止を呼び出し、 [concurrency::timer::pause](reference/timer-class.md#pause)メソッド。
 

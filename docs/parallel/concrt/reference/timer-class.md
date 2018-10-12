@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b821dcc3426c6e1d9f3cd2f2ff8eb057197ca8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e37348fe92354d2ea7be3168dc5b3c9aee9fcd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416202"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163104"
 ---
 # <a name="timer-class"></a>timer クラス
 
@@ -193,11 +193,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。
+**true**場合は、メッセージが正常に予約された、 **false**それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
 
-後`reserve`と呼ばれる場合は、返された場合`true`, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
+後`reserve`と呼ばれる場合は、返された場合**true**, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -271,7 +271,7 @@ True の場合は、タイマーを定期的に起動を示します。 すべ�
 
 ### <a name="remarks"></a>Remarks
 
-指定しない場合、ランタイムは、既定のスケジューラを使用して、`_Scheduler`または`_ScheduleGroup`パラメーター。
+`_Scheduler` または `_ScheduleGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。
 
 ##  <a name="dtor"></a> ~ タイマー
 

@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 845addc73d0dd542b7bb6a4abccbf915005ddd41
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4dab192b2d5d4210461bd791e3f4d9996363c953
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235816"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163297"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 
@@ -194,7 +194,7 @@ SafeInt オブジェクトでの論理比較を実行すると、比較では厳
 
 - `((uint)~0) > -1`
 
-最初のステートメントに解決`true`に解決される 2 番目のステートメントが`false`します。 0 のビットごとの否定は、0 xffffffff です。 2 番目のステートメントでは、既定の比較演算子は、0 xffffffff を 0 xffffffff を比較し、両者を等しいと見なされます。 比較演算子、`SafeInt`クラスは、最初のパラメーターが署名されていないが、2 番目のパラメーターが負の値を認識しています。 そのため、ビット表現は同じですには、`SafeInt`論理演算子の符号なし整数が-1 より大きいことに気付きます。
+最初のステートメントに解決**true**に解決される 2 番目のステートメントが`false`します。 0 のビットごとの否定は、0 xffffffff です。 2 番目のステートメントでは、既定の比較演算子は、0 xffffffff を 0 xffffffff を比較し、両者を等しいと見なされます。 比較演算子、`SafeInt`クラスは、最初のパラメーターが署名されていないが、2 番目のパラメーターが負の値を認識しています。 そのため、ビット表現は同じですには、`SafeInt`論理演算子の符号なし整数が-1 より大きいことに気付きます。
 
 使用する場合は注意してください、`SafeInt`クラスと組み合わせて、`?:`三項演算子。 次のコード行を検討してください。
 

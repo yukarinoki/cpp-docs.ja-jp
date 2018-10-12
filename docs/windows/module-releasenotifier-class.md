@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c9af03549eec7b62cc34aec2840764c54d2a21e
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: e2dae7809a5926fa93626fa33148d444fe12807b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494362"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161893"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier クラス
 
@@ -56,7 +56,7 @@ class ReleaseNotifier;
 名前                                                         | 説明
 ------------------------------------------------------------ | --------------------------------------------------------------------------------------------------------------
 [Module::releasenotifier:: 呼び出し](#releasenotifier-invoke)   | 実装された場合、モジュールの最後のオブジェクトがリリースされたときに、イベント ハンドラーを呼び出します。
-[Module::ReleaseNotifier::Release](#releasenotifier-release) | 現在の削除`Module::ReleaseNotifier`オブジェクトのパラメーターを持つオブジェクトを構築したかどうかは`true`します。
+[Module::ReleaseNotifier::Release](#releasenotifier-release) | 現在の削除`Module::ReleaseNotifier`オブジェクトのパラメーターを持つオブジェクトを構築したかどうかは**true**します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -86,7 +86,7 @@ virtual void Invoke() = 0;
 
 ## <a name="releasenotifier-release"></a>Module::ReleaseNotifier::Release
 
-現在の削除`Module::ReleaseNotifier`オブジェクトのパラメーターを持つオブジェクトを構築したかどうかは`true`します。
+現在の削除`Module::ReleaseNotifier`オブジェクトのパラメーターを持つオブジェクトを構築したかどうかは**true**します。
 
 ```cpp
 void Release() throw();

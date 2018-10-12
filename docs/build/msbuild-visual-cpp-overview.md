@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad6feef707d991d07fa4e086bc8535f32b991825
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9c337ec94f863e6c19851bcf962db61f277491cf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716870"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163245"
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) の概要
 
@@ -111,7 +111,7 @@ IDE でプロジェクト プロパティを設定し、プロジェクトを保
 
 ### <a name="useenv-property"></a>UseEnv プロパティ
 
-既定では、現在のプロジェクトのプラットフォーム固有の設定によって、PATH、INCLUDE、LIB、LIBPATH、CONFIGURATION、および PLATFORM の各環境変数がオーバーライドされます。 環境変数がオーバーライドされないようにするには、`UseEnv` プロパティを `true` に設定します。
+既定では、現在のプロジェクトのプラットフォーム固有の設定によって、PATH、INCLUDE、LIB、LIBPATH、CONFIGURATION、および PLATFORM の各環境変数がオーバーライドされます。 設定、`UseEnv`プロパティを**true**環境変数がオーバーライドされていないことを保証するためにします。
 
 `msbuild myProject.vcxproj /p:UseEnv=true`
 
