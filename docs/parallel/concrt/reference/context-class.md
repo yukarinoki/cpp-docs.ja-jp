@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e84c8df1748e68f2364400fd4725ce6bffd232f1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 854f5935a66d845aa3c63b9f15857732fdfe6b8a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379711"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163869"
 ---
 # <a name="context-class"></a>Context クラス
 
@@ -64,7 +64,7 @@ class Context;
 |[GetId](#getid)|コンテキストが属するスケジューラ内で一意のコンテキストの識別子を返します。|
 |[GetScheduleGroupId](#getschedulegroupid)|コンテキストが現在実行されているスケジュール グループの識別子を返します。|
 |[GetVirtualProcessorId](#getvirtualprocessorid)|コンテキストが現在実行されている仮想プロセッサの識別子を返します。|
-|[Id](#id)|現在のコンテキストが属するスケジューラ内で一意の現在のコンテキストの識別子を返します。|
+|[ID](#id)|現在のコンテキストが属するスケジューラ内で一意の現在のコンテキストの識別子を返します。|
 |[IsCurrentTaskCollectionCanceling](#iscurrenttaskcollectioncanceling)|現在のコンテキストで現在インラインで実行されているタスク コレクションがアクティブなキャンセル処理中である (または間もなくキャンセル処理が開始される) かどうかを示す値を返します。|
 |[IsSynchronouslyBlocked](#issynchronouslyblocked)|コンテキストが同期的にブロックされているかどうかを判断します。 コンテキストがブロックを引き起こしたアクションを明示的に実行した場合、そのコンテキストは同期的にブロックされていると見なされます。|
 |[オーバーサブスク ライブします。](#oversubscribe)|スケジューラの仮想プロセッサのいずれかで実行されるコンテキストで呼び出された場合に、コード ブロックの期間中、追加の仮想プロセッサをそのスケジューラに挿入します。|
@@ -77,7 +77,7 @@ class Context;
 
 同時実行ランタイム スケジューラ (を参照してください[スケジューラ](scheduler-class.md))、アプリケーションで作業を実行する実行コンテキストを使用してキューに登録されています。 Win32 スレッドは、Windows オペレーティング システムの実行コンテキストの例です。
 
-スケジューラの同時実行レベルは、リソース マネージャーによって許可された仮想プロセッサの数と常に等しくなります。 仮想プロセッサとは、処理リソースを抽象化したものであり、基になるシステムのハードウェア スレッドに対応しています。 指定された時点に 1 つの仮想プロセッサで実行できるスケジューラ コンテキストは 1 つのみです。
+スケジューラのコンカレンシー レベルは、リソース マネージャーによって許可された仮想プロセッサの数と常に等しくなります。 仮想プロセッサとは、処理リソースを抽象化したものであり、基になるシステムのハードウェア スレッドに対応しています。 指定された時点に 1 つの仮想プロセッサで実行できるスケジューラ コンテキストは 1 つのみです。
 
 スケジューラは本質的に協調的であるため、実行コンテキストが待機状態になると、常に仮想プロセッサを別のコンテキストに渡す可能性があります。 待機状態が終了すると、スケジューラの使用可能な仮想プロセッサが実行を開始するまで再開できません。
 
@@ -241,7 +241,7 @@ static void __cdecl Oversubscribe(bool _BeginOversubscription);
 ### <a name="parameters"></a>パラメーター
 
 *_BeginOversubscription*<br/>
-場合`true`を示す値、オーバー サブスクリプションの期間中、追加の仮想プロセッサを追加する必要があります。 場合`false`を示す値、オーバー サブスクリプションが終了する必要があります、以前に追加の仮想プロセッサを削除する必要があります。
+場合**true**を示す値、オーバー サブスクリプションの期間中、追加の仮想プロセッサを追加する必要があります。 場合**false**を示す値、オーバー サブスクリプションが終了する必要があります、以前に追加の仮想プロセッサを削除する必要があります。
 
 ##  <a name="schedulegroupid"></a> ScheduleGroupId
 

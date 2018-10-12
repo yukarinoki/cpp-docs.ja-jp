@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 165ea5b42ea4e293eb60b7a798778e3a461e0385
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: f7ecf84317f8d88748e4a50a43c173a3fe41e0e2
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235452"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163739"
 ---
 # <a name="how-to-migrate-to-clr"></a>方法: /clr に移行する
 
@@ -84,7 +84,7 @@ NewFunc2 = (MYPROC)GetProcAddress( hLib, "Func2" );
 
 また C++ では、関数を参照したり呼び出すには、その前にプロトタイプを作成するか完全に定義する必要があります。
 
-C コードの識別子で、C++ のキーワードとなっているもの (`virtual`、`new`、`delete`、`bool`、`true`、`false` など) は名前を変更する必要があります。 これは一般的に、単純な検索置換操作だけで行うことができます。
+C++ のキーワードとなって発生する C コードで使用される識別子 (など**仮想**、**新しい**、**削除**、 **bool**、**は true。**、 **false**など) 名前を変更する必要があります。 これは一般的に、単純な検索置換操作だけで行うことができます。
 
 ```
 COMObj1->lpVtbl->Method(COMObj, args);  // C code

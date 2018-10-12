@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c4ada69fcd687d63022d0527ddf8da43906c483
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fe26b202dbe9aabc1ccf98a59ead6c51c498fc1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412016"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163713"
 ---
 # <a name="itarget-class"></a>ITarget クラス
 
@@ -67,7 +67,7 @@ class ITarget;
 |----------|-----------------|
 |[伝達](#propagate)|派生クラスでオーバーライドされると、非同期的にメッセージをソース ブロックからこのターゲット ブロックに渡します。|
 |[send](#send)|派生クラスでオーバーライドされると、ターゲット ブロックにメッセージを同期的に渡します。|
-|[supports_anonymous_source](#supports_anonymous_source)|派生クラスでオーバーライドされると、true またはメッセージ ブロックがそれにリンクされていないソースによって提供されるメッセージを受け入れるかどうかによっては false を返します。 オーバーライドされたメソッドが返された場合`true`ターゲットは提供されたメッセージを延期できないように後で、延期されたメッセージの消費量には、そのソース リンクのレジストリに識別するソースが必要です。|
+|[supports_anonymous_source](#supports_anonymous_source)|派生クラスでオーバーライドされると、true またはメッセージ ブロックがそれにリンクされていないソースによって提供されるメッセージを受け入れるかどうかによっては false を返します。 オーバーライドされたメソッドが返された場合**true**ターゲットは提供されたメッセージを延期できないように後で、延期されたメッセージの消費量には、そのソース リンクのレジストリに識別するソースが必要です。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
@@ -174,7 +174,7 @@ A [message_status](concurrency-namespace-enums.md)メッセージとは、ター
 
 ##  <a name="supports_anonymous_source"></a> supports_anonymous_source
 
-派生クラスでオーバーライドされると、true またはメッセージ ブロックがそれにリンクされていないソースによって提供されるメッセージを受け入れるかどうかによっては false を返します。 オーバーライドされたメソッドが返された場合`true`ターゲットは提供されたメッセージを延期できないように後で、延期されたメッセージの消費量には、そのソース リンクのレジストリに識別するソースが必要です。
+派生クラスでオーバーライドされると、true またはメッセージ ブロックがそれにリンクされていないソースによって提供されるメッセージを受け入れるかどうかによっては false を返します。 オーバーライドされたメソッドが返された場合**true**ターゲットは提供されたメッセージを延期できないように後で、延期されたメッセージの消費量には、そのソース リンクのレジストリに識別するソースが必要です。
 
 ```
 virtual bool supports_anonymous_source();
@@ -182,7 +182,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>戻り値
 
-`true` ブロックにリンクされていないソースからのメッセージを受け入れることができる場合`false`それ以外の場合。
+**true**ブロックにリンクされていないソースからのメッセージを受け入れることができる場合**false**それ以外の場合。
 
 ##  <a name="unlink_source"></a> unlink_source
 

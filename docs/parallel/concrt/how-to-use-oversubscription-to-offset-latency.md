@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f96a8a27b511c1a93114c32d048043aa9562fe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24e1113dac068a20e535bee3e8fd5fa9dcfb9064
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392967"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163570"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>方法: オーバーサブスクリプションを使用して待機時間を短縮する
 
@@ -30,7 +30,7 @@ ms.locfileid: "46392967"
 
 この例では、 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md) HTTP サーバーからファイルをダウンロードします。 `http_reader`クラスから派生[concurrency::agent](../../parallel/concrt/reference/agent-class.md)とメッセージ パッシングをダウンロードする対象の URL 名を非同期的に読み取りを使用します。
 
-`http_reader`クラスで使用、 [concurrency::task_group](reference/task-group-class.md)を同時に各ファイルを読み取るクラス。 各タスクを呼び出す、 [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)メソッドを`_BeginOversubscription`パラメーターに設定`true`現在のコンテキストでオーバー サブスクリプションを有効にします。 各タスクは、Microsoft Foundation Classes (MFC) を使用して[CInternetSession](../../mfc/reference/cinternetsession-class.md)と[CHttpFile](../../mfc/reference/chttpfile-class.md)クラス ファイルをダウンロードします。 最後に、各タスクは、`Context::Oversubscribe` パラメーターを `_BeginOversubscription` に設定して `false` メソッドを呼び出し、オーバーサブスクリプションを無効にします。
+`http_reader`クラスで使用、 [concurrency::task_group](reference/task-group-class.md)を同時に各ファイルを読み取るクラス。 各タスクを呼び出す、 [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)メソッドを`_BeginOversubscription`パラメーターに設定**true**現在のコンテキストでオーバー サブスクリプションを有効にします。 各タスクは、Microsoft Foundation Classes (MFC) を使用して[CInternetSession](../../mfc/reference/cinternetsession-class.md)と[CHttpFile](../../mfc/reference/chttpfile-class.md)クラス ファイルをダウンロードします。 最後に、各タスクが呼び出す`Context::Oversubscribe`で、`_BeginOversubscription`パラメーターに設定**false**オーバー サブスクリプションを無効にします。
 
 オーバーサブスクリプションを有効にすると、タスクを実行する 1 つの追加スレッドがランタイムによって作成されます。 これらのスレッドのそれぞれで現在のコンテキストをオーバーサブスクライブして、追加のスレッドを作成することもできます。 `http_reader`クラスで使用する[concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)アプリケーションが使用するスレッドの数を制限するオブジェクト。 agent は、トークン値の固定数でバッファーを初期化します。 それぞれのダウンロード操作に対して、agent はバッファーからトークン値を読み込んでから操作を開始し、操作が完了すると値をバッファーに書き戻します。 バッファーが空の場合、agent はいずれかのダウンロード操作によって値がバッファーに書き戻されるまで待機します。
 
@@ -68,7 +68,7 @@ Downloaded 1801040 bytes in 3276 ms.
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
-コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`download-oversubscription.cpp`とし、Visual Studio コマンド プロンプト ウィンドウでコマンドを次のいずれかを実行します。
+コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`download-oversubscription.cpp`し、コマンド内の次のいずれかを実行し、 **Visual Studio コマンド プロンプト**ウィンドウ。
 
 **cl.exe/EHsc/MD/D"_AFXDLL"download-oversubscription.cpp**
 

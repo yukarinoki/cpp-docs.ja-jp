@@ -1,12 +1,14 @@
 ---
 title: _ _declspec |Microsoft Docs
 ms.custom: ''
-ms.date: 1/23/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __declspec_cpp
+- __declspec
+- _declspec
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -15,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b159bcdae6e7f576ed92275ec5f79d25132b53e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f413c56b665a1878fb1e948b975ab8e4cbc0daf4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46111322"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163589"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -66,6 +68,8 @@ ms.locfileid: "46111322"
 文法の拡張属性は、これらの Microsoft 固有ストレージ クラス属性をサポートしています: [align](../cpp/align-cpp.md)、[割り当てる](../cpp/allocate.md)、 [appdomain](../cpp/appdomain.md)、 [code_seg](../cpp/code-seg-declspec.md)、[非推奨とされます](../cpp/deprecated-cpp.md)、 [dllexport](../cpp/dllexport-dllimport.md)、 [dllimport](../cpp/dllexport-dllimport.md)、 [jitintrinsic](../cpp/jitintrinsic.md)、 [naked](../cpp/naked-cpp.md)、 [noalias](../cpp/noalias.md)、 [noinline](../cpp/noinline.md)、 [noreturn](../cpp/noreturn.md)、 [nothrow](../cpp/nothrow-cpp.md)、 [novtable](../cpp/novtable.md)、[プロセス](../cpp/process.md)、[制限](../cpp/restrict.md)、 [safebuffers](../cpp/safebuffers.md)、 [selectany](../cpp/selectany.md)、 [spectre](../cpp/spectre.md)、と[スレッド](../cpp/thread.md)します。 これらの COM オブジェクトの属性もサポートしています:[プロパティ](../cpp/property-cpp.md)と[uuid](../cpp/uuid-cpp.md)します。
 
 **Code_seg**、 **dllexport**、 **dllimport**、 **naked**、 **noalias**、 **nothrow**、**プロパティ**、**制限**、 **selectany**、**スレッド**、および**uuid**ストレージ クラス属性は、オブジェクトまたは関数を適用する対象の宣言のみのプロパティ。 **スレッド**属性は、データに影響し、オブジェクトのみです。 **Naked**と**spectre**属性は関数だけに影響します。 **Dllimport**と**dllexport**属性は、関数、データ、およびオブジェクトに影響します。 **プロパティ**、 **selectany**、および**uuid**属性は COM オブジェクトに影響します。
+
+以前のバージョンとの互換性のため **_declspec**のシノニムです **_ _declspec**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)は指定します。
 
 **_ _Declspec**キーワードは、単純な宣言の先頭に配置する必要があります。 警告、なし、コンパイラは無視 **_ _declspec**キーワードの後に配置 * または (& a) と宣言で変数の識別子の前にします。
 

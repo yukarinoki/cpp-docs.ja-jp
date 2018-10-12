@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe3c516881115dd96337f950d83de2d30c57161b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9cfad80ac1f16d200f29504be1d4fb818e6e6afd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102513"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163895"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView クラス
 
@@ -140,7 +140,7 @@ virtual unsigned int GetMany(
 取得する項目の 0 から始まるインデックス。
 
 *dest*<br/>
-ときにこの操作が完了したらで指定した要素から開始する項目の配列`startIndex`と VectorView 内の最後の要素で終了します。
+この操作が完了するときに、`startIndex` で指定された要素を開始位置とし、VectorView 内の最後の要素を終了位置とする、項目の配列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -168,11 +168,11 @@ virtual bool IndexOf(
 *index*<br/>
 `value` パラメーターが見つかった場合は、項目の 0 から始まるインデックス。 それ以外の場合は 0。
 
-`index` パラメーターは、項目が VectorView の最初の要素であるか、項目が見つからなかった場合は 0 です。 戻り値が `true` の場合、項目が見つかり、項目は最初の要素です。それ以外の場合は、項目は見つかっていません。
+*インデックス*、いずれかの項目が最初の要素の場合は、パラメーターが 0、`VectorView`または項目が見つかりませんでした。 場合、戻り値は**true**項目が見つかったと最初の要素を;、それ以外の場合、項目が見つかりません。
 
 ### <a name="return-value"></a>戻り値
 
-指定した項目が見つかった場合は `true`。それ以外の場合は `false`。
+**true**場合、指定した項目が見つからなかった場合は、 **false**します。
 
 ## <a name="size"></a>  Vectorview::size メソッド
 
@@ -285,4 +285,4 @@ A [std::array](../standard-library/array-class-stl.md)現在の VectorView を�
 ## <a name="see-also"></a>関連項目
 
 [プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
-[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[C++ で Windows ランタイム コンポーネントを作成する](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

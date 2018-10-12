@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b3997f8beb414992464c51ca1c1fd944145c43d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d8c8c3cc219f0cf658dc2669ccc10adf3aba55bd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715144"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163531"
 ---
 # <a name="manifestuac-embeds-uac-information-in-manifest"></a>/MANIFESTUAC (UAC 情報をマニフェストに組み込む)
 
@@ -50,7 +50,7 @@ ms.locfileid: "45715144"
 いずれかの*asInvoker*、 *highestAvailable*、または*requireAdministrator*します。 既定値は asInvoker です。 詳細については、このトピックで後述する「解説」を参照してください。
 
 *_uiAccess*<br/>
-アプリケーションがユーザー インターフェイスの保護レベルをバイパスし、入力をデスクトップ上のアクセス許可の高いウィンドウにアクセスできるようにするには `true`、それ以外の場合は `false`。 既定値は `false` です。 `true` の設定は、ユーザー インターフェイスのユーザー補助アプリケーションでのみ行います。
+**true**する場合は、アプリケーションをユーザー インターフェイスの保護レベルをバイパスし、上位の権限の windows デスクトップへの入力。 それ以外のドライブ**false**します。 既定値は**false**します。 設定**true**ユーザー インターフェイスのユーザー補助アプリケーションに対してのみです。
 
 ## <a name="remarks"></a>Remarks
 

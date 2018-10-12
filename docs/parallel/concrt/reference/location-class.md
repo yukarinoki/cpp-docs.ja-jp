@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7e4e2b7af8e99059151963398215a18411797101
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c2352662de2d55be823064afd16354ff7f2c72e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380153"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163622"
 ---
 # <a name="location-class"></a>location クラス
 
@@ -157,7 +157,7 @@ bool operator!= (const location& _Rhs) const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` 2 つの場所が異なる場合、`false`それ以外の場合。
+**true** 2 つの場所が異なる場合、 **false**それ以外の場合。
 
 ##  <a name="operator_eq"></a> 演算子 =
 
@@ -189,7 +189,7 @@ bool operator== (const location& _Rhs) const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` 2 つの場所が同じですが場合と`false`それ以外の場合。
+**true**場合は、2 つの場所が同じで、 **false**それ以外の場合。
 
 ## <a name="see-also"></a>関連項目
 
