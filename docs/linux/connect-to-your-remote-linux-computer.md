@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: bba17549abc9f747d93299cf22c39ae7c3e8f4d6
+ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207667"
+ms.lasthandoff: 09/14/2018
+ms.locfileid: "45601445"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>リモートの Linux コンピューターへの接続
 
@@ -41,7 +41,7 @@ Visual Studio で C++ の Linux プロジェクトをビルドするときに、
    | **ユーザー名**           | 認証するユーザー
    | **認証の種類** | パスワードと秘密キーの両方がサポートされます。
    | **パスワード**            | 入力したユーザー名のパスワード
-   | **秘密キー ファイル**    | ssh 接続用に作成された秘密キー
+   | **秘密キー ファイル**    | ssh 接続用に作成された秘密キー ファイル
    | **パスフレーズ**          | 上で選択した秘密キーで使用されるパスフレーズ
 
 1. **[接続]** ボタンをクリックすると、リモート コンピューターへの接続が試行されます。  接続に失敗した場合は、変更する必要がある入力ボックスが赤色で示されます。
