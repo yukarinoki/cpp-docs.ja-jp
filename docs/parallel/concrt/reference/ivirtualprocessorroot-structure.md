@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7466c00ec1a5c507a84a098b3dca79d57ffee91e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 891fcd96901423e5d5c23b840784f9e050dbbe81
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445985"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162920"
 ---
 # <a name="ivirtualprocessorroot-structure"></a>IVirtualProcessorRoot 構造体
 
@@ -111,7 +111,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 
 ### <a name="return-value"></a>戻り値
 
-ブール値。 値`true`スレッド プロキシから返されることを示します、`Deactivate`メソッドへの呼び出しに応答に、`Activate`メソッド。 値`false`スレッド プロキシは、Resource Manager での notification イベントに応答でメソッドから返されることを示します。 ユーザー モード スケジュール可能 (UMS) スレッド スケジューラには、スケジューラのコンプリート リスト項目に表示されて、そのスケジューラがそれらを処理するために必要なことを示します。
+ブール値。 値**true**スレッド プロキシから返されることを示します、`Deactivate`メソッドへの呼び出しに応答に、`Activate`メソッド。 値`false`スレッド プロキシは、Resource Manager での notification イベントに応答でメソッドから返されることを示します。 ユーザー モード スケジュール可能 (UMS) スレッド スケジューラには、スケジューラのコンプリート リスト項目に表示されて、そのスケジューラがそれらを処理するために必要なことを示します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -119,9 +119,9 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 
 非アクティブ化された仮想プロセッサ ルートがへの呼び出しに起こされる可能性があります、`Activate`メソッドに渡された同じ引数で、`Deactivate`メソッド。 呼び出しを確保するため、スケジューラは、`Activate`と`Deactivate`メソッドはペアになっているが、特定の順序で受信する必要はありません。 Resource Manager は、呼び出しを受け取る処理できる、`Activate`メソッドへの呼び出しを受信する前に、`Deactivate`の本来のメソッド。
 
-仮想プロセッサ ルートが起動する場合からの戻り値と、`Deactivate`メソッドは、値`false`、スケジューラを使用して UMS の完了リストをクエリする必要があります、`IUMSCompletionList::GetUnblockNotifications`メソッドをその情報に基づいて行動し、を後で呼び出す`Deactivate`メソッドを再度します。 これは、手順を繰り返しますようになるまで、`Deactivate`メソッドが値を返します`true`します。
+仮想プロセッサ ルートが起動する場合とからの戻り値、`Deactivate`メソッドは、値**false**、スケジューラを使用して UMS の完了リストをクエリする必要があります、`IUMSCompletionList::GetUnblockNotifications`メソッド、act、その情報にし、その後、`Deactivate`メソッドを再度します。 これは、手順を繰り返しますようになるまで、`Deactivate`メソッドが値を返します`true`します。
 
-`invalid_argument` 場合にスローされる引数`pContext`、値を持つ`NULL`します。
+`invalid_argument` 場合にスローされる引数`pContext`に NULL 値があります。
 
 `invalid_operation` 仮想プロセッサ ルートがアクティブ化されていない場合にスローされるか、引数`pContext`この仮想プロセッサ ルートがディスパッチされた最も最近実行コンテキストを表していません。
 

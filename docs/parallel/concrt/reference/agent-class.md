@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04202b647910914de8ebe92397efe1373e9508be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6d91f312b028f44e0671c7960d4b06c2634928
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401369"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162517"
 ---
 # <a name="agent-class"></a>agent クラス
 
@@ -108,7 +108,7 @@ agent(ScheduleGroup& _PGroup);
 
 ### <a name="remarks"></a>Remarks
 
-指定しない場合、ランタイムは、既定のスケジューラを使用して、`_PScheduler`または`_PGroup`パラメーター。
+`_PScheduler` または `_PGroup` パラメーターを指定しない場合、ランタイムは既定のスケジューラを使用しています。
 
 ##  <a name="dtor"></a> ~ エージェント
 
@@ -132,7 +132,7 @@ bool cancel();
 
 ### <a name="return-value"></a>戻り値
 
-`true` エージェントが取り消された場合`false`それ以外の場合。 実行が開始既にかが既に完了した場合、エージェントをキャンセルできません。
+**true** 、エージェントが取り消された場合**false**それ以外の場合。 実行が開始既にかが既に完了した場合、エージェントをキャンセルできません。
 
 ##  <a name="done"></a> 完成です
 
@@ -144,7 +144,7 @@ bool done();
 
 ### <a name="return-value"></a>戻り値
 
-`true` エージェントに移動した場合、`agent_done`状態、`false`それ以外の場合。 取り消されたエージェントに移動することはできません、`agent_done`状態。
+**true**にエージェントが移動した場合、`agent_done`状態、 **false**それ以外の場合。 取り消されたエージェントに移動することはできません、`agent_done`状態。
 
 ### <a name="remarks"></a>Remarks
 
@@ -172,7 +172,7 @@ bool start();
 
 ### <a name="return-value"></a>戻り値
 
-`true` エージェントが正しく起動する場合`false`それ以外の場合。 取り消されたエージェントを開始できません。
+**true**場合は、エージェントが正しく起動**false**それ以外の場合。 取り消されたエージェントを開始できません。
 
 ##  <a name="status"></a> 状態
 

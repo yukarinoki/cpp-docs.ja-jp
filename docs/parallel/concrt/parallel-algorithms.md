@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 23a4efb1412260ad71a610f53a7d1745157b3c53
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1eb46754f80bca89419e6c3c85db94ec802df2f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435000"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163401"
 ---
 # <a name="parallel-algorithms"></a>並列アルゴリズム
 
@@ -284,7 +284,7 @@ PPL では、3 つの並べ替えアルゴリズム: [:parallel_sort](reference/
 
 [!code-cpp[concrt-parallel-sort-points#3](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_14.cpp)]
 
-ハッシュ関数は、整数型を返す必要があります ([std::is_integral::value](../../standard-library/is-integral-class.md)あります`true`)。 この整数の型を型に変換できる必要があります`size_t`します。
+ハッシュ関数は、整数型を返す必要があります ([std::is_integral::value](../../standard-library/is-integral-class.md)あります**true**)。 この整数の型を型に変換できる必要があります`size_t`します。
 
 ###  <a name="choose_sort"></a> 並べ替えアルゴリズムの選択
 
@@ -321,7 +321,7 @@ PPL では、3 つの並べ替えアルゴリズム: [:parallel_sort](reference/
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[方法: parallel_for ループを記述する](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|使用する方法を示しています、`parallel_for`行列の乗算を実行するアルゴリズム。|
 |[方法: parallel_for_each ループを記述する](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|使用する方法を示しています、`parallel_for_each`内の素数の数を計算するアルゴリズム、 [std::array](../../standard-library/array-class-stl.md)並列オブジェクト。|

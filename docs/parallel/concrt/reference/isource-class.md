@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26f39b9fff9d5fad930123fc930afe1600cd259e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e53f8999b4559a221b335528ec20b6034de269d3
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396481"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162205"
 ---
 # <a name="isource-class"></a>ISource クラス
 
@@ -158,7 +158,7 @@ virtual message<T>* consume(
 
 ### <a name="remarks"></a>Remarks
 
-`consume`メソッドは`accept`への呼び出しでは前に必ず必要がありますが、`reserve`返さ`true`します。
+`consume`メソッドは`accept`への呼び出しでは前に必ず必要がありますが、`reserve`返さ**true**します。
 
 ##  <a name="dtor"></a> ~ ISource
 
@@ -236,7 +236,7 @@ virtual bool reserve(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。 予約はなど、多くの理由で失敗します。 メッセージが既に予約またはソースでした、予約を拒否する、など別のターゲットによって受け入れします。
+**true**場合は、メッセージが正常に予約された、 **false**それ以外の場合。 予約はなど、多くの理由で失敗します。 メッセージが既に予約またはソースでした、予約を拒否する、など別のターゲットによって受け入れします。
 
 ### <a name="remarks"></a>Remarks
 

@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fea4f576e347ca03dda1142b3118bf605bc9f385
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235348"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163121"
 ---
 # <a name="hstring-class"></a>HString クラス
 
@@ -225,7 +225,7 @@ bool IsValid() const throw()
 
 ### <a name="parameters"></a>パラメーター
 
-`true` 場合、現在`HString`オブジェクトがないと、空以外の場合、`false`します。
+**true**場合、現在`HString`オブジェクトがないと、空以外の場合、 **false**します。
 
 ## <a name="makereference"></a>Hstring::makereference
 
@@ -310,7 +310,7 @@ inline bool operator==(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合、 *lhs*と*rhs*パラメーターは、それ以外の`false`します。
+**true**場合、 *lhs*と*rhs*パラメーターは、それ以外の**false**します。
 
 ## <a name="operator-inequality"></a>Hstring::operator! = 演算子
 
@@ -343,7 +343,7 @@ inline bool operator!=( const HString& lhs,
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合、 *lhs*と*rhs*パラメーターが、それ以外の`false`します。
+**true**場合、 *lhs*と*rhs*パラメーターが、それ以外の**false**します。
 
 ## <a name="operator-less-than"></a>Hstring::operator&lt;演算子
 
@@ -365,7 +365,7 @@ inline bool operator<(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合、 *lhs*パラメーターより小さい*rhs*パラメーター、それ以外の`false`します。
+**true**場合、 *lhs*パラメーターより小さい*rhs*パラメーター、それ以外の**false**します。
 
 ## <a name="release"></a>Hstring::release
 

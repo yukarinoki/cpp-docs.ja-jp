@@ -1,7 +1,7 @@
 ---
 title: キーワード (C++) |Microsoft Docs
 ms.custom: index-page
-ms.date: 09/24/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38808ea3874964db7983c0f7193c919b9df05391
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169607"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162452"
 ---
 # <a name="keywords-c"></a>キーワード (C++)
 
@@ -31,19 +31,20 @@ ms.locfileid: "47169607"
 
 |||||
 |-|-|-|-|
-|[_ _abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[__alignof 演算子](alignof-operator.md)|[__asm](../assembler/inline/asm.md)|[__assume](../intrinsics/assume.md)|
-|[__based](based-pointers-cpp.md)|[_ _box](../dotnet/value-type-semantics.md) <sup>2</sup>|[__cdecl](cdecl.md)|[__declspec](declspec.md)|
-|[_ _delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[__except](try-except-statement.md)|[__fastcall](fastcall.md)|
-|[__finally](try-finally-statement.md)|[_ _forceinline](inline-functions-cpp.md)|[_ _gc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[_ _hook](hook.md) <sup>3</sup>|
-|[_ _identifier](../windows/identifier-cpp-cli.md)|[_ _if_exists](if-exists-statement.md)|[_ _if_not_exists](if-not-exists-statement.md)|[__inline](inline-functions-cpp.md)|
-|[__int16](int8-int16-int32-int64.md)|[__int32](int8-int16-int32-int64.md)|[__int64](int8-int16-int32-int64.md)|[__int8](int8-int16-int32-int64.md)|
-|[__interface](interface.md)|[__leave](try-finally-statement.md)|[__m128](m128.md)|[__m128d](m128d.md)|
-|[__m128i](m128i.md)|[__m64](m64.md)|[_ _multiple_inheritance](inheritance-keywords.md)|[_ _nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
-|[__noop](../intrinsics/noop.md)|**_ _pin** <sup>2</sup>|**_ _property** <sup>2</sup>|[__raise](raise.md)|
-|**_ _sealed** <sup>2</sup>|[_ _single_inheritance](inheritance-keywords.md)|[__stdcall](stdcall.md)|[__super](super.md)|
-|[__thiscall](thiscall.md)|[_ _try/\__except](try-except-statement.md)|[_ _try/\__finally](try-finally-statement.md)|[_ _try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|
-|[__unaligned](unaligned.md)|[_ _unhook](unhook.md) <sup>3</sup>|[_ _uuidof](uuidof-operator.md)|[_ _value](../dotnet/value-type-semantics.md) <sup>2</sup>|
-|[_ _virtual_inheritance](inheritance-keywords.md)|[__w64](w64.md)|[_ _wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
+|[_ _abstract](../dotnet/declaration-of-a-managed-class-type.md) <sup>2</sup>|[_ _alignof 演算子](alignof-operator.md) <sup>4</sup>|[_ _asm](../assembler/inline/asm.md) <sup>4</sup>|[_assume](../intrinsics/assume.md) <sup>4</sup>|
+|[_ _based](based-pointers-cpp.md) <sup>4</sup>|[_ _box](../dotnet/value-type-semantics.md) <sup>2</sup>|[_ _cdecl](cdecl.md) <sup>4</sup>|[_ _declspec](declspec.md) <sup>4</sup>|
+|[_ _delegate](../dotnet/delegates-and-events.md) <sup>2</sup>|[__event](event.md)|[_ _except](try-except-statement.md) <sup>4</sup>|[_ _fastcall](fastcall.md) <sup>4</sup>|
+|[_ _finally](try-finally-statement.md) <sup>4</sup>|[_ _forceinline](inline-functions-cpp.md) <sup>4</sup>|[_ _gc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|[_ _hook](hook.md) <sup>3</sup>|
+|[_ _identifier](../windows/identifier-cpp-cli.md)|[_ _if_exists](if-exists-statement.md)|[_ _if_not_exists](if-not-exists-statement.md)|[_ _inline](inline-functions-cpp.md) <sup>4</sup>|
+|[_ _int16](int8-int16-int32-int64.md) <sup>4</sup>|[_ _int32](int8-int16-int32-int64.md) <sup>4</sup>|[_ _int64](int8-int16-int32-int64.md) <sup>4</sup>|[_ _int8](int8-int16-int32-int64.md) <sup>4</sup>|
+|[__interface](interface.md)|[_ _leave](try-finally-statement.md) <sup>4</sup>|[__m128](m128.md)|[__m128d](m128d.md)|
+|[__m128i](m128i.md)|[__m64](m64.md)|[_ _multiple_inheritance](inheritance-keywords.md) <sup>4</sup>|[_ _nogc](../dotnet/declaration-of-a-clr-reference-class-object.md) <sup>2</sup>|
+|[__noop](../intrinsics/noop.md)|**_ _pin** <sup>2</sup>|**_ _property** <sup>2</sup>|[_ _ptr32](ptr32-ptr64.md) <sup>4</sup>|
+|[_ _ptr64](ptr32-ptr64.md)<sup>4</sup>|[__raise](raise.md)|[_ _restrict](extension-restrict.md) <sup>4</sup>|**_ _sealed** <sup>2</sup>|
+|[_ _single_inheritance](inheritance-keywords.md)<sup>4</sup>|[_ _sptr](sptr-uptr.md)<sup>4</sup>|[_ _stdcall](stdcall.md) <sup>4</sup>|[__super](super.md)|
+|[__thiscall](thiscall.md)|[_ _try_cast](../dotnet/cast-notation-and-introduction-of-safe-cast-angles.md) <sup>2</sup>|[_ _unaligned](unaligned.md) <sup>4</sup>|[_ _unhook](unhook.md) <sup>3</sup>|
+|[_ _uptr](sptr-uptr.md) <sup>4</sup>|[_ _uuidof](uuidof-operator.md) <sup>4</sup>|[_ _value](../dotnet/value-type-semantics.md) <sup>2</sup>|[_ _vectorcall](vectorcall.md) <sup>4</sup>|
+|[_ _virtual_inheritance](inheritance-keywords.md) <sup>4</sup>|[_ _w64](w64.md) <sup>4</sup>|[_ _wchar_t](fundamental-types-cpp.md)|[abstract](../windows/abstract-cpp-component-extensions.md)|
 |[alignas](align-cpp.md)|[array](../windows/arrays-cpp-component-extensions.md)|[auto](auto-keyword.md)|[bool](bool-cpp.md)|
 |[break](break-statement-cpp.md)|[case](switch-statement-cpp.md)|[catch](try-throw-and-catch-statements-cpp.md)|[char](fundamental-types-cpp.md)|
 |[char16_t](char-wchar-t-char16-t-char32-t.md)|[char32_t](char-wchar-t-char16-t-char32-t.md)|[class](class-cpp.md)|[const](const-cpp.md)|
@@ -56,7 +57,7 @@ ms.locfileid: "47169607"
 |[は for each](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |[汎用](../windows/generics-cpp-component-extensions.md)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|[initonly](../dotnet/initonly-cpp-cli.md)|
 |[インライン](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)|[インターフェイス構造体](../windows/interface-class-cpp-component-extensions.md)|
-|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|[リテラル](../windows/literal-cpp-component-extensions.md)|[long](fundamental-types-cpp.md)|[変更可能です](mutable-data-members-cpp.md)|
+|[interior_ptr](../windows/interior-ptr-cpp-cli.md)|[name](../windows/literal-cpp-component-extensions.md)|[long](fundamental-types-cpp.md)|[変更可能です](mutable-data-members-cpp.md)|
 |[naked](naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[new](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)|[new](new-operator-cpp.md)|
 |[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|[nothrow](nothrow-cpp.md) <sup>1</sup>|
 |[novtable](novtable.md) <sup>1</sup>|[nullptr](nullptr.md)|[operator](operator-overloading.md)|[private](private-cpp.md)|
@@ -72,22 +73,21 @@ ms.locfileid: "47169607"
 |[値構造体](../windows/classes-and-structs-cpp-component-extensions.md)|[virtual](virtual-cpp.md)|[void](void-cpp.md)|[volatile](volatile-cpp.md)|
 |[while](while-statement-cpp.md)|
 
+<sup>1</sup>の拡張属性、 **_ _declspec**キーワード。
 
-1 の拡張属性、 **_ _declspec**キーワード。
+<sup>2</sup>のみ C++ マネージ拡張に適用できます。 この構文は現在非推奨とされます。 参照してください[Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)詳細についてはします。
 
-2 のみ C++ マネージ拡張に適用できます。 この構文は現在非推奨とされます。
+<sup>3</sup>イベント処理で使用される組み込み関数。
 
-イベントの処理に使用される 3 つの組み込み関数。
+<sup>4</sup>以前のバージョンと旧バージョンと互換性のため、これらのキーワードは使用可能な (既定値) の両方で、先頭にアンダー スコア 2 つと、1 つ先頭にアンダー スコアと、Microsoft 拡張機能を有効になっています。
 
-参照してください[Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)詳細についてはします。
-
-## <a name="microsoft-specific"></a>Microsoft 固有の仕様
+**Microsoft 固有の仕様**
 
 Microsoft C++ では、先頭に 2 つのアンダースコアが付いている識別子はコンパイラ実装用に予約されています。 Microsoft の規約では、Microsoft 固有のキーワードには先頭に 2 つのアンダースコアを付けることになっています。 したがって、これらの単語を識別子名として使用することはできません。
 
-Microsoft 拡張機能は既定で有効になっています。 プログラムには完全に移植可能であることを確認するには、する、ANSI と互換性のあるを指定することで、Microsoft の拡張機能を無効にする[/Za](../build/reference/za-ze-disable-language-extensions.md)コンパイル時にコマンド ライン オプション (ANSI 互換性用にコンパイルします)。 これにより、Microsoft 固有のキーワードが無効になります。
+Microsoft 拡張機能は既定で有効になっています。 プログラムには完全に移植可能であることを確認するには、する、指定することで、Microsoft の拡張機能を無効にする、 [/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)コンパイル時にオプション。 これを行うと、いくつかの Microsoft 固有キーワードは無効になります。
 
-Microsoft 拡張機能を有効にすると、Microsoft 固有のキーワードをプログラム内で使用できます。 ANSI 準拠のために、これらのキーワードは 2 つのアンダースコアで始まります。 旧バージョンと互換性のため、1 つのアンダー スコアのバージョン以外のすべての二重文字キーワードの **_ _except**、 **_ _finally**、 **_ _leave**、および **__try**はサポートされています。 さらに、 **_ _cdecl**は先頭にアンダー スコアなしで使用できます。
+Microsoft 拡張機能を有効にすると、Microsoft 固有のキーワードをプログラム内で使用できます。 ANSI 準拠のために、これらのキーワードは 2 つのアンダースコアで始まります。 旧バージョンと互換性のためは、二重文字キーワードの多くのアンダー スコア 1 バージョンがサポートされます。 さらに、 **_ _cdecl**は先頭にアンダー スコアなしで使用できます。
 
 **_ _Asm**キーワードに置き換えられます C++`asm`構文。 `asm` は他の C++ 実装との互換性を維持するために予約されていますが、実装されていません。 使用 **_ _asm**します。
 

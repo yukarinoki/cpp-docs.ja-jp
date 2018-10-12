@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 504cfe0780cfb0116f59ae67937ea5f0370dc8b2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235569"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162582"
 ---
 # <a name="safeint-functions"></a>SafeInt 関数
 
@@ -101,7 +101,7 @@ inline bool SafeAdd (
 
 ### <a name="return-value"></a>戻り値
 
-`true` エラーが発生しなかった場合`false`エラーが発生した場合。
+**true**場合、エラーは発生しません。**false**エラーが発生した場合。
 
 ## <a name="safecast"></a>SafeCast
 
@@ -125,7 +125,7 @@ inline bool SafeCast (
 
 ### <a name="return-value"></a>戻り値
 
-`true` エラーが発生しなかった場合`false`エラーが発生した場合。
+**true**場合、エラーは発生しません。**false**エラーが発生した場合。
 
 ## <a name="safedivide"></a>SafeDivide
 
@@ -153,7 +153,7 @@ inline bool SafeDivide (
 
 ### <a name="return-value"></a>戻り値
 
-`true` エラーが発生しなかった場合`false`エラーが発生した場合。
+**true**場合、エラーは発生しません。**false**エラーが発生した場合。
 
 ## <a name="safeequals"></a>SafeEquals
 
@@ -177,7 +177,7 @@ inline bool SafeEquals (
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合*t*と*u*はそれ以外の`false`します。
+**true**場合*t*と*u*はそれ以外の**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -205,7 +205,7 @@ inline bool SafeGreaterThan (
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合*t*がより大きい*u*。 そうしないと`false`します。
+**true**場合*t*がより大きい*u*。 そうしないと**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -233,7 +233,7 @@ inline bool SafeGreaterThanEquals (
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合*t*がより大きいまたは等しい*u*。 そうしないと`false`します。
+**true**場合*t*がより大きいまたは等しい*u*。 そうしないと**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -261,7 +261,7 @@ inline bool SafeLessThan (
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合*t*がより小さい*u*。 そうしないと`false`します。
+**true**場合*t*がより小さい*u*。 そうしないと**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -289,7 +289,7 @@ inline bool SafeLessThanEquals (
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合*t*に等しいまたはそれよりも小さい*u*。 そうしないと`false`します。
+**true**場合*t*に等しいまたはそれよりも小さい*u*。 そうしないと**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -321,7 +321,7 @@ inline bool SafeModulus (
 
 ### <a name="return-value"></a>戻り値
 
-`true` エラーが発生しなかった場合`false`エラーが発生した場合。
+**true**場合、エラーは発生しません。**false**エラーが発生した場合。
 
 ## <a name="safemultiply"></a>SafeMultiply
 
@@ -373,7 +373,7 @@ inline bool SafeNotEquals (
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合*t*と*u*それ以外のない`false`します。
+**true**場合*t*と*u*それ以外のない**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -405,4 +405,4 @@ inline bool SafeSubtract (
 
 ### <a name="return-value"></a>戻り値
 
-`true` エラーが発生しなかった場合`false`エラーが発生した場合。
+**true**場合、エラーは発生しません。**false**エラーが発生した場合。

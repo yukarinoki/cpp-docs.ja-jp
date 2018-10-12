@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 94c094fe21127592bd8756d0f0b467e2c74df487
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 93fb92c51ee16593f9314d7172f0b38e6d0918e8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789242"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162478"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator クラス
 
@@ -60,7 +60,7 @@ class MakeAllocator<T, true>;
 型の名前。
 
 *hasWeakReferenceSupport*<br/>
-`true` 弱い参照は; をサポートするオブジェクトのメモリを割り当てられません。`false`弱い参照をサポートしていないオブジェクトのメモリを割り当てられません。
+**true**弱い参照は; をサポートするオブジェクトのメモリを割り当てられません。**false**弱い参照をサポートしていないオブジェクトのメモリを割り当てられません。
 
 ## <a name="remarks"></a>Remarks
 

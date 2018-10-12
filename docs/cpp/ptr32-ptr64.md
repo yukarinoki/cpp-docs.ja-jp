@@ -1,13 +1,17 @@
 ---
 title: _ _ptr32、_ _ptr64 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __ptr32_cpp
 - __ptr64_cpp
+- __ptr32
+- __ptr64
+- _ptr32
+- _ptr64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -22,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 573af4088e288403edaa8e5c34fb84817442c8f5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 50360ab6a163f70f4f950e44d963b9aa67dc04f4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46115997"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161646"
 ---
 # <a name="ptr32-ptr64"></a>__ptr32、__ptr64
 
@@ -46,6 +50,8 @@ int * __ptr64 p64;
 
 > [!NOTE]
 > 使用することはできません **_ _ptr32**または **_ _ptr64**でコンパイルするときに **/clr: 純粋な**します。 それ以外の場合、コンパイラ エラー C2472 が生成されます。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
+
+以前のバージョンとの互換性のため **_ptr32**と **_ptr64**のシノニムで **_ _ptr32**と **_ _ptr64**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
 ## <a name="example"></a>例
 

@@ -35,12 +35,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a674d63c52f6f204d0bb69c69cd5814cd6d9761a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85f9498f44f4f1ec2598e6263c003d041f519105
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788943"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162218"
 ---
 # <a name="comptrref-class"></a>ComPtrRef クラス
 
@@ -176,11 +176,11 @@ bool operator==(
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子と`true`場合オブジェクト *、* がオブジェクトと等しい*b*、それ以外の`false`します。
+最初の演算子と**true**場合オブジェクト *、* がオブジェクトと等しい*b*、それ以外の**false**します。
 
-2 番目と 3 番目の演算子を生成`true`場合オブジェクト *、* と等しい`nullptr`、それ以外の`false`します。
+2 番目と 3 番目の演算子を生成**true**場合オブジェクト *、* と等しい**nullptr**、それ以外の**false**します。
 
-4 番目と 5 番目の演算子を生成`true`場合オブジェクト *、* がオブジェクトと等しい*b*、それ以外の`false`します。
+4 番目と 5 番目の演算子を生成**true**場合オブジェクト *、* がオブジェクトと等しい*b*、それ以外の**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -227,11 +227,11 @@ bool operator!=(
 
 ### <a name="return-value"></a>戻り値
 
-最初の演算子と`true`場合オブジェクト *、* オブジェクトと等しくない*b*、それ以外の`false`します。
+最初の演算子と**true**場合オブジェクト *、* オブジェクトと等しくない*b*、それ以外の**false**します。
 
-2 番目と 3 番目の演算子を生成`true`場合オブジェクト *、* が等しくない`nullptr`、それ以外の`false`します。
+2 番目と 3 番目の演算子を生成**true**場合オブジェクト *、* が等しくない**nullptr**、それ以外の**false**します。
 
-4 番目と 5 番目の演算子を生成`true`場合オブジェクト *、* オブジェクトと等しくない*b*、それ以外の`false`します。
+4 番目と 5 番目の演算子を生成**true**場合オブジェクト *、* オブジェクトと等しくない*b*、それ以外の**false**します。
 
 ### <a name="remarks"></a>Remarks
 

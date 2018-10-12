@@ -1,12 +1,14 @@
 ---
 title: _ _restrict |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __restrict_cpp
+- __restrict
+- _restrict
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3d9754f8b0b218fc4d627eb0e27504e8521bf776
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9245571e21be04cc250347f30ce8ddb464ff9b55
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076438"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163453"
 ---
 # <a name="restrict"></a>__restrict
 
@@ -34,6 +36,8 @@ ms.locfileid: "46076438"
 - ときに **_ _restrict**が使用すると、コンパイラは伝達されません変数の非エイリアスのプロパティ。 つまりを割り当てた場合、 **_ _restrict**変数以外に **_ _restrict**変数コンパイラも、-_ _restrict 以外には別名を変数。 これは、別の動作、**制限**C99 仕様のキーワード。
 
 一般に、関数全体の動作に影響を及ぼす場合、キーワードよりも `__declspec ( restrict )` を使用する方が適切です。
+
+以前のバージョンとの互換性のため **_restrict**のシノニムです **_ _restrict**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)は指定します。
 
 Visual Studio 2015 以降では、 **_ _restrict** C++ 参照で使用できます。
 

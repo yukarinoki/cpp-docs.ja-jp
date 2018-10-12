@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2798c4abe33e49d2ac6199ad6f9a1013805fde7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bcdb05230cdacbf626235e315e605414c435493
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424418"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163065"
 ---
 # <a name="networklinkregistry-class"></a>network_link_registry クラス
 
@@ -124,7 +124,7 @@ virtual bool contains(_EType _Link) = 0;
 
 ### <a name="return-value"></a>戻り値
 
-`true` ブロックが見つかった場合`false`それ以外の場合。
+**true**ブロックが見つかった場合**false**それ以外の場合。
 
 ##  <a name="count"></a> カウント
 
@@ -153,7 +153,7 @@ virtual bool remove(_EType _Link) = 0;
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、リンクが見つかり、削除、`false`それ以外の場合。
+**true**場合は、リンクが見つかり、削除、 **false**それ以外の場合。
 
 ## <a name="see-also"></a>関連項目
 

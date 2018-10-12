@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78cbd53baf9e9ade8c20f3b9f5fa419eeb2d1c80
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211005f273500992440c0e95d2c3c4e3adcef581
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441916"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163414"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency 名前空間関数 (AMP)
 
@@ -92,7 +92,7 @@ inline bool atomic_compare_exchange(
 
 ### <a name="return-value"></a>戻り値
 
-操作が正常に終了した場合は `true`。それ以外の場合は `false`。
+**true**操作が成功した。 それ以外の場合**false**します。
 
 ##  <a name="atomic_exchange"></a>  atomic_exchange 関数 (C++ AMP)
 
@@ -554,7 +554,7 @@ concurrency::completion_future copy_async(
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-制限句 `restrict(amp)` を使用して関数の実行を中止します。 AMP ランタイムは、呼び出しが検出されると発生する[runtime_exception](runtime-exception-class.md)エラー メッセージで例外"リファレンス ラスタライザー: シェーダー中止命令"。
+制限句 `restrict(amp)` を使用して関数の実行を中止します。 AMP ランタイムが呼び出しを検出すると、 [runtime_exception](runtime-exception-class.md) 例外が発生し、"リファレンス ラスタライザー: シェーダー中止命令が発行" というエラー メッセージが返されます。
 
 ```
 void direct3d_abort() restrict(amp);

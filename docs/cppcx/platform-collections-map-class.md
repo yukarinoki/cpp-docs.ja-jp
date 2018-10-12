@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9eccefff291dc509f846bce951cfe9508834876e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7e64f5857a2b0530fb0346a2635611db03fd9bc8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103880"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162556"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
@@ -173,7 +173,7 @@ Map 要素の検索に使用するキー。 型*キー* typename が*K*します
 
 ### <a name="return-value"></a>戻り値
 
-キーが見つかった場合は `true`。それ以外の場合は `false`。
+**true**キーが見つかった。 それ以外の場合**false**します。
 
 ## <a name="insert"></a>  Map::insert メソッド
 
@@ -195,7 +195,7 @@ virtual bool Insert(K key, V value);
 
 ### <a name="return-value"></a>戻り値
 
-`true` 現在のマップ内の既存の要素のキーと一致するかどうか*キー*し、その要素の値の部分に設定されている*値*します。 `false` 現在のマップ内の既存の要素が一致しない場合*キー*と*キー*と*値*パラメーターのキー/値ペアに行われ、現在のマップに追加されます。
+**true**現在のマップ内の既存の要素のキーと一致するかどうか*キー*し、その要素の値の部分に設定されている*値*します。 **false**現在のマップ内の既存の要素が一致しない場合*キー*と*キー*と*値*パラメーターはキー/値ペアに加えに追加し、現在のマップ。
 
 ## <a name="lookup"></a>  Map::lookup メソッド
 
@@ -304,4 +304,4 @@ virtual property unsigned int Size;
 ## <a name="see-also"></a>関連項目
 
 [プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
-[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[C++ で Windows ランタイム コンポーネントを作成する](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

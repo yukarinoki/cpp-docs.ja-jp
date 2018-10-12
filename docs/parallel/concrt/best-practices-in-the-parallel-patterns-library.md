@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28bedc703a8fa965b5380cb8c7eba840d07f7772
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d5ad7d0210f99b1b1aa5c481ed1b8695c68fb311
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396936"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163388"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>並列パターン ライブラリに関するベスト プラクティス
 
@@ -162,7 +162,7 @@ Container 1: Freeing resources...Exiting program...
 
 などの並列ループ[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)または[concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)ブロックによって制御される操作により、ランタイムで短時間で多数のスレッドを作成します。
 
-同時実行ランタイムでは、タスクが終了するか、協調的にブロックまたは譲渡すると、追加の処理が実行されます。 並列ループの 1 回の反復がブロックすると、別の反復が開始されることがあります。 使用可能なアイドル スレッドが存在しない場合は、新しいスレッドが作成されます。
+コンカレンシー ランタイムでは、タスクが終了するか、協調的にブロックまたは譲渡すると、追加の処理が実行されます。 並列ループの 1 回の反復がブロックすると、別の反復が開始されることがあります。 使用可能なアイドル スレッドが存在しない場合は、新しいスレッドが作成されます。
 
 並列ループの本体がときどきブロックする程度であれば、この機構によりタスクの全体的なスループットが最大限に高まります。 ただし、反復処理で頻繁にブロックが発生する場合は、追加の処理を実行するために多数のスレッドが作成される可能性があります。 それに伴って、メモリ不足の状態に陥ったり、ハードウェア リソースが不適切に使用されたりする場合があります。
 
@@ -180,7 +180,7 @@ Container 1: Freeing resources...Exiting program...
 
 タスクが協調的ブロッキング操作を実行すると、ランタイムは最初のタスクがデータを待っている間に他の処理を実行できます。 待機中のタスクがブロック解除すると、ランタイムはそのタスクを再スケジュールします。 ランタイムは、通常、直近にブロック解除したタスクから順に再スケジュールします。 そのため、ブロッキング操作中に不要な処理がスケジュールされ、パフォーマンスが低下します。 したがって、並列処理を取り消す前にブロッキング操作を実行すると、そのブロッキング操作が原因で `cancel` の呼び出しが遅れる可能性があります。 それにより、他のタスクで不要な処理が実行されるようになります。
 
-次の例について考えます。この例では、提供された述語関数を満たす指定の配列の要素を検索する `parallel_find_answer` 関数を定義します。 述語関数が `true` を返すと、並列処理関数は `Answer` オブジェクトを作成し、タスク全体を取り消します。
+次の例について考えます。この例では、提供された述語関数を満たす指定の配列の要素を検索する `parallel_find_answer` 関数を定義します。 述語の関数が返す場合**true**、並列処理関数を作成、`Answer`オブジェクトし、タスク全体を取り消します。
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 
@@ -200,7 +200,7 @@ Container 1: Freeing resources...Exiting program...
 
 [!code-cpp[concrt-parallel-sum-of-primes#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_15.cpp)]
 
-また、頻繁なロック操作によってループが事実上シリアル化されるため、パフォーマンスが低下する可能性もあります。 さらに、同時実行ランタイム オブジェクトがブロック操作を実行すると、スケジューラによって追加のスレッドが作成され、最初のスレッドがデータを待っている間に他の処理が実行される可能性があります。 共有データを待つタスクが多数存在し、それに対処するためにランタイムで多数のスレッドが作成されると、アプリケーションのパフォーマンス低下やリソース不足状態が発生することがあります。
+また、頻繁なロック操作によってループが事実上シリアル化されるため、パフォーマンスが低下する可能性もあります。 さらに、コンカレンシー ランタイム オブジェクトがブロック操作を実行すると、スケジューラによって追加のスレッドが作成され、最初のスレッドがデータを待っている間に他の処理が実行される可能性があります。 共有データを待つタスクが多数存在し、それに対処するためにランタイムで多数のスレッドが作成されると、アプリケーションのパフォーマンス低下やリソース不足状態が発生することがあります。
 
 PPL の定義、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスは、ロック制御不要の方法で共有リソースへのアクセスを提供することで、共有状態を回避するのに役立ちます。 `combinable` クラスにはスレッド ローカル ストレージが用意されており、詳細な計算を実行した後、その計算を最終結果にマージできます。 `combinable` オブジェクトは減少変数と考えることができます。
 

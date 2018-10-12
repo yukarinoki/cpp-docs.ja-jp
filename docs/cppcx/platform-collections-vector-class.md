@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 36fe82bc5d17cd3c4951b008af28ba89b171c78f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: acf3ae2fd16eb3aacbc0a2e681ae39aece1b4dd4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103933"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163219"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
@@ -71,7 +71,7 @@ Vector オブジェクトに含まれている要素の型。
 
 **ベクター**クラスは、C++ の具象実装、 [:ivector](/uwp/api/Windows.Foundation.Collections.IVector_T_)インターフェイス。
 
-使用しようとした場合、**ベクター**入力パブリックの戻り値またはパラメーター、コンパイラ エラー C3986 が発生します。 パラメーターを変更してエラーを修正したり、戻り値の型を[:ivector](/uwp/api/Windows.Foundation.Collections.IVector_T_)します。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
+使用しようとした場合、**ベクター**入力パブリックの戻り値またはパラメーター、コンパイラ エラー C3986 が発生します。 このエラーを修正するには、パラメーターまたは戻り値の型を [Windows::Foundation::Collections::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_)に変更します。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
 ### <a name="members"></a>メンバー
 
@@ -240,11 +240,11 @@ virtual bool IndexOf(T value, unsigned int* index);
 *index*<br/>
 項目の 0 から始まるインデックス場合パラメーター*値*。 それ以外は 0。
 
-*インデックス*項目は、ベクターの最初の要素か、項目が見つからなかった場合、パラメーターが 0 です。 戻り値が `true` の場合、項目が見つかり、項目は最初の要素です。それ以外の場合は、項目は見つかっていません。
+*インデックス*項目は、ベクターの最初の要素か、項目が見つからなかった場合、パラメーターが 0 です。 場合、戻り値は**true**項目が見つかったと最初の要素を;、それ以外の場合、項目が見つかりません。
 
 ### <a name="return-value"></a>戻り値
 
-指定した項目が見つかった場合は `true`。それ以外の場合は `false`。
+**true**場合、指定した項目が見つからなかった場合は、 **false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -401,4 +401,4 @@ A [std::initializer_list](../standard-library/initializer-list-class.md)型の�
 ## <a name="see-also"></a>関連項目
 
 [プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
-[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[C++ で Windows ランタイム コンポーネントを作成する](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

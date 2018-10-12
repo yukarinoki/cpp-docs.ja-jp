@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0bec396efa2d0a4191c67440e4ed3ed5d4bc083
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1d8a9340abf7ca16fe2f0e6d6660bf14f00bd594
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110793"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161230"
 ---
 # <a name="fundamental-types-ccx"></a>基本的な型 (C++/CX)
 
@@ -26,7 +26,7 @@ ms.locfileid: "44110793"
 
 |名前空間|C + + CX 名|定義|標準 C++ 名|値の範囲|
 |---------------|-----------------------------------------------------------------------|----------------|-------------------------|---------------------|
-|プラットフォーム|ブール型|8 ビットのブール値。|bool|`true` (0 以外) と `false` (0)|
+|プラットフォーム|ブール型|8 ビットのブール値。|bool|**true** (0 以外) と**false** (ゼロ)|
 |default|char16|Unicode (UTF-16) コード ポイントを表す 16 ビットの数字以外の値。|wchar_t<br /><br /> - または -<br /><br /> L'c'|(Unicode 標準によって指定される)|
 
 ## <a name="numeric-types"></a>数値型

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 13ddf5a303096d3244f6b8b59e58bcb41bafe91f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee06d9a30339a72bd7137db6f277a1eb41028d50
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374263"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163090"
 ---
 # <a name="singleassignment-class"></a>single_assignment クラス
 
@@ -58,7 +58,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 |名前|説明|
 |----------|-----------------|
-|[single_assignment](#ctor)|オーバーロードされます。 構築、`single_assignment`メッセージング ブロックします。|
+|[single_assignment](#ctor)|オーバーロードされます。 `single_assignment` メッセージング ブロックを構築します。|
 |[~ single_assignment デストラクター](#dtor)|破棄、`single_assignment`メッセージング ブロックします。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -66,7 +66,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |名前|説明|
 |----------|-----------------|
 |[has_value](#has_value)|チェックするかどうかこれ`single_assignment`メッセージング ブロックを値はまだ初期化されています。|
-|[value](#value)|格納されているメッセージの現在のペイロードへの参照を取得、`single_assignment`メッセージング ブロックします。|
+|[値](#value)|格納されているメッセージの現在のペイロードへの参照を取得、`single_assignment`メッセージング ブロックします。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
@@ -158,7 +158,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` ブロックは、値を受け取った場合`false`それ以外の場合。
+**true**ブロックは、値を受け取った場合**false**それ以外の場合。
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -236,11 +236,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。
+**true**場合は、メッセージが正常に予約された、 **false**それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
 
-後`reserve`と呼ばれる場合は、返された場合`true`, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
+後`reserve`と呼ばれる場合は、返された場合**true**, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -274,7 +274,7 @@ A [message_status](concurrency-namespace-enums.md)メッセージとは、ター
 
 ##  <a name="ctor"></a> single_assignment
 
-構築、`single_assignment`メッセージング ブロックします。
+`single_assignment` メッセージング ブロックを構築します。
 
 ```
 single_assignment();

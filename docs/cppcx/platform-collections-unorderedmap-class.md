@@ -11,12 +11,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2050be008f89ff2d125842d5919407dc292eed40
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b0b8a17cf83171a570f2ca3f6ff40c657d17164d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105836"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162348"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap クラス
 
@@ -58,7 +58,7 @@ ref class Map sealed;
 
 - パブリック列挙型クラス
 
-**UnorderedMap**のラッパーでは基本的に[std::unordered_map](../standard-library/unordered-map-class.md) Windows ランタイム型の格納をサポートします。 具象実装、 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) Windows ランタイム インターフェイスのパブリックの間で渡される型。 パブリックの戻り値またはパラメーターで `Platform::Collections::UnorderedMap` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を変更することで、エラーを修正する[Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)します。
+**UnorderedMap**のラッパーでは基本的に[std::unordered_map](../standard-library/unordered-map-class.md) Windows ランタイム型の格納をサポートします。 具象実装、 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) Windows ランタイム インターフェイスのパブリックの間で渡される型。 パブリックの戻り値またはパラメーターで `Platform::Collections::UnorderedMap` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 エラーを修正するには、パラメーターや戻り値の型を [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)に変更します。
 
 詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)します。
 
@@ -163,7 +163,7 @@ UnorderedMap 要素の検索に使用するキー。 型*キー* typename が*K*
 
 ### <a name="return-value"></a>戻り値
 
-キーが見つかった場合は `true`。それ以外の場合は `false`。
+**true**キーが見つかった。 それ以外の場合**false**します。
 
 ## <a name="insert"></a>  UnorderedMap::Insert Method
 
@@ -188,7 +188,7 @@ virtual bool Insert(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 現在のマップ内の既存の要素のキーと一致するかどうか*キー*し、その要素の値の部分に設定されている*値*します。 `false` 現在のマップ内の既存の要素が一致しない場合*キー*と*キー*と*値*パラメーターのキー/値ペアに行われ、現在の UnorderedMap に追加します。
+**true**現在のマップ内の既存の要素のキーと一致するかどうか*キー*し、その要素の値の部分に設定されている*値*します。 **false**現在のマップ内の既存の要素が一致しない場合*キー*と*キー*と*値*パラメーターはキー/値ペアに加えに追加し、現在の UnorderedMap します。
 
 ## <a name="lookup"></a>  Unorderedmap::lookup メソッド
 
@@ -374,4 +374,4 @@ A [std::initializer_list](../standard-library/initializer-list-class.md)の[std:
 [Platform::Collections::Map クラス](../cppcx/platform-collections-map-class.md)<br/>
 [Platform::Collections::UnorderedMapView クラス](../cppcx/platform-collections-unorderedmapview-class.md)<br/>
 [コレクション](../cppcx/collections-c-cx.md)<br/>
-[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[C++ で Windows ランタイム コンポーネントを作成する](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

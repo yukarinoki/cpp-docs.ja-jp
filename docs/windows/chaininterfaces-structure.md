@@ -27,12 +27,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: df483f08e96f2bd479504028ce4ce17513bb7d41
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 28683d8c69a800cb6f9a365beda26c75b3a69d15
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789022"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161815"
 ---
 # <a name="chaininterfaces-structure"></a>ChainInterfaces 構造体
 
@@ -117,7 +117,7 @@ struct ChainInterfaces<
 派生型の基本型。
 
 *hasImplements*<br/>
-ブール値の場合に`true`、ため使用できません、 [MixIn](../windows/mixin-structure.md)構造から派生していないクラスを使用して、[実装](../windows/implements-structure.md)構造体。
+ブール値の場合に**true**、ため使用できません、 [MixIn](../windows/mixin-structure.md)構造から派生していないクラスを使用して、[実装](../windows/implements-structure.md)構造体。
 
 ## <a name="members"></a>メンバー
 
@@ -169,7 +169,7 @@ __forceinline bool CanCastTo(
 
 ### <a name="return-value"></a>戻り値
 
-`true` すべてのキャスト操作が成功した場合それ以外の場合、`false`します。
+**true**すべてのキャスト操作が成功した場合、それ以外の場合**false**します。
 
 ## <a name="casttounknown"></a>Chaininterfaces::casttounknown
 
@@ -216,7 +216,7 @@ static const unsigned long IidCount = Details::InterfaceTraits<I0>::IidCount + D
 
 ### <a name="remarks"></a>Remarks
 
-テンプレート パラメーター *I0*と*I1*が必要なパラメーターと*I2*を通じて*I9*は省略可能です。通常、各インターフェイスの IID の数は、1 になります。
+テンプレート パラメーター *I0*と*I1*が必要なパラメーターと*I2*を通じて*I9*は省略可能です。 通常、各インターフェイスの IID の数は、1 になります。
 
 ## <a name="verify"></a>Chaininterfaces::verify
 
