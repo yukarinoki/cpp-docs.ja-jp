@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 721dd285760027c35ae93d89ec5bb3fde6e9ba11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 86dc19600dc8cbb452db585993dec85c3f7b8591
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413452"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328390"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog クラス
 
@@ -272,7 +272,7 @@ void GetMargins(
 ### <a name="parameters"></a>パラメーター
 
 *lpRectMargins*<br/>
-ポインターを[RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)現在選択されているプリンターの印刷の余白 (1/1000 インチまたは 1/100 mm) で記述するオブジェクト。 この四角形に興味がない場合は、このパラメーターは、NULL を渡します。
+ポインターを[RECT](rect-structure.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)現在選択されているプリンターの印刷の余白 (1/1000 インチまたは 1/100 mm) で記述するオブジェクト。 この四角形に興味がない場合は、このパラメーターは、NULL を渡します。
 
 *lpRectMinMargins*<br/>
 ポインターを`RECT`構造または`CRect`現在選択されているプリンターの印刷の余白の最小値 (1/1000 インチまたは 1/100 mm) で記述するオブジェクト。 この四角形に興味がない場合は、このパラメーターは、NULL を渡します。
@@ -351,7 +351,7 @@ virtual UINT OnDrawPage(
 - 戻り値のアドレス形式の WM_PSD_YAFULLPAGERECT 領域。 この領域は、サンプル ページ領域の端に拡張されます。
 
 *lpRect*<br/>
-ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)描画領域の座標を格納しているオブジェクト。
+ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT](rect-structure.md)描画領域の座標を格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

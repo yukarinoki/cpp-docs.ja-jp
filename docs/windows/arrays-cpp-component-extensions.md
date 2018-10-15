@@ -1,7 +1,7 @@
 ---
-title: 配列 (C++ コンポーネント拡張) |Microsoft Docs
+title: 配列 (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b1a1f977e15d80d631799d8a9e101a8c85e3aaf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402851"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328104"
 ---
-# <a name="arrays-c-component-extensions"></a>配列 (C++ コンポーネント拡張)
+# <a name="arrays-ccli-and-ccx"></a>配列 (C +/cli および C++/cli CX)
 
 `Platform::Array<T>` C++ 型/cli CX、または**配列**キーワードは c++/cli CLI では、指定した型と初期値の配列を宣言します。
 
@@ -180,4 +180,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

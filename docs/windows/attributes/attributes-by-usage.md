@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39dac1bda25a66ecd67feac167e0029931a204e0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791831"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328182"
 ---
 # <a name="attributes-by-usage"></a>使用法別の属性
 
 このトピックでは、C++ 言語要素を適用するに従って属性を使用します。
 
-属性に属性のスコープに含まれていない Visual C の要素が前にある場合は、属性ブロックがコメントとして扱われます。
+場合は、属性のスコープではない要素の直前に、属性、属性ブロックはコメントとして扱われます。
 
 |属性|説明|
 |---------------|-----------------|
@@ -89,6 +89,6 @@ ms.locfileid: "48791831"
 
 ## <a name="see-also"></a>関連項目
 
-[COM および .NET C++ 属性](cpp-attributes-com-net.md)<br/>
+[COM および .NET の C++ の属性](cpp-attributes-com-net.md)<br/>
 [グループ別の属性](attributes-by-group.md)<br/>
 [属性リファレンス (アルファベット順)](attributes-alphabetical-reference.md)

@@ -1,7 +1,7 @@
 ---
-title: ref new、gcnew (C++ コンポーネント拡張) |Microsoft Docs
+title: ref new、gcnew (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: f5a10278957e6a89b52e744f8f0dd78b475f7730
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596159"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328312"
 ---
-# <a name="ref-new-gcnew--c-component-extensions"></a>ref new、gcnew (C++ コンポーネント拡張)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new、gcnew (C +/cli および C++/cli CX)
 
 **Ref 新しい**集計キーワードは、ガベージ コレクションのオブジェクトにアクセスできなくなったし、識別するハンドルを返す対象である型のインスタンスを割り当てます ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) に割り当てられたオブジェクト。
 
@@ -99,4 +99,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

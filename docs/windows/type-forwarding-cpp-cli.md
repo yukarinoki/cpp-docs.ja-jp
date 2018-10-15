@@ -1,7 +1,7 @@
 ---
 title: 転送の型 (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,28 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 806003e33e60b5146bdd722fa5248011cd4939c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7fe70de2503134bf76f5e1c7099773737cc153f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396552"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328338"
 ---
 # <a name="type-forwarding-ccli"></a>型の転送 (C++/CLI)
 
 *型転送*ことなど、アセンブリ A を使用するクライアントを再コンパイルする必要はありませんは、別のアセンブリ (アセンブリ B) に 1 つのアセンブリ (アセンブリ A) から型を移動することができます
 
-## <a name="all-platforms"></a>すべてのプラットフォーム
-
-この機能はすべてのランタイムでサポートされていません。
-
 ## <a name="windows-runtime"></a>Windows ランタイム
 
 この機能は、Windows ランタイムでサポートされていません。
-
-### <a name="requirements"></a>要件
-
-コンパイラ オプション: `/ZW`
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
@@ -44,7 +36,7 @@ ms.locfileid: "46396552"
 
 ### <a name="syntax"></a>構文
 
-```
+```cpp
 #using "new.dll"
 [assembly:TypeForwardedTo(type::typeid)];
 ```
@@ -97,7 +89,7 @@ ms.locfileid: "46396552"
 
 3. 削除、`MyClass`種類の定義から、ソース コードの使用を A.dll をビルドし、次に置き換えます。
 
-    ```
+    ```cpp
     #using "B.dll"
     [assembly:TypeForwardedTo(MyClass::typeid)];
     ```

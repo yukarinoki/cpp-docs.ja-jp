@@ -17,16 +17,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0b305e928fec58833c4aac3f5625783aa2cb9ef
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 431ca9e88e644bd7a7c38f9ab4a1c3faeab6f9bb
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791991"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328403"
 ---
 # <a name="attributes-alphabetical-reference"></a>属性リファレンス (アルファベット順)
 
-次の属性は、Visual C で使用できます。
+次の属性は、Microsoft C コンパイラで使用できます。
 
 |属性|説明|
 |---------------|-----------------|
@@ -73,7 +73,7 @@ ms.locfileid: "48791991"
 |[idl_quote](idl-quote.md)|IDL 構造を現在のバージョンの Visual C でサポートされていないまたは属性を使用することができます。|
 |[iid_is](iid-is.md)|インターフェイス ポインターによって示される COM インターフェイスの IID を指定します。|
 |[immediatebind](immediatebind.md)|データ バインド オブジェクトのプロパティに対するすべての変更のデータベースに直ちに通知されることを示します。|
-|[実装](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
+|[implements](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
 |[implements_category](implements-category.md)|クラスの実装されたコンポーネントのカテゴリを指定します。|
 |[import](import.md)|メイン .idl ファイルから参照する定義を含む .idl、.odl ファイル、またはヘッダーの別のファイルを指定します。|
 |[importidl](importidl.md)|生成された .idl ファイルには、指定された .idl ファイルを挿入します。|
@@ -88,7 +88,7 @@ ms.locfileid: "48791991"
 |[licensed](licensed.md)|適用するコクラスはライセンスされていることを示しますを使用してインスタンス化する必要があります`IClassFactory2`します。|
 |[local](local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして、MIDL コンパイラを使用することができます。 個々 の関数で使用する場合は、スタブが生成されたないローカル プロシージャを指定します。|
 |[max_is](max-is.md)|有効な配列のインデックスの最大値を指定します。|
-|[モジュール](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
+|[module](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
 |[ms_union](ms-union.md)|カプセル化されていない共用体のネットワーク データ表現の整列を制御します。|
 |[no_injected_text](no-injected-text.md)|コンパイラがコードの属性を使用した結果として挿入するを防ぎます。|
 |[nonbrowsable](nonbrowsable.md)|インターフェイス メンバーをプロパティ ブラウザーに表示されないことを示します。|
@@ -97,7 +97,7 @@ ms.locfileid: "48791991"
 |[object](object-cpp.md)|カスタムのインターフェイスを識別します。カスタム属性と同義です。|
 |[odl](odl.md)|オブジェクト記述言語 (ODL) インターフェイスとしてインターフェイスを識別します。|
 |[oleautomation](oleautomation.md)|インターフェイスが Automation と互換性があることを示します。|
-|[省略可能](optional-cpp.md)|メンバー関数のオプション パラメーターを指定します。|
+|[optional](optional-cpp.md)|メンバー関数のオプション パラメーターを指定します。|
 |[out](out-cpp.md)|呼び出されたプロシージャから呼び出したプロシージャ (サーバーからクライアント) に返されるポインター パラメーターを示します。|
 |[pointer_default](pointer-default.md)|パラメーター リストで表示される最上位レベルのポインターを除くすべてのポインターの既定のポインターの属性を指定します。|
 |[pragma](pragma.md)|生成された .idl ファイルに、引用符なしの指定した文字列を出力します。|
@@ -124,7 +124,7 @@ ms.locfileid: "48791991"
 |[switch_is](switch-is.md)|式または共用体の判別共用体のメンバーを選択するとして機能する識別子を指定します。|
 |[switch_type](switch-type.md)|共用体の判別式として使用される変数の型を識別します。|
 |[synchronize](synchronize.md)|メソッドへのアクセスを同期します。|
-|[スレッド処理](threading-cpp.md)|COM オブジェクトのスレッド モデルを指定します。|
+|[threading](threading-cpp.md)|COM オブジェクトのスレッド モデルを指定します。|
 |[transmit_as](transmit-as.md)|提示された種類、クライアントとサーバー アプリケーションは、次の操作、転送の型との関連付けをコンパイラに指示します。|
 |[uidefault](uidefault.md)|型情報メンバーは、ユーザー インターフェイスに表示する既定のメンバーであることを示します。|
 |[unique](unique-cpp.md)|一意のポインターを指定します。|
@@ -138,6 +138,6 @@ ms.locfileid: "48791991"
 
 ## <a name="see-also"></a>関連項目
 
-[COM および .NET C++ 属性](cpp-attributes-com-net.md)<br/>
+[COM および .NET の C++ の属性](cpp-attributes-com-net.md)<br/>
 [グループ別の属性](attributes-by-group.md)<br/>
 [使用法別の属性](attributes-by-usage.md)

@@ -1,7 +1,7 @@
 ---
-title: リテラル (C++ コンポーネント拡張) |Microsoft Docs
+title: リテラル (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8168b3cd981bb288df35659ffd3520a7c8597d1e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596447"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328071"
 ---
-# <a name="literal-c-component-extensions"></a>リテラル (C++ コンポーネント拡張)
+# <a name="literal-ccli-and-ccx"></a>リテラル (C +/cli および C++/cli CX)
 
 としてマークされている変数 (データ メンバー)**リテラル**で、 **/clr**コンパイルがネイティブと同等の**static const**変数。
 
@@ -137,4 +137,4 @@ class B {
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

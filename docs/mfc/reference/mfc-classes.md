@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fb0cfa6d3657c0cce01e91c94cb23bce8886a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403145"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328611"
 ---
 # <a name="mfc-classes"></a>MFC クラス
 
@@ -34,7 +34,7 @@ Microsoft Foundation Class (MFC) ライブラリには、次の一覧に示す�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[CAccelerateDecelerateTransition クラス](../../mfc/reference/cacceleratedeceleratetransition-class1.md)<br/>
+[CAccelerateDecelerateTransition クラス](../../mfc/reference/cacceleratedeceleratetransition-class.md)<br/>
 加速減速遷移を実装します。
 
 [CAnimateCtrl クラス](../../mfc/reference/canimatectrl-class.md)<br/>
@@ -137,7 +137,7 @@ Windows のボタン コントロールの機能が用意されています。
 Windows のチェックリスト ボックスの機能を提供します。
 
 [CClientDC クラス](../../mfc/reference/cclientdc-class.md)<br/>
-Windows 関数の呼び出しを処理する[GetDC](/windows/desktop/api/winuser/nf-winuser-getdc)構築時に、 [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc)破棄時にします。
+構築時の Windows 関数 [GetDC](/windows/desktop/api/winuser/nf-winuser-getdc) の呼び出しと、破棄時の [ReleaseDC](/windows/desktop/api/winuser/nf-winuser-releasedc) の呼び出しを処理します。
 
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>
 Microsoft Foundation Class ライブラリのメッセージ マップ アーキテクチャに関する基底クラスです。
@@ -863,7 +863,7 @@ MDI アプリケーションで、ユーザーが MDI 子ウィンドウを管�
 フローティング ツール バーの周りなどで使用される、半分の高さのフレーム ウィンドウを表します。
 
 [CMonikerFile クラス](../../mfc/reference/cmonikerfile-class.md)<br/>
-データのストリームを表します ([IStream](/windows/desktop/api/objidl/nn-objidl-istream)) によってという名前を[IMoniker](/windows/desktop/api/objidl/nn-objidl-imoniker)します。
+[IMoniker](/windows/desktop/api/objidl/nn-objidl-istream)で名前が付けられたデータのストリーム ( [IStream](/windows/desktop/api/objidl/nn-objidl-imoniker)) を表します。
 
 [CMonthCalCtrl クラス](../../mfc/reference/cmonthcalctrl-class.md)<br/>
 月間予定表コントロールの機能がカプセル化されています。
@@ -1022,7 +1022,7 @@ OLE のビジュアル編集サーバー、オートメーション サーバー
 OLE の [リンクの編集] ダイアログ ボックスを使って、ドキュメント内の既存のリンク オブジェクトや埋め込みオブジェクトの更新のみを行います。これは、OLE の [リンクの編集] ダイアログ ボックスの特別な使い方です。
 
 [COleVariant クラス](../../mfc/reference/colevariant-class.md)<br/>
-カプセル化、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)データ型。
+[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) データ型をカプセル化します。
 
 [CPagerCtrl クラス](../../mfc/reference/cpagerctrl-class.md)<br/>
 `CPagerCtrl` クラスは、Windows のページャー コントロールをラップします。ページャー コントロールには、外側のウィンドウに収まらない内側のウィンドウをスクロールによって表示する機能があります。
@@ -1109,7 +1109,7 @@ MRU ファイル リストのコントロールをサポートします。
 コントロール内にデータベース レコードを表示するビューです。
 
 [CRect クラス](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Windows のような[RECT 構造体](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/18113766-3975-4369-bc07-92e34cba712e/locales/en-us)します。
+Windows のような[RECT 構造体](rect-structure.md)します。
 
 [CRectTracker クラス](../../mfc/reference/crecttracker-class.md)<br/>
 アイテムを異なる方法で表示、移動、サイズ変更できるようにします。
@@ -1175,7 +1175,7 @@ SDI (シングル ドキュメント インターフェイス) を実装する�
 アニメーション変数の初期ベロシティによって振幅が決まる正弦波ベロシティ遷移をカプセル化します。
 
 [CSize クラス](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Windows のような[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造体は、相対座標や位置を実装します。
+Windows の [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) 構造体と同様に、相対座標や位置を実装します。
 
 [CSliderCtrl クラス](../../mfc/reference/csliderctrl-class.md)<br/>
 Windows コモン スライダー コントロールの機能を提供します。

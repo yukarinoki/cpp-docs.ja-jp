@@ -1,7 +1,7 @@
 ---
-title: 明示的なオーバーライド (C++ コンポーネント拡張) |Microsoft Docs
+title: 明示的なオーバーライド (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ba6ed66359ee833b51154e47f8f6c26c0de8994c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 689c8420c2526f94f88c8b2ba8433c2310281874
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408948"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328039"
 ---
-# <a name="explicit-overrides--c-component-extensions"></a>明示的なオーバーライド (C++ Component Extensions)
+# <a name="explicit-overrides--ccli-and-ccx"></a>明示的なオーバーライド (C +/cli および C++/cli CX)
 
 このトピックでは、基底クラスまたはインターフェイスのメンバーを明示的にオーバーライドする方法について説明します。 (明示的) の名前付きオーバーライドを別の名前を持つ派生メソッドを使用してメソッドをオーバーライドする場合にのみ使用する必要があります。
 
@@ -184,4 +184,4 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

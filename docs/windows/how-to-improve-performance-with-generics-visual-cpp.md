@@ -1,7 +1,7 @@
 ---
-title: '方法: ジェネリック (Visual C) によるパフォーマンスの向上 |Microsoft Docs'
+title: '方法: ジェネリックによるパフォーマンスの向上 (C +/cli CLI) |Microsoft Docs'
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9f946970f78b432774a5e4c7ba20fd15a00ae654
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: ead9491e7b5302cadfa59eb7d98215fb3c41eb09
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318527"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327824"
 ---
-# <a name="how-to-improve-performance-with-generics-visual-c"></a>方法: ジェネリックを使用してパフォーマンスを改善する (Visual C++)
+# <a name="how-to-improve-performance-with-generics-ccli"></a>方法: ジェネリックによるパフォーマンスの向上 (C +/cli CLI)
 
-ジェネリック型パラメーターに基づく再利用可能なコードを作成できます。 型パラメーターの実際の型は、クライアント コードによって呼び出されるまで遅延されます。 ジェネリックの詳細については、次を参照してください。[ジェネリック](../windows/generics-cpp-component-extensions.md)します。
+ジェネリック型パラメーターに基づく再利用可能なコードを作成できます。 型パラメーターの実際の型は、クライアント コードによって呼び出されるまで遅延されます。 ジェネリックの詳細については、「 [Generics](../windows/generics-cpp-component-extensions.md)」を参照してください。
 
 この記事では、方法、コレクションを使用するアプリケーションのパフォーマンスを向上させるジェネリックがヘルプについて説明します。
 
