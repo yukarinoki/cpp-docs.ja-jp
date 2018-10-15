@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d4b7184e2eebcea83770aff55a5e9f75242aa1c1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 04e331da219f0c7a3996dda69d53769ea443b55e
+ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206172"
+ms.lasthandoff: 09/10/2018
+ms.locfileid: "44319098"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
@@ -65,7 +65,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
   
 - **数値演算ライブラリ関数の C++ のオーバーロード** 以前のバージョンでは、\<math.h> は、数値演算ライブラリ関数の C++ オーバーロードの (すべてではなく) いくつかを定義していました。 \<cmath> はそれ以外のオーバーロードを定義するため、すべてのオーバーロードを取得するには、\<cmath> ヘッダーを組み込む必要がありました。 そのため、\<math.h> だけしか組み込まれていないコードでは、関数のオーバーロードの解決方法に問題が生じていました。 現在は、すべての C++ オーバーロードが \<math.h> から削除されており、\<cmath> にのみ存在しています。  
   
-     エラーを解決するには、\<math.h> から削除された関数の宣言を取得する <cmath> を組み込んでください。 移動された関数を次の表に示します。  
+     エラーを解決するには、\<math.h> から削除された関数の宣言を取得する \<cmath> を組み込んでください。 移動された関数を次の表に示します。  
   
      移動された関数:  
   
