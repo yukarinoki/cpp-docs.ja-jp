@@ -1,7 +1,7 @@
 ---
-title: new (新規のスロット vtable) (C++ コンポーネント拡張) |Microsoft Docs
+title: new (新規のスロット vtable) (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b5dc0f490da43b4a2a2befa22f2902e7bfce51ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 48351903b7827f4ad9e6d63824658e4f44e047e0
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420921"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327740"
 ---
-# <a name="new-new-slot-in-vtable--c-component-extensions"></a>new (vtable の新しいスロット) (C++ コンポーネント拡張)
+# <a name="new-new-slot-in-vtable--ccli-and-ccx"></a>new (新規のスロット vtable) (C +/cli および C++/cli CX)
 
 **新しい**キーワードは、仮想メンバーが vtable の新しいスロットを取得することを示します。
 
@@ -115,5 +115,6 @@ E::f() called
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+
 [オーバーライド指定子](../windows/override-specifiers-cpp-component-extensions.md)

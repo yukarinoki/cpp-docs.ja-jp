@@ -1,7 +1,7 @@
 ---
-title: 状況依存のキーワード (C++ コンポーネント拡張) |Microsoft Docs
+title: 状況依存のキーワード (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,14 +17,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 785836f575c0dec3a0e08c32063116f01e16d4fe
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5d02939e61da4a247b46da5637c38d01e7990c49
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42605240"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327935"
 ---
-# <a name="context-sensitive-keywords--c-component-extensions"></a>状況依存のキーワード (C++ コンポーネント拡張)
+# <a name="context-sensitive-keywords--ccli-and-ccx"></a>状況依存のキーワード (C +/cli および C++/cli CX)
 
 *状況依存のキーワード*は特定のコンテキストでのみ認識される言語要素です。 特定のコンテキスト以外では、状況依存のキーワードをユーザー定義の記号として使用することができます。
 
@@ -48,10 +48,9 @@ ms.locfileid: "42605240"
 
 - `internal`
 
-- [リテラル](../windows/literal-cpp-component-extensions.md)
+- [name](../windows/literal-cpp-component-extensions.md)
 
-- 
-  [override](../windows/override-cpp-component-extensions.md)
+- [override](../windows/override-cpp-component-extensions.md)
 
 - [プロパティ](../windows/property-cpp-component-extensions.md)
 
@@ -112,4 +111,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

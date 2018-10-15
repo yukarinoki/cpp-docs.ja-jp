@@ -1,7 +1,7 @@
 ---
-title: ジェネリックとテンプレート (Visual C) |Microsoft Docs
+title: ジェネリックとテンプレート (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f8a58e26b571c119d45cb981c582ebec335eface
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 4d63d7620aa4d2cb83b954494172da9db55f6a2e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591003"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328221"
 ---
-# <a name="generics-and-templates-visual-c"></a>ジェネリックとテンプレート (Visual C++)
+# <a name="generics-and-templates-ccli"></a>ジェネリックとテンプレート (C +/cli CLI)
 
 ジェネリックとテンプレートは、パラメーター化された型のサポートを提供する両方の言語機能です。 ただし、それらが異なると、さまざまな用途があります。 このトピックでは、多くの違いの概要を示します。
 
@@ -61,7 +61,7 @@ ms.locfileid: "42591003"
 
 次の例では、テンプレートとジェネリックを一緒に使用する単純な例を示します。 この例では、テンプレート クラスは、ジェネリック型にを通じてそのパラメーターを渡します。 逆はできません。
 
-Visual C のアセンブリをローカルのテンプレート コードで、既存の汎用的な API をビルドするとき、またはしないサポートされます。 テンプレートの特定の機能を活用するために、ジェネリック型にパラメーター化のレイヤーを追加する必要がある場合、この手法を使用できます。ジェネリックによって d.
+C + ローカル テンプレート コードで、既存の汎用的な API をビルドするときに、この手法を使用できます/cli CLI アセンブリ、またはサポート b を実行するテンプレートの特定の機能を活用するジェネリック型にパラメーター化のレイヤーを追加する必要がある場合y のジェネリック。
 
 ### <a name="code"></a>コード
 

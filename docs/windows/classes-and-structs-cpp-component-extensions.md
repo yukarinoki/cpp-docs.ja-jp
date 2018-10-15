@@ -1,7 +1,7 @@
 ---
-title: クラスと構造体 (C++ コンポーネント拡張) |Microsoft Docs
+title: ref クラスと ref 構造体 (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 60e388e18e6d3607dac1946c3fd9a511e948afd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448377"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328076"
 ---
-# <a name="classes-and-structs--c-component-extensions"></a>クラスと構造体 (C++ コンポーネント拡張)
+# <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref クラスと ref 構造体 (C +/cli および C++/cli CX)
 
-クラスまたは構造体の宣言が*オブジェクトの有効期間*自動的に管理されます。 Visual C++ では、オブジェクトがアクセス不能になるかスコープ外になると、そのオブジェクトに割り当てられているメモリを自動的に破棄します。
+**Ref クラス**または**ref 構造体**拡張機能の宣言をクラスまたは構造体が*オブジェクトの有効期間*自動的に管理されます。 オブジェクトからアクセスできなくなりますまたはがスコープ外になると、メモリが解放されます。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
@@ -61,7 +61,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 *base_type*<br/>
 (省略可能)基本型です。 ただし、値型を基本型として使用することはできません。
 
-詳細については、Windows ランタイムと共通言語 Runtimesections で、このパラメーターの言語固有の説明を参照してください。
+詳細については、Windows ランタイムと共通言語ランタイムのセクションでは、このパラメーターの言語固有の説明を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -129,4 +129,4 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

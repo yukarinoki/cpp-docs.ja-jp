@@ -1,7 +1,7 @@
 ---
-title: デリゲート (C++ コンポーネント拡張) |Microsoft Docs
+title: デリゲート (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2281dfb6648f9c4756800a0693f184ccaa7435d7
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432410"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327961"
 ---
-# <a name="delegate--c-component-extensions"></a>delegate (C++ コンポーネント拡張)
+# <a name="delegate--ccli-and-ccx"></a>デリゲート (C +/cli および C++/cli CX)
 
 関数ポインターを表す型を宣言します。
 
@@ -131,7 +131,7 @@ function_declaration
 
 - [方法: デリゲートを定義および使用する (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [汎用デリゲート (Visual C++)](../windows/generic-delegates-visual-cpp.md)
+- [汎用デリゲート (C +/cli CLI)](../windows/generic-delegates-visual-cpp.md)
 
 ### <a name="requirements"></a>要件
 
@@ -212,4 +212,4 @@ in static func3 11
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

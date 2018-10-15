@@ -1,7 +1,7 @@
 ---
-title: typeid (C++ コンポーネント拡張) |Microsoft Docs
+title: typeid (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1daf9d33b3eb21bf7d196a4263b5f2f7009b183
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31344b1ba72b37bcfff45a3fd4feefda85f6a7a
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435403"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327584"
 ---
-# <a name="typeid--c-component-extensions"></a>typeid (C++ コンポーネント拡張)
+# <a name="typeid--ccli-and-ccx"></a>typeid (C +/cli および C++/cli CX)
 
 オブジェクトの型を示す値を取得します。
 
-> [!WARNING]
+> [!NOTE]
 > このトピックでは、typeid の C++ コンポーネント拡張バージョンを示します。 このキーワードの ISO C バージョンでは、次を参照してください。 [typeid 演算子](../cpp/typeid-operator.md)します。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
@@ -200,4 +200,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

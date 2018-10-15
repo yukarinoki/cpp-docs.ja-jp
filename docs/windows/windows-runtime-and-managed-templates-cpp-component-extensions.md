@@ -1,7 +1,7 @@
 ---
-title: Windows ランタイムおよびマネージ テンプレート (C++ コンポーネント拡張) |Microsoft Docs
+title: Windows ランタイムおよびマネージ テンプレート (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0a7d08354bcd2b0b0d8cf1db6e4bd58fb9821708
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: b83aa54b9f9697fddbefc6da29e7cf99d497cc12
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42591450"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328299"
 ---
-# <a name="windows-runtime-and-managed-templates-c-component-extensions"></a>Windows ランタイムおよびマネージド テンプレート (C++ コンポーネント拡張)
+# <a name="windows-runtime-and-managed-templates-ccli-and-ccx"></a>Windows ランタイムおよびマネージ テンプレート (C +/cli および C++/cli CX)
 
 テンプレートは、Windows ランタイムまたは共通言語ランタイム型では、プロトタイプを定義することを有効にして、別のテンプレート型パラメーターを使用してその型のバリエーションをインスタンス化し。
 
@@ -50,7 +50,7 @@ ms.locfileid: "42591450"
 
 ### <a name="examples"></a>使用例
 
-マネージ型テンプレート パラメーターを使用してジェネリック型のインスタンスを作成することができますが、ジェネリック型テンプレート パラメーターを持つ管理対象のテンプレートをインスタンス化することはできません。 これは、ジェネリック型は実行時に解決されるためです。 詳細については、次を参照してください。[ジェネリックとテンプレート (Visual c)](../windows/generics-and-templates-visual-cpp.md)します。
+マネージ型テンプレート パラメーターを使用してジェネリック型のインスタンスを作成することができますが、ジェネリック型テンプレート パラメーターを持つ管理対象のテンプレートをインスタンス化することはできません。 これは、ジェネリック型は実行時に解決されるためです。 詳細については、次を参照してください。[ジェネリックとテンプレート (C +/cli CLI)](../windows/generics-and-templates-visual-cpp.md)します。
 
 ```cpp
 // managed_templates.cpp
@@ -142,4 +142,4 @@ class A <int> {};
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

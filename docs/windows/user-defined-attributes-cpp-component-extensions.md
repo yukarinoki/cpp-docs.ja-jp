@@ -1,7 +1,7 @@
 ---
-title: ユーザー定義の属性 (C++ コンポーネント拡張) |Microsoft Docs
+title: ユーザー定義の属性 (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 10/02/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,26 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3c2f5568b067c119bfa65744290c39d7ca577072
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 004c4c30c6e7e75f626e1ac87c09cb0a87f1c8cc
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789229"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328442"
 ---
-# <a name="user-defined-attributes--c-component-extensions"></a>ユーザー定義の属性 (C++ コンポーネント拡張)
+# <a name="user-defined-attributes--ccli-and-ccx"></a>ユーザー定義の属性 (C +/cli および C++/cli CX)
 
-カスタム属性を使用すると、インターフェイス、クラスまたは構造体、メソッド、パラメーター、または列挙型のメタデータを拡張できます。
-
-## <a name="all-runtimes"></a>すべてのランタイム
-
-すべてのランタイムは、カスタム属性をサポートします。
+C +/cli および C++/cli CX では、インターフェイス、クラスまたは構造体、メソッド、パラメーター、または列挙型のメタデータを拡張するプラットフォームに固有の属性を作成できます。 これらの属性は異なる、 [C++ の標準属性](../cpp/attributes.md)します。
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-C + + CX 属性のプロパティのみをサポートがない属性のコンス トラクターまたはメソッドです。
-
-### <a name="remarks"></a>Remarks
+適用できる C +/cli CX 属性、プロパティがコンス トラクターまたはメソッドにできません。
 
 ### <a name="requirements"></a>要件
 
@@ -43,17 +37,11 @@ C + + CX 属性のプロパティのみをサポートがない属性のコン�
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-カスタム属性を使用して、管理対象の要素のメタデータを拡張できます。 詳細については、「[属性](/dotnet/standard/attributes/index)」を参照してください。
-
-### <a name="remarks"></a>Remarks
-
 情報と、このトピックで示した構文で説明する情報を置き換えるものでは[属性](attributes/attribute.md)します。
 
 カスタム属性を定義するには、型を定義して<xref:System.Attribute>型と、必要に応じて、基本クラスを適用する、<xref:System.AttributeUsageAttribute>属性。
 
-などの Microsoft サーバー (MTS Transaction) 1.0 では、トランザクション、同期、に関する動作の負荷分散とでは、ODL カスタム属性を使用してタイプ ライブラリに追加されたカスタム Guid により指定されました。 そのため、MTS サーバーのクライアントでは、タイプ ライブラリを参照してその特性を決定でした。 .NET framework では、タイプ ライブラリのアナログはメタデータで、ODL カスタム属性のアナログはカスタム属性です。 また、タイプ ライブラリを読み取り、型でリフレクションを使用してに似ています。
-
-詳細については、次のトピックを参照してください。
+詳細については次を参照してください:
 
 - [属性の対象](attribute-targets-cpp-component-extensions.md)
 
@@ -216,4 +204,4 @@ ref struct B {};
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
 title: _ _identifier (c +/cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,25 +18,23 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 572767c2f85b07f201bef93578b14b731aa467e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a8b69402dbe3812bdd49f8944c979300209bff
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415019"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328273"
 ---
 # <a name="identifier-ccli"></a>__identifier (C++/CLI)
 
-識別子としての Visual C のキーワードを使用できるようにします。
+識別子として C++ のキーワードを使用できるようにします。
 
 ## <a name="all-platforms"></a>すべてのプラットフォーム
 
 ### <a name="syntax"></a>構文
 
 ```cpp
-__identifier(
-Visual_C++_keyword
-)  
+__identifier(C++_keyword)  
 ```
 
 ### <a name="remarks"></a>Remarks
@@ -53,7 +51,7 @@ Visual_C++_keyword
 
 **例**
 
-次の例では、クラスが名前付き**テンプレート**c# で作成され、DLL として配布されます。 使用する Visual C プログラムで、**テンプレート**クラス、 **_ _identifier**キーワードという事実を非表示にする**テンプレート**は標準の C++ キーワードです。
+次の例では、クラスが名前付き**テンプレート**c# で作成され、DLL として配布されます。 C +/cli を使用する CLI プログラム、**テンプレート**クラス、 **_ _identifier**キーワードという事実を非表示にする**テンプレート**は標準の C++ キーワードです。
 
 ```cs
 // identifier_template.cs
@@ -85,7 +83,7 @@ int main() {
 
 ### <a name="examples"></a>使用例
 
-次の例では、クラスが名前付き**テンプレート**c# で作成され、DLL として配布されます。 使用する Visual C プログラムで、**テンプレート**クラス、 **_ _identifier**キーワードという事実を非表示にする**テンプレート**は標準の C++ キーワードです。
+次の例では、クラスが名前付き**テンプレート**c# で作成され、DLL として配布されます。 C +/cli を使用する CLI プログラム、**テンプレート**クラス、 **_ _identifier**キーワードという事実を非表示にする**テンプレート**は標準の C++ キーワードです。
 
 ```cs
 // identifier_template.cs
@@ -108,5 +106,5 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)<br/>
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

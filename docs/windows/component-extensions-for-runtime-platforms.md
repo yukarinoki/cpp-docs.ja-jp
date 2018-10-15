@@ -1,7 +1,7 @@
 ---
-title: Component Extensions for Runtime Platforms |Microsoft Docs
+title: Component Extensions for .NET と UWP |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,28 +19,29 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0619585a0a5b59ffb6b8cfbe22e7930909369b23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45f83fbaaa867e2f58e329d8531259fa3751a521
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386755"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328416"
 ---
-# <a name="component-extensions-for-runtime-platforms"></a>ランタイム プラットフォームのコンポーネントの拡張機能
+# <a name="component-extensions-for-net-and-uwp"></a>Component Extensions for .NET と UWP
 
-Visual C++ には、ランタイム プラットフォームに対するプログラミングに役立つ言語拡張が用意されています。 C + を使用して/cli CX、ユニバーサル Windows プラットフォーム アプリとネイティブ コードにコンパイルされるコンポーネントをプログラミングできます。 C + を使用して、Windows ランタイムの COM インターフェイスに対して直接プログラミングしてユニバーサル Windows プラットフォーム アプリを作成できますが、/cli CX、コンス トラクター、例外、およびその他の最新の C++ プログラミングの表現方法で操作することができます。 .NET プラットフォームでマネージ実行環境での C++ プログラミングを有効にするを使用することが C +/cli CLI。
+C++ 標準には、言語に非標準の拡張機能を提供するコンパイラ ベンダーができます。 Microsoft では、.NET Framework またはユニバーサル Windows プラットフォーム (UWP) で実行されるネイティブ C++ コードを接続するための拡張機能を提供します。 .NET 拡張機能と呼ばれる C +/cli、.NET で実行するための CLI と生成コードが共通言語ランタイム (CLR) が呼び出される実行環境を管理します。 UWP 拡張機能と呼ばれる C + + CX およびそれらがネイティブ マシン コードを生成します。
+
+> [!NOTE]
+> 新しいアプリケーションの使用をお勧め C +/cli WinRT ではなく C + + CX します。 C +/cli WinRT は、標準的な新しい c++ 17 の言語プロジェクションの Windows ランタイム Api です。 C + をサポートするために引き続き/cli CX および WRL、C + 新しいアプリケーションを使用するを強くお勧めしますが、/cli WinRT します。 詳細については、次を参照してください。 [C +/cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)します。
 
 ### <a name="two-runtimes-one-set-of-extensions"></a>2 つのランタイムに共通の拡張
 
-C + + CX はサブセットの C++/cli CLI。 拡張機能は共通する C +/cli/CX および C++/cli CLI、セマンティクスが共通言語ランタイム (CLR) または Windows ランタイムを対象にかに依存します。 Windows ランタイムで実行するアプリをコンパイルするには、指定、`/ZW`コンパイラ オプション。 CLR で動作するようにコンパイルする場合は `/clr` コンパイラ オプションを指定します。 Visual Studio を使用してプロジェクトを作成すると、これらのスイッチが自動的に設定されます。
-
-C++ でのユニバーサル Windows プラットフォーム アプリを作成する方法の詳細については、次を参照してください。 [C++ を使用してアプリを Windows ランタイム用のロードマップ](https://msdn.microsoft.com/library/windows/apps/hh700360.aspx)します。
-
 C +/cli CLI は ISO/ANSI C 規格を拡張し、定義下で、Ecma C +/cli CLI 標準。 詳細については、次を参照してください。 [C + での .NET プログラミング/cli (Visual c)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)します。
+
+C++/cli CX の拡張機能は、サブセットの C++/cli CLI。 拡張構文は、ほとんどの場合と同じですが、生成されるコードは異なるかどうかを指定する、 `/ZW` UWP を対象にコンパイラ オプションまたは`/clr`.NET ターゲットするにはオプションです。 Visual Studio を使用してプロジェクトを作成すると、これらのスイッチが自動的に設定されます。
 
 ## <a name="data-type-keywords"></a>データ型のキーワード
 
-言語拡張機能には、*集計キーワード*空白で区切られた 2 つのトークンで構成されるキーワードします。 これらのトークンは、単独で使用した場合と一緒に使用した場合で意味が異なることがあります。 たとえば、"ref" は通常の識別子であり、"class" はネイティブ クラスを宣言するキーワードです。 いますが、フォームにこれらの単語を結合するときに**ref クラス**、結果として得られる集計キーワードと呼ばれるエンティティの宣言を*ランタイム クラス*します。
+言語拡張機能には、*集計キーワード*空白で区切られた 2 つのトークンで構成されます。 これらのトークンは、単独で使用した場合と一緒に使用した場合で意味が異なることがあります。 たとえば、"ref" は通常の識別子であり、"class" はネイティブ クラスを宣言するキーワードです。 いますが、フォームにこれらの単語を結合するときに**ref クラス**、結果として得られる集計キーワードと呼ばれるエンティティの宣言を*ランタイム クラス*します。
 
 含めることも、拡張機能*状況に応じた*キーワード。 キーワードが状況依存のキーワードとして扱われるかどうかは、キーワードを含むステートメントの種類と、そのステートメント内でのキーワードの配置で決まります。 たとえば、"property" というトークンは、識別子として使用されることもあれば、特殊なパブリック クラスのメンバーを宣言するために使用されることもあります。
 
@@ -53,7 +54,7 @@ C +/cli CLI は ISO/ANSI C 規格を拡張し、定義下で、Ecma C +/cli CLI 
 |**インターフェイス クラス**<br /><br /> **インターフェイス構造体**|いいえ|インターフェイスを宣言します。|[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)|
 |**列挙型クラス**<br /><br /> **列挙型の構造体**|いいえ|列挙型を宣言します。|[列挙型クラス](../windows/enum-class-cpp-component-extensions.md)|
 |**プロパティ**|はい|プロパティを宣言します。|[プロパティ](../windows/property-cpp-component-extensions.md)|
-|**delegate**|はい|デリゲートを宣言します。|[delegate (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)|
+|**delegate**|はい|デリゲートを宣言します。|[デリゲート (C +/cli および C++/cli CX)](../windows/delegate-cpp-component-extensions.md)|
 |**event**|はい|イベントを宣言します。|[event](../windows/event-cpp-component-extensions.md)|
 
 ## <a name="override-specifiers"></a>オーバーライド指定子
@@ -87,7 +88,7 @@ C++ 拡張に追加されたその他のキーワードを次に示します。
 |**gcnew**|いいえ|ガベージ コレクション ヒープに型を割り当てます。 代わりに使用**新しい**と**削除**します。|[ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**新しい ref**|はい|Windows ランタイム型を割り当てます。 代わりに使用**新しい**と**削除**します。|[ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)|
 |**initonly**|はい|宣言または静的コンストラクターでしかメンバーを初期化できないことを示します。|[initonly (C++/CLI)](../dotnet/initonly-cpp-cli.md)|
-|**リテラル**|はい|リテラル変数を作成します。|[リテラル](../windows/literal-cpp-component-extensions.md)|
+|**name**|はい|リテラル変数を作成します。|[name](../windows/literal-cpp-component-extensions.md)|
 |**nullptr**|いいえ|ハンドルまたはポインターでオブジェクトを参照しないことを示します。|[nullptr](../windows/nullptr-cpp-component-extensions.md)|
 
 ## <a name="template-constructs"></a>テンプレートの構成要素

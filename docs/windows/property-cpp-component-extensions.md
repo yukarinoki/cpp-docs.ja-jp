@@ -1,7 +1,7 @@
 ---
-title: プロパティ (C++ コンポーネント拡張) |Microsoft Docs
+title: プロパティ (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9bd79042a43588ad4cedcbe88cc69f30947de7f8
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420505"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328234"
 ---
-# <a name="property--c-component-extensions"></a>プロパティ (C++ コンポーネント拡張)
+# <a name="property--ccli-and-ccx"></a>プロパティ (C +/cli および C++/cli CX)
 
 宣言を*プロパティ*、動作し、データ メンバーまたは配列要素と同様にアクセスがメンバー関数であります。
 
@@ -226,4 +226,4 @@ test
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

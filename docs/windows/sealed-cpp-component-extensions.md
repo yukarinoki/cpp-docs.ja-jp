@@ -1,7 +1,7 @@
 ---
-title: シール (C++ コンポーネント拡張) |Microsoft Docs
+title: 封印された (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,19 +18,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 134ee819edc0698c4ffa067d38b715968f22590f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 211428335473f677f520ee14ad688e5ffcbda8fd
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439563"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328000"
 ---
-# <a name="sealed--c-component-extensions"></a>sealed (C++ コンポーネント拡張)
+# <a name="sealed--ccli-and-ccx"></a>封印された (C +/cli および C++/cli CX)
 
 **封印された**の ref クラス仮想メンバーをオーバーライドできないことを示す状況依存のキーワードは、または型を基本データ型として使用できません。
 
 > [!NOTE]
-> ISO c 11 標準言語が、[最終的な](../cpp/final-specifier.md)キーワードで、Visual Studio ではサポートされています。 使用**最終的な**標準クラス、および**シール**ref クラスで。
+> ISO c 11 標準言語導入された、[最終的な](../cpp/final-specifier.md)キーワード。 使用**最終的な**標準クラス、および**シール**ref クラスで。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
@@ -53,7 +53,7 @@ virtual return-type identifier() sealed {...};
 
 最初の構文例ではクラスがシールされます。 2 番目の例では仮想関数がシールされます。
 
-**シール**キーワードはネイティブ ターゲット、および Windows ランタイムと共通言語ランタイム (CLR) も有効です。 詳細については、次を参照してください。[オーバーライド指定子とネイティブ コンパイル](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)します。
+使用して、**シール**ref クラスとその仮想メンバー関数のキーワード。 詳細については、次を参照してください。[オーバーライド指定子とネイティブ コンパイル](../dotnet/how-to-declare-override-specifiers-in-native-compilations-cpp-cli.md)します。
 
 使用して、型がシールされているかどうかは、コンパイル時に検出することができます、`__is_sealed(type)`型の特徴です。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)します。
 
@@ -108,7 +108,7 @@ public:
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");
-   } 
+   }
    */
 };
 
@@ -150,4 +150,4 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -1,7 +1,7 @@
 ---
-title: 属性の対象 (C++ コンポーネント拡張) |Microsoft Docs
+title: ターゲットの属性 (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d7a4cc42a0913636b0b63057f0f265f3fb8a034c
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9dfb469bb9dcea8a2c1e197fa7c305d08d155cf1
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42589417"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327781"
 ---
-# <a name="attribute-targets-c-component-extensions"></a>属性の対象 (C++ コンポーネント拡張)
+# <a name="attribute-targets-ccli-and-ccx"></a>ターゲットの属性 (C +/cli および C++/cli CX)
 
 属性の使用量指定子を使用して、属性の対象を指定できます。  各属性を定義して、特定の言語要素に適用されます。 たとえば、クラスと構造体にのみ適用する属性を定義できるかもしれません。  カスタム属性を使用できる可能性のある構文要素を次に示します。 これらの値の組み合わせ (論理を使用してまたは) 使用することがあります。
 
