@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17babc058ef3e1851da686e9a8c5bf17cefbc2fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f84ca4c924c837ec008c16d6ff3b77af379df4cd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427005"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163804"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL における取り消し処理
 
@@ -91,7 +91,7 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 - `task` 、オブジェクトを使用して、 [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)関数。 `cancel_current_task` が現在のタスクとすべての値ベースの継続を取り消します (取り消し操作は取り消されません*トークン*タスクまたはその継続に関連付けられている)。
 
-- タスク グループと並列アルゴリズムでは、使用して、 [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)キャンセルを検出し、この関数によって返されるときにタスクの本体から直ちにを返す関数を`true`します。 (タスク グループから `cancel_current_task` を呼び出さないでください)。
+- タスク グループと並列アルゴリズムでは、使用して、 [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)キャンセルを検出し、この関数によって返されるときにタスクの本体から直ちにを返す関数を**は true。**. (タスク グループから `cancel_current_task` を呼び出さないでください)。
 
 次の例では、タスク取り消し処理の最初の基本的なパターンを示しています。 タスクの本体は、ループ内の取り消し状態を適宜チェックします。
 
@@ -159,7 +159,7 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 [Concurrency::task_group::cancel](reference/task-group-class.md#cancel)と[::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)メソッドが取り消された状態にタスク グループを設定します。 `cancel` を呼び出すと、それ以降はタスク グループでタスクが開始されなくなります。 `cancel` メソッドは、複数の子タスクから呼び出すことができます。 取り消されたタスクによって、 [::task_group::wait](reference/task-group-class.md#wait)と[concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait)メソッドを返す[:canceled](reference/concurrency-namespace-enums.md#task_group_status)します。
 
-ランタイムを各子タスクからの呼び出しをトリガーできるタスク グループが取り消された場合、*割り込みポイント*、それが原因でスローおよび内部例外の種類をアクティブなタスクのキャンセルをキャッチするランタイム。 同時実行ランタイムでは、特定の割り込みポイントが定義されていません。割り込みポイントは、ランタイムに対する任意の呼び出しで発生します。 ランタイムは、取り消し処理を実行するために、自身がスローした例外を処理する必要があります。 このため、タスクの本体で不明な例外を処理しないでください。
+ランタイムを各子タスクからの呼び出しをトリガーできるタスク グループが取り消された場合、*割り込みポイント*、それが原因でスローおよび内部例外の種類をアクティブなタスクのキャンセルをキャッチするランタイム。 コンカレンシー ランタイムでは、特定の割り込みポイントが定義されていません。割り込みポイントは、ランタイムに対する任意の呼び出しで発生します。 ランタイムは、取り消し処理を実行するために、自身がスローした例外を処理する必要があります。 このため、タスクの本体で不明な例外を処理しないでください。
 
 子タスクが時間のかかる処理を実行しており、ランタイムの呼び出しを行わない場合、子タスクは定期的に取り消し状態をチェックして、適切なタイミングで終了する必要があります。 処理の取り消し状態を判定する方法の 1 つを次の例に示します。 タスク `t4` は、エラーの発生時に親タスク グループを取り消します。 タスク `t5` は、`structured_task_group::is_canceling` メソッドを定期的に呼び出して、取り消し状態をチェックします。 親タスク グループが取り消されると、タスク `t5` はメッセージを表示して終了します。
 
@@ -255,7 +255,7 @@ Caught 50
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[方法: キャンセル処理を使用して並列ループを中断する](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|取り消し処理を使用して並列検索アルゴリズムを実装する方法について説明します。|
 |[方法: 例外処理を使用して並列ループを中断する](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|`task_group` クラスを使用して基本的なツリー構造の検索アルゴリズムを作成する方法を示します。|

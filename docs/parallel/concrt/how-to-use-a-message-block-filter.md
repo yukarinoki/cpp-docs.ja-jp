@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16dee4d0a3c5a6d09c1fd19006c832be400d5a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93578f9d798e0c0bab0fe58a3211c20507dd99d4
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411076"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162062"
 ---
 # <a name="how-to-use-a-message-block-filter"></a>方法: メッセージ ブロック フィルターを使用する
 
@@ -48,7 +48,7 @@ ms.locfileid: "46411076"
 
 [!code-cpp[concrt-primes-filter#2](../../parallel/concrt/codesnippet/cpp/how-to-use-a-message-block-filter_2.cpp)]
 
-今回の `transformer` オブジェクトは素数のみを処理します。 前の例の `transformer` オブジェクトはすべてのメッセージを処理します。 したがって、前の例では、送信メッセージの数と受信メッセージの数が一致する必要があります。 この例の結果を使用して、 [concurrency::send](reference/concurrency-namespace-functions.md#send)から受信するメッセージの数を決定する関数、`transformer`オブジェクト。 `send` 関数は、メッセージ バッファーがメッセージを受け入れた場合は `true` を返し、メッセージ バッファーがメッセージを拒否した場合は `false` を返します。 したがって、メッセージ バッファーがメッセージを受け入れる回数は、素数の数と一致します。
+今回の `transformer` オブジェクトは素数のみを処理します。 前の例の `transformer` オブジェクトはすべてのメッセージを処理します。 したがって、前の例では、送信メッセージの数と受信メッセージの数が一致する必要があります。 この例の結果を使用して、 [concurrency::send](reference/concurrency-namespace-functions.md#send)から受信するメッセージの数を決定する関数、`transformer`オブジェクト。 `send`関数が返される**true**メッセージ バッファーがメッセージを受け入れると**false**メッセージ バッファーがメッセージを拒否する場合。 したがって、メッセージ バッファーがメッセージを受け入れる回数は、素数の数と一致します。
 
 ## <a name="example"></a>例
 
