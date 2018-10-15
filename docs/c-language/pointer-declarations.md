@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2870b2958f2e18b711ea568fdda2ae01d41e37f6
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: ca5ef287ad853387635bbcc349374e1f174b4fd6
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752724"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46095938"
 ---
 # <a name="pointer-declarations"></a>ポインター宣言
 
@@ -59,6 +59,7 @@ ms.locfileid: "43752724"
 構造体型、共用体型、または列挙型へのポインターは、構造体型、共用体型、または列挙型を定義する前に宣言できます。 ポインターの宣言には、次の例に示すように、構造体タグまたは共用体タグを使用します。 このような宣言ができるのは、コンパイラがポインター変数の領域を割り当てるのに、構造体や共用体のサイズが不要であるためです。
 
 ## <a name="examples"></a>使用例
+
 ポインター宣言の例を次に示します。
 
 ```
