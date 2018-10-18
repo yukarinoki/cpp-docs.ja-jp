@@ -47,16 +47,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2a70b39352f26d76e9199b9da46f679507b148ed
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163121"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410812"
 ---
 # <a name="hstring-class"></a>HString クラス
 
-RAII パターンを使用して、HSTRING の有効期間を管理するためのヘルパー クラスです。
+有効期間を管理するためのヘルパー クラス、 [HSTRING](/windows/desktop/WinRT/hstring) RAII パターンを使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -66,7 +66,7 @@ class HString;
 
 ## <a name="remarks"></a>Remarks
 
-Windows ランタイムでは、HSTRING ハンドルを使用して文字列へのアクセスを提供します。 `HString`クラスには、便利な関数および HSTRING ハンドルの使用を簡単に演算子が用意されています。 このクラスは、RAII パターンを所有している HSTRING の有効期間を処理できます。
+Windows ランタイムを使用して文字列へのアクセスを提供する[HSTRING](/windows/desktop/WinRT/hstring)ハンドル。 `HString`クラスには、便利な関数および HSTRING ハンドルの使用を簡単に演算子が用意されています。 このクラスは、RAII パターンを所有している HSTRING の有効期間を処理できます。
 
 ## <a name="members"></a>メンバー
 
