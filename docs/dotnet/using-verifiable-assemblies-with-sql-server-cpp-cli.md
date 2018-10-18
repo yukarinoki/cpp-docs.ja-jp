@@ -1,7 +1,7 @@
 ---
 title: SQL Server で検証可能なアセンブリの使用 (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2019
 ms.technology:
 - cpp-cli
 ms.topic: conceptual
@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 2bb4adbb960f9d062cc8573c7ca0f7cd5dcd0426
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382220"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410708"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>SQL Server での確認可能なアセンブリの使用 (C++/CLI)
 
@@ -32,9 +32,10 @@ SQL Server TRANSACT-SQL (T-SQL) は、SQL Server に検証可能なアセンブ�
 
 - 無制限のモード: コードを各自の責任で実行コードはタイプ セーフではありません。
 
-- セーフ モード: 検証可能なタイプ セーフなコードの実行/clr:safe と共にコンパイル。
+- セーフ モード: 検証可能なタイプ セーフなコードの実行/clr:safe と共にコンパイル。 
 
-セーフ モードでは、実行されるアセンブリにタイプセーフにする必要があります。
+> [!IMPORTANT]
+> Visual Studio 2015 で非推奨とされ、Visual Studio 2017 がサポートしていない、 **/clr: 純粋な**と **/clr:safe**検証可能なプロジェクトを作成します。 検証可能なコードが必要な場合は、c# コードを変換することをお勧めします。
 
 作成しを SQL Server に検証可能なアセンブリを読み込むようアセンブリの作成と DROP ASSEMBLY は、TRANSACT-SQL コマンドを使用します。
 
@@ -88,5 +89,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 
 ## <a name="see-also"></a>関連項目
 
-[方法:/clr:safe に移行する (C +/cli CLI)](../dotnet/how-to-migrate-to-clr-safe-cpp-cli.md)<br/>
+
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3ed6610f71561a62d3ff99a794bb166bdcabd3d3
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 32f3fc1b6a990a746c3dc87740c63fbe898f79d5
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083516"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410630"
 ---
 # <a name="ole-db-programming"></a>OLE DB プログラミング
 
@@ -40,7 +40,7 @@ Visual C++ には OLE DB のスターター アプリケーションを作成す
 |OLE DB プロバイダー テンプレートの使用方法 (概念説明のトピック)|[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)|  
 |OLE DB テンプレート クラスおよびマクロ|[OLE DB テンプレート リファレンス](../../data/oledb/ole-db-templates.md)(Visual C)|  
 |OLE DB コンシューマー属性|[OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)|  
-|OLE DB インターフェイス|[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)(では、Windows SDK)|  
+|OLE DB インターフェイス|[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643(v%3dvs.85))(では、Windows SDK)| 
 |OLE DB テンプレート サンプル|[OLE DB テンプレート サンプル](https://github.com/Microsoft/VCSamples)| 
 |データ アクセス プログラミングの概要 (Visual C++)|[データ アクセス プログラミング](../../data/data-access-programming-mfc-atl.md)|  
 |ODBC の概念説明のトピック|[ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)|  
