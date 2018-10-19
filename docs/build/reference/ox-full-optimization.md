@@ -1,13 +1,14 @@
 ---
 title: -Ox (ほとんどの速度の最適化を有効にする) |Microsoft Docs
 ms.custom: ''
-ms.date: 09/25/2017
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
-- /ox
+- /Ox
+- /Oxs
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -20,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6e1da84c3a4ec481d3af2880a80f5923bf0c50cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3f5a39201283567285b37a0901929022b688104
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438081"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459167"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (ほとんどの速度の最適化を有効にする)
 
@@ -33,7 +34,7 @@ ms.locfileid: "46438081"
 
 ## <a name="syntax"></a>構文
 
-> /Ox
+> **/Ox**
 
 ## <a name="remarks"></a>Remarks
 
@@ -59,7 +60,7 @@ ms.locfileid: "46438081"
 
 - [/Od (無効 (デバッグ))](../../build/reference/od-disable-debug.md)
 
-速度に対するバイアスを取り消すことができます、 **/Ox**コンパイラ オプションを指定する場合 **/Oxs**を組み合わせる、 **/Ox**コンパイラ オプションを使用[/Os (優先小コード)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)します。 オプションの組み合わせでは、コード サイズを小さくも優先します。
+速度に対するバイアスを取り消すことができます、 **/Ox**コンパイラ オプションを指定する場合 **/Oxs**を組み合わせる、 **/Ox**コンパイラ オプションを使用[/Os (優先小コード)](../../build/reference/os-ot-favor-small-code-favor-fast-code.md)します。 オプションの組み合わせでは、コード サイズを小さくも優先します。  **/Oxs**オプションは、指定した場合と同じでは正確に **/Ox** **/Os**オプションがこの順序で表示されます。
 
 リリース ビルドの場合、ファイル レベルが使用可能なすべての最適化を適用する指定した勧め[/O2 (速度)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)の代わりに **/Ox**、および[/O1 (サイズを最小限に抑える)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)代わりに **/Oxs**します。 リリースでさらに多くの最適化がビルドも検討、 [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプションと[/LTCG (リンク時コード生成)](../../build/reference/ltcg-link-time-code-generation.md)リンカー オプション。
 
