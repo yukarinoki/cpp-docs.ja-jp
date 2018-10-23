@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 5aa7f72cc76f80e2304faf93ca0c6198c505e88a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8805878f880d1c195ddf89abc283719e73ff5182
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101645"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808928"
 ---
 # <a name="using-manual-accessors"></a>手動アクセサーの使用
 
@@ -36,7 +36,7 @@ ms.locfileid: "46101645"
   
 - 複数の行セットを返すかを参照してください。  
   
-OLE DB コンシューマー テンプレートを使用して、`CManualAccessor`クラスし、これらの手順に従います。  
+OLE DB コンシューマー テンプレートに対してこれらの操作には、使用、`CManualAccessor`クラスし、これらの手順に従います。  
   
 1. 開く、`CCommand`オブジェクト`CManualAccessor`テンプレート パラメーターとして。  
   
@@ -44,7 +44,7 @@ OLE DB コンシューマー テンプレートを使用して、`CManualAccesso
     CCommand<CManualAccessor, CRowset, CMultipleResults> rs;  
     ```  
   
-1. クエリのセッション、`IDBSchemaRowset`インターフェイスし、プロシージャ パラメーター行セットを使用します。 場合、`IDBSchemaRowset`インターフェイスが使用できないクエリを実行、`ICommandWithParameters`インターフェイス。 呼び出す`GetParameterInfo`について。 どちらのインターフェイスを使用できる場合は、パラメーターがないと想定することができます。  
+1. クエリのセッション、`IDBSchemaRowset`インターフェイスし、プロシージャ パラメーター行セットを使用します。 場合、`IDBSchemaRowset`インターフェイスを使用できない、照会、`ICommandWithParameters`インターフェイス。 呼び出す`GetParameterInfo`について。 どちらのインターフェイスを使用できる場合は、パラメーターがないと想定することができます。  
   
 1. 各パラメーターでは、呼び出す`AddParameterEntry`パラメーターを追加し、それらを設定します。  
   

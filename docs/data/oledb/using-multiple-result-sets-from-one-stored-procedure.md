@@ -16,20 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 3e75a100bb5b56b613419160a3ea063bce42bbdb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 70fab2751e216ca90dbe09e31c88f9aa80aa7b90
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092324"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808265"
 ---
 # <a name="using-multiple-result-sets-from-one-stored-procedure"></a>1 つのストアド プロシージャからの複数の結果セットの使用
 
-ほとんどのストアド プロシージャは、複数の結果セットを返します。 このようなストアド プロシージャには、通常は、または複数の select ステートメント。 コンシューマーは、すべての結果セットを処理するためにこれを考慮する必要があります。  
+ほとんどのストアド プロシージャは、複数の結果セットを返します。 このようなストアド プロシージャには、通常は、または複数の select ステートメント。 コンシューマーは、すべての結果セットを処理するためにこれらを含めることを検討する必要があります。  
   
-### <a name="to-handle-multiple-result-sets"></a>複数の結果を処理するために次のように設定します。  
+## <a name="to-handle-multiple-result-sets"></a>複数の結果を処理するために次のように設定します。  
   
-1. 作成、`CCommand`クラス`CMultipleResults`テンプレート引数と、任意のアクセサー。 通常、これは、動的または手動アクセサーです。 アクセサーの別の型を使用する場合は、それぞれの行セットの出力列を決定できる場合がありますできません。  
+1. 作成、`CCommand`クラス`CMultipleResults`テンプレート引数と好み、通常は、動的または手動アクセサーのアクセサー。 アクセサーの別の型を使用する場合は、それぞれの行セットの出力列を決定できる場合がありますできません。  
   
 1. 通常どおり、ストアド プロシージャを実行し、列をバインド (を参照してください[データのフェッチを How Do I?](../../data/oledb/fetching-data.md))。  
   

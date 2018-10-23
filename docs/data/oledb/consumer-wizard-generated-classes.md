@@ -1,7 +1,7 @@
 ---
 title: コンシューマー ウィザードで生成されたクラス |Microsoft Docs
 ms.custom: ''
-ms.date: 10/15/2018
+ms.date: 10/17/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a7498f15072f3b9687476ba7f6c291ebf5ff88cd
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: d6054695cf7483ffc3991efe89853a94a22ce284
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410774"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808668"
 ---
 # <a name="consumer-wizard-generated-classes"></a>コンシューマー ウィザードで生成されたクラス
 
@@ -133,7 +133,7 @@ SELECT \
 
 ウィザードでは、列のバインドまたは列のマップが生成されます。 一部のプロバイダーで発生する問題を解決するため、下記のコードでの列のバインドの順序は、プロバイダーからの報告とは異なる場合があります。  
   
-```  
+```cpp  
    BEGIN_COLUMN_MAP(CProductsAccessor)  
       COLUMN_ENTRY_LENGTH_STATUS(1, m_ProductID, m_dwProductIDLength, m_dwProductIDStatus)  
       COLUMN_ENTRY_LENGTH_STATUS(2, m_ProductName, m_dwProductNameLength, m_dwProductNameStatus)  
@@ -187,7 +187,7 @@ public:
   
 挿入されたコマンド クラス宣言は次のようになります。  
   
-```  
+```cpp  
 class CProducts : public CCommand<CAccessor<_CProductsAccessor>>  
 ```  
   

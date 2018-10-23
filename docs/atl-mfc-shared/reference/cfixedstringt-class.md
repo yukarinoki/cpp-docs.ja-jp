@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6ac44a9a27b5c3ad62279dc3065aa9e0aac5236
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d9f48ffb9cad787159a40a58d85e6bff5dacc475
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378229"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808252"
 ---
 # <a name="cfixedstringt-class"></a>CFixedStringT クラス
 
@@ -39,10 +39,10 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 #### <a name="parameters"></a>パラメーター
 
-*文字列型*  
+*文字列型*<br/>
 固定文字列オブジェクトの基底クラスとして使用して、いずれかを指定できます`CStringT`-ベースの型。 例をいくつか含める`CString`、 `CStringA`、および`CStringW`します。
 
-*t_nChars*  
+*t_nChars*<br/>
 バッファーに格納されている文字の数。
 
 ## <a name="members"></a>メンバー
@@ -81,7 +81,7 @@ class CFixedStringT : private CFixedStringMgr, public StringType
 
 `CFixedStringT`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** cstringt.h
 
@@ -101,13 +101,13 @@ explicit CFixedStringT(const unsigned char* psz);
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*  
+*2 つ*<br/>
 これにコピーされる null で終わる文字列`CFixedStringT`オブジェクト。
 
-*str*  
+*str*<br/>
 既存の`CFixedStringT`オブジェクトにコピーされるこの`CFixedStringT`オブジェクト。
 
-*pStringMgr*  
+*pStringMgr*<br/>
 メモリ マネージャーへのポインター、`CFixedStringT`オブジェクト。 詳細については`IAtlStringMgr`のメモリ管理と`CFixedStringT`を参照してください[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
 
 ### <a name="remarks"></a>Remarks
@@ -129,10 +129,10 @@ CFixedStringT<StringType, t_nChars>& operator=(const StringType& str);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*  
+*str*<br/>
 これにコピーされる null で終わる文字列`CFixedStringT`オブジェクト。
 
-*2 つ*  
+*2 つ*<br/>
 既存の`CFixedStringT`これにコピーされる`CFixedStringT`オブジェクト。
 
 ### <a name="remarks"></a>Remarks

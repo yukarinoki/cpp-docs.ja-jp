@@ -1,7 +1,7 @@
 ---
 title: CTime クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 10/12/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c14dc8c8c9b697ecb7dcf1ff227eb7a76ad7cfa5
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 8c99fe44b5012e08a4b32a9e84d4255e4ee2b7e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328598"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808837"
 ---
 # <a name="ctime-class"></a>CTime クラス
 
@@ -49,7 +49,7 @@ ms.locfileid: "49328598"
 ## <a name="syntax"></a>構文
 
 ```
-class CTime  
+class CTime
 ```
 
 ## <a name="members"></a>メンバー
@@ -110,7 +110,7 @@ class CTime
 > [!NOTE]
 >  `CTime` MFC 8.0 から MFC 7.1 構造に変更します。 シリアル化する場合、`CTime`構造体を使用して、**演算子 <<** MFC 8.0 またはそれ以降のバージョンでは、結果のファイルが読み取れない MFC の以前のバージョン。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atltime.h
 
@@ -119,17 +119,17 @@ class CTime
 比較演算子。
 
 ```
-bool operator==(CTime time) const throw(); 
+bool operator==(CTime time) const throw();
 bool operator!=(CTime time) const throw();
 bool operator<(CTime time) const throw();
 bool operator>(CTime time) const throw();
 bool operator<=(CTime time) const throw();
-bool operator>=(CTime time) const throw(); 
+bool operator>=(CTime time) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*time*  
+*time*<br/>
 比較される `CTime` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -152,22 +152,21 @@ CTime(int nYear, int nMonth, int nDay,
 CTime(WORD wDosDate, WORD wDosTime, int nDST = -1);
 CTime(const SYSTEMTIME& st, int nDST = - 1) throw();
 CTime(const FILETIME& ft, int nDST = - 1);
-CTime(const DBTIMESTAMP& dbts,int nDST = -1) throw();
+CTime(const DBTIMESTAMP& dbts, int nDST = -1) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*timeSrc*  
+*timeSrc*<br/>
 示す、`CTime`既に存在するオブジェクト。
 
-*time*  
-A **_ _time64_t**時刻の値は UTC 1970 年 1 月 1 日の後の秒数です。 これが、現地時刻に調整されることに注意してください。 たとえば、ニューヨークにして作成した場合、 `CTime` 0 の場合のパラメーターを渡すことによってオブジェクト[渡して](#getmonth)は 12 を返します。  
+*time*<br/>
+A **_ _time64_t**時刻の値は UTC 1970 年 1 月 1 日の後の秒数です。 これが、現地時刻に調整されることに注意してください。 たとえば、ニューヨークにして作成した場合、 `CTime` 0 の場合のパラメーターを渡すことによってオブジェクト[渡して](#getmonth)は 12 を返します。
 
-
-*nYear*、 *nMonth*、 *%n%n*、*時間*、 *nMin*、 *nSec*  
+*nYear*、 *nMonth*、 *%n%n*、*時間*、 *nMin*、 *nSec*<br/>
 新しいにコピーされる日付と時刻の値を示す`CTime`オブジェクト。
 
-*nDST*  
+*nDST*<br/>
 夏時間が有効になっているかどうかを示します。 次の 3 つの値のいずれかを設定できます。
 
 - *nDST* 0Standard 時間に設定が有効になっています。
@@ -176,16 +175,16 @@ A **_ _time64_t**時刻の値は UTC 1970 年 1 月 1 日の後の秒数です�
 
 - *nDST* 0 the 既定よりも小さい値に設定します。 標準時間または夏時間が有効ではかどうかを自動的に計算します。
 
-*wDosDate*、 *wDosTime*  
+*wDosDate*、 *wDosTime*<br/>
 日付と時刻の値を日付/時刻値に変換して、新しいコピーを MS-DOS`CTime`オブジェクト。
 
-*st*  
+*st*<br/>
 A [SYSTEMTIME](../../mfc/reference/systemtime-structure.md)構造体の日付/時刻値に変換して、新しいコピーを`CTime`オブジェクト。
 
-*ft*  
+*ft*<br/>
 A [FILETIME](../../mfc/reference/filetime-structure.md)構造体の日付/時刻値に変換して、新しいコピーを`CTime`オブジェクト。
 
-dbts  
+*dbts*<br/>
 現在の現地時刻を含む DBTIMESTAMP 構造体への参照。
 
 ### <a name="remarks"></a>Remarks
@@ -200,13 +199,13 @@ dbts
 
 - `CTime( int, int, ...);` 構築、`CTime`各コンポーネントのローカル時刻のコンポーネントからのオブジェクトは、次の範囲に制限します。
 
-   |コンポーネント|範囲|  
-   |---------------|-----------|  
-   |*nYear*|1970-3000|  
-   |*nMonth*|1-12|  
-   |*%n%n*|1-31|  
-   |*時間*|0-23|  
-   |*nMin*|0-59|  
+   |コンポーネント|範囲|
+   |---------------|-----------|
+   |*nYear*|1970-3000|
+   |*nMonth*|1-12|
+   |*%n%n*|1-31|
+   |*時間*|0-23|
+   |*nMin*|0-59|
    |*nSec*|0-59|
 
    このコンス トラクターは、UTC への適切な変換です。 1 つの場合、Microsoft Foundation Class ライブラリのデバッグ バージョンがアサートまたは範囲外の時間コンポーネントの詳細。 呼び出しの前に引数を検証する必要があります。 このコンス トラクターには、現地時刻が必要です。
@@ -231,16 +230,16 @@ dbts
 日付/時刻値の書式設定された表現を作成するには、このメンバー関数を呼び出します。
 
 ```
-CString Format(LPCTSTR pszFormat) const; 
-CString Format(UINT nFormatID) const; 
+CString Format(LPCTSTR pszFormat) const;
+CString Format(UINT nFormatID) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFormat*  
+*pszFormat*<br/>
 ような文字列を書式設定、`printf`文字列の書式設定します。 割合に続くコードの書式設定 (`%`) 署名は、対応する置き換え`CTime`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 実行時の関数を参照してください。 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)コードの書式設定の一覧についてはします。
 
-*nFormatID*  
+*nFormatID*<br/>
 この形式を識別する文字列の ID。
 
 ### <a name="return-value"></a>戻り値
@@ -268,10 +267,10 @@ CString FormatGmt(UINT nFormatID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFormat*  
+*pszFormat*<br/>
 ような書式設定文字列を指定します、`printf`文字列の書式設定します。 実行時の関数を参照してください。 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)詳細についてはします。
 
-*nFormatID*  
+*nFormatID*<br/>
 この形式を識別する文字列の ID。
 
 ### <a name="return-value"></a>戻り値
@@ -298,7 +297,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dbts*  
+*dbts*<br/>
 現在の現地時刻を含む DBTIMESTAMP 構造体への参照。
 
 ### <a name="return-value"></a>戻り値
@@ -323,7 +322,7 @@ bool GetAsSystemTime(SYSTEMTIME& st) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*timeDest*  
+*timeDest*<br/>
 参照を[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)の変換後の日付/時刻値を保持する構造体、`CTime`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -359,7 +358,7 @@ static CTime WINAPI GetCurrentTime() throw();
 によって表される日を返します、`CTime`オブジェクト。
 
 ```
-int GetDay() const throw(); 
+int GetDay() const throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -404,7 +403,7 @@ struct tm* GetGmtTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ptm*  
+*ptm*<br/>
 時刻のデータを受け取るバッファーへのポインター。 このポインターが NULL の場合は、例外がスローされます。
 
 ### <a name="return-value"></a>戻り値
@@ -451,7 +450,7 @@ struct tm* GetLocalTm(struct tm* ptm) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ptm*  
+*ptm*<br/>
 時刻のデータを受け取るバッファーへのポインター。 このポインターが NULL の場合は、例外がスローされます。
 
 ### <a name="return-value"></a>戻り値
@@ -574,7 +573,7 @@ CTime& operator=(__time64_t time) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*time*  
+*time*<br/>
 新しい日付/時刻値。
 
 ### <a name="return-value"></a>戻り値
@@ -597,10 +596,10 @@ CTimeSpan operator-(CTime time) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*timeSpan*  
+*timeSpan*<br/>
 `CTimeSpan`加算または減算するオブジェクト。
 
-*time*  
+*time*<br/>
 `CTime`減算するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -626,7 +625,7 @@ CTime& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*  
+*スパン*<br/>
 `CTimeSpan`加算または減算するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -654,7 +653,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-*ar*  
+*ar*<br/>
 `CArchive`を更新するオブジェクト。
 
 ### <a name="return-value"></a>戻り値

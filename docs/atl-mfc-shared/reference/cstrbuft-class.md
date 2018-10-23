@@ -1,7 +1,7 @@
 ---
 title: CStrBufT クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43c460d45e0f1ce41cebd463bc3ba6b7f295d9ca
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82152ea3df6bb21ee1405790acf9d3fb2c9630c5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411184"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808993"
 ---
 # <a name="cstrbuft-class"></a>CStrBufT クラス
 
@@ -43,7 +43,7 @@ class CStrBufT
 
 #### <a name="parameters"></a>パラメーター
 
-*TCharType*  
+*TCharType*<br/>
 文字型、`CStrBufT`クラス。 次のいずれかの値を指定します。
 
 - **char** (の ANSI 文字列)
@@ -94,7 +94,7 @@ class CStrBufT
 
 ヘルパー クラスとして主に設計されています`CStrBufT`方法の詳細について心配することがなく、文字列オブジェクトの文字バッファーを使用する開発者にとって便利な方法を提供します。 またはを呼び出すタイミング`ReleaseBuffer`します。 これは、ラッパー オブジェクトが例外または終了する複数のコード パスの場合は当然のスコープ外になるため、可能文字列リソースを解放するには、そのデストラクターが原因で。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsimpstr.h
 
@@ -121,13 +121,13 @@ explicit CStrBufT(StringType& str) throw(...);
 
 ### <a name="parameters"></a>パラメーター
 
-*str*  
+*str*<br/>
 バッファーに関連付けられている文字列オブジェクト。 通常、開発者がの定義済みの typedef を使用`CStrBuf`(TCHAR バリアント型)、 `CStrBufA` (**char**バリアント型) と`CStrBufW`(**wchar_t**バリアント型)。
 
-*nMinLength*  
+*nMinLength*<br/>
 文字バッファーの最小長。
 
-*dwFlags*  
+*dwFlags*<br/>
 文字列の長さが自動的に決定されているかどうかを決定します。 次のいずれかの値を指定します。
 
 - AUTO_LENGTH 文字列の長さが自動的に決定するときに[CSimpleStringT::Release](../../atl-mfc-shared/reference/csimplestringt-class.md#releasebuffer)が呼び出されます。 Null で終わる文字列がある必要があります。 既定値です。
@@ -212,7 +212,7 @@ void SetLength(int nLength);
 
 ### <a name="parameters"></a>パラメーター
 
-*されて*  
+*されて*<br/>
 文字列オブジェクトの文字バッファーの新しい長さ。
 
 > [!NOTE]

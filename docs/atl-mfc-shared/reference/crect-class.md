@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b135b318a77835d22d7547e78f3b5c4f7ee3daee
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: e8033ceb709ab66c37e1801cd4033e6830467f2b
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328585"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808616"
 ---
 # <a name="crect-class"></a>CRect クラス
 
@@ -139,7 +139,7 @@ A`CRect`四角形の左と右下隅の点を定義するメンバー変数が含
 
 `CRect`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atltypes.h
 
@@ -259,7 +259,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpSrcRect*  
+*lpSrcRect*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`オブジェクトのコピーです。
 
 ### <a name="example"></a>例
@@ -300,34 +300,34 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*l*  
+*l*<br/>
 左側の位置を示す`CRect`します。
 
-*t*  
+*t*<br/>
 先頭を指定します`CRect`します。
 
-*r*  
+*r*<br/>
 適切な位置を示す`CRect`します。
 
-*b*  
+*b*<br/>
 指定の下部にある`CRect`します。
 
-*srcRect*  
+*srcRect*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造体の座標で`CRect`します。
 
-*lpSrcRect*  
+*lpSrcRect*<br/>
 指す、`RECT`構造体の座標で`CRect`します。
 
-*ポイント*  
+*ポイント*<br/>
 構築される四角形の原点を指定します。 左上隅に対応します。
 
-*size*  
+*size*<br/>
 左上隅から構築される四角形の右下隅までの距離を指定します。
 
-*左上端*  
+*左上端*<br/>
 左上の位置を示す`CRect`します。
 
-*bottomRight*  
+*bottomRight*<br/>
 右下の位置を示す`CRect`します。
 
 ### <a name="remarks"></a>Remarks
@@ -387,28 +387,28 @@ void DeflateRect(int l, int t, int r, int b) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 左右に左側を deflate ユニットの数を指定します`CRect`します。
 
-*y*  
+*y*<br/>
 Deflate 上部と下部にユニットの数を指定します`CRect`します。
 
-*size*  
+*size*<br/>
 A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)または[CSize](csize-class.md) deflate をユニットの数を指定する`CRect`します。 `cx`値が左辺と右辺を圧縮する単位数を指定します、 `cy` deflate 上部と下部にユニットの数を指定します。
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`各辺を縮小するユニット数を指定します。
 
-*l*  
+*l*<br/>
 左側にあるを圧縮する単位の数を指定します`CRect`します。
 
-*t*  
+*t*<br/>
 上部を圧縮する単位の数を指定します`CRect`します。
 
-*r*  
+*r*<br/>
 右側にあるを圧縮する単位の数を指定します`CRect`します。
 
-*b*  
+*b*<br/>
 Deflate の下部にユニットの数を指定します`CRect`します。
 
 ### <a name="remarks"></a>Remarks
@@ -442,7 +442,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`四角形の左上隅および右下隅の座標を格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -518,28 +518,28 @@ void InflateRect(int l, int t, int r,  int b) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 左右を左に拡大するためのユニットの数を指定します`CRect`します。
 
-*y*  
+*y*<br/>
 上部と下部の膨張ユニットの数を指定します`CRect`します。
 
-*size*  
+*size*<br/>
 A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)または[CSize](csize-class.md)膨張ユニットの数を指定する`CRect`します。 `cx`値が左辺と右辺を拡大するためのユニットの数を指定します、`cy`上部と下部の膨張ユニットの数を指定します。
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`各辺を拡大するユニット数を指定します。
 
-*l*  
+*l*<br/>
 左側にあるを拡大するためのユニットの数を指定します`CRect`します。
 
-*t*  
+*t*<br/>
 先頭を拡大するためのユニットの数を指定します`CRect`します。
 
-*r*  
+*r*<br/>
 右側にあるを拡大するためのユニットの数を指定します`CRect`します。
 
-*b*  
+*b*<br/>
 一番下に拡大するためのユニットの数を指定します`CRect`します。
 
 ### <a name="remarks"></a>Remarks
@@ -568,10 +568,10 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRect1*  
+*lpRect1*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`ソース四角形を格納しているオブジェクト。
 
-*lpRect2*  
+*lpRect2*<br/>
 指す、`RECT`構造または`CRect`ソース四角形を格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -684,7 +684,7 @@ void MoveToX(int x) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 四角形の左上隅の絶対 x 座標。
 
 ### <a name="example"></a>例
@@ -712,13 +712,13 @@ void MoveToXY(POINT point) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 四角形の左上隅の絶対 x 座標。
 
-*y*  
+*y*<br/>
 四角形の左上隅の絶対 y 座標。
 
-*ポイント*  
+*ポイント*<br/>
 A`POINT`四角形の絶対の左上隅を指定する構造体。
 
 ### <a name="example"></a>例
@@ -745,7 +745,7 @@ void MoveToY(int y) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*y*  
+*y*<br/>
 四角形の左上隅の絶対 y 座標。
 
 ### <a name="example"></a>例
@@ -803,16 +803,16 @@ void OffsetRect(SIZE size) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 左に移動する量を指定します。 負の値を左に移動する場合があります。
 
-*y*  
+*y*<br/>
 上下に移動する量を指定します。 負の値を上へ移動する場合があります。
 
-*ポイント*  
+*ポイント*<br/>
 含まれています、[ポイント](../../mfc/reference/point-structure.md)構造または[CPoint](cpoint-class.md)に移動する寸法の両方を指定するオブジェクト。
 
-*size*  
+*size*<br/>
 含まれています、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](csize-class.md)に移動する寸法の両方を指定するオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -872,7 +872,7 @@ void operator=(const RECT& srcRect) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*srcRect*  
+*srcRect*<br/>
 元の四角形を指します。 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
 
 ### <a name="example"></a>例
@@ -900,7 +900,7 @@ BOOL operator==(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*  
+*rect*<br/>
 元の四角形を指します。 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
 
 ### <a name="return-value"></a>戻り値
@@ -946,7 +946,7 @@ BOOL operator!=(const RECT& rect) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*  
+*rect*<br/>
 元の四角形を指します。 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
 
 ### <a name="return-value"></a>戻り値
@@ -993,13 +993,13 @@ void operator+=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*  
+*ポイント*<br/>
 A[ポイント](../../mfc/reference/point-structure.md)構造または[CPoint](cpoint-class.md)四角形を移動する単位の数を指定するオブジェクト。
 
-*size*  
+*size*<br/>
 A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](csize-class.md)四角形を移動する単位の数を指定するオブジェクト。
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`のそれぞれの側を拡大するためのユニットの数を格納しているオブジェクト`CRect`します。
 
 ### <a name="remarks"></a>Remarks
@@ -1036,13 +1036,13 @@ void operator-=(LPCRECT lpRect) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*  
+*ポイント*<br/>
 A[ポイント](../../mfc/reference/point-structure.md)構造または[CPoint](cpoint-class.md)四角形を移動する単位の数を指定するオブジェクト。
 
-*size*  
+*size*<br/>
 A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](csize-class.md)四角形を移動する単位の数を指定するオブジェクト。
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`の各辺を縮小するユニット数を格納しているオブジェクト`CRect`します。
 
 ### <a name="remarks"></a>Remarks
@@ -1077,7 +1077,7 @@ void operator&=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*  
+*rect*<br/>
 含まれています、 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
 
 ### <a name="remarks"></a>Remarks
@@ -1101,7 +1101,7 @@ void operator|=(const RECT& rect) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*  
+*rect*<br/>
 含まれています、`CRect`または[RECT](../../mfc/reference/rect-structure.md)します。
 
 ### <a name="remarks"></a>Remarks
@@ -1140,13 +1140,13 @@ CRect operator+(SIZE size) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*  
+*ポイント*<br/>
 A[ポイント](../../mfc/reference/point-structure.md)構造または[CPoint](cpoint-class.md)戻り値を移動する単位の数を指定するオブジェクト。
 
-*size*  
+*size*<br/>
 A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](csize-class.md)戻り値を移動する単位の数を指定するオブジェクト。
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`戻り値のそれぞれの側を拡大するためのユニットの数を格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1184,13 +1184,13 @@ CRect operator-(LPCRECT lpRect) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*  
+*ポイント*<br/>
 A[ポイント](../../mfc/reference/point-structure.md)構造または`CPoint`戻り値を移動する単位の数を指定するオブジェクト。
 
-*size*  
+*size*<br/>
 A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または`CSize`戻り値を移動する単位の数を指定するオブジェクト。
 
-*lpRect*  
+*lpRect*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`戻り値の各辺を縮小するユニット数を格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1226,7 +1226,7 @@ CRect operator&(const RECT& rect2) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*rect2*  
+*rect2*<br/>
 含まれています、 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
 
 ### <a name="return-value"></a>戻り値
@@ -1264,7 +1264,7 @@ rect2) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*rect2*  
+*rect2*<br/>
 含まれています、 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
 
 ### <a name="return-value"></a>戻り値
@@ -1306,7 +1306,7 @@ BOOL PtInRect(POINT point) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*  
+*ポイント*<br/>
 含まれています、[ポイント](../../mfc/reference/point-structure.md)構造または[CPoint](cpoint-class.md)オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1358,16 +1358,16 @@ void SetRect(int x1, int y1, int x2, int y2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*x1*  
+*x1*<br/>
 左上隅の x 座標を指定します。
 
-*y1*  
+*y1*<br/>
 左上隅の y 座標を指定します。
 
-*x2*  
+*x2*<br/>
 右下隅の x 座標を指定します。
 
-*y2*  
+*y2*<br/>
 右下隅の y 座標を指定します。
 
 ### <a name="example"></a>例
@@ -1438,10 +1438,10 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRectSrc1*  
+*lpRectSrc1*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`四角形の減算する元のオブジェクト。
 
-*lpRectSrc2*  
+*lpRectSrc2*<br/>
 指す、`RECT`構造または`CRect`指す四角形から減算するオブジェクト、 *lpRectSrc1*パラメーター。
 
 ### <a name="return-value"></a>戻り値
@@ -1526,10 +1526,10 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lpRect1*  
+*lpRect1*<br/>
 指す、 [RECT](../../mfc/reference/rect-structure.md)または`CRect`ソース四角形を格納しています。
 
-*lpRect2*  
+*lpRect2*<br/>
 指す、`RECT`または`CRect`ソース四角形を格納しています。
 
 ### <a name="return-value"></a>戻り値

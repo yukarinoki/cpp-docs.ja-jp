@@ -1,7 +1,7 @@
 ---
 title: CSize クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ca548fec9a70a04b0bdb9a5169021fc43f149eb
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 9966bcdf31df3b6d3f702ec425131c5b8baa3aee
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328546"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808499"
 ---
 # <a name="csize-class"></a>CSize クラス
 
@@ -72,7 +72,7 @@ class CSize : public tagSIZE
 
 `CSize`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atltypes.h
 
@@ -90,19 +90,19 @@ CSize( DWORD dwSize) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*initCX*  
+*initCX*<br/>
 セット、`cx`のメンバー、`CSize`します。
 
-*initCY*  
+*initCY*<br/>
 セット、`cy`のメンバー、`CSize`します。
 
-*initSize*  
+*initSize*<br/>
 [サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または`CSize`オブジェクトの初期化に使用される`CSize`します。
 
-*initPt*  
+*initPt*<br/>
 [ポイント](../../mfc/reference/point-structure.md)構造または`CPoint`オブジェクトの初期化に使用される`CSize`します。
 
-*ない dwSize*  
+*ない dwSize*<br/>
 DWORD が初期化に使用される`CSize`します。 下位ワードは、`cx`メンバーと、上位の単語は、`cy`メンバー。
 
 ### <a name="remarks"></a>Remarks

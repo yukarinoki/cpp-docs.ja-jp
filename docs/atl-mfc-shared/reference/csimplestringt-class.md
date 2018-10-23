@@ -1,7 +1,7 @@
 ---
 title: CSimpleStringT クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a4abff1faaa8fe93f15fb2d4a7e5ba15d6e434
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434662"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809149"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT クラス
 
@@ -66,7 +66,7 @@ class CSimpleStringT
 
 ### <a name="parameters"></a>パラメーター
 
-*BaseType*  
+*BaseType*<br/>
 String クラスの文字型。 次のいずれかの値を指定します。
 
 - **char** (の ANSI 文字列)。
@@ -151,13 +151,13 @@ void Append(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*strSrc*  
+*strSrc*<br/>
 `CSimpleStringT`追加するオブジェクト。
 
-*pszSrc*  
+*pszSrc*<br/>
 追加する文字を含む文字列へのポインター。
 
-*されて*  
+*されて*<br/>
 追加する文字数。
 
 ### <a name="remarks"></a>Remarks
@@ -187,7 +187,7 @@ void AppendChar(XCHAR ch);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*ch*  
+*ch*<br/>
 追加される文字
 
 ### <a name="remarks"></a>Remarks
@@ -209,13 +209,13 @@ static void CopyChars(
 
 #### <a name="parameters"></a>パラメーター
 
-*pchDest*  
+*pchDest*<br/>
 文字の文字列へのポインター。
 
-*pchSrc*  
+*pchSrc*<br/>
 コピーする文字を含む文字列へのポインター。
 
-*文字数*  
+*文字数*<br/>
 数*pchSrc*コピーする文字。
 
 ### <a name="remarks"></a>Remarks
@@ -249,13 +249,13 @@ static void CopyCharsOverlapped(
 
 #### <a name="parameters"></a>パラメーター
 
-*pchDest*  
+*pchDest*<br/>
 文字の文字列へのポインター。
 
-*pchSrc*  
+*pchSrc*<br/>
 コピーする文字を含む文字列へのポインター。
 
-*文字数*  
+*文字数*<br/>
 数*pchSrc*コピーする文字。
 
 ### <a name="remarks"></a>Remarks
@@ -280,19 +280,19 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
 #### <a name="parameters"></a>パラメーター
 
-*strSrc*  
+*strSrc*<br/>
 既存の`CSimpleStringT`オブジェクトにコピーされるこの`CSimpleStringT`オブジェクト。
 
-*pchSrc*  
+*pchSrc*<br/>
 長さの文字の配列へのポインター*されて*、null 終端ではありません。
 
-*pszSrc*  
+*pszSrc*<br/>
 これにコピーされる null で終わる文字列`CSimpleStringT`オブジェクト。
 
-*されて*  
+*されて*<br/>
 文字数のカウント`pch`します。
 
-*pStringMgr*  
+*pStringMgr*<br/>
 メモリ マネージャーへのポインター、`CSimpleStringT`オブジェクト。 詳細については`IAtlStringMgr`のメモリ管理と`CSimpleStringT`を参照してください[メモリ管理と CStringT](../memory-management-with-cstringt.md)します。
 
 ### <a name="remarks"></a>Remarks
@@ -419,7 +419,7 @@ XCHAR GetAt(int iChar) const;
 ```
 #### <a name="parameters"></a>パラメーター
 
-*iChar*  
+*iChar*<br/>
 内の文字の 0 から始まるインデックス、`CSimpleStringT`オブジェクト。 *IChar*パラメーターが 0 以上で、によって返される値より小さくする必要があります[GetLength](#getlength)します。 それ以外の場合、`GetAt`例外が生成されます。
 
 ### <a name="return-value"></a>戻り値
@@ -451,7 +451,7 @@ PXSTR GetBuffer();
 ```
 #### <a name="parameters"></a>パラメーター
 
-*nMinBufferLength*  
+*nMinBufferLength*<br/>
 文字バッファーに保持できる文字の最小数。 この値では、null 終端文字のスペースは含まれません。
 
 場合*nMinBufferLength*が現在のバッファーの長さより大きい`GetBuffer`現在のバッファーを破棄し、要求されたサイズのバッファーに置き換えられ、オブジェクトの参照カウントを 0 にリセットします。 以前と呼ばれる場合[LockBuffer](#lockbuffer)で、このバッファーでバッファーのロックが失われます。
@@ -498,7 +498,7 @@ PXSTR GetBufferSetLength(int nLength);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*されて*  
+*されて*<br/>
 正確なサイズ、`CSimpleStringT`文字内で文字バッファー。
 
 ### <a name="return-value"></a>戻り値
@@ -696,7 +696,7 @@ XCHAR operator[](int iChar) const;
 ```
 #### <a name="parameters"></a>パラメーター
 
-*iChar*  
+*iChar*<br/>
 文字列内の文字の 0 から始まるインデックス。
 
 ### <a name="remarks"></a>Remarks
@@ -727,7 +727,7 @@ XCHAR operator[](int iChar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*iChar*  
+*iChar*<br/>
 文字列内の文字の 0 から始まるインデックス。
 
 ### <a name="remarks"></a>Remarks
@@ -755,13 +755,13 @@ CSimpleStringT& operator +=(wchar_t ch);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*pszSrc*  
+*pszSrc*<br/>
 Null で終わる文字列へのポインター。
 
-*strSrc*  
+*strSrc*<br/>
 既存へのポインター`CSimpleStringT`オブジェクト。
 
-*ch*  
+*ch*<br/>
 追加される文字。
 
 ### <a name="remarks"></a>Remarks
@@ -789,10 +789,10 @@ CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*pszSrc*  
+*pszSrc*<br/>
 Null で終わる文字列へのポインター。
 
-*strSrc*  
+*strSrc*<br/>
 既存へのポインター`CSimpleStringT`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -894,7 +894,7 @@ void Preallocate( int nLength);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*されて*  
+*されて*<br/>
 正確なサイズ、`CSimpleStringT`文字内で文字バッファー。
 
 ### <a name="remarks"></a>Remarks
@@ -934,7 +934,7 @@ void ReleaseBuffer(int nNewLength = -1);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*nNewLength*  
+*nNewLength*<br/>
 Null 終端文字をカウントせず、文字の文字列の新しい長さ。 -1 の既定値の設定、文字列が null 終了の場合、`CSimpleStringT`サイズ文字列の現在の長さにします。
 
 ### <a name="remarks"></a>Remarks
@@ -974,7 +974,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*nNewLength*  
+*nNewLength*<br/>
 解放されている文字列の長さ
 
 ### <a name="remarks"></a>Remarks
@@ -992,10 +992,10 @@ void SetAt(int iChar, XCHAR ch);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*iChar*  
+*iChar*<br/>
 内の文字の 0 から始まるインデックス、`CSimpleStringT`オブジェクト。 *IChar*パラメーターが 0 以上で、によって返される値より小さくする必要があります[GetLength](#getlength)します。
 
-*ch*  
+*ch*<br/>
 新しい文字です。
 
 ### <a name="remarks"></a>Remarks
@@ -1023,7 +1023,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*pStringMgr*  
+*pStringMgr*<br/>
 新しいメモリ マネージャーへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -1051,10 +1051,10 @@ void SetString(PCXSTR pszSrc);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*pszSrc*  
+*pszSrc*<br/>
 Null で終わる文字列へのポインター。
 
-*されて*  
+*されて*<br/>
 文字数のカウント*pszSrc*します。
 
 ### <a name="remarks"></a>Remarks
@@ -1091,7 +1091,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
 #### <a name="parameters"></a>パラメーター
 
-*2 つ*  
+*2 つ*<br/>
 Null で終わる文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -1121,7 +1121,7 @@ void Truncate(int nNewLength);
 ```
 #### <a name="parameters"></a>パラメーター
 
-*nNewLength*  
+*nNewLength*<br/>
 文字列の新しい長さ。
 
 ### <a name="remarks"></a>Remarks

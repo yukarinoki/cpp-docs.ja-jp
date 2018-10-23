@@ -1,46 +1,49 @@
 ---
-title: CMyProviderCommand (MyProviderRS.H) |Microsoft Docs
+title: CCustomCommand (CustomRS.H) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
 f1_keywords:
 - cmyprovidercommand
 - myproviderrs.h
+- ccustomcommand
+- customrs.h
 dev_langs:
 - C++
 helpviewer_keywords:
 - OLE DB providers, wizard-generated files
 - CMyProviderCommand class in MyProviderRS.H
+- CCustomCommand class in CustomRS.H
 ms.assetid: b30b956e-cc91-4cf5-9fe6-f8b1ce9cc2a5
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 919455c1f0e1bae0491226e2f2d0f53bb35f7ad8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3d3f6b8775ab876834555e7c47e469c72d3a150b
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46046603"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807734"
 ---
-# <a name="cmyprovidercommand-myproviderrsh"></a>CMyProviderCommand (MyProviderRS.H)
+# <a name="ccustomcommand-customrsh"></a>CCustomCommand (CustomRS.H)
 
-`CMyProviderCommand`クラスは、プロバイダー コマンド オブジェクトの実装。 実装を提供しますが、 `IAccessor`、 `ICommandText`、および`ICommandProperties`インターフェイス。 `IAccessor`インターフェイスは、行セットの 1 つと同じです。 コマンド オブジェクトでは、アクセサーを使用して、バインド パラメーターを指定します。 行セット オブジェクトでは、出力列のバインドを指定するのに、それらを使用します。 `ICommandText`インターフェイスは、テキスト コマンドを指定する便利な方法です。 この例では、`ICommandText`インターフェイスの後でカスタム コードを追加する場合もオーバーライド、`ICommand::Execute`メソッド。 `ICommandProperties`インターフェイスはすべてのコマンドと行セット オブジェクトのプロパティを処理します。  
+`CCustomCommand`クラスは、プロバイダー コマンド オブジェクトの実装。 実装を提供しますが、 `IAccessor`、 `ICommandText`、および`ICommandProperties`インターフェイス。 `IAccessor`インターフェイスは、行セットの 1 つと同じです。 コマンド オブジェクトでは、アクセサーを使用して、バインド パラメーターを指定します。 行セット オブジェクトでは、出力列のバインドを指定するのに、それらを使用します。 `ICommandText`インターフェイスは、テキスト コマンドを指定する便利な方法です。 この例では、`ICommandText`インターフェイスの後でカスタム コードを追加する場合もオーバーライド、`ICommand::Execute`メソッド。 `ICommandProperties`インターフェイスはすべてのコマンドと行セット オブジェクトのプロパティを処理します。  
   
 ```cpp  
-// CMyProviderCommand  
-class ATL_NO_VTABLE CMyProviderCommand :   
-class ATL_NO_VTABLE CMyProviderCommand :   
+// CCustomCommand  
+class ATL_NO_VTABLE CCustomCommand :   
+class ATL_NO_VTABLE CCustomCommand :   
    public CComObjectRootEx<CComSingleThreadModel>,  
-   public IAccessorImpl<CMyProviderCommand>,  
-   public ICommandTextImpl<CMyProviderCommand>,  
-   public ICommandPropertiesImpl<CMyProviderCommand>,  
-   public IObjectWithSiteImpl<CMyProviderCommand>,  
-   public IConvertTypeImpl<CMyProviderCommand>,  
-   public IColumnsInfoImpl<CMyProviderCommand>  
+   public IAccessorImpl<CCustomCommand>,  
+   public ICommandTextImpl<CCustomCommand>,  
+   public ICommandPropertiesImpl<CCustomCommand>,  
+   public IObjectWithSiteImpl<CCustomCommand>,  
+   public IConvertTypeImpl<CCustomCommand>,  
+   public IColumnsInfoImpl<CCustomCommand>  
 ```  
   
 `IAccessor`インターフェイス コマンドと行セットで使用されるすべてのバインドを管理します。 コンシューマーは`IAccessor::CreateAccessor`の配列で`DBBINDING`構造体。 各`DBBINDING`構造には (型と長さ) などの列バインドの処理方法に関する情報が含まれています。 プロバイダーは、構造体を受け取り、データの転送方法と、すべての変換が必要かどうかを判断します。 `IAccessor`インターフェイスが、コマンドのパラメーターを処理するために、コマンド オブジェクトで使用します。  

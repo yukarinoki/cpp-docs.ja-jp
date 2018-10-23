@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8c4e3003beb0e50887f6b765904095c65dd8f1b6
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 3a3d2926b2f9c958d3770737729726bbad7b13e7
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083659"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808915"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>スキーマ行セットを使用したメタデータの取得
 
@@ -31,23 +31,23 @@ ms.locfileid: "49083659"
 OLE DB テンプレートは、一連のスキーマ情報を取得するためのクラスを提供します。これらのクラスは、定義済みのスキーマ行セットを作成し、記載されて[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)します。  
   
 > [!NOTE]
->  OLAP を使用していて、行セットの一部がスキーマ行セット クラスでサポートされていない場合 (列数が変数の場合など) は、`CManualAccessor` または `CDynamicAccessor` の使用を検討する必要があります。 列をスクロールし、case ステートメントを使用して、各列で可能なデータ型を処理できます。  
+> OLAP を使用していて、行セットの一部がスキーマ行セット クラスでサポートされていない場合 (列数が変数の場合など) は、`CManualAccessor` または `CDynamicAccessor` の使用を検討する必要があります。 列をスクロールし、case ステートメントを使用して、各列で可能なデータ型を処理できます。  
   
 ## <a name="catalogschema-model"></a>カタログ/スキーマ モデル  
 
 ANSI SQL はデータ ストアのカタログ/スキーマ モデルを定義しています。OLE DB はこのモデルを使用します。 このモデルでは、カタログ (データベース) にスキーマが含まれ、スキーマにテーブルが含まれます。  
   
-- **カタログ**カタログは、データベースに別の名前。 これは、関連するスキーマのコレクションです。 指定したデータ ソースに属するカタログ (データベース) を一覧表示する[CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md)します。 多くのデータベースにはカタログが 1 つしかないため、メタデータは、単純にスキーマ情報と呼ばれることがあります。  
+- **カタログ**カタログは、データベースに別の名前。 これは、関連するスキーマのコレクションです。 指定したデータ ソースに属するカタログ (データベース) を一覧表示する[CCatalog](../../data/oledb/ccatalogs-ccataloginfo.md)します。 多数のデータベースが 1 つだけカタログが、メタデータはスキーマ情報と呼ばれることがあります。  
   
 - **スキーマ**スキーマが所有しているまたは特定のユーザーによって作成されたデータベース オブジェクトのコレクション。 特定のユーザーが所有するスキーマを一覧表示する[CSchemata](../../data/oledb/cschemata-cschematainfo.md)します。  
   
-     Microsoft SQL Server と ODBC 2.x の用語では、スキーマは所有者です (たとえば、dbo は一般的なスキーマ名)。 また、SQL Server は一連のテーブルでメタデータを格納します。 1 つのテーブルには、すべてのテーブルの一覧が含まれていますし、別のテーブルには、すべての列の一覧が含まれています。 Microsoft Access データベースにはスキーマに相当するものはありません。  
+     Microsoft SQL Server と ODBC 2.x の用語では、スキーマは所有者です (たとえば、dbo は一般的なスキーマ名)。 また、SQL Server は一連のテーブルでメタデータを格納します。 1 つのテーブルには、すべてのテーブルの一覧が含まれていますし、別のテーブルには、すべての列の一覧が含まれています。 Microsoft Access データベース内のスキーマに相当することはありません。  
   
 - **テーブル**テーブルは、特定の順序で分類された列のコレクション。 指定したカタログ (データベース) とそれらのテーブルに関する情報で定義されているテーブルを一覧表示する[CTables](../../data/oledb/ctables-ctableinfo.md))。  
   
 ## <a name="restrictions"></a>制約  
 
-スキーマ情報を照会するときに、制約を使用して、目的の情報の種類を指定できます。 制約は、クエリのフィルターまたは修飾子として考えることができます。 たとえば、次のクエリについて考えます。  
+スキーマ情報を照会すると、関心がある情報の種類を指定するのに制限を使用できます。 制約は、クエリのフィルターまたは修飾子として考えることができます。 たとえば、次のクエリについて考えます。  
   
 ```sql  
 SELECT * FROM authors where l_name = 'pivo'  
@@ -67,7 +67,7 @@ CRestrictions<CAccessor<CColumnsInfo>
   
 そのため、たとえば、テーブル名で制限する場合は、TABLE_NAME が 3 つ目の制限列を呼び出して`Open`、次の例に示すように、3 番目の制限パラメーターとして目的のテーブル名を指定します。  
   
-#### <a name="to-use-schema-rowsets"></a>スキーマ行セットを使用するには  
+### <a name="to-use-schema-rowsets"></a>スキーマ行セットを使用するには  
   
 1. Atldbsch.h ヘッダー ファイルをインクルードする必要があります (コンシューマー サポートでも Atldbcli.h が必要です)。  
   
@@ -89,7 +89,7 @@ CRestrictions<CAccessor<CColumnsInfo>
     }  
     ```  
   
-1. 情報をフェッチするには、スキーマ行セット オブジェクトの適切なデータ メンバーにアクセスします。たとえば、`ColumnSchemaRowset.m_szColumnName` にアクセスします。 これは COLUMN_NAME に対応します。 各データ メンバーに対応する OLE DB 列を表示するには、次を参照してください。 [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)します。  
+1. 情報をフェッチするには、スキーマ行セット オブジェクトの適切なデータ メンバーにアクセスします。たとえば、`ColumnSchemaRowset.m_szColumnName` にアクセスします。 このデータ メンバーは、COLUMN_NAME に対応します。 各データ メンバーに対応する OLE DB 列を表示するには、次を参照してください。 [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)します。  
   
 OLE DB テンプレートのスキーマ行セットの参照の typedef クラスが提供されている (を参照してください[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。  
   

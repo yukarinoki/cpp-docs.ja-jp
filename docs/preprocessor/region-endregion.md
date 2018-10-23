@@ -1,7 +1,7 @@
 ---
 title: リージョン、endregion |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -22,49 +22,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dac2df26f393b7491d94abdb6d987a8e424723e1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2e360009eb9126604d4466daed2445c7dfc582d4
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715560"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808070"
 ---
 # <a name="region-endregion"></a>region、endregion
-`#pragma region` 展開したり折りたたむを使用する場合のコードのブロックを指定することができます、[アウトライン機能](/visualstudio/ide/outlining)の Visual Studio コード エディター。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-#pragma region name  
-#pragma endregion comment  
-```  
-  
-### <a name="parameters"></a>パラメーター  
-*comment*  
-(省略可能)コード エディターに表示されるコメントです。  
-  
-*name*  
-(省略可能)領域の名前。  この名前はコード エディターに表示されます。  
-  
-## <a name="remarks"></a>Remarks  
- 
-`#pragma endregion` 末尾を`#pragma region`ブロックします。  
-  
-A`#region`でブロックを終了する必要があります`#pragma endregion`します。  
-  
-## <a name="example"></a>例  
-  
-```cpp  
-// pragma_directives_region.cpp  
-#pragma region Region_1  
-void Test() {}  
-void Test2() {}  
-void Test3() {}  
-#pragma endregion Region_1  
-  
-int main() {}  
-```  
-  
-## <a name="see-also"></a>関連項目  
- 
+
+`#pragma region` 展開したり折りたたむを使用する場合のコードのブロックを指定することができます、[アウトライン機能](/visualstudio/ide/outlining)の Visual Studio コード エディター。
+
+## <a name="syntax"></a>構文
+
+```
+#pragma region name
+#pragma endregion comment
+```
+
+### <a name="parameters"></a>パラメーター
+
+*comment*<br/>
+(省略可能)コード エディターに表示されるコメントです。
+
+*name*<br/>
+(省略可能)領域の名前。  この名前はコード エディターに表示されます。
+
+## <a name="remarks"></a>Remarks
+
+`#pragma endregion` 末尾を`#pragma region`ブロックします。
+
+A`#region`でブロックを終了する必要があります`#pragma endregion`します。
+
+## <a name="example"></a>例
+
+```cpp
+// pragma_directives_region.cpp
+#pragma region Region_1
+void Test() {}
+void Test2() {}
+void Test3() {}
+#pragma endregion Region_1
+
+int main() {}
+```
+
+## <a name="see-also"></a>関連項目
+
 [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

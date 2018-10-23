@@ -1,7 +1,7 @@
 ---
 title: CStringT クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -90,12 +90,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d6a6afeca0bcf0d08a0a206983d3db33b61a041
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: f2d31d24007da1ec279e9c9762158b549e83d114
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890700"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809123"
 ---
 # <a name="cstringt-class"></a>CStringT クラス
 
@@ -115,7 +115,7 @@ public CSimpleStringT<BaseType,
 
 #### <a name="parameters"></a>パラメーター
 
-*BaseType*  
+*BaseType*<br/>
 String クラスの文字型。 次のいずれかの値を指定します。
 
 - **char** (の ANSI 文字列)。
@@ -124,7 +124,7 @@ String クラスの文字型。 次のいずれかの値を指定します。
 
 - TCHAR (の ANSI および Unicode 文字列)。
 
-*StringTraits*  
+*StringTraits*<br/>
 文字列クラスには、C ランタイム (CRT) ライブラリのサポートと文字列リソースが配置される必要があるかどうかを決定します。 次のいずれかの値を指定します。
 
 - **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR、ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
@@ -282,7 +282,7 @@ MFC ベースのアプリケーション内で、次の文字列型がありま�
 
 `CStringT`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |Header|を使用します。|
 |------------|-------------|
@@ -343,13 +343,13 @@ void __cdecl AppendFormat(UINT nFormatID, [, argument] ...);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFormat*  
+*pszFormat*<br/>
 コントロールの書式設定文字列。
 
-*nFormatID*  
+*nFormatID*<br/>
 コントロールの書式設定文字列を含む文字列リソースの識別子です。
 
-*argument*  
+*argument*<br/>
 省略可能な引数。
 
 ### <a name="remarks"></a>Remarks
@@ -370,7 +370,7 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*  
+*2 つ*<br/>
 その他の文字列の比較に使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -391,7 +391,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*  
+*2 つ*<br/>
 その他の文字列の比較に使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -416,7 +416,7 @@ int Compare(PCXSTR psz) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*  
+*2 つ*<br/>
 その他の文字列の比較に使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -445,7 +445,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*  
+*2 つ*<br/>
 その他の文字列の比較に使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -539,28 +539,28 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 
 ### <a name="parameters"></a>パラメーター
 
-*pch*  
+*pch*<br/>
 長さの文字の配列へのポインター*されて*null で終了していません。
 
-*されて*  
+*されて*<br/>
 文字数のカウント*pch*します。
 
-*ch*  
+*ch*<br/>
 1 文字です。
 
-*pszSrc*  
+*pszSrc*<br/>
 これにコピーされる null で終わる文字列`CStringT`オブジェクト。
 
-*pStringMgr*  
+*pStringMgr*<br/>
 メモリ マネージャーへのポインター、`CStringT`オブジェクト。 詳細については`IAtlStringMgr`のメモリ管理と`CStringT`を参照してください[CStringT によるメモリ管理](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
 
-*strSrc*  
+*strSrc*<br/>
 既存の`CStringT`オブジェクトにコピーされるこの`CStringT`オブジェクト。 詳細については`CThisString`と`CThisSimpleString`、「解説」を参照してください。
 
-*varSrc*  
+*varSrc*<br/>
 これにコピーされるバリアント オブジェクト`CStringT`オブジェクト。
 
-*BaseType*  
+*BaseType*<br/>
 String クラスの文字型。 次のいずれかの値を指定します。
 
 **char** (の ANSI 文字列)。
@@ -569,13 +569,13 @@ String クラスの文字型。 次のいずれかの値を指定します。
 
 TCHAR (の ANSI および Unicode 文字列)。
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 プロジェクトが MFC DLL (TRUE) であるかどうかどうかを指定するブール値 (FALSE)。
 
-*[Systemstring]*  
+*[Systemstring]*<br/>
 必要があります`System::String`、し、プロジェクトは/clr でコンパイルする必要があります。
 
-*pString*  
+*pString*<br/>
 ハンドルを`CStringT`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -624,10 +624,10 @@ int Delete(int iIndex, int nCount = 1);
 
 ### <a name="parameters"></a>パラメーター
 
-*iIndex*  
+*iIndex*<br/>
 最初の文字の 0 から始まるインデックス、`CStringT`オブジェクトを削除します。
 
-*nCount*  
+*nCount*<br/>
 削除する文字数。
 
 ### <a name="return-value"></a>戻り値
@@ -660,13 +660,13 @@ int Find(XCHAR ch, int iStart=0) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszSub*  
+*pszSub*<br/>
 検索する部分文字列。
 
-*iStart*  
+*iStart*<br/>
 使用すると、検索を開始する文字列または最初から開始するには 0 で文字のインデックス。
 
-*ch*  
+*ch*<br/>
 単一の文字を検索します。
 
 ### <a name="return-value"></a>戻り値
@@ -691,7 +691,7 @@ int FindOneOf(PCXSTR pszCharSet) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszCharSet*  
+*pszCharSet*<br/>
 一致する文字を含む文字列。
 
 ### <a name="return-value"></a>戻り値
@@ -717,13 +717,13 @@ void __cdecl Format(PCXSTR pszFormat,  [, argument] ...);
 
 ### <a name="parameters"></a>パラメーター
 
-*nFormatID*  
+*nFormatID*<br/>
 コントロールの書式設定文字列を含む文字列リソースの識別子です。
 
-*pszFormat*  
+*pszFormat*<br/>
 コントロールの書式設定文字列。
 
-*argument*  
+*argument*<br/>
 省略可能な引数。
 
 ### <a name="remarks"></a>Remarks
@@ -751,13 +751,13 @@ void __cdecl FormatMessage(PCXSTR pszFormat, [, argument]...);
 
 ### <a name="parameters"></a>パラメーター
 
-*nFormatID*  
+*nFormatID*<br/>
 書式設定されていないメッセージのテキストを含む文字列リソースの識別子です。
 
-*pszFormat*  
+*pszFormat*<br/>
 コントロールの書式設定文字列を指します。 挿入のためにスキャンされ、それに応じて書式設定されます。 書式指定文字列は実行時の関数に似ています*printf*-パラメーターが任意の順序で挿入できることを除いて、書式指定文字列をスタイル設定します。
 
-*argument*  
+*argument*<br/>
 省略可能な引数。
 
 ### <a name="remarks"></a>Remarks
@@ -783,10 +783,10 @@ void FormatMessageV(PCXSTR pszFormat, va_list* pArgList);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFormat*  
+*pszFormat*<br/>
 コントロールの書式設定文字列を指します。 挿入のためにスキャンされ、それに応じて書式設定されます。 書式指定文字列は実行時の関数に似ています`printf`-パラメーターが任意の順序で挿入できることを除いて、書式指定文字列をスタイル設定します。
 
-*pArgList*  
+*pArgList*<br/>
 引数のリストへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -808,10 +808,10 @@ void FormatV(PCXSTR pszFormat, va_list args);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFormat*  
+*pszFormat*<br/>
 コントロールの書式設定文字列を指します。 挿入のためにスキャンされ、それに応じて書式設定されます。 書式指定文字列は実行時の関数に似ています`printf`-パラメーターが任意の順序で挿入できることを除いて、書式指定文字列をスタイル設定します。
 
-*引数*  
+*引数*<br/>
 引数のリストへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -834,7 +834,7 @@ BOOL GetEnvironmentVariable(PCXSTR pszVar);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszVar*  
+*pszVar*<br/>
 環境変数を指定する null で終わる文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -860,13 +860,13 @@ int Insert(int iIndex, XCHAR ch);
 
 ### <a name="parameters"></a>パラメーター
 
-*iIndex*  
+*iIndex*<br/>
 その前に、挿入が行われます文字のインデックス。
 
-*2 つ*  
+*2 つ*<br/>
 挿入する部分文字列へのポインター。
 
-*ch*  
+*ch*<br/>
 挿入する文字。
 
 ### <a name="return-value"></a>戻り値
@@ -891,7 +891,7 @@ CStringT Left(int nCount) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nCount*  
+*nCount*<br/>
 この `CStringT` オブジェクトから抽出する文字数。
 
 ### <a name="return-value"></a>戻り値
@@ -920,13 +920,13 @@ BOOL LoadString(UINT nID);
 
 ### <a name="parameters"></a>パラメーター
 
-*hInstance*  
+*hInstance*<br/>
 モジュールのインスタンスへのハンドル。
 
-*nID*  
+*nID*<br/>
 Windows の文字列リソース id。
 
-*wLanguageID*  
+*wLanguageID*<br/>
 文字列リソースの言語です。
 
 ### <a name="return-value"></a>戻り値
@@ -1002,10 +1002,10 @@ CStringT Mid(int iFirst) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*iFirst*  
+*iFirst*<br/>
 この最初の文字の 0 から始まるインデックス`CStringT`で抽出された部分文字列に含まれるオブジェクト。
 
-*nCount*  
+*nCount*<br/>
 この `CStringT` オブジェクトから抽出する文字数。 このパラメーターが指定されていない場合は、文字列の残りの部分を抽出します。
 
 ### <a name="return-value"></a>戻り値
@@ -1054,22 +1054,22 @@ friend CStringT operator+(wchar_t ch1, const CStringT& str2,);
 
 ### <a name="parameters"></a>パラメーター
 
-*ch1*  
+*ch1*<br/>
 文字列に連結する ANSI または Unicode 文字。
 
-*ch2*  
+*ch2*<br/>
 文字列に連結する ANSI または Unicode 文字。
 
-*str1*  
+*str1*<br/>
 A`CStringT`文字列または文字で連結します。
 
-*str2*  
+*str2*<br/>
 A`CStringT`文字列または文字で連結します。
 
-*psz1*  
+*psz1*<br/>
 文字列または文字で連結する null で終わる文字列へのポインター。
 
-*psz2*  
+*psz2*<br/>
 文字列または文字で連結する文字列へのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -1108,22 +1108,22 @@ CStringT& operator+=(const VARIANT& var);
 str  
 `CThisSimpleString` オブジェクトへの参照。
 
-*bMFCDLL*  
+*bMFCDLL*<br/>
 プロジェクトが MFC DLL であるかどうかどうか指定するブール値。
 
-*BaseType*  
+*BaseType*<br/>
 文字列の基本型。
 
-*var*  
+*var*<br/>
 この文字列に連結するバリアント オブジェクト。
 
-*ch*  
+*ch*<br/>
 文字列に連結する ANSI または Unicode 文字。
 
-*pszSrc*  
+*pszSrc*<br/>
 連結された場合、元の文字列へのポインター。
 
-*strSrc*  
+*strSrc*<br/>
 A`CStringT`をこの文字列に連結します。
 
 ### <a name="remarks"></a>Remarks
@@ -1155,22 +1155,22 @@ friend bool operator==(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ch1*  
+*ch1*<br/>
 比較のための ANSI または Unicode 文字。
 
-*ch2*  
+*ch2*<br/>
 比較のための ANSI または Unicode 文字。
 
-*str1*  
+*str1*<br/>
 A`CStringT`比較します。
 
-*str2*  
+*str2*<br/>
 A`CStringT`比較します。
 
-*psz1*  
+*psz1*<br/>
 比較対象の null で終わる文字列へのポインター。
 
-*psz2*  
+*psz2*<br/>
 比較対象の null で終わる文字列へのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -1197,22 +1197,22 @@ friend bool operator!=(XCHAR ch1, const CStringT& str2,) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ch1*  
+*ch1*<br/>
 文字列に連結する ANSI または Unicode 文字。
 
-*ch2*  
+*ch2*<br/>
 文字列に連結する ANSI または Unicode 文字。
 
-*str1*  
+*str1*<br/>
 A`CStringT`比較します。
 
-*str2*  
+*str2*<br/>
 A`CStringT`比較します。
 
-*psz1*  
+*psz1*<br/>
 比較対象の null で終わる文字列へのポインター。
 
-*psz2*  
+*psz2*<br/>
 比較対象の null で終わる文字列へのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -1235,16 +1235,16 @@ friend bool operator<(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*str1*  
+*str1*<br/>
 A`CStringT`比較します。
 
-*str2*  
+*str2*<br/>
 A`CStringT`比較します。
 
-*psz1*  
+*psz1*<br/>
 比較対象の null で終わる文字列へのポインター。
 
-*psz2*  
+*psz2*<br/>
 比較対象の null で終わる文字列へのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -1273,16 +1273,16 @@ friend bool operator>(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*str1*  
+*str1*<br/>
 A`CStringT`比較します。
 
-*str2*  
+*str2*<br/>
 A`CStringT`比較します。
 
-*psz1*  
+*psz1*<br/>
 比較対象の null で終わる文字列へのポインター。
 
-*psz2*  
+*psz2*<br/>
 比較対象の null で終わる文字列へのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -1311,16 +1311,16 @@ friend bool operator<=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*str1*  
+*str1*<br/>
 A`CStringT`比較します。
 
-*str2*  
+*str2*<br/>
 A`CStringT`比較します。
 
-*psz1*  
+*psz1*<br/>
 比較対象の null で終わる文字列へのポインター。
 
-*psz2*  
+*psz2*<br/>
 比較対象の null で終わる文字列へのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -1349,16 +1349,16 @@ friend bool operator>=(PCXSTR psz1, const CStringT& str2) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*str1*  
+*str1*<br/>
 A`CStringT`比較します。
 
-*str2*  
+*str2*<br/>
 A`CStringT`比較します。
 
-*psz1*  
+*psz1*<br/>
 比較対象の文字列へのポインター。
 
-*psz2*  
+*psz2*<br/>
 比較対象の文字列へのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -1385,7 +1385,7 @@ int Remove(XCHAR chRemove);
 
 ### <a name="parameters"></a>パラメーター
 
-*chRemove*  
+*chRemove*<br/>
 文字列から削除する文字。
 
 ### <a name="return-value"></a>戻り値
@@ -1411,16 +1411,16 @@ int Replace(XCHAR chOld, XCHAR chNew);
 
 ### <a name="parameters"></a>パラメーター
 
-*pszold と*  
+*pszold と*<br/>
 によって置き換えられる null で終わる文字列へのポインター *pszNew*します。
 
-*pszNew*  
+*pszNew*<br/>
 置換する null で終わる文字列へのポインター *pszold と*します。
 
-*chOld*  
+*chOld*<br/>
 置換する文字*chNew*します。
 
-*chNew*  
+*chNew*<br/>
 文字置換*chOld*します。
 
 ### <a name="return-value"></a>戻り値
@@ -1458,7 +1458,7 @@ int ReverseFind(XCHAR ch) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*ch*  
+*ch*<br/>
 検索する文字。
 
 ### <a name="return-value"></a>戻り値
@@ -1483,7 +1483,7 @@ CStringT Right(int nCount) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*nCount*  
+*nCount*<br/>
 この `CStringT` オブジェクトから抽出する文字数。
 
 ### <a name="return-value"></a>戻り値
@@ -1510,7 +1510,7 @@ BSTR SetSysString(BSTR* pbstr) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pbstr*  
+*pbstr*<br/>
 文字の文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -1537,7 +1537,7 @@ CStringT SpanExcluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pszCharSet*  
+*pszCharSet*<br/>
 文字列は、一連の文字として解釈されます。
 
 ### <a name="return-value"></a>戻り値
@@ -1562,7 +1562,7 @@ CStringT SpanIncluding(PCXSTR pszCharSet) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pszCharSet*  
+*pszCharSet*<br/>
 文字列は、一連の文字として解釈されます。
 
 ### <a name="return-value"></a>戻り値
@@ -1587,10 +1587,10 @@ CStringT Tokenize(PCXSTR pszTokens, int& iStart) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pszTokens*  
+*pszTokens*<br/>
 トークン区切り記号を含む文字列。 これらの区切り記号の順序は重要ではありません。
 
-*iStart*  
+*iStart*<br/>
 検索の開始位置の 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -1629,10 +1629,10 @@ CStringT& Trim();
 
 ### <a name="parameters"></a>パラメーター
 
-*chTarget*  
+*chTarget*<br/>
 トリムされる文字。
 
-*pszTargets*  
+*pszTargets*<br/>
 トリムされる文字を含む文字列へのポインター。 すべての先頭と末尾の文字の出現*pszTarget*から除去されることは、`CStringT`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1674,10 +1674,10 @@ CStringT& TrimLeft();
 
 ### <a name="parameters"></a>パラメーター
 
-*chTarget*  
+*chTarget*<br/>
 トリムされる文字。
 
-*pszTargets*  
+*pszTargets*<br/>
 トリムされる文字を含む文字列へのポインター。 内の文字の先頭をすべて*pszTarget*から除去されることは、`CStringT`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1710,10 +1710,10 @@ CStringT& TrimRight();
 
 ### <a name="parameters"></a>パラメーター
 
-*chTarget*  
+*chTarget*<br/>
 トリムされる文字。
 
-*pszTargets*  
+*pszTargets*<br/>
 トリムされる文字を含む文字列へのポインター。 末尾の文字のすべて*pszTarget*から除去されることは、`CStringT`オブジェクト。
 
 ### <a name="return-value"></a>戻り値

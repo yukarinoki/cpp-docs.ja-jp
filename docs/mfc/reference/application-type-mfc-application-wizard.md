@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7d27245e06350a9174699fc20246d5e8997795d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0b938186716ab86b8eaeadd69d123ff14e57e0
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434378"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808772"
 ---
 # <a name="application-type-mfc-application-wizard"></a>[アプリケーションの種類] \(MFC アプリケーション ウィザード)
 
@@ -58,7 +58,7 @@ ms.locfileid: "46434378"
 
 - **リソース言語**
 
-   リソースの言語を設定します。 一覧は、Visual Studio がインストールされている、システムで使用できる言語を表示します。 システムの言語以外の言語を選択する場合は、その言語の適切なテンプレート フォルダー既にインストールする必要があります。 言語のリソースで使用可能な既定値から別のインストールの詳細については、**リソース言語**ボックスの一覧を参照してください[ウィザードの他の言語サポート](../../ide/wizard-support-for-other-languages.md)します。
+   リソースの言語を設定します。 一覧は、Visual Studio がインストールされている、システムで使用できる言語を表示します。 システムの言語以外の言語を選択する場合は、その言語の適切なテンプレート フォルダー既にインストールする必要があります。
 
    選択した言語に反映されます、**ローカライズ文字列**のオプション、[ドキュメント テンプレート文字列、MFC アプリケーション ウィザード](../../mfc/reference/document-template-strings-mfc-application-wizard.md)ウィザードのページ。
 
