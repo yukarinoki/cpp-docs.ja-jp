@@ -1,7 +1,7 @@
 ---
 title: データベース属性によるデータ アクセスを簡素化する |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41d1692fc69ba4ff29e091ca736cae60b10a402a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2689aab8b33c01c9a4d72b231a11a251813ac625
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054078"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808018"
 ---
 # <a name="simplifying-data-access-with-database-attributes"></a>データベース属性によるデータ アクセスの簡略化
 
@@ -52,18 +52,26 @@ ms.locfileid: "46054078"
   
 - `db_table`属性付きのバージョンでの呼び出しは次のテンプレートの宣言と同等です。  
   
-    ```  
+    ```cpp  
     class CAuthorsNoAttr : public CTable<CAccessor<CAuthorsNoAttrAccessor>>  
     ```  
   
 - `db_column`属性付きのバージョンでの呼び出しは、列マップに同等です (を参照してください`BEGIN_COLUMN_MAP ... END_COLUMN_MAP`) テンプレートの宣言にします。  
   
-属性は、ユーザー レコード クラスの宣言を挿入します。 ユーザー レコード クラスは`CAuthorsNoAttrAccessor`テンプレート宣言のです。 場合は、テーブル クラス`CAuthors`、挿入されたユーザー レコード クラスの名前は`CAuthorsAccessor`、挿入されたコードではその宣言だけを表示できます。 詳細については、「Attribute-Injected ユーザー レコード クラス」を参照してください[ユーザー レコード](../../data/oledb/user-records.md)します。  
+属性は、ユーザー レコード クラスの宣言を挿入します。 ユーザー レコード クラスと等しい`CAuthorsNoAttrAccessor`テンプレート宣言のです。 場合は、テーブル クラス`CAuthors`、挿入されたユーザー レコード クラスの名前は`CAuthorsAccessor`、挿入されたコードではその宣言だけを表示できます。 詳細については、「Attribute-Injected ユーザー レコード クラス」を参照してください[ユーザー レコード](../../data/oledb/user-records.md)します。  
   
-属性と、テンプレート化されたコードの両方でを使用して行セット プロパティを設定する必要がありますに注意してください。`CDBPropSet::AddProperty`します。  
+属性付きおよびテンプレートを使ったコードを使用して行セット プロパティを設定する必要があります`CDBPropSet::AddProperty`します。  
   
-このトピックで説明する属性については、次を参照してください。 [OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)します。  
-  
+このトピックで説明する属性については、次を参照してください。 [OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)します。
+
+> [!NOTE]
+> 次`include`ステートメントは次の例をコンパイルするために必要なもの。
+> ```cpp
+> #include <atlbase.h>  
+> #include <atlplus.h>  
+> #include <atldbcli.h>    
+> ```
+
 ## <a name="table-and-accessor-declaration-using-attributes"></a>テーブルおよびアクセサーの宣言属性を使用します。  
 
 次のコード呼び出し`db_source`と`db_table`テーブル クラスにします。 `db_source` データ ソース、使用する接続を指定します。 `db_table` table クラスを宣言する適切なテンプレート コードを挿入します。 `db_column` 列マップを指定し、アクセサーの宣言を挿入します。 ATL をサポートするすべてのプロジェクトで、OLE DB コンシューマー属性を使用することができます。  
@@ -85,15 +93,15 @@ ms.locfileid: "46054078"
 class CAuthors  
 {  
 public:  
-   DWORD m_dwAuIDStatus;  
-   DWORD m_dwAuthorStatus;  
-   DWORD m_dwYearBornStatus;  
-   DWORD m_dwAuIDLength;  
-   DWORD m_dwAuthorLength;  
-   DWORD m_dwYearBornLength;  
-   [ db_column(1, status=m_dwAuIDStatus, length=m_dwAuIDLength) ] LONG m_AuID;  
-   [ db_column(2, status=m_dwAuthorStatus, length=m_dwAuthorLength) ] TCHAR m_Author[51];  
-   [ db_column(3, status=m_dwYearBornStatus, length=m_dwYearBornLength) ] SHORT m_YearBorn;  
+   DBSTATUS m_dwAuIDStatus;
+   DBSTATUS m_dwAuthorStatus;
+   DBSTATUS m_dwYearBornStatus;
+   DBLENGTH m_dwAuIDLength;
+   DBLENGTH m_dwAuthorLength;
+   DBLENGTH m_dwYearBornLength;
+   [db_column("1", status = "m_dwAuIDStatus", length = "m_dwAuIDLength")] LONG m_AuID;
+   [db_column("2", status = "m_dwAuthorStatus", length = "m_dwAuthorLength")] TCHAR m_Author[51];
+   [db_column("3", status = "m_dwYearBornStatus", length = "m_dwYearBornLength")] SHORT m_YearBorn;
    void GetRowsetProperties(CDBPropSet* pPropSet)  
    {  
       pPropSet->AddProperty(DBPROP_CANFETCHBACKWARDS, true);  

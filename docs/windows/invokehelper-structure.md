@@ -1,7 +1,7 @@
 ---
 title: InvokeHelper 構造体 |Microsoft Docs
 ms.custom: ''
-ms.date: 10/03/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 46cd067e41fcc9ac0d8d3dd9fe50c9edd23532c3
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 24abb55c0754b9dc5b5300ca6cd50079f003717a
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789112"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808369"
 ---
 # <a name="invokehelper-structure"></a>InvokeHelper 構造体
 
@@ -114,7 +114,9 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 ### <a name="parameters"></a>パラメーター
 
 *TDelegateInterface*<br/>
-*TCallback*  
+デリゲートのインターフェイス型。
+
+*TCallback*<br/>
 イベント ハンドラー関数の型。
 
 *について*<br/>
@@ -154,7 +156,7 @@ struct InvokeHelper<TDelegateInterface, TCallback, 9> :
 
 `InvokeHelper`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** event.h
 

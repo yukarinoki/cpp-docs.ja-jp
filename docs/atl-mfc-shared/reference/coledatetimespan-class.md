@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434181"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808980"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan クラス
 
@@ -105,7 +105,7 @@ A`COleDateTimeSpan`日で時間を保持します。
 
 詳細については、`COleDateTime`と`COleDateTimeSpan`クラスは、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** ATLComTime.h
 
@@ -124,7 +124,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dateSpan*  
+*dateSpan*<br/>
 比較対象の `COleDateTimeSpan`。
 
 ### <a name="return-value"></a>戻り値
@@ -154,7 +154,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dblSpanSrc*  
+*dblSpanSrc*<br/>
 新しいにコピーされる日数`COleDateTimeSpan`オブジェクト。
 
 *lDays*、 *nHours*、 *nMins*、 *nSecs*  
@@ -189,7 +189,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pFormat*  
+*pFormat*<br/>
 ような文字列を書式設定、`printf`文字列の書式設定します。 割合に続くコードの書式設定 (`%`) 署名は、対応する置き換え`COleDateTimeSpan`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 値との書式設定コードの意味`Format`を以下に示します。
 
 - **%H**は現在の日の時間
@@ -204,7 +204,7 @@ CString Format(UINT nID) const;
 
 -
 
-*nID*  
+*nID*<br/>
 コントロールの書式設定文字列のリソース ID。
 
 ### <a name="return-value"></a>戻り値
@@ -731,7 +731,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*status*  
+*status*<br/>
 この新しいステータス値`COleDateTimeSpan`オブジェクト。
 
 ### <a name="remarks"></a>Remarks

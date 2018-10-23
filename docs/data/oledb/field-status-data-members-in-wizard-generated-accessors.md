@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b1c48f4699c0add937c2bcdb13d49bce8cb895c4
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: ce3ad819b6e22bfb5c760849e5f3fdf85bd4f7bc
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083964"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809097"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー
 
@@ -80,13 +80,13 @@ END_COLUMN_MAP()
 ```  
   
 > [!NOTE]
->  ユーザー レコード クラスを変更するか、独自のコンシューマーを作成する場合、データ変数は、ステータス変数と長さ変数よりも前に記述する必要があります。  
+> ユーザー レコード クラスを変更するか、独自のコンシューマーを作成する場合、データ変数は、ステータス変数と長さ変数よりも前に記述する必要があります。  
   
 状態値は、デバッグ目的で使用できます。 ATL OLE DB コンシューマー ウィザードで生成されたコードでは、コンパイル エラー DB_S_ERRORSOCCURRED または DB_E_ERRORSOCCURRED などを生成する場合、フィールド ステータス データ メンバーの現在の値最初に確認する必要があります。 0 以外の値が指定されている問題のある列に対応しています。  
   
 特定のフィールドに NULL 値を設定するのに状態の値を使用することもできます。 これにより、フィールドの値を 0 ではなく、NULL として区別する場合に役立ちます。 NULL が有効な値、または特殊な値かどうかを判断し、アプリケーションが処理する方法を決定する責任です。 OLE DB は、ジェネリック、NULL 値を指定する適切な手段として、DBSTATUS_S_ISNULL を定義します。 コンシューマーは、データを読み取るし、値が null、status フィールドは、DBSTATUS_S_ISNULL に設定されます。 コンシューマーは、NULL 値を設定する場合、コンシューマーは、プロバイダーを呼び出す前に DBSTATUS_S_ISNULL にステータス値を設定します。  
   
-次に、Oledb.h を開き、検索`DBSTATUSENUM`します。 に対して 0 以外の状態を表す数値を照合することができますし、`DBSTATUSENUM`列挙値。 列挙型の名前で何が問題を通知するのに十分でない場合は、"Status"、「データの値をバインドする」のセクションのトピックを参照してください、 [OLE DB プログラマ ガイド](/previous-versions/windows/desktop/ms713643)します。 このトピックには、作業またはデータを設定するときに使用される状態値のテーブルが含まれています。 長さの値については、同じセクションでは、"Length"トピックを参照してください。  
+次に、Oledb.h と DBSTATUSENUM の検索を開きます。 DBSTATUSENUM 列挙値に対して 0 以外の状態を表す数値を適合できます。 列挙型の名前で何が問題を通知するのに十分でない場合は、"Status"、「データの値をバインドする」のセクションのトピックを参照してください、 [OLE DB プログラマ ガイド](/previous-versions/windows/desktop/ms713643)します。 このトピックには、作業またはデータを設定するときに使用される状態値のテーブルが含まれています。 長さの値については、同じセクションでは、"Length"トピックを参照してください。  
   
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>長さまたは列のステータスを取得します。  
 

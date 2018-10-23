@@ -18,26 +18,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 79899bb4ff2dada8f459a6c25499be25d078353e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 769f2bf2c0ef6c2c92b4c0468569e91d399cea59
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46105376"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808447"
 ---
 # <a name="defining-stored-procedures"></a>ストアド プロシージャの定義
 
 ストアド プロシージャを呼び出す前に最初に定義してそれを使用して、 [DEFINE_COMMAND](../../data/oledb/define-command.md)マクロ。 コマンドを定義するときに、パラメーター マーカーとして疑問符 (?) でパラメーターを表します。  
   
-```  
+```cpp  
 DEFINE_COMMAND(CMySProcAccessor, _T("{INSERT {name, phone} into shippers  (?,?)}")  
 ```  
   
-このトピックのコード例で使用される構文 (中かっこの使用) が SQL Server に固有であるに注意してください。 使用するプロバイダーに応じて、ストアド プロシージャで使用する構文が異なる場合があります。  
+このトピックのコード例で使用される構文 (中かっこの使用) は、SQL Server に固有です。 使用するプロバイダーに応じて、ストアド プロシージャで使用する構文が異なる場合があります。  
   
 次に、パラメーターのマップでは、コマンドで出現する順序でパラメーターを一覧表示コマンドで使用するパラメーターを指定します。  
   
-```  
+```cpp  
 BEGIN_PARAM_MAP(CMySProcAccessor)  
    SET_PARAM_TYPE(DBPARAMIO_INPUT)  
    COLUMN_ENTRY(1, m_Name)   // name corresponds to first '?' param  
@@ -48,7 +48,7 @@ END_PARAM_MAP()
   
 前の例が移動するときに、ストアド プロシージャを定義します。 通常、コードを効率的に再利用のデータベースのセットを含む"Sales を Year"や"dt_adduserobject"などの名前を持つ定義済みのストアド プロシージャ SQL Server Enterprise Manager を使用してその定義を表示することができます。 次のように呼び出します (の配置、'?' パラメーターは、ストアド プロシージャのインターフェイスによって異なります)。  
   
-```  
+```cpp  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL \"Sales by Year\" (?,?) }")  
 DEFINE_COMMAND(CMySProcAccessor, _T("{CALL dbo.dt_adduserobject (?,?) }")  
 ```  

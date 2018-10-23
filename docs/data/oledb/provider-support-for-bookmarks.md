@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: e7f97011e66c72c79c3ab6db3b6011e1d4d76ce7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d01674929522326c21eea2ad7d40f33e8ff6fae6
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017174"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807524"
 ---
 # <a name="provider-support-for-bookmarks"></a>プロバイダーのブックマーク サポート
 
@@ -247,7 +247,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 }  
 ```  
   
-While ループには呼び出すコードが含まれています、`Compare`メソッドで、`IRowsetLocate`インターフェイス。 まったく同じブックマークを比較するためのコードには常に成功します。 While の後に使用できるように、また、一時変数に 1 つのブックマークが保存ループに呼び出しが完了すると、`MoveToBookmark`コンシューマー テンプレートの関数。 `MoveToBookmark`関数呼び出し、`GetRowsAt`メソッド`IRowsetLocate`します。  
+**中**ループには呼び出すコードが含まれています、`Compare`メソッドで、`IRowsetLocate`インターフェイス。 まったく同じブックマークを比較するためのコードには常に成功します。 後に使用できるように、また、一時変数に 1 つのブックマークが保存、**中**ループに呼び出しが完了すると、`MoveToBookmark`コンシューマー テンプレートの関数。 `MoveToBookmark`関数呼び出し、`GetRowsAt`メソッド`IRowsetLocate`します。  
   
 また、コンシューマーでは、ユーザー レコードを更新する必要があります。 ブックマークと内のエントリを処理するクラスにエントリを追加、 `COLUMN_MAP`:  
   

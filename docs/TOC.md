@@ -14,7 +14,6 @@
 # [.NET 標準ライブラリ](standard-library/cpp-standard-library-reference.md)
 # [Windows 開発](windows/overview-of-windows-programming-in-cpp.md)
 # [Linux 開発](linux/download-install-and-setup-the-linux-development-workload.md)
-# [C++/CLI による .NET の開発](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)
 # [Visual C++ でのクラウドおよび Web プログラミング](cloud/cloud-and-web-programming-in-visual-cpp.md)
 # [並列プログラミング](parallel/parallel-programming-in-visual-cpp.md)
 # [データ アクセス](data/data-access-in-cpp.md)

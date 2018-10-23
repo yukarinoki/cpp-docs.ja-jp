@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4a3f80d3e421701ac0612ddb2552d10d1eff1f02
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d8bcd61fb77b12db612bb12ae516a8665caaee8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056028"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808226"
 ---
 # <a name="consumer-wizard-generated-methods"></a>コンシューマー ウィザードで生成されたメソッド
 
@@ -40,7 +40,7 @@ ATL OLE DB コンシューマー ウィザードおよび MFC アプリケーシ
   
 - `CloseAll` 開いているすべての行セットを終了し、すべてのコマンドの実行を解放します。  
   
-- `OpenRowset` コンシューマーの行セットまたは行セットを開く OpenAll によって呼び出されます。  
+- `OpenRowset` によって呼び出される`OpenAll`をコンシューマーの行セットまたは行セットを開きます。  
   
 - `GetRowsetProperties` 設定するプロパティを設定すると、行セットのプロパティへのポインターを取得します。  
   
@@ -91,7 +91,7 @@ int main(int argc, char* argv[])
   
 ## <a name="remarks"></a>Remarks  
 
-定義する場合、`HasBookmark`メソッド、 `OpenAll` DBPROP_IRowsetLocate プロパティを設定するコードは、プロバイダーは、そのプロパティをサポートしている場合にのみ、このメソッドを定義してください。  
+定義する場合、`HasBookmark`メソッド、`OpenAll`設定するコード、`DBPROP_IRowsetLocate`プロパティは、プロバイダーは、そのプロパティをサポートしている場合にのみ、このメソッドを定義してください。  
   
 ## <a name="openrowset"></a>OpenRowset  
   
@@ -104,7 +104,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand = NULL);
   
 `OpenAll` コンシューマーの行セットまたは行セットを開くには、このメソッドを呼び出します。 通常、呼び出す必要はない`OpenRowset`複数データ ソース/セッション/行セットを使用する場合を除き、します。 `OpenRowset` コマンドまたはテーブル クラスのヘッダー ファイルで宣言されます。  
   
-```  
+```cpp  
 // OLE DB Template version:  
 HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)  
 {  
@@ -117,7 +117,7 @@ HRESULT OpenRowset(DBPROPSET *pPropSet = NULL)
 }  
 ```  
   
-属性は、異なる方法でこのメソッドを実装します。 このバージョンでは、セッション オブジェクトおよびその db_command で指定されたコマンド文字列を既定値は、別のアカウントを渡すことができますが、コマンド文字列を受け取ります。 定義する場合、`HasBookmark`メソッド、 `OpenRowset` DBPROP_IRowsetLocate プロパティを設定するコードは、プロバイダーは、そのプロパティをサポートしている場合にのみ、このメソッドを定義してください。  
+属性は、異なる方法でこのメソッドを実装します。 このバージョンでは、セッション オブジェクトおよびその db_command で指定されたコマンド文字列を既定値は、別のアカウントを渡すことができますが、コマンド文字列を受け取ります。 定義する場合、`HasBookmark`メソッド、`OpenRowset`設定するコード、`DBPROP_IRowsetLocate`プロパティは、プロバイダーは、そのプロパティをサポートしている場合にのみ、このメソッドを定義してください。  
   
 ```cpp  
 // Attribute-injected version:  
@@ -142,7 +142,7 @@ HRESULT OpenRowset(const CSession& session, LPCWSTR szCommand=NULL)
 void GetRowsetProperties(CDBPropSet* pPropSet);  
 ```  
   
-このメソッドは、行セットのプロパティ セットへのポインターを取得しますこのポインターを使用して、DBPROP_IRowsetChange などのプロパティを設定することができます。 `GetRowsetProperties` 以下を使用、ユーザー レコード クラスにします。 追加の行セット プロパティを設定するには、このコードを変更することができます。  
+このメソッドは、行セットのプロパティ セットへのポインターを取得しますこのポインターを使用するにはなどのプロパティを設定する`DBPROP_IRowsetChange`します。 `GetRowsetProperties` 以下を使用、ユーザー レコード クラスにします。 追加の行セット プロパティを設定するには、このコードを変更することができます。  
   
 ```cpp  
 void GetRowsetProperties(CDBPropSet* pPropSet)  

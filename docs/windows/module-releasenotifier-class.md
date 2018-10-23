@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e2dae7809a5926fa93626fa33148d444fe12807b
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 2128164fe3196a77991e755b865357e1aefcac23
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161893"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808486"
 ---
 # <a name="modulereleasenotifier-class"></a>Module::ReleaseNotifier クラス
 
@@ -62,7 +62,7 @@ class ReleaseNotifier;
 
 `ReleaseNotifier`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** module.h
 
@@ -102,5 +102,5 @@ ReleaseNotifier(bool release) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*release*  
+*release*<br/>
 `true` 削除するインスタンスこれ、`Release`メソッドが呼び出されます。`false`をこのインスタンスを削除できません。

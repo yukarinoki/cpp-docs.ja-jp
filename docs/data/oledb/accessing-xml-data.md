@@ -1,7 +1,7 @@
 ---
 title: XML データへのアクセス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cfde3980e58ba86d6923eaac765332a23e40ad7e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7db1d790ca9caeea6bd9c7853139f59ffa0ab6c
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062502"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808720"
 ---
 # <a name="accessing-xml-data"></a>XML データへのアクセス
 
@@ -34,7 +34,7 @@ ms.locfileid: "46062502"
 |機能|CStreamRowset|CXMLAccessor|  
 |-------------------|-------------------|------------------|  
 |転送されたデータ量|すべての列と行から一度にデータを取得します。|すべての列からデータが、一度に 1 つだけの行を取得します。 などのメソッドを使用して行を移動する必要があります`MoveNext`します。|  
-|文字列の書式設定|SQL Server では、XML 文字列を書式設定し、コンシューマーに送信します。|(プロバイダーが Unicode 文字列として送信要求) ネイティブ形式で行セットのデータを取得し、XML 形式のデータを含む文字列を作成します。|  
+|文字列の書式設定|SQL Server では、XML 文字列を書式設定し、コンシューマーに送信します。|(プロバイダーが Unicode 文字列として送信要求) ネイティブ形式で行セットのデータを取得し、XML 形式でデータを保持している文字列を作成します。|  
 |書式設定の制御します。|SQL Server 2000 に固有のプロパティを設定して、XML 文字列の書式設定方法を制御のいくつかのレベルがあります。|生成された XML 文字列の形式の制御があるありません。|  
   
 中に`CStreamRowset`SQL Server 2000 でのみサポートされている XML 形式でのデータの取得の詳細の全体的な効率的な方法を提供します。  
@@ -61,12 +61,12 @@ CCommand<CNoAccessor, CStreamRowset> myCmd;
 myCmd.m_spStream->Read()  
 ```  
   
-SQL Server 2000 では、XML の書式設定を実行し、すべての列と 1 つの XML 文字列として行セットのすべての行を返します。  
+SQL Server 2000 は XML 形式を設定し、すべての列と 1 つの XML 文字列として行セットのすべての行を返します。  
   
 使用例について、`Read`メソッドでは、「XML コンシューマー サポートの追加する」を参照してください[単純なコンシューマーを実装する](../../data/oledb/implementing-a-simple-consumer.md)します。  
   
 > [!NOTE]
->  XML の使用をサポート`CStreamRowset`SQL Server 2000 でのみ動作し、(MDAC と共にインストールされた) SQL Server 2000 の OLE DB プロバイダーが必要です。  
+> XML の使用をサポート`CStreamRowset`SQL Server 2000 でのみ動作し、(MDAC と共にインストールされた) SQL Server 2000 の OLE DB プロバイダーが必要です。  
   
 ## <a name="retrieving-xml-data-using-cxmlaccessor"></a>CXMLAccessor を使用して XML データの取得  
 

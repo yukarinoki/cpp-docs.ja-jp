@@ -26,7 +26,6 @@
 ### [プロパティ ページの XML ファイル](property-page-xml-files.md)
 ### [.vcxproj と .props のファイル構造](vcxproj-file-structure.md)
 ## [アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](creating-desktop-projects-by-using-application-wizards.md)
-### [ウィザードでサポートされるその他の言語](wizard-support-for-other-languages.md)
 ### [メイクファイル プロジェクトの作成](creating-a-makefile-project.md)
 #### [メイクファイル アプリケーション ウィザード](makefile-project-wizard.md)
 ##### [[アプリケーションの設定] (メイクファイル アプリケーション ウィザード)](application-settings-makefile-project-wizard.md)
