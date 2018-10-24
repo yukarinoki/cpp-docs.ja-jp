@@ -1,7 +1,7 @@
 ---
 title: ウィザードを使用して OLE DB コンシューマーの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 2f9a301d6e8b2c26d5be7c4234550ba4af7eefd3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 76f16c10ff4342e32a6081e89581945c53ee607c
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097896"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990114"
 ---
 # <a name="creating-an-ole-db-consumer-using-a-wizard"></a>ウィザードを使用した OLE DB コンシューマーの作成
 
-この手順では、ATL プロジェクト ウィザードと ATL OLE DB コンシューマー ウィザードを使用、OLE DB テンプレート コンシューマーを生成しを取得して、データベース テーブルからデータを表示するコンソール アプリケーションのメインのコードを変更する方法を示しています。  
+この手順では、使用する方法を示します、 **ATL プロジェクト ウィザード**と **ATL OLE DB コンシューマー ウィザード*OLE DB テンプレート コンシューマーを生成するコンソール アプリケーションのメインのコードを変更するには取得し、データベース テーブルからデータを表示します。  
   
 最後の 2 つのセクションでは、OLE DB コンシューマー ウィザードで生成されたコードについて説明します。  
   

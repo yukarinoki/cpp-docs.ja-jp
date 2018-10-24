@@ -1,7 +1,7 @@
 ---
 title: アクセサーと行セット |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -28,12 +28,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: f8dc681e149d54742e4bf5e7ff44afeebe2292eb
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c3247cd3b5844df76b8a115a3f28a76874db2a16
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113098"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990179"
 ---
 # <a name="accessors-and-rowsets"></a>アクセサーと行セット
 
@@ -77,7 +77,7 @@ OLE DB テンプレートは、3 つの種類の行セット (上記の図を参
 ![RowsetType グラフィック](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")  
 行セット クラス  
   
-[スキーマ行セット](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)は、データのデータにアクセスしない格納しますが、代わりにメタデータと呼ばれる、データ ストアの情報にアクセスします。 スキーマ行セットは通常、データベースの構造が、コンパイル時に不明し、実行時に取得する必要がありますの状況で使用されます。  
+[スキーマ行セット](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)データ、データにアクセスしない格納しますが、代わりにメタデータと呼ばれる、データ ストアの情報にアクセスします。 スキーマ行セットがである場合、データベースの構造がコンパイル時に不明な実行時に取得する必要がありますで通常使用されます。  
   
 ## <a name="see-also"></a>関連項目  
 

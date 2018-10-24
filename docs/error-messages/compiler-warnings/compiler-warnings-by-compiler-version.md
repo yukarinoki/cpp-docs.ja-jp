@@ -1,7 +1,7 @@
 ---
 title: コンパイラのバージョンによるコンパイラの警告 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/03/2018
+ms.date: 10/24/2018
 ms.technology:
 - devlang-cpp
 ms.topic: error-reference
@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6645bb81a1fd4a2b42eb7419a0d008b9ac7692ad
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 1c4d815ba1036a03042992d2715e49bbd8f74a28
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319085"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990387"
 ---
 # <a name="compiler-warnings-by-compiler-version"></a>コンパイラのバージョンによるコンパイラの警告
 
@@ -45,10 +45,19 @@ ms.locfileid: "44319085"
 | Visual C 2017 バージョン 15.5 | 19.12.25830.0 |
 | Visual C 2017 バージョン 15.6 | 19.13.26128.0 |
 | Visual C 2017 バージョン 15.7 | 19.14.26428.0 |
+| Visual C 2017 バージョン 15.8 | 19.15.26726.0 |
 
 メジャー番号のみ、メジャーおよびマイナー番号、またはメジャー、マイナーを指定し、ためにビルド番号、 __/Wv__オプション。 コンパイラは、指定した数値で始まるバージョンに一致するすべての警告を報告し、指定した数よりも大きいバージョンのすべての警告を抑制します。 たとえば、 __/Wv:17__中または任意のバージョンの Visual Studio 2012 では前に、導入されたすべての警告を報告し、Visual Studio 2013 (バージョン 18) から、またはそれ以降の任意のコンパイラで導入されたすべての警告を抑制します。 Visual Studio 2015 で導入された警告の update 2 を抑制して、使用することができます __/Wv:19.00.23506__します。 使用 __/Wv:19.11__を報告するすべての警告は、Visual Studio 2017 バージョン 15.5 では、前に Visual Studio の任意のバージョンで導入されましたが、Visual Studio 2017 バージョン 15.5 以降で導入された警告を抑制します。
 
 次のセクションでは、Visual C を使用して抑制することができますの各バージョンで導入された警告を一覧表示、 __/Wv__コンパイラ オプション。 __/Wv__オプションは、以前指定したバージョンのコンパイラが一覧にない警告を抑制することはできません。
+
+## <a name="warnings-introduced-in-visual-c-2017-version-158-compiler-version-1915267260"></a>Visual C 2017 15.8 (コンパイラ バージョン 19.15.26726.0) のバージョンで導入された警告
+
+コンパイラ オプションを使用してこれらの警告と以降のバージョンですべての警告を抑制 __/Wv:19.14__します。
+
+|||
+|-|-|
+C5046|'*関数*': シンボルが定義されていない内部リンケージを持つ型に関連します。|
 
 ## <a name="warnings-introduced-in-visual-c-2017-version-157-compiler-version-1914264280"></a>Visual C 2017 バージョン 15.7 (コンパイラ バージョン 19.14.26428.0) で導入された警告
 

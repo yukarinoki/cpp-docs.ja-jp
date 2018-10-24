@@ -1,7 +1,7 @@
 ---
 title: コマンドとテーブル |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fefd4241d1412ec6ea319db9ca6669856715e631
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 762623d6460404b4de85a45adaff7c5662bac258
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028117"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990011"
 ---
 # <a name="commands-and-tables"></a>コマンドとテーブル
 
@@ -36,7 +36,7 @@ ms.locfileid: "46028117"
 ![CCommand および CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")  
 コマンドとテーブル クラス  
   
-前の表に`TAccessor`、アクセサーの型に指定できる[アクセサーの種類](../../data/oledb/accessors-and-rowsets.md)します。 *TRowset*任意の行セット型に指定できる[行セットの種類](../../data/oledb/accessors-and-rowsets.md)します。 *TMultiple* (1 つまたは複数の結果セット) の結果型を指定します。  
+前の表に`TAccessor`、アクセサーの型に指定できる[アクセサーの種類](../../data/oledb/accessors-and-rowsets.md)します。 `TRowset` 指定できる任意の行セットの種類ある[行セットの種類](../../data/oledb/accessors-and-rowsets.md)します。 `TMultiple` 結果の型 (1 つまたは複数の結果セット) を指定します。  
   
 [ATL OLE DB コンシューマー ウィザード](../../atl/reference/atl-ole-db-consumer-wizard.md)コマンドまたはテーブル オブジェクトにするかどうかを指定することができます。  
   
