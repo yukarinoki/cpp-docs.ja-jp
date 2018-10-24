@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 8a0864c87b33937fe18c3e4c3083e63bde23ac06
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42578161"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46092245"
 ---
 # <a name="crt-library-features"></a>CRT ライブラリの機能
 
@@ -65,7 +65,8 @@ vcruntime ライブラリには、例外処理やデバッグ サポートなど
 |vcruntime.lib|vcruntime\<version>.dll|vcruntime 用の DLL インポート ライブラリ。|**/MD**|_MT、_DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|デバッグ vcruntime 用の DLL インポート ライブラリ。 再頒布可能パッケージではありません。|**/MDd**|_DEBUG、_MT、_DLL|
 
-UCRT リファクタリングが行われたとき、同時実行ランタイムは concrt140.dll に移動されました。これは C++ 再頒布可能パッケージに含まれます。 この DLL は、C++ の並列コンテナーおよびアルゴリズム (`concurrency::parallel_for` など) に必要となります。 さらに、C++ 標準ライブラリでは、同期プリミティブを支援するために、Windows XP でこの DLL を必要とします。Windows XP には条件変数がないためです。
+> [!NOTE]
+> UCRT リファクタリングが行われたとき、同時実行ランタイムは concrt140.dll に移動されました。これは C++ 再頒布可能パッケージに含まれています。 この DLL は、C++ の並列コンテナーおよびアルゴリズム (`concurrency::parallel_for` など) に必要となります。 さらに、C++ 標準ライブラリでは、同期プリミティブを支援するために、Windows XP でこの DLL を必要とします。Windows XP には条件変数がないためです。
 
 CRT を初期化するコードは、CRT ライブラリが静的にリンクされているのか、動的にリンクされているのか、ネイティブ コードなのか、マネージド コードなのか、混合コードなのかによって、複数あるライブラリのいずれかに含まれています。 このコードは、CRT のスタートアップ、内部スレッド単位データ初期化、および強制終了を処理します。 使用されているコンパイラのバージョンによって異なります。 このライブラリは、動的にリンクされた UCRT が使用されている場合でも、常に静的にリンクされます。
 

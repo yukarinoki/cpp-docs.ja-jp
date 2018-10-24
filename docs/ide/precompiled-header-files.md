@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d2e2bab9da3d19347577f0b1d1e8ab2ed6bb0dc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d93486d8df8cdb8bc253a0e71037f4e2ddf9e128
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404021"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890480"
 ---
 # <a name="precompiled-header-files"></a>プリコンパイル済みヘッダー ファイル
 
@@ -35,7 +35,7 @@ ms.locfileid: "46404021"
 
 |ファイル名|説明|
 |---------------|-----------------|
-|stdafx.h|頻繁に使用されるものの、ほとんど変更されない標準のシステム インクルード ファイルとプロジェクト固有のインクルード ファイル用のインクルード ファイル。<br /><br /> stdafx.h で _AFX_NO_XXX マクロのいずれかを定義または定義解除しないでください。サポート技術情報の記事「PRB: _AFX_NO_XXX を定義するときに問題が発生する」を参照してください。 サポート技術情報の記事は、MSDN ライブラリまたは [http:// support.microsoft.com/](http://%20support.microsoft.com/)で参照できます。|
+|stdafx.h|頻繁に使用されるものの、ほとんど変更されない標準のシステム インクルード ファイルとプロジェクト固有のインクルード ファイル用のインクルード ファイル。<br /><br /> stdafx.h ではどのような _AFX_NO_XXX マクロも定義または定義解除しないでください。|
 |stdafx.cpp|プリプロセッサ ディレクティブ `#include "stdafx.h"` が含まれており、プリコンパイル済み型用のインクルード ファイルが追加されています。 ヘッダー ファイルなどの任意の型のプリコンパイル済みファイルは、コンパイルが必要なファイルだけにコンパイルを制限することで、コンパイル時間の短縮を支援します。 初めてプロジェクトをビルドすると、プリコンパイル済みヘッダー ファイルが存在することによって、その後のビルドは非常に速くなることに気付くでしょう。|
 
 ## <a name="see-also"></a>参照

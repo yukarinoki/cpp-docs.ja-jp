@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16c204636baf87cd88f80294b1f413cacc9f5ddc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: c2bf6990180a7fe325b1ee3d4f4e497a433c183e
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43764265"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46103361"
 ---
 # <a name="c-type-specifiers"></a>C 型指定子
 
@@ -28,19 +28,7 @@ ms.locfileid: "43764265"
 
 ## <a name="syntax"></a>構文
 
-*type-specifier*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**void**  
-&nbsp;&nbsp;&nbsp;&nbsp;**char**  
-&nbsp;&nbsp;&nbsp;&nbsp;**short**  
-&nbsp;&nbsp;&nbsp;&nbsp;**int**  
-&nbsp;&nbsp;&nbsp;&nbsp;**long**  
-&nbsp;&nbsp;&nbsp;&nbsp;**float**  
-&nbsp;&nbsp;&nbsp;&nbsp;**double**  
-&nbsp;&nbsp;&nbsp;&nbsp;**signed**  
-&nbsp;&nbsp;&nbsp;&nbsp;**unsigned**  
-&nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier*  
-&nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier*  
-&nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*  
+*type-specifier*: &nbsp;&nbsp;&nbsp;&nbsp;**void** &nbsp;&nbsp;&nbsp;&nbsp;**char** &nbsp;&nbsp;&nbsp;&nbsp;**short** &nbsp;&nbsp;&nbsp;&nbsp;**int** &nbsp;&nbsp;&nbsp;&nbsp;**long** &nbsp;&nbsp;&nbsp;&nbsp;**float** &nbsp;&nbsp;&nbsp;&nbsp;**double** &nbsp;&nbsp;&nbsp;&nbsp;**signed** &nbsp;&nbsp;&nbsp;&nbsp;**unsigned** &nbsp;&nbsp;&nbsp;&nbsp;*struct-or-union-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*enum-specifier* &nbsp;&nbsp;&nbsp;&nbsp;*typedef-name*
 
 **signed char**、**signed int**、**signed short int**、および **signed long int** 型と、それに対応する **unsigned** 型および **enum** は、"*整数*" 型と呼ばれます。 **float**、**double**、および **long double** 型指定子は、"*浮動*" 型または "*浮動小数点*" 型と呼ばれます。 変数宣言または関数宣言で、整数型または浮動小数点型の指定子を使用できます。 *type-specifier* が宣言で指定されていない場合、**int** として処理されます。
 
@@ -87,4 +75,4 @@ ANSI 仕様に準拠するには、<strong>void\*\*</strong> は <strong>int\*\*
 
 ## <a name="see-also"></a>関連項目
 
-[宣言と型](../c-language/declarations-and-types.md)  
+[宣言と型](../c-language/declarations-and-types.md)

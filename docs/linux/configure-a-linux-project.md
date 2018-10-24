@@ -1,7 +1,7 @@
 ---
 title: Visual Studio で C++ Linux プロジェクトを構成する | Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 09/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,12 +14,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: fbc0674a7659ffccd5ab5c655f74167acebdca97
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 17597ae7497288312b8ddcfcf53a77130fbbf2d8
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895202"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46383247"
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトの構成
 
@@ -33,9 +33,11 @@ Visual Studio で Linux プロジェクトに対して、さまざまなオプ�
 
 既定では、実行可能ファイル (.out) は、ツールを使用してビルドされます。  静的または動的なライブラリをビルドする場合や、既存のメイクファイルを使用する場合は、**[構成の種類]** の選択項目を使用します。
 
+プロパティ ページのオプションについては、「[Linux プロジェクト プロパティ ページの参照](prop-pages-linux.md)」を参照してください。
+
 ## <a name="remote-settings"></a>リモート設定
 
-リモート Linux コンピューターに関する設定を変更するには、**[全般]** 設定に表示されるリモート オプションを構成します。
+リモート Linux コンピューターに関する設定を変更するには、[[全般]](prop-pages/general-linux.md) 設定に表示されるリモート オプションを構成します。
 
 - ターゲットの Linux コンピューターを変更するには、**[リモート ビルド マシン]** エントリを使用します。  これによって、以前に作成された接続のいずれかを選択できます。  新しいエントリを作成する場合は、「[Connecting to Your Remote Linux Computer](connect-to-your-remote-linux-computer.md)」 (リモートの Linux コンピューターへの接続) セクションを参照してください。
 
@@ -44,11 +46,12 @@ Visual Studio で Linux プロジェクトに対して、さまざまなオプ�
 - **[リモート ビルド プロジェクト ディレクトリ]** は、リモートの Linux コンピューターでこの特定のプロジェクトが構築される場所です。  これは、既定で **$(RemoteRootDir)/$(ProjectName)** に設定され、上で設定したルート ディレクトリ下の、現在のプロジェクトから名前が付けられたディレクトリに展開されます。
 
 > [!NOTE]
-> 既定の C および C++ コンパイラ、またはプロジェクトのビルドに使用したリンカーとアーカイバーを変更する場合は、**[C/C++]、[全般]** セクションと **[リンカー]、[全般]** セクションで適切なエントリを使用します。  これらは特定のバージョンの GCC (Clang コンパイラなど) を使用する際に設定する場合があります。
+> 既定の C および C++ コンパイラ、またはプロジェクトのビルドに使用したリンカーとアーカイバーを変更する場合は、**[C/C++]、[全般]** セクションと **[リンカー]、[全般]** セクションで適切なエントリを使用します。  これらは特定のバージョンの GCC (Clang コンパイラなど) を使用する際に設定する場合があります。 詳細については、「[C/C++ プロパティ (Linux C++)](prop-pages/c-cpp-linux.md)」と「[リンカー プロパティ (Linux C++)](prop-pages/linker-linux.md)」を参照してください。
 
 ## <a name="include-directories-and-intellisense-support"></a>ディレクトリと IntelliSense サポートを含める
 
-**Visual Studio 2017 バージョン 15.6 以前:** 既定では、Visual Studio に Linux コンピューターのシステム レベルのインクルード ファイルは含まれません。  たとえば、**/usr/include** ディレクトリの項目は Visual Studio には存在しません。
+**Visual Studio 2017 バージョン 15.6 以前:**<br/>
+既定では、Visual Studio に Linux コンピューターのシステム レベルのインクルード ファイルは含まれません。  たとえば、**/usr/include** ディレクトリの項目は Visual Studio には存在しません。
 完全に [IntelliSense](/visualstudio/ide/using-intellisense) をサポートするには、これらのファイルを、開発用コンピューターの任意の場所にコピーし、Visual Studio でこの場所を指定する必要があります。  scp (セキュア コピー) を使用して、ファイルをコピーすることもできます。  Windows 10 では、[Bash on Windows](https://msdn.microsoft.com/commandline/wsl/about) を使用して scp を実行することができます。  以前のバージョンの Windows では、[PSCP (PuTTY セキュア コピー)](http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html) などを使用できました。
 
 次のようなコマンドを使用して、ファイルをコピーすることができます。
@@ -61,7 +64,8 @@ Visual Studio で Linux プロジェクトに対して、さまざまなオプ�
 
 ![VC++ ディレクトリ](media/settings_directories.png)
 
-**Visual Studio 2017 バージョン 15.7 以降:** [IntelliSense のリモート ヘッダーの管理](#remote_intellisense)に関するセクションを参照してください。
+**Visual Studio 2017 バージョン 15.7 以降:**<br/>
+[IntelliSense のリモート ヘッダーの管理](#remote_intellisense)に関するセクションをご覧ください。
 
 ## <a name="copy-sources"></a>ソースのコピー
 
@@ -97,8 +101,8 @@ apt install zip
 
 ## <a name="see-also"></a>参照
 
-[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)  
-[C++ 全般プロパティ (Linux C++)](../linux/prop-pages/general-linux.md)  
-[VC++ ディレクトリ (Linux C++)](../linux/prop-pages/directories-linux.md)  
-[ソースのプロジェクト プロパティのコピー (Linux C++)](../linux/prop-pages/copy-sources-project.md)  
+[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)<br/>
+[C++ 全般プロパティ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
+[VC++ ディレクトリ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
+[ソースのプロジェクト プロパティのコピー (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
 [ビルド イベント プロパティ (Linux C++)](../linux/prop-pages/build-events-linux.md)

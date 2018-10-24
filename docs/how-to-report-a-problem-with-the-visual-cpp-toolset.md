@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 359c9d3f72ffa87abf49c6e3ca90743ad0fc80a3
-ms.sourcegitcommit: 9be4b66efa45dc132cef06eb3b258c2252ea23a9
+ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42583900"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235011"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Visual C++ ツールセットまたはドキュメントの問題を報告する方法
 
@@ -370,14 +370,12 @@ Visual Studio の**問題の報告**ツールを使うと、Visual Studio のユ
 
 ### <a name="use-the-visual-studio-developer-community-pages"></a>Visual Studio 開発者コミュニティ ページを使用する
 
-Visual Studio で問題を報告するためのもう 1 つの便利な方法として Visual Studio 開発者コミュニティ ページがあります。このページでは Visual Studio、C++ コンパイラ、ツール、ライブラリについて解決策を検索できます。 [Visual Studio に関する質問](https://developercommunity.visualstudio.com/spaces/8/index.html)ページは、IDE またはインストールに関する問題を報告する場所です。 C++ コンパイラ、リンカー、およびその他のツールやライブラリでの問題については、[C++ に関する質問](https://developercommunity.visualstudio.com/spaces/62/index.html)ページを使用してください。
+Visual Studio で問題を報告するためのもう 1 つの便利な方法として Visual Studio 開発者コミュニティ ページがあります。このページでは Visual Studio および C++ コンパイラ、ツール、ライブラリについて解決策を検索できます。 [Visual Studio](https://developercommunity.visualstudio.com/spaces/8/index.html)、[Visual Studio for Mac](https://developercommunity.visualstudio.com/spaces/41/index.html)、[.NET](https://developercommunity.visualstudio.com/spaces/61/index.html)、[C++](https://developercommunity.visualstudio.com/spaces/62/index.html)、[Azure DevOps](https://developercommunity.visualstudio.com/spaces/21/index.html)、および [TFS](https://developercommunity.visualstudio.com/spaces/22/index.html) の特定の開発者コミュニティ ページがあります。 これらのタブの下にある各ページの上部付近には、検索ボックスがあり、自分が遭遇している問題と同様の内容を報告している投稿またはトピックを検索することができます。 遭遇している問題に関連する解決策またはその他の有用な情報が既に報告されていることがあります。 他のユーザーが以前に同じ問題を報告している場合は、新たに問題レポートを作成するのではなく、そのトピックに対して賛成票を投じ、コメントを追加してください。 新しい問題についてコメント、投票、または報告する場合は、Visual Studio アカウントへのサインイン、および開発者コミュニティ アプリがプロファイルにアクセスすることへの同意を求められる場合があります。
 
-開発者コミュニティの各ページの上部付近にあるバナーは検索ボックスであり、自分が遭遇している問題と同様の内容を報告している投稿またはトピックを検索することができます。 遭遇している問題に関連する解決策またはその他の有用な情報が既存のトピックで報告されていることを確認できる場合があります。 他のユーザーが以前に同じ問題を報告している場合は、新たに問題レポートを作成するのではなく、そのトピックに対して賛成票を投じ、コメントを追加してください。
-
-以前に問題が報告されていない場合は、開発者コミュニティ ページの検索ボックスの横にある **[問題の報告]** ボタンを選択します。 Visual Studio アカウントへのサインイン、および開発者コミュニティ アプリがプロファイルにアクセスすることへの同意を求められる場合があります。 サインインすると、問題を報告できるページに直接移動します。 再現コードとコマンド ライン、スクリーン ショット、関連するディスカッションへのリンク、および関連性があり有用だと思われるその他の情報を含めることができます。
+C++ コンパイラ、リンカー、およびその他のツールやライブラリでの問題については、[C++](https://developercommunity.visualstudio.com/spaces/62/index.html) に関するページを使用してください。 問題を検索し、以前にその問題が報告されていない場合は、ページの上部の検索ボックスの横にある **[問題の報告]** ボタンを選択します。 再現コードとコマンド ライン、スクリーン ショット、関連するディスカッションへのリンク、および関連性があり有用だと思われるその他の情報を含めることができます。
 
 > [!TIP]
-> Visual Studio で発生する可能性がある、ツールセットに関係しない他の種類の問題 (たとえば、UI の問題、IDE の機能の不具合、一般的なクラッシュなど) の場合は、**問題の報告ツール**を使うのが特に適しています。このツールのスクリーンショット機能や、発生した問題をもたらした UI 操作を記録する機能が役に立ちます。 このようなエラーは、[開発者コミュニティ](https://developercommunity.visualstudio.com/) サイトから報告していただくことも可能です。
+> Visual Studio で発生する可能性がある、C++ ツールセットに関係しない他の種類の問題 (たとえば、UI の問題、IDE の機能の不具合、一般的なクラッシュなど) の場合は、IDE の**問題の報告**ツールを使用します。 スクリーンショット機能や、発生した問題の原因である UI 操作を記録する機能があるので、このツールは最適です。 このようなエラーについても、[開発者コミュニティ](https://developercommunity.visualstudio.com/) サイトで検索できます。 詳細については、「[Visual Studio で問題を報告する方法](/visualstudio/ide/how-to-report-a-problem-with-visual-studio-2017)」を参照してください。
 
 ### <a name="reports-and-privacy"></a>レポートとプライバシー
 

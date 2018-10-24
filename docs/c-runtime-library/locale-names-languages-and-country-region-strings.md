@@ -20,23 +20,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c072074c24466458ebd19e1335f49169c5c22bd5
-ms.sourcegitcommit: 3b78ddea5fd3e22b7c5cd2d787ec71a518a52223
+ms.openlocfilehash: 2622702cd19dab3cad2613aa3df28b5cef464853
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578382"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46076009"
 ---
 # <a name="locale-names-languages-and-countryregion-strings"></a>ロケール名、言語、および国/地域識別文字列
 
 `setlocale` および `_create_locale` 関数の*ロケール*引数は、Windows NLS API でサポートされているロケール名、言語、国/地域コード、コード ページなどを使用して設定できます。 *ロケール*引数は次の形式になります。
 
-> *locale* :: "*locale_name*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*"  
-&nbsp;&nbsp;&nbsp;&nbsp;| "C"  
-&nbsp;&nbsp;&nbsp;&nbsp;| ""  
-&nbsp;&nbsp;&nbsp;&nbsp;| NULL  
+> *locale* :: "*locale_name*" &nbsp;&nbsp;&nbsp;&nbsp;| "*language*\[\_*country-region*]\[.*code_page*]]" &nbsp;&nbsp;&nbsp;&nbsp;| ".*code_page*" &nbsp;&nbsp;&nbsp;&nbsp;| "C" &nbsp;&nbsp;&nbsp;&nbsp;| "" &nbsp;&nbsp;&nbsp;&nbsp;| NULL
 
 ロケール名形式が推奨されます。たとえば、英語 (米国) の `en-US`、またはボスニア語 (キリル、ボスニア・ヘルツェゴビナ) の `bs-Cyrl-BA` などです。 ロケール名のセットは「 [ロケール名](/windows/desktop/Intl/locale-names)」に記述されています。 Windows オペレーティング システムのバージョンごとにサポートされるロケール名の一覧については、[MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: Windows 言語コード識別子 (LCID) リファレンス) の「[Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx)」(付録 A: 製品の動作) に記載されている表の、**[Language tag]** 列をご覧ください。 このリソースは、ロケール名のサポートされている言語、スクリプト、および地域の部分を示しています。 既定以外の並べ替え順序を持つ、サポートされているロケール名については、「 **並べ替え順序の識別子** 」の [Locale name](/windows/desktop/Intl/sort-order-identifiers)の列を参照してください。 Windows 10 以降では、有効な BCP-47 の言語タグに対応するロケール名が許可されています。 たとえば、`jp-US` は有効な BCP-47 タグですが、ロケール機能としては `US` にのみ有効です。
 
@@ -50,8 +45,7 @@ ms.locfileid: "42578382"
 
 `setlocale` 関数と `_wsetlocale` 関数に `LC_ALL` カテゴリを使用して、ロケールのカテゴリのすべてを同時に指定できます。 カテゴリはすべて同じロケールに設定できますが、次の形式を持つロケール引数を使用して各カテゴリを個別に設定できます。
 
-> LC_ALL_specifier :: locale  
-&nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
+> LC_ALL_specifier :: locale &nbsp;&nbsp;&nbsp;&nbsp;| [LC_COLLATE=locale][;LC_CTYPE=locale][;LC_MONETARY=locale][;LC_NUMERIC=locale][;LC_TIME=locale]
 
 セミコロンで区切って複数のカテゴリの種類を指定できます。 指定されていないカテゴリの種類は、現在のロケール設定を使用します。 たとえば、このコード スニペットは、すべてのカテゴリの現在のロケールを `de-DE` に設定し、カテゴリ `LC_MONETARY` を `en-GB` に、カテゴリ `LC_TIME` を `es-ES` に設定します。
 
@@ -62,9 +56,9 @@ _wsetlocale(LC_ALL, L"LC_MONETARY=en-GB;LC_TIME=es-ES");
 
 ## <a name="see-also"></a>関連項目
 
-[C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)  
-[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)  
-[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)  
-[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)  
-[言語識別文字列](../c-runtime-library/language-strings.md)  
-[国/地域別文字列](../c-runtime-library/country-region-strings.md)  
+[C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)<br/>
+[_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
+[setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>
+[_create_locale、_wcreate_locale](../c-runtime-library/reference/create-locale-wcreate-locale.md)<br/>
+[言語識別文字列](../c-runtime-library/language-strings.md)<br/>
+[国/地域別文字列](../c-runtime-library/country-region-strings.md)
