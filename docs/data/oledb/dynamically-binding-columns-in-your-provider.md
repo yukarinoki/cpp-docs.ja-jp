@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ed2b8d1d8bc3ac516b3d605f13e02bda37bb0122
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9373c7569ac31b74429e815bd466cd9d5b9aa78
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028546"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990271"
 ---
 # <a name="dynamically-binding-columns-in-your-provider"></a>プロバイダーでの列の動的な連結
 
@@ -32,7 +32,7 @@ ms.locfileid: "46028546"
   
 - 列を追加するブックマークなどの要素をサポートします。  
   
-### <a name="to-implement-dynamic-column-binding"></a>動的な列バインディングを実装するには  
+## <a name="to-implement-dynamic-column-binding"></a>動的な列バインディングを実装するには  
   
 1. 削除`PROVIDER_COLUMN_MAP`コードからの秒。  
   

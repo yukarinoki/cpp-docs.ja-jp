@@ -1,7 +1,7 @@
 ---
 title: ユーザー レコード |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -26,16 +26,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4389fdd35c36a8f7708361176889111b1665f2c6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 10025d7bdb8035ee6ce9c070ab57bc52c507f585
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073653"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990166"
 ---
 # <a name="user-records"></a>ユーザー レコード
 
-静的アクセサーを使用する (から派生したアクセサー `CAccessor`)、コンシューマーはユーザー レコードが存在する必要があります。 ユーザー レコードは、ハンドルの入力または出力するデータ要素を含む C++ クラスです。 ATL OLE DB コンシューマー ウィザードでは、コンシューマーのユーザー レコードを生成します。 メソッドは、コマンドの処理などのオプションのタスクのユーザー レコードを追加できます。  
+静的アクセサーを使用する (から派生したアクセサー `CAccessor`)、コンシューマーはユーザー レコードが存在する必要があります。 ユーザー レコードは、ハンドルの入力または出力するデータ要素を含む C++ クラスです。 **ATL OLE DB コンシューマー ウィザード**コンシューマー ユーザー レコードが生成されます。 メソッドは、コマンドの処理などのオプションのタスクのユーザー レコードを追加できます。  
   
 次のコードでは、コマンドを処理するサンプル レコードを示します。 ユーザーのレコードでは、BEGIN_COLUMN_MAP は、プロバイダーからコンシューマーに渡されるデータ行セットを表します。 BEGIN_PARAM_MAP では、コマンド パラメーターのセットを表します。 この例では、 [CCommand](../../data/oledb/ccommand-class.md)コマンドのパラメーターを処理するクラス。 マップ エントリのデータ メンバーは、1 つの連続したクラスのインスタンスごとにメモリ ブロックのオフセットを表します。 COLUMN_ENTRY マクロは、プロバイダー側で PROVIDER_COLUMN_ENTRY マクロに対応します。  
   
@@ -66,7 +66,7 @@ END_PARAM_MAP()
   
 ## <a name="wizard-generated-user-records"></a>ウィザードで生成されたユーザー レコード  
 
-ATL OLE DB コンシューマー ウィザードを使用してコンシューマーを生成する場合がある場合の OLE DB テンプレートまたは OLE DB 属性を使用して選択します。 生成されたコードでは、各ケースで異なります。 このコードの詳細については、次を参照してください。[コンシューマー クラス](../../data/oledb/consumer-wizard-generated-classes.md)します。  
+使用する場合、 **ATL OLE DB コンシューマー ウィザード**OLE DB テンプレートまたは OLE DB 属性を使用する選択肢があるコンシューマーを生成します。 生成されたコードでは、各ケースで異なります。 このコードの詳細については、次を参照してください。[コンシューマー クラス](../../data/oledb/consumer-wizard-generated-classes.md)します。  
   
 ## <a name="user-record-support-for-multiple-accessors"></a>複数のアクセサーのユーザー レコードのサポート  
 

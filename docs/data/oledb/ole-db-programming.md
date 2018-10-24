@@ -1,7 +1,7 @@
 ---
 title: OLE DB プログラミング |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 32f3fc1b6a990a746c3dc87740c63fbe898f79d5
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 2628756992298fa61bad070b72f66232d65bec5f
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410630"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990037"
 ---
 # <a name="ole-db-programming"></a>OLE DB プログラミング
 
@@ -32,7 +32,7 @@ OLE DB テンプレートは、一般的に使用される多数の OLE DB イ�
   
 Visual C++ には OLE DB のスターター アプリケーションを作成するためのウィザードのサポートもあります。  
   
-また、属性を使って OLE DB コンシューマー テンプレートを実装することもできます。  
+また、OLE DB コンシューマー テンプレートを実装するのに属性を使用できます。  
   
 |詳細情報|参照トピック|  
 |-------------------------|---------|  

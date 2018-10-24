@@ -1,7 +1,7 @@
 ---
 title: OLE DB プログラミングの概要 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ec41a0213c621e948a160553c03b17be39e9f2f3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5fea82dfd7d3f9cdd64d0eab66e44ac1a486abac
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090712"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989893"
 ---
 # <a name="ole-db-programming-overview"></a>OLE DB プログラミングの概要
 
-OLE DB は、データベースの高パフォーマンスでは、COM ベース テクノロジです。 格納されている形式に関係なくデータにアクセスする一般的な方法を提供します。 一般的に、ビジネスの現場では、大量の情報が企業データベースの外部に格納されています。 このような情報は、ファイル システム (FAT や NTFS など)、インデックス付きのシーケンシャル ファイル、パーソナル データベース (Access など)、スプレッドシート (Excel など)、プロジェクト プランニング アプリケーション (Project など)、および電子メール (Outlook など) に含まれています。 OLE DB をデータ ストアは、OLE DB プロバイダーをされている限り、同様に、あらゆる種類のデータ ストアにアクセスできます。
+OLE DB は、データベースの高パフォーマンスでは、COM ベース テクノロジです。 格納されているフォームの独立したデータにアクセスする一般的な方法を提供します。 一般的なビジネスの状況で膨大な量の情報は、企業データベースには格納されません。 このような情報は、ファイル システム (FAT や NTFS など)、インデックス付きのシーケンシャル ファイル、パーソナル データベース (Access など)、スプレッドシート (Excel など)、プロジェクト プランニング アプリケーション (Project など)、および電子メール (Outlook など) に含まれています。 OLE DB をデータ ストアは、OLE DB プロバイダーをされている限り、同様に、あらゆる種類のデータ ストアにアクセスできます。
   
-OLE DB を使用すると、DBMS かどうかにかかわらず、多様なデータ ソースにアクセスするアプリケーションを開発できます。 OLE DB では、特定のデータ ソースに適した DBMS 機能をサポートする COM インターフェイスを使用することにより、汎用アクセスが可能になります。 COM では、データ ソース間だけでなく、ほかのアプリケーションとの間でも、サービスおよび最大化された相互運用性の不要な二重化が削減されます。  
+OLE DB いるかどうかは、DBMS かどうか、多様なデータ ソースにアクセスするアプリケーションを開発することができます。 OLE DB では、特定のデータ ソースに適した DBMS 機能をサポートする COM インターフェイスを使用することにより、汎用アクセスが可能になります。 COM では、データ ソース間だけでなく、ほかのアプリケーションとの間でも、サービスおよび最大化された相互運用性の不要な二重化が削減されます。  
   
 ## <a name="benefits-of-com"></a>COM の利点  
 
