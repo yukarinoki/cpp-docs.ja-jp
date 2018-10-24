@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dca97238310c42b9a537baa4056563b25c20c617
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 98734522410b867d735d0af25f440d5b45874563
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43895228"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46393283"
 ---
 # <a name="hint-files"></a>ヒント ファイル
 
@@ -52,9 +52,9 @@ STDMETHOD(myMethod)(int parameter1);
 
 ```cpp
 // Header file.
-#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)  
+#define STDMETHOD(method) HRESULT (STDMETHODCALLTYPE * method)
 #define STDMETHODCALLTYPE __stdcall
-#define HRESULT void*  
+#define HRESULT void*
 ```
 
 解析システムは、ソース コードを解釈できません。その理由は、`STDMETHOD` という名前の関数が宣言されているように見え、またその宣言には 2 つのパラメーター リストがあるため構文的に正しくないからです。 解析システムでは、`STDMETHOD`、`STDMETHODCALLTYPE`、および `HRESULT` のマクロの定義を検出するためのヘッダー ファイルが開かれません。 解析システムは `STDMETHOD` マクロを解釈できないため、ステートメント全体を無視して解析を継続します。
@@ -127,21 +127,21 @@ STDMETHOD(myMethod)(int parameter1);
 
 次のソース コードでは、`FormatWindowClassName()` 関数のパラメーターの型は `PXSTR` で、パラメーター名は `szBuffer` です。 ただし、解析システムはパラメーターの型またはパラメーター名のいずれかの `_Pre_notnull_` と `_Post_z_` の SAL 注釈を誤解します。
 
-**ソース コード:**  
+**ソース コード:**
 
-```  
-static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)  
-```  
+```cpp
+static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
+```
 
 **方法:** Null 定義
 
-このような状況に対応する方法は、SAL 注釈を存在しないかのように処理することです。 これを行うには、置換文字列が null のヒントを指定します。 その結果、解析システムで注釈が無視され、**クラス ビュー** ブラウザーにそれらが表示されなくなります  (Visual C++ には、SAL 注釈を非表示にする組み込みのヒント ファイルが含まれています)。  
+このような状況に対応する方法は、SAL 注釈を存在しないかのように処理することです。 これを行うには、置換文字列が null のヒントを指定します。 その結果、解析システムで注釈が無視され、**クラス ビュー** ブラウザーにそれらが表示されなくなります  (Visual C++ には、SAL 注釈を非表示にする組み込みのヒント ファイルが含まれています)。
 
-**ヒント ファイル:**  
+**ヒント ファイル:**
 
-```  
+```cpp.hint
 #define _Pre_notnull_
-```  
+```
 
 ### <a name="concealed-cc-language-elements"></a>非表示の C/C++ 言語要素
 
@@ -149,11 +149,11 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 次のソース コードでは、`START_NAMESPACE` マクロは、対になっていない左中かっこ (`{`) を非表示にします。
 
-**ソース コード:**  
+**ソース コード:**
 
-```  
+```cpp
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 **方法:** 直接コピー
 
@@ -161,11 +161,11 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 ソース ファイル内のマクロに他のマクロが含まれている場合、これらのマクロは、一連のエフェクティブ ヒント内に既にある場合にのみ解釈されることに注意してください。
 
-**ヒント ファイル:**  
+**ヒント ファイル:**
 
-```  
+```cpp.hint
 #define START_NAMESPACE namespace MyProject {
-```  
+```
 
 ### <a name="maps"></a>マップ
 
@@ -173,9 +173,9 @@ static void FormatWindowClassName(_Pre_notnull__Post_z_ PXSTR szBuffer)
 
 次のソース コードは、`BEGIN_CATEGORY_MAP`、`IMPLEMENTED_CATEGORY`、および `END_CATEGORY_MAP` のマクロを定義します。
 
-**ソース コード:**  
+**ソース コード:**
 
-```  
+```cpp
 #define BEGIN_CATEGORY_MAP(x)\
 static const struct ATL::_ATL_CATMAP_ENTRY* GetCategoryMap() throw() {\
 static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
@@ -183,15 +183,15 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define END_CATEGORY_MAP()\
    { _ATL_CATMAP_ENTRY_END, NULL } };\
    return( pMap ); }
-```  
+```
 
 **方法:** マップ要素の識別
 
 マップの開始要素、中間要素 (ある場合)、および終了要素のヒントを指定します。 特殊なマップ置換文字列 `@<`、`@=`、および `@>` を使用します。 詳細については、このトピックの「`Syntax`」セクションをご覧ください。
 
-**ヒント ファイル:**  
+**ヒント ファイル:**
 
-```  
+```cpp.hint
 // Start of the map.
 #define BEGIN_CATEGORY_MAP(x) @<
 // Intermediate map element.
@@ -200,7 +200,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 #define REQUIRED_CATEGORY( catid ) @=
 // End of the map.
 #define END_CATEGORY_MAP() @>
-```  
+```
 
 ### <a name="composite-macros"></a>複合マクロ
 
@@ -208,11 +208,11 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 次のソース コードには、名前空間スコープの開始を指定する `START_NAMESPACE` マクロと、マップの開始を指定する `BEGIN_CATEGORY_MAP` マクロが含まれています。
 
-**ソース コード:**  
+**ソース コード:**
 
-```  
+```cpp
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 **方法:** 直接コピー
 
@@ -220,31 +220,31 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 この例では、`START_NAMESPACE` には「`Concealed C/C++ Language Elements`」の小見出しのこのトピックで説明されているように、既にヒントがあることを前提としています。 また、`BEGIN_CATEGORY_MAP` には前述の `Maps` で説明されているようにヒントがあることを前提としています。
 
-**ヒント ファイル:**  
+**ヒント ファイル:**
 
-```  
+```cpp.hint
 #define NSandMAP START_NAMESPACE BEGIN_CATEGORY_MAP
-```  
+```
 
 ### <a name="inconvenient-macros"></a>不便なマクロ
 
 マクロの中には、解析システムで解釈できるものの、マクロが長かったり複雑だったりして、ソース コードの読み取りが困難なものがあります。 読みやすくするため、マクロの表示を簡略化するヒントを提供できます。
 
-**ソース コード:**  
+**ソース コード:**
 
-```  
-#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)  
-```  
+```cpp
+#define STDMETHOD(methodName) HRESULT (STDMETHODCALLTYPE * methodName)
+```
 
 **方法:** 簡略化
 
 より簡略化したマクロ定義を表示するヒントを作成します。
 
-**ヒント ファイル:**  
+**ヒント ファイル:**
 
-```  
+```cpp.hint
 #define STDMETHOD(methodName) void* methodName
-```  
+```
 
 ## <a name="example"></a>例
 
@@ -254,7 +254,7 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 ### <a name="hint-file-directories"></a>ヒント ファイルのディレクトリ
 
-![共通およびプロジェクト固有のヒント ファイルのディレクトリ。](../ide/media/hintfile.png "HintFile")  
+![共通およびプロジェクト固有のヒント ファイルのディレクトリ。](../ide/media/hintfile.png "HintFile")
 
 ### <a name="directories-and-hint-file-contents"></a>ディレクトリとヒント ファイルのコンテンツ
 
@@ -262,41 +262,41 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 - vcpackages
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
-    ```  
+    #define _In_count_(size)
+    ```
 
 - デバッグ
 
-    ```  
+    ```cpp.hint
     // Debug
     #undef _In_
     #define OBRACE {
     #define CBRACE }
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     #define START_NAMESPACE namespace MyProject {
     #define END_NAMESPACE }
-    ```  
+    ```
 
 - A1
 
-    ```  
+    ```cpp.hint
     // A1
     #define START_NAMESPACE namespace A1Namespace {
-    ```  
+    ```
 
 - A2
 
-    ```  
+    ```cpp.hint
     // A2
     #undef OBRACE
     #undef CBRACE
-    ```  
+    ```
 
 ### <a name="effective-hints"></a>エフェクティブ ヒント
 
@@ -306,19 +306,19 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 - エフェクティブ ヒント:
 
-    ```  
-    // vcpackages (partial list)  
+    ```cpp.hint
+    // vcpackages (partial list)
     #define _In_opt_
     #define _In_z_
     #define _In_opt_z_
-    #define _In_count_(size)  
+    #define _In_count_(size)
     // Debug...
-    #define RAISE_EXCEPTION(x) throw (x)  
+    #define RAISE_EXCEPTION(x) throw (x)
     // A1
     #define START_NAMESPACE namespace A1Namespace {
     // ...Debug
     #define END_NAMESPACE }
-    ```  
+    ```
 
 次の注意事項は、上記のリストに適用されます。
 
@@ -332,10 +332,10 @@ static const struct ATL::_ATL_CATMAP_ENTRY pMap[] = {
 
 ## <a name="see-also"></a>参照
 
-[Visual C++ プロジェクトに対して作成されるファイルの種類](../ide/file-types-created-for-visual-cpp-projects.md)    
-[#define ディレクティブ (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)   
-[#undef ディレクティブ (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)   
-[SAL 注釈](../c-runtime-library/sal-annotations.md)   
-[メッセージ マップ](../mfc/reference/message-maps-mfc.md)   
-[メッセージ マップ マクロ](../atl/reference/message-map-macros-atl.md)   
+[Visual C++ プロジェクトに対して作成されるファイルの種類](../ide/file-types-created-for-visual-cpp-projects.md)<br>
+[#define ディレクティブ (C/C++)](../preprocessor/hash-define-directive-c-cpp.md)<br>
+[#undef ディレクティブ (C/C++)](../preprocessor/hash-undef-directive-c-cpp.md)<br>
+[SAL 注釈](../c-runtime-library/sal-annotations.md)<br>
+[メッセージ マップ](../mfc/reference/message-maps-mfc.md)<br>
+[メッセージ マップ マクロ](../atl/reference/message-map-macros-atl.md)<br>
 [オブジェクト マップに関するマクロ](../atl/reference/object-map-macros.md)

@@ -18,31 +18,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ebf50e4672ee2a3398f6c484c42f8e36f231169
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: c36388e34b2f1e3cdc4d5664c014463c727e8369
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33325118"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46385093"
 ---
 # <a name="ltparagt-visual-c"></a>&lt;para&gt; (Visual C++)
-\<para> タグは、[\<summary>](../ide/summary-visual-cpp.md)、[\<remarks>](../ide/remarks-visual-cpp.md)、または [\<returns>](../ide/returns-visual-cpp.md) などのタグ内で使用し、テキストに構造を追加することができます。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-<para>content</para>  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `content`  
- 段落のテキストです。  
-  
-## <a name="remarks"></a>コメント  
- コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。  
-  
-## <a name="example"></a>例  
- \<para> の使用例については、「[\<summary>](../ide/summary-visual-cpp.md)」を参照してください。  
-  
-## <a name="see-also"></a>参照  
- [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)
+
+\<para> タグは、[\<summary>](../ide/summary-visual-cpp.md)、[\<remarks>](../ide/remarks-visual-cpp.md)、または [\<returns>](../ide/returns-visual-cpp.md) などのタグ内で使用し、テキストに構造を追加することができます。
+
+## <a name="syntax"></a>構文
+
+```
+<para>content</para>
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*content*<br/>
+段落のテキストです。
+
+## <a name="remarks"></a>コメント
+
+コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
+
+## <a name="example"></a>例
+
+\<para> の使用例については、「[\<summary>](../ide/summary-visual-cpp.md)」を参照してください。
+
+## <a name="see-also"></a>参照
+
+[XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

@@ -12,14 +12,15 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 434acbaa23826636a221deb77f1930283e43e9de
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: d8a4278d89727f47e85d20809060fc8cef421998
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578263"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46427213"
 ---
 # <a name="porting-guide-com-spy"></a>移植のガイド: COM Spy
+
 このトピックは、旧バージョンの Visual C++ プロジェクトを Visual Studio の最新バージョンにアップグレードするプロセスについて説明する一連の記事の 2 番目です。 このトピックのコード例は、前回 Visual Studio 2005 でコンパイルされています。  
   
 ## <a name="comspy"></a>COMSpy  
@@ -175,6 +176,6 @@ private void button1_Click(object sender, EventArgs e)
   
 ## <a name="see-also"></a>参照  
 
-[移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)   
-[次の例: spy++](../porting/porting-guide-spy-increment.md)   
+[移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[次の例: Spy++](../porting/porting-guide-spy-increment.md)<br/>
 [前の例: MFC Scribble](../porting/porting-guide-mfc-scribble.md)

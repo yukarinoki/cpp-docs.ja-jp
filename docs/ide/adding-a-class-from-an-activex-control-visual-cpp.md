@@ -1,7 +1,7 @@
 ---
 title: ActiveX コントロールからのクラスの追加 (Visual C++) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/07/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -15,16 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fd284236d2e9267d281061eef3915ed41f6f590
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6f9e7d8ea0e3b21b06d73e187a4f45c53cd896cf
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375957"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250485"
 ---
 # <a name="adding-a-class-from-an-activex-control-visual-c"></a>ActiveX コントロールからのクラスの追加 (Visual C++)
 
 このウィザードを使用すると、使用可能な ActiveX コントロールのインターフェイスからの MFC クラスを作成できます。 MFC クラスは、[MFC アプリケーション](../mfc/reference/creating-an-mfc-application.md)、[MFC DLL](../mfc/reference/creating-an-mfc-dll-project.md)、または [MFC ActiveX コントロール](../mfc/reference/creating-an-mfc-activex-control.md)に追加できます。
+
+> [!WARNING]
+> Visual Studio 2017 バージョン 15.9 では、このコード ウィザードは非推奨になっており、Visual Studio の今後のバージョンで削除されます。 このウィザードはほとんど使用されません。 このウィザードを削除しても、ATL と MFC の一般的なサポートには影響ありません。 この非推奨に関するご意見を共有したい場合は、[こちらのアンケート](https://www.surveymonkey.com/r/QDWKKCN)にお答えください。 お客様のご意見は私どもにとって重要です。
 
 > [!NOTE]
 >  ActiveX コントロールからクラスを追加するのに、Automation を有効にして MFC プロジェクトを作成する必要はありません。

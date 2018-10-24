@@ -28,34 +28,36 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4384d67060d2f5d992c098841f76a6b858b78c15
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c118cc5537690e8978ed2fd96b7727054ce5920
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408134"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46101503"
 ---
 # <a name="setusermatherr"></a>__setusermatherr
-数値演算エラーを処理するために、[_matherr](../c-runtime-library/reference/matherr.md) ルーチンではなく、ユーザーが指定したルーチンを指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```cpp  
-void __setusermatherr(  
-   _HANDLE_MATH_ERROR pf   
-   )  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- `pf`  
- ユーザーによって提供された `_matherr` の実装へのポインター。  
-  
- `pf` パラメーターの型は `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)` として宣言されます。  
-  
-## <a name="remarks"></a>コメント  
-  
-## <a name="requirements"></a>必要条件  
-  
-|ルーチンによって返される値|必須ヘッダー|  
-|-------------|---------------------|  
+
+数値演算エラーを処理するために、[_matherr](../c-runtime-library/reference/matherr.md) ルーチンではなく、ユーザーが指定したルーチンを指定します。
+
+## <a name="syntax"></a>構文
+
+```cpp
+void __setusermatherr(
+   _HANDLE_MATH_ERROR pf
+   )
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*/pf*<br/>
+ユーザーによって提供された `_matherr` の実装へのポインター。
+
+*pf* パラメーターの型は `typedef int (__cdecl * _HANDLE_MATH_ERROR)(struct _exception *)` として宣言されます。
+
+## <a name="remarks"></a>コメント
+
+## <a name="requirements"></a>必要条件
+
+|ルーチンによって返される値|必須ヘッダー|
+|-------------|---------------------|
 |__setusermatherr|matherr.c|

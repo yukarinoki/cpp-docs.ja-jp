@@ -197,7 +197,7 @@
 ### [/CLRIMAGETYPE (CLR イメージのタイプの指定)](clrimagetype-specify-type-of-clr-image.md)
 ### [/CLRSUPPORTLASTERROR (PInvoke 呼び出しの最終エラー コードの保持)](clrsupportlasterror-preserve-last-error-code-for-pinvoke-calls.md)
 ### [/CLRTHREADATTRIBUTE (CLR スレッド属性の設定)](clrthreadattribute-set-clr-thread-attribute.md)
-### [/CLRUNMANAGEDCODECHECK (SupressUnmanagedCodeSecurityAttribute の追加)](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
+### [/CLRUNMANAGEDCODECHECK (SuppressUnmanagedCodeSecurityAttribute の削除)](clrunmanagedcodecheck-add-supressunmanagedcodesecurityattribute.md)
 ### [/DEBUG (デバッグ情報の生成)](debug-generate-debug-info.md)
 ### [/DEBUGTYPE (デバッグ情報オプション)](debugtype-debug-info-options.md)
 ### [/DEF (モジュール定義ファイルの指定)](def-specify-module-definition-file.md)

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5254adbf533a30da65349f2f8aadd100b8776d7
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 4b86fa6444889f77b306e4ae543e7d2db41d721b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43755553"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860681"
 ---
 # <a name="do-while-statement-c"></a>do-while ステートメント (C)
 
@@ -30,8 +30,7 @@ ms.locfileid: "43755553"
 
 ## <a name="syntax"></a>構文
 
-*iteration-statement*:  
-&nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
+*iteration-statement*: &nbsp;&nbsp;&nbsp;&nbsp;**do**  *statement*  **while (**  *expression*  **) ;**
 
 *do-while* ステートメント内の *expression* は、ループの本体が実行された後で評価されます。 したがって、ループの本体は、常に少なくとも 1 回は実行されます。
 
@@ -39,7 +38,7 @@ ms.locfileid: "43755553"
 
 1. ステートメントの本体が実行されます。
 
-2. 次に、*expression* が評価されます。 *expression* が false の場合、*do-while* ステートメントは終了し、プログラムの次のステートメントに制御が渡されます。 *式*が true (0 以外) の場合、プロセスは手順 1 から繰り返されます。
+1. 次に、*expression* が評価されます。 *expression* が false の場合、*do-while* ステートメントは終了し、プログラムの次のステートメントに制御が渡されます。 *式*が true (0 以外) の場合、プロセスは手順 1 から繰り返されます。
 
 *do-while* ステートメントは、**break**、**goto**、または **return** ステートメントがステートメントの本体で実行されたときにも終了できます。
 
@@ -47,10 +46,10 @@ ms.locfileid: "43755553"
 
 ```C
 do
-{  
-    y = f( x );  
-    x--;  
-} while ( x > 0 );  
+{
+    y = f( x );
+    x--;
+} while ( x > 0 );
 ```
 
 この *do-while* ステートメントでは、`x` の初期値に関係なく、2 つのステートメント `y = f( x );` および `x--;` が実行されます。 次に、`x > 0` が評価されます。 `x` が 0 より大きい場合、ステートメント本体が再度実行され、`x > 0` が再評価されます。 `x` が 0 より大きい間、ステートメント本体が繰り返し実行されます。 *do-while* ステートメントの実行は、`x` が 0 または負になると終了します。 ループの本体は、少なくとも 1 回は実行されます。

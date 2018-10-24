@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578425"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46374146"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Visual Studio でネイティブ マルチターゲットを利用し、古いプロジェクトを作成する
 
@@ -70,19 +70,11 @@ Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビル�
 
 アップグレードできないまたはアップグレードしたくない古い Visual C++ プロジェクトがあって、しかもプラットフォーム ツールセットのバージョンがプロジェクトに一致していないことがあります。 この場合、ツールセットを取得するには、無料の Visual Studio Community または必要なバージョンの Express エディションをインストールできます。 Visual Studio 2008 からのすべてのバージョンで、現在の Visual Studio のバージョンからそのバージョンをターゲットにするために必要なコンパイラ、ツール、およびライブラリをインストールできます。 Microsoft ダウンロード センターで特定のバージョンの Visual Studio を検索してダウンロードしてください。 セットアップ中に、C++ のインストール オプションを選択したことを確認してください。 セットアップの完了後は、そのバージョンの Visual Studio を実行して更新をインストールします。 また、必要になる可能性がある Windows Update の変更を確認します。 すべての更新プログラムを取得するには、この更新プログラムの確認処理を複数回繰り返す必要があります。
 
-以下に、必要になる可能性があるいくつかの Visual Studio のダウンロードを示します。
-
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 for Windows Desktop および更新プログラム 5](https://www.microsoft.com/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 更新プログラム 5](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 Express (Web インストーラー)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
-  - [Microsoft Visual C++ 2008 Express SP1 (Web インストーラー)](https://go.microsoft.com/?linkid=7729279)  
+現在利用できるダウンロードについては、[以前の Visual Studio ソフトウェアのダウンロード](https://visualstudio.microsoft.com/vs/older-downloads/)に関するページを参照してください。
 
 これらの製品がインストールされているときに、**[プロパティ ページ]** ダイアログ ボックスの **[プラットフォーム ツールセット]** プロパティ ドロップダウンの一覧が自動的に更新され、使用できるツールセットが表示されます。 最新バージョンの Visual Studio を使用して、古いバージョンのツールセットのプロジェクトをビルドすることができます。それらを変換またはアップグレードする必要はありません。
 
 ## <a name="see-also"></a>参照
 
-[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
+[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 2017 の C++ 準拠の強化](../cpp-conformance-improvements-2017.md)  

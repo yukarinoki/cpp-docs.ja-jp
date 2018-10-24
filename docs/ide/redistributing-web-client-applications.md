@@ -17,24 +17,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cdde0f8d4edc13e8c1e1a53d8f4393dc7c2dac40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d036f7d46e0db84b8572b26c747947c929972517
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372471"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889933"
 ---
 # <a name="redistributing-web-client-applications"></a>Web クライアント アプリケーションの再頒布
 
 アプリケーションで WebBrowser コントロールが実装された MFC クラスを使用している場合 (たとえば、`CHtmlView` または `CHtmlEditView`)、ターゲット コンピューターに最低でも Microsoft Internet Explorer 4.0 以降がインストールされている必要があります。
 
-Internet Explorer の最新バージョンがインストールされていると、ターゲット コンピューターには最新の共通コントロール ファイルが含まれていることも保証されます。
-
-Internet Explorer の最小限のコンポーネントのインストールについては、次のサポート技術情報の記事を参照してください。
-
-- Q185375, HOWTO: Create a Single EXE Install of Internet Explorer ([http://support.microsoft.com/support/kb/articles/q185/3/75.asp](http://support.microsoft.com/support/kb/articles/q185/3/75.asp)) (方法: Internet Explorer の単一の EXE インストールを作成する)
-
-サポート技術情報の記事は、MSDN ライブラリまたは [http://support.microsoft.com](http://support.microsoft.com) で参照できます。
+Internet Explorer の最新バージョンがインストールされていると、ターゲット コンピューターには最新の共通コントロール ファイルが含まれていることも保証されます。 詳しくは、「[Internet Explorer 11 のインストールと展開](/internet-explorer/ie11-deploy-guide/install-and-deploy-ie11)」をご覧ください。
 
 ## <a name="see-also"></a>参照
 

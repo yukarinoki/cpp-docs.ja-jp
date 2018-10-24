@@ -18,33 +18,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d2b1eaee54ac33e687d457830372f2bef06230
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 687203787bdab69751aabf0672fe1269974b3014
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718511"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399608"
 ---
 # <a name="managed-resources-property-page"></a>[マネージド リソース] プロパティ ページ
-リソース コンパイラの設定を有効にします。  
-  
- **[マネージド リソース]** プロパティ ページには、以下のプロパティが含まれます。  
-  
+
+リソース コンパイラの設定を有効にします。
+
+**[マネージド リソース]** プロパティ ページには、以下のプロパティが含まれます。
+
 - **リソース論理名**
 
-   生成された中間 .resources ファイルの*論理名* を指定します。 論理名は、リソースの読み込みに使用される名前です。 論理名が指定されていない場合は、リソース (.resx) ファイル名が論理名として使用されます。  
-  
+   生成された中間 .resources ファイルの*論理名* を指定します。 論理名は、リソースの読み込みに使用される名前です。 論理名が指定されていない場合は、リソース (.resx) ファイル名が論理名として使用されます。
+
 - **出力ファイル名**
 
-   リソース (.resx) ファイルによって決定する最終出力ファイルの名前を指定します。  
-  
+   リソース (.resx) ファイルによって決定する最終出力ファイルの名前を指定します。
+
 - **既定のローカライズされたリソース**
 
-   特定の .resx ファイルが既定のリソースまたはサテライト .dll に変更を与えるかどうかを指定します。  
-  
-**[マネージド リソース]** プロパティ ページにアクセスする方法については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
-  
-## <a name="see-also"></a>参照  
- [RC の使用 (RC コマンドライン)](/windows/desktop/menurc/using-rc-the-rc-command-line-)   
- [プロパティ ページ](../ide/property-pages-visual-cpp.md)   
- [/ASSEMBLYRESOURCE (マネージド リソースの埋め込み)](../build/reference/assemblyresource-embed-a-managed-resource.md)
+   特定の .resx ファイルが既定のリソースまたはサテライト .dll に変更を与えるかどうかを指定します。
+
+**[マネージド リソース]** プロパティ ページにアクセスする方法については、「[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)」を参照してください。
+
+## <a name="see-also"></a>参照
+
+[RC の使用 (RC コマンドライン)](/windows/desktop/menurc/using-rc-the-rc-command-line-)<br>
+[プロパティ ページ](../ide/property-pages-visual-cpp.md)<br>
+[/ASSEMBLYRESOURCE (マネージド リソースの埋め込み)](../build/reference/assemblyresource-embed-a-managed-resource.md)
