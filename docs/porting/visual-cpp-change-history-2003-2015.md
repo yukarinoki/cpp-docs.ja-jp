@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6f0e5ce08e362cef0fd625036a92c1d13885ded
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: bcf3ce1f0ddc5003886c367cfe5db8968a911ee9
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821544"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083984"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
@@ -282,7 +282,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **clock**
 
-   以前のバージョンでは、Windows API [GetSystemTimeAsFileTime](https://msdn.microsoft.com/library/windows/desktop/ms724397.aspx) を使用して [clock](../c-runtime-library/reference/clock.md) 関数が実装されていました。 この実装により、clock 関数はシステム時刻の影響を受け、単調になることがありませんでした。 現在は、 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) によって clock 関数が再実装されたため、単調になっています。
+   以前のバージョンでは、Windows API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) を使用して [clock](../c-runtime-library/reference/clock.md) 関数が実装されていました。 この実装により、clock 関数はシステム時刻の影響を受け、単調になることがありませんでした。 現在は、 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) によって clock 関数が再実装されたため、単調になっています。
 
 - **fstat および _utime**
 
@@ -2545,7 +2545,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **属性が指定された ATL コードのサポートの非推奨化** (デフォルトでレベル 1 (`/W1`))
 
-   以前のバージョンのコンパイラは、属性が指定された ATL コードをサポートしていました。 [Visual Studio 2008 から始まった](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)、属性が指定された ATL コードのサポートを停止する次のフェーズとして、属性が指定された ATL コードは非推奨になりました。 コンパイラは、非推奨になったこの種類のコードを特定するために、コンパイラの警告 C4467 を発行するようになりました。
+   以前のバージョンのコンパイラは、属性が指定された ATL コードをサポートしていました。 [Visual Studio 2008 から始まった](https://msdn.microsoft.com/library/bb384632)、属性が指定された ATL コードのサポートを停止する次のフェーズとして、属性が指定された ATL コードは非推奨になりました。 コンパイラは、非推奨になったこの種類のコードを特定するために、コンパイラの警告 C4467 を発行するようになりました。
 
     ```Output
     warning C4467: Usage of ATL attributes is deprecated

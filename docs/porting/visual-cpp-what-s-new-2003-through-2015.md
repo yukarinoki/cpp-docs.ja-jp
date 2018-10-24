@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01ee370b4fd96419ce095fa9a93450b98b241dd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51921f8e55b9d4ce4e1875f5216984fe3257ca97
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448572"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49084114"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ～ 2015 の新機能
 
@@ -1360,7 +1360,7 @@ Visual Studio 2015 以降では、コンパイラの準拠に関する継続的�
 
 - **属性が指定された ATL コードのサポートの非推奨化** (デフォルトでレベル 1 (`/W1`))
 
-   以前のバージョンのコンパイラは、属性が指定された ATL コードをサポートしていました。 [Visual C++ 2008 から始まった](https://msdn.microsoft.com/library/bb384632\(v=vs.90\).aspx)、属性が指定された ATL コードのサポートを停止する次のフェーズとして、属性が指定された ATL コードは非推奨とされました。 コンパイラは、非推奨になったこの種類のコードを特定するために、コンパイラの警告 C4467 を発行するようになりました。
+   以前のバージョンのコンパイラは、属性が指定された ATL コードをサポートしていました。 [Visual C++ 2008 から始まった](https://msdn.microsoft.com/library/bb384632)、属性が指定された ATL コードのサポートを停止する次のフェーズとして、属性が指定された ATL コードは非推奨とされました。 コンパイラは、非推奨になったこの種類のコードを特定するために、コンパイラの警告 C4467 を発行するようになりました。
 
    ```Output
     warning C4467: Usage of ATL attributes is deprecated
