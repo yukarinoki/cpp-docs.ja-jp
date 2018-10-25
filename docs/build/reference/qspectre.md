@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0baba6503d1d5b4e382347f4f4d9680b11f954ce
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7bef66e8b3c326f205b6399538a811bcc83c9f9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328520"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070401"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -36,7 +36,7 @@ Spectre バリアント 1 セキュリティの脆弱性を軽減するための
 
 **/Qspectre**オプションは既定でオフです。
 
-最初のリリースで、 **/Qspectre**最適化されたコードをオプションでのみ機能します。 Visual Studio 2017 バージョン 15.7 以降で、 **/Qspectre**オプションがすべての最適化レベルでサポートされています。 
+最初のリリースで、 **/Qspectre**最適化されたコードをオプションでのみ機能します。 Visual Studio 2017 バージョン 15.7 以降で、 **/Qspectre**オプションがすべての最適化レベルでサポートされています。
 
 Microsoft Visual C ライブラリでは、Spectre の軽減策のバージョンで入手できます。 Visual Studio 2017 の Spectre 軽減ライブラリは、Visual Studio インストーラーでダウンロードできます。 内にある、**個々 のコンポーネント**タブ**コンパイラ、ビルド ツール、およびランタイム**、"Spectre 用ライブラリ"を名前であるとします。 DLL と軽減策を有効になっているスタティック ランタイム ライブラリの両方が Visual C ランタイムのサブセットの使用可能な: VC + + のスタートアップ コード、vcruntime140、msvcp140、concrt140、および vcamp140 します。 Dll はアプリケーションのローカル展開だけです。Visual C 2017 ランタイム ライブラリ Redistributable の内容が変更されていません。 MFC と ATL で見つかった Spectre 軽減ライブラリをインストールすることも、**個々 のコンポーネント**タブ**Sdk、ライブラリ、およびフレームワーク**します。
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 637843873bbb0e12a76168bd08b613e14b391ef8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d91a44a38d331a49927d5129c5002eef53c224ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392464"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077973"
 ---
 # <a name="devnames-structure"></a>DEVNAMES 構造体
 
@@ -58,7 +58,7 @@ typedef struct tagDEVNAMES { /* dvnm */
 
 `PrintDlg`関数では、これらの文字列を使用して、システム定義の印刷 ダイアログ ボックスでメンバーを初期化します。 ユーザーは、ダイアログ ボックスを閉じ、この構造体で、選択したプリンターに関する情報が返されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** commdlg.h
 
@@ -66,5 +66,4 @@ typedef struct tagDEVNAMES { /* dvnm */
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CPrintDialog::CreatePrinterDC](../../mfc/reference/cprintdialog-class.md#createprinterdc)
-
 

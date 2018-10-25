@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295e19d875585e0ea166dfce552866b8c1fc81b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c2c954851348fcb96b28a4c47aee4b4475aeaca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392271"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070284"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView と CDaoRecordView のダイアログ データ エクスチェンジ (DDX) 関数
 
@@ -98,13 +98,13 @@ void AFXAPI DDX_FieldCBIndex(
 
 ODBC ベースのクラスを使用する場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用する場合は、2 番目のバージョンを使用します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
 
 ### <a name="example"></a>例
 
 参照してください[DDX_FieldText](#ddx_fieldtext)全般のための DDX_Field 例。 例はのようになります`DDX_FieldCBIndex`します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -146,13 +146,13 @@ void AFXAPI DDX_FieldCBString(
 
 ODBC ベースのクラスを使用する場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用する場合は、2 番目のバージョンを使用します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
 
 ### <a name="example"></a>例
 
 参照してください[DDX_FieldText](#ddx_fieldtext)全般のための DDX_Field 例。 例への呼び出しが含まれています`DDX_FieldCBString`します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 
@@ -194,13 +194,13 @@ void AFXAPI DDX_FieldCBStringExact(
 
 ODBC ベースのクラスを使用する場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用する場合は、2 番目のバージョンを使用します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
 
 ### <a name="example"></a>例
 
 参照してください[DDX_FieldText](#ddx_fieldtext)全般のための DDX_Field 例。 呼び出す`DDX_FieldCBStringExact`のようになります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 
@@ -240,9 +240,9 @@ void AFXAPI DDX_FieldCheck(
 
 ときに`DDX_FieldCheck`が呼び出され、*値*、チェック ボックス コントロールの現在の状態に設定されているコントロールの状態が に設定されているまたは*値*転送の方向に応じて。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 
@@ -284,13 +284,13 @@ void AFXAPI DDX_FieldLBIndex(
 
 ODBC ベースのクラスを使用する場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用する場合は、2 番目のバージョンを使用します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
 
 ### <a name="example"></a>例
 
 参照してください[DDX_FieldText](#ddx_fieldtext)全般のための DDX_Field 例。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 
@@ -332,13 +332,13 @@ void AFXAPI DDX_FieldLBString(
 
 ODBC ベースのクラスを使用する場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用する場合は、2 番目のバージョンを使用します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
 
 ### <a name="example"></a>例
 
 参照してください[DDX_FieldText](#ddx_fieldtext)全般のための DDX_Field 例。 呼び出す`DDX_FieldLBString`のようになります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 
@@ -380,13 +380,13 @@ void AFXAPI DDX_FieldLBStringExact(
 
 ODBC ベースのクラスを使用する場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用する場合は、2 番目のバージョンを使用します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
 
 ### <a name="example"></a>例
 
 参照してください[DDX_FieldText](#ddx_fieldtext)全般のための DDX_Field 例。 呼び出す`DDX_FieldLBStringExact`のようになります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 
@@ -428,13 +428,13 @@ void AFXAPI DDX_FieldRadio(
 
 ODBC ベースのクラスを使用する場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用する場合は、2 番目のバージョンを使用します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
 
 ### <a name="example"></a>例
 
 参照してください[DDX_FieldText](#ddx_fieldtext)全般のための DDX_Field 例。 呼び出す`DDX_FieldRadio`のようになります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 
@@ -476,13 +476,13 @@ void AFXAPI DDX_FieldScroll(
 
 ODBC ベースのクラスを使用する場合は、最初のバージョンを使用します。 DAO ベースのクラスを使用する場合は、2 番目のバージョンを使用します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
 
 ### <a name="example"></a>例
 
 参照してください[DDX_FieldText](#ddx_fieldtext)全般のための DDX_Field 例。 呼び出す`DDX_FieldScroll`のようになります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 
@@ -499,11 +499,12 @@ DDX の詳細については、次を参照してください。[ダイアログ
        CRecordset* pRecordset );
 
 void AFXAPI DDX_FieldSlider(
-     CDataExchange* pDX,
-     int nIDC,
-     int& value,
-     CDaoRecordset* pRecordset );
+   CDataExchange* pDX,
+   int nIDC,
+   int& value,
+   CDaoRecordset* pRecordset );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
@@ -526,13 +527,13 @@ void AFXAPI DDX_FieldSlider(
 
 ODBC ベースのクラスを使用する場合は、関数の最初のオーバーライドを使用します。 DAO ベースのクラスでは、2 番目のオーバーライドを使用します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../dialog-data-exchange-and-validation.md)です。 例との DDX の詳細について`CRecordView`と`CDaoRecordView`フィールドを参照してください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。 スライダー コントロールの概要については、次を参照してください。[を使用して CSliderCtrl](../using-csliderctrl.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について`CRecordView`と`CDaoRecordView`フィールドを参照してください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。 スライダー コントロールの概要については、次を参照してください。[を使用して CSliderCtrl](../using-csliderctrl.md)します。
 
 ### <a name="example"></a>例
 
 参照してください[DDX_FieldText](#ddx_fieldtext)全般のための DDX_Field 例。 呼び出す`DDX_FieldSlider`のようになります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -674,7 +675,7 @@ void AFXAPI DDX_FieldText(
 
 バージョンを使用して[CRecordset](../../mfc/reference/crecordset-class.md) ODBC ベースのクラスを使用する場合は、パラメーター。 バージョンを使用して[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md) DAO ベースのクラスを使用する場合は、パラメーター。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について[CRecordView](../../mfc/reference/crecordview-class.md)と[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)フィールド、記事をご覧ください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。
 
 ### <a name="example"></a>例
 
@@ -682,8 +683,7 @@ DDX の詳細については、次を参照してください。[ダイアログ
 
 [!code-cpp[NVC_MFCDatabase#43](../../mfc/codesnippet/cpp/dialog-data-exchange-functions-for-crecordview-and-cdaorecordview_1.cpp)]
 
-
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 

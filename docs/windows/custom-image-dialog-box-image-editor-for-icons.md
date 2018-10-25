@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8376db7eb824856d84e8c742d8a187604f939455
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 13e3f621bafad08694e8e930835ecc62562db013
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384716"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071681"
 ---
 # <a name="custom-image-dialog-box-c-image-editor-for-icons"></a>カスタム イメージ ダイアログ ボックス (C++) (アイコン用イメージ エディター)
 
@@ -31,19 +31,19 @@ ms.locfileid: "46384716"
 - **Width**
 
    カスタム イメージの幅をピクセル (1 ~ 512 の制限を 2048) で入力する場所を提供します。
-  
+
 - **Height**
 
    ピクセル (1 ~ 512 の制限を 2048) でカスタム イメージの高さを入力する場所を提供します。
-  
+
 - **色**
 
    カスタム イメージの色の数を選択する場所を提供します。 2、16、または 256 です。
-  
-## <a name="requirements"></a>要件
+
+## <a name="requirements"></a>必要条件
 
 なし
-  
+
 ## <a name="see-also"></a>関連項目
 
 [新しい\<デバイス > イメージの種類 ダイアログ ボックス](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)<br/>

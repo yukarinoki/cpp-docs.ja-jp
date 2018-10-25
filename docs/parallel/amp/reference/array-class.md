@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e0d0fde53cc7ffb885e8435fc82cbb899a3bc89
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9023f042cd2c39966adb6a5fb4c71b5e24c3e9d1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389553"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068048"
 ---
 # <a name="array-class"></a>array クラス
 
@@ -85,7 +85,7 @@ friend class array;
 |名前|説明|
 |----------|-----------------|
 |[operator std::vector&lt;value_type&gt;](#operator_vec)|使用して`copy(*this, vector)`へ暗黙的に変換、配列、std::[ベクター](../../../standard-library/vector-class.md)オブジェクト。|
-|[operator()](#operator_call)|パラメーターによって指定された要素の値を返します。|
+|[演算子 ()](#operator_call)|パラメーターによって指定された要素の値を返します。|
 |[operator[]](#operator_at)|指定したインデックス位置にある要素を返します。|
 |[operator=](#operator_eq)|指定された `array` オブジェクトの内容をこのオブジェクトにコピーします。|
 
@@ -126,7 +126,7 @@ friend class array;
 
 `array`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp.h
 
@@ -671,6 +671,7 @@ array& operator= (
 ```
 static const int rank = _Rank;
 ```
+
 ## <a name="reinterpret_as"></a> reinterpret_as
 
 必要に応じてソース配列の別の値型である可能性がありますが、1 次元 array_view を配列として再解釈します。

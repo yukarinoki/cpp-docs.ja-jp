@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5fb7f205ccdf78e1ef64e2ba2c132e3c2b6b6000
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2ca39b160aacdf72bb6d6131b757755f87ac22a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791943"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075083"
 ---
 # <a name="default-c"></a>default (C++)
 
@@ -44,13 +44,13 @@ ms.locfileid: "48791943"
 既定のインターフェイスが指定されていない場合は、最初に見つかったソース以外のインターフェイスが既定値として使用されます。
 
 *interface2*<br/>
-(省略可能)既定のソース インターフェイス。 このインターフェイスを指定することも必要があります、[ソース](source-cpp.md)属性。
+(省略可能)既定のソース インターフェイス。 このインターフェイスを指定する場合は、 [source](source-cpp.md) 属性も使用する必要があります。
 
 既定のソース インターフェイスが指定されていない場合は、最初のソース インターフェイスが既定値として使用されます。
 
 ## <a name="remarks"></a>Remarks
 
-**既定**C++ 属性と同じ機能を持つ、[既定](/windows/desktop/Midl/default)MIDL 属性。 **既定**属性が併用しても、[ケース](case-cpp.md)属性。
+**default** C++ 属性には、 [default](/windows/desktop/Midl/default) MIDL 属性と同じ機能があります。 また、 **default** 属性は、 [case](case-cpp.md) 属性と共に使用されます。
 
 ## <a name="example"></a>例
 
@@ -77,7 +77,7 @@ __interface ICustomDispatch : public IDispatch {
    HRESULT Dispatch([in] long l, [out, retval] long *pLong);
 };
 
-[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")  
+[   coclass, default(ICustomDispatch), source(IDual), uuid("9E66A294-4365-11D2-A997-00C04FA37DDB")
 ]
 class CClass : public ICustom, public IDual, public ICustomDispatch {
    HRESULT Custom(long l, long *pLong) { return(S_OK); }
@@ -102,9 +102,9 @@ int main() {
 }
 ```
 
-[ソース](source-cpp.md)属性も使用する方法の例を持つ**既定**します。
+[default](source-cpp.md) の使用例については、「 **source**」も参照してくださいにも含まれています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -115,10 +115,10 @@ int main() {
 |**必要な属性**|**コクラス**(に適用すると**クラス**または**構造体**)|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
-[coclass](coclass.md)  
+[coclass](coclass.md)

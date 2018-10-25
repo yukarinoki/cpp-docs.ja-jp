@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c60cf5d6f61f16aac18524e8b6e75638ec13d27e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9907424a583cc16f170890a739fa7ece8cc93ead
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075126"
 ---
 # <a name="using-the-classes-to-write-applications-for-windows"></a>クラスを使用した Windows アプリケーションの作成
 
@@ -66,17 +66,17 @@ ms.locfileid: "46433336"
 
 - [メモリ管理](../mfc/memory-management.md)
 
-     Windows オペレーティング システムのアプリケーションを作成する利点を渡すと、MFC もは、具体的には OLE リンクと埋め込みのテクノロジを使用するアプリケーションの記述が簡単です。 行うことができます、アプリケーション、OLE ビジュアル編集コンテナー、OLE ビジュアル編集サーバー、またはその両方とオートメーションを追加するには、他のアプリケーションは、アプリケーションからオブジェクトを使用したり、でもリモートでドライブようにします。
+   Windows オペレーティング システムのアプリケーションを作成する利点を渡すと、MFC もは、具体的には OLE リンクと埋め込みのテクノロジを使用するアプリケーションの記述が簡単です。 行うことができます、アプリケーション、OLE ビジュアル編集コンテナー、OLE ビジュアル編集サーバー、またはその両方とオートメーションを追加するには、他のアプリケーションは、アプリケーションからオブジェクトを使用したり、でもリモートでドライブようにします。
 
 - [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
 
-     OLE コントロールの開発キット (CDK) が完全に統合フレームワークです。 ここでは、mfc ActiveX コントロールの開発の概要を提供します。 (ActiveX コントロールが以前の OLE コントロール。)
+   OLE コントロールの開発キット (CDK) が完全に統合フレームワークです。 ここでは、mfc ActiveX コントロールの開発の概要を提供します。 (ActiveX コントロールが以前の OLE コントロール。)
 
 - [データベースのプログラミング](../data/data-access-programming-mfc-atl.md)
 
-     MFC では、書き込みのデータ アクセスを簡略化するデータベース クラスの 2 つのセットも用意されてアプリケーション。 ODBC データベース クラスを使用して、Open Database Connectivity (ODBC) ドライバーを通じてデータベースに接続する、テーブルからレコードを選択してレコード情報を表示する画面上のフォームです。 データ アクセス オブジェクト (DAO) クラスを使用して、扱えるデータベース、Microsoft Jet データベース エンジンまたは ODBC データ ソースを含む、外部の (非 Jet) データ ソースを使用します。
+   MFC では、書き込みのデータ アクセスを簡略化するデータベース クラスの 2 つのセットも用意されてアプリケーション。 ODBC データベース クラスを使用して、Open Database Connectivity (ODBC) ドライバーを通じてデータベースに接続する、テーブルからレコードを選択してレコード情報を表示する画面上のフォームです。 データ アクセス オブジェクト (DAO) クラスを使用して、扱えるデータベース、Microsoft Jet データベース エンジンまたは ODBC データ ソースを含む、外部の (非 Jet) データ ソースを使用します。
 
-     さらに、MFC が Unicode を使用するアプリケーションの記述を完全に有効にし、マルチバイト文字セット (MBCS)、具体的には 2 バイト文字セット (DBCS)。
+   さらに、MFC が Unicode を使用するアプリケーションの記述を完全に有効にし、マルチバイト文字セット (MBCS)、具体的には 2 バイト文字セット (DBCS)。
 
 MFC のドキュメントを一般的なガイドは、次を参照してください。 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)します。
 

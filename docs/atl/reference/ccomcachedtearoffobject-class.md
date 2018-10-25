@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40dddf2bb1619bd896ecf50008f80fca968ef8c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce642b6ed4017dba66d80325e7b9be8f18a7fb16
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075710"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076088"
 ---
 # <a name="ccomcachedtearoffobject-class"></a>CComCachedTearOffObject クラス
 
@@ -95,7 +95,7 @@ public CComObjectRootEx<contained
 
 `CComCachedTearOffObject`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
@@ -199,7 +199,7 @@ STDMETHOD(QueryInterface)(REFIID iid, void** ppvObject);
 
 ### <a name="remarks"></a>Remarks
 
-要求されたインターフェイスがある場合`IUnknown`へのポインターを返します、`CComCachedTearOffObject`の独自`IUnknown`し、参照カウントをインクリメントします。 それ以外の場合、ティアオフ クラスを使用してインターフェイスを照会、 [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)から継承されたメソッド`CComObjectRootEx`します。  
+要求されたインターフェイスがある場合`IUnknown`へのポインターを返します、`CComCachedTearOffObject`の独自`IUnknown`し、参照カウントをインクリメントします。 それ以外の場合、ティアオフ クラスを使用してインターフェイスを照会、 [InternalQueryInterface](ccomobjectrootex-class.md#internalqueryinterface)から継承されたメソッド`CComObjectRootEx`します。
 
 ##  <a name="release"></a>  CComCachedTearOffObject::Release
 

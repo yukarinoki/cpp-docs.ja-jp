@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4c819d024b9b89d28c0e87b86382bf1c1f23258a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b097e1d3c7d26c51283d4f63bb2bae14059f21cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118493"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069779"
 ---
 # <a name="move-constructors-and-move-assignment-operators-c"></a>移動コンストラクターと移動代入演算子 (C++)
 
@@ -151,14 +151,14 @@ private:
 
 1. 条件付きステートメントでは、割り当てられているオブジェクトからリソース (メモリなど) を解放します。
 
-     次の例は、割り当て先のオブジェクトから `_data` メンバーを解放します。
+   次の例は、割り当て先のオブジェクトから `_data` メンバーを解放します。
 
     ```cpp
     // Free the existing resource.
     delete[] _data;
     ```
 
-     最初の手順の手順 2. と手順 3. を実行し、ソース オブジェクトから構築中のオブジェクトにデータ メンバーを転送します。
+   最初の手順の手順 2. と手順 3. を実行し、ソース オブジェクトから構築中のオブジェクトにデータ メンバーを転送します。
 
     ```cpp
     // Copy the data pointer and its length from the

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3374b2a292fc6463cb4fd85d0cd56fe9c3556443
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 986bc24c57f8692bfdd98194b9e58c9cee6817f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448248"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067190"
 ---
 # <a name="deleting-all-objects-in-a-cobject-collection"></a>CObject コレクションの全オブジェクトの削除
 
@@ -68,9 +68,9 @@ ms.locfileid: "46448248"
 
 1. 呼び出す、`RemoveAll`が削除された後、配列からすべての要素を削除する関数。
 
-     配列のすべての要素を削除するためのコードは次のとおりです。
+   配列のすべての要素を削除するためのコードは次のとおりです。
 
-     [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#18](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_2.cpp)]
 
 上記リストの例でを呼び出すことができますと`RemoveAll`配列内のすべての要素を削除するまたは`RemoveAt`個々 の要素を削除します。
 
@@ -82,9 +82,9 @@ ms.locfileid: "46448248"
 
 1. 呼び出す、`RemoveAll`が削除された後、マップからすべての要素を削除する関数。
 
-     すべての要素を削除するためのコードを`CMap`コレクションは、次のようにします。 マップ内の各要素が文字列をキーとして、`CPerson`オブジェクト (から派生した`CObject`) 値として。
+   すべての要素を削除するためのコードを`CMap`コレクションは、次のようにします。 マップ内の各要素が文字列をキーとして、`CPerson`オブジェクト (から派生した`CObject`) 値として。
 
-     [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#19](../mfc/codesnippet/cpp/deleting-all-objects-in-a-cobject-collection_3.cpp)]
 
 呼び出すことができます`RemoveAll`マップ内のすべての要素を削除するまたは`RemoveKey`指定のキーを持つ個々 の要素を削除します。
 

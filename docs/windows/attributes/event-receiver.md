@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8e049d8338ba63e4d127c8a83fd3d9add32c6a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95e5d65d437b60f6421978682997067d8f53a3d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791383"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073956"
 ---
 # <a name="eventreceiver"></a>event_receiver
 
@@ -74,7 +74,7 @@ ms.locfileid: "48791383"
 > [!NOTE]
 > テンプレート クラスまたは構造体にイベントを含めることはできません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -85,7 +85,7 @@ ms.locfileid: "48791383"
 |**必要な属性**|`coclass` ときに*layout_dependent*=**は true。**|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -94,4 +94,4 @@ ms.locfileid: "48791383"
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[クラス属性](class-attributes.md)  
+[クラス属性](class-attributes.md)

@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 83d518aded30215684970e58d2868625fb8cd0e5
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 2aa88f88fe26b96202f2a917bddf5c8bb07c0d3c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791882"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071129"
 ---
 # <a name="com-attributes"></a>COM 属性
 
 COM 属性は、COM の開発と .NET Framework 共通言語ランタイムによる開発のさまざまな領域をサポートするためにコードを挿入します。 領域はこれらカスタム インターフェイスの実装と既存のインターフェイスのサポートからストック プロパティ、メソッド、およびイベントをサポートする範囲。 さらに、複合デバイスと ActiveX コントロールの実装のサポートを確認できます。
-  
+
 |属性|説明|
 |---------------|-----------------|
 |[aggregatable](aggregatable.md)|別のコントロールでコントロールを集計できることを示します。|
@@ -41,9 +41,9 @@ COM 属性は、COM の開発と .NET Framework 共通言語ランタイムに�
 |[requires_category](requires-category.md)|クラスの必須コンポーネントのカテゴリを指定します。|
 |[support_error_info](support-error-info.md)|ターゲット オブジェクトのエラー報告をサポートしています。|
 |[synchronize](synchronize.md)|メソッドへのアクセスを同期します。|
-|[スレッド処理](threading-cpp.md)|COM オブジェクトのスレッド モデルを指定します。|
+|[threading](threading-cpp.md)|COM オブジェクトのスレッド モデルを指定します。|
 |[vi_progid](vi-progid.md)|コントロールのバージョンに依存しないプログラム Id を定義します。|
-  
+
 ## <a name="see-also"></a>関連項目
 
 [グループ別の属性](attributes-by-group.md)

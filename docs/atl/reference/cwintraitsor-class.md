@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48303c6115ac1d2314e3038556b8f98330a6182e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3883065d9d7222d5e9d98806f0baadf0bc209213
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46062671"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072305"
 ---
 # <a name="cwintraitsor-class"></a>CWinTraitsOR クラス
 
@@ -38,7 +38,7 @@ ms.locfileid: "46062671"
 
 ```
 template <DWORD t_dwStyle = 0,
-          DWORD t_dwExStyle = 0, 
+          DWORD t_dwExStyle = 0,
           class TWinTraits = CControlWinTraits>
 class CWinTraitsOR
 ```
@@ -68,7 +68,7 @@ class CWinTraitsOR
 
 既定の呼び出しでその他のスタイルが指定されていない場合にのみ使用されるウィンドウのスタイルを指定する場合`CWindowImpl::Create`を使用して、 [CWinTraits](../../atl/reference/cwintraits-class.md)代わりにします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 

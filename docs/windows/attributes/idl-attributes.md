@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ebc257d78bf658b722a93e9d7c306c9bcf6e88bd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 87ab9e42af139f9b156fa2a688558077967dfa8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791727"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067801"
 ---
 # <a name="idl-attributes"></a>IDL 属性
 
@@ -83,7 +83,7 @@ ms.locfileid: "48791727"
 |[licensed](licensed.md)|適用するコクラスはライセンスされていることを示しますを使用してインスタンス化する必要があります`IClassFactory2`します。|
 |[local](local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして、MIDL コンパイラを使用することができます。 個々 の関数で使用する場合は、スタブが生成されたないローカル プロシージャを指定します。|
 |[max_is](max-is.md)|有効な配列のインデックスの最大値を指定します。|
-|[モジュール](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
+|[module](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
 |[ms_union](ms-union.md)|カプセル化されていない共用体のネットワーク データ表現の整列を制御します。|
 |[no_injected_text](no-injected-text.md)|コンパイラがコードの属性を使用した結果として挿入するを防ぎます。|
 |[nonbrowsable](nonbrowsable.md)|インターフェイス メンバーをプロパティ ブラウザーに表示されないことを示します。|
@@ -92,7 +92,7 @@ ms.locfileid: "48791727"
 |[object](object-cpp.md)|カスタムのインターフェイスを識別します。カスタム属性と同義です。|
 |[odl](odl.md)|オブジェクト記述言語 (ODL) インターフェイスとしてインターフェイスを識別します。|
 |[oleautomation](oleautomation.md)|インターフェイスが Automation と互換性があることを示します。|
-|[省略可能](optional-cpp.md)|メンバー関数のオプション パラメーターを指定します。|
+|[optional](optional-cpp.md)|メンバー関数のオプション パラメーターを指定します。|
 |[out](out-cpp.md)|呼び出されたプロシージャから呼び出したプロシージャ (サーバーからクライアント) に返されるポインター パラメーターを示します。|
 |[pointer_default](pointer-default.md)|パラメーター リストで表示される最上位レベルのポインターを除くすべてのポインターの既定のポインターの属性を指定します。|
 |[pragma](pragma.md)|生成された .idl ファイルに、引用符なしの指定した文字列を出力します。|
@@ -125,4 +125,4 @@ ms.locfileid: "48791727"
 
 ## <a name="see-also"></a>関連項目
 
-[グループ別の属性](attributes-by-group.md)  
+[グループ別の属性](attributes-by-group.md)

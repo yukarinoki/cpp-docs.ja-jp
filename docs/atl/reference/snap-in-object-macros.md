@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d37c8c9d319495c3247bf98d9ed3c8f58063ae56
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f2c692f9055e0c2ca3657a6bba0d854209f786b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050555"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068750"
 ---
 # <a name="snap-in-object-macros"></a>スナップイン オブジェクトに関するマクロ
 
@@ -41,9 +41,9 @@ ms.locfileid: "46050555"
 |[EXTENSION_SNAPIN_DATACLASS](#extension_snapin_dataclass)|スナップイン拡張機能のデータ クラスのデータ メンバーを作成します。|
 |[EXTENSION_SNAPIN_NODEINFO_ENTRY](#extension_snapin_nodeinfo_entry)|スナップイン オブジェクトのスナップイン拡張データ クラスのマップには、スナップインの拡張機能のデータ クラスを入力します。|
 |[SNAPINMENUID](#snapinmenuid)|スナップイン オブジェクトによって使用されるコンテキスト メニューの ID を宣言します。|
-|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|スナップイン オブジェクトのツールバーのマップをツールバーに入力します。|  
+|[SNAPINTOOLBARID_ENTRY](#snapintoolbarid_entry)|スナップイン オブジェクトのツールバーのマップをツールバーに入力します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsnap.h
 

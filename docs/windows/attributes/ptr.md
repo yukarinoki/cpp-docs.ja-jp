@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 89f00c5e2d65fde2c8a3bb2fd064796c2585c720
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1f9f0fede8c5c3fd522aa7eb9dd95214062e3949
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791767"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066715"
 ---
 # <a name="ptr"></a>ptr
 
@@ -42,7 +42,7 @@ ms.locfileid: "48791767"
 
 例をご覧ください[defaultvalue](defaultvalue.md)の使用サンプル**ptr**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -53,11 +53,11 @@ ms.locfileid: "48791767"
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [インターフェイス属性](interface-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)  
+[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)

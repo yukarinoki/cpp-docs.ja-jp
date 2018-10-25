@@ -26,12 +26,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 299d11ea29afa5331ef79c7947ccd2684713b29e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b6163e3db11da717eaf188b4b2f585f78d7eb511
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073371"
 ---
 # <a name="moneyput-class"></a>money_put クラス
 
@@ -63,7 +63,7 @@ class money_put : public locale::facet;
 |-|-|
 |[money_put](#money_put)|`money_put` 型のオブジェクトのコンストラクター。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -78,7 +78,7 @@ class money_put : public locale::facet;
 |[do_put](#do_put)|通貨値を表す文字シーケンスから数値または文字列を抽出するために呼び出される仮想関数。|
 |[put](#put)|数値または文字列を通貨値を表す文字シーケンスに変換します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 
@@ -107,7 +107,6 @@ virtual iter_type do_put(
     ios_base& _Iosbase,
     CharType _Fill,
     const string_type& val) const;
-
 
 virtual iter_type do_put(
     iter_type next,
@@ -230,7 +229,6 @@ iter_type put(
     ios_base& _Iosbase,
     CharType _Fill,
     const string_type& val) const;
-
 
 iter_type put(
     iter_type next,

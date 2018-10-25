@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a346cf75a0afebcfdcb31259a0ba72d3a8f6c22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fe5aa32a8d6cf0eecc1cc38e49643900bf34f9ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397326"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066995"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton クラス
 
@@ -141,7 +141,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CMFCToolBarEditBoxButton`クラス。 例では、指定ことユーザーことができます、ボタンをカスタマイズするときに拡張、ユーザーがボタンをクリックすると、ボタンの境界線が表示されることを指定、テキスト ボックス コントロールにテキストを設定、アプリケーションでのエディット ボックス ボタンのフラット スタイルの外観を指定する方法を示しています。アプリケーションでは、編集ボックス コントロールのツールバーのスタイルを指定します。
+`CMFCToolBarEditBoxButton` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、指定ことユーザーことができます、ボタンをカスタマイズするときに拡張、ユーザーがボタンをクリックすると、ボタンの境界線が表示されることを指定、テキスト ボックス コントロールにテキストを設定、アプリケーションでのエディット ボックス ボタンのフラット スタイルの外観を指定する方法を示しています。アプリケーションでは、編集ボックス コントロールのツールバーのスタイルを指定します。
 
 [!code-cpp[NVC_MFC_RibbonApp#40](../../mfc/reference/codesnippet/cpp/cmfctoolbareditboxbutton-class_1.cpp)]
 
@@ -153,7 +153,7 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 `CMFCToolBarEditBoxButton`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxtoolbareditboxbutton.h
 
@@ -703,6 +703,4 @@ virtual void SetStyle(UINT nStyle);
 [CEdit クラス](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

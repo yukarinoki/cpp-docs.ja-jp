@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c4acd417dacadbe2667f63c70435b97353bafe1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4d5db33dda6abc141c9247c74c16624bef5f0fc8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384417"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076036"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX コントロール : カスタム イベントの追加
 
@@ -48,7 +48,7 @@ ms.locfileid: "46384417"
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**イベントの追加**します。
 
-     イベントの追加ウィザードが開きます。
+   イベントの追加ウィザードが開きます。
 
 1. **イベント名**ボックス、まず、任意の既存のイベントを選択し、をクリックして、**カスタム**ラジオ ボタンをクリックし、入力*ClickIn*します。
 
@@ -94,7 +94,7 @@ ms.locfileid: "46384417"
 
 1. [プロパティ] ウィンドウ、**メッセージ**ボタンをクリックします。
 
-     [プロパティ] ウィンドウには、ActiveX コントロールで処理できるメッセージの一覧が表示されます。 既に、太字で表示されているメッセージでは、それに割り当てられているハンドラー関数があります。
+   [プロパティ] ウィンドウには、ActiveX コントロールで処理できるメッセージの一覧が表示されます。 既に、太字で表示されているメッセージでは、それに割り当てられているハンドラー関数があります。
 
 1. [プロパティ] ウィンドウから処理するメッセージを選択します。 この例では、WM_LBUTTONDOWN を選択します。
 
@@ -131,7 +131,7 @@ ms.locfileid: "46384417"
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**イベントの追加**します。
 
-     イベントの追加ウィザードが開きます。
+   イベントの追加ウィザードが開きます。
 
 1. **イベント名**ドロップダウン リストで、ストック イベント名を選択します。 この例では、次のように選択します。**クリック**します。
 

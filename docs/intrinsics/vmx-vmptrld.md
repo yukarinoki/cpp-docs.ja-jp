@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f3304106662d290a208545061bf9f71b7f30c10
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 16a61578b7512c1d9ce9d7ca217b29a3ea670657
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820946"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068490"
 ---
 # <a name="vmxvmptrld"></a>__vmx_vmptrld
 
@@ -33,30 +33,34 @@ ms.locfileid: "48820946"
 ## <a name="syntax"></a>構文
 
 ```
-int __vmx_vmptrld( 
-   unsigned __int64 *VmcsPhysicalAddress 
+int __vmx_vmptrld( 
+   unsigned __int64 *VmcsPhysicalAddress 
 );
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
-[in] *`VmcsPhysicalAddress` VMCS ポインターが格納されているアドレスです。
+*VmcsPhysicalAddress*<br/>
+[in]VMCS ポインターが格納されているアドレスです。
 
 ## <a name="return-value"></a>戻り値
 
-0 は、操作が成功しました。
+0<br/>
+操作が成功しました。
 
-1 使用可能な拡張状態、操作に失敗しました、`VM-instruction error field`現在 VMCS の。
+1<br/>
+現在 VMCS の `VM-instruction error field` で有効な拡張状態が発生したため、操作は失敗しました。
 
-2 状態を利用せず、、操作が失敗しました。
+2<br/>
+有効な状態がないため操作は失敗しました。
 
 ## <a name="remarks"></a>Remarks
 
 VMCS ポインターは、64 ビットの物理アドレスです。
 
-`__vmx_vmptrld`関数は、`VMPTRLD`マシン語命令。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
+`__vmx_vmptrld` 関数は `VMPTRLD` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

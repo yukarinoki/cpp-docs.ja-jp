@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 028c74bdc0c937fe59b621b81fb6abb8def63707
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df664db673ee3989d689b8cf28b87cfff32a8dc7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385106"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076816"
 ---
 # <a name="cmemoryexception-class"></a>CMemoryException クラス
 
@@ -59,7 +59,7 @@ class CMemoryException : public CSimpleException
 
 `CMemoryException`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -79,6 +79,4 @@ CMemoryException();
 
 [CException クラス](cexception-class.md)<br/>
 [階層図](../hierarchy-chart.md)
-
-
 

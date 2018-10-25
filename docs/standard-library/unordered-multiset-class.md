@@ -144,12 +144,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 35c13890262bf7d1bbcf5d86d71e50ed55a073ff
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 4b3e7697eea7ae6fddf2abafaacef1ddc13c1137
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235751"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069688"
 ---
 # <a name="unorderedmultiset-class"></a>unordered_multiset クラス
 
@@ -238,7 +238,7 @@ class unordered_multiset;
 
 被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_multiset::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このアロケーター オブジェクトは、`allocator` テンプレート クラスのオブジェクトと同じ外部インターフェイスを持っている必要があります。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<unordered_set >
 
@@ -290,7 +290,6 @@ al == std::allocator() is true
 iterator begin();
 
 const_iterator begin() const;
-
 
 local_iterator begin(size_type nbucket);
 
@@ -1866,7 +1865,6 @@ max_load_factor() == 0.1
 
 ```cpp
 float max_load_factor() const;
-
 
 void max_load_factor(float factor);
 ```

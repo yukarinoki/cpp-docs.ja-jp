@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: abc9af657e790fcedf949719776581b5c1877e89
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: e37e6183ca840067ceca47dd48f3b24d7b3b98c7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48889992"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074541"
 ---
 # <a name="mfc-activex-controls-creating-an-automation-server"></a>MFC ActiveX コントロール : オートメーション サーバーの作成
 
@@ -43,17 +43,17 @@ MFC ActiveX コントロールは、別のアプリケーションでそのコ�
 
 1. 先頭に、`InitInstance`関数は、次の行を追加します。
 
-     [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#17](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_1.cpp)]
 
 1. クラス ビューでは、プロジェクト ノードを右クリックして**typelib クラス追加**タイプ ライブラリをインポートします。
 
-     これにより、ファイル名拡張子の .h および .cpp ファイルがプロジェクトに追加されます。
+   これにより、ファイル名拡張子の .h および .cpp ファイルがプロジェクトに追加されます。
 
 1. ヘッダー ファイルでクラスの ActiveX コントロールの 1 つまたは複数のメソッドを呼び出すことは、次の行を追加します:`#include filename.h`ファイル名は、タイプ ライブラリをインポートしたときに作成されたヘッダー ファイルの名前です。
 
 1. ActiveX コントロールのメソッドの呼び出しを行ったは関数では、コントロールのラッパー クラスのオブジェクトを作成するコードを追加し、ActiveX オブジェクトを作成します。 たとえば、次の MFC コードがインスタンス化、`CCirc`制御、キャプションのプロパティを取得およびダイアログ ボックスで [ok] ボタンがクリックされたときに、結果を表示します。
 
-     [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#18](../mfc/codesnippet/cpp/mfc-activex-controls-creating-an-automation-server_2.cpp)]
 
 アプリケーションで使用した後、ActiveX コントロールにメソッドを追加する場合は、タイプ ライブラリをインポートしたときに作成されたファイルを削除するアプリケーションでコントロールの最新バージョンの使用を開始できます。 再度、タイプ ライブラリをインポートします。
 

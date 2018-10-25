@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d87fe1060756e46418411584fa6042533bbc1f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cc766b3f5410cc52543b5d2bafc06b87d9222e4a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385509"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077934"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>チュートリアル: ユーザー インターフェイス スレッドからの処理の除去
 
@@ -72,7 +72,7 @@ UI スレッドから作業を削除するには、ブロック操作をオフ�
 
 1. クリックして**完了**、プロジェクトを作成し、閉じます、 **MFC アプリケーション ウィザード**します。
 
-     アプリケーションをビルドして実行することにより、アプリケーションが正常に作成されたことを確認します。 アプリケーションを構築する、**ビルド** メニューのをクリックして**ソリューションのビルド**します。 アプリケーションが正常にビルドする場合をクリックしてアプリケーションを実行**デバッグの開始**上、**デバッグ**メニュー。
+   アプリケーションをビルドして実行することにより、アプリケーションが正常に作成されたことを確認します。 アプリケーションを構築する、**ビルド** メニューのをクリックして**ソリューションのビルド**します。 アプリケーションが正常にビルドする場合をクリックしてアプリケーションを実行**デバッグの開始**上、**デバッグ**メニュー。
 
 ##  <a name="serial"></a> マンデルブロ アプリケーションの逐次バージョンを実装します。
 
@@ -82,37 +82,37 @@ UI スレッドから作業を削除するには、ブロック操作をオフ�
 
 1. Stdafx.h に、次のコードを追加`#include`ディレクティブ。
 
-     [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
+   [!code-cpp[concrt-mandelbrot#1](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_1.h)]
 
 1. ChildView.h の後、`pragma`ディレクティブ、定義、`BitmapPtr`型。 `BitmapPtr`型へのポインターを使用する、`Bitmap`オブジェクトを複数のコンポーネントで共有できます。 `Bitmap`不要になったすべてのコンポーネントによって参照されている場合、オブジェクトを削除します。
 
-     [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
+   [!code-cpp[concrt-mandelbrot#2](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_2.h)]
 
 1. ChildView.h で次のコードを追加、`protected`のセクション、`CChildView`クラス。
 
-     [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
+   [!code-cpp[concrt-mandelbrot#3](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_3.h)]
 
 1. ChildView.cpp、コメント アウトするか、次の行を削除します。
 
-     [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]
+   [!code-cpp[concrt-mandelbrot#4](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_4.cpp)]
 
-     デバッグ ビルドでこの手順により、アプリケーションを使用して、`DEBUG_NEW`アロケーターで、GDI + と互換性がありません。
+   デバッグ ビルドでこの手順により、アプリケーションを使用して、`DEBUG_NEW`アロケーターで、GDI + と互換性がありません。
 
 1. ChildView.cpp で追加、`using`ディレクティブを`Gdiplus`名前空間。
 
-     [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
+   [!code-cpp[concrt-mandelbrot#5](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_5.cpp)]
 
 1. コンス トラクターとデストラクターの次のコードを追加、`CChildView`クラスを初期化し、GDI + をシャット ダウンします。
 
-     [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]
+   [!code-cpp[concrt-mandelbrot#6](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_6.cpp)]
 
 1. `CChildView::DrawMandelbrot` メソッドを実装します。 このメソッドを指定した、マンデルブロ フラクタルの描画`Bitmap`オブジェクト。
 
-     [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]
+   [!code-cpp[concrt-mandelbrot#7](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_7.cpp)]
 
 1. `CChildView::OnPaint` メソッドを実装します。 このメソッドを呼び出す`CChildView::DrawMandelbrot`の内容をコピーし、`Bitmap`ウィンドウへのオブジェクト。
 
-     [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
+   [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
 9. 構築し実行すると、アプリケーションが正常に更新されたことを確認します。
 
@@ -136,25 +136,25 @@ UI スレッドから作業を削除するには、ブロック操作をオフ�
 
 1. Stdafx.h に、次のコードを追加`#include`ディレクティブ。
 
-     [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
+   [!code-cpp[concrt-mandelbrot#101](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_9.h)]
 
 1. ChildView.h で追加`task_group`と`unbounded_buffer`メンバー変数を`protected`のセクション、`CChildView`クラス。 `task_group` ; の描画を実行するタスクを保持するオブジェクト、`unbounded_buffer`オブジェクトが完了したマンデルブロ イメージを保持します。
 
-     [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
+   [!code-cpp[concrt-mandelbrot#102](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_10.h)]
 
 1. ChildView.cpp で追加、`using`ディレクティブを`concurrency`名前空間。
 
-     [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
+   [!code-cpp[concrt-mandelbrot#103](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_11.cpp)]
 
 1. `CChildView::DrawMandelbrot`メソッドの呼び出しの後、 `Bitmap::UnlockBits`、呼び出し、 [concurrency::send](reference/concurrency-namespace-functions.md#send)関数に渡す、 `Bitmap` UI スレッドへのオブジェクト。 UI スレッドに描画メッセージを投稿し、クライアント領域を無効にします。
 
-     [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
+   [!code-cpp[concrt-mandelbrot#104](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_12.cpp)]
 
 1. 更新プログラム、`CChildView::OnPaint`メソッドは、更新を受信する`Bitmap`オブジェクトし、クライアント ウィンドウにイメージを描画します。
 
-     [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]
+   [!code-cpp[concrt-mandelbrot#105](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_13.cpp)]
 
-     `CChildView::OnPaint`メソッドは、メッセージ バッファーのいずれかが存在しない場合は、マンデルブロ イメージを生成するタスクを作成します。 メッセージ バッファーにが含まれていない、`Bitmap`初期のペイント メッセージなど、クライアント ウィンドウの前面に別のウィンドウに移動する場合のオブジェクト。
+   `CChildView::OnPaint`メソッドは、メッセージ バッファーのいずれかが存在しない場合は、マンデルブロ イメージを生成するタスクを作成します。 メッセージ バッファーにが含まれていない、`Bitmap`初期のペイント メッセージなど、クライアント ウィンドウの前面に別のウィンドウに移動する場合のオブジェクト。
 
 1. 構築し実行すると、アプリケーションが正常に更新されたことを確認します。
 
@@ -194,37 +194,37 @@ UI スレッドから作業を削除するには、ブロック操作をオフ�
 
 1. ChildView.h での`protected`のセクション、`CChildView`クラスでの宣言を追加、 `OnSize`、 `OnSizing`、および`OnDestroy`メッセージ マップ関数です。
 
-     [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
+   [!code-cpp[concrt-mandelbrot#201](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_15.h)]
 
 1. ChildView.cpp でのハンドラーを含むメッセージ マップの変更、 `WM_SIZE`、 `WM_SIZING`、および`WM_DESTROY`メッセージ。
 
-     [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]
+   [!code-cpp[concrt-mandelbrot#202](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_16.cpp)]
 
 1. `CChildView::OnSizing` メソッドを実装します。 このメソッドは、既存の描画タスクをキャンセルします。
 
-     [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]
+   [!code-cpp[concrt-mandelbrot#203](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_17.cpp)]
 
 1. `CChildView::OnSize` メソッドを実装します。 このメソッドは、既存の描画タスクをキャンセルし、更新されたクライアント ウィンドウ サイズの新しい描画タスクを作成します。
 
-     [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]
+   [!code-cpp[concrt-mandelbrot#204](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_18.cpp)]
 
 1. `CChildView::OnDestroy` メソッドを実装します。 このメソッドは、既存の描画タスクをキャンセルします。
 
-     [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]
+   [!code-cpp[concrt-mandelbrot#205](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_19.cpp)]
 
 1. ChildView.cpp で定義、`scope_guard`クラスは、RAII パターンを実装します。
 
-     [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]
+   [!code-cpp[concrt-mandelbrot#206](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_20.cpp)]
 
 1. 次のコードを追加、`CChildView::DrawMandelbrot`メソッドを呼び出した後`Bitmap::LockBits`:
 
-     [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]
+   [!code-cpp[concrt-mandelbrot#207](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_21.cpp)]
 
-     このコードでは、キャンセルを処理を作成して、`scope_guard`オブジェクト。 オブジェクトがスコープを離れたときに、ビットマップのビットがロック解除します。
+   このコードでは、キャンセルを処理を作成して、`scope_guard`オブジェクト。 オブジェクトがスコープを離れたときに、ビットマップのビットがロック解除します。
 
 1. 最後の変更、`CChildView::DrawMandelbrot`メソッドを`scope_guard`がビットマップのビットがロックされた後は、すべてのメッセージが UI スレッドに送信される前にオブジェクトします。 これにより、UI スレッドは、ビットマップのビットがロックされていない前に更新されません。
 
-     [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
+   [!code-cpp[concrt-mandelbrot#208](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_22.cpp)]
 
 9. 構築し実行すると、アプリケーションが正常に更新されたことを確認します。
 

@@ -16,18 +16,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31ac9d8ab0200d8dd56bbca3c82eb0ebec32388b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 210ef0d41cd0653718908b10ad64cd6004886c64
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46015972"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077752"
 ---
 # <a name="asp-atl-active-server-page-component-wizard"></a>ASP、ATL Active Server Page コンポーネント ウィザード
 
 ATL Active Server Page コンポーネント ウィザードのこのページを使用すると、情報と、ASP のコンポーネントに関連するのに状態を処理するためのオプションの設定を指定できます。
 
-- **省略可能なメソッド**  
+- **省略可能なメソッド**
 
    オプションの ASP メソッドを追加します。 **OnStartPage**と**OnEndPage**、オブジェクトにします。 Active Server Pages 組み込みオブジェクトを設定するのには、このオプションを選択する必要があります。 既定で選択されます。
 
@@ -35,7 +35,7 @@ ATL Active Server Page コンポーネント ウィザードのこのページ�
 
    [OnStartPage](https://msdn.microsoft.com/library/ms691624.aspx)スクリプトが、オブジェクトにアクセスしようとしています。 最初に呼び出されます。 **OnEndPage**オブジェクトが完了したときに呼び出されるスクリプトを処理します。
 
-- **組み込みオブジェクト**  
+- **組み込みオブジェクト**
 
    選択する必要があります、 **OnStartPage/OnEndPage** ASP 組み込みオブジェクトを設定するオプション。
 

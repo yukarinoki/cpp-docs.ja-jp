@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f1ebb5e2151fe770e6a59210ac564237155fafd4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 643e758d063744c155ff3e03a2ff8d6bede78822
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412081"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075152"
 ---
 # <a name="connecting-a-pop-up-menu-to-your-c-application"></a>ポップアップ メニューを C++ アプリケーションに接続します。
 
@@ -44,11 +44,11 @@ ms.locfileid: "46412081"
    > [!NOTE]
    > [CPoint](../atl-mfc-shared/reference/cpoint-class.md)渡されたハンドラーが画面座標では、メッセージによって。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 MFC
 
 ## <a name="see-also"></a>関連項目
 
 [ショートカット メニューの作成](../windows/creating-pop-up-menus.md)<br/>
-[メニュー エディター](../windows/menu-editor.md)  
+[メニュー エディター](../windows/menu-editor.md)

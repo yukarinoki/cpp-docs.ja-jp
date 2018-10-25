@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 116cd9ee86ca29aac6da489916f78c3884ba8bdd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3a37f79851df043a5473c82b514b7e85f418f1b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446551"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067918"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>標準的なダイアログ データ検証ルーチン
 
@@ -48,8 +48,6 @@ ms.locfileid: "46446551"
 |[DDV_MinMaxUnsigned](#ddv_minmaxuint)|指定されたコントロール値がある 2 つの指定した値を確認します。|
 |[DDV_MinMaxULongLong](#ddv_minmaxulonglong)|指定されたコントロール値を超えていないことを確認、指定された**ULONGLONG**範囲。|
 
-
-
 ##  <a name="ddv_maxchars"></a>  DDV_MaxChars
 
 呼び出す`DDV_MaxChars`コントロール内の文字の量に関連付けられていることを確認する*値*超えない*文字数*します。
@@ -76,7 +74,7 @@ void AFXAPI DDV_MaxChars(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -110,7 +108,7 @@ void AFXAPI DDV_MinMaxByte(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -150,7 +148,7 @@ void AFXAPI DDV_MinMaxDateTime(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -184,7 +182,7 @@ void AFXAPI DDV_MinMaxDouble(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -218,7 +216,7 @@ void AFXAPI DDV_MinMaxDWord(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -252,7 +250,7 @@ void AFXAPI DDV_MinMaxFloat(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -286,7 +284,7 @@ void AFXAPI DDV_MinMaxInt(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -320,7 +318,7 @@ void AFXAPI DDV_MinMaxLong(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -354,7 +352,7 @@ void AFXAPI DDV_MinMaxLongLong(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -394,7 +392,7 @@ void AFXAPI DDV_MinMaxMonth(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -428,7 +426,7 @@ void AFXAPI DDV_MinMaxShort(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -462,7 +460,7 @@ void AFXAPI DDV_MinMaxSlider(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 スライダー コントロールの概要については、次を参照してください。[を使用して CSliderCtrl](../../mfc/using-csliderctrl.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -496,7 +494,7 @@ void AFXAPI DDV_MinMaxUInt(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -530,7 +528,7 @@ void AFXAPI DDV_MinMaxULongLong(
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -552,6 +550,7 @@ DDV の詳細については、次を参照してください。[ダイアログ
        unsigned minVal,
        unsigned maxVal );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
@@ -570,7 +569,7 @@ DDV の詳細については、次を参照してください。[ダイアログ
 
 DDV の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../dialog-data-exchange-and-validation.md)です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdd_.h
 
@@ -579,6 +578,4 @@ DDV の詳細については、次を参照してください。[ダイアログ
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>
 [DDX_Slider](#ddx_slider)<br/>
 [DDX_FieldSlider](#ddx_fieldslider)
-
-
 

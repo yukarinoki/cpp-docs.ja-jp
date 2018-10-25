@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fdbbda6956e3265e7b17aa63ea26ac760b1fda5a
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 03cc6ab0708914f9283ac713e2a63dba02711db9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890622"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068347"
 ---
 # <a name="cdialog-class"></a>CDialog クラス
 
@@ -145,7 +145,7 @@ Framework 呼び出し`UpdateData`ユーザーがモーダル ダイアログ �
 
 `CDialog`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -157,7 +157,6 @@ Framework 呼び出し`UpdateData`ユーザーがモーダル ダイアログ �
 explicit CDialog(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd = NULL);
-
 
 explicit CDialog(
     UINT nIDTemplate,
@@ -195,7 +194,6 @@ CDialog();
 virtual BOOL Create(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd = NULL);
-
 
 virtual BOOL Create(
     UINT nIDTemplate,
@@ -244,7 +242,6 @@ virtual BOOL CreateIndirect(
     LPCDLGTEMPLATE lpDialogTemplate,
     CWnd* pParentWnd = NULL,
     void* lpDialogInit = NULL);
-
 
 virtual BOOL CreateIndirect(
     HGLOBAL hDialogTemplate,
@@ -377,7 +374,6 @@ BOOL InitModalIndirect(
     LPCDLGTEMPLATE lpDialogTemplate,
     CWnd* pParentWnd = NULL,
     void* lpDialogInit = NULL);
-
 
     BOOL InitModalIndirect(
     HGLOBAL hDialogTemplate,

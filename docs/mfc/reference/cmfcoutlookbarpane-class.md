@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08055d748bb61101e80df31b272e847db045164c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2d468ded9db1d21fd19bc553ed2a0c3227725a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398080"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075555"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane クラス
 
@@ -88,12 +88,12 @@ class CMFCOutlookBarPane : public CMFCToolBar
 |[CMFCOutlookBarPane::ClearAll](#clearall)|Outlook バー ペイン内のイメージで使用されるリソースを解放します。|
 |[CMFCOutlookBarPane::Create](#create)|Outlook バー ペインを作成します。|
 |`CMFCOutlookBarPane::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
-|`CMFCOutlookBarPane::Dock`|Outlook バー ペインをドッキングするためにフレームワークによって呼び出されます。 (`CPane::Dock` をオーバーライドします)。|
+|`CMFCOutlookBarPane::Dock`|Outlook バー ペインをドッキングするためにフレームワークによって呼び出されます。 ( `CPane::Dock`をオーバーライドします)。|
 |[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|ページで、またはボタンをクリックして、Outlook バー ペインのスクロール バーの矢印がボタンのリストを進めるかどうかを指定します。|
 |[CMFCOutlookBarPane::GetRegularColor](#getregularcolor)|Outlook バー ペインの正規表現 (選択されていない) のテキストの色を返します。|
 |`CMFCOutlookBarPane::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|
 |[CMFCOutlookBarPane::IsBackgroundTexture](#isbackgroundtexture)|Outlook バー ペインの読み込まれた背景イメージがあるかどうかを判断します。|
-|`CMFCOutlookBarPane::IsChangeState`|浮動ペインをドッキングできるかどうかを判断します。 (`CPane::IsChangeState` をオーバーライドします)。|
+|`CMFCOutlookBarPane::IsChangeState`|浮動ペインをドッキングできるかどうかを判断します。 ( `CPane::IsChangeState`をオーバーライドします)。|
 |[CMFCOutlookBarPane::IsDrawShadedHighlight](#isdrawshadedhighlight)|ボタンが強調表示され、背景画像が表示されるときにボタンの境界線が影付きかどうかを判断します。|
 |`CMFCOutlookBarPane::OnBeforeFloat`|ペインが float 型に、フレームワークによって呼び出されます。 (上書き[CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat))。|
 |[CMFCOutlookBarPane::RemoveButton](#removebutton)|指定したコマンド ID を持つボタンを削除します。|
@@ -104,7 +104,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 |[CMFCOutlookBarPane::SetExtraSpace](#setextraspace)|Outlook バー ペインのボタンの周囲に使用するパディングのピクセルの数を設定します。|
 |[CMFCOutlookBarPane::SetTextColor](#settextcolor)|Outlook バー ペインには、正規表現と強調表示されたテキストの色を設定します。|
 |[CMFCOutlookBarPane::SetTransparentColor](#settransparentcolor)|Outlook バー ペインの透明色を設定します。|
-|`CMFCOutlookBarPane::SmartUpdate`|Outlook バーを更新するには、内部的に使用します。 (`CMFCToolBar::SmartUpdate` をオーバーライドします)。|
+|`CMFCOutlookBarPane::SmartUpdate`|Outlook バーを更新するには、内部的に使用します。 ( `CMFCToolBar::SmartUpdate`をオーバーライドします)。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
@@ -144,7 +144,7 @@ Outlook バーの例は、OutlookDemo サンプル プロジェクトを参照�
 
 [CMFCOutlookBarPane](../../mfc/reference/cmfcoutlookbarpane-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxoutlookbarpane.h
 
@@ -159,13 +159,11 @@ BOOL AddButton(
     UINT iIdCommand,
     int iInsertAt=-1);
 
-
 BOOL AddButton(
     UINT uiImage,
     UINT uiLabel,
     UINT iIdCommand,
     int iInsertAt=-1);
-
 
 BOOL AddButton(
     LPCTSTR szBmpFileName,
@@ -173,13 +171,11 @@ BOOL AddButton(
     UINT iIdCommand,
     int iInsertAt=-1);
 
-
 BOOL AddButton(
     HBITMAP hBmp,
     LPCTSTR lpszLabel,
     UINT iIdCommand,
     int iInsertAt=-1);
-
 
 BOOL AddButton(
     HICON hIcon,

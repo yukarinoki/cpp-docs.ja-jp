@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 468b5c5dcadc1715384684062f203ae9179ef044
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7b63e98e070dc5352d7c1456252722bea958b8bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791975"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072097"
 ---
 # <a name="viprogid"></a>vi_progid
 
@@ -55,7 +55,7 @@ ATL プロジェクトでは、場合、[コクラス](coclass.md)属性が存�
 
 参照してください、[コクラス](coclass.md)の使用サンプルの例を**vi_progid**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -66,11 +66,11 @@ ATL プロジェクトでは、場合、[コクラス](coclass.md)属性が存�
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
-[ProgID キー](/windows/desktop/com/-progid--key)  
+[ProgID キー](/windows/desktop/com/-progid--key)
