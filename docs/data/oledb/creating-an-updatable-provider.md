@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cbf1c696a66024ec1d3b3022b1e3a03445e9b6fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ee405244d4c23e3cacddb5efe5dfa276a8a21db0
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043301"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990322"
 ---
 # <a name="creating-an-updatable-provider"></a>更新可能なプロバイダーの作成
 
@@ -33,7 +33,7 @@ ms.locfileid: "46043301"
 次に、ご利用のプロバイダーには、コンシューマーの要求をサポートするためのすべての機能が含まれています。 確認する必要があります。 コンシューマーは、データ ストアを更新する場合、プロバイダーをデータ ストアにデータを保存するコードが含まれる必要があります。 たとえば、C ランタイム ライブラリまたは MFC を使用、データ ソースには、このような操作を実行するのに可能性があります。 セクション"[データ ソースへの書き込み](#vchowwritingtothedatasource)"データ ソースへの書き込み、NULL、既定値の処理、および列のフラグを設定する方法について説明します。  
   
 > [!NOTE]
->  [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)更新可能なプロバイダーの例を示します。 UpdatePV インストールされている MyProv として更新をサポートしています。  
+> [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)更新可能なプロバイダーの例を示します。 UpdatePV インストールされている MyProv として更新をサポートしています。  
   
 ##  <a name="vchowmakingprovidersupdatable"></a> 更新可能なプロバイダーを作成  
 
@@ -47,7 +47,7 @@ ms.locfileid: "46043301"
   
 なお`IRowsetUpdateImpl`から派生した`IRowsetChangeImpl`します。 したがって、`IRowsetUpdateImpl`機能とバッチ機能を変更できます。  
   
-#### <a name="to-support-updatability-in-your-provider"></a>プロバイダーで更新をサポートするには  
+### <a name="to-support-updatability-in-your-provider"></a>プロバイダーで更新をサポートするには  
   
 1. 行セット クラスから継承`IRowsetChangeImpl`または`IRowsetUpdateImpl`します。 これらのクラスは、データ ストアを変更するための適切なインターフェイスを提供します。  
   
@@ -70,7 +70,7 @@ ms.locfileid: "46043301"
     ```  
   
     > [!NOTE]
-    >  削除する必要があります、`IRowsetChangeImpl`継承チェーンからの行。 ディレクティブの前に説明したこの例外が 1 つのコードを含める必要があります`IRowsetChangeImpl`します。  
+    > 削除する必要があります、`IRowsetChangeImpl`継承チェーンからの行。 ディレクティブの前に説明したこの例外が 1 つのコードを含める必要があります`IRowsetChangeImpl`します。  
   
 1. 次の COM マップに追加 (`BEGIN_COM_MAP ... END_COM_MAP`)。  
   
@@ -109,7 +109,7 @@ ms.locfileid: "46043301"
      プロパティの Id と値を Atldb.h で探すことによってこれらのマクロの呼び出しで使用する値を見つけることができます (Atldb.h と異なる場合、オンライン ドキュメント、Atldb.h よりも優先されますマニュアルを参照)。  
   
     > [!NOTE]
-    >  多くは、`VARIANT_FALSE`と`VARIANT_TRUE`設定は、OLE DB テンプレートに必要な; OLE DB 仕様によれば、読み取り/書き込みができるが、OLE DB テンプレートは 1 つの値のみをサポートします。  
+    > 多くは、`VARIANT_FALSE`と`VARIANT_TRUE`設定は、OLE DB テンプレートに必要な; OLE DB 仕様によれば、読み取り/書き込みができるが、OLE DB テンプレートは 1 つの値のみをサポートします。  
   
      **IRowsetChangeImpl を実装する場合**  
   
@@ -142,16 +142,14 @@ ms.locfileid: "46043301"
     - `DBPROP_MAXPENDINGROWS`。  
   
         > [!NOTE]
-        >  通知をサポートする場合は、その他のプロパティも; をもがあります。参照してください`IRowsetNotifyCP`このリスト。  
+        > 通知をサポートする場合は、その他のプロパティも; をもがあります。参照してください`IRowsetNotifyCP`このリスト。  
   
 ##  <a name="vchowwritingtothedatasource"></a> データ ソースへの書き込み  
 
 データ ソースからの読み取り、呼び出し、`Execute`関数。 データ ソースへの書き込みを呼び出して、`FlushData`関数。 (一般的な意味では、テーブルまたはインデックスをディスクに加えた変更を保存するための手段をフラッシュします)。  
 
 ```cpp
-
 FlushData(HROW, HACCESSOR);  
-
 ```
 
 行ハンドル (HROW) およびアクセサーのハンドル (HACCESSOR) 引数を記述するリージョンを指定できます。 通常、一度に 1 つのデータ フィールドを作成します。
@@ -192,7 +190,7 @@ NULL 値を処理します。
 
 ### <a name="handling-default-values"></a>既定値を処理します。
 
-FlushData メソッドを実装するには、する必要があります。
+独自に実装する`FlushData`メソッド、する必要があります。
 
 - 行セット クラスに移動します。
 
@@ -207,7 +205,7 @@ FlushData メソッドを実装するには、する必要があります。
 
 - 実装を提供`FlushData`します。
 
-FlushData の適切な実装には、行と実際に更新される列のみが格納されます。 HROW と HACCESSOR パラメーターを使用するには、現在の行と最適化のために格納されている列を決定します。
+適切に実装した`FlushData`行と実際に更新される列のみを格納します。 HROW と HACCESSOR パラメーターを使用するには、現在の行と最適化のために格納されている列を決定します。
 
 通常、独自のネイティブなデータ ストアは、最大の課題が処理します。 可能であれば、みてください。
 
@@ -219,7 +217,7 @@ FlushData の適切な実装には、行と実際に更新される列のみが�
 
 最善の方法では、NULL と既定値のデータ ストアに指定された実際の値があります。 このデータを見積もることができますを用意することをお勧めします。 ない場合は、NULL と既定値を許可しないことをお勧めします。
 
-次の例はどのように`FlushData`UpdatePV サンプル RUpdateRowset クラスで実装されたが (サンプル コードでを参照してください)。
+次の例はどのように`FlushData`で実装されて、`RUpdateRowset`クラス、`UpdatePV`サンプル (サンプル コードでを参照してください)。
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////////  
@@ -374,16 +372,15 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols, bool bBookma
   
     return _rgColumns;  
 }  
-
 ```
 
 ### <a name="default-values"></a>既定値
 
 NULL のデータと同様には、既定値の変更を処理する責任があります。
 
-FlushData と実行の既定では、S_OK を返します。 したがって、この関数を上書きしない場合、変更を正常に表示されます (S_OK が返される、データ ストアに転送されませんが。
+既定値は`FlushData`と`Execute`S_OK を返します。 したがって、この関数を上書きしない場合、変更を正常に表示されます (S_OK が返される、データ ストアに転送されませんが。
 
-(では)、UpdatePV サンプルでは、`SetDBStatus`メソッドは次のように既定値を処理します。
+`UpdatePV` (では)、サンプル、`SetDBStatus`メソッドは、既定値を次のように処理します。
 
 ```cpp
 virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,  
@@ -422,11 +419,11 @@ virtual HRESULT SetDBStatus(DBSTATUS* pdbStatus, CSimpleRow* pRow,
 
 ### <a name="column-flags"></a>列のフラグ
 
-内のメタデータを使用して設定する必要があります、列の既定値をサポートする場合、\<プロバイダー クラス\>SchemaRowset クラス。 設定`m_bColumnHasDefault`VARIANT_TRUE を = です。
+内のメタデータを使用して設定する必要があります、列の既定値をサポートする場合、\<プロバイダー クラス\>SchemaRowset クラス。 設定`m_bColumnHasDefault = VARIANT_TRUE`します。
 
 また、DBCOLUMNFLAGS を使用して列挙型指定されている列のフラグを設定する責任があります。 列のフラグには、列の特性について説明します。
 
-たとえば、`CUpdateSessionColSchemaRowset`クラス UpdatePV (Session.h) で、最初の列はこの方法を設定します。
+たとえば、`CUpdateSessionColSchemaRowset`クラス`UpdatePV`(で Session.h)、最初の列はこのように設定設定。
 
 ```cpp
 // Set up column 1  

@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e761115642cb9ab95931a89ac3b511256d88708b
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809006"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990335"
 ---
 # <a name="openmp-directives"></a>OpenMP ディレクティブ
 
@@ -111,7 +111,7 @@ int main() {
 Number of threads: 10
 ```
 
-## <a name="barrier"></a>barrier
+## <a name="barrier"></a>バリア
 
 チーム内のすべてのスレッドを同期します。すべてのスレッドがバリアを実行するまでのすべてのスレッドがバリアで一時停止します。
 
@@ -129,7 +129,7 @@ Number of threads: 10
 
 使用する方法の例については`barrier`を参照してください[マスター](#master)します。
 
-## <a name="critical"></a>critical
+## <a name="critical"></a>重要です
 
 コードは一度に 1 つのスレッドでのみ実行することを指定します。
 
@@ -209,7 +209,7 @@ int main()
 max = 29358
 ```
 
-## <a name="flush-openmp"></a>flush (OpenMP)
+## <a name="flush-openmp"></a>フラッシュ (OpenMP)
 
 すべてのスレッドがすべての共有オブジェクトのメモリの同じビューを持つことを指定します。
 
@@ -285,7 +285,7 @@ Thread 1: process data
 data = 2
 ```
 
-## <a name="for-openmp"></a>for (OpenMP)
+## <a name="for-openmp"></a>(OpenMP)
 
 行われる動作、`for`スレッド間で除算する、並行領域内でループします。
 
@@ -382,7 +382,7 @@ int main() {
 The sum of 1 through 10 is 55
 ```
 
-## <a name="master"></a>master
+## <a name="master"></a>マスター
 
 マスタ スレッドだけがプログラムのセクションを実行する必要がありますを指定します。
 
@@ -515,7 +515,7 @@ test2() iteration 3
 test2() iteration 4
 ```
 
-## <a name="parallel"></a>parallel
+## <a name="parallel"></a>並列
 
 複数のスレッドを並列で実行されるコードは、並列領域を定義します。
 
@@ -578,7 +578,7 @@ Hello from thread 3
 
 出力の順序は、別々 のコンピューターで異なることに注意してください。
 
-## <a name="sections-openmp"></a>sections (OpenMP)
+## <a name="sections-openmp"></a>セクション (OpenMP)
 
 すべてのスレッド間で分配するコード セクションを識別します。
 
@@ -588,7 +588,7 @@ Hello from thread 3
    #pragma omp section
    {
       code_block
-   } 
+   } 
 }
 ```
 
@@ -636,12 +636,12 @@ Hello from thread 0
 Hello from thread 0
 ```
 
-## <a name="single"></a>single
+## <a name="single"></a>1 つ
 
 コードのセクションは、シングル スレッドで実行する必要があります指定できます。
 
 ```
-#pragma omp single [clauses] 
+#pragma omp single [clauses] 
 {
    code_block
 }
