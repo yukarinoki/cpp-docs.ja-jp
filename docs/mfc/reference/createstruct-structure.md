@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 880cbbde261caf804e16e9eb759abb213cb84f60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: db41deda6040121e3d74958f4616a1f3364f6f23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422429"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064812"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 構造体
 
@@ -84,7 +84,7 @@ typedef struct tagCREATESTRUCT {
 *dwExStyle*<br/>
 指定します、[拡張スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新しいウィンドウの。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** winuser.h
 
@@ -92,5 +92,4 @@ typedef struct tagCREATESTRUCT {
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CWnd::OnCreate](../../mfc/reference/cwnd-class.md#oncreate)
-
 

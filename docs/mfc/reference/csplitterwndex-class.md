@@ -18,16 +18,14 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7df892a3d3f038655f37b78fa88babb09d50df2d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a74691b17e04c20fa45045fa4105fd73925f19f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373480"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065396"
 ---
 # <a name="csplitterwndex-class"></a>CSplitterWndEx クラス
-
-
 
 カスタマイズされた分割ウィンドウを表します。
 
@@ -68,7 +66,7 @@ class CSplitterWndEx : public CSplitterWnd
 
 [CSplitterWnd](csplitterwnd-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxsplitterwndex.h
 
@@ -90,7 +88,7 @@ virtual void OnDrawSplitter(
 [in]デバイス コンテキストへのポインター。 このパラメーターが NULL の場合、フレームワークには、アクティブなウィンドウが再描画します。
 
 *%n タイプ*<br/>
-[in]1 つ、`CSplitterWnd::ESplitType`描画するためにスプリッター ウィンドウの要素を指定する列挙値。 有効な値は`splitBox`、 `splitBar`、 `splitIntersection`、および`splitBorder`します。
+[in]1 つ、`CSplitterWnd::ESplitType`描画するためにスプリッター ウィンドウの要素を指定する列挙値。 正しい値は `splitBox`、`splitBar`、`splitIntersection`、`splitBorder` です。
 
 *rect*<br/>
 [in]ディメンションと、指定された分割ウィンドウの要素を描画する場所を指定する外接する四角形。

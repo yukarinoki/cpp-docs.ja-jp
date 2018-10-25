@@ -21,18 +21,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff655573f77b901725fe18c2346c46306c9b853a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bf5bca25f0e5b6a349544e24d0983d4d297be9ae
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716808"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065877"
 ---
 # <a name="ltfilesystemgt-enumerations"></a>&lt;filesystem&gt; 列挙体
 
 このトピックでは、filesystem ヘッダーの列挙体について説明します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<experimental/filesystem>
 
@@ -73,7 +73,6 @@ enum class copy_options {
 |`directories_only`|ディレクトリに対してのみ反復処理を実行します。ファイルを無視します。|
 |`create_symlinks`|ファイルをコピーするのではなく、シンボリック リンクを作成します。 対象がカレント ディレクトリではない場合、ソース パスとして絶対パスを使用する必要があります。|
 |`create_hard_links`|ファイルをコピーするのではなく、ハード リンクを作成します。|
-
 
 ## <a name="directory_options"></a> directory_options
 

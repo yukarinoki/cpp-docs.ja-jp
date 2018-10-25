@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb5b9d710bef136893c66208480056f6bc6390d3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9061205bdf3697e492b846d160a5b4dd2d154bb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429709"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065019"
 ---
 # <a name="deleteitemstruct-structure"></a>DELETEITEMSTRUCT 構造体
 
@@ -60,7 +60,7 @@ ODT_LISTBOX (オーナー描画リスト ボックス、) または ODT_COMBOBOX
 
 リスト ボックスまたはコンボ ボックスから、またはリスト ボックスまたはコンボ ボックスが破棄されるときに項目が削除されると、Windows は、削除された各項目の所有者に WM_DELETEITEM メッセージを送信します。 *LParam*メッセージのパラメーターには、この構造体へのポインターが含まれています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
 
@@ -68,5 +68,4 @@ ODT_LISTBOX (オーナー描画リスト ボックス、) または ODT_COMBOBOX
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [CWnd::OnDeleteItem](../../mfc/reference/cwnd-class.md#ondeleteitem)
-
 

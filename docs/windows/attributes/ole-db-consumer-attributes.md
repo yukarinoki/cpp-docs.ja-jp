@@ -20,16 +20,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 35051c565a18ba61de53813ce57be147140cc468
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 19c3e441ff4130d30f3aeb7957c5af85576fb9e1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792031"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065864"
 ---
 # <a name="ole-db-consumer-attributes"></a>OLE DB コンシューマー属性
 OLE DB コンシューマー属性に基づくコードの挿入、 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-reference.md)コンシューマーを作成する作業 OLE DB テーブルを開くなどのタスクを実行するコマンドを実行して、データにアクセスします。
-  
+
 |属性|説明|
 |---------------|-----------------|
 |[db_accessor](db-accessor.md)|行セットの列をバインドし、対応するアクセサー マップにバインドします。|
@@ -38,7 +38,7 @@ OLE DB コンシューマー属性に基づくコードの挿入、 [OLE DB コ�
 |[db_param](db-param.md)|指定したメンバー変数を入力または出力パラメーターに関連付けます。|
 |[db_source](db-source.md)|作成し、データ ソースへのプロバイダー経由の接続をカプセル化します。|
 |[db_table](db-table.md)|OLE DB、テーブルを開きます。|
-  
+
 ## <a name="see-also"></a>関連項目
 
 [グループ別の属性](attributes-by-group.md)

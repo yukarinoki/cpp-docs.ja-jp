@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 115a4524f3b11d847291015f3bee5ca10f628310
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d016b95ea2a2d5d94b8db47a2d6c9d5cc577083f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423443"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064447"
 ---
 # <a name="benefits-of-character-set-portability"></a>文字セットにおける移植性の利点
 
@@ -29,7 +29,6 @@ ms.locfileid: "46423443"
 - 柔軟な基本コードは、移植可能な方法でコーディングします。 後で移動できます簡単に Unicode や MBCS にします。
 
 - 効率的な Windows のアプリケーションは、Unicode を使用します。 Windows では、Unicode を使用するため、オペレーティング システムとの間に渡される Unicode 以外の文字列変換される必要が、オーバーヘッドが発生します。
-
 
 ## <a name="see-also"></a>関連項目
 
