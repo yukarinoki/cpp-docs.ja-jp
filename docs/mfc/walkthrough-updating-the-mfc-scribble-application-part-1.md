@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 48cbc29685660f00665fbbb08be76779272d0fcf
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 3daa42008bd385b2d45d05106162c99fb9ca0b12
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235508"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082880"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>チュートリアル: MFC Scribble アプリケーション (パート 1) の更新
 
@@ -32,7 +32,7 @@ ms.locfileid: "48235508"
 
 このチュートリアルでは、マウスを使用して線画を描く、従来の Scribble 1.0 MFC サンプルを変更します。 ここでは、リボン バーを表示するよう Scribble サンプルを変更します。 [第 2 部](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)リボン バーにボタンを追加します。
 
-## <a name="prerequisites"></a>必須コンポーネント 
+## <a name="prerequisites"></a>必須コンポーネント
 
 [Scribble 1.0 MFC サンプル](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)します。 Visual Studio 2017 に変換する方法については、次を参照してください。[移植のガイド: MFC Scribble](../porting/porting-guide-mfc-scribble.md)します。
 
@@ -91,9 +91,9 @@ ms.locfileid: "48235508"
 
     mainfrm.h ファイルでは、次の手順に従います。
 
-    1. `CToolBar` を `CMFCToolBar` に置き換えます。
+    1. `CToolBar` を `CMFCToolBar`に置き換えます。
 
-    1. `CStatusBar` を `CMFCStatusBar` に置き換えます。
+    1. `CStatusBar` を `CMFCStatusBar`に置き換えます。
 
 1. mainfrm.cpp ファイルでは、次の手順に従います。
 
@@ -146,7 +146,7 @@ ms.locfileid: "48235508"
    1. 11 個の 16 x 16 (16 x 176) を含む filesmall.bmp ファイルをインポートするイメージ。 ビットマップの ID を変更`IDB_RIBBON_FILESMALL`します。
 
    > [!NOTE]
-   > 最初の 8 つの 16 x 16 イメージ (16 × 128) のみ、必要なため、必要に応じて 128 176 からは、このビットマップの右側の幅をトリミングすることがあります。 
+   > 最初の 8 つの 16 x 16 イメージ (16 × 128) のみ、必要なため、必要に応じて 128 176 からは、このビットマップの右側の幅をトリミングすることがあります。
 
    1. 9 つの 32 x 32 (32 x 288) を含む、filelarge.bmp をインポートするイメージ。 ビットマップの ID を変更`IDB_RIBBON_FILELARGE`します。
 
@@ -161,7 +161,7 @@ ms.locfileid: "48235508"
    1. panelicons.bmp をインポートします。このファイルには 16 × 16 イメージが 8 個含まれています。 **プロパティ**のウィンドウ、**ビットマップ エディター**64 (16 × 64) にビットマップの幅を調整します。 ビットマップの ID を変更`IDB_PANEL_ICONS`します。
 
    > [!NOTE]
-   > 最初の 4 つの 16 x 16 イメージ (16 × 64) のみ、必要なため、必要に応じて、右側にあるビットマップの幅この 128 から 64 をトリミングすることがあります。 
+   > 最初の 4 つの 16 x 16 イメージ (16 × 64) のみ、必要なため、必要に応じて、右側にあるビットマップの幅この 128 から 64 をトリミングすることがあります。
 
 ##  <a name="addribbon"></a> プロジェクトにリボン リソースを追加します。
 

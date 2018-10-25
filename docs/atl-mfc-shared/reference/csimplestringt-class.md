@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f835558bb4d97f90857d44ef63e4b8f6075d2c0
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 326fdd3d4d5e8f19408adc7300c97523b37d942e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809149"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078935"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT クラス
 
@@ -73,7 +73,7 @@ String クラスの文字型。 次のいずれかの値を指定します。
 
 - **wchar_t** (の Unicode 文字の文字列)。
 
-- TCHAR (の ANSI および Unicode 文字列)。  
+- TCHAR (の ANSI および Unicode 文字列)。
 
 ## <a name="members"></a>メンバー
 
@@ -89,8 +89,7 @@ String クラスの文字型。 次のいずれかの値を指定します。
 |名前|説明|
 |----------|-----------------|
 |[CSimpleStringT::CSimpleStringT](#ctor)|構築`CSimpleStringT`さまざまな方法でオブジェクト。|
-|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|デストラクターです。|  
-
+|[CSimpleStringT:: ~ CSimpleStringT](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -119,7 +118,7 @@ String クラスの文字型。 次のいずれかの値を指定します。
 |[CSimpleStringT::SetString](#setstring)|文字列を設定、`CSimpleStringT`オブジェクト。|
 |[CSimpleStringT::StringLength](#stringlength)|指定した文字列内の文字数を返します。|
 |[CSimpleStringT::Truncate](#truncate)|文字列を指定した長さに切り捨てます。|
-|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|参照カウントを使用し、バッファー内の文字列を解放します。|  
+|[CSimpleStringT::UnlockBuffer](#unlockbuffer)|参照カウントを使用し、バッファー内の文字列を解放します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -136,7 +135,7 @@ String クラスの文字型。 次のいずれかの値を指定します。
 
 ### <a name="requirements"></a>要件
 
-**ヘッダー:** atlsimpstr.h  
+**ヘッダー:** atlsimpstr.h
 
 ## <a name="append"></a> CSimpleStringT::Append
 
@@ -145,10 +144,11 @@ String クラスの文字型。 次のいずれかの値を指定します。
 ### <a name="syntax"></a>構文
 
 ```
-void Append(const CSimpleStringT& strSrc); 
-void Append(PCXSTR pszSrc, int nLength); 
+void Append(const CSimpleStringT& strSrc);
+void Append(PCXSTR pszSrc, int nLength);
 void Append(PCXSTR pszSrc);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *strSrc*<br/>
@@ -168,7 +168,7 @@ void Append(PCXSTR pszSrc);
 
 次の例は、`CSimpleStringT::Append` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString str1(pMgr), str2(pMgr);
 str1.SetString(_T("Soccer is"));
 str2.SetString(_T(" an elegant game"));
@@ -185,6 +185,7 @@ ASSERT(_tcscmp(str1, _T("Soccer is an elegant game")) == 0);
 ```
 void AppendChar(XCHAR ch);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *ch*<br/>
@@ -198,7 +199,7 @@ void AppendChar(XCHAR ch);
 
 コピーする、文字または文字列を`CSimpleStringT`オブジェクト。
 
-### <a name="syntax"></a>構文  
+### <a name="syntax"></a>構文
 
 ```
 static void CopyChars(
@@ -226,7 +227,7 @@ static void CopyChars(
 
 次の例は、`CSimpleStringT::CopyChars` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString str(_T("xxxxxxxxxxxxxxxxxxx"), 20, pMgr);
 TCHAR* pszSrc = _T("Hello world!");
 _tprintf_s(_T("%s\n"), str);
@@ -238,7 +239,7 @@ _tprintf_s(_T("%s\n"), str);
 
 コピーする、文字または文字列を`CSimpleStringT`オブジェクト。
 
-### <a name="syntax"></a>構文  
+### <a name="syntax"></a>構文
 
 ```
 static void CopyCharsOverlapped(
@@ -273,11 +274,12 @@ static void CopyCharsOverlapped(
 ### <a name="syntax"></a>構文
 
 ```
-CSimpleStringT(const XCHAR* pchSrc, int nLength, IAtlStringMgr* pStringMgr); 
-CSimpleStringT(PCXSTR pszSrc, IAtlStringMgr* pStringMgr); 
-CSimpleStringT(const CSimpleStringT& strSrc); 
-explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw(); 
+CSimpleStringT(const XCHAR* pchSrc, int nLength, IAtlStringMgr* pStringMgr);
+CSimpleStringT(PCXSTR pszSrc, IAtlStringMgr* pStringMgr);
+CSimpleStringT(const CSimpleStringT& strSrc);
+explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *strSrc*<br/>
@@ -303,7 +305,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 
 使用例を次に示します`CSimpleStringT::CSimpleStringT`ATL を使用して**typedef** `CSimpleString`します。 `CSimpleString` 一般的に使用されるクラス テンプレートの特殊化した`CSimpleStringT`します。
 
-```cpp  
+```cpp
 CSimpleString s1(pMgr);
 // Empty string
 CSimpleString s2(_T("cat"), pMgr);
@@ -315,9 +317,8 @@ CSimpleString s4(s2 + _T(" ") + s3);
 
 // From a string expression
 CSimpleString s5(_T("xxxxxx"), 6, pMgr);
-// s5 = "xxxxxx"   
+// s5 = "xxxxxx"
 ```
-
 
 ##  <a name="empty"></a>  CSimpleStringT::Empty
 
@@ -326,8 +327,9 @@ CSimpleString s5(_T("xxxxxx"), 6, pMgr);
 ### <a name="syntax"></a>構文
 
 ```
-void Empty() throw();  
+void Empty() throw();
 ```
+
 ### <a name="remarks"></a>Remarks
 
 詳細については、次を参照してください。[文字列: CString の例外の後処理](../cstring-exception-cleanup.md)します。
@@ -336,9 +338,9 @@ void Empty() throw();
 
 次の例は、`CSimpleStringT::Empty` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString s(pMgr);
-ASSERT(s.IsEmpty());  
+ASSERT(s.IsEmpty());
 ```
 
 ##  <a name="freeextra"></a>  CSimpleStringT::FreeExtra
@@ -348,15 +350,16 @@ ASSERT(s.IsEmpty());
 ### <a name="syntax"></a>構文
 
 ```
-void FreeExtra(); 
+void FreeExtra();
 ```
+
 ### <a name="remarks"></a>Remarks
 
 これは、文字列オブジェクトによって使用されたメモリのオーバーヘッドを削減する必要があります。 メソッドによって返される正確な長さのバッファーを再割り当て[GetLength](#getlength)します。
 
 ### <a name="example"></a>例
 
-```cpp  
+```cpp
 CAtlString basestr;
 IAtlStringMgr* pMgr;
 
@@ -368,13 +371,13 @@ CSimpleString str(_T("Many sports are fun to play."), 28, pMgr);
 _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
    str.GetAllocLength(), str.GetLength());
 
-// Assigning a smaller string won't cause CSimpleString to free its 
+// Assigning a smaller string won't cause CSimpleString to free its
 // memory, because it assumes the string will grow again anyway.
 str = _T("Soccer is best!");
 _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
    str.GetAllocLength(), str.GetLength());
 
-// This call forces CSimpleString to release the extra 
+// This call forces CSimpleString to release the extra
 // memory it doesn't need.
 str.FreeExtra();
 _tprintf_s(_T("Alloc length is %d, String length is %d\n"),
@@ -398,8 +401,9 @@ Alloc length is 15, String length is 15
 ### <a name="syntax"></a>構文
 
 ```
-int GetAllocLength() const throw();  
+int GetAllocLength() const throw();
 ```
+
 ### <a name="return-value"></a>戻り値
 
 このオブジェクトに割り当てられた文字の数。
@@ -417,6 +421,7 @@ int GetAllocLength() const throw();
 ```
 XCHAR GetAt(int iChar) const;
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *iChar*<br/>
@@ -434,7 +439,7 @@ XCHAR GetAt(int iChar) const;
 
 次の例を使用する方法を示します`CSimpleStringT::GetAt`します。
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 ASSERT(s.GetAt(2) == _T('c'));
 ```
@@ -446,9 +451,10 @@ ASSERT(s.GetAt(2) == _T('c'));
 ### <a name="syntax"></a>構文
 
 ```
-PXSTR GetBuffer(int nMinBufferLength); 
+PXSTR GetBuffer(int nMinBufferLength);
 PXSTR GetBuffer();
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *nMinBufferLength*<br/>
@@ -476,7 +482,7 @@ PXSTR GetBuffer();
 
 ### <a name="example"></a>例
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcd"), pMgr);
 LPTSTR pBuffer = s.GetBuffer(10);
 int sizeOfBuffer = s.GetAllocLength();
@@ -484,7 +490,7 @@ int sizeOfBuffer = s.GetAllocLength();
 // Directly access CSimpleString buffer
 _tcscpy_s(pBuffer, sizeOfBuffer, _T("Hello"));
 ASSERT(_tcscmp(s, _T("Hello")) == 0);
-s.ReleaseBuffer();   
+s.ReleaseBuffer();
 ```
 
 ##  <a name="getbuffersetlength"></a>  CSimpleStringT::GetBufferSetLength
@@ -496,6 +502,7 @@ s.ReleaseBuffer();
 ```
 PXSTR GetBufferSetLength(int nLength);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *されて*<br/>
@@ -529,14 +536,14 @@ A`PXSTR`オブジェクトの (null で終わる) 文字バッファーへのポ
 
 次の例は、`CSimpleStringT::GetBufferSetLength` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString str(pMgr);
 LPTSTR pstr = str.GetBufferSetLength(3);
 pstr[0] = _T('C');
 pstr[1] = _T('u');
 pstr[2] = _T('p');
 
-// No need for trailing zero or call to ReleaseBuffer() 
+// No need for trailing zero or call to ReleaseBuffer()
 // because GetBufferSetLength() set it for us.
 
 str += _T(" soccer is best!");
@@ -550,8 +557,9 @@ ASSERT(_tcscmp(str, _T("Cup soccer is best!")) == 0);
 ### <a name="syntax"></a>構文
 
 ```
-int GetLength() const throw();  
+int GetLength() const throw();
 ```
+
 ### <a name="return-value"></a>戻り値
 
 文字列内の文字数。
@@ -569,8 +577,9 @@ int GetLength() const throw();
 ### <a name="syntax"></a>構文
 
 ```
-IAtlStringMgr* GetManager() const throw();  
+IAtlStringMgr* GetManager() const throw();
 ```
+
 ### <a name="return-value"></a>戻り値
 
 メモリ マネージャーへのポインター、`CSimpleStringT`オブジェクト。
@@ -588,6 +597,7 @@ Manager で使用されるメモリを取得するには、このメソッドを
 ```
 PCXSTR GetString() const throw();
 ```
+
 ### <a name="return-value"></a>戻り値
 
 Null で終わる文字列へのポインター。
@@ -603,7 +613,7 @@ Null で終わる文字列へのポインター。
 
 次の例は、`CSimpleStringT::GetString` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString str(pMgr);
 str += _T("Cup soccer is best!");
 _tprintf_s(_T("%s"), str.GetString());
@@ -616,8 +626,9 @@ _tprintf_s(_T("%s"), str.GetString());
 ### <a name="syntax"></a>構文
 
 ```
-bool IsEmpty() const throw();  
+bool IsEmpty() const throw();
 ```
+
 ### <a name="return-value"></a>戻り値
 
 True の場合、`CSimpleStringT`オブジェクトには 0 長; 場合は FALSE。
@@ -630,7 +641,7 @@ True の場合、`CSimpleStringT`オブジェクトには 0 長; 場合は FALSE
 
 次の例は、`CSimpleStringT::IsEmpty` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString s(pMgr);
 ASSERT(s.IsEmpty());
 ```
@@ -644,6 +655,7 @@ ASSERT(s.IsEmpty());
 ```
 PXSTR LockBuffer();
 ```
+
 ### <a name="return-value"></a>戻り値
 
 ポインターを`CSimpleStringT`オブジェクトまたは null で終わる文字列。
@@ -675,7 +687,7 @@ PXSTR LockBuffer();
 
 次の例は、`CSimpleStringT::LockBuffer` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString str(_T("Hello"), pMgr);
 TCHAR ch;
 
@@ -694,6 +706,7 @@ str.UnlockBuffer();
 ```
 XCHAR operator[](int iChar) const;
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *iChar*<br/>
@@ -710,7 +723,7 @@ XCHAR operator[](int iChar) const;
 
 次の例は、`CSimpleStringT::operator []` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString s(_T("abc"), pMgr);
 ASSERT(s[1] == _T('b'));
 ```
@@ -721,7 +734,7 @@ ASSERT(s[1] == _T('b'));
 
 ### <a name="syntax"></a>構文
 
-``` 
+```
 XCHAR operator[](int iChar) const;
 ```
 
@@ -737,7 +750,6 @@ XCHAR operator[](int iChar) const;
 > [!NOTE]
 >  添字を使用することができます (**[]**) 内の文字の値を取得する演算子、 `CSimpleStringT`、内の文字の値を変更するのには使用できませんが、 `CSimpleStringT`。
 
-
 ##  <a name="operator_add_eq"></a>  CSimpleStringT::operator + =
 
 既存の文字列の末尾に新しい文字列または文字を結合します。
@@ -745,14 +757,15 @@ XCHAR operator[](int iChar) const;
 ### <a name="syntax"></a>構文
 
 ```
-CSimpleStringT& operator +=(PCXSTR pszSrc); 
-CSimpleStringT& operator +=(const CSimpleStringT& strSrc); 
-template<int t_nSize>  
-CSimpleStringT& operator+=(const CStaticString< XCHAR, t_nSize >& strSrc); 
-CSimpleStringT& operator +=(char ch); 
-CSimpleStringT& operator +=(unsigned char ch); 
+CSimpleStringT& operator +=(PCXSTR pszSrc);
+CSimpleStringT& operator +=(const CSimpleStringT& strSrc);
+template<int t_nSize>
+CSimpleStringT& operator+=(const CStaticString< XCHAR, t_nSize >& strSrc);
+CSimpleStringT& operator +=(char ch);
+CSimpleStringT& operator +=(unsigned char ch);
 CSimpleStringT& operator +=(wchar_t ch);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *pszSrc*<br/>
@@ -772,7 +785,7 @@ Null で終わる文字列へのポインター。
 
 次の例は、`CSimpleStringT::operator +=` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString str(_T("abc"), pMgr);
 ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ```
@@ -784,9 +797,10 @@ ASSERT(_tcscmp((str += _T("def")), _T("abcdef")) == 0);
 ### <a name="syntax"></a>構文
 
 ```
-CSimpleStringT& operator =(PCXSTR pszSrc); 
+CSimpleStringT& operator =(PCXSTR pszSrc);
 CSimpleStringT& operator =(const CSimpleStringT& strSrc);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *pszSrc*<br/>
@@ -803,7 +817,7 @@ Null で終わる文字列へのポインター。
 
 次の例は、`CSimpleStringT::operator =` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString s1(pMgr), s2(pMgr);
 // Empty CSimpleStringT objects
 
@@ -814,7 +828,7 @@ ASSERT(_tcscmp(s1, _T("cat")) == 0);
 s2 = s1;               // s1 and s2 each = "cat"
 ASSERT(_tcscmp(s2, _T("cat")) == 0);
 
-s1 = _T("the ") + s1;      
+s1 = _T("the ") + s1;
 // Or expressions
 ASSERT(_tcscmp(s1, _T("the cat")) == 0);
 
@@ -823,7 +837,7 @@ s1 = _T("x");
 ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
 
-##  <a name="operator_pcxstr"></a>  CSimpleStringT::operator PCXSTR  
+##  <a name="operator_pcxstr"></a>  CSimpleStringT::operator PCXSTR
 
 格納されている文字に直接アクセス、 `CSimpleStringT` C スタイル文字列としてオブジェクト。
 
@@ -832,6 +846,7 @@ ASSERT(_tcscmp(s1, _T("x")) == 0);
 ```
 operator PCXSTR() const throw();
 ```
+
 ### <a name="return-value"></a>戻り値
 
 文字列のデータを指すポインター。
@@ -844,8 +859,8 @@ operator PCXSTR() const throw();
 
 次の例は、`CSimpleStringT::operator PCXSTR` の使い方を示しています。
 
-```cpp  
-// If the prototype of a function is known to the compiler, 
+```cpp
+// If the prototype of a function is known to the compiler,
 // the PCXSTR cast operator may be invoked implicitly.
 
 CSimpleString strSports(L"Soccer is Best!", pMgr);
@@ -853,25 +868,25 @@ WCHAR sz[1024];
 
 wcscpy_s(sz, strSports);
 
-// If the prototype isn't known or is a va_arg prototype, 
-// you must invoke the cast operator explicitly. For example, 
+// If the prototype isn't known or is a va_arg prototype,
+// you must invoke the cast operator explicitly. For example,
 // the va_arg part of a call to swprintf_s() needs the cast:
 
 swprintf_s(sz, 1024, L"I think that %s!\n", (PCWSTR)strSports);
 
-// While the format parameter is known to be an PCXSTR and 
+// While the format parameter is known to be an PCXSTR and
 // therefore doesn't need the cast:
 
 swprintf_s(sz, 1024, strSports);
 
-// Note that some situations are ambiguous. This line will 
+// Note that some situations are ambiguous. This line will
 // put the address of the strSports object to stdout:
 
 wcout << strSports;
 
 // while this line will put the content of the string out:
 
-wcout << (PCWSTR)strSports;   
+wcout << (PCWSTR)strSports;
 ```
 
 ##  <a name="pcxstr"></a>  CSimpleStringT::PCXSTR
@@ -881,8 +896,9 @@ wcout << (PCWSTR)strSports;
 ### <a name="syntax"></a>構文
 
 ```
-typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;    
+typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 ```
+
 ##  <a name="preallocate"></a>  CSimpleStringT::Preallocate
 
 特定のバイトの容量を割り当て、`CSimpleStringT`オブジェクト。
@@ -892,6 +908,7 @@ typedef ChTraitsBase< BaseType >::PCXSTR PCXSTR;
 ```
 void Preallocate( int nLength);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *されて*<br/>
@@ -907,7 +924,7 @@ void Preallocate( int nLength);
 
 次の例は、`CSimpleStringT::Preallocate` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString str(pMgr);
 _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 str.Preallocate(100);
@@ -921,8 +938,9 @@ _tprintf_s(_T("Allocated length: %d\n"), str.GetAllocLength());
 ### <a name="syntax"></a>構文
 
 ```
-typedef ChTraitsBase< BaseType >::PXSTR PXSTR;  
+typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 ```
+
 ##  <a name="releasebuffer"></a>  CSimpleStringT::ReleaseBuffer
 
 によって割り当てられたバッファーの制御を解放[GetBuffer](#getbuffer)します。
@@ -932,6 +950,7 @@ typedef ChTraitsBase< BaseType >::PXSTR PXSTR;
 ```
 void ReleaseBuffer(int nNewLength = -1);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *nNewLength*<br/>
@@ -945,7 +964,7 @@ Null 終端文字をカウントせず、文字の文字列の新しい長さ。
 
 次の例は、`CSimpleStringT::ReleaseBuffer` の使い方を示しています。
 
-```cpp  
+```cpp
 const int bufferSize = 1024;
 CSimpleString s(_T("abc"), pMgr);
 LPTSTR p = s.GetBuffer(bufferSize);
@@ -972,6 +991,7 @@ ASSERT(s.GetLength() == 3);
 ```
 void ReleaseBufferSetLength(int nNewLength);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *nNewLength*<br/>
@@ -990,6 +1010,7 @@ void ReleaseBufferSetLength(int nNewLength);
 ```
 void SetAt(int iChar, XCHAR ch);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *iChar*<br/>
@@ -1006,7 +1027,7 @@ void SetAt(int iChar, XCHAR ch);
 
 次の例は、`CSimpleStringT::SetAt` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 s.SetAt(1, _T('a'));
 ASSERT(_tcscmp(s, _T("aacdef")) == 0);
@@ -1021,6 +1042,7 @@ ASSERT(_tcscmp(s, _T("aacdef")) == 0);
 ```
 void SetManager(IAtlStringMgr* pStringMgr);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *pStringMgr*<br/>
@@ -1034,7 +1056,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 
 次の例は、`CSimpleStringT::SetManager` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString s(pMgr);
 s.SetManager(pCustomMgr);
 ```
@@ -1046,9 +1068,10 @@ s.SetManager(pCustomMgr);
 ### <a name="syntax"></a>構文
 
 ```
-void SetString(PCXSTR pszSrc, int nLength); 
+void SetString(PCXSTR pszSrc, int nLength);
 void SetString(PCXSTR pszSrc);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *pszSrc*<br/>
@@ -1073,7 +1096,7 @@ Null で終わる文字列へのポインター。
 
 次の例は、`CSimpleStringT::SetString` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString s(_T("abcdef"), pMgr);
 ASSERT(_tcscmp(s, _T("abcdef")) == 0);
 s.SetString(_T("Soccer"), 6);
@@ -1089,6 +1112,7 @@ ASSERT(_tcscmp(s, _T("Soccer")) == 0);
 ```
 ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *2 つ*<br/>
@@ -1106,7 +1130,7 @@ Null で終わる文字列へのポインター。
 
 次の例は、`CSimpleStringT::StringLength` の使い方を示しています。
 
-```cpp  
+```cpp
 ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ```
 
@@ -1119,6 +1143,7 @@ ASSERT(CSimpleString::StringLength(_T("soccer")) == 6);
 ```
 void Truncate(int nNewLength);
 ```
+
 #### <a name="parameters"></a>パラメーター
 
 *nNewLength*<br/>
@@ -1135,7 +1160,7 @@ void Truncate(int nNewLength);
 
 次の例は、`CSimpleStringT::Truncate` の使い方を示しています。
 
-```cpp  
+```cpp
 CSimpleString str(_T("abcdefghi"), pMgr);
 _tprintf_s(_T("Allocated length: %d\n"), str.GetLength());
 _tprintf_s(_T("Contents: %s\n"), str);
@@ -1153,6 +1178,7 @@ _tprintf_s(_T("Contents: %s\n"), str);
 ```
 void UnlockBuffer() throw();
 ```
+
 ### <a name="remarks"></a>Remarks
 
 文字列の参照カウントを 1 にリセットするには、このメソッドを呼び出します。
@@ -1168,6 +1194,7 @@ void UnlockBuffer() throw();
 ```
 ~CSimpleStringT() throw();
 ```
+
 ### <a name="remarks"></a>Remarks
 
 破棄するには、このメソッドを呼び出して、`CSimpleStringT`オブジェクト。

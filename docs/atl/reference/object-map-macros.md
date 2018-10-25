@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b85d157cd6124bb0ef6e6167a415c018e14b046
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cfda40e857cc05a907ce4dcdc2352d52cb9cf0b5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040441"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075932"
 ---
 # <a name="object-map-macros"></a>オブジェクト マップに関するマクロ
 
@@ -31,9 +31,9 @@ ms.locfileid: "46040441"
 |-|-|
 |[DECLARE_OBJECT_DESCRIPTION](#declare_object_description)|入力すると、オブジェクトのマップには、クラス オブジェクトのテキストの説明を指定することができます。|
 |[OBJECT_ENTRY_AUTO](#object_entry_auto)|オブジェクト マップに ATL オブジェクトを入力、レジストリを更新し、オブジェクトのインスタンスを作成します。|
-|[役立つ](#object_entry_non_createable_ex_auto)|オブジェクトを登録して初期化するように指定する一方で、`CoCreateInstance` を使用してオブジェクトを外部で作成できないように指定できます。|  
+|[役立つ](#object_entry_non_createable_ex_auto)|オブジェクトを登録して初期化するように指定する一方で、`CoCreateInstance` を使用してオブジェクトを外部で作成できないように指定できます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
@@ -54,7 +54,7 @@ DECLARE_OBJECT_DESCRIPTION( x )
 
 ATL を介したオブジェクトのマップにこの説明を入力した、 [OBJECT_ENTRY_AUTO](#object_entry_auto)マクロ。
 
-DECLARE_OBJECT_DESCRIPTION 実装、`GetObjectDescription`関数をオーバーライドする際、 [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription)メソッド。  
+DECLARE_OBJECT_DESCRIPTION 実装、`GetObjectDescription`関数をオーバーライドする際、 [CComCoClass::GetObjectDescription](ccomcoclass-class.md#getobjectdescription)メソッド。
 
 `GetObjectDescription`関数`IComponentRegistrar::GetComponents`します。 `IComponentRegistrar` オートメーション インターフェイスを登録し、DLL 内の個々 のコンポーネントの登録を解除することができますです。 ATL プロジェクト ウィザードでコンポーネント レジストラー オブジェクトを作成するときに、ウィザードは自動的に実装、`IComponentRegistrar`インターフェイス。 `IComponentRegistrar` 通常、Microsoft Transaction Server によって使用されます。
 
@@ -84,7 +84,7 @@ OBJECT_ENTRY_AUTO( clsid, class )
 
 オブジェクトのエントリ マクロは、クラスの登録、初期化、および作成をサポートするためにプロジェクトのグローバル スコープに配置されます。
 
-OBJECT_ENTRY_AUTO クリエーター クラスとクラス ファクトリ クリエーター クラスの関数ポインターを入力した`CreateInstance`ATL オブジェクトの自動生成されたマップには、このオブジェクトの関数。 ときに[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)が呼び出されると、オブジェクト マップ内の各オブジェクトのシステム レジストリを更新します。  
+OBJECT_ENTRY_AUTO クリエーター クラスとクラス ファクトリ クリエーター クラスの関数ポインターを入力した`CreateInstance`ATL オブジェクトの自動生成されたマップには、このオブジェクトの関数。 ときに[CAtlComModule::RegisterServer](catlcommodule-class.md#registerserver)が呼び出されると、オブジェクト マップ内の各オブジェクトのシステム レジストリを更新します。
 
 次の表では、このマクロを 2 番目のパラメーターとして指定したクラスからオブジェクトのマップに追加される情報を取得する方法について説明します。
 
@@ -94,7 +94,7 @@ OBJECT_ENTRY_AUTO クリエーター クラスとクラス ファクトリ ク�
 |クラス ファクトリの作成|[クラス ファクトリに関するマクロ](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |インスタンスの作成|[集約マクロ](../../atl/reference/aggregation-and-class-factory-macros.md)|
 |コンポーネント カテゴリの登録|[カテゴリに関するマクロ](../../atl/reference/category-macros.md)|
-|クラス レベルの初期化とクリーンアップ|[ObjectMain](ccomobjectrootex-class.md#objectmain)|  
+|クラス レベルの初期化とクリーンアップ|[ObjectMain](ccomobjectrootex-class.md#objectmain)|
 
 ##  <a name="object_entry_non_createable_ex_auto"></a>  役立つ
 

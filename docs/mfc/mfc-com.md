@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 660b2fc2f6ece6f60ff7bd1868b3a65bc8f045c1
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 5ae1ccdcda4fac1cbd0660b054d792999ae449fc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890037"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079288"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -52,7 +52,7 @@ Active テクノロジ (など、ActiveX コントロール、Active ドキュ�
 
 - [Automation](../mfc/automation.md) (以前の OLE オートメーション) 1 つのアプリケーションを別のアプリケーションで実装されているオブジェクトを操作する"オブジェクトを公開したり"操作できるようにすることになります。
 
-     オブジェクトの自動化には、ローカルまたはリモート (上に別のコンピューターをネットワーク経由でアクセスできる) があります。 OLE オブジェクトと COM オブジェクトは、どちらもオートメーションを利用できます。
+   オブジェクトの自動化には、ローカルまたはリモート (上に別のコンピューターをネットワーク経由でアクセスできる) があります。 OLE オブジェクトと COM オブジェクトは、どちらもオートメーションを利用できます。
 
 - このセクションの例については、MFC を使用する COM コンポーネントを作成する方法に関する情報も提供します[コネクション ポイント](../mfc/connection-points.md)します。
 

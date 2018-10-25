@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca17d81aa1712bcf6222b0ec0888f3a987269f03
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 65113616b93917e46738a0d7f3bc39bdd79553f1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163128"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060047"
 ---
 # <a name="extent-class-c-amp"></a>extent クラス (C++ AMP)
 
@@ -45,7 +45,7 @@ class extent;
 *_Rank*<br/>
 `extent` オブジェクトのランク。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp.h
 
@@ -393,6 +393,7 @@ tiled_extent<_Dim0, _Dim1> tile() const ;
 template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *_Dim0*<br/>

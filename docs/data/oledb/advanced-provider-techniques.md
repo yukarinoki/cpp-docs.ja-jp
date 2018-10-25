@@ -15,28 +15,28 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: ebe324ce569077654db8d9462a9c32b570748bba
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ecb6dc023b99964d5674e5f6f93cc21787de9af3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083499"
 ---
 # <a name="advanced-provider-techniques"></a>高度なプロバイダー手法
 
-高度なプロバイダー手法の詳細については、次のトピックを参照してください。  
-  
-- [通知のサポート](../../data/oledb/supporting-notifications.md)  
-  
-- [スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)  
-  
-- [プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)  
-  
-- [OLE DB 準拠合致テスト](../../data/oledb/passing-ole-db-conformance-tests.md)  
-  
-- [OLE DB リソース プールとサービス](../../data/oledb/ole-db-resource-pooling-and-services.md)  
-  
-## <a name="see-also"></a>関連項目  
+高度なプロバイダー手法の詳細については、次のトピックを参照してください。
+
+- [通知のサポート](../../data/oledb/supporting-notifications.md)
+
+- [スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)
+
+- [プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)
+
+- [OLE DB 準拠合致テスト](../../data/oledb/passing-ole-db-conformance-tests.md)
+
+- [OLE DB リソース プールとサービス](../../data/oledb/ole-db-resource-pooling-and-services.md)
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレート リファレンス](../../data/oledb/ole-db-provider-templates-reference.md)<br/>
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)

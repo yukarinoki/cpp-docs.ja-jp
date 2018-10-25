@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 564ff010756a2afa9210fc71dd47fce2b72dcbca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1223de9791ea5c47c7ef3cf9ee5b490c5238fec3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075723"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078525"
 ---
 # <a name="catlmap-class"></a>CAtlMap クラス
 
@@ -62,8 +62,8 @@ ms.locfileid: "46075723"
 
 ```
 template <typename K,
-          typename V, 
-          class KTraits = CElementTraits<K>, 
+          typename V,
+          class KTraits = CElementTraits<K>,
           class VTraits = CElementTraits<V>>
 class CAtlMap
 ```
@@ -97,7 +97,7 @@ class CAtlMap
 
 |名前|説明|
 |----------|-----------------|
-|[CAtlMap::CPair クラス](#cpair_class)|キーと値の要素を含むクラスです。|  
+|[CAtlMap::CPair クラス](#cpair_class)|キーと値の要素を含むクラスです。|
 
 ### <a name="cpair-data-members"></a>CPair データ メンバー
 
@@ -145,7 +145,7 @@ class CAtlMap
 
 |名前|説明|
 |----------|-----------------|
-|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|置き換えるか、新しい要素を追加します、`CAtlMap`します。|  
+|[CAtlMap::operator\[\]](catlmap-class.md#operator_at)|置き換えるか、新しい要素を追加します、`CAtlMap`します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -161,7 +161,7 @@ class CAtlMap
 
 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcoll.h
 

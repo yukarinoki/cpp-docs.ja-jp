@@ -1,7 +1,7 @@
 ---
 title: CDockablePane Class |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed4325cc950cdfa5320f1107df7103cbb2c026b5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 91058da47a97098826939be2248d81ba657f3cbb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417489"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078311"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -223,7 +223,7 @@ class CDockablePane : public CPane
 |[CDockablePane::ReplacePane](#replacepane)|指定したウィンドウのウィンドウで置き換えます。|
 |[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)|フレームワークは、ウィンドウがウィンドウの既定の区分線を復元する逆シリアル化と、このメソッドを呼び出します。|
 |`CDockablePane::SaveState`|内部的に使用します。|
-|`CDockablePane::Serialize`|ウィンドウで、シリアル化します。 (`CBasePane::Serialize` をオーバーライドします)。|
+|`CDockablePane::Serialize`|ウィンドウで、シリアル化します。 ( `CBasePane::Serialize`をオーバーライドします)。|
 |[CDockablePane::SetAutoHideMode](#setautohidemode)|ドッキング ペインの表示を切り替えると自動的に隠すモード。|
 |[CDockablePane::SetAutoHideParents](#setautohideparents)|自動的に隠すツールバー、ウィンドウを自動的に隠す ボタンを設定します。|
 |`CDockablePane::SetDefaultPaneDivider`|内部的に使用します。|
@@ -319,7 +319,7 @@ class CDockablePane : public CPane
 
 [CDockablePane](../../mfc/reference/cdockablepane-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxDockablePane.h
 
@@ -337,7 +337,8 @@ virtual CDockablePane* AttachToTabWnd(
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pTabControlBarAttachTo*に現在のウィンドウをアタッチするターゲット ウィンドウを指定します。 [ターゲット] ウィンドウには、ドッキング可能ペインをする必要があります。
+*pTabControlBarAttachTo*<br/>
+[入力、出力][ターゲット] ウィンドウに現在のウィンドウが接続しているを指定します。 [ターゲット] ウィンドウには、ドッキング可能ペインをする必要があります。
 
 *dockMethod*<br/>
 [in]ドッキング方法を指定します。
@@ -585,7 +586,6 @@ virtual BOOL Create(
     DWORD dwControlBarStyle = AFX_DEFAULT_DOCKING_PANE_STYLE,
     CCreateContext* pContext = NULL);
 
-
 virtual BOOL Create(
     LPCTSTR lpszWindowName,
     CWnd* pParentWnd,
@@ -602,7 +602,8 @@ virtual BOOL Create(
 *lpszCaption*<br/>
 [in]ウィンドウの名前を指定します。
 
-[in][out]*pParentWnd*親ウィンドウを指定します。
+*pParentWnd*<br/>
+[入力、出力]親ウィンドウを指定します。
 
 *rect*<br/>
 [in]クライアント座標で、ウィンドウの位置とサイズを指定します。 *pParentWnd*します。
@@ -622,7 +623,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in]追加のスタイル属性を指定します。
 
-[in][out]*pContext*ウィンドウの作成のコンテキストを指定します。
+*pContext*<br/>
+[入力、出力]ウィンドウの作成のコンテキストを指定します。
 
 *したとき*<br/>
 [in]ウィンドウの名前を指定します。
@@ -705,7 +707,8 @@ virtual BOOL CreateEx(
 *lpszCaption*<br/>
 [in]ウィンドウの名前を指定します。
 
-[in][out]*pParentWnd*親ウィンドウを指定します。
+*pParentWnd*<br/>
+[入力、出力]親ウィンドウを指定します。
 
 *rect*<br/>
 [in]クライアント座標で、ウィンドウの位置とサイズを指定します。 *pParentWnd*します。
@@ -725,7 +728,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in]追加のスタイル属性を指定します。
 
-[in][out]*pContext*ウィンドウの作成のコンテキストを指定します。
+*pContext*<br/>
+[入力、出力]ウィンドウの作成のコンテキストを指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -842,7 +846,8 @@ virtual BOOL DockToWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pTargetWindow*このペインをドッキング、ドッキング可能なウィンドウを指定します。
+*pTargetWindow*<br/>
+[入力、出力]このペインをドッキング、ドッキング可能なウィンドウを指定します。
 
 *場合*<br/>
 [in]ウィンドウのドッキング位置を指定します。 CBRS_ALIGN_LEFT、CBRS_ALIGN_TOP、CBRS_ALIGN_RIGHT、CBRS_ALIGN_BOTTOM または CBRS_ALIGN_ANY のいずれかを指定することがあります。 (Afxres.h 内で定義)。
@@ -1339,7 +1344,7 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pWndOldParent*
+[in]*pWndOldParent*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1509,7 +1514,8 @@ virtual CMFCAutoHideBar* SetAutoHideMode(
 *場合*<br/>
 [in]作成する、自動的に隠すウィンドウの配置を指定します。
 
-[in][out]*pCurrAutoHideBar*現在自動的に隠すツールバーへのポインター。 NULL にすることができます。
+*pCurrAutoHideBar*<br/>
+[入力、出力]現在自動的に隠すツールバーへのポインター。 NULL にすることができます。
 
 *bUseTimer*<br/>
 [in]ユーザーが自動的に隠すモードに、ウィンドウを切り替えるときに、自動非表示の効果を使用するか、すぐに、ウィンドウを非表示にするかどうかを指定します。

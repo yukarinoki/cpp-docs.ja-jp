@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f5bc9bb1e537b7c8b338ed0164b0d85f27230b11
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2579a926c6a48d86eb12e406a442b17126a9f5c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429228"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081093"
 ---
 # <a name="crebar-class"></a>CReBar クラス
 
@@ -76,7 +76,7 @@ Rebar オブジェクトは、ツールバーのオブジェクトと同様に�
 
 `CReBar`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxext.h
 
@@ -90,7 +90,6 @@ BOOL AddBar(
     LPCTSTR pszText = NULL,
     CBitmap* pbmp = NULL,
     DWORD dwStyle = RBBS_GRIPPERALWAYS | RBBS_FIXEDBMP);
-
 
 BOOL AddBar(
     CWnd* pBar,
@@ -189,6 +188,4 @@ Windows rebar の一般的なコントロール、rebar のカスタマイズで
 [MFC サンプル MFCIE](../../visual-cpp-samples.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-
-
 

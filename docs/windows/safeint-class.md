@@ -1,7 +1,7 @@
 ---
 title: SafeInt クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 09/27/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,16 +20,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4dab192b2d5d4210461bd791e3f4d9996363c953
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b7d9c6b68f67185bb9cc529949fcc7c43e91d21e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163297"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081863"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 
 整数のオーバーフローを防ぐため、整数のプリミティブを拡張し、さまざまな種類の整数を比較することができます。
+
+> [!NOTE] 
+> このライブラリの最新バージョンは[ https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)します。
 
 ## <a name="syntax"></a>構文
 
@@ -230,7 +233,7 @@ Int x = flag ? (int) SafeInt<unsigned int>(y) : -1;
 
 `SafeInt`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** safeint.h
 
@@ -259,7 +262,7 @@ SafeInt (
 I template <typename U>
 SafeInt (
    const U& i
-)  
+)
 ```
 
 ### <a name="parameters"></a>パラメーター

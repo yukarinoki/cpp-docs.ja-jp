@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7bd8c505c857082732e56ff2b4bf1a5bed76647
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 913bc04533668e6576a84641937992504f49390a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420310"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080079"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX コントロール コンテナー : ActiveX コントロールで発生したイベントの処理
 
@@ -34,7 +34,6 @@ ms.locfileid: "46420310"
 
 >[!IMPORTANT]
 > ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
-
 
 > [!NOTE]
 >  この記事では、ダイアログ ベース ActiveX コントロール コンテナーという名前のプロジェクト コンテナーと円をという名前のプロシージャとコードの例として、埋め込みのコントロールを使用します。
@@ -70,7 +69,7 @@ ms.locfileid: "46420310"
 
 1. [プロパティ] ウィンドウでは、埋め込みの ActiveX コントロールのコントロール ID を選択します。 この例では、使用`IDC_CIRCCTRL1`します。
 
-     [プロパティ] ウィンドウには、埋め込みの ActiveX コントロールによって起動できるイベントの一覧が表示されます。 既に太字で表示されたメンバー関数では、それに割り当てられているハンドラー関数があります。
+   [プロパティ] ウィンドウには、埋め込みの ActiveX コントロールによって起動できるイベントの一覧が表示されます。 既に太字で表示されたメンバー関数では、それに割り当てられているハンドラー関数があります。
 
 1. ダイアログ クラスに処理するイベントを選択します。 この例では、次のように選択します。**クリック**します。
 

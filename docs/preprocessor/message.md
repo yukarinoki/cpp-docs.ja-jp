@@ -18,55 +18,55 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3ce9091fe380f7d255dd321dbb9eb5ca7134b8d
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 98cdb6e089b972bbc53a6816287595d952aed1f5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541408"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083543"
 ---
 # <a name="message"></a>message
-コンパイルを終了せずに、標準出力に文字列リテラルを送信します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-#pragma message( messagestring )  
-```  
-  
-## <a name="remarks"></a>Remarks  
+コンパイルを終了せずに、標準出力に文字列リテラルを送信します。
 
-一般的な使用、**メッセージ**プラグマは、コンパイル時に情報メッセージを表示します。  
-  
-*Messagestring*パラメーターは、リテラル文字列に展開されるマクロは、こうしたマクロと文字列リテラルの任意の組み合わせを連結することができます。  
-  
-定義済みマクロを使用する場合、**メッセージ**プラグマ マクロが文字列を返す必要があります、それ以外の場合、マクロの出力を文字列に変換する必要があります。  
-  
-次のコード フラグメントを使用して、**メッセージ**プラグマはコンパイル時にメッセージを表示します。  
-  
-```cpp  
-// pragma_directives_message1.cpp  
-// compile with: /LD  
-#if _M_IX86 >= 500  
-#pragma message("_M_IX86 >= 500")  
-#endif  
-  
-#pragma message("")  
-  
-#pragma message( "Compiling " __FILE__ )   
-#pragma message( "Last modified on " __TIMESTAMP__ )  
-  
-#pragma message("")  
-  
-// with line number  
-#define STRING2(x) #x  
-#define STRING(x) STRING2(x)  
-  
-#pragma message (__FILE__ "[" STRING(__LINE__) "]: test")  
-  
-#pragma message("")  
-```  
-  
-## <a name="see-also"></a>関連項目  
- 
+## <a name="syntax"></a>構文
+
+```
+#pragma message( messagestring )
+```
+
+## <a name="remarks"></a>Remarks
+
+一般的な使用、**メッセージ**プラグマは、コンパイル時に情報メッセージを表示します。
+
+*Messagestring*パラメーターは、リテラル文字列に展開されるマクロは、こうしたマクロと文字列リテラルの任意の組み合わせを連結することができます。
+
+定義済みマクロを使用する場合、**メッセージ**プラグマ マクロが文字列を返す必要があります、それ以外の場合、マクロの出力を文字列に変換する必要があります。
+
+次のコード フラグメントを使用して、**メッセージ**プラグマはコンパイル時にメッセージを表示します。
+
+```cpp
+// pragma_directives_message1.cpp
+// compile with: /LD
+#if _M_IX86 >= 500
+#pragma message("_M_IX86 >= 500")
+#endif
+
+#pragma message("")
+
+#pragma message( "Compiling " __FILE__ )
+#pragma message( "Last modified on " __TIMESTAMP__ )
+
+#pragma message("")
+
+// with line number
+#define STRING2(x) #x
+#define STRING(x) STRING2(x)
+
+#pragma message (__FILE__ "[" STRING(__LINE__) "]: test")
+
+#pragma message("")
+```
+
+## <a name="see-also"></a>関連項目
+
 [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

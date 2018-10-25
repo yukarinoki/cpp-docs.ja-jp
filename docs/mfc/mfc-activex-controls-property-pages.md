@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 19dc08fc29de4affaea987025a2bc8b92bc56460
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376487"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079858"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX コントロール : プロパティ ページ
 
@@ -86,7 +86,7 @@ ActiveX コントロール以外の MFC アプリケーションでプロパテ�
 
 1. IDD_PROPPAGE_SAMPLE ダイアログ ボックスを開きます。
 
-     ActiveX コントロール ウィザードでは、ダイアログ ID、ここでは、サンプルの末尾に、プロジェクトの名前を追加します。
+   ActiveX コントロール ウィザードでは、ダイアログ ID、ここでは、サンプルの末尾に、プロジェクトの名前を追加します。
 
 1. ドラッグし、選択したコントロールをツールボックスからダイアログ ボックスの領域にドロップします。
 

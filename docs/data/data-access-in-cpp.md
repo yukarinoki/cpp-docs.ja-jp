@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c8e2fc86d15472bd4ab63e472df99bb69393b386
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ca9d1ea34aa8a2793f895a3c89f94994743570e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060305"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082685"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ でのデータ アクセス
 
@@ -52,13 +52,13 @@ C または C++ アプリケーションから Azure SQL Database に接続し�
 [Azure Storage](/azure/storage/storage-introduction) は、顧客のニーズに合う耐久性、可用性、スケーラビリティを必要とする最新のアプリケーション向けのクラウド ストレージ ソリューションです。 C++ 用 Azure Storage クライアント ライブラリを使用して C++ から Azure Storage に接続します。
 
 [ODBC Driver 13.1 for SQL Server の Windows リリース](https://blogs.msdn.microsoft.com/sqlnativeclient/2016/08/01/announcing-the-odbc-driver-13-1-for-sql-server)<br/>
-最新の ODBC ドライバーには、C/C++ ベースのアプリケーション向けの Microsoft SQL Server 2016 Microsoft Azure SQL Database に対する堅牢なデータ アクセス機能があります。 常に暗号化などの機能のサポート、Azure Active Directory、および AlwaysOn 可用性グループを提供します。 また、Mac OS と Linux でも使用できます。     
- 
+最新の ODBC ドライバーには、C/C++ ベースのアプリケーション向けの Microsoft SQL Server 2016 Microsoft Azure SQL Database に対する堅牢なデータ アクセス機能があります。 常に暗号化などの機能のサポート、Azure Active Directory、および AlwaysOn 可用性グループを提供します。 また、Mac OS と Linux でも使用できます。
+
 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client-programming)<br/>
 SQL Server Native Client は、単体のデータ アクセス アプリケーション プログラミング インターフェイス (API) です。OLE DB と ODBC の両方で使用され、SQL Server 2005 から SQL Server 2014 をサポートしています。 新しいアプリケーションでは、ODBC Driver 13.1 for SQL Server を使用することをお勧めします。
 
 [Microsoft Azure C および C++ デベロッパー センター](https://azure.microsoft.com/develop/cpp/)<br/>
-Azure を使用すると、柔軟性、スケーラビリティ、信頼性の高い C++ アプリケーションを好みのツールで容易に構築できます。    
+Azure を使用すると、柔軟性、スケーラビリティ、信頼性の高い C++ アプリケーションを好みのツールで容易に構築できます。
 
 [C++ から Blob Storage を使用する方法](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Azure BLOB Storage は、非構造化データをオブジェクト/BLOB としてクラウドに格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキストまたはバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。

@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5161e23d17283ba1495baf6fcb201943f8b6ae12
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2af0148c386bc3b1ea8db60fdf84d080c38af857
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422416"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080690"
 ---
 # <a name="how-to-add-command-routing-to-the-windows-forms-control"></a>方法: Windows フォーム コントロールにコマンド ルーティングを追加する
 
@@ -51,7 +51,7 @@ ms.locfileid: "46422416"
     partial class UserControl1
     ```
 
-     変更後は次のようになります。
+   変更後は次のようになります。
 
     ```
     partial class UserControl1 : System.Windows.Forms.UserControl, ICommandTarget
@@ -84,19 +84,19 @@ ms.locfileid: "46422416"
 
 1. `singleMenuHandler` を呼び出すメニュー オプションを追加します。
 
-     移動して**リソース ビュー** (Ctrl + Shift + E)、展開、**メニュー**フォルダー、およびダブルクリック**IDR_MFC02TYPE**します。 これにより、メニュー エディターが表示されます。
+   移動して**リソース ビュー** (Ctrl + Shift + E)、展開、**メニュー**フォルダー、およびダブルクリック**IDR_MFC02TYPE**します。 これにより、メニュー エディターが表示されます。
 
-     下部のメニュー オプションを追加、**ビュー**メニュー。 メニュー オプションの ID に注意してください、**プロパティ**ウィンドウ。 ファイルを保存します。
+   下部のメニュー オプションを追加、**ビュー**メニュー。 メニュー オプションの ID に注意してください、**プロパティ**ウィンドウ。 ファイルを保存します。
 
-     **ソリューション エクスプ ローラー**、Resource.h ファイルを開き、追加したメニュー オプションの ID 値をコピーおよび最初のパラメーターとしてその値を貼り付けます、 `m_CmdSrc.AddCommandHandler` c# プロジェクトの呼び出す`Initialize`(置換メソッド`32771`必要な場合)。
+   **ソリューション エクスプ ローラー**、Resource.h ファイルを開き、追加したメニュー オプションの ID 値をコピーおよび最初のパラメーターとしてその値を貼り付けます、 `m_CmdSrc.AddCommandHandler` c# プロジェクトの呼び出す`Initialize`(置換メソッド`32771`必要な場合)。
 
 9. プロジェクトをビルドして実行します。
 
-     **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
+   **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-     **デバッグ** メニューのをクリックして**デバッグなしで開始**します。
+   **デバッグ** メニューのをクリックして**デバッグなしで開始**します。
 
-     追加したメニュー オプションを選択します。 .dll 内のメソッドが呼び出されます。
+   追加したメニュー オプションを選択します。 .dll 内のメソッドが呼び出されます。
 
 ## <a name="see-also"></a>関連項目
 

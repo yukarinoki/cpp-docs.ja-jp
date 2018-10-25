@@ -28,16 +28,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa3f3356cf3fdddeeb4245986549fa1bd2e12ae7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16aa17ef58e8e4a7f0b8970cb229b6c914f291fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085226"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080118"
 ---
-# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY マクロ  
+# <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY マクロ
 
-アクセスできるように、これらのマクロでその COM マップにオブジェクトのインターフェイスが入力`QueryInterface`します。 COM マップ内のエントリの順序は、注文インターフェイスのチェック中に一致する IID 対象となる`QueryInterface`します。  
+アクセスできるように、これらのマクロでその COM マップにオブジェクトのインターフェイスが入力`QueryInterface`します。 COM マップ内のエントリの順序は、注文インターフェイスのチェック中に一致する IID 対象となる`QueryInterface`します。
 
 |||
 |-|-|
@@ -55,9 +55,9 @@ ms.locfileid: "46085226"
 |[COM_INTERFACE_ENTRY_CHAIN](#com_interface_entry_chain)|COM マップ内のこのエントリに達したら、処理は、基底クラスの COM マップを処理します。|
 |[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)|ATL にフックする汎用的なメカニズム`QueryInterface`ロジック。|
 |[COM_INTERFACE_ENTRY_FUNC_BLIND](#com_interface_entry_func_blind)|同じ[COM_INTERFACE_ENTRY_FUNC](#com_interface_entry_func)への呼び出しの結果の任意の IID のクエリを実行することを除いて、 *func*します。|
-|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|E_NOINTERFACE を返すし、COM マップ処理の指定したインターフェイスが照会されたときに終了します。|  
+|[COM_INTERFACE_ENTRY_NOINTERFACE](#com_interface_entry_nointerface)|E_NOINTERFACE を返すし、COM マップ処理の指定したインターフェイスが照会されたときに終了します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
@@ -70,6 +70,7 @@ COM インターフェイス マップ インターフェイスに入力しま�
 ```
 COM_INTERFACE_ENTRY( x )
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *x*<br/>
@@ -88,7 +89,8 @@ BEGIN_COM_MAP(CThisExample)
    COM_INTERFACE_ENTRY(ISupportErrorInfo)
 END_COM_MAP()
 ```
-### <a name="requirements"></a>要件
+
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
@@ -406,4 +408,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 
 インターフェイスの IID を追加することによって構築されます*x*に`IID_`します。 たとえば場合、 *x*は`IPersistStorage`、IID がなります`IID_IPersistStorage`。
 
-  

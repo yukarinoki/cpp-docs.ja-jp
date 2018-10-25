@@ -124,19 +124,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 664894fb99f02168d06cfc5d82b4225defe7fe38
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46b7f613cdb67fa446c878ceda7dd9eca6eec7e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422227"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082581"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel クラス
 
 一連のリボン要素を含むパネルを実装します。 このパネルが描画されると、そのパネルに指定されたサイズに対して可能な限り多くの要素が表示されます。
 
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
-
 
 ## <a name="syntax"></a>構文
 
@@ -228,7 +227,7 @@ class CMFCRibbonPanel : public CObject
 
 [CMFCRibbonPanel](../../mfc/reference/cmfcribbonpanel-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxRibbonPanel.h
 
@@ -540,7 +539,6 @@ LPCTSTR GetName() const;
 
 ##  <a name="getparentbutton"></a>  CMFCRibbonPanel::GetParentButton
 
-
 ```
 CMFCRibbonBaseElement* GetParentButton() const;
 ```
@@ -562,7 +560,6 @@ CMFCRibbonCategory* GetParentCategory() const;
 このリボン パネルを含むリボン カテゴリへのポインター。
 
 ##  <a name="getparentmenubar"></a>  CMFCRibbonPanel::GetParentMenuBar
-
 
 ```
 CMFCRibbonPanelMenuBar* GetParentMenuBar() const;
@@ -830,7 +827,6 @@ virtual BOOL IsMainPanel() const;
 
 ##  <a name="ismenumode"></a>  CMFCRibbonPanel::IsMenuMode
 
-
 ```
 BOOL IsMenuMode() const;
 ```
@@ -841,14 +837,13 @@ BOOL IsMenuMode() const;
 
 ##  <a name="onkey"></a>  CMFCRibbonPanel::OnKey
 
-
 ```
 virtual BOOL OnKey(UINT nChar);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nChar*
+[in]*nChar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -929,7 +924,8 @@ CMFCRibbonBaseElement* pElem);
 *nIndex*<br/>
 [in]置換する要素の 0 から始まるインデックスを指定します。
 
-[in][out]*pElem*元の要素を置換する要素に有効なポインター。
+*pElem*<br/>
+[入力、出力]元の要素を置換する要素に有効なポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -954,7 +950,8 @@ CMFCRibbonBaseElement* pElem);
 *uiCmdID*<br/>
 [in]置換する要素のコマンド ID を指定します。
 
-[in][out]*pElem*元の要素を交換する要素に有効なポインター。
+*pElem*<br/>
+[入力、出力]元の要素を交換する要素に有効なポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1007,7 +1004,6 @@ HMENU hMenu,
 BOOL bIsDefautCommand = FALSE,
 BOOL bRightAlign = FALSE);
 
-
 BOOL SetElementMenu(
 UINT uiCmdID,
 UINT uiMenuResID,
@@ -1055,7 +1051,8 @@ CRuntimeClass* pRTC);
 *nIndex*<br/>
 [in]追加するリボン要素の 0 から始まるインデックスを指定します。
 
-[in][out]*pRTC*リボン パネルに追加されるリボン要素のランタイム クラス情報へのポインター。
+*pRTC*<br/>
+[入力、出力]リボン パネルに追加されるリボン要素のランタイム クラス情報へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1080,7 +1077,8 @@ CRuntimeClass* pRTC);
 *uiCmdID*<br/>
 [in]追加するリボン要素のコマンド ID を指定します。
 
-[in][out]*pRTC*リボン パネルに追加されるリボン要素に関連付けられたランタイム クラス情報へのポインター。
+*pRTC*<br/>
+[入力、出力]リボン パネルに追加されるリボン要素に関連付けられたランタイム クラス情報へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1106,7 +1104,6 @@ CMFCRibbonColorButton* pColorButton =
 (CMFCRibbonColorButton*)pPanel->SetElementRTCByID(
 ID_CHAR_COLOR,
     RUNTIME_CLASS (CMFCRibbonColorButton));
-
 
 // SetElementRTCByID sets runtime class and returns a pointer
 // to the newly created custom button,

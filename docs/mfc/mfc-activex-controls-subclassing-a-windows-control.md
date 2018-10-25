@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 03fc15cc2d2a73c0e8a1a016a2a477a5c65cdc15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081707"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX コントロール : Windows コントロールのサブクラス化
 
@@ -94,12 +94,12 @@ Windows コントロールをサブクラス化する特定のウィンドウ �
 
 - コントロール クラス。H のファイル ハンドラー関数を宣言します。 関数の戻り値の型があります**LRESULT**と 2 つのパラメーター、型**WPARAM**と**LPARAM**、それぞれします。 例えば:
 
-     [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
+   [!code-cpp[NVC_MFC_AxSub#5](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_5.h)]
     [!code-cpp[NVC_MFC_AxSub#6](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_6.h)]
 
 - コントロール クラス。CPP ファイルをメッセージ マップに ON_MESSAGE エントリを追加します。 このエントリのパラメーターには、メッセージ識別子とハンドラー関数の名前があります。 例えば:
 
-     [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxSub#7](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_7.cpp)]
 
 - また、します。CPP ファイルの場合は、実装、`OnOcmCommand`反映されたメッセージを処理するメンバー関数。 *WParam*と*lParam*パラメーターは、元のウィンドウ メッセージのものと同じです。
 

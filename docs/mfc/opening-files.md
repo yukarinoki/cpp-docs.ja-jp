@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4abd2bf866a97e13324af22032cce9ebcaba4da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f74c0fdcdb8d6dfe1aced33a1c7087ecde6c89ff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408519"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080924"
 ---
 # <a name="opening-files"></a>ファイルを開く
 
@@ -41,15 +41,15 @@ Mfc では、ファイルを開く最も一般的な方法は、2 段階プロ�
 
 1. パスまたはアクセス許可フラグを指定せず、ファイル オブジェクトを作成します。
 
-     宣言することで、通常、ファイル オブジェクトを作成する、 [CFile](../mfc/reference/cfile-class.md)スタック フレームで変数。
+   宣言することで、通常、ファイル オブジェクトを作成する、 [CFile](../mfc/reference/cfile-class.md)スタック フレームで変数。
 
 1. 呼び出す、[オープン](../mfc/reference/cfile-class.md#open)パスとアクセス許可フラグを指定して、ファイル オブジェクトのメンバー関数。
 
-     戻り値`Open`ファイルが正常に開かれている場合、0 以外の値または 0 になる場合は、指定したファイルを開くことができませんでした。 `Open`メンバー関数は、次のようにプロトタイプ宣言。
+   戻り値`Open`ファイルが正常に開かれている場合、0 以外の値または 0 になる場合は、指定したファイルを開くことができませんでした。 `Open`メンバー関数は、次のようにプロトタイプ宣言。
 
-     `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
+   `virtual BOOL Open( LPCTSTR lpszFileName, UINT nOpenFlags, CFileException* pError = NULL );`
 
-     フラグがなど、アクセス許可を指定するファイルの読み取り専用です。 内の列挙型定数として可能なフラグの値が定義されている、`CFile`で修飾されるため、クラス"`CFile::`"うに`CFile::modeRead`します。 使用して、`CFile::modeCreate`ファイルを作成する場合にフラグを設定します。
+   フラグがなど、アクセス許可を指定するファイルの読み取り専用です。 内の列挙型定数として可能なフラグの値が定義されている、`CFile`で修飾されるため、クラス"`CFile::`"うに`CFile::modeRead`します。 使用して、`CFile::modeCreate`ファイルを作成する場合にフラグを設定します。
 
 次の例では、(前のファイルはすべて同じパスに置き換えて)、読み取り/書き込み権限を持つ新しいファイルを作成する方法を示します。
 

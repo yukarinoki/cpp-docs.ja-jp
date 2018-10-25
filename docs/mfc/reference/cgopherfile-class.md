@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4405f591fbdf3636558dd770bd18b97476283d49
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 083ed824ce8586295e398d32ed14e17f8d334358
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421792"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080950"
 ---
 # <a name="cgopherfile-class"></a>CGopherFile クラス
 
@@ -64,7 +64,7 @@ Gopher サービスには、ユーザーがこのサービスは、主に情報�
 
 `CGopherFile`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxinet.h
 
@@ -77,7 +77,6 @@ CGopherFile(
     HINTERNET hFile,
     CGopherLocator& refLocator,
     CGopherConnection* pConnection);
-
 
 CGopherFile(
     HINTERNET hFile,

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 868bc5271fd52e32ecb01f0155fe1c11181ac2ea
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1313c50682a2d2baad124db512e7e0ad4b441284
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082320"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout クラス
 
@@ -89,7 +89,7 @@ class CMFCDynamicLayout : public CObject
 
 [CMFCDynamicLayout](../../mfc/reference/cmfctoolbarbutton-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxlayout.h
 
@@ -101,7 +101,6 @@ class CMFCDynamicLayout : public CObject
 BOOL AddItem(
     HWND hwnd,
     MoveSettings moveSettings SizeSettings sizeSettings);
-
 
 BOOL AddItem(
     int nID,
@@ -338,7 +337,6 @@ struct CMFCDynamicLayout::MoveSettings;
 ## <a name="cmfcdynamiclayoutmovesettingsishorizontal"></a>CMFCDynamicLayout::MoveSettings::IsHorizontal
 
 データの移動が 0 以外の水平方向の移動を指定しているかどうかを確認します。
-
 
 ```
 BOOL IsHorizontal() const

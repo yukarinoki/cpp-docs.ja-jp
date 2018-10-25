@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b5a4551387716c81766ae99759f8188410497be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c7b48b2382ee22cc5d11c1145dc494aca4e7997f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42545783"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083192"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラの警告
 コンパイラには、ほとんどの開発者は、それらを表示したくありませんので、既定でオフになっている警告が含まれます。 場合によっては、古いコードは、一般的なイディオムにあるまたは言語から、Microsoft 拡張機能の利用、スタイル上の選択肢を表現します。 それ以外の場合でプログラマは予期されない、または未定義の動作につながる可能性がありますが、誤った仮定で動作を行う多くの場合、領域を示します。 これらの警告の一部は、ライブラリのヘッダーで非常にノイズの多い可能性があります。 C ランタイム ライブラリと C++ 標準ライブラリは、警告レベルでのみ警告を発するありません[/W4](../build/reference/compiler-option-warning-level.md)します。
@@ -154,12 +154,12 @@ ms.locfileid: "42545783"
 |C5042 (レベル 3)|'*関数*': 関数宣言のブロック スコープでは、標準 C++ で指定された 'inline' をすることはできません 'inline' 指定子を削除<sup>15.5。</sup>|
 |[C5045](../error-messages/compiler-warnings/c5045.md)|/Qspectre スイッチが指定されている場合、コンパイラはメモリの読み込みに Spectre の軽減策を挿入は<sup>15.7</sup>|
 
-<sup>14.1</sup>この警告は Visual Studio 2015 Update 1 以降を使用します。  
-<sup>14.3</sup>この警告は Visual Studio 2015 Update 3 以降を使用します。  
-<sup>15.3</sup>この警告は Visual Studio 2017 バージョン 15.3 以降を使用します。  
-<sup>15.5</sup>この警告は Visual Studio 2017 バージョン 15.5 以降使用できます。  
-<sup>15.7</sup>この警告は Visual Studio 2017 バージョン 15.7 以降使用できます。  
-<sup>Perm</sup>しない限り、この警告はオフ、 [/permissive -](../build/reference/permissive-standards-conformance.md)コンパイラ オプションを設定します。  
+<sup>14.1</sup>この警告は Visual Studio 2015 Update 1 以降を使用します。<br/>
+<sup>14.3</sup>この警告は Visual Studio 2015 Update 3 以降を使用します。<br/>
+<sup>15.3</sup>この警告は Visual Studio 2017 バージョン 15.3 以降を使用します。<br/>
+<sup>15.5</sup>この警告は Visual Studio 2017 バージョン 15.5 以降使用できます。<br/>
+<sup>15.7</sup>この警告は Visual Studio 2017 バージョン 15.7 以降使用できます。<br/>
+<sup>Perm</sup>しない限り、この警告はオフ、 [/permissive -](../build/reference/permissive-standards-conformance.md)コンパイラ オプションを設定します。<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>以前のバージョンで既定でオフの警告
 

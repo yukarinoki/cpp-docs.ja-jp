@@ -17,17 +17,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: fe348043d991aa04652eae02ba0f2efa393bcf5f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3ac01274773abf04bf6f817b0f70bcd527865a1b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098135"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083478"
 ---
 # <a name="record-mfc-data-access"></a>レコード (MFC データ アクセス)
 
-レコードとは、口座や顧客など、テーブル (テーブルの 1 行) に格納される、1 つのエントリに関するデータの集まりです。 レコードは、さまざまなデータ型を持つ、複数の連続した列 (フィールド) で構成されます。 データ ソースから選択された一連のレコードはデータベース用語で結果セットと呼ばれますが、MFC ではレコードセットと呼びます。 詳細については、次を参照してください。[レコード セット (ODBC)](../data/odbc/recordset-odbc.md)します。  
-  
-## <a name="see-also"></a>関連項目  
+レコードとは、口座や顧客など、テーブル (テーブルの 1 行) に格納される、1 つのエントリに関するデータの集まりです。 レコードは、さまざまなデータ型を持つ、複数の連続した列 (フィールド) で構成されます。 データ ソースから選択された一連のレコードはデータベース用語で結果セットと呼ばれますが、MFC ではレコードセットと呼びます。 詳細については、次を参照してください。[レコード セット (ODBC)](../data/odbc/recordset-odbc.md)します。
+
+## <a name="see-also"></a>関連項目
 
 [データ アクセス プログラミング (MFC/ATL)](../data/data-access-programming-mfc-atl.md)

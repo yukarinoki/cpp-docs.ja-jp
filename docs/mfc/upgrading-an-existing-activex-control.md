@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc5bca0f7ff1b2fdb2650eadbcdca4778d9b53ef
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890361"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082932"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>既存の ActiveX コントロールのアップグレード
 
@@ -213,11 +213,11 @@ Internet Explorer でライセンスされた ActiveX コントロールを使�
 
 1. 挿入、\<オブジェクト > License Manager タグの後にライセンスされたコントロールのタグ。
 
-     たとえば、Microsoft のマスク エディット コントロールを表示する HTML ページは、以下に示します。 ID は、License Manager コントロールの最初のクラス、マスク エディット コントロールの ID は、2 番目のクラス。 前に作成した .lpk ファイルの相対パスを指すタグを変更し、コントロールのクラス ID を含むオブジェクト タグを追加します。
+   たとえば、Microsoft のマスク エディット コントロールを表示する HTML ページは、以下に示します。 ID は、License Manager コントロールの最初のクラス、マスク エディット コントロールの ID は、2 番目のクラス。 前に作成した .lpk ファイルの相対パスを指すタグを変更し、コントロールのクラス ID を含むオブジェクト タグを追加します。
 
 1. 挿入、\<埋め込み > NCompass ActiveX プラグインを使用する場合、LPK ファイルの属性します。
 
-     アクティブによってブラウザーが有効になっている場合、他のコントロールを表示することがあります: NCompass ActiveX プラグインを使用して Netscape など、追加する必要があります、\<埋め込み > 構文を次に示すよう。
+   アクティブによってブラウザーが有効になっている場合、他のコントロールを表示することがあります: NCompass ActiveX プラグインを使用して Netscape など、追加する必要があります、\<埋め込み > 構文を次に示すよう。
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c882a8d4eb2510969401b4280eb66116ad220c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3f169b30394e3fdf893475a49946266143772eb7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440837"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078064"
 ---
 # <a name="noimplementation"></a>no_implementation
-**C++ 固有の仕様**  
-  
-ラッパー メンバー関数の実装を含む .tli ヘッダーの生成を抑制します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-no_implementation  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 
-この属性を指定すると、タイプ ライブラリの項目の公開が宣言され、.tlh ヘッダーが生成されます。`#include` ステートメントによって .tli ヘッダー ファイルは取り込まれません。  
-  
-この属性と組み合わせて使用[implementation_only](../preprocessor/implementation-only.md)します。  
-  
-**END C 固有の仕様**  
-  
-## <a name="see-also"></a>関連項目  
- 
+**C++ 固有の仕様**
+
+ラッパー メンバー関数の実装を含む .tli ヘッダーの生成を抑制します。
+
+## <a name="syntax"></a>構文
+
+```
+no_implementation
+```
+
+## <a name="remarks"></a>Remarks
+
+この属性を指定すると、タイプ ライブラリの項目の公開が宣言され、.tlh ヘッダーが生成されます。`#include` ステートメントによって .tli ヘッダー ファイルは取り込まれません。
+
+この属性と組み合わせて使用[implementation_only](../preprocessor/implementation-only.md)します。
+
+**END C 固有の仕様**
+
+## <a name="see-also"></a>関連項目
+
 [#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)
