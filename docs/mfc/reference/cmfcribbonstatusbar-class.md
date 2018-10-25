@@ -60,12 +60,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59bc8c58c6f11903b483893e99f415ab836ae358
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4303dc9f5f72e4a9500a1d5a6a7c210e7f7bc62f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448052"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063797"
 ---
 # <a name="cmfcribbonstatusbar-class"></a>CMFCRibbonStatusBar クラス
 
@@ -121,7 +121,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CMFCRibbonStatusBar`クラス。 、区切り記号を追加する例では、リボン ステータス バーに新しいリボン要素を追加、リボン ステータス バーの拡張領域にリボン要素を追加する方法を示していて、リボン ステータス バーの通常モードを有効にします。
+`CMFCRibbonStatusBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 、区切り記号を追加する例では、リボン ステータス バーに新しいリボン要素を追加、リボン ステータス バーの拡張領域にリボン要素を追加する方法を示していて、リボン ステータス バーの通常モードを有効にします。
 
 [!code-cpp[NVC_MFC_RibbonApp#15](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_1.cpp)]
 [!code-cpp[NVC_MFC_RibbonApp#16](../../mfc/reference/codesnippet/cpp/cmfcribbonstatusbar-class_2.cpp)]
@@ -142,7 +142,7 @@ class CMFCRibbonStatusBar : public CMFCRibbonBar
 
 [CMFCRibbonStatusBar](../../mfc/reference/cmfcribbonstatusbar-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxribbonstatusbar.h
 
@@ -289,8 +289,8 @@ CMFCRibbonBaseElement* FindByID(UINT uiCmdID, BOOL = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-*uiCmdID*<br/>
-[in][in]*BOOL*
+[in]*uiCmdID*<br/>
+[in]*BOOL*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -385,7 +385,7 @@ virtual BOOL GetExtendedArea(CRect& rect) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rect*
+[in]*rect*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -425,7 +425,7 @@ BOOL IsExtendedElement(CMFCRibbonBaseElement* pElement) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pElement*
+[in]*pElement*<br/>
 
 ### <a name="return-value"></a>戻り値
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 84f14cccdd4dd142f2fa6e17e48c37a3fecb94ea
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6a025b54e3c41f283e1877e0b97c7dbb6e5f32bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791735"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062810"
 ---
 # <a name="nonextensible"></a>nonextensible
 
@@ -59,7 +59,7 @@ __interface IFireTabCtrl
 };
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -70,9 +70,9 @@ __interface IFireTabCtrl
 |**必要な属性**|`dual` `oleautomation`、または `dispinterface`|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
-[インターフェイス属性](interface-attributes.md)  
+[インターフェイス属性](interface-attributes.md)

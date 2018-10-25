@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 708825ddda9becc51d9009d0d6a03a22c48f8007
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cad3d8456d219918179b31acfb3c32818e445534
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432478"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062776"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート
 
@@ -106,4 +106,4 @@ DBCS では、文字列の中に任意の ANSI の 1 バイト文字と 2 バイ
 ## <a name="see-also"></a>関連項目
 
 [文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
-[文字列操作](../c-runtime-library/string-manipulation-crt.md)  
+[文字列操作](../c-runtime-library/string-manipulation-crt.md)

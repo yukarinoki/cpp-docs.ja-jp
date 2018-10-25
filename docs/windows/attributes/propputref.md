@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 147b46a3081f842b247ac7a2227bd07bb75d8fe6
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0ea1c6c3d0e8f0458b54f5794824c4b25c3dcd60
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791166"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059378"
 ---
 # <a name="propputref"></a>propputref
 
@@ -42,7 +42,7 @@ ms.locfileid: "48791166"
 
 例をご覧ください[バインド可能な](bindable.md)の使用サンプル**propputref**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -53,11 +53,11 @@ ms.locfileid: "48791166"
 |**必要な属性**|なし|
 |**無効な属性**|`propget`, `propput`|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
 [propget](propget.md)<br/>
-[propput](propput.md)  
+[propput](propput.md)

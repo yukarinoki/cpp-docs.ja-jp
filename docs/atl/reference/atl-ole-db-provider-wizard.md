@@ -17,20 +17,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6857bf80aaaad36b4dcfc4fbf1330eccd03f971a
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: a9710fd4c770f17afb8902b80241179aa20344c1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060732"
 ---
 # <a name="atl-ole-db-provider-wizard"></a>ATL OLE DB プロバイダー ウィザード
 
 このウィザードでは、OLE DB プロバイダーを構成するクラスを作成します。
 
 > [!WARNING]
-> Visual Studio 2017 バージョン 15.9 でこのコード ウィザードは非推奨し、Visual Studio の将来のバージョンで削除される予定です。 このウィザードはほとんど使用されません。 ATL と MFC の一般的なサポートは、このウィザードの削除による影響はありません。 この非推奨に関するご意見を共有する場合は、完了[このアンケート](https://www.surveymonkey.com/r/QDWKKCN)します。 ご意見、ご意見が重要です。
-
+> Visual Studio 2017 バージョン 15.9 では、このコード ウィザードは非推奨になっており、Visual Studio の今後のバージョンで削除されます。 このウィザードはほとんど使用されません。 このウィザードを削除しても、ATL と MFC の一般的なサポートには影響ありません。 この非推奨に関するご意見を共有したい場合は、[こちらのアンケート](https://www.surveymonkey.com/r/QDWKKCN)にお答えください。 お客様のご意見は私どもにとって重要です。
 
 ## <a name="remarks"></a>Remarks
 

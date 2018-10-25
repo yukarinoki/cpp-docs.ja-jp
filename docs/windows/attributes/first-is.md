@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6eeeb28b7679fa67e991e96aa998abc4946bb82b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: fb8b53141f54e0f59c9734b9d7d855569dfceb9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791770"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059365"
 ---
 # <a name="firstis"></a>first_is
 
@@ -67,7 +67,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 };
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -78,7 +78,7 @@ requestedit] HRESULT get_I([out, retval]long *i);
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -88,4 +88,4 @@ requestedit] HRESULT get_I([out, retval]long *i);
 [last_is](last-is.md)<br/>
 [max_is](max-is.md)<br/>
 [length_is](length-is.md)<br/>
-[size_is](size-is.md)  
+[size_is](size-is.md)

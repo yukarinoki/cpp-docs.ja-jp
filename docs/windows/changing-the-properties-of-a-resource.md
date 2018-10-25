@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c777f2800d16775ccb9a6ba51baa708d861e0d68
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8e92b52ce3b14b5ee26641186222ddc228877e71
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313352"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057271"
 ---
 # <a name="changing-the-properties-of-a-resource-c"></a>リソース (C++) のプロパティを変更します。
 
@@ -29,7 +29,7 @@ ms.locfileid: "44313352"
 
 1. [リソース ビュー](../windows/resource-view-window.md)、編集するリソースを右クリックして**プロパティ**ショートカット メニューから。
 
-   > [!NOTE] 
+   > [!NOTE]
    > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
 
 2. [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)リソースのプロパティを変更します。
@@ -40,7 +40,7 @@ ms.locfileid: "44313352"
 
 2. 選択**を元に戻す**から、**編集**メニュー。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c83ab1a42c62a4cb1afd0c7f49f55c40633d05b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e787eb7e638751fa369923f8f4059f40fae34104
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234568"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061249"
 ---
 # <a name="creating-an-mfc-dll-project"></a>MFC DLL プロジェクトの作成
 
@@ -53,5 +53,4 @@ MFC DLL とは、複数のアプリケーションで同時に利用できる関
 [Visual C++ プロジェクトの種類](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [プロパティ ページ](../../ide/property-pages-visual-cpp.md)
-
 

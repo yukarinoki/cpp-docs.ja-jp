@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5a491c120dff7f8f505878d6887498eb5f05fb22
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7cdfa9011e0021d168c0ad10424a7d326b3c3725
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791431"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062159"
 ---
 # <a name="custom-c"></a>custom (C++)
 
@@ -51,7 +51,7 @@ ms.locfileid: "48791431"
 
 **カスタム**属性と同じ機能を持つ、[カスタム](/windows/desktop/Midl/custom)MIDL 属性。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -62,7 +62,7 @@ ms.locfileid: "48791431"
 |**必要な属性**|**コクラス**(クラスで使用) 場合|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -72,4 +72,4 @@ ms.locfileid: "48791431"
 [パラメーター属性](parameter-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
-[インターフェイス属性](interface-attributes.md)  
+[インターフェイス属性](interface-attributes.md)

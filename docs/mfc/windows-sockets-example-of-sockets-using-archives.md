@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6613e38a19987abcc9f95288e9d1cb6957b076a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add9336165195ba4da0125c606eebd39f3fce298
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427278"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062228"
 ---
 # <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows ソケット: アーカイブを使用するソケットの例
 
@@ -40,11 +40,11 @@ ms.locfileid: "46427278"
 
 - "Header"データの性質を指定する (この例では、値で、 *bValue*変数とコピーの数が送信されます)。
 
-     両方の項目は、この例ではランダムに生成されます。
+   両方の項目は、この例ではランダムに生成されます。
 
 - データのコピーの指定した数。
 
-     内部**の**ループ送信*bValue*指定された回数。
+   内部**の**ループ送信*bValue*指定された回数。
 
 - 文字列と呼ばれる*strText*受信側がそのユーザーに表示します。
 

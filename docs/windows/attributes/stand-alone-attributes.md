@@ -16,16 +16,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b46b5c3b4750957c548becfcc5143f5eed858f71
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0df8cb1def78e3a7b564f268eb1b3b0a2069fb11
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791260"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062848"
 ---
 # <a name="stand-alone-attributes"></a>スタンドアロン属性
+
 スタンドアロン属性は C++ キーワードについては動作しませんが、行のコードのようにします。 スタンドアロン属性ステートメントには、行の末尾にセミコロンが必要です。
-  
+
+## <a name="stand-alone-attribute-list"></a>スタンドアロン属性の一覧
+
 |属性|説明|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|生成されたヘッダー ファイルに、引用符なしの指定した文字列を出力します。|
@@ -40,10 +43,10 @@ ms.locfileid: "48791260"
 |[include](include-cpp.md)|生成された .idl ファイルに含まれる 1 つまたは複数のヘッダー ファイルを指定します。|
 |[includelib](includelib-cpp.md)|生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル。|
 |[library_block](library-block.md)|.Idl ファイルのライブラリ ブロック内で構成要素を配置します。|
-|[モジュール](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
+|[module](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
 |[no_injected_text](no-injected-text.md)|コンパイラがコードの属性を使用した結果として挿入するを防ぎます。|
 |[pragma](pragma.md)|生成された .idl ファイルに、引用符なしの指定した文字列を出力します。|
-  
+
 ## <a name="see-also"></a>関連項目
 
 [使用法別の属性](attributes-by-usage.md)

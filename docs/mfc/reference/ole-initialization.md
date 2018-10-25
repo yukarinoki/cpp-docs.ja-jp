@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d02bdd5f00e5ffc5d64381b04da38ec0d57d15
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: df0187364a44c84a2d0f7f38e968e0ea17df1fb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890103"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064161"
 ---
 # <a name="ole-initialization"></a>OLE の初期化
 
@@ -34,7 +34,6 @@ ms.locfileid: "48890103"
 |-|-|
 |[AfxOleInit](#afxoleinit)|OLE ライブラリを初期化します。|
 |[AfxEnableControlContainer](#afxenablecontrolcontainer)|アプリケーション オブジェクトのこの関数を呼び出す`InitInstance`OLE コントロールのコンテインメントのサポートを有効にする関数。|
-
 
 ## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
 
@@ -50,10 +49,9 @@ void AfxEnableControlContainer( );
 
 (ActiveX コントロールと呼ばれるようになりました) OLE コントロールの詳細については、次を参照してください。 [ActiveX コントロールのトピック](../mfc-activex-controls.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
-
 
 ##  <a name="afxoleinit"></a>  AfxOleInit
 
@@ -81,7 +79,7 @@ MFC アプリケーションに対する OLE サポートを初期化するに�
 > [!NOTE]
 >  MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)で、`InitInstance`オーバーライド、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 

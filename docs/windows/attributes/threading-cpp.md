@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d6b343ec9342199727122ac89f6df77e532429ad
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 85ffa775fd18b6979fccf4354ce243f017634d02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792002"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059676"
 ---
 # <a name="threading-c"></a>threading (C++)
 
@@ -63,7 +63,7 @@ COM オブジェクトのスレッド モデルを指定します。
 
 参照してください、[ライセンス](licensed.md)の使用サンプルの例を**スレッド**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -74,7 +74,7 @@ COM オブジェクトのスレッド モデルを指定します。
 |**必要な属性**|**coclass**|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -82,4 +82,4 @@ COM オブジェクトのスレッド モデルを指定します。
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [旧形式のコードのためのマルチスレッド サポート (Visual C++)](../../parallel/multithreading-support-for-older-code-visual-cpp.md)<br/>
-[ニュートラル アパートメント](/windows/desktop/cossdk/neutral-apartments)  
+[ニュートラル アパートメント](/windows/desktop/cossdk/neutral-apartments)

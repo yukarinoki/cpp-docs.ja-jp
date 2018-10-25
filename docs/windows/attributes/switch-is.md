@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 425caf89619670dd8cabe647b01f8df63be24167
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 0eb8c8b3a49e7aa4754762ce0c065c816e262bca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791314"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062913"
 ---
 # <a name="switchis"></a>switch_is
 
@@ -42,7 +42,7 @@ ms.locfileid: "48791314"
 
 参照してください、[ケース](case-cpp.md)の使用サンプルの例を**switch_is**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -53,10 +53,10 @@ ms.locfileid: "48791314"
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
-[switch_type](switch-type.md)  
+[switch_type](switch-type.md)

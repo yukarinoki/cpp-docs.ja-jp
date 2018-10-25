@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c2c67242195f54f543bdc8c0c1be49fbed69fe91
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 852d91dc6bc72fc86307199c8d2e7b67d53323bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318721"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057648"
 ---
 # <a name="adding-commands-to-a-menu-c"></a>(C++) メニューにコマンドを追加します。
 
@@ -57,10 +57,10 @@ ms.locfileid: "44318721"
 
    新しい項目ボックスが選択され、追加のメニュー コマンドを作成できるようになります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 
 ## <a name="see-also"></a>関連項目
 
-[メニュー エディター](../windows/menu-editor.md)  
+[メニュー エディター](../windows/menu-editor.md)

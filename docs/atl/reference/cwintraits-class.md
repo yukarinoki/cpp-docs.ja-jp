@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fb6ee8cd591c4a5b5a4a3701c6974849f9e3238f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 69ea4cf411e0ded0f1c324cea439d5a5a4c0c553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069394"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062471"
 ---
 # <a name="cwintraits-class"></a>CWinTraits クラス
 
@@ -68,21 +68,21 @@ template <DWORD t_dwStyle = 0, DWORD t_dwExStyle = 0>  class CWinTraits
 
 ATL では、このテンプレートをウィンドウ スタイルの一般的に使用される組み合わせの 3 つ定義済みの特殊化を提供します。
 
-- `CControlWinTraits`  
+- `CControlWinTraits`
 
    標準コントロール ウィンドウの設計されています。 次の標準的なスタイルを使用: WS_CHILD、WS_VISIBLE、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 拡張スタイルはありません。
 
-- `CFrameWinTraits`  
+- `CFrameWinTraits`
 
    標準のフレーム ウィンドウの設計されています。 使用される標準のスタイルが含まれます: WS_OVERLAPPEDWINDOW、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 使用する拡張スタイルが含まれます: WS_EX_APPWINDOW と WS_EX_WINDOWEDGE します。
 
-- `CMDIChildWinTraits`  
+- `CMDIChildWinTraits`
 
    標準の MDI 子ウィンドウに設計されています。 使用される標準のスタイルが含まれます: WS_OVERLAPPEDWINDOW、WS_CHILD、WS_VISIBLE、WS_CLIPCHILDREN、および WS_CLIPSIBLINGS します。 使用する拡張スタイルが含まれます: WS_EX_MDICHILD します。
 
 インスタンスごとに設定するには、その他のスタイルを許容しつつ、ウィンドウ クラスのすべてのインスタンスを使用して、特定のスタイルが設定されていることを確認する場合[CWinTraitsOR](../../atl/reference/cwintraitsor-class.md)代わりにします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 

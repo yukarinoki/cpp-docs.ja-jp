@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 4fca5d567d19434654b7ccf3cfb2b4d5d3e44d53
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 109b0303eaf4c4352d4e9b426642f92e361051a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410708"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063407"
 ---
 # <a name="using-verifiable-assemblies-with-sql-server-ccli"></a>SQL Server での確認可能なアセンブリの使用 (C++/CLI)
 
@@ -32,7 +32,7 @@ SQL Server TRANSACT-SQL (T-SQL) は、SQL Server に検証可能なアセンブ�
 
 - 無制限のモード: コードを各自の責任で実行コードはタイプ セーフではありません。
 
-- セーフ モード: 検証可能なタイプ セーフなコードの実行/clr:safe と共にコンパイル。 
+- セーフ モード: 検証可能なタイプ セーフなコードの実行/clr:safe と共にコンパイル。
 
 > [!IMPORTANT]
 > Visual Studio 2015 で非推奨とされ、Visual Studio 2017 がサポートしていない、 **/clr: 純粋な**と **/clr:safe**検証可能なプロジェクトを作成します。 検証可能なコードが必要な場合は、c# コードを変換することをお勧めします。
@@ -88,6 +88,5 @@ sqlcmd -S MyServer -E -i myScript.sql -o myResult.txt
 ```
 
 ## <a name="see-also"></a>関連項目
-
 
 [クラスと構造体](../cpp/classes-and-structs-cpp.md)

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b33097c6f6f747d99cf582c1553e25942f1bfcd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436794"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056010"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールの描画
 
@@ -112,11 +112,11 @@ ActiveX コントロールの描画の既定の実装では、コントロール
 
 1. **新しいコントロールを挿入**ボックスで、コントロールを選択し、をクリックして**OK**します。
 
-     コントロールは、テスト コンテナーに表示されます。
+   コントロールは、テスト コンテナーに表示されます。
 
 1. **コントロール** メニューのをクリックして**を描画するメタファイル**します。
 
-     メタファイルを表示する別のウィンドウが表示されます。 スケーリングがコントロールのメタファイルに与える影響を確認するには、このウィンドウのサイズを変更することができます。 このウィンドウは、いつでも閉じることができます。
+   メタファイルを表示する別のウィンドウが表示されます。 スケーリングがコントロールのメタファイルに与える影響を確認するには、このウィンドウのサイズを変更することができます。 このウィンドウは、いつでも閉じることができます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c695dbee2b92a2a3fbc5de0830f298b81e63ad8d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: fbb7bc07ab3b3942f1a3a6fa20c69327c0bd1a53
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791147"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063758"
 ---
 # <a name="out-c"></a>out (C++)
 
@@ -36,13 +36,13 @@ ms.locfileid: "48791147"
 
 ## <a name="remarks"></a>Remarks
 
-**アウト**C++ 属性と同じ機能を持つ、[アウト](/windows/desktop/Midl/out-idl)MIDL 属性。
+**out** C++ 属性には、 [propput](/windows/desktop/Midl/out-idl) MIDL 属性と同じ機能があります。
 
 ## <a name="example"></a>例
 
-例をご覧ください[バインド可能な](bindable.md)の使用サンプル**アウト**します。
+[out](bindable.md) の使用サンプルについては、「 **bindable**」の例を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -53,11 +53,11 @@ ms.locfileid: "48791147"
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
-[ID](id.md)  
+[ID](id.md)
