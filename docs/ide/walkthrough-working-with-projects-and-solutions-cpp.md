@@ -1,7 +1,7 @@
 ---
 title: 'チュートリアル: プロジェクトとソリューションの使用 (C++) | Microsoft Docs'
 ms.custom: ''
-ms.date: 12/13/2017
+ms.date: 09/14/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f62b2317669949473c8b0e68ad4410a3d9b03806
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 56b5e41872ebe4b3cdc4800d7818cceb05f03dd1
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33339136"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235153"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>チュートリアル: プロジェクトとソリューションの使用 (C++)
 
@@ -42,13 +42,16 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
 ### <a name="to-create-a-project"></a>プロジェクトを作成するには
 
-1. メニュー バーで **[ファイル] > [新規] > [プロジェクト]** の順にクリックします。
+1. メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
 
 1. **[新しいプロジェクト]** ダイアログ ボックスの左ウィンドウで、**[インストール済み]** を展開し、**[Visual C++]** を選択します (まだ開いていない場合)。
 
 1. 中央のペインのインストールされたテンプレートの一覧で、**[Windows コンソール アプリケーション]** を選択します。
 
-1. **[名前]** ボックスにプロジェクトの名前を入力します。 この例では「**Game**」と入力します。
+   > [!NOTE]
+   > 以前のバージョンの Visual Studio では、インストールされたテンプレートは **Win32 コンソール アプリケーション**と呼ばれます。
+
+1. **[名前]** ボックスにプロジェクトの名前を入力します。 この例では「*Game*」と入力します。
 
    **[場所]** ドロップダウン リストに表示される既定の場所をそのまま使用するか、別の場所を入力するか、または **[参照]** を選択してプロジェクトを保存するディレクトリを参照できます。
 
@@ -62,15 +65,15 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
 **ソリューション エクスプローラー**を使用して、ソリューションのプロジェクト、ファイル、その他のリソースを整理および管理できます。
 
-ここでは、クラスをプロジェクトに追加する方法を説明します。 クラスを追加すると、Visual Studio は、対応する .h ファイルと .cpp ファイルを追加します。 結果は**ソリューション エクスプローラー**で確認できます。
+ここでは、クラスをプロジェクトに追加する方法について説明します。 クラスを追加すると、Visual Studio は、対応する .h ファイルと .cpp ファイルを追加します。 結果は**ソリューション エクスプローラー**で確認できます。
 
 ### <a name="to-add-a-class-to-a-project"></a>プロジェクトにクラスを追加するには
 
-1. Visual Studio で**ソリューション エクスプローラー** ウィンドウが表示されない場合は、メニュー バーで **[表示] > [ソリューション エクスプローラー]** の順にクリックします。
+1. Visual Studio で**ソリューション エクスプローラー** ウィンドウが表示されない場合は、メニュー バーで **[表示]** > **[ソリューション エクスプローラー]** の順に選択します。
 
-1. **ソリューション エクスプローラー**で **Game** プロジェクトを選択します。 メニュー バーで **[プロジェクト] > [クラスの追加]** の順に選択します。
+1. **ソリューション エクスプローラー**で **Game** プロジェクトを選択します。 メニュー バーで **[プロジェクト]** > **[クラスの追加]** の順に選択します。
 
-1. **[クラスの追加]** ダイアログで、**[クラス名]** ボックスに「*Cardgame*」と入力します。 既定のファイル名と設定を変更しないでください。 **[OK]** を選択します。
+1. **[クラスの追加]** ダイアログ ボックスで、**[クラス名]** ボックスに「*Cardgame*」と入力します。 既定のファイル名と設定を変更しないでください。 **[OK]** を選択します。
 
    Visual Studio により新しいファイルが作成され、プロジェクトに追加されます。 これらは**ソリューション エクスプローラー** ウィンドウで確認できます。 Cardgame.h と Cardgame.cpp ファイルがエディターで開かれます。
 
@@ -90,15 +93,13 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
       このコンストラクターを、"*players*" という名前の型 `int` の 1 個のパラメーターを受け取るように変更します。
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
-      `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
 
    - 既定のデストラクターの後に、*GetParticipants* という名前の `static int` メンバー関数のインライン宣言を追加します。これは、パラメーターを受け取らず `totalParticipants` の値を返します。
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
-      `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
 
-   変更後、Cardgame.h ファイルは次のようになります。
+   変更後、Cardgame.h ファイルは次のコードのようになります。
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
    ```cpp
@@ -109,20 +110,20 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
        static int totalParticipants;
    public:
        Cardgame(int players);
-       ~Cardgame(void);
+       ~Cardgame();
        static int GetParticipants() { return totalParticipants; }
    };
    ```
 
-   行 `#pragma once` は、1 回だけヘッダー ファイルを含むようにコンパイラに指示します。 詳細については、「[once](../preprocessor/once.md)」を参照してください。 このヘッダー ファイルの他の C++ キーワードについては、「[class](../cpp/class-cpp.md)」、「[int](../cpp/fundamental-types-cpp.md)」、「[static](../cpp/storage-classes-cpp.md)」、および「[public](../cpp/public-cpp.md)」を参照してください。
+   行 `#pragma once` は、1 回だけヘッダー ファイルを含むようにコンパイラに指示します。 詳細については、「[once](../preprocessor/once.md)」を参照してください。 上記のヘッダー ファイルの他の C++ キーワードについては、「[class](../cpp/class-cpp.md)」、「[int](../cpp/fundamental-types-cpp.md)」、「[static](../cpp/storage-classes-cpp.md)」、および「[public](../cpp/public-cpp.md)」を参照してください。
 
 1. 編集ウィンドウの上部で **[Cardgame.cpp]** タブをクリックして編集のために開きます。
 
-1. ファイル内のすべてを削除して、このコードと置き換えます。
+1. ファイル内のすべてを削除して、次のコードに置き換えます。
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
    ```cpp
-   #include "stdafx.h"
+   #include "pch.h"
    #include "Cardgame.h"
    #include <iostream>
 
@@ -144,7 +145,7 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
    ```
 
    > [!NOTE]
-   > コードを入力するときにオート コンプリートを使用できます。 たとえば、キーボードでこのコードを入力する場合、「*pl*」または「*tot*」を入力してから、Ctrl キーを押しながら Space キーを押すことができます。 オート コンプリートにより `players` または `totalParticipants` が入力されます。
+   > コードを入力するときにオート コンプリートを使用できます。 たとえば、キーボードでこのコードを入力する場合、「*pl*」または「*tot*」を入力してから、**Ctrl** + **Space** キーを押すことができます。 オート コンプリートにより `players` または `totalParticipants` が入力されます。
 
 ## <a name="add-test-code-to-your-main-function"></a>main 関数にテスト コードを追加する
 
@@ -152,14 +153,14 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
 ### <a name="to-add-test-code-to-the-project"></a>プロジェクトにテスト コードを追加するには
 
-1. Game.cpp エディター ウィンドウで、既存のコードを次のコードに置き換えます。
+1. **Game.cpp** エディター ウィンドウで、既存のコードを次のコードに置き換えます。
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
    ```cpp
    // Game.cpp : Defines the entry point for the console application.
    //
 
-   #include "stdafx.h"
+   #include "pch.h"
    #include "Cardgame.h"
    #include <iostream>
 
@@ -179,7 +180,7 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
        return 0;
    }
    ```
-このコードは、テスト関数 `PlayGames` をソース コードに追加し、それを `main` で呼び出します。 
+このコードでは、テスト関数 `PlayGames` をソース コードに追加し、それを `main` で呼び出します。
 
 ## <a name="build-and-run-your-app-project"></a>アプリ プロジェクトをビルドして実行する
 
@@ -187,17 +188,17 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
 ### <a name="to-build-and-run-the-project"></a>プロジェクトをビルドして実行するには
 
-1. メニュー バーで、**[ビルド]、[ソリューションのビルド]** の順にクリックします。
+1. メニュー バーで、**[ビルド]** > **[ソリューションのビルド]** の順にクリックします。
 
    ビルドからの出力は、**[出力]** ウィンドウに表示されます。 ビルドが成功した場合、出力は次のようになります。
 
    ```Output
    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
-   1>  stdafx.cpp
-   1>  Game.cpp
-   1>  Cardgame.cpp
-   1>  Generating Code...
-   1>  Game.vcxproj -> C:\Users\username\Source\Repos\Game\Debug\Game.exe
+   1>pch.cpp
+   1>Cardgame.cpp
+   1>Game.cpp
+   1>Generating Code...
+   1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
    ```
 
@@ -205,7 +206,7 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
    ビルドが成功しなかった場合は、コードを、前の手順で示されたコードと比較してください。
 
-1. プロジェクトを実行するには、メニュー バーで **[デバッグ] > [デバッグなしで開始]** の順にクリックします。 コンソール ウィンドウが表示され、出力はこのようになります。
+1. プロジェクトを実行するには、メニュー バーで **[デバッグ]** > **[デバッグなしで開始]** の順にクリックします。 コンソール ウィンドウが表示され、出力は次のようになります。
 
    ```Output
    4 players have started a new game.  There are now 4 players in total.
@@ -219,10 +220,10 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
 ## <a name="next-steps"></a>次の手順
 
-**前:** [C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)  
-**次:** [チュートリアル: プロジェクトの構築 (C++)](../ide/walkthrough-building-a-project-cpp.md)
+**前へ:** [C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**次へ:** [チュートリアル: プロジェクトの構築 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>関連項目
 
-[C++ 言語リファレンス](../cpp/cpp-language-reference.md)  
-[C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)
+[C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
+[C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)<br/>
