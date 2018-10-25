@@ -1,7 +1,7 @@
 ---
 title: SafeInt 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/28/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -41,12 +41,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 43960e70f1aad29fa4b8fc03517231c7658d155b
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 515bf6793a2b1546bc79998283104b704de7f1ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162582"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057290"
 ---
 # <a name="safeint-functions"></a>SafeInt 関数
 
@@ -55,6 +55,9 @@ SafeInt ライブラリのインスタンスを作成せずに使用できるい
 これらの関数を使用すると、比較または最初に、同じ型に変換することがなく 2 つの異なる型のパラメーターの算術演算を実行できます。
 
 これらの各関数は、テンプレートの 2 つの種類:`T`と`U`します。 これらの型には、ブール値、文字、または整数型ができます。 整数型の符号付きまたは符号なしでき、あらゆるサイズを 8 ビットから 64 ビット。
+
+> [!NOTE]
+> このライブラリの最新バージョンは[ https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

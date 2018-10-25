@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02b3a076a46092c3c4b36055aadb2dfa24af0f82
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b71904fb20348985dee78e5dd06e0e3c60797782
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420108"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067970"
 ---
 # <a name="cobarray-class"></a>CObArray クラス
 
@@ -135,7 +135,7 @@ C 言語の配列では、アクセスする時間と同様、`CObArray`が定�
 
 `CObArray`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcoll.h
 
@@ -531,7 +531,6 @@ void InsertAt(
     INT_PTR nIndex,
     CObject* newElement,
     INT_PTR nCount = 1);
-
 
 void InsertAt(
     INT_PTR nStartIndex,

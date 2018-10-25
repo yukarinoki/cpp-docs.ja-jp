@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aa1803fb34ce1c9cf50b996efb9cc5467dd55996
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0bd1e6953d936106f272aa8bef4243728d742d8c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387836"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078194"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog クラス
 
@@ -100,7 +100,7 @@ OLE ダイアログ ボックスの詳細については、記事を参照して
 
 `COlePropertiesDialog`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxodlgs.h
 
@@ -138,15 +138,15 @@ COlePropertiesDialog(
 
 - 全般
 
-     このページには、選択されているドキュメント項目によって表されるファイルのシステム情報が含まれています。 このページで、ユーザーは、別の型を選択した項目を変換できます。
+   このページには、選択されているドキュメント項目によって表されるファイルのシステム情報が含まれています。 このページで、ユーザーは、別の型を選択した項目を変換できます。
 
 - 表示
 
-     このページには、アイテムを表示する、アイコンの変更、およびイメージのスケーリングを変更するためのオプションが含まれています。
+   このページには、アイテムを表示する、アイコンの変更、およびイメージのスケーリングを変更するためのオプションが含まれています。
 
 - リンク
 
-     このページには、リンク アイテムの場所を変更して、リンクされた項目を更新するためのオプションが含まれています。 このページで、ユーザーが選択された項目のリンクを中断できます。
+   このページには、リンク アイテムの場所を変更して、リンクされた項目を更新するためのオプションが含まれています。 このページで、ユーザーが選択された項目のリンクを中断できます。
 
 既定で提供されるもの以外のページを追加するには、変更、 [m_psh](#m_psh)メンバー変数のコンス トラクターを終了する前に、 `COlePropertiesDialog`-クラスを派生します。 これは、高度な実装、`COlePropertiesDialog`コンス トラクター。
 

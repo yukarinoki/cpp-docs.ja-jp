@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f067b1835c9ff70c7a7c91d401a83e7fa3e1cce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 734707256bb97e25452c45829fd99a1e0fb06fd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382298"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060313"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX コントロール : ActiveX コントロールの配布
 
@@ -51,7 +51,6 @@ ms.locfileid: "46382298"
 - [ActiveX コントロールと再頒布可能 Dll をインストールします。](#_core_installing_activex_controls_and_redistributable_dlls)
 
 - [コントロールの登録](#_core_registering_controls)
-
 
 >[!IMPORTANT]
 > ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。

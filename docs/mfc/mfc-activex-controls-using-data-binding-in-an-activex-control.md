@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ecd2cea655536ab12751a169793273c27b7d8f7
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029568"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062614"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるデータ バインディングの使用
 
@@ -63,13 +63,13 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
 
 1. コントロールのインターフェイス ノードを右クリックします。
 
-     これは、ショートカット メニューを開きます。
+   これは、ショートカット メニューを開きます。
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**プロパティの追加**します。
 
 1. エントリのいずれかを選択、**プロパティ名**ドロップダウン リスト。 たとえば、選択**テキスト**します。
 
-     **テキスト**、ストック プロパティ、**バインド可能な**と**requestedit**属性は既にチェックします。
+   **テキスト**、ストック プロパティ、**バインド可能な**と**requestedit**属性は既にチェックします。
 
 1. 次のチェック ボックスをオン、 **IDL 属性** タブ: **displaybind**と**defaultbind**プロジェクトのプロパティの定義に属性を追加します。IDL ファイルです。 これらの属性は、コントロールをユーザーに表示されるようにし、ストック プロパティの既定のバインド可能なプロパティを作成します。
 
@@ -96,7 +96,7 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
 
 1. コントロールのインターフェイス ノードを右クリックします。
 
-     これは、ショートカット メニューを開きます。
+   これは、ショートカット メニューを開きます。
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**プロパティの追加**します。
 
@@ -112,33 +112,33 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
 
 11. 本体を変更、`SetMyProp`関数の次のコードが含まれるようにします。
 
-     [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
+   [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
 12. 渡されるパラメーター、`BoundPropertyChanged`と`BoundPropertyRequestEdit`関数は、プロパティに id() 属性に渡されるパラメーターであると、プロパティの dispid します。IDL ファイルです。
 
 13. 変更、[例](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)関数の次のコードが含まれるようにします。
 
-     [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
+   [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
 14. 変更、`OnDraw`関数の次のコードが含まれるようにします。
 
-     [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
+   [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
 15. コントロール クラスのヘッダー ファイルのヘッダー ファイルのパブリック セクションに次の定義 (コンス トラクター) のメンバー変数を追加します。
 
-     [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
+   [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
 16. 次の行の最後の行を作成、`DoPropExchange`関数。
 
-     [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
+   [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
 17. 変更、`OnResetState`関数の次のコードが含まれるようにします。
 
-     [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
+   [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
 18. 変更、`GetMyProp`関数の次のコードが含まれるようにします。
 
-     [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
+   [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 
 コントロールを登録すると、プロジェクトをビルドすることができますようになりました。 ダイアログ ボックスでは、コントロールを挿入するときに、**データ フィールド**と**データソース**プロパティが追加されているし、データ ソースと、コントロールに表示するフィールドを選択できます。
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0111dfc424a99d413a217149b3c5e579a3999f13
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 6cb9202d020aee86a4ebe3892fa8dd84ec4c4577
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791415"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061629"
 ---
 # <a name="dbcommand"></a>db_command
 
@@ -31,7 +31,7 @@ OLE DB コマンドを作成します。
 ## <a name="syntax"></a>構文
 
 ```cpp
-[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)  
+[ db_command(command, name, source_name, hresult, bindings, bulk_fetch)
 ]
 ```
 
@@ -74,7 +74,7 @@ OLE DB コマンドのテキストを含むコマンド文字列。 簡単な例
 
 などのコマンド文字列に 1 つまたは複数の指定子が含まれている場合\[で]、 \[out]、または\[入力/出力]、 **db_command**はパラメーター マップを作成します。
 
-などのコマンド文字列に 1 つまたは複数のパラメーターが含まれている場合\[db_column] や\[bindto]、 **db_command**行セットとこれらのバインドされた変数へのアクセサー マップを生成します。 参照してください[db_accessor](db-accessor.md)詳細についてはします。
+などのコマンド文字列に 1 つまたは複数のパラメーターが含まれている場合\[db_column] や\[bindto]、 **db_command**行セットとこれらのバインドされた変数へのアクセサー マップを生成します。 詳しくは、「 [db_accessor](db-accessor.md) 」をご覧ください。
 
 > [!NOTE]
 > \[*bindtype*] 構文と*バインド*を使用する場合のパラメーターは無効な**db_command**クラス レベルでします。
@@ -88,7 +88,7 @@ TCHAR m_state[3] = 'CA';
 
 [db_command (command = "SELECT au_fname([bindto]m_au_fname), au_lname([bindto]m_au_lname) " \
    "FROM dbo.authors " \
-   "WHERE state = ?([in]m_state)")  
+   "WHERE state = ?([in]m_state)")
 ]
 ```
 
@@ -96,7 +96,7 @@ TCHAR m_state[3] = 'CA';
 (省略可能)行セットの操作に使用するためのハンドルの名前。 *name*を指定した場合、 **db_command** は指定された *name*のクラスを生成します。このクラスを使用して、行セットを走査したり、複数のアクション クエリを実行したりできます。 *name*を指定しないと、複数の結果行をユーザーに返すことはできません。
 
 *source_name*<br/>
-(省略可能)`CSession`変数またはを持つクラスのインスタンス、`db_source`コマンドが実行されることに適用される属性。 参照してください[db_source](db-source.md)します。
+(省略可能)`CSession`変数またはを持つクラスのインスタンス、`db_source`コマンドが実行されることに適用される属性。 「 [db_source](db-source.md)」をご覧ください。
 
 **db_command** は *source_name* に使用されている変数が有効であることを確認するので、指定する変数は関数スコープまたはグローバル スコープに存在する必要があります。
 
@@ -113,15 +113,15 @@ TCHAR m_state[3] = 'CA';
 *bulk_fetch*<br/>
 (省略可能)フェッチする行の数を指定する整数値。
 
-既定値は 1、1 つの行のフェッチを指定します (行セットは、型になります[CRowset](../../data/oledb/crowset-class.md))。
+既定値は 1 で、単一行のフェッチを指定します (行セットは [CRowset](../../data/oledb/crowset-class.md)型です)。
 
-1 より大きい値は、バルク行フェッチを指定します。 複数の行ハンドルをフェッチするバルク行セットの機能を指しますバルク行フェッチ (行セットは、型になります[CBulkRowset](../../data/oledb/cbulkrowset-class.md)と呼び出されます`SetRows`指定数の行で)。
+1 より大きい値は、バルク行フェッチを指定します。 バルク行フェッチとは、複数の行ハンドルをフェッチするバルク行セットの機能のことです (行セットは [CBulkRowset](../../data/oledb/cbulkrowset-class.md) 型であり、指定された行数で `SetRows` を呼び出します)。
 
 *bulk_fetch* が 1 より小さい場合は、 `SetRows` は 0 を返します。
 
 ## <a name="remarks"></a>Remarks
 
-**db_command**作成、 [CCommand](../../data/oledb/ccommand-class.md)オブジェクトで、コマンドを実行する OLE DB コンシューマーによって使用されます。
+OLE DB コンシューマーは、**db_command** によって作成された [CCommand](../../data/oledb/ccommand-class.md) オブジェクトを使用して、コマンドを実行します。
 
 **db_command** はクラス スコープまたは関数スコープで使用できます。主な違いは、 `CCommand` オブジェクトのスコープです。 関数スコープでは、バインディングなどのデータは関数の終了時に終了します。 クラスと関数のスコープの使用法は、OLE DB コンシューマー テンプレート クラスを伴う`CCommand<>`、テンプレート引数は、関数およびクラスの場合の点が異なります。 関数の場合、バインドできるように、`Accessor`クラスの使用状況は推論中にローカル変数で構成する、 `CAccessor`-引数としてクラスを派生します。 クラス属性として使用すると、 **db_command** は **db_column**と共に動作します。
 
@@ -131,7 +131,7 @@ TCHAR m_state[3] = 'CA';
 
 ## <a name="example"></a>例
 
-この例では、テーブルから state 列が 'CA' と一致する姓と名を選択するコマンドを定義しています。 **db_command**を作成して呼び出すことができるウィザードで生成された関数など、行セットを読み取ります[OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)、だけでなく`CRowset`などの関数メンバー [MoveNext](../../data/oledb/crowset-movenext.md)します。
+この例では、テーブルから state 列が 'CA' と一致する姓と名を選択するコマンドを定義しています。 **db_command** は、ウィザードで生成される [OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)などの関数および `CRowset` MoveNext [などの](../../data/oledb/crowset-movenext.md)メンバー関数を呼び出すことができる行セットを作成して読み取ります。
 
 このコードでは、pubs データベースに接続する独自の接続文字列を指定する必要があることに注意してください。 開発環境でこれを行う方法については、次を参照してください。[方法: 既存のオブジェクトの参照と、データベースに接続する](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)と[新しい接続を追加](/visualstudio/data-tools/add-new-connections)します。
 
@@ -242,7 +242,7 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -253,9 +253,9 @@ int main() {
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [OLE DB コンシューマー属性](ole-db-consumer-attributes.md)<br/>
-[スタンドアロン属性](stand-alone-attributes.md)  
+[スタンドアロン属性](stand-alone-attributes.md)

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f844d63bc04deb4294203f04aef30db48f195fd9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bc5aec34177572552d119df967c9d25571b6cb63
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438068"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066033"
 ---
 # <a name="terminatemap-function"></a>TerminateMap 関数
 
@@ -34,12 +34,12 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 inline bool TerminateMap(
    _In_ ModuleBase *module,
    _In_opt_z_ const wchar_t *serverName,
-    bool forceTerminate) throw()  
+    bool forceTerminate) throw()
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*モジュール*<br/>
+*module*<br/>
 A[モジュール](../windows/module-class.md)します。
 
 *サーバー名*<br/>
@@ -56,7 +56,7 @@ A[モジュール](../windows/module-class.md)します。
 
 指定されたモジュールでクラス ファクトリをシャット ダウンします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** module.h
 

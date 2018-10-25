@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7ec76a554068dbec050078a0e0558cecd583410c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd9ea4397c655f0ebb28d10febe82581d6ad8771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429209"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055009"
 ---
 # <a name="icommandui-interface"></a>ICommandUI インターフェイス
 
@@ -73,6 +73,7 @@ MFC でのユーザー インターフェイスのコマンドを管理する方
 ```
 property UICheckState Check;
 ```
+
 ## <a name="remarks"></a>Remarks
 
 このプロパティは、このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。 チェックは、次の値に設定します。
@@ -86,6 +87,7 @@ property UICheckState Check;
 ```
 void ContinueRouting();
 ```
+
 ## <a name="remarks"></a>Remarks
 
 これは、高度なメンバー関数は FALSE を返す ON_COMMAND_EX ハンドラーと組み合わせて使用する必要があります。 詳細については、テクニカル ノート TN006 を参照してください: メッセージ マップです。
@@ -96,6 +98,7 @@ void ContinueRouting();
 ```
 property bool Enabled;
 ```
+
 ## <a name="remarks"></a>Remarks
 
 このプロパティは、有効または、このコマンドのユーザー インターフェイス項目を無効にします。 有効には、有効にする項目を無効にする場合は FALSE true に設定されます。
@@ -106,6 +109,7 @@ ICommandUI オブジェクトによって表されるユーザー インター�
 ```
 property unsigned int ID;
 ```
+
 ## <a name="remarks"></a>Remarks
 
 このプロパティは、メニュー項目、ツール バー ボタン、または ICommandUI オブジェクトによって表されるその他のユーザー インターフェイス オブジェクトの ID (ハンドル) を取得します。
@@ -116,6 +120,7 @@ ICommandUI オブジェクトによって表されるユーザー インター�
 ```
 property unsigned int Index;
 ```
+
 ## <a name="remarks"></a>Remarks
 
 このプロパティは、メニュー項目、ツール バー ボタン、または ICommandUI オブジェクトによって表されるその他のユーザー インターフェイス オブジェクトのインデックス (ハンドル) を取得します。
@@ -126,6 +131,7 @@ property unsigned int Index;
 ```
 property bool Radio;
 ```
+
 ## <a name="remarks"></a>Remarks
 
 このプロパティは、このコマンドのユーザー インターフェイス項目を適切なチェックの状態に設定します。 アイテムを有効にする場合は true にセット オプションそれ以外の場合は FALSE です。
@@ -136,11 +142,12 @@ property bool Radio;
 ```
 property String^ Text;
 ```
+
 ## <a name="remarks"></a>Remarks
 
 このプロパティは、このコマンドのユーザー インターフェイスの項目のテキストを設定します。 テキストをテキスト文字列のハンドルに設定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 

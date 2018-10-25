@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d19a2b1859012a56bdaf3c454f8b92758179bed9
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: ea394ca09a086229a8718f4e7e1bfa55115652bc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49809071"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056224"
 ---
 # <a name="openmp-clauses"></a>OpenMP 句
 
@@ -56,21 +56,21 @@ OpenMP API で使用される句へのリンクを提供します。
 
 Visual C には、次の OpenMP 句がサポートされています。
 
-句                             | 説明
----------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-[copyin](#copyin)                  | スレッドのマスター スレッドの値にアクセスできるように、 [threadprivate](openmp-directives.md#threadprivate)変数。
-[copyprivate](#copyprivate)        | すべてのスレッド間で 1 つまたは複数の変数を共有する必要がありますを指定します。
-[default](#default-openmp)         | 並列領域では、対象範囲外の変数の動作を指定します。
-[firstprivate](#firstprivate)      | Parallel コンストラクトの前に存在するため、各スレッドは、変数の独自のインスタンスである必要があり、変数の値で、変数を初期化する必要がありますを指定します。
-[if](#if-openmp)                   | 直列または並列でループを実行する必要があるかどうかを指定します。
-[lastprivate](#lastprivate)        | 変数の外側のコンテキストのバージョンを最後の反復処理 (for ループ コンストラクト) または最後のセクション (#pragma セクション) を実行したスレッドのプライベート バージョンと同じに設定されているを指定します。
-[nowait](#nowait)                  | ディレクティブ内の暗黙のバリアをオーバーライドします。
-[num_threads](#num-threads)        | スレッドのチームでは、スレッドの数を設定します。
-[順序付け](#ordered-openmp-clauses) | 並列で必要な[の](openmp-directives.md#for-openmp)ステートメント場合、[注文](openmp-directives.md#ordered-openmp-directives)ディレクティブが、ループ内で使用されます。
-[private](#private-openmp)         | 各スレッドは、変数の独自のインスタンスである必要がありますを指定します。
-[reduction](#reduction)            | 各スレッドに対してプライベートである 1 つまたは複数の変数を並行領域の最後のリダクション演算の件名を指定します。
-[schedule](#schedule)              | 適用されます、[の](openmp-directives.md#for-openmp)ディレクティブ。
-[shared](#shared-openmp)           | すべてのスレッド間で 1 つまたは複数の変数を共有する必要がありますを指定します。
+|句|説明|
+|------|-----------|
+|[copyin](#copyin)|スレッドのマスター スレッドの値にアクセスできるように、 [threadprivate](openmp-directives.md#threadprivate)変数。|
+|[copyprivate](#copyprivate)|すべてのスレッド間で 1 つまたは複数の変数を共有する必要がありますを指定します。|
+|[default](#default-openmp)|並列領域では、対象範囲外の変数の動作を指定します。|
+|[firstprivate](#firstprivate)|Parallel コンストラクトの前に存在するため、各スレッドは、変数の独自のインスタンスである必要があり、変数の値で、変数を初期化する必要がありますを指定します。|
+|[if](#if-openmp)|直列または並列でループを実行する必要があるかどうかを指定します。|
+|[lastprivate](#lastprivate)|変数の外側のコンテキストのバージョンを最後の反復処理 (for ループ コンストラクト) または最後のセクション (#pragma セクション) を実行したスレッドのプライベート バージョンと同じに設定されているを指定します。|
+|[nowait](#nowait)|ディレクティブ内の暗黙のバリアをオーバーライドします。|
+|[num_threads](#num-threads)|スレッドのチームでは、スレッドの数を設定します。|
+|[順序付け](#ordered-openmp-clauses)|並列で必要な[の](openmp-directives.md#for-openmp)ステートメント場合、[注文](openmp-directives.md#ordered-openmp-directives)ディレクティブが、ループ内で使用されます。|
+|[private](#private-openmp)|各スレッドは、変数の独自のインスタンスである必要がありますを指定します。|
+|[reduction](#reduction)|各スレッドに対してプライベートである 1 つまたは複数の変数を並行領域の最後のリダクション演算の件名を指定します。|
+|[schedule](#schedule)|適用されます、[の](openmp-directives.md#for-openmp)ディレクティブ。|
+|[shared](#shared-openmp)|すべてのスレッド間で 1 つまたは複数の変数を共有する必要がありますを指定します。|
 
 ## <a name="copyin"></a>copyin
 
@@ -401,7 +401,7 @@ num_threads(num)
 
 ### <a name="remarks"></a>Remarks
 
-`num_threads`句と同じ機能には、 [omp_set_num_threads](../../../parallel/openmp/reference/omp-set-num-threads.md)関数。
+`num_threads`句と同じ機能には、 [omp_set_num_threads](openmp-functions.md#omp-set-num-threads)関数。
 
 `num_threads` 次のディレクティブに適用されます。
 

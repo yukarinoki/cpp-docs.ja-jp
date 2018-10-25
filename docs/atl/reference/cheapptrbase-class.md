@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f2a6ab9e03a44f48acca9b949193ceec85eb3ef6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1e1fad70e709ecef33d6df2c8e8e0aa58589e356
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063113"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059780"
 ---
 # <a name="cheapptrbase-class"></a>CHeapPtrBase クラス
 
@@ -76,7 +76,7 @@ class CHeapPtrBase
 |----------|-----------------|
 |[CHeapPtrBase::operator T *](#operator_t_star)|キャスト演算子です。|
 |[CHeapPtrBase::operator (& a)](#operator_amp)|& 演算子。|
-|[CHeapPtrBase::operator -> します。](#operator_ptr)|メンバーへのポインター演算子。|  
+|[CHeapPtrBase::operator -> します。](#operator_ptr)|メンバーへのポインター演算子。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -88,7 +88,7 @@ class CHeapPtrBase
 
 このクラスは、いくつかのヒープのスマート ポインター クラスの基礎を形成します。 たとえば、派生クラス[CHeapPtr](../../atl/reference/cheapptr-class.md)と[CComHeapPtr](../../atl/reference/ccomheapptr-class.md)、独自のコンス トラクターと演算子を追加します。 これらのクラスの実装例を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcore.h
 

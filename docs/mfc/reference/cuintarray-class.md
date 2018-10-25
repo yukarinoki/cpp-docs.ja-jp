@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c110ffd183aa3de989543d368349ba629c580433
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6dc9bf5b2a7e7cf5d2335676d9c6fd219ce35634
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399666"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064876"
 ---
 # <a name="cuintarray-class"></a>CUIntArray クラス
 
@@ -130,7 +130,7 @@ class CUIntArray : public CObject
 
 `CUIntArray`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcoll.h
 
@@ -138,6 +138,4 @@ class CUIntArray : public CObject
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-
-
 

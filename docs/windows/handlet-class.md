@@ -37,12 +37,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae6e7c1ec602cb57df071ecac24a0ac084331c3c
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: d0f7364ac86aebd0f5a9a1c0f7ec2343b9e162d0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162322"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081669"
 ---
 # <a name="handlet-class"></a>HandleT クラス
 
@@ -107,7 +107,7 @@ class HandleT;
 
 `HandleT`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** corewrappers.h
 
@@ -193,7 +193,7 @@ typename HandleTraits::Type handle_;
 ```cpp
 explicit HandleT(
    typename HandleTraits::Type h =
-      HandleTraits::GetInvalidValue()  
+      HandleTraits::GetInvalidValue()
 );
 
 HandleT(

@@ -13,19 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 991e3e74ba280b615d951c12472de46833b7de72
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 2d8c5188cccceb0c09de95c43a72a645ded0e6a9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083347"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077520"
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップ アプリケーション (Visual C)
 
 A*デスクトップ アプリケーション*C++ では、ウィンドウ、またはシステム コンソールで実行される、Windows Api との完全なセットにアクセスできるネイティブ アプリケーション。 C++ でデスクトップ アプリケーションは、(Windows XP が不要になった正式にサポートされているし、それ以降に導入された多くの Windows Api があります) は、Windows XP、Windows 10 で実行できます。
 
 デスクトップ アプリケーションは、ユニバーサル Windows プラットフォーム (UWP) アプリ、または Windows 10 を実行している Pc でも XBox、Windows Phone、Surface Hub、およびその他のデバイスで実行できるとは異なります。 デスクトップの vs の詳細についてはします。UWP アプリケーションを参照してください[テクノロジを選ぶ](https://msdn.microsoft.com/library/windows/desktop/dn614993)します。
-
 
 ### <a name="desktop-bridge"></a>デスクトップ ブリッジ
 

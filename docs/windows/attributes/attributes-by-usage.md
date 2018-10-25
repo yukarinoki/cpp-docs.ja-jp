@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 49e298af793655bb3ea3854909a16dd4db03c6a3
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 7dc5519fbef10ca6c369bcffacacb8351dbc0390
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328182"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060430"
 ---
 # <a name="attributes-by-usage"></a>使用法別の属性
 
@@ -43,7 +43,7 @@ ms.locfileid: "49328182"
 
 ## <a name="module-attributes"></a>モジュール属性
 次の属性にのみ適用、[モジュール](module-cpp.md)属性。
-  
+
 |属性|説明|
 |---------------|-----------------|
 |[helpstringdll](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
@@ -85,7 +85,6 @@ ms.locfileid: "49328182"
 - オーバー ロードされたメソッドは許可されません。
 
 指定しない場合、 [uuid](uuid-cpp-attributes.md)属性し、同じインターフェイスの名前を使用して、別の属性のプロジェクトで、同じ GUID が生成されます。
-
 
 ## <a name="see-also"></a>関連項目
 

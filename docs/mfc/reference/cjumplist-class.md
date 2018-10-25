@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ecbfcbe75620f89b8ef25fba51273e16ae9f28d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 518712dd4d52673ad88dffc0ffa76c9e0281642a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071876"
 ---
 # <a name="cjumplist-class"></a>CJumpList クラス
 
@@ -93,7 +93,7 @@ class CJumpList;
 
 [CJumpList](../../mfc/reference/cjumplist-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxadv.h
 
@@ -126,11 +126,9 @@ BOOL AddDestination(
     LPCTSTR lpcszCategoryName,
     LPCTSTR strDestinationPath);
 
-
 BOOL AddDestination(
     LPCTSTR strCategoryName,
     IShellItem* pShellItem);
-
 
 BOOL AddDestination(
     LPCTSTR strCategoryName,

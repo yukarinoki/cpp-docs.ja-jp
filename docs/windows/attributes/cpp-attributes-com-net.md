@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe6941e8809c0d735013b56d340f27302890b149
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 66188f1879c42eaf9429675a2f235130e263211f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791250"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072526"
 ---
 # <a name="c-attributes-for-com-and-net"></a>COM および .NET C++ 属性
 
@@ -90,21 +90,21 @@ Visual C 属性をソース コードに追加した後のタイプ ライブラ
 ## <a name="contexts"></a> 属性コンテキスト
 
 C++ 属性は、次の 4 つの基本的なフィールドを使用して記述できます: に適用できますターゲット (**適用先**) 場合は、反復可能かどうか (**Repeatable**)、その他の属性 (の存在を必要な**必要な属性**)、およびその他の属性の非互換性 (**無効な属性**)。 これらのフィールドは、各属性の参照トピックの表に表示されます。 これらの各フィールドについて、次に示します。
-  
+
 ### <a name="applies-to"></a>対象
 
 このフィールドには、指定した属性の有効な対象となっているさまざまな C++ 言語要素について説明します。 たとえば、属性で"class"を指定する場合、**適用先**フィールド、属性は、有効な C++ クラスにのみ適用できますこれを示します。 属性はクラスのメンバー関数に適用する場合、構文エラーが発生します。
-  
+
 詳細については、次を参照してください。[属性を使用して](attributes-by-usage.md)します。
-  
+
 ### <a name="repeatable"></a>反復可能
 
 このフィールドは、同じターゲットに属性を繰り返し適用するかどうかを示します。 属性の大半は、反復可能はありません。
-  
+
 ### <a name="required-attributes"></a>必要な属性
 
 このフィールドに表示されるその他の属性が必要な適切に機能する指定した属性のある (つまり、同じターゲットに適用される)。 このフィールドのすべてのエントリが存在する属性の一般的なことはできません。
-  
+
 ### <a name="invalid-attributes"></a>無効な属性
 
 このフィールドは、指定した属性と互換性があるその他の属性を一覧表示します。 このフィールドのすべてのエントリが存在する属性の一般的なことはできません。

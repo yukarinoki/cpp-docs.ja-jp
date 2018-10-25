@@ -1,7 +1,7 @@
 ---
 title: CMFCAutoHideBar クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78582039e172be92f397c898163ec62c6041f32f
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0a029bb2e2cd231d4a1c19bfcc5c7981cfd7f39b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054970"
 ---
 # <a name="cmfcautohidebar-class"></a>CMFCAutoHideBar クラス
 
@@ -80,7 +80,7 @@ class CMFCAutoHideBar : public CPane
 |名前|説明|
 |----------|-----------------|
 |[CMFCAutoHideBar::AddAutoHideWindow](#addautohidewindow)||
-|[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(`CPane::AllowShowOnPaneMenu` をオーバーライドします)。|
+|[CMFCAutoHideBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|( `CPane::AllowShowOnPaneMenu`をオーバーライドします)。|
 |[CMFCAutoHideBar::CalcFixedLayout](#calcfixedlayout)|(上書き[cbasepane::calcfixedlayout](../../mfc/reference/cbasepane-class.md#calcfixedlayout))。|
 |[CMFCAutoHideBar::Create](#create)|コントロール バーを作成し、それにアタッチします、 [CPane](../../mfc/reference/cpane-class.md)オブジェクト。 (上書き[cpane::create](../../mfc/reference/cpane-class.md#create))。|
 |[CMFCAutoHideBar::GetFirstAHWindow](#getfirstahwindow)||
@@ -128,7 +128,7 @@ class CMFCAutoHideBar : public CPane
 
 [CMFCAutoHideBar](../../mfc/reference/cmfcautohidebar-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxautohidebar.h
 
@@ -184,8 +184,9 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-*bStretch*<br/>
-[in][in]*bHorz*
+[in]*bStretch*<br/>
+
+[in]*bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -282,7 +283,7 @@ virtual BOOL OnShowControlBarMenu(CPoint);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*CPoint*
+[in]*CPoint*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -320,7 +321,7 @@ virtual void SetActiveInGroup(BOOL bActive);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[cpane::setactiveingroup](../../mfc/reference/cpane-class.md#setactiveingroup)します。
+「 [CPane::SetActiveInGroup](../../mfc/reference/cpane-class.md#setactiveingroup)」を参照してください。
 
 ## <a name="setrecentvisiblestate"></a>  CMFCAutoHideBar::SetRecentVisibleState
 

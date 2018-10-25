@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b27579211e6d0cf3cd1a933dd6ee83599dcd06f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d430ab70818dafb883e405b082f60c86689853cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408688"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081041"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager クラス
 
@@ -76,7 +76,7 @@ class CMouseManager : public CObject
 
 `CMouseManager`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxmousemanager.h
 
@@ -89,7 +89,6 @@ BOOL AddView(
     int iViewId,
     UINT uiViewNameResId,
     UINT uiIconId = 0);
-
 
 BOOL AddView(
     int iId,
@@ -284,6 +283,4 @@ void SetCommandForDblClk(
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)<br/>
 [キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)
-
-
 

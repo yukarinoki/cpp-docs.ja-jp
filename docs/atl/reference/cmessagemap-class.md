@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f09347fdfaaf20e465e5be05ce446dfec449526
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5fcbb20ac27eea7999c634f78b14e85a6221b11b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024399"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053455"
 ---
 # <a name="cmessagemap-class"></a>CMessageMap クラス
 
@@ -60,7 +60,7 @@ ATL を使用して`CMessageMap`サポートが含まれている windows およ
 
 メッセージ マップの詳細については、次を参照してください[メッセージ マップ](../../atl/message-maps-atl.md)"ATL ウィンドウ クラス"の記事。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -69,7 +69,7 @@ ATL を使用して`CMessageMap`サポートが含まれている windows およ
 識別されるメッセージ マップにアクセスする*dwMsgMapID*で、 `CMessageMap`-クラスを派生します。
 
 ```
-virtual BOOL ProcessWindowMessage(  
+virtual BOOL ProcessWindowMessage(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

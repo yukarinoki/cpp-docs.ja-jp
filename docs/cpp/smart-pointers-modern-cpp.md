@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9142ba85a78259c0a6e5ae06f3745d414e62e908
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 58591309faaa107756739a52173ceea2f1f7b188
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425628"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069881"
 ---
 # <a name="smart-pointers-modern-c"></a>スマート ポインター (Modern C++)
 
@@ -76,11 +76,14 @@ C++ のスマート ポインターの表現方法は、C# などの言語での
 
 これらのスマート ポインターは、Plain Old C++ Object (POCO) にポインターをカプセル化する最初のオプションとして使用します。
 
-- `unique_ptr` 基になるポインターの所有者が 1 つだけできます。 `shared_ptr` が必要であることがわかっている場合を除き、POCO の既定のオプションとして使用します。 新しい所有者に移動できますが、コピーおよび共有することはできません。 非推奨とされた `auto_ptr` を置き換えます。 `boost::scoped_ptr` に相当します。 `unique_ptr` 小さく効率的です。サイズは 1 つのポインターを高速な挿入および C++ 標準ライブラリ コレクションから取得するための右辺値参照をサポートしています。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: unique_ptr インスタンスを作成して](../cpp/how-to-create-and-use-unique-ptr-instances.md)と[unique_ptr クラス](../standard-library/unique-ptr-class.md)します。
+- `unique_ptr`<br/>
+   基になるポインターの所有者は、厳密に 1 人許可されます。 `shared_ptr` が必要であることがわかっている場合を除き、POCO の既定のオプションとして使用します。 新しい所有者に移動できますが、コピーおよび共有することはできません。 非推奨とされた `auto_ptr` を置き換えます。 `boost::scoped_ptr` に相当します。 `unique_ptr` 小さく効率的です。サイズは 1 つのポインターを高速な挿入および C++ 標準ライブラリ コレクションから取得するための右辺値参照をサポートしています。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: unique_ptr インスタンスを作成して](../cpp/how-to-create-and-use-unique-ptr-instances.md)と[unique_ptr クラス](../standard-library/unique-ptr-class.md)します。
 
-- `shared_ptr` 参照カウント スマート ポインター。 複数の所有者に 1 個の生のポインターなどを割り当てる場合に使用します。たとえば、コンテナーからポインターのコピーを返し、元のポインターを維持する場合などです。 生のポインターは、`shared_ptr` のすべての所有者がスコープ外になるか、所有権を放棄するまで削除されません。 サイズはポインター 2 個です。1 個はオブジェクト用で、もう 1 個は参照カウントを含む共有コントロール ブロック用です。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: shared_ptr インスタンスを作成して](../cpp/how-to-create-and-use-shared-ptr-instances.md)と[shared_ptr クラス](../standard-library/shared-ptr-class.md)します。
+- `shared_ptr`<br/>
+   参照カウント スマート ポインターです。 複数の所有者に 1 個の生のポインターなどを割り当てる場合に使用します。たとえば、コンテナーからポインターのコピーを返し、元のポインターを維持する場合などです。 生のポインターは、`shared_ptr` のすべての所有者がスコープ外になるか、所有権を放棄するまで削除されません。 サイズはポインター 2 個です。1 個はオブジェクト用で、もう 1 個は参照カウントを含む共有コントロール ブロック用です。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: shared_ptr インスタンスを作成して](../cpp/how-to-create-and-use-shared-ptr-instances.md)と[shared_ptr クラス](../standard-library/shared-ptr-class.md)します。
 
-- `weak_ptr` 組み合わせて使用するための特別なケース スマート ポインター`shared_ptr`します。 `weak_ptr` は、1 つ以上の `shared_ptr` インスタンスが所有するオブジェクトへのアクセスを提供しますが、参照カウントには参加しません。 オブジェクトを観察するが、オブジェクトを維持しておく必要はない場合に使用します。 `shared_ptr` インスタンス間の循環参照を解除するいくつかのケースで必要です。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: weak_ptr インスタンスを作成して](../cpp/how-to-create-and-use-weak-ptr-instances.md)と[weak_ptr クラス](../standard-library/weak-ptr-class.md)します。
+- `weak_ptr`<br/>
+    `shared_ptr` と同時に使用する特殊ケースのスマート ポインターです。 `weak_ptr` は、1 つ以上の `shared_ptr` インスタンスが所有するオブジェクトへのアクセスを提供しますが、参照カウントには参加しません。 オブジェクトを観察するが、オブジェクトを維持しておく必要はない場合に使用します。 `shared_ptr` インスタンス間の循環参照を解除するいくつかのケースで必要です。 ヘッダー ファイルは `<memory>` です。 詳細については、次を参照してください。[方法: weak_ptr インスタンスを作成して](../cpp/how-to-create-and-use-weak-ptr-instances.md)と[weak_ptr クラス](../standard-library/weak-ptr-class.md)します。
 
 ### <a name="smart-pointers-for-com-objects-classic-windows-programming"></a>COM オブジェクト用のスマート ポインター (従来の Windows プログラミング)
 

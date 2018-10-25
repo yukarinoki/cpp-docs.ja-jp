@@ -204,12 +204,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28a548c50345601dda85d79ec4c40f1632ab316f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1dcf14a23331ef783a25d75ed167703dcd4ffd7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065670"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane クラス
 
@@ -275,7 +275,7 @@ class CMFCTasksPane : public CDockablePane
 |[CMFCTasksPane::GetTasksIconHorzOffset](#gettasksiconhorzoffset)||
 |[CMFCTasksPane::GetTasksIconVertOffset](#gettasksiconvertoffset)||
 |[CMFCTasksPane::GetVertMargin](#getvertmargin)|作業ウィンドウとクライアント領域の端との上下の間隔を返します。|
-|[CMFCTasksPane::IsAccessibilityCompatible](#isaccessibilitycompatible)|(`CDockablePane::IsAccessibilityCompatible` をオーバーライドします)。|
+|[CMFCTasksPane::IsAccessibilityCompatible](#isaccessibilitycompatible)|( `CDockablePane::IsAccessibilityCompatible`をオーバーライドします)。|
 |[CMFCTasksPane::IsAnimationEnabled](#isanimationenabled)|アニメーションが有効かどうかを示します。|
 |[CMFCTasksPane::IsBackButtonEnabled](#isbackbuttonenabled)|[戻る] ボタンが有効かどうかを示します。|
 |[CMFCTasksPane::IsForwardButtonEnabled](#isforwardbuttonenabled)|[進む] ボタンが有効かどうかを示します。|
@@ -350,7 +350,7 @@ class CMFCTasksPane : public CDockablePane
 
 1. `CMFCTasksPane` オブジェクトをメイン フレーム ウィンドウ クラスに埋め込みます。
 
-1. WM_CREATE メッセージを処理するときに呼び出す、`Create`メソッド。 標準を使用する[CControlBar](../../mfc/reference/ccontrolbar-class.md)スタイル。 詳細については、「`CControlBar::Create`」を参照してください。
+1. WM_CREATE メッセージを処理するときに呼び出す、`Create`メソッド。 標準を使用する[CControlBar](../../mfc/reference/ccontrolbar-class.md)スタイル。 詳細については、「 `CControlBar::Create` 」を参照してください。
 
 1. 呼び出す、 [cmfctaskspane::addgroup](#addgroup)さまざまなグループを追加するメソッド。
 
@@ -380,7 +380,7 @@ class CMFCTasksPane : public CDockablePane
 
 `CMFCTasksPane`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxTasksPane.h
 
@@ -395,7 +395,6 @@ int AddGroup(
     BOOL bBottomLocation = FALSE,
     BOOL bSpecial = FALSE,
     HICON hIcon = NULL);
-
 
 int AddGroup(
     LPCTSTR lpszGroupName,
@@ -506,14 +505,13 @@ int AddPage(LPCTSTR lpszPageLabel);
 
 ##  <a name="addseparator"></a>  CMFCTasksPane::AddSeparator
 
-
 ```
 int AddSeparator(int nGroup);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*n グループ*
+[in]*n グループ*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -601,10 +599,8 @@ CMFCTasksPane();
 
 ##  <a name="collapseallgroups"></a>  CMFCTasksPane::CollapseAllGroups
 
-
 ```
 void CollapseAllGroups(BOOL bCollapse = TRUE);
-
 
 void CollapseAllGroups(
     int nPageIdx,
@@ -613,8 +609,8 @@ void CollapseAllGroups(
 
 ### <a name="parameters"></a>パラメーター
 
-*bCollapse*<br/>
-[in][in]*nPageIdx*
+[in]*bCollapse*<br/>
+[in]*nPageIdx*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -626,7 +622,6 @@ void CollapseAllGroups(
 BOOL CollapseGroup(
     CMFCTasksPaneTaskGroup* pGroup,
     BOOL bCollapse = TRUE);
-
 
 BOOL CollapseGroup(
     int nGroup,
@@ -654,14 +649,13 @@ BOOL CollapseGroup(
 
 ##  <a name="createdefaultminiframe"></a>  CMFCTasksPane::CreateDefaultMiniframe
 
-
 ```
 virtual CPaneFrameWnd* CreateDefaultMiniframe(CRect rectInitial);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectInitial*
+[in]*rectInitial*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -774,14 +768,13 @@ void EnableNavigationToolbar(
 
 ##  <a name="enableoffsetcustomcontrols"></a>  CMFCTasksPane::EnableOffsetCustomControls
 
-
 ```
 void EnableOffsetCustomControls(BOOL bEnable);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bEnable*
+[in]*bEnable*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -952,14 +945,13 @@ int GetHorzMargin() const;
 
 ##  <a name="getnextpages"></a>  CMFCTasksPane::GetNextPages
 
-
 ```
 void GetNextPages(CStringList& lstNextPages) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lstNextPages*
+[in]*lstNextPages*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -999,19 +991,17 @@ int GetPagesCount() const;
 
 ##  <a name="getpreviouspages"></a>  CMFCTasksPane::GetPreviousPages
 
-
 ```
 void GetPreviousPages(CStringList& lstPrevPages) const;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lstPrevPages*
+[in]*lstPrevPages*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="getscrollbarctrl"></a>  CMFCTasksPane::GetScrollBarCtrl
-
 
 ```
 virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
@@ -1019,7 +1009,7 @@ virtual CScrollBar* GetScrollBarCtrl(int nBar) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*れる*
+[in]*れる*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1145,7 +1135,6 @@ int GetTasksHorzOffset() const;
 
 ##  <a name="gettasksiconhorzoffset"></a>  CMFCTasksPane::GetTasksIconHorzOffset
 
-
 ```
 int GetTasksIconHorzOffset() const;
 ```
@@ -1155,7 +1144,6 @@ int GetTasksIconHorzOffset() const;
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="gettasksiconvertoffset"></a>  CMFCTasksPane::GetTasksIconVertOffset
-
 
 ```
 int GetTasksIconVertOffset() const;
@@ -1182,7 +1170,6 @@ int GetVertMargin() const;
 縦の余白は、作業ウィンドウとクライアント領域の端の間のスペースです。 縦の余白の既定値は、12 ピクセルです。
 
 ##  <a name="isaccessibilitycompatible"></a>  CMFCTasksPane::IsAccessibilityCompatible
-
 
 ```
 virtual BOOL IsAccessibilityCompatible();
@@ -1242,7 +1229,6 @@ BOOL IsForwardButtonEnabled() const;
 
 ##  <a name="isgroupcollapseenabled"></a>  CMFCTasksPane::IsGroupCollapseEnabled
 
-
 ```
 BOOL IsGroupCollapseEnabled() const;
 ```
@@ -1276,7 +1262,6 @@ BOOL IsNavigationToolbarEnabled() const;
 ナビゲーション ツールバーが有効な場合は TRUE。それ以外の場合、FALSE です。
 
 ##  <a name="istoolbox"></a>  CMFCTasksPane::IsToolBox
-
 
 ```
 virtual BOOL IsToolBox() const;
@@ -1312,7 +1297,6 @@ BOOL IsWrapTasksEnabled() const;
 
 ##  <a name="loadstate"></a>  CMFCTasksPane::LoadState
 
-
 ```
 virtual BOOL LoadState(
     LPCTSTR lpszProfileName = NULL,
@@ -1322,8 +1306,9 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszProfileName*<br/>
-[in][in]*nIndex* [in] *uiID*
+[in]*lpszProfileName*<br/>
+[in]*nIndex*<br/>
+[in]*uiID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1342,7 +1327,6 @@ virtual void OnActivateTasksPanePage();
 作業ウィンドウ ページの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。
 
 ##  <a name="oncancel"></a>  CMFCTasksPane::OnCancel
-
 
 ```
 virtual void OnCancel();
@@ -1383,7 +1367,6 @@ virtual void OnClickTask(
 タスクがクリックされたときに、カスタム コードを実行する派生クラスでこのメソッドをオーバーライドします。
 
 ##  <a name="onok"></a>  CMFCTasksPane::OnOK
-
 
 ```
 virtual void OnOK();
@@ -1435,7 +1418,6 @@ virtual void OnPressHomeButton();
 
 ##  <a name="onpressotherbutton"></a>  CMFCTasksPane::OnPressOtherButton
 
-
 ```
 virtual void OnPressOtherButton(
     CMFCCaptionMenuButton* pbtn,
@@ -1444,13 +1426,12 @@ virtual void OnPressOtherButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*pbtn*<br/>
-[in][in]*pWndOwner*
+[in]*pbtn*<br/>
+[in]*pWndOwner*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="onsetaccdata"></a>  CMFCTasksPane::OnSetAccData
-
 
 ```
 virtual BOOL OnSetAccData(long lVal);
@@ -1458,14 +1439,13 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lVal*
+[in]*lVal*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="onupdatecmdui"></a>  CMFCTasksPane::OnUpdateCmdUI
-
 
 ```
 virtual void OnUpdateCmdUI(
@@ -1475,13 +1455,12 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="parameters"></a>パラメーター
 
-*pTarget*<br/>
-[in][in]*持たず*
+[in]*pTarget*<br/>
+[in]*持たず*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="pretranslatemessage"></a>  CMFCTasksPane::PreTranslateMessage
-
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -1489,7 +1468,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pMsg*
+[in]*pMsg*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1497,14 +1476,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ##  <a name="recalclayout"></a>  CMFCTasksPane::RecalcLayout
 
-
 ```
 void RecalcLayout(BOOL bRedraw = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bRedraw*
+[in]*bRedraw*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1606,7 +1584,6 @@ BOOL RemoveTask(
 
 ##  <a name="savestate"></a>  CMFCTasksPane::SaveState
 
-
 ```
 virtual BOOL SaveState(
     LPCTSTR lpszProfileName = NULL,
@@ -1616,8 +1593,9 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszProfileName*<br/>
-[in][in]*nIndex* [in] *uiID*
+[in]*lpszProfileName*<br/>
+[in]*nIndex*<br/>
+[in]*uiID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1625,14 +1603,13 @@ virtual BOOL SaveState(
 
 ##  <a name="serialize"></a>  CMFCTasksPane::Serialize
 
-
 ```
 virtual void Serialize(CArchive& ar);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ar*
+[in]*ar*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1905,19 +1882,17 @@ void SetTasksHorzOffset(int n = -1);
 
 ##  <a name="settasksiconhorzoffset"></a>  CMFCTasksPane::SetTasksIconHorzOffset
 
-
 ```
 void SetTasksIconHorzOffset(int n = -1);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*n*
+[in]*n*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="settasksiconvertoffset"></a>  CMFCTasksPane::SetTasksIconVertOffset
-
 
 ```
 void SetTasksIconVertOffset(int n = -1);
@@ -1925,7 +1900,7 @@ void SetTasksIconVertOffset(int n = -1);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*n*
+[in]*n*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1988,7 +1963,6 @@ BOOL SetWindowHeight(
     HWND hwndTask,
     int nWndHeight);
 
-
 BOOL SetWindowHeight(
     HWND hwndTask,
     int nWndHeight);
@@ -2015,14 +1989,13 @@ BOOL SetWindowHeight(
 
 ##  <a name="showcommandmessagestring"></a>  CMFCTasksPane::ShowCommandMessageString
 
-
 ```
 virtual void ShowCommandMessageString(UINT uiCmdId);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCmdId*
+[in]*uiCmdId*<br/>
 
 ### <a name="remarks"></a>Remarks
 

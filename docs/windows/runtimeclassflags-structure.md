@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: c5bfd9fc6dd87c61149722e8ef7fed79f8f017da
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 90b590637935b7dbeaa0bb6a07ed84faeb0d0a1d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788839"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076180"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 構造体
 
@@ -54,7 +54,7 @@ A [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。
 
 `RuntimeClassFlags`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** implements.h
 
@@ -63,7 +63,7 @@ A [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。
 ## <a name="value-constant"></a>Runtimeclassflags::value 定数
 
 含むフィールドを[RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。
-  
+
 ```cpp
 static const unsigned int value = flags;
 ```

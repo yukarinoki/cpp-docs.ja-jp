@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 5867f9524d897657641ab9db392d77585117a465
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 86a820e54e63c21c3ec4b9ace538bd6bfb4e9c0a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234992"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052866"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト
 
@@ -36,35 +36,35 @@ Windows フォームと MFC を示すサンプル アプリケーションの場
 
 1. MFC アプリケーション プロジェクトを作成します。
 
-     **ファイル**メニューの [**新規**、] をクリックし、**プロジェクト**します。 **Visual C**フォルダーで、 **MFC アプリケーション**します。
+   **ファイル**メニューの [**新規**、] をクリックし、**プロジェクト**します。 **Visual C**フォルダーで、 **MFC アプリケーション**します。
 
-     **名前**ボックスに、入力`MFC03`ソリューションの設定を変更および**ソリューションに追加**します。クリックして**OK**します。
+   **名前**ボックスに、入力`MFC03`ソリューションの設定を変更および**ソリューションに追加**します。クリックして**OK**します。
 
-     **MFC アプリケーション ウィザード**すべての既定値をそのまま使用し、クリックして**完了**します。 これにより、マルチ ドキュメント インターフェイスを持つ MFC アプリケーションが作成されます。
+   **MFC アプリケーション ウィザード**すべての既定値をそのまま使用し、クリックして**完了**します。 これにより、マルチ ドキュメント インターフェイスを持つ MFC アプリケーションが作成されます。
 
 1. プロジェクトを構成します。
 
-     **ソリューション エクスプ ローラー**を右クリックし、 **MFC03**プロジェクト ノード、**プロパティ**します。 **プロパティ ページ** ダイアログ ボックスが表示されます。
+   **ソリューション エクスプ ローラー**を右クリックし、 **MFC03**プロジェクト ノード、**プロパティ**します。 **プロパティ ページ** ダイアログ ボックスが表示されます。
 
-     **プロパティ ページ** ダイアログ ボックスで、**構成プロパティ**ツリー コントロールで、**全般**、次に、**プロジェクトの既定値**セクションで、設定**共通言語ランタイム サポート**に**共通言語ランタイム サポート (/clr)** します。 **[OK]** をクリックします。
+   **プロパティ ページ** ダイアログ ボックスで、**構成プロパティ**ツリー コントロールで、**全般**、次に、**プロジェクトの既定値**セクションで、設定**共通言語ランタイム サポート**に**共通言語ランタイム サポート (/clr)** します。 **[OK]** をクリックします。
 
 1. .NET コントロールへの参照を追加します。
 
-     **ソリューション エクスプ ローラー**を右クリックし、 **MFC03**プロジェクト ノード**追加**、**参照**します。 **プロパティ ページ**、 をクリックして**新しい参照の追加**、WindowsControlLibrary1 を選択します (下、**プロジェクト** タブ)、 をクリック**OK**。 形式での参照が追加されます、 [/FU](../build/reference/fu-name-forced-hash-using-file.md)コンパイラは、プログラムをコンパイルするためのオプションは、WindowsControlLibrary1.dll にもコピー、`MFC03`プログラムを実行するためのプロジェクト ディレクトリ。
+   **ソリューション エクスプ ローラー**を右クリックし、 **MFC03**プロジェクト ノード**追加**、**参照**します。 **プロパティ ページ**、 をクリックして**新しい参照の追加**、WindowsControlLibrary1 を選択します (下、**プロジェクト** タブ)、 をクリック**OK**。 形式での参照が追加されます、 [/FU](../build/reference/fu-name-forced-hash-using-file.md)コンパイラは、プログラムをコンパイルするためのオプションは、WindowsControlLibrary1.dll にもコピー、`MFC03`プログラムを実行するためのプロジェクト ディレクトリ。
 
 1. stdafx.h の既存の `#include <afxwinforms.h>` ステートメントの最後に `#include` を追加します。
 
 1. `CDialog` をサブクラスとして持つ新しいクラスを追加します。
 
-     プロジェクト名を右クリックし、`CDialog` をサブクラスとして持つ (CHostForWinForm という名前の) MFC クラスを追加します。 ダイアログ ボックスのリソースを使用する必要はありません、ために、リソース ID を削除することができます (選択**リソース ビュー**、展開、**ダイアログ**フォルダーおよび delete`IDD_HOSTFORWINFORM`リソース。  次に、コード内のこの ID への参照を削除します。
+   プロジェクト名を右クリックし、`CDialog` をサブクラスとして持つ (CHostForWinForm という名前の) MFC クラスを追加します。 ダイアログ ボックスのリソースを使用する必要はありません、ために、リソース ID を削除することができます (選択**リソース ビュー**、展開、**ダイアログ**フォルダーおよび delete`IDD_HOSTFORWINFORM`リソース。  次に、コード内のこの ID への参照を削除します。
 
 1. CHostForWinForm.h ファイルと CHostForWinForm.cpp ファイル内にある `CDialog` を `CWinFormsDialog<WindowsControlLibrary1::UserControl1>` に置き換えます。
 
 1. CHostForWinForm クラスで DoModal を呼び出します。
 
-     MFC03.cpp で、`#include "HostForWinForm.h"` を追加します。
+   MFC03.cpp で、`#include "HostForWinForm.h"` を追加します。
 
-     CMFC03App::InitInstance の定義内の return ステートメントの前に、次のコードを追加します。
+   CMFC03App::InitInstance の定義内の return ステートメントの前に、次のコードを追加します。
 
     ```cpp
     CHostForWinForm m_HostForWinForm;
@@ -73,15 +73,15 @@ Windows フォームと MFC を示すサンプル アプリケーションの場
 
 1. プロジェクトをビルドして実行します。
 
-     **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
+   **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-     **デバッグ** メニューのをクリックして**デバッグなしで開始**します。
+   **デバッグ** メニューのをクリックして**デバッグなしで開始**します。
 
-     次に、MFC アプリケーションから Windows フォーム上のコントロールの状態を監視するコードを追加します。
+   次に、MFC アプリケーションから Windows フォーム上のコントロールの状態を監視するコードを追加します。
 
 9. OnInitDialog のハンドラーを追加します。
 
-     表示、**プロパティ**ウィンドウ (F4)。 **クラス ビュー**CHostForWinForm を選択します。 **プロパティ**ウィンドウで、選択をオーバーライドし、OnInitDialog の行、左側の列内をクリックし、選択\<追加 >。 これにより、次の行が CHostForWinForm.h に追加されます。
+   表示、**プロパティ**ウィンドウ (F4)。 **クラス ビュー**CHostForWinForm を選択します。 **プロパティ**ウィンドウで、選択をオーバーライドし、OnInitDialog の行、左側の列内をクリックし、選択\<追加 >。 これにより、次の行が CHostForWinForm.h に追加されます。
 
     ```cpp
     virtual BOOL OnInitDialog();
@@ -107,7 +107,7 @@ Windows フォームと MFC を示すサンプル アプリケーションの場
     END_DELEGATE_MAP()
     ```
 
-     CHostForWinForm.cpp で、次の定義を追加します。
+   CHostForWinForm.cpp で、次の定義を追加します。
 
     ```
     void CHostForWinForm::OnButton1( System::Object^ sender, System::EventArgs^ e )
@@ -118,7 +118,7 @@ Windows フォームと MFC を示すサンプル アプリケーションの場
 
 12. プロジェクトをビルドして実行します。 Windows フォーム上のボタンをクリックすると、MFC アプリケーション内のコードが実行されます。
 
-     次に、MFC コードから Windows フォーム上のテキスト ボックスの値を表示するコードを追加します。
+   次に、MFC コードから Windows フォーム上のテキスト ボックスの値を表示するコードを追加します。
 
 13. CHostForWinForm.h 内の CHostForWinForm クラスのパブリック セクションに、次の宣言を追加します。
 

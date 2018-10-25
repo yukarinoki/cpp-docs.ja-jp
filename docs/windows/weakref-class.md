@@ -29,12 +29,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: adbd47e8aeeb777b9a5e077429d74ef542abb85d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: f40e0509f5e532ea85930052a6bda35d89e47ae1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788813"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071025"
 ---
 # <a name="weakref-class"></a>WeakRef クラス
 
@@ -75,7 +75,7 @@ A`WeakRef`オブジェクトを保持する*強い参照*、これは、オブ�
 
 A`WeakRef`オブジェクトは通常、外部スレッドまたはアプリケーションによって存在が制御されるオブジェクトを表すために使用します。 たとえば、構築、`WeakRef`ファイル オブジェクトへの参照からオブジェクト。 ファイルが開いている間、強い参照は有効です。 しかし、ファイルが閉じられた場合、強い参照は無効になります。
 
-動作の変更があることに注意してください、[として](#as)、 [AsIID](#asiid)と[CopyTo](#copyto) Windows 10 SDK のメソッド。 以前は、これらのメソッドを呼び出した後でしたを確認する、`WeakRef`の`nullptr`が次のコードのように、強い参照を取得が正常にかどうかを決定します。
+なお、Windows 10 SDK では [As](#as)、 [AsIID](#asiid) 、 [CopyTo](#copyto) の各メソッドの動作が変更されています。 以前は、これらのメソッドを呼び出した後でしたを確認する、`WeakRef`の`nullptr`が次のコードのように、強い参照を取得が正常にかどうかを決定します。
 
 ```cpp
 WeakRef wr;
@@ -88,7 +88,7 @@ HRESULT hr = wr.As(&strongRef);
 
 // This check won't work with the Windows 10 SDK version of the library.
 // Check the input pointer instead.
-if(wr == nullptr)  
+if(wr == nullptr)
 {
     wprintf(L"Couldn’t get strong ref!");
 }
@@ -97,7 +97,7 @@ if(wr == nullptr)
 上記のコードは、Windows 10 SDK (以降) の使用時には機能しません。 渡されたポインターを代わりに、チェック`nullptr`します。
 
 ```cpp
-if (strongRef == nullptr)  
+if (strongRef == nullptr)
 {
     wprintf(L"Couldn't get strong ref!");
 }
@@ -109,7 +109,7 @@ if (strongRef == nullptr)
 
 `WeakRef`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** client.h
 
@@ -244,7 +244,7 @@ S_OK の戻り値はこの操作が成功したことを示しますが、弱い
 返します、`ComPtrRef`現在を表すオブジェクトを`WeakRef`オブジェクト。
 
 ```cpp
-Details::ComPtrRef<WeakRef> operator&() throw()  
+Details::ComPtrRef<WeakRef> operator&() throw()
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -262,7 +262,7 @@ A`ComPtrRef`現在を表すオブジェクトを`WeakRef`オブジェクト。
 ```cpp
 WeakRef();
 WeakRef(
-   decltype(__nullptr)  
+   decltype(__nullptr)
 );
 
 WeakRef(

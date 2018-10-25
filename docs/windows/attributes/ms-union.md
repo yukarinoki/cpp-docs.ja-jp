@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 720d03cbab6712e5d76c5ee22c2e12b7b1b65742
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 95a477e3d62a9ca2678101c8de51a814186c9488
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791220"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061392"
 ---
 # <a name="msunion"></a>ms_union
 
@@ -65,7 +65,7 @@ __interface IFireTabCtrl {
 [module(name="ATLFIRELib")];
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -76,9 +76,9 @@ __interface IFireTabCtrl {
 |**必要な属性**|なし|
 |**無効な属性**|`dispinterface`|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
-[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)  
+[Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)

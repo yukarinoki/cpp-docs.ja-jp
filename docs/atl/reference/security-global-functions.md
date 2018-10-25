@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a2cdeef97b92550731b06dcb4a1d425d77f5920a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: bbac8dc499c08d96abd33d49f5adec08095ca420
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075160"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067294"
 ---
 # <a name="security-global-functions"></a>セキュリティに関するグローバル関数
 
@@ -50,11 +50,11 @@ ms.locfileid: "46075160"
 |[AtlSetOwnerSid](#atlsetownersid)|オブジェクトの所有者セキュリティ識別子 (SID: Security Identifier) を設定します。|
 |[AtlGetSacl](#atlgetsacl)|指定されたオブジェクトのシステム アクセス制御リスト (SACL: System Access Control List) の情報を取得します。|
 |[AtlSetSacl](#atlsetsacl)|指定されたオブジェクトのシステム アクセス制御リスト (SACL: System Access Control List) の情報を設定します。|
-|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|指定されたオブジェクトのセキュリティ記述子を取得します。|  
+|[AtlGetSecurityDescriptor](#atlgetsecuritydescriptor)|指定されたオブジェクトのセキュリティ記述子を取得します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsecurity.h 
+**ヘッダー:** atlsecurity.h
 
 ##  <a name="atlgetdacl"></a>  AtlGetDacl
 
@@ -125,9 +125,9 @@ inline bool AtlSetDacl(
 ### <a name="remarks"></a>Remarks
 
 場合、デバッグ ビルドで、アサーション エラーが発生*hObject*が有効でない場合、または*dwInheritanceFlowControl*許可されている 3 つの値ではありません。
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsecurity.h 
+**ヘッダー:** atlsecurity.h
 
 ##  <a name="atlgetgroupsid"></a>  AtlGetGroupSid
 
@@ -156,11 +156,11 @@ inline bool AtlGetGroupSid(
 
 ### <a name="return-value"></a>戻り値
 
-正常に終了した場合は true を返します。失敗した場合は false を返します。  
+正常に終了した場合は true を返します。失敗した場合は false を返します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsecurity.h 
+**ヘッダー:** atlsecurity.h
 
 ##  <a name="atlsetgroupsid"></a>  AtlSetGroupSid
 
@@ -189,11 +189,11 @@ inline bool AtlSetGroupSid(
 
 ### <a name="return-value"></a>戻り値
 
-正常に終了した場合は true を返します。失敗した場合は false を返します。  
+正常に終了した場合は true を返します。失敗した場合は false を返します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsecurity.h 
+**ヘッダー:** atlsecurity.h
 
 ##  <a name="atlgetownersid"></a>  AtlGetOwnerSid
 
@@ -222,11 +222,11 @@ inline bool AtlGetOwnerSid(
 
 ### <a name="return-value"></a>戻り値
 
-正常に終了した場合は true を返します。失敗した場合は false を返します。  
+正常に終了した場合は true を返します。失敗した場合は false を返します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsecurity.h 
+**ヘッダー:** atlsecurity.h
 
 ##  <a name="atlsetownersid"></a>  AtlSetOwnerSid
 
@@ -255,11 +255,11 @@ inline bool AtlSetOwnerSid(
 
 ### <a name="return-value"></a>戻り値
 
-正常に終了した場合は true を返します。失敗した場合は false を返します。  
+正常に終了した場合は true を返します。失敗した場合は false を返します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsecurity.h 
+**ヘッダー:** atlsecurity.h
 
 ##  <a name="atlgetsacl"></a>  AtlGetSacl
 
@@ -296,11 +296,11 @@ True の場合、関数が SE_SECURITY_NAME 特権には、有効にして、完
 
 ### <a name="remarks"></a>Remarks
 
-場合`AtlGetSacl`が何度もを多数の異なるオブジェクトで呼び出されると、関数を呼び出す前に 1 回 SE_SECURITY_NAME 特権を有効にする方が効率的になります*bRequestNeededPrivileges*を false に設定します。  
+場合`AtlGetSacl`が何度もを多数の異なるオブジェクトで呼び出されると、関数を呼び出す前に 1 回 SE_SECURITY_NAME 特権を有効にする方が効率的になります*bRequestNeededPrivileges*を false に設定します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsecurity.h 
+**ヘッダー:** atlsecurity.h
 
 ##  <a name="atlsetsacl"></a>  AtlSetSacl
 
@@ -343,11 +343,11 @@ True の場合、関数が SE_SECURITY_NAME 特権には、有効にして、完
 
 場合、デバッグ ビルドで、アサーション エラーが発生*hObject*が有効でない場合、または*dwInheritanceFlowControl*許可されている 3 つの値ではありません。
 
-場合`AtlSetSacl`が何度もを多数の異なるオブジェクトで呼び出されると、関数を呼び出す前に 1 回 SE_SECURITY_NAME 特権を有効にする方が効率的になります*bRequestNeededPrivileges*を false に設定します。  
+場合`AtlSetSacl`が何度もを多数の異なるオブジェクトで呼び出されると、関数を呼び出す前に 1 回 SE_SECURITY_NAME 特権を有効にする方が効率的になります*bRequestNeededPrivileges*を false に設定します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlsecurity.h 
+**ヘッダー:** atlsecurity.h
 
 ##  <a name="atlgetsecuritydescriptor"></a>  AtlGetSecurityDescriptor
 
@@ -390,9 +390,9 @@ True の場合、関数が SE_SECURITY_NAME 特権には、有効にして、完
 
 ### <a name="remarks"></a>Remarks
 
-場合`AtlGetSecurityDescriptor`が何度もを多数の異なるオブジェクトで呼び出されると、関数を呼び出す前に 1 回 SE_SECURITY_NAME 特権を有効にする方が効率的になります*bRequestNeededPrivileges*を false に設定します。  
+場合`AtlGetSecurityDescriptor`が何度もを多数の異なるオブジェクトで呼び出されると、関数を呼び出す前に 1 回 SE_SECURITY_NAME 特権を有効にする方が効率的になります*bRequestNeededPrivileges*を false に設定します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsecurity.h
 

@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26e59888a26b5f71b697e398e81b16012dd35e3a
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: c9844c610a1b5bffab8f5fba67daff90a52412e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42541411"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065175"
 ---
 # <a name="includealias"></a>include_alias
 
@@ -31,7 +31,7 @@ ms.locfileid: "42541411"
 
 ## <a name="syntax"></a>構文
 
-> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias("*long_filename*", "*short_filename*")  
+> #<a name="pragma-includealiaslongfilename-shortfilename"></a>pragma include_alias("*long_filename*", "*short_filename*")
 > #<a name="pragma-includealiaslongfilename-shortfilename"></a>プラグマ include_alias (*long_filename*、 *short_filename*)
 
 ## <a name="remarks"></a>Remarks
@@ -59,7 +59,7 @@ ms.locfileid: "42541411"
 ```
 
 ヘッダー ファイル文字列が正確に一致しないため、エイリアシング (置換) は実行されません。 引数として使用されるヘッダー ファイル名も、`/Yu`と`/Yc`コンパイラ オプション、または`hdrstop`プラグマを置き換えられません。 たとえば、ソース ファイルに次のディレクティブが含まれている場合、
-  
+
 ```cpp
 #include <AppleSystemHeaderStop.h>
 ```
@@ -111,7 +111,7 @@ myfile.h(15) : error C2059 : syntax error
 #include "one.h"
 ```
 
-コンパイラは、THREE.H. ではなく、TWO.H ファイルを探します。  
+コンパイラは、THREE.H. ではなく、TWO.H ファイルを探します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 29e5b2783dda3c66736a7e668186d0645cdd4b84
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861318"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058337"
 ---
 # <a name="storage-classes-c"></a>ストレージ クラス (C++)
 
@@ -35,7 +35,6 @@ A*ストレージ クラス*C++ のコンテキストでの変数宣言は、オ
 1. [変更可能な](../cpp/mutable-data-members-cpp.md)キーワードが、ストレージ クラス指定子として見なされます。 ただし、クラス定義のメンバー一覧でのみ使用できます。
 
 1. **Visual C 2010 以降:** 、**自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**登録**キーワードは C++ 言語から削除されます。
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

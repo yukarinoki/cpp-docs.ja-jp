@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 19f6a895eb48b3ae1816edc45747c865e7e03b96
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c1b8cca1453ef4a044a39853e615c5d0e6c3268f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420154"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50051890"
 ---
 # <a name="dynamic-object-creation"></a>オブジェクトの動的生成
 
@@ -32,7 +32,7 @@ ms.locfileid: "46420154"
 
 1. 使用してオブジェクトを動的に作成する次のコードを使用して、`CreateObject`の関数、`CRuntimeClass`します。 失敗した場合、なお`CreateObject`返します**NULL**例外を発生させる代わりに。
 
-     [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#6](../mfc/codesnippet/cpp/dynamic-object-creation_1.cpp)]
 
 ## <a name="see-also"></a>関連項目
 

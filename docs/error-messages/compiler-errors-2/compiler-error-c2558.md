@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fd6f38ff8fbe0c4179addf46a43a35be4237b73e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6129bea28b943f8f18e1cf6b1e760e604223bdc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100839"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060937"
 ---
 # <a name="compiler-error-c2558"></a>コンパイラ エラー C2558
 
@@ -33,7 +33,7 @@ ms.locfileid: "46100839"
 
 1. この問題は、コピー コンストラクターが `private` であるクラスをコピーしようとしたときに発生する場合があります。 ほとんどの場合、`private` コピー コンストラクターを持つクラスはコピーできません。 一般的なプログラミング技法では、`private` コピー コンストラクターを宣言してクラスを直接使用しないようにします。 このクラスは、単独では役に立たない、つまり正常に機能させるには別のクラスを必要とする場合があります。
 
-     `private` コピー コンストラクターを持つクラスを使用しても安全であると判断したら、`private` コンストラクターを持つこのクラスから新しいクラスを派生させ、`public` コピー コンストラクターまたは `protected` コピー コンストラクターをその新しいクラスで使用できるようにします。 この派生クラスを元のクラスがあった位置で使用するとエラーを解決できます。
+   `private` コピー コンストラクターを持つクラスを使用しても安全であると判断したら、`private` コンストラクターを持つこのクラスから新しいクラスを派生させ、`public` コピー コンストラクターまたは `protected` コピー コンストラクターをその新しいクラスで使用できるようにします。 この派生クラスを元のクラスがあった位置で使用するとエラーを解決できます。
 
 1. この問題は、コピー コンストラクターが明示的であるクラスをコピーしようとしたときに発生する場合があります。 コピー コンストラクターを `explicit` として宣言すると、関数との間でクラス オブジェクトの受け渡しができなくなります。 明示的なコンス トラクターの詳細については、次を参照してください。[ユーザー定義型の変換](../../cpp/user-defined-type-conversions-cpp.md)します。
 

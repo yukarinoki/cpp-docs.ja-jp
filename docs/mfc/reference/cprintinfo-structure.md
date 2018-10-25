@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b12c93375618cacf25e88ecba6919808ac7bd705
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b8c1fb4d82bd1aaeb9f625fea66aa339a0ef4d97
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446859"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082893"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo 構造体
 
@@ -83,7 +83,7 @@ A`CPrintInfo`オブジェクトは、印刷プロセス中に、フレームワ�
 
 `CPrintInfo`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxext.h
 
@@ -93,7 +93,6 @@ A`CPrintInfo`オブジェクトは、印刷プロセス中に、フレームワ�
 
 ```
 UINT GetFromPage() const;
-
 
 ```
 
@@ -112,7 +111,6 @@ UINT GetFromPage() const;
 ```
 UINT GetMaxPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -129,7 +127,6 @@ UINT GetMaxPage() const;
 
 ```
 UINT GetMinPage() const;
-
 
 ```
 
@@ -148,7 +145,6 @@ DocObject クライアントから複数の項目の DocObject を印刷する�
 ```
 UINT GetOffsetPage() const;
 
-
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -165,7 +161,6 @@ UINT GetOffsetPage() const;
 
 ```
 UINT GetToPage() const;
-
 
 ```
 
@@ -345,6 +340,4 @@ void SetMinPage(UINT nMinPage);
 [付け](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [関数](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
 [のみ](../../mfc/reference/cview-class.md#onprint)
-
-
 

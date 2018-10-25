@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2801ddf7169bfd8d9ede93ada28cd4716057661c
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: e7ed87390608c05a215caf9c9991c286e5fb0be4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315744"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060976"
 ---
 # <a name="adding-files-to-an-empty-win32-applications"></a>空の Win32 アプリケーションへのファイルの追加
 
@@ -44,4 +44,4 @@ ms.locfileid: "44315744"
 
 ## <a name="see-also"></a>関連項目
 
-[空の Windows デスクトップ アプリケーションの作成](../windows/creating-an-empty-windows-desktop-application.md)  
+[空の Windows デスクトップ アプリケーションの作成](../windows/creating-an-empty-windows-desktop-application.md)

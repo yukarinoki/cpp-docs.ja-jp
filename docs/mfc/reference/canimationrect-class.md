@@ -48,12 +48,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e798862dc9e9d34d6a75461994989f685e33a554
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ec22bfd2805f4af432821c4aaeb350a2cf635cfa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436027"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083426"
 ---
 # <a name="canimationrect-class"></a>CAnimationRect クラス
 
@@ -127,7 +127,7 @@ CAnimationRect クラスは、4 つの CAnimationVariable オブジェクトを�
 
 `CAnimationRect`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxanimationcontroller.h
 
@@ -168,13 +168,11 @@ CAnimationRect オブジェクトを構築します。
 ```
 CAnimationRect();
 
-
 CAnimationRect(
     const CRect& rect,
     UINT32 nGroupID,
     UINT32 nObjectID = (UINT32)-1,
     DWORD dwUserData = 0);
-
 
 CAnimationRect(
     const CPoint& pt,
@@ -182,7 +180,6 @@ CAnimationRect(
     UINT32 nGroupID,
     UINT32 nObjectID = (UINT32)-1,
     DWORD dwUserData = 0);
-
 
 CAnimationRect(
     int nLeft,

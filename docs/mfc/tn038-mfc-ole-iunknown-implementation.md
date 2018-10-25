@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6bf8f299ef46166c5b09a716e5bed21fd3b9b01
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 84d37ad6303a9e5b4fb9d238dd8c15c3a40ccef6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387108"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058794"
 ---
 # <a name="tn038-mfcole-iunknown-implementation"></a>テクニカル ノート 38: MFC/OLE IUnknown の実装
 
@@ -57,7 +57,7 @@ public:
 ```
 
 > [!NOTE]
-> この説明では、必要な呼び出し規約の詳細の一部 (`__stdcall` など) を省略しています。
+> この説明では、必要な呼び出し規則の詳細の一部 (`__stdcall` など) を省略しています。
 
 [AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)と[リリース](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)メンバー関数は、オブジェクトのメモリ管理を制御します。 COM は、参照カウント スキームを使用してオブジェクトを追跡します。 C++ と異なり、オブジェクトが直接参照されることはありません。 COM オブジェクトは、常にポインターを通じて参照されます。 所有者が行われるときに、オブジェクトを解放するを使用して、オブジェクトの[リリース](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)(従来の C++ オブジェクトの実行はような delete 演算子を使用して) ではなくメンバーが呼び出されます。 参照カウント スキームを使用することで、単一オブジェクトに対する多重参照を管理できます。 実装[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)と[リリース](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)オブジェクトの参照カウントを維持 — オブジェクトは、参照カウントが 0 になるまでは削除されません。
 
@@ -80,7 +80,7 @@ ULONG CMyObj::Release()
 }
 ```
 
-[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))もう少し興味深いは、メンバー関数。 唯一のメンバー関数は、オブジェクトがあるにとってあまり重要でない[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)と[リリース](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)-よりも多くを実行するオブジェクトを指示するできれば[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)提供します。 これは、ような場合[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))役に立ちます。 QueryInterface を使用すると、1 つのオブジェクトが複数の "インターフェイス" を持つことができます。 通常、これらのインターフェイスはから派生[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)し、新しいメンバー関数を追加することで機能を追加します。 COM インターフェイスでは、インターフェイス内でメンバー変数を宣言せず、メンバー関数はすべて純粋仮想として宣言します。 たとえば、オブジェクトに適用された
+[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))もう少し興味深いは、メンバー関数。 唯一のメンバー関数は、オブジェクトがあるにとってあまり重要でない[AddRef](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)と[リリース](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)-よりも多くを実行するオブジェクトを指示するできれば[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)提供します。 これは、ような場合[QueryInterface](/windows/desktop/api/unknwn/nf-unknwn-iunknown-queryinterface(q_))役に立ちます。 QueryInterface を使用すると、1 つのオブジェクトが複数の "インターフェイス" を持つことができます。 通常、これらのインターフェイスはから派生[IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)し、新しいメンバー関数を追加することで機能を追加します。 COM インターフェイスでは、インターフェイス内でメンバー変数を宣言せず、メンバー関数はすべて純粋仮想として宣言します。 例えば以下のようにします。
 
 ```cpp
 class IPrintInterface : public IUnknown
@@ -398,7 +398,6 @@ class CAggrExample : public CCmdTarget
 {
 public:
     CAggrExample();
-
 
 protected:
     LPUNKNOWN m_lpAggrInner;

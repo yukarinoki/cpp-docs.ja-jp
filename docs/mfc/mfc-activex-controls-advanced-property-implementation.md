@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa1116384ac9fd5212046f9a0b3354a3aa70d88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f18d9466c1608742f63e68caa639c1ad6697df1c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416085"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063654"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX コントロール : 高度なプロパティの実装
 
@@ -48,7 +48,7 @@ ms.locfileid: "46416085"
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**プロパティの追加**します。
 
-     開き、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)します。
+   開き、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)します。
 
 1. **プロパティ名**ボックス、プロパティの名前を入力します。
 

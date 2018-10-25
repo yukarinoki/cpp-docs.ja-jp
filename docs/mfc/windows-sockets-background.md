@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7fe08de0cbeaf6e70c8d786f3cfc849094117cd2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6146106a7ae378821fc7133d2d65597d1225cc1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389552"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079663"
 ---
 # <a name="windows-sockets-background"></a>Windows ソケット : 予備知識
 
@@ -69,11 +69,11 @@ Windows ソケット仕様では、Windows ソケットは Microsoft Windows で
 
 - ストリーム ソケット
 
-     ストリーム ソケットは、レコード境界のないデータ フロー、つまりバイト ストリーム用です。 ストリームは必ず配信され、正しく順序付けられて重複しません。
+   ストリーム ソケットは、レコード境界のないデータ フロー、つまりバイト ストリーム用です。 ストリームは必ず配信され、正しく順序付けられて重複しません。
 
 - データグラム ソケット
 
-     データグラム ソケットは、レコード指向のデータ フローをサポートします。このデータ フローは配信されるとは限らず、送信順になっていないことや重複していることがあります。
+   データグラム ソケットは、レコード指向のデータ フローをサポートします。このデータ フローは配信されるとは限らず、送信順になっていないことや重複していることがあります。
 
 "順序付けられた" とは、パケットが送信順に配信されることです。 "重複しない" とは、特定のパケットが一度だけ配信されることです。
 

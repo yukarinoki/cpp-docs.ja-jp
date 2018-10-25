@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b9479957fdfb4d6b92ec531941808940765a9e5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 150179fc0fd97450ba805d6957f5282bfaf8345c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116725"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071259"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
@@ -95,7 +95,6 @@ Constexpr 関数に次の規則が適用されます。
 - ローカル変数の宣言を含めることができますが、変数の初期化する必要があります、リテラルの型である必要があります、および静的あるいはスレッド ローカルにすることはできません。 ローカルに宣言された変数は const を指定する必要はありませんし、変更可能性があります。
 
 - Constexpr の非静的メンバー関数は、暗黙的に const を指定する必要はありません。
-
 
 ```cpp
 constexpr float exp(float x, int n)
@@ -184,7 +183,7 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Visual Studio 2015
 

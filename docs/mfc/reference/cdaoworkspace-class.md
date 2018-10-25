@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 964fab6030e0a89ef69730fd4867973e402db614
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a4a5b6936397728472bf0041735248157091db56
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442020"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054359"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace クラス
 
@@ -163,7 +163,7 @@ MFC dao でのセキュリティ制御に使用されるユーザーとグルー
 
 - 明示的に既定のワークスペースを開きます。
 
-     通常、既定のワークスペースの使用は暗黙的な-新しいが開く[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクト。 明示的にアクセスする必要がありますが、-などに access データベース エンジンのプロパティまたはワークスペースのコレクション。 「既定のワークスペースの暗黙的な使用」を参照してください。
+   通常、既定のワークスペースの使用は暗黙的な-新しいが開く[CDaoDatabase](../../mfc/reference/cdaodatabase-class.md)または[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)オブジェクト。 明示的にアクセスする必要がありますが、-などに access データベース エンジンのプロパティまたはワークスペースのコレクション。 「既定のワークスペースの暗黙的な使用」を参照してください。
 
 - 新しいワークスペースを作成します。 呼び出す[Append](#append)ワークスペース コレクションに追加する場合。
 
@@ -199,7 +199,7 @@ DAO セキュリティと DAO の直接の呼び出しについては、次を�
 
 `CDaoWorkspace`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -308,7 +308,6 @@ static void PASCAL CompactDatabase(
     LPCTSTR lpszDestName,
     LPCTSTR lpszLocale = dbLangGeneral,
     int nOptions = 0);
-
 
 static void PASCAL CompactDatabase(
     LPCTSTR lpszSrcName,
@@ -453,7 +452,6 @@ void GetDatabaseInfo(
     int nIndex,
     CDaoDatabaseInfo& dbinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetDatabaseInfo(
     LPCTSTR lpszName,
@@ -624,7 +622,6 @@ void GetWorkspaceInfo(
     int nIndex,
     CDaoWorkspaceInfo& wkspcinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetWorkspaceInfo(
     LPCTSTR lpszName,

@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 320457928ef8bc1a03d86b3a898bc0b719e116a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bcaaf4723e8b6a1ad40fb534b7114f317d76f6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442878"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060820"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>コレクションの全メンバーへのアクセス
 
@@ -48,38 +48,38 @@ MFC の配列コレクション クラスでは、テンプレート クラス�
 
 1. 連続したインデックス番号を使用して、 `GetAt` メンバー関数を呼び出します。
 
-     [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#12](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_1.cpp)]
 
-     この例では、 `CPerson` オブジェクトへのポインターを格納する型付きポインター配列を使っています。 この配列は、定義済みの非テンプレート クラスである `CObArray`クラスから派生しています。 `GetAt` は `CPerson` オブジェクトへのポインターを返します。 型付きポインター コレクション クラスの場合は、配列でもリストでも、最初のパラメーターで基本クラスを指定し、2 番目のパラメーターで格納するデータの型を指定します。
+   この例では、 `CPerson` オブジェクトへのポインターを格納する型付きポインター配列を使っています。 この配列は、定義済みの非テンプレート クラスである `CObArray`クラスから派生しています。 `GetAt` は `CPerson` オブジェクトへのポインターを返します。 型付きポインター コレクション クラスの場合は、配列でもリストでも、最初のパラメーターで基本クラスを指定し、2 番目のパラメーターで格納するデータの型を指定します。
 
-     `CTypedPtrArray`クラスのオーバー ロードではまた、 **[ ]** 演算子、配列の要素にアクセスする一般的な配列サブスクリプト構文を使用できるようにします。 代わりに、ステートメントの本体で、**の**上のコードは、
+   `CTypedPtrArray`クラスのオーバー ロードではまた、 **[ ]** 演算子、配列の要素にアクセスする一般的な配列サブスクリプト構文を使用できるようにします。 代わりに、ステートメントの本体で、**の**上のコードは、
 
-     [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#13](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_2.cpp)]
 
-     この演算子は **const** バージョンと非**const** バージョンがあります。 **const** バージョンは、 **const** の配列に対して呼び出され、代入ステートメントの右側にのみ表示されます。
+   この演算子は **const** バージョンと非**const** バージョンがあります。 **const** バージョンは、 **const** の配列に対して呼び出され、代入ステートメントの右側にのみ表示されます。
 
 ### <a name="_core_to_iterate_a_list"></a> リストを反復処理するには
 
 1. リスト内の項目を順に処理するには、 `GetHeadPosition` メンバー関数と `GetNext` メンバー関数を使用します。
 
-     [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
+   [!code-cpp[NVC_MFCCollections#14](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_3.cpp)]
 
-     この例では、型付きポインター リストを使用して、 `CPerson` オブジェクトへのポインターを格納します。 リストの宣言は、「 [配列を反復処理するには](#_core_to_iterate_an_array) 」の配列に対する宣言に似ていますが、 `CObList`クラスから派生しています。 `GetNext` は `CPerson` オブジェクトへのポインターを返します。
+   この例では、型付きポインター リストを使用して、 `CPerson` オブジェクトへのポインターを格納します。 リストの宣言は、「 [配列を反復処理するには](#_core_to_iterate_an_array) 」の配列に対する宣言に似ていますが、 `CObList`クラスから派生しています。 `GetNext` は `CPerson` オブジェクトへのポインターを返します。
 
 ### <a name="_core_to_iterate_a_map"></a> マップを反復処理するには
 
 1. `GetStartPosition` を使用してマップの先頭位置に移動し、 `GetNextAssoc` を使用して、次のキーと値をマップから順次取得します。次に例を示します。
 
-     [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#15](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_4.cpp)]
 
-     この例では、型付きポインター コレクションではなく、簡単なマップ テンプレートを使用しています。このテンプレートは、 `CString` 型のキーを使用し、 `CPerson` オブジェクトへのポインターを格納します。 `GetNextAssoc`などのアクセス関数を使用すると、 `CPerson` オブジェクトへのポインターが返されます。 非テンプレート マップ コレクションを使用すると、返された `CObject` ポインターを、 `CPerson`へのポインターにキャストする必要があります。
+   この例では、型付きポインター コレクションではなく、簡単なマップ テンプレートを使用しています。このテンプレートは、 `CString` 型のキーを使用し、 `CPerson` オブジェクトへのポインターを格納します。 `GetNextAssoc`などのアクセス関数を使用すると、 `CPerson` オブジェクトへのポインターが返されます。 非テンプレート マップ コレクションを使用すると、返された `CObject` ポインターを、 `CPerson`へのポインターにキャストする必要があります。
 
     > [!NOTE]
     >  非テンプレート マップの場合、コンパイラには、 `CObject` の最後のパラメーターとして `GetNextAssoc`ポインターへの参照が必要です。 入力時には、ポインターをその型にキャストする必要があります。次に例を示します。
 
-     テンプレートを使用すると、よりシンプルなソリューションが実現し、タイプ セーフもさらに確実になります。 テンプレートを使用しないコードは、次のようにより複雑になります。
+   テンプレートを使用すると、よりシンプルなソリューションが実現し、タイプ セーフもさらに確実になります。 テンプレートを使用しないコードは、次のようにより複雑になります。
 
-     [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
+   [!code-cpp[NVC_MFCCollections#16](../mfc/codesnippet/cpp/accessing-all-members-of-a-collection_5.cpp)]
 
 詳細については、「 [CObject コレクションの全オブジェクトの削除](../mfc/deleting-all-objects-in-a-cobject-collection.md)」を参照してください。
 

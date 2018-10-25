@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6a14a45341645feeb0b85f92379702c9fc40c9d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 010afb3939afcb392d38cda8dfb1ab1a37100d3b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381728"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083374"
 ---
 # <a name="collection-class-helpers"></a>コレクション クラスのヘルパー
 
@@ -81,7 +81,7 @@ CompareElements(
 
 C++ 言語では、比較演算子を定義します ( `==`) の単純型 (**char**、 **int**、 **float**など) の比較演算子を定義しません。クラスと構造体。 使用する場合`CompareElements`、それを使用するコレクション クラスのいずれかをインスタンス化する比較演算子を定義するか、オーバー ロードまたは`CompareElements`したバージョンに適切な値を返します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
    **ヘッダー:** afxtempl.h
 
@@ -117,7 +117,7 @@ void AFXAPI CopyElements(
 
 これと他のヘルパー関数を実装する方法の詳細については、この記事を参照してください。[コレクション: タイプ セーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxtempl.h
 
@@ -153,8 +153,7 @@ void  AFXAPI DumpElements(
 
 既定の実装では、何も行われません。 場合は、コレクションの要素から派生`CObject`、オーバーライドは通常、反復、コレクションの要素を呼び出す`Dump`の各要素に有効にします。
 
-
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxtempl.h
 
@@ -196,7 +195,7 @@ template <> UINT AFXAPI HashKey(unsigned __int64 key)
 }
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxtempl.h
 
@@ -233,7 +232,7 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 
 記事の例を参照してください。[コレクション: タイプ セーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxtempl.h
 

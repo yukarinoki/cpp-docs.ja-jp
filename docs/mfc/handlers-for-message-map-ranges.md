@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca420ce09cae5bf7c11dcfb0ad384e0002bdc4b1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 738d441cf88b41740cb0cff933916489cac683f2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403579"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073098"
 ---
 # <a name="handlers-for-message-map-ranges"></a>範囲内のメッセージのハンドラー
 
@@ -81,7 +81,7 @@ ms.locfileid: "46403579"
 
 - マクロ パラメーター:
 
-     最初の 2 つのマクロは、次の 3 つのパラメーターをとります。
+   最初の 2 つのマクロは、次の 3 つのパラメーターをとります。
 
    - 範囲の開始コマンド ID
 
@@ -89,9 +89,9 @@ ms.locfileid: "46403579"
 
    - メッセージ ハンドラー関数の名前
 
-     コマンド Id の範囲は連続している必要があります。
+   コマンド Id の範囲は連続している必要があります。
 
-     3 番目のマクロ`ON_CONTROL_RANGE`、追加の最初のパラメーターを受け取る: コントロールの通知メッセージなど、 **EN_CHANGE**します。
+   3 番目のマクロ`ON_CONTROL_RANGE`、追加の最初のパラメーターを受け取る: コントロールの通知メッセージなど、 **EN_CHANGE**します。
 
 ##  <a name="_core_declaring_the_handler_function"></a> ハンドラー関数の宣言
 
@@ -113,11 +113,11 @@ ms.locfileid: "46403579"
 
 - 2 つのコマンドの開始と終了の連続する範囲の Id。
 
-     ここには**ID_VIEW_ZOOM25**と**ID_VIEW_ZOOM300**します。
+   ここには**ID_VIEW_ZOOM25**と**ID_VIEW_ZOOM300**します。
 
 - コマンドのハンドラー関数の名前。
 
-     ここでは`OnZoom`します。
+   ここでは`OnZoom`します。
 
 この関数の宣言になります。
 
@@ -137,15 +137,15 @@ ms.locfileid: "46403579"
 
 - 特定のコントロール通知メッセージです。
 
-     ここでは**BN_CLICKED**します。
+   ここでは**BN_CLICKED**します。
 
 - コントロールの範囲に関連付けられているコントロール ID の値。
 
-     ここではこれら**IDC_BUTTON1**と**IDC_BUTTON10**します。
+   ここではこれら**IDC_BUTTON1**と**IDC_BUTTON10**します。
 
 - メッセージ ハンドラー関数の名前。
 
-     ここでは`OnButtonClicked`します。
+   ここでは`OnButtonClicked`します。
 
 ハンドラー関数を記述する場合は、余分なを指定**UINT**では、次に示すように、パラメーター。
 

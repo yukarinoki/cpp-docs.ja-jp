@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1009daaa378b4630d9fa477488a802a580d769a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d59b8dc90c6ce2aed8817f5be5c1724b6fbda2a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390090"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074450"
 ---
 # <a name="cpropexchange-class"></a>CPropExchange クラス
 
@@ -84,7 +84,7 @@ class AFX_NOVTABLE CPropExchange
 
 `CPropExchange`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxctl.h
 
@@ -304,6 +304,4 @@ BOOL IsLoading();
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [COleControl::DoPropExchange](../../mfc/reference/colecontrol-class.md#dopropexchange)
-
-
 

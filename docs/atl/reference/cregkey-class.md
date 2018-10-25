@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a502cbf61f3542c010a89b82131a95f94856cda
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 26861b11aafd4bfcd4f1d5a7cc618ed27b60e6b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46042885"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071181"
 ---
 # <a name="cregkey-class"></a>CRegKey クラス
 
@@ -139,7 +139,7 @@ class CRegKey
 > [!IMPORTANT]
 >  レジストリの場所を指定する呼び出し元を許可するすべてのメソッドでは、信頼できないデータを読み取る可能性があります。 ようにするメソッドを使用して、 [RegQueryValueEx](/windows/desktop/api/winreg/nf-winreg-regqueryvalueexa)この関数が NULL 終端である文字列を明示的に処理しないの考慮事項を考慮する必要があります。 呼び出し元のコードの両方の条件をチェックする必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
@@ -177,7 +177,7 @@ LONG Close() throw();
 としてのサブキーが存在しない場合は、指定したキーを作成するには、このメソッドを呼び出す*hKeyParent*します。
 
 ```
-LONG Create(  
+LONG Create(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPTSTR lpszClass = REG_NONE,
@@ -311,7 +311,7 @@ HKEY Detach() throw();
 開いているレジストリ キーのサブキーの列挙には、このメソッドを呼び出します。
 
 ```
-LONG EnumKey(  
+LONG EnumKey(
     DWORD iIndex,
     LPTSTR pszName,
     LPDWORD pnNameLength,
@@ -361,7 +361,7 @@ LONG Flush() throw();
 開いているレジストリ キーを保護するセキュリティ記述子のコピーを取得するには、このメソッドを呼び出します。
 
 ```
-LONG GetKeySecurity(  
+LONG GetKeySecurity(
     SECURITY_INFORMATION si,
     PSECURITY_DESCRIPTOR psd,
     LPDWORD pnBytes) throw();
@@ -409,7 +409,7 @@ CAtlTransactionManager* m_pTM;
 このメソッドでは、属性またはレジストリ キーの内容の変更について、呼び出し元に通知します。
 
 ```
-LONG NotifyChangeKeyValue(  
+LONG NotifyChangeKeyValue(
     BOOL bWatchSubtree,
     DWORD dwNotifyFilter,
     HANDLE hEvent,
@@ -453,7 +453,7 @@ LONG NotifyChangeKeyValue(
 指定したキーを開き、設定するには、このメソッドを呼び出す[m_hKey](#m_hkey)にこのキーのハンドル。
 
 ```
-LONG Open(  
+LONG Open(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     REGSAM samDesired = KEY_READ | KEY_WRITE) throw();
@@ -514,7 +514,7 @@ CRegKey& operator= (CRegKey& key) throw();
 指定された値の名前のバイナリ データを取得するには、このメソッドを呼び出します。
 
 ```
-LONG QueryBinaryValue(  
+LONG QueryBinaryValue(
     LPCTSTR pszValueName,
     void* pValue,
     ULONG* pnBytes) throw();
@@ -547,7 +547,7 @@ LONG QueryBinaryValue(
 DWORD データ値を指定した名前を取得するには、このメソッドを呼び出します。
 
 ```
-LONG QueryDWORDValue(  
+LONG QueryDWORDValue(
     LPCTSTR pszValueName,
     DWORD& dwValue) throw();
 ```
@@ -576,7 +576,7 @@ Dword 値を受け取るバッファーへのポインター。
 GUID データ値を指定した名前を取得するには、このメソッドを呼び出します。
 
 ```
-LONG QueryGUIDValue(  
+LONG QueryGUIDValue(
     LPCTSTR pszValueName,
     GUID& guidValue) throw();
 ```
@@ -605,7 +605,7 @@ GUID を受け取る変数へのポインター。
 指定された値名の複数行文字列のデータを取得するには、このメソッドを呼び出します。
 
 ```
-LONG QueryMultiStringValue(  
+LONG QueryMultiStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -638,7 +638,7 @@ LONG QueryMultiStringValue(
 QWORD データが指定された値の名前を取得するには、このメソッドを呼び出します。
 
 ```
-LONG QueryQWORDValue(  
+LONG QueryQWORDValue(
     LPCTSTR pszValueName,
     ULONGLONG& qwValue) throw();
 ```
@@ -667,7 +667,7 @@ QWORD を受け取るバッファーへのポインター。
 指定された値名の文字列データを取得するには、このメソッドを呼び出します。
 
 ```
-LONG QueryStringValue(  
+LONG QueryStringValue(
     LPCTSTR pszValueName,
     LPTSTR pszValue,
     ULONG* pnChars) throw();
@@ -700,7 +700,7 @@ LONG QueryStringValue(
 指定した値のフィールドのデータを取得するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。 このメソッドの以前のバージョンでは、現在サポートされていませんされ、されずとしてマークされます。
 
 ```
-LONG QueryValue(  
+LONG QueryValue(
     LPCTSTR pszValueName,
     DWORD* pdwType,
     void* pData,
@@ -781,7 +781,7 @@ LONG RecurseDeleteKey(LPCTSTR lpszKey) throw();
 レジストリ キーのバイナリ値を設定するには、このメソッドを呼び出します。
 
 ```
-LONG SetBinaryValue(  
+LONG SetBinaryValue(
     LPCTSTR pszValueName,
     const void* pValue,
     ULONG nBytes) throw();
@@ -859,7 +859,7 @@ LONG SetGUIDValue(LPCTSTR pszValueName, REFGUID guidValue) throw();
 指定したキーの指定した値のフィールドにデータを格納するには、このメソッドを呼び出します。
 
 ```
-LONG SetKeyValue(  
+LONG SetKeyValue(
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL) throw();
@@ -968,7 +968,7 @@ LONG SetQWORDValue(LPCTSTR pszValueName, ULONGLONG qwValue) throw();
 レジストリ キーの文字列値を設定します。
 
 ```
-LONG SetStringValue(  
+LONG SetStringValue(
     LPCTSTR pszValueName,
     LPCTSTR pszValue,
     DWORD dwType = REG_SZ) throw();
@@ -998,23 +998,23 @@ LONG SetStringValue(
 指定された値 フィールドのデータを格納するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。 このメソッドの以前のバージョンでは、現在サポートされていませんされ、されずとしてマークされます。
 
 ```
-LONG SetValue(  
+LONG SetValue(
     LPCTSTR pszValueName,
     DWORD dwType,
     const void* pValue,
     ULONG nBytes) throw();
 
-static LONG WINAPI SetValue(  
+static LONG WINAPI SetValue(
     HKEY hKeyParent,
     LPCTSTR lpszKeyName,
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     DWORD dwValue,
     LPCTSTR lpszValueName);
 
-ATL_DEPRECATED LONG SetValue(  
+ATL_DEPRECATED LONG SetValue(
     LPCTSTR lpszValue,
     LPCTSTR lpszValueName = NULL,
     bool bMulti = false,

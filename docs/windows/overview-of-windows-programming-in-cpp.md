@@ -13,20 +13,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e8251f45d07e8a410c41a89fbc618839e9bbb838
-ms.sourcegitcommit: 6a6b2061db9d51c5cc79775512de54589a4d2fbc
+ms.openlocfilehash: 6ea59ae2cb0c12a60a8463434105f1cc6af0a77d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/16/2018
-ms.locfileid: "49347229"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073533"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
 Windows サーバー、クラウド、または Xbox でさまざまな種類の (x 86、x64 または ARM) の Windows PC 上で実行されるプログラムを記述するのに Visual C を使用できます。 適切に記述された C++ プログラムは、これらの性質を持っています。
+
 - 効率的にメモリ要件
-- 電力消費量で経済的 
+- 電力消費量で経済的
 - マルチコアおよびメニーコア デバイスのフル活用すること
-- グラフィックス処理装置 (GPU) での一般的なコンピューティング操作を実行できます。  
+- グラフィックス処理装置 (GPU) での一般的なコンピューティング操作を実行できます。
 - ハードウェアでの他の最近の進歩を利用することができます。
 
 Visual C++ で開発できる Windows アプリにはいくつかの大きなカテゴリがあります。 これらのカテゴリがあるさまざまなプログラミング モデル、またはアプリ モデルでは、長年にわたりが導入されています。 各モデルは、プラットフォームへのアクセスを提供し、ウィンドウとダイアログ ボックスなどのユーザー インターフェイスを作成するさまざまなライブラリや Api を使用します。 UWP 用のいくつかの制限と、これらのカテゴリのいずれかでは、C++ 標準ライブラリとサードパーティ製のライブラリを使用できます。
@@ -98,7 +99,7 @@ Microsoft ライブラリは次のとおりです。
 
 - コンカレンシー ランタイム: マルチコア デバイスおよびメニーコア デバイス用の並列プログラミングおよび非同期プログラミング作業を簡略化するために役立つライブラリ。 詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
 
-Windows プログラミングの多くのシナリオでは、Windows SDK も必要になります。これには、Windows オペレーティング システム コンポーネントへのアクセスを可能にするためのヘッダー ファイルが含まれています。 既定では、Visual Studio は、C++ デスクトップ ワークロードでは、ユニバーサル Windows アプリの開発のコンポーネントとして Windows SDK をインストールします。 UWP アプリを開発するには、Windows 10 バージョンの Windows SDK 必要があります。 詳しくは、次を参照してください。 [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)します。 (Windows の以前のバージョンの Windows Sdk の詳細については、次を参照してください。、 [Windows SDK アーカイブ](https://developer.microsoft.com/windows/downloads/sdk-archive))。 
+Windows プログラミングの多くのシナリオでは、Windows SDK も必要になります。これには、Windows オペレーティング システム コンポーネントへのアクセスを可能にするためのヘッダー ファイルが含まれています。 既定では、Visual Studio は、C++ デスクトップ ワークロードでは、ユニバーサル Windows アプリの開発のコンポーネントとして Windows SDK をインストールします。 UWP アプリを開発するには、Windows 10 バージョンの Windows SDK 必要があります。 詳しくは、次を参照してください。 [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)します。 (Windows の以前のバージョンの Windows Sdk の詳細については、次を参照してください。、 [Windows SDK アーカイブ](https://developer.microsoft.com/windows/downloads/sdk-archive))。
 
 **プログラム ファイル (x86) \Windows キット**がインストールされている Windows SDK のすべてのバージョンの既定の場所。
 

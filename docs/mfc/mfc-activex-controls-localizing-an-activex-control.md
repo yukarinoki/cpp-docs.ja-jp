@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2705061b1914ac8fad9f7ca8d769df16bab2f5c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415695"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053280"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールのローカライズ
 
@@ -68,7 +68,7 @@ SAMPLEFR のプロパティ名を変更します。フランス語としを使�
 
 1. コントロール プロジェクトを開いて、**プロジェクト** メニューのをクリックして**既存項目の追加**します。
 
-     **既存項目の追加** ダイアログ ボックスが表示されます。
+   **既存項目の追加** ダイアログ ボックスが表示されます。
 
 1. 必要に応じて、ドライブとを表示するディレクトリを選択します。
 

@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ffee10ea334c6c425aa5ecd81705ef1915dc80c0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: e48d71ace613eac040f83023f70f2a1f28d09f6e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791225"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082308"
 ---
 # <a name="rdx"></a>rdx
 
@@ -51,7 +51,7 @@ ms.locfileid: "48791225"
 
 この属性を組み合わせて使用することができます、[コクラス](coclass.md)、 [progid](progid.md)、または[vi_progid](vi-progid.md)属性または他の属性をこれらのいずれかを意味します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -62,7 +62,7 @@ ms.locfileid: "48791225"
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="example"></a>例
 
@@ -90,4 +90,4 @@ public:
 ## <a name="see-also"></a>関連項目
 
 [COM 属性](com-attributes.md)<br/>
-[registration_script](registration-script.md)  
+[registration_script](registration-script.md)

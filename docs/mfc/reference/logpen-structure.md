@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a535858a0d5540db481fd42918b4079f30c90728
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e0fa2a4b422a7bd1f36fc46837adec4136b693fb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375674"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064955"
 ---
 # <a name="logpen-structure"></a>LOGPEN 構造体
 
@@ -56,9 +56,9 @@ typedef struct tagLOGPEN {  /* lgpn */
 
 - 出力の外接する四角形を指定する関数をペンで閉じた図形のフレーム内の行を描画するペンの生成を作成、GDI (たとえば、 `Ellipse`、 `Rectangle`、 `RoundRect`、 `Pie`、および`Chord`メンバー関数の場合)。 外接する四角形が指定されていない関数の出力 GDI を使用してこのスタイルを使用する場合 (たとえば、`LineTo`メンバー関数)、枠は、ペンの描画領域に制限されません。
 
-     ペンにペン スタイルと色が論理カラー テーブルで使用する色に一致しない場合、ペンをディザリングされた色で描画します。 ディザリングされた色でペンを作成するきはペンのスタイルを使用できません。 ペンの幅が 1 に等しいまたはそれよりも小さい場合は、ペンのスタイルをきと同じです。
+   ペンにペン スタイルと色が論理カラー テーブルで使用する色に一致しない場合、ペンをディザリングされた色で描画します。 ディザリングされた色でペンを作成するきはペンのスタイルを使用できません。 ペンの幅が 1 に等しいまたはそれよりも小さい場合は、ペンのスタイルをきと同じです。
 
-     以外の関数によって生成された GDI オブジェクトでペンのスタイルを使用するときに`Ellipse`、 `Rectangle`、および`RoundRect`、行できない可能性があります完全に指定したフレーム内で。
+   以外の関数によって生成された GDI オブジェクトでペンのスタイルを使用するときに`Ellipse`、 `Rectangle`、および`RoundRect`、行できない可能性があります完全に指定したフレーム内で。
 
 *lopnWidth*<br/>
 論理ユニットでは、ペンの幅を指定します。 場合、`lopnWidth`メンバーが 0 のペンは現在のマッピング モードに関係なくラスター デバイス上の 1 ピクセル場合、です。
@@ -70,7 +70,7 @@ typedef struct tagLOGPEN {  /* lgpn */
 
 `y`値、[ポイント](../../mfc/reference/point-structure1.md)用の構造、`lopnWidth`メンバーは使用されません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** wingdi.h
 

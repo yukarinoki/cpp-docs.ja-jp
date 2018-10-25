@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e7a6f4f014d609e8b650951d459c23b07fd4a006
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fdd5bcf0bf3ac58cf056543b9dbe3c55b6fe1bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085447"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073242"
 ---
 # <a name="ccomobject-class"></a>CComObject クラス
 
@@ -75,7 +75,7 @@ class CComObject : public Base
 
 `CComObject`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
@@ -120,7 +120,7 @@ CComObject();
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し、割り当てられているすべてのリソースを解放[FinalRelease](ccomobjectrootex-class.md#finalrelease)、およびモジュールのロック カウントをデクリメントします。  
+呼び出し、割り当てられているすべてのリソースを解放[FinalRelease](ccomobjectrootex-class.md#finalrelease)、およびモジュールのロック カウントをデクリメントします。
 
 ##  <a name="createinstance"></a>  CComObject::CreateInstance
 

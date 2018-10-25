@@ -47,12 +47,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a93c36748eb01a1c647a2aa433196c7364f60744
-ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
+ms.openlocfilehash: 8165a404924b997d70d0097c28ac7d34ade92fc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2018
-ms.locfileid: "49410812"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063862"
 ---
 # <a name="hstring-class"></a>HString クラス
 
@@ -104,7 +104,7 @@ Windows ランタイムを使用して文字列へのアクセスを提供する
 
 `HString`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** corewrappers.h
 
@@ -115,7 +115,7 @@ Windows ランタイムを使用して文字列へのアクセスを提供する
 現在のインスタンスを破棄、`HString`クラス。
 
 ```cpp
-~HString() throw()  
+~HString() throw()
 ```
 
 ## <a name="attach"></a>Hstring::attach
@@ -125,7 +125,7 @@ Windows ランタイムを使用して文字列へのアクセスを提供する
 ```cpp
 void Attach(
        HSTRING hstr
-       ) throw()  
+       ) throw()
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -157,7 +157,7 @@ HRESULT CopyTo(
 指定された関連付けを解除`HString`その基になる値からオブジェクトです。
 
 ```cpp
-HSTRING Detach() throw()  
+HSTRING Detach() throw()
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -169,7 +169,7 @@ HSTRING Detach() throw()
 基になる HSTRING ハンドルの値を取得します。
 
 ```cpp
-HSTRING Get() const throw()  
+HSTRING Get() const throw()
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -181,7 +181,7 @@ HSTRING Get() const throw()
 基になる HSTRING ハンドルへのポインターを取得します。
 
 ```cpp
-HSTRING* GetAddressOf() throw()  
+HSTRING* GetAddressOf() throw()
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -220,7 +220,7 @@ HSTRING ハンドルの場合。
 示すかどうか、現在`HString`オブジェクトが空か。
 
 ```cpp
-bool IsValid() const throw()  
+bool IsValid() const throw()
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -262,7 +262,7 @@ template<unsigned int sizeDest>
 別の値を移動`HString`現在オブジェクト`HString`オブジェクト。
 
 ```cpp
-HString& operator=(HString&& other) throw()  
+HString& operator=(HString&& other) throw()
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -297,7 +297,7 @@ inline bool operator==(
 
 inline bool operator==(
                  const HString& lhs,
-                 const HSTRING& rhs) throw()  
+                 const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -330,7 +330,7 @@ inline bool operator!=( const HSTRING& lhs,
                         const HString& rhs) throw()
 
 inline bool operator!=( const HString& lhs,
-                        const HSTRING& rhs) throw()  
+                        const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -352,7 +352,7 @@ inline bool operator!=( const HString& lhs,
 ```cpp
 inline bool operator<(
     const HString& lhs,
-    const HString& rhs) throw()  
+    const HString& rhs) throw()
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -372,7 +372,7 @@ inline bool operator<(
 基になる文字列値を削除し、現在を初期化します。`HString`オブジェクトから空の値。
 
 ```cpp
-void Release() throw()  
+void Release() throw()
 ```
 
 ## <a name="set"></a>Hstring::set

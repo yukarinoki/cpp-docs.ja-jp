@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c5b5bb50c99efc2a7b18fbbbabba394ec5330661
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc151ae25df4cac2c6b5ed9ac5a523efda28dff2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378203"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082711"
 ---
 # <a name="using-property-sheets-in-your-application"></a>アプリケーションでのプロパティ シートの使用
 
@@ -34,9 +34,9 @@ ms.locfileid: "46378203"
 
 1. 各プロパティ ページのダイアログ テンプレート リソースを作成します。 ユーザー切り替えて使用する 1 つのページから、各レイアウト ページできるだけ一貫性を保つため、注意してください。
 
-     すべてのページのダイアログ テンプレートは同じサイズではありません。 フレームワークでは、最大のページのサイズを使用して、プロパティ ページのプロパティ シートで割り当てる領域の量を決定します。
+   すべてのページのダイアログ テンプレートは同じサイズではありません。 フレームワークでは、最大のページのサイズを使用して、プロパティ ページのプロパティ シートで割り当てる領域の量を決定します。
 
-     プロパティ ページのダイアログ テンプレート リソースを作成するときに、ダイアログのプロパティのプロパティ シートで、次のスタイルを指定する必要があります。
+   プロパティ ページのダイアログ テンプレート リソースを作成するときに、ダイアログのプロパティのプロパティ シートで、次のスタイルを指定する必要があります。
 
    - 設定、**キャプション**で編集ボックス、**全般**をこのページのタブに表示するテキスト ページ。
 
@@ -60,9 +60,9 @@ ms.locfileid: "46378203"
 
    - 呼び出す[が](../mfc/reference/cpropertysheet-class.md#addpage)ページごとにします。
 
-     通常、オブジェクトを作成する、`CPropertySheet`も作成、`CPropertyPage`この手順内のオブジェクト。 ただし、実装する場合、 `CPropertySheet`-派生クラスで埋め込むことができます、`CPropertyPage`内のオブジェクト、`CPropertySheet`オブジェクトと呼び出し`AddPage`からページごとに、 `CPropertySheet`-派生したクラスのコンス トラクター。 `AddPage` 追加、`CPropertyPage`オブジェクトのページのプロパティ シートの一覧には、そのページは、ウィンドウを実際には作成されません。 そのため、ウィンドウの作成、プロパティ シートを呼び出すまで待機する必要はありません`AddPage`; 呼び出せる`AddPage`プロパティ シートのコンス トラクターから。
+   通常、オブジェクトを作成する、`CPropertySheet`も作成、`CPropertyPage`この手順内のオブジェクト。 ただし、実装する場合、 `CPropertySheet`-派生クラスで埋め込むことができます、`CPropertyPage`内のオブジェクト、`CPropertySheet`オブジェクトと呼び出し`AddPage`からページごとに、 `CPropertySheet`-派生したクラスのコンス トラクター。 `AddPage` 追加、`CPropertyPage`オブジェクトのページのプロパティ シートの一覧には、そのページは、ウィンドウを実際には作成されません。 そのため、ウィンドウの作成、プロパティ シートを呼び出すまで待機する必要はありません`AddPage`; 呼び出せる`AddPage`プロパティ シートのコンス トラクターから。
 
-     既定では、プロパティ シートのプロパティ シートで、1 行に収まらないのタブがある場合、タブは複数の行に積み重ねられます。 重なりを無効にする[CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)パラメーターを設定して**FALSE**します。 呼び出す必要があります`EnableStackedTabs`プロパティ シートを作成する場合。
+   既定では、プロパティ シートのプロパティ シートで、1 行に収まらないのタブがある場合、タブは複数の行に積み重ねられます。 重なりを無効にする[CPropertySheet::EnableStackedTabs](../mfc/reference/cpropertysheet-class.md#enablestackedtabs)パラメーターを設定して**FALSE**します。 呼び出す必要があります`EnableStackedTabs`プロパティ シートを作成する場合。
 
 1. 呼び出す[する](../mfc/reference/cpropertysheet-class.md#domodal)または[作成](../mfc/reference/cpropertysheet-class.md#create)プロパティ シートを表示します。 呼び出す`DoModal`モーダル ダイアログ ボックスのプロパティ シートを作成します。 呼び出す**作成**モードレス ダイアログ ボックスのプロパティ シートを作成します。
 

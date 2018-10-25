@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24b663e1b07d1012c1611714390340df3ce3867f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c17b280d658eb615d314526f4fd241bf57c2eed1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448503"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074736"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager クラス
 
@@ -296,7 +296,7 @@ class CDockingManager : public CObject
 
     - `AFX_DOCK_TYPE::DT_SMART`
 
-     これらのドッキングのモードが定めた[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)呼び出すことによって設定されます[CDockingManager::SetDockingMode](#setdockingmode)。
+   これらのドッキングのモードが定めた[CDockingManager::m_dockModeGlobal](#m_dockmodeglobal)呼び出すことによって設定されます[CDockingManager::SetDockingMode](#setdockingmode)。
 
 - サイズを変更できない、フローティング ウィンドウを作成する場合は、呼び出し、 [CDockingManager::AddPane](#addpane)メソッド。 このメソッドは、ウィンドウのレイアウトを担当する、ドッキング マネージャーのウィンドウを登録します。
 
@@ -312,7 +312,7 @@ class CDockingManager : public CObject
 
 [CDockingManager](../../mfc/reference/cdockingmanager-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxDockingManager.h
 
@@ -396,7 +396,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *hdwp*<br/>
-[in]遅延のウィンドウの位置の構造体を指定します。 詳細については、次を参照してください。[データ型の Windows](/windows/desktop/WinProg/windows-data-types)します。
+[in]遅延のウィンドウの位置の構造体を指定します。 詳細については、「 [Windows のデータ型](/windows/desktop/WinProg/windows-data-types)」を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

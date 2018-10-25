@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0fa2c3b421aa0aa60194f8ed949c023d78b70c2d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4fb9985314a71c2da6eed50fd1ba3a486b0cff73
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070301"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059520"
 ---
 # <a name="csimplemap-class"></a>CSimpleMap クラス
 
@@ -106,7 +106,7 @@ class CSimpleMap
 
 ATL と MFC での他のマップ コレクションとは異なりこのクラスは単純な配列と検索順次検索が必要です。 `CAtlMap` 配列には、多数の要素が含まれている場合に使用する必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsimpcoll.h
 
@@ -371,7 +371,7 @@ BOOL SetAt(const TKey& key, const TVal& val);
 指定したインデックス位置にあるキーと値を設定します。
 
 ```
-BOOL SetAtIndex(  
+BOOL SetAtIndex(
     int nIndex,
     const TKey& key,
     const TVal& val);

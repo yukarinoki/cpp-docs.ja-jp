@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3fbc661a870c7adc6e2e5dda5def744fa3e0396
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 23b538904c78fc0f0bc88b7c12de1bc4862a88ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417021"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053410"
 ---
 # <a name="mapi-support-in-mfc"></a>MFC での MAPI サポート
 
@@ -44,11 +44,11 @@ MAPI の添付ファイルを送信するファイルを読み取る必要があ
 
 1. コマンド ID が判定するメニュー項目を追加するのにには、Visual C のメニュー エディターを使用します。
 
-     このコマンド ID は、コマによって提供されます。H. 任意のメニューにコマンドを追加できますが、通常に追加されて、**ファイル**メニュー。
+   このコマンド ID は、コマによって提供されます。H. 任意のメニューにコマンドを追加できますが、通常に追加されて、**ファイル**メニュー。
 
 1. ドキュメントのメッセージ マップに、次を手動で追加するには。
 
-     [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#9](../mfc/codesnippet/cpp/mapi-support-in-mfc_1.cpp)]
 
     > [!NOTE]
     >  このメッセージ マップのいずれかから派生したドキュメントが適して`CDocument`または`COleDocument`-場合でも、メッセージ マップは、ドキュメントの派生クラスで、いずれの場合も、適切な基本クラスを選択します。

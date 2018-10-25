@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f00a81aa7997591d152a665e14869f22bd14321
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f4bc06415d804aa48b7d12ac28b1181e818a2c2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377975"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082568"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection クラス
 
@@ -78,7 +78,7 @@ Gopher インターネット サーバーと通信のインスタンスを作成
 
 `CGopherConnection`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxinet.h
 
@@ -92,7 +92,6 @@ CGopherConnection(
     HINTERNET hConnected,
     LPCTSTR pstrServer,
     DWORD_PTR dwContext);
-
 
 CGopherConnection(
     CInternetSession* pSession,
@@ -148,7 +147,6 @@ CGopherLocator CreateLocator(
     DWORD dwGopherType);
 
 static CGopherLocator CreateLocator(LPCTSTR pstrLocator);
-
 
 static CGopherLocator CreateLocator(
     LPCTSTR pstrServerName,

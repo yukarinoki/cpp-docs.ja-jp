@@ -64,12 +64,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df61ebeea72a7cf860237b760288cc47ff353bf2
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a1c27d20970b8e8634e8438c25733fd90a3ad632
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890661"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064798"
 ---
 # <a name="cimage-class"></a>CImage クラス
 
@@ -172,7 +172,7 @@ class CImage
 
 ## <a name="example"></a>例
 
-```cpp  
+```cpp
 // Get a CDC for the image
 CDC* pDC = CDC::FromHandle(m_myImage.GetDC());
 
@@ -181,19 +181,19 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```
 
-使用すると`CImage`MFC プロジェクトで、プロジェクトのメンバー関数へのポインターの期待に注意してください、 [CBitmap](../../mfc/reference/cbitmap-class.md)オブジェクト。 使用する場合`CImage`のような関数は、のような[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)を使用して、 [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)、渡す、 `CImage` HBITMAP、して、返された`CBitmap*`します。  
+使用すると`CImage`MFC プロジェクトで、プロジェクトのメンバー関数へのポインターの期待に注意してください、 [CBitmap](../../mfc/reference/cbitmap-class.md)オブジェクト。 使用する場合`CImage`のような関数は、のような[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)を使用して、 [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)、渡す、 `CImage` HBITMAP、して、返された`CBitmap*`します。
 
 ## <a name="example"></a>例
 
-```cpp  
+```cpp
 void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 {
     UNREFERENCED_PARAMETER(nFlags);
-    
+
     CBitmap* pBitmap = CBitmap::FromHandle(m_myImage);
     m_pmenuPop->AppendMenu(0, ID_BMPCOMMAND, pBitmap);
     ClientToScreen(&point);
-    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x, 
+    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x,
     point.y, this);
 }
 ```
@@ -203,11 +203,11 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 使用することができます`CImage`MFC または ATL のいずれかから
 
 > [!NOTE]
-> 使用してプロジェクトを作成すると`CImage`を定義する必要があります`CString`インクルードする前に`atlimage.h`します。 プロジェクトでは、MFC を使用せずに ATL を使用する場合は、`atlstr.h`インクルードする前に`atlimage.h`します。 プロジェクトでは、MFC (または、これは MFC サポートを ATL プロジェクトであるかどうか) を使用する場合は、`afxstr.h`インクルードする前に`atlimage.h`します。  
->   
+> 使用してプロジェクトを作成すると`CImage`を定義する必要があります`CString`インクルードする前に`atlimage.h`します。 プロジェクトでは、MFC を使用せずに ATL を使用する場合は、`atlstr.h`インクルードする前に`atlimage.h`します。 プロジェクトでは、MFC (または、これは MFC サポートを ATL プロジェクトであるかどうか) を使用する場合は、`afxstr.h`インクルードする前に`atlimage.h`します。<br/>
+> <br/>
 > 同様に、含める必要がある`atlimage.h`インクルードする前に`atlimpl.cpp`します。 簡単にこれを実現するには含める`atlimage.h`で、`stdafx.h`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlimage.h
 
@@ -302,7 +302,7 @@ Y 座標、先の四角形の左上隅の論理単位です。
 
 アルファ ブレンド ビットマップでは、色は、ピクセル単位で描画をサポートします。
 
-ときに*bBlendOp*設定されているソース ビットマップをコピー先のビットマップ ソース ピクセルのアルファ値に基づいてその上にビットマップの既定値にします。  
+ときに*bBlendOp*設定されているソース ビットマップをコピー先のビットマップ ソース ピクセルのアルファ値に基づいてその上にビットマップの既定値にします。
 
 ##  <a name="attach"></a>  CImage::Attach
 
@@ -506,9 +506,9 @@ Bitmap オブジェクトがアルファ チャネルを持つかどうかを指
 
 ### <a name="example"></a>例
 
-次の例では、ピクセルごとに 16 ビットを使用して、100 x 100 ピクセルのビットマップを作成します。 指定された 16 ビットのピクセルでは、ビット 0 ~ 3 は赤のコンポーネントをエンコード、4 ~ 7 ビット エンコード緑、および 8 ~ 11 ビットは青をエンコードします。 残りの 4 ビットは、使用されません。  
+次の例では、ピクセルごとに 16 ビットを使用して、100 x 100 ピクセルのビットマップを作成します。 指定された 16 ビットのピクセルでは、ビット 0 ~ 3 は赤のコンポーネントをエンコード、4 ~ 7 ビット エンコード緑、および 8 ~ 11 ビットは青をエンコードします。 残りの 4 ビットは、使用されません。
 
-```cpp  
+```cpp
 DWORD adwBitmasks[3] = { 0x0000000f, 0x000000f0, 0x00000f00 };
 m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
@@ -725,16 +725,15 @@ static HRESULT GetExporterFilterString(
 *pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例えば:  
+例えば:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any exporter.
 CImage::GetExporterFilterString(
-    strExporters, aguidFileTypes, 
+    strExporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 一覧から除外するファイルの種類を指定するビット フラグのセット。 使用できるフラグは次のとおりです。
@@ -821,16 +820,15 @@ static HRESULT GetImporterFilterString(
 *pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例えば:  
+例えば:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any importer.
 CImage::GetImporterFilterString(
-    strImporters, aguidFileTypes, 
+    strImporters, aguidFileTypes,
 _T("All Image Files"));
 ```
-
 
 *dwExclude*<br/>
 一覧から除外するファイルの種類を指定するビット フラグのセット。 使用できるフラグは次のとおりです。
@@ -1360,7 +1358,7 @@ DIB セクションのパレットで、エントリの範囲の赤、緑、青 
 
 ```
 void SetColorTable(
-    UINT iFirstColor, 
+    UINT iFirstColor,
     UINT nColors,
     const RGBQUAD* prgbColors) throw();
 ```
@@ -1427,7 +1425,7 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 指定された場所にあるピクセル設定*x*と*y*で示される色を*r*、 *g*、および*b*、赤、緑、青 (RGB) のイメージ。
 
 ```
-void SetPixelRGB(  
+void SetPixelRGB(
     int x,
     int y,
     BYTE r,
@@ -1639,12 +1637,12 @@ TRUE の場合は成功しましたが、それ以外の場合は FALSE。
 
 `TransparentBlt` ソース ビットマップのピクセルごと、およびピクセルあたり 8 ビット 4 ビット サポートされます。 使用[CImage::AlphaBlend](#alphablend)透明度が 32 ビット/ピクセルのビットマップを指定します。
 
-### <a name="example"></a>例  
+### <a name="example"></a>例
 
-```cpp  
-// Performs a transparent blit from the source image to the destination 
+```cpp
+// Performs a transparent blit from the source image to the destination
 // image using the images' current transparency settings
-BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage, 
+BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
        int xDest, int yDest, int nDestWidth, int nDestHeight)
 {
     HDC hDstDC = NULL;
@@ -1676,4 +1674,4 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)<br/>
 [デバイスに依存しないビットマップ](/windows/desktop/gdi/device-independent-bitmaps)<br/>
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
+[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)

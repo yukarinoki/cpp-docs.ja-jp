@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9ccb638669712222cac2dee522bf729766a4bc93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e76dc8ca4a61839b893b4328bdb9d606424def91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402266"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062237"
 ---
 # <a name="cview-class"></a>CView クラス
 
@@ -169,7 +169,7 @@ class AFX_NOVTABLE CView : public CWnd
 
 `CView`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -196,7 +196,7 @@ BOOL DoPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>パラメーター
 
 *pInfo*<br/>
-指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)現在の印刷ジョブを記述する構造体。
+現在の印刷ジョブを表す [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 構造体を指し示します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -319,13 +319,13 @@ virtual void OnBeginPrinting(
 プリンター デバイス コンテキストを指し示します。
 
 *pInfo*<br/>
-指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)現在の印刷ジョブを記述する構造体。
+現在の印刷ジョブを表す [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 構造体を指し示します。
 
 ### <a name="remarks"></a>Remarks
 
-この関数の既定の実装は、何も行いません。 この関数をオーバーライドして、特に印刷のために必要な GDI リソース (ペン、フォントなど) を割り当てます。 内からデバイス コンテキストに GDI オブジェクトを選択、 [OnPrint](#onprint)それらを使用する各ページのメンバー関数。 同じビュー オブジェクトを使用して画面の表示と印刷の両方を実行している場合は、各表示に必要な GDI リソースに別個の変数を使用します。これにより、印刷時に画面を更新することができます。
+この関数の既定の実装は、何も行いません。 この関数をオーバーライドして、特に印刷のために必要な GDI リソース (ペン、フォントなど) を割り当てます。 [OnPrint](#onprint) メンバー関数内から、デバイス コンテキストの GDI オブジェクトを、それらを使用する各ページ用に選択します。 同じビュー オブジェクトを使用して画面の表示と印刷の両方を実行している場合は、各表示に必要な GDI リソースに別個の変数を使用します。これにより、印刷時に画面を更新することができます。
 
-さらに、この関数を使用して、プリンター デバイス コンテキストのプロパティに依存する初期化を実行することもできます。 たとえば、ドキュメントを印刷するために必要なページ数は、印刷ダイアログ ボックスでユーザーが指定した設定 (たとえば、ページの長さ) によって異なる可能性があります。 このような状況では、ドキュメントの長さを指定することはできません、 [OnPreparePrinting](#onprepareprinting) 、メンバー関数は、通常行うよう; ダイアログ ボックスの設定に基づいてプリンター デバイス コンテキストが作成されるまでに待機する必要があります。 [OnBeginPrinting](#onbeginprinting)にアクセスが提供される最初のオーバーライド可能な関数は、 [CDC](../../mfc/reference/cdc-class.md)この関数からドキュメントの長さを設定できるように、プリンター デバイス コンテキストを表すオブジェクト。 この時点でドキュメントの長さを指定しない場合、印刷プレビュー時にスクロール バーは表示されません。
+さらに、この関数を使用して、プリンター デバイス コンテキストのプロパティに依存する初期化を実行することもできます。 たとえば、ドキュメントを印刷するために必要なページ数は、印刷ダイアログ ボックスでユーザーが指定した設定 (たとえば、ページの長さ) によって異なる可能性があります。 そのような場合は、通常行うように [OnPreparePrinting](#onprepareprinting) メンバー関数にドキュメントの長さを指定することはできません。ダイアログ ボックスの設定に基づいてプリンター デバイス コンテキストが作成されるまで待機する必要があります。 [OnBeginPrinting](#onbeginprinting) は、プリンター デバイス コンテキストを表す [CDC](../../mfc/reference/cdc-class.md) オブジェクトにアクセスできる初めてのオーバーライド可能な関数です。したがって、この関数からドキュメントの長さを設定することができます。 この時点でドキュメントの長さを指定しない場合、印刷プレビュー時にスクロール バーは表示されません。
 
 ##  <a name="ondragenter"></a>  CView::OnDragEnter
 
@@ -602,7 +602,7 @@ virtual void OnEndPrinting(
 プリンター デバイス コンテキストを指し示します。
 
 *pInfo*<br/>
-指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)現在の印刷ジョブを記述する構造体。
+現在の印刷ジョブを表す [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 構造体を指し示します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -626,7 +626,7 @@ virtual void OnEndPrintPreview(
 プリンター デバイス コンテキストを指し示します。
 
 *pInfo*<br/>
-指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)現在の印刷ジョブを記述する構造体。
+現在の印刷ジョブを表す [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 構造体を指し示します。
 
 *ポイント*<br/>
 プレビュー モードで最後に表示されたページで、ポイントを指定します。
@@ -701,7 +701,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 ### <a name="parameters"></a>パラメーター
 
 *pInfo*<br/>
-指す、 [CPrintInfo](../../mfc/reference/cprintinfo-structure.md)現在の印刷ジョブを記述する構造体。
+現在の印刷ジョブを表す [CPrintInfo](../../mfc/reference/cprintinfo-structure.md) 構造体を指し示します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -757,7 +757,7 @@ virtual void OnPrint(
 
 - (つまり、アプリケーションは WYSIWYG ではない) 場合、画面イメージとは異なる、印刷されたイメージにします。 プリンター デバイス コンテキストを渡す代わりに`OnDraw`画面に表示されない属性を使用してイメージを表示するために、デバイス コンテキストを使用します。
 
-     GDI リソースを必要な画面表示を使用しない印刷描画前にデバイス コンテキストに選択し、後で選択を解除します。 これらの GDI リソースを割り当てる必要がある[OnBeginPrinting](#onbeginprinting)でリリースされた[OnEndPrinting](#onendprinting)します。
+   GDI リソースを必要な画面表示を使用しない印刷描画前にデバイス コンテキストに選択し、後で選択を解除します。 これらの GDI リソースを割り当てる必要がある[OnBeginPrinting](#onbeginprinting)でリリースされた[OnEndPrinting](#onendprinting)します。
 
 - ヘッダーまたはフッターを実装します。 使用することもできます`OnDraw`で印刷できる領域を制限することで、レンダリングを行う。
 

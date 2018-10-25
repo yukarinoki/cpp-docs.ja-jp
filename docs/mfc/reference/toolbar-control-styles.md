@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fe31acea49dddf6a1cf76c01de789ccfc8583e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 882111e400b613c830bb45cafd03ace99c09a0c2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386536"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054944"
 ---
 # <a name="toolbar-control-styles"></a>ツール バー コントロールのスタイル
 
@@ -58,7 +58,7 @@ ms.locfileid: "46386536"
 
 ビジュアル マネージャーでは、各状態にあるボタンの外観を決定します。 参照してください[ビジュアル マネージャー](../../mfc/visualization-manager.md)詳細についてはします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxtoolbarbutton.h
 
@@ -67,5 +67,4 @@ ms.locfileid: "46386536"
 [マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [ビジュアル マネージャー](../../mfc/visualization-manager.md)
-
 

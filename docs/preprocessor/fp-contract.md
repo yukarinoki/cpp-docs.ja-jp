@@ -1,5 +1,5 @@
 ---
-title: fp_contract |Microsoft ドキュメント
+title: fp_contract |Microsoft Docs
 ms.custom: ''
 ms.date: 03/12/2018
 ms.technology:
@@ -18,26 +18,26 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 514b4708129d625ea7880e4c61be22c4b1ac2db5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 95f23fa132a263970047a480ccde37382b6d03de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33912889"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052165"
 ---
 # <a name="fpcontract"></a>fp_contract
 
-浮動小数点の省略形が配置を受け取るかどうかを判断します。 浮動小数点の省略形は、2 つ別々 浮動小数点演算に 1 つの命令を結合する (Fused Multiply-追加) FMA などの命令です。 これらの手順を使用できます丸め処理を行う各操作後に、代わりに、プロセッサが 1 回だけ丸め両方の操作後にあるために、浮動小数点の精度に影響します。
+浮動小数点の省略形に配置されるかどうかを判断します。 浮動小数点の省略形は、2 つ個別浮動小数点演算に 1 つの命令を結合する (Fused Multiply-アド) FMA など命令です。 丸め処理を行う各操作後に、代わりに、プロセッサが 1 回だけ丸め両方の操作の後であるために、浮動小数点の精度を使用してこれらの手順に影響ことができます。
 
 ## <a name="syntax"></a>構文
 
-> **#pragma fp_contract (** { **on** | **off** } **)**  
+> **#pragma fp_contract (** { **on** | **off** } **)**
 
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks
 
-既定では、 **fp_contract**は**で**です。 これは、浮動小数点の縮小の手順を使用可能な限り、コンパイラを示しています。 設定**fp_contract**に**オフ**個々 の浮動小数点命令を維持します。
+既定では、 **fp_contract**は**で**します。 これは、ように可能であれば、浮動小数点の省略形の手順を使用してコンパイラに指示します。 設定**fp_contract**に**オフ**個々 の浮動小数点命令を維持します。
 
-浮動小数点の動作の詳細については、次を参照してください。 [/fp (浮動小数点の動作を指定)](../build/reference/fp-specify-floating-point-behavior.md)です。
+浮動小数点の動作の詳細については、次を参照してください。 [/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)します。
 
 その他の浮動小数点プラグマには以下があります。
 
@@ -47,8 +47,8 @@ ms.locfileid: "33912889"
 
 ## <a name="example"></a>例
 
-このサンプルから生成されたコードでは、ターゲット プロセッサで使用可能な場合でも、: fused multiply-追加の命令は使用しません。 コメント アウトする場合`#pragma fp_contract (off)`、使用可能になる場合、生成されたコードが: fused multiply-追加の命令を使用して可能性があります。  
-  
+このサンプルから生成されたコードでは、ターゲット プロセッサで使用可能な場合にも組み合わされ、-乗算-追加の命令は使用しません。 コメント アウトする場合`#pragma fp_contract (off)`、入手可能になった場合、生成されたコードが組み合わされ、-乗算-追加の命令を使用可能性があります。
+
 ```cpp
 // pragma_directive_fp_contract.cpp
 // on x86 and x64 compile with: /O2 /fp:fast /arch:AVX2

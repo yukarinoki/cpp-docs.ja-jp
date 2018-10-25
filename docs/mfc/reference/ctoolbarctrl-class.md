@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2473f33508274bb0f0aa9aebcb462973ec80b267
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 7334fe1a48f0828a542baa77670f3ad7888b52e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890817"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083556"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 
@@ -359,7 +359,7 @@ Internet Explorer 4.0 以降のバージョンで導入された機能をサポ�
 
 `CToolBarCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
@@ -371,7 +371,6 @@ Internet Explorer 4.0 以降のバージョンで導入された機能をサポ�
 int AddBitmap(
     int nNumButtons,
     UINT nBitmapID);
-
 
 int AddBitmap(
     int nNumButtons,

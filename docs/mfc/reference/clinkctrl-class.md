@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 43bc666677a82551410a08a2778c844ed6f21e1b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6b760cd1f548fc4d5dd2c4ce78cb0e16bca64474
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446986"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070271"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl クラス
 
@@ -105,7 +105,7 @@ class CLinkCtrl : public CWnd
 
 `CLinkCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
@@ -128,7 +128,6 @@ virtual BOOL Create(
     const RECT& rect,
     CWnd* pParentWnd,
     UINT nID);
-
 
 virtual BOOL Create(DWORD dwStyle,
     const RECT& rect,
@@ -187,7 +186,6 @@ virtual BOOL CreateEx(
     const RECT& rect,
     CWnd* pParentWnd,
     UINT nID);
-
 
 virtual BOOL CreateEx(DWORD  dwExStyle,
     DWORD  dwStyle,

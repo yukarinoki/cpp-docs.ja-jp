@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e885ef1db8f282bbdca2e8c39c3d1221d791d1a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e067b1d72b80950b4ed33fbae8cac7333ac0438
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067637"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083077"
 ---
 # <a name="atl-module-classes"></a>ATL モジュール クラス
 
@@ -55,15 +55,15 @@ ms.locfileid: "46067637"
 
 - 機能`CComModule`細分化されました。
 
-     COM、ウィンドウ、インターフェイスは、次のデバッグ、およびアプリケーション固有 (DLL または EXE) の機能のサポートは、別のクラスはようになりました。
+   COM、ウィンドウ、インターフェイスは、次のデバッグ、およびアプリケーション固有 (DLL または EXE) の機能のサポートは、別のクラスはようになりました。
 
 - これらの各モジュールのグローバル インスタンスを自動的に宣言します。
 
-     必要なモジュールのクラスのグローバル インスタンスは、プロジェクトにリンクします。
+   必要なモジュールのクラスのグローバル インスタンスは、プロジェクトにリンクします。
 
 - Init と用語のメソッドを呼び出す必要があることを削除します。
 
-     Init と用語のメソッドが、モジュール クラスのコンス トラクターとデストラクターに移動します。Init と用語をコールする必要が不要になったです。
+   Init と用語のメソッドが、モジュール クラスのコンス トラクターとデストラクターに移動します。Init と用語をコールする必要が不要になったです。
 
 ## <a name="see-also"></a>関連項目
 

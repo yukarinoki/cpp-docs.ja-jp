@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8dee099912b69d48b0ded4184dc68c14da1899fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ed6639bdf86a54689834c6eda03a3b6ec4dd171d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391905"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063849"
 ---
 # <a name="toolbar-c-image-editor-for-icons"></a>ツールバー (アイコン用イメージ エディターを C++)
 
@@ -36,8 +36,7 @@ ms.locfileid: "46391905"
 > [!NOTE]
 > 使用できるすべてのツール、**イメージ エディター**ツールバーも使用できます、**イメージ**メニュー (で、**ツール**コマンド)。
 
-![イメージ エディターのツールバー](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")  
-[イメージ エディター] ツール バー
+![イメージ エディターのツールバー](../mfc/media/vcimageeditortoolbar.gif "vcImageEditorToolbar")イメージ エディターのツールバー
 
 使用する、**イメージ エディター**ツールバーと**オプション**セレクターで、[ツール] をクリックまたはするオプションします。
 
@@ -46,12 +45,11 @@ ms.locfileid: "46391905"
 
 **オプション**セレクター行やブラシなどの幅を指定することができます。上のアイコン、**オプション**セレクター ボタンが選択したツールを変更します。
 
-![描画&#45;イメージ エディターのツールバーの図形セレクター](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")  
-イメージ エディターのツールバーでオプション セレクター
+![描画&#45;イメージ エディターのツールバーの図形セレクター](../mfc/media/vcimageeditortoolbaroptionselector.gif "vcImageEditorToolbarOptionSelector")イメージ エディターのツールバーでオプション セレクター
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

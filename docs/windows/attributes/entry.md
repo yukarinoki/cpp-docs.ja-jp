@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 95eb37898d4934740e1520df758ed33d3dd4c79a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ae14a6346f547d8c362bad478144e915ee9ebb98
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791245"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077297"
 ---
 # <a name="entry"></a>entry
 
@@ -47,7 +47,7 @@ DLL 内のエントリ ポイントを識別することによって、モジュ
 
 例をご覧ください[idl_module](idl-module.md)の使用例の**エントリ**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -58,8 +58,8 @@ DLL 内のエントリ ポイントを識別することによって、モジュ
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[IDL 属性](idl-attributes.md)  
+[IDL 属性](idl-attributes.md)

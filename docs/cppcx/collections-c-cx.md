@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 67e5b086e57c90b9cb11779d8f3af167768a45fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 5b57b03af7c0a98e2bb8c70b6c0921930ebb1b9c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103348"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062640"
 ---
 # <a name="collections-ccx"></a>コレクション (C++/CX)
 
@@ -30,14 +30,14 @@ Windows ランタイムは、コレクションと関連する型、および C 
 
 - [Platform::Collections::VectorView クラス](../cppcx/platform-collections-vectorview-class.md) と[Platform::Collections::MapView クラス](../cppcx/platform-collections-mapview-class.md) は `Vector` と `Map`の読み取り専用のバージョンです。
 
-- 反復子は [Platform::Collections 名前空間](../cppcx/platform-collections-namespace.md)で定義されます。 これらの反復子は、STL 反復子の要件を満たしておりの使用を有効にする[std::count_if](../standard-library/algorithm-functions.md#find)、 [std::count_if](../standard-library/algorithm-functions.md#count_if)、いずれかで他の STL アルゴリズム[:foundation](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx)インターフェイス型または[platform::collections](../cppcx/platform-collections-namespace.md)具象型。 たとえば、c# で作成され、STL アルゴリズムを適用する Windows ランタイム コンポーネントのコレクションを反復処理することができますこれを意味します。
+- 反復子は [Platform::Collections 名前空間](../cppcx/platform-collections-namespace.md)で定義されます。 これらの反復子は、STL 反復子の要件を満たし、任意の [Windows::Foundation::Collections](../standard-library/algorithm-functions.md#find)インターフェイス型や  [Platform::Collections](../standard-library/algorithm-functions.md#count_if)具象型で [std::find](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx) 、 [std::count_if](../cppcx/platform-collections-namespace.md) などの STL アルゴリズムを使えるようにします。 たとえば、c# で作成され、STL アルゴリズムを適用する Windows ランタイム コンポーネントのコレクションを反復処理することができますこれを意味します。
 
    > [!IMPORTANT]
    > プロキシ反復子 `VectorIterator` と `VectorViewIterator` は、プロキシ オブジェクト `VectoryProxy<T>` と `ArrowProxy<T>` を利用して、STL コンテナーでの使用を有効にします。 詳細については、この記事で後述する「VectorProxy 要素」を参照してください。
 
 - C++/cli CX コレクション型と同じスレッド セーフの保証を STL コンテナーがサポートされます。
 
-- [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_)と[Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)さまざまな方法でコレクションが変更されたときに発生するイベントを定義します。 これらのインターフェイスを実装すると、  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) と [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) は、XAML コレクションとのデータ バインドをサポートします。 たとえば、 `Vector` にデータ バインドされている `Grid`がある場合、コレクションに項目を追加すると、変更がグリッド UI に反映されます。
+- [Windows::Foundation::Collections::IObservableVector](/uwp/api/Windows.Foundation.Collections.IObservableVector_T_) と [Windows::Foundation::Collections::IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) は、コレクションがさまざまな方法で変更されるときに発生するイベントを定義します。 これらのインターフェイスを実装すると、  [Platform::Collections::Map](../cppcx/platform-collections-map-class.md) と [Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) は、XAML コレクションとのデータ バインドをサポートします。 たとえば、 `Vector` にデータ バインドされている `Grid`がある場合、コレクションに項目を追加すると、変更がグリッド UI に反映されます。
 
 ## <a name="vector-usage"></a>ベクターの使用
 
@@ -60,11 +60,11 @@ Windows ランタイムは、コレクションと関連する型、および C 
 
 ## <a name="value-types-in-vector"></a>ベクターにおける値の型
 
-[Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) に格納される要素は、暗黙的にまたは指定したカスタム [std::equal_to](../standard-library/equal-to-struct.md) 比較子を使用するかして、等値比較をサポートする必要があります。 すべての参照型とすべてのスカラー型は、暗黙的に等値比較をサポートしています。 など、非スカラー値型[::datetime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)、またはカスタム比較 — たとえば、 `objA->UniqueID == objB->UniqueID`-カスタム関数オブジェクトを提供する必要があります。
+[Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) に格納される要素は、暗黙的にまたは指定したカスタム [std::equal_to](../standard-library/equal-to-struct.md) 比較子を使用するかして、等値比較をサポートする必要があります。 すべての参照型とすべてのスカラー型は、暗黙的に等値比較をサポートしています。 [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)などの非スカラー値型の場合や、カスタム比較 ( `objA->UniqueID == objB->UniqueID`など) の場合、カスタム関数オブジェクトを提供する必要があります。
 
 ## <a name="vectorproxy-elements"></a>VectorProxy 要素
 
-[Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)と[Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)の使用を有効にする`range for`ループとなどのアルゴリズム[std::sort](../standard-library/algorithm-functions.md#sort) で[IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)コンテナー。 `IVector`要素は、C++ を通じてアクセスできないポインターの逆参照; を通してのみアクセスできる[GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx)と[SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx)メソッド。 したがって、これらの反復子は、STL の要求に従って、 `Platform::Details::VectorProxy<T>` プロキシ クラスおよび `Platform::Details::ArrowProxy<T>` プロキシ クラスを使用して `*`、 `->`、 `[]` の各演算子を介した個々の要素へのアクセスを提供します。 厳密には、 `IVector<Person^> vec`が指定されている場合、 `*begin(vec)` の型は `VectorProxy<Person^>`になります。 ただし、プロキシ オブジェクトは、ほとんどの場合、コードに対して透過的です。 これらのプロキシ オブジェクトは反復子によって内部でのみ使用されるため文書化されませんが、その機構の動作がわかっていると便利です。
+[Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)と[Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)の使用を有効にする`range for`ループとなどのアルゴリズム[std::sort](../standard-library/algorithm-functions.md#sort) で[IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)コンテナー。 ただし、C++ ポインターの逆参照を使って `IVector` 要素にアクセスすることはできません。これらの要素には、 [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) メソッドと [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) メソッドを使ってアクセスすることしかできません。 そのため、これらの反復子を使用して、プロキシ クラス`Platform::Details::VectorProxy<T>`と`Platform::Details::ArrowProxy<T>`を介して個々 の要素へのアクセスを提供する__\*__、 __->__、および__\[]__ 演算子は、標準ライブラリで必要とします。 厳密には、 `IVector<Person^> vec`が指定されている場合、 `*begin(vec)` の型は `VectorProxy<Person^>`になります。 ただし、プロキシ オブジェクトは、ほとんどの場合、コードに対して透過的です。 これらのプロキシ オブジェクトは反復子によって内部でのみ使用されるため文書化されませんが、その機構の動作がわかっていると便利です。
 
 `range for` コンテナーに対して `IVector` ループを使用する場合は、 `auto&&` を使用して反復子変数が `VectorProxy` 要素に正しくバインドされるようにします。 `auto` または `auto&`を使用すると、コンパイラ警告 C4239 が発生し、警告テキストに `VectoryProxy` が示されます。
 
@@ -74,8 +74,7 @@ Windows ランタイムは、コレクションと関連する型、および C 
 
 プロキシ オブジェクトに関してコーディングする必要があるのは、 `dynamic_cast` 要素コレクションで特定の型の XAML オブジェクトを探している場合など、要素で `UIElement` を実行する必要がある場合です。 この場合は、最初に [Platform::Object](../cppcx/platform-object-class.md)^ に要素をキャストし、その後に動的キャストを実行する必要があります。
 
-```
-
+```cpp
 void FindButton(UIElementCollection^ col)
 {
     // Use auto&& to avoid warning C4239
@@ -96,7 +95,7 @@ void FindButton(UIElementCollection^ col)
 
 [!code-cpp[cx_collections#04](../cppcx/codesnippet/CPP/collections/class1.cpp#04)]
 
-一般に、内部マップ機能については、パフォーマンス上の理由で `std::map` 型を優先します。 ABI を介してコンテナーを渡す場合は、構築、 [:map](../cppcx/platform-collections-map-class.md)から、 [std::map](../standard-library/map-class.md)戻って、`Map`として、 [windows::foundation:。Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)します。 パブリックの戻り値またはパラメーターで `Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーは、 `Map` を `IMap`に変更することで解決できます。 たとえば、実行するルックアップや挿入の数が多くなく、ABI を介して頻繁にコレクションを渡すなどの場合、最初から `Platform::Collections::Map` を使用し `std::map`を変換するコストを回避した方がコストを抑えられることがあります。 どちらの場合も、 `IMap` のルックアップ操作と挿入操作は、3 つの種類で最もパフォーマンスが低いので避けます。 ABI を介してコンテナーを渡すポイントでのみ、 `IMap` に変換します。
+一般に、内部マップ機能については、パフォーマンス上の理由で `std::map` 型を優先します。 ABI を介してコンテナーを渡す必要がある場合は、 [std::map](../cppcx/platform-collections-map-class.md) から [Platform::Collections::Map](../standard-library/map-class.md) を構築し、 `Map` を [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)として返します。 パブリックの戻り値またはパラメーターで `Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーは、 `Map` を `IMap`に変更することで解決できます。 たとえば、実行するルックアップや挿入の数が多くなく、ABI を介して頻繁にコレクションを渡すなどの場合、最初から `Platform::Collections::Map` を使用し `std::map`を変換するコストを回避した方がコストを抑えられることがあります。 どちらの場合も、 `IMap` のルックアップ操作と挿入操作は、3 つの種類で最もパフォーマンスが低いので避けます。 ABI を介してコンテナーを渡すポイントでのみ、 `IMap` に変換します。
 
 ## <a name="value-types-in-map"></a>マップにおける値の型
 
@@ -149,7 +148,7 @@ STL の  `const` ランダム アクセス反復子の要件を満たす STL 反
 
 `Vector` と `Map` は、XAML コレクションでのデータ バインドをサポートしていますが、これは、コレクション オブジェクトが変更またはリセットされたとき、またはコレクションのいずれかの要素が挿入、削除、または変更されたときに発生するイベントを実装することで実現されています。 データ バインドをサポートする独自の型を作成できます。ただし、 `Map` と `Vector` から継承することはできません。これらの型はシールされているためです。
 
-[::Vectorchangedeventhandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler)と[Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler)デリゲートは、指定のイベント ハンドラーのシグネチャは、変更イベントのコレクション。 [::Collections::collectionchange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)パブリック列挙型クラス、および`Platform::Collection::Details::MapChangedEventArgs`と`Platform::Collections::Details::VectorChangedEventArgs`ref クラスでは、イベントの原因を判断するイベント引数を格納します。 *`EventArgs` 型は `Details` 名前空間で定義されますが、これは、 `Map` か `Vector`を使用するときには、それらを明示的に作成および利用する必要がないためです。
+[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) デリゲートと [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) デリゲートは、コレクション変更イベントのイベント ハンドラーのシグネチャを指定します。 [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) パブリック列挙型クラス、 `Platform::Collection::Details::MapChangedEventArgs` 、 `Platform::Collections::Details::VectorChangedEventArgs` ref クラスは、イベントの原因を特定するためにイベント引数を格納します。 `*EventArgs`で型が定義されている、`Details`名前空間を作成または使用するときに明示的に使用する必要がないため`Map`または`Vector`します。
 
 ## <a name="see-also"></a>関連項目
 

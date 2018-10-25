@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 451cf4b404143ce8f9b94481dd27227f487874d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b66debe5c6401b4eee01bc81acc58b8445e20c21
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381167"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068776"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールのライセンス
 
@@ -84,15 +84,15 @@ ActiveX コントロール ウィザードを使用して ActiveX コントロ�
 
 - [VerifyUserLicense](../mfc/reference/coleobjectfactory-class.md#verifyuserlicense)
 
-     コントロールで、システムは、コントロールのライセンス ファイルの存在をチェックして、デザイン時の使用状況を確認します。 この関数`IClassFactory2::GetLicInfo`と`IClassFactory::CreateInstanceLic`します。
+   コントロールで、システムは、コントロールのライセンス ファイルの存在をチェックして、デザイン時の使用状況を確認します。 この関数`IClassFactory2::GetLicInfo`と`IClassFactory::CreateInstanceLic`します。
 
 - [GetLicenseKey](../mfc/reference/coleobjectfactory-class.md#getlicensekey)
 
-     コントロールの DLL からの一意のキーを要求します。 このキーがコンテナー アプリケーションに埋め込まれ、後と組み合わせて使用`VerifyLicenseKey`コントロールのインスタンスを作成します。 この関数`IClassFactory2::RequestLicKey`します。
+   コントロールの DLL からの一意のキーを要求します。 このキーがコンテナー アプリケーションに埋め込まれ、後と組み合わせて使用`VerifyLicenseKey`コントロールのインスタンスを作成します。 この関数`IClassFactory2::RequestLicKey`します。
 
 - [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-     埋め込みのキーと、コントロールの一意のキーは、同じであることを確認します。 これにより、使用するためのコントロールのインスタンスを作成するコンテナーです。 この関数`IClassFactory2::CreateInstanceLic`ライセンス キーのカスタマイズされた検証を提供するオーバーライドできます。 既定の実装では、文字列比較を実行します。 詳細については、次を参照してください。[ライセンス ActiveX コントロールのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)、この記事で後述します。
+   埋め込みのキーと、コントロールの一意のキーは、同じであることを確認します。 これにより、使用するためのコントロールのインスタンスを作成するコンテナーです。 この関数`IClassFactory2::CreateInstanceLic`ライセンス キーのカスタマイズされた検証を提供するオーバーライドできます。 既定の実装では、文字列比較を実行します。 詳細については、次を参照してください。[ライセンス ActiveX コントロールのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)、この記事で後述します。
 
 ###  <a name="_core_header_file_modifications"></a> ヘッダー ファイルの変更
 

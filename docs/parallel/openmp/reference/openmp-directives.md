@@ -39,12 +39,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4d92d196cc38e6033c6f16332e4977f2481c4496
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 98fec6659c2f4e998b946983a0bd2bdea6d0cde1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990335"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083257"
 ---
 # <a name="openmp-directives"></a>OpenMP ディレクティブ
 
@@ -52,19 +52,19 @@ OpenMP API で使用するディレクティブへのリンクを提供します
 
 Visual C には、次の OpenMP ディレクティブがサポートされています。
 
-ディレクティブ                             | 説明
-------------------------------------- | -----------------------------------------------------------------------------------------------------------------
-[atomic](#atomic)                     | 指定するアトミックに更新されるメモリの場所。
-[barrier](#barrier)                   | チーム内のすべてのスレッドを同期します。すべてのスレッドがバリアを実行するまでのすべてのスレッドがバリアで一時停止します。
-[critical](#critical)                 | コードが、一度に 1 つのスレッドでのみ実行されるかを指定します。
-[flush](#flush-openmp)                | すべてのスレッドがすべての共有オブジェクトのメモリの同じビューを持つことを指定します。
-[for](#for-openmp)                    | 行われる動作、`for`スレッド間で除算する、並行領域内でループします。
-[master](#master)                     | マスタ スレッドだけがプログラムのセクションを実行する必要がありますを指定します。
-[順序付け](#ordered-openmp-directives) | 並行処理には、そのコードを指定します`for`シーケンシャル ループのようなループを実行する必要があります。
-[parallel](#parallel)                 | 複数のスレッドを並列で実行されるコードは、並列領域を定義します。
-[sections](#sections-openmp)          | すべてのスレッド間で分配するコード セクションを識別します。
-[single](#single)                     | コードのセクションは、シングル スレッドで実行する必要があります指定できます。
-[threadprivate](#threadprivate)       | 変数は、スレッドに対してプライベートであることを指定します。
+|ディレクティブ|説明|
+|---------|-----------|
+|[atomic](#atomic)|指定するアトミックに更新されるメモリの場所。|
+|[barrier](#barrier)|チーム内のすべてのスレッドを同期します。すべてのスレッドがバリアを実行するまでのすべてのスレッドがバリアで一時停止します。|
+|[critical](#critical)|コードが、一度に 1 つのスレッドでのみ実行されるかを指定します。|
+|[flush](#flush-openmp)|すべてのスレッドがすべての共有オブジェクトのメモリの同じビューを持つことを指定します。|
+|[for](#for-openmp)|行われる動作、`for`スレッド間で除算する、並行領域内でループします。|
+|[master](#master)|マスタ スレッドだけがプログラムのセクションを実行する必要がありますを指定します。|
+|[順序付け](#ordered-openmp-directives)|並行処理には、そのコードを指定します`for`シーケンシャル ループのようなループを実行する必要があります。|
+|[parallel](#parallel)|複数のスレッドを並列で実行されるコードは、並列領域を定義します。|
+|[sections](#sections-openmp)|すべてのスレッド間で分配するコード セクションを識別します。|
+|[single](#single)|コードのセクションは、シングル スレッドで実行する必要があります指定できます。|
+|[threadprivate](#threadprivate)|変数は、スレッドに対してプライベートであることを指定します。|
 
 ## <a name="atomic"></a>アトミック
 
@@ -306,13 +306,13 @@ A`for`ループします。 ユーザー コードで未定義の動作が発生
 
 `for`ディレクティブは、次の OpenMP 句をサポートしています。
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [順序付け](../../../parallel/openmp/reference/ordered-openmp-directives.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [schedule](../../../parallel/openmp/reference/schedule.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [順序付け](openmp-clauses.md#ordered-openmp-clauses)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [schedule](openmp-clauses.md#schedule)
 
 場合`parallel`が指定されても、`clauses`句受け入れ可能で、`parallel`または`for`ディレクティブを除く`nowait`。
 
@@ -535,14 +535,14 @@ test2() iteration 4
 
 `parallel`ディレクティブは、次の OpenMP 句をサポートしています。
 
-- [copyin](../../../parallel/openmp/reference/copyin.md)
-- [default](../../../parallel/openmp/reference/default-openmp.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [if](../../../parallel/openmp/reference/if-openmp.md)
-- [num_threads](../../../parallel/openmp/reference/num-threads.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
-- [shared](../../../parallel/openmp/reference/shared-openmp.md)
+- [copyin](openmp-clauses.md#copyin)
+- [default](openmp-clauses.md#default-openmp)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [if](openmp-clauses.md#if-openmp)
+- [num_threads](openmp-clauses.md#num-threads)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
+- [shared](openmp-clauses.md#shared-openmp)
 
 `parallel` 使用することができますも、[セクション](#sections-openmp)と[の](#for-openmp)ディレクティブ。
 
@@ -603,11 +603,11 @@ Hello from thread 3
 
 `sections`ディレクティブは、次の OpenMP 句をサポートしています。
 
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [lastprivate](../../../parallel/openmp/reference/lastprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
-- [reduction](../../../parallel/openmp/reference/reduction.md)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [lastprivate](openmp-clauses.md#lastprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
+- [reduction](openmp-clauses.md#reduction)
 
 場合`parallel`が指定されても、`clauses`句受け入れ可能で、`parallel`または`sections`ディレクティブを除く`nowait`。
 
@@ -656,10 +656,10 @@ Hello from thread 0
 
 `single`ディレクティブは、次の OpenMP 句をサポートしています。
 
-- [copyprivate](../../../parallel/openmp/reference/copyprivate.md)
-- [firstprivate](../../../parallel/openmp/reference/firstprivate.md)
-- [nowait](../../../parallel/openmp/reference/nowait.md)
-- [private](../../../parallel/openmp/reference/private-openmp.md)
+- [copyprivate](openmp-clauses.md#copyprivate)
+- [firstprivate](openmp-clauses.md#firstprivate)
+- [nowait](openmp-clauses.md#nowait)
+- [private](openmp-clauses.md#private-openmp)
 
 [マスター](#master)ディレクティブを使用して、コードのセクションをマスター スレッドでのみ実行するように指定できます。
 
@@ -745,4 +745,4 @@ int main()
 
 ### <a name="example"></a>例
 
-使用するサンプルの`threadprivate`を参照してください[プライベート](../../../parallel/openmp/reference/private-openmp.md)します。
+使用するサンプルの`threadprivate`を参照してください[プライベート](openmp-clauses.md#private-openmp)します。

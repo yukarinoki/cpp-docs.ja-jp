@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be0e05d61d4949deaee683c5b8f43d18e0501d23
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 5e50fe341ff52916d16b3c006e438fe2bfa99154
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808980"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082841"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan クラス
 
@@ -157,7 +157,7 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 *dblSpanSrc*<br/>
 新しいにコピーされる日数`COleDateTimeSpan`オブジェクト。
 
-*lDays*、 *nHours*、 *nMins*、 *nSecs*  
+*lDays*、 *nHours*、 *nMins*、 *nSecs*<br/>
 新しいにコピーされる日付と時刻の値を示す`COleDateTimeSpan`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -217,10 +217,10 @@ A`CString`書式設定された日付/時間値を格納しています。
 
 この関数の形式の簡単な説明に従います。
 
-**形式 (** *pFormat* **)**  
+**形式 (** *pFormat* **)**<br/>
 この形式でパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式化`printf`します。 書式指定文字列は、関数にパラメーターとして渡されます。
 
-**形式 (** *nID* **)**  
+**形式 (** *nID* **)**<br/>
 この形式でパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式化`printf`します。 書式指定文字列は、リソースです。 この文字列リソースの ID は、パラメーターとして渡されます。
 
 ### <a name="example"></a>例
@@ -388,11 +388,11 @@ DateTimeSpanStatus GetStatus() const throw();
 戻り値は、`DateTimeSpanStatus`列挙型内で定義されている、`COleDateTimeSpan`クラス。
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-};  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+};
 ```
 
 これらのステータス値の簡単な説明は、次の一覧を参照してください。
@@ -585,11 +585,11 @@ DateTimeSpanStatus m_status;
 ### <a name="remarks"></a>Remarks
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 これらのステータス値の簡単な説明は、次の一覧を参照してください。
@@ -694,7 +694,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lDays*、 *nHours*、 *nMins*、 *nSecs*  
+*lDays*、 *nHours*、 *nMins*、 *nSecs*<br/>
 これにコピーされる日付範囲と時間範囲の値を示す`COleDateTimeSpan`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -739,11 +739,11 @@ void SetStatus(DateTimeSpanStatus status) throw();
 *状態*パラメーターの値によって定義されます、`DateTimeSpanStatus`列挙型内で定義されている、`COleDateTimeSpan`クラス。
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 これらのステータス値の簡単な説明は、次の一覧を参照してください。

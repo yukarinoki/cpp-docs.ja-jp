@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b9ec3c034e388cec4f91617fbee0e6ab19180de
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 51dee27c69d42bde83f8eb6925e96d0dad80dca6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418750"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081249"
 ---
 # <a name="containers-advanced-features"></a>コンテナー : 高度な機能
 
@@ -49,7 +49,7 @@ ms.locfileid: "46418750"
 
 - オーバーライド`COleClientItem::CanActivate`場で編集できる、サーバー自体を使用中は、配置内の項目を編集しないようにします。
 
-     たとえば、MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md)コンテナー/サーバー アプリケーションで作成されたアイテムが埋め込まれています。 OCLIENT アプリケーションを開くし、一括編集コンテナー/サーバー アプリケーションで作成された項目。 アプリケーションのアイテムの編集中に決定した MFC OLE サンプルで作成したアイテムを埋め込む[HIERSVR](../visual-cpp-samples.md)します。 これを行うには、インプレース アクティブ化を使用することはできません。 完全には、この項目をアクティブ化する HIERSVR を開く必要があります。 Microsoft Foundation Class ライブラリがこの OLE 機能をサポートしていないためにオーバーライド`COleClientItem::CanActivate`すると、このような状況を確認し、アプリケーションで可能な実行時エラーを防ぐことができます。
+   たとえば、MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md)コンテナー/サーバー アプリケーションで作成されたアイテムが埋め込まれています。 OCLIENT アプリケーションを開くし、一括編集コンテナー/サーバー アプリケーションで作成された項目。 アプリケーションのアイテムの編集中に決定した MFC OLE サンプルで作成したアイテムを埋め込む[HIERSVR](../visual-cpp-samples.md)します。 これを行うには、インプレース アクティブ化を使用することはできません。 完全には、この項目をアクティブ化する HIERSVR を開く必要があります。 Microsoft Foundation Class ライブラリがこの OLE 機能をサポートしていないためにオーバーライド`COleClientItem::CanActivate`すると、このような状況を確認し、アプリケーションで可能な実行時エラーを防ぐことができます。
 
 新しいアプリケーションを作成し、コンテナー/サーバー アプリケーションとして機能する場合は、アプリケーション ウィザードでこのサポート OLE オプション ダイアログ ボックスのオプションが自動的に作成されることを選択します。 詳細については、この記事を参照してください。[概要: ActiveX コントロール コンテナーの作成](../mfc/reference/creating-an-mfc-activex-control-container.md)です。 MFC のサンプルについては、MFC のサンプルを参照してください。
 

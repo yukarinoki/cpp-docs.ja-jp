@@ -71,12 +71,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dfa3f599da4594e9cb0d416def1846b9937664f8
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: bef92e7315418e13b660f655a54f20e8696c7590
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328539"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066592"
 ---
 # <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>型の特徴のコンパイラ サポート (C +/cli および C++/cli CX)
 
@@ -231,7 +231,7 @@ Microsoft C コンパイラがサポート*特徴の入力*c++/cli および C++
 
    返します**true**型に単純なコンパイラによって生成されたデストラクターがある場合。
 
-    ``` cpp 
+    ``` cpp
     // has_trivial_destructor.cpp
     #include <stdio.h>
     struct S {};
@@ -534,7 +534,7 @@ Microsoft C コンパイラがサポート*特徴の入力*c++/cli および C++
 
 `__has_finalizer(`*型*`)`このプラットフォームがファイナライザーをサポートしていないために、型の特徴がサポートされていません。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -544,7 +544,7 @@ Microsoft C コンパイラがサポート*特徴の入力*c++/cli および C++
 
 (この機能のプラットフォーム固有の解説はありません。)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -567,7 +567,7 @@ ref struct is_class {
 ref class R {};
 
 int main () {
-   if (is_class<R>::value)  
+   if (is_class<R>::value)
       Console::WriteLine("R is a ref class");
    else
       Console::WriteLine("R is not a ref class");

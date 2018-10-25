@@ -18,16 +18,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6acec41bcae08f5585eb521dc90ff12d082fd5ad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93fc2b788d450b591ebd20be49f25133c95f22b6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418685"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052854"
 ---
 # <a name="cd2dellipse-class"></a>CD2DEllipse クラス
 
-`D2D1_ELLIPSE` のラッパー。
+`D2D1_ELLIPSE`のラッパー。
 
 ## <a name="syntax"></a>構文
 
@@ -49,7 +49,7 @@ class CD2DEllipse : public D2D1_ELLIPSE;
 
 `CD2DEllipse`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxrendertarget.h
 
@@ -61,7 +61,6 @@ CD2DRectF オブジェクトから CD2DEllipse オブジェクトを構築しま
 CD2DEllipse(const CD2DRectF& rect);
 CD2DEllipse(const D2D1_ELLIPSE& ellipse);
   CD2DEllipse(const D2D1_ELLIPSE* ellipse);
-
 
 CD2DEllipse(
     const CD2DPointF& ptCenter,

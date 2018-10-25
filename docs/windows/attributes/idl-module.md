@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 91bed0ebfdacae21f2d606c0b8fa1bb43326816d
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 54fcef3c7b2ef86273a570e483f65b34b3b2efc2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063101"
 ---
 # <a name="idlmodule"></a>idl_module
 
@@ -56,10 +56,10 @@ function declaration
 (省略可能)このタイプ ライブラリのヘルプ ID です。
 
 *hidden*<br/>
-(省略可能)ライブラリが表示されないようにするパラメーター。 参照してください、[隠し](/windows/desktop/Midl/hidden)MIDL 属性に関する詳細について説明します。
+(省略可能)ライブラリが表示されないようにするパラメーター。 詳細については、「 [hidden](/windows/desktop/Midl/hidden) 」の MIDL 属性に関する説明を参照してください。
 
 *restricted*<br/>
-(省略可能)ライブラリのメンバーは任意に呼び出すことができません。 参照してください、[制限](/windows/desktop/Midl/restricted)MIDL 属性に関する詳細について説明します。
+(省略可能)ライブラリのメンバーは任意に呼び出すことができません。 詳細については、「 [restricted](/windows/desktop/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
 
 *関数の宣言*<br/>
 この関数を定義します。
@@ -87,7 +87,7 @@ function declaration
 void FuncName(int i);
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -98,10 +98,10 @@ void FuncName(int i);
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [スタンドアロン属性](stand-alone-attributes.md)<br/>
-[entry](entry.md)  
+[entry](entry.md)

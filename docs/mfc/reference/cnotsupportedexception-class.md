@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 65d574ebdfb93b78e766b7e9711540af48d4a09e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b52151dba90c0cfd0ed834e2ef351838d598eb90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437431"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068803"
 ---
 # <a name="cnotsupportedexception-class"></a>CNotSupportedException クラス
 
@@ -59,7 +59,7 @@ class CNotSupportedException : public CSimpleException
 
 `CNotSupportedException`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -79,5 +79,4 @@ CNotSupportedException();
 
 [CException クラス](cexception-class.md)<br/>
 [階層図](../hierarchy-chart.md)
-
 

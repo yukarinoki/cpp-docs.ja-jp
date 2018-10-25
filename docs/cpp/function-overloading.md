@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 608b4560f11e35d9aefb2c848a27c99c8dc6f4ec
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 3d942e2c5bca7d86e66cb579de1cbe946cb9f5f6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821349"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081496"
 ---
 # <a name="function-overloading"></a>関数のオーバーロード
 
@@ -126,7 +126,6 @@ int print(double dvalue, int prec)
 既定の引数は、関数型の一部とは見なされません。 したがって、オーバーロードされた関数の選択では使用されません。 既定の引数のみが異なる 2 つの関数は、オーバーロードされた関数ではなく複数の定義と見なされます。
 
 既定の引数は、オーバーロードされた演算子に指定することはできません。
-
 
 ## <a name="argument-matching"></a>引数の一致
 
@@ -471,7 +470,7 @@ int main()
     void Print( PSTR szToPrint );
     ```
 
-     先行する 2 つの関数の引数リストはまったく同じです。 `PSTR` 型のシノニムです`char *`します。 メンバーのスコープでは、このコードによりエラーが発生します。
+   先行する 2 つの関数の引数リストはまったく同じです。 `PSTR` 型のシノニムです`char *`します。 メンバーのスコープでは、このコードによりエラーが発生します。
 
 - 列挙型は別個の型です。また、オーバーロードされた関数を識別するために使用できます。
 
@@ -482,7 +481,7 @@ int main()
     void Print( char szToPrint[] );
     ```
 
-     次元配列の乗算では、2 番目以降のすべてのディメンションは、型の一部と見なされます。 したがって、オーバーロードされた関数を識別するために使用されます。
+   次元配列の乗算では、2 番目以降のすべてのディメンションは、型の一部と見なされます。 したがって、オーバーロードされた関数を識別するために使用されます。
 
     ```cpp
     void Print( char szToPrint[] );

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a276868dfdb14f754cac3938e052e82b7ab22a6f
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 1eea2e3158d980c77863640d0342f8b074bf7849
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328611"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080248"
 ---
 # <a name="mfc-classes"></a>MFC クラス
 
@@ -1316,6 +1316,4 @@ Microsoft Foundation Class ライブラリにあるすべてのウィンドウ �
 
 [MFC デスクトップ アプリケーション](../../mfc/mfc-desktop-applications.md)<br/>
 MFC ライブラリを構成するクラス、グローバル関数、グローバル変数、およびマクロに関するトピックへのリンクを含みます。
-
-
 

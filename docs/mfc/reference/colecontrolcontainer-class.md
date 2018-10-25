@@ -82,12 +82,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f016773102b5989d5272ebb51931e00ff1972ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cd45453dd4d70424b47f74e46d0bd5f948f75499
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409110"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077700"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer クラス
 
@@ -163,7 +163,7 @@ class COleControlContainer : public CCmdTarget
 
 `COleControlContainer`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxocc.h
 
@@ -176,7 +176,6 @@ virtual void AttachControlSite(
     CWnd* pWnd,
     UINT nIDC = 0);
 
-
 void AttachControlSite(
     CWnd* pWnd,
     UINT nIDC = 0);
@@ -185,7 +184,7 @@ void AttachControlSite(
 ### <a name="parameters"></a>パラメーター
 
 *我が物*<br/>
-ポインターを`CWnd`オブジェクト。
+`CWnd` オブジェクトへのポインター。
 
 *各*<br/>
 アタッチされるコントロールの ID。
@@ -293,7 +292,6 @@ BOOL CreateControl(
     BOOL bStorage =FALSE,
     BSTR bstrLicKey =NULL,
     COleControlSite** ppNewSite =NULL);
-
 
 BOOL CreateControl(
     CWnd* pWndCtrl,

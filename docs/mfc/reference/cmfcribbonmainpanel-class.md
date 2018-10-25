@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9397dbd6c18d2256bf1803080f32d1fae36a159
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e23e883c143b1c65d4f150092193a7a693a34269
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430580"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065240"
 ---
 # <a name="cmfcribbonmainpanel-class"></a>CMFCRibbonMainPanel クラス
 
@@ -82,7 +82,7 @@ class CMFCRibbonMainPanel : public CMFCRibbonPanel
 
 [CMFCRibbonMainPanel](../../mfc/reference/cmfcribbonmainpanel-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxRibbonMainPanel.h
 
@@ -96,7 +96,8 @@ virtual void Add(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pElem*メイン パネルに追加するリボン要素へのポインター。
+*pElem*<br/>
+[入力、出力]メイン パネルに追加するリボン要素へのポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -132,7 +133,8 @@ void AddToBottom(CMFCRibbonMainPanelButton* pElem);
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pElem*メイン パネルの下部に追加するリボン要素へのポインター。
+*pElem*<br/>
+[入力、出力]メイン パネルの下部に追加するリボン要素へのポインター。
 
 ### <a name="remarks"></a>Remarks
 

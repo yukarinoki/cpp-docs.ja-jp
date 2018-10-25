@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3d0cc73df8304377bde00d8da2ab3c501ea5db45
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4a362404cc92a147b0517b394c3923e0c9924ca3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373272"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059338"
 ---
-# <a name="dialog-editor-states-guides-and-grids-c"></a>ダイアログ エディターの状態 (ガイドとグリッド) (C++) 
+# <a name="dialog-editor-states-guides-and-grids-c"></a>ダイアログ エディターの状態 (ガイドとグリッド) (C++)
 
 ダイアログ ボックスのコントロールを配置することができます、**ダイアログ**エディターで次の 3 つの異なる状態のいずれか。
 
@@ -44,7 +44,7 @@ ms.locfileid: "46373272"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622c0720f55e638d6640094f095e59d2d5e5f931
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f756da8f553d68e89dcbee737adbab75f256ae8d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069340"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053124"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>ATL プロジェクトのコンパイラ最適化を指定します。
 
@@ -51,7 +51,7 @@ _ATL_DISABLE_NO_VTABLE を定義していない場合、ATL_NO_VTABLE マクロ�
 
 ATL_NO_VTABLE を使用する必要があり、その結果`declspec(novtable)`を直接作成可能でない基底クラスのみを持つ。 使用しないでください`declspec(novtable)`プロジェクトで、最も多く派生されたクラスを使用しているためこのクラス (通常は[CComObject](../../atl/reference/ccomobject-class.md)、 [CComAggObject](../../atl/reference/ccomaggobject-class.md)、または[CComPolyObject](../../atl/reference/ccompolyobject-class.md))プロジェクトの vtable ポインターを初期化します。
 
-使用する任意のオブジェクトのコンス トラクターから仮想関数を呼び出す必要がありますいない`declspec(novtable)`します。 これらの呼び出しを移動する必要があります、 [finalconstruct 関数](ccomobjectrootex-class.md#finalconstruct)メソッド。  
+使用する任意のオブジェクトのコンス トラクターから仮想関数を呼び出す必要がありますいない`declspec(novtable)`します。 これらの呼び出しを移動する必要があります、 [finalconstruct 関数](ccomobjectrootex-class.md#finalconstruct)メソッド。
 
 使用する必要があるかどうかが不明の場合、`declspec(novtable)`修飾子は、任意のクラス定義から ATL_NO_VTABLE マクロを削除するかを指定してグローバルに無効にできます
 

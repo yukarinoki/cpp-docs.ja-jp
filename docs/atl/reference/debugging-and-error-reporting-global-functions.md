@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3bef300671894e054ddf9b1ca0ab9dcf3b135370
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f035ac105dee4e668ca8bee0bab18c2a31fd027f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019420"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069153"
 ---
 # <a name="debugging-and-error-reporting-global-functions"></a>デバッグとエラー報告に関するグローバル関数
 
@@ -47,11 +47,11 @@ HRESULT AtlHresultFromLastError();
 
 ### <a name="remarks"></a>Remarks
 
-`AtlHresultFromLastError` 呼び出し`GetLastError`最後のエラーを取得して、HRESULT_FROM_WIN32 マクロを使用して、HRESULT に変換してから、エラーが返されます。  
+`AtlHresultFromLastError` 呼び出し`GetLastError`最後のエラーを取得して、HRESULT_FROM_WIN32 マクロを使用して、HRESULT に変換してから、エラーが返されます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcomcli.h  
+**ヘッダー:** atlcomcli.h
 
 ##  <a name="atlhresultfromwin32"></a>  AtlHresultFromWin32
 
@@ -71,11 +71,11 @@ AtlHresultFromWin32(DWORD error);
 Win32 エラー コードを HRESULT_FROM_WIN32 マクロを使用して、HRESULT に変換します。
 
 > [!NOTE]
->  使用する代わりに`HRESULT_FROM_WIN32(GetLastError())`、関数を使用して[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)します。  
+>  使用する代わりに`HRESULT_FROM_WIN32(GetLastError())`、関数を使用して[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcomcli.h  
+**ヘッダー:** atlcomcli.h
 
 ##  <a name="atlreporterror"></a>  AtlReportError
 
@@ -166,9 +166,9 @@ HRESULT WINAPI AtlReportError(
 [!code-cpp[NVC_ATL_COM#52](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_1.cpp)]
 
 > [!CAUTION]
->  使用しない`AtlReportError`C++ の catch ハンドラー。 これらの関数の一部のオーバーライドを使用して、ATL 文字列変換マクロは、内部的には、使用される、`_alloca`関数を内部的にします。 使用して`AtlReportError`C++ catch ハンドラーの C++ の catch ハンドラーで例外が発生します。  
+>  使用しない`AtlReportError`C++ の catch ハンドラー。 これらの関数の一部のオーバーライドを使用して、ATL 文字列変換マクロは、内部的には、使用される、`_alloca`関数を内部的にします。 使用して`AtlReportError`C++ catch ハンドラーの C++ の catch ハンドラーで例外が発生します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
@@ -203,11 +203,11 @@ ATL プロジェクトでは、ATL によって、障害発生時に使用する
 
 ### <a name="example"></a>例
 
-[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]  
+[!code-cpp[NVC_ATL_Windowing#95](../../atl/codesnippet/cpp/debugging-and-error-reporting-global-functions_2.h)]
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atldef.h  
+**ヘッダー:** atldef.h
 
 ##  <a name="atlthrowlastwin32"></a>  AtlThrowLastWin32
 
@@ -225,9 +225,9 @@ MFC プロジェクトでシンボルが定義されていない場合に、こ�
 
 ATL プロジェクトでシンボルが定義されていない場合、関数、 [CAtlException](../../atl/reference/catlexception-class.md)します。
 
-シンボルが定義されている場合、関数は例外をスローする代わりにアサーション失敗を発生させます。  
+シンボルが定義されている場合、関数は例外をスローする代わりにアサーション失敗を発生させます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldef.h
 

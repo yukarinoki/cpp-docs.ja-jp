@@ -15,19 +15,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 370c028c9d28cce9d0eb36a20bd2014ac14bba60
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: d33ada08132d5748b2cf2630ac44c81a52cec7c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49989984"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082789"
 ---
 # <a name="schema-rowsets"></a>スキーマ行セット
 
-スキーマ (メタデータ) は、データベースの構造や、プロバイダー、行セット、テーブルの列に関する情報などの組織に関する情報、またはその他の情報を実際のデータベースの内容。 OLE DB スキーマ行セットを使用して、行セットを開くことがなくこのような情報を取得することができます。  
-  
-スキーマ行セットを使用する方法については、次を参照してください。[スキーマ行セットのメタデータの取得](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)します。  
-  
-## <a name="see-also"></a>関連項目  
+スキーマ (メタデータ) は、データベースの構造や、プロバイダー、行セット、テーブルの列に関する情報などの組織に関する情報、またはその他の情報を実際のデータベースの内容。 OLE DB スキーマ行セットを使用して、行セットを開くことがなくこのような情報を取得することができます。
+
+スキーマ行セットを使用する方法については、次を参照してください。[スキーマ行セットのメタデータの取得](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)します。
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)

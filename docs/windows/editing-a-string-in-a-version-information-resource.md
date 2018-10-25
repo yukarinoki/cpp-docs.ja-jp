@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 87fac131c053afa3c3b6d6da549d7a002fa95b64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5a456c745a11fa4250ad731f00556b211ad21b8f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445029"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061704"
 ---
 # <a name="editing-a-string-in-a-version-information-resource-c"></a>バージョン情報リソース (C++) の文字列の編集
 
@@ -31,7 +31,7 @@ ms.locfileid: "46445029"
 
 1. 1 回アイテムをクリックして選択し、もう一度クリックして編集を開始します。 変更を直接、**バージョン情報**テーブルまたは、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。 加えた変更は、両方の場所で反映されます。
 
-   > [!NOTE] 
+   > [!NOTE]
    > 編集するときに、`FILEFLAGS`キー、**バージョン情報**エディター、わかります設定することはできません、**デバッグ**、**プライベート ビルド**、または**特別なビルド**プロパティ (で、**プロパティ**ウィンドウ) .rc ファイル。
 
    - **バージョン情報**エディター セット、**デバッグ**プロパティを`#ifdef`、リソース スクリプトに基づく、`_DEBUG`ビルド フラグ。
@@ -42,7 +42,7 @@ ms.locfileid: "46445029"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

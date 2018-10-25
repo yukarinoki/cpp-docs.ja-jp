@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9f2155fef0f9287273b3c45e9318665acfdae527
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2c0ebbc2686c229d7818042672cdb1d6d2143f81
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070640"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058077"
 ---
 # <a name="declarations-and-definitions-c"></a>宣言と定義 (C++)
 
@@ -35,7 +35,7 @@ ms.locfileid: "46070640"
 
 1. クラス宣言内の静的データ メンバーの宣言である。
 
-     静的クラスのデータ メンバーは、クラスのすべてのオブジェクトで共有される個別の変数であるため、クラス宣言の外側で定義し、初期化する必要があります (クラスおよびクラス メンバーの詳細については、次を参照してください[クラス](../cpp/classes-and-structs-cpp.md)。)。
+   静的クラスのデータ メンバーは、クラスのすべてのオブジェクトで共有される個別の変数であるため、クラス宣言の外側で定義し、初期化する必要があります (クラスおよびクラス メンバーの詳細については、次を参照してください[クラス](../cpp/classes-and-structs-cpp.md)。)。
 
 1. 後ろに定義が続かない、`class T;` などのようなクラス名の宣言である。
 

@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a01e6cf423aece9fba74c4b81fa247d57844e107
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 233e302d4035801e7d8871754d8ecfcfee54cf1a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439888"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060912"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
-**C++ 固有の仕様**  
-  
-タイプ ライブラリのすべてのインターフェイスに対して、スマート ポインターの作成を抑制します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-no_smart_pointers  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 
-既定では、`#import` を使用すると、タイプ ライブラリのすべてのインターフェイスのスマート ポインター宣言を取得できます。 これらのスマート ポインターは型[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)します。  
-  
-**END C 固有の仕様**  
-  
-## <a name="see-also"></a>関連項目  
- 
+**C++ 固有の仕様**
+
+タイプ ライブラリのすべてのインターフェイスに対して、スマート ポインターの作成を抑制します。
+
+## <a name="syntax"></a>構文
+
+```
+no_smart_pointers
+```
+
+## <a name="remarks"></a>Remarks
+
+既定では、`#import` を使用すると、タイプ ライブラリのすべてのインターフェイスのスマート ポインター宣言を取得できます。 これらのスマート ポインターは型[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)します。
+
+**END C 固有の仕様**
+
+## <a name="see-also"></a>関連項目
+
 [#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

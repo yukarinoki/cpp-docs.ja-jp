@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17040448771e4ca3c0f999e72a9c08f0e1fa28aa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c10908454252b1ae381a2b96835ce09f3aa6db6f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058498"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053657"
 ---
 # <a name="registry-macros"></a>レジストリに関するマクロ
 
@@ -41,9 +41,9 @@ ms.locfileid: "46058498"
 |[DECLARE_REGISTRY](#declare_registry)|入るか、システム レジストリの主要なオブジェクトのエントリを削除します。|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|自動的に登録するために必要な情報を指定します、 *appid*します。|
 |[に](#declare_registry_resource)|名前付きリソースを検索し、レジストリ スクリプトを実行します。|
-|[代入](#declare_registry_resourceid)|ID 番号で識別されるリソースを検索し、レジストリ スクリプトを実行します。|  
+|[代入](#declare_registry_resourceid)|ID 番号で識別されるリソースを検索し、レジストリ スクリプトを実行します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
@@ -96,10 +96,10 @@ DECLARE_NO_REGISTRY()
 
 ```
 DECLARE_REGISTRY(
-    class, 
-    pid, 
-    vpid, 
-    nid, 
+    class,
+    pid,
+    vpid,
+    nid,
     flags )
 ```
 
@@ -132,7 +132,7 @@ DECLARE_REGISTRY(
 
 ```
 DECLARE_REGISTRY_APPID_RESOURCEID(
-    resid, 
+    resid,
     appid )
 ```
 
@@ -173,7 +173,7 @@ DECLARE_REGISTRY_RESOURCE( x )
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-ATL 実行時に置換値を置換する場合は、代入マクロを指定しません。 配列を作成する代わりに、`_ATL_REGMAP_ENTRIES`構造、各エントリが変数のプレース ホルダーが含まれている実行時に、プレース ホルダーを置換する値と組み合わせて使用します。 呼び出して[として](catlmodule-class.md#updateregistryfromresourced)または[方法については](catlmodule-class.md#updateregistryfromresources)配列を渡します。 これは、すべての置換値の追加、`_ATL_REGMAP_ENTRIES`レジストラーの置換のマップの構造体。  
+ATL 実行時に置換値を置換する場合は、代入マクロを指定しません。 配列を作成する代わりに、`_ATL_REGMAP_ENTRIES`構造、各エントリが変数のプレース ホルダーが含まれている実行時に、プレース ホルダーを置換する値と組み合わせて使用します。 呼び出して[として](catlmodule-class.md#updateregistryfromresourced)または[方法については](catlmodule-class.md#updateregistryfromresources)配列を渡します。 これは、すべての置換値の追加、`_ATL_REGMAP_ENTRIES`レジストラーの置換のマップの構造体。
 
 置き換え可能パラメーターとスクリプト作成する方法の詳細については、記事を参照してください。 [、ATL レジストリ コンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)します。
 
@@ -198,7 +198,7 @@ DECLARE_REGISTRY_RESOURCEID( x )
 
 [!code-cpp[NVC_ATL_COM#56](../../atl/codesnippet/cpp/registry-macros_2.h)]
 
-ATL 実行時に置換値を置換する場合は、代入マクロを指定しません。 配列を作成する代わりに、`_ATL_REGMAP_ENTRIES`構造、各エントリが変数のプレース ホルダーが含まれている実行時に、プレース ホルダーを置換する値と組み合わせて使用します。 呼び出して[として](catlmodule-class.md#updateregistryfromresourced)または[方法については](catlmodule-class.md#updateregistryfromresources)配列を渡します。 これは、すべての置換値の追加、`_ATL_REGMAP_ENTRIES`レジストラーの置換のマップの構造体。  
+ATL 実行時に置換値を置換する場合は、代入マクロを指定しません。 配列を作成する代わりに、`_ATL_REGMAP_ENTRIES`構造、各エントリが変数のプレース ホルダーが含まれている実行時に、プレース ホルダーを置換する値と組み合わせて使用します。 呼び出して[として](catlmodule-class.md#updateregistryfromresourced)または[方法については](catlmodule-class.md#updateregistryfromresources)配列を渡します。 これは、すべての置換値の追加、`_ATL_REGMAP_ENTRIES`レジストラーの置換のマップの構造体。
 
 置き換え可能パラメーターとスクリプト作成する方法の詳細については、記事を参照してください。 [、ATL レジストリ コンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)します。
 

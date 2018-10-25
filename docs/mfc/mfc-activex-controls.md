@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b94172d57bc21e7f747a5d0986ef28dbfb80e481
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 33c79dc8c83f40d0b553a2c44cf22fa107f5ef34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428643"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065591"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX コントロール
 
@@ -109,19 +109,19 @@ Visual C++ をインストールするときに、セットアップで ActiveX 
 
 - **\Common7\Tools**
 
-     テスト コンテナー ファイル (TstCon32.exe、およびそのヘルプ ファイル) を格納します。
+   テスト コンテナー ファイル (TstCon32.exe、およびそのヘルプ ファイル) を格納します。
 
 - **\Vc7\atlmfc\include**
 
-     MFC を使用して ActiveX コントロールを開発するために必要なインクルード ファイルを格納します。
+   MFC を使用して ActiveX コントロールを開発するために必要なインクルード ファイルを格納します。
 
 - **\Vc7\atlmfc\src\mfc**
 
-     MFC 内の特定の ActiveX コントロール クラスに対応するソース コードを格納します。
+   MFC 内の特定の ActiveX コントロール クラスに対応するソース コードを格納します。
 
 - **\Vc7\atlmfc\lib**
 
-     MFC を使用して ActiveX コントロールを開発するために必要なライブラリを格納します。
+   MFC を使用して ActiveX コントロールを開発するために必要なライブラリを格納します。
 
 また、MFC ActiveX コントロール用のサンプルもあります。 これらのサンプルの詳細については、次を参照してください[コントロールのサンプル: MFC-Based ActiveX コントロール。](../visual-cpp-samples.md)
 

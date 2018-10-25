@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4100dc14a25a744e5c28ffd1b16119408d800656
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 038d33a81d96067089eb55affbad6991a62d129f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404515"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055204"
 ---
 # <a name="mfc-activex-controls-adding-stock-properties"></a>MFC ActiveX コントロール : ストック プロパティの追加
 
@@ -59,7 +59,7 @@ ms.locfileid: "46404515"
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**プロパティの追加**します。
 
-     開き、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)します。
+   開き、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)します。
 
 1. **プロパティ名**ボックスで、**キャプション**します。
 
