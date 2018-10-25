@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 83606041250dafed0ef57eb4eea18d7314e0bbef
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ba22c87ee601d66ccfb1092047e69be42d8163c3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429267"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052755"
 ---
 # <a name="inserting-a-form-into-a-project"></a>プロジェクトへのフォームの挿入
 
@@ -33,7 +33,7 @@ ms.locfileid: "46429267"
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**クラスの追加**します。
 
-     場合、**新しいフォーム**コマンドは使用できません、プロジェクトは、Active Template Library (ATL) に基づく可能性があります。 ATL プロジェクトには、フォームを追加するにする必要があります[特定の設定を指定](../atl/reference/application-settings-atl-project-wizard.md)プロジェクトを作成しているとき。
+   場合、**新しいフォーム**コマンドは使用できません、プロジェクトは、Active Template Library (ATL) に基づく可能性があります。 ATL プロジェクトには、フォームを追加するにする必要があります[特定の設定を指定](../atl/reference/application-settings-atl-project-wizard.md)プロジェクトを作成しているとき。
 
 1. **MFC**フォルダー、をクリックして**MFC クラス**します。
 

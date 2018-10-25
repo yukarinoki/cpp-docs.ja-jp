@@ -1,7 +1,7 @@
 ---
 title: CMFCAutoHideButton クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -60,18 +60,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 072473895bbd041f9b195f02572461b02202be32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92f7875620f6cc3efee77094fcae80de83f6db1b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386094"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056075"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton クラス
 
 非表示になるように構成されている [CDockablePane Class](../../mfc/reference/cdockablepane-class.md) を表示または非表示にするボタンです。
 
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
+
 ## <a name="syntax"></a>構文
 
 ```
@@ -125,12 +126,11 @@ class CMFCAutoHideButton : public CObject
 
 `CMFCAutoHideButton`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxautohidebutton.h
 
 ##  <a name="bringtotop"></a>  CMFCAutoHideButton::BringToTop
-
 
 ```
 void BringToTop();
@@ -220,7 +220,6 @@ CDockablePane* GetAutoHideWindow() const;
 
 ##  <a name="getparenttoolbar"></a>  CMFCAutoHideButton::GetParentToolBar
 
-
 ```
 CMFCAutoHideBar* GetParentToolBar();
 ```
@@ -230,7 +229,6 @@ CMFCAutoHideBar* GetParentToolBar();
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="getrect"></a>  CMFCAutoHideButton::GetRect
-
 
 ```
 CRect GetRect() const;
@@ -301,7 +299,6 @@ BOOL IsHorizontal() const;
 向きを設定するために、フレームワーク、 [CMFCAutoHideButton](../../mfc/reference/cmfcautohidebutton-class.md)オブジェクトの作成時にします。  使用して方向を制御することができます、*場合*パラメーター、 [CMFCAutoHideButton::Create](#create)メソッド。
 
 ##  <a name="istop"></a>  CMFCAutoHideButton::IsTop
-
 
 ```
 BOOL IsTop() const;
@@ -416,19 +413,17 @@ virtual void ShowButton(BOOL bShow);
 
 ##  <a name="move"></a>  CMFCAutoHideButton::Move
 
-
 ```
 void Move(int nOffset);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nOffset*
+[in]*nOffset*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="replacepane"></a>  CMFCAutoHideButton::ReplacePane
-
 
 ```
 void ReplacePane(CDockablePane* pNewBar);
@@ -436,7 +431,7 @@ void ReplacePane(CDockablePane* pNewBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pNewBar*
+[in]*pNewBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 

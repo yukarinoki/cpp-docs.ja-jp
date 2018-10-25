@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 30eb0befda4d439bf4153d7c6726c982d3bf19ae
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: b556a86506e3aae73f7ac4e1ac961b539364d6db
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163336"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053565"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view クラス
 
@@ -100,7 +100,7 @@ class accelerator_view;
 
 `accelerator_view`オブジェクトには、2 つのいずれかを指定できる[queuing_mode 列挙型](concurrency-namespace-enums-amp.md#queuing_mode)状態。 キュー モードが `immediate` である場合、`copy` および `parallel_for_each` のようなコマンドが呼び出し元に戻るとすぐに対応するアクセラレータ デバイスに送信されます。 キュー モードが `deferred` の場合、このようなコマンドは `accelerator_view` オブジェクトに対応するコマンド キューに置かれます。 コマンドは、`flush()` が呼び出されるまでデバイスに実際に送信されません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amprt.h
 
@@ -167,6 +167,7 @@ Accelerator_view オブジェクトのアクセラレータのオブジェクト
 ```
 accelerator get_accelerator() const;
 ```
+
 ### <a name="return-value"></a>戻り値
 
 Accelerator_view オブジェクトのアクセラレータのオブジェクト。

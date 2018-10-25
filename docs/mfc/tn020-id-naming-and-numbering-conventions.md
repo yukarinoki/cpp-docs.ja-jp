@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f19d79b7946e3f2b4fda0b2651ce8d2099373d93
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b66fa88a98f800c77e2b6b0a731bbd40df9eb9d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433583"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054632"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>テクニカル ノート 20: ID 名および番号に関する規約
 
@@ -105,7 +105,7 @@ MFC コマンド アーキテクチャを次のコマンドを ON_COMMAND コマ
 
    - 16000 ～ 18000 (afxribbonres.h を参照) 
 
-     これらの範囲は、将来の MFC 実装で変更される可能性があります。
+   これらの範囲は、将来の MFC 実装で変更される可能性があります。
 
 - Windows システム コマンドの一部が 0xF000 ～ 0xFFFF を使用します。
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 26345a95559000815ed7d2e2cc336892d619969b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 104f9e0be67a350a1725dfbcd2bf234a8bc79553
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413745"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052565"
 ---
 # <a name="defining-a-message-handler-for-a-reflected-message"></a>リフレクション メッセージ用のメッセージ ハンドラーの定義
 
@@ -53,7 +53,7 @@ ms.locfileid: "46413745"
 
 1. 受け入れるように推奨される名前をクリックします。 ハンドラーは、プロジェクトに追加されます。
 
-     リフレクション メッセージ ウィンドウの右側の列に追加したメッセージ ハンドラー名が表示されます。
+   リフレクション メッセージ ウィンドウの右側の列に追加したメッセージ ハンドラー名が表示されます。
 
 9. を編集またはメッセージ ハンドラーを削除するには、手順 4 ~ 7 を繰り返します。 編集または削除、および適切なタスクをクリックします。 ハンドラー名を含むセルをクリックします。
 

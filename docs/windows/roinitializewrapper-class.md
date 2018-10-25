@@ -23,12 +23,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd1b5df8749f22873a52782b6f528760c3823a1
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8a0eeb4b7da53b5722733ba0b0116cf03dab4a29
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788762"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053445"
 ---
 # <a name="roinitializewrapper-class"></a>RoInitializeWrapper クラス
 
@@ -63,7 +63,7 @@ class RoInitializeWrapper;
 
 `RoInitializeWrapper`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** corewrappers.h
 
@@ -74,7 +74,7 @@ class RoInitializeWrapper;
 最後のによって生成された HRESULT 値を取得します`RoInitializeWrapper`コンス トラクター。
 
 ```cpp
-operator HRESULT()  
+operator HRESULT()
 ```
 
 ## <a name="roinitializewrapper"></a>Roinitializewrapper::roinitializewrapper
@@ -82,7 +82,7 @@ operator HRESULT()
 `RoInitializeWrapper` クラスの新しいインスタンスを初期化します。
 
 ```cpp
-RoInitializeWrapper(   RO_INIT_TYPE flags)  
+RoInitializeWrapper(RO_INIT_TYPE flags)
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -99,7 +99,7 @@ RO_INIT_TYPE の列挙体は、Windows ランタイムによって提供され�
 Windows ランタイムの初期化を解除します。
 
 ```cpp
-~RoInitializeWrapper()  
+~RoInitializeWrapper()
 ```
 
 ### <a name="remarks"></a>Remarks

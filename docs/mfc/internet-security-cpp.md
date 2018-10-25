@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1f5beba4f9a33a5bd9ee93baae6176d3ea592d2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b61df9a17903f50ea922edf9c29eee926063254
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445816"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055412"
 ---
 # <a name="internet-security-c"></a>インターネット セキュリティ (C++)
 
@@ -37,7 +37,6 @@ ms.locfileid: "46445816"
 インターネット向けの開発時のセキュリティに 2 つの基本的な方法は。 1 つ目は「サンド ボックス化します」と呼ばれる この方法でのアプリケーションの特定の Api のセットに制限し、プログラムがユーザーのコンピューター上のデータを破棄でしたファイル I/O などの危険性のあるものから除外します。 2 つ目は、デジタル署名を使用して実装されます。 このアプローチは、インターネット用に"shrinkwrap"と呼ばれます。 コードが検証され、プライベート キーと公開キー テクノロジを使用して署名します。 コードを実行すると、前に、そのデジタル署名を検証して、コードが既知の認証済みのソースからのものとが署名されているため、コードが変更されていないことを確認します。
 
 最初のケースで、アプリケーションが起きなくを実行していないと、アプリケーションの配信元を信頼することを信頼します。 2 番目の場合は、デジタル署名が信頼性を確認に使用されます。 デジタル署名では業界標準を特定し、コードの発行元の詳細を提供するために使用します。 同社のテクノロジは、RSA など、X.509 標準に基づいています。 ブラウザーは、通常ユーザーが元が不明なコードをダウンロードして実行するかどうかに選択を許可します。
-
 
 ## <a name="see-also"></a>関連項目
 

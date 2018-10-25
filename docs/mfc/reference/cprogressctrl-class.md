@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b6a5668a5d9c179f37e7056de6ae17a25c1b4ebe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b14a3e4fcfbd8287440dddf9a3f660b3bd47911
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393505"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055165"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
 
@@ -117,7 +117,7 @@ class CProgressCtrl : public CWnd
 
 `CProgressCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
@@ -510,7 +510,6 @@ void SetRange(
     short nLower,
     short nUpper);
 
-
 void SetRange32(
     int nLower,
     int nUpper);
@@ -618,5 +617,4 @@ int StepIt();
 [MFC サンプル CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-
 

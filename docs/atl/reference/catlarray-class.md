@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c08387d5c1a2a9b9b757bab7a8112783a3810065
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4c16337949340b03bbaa517ca98ac9b65a5bb2bb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46097797"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053931"
 ---
 # <a name="catlarray-class"></a>CAtlArray クラス
 
@@ -90,9 +90,9 @@ class CAtlArray
 
 |||
 |-|-|
-|[演算子&#91;&#93;](#operator_at)|配列の要素への参照を返すには、この演算子を呼び出します。|  
+|[演算子&#91;&#93;](#operator_at)|配列の要素への参照を返すには、この演算子を呼び出します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |||
 |-|-|
@@ -109,7 +109,7 @@ ATL クラスの要素の数が少ない配列[CSimpleArray](../../atl/reference
 
 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcoll.h
 

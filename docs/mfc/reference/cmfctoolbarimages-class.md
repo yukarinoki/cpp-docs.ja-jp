@@ -150,12 +150,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e35b9d8d5a60fd35f69ec336a38d05a9ad614760
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecb54aab57449b59231fcfe03fdbb6c6e8e2b4b4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431763"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055178"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages クラス
 
@@ -273,12 +273,11 @@ class CMFCToolBarImages : public CObject
 
 `CMFCToolBarImages`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxtoolbarimages.h
 
 ##  <a name="adaptcolors"></a>  CMFCToolBarImages::AdaptColors
-
 
 ```
 void AdaptColors(
@@ -288,8 +287,8 @@ void AdaptColors(
 
 ### <a name="parameters"></a>パラメーター
 
-*clrBase*<br/>
-[in][in]*clrTone*
+[in]*clrBase*<br/>
+[in]*clrTone*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -349,7 +348,6 @@ int AddImage(
 
 ##  <a name="cleanup"></a>  CMFCToolBarImages::CleanUp
 
-
 ```
 static void __stdcall CleanUp();
 ```
@@ -378,14 +376,13 @@ CMFCToolBarImages();
 
 ##  <a name="copyimagetoclipboard"></a>  CMFCToolBarImages::CopyImageToClipboard
 
-
 ```
 BOOL CopyImageToClipboard(int iImage);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*画像を*
+[in]*画像を*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -393,14 +390,13 @@ BOOL CopyImageToClipboard(int iImage);
 
 ##  <a name="copyto"></a>  CMFCToolBarImages::CopyTo
 
-
 ```
 BOOL CopyTo(CMFCToolBarImages& imageList);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*imageList*
+[in]*imageList*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -429,7 +425,6 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ##  <a name="createregionfromimage"></a>  CMFCToolBarImages::CreateRegionFromImage
 
-
 ```
 static HRGN __stdcall CreateRegionFromImage(
     HBITMAP bmp,
@@ -438,8 +433,8 @@ static HRGN __stdcall CreateRegionFromImage(
 
 ### <a name="parameters"></a>パラメーター
 
-*bmp*<br/>
-[in][in]*clrTransparent*
+[in]*bmp*<br/>
+[in]*clrTransparent*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -518,7 +513,6 @@ BOOL Draw(
 
 ##  <a name="drawex"></a>  CMFCToolBarImages::DrawEx
 
-
 ```
 BOOL DrawEx(
     CDC* pDC,
@@ -526,23 +520,19 @@ BOOL DrawEx(
     int iImageIndex,
     ImageAlignHorz horzAlign = ImageAlignHorzLeft,
     ImageAlignVert vertAlign = ImageAlignVertTop,
-    CRect rectSrc = CRect(0,
-    0,
-    0,
-    0),
+    CRect rectSrc = CRect(0, 0, 0, 0),
     BYTE alphaSrc = 255);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pDC*<br/>
-[in][in]*rect*
-*iImageIndex*<br/>
-[in][in]*horzAlign*
-*vertAlign*<br/>
-[in][in]*rectSrc*
-*0*<br/>
-[in][in]*0)* [in] *alphaSrc*
+[in]*pDC*<br/>
+[in]*rect*<br/>
+[in]*iImageIndex*<br/>
+[in]*horzAlign*<br/>
+[in]*vertAlign*<br/>
+[in]*rectSrc*<br/>
+[in]*alphaSrc*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -550,14 +540,13 @@ BOOL DrawEx(
 
 ##  <a name="enablertl"></a>  CMFCToolBarImages::EnableRTL
 
-
 ```
 static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bIsRTL*
+[in]*bIsRTL*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -615,7 +604,6 @@ static void FillDitheredRect(
 
 ##  <a name="getalwayslight"></a>  CMFCToolBarImages::GetAlwaysLight
 
-
 ```
 BOOL GetAlwaysLight() const;
 ```
@@ -653,7 +641,6 @@ static BYTE GetDisabledImageAlpha();
 呼び出すことができます[CMFCToolBarImages::SetDisabledImageAlpha](#setdisabledimagealpha)アルファ チャネル値を変更します。
 
 ##  <a name="getfadedimagealpha"></a>  CMFCToolBarImages::GetFadedImageAlpha
-
 
 ```
 static BYTE __stdcall GetFadedImageAlpha();
@@ -704,7 +691,6 @@ HBITMAP GetImageWell() const;
 
 ##  <a name="getimagewelllight"></a>  CMFCToolBarImages::GetImageWellLight
 
-
 ```
 HBITMAP GetImageWellLight() const;
 ```
@@ -714,7 +700,6 @@ HBITMAP GetImageWellLight() const;
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="getlastimagerect"></a>  CMFCToolBarImages::GetLastImageRect
-
 
 ```
 CRect GetLastImageRect() const;
@@ -726,7 +711,6 @@ CRect GetLastImageRect() const;
 
 ##  <a name="getlightpercentage"></a>  CMFCToolBarImages::GetLightPercentage
 
-
 ```
 int GetLightPercentage() const;
 ```
@@ -736,7 +720,6 @@ int GetLightPercentage() const;
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="getmapto3dcolors"></a>  CMFCToolBarImages::GetMapTo3DColors
-
 
 ```
 BOOL GetMapTo3DColors() const;
@@ -748,14 +731,13 @@ BOOL GetMapTo3DColors() const;
 
 ##  <a name="getmask"></a>  CMFCToolBarImages::GetMask
 
-
 ```
 HBITMAP GetMask(int iImage);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*画像を*
+[in]*画像を*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -779,7 +761,6 @@ int GetResourceOffset(UINT uiResId) const;
 メソッドが成功した場合、イメージのインデックス指定したリソース ID を持つイメージが存在しない場合は-1。
 
 ##  <a name="gettransparentcolor"></a>  CMFCToolBarImages::GetTransparentColor
-
 
 ```
 COLORREF GetTransparentColor() const;
@@ -830,7 +811,6 @@ static BOOL Is32BitTransparencySupported();
 この静的メソッドを使用して、実行時に、オペレーティング システムが 32 ビットのアルファ ブレンドをサポートしているかどうかを判断します。 この機能は、Windows 2000 およびそれ以降のバージョンでサポートされます。
 
 ##  <a name="ispremultiplyautocheck"></a>  CMFCToolBarImages::IsPreMultiplyAutoCheck
-
 
 ```
 BOOL IsPreMultiplyAutoCheck() const;
@@ -942,7 +922,6 @@ BOOL Load(
 
 ##  <a name="loadstr"></a>  CMFCToolBarImages::LoadStr
 
-
 ```
 BOOL LoadStr(
     LPCTSTR lpszResourceName,
@@ -952,15 +931,15 @@ BOOL LoadStr(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszResourceName*<br/>
-[in][in]*hinstRes* [in] *bAdd*
+[in]*lpszResourceName*<br/>
+[in]*hinstRes*<br/>
+[in]*bAdd*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="mapfromsyscolor"></a>  CMFCToolBarImages::MapFromSysColor
-
 
 ```
 static COLORREF __stdcall MapFromSysColor(
@@ -970,15 +949,14 @@ static COLORREF __stdcall MapFromSysColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*色*<br/>
-[in][in]*bUseRGBQUAD*
+[in]*色*<br/>
+[in]*bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="mapto3dcolors"></a>  CMFCToolBarImages::MapTo3dColors
-
 
 ```
 BOOL MapTo3dColors(
@@ -989,15 +967,15 @@ BOOL MapTo3dColors(
 
 ### <a name="parameters"></a>パラメーター
 
-*bUseRGBQUAD*<br/>
-[in][in]*clrSrc* [in] *clrDest*
+[in]*bUseRGBQUAD*<br/>
+[in]*clrSrc*<br/>
+[in]*clrDest*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="maptosyscolor"></a>  CMFCToolBarImages::MapToSysColor
-
 
 ```
 static COLORREF __stdcall MapToSysColor(
@@ -1007,8 +985,8 @@ static COLORREF __stdcall MapToSysColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*色*<br/>
-[in][in]*bUseRGBQUAD*
+[in]*色*<br/>
+[in]*bUseRGBQUAD*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1016,14 +994,13 @@ static COLORREF __stdcall MapToSysColor(
 
 ##  <a name="maptosyscoloralpha"></a>  CMFCToolBarImages::MapToSysColorAlpha
 
-
 ```
 static COLORREF __stdcall MapToSysColorAlpha(COLORREF color);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*色*
+[in]*色*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1073,7 +1050,6 @@ static BOOL MirrorBitmap(
 
 ##  <a name="mirrorbitmapvert"></a>  CMFCToolBarImages::MirrorBitmapVert
 
-
 ```
 static BOOL __stdcall MirrorBitmapVert(
     HBITMAP& hbmp,
@@ -1082,15 +1058,14 @@ static BOOL __stdcall MirrorBitmapVert(
 
 ### <a name="parameters"></a>パラメーター
 
-*hbmp*<br/>
-[in][in]*cyImage*
+[in]*hbmp*<br/>
+[in]*cyImage*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="mirrorvert"></a>  CMFCToolBarImages::MirrorVert
-
 
 ```
 BOOL MirrorVert();
@@ -1102,7 +1077,6 @@ BOOL MirrorVert();
 
 ##  <a name="onsyscolorchange"></a>  CMFCToolBarImages::OnSysColorChange
 
-
 ```
 void OnSysColorChange();
 ```
@@ -1110,7 +1084,6 @@ void OnSysColorChange();
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="premultiplyalpha"></a>  CMFCToolBarImages::PreMultiplyAlpha
-
 
 ```
 static BOOL __stdcall PreMultiplyAlpha(
@@ -1122,8 +1095,8 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 
 ### <a name="parameters"></a>パラメーター
 
-*hbmp*<br/>
-[in][in]*bAutoCheckPremlt*
+[in]*hbmp*<br/>
+[in]*bAutoCheckPremlt*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1197,14 +1170,13 @@ BOOL Save(LPCTSTR lpszBmpFileName=NULL);
 
 ##  <a name="setalwayslight"></a>  CMFCToolBarImages::SetAlwaysLight
 
-
 ```
 void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bAlwaysLight*
+[in]*bAlwaysLight*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1227,14 +1199,13 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ##  <a name="setfadedimagealpha"></a>  CMFCToolBarImages::SetFadedImageAlpha
 
-
 ```
 static void __stdcall SetFadedImageAlpha(BYTE nValue);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*値*
+[in]*値*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1259,19 +1230,17 @@ void SetImageSize(
 
 ##  <a name="setlightpercentage"></a>  CMFCToolBarImages::SetLightPercentage
 
-
 ```
 void SetLightPercentage(int nValue);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*値*
+[in]*値*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="setmapto3dcolors"></a>  CMFCToolBarImages::SetMapTo3DColors
-
 
 ```
 void SetMapTo3DColors(BOOL bMapTo3DColors);
@@ -1279,12 +1248,11 @@ void SetMapTo3DColors(BOOL bMapTo3DColors);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bMapTo3DColors*
+[in]*bMapTo3DColors*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="setpremultiplyautocheck"></a>  CMFCToolBarImages::SetPreMultiplyAutoCheck
-
 
 ```
 void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
@@ -1292,12 +1260,11 @@ void SetPreMultiplyAutoCheck(BOOL bAuto = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bAuto*
+[in]*bAuto*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="setsingleimage"></a>  CMFCToolBarImages::SetSingleImage
-
 
 ```
 void SetSingleImage();

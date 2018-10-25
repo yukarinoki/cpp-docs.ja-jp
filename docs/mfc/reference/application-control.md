@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b20b5ea002ac16feb99707610fbe4556bf3254f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3b06302d330ec8677a3de9b3ccaebf0b7b237b0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375995"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053892"
 ---
 # <a name="application-control"></a>アプリケーションの制御
 
@@ -41,7 +41,6 @@ OLE には、アプリケーションとそれらのオブジェクトを十分�
 |[AfxOleUnlockControl](#afxoleunlockcontrol)| 指定したコントロールのクラス ファクトリのロックを解除します。 |
 |[AfxOleRegisterServerClass](#afxoleregisterserverclass)|OLE システム レジストリでサーバーを登録します。|
 |[AfxOleSetEditMenu](#afxoleseteditmenu)|ユーザー インターフェイスを実装、 *typename*オブジェクト コマンド。|
-
 
 ##  <a name="afxolecanexitapp"></a>  AfxOleCanExitApp
 
@@ -63,7 +62,7 @@ BOOL AFXAPI AfxOleCanExitApp();
 
 [!code-cpp[NVC_MFCAutomation#2](../../mfc/codesnippet/cpp/application-control_1.cpp)]
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 
@@ -89,7 +88,7 @@ COleMessageFilter* AFXAPI AfxOleGetMessageFilter();
 
 [!code-cpp[NVC_MFCAutomation#4](../../mfc/codesnippet/cpp/application-control_3.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxwin.h
 
@@ -109,7 +108,7 @@ BOOL AFXAPI AfxOleGetUserCtrl();
 
 ユーザーが明示的に開くか、新しいドキュメントを作成すると、ユーザーがアプリケーションの管理です。 ユーザーはコントロールにも、OLE システム Dll によって、アプリケーションを起動しなかった場合、つまり、ユーザーがシステムのシェルを使用してアプリケーションを起動した場合。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 
@@ -132,7 +131,7 @@ void AFXAPI AfxOleSetUserCtrl(BOOL bUserCtrl);
 
 この関数を呼び出す場合は、アプリケーションでは、その他のアクションは、アプリケーションのコントロールでユーザーを配置する必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 
@@ -156,7 +155,7 @@ void AFXAPI AfxOleLockApp();
 
 [!code-cpp[NVC_MFCAutomation#5](../../mfc/codesnippet/cpp/application-control_4.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 
@@ -178,7 +177,7 @@ void AFXAPI AfxOleUnlockApp();
 
 例をご覧ください[AfxOleLockApp](#afxolelockapp)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 
@@ -192,6 +191,7 @@ void AFXAPI AfxOleUnlockApp();
 BOOL AFXAPI AfxOleLockControl(  REFCLSID clsid  );
 BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *clsid*<br/>
@@ -218,7 +218,7 @@ BOOL AFXAPI AfxOleLockControl( LPCTSTR lpszProgID );
 AfxOleLockControl(_T("MSCAL.Calendar"));
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -293,7 +293,7 @@ OLE アプリケーションの種類を指定する、OLE_APPTYPE 列挙から�
 |%4|短い型名|
 |%5|Long 型の名前|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 
@@ -339,7 +339,7 @@ void AFXAPI AfxOleSetEditMenu(
 
 **#include \<afxolecl.rc >**
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxole.h
 
@@ -357,6 +357,7 @@ void AFXAPI AfxOleSetEditMenu(
 BOOL AFXAPI AfxOleUnlockControl( REFCLSID clsid );
 BOOL AFXAPI AfxOleUnlockControl( LPCTSTR lpszProgID );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *clsid*<br/>
@@ -382,7 +383,7 @@ AfxOleUnlockControl(_T("MSCAL.Calendar"));
 
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 

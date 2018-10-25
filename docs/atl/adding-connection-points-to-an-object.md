@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdaf4cf8e1c2f6a062c133ab9e0427cab1d3d094
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 685f1b7d24e781dbee6d67b325b059f09ca9bf4c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43762549"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054216"
 ---
 # <a name="adding-connection-points-to-an-object"></a>オブジェクトへの接続ポイントの追加
 
@@ -38,15 +38,15 @@ ms.locfileid: "43762549"
 
 1. .Idl ファイルのライブラリ ブロックにディスパッチ インターフェイスを定義します。 コネクション ポイントのサポートを有効にした場合、ATL コントロール ウィザードを使用して、コントロールを作成したときに、ディスパッチ インターフェイス既にに作成します。 コントロールの作成時に接続ポイントのサポートを有効にしなかった、.idl ファイルにディスパッチ インターフェイスを手動で追加する必要があります。 次は、ディスパッチ インターフェイスの例です。 発信インターフェイスがディスパッチ インターフェイスである必要はありませんが、VBScript や JScript などの多くのスクリプト言語ではこれが要求されるため、この例は、2 つのディスパッチ インターフェイスを使用しています。
 
-     [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
+   [!code-cpp[NVC_ATL_Windowing#81](../atl/codesnippet/cpp/adding-connection-points-to-an-object_1.idl)]
 
-     Uuidgen.exe または guidgen.exe ユーティリティを使用すると、GUID を生成します。
+   Uuidgen.exe または guidgen.exe ユーティリティを使用すると、GUID を生成します。
 
 2. ディスパッチ インターフェイスとしての追加、`[default,source]`プロジェクトの .idl ファイル内のオブジェクトのコクラスのインターフェイス。 ここでも、コントロールを作成するときに、コネクション ポイントのサポートが有効にした場合、ATL コントロール ウィザードが作成、 `[default,source`] エントリ。 このエントリを手動で追加するには、太字で、行を追加します。
 
-     [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
+   [!code-cpp[NVC_ATL_Windowing#82](../atl/codesnippet/cpp/adding-connection-points-to-an-object_2.idl)]
 
-     .Idl ファイルを参照して、[円](../visual-cpp-samples.md)例については、ATL のサンプルです。
+   .Idl ファイルを参照して、[円](../visual-cpp-samples.md)例については、ATL のサンプルです。
 
 3. クラス ビューを使用して、イベント インターフェイスにメソッドとプロパティを追加します。 クラス ビュー内のクラスを右クリックし、**追加**をクリックし、ショートカット メニュー**接続ポイントの追加**します。
 
@@ -56,7 +56,7 @@ ms.locfileid: "43762549"
 
    - 接続ポイントのマップ エントリを追加します。
 
-     タイプ ライブラリのすべての一覧は、コンピューターにも表示されます。 これら他のタイプ ライブラリの 1 つは、別のタイプ ライブラリで検出された正確な同じ送信インターフェイスを実装する場合、接続ポイントを定義にのみ使用する必要があります。
+   タイプ ライブラリのすべての一覧は、コンピューターにも表示されます。 これら他のタイプ ライブラリの 1 つは、別のタイプ ライブラリで検出された正確な同じ送信インターフェイスを実装する場合、接続ポイントを定義にのみ使用する必要があります。
 
 ### <a name="to-reuse-a-connection-point-interface-defined-in-another-type-library"></a>別のタイプ ライブラリで定義されている接続ポイントのインターフェイスを再利用するには
 
