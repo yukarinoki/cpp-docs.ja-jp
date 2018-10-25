@@ -1,7 +1,7 @@
 ---
 title: OLE DB テンプレート、属性、およびその他の実装 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8b2cbe36a933580edc09e8139dca0ed6ec090f90
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 5798eeb4e99e4901ea83a26e4e570c18437ff445
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082658"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989932"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB テンプレート、属性、およびその他の実装
 
@@ -36,7 +36,7 @@ OLE DB テンプレート、ATL (Active Template Library) の一部である、�
   
 - **OLE DB プロバイダー テンプレート**OLE DB サーバー (プロバイダー) アプリケーションを実装するために使用します。  
   
-OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB についてあまり知識がない場合は、『 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)』を参照してください。  
+OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB を知らない場合は、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)します。  
   
 詳細については、次の操作を実行できます。  
   
@@ -60,7 +60,7 @@ MFC ライブラリの 1 つのクラス ライブラリが[COleDBRecordView](..
   
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK インターフェイス  
 
-OLE DB テンプレートと OLE DB 機能がサポートして場合、OLE DB インターフェイス自体を使用する必要があります。 詳細については、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)Windows SDK に含まれています。  
+OLE DB テンプレートが OLE DB の機能をサポートしない場合、OLE DB インターフェイス自体を使用する必要があります。 詳細については、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)Windows SDK に含まれています。  
   
 ## <a name="see-also"></a>関連項目  
 

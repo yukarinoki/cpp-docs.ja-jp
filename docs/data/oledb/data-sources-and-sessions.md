@@ -1,7 +1,7 @@
 ---
 title: データ ソースとセッション |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 07c7a395f111d4473eed5f85a1329e85358f5d0c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0a1904c0b0c416c216a28ddcaf7bb20ce408ba0a
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037672"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49989945"
 ---
 # <a name="data-sources-and-sessions"></a>データ ソースとセッション
 
@@ -35,7 +35,7 @@ ms.locfileid: "46037672"
   
 - [CDataSource](../../data/oledb/cdatasource-class.md)このクラスを作成し、OLE DB プロバイダー経由のデータ ソースへの接続を管理するデータ ソース オブジェクトをインスタンス化します。 データ ソースは、接続文字列の形式でデータ ソースのアドレスや認証情報などの情報です。  
   
-     いることに注意もヘルパー クラス[CEnumerator](../../data/oledb/cenumerator-class.md)はシステムに登録されている利用可能なプロバイダーの一覧を取得する任意の接続が確立される前に、よく使用します。 これにより、データ ソースとして、プロバイダーを選択することができます。 たとえば、**データ リンク プロパティ** ダイアログ ボックスでは、このクラスを使用して、プロバイダーの一覧を事前設定、**プロバイダー**タブ。同じになります、`SQLBrowseConnect`または`SQLDriverConnect`関数。  
+     いることに注意もヘルパー クラス[CEnumerator](../../data/oledb/cenumerator-class.md)はシステムに登録されている利用可能なプロバイダーの一覧を取得する任意の接続が確立される前に、よく使用します。 これにより、データ ソースとして、プロバイダーを選択することができます。 たとえば、**データ リンク プロパティ** ダイアログ ボックスでは、このクラスを使用して、プロバイダーの一覧を事前設定、**プロバイダー**タブ。同じですが、`SQLBrowseConnect`または`SQLDriverConnect`関数。  
   
 - [CSession](../../data/oledb/csession-class.md)このクラスは、データ ソースに単一のアクセスのセッションを表すセッション オブジェクトをインスタンス化します。 ただし、データ ソースで複数のセッションを作成できます。 セッションごとに、データ ソースからデータにアクセスするには、行セット、コマンド、およびその他のオブジェクトを作成できます。 セッションでは、トランザクションを処理します。  
   

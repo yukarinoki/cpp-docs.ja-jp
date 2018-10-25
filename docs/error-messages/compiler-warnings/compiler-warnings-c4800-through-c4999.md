@@ -1,6 +1,6 @@
 ---
 title: コンパイラの警告 C4800 C5999 を通じて |Microsoft Docs
-ms.date: 05/30/2018
+ms.date: 10/24/2018
 ms.technology:
 - cpp-diagnostics
 ms.topic: error-reference
@@ -99,18 +99,20 @@ f1_keywords:
 - C5042
 - C5043
 - C5044
+- C5045
+- C5046
 dev_langs:
 - C++
 author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: deee159c9da6fce9001d010a1a6b1db9b3b1d666
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 27f212865965883732e8bd956cafecf50e0a8de3
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861422"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990348"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>コンパイラの警告 C4800 C5999 経由
 
@@ -251,3 +253,4 @@ ms.locfileid: "48861422"
 |コンパイラの警告 (レベル 2) C5043|'*仕様*': 例外の指定が以前の宣言と一致しません|
 |コンパイラの警告 (レベル 4) C5044|コマンド ライン オプションに引数*オプション*パスを指す '*パス*' が存在しません。|
 |[コンパイラの警告 C5045](c5045.md)|/Qspectre スイッチする場合は、指定されたメモリの負荷にコンパイラが Spectre の軽減策を挿入します。|
+|[コンパイラの警告 (レベル 2) C5046](c5046.md)|'*関数*': シンボルが定義されていない内部リンケージを持つ型に関連します。|
