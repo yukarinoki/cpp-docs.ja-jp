@@ -166,12 +166,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7c797cdb2b0950d0158e8a63294f1e2ea913512
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b238dedf9b4f638baf4ea2c9373e7658c90114cb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436898"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069335"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx クラス
 
@@ -230,7 +230,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|フレーム ウィンドウにメニュー バーがあるかどうかを判断します。|
 |[CMDIFrameWndEx::IsPointNearDockSite](#ispointneardocksite)|指定したポイントがドッキング サイトに近いかどうかを判断します。|
 |[CMDIFrameWndEx::IsPrintPreview](#isprintpreview)|フレーム ウィンドウが印刷プレビュー モードかどうかを判断します。|
-|[CMDIFrameWndEx::LoadFrame](#loadframe)|リソース情報は、フレーム ウィンドウを作成します。 (`CMDIFrameWnd::LoadFrame` をオーバーライドします)。|
+|[CMDIFrameWndEx::LoadFrame](#loadframe)|リソース情報は、フレーム ウィンドウを作成します。 ( `CMDIFrameWnd::LoadFrame`をオーバーライドします)。|
 |[CMDIFrameWndEx::LoadMDIState](#loadmdistate)|MDI タブ付きグループの指定したレイアウトおよび前に開かれたドキュメントの一覧を読み込みます。|
 |[CMDIFrameWndEx::MDITabMoveToNextGroup](#mditabmovetonextgroup)|現在アクティブなタブ付きウィンドウから次または前のタブ付きグループにアクティブなタブに移動します。|
 |[CMDIFrameWndEx::MDITabNewGroup](#mditabnewgroup)|1 つのウィンドウがある新しいタブ付きグループを作成します。|
@@ -251,9 +251,9 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|ポップアップ メニューがアクティブにされるときにフレームワークによって呼び出されます。|
 |[CMDIFrameWndEx::OnSizeMDIClient](#onsizemdiclient)|クライアントの MDI ウィンドウのサイズが変更されるときに、フレームワークによって呼び出されます。|
 |[CMDIFrameWndEx::OnTearOffMenu](#ontearoffmenu)|ティアオフ バーのあるメニューがアクティブ化されるときにフレームワークによって呼び出されます。|
-|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|フレームのメニューを更新するためにフレームワークによって呼び出されます。 (`CMDIFrameWnd::OnUpdateFrameMenu` をオーバーライドします)。|
+|[CMDIFrameWndEx::OnUpdateFrameMenu](#onupdateframemenu)|フレームのメニューを更新するためにフレームワークによって呼び出されます。 ( `CMDIFrameWnd::OnUpdateFrameMenu`をオーバーライドします)。|
 |[CMDIFrameWndEx::PaneFromPoint](#panefrompoint)|指定したポイントを含むドッキング ペインを返します。|
-|`CMDIFrameWndEx::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。  (`CMDIFrameWnd::PreTranslateMessage` をオーバーライドします)。|
+|`CMDIFrameWndEx::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) で使用されます。  ( `CMDIFrameWnd::PreTranslateMessage`をオーバーライドします)。|
 |[CMDIFrameWndEx::RecalcLayout](#recalclayout)|フレーム ウィンドウのレイアウトを再計算するためにフレームワークによって呼び出されます。 (上書き[表示](../../mfc/reference/cframewnd-class.md#recalclayout))。|
 |[CMDIFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)|ウィンドウの登録を解除し、ドッキング マネージャーから削除されます。|
 |[CMDIFrameWndEx::SaveMDIState](#savemdistate)|MDI タブ付きグループの現在のレイアウトおよび前に開かれたドキュメントの一覧を保存します。|
@@ -298,7 +298,7 @@ MDI アプリケーションでカスタマイズ拡張機能を利用するア�
 
 [CMDIFrameWndEx](../../mfc/reference/cmdiframewndex-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxMDIFrameWndEx.h
 
@@ -831,7 +831,6 @@ void EnableWindowsDialog(
     LPCTSTR lpszMenuText,
     BOOL bShowAllways=FALSE,
     BOOL bShowHelpButton=FALSE);
-
 
 void EnableWindowsDialog(
     UINT uiMenuId,
@@ -2033,7 +2032,7 @@ virtual void WinHelp(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは[cwnd::winhelp](../../mfc/reference/cwnd-class.md#winhelp)します。
+このメソッドは [CWnd::WinHelp](../../mfc/reference/cwnd-class.md#winhelp)をオーバーライドします。
 
 ## <a name="see-also"></a>関連項目
 

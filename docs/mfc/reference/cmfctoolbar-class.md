@@ -321,12 +321,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b92acb477e6e15dfe933360dd6456db09d7f52a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d50d751028cc9e162f2a4bd903f35255a5ed3814
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408741"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067814"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar クラス
 
@@ -471,7 +471,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::ResetAllImages](#resetallimages)|アプリケーション内のすべてのツール バー イメージのコレクションをクリアします。|
 |[CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)|ツール バーを元の状態に戻します。|
 |[CMFCToolBar::SaveState](#savestate)|Windows レジストリで、ツールバーの状態情報を保存します。 (上書き[CPane::SaveState](../../mfc/reference/cpane-class.md#savestate))。|
-|`CMFCToolBar::Serialize`|(`CBasePane::Serialize` をオーバーライドします)。|
+|`CMFCToolBar::Serialize`|( `CBasePane::Serialize`をオーバーライドします)。|
 |[CMFCToolBar::SetBasicCommands](#setbasiccommands)|ユーザーがメニューを開いたときに常に表示されるコマンドの一覧を設定します。|
 |[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|コマンド ID、スタイル、およびツール バー ボタンのイメージ ID を設定します。|
 |[CMFCToolBar::SetButtonStyle](#setbuttonstyle)|指定したインデックス位置にあるツールバーのボタンのスタイルを設定します。|
@@ -535,12 +535,12 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CMFCToolBar`クラス。 例では、ツール バーのウィンドウのラベルのテキストを設定、罫線を設定、ウィンドウのスタイルを設定および有効にする方法を示しています、**の追加と削除 ボタン**ツールバーの右端に表示されるボタン。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCToolBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、ツール バーのウィンドウのラベルのテキストを設定、罫線を設定、ウィンドウのスタイルを設定および有効にする方法を示しています、**の追加と削除 ボタン**ツールバーの右端に表示されるボタン。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxtoolbar.h
 
@@ -1155,7 +1155,6 @@ void EnableCustomizeButton(
     int iCustomizeCmd,
     const CString& strCustomizeText,
     BOOL bQuickCustomize=TRUE);
-
 
 void EnableCustomizeButton(
     BOOL bEnable,
@@ -2173,7 +2172,6 @@ virtual int InsertButton(
     const CMFCToolBarButton& button,
     INT_PTR iInsertAt=-1);
 
-
 virtual int InsertButton(
     CMFCToolBarButton* pButton,
     int iInsertAt=-1);
@@ -2543,7 +2541,6 @@ BOOL IsOneRowWithSibling();
 
 ##  <a name="isresourcechanged"></a>  CMFCToolBar::IsResourceChanged
 
-
 ```
 virtual BOOL IsResourceChanged() const;
 ```
@@ -2553,7 +2550,6 @@ virtual BOOL IsResourceChanged() const;
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="issibling"></a>  CMFCToolBar::IsSibling
-
 
 ```
 BOOL IsSibling();
@@ -2615,12 +2611,11 @@ virtual BOOL LoadBitmap(
 
 ### <a name="remarks"></a>Remarks
 
-[Cmfctoolbar::loadtoolbarex](#loadtoolbarex)メソッドは、ツールバーに関連付けられているイメージを読み込むには、このメソッドを呼び出します。 このメソッドをオーバーライドして、イメージ リソースのカスタムの読み込みを実行します。
+[CMFCToolBar::LoadToolBarEx](#loadtoolbarex) メソッドはこのメソッドを呼び出して、ツール バーに関連付けられたイメージを読み込みます。 このメソッドをオーバーライドして、イメージ リソースのカスタムの読み込みを実行します。
 
 ツール バーの作成後に、 `LoadBitmapEx` メソッドを呼び出して追加のイメージを読み込みます。
 
 ##  <a name="loadbitmapex"></a>  CMFCToolBar::LoadBitmapEx
-
 
 ```
 virtual BOOL LoadBitmapEx(
@@ -2630,8 +2625,8 @@ virtual BOOL LoadBitmapEx(
 
 ### <a name="parameters"></a>パラメーター
 
-*params*<br/>
-[in][in]*ブロック*
+[in]*params*<br/>
+[in]*ブロック*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -2639,14 +2634,13 @@ virtual BOOL LoadBitmapEx(
 
 ##  <a name="loadlargeiconsstate"></a>  CMFCToolBar::LoadLargeIconsState
 
-
 ```
 static BOOL __stdcall LoadLargeIconsState(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lpszProfileName*
+[in]*lpszProfileName*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -2804,7 +2798,6 @@ AFX_IMPORT_DATA static double m_dblLargeImageRatio;
 
 ##  <a name="nextmenu"></a>  CMFCToolBar::NextMenu
 
-
 ```
 virtual BOOL NextMenu();
 ```
@@ -2814,7 +2807,6 @@ virtual BOOL NextMenu();
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="onbeforeremovebutton"></a>  CMFCToolBar::OnBeforeRemoveButton
-
 
 ```
 virtual BOOL OnBeforeRemoveButton(
@@ -2853,7 +2845,6 @@ virtual void OnChangeHot(int iHot);
 
 ##  <a name="onchangevisualmanager"></a>  CMFCToolBar::OnChangeVisualManager
 
-
 ```
 virtual void OnChangeVisualManager();
 ```
@@ -2881,7 +2872,6 @@ virtual void OnFillBackground(CDC* pDC);
 
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBar::OnGlobalFontsChanged
 
-
 ```
 virtual void OnGlobalFontsChanged();
 ```
@@ -2904,14 +2894,13 @@ virtual void OnReset();
 
 ##  <a name="onsetaccdata"></a>  CMFCToolBar::OnSetAccData
 
-
 ```
 virtual BOOL OnSetAccData(long lVal);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lVal*
+[in]*lVal*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -2969,7 +2958,6 @@ TRUE の場合*strTTText*がツールヒントのテキストに入力されま�
 オーバーライド`OnUserToolTip`ツール バー ボタンのツールヒントをカスタマイズします。 既定の実装[CMFCToolBar::OnUserToolTip](#onusertooltip)ツールヒント テキストを取得します。
 
 ##  <a name="prevmenu"></a>  CMFCToolBar::PrevMenu
-
 
 ```
 virtual BOOL PrevMenu();
@@ -3132,7 +3120,6 @@ static void __stdcall ResetAllImages();
 
 ##  <a name="resetimages"></a>  CMFCToolBar::ResetImages
 
-
 ```
 virtual void ResetImages();
 ```
@@ -3140,7 +3127,6 @@ virtual void ResetImages();
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="restorefocus"></a>  CMFCToolBar::RestoreFocus
-
 
 ```
 virtual void RestoreFocus();
@@ -3168,14 +3154,13 @@ TRUE の場合、メソッドが成功すると、またはメソッドが失敗
 
 ##  <a name="saveparameters"></a>  CMFCToolBar::SaveParameters
 
-
 ```
 static BOOL __stdcall SaveParameters(LPCTSTR lpszProfileName = NULL);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lpszProfileName*
+[in]*lpszProfileName*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -3431,19 +3416,17 @@ void SetHeight(int cyHeight);
 
 ##  <a name="sethelpmode"></a>  CMFCToolBar::SetHelpMode
 
-
 ```
 static void __stdcall SetHelpMode(BOOL bOn = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bOn*
+[in]*bOn*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="sethot"></a>  CMFCToolBar::SetHot
-
 
 ```
 BOOL SetHot(CMFCToolBarButton* pMenuButton);
@@ -3451,7 +3434,7 @@ BOOL SetHot(CMFCToolBarButton* pMenuButton);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pMenuButton*
+[in]*pMenuButton*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -3495,14 +3478,13 @@ static void SetHotTextColor(COLORREF clrText);
 
 ##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText
 
-
 ```
 void SetIgnoreSetText(BOOL bValue);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bValue*
+[in]*bValue*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -3557,14 +3539,13 @@ void SetLockedSizes(
 
 ##  <a name="setmaskmode"></a>  CMFCToolBar::SetMaskMode
 
-
 ```
 void SetMaskMode(BOOL bMasked);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bMasked*
+[in]*bMasked*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -3631,14 +3612,13 @@ void SetOneRowWithSibling();
 
 ##  <a name="setorigbuttons"></a>  CMFCToolBar::SetOrigButtons
 
-
 ```
 void SetOrigButtons(const CObList& lstOrigButtons);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lstOrigButtons*
+[in]*lstOrigButtons*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -3936,6 +3916,4 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCPopupMenuBar クラス](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
 [チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

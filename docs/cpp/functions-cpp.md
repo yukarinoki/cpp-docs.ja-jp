@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aacbb7709daf6952f00276663e20131e967a554d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 24eded7bac023bd2291e0c574012f72ba86b6bcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46022359"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053800"
 ---
 # <a name="functions-c"></a>関数 (C++)
 
@@ -101,7 +101,7 @@ int sum(int a, int b)
 
     ```
 
-     詳細については、次を参照してください。[プログラムとリンケージ](../cpp/program-and-linkage-cpp.md)します。
+   詳細については、次を参照してください。[プログラムとリンケージ](../cpp/program-and-linkage-cpp.md)します。
 
 1. **インライン**に関数を呼び出すたびに関数コード自体を置き換えるコンパイラに指示します。 パフォーマンスが重要なコード セクションで関数が迅速に実行され、繰り返し呼び出されるシナリオでは、インライン展開を使用すると、パフォーマンスが向上します。
 
@@ -112,7 +112,7 @@ int sum(int a, int b)
     }
     ```
 
-     詳細については、次を参照してください。[インライン関数](../cpp/inline-functions-cpp.md)します。
+   詳細については、次を参照してください。[インライン関数](../cpp/inline-functions-cpp.md)します。
 
 1. A`noexcept`式で、関数が例外をスローできるかどうかを指定します。 次の例では、関数は例外をスローしない場合、`is_pod`式に評価される**true**します。
 
@@ -123,7 +123,7 @@ int sum(int a, int b)
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-     詳細については、次を参照してください。 [noexcept](../cpp/noexcept-cpp.md)します。
+   詳細については、次を参照してください。 [noexcept](../cpp/noexcept-cpp.md)します。
 
 1. (メンバー関数のみ)Cv 修飾子、関数は、かどうかを指定する**const**または**揮発性**します。
 
@@ -263,7 +263,6 @@ auto Add(const Lhs& lhs, const Rhs& rhs) -> decltype(lhs + rhs)
 ```
 
 ときに**自動**される後続の戻り値の型と共に、それだけのプレースホルダとして使用、decltype 式によって生成されるのとは自体は型の推論を実行します。
-
 
 ## <a name="function-local-variables"></a>関数のローカル変数
 

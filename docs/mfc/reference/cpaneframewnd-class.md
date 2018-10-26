@@ -142,12 +142,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 34ac2ddb08b485a56274f6067871c5bbd5893f94
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fb6e87d9deac7a6d0082480196b7dbeecf5a85b8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434818"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081080"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd クラス
 
@@ -211,7 +211,7 @@ class CPaneFrameWnd : public CWnd
 |[CPaneFrameWnd::OnShowPane](#onshowpane)|ミニフレーム ウィンドウ内のペインが非表示になるとき、または表示されるときに、フレームワークによって呼び出されます。|
 |[CPaneFrameWnd::PaneFromPoint](#panefrompoint)|ユーザーが指定した位置がミニフレーム ウィンドウ内のペインに含まれている場合、そのペインを返します。|
 |[CPaneFrameWnd::Pin](#pin)||
-|`CPaneFrameWnd::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。|
+|`CPaneFrameWnd::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) で使用されます。|
 |[CPaneFrameWnd::RedrawAll](#redrawall)|すべてのミニフレーム ウィンドウを再描画します。|
 |[CPaneFrameWnd::RemoveNonValidPanes](#removenonvalidpanes)|有効でないウィンドウを削除するために、フレームワークによって呼び出されます。|
 |[CPaneFrameWnd::RemovePane](#removepane)|ミニフレーム ウィンドウから、ペインを削除します。|
@@ -263,7 +263,7 @@ class CPaneFrameWnd : public CWnd
 
 `CPaneFrameWnd`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxPaneFrameWnd.h
 
@@ -311,7 +311,6 @@ virtual void AdjustLayout();
 ```
 
 ##  <a name="adjustpaneframes"></a>  CPaneFrameWnd::AdjustPaneFrames
-
 
 ```
 virtual void AdjustPaneFrames();
@@ -401,7 +400,6 @@ virtual BOOL CanBeDockedToPane(const CDockablePane* pDockingBar) const;
 
 ##  <a name="checkgrippervisibility"></a>  CPaneFrameWnd::CheckGripperVisibility
 
-
 ```
 virtual void CheckGripperVisibility();
 ```
@@ -440,9 +438,11 @@ virtual BOOL Create(
 *rect*<br/>
 [in]ミニフレーム ウィンドウの位置と初期サイズを指定します。
 
-[in][out]*pParentWnd*ミニフレーム ウィンドウの親フレームを指定します。 この値は、NULL は指定できません。
+*pParentWnd*<br/>
+[入力、出力]ミニフレーム ウィンドウの親フレームを指定します。 この値は、NULL は指定できません。
 
-[in][out]*pContext*ユーザー定義のコンテキストを指定します。
+*pContext*<br/>
+[入力、出力]ユーザー定義のコンテキストを指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -480,9 +480,11 @@ virtual BOOL CreateEx(
 *rect*<br/>
 [in]ミニフレーム ウィンドウの位置と初期サイズを指定します。
 
-[in][out]*pParentWnd*ミニフレーム ウィンドウの親フレームを指定します。 この値は、NULL は指定できません。
+*pParentWnd*<br/>
+[入力、出力]ミニフレーム ウィンドウの親フレームを指定します。 この値は、NULL は指定できません。
 
-[in][out]*pContext*ユーザー定義のコンテキストを指定します。
+*pContext*<br/>
+[入力、出力]ユーザー定義のコンテキストを指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -607,7 +609,6 @@ virtual CString GetCaptionText();
 
 ##  <a name="getdockingmanager"></a>  CPaneFrameWnd::GetDockingManager
 
-
 ```
 CDockingManager* GetDockingManager() const;
 ```
@@ -648,7 +649,6 @@ virtual CWnd* GetFirstVisiblePane() const;
 
 ##  <a name="gethotpoint"></a>  CPaneFrameWnd::GetHotPoint
 
-
 ```
 CPoint GetHotPoint() const;
 ```
@@ -687,7 +687,6 @@ virtual int GetPaneCount() const;
 
 ##  <a name="getparent"></a>  CPaneFrameWnd::GetParent
 
-
 ```
 CWnd* GetParent();
 ```
@@ -698,7 +697,6 @@ CWnd* GetParent();
 
 ##  <a name="getpinstate"></a>  CPaneFrameWnd::GetPinState
 
-
 ```
 BOOL GetPinState() const;
 ```
@@ -708,7 +706,6 @@ BOOL GetPinState() const;
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="getrecentfloatingrect"></a>  CPaneFrameWnd::GetRecentFloatingRect
-
 
 ```
 CRect GetRecentFloatingRect() const;
@@ -770,7 +767,6 @@ virtual LRESULT HitTest(
 
 ##  <a name="iscaptured"></a>  CPaneFrameWnd::IsCaptured
 
-
 ```
 BOOL IsCaptured() const;
 ```
@@ -780,7 +776,6 @@ BOOL IsCaptured() const;
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="isdelayshow"></a>  CPaneFrameWnd::IsDelayShow
-
 
 ```
 BOOL IsDelayShow() const;
@@ -991,14 +986,13 @@ virtual void OnShowPane(
 
 ##  <a name="pin"></a>  CPaneFrameWnd::Pin
 
-
 ```
 void Pin(BOOL bPin = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bPin*
+[in]*bPin*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1141,19 +1135,17 @@ virtual void SetCaptionButtons(DWORD dwButtons);
 
 ##  <a name="setdelayshow"></a>  CPaneFrameWnd::SetDelayShow
 
-
 ```
 void SetDelayShow(BOOL bDelayShow);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bDelayShow*
+[in]*bDelayShow*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="setdockingmanager"></a>  CPaneFrameWnd::SetDockingManager
-
 
 ```
 void SetDockingManager(CDockingManager* pManager);
@@ -1161,7 +1153,7 @@ void SetDockingManager(CDockingManager* pManager);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pManager*
+[in]*pManager*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1193,14 +1185,13 @@ virtual void SetDockState(CDockingManager* pDockManager);
 
 ##  <a name="sethotpoint"></a>  CPaneFrameWnd::SetHotPoint
 
-
 ```
 void SetHotPoint(CPoint& ptNew);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*ptNew*
+[in]*ptNew*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1267,19 +1258,17 @@ BOOL StartTearOff(CMFCPopu* pMenu);
 
 ##  <a name="storerecentdocksiteinfo"></a>  CPaneFrameWnd::StoreRecentDockSiteInfo
 
-
 ```
 virtual void StoreRecentDockSiteInfo(CPane* pBar);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBar*
+[in]*pBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="storerecenttabrelatedinfo"></a>  CPaneFrameWnd::StoreRecentTabRelatedInfo
-
 
 ```
 virtual void StoreRecentTabRelatedInfo(
@@ -1289,8 +1278,8 @@ virtual void StoreRecentTabRelatedInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*pDockingBar*<br/>
-[in][in]*pTabbedBar*
+[in]*pDockingBar*<br/>
+[in]*pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 

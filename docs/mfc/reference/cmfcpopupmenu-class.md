@@ -1,7 +1,7 @@
 ---
 title: CMFCPopupMenu クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -170,12 +170,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067f9dc580a901974a5e980eabb28c04076f3fa9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 689a3d8e2ce7b63b5f5e507343084848cf6c52f4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374543"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081746"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu クラス
 
@@ -251,7 +251,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 |[CMFCPopupMenu::MoveTo](#moveto)||
 |[CMFCPopupMenu::OnCmdMsg](#oncmdmsg)|( `CFrameWnd::OnCmdMsg`をオーバーライドします)。|
 |[CMFCPopupMenu::PostCommand](#postcommand)||
-|[CMFCPopupMenu::PreTranslateMessage](#pretranslatemessage)|(`CFrameWnd::PreTranslateMessage` をオーバーライドします)。|
+|[CMFCPopupMenu::PreTranslateMessage](#pretranslatemessage)|( `CFrameWnd::PreTranslateMessage`をオーバーライドします)。|
 |[CMFCPopupMenu::RecalcLayout](#recalclayout)|オンまたはオフに標準のコントロール バーが切り替えられたときに、またはフレーム ウィンドウのサイズが変更されたときに、フレームワークによって呼び出されます。 (上書き[表示](../../mfc/reference/cframewnd-class.md#recalclayout))。|
 |[CMFCPopupMenu::RemoveAllItems](#removeallitems)|ポップアップ メニューからすべての項目をクリアします。|
 |[CMFCPopupMenu::RemoveItem](#removeitem)|ポップアップ メニューから、指定した項目を削除します。|
@@ -306,12 +306,11 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 `CMFCPopupMenu`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxpopupmenu.h
 
 ##  <a name="activatepopupmenu"></a>  CMFCPopupMenu::ActivatePopupMenu
-
 
 ```
 static BOOL __stdcall ActivatePopupMenu(
@@ -321,8 +320,8 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*pTopFrame*<br/>
-[in][in]*pPopupMenu*
+[in]*pTopFrame*<br/>
+[in]*pPopupMenu*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -342,7 +341,6 @@ static void AlwaysShowEmptyToolsEntry(BOOL bShow = TRUE);
 [in]ポップアップ メニューが空のエントリを表示できる場合は TRUE。FALSE それ以外の場合。
 
 ##  <a name="areallcommandsshown"></a>  CMFCPopupMenu::AreAllCommandsShown
-
 
 ```
 BOOL AreAllCommandsShown() const;
@@ -387,14 +385,13 @@ MENUAREA_TYPE パラメーターは、次の値のいずれかを持つことが
 
 ##  <a name="closemenu"></a>  CMFCPopupMenu::CloseMenu
 
-
 ```
 void CloseMenu(BOOL bSetFocusToBar = FALSE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bSetFocusToBar*
+[in]*bSetFocusToBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -470,7 +467,6 @@ virtual BOOL Create(
 
 ##  <a name="createtearoffbar"></a>  CMFCPopupMenu::CreateTearOffBar
 
-
 ```
 virtual CPane* CreateTearOffBar(
     CFrameWnd* pWndMain,
@@ -480,15 +476,15 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>パラメーター
 
-*pWndMain*<br/>
-[in][in]*uiID* [in] *lpszName*
+[in]*pWndMain*<br/>
+[in]*uiID*<br/>
+[in]*lpszName*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="defaultmouseclickonclose"></a>  CMFCPopupMenu::DefaultMouseClickOnClose
-
 
 ```
 virtual BOOL DefaultMouseClickOnClose() const;
@@ -541,19 +537,17 @@ static void EnableMenuSound(BOOL bEnable = TRUE);
 
 ##  <a name="enableresize"></a>  CMFCPopupMenu::EnableResize
 
-
 ```
 void EnableResize(CSize sizeMinResize);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*sizeMinResize*
+[in]*sizeMinResize*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="enablescrolling"></a>  CMFCPopupMenu::EnableScrolling
-
 
 ```
 void EnableScrolling(BOOL = TRUE);
@@ -561,12 +555,11 @@ void EnableScrolling(BOOL = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*BOOL*
+[in]*BOOL*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="enablevertresize"></a>  CMFCPopupMenu::EnableVertResize
-
 
 ```
 void EnableVertResize(int nMinResize);
@@ -574,12 +567,11 @@ void EnableVertResize(int nMinResize);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nMinResize*
+[in]*nMinResize*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="findsubitembycommand"></a>  CMFCPopupMenu::FindSubItemByCommand
-
 
 ```
 CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
@@ -587,7 +579,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCmd*
+[in]*uiCmd*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -657,7 +649,6 @@ static CMFCPopupMenu::ANIMATION_TYPE GetAnimationType(BOOL bNoSystem = FALSE);
 
 ##  <a name="getdropdirection"></a>  CMFCPopupMenu::GetDropDirection
 
-
 ```
 DROP_DIRECTION GetDropDirection() const;
 ```
@@ -683,7 +674,6 @@ static BOOL GetForceMenuFocus();
 既定では、アプリケーションは、メニュー バーにフォーカスを返しません。 この設定を変更するには使用[CMFCPopupMenu::SetForceMenuFocus](#setforcemenufocus)します。
 
 ##  <a name="getforceshadow"></a>  CMFCPopupMenu::GetForceShadow
-
 
 ```
 static BOOL __stdcall GetForceShadow();
@@ -768,14 +758,13 @@ CWnd* GetMessageWnd() const;
 
 ##  <a name="getparentarea"></a>  CMFCPopupMenu::GetParentArea
 
-
 ```
 virtual CWnd* GetParentArea(CRect& rectParentBtn);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectParentBtn*
+[in]*rectParentBtn*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -817,7 +806,6 @@ CMFCPopupMenu* GetParentPopupMenu() const;
 
 ##  <a name="getparentribbonelement"></a>  CMFCPopupMenu::GetParentRibbonElement
 
-
 ```
 CMFCRibbonBaseElement* GetParentRibbonElement() const;
 ```
@@ -843,7 +831,6 @@ CMFCToolBar* GetParentToolBar() const;
 場合、`CMFCPopupMenu`がショートカット メニュー、ツールバーの親を持たない。
 
 ##  <a name="getquickcustomizetype"></a>  CMFCPopupMenu::GetQuickCustomizeType
-
 
 ```
 QUICK_CUSTOMIZE_TYPE GetQuickCustomizeType() const;
@@ -871,7 +858,6 @@ CMFCToolBarMenuButton* GetSelItem();
 
 ##  <a name="hasbeenresized"></a>  CMFCPopupMenu::HasBeenResized
 
-
 ```
 BOOL HasBeenResized() const;
 ```
@@ -897,7 +883,6 @@ TRUE の場合は、ポップアップ メニューには、あまり使用さ�
 このメソッドは、その構成が有効になっていない場合、ほとんどのコマンドを使用ポップアップ メニューを非表示にできるかどうかのみを指定します。 親ボタンがあり、親ウィンドウがから派生した場合、ポップアップ メニューがめったに使用するコマンドを非表示できます、 [CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)します。 使用[CMFCMenuBar::SetRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#setrecentlyusedmenus)この機能を有効にして[CMFCMenuBar::IsRecentlyUsedMenus](../../mfc/reference/cmfcmenubar-class.md#isrecentlyusedmenus)をこの機能が現在有効になっているかどうかを判断します。 親ウィンドウには、これら両方のメソッドを呼び出す必要があります。
 
 ##  <a name="incommand"></a>  CMFCPopupMenu::InCommand
-
 
 ```
 virtual BOOL InCommand();
@@ -958,7 +943,6 @@ int InsertSeparator(int iInsertAt = -1);
 
 ##  <a name="isalwaysclose"></a>  CMFCPopupMenu::IsAlwaysClose
 
-
 ```
 virtual BOOL IsAlwaysClose() const;
 ```
@@ -968,7 +952,6 @@ virtual BOOL IsAlwaysClose() const;
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="isalwaysshowemptytoolsentry"></a>  CMFCPopupMenu::IsAlwaysShowEmptyToolsEntry
-
 
 ```
 static BOOL __stdcall IsAlwaysShowEmptyToolsEntry();
@@ -998,7 +981,6 @@ BOOL IsCustomizePane();
 
 ##  <a name="isescclose"></a>  CMFCPopupMenu::IsEscClose
 
-
 ```
 BOOL IsEscClose();
 ```
@@ -1025,7 +1007,6 @@ virtual BOOL IsIdle() const;
 
 ##  <a name="ismenusound"></a>  CMFCPopupMenu::IsMenuSound
 
-
 ```
 static UINT __stdcall IsMenuSound();
 ```
@@ -1051,7 +1032,6 @@ BOOL IsQuickCustomize();
 QuickCustomize では、モード、ユーザーは、ツールバーのボタンを直接カスタマイズするボタンを選択します。
 
 ##  <a name="isresizeble"></a>  CMFCPopupMenu::IsResizeble
-
 
 ```
 BOOL IsResizeble() const;
@@ -1080,7 +1060,6 @@ TRUE の場合、メニューは右揃えになります。FALSE の場合は、
 メニューの配置では、グローバル設定ではありませんし、ポップアップ メニュー間で異なることができます。
 
 ##  <a name="isscrollable"></a>  CMFCPopupMenu::IsScrollable
-
 
 ```
 BOOL IsScrollable() const;
@@ -1120,19 +1099,17 @@ BOOL IsShown() const;
 
 ##  <a name="moveto"></a>  CMFCPopupMenu::MoveTo
 
-
 ```
 void MoveTo(const CPoint& pt);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pt*
+[in]*pt*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="onchangehot"></a>  CMFCPopupMenu::OnChangeHot
-
 
 ```
 virtual void OnChangeHot(int nHot);
@@ -1140,12 +1117,11 @@ virtual void OnChangeHot(int nHot);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nHot*
+[in]*nHot*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="onchooseitem"></a>  CMFCPopupMenu::OnChooseItem
-
 
 ```
 virtual void OnChooseItem(UINT uidCmdID);
@@ -1153,12 +1129,11 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uidCmdID*
+[in]*uidCmdID*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="oncmdmsg"></a>  CMFCPopupMenu::OnCmdMsg
-
 
 ```
 virtual BOOL OnCmdMsg(
@@ -1170,10 +1145,10 @@ virtual BOOL OnCmdMsg(
 
 ### <a name="parameters"></a>パラメーター
 
-*nID*<br/>
-[in][in]*nCode*
-*pExtra*<br/>
-[in][in]*pHandlerInfo*
+[in]*nID*<br/>
+[in]*nCode*<br/>
+[in]*pExtra*<br/>
+[in]*pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1181,14 +1156,13 @@ virtual BOOL OnCmdMsg(
 
 ##  <a name="postcommand"></a>  CMFCPopupMenu::PostCommand
 
-
 ```
 BOOL PostCommand(UINT uiCommandID);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCommandID*
+[in]*uiCommandID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1196,14 +1170,13 @@ BOOL PostCommand(UINT uiCommandID);
 
 ##  <a name="pretranslatemessage"></a>  CMFCPopupMenu::PreTranslateMessage
 
-
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pMsg*
+[in]*pMsg*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1211,14 +1184,13 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 
 ##  <a name="recalclayout"></a>  CMFCPopupMenu::RecalcLayout
 
-
 ```
 virtual void RecalcLayout(BOOL bNotify = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bNotify*
+[in]*bNotify*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1252,7 +1224,6 @@ BOOL RemoveItem(int iIndex);
 このメソッドは、項目の削除の影響を受けるすべての区切り記号を自動的に配置します。 フレームワークが区切り記号を再配置する方法の詳細については、次を参照してください。 [CMFCToolBar::RemoveButton](../../mfc/reference/cmfctoolbar-class.md#removebutton)します。
 
 ##  <a name="savestate"></a>  CMFCPopupMenu::SaveState
-
 
 ```
 virtual void SaveState();
@@ -1298,14 +1269,13 @@ static void SetAnimationType(CMFCPopupMenu::ANIMATION_TYPE type);
 
 ##  <a name="setautodestroy"></a>  CMFCPopupMenu::SetAutoDestroy
 
-
 ```
 void SetAutoDestroy(BOOL bAutoDestroy = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bAutoDestroy*
+[in]*bAutoDestroy*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1379,19 +1349,17 @@ void SetMaxWidth(int iMaxWidth);
 
 ##  <a name="setmessagewnd"></a>  CMFCPopupMenu::SetMessageWnd
 
-
 ```
 void SetMessageWnd(CWnd* pMsgWnd);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pMsgWnd*
+[in]*pMsgWnd*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="setparentribbonelement"></a>  CMFCPopupMenu::SetParentRibbonElement
-
 
 ```
 void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
@@ -1399,12 +1367,11 @@ void SetParentRibbonElement(CMFCRibbonBaseElement* pElem);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pElem*
+[in]*pElem*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="setquickcustomizetype"></a>  CMFCPopupMenu::SetQuickCustomizeType
-
 
 ```
 void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
@@ -1412,12 +1379,11 @@ void SetQuickCustomizeType(QUICK_CUSTOMIZE_TYPE Type);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*型*
+[in]*型*<br/>
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="setquickmode"></a>  CMFCPopupMenu::SetQuickMode
-
 
 ```
 void SetQuickMode();
@@ -1472,7 +1438,6 @@ void ShowAllCommands();
 これはグローバル設定ではありませんし、現在のポップアップ メニューのみに影響します。
 
 ##  <a name="triggerresize"></a>  CMFCPopupMenu::TriggerResize
-
 
 ```
 void TriggerResize();
