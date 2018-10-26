@@ -1,7 +1,7 @@
 ---
 title: bss_seg |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-tools
 ms.topic: reference
@@ -18,69 +18,70 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3c3a80e50bd0b012773a5e5a197674965f73b526
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 77d234acdc02a2fefeca45ca0a925603e0ff9984
+ms.sourcegitcommit: 80fc7b0452aafa36b0c915cbd29c75e1ffa25630
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711159"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50003560"
 ---
 # <a name="bssseg"></a>bss_seg
-初期化されていない変数が格納される .obj ファイル内のセグメントを指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-#pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )  
-```  
-  
-## <a name="remarks"></a>Remarks  
 
-Obj ファイルを表示できる、 [dumpbin](../build/reference/dumpbin-command-line.md)アプリケーション。 初期化されていないデータの .obj ファイルの既定セグメントは、.bss です。 場合によっては使用**bss_seg**高速化できますの読み込み時間の 1 つのセクションに初期化されていないデータをグループ化します。  
-  
-**bss_seg**パラメーターなしで、セグメントを .bss にリセットします。  
-  
+初期化されていない変数が格納される .obj ファイル内のセグメントを指定します。
+
+## <a name="syntax"></a>構文
+
+```
+#pragma bss_seg( [ [ { push | pop }, ] [ identifier, ] ] [ "segment-name" [, "segment-class" ] )
+```
+
+### <a name="parameters"></a>パラメーター
+
 **push**<br/>
-(省略可能)内部コンパイラ スタックには、レコードを設定します。 A *pu*sh * ことができますが、*識別子*と*セグメント名*します。  
-  
+(省略可能)内部コンパイラ スタックには、レコードを設定します。 A *pu*sh * ことができますが、*識別子*と*セグメント名*します。
+
 **pop**<br/>
-(省略可能)内部コンパイラ スタックの上部からレコードを削除します。  
-  
+(省略可能)内部コンパイラ スタックの上部からレコードを削除します。
+
 *identifier*<br/>
-(省略可能)使用すると**プッシュ**、内部コンパイラ スタックのレコードに名前を割り当てます。 使用すると**pop**、レコードまで内部スタックからポップ*識別子*が削除された場合*識別子*は内部のスタックに何もポップされます。  
-  
-*識別子*により、複数のレコードを 1 つのポップを**pop**コマンド。  
-  
+(省略可能)使用すると**プッシュ**、内部コンパイラ スタックのレコードに名前を割り当てます。 *識別子*により、複数のレコードを 1 つのポップを**pop**コマンド。 使用すると**pop**、ディレクティブのポップ レコードまで内部スタックからポップ*識別子*が削除された場合*識別子*が見つからない内部スタックではありませんポップされます。
+
 *「セグメント名」*<br/>
-(省略可能)セグメントの名前。 使用すると**pop**、スタックがポップされ、*セグメント名*がアクティブなセグメント名になります。  
-  
+(省略可能)セグメントの名前。 使用すると**pop**、スタックがポップされ、*セグメント名*がアクティブなセグメント名になります。
+
 *「セグメント クラス」*<br/>
-(省略可能)C++ との互換性をバージョン 2.0 より前に含まれています。 これは無視されます。  
-  
-## <a name="example"></a>例  
-  
-```cpp  
-// pragma_directive_bss_seg.cpp  
-int i;                     // stored in .bss  
-#pragma bss_seg(".my_data1")  
-int j;                     // stored in "my_data1"  
-  
-#pragma bss_seg(push, stack1, ".my_data2")     
-int l;                     // stored in "my_data2"  
-  
-#pragma bss_seg(pop, stack1)   // pop stack1 from stack  
-int m;                     // stored in "stack_data1"  
-  
-int main() {  
-}  
-```  
-  
-初期化されたデータのセクションを指定することもできます ([data_seg](../preprocessor/data-seg.md))、関数 ([code_seg](../preprocessor/code-seg.md))、および const 変数 ([const_seg](../preprocessor/const-seg.md))。  
-  
-データを使用して割り当て、 **bss_seg**プラグマがその場所に関する情報を保持していません。  
-  
-参照してください[/section](../build/reference/section-specify-section-attributes.md)に対して一連の名前のセクションを作成するときに使用する必要があります。  
-  
-## <a name="see-also"></a>関連項目  
- 
+(省略可能)C++ との互換性をバージョン 2.0 より前に含まれています。 これは無視されます。
+
+## <a name="remarks"></a>Remarks
+
+.Obj ファイルを表示できる、 [dumpbin](../build/reference/dumpbin-command-line.md)アプリケーション。 初期化されていないデータの .obj ファイルの既定セグメントは、.bss です。 場合によっては使用**bss_seg**高速化できますの読み込み時間の 1 つのセクションに初期化されていないデータをグループ化します。
+
+**bss_seg**パラメーターなしで、セグメントを .bss にリセットします。
+
+データを使用して割り当て、 **bss_seg**プラグマがその場所に関する情報を保持していません。
+
+初期化されたデータのセクションを指定することもできます ([data_seg](../preprocessor/data-seg.md))、関数 ([code_seg](../preprocessor/code-seg.md))、および const 変数 ([const_seg](../preprocessor/const-seg.md))。
+
+参照してください[/section](../build/reference/section-specify-section-attributes.md)に対して一連の名前のセクションを作成するときに使用する必要があります。
+
+## <a name="example"></a>例
+
+```cpp
+// pragma_directive_bss_seg.cpp
+int i;                     // stored in .bss
+#pragma bss_seg(".my_data1")
+int j;                     // stored in .my_data1
+
+#pragma bss_seg(push, stack1, ".my_data2")
+int l;                     // stored in .my_data2
+
+#pragma bss_seg(pop, stack1)   // pop stack1 from stack
+int m;                     // stored in .my_data1
+
+int main() {
+}
+```
+
+## <a name="see-also"></a>関連項目
+
 [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

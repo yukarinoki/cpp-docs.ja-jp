@@ -36,129 +36,129 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6de23571f30373e5ddd3940bcae4be9fa176539a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2e62c4242513c5147dcfd84ee5d69ec51a4816d1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46086838"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053332"
 ---
 # <a name="caccessorbase-class"></a>CAccessorBase クラス
 
-OLE DB テンプレートのすべてのアクセサーは、このクラスから派生します。 `CAccessorBase` 複数のアクセサーを管理する 1 つの行セットを使用できます。 パラメーターと出力列の両方のバインドも提供します。  
-  
+OLE DB テンプレートのすべてのアクセサーは、このクラスから派生します。 `CAccessorBase` 複数のアクセサーを管理する 1 つの行セットを使用できます。 パラメーターと出力列の両方のバインドも提供します。
+
 ## <a name="syntax"></a>構文
 
 ```cpp
-// Replace with syntax  
-```  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="methods"></a>メソッド  
-  
-|||  
-|-|-|  
-|[閉じる](#close)|アクセサーを閉じます。|  
-|[GetHAccessor](#geth)|アクセサーのハンドルを取得します。|  
-|[GetNumAccessors](#getnum)|クラスによって作成されたアクセサーの数を取得します。|  
-|[IsAutoAccessor](#isauto)|指定されたアクセサーが自動かどうかをテストします。|  
-|[ReleaseAccessors](#release)|アクセサーを解放します。|  
+// Replace with syntax
+```
 
-## <a name="requirements"></a>要件  
+## <a name="members"></a>メンバー
 
-**ヘッダー:** atldbcli.h  
+### <a name="methods"></a>メソッド
+
+|||
+|-|-|
+|[閉じる](#close)|アクセサーを閉じます。|
+|[GetHAccessor](#geth)|アクセサーのハンドルを取得します。|
+|[GetNumAccessors](#getnum)|クラスによって作成されたアクセサーの数を取得します。|
+|[IsAutoAccessor](#isauto)|指定されたアクセサーが自動かどうかをテストします。|
+|[ReleaseAccessors](#release)|アクセサーを解放します。|
+
+## <a name="requirements"></a>必要条件
+
+**ヘッダー:** atldbcli.h
 
 ## <a name="close"></a> Caccessorbase::close
 
-アクセサーを閉じます。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-void Close();  
-```  
-  
-### <a name="remarks"></a>Remarks  
+アクセサーを閉じます。
 
-呼び出す必要があります[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)最初。  
+### <a name="syntax"></a>構文
+
+```cpp
+void Close();
+```
+
+### <a name="remarks"></a>Remarks
+
+呼び出す必要があります[ReleaseAccessors](../../data/oledb/caccessorbase-releaseaccessors.md)最初。
 
 ## <a name="geth"></a> Caccessorbase::gethaccessor
 
-指定されたアクセサーのアクセサーのハンドルを取得します。  
-  
-### <a name="syntax"></a>構文  
-  
+指定されたアクセサーのアクセサーのハンドルを取得します。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-HACCESSOR GetHAccessor(ULONG nAccessor) const;  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+HACCESSOR GetHAccessor(ULONG nAccessor) const;
+```
+
+#### <a name="parameters"></a>パラメーター
 
 *nAccessor*<br/>
-[in]アクセサーのゼロ オフセット番号。  
-  
-### <a name="return-value"></a>戻り値  
+[in]アクセサーのゼロ オフセット番号。
 
-アクセサーのハンドルです。  
+### <a name="return-value"></a>戻り値
+
+アクセサーのハンドルです。
 
 ## <a name="getnum"></a> Caccessorbase::getnumaccessors
 
-クラスによって作成されたアクセサーの数を取得します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-ULONG GetNumAccessors() const;  
-```  
-  
-### <a name="return-value"></a>戻り値  
+クラスによって作成されたアクセサーの数を取得します。
 
-クラスによって作成されたアクセサーの数。  
+### <a name="syntax"></a>構文
+
+```cpp
+ULONG GetNumAccessors() const;
+```
+
+### <a name="return-value"></a>戻り値
+
+クラスによって作成されたアクセサーの数。
 
 ## <a name="isauto"></a> Caccessorbase::isautoaccessor
 
-移動操作中に、アクセサーのデータが自動的に取得される場合に true を返します。  
-  
-### <a name="syntax"></a>構文  
-  
+移動操作中に、アクセサーのデータが自動的に取得される場合に true を返します。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-bool IsAutoAccessor(ULONG nAccessor) const;  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+bool IsAutoAccessor(ULONG nAccessor) const;
+```
+
+#### <a name="parameters"></a>パラメーター
 
 *nAccessor*<br/>
-[in]アクセサーのゼロ オフセット番号。  
-  
-### <a name="return-value"></a>戻り値  
+[in]アクセサーのゼロ オフセット番号。
 
-返します**true**アクセサーが自動である場合。 それ以外の場合は **false**を返します。  
+### <a name="return-value"></a>戻り値
+
+返します**true**アクセサーが自動である場合。 それ以外の場合は **false**を返します。
 
 ## <a name="release"></a> Caccessorbase::releaseaccessors
 
-クラスによって作成されたアクセサーを解放します。  
-  
-### <a name="syntax"></a>構文  
-  
+クラスによって作成されたアクセサーを解放します。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-HRESULT ReleaseAccessors(IUnknown* pUnk);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+HRESULT ReleaseAccessors(IUnknown* pUnk);
+```
+
+#### <a name="parameters"></a>パラメーター
 
 *pUnk*<br/>
-[in]ポインター、`IUnknown`アクセサーが作成されている COM オブジェクトのインターフェイス。  
-  
-### <a name="return-value"></a>戻り値  
+[in]ポインター、`IUnknown`アクセサーが作成されている COM オブジェクトのインターフェイス。
 
-標準の HRESULT です。  
-  
-### <a name="remarks"></a>Remarks  
+### <a name="return-value"></a>戻り値
 
-呼び出される[caccessorrowset::close](../../data/oledb/caccessorrowset-close.md)します。 
-  
-## <a name="see-also"></a>関連項目  
+標準の HRESULT です。
+
+### <a name="remarks"></a>Remarks
+
+呼び出される[caccessorrowset::close](../../data/oledb/caccessorrowset-close.md)します。
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)<br/>

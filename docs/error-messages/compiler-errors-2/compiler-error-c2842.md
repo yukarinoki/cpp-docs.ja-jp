@@ -16,19 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 20967ab4cd047f62a5cf692c91fec90148b4f470
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f6143249871384d89227d63fe1900814ae5077fd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118818"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055243"
 ---
 # <a name="compiler-error-c2842"></a>コンパイラ エラー C2842
 
 'class' : マネージド型または WinRT 型はそれ自体の 'operator new' または 'operator delete' を定義できません
 
 独自に定義することができます * * new 演算子または**delete 演算子**ネイティブ ヒープにメモリの割り当てを管理します。 ただし、これらの演算子はマネージド ヒープでのみ割り当てられるため、参照クラスでは定義できません。
-
 
 詳細については、次を参照してください。[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)します。
 

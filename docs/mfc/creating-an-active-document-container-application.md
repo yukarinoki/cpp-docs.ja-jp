@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4f01b15a226887216b45ba232437d9d20c4691b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f1b20dd592e180122e119b08ab59babfdaae8d54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052812"
 ---
 # <a name="creating-an-active-document-container-application"></a>Active ドキュメント コンテナー アプリケーションの作成
 
@@ -57,9 +57,9 @@ Active ドキュメント コンテナー アプリケーションを作成す�
 
          [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
-     `OnPreparePrinting` 印刷のサポートを提供します。 このコードで置き換えます`DoPreparePrinting`、これは、既定の印刷準備します。
+   `OnPreparePrinting` 印刷のサポートを提供します。 このコードで置き換えます`DoPreparePrinting`、これは、既定の印刷準備します。
 
-     Active ドキュメント コンテインメントには、強化された印刷スキームが用意されています。
+   Active ドキュメント コンテインメントには、強化された印刷スキームが用意されています。
 
    - 使用してアクティブなドキュメントを最初に呼び出すことができます、`IPrint`インターフェイス自体を印刷するように指定しています。 これに対し、プリンターに含まれているアイテムの画像を表示するコンテナー必要がある、以前の OLE コンテインメント`CDC`オブジェクト。
 
@@ -67,7 +67,7 @@ Active ドキュメント コンテナー アプリケーションを作成す�
 
    - 失敗した場合は、独自のアイテムの表示を確認します。
 
-     静的メンバー関数は、`COleDocObjectItem::OnPrint`と`COleDocObjectItem::OnPreparePrinting`前のコードに実装されると、この強化された印刷スキームを処理します。
+   静的メンバー関数は、`COleDocObjectItem::OnPrint`と`COleDocObjectItem::OnPreparePrinting`前のコードに実装されると、この強化された印刷スキームを処理します。
 
 11. 独自の実装を追加し、アプリケーションをビルドします。
 

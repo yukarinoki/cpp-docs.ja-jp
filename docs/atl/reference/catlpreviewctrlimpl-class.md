@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ef1469c40de8aae06460f1874905c53e91a47ca1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 575af8c372e0d935e1ca7c262a70466a97885648
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46079337"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053956"
 ---
 # <a name="catlpreviewctrlimpl-class"></a>CAtlPreviewCtrlImpl クラス
 
@@ -89,7 +89,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 |名前|説明|
 |----------|-----------------|
 |[CAtlPreviewCtrlImpl::m_clrBack](#m_clrback)|プレビュー ウィンドウの背景色です。|
-|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|プレビュー ウィンドウのテキストの色。|  
+|[CAtlPreviewCtrlImpl::m_clrText](#m_clrtext)|プレビュー ウィンドウのテキストの色。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -109,7 +109,7 @@ class CAtlPreviewCtrlImpl : public CWindowImpl<CAtlPreviewCtrlImpl>, public IPre
 
 `ATL::CAtlPreviewCtrlImpl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlpreviewctrlimpl.h
 
@@ -226,7 +226,7 @@ const LOGFONTW* m_plf;
 WM_PAINT メッセージを処理します。
 
 ```
-LRESULT OnPaint(  
+LRESULT OnPaint(
     UINT nMsg,
     WPARAM wParam,
     LPARAM lParam,

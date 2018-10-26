@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 217dcd1d5e999ea640795c656bbf40f7adad3d7d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295077b474681cabeb1221052ae9e2c9ad5ed79a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398749"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053176"
 ---
 # <a name="windows-sockets-using-sockets-with-archives"></a>Windows ソケット: アーカイブ付きソケットの使用
 
@@ -49,7 +49,7 @@ ms.locfileid: "46398749"
 
 1. オブジェクトを使用して作成する、基になる**ソケット**を処理します。
 
-     `CSocket`クライアント オブジェクト、通常、既定のパラメーターを使用する必要があります[作成](../mfc/reference/casyncsocket-class.md#create)データグラム ソケットを作成する必要がある場合を除き、します。 `CSocket`サーバー オブジェクト内のポートを指定する必要があります、`Create`呼び出します。
+   `CSocket`クライアント オブジェクト、通常、既定のパラメーターを使用する必要があります[作成](../mfc/reference/casyncsocket-class.md#create)データグラム ソケットを作成する必要がある場合を除き、します。 `CSocket`サーバー オブジェクト内のポートを指定する必要があります、`Create`呼び出します。
 
     > [!NOTE]
     >  `CArchive` データグラム ソケットでは機能しません。 使用する場合`CSocket`使用する場合と、データグラム ソケットに対してクラスを使用する必要があります`CAsyncSocket`、つまり、アーカイブせずにします。 データグラムの信頼性がないため、(必ず到着して、繰り返される可能性がありますいない、または誤った順序)、アーカイブをシリアル化と互換性がありません。 シリアル化操作が確実、かつシーケンス内に完了するはずです。 使用しようとする場合`CSocket`で、 `CArchive` MFC アサーションが失敗するのデータグラムのオブジェクトします。
@@ -58,7 +58,7 @@ ms.locfileid: "46398749"
 
      - または -
 
-     ソケットがサーバーの場合は、呼び出す[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)を開始する試行をクライアントから接続をリッスンします。 接続要求を受信すると呼び出すことで同意[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)します。
+   ソケットがサーバーの場合は、呼び出す[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)を開始する試行をクライアントから接続をリッスンします。 接続要求を受信すると呼び出すことで同意[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)します。
 
     > [!NOTE]
     >  `Accept`メンバー関数は、新しい空への参照を受け取ります`CSocket`オブジェクトをパラメーターとして。 呼び出す前に、このオブジェクトを構築する必要があります`Accept`します。 このソケット オブジェクトがスコープ外になった場合、接続が閉じられます。 呼び出さない`Create`この新しいソケット オブジェクト。
@@ -67,13 +67,13 @@ ms.locfileid: "46398749"
 
 1. 作成、 [CArchive](../mfc/reference/carchive-class.md)読み込み (受信) または (送信) データを格納するオブジェクト。 アーカイブが関連付けられている、`CSocketFile`オブジェクト。
 
-     注意`CArchive`データグラム ソケットでは機能しません。
+   注意`CArchive`データグラム ソケットでは機能しません。
 
 1. 使用して、`CArchive`クライアントとサーバー ソケットの間でデータを渡すオブジェクト。
 
-     注意を指定した`CArchive`オブジェクトでは、一方向のみのデータを移動: 読み込み (受信) または格納 (送信) のいずれか。 場合によっては、2 つの使用は`CArchive`オブジェクト: 受信確認を受信するため、その他のデータを送信するための 1 つ。
+   注意を指定した`CArchive`オブジェクトでは、一方向のみのデータを移動: 読み込み (受信) または格納 (送信) のいずれか。 場合によっては、2 つの使用は`CArchive`オブジェクト: 受信確認を受信するため、その他のデータを送信するための 1 つ。
 
-     接続を受け入れると、archive の設定、パスワードの検証などのタスクを実行できます。
+   接続を受け入れると、archive の設定、パスワードの検証などのタスクを実行できます。
 
 1. アーカイブ、ソケット ファイル、およびソケット オブジェクトを破棄します。
 

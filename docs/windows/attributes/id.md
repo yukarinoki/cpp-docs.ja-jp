@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: a17edd3ec3c35c307ca35a6657c69f3f7fef246a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7ae22069acfa13bcaa71630f919b4ab3fede86a4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791175"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057687"
 ---
 # <a name="id"></a>ID
 
@@ -47,7 +47,7 @@ ms.locfileid: "48791175"
 
 例をご覧ください[バインド可能な](bindable.md)を使用する方法の例については**id**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -58,7 +58,7 @@ ms.locfileid: "48791175"
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -67,4 +67,4 @@ ms.locfileid: "48791175"
 [データ メンバー属性](data-member-attributes.md)<br/>
 [defaultvalue](defaultvalue.md)<br/>
 [in](in-cpp.md)<br/>
-[out](out-cpp.md)  
+[out](out-cpp.md)

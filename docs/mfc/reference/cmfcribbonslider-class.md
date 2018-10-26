@@ -40,12 +40,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6d53f1911073312b6ff8f5b9b2a1772205108244
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ee89ec85a222ae4727a31a1f3f76cfd257e328b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386213"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058390"
 ---
 # <a name="cmfcribbonslider-class"></a>CMFCRibbonSlider クラス
 
@@ -103,7 +103,7 @@ class CMFCRibbonSlider : public CMFCRibbonBaseElement
 
 [CMFCRibbonSlider](../../mfc/reference/cmfcribbonslider-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxribbonslider.h
 
@@ -174,7 +174,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -214,7 +214,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="remarks"></a>Remarks
 

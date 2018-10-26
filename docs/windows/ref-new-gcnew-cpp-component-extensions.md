@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: f5a10278957e6a89b52e744f8f0dd78b475f7730
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: c9553ac6bf1d2e8e8d92745456f1f52d1de1c9ba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328312"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057043"
 ---
 # <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new、gcnew (C +/cli および C++/cli CX)
 
@@ -43,7 +43,7 @@ A **ref 新しい**操作がスローされます`OutOfMemoryException`メモリ
 
 使用**ref 新しい**Windows ランタイム オブジェクト有効期間が自動的に管理用のメモリを割り当てられません。 オブジェクトは、参照の最後のコピーがスコープ外になった後で参照カウントが 0 になると、自動的に解放されます。 詳細については、次を参照してください。 [Ref クラスと構造体](../cppcx/ref-classes-and-structs-c-cx.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -51,7 +51,7 @@ A **ref 新しい**操作がスローされます`OutOfMemoryException`メモリ
 
 割り当てられているマネージ型 (参照または値型) のメモリ**gcnew**、ガベージ コレクションを使用して割り当てを解除します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -84,7 +84,7 @@ value class Boxed {
     public:
         int i;
 };
-int main()  
+int main()
 {
     Boxed^ y = gcnew Boxed;
     y->i = 32;

@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 750e51264f12d1c8961ced4e8b606ea5d040d8c9
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 41a757ccd70fe95ce82f90b1128985986e3722b0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791298"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057817"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -57,19 +57,19 @@ ms.locfileid: "48791298"
 *optimize*<br/>
 ときに*型*は`native`を指定できます`optimize=size`は 4 バイトのストレージ (最小値) のすべてのイベント クラスで示すために、または`optimize=speed`(既定値) を 4 があることを示すために * (イベントの #) バイトのストレージ。
 
-*装飾します。*<br/>
-ときに*型*は`native`を指定できます`decorate=false`を結合 (.mrg) ファイルの拡張名が、外側のクラス名を含める必要がありますいないことを示しています。 [/Fx](../../build/reference/fx-merge-injected-code.md) .mrg ファイルを生成することができます。 `decorate=false`、既定値は、マージされたファイルで完全修飾型名します。
+*decorate*<br/>
+ときに*型*は`native`を指定できます`decorate=false`を結合 (.mrg) ファイルの拡張名が、外側のクラス名を含める必要がありますいないことを示しています。 [/Fx](../../build/reference/fx-merge-injected-code.md) では、.mrg ファイルを生成できます。 `decorate=false`、既定値は、マージされたファイルで完全修飾型名します。
 
 ## <a name="remarks"></a>Remarks
 
 **event_source** C++ 属性では、それが適用されているクラスまたは構造がイベント ソースとなることを指定します。
 
-**event_source**と組み合わせて使用は、 [event_receiver](event-receiver.md)属性と[_ _event](../../cpp/event.md)キーワード。 使用`event_receiver`イベント レシーバーを作成します。 使用 **_ _event**イベントとしてこれらのメソッドを指定するイベント ソース内のメソッドにします。
+**event_source** は、 [event_receiver](event-receiver.md) 属性と [__event](../../cpp/event.md) キーワードと共に使用します。 使用`event_receiver`イベント レシーバーを作成します。 使用 **_ _event**イベントとしてこれらのメソッドを指定するイベント ソース内のメソッドにします。
 
 > [!NOTE]
 > テンプレート クラスまたは構造体にイベントを含めることはできません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -80,7 +80,7 @@ ms.locfileid: "48791298"
 |**必要な属性**|**コクラス**とき `type`=`com`|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -89,4 +89,4 @@ ms.locfileid: "48791298"
 [__event](../../cpp/event.md)<br/>
 [__hook](../../cpp/hook.md)<br/>
 [__unhook](../../cpp/unhook.md)<br/>
-[クラス属性](class-attributes.md)  
+[クラス属性](class-attributes.md)
