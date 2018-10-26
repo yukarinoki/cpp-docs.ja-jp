@@ -66,7 +66,7 @@
 ###### [OLE DB プロバイダーへの文字列の読み込み](reading-strings-into-the-ole-db-provider.md)
 ###### [OLE DB プロバイダーへの文字列の格納](storing-strings-in-the-ole-db-provider.md)
 ##### [単純な読み取り専用プロバイダーの機能の拡張](enhancing-the-simple-read-only-provider.md)
-###### [RMyProviderRowset の継承の変更](modifying-the-inheritance-of-rmyproviderrowset.md)
+###### [RCustomRowset の継承の変更](modifying-the-inheritance-of-rmyproviderrowset.md)
 ###### [コンシューマーに返される列の動的な判断](dynamically-determining-columns-returned-to-the-consumer.md)
 ##### [読み取り専用プロバイダーのテスト](testing-the-read-only-provider.md)
 #### [更新可能なプロバイダーの作成](creating-an-updatable-provider.md)
