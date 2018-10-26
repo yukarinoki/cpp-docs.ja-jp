@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4983d2a56407449873c8b4db73d82fa2ef864058
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 297a54b588cadc3a43e1b08ca89820807edb8ba2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328260"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069842"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl クラス
 
@@ -105,7 +105,7 @@ template <class T,
 |ATL プロジェクト ウィザード|[ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)|
 |ダイアログ ボックス|[ダイアログ ボックス](https://msdn.microsoft.com/library/windows/desktop/ms632588)と Windows SDK の後続のトピック|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -115,12 +115,12 @@ template <class T,
 
 ```
 HWND Create(
-    HWND hWndParent,  
-    LPARAM dwInitParam = NULL );  
+    HWND hWndParent,
+    LPARAM dwInitParam = NULL );
 
 HWND Create(
-    HWND hWndParent,  
-    RECT&, 
+    HWND hWndParent,
+    RECT&,
     LPARAM dwInitParam = NULL);
 ```
 
@@ -144,7 +144,7 @@ HWND Create(
 
 ##  <a name="destroywindow"></a>  CDialogImpl::DestroyWindow
 
-モードレス ダイアログ ボックスを破棄します。  
+モードレス ダイアログ ボックスを破棄します。
 
 ```
 BOOL DestroyWindow();
@@ -160,13 +160,13 @@ BOOL DestroyWindow();
 
 ##  <a name="dialogproc"></a>  CDialogImpl::DialogProc
 
-この静的関数は、ダイアログ ボックス プロシージャを実装します。  
+この静的関数は、ダイアログ ボックス プロシージャを実装します。
 
 ```
 static LRESULT CALLBACK DialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 
@@ -199,8 +199,8 @@ static LRESULT CALLBACK DialogProc(
 モーダル ダイアログ ボックスを作成します。
 
 ```
-INT_PTR DoModal(  
-    HWND hWndParent = ::GetActiveWindow(),   
+INT_PTR DoModal(
+    HWND hWndParent = ::GetActiveWindow(),
     LPARAM dwInitParam = NULL);
 ```
 
@@ -306,9 +306,9 @@ virtual void OnFinalMessage(HWND hWnd);
 
 ```
 static LRESULT CALLBACK StartDialogProc(
-    HWND hWnd,  
-    UINT uMsg,  
-    WPARAM wParam,  
+    HWND hWnd,
+    UINT uMsg,
+    WPARAM wParam,
     LPARAM lParam);
 ```
 

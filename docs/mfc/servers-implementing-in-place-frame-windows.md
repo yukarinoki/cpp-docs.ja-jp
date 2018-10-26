@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 24c63c10feff624abe399952b682303a6e262d35
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e6ef01a7943bbb0c14ec630651757a8665373b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425016"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055223"
 ---
 # <a name="servers-implementing-in-place-frame-windows"></a>サーバー : 埋め込み先フレーム ウィンドウの実装
 
@@ -39,15 +39,15 @@ ms.locfileid: "46425016"
 
 1. 宣言を`COleResizeBar`フレーム ウィンドウ クラスのメンバー。 これは、サーバー アプリケーションで、インプレースのサイズ変更をサポートする場合に必要です。
 
-     宣言、`OnCreate`メッセージ ハンドラー (を使用して、**プロパティ**ウィンドウ)、呼び出す`Create`の`COleResizeBar`定義されている場合はメンバー。
+   宣言、`OnCreate`メッセージ ハンドラー (を使用して、**プロパティ**ウィンドウ)、呼び出す`Create`の`COleResizeBar`定義されている場合はメンバー。
 
 1. ツールバーの場合は、宣言、`CToolBar`フレーム ウィンドウ クラスのメンバー。
 
-     上書き、`OnCreateControlBars`インプレース サーバーがアクティブなときにツールバーを作成するメンバー関数。 例えば:
+   上書き、`OnCreateControlBars`インプレース サーバーがアクティブなときにツールバーを作成するメンバー関数。 例えば:
 
-     [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
+   [!code-cpp[NVC_MFCOleServer#1](../mfc/codesnippet/cpp/servers-implementing-in-place-frame-windows_1.cpp)]
 
-     このコードを次の手順 5. の説明を参照してください。
+   このコードを次の手順 5. の説明を参照してください。
 
 1. メインの .cpp ファイルには、この埋め込み先フレーム ウィンドウ クラスのヘッダー ファイルを含めます。
 

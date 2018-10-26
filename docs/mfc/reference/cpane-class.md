@@ -143,12 +143,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 629e10d06a59b926604fad3b3a6e191fefcb71e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a32625001ae86f4d6dffa7eeb953c538822d207
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384508"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080222"
 ---
 # <a name="cpane-class"></a>CPane Class
 
@@ -190,7 +190,7 @@ class CPane : public CBasePane
 |[CPane::DockByMouse](#dockbymouse)|メソッドをドッキング マウスを使用して、ウィンドウをドッキングします。|
 |[CPane::DockPane](#dockpane)|基本のペインをフローティング ウィンドウをドッキングします。|
 |[CPane::DockPaneStandard](#dockpanestandard)|アウトライン (標準) のドッキングを使用して、ウィンドウをドッキングします。|
-|[CPane::DockToFrameWindow](#docktoframewindow)|フレームにドッキング可能ペインをドッキングします。 (`CBasePane::DockToFrameWindow` をオーバーライドします)。|
+|[CPane::DockToFrameWindow](#docktoframewindow)|フレームにドッキング可能ペインをドッキングします。 ( `CBasePane::DockToFrameWindow`をオーバーライドします)。|
 |[CPane::DoesAllowSiblingBars](#doesallowsiblingbars)|現在のウィンドウがドッキングされている同じ行から別のペインをドッキングできるかどうかを示します。|
 |[CPane::FloatPane](#floatpane)|ペインをフローティング状態します。|
 |[CPane::GetAvailableExpandSize](#getavailableexpandsize)|ウィンドウを展開できます (ピクセル単位)、金額を返します。|
@@ -207,7 +207,7 @@ class CPane : public CBasePane
 |[CPane::GetVirtualRect](#getvirtualrect)|取得、*仮想の長方形*ウィンドウの。|
 |[CPane::IsChangeState](#ischangestate)|ペインは、このメソッドは、他のウィンドウを基準としたウィンドウの位置を分析し、移動される行、およびミニフレーム ウィンドウをドッキングし、適切な AFX_CS_STATUS 値を返します。|
 |[CPane::IsDragMode](#isdragmode)|ウィンドウがドラッグされているかどうかを指定します。|
-|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|マルチ フレーム ウィンドウで、ウィンドウは、かどうかを指定します。 (`CBasePane::IsInFloatingMultiPaneFrameWnd` をオーバーライドします)。|
+|[CPane::IsInFloatingMultiPaneFrameWnd](#isinfloatingmultipaneframewnd)|マルチ フレーム ウィンドウで、ウィンドウは、かどうかを指定します。 ( `CBasePane::IsInFloatingMultiPaneFrameWnd`をオーバーライドします)。|
 |[CPane::IsLeftOf](#isleftof)|(またはそれ以降) に、ウィンドウを残すかどうかを決定します。 指定した四角形。|
 |[CPane::IsResizable](#isresizable)|ウィンドウのサイズを変更できるかどうかを判断します。 (上書き[cbasepane::isresizable](../../mfc/reference/cbasepane-class.md#isresizable))。|
 |[CPane::IsTabbed](#istabbed)|タブ付きウィンドウのタブ コントロールに、ウィンドウが挿入されたかどうかを判断します。 (上書き[CBasePane::IsTabbed](../../mfc/reference/cbasepane-class.md#istabbed))。|
@@ -270,7 +270,7 @@ class CPane : public CBasePane
 
 [CPane](../../mfc/reference/cpane-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxPane.h
 
@@ -500,7 +500,8 @@ virtual BOOL Create(
 *rect*<br/>
 [in]初期サイズと位置を指定します、 *pParentWnd*クライアント座標でのウィンドウ。
 
-[in][out]*pParentWnd*このウィンドウの親ウィンドウを指定します。
+*pParentWnd*<br/>
+[入力、出力]このウィンドウの親ウィンドウを指定します。
 
 *nID*<br/>
 [in]ペインの ID を指定します。
@@ -508,7 +509,8 @@ virtual BOOL Create(
 *dwControlBarStyle*<br/>
 [in]ウィンドウのスタイルを指定します。 詳細については、次を参照してください。 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)します。
 
-[in][out]*pContext*ウィンドウの作成のコンテキストを指定します。
+*pContext*<br/>
+[入力、出力]ウィンドウの作成のコンテキストを指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -573,7 +575,8 @@ virtual BOOL CreateEx(
 *rect*<br/>
 [in]初期サイズと位置を指定します、 *pParentWnd*クライアント座標でのウィンドウ。
 
-[in][out]*pParentWnd*このウィンドウの親ウィンドウを指定します。
+*pParentWnd*<br/>
+[入力、出力]このウィンドウの親ウィンドウを指定します。
 
 *nID*<br/>
 [in]ペインの ID を指定します。
@@ -581,7 +584,8 @@ virtual BOOL CreateEx(
 *dwControlBarStyle*<br/>
 [in]ウィンドウのスタイルを指定します。 詳細については、次を参照してください。 [cbasepane::createex](../../mfc/reference/cbasepane-class.md#createex)します。
 
-[in][out]*pContext*ウィンドウの作成のコンテキストを指定します。
+*pContext*<br/>
+[入力、出力]ウィンドウの作成のコンテキストを指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -623,7 +627,8 @@ virtual BOOL DockPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pDockBar*このペインをドッキングする基本ウィンドウを指定します。
+*pDockBar*<br/>
+[入力、出力]このペインをドッキングする基本ウィンドウを指定します。
 
 *lpRect*<br/>
 [in]このペインのドッキング位置ベースのウィンドウで、四角形を指定します。
@@ -1161,7 +1166,8 @@ virtual void OnAfterChangeParent(CWnd* pWndOldParent);
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pWndOldParent*ペインの直前の親ウィンドウ。
+*pWndOldParent*<br/>
+[入力、出力]ウィンドウの前の親ウィンドウ。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1213,7 +1219,8 @@ virtual void OnBeforeChangeParent(
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pWndNewParent*新しい親ウィンドウを指定します。
+*pWndNewParent*<br/>
+[入力、出力]新しい親ウィンドウを指定します。
 
 *bDelay*<br/>
 [in]グローバルのドッキング レイアウト調整; を遅延する場合は TRUEそれ以外の場合、FALSE です。
@@ -1237,7 +1244,8 @@ virtual BOOL OnBeforeDock(
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*ppDockBar*をこのペインのドッキングされたウィンドウを指定します。
+*ppDockBar*<br/>
+[入力、出力]このペインがドッキングされたウィンドウを指定します。
 
 *lpRect*<br/>
 [in]ドッキングの四角形を指定します。
@@ -1518,7 +1526,8 @@ void SetMiniFrameRTC(CRuntimeClass* pClass);
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pClass*ミニフレーム ウィンドウのランタイム クラス情報を指定します。
+*pClass*<br/>
+[入力、出力]ミニフレーム ウィンドウのランタイム クラス情報を指定します。
 
 ### <a name="remarks"></a>Remarks
 

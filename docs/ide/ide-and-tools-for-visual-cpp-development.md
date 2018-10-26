@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 310dc9b8e31f72fbd04c620987d9857932f7a0a1
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821147"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328377"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>IDE と Visual C++ 開発用コンパイラ ツール
 
@@ -59,7 +59,7 @@ Git と Azure のリポジトリの統合については、「[Share your code w
 
 ![デザイナーとツールボックス](media/vs2017-toolbox-designer.png "Visual Studio 2017 のデザイナーとツールボックス")
 
-ユニバーサル Windows プラットフォーム アプリのユーザー インターフェイスの設計方法については、[デザインと UI](https://developer.microsoft.com/en-us/windows/design) に関するページを参照してください。
+ユニバーサル Windows プラットフォーム アプリのユーザー インターフェイスの設計方法については、[デザインと UI](https://developer.microsoft.com/windows/design) に関するページを参照してください。
 
 MFC アプリケーションのユーザー インターフェイスの作成方法については、「[MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md)」を参照してください。 Win32 Windows プログラムについては、「[Windows デスクトップ アプリケーション](../windows/windows-desktop-applications-cpp.md)」を参照してください。
 

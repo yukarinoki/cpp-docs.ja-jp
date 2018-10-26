@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49e5df8e88124d1d94869618a94525e224d32495
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0aaefc41ca365e2bf4d87583f2e25dfa2a870a90
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424675"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079013"
 ---
 # <a name="windows-sockets-using-class-casyncsocket"></a>Windows ソケット: CAsyncSocket クラスの使い方
 
@@ -48,19 +48,19 @@ ms.locfileid: "46424675"
 
 1. 構築、 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)オブジェクトおよびオブジェクトを使用して作成する、基になる**ソケット**を処理します。
 
-     ソケットの作成では、2 段階の構築の MFC のパターンに従います。
+   ソケットの作成では、2 段階の構築の MFC のパターンに従います。
 
-     例えば:
+   例えば:
 
-     [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#3](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_1.cpp)]
 
      - または -
 
-     [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
+   [!code-cpp[NVC_MFCSimpleSocket#4](../mfc/codesnippet/cpp/windows-sockets-using-class-casyncsocket_2.cpp)]
 
-     上記の最初のコンス トラクターを作成、`CAsyncSocket`スタック上のオブジェクト。 2 番目のコンス トラクターを作成、`CAsyncSocket`ヒープにします。 最初の[作成](../mfc/reference/casyncsocket-class.md#create)上記の呼び出しでは、既定のパラメーターを使用して、ストリーム ソケットを作成します。 2 番目の`Create`呼び出しは、指定したポートとアドレスを持つデータグラム ソケットを作成します。 (いずれかを使用する`Create`いずれかの構築方法とバージョン)。
+   上記の最初のコンス トラクターを作成、`CAsyncSocket`スタック上のオブジェクト。 2 番目のコンス トラクターを作成、`CAsyncSocket`ヒープにします。 最初の[作成](../mfc/reference/casyncsocket-class.md#create)上記の呼び出しでは、既定のパラメーターを使用して、ストリーム ソケットを作成します。 2 番目の`Create`呼び出しは、指定したポートとアドレスを持つデータグラム ソケットを作成します。 (いずれかを使用する`Create`いずれかの構築方法とバージョン)。
 
-     パラメーターを`Create`は。
+   パラメーターを`Create`は。
 
    - 「ポート」: 短整数。
 
@@ -72,28 +72,28 @@ ms.locfileid: "46424675"
 
          This is your Internet Protocol (IP) address on the network. You will probably always rely on the default value for this parameter.
 
-     用語"port"および「ソケット アドレス」で説明[Windows ソケット: ポートとソケット アドレス](../mfc/windows-sockets-ports-and-socket-addresses.md)します。
+   用語"port"および「ソケット アドレス」で説明[Windows ソケット: ポートとソケット アドレス](../mfc/windows-sockets-ports-and-socket-addresses.md)します。
 
 1. ソケットがクライアントの場合は、ソケット オブジェクトをサーバーに接続を使用して、ソケット[不要なため](../mfc/reference/casyncsocket-class.md#connect)します。
 
      - または -
 
-     ソケットがサーバーの場合は、設定、ソケットのリッスンを開始 (で[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) のクライアントからの接続試行します。 接続要求を受信するでそのまま使用[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)します。
+   ソケットがサーバーの場合は、設定、ソケットのリッスンを開始 (で[CAsyncSocket::Listen](../mfc/reference/casyncsocket-class.md#listen)) のクライアントからの接続試行します。 接続要求を受信するでそのまま使用[CAsyncSocket::Accept](../mfc/reference/casyncsocket-class.md#accept)します。
 
-     接続を受け入れた後には、パスワードの検証などのタスクを実行できます。
+   接続を受け入れた後には、パスワードの検証などのタスクを実行できます。
 
     > [!NOTE]
     >  `Accept`メンバー関数は、新しい空への参照を受け取ります`CSocket`オブジェクトをパラメーターとして。 呼び出す前に、このオブジェクトを構築する必要があります`Accept`します。 このソケット オブジェクトがスコープ外になった場合、接続が閉じられます。 呼び出さない`Create`この新しいソケット オブジェクト。 例については、この記事を参照してください。 [Windows ソケット: 動作シーケンス](../mfc/windows-sockets-sequence-of-operations.md)します。
 
 1. 呼び出すことによって、他のソケットとの通信を実行、 `CAsyncSocket` Windows ソケット API 関数をカプセル化するオブジェクトのメンバー関数。
 
-     Windows ソケット仕様とクラスを参照してください[CAsyncSocket](../mfc/reference/casyncsocket-class.md)で、 *MFC リファレンス*します。
+   Windows ソケット仕様とクラスを参照してください[CAsyncSocket](../mfc/reference/casyncsocket-class.md)で、 *MFC リファレンス*します。
 
 1. 破棄、`CAsyncSocket`オブジェクト。
 
-     スタック上にソケット オブジェクトを作成する場合は、関数スコープから外れたときにデストラクターが呼び出されます。 使用して、ヒープ上のソケット オブジェクトを作成した場合、**新しい**演算子を使用して責任を負いますが、**削除**オブジェクトを破棄する演算子。
+   スタック上にソケット オブジェクトを作成する場合は、関数スコープから外れたときにデストラクターが呼び出されます。 使用して、ヒープ上のソケット オブジェクトを作成した場合、**新しい**演算子を使用して責任を負いますが、**削除**オブジェクトを破棄する演算子。
 
-     デストラクターは、オブジェクトの[閉じる](../mfc/reference/casyncsocket-class.md#close)メンバー関数は、オブジェクトを破棄します。
+   デストラクターは、オブジェクトの[閉じる](../mfc/reference/casyncsocket-class.md#close)メンバー関数は、オブジェクトを破棄します。
 
 コードでは、このシーケンスの例については (を実際には、`CSocket`オブジェクト) を参照してください[Windows ソケット: 操作のシーケンス](../mfc/windows-sockets-sequence-of-operations.md)します。
 
