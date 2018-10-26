@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: dcc942bc69ebb37a7aba59e722b1a4cebbbab3ff
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3f97ef0f285cda7d31ddd53f0a8b0ca9a22f360c
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071365"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136199"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデータから .h ファイルを作成する
 
@@ -39,13 +39,13 @@ winmdidl.exe と midlrt.exe によって、ネイティブ C++ コードと Wind
 ## <a name="winmdidl-command-line-arguments"></a>winmdidl のコマンド ライン引数
 
 ```
-Winmdidl.exe [/nologo] [/supressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
+Winmdidl.exe [/nologo] [/suppressversioncheck] [/time] [/outdir:dir] [/banner:file] [/utf8] Winmdfile
 ```
 
 **/nologo**<br/>
 winmdidl の著作権メッセージとバージョン番号のコンソール表示を防ぎます。
 
-**/supressversioncheck**<br/>
+**/suppressversioncheck**<br/>
 使用しません。
 
 **/時間**<br/>
