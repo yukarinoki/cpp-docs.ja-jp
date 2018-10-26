@@ -44,12 +44,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eceb6c0b4bb6a43616ceae66701e762e08713bf9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a6bd8c230f17e3b62d02d724cfd0744c0d335eac
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101081"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060547"
 ---
 # <a name="allocator-class"></a>allocator クラス
 
@@ -97,7 +97,7 @@ class allocator
 |-|-|
 |[allocator](#allocator)|`allocator` オブジェクトを作成するために使用するコンストラクター。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -127,7 +127,7 @@ class allocator
 |-|-|
 |[operator=](#op_eq)|`allocator` オブジェクトを別の `allocator` オブジェクトに割り当てます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<memory>
 
@@ -879,6 +879,7 @@ The integer addressed by v1Ptr has a value of: *v1Ptr = 12.
 ```cpp
 struct rebind {    typedef allocator<_Other> other ;    };
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *other*<br/>

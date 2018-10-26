@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dced1bd7db0f3eec9d9d070deb8cf990496116ae
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: e0ac5ceda3b979454c5d37e513cbd77a4d3e3e20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821661"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063355"
 ---
 # <a name="member-access-control-c"></a>メンバー アクセス コントロール (C++)
 
@@ -247,7 +247,6 @@ int main()
 ![継承グラフのパスに沿ったアクセス](../cpp/media/vc38v91.gif "vc38V91")継承グラフのパスに沿ったアクセス
 
 図では、クラス `VBase` で宣言される名前は、必ずクラス `RightPath` 経由でアクセスされます。 `RightPath` が `VBase` をプライベート基底クラスとして宣言するのに対し、`LeftPath` は `VBase` をパブリック基底クラスとして宣言するため、右のパスの方がアクセスが簡単です。
-
 
 ## <a name="see-also"></a>関連項目
 

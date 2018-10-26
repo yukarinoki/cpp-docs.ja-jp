@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3448f915ae7b738c839ceaa4fb7adeb00492d9f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 48261d545737215ff44b1b56bb3b2d48839b6eb4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112864"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067060"
 ---
 # <a name="default-arguments"></a>既定の引数
 
@@ -112,7 +112,7 @@ print( d, 0 ); // Override default argument to achieve other
     }
     ```
 
-     このコードの問題は、定義での関数宣言が `prec` の既定の引数を定義し直すことです。
+   このコードの問題は、定義での関数宣言が `prec` の既定の引数を定義し直すことです。
 
 - 追加の既定の引数は、後の宣言によって追加できます。
 

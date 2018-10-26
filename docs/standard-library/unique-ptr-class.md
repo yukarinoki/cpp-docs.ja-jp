@@ -32,12 +32,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fc013ca5cc8c941e0208b5921a73daebdae2264b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f148d548cb9d3c93e94f51c1cd8c90fae69527f8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725193"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075737"
 ---
 # <a name="uniqueptr-class"></a>unique_ptr クラス
 
@@ -86,7 +86,6 @@ public:
     unique_ptr& operator=(unique_ptr<U, E>&& u) noexcept;
     unique_ptr& operator=(nullptr_t) noexcept;
     T& operator[](size_t i) const;
-
 
     pointer get() const noexcept;
     deleter_type& get_deleter() noexcept;
@@ -140,7 +139,7 @@ public:
 |-|-|
 |[unique_ptr](#unique_ptr)|`unique_ptr` には、7 種類のコンストラクターがあります。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -167,7 +166,7 @@ public:
 |`operator*`|このメンバー関数は、`*stored_ptr` を返します。|
 |[unique_ptr operator=](#unique_ptr_operator_eq)|現在の `unique_ptr` に `unique_ptr` (または `pointer-type`) の値を割り当てます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<memory>
 

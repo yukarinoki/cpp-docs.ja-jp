@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fb2169adf5bfce3c1a66e382c79b57c8ef53ef04
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 76a0a6baec4f775d2ec4f7ca0236530125fe7973
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791927"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083413"
 ---
 # <a name="immediatebind"></a>immediatebind
 
@@ -42,7 +42,7 @@ ms.locfileid: "48791927"
 
 参照してください[バインド可能な](bindable.md)を使用する方法の例については**immediatebind**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -53,7 +53,7 @@ ms.locfileid: "48791927"
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -61,4 +61,4 @@ ms.locfileid: "48791927"
 [メソッド属性](method-attributes.md)<br/>
 [defaultbind](defaultbind.md)<br/>
 [displaybind](displaybind.md)<br/>
-[requestedit](requestedit.md)  
+[requestedit](requestedit.md)

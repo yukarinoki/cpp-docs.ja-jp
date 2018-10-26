@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0d687dfbee48105001d3be04fd4918b9889e2d04
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 4e5305aaa35064c26a78cbd4654c27a0d608d70c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327701"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067905"
 ---
 # <a name="generic-functions-ccli"></a>ジェネリック関数 (C++/CLI)
 
@@ -42,7 +42,7 @@ ms.locfileid: "49327701"
 
 この機能は、Windows ランタイムでサポートされていません。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -57,7 +57,7 @@ ms.locfileid: "49327701"
 return-type identifier<type-parameter identifier(s)>
 [type-parameter-constraints clauses]
 
-([formal-parameters])  
+([formal-parameters])
 {function-body}
 ```
 
@@ -95,7 +95,7 @@ return-type identifier<type-parameter identifier(s)>
 
 呼び出されると、ジェネリック型パラメーターは、実際の型に置換されます。 テンプレート関数の呼び出しに似た構文を使用して、山かっこでは、実際の型を明示的に指定することがあります。 型のパラメーターなしで呼び出すと、コンパイラは関数呼び出しで指定されたパラメーターから実際の型を推測しようとします。 目的の型引数は、使用されるパラメーターから推測できない、コンパイラでエラーが報告されます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

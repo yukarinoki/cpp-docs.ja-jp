@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5c489d1b17df579ecec6c118826a8f770f5664eb
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 256ceee14f38885259da11453efef8451d34248c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068009"
 ---
 # <a name="opening-a-resource-for-binary-editing-c"></a>バイナリ編集 (C++) のリソースを開く
 
@@ -53,7 +53,7 @@ ms.locfileid: "44316355"
    > [!NOTE]
    > マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-![バイナリ エディター](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")  
+![バイナリ エディター](../mfc/media/vcbinaryeditor2.gif "vcBinaryEditor2")<br/>
 バイナリ エディターに表示されるダイアログ ボックスのバイナリ データ
 
 バイナリ エディターでは、特定の ASCII 値のみが表されます (0x20 ～ 0x7E)。 拡張文字は、バイナリ エディターの ASCII 値セクション (右側のパネル) にピリオドで表示されます。 "印刷可能" な文字は、ASCII 値の 32 ～ 126 です。
@@ -61,7 +61,7 @@ ms.locfileid: "44316355"
 > [!NOTE]
 > 使用する場合、**バイナリ**別のエディター ウィンドウで既に編集中のリソース エディターが最初に他のエディター ウィンドウを閉じます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

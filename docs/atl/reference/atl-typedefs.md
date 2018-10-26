@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 866cedba73be1c7858415359dfd94cec9a55dccc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9835b8cadb5a24aea130b1e32d919ebb49d20293
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46045251"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065697"
 ---
 # <a name="atl-typedefs"></a>ATL の Typedef
 
@@ -77,7 +77,7 @@ typedef ATL::_ATL_BASE_MODULE70 _ATL_BASE_MODULE;
 
 ATL 7.0 のモジュールのクラスの一部であるクラスは、_ATL_BASE_MODULE 構造から派生します。  ATL モジュール クラスの詳細についてを参照してください[COM モジュール クラス](../../atl/com-modules-classes.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcore.h
 
@@ -93,7 +93,7 @@ typedef ATL::_ATL_COM_MODULE70 _ATL_COM_MODULE;
 
 COM 機能を使用する ATL プロジェクトで使用します。 基づく[_ATL_COM_MODULE70](../../atl/reference/atl-com-module70-structure.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
@@ -105,7 +105,7 @@ _ATL_MODULE70 に基づいて typedef として定義されます。
 typedef ATL::_ATL_MODULE70 _ATL_MODULE;
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:**
 
@@ -125,7 +125,7 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 
 ウィンドウ化機能を使用する ATL プロジェクトで使用されます。 基づく[_ATL_WIN_MODULE70](../../atl/reference/atl-win-module70-structure.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
@@ -137,7 +137,7 @@ typedef ATL::_ATL_WIN_MODULE70 _ATL_WIN_MODULE;
 typedef WORD ATL_URL_PORT;
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlutil.h
 
@@ -149,7 +149,7 @@ typedef WORD ATL_URL_PORT;
 typedef CComQIPtr<IDispatch, &__uuidof(IDispatch)> CComDispatchDriver;
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
@@ -189,7 +189,7 @@ S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
 
 使用`CComObjectThreadModel`1 つのオブジェクト クラス内で。 使用`CComGlobalsThreadModel`または複数のスレッド、モジュールのリソースを保護する場合、プログラムにグローバルに使用できるオブジェクト。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
@@ -229,7 +229,7 @@ S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
 
 使用`CComObjectThreadModel`1 つのオブジェクト クラス内で。 使用`CComGlobalsThreadModel`でいずれかであるオブジェクトをプログラム、または複数のスレッド、モジュールのリソースを保護する場合に、グローバルに利用できます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
@@ -241,7 +241,7 @@ S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
 typedef CContainedWindowT<CWindow> CContainedWindow;
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -257,7 +257,7 @@ typedef CContainedWindowT<CWindow> CContainedWindow;
 typedef CPathT<CString> CPath;
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlpath.h
 
@@ -269,7 +269,7 @@ typedef CPathT<CString> CPath;
 typedef CPathT<CStringA> CPathA;
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlpath.h
 
@@ -280,7 +280,8 @@ typedef CPathT<CStringA> CPathA;
 ```
 typedef ATL::CPathT<CStringW> CPathW;
 ```
-## <a name="requirements"></a>要件
+
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlpath.h
 
@@ -296,7 +297,7 @@ typedef ATL::CPathT<CStringW> CPathW;
 
 `CSimpleValArray` 作成および単純なデータ型を含む配列を管理するために提供されます。 単純な #include の define [CSimpleArray](../../atl/reference/csimplearray-class.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsimpcoll.h
 
@@ -308,7 +309,7 @@ typedef ATL::CPathT<CStringW> CPathW;
 typedef const CUrl* LPCURL;
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlutil.h
 
@@ -330,7 +331,7 @@ typedef const CUrl* LPCURL;
 
 現在のプロジェクトでは、マルチ スレッドの CRT を使用する場合は、DefaultThreadTraits が CRTThreadTraits として定義されます。 それ以外の場合、Win32ThreadTraits が使用されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
@@ -342,7 +343,7 @@ typedef const CUrl* LPCURL;
 typedef CUrl* LPURL;
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlutil.h
 

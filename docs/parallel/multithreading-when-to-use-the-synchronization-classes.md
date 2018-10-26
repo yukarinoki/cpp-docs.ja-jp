@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 018623e9e6a093c4f86b8768e0fd5329f4ea3282
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6da48b12b657944864b1a33216692fce296e5dfd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443775"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083452"
 ---
 # <a name="multithreading-when-to-use-the-mfc-synchronization-classes"></a>マルチ スレッド: MFC 同期クラスを使用する場合
 
@@ -38,17 +38,17 @@ MFC で提供されるマルチ スレッドのクラスが 2 つのカテゴリ
 
 1. アプリケーションがリソースにアクセスできる前に発生するを待機するには (たとえば、データがから受け取る必要が通信ポートあるをファイルに書き込む前に) でしょうか。
 
-     場合はそれを使用して、`CEvent`します。
+   場合はそれを使用して、`CEvent`します。
 
 2. できます 1 つ以上のスレッド内、同じアプリケーションのアクセスでこのリソース一度に 1 つ (たとえば、アプリケーションが最大 5 つのウィンドウのビューには、同じドキュメントを許可する) か?
 
-     場合はそれを使用して、`CSemaphore`します。
+   場合はそれを使用して、`CSemaphore`します。
 
 3. このリソースを使用して複数のアプリケーション (リソースは、DLL 内など) ですか?
 
-     場合はそれを使用して、`CMutex`します。
+   場合はそれを使用して、`CMutex`します。
 
-     ない場合を使用して、`CCriticalSection`します。
+   ない場合を使用して、`CCriticalSection`します。
 
 `CSyncObject` 直接使用されません。 その他の 4 つの同期クラスの基本クラスです。
 

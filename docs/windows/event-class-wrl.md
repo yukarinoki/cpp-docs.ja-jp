@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b28a6e9d30e7a31916582207901859045023ad66
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 7fce42093eb5d5c9eede67699b58124218d924d4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250982"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075464"
 ---
 # <a name="event-class-wrl"></a>イベント クラス (WRL)
 
@@ -58,7 +58,7 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 `Event`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** corewrappers.h
 
@@ -70,7 +70,7 @@ class Event : public HandleT<HandleTraits::EventTraits>;
 
 ```cpp
 explicit Event(
-   HANDLE h = HandleT::Traits::GetInvalidValue()  
+   HANDLE h = HandleT::Traits::GetInvalidValue()
 );
 WRL_NOTHROW Event(
    _Inout_ Event&& h

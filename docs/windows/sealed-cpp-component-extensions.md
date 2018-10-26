@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 211428335473f677f520ee14ad688e5ffcbda8fd
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: ee0ea65267320a4730c543cec978c2675ef1cc57
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328000"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071954"
 ---
 # <a name="sealed--ccli-and-ccx"></a>封印された (C +/cli および C++/cli CX)
 
@@ -63,7 +63,7 @@ virtual return-type identifier() sealed {...};
 
 参照してください[Ref クラスと構造体](../cppcx/ref-classes-and-structs-c-cx.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -104,7 +104,7 @@ public:
       System::Console::WriteLine("Y::f override of I1::f");
    }
 
-   /*  
+   /*
    // the following override generates a compiler error
    virtual void g() override {
       System::Console::WriteLine("Y::g override of I1::g");

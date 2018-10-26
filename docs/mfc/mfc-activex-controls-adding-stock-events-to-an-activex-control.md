@@ -52,12 +52,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 51fff5b7e43b489bdaf2a27b115af26c48e33956
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3bf023dbc52ccac7311a62aba1a290b1a03190dd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400792"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060560"
 ---
 # <a name="mfc-activex-controls-adding-stock-events-to-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールへのストック イベントの追加
 
@@ -73,13 +73,13 @@ ms.locfileid: "46400792"
 |-----------|---------------------|--------------|
 |クリック|**FireClick () を無効にします。**|コントロールが、マウスをキャプチャするときに発生**BUTTONUP** (左、中央、または右) のメッセージを受信し、コントロールの上のボタンが離されました。 株価 MouseDown、MouseUp イベントは、このイベントの前に発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_CLICK)**|
 |DblClick|**FireDblClick () を無効にします。**|クリックすると似ていますが、ときに発生する、 **BUTTONDBLCLK**メッセージを受信します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_DBLCLICK)**|
-|Error|**FireError を無効にする (SCODE***scode* **、LPCSTR** `lpszDescription` **、UINT**`nHelpID`**= 0)** |メソッドの呼び出しまたはプロパティ アクセスのスコープの外部で ActiveX コントロール内でエラーが発生したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_ERROREVENT)**|
-|KeyDown|**FireKeyDown を無効にする (短い**`nChar` **、短い**`nShiftState`**)** |ときに発生する、`WM_SYSKEYDOWN`または`WM_KEYDOWN`メッセージを受信します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYDOWN)**|
-|Keypress イベント|**FireKeyPress を無効にする (短い** <strong>\*</strong> `pnChar` **)** |ときに発生する、`WM_CHAR`メッセージを受信します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYPRESS)**|
-|KeyUp|**FireKeyUp を無効にする (短い**`nChar` **、短い**`nShiftState`**)** |ときに発生する、`WM_SYSKEYUP`または`WM_KEYUP`メッセージを受信します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYUP)**|
-|MouseDown|**FireMouseDown を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)** |存在する場合に発生した**BUTTONDOWN** (左、中央、または右) を受信します。 このイベントが発生する直前に、マウスがキャプチャされます。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEDOWN)**|
-|MouseMove|**FireMouseMove を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)** |WM_MOUSEMOVE メッセージを受信したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEMOVE)**|
-|MouseUp|**FireMouseUp を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)** |存在する場合に発生した**BUTTONUP** (左、中央、または右) を受信します。 このイベントが発生する前に、マウス キャプチャが解放されます。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEUP)**|
+|Error|**FireError を無効にする (SCODE***scode* **、LPCSTR** `lpszDescription` **、UINT**`nHelpID`**= 0)**|メソッドの呼び出しまたはプロパティ アクセスのスコープの外部で ActiveX コントロール内でエラーが発生したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_ERROREVENT)**|
+|KeyDown|**FireKeyDown を無効にする (短い**`nChar` **、短い**`nShiftState`**)**|ときに発生する、`WM_SYSKEYDOWN`または`WM_KEYDOWN`メッセージを受信します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYDOWN)**|
+|Keypress イベント|**FireKeyPress を無効にする (短い** <strong>\*</strong> `pnChar` **)**|ときに発生する、`WM_CHAR`メッセージを受信します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYPRESS)**|
+|KeyUp|**FireKeyUp を無効にする (短い**`nChar` **、短い**`nShiftState`**)**|ときに発生する、`WM_SYSKEYUP`または`WM_KEYUP`メッセージを受信します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_KEYUP)**|
+|MouseDown|**FireMouseDown を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)**|存在する場合に発生した**BUTTONDOWN** (左、中央、または右) を受信します。 このイベントが発生する直前に、マウスがキャプチャされます。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEDOWN)**|
+|MouseMove|**FireMouseMove を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)**|WM_MOUSEMOVE メッセージを受信したときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEMOVE)**|
+|MouseUp|**FireMouseUp を無効にする (短い**`nButton` **、短い**`nShiftState` **、float***x* **、float** *y***)**|存在する場合に発生した**BUTTONUP** (左、中央、または右) を受信します。 このイベントが発生する前に、マウス キャプチャが解放されます。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_MOUSEUP)**|
 |ReadyStateChange|**void FireReadyStateChange)**|受信データの量のための次の準備完了状態にコントロールの遷移するときに発生します。<br /><br /> イベント マップ エントリ: **EVENT_STOCK_READYSTATECHANGE)**|
 
 ##  <a name="_core_adding_a_stock_event_using_classwizard"></a> ストック イベントを使用して追加のイベント追加ウィザード
@@ -94,7 +94,7 @@ ms.locfileid: "46400792"
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**イベントの追加**します。
 
-     イベントの追加ウィザードが開きます。
+   イベントの追加ウィザードが開きます。
 
 1. **イベント名**ドロップダウン リストで、`KeyPress`します。
 

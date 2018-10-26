@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 14bb20cae26ecb012362b65f86aae5e422170a1a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8828ada429875245d583c30d65259300a01f6a5d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791285"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067437"
 ---
 # <a name="object-c"></a>object (C++)
 
@@ -44,7 +44,7 @@ ms.locfileid: "48791285"
 
 参照してください[nonbrowsable](nonbrowsable.md)を使用する方法の例については**オブジェクト**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -55,7 +55,7 @@ ms.locfileid: "48791285"
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -64,4 +64,4 @@ ms.locfileid: "48791285"
 [dual](dual.md)<br/>
 [dispinterface](dispinterface.md)<br/>
 [custom](custom-cpp.md)<br/>
-[__interface](../../cpp/interface.md)  
+[__interface](../../cpp/interface.md)

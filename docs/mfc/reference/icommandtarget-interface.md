@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 95faae4de2e9fa756a4f69f231839e19019e08fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ee8a4bb3f80d9776aec4fd7a6af0d1523c60064d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436807"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066085"
 ---
 # <a name="icommandtarget-interface"></a>ICommandTarget インターフェイス
 
@@ -51,7 +51,7 @@ MFC ビューでユーザー コントロールをホストするときに[CWinF
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 
@@ -78,6 +78,4 @@ MFC ビューでユーザー コントロールをホストする場合、CWinFo
 
 [方法: Windows フォーム コントロールにコマンド ルーティングを追加する](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)<br/>
 [ICommandSource インターフェイス](../../mfc/reference/icommandsource-interface.md)
-
-
 

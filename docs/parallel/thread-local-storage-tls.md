@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b271ed2c2af94e37edcbabb6611cda967f9587c7
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 18d9d2c1b3c633ba3399e93d34317c2360d45215
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081872"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059845"
 ---
 # <a name="thread-local-storage-tls"></a>スレッド ローカル ストレージ (TLS: Thread Local Storage)
 
@@ -100,7 +100,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;       //This will generate an error in C.
     ```
 
-     この制限は、C++ では適用されません。 C++ ではすべてのオブジェクトを動的に初期化することが許可されているため、スレッド ローカル変数のアドレスを使用する式を使用してオブジェクトを初期化できます。 これは、スレッド ローカル オブジェクトの作成と同じように行います。 たとえば、前に示したコードが C++ ソース ファイルとしてコンパイルされる場合、エラーは発生しません。 スレッド ローカル変数のアドレスは、アドレスが取得されたスレッドが存在する限り有効であることに注意してください。
+   この制限は、C++ では適用されません。 C++ ではすべてのオブジェクトを動的に初期化することが許可されているため、スレッド ローカル変数のアドレスを使用する式を使用してオブジェクトを初期化できます。 これは、スレッド ローカル オブジェクトの作成と同じように行います。 たとえば、前に示したコードが C++ ソース ファイルとしてコンパイルされる場合、エラーは発生しません。 スレッド ローカル変数のアドレスは、アドレスが取得されたスレッドが存在する限り有効であることに注意してください。
 
 - 標準 C では、オブジェクトや変数をそれ自体への参照を含む式で初期化できます。ただし、この場合のオブジェクトは、非静的なものに限られます。 C++ では、一般的に、オブジェクト自体への参照を含む式でこのようにオブジェクトを動的に初期化できますが、この種の初期化はスレッド ローカル オブジェクトでは許可されません。 例えば:
 
@@ -110,9 +110,9 @@ __declspec( thread ) int tls_i = 1;
     __declspec( thread )int tls_i = sizeof( tls_i )       // Legal in C and C++
     ```
 
-     初期化されるオブジェクトが含まれる `sizeof` 式は、そのオブジェクト自体への参照を表さないため、C と C++ の両方で有効になります。
+   初期化されるオブジェクトが含まれる `sizeof` 式は、そのオブジェクト自体への参照を表さないため、C と C++ の両方で有効になります。
 
-     スレッド ローカル ストレージ機能は将来拡張される可能性があるため、C++ ではこのようにスレッド データを動的に初期化することが許可されていません。
+   スレッド ローカル ストレージ機能は将来拡張される可能性があるため、C++ ではこのようにスレッド データを動的に初期化することが許可されていません。
 
 - Windows Vista では前に、の Windows オペレーティング システムで`__declspec`(スレッド) がいくつかの制限。 DLL で任意のデータまたはオブジェクトを `__declspec`( thread ) として宣言した場合、動的に読み込まれたときに保護違反が発生する可能性があります。 によって、DLL が読み込まれた後[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)、コードで参照されるたびにシステム エラーが発生、 `__declspec`(thread) データ。 スレッドのグローバル変数領域は実行時に割り当てられるため、この領域のサイズは、アプリケーションの要件および静的にリンクされているすべての DLL の要件に基づいて計算されます。 `LoadLibrary` を使用すると、`__declspec`( thread ) を使用して宣言されたスレッド ローカル変数用にこの領域を拡張することはできません。 TLS の Api を使用して[TlsAlloc](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-tlsalloc)、TLS の割り当てに DLL が読み込まれることが場合に、DLL で`LoadLibrary`します。
 

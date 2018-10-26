@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f24cf6cce5cdf268367f547e8a536dcdae7cc859
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 413485bc7675fbc68f2c224ceefdd0f552538eb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46098954"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076985"
 ---
 # <a name="ccomobjectrootex-class"></a>CComObjectRootEx クラス
 
@@ -51,7 +51,7 @@ class CComObjectRootEx : public CComObjectRootBase
 #### <a name="parameters"></a>パラメーター
 
 *表*<br/>
-目的のスレッド処理モデルのメソッドとして実装するクラスです。 スレッド処理モデルを設定して明示的に選択できます*表*に[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)、または[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)します。 設定して、サーバーの既定のスレッド モデルをそのまま使用できる*表*に[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)または[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)します。  
+目的のスレッド処理モデルのメソッドとして実装するクラスです。 スレッド処理モデルを設定して明示的に選択できます*表*に[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)、 [CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)、または[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)します。 設定して、サーバーの既定のスレッド モデルをそのまま使用できる*表*に[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)または[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)します。
 
 ## <a name="members"></a>メンバー
 
@@ -105,7 +105,7 @@ ATL がのインスタンスを作成する場合は、クラスが DECLARE_POLY
 
 場合は、オブジェクトは集計されず`IUnknown`によって実装される`CComObject`または`CComPolyObject`します。 この場合、呼び出し`QueryInterface`、 `AddRef`、および`Release`に委任されます`CComObjectRootEx`の`InternalQueryInterface`、 `InternalAddRef`、および`InternalRelease`実際の操作を実行します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
@@ -139,9 +139,9 @@ HRESULT 値、成功時または標準エラーのいずれかに S_OK を返し
 
 - クラスのコンス トラクターから仮想関数のメカニズムを通じて仮想関数を呼び出すことはできません。 継承階層内の時点で定義されている、静的に解決される、関数呼び出しで結果をクラスのコンス トラクターから仮想関数を呼び出します。 純粋仮想関数への呼び出しは、リンカー エラーが発生します。
 
-     継承階層で最派生クラスではなく、その機能の一部を提供する ATL によって提供される派生クラスに依存します。 初期化は、(これは確かに、クラスのオブジェクトが他のオブジェクトを集計する必要がある場合) そのクラスによって提供される機能を使用する必要がある可能性があるが、クラスにコンス トラクターには、これらの機能にアクセスする方法はありません。 クラスの構築用のコードは、最派生クラスが完全に構築される前に実行されます。
+   継承階層で最派生クラスではなく、その機能の一部を提供する ATL によって提供される派生クラスに依存します。 初期化は、(これは確かに、クラスのオブジェクトが他のオブジェクトを集計する必要がある場合) そのクラスによって提供される機能を使用する必要がある可能性があるが、クラスにコンス トラクターには、これらの機能にアクセスする方法はありません。 クラスの構築用のコードは、最派生クラスが完全に構築される前に実行されます。
 
-     ただし、`FinalConstruct`仮想関数を呼び出すし、ATL で提供される、参照カウントの実装を使用することができますクラスが完全に生成される、最も多く派生後すぐには呼び出されます
+   ただし、`FinalConstruct`仮想関数を呼び出すし、ATL で提供される、参照カウントの実装を使用することができますクラスが完全に生成される、最も多く派生後すぐには呼び出されます
 
 ### <a name="example"></a>例
 
@@ -265,7 +265,7 @@ long m_dwRef;
 
 ### <a name="remarks"></a>Remarks
 
-`m_pOuterUnknown`共用体の一部であります。  
+`m_pOuterUnknown`共用体の一部であります。
 
 ```
 union {

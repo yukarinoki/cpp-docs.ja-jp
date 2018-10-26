@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c78d95afbadb0d3612dcdbca1714ae8c3a06454
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 690e612201d0d3614b47c8baf7b5c46cb29d6140
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426342"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063043"
 ---
 # <a name="arrayview-class"></a>array_view クラス
 
@@ -103,7 +103,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 |名前|説明|
 |----------|-----------------|
-|[operator()](#operator_call)|パラメーターによって指定された要素の値を返します。|
+|[演算子 ()](#operator_call)|パラメーターによって指定された要素の値を返します。|
 |[operator[]](#operator_at)|パラメーターで指定された要素を返します。|
 |[operator=](#operator_eq)|指定された `array_view` オブジェクトの内容をこのオブジェクトにコピーします。|
 
@@ -157,7 +157,7 @@ class array_view<const value_type, _Rank> : public _Array_view_base<_Rank, sizeo
 
 `array_view`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp.h
 
@@ -561,6 +561,7 @@ static const int rank = _Rank;
 ```
 void refresh() const restrict(cpu);
 ```
+
 ## <a name="reinterpret_as"></a> reinterpret_as
 
 オプションとして、ソースの array_view とは異なる値型を持つ可能性のある、1 次元 array_view を使用して array_view を再解釈します。

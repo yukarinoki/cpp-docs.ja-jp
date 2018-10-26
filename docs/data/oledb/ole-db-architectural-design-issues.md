@@ -15,17 +15,17 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a79cc4dfa36170293a8832571ba3348d6e2c8865
-ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
+ms.openlocfilehash: 0a0fc54c002511b9c091acc5d5e3fbe4636ad933
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49990024"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072240"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB アーキテクチャのデザインの問題
 
-OLE DB アプリケーションを開始する前に、次の問題を考慮してください。  
-  
+OLE DB アプリケーションを開始する前に、次の問題を考慮してください。
+
 ## <a name="what-programming-implementation-will-you-use-to-write-your-ole-db-application"></a>OLE DB アプリケーションを記述するプログラミング実装を使用するか。
 
 Microsoft には、このタスクを実行するいくつかのライブラリが用意されています。 OLE DB テンプレート ライブラリを、OLE DB 属性、および OLE DB SDK では、生の OLE DB インターフェイス。 または、ウィザード、プログラムを記述するのに役立ちます。 これらの実装については、後述[OLE DB テンプレート、属性、およびその他の実装](../../data/oledb/ole-db-templates-attributes-and-other-implementations.md)します。

@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc13285549543eeab07bed6372f8f7d529f90a32
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 40fdfa363da286952139248088c737b348873ec8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46078700"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063680"
 ---
 # <a name="category-macros"></a>カテゴリに関するマクロ
 
@@ -51,11 +51,11 @@ ms.locfileid: "46078700"
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|カテゴリのマップの先頭をマークします。|
 |[END_CATEGORY_MAP](#end_category_map)|カテゴリのマップの最後をマークします。|
 |[IMPLEMENTED_CATEGORY](#implemented_category)|COM オブジェクトによって実装されているカテゴリを示します。|
-|[要求します。](#required_category)|COM オブジェクトによって、コンテナーに必要なカテゴリを示します。|  
+|[要求します。](#required_category)|COM オブジェクトによって、コンテナーに必要なカテゴリを示します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h  
+**ヘッダー:** atlcom.h
 
 ##  <a name="begin_category_map"></a>  BEGIN_CATEGORY_MAP
 
