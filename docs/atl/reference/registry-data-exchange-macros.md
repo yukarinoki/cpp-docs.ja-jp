@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8a4ac19f9ead379b66d93a7be031bb53bc50fe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e9e62c1969d61f84319c0ffadf50f9f96534380
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109345"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055485"
 ---
 # <a name="registry-data-exchange-macros"></a>レジストリ データ エクス チェンジに関するマクロ
 
@@ -39,9 +39,9 @@ ms.locfileid: "46109345"
 |[RDX_BINARY](#rdx_binary)|BYTE 型の指定したメンバー変数で指定されたレジストリ エントリに関連付けます。|
 |[RDX_CSTRING_TEXT](#rdx_cstring_text)|指定されたレジストリ エントリを CString 型の指定したメンバー変数に関連付けます。|
 |[RDX_DWORD](#rdx_dword)|指定されたレジストリ エントリを DWORD 型の指定したメンバー変数に関連付けます。|
-|[RDX_TEXT](#rdx_text)|TCHAR 型の指定したメンバー変数で指定されたレジストリ エントリに関連付けます。|  
+|[RDX_TEXT](#rdx_text)|TCHAR 型の指定したメンバー変数で指定されたレジストリ エントリに関連付けます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlplus.h
 
@@ -80,10 +80,10 @@ BYTE 型の指定したメンバー変数で指定されたレジストリ エ�
 
 ```
 RDX_BINARY(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -98,7 +98,7 @@ RDX_BINARY(
 *valuename*<br/>
 レジストリ キー。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたレジストリ エントリに関連付けるメンバー変数です。
 
 *member_size*<br/>
@@ -114,10 +114,10 @@ RDX_BINARY(
 
 ```
 RDX_CSTRING_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -132,7 +132,7 @@ RDX_CSTRING_TEXT(
 *valuename*<br/>
 レジストリ キー。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたレジストリ エントリに関連付けるメンバー変数です。
 
 *member_size*<br/>
@@ -148,10 +148,10 @@ RDX_CSTRING_TEXT(
 
 ```
 RDX_DWORD(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -166,7 +166,7 @@ RDX_DWORD(
 *valuename*<br/>
 レジストリ キー。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたレジストリ エントリに関連付けるメンバー変数です。
 
 *member_size*<br/>
@@ -182,10 +182,10 @@ TCHAR 型の指定したメンバー変数で指定されたレジストリ エ�
 
 ```
 RDX_TEXT(
-    rootkey, 
-    subkey, 
-    valuename, 
-    member, 
+    rootkey,
+    subkey,
+    valuename,
+    member,
     member_size )
 ```
 
@@ -200,7 +200,7 @@ RDX_TEXT(
 *valuename*<br/>
 レジストリ キー。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたレジストリ エントリに関連付けるメンバー変数です。
 
 *member_size*<br/>

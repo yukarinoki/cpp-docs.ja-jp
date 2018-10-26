@@ -17,20 +17,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: d9db21b7531f71ba40be64018b71c4e2e3e555e2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b5ba9789226e54c9607e85caaa5e8af3f157f02d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46064972"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052639"
 ---
 # <a name="data-source-determining-the-schema-of-the-data-source-odbc"></a>データ ソース : データ ソースのスキーマの判定 (ODBC)
 
-このトピックの内容は、MFC ODBC クラスに該当します。  
-  
-データ メンバーを設定する、`CRecordset`オブジェクトの場合、接続しているデータ ソースのスキーマを把握する必要があります。 データ ソースのスキーマを決定するには、データ ソース内のテーブルの一覧、各テーブルの列で、各列のデータ型の一覧と、インデックスの有無を取得する必要があります。  
-  
-## <a name="see-also"></a>関連項目  
+このトピックの内容は、MFC ODBC クラスに該当します。
+
+データ メンバーを設定する、`CRecordset`オブジェクトの場合、接続しているデータ ソースのスキーマを把握する必要があります。 データ ソースのスキーマを決定するには、データ ソース内のテーブルの一覧、各テーブルの列で、各列のデータ型の一覧と、インデックスの有無を取得する必要があります。
+
+## <a name="see-also"></a>関連項目
 
 [データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
 [データ ソース: 接続 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)

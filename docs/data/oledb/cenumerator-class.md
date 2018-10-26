@@ -33,120 +33,120 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 6f85fafe213fa7e53f67fb6a3035f415235c8794
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8d653618e690a5c60dea460e1dfa7cdb17d70c7a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082450"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056153"
 ---
 # <a name="cenumerator-class"></a>CEnumerator クラス
 
-公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969)インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。  
-  
+公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969)インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。
+
 ## <a name="syntax"></a>構文
 
 ```cpp
-class CEnumerator :   
-   public CAccessorRowset< CAccessor <CEnumeratorAccessor >>  
-```  
+class CEnumerator : 
+   public CAccessorRowset< CAccessor <CEnumeratorAccessor >>
+```
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atldbcli.h
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="methods"></a>メソッド  
-  
-|||  
-|-|-|  
-|[[検索]](#find)|指定した名前のいずれかを探して利用可能なプロバイダー (データ ソース) で検索します。|  
-|[GetMoniker](#getmoniker)|取得、`IMoniker`現在のレコードのインターフェイス。|  
-|[開く](#open)|列挙子を開きます。|  
-  
-## <a name="remarks"></a>Remarks  
 
-取得することができます、`ISourcesRowset`このクラスから間接的にデータ。  
+## <a name="members"></a>メンバー
+
+### <a name="methods"></a>メソッド
+
+|||
+|-|-|
+|[[検索]](#find)|指定した名前のいずれかを探して利用可能なプロバイダー (データ ソース) で検索します。|
+|[GetMoniker](#getmoniker)|取得、`IMoniker`現在のレコードのインターフェイス。|
+|[開く](#open)|列挙子を開きます。|
+
+## <a name="remarks"></a>Remarks
+
+取得することができます、`ISourcesRowset`このクラスから間接的にデータ。
 
 ## <a name="find"></a> Cenumerator::find
 
-使用可能なプロバイダーの間で指定した名前を検索します。  
-  
-### <a name="syntax"></a>構文  
-  
+使用可能なプロバイダーの間で指定した名前を検索します。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-bool Find(TCHAR* szSearchName) throw();  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+bool Find(TCHAR* szSearchName) throw();
+```
+
+#### <a name="parameters"></a>パラメーター
 
 *szSearchName*<br/>
-[in]検索する名前。  
-  
-### <a name="return-value"></a>戻り値  
+[in]検索する名前。
 
-**true**名前が見つかった場合します。 それ以外の場合、 **false**します。  
-  
-### <a name="remarks"></a>Remarks  
+### <a name="return-value"></a>戻り値
 
-この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969)インターフェイス。  
-  
+**true**名前が見つかった場合します。 それ以外の場合、 **false**します。
+
+### <a name="remarks"></a>Remarks
+
+この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969)インターフェイス。
+
 ## <a name="getmoniker"></a> Cenumerator::getmoniker
 
-モニカーに変換できる文字列の部分を抽出する表示名を解析します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();  
+モニカーに変換できる文字列の部分を抽出する表示名を解析します。
 
-HRESULT GetMoniker(LPMONIKER* ppMoniker,   
-   LPCTSTR lpszDisplayName) const throw();  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+### <a name="syntax"></a>構文
+
+```cpp
+HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();
+
+HRESULT GetMoniker(LPMONIKER* ppMoniker, 
+   LPCTSTR lpszDisplayName) const throw();
+```
+
+#### <a name="parameters"></a>パラメーター
 
 *ppMoniker*<br/>
-[out]表示名からモニカーが解析された ([cenumeratoraccessor::m_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) 現在の行のできます。  
-  
-*lpszDisplayName*<br/>
-[in]解析する表示名。  
-  
-### <a name="return-value"></a>戻り値  
+[out]表示名からモニカーが解析された ([cenumeratoraccessor::m_szparsename](../../data/oledb/cenumeratoraccessor-m-szparsename.md)) 現在の行のできます。
 
-標準の HRESULT です。  
+*lpszDisplayName*<br/>
+[in]解析する表示名。
+
+### <a name="return-value"></a>戻り値
+
+標準の HRESULT です。
 
 ## <a name="open"></a> Cenumerator::open
 
-指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200)します。  
-  
-### <a name="syntax"></a>構文  
-  
+指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200)します。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-HRESULT Open(LPMONIKER pMoniker) throw();  
+HRESULT Open(LPMONIKER pMoniker) throw();
 
-HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();  
+HRESULT Open(const CLSID* pClsid = & CLSID_OLEDB_ENUMERATOR) throw();
 
-HRESULT Open(const CEnumerator& enumerator) throw();  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+HRESULT Open(const CEnumerator& enumerator) throw();
+```
+
+#### <a name="parameters"></a>パラメーター
 
 *pMoniker*<br/>
-[in]列挙子のモニカーへのポインター。  
-  
-*pClsid*<br/>
-[in]ポインター、`CLSID`の列挙子。  
-  
-*enumerator*<br/>
-[in]列挙子への参照。  
-  
-### <a name="return-value"></a>戻り値  
+[in]列挙子のモニカーへのポインター。
 
-標準の HRESULT です。  
-  
-## <a name="see-also"></a>関連項目  
+*pClsid*<br/>
+[in]ポインター、`CLSID`の列挙子。
+
+*enumerator*<br/>
+[in]列挙子への参照。
+
+### <a name="return-value"></a>戻り値
+
+標準の HRESULT です。
+
+## <a name="see-also"></a>関連項目
 
 [DBViewer](../../visual-cpp-samples.md)<br/>
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

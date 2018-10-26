@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 81ea5c45aff148d8f0683d0058963571bc02a57a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: f7bc10b89df58dc72c35855fea43c2a0387f9efd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058467"
 ---
 # <a name="source-c"></a>source (C++)
 
@@ -79,7 +79,7 @@ class NN : public b
 };
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -90,11 +90,11 @@ class NN : public b
 |**必要な属性**|`coclass` (クラスまたは構造体に適用される) と|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
-[coclass](coclass.md)  
+[coclass](coclass.md)

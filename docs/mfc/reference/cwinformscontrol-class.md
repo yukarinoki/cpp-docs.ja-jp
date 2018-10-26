@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 57a06fe87e7d4fbcf698cc333022c4c32afb40da
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d687c2ffc0659e1a0571f55528dd35044d154dad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442605"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053826"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl クラス
 
@@ -81,7 +81,7 @@ MFC コードは、ウィンドウ ハンドルをキャッシュする必要が
 > [!NOTE]
 >  MFC Windows フォームの統合は、(AFXDLL が定義されている) MFC と動的にリンクするプロジェクトでのみ動作します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h
 
@@ -102,12 +102,10 @@ inline BOOL CreateManagedControl(
     CWnd* pParentWnd,
     int nID);
 
-
 inline BOOL CreateManagedControl(
     DWORD dwStyle,
     int nPlaceHolderID,
     CWnd* pParentWnd);
-
 
 inline BOOL CreateManagedControl(
     typename TManagedControl^ pControl,

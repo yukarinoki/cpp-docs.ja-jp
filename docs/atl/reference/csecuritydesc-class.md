@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3df63cbed5fcb17b01450435aa2d991ca3e0c5a8
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: cc7f178923e043d9ecd3be4849f7b2f497b51a08
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083919"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057375"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc クラス
 
@@ -119,7 +119,7 @@ class CSecurityDesc
 
 Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsecurity.h
 
@@ -556,7 +556,7 @@ operator const SECURITY_DESCRIPTOR *() const throw();
 
 ```
 bool SetControl(
-    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest, 
+    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest,
     SECURITY_DESCRIPTOR_CONTROL ControlBitsToSet) throw();
 ```
 
@@ -581,11 +581,11 @@ bool SetControl(
 随意アクセス制御リスト (DACL) で情報を設定します。 DACL が既にセキュリティ記述子に存在する場合は置き換えられます。
 
 ```
-inline void SetDacl(  
+inline void SetDacl(
     bool bPresent = true,
     bool bDefaulted = false) throw(...);
 
-inline void SetDacl(  
+inline void SetDacl(
     const CDacl& Dacl,
     bool bDefaulted = false) throw(...);
 ```

@@ -19,38 +19,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b16a3d87741b8dda3b130c09d74e86a2350cd7be
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 211a73fb2af2925f40518f2b0eda3f7bd5b5daf1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42540664"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057245"
 ---
 # <a name="checkstack"></a>check_stack
-場合、スタック プローブをオフにするようにコンパイラに指示`off`(または`-`) が指定されているか場合は、スタック プローブを有効に`on`(または`+`) を指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-#pragma check_stack([ {on | off}] )  
-#pragma check_stack{+ | -}  
-```  
-  
-## <a name="remarks"></a>Remarks 
+場合、スタック プローブをオフにするようにコンパイラに指示`off`(または`-`) が指定されているか場合は、スタック プローブを有効に`on`(または`+`) を指定します。
 
-引数を指定しない場合、スタック プローブが既定に従って処理されます。 このプラグマは、プラグマの後で定義されている最初の関数に対して効果があります。 スタック プローブは、マクロの一部でも、インラインで生成される関数の一部でもありません。  
-  
-引数を指定しない場合、 **check_stack**プラグマ、スタック チェック コマンドラインで指定された動作を元に戻します。 詳細については、次を参照してください。[コンパイラ リファレンス](../build/reference/compiler-options.md)します。 相互作用、`#pragma check_stack`と[/Gs](../build/reference/gs-control-stack-checking-calls.md)オプションは、次の表にまとめられています。  
-  
-### <a name="using-the-checkstack-pragma"></a>check_stack プラグマの使用  
-  
-|構文|コンパイルで<br /><br /> /Gs オプションを使用?|アクション|  
-|------------|------------------------------------|------------|  
-|`#pragma check_stack( )` または<br /><br /> `#pragma check_stack`|[はい]|後続の関数のスタック チェックをオフにします|  
-|`#pragma check_stack( )` または<br /><br /> `#pragma check_stack`|いいえ|後続の関数のスタック チェックをオンにします|  
-|`#pragma check_stack(on)`<br /><br /> または `#pragma check_stack +`|Yes または No|後続の関数のスタック チェックをオンにします|  
-|`#pragma check_stack(off)`<br /><br /> または `#pragma check_stack -`|Yes または No|後続の関数のスタック チェックをオフにします|  
-  
-## <a name="see-also"></a>関連項目  
- 
+## <a name="syntax"></a>構文
+
+```
+#pragma check_stack([ {on | off}] )
+#pragma check_stack{+ | -}
+```
+
+## <a name="remarks"></a>Remarks
+
+引数を指定しない場合、スタック プローブが既定に従って処理されます。 このプラグマは、プラグマの後で定義されている最初の関数に対して効果があります。 スタック プローブは、マクロの一部でも、インラインで生成される関数の一部でもありません。
+
+引数を指定しない場合、 **check_stack**プラグマ、スタック チェック コマンドラインで指定された動作を元に戻します。 詳細については、次を参照してください。[コンパイラ リファレンス](../build/reference/compiler-options.md)します。 相互作用、`#pragma check_stack`と[/Gs](../build/reference/gs-control-stack-checking-calls.md)オプションは、次の表にまとめられています。
+
+### <a name="using-the-checkstack-pragma"></a>check_stack プラグマの使用
+
+|構文|コンパイルで<br /><br /> /Gs オプションを使用?|アクション|
+|------------|------------------------------------|------------|
+|`#pragma check_stack( )` または<br /><br /> `#pragma check_stack`|はい|後続の関数のスタック チェックをオフにします|
+|`#pragma check_stack( )` または<br /><br /> `#pragma check_stack`|いいえ|後続の関数のスタック チェックをオンにします|
+|`#pragma check_stack(on)`<br /><br /> または `#pragma check_stack +`|Yes または No|後続の関数のスタック チェックをオンにします|
+|`#pragma check_stack(off)`<br /><br /> または `#pragma check_stack -`|Yes または No|後続の関数のスタック チェックをオフにします|
+
+## <a name="see-also"></a>関連項目
+
 [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)

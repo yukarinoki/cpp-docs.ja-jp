@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ea6b687b00310390e3748fb5a8f6db74a19dfd0a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 97735b5509fb841a8b9b3d8212f4a23514f9d28c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46373897"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057466"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>方法: スケジューラ インスタンスを管理する
 
@@ -34,7 +34,7 @@ ms.locfileid: "46373897"
 
 1. 呼び出す、 [::create](reference/currentscheduler-class.md#create)メソッドまたは[:create](reference/scheduler-class.md#create)スケジューラ インスタンスを作成します。
 
-     使用する場合、`Scheduler::Create`メソッドを呼び出し、 [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach)メソッドに、現在のコンテキストにスケジューラを関連付ける必要がある場合。
+   使用する場合、`Scheduler::Create`メソッドを呼び出し、 [concurrency::Scheduler::Attach](reference/scheduler-class.md#attach)メソッドに、現在のコンテキストにスケジューラを関連付ける必要がある場合。
 
 1. 呼び出す、 [CreateEvent](/windows/desktop/api/synchapi/nf-synchapi-createeventa)非シグナル状態の自動リセット イベント オブジェクトへのハンドルを作成する関数。
 
@@ -44,7 +44,7 @@ ms.locfileid: "46373897"
 
 1. 呼び出す、 [:currentscheduler](reference/currentscheduler-class.md#detach)現在のスケジューラをデタッチおよび以前のスケジューラを現在の 1 つとして復元する方法。
 
-     使用する場合、`Scheduler::Create`メソッドを呼び出し、 [concurrency::Scheduler::Release](reference/scheduler-class.md#release)の参照カウントをデクリメントするメソッド、`Scheduler`オブジェクト。
+   使用する場合、`Scheduler::Create`メソッドを呼び出し、 [concurrency::Scheduler::Release](reference/scheduler-class.md#release)の参照カウントをデクリメントするメソッド、`Scheduler`オブジェクト。
 
 1. イベントにハンドルを渡す、 [WaitForSingleObject](/windows/desktop/api/synchapi/nf-synchapi-waitforsingleobject)スケジューラをシャット ダウンするを待機する関数。
 

@@ -33,94 +33,94 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b73111fe05a7c752edda0c95f1289a125828d4a5
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: a2ddd7e1a4397b36daba8b354c84941d0d1c4d0e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082554"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057973"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl クラス
 
-実装を提供、 [ICommandText](/previous-versions/windows/desktop/ms714914)インターフェイス。  
-  
+実装を提供、 [ICommandText](/previous-versions/windows/desktop/ms714914)インターフェイス。
+
 ## <a name="syntax"></a>構文
 
 ```cpp
-template <class T >  
-class ATL_NO_VTABLE ICommandTextImpl   
-   : public ICommandImpl<T, ICommandText>  
-```  
-  
-### <a name="parameters"></a>パラメーター  
+template <class T >
+class ATL_NO_VTABLE ICommandTextImpl
+   : public ICommandImpl<T, ICommandText>
+```
+
+### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-コマンド クラスから派生した`ICommandTextImpl`します。 
+コマンド クラスから派生した`ICommandTextImpl`します。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** altdb.h  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="interface-methods"></a>インターフェイス メソッド  
-  
-|||  
-|-|-|  
-|[GetCommandText](#getcommandtext)|テキスト コマンドの最後の呼び出しでセットを返します[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)します。|  
-|[SetCommandText](#setcommandtext)|既存のコマンド テキストを置き換えて、コマンド テキストを設定します。|  
-  
-### <a name="data-members"></a>データ メンバー  
-  
-|||  
-|-|-|  
-|[m_strCommandText](#strcommandtext)|コマンド テキストを格納します。|  
-  
-## <a name="remarks"></a>Remarks  
+**ヘッダー:** altdb.h
 
-コマンドの必須インターフェイス。  
- 
+## <a name="members"></a>メンバー
+
+### <a name="interface-methods"></a>インターフェイス メソッド
+
+|||
+|-|-|
+|[GetCommandText](#getcommandtext)|テキスト コマンドの最後の呼び出しでセットを返します[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)します。|
+|[SetCommandText](#setcommandtext)|既存のコマンド テキストを置き換えて、コマンド テキストを設定します。|
+
+### <a name="data-members"></a>データ メンバー
+
+|||
+|-|-|
+|[m_strCommandText](#strcommandtext)|コマンド テキストを格納します。|
+
+## <a name="remarks"></a>Remarks
+
+コマンドの必須インターフェイス。
+
 ## <a name="getcommandtext"></a> Icommandtextimpl::getcommandtext
 
-テキスト コマンドの最後の呼び出しでセットを返します[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-STDMETHOD(GetCommandText)(GUID * pguidDialect,   
-   LPOLESTR * ppwszCommand);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+テキスト コマンドの最後の呼び出しでセットを返します[SetCommandText](../../data/oledb/icommandtextimpl-setcommandtext.md)します。
 
-参照してください[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。  
+### <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(GetCommandText)(GUID * pguidDialect, 
+   LPOLESTR * ppwszCommand);
+```
+
+#### <a name="parameters"></a>パラメーター
+
+参照してください[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。
 
 ## <a name="setcommandtext"></a> Icommandtextimpl::setcommandtext
 
-既存のコマンド テキストを置き換えて、コマンド テキストを設定します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-STDMETHOD(SetCommandText)(REFGUID rguidDialect,   
-   LPCOLESTR pwszCommand);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+既存のコマンド テキストを置き換えて、コマンド テキストを設定します。
 
-参照してください[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757)で、 *OLE DB プログラマーズ リファレンス*します。 
+### <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(SetCommandText)(REFGUID rguidDialect, 
+   LPCOLESTR pwszCommand);
+```
+
+#### <a name="parameters"></a>パラメーター
+
+参照してください[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757)で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="strcommandtext"></a> Icommandtextimpl::m_strcommandtext
 
-コマンド テキストの文字列を格納します。  
-  
-### <a name="syntax"></a>構文  
-  
+コマンド テキストの文字列を格納します。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-CComBSTR m_strCommandText;  
-```  
-  
-## <a name="see-also"></a>関連項目  
+CComBSTR m_strCommandText;
+```
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

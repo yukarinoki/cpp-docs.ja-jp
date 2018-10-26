@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d050f27688d97cd3ef0352eed00f4dadb1fe6d98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 96bcaf768ece46c22422fb3d98b85def7c57ed6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403787"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056595"
 ---
 # <a name="creating-stack-and-queue-collections"></a>スタック コレクションとキュー コレクションの作成
 
@@ -40,9 +40,9 @@ ms.locfileid: "46403787"
 
 1. 既存の MFC のリストのクラスのいずれかから新しいリスト クラスを派生し、スタック操作の機能をサポートするメンバー関数を追加します。
 
-     次の例では、スタック、スタックの最上位の要素でピークに要素をプッシュして、スタックからの最上位の要素をポップするメンバー関数を追加する方法を示します。
+   次の例では、スタック、スタックの最上位の要素でピークに要素をプッシュして、スタックからの最上位の要素をポップするメンバー関数を追加する方法を示します。
 
-     [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
+   [!code-cpp[NVC_MFCCollections#20](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_1.h)]
 
 このアプローチは、基になる公開注`CObList`クラス。 ユーザーは、いずれかを呼び出すことができます`CObList`メンバー関数は、合理的スタックのかどうかどうか。
 
@@ -54,9 +54,9 @@ ms.locfileid: "46403787"
 
 1. Microsoft Foundation Class ライブラリで提供される定義済みリストのクラスのいずれかから新しいリスト クラスを派生し、キュー操作のセマンティクスをサポートするメンバー関数を追加します。
 
-     次の例では、キューの末尾に要素を追加し、キューの先頭から要素を取得するメンバー関数を追加する方法を示します。
+   次の例では、キューの末尾に要素を追加し、キューの先頭から要素を取得するメンバー関数を追加する方法を示します。
 
-     [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
+   [!code-cpp[NVC_MFCCollections#21](../mfc/codesnippet/cpp/creating-stack-and-queue-collections_2.h)]
 
 ## <a name="see-also"></a>関連項目
 
