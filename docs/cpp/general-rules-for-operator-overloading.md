@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6c3064da609c8a81a6e264c7f46d37d4cd5681d1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a6eb1b97acfe2fa41511433de3990da8923de7d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107144"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059546"
 ---
 # <a name="general-rules-for-operator-overloading"></a>演算子のオーバーロードに関する一般的な規則
 
@@ -48,7 +48,7 @@ ms.locfileid: "46107144"
     }
     ```
 
-     前のコード サンプルは、メンバー関数として小なり演算子を宣言します。ただし、加算演算子はフレンド アクセスを持つグローバル関数として宣言されます。 複数の実装を特定の演算子に対して提供できることに注意してください。 前の加算演算子の場合は、可換を容易にするため、2 種類の実装が用意されています。 追加する演算子と、`Point`を`Point`、 **int**を`Point`で実装される場合があります。
+   前のコード サンプルは、メンバー関数として小なり演算子を宣言します。ただし、加算演算子はフレンド アクセスを持つグローバル関数として宣言されます。 複数の実装を特定の演算子に対して提供できることに注意してください。 前の加算演算子の場合は、可換を容易にするため、2 種類の実装が用意されています。 追加する演算子と、`Point`を`Point`、 **int**を`Point`で実装される場合があります。
 
 - 演算子は、組み込み型との一般的な使用方法によって指定されるオペランドの優先順位、グループ、および数に従います。 そのため、という概念を表現する方法はありません"2 および 3 を型のオブジェクトに追加`Point`、"に追加する 2 を指定してください、 *x*に追加するには、座標、3、 *y*を調整します。
 

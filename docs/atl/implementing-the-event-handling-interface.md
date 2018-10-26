@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2241080fda6aa58dc5e70f57c83afec69a57203
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57e685ea9ac4b1efc76f7657421d825b83f4a9b7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078623"
 ---
 # <a name="implementing-the-event-handling-interface"></a>イベント処理インターフェイスを実装します。
 
@@ -37,7 +37,7 @@ ATL を使用してインターフェイスを実装する最も一般的な方�
 
 - 派生する[IDispEventSimpleImpl](../atl/reference/idispeventsimpleimpl-class.md)ディスパッチ インターフェイスの場合、タイプ ライブラリまたは実行時に型情報を読み込まないようにして効率を向上する場合に説明しません。
 
-呼び出すことによって、イベント ソースをお勧めする必要があります、カスタムまたはデュアル インターフェイスを実装する場合[AtlAdvise](reference/connection-point-global-functions.md#atladvise)または[CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)します。 自分での呼び出しによって返されるクッキーを追跡する必要があります。 呼び出す[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)結合を解除します。  
+呼び出すことによって、イベント ソースをお勧めする必要があります、カスタムまたはデュアル インターフェイスを実装する場合[AtlAdvise](reference/connection-point-global-functions.md#atladvise)または[CComPtrBase::Advise](../atl/reference/ccomptrbase-class.md#advise)します。 自分での呼び出しによって返されるクッキーを追跡する必要があります。 呼び出す[AtlUnadvise](reference/connection-point-global-functions.md#atlunadvise)結合を解除します。
 
 使用してディスパッチ インターフェイスを実装している場合`IDispEventImpl`または`IDispEventSimpleImpl`、呼び出すことによって、イベント ソースを知らせるはず[IDispEventSimpleImpl::DispEventAdvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventadvise)します。 呼び出す[IDispEventSimpleImpl::DispEventUnadvise](../atl/reference/idispeventsimpleimpl-class.md#dispeventunadvise)結合を解除します。
 
@@ -48,4 +48,3 @@ ATL を使用してインターフェイスを実装する最も一般的な方�
 ## <a name="see-also"></a>関連項目
 
 [イベント処理](../atl/event-handling-and-atl.md)
-

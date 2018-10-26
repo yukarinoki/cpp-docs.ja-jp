@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3930f08ae0708b81dde218a88fcda4dc34931390
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f07ab7b4420a5c33be56a9278b60afb6424e9e83
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063550"
 ---
 # <a name="tn026-ddx-and-ddv-routines"></a>テクニカル ノート 26: DDX ルーチンおよび DDV ルーチン
 
@@ -224,21 +224,21 @@ ClassWizard では、ClassWizard のユーザー インターフェイスに、�
 
    - *promptN*
 
-     アイテム編集 (& accelerator) の上に配置する文字列。
+      アイテム編集 (& accelerator) の上に配置する文字列。
 
    - *fmtN*
 
-     1 つの引数型の書式指定文字:
+      1 つの引数型の書式指定文字:
 
-     |文字|型|
-     |-|-|
-     d | int
-     u | unsigned int
-     D | int を長時間かかる場合 (つまり、時間の長い)
-     U | 符号なし長 (つまり、DWORD)
-     f | float
-     F | double
-     s | string
+      |文字|型|
+      |-|-|
+      |d | int|
+      |u | unsigned int|
+      |D | int を長時間かかる場合 (つまり、時間の長い)|
+      |U | 符号なし長 (つまり、DWORD)|
+      |f | float|
+      |F | double|
+      |s | string|
 
 ## <a name="see-also"></a>関連項目
 

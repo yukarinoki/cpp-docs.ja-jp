@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb3f2ca2cfe094f4ea9da11786af6f90db7d2217
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fb13c8c4ce2705d3e7af8ca5b4cd0e4b97b13ca
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136160"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059091"
 ---
 # <a name="type-conversions-and-type-safety-modern-c"></a>型変換とタイプ セーフ (Modern C++)
 
@@ -70,7 +70,7 @@ int k = 7.7; // warning C4244:'initializing':conversion from 'double' to
 
 ```cpp
 using namespace std;
-unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
+unsigned short num = numeric_limits<unsigned short>::max(); // #include <limits>
 short num2 = num;
 cout << "unsigned val = " << num << " signed val = " << num2 << endl;
 // Prints: unsigned val = 65535 signed val = -1
@@ -126,7 +126,7 @@ int(x); // old-style cast, functional syntax
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-     詳細については、次を参照してください。 [static_cast](../cpp/static-cast-operator.md)します。
+   詳細については、次を参照してください。 [static_cast](../cpp/static-cast-operator.md)します。
 
 - **dynamic_cast**のポインターから派生する基本のポインターのキャストの安全なランタイム チェックします。 A **dynamic_cast**よりも安全です、 **static_cast**ダウン キャストが、実行時のチェックで一部のオーバーヘッドが発生します。
 
@@ -151,7 +151,7 @@ int(x); // old-style cast, functional syntax
     //Output: d3 is null;
     ```
 
-     詳細については、次を参照してください。 [dynamic_cast](../cpp/dynamic-cast-operator.md)します。
+   詳細については、次を参照してください。 [dynamic_cast](../cpp/dynamic-cast-operator.md)します。
 
 - **const_cast**にキャストして、 **const**の変数、または非変換性 -**const**変数を**const**します。 キャストして**const**-させずに、この演算子を使用して、単にエラーを起こしやすい C スタイルの点を除いて、キャストが使用されている**const キャスト**が誤ってキャストを実行する可能性が低下します。 キャストする必要がある場合があります、 **const**-させずに、たとえば、渡す変数の**const**受け取る以外の関数を変数**const**パラメーター。 その方法を次の例に示します。
 
@@ -164,14 +164,14 @@ int(x); // old-style cast, functional syntax
     }
     ```
 
-     詳細については、次を参照してください。 [const_cast](../cpp/const-cast-operator.md)します。
+   詳細については、次を参照してください。 [const_cast](../cpp/const-cast-operator.md)します。
 
 - **reinterpret_cast**間のキャスト関連のない型などの**ポインター**に**int**します。
 
     > [!NOTE]
     >  このキャスト演算子は、他のキャスト演算子ほどの頻度では使用されず、他のコンパイラへの移植性も保証されません。
 
-     次の例を示しています。 どの**reinterpret_cast**とは異なります**static_cast**。
+   次の例を示しています。 どの**reinterpret_cast**とは異なります**static_cast**。
 
     ```cpp
     const char* str = "hello";
@@ -183,7 +183,7 @@ int(x); // old-style cast, functional syntax
                                        // However, it is not 64-bit safe.
     ```
 
-     詳細については、次を参照してください。 [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md)します。
+   詳細については、次を参照してください。 [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md)します。
 
 ## <a name="see-also"></a>関連項目
 

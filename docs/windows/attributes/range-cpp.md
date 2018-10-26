@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 593cfbd4b7430c3f6ac5b4f2ab1053665136ab25
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 17ceaa7c470e57cadd198c17c21bb2a8ae4755ce
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791158"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071660"
 ---
 # <a name="range-c"></a>range (C++)
 
@@ -62,7 +62,7 @@ __interface ICustom {
 };
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -73,11 +73,11 @@ __interface ICustom {
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [メソッド属性](method-attributes.md)<br/>
 [パラメーター属性](parameter-attributes.md)<br/>
-[データ メンバー属性](data-member-attributes.md)  
+[データ メンバー属性](data-member-attributes.md)

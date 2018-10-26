@@ -31,12 +31,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae2199ec414556fe3401c94c273d5ef0c13c3c5d
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4754a74365b2c596e240bd13eb11fdc852205e2c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162530"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077889"
 ---
 # <a name="hstringreference-class"></a>HStringReference クラス
 
@@ -80,7 +80,7 @@ class HStringReference;
 
 `HStringReference`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** corewrappers.h
 
@@ -110,7 +110,7 @@ HRESULT CopyTo(
 基になる HSTRING ハンドルの値を取得します。
 
 ```cpp
-HSTRING Get() const throw()  
+HSTRING Get() const throw()
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -159,7 +159,7 @@ HStringReference(HStringReference&& other) throw();
 別の値を移動`HStringReference`現在オブジェクト`HStringReference`オブジェクト。
 
 ```cpp
-HStringReference& operator=(HStringReference&& other) throw()  
+HStringReference& operator=(HStringReference&& other) throw()
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -186,7 +186,7 @@ inline bool operator==(
 
 inline bool operator==(
                const HStringReference& lhs,
-               const HSTRING& rhs) throw()  
+               const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -216,7 +216,7 @@ inline bool operator!=(
 
 inline bool operator!=(
                const HStringReference& lhs,
-               const HSTRING& rhs) throw()  
+               const HSTRING& rhs) throw()
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -238,7 +238,7 @@ inline bool operator!=(
 ```cpp
 inline bool operator<(
     const HStringReference& lhs,
-    const HStringReference& rhs) throw()  
+    const HStringReference& rhs) throw()
 ```
 
 ### <a name="parameters"></a>パラメーター

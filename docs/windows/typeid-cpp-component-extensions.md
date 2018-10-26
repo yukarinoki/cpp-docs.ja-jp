@@ -15,12 +15,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b31344b1ba72b37bcfff45a3fd4feefda85f6a7a
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 1196956208d490674d4705a8d1e61ea3381d94a2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327584"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065188"
 ---
 # <a name="typeid--ccli-and-ccx"></a>typeid (C +/cli および C++/cli CX)
 
@@ -59,7 +59,7 @@ Platform::Type^ type = T::typeid;
 
 C++/cli CX、typeid を返します、 [platform::type](../cppcx/platform-type-class.md)ランタイム型情報から構築します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -88,7 +88,7 @@ type::typeid
 
 `typeid` ではネイティブ型も扱えますが、その場合でも System::Type を返します。  Type_info 構造体を取得する[typeid 演算子](../cpp/typeid-operator.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -110,7 +110,7 @@ int main() {
    Type ^ pType = pG->GetType();
    Type ^ pType2 = G::typeid;
 
-   if (pType == pType2)  
+   if (pType == pType2)
       Console::WriteLine("typeid and GetType returned the same System::Type");
    Console::WriteLine(G::typeid);
 
@@ -123,7 +123,7 @@ int main() {
 typeid and GetType returned the same System::Type
 G
 
-System.Single*  
+System.Single*
 ```
 
 次の例では、System::Type 型の変数を使用して型の属性を取得できることを示しています。  この例を見るとわかるように、一部の型では、`typeid` を使用するために typedef を作成する必要があります。
@@ -169,13 +169,13 @@ int main() {
    Console::WriteLine(MyType->IsClass);
 
    array<Object^>^ MyArray = MyType -> GetCustomAttributes(true);
-   for (int i = 0 ; i < MyArray->Length ; i++ )  
+   for (int i = 0 ; i < MyArray->Length ; i++ )
       Console::WriteLine(MyArray[i]);
 
-   if (int::typeid != pointer_to_int::typeid)  
+   if (int::typeid != pointer_to_int::typeid)
       Console::WriteLine("int::typeid != pointer_to_int::typeid, as expected");
 
-   if (int::typeid == handle_to_int::typeid)  
+   if (int::typeid == handle_to_int::typeid)
       Console::WriteLine("int::typeid == handle_to_int::typeid, as expected");
 }
 ```

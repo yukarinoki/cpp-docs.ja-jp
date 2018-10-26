@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa96d87c51eb4db8c7d180f741c3543571984ec
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 04ff3603d403c34915bc062ff6c17fd818d8a286
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416488"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072513"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox クラス
 
@@ -85,7 +85,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 
 [CMFCToolBarFontComboBox](../../mfc/reference/cmfctoolbarfontcombobox-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxtoolbarfontcombobox.h
 
@@ -103,7 +103,6 @@ CMFCToolBarFontComboBox(
     DWORD dwStyle = CBS_DROPDOWN,
     int iWidth = 0,
     BYTE nPitchAndFamily = DEFAULT_PITCH);
-
 
 protected:
 CMFCToolBarFontComboBox(
@@ -172,7 +171,7 @@ const CMFCFontInfo* GetFontDesc(int iIndex=-1) const;
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを`CMFCFontInfo`オブジェクト。 場合*iIndex*有効なアイテムのインデックスで指定されていない戻り値は NULL です。
+`CMFCFontInfo` オブジェクトへのポインター。 場合*iIndex*有効なアイテムのインデックスで指定されていない戻り値は NULL です。
 
 ##  <a name="m_nfontheight"></a>  CMFCToolBarFontComboBox::m_nFontHeight
 
@@ -226,6 +225,4 @@ BOOL SetFont(
 [CMFCFontInfo クラス](../../mfc/reference/cmfcfontinfo-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
 [チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
-
 

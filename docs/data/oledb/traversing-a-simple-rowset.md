@@ -19,72 +19,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 62a1b6c0aa164e6b564c505873fbc85f38b9febf
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 358e7d4833587d459e813af442c4657cfa86a0ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808317"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082136"
 ---
 # <a name="traversing-a-simple-rowset"></a>単純な行セットの走査
 
-次の例では、コマンドに素早く簡単にデータベースへのアクセスを示します。 ATL プロジェクトで、次のコンシューマー コードという名前のテーブルからレコードを取得する*アーティスト*ODBC 用の Microsoft OLE DB プロバイダーを使用して、データベースの Microsoft Access でします。 このコードを作成、 [CTable](../../data/oledb/ctable-class.md)アクセサーを使用してテーブルのオブジェクトは、ユーザー レコード クラスに基づく`CArtists`します。 接続を開き、接続、セッションを開きますをセッションでテーブルを開きます。  
-  
-```cpp  
-#include <atldbcli.h>  
+次の例では、コマンドに素早く簡単にデータベースへのアクセスを示します。 ATL プロジェクトで、次のコンシューマー コードという名前のテーブルからレコードを取得する*アーティスト*ODBC 用の Microsoft OLE DB プロバイダーを使用して、データベースの Microsoft Access でします。 このコードを作成、 [CTable](../../data/oledb/ctable-class.md)アクセサーを使用してテーブルのオブジェクトは、ユーザー レコード クラスに基づく`CArtists`します。 接続を開き、接続、セッションを開きますをセッションでテーブルを開きます。
+
+```cpp
+#include <atldbcli.h>
 #include <iostream>
- 
+
 using namespace std;
 
 int main()
 {
-    CDataSource connection;  
-    CSession session;  
-    CTable<CAccessor<CArtists>> artists;  
+    CDataSource connection;
+    CSession session;
+    CTable<CAccessor<CArtists>> artists;
 
     LPCSTR clsid; // Initialize CLSID_MSDASQL here
     LPCTSTR pName = L"NWind";
 
-    // Open the connection, session, and table, specifying authentication   
-    // using Windows NT integrated security. Hard-coding a password is a major  
-    // security weakness.  
-    connection.Open(clsid, pName, NULL, NULL, DBPROP_AUTH_INTEGRATED);  
+    // Open the connection, session, and table, specifying authentication
+    // using Windows NT integrated security. Hard-coding a password is a major
+    // security weakness.
+    connection.Open(clsid, pName, NULL, NULL, DBPROP_AUTH_INTEGRATED);
 
-    session.Open(connection);  
+    session.Open(connection);
 
-    artists.Open(session, "Artists");  
-  
-    // Get data from the rowset  
-    while (artists.MoveNext() == S_OK)  
-    {  
-       cout << artists.m_szFirstName;  
-       cout << artists.m_szLastName;  
-    }  
+    artists.Open(session, "Artists");
+
+    // Get data from the rowset
+    while (artists.MoveNext() == S_OK)
+    {
+       cout << artists.m_szFirstName;
+       cout << artists.m_szLastName;
+    }
 
     return 0;
 }
-```  
-  
-ユーザー レコードでは、 `CArtists`、この例のようになります。  
-  
-```cpp  
-class CArtists  
-{  
-public:  
-// Data Elements  
-   CHAR m_szFirstName[20];  
-   CHAR m_szLastName[30];  
-   short m_nAge;  
-  
-// Column binding map  
-BEGIN_COLUMN_MAP(CArtists)  
-   COLUMN_ENTRY(1, m_szFirstName)  
-   COLUMN_ENTRY(2, m_szLastName)  
-   COLUMN_ENTRY(3, m_nAge)  
-END_COLUMN_MAP()  
+```
+
+ユーザー レコードでは、 `CArtists`、この例のようになります。
+
+```cpp
+class CArtists
+{
+public:
+// Data Elements
+   CHAR m_szFirstName[20];
+   CHAR m_szLastName[30];
+   short m_nAge;
+
+// Column binding map
+BEGIN_COLUMN_MAP(CArtists)
+   COLUMN_ENTRY(1, m_szFirstName)
+   COLUMN_ENTRY(2, m_szLastName)
+   COLUMN_ENTRY(3, m_nAge)
+END_COLUMN_MAP()
 };
-```  
-  
-## <a name="see-also"></a>関連項目  
+```
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)

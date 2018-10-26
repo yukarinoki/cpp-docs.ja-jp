@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1781077896465d8a7a1d925262c3fd0696d24380
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9a077cd90055a17f9aff71d67d2cb9a511a1caf0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078038"
 ---
 # <a name="mfc-library-versions"></a>MFC ライブラリのバージョン
 
@@ -95,7 +95,7 @@ MFC プロジェクトは、プリプロセッサ シンボルを使用して\_U
 
 MFC のスタティック ライブラリは、次の命名規則を使用します。 ライブラリ名があるフォーム
 
-> *u*AFX*c**d*です。LIB
+> <em>u</em>AFX<em>cd</em>します。LIB
 
 小文字の斜体に示すように文字が、次の表の意味が示すように指定子のプレース ホルダーです。
 

@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: af4f0307823011e4c32ae6b08e18b4cef86e05db
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: de27208562a235f11e47e3fd5c1600c5fad4c3ba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072084"
 ---
 # <a name="complex-class"></a>complex クラス
 
@@ -60,7 +60,7 @@ class complex
 |-|-|
 |[complex](#complex)|指定された実数部または虚数部を使用して、または他の複素数のコピーとして複素数を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -83,7 +83,7 @@ class complex
 |[operator/=](#op_div_eq)|ターゲットの複素数を除数で除算します。除数は複素数、または複素数の実数部および虚数部と同じ型である場合があります。|
 |[operator=](#op_eq)|ターゲットの複素数に数値を割り当てます。割り当てられる数値は複素数、またはターゲットの複素数の実数部および虚数部と同じ型である場合があります。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<complex>
 
@@ -183,7 +183,6 @@ int main( )
 
 ```cpp
 T imag() const;
-
 
 T imag(const T& right);
 ```
@@ -715,7 +714,6 @@ cl2 = (3,4)
 
 ```cpp
 constexpr T real() const;
-
 
 T real(const T& right);
 ```

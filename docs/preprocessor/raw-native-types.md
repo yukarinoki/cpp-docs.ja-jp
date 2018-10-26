@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 067b109757f14e1b76c292bbae5a2ea7d688eae2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d4739b8664da21a86caa91398a7956eac77e22f3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393627"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072890"
 ---
 # <a name="rawnativetypes"></a>raw_native_types
-**C++ 固有の仕様**  
-  
-高レベルのラッパー関数の COM サポート クラスの使用を無効にし、代わりに低レベルのデータ型の使用を強制します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-raw_native_types  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 
-既定では、高レベルのエラー処理メソッドは、COM サポート クラスを使用して[_bstr_t](../cpp/bstr-t-class.md)と[_variant_t](../cpp/variant-t-class.md)の代わりに、`BSTR`と`VARIANT`データ型および生の COM インターフェイス ポインター。 これらのクラスは、これらのデータ型のメモリ ストレージの割り当てと解放の詳細情報をカプセル化し、型キャストと変換演算を大幅に簡略化します。  
-  
-**END C 固有の仕様**  
-  
-## <a name="see-also"></a>関連項目  
- 
+**C++ 固有の仕様**
+
+高レベルのラッパー関数の COM サポート クラスの使用を無効にし、代わりに低レベルのデータ型の使用を強制します。
+
+## <a name="syntax"></a>構文
+
+```
+raw_native_types
+```
+
+## <a name="remarks"></a>Remarks
+
+既定では、高レベルのエラー処理メソッドは、COM サポート クラスを使用して[_bstr_t](../cpp/bstr-t-class.md)と[_variant_t](../cpp/variant-t-class.md)の代わりに、`BSTR`と`VARIANT`データ型および生の COM インターフェイス ポインター。 これらのクラスは、これらのデータ型のメモリ ストレージの割り当てと解放の詳細情報をカプセル化し、型キャストと変換演算を大幅に簡略化します。
+
+**END C 固有の仕様**
+
+## <a name="see-also"></a>関連項目
+
 [#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

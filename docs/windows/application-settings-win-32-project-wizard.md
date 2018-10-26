@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d0c8e2294c7aee3634409a01c613d7e31729230a
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 7342e8cfb95e8e443631563499a84fd7bd6579a1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861825"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080703"
 ---
 # <a name="application-settings-win-32-project-wizard"></a>[アプリケーションの設定] (Win32 アプリケーション ウィザード)
 
@@ -62,4 +62,4 @@ Visual C++ に用意されているライブラリの 1 つに対するサポー
 
 ## <a name="see-also"></a>関連項目
 
-[Win32 アプリケーション ウィザード](../windows/win32-application-wizard.md)  
+[Win32 アプリケーション ウィザード](../windows/win32-application-wizard.md)

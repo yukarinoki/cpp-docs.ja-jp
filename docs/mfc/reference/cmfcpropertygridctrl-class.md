@@ -160,12 +160,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47af9bf4a42f02ce16cc6f43e0689bfa2c5003b2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3516614809ffda8e0659379ebfc8566ea7aee942
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075984"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl クラス
 
@@ -247,7 +247,7 @@ class CMFCPropertyGridCtrl : public CWnd
 |[CMFCPropertyGridCtrl::IsShowDragContext](#isshowdragcontext)|ユーザーは、列をサイズ変更時に、フレームワークが、現在のプロパティ グリッド コントロールの名前と値の列を再描画かどうかを示します。|
 |[CMFCPropertyGridCtrl::IsVSDotNetLook](#isvsdotnetlook)|プロパティ グリッド コントロールの外観が VS .NET で使用されるスタイルかどうかを示します。|
 |[CMFCPropertyGridCtrl::MarkModifiedProperties](#markmodifiedproperties)|変更されたプロパティを表示する方法を指定します。|
-|`CMFCPropertyGridCtrl::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
+|`CMFCPropertyGridCtrl::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) で使用されます。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
 |[CMFCPropertyGridCtrl::RemoveAll](#removeall)|プロパティ グリッド コントロールからすべてのプロパティ オブジェクトを削除します。|
 |[CMFCPropertyGridCtrl::ResetOriginalValues](#resetoriginalvalues)|すべてのプロパティの元の値を復元します。|
 |[CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)|設定またはアルファベット順のモードをリセットします。|
@@ -325,12 +325,11 @@ class CMFCPropertyGridCtrl : public CWnd
 
 [CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxpropertygridctrl.h
 
 ##  <a name="accselect"></a>  CMFCPropertyGridCtrl::accSelect
-
 
 ```
 virtual HRESULT accSelect(
@@ -340,8 +339,8 @@ virtual HRESULT accSelect(
 
 ### <a name="parameters"></a>パラメーター
 
-*flagsSelect*<br/>
-[in][in]*varChild*
+[in]*flagsSelect*<br/>
+[in]*varChild*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -391,14 +390,13 @@ virtual void AdjustLayout();
 
 ##  <a name="alwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::AlwaysShowUserToolTip
 
-
 ```
 void AlwaysShowUserToolTip(BOOL bShow = TRUE);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bShow*
+[in]*bShow*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -527,7 +525,6 @@ BOOL DeleteProperty(
 このメソッドを使用して、プロパティ グリッド コントロールからプロパティ、およびすべてのサブ項目を削除します。
 
 ##  <a name="drawcontrolbarcolors"></a>  CMFCPropertyGridCtrl::DrawControlBarColors
-
 
 ```
 BOOL DrawControlBarColors() const;
@@ -682,14 +679,13 @@ CMFCPropertyGridProperty* FindItemByData(
 
 ##  <a name="get_accchildcount"></a>  CMFCPropertyGridCtrl::get_accChildCount
 
-
 ```
 virtual HRESULT get_accChildCount(long* pcountChildren);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pcountChildren*
+[in]*pcountChildren*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -697,21 +693,19 @@ virtual HRESULT get_accChildCount(long* pcountChildren);
 
 ##  <a name="get_accfocus"></a>  CMFCPropertyGridCtrl::get_accFocus
 
-
 ```
 virtual HRESULT get_accFocus(VARIANT* pvarChild);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pvarChild*
+[in]*pvarChild*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="get_acchelp"></a>  CMFCPropertyGridCtrl::get_accHelp
-
 
 ```
 virtual HRESULT get_accHelp(
@@ -721,15 +715,14 @@ virtual HRESULT get_accHelp(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*<br/>
-[in][in]*pszHelp*
+[in]*varChild*<br/>
+[in]*pszHelp*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="get_acchelptopic"></a>  CMFCPropertyGridCtrl::get_accHelpTopic
-
 
 ```
 virtual HRESULT get_accHelpTopic(
@@ -740,15 +733,15 @@ virtual HRESULT get_accHelpTopic(
 
 ### <a name="parameters"></a>パラメーター
 
-*pszHelpFile*<br/>
-[in][in]*varChild* [in] *pidTopic*
+[in]*pszHelpFile*<br/>
+[in]*varChild*<br/>
+[in]*pidTopic*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="get_acckeyboardshortcut"></a>  CMFCPropertyGridCtrl::get_accKeyboardShortcut
-
 
 ```
 virtual HRESULT get_accKeyboardShortcut(
@@ -758,8 +751,8 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ### <a name="parameters"></a>パラメーター
 
-*varChild*<br/>
-[in][in]*pszKeyboardShortcut*
+[in]*varChild*<br/>
+[in]*pszKeyboardShortcut*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -767,14 +760,13 @@ virtual HRESULT get_accKeyboardShortcut(
 
 ##  <a name="get_accselection"></a>  CMFCPropertyGridCtrl::get_accSelection
 
-
 ```
 virtual HRESULT get_accSelection(VARIANT* pvarChildren);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pvarChildren*
+[in]*pvarChildren*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1136,7 +1128,6 @@ BOOL IsAlphabeticMode() const;
 使用して、 [CMFCPropertyGridCtrl::SetAlphabeticMode](#setalphabeticmode)メソッドを有効にするか、アルファベット モードを無効にします。
 
 ##  <a name="isalwaysshowusertooltip"></a>  CMFCPropertyGridCtrl::IsAlwaysShowUserToolTip
-
 
 ```
 BOOL IsAlwaysShowUserToolTip() const;

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 477ed175e6f8e81acdae5c873d1436e6c3dbbd60
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b12f3ff78f88029067d3b77296979a173dad494d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423560"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079650"
 ---
 # <a name="using-image-lists-with-header-controls"></a>ヘッダー コントロールでのイメージ リストの使い方
 
@@ -35,17 +35,17 @@ ms.locfileid: "46423560"
 
 1. 新しいイメージ リスト オブジェクトを呼び出すことによって初期化[CImageList::Create](../mfc/reference/cimagelist-class.md#create)します。 次のコードは、この呼び出しの 1 つの例です。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#15](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_1.cpp)]
 
 1. 各ヘッダー項目のイメージを追加します。 次のコードは、2 つの定義済みのイメージを追加します。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#16](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_2.cpp)]
 
 1. イメージ リストへの呼び出しでヘッダー コントロールに関連付けられる[CHeaderCtrl::SetImageList](../mfc/reference/cheaderctrl-class.md#setimagelist)します。
 
 1. 関連付けられているイメージ リストからイメージを表示するヘッダー アイテムを変更します。 次の例では、最初のイメージを割り当ててから`m_phdrImages`、最初のヘッダー項目に`m_pHdrCtrl`します。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#17](../mfc/codesnippet/cpp/using-image-lists-with-header-controls_3.cpp)]
 
 使用されるパラメーター値の詳細については、参照、関連する[CHeaderCtrl](../mfc/reference/cheaderctrl-class.md)します。
 

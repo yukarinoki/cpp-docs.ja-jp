@@ -176,12 +176,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9351e363bfa0ca654837436a01bb36b4f2b51eb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5099251f46d3446368c04a39d624fde8128ab2e4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378398"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076310"
 ---
 # <a name="cbasepane-class"></a>CBasePane クラス
 
@@ -292,7 +292,7 @@ class CBasePane : public CWnd
 |[Cbasepane::onsetaccdata](#onsetaccdata)|`CBasePane` このメソッドを使用しません。|
 |`CBasePane::OnUpdateCmdUI`|内部的に使用します。|
 |[CBasePane::PaneFromPoint](#panefrompoint)|指定したポイントを含むペインを返します。|
-|`CBasePane::PreTranslateMessage`|クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
+|`CBasePane::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) で使用されます。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
 |[CBasePane::RecalcLayout](#recalclayout)|`CBasePane` このメソッドを使用しません。|
 |[CBasePane::RemovePaneFromDockManager](#removepanefromdockmanager)|ウィンドウの登録を解除し、ドッキング マネージャーの一覧から削除されます。|
 |[CBasePane::SaveState](#savestate)|レジストリにペインの状態を保存します。|
@@ -332,7 +332,7 @@ MFC で使用できる拡張のドッキング機能をサポートするウィ�
 
     - AFX_CBRS_CLOSE (非表示)、終了するウィンドウを使用できます。
 
-     これらは、フラグのビットごとの OR 操作を組み合わせることができます。
+   これらは、フラグのビットごとの OR 操作を組み合わせることができます。
 
 `CBasePane` これらのフラグを反映するように、次の仮想ブール メソッドを実装: [cbasepane::canbeclosed](#canbeclosed)、 [CBasePane::CanAutoHide](#canautohide)、 [CBasePane::CanFloat](#canfloat)します。 動作をカスタマイズする派生クラスでオーバーライドできます。
 
@@ -352,7 +352,7 @@ MFC で使用できる拡張のドッキング機能をサポートするウィ�
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CBasePane`クラス。 例からウィンドウを取得する方法を示します、`CFrameWndEx`クラスとドッキングのモード、ウィンドウの配置、およびウィンドウのスタイルを設定する方法。 コードは、 [Word パッド サンプル](../../visual-cpp-samples.md)します。
+`CBasePane` クラスのさまざまなメソッドの使用方法を次の例に示します。 例からウィンドウを取得する方法を示します、`CFrameWndEx`クラスとドッキングのモード、ウィンドウの配置、およびウィンドウのスタイルを設定する方法。 コードは、 [Word パッド サンプル](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 
@@ -366,7 +366,7 @@ MFC で使用できる拡張のドッキング機能をサポートするウィ�
 
 [CBasePane](../../mfc/reference/cbasepane-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxbasepane.h
 
@@ -1514,7 +1514,7 @@ virtual BOOL IsVisible() const;
 
 ### <a name="remarks"></a>Remarks
 
-ウィンドウの表示を指定するのにには、このメソッドを使用します。 `::IsWindowVisible` は使用しないでください。
+ウィンドウの表示を指定するのにには、このメソッドを使用します。 `::IsWindowVisible`は使用しないでください。
 
 ウィンドウがタブ付きなっていない場合 (を参照してください[CBasePane::IsTabbed](#istabbed))、WS_VISIBLE スタイルとしてこのメソッドを確認します。 場合は、ウィンドウのタブは、このメソッドは、親のタブ付きウィンドウの可視性をチェックします。 関数がウィンドウ タブを使用して表示状態をチェックする親ウィンドウが表示されている場合は、 [CMFCBaseTabCtrl::IsTabVisible](../../mfc/reference/cmfcbasetabctrl-class.md#istabvisible)します。
 
@@ -1643,7 +1643,8 @@ virtual void OnMovePaneDivider(CPaneDivider*);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*CPaneDivider\** 使用されません。
+*CPaneDivider\**<br/>
+[in]使用されません。
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu
 

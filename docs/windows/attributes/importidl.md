@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d1c022a48ef5510f67355af3af1ff0a0e98ad4c4
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: b46aa139ca26b163c69fedcd0f5c941f7e952a2d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791311"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073969"
 ---
 # <a name="importidl"></a>importidl
 
@@ -54,7 +54,7 @@ ms.locfileid: "48791311"
 [importidl("import.idl")];
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -65,7 +65,7 @@ ms.locfileid: "48791311"
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
@@ -74,4 +74,4 @@ ms.locfileid: "48791311"
 [import](import.md)<br/>
 [importlib](importlib.md)<br/>
 [include](include-cpp.md)<br/>
-[includelib](includelib-cpp.md)  
+[includelib](includelib-cpp.md)

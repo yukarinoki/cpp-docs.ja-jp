@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 77bcb8257fc6907b48330301cf009fa44f00578d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d28d909866808fbffb6165e552bf825bf1241771
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46082548"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069816"
 ---
 # <a name="postfix-expressions"></a>後置式
 
@@ -41,7 +41,7 @@ ms.locfileid: "46082548"
 次の構文は、可能な後置式について説明しています。
 
 ```
-primary-expression 
+primary-expression 
 postfix-expression[expression]postfix-expression(expression-list)simple-type-name(expression-list)postfix-expression.namepostfix-expression->namepostfix-expression++postfix-expression--cast-keyword < typename > (expression )typeid ( typename )
 ```
 
@@ -83,20 +83,20 @@ simple-type-name ( expression-list )
     Func( 7 );          // Execute function call
     ```
 
-     呼び出しの前の概念的な初期化は次のとおりです。
+   呼び出しの前の概念的な初期化は次のとおりです。
 
     ```cpp
     int Temp_i = 7;
     Func( Temp_i );
     ```
 
-     かっこ構文ではなく、等号構文を使用しているように初期化が実行されることに注意してください。 `i` のコピーは、関数に値を渡す前に作成されます (詳細については、次を参照してください。[初期化子](../cpp/initializers.md)と[変換](../cpp/user-defined-type-conversions-cpp.md))。
+   かっこ構文ではなく、等号構文を使用しているように初期化が実行されることに注意してください。 `i` のコピーは、関数に値を渡す前に作成されます (詳細については、次を参照してください。[初期化子](../cpp/initializers.md)と[変換](../cpp/user-defined-type-conversions-cpp.md))。
 
-     そのため、型の引数、関数プロトタイプ (宣言) を呼び出す場合**長い**、呼び出し元のプログラムの種類の実引数を提供する場合と**int**を使用して、実引数を昇格、型への標準の型変換**長い**(を参照してください[標準変換](../cpp/standard-conversions.md))。
+   そのため、型の引数、関数プロトタイプ (宣言) を呼び出す場合**長い**、呼び出し元のプログラムの種類の実引数を提供する場合と**int**を使用して、実引数を昇格、型への標準の型変換**長い**(を参照してください[標準変換](../cpp/standard-conversions.md))。
 
-     仮引数の型への標準変換またはユーザー定義変換がない実際の引数を指定するとエラーになります。
+   仮引数の型への標準変換またはユーザー定義変換がない実際の引数を指定するとエラーになります。
 
-     クラス型の実引数では、仮引数はクラスのコンストラクターを呼び出すことによって初期化されます (を参照してください[コンス トラクター](../cpp/constructors-cpp.md)の詳細については、これらの特殊クラス メンバー関数は)。
+   クラス型の実引数では、仮引数はクラスのコンストラクターを呼び出すことによって初期化されます (を参照してください[コンス トラクター](../cpp/constructors-cpp.md)の詳細については、これらの特殊クラス メンバー関数は)。
 
 - 関数呼び出しが実行されます。
 

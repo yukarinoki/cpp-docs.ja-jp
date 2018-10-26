@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e760bab6fb3ad420fc6fe0f5c8a2ea6addc652ac
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 597825c89b19c15872c831c675981e68345aa947
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46019426"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068224"
 ---
 # <a name="iobjectsafetyimpl-class"></a>IObjectSafetyImpl クラス
 
@@ -85,7 +85,7 @@ class IObjectSafetyImpl
 
 `IObjectSafetyImpl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlctl.h
 
@@ -94,7 +94,7 @@ class IObjectSafetyImpl
 現在設定されて、オブジェクトの安全性のオプションと同様に、オブジェクトでサポートされている安全性のオプションを取得します。
 
 ```
-HRESULT GetInterfaceSafetyOptions(  
+HRESULT GetInterfaceSafetyOptions(
     REFIID riid,
     DWORD* pdwSupportedOptions,
     DWORD* pdwEnabledOptions);
@@ -122,7 +122,7 @@ DWORD m_dwCurrentSafety;
 により、オブジェクトを設定してスクリプトまたは初期化の安全な[m_dwCurrentSafety](#m_dwcurrentsafety)適切な値のメンバー。
 
 ```
-HRESULT SetInterfaceSafetyOptions(  
+HRESULT SetInterfaceSafetyOptions(
     REFIID riid,
     DWORD dwOptionsSetMask,
     DWORD dwEnabledOptions);

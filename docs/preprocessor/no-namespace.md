@@ -16,33 +16,33 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a02919e1e96717c1accc6343ecff32a66968cbcc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e84cfad5a11c0d691c56e6e7ddcca17ea87e3f02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378821"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082922"
 ---
 # <a name="nonamespace"></a>no_namespace
-**C++ 固有の仕様**  
-  
-名前空間名がコンパイラによって生成されないことを指定します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-no_namespace  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 
-`#import` ヘッダー ファイルのタイプ ライブラリの内容は、通常、特定の名前空間で定義されます。 名前空間の名前がで指定された、`library`元の IDL ファイルのステートメント。 場合、 **no_namespace**属性を指定し、この名前空間は、コンパイラによって生成されません。  
-  
-別の名前空間の名前を使用する場合を使用し、 [rename_namespace](../preprocessor/rename-namespace.md)属性の代わりにします。  
-  
-**END C 固有の仕様**  
-  
-## <a name="see-also"></a>関連項目  
- 
+**C++ 固有の仕様**
+
+名前空間名がコンパイラによって生成されないことを指定します。
+
+## <a name="syntax"></a>構文
+
+```
+no_namespace
+```
+
+## <a name="remarks"></a>Remarks
+
+`#import` ヘッダー ファイルのタイプ ライブラリの内容は、通常、特定の名前空間で定義されます。 名前空間の名前がで指定された、`library`元の IDL ファイルのステートメント。 場合、 **no_namespace**属性を指定し、この名前空間は、コンパイラによって生成されません。
+
+別の名前空間の名前を使用する場合を使用し、 [rename_namespace](../preprocessor/rename-namespace.md)属性の代わりにします。
+
+**END C 固有の仕様**
+
+## <a name="see-also"></a>関連項目
+
 [#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

@@ -1,7 +1,7 @@
 ---
 title: SafeIntException クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 09/27/2018
+ms.date: 10/22/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -21,16 +21,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4ffd82f80b8af0b53ca86ca3daded84580e1e07b
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 2a1890bc20c0737007075656dcbefa20ad81a9bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068061"
 ---
 # <a name="safeintexception-class"></a>SafeIntException クラス
 
 `SafeInt`クラスで使用`SafeIntException`数学的な操作が完了できない理由を特定します。
+
+> [!NOTE]
+> このライブラリの最新バージョンは[ https://github.com/dcleblanc/SafeInt](https://github.com/dcleblanc/SafeInt)します。
 
 ## <a name="syntax"></a>構文
 
@@ -54,7 +57,7 @@ class SafeIntException;
 
 `SafeIntException`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** safeint.h
 
@@ -74,7 +77,7 @@ SafeIntException(
 
 ### <a name="parameters"></a>パラメーター
 
-*コード*<br/>
+*code*<br/>
 [in]発生したエラーを説明する列挙値。
 
 ### <a name="remarks"></a>Remarks

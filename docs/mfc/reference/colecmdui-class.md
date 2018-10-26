@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e9fe0365440823a394bee44d84bcecd6ed0b70c8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cb4d71f66add8e0462141acf74342c429eb81379
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439095"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071285"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI クラス
 
@@ -71,7 +71,7 @@ DocObjects については、次を参照してください。 [CDocObjectServer
 
 `COleCmdUI`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdocobj.h
 
@@ -150,6 +150,4 @@ virtual void SetText(LPCTSTR lpszText);
 
 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-
-
 

@@ -1,7 +1,7 @@
 ---
 title: 行セットで複数のアクセサーの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,12 +18,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 43fa36e0f5b79a6901c1294345f54386340c43ef
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: fb0eeb3a0a3c347c115cb05c2a35d221e6a94fe4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808460"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071045"
 ---
 # <a name="using-multiple-accessors-on-a-rowset"></a>行セットでの複数アクセサーの使用
 
@@ -37,7 +37,7 @@ ms.locfileid: "49808460"
 
 - **パフォーマンス。** このシナリオでは、大量のデータ、たとえば、グラフィック、サウンド、ファイルまたはビデオ ファイルを 1 つまたは複数の列であります。 行に移動するたびに可能性がありますしない大きなデータ ファイルを列を取得するため、これは、アプリケーションのパフォーマンスが低下はので。
 
-   最初のアクセサーに大きなデータは、1 つを除くすべての列が含まれていて、これらの列からデータを自動的に取得に別のアクセサーを設定することができます。最初のアクセサーは、自動アクセサーです。 2 番目のアクセサーは、大きなデータを格納している列のみを取得しますが、この列からデータを自動的に取得がありません。 その他のメソッドを更新またはオンデマンドで大規模なデータをフェッチすることができます。
+   最初のアクセサーに大きなデータは、1 つを除くすべての列が含まれていて、これらの列からデータを自動的に取得に別のアクセサーを設定することができます。最初のアクセサーは、自動アクセサーです。 2 番目のアクセサーは、大きなデータを保持している列のみを取得しますが、この列からデータを自動的に取得がありません。 その他のメソッドを更新またはオンデマンドで大規模なデータをフェッチすることができます。
 
    - アクセサー 0 は自動アクセサーです。大規模なデータを 1 つを除くすべての列を取得します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "49808460"
 
    アクセサーが自動アクセサーであるかどうかを指定するのにには、自動引数を使用します。
 
-- **複数の ISequentialStream 列。** 1 つ以上含む列がある場合、このシナリオで`ISequentialStream`データ。 ただし、各アクセサーが 1 つに制限は`ISequentialStream`データ ストリーム。 この問題を解決するを設定する複数のアクセサーでは、それぞれが 1 つ`ISequentialStream`ポインター。
+- **複数の ISequentialStream 列。** このシナリオでは、複数の列の保持した`ISequentialStream`データ。 ただし、各アクセサーが 1 つに制限は`ISequentialStream`データ ストリーム。 この問題を解決するを設定する複数のアクセサーでは、それぞれが 1 つ`ISequentialStream`ポインター。
 
 使用してアクセサーを作成する、 [BEGIN_ACCESSOR](../../data/oledb/begin-accessor.md)と[END_ACCESSOR](../../data/oledb/end-accessor.md)マクロ。 使用することも、 [db_accessor](../../windows/db-accessor.md)属性。 (アクセサーの詳細については[ユーザー レコード](../../data/oledb/user-records.md))。マクロまたは属性は、アクセサーが自動または非自動アクセサーがかどうかを指定します。
 

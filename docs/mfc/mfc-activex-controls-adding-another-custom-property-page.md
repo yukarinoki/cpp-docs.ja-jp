@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce81436781a92c8d2c9156e1d1c02513c3816dc4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1599500a775bcd1c76f2e63a1f7b20126a2fb329
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440057"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078207"
 ---
 # <a name="mfc-activex-controls-adding-another-custom-property-page"></a>MFC ActiveX コントロール : カスタム プロパティ ページの追加
 
@@ -65,7 +65,7 @@ ActiveX コントロールのプロパティ ページの使用に関する詳�
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**クラスの追加**します。
 
-     開き、[クラスの追加](../ide/add-class-dialog-box.md) ダイアログ ボックス。
+   開き、[クラスの追加](../ide/add-class-dialog-box.md) ダイアログ ボックス。
 
 1. ダブルクリックして、 **MFC クラス**テンプレート。
 
@@ -95,25 +95,25 @@ ActiveX コントロールのプロパティ ページの使用に関する詳�
 
 1. ダブルクリックして、**ストリング テーブル**フォルダーとダブルクリックして、既存の文字列テーブルの文字列を追加するリソース。
 
-     これは、ウィンドウで、文字列テーブルを開きます。
+   これは、ウィンドウで、文字列テーブルを開きます。
 
 1. 文字列のテーブルの末尾の空白行を選択し、テキスト、または文字列のキャプションを入力しますたとえば、"追加プロパティのページです。"。
 
-     開き、**文字列プロパティ**ページが表示された**キャプション**と**ID**ボックス。 **キャプション**ボックスに入力した文字列が含まれています。
+   開き、**文字列プロパティ**ページが表示された**キャプション**と**ID**ボックス。 **キャプション**ボックスに入力した文字列が含まれています。
 
 1. **ID**ボックス、選択するか、文字列の ID を入力します。 完了したら、Enter キーを押します。
 
-     この例では**として**新しいプロパティ ページの型の名前にします。
+   この例では**として**新しいプロパティ ページの型の名前にします。
 
 1. 手順 3 と 4 を使用して**IDS_SAMPLE_ADDPPG_CAPTION** ID とキャプションを「追加プロパティ ページ」にします。
 
 1. の。新しいプロパティ ページ クラスの CPP ファイル (この例で`CAddtlPropPage`) を変更、`CAddtlPropPage::CAddtlPropPageFactory::UpdateRegistry`としてがによって渡されるように[AfxOleRegisterPropertyPageClass](../mfc/reference/registering-ole-controls.md#afxoleregisterpropertypageclass)、次の例のように。
 
-     [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#33](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_2.cpp)]
 
 1. コンス トラクターを変更`CAddtlPropPage`IDS_SAMPLE_ADDPPG_CAPTION に渡されるように、`COlePropertyPage`コンス トラクターには、次のようにします。
 
-     [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
+   [!code-cpp[NVC_MFC_AxUI#34](../mfc/codesnippet/cpp/mfc-activex-controls-adding-another-custom-property-page_3.cpp)]
 
 プロジェクトをビルドし、新しいプロパティ ページをテストするテスト コンテナーを使用して、必要な変更が終了したら。 Test Container にアクセスする方法について詳しくは、「 [テスト コンテナーでのプロパティとイベントのテスト](../mfc/testing-properties-and-events-with-test-container.md) 」をご覧ください。
 

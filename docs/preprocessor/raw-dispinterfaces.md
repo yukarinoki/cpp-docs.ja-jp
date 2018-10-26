@@ -16,31 +16,31 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 02133e6b9d884fa8e0a175dd01845035ec8b96a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b89c1f549168a762b5ae095c4eacf5ddb1b4d053
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435949"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062354"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
-**C++ 固有の仕様**  
-  
-ディスパッチインターフェイス メソッドおよびプロパティを呼び出すための低レベルのラッパー関数を生成するようにコンパイラに指示`IDispatch::Invoke`し HRESULT エラー コードを返します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-raw_dispinterfaces  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 
-この属性を指定しない場合、高度なラッパーのみが生成され、エラーの場合は C++ 例外がスローされます。  
-  
-**END C 固有の仕様**  
-  
-## <a name="see-also"></a>関連項目  
- 
+**C++ 固有の仕様**
+
+ディスパッチインターフェイス メソッドおよびプロパティを呼び出すための低レベルのラッパー関数を生成するようにコンパイラに指示`IDispatch::Invoke`し HRESULT エラー コードを返します。
+
+## <a name="syntax"></a>構文
+
+```
+raw_dispinterfaces
+```
+
+## <a name="remarks"></a>Remarks
+
+この属性を指定しない場合、高度なラッパーのみが生成され、エラーの場合は C++ 例外がスローされます。
+
+**END C 固有の仕様**
+
+## <a name="see-also"></a>関連項目
+
 [#import の属性](../preprocessor/hash-import-attributes-cpp.md)<br/>
 [#import ディレクティブ](../preprocessor/hash-import-directive-cpp.md)

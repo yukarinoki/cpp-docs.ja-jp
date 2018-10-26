@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc19475cff0038d11131a26c36ab498a562b234c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 7e9ec6724addeb8002eeb681f289f232520f31dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236037"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060105"
 ---
 # <a name="hashmap-class"></a>hash_map クラス
 
@@ -230,7 +230,7 @@ hash_map クラスに用意されている反復子は双方向反復子です�
 |[operator&#91;&#93;](#op_at)|`hash_map` に、指定したキー値を持つ要素を挿入します。|
 |[hash_map::operator=](#op_eq)|別の `hash_map` のコピーで `hash_map` の要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<hash_map>
 
@@ -277,7 +277,6 @@ const Type& at(const Key& key) const;
 ### <a name="remarks"></a>Remarks
 
 引数のキー値が見つからない場合、この関数は、[out_of_range クラス](../standard-library/out-of-range-class.md) のオブジェクトをスローします。
-
 
 ### <a name="example"></a>例
 
@@ -2688,9 +2687,9 @@ hash_map が要素の並べ替えに使用する比較関数オブジェクト�
 
 ### <a name="remarks"></a>Remarks
 
-hash_map *m* について、2 つの要素 *e*1 *(k*1 *, d*1 *)* および *e*2 *(k*2 *, d*2 *)* が [value_type](#value_type) 型のオブジェクトである場合 (ここで *k*1 および *k*2 は [key_type](#key_type) 型のキーであり、`d`1 および `d`2 は [mapped_type](#mapped_type) 型のデータである)、*m.*`value_comp`*( )(e*1 *, e*2 *)* は *m.*`key_comp`*( ) (k*1 *, k*2 *)* と同等です。 格納されているオブジェクトは以下のメンバー関数を定義します。
+Hash_map の*m*場合は、2 つの要素*e1* (*k1*、 *d1*) と*e2* (*k2*、 *d2*) 型のオブジェクトは[value_type](#value_type)ここで、 *k1*と*k2* 型のキーがその[key_type](#key_type)と*d1*と*d2*は、データ型の[mapped_type](#mapped_type)、し`m.value_comp()(e1, e2)`と等価`m.key_comp()(k1, k2)`. 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **value_type&** `left`, **value_type&** `right`) **;**
+`bool operator(value_type& left, value_type& right);`
 
 これは、並べ替え順で `left` のキー値が `right` のキー値に先行しかつ等しくない場合に、**true** を返します。
 

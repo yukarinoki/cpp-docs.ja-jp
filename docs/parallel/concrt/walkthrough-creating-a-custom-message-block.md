@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f9391d99f75bdb5ac2191a65e525ce989aefcd6b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6c4e2f27a6f123d870e56750180a5b7d4ee624fc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421285"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066410"
 ---
 # <a name="walkthrough-creating-a-custom-message-block"></a>チュートリアル: カスタム メッセージ ブロックの作成
 
@@ -50,7 +50,7 @@ ms.locfileid: "46421285"
 
 メッセージ ブロックは、メッセージの送受信処理に参加します。 メッセージを送信するメッセージ ブロックと呼ばれる、*ソース ブロック*します。 メッセージを受信するメッセージ ブロックと呼ばれる、*ターゲット ブロック*します。 メッセージを送受信するメッセージ ブロックと呼ばれる、*伝達子ブロック*します。 エージェント ライブラリは、抽象クラスを使用して[concurrency::isource](../../parallel/concrt/reference/isource-class.md)ソース ブロックと抽象クラスを表す[concurrency::itarget](../../parallel/concrt/reference/itarget-class.md)ターゲット ブロックを表します。 ソースとして機能するメッセージ ブロックの型は `ISource` から派生します。ターゲットとして機能するメッセージ ブロックの型は `ITarget` から派生します。
 
-メッセージ ブロックの型は `ISource` および `ITarget` から直接派生させることもできますが、エージェント ライブラリには、メッセージ ブロックのすべての型に共通の大部分の機能を実行する 3 つの基底クラスが定義されています。これらの基底クラスによって、エラーの処理やメッセージ ブロックの接続などの操作が同時実行セーフに行われます。 [Concurrency::source_block](../../parallel/concrt/reference/source-block-class.md)クラスから派生`ISource`他のブロックにメッセージを送信します。 [Concurrency::target_block](../../parallel/concrt/reference/target-block-class.md)クラスから派生`ITarget`と他のブロックからメッセージを受信します。 [Concurrency::propagator_block](../../parallel/concrt/reference/propagator-block-class.md)クラスから派生`ISource`と`ITarget`と他のブロックにメッセージを送信しますが、他のブロックからメッセージを受信します。 メッセージ ブロックの動作に焦点を合わせることができるように、インフラストラクチャの細部の処理にはこれらの 3 つの基底クラスを使用することをお勧めします。
+メッセージ ブロックの型は `ISource` および `ITarget` から直接派生させることもできますが、エージェント ライブラリには、メッセージ ブロックのすべての型に共通の大部分の機能を実行する 3 つの基底クラスが定義されています。これらの基底クラスによって、エラーの処理やメッセージ ブロックの接続などの操作がコンカレンシー セーフに行われます。 [Concurrency::source_block](../../parallel/concrt/reference/source-block-class.md)クラスから派生`ISource`他のブロックにメッセージを送信します。 [Concurrency::target_block](../../parallel/concrt/reference/target-block-class.md)クラスから派生`ITarget`と他のブロックからメッセージを受信します。 [Concurrency::propagator_block](../../parallel/concrt/reference/propagator-block-class.md)クラスから派生`ISource`と`ITarget`と他のブロックにメッセージを送信しますが、他のブロックからメッセージを受信します。 メッセージ ブロックの動作に焦点を合わせることができるように、インフラストラクチャの細部の処理にはこれらの 3 つの基底クラスを使用することをお勧めします。
 
 `source_block`、`target_block`、および `propagator_block` の各クラスはテンプレートであり、ソース ブロックとターゲット ブロック間の接続 (リンク) を管理する型、およびメッセージの処理方法を管理する型でパラメーター化されます。 エージェント ライブラリは、リンクの管理を実行する 2 つの型を定義します。 [concurrency::single_link_registry](../../parallel/concrt/reference/single-link-registry-class.md)と[concurrency::multi_link_registry](../../parallel/concrt/reference/multi-link-registry-class.md)します。 `single_link_registry` クラスは、メッセージ ブロックを 1 つのソースまたは 1 つのターゲットにリンクできるようにします。 `multi_link_registry` クラスは、メッセージ ブロックを複数のソースまたは複数のターゲットにリンクできるようにします。 エージェント ライブラリは、メッセージの管理を実行する 1 つのクラスを定義します。 [concurrency::ordered_message_processor](../../parallel/concrt/reference/ordered-message-processor-class.md)します。 `ordered_message_processor` クラスは、メッセージ ブロックでメッセージを受信順に処理できるようにします。
 
@@ -92,19 +92,19 @@ ms.locfileid: "46421285"
 
 [!code-cpp[concrt-priority-buffer#2](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_3.h)]
 
-     The `priority_buffer` class stores `message` objects in a `priority_queue` object. These type specializations enable the priority queue to sort messages according to their priority. The priority is the first element of the `tuple` object.
+   `priority_buffer` クラスは、`message` オブジェクトに `priority_queue` オブジェクトを格納します。 このような型の特殊化によって、優先順位キューでメッセージが優先順位に従って並べ替えられるようになります。 優先順位は、`tuple` オブジェクトの最初の要素です。
 
 1. `concurrencyex` 名前空間で、`priority_buffer` クラスを宣言します。
 
 [!code-cpp[concrt-priority-buffer#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_4.h)]
 
-     The `priority_buffer` class derives from `propagator_block`. Therefore, it can both send and receive messages. The `priority_buffer` class can have multiple targets that receive messages of type `Type`. It can also have multiple sources that send messages of type `tuple<PriorityType, Type>`.
+   `priority_buffer` クラスは `propagator_block` から派生したものです。 したがって、メッセージを送信することも受信することもできます。 `priority_buffer` クラスは、`Type` 型のメッセージを受信する複数のターゲットを持つことができます。 さらに、`tuple<PriorityType, Type>` 型のメッセージを送信する複数のソースを持つことができます。
 
 1. `private` クラスの `priority_buffer` セクションに、次のメンバー変数を追加します。
 
 [!code-cpp[concrt-priority-buffer#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_5.h)]
 
-     The `priority_queue` object holds incoming messages; the `queue` object holds outgoing messages. A `priority_buffer` object can receive multiple messages simultaneously; the `critical_section` object synchronizes access to the queue of input messages.
+   `priority_queue` オブジェクトは受信メッセージを保持し、`queue` オブジェクトは送信メッセージを保持します。 `priority_buffer` オブジェクトは、複数のメッセージを同時に受信できます。`critical_section` オブジェクトは、入力メッセージのキューへのアクセスを同期します。
 
 1. `private` セクションで、コピー コンストラクターと代入演算子を定義します。 これにより、`priority_queue` オブジェクトが割り当て可能になるのを防ぎます。
 
@@ -122,65 +122,65 @@ ms.locfileid: "46421285"
 
 [!code-cpp[concrt-priority-buffer#9](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_9.h)]
 
-     The `propagate_to_any_targets` method transfers the message that is at the front of the input queue to the output queue and propagates out all messages in the output queue.
+   `propagate_to_any_targets` メソッドは、入力キューの先頭にあるメッセージを出力キューに転送し、出力キュー内のすべてのメッセージを伝達します。
 
 10. `protected` セクションで、`accept_message` メソッドを定義します。
 
 [!code-cpp[concrt-priority-buffer#8](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_10.h)]
 
-     When a target block calls the `accept_message` method, the `priority_buffer` class transfers ownership of the message to the first target block that accepts it. (This resembles the behavior of `unbounded_buffer`.)
+   ターゲット ブロックから `accept_message` メソッドが呼び出されたとき、`priority_buffer` クラスは、メッセージを最初に受け入れるターゲット ブロックにそのメッセージの所有権を譲渡します  (この動作は `unbounded_buffer` の動作と似ています)。
 
 11. `protected` セクションで、`reserve_message` メソッドを定義します。
 
 [!code-cpp[concrt-priority-buffer#10](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_11.h)]
 
-     The `priority_buffer` class permits a target block to reserve a message when the provided message identifier matches the identifier of the message that is at the front of the queue. In other words, a target can reserve the message if the `priority_buffer` object has not yet received an additional message and has not yet  propagated out the current one.
+   `priority_buffer` クラスは、指定されたメッセージ識別子とキューの先頭にあるメッセージの識別子が一致する場合に、ターゲット ブロックでメッセージを予約できるようにします。 つまり、`priority_buffer` オブジェクトがまだ追加のメッセージを受信しておらず、現在のメッセージも伝達していない場合、ターゲットはメッセージを予約できます。
 
 12. `protected` セクションで、`consume_message` メソッドを定義します。
 
 [!code-cpp[concrt-priority-buffer#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_12.h)]
 
-     A target block calls `consume_message` to transfer ownership of the message that it reserved.
+   ターゲット ブロックは、予約したメッセージの所有権を譲渡するために `consume_message` を呼び出します。
 
 13. `protected` セクションで、`release_message` メソッドを定義します。
 
 [!code-cpp[concrt-priority-buffer#12](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_13.h)]
 
-     A target block calls `release_message` to cancel its reservation to a message.
+   ターゲット ブロックは、メッセージの予約を取り消すために `release_message` を呼び出します。
 
 14. `protected` セクションで、`resume_propagation` メソッドを定義します。
 
 [!code-cpp[concrt-priority-buffer#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_14.h)]
 
-     The runtime calls `resume_propagation` after a target block either consumes or releases a reserved message. This method propagates out any messages that are in the output queue.
+   ターゲット ブロックが予約済みのメッセージを処理または解放すると、ランタイムは `resume_propagation` を呼び出します。 このメソッドは、出力キュー内のすべてのメッセージを伝達します。
 
 15. `protected` セクションで、`link_target_notification` メソッドを定義します。
 
 [!code-cpp[concrt-priority-buffer#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_15.h)]
 
-     The `_M_pReservedFor` member variable is defined by the base class, `source_block`. This member variable points to the target block, if any, that is holding a reservation to the message that is at the front of the output queue. The runtime calls `link_target_notification` when a new target is linked to the `priority_buffer` object. This method propagates out any messages that are in the output queue if no target is holding a reservation.
+   `_M_pReservedFor` メンバー変数は、`source_block` 基底クラスによって定義されます。 このメンバー変数は、出力キューの先頭にあるメッセージの予約を保持しているターゲット ブロック (存在する場合) を指します。 新しいターゲットが `link_target_notification` オブジェクトにリンクされると、ランタイムは `priority_buffer` を呼び出します。 このメソッドは、ターゲットが予約を保持していない場合に、出力キュー内のすべてのメッセージを伝達します。
 
 16. `private` セクションで、`propagate_priority_order` メソッドを定義します。
 
 [!code-cpp[concrt-priority-buffer#15](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_16.h)]
 
-     This method propagates out all messages from the output queue. Every message in the queue is offered to every target block until one of the target blocks accepts the message. The `priority_buffer` class preserves the order of the outgoing messages. Therefore, the first message in the output queue must be accepted by a target block before this method offers any other message to the target blocks.
+   このメソッドは、出力キュー内のすべてのメッセージを伝達します。 ターゲット ブロックの 1 つがメッセージを受け入れるまで、キュー内の各メッセージが各ターゲット ブロックに提供されます。 `priority_buffer` クラスは、送信メッセージの順序を保持しています。 そこで、このメソッドでは、出力キュー内の最初のメッセージがいずれかのターゲット ブロックによって受け入れられるまで、他のメッセージをターゲット ブロックに提供しないようにします。
 
 17. `protected` セクションで、`propagate_message` メソッドを定義します。
 
 [!code-cpp[concrt-priority-buffer#16](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_17.h)]
 
-     The `propagate_message` method enables the `priority_buffer` class to act as a message receiver, or target. This method receives the message that is offered by the provided source block and inserts that message into the priority queue. The `propagate_message` method then asynchronously sends all output messages to the target blocks.
+   `propagate_message` メソッドは、`priority_buffer` クラスがメッセージの受信側 (つまりターゲット) として機能するようにします。 このメソッドは、指定されたソース ブロックから提供されたメッセージを受信し、そのメッセージを優先順位キューに挿入します。 その後、`propagate_message` メソッドは、すべての出力メッセージをターゲット ブロックに非同期的に送信します。
 
-     The runtime calls this method when you call the [concurrency::asend](reference/concurrency-namespace-functions.md#asend) function or when the message block is connected to other message blocks.
+   呼び出すと、ランタイムはこのメソッドを呼び出して、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)関数または他のメッセージ ブロックにメッセージ ブロックを接続するとき。
 
 18. `protected` セクションで、`send_message` メソッドを定義します。
 
 [!code-cpp[concrt-priority-buffer#17](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-a-custom-message-block_18.h)]
 
-     The `send_message` method resembles `propagate_message`. However it sends the output messages synchronously instead of asynchronously.
+   `send_message` メソッドは `propagate_message` と似ています。 ただし、このメソッドは、非同期的にではなく同期的に出力メッセージを送信します。
 
-     The runtime calls this method during a synchronous send operation, such as when you call the [concurrency::send](reference/concurrency-namespace-functions.md#send) function.
+   ランタイムが呼び出す場合などの同期送信操作中にこのメソッドを呼び出す、 [concurrency::send](reference/concurrency-namespace-functions.md#send)関数。
 
 `priority_buffer` クラスには、多くのメッセージ ブロックの型に共通のコンストラクター オーバーロードが含まれています。 一部のコンス トラクター オーバー ロード[concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)または[concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクトで、特定のタスク スケジューラで管理するためのメッセージ ブロックを有効にします。 フィルター関数を受け取るコンストラクター オーバーロードもあります。 フィルター関数を使用すると、メッセージ ブロックでのメッセージの受け入れまたは拒否をメッセージ ペイロードに基づいて行うことができます。 メッセージ フィルターの詳細については、次を参照してください。[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)します。 タスク スケジューラに関する詳細については、次を参照してください。[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
 

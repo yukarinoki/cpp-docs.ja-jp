@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b205be3c2417453faa54c9d24ac28216ee0af5cf
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 447a03cec8beba331aedc8077a44dc9090fccbc6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46060536"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078532"
 ---
 # <a name="new-and-delete-operators"></a>new および delete 演算子
 
@@ -45,7 +45,6 @@ char *pch = new char[BUFFER_SIZE];
 要求がゼロ バイトのストレージの場合**new 演算子**別のオブジェクトへのポインターを返します (つまりへの呼び出しを繰り返す**new 演算子**異なるポインターが返されます)。 メモリ不足のため、割り当て要求がある場合**演算子 new** 、std::bad_alloc 例外をスローするかを返します**nullptr**スローしないでリンクしている場合**演算子 new**をサポートします。
 
 メモリを解放して、割り当てを再試行しようとするルーチンを記述することができます。参照してください[_set_new_handler](../c-runtime-library/reference/set-new-handler.md)詳細についてはします。 復旧方法の詳細については、このトピックの処理が不足しているメモリのセクションを参照してください。
-
 
 2 つのスコープの**演算子 new**関数は次の表で説明します。
 

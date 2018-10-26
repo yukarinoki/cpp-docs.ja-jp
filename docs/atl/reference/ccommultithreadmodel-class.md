@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6861f19e6b785ac72edec54577b92dea0c307bff
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 85d36b329a28ddac09e981fa9ca0a01cb8b0bedf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46100605"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060378"
 ---
 # <a name="ccommultithreadmodel-class"></a>CComMultiThreadModel クラス
 
@@ -71,7 +71,7 @@ S = `CComSingleThreadModel`;M = `CComMultiThreadModel`
 
 `CComMultiThreadModel` 3 つの定義自体**typedef**名。 `AutoCriticalSection` `CriticalSection`の取得と、クリティカル セクションの所有権を解放するメソッドを提供するクラスを参照します。 `ThreadModelNoCS` 参照クラス [CComMultiThreadModelNoCS(ccommultithreadmodelnocs-class.md) します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
@@ -115,7 +115,7 @@ public:
    }
    ULONG InternalRelease()
    {
-      return _ThreadModel::Decrement(&m_dwRef);   
+      return _ThreadModel::Decrement(&m_dwRef);
    }
    void Lock() { m_critsec.Lock( ); }
    void Unlock() { m_critsec.Unlock(); }

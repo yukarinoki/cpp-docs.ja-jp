@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d8ba772b03399b820a04c4f2601f2ab5b357a63f
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 7aa11ada46f74c3e2a7293c65151b1f1ede7255e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791994"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080092"
 ---
 # <a name="switchtype"></a>switch_type
 
@@ -68,7 +68,7 @@ struct SizedValue2 {
 
 参照してください、[ケース](case-cpp.md)の使用サンプルの例を**switch_type**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -79,10 +79,10 @@ struct SizedValue2 {
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [IDL 属性](idl-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
-[export](export.md)  
+[export](export.md)

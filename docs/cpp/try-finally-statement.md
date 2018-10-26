@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94a250862f5514f290043bf596ba19bf0834e71e
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4040f5a05f8c9bccfbf1c8b48a40188f684d48ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49161659"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060014"
 ---
 # <a name="try-finally-statement"></a>try-finally ステートメント
 
@@ -44,7 +44,7 @@ ms.locfileid: "49161659"
 次の構文について説明します、 **、try-finally**ステートメント。
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -73,7 +73,7 @@ __finally {
 
 1. 後に実行が続行、終了ハンドラーが完了したら、 **_ _finally**ステートメント。 セクションが終了を保護する方法にかかわらず (経由など、 **goto**本体外のまたは**返す**ステートメント)、終了ハンドラーが実行される*する前に*制御フローが保護されたセクション外へ移動します。
 
-     A **_ _finally**ステートメントは、適切な例外ハンドラーの検索をブロックしません。
+   A **_ _finally**ステートメントは、適切な例外ハンドラーの検索をブロックしません。
 
 例外が発生した場合、 **_ _try**ブロック、例外のハンドラーを見つける必要があります、オペレーティング システムまたはプログラムは失敗します。 ハンドラーが見つかった場合、すべて **_ _finally**ブロックが実行され、ハンドラーの実行が再開します。
 

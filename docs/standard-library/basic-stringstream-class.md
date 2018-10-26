@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60a12c18ec4e174087900f7386d948ea3ab16a89
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e7d874902b4bf3c92eaa3a5b3a5ac07ee19a0ef3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102487"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068878"
 ---
 # <a name="basicstringstream-class"></a>basic_stringstream クラス
 
@@ -61,7 +61,7 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 |-|-|
 |[basic_stringstream](#basic_stringstream)|`basic_stringstream` 型のオブジェクトを構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -74,7 +74,7 @@ class basic_stringstream : public basic_iostream<Elem, Tr>
 |[rdbuf](#rdbuf)|型 `pointer` の格納されたストリーム バッファーのアドレスを [basic_stringbuf](../standard-library/basic-stringbuf-class.md)< `Elem`, `Tr`, `Alloc`> に返します。|
 |[str](#str)|文字列バッファー内のテキストを設定または取得します。書き込み位置は変更しません。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<sstream>
 
@@ -134,7 +134,6 @@ basic_stringbuf<Elem, Tr, Alloc> *rdbuf() const;
 
 ```cpp
 basic_string<Elem, Tr, Alloc> str() const;
-
 
 void str(
     const basic_string<Elem, Tr, Alloc>& _Newstr);

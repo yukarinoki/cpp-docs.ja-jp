@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5e11e1ce061fcf2e9ce21155dcbeb93b45b66238
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 520b9bf8d6a71593acd95ebaac98a72036fcabf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070024"
 ---
 # <a name="emitidl"></a>emitidl
 
@@ -49,7 +49,8 @@ ms.locfileid: "48791738"
 
 - `push` 現在を保存することができます**emitidl**内部へ設定**emitidl**スタック、および`pop`設定できます**emitidl**にどのような値は、内部の上部にある、**emitidl**スタック。
 
-`defaultimports=`*ブール*\(省略可能)  
+`defaultimports=`*ブール*\(省略可能)
+
 - 場合*ブール*は**true**docobj.idl が生成された .idl ファイルにインポートされます。 また、.idl ファイルと同じ名前、.h ファイルする場合`#include`、.h ファイルと同じディレクトリ内に、ソース コードが見つかった後、その .idl ファイルの import ステートメントが生成された .idl ファイルに含まれています。
 
 - 場合*ブール*は**false**docobj.idl が生成された .idl ファイルにインポートされていません。 .Idl ファイルを明示的にインポートする必要があります[インポート](import.md)します。
@@ -62,7 +63,7 @@ ms.locfileid: "48791738"
 
 コンパイラが、新しいファイルを検出するたびに**emitidl**に暗黙的に設定されている**true**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -73,9 +74,9 @@ ms.locfileid: "48791738"
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
-詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [コンパイラ属性](compiler-attributes.md)<br/>
-[スタンドアロン属性](stand-alone-attributes.md)  
+[スタンドアロン属性](stand-alone-attributes.md)

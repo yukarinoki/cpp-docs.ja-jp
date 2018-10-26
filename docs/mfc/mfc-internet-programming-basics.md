@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7134ea1a822fa61ec0d82592145f1fd3c5ecc6aa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b2be02e6cac5dac226f7b04cd627a292e3761980
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418308"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082678"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC インターネット プログラミングの基礎
 
@@ -91,6 +91,4 @@ MFC は、インターネット プログラミングをサポートするクラ
 Windows SDK の OLE セクションには、OLE プログラミングに関する追加情報が含まれています。 この情報は、MFC クラスではなく、直接、WinInet の Win32 関数の使用方法の詳細を説明します。 インターネット テクノロジに関する概要情報も含まれています。
 
 ## <a name="see-also"></a>関連項目
-
-
 
