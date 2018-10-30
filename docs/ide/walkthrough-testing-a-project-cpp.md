@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 133214cceebf5d43610207e446698341d7803b71
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 56614dc0829834e77cfdf10d8d88ed44492237e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235543"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070141"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>チュートリアル: プロジェクトのテスト (C++)
 
@@ -41,7 +41,7 @@ ms.locfileid: "48235543"
 
 1. 次のコード行を選択します。
 
-     `Cardgame.solitaire(1);`
+   `Cardgame.solitaire(1);`
 
 1. その行にブレークポイントを設定するには、メニュー バーで **[デバッグ]** > **[ブレークポイントの設定/解除]** の順に選択するか、**F9** キーを押します。 赤い円が行の左側に表示されて、その行にブレークポイントが設定されていることを示します。 ブレークポイントを削除するには、もう一度メニュー コマンドを選択するか **F9** キーを押します。
 

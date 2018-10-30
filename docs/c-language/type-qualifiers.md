@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ecac60a1b9cbd2758090e52d917c7a65259d62d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4dc0fd45887975c9b50cee141b0c6e8faca33513
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094391"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083244"
 ---
 # <a name="type-qualifiers"></a>型修飾子
 
@@ -69,7 +69,7 @@ int volatile vint;     /* Volatile integer        */
 
 - プログラムのどの時点でも、未知のプロセスが `volatile` 変数にアクセスし、その値を使用または変更できると見なされます。 したがって、コマンド ラインで指定した最適化にかかわらず、`volatile` 変数に値を割り当てたり参照したりするコードが必ず (それが何も影響しない場合でも) 生成されます。
 
-     `volatile` を単独で使用した場合、`int` を指定したと見なされます。 `volatile` 型指定子を使用すれば、特別なメモリ位置へ確実にアクセスできます。 シグナル ハンドラー、同時実行のプログラム、または特殊なハードウェア (メモリ マップト I/O 制御レジスタなど) がアクセスまたは変更できるデータ オブジェクトで `volatile` を使用します。 変数が有効な間だけ `volatile` として宣言するか、または 1 つの参照を `volatile` にキャストできます。
+   `volatile` を単独で使用した場合、`int` を指定したと見なされます。 `volatile` 型指定子を使用すれば、特別なメモリ位置へ確実にアクセスできます。 シグナル ハンドラー、同時実行のプログラム、または特殊なハードウェア (メモリ マップト I/O 制御レジスタなど) がアクセスまたは変更できるデータ オブジェクトで `volatile` を使用します。 変数が有効な間だけ `volatile` として宣言するか、または 1 つの参照を `volatile` にキャストできます。
 
 - 項目は **const** と `volatile` の両方であってもかまいません。その場合、自身のプログラムではその項目を変更できませんが、非同期のプロセスでは変更できます。
 
