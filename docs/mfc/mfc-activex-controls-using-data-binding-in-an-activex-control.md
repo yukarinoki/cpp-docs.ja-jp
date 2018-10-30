@@ -24,19 +24,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 397356f8144e3680f3b2d19824d19c0a3bbaddd1
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 5a02330d938e1952d3e6b547d49ddb551bf594a5
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50062614"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204588"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるデータ バインディングの使用
 
 ActiveX コントロールのより強力な用途の 1 つは、データ バインディングは、データベース内の特定のフィールドにバインドするコントロールのプロパティを使用します。 ユーザーは、このバインドのプロパティ内のデータを変更するとき、コントロールは、データベースとレコードのフィールドを更新する要求を通知します。 データベースでは、成功のコントロールまたは要求の失敗が通知します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 この記事では、コントロール側でのタスクについて説明します。 データベースとの相互作用をデータ バインディングの実装は、コントロール コンテナーの責任です。 コンテナー内のデータベースとのやり取りを管理する方法はこのドキュメントの範囲外です。 データ バインド コントロールを準備する方法については、この記事の残りの部分で説明します。
 

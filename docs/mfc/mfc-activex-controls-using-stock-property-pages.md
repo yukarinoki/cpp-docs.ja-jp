@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6fadc159f0924c3714616778cd1fd148b5ff0e84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc7957e69821a409d5ad56bd10c222cbe85fbc54
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423091"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204406"
 ---
 # <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX コントロール : ストック プロパティ ページの使用
 
 この記事では、ストック プロパティ ページを使用できる ActiveX コントロールとその使用方法について説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 ActiveX コントロールのプロパティ ページの使用に関する詳細については、次の記事を参照してください。
 

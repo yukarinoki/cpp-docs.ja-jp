@@ -26,19 +26,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7cd03babd97033495ecfa84817938103cde05a73
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 893d388975bf224a1444a233899ae3898d41865a
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081707"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204640"
 ---
 # <a name="mfc-activex-controls-subclassing-a-windows-control"></a>MFC ActiveX コントロール : Windows コントロールのサブクラス化
 
 この記事では、ActiveX コントロールを作成する一般的な Windows コントロールをサブクラス化するプロセスについて説明します。 既存の Windows をサブクラス化コントロールは ActiveX コントロールを開発する簡単な方法を示します。 新しいコントロールは、Windows のサブクラス化されたコントロールの描画、マウスのクリックに応答してなどの機能があります。 MFC ActiveX コントロールをサンプル[ボタン](../visual-cpp-samples.md)Windows コントロールをサブクラス化の例を示します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 Windows コントロールをサブクラス化するには、次のタスクを行います。
 

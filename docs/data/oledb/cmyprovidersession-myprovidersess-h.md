@@ -22,12 +22,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 8873247ee54884236ed3472c345fb15b99e97131
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 50576d93d8b86a070b928d62662a212d957e5c79
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076686"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216319"
 ---
 # <a name="ccustomsession-customsessh"></a>CCustomSession (CustomSess.H)
 
@@ -36,7 +36,7 @@ ms.locfileid: "50076686"
 ```cpp
 /////////////////////////////////////////////////////////////////////////
 // CCustomSession
-class ATL_NO_VTABLE CCustomSession :
+class ATL_NO_VTABLE CCustomSession : 
    public CComObjectRootEx<CComSingleThreadModel>,
    public IGetDataSourceImpl<CCustomSession>,
    public IOpenRowsetImpl<CCustomSession>,
@@ -46,12 +46,12 @@ class ATL_NO_VTABLE CCustomSession :
    public IDBCreateCommandImpl<CCustomSession, CCustomCommand>
 ```
 
-セッション オブジェクトから継承`IGetDataSource`、 `IOpenRowset`、 `ISessionProperties`、および`IDBCreateCommand`します。 `IGetDataSource`インターフェイスでは、セッションを作成したデータ ソースを取得できます。 これは、作成したデータ ソースまたはデータ ソースを提供するその他の情報のプロパティを取得する必要がある場合に便利です。 `ISessionProperties`インターフェイスは、セッションのすべてのプロパティを処理します。 `IOpenRowset`と`IDBCreateCommand`インターフェイスは、データベース処理のために使用します。 実装されているプロバイダーでは、コマンドをサポートするか、`IDBCreateCommand`インターフェイス。 コマンドを実行できるコマンド オブジェクトの作成に使用されます。 常に、プロバイダーを実装する、`IOpenRowset`オブジェクト。 プロバイダーからの単純な行セットの生成に使用されます。 既定の行セットが (たとえば、 `"select * from mytable"`) プロバイダーからです。
+セッション オブジェクトから継承`IGetDataSource`、 `IOpenRowset`、 `ISessionProperties`、および`IDBCreateCommand`します。 `IGetDataSource`インターフェイスでは、セッションを作成したデータ ソースを取得できます。 これは、作成したデータ ソースまたはデータ ソースを提供するその他の情報のプロパティを取得する必要がある場合に便利です。 `ISessionProperties`インターフェイスは、セッションのすべてのプロパティを処理します。 `IOpenRowset`と`IDBCreateCommand`インターフェイスは、データベース処理のために使用します。 実装されているプロバイダーでは、コマンドをサポートするか、`IDBCreateCommand`インターフェイス。 コマンドを実行できるコマンド オブジェクトの作成に使用されます。 常に、プロバイダーを実装する、`IOpenRowset`オブジェクト。 プロバイダーからの行セットの生成に使用されます。 既定の行セットが (たとえば、 `"select * from mytable"`) プロバイダーからです。
 
-ウィザードでは、次の 3 つのセッション クラスも生成されます: `CCustomSessionColSchema`、 `CCustomSessionPTSchema`、および`CCustomSessionTRSchema`します。 スキーマ行セットでは、これらのセッションが使用されます。 スキーマ行セットには、プロバイダーがコンシューマーのデータのクエリまたはフェッチを実行することがなく、コンシューマーにメタデータを返すことができるようにします。 メタデータをフェッチは、プロバイダーの機能を検出するよりも高速に実行できます。
+ウィザードでは、次の 3 つのセッション クラスも生成されます: `CCustomSessionColSchema`、 `CCustomSessionPTSchema`、および`CCustomSessionTRSchema`します。 スキーマ行セットでは、これらのセッションが使用されます。 スキーマ行セットには、プロバイダーがコンシューマーのデータのクエリまたはフェッチを実行することがなく、コンシューマーにメタデータを返すことができるようにします。 メタデータをフェッチしていますが、プロバイダーの機能の検索よりも高速に実行できます。
 
-OLE DB 仕様では、する必要がありますを実装するプロバイダー、`IDBSchemaRowset`インターフェイス サポートの 3 つのスキーマ行セットの種類: DBSCHEMA_COLUMNS、DBSCHEMA_PROVIDER_TYPES、および DBSCHEMA_TABLES します。 ウィザードでは、各スキーマ行セットの実装を生成します。 ウィザードによって生成される各クラスが含まれています、`Execute`メソッド。 この`Execute`メソッドをサポートするどのテーブル、列、およびデータ型について、プロバイダーにデータを返すことができます。 このデータは通常、コンパイル時に呼ばれます。
+OLE DB 仕様では、する必要がありますを実装するプロバイダー、`IDBSchemaRowset`インターフェイス サポートの 3 つのスキーマ行セットの種類: DBSCHEMA_COLUMNS、DBSCHEMA_PROVIDER_TYPES、および DBSCHEMA_TABLES します。 ウィザードでは、各スキーマ行セットの実装を生成します。 ウィザードによって生成される各クラスが含まれています、`Execute`メソッド。 この`Execute`メソッドをサポートするどのテーブル、列、およびデータ型について、プロバイダーにデータを返すことができます。 このデータは、コンパイル時に呼ばれます。
 
 ## <a name="see-also"></a>関連項目
 
-[プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)
+[プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)<br/>

@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37119934a70f8a68d32ed83699fa6deb012d8879
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bc12be2b7d3e25059333d4f22bd2d8eb458b959c
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404437"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204393"
 ---
 # <a name="creating-an-mfc-activex-control-container"></a>MFC ActiveX コントロール コンテナーの作成
 
 ActiveX コントロール コンテナーは、実行する (旧 OLE) の ActiveX コントロール用の環境を提供する親プログラムです。 対応の有無にかかわらず、MFC ActiveX コントロールを含むアプリケーションを作成することができますより簡単に MFC を行います。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](../activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](../activex-controls.md)します。
 
 MFC プログラムを使用してコンテナーを作成、 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)MFC と ActiveX クラスによって実装されている ActiveX コントロールと自動化の多くの機能にアクセスすることができます。 これらの機能は、ビジュアル編集、自動化、複合ファイルを作成して、コントロールのサポートします。 親プログラムをサポートする MFC アプリケーション ウィザードのビジュアル編集オプションには、コンテナー、ミニ サーバー、フル サーバー、およびコンテナーとサーバーの両方のプログラムの作成が含まれます。
 

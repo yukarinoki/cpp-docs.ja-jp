@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccf2da630c72962ee3e74badc250de5cce5f14e2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 09a4cdccf92df9681a85a03369ad0ba1792a6b25
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407154"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204731"
 ---
 # <a name="mfc-activex-control-wizard"></a>MFC ActiveX コントロール ウィザード
 
 ActiveX コントロールは、特定の種類の[オートメーション サーバー](../../mfc/automation-servers.md);、再利用可能なコンポーネントです。 ActiveX コントロールをホストするアプリケーションは、[オートメーション クライアント](../../mfc/automation-clients.md)を制御するのです。 場合は、目的が、このような再利用可能なコンポーネントを作成するには、コントロールを作成するこのウィザードを使用します。 参照してください[MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)詳細についてはします。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](../activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](../activex-controls.md)します。
 
 オートメーション サーバー MFC を使用するアプリケーションを作成する代わりに、 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)します。
 

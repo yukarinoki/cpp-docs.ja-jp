@@ -19,19 +19,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 075804ae82d2e8431bef97d656aeee212feb6757
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1c59d9d3e2a838c2b3933d49454a494ab6c7a290
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073800"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204432"
 ---
 # <a name="win32-internet-classes"></a>Win32 インターネット クラス
 
 MFC は、インターネット プログラミングを簡単には、Win32 のインターネット (WinInet) と ActiveX テクノロジをラップします。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 [CInternetSession](../mfc/reference/cinternetsession-class.md)<br/>
 作成しインターネット セッションを 1 つまたは複数の同時インターネット セッションを初期化し、必要に応じて、プロキシ サーバーへの接続をについて説明します。

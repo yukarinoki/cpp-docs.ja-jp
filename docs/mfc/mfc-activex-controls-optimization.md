@@ -24,19 +24,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4864e0be8ef49541cc59474bdb24c2ef25840007
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a583b0b70473698963841a3bd9c84c79472eb529
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441201"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204445"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX コントロール : 最適化
 
 この記事では、パフォーマンス向上のため、ActiveX コントロールを最適化するために使用できる手法について説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 トピックでは、[にすることから、アクティブ化表示時にオプション](../mfc/turning-off-the-activate-when-visible-option.md)と[を提供するマウス操作中に非アクティブな](../mfc/providing-mouse-interaction-while-inactive.md)をアクティブ化されるまでウィンドウを作成しないコントロールについて説明します。 トピック[ウィンドウなしのアクティベーション](../mfc/providing-windowless-activation.md)アクティブにしている場合でも、ウィンドウを作成しないコントロールについて説明します。
 

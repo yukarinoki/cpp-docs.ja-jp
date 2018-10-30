@@ -22,19 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0567913eac57c4150f9fe6d051d2fc8e0e31860b
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 48fee88dc991ff58bfb9178e370134ad3cdb11d8
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50082932"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204627"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>既存の ActiveX コントロールのアップグレード
 
 既存の ActiveX コントロール (以前の OLE コントロール) 変更しなくても、インターネットで使用できます。 ただし、それぞれのパフォーマンスを向上させるためにコントロールを変更することがあります。
 
 > [!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 Web ページ上にコントロールを使用する場合は、追加の考慮事項です。 .Ocx ファイルとすべてのサポート ファイルは、ターゲット コンピューターである必要がありますか、インターネット経由でダウンロードします。 これにより、コードのサイズと時間の重要な考慮事項をダウンロードします。 ダウンロードは、署名された .cab ファイルにパッケージ化することができます。 コントロール、スクリプトの安全性および初期化に対して安全としてマークできます。
 

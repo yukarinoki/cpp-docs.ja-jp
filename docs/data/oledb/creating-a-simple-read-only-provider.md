@@ -1,7 +1,7 @@
 ---
 title: 単純な読み取り専用プロバイダーの作成 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: b32517e8254f383e624c5262f3a806e66ed28824
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c8fd4e5eb25ab1e8e6b20b576a0688da7b5aa2ef
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50056257"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216397"
 ---
 # <a name="creating-a-simple-read-only-provider"></a>単純な読み取り専用プロバイダーの作成
 
-ATL プロジェクト ウィザードと ATL OLE DB プロバイダー ウィザードを使用して OLE DB プロバイダーを作成するときは、サポートするその他の機能を追加できます。 どのような条件下でコンシューマーに送信するデータの種類を調べることで、プロバイダーのデザインを開始します。 これは、機能は、コマンド、トランザクション、およびその他の省略可能なオブジェクトをサポートするために必要かどうかを判断するは特に重要です。 実装とテスト、前もって優れたデザインが短縮されます。
+使用する OLE DB プロバイダーを作成した場合、 **ATL プロジェクト ウィザード**と**ATL OLE DB プロバイダー ウィザード**をサポートするその他の機能を追加することができます。 送信してどのような条件下でコンシューマーにデータの種類を調べることで、プロバイダーのデザインを開始します。 これは、機能は、コマンド、トランザクション、およびその他の省略可能なオブジェクトをサポートするために必要かどうかを判断するは特に重要です。 実装とテスト、前もって優れたデザインが短縮されます。
 
 2 つの部分では、例では、表示されます。
 
@@ -35,4 +35,4 @@ ATL プロジェクト ウィザードと ATL OLE DB プロバイダー ウィ�
 
 ## <a name="see-also"></a>関連項目
 
-[OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)
+[OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)<br/>

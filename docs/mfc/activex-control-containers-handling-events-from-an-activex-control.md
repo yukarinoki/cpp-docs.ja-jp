@@ -21,19 +21,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 913bc04533668e6576a84641937992504f49390a
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 2b7e01fec89ffa625f785cc72aff4d94a9c1b489
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50080079"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204380"
 ---
 # <a name="activex-control-containers-handling-events-from-an-activex-control"></a>ActiveX コントロール コンテナー : ActiveX コントロールで発生したイベントの処理
 
 この記事では、[プロパティ] ウィンドウを使用して ActiveX コントロール コンテナーで ActiveX コントロールのイベント ハンドラーをインストールするについて説明します。 イベント ハンドラーは、特定のイベントの (制御) から通知を受け取り、応答で何らかのアクションを実行に使用されます。 この通知は、イベントを「起動」と呼ばれます。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 > [!NOTE]
 >  この記事では、ダイアログ ベース ActiveX コントロール コンテナーという名前のプロジェクト コンテナーと円をという名前のプロシージャとコードの例として、埋め込みのコントロールを使用します。

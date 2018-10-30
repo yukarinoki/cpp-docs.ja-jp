@@ -35,12 +35,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 734707256bb97e25452c45829fd99a1e0fb06fd0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: d75f84a8cb5ca2cb5a867cc640410c7de978d4fc
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060313"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204666"
 ---
 # <a name="mfc-activex-controls-distributing-activex-controls"></a>MFC ActiveX コントロール : ActiveX コントロールの配布
 
@@ -53,7 +53,7 @@ ms.locfileid: "50060313"
 - [コントロールの登録](#_core_registering_controls)
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 ##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI または Unicode コントロールのバージョン
 

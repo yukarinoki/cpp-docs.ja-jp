@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3be523feaacb403076f2c066943ca55ace958dce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cf2568561e3e79eaf7c2f56b0b571f5c9e74f268
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401839"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204523"
 ---
 # <a name="mfc-activex-controls-serializing"></a>MFC ActiveX コントロール : シリアル化
 
 この記事では、ActiveX コントロールをシリアル化する方法について説明します。 シリアル化は、ディスク ファイルなどの永続的なストレージ メディアに対するから読み取りまたは書き込みのプロセスです。 Microsoft Foundation Class (MFC) ライブラリでは、クラスでシリアル化の組み込みサポート`CObject`します。 `COleControl` プロパティの交換機構を使用して ActiveX コントロールには、このサポートを拡張します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 ActiveX コントロールのシリアル化をオーバーライドすることで実装[使って](../mfc/reference/colecontrol-class.md#dopropexchange)します。 、この関数は、読み込み中に呼び出され、メンバー変数またはメンバー変数の変更通知を使用して実装するすべてのプロパティを格納する、コントロール オブジェクトの保存します。
 

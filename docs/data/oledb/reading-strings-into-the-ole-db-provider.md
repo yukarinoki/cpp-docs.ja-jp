@@ -15,22 +15,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a2a580c5ae3d80349b74e6ce7606763c32201805
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: b1730c839ab2eb87511a241c28409646a999cfd6
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063329"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216254"
 ---
 # <a name="reading-strings-into-the-ole-db-provider"></a>OLE DB プロバイダーへの文字列の読み込み
 
 `RCustomRowset::Execute`関数は、ファイルを開くし、文字列を読み取る。 呼び出して、コンシューマーがプロバイダーにファイル名を渡します[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757)します。 プロバイダーは、ファイル名を受け取るし、メンバー変数に格納`m_szCommandText`します。 `Execute` ファイル名を読み取って`m_szCommandText`します。 ファイル名が無効か、ファイルが使用できない場合`Execute`エラーが返されます。 ファイルと呼び出しを開き、それ以外の場合、`fgets`文字列を取得します。 各セットの文字列の読み取り、`Execute`ユーザー レコードのインスタンスを作成します (`CAgentMan`) と配列に配置します。
 
-ファイルを開けない場合`Execute`DB_E_NOTABLE を返す必要があります。 E_FAIL を代わりに返された場合、プロバイダーが多数のコンシューマーでは動作せず、OLE DB に合格しない[準拠合致テスト](../../data/oledb/testing-your-provider.md)します。
+ファイルを開けない場合`Execute`DB_E_NOTABLE を返す必要があります。 E_FAIL を代わりに返された場合、プロバイダーは多くのコンシューマーでは機能せず、OLE DB に渡さない[準拠合致テスト](../../data/oledb/testing-your-provider.md)します。
 
 ## <a name="example"></a>例
-
-編集、`Execute`関数に次のようになります。
 
 ```cpp
 /////////////////////////////////////////////////////////////////////////
@@ -106,4 +104,4 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[単純な読み取り専用プロバイダーの実装](../../data/oledb/implementing-the-simple-read-only-provider.md)
+[単純な読み取り専用プロバイダーの実装](../../data/oledb/implementing-the-simple-read-only-provider.md)<br/>
