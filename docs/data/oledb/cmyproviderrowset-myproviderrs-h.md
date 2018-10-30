@@ -22,26 +22,26 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4808f9165fa6f139b0d3b576620e9db80eb360d3
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 211c83ec63611c493f03e48b58619caca373ce65
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076998"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216358"
 ---
 # <a name="ccustomrowset-customrsh"></a>CCustomRowset (CustomRS.H)
 
-ウィザードでは、行セット オブジェクトのエントリを生成します。 ここでは、`CCustomRowset` という名前になります。 `CCustomRowset`と呼ばれる OLE DB プロバイダー クラスからクラスを継承`CRowsetImpl`、行セット オブジェクトに必要なすべてのインターフェイスを実装します。 次のコードは継承チェーンの`CRowsetImpl`:
+ウィザードでは、行セット オブジェクトのエントリを生成します。 この場合、呼び出された`CCustomRowset`します。 `CCustomRowset`と呼ばれる OLE DB プロバイダー クラスからクラスを継承`CRowsetImpl`、行セット オブジェクトに必要なすべてのインターフェイスを実装します。 次のコードは継承チェーンの`CRowsetImpl`:
 
 ```cpp
-template <class T, class Storage, class CreatorClass,
+template <class T, class Storage, class CreatorClass, 
    class ArrayType = CAtlArray<Storage>>
 class CMyRowsetImpl:
-   public CRowsetImpl<T, Storage, CreatorClass, ArrayType,
+   public CRowsetImpl<T, Storage, CreatorClass, ArrayType, 
       CSimpleRow, IRowsetLocateImpl< T >>
 ```
 
-`CRowsetImpl` では、`IAccessor`と`IColumnsInfo`インターフェイス。 出力フィールドをテーブルにこれらのインターフェイスを使用します。 クラスの実装を提供も`IRowsetIdentity`コンシューマーが 2 つの行が同じかどうかを判断することができます。 `IRowsetInfo`インターフェイスは、行セット オブジェクトのプロパティを実装します。 `IConvertType`インターフェイスは、コンシューマーから要求されたデータ型と、プロバイダーによって使用されるものの間の相違点を解決するのには、プロバイダーを使用します。
+`CRowsetImpl` では、`IAccessor`と`IColumnsInfo`インターフェイス。 出力フィールドをテーブルにこれらのインターフェイスを使用します。 クラスの実装を提供も`IRowsetIdentity`コンシューマーは、2 つの行が、同じになるかどうかを判断することができます。 `IRowsetInfo`インターフェイスは、行セット オブジェクトのプロパティを実装します。 `IConvertType`インターフェイスは、コンシューマーから要求されたデータ型と、プロバイダーによって使用されるものの間の相違点を解決するのには、プロバイダーを使用します。
 
 `IRowset`インターフェイスが実際にデータの取得を処理します。 コンシューマーは、最初に呼び出されるメソッドを呼び出します`GetNextRows`と呼ばれる、行ハンドルを返す、`HROW`します。 コンシューマーを呼び出して`IRowset::GetData`を`HROW`要求されたデータを取得します。
 
@@ -51,4 +51,4 @@ class CMyRowsetImpl:
 
 ## <a name="see-also"></a>関連項目
 
-[プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)
+[プロバイダー ウィザードで生成されたファイル](../../data/oledb/provider-wizard-generated-files.md)<br/>

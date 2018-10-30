@@ -19,49 +19,49 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1c1958604edbb2f9d9c10e58082e70c2df400b8c
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e37ed0ac918b004513aa64308870a534a7b2af40
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50077375"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216293"
 ---
 # <a name="user-record"></a>ユーザー レコード
 
-ユーザー レコードは、行セットの列のデータを表すコードとデータ構造を提供します。 コンパイル時または実行時に、ユーザー レコードを作成することができます。 ATL OLE DB プロバイダー ウィザードを使用してプロバイダーを作成するときに、ウィザードは次のような既定のユーザー レコードを作成します (のプロバイダー名 [短い名前] を指定したと仮定すると*カスタム*)。
+ユーザー レコードは、行セットの列のデータを表すコードとデータ構造を提供します。 コンパイル時または実行時に、ユーザー レコードを作成することができます。 使用してプロバイダーを作成する場合、 **ATL OLE DB プロバイダー ウィザード**、ウィザードは、次のような既定のユーザー レコードを作成します (のプロバイダー名 [短い名前] を指定したと仮定すると*MyProvider*)。
 
 ```cpp
 class CWindowsFile:
    public WIN32_FIND_DATA
 {
 public:
-
-BEGIN_PROVIDER_COLUMN_MAP(CCustomWindowsFile)
+  
+BEGIN_PROVIDER_COLUMN_MAP(CMyProviderWindowsFile)
    PROVIDER_COLUMN_ENTRY("FileAttributes", 1, dwFileAttributes)
    PROVIDER_COLUMN_ENTRY("FileSizeHigh", 2, nFileSizeHigh)
    PROVIDER_COLUMN_ENTRY("FileSizeLow", 3, nFileSizeLow)
    PROVIDER_COLUMN_ENTRY_STR("FileName", 4, cFileName)
    PROVIDER_COLUMN_ENTRY_STR("AltFileName", 5, cAlternateFileName)
 END_PROVIDER_COLUMN_MAP()
-
+  
 };
 ```
 
-OLE DB プロバイダー テンプレートは、クライアントとのやり取りに関するすべての OLE DB 仕様を処理します。 プロバイダーの呼び出しの応答を必要な列のデータを取得するために、`GetColumnInfo`関数で、ユーザー レコード内に配置する必要があります。 明示的にオーバーライドする`GetColumnInfo`ユーザーのレコードのなど宣言するで、.h ファイルに次に示すよう。
+OLE DB プロバイダー テンプレートは、クライアントとのやり取りに OLE DB 固有のすべてを処理します。 プロバイダーの呼び出しの応答を必要な列のデータを取得するために、`GetColumnInfo`関数で、ユーザー レコード内に配置する必要があります。 明示的にオーバーライドする`GetColumnInfo`ユーザーのレコードのなど宣言するで、.h ファイルに次に示すよう。
 
 ```cpp
 template <class T>
-static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols)
+static ATLCOLUMNINFO* GetColumnInfo(T* pThis, ULONG* pcCols) 
 ```
 
-このようにすると、次の記述と同じ結果が得られます。
+これに相当します。
 
 ```cpp
 static ATLCOLUMNINFO* GetColumnInfo(CommandClass* pThis, ULONG* pcCols)
 static ATLCOLUMNINFO* GetColumnInfo(RowsetClass* pThis, ULONG* pcCols)
 ```
 
-実装する必要がありますも`GetColumnInfo`ユーザー レコードの .cpp ファイルにします。
+次に、実装`GetColumnInfo`ユーザー レコードの .cpp ファイルにします。
 
 PROVIDER_COLUMN_MAP マクロは作成を支援する`GetColumnInfo`関数。
 
@@ -79,4 +79,4 @@ PROVIDER_COLUMN_MAP マクロは作成を支援する`GetColumnInfo`関数。
 
 ## <a name="see-also"></a>関連項目
 
-[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)
+[OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)<br/>

@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: a9bc7c85dccdfe095412450d5020fc8a6b42d516
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 40422ac7894523a28a2135b7f5005eb1f11d36c8
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50076972"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216371"
 ---
 # <a name="provider-wizard-generated-files"></a>プロバイダー ウィザードで生成されたファイル
 
-ATL OLE DB プロバイダー ウィザードでは、次のファイルを生成します。 次のトピックを使用して、短い名前*カスタム*、正確なファイル名が選択したプロバイダーを作成するときに依存しています。
+**ATL OLE DB プロバイダー ウィザード**次のファイルが生成されます。 次のトピックを使用して、短い名前*カスタム*、正確なファイル名が選択したプロバイダーを作成するときに依存しています。
 
 |ファイル名|説明|
 |---------------|-----------------|
@@ -32,8 +32,8 @@ ATL OLE DB プロバイダー ウィザードでは、次のファイルを生�
 |*カスタム*DS.h|データ ソース オブジェクトを実装します。 このヘッダー ファイルには、データ ソースのプロパティのプロパティのマップが含まれています。|
 |*カスタム*RS.h|コマンドや行セット オブジェクトを実装します。 このヘッダー ファイルには、行セットとコマンドのプロパティのプロパティのマップが含まれています。|
 |*カスタム*Sess.h|セッション オブジェクトを実装します。 このヘッダー ファイルには、セッションのプロパティのプロパティのマップが含まれています。|
-|*カスタム*.rgs|OLE DB プロバイダー ウィザードで生成された登録済みのオブジェクトが含まれています。|
+|*カスタム*.rgs|によって生成された登録済みのオブジェクトが含まれています、 **OLE DB プロバイダー ウィザード**します。|
 
 ## <a name="see-also"></a>関連項目
 
-[OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)
+[OLE DB プロバイダーの作成](../../data/oledb/creating-an-ole-db-provider.md)<br/>

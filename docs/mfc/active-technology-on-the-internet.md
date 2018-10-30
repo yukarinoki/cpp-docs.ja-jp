@@ -14,19 +14,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: db0c93070fe8373cdd4494419ce1b71bf4068b14
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 30aef153dc99c0cbdc4de537496e42ab2bb0459f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395124"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204510"
 ---
 # <a name="active-technology-on-the-internet"></a>インターネット上の Active テクノロジ
 
 Active テクノロジは、開発者が魅力的な動的コンテンツとアプリケーションのグローバル インターネットまたはイントラネットと呼ばれる、会社の内部ネットワークを作成できるオープン プラットフォームです。 インターネットのプログラミング用に Microsoft によって提供される主要なテクノロジを以下に示します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 ## <a name="activex-controls"></a>ActiveX コントロール
 

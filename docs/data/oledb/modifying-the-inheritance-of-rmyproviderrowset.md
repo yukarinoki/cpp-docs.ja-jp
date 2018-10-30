@@ -1,7 +1,7 @@
 ---
 title: RCustomRowset の継承の変更 |マイクロソフトのドキュメント
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/26/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 1a9b6e238d3824451ab0f820917c34c97826ffab
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 13e15b470be6f6a5af4f8012e3a70896f648e665
+ms.sourcegitcommit: 840033ddcfab51543072604ccd5656fc6d4a5d3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50060391"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50216514"
 ---
 # <a name="modifying-the-inheritance-of-rcustomrowset"></a>RCustomRowset の継承の変更
 
@@ -35,28 +35,28 @@ ms.locfileid: "50060391"
 // CustomRS.h
 
 template <class T, class Storage, class CreatorClass, class ArrayType = CAtlArray<Storage>>
-class CCustomRowsetImpl:
+class CMyRowsetImpl:
    public CRowsetImpl<T, Storage, CreatorClass, ArrayType, CSimpleRow, IRowsetLocateImpl< T, IRowsetLocate >>
 {
 ...
 };
 ```
 
-次に、ように CustomRS.h の COM インターフェイス マップを編集します。
+これで、COM インターフェイス マップを編集*カスタム*RS.h するようになります。
 
 ```cpp
-BEGIN_COM_MAP(CCustomRowsetImpl)
+BEGIN_COM_MAP(CMyRowsetImpl)
    COM_INTERFACE_ENTRY(IRowsetLocate)
    COM_INTERFACE_ENTRY_CHAIN(_RowsetBaseClass)
 END_COM_MAP()
 ```
 
-これに指示する COM インターフェイス マップを作成します`CCustomRowsetImpl`を呼び出す`QueryInterface`両方に対して、`IRowset`と`IRowsetLocate`インターフェイス。 その他の行セットの実装のすべてを取得するクラスをマップのリンク、`CCustomRowsetImpl`クラスを`CRowsetBaseImpl`OLE DB テンプレートで定義されているクラスは、map の COM マップをスキャンする OLE DB テンプレートに伝える COM_INTERFACE_ENTRY_CHAIN マクロを使用します。`CRowsetBaseImpl`への応答を`QueryInterface`呼び出します。
+このコードに指示する COM インターフェイス マップを作成します`CMyRowsetImpl`を呼び出す`QueryInterface`両方に対して、`IRowset`と`IRowsetLocate`インターフェイス。 その他の行セットの実装のすべてを取得するクラスをマップのリンク、`CMyRowsetImpl`クラスを`CRowsetBaseImpl`OLE DB テンプレートで定義されているクラスは、map の COM マップをスキャンする OLE DB テンプレートに伝える COM_INTERFACE_ENTRY_CHAIN マクロを使用します。`CRowsetBaseImpl`への応答を`QueryInterface`呼び出します。
 
-最後に、リンク`RAgentRowset`に`CCustomRowsetBaseImpl`を変更して`RAgentRowset`から継承する`CCustomRowsetImpl`、次のようにします。
+最後に、リンク`RAgentRowset`に`CMyRowsetBaseImpl`を変更して`RAgentRowset`から継承する`CMyRowsetImpl`、次のようにします。
 
 ```cpp
-class RAgentRowset : public CCustomRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
+class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
 ```
 
 `RAgentRowset` 使用できるように、`IRowsetLocate`行セット クラスの実装の残りの部分を活用しながらインターフェイス。
@@ -65,4 +65,4 @@ class RAgentRowset : public CCustomRowsetImpl<RAgentRowset, CAgentMan, CCustomCo
 
 ## <a name="see-also"></a>関連項目
 
-[単純な読み取り専用プロバイダーの機能の拡張](../../data/oledb/enhancing-the-simple-read-only-provider.md)
+[単純な読み取り専用プロバイダーの機能の拡張](../../data/oledb/enhancing-the-simple-read-only-provider.md)<br/>

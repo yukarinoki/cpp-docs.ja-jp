@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1a970c7fd75eec2ea028f74220cbdb046e5d23bd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fb31eb15a61f1d4cbee7ba7402de508a84124461
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50053280"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204705"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールのローカライズ
 
 この記事では、ActiveX コントロールのインターフェイスをローカライズするための手順について説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 国際市場に ActiveX コントロールを調整する場合は、コントロールをローカライズしたい場合があります。 Windows では、既定の英語、ドイツ語、フランス語、スウェーデン語を含むだけでなく多くの言語をサポートします。 これは、場合、そのインターフェイスは、英語でのみはコントロールの問題が生じる。
 
