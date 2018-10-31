@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69172986a2f9bd3ca7c0b2373bb815a2f52186b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d14b4598020358de01a7914b369eac2b8f5b016d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46029014"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076101"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc クラス
 
@@ -75,7 +75,7 @@ Windows でのアクセス制御モデルの概要については、次を参照
 
 `CPrivateObjectSecurityDesc`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsecurity.h
 
@@ -84,7 +84,7 @@ Windows でのアクセス制御モデルの概要については、次を参照
 セキュリティ記述子とそのアクセス制御リスト (Acl) を継承可能なアクセス制御エントリ (Ace) の自動適用をサポートする形式に変換するには、このメソッドを呼び出します。
 
 ```
-bool ConvertToAutoInherit(  
+bool ConvertToAutoInherit(
     const CSecurityDesc* pParent,
     GUID* ObjectType,
     bool bIsDirectoryObject,
@@ -142,14 +142,14 @@ CPrivateObjectSecurityDesc() throw();
 割り当て、呼び出し元のリソース マネージャーによって作成されたプライベート オブジェクト用の自己相対のセキュリティ記述子を初期化するには、このメソッドを呼び出します。
 
 ```
-bool Create(  
+bool Create(
     const CSecurityDesc* pParent,
     const CSecurityDesc* pCreator,
     bool bIsDirectoryObject,
     const CAccessToken& Token,
     PGENERIC_MAPPING GenericMapping) throw();
 
-bool Create(  
+bool Create(
     const CSecurityDesc* pParent,
     const CSecurityDesc* pCreator,
     GUID* ObjectType,
@@ -203,7 +203,7 @@ bool Create(
 プライベート オブジェクトのセキュリティ記述子から情報を取得するには、このメソッドを呼び出します。
 
 ```
-bool Get(  
+bool Get(
     SECURITY_INFORMATION si,
     CSecurityDesc* pResult) const throw();
 ```
@@ -246,13 +246,13 @@ CPrivateObjectSecurityDesc& operator= (const CPrivateObjectSecurityDesc& rhs) th
 プライベート オブジェクトのセキュリティ記述子を変更するには、このメソッドを呼び出します。
 
 ```
-bool Set(  
+bool Set(
     SECURITY_INFORMATION si,
     const CSecurityDesc& Modification,
     PGENERIC_MAPPING GenericMapping,
     const CAccessToken& Token) throw();
 
-bool Set(  
+bool Set(
     SECURITY_INFORMATION si,
     const CSecurityDesc& Modification,
     ULONG AutoInheritFlags,

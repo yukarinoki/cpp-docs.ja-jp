@@ -1,7 +1,7 @@
 ---
-title: プラットフォーム、既定では、および cli 名前空間 (C++ コンポーネント拡張) |Microsoft Docs
+title: プラットフォーム、既定では、および cli 名前空間 (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,20 +19,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 726c9e2653f2914c01d4a45a572614438e12bc8f
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a70fb5317f42e98ccddb21fe66e328e1cc6f7643
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194650"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328026"
 ---
-# <a name="platform-default-and-cli-namespaces--c-component-extensions"></a>プラットフォーム、既定、および cli 名前空間 (C++ コンポーネント拡張)
+# <a name="platform-default-and-cli-namespaces--ccli-and-ccx"></a>プラットフォーム、既定では、および cli 名前空間 (C +/cli および C++/cli CX)
 
 言語要素の名前は名前空間によって修飾されるため、それ以外は同じである名前と、ソース コードの別の部分で競合することはありません。 たとえば、名前の競合は弱くコンパイラを妨げる可能性[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。 名前空間はコンパイラによって使用されますが、コンパイルされたアセンブリでは保持されません。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
-Visual C++ では、プロジェクトの作成時に、既定の名前空間がプロジェクトに与えられます。 ルート名前空間の名前が .winmd ファイルの名前で Windows ランタイムと一致する必要がありますが、名前空間を手動で変更できます。
+Visual Studio では、プロジェクトを作成するときに、プロジェクトの既定の名前空間を提供します。 C + で、名前空間を手動で変更できます/cli CX .winmd ファイルの名前は、ルート名前空間の名前と一致する必要があります。
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
@@ -90,4 +90,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

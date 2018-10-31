@@ -15,21 +15,21 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eb3f501a2653c4d25adb195e9de9abf082179f3a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 277f60b48f32ea2378a2011f61407ce4713659ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421909"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072968"
 ---
 # <a name="id-property"></a>ID プロパティ
 
 ID プロパティは、プログラム コード内の各アクセラレータ テーブル エントリを参照します。 これは、アクセラレータ キーまたはキーの組み合わせを押すと、プログラムを受信するコマンドの値です。 アクセラレータ メニュー項目と同じをくださいその Id と同じ (限りアクセラレータ テーブルの ID では、メニュー リソースの ID と同じです)。
-  
-## <a name="requirements"></a>要件
+
+## <a name="requirements"></a>必要条件
 
 Win32
-  
+
 ## <a name="see-also"></a>関連項目
 
 [アクセラレータのプロパティの設定](../windows/setting-accelerator-properties.md)<br/>

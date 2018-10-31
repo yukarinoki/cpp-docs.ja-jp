@@ -35,12 +35,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6a980a96198db80f0956895292d37f123d0351c
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 75f629c8a9c8a06f02024e9d52ab13b2d12b234c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723308"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860395"
 ---
 # <a name="building-an-import-library-and-export-file"></a>インポート ライブラリとエクスポート ファイルのビルド
 
@@ -52,9 +52,9 @@ ms.locfileid: "45723308"
 
 1. A**方式**のいずれかで定義、 *objfiles*または*ライブラリ*
 
-2. /EXPORT の指定:*名前*LIB コマンドラインで
+1. /EXPORT の指定:*名前*LIB コマンドラインで
 
-3. 定義、**エクスポート**内のステートメントを*deffile*
+1. 定義、**エクスポート**内のステートメントを*deffile*
 
 これらは、エクスポートするプログラムをリンクするときに、エクスポートを指定するときと同じ方法です。 プログラムでは、1 つ以上のメソッドを使用できます。 LIB のコマンドは、の部分を指定することができます (複数など*objfiles*または/EXPORT の仕様) LIB コマンドでコマンド ファイルでだけできる限り LINK コマンドでします。
 

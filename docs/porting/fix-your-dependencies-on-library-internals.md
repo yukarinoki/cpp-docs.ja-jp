@@ -15,34 +15,34 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f70ef59ff43e7a8002ce312bd79702e465f52c74
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9dc9ef70eb2cf93ee92e32514681ae1a80810eb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385873"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069804"
 ---
 # <a name="fix-your-dependencies-on-library-internals"></a>ライブラリ内部の依存関係を修正する
 
-Microsoft では、標準ライブラリ、ほとんどの C ランタイム ライブラリ、および多くのバージョンの Visual Studio の他の Microsoft ライブラリ用のソース コードを公開しています。 その目的は、ユーザーがライブラリの動作を理解できるようにすることと、コードをデバッグすることです。 ライブラリのソース コードを公開する 1 つの副次作用は、いくつかの内部値、データ構造、および関数が、ライブラリ インターフェイスの一部でない場合でも公開されることです。 通常、これらには、2 つのアンダースコア、または後ろに大文字が続くアンダースコアで始まる名前があり、この名前は C++ 標準で実装用に予約されます。 これらの値、構造、および関数は実装の詳細であり、ライブラリの経時的な変化に伴い、変更される可能性があるため、これらに依存しないことを強くお勧めします。 依存すると、コードが移植できなくなり、コードを新しいバージョンのライブラリに移行しようとしたときに問題が発生する危険性があります。  
+Microsoft では、標準ライブラリ、ほとんどの C ランタイム ライブラリ、および多くのバージョンの Visual Studio の他の Microsoft ライブラリ用のソース コードを公開しています。 その目的は、ユーザーがライブラリの動作を理解できるようにすることと、コードをデバッグすることです。 ライブラリのソース コードを公開する 1 つの副次作用は、いくつかの内部値、データ構造、および関数が、ライブラリ インターフェイスの一部でない場合でも公開されることです。 通常、これらには、2 つのアンダースコア、または後ろに大文字が続くアンダースコアで始まる名前があり、この名前は C++ 標準で実装用に予約されます。 これらの値、構造、および関数は実装の詳細であり、ライブラリの経時的な変化に伴い、変更される可能性があるため、これらに依存しないことを強くお勧めします。 依存すると、コードが移植できなくなり、コードを新しいバージョンのライブラリに移行しようとしたときに問題が発生する危険性があります。
 
 ほとんどの場合、各リリースの Visual Studio の新機能または重大な変更に関するドキュメントでは、ライブラリ内部の変更は示されません。 結局は、これらの実装の詳細による影響を受けないことになっています。 ただし、ライブラリ内で表示できる一部のコードを使用したいという非常に強い衝動にかられる場合があります。 このトピックでは、依存していた可能性のある CRT または標準ライブラリ内部の依存関係について説明します。また、コードを更新し、これらの依存関係を削除して、コードの移植性を高めたり、新しいバージョンのライブラリに移行できるようにしたりする方法についても説明します。
 
-## <a name="hashseq"></a>_Hash_seq  
+## <a name="hashseq"></a>_Hash_seq
 
-いくつかの文字列型で `std::hash` を実装するために使用される、内部ハッシュ関数 `std::_Hash_seq(const unsigned char *, size_t)` は、最近のバージョンの標準ライブラリでは表示されていました。 この関数は、文字シーケンスで [FNV-1a ハッシュ]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)を実装していました。  
-  
-この依存関係を削除するためのいくつかのオプションがあります。  
+いくつかの文字列型で `std::hash` を実装するために使用される、内部ハッシュ関数 `std::_Hash_seq(const unsigned char *, size_t)` は、最近のバージョンの標準ライブラリでは表示されていました。 この関数は、文字シーケンスで [FNV-1a ハッシュ]( https://en.wikipedia.org/wiki/Fowler%E2%80%93Noll%E2%80%93Vo_hash_function)を実装していました。
 
-- `basic_string` と同じハッシュ コード構造を使用して、`const char *` シーケンスを順不同のコンテナーに挿入する予定の場合は、そのハッシュ コードを移植可能な方法で返す、`std::string_view` を取る `std::hash` テンプレート オーバーロードを使用して行うことができます。 文字列ライブラリ コードは今後、FNV-1a ハッシュの使用に依存する可能性もあれば、依存しない可能性もあります。したがって、これが特定のハッシュ アルゴリズムに依存しないようにするための最良の方法です。 
-  
-- 任意のメモリに FNV-1a ハッシュを生成する予定の場合は、Microsoft がこのためのコードを作成しました。このコードは、GitHub の [VCSamples]( https://github.com/Microsoft/vcsamples) リポジトリ内のスタンドアロン ヘッダー ファイル [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq) ([MIT ライセンス](https://github.com/Microsoft/VCSamples/blob/master/license.txt)認可済み) から入手できます。 便利なコピーも含まれています。 このコードをヘッダー ファイルにコピーし、影響を受けるコードにヘッダーを追加してから `_Hash_seq` を検索して `fnv1a_hash_bytes` で置き換えることができます。 `_Hash_seq` の内部実装と同じ動作が得られます。 
+この依存関係を削除するためのいくつかのオプションがあります。
 
-```cpp  
+- `basic_string` と同じハッシュ コード構造を使用して、`const char *` シーケンスを順不同のコンテナーに挿入する予定の場合は、そのハッシュ コードを移植可能な方法で返す、`std::string_view` を取る `std::hash` テンプレート オーバーロードを使用して行うことができます。 文字列ライブラリ コードは今後、FNV-1a ハッシュの使用に依存する可能性もあれば、依存しない可能性もあります。したがって、これが特定のハッシュ アルゴリズムに依存しないようにするための最良の方法です。
+
+- 任意のメモリに FNV-1a ハッシュを生成する予定の場合は、Microsoft がこのためのコードを作成しました。このコードは、GitHub の [VCSamples]( https://github.com/Microsoft/vcsamples) リポジトリ内のスタンドアロン ヘッダー ファイル [fnv1a.hpp](https://github.com/Microsoft/VCSamples/tree/master/VC2015Samples/_Hash_seq) ([MIT ライセンス](https://github.com/Microsoft/VCSamples/blob/master/license.txt)認可済み) から入手できます。 便利なコピーも含まれています。 このコードをヘッダー ファイルにコピーし、影響を受けるコードにヘッダーを追加してから `_Hash_seq` を検索して `fnv1a_hash_bytes` で置き換えることができます。 `_Hash_seq` の内部実装と同じ動作が得られます。
+
+```cpp
 /*
 VCSamples
 Copyright (c) Microsoft Corporation
-All rights reserved. 
+All rights reserved.
 MIT License
 Permission is hereby granted, free of charge, to any person obtaining a copy of
 this software and associated documentation files (the "Software"), to deal in
@@ -67,7 +67,6 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
     static_assert(sizeof(size_t) == 8, "This code is for 64-bit size_t.");
     const size_t fnv_offset_basis = 14695981039346656037ULL;
     const size_t fnv_prime = 1099511628211ULL;
-
 #else /* defined(_WIN64) */
     static_assert(sizeof(size_t) == 4, "This code is for 32-bit size_t.");
     const size_t fnv_offset_basis = 2166136261U;
@@ -76,16 +75,17 @@ inline size_t fnv1a_hash_bytes(const unsigned char * first, size_t count) {
 
     size_t result = fnv_offset_basis;
     for (size_t next = 0; next < count; ++next)
-        {   // fold in another byte
+    {
+        // fold in another byte
         result ^= (size_t)first[next];
         result *= fnv_prime;
-        }
+    }
     return (result);
 }
-```  
-  
-## <a name="see-also"></a>関連項目  
-  
+```
+
+## <a name="see-also"></a>関連項目
+
 [旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [アップグレードに関する潜在的な問題 (Visual C++) の概要](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
-[Universal CRT へのコードのアップグレード](upgrade-your-code-to-the-universal-crt.md)  
+[Universal CRT へのコードのアップグレード](upgrade-your-code-to-the-universal-crt.md)

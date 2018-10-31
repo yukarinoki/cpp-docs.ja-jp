@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e41ffab3f3f22bca1a9a721b4f2cdb03129d03
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 05e2a39f94eeefa264a9e93623f4ff7c6b2f2e91
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391697"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080457"
 ---
 # <a name="memory-management-examples"></a>メモリ管理 : 例
 
@@ -52,19 +52,19 @@ ms.locfileid: "46391697"
 
 1. 次のコードに示すように、配列を定義します。 配列は自動的に削除し、配列変数のスコープの終了時に、そのメモリが再利用します。
 
-     [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#1](../mfc/codesnippet/cpp/memory-management-examples_1.cpp)]
 
 #### <a name="to-allocate-an-array-of-bytes-or-any-primitive-data-type-on-the-heap"></a>ヒープのバイト (または任意のプリミティブ データ型) の配列を割り当てる
 
 1. 使用して、**新しい**この例に示すように配列の構文を持つ演算子。
 
-     [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#2](../mfc/codesnippet/cpp/memory-management-examples_2.cpp)]
 
 #### <a name="to-deallocate-the-arrays-from-the-heap"></a>ヒープからの配列の割り当てを解除するには
 
 1. 使用して、**削除**演算子として次のとおりです。
 
-     [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#3](../mfc/codesnippet/cpp/memory-management-examples_3.cpp)]
 
 ##  <a name="_core_allocation_of_a_data_structure"></a> データ構造の割り当て
 
@@ -72,15 +72,15 @@ ms.locfileid: "46391697"
 
 1. 構造体変数を次のように定義します。
 
-     [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#4](../mfc/codesnippet/cpp/memory-management-examples_4.cpp)]
 
-     構造体が占有するメモリが回収されるは、そのスコープを終了する場合。
+   構造体が占有するメモリが回収されるは、そのスコープを終了する場合。
 
 #### <a name="to-allocate-data-structures-on-the-heap"></a>ヒープ上のデータ構造を割り当てる
 
 1. 使用**新しい**、ヒープ上のデータ構造を割り当てると**削除**次の例に示すように、割り当てを解除します。
 
-     [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#5](../mfc/codesnippet/cpp/memory-management-examples_5.cpp)]
 
 ##  <a name="_core_allocation_of_an_object"></a> オブジェクトの割り当て
 
@@ -88,25 +88,25 @@ ms.locfileid: "46391697"
 
 1. 次のように、オブジェクトを宣言します。
 
-     [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#6](../mfc/codesnippet/cpp/memory-management-examples_6.cpp)]
 
-     オブジェクトのスコープの終了時に、オブジェクトのデストラクターが自動的に呼び出されます。
+   オブジェクトのスコープの終了時に、オブジェクトのデストラクターが自動的に呼び出されます。
 
 #### <a name="to-allocate-an-object-on-the-heap"></a>ヒープ上のオブジェクトを割り当てる
 
 1. 使用して、**新しい**この演算子は、オブジェクトへのポインターを返します、ヒープ上のオブジェクトを割り当てます。 使用して、**削除**それらを削除する演算子。
 
-     次のヒープとフレームの例にある、`CPerson`コンス トラクターは引数を受け取りません。
+   次のヒープとフレームの例にある、`CPerson`コンス トラクターは引数を受け取りません。
 
-     [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#7](../mfc/codesnippet/cpp/memory-management-examples_7.cpp)]
 
-     場合、引数、`CPerson`コンス トラクターへのポインターは、 **char**、フレーム割り当て用のステートメントは。
+   場合、引数、`CPerson`コンス トラクターへのポインターは、 **char**、フレーム割り当て用のステートメントは。
 
-     [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#8](../mfc/codesnippet/cpp/memory-management-examples_8.cpp)]
 
-     ヒープ割り当て用のステートメントは次のとおりです。
+   ヒープ割り当て用のステートメントは次のとおりです。
 
-     [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
+   [!code-cpp[NVC_MFC_Utilities#9](../mfc/codesnippet/cpp/memory-management-examples_9.cpp)]
 
 ## <a name="see-also"></a>関連項目
 

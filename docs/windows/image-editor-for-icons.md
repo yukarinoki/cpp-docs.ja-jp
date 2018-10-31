@@ -1,7 +1,7 @@
 ---
 title: アイコン用イメージ エディター |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/17/2018
 ms.technology:
 - cpp-windows
 ms.topic: conceptual
@@ -23,16 +23,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fe7cad7fccabd7acc8af7ecf1f3711d5b0d636ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ecd2b3b94f04a246242a33494a124171e95cae7c
+ms.sourcegitcommit: db6b2ad3195e71abfb60b62f3f015f08b0a719d0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379191"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49410669"
 ---
 # <a name="image-editor-for-icons"></a>アイコン用イメージ エディター
 
-イメージ エディターには、イメージの作成と編集に使用できる広範なツール セットと、ツール バーのビットマップの作成に役立つ機能が用意されています。 **[イメージ]** メニューのコマンドや、 **[イメージ エディター]** ツール バーのツールを使用して、ビットマップ、アイコン、カーソルだけでなく、GIF 形式や JPEG 形式のイメージも編集できます。
+ソリューション エクスプ ローラーで、イメージ ファイル (.ico、.bmp、.png) などをクリックすると、イメージがコード ファイルは、コード エディターを開くことと同じ方法で、イメージ エディターを開きます。 イメージ エディター タブがアクティブで作成およびイメージを編集するための多くのツールを使用してツールバーを参照してください。 **[イメージ]** メニューのコマンドや、 **[イメージ エディター]** ツール バーのツールを使用して、ビットマップ、アイコン、カーソルだけでなく、GIF 形式や JPEG 形式のイメージも編集できます。
 
 イメージ エディターでは、次の作業ができます。
 

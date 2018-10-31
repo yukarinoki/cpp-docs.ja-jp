@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee6c0b958fe27c04c116b4f82098f459c1f0f745
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c6fddd337cb9c0bcd78df1bfa563d1f447131078
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070588"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077336"
 ---
 # <a name="this-pointer"></a>this ポインター
 
@@ -32,7 +32,7 @@ ms.locfileid: "46070588"
 ## <a name="syntax"></a>構文
 
 ```
-this 
+this 
 this->member-identifier
 ```
 
@@ -181,7 +181,7 @@ int main()
 
 型**この**次の構文で、メンバー関数が説明されている場所*cv 修飾子のリスト*はメンバー関数宣言子から決定され、 **const**または**揮発性**(または両方) および*クラス型*クラスの名前を指定します。
 
-*[cv 修飾子一覧] クラス型***\* const これ**
+*[cv 修飾子一覧] クラス型***&#42; const これ**
 
 つまり、**この**; の const ポインターは、常に再割り当てできません。  **Const**または**揮発性**メンバー関数の宣言で使用される修飾子が指すクラス インスタンスに適用**この**でその関数のスコープ。
 

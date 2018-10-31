@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ebf8112650cf1908225d0fc2c79d61d26dd606fe
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f01b333edd9dd671ce4d03176a75979e57a06bd7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46051010"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062172"
 ---
 # <a name="ccomclassfactory-class"></a>CComClassFactory クラス
 
@@ -33,9 +33,9 @@ ms.locfileid: "46051010"
 ## <a name="syntax"></a>構文
 
 ```
-class CComClassFactory 
-   : public IClassFactory,  
-     public CComObjectRootEx<CComGlobalsThreadModel>
+class CComClassFactory
+    : public IClassFactory,
+      public CComObjectRootEx<CComGlobalsThreadModel>
 ```
 
 ## <a name="members"></a>メンバー
@@ -65,7 +65,7 @@ ATL には、クラス ファクトリを宣言するその他の 3 つのマク
 
 - [DECLARE_CLASSFACTORY_SINGLETON](aggregation-and-class-factory-macros.md#declare_classfactory_singleton)使用[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)、1 つを構築する[CComObjectGlobal](../../atl/reference/ccomobjectglobal-class.md)オブジェクト。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 

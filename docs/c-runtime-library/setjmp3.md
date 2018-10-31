@@ -29,44 +29,49 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04d06bd7728347770bd17c48abc9898f2a2467a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 22416f4036d79f9e9b7c95f1cf9098e450533f39
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408368"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46054273"
 ---
 # <a name="setjmp3"></a>_setjmp3
-内部 CRT 関数。 `setjmp` 関数の新しい実装。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-int _setjmp3(  
-   OUT jmp_buf env,  
-   int count,  
-   (optional parameters)  
-);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
- [出力] `env`  
- 状態情報を格納するためのバッファーのアドレス。  
-  
- [入力] `count`  
- `DWORD` に格納されている情報の追加 `optional parameters` の数。  
-  
- [入力] `optional parameters`  
- `setjmp` の組み込みによってプッシュダウンされる追加データ。 最初の `DWORD` は、追加データをアンワインドして不揮発性レジスタの状態に戻るために使用される関数ポインターです。 2 番目の `DWORD` は、復元される試行レベルです。 これ以上のデータは、`jmp_buf` の一般的なデータ配列に保存されます。  
-  
-## <a name="return-value"></a>戻り値  
- 常に 0 を返します。  
-  
-## <a name="remarks"></a>コメント  
- この関数は C++ プログラムでは使用しないでください。 これは、C++ をサポートしない組み込み関数です。 `setjmp` の使用方法の詳細については、「[setjmp/longjmp の使用](../cpp/using-setjmp-longjmp.md)」をご覧ください。  
-  
-## <a name="requirements"></a>必要条件  
-  
-## <a name="see-also"></a>参照  
- [関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)   
- [setjmp](../c-runtime-library/reference/setjmp.md)
+
+内部 CRT 関数。 `setjmp` 関数の新しい実装。
+
+## <a name="syntax"></a>構文
+
+```
+int _setjmp3(
+   OUT jmp_buf env,
+   int count,
+   (optional parameters)
+);
+```
+
+#### <a name="parameters"></a>パラメーター
+
+*env*<br/>
+[out] 状態情報を格納するためのバッファーのアドレス。
+
+*count*<br/>
+[in] `optional parameters` に格納されている情報の追加 `DWORD` の数。
+
+*省略可能なパラメーター*<br/>
+[in] `setjmp` の組み込みによってプッシュダウンされる追加データ。 最初の `DWORD` は、追加データをアンワインドして不揮発性レジスタの状態に戻るために使用される関数ポインターです。 2 番目の `DWORD` は、復元される試行レベルです。 これ以上のデータは、`jmp_buf` の一般的なデータ配列に保存されます。
+
+## <a name="return-value"></a>戻り値
+
+常に 0 を返します。
+
+## <a name="remarks"></a>コメント
+
+この関数は C++ プログラムでは使用しないでください。 これは、C++ をサポートしない組み込み関数です。 `setjmp` の使用方法の詳細については、「[setjmp/longjmp の使用](../cpp/using-setjmp-longjmp.md)」をご覧ください。
+
+## <a name="requirements"></a>必要条件
+
+## <a name="see-also"></a>参照
+
+[関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
+[setjmp](../c-runtime-library/reference/setjmp.md)

@@ -41,12 +41,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1cc8fbe595259b0f5e59d3ac844710222042540c
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 68211c3807893d28adb5e90e8863967b7f60318f
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206069"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083568"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime、_mktime32、_mktime64
 
@@ -93,7 +93,7 @@ UTC への調整後 **_mktime32**の日付を 1970 年 1 月 1 日、午前 0 �
 
 - 標準時間と夏時間のどちらが有効であるかを C ランタイム ライブラリ コードで計算する場合は 0 より小さい値。
 
-C ランタイム ライブラリは、[TZ](tzset.md) 環境変数から夏時間の状態を判断します。 場合**TZ** 、Win32 API 呼び出しを設定しない[GetTimeZoneInformation](https://msdn.microsoft.com/library/windows/desktop/ms724421.aspx)オペレーティング システムから夏時間の情報を取得するために使用します。 これが失敗すると、ライブラリは、夏時間の計算の実装にアメリカ合衆国の規則が使用されると見なします。 **tm_isdst**は必須フィールドです。 設定しないと、その値は未定義になり、これらの関数からは予想外の値が返されます。 場合*timeptr*を指す、 **tm**以前の呼び出しによって返される構造体[asctime](asctime-wasctime.md)、 [gmtime](gmtime-gmtime32-gmtime64.md)、または[localtime](localtime-localtime32-localtime64.md)(またはこれらの関数のバリアント)、 **tm_isdst**フィールドに正しい値が含まれています。
+C ランタイム ライブラリは、[TZ](tzset.md) 環境変数から夏時間の状態を判断します。 場合**TZ** 、Win32 API 呼び出しを設定しない[GetTimeZoneInformation](/windows/desktop/api/timezoneapi/nf-timezoneapi-gettimezoneinformation)オペレーティング システムから夏時間の情報を取得するために使用します。 これが失敗すると、ライブラリは、夏時間の計算の実装にアメリカ合衆国の規則が使用されると見なします。 **tm_isdst**は必須フィールドです。 設定しないと、その値は未定義になり、これらの関数からは予想外の値が返されます。 場合*timeptr*を指す、 **tm**以前の呼び出しによって返される構造体[asctime](asctime-wasctime.md)、 [gmtime](gmtime-gmtime32-gmtime64.md)、または[localtime](localtime-localtime32-localtime64.md)(またはこれらの関数のバリアント)、 **tm_isdst**フィールドに正しい値が含まれています。
 
 なお**gmtime**と**localtime** (と **_gmtime32**、 **_gmtime64**、 **_localtime32**と **_localtime64**) 変換で、スレッドごとに 1 つのバッファーを使用します。 このバッファーを指定する場合**mktime**、 **_mktime32**または **_mktime64**、以前の内容は破棄されます。
 

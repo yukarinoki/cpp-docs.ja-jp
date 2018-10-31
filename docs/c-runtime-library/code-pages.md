@@ -22,12 +22,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a81b358a89f3ed16747d27bc6401c01ad194680
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6eafdf3a140dd8a5976cf2fe8554b3b076111b74
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113722"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060508"
 ---
 # <a name="code-pages"></a>コード ページ
 
@@ -43,7 +43,7 @@ Microsoft ランタイム ライブラリでは、次の種類のコード ペ�
     setlocale ( LC_ALL, "" );
     ```
 
-     また、システム既定の ANSI コード ページにロケールを設定します。
+   また、システム既定の ANSI コード ページにロケールを設定します。
 
 - ロケールのコード ページ。 ランタイム ルーチンの動作は、ロケール コード ページを含む、現在のロケール設定に依存します。 (詳細については、[ロケール依存のルーチン](../c-runtime-library/locale.md)に関するページを参照してください。)既定では、Microsoft ランタイム ライブラリのすべてのロケール依存ルーチンで "C" ロケールに相当するコード ページが使用されます。 実行時、[setlocale](../c-runtime-library/reference/setlocale-wsetlocale.md) を呼び出し、使用中のロケール コード ページを変更したり、クエリを実行したりできます。
 

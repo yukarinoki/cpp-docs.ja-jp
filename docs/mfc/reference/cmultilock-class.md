@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39cde8affc84ed879ad3731cb6c18449c60498f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 097f6173faad4f99f64c5dac45e2a0d1292a07eb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430853"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076361"
 ---
 # <a name="cmultilock-class"></a>CMultiLock クラス
 
@@ -73,7 +73,7 @@ class CMultiLock
 
 `CMultiLock`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxmt.h
 
@@ -148,19 +148,19 @@ DWORD Lock(
 
 - WAIT_OBJECT_0 と WAIT_OBJECT_0 と (1 - オブジェクトの数) の間
 
-     場合*bWaitForAll*が true の場合、すべてのオブジェクトが (使用可能) に通知されます。 場合*bWaitForAll* false で、戻り値 - WAIT_OBJECT_0 が (使用可能) に通知されるオブジェクトのオブジェクトの配列内のインデックス。
+   場合*bWaitForAll*が true の場合、すべてのオブジェクトが (使用可能) に通知されます。 場合*bWaitForAll* false で、戻り値 - WAIT_OBJECT_0 が (使用可能) に通知されるオブジェクトのオブジェクトの配列内のインデックス。
 
 - WAIT_OBJECT_0 + (オブジェクトの数)
 
-     指定されたイベント*dwWakeMask*はスレッドの入力キューで使用できます。
+   指定されたイベント*dwWakeMask*はスレッドの入力キューで使用できます。
 
 - WAIT_ABANDONED_0 と WAIT_ABANDONED_0 と (1 - オブジェクトの数) の間
 
-     場合*bWaitForAll* true、すべてのオブジェクトがシグナル状態、および放棄されたミュー テックス オブジェクトは、少なくとも 1 つのオブジェクト。 場合*bWaitForAll* false で、戻り値 - WAIT_ABANDONED_0 は待機を実行する放棄されたミュー テックス オブジェクトのオブジェクトの配列内のインデックス。
+   場合*bWaitForAll* true、すべてのオブジェクトがシグナル状態、および放棄されたミュー テックス オブジェクトは、少なくとも 1 つのオブジェクト。 場合*bWaitForAll* false で、戻り値 - WAIT_ABANDONED_0 は待機を実行する放棄されたミュー テックス オブジェクトのオブジェクトの配列内のインデックス。
 
 - 正常に終了しました。
 
-     指定されたタイムアウト間隔*dwTimeOut*待機に成功することがなく有効期限が切れました。
+   指定されたタイムアウト間隔*dwTimeOut*待機に成功することがなく有効期限が切れました。
 
 ### <a name="remarks"></a>Remarks
 
@@ -174,7 +174,6 @@ DWORD Lock(
 
 ```
 BOOL Unlock();
-
 
 BOOL Unlock(
     LONG lCount,
@@ -202,6 +201,4 @@ BOOL Unlock(
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)
-
-
 

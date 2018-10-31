@@ -198,12 +198,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dd7dfaa0511c7d776afd009ad8ea9c1db3008f09
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c8d337fdf6b861b4a64cba2876de33cc65d89b6b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434292"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070336"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar クラス
 
@@ -290,14 +290,14 @@ class CMFCRibbonBar : public CPane
 |[Cmfcribbonbar::loadfromresource](#loadfromresource)|オーバーロードされます。 アプリケーション リソースからリボン バーを読み込みます。|
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||
-|[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|(`CPane::OnRTLChanged` をオーバーライドします)。|
+|[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|( `CPane::OnRTLChanged`をオーバーライドします)。|
 |[CMFCRibbonBar::OnSetAccData](#onsetaccdata)|(上書き[cbasepane::onsetaccdata](../../mfc/reference/cbasepane-class.md#onsetaccdata))。|
 |[CMFCRibbonBar::OnShowRibbonContextMenu](#onshowribboncontextmenu)||
 |[CMFCRibbonBar::OnShowRibbonQATMenu](#onshowribbonqatmenu)||
 |[CMFCRibbonBar::OnSysKeyDown](#onsyskeydown)||
 |[CMFCRibbonBar::OnSysKeyUp](#onsyskeyup)||
 |[CMFCRibbonBar::PopTooltip](#poptooltip)||
-|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|(`CBasePane::PreTranslateMessage` をオーバーライドします)。|
+|[CMFCRibbonBar::PreTranslateMessage](#pretranslatemessage)|( `CBasePane::PreTranslateMessage`をオーバーライドします)。|
 |[CMFCRibbonBar::RecalcLayout](#recalclayout)|(上書き[cpane::recalclayout](../../mfc/reference/cpane-class.md#recalclayout))。|
 |[CMFCRibbonBar::RemoveAllCategories](#removeallcategories)|リボン バーからすべてのリボン カテゴリを削除します。|
 |[CMFCRibbonBar::RemoveAllFromTabs](#removeallfromtabs)|タブ領域からすべてのリボン要素を削除します。|
@@ -345,7 +345,7 @@ Microsoft は、Microsoft Office 2007 のリリースと同時に Office Fluent 
 
 [CMFCRibbonBar](../../mfc/reference/cmfcribbonbar-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxribbonbar.h
 
@@ -1495,7 +1495,6 @@ virtual void OnClickButton(
 
 ##  <a name="oneditcontextmenu"></a>  CMFCRibbonBar::OnEditContextMenu
 
-
 ```
 virtual void OnEditContextMenu(
     CMFCRibbonRichEditCtrl* pEdit,
@@ -1504,8 +1503,8 @@ virtual void OnEditContextMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*pEdit*<br/>
-[in][in]*ポイント*
+[in]*pEdit*<br/>
+[in]*ポイント*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1546,7 +1545,6 @@ BOOL OnSetAccData(long lVal);
 
 ##  <a name="onshowribboncontextmenu"></a>  CMFCRibbonBar::OnShowRibbonContextMenu
 
-
 ```
 virtual BOOL OnShowRibbonContextMenu(
     CWnd* pWnd,
@@ -1557,17 +1555,16 @@ virtual BOOL OnShowRibbonContextMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-[in][in]*x*
-*y*<br/>
-[in][in]*pHit*
+[in]*我が物*<br/>
+[in]*x*<br/>
+[in]*y*<br/>
+[in]*pHit*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="onshowribbonqatmenu"></a>  CMFCRibbonBar::OnShowRibbonQATMenu
-
 
 ```
 virtual BOOL OnShowRibbonQATMenu(
@@ -1579,10 +1576,10 @@ virtual BOOL OnShowRibbonQATMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*我が物*<br/>
-[in][in]*x*
-*y*<br/>
-[in][in]*pHit*
+[in]*我が物*<br/>
+[in]*x*<br/>
+[in]*y*<br/>
+[in]*pHit*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -2076,7 +2073,6 @@ virtual BOOL LoadFromResource(
     LPCTSTR lpszResType = RT_RIBBON,
     HINSTANCE hInstance = NULL);
 
-
 virtual BOOL LoadFromResource(
     LPCTSTR lpszXMLResID,
     LPCTSTR lpszResType = RT_RIBBON,
@@ -2170,6 +2166,4 @@ TRUE は、リボンのレイアウトを再計算します。FALSE それ以外
 [CMFCRibbonPanel クラス](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement クラス](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [チュートリアル: MFC Scribble アプリケーションの更新](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-
-
 

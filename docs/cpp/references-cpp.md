@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9bd01cf5c153fcd31bae1a73fead87fe480cdd2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a3a93d434907a2a3ff13053ee4b932201de22f3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030425"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861409"
 ---
 # <a name="references-c"></a>参照 (C++)
 
@@ -32,41 +32,35 @@ ms.locfileid: "46030425"
 
 参照は次の構文を使用して宣言できます。
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator [= expression];
-```
+> \[*ストレージ クラス指定子*] \[ *cv 修飾子*]*型指定子* \[ *ms 修飾子*] *宣言子* \[ **=** *式*]**;**
 
 参照を指定する任意の有効な宣言子を使用できます。 参照が関数または配列型への参照でない限り、次の簡略化された構文が適用されます。
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers [& or &&] 
-[cv-qualifiers] identifier [= expression];
-```
+> \[*ストレージ クラス指定子*] \[ *cv 修飾子*]*型指定子* \[ **&** または**&&**] \[ *cv 修飾子*]*識別子* \[ **=** *式*]**;**
 
 参照は次の順序で宣言します。
 
 1. 宣言指定子:
 
-- ストレージ クラスの指定子 (省略可能)。
+   - ストレージ クラスの指定子 (省略可能)。
 
-- 省略可能な**const**や**揮発性**修飾子。
+   - 省略可能な**const**や**揮発性**修飾子。
 
-- 型指定子: 型の名前。
+   - 型指定子: 型の名前。
 
-- 2. 宣言子: 
+1. 宣言子: 
 
-- オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
+   - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
 
-- & 演算子または && 演算子。
+   - **&** 演算子または**&&** 演算子。
 
-- 省略可能な**const**や**揮発性**修飾子。
+   - 省略可能な**const**や**揮発性**修飾子。
 
-- 識別子。
+   - 識別子。
 
-3. 初期化子 (省略可能)。
+1. 初期化子 (省略可能)。
 
-複雑な宣言子フォーム参照の配列および関数へのポインターは、配列と関数への参照にも適用[ポインター](../cpp/pointers-cpp.md)します。
+複雑な宣言子の形式の配列および関数へのポインターは配列および関数への参照にも適用されます。 詳細については、次を参照してください。[ポインター](../cpp/pointers-cpp.md)します。
 
 1 つの宣言指定子の後のコンマ区切りリストに、複数の宣言子と初期化子を含めることができます。 例えば:
 
@@ -83,7 +77,7 @@ int &ref, *ptr, k;
 
 参照は、オブジェクトのアドレスを保持しますが、構文的にはオブジェクトと同様に動作します。
 
-次のプログラムでは、オブジェクトの名前 `Today` とオブジェクトへの参照 `TodayRef` を、プログラム内で同じように使用できることに注意してください。
+次のプログラムでは、オブジェクトの名前 `s` とオブジェクトへの参照 `SRef` を、プログラム内で同じように使用できることに注意してください。
 
 ## <a name="example"></a>例
 
@@ -120,4 +114,3 @@ int main() {
 [参照型関数の引数](../cpp/reference-type-function-arguments.md)<br/>
 [参照型関数の戻り値](../cpp/reference-type-function-returns.md)<br/>
 [ポインターへの参照](../cpp/references-to-pointers.md)
-

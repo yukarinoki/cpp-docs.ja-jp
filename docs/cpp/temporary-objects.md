@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3aea9e17d17008642f9421beb47be38cac401132
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4e94fa412b76107dde90d3a6a664ec68c6b6bdaf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071316"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078795"
 ---
 # <a name="temporary-objects"></a>一時オブジェクト
 
@@ -41,9 +41,9 @@ ms.locfileid: "46071316"
                     //   value.
     ```
 
-     戻り値は別のオブジェクトにコピーされないため、一時オブジェクトが作成されます。 一時オブジェクトが作成されるより一般的なケースは、オーバーロードされた演算子関数を呼び出す必要がある式を評価するときです。 これらのオーバーロードされた演算子関数は、多くの場合、別のオブジェクトにコピーされないユーザー定義型を返します。
+   戻り値は別のオブジェクトにコピーされないため、一時オブジェクトが作成されます。 一時オブジェクトが作成されるより一般的なケースは、オーバーロードされた演算子関数を呼び出す必要がある式を評価するときです。 これらのオーバーロードされた演算子関数は、多くの場合、別のオブジェクトにコピーされないユーザー定義型を返します。
 
-     式 `ComplexResult = Complex1 + Complex2 + Complex3` を考えます。 `Complex1 + Complex2` 式が評価され、結果が一時オブジェクトに格納されます。 次に、式*一時*`+ Complex3`が評価され、結果にコピーされますが、 `ComplexResult` (と仮定すると、代入演算子はオーバー ロードされない)。
+   式 `ComplexResult = Complex1 + Complex2 + Complex3` を考えます。 `Complex1 + Complex2` 式が評価され、結果が一時オブジェクトに格納されます。 次に、式*一時*`+ Complex3`が評価され、結果にコピーされますが、 `ComplexResult` (と仮定すると、代入演算子はオーバー ロードされない)。
 
 - キャストの結果をユーザー定義型に格納するため。 特定の型のオブジェクトがユーザー定義型に明示的に変換されるとき、新しいオブジェクトは一時オブジェクトとして作成されます。
 

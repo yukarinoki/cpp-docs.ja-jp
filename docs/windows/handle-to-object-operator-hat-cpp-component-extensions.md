@@ -1,7 +1,7 @@
 ---
-title: オブジェクト演算子 (^) (C++ コンポーネント拡張) へのハンドル |Microsoft Docs
+title: オブジェクト演算子 (^) へのハンドル (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,14 +15,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: fa72b6ec2983c0d7b9850578e743d03b7e3946e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5fe5bf67df643f83d555d3f2d6fc9a0aadf84b01
+ms.sourcegitcommit: 68cd127a6606f0aed2eb1bc9a75cdfb95b9b6526
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410859"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204891"
 ---
-# <a name="handle-to-object-operator---c-component-extensions"></a>オブジェクト演算子 (^) へのハンドル (C++ コンポーネント拡張)
+# <a name="handle-to-object-operator---ccli-and-ccx"></a>オブジェクト演算子 (^) へのハンドル (C +/cli および C++/cli CX)
 
 *ハンドル宣言子*(`^`、「ハット」と発音)、型を変更します[指定子](../cpp/overview-of-declarators.md)という意味では、宣言されたオブジェクトに自動的にを削除するか、システム オブジェクトがあると判断した場合に。不要になったアクセスできます。
 
@@ -34,21 +34,19 @@ ms.locfileid: "46410859"
 
 コンパイラ COM の使用*参照カウント*オブジェクトが使用しなくなったと削除できるかどうかを判断するためのメカニズムです。 これが可能なのは、Windows ランタイム インターフェイスから派生するオブジェクトが実際に COM オブジェクトであるためです。 参照カウントは、オブジェクトが作成されるかコピーされるとインクリメントされ、オブジェクトが null に設定されるかスコープから外れるとデクリメントされます。 参照カウントがゼロになると、オブジェクトは直ちに自動的に削除されます。
 
-ハンドル宣言子の利点は、煩雑でエラーが発生しやすいプロセスであるオブジェクトについて、COM では参照カウントを明示的に管理する必要があるということです。 つまり、参照カウントをインクリメントおよびデクリメントするには、オブジェクトの AddRef() メソッドと Release() メソッドを呼び出す必要があります。 ただし、ハンドル宣言子を使用してオブジェクトを宣言する場合、Visual C++ コンパイラでは、参照カウントを自動的に調整するコードを生成します。
+ハンドル宣言子の利点は、煩雑でエラーが発生しやすいプロセスであるオブジェクトについて、COM では参照カウントを明示的に管理する必要があるということです。 つまり、参照カウントをインクリメントおよびデクリメントするには、オブジェクトの AddRef() メソッドと Release() メソッドを呼び出す必要があります。 ただし、ハンドル宣言子とオブジェクトを宣言する場合、コンパイラは、参照カウントを自動的に調整するコードを生成します。
 
 オブジェクトをインスタンス化する方法については、次を参照してください。 [ref 新しい](../windows/ref-new-gcnew-cpp-component-extensions.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-システムが CLR を使用して*ガベージ コレクター*オブジェクトが使用しなくなったと削除できるかどうかを判断するためのメカニズムです。 共通言語ランタイムが、オブジェクトを割り当てるヒープを保持し、プログラムでマネージド参照 (変数) を使用します。それによりヒープ内のオブジェクトの場所が示されます。 オブジェクトがもう使用されなくなると、オブジェクトがヒープで占有していたメモリが解放されます。 ガベージ コレクターは、解放済みメモリの使用を改善するために、定期的にヒープを圧縮します。 ヒープを圧縮すると、ヒープのオブジェクトを移動できます。これにより、マネージド参照によって参照される場所が無効になります。 ただし、ガベージ コレクターは、すべてのマネージド参照の場所を認識しており、ヒープ内のオブジェクトの現在の場所を示すようにマネージド参照を自動的に更新します。
+システムが CLR を使用して*ガベージ コレクター*オブジェクトが使用しなくなったと削除できるかどうかを判断するためのメカニズムです。 共通言語ランタイムが、オブジェクトを割り当てるヒープを保持し、プログラムでマネージド参照 (変数) を使用します。それによりヒープ内のオブジェクトの場所が示されます。 オブジェクトがもう使用されなくなると、オブジェクトがヒープで占有していたメモリが解放されます。 ガベージ コレクターは、解放済みメモリの使用を改善するために、定期的にヒープを圧縮します。 ヒープを最適化すると、マネージ参照によって参照される場所を無効にすると、ヒープのオブジェクトを移動できます。 ただし、ガベージ コレクターは、すべてのマネージド参照の場所を認識しており、ヒープ内のオブジェクトの現在の場所を示すようにマネージド参照を自動的に更新します。
 
 ネイティブ C++ ポインター (`*`) と参照 (`&`) は、マネージド参照ではないため、それらが指し示すアドレスをガベージ コレクターは自動的に更新できません。 この問題を解決するには、ガベージ コレクターが認識しており自動的に更新できる変数を、ハンドル宣言子を使用して指定します。
-
-Visual C++ 2002 と Visual C++ 2003 では、`__gc *` を使用して、マネージド ヒープ上のオブジェクトを宣言していました。  新しい構文では、`^` が `__gc *` で置き換えられています。
 
 詳細については、次を参照してください。[方法: ネイティブ型内のハンドルを宣言](../dotnet/how-to-declare-handles-in-native-types.md)します。
 
@@ -96,7 +94,7 @@ using namespace System;
 void Test(Object^ o) {
    Int32^ i = dynamic_cast<Int32^>(o);
 
-   if(i)  
+   if(i)
       Console::WriteLine(i);
    else
       Console::WriteLine("Not a boxed int");
@@ -175,12 +173,12 @@ private:
 public:
    DataCollection(int i) : Size(i) {
       x = gcnew array<String^>(Size);
-      for (int i = 0 ; i < Size ; i++)  
+      for (int i = 0 ; i < Size ; i++)
          x[i] = i.ToString();
    }
 
    void f(int Item) {
-      if (Item >= Size)  
+      if (Item >= Size)
       {
          System::Console::WriteLine("Cannot access array element {0}, size is {1}", Item, Size);
          return;
@@ -229,11 +227,11 @@ int main() {
 }
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [参照演算子の追跡](../windows/tracking-reference-operator-cpp-component-extensions.md)

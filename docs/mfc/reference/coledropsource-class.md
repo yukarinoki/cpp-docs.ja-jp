@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f40ac527ba8ad7e65f025910e96a69f546842e30
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cb12135a0fbffdeba55130bced80c2f23c365caa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052354"
 ---
 # <a name="coledropsource-class"></a>COleDropSource クラス
 
@@ -75,7 +75,7 @@ class COleDropSource : public CCmdTarget
 
 `COleDropSource`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxole.h
 
@@ -177,6 +177,4 @@ DRAGDROP_S_CANCEL、ESC キーまたは右ボタンが押された場合、ま�
 [MFC サンプルの OCLIENT](../../visual-cpp-samples.md)<br/>
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-
-
 

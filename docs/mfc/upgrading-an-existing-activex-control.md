@@ -22,19 +22,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2ddf4b505689521fbdfd702eb1944ac0779f16bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 48fee88dc991ff58bfb9178e370134ad3cdb11d8
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409572"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204627"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>既存の ActiveX コントロールのアップグレード
 
 既存の ActiveX コントロール (以前の OLE コントロール) 変更しなくても、インターネットで使用できます。 ただし、それぞれのパフォーマンスを向上させるためにコントロールを変更することがあります。
 
 > [!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 Web ページ上にコントロールを使用する場合は、追加の考慮事項です。 .Ocx ファイルとすべてのサポート ファイルは、ターゲット コンピューターである必要がありますか、インターネット経由でダウンロードします。 これにより、コードのサイズと時間の重要な考慮事項をダウンロードします。 ダウンロードは、署名された .cab ファイルにパッケージ化することができます。 コントロール、スクリプトの安全性および初期化に対して安全としてマークできます。
 
@@ -56,7 +56,7 @@ Web ページ上にコントロールを使用する場合は、追加の考慮�
 
 ##  <a name="_core_packaging_code_for_downloading"></a> ダウンロード用のコードをパッケージ化
 
-このトピックの詳細については、サポート技術情報の記事「パッケージ MFC コントロールを使用してインターネット経由」(Q167158) を参照してください。 サポート技術情報の記事を検索する[ http://support.microsoft.com/support](http://support.microsoft.com/support)します。
+このトピックの詳細については、次を参照してください。 [ActiveX コントロールをパッケージ化](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29)します。
 
 ### <a name="the-codebase-tag"></a>コードベースのタグ
 
@@ -94,7 +94,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
 
 ### <a name="creating-cab-files"></a>CAB ファイルを作成します。
 
-キャビネットの開発キットをダウンロードするには、サポート技術情報の記事から[310618: Microsoft キャビネット Software Development Kit](http://go.microsoft.com/fwlink/p/?linkid=148204)します。 このキットには、キャビネット ファイルの作成に必要なツールを紹介します。
+キャビネット ファイルを作成するツールは、の一部となって、 [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)します。
 
 キャビネット ファイルが指す`CODEBASE`ActiveX コントロールの .ocx ファイルとそのインストールを制御する .inf ファイルに含める必要があります。 キャビネット ファイル、コントロールのファイルの名前を指定することで、.inf ファイルを作成します。 既にこのキャビネット ファイルで、システムに存在する依存 Dll を含めないでください。 たとえば、MFC Dll が別のキャビネット ファイルにパッケージ化され、制御の .inf ファイルで参照します。
 
@@ -213,11 +213,11 @@ Internet Explorer でライセンスされた ActiveX コントロールを使�
 
 1. 挿入、\<オブジェクト > License Manager タグの後にライセンスされたコントロールのタグ。
 
-     たとえば、Microsoft のマスク エディット コントロールを表示する HTML ページは、以下に示します。 ID は、License Manager コントロールの最初のクラス、マスク エディット コントロールの ID は、2 番目のクラス。 前に作成した .lpk ファイルの相対パスを指すタグを変更し、コントロールのクラス ID を含むオブジェクト タグを追加します。
+   たとえば、Microsoft のマスク エディット コントロールを表示する HTML ページは、以下に示します。 ID は、License Manager コントロールの最初のクラス、マスク エディット コントロールの ID は、2 番目のクラス。 前に作成した .lpk ファイルの相対パスを指すタグを変更し、コントロールのクラス ID を含むオブジェクト タグを追加します。
 
 1. 挿入、\<埋め込み > NCompass ActiveX プラグインを使用する場合、LPK ファイルの属性します。
 
-     アクティブによってブラウザーが有効になっている場合、他のコントロールを表示することがあります: NCompass ActiveX プラグインを使用して Netscape など、追加する必要があります、\<埋め込み > 構文を次に示すよう。
+   アクティブによってブラウザーが有効になっている場合、他のコントロールを表示することがあります: NCompass ActiveX プラグインを使用して Netscape など、追加する必要があります、\<埋め込み > 構文を次に示すよう。
 
 ```
 <OBJECT CLASSID="clsid:5220cb21-c88d-11cf-b347-00aa00a28331">

@@ -1,7 +1,7 @@
 ---
 title: IsBaseOfStrict 構造体 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 137f572f01d4aa72b9141c3ca172426fdb575b48
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 90ceaf20a5d601fc2904b7ce8610b4a3906e30ac
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169525"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161204"
 ---
 # <a name="isbaseofstrict-structure"></a>IsBaseOfStrict 構造体
 
@@ -33,15 +33,10 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 ## <a name="syntax"></a>構文
 
 ```cpp
-template <
-   typename Base,
-   typename Derived
->
-
+template <typename Base, typename Derived>
 struct IsBaseOfStrict;
-template <
-   typename Base
->
+
+template <typename Base>
 struct IsBaseOfStrict<Base, Base>;
 ```
 
@@ -57,7 +52,7 @@ struct IsBaseOfStrict<Base, Base>;
 
 一方の型がもう一方の型の基本クラスであるかどうかをテストします。
 
-最初のテンプレートが生じる場合の基本型から派生する型かどうかをテストする`true`または`false`します。 2 番目のテンプレートはから派生した型自体には、常に生成するかどうかをテストする`false`します。
+最初のテンプレートが生じる場合の基本型から派生する型かどうかをテストする**true**または**false**します。 2 番目のテンプレートはから派生した型自体には、常に生成するかどうかをテストする**false**します。
 
 ## <a name="members"></a>メンバー
 
@@ -89,4 +84,4 @@ static const bool value = __is_base_of(Base, Derived);
 
 1 つの型が別のベースであるかどうかを示します。
 
-`value` `true`場合型`Base`型の基本クラスは、 `Derived`、それ以外の場合は`false`します。
+`value` **true**場合型`Base`型の基本クラスは、 `Derived`、それ以外の場合は**false**します。

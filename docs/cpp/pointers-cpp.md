@@ -17,62 +17,52 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a39ee9c45084d03198157f427ca3edca13767e6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7e896c1a00e45e5e7503837409903651ed2bdc3a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024113"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861240"
 ---
 # <a name="pointers-c"></a>ポインター (C++)
 
 ポインターは次の順序で宣言します。
 
-```
-[storage-class-specifiers] [cv-qualifiers] type-specifiers 
-[ms-modifier] declarator ;
-```
+> \[*ストレージ クラス指定子*] \[ *cv 修飾子*]*型指定子* \[ *ms 修飾子*] *宣言子* **;**
 
-ここで、`declarator` には任意の有効なポインター宣言子を使用できます。 単純なポインター宣言子の構文は、次のとおりです。
+任意の有効なポインター宣言子を使用できます*宣言子*します。 単純なポインター宣言子の構文は、次のとおりです。
 
-```
-* [cv-qualifiers] identifier [= expression]
-```
+> __\*__ \[*cv 修飾子*]*識別子* \[ **=** *式*]
 
 1. 宣言指定子:
 
-    - ストレージ クラスの指定子 (省略可能)。 詳細については、次を参照してください。[指定子](../cpp/specifiers.md)します。
+   - ストレージ クラスの指定子 (省略可能)。 詳細については、次を参照してください。[指定子](../cpp/specifiers.md)します。
 
-    - 省略可能な**const**または**揮発性**指されるオブジェクトの型に適用するキーワード。
+   - 省略可能な**const**または**揮発性**指されるオブジェクトの型に適用するキーワード。
 
-    - 型指定子: ポイントされるオブジェクトの型を表す型の名前。
+   - 型指定子: ポイントされるオブジェクトの型を表す型の名前。
 
-2. 宣言子: 
+1. 宣言子: 
 
-    - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
+   - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
 
-    - `*` 演算子。
+   - __\*__ 演算子。
 
-    - 省略可能な**const**または**揮発性**ポインター自体に適用するキーワード。
+   - 省略可能な**const**または**揮発性**ポインター自体に適用するキーワード。
 
-    - 識別子。
+   - 識別子。
 
-    - 初期化子 (省略可能)。
+   - 初期化子 (省略可能)。
 
-     関数へのポインターの宣言子は次のようになります。
+関数へのポインターの宣言子は次のようになります。
 
-```
-(* [cv-qualifiers] identifier )( argument-list ) [cv-qualifers]
-[exception specification] [= expression];
-```
+> __(\*__  \[ *cv 修飾子*]*識別子* **) (** *引数リスト* **)** \[ *cv 修飾子*] \[*例外仕様*] \[ **=***式*] **;**
 
-- ポインターの配列の場合、構文は次のようになります。
+ポインターの配列の場合、構文は次のようになります。
 
-```
-* identifier [ [ constant-expression ] ]
-```
+> __\*__ *識別子* **\[** \[*定数式*] **]**
 
-- 1 つの宣言内で、宣言指定子の後ろのコンマ区切りリストとして、複数の宣言子とその初期化子をまとめて指定することができます。
+1 つの宣言内で、宣言指定子の後ろのコンマ区切りリストとして、複数の宣言子とその初期化子をまとめて指定することができます。
 
 ポインター宣言の簡単な例は次のとおりです。
 

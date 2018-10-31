@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5f0090195506e26cab165e3ddadca0342c0b35b6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a6ad4b23e6caef15b5dabaaa3102d72e3ff84fbc
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084056"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860590"
 ---
 # <a name="for-statement-c"></a>for ステートメント (C)
 
@@ -34,7 +34,7 @@ ms.locfileid: "46084056"
 
 1. *init-expression* がある場合、それが評価されます。 この式は、ループの初期化を指定します。 *init-expression* の型に制限はありません。
 
-2. *cond-expression* がある場合、それが評価されます。 この式は、演算型またはポインター型である必要があります。 この式は、各イテレーションの前に評価されます。 次の 3 つの結果が発生する可能性があります。
+1. *cond-expression* がある場合、それが評価されます。 この式は、演算型またはポインター型である必要があります。 この式は、各イテレーションの前に評価されます。 次の 3 つの結果が発生する可能性があります。
 
    - *cond-expression* が **true** (0 以外) の場合、*statement* が実行されます。その後、*loop-expression* があれば、それが評価されます。 *loop-expression* は、各イテレーションの後に評価されます。 この式の型に制限はありません。 副作用が順に実行されます。 その後、*cond-expression* の評価から再び処理が開始されます。
 

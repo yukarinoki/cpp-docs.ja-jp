@@ -1,7 +1,7 @@
 ---
-title: メイクファイル プロジェクトの作成 | Microsoft Docs
+title: C++ メイクファイル プロジェクトの作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 02/28/2018
+ms.date: 09/12/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,28 +17,34 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc854f96f1c41baf28a5af4ca1f253e47d9a8914
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: a3360d2ed86d220bc59d6f09f582c71b48f7d78c
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33336779"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46399484"
 ---
-# <a name="creating-a-makefile-project"></a>メイクファイル プロジェクトの作成
+# <a name="creating-a-c-makefile-project"></a>C++ メイクファイル プロジェクトの作成
 
-メイクファイルを使用してコマンド ラインからビルドした既存のソース コード プロジェクトがある場合、Visual Studio 開発環境には、Visual Studio IDE 機能を最大限に活用できるプロジェクトにするための方法がいくつかあります。 この記事では、Visual Studio でメイクファイル プロジェクトを作成する方法について説明します。ここでは、既存のメイクファイルを使用して IDE でコードをビルドします。 また、**[既存コード ファイルからの新しいプロジェクトの作成]** ウィザードを使用して、ソース コードからネイティブ MSBuild プロジェクトを作成することもできます。 詳細については、「[方法 : 既存のコードから C++ プロジェクトを作成する](how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。 Visual Studio 2017 以降、ネイティブ Visual Studio プロジェクトであれば、いくつかの既存のビルド システムを使用できる **[フォルダーを開く]** 機能を使用することもできます。 詳細については、「[Open Folder projects in Visual C++ (Visual C++ の [フォルダーを開く] プロジェクト)](non-msbuild-projects.md)」をご覧ください。
+*makefile* は、一連の C++ ソース コード ファイルをコンパイルし、リンクする (あるいは*ビルド*する) 方法を含むテキスト ファイルです。 *make* プログラムによってメイクファイルが読み取られ、コンパイラ、リンカー、そしておそらくは他のプログラムが呼び出され、実行可能ファイルが作成されます。 Microsoft の *make* プログラム実装は **NMAKE** と呼ばれています。 (Visual Studio では既定で、.vcsproj ファイルに基づいて MSBuild システムが使用されます。これは **[ファイル]、[新規]、[プロジェクト]** で作成されます。)
 
-Visual Studio を使用して、既存のメイクファイルを使用してソース コードを開いてビルドするには、まずメイクファイル プロジェクト テンプレートを選択して新しいプロジェクトを作成します。 ウィザードを使用すると、メイクファイルによって使用されるコマンドと環境を指定するのに役立ちます。 次に、このプロジェクトを使用して、Visual Studio 開発環境でコードをビルドできます。
+既存のメイクファイル プロジェクトがある場合、Visual Studio IDE でそれをコード化またはデバッグするとき、次の選択肢が表示されます。
+
+- Visual Studio で、既存のメイクファイルを使用して IDE でコードをビルドするメイクファイル プロジェクトを作成します。 (ネイティブの MSBuild プロジェクトで与えられる IDE 機能は一部のみ与えられます。)下の「[メイクファイル プロジェクトを作成するには](#create_a_makefile_project)」を参照してください。
+- **[既存コード ファイルからの新しいプロジェクトの作成]** ウィザードを使用し、ソース コードからネイティブ MSBuild プロジェクトを作成します。 詳細については、「[方法 : 既存のコードから C++ プロジェクトを作成する](how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。
+- **Visual Studio 2017 以降**: **[フォルダーを開く]** 機能を使用してメイクファイルを開きます。 詳細については、「[Open Folder projects in Visual C++ (Visual C++ の [フォルダーを開く] プロジェクト)](non-msbuild-projects.md)」をご覧ください。
+
+## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> メイクファイル プロジェクト テンプレートでメイクファイル プロジェクトを作成するには
+
+Visual Studio 2017 以降では、メイクファイル プロジェクト テンプレートは、C++ デスクトップ開発ワークロードがインストールされているときに利用できます。
+
+ウィザードに従い、メイクファイルによって使用されるコマンドと環境を指定します。 次に、このプロジェクトを使用して、Visual Studio 開発環境でコードをビルドできます。
 
 既定では、ソリューション エクスプローラーにメイクファイル プロジェクトのファイルは表示されません。 メイクファイル プロジェクトで指定したビルド構成は、プロジェクトのプロパティ ページに反映されます。
 
 プロジェクトで指定した出力ファイルは、ビルド スクリプトの生成するファイルの名前には直接は影響しません。 メイクファイルでは、引き続きビルド プロセスの制御とビルド ターゲットの指定を行います。
 
-## <a name="to-create-a-makefile-project"></a>メイクファイル プロジェクトを作成するには
-
-1. ヘルプ トピックの「[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../ide/creating-desktop-projects-by-using-application-wizards.md)」の手順に従います。
-
-1. **[新しいプロジェクト]** ダイアログ ボックスで **[Visual C++]** > **[全般]** を展開し、[テンプレート] ウィンドウの **[メイクファイル プロジェクト]** を選択してプロジェクト ウィザードを開きます。
+1. Visual Studio のスタート ページで、**[新しいプロジェクト]** 検索ボックスに「makefile」と入力します。 あるいは、**[新しいプロジェクト]** ダイアログ ボックスで **[Visual C++]**、**[全般]** (Visual Studio 2015) または **[その他]** (Visual Studio 2017) の順に展開し、[テンプレート] ウィンドウの **[メイクファイル プロジェクト]** を選択してプロジェクト ウィザードを開きます。
 
 1. [[アプリケーションの設定]](../ide/application-settings-makefile-project-wizard.md) ページで、デバッグと製品ビルドに対してコマンド、出力、クリーンアップ、およびリビルドに関する情報を指定します。
 

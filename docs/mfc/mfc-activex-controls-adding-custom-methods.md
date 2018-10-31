@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 428f43d5cd1a0cfaa4b5f829b59208ce96eab85d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0973bb21771796f40a0464e2376101ee35a0d1a3
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441084"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204551"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX コントロール : カスタム メソッドの追加
 
 実装されていないことで、ストック メソッドのカスタム メソッドとは異なる`COleControl`します。 コントロールに追加する各カスタム メソッドの実装を指定する必要があります。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 ActiveX コントロールのユーザーは、コントロールに固有の操作を実行するには、いつでもカスタム メソッドを呼び出すことができます。 カスタム メソッドのディスパッチ マップ エントリは、フォーム DISP_FUNCTION のです。
 
@@ -48,7 +48,7 @@ ActiveX コントロールのユーザーは、コントロールに固有の操
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**メソッドの追加**します。
 
-     メソッドの追加ウィザードが開きます。
+   メソッドの追加ウィザードが開きます。
 
 1. **メソッド名**ボックスに「 *PtInCircle*します。
 

@@ -65,12 +65,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6b6ccad2c7c6c925a2c5ef6a7270a95d8a270f0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 935a92beb49d26240aa63f5cfbd4adc9f22d06e8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398991"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078012"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 構造体
 
@@ -113,13 +113,13 @@ struct AFX_GLOBAL_DATA
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|`D2D`、 `DirectWrite`、および `WIC` の各ファクトリを初期化します。 このメソッドは、メイン ウィンドウが初期化される前に呼び出します。|
 |[AFX_GLOBAL_DATA::Is32BitIcons](#is32biticons)|定義済みの 32 ビット アイコンがサポートされているかどうかを示します。|
 |[AFX_GLOBAL_DATA::IsD2DInitialized](#isd2dinitialized)|`D2D` が初期化されているかどうかを調べます。|
-|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Windows を呼び出す簡単な方法を提供します。 [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled)メソッド。|
+|[AFX_GLOBAL_DATA::IsDwmCompositionEnabled](#isdwmcompositionenabled)|Windows の [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) のメソッドを簡単な方法で呼び出すことができます。|
 |[AFX_GLOBAL_DATA::IsHighContrastMode](#ishighcontrastmode)|イメージが現在、ハイ コントラストで表示されているかどうかを判定します。|
 |[AFX_GLOBAL_DATA::OnSettingChange](#onsettingchange)|デスクトップのメニュー アニメーションとタスクバーの自動非表示機能の現在の状態を検出します。|
 |[AFX_GLOBAL_DATA::RegisterWindowClass](#registerwindowclass)|指定された MFC ウィンドウ クラスを登録します。|
 |[AFX_GLOBAL_DATA::ReleaseTaskBarRefs](#releasetaskbarrefs)|GetITaskbarList メソッドおよび GetITaskbarList3 メソッドを通じて取得されたインターフェイスを解放します。|
-|[AFX_GLOBAL_DATA::Resume](#resume)|Windows をサポートするメソッドにアクセスする内部関数ポインターを再初期化[テーマと視覚スタイル](/windows/desktop/Controls/visual-styles-overview)します。|
-|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Windows を呼び出す簡単な方法を提供します。 [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)メソッド。|
+|[AFX_GLOBAL_DATA::Resume](#resume)|Windows の [テーマと視覚スタイル](/windows/desktop/Controls/visual-styles-overview)をサポートするメソッドにアクセスする内部関数ポインターを再初期化します。|
+|[AFX_GLOBAL_DATA::SetLayeredAttrib](#setlayeredattrib)|Windows の [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) メソッドを簡単な方法で呼び出すことができます。|
 |[AFX_GLOBAL_DATA::SetMenuFont](#setmenufont)|指定された論理フォントを作成します。|
 |[AFX_GLOBAL_DATA::ShellCreateItemFromParsingName](#shellcreateitemfromparsingname)|解析名からシェル項目オブジェクトを作成して初期化します。|
 |[AFX_GLOBAL_DATA::UpdateFonts](#updatefonts)|フレームワークにより使用される論理フォントを再初期化します。|
@@ -160,7 +160,7 @@ struct AFX_GLOBAL_DATA
 
 `AFX_GLOBAL_DATA`
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxglobals.h
 
@@ -169,11 +169,9 @@ struct AFX_GLOBAL_DATA
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
-
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
 オペレーティング システムがアルファ ブレンドをサポートしているかどうかを示します。
-
 
 ```
 BOOL  bIsOSAlphaBlendingSupport;
@@ -183,19 +181,17 @@ BOOL  bIsOSAlphaBlendingSupport;
 
 TRUE は、アルファ ブレンドがサポートされていることを示しますそれ以外の場合、FALSE です。
 
-
 ## <a name="cleanup"></a> AFX_GLOBAL_DATA::CleanUp
 
 ブラシ、フォント、DLL など、フレームワークにより割り当てられたリソースを解放します。
 
-
 ```
 void CleanUp();
 ```
+
 ## <a name="d2d1makerotatematrix"></a> AFX_GLOBAL_DATA::D2D1MakeRotateMatrix
 
 指定した点を中心に指定した角度ずつ回転する回転変換を作成します。
-
 
 ```
 HRESULT D2D1MakeRotateMatrix(
@@ -223,7 +219,6 @@ HRESULT D2D1MakeRotateMatrix(
 
 指定領域にコントロールの親の背景を描画します。
 
-
 ```
 BOOL DrawParentBackground(
     CWnd* pWnd,
@@ -250,7 +245,6 @@ BOOL DrawParentBackground(
 
 指定されたテーマの視覚スタイルで、指定されたテキストを描画します。
 
-
 ```
 BOOL DrawTextOnGlass(
     HTHEME hTheme,
@@ -275,10 +269,10 @@ BOOL DrawTextOnGlass(
 [in]デバイス コンテキストへのポインター。
 
 *iPartId*<br/>
-[in]目的のテキストの外観を備えたコントロールの部分。 詳細については、テーブルの部分列を参照してください。[パーツと状態](https://msdn.microsoft.com/library/windows/desktop/bb773210)します。 この値が 0 の場合、テキストは既定のフォント、またはデバイス コンテキストに選択されているフォントで描画されます。
+[in]目的のテキストの外観を備えたコントロールの部分。 詳細については、「 [Parts and States (パーツと状態)](https://msdn.microsoft.com/library/windows/desktop/bb773210)」の表の「Parts (パーツ)」列を参照してください。 この値が 0 の場合、テキストは既定のフォント、またはデバイス コンテキストに選択されているフォントで描画されます。
 
 *iStateId*<br/>
-[in]目的のテキストの外観を備えたコントロールの状態。 詳細については、テーブルの状態列を参照してください。[パーツと状態](https://msdn.microsoft.com/library/windows/desktop/bb773210)します。
+[in]目的のテキストの外観を備えたコントロールの状態。 詳細については、「 [Parts and States (パーツと状態)](https://msdn.microsoft.com/library/windows/desktop/bb773210)」の表の「States (状態)」列を参照してください。
 
 *strText*<br/>
 [in]描画するテキスト。
@@ -319,7 +313,6 @@ BOOL DrawTextOnGlass(
 
 Microsoft Active Accessibility のサポートを有効または無効にします。
 
-
 ```
 void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 ```
@@ -335,7 +328,6 @@ Active Accessibility は、プログラムと支援技術製品と共に、Windo
 
 使用して、 [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) Microsoft Active Accessibility のサポートが有効になっているかどうかを判断するメソッド。
 
-
 ### <a name="see-also"></a>関連項目
 
 [UI オートメーションと Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
@@ -344,7 +336,6 @@ Active Accessibility は、プログラムと支援技術製品と共に、Windo
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
 指定された XML タグ ペアを、指定されたバッファーから削除します。
-
 
 ```
 BOOL ExcludeTag(
@@ -392,7 +383,6 @@ XML タグのペアは開始と指定したバッファー内のテキストの�
 
 指定されたユーザー インターフェイス要素の現在の色を取得します。
 
-
 ```
 COLORREF GetColor(int nColor);
 ```
@@ -420,7 +410,6 @@ COLORREF GetColor(int nColor);
 
 グローバル データに格納されている ID2D1Factory インターフェイスへのポインターを返します。 インターフェイスが初期化されていない場合は、既定のパラメーターでインターフェイスが作成されます。
 
-
 ```
 ID2D1Factory* GetDirect2dFactory();
 ```
@@ -433,7 +422,6 @@ ID2D1Factory インターフェイスの場合は、ファクトリの作成が�
 
 手の形に類似して、識別子を持つ IDC_HAND は、定義済みのカーソルを取得します。
 
-
 ```
 HCURSOR GetHandCursor();
 ```
@@ -445,7 +433,6 @@ HCURSOR GetHandCursor();
 ## <a name="getnonclientmetrics"></a> AFX_GLOBAL_DATA::GetNonClientMetrics
 
 最小化されていないウィンドウの非クライアント領域に関連付けられたメトリックを取得します。
-
 
 ```
 BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
@@ -460,7 +447,6 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。
 
-
 ### <a name="see-also"></a>関連項目
 
 [NONCLIENTMETRICS 構造体](https://msdn.microsoft.com/library/windows/desktop/ff729175)
@@ -468,7 +454,6 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
 現在のフォントのテキスト文字の高さを取得します。
-
 
 ```
 int GetTextHeight(BOOL bHorz = TRUE);
@@ -487,7 +472,6 @@ int GetTextHeight(BOOL bHorz = TRUE);
 
 グローバル データに格納されている IWICImagingFactory インターフェイスへのポインターを返します。 インターフェイスが初期化されていない場合は、既定のパラメーターでインターフェイスが作成されます。
 
-
 ```
 IWICImagingFactory* GetWICFactory();
 ```
@@ -500,7 +484,6 @@ IWICImagingFactory インターフェイスの場合は、ファクトリの作�
 
 グローバル データに格納されている IDWriteFactory インターフェイスへのポインターを返します。 インターフェイスが初期化されていない場合は、既定のパラメーターでインターフェイスが作成されます。
 
-
 ```
 IDWriteFactory* GetWriteFactory();
 ```
@@ -512,7 +495,6 @@ IDWriteFactory インターフェイスの場合は、ファクトリの作成�
 ## <a name="initd2d"></a> AFX_GLOBAL_DATA::InitD2D
 
 D2D、DirectWrite と WIC のファクトリを初期化します。 このメソッドは、メイン ウィンドウが初期化される前に呼び出します。
-
 
 ```
 BOOL InitD2D(
@@ -536,10 +518,8 @@ D2D ファクトリとリソースのスレッド処理モデルを作成しま�
 
 定義済みの 32 ビット アイコンがサポートされているかどうかを示します。
 
-
 ```
 BOOL Is32BitIcons() const;
-
 
 ```
 
@@ -555,7 +535,6 @@ TRUE の場合、定義済みの 32 ビット アイコンがサポートされ�
 
 Microsoft Active Accessibility のサポートが有効かどうかを示します。
 
-
 ```
 BOOL IsAccessibilitySupport() const;
 ```
@@ -570,7 +549,6 @@ Microsoft Active Accessibility は、以前のソリューションのアプリ�
 
 使用して、 [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)メソッドを有効または Active Accessibility のサポートを無効にします。
 
-
 ### <a name="see-also"></a>関連項目
 
 [UI オートメーションと Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
@@ -578,7 +556,6 @@ Microsoft Active Accessibility は、以前のソリューションのアプリ�
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 D2D が初期化されたかどうかを決定します。
-
 
 ```
 BOOL IsD2DInitialized() const;
@@ -590,8 +567,7 @@ D2D の初期化された場合は TRUE。それ以外の場合は FALSE です�
 
 ## <a name="isdwmcompositionenabled"></a> AFX_GLOBAL_DATA::IsDwmCompositionEnabled
 
-Windows を呼び出す簡単な方法を提供します。 [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled)メソッド。
-
+Windows の [DwmIsCompositionEnabled](/windows/desktop/api/dwmapi/nf-dwmapi-dwmiscompositionenabled) のメソッドを簡単な方法で呼び出すことができます。
 
 ```
 BOOL IsDwmCompositionEnabled();
@@ -625,7 +601,6 @@ BOOL IsHighContrastMode() const;
 
 オペレーティング システムがレイヤード ウィンドウをサポートするかどうかを示します。
 
-
 ```
 BOOL IsWindowsLayerSupportAvailable() const;
 ```
@@ -642,7 +617,6 @@ TRUE の場合、レイヤード ウィンドウがサポートされていま�
 
 事前定義された 32 ビット カラー アイコンと低解像度のアイコンのどちらをフレームワークで使用するかを指定します。
 
-
 ```
 BOOL  m_bUseBuiltIn32BitIcons;
 ```
@@ -656,7 +630,6 @@ TRUE は、フレームワークが 32 ビット カラー アイコンを使用
 ## <a name="m_busesystemfont"></a> AFX_GLOBAL_DATA::m_bUseSystemFont
 
 メニュー、ツール バー、およびリボンに対してシステム フォントが使用されるかどうかを示します。
-
 
 ```
 BOOL m_bUseSystemFont;
@@ -672,7 +645,6 @@ TRUE は、システム フォントを使用するを指定しますそれ以�
 
 手の形のカーソルのハンドルを格納します。
 
-
 ```
 HCURSOR m_hcurHand;
 ```
@@ -680,7 +652,6 @@ HCURSOR m_hcurHand;
 ## <a name="m_hcurstretch"></a> AFX_GLOBAL_DATA::m_hcurStretch
 
 水平方向の伸縮カーソルのハンドルを格納します。
-
 
 ```
 HCURSOR m_hcurStretch;
@@ -690,7 +661,6 @@ HCURSOR m_hcurStretch;
 
 垂直方向の伸縮カーソルのハンドルを格納します。
 
-
 ```
 HCURSOR m_hcurStretchVert;
 ```
@@ -699,14 +669,13 @@ HCURSOR m_hcurStretchVert;
 
 ツール アイコンのハンドルを格納します。
 
-
 ```
 HICON m_hiconTool;
 ```
+
 ## <a name="m_nautohidetoolbarmargin"></a> AFX_GLOBAL_DATA::m_nAutoHideToolBarMargin
 
 左端の自動的に隠すツールバーからドッキング バーの左側にあるのオフセットを指定します。
-
 
 ```
 int  m_nAutoHideToolBarMargin;
@@ -720,7 +689,6 @@ int  m_nAutoHideToolBarMargin;
 
 自動的に隠すツール バーの間の間隔を指定します。
 
-
 ```
 int   m_nAutoHideToolBarSpacing;
 ```
@@ -732,7 +700,6 @@ int   m_nAutoHideToolBarSpacing;
 ## <a name="m_ndragframethicknessdock"></a> AFX_GLOBAL_DATA::m_nDragFrameThicknessDock
 
 ドッキングされた状態を示すために使用するドラッグ フレームの太さを指定します。
-
 
 ```
 int  m_nDragFrameThicknessDock;
@@ -746,7 +713,6 @@ int  m_nDragFrameThicknessDock;
 
 浮動小数点状態を示すために使用するドラッグ フレームの太さを指定します。
 
-
 ```
 int  m_nDragFrameThicknessFloat;
 ```
@@ -759,7 +725,6 @@ int  m_nDragFrameThicknessFloat;
 
 デスクトップのメニュー アニメーションとタスクバーの自動非表示機能の現在の状態を検出します。
 
-
 ```
 void OnSettingChange();
 ```
@@ -771,7 +736,6 @@ void OnSettingChange();
 ## <a name="registerwindowclass"></a> AFX_GLOBAL_DATA::RegisterWindowClass
 
 指定された MFC ウィンドウ クラスを登録します。
-
 
 ```
 CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
@@ -799,7 +763,6 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 
 Windows テーマと視覚スタイルをサポートするメソッドにアクセスする内部関数ポインターを再初期化します。
 
-
 ```
 BOOL Resume();
 ```
@@ -814,8 +777,7 @@ BOOL Resume();
 
 ## <a name="setlayeredattrib"></a> AFX_GLOBAL_DATA::SetLayeredAttrib
 
-Windows を呼び出す簡単な方法を提供します。 [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)メソッド。
-
+Windows の [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes) メソッドを簡単な方法で呼び出すことができます。
 
 ```
 BOOL SetLayeredAttrib(
@@ -852,7 +814,6 @@ BOOL SetLayeredAttrib(
 
 指定された論理フォントを作成します。
 
-
 ```
 BOOL SetMenuFont(
     LPLOGFONT lpLogFont,
@@ -879,7 +840,6 @@ BOOL SetMenuFont(
 
 フレームワークにより使用される論理フォントを再初期化します。
 
-
 ```
 void UpdateFonts();
 ```
@@ -892,7 +852,6 @@ void UpdateFonts();
 
 フレームワークで使用される色、色深度、ブラシ、ペン、およびイメージを初期化します。
 
-
 ```
 void UpdateSysColors();
 ```
@@ -900,7 +859,6 @@ void UpdateSysColors();
 ## <a name="biswindows7"></a> AFX_GLOBAL_DATA::bIsWindows7
 
 Windows 7 またはそれ以降、アプリケーションが実行されているかどうかを示します。
-
 
 ```
 BOOL bIsWindows7;
@@ -910,7 +868,6 @@ BOOL bIsWindows7;
 
 アクティブなキャプションのグラデーションの色を指定します。 通常、ドッキング ペインで使用されます。
 
-
 ```
 COLORREF clrActiveCaptionGradient;
 ```
@@ -919,7 +876,6 @@ COLORREF clrActiveCaptionGradient;
 
 非アクティブなキャプションのグラデーションの色を指定します。 通常、ドッキング ペインで使用されます。
 
-
 ```
 COLORREF clrInactiveCaptionGradient;
 ```
@@ -927,7 +883,6 @@ COLORREF clrInactiveCaptionGradient;
 ## <a name="getitaskbarlist"></a> AFX_GLOBAL_DATA::GetITaskbarList
 
 作成し、グローバル データへのポインターを格納、`ITaskBarList`インターフェイス。
-
 
 ```
 ITaskbarList *GetITaskbarList();
@@ -941,7 +896,6 @@ ITaskbarList *GetITaskbarList();
 
 作成し、グローバル データへのポインターを格納、`ITaskBarList3`インターフェイス。
 
-
 ```
 ITaskbarList3 *GetITaskbarList3();
 ```
@@ -953,7 +907,6 @@ ITaskbarList3 *GetITaskbarList3();
 ## <a name="getshellautohidebars"></a> AFX_GLOBAL_DATA::GetShellAutohideBars
 
 シェルの自動非表示バーの位置を決定します。
-
 
 ```
 int GetShellAutohideBars();
@@ -967,7 +920,6 @@ int GetShellAutohideBars();
 
 経由で取得したインターフェイスを解放、`GetITaskbarList`と`GetITaskbarList3`メソッド。
 
-
 ```
 void ReleaseTaskBarRefs();
 ```
@@ -975,7 +927,6 @@ void ReleaseTaskBarRefs();
 ## <a name="shellcreateitemfromparsingname"></a> AFX_GLOBAL_DATA::ShellCreateItemFromParsingName
 
 解析名からシェル項目オブジェクトを作成して初期化します。
-
 
 ```
 HRESULT ShellCreateItemFromParsingName(

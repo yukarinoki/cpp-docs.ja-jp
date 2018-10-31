@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d618ace9d922daabecf908c76a319e89a9fdedcc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4ed220aad7dd90ff2b5ca97c4cf5160fd4d00ed4
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46094183"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204575"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>コンパイラの警告 (レベル 3) C4996
 
@@ -35,7 +35,7 @@ ms.locfileid: "46094183"
 
 - [' std::*function_name*::\_未チェック\_反復子::\_Deprecate' 呼び出し std::*function_name*この呼び出しが依存する安全でない可能性がありますパラメーターを使用渡された値が正しいことを確認する呼び出し元。この警告を無効にするには、-D_SCL_SECURE_NO_WARNINGS を使用します。Visual C ' Checked Iterators' を使用する方法のドキュメントを参照してください。](#unsafe-standard-library-functions)
 
-- [この関数または変数は、新しいライブラリまたはオペレーティング システムの機能が提供されています。使用を検討して*new_item*代わりにします。詳しくは、オンライン ヘルプをご覧ください。](#obsolete-crt-functions-and-variables)
+- [この関数または変数は新しいライブラリまたはオペレーティング システムの機能によって置き換えられました。使用を検討して*new_item*代わりにします。詳しくは、オンライン ヘルプをご覧ください。](#obsolete-crt-functions-and-variables)
 
 ## <a name="cause"></a>原因
 
@@ -82,7 +82,6 @@ Microsoft は C99 と c++ 03 の規則の実装で定義されたグローバル
 この問題を解決するには、通常お勧めします推奨の関数名の代わりに使用するコードを変更します。 ただし、更新された名前は、Microsoft 固有です。 移植性のための既存の関数名を使用する必要がある場合は、これらの警告をオフにすることができます。 POSIX 関数は、ライブラリ、元の名前で引き続き使用できます。
 
 これらの関数の警告をオフにするには、プリプロセッサ マクロを定義して **\_CRT\_NONSTDC\_いいえ\_警告**します。 コマンドラインでこのマクロを定義するには、オプションを含めることによって`/D_CRT_NONSTDC_NO_WARNINGS`します。
-
 
 ### <a name="unsafe-crt-library-functions"></a>安全でない CRT ライブラリ関数
 
@@ -257,7 +256,7 @@ C4996 は、セキュリティ上の理由から非推奨とされた MFC また
 
 ### <a name="obsolete-crt-functions-and-variables"></a>廃止された CRT 関数と変数
 
-**この関数または変数は、新しいライブラリまたはオペレーティング システムの機能が提供されています。使用を検討して** *new_item* **代わりにします。詳しくは、オンライン ヘルプをご覧ください。**
+**この関数または変数は新しいライブラリまたはオペレーティング システムの機能によって置き換えられました。使用を検討して** *new_item* **代わりにします。詳しくは、オンライン ヘルプをご覧ください。**
 
 一部のライブラリ関数およびグローバル変数は非推奨とされるため使用されていません。 これらの関数および変数は、将来のバージョンのライブラリでは削除される可能性があります。 コンパイラは、これらの項目は使用されなくなったとの警告を発行し、優先すべき代替項目を提案します。
 

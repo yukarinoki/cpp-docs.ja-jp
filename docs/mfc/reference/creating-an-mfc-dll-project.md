@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 177d0dea7859dc2093fb7a10f6fdb6ee4df013f0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e787eb7e638751fa369923f8f4059f40fae34104
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386809"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061249"
 ---
 # <a name="creating-an-mfc-dll-project"></a>MFC DLL プロジェクトの作成
 
@@ -46,12 +46,11 @@ MFC DLL とは、複数のアプリケーションで同時に利用できる関
 
 1. をクリックして**完了**をで新しいプロジェクトを開き、ウィザードを閉じて**ソリューション エクスプ ローラー**します。
 
-作成したプロジェクトのファイルは、ソリューション エクスプローラーで確認できます。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)します。
+作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [Visual C++ プロジェクトの種類](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
 [プロパティ ページ](../../ide/property-pages-visual-cpp.md)
-
 

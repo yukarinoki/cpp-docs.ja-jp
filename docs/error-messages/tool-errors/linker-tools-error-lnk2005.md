@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a800fb8065fd3c613a2bc05975c15decb0145891
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a3dbb1d63e7d7c6f5e036fc0cde967277c91a40
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028312"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890128"
 ---
 # <a name="linker-tools-error-lnk2005"></a>リンカ ツール エラー LNK2005
 
@@ -121,14 +121,3 @@ ms.locfileid: "46028312"
     ```
 
    この問題を解決するには追加[/FORCE:MULTIPLE](../../build/reference/force-force-file-output.md)その uuid.lib が最初に参照されるライブラリをリンカー コマンドラインのオプションを確認します。
-
-## <a name="additional-information"></a>追加情報
-
-以前のバージョンのツールセットを使用している場合は、このエラーの具体的な原因の詳細については次のサポート技術情報記事を参照してください。
-
-- [LNK2005 エラーは、CRT ライブラリと MFC ライブラリが Visual C で間違った順序でリンクされている場合に発生します。](https://support.microsoft.com/kb/148652)
-
-- [修正: Global Overloaded Delete Operator 原因 LNK2005](https://support.microsoft.com/kb/140440)
-
-- [Visual c ATL 実行可能ファイル (.exe) プロジェクトをコンパイルするときに LNK2005 エラーが発生する](https://support.microsoft.com/kb/184235)します。
-

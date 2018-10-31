@@ -1,7 +1,7 @@
 ---
-title: デリゲート (C++ コンポーネント拡張) |Microsoft Docs
+title: デリゲート (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 13ce7d2a35245716adc70b9e84532ea7d1a4a440
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd0f63aebaa6dd742e1ce701e42cf8238fb6033f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432410"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068098"
 ---
-# <a name="delegate--c-component-extensions"></a>delegate (C++ コンポーネント拡張)
+# <a name="delegate--ccli-and-ccx"></a>デリゲート (C +/cli および C++/cli CX)
 
 関数ポインターを表す型を宣言します。
 
@@ -52,7 +52,7 @@ return-type
 delegate-type-identifier
 (
 [ parameters ]
-)  
+)
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -73,7 +73,7 @@ delegate-type-identifier
 
 使用して、*デリゲートの型識別子*イベント、デリゲートと同じプロトタイプを宣言します。 詳細については、次を参照してください。[デリゲート (C + + CX)](../cppcx/delegates-c-cx.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -131,9 +131,9 @@ function_declaration
 
 - [方法: デリゲートを定義および使用する (C++/CLI)](../dotnet/how-to-define-and-use-delegates-cpp-cli.md)
 
-- [汎用デリゲート (Visual C++)](../windows/generic-delegates-visual-cpp.md)
+- [汎用デリゲート (C +/cli CLI)](../windows/generic-delegates-visual-cpp.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -171,14 +171,14 @@ int main () {
    MyDel^ DelInst;
 
    // test if delegate is initialized
-   if (DelInst)  
+   if (DelInst)
       DelInst(7);
 
    // assigning to delegate
    DelInst = gcnew MyDel(a, &A::func1);
 
    // invoke delegate
-   if (DelInst)  
+   if (DelInst)
       DelInst(8);
 
    // add a function
@@ -212,4 +212,4 @@ in static func3 11
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec1e6215cd085ed948e4b0554bca12a678563d6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 84ed9bfb8b0c8b5ab30af07d8f0448109161df51
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434012"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077765"
 ---
 # <a name="iview-interface"></a>IView インターフェイス
 
@@ -57,8 +57,7 @@ interface class IView
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
-
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ヘッダー: afxwinforms.h が (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 
@@ -68,6 +67,7 @@ Windows フォームの使用に関する詳細については、次を参照し
 ```
 void OnActivateView(bool activate);
 ```
+
 ## <a name="parameters"></a>パラメーター
 
 *アクティブ化します。*<br/>
@@ -86,6 +86,7 @@ void OnInitialUpdate();
 ```
 void OnUpdate();
 ```
+
 ## <a name="remarks"></a>Remarks
 
 この関数は、ビューの変更を反映するように表示を更新できます。

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 378a99021ca1b48599ee934d659542384068e195
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2f3824e87a2016a848b3723aaa293f235f6f9b09
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46443346"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054866"
 ---
 # <a name="serialization-making-a-serializable-class"></a>シリアル化 : シリアル化可能なクラスの作成
 
@@ -67,9 +67,9 @@ ms.locfileid: "46443346"
 
 1. 挿入またはクラスに固有のメンバー変数を抽出します。
 
-     挿入と抽出演算子は、データを読み書きするアーカイブ クラスと対話します。 次の例は、実装する方法を示しています。`Serialize`の、`CPerson`上で宣言されたクラス。
+   挿入と抽出演算子は、データを読み書きするアーカイブ クラスと対話します。 次の例は、実装する方法を示しています。`Serialize`の、`CPerson`上で宣言されたクラス。
 
-     [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#2](../mfc/codesnippet/cpp/serialization-making-a-serializable-class_2.cpp)]
 
 使用することも、[読み書きするとき](../mfc/reference/carchive-class.md#read)と[CArchive::Write](../mfc/reference/carchive-class.md#write)大量の型指定されていないデータを読み書きするメンバー関数。
 

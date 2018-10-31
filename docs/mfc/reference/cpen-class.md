@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c6e8f448d4b6bee4b301fc567cc8e8e857747a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ec2e3253b4d26bc6773ffc4005100edfbec1bff
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46440291"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077531"
 ---
 # <a name="cpen-class"></a>CPen クラス
 
@@ -81,7 +81,7 @@ class CPen : public CGdiObject
 
 `CPen`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -92,12 +92,10 @@ class CPen : public CGdiObject
 ```
 CPen();
 
-
 CPen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 CPen(
     int nPenStyle,
@@ -132,13 +130,13 @@ CPen(
 
 - PS_COSMETIC は表面的なペンを作成します。
 
-     2 番目のバージョン、`CPen`コンス トラクターの次のペンのスタイルを追加します*nPenStyle*:
+   2 番目のバージョン、`CPen`コンス トラクターの次のペンのスタイルを追加します*nPenStyle*:
 
 - PS_ALTERNATE では、その他のすべてのピクセルを設定するペンを作成します。 (このスタイルは、表面的なペンにのみ適用できます)。
 
 - PS_USERSTYLE は、ユーザーが指定したスタイルの配列を使用するペンを作成します。
 
-     端点キャップには、次の値のいずれかを指定できます。
+   端点キャップには、次の値のいずれかを指定できます。
 
 - PS_ENDCAP_ROUND 端点キャップは round です。
 
@@ -146,7 +144,7 @@ CPen(
 
 - PS_ENDCAP_FLAT 端点キャップは一定です。
 
-     結合には、次の値のいずれかを指定できます。
+   結合には、次の値のいずれかを指定できます。
 
 - 斜め PS_JOIN_BEVEL を結合します。
 
@@ -192,7 +190,6 @@ BOOL CreatePen(
     int nPenStyle,
     int nWidth,
     COLORREF crColor);
-
 
 BOOL CreatePen(
     int nPenStyle,

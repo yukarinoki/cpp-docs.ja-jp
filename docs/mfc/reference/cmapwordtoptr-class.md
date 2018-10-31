@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58b998d4e4d15e972b31c468036c28c2ba26f92a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 90e22b19ab8bc196ed6c2017a3c3164933914dfa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442748"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073748"
 ---
 # <a name="cmapwordtoptr-class"></a>CMapWordToPtr クラス
 
@@ -117,7 +117,7 @@ Word とポインターのマップは、シリアル化されません。
 
 `CMapWordToPtr`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcoll.h
 
@@ -125,6 +125,4 @@ Word とポインターのマップは、シリアル化されません。
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-
-
 

@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6f2e9fdbef911a0160ff42925a9c7984f0211069
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: c6f00b3c3136a4a2df96667d0f99f195339c60f1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33843224"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056621"
 ---
 # <a name="hash-structure-c-standard-library"></a>hash 構造体 (C++ 標準ライブラリ)
 
@@ -34,11 +34,10 @@ struct hash<thread::id> :
 {
     size_t operator()(thread::id Val) const;
 
-
 };
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<スレッド >
 

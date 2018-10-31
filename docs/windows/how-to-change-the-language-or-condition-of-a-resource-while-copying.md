@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6239acd275d94eb2a59fe59882095d5106d3fc1e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3594e3c6ec839e41963ba7458e246563241bb4aa
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405737"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066566"
 ---
 # <a name="how-to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>方法: (C++) のコピー中に、言語またはリソースの条件を変更します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "46405737"
 リソースの言語と条件は、[ワークスペース] ウィンドウで、リソース名の後に、かっこで囲んで表示されます。 次の例では、リソース IDD_AboutBox が言語として Finnish、条件として XX33 を使用しています。
 
 ```cpp
-IDD_AboutBox (Finnish - XX33)  
+IDD_AboutBox (Finnish - XX33)
 ```
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>既存のリソースをコピーして、そのリソースの言語または条件を変更するには
@@ -50,7 +50,7 @@ IDD_AboutBox (Finnish - XX33)
 
    - **条件**ボックスに、条件を入力します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

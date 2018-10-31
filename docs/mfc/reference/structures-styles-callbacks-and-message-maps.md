@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a8499fd02e9338d518eae9c3f7ea4d4cb077fedb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4aebb9ab084bafa80f212a29969dce27a6ae6c5d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403606"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059689"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>構造体、スタイル、コールバック関数とメッセージ マップ
 
@@ -51,6 +51,4 @@ MFC ライブラリのクラスをカテゴリ別に一覧表示します。
 
 [MFC のサンプル](../../visual-cpp-samples.md)<br/>
 MFC ライブラリの使用方法を示すサンプルへのリンクを提供します。
-
-
 

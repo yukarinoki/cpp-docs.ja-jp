@@ -1,7 +1,7 @@
 ---
 title: Visual C++ での CMake プロジェクト | Microsoft Docs
 ms.custom: ''
-ms.date: 04/28/2018
+ms.date: 09/26/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,20 +16,20 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0e7852ad3fbd88b815aea8266bafc2879494d8a
-ms.sourcegitcommit: f923f667065cd6c4203d10ca9520600ee40e5f84
+ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/24/2018
-ms.locfileid: "42900668"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235101"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ での CMake プロジェクト
 
 この記事では、複数のプラットフォームで動作するビルド プロセスを定義するためのクロスプラットフォームのオープン ソース ツールである CMake についてよく理解していることを前提としています。
 
-Visual Studio 2015 では、Visual Studio のユーザーは [CMake ジェネレーター](https://cmake.org/cmake/help/v3.9/manual/cmake-generators.7.html)を使って MSBuild プロジェクト ファイルを生成し、IDE はそのファイルを IntelliSense、参照、およびコンパイルに使っていました。 
+Visual Studio 2015 では、Visual Studio のユーザーは [CMake ジェネレーター](https://cmake.org/cmake/help/v3.9/manual/cmake-generators.7.html)を使って MSBuild プロジェクト ファイルを生成し、IDE はそのファイルを IntelliSense、参照、およびコンパイルに使っていました。
 
-Visual Studio 2017 以降、**CMake の Visual C++ ツール** コンポーネントは、IntelliSense と参照のために、**フォルダーを開く**機能を使って IDE が CMake プロジェクト ファイル (CMakeLists.txt など) を直接使用できるようにします。 Visual Studio ジェネレーターを使用した場合は、一時プロジェクト ファイルが生成されて msbuild.exe に渡されますが、IntelliSense または参照のために読み込まれることはありません。 
+Visual Studio 2017 以降、**CMake の Visual C++ ツール** コンポーネントは、IntelliSense と参照のために、**フォルダーを開く**機能を使って IDE が CMake プロジェクト ファイル (CMakeLists.txt など) を直接使用できるようにします。 Visual Studio ジェネレーターを使用した場合は、一時プロジェクト ファイルが生成されて msbuild.exe に渡されますが、IntelliSense または参照のために読み込まれることはありません。
 
 **Visual Studio 2017 バージョン 15.3**: Ninja ジェネレーターと Visual Studio ジェネレーターの両方がサポートされます。
 
@@ -44,7 +44,7 @@ Visual Studio 2017 以降、**CMake の Visual C++ ツール** コンポーネ�
 **CMake の Visual C++ ツール**は、**C++ によるデスクトップ開発**ワークロードの一部として既定でインストールされます。
 
 ![C++ デスクトップ ワークロードでの CMake コンポーネント](media/cmake-install.png)
- 
+
 ## <a name="ide-integration"></a>IDE の統合
 
 **[ファイル] > [開く] > [フォルダー]** を選んで、CMakeLists.txt ファイルを含むフォルダーを開くと、次の処理が行われます。
@@ -53,10 +53,10 @@ Visual Studio 2017 以降、**CMake の Visual C++ ツール** コンポーネ�
 - **ソリューション エクスプローラー**に、フォルダーの構造とファイルが表示されます。
 - Visual Studio は CMake.exe を実行して、既定の "*構成*" (x86 デバッグ) 用の CMake キャッシュを生成します。 CMake コマンド ラインおよび CMake からの追加出力が、**出力ウィンドウ**に表示されます。  **Visual Studio 2017 バージョン 15.7 以降**: キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログで無効にできます。
 - Visual Studio は、IntelliSense、情報の参照、リファクタリングなどを有効にするためのソース ファイルのインデックス付けを、バックグラウンドで開始します。 ユーザーが作業を行っている間、Visual Studio は、エディターおよびディスク上での変更を監視し、インデックスとソースの同期を維持します。
- 
+
 開くフォルダーに含まれる CMake プロジェクトの数は制限されていません。 Visual Studio は、ワークスペース内にあるすべての "ルート" CMakeLists.txt ファイルを検出して構成します。 CMake の操作 (構成、ビルド、デバッグ) および C++ の IntelliSense と参照は、ワークスペース内のすべての CMake プロジェクトが使用できます。
 
-![複数のルートを持つ CMake プロジェクト](media/cmake-multiple-roots.png)  
+![複数のルートを持つ CMake プロジェクト](media/cmake-multiple-roots.png)
 
 **Visual Studio 2017 バージョン 15.7 以降**: ターゲットごとに論理的にまとめられたプロジェクトを参照することも可能です。 **ソリューション エクスプローラー** ツールバーのドロップダウンから、**[ターゲット ビュー]** を選択します。
 
@@ -64,8 +64,7 @@ Visual Studio 2017 以降、**CMake の Visual C++ ツール** コンポーネ�
 
 ## <a name="import-an-existing-cache"></a>既存のキャッシュをインポートする
 
-ユーザーが既存の CMakeCache.txt ファイルをインポートすると、Visual Studio はカスタマイズされた変数を自動的に抽出し、それを基にして事前設定済みの CMakeSettings.json ファイルを作成します。 元のキャッシュには、どのような変更も加えられておらず、コマンド ラインから、またはキャッシュの生成に使われた任意のツールや IDE で、使用することができます。 新しい CMakeSettings.json ファイルは、プロジェクトのルートの CMakeLists.txt と共に配置されます。 Visual Studio は、設定ファイルに基づいて新しいキャッシュを生成します。  
-
+ユーザーが既存の CMakeCache.txt ファイルをインポートすると、Visual Studio はカスタマイズされた変数を自動的に抽出し、それを基にして事前設定済みの [CMakeSettings.json](#cmake_settings) ファイルを作成します。 元のキャッシュには、どのような変更も加えられておらず、コマンド ラインから、またはキャッシュの生成に使われた任意のツールや IDE で、使用することができます。 新しい CMakeSettings.json ファイルは、プロジェクトのルートの CMakeLists.txt と共に配置されます。 Visual Studio は、設定ファイルに基づいて新しいキャッシュを生成します。
 
 **Visual Studio 2017 バージョン 15.7 以降**: キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログでオーバーライドできます。
 
@@ -75,16 +74,15 @@ Visual Studio 2017 以降、**CMake の Visual C++ ツール** コンポーネ�
 
 1. メイン メニューから **[ファイル] > [開く] > [CMake]** を選びます。
 
-   ![CMake を開く](media/cmake-file-open.png "[ファイル] > [開く] > [CMake]") 
+   ![CMake を開く](media/cmake-file-open.png "[ファイル] > [開く] > [CMake]")
 
-   これにより、**キャッシュからの CMake のインポート** ウィザードが起動します。 
-   
+   これにより、**キャッシュからの CMake のインポート** ウィザードが起動します。
+
 2. インポートする CMakeCache.txt ファイルに選んで、**[OK]** をクリックします。 **[キャッシュから CMake のプロジェクトをインポートします]** ウィザードが表示されます。
 
-   ![CMake キャッシュのインポート](media/cmake-import-wizard.png "CMake キャッシュ インポート ウィザードを開く") 
+   ![CMake キャッシュのインポート](media/cmake-import-wizard.png "CMake キャッシュ インポート ウィザードを開く")
 
    ウィザードが完了すると、**ソリューション エクスプローラー**でプロジェクトのルート CMakeLists.txt ファイルの隣に新しい CMakeCache.txt ファイルが表示されます。
-
 
 ## <a name="building-cmake-projects"></a>CMake プロジェクトのビルド
 
@@ -94,7 +92,7 @@ CMake プロジェクトをビルドするには、次の選択肢がありま�
 1. CMakeLists.txt を右クリックして、コンテキスト メニューから **[ビルド]** を選びます。 フォルダー構造内に複数のターゲットがある場合は、すべてをビルドするか、特定の 1 つのターゲットだけをビルドするかを選べます。
 1. メイン メニューから、**[ビルド] > [ソリューションのビルド]** (**F7** キーまたは **Ctrl + Shift + B** キー) を選びます。 **[全般]** ツール バーの **[スタートアップ アイテム]** ドロップダウンで CMake ターゲットが既に選択されていることを確認します。
 
-![CMake のビルド メニュー コマンド](media/cmake-build-menu.png "CMake のビルド コマンド メニュー") 
+![CMake のビルド メニュー コマンド](media/cmake-build-menu.png "CMake のビルド コマンド メニュー")
 
 アクティブな構成に対して Visual Studio ジェネレーターが選択されている場合、`-m -v:minimal` 引数を指定して MSBuild.exe が呼び出されます。 ビルドをカスタマイズするには、CMakeSettings.json ファイル内で、`buildCommandArgs` プロパティによりビルド システムに渡される追加のコマンド ライン引数を指定できます。
 
@@ -103,14 +101,14 @@ CMake プロジェクトをビルドするには、次の選択肢がありま�
 ```
 
 想像したとおり、ビルド結果が**出力ウィンドウ**と**エラー一覧**に表示されます。
- 
+
 ![CMake ビルド エラー](media/cmake-build-errors.png "CMake ビルド エラー")
 
 フォルダーに複数のビルド ターゲットがある場合は、**[CMake]** メニューまたは **CMakeLists.txt** のコンテキスト メニューで **[ビルド]** 項目を選び、ビルドする CMake ターゲットを指定できます。 CMake プロジェクトで **Ctrl + Shift + B** キーを押して、現在アクティブなドキュメントをビルドします。
 
 ## <a name="debug-the-project"></a>プロジェクトをデバッグする
 
-CMake プロジェクトをデバッグするには、対象の構成を選んで、**F5** キーを押すか、またはツール バーの **[実行]** ボタンをクリックします。 **[実行]** ボタンに [スタートアップ アイテムの選択] と表示されている場合は、ドロップダウン矢印を選んで、実行するターゲットを選びます (CMake プロジェクトでは、[現在のドキュメント] オプションは .cpp ファイルの場合にのみ有効です)。 
+CMake プロジェクトをデバッグするには、対象の構成を選んで、**F5** キーを押すか、またはツール バーの **[実行]** ボタンをクリックします。 **[実行]** ボタンに [スタートアップ アイテムの選択] と表示されている場合は、ドロップダウン矢印を選んで、実行するターゲットを選びます (CMake プロジェクトでは、[現在のドキュメント] オプションは .cpp ファイルの場合にのみ有効です)。
 
 ![CMake の実行ボタン](media/cmake-run-button.png "CMake の実行ボタン")
 
@@ -122,7 +120,6 @@ CMake プロジェクトをデバッグするには、対象の構成を選ん�
 
 ![CMake のスタートアップ アイテム ドロップダウン](media/cmake-startup-item-dropdown.png "CMake のスタートアップ アイテム ドロップダウン")
 
-
 CMake メニューからデバッグ セッションを開始することもできます。
 
 プロジェクト内の実行可能な CMake ターゲットのデバッガー設定をカスタマイズするには、特定の CMakeLists.txt ファイルを右クリックして、**[デバッグ設定と起動設定]** を選びます。 サブメニューで CMake ターゲットを選ぶと、launch.vs.json という名前のファイルが作成されます。 このファイルには選んだ CMake ターゲットに関する情報があらかじめ入力されており、プログラムの引数やデバッガーの種類などの他のパラメーターを指定することができます。 CMakeSettings.json ファイル内のキーを参照するには、launch.vs.json 内で前に "CMake." を付けます。 次に示す簡単な launch.vs.json ファイルの例では、現在選択されている構成に対して、CMakeSettings.json ファイル内の "remoteCopySources" キーの値を取得しています。
@@ -132,7 +129,7 @@ CMake メニューからデバッグ セッションを開始することもで�
   "version": "0.2.1",
   "defaults": {},
   "configurations": [
-   {
+    {
       "type": "default",
       "project": "CMakeLists.txt",
       "projectTarget": "CMakeHelloWorld.exe (Debug\\CMakeHelloWorld.exe)",
@@ -147,14 +144,13 @@ launch.vs.json ファイルを保存するとすぐに、**[スタートアッ�
 
 **Visual Studio 2017 バージョン 15.4**: launch.vs.json は、CMakeSettings.json (下記参照) で宣言されていて、現在選択されている構成に適用される変数をサポートします。 "currentDir" という名前のキーもあり、これは起動しているアプリの現在のディレクトリを設定します。
 
-
 ```json
 {
-"type": "default",
-"project": "CMakeLists.txt",
-"projectTarget": "CMakeHelloWorld1.exe (C:\\Users\\satyan\\CMakeBuilds\\Test\\Debug\\CMakeHelloWorld1.exe)",
-"name": "CMakeHelloWorld1.exe (C:\\Users\\satyan\\CMakeBuilds\\Test\\Debug\\CMakeHelloWorld1.exe)",
-"currentDir": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}"
+  "type": "default",
+  "project": "CMakeLists.txt",
+  "projectTarget": "CMakeHelloWorld1.exe (C:\\Users\\satyan\\CMakeBuilds\\Test\\Debug\\CMakeHelloWorld1.exe)",
+  "name": "CMakeHelloWorld1.exe (C:\\Users\\satyan\\CMakeBuilds\\Test\\Debug\\CMakeHelloWorld1.exe)",
+  "currentDir": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}"
 }
 ```
 
@@ -170,14 +166,13 @@ CMakeLists.txt ファイルを編集するには、**ソリューション エ�
 
    ![CMakeLists.txt ファイルの編集](media/cmake-cmakelists.png "CMakeLists.txt ファイルの編集")
 
-
 ファイルを保存するとすぐに構成手順が自動的に再び実行され、**[出力]** ウィンドウに情報が表示されます。 エラーと警告は、**[エラー一覧]** または **[出力]** ウィンドウに表示されます。 **[エラー一覧]** でエラーをダブルクリックすると、CMakeLists.txt で問題が発生した行に移動します。
 
    ![CMakeLists.txt ファイルのエラー](media/cmake-cmakelists-error.png "CMakeLists.txt ファイルのエラー")
 
 ## <a name="cmake_settings"></a> CMake の設定とカスタム構成
 
-Visual Studio では、6 つの既定の CMake 構成 ("x86-Debug"、"x86-Release"、"x64-Debug"、"x64-Release"、"Linux-Debug"、"Linux-Release") が提供されています。 これらの構成では、特定のプロジェクトの CMake キャッシュを作成するために CMake.exe が呼び出される方法が定義されています。 これらの構成を変更するには、または新しいカスタム構成を作成するには、**[CMake] > [CMake の設定を変更]** を選んでから、設定を適用する CMakeLists.txt ファイルを選びます。 **[CMake の設定を変更]** コマンドは、**ソリューション エクスプローラー**のファイルのコンテキスト メニューでも利用できます。 このコマンドでは、プロジェクト フォルダーに CMakeSettings.json ファイルが作成されます。 このファイルは、たとえば**クリーン**操作の後などに、CMake キャッシュ ファイルを再作成するために使われます。 
+Visual Studio では、6 つの既定の CMake 構成 ("x86-Debug"、"x86-Release"、"x64-Debug"、"x64-Release"、"Linux-Debug"、"Linux-Release") が提供されています。 これらの構成では、特定のプロジェクトの CMake キャッシュを作成するために CMake.exe が呼び出される方法が定義されています。 これらの構成を変更するには、または新しいカスタム構成を作成するには、**[CMake] > [CMake の設定を変更]** を選んでから、設定を適用する CMakeLists.txt ファイルを選びます。 **[CMake の設定を変更]** コマンドは、**ソリューション エクスプローラー**のファイルのコンテキスト メニューでも利用できます。 このコマンドでは、プロジェクト フォルダーに CMakeSettings.json ファイルが作成されます。 このファイルは、たとえば**クリーン**操作の後などに、CMake キャッシュ ファイルを再作成するために使われます。
 
    ![設定変更のための CMake メイン メニュー コマンド](media/cmake-change-settings.png)
 
@@ -203,6 +198,7 @@ JSON の IntelliSense は、CMakeSettings.json ファイルの編集を支援し
 ```
 
 1. **name**: C++ の構成ドロップダウンに表示される名前です。 このプロパティ値をマクロ `${name}` として使って、他のプロパティ値を指定することもできます。 例については、CMakeSettings.json の **buildRoot** の定義をご覧ください。
+
 1. **generator**: **-G** スイッチに対応し、使用するジェネレーターを指定します。 このプロパティをマクロ `${generator}` として使って、他のプロパティ値を指定することもできます。 現在、Visual Studio では次の CMake ジェネレーターがサポートされています。
 
     - "Ninja"
@@ -218,11 +214,29 @@ Ninja は柔軟性や機能ではなく、ビルド速度が速いことを目�
 Visual Studio ジェネレーターを指定するには、メイン メニューから **[CMake] > [CMake の設定を変更]** を選んで、CMakeSettings.json を開きます。 "Ninja" を削除して「V」と入力します。 これにより IntelliSense がアクティブになり、必要なジェネレーターを選択できます。
 
 1. **buildRoot**: **-DCMAKE_BINARY_DIR** スイッチに対応し、CMake キャッシュが作成される場所を指定します。 フォルダーが存在しない場合は、作成されます。
-1. **variables**: **-D**<_名前_>**=**<_値_> として CMake に渡される、CMake 変数の名前と値のペアを含みます。 CMake プロジェクトのビルド命令で CMake キャッシュ ファイルに直接変数を追加するように指定している場合は、代わりにここで追加することをお勧めします。
+
+1. **variables**: **-D**<_名前_>**=**<_値_> として CMake に渡される、CMake 変数の名前と値のペアを含みます。 CMake プロジェクトのビルド命令で CMake キャッシュ ファイルに直接変数を追加するように指定している場合は、代わりにここで追加することをお勧めします。 次の例は、名前と値のペアを指定する方法を示しています。
+
+```json
+"variables": [
+    {
+      "name": "CMAKE_CXX_COMPILER",
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+    },
+    {
+      "name": "CMAKE_C_COMPILER",
+      "value": "C:/Program Files (x86)/Microsoft Visual Studio/157/Enterprise/VC/Tools/MSVC/14.14.26428/bin/HostX86/x86/cl.exe"
+    }
+  ]
+```
+
 1. **cmakeCommandArgs**: CMake.exe に渡す追加のスイッチを指定します。
-1. **configurationType**: 選択したジェネレーターのビルド構成の種類を定義します。 現在サポートされている値は、"Debug"、"MinSizeRel"、"Release"、"RelWithDebInfo" です。
-1. **ctestCommandArgs**: テストの実行時に CTest に渡される追加スイッチを指定します。
-1. **buildCommandArgs**: 基礎となるビルド システムに渡される追加スイッチを指定します。 たとえば、Ninja ジェネレーターの使用時に -v を渡すと、コマンド ラインの出力が Ninja に強制されます。
+
+2. **configurationType**: 選択したジェネレーターのビルド構成の種類を定義します。 現在サポートされている値は、"Debug"、"MinSizeRel"、"Release"、"RelWithDebInfo" です。
+
+3. **ctestCommandArgs**: テストの実行時に CTest に渡される追加スイッチを指定します。
+
+4. **buildCommandArgs**: 基礎となるビルド システムに渡される追加スイッチを指定します。 たとえば、Ninja ジェネレーターの使用時に -v を渡すと、コマンド ラインの出力が Ninja に強制されます。
 
 ### <a name="environment-variables"></a>環境変数
 
@@ -255,13 +269,14 @@ usage: ninja [options] [targets...]
 |   -j N     | N 個のジョブを並列実行します (既定値は 14、使用可能な CPU の数から派生)|
 |   -k N     | N 個のジョブが失敗するまで続けます (既定値は 1)|
 |   -l N     | 負荷の平均が N より大きい場合は、新しいジョブを開始しません|
-|   -n      | ドライ実行 (コマンドを実行しませんが、成功したように動作します)|
+|   -n       | ドライ実行 (コマンドを実行しませんが、成功したように動作します)|
 |   -v       | ビルド中にすべてのコマンド ラインを表示します|
 |   -d MODE  | デバッグを有効にします (モードを一覧表示するには -d list を使用)|
-|   -t TOOL  | サブツールを実行します (サブツールを一覧表示するには -t list を使用)。 トップレベルのオプションを終了します。さらにフラグがツールに渡されます| 
+|   -t TOOL  | サブツールを実行します (サブツールを一覧表示するには -t list を使用)。 トップレベルのオプションを終了します。さらにフラグがツールに渡されます|
 |   -w FLAG  | 警告を調整します (警告を一覧表示するには -w list を使用)|
 
 ### <a name="inherited-environments-visual-studio-2017-version-155"></a>継承された環境 (Visual Studio 2017 バージョン 15.5)
+
 CMakeSettings.json は、継承された環境をサポートするようになっています。 この機能を使うと、(1) 既定の環境を継承することができ、(2) 実行時に CMake.exe に渡されるカスタム環境変数を作成できます。
 
 ```json
@@ -284,6 +299,7 @@ CMakeSettings.json は、継承された環境をサポートするようにな�
 |msvc_arm64_x64|64 ビット ツールを使って、ARM64 用にコンパイルします|
 
 ### <a name="custom-environment-variables"></a>カスタム環境変数
+
 CMakeSettings.json では、グローバルに、または **environments** プロパティを使用して構成ごとに、カスタム環境変数を定義できます。 次の例では、1 つのグローバル変数 **BuildDir** を定義します。これは、x86-Debug と x64-Debug の両方の構成で継承されます。 各構成は、この変数を使って、その構成の **buildRoot** プロパティの値を指定します。 各構成が **inheritEnvironments** プロパティを使ってその構成のみに適用される変数を指定する方法にも注意してください。
 
 ```json
@@ -349,7 +365,7 @@ CMakeSettings.json では、グローバルに、または **environments** プ�
 
       "generator": "Ninja",
       "configurationType": "Debug",
-      "inheritEnvironments": [ "msvc_x64" ], 
+      "inheritEnvironments": [ "msvc_x64" ],
       // Since this configuration doesn’t modify BuildDir, it inherits
       // from the one defined globally.
       "buildRoot": "${env.BuildDir}\\${name}"
@@ -373,10 +389,13 @@ CMakeSettings.json ファイルまたは CMakeLists.txt ファイルが大幅に
 問題を診断するために CMake キャッシュの状態に関する詳しい情報が必要な場合は、**CMake** のメイン メニューまたは**ソリューション エクスプローラー**で **CMakeLists.txt** のコンテキスト メニューを開き、次のコマンドのいずれかを実行します。
 
 - **[キャッシュの表示]** は、ビルド ルート フォルダーの CMakeCache.txt ファイルをエディターで開きます (ここで CMakeCache.txt に対して編集した内容はすべて、キャッシュをクリーンアップするとワイプされます。 キャッシュがクリーンアップされた後も残るように変更する方法については、前の「[CMake の設定とカスタム構成](#cmake_settings)」をご覧ください)。
-- **[キャッシュ フォルダーを開く]** は、エクスプローラー ウィンドウでビルド ルート フォルダーを開きます。  
+
+- **[キャッシュ フォルダーを開く]** は、エクスプローラー ウィンドウでビルド ルート フォルダーを開きます。
+
 - **[キャッシュをクリーン]** は、次の CMake 構成ステップがクリーンなキャッシュから開始されるように、ビルド ルート フォルダーを削除します。
+
 - **[キャッシュを生成]** は、Visual Studio が環境は最新の状態であると判断した場合でも、生成ステップを強制的に実行します。
- 
+
 **Visual Studio 2017 バージョン 15.7 以降**: キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログで無効にできます。
 
 ## <a name="single-file-compilation"></a>単一ファイルのコンパイル
@@ -384,3 +403,11 @@ CMakeSettings.json ファイルまたは CMakeLists.txt ファイルが大幅に
 **Visual Studio 2017 バージョン 15.7 以降**: CMake プロジェクトに単一ファイルをビルドするには、**ソリューション エクスプローラー**でファイルを右クリックし、**[コンパイル]** を選択します。 メインの CMake メニューを使用すると、エディターで現在開いているファイルをビルドすることも可能です。
 
 ![CMake の単一ファイルのコンパイル](media/cmake-single-file-compile.png)
+
+## <a name="run-cmake-from-the-command-line"></a>コマンド ラインから CMake を実行する
+Visual Studio インストーラーから CMake をインストールした場合は、次の手順に従ってコマンド ラインから実行できます。
+
+1. 適切な vsdevcmd.bat (x86 または x64) を実行します。 詳細については、[コマンド ラインでのビルド](../build/building-on-the-command-line.md)に関するページを参照してください。
+1. 出力フォルダーに移動します。
+1. CMake を実行してアプリをビルド/構成します。
+

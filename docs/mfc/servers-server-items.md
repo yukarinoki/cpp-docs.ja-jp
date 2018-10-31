@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 72f8de75607921edda62aec9baec424066431d61
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c134f0d0b0c8ee3009e372de7712a6c0894a51de
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438861"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082906"
 ---
 # <a name="servers-server-items"></a>サーバー : サーバー アイテム
 
@@ -43,7 +43,7 @@ ms.locfileid: "46438861"
 
 1. 派生クラスでオーバーライド、`OnDraw`メンバー関数。
 
-     Framework 呼び出し`OnDraw`メタファイルに OLE 項目を表示するためにします。 コンテナー アプリケーションでは、項目を表示するためにこのメタファイルを使用します。 アプリケーションのビューのクラスがあります、`OnDraw`メンバー関数は、サーバー アプリケーションがアクティブなときに、項目を表示するために使用します。
+   Framework 呼び出し`OnDraw`メタファイルに OLE 項目を表示するためにします。 コンテナー アプリケーションでは、項目を表示するためにこのメタファイルを使用します。 アプリケーションのビューのクラスがあります、`OnDraw`メンバー関数は、サーバー アプリケーションがアクティブなときに、項目を表示するために使用します。
 
 1. 実装のオーバーライドを`OnGetEmbeddedItem`サーバー ドキュメント クラス。 詳細については、この記事を参照してください。[サーバー: サーバー ドキュメントの実装](../mfc/servers-implementing-server-documents.md)と MFC OLE サンプル[HIERSVR](../visual-cpp-samples.md)します。
 

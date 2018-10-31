@@ -8,17 +8,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 2e6c6c98b027c561f6972ab76a520e9793c30963
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601601"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069948"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Linux プロジェクトのデプロイ、実行、デバッグ
 
@@ -41,7 +41,7 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 
     - **gdb** モードで、Visual Studio のデバッガーがリモート システム上の GDB を駆動します。GDB のローカル バージョンとターゲット コンピューターにインストールされているバージョンの間に互換性がない場合、互換性が高くなります。 |
 
-    > [!NOTE] 
+    > [!NOTE]
     > gdbserver デバッグ モードでブレークポイントに到達できない場合、gdb モードを試してください。 最初にリモート ターゲットに gdb を[インストール](../linux/download-install-and-setup-the-linux-development-workload.md)する必要があります。
 
 2. Visual Studio の標準**デバッグ** ツール バーでリモート ターゲットを選びます。
@@ -64,7 +64,7 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 
     エラーがない場合、アプリが起動し、デバッガーはブレークポイントで一時停止します。
 
-    ![ブレークポイントに到達する](media/hit_breakpoint.png)  
+    ![ブレークポイントに到達する](media/hit_breakpoint.png)
 
     **F10** や **F11** などのコマンド キーを押すことで、現在の状態のアプリケーションと対話したり、変数を表示したり、コードをステップ実行したりできるようになりました。
 
@@ -79,7 +79,7 @@ Linux プロジェクトと対話してデバッグするには、いくつか�
 ## <a name="configure-other-debugging-options"></a>その他のデバッグ オプションを構成する
 
 * プロジェクトの **[デバッグ]** プロパティ ページの **[プログラムの引数]** 項目を使って、実行可能ファイルにコマンド ライン引数を渡すことができます。
-  
+
   ![プログラムの引数](media/settings_programarguments.png)
 
 * **[追加のデバッガー コマンド]** エントリを使って、特定のデバッガー オプションを GDB に渡すことができます。  たとえば、SIGILL (無効な命令) シグナルを無視することができます。  これを行うには、**handle** コマンドを使います。  上の図のように、次のコードを **[追加のデバッガー コマンド]** エントリに追加します。

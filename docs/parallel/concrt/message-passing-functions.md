@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b0b7a7afb25d46fa3b521353c4577fbed66e69fd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7435bdbc4d5959771a1f80e2ad12f038a8157bae
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436989"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162283"
 ---
 # <a name="message-passing-functions"></a>メッセージ パッシング関数
 
@@ -41,9 +41,9 @@ Asynchronous Agents Library では、コンポーネント間でメッセージ�
 
 [Concurrency::send](reference/concurrency-namespace-functions.md#send)関数のメッセージから指定したターゲットの同期的に送信し、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)関数のメッセージから指定された対象への非同期的に送信します。 両方の`send`と`asend`関数が、ターゲットが、これは最終的に同意または拒否メッセージを示すまでに待機します。
 
-`send`関数が、ターゲットを受け入れるかを返す前に、メッセージを拒否するまでに待機します。 `send`関数が返される`true`場合は、メッセージの配信と`false`それ以外の場合。 `send`関数は同期的に、動作、`send`関数を返す前にメッセージを受信するターゲットを待機します。
+`send`関数が、ターゲットを受け入れるかを返す前に、メッセージを拒否するまでに待機します。 `send`関数が返される**true**場合は、メッセージの配信と**false**それ以外の場合。 `send`関数は同期的に、動作、`send`関数を返す前にメッセージを受信するターゲットを待機します。
 
-逆に、`asend`関数が返す前に、メッセージを承諾または拒否するようにターゲットの待機しません。 代わりに、`asend`関数が返される`true`場合は、ターゲットがメッセージを受け入れるし、実行は最終的にします。 それ以外の場合、`asend`返します`false`を示すこと、ターゲットがメッセージを拒否または、メッセージを受け取るかどうかの決定を延期します。
+逆に、`asend`関数が返す前に、メッセージを承諾または拒否するようにターゲットの待機しません。 代わりに、`asend`関数が返される**true**場合は、ターゲットがメッセージを受け入れるし、実行は最終的にします。 それ以外の場合、`asend`返します**false**を示すこと、ターゲットがメッセージを拒否または、メッセージを受け取るかどうかの決定を延期します。
 
 [[トップ](#top)]
 

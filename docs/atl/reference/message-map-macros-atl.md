@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3ce6099b904c088399dcb43635a1b254567e8320
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fbfd58491981cdba1b3aa3002736f49a7c09038c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024916"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054477"
 ---
 # <a name="message-map-macros-atl"></a>メッセージ マップ マクロ (ATL)
 
@@ -93,11 +93,11 @@ ms.locfileid: "46024916"
 |[REFLECTED_NOTIFY_HANDLER](#reflected_notify_handler)|リフレクション WM_NOTIFY メッセージは、通知コードとコントロールの識別子に基づいて、ハンドラー関数にマップします。|
 |[REFLECTED_NOTIFY_ID_HANDLER](#reflected_notify_id_handler)|コントロールの識別子に基づいて、ハンドラー関数には、リフレクション WM_NOTIFY メッセージをマップします。|
 |[REFLECTED_NOTIFY_RANGE_CODE_HANDLER](#reflected_notify_range_code_handler)|リフレクション WM_NOTIFY メッセージは、通知コードと連続した範囲のコントロール id に基づいて、ハンドラー関数にマップします。|
-|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|リフレクション WM_NOTIFY メッセージを連続した範囲のコントロール id に基づく、ハンドラー関数にマップします。|  
+|[REFLECTED_NOTIFY_RANGE_HANDLER](#reflected_notify_range_handler)|リフレクション WM_NOTIFY メッセージを連続した範囲のコントロール id に基づく、ハンドラー関数にマップします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h  
+**ヘッダー:** atlwin.h
 
 ##  <a name="alt_msg_map"></a>  ALT_MSG_MAP
 
@@ -134,9 +134,9 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h   
+**ヘッダー:** atlwin.h
 
 ##  <a name="begin_msg_map"></a>  送るに
 
@@ -153,7 +153,7 @@ BEGIN_MSG_MAP(theClass)
 
 ### <a name="remarks"></a>Remarks
 
-[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc)既定のメッセージ マップを使用して、ウィンドウに送信されるメッセージを処理します。 メッセージ マップでは、適切なハンドラー関数または別のメッセージ マップのいずれかのメッセージを送信します。  
+[CWindowImpl::WindowProc](cwindowimpl-class.md#windowproc)既定のメッセージ マップを使用して、ウィンドウに送信されるメッセージを処理します。 メッセージ マップでは、適切なハンドラー関数または別のメッセージ マップのいずれかのメッセージを送信します。
 
 次のマクロは、メッセージをハンドラー関数にマップします。 この関数を定義する必要があります*クラス*します。
 
@@ -213,7 +213,7 @@ BEGIN_MSG_MAP(theClass)
 
 ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -242,7 +242,7 @@ CHAIN_MSG_MAP_ALT では、基底クラスの代替メッセージ マップへ�
 
 ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -271,7 +271,7 @@ CHAIN_MSG_MAP_ALT_MEMBER は、データ メンバー、別のメッセージ �
 
 ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -309,7 +309,7 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 - ウィンドウ プロシージャを使用している場合`CMyClass`の 2 つ目の代替メッセージ マップおよび`OnChar`メッセージ、メッセージは指定した代替のメッセージ マップに送られますハンドルしないの`CMyBaseClass`します。 `CMyBaseClass` 必要があります、ALT_MSG_MAP(1) では、このメッセージ マップが宣言されています。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -328,14 +328,14 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 
 ### <a name="remarks"></a>Remarks
 
-場合は、別のオブジェクトの既定のメッセージ マップに、実行時に、メッセージを送信します。 オブジェクトとそのメッセージ マップに関連付けられている*dynaChainID*を使用して定義する[CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)します。 クラスを派生する必要があります`CDynamicChain`場合を使用するためにします。 例については、次を参照してください。、 [CDynamicChain](../../atl/reference/cdynamicchain-class.md)の概要。  
+場合は、別のオブジェクトの既定のメッセージ マップに、実行時に、メッセージを送信します。 オブジェクトとそのメッセージ マップに関連付けられている*dynaChainID*を使用して定義する[CDynamicChain::SetChainEntry](cdynamicchain-class.md#setchainentry)します。 クラスを派生する必要があります`CDynamicChain`場合を使用するためにします。 例については、次を参照してください。、 [CDynamicChain](../../atl/reference/cdynamicchain-class.md)の概要。
 
 > [!NOTE]
 >  メッセージ マップは常に開始[送るに](#begin_msg_map)します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
 
 ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -373,7 +373,7 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 - ウィンドウ プロシージャを使用している場合`CMyClass`の 2 つ目の代替メッセージ マップおよび`OnChar`の指定した代替のメッセージ マップに、メッセージが送られますハンドル以外は`m_obj`します。 クラス`CMyContainedClass`ALT_MSG_MAP(1) では、このメッセージ マップが宣言されている必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -387,13 +387,13 @@ COMMAND_CODE_HANDLER(code, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*コード*<br/>
+*code*<br/>
 [in]通知コード。
 
 *func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -410,7 +410,7 @@ COMMAND_HANDLER(id, code, func)
 *ID*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
-*コード*<br/>
+*code*<br/>
 [in]通知コード。
 
 *func*<br/>
@@ -435,7 +435,7 @@ COMMAND_HANDLER マクロで指定された任意の関数は、次のように�
 
 ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -455,7 +455,7 @@ COMMAND_ID_HANDLER(id, func)
 *func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -475,7 +475,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 *idLast*<br/>
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
-*コード*<br/>
+*code*<br/>
 [in]通知コード。
 
 *func*<br/>
@@ -485,7 +485,7 @@ COMMAND_RANGE_CODE_HANDLER(idFirst, idLast, code, func)
 
 この範囲は、メニュー項目、コントロール、またはメッセージを送信するアクセラレータの識別子に基づきます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -512,7 +512,7 @@ COMMAND_RANGE_HANDLER( idFirst, idLast, func)
 
 この範囲は、メニュー項目、コントロール、またはメッセージを送信するアクセラレータの識別子に基づきます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -538,7 +538,7 @@ DECLARE_EMPTY_MSG_MAP はマクロを呼び出す便利なマクロ[送るに](#
 DEFAULT_REFLECTION_HANDLER()
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -568,7 +568,7 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 [!code-cpp[NVC_ATL_Windowing#99](../../atl/codesnippet/cpp/message-map-macros-atl_2.h)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -584,7 +584,7 @@ FORWARD_NOTIFICATIONS()
 
 このマクロをメッセージ マップの一部として指定します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -625,7 +625,7 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 [!code-cpp[NVC_ATL_Windowing#129](../../atl/codesnippet/cpp/message-map-macros-atl_8.h)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -648,7 +648,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 *func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -668,7 +668,7 @@ NOTIFY_CODE_HANDLER(cd, func)
 *func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -712,7 +712,7 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 [!code-cpp[NVC_ATL_Windowing#130](../../atl/codesnippet/cpp/message-map-macros-atl_9.h)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -732,7 +732,7 @@ NOTIFY_ID_HANDLER( id, func )
 *func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -762,7 +762,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 この範囲は、メッセージを送信するコントロールの識別子に基づきます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -789,7 +789,7 @@ NOTIFY_RANGE_HANDLER( idFirst, idLast, func )
 
 この範囲は、メッセージを送信するコントロールの識別子に基づきます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -805,7 +805,7 @@ REFLECT_NOTIFICATIONS()
 
 このマクロは、親ウィンドウのメッセージ マップの一部として指定します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -819,13 +819,13 @@ REFLECTED_COMMAND_CODE_HANDLER( code, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*コード*<br/>
+*code*<br/>
 [in]通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。  
+[in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -842,15 +842,15 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 *ID*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
-*コード*<br/>
+*code*<br/>
 [in]通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。  
+[in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h  
+**ヘッダー:** atlwin.h
 
 ##  <a name="reflected_command_id_handler"></a>  REFLECTED_COMMAND_ID_HANDLER
 
@@ -866,11 +866,11 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。  
+[in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h  
+**ヘッダー:** atlwin.h
 
 ##  <a name="reflected_command_range_code_handler"></a>  REFLECTED_COMMAND_RANGE_CODE_HANDLER
 
@@ -888,15 +888,15 @@ REFLECTED_COMMAND_RANGE_CODE_HANDLER( idFirst, idLast, code, func )
 *idLast*<br/>
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
-*コード*<br/>
+*code*<br/>
 [in]通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。  
+[in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h  
+**ヘッダー:** atlwin.h
 
 ##  <a name="reflected_command_range_handler"></a>  REFLECTED_COMMAND_RANGE_HANDLER
 
@@ -915,11 +915,11 @@ REFLECTED_COMMAND_RANGE_HANDLER( idFirst, idLast, func )
 [in]コントロールの識別子の連続する範囲の末尾をマークします。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。  
+[in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h  
+**ヘッダー:** atlwin.h
 
 ##  <a name="reflected_notify_code_handler"></a>  REFLECTED_NOTIFY_CODE_HANDLER
 
@@ -935,11 +935,11 @@ REFLECTED_NOTIFY_CODE_HANDLER_EX( cd, func )
 [in]通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。  
+[in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h  
+**ヘッダー:** atlwin.h
 
 ##  <a name="reflected_notify_handler"></a>  REFLECTED_NOTIFY_HANDLER
 
@@ -958,11 +958,11 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 [in]通知コード。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。  
+[in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h  
+**ヘッダー:** atlwin.h
 
 ##  <a name="reflected_notify_id_handler"></a>  REFLECTED_NOTIFY_ID_HANDLER
 
@@ -978,11 +978,11 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
 *func*<br/>
-[in]メッセージ ハンドラー関数の名前。  
+[in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlwin.h  
+**ヘッダー:** atlwin.h
 
 ##  <a name="reflected_notify_range_code_handler"></a>  REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 
@@ -1006,7 +1006,7 @@ REFLECTED_NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 *func*<br/>
 [in]メッセージ ハンドラー関数の名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 

@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b42907273423d69ed93df5700b33556047338fe2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7967b63a14c296d7f0d73bb403aa5b74a6c3689b
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391427"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204304"
 ---
 # <a name="mfc-activex-controls-adding-stock-methods"></a>MFC ActiveX コントロール : ストック メソッドの追加
 
 ストック メソッドは、クラスによって既に実装されている点で、カスタム メソッドとは異なります。 [COleControl](../mfc/reference/colecontrol-class.md)します。 たとえば、`COleControl`コントロールの更新メソッドをサポートしている定義済みのメンバー関数が含まれています。 このストック メソッドのディスパッチ マップ エントリは、DISP_STOCKFUNC_REFRESH です。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 `COleControl` 2 つのメソッドをサポートしています: DoClick および更新します。 更新は、すぐに、コントロールの外観を更新するコントロールのユーザーによって呼び出されます。コントロールのクリックを起動する DoClick が呼び出されるイベント。
 
@@ -51,7 +51,7 @@ ms.locfileid: "46391427"
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**メソッドの追加**します。
 
-     メソッドの追加ウィザードが開きます。
+   メソッドの追加ウィザードが開きます。
 
 1. **メソッド名**ボックスで、**更新**します。
 

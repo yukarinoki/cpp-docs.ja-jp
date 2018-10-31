@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 837149397ec45ebd8b41808b170b9f5e25146d6a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c079201b92b6eaf3ef372bf04ab4785598c3b2bf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387693"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053969"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>テクニカル ノート 65: OLE オートメーション サーバー用デュアル インターフェイス サポート
 
@@ -328,7 +328,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
     hr = MAKE_HRESULT(SEVERITY_ERROR, FACILITY_ITF, (e->m_wCode + 0x200));
     ```
 
-     これを作成、`HRESULT`例外の原因となったインターフェイスを特定します。 エラー コードのオフセットはシステム定義との競合を回避するために 0x200`HRESULT`の標準の OLE インターフェイス。
+   これを作成、`HRESULT`例外の原因となったインターフェイスを特定します。 エラー コードのオフセットはシステム定義との競合を回避するために 0x200`HRESULT`の標準の OLE インターフェイス。
 
 - [CMemoryException](../mfc/reference/cmemoryexception-class.md) - この場合、`E_OUTOFMEMORY`が返されます。
 

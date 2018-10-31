@@ -152,12 +152,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b9a1472cba13f477143c9b9ace27cb2555f41406
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a95141aa97d7272970adaaa69f3f63de2a622780
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408428"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235647"
 ---
 # <a name="predefined-macros"></a>定義済みマクロ
 
@@ -435,7 +435,7 @@ Microsoft Visual C には、これらの追加の定義済みマクロがサポ�
 
 - **&#95;WINRT&#95;DLL**定義すると 1 としては、C++、およびその両方としてコンパイル[/ZW (Windows ランタイムのコンパイル)](../build/reference/zw-windows-runtime-compilation.md)と[/LD または/LDd](../build/reference/md-mt-ld-use-run-time-library.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
- ATL または MFC ライブラリのバージョンを判断するために使用するプリプロセッサのマクロは、コンパイラによっては事前定義されていません。 これらのマクロは、必須のヘッダーが含まれる前にプリプロセッサ ディレクティブで未定義、ため、ライブラリのヘッダーで定義されます。
+ATL または MFC ライブラリのバージョンを判断するために使用するプリプロセッサのマクロは、コンパイラによっては事前定義されていません。 これらのマクロは、必須のヘッダーが含まれる前にプリプロセッサ ディレクティブで未定義、ため、ライブラリのヘッダーで定義されます。
 
 - **&#95;ATL&#95;VER**で定義されている\<atldef.h > ATL バージョン番号をエンコードする整数リテラルとして。
 

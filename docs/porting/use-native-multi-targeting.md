@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb9d7b950e4c38ea53db6e459edfa1a179eb971d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 3c66fe63d97f623011b3dade46266a4a9d8d83b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578425"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064422"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Visual Studio でネイティブ マルチターゲットを利用し、古いプロジェクトを作成する
 
@@ -52,11 +52,11 @@ Visual Studio では、プロジェクトのアップグレードが何度も要
 
 アップグレードしないことを選択した場合は、Visual Studio はソリューションまたはプロジェクト ファイルを変更しません。 プロジェクトをビルドしたときに生成されたバイナリは、古いバージョンの Visual Studio でビルドしたものと完全な互換性があります。 これは、Visual Studio が同じ C++ コンパイラを使用し、古い IDE に同梱されている同じライブラリをリンクするためです。 アップグレード ダイアログで、**[キャンセル]** を選択した場合にインストールされている古いバージョンの Visual Studio を保持するように促す警告が表示されるのもこのためです。
 
-## <a name="instructions-for-visual-studio-2008"></a>Visual Studio 2008 での手順  
-  
+## <a name="instructions-for-visual-studio-2008"></a>Visual Studio 2008 での手順
+
 Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビルドシステムがありました。 Visual Studio 2010 以降、**MSBuild** を使用するように Visual C プロジェクトが変更されました。 つまり、最新バージョンの Visual Studio で Visual Studio 2008 プロジェクトをビルドするには、更新手順を実行する必要があります。 更新されたプロジェクトでは、Visual Studio 2008 IDE を使用して作成されたバイナリと完全に互換性があるバイナリを引き続き生成します。
 
-最初に、Visual Studio の現在のバージョンだけでなく、Visual Studio 2008 と同じコンピューターに Visual Studio 2010 をインストールする必要があります。 Visual Studio 2008 プロジェクトを対象とするために必要な **MSBuild** スクリプトをインストールするのは、Visual Studio 2010 のみです。 
+最初に、Visual Studio の現在のバージョンだけでなく、Visual Studio 2008 と同じコンピューターに Visual Studio 2010 をインストールする必要があります。 Visual Studio 2008 プロジェクトを対象とするために必要な **MSBuild** スクリプトをインストールするのは、Visual Studio 2010 のみです。
 
 次に、Visual Studio 2008 のソリューションとプロジェクトを Visual Studio の現在のバージョンに更新する必要があります。 アップグレードの前に、プロジェクトおよびソリューション ファイルのバックアップを作成することをお勧めします。 アップグレード プロセスを開始するには、現在のバージョンの Visual Studio でソリューションを開きます。 アップグレードのプロンプトが表示された場合、表示された情報を確認し、**[OK]** を選択してアップグレードを開始します。 ソリューションに複数のプロジェクトがある場合、更新する必要があります。既存の .vcproj ファイルに加えて、ウィザードによって新しい .vcxproj プロジェクト ファイルが作成されます。 元の .sln ファイルのコピーを保持する限り、アップグレードによる既存の Visual Studio 2008 プロジェクトへの他の影響はありません。
 
@@ -70,19 +70,11 @@ Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビル�
 
 アップグレードできないまたはアップグレードしたくない古い Visual C++ プロジェクトがあって、しかもプラットフォーム ツールセットのバージョンがプロジェクトに一致していないことがあります。 この場合、ツールセットを取得するには、無料の Visual Studio Community または必要なバージョンの Express エディションをインストールできます。 Visual Studio 2008 からのすべてのバージョンで、現在の Visual Studio のバージョンからそのバージョンをターゲットにするために必要なコンパイラ、ツール、およびライブラリをインストールできます。 Microsoft ダウンロード センターで特定のバージョンの Visual Studio を検索してダウンロードしてください。 セットアップ中に、C++ のインストール オプションを選択したことを確認してください。 セットアップの完了後は、そのバージョンの Visual Studio を実行して更新をインストールします。 また、必要になる可能性がある Windows Update の変更を確認します。 すべての更新プログラムを取得するには、この更新プログラムの確認処理を複数回繰り返す必要があります。
 
-以下に、必要になる可能性があるいくつかの Visual Studio のダウンロードを示します。
-
-  - [Microsoft Visual Studio Community 2015](https://www.microsoft.com/download/details.aspx?id=48146)  
-  - [Microsoft Visual Studio Express 2013 for Windows Desktop および更新プログラム 5](https://www.microsoft.com/download/details.aspx?id=48131)  
-  - [Microsoft Visual Studio Express 2012 for Windows Desktop](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Visual Studio 2012 更新プログラム 5](https://www.microsoft.com/download/details.aspx?id=34673)  
-  - [Microsoft Visual C++ 2010 Express (Web インストーラー)](https://download.microsoft.com/download/1/D/9/1D9A6C0E-FC89-43EE-9658-B9F0E3A76983/vc_web.exe)  
-  - [Microsoft Visual Studio 2010 Service Pack 1](https://www.microsoft.com/download/details.aspx?id=23691)  
-  - [Microsoft Visual C++ 2008 Express SP1 (Web インストーラー)](https://go.microsoft.com/?linkid=7729279)  
+現在利用できるダウンロードについては、[以前の Visual Studio ソフトウェアのダウンロード](https://visualstudio.microsoft.com/vs/older-downloads/)に関するページを参照してください。
 
 これらの製品がインストールされているときに、**[プロパティ ページ]** ダイアログ ボックスの **[プラットフォーム ツールセット]** プロパティ ドロップダウンの一覧が自動的に更新され、使用できるツールセットが表示されます。 最新バージョンの Visual Studio を使用して、古いバージョンのツールセットのプロジェクトをビルドすることができます。それらを変換またはアップグレードする必要はありません。
 
 ## <a name="see-also"></a>参照
 
-[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)  
-[Visual Studio 2017 の C++ 準拠の強化](../cpp-conformance-improvements-2017.md)  
+[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
+[Visual Studio 2017 の C++ 準拠の強化](../cpp-conformance-improvements-2017.md)

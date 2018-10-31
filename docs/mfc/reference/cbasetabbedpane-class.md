@@ -72,12 +72,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d9a50e3dcfb82e245dcac5f57553b34fef584fa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: addbc7c81c8cd38f44b7b1004c0b4e23ca183ecb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412029"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067321"
 ---
 # <a name="cbasetabbedpane-class"></a>CBaseTabbedPane クラス
 
@@ -161,7 +161,7 @@ A`CBaseTabbedPane`オブジェクトへのポインターをラップする、 [
 
 `CBaseTabbedPane`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxBaseTabbedPane.h
 
@@ -179,7 +179,8 @@ virtual BOOL AddTab(
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pNewBar*を追加するウィンドウへのポインター。 このメソッドを呼び出した後、このポインターが無効になる可能性があります。 詳細については、「解説」を参照してください。
+*pNewBar*<br/>
+[入力、出力]追加するウィンドウへのポインター。 このメソッドを呼び出した後、このポインターが無効になる可能性があります。 詳細については、「解説」を参照してください。
 
 *bVisible*<br/>
 [in]タブが表示されるようにする場合は TRUEそれ以外の場合、FALSE です。
@@ -384,7 +385,8 @@ virtual BOOL FloatTab(
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pBar* float 型に、ウィンドウへのポインター。
+*pBar*<br/>
+[入力、出力]Float 型に、ウィンドウへのポインター。
 
 *nTabID*<br/>
 [in]Float 型に、タブの 0 から始まるインデックスを指定します。
@@ -594,7 +596,8 @@ virtual BOOL RemovePane(CWnd* pBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in][out]*pBar*タブ付きウィンドウから削除するウィンドウへのポインター。
+*pBar*<br/>
+[入力、出力]タブ付きウィンドウから削除するウィンドウへのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -689,7 +692,8 @@ virtual CMFCAutoHideToolBar* SetAutoHideMode(
 *場合*<br/>
 [in]作成される自動非表示ウィンドウの配置を指定します。 使用可能な値の一覧は、次を参照してください。 [CPane::MoveByAlignment](../../mfc/reference/cpane-class.md#movebyalignment)します。
 
-[in][out]*pCurrAutoHideBar*現在自動的に隠すツールバーへのポインター。 NULL にすることができます。
+*pCurrAutoHideBar*<br/>
+[入力、出力]現在、自動的に隠すツールバーへのポインター。 NULL にすることができます。
 
 *bUseTimer*<br/>
 [in]ユーザーが自動的に隠すモードに、ウィンドウを切り替えるときに、自動非表示の効果を使用するか、すぐに、ウィンドウを非表示にするかどうかを指定します。

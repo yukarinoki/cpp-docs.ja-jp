@@ -62,12 +62,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6ec12275291321751c539d095c60fa9dabffa2b7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7df22a7e2209b49f65d240336229a3c80ba4ddb7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445179"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063823"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet クラス
 
@@ -155,7 +155,7 @@ class CPropertySheet : public CWnd
 
 ウィザードの種類 ダイアログ ボックスを作成する呼び出しが、標準のプロパティ シートを作成する場合に同じ手順に従います[SetWizardMode](#setwizardmode)を呼び出す前に[DoModal](#domodal)します。 ウィザード ボタンを有効にするには呼び出します[開か](#setwizardbuttons)フラグを使用して、それらの機能と外観をカスタマイズします。 有効にする、**完了** ボタンを呼び出す[SetFinishText](#setfinishtext)後、ユーザーは、ウィザードの最後のページに対してアクションを実行するがします。
 
-使用する方法の詳細についての`CPropertySheet`オブジェクトは、記事をご覧ください。[プロパティ シートとプロパティ ページ](../../mfc/property-sheets-and-property-pages-in-mfc.md)します。 また、サポート技術情報記事 Q146916 を参照してください: HOWTO: 標準のボタンを持つモードレス CPropertySheet を作成し、Q300606 の記事: HOWTO: サイズ変更可能な MFC のプロパティ シートをデザインします。
+使用する方法の詳細についての`CPropertySheet`オブジェクトは、記事をご覧ください。[プロパティ シートとプロパティ ページ](../../mfc/property-sheets-and-property-pages-in-mfc.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -167,7 +167,7 @@ class CPropertySheet : public CWnd
 
 `CPropertySheet`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdlgs.h
 
@@ -210,12 +210,10 @@ void Construct(
     CWnd* pParentWnd = NULL,
     UINT iSelectPage = 0);
 
-
 void Construct(
     LPCTSTR pszCaption,
     CWnd* pParentWnd = NULL,
     UINT iSelectPage = 0);
-
 
 void Construct(
     UINT nIDCaption,
@@ -224,7 +222,6 @@ void Construct(
     HBITMAP hbmWatermark,
     HPALETTE hpalWatermark = NULL,
     HBITMAP hbmHeader = NULL);
-
 
 void Construct(
     LPCTSTR pszCaption,
@@ -279,18 +276,15 @@ void Construct(
 ```
 CPropertySheet();
 
-
 explicit CPropertySheet(
     UINT nIDCaption,
     CWnd* pParentWnd = NULL,
     UINT iSelectPage = 0);
 
-
 explicit CPropertySheet(
     LPCTSTR pszCaption,
     CWnd* pParentWnd = NULL,
     UINT iSelectPage = 0);
-
 
 CPropertySheet(
     UINT nIDCaption,
@@ -299,7 +293,6 @@ CPropertySheet(
     HBITMAP hbmWatermark,
     HPALETTE hpalWatermark = NULL,
     HBITMAP hbmHeader = NULL);
-
 
 CPropertySheet(
     LPCTSTR pszCaption,

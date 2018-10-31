@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9c5c360246282f8b6062d21061856a57bd2c7194
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26b313aa3e1dec6d401ed27e1a4f8ae0bd870eaa
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32384334"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118519"
 ---
 # <a name="c-bitwise-operators"></a>C ビット処理演算子
 
@@ -35,17 +35,11 @@ ms.locfileid: "32384334"
 
 ## <a name="syntax"></a>構文
 
-*AND-expression*:  
-&nbsp;&nbsp;*equality-expression*  
-&nbsp;&nbsp;*AND-expression* **&** *equality-expression*
+*AND-expression*: &nbsp;&nbsp;*equality-expression* &nbsp;&nbsp;*AND-expression* **&** *equality-expression*
 
-*exclusive-OR-expression*:  
-&nbsp;&nbsp;*AND-expression*  
-&nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
+*exclusive-OR-expression*: &nbsp;&nbsp;*AND-expression* &nbsp;&nbsp;*exclusive-OR-expression* **^** *AND-expression*
 
-*inclusive-OR-expression*:  
-&nbsp;&nbsp;*exclusive-OR-expression*  
-&nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
+*inclusive-OR-expression*: &nbsp;&nbsp;*exclusive-OR-expression* &nbsp;&nbsp;*inclusive-OR-expression* &#124; *exclusive-OR-expression*
 
 ビット処理演算子のオペランドは、整数型である必要がありますが、それぞれの型が異なっていてもかまいません。 これらの演算子は、通常の算術変換を実行します。結果の型は変換後のオペランドの型です。
 
@@ -96,6 +90,6 @@ n = i ^ j;
 
 ## <a name="see-also"></a>関連項目
 
-[ビット処理 AND 演算子: &](../cpp/bitwise-and-operator-amp.md)  
-[ビット処理排他的 OR 演算子: ^](../cpp/bitwise-exclusive-or-operator-hat.md)  
-[ビット処理包括的 OR 演算子: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)  
+[ビット処理 AND 演算子: &](../cpp/bitwise-and-operator-amp.md)<br/>
+[ビット処理排他的 OR 演算子: ^](../cpp/bitwise-exclusive-or-operator-hat.md)<br/>
+[ビット処理包括的 OR 演算子: &#124;](../cpp/bitwise-inclusive-or-operator-pipe.md)

@@ -24,12 +24,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5ffea6dede3bc6bcc7c28b2326299362e78ed2b9
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8c9aebeb2216bf8248b3182159a0f0aef1482c3b
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42599302"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250446"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 名前空間
 
@@ -78,7 +78,7 @@ namespace Microsoft::WRL;
 
 ### <a name="enumerations"></a>列挙
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[AsyncResultType 列挙型](../windows/asyncresulttype-enumeration.md)|によって返される結果の種類を指定します、`GetResults()`メソッド。|
 |[ModuleType 列挙型](../windows/moduletype-enumeration.md)|モジュールがインプロセス サーバーまたはアウトプロセス サーバーをサポートするかどうかを指定します。|
@@ -89,7 +89,7 @@ namespace Microsoft::WRL;
 |名前|説明|
 |----------|-----------------|
 |[AsWeak 関数](../windows/asweak-function.md)|指定されたインスタンスへの弱い参照を取得します。|
-|[コールバック関数](../windows/callback-function-windows-runtime-cpp-template-library.md)|メンバー関数がコールバック メソッドであるオブジェクトを作成します。|
+|[コールバック関数 (WRL)](../windows/callback-function-wrl.md)|メンバー関数がコールバック メソッドであるオブジェクトを作成します。|
 |[CreateActivationFactory 関数](../windows/createactivationfactory-function.md)|Windows ランタイムによるアクティブ化が可能な、指定されたクラスのインスタンスを生成するファクトリを作成します。|
 |[CreateClassFactory 関数](../windows/createclassfactory-function.md)|指定されたクラスのインスタンスを生成するファクトリを作成します。|
 |[Make 関数](../windows/make-function.md)|指定した Windows ランタイム クラスを初期化します。|

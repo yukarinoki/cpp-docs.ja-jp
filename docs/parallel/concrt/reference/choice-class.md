@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 039f69f31c5a92cf07f96442c30bd59b0cc6f40e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9d38b8415b5ca214800c968d186f37c020dce6dc
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414577"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163960"
 ---
 # <a name="choice-class"></a>choice クラス
 
@@ -85,7 +85,7 @@ A `tuple`-ベースの入力ソースのペイロードを表す型。
 |[reserve](#reserve)|これによって以前に提供されたメッセージを予約`choice`メッセージング ブロックします。|
 |[unlink_target](#unlink_target)|これからのターゲット ブロックを解除`choice`メッセージング ブロックします。|
 |[unlink_targets](#unlink_targets)|これからのすべてのターゲットのリンクを解除`choice`メッセージング ブロックします。 (上書き[isource::unlink_targets](isource-class.md#unlink_targets))。|
-|[value](#value)|選択されたインデックスを持つメッセージを取得、`choice`メッセージング ブロックします。|
+|[値](#value)|選択されたインデックスを持つメッセージを取得、`choice`メッセージング ブロックします。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -216,7 +216,7 @@ virtual message<size_t>* consume(
 
 ### <a name="remarks"></a>Remarks
 
-`consume`メソッドは`accept`への呼び出しでは前に必ず必要がありますが、`reserve`返さ`true`します。
+`consume`メソッドは`accept`への呼び出しでは前に必ず必要がありますが、`reserve`返さ**true**します。
 
 ##  <a name="has_value"></a> has_value
 
@@ -229,7 +229,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` ブロックは、値を受け取った場合`false`それ以外の場合。
+**true**ブロックは、値を受け取った場合**false**それ以外の場合。
 
 ##  <a name="index"></a> インデックス
 
@@ -315,7 +315,7 @@ virtual bool reserve(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。 予約はなど、多くの理由で失敗します。 メッセージが既に予約またはソースでした、予約を拒否する、など別のターゲットによって受け入れします。
+**true**場合は、メッセージが正常に予約された、 **false**それ以外の場合。 予約はなど、多くの理由で失敗します。 メッセージが既に予約またはソースでした、予約を拒否する、など別のターゲットによって受け入れします。
 
 ### <a name="remarks"></a>Remarks
 

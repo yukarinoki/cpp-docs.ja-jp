@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5e5147faaf0170a10295006f12d7e95f5dfd3e8d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 159d452c3b0a813c52d8486f52d67b9817c3a558
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069283"
 ---
 # <a name="ccriticalsection-class"></a>CCriticalSection クラス
 
@@ -81,7 +81,7 @@ class CCriticalSection : public CSyncObject
 
 - スタンドアロンを使用するスタンドアロン メソッド`CCriticalSection`オブジェクト、構築、`CCriticalSection`必要がある場合のオブジェクトします。 呼び出してオブジェクトを明示的にコンス トラクターから正常に返された後にロック[ロック](#lock)します。 呼び出す[Unlock](#unlock)が終わったら、クリティカル セクションにアクセスします。 だれかが、ソース コードを読むにはわかり、このメソッドは、ロックし、アクセスの前後にクリティカル セクションのロックを解除することが、エラーが発生しやすいです。
 
-     望ましいメソッドは、使用する、 [CSingleLock](../../mfc/reference/csinglelock-class.md)クラス。 また、`Lock`と`Unlock`メソッドは、例外が発生した場合、リソースのロックを解除について心配する必要はありません。
+   望ましいメソッドは、使用する、 [CSingleLock](../../mfc/reference/csinglelock-class.md)クラス。 また、`Lock`と`Unlock`メソッドは、例外が発生した場合、リソースのロックを解除について心配する必要はありません。
 
 - メソッドを追加することで、複数のスレッドでクラスを共有することもできますを埋め込み、 `CCriticalSection`-クラスと必要なときに、データ メンバーをロックする型のデータ メンバー。
 
@@ -95,7 +95,7 @@ class CCriticalSection : public CSyncObject
 
 `CCriticalSection`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxmt.h
 

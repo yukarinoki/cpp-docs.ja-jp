@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8e78542e016ab0ba8ef33a5655b72fcdff45ccc4
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 68f85794c8d70d642295f9125ac45311df29f16e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494453"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163518"
 ---
 # <a name="modulemethodreleasenotifier-class"></a>Module::MethodReleaseNotifier クラス
 
@@ -112,14 +112,14 @@ MethodReleaseNotifier(
 
 ### <a name="parameters"></a>パラメーター
 
-*object*  
+*object*<br/>
 メンバー関数は、イベント ハンドラー オブジェクト。
 
-*method*  
+*method*<br/>
 パラメーターのメンバー関数は、*オブジェクト*イベント ハンドラーは。
 
-*release*  
-指定`true`、基になる呼び出しを有効にする[モジュール:: ReleaseNotifier::Release()](../windows/module-releasenotifier-class.md#releasenotifier-release)メソッド。 それ以外の場合、指定`false`します。
+*release*<br/>
+指定**true** 、基になる呼び出しを有効にする[モジュール:: ReleaseNotifier::Release()](../windows/module-releasenotifier-class.md#releasenotifier-release)メソッド。 それ以外の場合、指定**false**します。
 
 ## <a name="methodreleasenotifier-object"></a>Module::MethodReleaseNotifier::object_
 

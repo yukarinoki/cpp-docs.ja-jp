@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c319ba90a92ac534f4444960ff1e6e6d27acb180
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f9eeea62e1872cbea737313192b3822c23bb433
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390195"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064486"
 ---
 # <a name="readerwriterlock-class"></a>reader_writer_lock クラス
 
@@ -76,7 +76,7 @@ class reader_writer_lock;
 
 `reader_writer_lock`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 
@@ -141,6 +141,7 @@ reader_writer_lock();
 ```
 class scoped_lock;
 ```
+
 ## <a name="scoped_lock_ctor"></a> scoped_lock::scoped_lock
 
 構築します、`scoped_lock`オブジェクトし、取得、`reader_writer_lock`で渡されるオブジェクト、`_Reader_writer_lock`パラメーター ライター。 別のスレッドによってロックは、この呼び出しはブロックされます。
@@ -203,7 +204,7 @@ bool try_lock();
 
 ### <a name="return-value"></a>戻り値
 
-ロックが取得された場合、値`true`、それ以外の値`false`します。
+ロックが取得された場合、値**true**、それ以外の値**false**します。
 
 ##  <a name="try_lock_read"></a> try_lock_read
 
@@ -215,7 +216,7 @@ bool try_lock_read();
 
 ### <a name="return-value"></a>戻り値
 
-ロックが取得された場合、値`true`、それ以外の値`false`します。
+ロックが取得された場合、値**true**、それ以外の値**false**します。
 
 ##  <a name="unlock"></a> ロックを解除します。
 

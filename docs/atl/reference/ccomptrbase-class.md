@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 70ba26e5893b21393a3466ae7cf1c6cea43b81ef
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 68701e0cc79eac815ab56f99f41cc0f47bf3585f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46070159"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065136"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase クラス
 
@@ -94,7 +94,7 @@ class CComPtrBase
 
 このクラスは、COM メモリ管理ルーチンを使用して他のスマート ポインターの基礎を提供[CComQIPtr](../../atl/reference/ccomqiptr-class.md)と[CComPtr](../../atl/reference/ccomptr-class.md)します。 派生クラスは、独自のコンス トラクターと演算子がによって提供される方法を利用して`CComPtrBase`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcomcli.h
 
@@ -162,12 +162,12 @@ void Attach(T* p2) throw();
 指定したクラス ID、またはプログラムの ID に関連付けられているクラスのオブジェクトを作成するには、このメソッドを呼び出す
 
 ```
-HRESULT CoCreateInstance(  
+HRESULT CoCreateInstance(
     LPCOLESTR szProgID,
     LPUNKNOWN pUnkOuter = NULL,
     DWORD dwClsContext = CLSCTX_ALL) throw();
 
-HRESULT CoCreateInstance(  
+HRESULT CoCreateInstance(
     REFCLSID rclsid,
     LPUNKNOWN pUnkOuter = NULL,
     DWORD dwClsContext = CLSCTX_ALL) throw();

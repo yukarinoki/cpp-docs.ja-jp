@@ -12,18 +12,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 01efc61d08204598cbce6d875bfe2c2293d8e711
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 16fe66e6ba8ea3f6e4f88f434b58c61d46ce1edb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404268"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080651"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>ユニバーサル Windows プラットフォームへの移植 (C++)
 
 このトピックでは、既存の C++ コードを Windows 10 アプリ プラットフォームであるユニバーサル Windows プラットフォームに移植する方法を説明します。 *ユニバーサル* という用語は、Windows 10 を実行するどのデバイスでもコードを実行できることを意味します。これには、デスクトップ、電話、タブレット、Windows 10 を実行する将来のデバイスが含まれます。 単一のプロジェクトを作成し、Windows 10 を実行している任意のデバイス上で適切に機能する単一の XAML ベースのユーザー インターフェイスも作成します。 XAML で動的なレイアウト機能を使用することで、アプリの UI をさまざまな表示サイズに適合させることができます。
 
-Windows デベロッパー センターのドキュメントには、ユニバーサル Windows プラットフォームへの Windows 8.1 アプリの移植に関するガイドが含まれています。 「[Windows ランタイム 8 から UWP への移行](/windows/uwp/porting/w8x-to-uwp-root)」を参照してください。 ガイドでは主に C# コードに重点を置いていますが、ガイダンスのほとんどが C++ に適用可能です。 以下の手順にはより詳細な情報が記載されています。
+Windows デベロッパー センターのドキュメントには、ユニバーサル Windows プラットフォームへの Windows 8.1 アプリの移植に関するガイドが含まれています。 「 [Windows ランタイム 8 から UWP への移行](/windows/uwp/porting/w8x-to-uwp-root)」 を参照してください。 ガイドでは主に C# コードに重点を置いていますが、ガイダンスのほとんどが C++ に適用可能です。 以下の手順にはより詳細な情報が記載されています。
 
 このトピックには、UWP へのコードの移植に関する次の手順が含まれています。
 
@@ -74,7 +74,7 @@ Windows 8.1 ストア アプリがある場合は、この手順を使用して�
     #if WINAPI_FAMILY_PARTITION(WINAPI_PARTITION_DESKTOP)
     ```
 
-     これらのステートメントは、それぞれ、UWP アプリ、Windows Phone ストア アプリ、両方のアプリ、どちらでもないアプリ (クラシック Win32 デスクトップのみ) の順に適用されます。 これらのマクロは Windows SDK 8.1 以降でのみ使用可能です。それ以前のバージョンの Windows SDK を使用してコードをコンパイルする必要があるか、Windows 以外のプラットフォーム用にコンパイルする必要がある場合は、マクロが全く定義されないケースも考えられます。
+   これらのステートメントは、それぞれ、UWP アプリ、Windows Phone ストア アプリ、両方のアプリ、どちらでもないアプリ (クラシック Win32 デスクトップのみ) の順に適用されます。 これらのマクロは Windows SDK 8.1 以降でのみ使用可能です。それ以前のバージョンの Windows SDK を使用してコードをコンパイルする必要があるか、Windows 以外のプラットフォーム用にコンパイルする必要がある場合は、マクロが全く定義されないケースも考えられます。
 
 11. アプリでサポートされるデバイスの種類ごとに、エミュレーターまたは物理デバイスでアプリを実行してデバッグします。 エミュレーターを実行するには、仮想マシンではなく、物理コンピューター上で Visual Studio を実行する必要があります。
 
@@ -119,4 +119,4 @@ Visual Studio を使用して、新しい UWP のプロジェクトを作成し�
 ## <a name="see-also"></a>関連項目
 
 [Visual C++ 移植ガイド](../porting/porting-to-the-universal-windows-platform-cpp.md)<br/>
-[ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)  
+[ユニバーサル Windows プラットフォーム (UWP) 向けアプリの開発](/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp)

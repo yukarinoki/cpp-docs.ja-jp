@@ -1,7 +1,7 @@
 ---
 title: イベントの追加 (ATL チュートリアル、パート 5) |Microsoft Docs
 ms.custom: get-started-article
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-atl
 ms.topic: conceptual
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bb72babcc4bf425e4ea588e4e2a155b077c47cc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 9cec895019855e2d3744f722bd15ad3a10288597
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43754879"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821310"
 ---
 # <a name="adding-an-event-atl-tutorial-part-5"></a>イベントの追加 (ATL チュートリアル、パート 5)
 
@@ -29,7 +29,7 @@ ms.locfileid: "43754879"
 
 - 接続ポイントのインターフェイスを実装します。
 
-## <a name="adding-the-clickin-and-clickout-methods"></a>ClickIn と ClickOut メソッドを追加します。
+## <a name="adding-the-clickin-and-clickout-methods"></a>ClickIn と ClickOut メソッドの追加
 
 選択した ATL のコントロールを手順 2. で作成したときに、**コネクション ポイント**チェック ボックスをオンします。 作成した、 `_IPolyCtlEvents` Polygon.idl ファイルのインターフェイス。 インターフェイス名がアンダー スコアで始まるに注意してください。 これは、インターフェイスが内部のインターフェイスであることを示す規則です。 したがって、COM オブジェクトを参照するためのプログラムは、ユーザー インターフェイスを表示しないように選択できます。 また**コネクション ポイント**ことを示すために Polygon.idl ファイルで、次の行を追加`_IPolyCtlEvents`は既定のソース インターフェイス。
 
@@ -39,53 +39,30 @@ ms.locfileid: "43754879"
 
 ここで追加、`ClickIn`と`ClickOut`メソッドを`_IPolyCtlEvents`インターフェイス。
 
-#### <a name="to-add-the-clickin-and-clickout-methods"></a>ClickIn と ClickOut メソッドを追加するには
+### <a name="to-add-the-clickin-and-clickout-methods"></a>ClickIn と ClickOut メソッドを追加するには
 
-1. クラス ビューでは、オンを表示するには、多角形と PolygonLib を展開します。
+1. **ソリューション エクスプ ローラー**Polygon.idl を開き、次のコードを追加`methods:`で、 `dispInterface_IPolyCtlEvents` PolygonLib ライブラリの宣言。
 
-2. オンを右クリックします。 ショートカット メニューの **[追加]**、**[メソッドの追加]** を順にクリックします。
-
-3. 選択、**型を返す**の`void`します。
-
-4. 入力*ClickIn*で、**メソッド名**ボックス。
-
-5. **パラメーター属性**を選択、**で**ボックス。
-
-6. 選択、**パラメーターの型**の`LONG`します。
-
-7. 型*x*として、**パラメーター名**、 をクリック**追加**します。
-
-8. 手順 5 ~ 7 では、この時間を**パラメーター名**の*y*します。
-
-9. **[次へ]** をクリックします。
-
-10. 型`method ClickIn`として、 **helpstring**します。
-
-11. **[完了]** をクリックします。
-
-12. 定義する上記の手順を繰り返して、`ClickOut`メソッドと同じ`LONG`パラメーター *x*と*y*、同じ**パラメーター属性**と同じ`void`型を返します。
-
-Polygon.idl ファイルにコードが追加されたことを確認してください、`_IPolyCtlEvents`ディスパッチ インターフェイス。
-
-`_IPolyCtlEvents` Polygon.idl ファイルのディスパッチ インターフェイス次のようになります。
-
-[!code-cpp[NVC_ATL_Windowing#56](../atl/codesnippet/cpp/adding-an-event-atl-tutorial-part-5_1.idl)]
+    ```cpp
+   [id(1), helpstring("method ClickIn")] void ClickIn([in] LONG x,[in] LONG y);
+   [id(2), helpstring("method ClickOut")] void ClickOut([in] LONG x,[in] LONG y);
+    ```
 
 `ClickIn`と`ClickOut`メソッドを x とパラメーターとして、クリックした点の y 座標。
 
 ## <a name="generating-the-type-library"></a>タイプ ライブラリを生成します。
 
-接続ポイント ウィザードを使用すると接続ポイントのインターフェイスとコントロールの接続ポイント コンテナー インターフェイスを構築する必要がある情報の取得に使用するため、この時点では、タイプ ライブラリを生成します。
+プロジェクトを使用すると接続ポイントのインターフェイスとコントロールの接続ポイント コンテナー インターフェイスを構築する必要がある情報の取得に使用するため、この時点では、タイプ ライブラリを生成します。
 
-#### <a name="to-generate-the-type-library"></a>タイプ ライブラリを生成するには
+### <a name="to-generate-the-type-library"></a>タイプ ライブラリを生成するには
 
 1. プロジェクトをリビルドします。
 
      - または -
 
-2. ソリューション エクスプ ローラーで Polygon.idl ファイルを右クリックし、をクリックして**コンパイル**ショートカット メニューの します。
+1. Polygon.idl ファイルを右クリックして**ソリューション エクスプ ローラー** ] をクリック**コンパイル**ショートカット メニューの [します。
 
-これにより、これは、タイプ ライブラリ Polygon.tlb ファイルが作成されます。 バイナリ ファイルとことはできませんが表示またはに直接編集は、Polygon.tlb ファイルをソリューション エクスプ ローラーで表示されません。
+これにより、これは、タイプ ライブラリ Polygon.tlb ファイルが作成されます。 Polygon.tlb ファイルはから認識できない**ソリューション エクスプ ローラー**バイナリ ファイルしできません表示または編集直接ためです。
 
 ## <a name="implementing-the-connection-point-interfaces"></a>接続ポイントのインターフェイスを実装します。
 
@@ -95,39 +72,90 @@ Polygon.idl ファイルにコードが追加されたことを確認してく�
 
 実装に役立つ`IConnectionPoint`、接続ポイントの実装ウィザードを使用します。 このウィザードで生成、`IConnectionPoint`タイプ ライブラリを読み取って、起動できるイベントごとに関数を実装するインターフェイス。
 
-#### <a name="to-use-the-implement-connection-point-wizard"></a>接続ポイントの実装ウィザードを使用するには
+### <a name="to-implement-the-connection-points"></a>接続ポイントを実装するには
 
-1. クラス ビューでコントロールの実装クラスを右クリック`CPolyCtl`します。
+1. **ソリューション エクスプ ローラー**_IPolyCtlEvents_CP.h を開き、次のコードを追加、`public:`内のステートメント、`CProxy_IPolyCtlEvents`クラス。
 
-2. ショートカット メニューで、**追加**、 をクリックし、**接続ポイントの追加**します。
+    ```cpp
+    VOID Fire_ClickIn(LONG x, LONG y)
+    {
+        T* pT = static_cast<T*>(this);
+        int nConnectionIndex;
+        CComVariant* pvars = new CComVariant[2];
+        int nConnections = m_vec.GetSize();
 
-3. 選択`_IPolyCtlEvents`から、**ソース インターフェイス**を一覧表示し、ダブルクリックに追加して、**コネクション ポイントを実装**列。 **[完了]** をクリックします。 コネクション ポイントのプロキシ クラスが生成されます、ここでは、`CProxy_IPolyCtlEvents`します。
+        for (nConnectionIndex = 0; nConnectionIndex < nConnections; nConnectionIndex++)
+        {
+            pT->Lock();
+            CComPtr<IUnknown> sp = m_vec.GetAt(nConnectionIndex);
+            pT->Unlock();
+            IDispatch* pDispatch = reinterpret_cast<IDispatch*>(sp.p);
+            if (pDispatch != NULL)
+            {
+                pvars[1].vt = VT_I4;
+                pvars[1].lVal = x;
+                pvars[0].vt = VT_I4;
+                pvars[0].lVal = y;
+                DISPPARAMS disp = { pvars, NULL, 2, 0 };
+                pDispatch->Invoke(0x1, IID_NULL, LOCALE_USER_DEFAULT, DISPATCH_METHOD, &disp, NULL, NULL, NULL);
+            }
+        }
+        delete[] pvars;
 
-ソリューション エクスプ ローラーで生成された _IPolyCtlEvents_CP.h ファイルを見ると、わかりますというクラスを使用している`CProxy_IPolyCtlEvents`から派生した`IConnectionPointImpl`します。 _IPolyCtlEvents_CP.h は 2 つのメソッドも定義`Fire_ClickIn`と`Fire_ClickOut`、座標の 2 つのパラメーターを取ることができます。 コントロールからイベントを発生する場合に、これらのメソッドを呼び出します。
+    }
+    VOID Fire_ClickOut(LONG x, LONG y)
+    {
+        T* pT = static_cast<T*>(this);
+        int nConnectionIndex;
+        CComVariant* pvars = new CComVariant[2];
+        int nConnections = m_vec.GetSize();
 
-ウィザードの追加も`CProxy_PolyEvents`と`IConnectionPointContainerImpl`コントロールの複数の継承リストにします。 公開されているウィザード`IConnectionPointContainer`COM マップに適切なエントリを追加できます。
+        for (nConnectionIndex = 0; nConnectionIndex < nConnections; nConnectionIndex++)
+        {
+            pT->Lock();
+            CComPtr<IUnknown> sp = m_vec.GetAt(nConnectionIndex);
+            pT->Unlock();
+            IDispatch* pDispatch = reinterpret_cast<IDispatch*>(sp.p);
+            if (pDispatch != NULL)
+            {
+                pvars[1].vt = VT_I4;
+                pvars[1].lVal = x;
+                pvars[0].vt = VT_I4;
+                pvars[0].lVal = y;
+                DISPPARAMS disp = { pvars, NULL, 2, 0 };
+                pDispatch->Invoke(0x2, IID_NULL, LOCALE_USER_DEFAULT, DISPATCH_METHOD, &disp, NULL, NULL, NULL);
+            }
+        }
+        delete[] pvars;
+
+    }
+    ```
+
+このファイルにはというクラスが表示されます`CProxy_IPolyCtlEvents`から派生した`IConnectionPointImpl`します。 _IPolyCtlEvents_CP.h 2 つのメソッドを定義します`Fire_ClickIn`と`Fire_ClickOut`、座標の 2 つのパラメーターを取ることができます。 コントロールからイベントを発生する場合に、これらのメソッドを呼び出します。
+
+コントロールを作成して**コネクション ポイント**オプションを選択すると、_IPolyCtlEvents_CP.h ファイルが自動的に生成します。 It も追加`CProxy_PolyEvents`と`IConnectionPointContainerImpl`コントロールの複数の継承リストに、公開される`IConnectionPointContainer`COM マップに適切なエントリを追加できます。
 
 イベントをサポートするコードの実装が完了したら。 適切な時点で、イベントを発生させるコードを追加します。 起動することに注意してください、`ClickIn`または`ClickOut`イベント、ユーザーがコントロールでマウスの左ボタンをクリックするとします。 ユーザーがボタンをクリックしたときに確認をするのハンドラーを追加、`WM_LBUTTONDOWN`メッセージ。
 
-#### <a name="to-add-a-handler-for-the-wmlbuttondown-message"></a>WM_LBUTTONDOWN メッセージ ハンドラーを追加するには
+### <a name="to-add-a-handler-for-the-wmlbuttondown-message"></a>WM_LBUTTONDOWN メッセージ ハンドラーを追加するには
 
-1. クラス ビューで CPolyCtl クラスを右クリックし、をクリックして**プロパティ**ショートカット メニューの します。
+1. **クラス ビュー**を右クリックし、`CPolyCtl`クラスし、クリックして**プロパティ**ショートカット メニューの します。
 
-2. **プロパティ**ウィンドウで、をクリックして、**メッセージ**アイコンをクリック`WM_LBUTTONDOWN`、左側の一覧から。
+1. **プロパティ**ウィンドウで、をクリックして、**メッセージ**アイコンをクリック`WM_LBUTTONDOWN`、左側の一覧から。
 
-3. 表示されるドロップダウン リストから、クリックして**\<追加 > OnLButtonDown**します。 `OnLButtonDown` PolyCtl.h、するハンドラーの宣言が追加され、ハンドラーの実装は PolyCtl.cpp に追加されます。
+1. 表示されるドロップダウン リストから、クリックして**\<追加 > OnLButtonDown**します。 `OnLButtonDown` PolyCtl.h、するハンドラーの宣言が追加され、ハンドラーの実装は PolyCtl.cpp に追加されます。
 
 次に、ハンドラーを変更します。
 
-#### <a name="to-modify-the-onlbuttondown-method"></a>OnLButtonDown メソッドを変更するには
+### <a name="to-modify-the-onlbuttondown-method"></a>OnLButtonDown メソッドを変更するには
 
 1. 構成するコードを変更、`OnLButtonDown`メソッド PolyCtl.cpp (ウィザードで配置された任意のコードを削除する) で次のように見えるように。
 
-     [!code-cpp[NVC_ATL_Windowing#57](../atl/codesnippet/cpp/adding-an-event-atl-tutorial-part-5_2.cpp)]
+    [!code-cpp[NVC_ATL_Windowing#57](../atl/codesnippet/cpp/adding-an-event-atl-tutorial-part-5_2.cpp)]
 
 ポイントの使用が計算されたこのコードにより、`OnDraw`関数の呼び出しで、ユーザーのマウスのクリックを検出する領域を作成する`PtInRegion`します。
 
-*UMsg*パラメーターは、処理されている Windows メッセージの ID。 これにより、さまざまなメッセージを処理する 1 つの関数が存在することができます。 *WParam*と*lParam*パラメーターは、処理されるメッセージの標準の値。 パラメーター bHandled かどうか、関数が、メッセージを処理するかどうかを指定することができます。 既定では、値を FALSE に設定することができますが、関数は、メッセージを処理を示すために TRUE に設定します。 ATL にメッセージを送信するメッセージ ハンドラー関数が別の検索を続行するのには、なります。
+*UMsg*パラメーターは、処理されている Windows メッセージの ID。 これにより、さまざまなメッセージを処理する 1 つの関数が存在することができます。 *WParam*と*lParam*パラメーターは、処理されるメッセージの標準の値。 パラメーター *bHandled*かどうか、関数が、メッセージを処理するかどうかを指定することができます。 既定では、値を FALSE に設定することができますが、関数は、メッセージを処理を示すために TRUE に設定します。 ATL にメッセージを送信するメッセージ ハンドラー関数が別の検索を続行するのには、なります。
 
 ## <a name="building-and-testing-the-control"></a>コントロールのビルドとテスト
 
@@ -140,4 +168,3 @@ Polygon.idl ファイルにコードが追加されたことを確認してく�
 ## <a name="see-also"></a>関連項目
 
 [チュートリアル](../atl/active-template-library-atl-tutorial.md)
-

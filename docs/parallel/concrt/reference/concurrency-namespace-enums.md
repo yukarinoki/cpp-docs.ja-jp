@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 69b11a78d1be76895b9687d1423df74c51fe3d39
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 49ae12184189996561717874833d6cdf3f30e159
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078846"
 ---
 # <a name="concurrency-namespace-enums"></a>同時実行の名前空間列挙型
 
@@ -44,6 +44,7 @@ ms.locfileid: "46416696"
 ```
 enum agent_status;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -58,7 +59,7 @@ enum agent_status;
 
 詳細については、次を参照してください。[非同期エージェント](../../../parallel/concrt/asynchronous-agents.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 
@@ -83,7 +84,7 @@ enum Agents_EventType;
 |`AGENTS_EVENT_START`|いくつかの開始を表すイベントの種類の処理|
 |`AGENTS_EVENT_UNLINK`|メッセージ ブロックの解除を表すイベントの種類|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 
@@ -94,6 +95,7 @@ enum Agents_EventType;
 ```
 enum ConcRT_EventType;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -108,7 +110,7 @@ enum ConcRT_EventType;
 |`CONCRT_EVENT_UNBLOCK`|コンテキストのブロック解除の動作を表すイベントの種類。|
 |`CONCRT_EVENT_YIELD`|応答してコンテキストの動作を表すイベントの種類。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h **Namespace:** 同時実行
 
@@ -119,6 +121,7 @@ enum ConcRT_EventType;
 ```
 enum Concrt_TraceFlags;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -131,7 +134,7 @@ enum Concrt_TraceFlags;
 |`SchedulerEventFlag`||
 |`VirtualProcessorEventFlag`||
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 
@@ -142,6 +145,7 @@ enum Concrt_TraceFlags;
 ```
 enum CriticalRegionType;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -150,7 +154,7 @@ enum CriticalRegionType;
 |`InsideHyperCriticalRegion`|コンテキストがハイパー クリティカル領域内にあることを示します。 Hyper クリティカル領域内では、同期および非同期の中断が、スケジューラからは見えません。 このような一時的に停止する必要があります。 またはブロックが発生すると、リソース マネージャーがスレッドの実行可能になるし、スケジューラをもう一度呼び出す代わりにそれを再開を待機します。 このようなリージョン内で取得されるロックは、このようなリージョン外で実行されているコードと共有する必要があることはありません。 そうと、予測不可能なデッドロックが発生します。|
 |`OutsideCriticalRegion`|コンテキストがクリティカル領域の外部にあることを示します。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrtrm.h
 
@@ -161,6 +165,7 @@ enum CriticalRegionType;
 ```
 enum DynamicProgressFeedbackType;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -174,6 +179,7 @@ enum DynamicProgressFeedbackType;
 ```
 enum join_type;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -181,7 +187,7 @@ enum join_type;
 |`greedy`|最長一致`join`メッセージング ブロックが伝播時にメッセージをすぐにそのまま使用します。 これより効率的ですが、live - ロックでは、ネットワークの構成によって発生する可能性です。|
 |`non_greedy`|非貪欲法による`join`メッセージング ブロック メッセージを延期し、すべてが到着した後、それらを使用します。 これらは確実に動作が遅くなります。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 
@@ -192,6 +198,7 @@ enum join_type;
 ```
 enum message_status;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -201,7 +208,7 @@ enum message_status;
 |`missed`|ターゲットが、メッセージの受け入れを試みましたが、使用できませんでした。|
 |`postponed`|ターゲットは、メッセージを延期します。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 
@@ -212,6 +219,7 @@ enum message_status;
 ```
 enum PolicyElementKey;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -228,7 +236,7 @@ enum PolicyElementKey;
 |`TargetOversubscriptionFactor`|一時的なハードウェア スレッドごとの仮想プロセッサ数。 ターゲットのオーバー サブスクリプション ファクター増やすことができます、リソース マネージャーによってを満たすために、必要に応じて`MaxConcurrency`マシン上のハードウェア スレッドにします。<br /><br /> 有効な値: 正の整数<br /><br /> 既定値: `1`|
 |`WinRTInitialization`||
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 
@@ -247,7 +255,7 @@ enum SchedulerType;
 |`ThreadScheduler`|通常の Win32 スレッドの明示的な要求を示します。|
 |`UmsThreadDefault`|ユーザー モード スケジュール可能 (UMS) スレッドは、Visual Studio 2013 での同時実行ランタイムでサポートされていません。 `UmsThreadDefault` ポリシーの値として `SchedulerType` を使用しても、エラーは発生しません。 ただし、そのポリシーで作成されたスケジューラでは、既定で Win32 スレッドが使用されます。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 
@@ -258,6 +266,7 @@ enum SchedulerType;
 ```
 enum SchedulingProtocolType;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -265,7 +274,7 @@ enum SchedulingProtocolType;
 |`EnhanceForwardProgress`|各タスクを実行した後、ラウンドロビン スケジュール グループを使用するスケジューラします。 ブロックされていないコンテキストは、最初に先出し (法 FIFO) 方式で通常スケジュールされます。 仮想プロセッサは、ブロック解除のコンテキストをキャッシュしません。|
 |`EnhanceScheduleGroupLocality`|スケジューラは別のスケジュール グループに移動する前に、現在のスケジュール グループ内のタスクで作業を続行します。 ブロックされていないコンテキストでは、仮想プロセッサあたりはキャッシュされ、それらのブロックを解除する仮想プロセッサによって、後入れ先出し (LIFO) の形式で通常にスケジュールされます。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 
@@ -276,6 +285,7 @@ enum SchedulingProtocolType;
 ```
 enum SwitchingProxyState;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -297,15 +307,16 @@ enum SwitchingProxyState;
 ```
 enum task_group_status;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
 |----------|-----------------|
 |`canceled`|`task_group` オブジェクトまたは `structured_task_group` オブジェクトは取り消されました。 1 つまたは複数のタスクが実行されていない可能性があります。|
 |`completed`|`task_group` オブジェクトまたは `structured_task_group` オブジェクトのキューに格納されたタスクは、正常に完了しました。|
-|`not_complete`|`task_group` オブジェクトのキューに格納されたタスクは完了していません。 この値は、同時実行ランタイムによって現在返されていないことに注意してください。|
+|`not_complete`|`task_group` オブジェクトのキューに格納されたタスクは完了していません。 この値は、コンカレンシー ランタイムによって現在返されていないことに注意してください。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** pplinterface.h
 
@@ -316,6 +327,7 @@ enum task_group_status;
 ```
 enum WinRTInitializationType;
 ```
+
 ### <a name="values"></a>値
 
 |名前|説明|
@@ -323,7 +335,7 @@ enum WinRTInitializationType;
 |`DoNotInitializeWinRT`|アプリケーションが Windows 8 またはそれ以降のバージョンのオペレーティング システムで実行される場合、スケジューラ内のスレッドは、Windows ランタイムを初期化しません。|
 |`InitializeWinRTAsMTA`|アプリケーションが Windows 8 またはそれ以降のバージョンのオペレーティング システムで実行される場合、スケジューラ内の各スレッドは、Windows ランタイムを初期化し、マルチスレッド アパートメントの一部であることを宣言します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 

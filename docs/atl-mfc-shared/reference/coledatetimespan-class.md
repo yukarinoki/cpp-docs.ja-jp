@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f313b659629f824828c52948b9a73c50f86b5e40
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e50fe341ff52916d16b3c006e438fe2bfa99154
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434181"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082841"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan クラス
 
@@ -105,7 +105,7 @@ A`COleDateTimeSpan`日で時間を保持します。
 
 詳細については、`COleDateTime`と`COleDateTimeSpan`クラスは、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** ATLComTime.h
 
@@ -124,7 +124,7 @@ bool operator>=(const COleDateTimeSpan& dateSpan) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dateSpan*  
+*dateSpan*<br/>
 比較対象の `COleDateTimeSpan`。
 
 ### <a name="return-value"></a>戻り値
@@ -154,10 +154,10 @@ COleDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dblSpanSrc*  
+*dblSpanSrc*<br/>
 新しいにコピーされる日数`COleDateTimeSpan`オブジェクト。
 
-*lDays*、 *nHours*、 *nMins*、 *nSecs*  
+*lDays*、 *nHours*、 *nMins*、 *nSecs*<br/>
 新しいにコピーされる日付と時刻の値を示す`COleDateTimeSpan`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -189,7 +189,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pFormat*  
+*pFormat*<br/>
 ような文字列を書式設定、`printf`文字列の書式設定します。 割合に続くコードの書式設定 (`%`) 署名は、対応する置き換え`COleDateTimeSpan`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 値との書式設定コードの意味`Format`を以下に示します。
 
 - **%H**は現在の日の時間
@@ -204,7 +204,7 @@ CString Format(UINT nID) const;
 
 -
 
-*nID*  
+*nID*<br/>
 コントロールの書式設定文字列のリソース ID。
 
 ### <a name="return-value"></a>戻り値
@@ -217,10 +217,10 @@ A`CString`書式設定された日付/時間値を格納しています。
 
 この関数の形式の簡単な説明に従います。
 
-**形式 (** *pFormat* **)**  
+**形式 (** *pFormat* **)**<br/>
 この形式でパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式化`printf`します。 書式指定文字列は、関数にパラメーターとして渡されます。
 
-**形式 (** *nID* **)**  
+**形式 (** *nID* **)**<br/>
 この形式でパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式化`printf`します。 書式指定文字列は、リソースです。 この文字列リソースの ID は、パラメーターとして渡されます。
 
 ### <a name="example"></a>例
@@ -388,11 +388,11 @@ DateTimeSpanStatus GetStatus() const throw();
 戻り値は、`DateTimeSpanStatus`列挙型内で定義されている、`COleDateTimeSpan`クラス。
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-};  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+};
 ```
 
 これらのステータス値の簡単な説明は、次の一覧を参照してください。
@@ -585,11 +585,11 @@ DateTimeSpanStatus m_status;
 ### <a name="remarks"></a>Remarks
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 これらのステータス値の簡単な説明は、次の一覧を参照してください。
@@ -694,7 +694,7 @@ void SetDateTimeSpan(LONG lDays, int nHours, int nMins, int nSecs) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*lDays*、 *nHours*、 *nMins*、 *nSecs*  
+*lDays*、 *nHours*、 *nMins*、 *nSecs*<br/>
 これにコピーされる日付範囲と時間範囲の値を示す`COleDateTimeSpan`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -731,7 +731,7 @@ void SetStatus(DateTimeSpanStatus status) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*status*  
+*status*<br/>
 この新しいステータス値`COleDateTimeSpan`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -739,11 +739,11 @@ void SetStatus(DateTimeSpanStatus status) throw();
 *状態*パラメーターの値によって定義されます、`DateTimeSpanStatus`列挙型内で定義されている、`COleDateTimeSpan`クラス。
 
 ```
-enum DateTimeSpanStatus{  
-   valid = 0,  
-   invalid = 1,  
-   null = 2,  
-   };  
+enum DateTimeSpanStatus{
+   valid = 0,
+   invalid = 1,
+   null = 2,
+   };
 ```
 
 これらのステータス値の簡単な説明は、次の一覧を参照してください。

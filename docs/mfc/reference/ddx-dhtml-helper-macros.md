@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7a4dbf1b085ca5ffddd87396fc367bf19f2ad02e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 841a140236c092ad14501698db90007bce0322ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383061"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054879"
 ---
 # <a name="ddxdhtml-helper-macros"></a>DDX_DHtml Helper マクロ
 
@@ -51,15 +51,13 @@ DDX_DHtml helper マクロでは、一般的に使用される HTML ページ上
 |[DDX_DHtml_Frame_Src](#ddx_dhtml_frame_src)|設定または関連付けられているフレームの URL を取得します。|
 |[DDX_DHtml_IFrame_Src](#ddx_dhtml_iframe_src)|設定または関連付けられているフレームの URL を取得します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdhtml.h
 
 ## <a name="ddx_dhtml_anchor_href"></a> DDX_DHtml_Anchor_Href
 
 設定または変換先の URL またはアンカー ポイントを取得します。
-
-
 
 ```
 DDX_DHtml_Anchor_Href(
@@ -113,8 +111,6 @@ HTML コントロールの ID パラメーターに指定した値。
 
 設定または現在の要素の開始と終了タグの間での HTML を取得します。
 
-
-
 ```
 DDX_DHtml_ElementInnerHtml(
     CDataExchange* dx,
@@ -137,12 +133,9 @@ HTML コントロールの ID パラメーターに指定した値。
 
 このマクロを呼び出す、 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) DISPID_IHTMLELEMENT_INNERHTML を使用して関数のディスパッチ id。
 
-
 ## <a name="ddx_dhtml_elementinnertext"></a>  DDX_DHtml_ElementInnerText
 
 設定または現在の要素の開始と終了タグの間のテキストを取得します。
-
-
 
 ```
 DDX_DHtml_ElementInnerText(
@@ -224,8 +217,6 @@ HTML コントロールの ID パラメーターに指定した値。
 
 設定または関連付けられているフレームの URL を取得します。
 
-
-
 ```
 DDX_DHtml_IFrame_Src(
     CDataExchange* dx,
@@ -275,7 +266,6 @@ HTML コントロールの ID パラメーターに指定した値。
 DDX_DHtml_Img_Src マクロを使用して、イメージ要素の src プロパティを取得する、Internet Explorer のイメージ オブジェクトは、イメージ ソースの完全にエスケープされた URL を返します。 たとえば、「いくつかの興味深い像」を文字列に画像の要素の src プロパティを設定する DDX_DHtml_Img_Src マクロを使用する場合 Internet Explorer、そのプロパティを取得する場合は文字列を返します、res://d:\myapplication\myapp.exe/some%"20interesting %20picture。"
 
 このマクロを呼び出す、 [CDHtmlDialog::DDX_DHtml_ElementText](../../mfc/reference/cdhtmldialog-class.md#ddx_dhtml_elementtext) DISPID_IHTMLIMGELEMENT_SRC を使用して関数のディスパッチ id。
-
 
 ## <a name="see-also"></a>関連項目
 

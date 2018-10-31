@@ -16,18 +16,18 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3a9d25a77b6936a3b5b741a1da927c6beb24cbb1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90cd0b401624ea6815b31b55a7da9c8796746ce8
+ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072226"
+ms.lasthandoff: 10/04/2018
+ms.locfileid: "48789203"
 ---
 # <a name="compiler-warning-level-3-c4580"></a>コンパイラの警告 (レベル 3) C4580
 
 [attribute] は非推奨とされます。System::Attribute または Platform::Metadata を基底クラスとして指定してください
 
-[[属性](../../windows/attribute.md)] がユーザー定義の属性を作成するための構文をお勧めします。 詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。 CLR コードの場合は、`System::Attribute` から属性を派生させます。 Windows ランタイム コードの場合は、`Platform::Metadata` から属性を派生させます。
+[[属性](../../windows/attributes/attribute.md)] がユーザー定義の属性を作成するための構文をお勧めします。 詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。 CLR コードの場合は、`System::Attribute` から属性を派生させます。 Windows ランタイム コードの場合は、`Platform::Metadata` から属性を派生させます。
 
 ## <a name="example"></a>例
 

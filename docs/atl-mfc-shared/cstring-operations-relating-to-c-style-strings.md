@@ -25,12 +25,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c7047161a059432b43d4ff1a92e9c4d10dc01d51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 765cb6ccf24415c174761c57268dc79e1fc6845b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387017"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062562"
 ---
 # <a name="cstring-operations-relating-to-c-style-strings"></a>C スタイルの文字列に関連する CString の操作方法
 
@@ -54,9 +54,9 @@ A [CString](../atl-mfc-shared/using-cstring.md)オブジェクトには、文字
 
 使用する、 `CString` C スタイル文字列としてオブジェクト、LPCTSTR をオブジェクトにキャストします。 次の例では、`CString` は読み取り専用で C スタイルの null で終わる文字列へのポインターを返します。 `strcpy` 関数は、C スタイルの文字列のコピーを変数 `myString` に入れます。
 
-```
-CString aCString = "A string";  
-char myString[256];  
+```cpp
+CString aCString = "A string";
+char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
@@ -67,7 +67,7 @@ strcpy(myString, (LPCTSTR)aCString);
 [!code-cpp[NVC_ATLMFC_Utilities#189](../atl-mfc-shared/codesnippet/cpp/cstring-operations-relating-to-c-style-strings_1.cpp)]
 
 > [!NOTE]
->  3 番目の引数`strcpy_s`(または Unicode と MBCS ポータブル`_tcscpy_s`) か、 `const wchar_t*` (Unicode) または`const char*`(ANSI)。 前述の例では、この引数に `CString` を渡しています。 C++ コンパイラは `CString` クラス用に定義されている変換関数を自動的に適用します。この関数は `CString` を `LPCTSTR` に変換します。 ある型から別の型へのキャスト操作を定義する機能は、C++ の最も有効な機能の 1 つです。
+> 3 番目の引数`strcpy_s`(または Unicode と MBCS ポータブル`_tcscpy_s`) か、 `const wchar_t*` (Unicode) または`const char*`(ANSI)。 前述の例では、この引数に `CString` を渡しています。 C++ コンパイラは `CString` クラス用に定義されている変換関数を自動的に適用します。この関数は `CString` を `LPCTSTR` に変換します。 ある型から別の型へのキャスト操作を定義する機能は、C++ の最も有効な機能の 1 つです。
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> 標準のランタイム ライブラリ文字列関数の使用
 
@@ -83,13 +83,13 @@ C ランタイム文字列関数を使用する場合は、_core_using_cstring_a
 
 `GetBuffer` メソッドと `ReleaseBuffer` メソッドでは、`CString` オブジェクトの内部文字バッファーへのアクセスが提供され、これを使用して直接変更できます。 次の手順では、このような目的でこれらの関数を使用する方法を示します。
 
-#### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>GetBuffer と ReleaseBuffer を使用して CString オブジェクトの内部文字バッファーにアクセスするには
+### <a name="to-use-getbuffer-and-releasebuffer-to-access-the-internal-character-buffer-of-a-cstring-object"></a>GetBuffer と ReleaseBuffer を使用して CString オブジェクトの内部文字バッファーにアクセスするには
 
 1. `GetBuffer` オブジェクトの `CString` を呼び出して、必要なバッファーの長さを指定します。
 
-2. `GetBuffer` によって返されたポインターを使用して、`CString` オブジェクトに直接文字を書き込みます。
+1. `GetBuffer` によって返されたポインターを使用して、`CString` オブジェクトに直接文字を書き込みます。
 
-3. `ReleaseBuffer` オブジェクトの `CString` を呼び出して、文字列の長さなどのすべての内部的な `CString` 状態情報を更新します。 `CString` オブジェクトの内容を直接変更した後、先に `ReleaseBuffer` を呼び出してから、その他の `CString` メンバー関数を呼び出す必要があります。
+1. `ReleaseBuffer` オブジェクトの `CString` を呼び出して、文字列の長さなどのすべての内部的な `CString` 状態情報を更新します。 `CString` オブジェクトの内容を直接変更した後、先に `ReleaseBuffer` を呼び出してから、その他の `CString` メンバー関数を呼び出す必要があります。
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> 可変個引数関数での CString オブジェクトの使用
 
@@ -113,4 +113,3 @@ C ランタイム文字列関数を使用する場合は、_core_using_cstring_a
 
 [文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>
 [CString 引数の渡し方](../atl-mfc-shared/cstring-argument-passing.md)
-

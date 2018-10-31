@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 919cff46250d07876c9ca50acb21972fcfa75d4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a734e51f298f7f092dde341479293bad3a2d9434
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411411"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072684"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用
 
@@ -47,15 +47,15 @@ ActiveX コントロール クラスには、コントロール内に Picture �
 
 - [CPictureHolder](../mfc/reference/cpictureholder-class.md) クラス。
 
-     このクラスは、画像オブジェクトへのアクセスを容易にするほか、カスタム Picture プロパティで表示されるアイテム用の機能を提供します。
+   このクラスは、画像オブジェクトへのアクセスを容易にするほか、カスタム Picture プロパティで表示されるアイテム用の機能を提供します。
 
 - Get/Set 関数を使用して実装される **LPPICTUREDISP**型のプロパティのサポート。
 
-     クラス ビューを使うと、Picture 型をサポートするカスタム プロパティを簡単に追加できます。 クラス ビューを使用して ActiveX コントロールのプロパティを追加する方法について詳しくは、「 [MFC ActiveX コントロール: プロパティ](../mfc/mfc-activex-controls-properties.md)」をご覧ください。
+   クラス ビューを使うと、Picture 型をサポートするカスタム プロパティを簡単に追加できます。 クラス ビューを使用して ActiveX コントロールのプロパティを追加する方法について詳しくは、「 [MFC ActiveX コントロール: プロパティ](../mfc/mfc-activex-controls-properties.md)」をご覧ください。
 
 - コントロールの Picture プロパティを操作するプロパティ ページ。
 
-     このプロパティ ページは、ActiveX コントロールで使用できる一連のストック プロパティ ページの 1 つです。 ActiveX コントロールのプロパティ ページについて詳しくは、「 [MFC ActiveX コントロール: ストック プロパティ ページの使用](../mfc/mfc-activex-controls-using-stock-property-pages.md)」をご覧ください。
+   このプロパティ ページは、ActiveX コントロールで使用できる一連のストック プロパティ ページの 1 つです。 ActiveX コントロールのプロパティ ページについて詳しくは、「 [MFC ActiveX コントロール: ストック プロパティ ページの使用](../mfc/mfc-activex-controls-using-stock-property-pages.md)」をご覧ください。
 
 ##  <a name="_core_implementing_a_custom_picture_property_in_your_activex_control"></a> ActiveX コントロールでのカスタム Picture プロパティの実装
 
@@ -67,11 +67,11 @@ ActiveX コントロール クラスには、コントロール内に Picture �
 
 - [コントロール プロジェクトへのコードの追加](#_core_additions_to_your_control_project)。
 
-     標準の Picture プロパティ ページ ID、 `CPictureHolder`型のデータ メンバー、Get/Set 実装を持つ **LPPICTUREDISP** 型のカスタム プロパティを追加する必要があります。
+   標準の Picture プロパティ ページ ID、 `CPictureHolder`型のデータ メンバー、Get/Set 実装を持つ **LPPICTUREDISP** 型のカスタム プロパティを追加する必要があります。
 
 - [コントロール クラスの一部の関数を変更](#_core_modifications_to_your_control_project)。
 
-     ActiveX コントロールの描画に使用するいくつかの関数を変更します。
+   ActiveX コントロールの描画に使用するいくつかの関数を変更します。
 
 ##  <a name="_core_additions_to_your_control_project"></a> コントロール プロジェクトへの追加
 

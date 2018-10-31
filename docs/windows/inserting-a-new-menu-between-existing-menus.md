@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 558c6e14c226a9d6138f0bad36cb1620e4ce18be
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 6d3344dd35f14aa04eba124a11b6f8637590bab4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314951"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077570"
 ---
 # <a name="inserting-a-new-menu-between-existing-menus-c"></a>既存のメニュー (C++) 間に新規メニューを挿入します。
 
@@ -35,10 +35,10 @@ ms.locfileid: "44314951"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 
 ## <a name="see-also"></a>関連項目
 
-[メニュー エディター](../windows/menu-editor.md)  
+[メニュー エディター](../windows/menu-editor.md)

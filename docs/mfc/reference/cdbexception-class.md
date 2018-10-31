@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b860084b12f285effff7cf3c8fc74409a9baf4a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c34c70f1bca3091ba078846b7b94ad947d5f31cb
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389578"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083113"
 ---
 # <a name="cdbexception-class"></a>CDBException クラス
 
@@ -142,7 +142,7 @@ Sql コードは、ODBC によって定義されます。 AFX プレフィック
 
 文字列が、フォーム"の状態: %s、ネイティブ: %ld 配信元: %s"での順序で、書式コードが記述する値を置き換え。
 
-- SQLSTATE、5 文字のエラー コードを含む null で終わる文字列が返される、 *szSqlState* ODBC 関数のパラメーター`SQLError`します。 SQLSTATE 値は、付録 A に記載されて[ODBC エラー コード](/previous-versions/windows/desktop/ms714687\(v=vs.85\))の*ODBC プログラマ リファレンス*します。 例:"S0022"。
+- SQLSTATE、5 文字のエラー コードを含む null で終わる文字列が返される、 *szSqlState* ODBC 関数のパラメーター`SQLError`します。 SQLSTATE 値は、付録 A に記載されて[ODBC エラー コード](/previous-versions/windows/desktop/ms714687)の*ODBC プログラマ リファレンス*します。 例:"S0022"。
 
 - データ ソースに固有のネイティブ エラー コードが返される、 *pfNativeError*のパラメーター、`SQLError`関数。 例: 207 します。
 
@@ -150,7 +150,7 @@ Sql コードは、ODBC によって定義されます。 AFX プレフィック
 
 フレームワークは、エラー文字列を解釈し、そのコンポーネントには、`m_strStateNativeOrigin`場合`m_strStateNativeOrigin`情報が含まれています、1 つ以上のエラー、エラーが改行で区切られました。 フレームワークは、英数字のエラー テキストを`m_strError`します。
 
-この文字列を構成するために使用するコードの詳細については、次を参照してください。、 [SQLError](/previous-versions/windows/desktop/ms716312\(v=vs.85\))で機能、 *ODBC プログラマ リファレンス*します。
+この文字列を構成するために使用するコードの詳細については、次を参照してください。、 [SQLError](/previous-versions/windows/desktop/ms716312)で機能、 *ODBC プログラマ リファレンス*します。
 
 ### <a name="example"></a>例
 

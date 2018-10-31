@@ -163,12 +163,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46e3926f31ec7d12da539d868cacb37e18134e96
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 999e91f1f437077b90b2c8a0ea9f7ac8a4603080
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109691"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054672"
 ---
 # <a name="cwindow-class"></a>CWindow クラス
 
@@ -382,9 +382,9 @@ class CWindow
 
 [CDialogImpl](../../atl/reference/cdialogimpl-class.md)モーダルまたはモードレスのダイアログ ボックスを作成することができます。
 
-Windows の詳細については、次を参照してください。 [Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595)と Windows SDK の後続のトピックです。 ATL でのウィンドウの使用に関する詳細については、記事を参照してください。 [ATL ウィンドウ クラス](../../atl/atl-window-classes.md)します。
+Windows の詳細については、次を参照してください。 [Windows](/windows/desktop/winmsg/windows)と Windows SDK の後続のトピックです。 ATL でのウィンドウの使用に関する詳細については、記事を参照してください。 [ATL ウィンドウ クラス](../../atl/atl-window-classes.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -499,7 +499,7 @@ BOOL CheckDlgButton(int nIDButton, UINT nCheck) throw();
 指定したオプション ボタンを確認します。
 
 ```
-BOOL CheckRadioButton(  
+BOOL CheckRadioButton(
     int nIDFirstButton,
     int nIDLastButton,
     int nIDCheckButton) throw();
@@ -667,7 +667,7 @@ CWindow(HWND hWnd = NULL) throw();
 指定したウィンドウの指定した複数ウィンドウ位置構造を更新します。
 
 ```
-HDWP DeferWindowPos(  
+HDWP DeferWindowPos(
     HDWP hWinPosInfo,
     HWND hWndInsertAfter,
     int x,
@@ -720,7 +720,7 @@ HWND に関連付けられている、`CWindow`オブジェクト。
 指定されたパスまたはファイル名に一致するすべてのファイルの名前を持つリスト ボックスに入力します。
 
 ```
-int DlgDirList(  
+int DlgDirList(
     LPTSTR lpPathSpec,
     int nIDListBox,
     int nIDStaticPath,
@@ -736,7 +736,7 @@ int DlgDirList(
 指定されたパスまたはファイル名に一致するすべてのファイルの名前を含むコンボ ボックスに入力します。
 
 ```
-int DlgDirListComboBox(  
+int DlgDirListComboBox(
     LPTSTR lpPathSpec,
     int nIDComboBox,
     int nIDStaticPath,
@@ -752,7 +752,7 @@ int DlgDirListComboBox(
 リスト ボックスから現在の選択を取得します。
 
 ```
-BOOL DlgDirSelect(  
+BOOL DlgDirSelect(
     LPTSTR lpString,
     int nCount,
     int nIDListBox) throw();
@@ -767,7 +767,7 @@ BOOL DlgDirSelect(
 コンボ ボックスから現在の選択範囲を取得します。
 
 ```
-BOOL DlgDirSelectComboBox(  
+BOOL DlgDirSelectComboBox(
     LPTSTR lpString,
     int nCount,
     int nIDComboBox) throw();
@@ -927,7 +927,7 @@ HWND GetDescendantWindow(int nID) const throw();
 複合コントロールまたはコントロール ホスト ダイアログによってホストされている ActiveX コントロールのインターフェイスへのポインターを取得するには、この関数を呼び出します。
 
 ```
-HRESULT GetDlgControl(  
+HRESULT GetDlgControl(
     int nID,
     REFIID iid,
     void** ppCtrl) throw();
@@ -969,7 +969,7 @@ int GetDlgCtrlID() const throw();
 ATL コントロールのコンテナーをホストするためのインターフェイスへのポインターを取得します。
 
 ```
-HRESULT GetDlgHost(  
+HRESULT GetDlgHost(
     int nID,
     REFIID iid,
     void** ppHost) throw();
@@ -1011,7 +1011,7 @@ HWND GetDlgItem(int nID) const throw();
 コントロールのテキストを整数に変換します。
 
 ```
-UINT GetDlgItemInt(  
+UINT GetDlgItemInt(
     int nID,
     BOOL* lpTrans = NULL,
     BOOL bSigned = TRUE) const throw();
@@ -1026,12 +1026,12 @@ UINT GetDlgItemInt(
 コントロールのテキストを取得します。
 
 ```
-UINT GetDlgItemText(  
+UINT GetDlgItemText(
     int nID,
     LPTSTR lpStr,
     int nMaxCount) const throw();
 
-BOOL GetDlgItemText(  
+BOOL GetDlgItemText(
     int nID,
     BSTR& bstrText) const throw();
 ```
@@ -1202,7 +1202,7 @@ int GetScrollPos(int nBar) const throw();
 スクロール バーの範囲を取得します。
 
 ```
-BOOL GetScrollRange(  
+BOOL GetScrollRange(
     int nBar,
     LPINT lpMinPos,
     LPINT lpMaxPos) const throw();
@@ -1543,7 +1543,7 @@ BOOL HideCaret() throw();
 強調表示するか、トップレベルのメニュー項目から強調表示を削除します。
 
 ```
-BOOL HiliteMenuItem(  
+BOOL HiliteMenuItem(
     HMENU hMenu,
     UINT uHiliteItem,
     UINT uHilite) throw();
@@ -1785,12 +1785,12 @@ HWND m_hWnd throw() throw();
 点のセットをウィンドウの座標空間から別のウィンドウの座標空間に変換します。
 
 ```
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPPOINT lpPoint,
     UINT nCount) const throw();
 
-int MapWindowPoints(  
+int MapWindowPoints(
     HWND hWndTo,
     LPRECT lpRect) const throw();
 ```
@@ -1806,7 +1806,7 @@ int MapWindowPoints(
 メッセージ ボックスを表示します。
 
 ```
-int MessageBox(  
+int MessageBox(
     LPCTSTR lpszText,
     LPCTSTR lpszCaption = NULL,
     UINT nType = MB_OK) throw();
@@ -1825,7 +1825,7 @@ int MessageBox(
 ウィンドウ スタイルを変更、`CWindow`オブジェクト。
 
 ```
-BOOL ModifyStyle(  
+BOOL ModifyStyle(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1871,7 +1871,7 @@ BOOL ModifyStyle(
 拡張ウィンドウ スタイルを変更、`CWindow`オブジェクト。
 
 ```
-BOOL ModifyStyleEx(  
+BOOL ModifyStyleEx(
     DWORD dwRemove,
     DWORD dwAdd,
     UINT nFlags = 0) throw();
@@ -1917,14 +1917,14 @@ BOOL ModifyStyleEx(
 ウィンドウのサイズと位置を変更します。
 
 ```
-BOOL MoveWindow(  
+BOOL MoveWindow(
     int x,
     int y,
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE) throw();
 
-BOOL MoveWindow(  
+BOOL MoveWindow(
     LPCRECT lpRect,
     BOOL bRepaint = TRUE) throw();
 ```
@@ -1980,7 +1980,7 @@ CWindow& operator= (HWND hWnd) throw();
 ウィンドウを作成したスレッドに関連付けられているメッセージ キューにメッセージを配置します。
 
 ```
-BOOL PostMessage(  
+BOOL PostMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2077,7 +2077,7 @@ static RECT rcDefault;
 指定した四角形またはクライアント領域内の領域を更新します。
 
 ```
-BOOL RedrawWindow(  
+BOOL RedrawWindow(
     LPCRECT lpRectUpdate = NULL,
     HRGN hRgnUpdate = NULL,
     UINT flags = RDW_INVALIDATE | RDW_UPDATENOW | RDW_ERASE);
@@ -2114,7 +2114,7 @@ int ReleaseDC(HDC hDC);
 指定したクライアント領域のサイズをウィンドウのサイズを変更します。
 
 ```
-BOOL ResizeClient(  
+BOOL ResizeClient(
     int nWidth,
     int nHeight,
     BOOL bRedraw = FALSE) throw();
@@ -2151,7 +2151,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 指定されたクライアント領域をスクロールします。
 
 ```
-BOOL ScrollWindow(  
+BOOL ScrollWindow(
     int xAmount,
     int yAmount,
     LPCRECT lpRect = NULL,
@@ -2167,7 +2167,7 @@ BOOL ScrollWindow(
 機能が追加された指定のクライアント領域をスクロールします。
 
 ```
-int ScrollWindowEx(  
+int ScrollWindowEx(
     int dx,
     int dy,
     LPCRECT lpRectScroll,
@@ -2186,7 +2186,7 @@ int ScrollWindowEx(
 コントロールにメッセージを送信します。
 
 ```
-LRESULT SendDlgItemMessage(  
+LRESULT SendDlgItemMessage(
     int nID,
     UINT message,
     WPARAM wParam = 0,
@@ -2202,12 +2202,12 @@ LRESULT SendDlgItemMessage(
 ウィンドウにメッセージを送信し、ウィンドウ プロシージャには、メッセージが処理されるまでは返されません。
 
 ```
-LRESULT SendMessage(  
+LRESULT SendMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
 
-static LRESULT SendMessage(  
+static LRESULT SendMessage(
     HWND hWnd,
     UINT message,
     WPARAM wParam,
@@ -2227,7 +2227,7 @@ static LRESULT SendMessage(
 すべての直接の子に指定したメッセージを送信、`CWindow`オブジェクト。
 
 ```
-void SendMessageToDescendants(  
+void SendMessageToDescendants(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0,
@@ -2257,7 +2257,7 @@ void SendMessageToDescendants(
 ウィンドウにメッセージを送信します。
 
 ```
-BOOL SendNotifyMessage(  
+BOOL SendNotifyMessage(
     UINT message,
     WPARAM wParam = 0,
     LPARAM lParam = 0) throw();
@@ -2331,7 +2331,7 @@ int SetDlgCtrlID(int nID) throw();
 コントロールのテキストを整数値の文字列形式に変更します。
 
 ```
-BOOL SetDlgItemInt(  
+BOOL SetDlgItemInt(
     int nID,
     UINT nValue,
     BOOL bSigned = TRUE) throw();
@@ -2483,7 +2483,7 @@ void SetRedraw(BOOL bRedraw = TRUE) throw();
 スクロール バーのパラメーターを設定します。
 
 ```
-int SetScrollInfo(  
+int SetScrollInfo(
     int nBar,
     LPSCROLLINFO lpScrollInfo,
     BOOL bRedraw = TRUE) throw();
@@ -2498,7 +2498,7 @@ int SetScrollInfo(
 スクロール ボックスの位置を変更します。
 
 ```
-int SetScrollPos(  
+int SetScrollPos(
     int nBar,
     int nPos,
     BOOL bRedraw = TRUE) throw();
@@ -2513,7 +2513,7 @@ int SetScrollPos(
 スクロール バーの範囲を変更します。
 
 ```
-BOOL SetScrollRange(  
+BOOL SetScrollRange(
     int nBar,
     int nMinPos,
     int nMaxPos,
@@ -2529,7 +2529,7 @@ BOOL SetScrollRange(
 タイマー イベントを作成します。
 
 ```
-UINT SetTimer(  
+UINT SetTimer(
     UINT nIDEvent,
     UINT nElapse,
     void (CALLBACK* lpfnTimer)(HWND, UINT, UINT, DWORD) = NULL) throw();
@@ -2597,7 +2597,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT FAR* lpwndpl);
 サイズ、位置、および Z オーダーを設定します。
 
 ```
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     int x,
     int y,
@@ -2605,7 +2605,7 @@ BOOL SetWindowPos(
     int cy,
     UINT nFlags) throw();
 
-BOOL SetWindowPos(  
+BOOL SetWindowPos(
     HWND hWndInsertAfter,
     LPCRECT lpRect,
     UINT nFlags) throw();
@@ -2770,7 +2770,7 @@ BOOL ValidateRgn(HRGN hRgn) throw();
 Windows のヘルプを起動します。
 
 ```
-BOOL WinHelp(  
+BOOL WinHelp(
     LPCTSTR lpszHelp,
     UINT nCmd = HELP_CONTEXT,
     DWORD dwData = 0) throw();

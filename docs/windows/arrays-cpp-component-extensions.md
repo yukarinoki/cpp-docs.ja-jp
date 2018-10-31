@@ -1,7 +1,7 @@
 ---
-title: 配列 (C++ コンポーネント拡張) |Microsoft Docs
+title: 配列 (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -22,14 +22,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 836017dcec969db85a0725a49193d7b8e8a88875
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 29f84515bfa802af8d6463d34de9b6717c8df044
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402851"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061327"
 ---
-# <a name="arrays-c-component-extensions"></a>配列 (C++ コンポーネント拡張)
+# <a name="arrays-ccli-and-ccx"></a>配列 (C +/cli および C++/cli CX)
 
 `Platform::Array<T>` C++ 型/cli CX、または**配列**キーワードは c++/cli CLI では、指定した型と初期値の配列を宣言します。
 
@@ -55,10 +55,10 @@ ms.locfileid: "46402851"
 構文の最初の例では、 **ref 新しい**配列を割り当てる集計キーワード。 2 番目の例では、ローカル配列を宣言します。
 
 ```cpp
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     ref new[Platform::]Array<initialization-type> [{initialization-list [,...]}]
 
-[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [Platform::]Array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
@@ -84,7 +84,7 @@ ms.locfileid: "46402851"
 
 型がで参照カウントの配列であるかどうかをコンパイル時に検出できます`__is_ref_array(type)`します。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -111,10 +111,10 @@ int main() {
 構文の最初の例では、 **gcnew**配列を割り当てるキーワード。 2 番目の例では、ローカル配列を宣言します。
 
 ```cpp
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     gcnew [cli::]array<initialization-type[,rank]>(rank-size-list[,...]) [{initialization-list [,...]}]
 
-[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier = 
+[qualifiers] [cli::]array<[qualifiers] array-type [,rank]>^ identifier =
     {initialization-list [,...]}
 ```
 
@@ -155,7 +155,7 @@ int main() {
 
 コンパイル時に、型、共通言語ランタイム (CLR) 配列では、かどうかを検出できます`__is_ref_array(type)`します。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -180,4 +180,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

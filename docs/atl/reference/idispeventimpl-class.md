@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 815a276cb07a91da73acb68a32cceef4b2138325
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2419b4da0cad2662a246c167938d673429afbf26
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093845"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060899"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl クラス
 
@@ -44,7 +44,7 @@ template <UINT nID, class T,
     const IID* pdiid = &IID_NULL,
     const GUID* plibid = &GUID_NULL,
     WORD wMajor = 0,
-    WORD wMinor = 0, 
+    WORD wMinor = 0,
     class tihclass = CcomTypeInfoHolder>
 class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 ```
@@ -102,7 +102,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 
 `IDispEventImpl` 適切なハンドラー関数にイベントをルーティングするクラスでイベント シンク マップと連携します。 このクラスを使用します。
 
-追加、 [SINK_ENTRY](composite-control-macros.md#sink_entry)または[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)マクロを各イベントを処理する各オブジェクトのイベント シンク マップします。 使用する場合`IDispEventImpl`複合コントロールの基本クラスを呼び出すこともできます[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)を確立し、イベント シンク マップのすべてのエントリのイベント ソースとの接続を解除します。 それ以外の場合やより詳細に制御を呼び出す[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)をソース オブジェクトと、基底クラス間の接続を確立します。 呼び出す[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)結合を解除します。  
+追加、 [SINK_ENTRY](composite-control-macros.md#sink_entry)または[SINK_ENTRY_EX](composite-control-macros.md#sink_entry_ex)マクロを各イベントを処理する各オブジェクトのイベント シンク マップします。 使用する場合`IDispEventImpl`複合コントロールの基本クラスを呼び出すこともできます[AtlAdviseSinkMap](connection-point-global-functions.md#atladvisesinkmap)を確立し、イベント シンク マップのすべてのエントリのイベント ソースとの接続を解除します。 それ以外の場合やより詳細に制御を呼び出す[DispEventAdvise](idispeventsimpleimpl-class.md#dispeventadvise)をソース オブジェクトと、基底クラス間の接続を確立します。 呼び出す[DispEventUnadvise](idispeventsimpleimpl-class.md#dispeventunadvise)結合を解除します。
 
 派生する必要があります`IDispEventImpl`(一意の値を使用して*nID*) の各オブジェクトのイベントを処理する必要があります。 別のソース オブジェクトに対してアドバイスを行って、1 つのソース オブジェクトに対してアドバイズで基本クラスを再利用できますが、一度に 1 つのオブジェクトで処理できるソース オブジェクトの最大数の数によって制限されます`IDispEventImpl`基本クラス。
 
@@ -125,7 +125,7 @@ ActiveX イベント シンクのみサポートの戻り値の HRESULT 型ま�
 
 `IDispEventImpl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 

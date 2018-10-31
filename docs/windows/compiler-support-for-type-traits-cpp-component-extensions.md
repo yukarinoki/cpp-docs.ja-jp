@@ -1,7 +1,7 @@
 ---
-title: (C++ コンポーネント拡張) の型の特徴のコンパイラ サポート |Microsoft Docs
+title: 型の特徴のコンパイラ サポート (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -71,16 +71,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 5df33233f78eed1f3dc6c9403eb4b1740ccf1a70
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: bef92e7315418e13b660f655a54f20e8696c7590
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42588283"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066592"
 ---
-# <a name="compiler-support-for-type-traits-c-component-extensions"></a>型の特徴のコンパイラ サポート (C++ コンポーネント拡張)
+# <a name="compiler-support-for-type-traits-ccli-and-ccx"></a>型の特徴のコンパイラ サポート (C +/cli および C++/cli CX)
 
-コンパイラ サポート*入力特徴*コンパイル時に、型のさまざまな特性を示します。
+Microsoft C コンパイラがサポート*特徴の入力*c++/cli および C++/cli CX 拡張機能、コンパイル時に、型のさまざまな特性を示します。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
@@ -90,9 +90,9 @@ ms.locfileid: "42588283"
 
 次の一覧には、コンパイラでサポートされている型の特徴が含まれています。 すべての特徴の戻り値の型**false**型の特徴の名前で指定された条件が満たされていない場合。
 
-(C + のみで、以下のコード例が記述された/cli CLI。 特に明記しない限り、対応する型の特徴は Visual C コンポーネント拡張でサポートもされています。 「プラットフォーム型」と Windows ランタイム型または共通言語ランタイム型のいずれかです。)
+(C + のみで、以下のコード例が記述された/cli CLI。 対応する型の特徴が c++ もサポートされていますが、/cli CX 明記しない限り、します。 「プラットフォーム型」と Windows ランタイム型または共通言語ランタイム型のいずれかです。)
 
-- `__has_assign(` `type` `)`
+- `__has_assign(` *型* `)`
 
    返します**true**プラットフォーム型またはネイティブ型にコピー代入演算子がある場合。
 
@@ -106,7 +106,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_copy(` `type` `)`
+- `__has_copy(` *型* `)`
 
    返します**true**プラットフォーム型またはネイティブ型にコピー コンス トラクターがある場合。
 
@@ -120,9 +120,9 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_finalizer(` `type` `)`
+- `__has_finalizer(` *型* `)`
 
-   (サポートされていません Visual C component extensions。)返します**true** CLR 型にファイナライザーがある場合。 参照してください[する方法のデストラクターおよびファイナライザー: クラスと構造体定義および使用 (C +/cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)詳細についてはします。
+   (C + ではサポートされていません/cli CX)。返します**true** CLR 型にファイナライザーがある場合。 参照してください[する方法のデストラクターおよびファイナライザー: クラスと構造体定義および使用 (C +/cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)詳細についてはします。
 
     ```cpp
     using namespace System;
@@ -137,7 +137,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_nothrow_assign(` `type` `)`
+- `__has_nothrow_assign(` *型* `)`
 
    返します**true**コピー代入演算子を空の例外の仕様がある場合。
 
@@ -153,7 +153,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_nothrow_constructor(` `type` `)`
+- `__has_nothrow_constructor(` *型* `)`
 
    返します**true**場合、既定のコンス トラクターは、空の例外の仕様。
 
@@ -169,7 +169,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_nothrow_copy(` `type` `)`
+- `__has_nothrow_copy(` *型* `)`
 
    返します**true**場合、コピー コンス トラクターは、空の例外の仕様。
 
@@ -185,7 +185,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_trivial_assign(` `type` `)`
+- `__has_trivial_assign(` *型* `)`
 
    返します**true**型が単純なコンパイラによって生成された代入演算子。
 
@@ -199,7 +199,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_trivial_constructor(` `type` `)`
+- `__has_trivial_constructor(` *型* `)`
 
    返します**true**型が単純なコンパイラによって生成されたコンス トラクター。
 
@@ -213,7 +213,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_trivial_copy(` `type` `)`
+- `__has_trivial_copy(` *型* `)`
 
    返します**true**型、単純なコンパイラによって生成されたコピー コンス トラクターがある場合。
 
@@ -227,11 +227,11 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_trivial_destructor(` `type` `)`
+- `__has_trivial_destructor(` *型* `)`
 
    返します**true**型に単純なコンパイラによって生成されたデストラクターがある場合。
 
-    ``` cpp 
+    ``` cpp
     // has_trivial_destructor.cpp
     #include <stdio.h>
     struct S {};
@@ -242,7 +242,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_user_destructor(` `type` `)`
+- `__has_user_destructor(` *型* `)`
 
    返します**true**プラットフォーム型またはネイティブ型にユーザーが宣言したデストラクターがある場合。
 
@@ -259,7 +259,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__has_virtual_destructor(` `type` `)`
+- `__has_virtual_destructor(` *型* `)`
 
    返します**true**型仮想デストラクターがある場合。
 
@@ -278,11 +278,11 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_abstract(` `type` `)`
+- `__is_abstract(` *型* `)`
 
-   返します**true**型が抽象型である場合。 ネイティブ抽象型の詳細については、次を参照してください。[抽象](../windows/abstract-cpp-component-extensions.md)します。
+   返します**true**型が抽象型である場合。 ネイティブ抽象型の詳細については、次を参照してください。[抽象クラス](../cpp/abstract-classes-cpp.md)します。
 
-   `__is_abstract` はプラットフォーム型でも機能します。 1 つ以上の抽象メンバーを持つ参照型と同様に、1 つ以上のメンバーを持つインターフェイスは抽象型です。 プラットフォームの種類の詳細については、次を参照してください[抽象クラス。](../cpp/abstract-classes-cpp.md)
+   `__is_abstract` はプラットフォーム型でも機能します。 1 つ以上の抽象メンバーを持つ参照型と同様に、1 つ以上のメンバーを持つインターフェイスは抽象型です。 プラットフォームの種類の詳細については、次を参照してください。[抽象](../windows/abstract-cpp-component-extensions.md)します。
 
     ```cpp
     // is_abstract.cpp
@@ -318,7 +318,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_class(` `type` `)`
+- `__is_class(` *型* `)`
 
    返します**true**型がネイティブ クラスまたは構造体である場合。
 
@@ -350,9 +350,9 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_delegate(` `type` `)`
+- `__is_delegate(` *型* `)`
 
-   返します**true**場合`type`デリゲートです。 詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)します。
+   返します**true**場合`type`デリゲートです。 詳細については、次を参照してください。[デリゲート (C +/cli および C++/cli CX)](../windows/delegate-cpp-component-extensions.md)します。
 
     ```cpp
     delegate void MyDel();
@@ -361,7 +361,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_empty(` `type` `)`
+- `__is_empty(` *型* `)`
 
    返します**true**型のインスタンス データ メンバーがありません。
 
@@ -377,7 +377,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_enum(` `type` `)`
+- `__is_enum(` *型* `)`
 
    返します**true**型がネイティブ列挙型である場合。
 
@@ -399,7 +399,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_interface_class(` `type` `)`
+- `__is_interface_class(` *型* `)`
 
    返します**true**プラットフォーム インターフェイスが渡された場合。 詳細については、次を参照してください。[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)します。
 
@@ -413,7 +413,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_pod(` `type` `)`
+- `__is_pod(` *型* `)`
 
    返します**true**かどうか、型は、クラスまたはなしのコンス トラクターとの和集合またはプライベートまたはプロテクトの非静的メンバー、基本クラス、および仮想関数はありません。 POD 型の詳細については、C++ 標準のセクション 8.5.1/1、9/4、3.9/10 を参照してください。
 
@@ -429,7 +429,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_polymorphic(` `type` `)`
+- `__is_polymorphic(` *型* `)`
 
    返します**true**ネイティブ型に仮想関数がある場合。
 
@@ -445,7 +445,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_ref_array(` `type` `)`
+- `__is_ref_array(` *型* `)`
 
    返します**true**プラットフォーム配列が渡された場合。 詳細については、次を参照してください。[配列](../windows/arrays-cpp-component-extensions.md)します。
 
@@ -457,7 +457,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_ref_class(` `type` `)`
+- `__is_ref_class(` *型* `)`
 
    返します**true**参照クラスに渡された場合。 ユーザー定義の参照型の詳細については、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)します。
 
@@ -470,7 +470,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_sealed(` `type` `)`
+- `__is_sealed(` *型* `)`
 
    返します**true**プラットフォームまたは封印されたマークされているネイティブ型に渡された場合。 詳細については、次を参照してください。[シール](../windows/sealed-cpp-component-extensions.md)します。
 
@@ -481,7 +481,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_simple_value_class(` `type` `)`
+- `__is_simple_value_class(` *型* `)`
 
    返します**true**ガベージ コレクション ヒープへの参照が含まれていない値型が渡された場合。 ユーザー定義の値の種類の詳細については、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)します。
 
@@ -499,7 +499,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_union(` `type` `)`
+- `__is_union(` *型* `)`
 
    返します**true**型が共用体である場合。
 
@@ -516,7 +516,7 @@ ms.locfileid: "42588283"
     }
     ```
 
-- `__is_value_class(` `type` `)`
+- `__is_value_class(` *型* `)`
 
    返します**true**値の型が渡された場合。 ユーザー定義の値の種類の詳細については、次を参照してください。[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)します。
 
@@ -534,7 +534,7 @@ ms.locfileid: "42588283"
 
 `__has_finalizer(`*型*`)`このプラットフォームがファイナライザーをサポートしていないために、型の特徴がサポートされていません。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -544,7 +544,7 @@ ms.locfileid: "42588283"
 
 (この機能のプラットフォーム固有の解説はありません。)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -567,7 +567,7 @@ ref struct is_class {
 ref class R {};
 
 int main () {
-   if (is_class<R>::value)  
+   if (is_class<R>::value)
       Console::WriteLine("R is a ref class");
    else
       Console::WriteLine("R is not a ref class");
@@ -580,4 +580,4 @@ R is a ref class
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

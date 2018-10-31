@@ -1,7 +1,7 @@
 ---
 title: CMFCMenuBar クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6aafffcdcfbab750215ccb968774d60259e03672
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93e9d1d148cc70ad0b83bb71565276baa5174afb
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433654"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080872"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar クラス
 
@@ -140,11 +140,11 @@ class CMFCMenuBar : public CMFCToolbar
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCMenuBar::AdjustLocations](#adjustlocations)|(`CMFCToolBar::AdjustLocations` をオーバーライドします)。|
+|[CMFCMenuBar::AdjustLocations](#adjustlocations)|( `CMFCToolBar::AdjustLocations`をオーバーライドします)。|
 |[CMFCMenuBar::AllowChangeTextLabels](#allowchangetextlabels)|ツール バー ボタンのイメージの下のテキスト ラベルを表示できるかどうかを指定します。 (上書き[CMFCToolBar::AllowChangeTextLabels](../../mfc/reference/cmfctoolbar-class.md#allowchangetextlabels))。|
-|[CMFCMenuBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|(`CPane::AllowShowOnPaneMenu` をオーバーライドします)。|
+|[CMFCMenuBar::AllowShowOnPaneMenu](#allowshowonpanemenu)|( `CPane::AllowShowOnPaneMenu`をオーバーライドします)。|
 |[CMFCMenuBar::CalcFixedLayout](#calcfixedlayout)|ツールバーの水平方向のサイズを計算します。 (上書き[CMFCToolBar::CalcFixedLayout](../../mfc/reference/cmfctoolbar-class.md#calcfixedlayout))。|
-|[CMFCMenuBar::CalcLayout](#calclayout)|(`CMFCToolBar::CalcLayout` をオーバーライドします)。|
+|[CMFCMenuBar::CalcLayout](#calclayout)|( `CMFCToolBar::CalcLayout`をオーバーライドします)。|
 |[CMFCMenuBar::CalcMaxButtonHeight](#calcmaxbuttonheight)|ツールバーのボタンの最大の高さを計算します。 (上書き[CMFCToolBar::CalcMaxButtonHeight](../../mfc/reference/cmfctoolbar-class.md#calcmaxbuttonheight))。|
 |[CMFCMenuBar::CanBeClosed](#canbeclosed)|ユーザーがツールバーを閉じるかどうかを指定します。 (上書き[CMFCToolBar::CanBeClosed](../../mfc/reference/cmfctoolbar-class.md#canbeclosed))。|
 |[CMFCMenuBar::CanBeRestored](#canberestored)|システムが、カスタマイズ後ツールバーを元の状態に復元できるかどうかを判断します。 (上書き[CMFCToolBar::CanBeRestored](../../mfc/reference/cmfctoolbar-class.md#canberestored))。|
@@ -177,10 +177,10 @@ class CMFCMenuBar : public CMFCToolbar
 |[CMFCMenuBar::LoadState](#loadstate)|状態を読み込みます、`CMFCMenuBar`レジストリからのオブジェクト。|
 |[CMFCMenuBar::OnChangeHot](#onchangehot)|ユーザーがツールバーのボタンを選択したときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBar::OnChangeHot](../../mfc/reference/cmfctoolbar-class.md#onchangehot))。|
 |[CMFCMenuBar::OnDefaultMenuLoaded](#ondefaultmenuloaded)|フレーム ウィンドウ メニューの既定のリソース ファイルからの読み込み時に、フレームワークによって呼び出されます。|
-|[CMFCMenuBar::OnSendCommand](#onsendcommand)|(`CMFCToolBar::OnSendCommand` をオーバーライドします)。|
+|[CMFCMenuBar::OnSendCommand](#onsendcommand)|( `CMFCToolBar::OnSendCommand`をオーバーライドします)。|
 |[CMFCMenuBar::OnSetDefaultButtonText](#onsetdefaultbuttontext)|メニューは、カスタマイズ モードで、ユーザーがメニュー項目のテキストを変更したときに、フレームワークによって呼び出されます。|
-|[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|(`CMFCToolBar::OnToolHitTest` をオーバーライドします)。|
-|[CMFCMenuBar::PreTranslateMessage](#pretranslatemessage)|(`CMFCToolBar::PreTranslateMessage` をオーバーライドします)。|
+|[CMFCMenuBar::OnToolHitTest](#ontoolhittest)|( `CMFCToolBar::OnToolHitTest`をオーバーライドします)。|
+|[CMFCMenuBar::PreTranslateMessage](#pretranslatemessage)|( `CMFCToolBar::PreTranslateMessage`をオーバーライドします)。|
 |[CMFCMenuBar::RestoreOriginalstate](#restoreoriginalstate)|カスタマイズ モードにメニューがあり、ユーザーが選択したときに、フレームワークによって呼び出されます**リセット**メニュー バーの。|
 |[CMFCMenuBar::SaveState](#savestate)|状態を保存、`CMFCMenuBar`レジストリへのオブジェクト。|
 |[CMFCMenuBar::SetDefaultMenuResId](#setdefaultmenuresid)|リソース ファイル内の元のメニューを設定します。|
@@ -201,7 +201,7 @@ class CMFCMenuBar : public CMFCToolbar
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CMFCMenuBar`クラス。 この例では、ウィンドウのスタイルを設定、[カスタマイズ] ボタンを有効にする、ヘルプのボックスを有効にする、ポップアップ メニューの影を有効にするおよびメニュー バーを更新する方法を示します。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCMenuBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、ウィンドウのスタイルを設定、[カスタマイズ] ボタンを有効にする、ヘルプのボックスを有効にする、ポップアップ メニューの影を有効にするおよびメニュー バーを更新する方法を示します。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -224,7 +224,7 @@ class CMFCMenuBar : public CMFCToolbar
 
 `CMFCMenuBar`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxmenubar.h
 
@@ -254,7 +254,6 @@ virtual BOOL AllowChangeTextLabels() const;
 
 ##  <a name="allowshowonpanemenu"></a>  CMFCMenuBar::AllowShowOnPaneMenu
 
-
 ```
 virtual BOOL AllowShowOnPaneMenu() const;
 ```
@@ -265,7 +264,6 @@ virtual BOOL AllowShowOnPaneMenu() const;
 
 ##  <a name="calcfixedlayout"></a>  CMFCMenuBar::CalcFixedLayout
 
-
 ```
 virtual CSize CalcFixedLayout(
     BOOL bStretch,
@@ -274,15 +272,15 @@ virtual CSize CalcFixedLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-*bStretch*<br/>
-[in][in]*bHorz*
+[in]*bStretch*<br/>
+
+[in]*bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="calclayout"></a>  CMFCMenuBar::CalcLayout
-
 
 ```
 virtual CSize CalcLayout(
@@ -292,15 +290,15 @@ virtual CSize CalcLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-*寸法*<br/>
-[in][in]*されて*
+[in]*寸法*<br/>
+
+[in]*されて*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="calcmaxbuttonheight"></a>  CMFCMenuBar::CalcMaxButtonHeight
-
 
 ```
 virtual int CalcMaxButtonHeight();
@@ -312,7 +310,6 @@ virtual int CalcMaxButtonHeight();
 
 ##  <a name="canbeclosed"></a>  CMFCMenuBar::CanBeClosed
 
-
 ```
 virtual BOOL CanBeClosed() const;
 ```
@@ -322,7 +319,6 @@ virtual BOOL CanBeClosed() const;
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="canberestored"></a>  CMFCMenuBar::CanBeRestored
-
 
 ```
 virtual BOOL CanBeRestored() const;
@@ -487,7 +483,6 @@ static void EnableMenuShadows(BOOL bEnable = TRUE);
 
 ##  <a name="getavailableexpandsize"></a>  CMFCMenuBar::GetAvailableExpandSize
 
-
 ```
 virtual int GetAvailableExpandSize() const;
 ```
@@ -497,7 +492,6 @@ virtual int GetAvailableExpandSize() const;
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="getcolumnwidth"></a>  CMFCMenuBar::GetColumnWidth
-
 
 ```
 virtual int GetColumnWidth() const;
@@ -541,21 +535,19 @@ UINT GetDefaultMenuResId() const;
 
 ##  <a name="getfloatpopupdirection"></a>  CMFCMenuBar::GetFloatPopupDirection
 
-
 ```
 int GetFloatPopupDirection(CMFCToolBarMenuButton* pButton);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pButton*
+[in]*pButton*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="getforcedownarrows"></a>  CMFCMenuBar::GetForceDownArrows
-
 
 ```
 BOOL GetForceDownArrows();
@@ -629,7 +621,6 @@ CMFCToolBarButton* GetMenuItem(int iItem) const;
 
 ##  <a name="getrowheight"></a>  CMFCMenuBar::GetRowHeight
 
-
 ```
 virtual int GetRowHeight() const;
 ```
@@ -640,7 +631,6 @@ virtual int GetRowHeight() const;
 
 ##  <a name="getsystembutton"></a>  CMFCMenuBar::GetSystemButton
 
-
 ```
 CMFCToolBarMenuButtonsButton* GetSystemButton(
     UINT uiBtn,
@@ -649,15 +639,15 @@ CMFCToolBarMenuButtonsButton* GetSystemButton(
 
 ### <a name="parameters"></a>パラメーター
 
-*uiBtn*<br/>
-[in][in]*bByCommand*
+[in]*uiBtn*<br/>
+
+[in]*bByCommand*<br/>
 
 ### <a name="return-value"></a>戻り値
 
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="getsystembuttonscount"></a>  CMFCMenuBar::GetSystemButtonsCount
-
 
 ```
 int GetSystemButtonsCount() const;
@@ -668,7 +658,6 @@ int GetSystemButtonsCount() const;
 ### <a name="remarks"></a>Remarks
 
 ##  <a name="getsystemmenu"></a>  CMFCMenuBar::GetSystemMenu
-
 
 ```
 CMFCToolBarSystemMenuButton* GetSystemMenu() const;
@@ -696,7 +685,6 @@ static void HighlightDisabledItems(BOOL bHighlight = TRUE);
 既定では、フレームワークは使用できないメニュー項目を選択しないユーザーは、上にマウス ポインターを置いたときにします。
 
 ##  <a name="isbuttonextrasizeavailable"></a>  CMFCMenuBar::IsButtonExtraSizeAvailable
-
 
 ```
 virtual BOOL IsButtonExtraSizeAvailable() const;
@@ -828,14 +816,13 @@ virtual BOOL LoadState(
 
 ##  <a name="onchangehot"></a>  CMFCMenuBar::OnChangeHot
 
-
 ```
 virtual void OnChangeHot(int iHot);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*iHot*
+[in]*iHot*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -858,14 +845,13 @@ virtual void OnDefaultMenuLoaded(HMENU hMenu);
 
 ##  <a name="onsendcommand"></a>  CMFCMenuBar::OnSendCommand
 
-
 ```
 virtual BOOL OnSendCommand(const CMFCToolBarButton* pButton);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pButton*
+[in]*pButton*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -894,7 +880,6 @@ virtual BOOL OnSetDefaultButtonText(CMFCToolBarButton* pButton);
 
 ##  <a name="ontoolhittest"></a>  CMFCMenuBar::OnToolHitTest
 
-
 ```
 virtual INT_PTR OnToolHitTest(
     CPoint point,
@@ -903,8 +888,9 @@ virtual INT_PTR OnToolHitTest(
 
 ### <a name="parameters"></a>パラメーター
 
-*ポイント*<br/>
-[in][in]*pTI*
+[in]*ポイント*<br/>
+
+[in]*pTI*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -912,14 +898,13 @@ virtual INT_PTR OnToolHitTest(
 
 ##  <a name="pretranslatemessage"></a>  CMFCMenuBar::PreTranslateMessage
 
-
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pMsg*
+[in]*pMsg*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -996,14 +981,13 @@ void SetDefaultMenuResId(UINT uiResId);
 
 ##  <a name="setforcedownarrows"></a>  CMFCMenuBar::SetForceDownArrows
 
-
 ```
 void SetForceDownArrows(BOOL bValue);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bValue*
+[in]*bValue*<br/>
 
 ### <a name="remarks"></a>Remarks
 

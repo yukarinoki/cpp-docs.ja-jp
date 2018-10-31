@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 326535395599a76f521100475cfc80b014ba6cd9
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 16613425633f55eeed152e86c1b4fea7f00a784c
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169438"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48234067"
 ---
 # <a name="walkthrough-adding-animation-to-an-mfc-project"></a>チュートリアル: MFC プロジェクトへのアニメーションの追加
 
@@ -100,11 +100,11 @@ ms.locfileid: "47169438"
 
 1. **MFC クラス ウィザード**、 をクリックして**OK**します。
 
-1. MFCAnimationWalkthroughView.cpp、これは、エディターで開く、保存しますが、終了しません。
+1. 保存 MFCAnimationWalkthroughView.cpp、エディターで開いているが、それを閉じないでください。
 
 ### <a name="to-add-an-animated-object-to-the-project"></a>アニメーション化するオブジェクトをプロジェクトに追加するには
 
-1. ソリューション エクスプ ローラーで、変更用に開きます MFCAnimationWalkthroughView.h をダブルクリックします。 定義の直前に、`CMFCAnimationWalkthroughView`クラスでのアニメーション オブジェクトとスケジュールの競合を処理するカスタム アニメーション コント ローラーを作成するには、次のコードを追加します。
+1. **ソリューション エクスプ ローラー**変更用に開きます MFCAnimationWalkthroughView.h をダブルクリックします。 定義の直前に、`CMFCAnimationWalkthroughView`クラスでのアニメーション オブジェクトとスケジュールの競合を処理するカスタム アニメーション コント ローラーを作成するには、次のコードを追加します。
 
     ```cpp
     class CCustomAnimationController : public CAnimationController

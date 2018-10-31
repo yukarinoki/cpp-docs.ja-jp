@@ -1,7 +1,7 @@
 ---
 title: ジェネリック関数 (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: b8c51b3468a636335a74b8a4206a6b533d3a200b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4e5305aaa35064c26a78cbd4654c27a0d608d70c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398860"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067905"
 ---
 # <a name="generic-functions-ccli"></a>ジェネリック関数 (C++/CLI)
 
@@ -42,7 +42,7 @@ ms.locfileid: "46398860"
 
 この機能は、Windows ランタイムでサポートされていません。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -57,7 +57,7 @@ ms.locfileid: "46398860"
 return-type identifier<type-parameter identifier(s)>
 [type-parameter-constraints clauses]
 
-([formal-parameters])  
+([formal-parameters])
 {function-body}
 ```
 
@@ -91,11 +91,11 @@ return-type identifier<type-parameter identifier(s)>
 
 ジェネリック関数は、ジェネリック型パラメーターで宣言された関数です。 クラスまたは構造体、またはスタンドアロン関数内のメソッドがあります。 1 つのジェネリック宣言には、ジェネリック型パラメーターのさまざまな実際の型の置換だけが異なる関数のファミリが暗黙的に宣言します。
 
-Visual C では、ジェネリック型パラメーターを持つ、クラスまたは構造体のコンス トラクターを宣言されていません可能性があります。
+クラスまたは構造体のコンス トラクターを宣言して、ジェネリック型パラメーターを持つことはできません。
 
 呼び出されると、ジェネリック型パラメーターは、実際の型に置換されます。 テンプレート関数の呼び出しに似た構文を使用して、山かっこでは、実際の型を明示的に指定することがあります。 型のパラメーターなしで呼び出すと、コンパイラは関数呼び出しで指定されたパラメーターから実際の型を推測しようとします。 目的の型引数は、使用されるパラメーターから推測できない、コンパイラでエラーが報告されます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -193,5 +193,5 @@ My function returned a string: Hello generic functions!
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [ジェネリック](../windows/generics-cpp-component-extensions.md)

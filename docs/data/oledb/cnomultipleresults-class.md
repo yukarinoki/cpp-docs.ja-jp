@@ -19,32 +19,32 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 67658f6edadd7723789288ab268b97cecdd611d2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6d68daae7bce6ca4c9ffafe7a24c80cff3a5426a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017355"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059858"
 ---
 # <a name="cnomultipleresults-class"></a>CNoMultipleResults クラス
 
-テンプレート引数として使用 (*TMultiple*) に[CCommand](../../data/oledb/ccommand-class.md) 1 つの結果を処理する最適化されたコマンドを作成するには設定します。  
-  
+テンプレート引数として使用 (*TMultiple*) に[CCommand](../../data/oledb/ccommand-class.md) 1 つの結果を処理する最適化されたコマンドを作成するには設定します。
+
 ## <a name="syntax"></a>構文
 
 ```cpp
-class CNoMultipleResults  
-```  
-  
-## <a name="remarks"></a>Remarks  
+class CNoMultipleResults
+```
 
-複数の結果セットを処理するためのコマンドを実行する場合に、使用[CMultipleResults](../../data/oledb/cmultipleresults-class.md)代わりにします。  
-  
-## <a name="requirements"></a>要件  
+## <a name="remarks"></a>Remarks
 
-**ヘッダー:** atldbcli.h  
-  
-## <a name="see-also"></a>関連項目  
+複数の結果セットを処理するためのコマンドを実行する場合に、使用[CMultipleResults](../../data/oledb/cmultipleresults-class.md)代わりにします。
+
+## <a name="requirements"></a>必要条件
+
+**ヘッダー:** atldbcli.h
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

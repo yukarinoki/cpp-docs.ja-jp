@@ -16,18 +16,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 7e9541517852696073a3dbbff560bb6c44fd3264
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029672"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235421"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来 Windows デスクトップ アプリケーション (C++) の作成します。
 
 このチュートリアルでは、Visual Studio での従来の Windows デスクトップ アプリケーションを作成する方法を示します。 作成するサンプル アプリケーションでは、Windows API を使用して、「こんにちは, Windows デスクトップ!」を表示 。ウィンドウです。 このチュートリアルで開発したコードは、他の Windows デスクトップ アプリケーションを作成するためのパターンとして使用できます。
 
-Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、および Windows クラシック API) は、Windows アプリケーションを作成するための C 言語ベースのフレームワークです。 1980 年代から存在していますが、数十年の Windows アプリケーションの作成に使用されています。 プログラムを簡単にし、高度なフレームワークは、MFC、ATL、および .NET フレームワークなど、この API の上に構築されています。 C++ で記述された UWP およびストア アプリのも、ほとんどの最新コード/cli WinRT の下にこの API を使用します。 Windows API の詳細については、次を参照してください。 [Windows API インデックス](/windows/desktop/apiindex/windows-api-list)します。 Windows アプリケーションを作成する方法はたくさんありますが、これは、1 つ目。
+Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、および Windows クラシック API) は、Windows アプリケーションを作成するための C 言語ベースのフレームワークです。 1980 年代から存在していますが、数十年の Windows アプリケーションの作成に使用されています。 プログラムを簡単にし、高度なフレームワークは、MFC、ATL、および .NET フレームワークなど、Windows API の上に構築されています。 C++ で記述された UWP およびストア アプリのも、ほとんどの最新コード/cli WinRT が下にある Windows API を使用します。 Windows API の詳細については、次を参照してください。 [Windows API インデックス](/windows/desktop/apiindex/windows-api-list)します。 Windows アプリケーションを作成する方法はたくさんありますが、上記のプロセスが 1 つ目。
 
 > [!IMPORTANT]
 > 説明を簡潔にするため、一部のコード ステートメントは、テキストで省略されます。 [コードをビルドして](#build-the-code)セクションにこのドキュメントの末尾には完全なコードが表示されます。
@@ -140,13 +140,13 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    );
    ```
 
-   この関数で処理するコードを記述する*メッセージ*アプリケーションが Windows から受信するときに*イベント*発生します。 たとえば場合は、ユーザーは、アプリケーションで、[ok] ボタンを選択、Windows では、メッセージを送信して、内のコードを記述することができます、`WndProc`はどのような作業が適切な関数です。 これは呼び出されます*処理*イベント。 アプリケーションに関連するイベントを処理するだけです。
+   この関数で処理するコードを記述する*メッセージ*アプリケーションが Windows から受信するときに*イベント*発生します。 たとえば場合は、ユーザーは、アプリケーションで、[ok] ボタンを選択、Windows では、メッセージを送信して、内のコードを記述することができます、`WndProc`はどのような作業が適切な関数です。 呼び出された*処理*イベント。 アプリケーションに関連するイベントを処理するだけです。
 
    詳細については、次を参照してください。[ウィンドウ プロシージャ](https://msdn.microsoft.com/library/windows/desktop/ms632593)します。
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>WinMain 関数に機能を追加するには
 
-1. `WinMain`関数、型の構造体の値を設定する[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)します。 この構造体には、アプリケーションのアイコン、タイトル バー、および非常に重要なは、ウィンドウ プロシージャへの関数ポインターの表示名 ウィンドウの背景色など、ウィンドウに関する情報が含まれています。 一般的な `WNDCLASSEX` 構造体の例を次に示します。
+1. `WinMain`関数、型の構造体の値を設定する[WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)します。 構造体には、アプリケーションのアイコン、タイトル バー、および重要なは、ウィンドウ プロシージャへの関数ポインターの表示名 ウィンドウの背景色など、ウィンドウに関する情報が含まれています。 一般的な `WNDCLASSEX` 構造体の例を次に示します。
 
    ```cpp
    WNDCLASSEX wcex;
@@ -165,9 +165,9 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   この構造体のフィールドの詳細については、次を参照してください。 [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)します。
+   上記の構造体のフィールドの詳細については、次を参照してください。 [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)します。
 
-1. 登録する必要があります、`WNDCLASSEX`で Windows メッセージを送信する方法と、ウィンドウの詳細が認識できるようにします。 使用して、 [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)関数し、ウィンドウ クラス構造体を引数として渡します。 `_T`マクロを使用しているために使用、`TCHAR`型。
+1. 登録、`WNDCLASSEX`で Windows メッセージを送信する方法と、ウィンドウの詳細が認識できるようにします。 使用して、 [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)関数し、ウィンドウ クラス構造体を引数として渡します。 `_T`マクロを使用しているために使用、`TCHAR`型。
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -232,7 +232,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    UpdateWindow(hWnd);
    ```
 
-   まだ実装していないため、表示されたウィンドウはコンテンツをありません、`WndProc`関数。 つまり、アプリケーションが Windows は、今すぐに送信するメッセージをまだ処理されません。
+   表示されたウィンドウはまだ実装されていないため、コンテンツがない、`WndProc`関数。 つまり、アプリケーションは、Windows は、今すぐに送信するメッセージを処理まだはありません。
 
 1. メッセージを処理するために Windows を送信するメッセージをリッスンするようにメッセージ ループを最初に追加します。 このループをディスパッチするアプリケーションでは、メッセージを受信したときに、`WndProc`処理する関数。 メッセージ ループのコードは、次のようになります。
 
@@ -340,9 +340,9 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 1. `WndProc` 関数を有効にしてアプリケーションが受け取るメッセージを処理するために、switch ステートメントを実装します。
 
-   1 つの重要なメッセージを処理するためには、 [WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージ。 アプリケーションは、表示しているウィンドウの一部の更新が必要になったときにこのメッセージを受け取ります ユーザーは、ウィンドウの前にウィンドウを移動し、移動にもう一度このイベントが発生します。 このようなイベントが発生したときに、アプリケーションが認識しません。Windows のみを知っていればに通知するように`WM_PAINT`します。 最初に、ウィンドウが表示されるときにすべての更新する必要があります。
+   1 つの重要なメッセージを処理するためには、 [WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージ。 アプリケーションが受信、`WM_PAINT`メッセージとその表示されたウィンドウの一部を更新する必要があります。 これらのイベントが発生した場合、アプリケーションが認識しないと、ユーザーは、ウィンドウの前にウィンドウを移動し、移動しますから、もう一度イベントが発生します。 Windows のみを知っていればに通知するように`WM_PAINT`します。 最初に、ウィンドウが表示されるときにすべての更新する必要があります。
 
-   処理するために、`WM_PAINT`メッセージ、最初の呼び出し[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)、テキスト、ボタン、およびウィンドウで、他のコントロールをレイアウトするすべてのロジックを処理し、呼び出す[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)します。 このアプリケーションで、最初の呼び出しと最後の呼び出しの間のロジックは文字列「こんにちは, Windows デスクトップ!」を表示するには ウィンドウです。 次のコードでわかるように、 [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)関数は、文字列を表示するために使用します。
+   処理するために、`WM_PAINT`メッセージ、最初の呼び出し[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)、テキスト、ボタン、およびウィンドウで、他のコントロールをレイアウトするすべてのロジックを処理し、呼び出す[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)します。 アプリケーションで、最初の呼び出しと最後の呼び出しの間のロジックは文字列「こんにちは, Windows デスクトップ!」を表示するには ウィンドウです。 次のコードでわかるように、 [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)関数は、文字列を表示するために使用します。
 
    ```cpp
    PAINTSTRUCT ps;
@@ -367,7 +367,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    }
    ```
 
-   `HDC` このコードでは、Windows を使用して、グラフィックス サブシステムと通信するアプリケーションを有効にするデータ構造体である、デバイス コンテキスト ハンドルです。 `BeginPaint`と`EndPaint`関数は、アプリケーションは良き市民と同様に動作し、必要以上になったため、デバイス コンテキストを使用しないことを確認します。 これにより、グラフィックス サブシステムが他のアプリケーションで使用可能であることを確認できます。
+   `HDC` コードは、Windows を使用して、グラフィックス サブシステムと通信するアプリケーションを有効にするデータ構造体である、デバイス コンテキストを識別するハンドル。 `BeginPaint`と`EndPaint`関数は良き市民と同様に動作する、アプリケーションを作成して、デバイス コンテキストを必要以上に長期間使用しません。 関数のヘルプ make グラフィックス サブシステムは、他のアプリケーションで使用可能です。
 
 1. アプリケーションで他の多くのメッセージをたとえば、処理通常[WM_CREATE](/windows/desktop/winmsg/wm-create)ウィンドウが最初に作成したときと[WM_DESTROY](/windows/desktop/winmsg/wm-destroy)ウィンドウを閉じるときにします。 単純でも完成した `WndProc` 関数のコードを次に示します。
 

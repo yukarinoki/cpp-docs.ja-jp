@@ -13,19 +13,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9d4f44e3587e9b274bbe89e2fa4f91accadb08ab
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 2d8c5188cccceb0c09de95c43a72a645ded0e6a9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688260"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077520"
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップ アプリケーション (Visual C)
 
 A*デスクトップ アプリケーション*C++ では、ウィンドウ、またはシステム コンソールで実行される、Windows Api との完全なセットにアクセスできるネイティブ アプリケーション。 C++ でデスクトップ アプリケーションは、(Windows XP が不要になった正式にサポートされているし、それ以降に導入された多くの Windows Api があります) は、Windows XP、Windows 10 で実行できます。
 
-デスクトップ アプリケーションは、ユニバーサル Windows プラットフォーム (UWP) アプリ、または Windows 10 を実行している Pc でも XBox、Windows Phone、Surface Hub、およびその他のデバイスで実行できるとは異なります。 デスクトップの vs の詳細についてはします。UWP アプリケーションを参照してください[テクノロジを選ぶ](https://msdn.microsoft.com/library/windows/desktop/dn614993\(v=vs.85\).aspx)します。
-
+デスクトップ アプリケーションは、ユニバーサル Windows プラットフォーム (UWP) アプリ、または Windows 10 を実行している Pc でも XBox、Windows Phone、Surface Hub、およびその他のデバイスで実行できるとは異なります。 デスクトップの vs の詳細についてはします。UWP アプリケーションを参照してください[テクノロジを選ぶ](https://msdn.microsoft.com/library/windows/desktop/dn614993)します。
 
 ### <a name="desktop-bridge"></a>デスクトップ ブリッジ
 
@@ -35,7 +34,7 @@ Visual Studio 2017 バージョン 15.4 以降では、既存のデスクトッ�
 
 ### <a name="terminology"></a>用語
 
-- A *Win32*アプリケーションは、C++ でデスクトップ アプリケーションを使用して、ネイティブの Windows [Windows C Api および COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516\(v=vs.85\).aspx) CRT と標準ライブラリ Api、およびサード パーティ製のライブラリです。 ウィンドウで実行される Win32 アプリケーションでは、Windows プロシージャ関数内での Windows メッセージを明示的に使用する開発者が必要です。 名前にかかわらず、Win32 アプリケーションは、32 ビット (x86) または 64 ビット (x64) バイナリとしてコンパイルできます。 Visual Studio ide、Win32、x86 の用語は同義です。
+- A *Win32*アプリケーションは、C++ でデスクトップ アプリケーションを使用して、ネイティブの Windows [Windows C Api および COM Api](https://msdn.microsoft.com/library/windows/desktop/ff818516) CRT と標準ライブラリ Api、およびサード パーティ製のライブラリです。 ウィンドウで実行される Win32 アプリケーションでは、Windows プロシージャ関数内での Windows メッセージを明示的に使用する開発者が必要です。 名前にかかわらず、Win32 アプリケーションは、32 ビット (x86) または 64 ビット (x64) バイナリとしてコンパイルできます。 Visual Studio ide、Win32、x86 の用語は同義です。
 
 - [コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/the-component-object-model)は、プログラムが相互に通信するさまざまな言語で記述された仕様です。 多くの Windows コンポーネントが COM オブジェクトとして実装され、オブジェクトの作成の標準の COM 規則に従うには、検出とオブジェクトの破棄がインターフェイスです。  C++ デスクトップ アプリケーションから COM オブジェクトを使用しては比較的簡単ですが、独自の COM オブジェクトの書き込みより高度な。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)マクロおよび COM 開発を簡略化するヘルパー関数を提供します。
 

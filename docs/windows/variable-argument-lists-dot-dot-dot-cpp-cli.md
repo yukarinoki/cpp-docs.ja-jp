@@ -1,7 +1,7 @@
 ---
 title: 可変個引数リスト (...)(C +/CLI CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,16 +16,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e58b7ea2d8db0c3d36ad36aaccbf23957c449a77
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 183208d734fa5ad39151b171bd9c6889863c8d33
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42590464"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057181"
 ---
 # <a name="variable-argument-lists--ccli"></a>可変個引数リスト (...) (C++/CLI)
 
-この例は、Visual C++ で `...` 構文を使って可変個の引数を持つ関数を実装する方法を示しています。
+この例では、使用する方法、`...`構文は c++/cli を可変個の引数を持つ関数を実装するために CLI。
 
 > [!NOTE]
 > これは C++/CLI に関するトピックです。 使用方法について、 `...` ISO 標準 c++ では、次を参照してください。[楕円および可変個引数テンプレート](../cpp/ellipses-and-variadic-templates.md)省略記号と既定の引数で[後置式](../cpp/postfix-expressions.md)します。
@@ -44,7 +44,7 @@ double average( ... array<Int32>^ arr ) {
    int i = arr->GetLength(0);
    double answer = 0.0;
 
-   for (int j = 0 ; j < i ; j++)  
+   for (int j = 0 ; j < i ; j++)
       answer += arr[j];
 
    return answer / i;

@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69c315f78c5ce1a587f48a873c9c2517f81537b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61e2ea655c25b15982f3434437bc3bdc3eaf310f
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441437"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204653"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog クラス
 
@@ -108,7 +108,7 @@ class CPrintDialog : public CCommonDialog
 > [!NOTE]
 >  `CPrintDialogEx`クラスは、Windows 印刷のプロパティ シートによって提供されるサービスをカプセル化します。 詳細については、次を参照してください。、 [CPrintDialogEx](../../mfc/reference/cprintdialogex-class.md)の概要。
 
-`CPrintDialog`機能がいる置き換え[CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)、両方の印刷設定、および ページ設定のコモン ダイアログ ボックスを提供するがいます。
+`CPrintDialog`機能は、のによって置き換え[CPageSetupDialog](../../mfc/reference/cpagesetupdialog-class.md)、両方の印刷設定、および ページ設定のコモン ダイアログ ボックスを提供するがいます。
 
 アプリケーションの印刷プロセスの多くの側面を処理するために、フレームワークに依存することができます。 ここでは、フレームワークには、印刷用の Windows コモン ダイアログ ボックスに自動的に表示されます。 Framework ハンドルが、アプリケーションの印刷機能を持つも、独自の印刷 ダイアログ ボックスで、一般的な印刷 ダイアログ ボックスをオーバーライドできます。 印刷タスクを処理するために、フレームワークの使用に関する詳細については、記事を参照してください。[印刷](../../mfc/printing.md)します。
 
@@ -148,7 +148,7 @@ Windows を使用する`CommDlgExtendedError` ダイアログ ボックスの初
 
 `CPrintDialog`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdlgs.h
 

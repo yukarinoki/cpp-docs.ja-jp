@@ -14,12 +14,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e078b38dd90fcda7a6973ac1b0aee13c301823d4
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 9bfbcbe990effa20fc91494e5586d3c34d47a0d5
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691433"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821241"
 ---
 # <a name="spaceinfo-structure"></a>space_info 構造体
 
@@ -28,11 +28,12 @@ ms.locfileid: "44691433"
 ## <a name="syntax"></a>構文
 
 ```cpp
-struct space_info   {
+struct space_info
+{
     uintmax_t capacity;
     uintmax_t free;
     uintmax_t available;
-    };
+};
 ```
 
 ## <a name="members"></a>メンバー
@@ -41,9 +42,9 @@ struct space_info   {
 
 |名前|説明|
 |----------|-----------------|
-|`unsigned long long available`|ボリューム上のデータを表すために使用できるバイト数を表します。|
 |`unsigned long long capacity`|ボリュームを表すことのできるバイト数の合計数を表します。|
 |`unsigned long long free`|ボリューム上のデータを表すために使用されないバイト数を表します。|
+|`unsigned long long available`|ボリューム上のデータを表すために使用できるバイト数を表します。|
 
 ## <a name="requirements"></a>要件
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 876f3b45cc9f45ab5ff1aaa7e07116482f89afc1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2035e665bd7d8cba502c3516498934f32c2b3dd0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442085"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080846"
 ---
 # <a name="security-implications-of-customization"></a>カスタマイズによるセキュリティへの影響
 
@@ -38,7 +38,7 @@ MFC で、ユーザーは、ボタンとアイコンの外観など、アプリ�
 
 - レジストリではなく、セキュリティで保護されたファイルにデータを格納します。
 
-     これらの最初の 2 つの方法のいずれかを行うためには、派生クラスを[CSettingsStore クラス](../mfc/reference/csettingsstore-class.md)し、暗号化またはレジストリ以外で記憶域を実装するメソッドをオーバーライドします。
+   これらの最初の 2 つの方法のいずれかを行うためには、派生クラスを[CSettingsStore クラス](../mfc/reference/csettingsstore-class.md)し、暗号化またはレジストリ以外で記憶域を実装するメソッドをオーバーライドします。
 
 - また、アプリケーションでカスタマイズを無効にします。
 

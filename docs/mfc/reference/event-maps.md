@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f937c2cdaa4bb7f31b39b8a28c657274830fc36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45a5b1714721a414f1016d977cc9cb549b4000d7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446609"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083114"
 ---
 # <a name="event-maps"></a>イベント マップ
 
@@ -75,7 +75,7 @@ DECLARE_EVENT_MAP()
 
 イベント マップの詳細については、記事を参照してください。 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxctl.h
 
@@ -101,7 +101,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 イベント マップと BEGIN_EVENT_MAP マクロの詳細については、この記事を参照してください。 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxctl.h
 
@@ -113,7 +113,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 END_EVENT_MAP()
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxctl.h
 
@@ -179,7 +179,7 @@ RGB を表す 32 ビット整数を含むリストを指すポインターによ
 > [!NOTE]
 > 追加のバリアント型定数は、すべてのバリアント型を除く VTS_FONT と VTS_PICTURE、variant データ定数へのポインターを提供する定義されています。 使用してこれらの定数の名前は、`VTS_Pconstantname`規則。 たとえば、VTS_PCOLOR、VTS_COLOR 定数ポインターです。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxctl.h
 
@@ -219,7 +219,7 @@ RGB を表す 32 ビット整数を含むリストを指すポインターによ
 
 一覧については、`VTS_`定数を参照してください[EVENT_CUSTOM](#event_custom)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxctl.h
 
@@ -254,7 +254,7 @@ BOOL memberFxn(
 
 値、 *lpMsg*、 *hWndParent*、および*lpRect*パラメーターの対応するパラメーターから取得されますが、`IOleObject::DoVerb`メンバー関数。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxole.h
 
@@ -280,8 +280,7 @@ ON_STDOLEVERB(iVerb, memberFxn)
 
 参照してください[ON_OLEVERB](#on_oleverb)として使用する関数プロトタイプの説明については、 *memberFxn*パラメーター。
 
-
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー** afxole.h
 

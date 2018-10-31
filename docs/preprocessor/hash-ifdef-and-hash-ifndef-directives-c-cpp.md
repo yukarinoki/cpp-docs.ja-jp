@@ -21,51 +21,51 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c3453cd652401e9d1f4573bb1750773cbefe8d9
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: d1ba603941b5d08bc56d8385f2b721fb1bef6586
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539217"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075893"
 ---
 # <a name="ifdef-and-ifndef-directives-cc"></a>#ifdef および #ifndef ディレクティブ (C/C++)
-**#Ifdef**と **#ifndef**ディレクティブと同じタスクを実行する、`#if`ディレクティブと共に使用するときに**定義**( *の識別子* ).  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-#ifdef identifier  
-#ifndef identifier  
-  
-// equivalent to  
-#if defined identifier  
-#if !defined identifier  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 
-使用することができます、 **#ifdef**と **#ifndef**任意の場所ディレクティブ`#if`ことができます。 **#Ifdef** *識別子*ステートメントは等価`#if 1`とき*識別子*を定義した後と等価`#if 0`とき*識別子*が定義されていないか、定義していない、`#undef`ディレクティブ。 これらのディレクティブは、C または C++ ソース コードで宣言された識別子ではなく、`#define` で定義された識別子の有無を調べます。  
-  
-これらのディレクティブは、言語の以前のバージョンとの互換性を維持するために用意されています。 **定義 (** *識別子* **)** で使用される定数式、`#if`ディレクティブをお勧めします。  
-  
-**#Ifndef**ディレクティブが反対でチェックする条件のチェック **#ifdef**します。 識別子を定義していない (またはその定義を `#undef` で削除した) 場合、条件は true (ゼロ以外) です。 それ以外の場合、条件は False (0) です。  
-  
-**Microsoft 固有の仕様**  
-  
-*識別子*を使用して、コマンドラインから渡すことができます、`/D`オプション。 最大で 30 個のマクロで指定できる`/D`します。  
-  
-定義をコマンド ラインから渡すことができるため、定義の有無を調べるために便利です。 例えば:  
-  
-```cpp  
-// ifdef_ifndef.CPP  
-// compile with: /Dtest /c  
-#ifndef test  
-#define final  
-#endif  
-```  
-  
-**Microsoft 固有の仕様はここまで**  
-  
-## <a name="see-also"></a>関連項目  
- 
+**#Ifdef**と **#ifndef**ディレクティブと同じタスクを実行する、`#if`ディレクティブと共に使用するときに**定義**( *の識別子* ).
+
+## <a name="syntax"></a>構文
+
+```
+#ifdef identifier
+#ifndef identifier
+
+// equivalent to
+#if defined identifier
+#if !defined identifier
+```
+
+## <a name="remarks"></a>Remarks
+
+使用することができます、 **#ifdef**と **#ifndef**任意の場所ディレクティブ`#if`ことができます。 **#Ifdef** *識別子*ステートメントは等価`#if 1`とき*識別子*を定義した後と等価`#if 0`とき*識別子*が定義されていないか、定義していない、`#undef`ディレクティブ。 これらのディレクティブは、C または C++ ソース コードで宣言された識別子ではなく、`#define` で定義された識別子の有無を調べます。
+
+これらのディレクティブは、言語の以前のバージョンとの互換性を維持するために用意されています。 **定義 (** *識別子* **)** で使用される定数式、`#if`ディレクティブをお勧めします。
+
+**#Ifndef**ディレクティブが反対でチェックする条件のチェック **#ifdef**します。 識別子を定義していない (またはその定義を `#undef` で削除した) 場合、条件は true (ゼロ以外) です。 それ以外の場合、条件は False (0) です。
+
+**Microsoft 固有の仕様**
+
+*識別子*を使用して、コマンドラインから渡すことができます、`/D`オプション。 最大で 30 個のマクロで指定できる`/D`します。
+
+定義をコマンド ラインから渡すことができるため、定義の有無を調べるために便利です。 例えば:
+
+```cpp
+// ifdef_ifndef.CPP
+// compile with: /Dtest /c
+#ifndef test
+#define final
+#endif
+```
+
+**Microsoft 固有の仕様はここまで**
+
+## <a name="see-also"></a>関連項目
+
 [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)

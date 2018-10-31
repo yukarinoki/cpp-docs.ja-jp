@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8cd4318ac3d6b1da998e661da2a88f46cb84c8e9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: df0187364a44c84a2d0f7f38e968e0ea17df1fb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435832"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064161"
 ---
 # <a name="ole-initialization"></a>OLE の初期化
 
@@ -34,7 +34,6 @@ ms.locfileid: "46435832"
 |-|-|
 |[AfxOleInit](#afxoleinit)|OLE ライブラリを初期化します。|
 |[AfxEnableControlContainer](#afxenablecontrolcontainer)|アプリケーション オブジェクトのこの関数を呼び出す`InitInstance`OLE コントロールのコンテインメントのサポートを有効にする関数。|
-
 
 ## <a name="afxenablecontrolcontainer"></a> AfxEnableControlContainer
 
@@ -50,10 +49,9 @@ void AfxEnableControlContainer( );
 
 (ActiveX コントロールと呼ばれるようになりました) OLE コントロールの詳細については、次を参照してください。 [ActiveX コントロールのトピック](../mfc-activex-controls.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
-
 
 ##  <a name="afxoleinit"></a>  AfxOleInit
 
@@ -79,9 +77,9 @@ MFC アプリケーションに対する OLE サポートを初期化するに�
 >  場合**AfxOleInit**と呼ばれますが、MFC DLL からの呼び出しは失敗します。 この関数は DLL から呼び出された場合、呼び出し元アプリケーションによって OLE システムが既に初期化されていることを想定するため、失敗が生じます。
 
 > [!NOTE]
->  MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)で、`InitInstance`オーバーライド、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。 詳細については、[prb] を参照してください: MFC アプリケーションとして、マルチ スレッド アパートメント (828643) でアプリケーションを初期化するときの応答を停止[ http://support.microsoft.com/default.aspxscid=kb; en-ご; 828643](http://support.microsoft.com/default.aspxscid=kb;en-us;828643)します。
+>  MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)で、`InitInstance`オーバーライド、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 

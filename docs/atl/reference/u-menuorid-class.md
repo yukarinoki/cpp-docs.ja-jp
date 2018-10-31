@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9e5902019704821d6c34c74480623593b7d7448a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3eb9ab5f08fe1984e52ed16eb26064093fb8e003
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46044250"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052955"
 ---
 # <a name="umenuorid-class"></a>_U_MENUorID クラス
 
@@ -57,11 +57,11 @@ class _U_MENUorID
 
 この引数のアダプター クラスは、呼び出し元の側 (ついて) Id またはメニューのハンドルの明示的なキャストを必要とせず、関数に渡される (HMENUs) のいずれかを使用できます。
 
-このクラスは、Windows API にラッパーを実装するために設計されていますが、特に[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)と[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)が子ウィンドウがあります HMENU 引数を受け取るいずれ関数。識別子 (UINT) ではなくメニュー ハンドル。 たとえば、このクラスの使用を表示のパラメーターとして[CWindowImpl::Create](cwindowimpl-class.md#create)します。  
+このクラスは、Windows API にラッパーを実装するために設計されていますが、特に[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)と[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)が子ウィンドウがあります HMENU 引数を受け取るいずれ関数。識別子 (UINT) ではなくメニュー ハンドル。 たとえば、このクラスの使用を表示のパラメーターとして[CWindowImpl::Create](cwindowimpl-class.md#create)します。
 
 クラスは、2 つのコンス トラクター オーバー ロードを定義します。 UINT 引数を受け取るいずれかと、その他の HMENU 引数を受け取ります。 UINT 引数は、コンス トラクターとクラスの 1 つのデータのメンバーに格納されている結果の HMENU にキャスト[m_hMenu](#_u_menuorid__m_hmenu)します。 HMENU コンス トラクターの引数は、変換せずに直接格納されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 

@@ -27,48 +27,38 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279f4beb3b550f672ac3950c31f3653ca1f00ba2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: defd5f630f1d3832014e2cc7e9746c0e00e8d816
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409359"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46070666"
 ---
 # <a name="signal-constants"></a>signal 定数
-## <a name="syntax"></a>構文  
-  
-```  
-#include <signal.h>  
-```  
-  
-## <a name="remarks"></a>コメント  
- `sig` 引数は、SIGNAL.H に定義されている以下のマニフェスト定数のいずれかにする必要があります。  
-  
- `SIGABRT`  
- 異常終了。 既定のアクションでは、終了コード 3 で呼び出し元のプログラムを終了します。  
-  
- `SIGABRT_COMPAT`  
- SIGABRT と同じ。 その他のプラットフォームとの互換性を維持します。  
-  
- `SIGFPE`  
- オーバーフロー、0 除算、無効な操作などの浮動小数点エラー。 既定のアクションでは、呼び出し元のプログラムを終了します。  
-  
- `SIGILL`  
- 無効な命令。 既定のアクションでは、呼び出し元のプログラムを終了します。  
-  
- `SIGINT`  
- Ctrl + C 割り込み。 既定のアクションでは、終了コード 3 で呼び出し元のプログラムを終了します。  
-  
- `SIGSEGV`  
- ストレージへの無効なアクセス。 既定のアクションでは、呼び出し元のプログラムを終了します。  
-  
- `SIGTERM`  
- プログラムに送信される終了要求。 既定のアクションでは、終了コード 3 で呼び出し元のプログラムを終了します。  
-  
- `SIG_ERR`  
- エラーが発生したことを示すシグナルからの戻り値の型。  
-  
-## <a name="see-also"></a>参照  
- [signal](../c-runtime-library/reference/signal.md)   
- [raise](../c-runtime-library/reference/raise.md)   
- [グローバル定数](../c-runtime-library/global-constants.md)
+
+## <a name="syntax"></a>構文
+
+```
+#include <signal.h>
+```
+
+## <a name="remarks"></a>コメント
+
+`sig` 引数は、SIGNAL.H に定義されている以下のマニフェスト定数のいずれかにする必要があります。
+
+|||
+|-|-|
+|SIGABRT|異常終了。 既定のアクションでは、終了コード 3 で呼び出し元のプログラムを終了します。  |
+|SIGABRT_COMPAT|SIGABRT と同じ。 その他のプラットフォームとの互換性を維持します。  |
+|SIGFPE|オーバーフロー、0 除算、無効な操作などの浮動小数点エラー。 既定のアクションでは、呼び出し元のプログラムを終了します。  |
+|SIGILL|無効な命令。 既定のアクションでは、呼び出し元のプログラムを終了します。  |
+|SIGINT|Ctrl + C 割り込み。 既定のアクションでは、終了コード 3 で呼び出し元のプログラムを終了します。  |
+|SIGSEGV|ストレージへの無効なアクセス。 既定のアクションでは、呼び出し元のプログラムを終了します。  |
+|SIGTERM|プログラムに送信される終了要求。 既定のアクションでは、終了コード 3 で呼び出し元のプログラムを終了します。  |
+|SIG_ERR|エラーが発生したことを示すシグナルからの戻り値の型。  |
+
+## <a name="see-also"></a>参照
+
+[signal](../c-runtime-library/reference/signal.md)<br/>
+[raise](../c-runtime-library/reference/raise.md)<br/>
+[グローバル定数](../c-runtime-library/global-constants.md)

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff86123f395e9647ef848ad017fe3cb69b69dd71
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a460870887f3a012bf02ee6518ba70c65881c804
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427681"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081418"
 ---
 # <a name="windows-sockets-in-mfc"></a>MFC における Windows ソケット
 
@@ -42,11 +42,11 @@ Windows ソケット、ソケットの概念の説明などを含むに関する
 
 - `CAsyncSocket`
 
-     このクラスは、Windows ソケット API をカプセル化します。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)ネットワーク プログラミングを理解し、ソケット API に対して直接プログラミングの柔軟性もネットワーク イベントの通知のコールバック関数の利便性を必要するプログラマにとっては。 C++ で使用するためのフォームのオブジェクト指向のソケットをパッケージ化、以外、のみ追加の抽象化がこのクラスは提供はコールバックに特定のソケットに関連する Windows メッセージを変換します。 詳細については、次を参照してください。 [Windows ソケット: ソケット通知](../mfc/windows-sockets-socket-notifications.md)します。
+   このクラスは、Windows ソケット API をカプセル化します。 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)ネットワーク プログラミングを理解し、ソケット API に対して直接プログラミングの柔軟性もネットワーク イベントの通知のコールバック関数の利便性を必要するプログラマにとっては。 C++ で使用するためのフォームのオブジェクト指向のソケットをパッケージ化、以外、のみ追加の抽象化がこのクラスは提供はコールバックに特定のソケットに関連する Windows メッセージを変換します。 詳細については、次を参照してください。 [Windows ソケット: ソケット通知](../mfc/windows-sockets-socket-notifications.md)します。
 
 - `CSocket`
 
-     このクラスから派生した`CAsyncSocket`、MFC からソケットを操作するためより高いレベルの抽象化を提供[CArchive](../mfc/reference/carchive-class.md)オブジェクト。 アーカイブを使用して、ソケットを使用すると、大幅にするには、MFC のファイルのシリアル化プロトコルを使用してに似ています。 これによりより使いやすく、`CAsyncSocket`モデル。 [CSocket](../mfc/reference/csocket-class.md)から多くのメンバー関数を継承`CAsyncSocket`Windows Sockets Api をカプセル化する。 これらの関数を使用して、ソケットの通常のプログラミングを理解する必要があります。 `CSocket`生 API またはクラスのいずれかを使用して自分で行う必要がありますの通信の多くの側面を管理`CAsyncSocket`します。 最も重要なは、 `CSocket` (バック グラウンド処理の Windows メッセージ) を使用してブロックを提供するための同期操作に不可欠である`CArchive`します。
+   このクラスから派生した`CAsyncSocket`、MFC からソケットを操作するためより高いレベルの抽象化を提供[CArchive](../mfc/reference/carchive-class.md)オブジェクト。 アーカイブを使用して、ソケットを使用すると、大幅にするには、MFC のファイルのシリアル化プロトコルを使用してに似ています。 これによりより使いやすく、`CAsyncSocket`モデル。 [CSocket](../mfc/reference/csocket-class.md)から多くのメンバー関数を継承`CAsyncSocket`Windows Sockets Api をカプセル化する。 これらの関数を使用して、ソケットの通常のプログラミングを理解する必要があります。 `CSocket`生 API またはクラスのいずれかを使用して自分で行う必要がありますの通信の多くの側面を管理`CAsyncSocket`します。 最も重要なは、 `CSocket` (バック グラウンド処理の Windows メッセージ) を使用してブロックを提供するための同期操作に不可欠である`CArchive`します。
 
 作成と使用`CSocket`と`CAsyncSocket`オブジェクトについては、「 [Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)と[Windows ソケット: を使用してクラス CAsyncSocket](../mfc/windows-sockets-using-class-casyncsocket.md)します。
 

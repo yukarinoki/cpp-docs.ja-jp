@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 88c8ee576af3c50317b86b7016ac198fefdcbaa9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3211f87e2c692c587ee2df82497fc56662e4974d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093442"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077285"
 ---
 # <a name="catlmodule-class"></a>CAtlModule クラス
 
@@ -92,7 +92,7 @@ ATL でモジュールの詳細については、次を参照してください�
 
 `CAtlModule`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
@@ -262,7 +262,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-HRESULT WINAPI UpdateRegistryFromResourceD(  
+HRESULT WINAPI UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -299,7 +299,7 @@ ATL レジストリ コンポーネント (レジストラー) に静的にリ�
 このメソッドを呼び出して`UpdateRegistryFromResourceD`レジストリの更新を実行します。
 
 ```
-inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(  
+inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
     LPCOLESTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -329,12 +329,12 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 登録またはオブジェクトを登録解除に指定されたリソースに含まれるスクリプトを実行します。 このメソッドは、ATL レジストリ コンポーネントに静的にリンクします。
 
 ```
-HRESULT WINAPI UpdateRegistryFromResourceS(  
+HRESULT WINAPI UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-HRESULT WINAPI UpdateRegistryFromResourceS(  
+HRESULT WINAPI UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
@@ -367,4 +367,4 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 [_ATL_MODULE](atl-typedefs.md#_atl_module)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [モジュール クラス](../../atl/atl-module-classes.md)<br/>
-[レジストリ コンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)  
+[レジストリ コンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)

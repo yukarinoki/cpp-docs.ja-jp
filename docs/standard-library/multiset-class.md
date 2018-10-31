@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8d45b08ee356fd217207b625ffe7bf4fb0abffec
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 43929e4b8ff2fa55750e44531a2dd46474505124
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45708696"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074268"
 ---
 # <a name="multiset-class"></a>multiset クラス
 
@@ -159,7 +159,7 @@ C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語ま�
 |-|-|
 |[multiset](#multiset)|空であるか、指定された `multiset` の全体または一部のコピーである `multiset` を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -215,7 +215,7 @@ C++ 14 では、型パラメーターを使用せずに `std::less<>` 述語ま�
 |-|-|
 |[operator=](#op_eq)|別の `multiset` のコピーで `multiset` の要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<set>
 
@@ -849,7 +849,6 @@ The multiset ms2 is empty.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -990,7 +989,6 @@ size_type erase(
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1148,19 +1146,16 @@ multiset に要素や要素範囲を挿入します。
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1168,13 +1163,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1559,7 +1552,6 @@ multiset(
     initializer_list<Type> IList,
     const Compare& Comp,
     const Allocator& Al);
-
 
 template <class InputIterator>
 multiset (

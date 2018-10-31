@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d414df9d5e5f7d930497d42b5ec73d92a65ac3cc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7df3233b5605c4b19269571d1afa0f5a6215ae
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116712"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861097"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>C++ 標準ライブラリに基づくコレクションを実装します。
 
@@ -57,15 +57,15 @@ ATL には、`ICollectionOnSTLImpl`迅速に、オブジェクトのコレクシ
 
 1. オートメーション クライアントにアクセスするため、コレクション インターフェイスがデュアル、通常は、`_NewEnum`プロパティを使用して`IDispatch::Invoke`します。 ただし、オートメーション クライアントは、デュアル インターフェイスがディスパッチ インターフェイスに適していますので、vtable を使用して残りのメソッドをアクセスできます。
 
-2. 実行時にインターフェイスをデュアルまたはディスパッチ インターフェイスを拡張するがいない場合 (つまり、追加のメソッドまたはを使用してプロパティを提供しません`IDispatch::Invoke`)、適用する必要があります、 **nonextensible**属性の定義にします。 この属性には、コンパイル時に完全なコードの検証を実行するオートメーション クライアントが使用できます。 この場合は、インターフェイスを拡張しません。
+1. 実行時にインターフェイスをデュアルまたはディスパッチ インターフェイスを拡張するがいない場合 (つまり、追加のメソッドまたはを使用してプロパティを提供しません`IDispatch::Invoke`)、適用する必要があります、 **nonextensible**属性の定義にします。 この属性には、コンパイル時に完全なコードの検証を実行するオートメーション クライアントが使用できます。 この場合は、インターフェイスを拡張しません。
 
-3. DISPID を正しくは、このプロパティを使用できるオートメーション クライアントの場合に重要です。 (なに 1 つだけのアンダー スコアがあることに注意してください)。
+1. DISPID を正しくは、このプロパティを使用できるオートメーション クライアントの場合に重要です。 (なに 1 つだけのアンダー スコアがあることに注意してください)。
 
-4. DISPID として任意の値を指定することができます、`Item`プロパティ。 ただし、`Item`通常 DISPID_VALUE をコレクションの既定のプロパティを使用します。 これにより、オートメーション クライアントを明示的に名前を指定せず、プロパティを参照してください。
+1. DISPID として任意の値を指定することができます、`Item`プロパティ。 ただし、`Item`通常 DISPID_VALUE をコレクションの既定のプロパティを使用します。 これにより、オートメーション クライアントを明示的に名前を指定せず、プロパティを参照してください。
 
-5. 戻り値を使用するデータ型、`Item`プロパティが COM クライアントにとってはできる限り、コレクションに格納されている項目の種類。 インターフェイスは、ので、標準の COM 文字列型、BSTR を使用する必要があります、文字列を返します。 できますデータ保存する別の形式で内部的にすぐにわかります。
+1. 戻り値を使用するデータ型、`Item`プロパティが COM クライアントにとってはできる限り、コレクションに格納されている項目の種類。 インターフェイスは、ので、標準の COM 文字列型、BSTR を使用する必要があります、文字列を返します。 できますデータ保存する別の形式で内部的にすぐにわかります。
 
-6. ように DISPID を使用する値、`Count`プロパティは、まったく任意です。 このプロパティの DISPID を標準はありません。
+1. ように DISPID を使用する値、`Count`プロパティは、まったく任意です。 このプロパティの DISPID を標準はありません。
 
 ##  <a name="vcconstorage_and_exposure_typedefs"></a> 記憶域と露出の Typedef を作成します。
 
@@ -114,4 +114,3 @@ ATL には、`ICollectionOnSTLImpl`迅速に、オブジェクトのコレクシ
 [コレクションと列挙子](../atl/atl-collections-and-enumerators.md)<br/>
 [ATLCollections サンプル](../visual-cpp-samples.md)<br/>
 [ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)
-

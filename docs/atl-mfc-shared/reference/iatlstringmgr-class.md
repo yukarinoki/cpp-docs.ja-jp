@@ -1,7 +1,7 @@
 ---
 title: IAtlStringMgr クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ad98923c21a28976b54c2251f2da83eb0ec4cf5f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d637750ab4aa9dc30ca7b297373cb2c752802d8
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408142"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808876"
 ---
 # <a name="iatlstringmgr-class"></a>IAtlStringMgr クラス
 
@@ -59,7 +59,7 @@ __interface IAtlStringMgr
 
 カスタムの文字列クラスのカスタム メモリ マネージャーを実装するために、このクラスを使用することもできます。 詳細については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsimpstr.h
 
@@ -73,10 +73,10 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*nAllocLength*  
+*nAllocLength*<br/>
 新しいメモリ ブロック内の文字の数。
 
-*nCharSize*  
+*nCharSize*<br/>
 文字列マネージャーによって使用される文字型のサイズをバイト単位で。
 
 ### <a name="return-value"></a>戻り値
@@ -124,7 +124,7 @@ void Free(CStringData* pData) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pData*  
+*pData*<br/>
 解放するメモリ ブロックへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -151,31 +151,31 @@ CStringData* GetNilString() throw();
 この関数では、空の文字列表現を返します。
 
 > [!NOTE]
->  カスタム文字列マネージャーを実装するときにこの関数が失敗しない必要があります。 インスタンスを埋め込むことでこのことを確認できる`CNilStringData`文字列マネージャーのクラスとそのインスタンスへのポインターを返す。
+> カスタム文字列マネージャーを実装するときにこの関数が失敗しない必要があります。 インスタンスを埋め込むことでこのことを確認できる`CNilStringData`文字列マネージャーのクラスとそのインスタンスへのポインターを返す。
 
 > [!NOTE]
->  使用例については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+> 使用例については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
 
-##  <a name="reallocate"></a>  IAtlStringMgr::Reallocate
+## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
 文字列データの構造を再割り当ています。
 
 ```
-CStringData* Reallocate(  
-CStringData* pData,
-int nAllocLength,
-int nCharSize) throw();
+CStringData* Reallocate(
+    CStringData* pData,
+    int nAllocLength,
+    int nCharSize) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pData*  
+*pData*<br/>
 このメモリ マネージャーによって以前に割り当てられたメモリへのポインター。
 
-*nAllocLength*  
+*nAllocLength*<br/>
 新しいメモリ ブロック内の文字の数。
 
-*nCharSize*  
+*nCharSize*<br/>
 文字列マネージャーによって使用される文字型のサイズをバイト単位で。
 
 ### <a name="return-value"></a>戻り値
@@ -189,10 +189,9 @@ int nCharSize) throw();
 呼び出す[IAtlStringMgr::Free](#free)このメソッドによって割り当てられたメモリを解放します。
 
 > [!NOTE]
->  使用例については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+> 使用例については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)
-

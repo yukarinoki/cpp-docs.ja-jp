@@ -1,7 +1,7 @@
 ---
-title: 参照演算子 (C++ コンポーネント拡張) の追跡 |Microsoft Docs
+title: 参照演算子の追跡 (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: da01a2dd7e871bb555b2b5711a59dbb5e65424a8
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 9f2277e09bc4835cabd73d9be5177042dd0817e5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42604077"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056101"
 ---
-# <a name="tracking-reference-operator-c-component-extensions"></a>参照演算子の追跡 (C++ コンポーネント拡張)
+# <a name="tracking-reference-operator-ccli-and-ccx"></a>参照演算子の追跡 (C +/cli および C++/cli CX)
 
 A*追跡参照*(`%`) 通常の C++ 参照のように動作 (`&`) オブジェクトの参照カウントがインクリメントされますオブジェクトが追跡参照に割り当てられるとき、点が異なります。
 
@@ -61,13 +61,13 @@ Foo^ spFoo2 = %srFoo;
 ref class Foo sealed {};
 
     // internal or private
-    void UseFooHelper(Foo% f)  
+    void UseFooHelper(Foo% f)
     {
         auto x = %f;
     }
 
     // public method on ABI boundary
-    void UseFoo(Foo^ f)  
+    void UseFoo(Foo^ f)
     {
         if (f != nullptr) { UseFooHelper(*f); }
     }

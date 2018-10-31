@@ -1,7 +1,7 @@
 ---
 title: CTimeSpan クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -33,12 +33,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1b70e4ca31f4346e8ad0b6dda4e66192e2e53111
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 32e6599fa19c23751beaf3545696a90a2d117248
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397521"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49809084"
 ---
 # <a name="ctimespan-class"></a>CTimeSpan クラス
 
@@ -95,7 +95,7 @@ class CTimeSpan
 
 使用しての詳細については`CTimeSpan`、記事を参照して[日付と時刻](../../atl-mfc-shared/date-and-time.md)、および[時間管理](../../c-runtime-library/time-management.md)で、*ランタイム ライブラリ リファレンス*します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atltime.h
 
@@ -114,7 +114,7 @@ bool operator>=(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*  
+*スパン*<br/>
 比較対象のオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -133,22 +133,22 @@ bool operator>=(CTimeSpan span) const throw();
 CTimeSpan() throw();
 CTimeSpan(__time64_t time) throw();
 
-CTimeSpan(  
-LONG lDays,
-int nHours,
-int nMins,
-int nSecs) throw();
+CTimeSpan(
+    LONG lDays,
+    int nHours,
+    int nMins,
+    int nSecs) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*timeSpanSrc*  
+*timeSpanSrc*<br/>
 A`CTimeSpan`既に存在するオブジェクト。
 
-*time*  
+*time*<br/>
 A **_ _time64_t**時刻の値は、時間間隔の秒数です。
 
-*lDays*、 *nHours*、 *nMins*、 *nSecs*  
+*lDays*、 *nHours*、 *nMins*、 *nSecs*<br/>
 日数、時間、分、および秒に、それぞれします。
 
 ### <a name="remarks"></a>Remarks
@@ -163,12 +163,12 @@ A **_ _time64_t**時刻の値は、時間間隔の秒数です。
 
 - `CTimeSpan( LONG, int, int, int );` 構築、`CTimeSpan`の各構成要素からオブジェクトが、次の範囲に制限されます。
 
-    |コンポーネント|範囲|  
-    |---------------|-----------|  
-    |*lDays*|0 ~ 25,000 (概算)|  
-    |*nHours*|0-23|  
-    |*nMins*|0-59|  
-    |*nSecs*|0-59|
+   |コンポーネント|範囲|
+   |---------------|-----------|
+   |*lDays*|0 ~ 25,000 (概算)|
+   |*nHours*|0-23|
+   |*nMins*|0-59|
+   |*nSecs*|0-59|
 
 Microsoft Foundation Class ライブラリのデバッグ バージョンのかどうか、時刻のコンポーネントの 1 つ以上が範囲外ですがアサートすることに注意してください。 呼び出す前に引数を検証するユーザーの責任になります。
 
@@ -188,7 +188,7 @@ CString Format(UINT nID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pFormat*、 *pszFormat*  
+*pFormat*、 *pszFormat*<br/>
 ような文字列を書式設定、`printf`文字列の書式設定します。 割合に続くコードの書式設定 (`%`) 署名は、対応する置き換え`CTimeSpan`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 値との書式設定コードの意味`Format`を以下に示します。
 
 - **%D**この日の合計 `CTimeSpan`
@@ -201,7 +201,7 @@ CString Format(UINT nID) const;
 
 - **%%** パーセント記号
 
-*nID*  
+*nID*<br/>
 この形式を識別する文字列の ID。
 
 ### <a name="return-value"></a>戻り値
@@ -355,7 +355,7 @@ CTimeSpan operator-(CTimeSpan span) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*  
+*スパン*<br/>
 追加する値、`CTimeSpan`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -381,7 +381,7 @@ CTimeSpan& operator-=(CTimeSpan span) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*スパン*  
+*スパン*<br/>
 追加する値、`CTimeSpan`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -409,7 +409,7 @@ CArchive& Serialize64(CArchive& ar);
 
 ### <a name="parameters"></a>パラメーター
 
-*ar*  
+*ar*<br/>
 `CArchive`を更新するオブジェクト。
 
 ### <a name="return-value"></a>戻り値

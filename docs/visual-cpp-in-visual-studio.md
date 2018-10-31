@@ -1,36 +1,33 @@
 ---
 title: Visual Studio の Visual C++ | Microsoft Docs
+description: Visual C++ とは、Microsoft C++ のコンパイラ、コード エディターおよび Visual Studio IDE の関連ツールの名称です。 Visual C++ を使用すると、Windows、Linux、Android および iOS 用のプログラムを開発できます。
 ms.custom: ''
-ms.date: 08/22/2018
+ms.date: 09/26/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
-- unmanaged code, C++
-- development environment, Visual C++
-- unmanaged code
-- Visual C++
-- Visual C++, reference
+- Visual C++, home page
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6116a1b27595c6400edfcb79daafb362fb7aec5f
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43684492"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067944"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio の Visual C++
 
-> [!NOTE]  
-> この開発者向けドキュメントは、Visual Studio 2015 と Visual Studio 2017 に適用されます。 
+> [!NOTE]
+> この開発者向けドキュメントは、Visual Studio 2015 と Visual Studio 2017 に適用されます。
 
-> プログラムを実行するために Visual C++ 再頒布可能パッケージを探している場合、[Microsoft ダウンロード センター](http://www.microsoft.com/en-us/download/)にアクセスして検索ボックスに「**Visual C++**」と入力してください。  
-  
+> プログラムを実行するために Visual C++ 再頒布可能パッケージを探している場合、[Microsoft ダウンロード センター](http://www.microsoft.com/download/)にアクセスして検索ボックスに「**Visual C++**」と入力してください。
+
 
 Microsoft Visual C++ (通常は短縮形で Visual C++ または MSVC と表現される) とは、Windows 上で Visual Studio の一部として利用できる C++、C、およびアセンブリ言語の開発ツールおよびライブラリの名前です。 これらのツールとライブラリでは、ユニバーサル Windows プラットフォーム (UWP) アプリ、ネイティブ Windows デスクトップおよびサーバー アプリケーション、Windows、Linux、Android、iOS 上で実行されるクロスプラットフォーム ライブラリおよびアプリに加えて、.NET Framework を使用する管理対象のアプリおよびライブラリを作成できます。 Visual C++ を使用すると、単純なコンソール アプリから最も高度で複雑な Windows デスクトップ用アプリまで、またデバイス ドライバーやオペレーティング システムのコンポーネントからモバイル デバイス用のクロスプラットフォーム ゲームまで、さらに最小の IoT デバイスから Azure クラウドにおけるマルチ サーバー ハイ パフォーマンス コンピューティングに至るまであらゆるアプリを記述することができます。
 
@@ -81,10 +78,20 @@ C++ について学び始める。
 
 ## <a name="c-development-tools"></a>C++ 開発ツール
 
-[IDE と開発ツール](ide/ide-and-tools-for-visual-cpp-development.md)。
-Visual Studio IDE を使用してプロジェクトの作成、ソース コード ファイルの操作、ライブラリへのリンク、コンパイル、デバッグ、単体テストの作成、静的分析の実行、配置などを行う方法。
+[IDE と開発ツール](ide/ide-and-tools-for-visual-cpp-development.md)。<br/>
+Visual Studio IDE を使用し、プロジェクトの作成、コードの編集、ライブラリへのリンク、コンパイル、デバッグ、単体テストの作成、静的分析の実行、配置などを行う方法。
 
-[コンパイラおよびビルド ツール](build/building-c-cpp-programs.md) Microsoft C++ コンパイラとリンカーのオプション、エラー メッセージ、コマンドラインの例、さまざまなプラットフォームの構成、ビルド リファレンス トピック。 
+[コンパイラおよびビルド ツール](build/building-c-cpp-programs.md)<br/>
+Microsoft C++ コンパイラとリンカーのオプション、エラー メッセージ、コマンドラインの例、さまざまなプラットフォームの構成、ビルド リファレンス トピック。
+
+[ネイティブ コードのデバッグ](/visualstudio/debugger/debugging-native-code)<br/>
+C++ プロジェクトで Visual Studio デバッガーを使用する。
+
+[C/C++ のコード分析の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)<br/>
+静的な分析を行うために、SAL 注釈または C++ Core Guidelines チェッカーを使用する。
+
+[Visual Studio で C/C++ 用の単体テストを作成する](/visualstudio/test/writing-unit-tests-for-c-cpp)<br/>
+C++ 用の Microsoft 単体テスト フレームワーク、Google Test、Boost.Test または CTest を使用して、単体テストを作成する。
 
 ## <a name="write-applications-in-c"></a>C++ でアプリケーションを作成する
 
@@ -94,9 +101,11 @@ Windows Developer Center 内にあるガイドとリファレンス コンテン
 [デスクトップ アプリケーション (C++)](windows/desktop-applications-visual-cpp.md)<br/>
 Windows 向けの従来のネイティブ C++ デスクトップ アプリケーションの作成方法について説明します。
 
-[C++/CLI による .NET プログラミング](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md) ネイティブの C++ と、C# や Visual Basic などの言語で記述されている .NET プログラムの間の相互運用を可能にする DLL の作成方法について説明します。
+[C++/CLI による .NET プログラミング](dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)<br/>
+ネイティブの C++ と、C# や Visual Basic などの言語で記述されている .NET プログラムの間の相互運用を可能にする DLL の作成方法。
 
-[Linux プログラミング](linux/index.md) コーディングと GCC によるコンパイル用のリモート Linux マシンへの配置に Visual Studio IDE を使用します。
+[Linux でのプログラミング](linux/index.md)<br/>
+GCC でコンパイルするためにリモートの Linux マシンにコードを記述し配置するために Visual Studio IDE を使用する方法。
 
 [Visual C++ の DLL](build/dlls-in-visual-cpp.md)<br/>
 Win32、ATL、および MFC を使用して Windows のデスクトップ DLL を作成する方法、さらには DLL をコンパイルおよび登録する方法。
@@ -116,11 +125,15 @@ ODBC およびその他のデータベース アクセス テクノロジを使�
 [テキストと文字列](text/text-and-strings-in-visual-cpp.md)<br/>
 さまざまなテキスト形式および文字列形式の処理、およびローカルおよび国際対応の開発におけるエンコーディングの処理について説明します。
 
-## <a name="c-language-reference"></a>C++ 言語リファレンス
+## <a name="languages-reference"></a>言語リファレンス
 
-C++ 言語については、「 [C++ Language Reference](cpp/cpp-language-reference.md)」を参照してください。
+[C++ 言語リファレンス](cpp/cpp-language-reference.md)
 
-C++ プリプロセッサの詳細については、「 [C/C++ Preprocessor Reference](preprocessor/c-cpp-preprocessor-reference.md)」を参照してください。
+[C/C++ プリプロセッサ リファレンス](preprocessor/c-cpp-preprocessor-reference.md)
+
+[C 言語リファレンス](c-language/c-language-reference.md)
+
+[コンパイラの組み込みとアセンブリ言語](intrinsics/compiler-intrinsics-and-assembly-language.md)
 
 ## <a name="c-libraries-in-visual-studio"></a>Visual Studio での C++ ライブラリ
 

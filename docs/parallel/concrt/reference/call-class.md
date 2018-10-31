@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b4f993c357ef3d4f66f9b2f22c9fb37a4e10c77
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0a99de307ec64c3b6d4e49f4e0a6eef532314bf9
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423898"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161867"
 ---
 # <a name="call-class"></a>call クラス
 
@@ -55,7 +55,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 |名前|説明|
 |----------|-----------------|
-|[call](#ctor)|オーバーロードされます。 構築、`call`メッセージング ブロックします。|
+|[call](#ctor)|オーバーロードされます。 `call` メッセージング ブロックを構築します。|
 |[~ call デストラクター](#dtor)|破棄、`call`メッセージング ブロックします。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
@@ -88,7 +88,7 @@ class call : public target_block<multi_link_registry<ISource<T>>>;
 
 ##  <a name="ctor"></a> 呼び出し
 
-構築、`call`メッセージング ブロックします。
+`call` メッセージング ブロックを構築します。
 
 ```
 call(
@@ -227,7 +227,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>戻り値
 
-`true` ブロックは延期しないため、メッセージを提供します。
+**true**ブロックは延期しないため、メッセージを提供します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 28e22df4eba5a12806221beea1966d1c1cdeae46
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: af14755b9be9413feb3a519d09200577c9260c5a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052917"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053710"
 ---
 # <a name="atl-control-containment-faq"></a>ATL コントロール コンテインメント : Q & A 集
 
@@ -37,7 +37,7 @@ ATL のコントロール ホスト コードで、ATL クラスを使用する�
 |[CAxWindow2T](../atl/reference/caxwindow2t-class.md)|ラップする **"AtlAxWinLic80"** ウィンドウで、ウィンドウの作成、コントロールの作成や、ウィンドウへのライセンス付きコントロールおよびホスト オブジェクトのインターフェイス ポインターを取得するメソッドを指定できます。|
 |[CComCompositeControl](../atl/reference/ccomcompositecontrol-class.md)|ダイアログ リソースに基づく ActiveX コントロール クラスの基本クラスとして機能します。 このようなコントロールは、他の ActiveX コントロールを含めることができます。|
 |[CAxDialogImpl](../atl/reference/caxdialogimpl-class.md)|ダイアログ リソースに基づくダイアログ クラスの基本クラスとして機能します。 このようなダイアログ ボックスは、ActiveX コントロールを含めることができます。|
-|[CWindow](../atl/reference/cwindow-class.md)|メソッドを提供します。 [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol)、そのホスト ウィンドウの ID を指定し、コントロールのインターフェイス ポインターが返されます。 さらに、Windows API のラッパーをによって公開されている`CWindow`通常、ウィンドウの管理を容易にします。|  
+|[CWindow](../atl/reference/cwindow-class.md)|メソッドを提供します。 [GetDlgControl](../atl/reference/cwindow-class.md#getdlgcontrol)、そのホスト ウィンドウの ID を指定し、コントロールのインターフェイス ポインターが返されます。 さらに、Windows API のラッパーをによって公開されている`CWindow`通常、ウィンドウの管理を容易にします。|
 
 ## <a name="what-is-the-atl-control-hosting-api"></a>新機能、ATL コントロール ホスト API でしょうか。
 
@@ -62,11 +62,11 @@ ATL のコントロール ホスト API は、ActiveX コントロール コン�
 最初の 7 つの関数を呼び出す[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)暗黙的にします。
 
 > [!NOTE]
->  コントロール ホスト API では、ActiveX コントロール サポートの ATL のサポートの基礎を形成します。 ただし、活用または ATL のラッパー クラスを最大限に活用する場合、これらの関数を直接呼び出す必要はほとんどありませんが、通常は。 詳細については、次を参照してください。[する ATL クラスを容易に ActiveX コントロール コンテインメント](which-atl-classes-facilitate-activex-control-containment-q.md)します。  
+>  コントロール ホスト API では、ActiveX コントロール サポートの ATL のサポートの基礎を形成します。 ただし、活用または ATL のラッパー クラスを最大限に活用する場合、これらの関数を直接呼び出す必要はほとんどありませんが、通常は。 詳細については、次を参照してください。[する ATL クラスを容易に ActiveX コントロール コンテインメント](which-atl-classes-facilitate-activex-control-containment-q.md)します。
 
 ## <a name="what-is-atlaxwin100"></a>AtlAxWin100 とは何ですか。
 
-`AtlAxWin100` ATL のコントロール ホスト機能を提供できるウィンドウ クラスの名前です。 このクラスのインスタンスを作成するときにウィンドウ プロシージャは自動的に使用されているウィンドウに関連付けられているホスト オブジェクトを作成し、ウィンドウのタイトルとして指定したコントロールに読み込み、コントロール ホスト API を使用します。 
+`AtlAxWin100` ATL のコントロール ホスト機能を提供できるウィンドウ クラスの名前です。 このクラスのインスタンスを作成するときにウィンドウ プロシージャは自動的に使用されているウィンドウに関連付けられているホスト オブジェクトを作成し、ウィンドウのタイトルとして指定したコントロールに読み込み、コントロール ホスト API を使用します。
 
 ## <a name="when-do-i-need-to-call-atlaxwininit"></a>ときに AtlAxWinInit を呼び出す必要があるのでしょうか。
 

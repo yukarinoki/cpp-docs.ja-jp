@@ -1,7 +1,7 @@
 ---
-title: リテラル (C++ コンポーネント拡張) |Microsoft Docs
+title: リテラル (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 76a57261b28679c4f05b677dc7b49008535c921b
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 626f05dff87bcff2d10d0726bcc10dfa767117d5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596447"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069924"
 ---
-# <a name="literal-c-component-extensions"></a>リテラル (C++ コンポーネント拡張)
+# <a name="literal-ccli-and-ccx"></a>リテラル (C +/cli および C++/cli CX)
 
 としてマークされている変数 (データ メンバー)**リテラル**で、 **/clr**コンパイルがネイティブと同等の**static const**変数。
 
@@ -41,7 +41,7 @@ ms.locfileid: "42596447"
 
 (この言語機能には Windows ランタイムのみに適用される特記事項がありません。)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -91,11 +91,11 @@ public ref struct A {
 メタデータでの違いに注意`sc`と`lit`:`modopt`にディレクティブが適用される`sc`、別のコンパイラであることを無視できます。
 
 ```
-.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)  
+.field public static int32 modopt([mscorlib]System.Runtime.CompilerServices.IsConst) sc = int32(0x0000000A)
 ```
 
 ```
-.field public static literal int32 lit = int32(0x0000000A)  
+.field public static literal int32 lit = int32(0x0000000A)
 ```
 
 ## <a name="example"></a>例
@@ -131,10 +131,10 @@ class B {
 }
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -147,12 +147,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52073a97e062d4ab96e50fed534edc24add0f8c5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: bae7d94c7e92ea52a6f34172d0d339d813684725
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715599"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060106"
 ---
 # <a name="unorderedmultimap-class"></a>unordered_multimap クラス
 
@@ -244,7 +244,7 @@ class unordered_multimap;
 
 被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_multimap::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このアロケーター オブジェクトは、`allocator` テンプレート クラスのオブジェクトと同じ外部インターフェイスを持っている必要があります。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<unordered_map>
 
@@ -297,7 +297,6 @@ al == std::allocator() is true
 iterator begin();
 
 const_iterator begin() const;
-
 
 local_iterator begin(size_type nbucket);
 
@@ -1124,7 +1123,6 @@ iterator end();
 
 const_iterator end() const;
 
-
 local_iterator end(size_type nbucket);
 
 const_local_iterator end(size_type nbucket) const;
@@ -1486,19 +1484,16 @@ unordered_multimap に要素または要素範囲を挿入します。
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1506,13 +1501,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -2004,7 +1997,6 @@ max_load_factor() == 0.1
 
 ```cpp
 float max_load_factor() const;
-
 
 void max_load_factor(float factor);
 ```
@@ -2582,7 +2574,8 @@ unordered_multimap(
 
 template <class InputIterator>
 unordered_multimap(
-InputIterator first, InputIterator last,
+    InputIterator first,
+    InputIterator last,
     size_type Bucket_count = N0,
     const Hash& Hash = Hash(),
     const Comp& Comp = Pred(),

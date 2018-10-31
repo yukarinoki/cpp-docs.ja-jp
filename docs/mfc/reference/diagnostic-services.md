@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b572af3bdfd444687af98172da9ada0736dac25
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd420544f341159fa4281c4f837fa222d357e1b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429514"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068698"
 ---
 # <a name="diagnostic-services"></a>診断サービス
 
@@ -103,7 +103,6 @@ Microsoft Foundation Class ライブラりは、プログラムのデバッグ�
 |-|-|
 |[_AFX_SECURE_NO_WARNINGS](#afx_secure_no_warnings)|コンパイラの警告を非推奨の MFC 関数の使用を抑制します。|
 
-
 ## <a name="afx_secure_no_warnings"></a> _AFX_SECURE_NO_WARNINGS
 
 コンパイラの警告を非推奨の MFC 関数の使用を抑制します。
@@ -113,6 +112,7 @@ Microsoft Foundation Class ライブラりは、プログラムのデバッグ�
 ```
 _AFX_SECURE_NO_WARNINGS
 ```
+
 ### <a name="example"></a>例
 
 このコード サンプルで、_AFX_SECURE_NO_WARNINGS が定義されていない場合、コンパイラの警告が生じる場合があります。
@@ -143,7 +143,7 @@ void AfxDebugBreak( );
 
 `AfxDebugBreak` MFC アプリケーションのリリース バージョンに影響を与えませんし、削除する必要があります。 この関数は、MFC アプリケーションでのみ使用する必要があります。 Win32 API のバージョンを使用して、 `DebugBreak`、非 MFC アプリケーションで中断が発生します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxver_.h
 
@@ -179,7 +179,7 @@ MFC のリリース バージョンでは、アサートは、式は評価され
 
 [!code-cpp[NVC_MFC_Utilities#44](../../mfc/codesnippet/cpp/diagnostic-services_2.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -214,7 +214,7 @@ ASSERT_KINDOF(classname, pobject)
 > [!NOTE]
 >  この関数は、MFC のデバッグ バージョンでのみ使用できます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -246,7 +246,7 @@ MFC のリリース バージョンでは ASSERT_VALID は何も行いません�
 
 [!code-cpp[NVC_MFCCObjectSample#19](../../mfc/codesnippet/cpp/diagnostic-services_5.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -273,7 +273,7 @@ DEBUG_NEW を使用するには、ソース ファイルに次のディレクテ
 > [!NOTE]
 >  配置に必要な (4.1 以降) の MFC の以前のバージョンで、 `#define` IMPLEMENT_DYNCREATE または IMPLEMENT_SERIAL マクロと呼ばれるすべてのステートメントの後のステートメント。 これは、必要はなくなりました。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -295,7 +295,7 @@ DEBUG_ONLY マクロでは、周囲に相当*式*で`#ifdef _DEBUG`と`#endif`�
 
 [!code-cpp[NVC_MFC_Utilities#32](../../mfc/codesnippet/cpp/diagnostic-services_6.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -309,6 +309,7 @@ DEBUG_ONLY マクロでは、周囲に相当*式*で`#ifdef _DEBUG`と`#endif`�
 ENSURE(  booleanExpression )
 ENSURE_VALID( booleanExpression  )
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *ブール式*<br/>
@@ -325,7 +326,7 @@ ENSURE_VALID( booleanExpression  )
 ENSURE_VALID は、ASSERT_VALID マクロ (これは、デバッグ ビルドでのみ効果があります) を呼び出します。 さらに、ポインターが NULL の場合、ENSURE_VALID は例外をスローします。 NULL のテストは、デバッグとリリースの両方の構成で実行されます。
 
 これらのテストのいずれかが失敗した場合、アサートと同様に、警告メッセージが表示されます。 マクロは、必要な場合、無効な引数の例外をスローします。
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -361,7 +362,7 @@ static char THIS_FILE[] = __FILE__;
 // compiler recognizes.
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -370,7 +371,6 @@ static char THIS_FILE[] = __FILE__;
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>
 [ASSERT](#assert)<br/>
 [VERIFY](#verify)
-
 
 ##  <a name="trace"></a>  TRACE
 
@@ -389,7 +389,7 @@ MFC のデバッグ バージョンでは、このマクロは、現在のアプ
 
 詳細については、次を参照してください。 [MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -422,7 +422,7 @@ MFC のリリース バージョンで式が評価を確認してくださいが
 
 [!code-cpp[NVC_MFCDocView#198](../../mfc/codesnippet/cpp/diagnostic-services_7.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -446,10 +446,9 @@ Windows NT とすべてのバージョンの Windows、`afxDump`アプリケー�
 
 [!code-cpp[NVC_MFC_Utilities#23](../../mfc/codesnippet/cpp/diagnostic-services_8.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
-
 
 ## <a name="afxdump"></a> AfxDump (内部)
 
@@ -460,6 +459,7 @@ MFC を使用してデバッグ中に、オブジェクトの状態をダンプ�
 ```
 void AfxDump(const CObject* pOb);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *私書箱*<br/>
@@ -471,15 +471,13 @@ void AfxDump(const CObject* pOb);
 
 プログラム コードは呼び出さないでください`AfxDump`、代わりに呼び出す必要がありますが、`Dump`適切なオブジェクトのメンバー関数。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
 ### <a name="see-also"></a>関連項目
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -503,7 +501,7 @@ int  afxMemDF;
 
 [!code-cpp[NVC_MFC_Utilities#30](../../mfc/codesnippet/cpp/diagnostic-services_9.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -530,7 +528,7 @@ throw COleException*
 
 [!code-cpp[NVC_MFCOleContainer#33](../../mfc/codesnippet/cpp/diagnostic-services_10.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -567,7 +565,7 @@ BOOL  AfxCheckMemory();
 
 [!code-cpp[NVC_MFCCObjectSample#26](../../mfc/codesnippet/cpp/diagnostic-services_11.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -590,15 +588,13 @@ void AfxDump(const CObject* pOb);
 
 プログラム コードは呼び出さないでください`AfxDump`、代わりに呼び出す必要がありますが、`Dump`適切なオブジェクトのメンバー関数。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
 ### <a name="see-also"></a>関連項目
 
 [CObject::Dump](cobject-class.md#dump)
-
-
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
@@ -671,7 +667,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 - IMAGEHLP ファイル。DLL は、パスにある必要があります。 この DLL がない、関数により、エラー メッセージが表示されます。 参照してください[イメージ ヘルプ ライブラリ](/windows/desktop/Debug/image-help-library)IMAGEHLP によって提供される関数のセットについてはします。
 
 - スタック フレームがモジュールには、デバッグ情報を含める必要があります。 デバッグ情報を含んでいない、スタック トレースでは、関数によって生成されますが、トレースがあまり詳しく説明。
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -701,7 +697,7 @@ BOOL AFXAPI AfxEnableMemoryLeakDump(BOOL bDump);
 > [!NOTE]
 >  この方法を使用してメモリ リーク ダンプをオフにすると、アプリケーションで有効なメモリ リークのレポートを受け取らなくなります。 この方法を使用するのは、メモリ リーク ダンプに誤ったメモリ リークが含まれているという確信がある場合のみにする必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -735,7 +731,7 @@ BOOL AfxEnableMemoryTracking(BOOL bTrack);
 
 [!code-cpp[NVC_MFC_Utilities#24](../../mfc/codesnippet/cpp/diagnostic-services_12.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -773,7 +769,7 @@ BOOL AfxIsMemoryBlock(
 
 [!code-cpp[NVC_MFC_Utilities#27](../../mfc/codesnippet/cpp/diagnostic-services_13.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -813,7 +809,7 @@ BOOL AfxIsValidAddress(
 
 [!code-cpp[NVC_MFC_Utilities#28](../../mfc/codesnippet/cpp/diagnostic-services_14.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -845,7 +841,7 @@ BOOL  AfxIsValidString(
 
 [!code-cpp[NVC_MFC_Utilities#29](../../mfc/codesnippet/cpp/diagnostic-services_15.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -883,7 +879,7 @@ TRUE の場合は、割り当て、 `CObject`-派生オブジェクト。 それ
 
 呼び出し規約 AFXAPI は、呼び出し先がスタックからパラメーターを削除する必要があります意味に注意してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -919,7 +915,7 @@ AFXAPI AfxDoForAllClasses(
 
 [!code-cpp[NVC_MFCCollections#114](../../mfc/codesnippet/cpp/diagnostic-services_17.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 

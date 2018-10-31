@@ -46,12 +46,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 295749648dd54349c3fa735008ef8c04d51c8e04
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f4c2ad96674058ac57ccdc7cef9537f1cb413b92
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441903"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079702"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory クラス
 
@@ -117,7 +117,7 @@ class COleObjectFactory : public CCmdTarget
 
 `COleObjectFactory`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -131,7 +131,6 @@ COleObjectFactory(
     CRuntimeClass* pRuntimeClass,
     BOOL bMultiInstance,
     LPCTSTR lpszProgID);
-
 
 COleObjectFactory(
     REFCLSID clsid,
@@ -163,7 +162,7 @@ C のランタイム クラスへのポインター オブジェクトをこの�
 
 - `afxRegFreeThreading` スレッド処理モデルを ThreadingModel をレジストリに設定する Free を =。
 
-     2 つのフラグを結合する`afxRegApartmentThreading`と`afxRegFreeThreading`ThreadingModel を設定する = Both。 参照してください[InprocServer32](/windows/desktop/com/inprocserver32)スレッド モデルの登録の詳細については、Windows SDK に含まれています。
+   2 つのフラグを結合する`afxRegApartmentThreading`と`afxRegFreeThreading`ThreadingModel を設定する = Both。 参照してください[InprocServer32](/windows/desktop/com/inprocserver32)スレッド モデルの登録の詳細については、Windows SDK に含まれています。
 
 *lpszProgID*<br/>
 "Excel"などの口頭でのプログラム識別子を含む文字列へのポインター
@@ -349,7 +348,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 
 - **Updateregistry に (** `bRegister` **)** 関数のこの形式はオーバーライド可能な。 場合*bRegister*は TRUE、コントロール クラスのシステム レジストリでこの関数のレジスタです。 それ以外の場合、クラスが登録解除します。
 
-     MFC ActiveX ControlWizard をプロジェクトの作成に使用する場合、ControlWizard には、この純粋仮想関数をオーバーライドが用意されています。
+   MFC ActiveX ControlWizard をプロジェクトの作成に使用する場合、ControlWizard には、この純粋仮想関数をオーバーライドが用意されています。
 
 ##  <a name="updateregistryall"></a>  されます
 

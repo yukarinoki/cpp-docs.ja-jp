@@ -28,12 +28,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5785d06a09c823140362fa4afc6a8b12954e5ac3
-ms.sourcegitcommit: 7f3df9ff0310a4716b8136ca20deba699ca86c6c
+ms.openlocfilehash: 7562f6e5a8915f33b3f2c8bd23ce310e641984c6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/21/2018
-ms.locfileid: "42578161"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057048"
 ---
 # <a name="crt-library-features"></a>CRT ライブラリの機能
 
@@ -65,7 +65,8 @@ vcruntime ライブラリには、例外処理やデバッグ サポートなど
 |vcruntime.lib|vcruntime\<version>.dll|vcruntime 用の DLL インポート ライブラリ。|**/MD**|_MT、_DLL|
 |vcruntimed.lib|vcruntime\<version>d.dll|デバッグ vcruntime 用の DLL インポート ライブラリ。 再頒布可能パッケージではありません。|**/MDd**|_DEBUG、_MT、_DLL|
 
-UCRT リファクタリングが行われたとき、同時実行ランタイムは concrt140.dll に移動されました。これは C++ 再頒布可能パッケージに含まれます。 この DLL は、C++ の並列コンテナーおよびアルゴリズム (`concurrency::parallel_for` など) に必要となります。 さらに、C++ 標準ライブラリでは、同期プリミティブを支援するために、Windows XP でこの DLL を必要とします。Windows XP には条件変数がないためです。
+> [!NOTE]
+> UCRT リファクタリングが行われたとき、同時実行ランタイムは concrt140.dll に移動されました。これは C++ 再頒布可能パッケージに含まれています。 この DLL は、C++ の並列コンテナーおよびアルゴリズム (`concurrency::parallel_for` など) に必要となります。 さらに、C++ 標準ライブラリでは、同期プリミティブを支援するために、Windows XP でこの DLL を必要とします。Windows XP には条件変数がないためです。
 
 CRT を初期化するコードは、CRT ライブラリが静的にリンクされているのか、動的にリンクされているのか、ネイティブ コードなのか、マネージド コードなのか、混合コードなのかによって、複数あるライブラリのいずれかに含まれています。 このコードは、CRT のスタートアップ、内部スレッド単位データ初期化、および強制終了を処理します。 使用されているコンパイラのバージョンによって異なります。 このライブラリは、動的にリンクされた UCRT が使用されている場合でも、常に静的にリンクされます。
 
@@ -122,7 +123,6 @@ C ランタイム ライブラリを指定するコンパイラ オプション�
 また、プロセス内のすべてのイメージで同じバージョンの CRT が動的に読み込まれる場合は、これらの問題を一部回避することもできます。 すべてのコンポーネントで CRT の同じ DLL バージョンを使用するには、**/MD** オプションを指定してビルドし、同じコンパイラ ツールセットとプロパティ設定を使用します。
 
 プログラムで DLL の境界を超えて特定の CRT リソース (ファイル ハンドル、ロケール、環境変数など) を渡す場合には、同じバージョンの CRT を使用する場合であっても、注意する必要があります。 発生する可能性のある問題とその対処法の詳細については、「[DLL の境界を越えて CRT オブジェクトを渡す場合に発生する可能性のあるエラー](../c-runtime-library/potential-errors-passing-crt-objects-across-dll-boundaries.md)」を参照してください。
-
 
 ## <a name="see-also"></a>関連項目
 

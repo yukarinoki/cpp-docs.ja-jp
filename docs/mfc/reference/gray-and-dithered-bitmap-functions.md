@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bd0a0a25e1607b3b4318fdfca1f68f272cd02173
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 01bd722dad7e09e52990d46d1c7666cdb939118c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380192"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064128"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>淡色表示 (灰色) ビットマップ関数とディザリングされたビットマップ関数
 
@@ -90,7 +90,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 [!code-cpp[NVC_MFCDocView#191](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_1.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -126,7 +126,7 @@ void AFXAPI AfxGetGrayBitmap(
 
 [!code-cpp[NVC_MFCDocView#193](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_2.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -174,10 +174,9 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 [!code-cpp[NVC_MFCDocView#190](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_3.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
-
 
 ##  <a name="afxgetditheredbitmap"></a>  AfxGetDitheredBitmap
 
@@ -215,7 +214,7 @@ void AFXAPI AfxGetDitheredBitmap(
 
 [!code-cpp[NVC_MFCDocView#192](../../mfc/codesnippet/cpp/gray-and-dithered-bitmap-functions_4.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 

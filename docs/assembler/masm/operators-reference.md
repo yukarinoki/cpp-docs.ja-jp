@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e4708af3c0fa272a1ca803f549ce8953caccaa27
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 5c9f5beb0e3525de6df88e44248410810502962e
+ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43688177"
+ms.lasthandoff: 10/19/2018
+ms.locfileid: "49459154"
 ---
 # <a name="masm-operators-reference"></a>MASM 演算子リファレンス
 
@@ -36,7 +36,7 @@ ms.locfileid: "43688177"
 
 ||||
 |-|-|-|
-|[!(ランタイム論理 not)](operator-logical-not-masm-run-time.md)|[! = (等しくないランタイム)](operator-not-equal-masm.md)|[&#124;&#124;(論理ランタイムまたは)](operator-logical-or.md)|
+|[\! (ランタイム論理 not)](operator-logical-not-masm-run-time.md)|[\!= (等しくないランタイム)](operator-not-equal-masm.md)|[&#124;&#124;(論理ランタイムまたは)](operator-logical-or.md)|
 |[& & (論理ランタイムと)](operator-logical-and-masm-run-time.md)|[< (ランタイム未満)](operator-less-than-masm-run-time.md)|[\<= (以下のランタイム)](operator-less-or-equal-masm-run-time.md)|
 |[(ランタイムと等しい) = =](operator-equal-masm-run-time.md)|[> (より大きいランタイム)](operator-greater-than-masm-run-time.md)|[> = (ランタイム大きいまたは等しい)](operator-greater-or-equal-masm-run-time.md)|
 |[& (ビットごとのランタイムと)](operator-bitwise-and.md)|||
@@ -54,7 +54,7 @@ ms.locfileid: "43688177"
 
 ||||
 |-|-|-|
-|[!(文字リテラル)](operator-logical-not-masm.md)|[% (テキストとして扱う)](operator-percent.md)||
+|[\! (文字リテラル)](operator-logical-not-masm.md)|[% (テキストとして扱う)](operator-percent.md)||
 |[;;(コメントとして扱う)](operator-semicolons.md)|[&lt; &gt; (1 つのリテラルとして扱う)](operator-literal.md)|[& & (パラメーターの値を置き換えてください)](operator-logical-and-masm.md)|
 
 ## <a name="miscellaneous"></a>その他

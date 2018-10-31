@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 10b87f57daaf510252fe6f07dc3ba2d9d0a8650d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630cdd1614aa19ec3a5a654d7dc4bfe7336ce027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409339"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50080586"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>CArchive オブジェクトを作成する 2 つの方法
 
@@ -66,9 +66,9 @@ ms.locfileid: "46409339"
 
 1. 渡す、`CFile`オブジェクトのコンス トラクターを`CArchive`次の例のように。
 
-     [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#5](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_1.cpp)]
 
-     2 番目の引数、`CArchive`コンス トラクターは、ファイルの格納またはデータの読み込みのアーカイブを使用するかどうかを指定する列挙値。 `Serialize`オブジェクトの関数が呼び出すことによってこの状態をチェック、`IsStoring`アーカイブ オブジェクトの関数。
+   2 番目の引数、`CArchive`コンス トラクターは、ファイルの格納またはデータの読み込みのアーカイブを使用するかどうかを指定する列挙値。 `Serialize`オブジェクトの関数が呼び出すことによってこの状態をチェック、`IsStoring`アーカイブ オブジェクトの関数。
 
 格納するかからのデータの読み込みが完了したら、`CArchive`オブジェクトを閉じます。 ただし、 `CArchive` (と`CFile`) アーカイブ (およびファイル) のオブジェクトが自動的に閉じ、エラーからの復旧に簡単には、明示的にそのためことをお勧めします。 エラー処理の詳細については、記事を参照してください。[例外。 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
 
@@ -76,7 +76,7 @@ ms.locfileid: "46409339"
 
 1. 次の例では、終了する方法を示しています、`CArchive`オブジェクト。
 
-     [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#6](../mfc/codesnippet/cpp/two-ways-to-create-a-carchive-object_2.cpp)]
 
 ## <a name="see-also"></a>関連項目
 

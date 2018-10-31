@@ -116,12 +116,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e29583218feeff997d30bfa2b16d35be45b25249
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5963bdd004bfbd242e00e8adac274f33949b08ec
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436300"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082415"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite クラス
 
@@ -219,7 +219,7 @@ class COleControlSite : public CCmdTarget
 
 `COleControlSite`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxocc.h
 
@@ -307,7 +307,6 @@ virtual HRESULT CreateControl(
     CFile* pPersist = NULL,
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
-
 
 virtual HRESULT CreateControl(
     CWnd* pWndCtrl,
@@ -573,7 +572,7 @@ virtual void GetProperty(
 コントロールの既定の検索、プロパティのディスパッチ ID を識別する`IDispatch`インターフェイスを取得します。
 
 *vtProp*<br/>
-取得するプロパティの型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+取得するプロパティの型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *pvProp*<br/>
 プロパティの値を受け取る変数のアドレス。 指定された型に一致する必要があります*vtProp*します。
@@ -637,13 +636,13 @@ virtual void AFX_CDECL InvokeHelper(
 Idispatch::invoke への呼び出しのコンテキストを記述するフラグ。 可能性があるのため*wflags が*値を参照してください`IDispatch::Invoke`Windows SDK に含まれています。
 
 *変数*<br/>
-戻り値の型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+戻り値の型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *pvRet*<br/>
 プロパティ値または戻り値を受け取る変数のアドレス。 指定された型に一致する必要があります*変数*します。
 
 *pbParamInfo*<br/>
-次のパラメーターの型を指定するバイトの null で終わる文字列へのポインター *pbParamInfo*します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+次のパラメーターの型を指定するバイトの null で終わる文字列へのポインター *pbParamInfo*します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *...*<br/>
 パラメーターで指定された型の変数一覧*pbParamInfo*します。
@@ -652,7 +651,7 @@ Idispatch::invoke への呼び出しのコンテキストを記述するフラ�
 
 *PbParamInfo*パラメーターがメソッドまたはプロパティに渡されるパラメーターの型を指定します。 可変個引数リストは、構文宣言で... によってを表されます。
 
-この関数は VARIANTARG 値にパラメーターを変換し、呼び出す、`IDispatch::Invoke`コントロールのメソッド。 場合に呼び出し`IDispatch::Invoke`失敗した場合、この関数には、例外がスローされます。 によって、状態コードが返される場合`IDispatch::Invoke`は`DISP_E_EXCEPTION`、この関数がスローされます、`COleDispatchException`オブジェクトがスローされますが、それ以外の場合、 `COleException`。
+この関数は VARIANTARG 値にパラメーターを変換し、呼び出す、`IDispatch::Invoke`コントロールのメソッド。 `IDispatch::Invoke` の呼び出しに失敗すると、この関数は、例外をスローします。 によって、状態コードが返される場合`IDispatch::Invoke`は`DISP_E_EXCEPTION`、この関数がスローされます、`COleDispatchException`オブジェクトがスローされますが、それ以外の場合、 `COleException`。
 
 ##  <a name="invokehelperv"></a>  COleControlSite::InvokeHelperV
 
@@ -677,13 +676,13 @@ virtual void InvokeHelperV(
 Idispatch::invoke への呼び出しのコンテキストを記述するフラグ。
 
 *変数*<br/>
-戻り値の型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+戻り値の型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *pvRet*<br/>
 プロパティ値または戻り値を受け取る変数のアドレス。 指定された型に一致する必要があります*変数*します。
 
 *pbParamInfo*<br/>
-次のパラメーターの型を指定するバイトの null で終わる文字列へのポインター *pbParamInfo*します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+次のパラメーターの型を指定するバイトの null で終わる文字列へのポインター *pbParamInfo*します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *argList*<br/>
 可変個引数リストへのポインター。
@@ -1010,7 +1009,7 @@ virtual BOOL AFX_CDECL SafeSetProperty(
 プロパティまたはコントロールのメソッドのディスパッチ ID を識別`IDispatch`インターフェイスを設定します。
 
 *vtProp*<br/>
-設定するプロパティの型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+設定するプロパティの型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *...*<br/>
 1 つのパラメーターで指定された型の*vtProp*します。
@@ -1095,7 +1094,7 @@ virtual void AFX_CDECL SetProperty(
 プロパティまたはコントロールのメソッドのディスパッチ ID を識別`IDispatch`インターフェイスを設定します。
 
 *vtProp*<br/>
-設定するプロパティの型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+設定するプロパティの型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *...*<br/>
 1 つのパラメーターで指定された型の*vtProp*します。
@@ -1123,7 +1122,7 @@ virtual void SetPropertyV(
 プロパティまたはコントロールのメソッドのディスパッチ ID を識別`IDispatch`インターフェイスを設定します。
 
 *vtProp*<br/>
-設定するプロパティの型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+設定するプロパティの型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *argList*<br/>
 引数リストへのポインター。

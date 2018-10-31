@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 00dadde438af1b4de820316dd4dc50e773827aca
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 635edd00fbb7126b9d4d87615321387867b2978c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107525"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063199"
 ---
 # <a name="using-idispeventsimpleimpl"></a>Idispeventsimpleimpl の使用
 
@@ -43,7 +43,7 @@ ms.locfileid: "46107525"
 
 次の例は、処理する方法を示します、`DocumentChange`によって Word のイベントが発生した**アプリケーション**オブジェクト。 このイベントは、メソッドとしてで定義されている、`ApplicationEvents`ディスパッチ インターフェイス。
 
-例は、[コード](../visual-cpp-samples.md)します。  
+例は、[コード](../visual-cpp-samples.md)します。
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]

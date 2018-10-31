@@ -1,17 +1,19 @@
 ---
 title: try-finally ステートメント |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __try
+- _try
 - __leave_cpp
 - __leave
 - __finally_cpp
 - __try_cpp
 - __finally
+- _finally
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -28,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: df3519cac370ac7595e0789eeab43c6488120fc8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4040f5a05f8c9bccfbf1c8b48a40188f684d48ad
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024243"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060014"
 ---
 # <a name="try-finally-statement"></a>try-finally ステートメント
 
@@ -42,7 +44,7 @@ ms.locfileid: "46024243"
 次の構文について説明します、 **、try-finally**ステートメント。
 
 ```cpp
-__try {
+__try {
    // guarded code
 }
 __finally {
@@ -71,7 +73,7 @@ __finally {
 
 1. 後に実行が続行、終了ハンドラーが完了したら、 **_ _finally**ステートメント。 セクションが終了を保護する方法にかかわらず (経由など、 **goto**本体外のまたは**返す**ステートメント)、終了ハンドラーが実行される*する前に*制御フローが保護されたセクション外へ移動します。
 
-     A **_ _finally**ステートメントは、適切な例外ハンドラーの検索をブロックしません。
+   A **_ _finally**ステートメントは、適切な例外ハンドラーの検索をブロックしません。
 
 例外が発生した場合、 **_ _try**ブロック、例外のハンドラーを見つける必要があります、オペレーティング システムまたはプログラムは失敗します。 ハンドラーが見つかった場合、すべて **_ _finally**ブロックが実行され、ハンドラーの実行が再開します。
 
@@ -81,6 +83,8 @@ __finally {
 
 > [!NOTE]
 >  Try-finally の動作の使用をサポートする他の言語とは異なります**最後に**、c# など。  1 つ **_ _try**の両方ではなくが、必要があります **_ _finally**と **_ _except**します。  両方を一緒に使用する場合は、外側の try-except ステートメントで内側の try-finally ステートメントを囲む必要があります。  各ブロックがいつ実行されるかを指定する規則も異なります。
+
+以前のバージョンとの互換性のため **_try**、 **_finally**、および **_leave**のシノニムで **_ _try**、 **_ _最後に**と **_ _leave**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
 ## <a name="the-leave-keyword"></a>__leave キーワード
 

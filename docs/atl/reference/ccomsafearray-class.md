@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 411b8f58b38d2b35c1353d1ff446407026977d66
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6537cdb9e7ff9806bef3bfec85a94e0d50808477
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030145"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078467"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray クラス
 
@@ -100,7 +100,7 @@ class CComSafeArray
 |----------|-----------------|
 |[CComSafeArray::operator LPSAFEARRAY](#operator_lpsafearray)|値にキャスト、`SAFEARRAY`ポインター。|
 |[CComSafeArray::operator\[\]](ccomsafearray-class.md#operator_at)|配列から要素を取得します。|
-|[CComSafeArray::operator =](#operator_eq)|代入演算子。|  
+|[CComSafeArray::operator =](#operator_eq)|代入演算子。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -110,7 +110,7 @@ class CComSafeArray
 
 ## <a name="remarks"></a>Remarks
 
-`CComSafeArray` ラッパーを提供、 [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)クラスを簡単に作成し、ほぼすべてのバリアント サポート型の 1 次元または多次元の配列を管理できるようにします。
+`CComSafeArray` は、 [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray) クラスのラッパーを提供して、ほぼすべてのバリアント サポート型の 1 次元配列と多次元配列を簡単に作成および管理できるようにします。
 
 `CComSafeArray` によりプロセス間での配列の受け渡しが単純化され、配列インデックスの値を上限と下限に照合することでセキュリティがさらに向上します。
 
@@ -138,7 +138,7 @@ class CComSafeArray
 |VT_VARIANT|バリアント ポインター|
 |VT_CY|Currency データ型|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsafe.h
 
@@ -159,7 +159,7 @@ HRESULT Add(const T& t, BOOL bCopy = TRUE);
 ### <a name="parameters"></a>パラメーター
 
 *psaSrc*<br/>
-ポインターを`SAFEARRAY`オブジェクト。
+`SAFEARRAY` オブジェクトへのポインター。
 
 *ulCount*<br/>
 配列に追加するオブジェクトの数。
@@ -311,7 +311,7 @@ HRESULT Create(ULONG ulCount = 0, LONG lLBound = 0);
 ### <a name="parameters"></a>パラメーター
 
 *pBound*<br/>
-ポインターを`SAFEARRAYBOUND`オブジェクト。
+`SAFEARRAYBOUND` オブジェクトへのポインター。
 
 *uDims*<br/>
 配列の次元の数。
@@ -597,7 +597,7 @@ ATL::CComSafeArray<T>& operator=(const SAFEARRAY* psaSrc);
 `CComSafeArray` オブジェクトへの参照。
 
 *psaSrc*<br/>
-ポインターを`SAFEARRAY`オブジェクト。
+`SAFEARRAY` オブジェクトへのポインター。
 
 ### <a name="return-value"></a>戻り値
 

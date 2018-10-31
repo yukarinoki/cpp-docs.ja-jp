@@ -78,150 +78,150 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 7a2eaaf273bb2c0ae4f3ab297fe444a41e81c873
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: aef24c5c55bc3a3250c483536d0a63f967608b20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058062"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064336"
 ---
 # <a name="cbookmark-class"></a>CBookmark クラス
 
-バッファーには、ブックマークの値を保持します。  
-  
+バッファーには、ブックマークの値を保持します。
+
 ## <a name="syntax"></a>構文
 
 ```cpp
-template < DBLENGTH nSize = 0 >  
+template < DBLENGTH nSize = 0 >
 class CBookmark : public CBookmarkBase
-  
-template <>  
-class CBookmark< 0 > : public CBookmarkBase  
-```  
-  
-### <a name="parameters"></a>パラメーター  
+
+template <>
+class CBookmark< 0 > : public CBookmarkBase
+```
+
+### <a name="parameters"></a>パラメーター
 
 *nSize*<br/>
-ブックマーク バッファーのバイト単位のサイズ。 ときに*nSize* 0 の場合は、実行時に、ブックマークのバッファーを動的に作成されます。  
+ブックマーク バッファーのバイト単位のサイズ。 ときに*nSize* 0 の場合は、実行時に、ブックマークのバッファーを動的に作成されます。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atldbcli.h  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="methods"></a>メソッド  
-  
-|||  
-|-|-|  
-|[CBookmark](#cbookmark)|コンス トラクター|  
-|[GetBuffer](#getbuffer)|バッファーへのポインターを取得します。|  
-|[GetSize](#getsize)|バッファーのバイト単位のサイズを取得します。|  
-|[SetBookmark](#setbookmark)|ブックマークの値を設定します。|  
-  
-### <a name="operators"></a>演算子  
-  
-|||  
-|-|-|  
-|[演算子 =](#operator)|1 つ割り当てます`CBookmark`を別のクラス。|  
-  
-## <a name="remarks"></a>Remarks  
+**ヘッダー:** atldbcli.h
 
-`CBookmark<0>` テンプレート特殊化した`CBookmark`; 実行時に、バッファーが動的に作成します。  
+## <a name="members"></a>メンバー
+
+### <a name="methods"></a>メソッド
+
+|||
+|-|-|
+|[CBookmark](#cbookmark)|コンス トラクター|
+|[GetBuffer](#getbuffer)|バッファーへのポインターを取得します。|
+|[GetSize](#getsize)|バッファーのバイト単位のサイズを取得します。|
+|[SetBookmark](#setbookmark)|ブックマークの値を設定します。|
+
+### <a name="operators"></a>演算子
+
+|||
+|-|-|
+|[演算子 =](#operator)|1 つ割り当てます`CBookmark`を別のクラス。|
+
+## <a name="remarks"></a>Remarks
+
+`CBookmark<0>` テンプレート特殊化した`CBookmark`; 実行時に、バッファーが動的に作成します。
 
 ## <a name="cbookmark"></a> Cbookmark::cbookmark
 
-コンストラクターです。  
-  
-### <a name="syntax"></a>構文  
-  
+コンストラクターです。
+
+### <a name="syntax"></a>構文
+
 ```cpp
 CBookmark();
-   
-CBookmark(DBLENGTH nSize);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+ 
+CBookmark(DBLENGTH nSize);
+```
+
+#### <a name="parameters"></a>パラメーター
 
 *nSize*<br/>
-[in]ブックマーク バッファーのバイト単位のサイズ。  
-  
-### <a name="remarks"></a>Remarks  
+[in]ブックマーク バッファーのバイト単位のサイズ。
 
-最初の関数では、バッファーを NULL とバッファー サイズを 0 に設定します。 2 番目の関数では、バッファー サイズを設定*nSize*、およびバッファーのバイト配列を*nSize*バイト。  
-  
+### <a name="remarks"></a>Remarks
+
+最初の関数では、バッファーを NULL とバッファー サイズを 0 に設定します。 2 番目の関数では、バッファー サイズを設定*nSize*、およびバッファーのバイト配列を*nSize*バイト。
+
 > [!NOTE]
->  この関数はのみ`CBookmark<0>`します。 
-  
+>  この関数はのみ`CBookmark<0>`します。
+
 ## <a name="getbuffer"></a> Cbookmark::getbuffer
 
-ブックマーク バッファーへのポインターを取得します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-virtual BYTE* GetBuffer() const throw();  
-```  
-  
-### <a name="return-value"></a>戻り値  
+ブックマーク バッファーへのポインターを取得します。
 
-ブックマーク バッファーへのポインター。 
+### <a name="syntax"></a>構文
+
+```cpp
+virtual BYTE* GetBuffer() const throw();
+```
+
+### <a name="return-value"></a>戻り値
+
+ブックマーク バッファーへのポインター。
 
 ## <a name="getsize"></a> Cbookmark::getsize
 
-ブックマークのバッファーのサイズを取得します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-virtual DBLENGTH GetSize() const throw();  
-```  
-  
-### <a name="return-value"></a>戻り値  
+ブックマークのバッファーのサイズを取得します。
 
-バッファーのサイズ (バイト単位)。  
+### <a name="syntax"></a>構文
+
+```cpp
+virtual DBLENGTH GetSize() const throw();
+```
+
+### <a name="return-value"></a>戻り値
+
+バッファーのサイズ (バイト単位)。
 
 ## <a name="setbookmark"></a> Cbookmark::setbookmark
 
-によって参照されるブックマークの値をコピー *pBuffer*を`CBookmark`バッファーおよびバッファー サイズを設定します*nSize*します。  
-  
-### <a name="syntax"></a>構文  
-  
+によって参照されるブックマークの値をコピー *pBuffer*を`CBookmark`バッファーおよびバッファー サイズを設定します*nSize*します。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+HRESULT SetBookmark(DBLENGTH nSize, BYTE* pBuffer) throw();
+```
+
+#### <a name="parameters"></a>パラメーター
 
 *nSize*<br/>
-[in]ブックマークのバッファーのサイズ。  
-  
+[in]ブックマークのバッファーのサイズ。
+
 *pBuffer*<br/>
-[in]ブックマークの値を格納するバイト配列へのポインター。  
-  
-### <a name="return-value"></a>戻り値  
+[in]ブックマークの値を格納するバイト配列へのポインター。
 
-標準の HRESULT です。  
-  
-### <a name="remarks"></a>Remarks  
+### <a name="return-value"></a>戻り値
 
-この関数はのみ`CBookmark<0>`します。 
+標準の HRESULT です。
+
+### <a name="remarks"></a>Remarks
+
+この関数はのみ`CBookmark<0>`します。
 
 ## <a name="operator"></a> Cbookmark::operator =
 
-割り当てます、`CBookmark`を別のオブジェクト。  
-  
-### <a name="syntax"></a>構文  
-  
+割り当てます、`CBookmark`を別のオブジェクト。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-CBookmark& operator =(const CBookmark& bookmark) throw();  
-```  
-  
-### <a name="remarks"></a>Remarks  
+CBookmark& operator =(const CBookmark& bookmark) throw();
+```
 
-この演算子はのみに必要な`CBookmark<0>`します。   
+### <a name="remarks"></a>Remarks
 
-## <a name="see-also"></a>関連項目  
+この演算子はのみに必要な`CBookmark<0>`します。
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

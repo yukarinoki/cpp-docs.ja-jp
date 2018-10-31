@@ -13,12 +13,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a9eb820b533b74d5634695ddabda26f081a35f95
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8065be6cc53cad04d5d52bea91da05bb3125dd63
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436924"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162569"
 ---
 # <a name="concurrency-namespace-operators"></a>concurrency 名前空間演算子
 
@@ -151,7 +151,7 @@ inline bool operator== (
 
 ### <a name="return-value"></a>戻り値
 
-`true` 演算子の左側にある同時実行ベクターは、演算子の右側にある同時実行ベクターに等しい場合それ以外の場合`false`します。
+**true**演算子の左側にある同時実行ベクターが演算子の右側にある同時実行ベクターそれ以外の場合**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -189,7 +189,7 @@ inline bool operator!= (
 
 ### <a name="return-value"></a>戻り値
 
-`true` 同時実行ベクターが等しくない場合`false`同時実行のベクトルが等しい場合。
+**true**同時実行ベクターが等しくない場合**false**同時実行のベクトルが等しい場合。
 
 ### <a name="remarks"></a>Remarks
 
@@ -227,7 +227,7 @@ inline bool operator<(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 演算子の左側にある同時実行ベクターが、同時実行ベクターは、演算子の右側にあるより小さい場合それ以外の場合`false`します。
+**true**演算子の左側にある同時実行ベクターが、同時実行ベクターは、演算子の右側にあるより小さい場合それ以外の場合**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -265,7 +265,7 @@ inline bool operator<= (
 
 ### <a name="return-value"></a>戻り値
 
-`true` 演算子の左側にある同時実行ベクターが、同時実行ベクターは、演算子の右側にある以下の場合それ以外の場合`false`します。
+**true**演算子の左側にある同時実行ベクター、または、同時実行ベクター演算子の右辺と等しいそれ以外の場合**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -303,7 +303,7 @@ inline bool operator>(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 演算子の左側にある同時実行ベクターが、同時実行ベクターは、演算子の右側にあるより大きい場合それ以外の場合`false`します。
+**true**演算子の左側にある同時実行ベクターがそれ以外の演算子の右側にある同時実行ベクターより大きい場合**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -341,7 +341,7 @@ inline bool operator>= (
 
 ### <a name="return-value"></a>戻り値
 
-`true` 演算子の左側にある同時実行ベクターが、同時実行ベクターは、演算子の右側にある以上の場合それ以外の場合`false`します。
+**true**演算子の左側にある同時実行ベクターがより大きいまたは演算子の右側にある同時実行ベクターと等しいそれ以外の場合**false**します。
 
 ### <a name="remarks"></a>Remarks
 

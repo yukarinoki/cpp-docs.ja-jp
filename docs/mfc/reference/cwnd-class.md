@@ -828,12 +828,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6cbe2269bfe4a67ba4e8c6952980216fce92165f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f619eeba8f239b145ceb44485a9cc1eadd2cc82d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448611"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083608"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -1305,7 +1305,7 @@ Microsoft Foundation Class ライブラリでは、固有のウィンドウ タ�
 
 `CWnd`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -1662,7 +1662,7 @@ void BringWindowToTop();
 
 また、`BringWindowToTop` により、ポップアップ ウィンドウ、トップレベル ウィンドウ、および MDI 子ウィンドウがアクティブになります。 `BringWindowToTop` メンバー関数は、重なったウィンドウによって部分的または完全に隠されているウィンドウを表示する場合に使用します。
 
-この関数では、Win32 呼び出します[BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673\(v=vs.85\).aspx)関数。 呼び出す、 [SetWindowPos](#setwindowpos) Z オーダーでウィンドウの位置を変更する関数。 `BringWindowToTop` 関数では、ウィンドウ スタイルが変更され、そのウィンドウがトップレベル ウィンドウになることはありません。 詳細については、次を参照してください[HWND_TOP と HWND_TOPMOST の違い。](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+この関数では、Win32 呼び出します[BringWindowToTop](https://msdn.microsoft.com/library/windows/desktop/ms632673)関数。 呼び出す、 [SetWindowPos](#setwindowpos) Z オーダーでウィンドウの位置を変更する関数。 `BringWindowToTop` 関数では、ウィンドウ スタイルが変更され、そのウィンドウがトップレベル ウィンドウになることはありません。 詳細については、次を参照してください[HWND_TOP と HWND_TOPMOST の違い。](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>例
 
@@ -2035,7 +2035,6 @@ BOOL CreateControl(
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
 
-
 BOOL CreateControl(
     REFCLSID clsid,
     LPCTSTR pszWindowName,
@@ -2046,7 +2045,6 @@ BOOL CreateControl(
     CFile* pPersist = NULL,
     BOOL bStorage = FALSE,
     BSTR bstrLicKey = NULL);
-
 
 BOOL CreateControl(
     REFCLSID clsid,
@@ -2140,7 +2138,6 @@ virtual BOOL CreateEx(
     HWND hWndParent,
     HMENU nIDorHMenu,
     LPVOID lpParam = NULL);
-
 
 virtual BOOL CreateEx(
     DWORD dwExStyle,
@@ -3207,7 +3204,7 @@ Windows のウィンドウの HWND。
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを`CWnd`オブジェクト。
+`CWnd` オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4417,7 +4414,7 @@ CWnd* GetOwner() const;
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを`CWnd`オブジェクト。
+`CWnd` オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4467,7 +4464,7 @@ CWnd* GetParentOwner() const;
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを`CWnd`オブジェクト。 `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
+`CWnd` オブジェクトへのポインター。 `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4492,7 +4489,7 @@ void GetProperty(
 取得するプロパティを識別します。
 
 *vtProp*<br/>
-取得するプロパティの型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+取得するプロパティの型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *pvProp*<br/>
 プロパティの値を変数のアドレスが表示されます。 指定された型に一致する必要があります*vtProp*します。
@@ -5363,7 +5360,7 @@ void AFX_CDECL InvokeHelper(
 呼び出しのコンテキストを記述するフラグ`IDispatch::Invoke`します。
 
 *変数*<br/>
-戻り値の型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+戻り値の型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *pvRet*<br/>
 される変数のアドレスは、プロパティ値を受け取る、または戻り値。 指定された型に一致する必要があります*変数*します。
@@ -5376,9 +5373,9 @@ void AFX_CDECL InvokeHelper(
 
 ### <a name="remarks"></a>Remarks
 
-*PbParamInfo*パラメーターがメソッドまたはプロパティに渡されるパラメーターの型を指定します。 引数の変数の一覧については、表さ *.* 構文宣言でします。
+*PbParamInfo*パラメーターがメソッドまたはプロパティに渡されるパラメーターの型を指定します。 引数の変数一覧は、構文宣言では、 *...* で表されます。
 
-この関数は VARIANTARG 値にパラメーターを変換し、呼び出す、 `IDispatch::Invoke` ActiveX コントロールのメソッド。 場合に呼び出し`IDispatch::Invoke`失敗した場合、この関数には、例外がスローされます。 SCODE (状態コード) がによって返される場合`IDispatch::Invoke`DISP_E_EXCEPTION は、この関数がスローされます、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクトがスローされますが、それ以外の場合、 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
+この関数は VARIANTARG 値にパラメーターを変換し、呼び出す、 `IDispatch::Invoke` ActiveX コントロールのメソッド。 `IDispatch::Invoke` の呼び出しに失敗すると、この関数は、例外をスローします。 SCODE (状態コード) がによって返される場合`IDispatch::Invoke`DISP_E_EXCEPTION は、この関数がスローされます、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクトがスローされますが、それ以外の場合、 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
 
 > [!NOTE]
 > この関数でのみ呼び出す必要があります、 `CWnd` ActiveX コントロールを表すオブジェクト。
@@ -5816,7 +5813,6 @@ void MoveWindow(
     int nWidth,
     int nHeight,
     BOOL bRepaint = TRUE);
-
 
 void MoveWindow(
     LPCRECT lpRect,
@@ -8805,7 +8801,7 @@ afx_msg void OnPaintClipboard(
 クリップボード アプリケーション ウィンドウへのポインターを指定します。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
 *hPaintStruct*<br/>
-識別、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)の描画にクライアント領域のどの部分を定義するデータ構造。
+クライアント領域のどの部分を描画するかを定義する [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) データ構造を識別します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -10602,7 +10598,7 @@ virtual void PreSubclassWindow();
 
 ##  <a name="pretranslatemessage"></a>  CWnd::PreTranslateMessage
 
-クラスによって使用される[CWinApp](../../mfc/reference/cwinapp-class.md)にディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。
+[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) で使用されます。
 
 ```
 virtual BOOL PreTranslateMessage(MSG* pMsg);
@@ -11592,7 +11588,7 @@ void AFX_CDECL SetProperty(
 設定するプロパティを識別します。
 
 *vtProp*<br/>
-設定するプロパティの型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)します。
+設定するプロパティの型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *...*<br/>
 1 つのパラメーターで指定された型の*vtProp*します。

@@ -34,12 +34,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0b10004551a594d6f969ffaf7893cd2e7efe2d76
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bc91a98d1909245e09268cc7129084392a4c096
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396558"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076257"
 ---
 # <a name="cmfcribboncheckbox-class"></a>CMFCRibbonCheckBox クラス
 
@@ -66,10 +66,10 @@ class CMFCRibbonCheckBox : public CMFCRibbonButton
 |[CMFCRibbonCheckBox::GetCompactSize](#getcompactsize)|(上書き[cmfcribbonbutton::getcompactsize](../../mfc/reference/cmfcribbonbutton-class.md#getcompactsize))。|
 |[CMFCRibbonCheckBox::GetIntermediateSize](#getintermediatesize)|(上書き[cmfcribbonbutton::getintermediatesize](../../mfc/reference/cmfcribbonbutton-class.md#getintermediatesize))。|
 |[CMFCRibbonCheckBox::GetRegularSize](#getregularsize)|(上書き[cmfcribbonbutton::getregularsize](../../mfc/reference/cmfcribbonbutton-class.md#getregularsize))。|
-|[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|(`CMFCRibbonButton::IsDrawTooltipImage` をオーバーライドします)。|
+|[CMFCRibbonCheckBox::IsDrawTooltipImage](#isdrawtooltipimage)|( `CMFCRibbonButton::IsDrawTooltipImage`をオーバーライドします)。|
 |[CMFCRibbonCheckBox::OnDraw](#ondraw)|(上書き[cmfcribbonbutton::ondraw](../../mfc/reference/cmfcribbonbutton-class.md#ondraw))。|
 |[CMFCRibbonCheckBox::OnDrawMenuImage](#ondrawmenuimage)|(上書き[cmfcribbonbaseelement::ondrawmenuimage](../../mfc/reference/cmfcribbonbaseelement-class.md#ondrawmenuimage))。|
-|[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|(`CMFCRibbonButton::OnDrawOnList` をオーバーライドします)。|
+|[CMFCRibbonCheckBox::OnDrawOnList](#ondrawonlist)|( `CMFCRibbonButton::OnDrawOnList`をオーバーライドします)。|
 |[CMFCRibbonCheckBox::SetACCData](#setaccdata)|(上書き[cmfcribbonbutton::setaccdata](../../mfc/reference/cmfcribbonbutton-class.md#setaccdata))。|
 
 ## <a name="remarks"></a>Remarks
@@ -93,7 +93,7 @@ CMFCRibbonCheckBox (UINT nID, LPCTSTR lpszText)
 
 [CMFCRibbonCheckBox](../../mfc/reference/cmfcribboncheckbox-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxribboncheckbox.h
 
@@ -227,7 +227,8 @@ virtual BOOL OnDrawMenuImage(CDC*, CRect);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*CDC** チェック ボックスに関連付けられている CDC へのポインター。
+[in]*CDC&#42;*<br/>
+チェック ボックスに関連付けられている CDC へのポインター。
 
 *CRect*<br/>
 [in]A`CRect`メニュー画像を描画する四角形を指定するオブジェクト。

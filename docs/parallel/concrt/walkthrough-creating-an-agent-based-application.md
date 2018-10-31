@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 68c4b389bdd8f1121a59bce1a0ca8942f077e062
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 41ae491a851d2e9a21a57ce35a54590323060881
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377170"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070596"
 ---
 # <a name="walkthrough-creating-an-agent-based-application"></a>チュートリアル: エージェント ベースのアプリケーションの作成
 
@@ -64,7 +64,7 @@ ms.locfileid: "46377170"
 
 [!code-cpp[concrt-basic-agent#1](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_1.h)]
 
-     The header file agents.h contains the functionality of the [concurrency::agent](../../parallel/concrt/reference/agent-class.md) class.
+   Agents.h ヘッダー ファイルの機能が含まれています、 [concurrency::agent](../../parallel/concrt/reference/agent-class.md)クラス。
 
 1. アプリケーションをビルドして実行することにより、アプリケーションが正常に作成されたことを確認します。 アプリケーションを構築する、**ビルド** メニューのをクリックして**ソリューションのビルド**します。 アプリケーションが正常にビルドする場合をクリックしてアプリケーションを実行**デバッグの開始**上、**デバッグ**メニュー。
 
@@ -90,19 +90,19 @@ ms.locfileid: "46377170"
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-     The `_file_name` member is the file name that the agent reads from. The `_target` member is a [concurrency::ITarget](../../parallel/concrt/reference/itarget-class.md) object that the agent writes the contents of the file to. The `_error` member holds any error that occurs during the life of the agent.
+   `_file_name` メンバーは、エージェントが読み取る対象のファイル名です。 `_target`メンバーは、 [concurrency::itarget](../../parallel/concrt/reference/itarget-class.md)オブジェクト、エージェントが、ファイルの内容を書き込みます。 `_error` メンバーでは、エージェントの有効期間中に発生したエラーを保持します。
 
 1. `file_reader` クラスの `public` セクションに `file_reader` コンストラクターの次のコードを追加します。
 
 [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
 
-     Each constructor overload sets the `file_reader` data members. The second and third constructor overload enables your application to use a specific scheduler with your agent. The first overload uses the default scheduler with your agent.
+   各コンストラクター オーバーロードによって、`file_reader` データ メンバーが設定されます。 2 番目と 3 番目のコンストラクター オーバーロードによって、アプリケーションでエージェントに対して特定のスケジューラを使用できるようにします。 最初のオーバーロードでは、エージェントに対して既定のスケジューラを使用します。
 
 1. `get_error` クラスのパブリック セクションに `file_reader` メソッドを追加します。
 
 [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
 
-     The `get_error` method retrieves any error that occurs during the life of the agent.
+   `get_error` メソッドにより、エージェントの有効期間中に発生したエラーを取得します。
 
 1. 実装、 [concurrency::agent::run](reference/agent-class.md#run)メソッドで、`protected`クラスのセクション。
 
@@ -140,7 +140,7 @@ file_reader.h の内容全体の例を次に示します。
 
 [!code-cpp[concrt-basic-agent#11](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_12.cpp)]
 
-     This `call` object also sets the `event` object when it receives the empty string to signal the end of processing.
+   また、この `call` オブジェクトは、処理の終了を通知する空の文字列を受け取ると、`event` オブジェクトを設定します。
 
 1. test.txt ファイルから読み取り、そのファイルの内容を `file_reader` オブジェクトに書き込む `call` オブジェクトを作成します。
 

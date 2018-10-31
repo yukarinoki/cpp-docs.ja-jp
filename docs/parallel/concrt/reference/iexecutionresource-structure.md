@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 912cdb59a1841bbe3bbe3e71202a796a3e67a94e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 642b73f81146fa8df68d36ee3b63b1902ed66619
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390267"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162400"
 ---
 # <a name="iexecutionresource-structure"></a>IExecutionResource 構造体
 
@@ -79,7 +79,7 @@ virtual unsigned int CurrentSubscriptionLevel() const = 0;
 
 サブスクリプション レベルは、実行中のスレッドの数はハードウェア スレッドに関連付けられたを指示します。 これには、リソース マネージャーは、サブスクライブしているスレッドとに、スレッド プロキシを実行している仮想プロセッサ ルートの形式での対応のスレッドにはのみが含まれます。
 
-メソッドを呼び出す[ischedulerproxy::subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread)、またはメソッド[ischedulerproxy::requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)パラメーターと共に`doSubscribeCurrentThread`値に設定`true`ハードウェア スレッドのサブスクリプション レベルを 1 ずつインクリメントします。 返すことも、`IExecutionResource`サブスクリプションを表すインターフェイス。 対応する呼び出し、 [iexecutionresource::remove](#remove)デクリメントを 1 つのハードウェア スレッドのサブスクリプション レベル。
+メソッドを呼び出す[ischedulerproxy::subscribecurrentthread](ischedulerproxy-structure.md#subscribecurrentthread)、またはメソッド[ischedulerproxy::requestinitialvirtualprocessors](ischedulerproxy-structure.md#requestinitialvirtualprocessors)パラメーターと共に`doSubscribeCurrentThread`値に設定**true**ハードウェア スレッドのサブスクリプション レベルを 1 ずつインクリメントします。 返すことも、`IExecutionResource`サブスクリプションを表すインターフェイス。 対応する呼び出し、 [iexecutionresource::remove](#remove)デクリメントを 1 つのハードウェア スレッドのサブスクリプション レベル。
 
 メソッドを使用して仮想プロセッサ ルートをアクティブ化する[ivirtualprocessorroot::activate](ivirtualprocessorroot-structure.md#activate)ハードウェア スレッドのサブスクリプション レベルを 1 ずつインクリメントします。 メソッド[ivirtualprocessorroot::deactivate](ivirtualprocessorroot-structure.md#deactivate)、または[iexecutionresource::remove](#remove)を 1 つをアクティブ化された仮想プロセッサ ルートで呼び出されると、サブスクリプション レベルをデクリメントします。
 

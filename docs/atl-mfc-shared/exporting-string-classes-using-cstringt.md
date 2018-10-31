@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5355b6e81354ef04b7cc4d2c3495289c9d1d029d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f2d77516ae53b0ee1c4f39e4d8f095848aa00acc
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46444206"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48889972"
 ---
 # <a name="exporting-string-classes-using-cstringt"></a>CStringT による文字列クラスをエクスポートします。
 
@@ -29,7 +29,7 @@ ms.locfileid: "46444206"
 
 - 新しい`CStringT`カスタマイズするテンプレート クラスは、 `CString` C++ 標準ライブラリでテンプレートのような文字特性を指定するテンプレート パラメーターを使用して動作します。
 
-- DLL を使用してから、独自の文字列クラスをエクスポートする`CStringT`、コンパイラが自動的にエクスポート、`CString`基本クラス。 `CString`テンプレート クラス自体は、コンパイラが認識しない限りには、使用すると、コンパイラでインスタンス化を`CString`DLL からインポートされます。 リンカーは乗算定義のエラーのシンボルが発生したことがあります Visual C 6.0 から Visual C .NET にプロジェクトを移行した場合`CString`の競合により、 `CString` DLL と、ローカルでインスタンス化されたバージョンからインポートします。 これを行う適切な方法を以下に示します。 この問題の詳細については、サポート技術情報の記事を参照してください"リンク エラー CString の派生をインポートするときにクラス"(Q309801) で[ http://support.microsoft.com/default.aspx](http://support.microsoft.com/default.aspx)します。
+- DLL を使用してから、独自の文字列クラスをエクスポートする`CStringT`、コンパイラが自動的にエクスポート、`CString`基本クラス。 `CString`テンプレート クラス自体は、コンパイラが認識しない限りには、使用すると、コンパイラでインスタンス化を`CString`DLL からインポートされます。 リンカーは乗算定義のエラーのシンボルが発生したことがあります Visual C 6.0 から Visual C .NET にプロジェクトを移行した場合`CString`の競合により、 `CString` DLL と、ローカルでインスタンス化されたバージョンからインポートします。 これを行う適切な方法を以下に示します。
 
 次のシナリオには、重複して定義されたクラスのシンボル エラーを生成するために、リンカーが発生します。 エクスポートすることを前提としています、 `CString`-派生クラス (`CMyString`) MFC 拡張 DLL から。
 

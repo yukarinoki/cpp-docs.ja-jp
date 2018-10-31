@@ -1,7 +1,7 @@
 ---
-title: 列挙型クラス (C++ コンポーネント拡張) |Microsoft Docs
+title: 列挙型クラス (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -13,14 +13,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 993f0e190d87b140fba0008872d57f2a34b6a5cb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c63a043b8f1a91654c0b765632969b82725a3c0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377267"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066163"
 ---
-# <a name="enum-class--c-component-extensions"></a>enum クラス (C++ コンポーネント拡張)
+# <a name="enum-class--ccli-and-ccx"></a>列挙型クラス (C +/cli および C++/cli CX)
 
 名前空間スコープで列挙型を宣言します。列挙型とは、列挙子と呼ばれる一連の名前付き定数で構成されるユーザー定義型です。
 
@@ -65,7 +65,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="remarks"></a>Remarks
 
-詳細についてと例については、次を参照してください。[列挙型](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)します。
+使用例を含む詳細については、「 [列挙型](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)」をご覧ください。
 
 列挙子の値を定義する定数式が *underlying-type*で表すことができない場合、コンパイラはエラー メッセージを生成します。  ただし、基になる型に対して値が不適切であるというエラーは生成されません。 例えば:
 
@@ -75,7 +75,7 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 - *underlying-type* が `char16`であり、列挙型の値が 0xD800 から 0xDFFF の範囲にある場合、その値を表すことができます。 この値は Unicode サロゲート ペアの一方を表していますが、このペアは分離して表すことができないため、論理的にはこの値は正しくありません。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -146,13 +146,13 @@ static const int mon = 1;
 
 標準列挙型の列挙子は外側のスコープに厳密に挿入されます。  そのため、列挙子と同じ名前を持つ別のシンボルが外側のスコープにある場合、コンパイラはエラーを生成します。
 
-Visual C++ 2002 と Visual C++ 2003 では、列挙子は弱く挿入されていました (同じ名前の別の識別子が存在していない限り外側のスコープで参照可能)。
+Visual Studio 2002 および Visual Studio 2003 で列挙子は弱く挿入されて (表示されている外側のスコープ内に同じ名前の別の識別子がない)。
 
-C++ 標準列挙型が定義されている場合 (せず**クラス**または**構造体**) を指定してコンパイル、`/clr`マネージ列挙型としてコンパイルする列挙型になります。  この列挙型のセマンティクスはアンマネージ列挙型のままです。  コンパイラはその列挙型をネイティブ列挙型にするというプログラマの意図を示すために、Visual C++ コンパイラが認識する `Microsoft::VisualC::NativeEnumAttribute`属性を挿入します。  他のコンパイラは、標準列挙型を単にマネージド列挙型として認識します。
+C++ 標準列挙型が定義されている場合 (せず**クラス**または**構造体**) を指定してコンパイル、`/clr`マネージ列挙型としてコンパイルする列挙型になります。  この列挙型のセマンティクスはアンマネージ列挙型のままです。  ただし、コンパイラは、属性を挿入`Microsoft::VisualC::NativeEnumAttribute`ネイティブ列挙型を指定する列挙型のプログラマの意図を識別するためにします。  他のコンパイラは、標準列挙型を単にマネージド列挙型として認識します。
 
 A という名前で、標準列挙型がコンパイルされた`/clr`マネージ列挙型としてアセンブリに表示されますおよびその他の任意のマネージ コンパイラで使用できます。   ただし、名前のない標準列挙体は、アセンブリからパブリックに参照することができません。
 
-Visual C++ 2002 と Visual C++ 2003 では、標準列挙型は関数のパラメーターの型として使用されていました。
+Visual Studio 2002 および Visual Studio 2003 では、標準列挙型は関数のパラメーター型として使用します。
 
 ```cpp
 // mcppv2_enum.cpp
@@ -175,7 +175,7 @@ void f(int32);
 ただし、現在のバージョンのコンパイラでは、[NativeEnumAttribute] を指定すると標準列挙型がマネージド列挙型として出力され、関数のシグネチャに対応して MSIL に次の出力を行います。
 
 ```cpp
-void f(E)  
+void f(E)
 ```
 
 ネイティブ列挙型の詳細については、「 [C++ 列挙体の宣言](../cpp/enumerations-cpp.md)」を参照してください。
@@ -184,7 +184,7 @@ CLR 列挙型の詳細については、次のページを参照してくださ�
 
 - [Underlying Type of an Enum (列挙型の基になる型)](../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -202,7 +202,7 @@ public enum n { c, d };
 // unnamed, standard enum
 public enum { e, f } o;
 
-int main()  
+int main()
 {
    // consume managed enum
    m mym = m::b;
@@ -231,4 +231,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

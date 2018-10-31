@@ -1,4 +1,4 @@
-# [C++/CLI (Visual C++) による .NET プログラミング](dotnet-programming-with-cpp-cli-visual-cpp.md)
+# [C++/CLI による .NET プログラミング](dotnet-programming-with-cpp-cli-visual-cpp.md)
 ## [C++/CLI タスク](cpp-cli-tasks.md)
 ### [方法 : 空の CLR プロジェクトを作成する](how-to-create-clr-empty-projects.md)
 ### [方法: CLR コンソール アプリケーションを作成する (C++/CLI)](how-to-create-clr-console-applications-cpp-cli.md)

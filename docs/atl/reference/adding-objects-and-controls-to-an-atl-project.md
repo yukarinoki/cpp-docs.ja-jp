@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a5cb510bb02f71f71b35191d3ba9c4fee6b7059d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5758dff128cd213442ec3738967ccd78e20e75af
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46093962"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861136"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>ATL プロジェクトへのオブジェクトやコントロールの追加
 
@@ -41,16 +41,16 @@ ATL または MFC ベースのプロジェクトにオブジェクトまたは�
 > [!NOTE]
 > ATL オブジェクトをプロジェクトに追加する前に、詳細とその関連するヘルプ トピック内のオブジェクトの要件を確認してください。
 
-### <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>オブジェクトまたは ATL コントロール ウィザードを使用してコントロールを追加するには
+## <a name="to-add-an-object-or-a-control-using-the-atl-control-wizard"></a>オブジェクトまたは ATL コントロール ウィザードを使用してコントロールを追加するには
 
-1. ソリューション エクスプ ローラーでプロジェクト ノードを右クリックし、をクリックして**追加**ショートカット メニューから。 クリックして**クラスを追加**します。
+1. **ソリューション エクスプ ローラー**プロジェクト ノードを右クリックし、クリックして、**追加**ショートカット メニューから。 クリックして**クラスを追加**します。
 
    [クラスの追加](../../ide/add-class-dialog-box.md) ダイアログ ボックスが表示されます。
 
-2. [カテゴリ] ペインで選択した ATL フォルダー、[テンプレート] ペインからを挿入するオブジェクトを選択します。 クリックして**オープン**します。 選択したオブジェクトのコード ウィザードが表示されます。
+1. **ATL**で選択したフォルダー、**カテゴリ**ウィンドウからを挿入するオブジェクトを選択、**テンプレート**ウィンドウ。 クリックして**オープン**します。 選択したオブジェクトのコード ウィザードが表示されます。
 
    > [!NOTE]
-   >  MFC プロジェクトへの ATL オブジェクトを追加する場合は、既存のプロジェクトに ATL サポートを追加する必要があります。 次の手順でこれを行う[MFC プロジェクトへの ATL サポートの追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)します。
+   > MFC プロジェクトへの ATL オブジェクトを追加する場合は、既存のプロジェクトに ATL サポートを追加する必要があります。 次の手順でこれを行う[MFC プロジェクトへの ATL サポートの追加](../../mfc/reference/adding-atl-support-to-your-mfc-project.md)します。
 
    代わりに、以前の ATL サポートを追加せず、MFC プロジェクトに ATL オブジェクトを追加しようとした場合は、Visual Studio するように求められますをプロジェクトに追加した ATL サポートをするかどうかを指定します。 クリックして**はい**をプロジェクトに ATL サポートを追加し、選択した ATL ウィザードを開きます。
 
@@ -62,4 +62,3 @@ ATL または MFC ベースのプロジェクトにオブジェクトまたは�
 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)
-

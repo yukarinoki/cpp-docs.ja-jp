@@ -1,7 +1,7 @@
 ---
-title: typeid (C++ コンポーネント拡張) |Microsoft Docs
+title: typeid (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,18 +15,18 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: e1daf9d33b3eb21bf7d196a4263b5f2f7009b183
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1196956208d490674d4705a8d1e61ea3381d94a2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435403"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065188"
 ---
-# <a name="typeid--c-component-extensions"></a>typeid (C++ コンポーネント拡張)
+# <a name="typeid--ccli-and-ccx"></a>typeid (C +/cli および C++/cli CX)
 
 オブジェクトの型を示す値を取得します。
 
-> [!WARNING]
+> [!NOTE]
 > このトピックでは、typeid の C++ コンポーネント拡張バージョンを示します。 このキーワードの ISO C バージョンでは、次を参照してください。 [typeid 演算子](../cpp/typeid-operator.md)します。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
@@ -59,7 +59,7 @@ Platform::Type^ type = T::typeid;
 
 C++/cli CX、typeid を返します、 [platform::type](../cppcx/platform-type-class.md)ランタイム型情報から構築します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -88,7 +88,7 @@ type::typeid
 
 `typeid` ではネイティブ型も扱えますが、その場合でも System::Type を返します。  Type_info 構造体を取得する[typeid 演算子](../cpp/typeid-operator.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -110,7 +110,7 @@ int main() {
    Type ^ pType = pG->GetType();
    Type ^ pType2 = G::typeid;
 
-   if (pType == pType2)  
+   if (pType == pType2)
       Console::WriteLine("typeid and GetType returned the same System::Type");
    Console::WriteLine(G::typeid);
 
@@ -123,7 +123,7 @@ int main() {
 typeid and GetType returned the same System::Type
 G
 
-System.Single*  
+System.Single*
 ```
 
 次の例では、System::Type 型の変数を使用して型の属性を取得できることを示しています。  この例を見るとわかるように、一部の型では、`typeid` を使用するために typedef を作成する必要があります。
@@ -169,13 +169,13 @@ int main() {
    Console::WriteLine(MyType->IsClass);
 
    array<Object^>^ MyArray = MyType -> GetCustomAttributes(true);
-   for (int i = 0 ; i < MyArray->Length ; i++ )  
+   for (int i = 0 ; i < MyArray->Length ; i++ )
       Console::WriteLine(MyArray[i]);
 
-   if (int::typeid != pointer_to_int::typeid)  
+   if (int::typeid != pointer_to_int::typeid)
       Console::WriteLine("int::typeid != pointer_to_int::typeid, as expected");
 
-   if (int::typeid == handle_to_int::typeid)  
+   if (int::typeid == handle_to_int::typeid)
       Console::WriteLine("int::typeid == handle_to_int::typeid, as expected");
 }
 ```
@@ -200,4 +200,4 @@ int::typeid == handle_to_int::typeid, as expected
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

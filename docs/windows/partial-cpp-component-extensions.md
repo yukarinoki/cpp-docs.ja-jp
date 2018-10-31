@@ -1,7 +1,7 @@
 ---
-title: partial (C++ コンポーネント拡張) |Microsoft Docs
+title: 部分 (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 340323d2b540c74e600b76129edd360b73d0db23
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8694c2fcad85bf3330ed9a5236bd53fa80ee8891
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372137"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083270"
 ---
-# <a name="partial--c-component-extensions"></a>Partial (C++ コンポーネント拡張)
+# <a name="partial--ccli-and-ccx"></a>部分 (C +/cli および C++/cli CX)
 
 **部分**キーワードは、同じ ref クラスとは独立して、複数のファイルが作成のさまざまな部分を使用します。
 
@@ -41,12 +41,12 @@ ms.locfileid: "46372137"
 
 ```cpp
 partial class-key identifier {
-   /* The first part of the partial class definition. 
+   /* The first part of the partial class definition.
       This is typically auto-generated */
 }
 // ...
 class-key identifier {
-   /* The subsequent part(s) of the class definition. The same 
+   /* The subsequent part(s) of the class definition. The same
       identifier is specified, but the "partial" keyword is omitted. */
 }
 ```
@@ -79,7 +79,7 @@ class-key identifier {
 
 使用する方法についての詳細、**部分**キーワードを参照してください[部分クラス (C +/cli CX)](http://go.microsoft.com/fwlink/p/?LinkId=249023)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 

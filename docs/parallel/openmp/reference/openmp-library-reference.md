@@ -1,7 +1,7 @@
 ---
 title: OpenMP ライブラリ リファレンス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/24/2018
 ms.technology:
 - cpp-parallel
 ms.topic: reference
@@ -12,12 +12,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f3812f698f034b5610f90c57b94b56f0b8648417
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ce6c10802f470e3416d0db9aca5b66db9064ade3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403802"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057011"
 ---
 # <a name="openmp-library-reference"></a>OpenMP ライブラリ リファレンス
 
@@ -27,10 +27,10 @@ OpenMP の標準の Visual C の実装には、次の構成要素が含まれて
 
 |構成体|説明|
 |---------------|-----------------|
-|[ライブラリ](../../../parallel/openmp/reference/openmp-libraries.md)|Visual C の OpenMP のランタイム ライブラリを構成する .lib ファイルについて説明します。|
-|[データの種類](../../../parallel/openmp/reference/openmp-data-types.md)|OpenMP API で使用されるデータ型へのリンクを提供します。|
-|[環境変数](../../../parallel/openmp/reference/openmp-environment-variables.md)|OpenMP API で使用される環境変数へのリンクを提供します。|
-|[関数](../../../parallel/openmp/reference/openmp-functions.md)|OpenMP API で使用される関数へのリンクを提供します。|
+|[ライブラリ](openmp-libraries.md)|Visual C の OpenMP のランタイム ライブラリを構成する .lib ファイルについて説明します。|
+|[データ型](openmp-data-types.md)|OpenMP API で使用されるデータ型へのリンクを提供します。|
+|[環境変数](openmp-environment-variables.md)|OpenMP API で使用される環境変数へのリンクを提供します。|
+|[関数](openmp-functions.md)|OpenMP API で使用される関数へのリンクを提供します。|
 
 ## <a name="see-also"></a>関連項目
 

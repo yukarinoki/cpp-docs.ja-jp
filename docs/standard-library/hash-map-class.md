@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 809391ea93c3baacd510df7d81f2000e1d6309b7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 7e9ec6724addeb8002eeb681f289f232520f31dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702028"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060105"
 ---
 # <a name="hashmap-class"></a>hash_map クラス
 
@@ -172,7 +172,7 @@ hash_map クラスに用意されている反復子は双方向反復子です�
 |-|-|
 |[hash_map](#hash_map)|空の `hash_map`、または他の `hash_map` の全体または一部のコピーである hash_multiset を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -230,7 +230,7 @@ hash_map クラスに用意されている反復子は双方向反復子です�
 |[operator&#91;&#93;](#op_at)|`hash_map` に、指定したキー値を持つ要素を挿入します。|
 |[hash_map::operator=](#op_eq)|別の `hash_map` のコピーで `hash_map` の要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<hash_map>
 
@@ -277,7 +277,6 @@ const Type& at(const Key& key) const;
 ### <a name="remarks"></a>Remarks
 
 引数のキー値が見つからない場合、この関数は、[out_of_range クラス](../standard-library/out-of-range-class.md) のオブジェクトをスローします。
-
 
 ### <a name="example"></a>例
 
@@ -1650,7 +1649,7 @@ int main()
     hm1.insert(Int_Pair(3, 30));
     hm1.insert(Int_Pair(4, 40));
 
-    cout<< "The original elements (Key => Value) of hm1 are:";
+    cout << "The original elements (Key => Value) of hm1 are:";
     for (hm1_pIter = hm1.begin(); hm1_pIter != hm1.end(); hm1_pIter++)
         cout << endl << " " << hm1_pIter -> first << " => "
              << hm1_pIter->second;
@@ -1661,22 +1660,23 @@ int main()
 
     if (pr.second == true)
     {
-        cout<< "The element 10 was inserted in hm1 successfully."
+        cout << "The element 10 was inserted in hm1 successfully."
             << endl;
     }
     else
     {
-        cout<< "The element 10 already exists in hm1\n with a key value of"
-            << "((pr.first) -> first)= "<<(pr.first)-> first
-            << "."<< endl;
+        cout << "The element 10 already exists in hm1\n"
+            << "with a key value of "
+            << "((pr.first) -> first) = " << (pr.first)->first
+            << "." << endl;
     }
 
     // The hint version of insert
     hm1.insert(--hm1.end(), Int_Pair(5, 50));
 
-    cout<< "After the insertions, the elements of hm1 are:";
+    cout << "After the insertions, the elements of hm1 are:";
     for (hm1_pIter = hm1.begin(); hm1_pIter != hm1.end(); hm1_pIter++)
-        cout << endl << " " << hm1_pIter -> first << " => "
+        cout << endl << hm1_pIter -> first << " => "
              << hm1_pIter->second;
     cout << endl;
 
@@ -1685,9 +1685,9 @@ int main()
     // The templatized version inserting a range
     hm2.insert( ++hm1.begin(), --hm1.end() );
 
-    cout<< "After the insertions, the elements of hm2 are:";
+    cout << "After the insertions, the elements of hm2 are:";
     for (hm2_pIter = hm2.begin(); hm2_pIter != hm2.end(); hm2_pIter++)
-        cout << endl << " " << hm2_pIter -> first << " => "
+        cout << endl << hm2_pIter -> first << " => "
              << hm2_pIter->second;
     cout << endl;
 
@@ -1697,13 +1697,13 @@ int main()
 
     hm3.insert(move(is1));
     cout << "After the move insertion, hm3 contains:" << endl
-      << " " << hm3.begin()->first
+      << hm3.begin()->first
       << " => " << hm3.begin()->second
       << endl;
 
     hm4.insert(hm4.begin(), move(is2));
     cout << "After the move insertion, hm4 contains:" << endl
-      << " " << hm4.begin()->first
+      << hm4.begin()->first
       << " => " << hm4.begin()->second
       << endl;
 }
@@ -1711,27 +1711,27 @@ int main()
 
 ```Output
 The original elements (Key => Value) of hm1 are:
- 1 => 10
- 2 => 20
- 3 => 30
- 4 => 40
+1 => 10
+2 => 20
+3 => 30
+4 => 40
 The element 10 already exists in hm1
- with a key value of((pr.first) -> first)= 1.
+with a key value of ((pr.first) -> first) = 1.
 After the insertions, the elements of hm1 are:
- 1 => 10
- 2 => 20
- 3 => 30
- 4 => 40
- 5 => 50
+1 => 10
+2 => 20
+3 => 30
+4 => 40
+5 => 50
 After the insertions, the elements of hm2 are:
- 2 => 20
- 10 => 100
- 3 => 30
- 4 => 40
+2 => 20
+10 => 100
+3 => 30
+4 => 40
 After the move insertion, hm3 contains:
- 1 => a
+1 => a
 After the move insertion, hm4 contains:
- 2 => b
+2 => b
 ```
 
 ## <a name="iterator"></a>  hash_map::iterator
@@ -2657,8 +2657,8 @@ int main( )
    // using a dereferenced iterator addressing the location
    hm1_AcIter = hm1.begin( );
    hm1_RcIter = hm1. upper_bound ( hm1_AcIter -> first );
-   cout << "The 1st element of hm1 with a key greater than "
-        << "that\n of the initial element of hm1 is: "
+   cout << "The 1st element of hm1 with a key greater than that\n"
+        << "of the initial element of hm1 is: "
         << hm1_RcIter -> second << "." << endl;
 }
 ```
@@ -2667,7 +2667,7 @@ int main( )
 The first element of hash_map hm1 with a key greater than 2 is: 30.
 The hash_map hm1 doesn't have an element with a key greater than 4.
 The 1st element of hm1 with a key greater than that
- of the initial element of hm1 is: 20.
+of the initial element of hm1 is: 20.
 ```
 
 ## <a name="value_comp"></a>  hash_map::value_comp
@@ -2687,9 +2687,9 @@ hash_map が要素の並べ替えに使用する比較関数オブジェクト�
 
 ### <a name="remarks"></a>Remarks
 
-hash_map *m* について、2 つの要素 *e*1 *(k*1 *, d*1 *)* および *e*2 *(k*2 *, d*2 *)* が [value_type](#value_type) 型のオブジェクトである場合 (ここで *k*1 および *k*2 は [key_type](#key_type) 型のキーであり、`d`1 および `d`2 は [mapped_type](#mapped_type) 型のデータである)、*m.*`value_comp`*( )(e*1 *, e*2 *)* は *m.*`key_comp`*( ) (k*1 *, k*2 *)* と同等です。 格納されているオブジェクトは以下のメンバー関数を定義します。
+Hash_map の*m*場合は、2 つの要素*e1* (*k1*、 *d1*) と*e2* (*k2*、 *d2*) 型のオブジェクトは[value_type](#value_type)ここで、 *k1*と*k2* 型のキーがその[key_type](#key_type)と*d1*と*d2*は、データ型の[mapped_type](#mapped_type)、し`m.value_comp()(e1, e2)`と等価`m.key_comp()(k1, k2)`. 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **value_type&** `left`, **value_type&** `right`) **;**
+`bool operator(value_type& left, value_type& right);`
 
 これは、並べ替え順で `left` のキー値が `right` のキー値に先行しかつ等しくない場合に、**true** を返します。
 

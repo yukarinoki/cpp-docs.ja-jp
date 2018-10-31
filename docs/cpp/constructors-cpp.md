@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 08200320e30816ac45e6c91a14dc41508430cfae
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ae2a08431a29e4140e3a9af86e68ccfc9bff388a
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069119"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861396"
 ---
 # <a name="constructors-c"></a>コンストラクター (C++)
 
@@ -388,11 +388,11 @@ explicit Box(int size): m_width(size), m_length(size), m_height(size){}
 
 1. 基底クラスとメンバーのコンストラクターを宣言の順序で呼び出します。
 
-2. クラスが仮想基底クラスから派生されている場合は、オブジェクトの仮想基底ポインターを初期化します。
+1. クラスが仮想基底クラスから派生されている場合は、オブジェクトの仮想基底ポインターを初期化します。
 
-3. クラスが仮想関数を含むか継承する場合は、オブジェクトの仮想関数ポインターを初期化します。 仮想関数ポインターは、クラスの仮想関数テーブルをポイントし、コードへの仮想関数呼び出しの正しいバインドを可能にします。
+1. クラスが仮想関数を含むか継承する場合は、オブジェクトの仮想関数ポインターを初期化します。 仮想関数ポインターは、クラスの仮想関数テーブルをポイントし、コードへの仮想関数呼び出しの正しいバインドを可能にします。
 
-4. その関数本体のコードをすべて実行します。
+1. その関数本体のコードをすべて実行します。
 
 次の例に、基底クラスとメンバーのコンストラクターが派生クラスのコンストラクターで呼び出される順序を示します。 まず、基底コンストラクターが呼び出され、基底クラスのメンバーがクラス宣言内の出現順に初期化されて、その後に派生コンストラクターが呼び出されます。
 
@@ -593,7 +593,6 @@ public:
     //... rest of class as before
 };
 ```
-
 
 コンストラクターによって作成されたオブジェクトは、コンストラクターが終了するとすぐに完全に初期化されます。 詳細については、次を参照してください。[均一な初期化とデリゲート コンス トラクター](../cpp/uniform-initialization-and-delegating-constructors.md)します。
 

@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f446eb557fab4f4ff6396042e832e4584546bd96
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60139821c1b15673fac0fb8f9ec3925cbfa6dc31
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416826"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052098"
 ---
 # <a name="ordering-items-in-the-header-control"></a>ヘッダー コントロールの項目の並べ替え
 
@@ -35,11 +35,11 @@ ms.locfileid: "46416826"
 
 - [CHeaderCtrl::GetOrderArray](../mfc/reference/cheaderctrl-class.md#getorderarray)と[CHeaderCtrl::SetOrderArray](../mfc/reference/cheaderctrl-class.md#setorderarray)
 
-     取得し、ヘッダー項目の左から右の順序を設定します。
+   取得し、ヘッダー項目の左から右の順序を設定します。
 
 - [CHeaderCtrl::OrderToIndex](../mfc/reference/cheaderctrl-class.md#ordertoindex)します。
 
-     特定のヘッダー項目のインデックス値を取得します。
+   特定のヘッダー項目のインデックス値を取得します。
 
 に加えて、前のメンバー関数は、HDS_DRAGDROP 形式は、ドラッグ アンド ドロップのヘッダー コントロールのヘッダー項目にユーザーをできます。 詳細については、次を参照してください。[ヘッダー項目に対するドラッグ アンド ドロップのサポートを提供する](../mfc/providing-drag-and-drop-support-for-header-items.md)します。
 

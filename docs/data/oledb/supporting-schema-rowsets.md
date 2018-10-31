@@ -18,16 +18,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: cb1ea67a0b89a59ad8ee16ec3a3ee0993a0fdafc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 79c02a36e0c19b0702a81281e626c60e016def32
+ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43208322"
+ms.lasthandoff: 10/11/2018
+ms.locfileid: "49083282"
 ---
 # <a name="supporting-schema-rowsets"></a>スキーマ行セットのサポート
 
-スキーマ行セットを許可すると、コンシューマーは、基になる構造体またはスキーマを知らなくても、データ ストアに関する情報を取得します。 たとえば、データ ストアを除く、スキーマ情報を読み込むことで、確認方法がなくなるために、ユーザー定義階層に編成されるテーブルがあります。 (別の例としてメモ、Visual C ウィザードでスキーマ行セットを使用して、コンシューマーのアクセサーを生成することです。)これを行うコンシューマーを許可するには、プロバイダーのセッション オブジェクトでメソッドを公開、 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))インターフェイス。 Visual C アプリケーションで使用する、 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)を実装するクラス`IDBSchemaRowset`します。
+スキーマ行セットを許可すると、コンシューマーは、基になる構造体またはスキーマを知らなくても、データ ストアに関する情報を取得します。 たとえば、データ ストアを除く、スキーマ情報を読み込むことで、確認方法がなくなるために、ユーザー定義階層に編成されるテーブルがあります。 (別の例としてメモ、Visual C ウィザードでスキーマ行セットを使用して、コンシューマーのアクセサーを生成することです。)これを行うコンシューマーを許可するには、プロバイダーのセッション オブジェクトでメソッドを公開、 [IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)インターフェイス。 Visual C アプリケーションで使用する、 [IDBSchemaRowsetImpl](../../data/oledb/idbschemarowsetimpl-class.md)を実装するクラス`IDBSchemaRowset`します。
 
 `IDBSchemaRowsetImpl` 次のメソッドをサポートしています。
 
@@ -97,7 +97,7 @@ class CUpdateSessionTRSchemaRowset :
 
 なお`CUpdateSession`継承`IDBSchemaRowsetImpl`メソッドを処理するすべての制限があるため、します。 使用して`CSchemaRowsetImpl`、(上記のスキーマ マップに表示)、3 つの子クラスを宣言: `CUpdateSessionTRSchemaRowset`、 `CUpdateSessionColSchemaRowset`、および`CUpdateSessionPTSchemaRowset`します。 各子クラスが、`Execute`制約 (検索条件) のそれぞれのセットを処理するメソッド。 各`Execute`メソッドの値を比較し、`cRestrictions`と`rgRestrictions`パラメーター。 これらのパラメーターの説明を参照して[SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)します。
 
-特定のスキーマ行セットに対応する制限についての詳細については、スキーマ行セット Guid の表を参照してくださいで[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*で、Windows SDK。
+特定のスキーマ行セットに対応する制限についての詳細については、スキーマ行セット Guid の表を参照してくださいで[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)で、 *OLE DB プログラマーズ リファレンス*で、Windows SDK。
 
 サポートする場合など、 **TABLE_NAME**に制限`DBSCHEMA_TABLES`次の操作します。
 
@@ -270,7 +270,7 @@ OLE DB スキーマ行セットのインターフェイスの詳細について�
 
 コンシューマーの使用方法については`IDBSchemaRowset`メソッドを参照してください[スキーマ行セットのメタデータの取得](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)します。
 
-スキーマ行セットをサポートするプロバイダーの例は、次を参照してください。、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)サンプル。
+スキーマ行セットをサポートするプロバイダーの例については、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV) サンプルを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

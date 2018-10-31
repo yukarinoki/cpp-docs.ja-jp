@@ -16,12 +16,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: a650d62a53fa6cada535119cb8897f1f97870ea1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 446ed0c6fb84990db572e1e1ead5c2ab5094ec70
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421259"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076062"
 ---
 # <a name="how-to-create-clr-console-applications-ccli"></a>方法: CLR コンソール アプリケーションを作成する (C++/CLI)
 
@@ -33,7 +33,7 @@ ms.locfileid: "46421259"
 
 - 次の .NET Framework 名前空間への参照
 
-   - [システム](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)-Contains 基礎的なクラスと一般的に定義する基底クラスは、値と参照データの型、イベントとイベント ハンドラー、インターフェイス、属性、および例外処理を使用します。
+   - [System](https://msdn.microsoft.com/library/system.appdomainmanager.appdomainmanager.aspx)- 一般的な値の型と参照データの型、イベントとイベント ハンドラー、インターフェイス、属性、および例外処理を定義する、基礎的なクラスと基底クラスが含まれます。
 
    - mscorlib - .NET Framework 開発をサポートするアセンブリ DLL。
 
@@ -67,7 +67,7 @@ ms.locfileid: "46421259"
 
 1. **[名前]** ボックスに、アプリケーションの一意な名前を入力します。
 
-     他のプロジェクトやソリューション設定を指定できますが、必須ではありません。
+   他のプロジェクトやソリューション設定を指定できますが、必須ではありません。
 
 1. **[OK]** を選択します。
 

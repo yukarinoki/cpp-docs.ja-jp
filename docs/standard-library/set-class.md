@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b3b697901ac564a88f48cdbc3154f29089c23acc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: dc57c1667fd9cfd6d3236fbd1891dc1444912c3c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706161"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077440"
 ---
 # <a name="set-class"></a>set クラス
 
@@ -159,7 +159,7 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 |-|-|
 |[set](#set)|空の set を構築するか、他の set の全体または一部のコピーである set を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -215,7 +215,7 @@ set クラスに用意されている反復子は双方向反復子ですが、�
 |-|-|
 |[operator=](#op_eq)|別の set のコピーで set の要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<set>
 
@@ -905,7 +905,6 @@ The set s2 is empty.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1124,7 +1123,6 @@ int main()
 ```cpp
 iterator find(const Key& key);
 
-
 const_iterator find(const Key& key) const;
 ```
 
@@ -1288,19 +1286,16 @@ set に要素または要素範囲を挿入します。
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1308,13 +1303,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1988,21 +1981,20 @@ set(
     const Compare& Comp,
     const Allocator& Al);
 
-
 template <class InputIterator>
 set(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 set(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 set(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al);

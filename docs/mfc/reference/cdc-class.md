@@ -412,12 +412,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 59fe5aeaa288f0d36db71df7f7ab5d498aec3256
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 496b958c1ff96b2bc8f3fd3ce8b453c9d3497dcf
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448585"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081145"
 ---
 # <a name="cdc-class"></a>CDC クラス
 
@@ -887,7 +887,6 @@ BOOL Arc(
     int x4,
     int y4);
 
-
 BOOL Arc(
     LPCRECT lpRect,
     POINT ptStart,
@@ -957,7 +956,6 @@ BOOL ArcTo(
     int y3,
     int x4,
     int y4);
-
 
 BOOL ArcTo(
     LPCRECT lpRect,
@@ -1141,7 +1139,6 @@ BOOL Chord(
     int y3,
     int x4,
     int y4);
-
 
 BOOL Chord(
     LPCRECT lpRect,
@@ -1421,7 +1418,6 @@ void Draw3dRect(
     COLORREF clrTopLeft,
     COLORREF clrBottomRight);
 
-
 void Draw3dRect(
     int x,
     int y,
@@ -1672,7 +1668,6 @@ BOOL DrawIcon(
     int y,
     HICON hIcon);
 
-
 BOOL DrawIcon(
     POINT point,
     HICON hIcon);
@@ -1721,7 +1716,6 @@ BOOL DrawState(
     UINT nFlags,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1729,7 +1723,6 @@ BOOL DrawState(
     UINT nFlags,
     CBrush* pBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1737,14 +1730,12 @@ BOOL DrawState(
     UINT nFlags,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
     HICON hIcon,
     UINT nFlags,
     CBrush* pBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1755,7 +1746,6 @@ BOOL DrawState(
     int nTextLen = 0,
     HBRUSH hBrush = NULL);
 
-
 BOOL DrawState(
     CPoint pt,
     CSize size,
@@ -1764,7 +1754,6 @@ BOOL DrawState(
     BOOL bPrefixText = TRUE,
     int nTextLen = 0,
     CBrush* pBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1773,7 +1762,6 @@ BOOL DrawState(
     LPARAM lData,
     UINT nFlags,
     HBRUSH hBrush = NULL);
-
 
 BOOL DrawState(
     CPoint pt,
@@ -1840,7 +1828,6 @@ virtual int DrawText(
     LPRECT lpRect,
     UINT nFormat);
 
-
 int DrawText(
     const CString& str,
     LPRECT lpRect,
@@ -1896,7 +1883,6 @@ virtual int DrawTextEx(
     LPRECT lpRect,
     UINT nFormat,
     LPDRAWTEXTPARAMS lpDTParams);
-
 
 int DrawTextEx(
     const CString& str,
@@ -2097,7 +2083,6 @@ virtual int Escape(
     int nCount,
     LPCSTR lpszInData,
     LPVOID lpOutData);
-
 
 int Escape(
     int nEscape,
@@ -2301,7 +2286,6 @@ virtual BOOL ExtTextOut(
     UINT nCount,
     LPINT lpDxWidths);
 
-
 BOOL ExtTextOut(
     int x,
     int y,
@@ -2433,7 +2417,6 @@ BOOL FillRgn(
 void FillSolidRect(
     LPCRECT lpRect,
     COLORREF clr);
-
 
 void FillSolidRect(
     int x,
@@ -3553,7 +3536,7 @@ int GetPath(
 
 PT_BEZIERTO 型は、3 つのセットで常に発生します。 その前にすぐに、パス内のポイントは、ベジエ曲線の開始点を定義します。 PT_BEZIERTO の最初の 2 つのポイントは、管理ポイントと 3 番目の PT_BEZIERTO ポイントは、終点 (場合ハード コーディングされた)。
 
-     A PT_LINETO or PT_BEZIERTO type may be combined with the following flag (by using the bitwise operator **OR**) to indicate that the corresponding point is the last point in a figure and that the figure should be closed:
+   PT_LINETO または PT_BEZIERTO 型は、次のフラグと組み合わせることも (ビットごとの演算子を使用して**OR**) に対応する点が、図の最後の点であり、図を閉じる必要があります。
 
 - PT_CLOSEFIGURE では、図が対応する行の後に自動的に閉じられますまたは曲線を描画するを指定します。 図は、最後の直前に対応する点を直線または曲線のエンドポイントから行を描画することによって閉じられます。
 
@@ -4704,7 +4687,6 @@ BOOL Pie(
     int x4,
     int y4);
 
-
 BOOL Pie(
     LPCRECT lpRect,
     POINT ptStart,
@@ -4768,7 +4750,6 @@ BOOL Pie(
 
 ```
 BOOL PlayMetaFile(HMETAFILE hMF);
-
 
 BOOL PlayMetaFile(
     HENHMETAFILE hEnhMetaFile,
@@ -4951,11 +4932,11 @@ BOOL PolyDraw(
 
 PT_BEZIERTO 型は、3 つのセットで常に発生します。 現在の位置は、ベジエ スプラインの開始点を定義します。 制御点は、最初の 2 つの PT_BEZIERTO ポイントは、3 番目の PT_BEZIERTO ポイントは、終了ポイント。 終了ポイントでは、新しい現在位置になります。 ない 3 つの連続する PT_BEZIERTO 点がある場合は、エラーが発生します。
 
-     A PT_LINETO or PT_BEZIERTO type can be combined with the following constant by using the bitwise operator OR to indicate that the corresponding point is the last point in a figure and the figure is closed:
+   PT_LINETO または PT_BEZIERTO 型は、ビットごとの演算子を使用して次の定数と組み合わせることができますか、対応する点が、図と図の最後の点であることを示すが閉じられます。
 
 - PT_CLOSEFIGURE の図は、PT_LINETO 後に自動的に閉じられるか、このポイントの PT_BEZIERTO 型が完了するを指定します。 行は、最新の直前にこの点から描画または`MoveTo`ポイントします。
 
-     このフラグは行の場合、PT_LINETO 型とビットごとのベジエ スプラインの終点の PT_BEZIERTO 型**OR**演算子。 現在の位置は、終了行の終了点に設定されます。
+   このフラグは行の場合、PT_LINETO 型とビットごとのベジエ スプラインの終点の PT_BEZIERTO 型**OR**演算子。 現在の位置は、終了行の終了点に設定されます。
 
 *nCount*<br/>
 内の地点の合計数を指定します、 *lpPoints*配列、バイト数と同じ、 *lpTypes*配列。
@@ -5332,7 +5313,6 @@ BOOL RoundRect(
     int x3,
     int y3);
 
-
 BOOL RoundRect(
     LPCRECT lpRect,
     POINT point);
@@ -5558,7 +5538,6 @@ BOOL SelectClipPath(int nMode);
 ```
 int SelectClipRgn(CRgn* pRgn);
 
-
 int SelectClipRgn(
     CRgn* pRgn,
     int nMode);
@@ -5641,7 +5620,7 @@ CGdiObject* SelectObject(CGdiObject* pObject);
 
 ### <a name="return-value"></a>戻り値
 
-置き換えられるオブジェクトへのポインター。 派生したクラスのいずれかのオブジェクトへのポインターは、この`CGdiObject`など`CPen`、使用する関数のバージョンによって異なります。 エラーがある場合、戻り値は NULL です。 この関数は、一時オブジェクトへのポインターを返す可能性があります。 この一時オブジェクトは 1 つの Windows メッセージの処理中にのみ有効です。 詳細については、「`CGdiObject::FromHandle`」を参照してください。
+置き換えられるオブジェクトへのポインター。 派生したクラスのいずれかのオブジェクトへのポインターは、この`CGdiObject`など`CPen`、使用する関数のバージョンによって異なります。 エラーがある場合、戻り値は NULL です。 この関数は、一時オブジェクトへのポインターを返す可能性があります。 この一時オブジェクトは 1 つの Windows メッセージの処理中にのみ有効です。 詳細については、「 `CGdiObject::FromHandle` 」を参照してください。
 
 リージョン パラメーターを受け取るメンバー関数のバージョンと同じタスクを実行する、`SelectClipRgn`メンバー関数。 その戻り値には、次のいずれかを指定できます。
 
@@ -6194,7 +6173,6 @@ COLORREF SetPixel(
     int y,
     COLORREF crColor);
 
-
 COLORREF SetPixel(
     POINT point,
     COLORREF crColor);
@@ -6233,7 +6211,6 @@ BOOL SetPixelV(
     int x,
     int y,
     COLORREF crColor);
-
 
 BOOL SetPixelV(
     POINT point,
@@ -6903,7 +6880,6 @@ virtual CSize TabbedTextOut(
     LPINT lpnTabStopPositions,
     int nTabOrigin);
 
-
 CSize TabbedTextOut(
     int x,
     int y,
@@ -6961,7 +6937,6 @@ virtual BOOL TextOut(
     int y,
     LPCTSTR lpszString,
     int nCount);
-
 
 BOOL TextOut(
     int x,

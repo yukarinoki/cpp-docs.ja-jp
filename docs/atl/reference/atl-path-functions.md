@@ -47,12 +47,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d5b3677ab256e6d1b3e88f5bc71c8b9c7b097b2
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cdb658b179e3e3488b070203ad7f0909610d4fd8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43753293"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054645"
 ---
 # <a name="atl-path-functions"></a>ATL パス関数
 
@@ -113,7 +113,7 @@ ATL ATLPath クラスの形式でパスを操作するためには、 [CPathT](c
 |[ATLPath::StripToRoot](#striptoroot)|この関数はオーバー ロードされたラッパー [PathStripToRoot](/windows/desktop/api/shlwapi/nf-shlwapi-pathstriptoroota)します。|
 |[ATLPath::UnquoteSpaces](#unquotespaces)|この関数はオーバー ロードされたラッパー [PathUnquoteSpaces](/windows/desktop/api/shlwapi/nf-shlwapi-pathunquotespacesa)します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlpath.h
 
@@ -351,6 +351,7 @@ inline int GetDriveNumber(const wchar_t* pszPath);
 inline BOOL IsDirectory(const char* pszPath);
 inline BOOL IsDirectory(const wchar_t* pszPath);
 ```
+
 ### <a name="remarks"></a>Remarks
 
 詳細については、PathIsDirectory を参照してください。

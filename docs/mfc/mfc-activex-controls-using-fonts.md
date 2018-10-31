@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14adec8d601778e255ae7e4242fc552fc820e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c34b4a842655ebce6fccaa89a1dfc6d4ef49add
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396702"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063485"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX コントロール: フォントの使用
 
@@ -64,7 +64,7 @@ ActiveX コントロールには、テキストが表示されている場合は
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**プロパティの追加**します。
 
-     プロパティの追加ウィザードが開きます。
+   プロパティの追加ウィザードが開きます。
 
 1. **プロパティ名**ボックスで、**フォント**します。
 
@@ -90,7 +90,7 @@ ActiveX コントロールには、テキストが表示されている場合は
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**プロパティの追加**します。
 
-     プロパティの追加ウィザードが開きます。
+   プロパティの追加ウィザードが開きます。
 
 1. **プロパティ名**ボックスで、**キャプション**します。
 
@@ -132,7 +132,7 @@ ActiveX コントロールには、テキストが表示されている場合は
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**プロパティの追加**します。
 
-     プロパティの追加ウィザードが開きます。
+   プロパティの追加ウィザードが開きます。
 
 1. **プロパティ名**ボックスに、プロパティの名前を入力します。 この例では、使用**HeadingFont**します。
 
@@ -168,35 +168,35 @@ DISP_PROPERTY_EX マクロを関連付けます、 `HeadingFont` 、対応する
 
 - 初期化*取り上げた*コントロールのコンス トラクター内。
 
-     [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#9](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_9.cpp)]
 
 - フォントの既定の属性を含む静的 FONTDESC 構造体を宣言します。
 
-     [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#10](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_10.cpp)]
 
 - コントロールで`DoPropExchange`メンバー関数を呼び出しを追加、`PX_Font`関数。 これは、初期化とカスタムのフォント プロパティを永続化を提供します。
 
-     [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#11](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_11.cpp)]
 
 - コントロールの実装を終了`GetHeadingFont`メンバー関数。
 
-     [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#12](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_12.cpp)]
 
 - コントロールの実装を終了`SetHeadingFont`メンバー関数。
 
-     [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#13](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_13.cpp)]
 
 - コントロールの変更`OnDraw`メンバー関数は、以前に選択したフォントを保持する変数を定義します。
 
-     [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#14](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_14.cpp)]
 
 - コントロールの変更`OnDraw`メンバー関数は、フォントが使用される場所に次の行を追加することで、デバイス コンテキストにカスタム フォントを選択します。
 
-     [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#15](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_15.cpp)]
 
 - コントロールの変更`OnDraw`メンバー関数は、フォントを使用した後、次の行を追加することで、デバイス コンテキストに戻す前のフォントを選択します。
 
-     [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
+   [!code-cpp[NVC_MFC_AxFont#16](../mfc/codesnippet/cpp/mfc-activex-controls-using-fonts_16.cpp)]
 
 カスタムのフォント プロパティを実装すると、標準のフォント プロパティ ページを実装するコントロールの現在のフォントを変更するユーザーが制御できるようにします。 標準のフォント プロパティ ページのプロパティ ページの ID を追加するには、BEGIN_PROPPAGEIDS マクロの後に、次の行を挿入します。
 

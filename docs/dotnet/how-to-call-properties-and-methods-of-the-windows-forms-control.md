@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 1d3f8dc2251dbfbcd8155b0edc512a9dc40bacc2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 71e42f7d7a60478ec9344a44e8e86463e5845500
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393400"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061574"
 ---
 # <a name="how-to-call-properties-and-methods-of-the-windows-forms-control"></a>方法: Windows フォーム コントロールのプロパティとメソッドを呼び出す
 
@@ -39,11 +39,11 @@ ms.locfileid: "46393400"
 
 1. オーバーライドのパブリック セクションに次の行を追加、`CMFC02View`クラス MFC02View.h で宣言します。
 
-     `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
+   `gcroot<WindowsFormsControlLibrary1::UserControl1 ^> m_ViewControl;`
 
 1. フィルターと並べ替え順序の上書きを追加します。
 
-     表示、**プロパティ**ウィンドウ (F4)。 **クラス ビュー** (CTRL + SHIFT + C)、CMFC02View クラスを選択します。 **プロパティ**ウィンドウで、上書きのアイコンを選択します。 フィルターと並べ替え順序を一覧の下にスクロールします。 ドロップダウン リストからをクリックして\<追加 >。 MFC02View.cpp で。 OnInitialUpdate 関数の本体は、次のようにすることを確認します。
+   表示、**プロパティ**ウィンドウ (F4)。 **クラス ビュー** (CTRL + SHIFT + C)、CMFC02View クラスを選択します。 **プロパティ**ウィンドウで、上書きのアイコンを選択します。 フィルターと並べ替え順序を一覧の下にスクロールします。 ドロップダウン リストからをクリックして\<追加 >。 MFC02View.cpp で。 OnInitialUpdate 関数の本体は、次のようにすることを確認します。
 
     ```
     CWinFormsView::OnInitialUpdate();
@@ -53,11 +53,11 @@ ms.locfileid: "46393400"
 
 1. プロジェクトをビルドして実行します。
 
-     **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
+   **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 
-     **デバッグ** メニューのをクリックして**デバッグなしで開始**します。
+   **デバッグ** メニューのをクリックして**デバッグなしで開始**します。
 
-     テキスト ボックスが現在初期化されていることに注意してください。
+   テキスト ボックスが現在初期化されていることに注意してください。
 
 ## <a name="see-also"></a>関連項目
 

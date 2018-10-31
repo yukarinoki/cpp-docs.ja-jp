@@ -41,12 +41,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: faf3080c6363ef0227b71e550ff658b1790d37b9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 52a2d1387fd476cffa2027ffc136b4759b591e31
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090699"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059195"
 ---
 # <a name="ccommodule-class"></a>CComModule クラス
 
@@ -127,7 +127,7 @@ ATL COM の AppWizard を実行すると、ウィザードは自動的に生成`
 
 `CComModule`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 
@@ -136,7 +136,7 @@ ATL COM の AppWizard を実行すると、ウィザードは自動的に生成`
 ATL 7.0 では、時点で`CComModule`は廃止されています。 を参照してください[ATL モジュール クラス](../../atl/atl-module-classes.md)の詳細。
 
 ```
-HRESULT GetClassObject(  
+HRESULT GetClassObject(
     REFCLSID rclsid,
     REFIID riid,
     LPVOID* ppv) throw();
@@ -340,7 +340,7 @@ _ATL_OBJMAP_ENTRY* m_pObjMap;
 ATL 7.0 では、時点で`CComModule`は廃止されています。 を参照してください[ATL モジュール クラス](../../atl/atl-module-classes.md)の詳細。
 
 ```
-ATL_DEPRECATED HRESULT RegisterClassHelper(  
+ATL_DEPRECATED HRESULT RegisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -386,7 +386,7 @@ HRESULT RegisterClassObjects(DWORD dwClsContext, DWORD dwFlags) throw();
 ### <a name="parameters"></a>パラメーター
 
 *dwClsContext*<br/>
-[in]クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 これらの値については、次を参照してください。 [CLSCTX](https://msdn.microsoft.com/library/windows/desktop/ms693716) Windows SDK に含まれています。
+[in]クラスのオブジェクトが実行コンテキストを指定します。 指定できる値は、CLSCTX_INPROC_SERVER や CLSCTX_INPROC_HANDLER、CLSCTX_LOCAL_SERVER は。 これらの値については、次を参照してください。 [CLSCTX](/windows/desktop/api/wtypesbase/ne-wtypesbase-tagclsctx) Windows SDK に含まれています。
 
 *dwFlags*<br/>
 [in]クラス オブジェクトへの接続の種類を決定します。 指定できる値は、REGCLS_SINGLEUSE、REGCLS_MULTIPLEUSE、または REGCLS_MULTI_SEPARATE は。 これらの値については、次を参照してください。 [REGCLS](/windows/desktop/api/combaseapi/ne-combaseapi-tagregcls) Windows SDK に含まれています。
@@ -405,7 +405,7 @@ ATL 7.0 では、時点で`CComModule`は廃止されています。 を参照�
 
 ```
 HRESULT RegisterServer(
-    BOOL bRegTypeLib = FALSE,  
+    BOOL bRegTypeLib = FALSE,
     const CLSID* pCLSID = NULL) throw();
 ```
 
@@ -488,7 +488,7 @@ void Term() throw();
 ATL 7.0 では、時点で`CComModule`は廃止されています。 を参照してください[ATL モジュール クラス](../../atl/atl-module-classes.md)の詳細。
 
 ```
-ATL_DEPRECATED HRESULT UnregisterClassHelper(  
+ATL_DEPRECATED HRESULT UnregisterClassHelper(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID);
@@ -549,7 +549,7 @@ TRUE の場合、タイプ ライブラリ登録も解除されます。
 ATL 7.0 では、時点で`CComModule`は廃止されています。 を参照してください[ATL モジュール クラス](../../atl/atl-module-classes.md)の詳細。
 
 ```
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -557,7 +557,7 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
     DWORD dwFlags,
     BOOL bRegister);
 
-ATL_DEPRECATED HRESULT UpdateRegistryClass(  
+ATL_DEPRECATED HRESULT UpdateRegistryClass(
     const CLSID& clsid,
     LPCTSTR lpszProgID,
     LPCTSTR lpszVerIndProgID,
@@ -608,12 +608,12 @@ ATL_DEPRECATED HRESULT UpdateRegistryClass(
 ATL 7.0 では、時点で`CComModule`は廃止されています。 を参照してください[ATL モジュール クラス](../../atl/atl-module-classes.md)の詳細。
 
 ```
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceD(  
+virtual HRESULT UpdateRegistryFromResourceD(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw ();
@@ -658,12 +658,12 @@ virtual HRESULT UpdateRegistryFromResourceD(
 ATL 7.0 では、時点で`CComModule`は廃止されています。 を参照してください[ATL モジュール クラス](../../atl/atl-module-classes.md)の詳細。
 
 ```
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     LPCTSTR lpszRes,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();
 
-virtual HRESULT UpdateRegistryFromResourceS(  
+virtual HRESULT UpdateRegistryFromResourceS(
     UINT nResID,
     BOOL bRegister,
     struct _ATL_REGMAP_ENTRY* pMapEntries = NULL) throw();

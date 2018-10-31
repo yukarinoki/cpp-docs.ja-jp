@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b92f634e120bf40fe2355a4c09e0e0fb68e9ec2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61da17093d56dcfd8b0eeec3ade7955f27bc6b85
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407453"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077719"
 ---
 # <a name="accessing-run-time-class-information"></a>ランタイム クラス情報へのアクセス方法
 
@@ -50,7 +50,7 @@ ms.locfileid: "46407453"
 
 1. 使用`RUNTIME_CLASS`クラスには、ここに示すように、クラスの名前を持つ`CObject`:
 
-     [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#4](../mfc/codesnippet/cpp/accessing-run-time-class-information_1.cpp)]
 
 ランタイム クラスのオブジェクトに直接アクセスする必要はほとんどありません。 一般的な使用がランタイム クラスのオブジェクトを渡すには、`IsKindOf`関数は、次の手順で示すようにします。 `IsKindOf`関数は、特定のクラスに属しているかどうかに表示するオブジェクトをテストします。
 
@@ -60,9 +60,9 @@ ms.locfileid: "46407453"
 
 1. 呼び出す、 `IsKindOf` 、そのクラスのオブジェクトのメンバー関数を使用して、`RUNTIME_CLASS`を生成するマクロ、`CRuntimeClass`引数は、次のように。
 
-     [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
+   [!code-cpp[NVC_MFCCObjectSample#2](../mfc/codesnippet/cpp/accessing-run-time-class-information_2.h)]
 
-     [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
+   [!code-cpp[NVC_MFCCObjectSample#5](../mfc/codesnippet/cpp/accessing-run-time-class-information_3.cpp)]
 
     > [!NOTE]
     >  IsKindOf 返します**TRUE**オブジェクトまたは指定したクラスから派生したクラスの指定したクラスのメンバーである場合。 `IsKindOf` 必要に応じて、派生 Microsoft Foundation classes の多重継承を使用できますに複数の継承または仮想基底クラスをサポートしません。

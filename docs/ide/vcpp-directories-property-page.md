@@ -1,7 +1,7 @@
 ---
 title: '[VC++ ディレクトリ] プロパティ ページ | Microsoft Docs'
 ms.custom: ''
-ms.date: 04/26/2018
+ms.date: 10/09/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 238f26e8955d4be676c3bf37f7cc8b2d842b3de9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1799bfedaacd5e1560b1294524f717db8912f6b0
+ms.sourcegitcommit: 243ee0395ee44654a81ce1232f4581fb54904868
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394453"
+ms.lasthandoff: 10/10/2018
+ms.locfileid: "49072399"
 ---
 # <a name="vc-directories-property-page-windows"></a>[VC++ ディレクトリ] プロパティ ページ (Windows)
 
@@ -76,11 +76,13 @@ Visual Studio の*プロジェクト プロパティ*に習熟していない場
 
 マクロの詳細と、ハードコーディングされたパスの代わりに可能な限りマクロを使用すべき理由については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md#bkmkPropertiesVersusMacros)」を参照してください。
 
-一般的に使用されるマクロのリストは、「[ビルドのコマンドとプロパティの共通マクロ](https://docs.microsoft.com/en-us/cpp/ide/common-macros-for-build-commands-and-properties)」を参照してください。
+一般的に使用されるマクロのリストは、「[ビルドのコマンドとプロパティの共通マクロ](common-macros-for-build-commands-and-properties.md)」を参照してください。
 
 独自のマクロは次の 2 通りの方法で定義できます。
--   開発者コマンド プロンプトで環境変数を設定します。 すべての環境変数は、MSBuild プロパティ/マクロとして扱われます。
--   .props ファイルでユーザー マクロを定義します。 詳細については、「[Property page macros](working-with-project-properties.md#bkmkPropertiesVersusMacros)」 (プロパティ ページ マクロ) を参照してください。
+
+- 開発者コマンド プロンプトで環境変数を設定します。 すべての環境変数は、MSBuild プロパティ/マクロとして扱われます。
+
+- .props ファイルでユーザー マクロを定義します。 詳細については、「[Property page macros](working-with-project-properties.md#bkmkPropertiesVersusMacros)」 (プロパティ ページ マクロ) を参照してください。
 
 詳細については、ブログの投稿[「VC++ Directories](http://blogs.msdn.com/b/vsproject/archive/2009/07/07/vc-directories.aspx)」 (VC++ ディレクトリ)、「[Inherited Properties and Property Sheets](http://blogs.msdn.com/b/vsproject/archive/2009/06/23/inherited-properties-and-property-sheets.aspx)」 (継承されたプロパティとプロパティ シート)、および「[Visual Studio 2010 C++ Project Upgrade Guide](http://blogs.msdn.com/b/vcblog/archive/2010/03/02/visual-studio-2010-c-project-upgrade-guide.aspx)」 (Visual Studio 2010 C++ プロジェクト アップグレード ガイド) を参照してください。
 

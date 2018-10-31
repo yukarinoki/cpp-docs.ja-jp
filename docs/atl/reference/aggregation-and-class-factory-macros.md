@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9a9cc4a142a0aefc4937df493fa87552464b4294
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7115d73319dc7b76386367fb93329906cd72a027
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46043418"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50073410"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>集計とクラス ファクトリに関するマクロ
 
@@ -51,9 +51,9 @@ ms.locfileid: "46043418"
 |[集約](#declare_only_aggregatable)|オブジェクトを集約する必要があることを宣言します。|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|不明な外部の値をチェックし、集計または集計可能でない、必要に応じて、オブジェクトを宣言します。|
 |[アグリゲート](#declare_protect_final_construct)|内部オブジェクトの構築時に削除されないように、外側のオブジェクトを保護します。|
-|[DECLARE_VIEW_STATUS](#declare_view_status)|コンテナーにな VIEWSTATUS フラグを指定します。|  
+|[DECLARE_VIEW_STATUS](#declare_view_status)|コンテナーにな VIEWSTATUS フラグを指定します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 

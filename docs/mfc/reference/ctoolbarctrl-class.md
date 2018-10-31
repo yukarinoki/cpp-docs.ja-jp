@@ -192,12 +192,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 486e7ba1b91f1e5b8a7f99f27b89183ed32608a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7334fe1a48f0828a542baa77670f3ad7888b52e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409650"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083556"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 
@@ -359,7 +359,7 @@ Internet Explorer 4.0 以降のバージョンで導入された機能をサポ�
 
 `CToolBarCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
@@ -371,7 +371,6 @@ Internet Explorer 4.0 以降のバージョンで導入された機能をサポ�
 int AddBitmap(
     int nNumButtons,
     UINT nBitmapID);
-
 
 int AddBitmap(
     int nNumButtons,
@@ -440,11 +439,11 @@ typedef struct _TBBUTTON {
 
    このボタンのイメージがない場合は-1、ボタンのイメージの 0 から始まるインデックス。
 
--  `idCommand`
+- `idCommand`
 
    ボタンに関連付けられているコマンドの識別子です。 この識別子は、ボタンを選択すると、WM_COMMAND メッセージで送信されます。 場合、`fsStyle`メンバー TBSTYLE_SEP 値には、このメンバーは 0 である必要があります。
 
--  `fsState`
+- `fsState`
 
    ボタンの状態フラグ。 次の値の組み合わせを指定できます。
 
@@ -731,8 +730,6 @@ void Customize();
 ### <a name="remarks"></a>Remarks
 
 このダイアログ ボックスは、ユーザーの追加と削除ボタンがツールバーをカスタマイズできます。 カスタマイズをサポートするために、ツールバーの親ウィンドウする必要があります、カスタマイズ通知メッセージの処理」の説明に従って[カスタマイズ通知の処理](../../mfc/handling-customization-notifications.md)します。 ツールバーの必要がありますもで作成されているツールのスタイル」の説明に従って[CToolBarCtrl::Create](#create)します。
-
-詳細については、サポート技術情報記事 Q241850 を参照してください: PRB: カスタマイズ ダイアログ表示を呼び出すに CToolBarCtrl::Customize を保持しません。
 
 ##  <a name="deletebutton"></a>  CToolBarCtrl::DeleteButton
 

@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 58d0d250e17ddd8beaef2a9f5cff4d4e1046fdcb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a7368e067e1324c3263440a7a6b165099c870735
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380447"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078155"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>方法: タイプ セーフなコレクションを作成する
 
@@ -45,11 +45,11 @@ Microsoft Foundation Class ライブラリでは、C++ テンプレートに基�
 
 1. コレクション クラスの型の変数を宣言します。 例えば:
 
-     [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
+   [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
 1. メンバーのコレクション オブジェクトの関数を呼び出します。 例えば:
 
-     [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
+   [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
 1. 必要に応じて、実装、[ヘルパー関数](../mfc/reference/collection-class-helpers.md)と[SerializeElements](../mfc/reference/collection-class-helpers.md#serializeelements)します。 これらの関数を実装する方法の詳細については、次を参照してください。[ヘルパー関数を実装する](#_core_implementing_helper_functions)します。
 
@@ -85,27 +85,27 @@ MFC には、MFC バージョン 1.0 で導入されたコレクション クラ
 
 1. 非テンプレート クラスのいずれかのような使用`CWordArray`、直接します。
 
-     たとえば、作成、`CWordArray`に任意の 32 ビット値を追加し、それらを取得します。 やるべきものがありません。 定義済みの機能を使用するだけです。
+   たとえば、作成、`CWordArray`に任意の 32 ビット値を追加し、それらを取得します。 やるべきものがありません。 定義済みの機能を使用するだけです。
 
-     など、定義済みのコレクションを使用することもできます。`CObList`から派生した任意のオブジェクトを保持するために、`CObject`します。 A`CObList`へのポインターを保持するためにコレクションが定義されている`CObject`します。 一覧からオブジェクトを取得するときに、結果から適切な型をキャストする必要があります、`CObList`関数へのポインターを返す`CObject`します。 格納する場合など、`CPerson`内のオブジェクトを`CObList`コレクションへのポインターを取得した要素をキャストする必要がある、`CPerson`オブジェクト。 次の例では、`CObList`を保持するコレクション`CPerson`オブジェクト。
+   など、定義済みのコレクションを使用することもできます。`CObList`から派生した任意のオブジェクトを保持するために、`CObject`します。 A`CObList`へのポインターを保持するためにコレクションが定義されている`CObject`します。 一覧からオブジェクトを取得するときに、結果から適切な型をキャストする必要があります、`CObList`関数へのポインターを返す`CObject`します。 格納する場合など、`CPerson`内のオブジェクトを`CObList`コレクションへのポインターを取得した要素をキャストする必要がある、`CPerson`オブジェクト。 次の例では、`CObList`を保持するコレクション`CPerson`オブジェクト。
 
-     [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
+   [!code-cpp[NVC_MFCCollections#10](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_4.cpp)]
 
-     この手法の定義済みのコレクション型を使用して、必要に応じてキャストは、さまざまなコレクションのニーズのための適切な可能性があります。 さらに機能または複数のタイプ セーフが必要な場合、テンプレートに基づくクラスを使用して、または、次の手順に従います。
+   この手法の定義済みのコレクション型を使用して、必要に応じてキャストは、さまざまなコレクションのニーズのための適切な可能性があります。 さらに機能または複数のタイプ セーフが必要な場合、テンプレートに基づくクラスを使用して、または、次の手順に従います。
 
 #### <a name="to-derive-and-extend-a-nontemplate-type-safe-collection"></a>派生および非テンプレート タイプ セーフなコレクションを拡張するには
 
 1. 定義済みの非テンプレート クラスのいずれかから、独自のコレクション クラスを派生します。
 
-     クラスを派生するときは、既存の関数にタイプ セーフなインターフェイスを提供するタイプ セーフ ラッパー関数を追加できます。
+   クラスを派生するときは、既存の関数にタイプ セーフなインターフェイスを提供するタイプ セーフ ラッパー関数を追加できます。
 
-     たとえば、次の一覧からの派生`CObList`を保持する`CPerson`オブジェクトの場合、ラッパー関数を追加する場合があります`AddHeadPerson`と`GetHeadPerson`以下に示すように。
+   たとえば、次の一覧からの派生`CObList`を保持する`CPerson`オブジェクトの場合、ラッパー関数を追加する場合があります`AddHeadPerson`と`GetHeadPerson`以下に示すように。
 
-     [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
+   [!code-cpp[NVC_MFCCollections#11](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_5.h)]
 
-     これらのラッパー関数を追加および取得するタイプ セーフな方法を提供する`CPerson`オブジェクト派生しますから。 ことを確認、`GetHeadPerson`関数、型キャスト カプセル化するだけです。
+   これらのラッパー関数を追加および取得するタイプ セーフな方法を提供する`CPerson`オブジェクト派生しますから。 ことを確認、`GetHeadPerson`関数、型キャスト カプセル化するだけです。
 
-     タイプ セーフ ラッパーで既存の機能をラップするだけではなく、コレクションの機能を拡張する新しい関数の定義によって新しい機能を追加することもできます。 たとえば、この記事[CObject コレクションのすべてのオブジェクトを削除する](../mfc/deleting-all-objects-in-a-cobject-collection.md)をリストに含まれるすべてのオブジェクトを削除する関数を記述します。 この関数は、メンバー関数として、派生クラスに追加でした。
+   タイプ セーフ ラッパーで既存の機能をラップするだけではなく、コレクションの機能を拡張する新しい関数の定義によって新しい機能を追加することもできます。 たとえば、この記事[CObject コレクションのすべてのオブジェクトを削除する](../mfc/deleting-all-objects-in-a-cobject-collection.md)をリストに含まれるすべてのオブジェクトを削除する関数を記述します。 この関数は、メンバー関数として、派生クラスに追加でした。
 
 ## <a name="see-also"></a>関連項目
 

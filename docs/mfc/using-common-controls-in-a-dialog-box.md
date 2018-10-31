@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b8d3db1d8c19b68adb8cec53984e0dfe5a189651
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7ff5c3f28a47eb4e1810f046a242f6170c537bf2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389870"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054937"
 ---
 # <a name="using-common-controls-in-a-dialog-box"></a>ダイアログ ボックスでのコモン コントロールの使い方
 
@@ -42,7 +42,7 @@ Windows コモン コントロールで使用できる[ ダイアログ ボッ�
 
 1. [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)ダイアログ クラスの一般的なコントロールの初期条件を設定します。 前の手順で作成したメンバー変数を使用して、初期値とその他の設定を設定するのにメンバー関数を使用します。 設定には、次の詳細については、コントロールの説明を参照してください。
 
-     使用することも[ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange-and-validation.md)チェンジ (DDX) ダイアログ ボックスのコントロールを初期化します。
+   使用することも[ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange-and-validation.md)チェンジ (DDX) ダイアログ ボックスのコントロールを初期化します。
 
 1. ダイアログ ボックス上のコントロールのハンドラーでは、コントロールを操作するのにメンバー変数を使用します。 メソッドでは、次の詳細については、コントロールの説明を参照してください。
 

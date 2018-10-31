@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 3dd07ead0608657597a81b239732347f67455273
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
+ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436885"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48250394"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 名前空間
 
@@ -43,7 +43,7 @@ namespace Microsoft::WRL::Details;
 |[MakeAllocator クラス](../windows/makeallocator-class.md)|弱い参照のサポートの有無のアクティブ化可能なクラスのメモリを割り当てます。|
 |[ModuleBase クラス](../windows/modulebase-class.md)|基本クラスを表します、[モジュール](../windows/module-class.md)クラス。|
 |[RemoveIUnknown クラス](../windows/removeiunknown-class.md)|等価の型を作成、 `IUnknown`-ベースの型が、非仮想`QueryInterface`、 `AddRef`、および`Release`メソッド。|
-|[WeakReference クラス](../windows/weakreference-class1.md)|表す、*弱い参照*Windows ランタイムまたはクラシック COM で使用できます。 弱い参照は、アクセスできる場合とできない場合があるオブジェクトを表します。|
+|[WeakReference クラス](../windows/weakreference-class.md)|表す、*弱い参照*Windows ランタイムまたはクラシック COM で使用できます。 弱い参照は、アクセスできる場合とできない場合があるオブジェクトを表します。|
 
 ### <a name="structures"></a>構造体
 
@@ -84,7 +84,7 @@ namespace Microsoft::WRL::Details;
 |[ActivationFactoryCallback 関数](../windows/activationfactorycallback-function.md)|指定されたアクティブ化 ID のアクティベーション ファクトリを取得します。|
 |[Move 関数](../windows/move-function.md)|指定した引数を 1 つの場所から移動します。|
 |[RaiseException 関数](../windows/raiseexception-function.md)|呼び出し元のスレッドで例外が発生します。|
-|[Swap 関数 (Windows ランタイム C++ テンプレート ライブラリ)](../windows/swap-function-windows-runtime-cpp-template-library.md)|指定された 2 つの引数の値を交換します。|
+|[Swap 関数 (WRL)](../windows/swap-function-wrl.md)|指定された 2 つの引数の値を交換します。|
 |[TerminateMap 関数](../windows/terminatemap-function.md)|指定されたモジュールでクラス ファクトリをシャット ダウンします。|
 
 ## <a name="requirements"></a>要件

@@ -1,12 +1,14 @@
 ---
 title: _ _stdcall |Microsoft Docs
 ms.custom: ''
-ms.date: 09/05/2018
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __stdcall_cpp
+- __stdcall
+- _stdcall
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb65ff85346412587fab96934ca5438bb6a4dfe5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 06eafcd4303e01be523554f2a164e6cb14f79a26
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031380"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162257"
 ---
 # <a name="stdcall"></a>__stdcall
 
@@ -46,6 +48,8 @@ ms.locfileid: "46031380"
 |大文字と小文字の変換規約|なし|
 
 [/Gz](../build/reference/gd-gr-gv-gz-calling-convention.md)コンパイラ オプションを指定します **_ _stdcall**異なる呼び出し規則で明示的に宣言されたすべての関数。
+
+以前のバージョンとの互換性のため **_stdcall**のシノニムです **_ _stdcall**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)は指定します。
 
 使用して宣言された関数、 **_ _stdcall**修飾子の戻り値を使用して宣言された関数と同じ方法[_ _cdecl](../cpp/cdecl.md)します。
 

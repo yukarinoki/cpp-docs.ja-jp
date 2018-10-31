@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5cb576ba6ce532bce15b9dda2aa598649044c2d8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 994095042dc473fda315b6d842d9ec9355ff3671
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378015"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055399"
 ---
 # <a name="tn062-message-reflection-for-windows-controls"></a>テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)
 
@@ -126,7 +126,7 @@ ON_NOTIFY_REFLECT と ON_CONTROL_REFLECT マクロでは、特定のメッセー
 
 1. 既存のアプリケーションでは、新しいダイアログ ボックスを作成します。 詳細については、次を参照してください。、[ダイアログ エディター](../windows/dialog-editor.md)トピック。
 
-     再利用可能なコントロールを開発するためのアプリケーションが必要です。 使用する既存のアプリケーションを持っていない場合は、AppWizard を使用して、ダイアログ ベースのアプリケーションを作成します。
+   再利用可能なコントロールを開発するためのアプリケーションが必要です。 使用する既存のアプリケーションを持っていない場合は、AppWizard を使用して、ダイアログ ベースのアプリケーションを作成します。
 
 2. Visual C に読み込まれるプロジェクトと ClassWizard を使用してという新しいクラスを作成する`CYellowEdit`に基づいて`CEdit`します。
 
@@ -145,7 +145,7 @@ ON_NOTIFY_REFLECT と ON_CONTROL_REFLECT マクロでは、特定のメッセー
 
 5. 反映された WM_CTLCOLOR メッセージのハンドラーを追加、ClassWizard を使用して、`CYellowEdit`クラス。 処理できるメッセージの一覧で、メッセージ名の前に等号 (=) が、メッセージが反映されることを示すことに注意してください。 「[リフレクション メッセージ用のメッセージ ハンドラーを定義する](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)します。
 
-     ClassWizard では、次のメッセージ マップ マクロとスケルトン関数を追加します。
+   ClassWizard では、次のメッセージ マップ マクロとスケルトン関数を追加します。
 
     ```cpp
     ON_WM_CTLCOLOR_REFLECT()

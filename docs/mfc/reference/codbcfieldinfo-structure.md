@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 797a229007be58ff3da3bb529c9e8f4a062c12b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f178791bdaf57e5678f2e30d8994c2ffd140ffc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434311"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055798"
 ---
 # <a name="codbcfieldinfo-structure"></a>CODBCFieldInfo 構造体
 
@@ -62,7 +62,7 @@ struct CODBCFieldInfo
 
 この情報を取得する[に](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -71,5 +71,4 @@ struct CODBCFieldInfo
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)<br/>
 [に](../../mfc/reference/crecordset-class.md#getodbcfieldinfo)<br/>
 [CRecordset::GetFieldValue](../../mfc/reference/crecordset-class.md#getfieldvalue)
-
 

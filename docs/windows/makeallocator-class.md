@@ -1,7 +1,7 @@
 ---
 title: MakeAllocator クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 09/21/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -25,12 +25,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6cb6574172747712fa2670b4444b17bec047a8cf
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 93fb92c51ee16593f9314d7172f0b38e6d0918e8
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169737"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162478"
 ---
 # <a name="makeallocator-class"></a>MakeAllocator クラス
 
@@ -40,9 +40,11 @@ WRL インフラストラクチャをサポートし、コードから直接使�
 
 ```cpp
 template<
-   typename T,
-   bool hasWeakReferenceSupport =
-         !__is_base_of(RuntimeClassFlags<InhibitWeakReference>, T)>
+    typename T,
+    bool hasWeakReferenceSupport =
+          !__is_base_of(RuntimeClassFlags<InhibitWeakReference>,
+                        T)
+>
 class MakeAllocator;
 
 template<typename T>
@@ -58,7 +60,7 @@ class MakeAllocator<T, true>;
 型の名前。
 
 *hasWeakReferenceSupport*<br/>
-`true` 弱い参照は; をサポートするオブジェクトのメモリを割り当てられません。`false`弱い参照をサポートしていないオブジェクトのメモリを割り当てられません。
+**true**弱い参照は; をサポートするオブジェクトのメモリを割り当てられません。**false**弱い参照をサポートしていないオブジェクトのメモリを割り当てられません。
 
 ## <a name="remarks"></a>Remarks
 

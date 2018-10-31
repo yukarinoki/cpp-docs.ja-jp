@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff8e486be6e28de313a8e1a20634af4c50c350e8
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: bef8243ee648679843ba9cfdbbb5033415b9e21d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44313859"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074969"
 ---
 # <a name="unaryfunction-struct"></a>unary_function 構造体
 
@@ -36,6 +36,7 @@ struct unary_function
    typedef Result result_type;
 };
 ```
+
 ## <a name="remarks"></a>Remarks
 
 このテンプレート構造体は、**result_type**`operator()`( **constargument_type&**) **const** 形式のメンバー関数を定義するクラスの基底になります。
@@ -92,7 +93,7 @@ The number of elements in v1 greater than 10 is: 3.
 */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

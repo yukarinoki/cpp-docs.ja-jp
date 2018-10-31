@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8aa04fdee2b63f9d91d2bdd7dfd62100b3e32a2c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae8b15431edbdd24a7afd6c7e25be6b9eadb4107
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393322"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081392"
 ---
 # <a name="updating-the-text-of-a-status-bar-pane"></a>ステータス バー ペインのテキストの更新
 
@@ -40,17 +40,17 @@ ms.locfileid: "46393322"
 
 1. 定義ウィンドウのコマンド id。
 
-     **ビュー**  メニューのをクリックして**リソース ビュー**します。 プロジェクト リソースを右クリックし、をクリックして**リソース シンボル**します。 [リソース シンボル] ダイアログ ボックスで、`New`します。 コマンド ID の名前を入力します。 たとえば、`ID_INDICATOR_PAGE`します。 では、ID の値を指定するか、[リソース シンボル] ダイアログ ボックスで提案された値を使用します。 たとえば、`ID_INDICATOR_PAGE`既定値をそのまま使用します。 リソース シンボル ダイアログ ボックスを閉じます。
+   **ビュー**  メニューのをクリックして**リソース ビュー**します。 プロジェクト リソースを右クリックし、をクリックして**リソース シンボル**します。 [リソース シンボル] ダイアログ ボックスで、`New`します。 コマンド ID の名前を入力します。 たとえば、`ID_INDICATOR_PAGE`します。 では、ID の値を指定するか、[リソース シンボル] ダイアログ ボックスで提案された値を使用します。 たとえば、`ID_INDICATOR_PAGE`既定値をそのまま使用します。 リソース シンボル ダイアログ ボックスを閉じます。
 
 1. ウィンドウに表示する既定の文字列を定義します。
 
-     リソース ビューを開き、ダブルクリック**ストリング テーブル**アプリケーションのリソースの種類を一覧表示するウィンドウ。 **ストリング テーブル**エディターを開き、選択**新しい文字列**から、**挿入**メニュー。 文字列のプロパティ ウィンドウで、ウィンドウのコマンド ID を選択します (たとえば、 `ID_INDICATOR_PAGE`)「ページ」など、既定の文字列値を入力します。 文字列エディターを閉じます。 (既定の文字列が、コンパイラ エラーを回避するために必要)。
+   リソース ビューを開き、ダブルクリック**ストリング テーブル**アプリケーションのリソースの種類を一覧表示するウィンドウ。 **ストリング テーブル**エディターを開き、選択**新しい文字列**から、**挿入**メニュー。 文字列のプロパティ ウィンドウで、ウィンドウのコマンド ID を選択します (たとえば、 `ID_INDICATOR_PAGE`)「ページ」など、既定の文字列値を入力します。 文字列エディターを閉じます。 (既定の文字列が、コンパイラ エラーを回避するために必要)。
 
 1. ウィンドウを追加、*インジケーター*配列。
 
-     ファイルします。CPP、検索、*インジケーター*配列。 この配列は、左から右への順序で、ステータス バーのインジケーターのすべてのコマンド Id を一覧表示します。 配列の適切な時点に示すように、ウィンドウのコマンド ID を入力`ID_INDICATOR_PAGE`:
+   ファイルします。CPP、検索、*インジケーター*配列。 この配列は、左から右への順序で、ステータス バーのインジケーターのすべてのコマンド Id を一覧表示します。 配列の適切な時点に示すように、ウィンドウのコマンド ID を入力`ID_INDICATOR_PAGE`:
 
-     [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
+   [!code-cpp[NVC_MFCDocView#10](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_1.cpp)]
 
 呼び出すことをウィンドウにテキストを表示する推奨される方法です、`SetText`クラスのメンバー関数`CCmdUI`でウィンドウの更新ハンドラー関数。 整数型の変数を設定するなど、 *m_nPage*使用と現在のページ数を格納している`SetText`ペインのテキストをその数値の文字列形式に設定します。
 
@@ -63,19 +63,19 @@ ms.locfileid: "46393322"
 
 1. コマンドのコマンド更新ハンドラーを追加します。
 
-     次に示すように、ハンドラーのプロトタイプを手動で追加`ID_INDICATOR_PAGE`(でします。H):
+   次に示すように、ハンドラーのプロトタイプを手動で追加`ID_INDICATOR_PAGE`(でします。H):
 
-     [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
+   [!code-cpp[NVC_MFCDocView#11](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_2.h)]
 
 1. 適切な。CPP ファイルに示すように、ハンドラーの定義を追加`ID_INDICATOR_PAGE`(でします。CPP):
 
-     [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
+   [!code-cpp[NVC_MFCDocView#12](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_3.cpp)]
 
-     このハンドラーの最後の 3 つの行は、テキストを表示するコードです。
+   このハンドラーの最後の 3 つの行は、テキストを表示するコードです。
 
 1. 適切なメッセージ マップに示すように、ON_UPDATE_COMMAND_UI マクロを追加`ID_INDICATOR_PAGE`(でします。CPP):
 
-     [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
+   [!code-cpp[NVC_MFCDocView#13](../mfc/codesnippet/cpp/updating-the-text-of-a-status-bar-pane_4.cpp)]
 
 値を定義すると、 *m_nPage*メンバー変数 (クラスの`CMainFrame`)、この手法により、アプリケーションが他のインジケーターを更新するのと同様に、アイドル状態の処理中に、ウィンドウに表示するページ番号。 場合*m_nPage*の変更、表示が次のアイドル ループの中に変更します。
 

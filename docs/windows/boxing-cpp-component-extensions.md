@@ -1,7 +1,7 @@
 ---
-title: ボックス化 (C++ コンポーネント拡張) |Microsoft Docs
+title: ボックス化 (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -15,16 +15,16 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 92dc2032031fd0f3032db57b9eca8c723367da9e
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 566a29b31ea931970937cc97da02b90e409bf2dc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316719"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072942"
 ---
-# <a name="boxing--c-component-extensions"></a>ボックス化 (C++ コンポーネント拡張)
+# <a name="boxing--ccli-and-ccx"></a>ボックス化 (C +/cli および C++/cli CX)
 
-Visual C コンパイラと呼ばれるプロセス内のオブジェクトに値型に変換できる*ボックス化*、オブジェクトに変換する値の型と呼ばれるプロセスで*ボックス化解除*します。
+値型のオブジェクトへの変換と呼びます*ボックス化*、オブジェクトの値の型への変換と呼びます*ボックス化解除*します。
 
 ## <a name="all-runtimes"></a>すべてのランタイム
 
@@ -40,7 +40,7 @@ C + + CX 値型のボックス化とボックス化解除の参照型の略式�
 value_variable = (value_type) object_variable;
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -51,7 +51,7 @@ value_variable = (value_type) object_variable;
 例をテストするには、作成、`BlankApplication`プロジェクトで、置換、`BlankPage::OnNavigatedTo()`メソッド、し、右角かっこと変数への割り当てにブレークポイントを指定`str1`します。 この例では、右角かっこに達すると、確認`str1`します。
 
 ```cpp
-void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)  
+void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 {
     using namespace Windows::Globalization::DateTimeFormatting;
 
@@ -86,7 +86,7 @@ void BlankPage::OnNavigatedTo(NavigationEventArgs^ e)
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
 
-Visual C++ コンパイラでは、値型を <xref:System.Object> にボックス化できるようになりました。 これは、値型を <xref:System.Object> に変換するコンパイラで定義済みの変換により可能になりました。
+コンパイラのボックスの値の型を<xref:System.Object>します。 これは、値型を <xref:System.Object> に変換するコンパイラで定義済みの変換により可能になりました。
 
 ボックス化とボックス化解除を利用することで、値型をオブジェクトとして扱うことができます。 値型 (構造体型や int などの組み込み型を含む) を、<xref:System.Object> 型との間で相互に変換できます。
 
@@ -100,7 +100,7 @@ Visual C++ コンパイラでは、値型を <xref:System.Object> にボック�
 
 - [標準変換と暗黙のボックス化](../dotnet/standard-conversions-and-implicit-boxing.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -174,7 +174,7 @@ int main() {
                 // Will call void func1(System::Object^);
 
    func2(v2);   // OK: Calls "static V2::operator System::Object^(V2 v2)"
-   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)  
+   func2((V2^)v2);   // Using explicit boxing: calls func2(System::ValueType^)
 }
 ```
 
@@ -195,9 +195,9 @@ in func1(V2^)
 
 in func2(System::ValueType^)
 
-in func2(System::ValueType^)  
+in func2(System::ValueType^)
 ```
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

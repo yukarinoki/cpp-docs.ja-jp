@@ -16,50 +16,53 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 383347dc5cd1ce0dcadff6bdee802b90fd52e85d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 1596722fc5db1c0de183b30bd5d60235cc1665fa
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "33333906"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46414798"
 ---
 # <a name="xdcmake-reference"></a>XDCMake リファレンス
-xdcmake.exe は .xdc ファイルを .xml ファイルにコンパイルするプログラムです。 .xdc ファイルは、ソース コードが [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) でコンパイルされるとき、また、XML タグでマークアップされたドキュメント コメントがソース コード ファイルに含まれるとき、ソース コード ファイルごとに Visual C++ コンパイラによって作成されます。  
-  
-### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で xdcmake.exe を使用するには  
-  
-1.  プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。  
-  
-2.  **[構成プロパティ]** フォルダーを開きます。  
-  
-3.  **[XML Document Comments]\(XML ドキュメント コメント\)** プロパティ ページをクリックします。  
-  
+
+xdcmake.exe は .xdc ファイルを .xml ファイルにコンパイルするプログラムです。 .xdc ファイルは、ソース コードが [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) でコンパイルされるとき、また、XML タグでマークアップされたドキュメント コメントがソース コード ファイルに含まれるとき、ソース コード ファイルごとに Visual C++ コンパイラによって作成されます。
+
+### <a name="to-use-xdcmakeexe-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で xdcmake.exe を使用するには
+
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)」を参照してください。
+
+1. **[構成プロパティ]** フォルダーを開きます。
+
+1. **[XML Document Comments]\(XML ドキュメント コメント\)** プロパティ ページをクリックします。
+
 > [!NOTE]
->  コマンド ラインの xdcmake.exe オプションは、xdcmake.exe が開発環境 (プロパティ ページ) で使用されるときのオプションとは異なります。 開発環境で xdcmake.exe を使用する方法については、「[[XML ドキュメント ジェネレーター] プロパティ ページ](../ide/xml-document-generator-tool-property-pages.md)」を参照してください。  
-  
-## <a name="syntax"></a>構文  
- xdcmake `input_filename options`  
-  
-## <a name="parameters"></a>パラメーター  
- それぞれの文字について以下に説明します。  
-  
- `input_filename`  
- xdcmake.exe への入力として使用されている .xdc ファイルのファイル名。 1 つまたは複数の .xdc ファイルを指定するか、*.xdc と指定し、現在のディレクトリにあるすべての .xdc ファイルを使用します。  
-  
- `options`  
- 次をいくつか指定できます。指定しないこともできます。  
-  
-|オプション|説明|  
-|------------|-----------------|  
-|/?, /help|xdcmake.exe のヘルプを表示します。|  
-|/assembly:*filename*|.xml ファイルに \<assembly> タグの値を指定できます。  既定では、\<assembly> タグは .xml ファイルのファイル名と同じになります。|  
-|/nologo|著作権メッセージを表示しません。|  
-|/out:*filename*|.xml ファイルの名前を指定できます。  既定では、.xml ファイルの名前は xdcmake.exe によって処理される最初の .xdc ファイルのファイル名になります。|  
-  
-## <a name="remarks"></a>コメント  
- Visual Studio は、プロジェクトのビルド時、xdcmake.exe を自動的に呼び出します。 コマンド ラインで xdcmake.exe を呼び出すこともできます。  
-  
- ドキュメントのコメントをソース コード ファイルに追加する詳細については、[ドキュメント コメントとして推奨されるタグ](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)に関するページを参照してください。  
-  
-## <a name="see-also"></a>参照  
- [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)
+>  コマンド ラインの xdcmake.exe オプションは、xdcmake.exe が開発環境 (プロパティ ページ) で使用されるときのオプションとは異なります。 開発環境で xdcmake.exe を使用する方法については、「[[XML ドキュメント ジェネレーター] プロパティ ページ](../ide/xml-document-generator-tool-property-pages.md)」を参照してください。
+
+## <a name="syntax"></a>構文
+
+xdcmake `input_filename options`
+
+## <a name="parameters"></a>パラメーター
+
+*input_filename*<br/>
+xdcmake.exe への入力として使用されている .xdc ファイルのファイル名。 1 つまたは複数の .xdc ファイルを指定するか、*.xdc と指定し、現在のディレクトリにあるすべての .xdc ファイルを使用します。
+
+*options*<br/>
+次をいくつか指定できます。指定しないこともできます。
+
+|オプション|説明|
+|------------|-----------------|
+|/?, /help|xdcmake.exe のヘルプを表示します。|
+|/assembly:*filename*|.xml ファイルに \<assembly> タグの値を指定できます。  既定では、\<assembly> タグは .xml ファイルのファイル名と同じになります。|
+|/nologo|著作権メッセージを表示しません。|
+|/out:*filename*|.xml ファイルの名前を指定できます。  既定では、.xml ファイルの名前は xdcmake.exe によって処理される最初の .xdc ファイルのファイル名になります。|
+
+## <a name="remarks"></a>コメント
+
+Visual Studio は、プロジェクトのビルド時、xdcmake.exe を自動的に呼び出します。 コマンド ラインで xdcmake.exe を呼び出すこともできます。
+
+ドキュメントのコメントをソース コード ファイルに追加する詳細については、[ドキュメント コメントとして推奨されるタグ](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)に関するページを参照してください。
+
+## <a name="see-also"></a>参照
+
+[XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

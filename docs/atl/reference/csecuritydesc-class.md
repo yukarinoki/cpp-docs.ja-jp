@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 591465ed9c16485498174a710d2d37ff68425058
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: cc7f178923e043d9ecd3be4849f7b2f497b51a08
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116868"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057375"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc クラス
 
@@ -119,7 +119,7 @@ class CSecurityDesc
 
 Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsecurity.h
 
@@ -556,14 +556,14 @@ operator const SECURITY_DESCRIPTOR *() const throw();
 
 ```
 bool SetControl(
-    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest, 
+    SECURITY_DESCRIPTOR_CONTROL ControlBitsOfInterest,
     SECURITY_DESCRIPTOR_CONTROL ControlBitsToSet) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *ControlBitsOfInterest*<br/>
-設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、次を参照してください。 [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)します。
+設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、次を参照してください。 [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582)します。
 
 *ControlBitsToSet*<br/>
 によって指定される制御ビットの新しい値を示す SECURITY_DESCRIPTOR_CONTROL マスク、 *ControlBitsOfInterest*マスク。 このパラメーターの一覧表示フラグの組み合わせを指定できます、 *ControlBitsOfInterest*パラメーター。
@@ -574,18 +574,18 @@ bool SetControl(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出す[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582\(v=vs.85\).aspx)します。
+このメソッドを呼び出す[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582)します。
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 
 随意アクセス制御リスト (DACL) で情報を設定します。 DACL が既にセキュリティ記述子に存在する場合は置き換えられます。
 
 ```
-inline void SetDacl(  
+inline void SetDacl(
     bool bPresent = true,
     bool bDefaulted = false) throw(...);
 
-inline void SetDacl(  
+inline void SetDacl(
     const CDacl& Dacl,
     bool bDefaulted = false) throw(...);
 ```

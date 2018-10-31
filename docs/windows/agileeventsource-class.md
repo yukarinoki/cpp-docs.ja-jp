@@ -1,7 +1,7 @@
 ---
 title: AgileEventSource クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 03/22/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -17,12 +17,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 4f8ef724c78bdc61ef470199fbb5e956e374493f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0f2ee187087917220751155cc43e8619e6dcf763
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405254"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054575"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource クラス
 
@@ -31,9 +31,13 @@ ms.locfileid: "46405254"
 ## <a name="syntax"></a>構文
 
 ```cpp
-template<typename TDelegateInterface, typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>>
-class AgileEventSource
-    : public Microsoft::WRL::EventSource<TDelegateInterface, TEventSourceOptions>;
+template<
+    typename TDelegateInterface,
+    typename TEventSourceOptions = Microsoft::WRL::InvokeModeOptions<FireAll>
+>
+class AgileEventSource :
+    public Microsoft::WRL::EventSource<
+        TDelegateInterface, TEventSourceOptions>;
 ```
 
 ## <a name="parameters"></a>パラメーター
@@ -54,7 +58,7 @@ Windows ランタイム コンポーネントの大半は、アジャイル コ�
 
 `AgileEventSource`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** event.h
 
@@ -92,7 +96,6 @@ HRESULT Add(
 ### <a name="return-value"></a>戻り値
 
 成功した場合は S_OK、そうでない場合はエラーを示す HRESULT。
-
 
 ## <a name="see-also"></a>関連項目
 

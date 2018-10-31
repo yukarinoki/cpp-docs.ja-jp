@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 71a02b89e7b2098f8a125d1477cff2a0d1cda30a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 65113616b93917e46738a0d7f3bc39bdd79553f1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429969"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060047"
 ---
 # <a name="extent-class-c-amp"></a>extent クラス (C++ AMP)
 
@@ -45,7 +45,7 @@ class extent;
 *_Rank*<br/>
 `extent` オブジェクトのランク。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp.h
 
@@ -110,7 +110,7 @@ bool contains(const index<rank>& _Index) const restrict(amp,cpu);
 
 ### <a name="return-value"></a>戻り値
 
-指定した `true` 値が `index` オブジェクトに含まれている場合は `extent`。それ以外の場合は `false`。
+**true**場合、指定した*インデックス*に値が含まれている、`extent`オブジェクト。 それ以外の場合、 **false**します。
 
 ##  <a name="ctor"></a> エクステント
 
@@ -393,6 +393,7 @@ tiled_extent<_Dim0, _Dim1> tile() const ;
 template <int _Dim0, int _Dim1, int _Dim2>
 tiled_extent<_Dim0, _Dim1, _Dim2> tile() const ;
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *_Dim0*<br/>

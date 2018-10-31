@@ -1,7 +1,7 @@
 ---
-title: プロパティ (C++ コンポーネント拡張) |Microsoft Docs
+title: プロパティ (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,14 +18,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6f9c444861587e21724fe5f6aff545935fed6086
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 24028ac403092404ddf7fd279864273fcf6016ab
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420505"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075867"
 ---
-# <a name="property--c-component-extensions"></a>プロパティ (C++ コンポーネント拡張)
+# <a name="property--ccli-and-ccx"></a>プロパティ (C +/cli および C++/cli CX)
 
 宣言を*プロパティ*、動作し、データ メンバーまたは配列要素と同様にアクセスがメンバー関数であります。
 
@@ -53,17 +53,17 @@ ms.locfileid: "46420505"
 ```cpp
 property type property_name;
 
-property type property_name { 
-   access-modifier type get() inheritance-modifier {property_body}; 
+property type property_name {
+   access-modifier type get() inheritance-modifier {property_body};
    access-modifier void set(type value) inheritance-modifier {property_body};
-} 
+}
 
-property type property_name[index_list] { 
-   access-modifier type get(index_list) inheritance-modifier {property_body}; 
+property type property_name[index_list] {
+   access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
-} 
+}
 
-property type default[index_list] { 
+property type default[index_list] {
    access-modifier type get(index_list) inheritance-modifier {property_body};
    access-modifier void set(index_list, value) inheritance-modifier {property_body};
 }
@@ -98,7 +98,7 @@ set アクセサーまたは get アクセサーのプロパティ メソッド�
 
 詳細については、次を参照してください。[プロパティ (C + + CX)](https://msdn.microsoft.com/library/windows/apps/hh755807.aspx)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -173,8 +173,7 @@ Get メソッドとプロパティの set メソッドが一致する必要、**
 
 **プロパティ**は状況依存のキーワードです。  詳細については、次を参照してください。[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。
 
-
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -226,4 +225,4 @@ test
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

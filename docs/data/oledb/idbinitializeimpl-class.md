@@ -50,140 +50,140 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 4f44d43d48f862ca2ca5465d5ea9ee44d0e9040e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 92d71bc780e66d4a61d74605aeb5c316b181beba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46072421"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081765"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl クラス
 
-実装を提供、 [IDBInitialize](/previous-versions/windows/desktop/ms713706\(v=vs.85\))インターフェイス。  
-  
+実装を提供、 [IDBInitialize](/previous-versions/windows/desktop/ms713706)インターフェイス。
+
 ## <a name="syntax"></a>構文
 
 ```cpp
-template <class T>  
-class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize  
-```  
-  
-### <a name="parameters"></a>パラメーター  
+template <class T>
+class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
+```
+
+### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`IDBInitializeImpl`します。  
+派生したクラス、`IDBInitializeImpl`します。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atldb.h  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="methods"></a>メソッド  
-  
-|||  
-|-|-|  
-|[IDBInitializeImpl](#idbinitializeimpl)|コンストラクターです。|  
-  
-### <a name="interface-methods"></a>インターフェイス メソッド  
-  
-|||  
-|-|-|  
-|[Initialize](#initialize)|プロバイダーが開始されます。|  
-|[初期化を解除します。](#uninitialize)|プロバイダーを停止します。|  
-  
-### <a name="data-members"></a>データ メンバー  
-  
-|||  
-|-|-|  
-|[m_dwStatus](#dwstatus)|データ ソースのフラグ。|  
-|[m_pCUtlPropInfo](#pcutlpropinfo)|DB のプロパティ情報の実装へのポインター。|  
-  
-## <a name="remarks"></a>Remarks  
+**ヘッダー:** atldb.h
 
-データ ソース オブジェクトと列挙子の省略可能なインターフェイスの必須のインターフェイスです。  
+## <a name="members"></a>メンバー
+
+### <a name="methods"></a>メソッド
+
+|||
+|-|-|
+|[IDBInitializeImpl](#idbinitializeimpl)|コンストラクターです。|
+
+### <a name="interface-methods"></a>インターフェイス メソッド
+
+|||
+|-|-|
+|[Initialize](#initialize)|プロバイダーが開始されます。|
+|[初期化を解除します。](#uninitialize)|プロバイダーを停止します。|
+
+### <a name="data-members"></a>データ メンバー
+
+|||
+|-|-|
+|[m_dwStatus](#dwstatus)|データ ソースのフラグ。|
+|[m_pCUtlPropInfo](#pcutlpropinfo)|DB のプロパティ情報の実装へのポインター。|
+
+## <a name="remarks"></a>Remarks
+
+データ ソース オブジェクトと列挙子の省略可能なインターフェイスの必須のインターフェイスです。
 
 ## <a name="idbinitializeimpl"></a> Idbinitializeimpl::idbinitializeimpl
 
-コンストラクターです。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-IDBInitializeImpl();  
-```  
-  
-### <a name="remarks"></a>Remarks  
+コンストラクターです。
 
-すべてのデータ メンバーを初期化します。 
-  
+### <a name="syntax"></a>構文
+
+```cpp
+IDBInitializeImpl();
+```
+
+### <a name="remarks"></a>Remarks
+
+すべてのデータ メンバーを初期化します。
+
 ## <a name="initialize"></a> Idbinitializeimpl::initialize
 
-そのプロパティのサポートを準備して、データ ソース オブジェクトを初期化します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-STDMETHOD(Initialize)(void);  
-```  
-  
-### <a name="remarks"></a>Remarks  
+そのプロパティのサポートを準備して、データ ソース オブジェクトを初期化します。
 
-参照してください[idbinitialize::initialize](/previous-versions/windows/desktop/ms718026\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。 
+### <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(Initialize)(void);
+```
+
+### <a name="remarks"></a>Remarks
+
+参照してください[idbinitialize::initialize](/previous-versions/windows/desktop/ms718026)で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="uninitialize"></a> Idbinitializeimpl::uninitialize
 
-データの場所はソース プロパティのサポートなどの内部リソースを解放して初期化されていない状態でのオブジェクトです。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-STDMETHOD(Uninitialize)(void);  
-```  
-  
-### <a name="remarks"></a>Remarks  
+データの場所はソース プロパティのサポートなどの内部リソースを解放して初期化されていない状態でのオブジェクトです。
 
-参照してください[:uninitialize](/previous-versions/windows/desktop/ms719648\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
+### <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(Uninitialize)(void);
+```
+
+### <a name="remarks"></a>Remarks
+
+参照してください[:uninitialize](/previous-versions/windows/desktop/ms719648)で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="dwstatus"></a> Idbinitializeimpl::m_dwstatus
 
-データ ソースのフラグ。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-DWORD m_dwStatus;  
-```  
-  
-### <a name="remarks"></a>Remarks  
+データ ソースのフラグ。
 
-これらのフラグは、データ ソース オブジェクトのさまざまな属性の状態を示すまたは指定します。 次の 1 つ以上含む**enum**値。  
-  
-```cpp  
-enum DATASOURCE_FLAGS {  
-    DSF_MASK_INIT     = 0xFFFFF00F,  
-    DSF_PERSIST_DIRTY = 0x00000001,  
-    DSF_INITIALIZED   = 0x00000010,  
-};  
-```  
-  
-|||  
-|-|-|  
-|`DSF_MASK_INIT`|初期化されていない状態の復元を有効にするマスク。|  
-|`DSF_PERSIST_DIRTY`|(変更されている) 場合は、データ ソース オブジェクトに永続化が必要な場合に設定します。|  
-|`DSF_INITIALIZED`|データ ソースが初期化されている場合に設定します。|  
+### <a name="syntax"></a>構文
+
+```cpp
+DWORD m_dwStatus;
+```
+
+### <a name="remarks"></a>Remarks
+
+これらのフラグは、データ ソース オブジェクトのさまざまな属性の状態を示すまたは指定します。 次の 1 つ以上含む**enum**値。
+
+```cpp
+enum DATASOURCE_FLAGS {
+    DSF_MASK_INIT     = 0xFFFFF00F,
+    DSF_PERSIST_DIRTY = 0x00000001,
+    DSF_INITIALIZED   = 0x00000010,
+};
+```
+
+|||
+|-|-|
+|`DSF_MASK_INIT`|初期化されていない状態の復元を有効にするマスク。|
+|`DSF_PERSIST_DIRTY`|(変更されている) 場合は、データ ソース オブジェクトに永続化が必要な場合に設定します。|
+|`DSF_INITIALIZED`|データ ソースが初期化されている場合に設定します。|
 
 ## <a name="pcutlpropinfo"></a> Idbinitializeimpl::m_pcutlpropinfo
 
-DB のプロパティ情報の実装オブジェクトへのポインター。  
-  
-### <a name="syntax"></a>構文  
-  
+DB のプロパティ情報の実装オブジェクトへのポインター。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-CUtlPropInfo< T >* m_pCUtlPropInfo;  
-```  
-  
-## <a name="see-also"></a>関連項目  
+CUtlPropInfo< T >* m_pCUtlPropInfo;
+```
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

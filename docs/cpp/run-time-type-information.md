@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1244c05b7af94d69394c412a3c67864d6e75c337
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f9ce0094bce1f8e7590cef0cbe3bfe85f35158d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46050880"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056062"
 ---
 # <a name="run-time-type-information"></a>ランタイム型情報
 
@@ -35,15 +35,15 @@ C++ 言語には、実行時型情報を扱う 3 つの主要要素がありま�
 
 - [Dynamic_cast](../cpp/dynamic-cast-operator.md)演算子。
 
-     ポリモーフィック型を変換します。
+   ポリモーフィック型を変換します。
 
 - [Typeid](../cpp/typeid-operator.md)演算子。
 
-     オブジェクトの正確な型を特定します。
+   オブジェクトの正確な型を特定します。
 
 - [Type_info](../cpp/type-info-class.md)クラス。
 
-     によって返される型情報を保持するために使用される、 **typeid**演算子。
+   によって返される型情報を保持するために使用される、 **typeid**演算子。
 
 ## <a name="see-also"></a>関連項目
 

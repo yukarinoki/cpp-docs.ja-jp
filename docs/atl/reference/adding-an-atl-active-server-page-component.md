@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a326b72ac5594d7ef5f0b9ad26f9bdf4e8472bd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a9410ac275ecd321184153d45fd5b044deb80e5b
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112994"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861513"
 ---
 # <a name="adding-an-atl-active-server-page-component"></a>ATL Active Server Page コンポーネントを追加します。
 
@@ -36,13 +36,13 @@ Active Server Pages コンポーネントは、次の高度な Web 開発機能�
 
 - Web ベースのアプリケーションの ASP エラー処理機能を使用することができます。
 
-### <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>ATL Active Server Pages コンポーネントをプロジェクトに追加するには
+## <a name="to-add-an-atl-active-server-pages-component-to-your-project"></a>ATL Active Server Pages コンポーネントをプロジェクトに追加するには
 
 1. **ソリューション エクスプ ローラー** ATL Active Server Pages コンポーネントを追加するプロジェクトの名前を右クリックします。
 
-2. ショートカット メニューの **[追加]**、**[クラスの追加]** を順にクリックします。
+1. ショートカット メニューの **[追加]**、**[クラスの追加]** を順にクリックします。
 
-3. [クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスの [テンプレート] ペインで、クリックして**ATL Active Server Page コンポーネント**、 をクリックし、**オープン**を表示する、 [ATL Active ServerPage コンポーネント ウィザード](../../atl/reference/atl-active-server-page-component-wizard.md)します。
+1. [クラスの追加](../../ide/add-class-dialog-box.md) ダイアログ ボックスで、**テンプレート**ウィンドウで、をクリックして**ATL Active Server Page コンポーネント**、順にクリックします**オープン**を表示する、[ATL Active Server Page コンポーネント ウィザード](../../atl/reference/atl-active-server-page-component-wizard.md)します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -52,4 +52,3 @@ Active Server Pages コンポーネントは、次の高度な Web 開発機能�
 [メソッドの追加](../../ide/adding-a-method-visual-cpp.md)<br/>
 [MFC クラス](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [一般 C++ クラスの追加](../../ide/adding-a-generic-cpp-class.md)
-

@@ -19,12 +19,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cfb885a5d29c26f4a40d5b93490a06652eff1ffc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6253b52d322982efe8beafc45c9942fb3787818a
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43216673"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46082496"
 ---
 # <a name="format-specification-syntax-printf-and-wprintf-functions"></a>書式指定構文: printf 関数と wprintf 関数
 
@@ -58,8 +58,7 @@ ms.locfileid: "43216673"
 `short`、`int`、`long`、`long long` などの整数型と、その `unsigned` のバリエーションは、**d**、**i**、**o**、**u**、**x**、および **X** を使用して指定します。`float`、`double`、`long double` などの浮動小数点数型は、**a**、**A**、**e**、**E**、**f**、**F**、**g**、および **G** を使用して指定します。*size* プレフィックスで変更しない場合、既定では、整数引数は `int` 型に強制変換され、浮動小数点引数は `double` 型に強制変換されます。 64 ビット システム上では、`int` は 32 ビット値です。そのため、*size* プレフィックスに **ll** または **I64** を使用しない限り、64 ビット整数は、出力のために書式設定される際に切り捨てが行われます。 **p** で指定されるポインター型では、プラットフォームの既定のポインター サイズが使用されます。
 
 > [!NOTE]
-> **Microsoft 固有の仕様**  
-> type 文字 **Z**、および `printf` 関数と `wprintf` 関数で使用した場合の type 文字 **c**、**C****s**、および **S** の動作は、Microsoft の拡張機能です。 ISO C 標準では、すべての書式設定関数で、ナロー文字とナロー文字列に **c** と **s** が、ワイド文字とワイド文字列に **C** と **S** が一貫して使用されています。
+> **Microsoft 固有** type 文字 **Z**、および `printf` 関数と `wprintf` 関数で使用した場合の type 文字 **c**、**C**、**s**、および **S** の動作は、Microsoft の拡張機能です。 ISO C 標準では、すべての書式設定関数で、ナロー文字とナロー文字列に **c** と **s** が、ワイド文字とワイド文字列に **C** と **S** が一貫して使用されています。
 
 ### <a name="type-field-characters"></a>type フィールドの文字
 
@@ -212,11 +211,10 @@ Visual C++ では、`long double` は別個の型ですが、これには `doubl
 型指定子 **hc** または **hC** は、`printf` 関数の **c** および `wprintf` 関数の **C** と同じ意味です。 型指定子 **lc**、**lC**、**wc**、**wC** は、`printf` 関数の **C** および `wprintf` 関数の **c** と同じ意味です。 型指定子 **hs** または **hS** は、`printf` 関数の **s** および `wprintf` 関数の **S** と同じ意味です。 型指定子 **ls**、**lS**、**ws**、**wS** は、`printf` 関数の **S** および `wprintf` 関数の **s** と同じ意味です。
 
 > [!NOTE]
-> **Microsoft 固有の仕様**  
-> 引数サイズ修飾子 **I** (小文字の i)、**I32**、**I64**、および **w** は Microsoft の拡張機能で、ISO C とは互換性がありません。 プレフィックス **h** (`char` 型のデータと共に使用する場合)、および **l** (L の小文字) プレフィックス (`double` 型のデータと共に使用する場合) は Microsoft の拡張機能です。
+> **Microsoft 固有** 引数サイズ修飾子 **I** (小文字の i)、**I32**、**I64**、および **w** は Microsoft の拡張機能で、ISO C とは互換性がありません。 プレフィックス **h** (`char` 型のデータと共に使用する場合)、および **l** (L の小文字) プレフィックス (`double` 型のデータと共に使用する場合) は Microsoft の拡張機能です。
 
 ## <a name="see-also"></a>参照
 
-[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)  
-[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)  
-[printf_p の位置指定パラメーター](../c-runtime-library/printf-p-positional-parameters.md)  
+[printf、_printf_l、wprintf、_wprintf_l](../c-runtime-library/reference/printf-printf-l-wprintf-wprintf-l.md)<br/>
+[printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
+[printf_p の位置指定パラメーター](../c-runtime-library/printf-p-positional-parameters.md)

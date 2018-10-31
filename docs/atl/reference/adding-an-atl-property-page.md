@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dfb5ec444be55d7b595660f7777ae54e19143fd4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c46adc199a5d6b0bc814cc203b94ac3d268a560d
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021617"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860629"
 ---
 # <a name="adding-an-atl-property-page"></a>ATL プロパティ ページを追加します。
 
@@ -30,15 +30,15 @@ Active Template Library (ATL) のプロパティ ページをプロジェクト�
 コントロールのプロパティ ページを追加する場合、コントロールをサポートする必要があります、 [ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)インターフェイス。 このインターフェイスは、コントロールの派生リストで、既定では、クラスを[ATL のコントロールを作成](../../atl/reference/adding-an-atl-control.md)を使用して、 [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)します。
 
 > [!NOTE]
->  コントロール クラスを持たない場合[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)の派生リストにする必要があります手動で追加します。
+> コントロール クラスを持たない場合[ISpecifyPropertyPagesImpl](../../atl/reference/ispecifypropertypagesimpl-class.md)の派生リストにする必要があります手動で追加します。
 
-### <a name="to-add-an-atl-property-page-to-your-project"></a>ATL プロパティ ページをプロジェクトに追加するには
+## <a name="to-add-an-atl-property-page-to-your-project"></a>ATL プロパティ ページをプロジェクトに追加するには
 
 1. いずれかで**ソリューション エクスプ ローラー**または[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)、ATL プロパティ ページを追加するプロジェクトの名前を右クリックします。
 
-2. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**クラスの追加**します。
+1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**クラスの追加**します。
 
-3. [クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスの [テンプレート] ペインで、クリックして**ATL プロパティ ページ** をクリックし、**オープン**を表示する、 [ATL プロパティ ページ ウィザード](../../atl/reference/atl-property-page-wizard.md).
+1. [クラスの追加](../../ide/add-class-dialog-box.md) ダイアログ ボックスで、**テンプレート**ウィンドウで、をクリックして**ATL プロパティ ページ**順にクリックします**オープン**を表示する[ATL プロパティ ページ ウィザード](../../atl/reference/atl-property-page-wizard.md)します。
 
 指定する必要がありますコントロールのプロパティ ページを作成すると、 [PROP_PAGE](property-map-macros.md#prop_page)コントロールのプロパティ マップ内のエントリ。
 
@@ -47,4 +47,3 @@ Active Template Library (ATL) のプロパティ ページをプロジェクト�
 [プロパティ ページ](../../atl/atl-com-property-pages.md)<br/>
 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [例: プロパティ ページの実装](../../atl/example-implementing-a-property-page.md)
-

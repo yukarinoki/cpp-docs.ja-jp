@@ -1,5 +1,5 @@
 ---
-title: override (C++ コンポーネント拡張) |Microsoft Docs
+title: オーバーライド (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 6071cef3d5669fda86975bb0f27a2b9b87eeb011
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1d97558dc50adc0bac8758d0821badff14707c04
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407271"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056140"
 ---
-# <a name="override--c-component-extensions"></a>override (C++ コンポーネント拡張)
+# <a name="override--ccli-and-ccx"></a>オーバーライド (C +/cli および C++/cli CX)
 
 **オーバーライド**状況依存のキーワードは、型のメンバーが基底クラスまたは基本インターフェイスのメンバーをオーバーライドすることを示します。
 
@@ -55,7 +55,7 @@ struct X : public I1 {
 
 コード例を次に示します**オーバーライド**Windows ランタイム コンパイルで使用できます。
 
-```cpp 
+```cpp
 // override_keyword_2.cpp
 // compile with: /ZW /c
 ref struct I1 {
@@ -67,7 +67,7 @@ ref struct X : public I1 {
 };
 ```
 
-#### <a name="requirements"></a>要件
+#### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -87,7 +87,7 @@ ref struct X : public I1 {
 };
 ```
 
-#### <a name="requirements"></a>要件
+#### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

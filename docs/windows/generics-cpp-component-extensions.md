@@ -1,7 +1,7 @@
 ---
-title: ジェネリック (C++ コンポーネント拡張) |Microsoft Docs
+title: ジェネリック (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -18,37 +18,37 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 121d3bf1fd7d59f36362a034216e0728b2fc25b0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8bb0c6bc3459ff0b86200502b1a31ee341078280
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448351"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49327676"
 ---
-# <a name="generics--c-component-extensions"></a>ジェネリック (C++ コンポーネント拡張)
+# <a name="generics--ccli-and-ccx"></a>ジェネリック (C +/cli および C++/cli CX)
 
-ジェネリックは、パラメーター化された型およびメソッドです。 このセクションでは、Windows ランタイムと、共通言語ランタイムの両方でサポートされる汎用的な機能および共通言語ランタイムのみでサポートを確認します。 また、独自のジェネリック メソッドと、Visual C の型を作成する方法と Visual C での .NET Framework 言語で作成されたジェネリック型を使用する方法を検索します。 最後に、このセクションでは、ジェネリックと C++ テンプレートの比較を示します。
+ジェネリックは、パラメーター化された型およびメソッドです。 このセクションでは、Windows ランタイムと、共通言語ランタイムの両方でサポートされる汎用的な機能および共通言語ランタイムのみでサポートを確認します。 また、独自のジェネリック メソッドや C + での型を作成する方法を調べる/cli CLI、C + での .NET Framework 言語で作成されたジェネリック型を使用する方法と/cli CLI。 最後に、このセクションでは、ジェネリックと C++ テンプレートの比較を示します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 ### <a name="supported-by-the-windows-runtime-and-the-common-language-runtime"></a>Windows ランタイムと共通言語ランタイムでサポートされます。
 
-[Visual C++ のジェネリックの概要](../windows/overview-of-generics-in-visual-cpp.md)<br/>
+[C++ のジェネリックの概要/cli CLI](../windows/overview-of-generics-in-visual-cpp.md)<br/>
 ジェネリックの概要については、言語の機能で、ジェネリックとジェネリック型パラメーターとして参照型と値の型の使用に関する情報を説明するのに使用される用語の定義の動機です。
 
-[ジェネリック インターフェイス (Visual C++)](../windows/generic-interfaces-visual-cpp.md)<br/>
+[ジェネリック インターフェイス (C +/cli CLI)](../windows/generic-interfaces-visual-cpp.md)<br/>
 定義とジェネリック インターフェイスの使用について説明します。
 
-[汎用デリゲート (Visual C++)](../windows/generic-delegates-visual-cpp.md)<br/>
+[汎用デリゲート (C +/cli CLI)](../windows/generic-delegates-visual-cpp.md)<br/>
 定義と汎用デリゲートの使用について説明します。
 
 [ジェネリック型パラメーターの制約 (C++/CLI)](../windows/constraints-on-generic-type-parameters-cpp-cli.md)<br/>
 ジェネリック型制約を使用する方法の詳細についてはします。
 
 [ジェネリックの使用 (C++/CLI)](../windows/consuming-generics-cpp-cli.md)<br/>
-Visual C での他の言語で作成された可能性がある、.NET アセンブリで定義されているジェネリックの使用方法の詳細についてはします。
+C + での他の言語で作成された可能性がある、.NET アセンブリで定義されているジェネリックを使用してについて/cli CLI。
 
-[ジェネリックとテンプレート (Visual C++)](../windows/generics-and-templates-visual-cpp.md)<br/>
+[ジェネリックとテンプレート (C +/cli CLI)](../windows/generics-and-templates-visual-cpp.md)<br/>
 ジェネリックとテンプレートを使用して、各およびそれらを有効に結合する方法を比較します。
 
 ### <a name="supported-by-the-common-language-runtime"></a>共通言語ランタイムでサポートされています。
@@ -66,4 +66,4 @@ Visual C での他の言語で作成された可能性がある、.NET アセン
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

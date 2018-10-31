@@ -64,19 +64,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cd0858763d31e1f46e1cb366154871f06ae7a910
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a1c27d20970b8e8634e8438c25733fd90a3ad632
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400407"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064798"
 ---
 # <a name="cimage-class"></a>CImage クラス
 
 `CImage` 読み込み、JPEG、GIF、BMP、およびポータブル ネットワーク グラフィックス (PNG) 形式で画像を保存する機能など、ビットマップの拡張サポートを提供します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -163,16 +163,16 @@ class CImage
 添付のビットマップが DIB セクションを確認するには、呼び出す[IsDibSection](#isdibsection)します。
 
 > [!NOTE]
-> **注**Visual Studio .NET 2003 で、このクラスは、数のカウントを保持`CImage`オブジェクトを作成します。 カウントが 0 の場合、関数に移動するたびに`GdiplusShutdown`は GDI + で使用されるリソースを解放する自動的に呼び出されます。 これにより、 `CImage` Dll によって直接的または間接的に作成されるオブジェクトが正しく破棄は常に、`GdiplusShutdown`からは呼び出されません`DllMain`します。
+> Visual Studio .NET 2003 でこのクラスは、数のカウントを保持`CImage`オブジェクトを作成します。 カウントが 0 の場合、関数に移動するたびに`GdiplusShutdown`は GDI + で使用されるリソースを解放する自動的に呼び出されます。 これにより、 `CImage` Dll によって直接的または間接的に作成されるオブジェクトが正しく破棄は常に、`GdiplusShutdown`からは呼び出されません`DllMain`します。
 
 > [!NOTE]
->  グローバルを使用して`CImage`DLL 内のオブジェクトはお勧めしません。 グローバルを使用する必要がある場合`CImage`呼び出し、DLL 内のオブジェクト[CImage::ReleaseGDIPlus](#releasegdiplus) GDI + で使用されるリソースを明示的に解放します。
+> グローバルを使用して`CImage`DLL 内のオブジェクトはお勧めしません。 グローバルを使用する必要がある場合`CImage`呼び出し、DLL 内のオブジェクト[CImage::ReleaseGDIPlus](#releasegdiplus) GDI + で使用されるリソースを明示的に解放します。
 
 `CImage` 新しい選択できない[CDC](../../mfc/reference/cdc-class.md)します。 `CImage` イメージの独自の HDC を作成します。 HBITMAP を 1 つ HDC を選択するには、一度に、ため、HBITMAP に関連付けられている、`CImage`別 HDC を選択することはできません。 HDC をな CDC の場合は、取得、`CImage`し [CDC::FromHandle] を付けます (../../mfc/reference/cdc-class.md#cdc__fromhandle します。
 
 ## <a name="example"></a>例
 
-```cpp  
+```cpp
 // Get a CDC for the image
 CDC* pDC = CDC::FromHandle(m_myImage.GetDC());
 
@@ -181,35 +181,33 @@ pDC->Rectangle(0, 40, 100, 50);
 m_myImage.ReleaseDC();
 ```
 
-使用すると`CImage`MFC プロジェクトで、プロジェクトのメンバー関数へのポインターの期待に注意してください、 [CBitmap](../../mfc/reference/cbitmap-class.md)オブジェクト。 使用する場合`CImage`のような関数は、のような[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)を使用して、 [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)、渡す、 `CImage` HBITMAP、して、返された`CBitmap*`します。  
-
+使用すると`CImage`MFC プロジェクトで、プロジェクトのメンバー関数へのポインターの期待に注意してください、 [CBitmap](../../mfc/reference/cbitmap-class.md)オブジェクト。 使用する場合`CImage`のような関数は、のような[CMenu::AppendMenu](../../mfc/reference/cmenu-class.md#appendmenu)を使用して、 [CBitmap::FromHandle](../../mfc/reference/cbitmap-class.md#fromhandle)、渡す、 `CImage` HBITMAP、して、返された`CBitmap*`します。
 
 ## <a name="example"></a>例
 
-```cpp  
+```cpp
 void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 {
     UNREFERENCED_PARAMETER(nFlags);
-    
+
     CBitmap* pBitmap = CBitmap::FromHandle(m_myImage);
     m_pmenuPop->AppendMenu(0, ID_BMPCOMMAND, pBitmap);
     ClientToScreen(&point);
-    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x, 
+    m_pmenuPop->TrackPopupMenu(TPM_RIGHTBUTTON | TPM_LEFTALIGN, point.x,
     point.y, this);
 }
 ```
-
 
 を通じて`CImage`、DIB セクションの実際のビットへのアクセスがあります。 使用することができます、 `CImage` Win32 HBITMAP または DIB のセクションを使用していたオブジェクトの任意の場所。
 
 使用することができます`CImage`MFC または ATL のいずれかから
 
 > [!NOTE]
->  使用してプロジェクトを作成すると`CImage`を定義する必要があります`CString`インクルードする前に`atlimage.h`します。 プロジェクトでは、MFC を使用せずに ATL を使用する場合は、`atlstr.h`インクルードする前に`atlimage.h`します。 プロジェクトでは、MFC (または、これは MFC サポートを ATL プロジェクトであるかどうか) を使用する場合は、`afxstr.h`インクルードする前に`atlimage.h`します。  
->   
->  同様に、含める必要がある`atlimage.h`インクルードする前に`atlimpl.cpp`します。 簡単にこれを実現するには含める`atlimage.h`で、`stdafx.h`します。
+> 使用してプロジェクトを作成すると`CImage`を定義する必要があります`CString`インクルードする前に`atlimage.h`します。 プロジェクトでは、MFC を使用せずに ATL を使用する場合は、`atlstr.h`インクルードする前に`atlimage.h`します。 プロジェクトでは、MFC (または、これは MFC サポートを ATL プロジェクトであるかどうか) を使用する場合は、`afxstr.h`インクルードする前に`atlimage.h`します。<br/>
+> <br/>
+> 同様に、含める必要がある`atlimage.h`インクルードする前に`atlimpl.cpp`します。 簡単にこれを実現するには含める`atlimage.h`で、`stdafx.h`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlimage.h
 
@@ -219,81 +217,81 @@ void CMyDlg::OnRButtonDown(UINT nFlags, CPoint point)
 
 ```
 BOOL AlphaBlend(
-HDC hDestDC,
-int xDest,
-int yDest,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER) const throw();
 
 BOOL AlphaBlend(
-HDC hDestDC,
-const POINT& pointDest,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER) const throw();
+    HDC hDestDC,
+    const POINT& pointDest,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER) const throw();
 
 BOOL AlphaBlend(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER);
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER);
 
 BOOL AlphaBlend(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc,
-BYTE bSrcAlpha = 0xff,
-BYTE bBlendOp = AC_SRC_OVER);
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc,
+    BYTE bSrcAlpha = 0xff,
+    BYTE bBlendOp = AC_SRC_OVER);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hDestDC*  
+*hDestDC*<br/>
 コピー先のデバイス コンテキストへのハンドルします。
 
-*xDest*  
+*xDest*<br/>
 X 座標、先の四角形の左上隅の論理単位です。
 
-*yDest*  
+*yDest*<br/>
 Y 座標、先の四角形の左上隅の論理単位です。
 
-*bSrcAlpha*  
+*bSrcAlpha*<br/>
 元のビットマップ全体で使用するアルファ透明度値。 既定値 0 xff (255) には、イメージが不透明であると、ピクセル単位のアルファ値のみを使用することが想定しています。
 
-*bBlendOp*  
+*bBlendOp*<br/>
 アルファ ブレンドのソースとコピー先ビットマップ、グローバルのアルファ値全体の元のビットマップと元のビットマップの書式情報に適用する関数。 ソースと宛先の blend 関数は、ビットマップに制限されています。
 
-*pointDest*  
+*pointDest*<br/>
 参照を[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)論理単位で、先の四角形の左上隅を識別する構造体。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 論理ユニットは、先の四角形の幅。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 論理ユニットは、先の四角形の高さ。
 
-*xSrc*  
+*xSrc*<br/>
 元の四角形の左上隅の論理 x 座標。
 
-*ySrc*  
+*ySrc*<br/>
 元の四角形の左上隅の論理 y 座標。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 論理ユニットは、元の四角形の幅。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 論理ユニットは、元の四角形の高さ。
 
-*rectDest*  
+*rectDest*<br/>
 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。
 
-*rectSrc*  
+*rectSrc*<br/>
 参照を`RECT`構造体、ソースを特定します。
 
 ### <a name="return-value"></a>戻り値
@@ -304,7 +302,7 @@ Y 座標、先の四角形の左上隅の論理単位です。
 
 アルファ ブレンド ビットマップでは、色は、ピクセル単位で描画をサポートします。
 
-ときに*bBlendOp*設定されているソース ビットマップをコピー先のビットマップ ソース ピクセルのアルファ値に基づいてその上にビットマップの既定値にします。  
+ときに*bBlendOp*設定されているソース ビットマップをコピー先のビットマップ ソース ピクセルのアルファ値に基づいてその上にビットマップの既定値にします。
 
 ##  <a name="attach"></a>  CImage::Attach
 
@@ -316,13 +314,13 @@ void Attach(HBITMAP hBitmap, DIBOrientation eOrientation = DIBOR_DEFAULT) throw(
 
 ### <a name="parameters"></a>パラメーター
 
-*hBitmap*  
+*hBitmap*<br/>
 HBITMAP ハンドル。
 
-*eOrientation*  
+*eOrientation*<br/>
 ビットマップの向きを指定します。 次のいずれかの値を指定します。
 
-- DIBOR_DEFAULT ビットマップの向きは、オペレーティング システムによって決定されます。 ただし、この常がない目的の結果にすべてのオペレーティング システム。 詳細については、これは、次のサポート技術情報の記事を参照してください (**Q186586**): PRB: GetObject() 常に返します正の高さの DIB のセクションでします。
+- DIBOR_DEFAULT ビットマップの向きは、オペレーティング システムによって決定されます。
 
 - DIBOR_BOTTOMUP ビットマップの行は逆の順序で。 これにより、 [CImage::GetBits](#getbits)ビットマップ バッファーの末尾付近のポインターを返すと[CImage::GetPitch](#getpitch)を負の数を返します。
 
@@ -338,66 +336,66 @@ HBITMAP ハンドル。
 
 ```
 BOOL BitBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL BitBlt(
-HDC hDestDC,
-const POINT& pointDest,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const POINT& pointDest,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL BitBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL BitBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const POINT& pointSrc,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const POINT& pointSrc,
+    DWORD dwROP = SRCCOPY) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hDestDC*  
+*hDestDC*<br/>
 HDC 先。
 
-*xDest*  
+*xDest*<br/>
 先の四角形の左上隅の論理 x 座標。
 
-*yDest*  
+*yDest*<br/>
 先の四角形の左上隅の論理 y 座標。
 
-*dwROP*  
+*dwROP*<br/>
 実行するラスター操作。 ラスター オペレーション コードは、変換先を形成するソース、変換先、およびパターンのビット (現在選択されているブラシによって定義される) とを組み合わせる方法を定義します。 参照してください[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt)他ラスター オペレーション コードとその説明の一覧については、Windows sdk。
 
-*pointDest*  
+*pointDest*<br/>
 A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)先の四角形の左上隅を示す構造体。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 論理ユニットは、先の四角形の幅。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 論理ユニットは、先の四角形の高さ。
 
-*xSrc*  
+*xSrc*<br/>
 元の四角形の左上隅の論理 x 座標。
 
-*ySrc*  
+*ySrc*<br/>
 元の四角形の左上隅の論理 y 座標。
 
-*rectDest*  
+*rectDest*<br/>
 A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)先の四角形を示す構造体。
 
-*pointSrc*  
+*pointSrc*<br/>
 A`POINT`ソース四角形の左上隅を示す構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -430,30 +428,30 @@ CImage() throw();
 
 ```
 BOOL Create(
-int nWidth,
-int nHeight,
-int nBPP,
-DWORD dwFlags = 0) throw();
+    int nWidth,
+    int nHeight,
+    int nBPP,
+    DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nWidth*  
+*nWidth*<br/>
 幅、 `CImage` (ピクセル単位) のビットマップ。
 
-*パラメーター nHeight*  
+*パラメーター nHeight*<br/>
 高さ、 `CImage` (ピクセル単位) のビットマップ。 場合*パラメーター nHeight*が正、ビットマップはボトムアップ DIB と原点は左下隅。 場合*パラメーター nHeight*が負の場合、ビットマップは、上から下へ DIB と、原点は左上隅。
 
-*nBPP*  
+*nBPP*<br/>
 ビットマップのピクセルあたりのビット数。 通常、4、8、16、24、または 32。 モノクロ ビットマップまたはマスクの 1 にすることができます。
 
-*dwFlags*  
+*dwFlags*<br/>
 Bitmap オブジェクトがアルファ チャネルを持つかどうかを指定します。 次の値の 0 個以上の組み合わせになります。
 
 - *createAlphaChannel*場合にのみ使用できます*nBPP* 32、および*eCompression*値です。 指定した場合 (英数字以外の 32 ビット イメージで使用されていない) の各ピクセルの第 4 バイトに格納されている、各ピクセルのアルファ (透明度) 値を作成されたイメージがあります。 呼び出すときに、このアルファ チャネルは自動的に使用[CImage::AlphaBlend](#alphablend)します。
 
 > [!NOTE]
->  呼び出しで[:draw](#draw)、アルファ チャネルを持つイメージが自動的にアルファ先にブレンドします。
+> 呼び出しで[:draw](#draw)、アルファ チャネルを持つイメージが自動的にアルファ先にブレンドします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -465,36 +463,36 @@ Bitmap オブジェクトがアルファ チャネルを持つかどうかを指
 
 ```
 BOOL CreateEx(
-int nWidth,
-int nHeight,
-int nBPP,
-DWORD eCompression,
-const DWORD* pdwBitmasks = NULL,
-DWORD dwFlags = 0) throw();
+    int nWidth,
+    int nHeight,
+    int nBPP,
+    DWORD eCompression,
+    const DWORD* pdwBitmasks = NULL,
+    DWORD dwFlags = 0) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nWidth*  
+*nWidth*<br/>
 幅、 `CImage` (ピクセル単位) のビットマップ。
 
-*パラメーター nHeight*  
+*パラメーター nHeight*<br/>
 高さ、 `CImage` (ピクセル単位) のビットマップ。 場合*パラメーター nHeight*が正、ビットマップはボトムアップ DIB と原点は左下隅。 場合*パラメーター nHeight*が負の場合、ビットマップは、上から下へ DIB と、原点は左上隅。
 
-*nBPP*  
+*nBPP*<br/>
 ビットマップのピクセルあたりのビット数。 通常、4、8、16、24、または 32。 モノクロ ビットマップまたはマスクの 1 にすることができます。
 
-*eCompression*  
+*eCompression*<br/>
 (上から下への Dib を圧縮することはできません)、圧縮されたボトムアップ ビットマップの圧縮の種類を指定します。 次のいずれかの値になります。
 
 - 値の形式は、圧縮ではありません。 呼び出すときに、この値を指定する`CImage::CreateEx`呼び出しと同じですが`CImage::Create`します。
 
 - BI_BITFIELDS 形式が圧縮されていないと、各ピクセルの赤、緑、および青のコンポーネントをそれぞれ指定する 3 つの DWORD 色マスクのカラー テーブルで構成されます。 これは、16、32 bpp のビットマップを使用すると有効です。
 
-*pdwBitfields*  
+*pdwBitfields*<br/>
 場合にのみ使用*eCompression*設定に BI_BITFIELDS、それ以外の場合があります NULL。 各ピクセルのビットが、色の赤、緑、および青のコンポーネントをそれぞれ使用されますを指定する、3 つの DWORD ビットマスクの配列へのポインター。 ビット フィールドの制限については、次を参照してください。 [BITMAPINFOHEADER](https://msdn.microsoft.com/library/windows/desktop/dd183376) Windows SDK に含まれています。
 
-*dwFlags*  
+*dwFlags*<br/>
 Bitmap オブジェクトがアルファ チャネルを持つかどうかを指定します。 次の値の 0 個以上の組み合わせになります。
 
 - *createAlphaChannel*場合にのみ使用できます*nBPP* 32、および*eCompression*値です。 指定した場合 (英数字以外の 32 ビット イメージで使用されていない) の各ピクセルの第 4 バイトに格納されている、各ピクセルのアルファ (透明度) 値を作成されたイメージがあります。 呼び出すときに、このアルファ チャネルは自動的に使用[CImage::AlphaBlend](#alphablend)します。
@@ -508,9 +506,9 @@ Bitmap オブジェクトがアルファ チャネルを持つかどうかを指
 
 ### <a name="example"></a>例
 
-次の例では、ピクセルごとに 16 ビットを使用して、100 x 100 ピクセルのビットマップを作成します。 指定された 16 ビットのピクセルでは、ビット 0 ~ 3 は赤のコンポーネントをエンコード、4 ~ 7 ビット エンコード緑、および 8 ~ 11 ビットは青をエンコードします。 残りの 4 ビットは、使用されません。  
+次の例では、ピクセルごとに 16 ビットを使用して、100 x 100 ピクセルのビットマップを作成します。 指定された 16 ビットのピクセルでは、ビット 0 ~ 3 は赤のコンポーネントをエンコード、4 ~ 7 ビット エンコード緑、および 8 ~ 11 ビットは青をエンコードします。 残りの 4 ビットは、使用されません。
 
-```cpp  
+```cpp
 DWORD adwBitmasks[3] = { 0x0000000f, 0x000000f0, 0x00000f00 };
 m_myImage.CreateEx(100, 100, 16, BI_BITFIELDS, adwBitmasks, 0);
 ```
@@ -541,78 +539,78 @@ HBITMAP Detach() throw();
 
 ```
 BOOL Draw(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-int xDest,
-int yDest) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-const POINT& pointDest) const throw();
+    HDC hDestDC,
+    const POINT& pointDest) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight) const throw();
 
 BOOL Draw(
-HDC hDestDC,
-const RECT& rectDest) const throw();
+    HDC hDestDC,
+    const RECT& rectDest) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hDestDC*  
+*hDestDC*<br/>
 コピー先のデバイス コンテキストへのハンドル。
 
-*xDest*  
+*xDest*<br/>
 X 座標、先の四角形の左上隅の論理単位です。
 
-*yDest*  
+*yDest*<br/>
 Y 座標、先の四角形の左上隅の論理単位です。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 論理ユニットは、先の四角形の幅。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 論理ユニットは、先の四角形の高さ。
 
-*xSrc*  
+*xSrc*<br/>
 X 座標、元の四角形の左上隅の論理単位で。
 
-*ySrc*  
+*ySrc*<br/>
 Y 座標、元の四角形の左上隅の論理単位で。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 論理ユニットは、元の四角形の幅。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 論理ユニットは、元の四角形の高さ。
 
-*rectDest*  
+*rectDest*<br/>
 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。
 
-*rectSrc*  
+*rectSrc*<br/>
 参照を`RECT`構造体、ソースを特定します。
 
-*pointDest*  
+*pointDest*<br/>
 参照を[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)論理単位で、先の四角形の左上隅を識別する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -642,7 +640,7 @@ void* GetBits() throw();
 によって返される値と共に、このポインターを使用して[GetPitch](#getpitch)を検索し、個々 のピクセルにイメージを変更できます。
 
 > [!NOTE]
->  このメソッドは、DIB セクション ビットマップのみをサポートしています。ピクセルにアクセスする、その結果、 `CImage` DIB セクションのピクセルのと同様のオブジェクトします。 返されるポインターは、ピクセル位置 (0, 0) を指します。
+> このメソッドは、DIB セクション ビットマップのみをサポートしています。ピクセルにアクセスする、その結果、 `CImage` DIB セクションのピクセルのと同様のオブジェクトします。 返されるポインターは、ピクセル位置 (0, 0) を指します。
 
 ##  <a name="getbpp"></a>  CImage::GetBPP
 
@@ -667,20 +665,21 @@ int GetBPP() const throw();
 DIB セクションのパレット内のエントリの範囲から赤、緑、青 (RGB) の色の値を取得します。
 
 ```
-void GetColorTable(UINT iFirstColor,
-UINT nColors,
-RGBQUAD* prgbColors) const throw();
+void GetColorTable(
+    UINT iFirstColor,
+    UINT nColors,
+    RGBQUAD* prgbColors) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*iFirstColor*  
+*iFirstColor*<br/>
 取得する最初のエントリのカラー テーブルのインデックス。
 
-*nColors*  
+*nColors*<br/>
 取得するカラー テーブル エントリの数。
 
-*prgbColors*  
+*prgbColors*<br/>
 配列へのポインター [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)構造体の色を取得するテーブルのエントリ。
 
 ##  <a name="getdc"></a>  CImage::GetDC
@@ -704,39 +703,39 @@ HDC GetDC() const throw();
 イメージを保存するためには、使用可能なイメージ形式を検索します。
 
 ```
-static HRESULT GetExporterFilterString(CSimpleString& strExporters,
-CSimpleArray<GUID>& aguidFileTypes,
-LPCTSTR pszAllFilesDescription = NULL,
-DWORD dwExclude = excludeDefaultSave,
-TCHAR chSeparator = _T('|'));
+static HRESULT GetExporterFilterString(
+    CSimpleString& strExporters,
+    CSimpleArray<GUID>& aguidFileTypes,
+    LPCTSTR pszAllFilesDescription = NULL,
+    DWORD dwExclude = excludeDefaultSave,
+    TCHAR chSeparator = _T('|'));
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*strExporters*  
+*strExporters*<br/>
 `CSimpleString` オブジェクトへの参照。 参照してください**解説**詳細についてはします。
 
-*aguidFileTypes*  
+*aguidFileTypes*<br/>
 文字列内のファイルの種類のいずれかに対応する各要素に、Guid の配列。 例では、 *pszAllFilesDescription*以下、 *aguidFileTypes*[0] GUID_ は、残りの配列値は、現在のオペレーティング システムでサポートされているイメージ ファイル形式。
 
 > [!NOTE]
->  定数の完全な一覧を参照してください。**イメージ ファイル形式の定数**Windows SDK に含まれています。
+> 定数の完全な一覧を参照してください。**イメージ ファイル形式の定数**Windows SDK に含まれています。
 
-*pszAllFilesDescription*  
+*pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例えば:  
+例えば:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any exporter.
 CImage::GetExporterFilterString(
-    strExporters, aguidFileTypes, 
+    strExporters, aguidFileTypes,
 _T("All Image Files"));
 ```
 
-
-*dwExclude*  
+*dwExclude*<br/>
 一覧から除外するファイルの種類を指定するビット フラグのセット。 使用できるフラグは次のとおりです。
 
 - `excludeGIF` 0x01 除外 GIF ファイルを = です。
@@ -761,7 +760,7 @@ _T("All Image Files"));
 
 - `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF` これらのファイルは、保存、するため特別な要件があるため、既定で除外されます。
 
-*chSeparator*  
+*chSeparator*<br/>
 イメージ形式の間で使用する区切り記号。 参照してください**解説**詳細についてはします。
 
 ### <a name="return-value"></a>戻り値
@@ -799,39 +798,39 @@ int GetHeight() const throw();
 イメージを読み込むためには、使用可能なイメージ形式を検索します。
 
 ```
-static HRESULT GetImporterFilterString(CSimpleString& strImporters,
-CSimpleArray<GUID>& aguidFileTypes,
-LPCTSTR pszAllFilesDescription = NULL,
-DWORD dwExclude = excludeDefaultLoad,
-TCHAR chSeparator = _T('|'));
+static HRESULT GetImporterFilterString(
+    CSimpleString& strImporters,
+    CSimpleArray<GUID>& aguidFileTypes,
+    LPCTSTR pszAllFilesDescription = NULL,
+    DWORD dwExclude = excludeDefaultLoad,
+    TCHAR chSeparator = _T('|'));
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*strImporters*  
+*strImporters*<br/>
 `CSimpleString` オブジェクトへの参照。 参照してください**解説**詳細についてはします。
 
-*aguidFileTypes*  
+*aguidFileTypes*<br/>
 文字列内のファイルの種類のいずれかに対応する各要素に、Guid の配列。 例では、 *pszAllFilesDescription*以下、 *aguidFileTypes*[0] は残りの配列の値を持つ GUID_ は現在のオペレーティング システムでサポートされているイメージ ファイル形式。
 
 > [!NOTE]
->  定数の完全な一覧を参照してください。**イメージ ファイル形式の定数**Windows SDK に含まれています。
+> 定数の完全な一覧を参照してください。**イメージ ファイル形式の定数**Windows SDK に含まれています。
 
-*pszAllFilesDescription*  
+*pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例えば:  
+例えば:
 
-```cpp  
+```cpp
 //First filter in the list will be titled "All Image Files", and
 //will accept files with any extension supported by any importer.
 CImage::GetImporterFilterString(
-    strImporters, aguidFileTypes, 
+    strImporters, aguidFileTypes,
 _T("All Image Files"));
 ```
 
-
-*dwExclude*  
+*dwExclude*<br/>
 一覧から除外するファイルの種類を指定するビット フラグのセット。 使用できるフラグは次のとおりです。
 
 - `excludeGIF` 0x01 除外 GIF ファイルを = です。
@@ -856,7 +855,7 @@ _T("All Image Files"));
 
 - `excludeDefaultSave` = `excludeIcon &#124; excludeEMF &#124; excludeWMF` これらのファイルは、保存、するため特別な要件があるため、既定で除外されます。
 
-*chSeparator*  
+*chSeparator*<br/>
 イメージ形式の間で使用する区切り記号。 参照してください**解説**詳細についてはします。
 
 ### <a name="remarks"></a>Remarks
@@ -908,22 +907,22 @@ int GetPitch() const throw();
 使用`GetPitch`で[GetBits](#getbits)を個々 のピクセルのイメージを検索します。
 
 > [!NOTE]
->  このメソッドは、DIB セクション ビットマップのみをサポートします。
+> このメソッドは、DIB セクション ビットマップのみをサポートします。
 
 ##  <a name="getpixel"></a>  CImage::GetPixel
 
 指定された場所にあるピクセルの色を取得*x*と*y*します。
 
 ```
-COLORREF GetPixel(int x,int y) const throw();
+COLORREF GetPixel(int x, int y) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 ピクセルの x 座標。
 
-*y*  
+*y*<br/>
 ピクセルの y 座標。
 
 ### <a name="return-value"></a>戻り値
@@ -935,15 +934,15 @@ COLORREF GetPixel(int x,int y) const throw();
 ピクセルの正確なアドレスを取得します。
 
 ```
-void* GetPixelAddress(int x,int y) throw();
+void* GetPixelAddress(int x, int y) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 ピクセルの x 座標。
 
-*y*  
+*y*<br/>
 ピクセルの y 座標。
 
 ### <a name="remarks"></a>Remarks
@@ -953,7 +952,7 @@ void* GetPixelAddress(int x,int y) throw();
 1 ピクセルあたり 8 ビット未満のある形式の場合は、このメソッドは、ピクセルを含むバイトのアドレスを返します。 たとえば、イメージの形式に 1 ピクセルあたり 4 ビット`GetPixelAddress`返しますバイトごとにそれぞれ 2 ピクセルの最初のピクセルにして、バイトのアドレスを計算する必要があります。
 
 > [!NOTE]
->  このメソッドは、DIB セクション ビットマップのみをサポートします。
+> このメソッドは、DIB セクション ビットマップのみをサポートします。
 
 ##  <a name="gettransparentcolor"></a>  CImage::GetTransparentColor
 
@@ -1026,7 +1025,7 @@ bool IsIndexed() const throw();
 このメソッドは、ビットマップが 8 ビットである場合にのみ、TRUE を返します (256 色) 以下です。
 
 > [!NOTE]
->  このメソッドは、DIB セクション ビットマップのみをサポートします。
+> このメソッドは、DIB セクション ビットマップのみをサポートします。
 
 ##  <a name="isnull"></a>  CImage::IsNull
 
@@ -1067,10 +1066,10 @@ HRESULT Load(IStream* pStream) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*pszFileName*  
+*pszFileName*<br/>
 読み込むイメージ ファイルの名前を含む文字列へのポインター。
 
-*pStream*  
+*pStream*<br/>
 読み込むイメージ ファイルの名前を含むストリームへのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -1089,23 +1088,23 @@ HRESULT Load(IStream* pStream) throw();
 
 ```
 void LoadFromResource(
-HINSTANCE hInstance,
-LPCTSTR pszResourceName) throw();
+    HINSTANCE hInstance,
+    LPCTSTR pszResourceName) throw();
 
 void LoadFromResource(
-HINSTANCE hInstance,
-UINT nIDResource) throw();
+    HINSTANCE hInstance,
+    UINT nIDResource) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hInstance*  
+*hInstance*<br/>
 読み込まれるイメージが含まれるモジュールのインスタンスへのハンドルします。
 
-*pszResourceName*  
+*pszResourceName*<br/>
 読み込むイメージを格納しているリソースの名前を含む文字列へのポインター。
 
-*可能*  
+*可能*<br/>
 読み込むリソースの ID。
 
 ### <a name="remarks"></a>Remarks
@@ -1118,85 +1117,85 @@ UINT nIDResource) throw();
 
 ```
 BOOL MaskBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-HBITMAP hbmMask,
-int xMask,
-int yMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    HBITMAP hbmMask,
+    int xMask,
+    int yMask,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL MaskBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const POINT& pointSrc,
-HBITMAP hbmMask,
-const POINT& pointMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const POINT& pointSrc,
+    HBITMAP hbmMask,
+    const POINT& pointMask,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL MaskBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-HBITMAP hbmMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    HBITMAP hbmMask,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL MaskBlt(
-HDC hDestDC,
-const POINT& pointDest,
-HBITMAP hbmMask,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const POINT& pointDest,
+    HBITMAP hbmMask,
+    DWORD dwROP = SRCCOPY) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hDestDC*  
+*hDestDC*<br/>
 実行可能ファイルは、リソースを含むモジュールへのハンドル。
 
-*xDest*  
+*xDest*<br/>
 X 座標、先の四角形の左上隅の論理単位です。
 
-*yDest*  
+*yDest*<br/>
 Y 座標、先の四角形の左上隅の論理単位です。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 論理ユニットは、コピー先の四角形と元のビットマップの幅。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 論理ユニットは、コピー先の四角形と元のビットマップの高さ。
 
-*xSrc*  
+*xSrc*<br/>
 ソース ビットマップの左上隅の論理 x 座標。
 
-*ySrc*  
+*ySrc*<br/>
 ソース ビットマップの左上隅の論理 y 座標。
 
-*hbmMask*  
+*hbmMask*<br/>
 元のデバイス コンテキストのカラー ビットマップと組み合わせて、モノクロ マスク ビットマップへのハンドルします。
 
-*xMask*  
+*xMask*<br/>
 指定されたマスク ビットマップのピクセルを水平方向のオフセット、 *hbmMask*パラメーター。
 
-*yMask*  
+*yMask*<br/>
 指定されたマスク ビットマップの垂直方向のピクセルのオフセット、 *hbmMask*パラメーター。
 
-*dwROP*  
+*dwROP*<br/>
 ソースと変換先のデータの組み合わせを制御するメソッドを使用する前景と背景の三項ラスター オペレーション コードを指定します。 バック グラウンドのラスター オペレーション コードがこの値の上位ワードの高位バイトに格納されています。フォア グラウンドのラスター オペレーション コードがこの値の上位ワードの下位バイトに格納されています。この値の下位ワードは無視され、0 にする必要があります。 前景色と背景では、このメソッドのコンテキストの詳細については、次を参照してください。 `MaskBlt` Windows SDK に含まれています。 共通のラスター オペレーション コードの一覧は、次を参照してください。 `BitBlt` Windows SDK に含まれています。
 
-*rectDest*  
+*rectDest*<br/>
 参照を`RECT`構造体、変換先を識別します。
 
-*pointSrc*  
+*pointSrc*<br/>
 A`POINT`ソース四角形の左上隅を示す構造体。
 
-*pointMask*  
+*pointMask*<br/>
 A`POINT`マスク ビットマップの左上隅を示す構造体。
 
-*pointDest*  
+*pointDest*<br/>
 参照を`POINT`論理単位で、先の四角形の左上隅を識別する構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1217,62 +1216,62 @@ A`POINT`マスク ビットマップの左上隅を示す構造体。
 
 ```
 BOOL PlgBlt(
-HDC hDestDC,
-const POINT* pPoints,
-HBITMAP hbmMask = NULL) const throw();
+    HDC hDestDC,
+    const POINT* pPoints,
+    HBITMAP hbmMask = NULL) const throw();
 
 BOOL PlgBlt(
-HDC hDestDC,
-const POINT* pPoints,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-HBITMAP hbmMask = NULL,
-int xMask = 0,
-int yMask = 0) const throw();
+    HDC hDestDC,
+    const POINT* pPoints,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    HBITMAP hbmMask = NULL,
+    int xMask = 0,
+    int yMask = 0) const throw();
 
 BOOL PlgBlt(
-HDC hDestDC,
-const POINT* pPoints,
-const RECT& rectSrc,
-HBITMAP hbmMask = NULL,
-const POINT& pointMask = CPoint(0, 0)) const throw();
+    HDC hDestDC,
+    const POINT* pPoints,
+    const RECT& rectSrc,
+    HBITMAP hbmMask = NULL,
+    const POINT& pointMask = CPoint(0, 0)) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hDestDC*  
+*hDestDC*<br/>
 コピー先のデバイス コンテキストへのハンドル。
 
-*pPoints*  
+*pPoints*<br/>
 先の平行四辺形の 3 つの角を識別する論理空間内の 3 つの点の配列へのポインター。 元の四角形の左上隅は、この配列、2 番目の点で、この配列に右上隅および 3 番目のポイントを左下隅の最初の要素にマップされます。 元の四角形の右上隅にあるは、暗黙の 4 番目のポイント、平行四辺形内にマップされます。
 
-*hbmMask*  
+*hbmMask*<br/>
 元の四角形の色をマスクするために使用するオプションのモノクロ ビットマップへのハンドル。
 
-*xSrc*  
+*xSrc*<br/>
 X 座標、元の四角形の左上隅の論理単位で。
 
-*ySrc*  
+*ySrc*<br/>
 Y 座標、元の四角形の左上隅の論理単位で。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 論理ユニットは、元の四角形の幅。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 論理ユニットは、元の四角形の高さ。
 
-*xMask*  
+*xMask*<br/>
 モノクロのビットマップの左上隅の x 座標。
 
-*yMask*  
+*yMask*<br/>
 モノクロのビットマップの左上隅の y 座標。
 
-*rectSrc*  
+*rectSrc*<br/>
 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ソース四角形の座標を指定する構造体。
 
-*pointMask*  
+*pointMask*<br/>
 A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)マスク ビットマップの左上隅を示す構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1314,22 +1313,24 @@ void ReleaseGDIPlus() throw();
 指定したストリーム、ディスク上のファイルにイメージを保存します。
 
 ```
-HRESULT Save(IStream* pStream,
-REFGUID guidFileType) const throw();
+HRESULT Save(
+    IStream* pStream,
+    REFGUID guidFileType) const throw();
 
-HRESULT Save(LPCTSTR pszFileName,
-REFGUID guidFileType= GUID_NULL) const throw();
+HRESULT Save(
+    LPCTSTR pszFileName,
+    REFGUID guidFileType = GUID_NULL) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*pStream*  
+*pStream*<br/>
 ファイルのイメージ データを含む COM IStream オブジェクトへのポインター。
 
-*pszFileName*  
+*pszFileName*<br/>
 イメージのファイル名へのポインター。
 
-*guidFileType*  
+*guidFileType*<br/>
 イメージを保存するファイルの種類。 次のいずれかの値を指定します。
 
 - `ImageFormatBMP` 圧縮されていないビットマップ イメージです。
@@ -1341,7 +1342,7 @@ REFGUID guidFileType= GUID_NULL) const throw();
 - `ImageFormatGIF` Gif 形式では、イメージを圧縮します。
 
 > [!NOTE]
->  定数の完全な一覧を参照してください。**イメージ ファイル形式の定数**Windows SDK に含まれています。
+> 定数の完全な一覧を参照してください。**イメージ ファイル形式の定数**Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1357,20 +1358,20 @@ DIB セクションのパレットで、エントリの範囲の赤、緑、青 
 
 ```
 void SetColorTable(
-    UINT iFirstColor, 
+    UINT iFirstColor,
     UINT nColors,
     const RGBQUAD* prgbColors) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*iFirstColor*  
+*iFirstColor*<br/>
 設定する最初のエントリのカラー テーブルのインデックス。
 
-*nColors*  
+*nColors*<br/>
 設定するカラー テーブル エントリの数。
 
-*prgbColors*  
+*prgbColors*<br/>
 配列へのポインター [RGBQUAD](/windows/desktop/api/wingdi/ns-wingdi-tagrgbquad)テーブル エントリの色を設定する構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -1387,13 +1388,13 @@ void SetPixel(int x, int y, COLORREF color) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 設定するピクセルの水平方向の位置。
 
-*y*  
+*y*<br/>
 設定するピクセルの垂直方向の位置。
 
-*色*  
+*色*<br/>
 ピクセルを設定する色です。
 
 ### <a name="remarks"></a>Remarks
@@ -1410,13 +1411,13 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 設定するピクセルの水平方向の位置。
 
-*y*  
+*y*<br/>
 設定するピクセルの垂直方向の位置。
 
-*iIndex*  
+*iIndex*<br/>
 色パレットの色のインデックス。
 
 ##  <a name="setpixelrgb"></a>  CImage::SetPixelRGB
@@ -1424,29 +1425,29 @@ void SetPixelIndexed(int x, int y, int iIndex) throw();
 指定された場所にあるピクセル設定*x*と*y*で示される色を*r*、 *g*、および*b*、赤、緑、青 (RGB) のイメージ。
 
 ```
-void SetPixelRGB(  
-int x,
-int y,
-BYTE r,
-BYTE g,
-BYTE b) throw();
+void SetPixelRGB(
+    int x,
+    int y,
+    BYTE r,
+    BYTE g,
+    BYTE b) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*x*  
+*x*<br/>
 設定するピクセルの水平方向の位置。
 
-*y*  
+*y*<br/>
 設定するピクセルの垂直方向の位置。
 
-*r*  
+*r*<br/>
 赤の色の彩度。
 
-*g*  
+*g*<br/>
 緑の色の彩度。
 
-*b*  
+*b*<br/>
 青の色の彩度。
 
 ### <a name="remarks"></a>Remarks
@@ -1463,7 +1464,7 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*iTransparentColor*  
+*iTransparentColor*<br/>
 透過色に設定する色のカラー パレット内のインデックス。 -1 の場合、色が設定されていない透過的です。
 
 ### <a name="return-value"></a>戻り値
@@ -1476,73 +1477,73 @@ LONG SetTransparentColor(LONG iTransparentColor) throw();
 
 ```
 BOOL StretchBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL StretchBlt(
-HDC hDestDC,
-const RECT& rectDest,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL StretchBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    DWORD dwROP = SRCCOPY) const throw();
 
 BOOL StretchBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc,
-DWORD dwROP = SRCCOPY) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc,
+    DWORD dwROP = SRCCOPY) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hDestDC*  
+*hDestDC*<br/>
 コピー先のデバイス コンテキストへのハンドル。
 
-*xDest*  
+*xDest*<br/>
 X 座標、先の四角形の左上隅の論理単位です。
 
-*yDest*  
+*yDest*<br/>
 Y 座標、先の四角形の左上隅の論理単位です。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 論理ユニットは、先の四角形の幅。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 論理ユニットは、先の四角形の高さ。
 
-*dwROP*  
+*dwROP*<br/>
 実行するラスター操作。 ラスター オペレーション コードは、変換先を形成するソース、変換先、およびパターンのビット (現在選択されているブラシによって定義される) とを組み合わせる方法を定義します。 参照してください[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt)他ラスター オペレーション コードとその説明の一覧については、Windows sdk。
 
-*rectDest*  
+*rectDest*<br/>
 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。
 
-*xSrc*  
+*xSrc*<br/>
 X 座標、元の四角形の左上隅の論理単位で。
 
-*ySrc*  
+*ySrc*<br/>
 Y 座標、元の四角形の左上隅の論理単位で。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 論理ユニットは、元の四角形の幅。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 論理ユニットは、元の四角形の高さ。
 
-*rectSrc*  
+*rectSrc*<br/>
 参照を`RECT`構造体、ソースを特定します。
 
 ### <a name="return-value"></a>戻り値
@@ -1559,73 +1560,73 @@ Y 座標、元の四角形の左上隅の論理単位で。
 
 ```
 BOOL TransparentBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    UINT crTransparent = CLR_INVALID) const throw();
 
 BOOL TransparentBlt(
-HDC hDestDC,
-const RECT& rectDest,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    UINT crTransparent = CLR_INVALID) const throw();
 
 BOOL TransparentBlt(
-HDC hDestDC,
-int xDest,
-int yDest,
-int nDestWidth,
-int nDestHeight,
-int xSrc,
-int ySrc,
-int nSrcWidth,
-int nSrcHeight,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    int xDest,
+    int yDest,
+    int nDestWidth,
+    int nDestHeight,
+    int xSrc,
+    int ySrc,
+    int nSrcWidth,
+    int nSrcHeight,
+    UINT crTransparent = CLR_INVALID) const throw();
 
 BOOL TransparentBlt(
-HDC hDestDC,
-const RECT& rectDest,
-const RECT& rectSrc,
-UINT crTransparent = CLR_INVALID) const throw();
+    HDC hDestDC,
+    const RECT& rectDest,
+    const RECT& rectSrc,
+    UINT crTransparent = CLR_INVALID) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*hDestDC*  
+*hDestDC*<br/>
 コピー先のデバイス コンテキストへのハンドル。
 
-*xDest*  
+*xDest*<br/>
 X 座標、先の四角形の左上隅の論理単位です。
 
-*yDest*  
+*yDest*<br/>
 Y 座標、先の四角形の左上隅の論理単位です。
 
-*nDestWidth*  
+*nDestWidth*<br/>
 論理ユニットは、先の四角形の幅。
 
-*nDestHeight*  
+*nDestHeight*<br/>
 論理ユニットは、先の四角形の高さ。
 
-*crTransparent*  
+*crTransparent*<br/>
 透明色として処理するソース ビットマップの色。 既定では、CLR_INVALID は、現在のイメージの透明色として設定されている色を使用することを指定します。
 
-*rectDest*  
+*rectDest*<br/>
 参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。
 
-*xSrc*  
+*xSrc*<br/>
 X 座標、元の四角形の左上隅の論理単位で。
 
-*ySrc*  
+*ySrc*<br/>
 Y 座標、元の四角形の左上隅の論理単位で。
 
-*nSrcWidth*  
+*nSrcWidth*<br/>
 論理ユニットは、元の四角形の幅。
 
-*nSrcHeight*  
+*nSrcHeight*<br/>
 論理ユニットは、元の四角形の高さ。
 
-*rectSrc*  
+*rectSrc*<br/>
 参照を`RECT`構造体、ソースを特定します。
 
 ### <a name="return-value"></a>戻り値
@@ -1636,13 +1637,12 @@ TRUE の場合は成功しましたが、それ以外の場合は FALSE。
 
 `TransparentBlt` ソース ビットマップのピクセルごと、およびピクセルあたり 8 ビット 4 ビット サポートされます。 使用[CImage::AlphaBlend](#alphablend)透明度が 32 ビット/ピクセルのビットマップを指定します。
 
+### <a name="example"></a>例
 
-### <a name="example"></a>例  
-
-```cpp  
-// Performs a transparent blit from the source image to the destination 
+```cpp
+// Performs a transparent blit from the source image to the destination
 // image using the images' current transparency settings
-BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage, 
+BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
        int xDest, int yDest, int nDestWidth, int nDestHeight)
 {
     HDC hDstDC = NULL;
@@ -1666,7 +1666,6 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 }
 ```
 
-
 ## <a name="see-also"></a>関連項目
 
 [MMXSwarm サンプル](../../visual-cpp-samples.md)<br/>
@@ -1675,5 +1674,4 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)<br/>
 [デバイスに依存しないビットマップ](/windows/desktop/gdi/device-independent-bitmaps)<br/>
-[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)   
-
+[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)

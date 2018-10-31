@@ -1,7 +1,7 @@
 ---
 title: pin_ptr (C +/cli CLI) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,12 +20,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: de7f4c94ec0d9cb5a9a57315ebda015b7737132c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e185f5456d2837c0a577b9c305cd717effaf6e06
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392763"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083283"
 ---
 # <a name="pinptr-ccli"></a>pin_ptr (C++/CLI)
 
@@ -101,7 +101,7 @@ A **pin_ptr**ネイティブ ポインターの機能のスーパー セット�
 
 固定ポインターの詳細については、次を参照してください。[方法: ピン ポインターと配列](../windows/how-to-pin-pointers-and-arrays.md)と[方法: 固定ポインターの宣言と値型](../windows/how-to-declare-pinning-pointers-and-value-types.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -118,7 +118,7 @@ using namespace System;
 #pragma unmanaged
 // native function that initializes an array
 void native_function(int* p) {
-   for(int i = 0 ; i < 10 ; i++)  
+   for(int i = 0 ; i < 10 ; i++)
     p[i] = i;
 }
 #pragma managed
@@ -140,7 +140,7 @@ public:
 
    int sum() {
       int total = 0;
-      for (int i = 0 ; i < SIZE ; i++)  
+      for (int i = 0 ; i < SIZE ; i++)
          total += arr[i];
       return total;
    }

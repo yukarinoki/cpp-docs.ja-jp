@@ -24,12 +24,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: c79991b22814140f93672dca2e1a92938aabdac8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a8069bd69af7743e0d83c7dbe770e1c73029ebf5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399159"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072656"
 ---
 # <a name="chtmleditview-class"></a>CHtmlEditView クラス
 
@@ -77,7 +77,7 @@ class CHtmlEditView : public CHtmlView, public CHtmlEditCtrlBase<CHtmlEditView>
 
 `CHtmlEditView`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxhtml.h
 
@@ -156,5 +156,4 @@ virtual LPCTSTR GetStartDocument();
 
 [HTMLEdit サンプル](../../visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-
 

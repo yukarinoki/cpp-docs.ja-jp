@@ -25,19 +25,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e2c3e0eb625c492cb9f0e9a1234d33149ac201a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 79855860b4d2d6bfee328f8fa07f2a3ba6cfd69c
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040233"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861461"
 ---
 # <a name="cworkerthread-class"></a>CWorkerThread クラス
 
 このクラスは、ワーカー スレッドを作成します。 または、既存のものを使用して化し、1 つ以上のカーネル オブジェクトのハンドルを待機ハンドルがシグナル通知されたときに、指定したクライアント関数を実行します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -46,7 +46,7 @@ template <class ThreadTraits = DefaultThreadTraits>
 class CWorkerThread
 ```
 
-#### <a name="parameters"></a>パラメーター
+### <a name="parameters"></a>パラメーター
 
 *ThreadTraits*<br/>
 など、スレッド作成関数を提供するクラス[CRTThreadTraits](../../atl/reference/crtthreadtraits-class.md)または[Win32ThreadTraits](../../atl/reference/win32threadtraits-class.md)します。
@@ -84,19 +84,19 @@ class CWorkerThread
 
 1. このクラスのインスタンスを作成します。
 
-2. 呼び出す[CWorkerThread::Initialize](#initialize)します。
+1. 呼び出す[CWorkerThread::Initialize](#initialize)します。
 
-3. 呼び出す[CWorkerThread::AddHandle](#addhandle)カーネル オブジェクトとの実装へのポインターのハンドルを持つ[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)します。
+1. 呼び出す[CWorkerThread::AddHandle](#addhandle)カーネル オブジェクトとの実装へのポインターのハンドルを持つ[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)します。
 
-     - または
+   \- または -
 
-     呼び出す[CWorkerThread::AddTimer](#addtimer)の実装へのポインターを[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)します。
+   呼び出す[CWorkerThread::AddTimer](#addtimer)の実装へのポインターを[IWorkerThreadClient](../../atl/reference/iworkerthreadclient-interface.md)します。
 
-4. 実装[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルまたはタイマーがシグナル通知されたときに、何らかのアクションを実行します。
+1. 実装[IWorkerThreadClient::Execute](../../atl/reference/iworkerthreadclient-interface.md#execute)ハンドルまたはタイマーがシグナル通知されたときに、何らかのアクションを実行します。
 
-5. 待機可能オブジェクトの一覧からオブジェクトを削除するには、呼び出す[CWorkerThread::RemoveHandle](#removehandle)します。
+1. 待機可能オブジェクトの一覧からオブジェクトを削除するには、呼び出す[CWorkerThread::RemoveHandle](#removehandle)します。
 
-6. スレッドを終了するには、呼び出す[CWorkerThread::Shutdown](#shutdown)します。
+1. スレッドを終了するには、呼び出す[CWorkerThread::Shutdown](#shutdown)します。
 
 ## <a name="requirements"></a>要件
 

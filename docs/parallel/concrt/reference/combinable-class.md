@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 60e1f944d19efd22cb2c6c7d6a3752d6d32ae1e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d544ac392e2eb227d7e1c37412110d09272f10d5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381674"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162510"
 ---
 # <a name="combinable-class"></a>combinable クラス
 
@@ -182,7 +182,7 @@ T& local(bool& _Exists);
 ### <a name="parameters"></a>パラメーター
 
 *_Exists*<br/>
-ブール値への参照。 この引数によって参照されるブール値に設定されます`true`サブ計算が既にこのスレッドで存在し、設定かどうか`false`場合、これは、このスレッドで最初のサブ計算します。
+ブール値への参照。 この引数によって参照されるブール値に設定されます**true**サブ計算が既にこのスレッドで存在し、設定かどうか**false**場合、これは、このスレッドで最初のサブ計算します。
 
 ### <a name="return-value"></a>戻り値
 

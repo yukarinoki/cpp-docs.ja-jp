@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 705f4f0d41b98c46e2cd61962d84fe8412b9e296
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2d5a0f2f5f7515e36997b876373dcf25bb6fc03
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414057"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890635"
 ---
 # <a name="message-map-macros-mfc"></a>メッセージ マップ マクロ (MFC)
 
@@ -81,7 +81,6 @@ ms.locfileid: "46414057"
 |[ON_CONTROL_RANGE](#on_control_range)|コントロールのマクロに 2 番目と 3 番目のパラメーターで指定された Id の範囲からの通知を処理する関数を示します。 最初のパラメーターは、コントロールの通知メッセージ、BN_CLICKED などです。|
 
 メッセージ マップ、メッセージ マップの宣言と定義用のマクロとメッセージ マップ マクロの詳細については、次を参照してください。[メッセージ マップ](../../mfc/reference/message-maps-mfc.md)と[メッセージの処理とのマッピング」](../../mfc/message-handling-and-mapping.md)します。 メッセージ マップの範囲の詳細については、次を参照してください。[メッセージ マップの範囲内のハンドラー](../../mfc/handlers-for-message-map-ranges.md)します。
-
 
 ## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
@@ -125,15 +124,18 @@ END_MESSAGE_MAP()
 
 ### <a name="syntax"></a>構文
 
-  ```
+```
 BEGIN_TEMPLATE_MESSAGE_MAP( theClass, type_name, baseClass )
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *クラス*<br/>
 マップを持つメッセージ クラスの名前を指定します。
+
 *type_name*<br/>
 指定されたクラス テンプレート パラメーターの名前。
+
 *baseClass*<br/>
 基本クラスの名前を示す*クラス*します。
 
@@ -181,7 +183,6 @@ class CMainFrame : public CMDIFrameWnd
 ### <a name="requirements"></a>要件
 
 **ヘッダー:** afxwin.h
-
 
 ## <a name="end_message_map"></a>  END_MESSAGE_MAP
 
@@ -245,9 +246,10 @@ END_MESSAGE_MAP()
 
 ### <a name="syntax"></a>構文
 
-  ```
+```
 ON_COMMAND_EX(id, memberFxn);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *ID*<br/>
@@ -267,6 +269,7 @@ ON_COMMAND_EX(id, memberFxn);
 ```
 ON_COMMAND_EX(id,  memberFxn);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *ID*<br/>
@@ -287,8 +290,7 @@ ON_COMMAND_EX(id,  memberFxn);
 ### <a name="see-also"></a>関連項目
 
 [ON_COMMAND](message-map-macros-mfc.md#on_command)<br/>
-[TN006: メッセージ マップ] tm006-メッセージ-maps.md)
-
+[テクニカル ノート 6: メッセージ マップ](../tn006-message-maps.md)
 
 ## <a name="on_control"></a>  ON_CONTROL
 
@@ -323,7 +325,6 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 
 **ヘッダー:** afxmsg_.h
 
-
 ## <a name="on_message"></a>  ON_MESSAGE
 
 ユーザー定義のメッセージを処理する関数を示します。
@@ -351,7 +352,7 @@ ON_MESSAGE( message, memberFxn )
 メッセージ ハンドラー関数にマップする必要がありますすべてのユーザー定義メッセージのメッセージ マップに ON_MESSAGE マクロ ステートメントは 1 つだけ必要があります。
 
 > [!NOTE]
->  ユーザー定義のメッセージだけでなく ON_MESSAGE はあまり一般的な Windows メッセージを処理します。 詳細については、技術情報の記事を参照してください。 [99848: 情報: ON_MESSAGE() マクロを使用してマップ頻度の低いメッセージを](http://go.microsoft.com/fwlink/p/?linkid=192022)します。
+>  ユーザー定義のメッセージだけでなく ON_MESSAGE はあまり一般的な Windows メッセージを処理します。 詳細については、次を参照してください。[メッセージ マップ](../../mfc/tn006-message-maps.md)します。
 
 詳細と例については、次を参照してください[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)と[ユーザー定義のハンドラー。](user-defined-handlers.md)
 
@@ -382,7 +383,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 
 **ヘッダー:** afxmsg_.h
 
-## <a name="on_olecmd"></a>  ON_OLECMD  
+## <a name="on_olecmd"></a>  ON_OLECMD
 
 コマンドをコマンドのディスパッチ インターフェイスを介してルーティング`IOleCommandTarget`します。
 
@@ -545,7 +546,6 @@ ON_REGISTERED_MESSAGE( nMessageVariable, memberFxn )
 ```cpp
 static UINT NEAR WM_FIND = RegisterWindowMessage(_T("COMMDLG_FIND"));
 
-
 BEGIN_MESSAGE_MAP(CMyWnd3, CWnd)
    ON_REGISTERED_MESSAGE(WM_FIND, OnFind)
 END_MESSAGE_MAP()
@@ -560,7 +560,7 @@ END_MESSAGE_MAP()
 [を通じて](https://msdn.microsoft.com/library/windows/desktop/ms644947)<br/>
 [ユーザー定義によるハンドラー](user-defined-handlers.md)
 
-## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE    
+## <a name="on_registered_thread_message"></a>  ON_REGISTERED_THREAD_MESSAGE
 
 Windows を通じて関数によって登録されたメッセージを処理する関数を示します。
 
@@ -586,7 +586,7 @@ ON_REGISTERED_THREAD_MESSAGE(nMessageVariable, memberFxn )
 
 **ヘッダー:** afxmsg_.h
 
-## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE  
+## <a name="on_thread_message"></a>  ON_THREAD_MESSAGE
 
 ユーザー定義のメッセージを処理する関数を示します。
 
@@ -612,7 +612,7 @@ ON_THREAD_MESSAGE( message, memberFxn )
 
 **ヘッダー:** afxole.h
 
-## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI    
+## <a name="on_update_command_ui"></a>  ON_UPDATE_COMMAND_UI
 
 このマクロは、ユーザー インターフェイスの更新コマンド メッセージを処理する関数を示します。
 
@@ -699,7 +699,7 @@ void CChildFrame::OnRangeCmds(UINT nID)
 
 **ヘッダー:** afxmsg_.h
 
-## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE    
+## <a name="on_update_command_ui_range"></a>  ON_UPDATE_COMMAND_UI_RANGE
 
 コマンド Id の連続する範囲を 1 つの更新メッセージ ハンドラー関数にマップします。
 
@@ -730,7 +730,7 @@ ON_UPDATE_COMMAND_UI_RANGE( id1, id2, memberFxn )
 
 **ヘッダー:** afxmsg_.h
 
-## <a name="on_control_range"></a>  ON_CONTROL_RANGE    
+## <a name="on_control_range"></a>  ON_CONTROL_RANGE
 
 コントロール Id の連続する範囲を BN_CLICKED などの指定された Windows 通知メッセージの 1 つのメッセージ ハンドラー関数にマップするのにには、このマクロを使用します。
 

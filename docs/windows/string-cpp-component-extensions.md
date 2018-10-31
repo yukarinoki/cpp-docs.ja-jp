@@ -1,7 +1,7 @@
 ---
-title: 文字列 (C++ コンポーネント拡張) |Microsoft Docs
+title: 文字列 (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/08/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -16,24 +16,20 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 2d6b6ce066c84056997ec9b54c9d74e782064df4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fd4caaf49bd72a85a6d81003926c4e556d0731e0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408402"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054242"
 ---
-# <a name="string--c-component-extensions"></a>文字列 (C++ コンポーネント拡張)
-
-Visual C のコンパイラ サポート*文字列*、これらは文字のシーケンスとしてテキストを表すオブジェクトです。 Visual C++ では、文字列の変数 (暗黙的な値) とリテラル (文字列が引用符で囲まれた明示的な値) をサポートしています。
-
-## <a name="all-runtimes"></a>すべてのランタイム
+# <a name="string--ccli-and-ccx"></a>文字列 (C +/cli および C++/cli CX)
 
 Windows ランタイムと共通言語ランタイムでは、割り当てられたメモリを自動的に管理するオブジェクトとして文字列を表します。 つまり、文字列変数がスコープから外れたりアプリケーションが終了したりしたときに文字列のメモリを明示的に破棄する必要はありません。 文字列オブジェクトの有効期間が自動的に管理することを示す、文字列型を宣言、[オブジェクトのハンドル (^)](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)修飾子。
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-Windows ランタイムのアーキテクチャでは、Visual C++ で `String` 名前空間の `Platform` データ型を実装する必要があります。 これを簡単にするために、Visual C++ では、`string` のシノニムとして、`Platform::String` 名前空間に用意されている `default` データ型を使用することもできます。
+Windows ランタイムのアーキテクチャである必要があります、`String`に配置するデータ型、`Platform`名前空間。 これを簡単にするために、Visual C++ では、`string` のシノニムとして、`Platform::String` 名前空間に用意されている `default` データ型を使用することもできます。
 
 ### <a name="syntax"></a>構文
 
@@ -46,13 +42,11 @@ using namespace default;
    String^ MyString3 = "Hello, world!";
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
 ## <a name="common-language-runtime"></a>共通言語ランタイム
-
-ここでは、`/clr` コンパイラ オプションを使用して文字列リテラルを実行したときに Visual C++ コンパイラでどのように処理されるかについて説明します。 `/clr` を使用するには、共通言語ランタイム (CLR) に加え、C++/CLI の構文とマネージド オブジェクトも使用する必要があります。 詳細については`/clr`を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。
 
 `/clr` を指定してコンパイルする場合、文字列リテラルは <xref:System.String> 型の文字列に変換されます。 これには、既存のコードとの下位互換性を維持するために 2 つの例外があります。
 
@@ -62,11 +56,11 @@ using namespace default;
 
 また、コンパイラには 3 種類の演算子のサポートが組み込まれています。これらの演算子は、オーバーライドして動作をカスタマイズすることができます。
 
-- System::String ^ operator +( System::String, System::String);
+- System::string ^ 演算子 + (system::string、system::string)。
 
-- System::String ^ operator +( System::Object, System::String);
+- System::string ^ 演算子 + (system::object、system::string)。
 
-- System::String ^ operator +( System::String, System::Object);
+- System::string ^ 演算子 + (system::string、system::object)。
 
 コンパイラに <xref:System.String> が渡されると、必要に応じてボックス化されてから、オブジェクトが文字列と連結されます (ToString を使用)。
 
@@ -75,7 +69,7 @@ using namespace default;
 
 詳細については、次を参照してください。 [String and Character Literals](../cpp/string-and-character-literals-cpp.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: **/clr**
 
@@ -91,9 +85,9 @@ using namespace default;
 using namespace System;
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -111,29 +105,29 @@ int main() {
    // concatenation of a System::String and string literal
    Console::WriteLine(a + "zzz");
 
-   // you can append to a System::String ^
+   // you can append to a System::String^
    Console::WriteLine(a + 1);
    Console::WriteLine(a + 'a');
    Console::WriteLine(a + 3.1);
 
-   // test System::String ^ for equality
+   // test System::String^ for equality
    a += b;
    Console::WriteLine(a);
    a = b;
-   if (a == b)  
+   if (a == b)
       Console::WriteLine("a and b are equal");
 
    a = "abc";
-   if (a != b)  
+   if (a != b)
       Console::WriteLine("a and b are not equal");
 
-   // System:String ^ and tracking reference
+   // System:String^ and tracking reference
    String^% rstr1 = a;
    Console::WriteLine(rstr1);
 
-   // testing an empty System::String ^
-   String ^ n;
-   if (n == nullptr)  
+   // testing an empty System::String^
+   String^ n;
+   if (n == nullptr)
       Console::WriteLine("n is empty");
 }
 ```
@@ -179,29 +173,29 @@ using namespace System;
 void Test_Overload(const char * a) {
    Console::WriteLine("const char * a");
 }
-void Test_Overload(String ^ a) {
-   Console::WriteLine("String ^ a");
+void Test_Overload(String^ a) {
+   Console::WriteLine("String^ a");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, String ^ b) {
-   return ("overloaded +(String ^ a, String ^ b)");
+String^ operator +(String^ a, String^ b) {
+   return ("overloaded +(String^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(Object ^ a, String ^ b) {
-   return ("overloaded +(Object ^ a, String ^ b)");
+String^ operator +(Object^ a, String^ b) {
+   return ("overloaded +(Object^ a, String^ b)");
 }
 
 // overload will be called instead of compiler defined operator
-String ^ operator +(String ^ a, Object ^ b) {
-   return ("overloaded +(String ^ a, Object ^ b)");
+String^ operator +(String^ a, Object^ b) {
+   return ("overloaded +(String^ a, Object^ b)");
 }
 
 int main() {
-   String ^ a = gcnew String("abc");
-   String ^ b = "def";   // same as gcnew form
-   Object ^ c = gcnew String("ghi");
+   String^ a = gcnew String("abc");
+   String^ b = "def";   // same as gcnew form
+   Object^ c = gcnew String("ghi");
 
    char d[100] = "abc";
 
@@ -215,13 +209,13 @@ int main() {
 ```
 
 ```Output
-overloaded +(String ^ a, String ^ b)
+overloaded +(String^ a, String^ b)
 
-overloaded +(String ^ a, Object ^ b)
+overloaded +(String^ a, Object^ b)
 
-overloaded +(Object ^ a, String ^ b)
+overloaded +(Object^ a, String^ b)
 
-String ^ a
+String^ a
 
 const char * a
 ```
@@ -233,7 +227,7 @@ const char * a
 // compile with: /clr
 using namespace System;
 int func() {
-   throw "simple string";   // const char *  
+   throw "simple string";   // const char *
 };
 
 int func2() {
@@ -260,7 +254,7 @@ int main() {
       Console::WriteLine("String^ str");
    }
 
-   func3("string");   // const char *  
+   func3("string");   // const char *
    func3("string" + "string");   // returns System::String
 }
 ```
@@ -277,6 +271,6 @@ System.String
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)<br/>
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)<br/>
 [文字列リテラルと文字リテラル](../cpp/string-and-character-literals-cpp.md)<br/>
 [/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)

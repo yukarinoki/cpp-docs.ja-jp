@@ -1,7 +1,7 @@
 ---
 title: RuntimeClassFlags 構造体 |Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 10/03/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,12 +19,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 39a7684337e7666613bcd824b29417ca5ba0b021
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 90b590637935b7dbeaa0bb6a07ed84faeb0d0a1d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438055"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50076180"
 ---
 # <a name="runtimeclassflags-structure"></a>RuntimeClassFlags 構造体
 
@@ -33,9 +33,7 @@ ms.locfileid: "46438055"
 ## <a name="syntax"></a>構文
 
 ```cpp
-template <
-   unsigned int flags
->
+template <unsigned int flags>
 struct RuntimeClassFlags;
 ```
 
@@ -56,7 +54,7 @@ A [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。
 
 `RuntimeClassFlags`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** implements.h
 
@@ -65,7 +63,7 @@ A [RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。
 ## <a name="value-constant"></a>Runtimeclassflags::value 定数
 
 含むフィールドを[RuntimeClassType 列挙型](../windows/runtimeclasstype-enumeration.md)値。
-  
+
 ```cpp
 static const unsigned int value = flags;
 ```

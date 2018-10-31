@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5071f2c6f00b3cc4aaf09974a01c4601d0078e42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4908566a80fcad2350023f2306a952b2d97b2e62
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377964"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060677"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource インターフェイス
 
@@ -69,7 +69,7 @@ MFC ビューでユーザー コントロールをホストするときに[CWinF
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 
@@ -103,6 +103,7 @@ void AddCommandRangeHandler(
     unsigned int cmdIDMax,
     CommandHandler^ cmdHandler);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *cmdIDMin*<br/>
@@ -124,6 +125,7 @@ void AddCommandRangeUIHandler(
     unsigned int cmdIDMax,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *cmdIDMin*<br/>
@@ -145,6 +147,7 @@ void AddCommandUIHandler(
     unsigned int cmdID,
     CommandUIHandler^ cmdUIHandler);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *cmdID*<br/>
@@ -162,6 +165,7 @@ void AddCommandUIHandler(
 ```
 void PostCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *command*<br/>
@@ -170,13 +174,13 @@ void PostCommand(unsigned int command);
 
 このメソッドは、コマンドで指定した ID にマップされているメッセージを非同期的にポストします。 ウィンドウのメッセージ キューにメッセージを配置する CWnd::PostMessage を呼び出し、対応するウィンドウ メッセージを処理するを待たずに戻ります。
 
-
 ## <a name="removecommandhandler"></a> ICommandSource::RemoveCommandHandler
 
 コマンド ソース オブジェクトから、コマンド ハンドラーを削除します。
 ```
 void RemoveCommandHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *cmdID*<br/>
@@ -184,7 +188,6 @@ void RemoveCommandHandler(unsigned int cmdID);
 ### <a name="remarks"></a>Remarks
 
 このメソッドは、コマンド ソース オブジェクトから cmdID に割り当てられたコマンド ハンドラーを削除します。
-
 
 ## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
 
@@ -194,6 +197,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *cmdIDMin*<br/>
@@ -212,6 +216,7 @@ void RemoveCommandRangeUIHandler(
     unsigned int cmdIDMin,
     unsigned int cmdIDMax);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *cmdIDMin*<br/>
@@ -228,6 +233,7 @@ void RemoveCommandRangeUIHandler(
 ```
 void RemoveCommandUIHandler(unsigned int cmdID);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *cmdID*<br/>
@@ -242,6 +248,7 @@ void RemoveCommandUIHandler(unsigned int cmdID);
 ```
 void SendCommand(unsigned int command);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *command*<br/>

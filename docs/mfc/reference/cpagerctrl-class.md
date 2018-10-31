@@ -58,12 +58,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a582d5de7087e433aed839dc2f55db01dd926f22
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8f7dc77eb9afdfcded959abad2199b1d255ffe3e
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447571"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054268"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl クラス
 
@@ -126,7 +126,7 @@ class CPagerCtrl : public CWnd
 
 `CPagerCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
@@ -627,6 +627,4 @@ void SetScrollPos(int iPos);
 [CPagerCtrl クラス](../../mfc/reference/cpagerctrl-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [ページャー コントロール](/windows/desktop/Controls/pager-controls)
-
-
 

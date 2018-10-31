@@ -13,18 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: d79888a58e5fc6d6911c4cc123877c1537f22cf1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c2d0cc85272eae4a5231872232dc259a9120a6bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441929"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059871"
 ---
 # <a name="key-wrl-apis-by-category"></a>カテゴリ別の主要な WRL API
+
 次の表は、主要な Windows ランタイム C++ テンプレート ライブラリのクラス、構造体、関数、およびマクロを示します。 ヘルパーの名前空間とクラスの構成要素は省略されます。 これらのリストは、API のドキュメントは別に並べ替える名前空間を拡張します。
-  
-### <a name="classes"></a>クラス
-  
+
+## <a name="classes"></a>クラス
+
 |Title|説明|
 |-----------|-----------------|
 |[ActivationFactory クラス](../windows/activationfactory-class.md)|1 つ以上のクラスを Windows ランタイムによってアクティブ化できるようにします。|
@@ -46,18 +47,18 @@ ms.locfileid: "46441929"
 |[SimpleActivationFactory クラス](../windows/simpleactivationfactory-class.md)|Windows ランタイムまたはクラシック COM の基底クラスを作成するための基本的なメカニズムを提供します。|
 |[SimpleClassFactory クラス](../windows/simpleclassfactory-class.md)|基底クラスを作成するための基本的なメカニズムを提供します。|
 |[WeakRef クラス](../windows/weakref-class.md)|クラシック COM ではなく、Windows ランタイムでのみ使用できる *弱い参照* を表します。 弱い参照は、アクセスできる場合とできない場合があるオブジェクトを表します。|
-  
-### <a name="structures"></a>構造体
-  
+
+## <a name="structures"></a>構造体
+
 |Title|説明|
 |-----------|-----------------|
 |[ChainInterfaces 構造体](../windows/chaininterfaces-structure.md)|一連のインターフェイス ID に適用できる検証および初期化関数を指定します。|
 |[CloakedIid 構造体](../windows/cloakediid-structure.md)|示します、 `RuntimeClass`、`Implements`と`ChainInterfaces`テンプレートの指定したインターフェイスが IID リストにアクセスできないことです。|
 |[Implements 構造体](../windows/implements-structure.md)|実装`QueryInterface`と`GetIid`のインターフェイスで指定します。|
 |[MixIn 構造体](../windows/mixin-structure.md)|ランタイム クラスが Windows ランタイム インターフェイス (存在する場合) から派生し、次にクラシック COM インターフェイスから派生していることを確認します。|
-  
-### <a name="functions"></a>関数
-  
+
+## <a name="functions"></a>関数
+
 |Title|説明|
 |-----------|-----------------|
 |[ActivateInstance 関数](../windows/activateinstance-function.md)|登録し、指定したクラス ID で定義されている指定された型のインスタンスを取得します。|
@@ -67,14 +68,14 @@ ms.locfileid: "46441929"
 |[CreateClassFactory 関数](../windows/createclassfactory-function.md)|指定されたクラスのインスタンスを生成するファクトリを作成します。|
 |[GetActivationFactory 関数](../windows/getactivationfactory-function.md)|テンプレート パラメーターで指定された型のアクティベーション ファクトリを取得します。|
 |[Make 関数](../windows/make-function.md)|指定した Windows ランタイム クラスを初期化します。|
-  
-### <a name="macros"></a>[マクロ]
-  
+
+## <a name="macros"></a>[マクロ]
+
 |Title|説明|
 |-----------|-----------------|
 |[ActivatableClass マクロ](../windows/activatableclass-macros.md)|指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを設定します。|
 |[InspectableClass マクロ](../windows/inspectableclass-macro.md)|ランタイム クラス名と信頼レベルを設定します。|
-  
+
 ## <a name="see-also"></a>関連項目
 
 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)

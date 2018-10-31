@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d263d1d61a6dcc6921d6918db2b89386e918551
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8134ea416f94def7e985a4d63cc61d740924317a
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46018315"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48235296"
 ---
 # <a name="low-level-io"></a>下位入出力
 
@@ -59,7 +59,7 @@ ms.locfileid: "46018315"
 |[_umask](../c-runtime-library/reference/umask.md), [_umask_s](../c-runtime-library/reference/umask-s.md)|ファイル アクセス許可マスクを設定する|
 |[_write](../c-runtime-library/reference/write.md)|ファイルにデータを書き込む|
 
- **_dup** と **_dup2** は通常、事前定義済みのファイル記述子を別のファイルと関連付けるために使用します。
+**_dup** と **_dup2** は通常、事前定義済みのファイル記述子を別のファイルと関連付けるために使用します。
 
 ## <a name="see-also"></a>参照
 

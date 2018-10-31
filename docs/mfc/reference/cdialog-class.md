@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bda3bcbd8686d985406842a4b7a64536616ae8ac
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03cc6ab0708914f9283ac713e2a63dba02711db9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419554"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068347"
 ---
 # <a name="cdialog-class"></a>CDialog クラス
 
@@ -133,11 +133,7 @@ Framework 呼び出し`UpdateData`ユーザーがモーダル ダイアログ �
 
 モードレス ダイアログ ボックスを実装するときに常にオーバーライド、`OnCancel`メンバー関数と呼び出し`DestroyWindow`から内部にします。 基本クラスを呼び出さないでください`CDialog::OnCancel`を呼び出すため、 `EndDialog`、ダイアログ ボックスを非表示にするが破棄されます。 オーバーライドする必要がありますも`PostNcDestroy`を削除するには、モードレス ダイアログ ボックスの**この**モードレス ダイアログ ボックスに通常割り当てられるため、**新しい**。 モーダル ダイアログ ボックスは、通常、フレームで構築され、必要はありません`PostNcDestroy`クリーンアップします。
 
-`CDialog` の詳細については、次を参照してください。
-
-- [ダイアログ ボックス](../../mfc/dialog-boxes.md)
-
-- サポート技術情報記事 Q262954: HOWTO: スクロール バーのサイズ ダイアログ ボックスの作成
+詳細については`CDialog`を参照してください[ ダイアログ ボックス](../../mfc/dialog-boxes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -149,7 +145,7 @@ Framework 呼び出し`UpdateData`ユーザーがモーダル ダイアログ �
 
 `CDialog`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -161,7 +157,6 @@ Framework 呼び出し`UpdateData`ユーザーがモーダル ダイアログ �
 explicit CDialog(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd = NULL);
-
 
 explicit CDialog(
     UINT nIDTemplate,
@@ -199,7 +194,6 @@ CDialog();
 virtual BOOL Create(
     LPCTSTR lpszTemplateName,
     CWnd* pParentWnd = NULL);
-
 
 virtual BOOL Create(
     UINT nIDTemplate,
@@ -249,7 +243,6 @@ virtual BOOL CreateIndirect(
     CWnd* pParentWnd = NULL,
     void* lpDialogInit = NULL);
 
-
 virtual BOOL CreateIndirect(
     HGLOBAL hDialogTemplate,
     CWnd* pParentWnd = NULL);
@@ -281,7 +274,7 @@ DLGINIT リソースへのポインター。
 
 使用して、`CWnd::DestroyWindow`関数によって作成されたダイアログ ボックスを破棄する、`CreateIndirect`関数。
 
-ActiveX コントロールを含むダイアログ ボックスでは、DLGINIT リソースで提供される追加情報が必要です。 詳細については、サポート技術情報記事 Q231591 を参照してください「HOWTO: ダイアログ テンプレートを使用して ActiveX コントロールを MFC ダイアログを作成します。"。 サポート技術情報については、「 [ http://support.microsoft.com](http://support.microsoft.com/)します。
+ActiveX コントロールを含むダイアログ ボックスでは、DLGINIT リソースで提供される追加情報が必要です。
 
 ##  <a name="domodal"></a>  CDialog::DoModal
 
@@ -382,7 +375,6 @@ BOOL InitModalIndirect(
     CWnd* pParentWnd = NULL,
     void* lpDialogInit = NULL);
 
-
     BOOL InitModalIndirect(
     HGLOBAL hDialogTemplate,
     CWnd* pParentWnd = NULL);
@@ -410,7 +402,7 @@ DLGINIT リソースへのポインター。
 
 まず、モーダル ダイアログ ボックスを直接作成するには、グローバル メモリ ブロックを割り当て、 ダイアログ ボックスのテンプレートを格納します。 空を呼び出して`CDialog` ダイアログ ボックスのオブジェクトを構築するコンス トラクター。 次に、呼び出す`InitModalIndirect`をメモリ内のダイアログ ボックスのテンプレートに、ハンドルを格納します。 Windows のダイアログ ボックスが作成され、表示されるときに、後で、 [DoModal](#domodal)メンバー関数が呼び出されます。
 
-ActiveX コントロールを含むダイアログ ボックスでは、DLGINIT リソースで提供される追加情報が必要です。 詳細については、サポート技術情報記事 Q231591 を参照してください「HOWTO: ダイアログ テンプレートを使用して ActiveX コントロールを MFC ダイアログを作成します。"。 サポート技術情報については、「 [ http://support.microsoft.com](http://support.microsoft.com/)します。
+ActiveX コントロールを含むダイアログ ボックスでは、DLGINIT リソースで提供される追加情報が必要です。
 
 ##  <a name="mapdialogrect"></a>  CDialog::MapDialogRect
 

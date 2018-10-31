@@ -13,12 +13,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 9858ebe9affb47d61114bde072645f7002849ec7
-ms.sourcegitcommit: edb46b0239a0e616af4ec58906e12338c3e8d2c6
+ms.openlocfilehash: 77664c6e849707e6ec9efafbc816a586d5b4850e
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47169464"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328208"
 ---
 # <a name="walkthrough-creating-a-uwp-app-using-wrl-and-media-foundation"></a>チュートリアル: WRL および Media Foundation を使用して UWP アプリの作成
 
@@ -52,7 +52,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 
 - [InspectableClass](../windows/inspectableclass-macro.md)マクロは、参照カウントなどの COM 基本機能を実装し、`QueryInterface`メソッド、およびランタイム クラス名と信頼レベルを設定します。
 
-- 使用の microsoft::wrl::[モジュール クラス](https://www.microsoftonedoc.com/#/organizations/e6f6a65cf14f462597b64ac058dbe1d0/projects/3fedad16-eaf1-41a6-8f96-0c1949c68f32/containers/a3daf831-1c5f-4bbe-964d-503870caf874/tocpaths/b4acf5de-2f4c-4c8b-b5ff-9140d023ecbe)など DLL エントリ ポイント関数を実装する[DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx)、 [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)します。
+- 使用の microsoft::wrl::[モジュール クラス](module-class.md)など DLL エントリ ポイント関数を実装する[DllGetActivationFactory](https://msdn.microsoft.com/library/br205771.aspx)、 [DllCanUnloadNow](/windows/desktop/api/combaseapi/nf-combaseapi-dllcanunloadnow)、および[DllGetClassObject](/windows/desktop/api/combaseapi/nf-combaseapi-dllgetclassobject)します。
 
 - コンポーネント DLL を runtimeobject.lib にリンクします。 指定することも[/WINMD](../cppcx/compiler-and-linker-options-c-cx.md) Windows メタデータを生成するリンカー行にします。
 

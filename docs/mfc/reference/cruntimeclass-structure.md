@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8bc788e646b0e8f788dd8db97d5bc43c3240441f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c7a7b0f8c61226260497baced9575c911b425512
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402489"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078779"
 ---
 # <a name="cruntimeclass-structure"></a>CRuntimeClass 構造体
 
@@ -71,7 +71,7 @@ struct CRuntimeClass
 
 `CRuntimeClass`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -133,7 +133,6 @@ static CRuntimeClass* PASCAL FromName(LPCWSTR lpszClassName);
 
 ```
 BOOL IsDerivedFrom(const CRuntimeClass* pBaseClass) const;
-
 
 ```
 
@@ -236,6 +235,4 @@ ASCII のクラス名を含む null で終わる文字列。
 [新規クラス](run-time-object-model-services.md#implement_dynamic)<br/>
 [IMPLEMENT_DYNCREATE](run-time-object-model-services.md#implement_dyncreate)<br/>
 [IMPLEMENT_SERIAL](run-time-object-model-services.md#implement_serial)
-
-
 

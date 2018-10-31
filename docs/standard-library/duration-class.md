@@ -21,12 +21,12 @@ helpviewer_keywords:
 - std::chrono [C++], duration
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bb4d2c813b53a180f13d5047dc0d78dae98fe59f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: db0ba9b841b26cab9f36cddba0c1f402e4812a20
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100912"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072006"
 ---
 # <a name="duration-class"></a>duration クラス
 
@@ -85,7 +85,7 @@ class duration <duration<Rep, Period1>, Period2>;
 |[duration::operator+=](#op_add_eq)|指定した `duration` オブジェクトのティック カウントを、格納されたティック カウントに加算します。|
 |[duration::operator-=](#operator-_eq)|指定した `duration` オブジェクトのティック カウントを、格納されたティック カウントから減算します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<chrono >
 
@@ -112,7 +112,6 @@ constexpr duration() = default;
 
 template <class Rep2>
 constexpr explicit duration(const Rep2& R);
-
 
 template <class Rep2, class Period2>
 constexpr duration(const duration<Rep2, Period2>& Dur);

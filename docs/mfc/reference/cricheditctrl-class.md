@@ -162,12 +162,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ddefef4525e000002b6fb685887b666aa53fc87
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ccd409a99ccbcf80dc117d7c034d4b8a66b551ef
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378071"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060469"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl クラス
 
@@ -279,8 +279,6 @@ class CRichEditCtrl : public CWnd
 
 - [CRichEditCtrl の使い方](../../mfc/using-cricheditctrl.md)
 
-- サポート技術情報記事 Q259949: 情報: SetCaretPos() が適切でない CEdit または CRichEditCtrl コントロール
-
 リッチ エディット コントロールを使用して MFC アプリケーションでの例は、次を参照してください。、[ワードパッド](../../visual-cpp-samples.md)サンプル アプリケーション。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -293,7 +291,7 @@ class CRichEditCtrl : public CWnd
 
 `CRichEditCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
@@ -929,7 +927,7 @@ DWORD GetParaFormat(PARAFORMAT& pf) const;  DWORD GetParaFormat(PARAFORMAT2& pf)
 
 ### <a name="parameters"></a>パラメーター
 
-*pf*<br/>
+*/pf*<br/>
 最初のバージョンへのポインターで、 [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat)段落の現在の選択の属性を保持する構造体。
 
 2 番目のバージョンへのポインターで、 [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)リッチ エディット 2.0 の拡張機能である構造体に、`PARAFORMAT`構造体、既定の文字書式属性を保持しています。
@@ -1784,7 +1782,7 @@ BOOL SetParaFormat(PARAFORMAT2& pf);
 
 ### <a name="parameters"></a>パラメーター
 
-*pf*<br/>
+*/pf*<br/>
 最初のバージョンへのポインターで、 [PARAFORMAT](/windows/desktop/api/richedit/ns-richedit-_paraformat)新しい既定の段落書式属性。
 
 2 番目のバージョンへのポインターで、 [PARAFORMAT2](/windows/desktop/api/richedit/ns-richedit-paraformat2)リッチ エディット 2.0 の拡張機能である構造体に、`PARAFORMAT`構造体、既定の文字書式属性を保持しています。
@@ -1958,7 +1956,6 @@ WYSIWYG に使用されるターゲット デバイスと行の幅を設定 (に
 BOOL SetTargetDevice(
     HDC hDC,
     long lLineWidth);
-
 
 BOOL SetTargetDevice(
     CDC& dc,

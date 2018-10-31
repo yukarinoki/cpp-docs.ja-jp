@@ -21,18 +21,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ae20f0ea5697883f361a1933601c24095b74d733
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 57bd89cac53fa7092453b80e9f7e65bccf4f789f
+ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43767918"
+ms.lasthandoff: 10/15/2018
+ms.locfileid: "49328156"
 ---
 # <a name="date-and-time-systemtime-support"></a>日付と時刻: SYSTEMTIME サポート
 
 [CTime](../atl-mfc-shared/reference/ctime-class.md)クラスには、Win32 からシステムとファイルの時間を受け入れるコンス トラクター。 このような目的に `CTime` オブジェクトを使用する場合は、この記事の説明に従って初期化を適宜変更する必要があります。
 
-SYSTEMTIME 構造体については、次を参照してください。 [SYSTEMTIME](../mfc/reference/systemtime-structure1.md)します。 FILETIME 構造体については、次を参照してください。 [FILETIME](../mfc/reference/filetime-structure.md)します。
+SYSTEMTIME 構造体については、次を参照してください。 [SYSTEMTIME](../mfc/reference/systemtime-structure.md)します。 FILETIME 構造体については、次を参照してください。 [FILETIME](../mfc/reference/filetime-structure.md)します。
 
 MFC では今でも MS-DOS スタイルの時間の引数を受け取る `CTime` コンストラクターが提供されていますが、MFC バージョン 3.0 からは、`CTime` クラスで、Win32 の `SYSTEMTIME` 構造体を受け取るコンストラクターと、Win32 の `FILETIME` 構造体を受け取る別のコンストラクターもサポートされています。
 
@@ -57,4 +57,3 @@ MFC では今でも MS-DOS スタイルの時間の引数を受け取る `CTime`
 ## <a name="see-also"></a>関連項目
 
 [日付と時刻](../atl-mfc-shared/date-and-time.md)
-

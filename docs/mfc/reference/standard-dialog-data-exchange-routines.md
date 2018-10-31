@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e178dfd91382db6c72fbced24ac990c09861a766
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e493f978606f4013da21c292ccf8f520e4e56ea5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433233"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070414"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>標準的なダイアログ データ エクスチェンジ ルーチン
 
@@ -75,9 +75,9 @@ void AFXAPI DDX_CBIndex(
 
 ときに`DDX_CBIndex`が呼び出され、*インデックス*コンボ ボックスの現在の選択範囲のインデックスに設定されます。 項目が選択されていない場合*インデックス*は 0 に設定します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -110,9 +110,9 @@ void AFXAPI DDX_CBString(
 > [!NOTE]
 >  コンボ ボックスがドロップダウン リスト ボックスの場合は、交換される値は 255 文字に制限されています。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -145,9 +145,9 @@ void AFXAPI DDX_CBStringExact(
 > [!NOTE]
 >  コンボ ボックスがドロップダウン リスト ボックスの場合は、交換される値は 255 文字に制限されています。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -177,9 +177,9 @@ void AFXAPI DDX_Check(
 
 ときに`DDX_Check`が呼び出され、*値*チェック ボックス コントロールの現在の状態に設定されます。 可能な状態の値の一覧では、次を参照してください。 [BM_GETCHECK](/windows/desktop/Controls/bm-getcheck) Windows SDK に含まれています。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -209,9 +209,9 @@ void AFXAPI DDX_Control(
 
 *PDX*オブジェクトが、framework によって提供されるときに、`DoDataExchange`関数が呼び出されます。 そのため、`DDX_Control`のオーバーライド内で呼び出す必要がありますのみ`DoDataExchange`します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -253,9 +253,9 @@ void AFXAPI DDX_DateTimeCtrl(
 
 上記の 3 番目のバージョンで`DDX_DateTimeCtrl`の転送を管理`CString`時刻コントロールの日付間のデータと[CString](../../atl-mfc-shared/reference/cstringt-class.md)コントロール ビュー オブジェクトのデータ メンバー。 文字列の日付と時刻の書式設定の現在のロケールの規則を使用して設定します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -268,10 +268,11 @@ DDX の詳細については、次を参照してください。[ダイアログ
 ```
 template <typename T>
 void DDX_ManagedControl(
-     CDataExchange* pDX,
-     int nIDC,
-     CWinFormsControl<T>& control );
+   CDataExchange* pDX,
+   int nIDC,
+   CWinFormsControl<T>& control );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *pDX*<br/>
@@ -289,7 +290,7 @@ void DDX_ManagedControl(
 
 詳細については、次を参照してください。[方法: Windows フォームで DDX/DDV データ バインディングを行う](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h
 
@@ -297,8 +298,6 @@ void DDX_ManagedControl(
 
 [CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
 [CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
-
-
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -335,9 +334,9 @@ Win32 を使用して、 [IPM_GETADDRESS](/windows/desktop/Controls/ipm-getaddre
 
 ときに`DDX_IPAddress`が呼び出され、*値*かは、IP アドレス管理から読み取り専用または*値*は、exchange の方向に応じて、コントロールに書き込まれます。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -367,9 +366,9 @@ void AFXAPI DDX_LBIndex(
 
 ときに`DDX_LBIndex`が呼び出され、*インデックス*リスト ボックスの現在の選択範囲のインデックスに設定されます。 項目が選択されていない場合*インデックス*が-1 に設定します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -404,9 +403,9 @@ void AFXAPI DDX_LBString(
 > [!NOTE]
 >  リスト ボックスがドロップダウン リスト ボックスの場合は、交換される値は 255 文字に制限されています。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -441,9 +440,9 @@ void AFXAPI DDX_LBStringExact(
 > [!NOTE]
 >  リスト ボックスがドロップダウン リスト ボックスの場合は、交換される値は 255 文字に制限されています。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -481,9 +480,9 @@ void AFXAPI DDX_MonthCalCtrl(
 
 ときに`DDX_MonthCalCtrl`が呼び出され、*値*月間予定表コントロールの現在の状態に設定されます。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -515,9 +514,9 @@ void AFXAPI DDX_Radio(
 
 グループ内の最初のラジオ ボタンがある場合などで (WS_GROUP スタイルのボタン) の値をチェック、 **int**メンバーが 0 です。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -547,9 +546,9 @@ void AFXAPI DDX_Scroll(
 
 ときに`DDX_Scroll`が呼び出され、*値*コントロールのスクロール ボックスの現在の位置に設定されます。 コントロールのスクロール ボックスの現在の位置に関連付けられている値の詳細については、次を参照してください。 [GetScrollPos](/windows/desktop/api/winuser/nf-winuser-getscrollpos) Windows SDK に含まれています。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -579,9 +578,9 @@ void AFXAPI DDX_Slider(
 
 ときに`DDX_Slider`を呼び出すと、*値*コントロールのスクロール ボックスの現在の位置に設定されている値が、exchange の方向に応じて、位置を送受信します。
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 スライダー コントロールの概要については、次を参照してください。[を使用して CSliderCtrl](../../mfc/using-csliderctrl.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 スライダー コントロールの概要については、次を参照してください。[を使用して CSliderCtrl](../../mfc/using-csliderctrl.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 
@@ -659,9 +658,9 @@ void AFXAPI DDX_Text(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
 

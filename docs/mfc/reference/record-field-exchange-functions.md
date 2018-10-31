@@ -55,12 +55,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 430d9d297161a05f9158893454f00be2afbe7a47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8fba2e8d949745f694973f2d7b29c5244ab30db4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408571"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058909"
 ---
 # <a name="record-field-exchange-functions"></a>レコード フィールド エクスチェンジ (RFX) 関数
 
@@ -161,7 +161,7 @@ void RFX_Binary(
 
 参照してください[RFX_Text](#rfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -193,7 +193,7 @@ void RFX_Bool(
 
 参照してください[RFX_Text](#rfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -225,7 +225,7 @@ void RFX_Byte(
 
 参照してください[RFX_Text](#rfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -275,7 +275,7 @@ void RFX_Date(
 
 参照してください[RFX_Text](#rfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -307,7 +307,7 @@ void RFX_Double(
 
 参照してください[RFX_Text](#rfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -339,7 +339,7 @@ void RFX_Int(
 
 参照してください[RFX_Text](#rfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -372,7 +372,7 @@ value );
 
 参照してください[RFX_Text](#rfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -404,7 +404,7 @@ void RFX_LongBinary(
 
 参照してください[RFX_Text](#rfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -436,10 +436,9 @@ void RFX_Single(
 
 参照してください[RFX_Text](#rfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
-
 
 ## <a name="rfx_text"></a>  RFX_Text
 
@@ -503,10 +502,9 @@ void CCustomer::DoFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
-
 
 ## <a name="rfx_binary_bulk"></a>  RFX_Binary_Bulk
 
@@ -555,7 +553,7 @@ void RFX_Binary_Bulk(
 
 参照してください[RFX_Text_Bulk](#rfx_text_bulk)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -602,7 +600,7 @@ void RFX_Bool_Bulk(
 
 参照してください[RFX_Text_Bulk](#rfx_text_bulk)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -649,7 +647,7 @@ void RFX_Byte_Bulk(
 
 参照してください[RFX_Text_Bulk](#rfx_text_bulk)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -696,7 +694,7 @@ TIMESTAMP_STRUCT 値の配列へのポインター。 この配列は、デー�
 
 参照してください[RFX_Text_Bulk](#rfx_text_bulk)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -743,7 +741,7 @@ void RFX_Double_Bulk(
 
 参照してください[RFX_Text_Bulk](#rfx_text_bulk)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -775,7 +773,7 @@ void RFX_Int(
 
 参照してください[RFX_Text](#rfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -822,7 +820,7 @@ void RFX_Long_Bulk(
 
 参照してください[RFX_Text_Bulk](#rfx_text_bulk)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -869,10 +867,9 @@ void RFX_Single_Bulk(
 
 参照してください[RFX_Text_Bulk](#rfx_text_bulk)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
-
 
 ## <a name="rfx_text_bulk"></a>  RFX_Text_Bulk
 
@@ -936,7 +933,7 @@ void CMultiCustomer::DoBulkFieldExchange(CFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -983,10 +980,9 @@ Dao DAO_BYTES 型と型の間のデータのマップ[CByteArray](cbytearray-cla
 
 参照してください[DFX_Text](#dfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
-
 
 ## <a name="dfx_bool"></a>  DFX_Bool
 
@@ -1027,7 +1023,7 @@ void AFXAPI DFX_Bool(
 
 参照してください[DFX_Text](#dfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -1070,7 +1066,7 @@ void AFXAPI DFX_Byte(
 
 参照してください[DFX_Text](#dfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -1113,7 +1109,7 @@ Dao DAO_CURRENCY 型と型の間のデータのマップ[COleCurrency](colecurre
 
 参照してください[DFX_Text](#dfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -1159,7 +1155,7 @@ Dao DAO_DATE 型と型の間のデータのマップ[COleDateTime](../../atl-mfc
 
 参照してください[DFX_Text](#dfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -1202,7 +1198,7 @@ DAO DAO_R8 型と型の間のデータのマップ**倍精度浮動小数点**�
 
 参照してください[DFX_Text](#dfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -1245,10 +1241,9 @@ DAO DAO_I4 型と型の間のデータのマップ**長い**レコード セッ�
 
 参照してください[DFX_Text](#dfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
-
 
 ## <a name="dfx_longbinary"></a>  DFX_LongBinary
 
@@ -1293,7 +1288,7 @@ void AFXAPI DFX_LongBinary(
 
 参照してください[DFX_Text](#dfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -1339,10 +1334,9 @@ DAO DAO_I2 型と型の間のデータのマップ**短い**レコード セッ�
 
 参照してください[DFX_Text](#dfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
-
 
 ## <a name="dfx_single"></a>  DFX_Single
 
@@ -1383,7 +1377,7 @@ DAO DAO_R4 型と型の間のデータのマップ**float**レコード セッ�
 
 参照してください[DFX_Text](#dfx_text)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -1446,7 +1440,7 @@ void CCustSet::DoFieldExchange(CDaoFieldExchange* pFX)
 }
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 

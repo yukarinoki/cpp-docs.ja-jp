@@ -13,19 +13,19 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8b220ecd69ce539c03339ac73048efb2750d2e32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 541a9d5064e9bdf9c4ddb9b410ab4dc0277626b0
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401804"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204614"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL)
 
 Windows ランタイム C++ テンプレート ライブラリ (WRL) は、Windows ランタイム コンポーネントを作成および使用するための低レベルの手段を提供するテンプレート ライブラリです。
 
 > [!NOTE]
-> WRL は C + によって置き換え今すぐ/cli WinRT、標準 c++ 17 の言語プロジェクションの Windows ランタイム Api です。 C +/cli WinRT はバージョン 1803 以降から Windows 10 SDK で使用できます。 C +/cli WinRT がヘッダー ファイルで完全に実装し、最新の Windows API に最上級アクセスを提供するように設計します。
+> C + によって置き換えられた WRL/cli WinRT、標準 c++ 17 の言語プロジェクションの Windows ランタイム Api です。 C +/cli WinRT はバージョン 1803 以降から Windows 10 SDK で使用できます。 C +/cli WinRT がヘッダー ファイルで完全に実装し、最新の Windows API に最上級アクセスを提供するように設計します。
 
 > C++/cli WinRT、両方を使用して標準に準拠した c++ 17 コンパイラを使用して Windows ランタイム Api を作成します。 C +/cli WinRT は通常、パフォーマンスが向上し、Windows ランタイムの他の言語オプションよりも小さいバイナリを生成します。 C + をサポートするために引き続き/cli CX および WRL、C + 新しいアプリケーションを使用するを強くお勧めしますが、/cli WinRT します。 詳細については、次を参照してください。 [C +/cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)します。
 
@@ -50,7 +50,7 @@ Windows ランタイム C++ テンプレート ライブラリと C + + CX さ�
 
 Windows ランタイム C++ テンプレート ライブラリとすぐに作業を取得するのに役立つリソースを次に示します。
 
-[Windows ランタイム ライブラリ (WRL)](http://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
+[Windows ランタイム ライブラリ (WRL)](https://channel9.msdn.com/Events/Windows-Camp/Developing-Windows-8-Metro-style-apps-in-Cpp/The-Windows-Runtime-Library-WRL-)<br/>
 この Channel 9 ビデオで詳細については、Windows ランタイム C++ テンプレート ライブラリがどのように役立つかを作成および Windows ランタイム コンポーネントを使用する方法とユニバーサル Windows プラットフォーム (UWP) アプリを記述します。
 
 [方法: アクティブ化し、Windows ランタイム コンポーネントの使用](../windows/how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)<br/>
@@ -69,7 +69,7 @@ Windows ランタイム C++ テンプレート ライブラリを使用してサ
 Windows ランタイム C++ テンプレート ライブラリを使用して、基本的な COM コンポーネントと登録してデスクトップ アプリから COM コンポーネントを使用する基本的な方法を作成する方法を示します。
 
 [方法: WRL コンポーネントを直接インスタンス化する](../windows/how-to-instantiate-wrl-components-directly.md)<br/>
-使用する方法について説明します、 [Microsoft::WRL::Make](../windows/make-function.md)と[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)関数を定義しているモジュールからコンポーネントをインスタンス化します。
+[Microsoft::WRL::Make](../windows/make-function.md) と [Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md) 関数を使用して、コンポーネントを定義するモジュールからそのコンポーネントをインスタンス化する方法について説明します。
 
 [方法: winmdidl.exe と midlrt.exe を使用して、Windows メタデータから .h ファイルを作成する](../windows/use-winmdidl-and-midlrt-to-create-h-files-from-windows-metadata.md)<br/>
 .winmd メタデータから IDL ファイルを作成して、WRL からカスタム Windows ランタイム コンポーネントを使用する方法を示します。
@@ -77,16 +77,16 @@ Windows ランタイム C++ テンプレート ライブラリを使用して、
 [チュートリアル: タスクおよび XML HTTP 要求を使用した接続](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)<br/>
 使用する方法を示しています、 [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)と[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) UWP アプリで web サービスに HTTP GET および POST 要求を送信するタスクとのインターフェイス。
 
-[Bing マップ トリップ オプティマイザーのサンプル](http://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
+[Bing マップ トリップ オプティマイザーのサンプル](https://code.msdn.microsoft.com/Bing-Maps-trip-optimizer-c4e037f7)<br/>
 使用して、`HttpRequest`クラスで定義されている[チュートリアル: を使用してタスクの接続および XML HTTP 要求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)完全な UWP アプリのコンテキストでします。
 
-[C++ のサンプルを使用した Windows ランタイム DLL コンポーネントの作成](http://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
+[C++ のサンプルを使用した Windows ランタイム DLL コンポーネントの作成](https://code.msdn.microsoft.com/windowsapps/Creating-a-Windows-Runtime-6c399797)<br/>
 Windows ランタイム C++ テンプレート ライブラリを使用してインプロセス DLL コンポーネントを作成し、C + から使用する方法を示しています。/cli/CX、JavaScript、および C# の場合。
 
-[DirectX の marble maze ゲームのサンプル](http://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
+[DirectX の marble maze ゲームのサンプル](https://code.msdn.microsoft.com/windowsapps/DirectX-Marble-Maze-Game-e4806345)<br/>
 Windows ランタイム C++ テンプレート ライブラリを使用して、3-D ゲーム全体のコンテキストで DirectX や Media Foundation などの COM コンポーネントの有効期間を管理する方法を示します。
 
-[デスクトップ アプリのサンプルからのトースト通知を送信します。](http://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
+[デスクトップ アプリのサンプルからのトースト通知を送信します。](https://code.msdn.microsoft.com/windowsdesktop/Sending-toast-notifications-71e230a2)<br/>
 Windows ランタイム C++ テンプレート ライブラリを使用してデスクトップ アプリからのトースト通知を操作する方法を示します。
 
 ## <a name="windows-runtime-c-template-library-compared-to-atl"></a>Windows ランタイム C++ テンプレートのライブラリと ATL の比較
@@ -119,23 +119,23 @@ Windows ランタイム C++ テンプレート ライブラリは、いくつか
 
 ### <a name="comptr"></a>ComPtr
 
-[ComPtr](../windows/comptr-class.md)は、*スマート ポインター*テンプレート パラメーターで指定されているインターフェイスを表す型。 インターフェイスから派生したオブジェクトのメンバーにアクセスできる変数を宣言するには、 `ComPtr` を使用します。 `ComPtr` は、基になるインターフェイス ポインターの参照カウントを維持し、参照カウントがゼロになるとそのインターフェイスを自動的に解放します。
+[ComPtr](../windows/comptr-class.md) は、テンプレート パラメーターで指定されたインターフェイスを表す *スマート ポインター* 型です。 インターフェイスから派生したオブジェクトのメンバーにアクセスできる変数を宣言するには、 `ComPtr` を使用します。 `ComPtr` は、基になるインターフェイス ポインターの参照カウントを維持し、参照カウントがゼロになるとそのインターフェイスを自動的に解放します。
 
 ### <a name="runtimeclass"></a>RuntimeClass
 
-[RuntimeClass](../windows/runtimeclass-class.md)インスタンス化された指定したインターフェイスのセットを継承するクラスを表します。 A`RuntimeClass`オブジェクトは、1 つまたは複数の Windows ランタイムの COM インターフェイス、またはコンポーネントへの弱い参照のサポートの組み合わせを提供できます。
+[RuntimeClass](../windows/runtimeclass-class.md) は、指定したインターフェイスのセットを継承する、インスタンス化されたクラスを表します。 A`RuntimeClass`オブジェクトは、1 つまたは複数の Windows ランタイムの COM インターフェイス、またはコンポーネントへの弱い参照のサポートの組み合わせを提供できます。
 
 ### <a name="module"></a>Module
 
-[モジュール](../windows/module-class.md)関連オブジェクトのコレクションを表します。 `Module` オブジェクトは、オブジェクトを作成するクラス ファクトリと、他のアプリケーションからオブジェクトを使用できるようにする登録を管理します。
+[Module](../windows/module-class.md) は、関連するオブジェクトから成るコレクションを表します。 `Module` オブジェクトは、オブジェクトを作成するクラス ファクトリと、他のアプリケーションからオブジェクトを使用できるようにする登録を管理します。
 
 ### <a name="callback"></a>コールバック
 
-[コールバック](../windows/callback-function-windows-runtime-cpp-template-library.md)関数オブジェクトをメンバー関数は、イベント ハンドラー (コールバック メソッド) を作成します。 非同期操作を書き込むには、 `Callback` 関数を使用します。
+["Callback (コールバック)"](../windows/callback-function-windows-runtime-cpp-template-library.md) 関数は、メンバー関数がイベント ハンドラー (コールバック メソッド) であるオブジェクトを作成します。 非同期操作を書き込むには、 `Callback` 関数を使用します。
 
 ### <a name="eventsource"></a>EventSource
 
-[EventSource](../windows/eventsource-class.md)を管理するために使用*委任*イベント ハンドラー。 Windows ランタイム C++ テンプレート ライブラリを使用してデリゲートを実装し、使用`EventSource`を追加するには、削除、およびデリゲートを呼び出します。
+[EventSource](../windows/eventsource-class.md) は、 *デリゲート* イベント ハンドラーを管理するために使用します。 Windows ランタイム C++ テンプレート ライブラリを使用してデリゲートを実装し、使用`EventSource`を追加するには、削除、およびデリゲートを呼び出します。
 
 ### <a name="asyncbase"></a>AsyncBase
 
@@ -143,11 +143,11 @@ Windows ランタイム C++ テンプレート ライブラリは、いくつか
 
 ### <a name="ftmbase"></a>FtmBase
 
-[FtmBase](../windows/ftmbase-class.md)フリー スレッド マーシャラー オブジェクトを表します。 `FtmBase` は、グローバル インターフェイス テーブル (GIT) を作成し、マーシャリングとプロキシ オブジェクトの管理を支援します。
+[FtmBase](../windows/ftmbase-class.md) は、フリー スレッドのマーシャラー オブジェクトを表します。 `FtmBase` は、グローバル インターフェイス テーブル (GIT) を作成し、マーシャリングとプロキシ オブジェクトの管理を支援します。
 
 ### <a name="weakref"></a>WeakRef
 
-[WeakRef](../windows/weakref-class.md)を表すスマート ポインター型には、*弱い参照*、またはアクセスできない可能性がありますのあるオブジェクトを参照します。 A `WeakRef` Windows ランタイムのみで、クラシック COM でないオブジェクトを使用できます
+[WeakRef](../windows/weakref-class.md) は、アクセス可能またはアクセス不可能のオブジェクトを参照する *弱い参照*を表すスマート ポインター型です。 A `WeakRef` Windows ランタイムのみで、クラシック COM でないオブジェクトを使用できます
 
 `WeakRef` オブジェクトは通常、外部スレッドまたは外部アプリケーションによって存在が制御されるオブジェクトを表します。 たとえば、 `WeakRef` オブジェクトを使用して、ファイル オブジェクトを参照できます。 そのファイルが開いている場合は、 `WeakRef` が有効になり、参照先ファイルにアクセスできます。 一方、そのファイルが閉じている場合は、 `WeakRef` が無効になり、そのファイルにアクセスできません。
 

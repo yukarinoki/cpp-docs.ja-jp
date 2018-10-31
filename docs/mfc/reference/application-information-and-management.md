@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b64e92eaca38743f0bc9de31f9be7684271c4674
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1867f044c143fc0e5fbb06705bf45b8fa729a5cc
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374374"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068971"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 
@@ -61,8 +61,6 @@ Microsoft Foundation Class ライブラリでは、これらのタスクを達�
 |[AfxSocketInit](#afxsocketinit)|呼び出される、 `CWinApp::InitInstance` Windows Sockets を初期化するためにオーバーライドします。|
 |[AfxUserToolsManager](#afxusertoolsmanager)|グローバルへのポインター[ユーザー ツール マネージャー](cusertoolsmanager-class.md)します。|
 |[AfxWinInit](#afxwininit)|MFC が指定したメソッドを呼び出して`WinMain`の一部として、関数、 [CWinApp](../../mfc/reference/cwinapp-class.md) MFC を初期化するために、GUI ベースのアプリケーションの初期化。 MFC を使用するコンソール アプリケーションを直接呼び出す必要があります。|
-
-
 
 ##  <a name="afxbeginthread"></a>  AfxBeginThread
 
@@ -132,7 +130,7 @@ CWinThread* AfxBeginThread(
 
 例をご覧ください[csocket::attach](../../mfc/reference/csocket-class.md#attach)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -145,14 +143,14 @@ CWinThread* AfxBeginThread(
 ```
 CContextMenuManager* afxContextMenuManager;
 ```
-### <a name="requirements"></a>要件
+
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcontextmenumanager.h
 
 ### <a name="see-also"></a>関連項目
 
 [CContextMenuManager クラス](ccontextmenumanager-class.md)
-
 
 ##  <a name="afxendthread"></a>  AfxEndThread
 
@@ -178,7 +176,7 @@ void AFXAPI AfxEndThread(
 
 詳細については`AfxEndThread`、記事をご覧ください[マルチ スレッド: スレッドの終了](../../parallel/multithreading-terminating-threads.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -190,6 +188,7 @@ void AFXAPI AfxEndThread(
 ```
 HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *lpszName*<br/>
@@ -217,7 +216,7 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 
 1. システム モジュールです。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -256,7 +255,7 @@ BOOL AFXAPI AfxFreeLibrary(HINSTANCE hInstLib);
 
 例をご覧ください[AfxLoadLibrary](#afxloadlibrary)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdll_.h
 
@@ -280,7 +279,7 @@ CWinApp* AFXAPI AfxGetApp();
 
 [!code-cpp[NVC_MFCWindowing#126](../../mfc/reference/codesnippet/cpp/application-information-and-management_1.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -300,7 +299,7 @@ LPCTSTR AFXAPI AfxGetAppName();
 
 [!code-cpp[NVC_MFCWindowing#127](../../mfc/reference/codesnippet/cpp/application-information-and-management_2.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -324,7 +323,7 @@ HINSTANCE  AFXAPI AfxGetInstanceHandle();
 
 [!code-cpp[NVC_MFCWindowing#128](../../mfc/reference/codesnippet/cpp/application-information-and-management_3.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -352,7 +351,7 @@ CWnd* AFXAPI AfxGetMainWnd();
 
 [!code-cpp[NVC_MFCWindowing#129](../../mfc/reference/codesnippet/cpp/application-information-and-management_4.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -374,7 +373,7 @@ TRUE は、HKCU ノードにレジストリ情報が送られることを示し�
 
 アプリケーションは、レジストリへのアクセスをリダイレクトするかどうかを変更する[AfxSetPerUserRegistration](#afxsetperuserregistration)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxstat_.h
 
@@ -394,7 +393,7 @@ extern HINSTANCE  AfxGetResourceHandle();
 
 [!code-cpp[NVC_MFCWindowing#130](../../mfc/reference/codesnippet/cpp/application-information-and-management_5.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -421,7 +420,7 @@ CWinThread* AfxGetThread();
 
 [!code-cpp[NVC_MFCWindowing#132](../../mfc/reference/codesnippet/cpp/application-information-and-management_6.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -443,7 +442,7 @@ BOOL AFXAPI AfxInitRichEdit();
 
 この関数は、ライブラリは、プロセスにまだ初期化されていない場合にも、一般的なコントロール ライブラリを初期化します。 リッチ エディット コントロールを MFC アプリケーションから直接使用する場合は、MFC がリッチ エディット コントロールのランタイムを正しく初期化されるようにするのには、この関数を呼び出す必要があります。 Create メソッドを呼び出す場合[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)、 [CRichEditView](../../mfc/reference/cricheditview-class.md)、または[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)、する通常、この関数を呼び出す必要はありませんが、場合によってはでがありますいる。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -459,7 +458,7 @@ BOOL AFXAPI AfxInitRichEdit2();
 
 RICHED20 を読み込むには、この関数を呼び出します。DLL と初期化バージョン 2.0 の豊富なコントロールを編集します。 Create メソッドを呼び出す場合[CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)、 [CRichEditView](../../mfc/reference/cricheditview-class.md)、または[CRichEditDoc](../../mfc/reference/cricheditdoc-class.md)、する通常、この関数を呼び出す必要はありませんが、場合によってはでがありますいる。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -471,6 +470,7 @@ RICHED20 を読み込むには、この関数を呼び出します。DLL と初�
 ```
 BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *我が物*<br/>
@@ -496,7 +496,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 このメソッドは、関数またはメソッドのパラメーターが拡張フレーム ウィンドウであるかどうかを検証する必要があるときに役立ちます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxpriv.h
 
@@ -514,6 +514,7 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 ```
 BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *我が物*<br/>
@@ -527,7 +528,7 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 
 このメソッドが戻る`TRUE`場合*我が物*から派生した`CMFCToolBar`します。 このメソッドは関数またはメソッドのパラメーターがあることを検証するときに、`CMFCToolBar`オブジェクト。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxpriv.h
 
@@ -535,7 +536,6 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 
 [CWnd クラス](cwnd-class.md)<br/>
 [CMFCToolBar クラス](cmfctoolbar-class.md)
-
 
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
@@ -546,7 +546,8 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 ```
 CKeyboardManager* afxKeyboardManager;
 ```
-### <a name="requirements"></a>要件
+
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxkeyboardmanager.h
 
@@ -554,7 +555,6 @@ CKeyboardManager* afxKeyboardManager;
 
 [マクロ、グローバル関数、およびグローバル変数](mfc-macros-and-globals.md)<br/>
 [CKeyboardManager クラス](ckeyboardmanager-class.md)
-
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -591,7 +591,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 ### <a name="remarks"></a>Remarks
 
-使用できるハンドルを返します[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212) DLL 関数のアドレスを取得します。 `AfxLoadLibrary` その他の実行可能モジュールにマップすることも使用できます。
+使用できるハンドルを返します[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress) DLL 関数のアドレスを取得します。 `AfxLoadLibrary` その他の実行可能モジュールにマップすることも使用できます。
 
 各プロセスは、各ライブラリが読み込まれたモジュールの参照カウントを保持します。 この参照カウントは毎回`AfxLoadLibrary`と呼びます。 毎回デクリメントされる`AfxFreeLibrary`が呼び出されます。 参照カウントがゼロに達するし、モジュールは、呼び出し元プロセスのアドレス空間からマップされたが、ハンドルが無効になった。
 
@@ -605,7 +605,7 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 [!code-cpp[NVC_MFC_DLLUser#2](../../mfc/reference/codesnippet/cpp/application-information-and-management_8.cpp)]
 [!code-cpp[NVC_MFC_DLLUser#3](../../mfc/reference/codesnippet/cpp/application-information-and-management_9.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdll_.h
 
@@ -618,7 +618,8 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 ```
 CMenuTearOffManager* g_pTearOffMenuManager;
 ```
-### <a name="requirements"></a>要件
+
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxmenutearoffmanager.h
 
@@ -635,15 +636,14 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 ```
 CMouseManager* afxMouseManager;
 ```
-### <a name="requirements"></a>要件
+
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxmousemanager.h
 
 ### <a name="see-also"></a>関連項目
 
 [CMouseManager クラス](cmousemanager-class.md)
-
-
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -672,7 +672,7 @@ TRUE の場合、クラスが正常に登録します。それ以外の場合は
 
 [!code-cpp[NVC_MFC_DLL#3](../../atl-mfc-shared/codesnippet/cpp/application-information-and-management_10.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -731,7 +731,7 @@ Microsoft Foundation Class ライブラリでは、いくつかの標準のウ�
 
 [!code-cpp[NVC_MFCWindowing#134](../../mfc/reference/codesnippet/cpp/application-information-and-management_11.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -752,13 +752,13 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Windows Vista では、通常使用されるレジストリにアクセスするアプリケーションの前に、 **HKEY_CLASSES_ROOT**ノード。 ただし、Windows Vista またはそれ以降のオペレーティング システムでは、HKCR への書き込みに管理者特権モードでアプリケーションを実行する必要があります。
 
-このメソッドは、読み取りし、書き込みを HKCU、HKCR からレジストリ アクセスをリダイレクトすることにより、管理者特権モードで実行することがなく、レジストリにアプリケーションを使用します。 詳細については、次を参照してください。[リンカー プロパティ ページ](../../ide/linker-property-pages.md)します。
+このメソッドは、読み取りし、書き込みを HKCU、HKCR からレジストリ アクセスをリダイレクトすることにより、管理者特権モードで実行することがなく、レジストリにアプリケーションを使用します。 詳細については、「 [Linker Property Pages](../../ide/linker-property-pages.md)」を参照してください。
 
 フレームワークが HKCR へのアクセスをリダイレクトするレジストリのリダイレクトを有効にした場合**する**します。 MFC と ATL のフレームワークは、リダイレクトの影響を受けます。
 
 既定の実装では、HKCR の下のレジストリにアクセスします。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxstat_.h
 
@@ -779,7 +779,7 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 
 [!code-cpp[NVC_MFCWindowing#135](../../mfc/reference/codesnippet/cpp/application-information-and-management_12.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -793,7 +793,7 @@ void AFXAPI AfxSetResourceHandle(HINSTANCE hInstResource);
 CShellManager* afxShellManager;
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxshellmanager.h
 
@@ -822,7 +822,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 
 静的にリンクされた MFC アプリケーションでセカンダリ スレッドで MFC ソケットを使用する場合を呼び出す必要があります`AfxSocketInit`ソケット ライブラリを初期化するためにソケットを使用する各スレッドにします。 既定では、`AfxSocketInit`は、プライマリ スレッドでのみ呼び出されます。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxsock.h
 
@@ -836,14 +836,13 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 CUserToolsManager* afxUserToolsManager;
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxusertoolsmanager.h
 
 ### <a name="see-also"></a>関連項目
 
 [CUserToolsManager クラス](cusertoolsmanager-class.md)
-
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 
@@ -884,7 +883,7 @@ GUI アプリケーションのメイン ウィンドウの表示方法を指定
 
 [!code-cpp[NVC_MFC_AfxWinInit#1](../../mfc/reference/codesnippet/cpp/application-information-and-management_13.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 

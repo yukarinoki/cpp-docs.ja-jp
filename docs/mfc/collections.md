@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3b6f2fdeb02fbc5e57bbba58f685d21133841279
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 72bae0d985c81478321109c3c02c07e6b1386028
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412861"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069907"
 ---
 # <a name="collections"></a>コレクション
 
@@ -53,15 +53,15 @@ Microsoft Foundation Class ライブラリは、オブジェクトのグルー�
 
 - リスト
 
-     List クラスはダブルリンク リストとして実装されている要素の順序付けられたインデックスなしのリストを提供します。 一覧は、"head"と"tail"と、要素を削除、先頭または末尾、または挿入または削除、中間の要素を追加または高速です。
+   List クラスはダブルリンク リストとして実装されている要素の順序付けられたインデックスなしのリストを提供します。 一覧は、"head"と"tail"と、要素を削除、先頭または末尾、または挿入または削除、中間の要素を追加または高速です。
 
 - 配列
 
-     Array クラスは、オブジェクトの配列を動的にサイズ変更、順序付けられたや整数インデックスを提供します。
+   Array クラスは、オブジェクトの配列を動的にサイズ変更、順序付けられたや整数インデックスを提供します。
 
 - マップ (ディクショナリとも呼ばれます)
 
-     マップは、キー オブジェクトを値オブジェクトに関連付けられるコレクションです。
+   マップは、キー オブジェクトを値オブジェクトに関連付けられるコレクションです。
 
 ##  <a name="_core_the_template_based_collection_classes"></a> テンプレート ベースのコレクション クラス
 

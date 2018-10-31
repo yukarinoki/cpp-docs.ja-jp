@@ -1,7 +1,7 @@
 ---
 title: CSize クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -21,21 +21,21 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa840b2fd6e143715c924d0f7ac67e78eb8306a4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6d9927712077f7d0d57d9ece5ae72489be291866
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417547"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055229"
 ---
 # <a name="csize-class"></a>CSize クラス
 
-Windows のような[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造体は、相対座標や位置を実装します。
+Windows の [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) 構造体と同様に、相対座標や位置を実装します。
 
 ## <a name="syntax"></a>構文
 
 ```
-class CSize : public tagSIZE 
+class CSize : public tagSIZE
 ```
 
 ## <a name="members"></a>メンバー
@@ -64,7 +64,7 @@ class CSize : public tagSIZE
 `cx`と`cy`のメンバー `SIZE` (と`CSize`) は public です。 さらに、`CSize`を操作するメンバー関数の実装、`SIZE`構造体。
 
 > [!NOTE]
->  詳細については、共有ユーティリティ クラス (など`CSize`) を参照してください[共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)します。
+> 詳細については、共有ユーティリティ クラス (など`CSize`) を参照してください[共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -72,7 +72,7 @@ class CSize : public tagSIZE
 
 `CSize`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atltypes.h
 
@@ -85,24 +85,24 @@ CSize() throw();
 CSize( int initCX, int initCY) throw();
 CSize( SIZE initSize) throw();
 CSize( POINT initPt) throw();
-CSize( DWORD dwSize) throw(); 
+CSize( DWORD dwSize) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*initCX*  
+*initCX*<br/>
 セット、`cx`のメンバー、`CSize`します。
 
-*initCY*  
+*initCY*<br/>
 セット、`cy`のメンバー、`CSize`します。
 
-*initSize*  
+*initSize*<br/>
 [サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または`CSize`オブジェクトの初期化に使用される`CSize`します。
 
-*initPt*  
-[ポイント](../../mfc/reference/point-structure1.md)構造または`CPoint`オブジェクトの初期化に使用される`CSize`します。
+*initPt*<br/>
+[ポイント](../../mfc/reference/point-structure.md)構造または`CPoint`オブジェクトの初期化に使用される`CSize`します。
 
-*ない dwSize*  
+*ない dwSize*<br/>
 DWORD が初期化に使用される`CSize`します。 下位ワードは、`cx`メンバーと、上位の単語は、`cy`メンバー。
 
 ### <a name="remarks"></a>Remarks
@@ -117,8 +117,8 @@ DWORD が初期化に使用される`CSize`します。 下位ワードは、`cx
 
 2 つのサイズに等しいかどうかを確認します。
 
-``` 
-BOOL operator==(SIZE size) const throw(); 
+```
+BOOL operator==(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Remarks
@@ -133,8 +133,8 @@ BOOL operator==(SIZE size) const throw();
 
 2 つのサイズ間の不等性を確認します。
 
-``` 
-BOOL operator!=(SIZE size) const throw(); 
+```
+BOOL operator!=(SIZE size) const throw();
 ```
 
 ### <a name="remarks"></a>Remarks
@@ -149,8 +149,8 @@ BOOL operator!=(SIZE size) const throw();
 
 このサイズを追加します。`CSize`します。
 
-``` 
-void operator+=(SIZE size) throw(); 
+```
+void operator+=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>例
@@ -161,8 +161,8 @@ void operator+=(SIZE size) throw();
 
 これからサイズを減算`CSize`します。
 
-``` 
-void operator-=(SIZE size) throw(); 
+```
+void operator-=(SIZE size) throw();
 ```
 
 ### <a name="example"></a>例
@@ -173,10 +173,10 @@ void operator-=(SIZE size) throw();
 
 これらの演算子は、これを追加`CSize`値パラメーターの値にします。
 
-``` 
+```
 CSize operator+(SIZE size) const throw();
 CPoint operator+(POINT point) const throw();
-CRect operator+(const RECT* lpRect) const throw(); 
+CRect operator+(const RECT* lpRect) const throw();
 ```
 
 ### <a name="remarks"></a>Remarks
@@ -197,11 +197,11 @@ CRect operator+(const RECT* lpRect) const throw();
 
 この最初の 3 つの演算子が減算`CSize`値パラメーターの値にします。
 
-``` 
+```
 CSize operator-(SIZE size) const throw();
 CPoint operator-(POINT point) const throw();
 CRect operator-(const RECT* lpRect) const throw();
-CSize operator-() const throw(); 
+CSize operator-() const throw();
 ```
 
 ### <a name="remarks"></a>Remarks

@@ -37,12 +37,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 042fe1a446137546654c8f0cfd5ee9be8072dcee
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 2b62de5b8303cfdd0516b143654fb9eb2e767eb2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091830"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059819"
 ---
 # <a name="csnapinitemimpl-class"></a>CSnapInItemImpl クラス
 
@@ -110,7 +110,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 
 `CSnapInItemImpl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsnap.h
 
@@ -119,7 +119,7 @@ class ATL_NO_VTABLE CSnapInItemImpl : public CSnapInItem
 このメソッドは、Win32 関数を実装します。 [IExtendContextMenu::AddMenuItems](https://msdn.microsoft.com/library/aa814841)します。
 
 ```
-AddMenuItems(  
+AddMenuItems(
     LPCONTEXTMENUCALLBACK piCallback,
     long* pInsertionAllowed,
     DATA_OBJECT_TYPES type);
@@ -181,7 +181,7 @@ Command(long lCommandID, DATA_OBJECT_TYPES type);
 このメソッドは、Win32 関数を実装します。 [IExtendPropertySheet::CreatePropertyPages](https://msdn.microsoft.com/library/aa814846)します。
 
 ```
-CreatePropertyPages(  
+CreatePropertyPages(
     LPPROPERTYSHEETCALLBACK lpProvider,
     long handle,
     IUnknown* pUnk,
@@ -393,7 +393,7 @@ QueryPagesFor(DATA_OBJECT_TYPES type);
 指定された、メニューの挿入フラグを変更するには、この関数を呼び出す*pInsertionAllowed*、スナップイン オブジェクト。
 
 ```
-void SetMenuInsertionFlags(  
+void SetMenuInsertionFlags(
     bool bBeforeInsertion,
     long* pInsertionAllowed);
 ```
@@ -425,7 +425,7 @@ void SetMenuInsertionFlags(
 ツールバーを作成する前に、スナップイン オブジェクトのツール バー ボタンのスタイルを変更するには、この関数を呼び出します。
 
 ```
-void SetToolbarButtonInfo(  
+void SetToolbarButtonInfo(
     UINT id,
     BYTE* fsState,
     BYTE* fsType);
@@ -469,7 +469,7 @@ void SetToolbarButtonInfo(
 スナップイン オブジェクトのコンテキスト メニューに挿入される前に、メニュー項目を変更するには、この関数を呼び出します。
 
 ```
-void UpdateMenuState(  
+void UpdateMenuState(
     UINT id,
     LPTSTR pBuf,
     UINT* flags);

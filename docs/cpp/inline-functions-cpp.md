@@ -1,7 +1,7 @@
 ---
 title: インライン関数 (C++) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -9,6 +9,10 @@ f1_keywords:
 - __forceinline_cpp
 - __inline_cpp
 - inline_cpp
+- __inline
+- _inline
+- __forceinline
+- _forceinline
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31738407b788f69998681442f15a8f1c104477a3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 21f3d74a7b640e203a8a5882710849c98ba5b40f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017822"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163596"
 ---
 # <a name="inline-functions-c"></a>インライン関数 (C++)
 
@@ -84,7 +88,7 @@ int main()
 
 インライン展開に関するオプションとキーワードは、インライン展開の対象となる候補をコンパイラに示すだけです。 関数がインライン展開される保証はありません。 使用しても、特定の関数のインライン展開を強制することはできません、 **_ _forceinline**キーワード。 コンパイルするときに **/clr**コンパイラはインラインではなく、関数、関数に適用されるセキュリティ属性がある場合。
 
-**インライン**キーワードは C++ でのみ使用できます。 **_ _Inline**と **_ _forceinline**キーワードは C および C++ の両方で使用します。 以前のバージョンとの互換性のため **_inline**のシノニムです **_ _inline**します。
+**インライン**キーワードは C++ でのみ使用できます。 **_ _Inline**と **_ _forceinline**キーワードは C および C++ の両方で使用します。 以前のバージョンとの互換性のため **_inline**と **_forceinline**のシノニムで **_ _inline**、および **_ _forceinline**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
 **インライン**キーワードは、インライン展開が優先されることをコンパイラに指示します。 ただし、コンパイラは、コードをインラインで挿入する代わりに、関数の別のインスタンスを作成 (インスタンス化) し、標準の呼び出しリンケージを作成できます。 このようになるのは、次の 2 つの場合です。
 

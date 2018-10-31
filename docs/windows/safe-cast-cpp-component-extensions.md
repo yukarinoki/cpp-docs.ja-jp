@@ -1,7 +1,7 @@
 ---
-title: safe_cast (C++ コンポーネント拡張) |Microsoft Docs
+title: safe_cast (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -19,14 +19,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 8d5a4f92e16c2d758fa5e2b88575b12d5710dd08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2b8f9b1e40deadbc23fe19f02bf2aaef899c52a6
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404214"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50056696"
 ---
-# <a name="safecast-c-component-extensions"></a>safe_cast (C++ コンポーネント拡張)
+# <a name="safecast-ccli-and-ccx"></a>safe_cast (C +/cli および C++/cli CX)
 
 **Safe_cast**操作成功した場合、指定された型として指定された式を返します。 それ以外の場合、がスローされます`InvalidCastException`します。
 
@@ -37,11 +37,7 @@ ms.locfileid: "46404214"
 ### <a name="syntax"></a>構文
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ## <a name="windows-runtime"></a>Windows ランタイム
@@ -51,11 +47,7 @@ expression
 ### <a name="syntax"></a>構文
 
 ```cpp
-[default]:: safe_cast<
-type-id
->(
-expression
-)  
+[default]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -70,7 +62,7 @@ expression
 
 **safe_cast**スロー`InvalidCastException`変換できない場合*式*で指定された型に*タイプ id*します。キャッチする`InvalidCastException`、指定、 [/EH (例外処理モデル)](../build/reference/eh-exception-handling-model.md)コンパイラ オプション、および使用して、 **try ~ catch**ステートメント。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -115,11 +107,7 @@ Caught expected exception: InvalidCastException
 ### <a name="syntax"></a>構文
 
 ```cpp
-[cli]:: safe_cast<
-type-id
->(
-expression
-)  
+[cli]:: safe_cast< type-id >( expression )
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -132,7 +120,7 @@ expression
 
 ### <a name="remarks"></a>Remarks
 
-式`safe_cast<`*タイプ id*`>(`*式*`)`オペランド式 type-id 型のオブジェクトに変換します。
+式`safe_cast<`*タイプ id*`>(`*式*`)`オペランドを変換*式*型のオブジェクトに*タイプ id*します。
 
 コンパイラでは使用、 [static_cast](../cpp/static-cast-operator.md)受け付けることがほとんどの場所で、 **safe_cast**します。  ただし、 **safe_cast** 、検証可能な MSIL を生成することが保証されますが、 **static_cast**検証できない MSIL を生成する可能性があります。  参照してください[純粋で検証可能なコード (C +/cli CLI)](../dotnet/pure-and-verifiable-code-cpp-cli.md)と[Peverify.exe (PEVerify ツール)](/dotnet/framework/tools/peverify-exe-peverify-tool)検証可能なコードの詳細についてはします。
 
@@ -148,9 +136,9 @@ expression
 
 - [C スタイル キャストと/clr (C +/cli CLI)](../windows/c-style-casts-with-clr-cpp-cli.md)
 
-- [方法: C++/CLI で safe_cast を使用する](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)  
+- [方法: C++/CLI で safe_cast を使用する](../dotnet/how-to-use-safe-cast-in-cpp-cli.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -188,4 +176,4 @@ Caught expected exception
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

@@ -23,72 +23,72 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: c6d8a07ded3da02c21c4ee8c528474efc6e52b6c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 727d50025ce7fc4808444ac7ad73d828c6f0c545
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46021565"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053515"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl クラス
 
-実装を提供、 [IDBCreateCommand](/previous-versions/windows/desktop/ms711625\(v=vs.85\))インターフェイス。  
-  
+実装を提供、 [IDBCreateCommand](/previous-versions/windows/desktop/ms711625)インターフェイス。
+
 ## <a name="syntax"></a>構文
 
 ```cpp
-template <class T, class CommandClass >  
-class ATL_NO_VTABLE IDBCreateCommandImpl   
-   : public IDBCreateCommand  
-```  
-  
-### <a name="parameters"></a>パラメーター  
+template <class T, class CommandClass >
+class ATL_NO_VTABLE IDBCreateCommandImpl
+   : public IDBCreateCommand
+```
+
+### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-セッション オブジェクトから派生した`IDBCreateCommandImpl`します。  
-  
+セッション オブジェクトから派生した`IDBCreateCommandImpl`します。
+
 *CommandClass*<br/>
-コマンド クラス。  
+コマンド クラス。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atldb.h  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="interface-methods"></a>インターフェイス メソッド  
-  
-|||  
-|-|-|  
-|[CreateCommand](#createcommand)|新しいコマンドを作成します。|  
-  
-## <a name="remarks"></a>Remarks  
+**ヘッダー:** atldb.h
 
-新しいコマンドを取得するセッション オブジェクトの省略可能なインターフェイスです。  
+## <a name="members"></a>メンバー
+
+### <a name="interface-methods"></a>インターフェイス メソッド
+
+|||
+|-|-|
+|[CreateCommand](#createcommand)|新しいコマンドを作成します。|
+
+## <a name="remarks"></a>Remarks
+
+新しいコマンドを取得するセッション オブジェクトの省略可能なインターフェイスです。
 
 ## <a name="createcommand"></a> Idbcreatecommandimpl::createcommand
 
-新しいコマンドを作成し、要求されたインターフェイスを返します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,   
-   REFIID riid,   
-   IUnknown ** ppvCommand);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+新しいコマンドを作成し、要求されたインターフェイスを返します。
 
-参照してください[idbcreatecommand::createcommand](/previous-versions/windows/desktop/ms709772\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
-  
-いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBCreateCommand::CreateCommand`:  
-  
-|OLE DB テンプレート パラメーター|*OLE DB プログラマーズ リファレンス*パラメーター|  
-|--------------------------------|------------------------------------------------|  
-|*ppvCommand*|*ppCommand*|  
-  
-## <a name="see-also"></a>関連項目  
+### <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter, 
+   REFIID riid, 
+   IUnknown ** ppvCommand);
+```
+
+#### <a name="parameters"></a>パラメーター
+
+参照してください[idbcreatecommand::createcommand](/previous-versions/windows/desktop/ms709772)で、 *OLE DB プログラマーズ リファレンス*します。
+
+いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBCreateCommand::CreateCommand`:
+
+|OLE DB テンプレート パラメーター|*OLE DB プログラマーズ リファレンス*パラメーター|
+|--------------------------------|------------------------------------------------|
+|*ppvCommand*|*ppCommand*|
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3cb07824ad5212f4174a6f19e3efa4549432455
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 95a336319861ef44f65f0573389f09c3e9a45573
+ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894452"
+ms.lasthandoff: 09/19/2018
+ms.locfileid: "46425848"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
 
@@ -31,22 +31,22 @@ ms.locfileid: "43894452"
 
 ## <a name="syntax"></a>構文
 
-```  
+```
 <include file='filename' path='tagpath' />
-```  
+```
 
 #### <a name="parameters"></a>パラメーター
 
-`filename`  
+*ファイル名*<br/>
 文書を含むファイルの名前。 ファイル名をパスで修飾することができます。  名前は、一重引用符または二重引用符で囲みます。  コンパイラは、`filename` が見つからない場合に警告を発行します。
 
-`tagpath`  
+*tagpath*<br/>
 ファイルに含まれている目的のノードセットを選択する有効な XPath 式。
 
-`name`  
+*name*<br/>
 コメントの前に配置するタグの名前指定子。`name` には `id` が指定されます。
 
-`id`  
+*ID*<br/>
 コメントの前に配置するタグの ID。  名前は、一重引用符または二重引用符で囲みます。
 
 ## <a name="remarks"></a>コメント
@@ -75,7 +75,7 @@ public ref class Test2 {
    void Test() {
    }
 };
-```  
+```
 
 2 番目のファイル xml_include_tag.doc には、次のドキュメントのコメントが含まれています。
 
@@ -95,7 +95,7 @@ The summary for this other type.
 </MyMembers>
 
 </MyDocs>
-```  
+```
 
 ## <a name="program-output"></a>プログラムの出力
 

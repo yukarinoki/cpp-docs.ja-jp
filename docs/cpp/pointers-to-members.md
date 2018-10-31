@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 509181abc0d9b3e2f2c2d4c76275e635ba3a4477
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 971f3df56f049b919ebb1f3fb8f517c97b2829e7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46076074"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48861279"
 ---
 # <a name="pointers-to-members"></a>メンバーへのポインター
 
@@ -56,7 +56,7 @@ ms.locfileid: "46076074"
   - クラスの修飾名。
   - `::` 演算子。
   - 適切な型のクラスの非静的メンバーの名前。
-  -  当然ながら、1 つの宣言で複数の宣言子 (および関連する初期化子) を使用できます。
+  - 当然ながら、1 つの宣言で複数の宣言子 (および関連する初期化子) を使用できます。
 
 クラスのメンバーへのポインターは、メンバーの型およびメンバーが属するクラスの情報を持つ点で通常のポインターとは異なります。 通常のポインターは、メモリ内の 1 つのオブジェクトだけを識別します (1 つのオブジェクトのアドレスだけを持ちます)。 クラスのメンバーへのポインターは、クラスのインスタンスのメンバーを識別します。 次の例では、`Window` クラス、およびメンバー データへのポインターをいくつか宣言します。
 

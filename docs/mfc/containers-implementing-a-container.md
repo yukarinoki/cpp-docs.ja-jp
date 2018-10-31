@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46fa8b115dd01a9ee11442a0701cd719cc6d389e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 28c93e5d1331d7195b894fe88c3fe5fc11e7c31d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394362"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074073"
 ---
 # <a name="containers-implementing-a-container"></a>コンテナー : コンテナーの実装
 
@@ -62,15 +62,15 @@ ms.locfileid: "46394362"
 
 - 埋め込みアイテムを編集するときに、インプレース アクティブ化
 
-     詳細については、次を参照してください。[アクティベーション](../mfc/activation-cpp.md)します。
+   詳細については、次を参照してください。[アクティベーション](../mfc/activation-cpp.md)します。
 
 - OLE アイテムの作成をドラッグ アンド サーバー アプリケーションから選択をドロップします。
 
-     詳細については、次を参照してください。[ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)します。
+   詳細については、次を参照してください。[ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)します。
 
 - 埋め込みオブジェクトやコンテナー/サーバー アプリケーションの組み合わせへのリンク。
 
-     詳細については、次を参照してください。[コンテナー: 高度な機能](../mfc/containers-advanced-features.md)します。
+   詳細については、次を参照してください。[コンテナー: 高度な機能](../mfc/containers-advanced-features.md)します。
 
 ## <a name="see-also"></a>関連項目
 

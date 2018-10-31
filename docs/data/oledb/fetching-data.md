@@ -1,7 +1,7 @@
 ---
 title: データのフェッチ |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/19/2018
 ms.technology:
 - cpp-data
 ms.topic: reference
@@ -18,89 +18,89 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 05cfcb59100f1778b0266636fb3930fd9489e917
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4f0467d322242bb222e5365b45a57e1aa2fe2943
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46067078"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49807472"
 ---
 # <a name="fetching-data"></a>データのフェッチ
 
-データ ソース、セッション、および行セット オブジェクトを開いた後は、データをフェッチできます。 で使用するアクセサーの種類によっては、列をバインドする必要があります。  
-  
-### <a name="to-fetch-data"></a>データをフェッチするには  
-  
-1. 適切なを使用して行セットを開く**オープン**コマンド。  
-  
-1. 使用する場合`CManualAccessor`をまだ行っていない場合は、出力列をバインドします。 列をバインドするには、呼び出す`GetColumnInfo`、し、次の例に示すように、バインドでアクセサーを作成します。  
-  
-    ```cpp  
-    // From the DBViewer Sample CDBTreeView::OnQueryEdit  
-    // Get the column information  
-    ULONG ulColumns       = 0;  
-    DBCOLUMNINFO* pColumnInfo  = NULL;  
-    LPOLESTR pStrings      = NULL;  
-    if (rs.GetColumnInfo(&ulColumns, &pColumnInfo, &pStrings) != S_OK)  
-        ThrowMyOLEDBException(rs.m_pRowset, IID_IColumnsInfo);  
-    struct MYBIND* pBind = new MYBIND[ulColumns];  
-    rs.CreateAccessor(ulColumns, &pBind[0], sizeof(MYBIND)*ulColumns);  
-    for (ULONG l=0; l<ulColumns; l++)  
-    rs.AddBindEntry(l+1, DBTYPE_STR, sizeof(TCHAR)*40, &pBind[l].szValue, NULL, &pBind[l].dwStatus);  
-    rs.Bind();  
-    ```  
-  
-1. 書き込みを`while`ループを使用してデータを取得します。 ループでは、呼び出す`MoveNext`カーソルを進めるし、次の例に示すように、S_OK に対して戻り値をテストします。  
-  
-    ```cpp  
-    while (rs.MoveNext() == S_OK)  
-    {  
-        // Add code to fetch data here  
-        // If you are not using an auto accessor, call rs.GetData()  
-    }  
-    ```  
-  
-1. 内で、`while`ループ、アクセサーの型に従ってデータをフェッチできます。  
-  
-    -   使用する場合、 [CAccessor](../../data/oledb/caccessor-class.md)クラス、データ メンバーを含んでいるユーザー レコードが必要です。 次の例に示すようにそのデータ メンバーを使用してデータにアクセスすることができます。  
-  
-        ```cpp  
-        while (rs.MoveNext() == S_OK)  
-        {  
-            // Use the data members directly. In this case, m_nFooID  
-            // is declared in a user record that derives from  
-            // CAccessor  
-            wsprintf_s("%d", rs.m_nFooID);   
-        }  
-        ```  
-  
-    -   使用する場合、`CDynamicAccessor`または`CDynamicParameterAccessor`クラスにアクセスする関数を使用してデータをフェッチできます`GetValue`と`GetColumn`次の例のようにします。 使用するデータの種類を決定する場合を使用して、`GetType`します。  
-  
-        ```cpp  
-        while (rs.MoveNext() == S_OK)  
-        {  
-            // Use the dynamic accessor functions to retrieve your data.  
-  
-            ULONG ulColumns = rs.GetColumnCount();  
-            for (ULONG i=0; i<ulColumns; i++)  
-            {  
-                rs.GetValue(i);  
-            }  
-        }  
-        ```  
-  
-    -   使用する場合`CManualAccessor`、独自のデータ メンバーを指定、自分でバインドおよび次の例に示すように、直接アクセスする必要があります。  
-  
-        ```cpp  
-        while (rs.MoveNext() == S_OK)  
-        {  
-            // Use the data members you specified in the calls to  
-            // AddBindEntry.  
-  
-            wsprintf_s("%s", szFoo);  
-        }  
-        ```  
-  
-## <a name="see-also"></a>関連項目  
+データ ソース、セッション、および行セット オブジェクトを開いた後は、データをフェッチできます。 、を使用するアクセサーの種類によっては、列をバインドする必要があります。
+
+## <a name="to-fetch-data"></a>データをフェッチするには
+
+1. 適切なを使用して行セットを開く**オープン**コマンド。
+
+1. 使用している場合`CManualAccessor`、これをまだ完了していない場合は、出力列をバインドします。 次の例がから取得した、 [DBViewer](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)サンプル。 列をバインドするには、呼び出す`GetColumnInfo`、し、次の例に示すように、バインドでアクセサーを作成します。
+
+    ```cpp
+    // From the DBViewer Sample CDBTreeView::OnQueryEdit
+    // Get the column information
+    ULONG ulColumns       = 0;
+    DBCOLUMNINFO* pColumnInfo  = NULL;
+    LPOLESTR pStrings      = NULL;
+    if (rs.GetColumnInfo(&ulColumns, &pColumnInfo, &pStrings) != S_OK)
+        ThrowMyOLEDBException(rs.m_pRowset, IID_IColumnsInfo);
+    struct MYBIND* pBind = new MYBIND[ulColumns];
+    rs.CreateAccessor(ulColumns, &pBind[0], sizeof(MYBIND)*ulColumns);
+    for (ULONG l=0; l<ulColumns; l++)
+    rs.AddBindEntry(l+1, DBTYPE_STR, sizeof(TCHAR)*40, &pBind[l].szValue, NULL, &pBind[l].dwStatus);
+    rs.Bind();
+    ```
+
+1. 書き込みを**中**ループを使用してデータを取得します。 ループでは、呼び出す`MoveNext`カーソルを進めるし、次の例に示すように、S_OK に対して戻り値をテストします。
+
+    ```cpp
+    while (rs.MoveNext() == S_OK)
+    {
+        // Add code to fetch data here
+        // If you are not using an auto accessor, call rs.GetData()
+    }
+    ```
+
+1. 内で、**中**ループ、アクセサーの型に従ってデータをフェッチできます。
+
+   - 使用する場合、 [CAccessor](../../data/oledb/caccessor-class.md)クラス、データ メンバーを含んでいるユーザー レコードが必要です。 次の例に示すようにそのデータ メンバーを使用してデータにアクセスすることができます。
+
+        ```cpp
+        while (rs.MoveNext() == S_OK)
+        {
+            // Use the data members directly. In this case, m_nFooID
+            // is declared in a user record that derives from
+            // CAccessor
+            wsprintf_s("%d", rs.m_nFooID);
+        }
+        ```
+
+   - 使用する場合、`CDynamicAccessor`または`CDynamicParameterAccessor`クラスにアクセスする関数を使用してデータをフェッチできます`GetValue`と`GetColumn`次の例のようにします。 使用するデータの種類を決定する場合を使用して、`GetType`します。
+
+        ```cpp
+        while (rs.MoveNext() == S_OK)
+        {
+            // Use the dynamic accessor functions to retrieve your data.
+
+            ULONG ulColumns = rs.GetColumnCount();
+            for (ULONG i=0; i<ulColumns; i++)
+            {
+                rs.GetValue(i);
+            }
+        }
+        ```
+
+   - 使用する場合`CManualAccessor`、独自のデータ メンバーを指定、自分でバインドおよび次の例に示すように、直接アクセスする必要があります。
+
+        ```cpp
+        while (rs.MoveNext() == S_OK)
+        {
+            // Use the data members you specified in the calls to
+            // AddBindEntry.
+
+            wsprintf_s("%s", szFoo);
+        }
+        ```
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB コンシューマー テンプレートの操作](../../data/oledb/working-with-ole-db-consumer-templates.md)

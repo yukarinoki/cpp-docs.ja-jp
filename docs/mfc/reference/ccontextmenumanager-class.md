@@ -38,12 +38,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5fbf5301b7fa49805eee3857b35a5c9e31a53fd5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0890b18316a9b61c3e86858e76176a8d68501852
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445738"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50082135"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager クラス
 
@@ -101,7 +101,7 @@ class CContextMenuManager : public CObject
 
 `CContextMenuManager`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcontextmenumanager.h
 
@@ -113,7 +113,6 @@ class CContextMenuManager : public CObject
 BOOL AddMenu(
     UINT uiMenuNameResId,
     UINT uiMenuResId);
-
 
 BOOL AddMenu(
     LPCTSTR lpszName,
@@ -298,7 +297,6 @@ virtual BOOL ShowPopupMenu(
     CWnd* pWndOwner,
     BOOL bOwnMessage = FALSE,
     BOOL bRightAlign = FALSE);
-
 
 virtual CMFCPopupMenu* ShowPopupMenu(
     HMENU hmenuPopup,

@@ -1,13 +1,15 @@
 ---
 title: _ _uuidof 演算子 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/10/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __LIBID_cpp
 - __uuidof_cpp
+- __uuidof
+- _uuidof
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -18,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 84fd779d50fb481cffc97b61a65f255c6c8f52a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c75e33dd7aab1e96a1d2d3464e974a7095f83f3f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056738"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163856"
 ---
 # <a name="uuidof-operator"></a>__uuidof 演算子
 
@@ -50,7 +52,9 @@ __uuidof (expression)
 - 作成されたライブラリ ブロック、[モジュール](../windows/module-cpp.md)属性。
 
 > [!NOTE]
->  デバッグ ビルドで **_ _uuidof**常に動的に (実行時) にオブジェクトを初期化します。 リリース ビルドで **_ _uuidof**静的 (コンパイル時) にオブジェクトを初期化できます。
+> デバッグ ビルドで **_ _uuidof**常に動的に (実行時) にオブジェクトを初期化します。 リリース ビルドで **_ _uuidof**静的 (コンパイル時) にオブジェクトを初期化できます。
+
+以前のバージョンとの互換性のため **_uuidof**のシノニムです **_ _uuidof**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)は指定します。
 
 ## <a name="example"></a>例
 

@@ -36,12 +36,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 27fec3420343b5b6af240f89bb922256cee52a7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c056ce5a9747be280e465e2054402f43761c64e2
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375564"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071574"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar クラス
 
@@ -81,7 +81,7 @@ A`CMFCRibbonProgressBar`は 2 つのモードで動作します。 正規表現�
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CMFCRibbonProgressBar`クラス。 例は、進行状況バーの最小値と最大値を設定し、進行状況バーの現在の位置を設定 (操作の完了時間はない既知) 無限のモードで動作する進行状況バーを設定する方法を示します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCRibbonProgressBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 例は、進行状況バーの最小値と最大値を設定し、進行状況バーの現在の位置を設定 (操作の完了時間はない既知) 無限のモードで動作する進行状況バーを設定する方法を示します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#11](../../mfc/reference/codesnippet/cpp/cmfcribbonprogressbar-class_1.cpp)]
 
@@ -93,7 +93,7 @@ A`CMFCRibbonProgressBar`は 2 つのモードで動作します。 正規表現�
 
 [CMFCRibbonProgressBar](../../mfc/reference/cmfcribbonprogressbar-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxRibbonProgressBar.h
 
@@ -103,7 +103,6 @@ A`CMFCRibbonProgressBar`は 2 つのモードで動作します。 正規表現�
 
 ```
 CMFCRibbonProgressBar();
-
 
 CMFCRibbonProgressBar(
     UINT nID,
@@ -174,7 +173,7 @@ virtual CSize GetRegularSize(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -206,7 +205,7 @@ virtual void OnDraw(CDC* pDC);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pDC*
+[in]*pDC*<br/>
 
 ### <a name="remarks"></a>Remarks
 

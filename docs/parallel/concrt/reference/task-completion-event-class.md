@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 16778adeb898759a9c15d08175d9482f8411b44c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 867f94cd290e6b8ee5f9e50b266b0e4c9df63adf
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413771"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163258"
 ---
 # <a name="taskcompletionevent-class"></a>task_completion_event クラス
 
@@ -96,11 +96,11 @@ bool set() const ;
 
 ### <a name="return-value"></a>戻り値
 
-イベントの設定が成功した場合、メソッドは `true` を返します。 イベントが既に設定されている場合は、`false` を返します。
+メソッドを返します**true**イベントの設定に成功した場合。 返します**false**イベントは既に設定されている場合。
 
 ### <a name="remarks"></a>Remarks
 
-`set` の複数呼び出しまたは同時呼び出しがある場合、最初の呼び出しだけが成功し、その結果 (結果が返される場合) はタスクの完了イベントに格納されます。 その他の set は無視され、メソッドは false を返します。 タスクの完了イベントを設定すると、そのイベントから作成されたすべてのタスクは直ちに完了します。また継続が存在する場合は、その継続がスケジュールされます。 タスクの完了オブジェクトを持つ、`_ResultType`以外`void`その継続に値を渡します。
+`set` の複数呼び出しまたは同時呼び出しがある場合、最初の呼び出しだけが成功し、その結果 (結果が返される場合) はタスクの完了イベントに格納されます。 その他の set は無視され、メソッドは false を返します。 タスクの完了イベントを設定すると、そのイベントから作成されたすべてのタスクは直ちに完了します。また継続が存在する場合は、その継続がスケジュールされます。 タスクの完了オブジェクトを持つ、`_ResultType`以外**void**その継続に値を渡します。
 
 ##  <a name="set_exception"></a> set_exception
 

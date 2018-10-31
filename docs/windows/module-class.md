@@ -1,7 +1,7 @@
 ---
 title: モジュール クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 09/17/2018
+ms.date: 10/18/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -53,12 +53,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 0fa34cb8fce2854f4b3864629b86122bdfe6b35f
-ms.sourcegitcommit: 338e1ddc2f3869d92ba4b73599d35374cf1d5b69
+ms.openlocfilehash: 2357790e3084c91011f16eb9f1f718948462f898
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2018
-ms.locfileid: "46494531"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50059481"
 ---
 # <a name="module-class"></a>Module クラス
 
@@ -150,7 +150,7 @@ class Module<OutOfProc> : public Module<InProc>;
 
 `Module`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** module.h
 
@@ -177,22 +177,22 @@ WRL_NOTHROW static Module& Create(
 template<typename T>
 WRL_NOTHROW static Module& Create(
    _In_ T* object,
-   _In_ void (T::* method)()  
+   _In_ void (T::* method)()
 );
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*T*  
+*T*<br/>
 モジュールの種類。
 
-*コールバック*  
+*コールバック*<br/>
 モジュールの最後のインスタンス オブジェクトを解放するときに呼び出されます。
 
-*object*  
+*object*<br/>
 *オブジェクト*と*メソッド*パラメーターの組み合わせで使用されます。 ポイント最後のインスタンス オブジェクト、モジュールの最後のインスタンスのオブジェクトがリリースされたときにします。
 
-*method*  
+*method*<br/>
 *オブジェクト*と*メソッド*パラメーターの組み合わせで使用されます。 モジュールの最後のインスタンスのオブジェクトがリリースされたときに、最後のインスタンス オブジェクトのメソッドを指します。
 
 ### <a name="return-value"></a>戻り値
@@ -225,13 +225,13 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>パラメーター
 
-*pActivatibleClassId*  
+*pActivatibleClassId*<br/>
 ランタイム クラスの IID。
 
-*ppIFactory*  
+*ppIFactory*<br/>
 指定されたランタイム クラスの IActivationFactory します。
 
-*サーバー名*  
+*サーバー名*<br/>
 現在のモジュールでクラス ファクトリのサブセットの名前。 使用されるサーバー名を指定、 [ActivatableClassWithFactoryEx](../windows/activatableclass-macros.md)マクロ、または指定`nullptr`を既定のサーバー名を取得します。
 
 ### <a name="return-value"></a>戻り値
@@ -243,7 +243,7 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 クラス ファクトリのキャッシュを取得します。
 
 ```cpp
- HRESULT GetClassObject(
+HRESULT GetClassObject(
    REFCLSID clsid,
    REFIID riid,
    _Deref_out_ void **ppv,
@@ -253,16 +253,16 @@ WRL_NOTHROW HRESULT GetActivationFactory(
 
 ### <a name="parameters"></a>パラメーター
 
-*clsid*  
+*clsid*<br/>
 クラスの id。
 
-*riid*  
+*riid*<br/>
 要求したインターフェイス ID です。
 
-*ppv*  
+*ppv*<br/>
 返されるオブジェクトへのポインター。
 
-*サーバー名*  
+*サーバー名*<br/>
 いずれかで指定されているサーバー名、 `ActivatableClassWithFactory`、 `ActivatableClassWithFactoryEx`、または`ActivatableClass`マクロ; または`nullptr`を既定のサーバー名を取得します。
 
 ### <a name="return-value"></a>戻り値
@@ -344,19 +344,19 @@ WRL_NOTHROW virtual HRESULT RegisterCOMObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*サーバー名*  
+*サーバー名*<br/>
 サーバーの完全修飾名。
 
-*clsid*  
+*clsid*<br/>
 登録する Clsid の配列。
 
-*ファクトリ*  
+*ファクトリ*<br/>
 パブリッシュされるかどうかをクラスのオブジェクトの IUnknown インターフェイスの配列。
 
-*Cookie*  
+*Cookie*<br/>
 操作が完了したらは、登録され、そのオブジェクト クラスを識別する値へのポインターの配列。 これらの値は使用後で登録を取り消します。
 
-*count*  
+*count*<br/>
 登録する Clsid の数。
 
 ### <a name="return-value"></a>戻り値
@@ -381,10 +381,10 @@ HRESULT RegisterObjects(
 
 ### <a name="parameters"></a>パラメーター
 
-*モジュール*  
+*module*<br/>
 COM または Windows ランタイム オブジェクトの配列。
 
-*サーバー名*  
+*サーバー名*<br/>
 オブジェクトを作成したサーバーの名前です。
 
 ### <a name="return-value"></a>戻り値
@@ -399,21 +399,21 @@ COM または Windows ランタイム オブジェクトの配列。
 HRESULT RegisterWinRTObject(const wchar_t* serverName,
    wchar_t** activatableClassIds,
    WINRT_REGISTRATION_COOKIE* cookie,
-   unsigned int count)  
+   unsigned int count)
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*サーバー名*  
+*サーバー名*<br/>
 この操作によって影響を受けるオブジェクトのサブセットを指定する名前。
 
-*activatableClassIds*  
+*activatableClassIds*<br/>
 登録のアクティブ化可能な Clsid の配列。
 
-*Cookie*  
+*Cookie*<br/>
 登録済みのクラス オブジェクトを識別する値。 この値は、登録を取り消すに後で使用されます。
 
-*count*  
+*count*<br/>
 登録するオブジェクトの数。
 
 ### <a name="return-value"></a>戻り値
@@ -453,13 +453,13 @@ virtual HRESULT UnregisterCOMObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*サーバー名*  
+*サーバー名*<br/>
 (未使用)
 
-*Cookie*  
+*Cookie*<br/>
 登録するクラスのオブジェクトを識別する値へのポインターの配列。 配列がによって作成された、 [RegisterCOMObject](#registercomobject)メソッド。
 
-*count*  
+*count*<br/>
 登録を解除するクラスの数。
 
 ### <a name="return-value"></a>戻り値
@@ -478,10 +478,10 @@ HRESULT UnregisterObjects(
 
 ### <a name="parameters"></a>パラメーター
 
-*モジュール*  
+*module*<br/>
 モジュールへのポインター。
 
-*サーバー名*  
+*サーバー名*<br/>
 この操作によって影響を受けるオブジェクトのサブセットを指定する修飾名。
 
 ### <a name="return-value"></a>戻り値
@@ -501,5 +501,5 @@ virtual HRESULT UnregisterWinRTObject(
 
 ### <a name="parameters"></a>パラメーター
 
-*Cookie*  
+*Cookie*<br/>
 登録を取り消すことは、クラス オブジェクトを識別する値へのポインター。

@@ -56,12 +56,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f90524b63a7d89d43cb6ed080804ed72fe2429e3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7f6ed7b94509c5dafd868680254c5f48f0066b7f
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412680"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054229"
 ---
 # <a name="crgn-class"></a>CRgn クラス
 
@@ -127,7 +127,7 @@ class CRgn : public CGdiObject
 
 `CRgn`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -622,7 +622,7 @@ Windows のリージョンを識別するハンドルを指定します。
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを`CRgn`オブジェクト。 関数が成功しなかった場合、戻り値は NULL です。
+`CRgn` オブジェクトへのポインター。 関数が成功しなかった場合、戻り値は NULL です。
 
 ### <a name="remarks"></a>Remarks
 
@@ -852,6 +852,4 @@ void SetRectRgn(LPCRECT lpRect);
 
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-
-
 

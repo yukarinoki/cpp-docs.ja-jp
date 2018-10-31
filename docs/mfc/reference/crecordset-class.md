@@ -140,12 +140,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d6e1fb04de4097a2cdf1dd51dc12265bef8d6c0b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 086aaebcdc44439c45a219c7292da4aff9e13b06
+ms.sourcegitcommit: a88d228480d4bb5834e985d7b3ead2760be95572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423131"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203093"
 ---
 # <a name="crecordset-class"></a>CRecordset クラス
 
@@ -267,7 +267,7 @@ class CRecordset : public CObject
 
 `CRecordset`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdb.h
 
@@ -727,17 +727,14 @@ void GetFieldValue(
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CDBVariant& varValue,
     short nFieldType = DEFAULT_FIELD_TYPE);
 
-
 void GetFieldValue(
     short nIndex,
     CStringA& strValue);
-
 
 void GetFieldValue(
     short nIndex,
@@ -822,7 +819,6 @@ short GetODBCFieldCount() const;
 void GetODBCFieldInfo(
     LPCTSTR lpszName,
     CODBCFieldInfo& fieldinfo);
-
 
 void GetODBCFieldInfo(
     short nIndex,
@@ -1538,7 +1534,7 @@ virtual BOOL Open(
 
 - `CRecordset::forwardOnly` 読み取り専用レコード セット前方スクロールのみです。
 
-     `CRecordset`、既定値は`CRecordset::snapshot`します。 既定値の機構により、Visual C++ ウィザードで既定値の異なる ODBC `CRecordset` と DAO `CDaoRecordset` 両方を操作できます。
+   `CRecordset`、既定値は`CRecordset::snapshot`します。 既定値の機構により、Visual C++ ウィザードで既定値の異なる ODBC `CRecordset` と DAO `CDaoRecordset` 両方を操作できます。
 
 これらのレコード セットの種類の詳細については、この記事を参照してください。[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)します。 関連情報については、「を使用してブロックし、スクロール可能なカーソル」Windows SDK の記事を参照してください。
 
@@ -1613,7 +1609,7 @@ virtual BOOL Open(
 
 通常のプロシージャでは NULL を`Open`。 この場合、`Open`呼び出し[GetDefaultSQL](#getdefaultsql)します。 派生を使用している場合`CRecordset`クラス、 `GetDefaultSQL` ClassWizard で指定したテーブル名を提供します。 代わりに、その他の情報を `lpszSQL` パラメーターに指定できます。
 
-渡したもの`Open`クエリの最終的な SQL 文字列を構築します (SQL も**場所**と**ORDER BY**句が追加された、`lpszSQL`渡された文字列) し実行しますクエリ。 呼び出すことによって作成された文字列を調べることができます[GetSQL](#getsql)呼び出した後 *`Open`します。 詳細については、レコード セットの SQL ステートメントを作成して、レコードを選択しますが、情報の記事を参照してください[レコード セット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)します。
+渡したもの`Open`クエリの最終的な SQL 文字列を構築します (SQL も**場所**と**ORDER BY**句が追加された、`lpszSQL`渡された文字列) し実行しますクエリ。 呼び出すことによって作成された文字列を調べることができます[GetSQL](#getsql)呼び出した後`Open`します。 詳細については、レコード セットの SQL ステートメントを作成して、レコードを選択しますが、情報の記事を参照してください[レコード セット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)します。
 
 レコードセット クラスのフィールド データ メンバーは、選択したデータの列に結び付けられています。 いくつかのレコードが返された場合、最初のレコードが現在のレコードになります。
 

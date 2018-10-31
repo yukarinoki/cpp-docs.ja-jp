@@ -21,12 +21,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4aa07273e68f0320823d258f324bb8631aef77a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 90c50d3a918f452372aacae5beb36f5425d6a77a
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095600"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053618"
 ---
 # <a name="cnonstatelessworker-class"></a>CNonStatelessWorker クラス
 
@@ -69,13 +69,13 @@ class CNonStatelessWorker
 
 このクラスの利点は、既存のワーカー スレッド クラスの状態モデルを変更する便利な手段を提供します。 `CThreadPool` スレッドの有効期間にわたって 1 つのワーカーが作成されますので、worker クラスには、状態が保持している場合は、複数の要求間で保持、これは。 単にそのクラスをラップすることによって、`CNonStatelessWorker`テンプレートで使用する前に`CThreadPool`、作業者と 1 つの要求に制限されていますが、保持している状態の有効期間。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlutil.h
 
 ##  <a name="execute"></a>  CNonStatelessWorker::Execute
 
-実装[WorkerArchetype::Execute](worker-archetype.md#execute)します。  
+実装[WorkerArchetype::Execute](worker-archetype.md#execute)します。
 
 ```
 void Execute(
@@ -86,7 +86,7 @@ void Execute(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドのインスタンスを作成、*ワーカー*で呼び出し、stack クラス[初期化](worker-archetype.md#initialize)そのオブジェクト。 初期化が成功した場合、このメソッドも呼び出します[Execute](worker-archetype.md#execute)と[Terminate](worker-archetype.md#terminate)同一のオブジェクト。  
+このメソッドのインスタンスを作成、*ワーカー*で呼び出し、stack クラス[初期化](worker-archetype.md#initialize)そのオブジェクト。 初期化が成功した場合、このメソッドも呼び出します[Execute](worker-archetype.md#execute)と[Terminate](worker-archetype.md#terminate)同一のオブジェクト。
 
 ##  <a name="initialize"></a>  CNonStatelessWorker::Initialize
 

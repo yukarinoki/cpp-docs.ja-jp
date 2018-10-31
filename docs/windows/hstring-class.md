@@ -1,30 +1,62 @@
 ---
 title: HString クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/24/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HString
+- corewrappers/Microsoft::WRL::Wrappers::HString::Attach
+- corewrappers/Microsoft::WRL::Wrappers::HString::CopyTo
+- corewrappers/Microsoft::WRL::Wrappers::HString::Detach
+- corewrappers/Microsoft::WRL::Wrappers::HString::Get
+- corewrappers/Microsoft::WRL::Wrappers::HString::GetAddressOf
+- corewrappers/Microsoft::WRL::Wrappers::HString::HString
+- corewrappers/Microsoft::WRL::Wrappers::HString::IsValid
+- corewrappers/Microsoft::WRL::Wrappers::HString::MakeReference
+- corewrappers/Microsoft::WRL::Wrappers::HString::operator=
+- corewrappers/Microsoft::WRL::Wrappers::HString::operator==
+- corewrappers/Microsoft::WRL::Wrappers::HString::operator!=
+- corewrappers/Microsoft::WRL::Wrappers::HString::operator<
+- corewrappers/Microsoft::WRL::Wrappers::HString::Release
+- corewrappers/Microsoft::WRL::Wrappers::HString::Set
+- corewrappers/Microsoft::WRL::Wrappers::HString::~HString
 dev_langs:
 - C++
+helpviewer_keywords:
+- Microsoft::WRL::Wrappers::HString class
+- Microsoft::WRL::Wrappers::HString::Attach method
+- Microsoft::WRL::Wrappers::HString::CopyTo method
+- Microsoft::WRL::Wrappers::HString::Detach method
+- Microsoft::WRL::Wrappers::HString::Get method
+- Microsoft::WRL::Wrappers::HString::GetAddressOf method
+- Microsoft::WRL::Wrappers::HString::HString, constructor
+- Microsoft::WRL::Wrappers::HString::IsValid method
+- Microsoft::WRL::Wrappers::HString::MakeReference method
+- Microsoft::WRL::Wrappers::HString::operator= operator
+- Microsoft::WRL::Wrappers::HString::operator== operator
+- Microsoft::WRL::Wrappers::HString::operator!= operator
+- Microsoft::WRL::Wrappers::HString::operator< operator
+- Microsoft::WRL::Wrappers::HString::Release method
+- Microsoft::WRL::Wrappers::HString::Set method
+- Microsoft::WRL::Wrappers::HString::~HString, destructor
 ms.assetid: 6709dd2e-8d72-4675-8ec7-1baa7d71854d
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: eea40f989e7d41afbff2773fcc5e6e5b2cfbafd2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 8165a404924b997d70d0097c28ac7d34ade92fc3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42613654"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063862"
 ---
 # <a name="hstring-class"></a>HString クラス
 
-RAII パターンを使用して、HSTRING の有効期間を管理するためのヘルパー クラスです。
+有効期間を管理するためのヘルパー クラス、 [HSTRING](/windows/desktop/WinRT/hstring) RAII パターンを使用します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,48 +66,338 @@ class HString;
 
 ## <a name="remarks"></a>Remarks
 
-Windows ランタイムでは、HSTRING ハンドルを使用して文字列へのアクセスを提供します。 **HString**クラスには、便利な関数および HSTRING ハンドルの使用を簡単に演算子が用意されています。 このクラスは、RAII パターンを所有している HSTRING の有効期間を処理できます。
+Windows ランタイムを使用して文字列へのアクセスを提供する[HSTRING](/windows/desktop/WinRT/hstring)ハンドル。 `HString`クラスには、便利な関数および HSTRING ハンドルの使用を簡単に演算子が用意されています。 このクラスは、RAII パターンを所有している HSTRING の有効期間を処理できます。
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-|名前|説明|
-|----------|-----------------|
-|[HString::HString コンストラクター](../windows/hstring-hstring-constructor.md)|新しいインスタンスを初期化、 **HString**クラス。|
-|[HString::~HString デストラクター](../windows/hstring-tilde-hstring-destructor.md)|現在のインスタンスを破棄、 **HString**クラス。|
+名前                                | 説明
+----------------------------------- | -----------------------------------------------------
+[Hstring::hstring](#hstring)        | `HString` クラスの新しいインスタンスを初期化します。
+[HString:: ~ HString](#tilde-hstring) | 現在のインスタンスを破棄、`HString`クラス。
 
-### <a name="members"></a>メンバー
+### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[HString::Set メソッド](../windows/hstring-set-method.md)|現在の値を設定**HString**ワイド文字の文字列を指定するオブジェクトまたは**HString**パラメーター。|
-|[HString::Attach メソッド](../windows/hstring-attach-method.md)|指定した関連付けます**HString**オブジェクトと現在**HString**オブジェクト。|
-|[HString::CopyTo メソッド](../windows/hstring-copyto-method.md)|現在のコピー **HString**オブジェクトを HSTRING オブジェクトにします。|
-|[HString::Detach メソッド](../windows/hstring-detach-method.md)|指定された関連付けを解除**HString**その基になる値からオブジェクトです。|
-|[HString::GetAddressOf メソッド](../windows/hstring-getaddressof-method.md)|基になる HSTRING ハンドルへのポインターを取得します。|
-|[HString::Get メソッド](../windows/hstring-get-method.md)|基になる HSTRING ハンドルの値を取得します。|
-|[HString::Release メソッド](../windows/hstring-release-method.md)|基になる文字列値を削除し、現在を初期化します。 **HString**オブジェクトから空の値。|
-|[HString::MakeReference メソッド](../windows/hstring-makereference-method.md)|作成、`HStringReference`オブジェクト指定した文字列パラメーターから。|
+名前                                     | 説明
+---------------------------------------- | -------------------------------------------------------------------------------------------------------------
+[Hstring::attach](#attach)               | 指定した関連付けます`HString`オブジェクトと現在`HString`オブジェクト。
+[Hstring::copyto](#copyto)               | 現在のコピー`HString`オブジェクトを HSTRING オブジェクトにします。
+[Hstring::detach](#detach)               | 指定された関連付けを解除`HString`その基になる値からオブジェクトです。
+[Hstring::get](#get)                     | 基になる HSTRING ハンドルの値を取得します。
+[Hstring::getaddressof](#getaddressof)   | 基になる HSTRING ハンドルへのポインターを取得します。
+[Hstring::isvalid](#isvalid)             | 示すかどうか、現在`HString`オブジェクトが無効です。
+[Hstring::makereference](#makereference) | 作成、`HStringReference`オブジェクト指定した文字列パラメーターから。
+[Hstring::release](#release)             | 基になる文字列値を削除し、現在を初期化します。`HString`オブジェクトから空の値。
+[Hstring::set](#set)                     | 現在の値を設定`HString`ワイド文字の文字列を指定するオブジェクトまたは`HString`パラメーター。
 
 ### <a name="public-operators"></a>パブリック演算子
 
-|名前|説明|
-|----------|-----------------|
-|[HString::Operator= 演算子](../windows/hstring-operator-assign-operator.md)|別の値を移動**HString**現在オブジェクト**HString**オブジェクト。|
-|[HString::Operator== 演算子](../windows/hstring-operator-equality-operator.md)|2 つのパラメーターが等しいかどうかを示します。|
-|[HString::Operator!= 演算子](../windows/hstring-operator-inequality-operator.md)|2 つのパラメーターが異なるかどうかを示します。|
+名前                                         | 説明
+-------------------------------------------- | ----------------------------------------------------------------------------
+[Hstring::operator =](#operator-assign)       | 別の値を移動`HString`現在オブジェクト`HString`オブジェクト。
+[Hstring::operator = =](#operator-equality)    | 2 つのパラメーターが等しいかどうかを示します。
+[Hstring::operator! =](#operator-inequality)  | 2 つのパラメーターが異なるかどうかを示します。
+[Hstring::operator&lt;](#operator-less-than) | 最初のパラメーターがかどうかが 2 番目のパラメーターを未満を示します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
 `HString`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** corewrappers.h
 
 **Namespace:** Microsoft::WRL::Wrappers
 
-## <a name="see-also"></a>関連項目
+## <a name="tilde-hstring"></a>HString:: ~ HString
 
-[Microsoft::WRL::Wrappers 名前空間](../windows/microsoft-wrl-wrappers-namespace.md)
+現在のインスタンスを破棄、`HString`クラス。
+
+```cpp
+~HString() throw()
+```
+
+## <a name="attach"></a>Hstring::attach
+
+指定した関連付けます`HString`オブジェクトと現在`HString`オブジェクト。
+
+```cpp
+void Attach(
+       HSTRING hstr
+       ) throw()
+```
+
+### <a name="parameters"></a>パラメーター
+
+*hstr*<br/>
+既存の `HString` オブジェクト。
+
+## <a name="copyto"></a>Hstring::copyto
+
+現在のコピー`HString`オブジェクトを HSTRING オブジェクトにします。
+
+```cpp
+HRESULT CopyTo(
+   _Out_ HSTRING *str
+   ) const throw();
+```
+
+### <a name="parameters"></a>パラメーター
+
+*str*<br/>
+コピーを受信する HSTRING です。
+
+### <a name="remarks"></a>Remarks
+
+このメソッドは、 [WindowsDuplicateString](https://msdn.microsoft.com/library/br224634.aspx)関数。
+
+## <a name="detach"></a>Hstring::detach
+
+指定された関連付けを解除`HString`その基になる値からオブジェクトです。
+
+```cpp
+HSTRING Detach() throw()
+```
+
+### <a name="return-value"></a>戻り値
+
+基になる`HString`デタッチ操作を開始する前に値。
+
+## <a name="get"></a>Hstring::get
+
+基になる HSTRING ハンドルの値を取得します。
+
+```cpp
+HSTRING Get() const throw()
+```
+
+### <a name="return-value"></a>戻り値
+
+基になる HSTRING ハンドルの値
+
+## <a name="getaddressof"></a>Hstring::getaddressof
+
+基になる HSTRING ハンドルへのポインターを取得します。
+
+```cpp
+HSTRING* GetAddressOf() throw()
+```
+
+### <a name="return-value"></a>戻り値
+
+基になる HSTRING ハンドルへのポインター。
+
+### <a name="remarks"></a>Remarks
+
+この操作の後は、基になる HSTRING ハンドルの文字列値が破棄されます。
+
+## <a name="hstring"></a>Hstring::hstring
+
+`HString` クラスの新しいインスタンスを初期化します。
+
+```cpp
+HString(HSTRING hstr = nullptr) throw();
+HString(HString&& other) throw();
+```
+
+### <a name="parameters"></a>パラメーター
+
+*hstr*<br/>
+HSTRING ハンドルの場合。
+
+*other*<br/>
+既存の `HString` オブジェクト。
+
+### <a name="remarks"></a>Remarks
+
+最初のコンス トラクターによって初期化新しい`HString`オブジェクトが空です。
+
+2 番目のコンス トラクターによって初期化、新しい`HString`オブジェクト、既存の値から*他*パラメーター、し、その後破棄、*他*パラメーター。
+
+## <a name="isvalid"></a>Hstring::isvalid
+
+示すかどうか、現在`HString`オブジェクトが空か。
+
+```cpp
+bool IsValid() const throw()
+```
+
+### <a name="parameters"></a>パラメーター
+
+**true**場合、現在`HString`オブジェクトがないと、空以外の場合、 **false**します。
+
+## <a name="makereference"></a>Hstring::makereference
+
+作成、`HStringReference`オブジェクト指定した文字列パラメーターから。
+
+```cpp
+template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[ sizeDest]);
+
+    template<unsigned int sizeDest>
+    static HStringReference MakeReference(
+              wchar_t const (&str)[sizeDest],
+              unsigned int len);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*sizeDest*<br/>
+変換先のサイズを指定するテンプレート パラメーター`HStringReference`バッファー。
+
+*str*<br/>
+ワイド文字の文字列への参照。
+
+*len*<br/>
+最大長、 *str*この操作で使用するパラメーターのバッファー。 場合、 *len*パラメーターが指定されていない全体*str*パラメーターを使用します。
+
+### <a name="return-value"></a>戻り値
+
+`HStringReference`オブジェクトの値が指定したのと同じ*str*パラメーター。
+
+## <a name="operator-assign"></a>Hstring::operator = 演算子
+
+別の値を移動`HString`現在オブジェクト`HString`オブジェクト。
+
+```cpp
+HString& operator=(HString&& other) throw()
+```
+
+### <a name="parameters"></a>パラメーター
+
+*other*<br/>
+既存の `HString` オブジェクト。
+
+### <a name="remarks"></a>Remarks
+
+既存の値*他*現在にオブジェクトがコピーされます`HString`オブジェクト、し、*他*オブジェクトが破棄されます。
+
+## <a name="operator-equality"></a>Hstring::operator = 演算子
+
+2 つのパラメーターが等しいかどうかを示します。
+
+```cpp
+inline bool operator==(
+               const HString& lhs,
+               const HString& rhs) throw()
+
+inline bool operator==(
+                const HString& lhs,
+                const HStringReference& rhs) throw()
+
+inline bool operator==(
+                const HStringReference& lhs,
+                const HString& rhs) throw()
+
+inline bool operator==(
+                 const HSTRING& lhs,
+                 const HString& rhs) throw()
+
+inline bool operator==(
+                 const HString& lhs,
+                 const HSTRING& rhs) throw()
+```
+
+### <a name="parameters"></a>パラメーター
+
+*lhs*<br/>
+比較する最初のパラメーター。 *lhs*できます、`HString`または`HStringReference`オブジェクト、または、HSTRING ハンドル。
+
+*rhs*<br/>
+比較する 2 番目のパラメーター。*rhs*できます、`HString`または`HStringReference`オブジェクト、または、HSTRING ハンドル。
+
+### <a name="return-value"></a>戻り値
+
+**true**場合、 *lhs*と*rhs*パラメーターは、それ以外の**false**します。
+
+## <a name="operator-inequality"></a>Hstring::operator! = 演算子
+
+2 つのパラメーターが異なるかどうかを示します。
+
+```cpp
+inline bool operator!=( const HString& lhs,
+                        const HString& rhs) throw()
+
+inline bool operator!=( const HStringReference& lhs,
+                        const HString& rhs) throw()
+
+inline bool operator!=( const HString& lhs,
+                        const HStringReference& rhs) throw()
+
+inline bool operator!=( const HSTRING& lhs,
+                        const HString& rhs) throw()
+
+inline bool operator!=( const HString& lhs,
+                        const HSTRING& rhs) throw()
+```
+
+### <a name="parameters"></a>パラメーター
+
+*lhs*<br/>
+比較する最初のパラメーター。 *lhs*できます、`HString`または`HStringReference`オブジェクト、または、HSTRING ハンドル。
+
+*rhs*<br/>
+比較する 2 番目のパラメーター。*rhs*できます、`HString`または`HStringReference`オブジェクト、または、HSTRING ハンドル。
+
+### <a name="return-value"></a>戻り値
+
+**true**場合、 *lhs*と*rhs*パラメーターが、それ以外の**false**します。
+
+## <a name="operator-less-than"></a>Hstring::operator&lt;演算子
+
+最初のパラメーターがかどうかが 2 番目のパラメーターを未満を示します。
+
+```cpp
+inline bool operator<(
+    const HString& lhs,
+    const HString& rhs) throw()
+```
+
+### <a name="parameters"></a>パラメーター
+
+*lhs*<br/>
+比較する最初のパラメーター。 *lhs*への参照を指定できます、`HString`します。
+
+*rhs*<br/>
+比較する 2 番目のパラメーター。 *rhs*への参照を指定できます、`HString`します。
+
+### <a name="return-value"></a>戻り値
+
+**true**場合、 *lhs*パラメーターより小さい*rhs*パラメーター、それ以外の**false**します。
+
+## <a name="release"></a>Hstring::release
+
+基になる文字列値を削除し、現在を初期化します。`HString`オブジェクトから空の値。
+
+```cpp
+void Release() throw()
+```
+
+## <a name="set"></a>Hstring::set
+
+現在の値を設定`HString`ワイド文字の文字列を指定するオブジェクトまたは`HString`パラメーター。
+
+```cpp
+HRESULT Set(
+          const wchar_t* str) throw();
+HRESULT Set(
+          const wchar_t* str,
+          unsigned int len
+           ) throw();
+HRESULT Set(
+          const HSTRING& hstr
+           ) throw();
+```
+
+### <a name="parameters"></a>パラメーター
+
+*str*<br/>
+ワイド文字の文字列。
+
+*len*<br/>
+最大長、 *str*パラメーターに現在割り当てられている`HString`オブジェクト。
+
+*hstr*<br/>
+既存の `HString` オブジェクト。

@@ -11,12 +11,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4a40738b5a360e521ff890ef53240609a9afde32
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd4848ae88d7bd66286ef13b3505a741d9b55c5c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388980"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060886"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 言語の準拠
 
@@ -93,8 +93,6 @@ Visual Studio 2017 で加えられた準拠の強化とその他の変更点の�
 |&nbsp;&nbsp;[P0283R2 識別できない属性を無視する](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0283r2.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[P0702R1 初期化子リスト ctors のクラス テンプレート引数の推論の修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 
-  
-  
 |機能分野| |
 |----|---|
 |__C++17 コア言語機能 (不具合報告)__|__サポート状況__|
@@ -105,8 +103,6 @@ Visual Studio 2017 で加えられた準拠の強化とその他の変更点の�
 |&nbsp;&nbsp;[P0962R2 範囲 for ループのカスタマイゼーション ポイントを見つけるルールの緩和](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|×|
 |&nbsp;&nbsp;[P0969R0 アクセス可能なメンバーへの構造化バインディングの許可](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|×|
 
-  
-  
 |機能分野| |
 |----|---|
 |__C++20 Core 言語機能__|__サポート状況__|
@@ -117,7 +113,6 @@ Visual Studio 2017 で加えられた準拠の強化とその他の変更点の�
 |&nbsp;&nbsp;[P0683R1 ビット フィールドの既定のメンバー初期化子](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0683r1.html)|×|
 |&nbsp;&nbsp;[P0704R1 メンバーへの const lvalue ref-qualified ポインターの修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|×|
 |&nbsp;&nbsp;[P0734R0 概念](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0734r0.pdf)|×|
-
 
 ## <a name="standard-library-features"></a>標準ライブラリの機能
 
@@ -258,38 +253,55 @@ Visual Studio 2017 で加えられた準拠の強化とその他の変更点の�
 
 ### <a name="supported-values"></a>サポート状況の値
 
-__いいえ__は、未実装という意味です。  
-__一部__は、Visual Studio 2017 への実装が一部のみであるという意味です。 詳細については、「ノート」セクションを参照してください。  
-__該当なし__は、提案書で機能が説明されていないことを意味しています。 これらのペーパーでは、標準の言語が変更されています。ただし、実装者のいかなる作品も作成されていません。 ここに記載するのは、完全性を期すためです。  
-__VS 2010__ は、Visual Studio 2010 でサポートされている機能を示しています。  
-__VS 2013__ は、Visual Studio 2013 でサポートされている機能を示しています。  
-__VS 2015__ は、Visual Studio 2015 RTM でサポートされている機能を示します。  
-__VS 2015.2__ と __VS 2015.3__ はそれぞれ、Visual Studio 2015 更新プログラム 2 と Visual Studio 2015 更新プログラム 3 でサポートされている機能を示します。  
-__VS 2017__ は、Visual Studio 2017 RTM でサポートされている機能を示します。  
-__VS 2017 15.3__ は、Visual Studio 2017 バージョン 15.3 でサポートされている機能を示します。  
-__VS 2017 15.5__ は、Visual Studio 2017 バージョン 15.5 でサポートされている機能を示します。
-__VS 2017 15.7__ は、Visual Studio 2017 バージョン 15.7 でサポートされている機能を示します。
+__いいえ__は、未実装という意味です。<br/>
+__一部__は、Visual Studio 2017 への実装が一部のみであるという意味です。 詳細については、「ノート」セクションを参照してください。<br/>
+__該当なし__は、提案書で機能が説明されていないことを意味しています。 これらのペーパーでは、標準の言語が変更されています。ただし、実装者のいかなる作品も作成されていません。 ここに記載するのは、完全性を期すためです。<br/>
+__VS 2010__ は、Visual Studio 2010 でサポートされている機能を示しています。<br/>
+__VS 2013__ は、Visual Studio 2013 でサポートされている機能を示しています。<br/>
+__VS 2015__ は、Visual Studio 2015 RTM でサポートされている機能を示します。<br/>
+__VS 2015.2__ と __VS 2015.3__ はそれぞれ、Visual Studio 2015 更新プログラム 2 と Visual Studio 2015 更新プログラム 3 でサポートされている機能を示します。<br/>
+__VS 2017__ は、Visual Studio 2017 RTM でサポートされている機能を示します。<br/>
+__VS 2017 15.3__ は、Visual Studio 2017 バージョン 15.3 でサポートされている機能を示します。<br/>
+__VS 2017 15.5__ は、Visual Studio 2017 バージョン 15.5 でサポートされている機能を示します。<br/>
+__VS 2017 15.7__ は、Visual Studio 2017 バージョン 15.7 でサポートされている機能を示します。<br/>
 
 ### <a name="notes"></a>メモ
 
 <a name="note_A"></a>__A__ /std:c++14 モードには、動的例外指定は実装されておらず、throw() は依然 \_\_declspec(nothrow) のシノニムとして扱われています。 C++ 17 では、1 つの形跡を除き、動的例外指定が P0003R5 でほとんど削除されています。throw() は廃止され、noexcept のシノニムとして動作する必要があります。 /std:c++17 モードの MSVC は、throw() に終了を使用した強制を行う、noexcept と同じ動作を与えることによって標準に準拠しています。
-コンパイラ オプション /Zc:noexceptTypes- は、以前の \_\_declspec(nothrow) の動作を要求します。 throw() は、C++20 で削除される可能性があります。 標準および実装へ、これらの変更に対応するコードを移行するのを支援するために、**/std:c++17** と **/permissive-** に、例外の指定の問題の新しいコンパイラ警告が追加されました。  
-<a name="note_B"></a>__B__ Visual Studio 2017 バージョン 15.7 の /permissive- モードでサポートされています。 詳細については、「[Two-phase name lookup support comes to MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/)」 (2 フェーズの名前参照のサポートを MSVC に導入) を参照してください。  
-<a name="note_C"></a>__C__ Visual Studio 2015 更新プログラム 2 以降、標準ライブラリ用の SFINAE 式用のコンパイラのサポートは十分になっています。 /permissive- モードが設定されているかどうかにかかわらず、Visual Studio 2017 15.7 でサポートされます。 いくつかのバグは、まだ修正されていません。 “一意のタグの種類” の回避策は不要になり、この回避策を STL 実装から削除しました。  
-<a name="note_D"></a>__D__ Visual Studio 2017 では、C99 プリプロセッサ ルールはコンパイラで完全にサポートされていません。 可変個引数マクロがサポートされますが、プリプロセッサの動作にたくさんのバグがあります。  プリプロセッサは刷新中で、近々にそれらの変更を **/permissive-** モード下で実験的に出荷する予定です。  
-<a name="note_E"></a>__E__これは該当なしとしてマークされています。拡張整数型のサポートがコンパイラに許可されていますが、必須ではないためです。  GCC や Clang と同様に、サポートしないことを選択しました。  
-<a name="note_F"></a>__F__ 同様に、これは該当なしとしてマークされています。この最適化の実装がコンパイラに許可されていますが、必須ではないためです。  
-<a name="note_G"></a>__G__ [/std:c++14](./build/reference/std-specify-language-standard-version.md) で、非表示にできる警告でサポートされています。  
-<a name="note_J"></a>__J__ Visual Studio 2015 では完全ではなかった機能は、この表の他の箇所に記載されています。  
-<a name="note_K"></a>__K__ これは、完全に新しい実装であり、以前の std::experimental バージョンとは対応していません。これは、symlink サポート、バグ修正、標準で要求される動作への変更で必要です。 現在、\<filesystem> を含めると、新しい std::filesystem と以前の std::experimental::filesystem が提供され、\<experimental/filesystem> を含めると、古い実験的な実装のみが提供されます。 この実験的な実装は、ライブラリの次の ABI の重大なリリースで削除されます。  
-<a name="note_L"></a>__L__ コンパイラ組み込みでサポートされています。   
-<a name="note_14"></a>__14__ これらの C++17/20 機能は、[/std:c++14](build/reference/std-specify-language-standard-version.md) (既定) が指定されているときでも、常に有効です。 この理由は、**/std** オプションを導入する前に機能が実装されたため、または条件付きの実装が許容範囲を超えて複雑なためです。  
-<a name="note_17"></a>__17__ これらの機能は [/std:c++17](./build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) コンパイラ オプションにより保護されています。  
-<a name="note_byte"></a>__byte__ `std::byte` は [/std:c++17](./build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) により有効になっていますが、Windows SDK のヘッダーと競合することがあるため、細かいオプトアウト マクロがあります。 `_HAS_STD_BYTE` を `0` として定義することで無効にできます。  
-<a name="note_C11"></a>__C11__ ユニバーサル CRT では、C++17 で必要となる C11 標準ライブラリの部分を実装しました。C99 `strftime()` E/O 代替変換指定子、C11 `fopen()` 排他モード、C11 `aligned_alloc()` は除きます。 C11 は `aligned_alloc()` を、Microsoft の `free()` の実装と互換性のない方法で指定した、つまり、その `free()` は高度に割り当てられたアロケーションを処理できなければならないため、後者が実装される可能性は低いです。  
-<a name="note_rem"></a>__rem__ 機能が [/std:c++17](./build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) コンパイラ オプションが指定されたときに削除されます。 これらの機能には、`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS`、`_HAS_UNEXPECTED` のオプトアウト マクロがあります。  
-<a name="note_charconv"></a>__charconv__ from_chars() および to_chars() は整数で使用できます。 現在、浮動小数点 from_chars() に取り組んでおり、次いで浮動小数点 to_chars() に取り組む予定です。  
-<a name ="note_parallel"></a> __parallel__  C++17 の並列アルゴリズムは完了しました。 なお、これはすべてのアルゴリズムがすべての場合において並列化されているということではありません。最も重要なアルゴリズムが並列化され、実行ポリシーの署名は、アルゴリズムが並列化されていないときでも提供されます。 STL 実装の中心の内部ヘッダー、yvals.h には、「C++ allows an implementation to implement parallel algorithms as calls to the serial algorithms」 (C++ には、シリアル アルゴリズムへの呼び出しとして並列アルゴリズムを実装することが許可されています。) という “並列アルゴリズムに関するメモ” が含まれています。   この実装では、いくつかの一般的なアルゴリズムの呼び出しを並列化しますが、すべては行いません。  
+
+コンパイラ オプション /Zc:noexceptTypes- は、以前の \_\_declspec(nothrow) の動作を要求します。 throw() は、C++20 で削除される可能性があります。 標準および実装へ、これらの変更に対応するコードを移行するのを支援するために、**/std:c++17** と **/permissive-** に、例外の指定の問題の新しいコンパイラ警告が追加されました。
+
+<a name="note_B"></a>__B__ Visual Studio 2017 バージョン 15.7 の /permissive- モードでサポートされています。 詳細については、「[Two-phase name lookup support comes to MSVC](https://blogs.msdn.microsoft.com/vcblog/2017/09/11/two-phase-name-lookup-support-comes-to-msvc/)」 (2 フェーズの名前参照のサポートを MSVC に導入) を参照してください。
+
+<a name="note_C"></a>__C__ Visual Studio 2015 更新プログラム 2 以降、標準ライブラリ用の SFINAE 式用のコンパイラのサポートは十分になっています。 /permissive- モードが設定されているかどうかにかかわらず、Visual Studio 2017 15.7 でサポートされます。 いくつかのバグは、まだ修正されていません。 “一意のタグの種類” の回避策は不要になり、この回避策を STL 実装から削除しました。
+
+<a name="note_D"></a>__D__ Visual Studio 2017 では、C99 プリプロセッサ ルールはコンパイラで完全にサポートされていません。 可変個引数マクロがサポートされますが、プリプロセッサの動作にたくさんのバグがあります。  プリプロセッサは刷新中で、近々にそれらの変更を **/permissive-** モード下で実験的に出荷する予定です。
+
+<a name="note_E"></a>__E__これは該当なしとしてマークされています。拡張整数型のサポートがコンパイラに許可されていますが、必須ではないためです。  GCC や Clang と同様に、サポートしないことを選択しました。
+
+<a name="note_F"></a>__F__ 同様に、これは該当なしとしてマークされています。この最適化の実装がコンパイラに許可されていますが、必須ではないためです。
+
+<a name="note_G"></a>__G__ [/std:c++14](./build/reference/std-specify-language-standard-version.md) で、非表示にできる警告でサポートされています。
+
+<a name="note_J"></a>__J__ Visual Studio 2015 では完全ではなかった機能は、この表の他の箇所に記載されています。
+
+<a name="note_K"></a>__K__ これは、完全に新しい実装であり、以前の std::experimental バージョンとは対応していません。これは、symlink サポート、バグ修正、標準で要求される動作への変更で必要です。 現在、\<filesystem> を含めると、新しい std::filesystem と以前の std::experimental::filesystem が提供され、\<experimental/filesystem> を含めると、古い実験的な実装のみが提供されます。 この実験的な実装は、ライブラリの次の ABI の重大なリリースで削除されます。
+
+<a name="note_L"></a>__L__ コンパイラ組み込みでサポートされています。
+
+<a name="note_14"></a>__14__ これらの C++17/20 機能は、[/std:c++14](build/reference/std-specify-language-standard-version.md) (既定) が指定されているときでも、常に有効です。 この理由は、**/std** オプションを導入する前に機能が実装されたため、または条件付きの実装が許容範囲を超えて複雑なためです。
+
+<a name="note_17"></a>__17__ これらの機能は [/std:c++17](./build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) コンパイラ オプションにより保護されています。
+
+<a name="note_byte"></a>__byte__ `std::byte` は [/std:c++17](./build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) により有効になっていますが、Windows SDK のヘッダーと競合することがあるため、細かいオプトアウト マクロがあります。 `_HAS_STD_BYTE` を `0` として定義することで無効にできます。
+
+<a name="note_C11"></a>__C11__ ユニバーサル CRT では、C++17 で必要となる C11 標準ライブラリの部分を実装しました。C99 `strftime()` E/O 代替変換指定子、C11 `fopen()` 排他モード、C11 `aligned_alloc()` は除きます。 C11 は `aligned_alloc()` を、Microsoft の `free()` の実装と互換性のない方法で指定した、つまり、その `free()` は高度に割り当てられたアロケーションを処理できなければならないため、後者が実装される可能性は低いです。
+
+<a name="note_rem"></a>__rem__ 機能が [/std:c++17](./build/reference/std-specify-language-standard-version.md) (または [/std:c++latest](./build/reference/std-specify-language-standard-version.md)) コンパイラ オプションが指定されたときに削除されます。 これらの機能には、`_HAS_AUTO_PTR_ETC`、`_HAS_FUNCTION_ALLOCATOR_SUPPORT`、`_HAS_OLD_IOSTREAMS_MEMBERS`、`_HAS_UNEXPECTED` のオプトアウト マクロがあります。
+
+<a name="note_charconv"></a>__charconv__ from_chars() および to_chars() は整数で使用できます。 現在、浮動小数点 from_chars() に取り組んでおり、次いで浮動小数点 to_chars() に取り組む予定です。
+
+<a name ="note_parallel"></a> __parallel__  C++17 の並列アルゴリズムは完了しました。 なお、これはすべてのアルゴリズムがすべての場合において並列化されているということではありません。最も重要なアルゴリズムが並列化され、実行ポリシーの署名は、アルゴリズムが並列化されていないときでも提供されます。 STL 実装の中心の内部ヘッダー、yvals.h には、「C++ allows an implementation to implement parallel algorithms as calls to the serial algorithms」 (C++ には、シリアル アルゴリズムへの呼び出しとして並列アルゴリズムを実装することが許可されています。) という “並列アルゴリズムに関するメモ” が含まれています。   この実装では、いくつかの一般的なアルゴリズムの呼び出しを並列化しますが、すべては行いません。
 
 並列化されるアルゴリズムは以下のとおりです。
 
@@ -314,4 +326,4 @@ __VS 2017 15.7__ は、Visual Studio 2017 バージョン 15.7 でサポート�
 [Visual Studio 2017 の Visual C++ の新機能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
 [Visual C++ 2003 ～ 2015 の変更履歴](porting/visual-cpp-change-history-2003-2015.md)<br/>
 [2003 ～ 2015 年の Visual C++ の新機能](porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
-[Visual C++ チーム ブログ](https://blogs.msdn.microsoft.com/vcblog/)  
+[Visual C++ チーム ブログ](https://blogs.msdn.microsoft.com/vcblog/)

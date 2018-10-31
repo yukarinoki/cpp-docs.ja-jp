@@ -8,17 +8,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: 5eeaa683-4e63-4c46-99ef-2d5f294040d4
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 9b3977c46e05ab0b175dad3658d1dcc390d33354
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: 387550fa7d3e745038d0be8ee66574d4496132a0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207667"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061289"
 ---
 # <a name="connect-to-your-remote-linux-computer"></a>リモートの Linux コンピューターへの接続
 
@@ -29,7 +29,7 @@ Visual Studio で C++ の Linux プロジェクトをビルドするときに、
    ![接続マネージャー](media/settings_connectionmanager.png)
 
    いずれの場合も、**[Connect to Remote System]** (リモート システムへの接続) ウィンドウが表示されます。
-   
+
    ![リモート システムへの接続](media/connect.png)
 
 1. 次の情報を入力します。
@@ -41,7 +41,7 @@ Visual Studio で C++ の Linux プロジェクトをビルドするときに、
    | **ユーザー名**           | 認証するユーザー
    | **認証の種類** | パスワードと秘密キーの両方がサポートされます。
    | **パスワード**            | 入力したユーザー名のパスワード
-   | **秘密キー ファイル**    | ssh 接続用に作成された秘密キー
+   | **秘密キー ファイル**    | ssh 接続用に作成された秘密キー ファイル
    | **パスフレーズ**          | 上で選択した秘密キーで使用されるパスフレーズ
 
 1. **[接続]** ボタンをクリックすると、リモート コンピューターへの接続が試行されます。  接続に失敗した場合は、変更する必要がある入力ボックスが赤色で示されます。

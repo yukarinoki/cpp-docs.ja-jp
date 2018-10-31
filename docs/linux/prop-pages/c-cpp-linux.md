@@ -13,12 +13,12 @@ f1_keywords: []
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 7ab78284929de8e5991abb0d1a8c89ead500096a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 78918acc70bddb25841b2bcaaf8f7cd7b627d63b
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314704"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061561"
 ---
 # <a name="cc-properties-linux-c"></a>C/C++ プロパティ (Linux C++)
 
@@ -85,4 +85,4 @@ C++ 言語標準 | C++ 言語標準を決定します。 | **既定値**<br/>**C
 コンパイル言語の選択 | .c および .cpp ファイルのコンパイル言語オプションを選択します。  "Default" は .c または .cpp 拡張に基づいて検出します。 (-x c、-x c++) | **既定** - 既定。<br/>**C コードとしてコンパイル** - C コードとしてコンパイルします。<br/>**C++ コードとしてコンパイル** - C++ コードとしてコンパイルします。<br/>
 必ず使用されるインクルード ファイル | 1 つ以上の強制インクルード ファイルです (-include [名前])
 
-## <a name="additional-options"></a>その他のオプション 
+## <a name="additional-options"></a>その他のオプション

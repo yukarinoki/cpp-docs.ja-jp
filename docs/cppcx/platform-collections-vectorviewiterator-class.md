@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d45bd056bff41832a98c7936510d22a321891fd0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 36e0421e002efbcabc4c4525ddcf592258f6f7d1
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102040"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163700"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator クラス
 
@@ -123,7 +123,7 @@ VectorViewIterator operator--(int);
 
 最初の VectorViewIterator 構文は、現在の VectorViewIterator の前置デクリメントを実行します。
 
-2 番目の構文は、現在の VectorViewIterator の後置デクリメントを実行します。 `int` 2 番目の構文で型を後置デクリメント演算、実際の整数オペランドではなくを示します。
+2 番目の構文は、現在の VectorViewIterator の後置デクリメントを実行します。 2 つ目の構文の `int` 型は、実際の整数オペランドではなく後置デクリメント演算を示します。
 
 ## <a name="operator-dereference"></a>  Vectorviewiterator::operator\*演算子
 
@@ -156,7 +156,7 @@ bool operator==(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` 現在の VectorViewIterator と等しい場合`other`、それ以外の`false`します。
+**true**場合、現在`VectorViewIterator`と等しい*他*、それ以外の**false**します。
 
 ## <a name="operator-greater-than"></a>  Vectorviewiterator::operator&gt;演算子
 
@@ -176,11 +176,11 @@ bool operator>(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-現在の VectorViewIterator が `true` より大きい場合は `other`。それ以外の場合は `false`。
+**true**よりも大きい場合は、現在の VectorViewIterator*他*、それ以外の**false**します。
 
 ## <a name="operator-greater-than-or-equals"></a>  Vectorviewiterator::operator&gt;= 演算子
 
-現在の VectorViewIterator が、指定された VectorViewIterator 以上であるかどうかを示します。
+示すかどうか、現在`VectorViewIterator`を指定した以上`VectorViewIterator`。
 
 ### <a name="syntax"></a>構文
 
@@ -196,7 +196,7 @@ bool operator>=(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-現在の VectorViewIterator が `true` 以上の場合は `other`。それ以外の場合は `false`。
+**true**場合、現在`VectorViewIterator`がより大きいまたは等しい*他*、それ以外の**false**します。
 
 ## <a name="operator-increment"></a>  Vectorviewiterator::operator++ 演算子
 
@@ -237,7 +237,7 @@ bool operator!=(const VectorViewIterator& other) const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` 現在の VectorViewIterator が等しくない場合`other`、それ以外の`false`します。
+**true**場合、現在`VectorViewIterator`が等しくない*他*、それ以外の**false**します。
 
 ## <a name="operator-less-than"></a>  Vectorviewiterator::operator&lt;演算子
 
@@ -252,15 +252,15 @@ bool operator<(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>パラメーター
 
 *other*<br/>
-別の VectorIterator。
+もう 1 つ`VectorIterator`します。
 
 ### <a name="return-value"></a>戻り値
 
-現在の VectorIterator が `true` より小さい場合は `other`。それ以外の場合は `false`。
+**true**場合、現在`VectorIterator`がより小さい*他*、それ以外の**false**します。
 
 ## <a name="operator-less-than-or-equals"></a>  Vectorviewiterator::operator&lt;= 演算子
 
-現在の VectorIterator が、指定された VectorIterator 以下かどうかを示します。
+示すかどうか、現在`VectorIterator`が、指定された小さい`VectorIterator`します。
 
 ### <a name="syntax"></a>構文
 
@@ -272,11 +272,11 @@ bool operator<=(const VectorViewIterator& other) const;
 ### <a name="parameters"></a>パラメーター
 
 *other*<br/>
-別の VectorIterator。
+もう 1 つ`VectorIterator`します。
 
 ### <a name="return-value"></a>戻り値
 
-`true` 現在の VectorIterator と等しいまたはそれよりも小さいかどうか`other`、それ以外の`false`します。
+**true**場合、現在`VectorIterator`に等しいまたはそれよりも小さい*他*、それ以外の**false**します。
 
 ## <a name="operator-minus"></a>  Vectorviewiterator::operator-演算子
 
@@ -353,7 +353,7 @@ inline VectorViewIterator<T> operator+
 
 最初の構文では、現在の VectorViewIterator から指定された転置にある要素を参照する VectorViewIterator。
 
-2 番目の構文のパラメーターの先頭から指定された転置にある要素を参照する VectorViewIterator`i`します。
+2 番目の構文では、`i` パラメーターの先頭から指定された転置にある要素を参照する VectorViewIterator。
 
 ## <a name="operator-minus-assign"></a>  Vectorviewiterator::operator-= 演算子
 

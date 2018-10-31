@@ -1,7 +1,7 @@
 ---
 title: hash_multimap クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -96,12 +96,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ca81fa18bb5f63f57c057eaa9e64c35df01e33f1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 3796ba7b243305fbae75e64f44e14964a89a9805
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45726766"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075321"
 ---
 # <a name="hashmultimap-class"></a>hash_multimap クラス
 
@@ -170,7 +170,7 @@ hash_multimap クラスに用意されている反復子は双方向反復子で
 |-|-|
 |[hash_multimap](#hash_multimap)|特定のサイズのリスト、特定の値の要素を持つリスト、または特定の `allocator` を持つリストを構築します。あるいは他の `hash_multimap` のコピーとして構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -226,7 +226,7 @@ hash_multimap クラスに用意されている反復子は双方向反復子で
 |-|-|
 |[hash_multimap::operator=](#op_eq)|別の `hash_multimap` のコピーで `hash_multimap` の要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<hash_map>
 
@@ -1130,12 +1130,12 @@ int main( )
    pair <IntMMap::const_iterator, IntMMap::const_iterator> p1, p2;
    p1 = hm1.equal_range( 2 );
 
-   cout << "The lower bound of the element with "
-        << "a key of 2\n in the hash_multimap hm1 is: "
+   cout << "The lower bound of the element with a key of 2\n"
+        << "in the hash_multimap hm1 is: "
         << p1.first -> second << "." << endl;
 
-   cout << "The upper bound of the element with "
-        << "a key of 2\n in the hash_multimap hm1 is: "
+   cout << "The upper bound of the element with a key of 2\n"
+        << "in the hash_multimap hm1 is: "
         << p1.second -> second << "." << endl;
 
    // Compare the upper_bound called directly
@@ -1143,8 +1143,8 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << hm1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
-        << " returned by equal_range( 2 )." << endl;
+        << "matching the 2nd element of the pair "
+        << "returned by equal_range( 2 )." << endl;
 
    p2 = hm1.equal_range( 4 );
 
@@ -1161,11 +1161,11 @@ int main( )
 
 ```Output
 The lower bound of the element with a key of 2
- in the hash_multimap hm1 is: 20.
+in the hash_multimap hm1 is: 20.
 The upper bound of the element with a key of 2
- in the hash_multimap hm1 is: 30.
+in the hash_multimap hm1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The hash_multimap hm1 doesn't have an element with a key less than 4.
 ```
 
@@ -1262,7 +1262,7 @@ int main()
     n = hm3.erase(2);
 
     cout << "After the element with a key of 2 is deleted,\n"
-         << " the hash_multimap hm3 is:";
+         << "the hash_multimap hm3 is:";
     for (pIter = hm3.begin(); pIter != hm3.end(); pIter++)
         cout << " " << pIter -> second;
     cout << "." << endl;
@@ -1277,7 +1277,7 @@ int main()
 
     cout << "After another element with a key equal to that of the"
          << endl;
-    cout  << " 2nd element is deleted, "
+    cout  << "2nd element is deleted, "
           << "the hash_multimap hm3 is:";
     for (pIter = hm3.begin(); pIter != hm3.end(); pIter++)
         cout << " " << pIter -> second;
@@ -1289,10 +1289,10 @@ int main()
 After the 2nd element is deleted, the hash_multimap hm1 is: 1 3 4.
 After the middle two elements are deleted, the hash_multimap hm2 is: 1 16.
 After the element with a key of 2 is deleted,
- the hash_multimap hm3 is: 0 2 3.
+the hash_multimap hm3 is: 0 2 3.
 The number of elements removed from hm3 is: 2.
 After another element with a key equal to that of the
- 2nd element is deleted, the hash_multimap hm3 is: 0 3.
+2nd element is deleted, the hash_multimap hm3 is: 0 3.
 ```
 
 ## <a name="find"></a>  hash_multimap::find
@@ -1497,7 +1497,6 @@ hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp);
 
-
 hash_multimap(
     initializer_list<Type> IList,
     const Compare& Comp,
@@ -1554,7 +1553,7 @@ hash_multimap(
 ## <a name="insert"></a>  hash_multimap::insert
 
 > [!NOTE]
-> この API は、互換性のために残されています。 代替が必要な場合は、[unordered_multimap クラス](../standard-library/unordered-multimap-class.md)をご使用ください。
+> この API は、互換性のために残されています。 代替が必要な場合は、 [unordered_multimap Class](../standard-library/unordered-multimap-class.md)をご使用ください。
 
 hash_multimap に要素や要素範囲を挿入します。
 
@@ -1818,7 +1817,7 @@ int main( )
    hm1_AcIter--;
    hm1_RcIter = hm1.lower_bound( hm1_AcIter -> first );
    cout << "The first element of hm1 with a key matching"
-        << endl << " that of the last element is: "
+        << endl << "that of the last element is: "
         << hm1_RcIter -> second << "." << endl;
 
    // Note that the first element with a key equal to
@@ -1837,7 +1836,7 @@ The element of hash_multimap hm1 with a key of 2 is: 20.
 The first element of hash_multimap hm1 with a key of 3 is: 20.
 The hash_multimap hm1 doesn't have an element with a key of 4.
 The first element of hm1 with a key matching
- that of the last element is: 20.
+that of the last element is: 20.
 This is not the last element of hash_multimap hm1.
 ```
 
@@ -2049,8 +2048,8 @@ int main( )
    hm1.erase ( hm1_rIter -> first );
 
    hm1_rIter = hm1.rbegin( );
-   cout << "After the erasure, the first element"
-        << "\n in the reversed hash_multimap is "
+   cout << "After the erasure, the first element\n"
+        << "in the reversed hash_multimap is "
         << hm1_rIter -> first << "." << endl;
 }
 ```
@@ -2060,7 +2059,7 @@ The first element of the reversed hash_multimap hm1 is 3.
 The hash_multimap is: 1 2 3 .
 The reversed hash_multimap is: 3 2 1 .
 After the erasure, the first element
- in the reversed hash_multimap is 2.
+in the reversed hash_multimap is 2.
 ```
 
 ## <a name="reference"></a>  hash_multimap::reference
@@ -2427,8 +2426,8 @@ int main( )
         << hm1_RcIter -> second << "." << endl;
 
    hm1_RcIter = hm1.upper_bound( 2 );
-   cout << "The first element of hash_multimap hm1\n with a key "
-        << " greater than 2 is: "
+   cout << "The first element of hash_multimap hm1\n"
+        << "with a key greater than 2 is: "
         << hm1_RcIter -> second << "." << endl;
 
    // If no match is found for the key, end( ) is returned
@@ -2446,7 +2445,7 @@ int main( )
    hm1_AcIter = hm1.begin( );
    hm1_RcIter = hm1.upper_bound( hm1_AcIter -> first );
    cout << "The first element of hm1 with a key greater than"
-        << endl << " that of the initial element of hm1 is: "
+        << endl << "that of the initial element of hm1 is: "
         << hm1_RcIter -> second << "." << endl;
 }
 ```
@@ -2454,10 +2453,10 @@ int main( )
 ```Output
 The 1st element of hash_multimap hm1 with a key greater than 1 is: 20.
 The first element of hash_multimap hm1
- with a key  greater than 2 is: 30.
+with a key  greater than 2 is: 30.
 The hash_multimap hm1 doesn't have an element with a key of 4.
 The first element of hm1 with a key greater than
- that of the initial element of hm1 is: 20.
+that of the initial element of hm1 is: 20.
 ```
 
 ## <a name="value_comp"></a>  hash_multimap::value_comp
@@ -2477,9 +2476,9 @@ hash_multimap が要素の並べ替えに使用する比較関数オブジェク
 
 ### <a name="remarks"></a>Remarks
 
-hash_multimap *m* について、2 つの要素 *e*1( *k*1 *, d*1) および *e*2( *k*2 *, d*2) が [value_type](#value_type) 型のオブジェクトである場合 (ここで *k*1 および *k*2 は [key_type](#key_type) 型のキーであり、`d`1 および `d`2 は [mapped_type](#mapped_type) 型のデータである)、*m.*`value_comp`( )( *e*1 *, e*2) は *m.*`key_comp`( ) ( *k*1 *, k*2) と同等です。 格納されているオブジェクトは以下のメンバー関数を定義します。
+Hash_multimap の*m*場合は、2 つの要素*e1* (*k1*、 *d1*) と*e2*(*k2*、 *d2*) 型のオブジェクトは[value_type](#value_type)ここで、 *k1*と*k2* 型のキーがその[key_type](#key_type)と*d1*と*d2*は、データ型の[mapped_type](#mapped_type)、し`m.value_comp()(e1, e2)`と等価`m.key_comp()(k1, k2)`. 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **value_type&**`left`, **value_type&** `right`);
+`bool operator( value_type& left, value_type& right);`
 
 これは、並べ替え順で `left` のキー値が `right` のキー値に先行しかつ等しくない場合に、**true** を返します。
 

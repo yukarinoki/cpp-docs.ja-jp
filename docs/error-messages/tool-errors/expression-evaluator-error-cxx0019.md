@@ -17,12 +17,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3fba76b75c640917b3b99cd41500d682cb1b32f0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9f1e78bd88f35240e90332ef9a9139558051cab5
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031809"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50070128"
 ---
 # <a name="expression-evaluator-error-cxx0019"></a>式エバリュエーター エラー CXX0019
 
@@ -42,4 +42,4 @@ C の式エバリュエーターでは、型キャストを実行できません
     (char **)h_message
     ```
 
-     C の式エバリュエーターによって評価ことはできません。
+   C の式エバリュエーターによって評価ことはできません。

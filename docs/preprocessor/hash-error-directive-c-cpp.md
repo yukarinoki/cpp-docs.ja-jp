@@ -18,32 +18,32 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d2da939fe52e41e122ecd4926e34fb9c4be735ae
-ms.sourcegitcommit: d4c803bd3a684d7951bf88dcecf1f14af43ae411
+ms.openlocfilehash: 143733af9003442996d9f649825f45f93643f536
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2018
-ms.locfileid: "42539854"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50078805"
 ---
 # <a name="error-directive-cc"></a>#error ディレクティブ (C/C++)
-**#Error**ディレクティブはコンパイル時にユーザーが指定したエラー メッセージを出力して、コンパイルを終了します。  
-  
-## <a name="syntax"></a>構文  
-  
-```  
-#errortoken-string  
-```  
-  
-## <a name="remarks"></a>Remarks  
- 
-このディレクティブが生成されるエラー メッセージが含まれています、*トークン文字列*パラメーター。 *トークン文字列*パラメーター、マクロの展開対象になりません。 このディレクティブは、プリプロセス時にプログラムの不整合や制約の違反を開発者に通知するために最も役立ちます。 次の例は、プリプロセス中のエラーの処理を示しています。  
-  
-```  
-#if !defined(__cplusplus)  
-#error C++ compiler required.  
-#endif  
-```  
-  
-## <a name="see-also"></a>関連項目  
- 
+**#Error**ディレクティブはコンパイル時にユーザーが指定したエラー メッセージを出力して、コンパイルを終了します。
+
+## <a name="syntax"></a>構文
+
+```
+#errortoken-string
+```
+
+## <a name="remarks"></a>Remarks
+
+このディレクティブが生成されるエラー メッセージが含まれています、*トークン文字列*パラメーター。 *トークン文字列*パラメーター、マクロの展開対象になりません。 このディレクティブは、プリプロセス時にプログラムの不整合や制約の違反を開発者に通知するために最も役立ちます。 次の例は、プリプロセス中のエラーの処理を示しています。
+
+```
+#if !defined(__cplusplus)
+#error C++ compiler required.
+#endif
+```
+
+## <a name="see-also"></a>関連項目
+
 [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)

@@ -26,12 +26,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5603327e7bdc32d9b760fc25160543c682e6f4f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 03f4161130a1517bba6ed87164a814a9e8c61bbd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054507"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069725"
 ---
 # <a name="csimplearray-class"></a>CSimpleArray クラス
 
@@ -79,7 +79,7 @@ class CSimpleArray
 |名前|説明|
 |----------|-----------------|
 |[CSimpleArray::operator\[\]](#operator_at)|配列から要素を取得します。|
-|[CSimpleArray::operator =](#operator_eq)|代入演算子。|  
+|[CSimpleArray::operator =](#operator_eq)|代入演算子。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -89,7 +89,7 @@ class CSimpleArray
 
 両方`CSimpleArray`と[CSimpleMap](../../atl/reference/csimplemap-class.md)要素の数が少ない場合に設計されています。 [CAtlArray](../../atl/reference/catlarray-class.md)と[CAtlMap](../../atl/reference/catlmap-class.md)配列には、多数の要素が含まれている場合に使用する必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsimpcoll.h
 

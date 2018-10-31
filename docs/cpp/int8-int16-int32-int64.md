@@ -1,7 +1,7 @@
 ---
 title: _ _int8、_ _int16、_ _int32、_ _int64 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -10,6 +10,14 @@ f1_keywords:
 - __int16_cpp
 - __int32_cpp
 - __int64_cpp
+- __int8
+- __int16
+- __int32
+- __int64
+- _int8
+- _int16
+- _int32
+- _int64
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -24,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 723724a477a5cdb714aa2644e1db938d67fb7b73
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b639e7a65bbe206d029a5ba28109170cb0f6a610
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43194252"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163544"
 ---
 # <a name="int8-int16-int32-int64"></a>__int8、__int16、__int32、__int64
 
@@ -47,6 +55,8 @@ __int64 nHuge;      // Declares 64-bit integer
 ```
 
 種類 **_ _int8**、 **_ _int16**、および **_ _int32**はシノニム、ANSI 型が同じサイズのいずれかとは、同じように動作する移植可能なコードを記述するために役立ちます複数のプラットフォームです。 **_ _Int8**データ型は型と同義です**char**、 **_ _int16**型と同義です**短い**、および **_ _int32。** 型と同義です**int**します。**_ _Int64**型は型と同義です。 **long**します。
+
+以前のバージョンとの互換性のため **_int8**、 **_ _int16**、 **_ _int32**、および **_ _int64**のシノニムで **_ _int8**、 **_ _int16**、 **_ _int32**、および **_ _int64**しない限り、コンパイラ オプション[/Za\(言語を無効にします。拡張機能)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
 ## <a name="example"></a>例
 

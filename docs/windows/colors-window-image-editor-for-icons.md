@@ -21,12 +21,12 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: ae58ae7cf09257b399fd21d7c34890b829394b98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a65959ffc149b93c6d9b28667647d8f49cfc1f2d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430593"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50063238"
 ---
 # <a name="colors-window-image-editor-for-icons"></a>[色] ウィンドウ (アイコン用イメージ エディター)
 
@@ -36,15 +36,15 @@ ms.locfileid: "46430593"
 
 2. **カラー インジケーター**、前景色と背景の色と画面と反転色のセレクターを示しています。
 
-   ![[色] ウィンドウ](../windows/media/vccolorswindow.gif "vcColorsWindow")  
-[色] ウィンドウ
+   ![[色] ウィンドウ](../windows/media/vccolorswindow.gif "vcColorsWindow")<br/>
+   [色] ウィンドウ
 
 > [!NOTE]
 > **画面の色**と**反転色**ツールは、アイコンとカーソルの使用のみ。
 
 使用することができます、**色**ウィンドウで、[イメージ エディターのツールバー](../windows/toolbar-image-editor-for-icons.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

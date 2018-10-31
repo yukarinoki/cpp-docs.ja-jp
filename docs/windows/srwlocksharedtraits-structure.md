@@ -1,28 +1,32 @@
 ---
 title: SRWLockSharedTraits 構造体 |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 09/27/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::GetInvalidValue
+- corewrappers/Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::Unlock
 dev_langs:
 - C++
 helpviewer_keywords:
-- SRWLockSharedTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits structure
+- Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::GetInvalidValue method
+- Microsoft::WRL::Wrappers::HandleTraits::SRWLockSharedTraits::Unlock method
 ms.assetid: 709cb51e-d70c-40b6-bdb4-d8eacf3af495
 author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 50bcfc728a2f228e4fa8444fe41cc25c3ff449a2
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: 5cfebfd1a6ccb1f243b534c9693a4402de574f17
+ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42602247"
+ms.lasthandoff: 10/03/2018
+ms.locfileid: "48233678"
 ---
 # <a name="srwlocksharedtraits-structure"></a>SRWLockSharedTraits 構造体
 
@@ -38,16 +42,16 @@ struct SRWLockSharedTraits;
 
 ### <a name="public-typedefs"></a>パブリック typedef
 
-|名前|説明|
-|----------|-----------------|
-|`Type`|ポインターのシノニム、 [SRWLOCK](../windows/srwlock-class.md)クラス。|
+名前   | 説明
+------ | --------------------------------------------------------------------------
+`Type` | ポインターのシノニム、 [SRWLOCK](../windows/srwlock-class.md)クラス。
 
 ### <a name="public-methods"></a>パブリック メソッド
 
-|名前|説明|
-|----------|-----------------|
-|[SRWLockSharedTraits::GetInvalidValue メソッド](../windows/srwlocksharedtraits-getinvalidvalue-method.md)|取得、 **SRWLockSharedTraits**オブジェクトは常に有効です。|
-|[SRWLockSharedTraits::Unlock メソッド](../windows/srwlocksharedtraits-unlock-method.md)|指定したの排他的制御を解放`SRWLock`オブジェクト。|
+名前                                                     | 説明
+-------------------------------------------------------- | -----------------------------------------------------------------
+[Srwlocksharedtraits::getinvalidvalue](#getinvalidvalue) | 取得、`SRWLockSharedTraits`オブジェクトは常に有効です。
+[Srwlocksharedtraits::unlock](#unlock)                   | 指定したの排他的制御を解放`SRWLock`オブジェクト。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -59,6 +63,29 @@ struct SRWLockSharedTraits;
 
 **Namespace:** Microsoft::WRL::Wrappers::HandleTraits
 
-## <a name="see-also"></a>関連項目
+## <a name="getinvalidvalue"></a>Srwlocksharedtraits::getinvalidvalue
 
-[Microsoft::WRL::Wrappers::HandleTraits 名前空間](../windows/microsoft-wrl-wrappers-handletraits-namespace.md)
+取得、`SRWLockSharedTraits`オブジェクトは常に有効です。
+
+```cpp
+inline static Type GetInvalidValue();
+```
+
+### <a name="return-value"></a>戻り値
+
+識別するハンドルを`SRWLockSharedTraits`オブジェクト。
+
+## <a name="unlock"></a>Srwlocksharedtraits::unlock
+
+指定したの排他的制御を解放`SRWLock`オブジェクト。
+
+```cpp
+inline static void Unlock(
+   _In_ Type srwlock
+);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*srwlock*<br/>
+識別するハンドルを`SRWLock`オブジェクト。

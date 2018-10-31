@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 49ea94258c163c241243934f41d55d896d0d1fa2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 74660dc2baeff683d35fac8d4b9dda06bdbec22d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372458"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061314"
 ---
 # <a name="using-the-carchive-ltlt-and-gtgt-operators"></a>CArchive を使用して&lt;&lt;と&gt;&gt;演算子
 
@@ -33,13 +33,13 @@ ms.locfileid: "46372458"
 
 1. 次の例では、アーカイブを通じたファイルにオブジェクトを格納する方法を示します。
 
-     [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
+   [!code-cpp[NVC_MFCSerialization#7](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_1.cpp)]
 
 #### <a name="to-load-an-object-from-a-value-previously-stored-in-a-file"></a>ファイルに保存された値からオブジェクトを読み込む
 
 1. 次の例では、ファイルに保存された値からオブジェクトを読み込む方法を示します。
 
-     [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
+   [!code-cpp[NVC_MFCSerialization#8](../mfc/codesnippet/cpp/using-the-carchive-output-and-input-operators_2.cpp)]
 
 通常、格納されとでアーカイブを通じたファイルからデータを読み込む、`Serialize`関数の`CObject`-派生クラスで、読み込んだりマクロで宣言されている必要があります。 参照を`CArchive`にオブジェクトが渡される、`Serialize`関数。 呼び出す、`IsLoading`の関数、`CArchive`を決定するオブジェクトかどうか、`Serialize`ファイルからデータを読み込んだり、ファイルにデータを格納する関数が呼び出されました。
 

@@ -29,12 +29,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 46789b74d0b7b8d882a1e2ea90103c4c2f1e934b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffc1ea1f512e049f3a6af15170429a3618323dc5
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396351"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162998"
 ---
 `unbounded_buffer` メッセージング ブロックは、メッセージを無制限に格納することができる、複数のターゲットと複数のソースを持つ順序付けられた `propagator_block` です。
 
@@ -175,7 +175,7 @@ bool enqueue(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 項目が受け入れられた場合`false`それ以外の場合。
+**true**項目が受け入れられた場合**false**それ以外の場合。
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -274,11 +274,11 @@ virtual bool reserve_message(
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。
+**true**場合は、メッセージが正常に予約された、 **false**それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
 
-後`reserve`と呼ばれる場合は、返された場合`true`, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
+後`reserve`と呼ばれる場合は、返された場合**true**, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 
@@ -321,7 +321,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>戻り値
 
-`true` ブロックは延期しないため、メッセージを提供します。
+**true**ブロックは延期しないため、メッセージを提供します。
 
 ##  <a name="ctor"></a> unbounded_buffer
 

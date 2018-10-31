@@ -1,12 +1,15 @@
 ---
 title: _ _cdecl |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __cdecl_cpp
+- __cdecl
+- _cdecl
+- cdecl
 dev_langs:
 - C++
 helpviewer_keywords:
@@ -16,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 37804aed04f998c6762cdbbc7012ae10c19a2529
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 085d8a49ed3c66f96bf8c2b8bdae7ca54cf3bef6
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066824"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163778"
 ---
 # <a name="cdecl"></a>__cdecl
 
@@ -63,9 +66,11 @@ void CMyClass::mymethod() { return; }
 void __cdecl CMyClass::mymethod() { return; }
 ```
 
+以前のバージョンとの互換性のため**cdecl**と **_cdecl**のシノニムは **_ _cdecl**しない限り、コンパイラ オプション[/Za\(を無効にします。言語拡張機能)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
+
 ## <a name="example"></a>例
 
-次の例では、コンパイラは、`system` 関数に対して C の命名規則と呼び出し規約を使用するように指示されます。
+次の例では、コンパイラは、`system` 関数に対して C の命名規則と呼び出し規則を使用するように指示されます。
 
 ```cpp
 // Example of the __cdecl keyword on function

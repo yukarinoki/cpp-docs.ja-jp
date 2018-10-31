@@ -1,7 +1,7 @@
 ---
 title: map クラス | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -98,12 +98,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ccab97a7ac1fd0ad073a3f507dfa6687f311efc4
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 96d0b6abc7ca9f82c3b9c1ce3e84b7fad99ea486
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703925"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066397"
 ---
 # <a name="map-class"></a>map クラス
 
@@ -174,7 +174,7 @@ map では、[key_compare](#key_compare) 型の格納されている関数オブ
 |-|-|
 |[map](#map)|特定のサイズのリスト、特定の値の要素を持つリスト、特定の `allocator` を持つリストを構築します。または他の map のコピーとしてリストを構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -232,7 +232,7 @@ map では、[key_compare](#key_compare) 型の格納されている関数オブ
 |[operator&#91;&#93;](#op_at)|map に、指定したキー値を持つ要素を挿入します。|
 |[operator=](#op_eq)|別の map のコピーで map の要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<map>
 
@@ -1012,7 +1012,6 @@ The map m2 is empty.
 ```cpp
 const_iterator end() const;
 
-
 iterator end();
 ```
 
@@ -1083,7 +1082,7 @@ int main( )
 
    cout << "A direct call of upper_bound( 2 ) gives "
         << m1_RcIter -> second << "," << endl
-        << " matching the 2nd element of the pair"
+        << "matching the 2nd element of the pair"
         << " returned by equal_range( 2 )." << endl;
 
    p2 = m1.equal_range( 4 );
@@ -1103,7 +1102,7 @@ int main( )
 The lower bound of the element with a key of 2 in the map m1 is: 20.
 The upper bound of the element with a key of 2 in the map m1 is: 30.
 A direct call of upper_bound( 2 ) gives 30,
- matching the 2nd element of the pair returned by equal_range( 2 ).
+matching the 2nd element of the pair returned by equal_range( 2 ).
 The map m1 doesn't have an element with a key less than 40.
 ```
 
@@ -1115,11 +1114,9 @@ The map m1 doesn't have an element with a key less than 40.
 iterator erase(
     const_iterator Where);
 
-
 iterator erase(
     const_iterator First,
     const_iterator Last);
-
 
 size_type erase(
     const key_type& Key);
@@ -1232,7 +1229,6 @@ int main()
 
 ```cpp
 iterator find(const Key& key);
-
 
 const_iterator find(const Key& key) const;
 ```
@@ -1394,19 +1390,16 @@ map に要素または要素範囲を挿入します。
 pair<iterator, bool> insert(
     const value_type& Val);
 
-
 // (2) single element, perfect forwarded
 template <class ValTy>
 pair<iterator, bool>
 insert(
     ValTy&& Val);
 
-
 // (3) single element with hint
 iterator insert(
     const_iterator Where,
     const value_type& Val);
-
 
 // (4) single element, perfect forwarded, with hint
 template <class ValTy>
@@ -1414,13 +1407,11 @@ iterator insert(
     const_iterator Where,
     ValTy&& Val);
 
-
 // (5) range
 template <class InputIterator>
 void insert(
     InputIterator First,
     InputIterator Last);
-
 
 // (6) initializer list
 void insert(
@@ -1794,18 +1785,18 @@ map(
 
 template <class InputIterator>
 map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last);
 
 template <class InputIterator>
 map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp);
 
 template <class InputIterator>
 map(
- InputIterator First,
+    InputIterator First,
     InputIterator Last,
     const Traits& Comp,
     const Allocator& Al);
@@ -2636,9 +2627,9 @@ map が要素の並べ替えに使用する比較関数オブジェクトを返�
 
 ### <a name="remarks"></a>Remarks
 
-map *m* について、2 つの要素 *e*1( *k*1, *d*1) および *e*2( *k*2, `d`2) が `value_type` 型のオブジェクトである場合 (ここで *k*1 および *k*2 は `key_type` 型のキーであり、`d`1 および `d`2 は `mapped_type` 型のデータである)、*m.*`value_comp`( *e*1, *e*2) は *m.*`key_comp`*(k*1, *k*2) と同等です。 格納されているオブジェクトは以下のメンバー関数を定義します。
+マップの*m*場合は、2 つの要素*e1*(*k1*、 *d1*) と*e2*(*k2*、 *d2*) 型のオブジェクトは`value_type`ここで、 *k1*と*k1*型のキーがその`key_type`と*d1*と*d2*は、データ型の`mapped_type`、し`m.value_comp(e1, e2)`と等価`m.key_comp(k1, k2)`します。 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool 演算子**( **value_type &**`left`、 **value_type &**`right`)。
+`bool operator( value_type& left, value_type& right);`
 
 これは、並べ替え順で `left` のキー値が `right` のキー値に先行しかつ等しくない場合に、**true** を返します。
 

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e6fb948efd63a8392661cc38a80393bc90d5e694
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5979fcb76dc688bffd9ad8076f123927439e3840
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396466"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064565"
 ---
 # <a name="run-time-object-model-services"></a>ランタイム オブジェクト モデル サービス
 
@@ -39,8 +39,6 @@ ms.locfileid: "46396466"
 
 ### <a name="run-time-object-model-services-macros"></a>実行時のオブジェクト モデル サービス マクロ
 
-
-
 |||
 |-|-|
 |[DECLARE_DYNAMIC](#declare_dynamic)|(クラス宣言で使用する必要があります)、ランタイム クラス情報にアクセスできるようにします。|
@@ -51,19 +49,11 @@ ms.locfileid: "46396466"
 |[IMPLEMENT_SERIAL](#implement_serial)|シリアル化および (クラスの実装で使用する必要があります)、ランタイム クラス情報へのアクセスを許可します。|
 |[RUNTIME_CLASS](#runtime_class)|返します、`CRuntimeClass`名前付きのクラスに対応する構造体。|
 
-
 OLE には、頻繁に実行時にオブジェクトの動的生成が必要です。 たとえば、OLE サーバー アプリケーションは、クライアントからの要求に対する応答で OLE 項目を動的に作成できる必要があります。 同様に、オートメーション サーバーは、オートメーション クライアントからの要求に応答で項目を作成できる必要があります。
 
 Microsoft Foundation Class ライブラリでは、OLE に特定の 2 つのマクロを提供します。
 
 ### <a name="dynamic-creation-of-ole-objects"></a>OLE オブジェクトの動的な作成
-
-
-
-
-
-
-
 
 |||
 |-|-|
@@ -85,6 +75,7 @@ Microsoft Foundation Class ライブラリでは、OLE に特定の 2 つのマ�
   ```
 AFX_COMCTL32_IF_EXISTS(  proc );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *proc*<br/>
@@ -92,9 +83,9 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 ### <a name="remarks"></a>Remarks
 
-指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)します。
+指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 afxcomctl32.h、afxcomctl32.inl は
 
@@ -112,6 +103,7 @@ afxcomctl32.h、afxcomctl32.inl は
 ```
 AFX_COMCTL32_IF_EXISTS2( proc );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *proc*<br/>
@@ -119,9 +111,9 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 ### <a name="remarks"></a>Remarks
 
-指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](https://msdn.microsoft.com/library/windows/desktop/ms683212)します。 このマクロは、AFX_COMCTL32_IF_EXISTS の Unicode バージョンです。
+指定された関数を一般的なコントロール ライブラリかどうかを判断するこのマクロを使用して*proc* (呼び出し元ではなく[GetProcAddress](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)します。 このマクロは、AFX_COMCTL32_IF_EXISTS の Unicode バージョンです。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 afxcomctl32.h、afxcomctl32.inl は
 
@@ -129,8 +121,6 @@ afxcomctl32.h、afxcomctl32.inl は
 
 [MFC コモン コントロール ライブラリの分離](../isolation-of-the-mfc-common-controls-library.md)<br/>
 [AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
-
 
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
@@ -159,7 +149,7 @@ DECLARE_DYNAMIC マクロの詳細については、次を参照してくださ�
 
 例をご覧ください[IMPLEMENT_DYNAMIC](#implement_dynamic)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -193,10 +183,9 @@ DECLARE_DYNCREATE マクロの詳細については、次を参照してくだ�
 
 例をご覧ください[IMPLEMENT_DYNCREATE](#implement_dyncreate)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
-
 
 ## <a name="declareolectltype"></a>DECLARE_OLECTLTYPE
 
@@ -207,6 +196,7 @@ DECLARE_DYNCREATE マクロの詳細については、次を参照してくだ�
 ```
 DECLARE_OLECTLTYPE( class_name )
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *$class_name$*<br/>
@@ -216,14 +206,13 @@ DECLARE_OLECTLTYPE( class_name )
 
 `GetUserTypeNameID` `GetMiscStatus`で宣言されている、純粋仮想関数`COleControl`します。 これらの関数は純粋であるため、仮想する必要があるクラスでオーバーライドされる、コントロール。 DECLARE_OLECTLTYPE、だけでなく、コントロール クラスの宣言に IMPLEMENT_OLECTLTYPE マクロを追加する必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxctl.h
 
 ### <a name="see-also"></a>関連項目
 
 [IMPLEMENT_OLECTLTYPE](#implement_olectltype)
-
 
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
@@ -234,6 +223,7 @@ OLE コントロールがそのプロパティを表示するプロパティ ペ
 ```
 DECLARE_PROPPAGEIDS( class_name )
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *$class_name$*<br/>
@@ -245,7 +235,7 @@ DECLARE_PROPPAGEIDS( class_name )
 
 プロパティ ページの詳細については、記事を参照してください。 [ActiveX コントロール: プロパティ ページ](../mfc-activex-controls-property-pages.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxctl.h
 
@@ -287,7 +277,7 @@ DECLARE_SERIAL マクロの詳細については、次を参照してくださ�
 
 [!code-cpp[NVC_MFCCObjectSample#21](../../mfc/codesnippet/cpp/run-time-object-model-services_2.h)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -319,7 +309,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 
 [!code-cpp[NVC_MFCCObjectSample#3](../../mfc/codesnippet/cpp/run-time-object-model-services_4.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -355,7 +345,7 @@ DECLARE_DYNCREATE がクラス宣言に含まれる場合、クラスの実装�
 
 [!code-cpp[NVC_MFCCObjectSample#23](../../mfc/codesnippet/cpp/run-time-object-model-services_6.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -370,6 +360,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
     l, w1, w2, b1, b2, b3, b4, b5, b6, b7, b8)
 
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *$class_name$*<br/>
@@ -398,7 +389,7 @@ External name は、他のアプリケーションに公開されている識別
 
 OLE クラス ID は、オブジェクトの一意の 128 ビット識別子です。 いずれかで構成されます**長い**、2 つ**WORD**秒、および 8**バイト**によって表される、s *l*、 *w1*、 *w2*、および*b1*を通じて*b8*構文の説明にします。 アプリケーション ウィザードとコード ウィザードでは、必要に応じての一意の OLE クラス Id を作成します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -407,7 +398,6 @@ OLE クラス ID は、オブジェクトの一意の 128 ビット識別子で�
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>
 [DECLARE_OLECREATE](#declare_olecreate)<br/>
 [CLSID キー](/windows/desktop/com/clsid-key-hklm)
-
 
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
@@ -418,6 +408,7 @@ OLE クラス ID は、オブジェクトの一意の 128 ビット識別子で�
 ```
 DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *$class_name$*<br/>
@@ -438,7 +429,7 @@ IMPLEMENT_OLECTLTYPE、だけでなく、コントロール クラスの宣言�
 > [!NOTE]
 >  ActiveX ControlWizard で使用される既定の設定: されて、OLEMISC_SETCLIENTSITEFIRST、OLEMISC_INSIDEOUT、OLEMISC_CANTLINKINSIDE、および OLEMISC_RECOMPOSEONRESIZE します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxctl.h
 
@@ -480,7 +471,7 @@ AFX_API マクロを使用して自動的にエクスポートすることがで
 
 [!code-cpp[NVC_MFCCObjectSample#24](../../mfc/codesnippet/cpp/run-time-object-model-services_7.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -507,7 +498,7 @@ Runtime_class へのポインターを[CRuntimeClass](../../mfc/reference/crunti
 
 [!code-cpp[NVC_MFCCObjectSample#25](../../mfc/codesnippet/cpp/run-time-object-model-services_8.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 
@@ -532,7 +523,7 @@ DECLARE_OLECREATE(class_name)
 
 クラス宣言でヘッダーが含まれる場合、クラスの実装で IMPLEMENT_OLECREATE を含める必要があります。 ヘッダーを使用して、クラス宣言には、DECLARE_DYNCREATE または DECLARE_SERIAL も使用する必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 
@@ -563,7 +554,7 @@ External name は、他のアプリケーションに公開されている識別
 
 OLE クラス ID は、オブジェクトの一意の 128 ビット識別子です。 いずれかで構成されます**長い**、2 つ**WORD**秒、および 8**バイト**によって表される、s *l*、 *w1*、 *w2*、および*b1*を通じて*b8*構文の説明にします。 アプリケーション ウィザードとコード ウィザードでは、必要に応じての一意の OLE クラス Id を作成します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー**: afxdisp.h
 

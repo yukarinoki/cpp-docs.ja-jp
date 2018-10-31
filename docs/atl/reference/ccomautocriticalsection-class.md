@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff8687783907cb84af36122c5d7828f8845d595d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 40fa13ecf743bf8e6aa0cd75b16bec65131fe267
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46073461"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50061080"
 ---
 # <a name="ccomautocriticalsection-class"></a>CComAutoCriticalSection クラス
 
@@ -48,7 +48,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 `CComAutoCriticalSection` クラスに似ていますが[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)、除く`CComAutoCriticalSection`コンス トラクターでクリティカル セクション オブジェクトを自動的に初期化します。
 
-通常、使用して`CComAutoCriticalSection`を通じて、`typedef`名前[AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)します。 この名前の参照`CComAutoCriticalSection`とき[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)が使用されています。  
+通常、使用して`CComAutoCriticalSection`を通じて、`typedef`名前[AutoCriticalSection](ccommultithreadmodel-class.md#autocriticalsection)します。 この名前の参照`CComAutoCriticalSection`とき[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)が使用されています。
 
 `Init`と`Term`メソッドから[CComCriticalSection](../../atl/reference/ccomcriticalsection-class.md)このクラスを使用する場合は使用できません。
 
@@ -58,7 +58,7 @@ class CComAutoCriticalSection : public CComCriticalSection
 
 `CComAutoCriticalSection`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcore.h
 

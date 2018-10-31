@@ -1,12 +1,13 @@
 ---
 title: ベース ポインター (C++) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/09/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
 f1_keywords:
 - __based
+- _based
 - __based_cpp
 dev_langs:
 - C++
@@ -19,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9dc4d19b94c8d0257eb1dbfc715b9eed7c5d85b4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4465cb2965983c37ac9d758e424b58b5ed3304fd
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46074439"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163609"
 ---
 # <a name="based-pointers-c"></a>ベース ポインター (C++)
 
@@ -62,7 +63,7 @@ struct llist_t {
 
 based ポインターを逆参照する場合、ベースは、明示的に指定されているか、または宣言によって暗黙的に認識されている必要があります。
 
-以前のバージョンとの互換性のため **_based**のシノニムです **_ _based**します。
+以前のバージョンとの互換性のため **_based**のシノニムです **_ _based**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)は指定します。
 
 ## <a name="example"></a>例
 

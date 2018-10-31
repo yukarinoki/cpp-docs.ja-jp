@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 680ff7d339f592cf112a91fc303a6367fbc4805b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b972d4552a8e41ca0dcea4ef57d48ef161ea35b9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408755"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069231"
 ---
 # <a name="template-based-classes"></a>テンプレート ベースのクラス
 
@@ -47,11 +47,11 @@ MFC 事前テンプレート ベースのコレクションの 2 つのカテゴ
 
 - [単純な配列、リスト、およびマップ クラス](#_core_using_simple_array.2c_.list.2c_.and_map_templates)
 
-     `CArray`、`CList`、`CMap`
+   `CArray`、 `CList`、 `CMap`
 
 - [配列、リスト、および型指定されたポインターのマップ](#_core_using_typed.2d.pointer_collection_templates)
 
-     `CTypedPtrArray`、`CTypedPtrList`、`CTypedPtrMap`
+   `CTypedPtrArray`、 `CTypedPtrList`、 `CTypedPtrMap`
 
 単純なコレクション クラスのすべてのクラスから派生`CObject`シリアル化、動的な作成は、その他のプロパティが継承されるよう、`CObject`します。 型付きポインター コレクション クラスから派生するクラスを指定する必要があります: などの MFC で定義済みテンプレート ポインター コレクションのいずれかを指定する必要があります`CPtrList`または`CPtrArray`します。 指定した基本クラスから新しいコレクション クラスを継承し、新しいクラスのメンバー関数では、基本クラスのメンバーをカプセル化された呼び出しを使用して、タイプ セーフを適用します。
 

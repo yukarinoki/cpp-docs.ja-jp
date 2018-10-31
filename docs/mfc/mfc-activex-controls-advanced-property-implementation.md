@@ -16,19 +16,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4aa1116384ac9fd5212046f9a0b3354a3aa70d88
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 084ef5e2a6173340d33baea94bd1e5c5f14bff9b
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416085"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204484"
 ---
 # <a name="mfc-activex-controls-advanced-property-implementation"></a>MFC ActiveX コントロール : 高度なプロパティの実装
 
 この記事では、ActiveX コントロールのプロパティを高度な実装に関連するトピックについて説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 - [読み取り専用であり、書き込み専用のプロパティ](#_core_read2donly_and_write2donly_properties)
 
@@ -48,7 +48,7 @@ ms.locfileid: "46416085"
 
 1. ショートカット メニューでは、次のようにクリックします。**追加** をクリックし、**プロパティの追加**します。
 
-     開き、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)します。
+   開き、[プロパティの追加ウィザード](../ide/names-add-property-wizard.md)します。
 
 1. **プロパティ名**ボックス、プロパティの名前を入力します。
 

@@ -118,12 +118,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 82c9ad08977e6b24886060c49b74c66697113cdf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 912bbd37d4d9afcb60158d41b82b7fa829eeb4ec
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447428"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890648"
 ---
 # <a name="ccombobox-class"></a>CComboBox クラス
 
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[Ccombobox:](#addstring)|リスト ボックス、コンボ ボックスまたは CBS_SORT スタイルを使用してリスト ボックスの並べ替えの位置にあるリストの末尾に文字列を追加します。|
+|[CComboBox::AddString](#addstring)|リスト ボックス、コンボ ボックスまたは CBS_SORT スタイルを使用してリスト ボックスの並べ替えの位置にあるリストの末尾に文字列を追加します。|
 |[CComboBox::Clear](#clear)|削除 (クリア) 現在の選択範囲の編集コントロールに存在する場合。|
 |[CComboBox::CompareItem](#compareitem)|並べ替えられたオーナー描画コンボ ボックスで新しいリスト アイテムの相対位置を決定するためにフレームワークによって呼び出されます。|
 |[CComboBox::Copy](#copy)|されているテキスト形式でクリップボードに存在する場合は、現在の選択範囲をコピーします。|
@@ -256,7 +256,7 @@ class CComboBox : public CWnd
 
 埋め込む場合、`CComboBox`別のウィンドウ内のオブジェクトがオブジェクトを破棄する必要はありません。 作成する場合、`CComboBox`スタック上のオブジェクトは自動的に破棄します。 作成する場合、`CComboBox`を使用して、ヒープ上のオブジェクト、**新しい**関数を呼び出す必要があります**削除**を Windows のコンボ ボックスが破棄されるときに破棄するオブジェクト。
 
-**注**コンボ ボックスの編集、リスト ボックス コントロールからクラスを派生サブクラスにある WM_KEYDOWN および WM_CHAR メッセージを処理する場合は、`CEdit`と`CListBox`、派生クラスにそれらのメッセージのハンドラーを追加します。 詳細については、次を参照してください。 [ http://support.microsoft.com/default.aspxscid=kb; en-ご心配なく。Q174667](http://support.microsoft.com/default.aspxscid=kb;en-us;q174667)と[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)します。
+**注**コンボ ボックスの編集、リスト ボックス コントロールからクラスを派生サブクラスにある WM_KEYDOWN および WM_CHAR メッセージを処理する場合は、`CEdit`と`CListBox`、派生クラスにそれらのメッセージのハンドラーを追加します。 詳細については、次を参照してください。 [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -1070,7 +1070,7 @@ int InsertString(
 
 ### <a name="remarks"></a>Remarks
 
-異なり、 [AddString](#addstring)メンバー関数を`InsertString`メンバー関数の一覧は発生しません、 [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)スタイルを並べ替えることができます。
+[AddString](#addstring) メンバー関数とは異なり、 `InsertString` メンバー関数では、 [CBS_SORT](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles) スタイルのリストが並べ替えられることはありません。
 
 > [!NOTE]
 >  この関数は、Windows ではサポートされていない`ComboBoxEx`コントロール。 このコントロールの詳細については、次を参照してください。 [ComboBoxEx コントロール](/windows/desktop/Controls/comboboxex-controls)Windows SDK に含まれています。

@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07277e9b98186747415cf1bf6abed3e431e64fff
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b45b1a1f2903dfcdfa4a95adc161766f5bb3328c
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403476"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053046"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの代替手段
 
@@ -56,7 +56,7 @@ MFC アプリケーションは通常、情報、ファイル形式、および�
 
 - 未使用の拡張子として、ドキュメントを処理し、ビュー クラスで、上記のように、データ管理コードを実装します。 ドキュメントのオーバーヘッドが比較的少ないです。 1 つ[CDocument](../mfc/reference/cdocument-class.md)オブジェクトは、少量のオーバーヘッドを単独での少量のオーバーヘッドを発生`CDocument`の基本クラス、 [CCmdTarget](../mfc/reference/ccmdtarget-class.md)と[CObject](../mfc/reference/cobject-class.md)します。 後者のクラスの両方が小さいです。
 
-     宣言されている`CDocument`:
+   宣言されている`CDocument`:
 
    - 2 つ`CString`オブジェクト。
 
@@ -66,7 +66,7 @@ MFC アプリケーションは通常、情報、ファイル形式、および�
 
    - 1 つ`CPtrList`ドキュメントのビューの一覧を含むオブジェクトです。
 
-     さらに、ドキュメントには、ドキュメント オブジェクト、そのオブジェクトの表示、フレーム ウィンドウ、およびドキュメントのテンプレート オブジェクトを作成する時間が必要です。
+   さらに、ドキュメントには、ドキュメント オブジェクト、そのオブジェクトの表示、フレーム ウィンドウ、およびドキュメントのテンプレート オブジェクトを作成する時間が必要です。
 
 - ドキュメントとビューの両方を使いませんとして扱います。 ビューではなく、フレーム ウィンドウで、データ管理と描画コードを配置します。 この方法は、C 言語のプログラミング モデルに近いです。
 

@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 07ed60edf2b83810616e2ed58a92510d1d973ff0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b31062530bfe6da940cd6458bd5cfa91f3e29ae7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378112"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50052552"
 ---
 # <a name="how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource"></a>方法: 既存の MFC リボンをリボン リソースに変換する
 
@@ -37,13 +37,13 @@ ms.locfileid: "46378112"
 
 ```
 
-     Save and close the file.
+   ファイルを保存して閉じます。
 
 1. ビルドし MFC アプリケーションを実行、メモ帳で開き RibbonOutput.txt しその内容をコピーします。
 
 1. Visual Studio での**プロジェクト** メニューのをクリックして**リソースの追加**します。 **リソースの追加**ダイアログ ボックスで、**リボン** をクリックし、**新規**します。
 
-     Visual Studio では、リボン リソースを作成し、デザイン ビューで開かれます。 リボン リソース ID に表示される IDR_RIBBON1**リソース ビュー**します。 リボンは ribbon1.mfcribbon ms XML ファイルで定義されます。
+   Visual Studio では、リボン リソースを作成し、デザイン ビューで開かれます。 リボン リソース ID に表示される IDR_RIBBON1**リソース ビュー**します。 リボンは ribbon1.mfcribbon ms XML ファイルで定義されます。
 
 1. Visual Studio で、ribbon1.mfcribbon ms や、その内容を削除しの RibbonOutput.txt で、先ほどコピーした内容を貼り付けます。 保存して ribbon1.mfcribbon ms を閉じます。
 

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b443e1758f766b7fa2dd9a0169ab98172423779d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e589f07d1c9c54c3acd2fa3ff6a0f346077f9b4
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439343"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053098"
 ---
 # <a name="setting-the-day-state-of-a-month-calendar-control"></a>月間予定表コントロールの日付状態の設定
 
@@ -51,9 +51,9 @@ MCN_GETDAYSTATE メッセージは、表示されるのか月以内の日の表�
 
 1. ハンドラーの本文には、次のコードを追加します。
 
-     [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
+   [!code-cpp[NVC_MFCControlLadenDialog#26](../mfc/codesnippet/cpp/setting-the-day-state-of-a-month-calendar-control_1.cpp)]
 
-     例では、変換、 *pNMHDR* 、適切な型へのポインターが要求されている情報の数か月を決定し (`pDayState->cDayState`)。 月ごとの現在のビット フィールド (`pDayState->prgDayState[i]`)、し、必要とゼロに初期化されます (この例では、毎月 15 日) では日付が設定されます。
+   例では、変換、 *pNMHDR* 、適切な型へのポインターが要求されている情報の数か月を決定し (`pDayState->cDayState`)。 月ごとの現在のビット フィールド (`pDayState->prgDayState[i]`)、し、必要とゼロに初期化されます (この例では、毎月 15 日) では日付が設定されます。
 
 ## <a name="see-also"></a>関連項目
 

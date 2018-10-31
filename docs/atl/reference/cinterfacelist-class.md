@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1ac378e0a923e2a906bf99995432bfc87e39b8d5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fdf3ae7adf36ad471b5cab09d0f13a4d5e18f7a7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032433"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075569"
 ---
 # <a name="cinterfacelist-class"></a>CInterfaceList クラス
 
@@ -33,7 +33,7 @@ ms.locfileid: "46032433"
 
 ```
 template<class I, const IID* piid =& __uuidof(I)>
-class CInterfaceList 
+class CInterfaceList
    : public CAtlList<ATL::CComQIPtr<I, piid>,
                      CComQIPtrElementTraits<I, piid>>
 ```
@@ -66,7 +66,7 @@ COM インターフェイスを格納するポインターの種類を指定し�
 
 `CInterfaceList`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcoll.h
 

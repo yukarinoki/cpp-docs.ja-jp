@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f69dab9dfc9216d1c56ed54730d5f94cbb58b1db
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f00e95aee0f3e16a979f4969a33b90746b4082ea
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088736"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062406"
 ---
 # <a name="implementing-property-pages"></a>プロパティ ページの実装
 
@@ -43,11 +43,11 @@ ATL を使用してプロパティ ページを作成します。
 
 - 必要に応じてオーバーライドして、`IPropertyPageImpl`メソッドを次のガイドラインを使用します。
 
-   |IPropertyPageImpl メソッド|オーバーライドする場合に.|メモ|  
-   |------------------------------|----------------------------------|-----------|  
-   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|ページおよびサポートするインターフェイスに渡されたオブジェクトの数に基本的なサニティ チェックを実行します。|基本クラスの実装を呼び出す前に、独自のコードを実行します。 設定されているオブジェクトが、期待どおりに準拠していない場合は、呼び出しをできるだけ早く失敗する必要があります。|  
-   |[アクティブ化します。](../atl/reference/ipropertypageimpl-class.md#activate)|ページのユーザー インターフェイス (たとえば、オブジェクトから現在のプロパティ値を持つダイアログ コントロールを設定、コントロールを動的に作成またはその他の初期化を実行します) を初期化します。|基底クラスがあるそれらを更新する前に、ダイアログ ウィンドウおよびすべてのコントロールを作成することになるように、コードの前に、基本クラスの実装を呼び出します。|  
-   |[適用します。](../atl/reference/ipropertypageimpl-class.md#apply)|プロパティの設定を検証し、オブジェクトを更新します。|これは何もトレースとは別の呼び出しから基本クラスの実装を呼び出す必要はありません。|  
+   |IPropertyPageImpl メソッド|オーバーライドする場合に.|メモ|
+   |------------------------------|----------------------------------|-----------|
+   |[SetObjects](../atl/reference/ipropertypageimpl-class.md#setobjects)|ページおよびサポートするインターフェイスに渡されたオブジェクトの数に基本的なサニティ チェックを実行します。|基本クラスの実装を呼び出す前に、独自のコードを実行します。 設定されているオブジェクトが、期待どおりに準拠していない場合は、呼び出しをできるだけ早く失敗する必要があります。|
+   |[アクティブ化します。](../atl/reference/ipropertypageimpl-class.md#activate)|ページのユーザー インターフェイス (たとえば、オブジェクトから現在のプロパティ値を持つダイアログ コントロールを設定、コントロールを動的に作成またはその他の初期化を実行します) を初期化します。|基底クラスがあるそれらを更新する前に、ダイアログ ウィンドウおよびすべてのコントロールを作成することになるように、コードの前に、基本クラスの実装を呼び出します。|
+   |[適用します。](../atl/reference/ipropertypageimpl-class.md#apply)|プロパティの設定を検証し、オブジェクトを更新します。|これは何もトレースとは別の呼び出しから基本クラスの実装を呼び出す必要はありません。|
    |[非アクティブ化します。](../atl/reference/ipropertypageimpl-class.md#deactivate)|ウィンドウの関連項目をクリーンアップします。|基本クラスの実装では、プロパティ ページを表す ダイアログ ボックスを破棄します。 ダイアログ ボックスが破棄される前に、クリーンアップする必要がある場合は、基本クラスを呼び出す前に、コードを追加する必要があります。|
 
 例プロパティ ページの実装を参照してください。[例: プロパティ ページを実装する](../atl/example-implementing-a-property-page.md)します。

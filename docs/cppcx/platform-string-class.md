@@ -27,12 +27,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3777116bf2a641a4fdc220306680c0150d5ba2d0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2d9c68bde9fdd49e4007b8b6e1d92899d71dde4e
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106415"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162543"
 ---
 # <a name="platformstring-class"></a>Platform::String クラス
 
@@ -174,7 +174,7 @@ String^ Concat( String^ str1, String^ str2);
 
 `str1` と `str2` を連結した値を持つ新しい String^ オブジェクト。
 
-場合`str1`は`null`と`str2`ない`str1`が返されます。 場合`str2`は`null`と`str1`ない`str2`が返されます。 `str1` と `str2` の両方が `null` の場合は、空の文字列 (L"") が返されます。
+`str1` が `null` で、`str2` がそうでない場合は、`str1` が返されます。 `str2` が `null` で、`str1` がそうでない場合は、`str2` が返されます。 `str1` と `str2` の両方が `null` の場合は、空の文字列 (L"") が返されます。
 
 ## <a name="data"></a>  String::data メソッド
 
@@ -240,7 +240,7 @@ bool String::Equals(String^ str);
 
 ### <a name="return-value"></a>戻り値
 
-`true` が現在のオブジェクトに等しい場合は `str`。それ以外の場合は、`false`。
+**true**場合`str`。 それ以外の現在のオブジェクトと等しい**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -272,7 +272,7 @@ bool IsEmpty();
 
 ### <a name="return-value"></a>戻り値
 
-現在の String オブジェクトが `true` または空の文字列 ("") の場合は `null`。それ以外の場合は `false`。
+**true**場合、現在`String`オブジェクトが**null**または空の文字列 (L"")、それ以外の**false**します。
 
 ## <a name="isfastpass"></a>  String::isfastpass メソッド
 
@@ -286,7 +286,7 @@ bool IsFastPass();
 
 ### <a name="return-value"></a>戻り値
 
-現在の文字列オブジェクトが高速渡しの場合は `true`。それ以外の場合は `false`。
+**true**場合、現在`String`オブジェクトが高速渡しの場合はそれ以外の場合、 **false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -294,7 +294,7 @@ bool IsFastPass();
 
 ## <a name="length"></a>  String::length メソッド
 
-現在の String オブジェクト内の文字数を取得します。
+現在の文字数を取得`String`オブジェクト。
 
 ### <a name="syntax"></a>構文
 
@@ -304,7 +304,7 @@ unsigned int Length();
 
 ### <a name="return-value"></a>戻り値
 
-現在の String オブジェクト内の文字数。
+現在の文字数`String`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -337,7 +337,7 @@ bool String::operator+( String^ str1, String^ str2);
 
 ### <a name="return-value"></a>戻り値
 
-`true` が `str1` に等しい場合は `str2`。それ以外の場合は `false`。
+**true**場合*str1*と等しい*str2*、それ以外の**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -356,14 +356,14 @@ bool String::operator==( String^ str1, String^ str2);
 ### <a name="parameters"></a>パラメーター
 
 *str1*<br/>
-比較する最初の String オブジェクト。
+比較する最初の `String` オブジェクト。
 
 *str2*<br/>
-比較する 2 番目の String オブジェクト。
+比較する 2 番目の `String` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-`true` の中身が `str1` と等しい場合は `str2`。それ以外の場合は `false`。
+**true**場合の内容`str1`と等しい`str2`、それ以外の**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -371,7 +371,7 @@ bool String::operator==( String^ str1, String^ str2);
 
 ##  <a name="operator-greater-than"></a>  String::operator&gt;
 
-1 つの String オブジェクトの値が、2 番目の String オブジェクトの値より大きいかどうかを示します。
+示すかどうかのいずれかの値`String`オブジェクトが 2 番目の値より大きい`String`オブジェクト。
 
 ### <a name="syntax"></a>構文
 
@@ -382,14 +382,14 @@ bool String::operator>( String^ str1, String^ str2);
 ### <a name="parameters"></a>パラメーター
 
 *str1*<br/>
-1 つ目の String オブジェクト。
+最初の `String` オブジェクト。
 
 *str2*<br/>
-2 つ目の String オブジェクト。
+2 番目の `String` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-`str1` の値が `str2` の値より大きい場合は `true`。それ以外の場合は `false`。
+**true**場合の値`str1`がの値より大きい`str2`、それ以外の**false**します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -397,7 +397,7 @@ bool String::operator>( String^ str1, String^ str2);
 
 ## <a name="operator-greater-than-or-equals"></a> String::operator&gt;=
 
-1 つの String オブジェクトの値が、2 番目の String オブジェクトの値以上かどうかを示します。
+示すかどうかのいずれかの値`String`オブジェクトが 2 番目の値以上`String`オブジェクト。
 
 ### <a name="syntax"></a>構文
 
@@ -408,18 +408,18 @@ bool String::operator>=( String^ str1, String^ str2);
 ### <a name="parameters"></a>パラメーター
 
 *str1*<br/>
-1 つ目の String オブジェクト。
+最初の `String` オブジェクト。
 
 *str2*<br/>
-2 つ目の String オブジェクト。
+2 番目の `String` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-`str1` の値が `str2` の値以上の場合は `true`。それ以外の場合は `false`。
+**true**場合の値`str1`の値以上`str2`、それ以外の**false**します。
 
 ## <a name="operator-inequality"></a> String::operator! =
 
-指定された 2 つの String オブジェクトの値が異なるかどうかを示します。
+示す 2 つかどうか指定`String`オブジェクトが異なる値を持ちます。
 
 ### <a name="syntax"></a>構文
 
@@ -430,18 +430,18 @@ bool String::operator!=( String^ str1, String^ str2);
 ### <a name="parameters"></a>パラメーター
 
 *str1*<br/>
-比較する最初の String オブジェクト。
+比較する最初の `String` オブジェクト。
 
 *str2*<br/>
-比較する 2 番目の String オブジェクト。
+比較する 2 番目の `String` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-`true` が `str1` と等しくない場合は `str2`。それ以外の場合は `false`。
+**true**場合`str1`が等しくない`str2`、それ以外の**false**します。
 
 ## <a name="operator-less-than"></a> String::operator&lt;
 
-1 つの String オブジェクトの値が、2 番目の String オブジェクトの値より小さいかどうかを示します。
+示すかどうかのいずれかの値`String`オブジェクトが 2 番目の値より小さい`String`オブジェクト。
 
 ### <a name="syntax"></a>構文
 
@@ -452,18 +452,18 @@ bool String::operator<( String^ str1, String^ str2);
 ### <a name="parameters"></a>パラメーター
 
 *str1*<br/>
-1 つ目の String オブジェクト。
+最初の `String` オブジェクト。
 
 *str2*<br/>
-2 つ目の String オブジェクト。
+2 番目の `String` オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
-`true` の値が `str1` の値より小さい場合は `str2`。それ以外の場合は `false`。
+**true**場合の値*str1*がの値より小さい*str2*、それ以外の**false**します。
 
 ## <a name="ctor"></a> String::string コンス トラクター
 
-入力文字列データのコピーで String クラスの新しいインスタンスを初期化します。
+新しいインスタンスを初期化、`String`入力文字列データのコピーを持つクラス。
 
 ### <a name="syntax"></a>構文
 
@@ -492,7 +492,7 @@ String^ s = L"Hello!";
 
 ## <a name="tostring"></a> String::tostring
 
-値が現在の文字列と同じである String オブジェクトを返します。
+返します、`String`オブジェクトの値は、現在の文字列と同じです。
 
 ### <a name="syntax"></a>構文
 
@@ -502,7 +502,7 @@ String^ String::ToString();
 
 ### <a name="return-value"></a>戻り値
 
-値が現在の文字列と同じである文字列オブジェクト。
+A`String`オブジェクトの値は、現在の文字列と同じです。
 
 ## <a name="see-also"></a>関連項目
 

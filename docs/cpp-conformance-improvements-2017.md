@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e12c8eeb162d93a41c2bad85fda3570f3ffc1127
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: a4003868609d8ffd1ea3b29074bdd24c25442ad8
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43220217"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054450"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158) での C++ 準拠の改善
 
@@ -227,9 +227,9 @@ B b(42L); // now calls B(int)
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {};
@@ -247,9 +247,9 @@ C++17 で、`Derived` は集約型と見なされるようになりました。�
 struct Derived;
 
 struct Base {
-    friend struct Derived;
+    friend struct Derived;
 private:
-    Base() {}
+    Base() {}
 };
 
 struct Derived : Base {
@@ -1263,7 +1263,8 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 この新しい警告 C4768 は、Visual Studio 2017 15.3 以前 (たとえば、バージョン 10.0.15063.0、RS2 SDK とも呼ばれます) に付属していたいくつかの Windows SDK ヘッダーで指定されます。 ただし、この警告を生成しないように以降のバージョンの Windows SDK のヘッダー (具体的には、ShlObj.h および ShlObj_core.h) が修正されました。 Windows SDK のヘッダーからこの警告が表示される場合は、次の操作を実行できます。
 
 1. Visual Studio 2017 バージョン 15.5 リリースに付属している最新の Windows SDK に切り替えます。
-2. Windows SDK のヘッダー ステートメントの #include に関する警告をオフにします。
+
+1. Windows SDK のヘッダー ステートメントの #include に関する警告をオフにします。
 
 ```cpp
    #pragma warning (push)
@@ -1374,7 +1375,7 @@ struct B : A {
 
 ```cpp
 struct X {
-    static constexpr int size = 3;
+    static constexpr int size = 3;
 };
 const int X::size; // C5041
 ```
@@ -1587,7 +1588,7 @@ D<int> d;
 
 ### <a name="constexpr-aggregate-initialization"></a>constexpr の集約の初期化
 
-C++ コンパイラの以前のバージョンでは、constexpr の集約の初期化を正しく処理することができませんでした。集約初期化リストの要素が多すぎる無効なコードを受け入れ、不適切な codegen を生成しました。 次にそのようなコードの例を示します。 
+C++ コンパイラの以前のバージョンでは、constexpr の集約の初期化を正しく処理することができませんでした。集約初期化リストの要素が多すぎる無効なコードを受け入れ、不適切な codegen を生成しました。 次にそのようなコードの例を示します。
 
 ```cpp
 #include <array>
@@ -1689,15 +1690,14 @@ struct S : Base<T> {
 
 C++ 標準では、ユーザーが事前宣言または定義を名前空間 `std` に追加することができません。 名前空間 `std` または名前空間 std 内の名前空間に宣言または定義を追加すると、定義されていない動作が発生するようになりました。
 
-Microsoft は今後どこかの時点で、一部の STL 型を定義する場所を移動します。 これが行われると、名前空間 `std` に事前宣言を追加する既存のコードが破損します。 新しい警告 C4643 は、このようなソースの問題の特定に役立ちます。 この警告は **/default** モードでは有効に、既定では無効になっています。 **/Wall** または **/WX** でコンパイルされるプログラムに影響があります。 
+Microsoft は今後どこかの時点で、一部の STL 型を定義する場所を移動します。 これが行われると、名前空間 `std` に事前宣言を追加する既存のコードが破損します。 新しい警告 C4643 は、このようなソースの問題の特定に役立ちます。 この警告は **/default** モードでは有効に、既定では無効になっています。 **/Wall** または **/WX** でコンパイルされるプログラムに影響があります。
 
-次のコードにより、C4643: *Forward declaring 'vector' in namespace std is not permitted by the C++ Standard\(名前空間 std での事前宣言 'vector' は C++ 標準で許可されていません\)* が発生します。 
-
+次のコードにより、C4643: *Forward declaring 'vector' in namespace std is not permitted by the C++ Standard\(名前空間 std での事前宣言 'vector' は C++ 標準で許可されていません\)* が発生します。
 
 ```cpp
-namespace std { 
-    template<typename T> class vector; 
-} 
+namespace std {
+    template<typename T> class vector;
+}
 ```
 
 このエラーを解決するには、事前宣言ではなく **include** ディレクティブを使用します。
@@ -1713,106 +1713,106 @@ C++ 標準では、コンストラクターがそれ自体にデリゲートす�
 このエラーがないと、次のプログラムでコンパイルされますが、無限ループが生成されます。
 
 ```cpp
-class X { 
-public: 
-    X(int, int); 
+class X {
+public:
+    X(int, int);
     X(int v) : X(v){}
-}; 
+};
 ```
 
 無限ループを避けるには、別のコンストラクターにデリゲートしてください。
 
 ```cpp
-class X { 
-public: 
+class X {
+public:
 
-    X(int, int); 
-    X(int v) : X(v, 0) {} 
-}; 
+    X(int, int);
+    X(int v) : X(v, 0) {}
+};
 ```
 
 ### <a name="offsetof-with-constant-expressions"></a>定数式を含む offsetof
 
-[offsetof](c-runtime-library/reference/offsetof-macro.md) は従来から [reinterpret_cast](cpp/reinterpret-cast-operator.md) を必要とするマクロを使用して実装されています。 これは、定数式を必要とするコンテキストでは正しくありませんが、Microsoft C++ コンパイラではこれまで許可されていました。 STL の一部としてリリースされている offsetof マクロはコンパイラ組み込み型 (**__builtin_offsetof**) が正しく使用されますが、多くのユーザーはマクロのトリックを使用して独自の **offsetof** を定義しています。  
+[offsetof](c-runtime-library/reference/offsetof-macro.md) は従来から [reinterpret_cast](cpp/reinterpret-cast-operator.md) を必要とするマクロを使用して実装されています。 これは、定数式を必要とするコンテキストでは正しくありませんが、Microsoft C++ コンパイラではこれまで許可されていました。 STL の一部としてリリースされている offsetof マクロはコンパイラ組み込み型 (**__builtin_offsetof**) が正しく使用されますが、多くのユーザーはマクロのトリックを使用して独自の **offsetof** を定義しています。
 
 Visual Studio 2017 バージョン 15.8 では、コードが標準の C++ の動作に準拠するように、これらの reinterpret_casts が既定のモードで表示される領域を制約します。 [/permissive-](build/reference/permissive-standards-conformance.md) の下では、制約がさらに厳しくなります。 定数式を必要とする場所で offsetof の結果を使用すると、警告 C4644 *usage of the macro-based offsetof pattern in constant expressions is non-standard; use offsetof defined in the C++ standard library instead\(定数式でマクロに基づく offsetof パターンを使用することは標準ではありません。C++ 標準ライブラリで定義された offsetof を使用してください\)* または C2975 *invalid template argument, expected compile-time constant expression\(無効なテンプレート引数です。予期されたコンパイル時の定数式です\)* を発行するコードが生成される場合があります。
 
-次のコードにより **/default** モードと **/std:c++17** モードで C4644 が、**/permissive-** モードで C2975 が発生します。 
+次のコードにより **/default** モードと **/std:c++17** モードで C4644 が、**/permissive-** モードで C2975 が発生します。
 
 ```cpp
-struct Data { 
-    int x; 
-}; 
+struct Data {
+    int x;
+};
 
-// Common pattern of user-defined offsetof 
-#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m)) 
+// Common pattern of user-defined offsetof
+#define MY_OFFSET(T, m) (unsigned long long)(&(((T*)nullptr)->m))
 
-int main() 
+int main()
 
-{ 
-    switch (0) { 
-    case MY_OFFSET(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+{
+    switch (0) {
+    case MY_OFFSET(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
 
 このエラーを解決するには、\<cstddef> を使用して定義された **offsetof** を使用します。
 
 ```cpp
-#include <cstddef>  
+#include <cstddef>
 
-struct Data { 
-    int x; 
-};  
+struct Data {
+    int x;
+};
 
-int main() 
-{ 
-    switch (0) { 
-    case offsetof(Data, x): return 0; 
-    default: return 1; 
-    } 
-} 
+int main()
+{
+    switch (0) {
+    case offsetof(Data, x): return 0;
+    default: return 1;
+    }
+}
 ```
-
 
 ### <a name="cv-qualifiers-on-base-classes-subject-to-pack-expansion"></a>パック拡張の対象になっている基底クラスの cv 修飾子
 
-以前のバージョンの Microsoft C++ コンパイラでは、基底クラスがパック拡張の対象でもあった場合、cv 修飾子が含まれることを検出しませんでした。 
+以前のバージョンの Microsoft C++ コンパイラでは、基底クラスがパック拡張の対象でもあった場合、cv 修飾子が含まれることを検出しませんでした。
 
-Visual Studio 2017 バージョン 15.8 の **/permissive-** モードでは次のコードにより C3770 *'const S': is not a valid base class\('const S': 有効な基底クラスではありません\)* が発生します。 
+Visual Studio 2017 バージョン 15.8 の **/permissive-** モードでは次のコードにより C3770 *'const S': is not a valid base class\('const S': 有効な基底クラスではありません\)* が発生します。
 
 ```cpp
-template<typename... T> 
-class X : public T... { };  
+template<typename... T>
+class X : public T... { };
 
-class S { };  
+class S { };
 
-int main() 
-{ 
-    X<const S> x; 
-} 
+int main()
+{
+    X<const S> x;
+}
 ```
+
 ### <a name="template-keyword-and-nested-name-specifiers"></a>template キーワードと nested-name-specifier
 
-**/permissive-** モードでは、コンパイラが依存する nested-name-specifier の後にある場合にテンプレート名が優先されるためには、コンパイラで `template` キーワードが必要になりました。 
+**/permissive-** モードでは、コンパイラが依存する nested-name-specifier の後にある場合にテンプレート名が優先されるためには、コンパイラで `template` キーワードが必要になりました。
 
 **/permissive-** モードでは次のコードにより、C7510 が発生します: *'foo': use of dependent template name must be prefixed with 'template'. note: see reference to class template instantiation 'X<T>' being compiled\('foo': 依存するテンプレート名を使用する場合は 'template' のプレフィックスが必要です。注: コンパイルされているクラス テンプレートのインスタンス化 ’X<T>’ のリファレンスを参照してください\)*。
 
 ```cpp
 template<typename T> struct Base
 {
-    template<class U> void foo() {} 
-}; 
+    template<class U> void foo() {}
+};
 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
-        Base<T>::foo<int>(); 
-    } 
-}; 
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
+        Base<T>::foo<int>();
+    }
+};
 ```
 
 このエラーを解決するには、次の例で示すように、`template` キーワードを `Base<T>::foo<int>();` ステートメントに追加します。
@@ -1822,16 +1822,16 @@ template<typename T> struct Base
 {
     template<class U> void foo() {}
 };
- 
-template<typename T> 
-struct X : Base<T> 
-{ 
-    void foo() 
-    { 
+
+template<typename T>
+struct X : Base<T>
+{
+    void foo()
+    {
         // Add template keyword here:
-        Base<T>::template foo<int>(); 
-    } 
-}; 
+        Base<T>::template foo<int>();
+    }
+};
 ```
 
 ## <a name="see-also"></a>関連項目

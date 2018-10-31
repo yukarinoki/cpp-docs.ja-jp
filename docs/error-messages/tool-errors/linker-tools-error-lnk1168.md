@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0a80aa365edf3e39c41ed73d815cc82de6ce9a52
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e8b9f8614feb98f7e21392565aa610b7d42cd512
+ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118168"
+ms.lasthandoff: 10/09/2018
+ms.locfileid: "48890167"
 ---
 # <a name="linker-tools-error-lnk1168"></a>リンカ ツール エラー LNK1168
 
@@ -35,10 +35,6 @@ Windows SysInternals ユーティリティを使用して[処理](http://technet
 
 ファイルがウイルス対策プログラムによってロックされている場合、この問題を解決するには、ウイルス対策プログラムによる自動スキャンの対象からビルド出力ディレクトリを除外します。 ウイルス対策スキャナーは、多くの場合、ファイル システムで新しいファイルを作成することにより実行され、スキャンの実行中は、このスキャナーによりファイルがロックされます。 特定のディレクトリをスキャン対象から除外する方法の詳細については、ウイルス対策プログラムのドキュメントを参照してください。
 
-ファイルが検索インデックス作成サービスによってロックされている場合、この問題を解決するには、自動インデックス作成の対象からビルド出力ディレクトリを除外します。 詳細については、インデックス作成サービスのドキュメントを参照してください。 Windows 検索インデックス作成サービスを変更する**インデックスのオプション**、Windows で**コントロール パネルの **します。 詳細については、次を参照してください。[を向上させる Windows 検索インデックスを使用する: よく寄せられる質問](http://windows.microsoft.com/en-us/windows/improve-windows-searches-using-index-faq#1TC=windows-7)します。
+ファイルが検索インデックス作成サービスによってロックされている場合、この問題を解決するには、自動インデックス作成の対象からビルド出力ディレクトリを除外します。 詳細については、インデックス作成サービスのドキュメントを参照してください。 Windows 検索インデックス作成サービスを変更する**インデックスのオプション**、Windows で**コントロール パネルの **します。 詳細については、次を参照してください。[を向上させる Windows 検索インデックスを使用する: よく寄せられる質問](http://windows.microsoft.com/windows/improve-windows-searches-using-index-faq#1TC=windows-7)します。
 
 ビルド処理で実行可能ファイルを上書きできない場合、そのファイルは、ファイル エクスプローラーによってロックされている可能性があります。 場合、**アプリケーション エクスペリエンス**サービスが無効で、長時間にわたって実行可能ファイルのハンドルのロックをファイル エクスプ ローラー保持可能性があります。 この問題を解決するには実行**services.msc**を開き、**プロパティ**の ダイアログ ボックス、**アプリケーション エクスペリエンス**サービス。 変更、**スタートアップの種類**から**無効**に**手動**します。
-
-## <a name="see-also"></a>関連項目
-
-[ソリューションまたは Visual C で ActiveX プロジェクトをビルドするときに、"error PRJ0008"または"Fatal error LNK1168"のエラー メッセージを受け取る可能性があります。](http://support.microsoft.com/kb/308358)

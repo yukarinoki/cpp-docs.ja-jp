@@ -1,7 +1,7 @@
 ---
-title: ref new、gcnew (C++ コンポーネント拡張) |Microsoft Docs
+title: ref new、gcnew (C +/cli および C++/cli CX) |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/12/2018
 ms.technology:
 - cpp-windows
 ms.topic: reference
@@ -20,14 +20,14 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - uwp
-ms.openlocfilehash: 1c31cda7c074b06025051661d27f00d2624721d0
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: c9553ac6bf1d2e8e8d92745456f1f52d1de1c9ba
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42596159"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057043"
 ---
-# <a name="ref-new-gcnew--c-component-extensions"></a>ref new、gcnew (C++ コンポーネント拡張)
+# <a name="ref-new-gcnew--ccli-and-ccx"></a>ref new、gcnew (C +/cli および C++/cli CX)
 
 **Ref 新しい**集計キーワードは、ガベージ コレクションのオブジェクトにアクセスできなくなったし、識別するハンドルを返す対象である型のインスタンスを割り当てます ([^](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)) に割り当てられたオブジェクト。
 
@@ -43,7 +43,7 @@ A **ref 新しい**操作がスローされます`OutOfMemoryException`メモリ
 
 使用**ref 新しい**Windows ランタイム オブジェクト有効期間が自動的に管理用のメモリを割り当てられません。 オブジェクトは、参照の最後のコピーがスコープ外になった後で参照カウントが 0 になると、自動的に解放されます。 詳細については、次を参照してください。 [Ref クラスと構造体](../cppcx/ref-classes-and-structs-c-cx.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -51,7 +51,7 @@ A **ref 新しい**操作がスローされます`OutOfMemoryException`メモリ
 
 割り当てられているマネージ型 (参照または値型) のメモリ**gcnew**、ガベージ コレクションを使用して割り当てを解除します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
@@ -84,7 +84,7 @@ value class Boxed {
     public:
         int i;
 };
-int main()  
+int main()
 {
     Boxed^ y = gcnew Boxed;
     y->i = 32;
@@ -99,4 +99,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)

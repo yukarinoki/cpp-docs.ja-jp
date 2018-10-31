@@ -15,19 +15,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b14f562bd93bf023d540bf362dd2f9a881c2e441
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4e5b0f1b38e73523a476c83e19ab9bf812fdc2fa
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436794"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204536"
 ---
 # <a name="mfc-activex-controls-painting-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールの描画
 
 この記事では、ActiveX コントロールの描画プロセスとプロセスを最適化する描画コードを変更する方法について説明します。 (を参照してください[コントロールの描画の最適化](../mfc/optimizing-control-drawing.md)ないコントロールを個別に描画を最適化する方法の手法が以前に選択した GDI オブジェクトを復元します。 すべてのコントロールが描画されたコンテナーが自動的に復元元のオブジェクトです。)
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 この記事の例では既定の設定では、MFC ActiveX コントロール ウィザードによって作成されたコントロールです。 MFC ActiveX コントロール ウィザードを使用してアプリケーションのスケルトンのコントロールを作成する方法の詳細については、この記事を参照してください。 [MFC ActiveX コントロール ウィザード](../mfc/reference/mfc-activex-control-wizard.md)します。
 
@@ -112,11 +112,11 @@ ActiveX コントロールの描画の既定の実装では、コントロール
 
 1. **新しいコントロールを挿入**ボックスで、コントロールを選択し、をクリックして**OK**します。
 
-     コントロールは、テスト コンテナーに表示されます。
+   コントロールは、テスト コンテナーに表示されます。
 
 1. **コントロール** メニューのをクリックして**を描画するメタファイル**します。
 
-     メタファイルを表示する別のウィンドウが表示されます。 スケーリングがコントロールのメタファイルに与える影響を確認するには、このウィンドウのサイズを変更することができます。 このウィンドウは、いつでも閉じることができます。
+   メタファイルを表示する別のウィンドウが表示されます。 スケーリングがコントロールのメタファイルに与える影響を確認するには、このウィンドウのサイズを変更することができます。 このウィンドウは、いつでも閉じることができます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e832dfa694e5d2977e6b6a4d659d373f726c0cd6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f38c4cdfcbb75cd4c2df4fadd10cfcaccda4540e
+ms.sourcegitcommit: a88d228480d4bb5834e985d7b3ead2760be95572
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059038"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50203067"
 ---
 # <a name="auto-c"></a>自動 (C++)
 
@@ -79,22 +79,22 @@ auto declarator initializer;
 使用して**自動**参照、const 修飾子、および volatile 修飾子を削除します。 次に例を示します。
 
 ```cpp
-// cl.exe /analyze /EHsc /W4
-#include <iostream>
+// cl.exe /analyze /EHsc /W4
+#include <iostream>
 
-using namespace std;
+using namespace std;
 
-int main( )
+int main( )
 {
-    int count = 10;
-    int& countRef = count;
-    auto myAuto = countRef;
+    int count = 10;
+    int& countRef = count;
+    auto myAuto = countRef;
 
-    countRef = 11;
-    cout << count << " ";
+    countRef = 11;
+    cout << count << " ";
 
-    myAuto = 12;
-    cout << count << endl;
+    myAuto = 12;
+    cout << count << endl;
 }
 
 ```
@@ -103,7 +103,7 @@ int main( )
 
 ## <a name="type-deduction-with-braced-initializers-c14"></a>中かっこで囲んだ初期化子 (c++ 14) を含む型の推論
 
-次のコード exmample では、中かっこを使用して、自動変数を初期化する方法を示します。 B と C A 間および間の違いに注意してくださいと E
+次のコード例では、中かっこを使用して、自動変数を初期化する方法を示します。 B と C A 間および間の違いに注意してくださいと E
 
 ```cpp
 #include <initializer_list>

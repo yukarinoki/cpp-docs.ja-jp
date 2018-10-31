@@ -32,12 +32,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1c64db5a041845bbd068bab1a72ad461740170b8
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fde79b2f96c815144b9cbdef1dcc7623e5a0eb60
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040480"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065214"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT クラス
 
@@ -118,7 +118,7 @@ class CContainedWindowT : public TBase
 |コントロールの作成|[ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)|
 |ATL でのウィンドウの使用|[ATL ウィンドウ クラス](../../atl/atl-window-classes.md)|
 |ATL プロジェクト ウィザード|[ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)|
-|Windows|[Windows](https://msdn.microsoft.com/library/windows/desktop/ms632595)と Windows SDK の後続のトピック|
+|Windows|[Windows](/windows/desktop/winmsg/windows)と Windows SDK の後続のトピック|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -126,7 +126,7 @@ class CContainedWindowT : public TBase
 
 `CContainedWindowT`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 
@@ -176,7 +176,7 @@ CContainedWindowT(
 呼び出し[RegisterWndSuperclass](#registerwndsuperclass)は既存のクラスに基づきますが、使用するウィンドウ クラスを登録する[この段階](#windowproc)します。
 
 ```
-HWND Create(  
+HWND Create(
     HWND hWndParent,
     _U_RECT rect,
     LPCTSTR szWindowName = NULL,
@@ -441,7 +441,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 この静的メソッドでは、ウィンドウ プロシージャを実装します。
 
 ```
-static LRESULT CALLBACK WindowProc(  
+static LRESULT CALLBACK WindowProc(
     HWND hWnd,
     UINT uMsg,
     WPARAM wParam,

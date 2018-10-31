@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 996a891d62ee254fe2ce769483d34941ffb300b6
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 6f2b4dddd77b245de307173fbc2496181658be78
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43680540"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066072"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 における Visual C++ の新機能
 
@@ -42,11 +42,11 @@ Visual Studio 2017 には、Visual C++ 環境に対する多くの更新プロ�
 
 - Visual Studio 2017 では、[/sdl](build/reference/sdl-enable-additional-security-checks.md) を [/await](build/reference/await-enable-coroutine-support.md) と一緒に使うことができます。 コルーチンでの [/RTC](build/reference/rtc-run-time-error-checks.md) の制限がなくなりました。
 
-   **Visual Studio 2017 バージョン 15.3**:  
+   **Visual Studio 2017 バージョン 15.3**:
+
 - [/std:c++14 と /std:c++latest](build/reference/std-specify-language-standard-version.md): これらのコンパイラ オプションを使用すると、プロジェクトで ISO C++ プログラミング言語の特定のバージョンにオプトインできます。 ほとんどの新しいドラフト標準機能は、**/std:c++latest** オプションによって保護されています。
 
 - [/std:c++17](build/reference/std-specify-language-standard-version.md) を使用すると、コンパイラによって実装された C++17 機能セットが有効になります。 このオプションによって、C++17 後の C++ 標準のワーキング ドラフトおよび不具合の更新のバージョンで変更または更新された機能に対するコンパイラと標準ライブラリのサポートが無効になります。 これらの機能を有効にするには、**/std:c++latest** を使用します。
-
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>コード生成、セキュリティ、診断、バージョン管理
 
@@ -65,7 +65,7 @@ Visual Studio 2017 には、Visual C++ 環境に対する多くの更新プロ�
 
 **Visual Studio 2017 バージョン 15.5**:
 
-Visual C++ ランタイムの性能が継続的に上がります。生成されたコードの質が良くなるためです。 つまり、コードを再コンパイルするだけでアプリがさらに速くなります。 コンパイラ最適化の一部はまったく新しい機能です。たとえば、条件付きスカラー ストアをベクター化する、`sin(x)` と `cos(x)` の呼び出しを組み合わせて新しい `sincos(x)` を作る、SSA オプティマイザーから冗長命令を除去するなどです。 その他のコンパイラ最適化は、既存の機能の改善になります。条件式のベクター化ヒューリスティック、ループ最適化の改善、float min/max codegen などです。 リンカーには新しくて速い **/OPT:ICF** が実装されました。結果的に、リンク時間が最大 9% スピードアップします。インクリメンタル リンクに他のパフォーマンス修正があります。 詳細については、「[/OPT (最適化)](https://docs.microsoft.com/en-us/cpp/build/reference/opt-optimizations)」と「[/INCREMENTAL (インクリメンタル リンクを行う)](https://docs.microsoft.com/en-us/cpp/build/reference/incremental-link-incrementally)」を参照してください。
+Visual C++ ランタイムの性能が継続的に上がります。生成されたコードの質が良くなるためです。 つまり、コードを再コンパイルするだけでアプリがさらに速くなります。 コンパイラ最適化の一部はまったく新しい機能です。たとえば、条件付きスカラー ストアをベクター化する、`sin(x)` と `cos(x)` の呼び出しを組み合わせて新しい `sincos(x)` を作る、SSA オプティマイザーから冗長命令を除去するなどです。 その他のコンパイラ最適化は、既存の機能の改善になります。条件式のベクター化ヒューリスティック、ループ最適化の改善、float min/max codegen などです。 リンカーには新しくて速い **/OPT:ICF** が実装されました。結果的に、リンク時間が最大 9% スピードアップします。インクリメンタル リンクに他のパフォーマンス修正があります。 詳細については、「[/OPT (最適化)](build/reference/opt-optimizations.md)」と「[/INCREMENTAL (インクリメンタル リンクを行う)](build/reference/incremental-link-incrementally.md)」を参照してください。
 
 Visual C++ は Intel の AVX-512 に対応しています。これに含まれるベクトルの長さ命令は AVX-512 の新しい関数を 128 ビット長と 256 ビット長のレジスタに与えます。
 
@@ -342,9 +342,9 @@ Visual Studio 2017 では、MSBuild プロジェクト ファイル (.vcxproj) �
 
   ![Cmake の [フォルダーを開く]](media/cmake_cpp.png "CMake Open Folder")
 
-**Visual Studio 2017 バージョン 15.3**: CMake Ninja generator のサポートが追加されました。 
+**Visual Studio 2017 バージョン 15.3**: CMake Ninja generator のサポートが追加されました。
 
-**Visual Studio 2017 バージョン 15.5**: 既存の CMake キャッシュをインポートするためのサポートが追加されました。 
+**Visual Studio 2017 バージョン 15.5**: 既存の CMake キャッシュをインポートするためのサポートが追加されました。
 
 **Visual Studio 2017 バージョン 15.7**: CMake 3.11、CMake プロジェクトでのコード分析、ソリューション エクスプローラーのターゲット ビュー、キャッシュ生成用のオプション、および単一ファイルのコンパイルのためのサポートが追加されました。 詳細については、「[CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)」 (Visual Studio での CMake のサポート) および「[Visual C++ で CMake プロジェクト](ide/cmake-tools-for-visual-cpp.md)」をご覧ください。
 
@@ -394,12 +394,11 @@ Android および iOS を対象とするモバイル アプリを、Visual Studi
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>ユニバーサル Windows プラットフォーム (UWP) での C++ の新しいオプション
 ユニバーサル Windows プラットフォームおよび Windows ストア用の C++ アプリケーションを記述およびパッケージ化するための新しいオプションが追加されました。デスクトップ ブリッジ インフラストラクチャを使うと、Windows ストアまたはサイドローディングを経由した既存のチャネルを通してデプロイできるように、既存のデスクトップ アプリケーションまたは COM オブジェクトをパッケージ化できます。 Windows 10 の新機能を使用すると、さまざまな方法で、デスクトップ アプリケーションに UWP 機能を追加できます。 詳細については、[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)に関するページをご覧ください。
 
-**Visual Studio 2017 バージョン 15.5**  
-**Windows アプリケーション パッケージ プロジェクト**というプロジェクト テンプレートが追加されました。このテンプレートでは、デスクトップ ブリッジを使用してデスクトップ アプリケーションをパッケージ化する作業が、大幅に簡略化されます。 **[ファイル]、[新規]、[プロジェクト]、[インストール]、[Visual C++]、[ユニバーサル Windows プラットフォーム]** の下にあります。 詳細については、「[Visual Studio を使ったアプリのパッケージ化 (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)」をご覧ください。
+**Visual Studio 2017 バージョン 15.5**: **Windows アプリケーション パッケージ プロジェクト**というプロジェクト テンプレートが追加されました。このテンプレートでは、デスクトップ ブリッジを使用してデスクトップ アプリケーションをパッケージ化する作業が、大幅に簡略化されます。 **[ファイル]、[新規]、[プロジェクト]、[インストール]、[Visual C++]、[ユニバーサル Windows プラットフォーム]** の下にあります。 詳細については、「[Visual Studio を使ったアプリのパッケージ化 (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)」をご覧ください。
 
 新しいコードを作成するときに、ヘッダー ファイルだけに実装される Windows ランタイム向けの標準 C++ 言語プロジェクションである C++/WinRT を使うことができるようになりました。 これにより、標準準拠の任意の C++ コンパイラを使って、Windows ランタイム API を作成および使用できます。 C++/WinRT は、C++ の開発者が最新の Windows API に最適にアクセスできるように設計されています。 詳しくは、「[C++/WinRT Available on GitHub](https://moderncpp.com/)」 (C++/WinRT が GitHub で入手可能) をご覧ください。
 
-[Windows SDK Insider Preview のビルド 17025](https://blogs.windows.com/buildingapps/2017/11/01/windows-10-sdk-preview-build-17025/#ryPH3zAy6yk2cIRX.97) より、C++/WinRT が Windows SDK に含まれるようになりました。 詳細については、「[C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/)」 (C++/WinRT が Windows SDK に追加されました) を参照してください。
+Windows SDK Insider Preview のビルド 17025 より、C++/WinRT が Windows SDK に含まれるようになりました。 詳細については、「[C++/WinRT is now included the Windows SDK](https://blogs.msdn.microsoft.com/vcblog/2017/11/01/cppwinrt-is-now-included-the-windows-sdk/)」 (C++/WinRT が Windows SDK に追加されました) を参照してください。
 
 ## <a name="clangc2-platform-toolset"></a>Clang/C2 プラットフォーム ツールセット
 
@@ -417,10 +416,11 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **/bi
 
 15.3 で使われていた警告番号の一部は 15.5 では使われなくなりました。 より具体的なチェックに置換されました。
 
-**Visual Studio 2017 バージョン 15.6**:  
-単一ファイルの分析、および分析実行時のパフォーマンス向上のサポートの追加。 詳細については、「[C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)」 (Visual Studio 2017 15.6 プレビュー 2 での C++ スタティック分析の改善) を参照してください。
+**Visual Studio 2017 バージョン 15.6**:
 
-**Visual Studio 2017 バージョン 15.7**:  
+- 単一ファイルの分析、および分析実行時のパフォーマンス向上のサポートの追加。 詳細については、「[C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)」 (Visual Studio 2017 15.6 プレビュー 2 での C++ スタティック分析の改善) を参照してください。
+
+**Visual Studio 2017 バージョン 15.7**:
 
 - どのコード分析ルールを実行するかを指定できる [/analyze: ruleset](build/reference/analyze-code-analysis.md)のサポートの追加。
 - 追加の C++ Core Guidelines ルールのサポートの追加。  詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
@@ -436,11 +436,11 @@ Google Test Adapter と Boost.Test Adapter は **C++ ワークロードによる
 - Boost.Test ダイナミック ライブラリのサポートの追加。
 - 現在、Boost.Test 項目テンプレートは IDE にあります。
 
-詳細については、「[Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)」 (Boost.Test 単体テスト: 動的なライブラリのサポートと新しい項目テンプレート) を参照してください。 
+詳細については、「[Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)」 (Boost.Test 単体テスト: 動的なライブラリのサポートと新しい項目テンプレート) を参照してください。
 
 **Visual Studio 2017 バージョン 15.7**:
 
-C++ 単体テスト プロジェクトへの [CodeLens](https://docs.microsoft.com/en-us/visualstudio/ide/find-code-changes-and-other-history-with-codelens) のサポートの追加。 詳細については、「[Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/)」 (C++ 単体テスト用の CodeLens の発表) を参照してください。
+C++ 単体テスト プロジェクトへの [CodeLens](/visualstudio/ide/find-code-changes-and-other-history-with-codelens) のサポートの追加。 詳細については、「[Announcing CodeLens for C++ Unit Testing](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/announcing-codelens-for-c-unit-testing/)」 (C++ 単体テスト用の CodeLens の発表) を参照してください。
 
 ## <a name="visual-studio-graphics-diagnostics"></a>Visual Studio グラフィックス診断
 

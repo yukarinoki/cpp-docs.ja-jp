@@ -1,7 +1,7 @@
 ---
 title: CSocketAddr クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-atl
 ms.topic: reference
@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c39ca72136db7c11e925f28cc3413a5f7b77002
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 705cbd051f7c5761ae9a2aabfe919519681ef089
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46040857"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990218"
 ---
 # <a name="csocketaddr-class"></a>CSocketAddr クラス
 
@@ -62,11 +62,11 @@ class CSocketAddr
 
 このクラスは、IP バージョンを Windows で使用するためのネットワーク アドレスを検索するための柔軟なアプローチはソケット API 関数やライブラリのソケット ラッパーを提供します。
 
-ネットワーク アドレスを検索するために使用するこのクラスのメンバーは、Win32 API 関数を使用して[getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)します。
+ネットワーク アドレスを検索するために使用するこのクラスのメンバーは、Win32 API 関数を使用して[getaddrinfo](/windows/desktop/api/ws2tcpip/nf-ws2tcpip-getaddrinfo)します。 ANSI または UNICODE のバージョンの関数は ANSI または UNICODE のコードをコンパイルするかどうかによって呼び出されます。
 
 このクラスは、両方の IPv4 と Ipv6 ネットワーク アドレスをサポートします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsocket.h
 
@@ -88,15 +88,15 @@ CSocketAddr();
 
 ```
 int FindAddr(
-    const char *szHost,
-    const char *szPortOrServiceName,
+    const TCHAR *szHost,
+    const TCHAR *szPortOrServiceName,
     int flags,
     int addr_family,
     int sock_type,
     int ai_proto);
 
 int FindAddr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
     int flags,
     int addr_family,
@@ -141,10 +141,10 @@ IPv4 または IPv6 のいずれかの形式で、ホスト名のパラメータ
 
 ```
 int FindINET4Addr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
-    int flags,
-    int sock_type,);
+    int flags = 0,
+    int sock_type = SOCK_STREAM);
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -175,10 +175,10 @@ int FindINET4Addr(
 
 ```
 int FindINET6Addr(
-    const char *szHost,
+    const TCHAR *szHost,
     int nPortNo,
-    int flags,
-    int sock_type,);
+    int flags = 0,
+    int sock_type = SOCK_STREAM);
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -208,7 +208,7 @@ int FindINET6Addr(
 特定の要素へのポインターを返すには、このメソッドを呼び出す、`addrinfo`一覧。
 
 ```
-addrinfo* const GetAddrInfoint nIndex = 0) const;
+addrinfo* const GetAddrInfo(int nIndex = 0) const;
 ```
 
 ### <a name="parameters"></a>パラメーター

@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 154f9b4835f7dc18fcf45de53b078d3d5b649e37
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f9cd49a0083081ff7152c92b731e02cfe50c7ff0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446923"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055321"
 ---
 # <a name="index-class"></a>index クラス
 
@@ -77,7 +77,7 @@ class index;
 
 `index`構造体の座標ベクターを表します*N*内の一意の位置を示す整数を*N*-次元空間。 ベクターの値は最上位から最下位へ順に並べ替えられます。 使用してコンポーネントの値を取得できます[演算子 =](#operator_eq)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp.h
 
@@ -144,6 +144,7 @@ index operator--(
    int
 ) restrict(amp,cpu);
 ```
+
 ### <a name="return-values"></a>戻り値
 
 前置演算子のインデックスのオブジェクト (* この)。 サフィックス演算子の場合、新しいインデックス オブジェクトです。
@@ -157,6 +158,7 @@ index<_Rank>& operator%=(
    int _Rhs
 ) restrict(cpu, amp);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *_Rhs*<br/>
@@ -188,6 +190,7 @@ index<_Rank>& operator/=(
    int _Rhs
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *_Rhs*<br/>
@@ -237,6 +240,7 @@ index<_Rank> operator++(
    int
 ) restrict(amp,cpu);
 ```
+
 ### <a name="return-value"></a>戻り値
 
 前置演算子のインデックスのオブジェクト (* この)。 サフィックス演算子の場合、新しいインデックス オブジェクトです。
@@ -253,6 +257,7 @@ index<_Rank>& operator+=(
    int _Rhs
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *_Rhs*<br/>
@@ -270,6 +275,7 @@ index<_Rank>& operator=(
    const index<_Rank>& _Other
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *_Other*<br/>
@@ -291,6 +297,7 @@ index<_Rank>& operator-=(
    int _Rhs
 ) restrict(amp,cpu);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *_Rhs*<br/>
@@ -305,6 +312,7 @@ index<_Rank>& operator-=(
 ```
 static const int rank = _Rank;
 ```
+
 ## <a name="see-also"></a>関連項目
 
 [コンカレンシー名前空間 (C++ AMP)](concurrency-namespace-cpp-amp.md)

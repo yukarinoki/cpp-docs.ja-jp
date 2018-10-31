@@ -44,12 +44,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 39329f4895060ff950f36c3d10dd5e4020f3b98a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b4490eef3427f66456ec79ae2f5429d309a82a54
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448429"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50057402"
 ---
 # <a name="coledatetime-class"></a>COleDateTime クラス
 
@@ -146,7 +146,7 @@ class COleDateTime
 
 詳細については、`COleDateTime`と`COleDateTimeSpan`クラスは、記事をご覧ください。[日付と時刻: オートメーション サポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** ATLComTime.h
 
@@ -165,7 +165,7 @@ bool operator>=(const COleDateTime& date) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*日付*  
+*日付*<br/>
 比較される `COleDateTime` オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -210,31 +210,31 @@ COleDateTime(const DBTIMESTAMP& dbts) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dateSrc*  
+*dateSrc*<br/>
 既存の`COleDateTime`新しいにコピーされるオブジェクト`COleDateTime`オブジェクト。
 
-*varSrc*  
+*varSrc*<br/>
 既存の`VARIANT`データ構造 (可能性があります、`COleVariant`オブジェクト) を日付/時刻値 (VT_DATE) に変換し、新しいコピーを`COleDateTime`オブジェクト。
 
-*dtSrc*  
+*dtSrc*<br/>
 日付/時刻 (`DATE`)、新規にコピーされる値`COleDateTime`オブジェクト。
 
-*timeSrc*  
+*timeSrc*<br/>
 A`time_t`または`__time64_t`値を日付/時刻値に変換し、新しいコピー`COleDateTime`オブジェクト。
 
-*systimeSrc*  
+*systimeSrc*<br/>
 A`SYSTEMTIME`構造体の日付/時刻値に変換して、新しいコピーを`COleDateTime`オブジェクト。
 
-*filetimeSrc*  
+*filetimeSrc*<br/>
 A`FILETIME`構造体の日付/時刻値に変換して、新しいコピーを`COleDateTime`オブジェクト。 なお`FILETIME`世界協定時刻 (UTC) を使用して、現地時刻を構造に渡す場合、結果は不正確になります。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。
 
-*nYear*、 *nMonth*、 *%n%n*、*時間*、 *nMin*、 *nSec*  
+*nYear*、 *nMonth*、 *%n%n*、*時間*、 *nMin*、 *nSec*<br/>
 新しいにコピーされる日付と時刻の値を示す`COleDateTime`オブジェクト。
 
-*wDosDate*、 *wDosTime*  
+*wDosDate*、 *wDosTime*<br/>
 日付と時刻の値を日付/時刻値に変換して、新しいコピーを MS-DOS`COleDateTime`オブジェクト。
 
-*dbts*  
+*dbts*<br/>
 参照を[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)現在の現地時刻を含む構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*dwFlags*  
+*dwFlags*<br/>
 次のロケールのフラグのいずれかを示します。
 
 - LOCALE_NOUSEROVERRIDE は、カスタム ユーザー設定ではなく、システムの既定のロケール設定を使用します。
@@ -306,10 +306,10 @@ CString Format(UINT nFormatID) const;
 
 - VAR_DATEVALUEONLY は、解析中に時刻部分を無視します。
 
-*lcid*  
+*lcid*<br/>
 変換に使用するロケール ID を示します。 言語識別子の詳細については、次を参照してください。[言語識別子](/windows/desktop/Intl/language-identifiers)します。
 
-*lpszFormat*  
+*lpszFormat*<br/>
 ような文字列を書式設定、`printf`文字列の書式設定します。 各パーセントで前に、コードの書式設定 ( `%`) 署名は、対応する置き換え`COleDateTime`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 実行時の関数を参照してください。 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)詳細についてはします。 値との書式設定コードの意味`Format`は。
 
 - `%H` 現在の日の時間
@@ -320,7 +320,7 @@ CString Format(UINT nFormatID) const;
 
 - `%%` パーセント記号
 
-*nFormatID*  
+*nFormatID*<br/>
 コントロールの書式設定文字列のリソース ID。
 
 ### <a name="return-value"></a>戻り値
@@ -333,13 +333,13 @@ A`CString`書式設定された日付/時刻値を格納します。
 
 この関数の 3 つの形式の簡単な説明に従います。
 
-`Format`( *dwFlags*、 *lcid*)  
+`Format`( *dwFlags*、 *lcid*)<br/>
 このフォームでは、日付と時刻の言語仕様 (ロケール Id) を使用して、値を形式です。 既定のパラメーターを使用して、このフォームで印刷されます、日付と時刻、時刻部分が 0 (深夜) である場合、日付のみが出力されますまたは日付部分が 0 (30 1899 年 12 月)、しない限り、この場合、時間だけが出力されます。 日付/時刻値が 0 (30 1899 年 12 月、午前 0 時) の場合、既定のパラメーターには、このフォームは午前 0 時を印刷します。
 
-`Format`( *lpszFormat*)  
+`Format`( *lpszFormat*)<br/>
 このフォームはパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式設定と`printf`します。 書式指定文字列は、関数にパラメーターとして渡されます。 書式設定コードの詳細については、次を参照してください。 [strftime、wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)ランタイム ライブラリのリファレンス。
 
-`Format`( *nFormatID*)  
+`Format`( *nFormatID*)<br/>
 このフォームはパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式設定と`printf`します。 書式指定文字列は、リソースです。 この文字列リソースの ID は、パラメーターとして渡されます。 書式設定コードの詳細については、次を参照してください。 [strftime、wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)で、*ランタイム ライブラリ リファレンス*します。
 
 ### <a name="example"></a>例
@@ -356,7 +356,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*dbts*  
+*dbts*<br/>
 参照を[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -381,7 +381,7 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*sysTime*  
+*sysTime*<br/>
 参照を[SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)から変換された日付/時刻値を受け取る、`COleDateTime`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -404,7 +404,7 @@ bool GetAsUDATE(UDATE& udate) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*udate*  
+*udate*<br/>
 参照を`UDATE`から変換された日付/時刻値を受け取る、`COleDateTime`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -701,13 +701,13 @@ DateTimeStatus GetStatus() const throw();
 戻り値は、`DateTimeStatus`列挙型内で定義されている、`COleDateTime`クラス。
 
 ```
-enum DateTimeStatus  
-{  
-   error = -1,  
-   valid = 0,  
-   invalid = 1,    // Invalid date (out of range, etc.)  
-   null = 2,       // Literally has no value  
-};  
+enum DateTimeStatus
+{
+   error = -1,
+   valid = 0,
+   invalid = 1,    // Invalid date (out of range, etc.)
+   null = 2,       // Literally has no value
+};
 ```
 
 これらのステータス値の簡単な説明は、次の一覧を参照してください。
@@ -930,18 +930,18 @@ operator DATE() const throw();
 日付/時刻値を読み取るための文字列を解析します。
 
 ```
-bool ParseDateTime(  
-LPCTSTR lpszDate,
-DWORD dwFlags = 0,
-LCID lcid = LANG_USER_DEFAULT) throw();
+bool ParseDateTime(
+    LPCTSTR lpszDate,
+    DWORD dwFlags = 0,
+    LCID lcid = LANG_USER_DEFAULT) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*lpszDate*  
+*lpszDate*<br/>
 解析するには null で終わる文字列へのポインター。 詳細については、「解説」を参照してください。
 
-*dwFlags*  
+*dwFlags*<br/>
 ロケールの設定と解析のフラグを示します。 1 つ以上の次のフラグ:
 
 - LOCALE_NOUSEROVERRIDE では、カスタム ユーザー設定ではなく、システムの既定のロケール設定を使用します。
@@ -950,7 +950,7 @@ LCID lcid = LANG_USER_DEFAULT) throw();
 
 - VAR_DATEVALUEONLY は、解析中に時刻部分を無視します。
 
-*lcid*  
+*lcid*<br/>
 変換に使用するロケール ID を示します。
 
 ### <a name="return-value"></a>戻り値
@@ -991,15 +991,15 @@ VAR_DATEVALUEONLY の場合は、時間の値は 0、または午前 0 時にか
 この日付を設定`COleDateTime`オブジェクト。
 
 ```
-int SetDate(  
-int nYear,
-int nMonth,
-int nDay) throw();
+int SetDate(
+    int nYear,
+    int nMonth,
+    int nDay) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nYear*、 *nMonth*、 *%n%n*  
+*nYear*、 *nMonth*、 *%n%n*<br/>
 これにコピーされる日付の構成要素を示す`COleDateTime`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1062,18 +1062,18 @@ int nDay) throw();
 この日時を設定`COleDateTime`オブジェクト。
 
 ```
-int SetDateTime(  
-int nYear,
-int nMonth,
-int nDay,
-int nHour,
-int nMin,
-int nSec) throw();
+int SetDateTime(
+    int nYear,
+    int nMonth,
+    int nDay,
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*nYear*、 *nMonth*、 *%n%n*、*時間*、 *nMin*、 *nSec*  
+*nYear*、 *nMonth*、 *%n%n*、*時間*、 *nMin*、 *nSec*<br/>
 これにコピーされる日付と時刻のコンポーネントを示す`COleDateTime`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1151,7 +1151,7 @@ void SetStatus(DateTimeStatus status) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*status*  
+*status*<br/>
 この新しいステータス値`COleDateTime`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -1170,15 +1170,15 @@ void SetStatus(DateTimeStatus status) throw();
 この時間を設定`COleDateTime`オブジェクト。
 
 ```
-int SetTime(  
-int nHour,
-int nMin,
-int nSec) throw();
+int SetTime(
+    int nHour,
+    int nMin,
+    int nSec) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*時間*、 *nMin*、 *nSec*  
+*時間*、 *nMin*、 *nSec*<br/>
 これにコピーされる時間コンポーネントを示す`COleDateTime`オブジェクト。
 
 ### <a name="return-value"></a>戻り値

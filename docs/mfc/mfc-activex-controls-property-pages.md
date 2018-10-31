@@ -20,19 +20,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 04a533acecd837fd5bad51612ce7b7eced841178
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 053a6dcf009fa65bbba9c864803db78866037196
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376487"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204419"
 ---
 # <a name="mfc-activex-controls-property-pages"></a>MFC ActiveX コントロール : プロパティ ページ
 
 プロパティ ページを使用すると、ActiveX コントロールのユーザーを表示および ActiveX コントロールのプロパティを変更します。 これらのプロパティは、表示およびコントロールのプロパティを編集するため、カスタマイズされたグラフィカル インターフェイスを提供する 1 つまたは複数のプロパティ ページを含む、コントロールのプロパティのダイアログ ボックスを呼び出すことによってアクセスされます。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 2 つの方法では、ActiveX コントロールのプロパティ ページが表示されます。
 
@@ -86,7 +86,7 @@ ActiveX コントロール以外の MFC アプリケーションでプロパテ�
 
 1. IDD_PROPPAGE_SAMPLE ダイアログ ボックスを開きます。
 
-     ActiveX コントロール ウィザードでは、ダイアログ ID、ここでは、サンプルの末尾に、プロジェクトの名前を追加します。
+   ActiveX コントロール ウィザードでは、ダイアログ ID、ここでは、サンプルの末尾に、プロジェクトの名前を追加します。
 
 1. ドラッグし、選択したコントロールをツールボックスからダイアログ ボックスの領域にドロップします。
 

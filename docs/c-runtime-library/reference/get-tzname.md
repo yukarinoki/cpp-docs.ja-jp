@@ -1,7 +1,7 @@
 ---
 title: _get_tzname | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/22/2018
 ms.technology:
 - cpp-standard-libraries
 ms.topic: reference
@@ -34,12 +34,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a4b49aa404dda6234382ae461459dece64e5996d
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: d773d5d98466963ef621cc3fa7bc5ab8b4acc40a
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451694"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990309"
 ---
 # <a name="gettzname"></a>_get_tzname
 
@@ -62,7 +62,7 @@ errno_t _get_tzname(
 文字列の長さ*timeZoneName* null 終端文字を含むです。
 
 *timeZoneName*<br/>
-文字列のタイム ゾーンの名前または夏時間標準タイム ゾーン名 (DST) の表現によってアドレス*インデックス*です。
+に応じて、タイム ゾーン名または夏時間標準タイム ゾーン名 (DST) の表現の文字の文字列のアドレス*インデックス*します。
 
 *sizeInBytes*<br/>
 サイズ、 *timeZoneName*文字の文字列 (バイト単位)。
@@ -70,11 +70,19 @@ errno_t _get_tzname(
 *index*<br/>
 取得する 2 つのタイム ゾーン名のいずれかのインデックス。
 
+|*index*|内容*timeZoneName*|*timeZoneName*既定値|
+|-|-|-|
+|0|タイム ゾーン名|「PST」|
+|1|夏時間ゾーン名|「PDT」|
+|> 1 または < 0|**errno**設定**EINVAL**|変更されない|
+
+実行時に値を明示的に変更しない限り、既定値はそれぞれ「PST」および「PDT」です。
+
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 それ以外の場合、 **errno**値を入力します。
+成功した場合は 0 それ以外の場合、 **errno**値を入力します。
 
-いずれか*timeZoneName*は**NULL**、または*sizeInBytes*がゼロまたは 0 (ただし、両方は必要ありません) よりも小さい無効なパラメーター ハンドラーが呼び出される、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**し、返します**EINVAL**です。
+いずれか*timeZoneName*は**NULL**、または*sizeInBytes*が 0 か、無効なパラメーター ハンドラーが呼び出される 0 個 (ただし、両方は必要ありません) より小さい」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**返します**EINVAL**します。
 
 ### <a name="error-conditions"></a>エラー条件
 
@@ -86,23 +94,57 @@ errno_t _get_tzname(
 |変更されない|任意|ゼロ|任意|**EINVAL**|変更されない|
 |変更されない|任意|> 0|> 1|**EINVAL**|変更されない|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Get_tzname**関数のアドレスにタイム ゾーンの名前または夏時間標準タイム ゾーン名 (DST) の文字の文字列表現を取得する*timeZoneName*によっては、インデックス値の文字列のサイズとともに*pReturnValue*です。 場合*timeZoneName*は**NULL**と*sizeInBytes*が 0 でゾーン (バイト単位) が返される時刻の文字列のサイズだけ*pReturnValue*. インデックス値は、標準タイム ゾーンが 0、または夏時間ゾーンが 1 のいずれかでなければなりません。他のインデックス値では結果が未確定となります。
+**_Get_tzname**関数のアドレスに現在のタイム ゾーン名または夏時間標準タイム ゾーン名 (DST) の文字の文字列表現を取得する*timeZoneName*に応じて、インデックス値、文字列のサイズと共に*pReturnValue*します。 場合*timeZoneName*は**NULL**と*sizeInBytes*は 0 を指定されたタイム ゾーンを保持するために必要な文字列のサイズとで(バイト単位)の終端のnullが返されます*pReturnValue*します。 いずれかの標準時ゾーンの場合は 0 または 1 標準時ゾーンの夏時間; をインデックス値がある必要があります。その他の値の*インデックス*が未確定の結果。
 
-### <a name="index-values"></a>インデックス値
+## <a name="example"></a>例
 
-|*index*|内容*timeZoneName*|*timeZoneName*既定値|
-|-------------|--------------------------------|----------------------------------|
-|0|タイム ゾーン名|「PST」|
-|1|夏時間ゾーン名|「PDT」|
-|> 1 または < 0|**errno** 'éý' **EINVAL**|変更されない|
+このサンプルを呼び出す **_get_tzname**現在夏時間標準タイム ゾーン名を表示する必要なバッファー サイズを取得するには、呼び出し、そのサイズのバッファーを割り当てます **_get_tzname**内の名前をもう一度、バッファーし、し、コンソールに出力します。
 
-実行時に値を明示的に変更しない限り、既定値はそれぞれ「PST」および「PDT」です。  これらの文字配列のサイズを受ける**TZNAME_MAX**値。
+```C
+// crt_get_tzname.c
+// Compile by using: cl /W4 crt_get_tzname.c
+#include <stdio.h>
+#include <time.h>
+#include <malloc.h>
 
-## <a name="requirements"></a>要件
+enum TZINDEX {
+    STD,
+    DST
+};
 
-|ルーチン|必須ヘッダー|
+int main()
+{
+    size_t tznameSize = 0;
+    char * tznameBuffer = NULL;
+
+    // Get the size of buffer required to hold DST time zone name
+    if (_get_tzname(&tznameSize, NULL, 0, DST))
+        return 1;    // Return an error value if it failed
+
+    // Allocate a buffer for the name
+    if (NULL == (tznameBuffer = (char *)(malloc(tznameSize))))
+        return 2;    // Return an error value if it failed
+
+    // Load the name in the buffer
+    if (_get_tzname(&tznameSize, tznameBuffer, tznameSize, DST))
+        return 3;    // Return an error value if it failed
+
+    printf_s("The current Daylight standard time zone name is %s.\n", tznameBuffer);
+    return 0;
+}
+```
+
+### <a name="output"></a>出力
+
+```Output
+The current Daylight standard time zone name is PDT.
+```
+
+## <a name="requirements"></a>必要条件
+
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_get_tzname**|\<time.h>|
 
@@ -115,4 +157,3 @@ errno_t _get_tzname(
 [_get_daylight](get-daylight.md)<br/>
 [_get_dstbias](get-dstbias.md)<br/>
 [_get_timezone](get-timezone.md)<br/>
-[TZNAME_MAX](../../c-runtime-library/tzname-max.md)<br/>

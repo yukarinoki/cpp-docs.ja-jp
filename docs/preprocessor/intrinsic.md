@@ -18,12 +18,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 496971736e1f303d61b83e15b2ba1c03083f8d53
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: af7fe3a96a31f636a0a1c45b1ee74dd4006d15fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422793"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50071600"
 ---
 # <a name="intrinsic"></a>intrinsic
 
@@ -86,7 +86,7 @@ int main() {
 |[acos](../c-runtime-library/reference/acos-acosf-acosl.md)|[cosh](../c-runtime-library/reference/cosh-coshf-coshl.md)|[pow](../c-runtime-library/reference/pow-powf-powl.md)|[tanh](../c-runtime-library/reference/tanh-tanhf-tanhl.md)|
 |[asin](../c-runtime-library/reference/asin-asinf-asinl.md)|[fmod](../c-runtime-library/reference/fmod-fmodf.md)|[sinh](../c-runtime-library/reference/sinh-sinhf-sinhl.md)||
 
- 指定すると、下記の浮動小数点関数は本物の組み込み形式をある[/Oi](../build/reference/oi-generate-intrinsic-functions.md)、 [/Og](../build/reference/og-global-optimizations.md)、および[/fp:fast](../build/reference/fp-specify-floating-point-behavior.md) (または/Og を含む任意のオプション: [/Ox](../build/reference/ox-full-optimization.md)、 [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)、/o2)。
+指定すると、下記の浮動小数点関数は本物の組み込み形式をある[/Oi](../build/reference/oi-generate-intrinsic-functions.md)、 [/Og](../build/reference/og-global-optimizations.md)、および[/fp:fast](../build/reference/fp-specify-floating-point-behavior.md) (または/Og を含む任意のオプション: [/Ox](../build/reference/ox-full-optimization.md)、 [/O1](../build/reference/o1-o2-minimize-size-maximize-speed.md)、/o2)。
 
 |||||
 |-|-|-|-|
@@ -101,4 +101,4 @@ int main() {
 ## <a name="see-also"></a>関連項目
 
 [プラグマ ディレクティブと __Pragma キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)  
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

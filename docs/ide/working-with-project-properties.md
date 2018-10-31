@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 85439e191ac8676603c9d7fab8a41bb126e97b9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4420bdac9e788f80142546d8b09781a8aa3ce06d
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46398665"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821388"
 ---
 # <a name="working-with-project-properties"></a>プロジェクトのプロパティの操作
 
@@ -250,7 +250,7 @@ Visual C++ コンパイラ (cl.exe) は、特定の環境変数、特に LIB、L
 
 ## <a name="modifying-properties-and-targets-without-changing-the-project-file"></a>プロジェクト ファイルを変更しないでプロパティとターゲットを変更する
 
-プロジェクト ファイルを変更することなく、MSBuild のコマンド プロンプトからプロジェクトのプロパティとターゲットをオーバーライドできます。 これは、一時的に、またはときどき一部のプロパティを適用する場合に便利です。 MSBuild のある程度の知識が必要です。 詳しくは、「[MSBuild](https://docs.microsoft.com/en-us/visualstudio/msbuild/msbuild)」をご覧ください。
+プロジェクト ファイルを変更することなく、MSBuild のコマンド プロンプトからプロジェクトのプロパティとターゲットをオーバーライドできます。 これは、一時的に、またはときどき一部のプロパティを適用する場合に便利です。 MSBuild のある程度の知識が必要です。 詳しくは、「[MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild)」をご覧ください。
 
 > [!IMPORTANT]
 > Visual Studio の XML エディターまたは任意のテキスト エディターを使って、.props ファイルまたは .targets ファイルを作成します。 **プロパティ マネージャー**はプロジェクト ファイルにプロパティを追加するため、このシナリオでは使わないでください。

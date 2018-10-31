@@ -76,12 +76,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: be2676609cae4de6b2f3995be1bc9311f88e0a84
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a10e1f6adb1fc9274a2a59215564fb60984ea661
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408715"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074489"
 ---
 # <a name="cdaoquerydef-class"></a>CDaoQueryDef クラス
 
@@ -197,7 +197,7 @@ Select、アクション、クロス集計、削除、更新プログラムを�
 
 `CDaoQueryDef`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 
@@ -235,7 +235,7 @@ BOOL CanUpdate();
 
 - データベースに対する更新アクセス許可があります。
 
-     これは、セキュリティ機能を実装するかどうかによって異なります。 MFC ではセキュリティのサポートはされていません必要があります、自分で実装を直接に DAO を呼び出すか、Microsoft Access を使用しています。 「アクセス許可のプロパティ」DAO ヘルプのトピックを参照してください。
+   これは、セキュリティ機能を実装するかどうかによって異なります。 MFC ではセキュリティのサポートはされていません必要があります、自分で実装を直接に DAO を呼び出すか、Microsoft Access を使用しています。 「アクセス許可のプロパティ」DAO ヘルプのトピックを参照してください。
 
 ##  <a name="cdaoquerydef"></a>  CDaoQueryDef::CDaoQueryDef
 
@@ -426,7 +426,6 @@ void GetFieldInfo(
     CDaoFieldInfo& fieldinfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
 
-
 void GetFieldInfo(
     LPCTSTR lpszName,
     CDaoFieldInfo& fieldinfo,
@@ -519,7 +518,6 @@ void GetParameterInfo(
     int nIndex,
     CDaoParameterInfo& paraminfo,
     DWORD dwInfoOptions = AFX_DAO_PRIMARY_INFO);
-
 
 void GetParameterInfo(
     LPCTSTR lpszName,
@@ -790,7 +788,6 @@ void SetODBCTimeout(short nODBCTimeout);
 virtual void SetParamValue(
     LPCTSTR lpszName,
     const COleVariant& varValue);
-
 
 virtual void SetParamValue(
     int nIndex,

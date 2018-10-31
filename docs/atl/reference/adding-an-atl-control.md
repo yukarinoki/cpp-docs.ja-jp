@@ -15,24 +15,24 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 47bbd73efc13eb28ed177c39366ae58cd9c91adc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 16bea4bb35a7eeffa1c6986953d7245ff588abd3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063191"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075530"
 ---
 # <a name="adding-an-atl-control"></a>ATL コントロールの追加
 
 このウィザードを使用すると、すべての潜在的なコンテナーのインターフェイスをサポートするプロジェクトにユーザー インターフェイス オブジェクトを追加します。 これらのインターフェイスをサポートするために、プロジェクトする必要がありますを作成して、ATL アプリケーションまたは ATL サポートを含む MFC アプリケーションとして。 ATL アプリケーションを作成するか、[ATL オブジェクトを MFC アプリケーションに追加して](../../mfc/reference/adding-atl-support-to-your-mfc-project.md) MFC アプリケーションの ATL サポートを実装するには、[ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)を利用できます。
 
-### <a name="to-add-an-atl-control-to-your-project"></a>ATL コントロールをプロジェクトに追加するには
+## <a name="to-add-an-atl-control-to-your-project"></a>ATL コントロールをプロジェクトに追加するには
 
 1. いずれかで**ソリューション エクスプ ローラー**または[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)、ATL シンプル オブジェクトを追加するプロジェクトの名前を右クリックします。
 
-2. クリックして**追加**クリックして、ショートカット メニューから**クラスの追加**します。
+1. クリックして**追加**クリックして、ショートカット メニューから**クラスの追加**します。
 
-3. [クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスの [テンプレート] ペインで、クリックして**ATL コントロール**、順にクリックします**追加**を表示する、 [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)します。
+1. [クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスの [テンプレート] ペインで、クリックして**ATL コントロール**、順にクリックします**追加**を表示する、 [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)します。
 
 使用して、 **ATL コントロール ウィザード**、3 種類のコントロールのいずれかを作成することができます。
 
@@ -47,5 +47,4 @@ ms.locfileid: "46063191"
 ## <a name="see-also"></a>関連項目
 
 [複合コントロールに機能を追加する](../../atl/adding-functionality-to-the-composite-control.md)<br/>
-[ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)   
-
+[ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)

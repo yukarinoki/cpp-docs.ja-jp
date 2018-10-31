@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: dc7b0ca9388de82d49927a7fe76694212b94246b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 30715cffb42c1dbf92512fa7314bf70f46f300a3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46053714"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50079936"
 ---
 # <a name="service-map-macros"></a>サービス マップに関するマクロ
 
@@ -33,9 +33,9 @@ ms.locfileid: "46053714"
 |[BEGIN_SERVICE_MAP](#begin_service_map)|ATL サービス マップの先頭をマークします。|
 |[END_SERVICE_MAP](#end_service_map)|ATL サービス マップの末尾をマークします。|
 |[SERVICE_ENTRY](#service_entry)|オブジェクトが特定のサービス ID をサポートしていることを示します。|
-|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指示[IServiceProviderImpl::QueryService](#queryservice)チェーンして、指定されたオブジェクト。|  
+|[SERVICE_ENTRY_CHAIN](#service_entry_chain)|指示[IServiceProviderImpl::QueryService](#queryservice)チェーンして、指定されたオブジェクト。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 
@@ -115,7 +115,7 @@ SERVICE_ENTRY_CHAIN( punk )
 作成または指定したサービスにアクセスし、サービスの指定したインターフェイスにインターフェイス ポインターを返します。
 
 ```
-STDMETHOD(QueryService)( 
+STDMETHOD(QueryService)(
     REFGUID guidService,
     REFIID riid,
     void** ppvObject);

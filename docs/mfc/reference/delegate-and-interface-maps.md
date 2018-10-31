@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2f44d362fc30503b062221c358dde6b2c10b9bd3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2bbf1a088151bcd2a6ecc1990c668211c6f70cd9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423755"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50065487"
 ---
 |||
 |-|-|
@@ -34,7 +34,6 @@ ms.locfileid: "46423755"
 |[INTERFACE_PART](#interface_part)|BEGIN_INTERFACE_MAP マクロと END_INTERFACE_MAP マクロの間オブジェクトでサポートされる各インターフェイスに使用します。|
 |[MAKE_DELEGATE](#make_delegate)|マネージ コントロールをイベント ハンドラーをアタッチします。|
 
-
 ## <a name="begin_delegate_map"></a> BEGIN_DELEGATE_MAP
 
 デリゲートのマップを開始します。
@@ -44,6 +43,7 @@ ms.locfileid: "46423755"
 ```
 BEGIN_DELEGATE_MAP(  CLASS );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *クラス*<br/>
@@ -53,7 +53,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 
 このマクロは、デリゲートのマップを構成するデリゲートのエントリの一覧の先頭をマークします。 このマクロの使用方法の例は、次を参照してください。 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** msclr\event.h
 
@@ -70,6 +70,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 ```
 BEGIN_INTERFACE_MAP( theClass, baseClass )
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *クラス*<br/>
@@ -84,7 +85,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 
 インターフェイス マップの詳細については、次を参照してください。[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -97,6 +98,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 ```
 delegate void CommandHandler(  UINT^ cmdID  );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *cmdID*<br/>
@@ -110,7 +112,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 
@@ -127,6 +129,7 @@ Windows フォームの使用に関する詳細については、次を参照し
 ```
 delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *cmdID*<br/>
@@ -141,7 +144,7 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h (アセンブリ atlmfc\lib\mfcmifc80.dll で定義)
 
@@ -164,14 +167,13 @@ END_DELEGATE_MAP();
 
 このマクロは、デリゲートのマップを構成するデリゲートのエントリの一覧の末尾をマークします。 このマクロの使用方法の例は、次を参照してください。 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** msclr\event.h
 
 ### <a name="see-also"></a>関連項目
 
 [方法: ネイティブ C++ クラスから Windows フォーム イベントをシンクする](../../dotnet/how-to-sink-windows-forms-events-from-native-cpp-classes.md)
-
 
 ##  <a name="end_interface_map"></a>END_INTERFACE_MAP
 
@@ -187,7 +189,7 @@ END_INTERFACE_MAP( )
 
 インターフェイス マップの詳細については、次を参照してください。[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -195,7 +197,6 @@ END_INTERFACE_MAP( )
 
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>
 [BEGIN_INTERFACE_MAP](#begin_interface_map)
-
 
 ##  <a name="event_delegate_entry"></a>EVENT_DELEGATE_ENTRY
 
@@ -206,6 +207,7 @@ END_INTERFACE_MAP( )
 ```
 EVENT_DELEGATE_ENTRY(MEMBER, ARG0, ARG1);
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *メンバー*<br/>
@@ -232,7 +234,7 @@ END_DELEGATE_MAP()
 
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** msclr\event.h
 
@@ -241,7 +243,6 @@ END_DELEGATE_MAP()
 [MAKE_DELEGATE](#make_delegate)<br/>
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)
-
 
 ##  <a name="interface_part"></a>INTERFACE_PART
 
@@ -252,6 +253,7 @@ BEGIN_INTERFACE_MAP マクロと END_INTERFACE_MAP マクロの間オブジェ�
 ```
 INTERFACE_PART( theClass, iid, localClass)
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *クラス*<br/>
@@ -267,10 +269,9 @@ INTERFACE_PART( theClass, iid, localClass)
 
 インターフェイス マップの詳細については、次を参照してください。[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
-
 
 ##  <a name="make_delegate"></a>MAKE_DELEGATE
 
@@ -281,6 +282,7 @@ INTERFACE_PART( theClass, iid, localClass)
 ```
 MAKE_DELEGATE( DELEGATE,  MEMBER) ;
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *デリゲート*<br/>
@@ -307,7 +309,7 @@ void CMyView::OnInitialUpdate()
 }
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** msclr\event.h
 
@@ -316,7 +318,4 @@ void CMyView::OnInitialUpdate()
 [BEGIN_DELEGATE_MAP](#begin_delegate_map)<br/>
 [END_DELEGATE_MAP](#end_delegate_map)<br/>
 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)
-
-
-
 

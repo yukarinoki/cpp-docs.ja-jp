@@ -9,19 +9,19 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a7d1381e511bc98b446e3f58be4d2a1c5ac15070
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 578df738d2c601c82f530ee32ae30284f6dac5ef
+ms.sourcegitcommit: e462e78a2dac06a0a539299facf34cdaeaf4d08c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105706"
+ms.lasthandoff: 10/18/2018
+ms.locfileid: "49401410"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ の言語リファレンス (C++/CX)
 
 C + + CX は Windows アプリと C++ の最新にできるだけ近い表現での Windows ランタイム コンポーネントの作成を有効にする C++ 言語への拡張のセットです。 C++/cli/CX を簡単に Visual c#、Visual Basic、および JavaScript と対話するネイティブ コードと Windows ランタイムをサポートするその他の言語で Windows アプリやコンポーネントを記述します。 生の COM インターフェイスまたは非例外的なコードに直接アクセスを必要とするこれらのまれなケースで使用することができます、 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)します。
 
 > [!NOTE]
-> C +/cli WinRT は、標準的な新しい c++ 17 の言語プロジェクションの Windows ランタイム Api です。 バージョン 1803 以降から最新の Windows 10 SDK で使用可能になります。 C +/cli WinRT がヘッダー ファイルで完全に実装し、最新の Windows API に最上級アクセスを提供するように設計します。
+> **[C +/cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)は、推奨される代替 C + + CX**します。 新しい、標準的な c++ 17 の言語プロジェクションの Windows ランタイム Api をバージョン 1803 以降から最新の Windows 10 SDK で使用できるになります。 C +/cli WinRT がヘッダー ファイルで完全に実装し、最新の Windows API に最上級アクセスを提供するように設計します。
 
 > C++/cli WinRT、両方を使用して標準に準拠した c++ 17 コンパイラを使用して Windows ランタイム Api を作成します。 C +/cli WinRT は通常、パフォーマンスが向上し、Windows ランタイムの他の言語オプションよりも小さいバイナリを生成します。 C + をサポートするために引き続き/cli CX および WRL、C + 新しいアプリケーションを使用するを強くお勧めしますが、/cli WinRT します。 詳細については、次を参照してください。 [C +/cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)します。
 
@@ -29,7 +29,7 @@ C + を使用して/cli CX を作成できます。
 
 - ユーザーを定義する XAML を使用する C++ ユニバーサル Windows プラットフォーム (UWP) アプリでは、インターフェイスし、ネイティブ スタックを使用します。 詳細については、次を参照してください。 ["hello world"アプリを作成するには、C++ (UWP) で](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)します。
 
-- JavaScript ベースの Windows アプリで使用できる C++ Windows ランタイム コンポーネントです。 詳細については、次を参照してください。 [C++ での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)です。
+- JavaScript ベースの Windows アプリで使用できる C++ Windows ランタイム コンポーネントです。 詳細については、「 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)」を参照してください。
 
 - Windows DirectX ゲームやグラフィックス処理の多いアプリ。 詳細については、次を参照してください。 [UWP の簡単なゲームを DirectX を使った作成](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game)です。
 

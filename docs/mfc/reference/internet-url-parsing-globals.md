@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2c0ffae70ae2da4edab9326a913e597fe1434611
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 18ef64bc20ba963b248273be16af7748a798a1bd
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383767"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50054710"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>インターネット URL 解析用グローバル関数とヘルパー
 
@@ -123,7 +123,7 @@ URL 文字列を解析し、サービスとそのコンポーネントの型を�
 > [!NOTE]
 >  この関数を呼び出すには、プロジェクトは AFXINET を含める必要があります。H.
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxinet.h
 
@@ -220,7 +220,7 @@ URL を解析する方法を制御するフラグ。 次の値の組み合わせ
 > [!NOTE]
 >  この関数を呼び出すには、プロジェクトは AFXINET を含める必要があります。H.
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxinet.h
 
@@ -237,6 +237,7 @@ URL を解析する方法を制御するフラグ。 次の値の組み合わせ
   ```
 DWORD AFXAPI AfxGetInternetHandleType(  HINTERNET hQuery );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *hQuery*<br/>
@@ -279,7 +280,7 @@ WININET で定義されているインターネット サービスの種類の�
 > [!NOTE]
 >  この関数を呼び出すために、プロジェクトは AFXINET を含める必要があります。H.
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxinet.h
 
@@ -297,6 +298,7 @@ WININET で定義されているインターネット サービスの種類の�
 ```
    void AFXAPI AfxThrowInternetException(  DWORD dwContext,  DWORD dwError = 0 );
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *独自*<br/>
@@ -312,7 +314,7 @@ WININET で定義されているインターネット サービスの種類の�
 > [!NOTE]
 >  この関数を呼び出すには、プロジェクトは AFXINET を含める必要があります。H.
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxinet.h
 
@@ -321,5 +323,4 @@ WININET で定義されているインターネット サービスの種類の�
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>
 [CInternetException クラス](cinternetexception-class.md)<br/>
 [スローします。](#throw)
-
 

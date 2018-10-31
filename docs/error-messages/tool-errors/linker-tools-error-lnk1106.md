@@ -16,12 +16,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 719ff1a87f3f1afc19cf38736c0059c46a8a9bdc
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce6a8b2ef9ac807e48cff42186453666cebda5ee
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46110875"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50055985"
 ---
 # <a name="linker-tools-error-lnk1106"></a>リンカ ツール エラー LNK1106
 
@@ -33,16 +33,16 @@ ms.locfileid: "46110875"
 
 1. ディスクがいっぱいです。
 
-     領域を解放し、リンクを再度クリックします。
+   領域を解放し、リンクを再度クリックします。
 
 1. ネットワーク経由でリンクしようとしています。
 
-     いくつかのネットワークでは、リンカーで使用されるメモリ マップト ファイルは完全にサポートしていません。 ローカル ディスクでのリンクを再試行してください。
+   いくつかのネットワークでは、リンカーで使用されるメモリ マップト ファイルは完全にサポートしていません。 ローカル ディスクでのリンクを再試行してください。
 
 1. ディスクで不良ブロックします。
 
-     オペレーティング システムとディスクのハードウェアでは、このようなエラーが検出が必要、ディスク チェックのプログラムを実行することがあります。
+   オペレーティング システムとディスクのハードウェアでは、このようなエラーが検出が必要、ディスク チェックのプログラムを実行することがあります。
 
 1. ヒープ領域にします。
 
-     参照してください[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)詳細についてはします。
+   参照してください[C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)詳細についてはします。

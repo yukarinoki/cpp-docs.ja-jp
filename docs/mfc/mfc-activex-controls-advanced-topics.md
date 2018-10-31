@@ -22,12 +22,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 18d0a15b2fe1d61e1b7ba14d210b428f282bff4d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: defc160b2b45185031160e0ba3dd553f8896e372
+ms.sourcegitcommit: a3c9e7888b8f437a170327c4c175733ad9eb0454
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386367"
+ms.lasthandoff: 10/29/2018
+ms.locfileid: "50204692"
 ---
 # <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX コントロール : 高度なトピック
 
@@ -44,7 +44,7 @@ ms.locfileid: "46386367"
 - [実行時に表示されないダイアログ コントロールへのアクセス](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の上書きの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 ##  <a name="_core_using_database_classes_in_activex_controls"></a> ActiveX コントロールにおけるデータベース クラスの使用
 
@@ -188,7 +188,7 @@ ActiveX コントロールのキーボード インターフェイスの処理�
 
 - ダイアログの項目として、ローカル変数とサブクラスを宣言します。 次のようなコードを挿入 (`CMyCtrl`ラッパー クラスには、IDC_MYCTRL1 はコントロールの ID)。
 
-     [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
+   [!code-cpp[NVC_MFC_AxCont#19](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_6.cpp)]
 
 ## <a name="see-also"></a>関連項目
 

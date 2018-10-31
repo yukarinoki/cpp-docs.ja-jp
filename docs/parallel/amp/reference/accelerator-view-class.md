@@ -31,12 +31,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7b9a157f747f32b7e146a0bc89ac695837c37974
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b556a86506e3aae73f7ac4e1ac961b539364d6db
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399679"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50053565"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view クラス
 
@@ -74,9 +74,9 @@ class accelerator_view;
 
 |名前|説明|
 |----------|-----------------|
-|[operator!=](#operator_neq)|この `accelerator_view` オブジェクトを別のオブジェクトと比較し、同じ場合は `false` を返し、それ以外の場合は `true` を返します。|
+|[operator!=](#operator_neq)|これを比較します`accelerator_view`と他のオブジェクトを返します**false**は同じである場合を返しますそれ以外の場合、 **true**します。|
 |[operator=](#operator_eq)|指定された `accelerator_view` オブジェクトの内容をこのオブジェクトにコピーします。|
-|[operator==](#operator_eq_eq)|この `accelerator_view` オブジェクトを別のオブジェクトと比較し、同じ場合は `true` を返し、それ以外の場合は `false` を返します。|
+|[operator==](#operator_eq_eq)|これを比較します`accelerator_view`と他のオブジェクトを返します**true**は同じである場合を返しますそれ以外の場合、 **false**します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -100,7 +100,7 @@ class accelerator_view;
 
 `accelerator_view`オブジェクトには、2 つのいずれかを指定できる[queuing_mode 列挙型](concurrency-namespace-enums-amp.md#queuing_mode)状態。 キュー モードが `immediate` である場合、`copy` および `parallel_for_each` のようなコマンドが呼び出し元に戻るとすぐに対応するアクセラレータ デバイスに送信されます。 キュー モードが `deferred` の場合、このようなコマンドは `accelerator_view` オブジェクトに対応するコマンド キューに置かれます。 コマンドは、`flush()` が呼び出されるまでデバイスに実際に送信されません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amprt.h
 
@@ -167,6 +167,7 @@ Accelerator_view オブジェクトのアクセラレータのオブジェクト
 ```
 accelerator get_accelerator() const;
 ```
+
 ### <a name="return-value"></a>戻り値
 
 Accelerator_view オブジェクトのアクセラレータのオブジェクト。
@@ -183,7 +184,7 @@ bool get_is_auto_selection() const;
 
 ### <a name="return-value"></a>戻り値
 
-ランタイムが自動的に適切なアクセラレータを選択する場合は `true`、それ以外の場合は `false`。
+**true**場合は、ランタイムが適切なアクセラレータ; を選択して自動的にそれ以外の場合、 **false**します。
 
 ## <a name="accelerator_view__get_is_debug"></a> get_is_debug
 
@@ -249,7 +250,7 @@ __declspec(property(get= get_is_debug)) bool is_debug;
 
 ## <a name="accelerator_view__operator_neq"></a> operator!=
 
-この accelerator_view オブジェクトと別に比較し、返します`false`は同じである場合を返しますそれ以外の場合、`true`します。
+この accelerator_view オブジェクトと別に比較し、返します**false**は同じである場合を返しますそれ以外の場合、 **true**します。
 
 ### <a name="syntax"></a>構文
 
@@ -264,7 +265,7 @@ bool operator!= (    const accelerator_view & _Other ) const;
 
 ### <a name="return-value"></a>戻り値
 
-2 つのオブジェクトが同一である場合は `false`。それ以外の場合は `true`。
+**false**場合 2 つのオブジェクトは同じです。 それ以外の場合、 **true**します。
 
 ## <a name="accelerator_view__operator_eq"></a> 演算子 =
 
@@ -287,7 +288,7 @@ accelerator_view & operator= (    const accelerator_view & _Other );
 
 ## <a name="accelerator_view__operator_eq_eq"></a> 演算子 = =
 
-この accelerator_view オブジェクトと別に比較し、返します`true`は同じである場合を返しますそれ以外の場合、`false`します。
+この accelerator_view オブジェクトと別に比較し、返します**true**は同じである場合を返しますそれ以外の場合、 **false**します。
 
 ### <a name="syntax"></a>構文
 
@@ -302,7 +303,7 @@ bool operator= = (    const accelerator_view & _Other ) const;
 
 ### <a name="return-value"></a>戻り値
 
-2 つのオブジェクトが同一である場合は `true`。それ以外の場合は `false`。
+**true**場合 2 つのオブジェクトは同じです。 それ以外の場合、 **false**します。
 
 ## <a name="accelerator_view__queuing_mode"></a> queuing_mode
 

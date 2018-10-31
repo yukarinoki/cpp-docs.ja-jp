@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: cc08e0807f1af6859587271ec48d2508b9d4bd6e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: d7a9915c7ca6b9d2c3f01cea12e2979ef256f904
+ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46048670"
+ms.lasthandoff: 10/05/2018
+ms.locfileid: "48821180"
 ---
 # <a name="lambda-expressions-in-c"></a>C++ でのラムダ式
 
@@ -349,7 +349,9 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
         return [n] { return n + 1; }();
     }
 ```
+
 ラムダは暗黙的に`constexpr`その結果の要件を満たしている場合、`constexpr`関数。
+
 ```cpp
     auto answer = [](int n)
     {
@@ -358,6 +360,7 @@ vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 
     constexpr int response = answer(10);
 ```
+
 ラムダが暗黙的または明示的に場合`constexpr`、関数ポインターへの変換を生成、`constexpr`関数。
 
 ```cpp

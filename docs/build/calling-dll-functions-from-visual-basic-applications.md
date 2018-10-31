@@ -20,12 +20,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b1cedafaea33ac642e3a5593468b996f2442bd50
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 47504b7a471dc38f30e4ceb59b5feeffcc53db6d
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894565"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161837"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>DLL 関数の Visual Basic アプリケーションからの呼び出し方
 
@@ -33,7 +33,7 @@ Visual Basic アプリケーション (または Pascal、Fortran などの他�
 
 `__stdcall` は、関数の正しい呼び出し規約を作成します。つまり、呼び出された関数がスタックをクリアし、パラメーターは右から左へ渡されます。ただし、関数名は異なる方法で装飾されます。 したがって、**方式**使用 DLL でエクスポートされた関数の装飾名がエクスポートされます。
 
-`__stdcall`名前の装飾は、アンダー スコア (_) で、シンボル名をプレフィックスし、記号の幅を追加します、アット マーク (**\@**) 文字が続く引数リスト (必要なスタック スペース) 内のバイト数。 結果として、宣言時の関数は次のようになります。
+`__stdcall`名前の装飾をアンダー スコアでシンボル名のプレフィックス ( **\_** ) のシンボルを追加し、アット マーク (**\@**) 文字の数が続く引数リスト (必要なスタック空間) のバイト数。 結果として、宣言時の関数は次のようになります。
 
 ```C
 int __stdcall func (int a, double b)
@@ -41,13 +41,13 @@ int __stdcall func (int a, double b)
 
 装飾すると、`_func@12`出力します。
 
-C の呼び出し規約 (`__cdecl`) による装飾では、名前は `_func` となります。
+C の呼び出し規則 (`__cdecl`) による装飾では、名前は `_func` となります。
 
 装飾名を取得する[/map](../build/reference/map-generate-mapfile.md)します。 使用**方式**は次の処理します。
 
-- C 呼び出し規則と関数をエクスポートするかどうか (**_cdecl**)、名前をエクスポートするときに、先頭にアンダー スコア (_) を削除します。
+- C 呼び出し規則と関数をエクスポートするかどうか (`__cdecl`)、先頭にアンダー スコアを除去 ( **\_** ) 名前がエクスポートされます。
 
-- エクスポートされる関数が C の呼び出し規約を使わない場合 (`__stdcall` など) は、装飾名がエクスポートされます。
+- エクスポートされる関数が C の呼び出し規則を使わない場合 (`__stdcall` など) は、装飾名がエクスポートされます。
 
 スタックがクリアされた場所をオーバーライドする方法はないので、`__stdcall` を使う必要があります。 `__stdcall` を使って装飾を外すには、.def ファイルの EXPORTS セクションにエイリアスを使って、その名前を指定する必要があります。 関数宣言の例を次に示します。
 

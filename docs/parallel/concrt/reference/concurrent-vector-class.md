@@ -43,12 +43,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: fa50628e9c63eee585eebe2ce63b2c5ec9b6f5fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 68ea93c137962e48f8a627e9a9409e4e7fceef65
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422208"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49163375"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector クラス
 
@@ -101,38 +101,38 @@ private details::_Concurrent_vector_base_v4;
 
 |名前|説明|
 |----------|-----------------|
-|[assign](#assign)|オーバーロードされます。 同時実行ベクターの要素を消去し、いずれかを割り当てる`_N`のコピー `_Item`、反復子の範囲で指定された値、または [ `_Begin`、 `_End`)。 このメソッドは同時実行セーフではありません。|
+|[assign](#assign)|オーバーロードされます。 同時実行ベクターの要素を消去し、いずれかを割り当てる`_N`のコピー `_Item`、反復子の範囲で指定された値、または [ `_Begin`、 `_End`)。 このメソッドはコンカレンシー セーフではありません。|
 |[at](#at)|オーバーロードされます。 同時実行ベクターで指定したインデックス位置にある要素へのアクセスを提供します。 このメソッドは、同時実行セーフ読み取り操作と、値を確認をしている限り、ベクトルを増加しているときにも`_Index`が、同時実行ベクターのサイズより小さい。|
-|[back](#back)|オーバーロードされます。 または、参照を返します`const`最後に、同時実行ベクター内の要素を参照します。 同時実行ベクターが空の場合、戻り値が定義されていません。 このメソッドは同時実行セーフです。|
-|[begin](#begin)|オーバーロードされます。 型の反復子を返します`iterator`または`const_iterator`同時実行ベクターの先頭にします。 このメソッドは同時実行セーフです。|
-|[capacity](#capacity)|同時実行ベクターがより多くのメモリを割り当てることがなく拡張できる最大サイズを返します。 このメソッドは同時実行セーフです。|
-|[cbegin](#cbegin)|型の反復子を返します`const_iterator`同時実行ベクターの先頭にします。 このメソッドは同時実行セーフです。|
-|[cend](#cend)|型の反復子を返します`const_iterator`同時実行ベクターの末尾にします。 このメソッドは同時実行セーフです。|
-|[clear](#clear)|同時実行のベクトル内のすべての要素を消去します。 このメソッドは同時実行セーフではありません。|
-|[crbegin](#crbegin)|型の反復子を返します`const_reverse_iterator`同時実行ベクターの先頭にします。 このメソッドは同時実行セーフです。|
-|[crend](#crend)|型の反復子を返します`const_reverse_iterator`同時実行ベクターの末尾にします。 このメソッドは同時実行セーフです。|
-|[empty](#empty)|テスト時に、同時実行ベクターが空の場合、このメソッドが呼び出されます。 このメソッドは同時実行セーフです。|
-|[end](#end)|オーバーロードされます。 型の反復子を返します`iterator`または`const_iterator`同時実行ベクターの末尾にします。 このメソッドは同時実行セーフです。|
-|[front](#front)|オーバーロードされます。 または、参照を返します`const`同時実行ベクターの最初の要素への参照。 同時実行ベクターが空の場合、戻り値が定義されていません。 このメソッドは同時実行セーフです。|
-|[get_allocator](#get_allocator)|同時実行ベクターを構築するために使用するアロケーターのコピーを返します。 このメソッドは同時実行セーフです。|
-|[grow_by](#grow_by)|オーバーロードされます。 この同時実行ベクターで`_Delta`要素。 このメソッドは同時実行セーフです。|
-|[grow_to_at_least](#grow_to_at_least)|この同時実行ベクターになるまで、少なくとも拡張`_N`要素。 このメソッドは同時実行セーフです。|
-|[max_size](#max_size)|同時実行ベクターが保持できる要素の最大数を返します。 このメソッドは同時実行セーフです。|
-|[push_back](#push_back)|オーバーロードされます。 同時実行ベクターの末尾に指定したアイテムを追加します。 このメソッドは同時実行セーフです。|
-|[rbegin](#rbegin)|オーバーロードされます。 型の反復子を返します`reverse_iterator`または`const_reverse_iterator`同時実行ベクターの先頭にします。 このメソッドは同時実行セーフです。|
-|[rend](#rend)|オーバーロードされます。 型の反復子を返します`reverse_iterator`または`const_reverse_iterator`同時実行ベクターの末尾にします。 このメソッドは同時実行セーフです。|
-|[reserve](#reserve)|サイズに、同時実行ベクターを拡張するための十分な領域を割り当てます`_N`を後でより多くのメモリを割り当てる必要はありません。 このメソッドは同時実行セーフではありません。|
-|[resize](#resize)|オーバーロードされます。 要求されたサイズ、削除、または必要に応じて要素を追加するには、同時実行ベクターのサイズを変更します。 このメソッドは同時実行セーフではありません。|
-|[shrink_to_fit](#shrink_to_fit)|断片化を削減し、メモリ使用量を最適化する同時実行ベクターの内部表現が圧縮されます。 このメソッドは同時実行セーフではありません。|
-|[size](#size)|同時実行ベクターの要素の数を返します。 このメソッドは同時実行セーフです。|
-|[swap](#swap)|2 つの同時実行ベクターの内容を交換します。 このメソッドは同時実行セーフではありません。|
+|[back](#back)|オーバーロードされます。 または、参照を返します`const`最後に、同時実行ベクター内の要素を参照します。 同時実行ベクターが空の場合、戻り値が定義されていません。 このメソッドはコンカレンシー セーフです。|
+|[begin](#begin)|オーバーロードされます。 型の反復子を返します`iterator`または`const_iterator`同時実行ベクターの先頭にします。 このメソッドはコンカレンシー セーフです。|
+|[capacity](#capacity)|同時実行ベクターがより多くのメモリを割り当てることがなく拡張できる最大サイズを返します。 このメソッドはコンカレンシー セーフです。|
+|[cbegin](#cbegin)|型の反復子を返します`const_iterator`同時実行ベクターの先頭にします。 このメソッドはコンカレンシー セーフです。|
+|[cend](#cend)|型の反復子を返します`const_iterator`同時実行ベクターの末尾にします。 このメソッドはコンカレンシー セーフです。|
+|[clear](#clear)|同時実行のベクトル内のすべての要素を消去します。 このメソッドはコンカレンシー セーフではありません。|
+|[crbegin](#crbegin)|型の反復子を返します`const_reverse_iterator`同時実行ベクターの先頭にします。 このメソッドはコンカレンシー セーフです。|
+|[crend](#crend)|型の反復子を返します`const_reverse_iterator`同時実行ベクターの末尾にします。 このメソッドはコンカレンシー セーフです。|
+|[empty](#empty)|テスト時に、同時実行ベクターが空の場合、このメソッドが呼び出されます。 このメソッドはコンカレンシー セーフです。|
+|[end](#end)|オーバーロードされます。 型の反復子を返します`iterator`または`const_iterator`同時実行ベクターの末尾にします。 このメソッドはコンカレンシー セーフです。|
+|[front](#front)|オーバーロードされます。 または、参照を返します`const`同時実行ベクターの最初の要素への参照。 同時実行ベクターが空の場合、戻り値が定義されていません。 このメソッドはコンカレンシー セーフです。|
+|[get_allocator](#get_allocator)|同時実行ベクターを構築するために使用するアロケーターのコピーを返します。 このメソッドはコンカレンシー セーフです。|
+|[grow_by](#grow_by)|オーバーロードされます。 この同時実行ベクターで`_Delta`要素。 このメソッドはコンカレンシー セーフです。|
+|[grow_to_at_least](#grow_to_at_least)|この同時実行ベクターになるまで、少なくとも拡張`_N`要素。 このメソッドはコンカレンシー セーフです。|
+|[max_size](#max_size)|同時実行ベクターが保持できる要素の最大数を返します。 このメソッドはコンカレンシー セーフです。|
+|[push_back](#push_back)|オーバーロードされます。 同時実行ベクターの末尾に指定したアイテムを追加します。 このメソッドはコンカレンシー セーフです。|
+|[rbegin](#rbegin)|オーバーロードされます。 型の反復子を返します`reverse_iterator`または`const_reverse_iterator`同時実行ベクターの先頭にします。 このメソッドはコンカレンシー セーフです。|
+|[rend](#rend)|オーバーロードされます。 型の反復子を返します`reverse_iterator`または`const_reverse_iterator`同時実行ベクターの末尾にします。 このメソッドはコンカレンシー セーフです。|
+|[reserve](#reserve)|サイズに、同時実行ベクターを拡張するための十分な領域を割り当てます`_N`を後でより多くのメモリを割り当てる必要はありません。 このメソッドはコンカレンシー セーフではありません。|
+|[resize](#resize)|オーバーロードされます。 要求されたサイズ、削除、または必要に応じて要素を追加するには、同時実行ベクターのサイズを変更します。 このメソッドはコンカレンシー セーフではありません。|
+|[shrink_to_fit](#shrink_to_fit)|断片化を削減し、メモリ使用量を最適化する同時実行ベクターの内部表現が圧縮されます。 このメソッドはコンカレンシー セーフではありません。|
+|[size](#size)|同時実行ベクターの要素の数を返します。 このメソッドはコンカレンシー セーフです。|
+|[swap](#swap)|2 つの同時実行ベクターの内容を交換します。 このメソッドはコンカレンシー セーフではありません。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
 |[operator[]](#operator_at)|オーバーロードされます。 同時実行ベクターで指定したインデックス位置にある要素へのアクセスを提供します。 このメソッドは、同時実行セーフ読み取り操作とすることを確認する値として、ベクトルを増加しているときにも`_Index`が、同時実行ベクターのサイズより小さい。|
-|[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_vector` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドは同時実行セーフではありません。|
+|[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_vector` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -154,7 +154,7 @@ private details::_Concurrent_vector_base_v4;
 
 ##  <a name="assign"></a> 割り当てる
 
-同時実行ベクターの要素を消去し、いずれかを割り当てる`_N`のコピー `_Item`、反復子の範囲で指定された値、または [ `_Begin`、 `_End`)。 このメソッドは同時実行セーフではありません。
+同時実行ベクターの要素を消去し、いずれかを割り当てる`_N`のコピー `_Item`、反復子の範囲で指定された値、または [ `_Begin`、 `_End`)。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 void assign(
@@ -214,7 +214,7 @@ const_reference at(size_type _Index) const;
 
 ##  <a name="back"></a> 戻る
 
-または、参照を返します`const`最後に、同時実行ベクター内の要素を参照します。 同時実行ベクターが空の場合、戻り値が定義されていません。 このメソッドは同時実行セーフです。
+または、参照を返します`const`最後に、同時実行ベクター内の要素を参照します。 同時実行ベクターが空の場合、戻り値が定義されていません。 このメソッドはコンカレンシー セーフです。
 
 ```
 reference back();
@@ -228,7 +228,7 @@ const_reference back() const;
 
 ##  <a name="begin"></a> 開始
 
-型の反復子を返します`iterator`または`const_iterator`同時実行ベクターの先頭にします。 このメソッドは同時実行セーフです。
+型の反復子を返します`iterator`または`const_iterator`同時実行ベクターの先頭にします。 このメソッドはコンカレンシー セーフです。
 
 ```
 iterator begin();
@@ -242,7 +242,7 @@ const_iterator begin() const;
 
 ##  <a name="capacity"></a> 容量
 
-同時実行ベクターがより多くのメモリを割り当てることがなく拡張できる最大サイズを返します。 このメソッドは同時実行セーフです。
+同時実行ベクターがより多くのメモリを割り当てることがなく拡張できる最大サイズを返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 size_type capacity() const;
@@ -258,7 +258,7 @@ C++ 標準ライブラリとは異なり`vector`、`concurrent_vector`より多�
 
 ##  <a name="cbegin"></a> cbegin
 
-型の反復子を返します`const_iterator`同時実行ベクターの先頭にします。 このメソッドは同時実行セーフです。
+型の反復子を返します`const_iterator`同時実行ベクターの先頭にします。 このメソッドはコンカレンシー セーフです。
 
 ```
 const_iterator cbegin() const;
@@ -270,7 +270,7 @@ const_iterator cbegin() const;
 
 ##  <a name="cend"></a> cend
 
-型の反復子を返します`const_iterator`同時実行ベクターの末尾にします。 このメソッドは同時実行セーフです。
+型の反復子を返します`const_iterator`同時実行ベクターの末尾にします。 このメソッドはコンカレンシー セーフです。
 
 ```
 const_iterator cend() const;
@@ -282,7 +282,7 @@ const_iterator cend() const;
 
 ##  <a name="clear"></a> オフ
 
-同時実行のベクトル内のすべての要素を消去します。 このメソッドは同時実行セーフではありません。
+同時実行のベクトル内のすべての要素を消去します。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 void clear();
@@ -378,7 +378,7 @@ concurrent_vector(_InputIterator _Begin,
 
 ##  <a name="crbegin"></a> crbegin
 
-型の反復子を返します`const_reverse_iterator`同時実行ベクターの先頭にします。 このメソッドは同時実行セーフです。
+型の反復子を返します`const_reverse_iterator`同時実行ベクターの先頭にします。 このメソッドはコンカレンシー セーフです。
 
 ```
 const_reverse_iterator crbegin() const;
@@ -390,7 +390,7 @@ const_reverse_iterator crbegin() const;
 
 ##  <a name="crend"></a> crend
 
-型の反復子を返します`const_reverse_iterator`同時実行ベクターの末尾にします。 このメソッドは同時実行セーフです。
+型の反復子を返します`const_reverse_iterator`同時実行ベクターの末尾にします。 このメソッドはコンカレンシー セーフです。
 
 ```
 const_reverse_iterator crend() const;
@@ -402,7 +402,7 @@ const_reverse_iterator crend() const;
 
 ##  <a name="empty"></a> 空
 
-テスト時に、同時実行ベクターが空の場合、このメソッドが呼び出されます。 このメソッドは同時実行セーフです。
+テスト時に、同時実行ベクターが空の場合、このメソッドが呼び出されます。 このメソッドはコンカレンシー セーフです。
 
 ```
 bool empty() const;
@@ -410,11 +410,11 @@ bool empty() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` 関数が呼び出された時点で、ベクターが空の場合`false`それ以外の場合。
+**true**場合は、関数が呼び出された時点で、ベクターが空**false**それ以外の場合。
 
 ##  <a name="end"></a> 終わり
 
-型の反復子を返します`iterator`または`const_iterator`同時実行ベクターの末尾にします。 このメソッドは同時実行セーフです。
+型の反復子を返します`iterator`または`const_iterator`同時実行ベクターの末尾にします。 このメソッドはコンカレンシー セーフです。
 
 ```
 iterator end();
@@ -428,7 +428,7 @@ const_iterator end() const;
 
 ##  <a name="front"></a> 前面
 
-または、参照を返します`const`同時実行ベクターの最初の要素への参照。 同時実行ベクターが空の場合、戻り値が定義されていません。 このメソッドは同時実行セーフです。
+または、参照を返します`const`同時実行ベクターの最初の要素への参照。 同時実行ベクターが空の場合、戻り値が定義されていません。 このメソッドはコンカレンシー セーフです。
 
 ```
 reference front();
@@ -442,7 +442,7 @@ const_reference front() const;
 
 ##  <a name="get_allocator"></a> get_allocator
 
-同時実行ベクターを構築するために使用するアロケーターのコピーを返します。 このメソッドは同時実行セーフです。
+同時実行ベクターを構築するために使用するアロケーターのコピーを返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 allocator_type get_allocator() const;
@@ -454,7 +454,7 @@ allocator_type get_allocator() const;
 
 ##  <a name="grow_by"></a> grow_by
 
-この同時実行ベクターで`_Delta`要素。 このメソッドは同時実行セーフです。
+この同時実行ベクターで`_Delta`要素。 このメソッドはコンカレンシー セーフです。
 
 ```
 iterator grow_by(
@@ -483,7 +483,7 @@ iterator grow_by(
 
 ##  <a name="grow_to_at_least"></a> grow_to_at_least
 
-この同時実行ベクターになるまで、少なくとも拡張`_N`要素。 このメソッドは同時実行セーフです。
+この同時実行ベクターになるまで、少なくとも拡張`_N`要素。 このメソッドはコンカレンシー セーフです。
 
 ```
 iterator grow_to_at_least(size_type _N);
@@ -500,7 +500,7 @@ iterator grow_to_at_least(size_type _N);
 
 ##  <a name="max_size"></a> max_size
 
-同時実行ベクターが保持できる要素の最大数を返します。 このメソッドは同時実行セーフです。
+同時実行ベクターが保持できる要素の最大数を返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 size_type max_size() const;
@@ -512,7 +512,7 @@ size_type max_size() const;
 
 ##  <a name="operator_eq"></a> 演算子 =
 
-別の `concurrent_vector` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドは同時実行セーフではありません。
+別の `concurrent_vector` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 concurrent_vector& operator= (
@@ -565,7 +565,7 @@ const_reference operator[](size_type _index) const;
 
 ##  <a name="push_back"></a> push_back
 
-同時実行ベクターの末尾に指定したアイテムを追加します。 このメソッドは同時実行セーフです。
+同時実行ベクターの末尾に指定したアイテムを追加します。 このメソッドはコンカレンシー セーフです。
 
 ```
 iterator push_back(const_reference _Item);
@@ -584,7 +584,7 @@ iterator push_back(T&& _Item);
 
 ##  <a name="rbegin"></a> rbegin
 
-型の反復子を返します`reverse_iterator`または`const_reverse_iterator`同時実行ベクターの先頭にします。 このメソッドは同時実行セーフです。
+型の反復子を返します`reverse_iterator`または`const_reverse_iterator`同時実行ベクターの先頭にします。 このメソッドはコンカレンシー セーフです。
 
 ```
 reverse_iterator rbegin();
@@ -598,7 +598,7 @@ const_reverse_iterator rbegin() const;
 
 ##  <a name="rend"></a> rend
 
-型の反復子を返します`reverse_iterator`または`const_reverse_iterator`同時実行ベクターの末尾にします。 このメソッドは同時実行セーフです。
+型の反復子を返します`reverse_iterator`または`const_reverse_iterator`同時実行ベクターの末尾にします。 このメソッドはコンカレンシー セーフです。
 
 ```
 reverse_iterator rend();
@@ -612,7 +612,7 @@ const_reverse_iterator rend() const;
 
 ##  <a name="reserve"></a> 予約
 
-サイズに、同時実行ベクターを拡張するための十分な領域を割り当てます`_N`を後でより多くのメモリを割り当てる必要はありません。 このメソッドは同時実行セーフではありません。
+サイズに、同時実行ベクターを拡張するための十分な領域を割り当てます`_N`を後でより多くのメモリを割り当てる必要はありません。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 void reserve(size_type _N);
@@ -629,7 +629,7 @@ void reserve(size_type _N);
 
 ##  <a name="resize"></a> サイズ変更
 
-要求されたサイズ、削除、または必要に応じて要素を追加するには、同時実行ベクターのサイズを変更します。 このメソッドは同時実行セーフではありません。
+要求されたサイズ、削除、または必要に応じて要素を追加するには、同時実行ベクターのサイズを変更します。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 void resize(
@@ -656,7 +656,7 @@ Concurrent_vector の新しいサイズ。
 
 ##  <a name="shrink_to_fit"></a> shrink_to_fit
 
-断片化を削減し、メモリ使用量を最適化する同時実行ベクターの内部表現が圧縮されます。 このメソッドは同時実行セーフではありません。
+断片化を削減し、メモリ使用量を最適化する同時実行ベクターの内部表現が圧縮されます。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 void shrink_to_fit();
@@ -668,7 +668,7 @@ void shrink_to_fit();
 
 ##  <a name="size"></a> サイズ
 
-同時実行ベクターの要素の数を返します。 このメソッドは同時実行セーフです。
+同時実行ベクターの要素の数を返します。 このメソッドはコンカレンシー セーフです。
 
 ```
 size_type size() const;
@@ -684,7 +684,7 @@ size_type size() const;
 
 ##  <a name="swap"></a> スワップ
 
-2 つの同時実行ベクターの内容を交換します。 このメソッドは同時実行セーフではありません。
+2 つの同時実行ベクターの内容を交換します。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 void swap(concurrent_vector& _Vector);

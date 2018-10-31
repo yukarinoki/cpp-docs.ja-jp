@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 54e4ab00a0d0df90601d06d9e2ffa100d82d4c03
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8c8493650ef2c86a89c1a3060deb5ee6269a38a7
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46037360"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50068646"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールに関するグローバル関数
 
@@ -56,11 +56,11 @@ ms.locfileid: "46037360"
 |[AtlSetChildSite](#atlsetchildsite)|初期化します、`IUnknown`子サイトの。|
 |[AtlAxWinInit](#atlaxwininit)|AxWin オブジェクトのホスティング コードを初期化します。|
 |[AtlAxWinTerm](#atlaxwinterm)|AxWin オブジェクトのホストのコードは初期化されません。|
-|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|オブジェクトの既定のソース インターフェイスに関する情報を返します。|  
+|[AtlGetObjectSourceInterface](#atlgetobjectsourceinterface)|オブジェクトの既定のソース インターフェイスに関する情報を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlhost.h  
+**ヘッダー:** atlhost.h
 
 ##  <a name="atlaxdialogbox"></a>  AtlAxDialogBox
 
@@ -81,7 +81,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in]実行可能ファイルには、ダイアログ ボックスのテンプレートが含まれています。 モジュールのインスタンスを識別します。
 
 *lpTemplateName*<br/>
-[in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](https://msdn.microsoft.com/library/windows/desktop/ms648029)マクロをこの値を作成します。
+[in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)マクロをこの値を作成します。
 
 *hWndParent*<br/>
 [in]ダイアログ ボックスを所有するウィンドウを識別します。
@@ -101,7 +101,7 @@ ATLAPI_(int) AtlAxDialogBox(
 使用する`AtlAxDialogBox`ActiveX コントロールを含むダイアログ テンプレートで指定として有効な CLSID、APPID、または URL 文字列、*テキスト*のフィールド、**コントロール**ダイアログ リソースの セクションと共に"AtlAxWin80"として、*クラス名*同じセクションの下のフィールド。 以下はどのような有効な**コントロール**セクションのようになります。
 
 ```
-CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,  
+CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
@@ -128,7 +128,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in]実行可能ファイルには、ダイアログ ボックスのテンプレートが含まれています。 モジュールのインスタンスを識別します。
 
 *lpTemplateName*<br/>
-[in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](https://msdn.microsoft.com/library/windows/desktop/ms648029)マクロをこの値を作成します。
+[in]ダイアログ ボックスのテンプレートを識別します。 このパラメーターは、いずれかのダイアログ ボックスのテンプレートの名前を指定する null で終わる文字列へのポインターまたはダイアログ ボックスのテンプレートのリソース識別子を指定する整数値は。 パラメーターは、リソース識別子を指定する場合の上位ワードはゼロである必要があり、その下位ワードは、識別子を含める必要があります。 使用することができます、[されるときは](/windows/desktop/api/winuser/nf-winuser-makeintresourcea)マクロをこの値を作成します。
 
 *hWndParent*<br/>
 [in]ダイアログ ボックスを所有するウィンドウを識別します。
@@ -261,7 +261,7 @@ ATLAPI AtlAxCreateControlEx(
 
 ##  <a name="atlaxcreatecontrollic"></a>  AtlAxCreateControlLic
 
-ライセンスされた ActiveX コントロールを作成して初期化し、指定されたウィンドウでホストします。  
+ライセンスされた ActiveX コントロールを作成して初期化し、指定されたウィンドウでホストします。
 
 ```
 ATLAPI AtlAxCreateControlLic(
@@ -484,7 +484,7 @@ ATLAPI_(BOOL) AtlAxWinInit();
 
 ### <a name="remarks"></a>Remarks
 
-ATL コントロール ホスト API を使用する前に、この関数を呼び出す必要があります。 この関数への呼び出しの後、 **"AtlAxWin"** への呼び出しでウィンドウ クラスを使用できます[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)または[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)」の説明に従って、Windows SDK。  
+ATL コントロール ホスト API を使用する前に、この関数を呼び出す必要があります。 この関数への呼び出しの後、 **"AtlAxWin"** への呼び出しでウィンドウ クラスを使用できます[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)または[CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)」の説明に従って、Windows SDK。
 
 ##  <a name="atlaxwinterm"></a>  AtlAxWinTerm
 

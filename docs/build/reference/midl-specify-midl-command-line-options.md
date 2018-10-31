@@ -21,12 +21,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9d9ecfada513e16ce10bab37bb38b6ce6d67f907
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d2fa03920f60d7da4730bc46b23605ccfa13f6d7
+ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397625"
+ms.lasthandoff: 10/08/2018
+ms.locfileid: "48860386"
 ---
 # <a name="midl-specify-midl-command-line-options"></a>/MIDL (MIDL コマンド ライン オプションの指定)
 
@@ -51,9 +51,9 @@ IDL ファイル TLB ファイルへの変換のすべてのオプションを�
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
 
-2. 選択、**構成プロパティ** > **リンカー** > **埋め込み IDL**プロパティ ページ。
+1. 選択、**構成プロパティ** > **リンカー** > **埋め込み IDL**プロパティ ページ。
 
-3. 変更、 **MIDL コマンド**プロパティ。
+1. 変更、 **MIDL コマンド**プロパティ。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

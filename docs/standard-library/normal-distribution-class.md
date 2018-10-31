@@ -36,12 +36,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ee9e6af44c77c16099dc5e30c78ac4a5f39aa54a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d298da140955c809db5e6128df3bf712838446e0
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108548"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067736"
 ---
 # <a name="normaldistribution-class"></a>normal_distribution クラス
 
@@ -192,7 +192,7 @@ Distribution for 10 samples:
     10: 2.7821317338
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -241,6 +241,7 @@ struct param_type {
    bool operator!=(const param_type& right) const;
    };
 ```
+
 ### <a name="parameters"></a>パラメーター
 
 *mean*<br/>

@@ -15,16 +15,16 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3e1edc9e4a6172b3ac55e7a8bc9b21cdc571774d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 24056346520897988fe92587ab45aa7cbc754199
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42578410"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50074996"
 ---
 # <a name="porting-third-party-libraries"></a>サード パーティ ライブラリの移植
 
-プロジェクトを Visual C++ の現在のバージョンにアップグレードする場合は、プロジェクトで使用されているライブラリもアップグレードする必要があります。これにより、ライブラリとプロジェクトは、同じバージョンおよび種類のコンパイラでビルドされます。 詳細については、「[アップグレード時の潜在的な問題の概要](overview-of-potential-upgrade-issues-visual-cpp.md)」 を参照してください。 
+プロジェクトを Visual C++ の現在のバージョンにアップグレードする場合は、プロジェクトで使用されているライブラリもアップグレードする必要があります。これにより、ライブラリとプロジェクトは、同じバージョンおよび種類のコンパイラでビルドされます。 詳細については、「[アップグレード時の潜在的な問題の概要](overview-of-potential-upgrade-issues-visual-cpp.md)」 を参照してください。
 
 ## <a name="introducing-vcpkg"></a>vcpkg の概要
 
@@ -35,7 +35,7 @@ ms.locfileid: "42578410"
 **vcpkg** カタログ内に目的のライブラリが存在しない場合は、[GitHub リポジトリ](https://github.com/Microsoft/vcpkg/issues)に掲載されている問題点を参照できます。コミュニティおよび Visual C++ チームは、内容を確認することで、該当するライブラリのポート ファイルを作成できる可能性があります。
 
 サードパーティ独自のライブラリ (非オープン ソース) の場合、ライブラリの製造元に問い合わせることをお勧めします。 ただし、使用する独自仕様の lib のうちアクセスできないものがあれば、どちらの lib であるかをお知らせください (連絡先は vcupgrade@microsoft.com です)。
-  
-## <a name="see-also"></a>参照  
+
+## <a name="see-also"></a>参照
 
 [Visual C++ 移植とアップグレードのガイド](visual-cpp-porting-and-upgrading-guide.md)

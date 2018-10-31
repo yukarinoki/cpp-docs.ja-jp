@@ -15,34 +15,36 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ff5e7dea444cdfe9e8925aeeb56561d42d8600e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2a088e089896e76b8195813022ee179b4772533
+ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32381708"
+ms.lasthandoff: 09/18/2018
+ms.locfileid: "46118545"
 ---
 # <a name="c-tokens"></a>C トークン
-C ソース プログラムでは、コンパイラで認識される基本要素が "トークン" です。 トークンは、コンパイラがそれ以上、構成要素に分割しないソース プログラム テキストです。  
-  
-## <a name="syntax"></a>構文  
- *token*:  
- *keyword*  
-  
- *identifier*  
-  
- *constant*  
-  
- *string-literal*  
-  
- *operator*  
-  
- *punctuator*  
-  
+
+C ソース プログラムでは、コンパイラで認識される基本要素が "トークン" です。 トークンは、コンパイラがそれ以上、構成要素に分割しないソース プログラム テキストです。
+
+## <a name="syntax"></a>構文
+
+*token*: *keyword*
+
+*identifier*
+
+*constant*
+
+*string-literal*
+
+*operator*
+
+*punctuator*
+
 > [!NOTE]
->  ANSI 構文規則については、「[C 言語の構文の概要](../c-language/c-language-syntax-summary.md)」の説明をご覧ください。  
-  
- このセクションで説明するキーワード、識別子、定数、文字列リテラル、および演算子は、トークンの例です。 角かっこ (**[ ]**)、中かっこ (**{ }**)、かっこ (**( )**)、コンマ (**,**) などの句読点もトークンです。  
-  
-## <a name="see-also"></a>参照  
- [C の要素](../c-language/elements-of-c.md)
+>  ANSI 構文規則については、「[C 言語の構文の概要](../c-language/c-language-syntax-summary.md)」の説明をご覧ください。
+
+このセクションで説明するキーワード、識別子、定数、文字列リテラル、および演算子は、トークンの例です。 角かっこ (**[ ]**)、中かっこ (**{ }**)、かっこ (**( )**)、コンマ (**,**) などの句読点もトークンです。
+
+## <a name="see-also"></a>参照
+
+[C の要素](../c-language/elements-of-c.md)

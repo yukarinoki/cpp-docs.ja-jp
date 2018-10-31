@@ -23,12 +23,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a15cc3aae03c0f9c57d982aac93cf711c735b35b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ffda10923d3be1baf7c9f6ed898480ee1c1367c3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393497"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50067697"
 ---
 # <a name="tiledextent-class"></a>tiled_extent クラス
 
@@ -101,7 +101,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 |名前|説明|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|`extent` テンプレート引数 `tiled_extent`、`_Dim0`、および `_Dim1` の値をキャプチャする `_Dim2` オブジェクトを取得します。|
+|[tile_extent](#tile_extent)|`tiled_extent` テンプレート引数 `_Dim0`、`_Dim1`、および `_Dim2` の値をキャプチャする `extent` オブジェクトを取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -109,7 +109,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 `tiled_extent`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp.h
 
@@ -216,6 +216,7 @@ static const int tile_dim0 = _Dim0;
 ```
 static const int tile_dim1 = _Dim1;
 ```
+
 ## <a name="tile_dim2"> </a>  tile_dim2
 
 最下位の次元の長さを格納します。
@@ -225,6 +226,7 @@ static const int tile_dim1 = _Dim1;
 ```
 static const int tile_dim2 = _Dim2;
 ```
+
 ## <a name="tile_extent"> </a>  tile_extent
   取得、`extent`オブジェクトの値をキャプチャする、`tiled_extent`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`します。
 

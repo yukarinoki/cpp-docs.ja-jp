@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 352f3e5ebd9606cc355ea9af65739c3e17894298
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 75e34fd4cfa53257f0e8a497cf8bc245c90f6732
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46136297"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077355"
 ---
 # <a name="composite-control-macros"></a>複合コントロールに関するマクロ
 
@@ -39,9 +39,9 @@ ms.locfileid: "46136297"
 |[SINK_ENTRY_INFO](#sink_entry_info)|使用するための手動で指定された型情報とイベント シンク マップするエントリ[IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)します。|
 |[SINK_ENTRY_INFO_P](#sink_entry_info)| (Visual Studio 2017)Iid へのポインターを受け取る点を除いて、SINK_ENTRY_INFO 類似します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atlcom.h  
+**ヘッダー:** atlcom.h
 
 ##  <a name="begin_sink_map"></a>  BEGIN_SINK_MAP
 
@@ -122,7 +122,7 @@ SINK_ENTRY_EX_P( id, piid, dispid, fn ) // (Visual Studio 2017)
 [in]コントロールを識別します。
 
 *iid*<br/>
-[in]ディスパッチ インターフェイスを識別します。  
+[in]ディスパッチ インターフェイスを識別します。
 
 *piid*<br/>
 [in]ディスパッチ インターフェイスへのポインター。
@@ -156,7 +156,7 @@ SINK_ENTRY_INFO_P( id, piid, dispid, fn, info ) // (Visual Studio 2017)
 [in]イベント ソースを識別する符号なし整数。 この値に一致する必要があります、 *nID*関連で使用するテンプレート パラメーター [IDispEventSimpleImpl](../../atl/reference/idispeventsimpleimpl-class.md)基本クラス。
 
 *iid*<br/>
-[in]ディスパッチ インターフェイスを識別する IID。  
+[in]ディスパッチ インターフェイスを識別する IID。
 
 *piid*<br/>
 [in]ディスパッチ インターフェイスを識別する IID へのポインター。

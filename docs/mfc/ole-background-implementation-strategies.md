@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e91ade065c61bbec974653b0fbf6fdfe0ac44a7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae49db47905f38c4b614609a7a4b73c4597292e3
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372176"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075912"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE の背景知識 : 実装の方法
 
@@ -29,19 +29,19 @@ ms.locfileid: "46372176"
 
 - 新しいアプリケーションを作成しています。
 
-     このような状況は、少なくとも通常必要があります。 作業します。 MFC アプリケーション ウィザードを実行し、スケルトン アプリケーションを作成する高度な機能または複合ドキュメント サポートを選択します。 これらのオプションとその実行内容については、この記事を参照してください。 [MFC EXE プログラムを作成する](../mfc/reference/mfc-application-wizard.md)します。
+   このような状況は、少なくとも通常必要があります。 作業します。 MFC アプリケーション ウィザードを実行し、スケルトン アプリケーションを作成する高度な機能または複合ドキュメント サポートを選択します。 これらのオプションとその実行内容については、この記事を参照してください。 [MFC EXE プログラムを作成する](../mfc/reference/mfc-application-wizard.md)します。
 
 - OLE をサポートしていない Microsoft Foundation Class ライブラリ version 2.0 以降で記述されたプログラムがあります。
 
-     既に触れましたが、MFC アプリケーション ウィザードを使用して新しいアプリケーションを作成し、コピーして、既存のアプリケーションに新しいアプリケーションのコードを貼り付けます。 これは、サーバー、コンテナー、または自動化されたアプリケーションの動作します。 MFC を参照してください。 [SCRIBBLE](../visual-cpp-samples.md)サンプルをこの方法の例です。
+   既に触れましたが、MFC アプリケーション ウィザードを使用して新しいアプリケーションを作成し、コピーして、既存のアプリケーションに新しいアプリケーションのコードを貼り付けます。 これは、サーバー、コンテナー、または自動化されたアプリケーションの動作します。 MFC を参照してください。 [SCRIBBLE](../visual-cpp-samples.md)サンプルをこの方法の例です。
 
 - OLE バージョン 1.0 のサポートを実装している Microsoft Foundation Class ライブラリ プログラムがあります。
 
-     参照してください[MFC テクニカル ノート 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)この変換方法。
+   参照してください[MFC テクニカル ノート 41](../mfc/tn041-mfc-ole1-migration-to-mfc-ole-2.md)この変換方法。
 
 - Microsoft Foundation クラスを使用して書き込んだではありませんし、可能性がありますまたは OLE サポート実装されていませんが、アプリケーションがあります。
 
-     このような状況では、最も多くの作業が必要です。 1 つの方法が、最初の方法では、ように、新しいアプリケーションを作成し、コピーして、既存のコードを貼り付けます。 既存のコードは C で記述され場合、は、C++ コードとしてコンパイルできるように変更する必要があります。 C のコードには、Windows API を呼び出す場合は、Microsoft Foundation classes を使用するように変更する必要はありません。 多くの場合は、バージョン 2.0 以降、Microsoft Foundation Classes のによって使用されるドキュメント/ビュー アーキテクチャをサポートするために、プログラムのいくつかの制限が必要です。 このアーキテクチャの詳細については、次を参照してください。[テクニカル ノート 25](../mfc/tn025-document-view-and-frame-creation.md)します。
+   このような状況では、最も多くの作業が必要です。 1 つの方法が、最初の方法では、ように、新しいアプリケーションを作成し、コピーして、既存のコードを貼り付けます。 既存のコードは C で記述され場合、は、C++ コードとしてコンパイルできるように変更する必要があります。 C のコードには、Windows API を呼び出す場合は、Microsoft Foundation classes を使用するように変更する必要はありません。 多くの場合は、バージョン 2.0 以降、Microsoft Foundation Classes のによって使用されるドキュメント/ビュー アーキテクチャをサポートするために、プログラムのいくつかの制限が必要です。 このアーキテクチャの詳細については、次を参照してください。[テクニカル ノート 25](../mfc/tn025-document-view-and-frame-creation.md)します。
 
 読み取りが必要があります、戦略を決定した後、[コンテナー](../mfc/containers.md)または[サーバー](../mfc/servers.md) (作成中のアプリケーションの種類) に応じて記事やサンプル プログラム、またはその両方を確認します。 MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md)コンテナーとサーバーのさまざまな側面をそれぞれ実装する方法について説明します。 これらの記事全体でさまざまな時点で説明している手法の例として、これらのサンプルで特定の関数に呼ばれます。
 

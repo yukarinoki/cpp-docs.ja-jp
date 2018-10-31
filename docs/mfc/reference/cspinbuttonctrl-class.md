@@ -42,12 +42,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8e37f277c4d1676a15aa5f1c0cd593bf0a181040
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5486b743d18f23e8bcd541ca956f6dd123182580
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395740"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50083517"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl クラス
 
@@ -108,7 +108,7 @@ class CSpinButtonCtrl : public CWnd
 
 `CSpinButtonCtrl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcmn.h
 
@@ -389,7 +389,6 @@ int SetPos32(int nPos);
 void SetRange(
     short nLower,
     short nUpper);
-
 
 void SetRange32(
     int nLower,

@@ -8,18 +8,18 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: bdfa82580ba61ab276d6d64a9424d7043c2822f1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 742d722033d0fb2e686861d0e09fc45c73540ade
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393777"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075763"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>アップグレード時の潜在的な問題の概要 (Visual C++)
 
 長年にわたり、Microsoft Visual C++ コンパイラでは、C++ 言語自体、C++ 標準ライブラリ、C ランタイム (CRT)、およびその他のライブラリ (MFC や ATL など) における変更と併せて、多くの変更が行われてきました。 その結果、Visual Studio の以前のバージョンからアプリケーションをアップグレードした場合、以前は正常にコンパイルされていたコードにおいてコンパイラおよびリンカーに関するエラーや警告が発生する場合があります。 元のコード ベースが古いほど、このようなエラーが発生する可能性は高くなります。 この記事では、発生する可能性が高い問題を最も一般的な方法で分類して概説するとともに、詳細情報へのリンクも示します。
 
-> [!NOTE] 
+> [!NOTE]
 > 以前は、アップグレードが Visual Studio の複数のバージョンにまたがる場合には、一度に 1 つずつ段階的にバージョンをアップグレードすることをお勧めしていました。 しかし、現在、この方法はお勧めしていません。 コード ベースの古さの程度に関係なく、ほとんどの場合は Visual Studio の最新バージョンへアップグレードする方がより簡単であることが判明しました。
 
 アップグレード プロセスに関する質問またはコメントについては、vcupgrade@microsoft.com にお送りください。
@@ -161,7 +161,7 @@ C++ 標準では、符号なし整数値から符号付き整数値への変換�
 
 ### <a name="windows-version"></a>Windows のバージョン
 
-Windows API を直接または間接的に使用するプログラムをアップグレードする場合は、サポートする最低限の Windows バージョンを判断する必要があります。 ほとんどの場合は、Windows 7 が適切な選択となります。 詳細については、「[ヘッダー ファイルの問題](porting-guide-spy-increment.md#header_file_problems)」を参照してください。 `WINVER` マクロでは、プログラムを実行できる最も古い Windows バージョンが定義されます。 MFC プログラムで WINVER が 0x0501 (Windows XP) に設定されている場合、警告が表示されます。これは、コンパイラ自体は XP モードを備えているにもかかわらず、MFC で XP がサポートされなくなったことに原因があります。  
+Windows API を直接または間接的に使用するプログラムをアップグレードする場合は、サポートする最低限の Windows バージョンを判断する必要があります。 ほとんどの場合は、Windows 7 が適切な選択となります。 詳細については、「[ヘッダー ファイルの問題](porting-guide-spy-increment.md#header_file_problems)」を参照してください。 `WINVER` マクロでは、プログラムを実行できる最も古い Windows バージョンが定義されます。 MFC プログラムで WINVER が 0x0501 (Windows XP) に設定されている場合、警告が表示されます。これは、コンパイラ自体は XP モードを備えているにもかかわらず、MFC で XP がサポートされなくなったことに原因があります。
 
 詳細については、「[ターゲットの Windows バージョンを更新する](porting-guide-spy-increment.md#updating_winver)」および「[その他の期限切れのヘッダー ファイル](porting-guide-spy-increment.md#outdated_header_files)」を参照してください。
 
@@ -188,4 +188,4 @@ Unicode が標準化される前、多くのプログラムでは、ASCII 文字
 ## <a name="see-also"></a>関連項目
 
 [旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Visual Studio 2017 の C++ 準拠の強化](../cpp-conformance-improvements-2017.md)  
+[Visual Studio 2017 の C++ 準拠の強化](../cpp-conformance-improvements-2017.md)

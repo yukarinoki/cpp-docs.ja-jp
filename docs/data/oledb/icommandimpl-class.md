@@ -63,230 +63,230 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 41636a0ff93a247b33c3d7fb7c13a65c05e1aa1d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 91b273e8bfda6c050fa3d9d6db7aafffbe03d684
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46041468"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077622"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl クラス
 
-実装を提供、 [ICommand](/previous-versions/windows/desktop/ms709737\(v=vs.85\))インターフェイス。  
-  
+実装を提供、 [ICommand](/previous-versions/windows/desktop/ms709737)インターフェイス。
+
 ## <a name="syntax"></a>構文
 
 ```cpp
-template <class T, class CommandBase = ICommand>   
-class ATL_NO_VTABLE ICommandImpl : public CommandBase  
-```  
-  
-### <a name="parameters"></a>パラメーター  
+template <class T, class CommandBase = ICommand>
+class ATL_NO_VTABLE ICommandImpl : public CommandBase
+```
+
+### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-派生したクラス、`ICommandImpl`します。  
-  
+派生したクラス、`ICommandImpl`します。
+
 *CommandBase*<br/>
-コマンド インターフェイスです。 既定値は `ICommand` です。  
+コマンド インターフェイスです。 既定値は `ICommand` です。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atldb.h  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="methods"></a>メソッド  
-  
-|||  
-|-|-|  
-|[キャンセル](#cancel)|現在のコマンドの実行をキャンセルします。|  
-|[CancelExecution](#cancelexecution)|現在のコマンドの実行をキャンセルします。|  
-|[CreateRowset](#createrowset)|行セット オブジェクトを作成します。|  
-|[Execute](#execute)|コマンドを実行します。|  
-|[GetDBSession](#getdbsession)|コマンドを作成したセッションにインターフェイス ポインターを返します。|  
-|[ICommandImpl](#icommandimpl)|コンストラクターです。|  
-  
-### <a name="data-members"></a>データ メンバー  
-  
-|||  
-|-|-|  
-|[m_bCancel](#bcancel)|コマンドが取り消されるかどうかを示します。|  
-|[m_bCancelWhenExecuting](#bcancelwhenexecuting)|コマンドを実行中にキャンセルするかどうかを示します。|  
-|[m_bIsExecuting](#bisexecuting)|コマンドが現在実行されているかどうかを示します。|  
-  
-## <a name="remarks"></a>Remarks  
+**ヘッダー:** atldb.h
 
-コマンド オブジェクトの必須インターフェイス。  
-  
+## <a name="members"></a>メンバー
+
+### <a name="methods"></a>メソッド
+
+|||
+|-|-|
+|[キャンセル](#cancel)|現在のコマンドの実行をキャンセルします。|
+|[CancelExecution](#cancelexecution)|現在のコマンドの実行をキャンセルします。|
+|[CreateRowset](#createrowset)|行セット オブジェクトを作成します。|
+|[Execute](#execute)|コマンドを実行します。|
+|[GetDBSession](#getdbsession)|コマンドを作成したセッションにインターフェイス ポインターを返します。|
+|[ICommandImpl](#icommandimpl)|コンストラクターです。|
+
+### <a name="data-members"></a>データ メンバー
+
+|||
+|-|-|
+|[m_bCancel](#bcancel)|コマンドが取り消されるかどうかを示します。|
+|[m_bCancelWhenExecuting](#bcancelwhenexecuting)|コマンドを実行中にキャンセルするかどうかを示します。|
+|[m_bIsExecuting](#bisexecuting)|コマンドが現在実行されているかどうかを示します。|
+
+## <a name="remarks"></a>Remarks
+
+コマンド オブジェクトの必須インターフェイス。
+
 ## <a name="cancel"></a> Icommandimpl::cancel
 
-現在のコマンドの実行をキャンセルします。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-STDMETHOD(Cancel)();  
-```  
-  
-### <a name="remarks"></a>Remarks  
+現在のコマンドの実行をキャンセルします。
 
-参照してください[icommand::cancel](/previous-versions/windows/desktop/ms714402\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
+### <a name="syntax"></a>構文
+
+```cpp
+STDMETHOD(Cancel)();
+```
+
+### <a name="remarks"></a>Remarks
+
+参照してください[icommand::cancel](/previous-versions/windows/desktop/ms714402)で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="cancelexecution"></a> Icommandimpl::cancelexecution
 
-現在のコマンドの実行をキャンセルします。  
-  
-### <a name="syntax"></a>構文  
-  
+現在のコマンドの実行をキャンセルします。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-HRESULT CancelExecution();  
-```  
+HRESULT CancelExecution();
+```
 
 ## <a name="createrowset"></a> Icommandimpl::createrowset
 
-によって呼び出される[Execute](../../data/oledb/icommandimpl-execute.md)を 1 つの行セットを作成します。  
-  
-### <a name="syntax"></a>構文  
-  
+によって呼び出される[Execute](../../data/oledb/icommandimpl-execute.md)を 1 つの行セットを作成します。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-template template <class RowsetClass>  
-HRESULT CreateRowset(IUnknown* pUnkOuter,  
-   REFIID riid,  
-   DBPARAMS* pParams,  
-   DBROWCOUNT* pcRowsAffected,  
-   IUnknown** ppRowset,  
-   RowsetClass*& pRowsetObj);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+template template <class RowsetClass>
+HRESULT CreateRowset(IUnknown* pUnkOuter,
+   REFIID riid,
+   DBPARAMS* pParams,
+   DBROWCOUNT* pcRowsAffected,
+   IUnknown** ppRowset,
+   RowsetClass*& pRowsetObj);
+```
+
+#### <a name="parameters"></a>パラメーター
 
 *RowsetClass*<br/>
-ユーザーの行セット クラスを表すテンプレート クラスのメンバー。 通常、ウィザードによって生成されます。  
-  
+ユーザーの行セット クラスを表すテンプレート クラスのメンバー。 通常、ウィザードによって生成されます。
+
 *pUnkOuter*<br/>
-[in]制御側へのポインター`IUnknown`インターフェイスの行セットが集計の一部として作成される場合は、それ以外の場合は null です。  
-  
+[in]制御側へのポインター`IUnknown`インターフェイスの行セットが集計の一部として作成される場合は、それ以外の場合は null です。
+
 *riid*<br/>
-[in]対応する*riid*で`ICommand::Execute`します。  
-  
+[in]対応する*riid*で`ICommand::Execute`します。
+
 *pParams*<br/>
-[入力/出力]対応する*pParams*で`ICommand::Execute`します。  
-  
+[入力/出力]対応する*pParams*で`ICommand::Execute`します。
+
 *入力/出力*<br/>
-対応する*入力/出力*で`ICommand::Execute`します。  
-  
+対応する*入力/出力*で`ICommand::Execute`します。
+
 *ppRowset*<br/>
-[入力/出力]対応する*ppRowset*で`ICommand::Execute`します。  
-  
+[入力/出力]対応する*ppRowset*で`ICommand::Execute`します。
+
 *pRowsetObj*<br/>
-[out]行セット オブジェクトへのポインター。 通常、このパラメーターは使用されませんが COM オブジェクトに渡す前に、行セットに対してより多くの作業を実行する必要がある場合に使用できます。 有効期間*pRowsetObj*連結された*ppRowset*します。  
-  
-### <a name="return-value"></a>戻り値  
+[out]行セット オブジェクトへのポインター。 通常、このパラメーターは使用されませんが COM オブジェクトに渡す前に、行セットに対してより多くの作業を実行する必要がある場合に使用できます。 有効期間*pRowsetObj*連結された*ppRowset*します。
 
-標準の HRESULT 値。 参照してください`ICommand::Execute`の一般的な値の一覧についてはします。  
-  
-### <a name="remarks"></a>Remarks  
+### <a name="return-value"></a>戻り値
 
-1 つ以上の行セットを作成するか、別の行セットを作成するための独自の条件を提供するには、別の呼び出しを配置`CreateRowset`内から`Execute`します。  
-  
-参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス。*  
+標準の HRESULT 値。 参照してください`ICommand::Execute`の一般的な値の一覧についてはします。
+
+### <a name="remarks"></a>Remarks
+
+1 つ以上の行セットを作成するか、別の行セットを作成するための独自の条件を提供するには、別の呼び出しを配置`CreateRowset`内から`Execute`します。
+
+参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095)で、 *OLE DB プログラマーズ リファレンス。*
 
 ## <a name="execute"></a> Icommandimpl::execute
 
-コマンドを実行します。  
-  
-### <a name="syntax"></a>構文  
-  
+コマンドを実行します。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-HRESULT Execute(IUnknown* pUnkOuter,  
-   REFIID riid,  
-   DBPARAMS* pParams,  
-   DBROWCOUNT* pcRowsAffected,  
-   IUnknown** ppRowset);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+HRESULT Execute(IUnknown* pUnkOuter,
+   REFIID riid,
+   DBPARAMS* pParams,
+   DBROWCOUNT* pcRowsAffected,
+   IUnknown** ppRowset);
+```
 
-参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
-  
-### <a name="remarks"></a>Remarks  
+#### <a name="parameters"></a>パラメーター
 
-要求された発信インターフェイスは、この関数を作成する、行セット オブジェクトから取得したインターフェイスになります。  
-  
-`Execute` 呼び出し[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)します。 1 つ以上の行セットを作成するか、別の行セットを作成するための独自の条件を提供する既定の実装をオーバーライドします。  
+参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095)で、 *OLE DB プログラマーズ リファレンス*します。
+
+### <a name="remarks"></a>Remarks
+
+要求された発信インターフェイスは、この関数を作成する、行セット オブジェクトから取得したインターフェイスになります。
+
+`Execute` 呼び出し[CreateRowset](../../data/oledb/icommandimpl-createrowset.md)します。 1 つ以上の行セットを作成するか、別の行セットを作成するための独自の条件を提供する既定の実装をオーバーライドします。
 
 ## <a name="getdbsession"></a> Icommandimpl::getdbsession
 
-コマンドを作成したセッションにインターフェイス ポインターを返します。  
-  
-### <a name="syntax"></a>構文  
-  
+コマンドを作成したセッションにインターフェイス ポインターを返します。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-STDMETHOD (GetDBSession) (REFIID riid,  
-   IUnknown** ppSession);  
-```  
-  
-#### <a name="parameters"></a>パラメーター  
+STDMETHOD (GetDBSession) (REFIID riid,
+   IUnknown** ppSession);
+```
 
-参照してください[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。  
-  
-### <a name="remarks"></a>Remarks  
+#### <a name="parameters"></a>パラメーター
 
-セッションからプロパティを取得するために便利です。  
+参照してください[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622)で、 *OLE DB プログラマーズ リファレンス*します。
+
+### <a name="remarks"></a>Remarks
+
+セッションからプロパティを取得するために便利です。
 
 ## <a name="icommandimpl"></a> Icommandimpl::icommandimpl
 
-コンストラクターです。  
-  
-### <a name="syntax"></a>構文  
-  
+コンストラクターです。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-ICommandImpl();  
-```  
+ICommandImpl();
+```
 
 ## <a name="bcancel"></a> Icommandimpl::m_bcancel
 
-コマンドが取り消されたかどうかを示します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-unsigned m_bCancel:1;  
-```  
-  
-### <a name="remarks"></a>Remarks  
+コマンドが取り消されたかどうかを示します。
 
-この変数を取得することができます、`Execute`コマンド クラスと適切なキャンセルのメソッド。 
+### <a name="syntax"></a>構文
+
+```cpp
+unsigned m_bCancel:1;
+```
+
+### <a name="remarks"></a>Remarks
+
+この変数を取得することができます、`Execute`コマンド クラスと適切なキャンセルのメソッド。
 
 ## <a name="bcancelwhenexecuting"></a> Icommandimpl::m_bcancelwhenexecuting
 
-実行時にコマンドをキャンセルできるかどうかを示します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-unsigned m_bCancelWhenExecuting:1;  
-```  
-  
-### <a name="remarks"></a>Remarks  
+実行時にコマンドをキャンセルできるかどうかを示します。
 
-既定値は**true** (キャンセルできます)。  
+### <a name="syntax"></a>構文
+
+```cpp
+unsigned m_bCancelWhenExecuting:1;
+```
+
+### <a name="remarks"></a>Remarks
+
+既定値は**true** (キャンセルできます)。
 
 ## <a name="bisexecuting"></a> Icommandimpl::m_bisexecuting
 
-コマンドが現在実行されているかどうかを示します。  
-  
-### <a name="syntax"></a>構文  
-  
-```cpp
-unsigned m_bIsExecuting:1;  
-```  
-  
-### <a name="remarks"></a>Remarks  
+コマンドが現在実行されているかどうかを示します。
 
-`Execute`コマンド クラスのメソッドでは、この変数に設定**true**します。 
-  
-## <a name="see-also"></a>関連項目  
+### <a name="syntax"></a>構文
+
+```cpp
+unsigned m_bIsExecuting:1;
+```
+
+### <a name="remarks"></a>Remarks
+
+`Execute`コマンド クラスのメソッドでは、この変数に設定**true**します。
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
 [OLE DB プロバイダー テンプレートのアーキテクチャ](../../data/oledb/ole-db-provider-template-architecture.md)

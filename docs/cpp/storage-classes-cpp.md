@@ -19,12 +19,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4b57e2c4e6631683afdabec983f155941b8cd2da
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 659b76a640a0dfaee75179f135fee9d1eeb5ba02
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46107469"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50058337"
 ---
 # <a name="storage-classes-c"></a>ストレージ クラス (C++)
 
@@ -35,7 +35,6 @@ A*ストレージ クラス*C++ のコンテキストでの変数宣言は、オ
 1. [変更可能な](../cpp/mutable-data-members-cpp.md)キーワードが、ストレージ クラス指定子として見なされます。 ただし、クラス定義のメンバー一覧でのみ使用できます。
 
 1. **Visual C 2010 以降:** 、**自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**登録**キーワードは C++ 言語から削除されます。
-
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -220,13 +219,13 @@ void DoSomething()
 
 - すべての呼び出し元スレッドを Dll に動的に初期化されたスレッド ローカル変数が正しく初期化されていません可能性があります。 詳細については、[スレッド](thread.md) に関するページを参照してください。
 
--  `thread_local`指定子と組み合わせることがあります**静的**または**extern**します。
+- `thread_local`指定子と組み合わせることがあります**静的**または**extern**します。
 
--  適用できる`thread_local`のみにデータの宣言と定義されます。`thread_local`関数宣言または定義では使用できません。
+- 適用できる`thread_local`のみにデータの宣言と定義されます。`thread_local`関数宣言または定義では使用できません。
 
--  `thread_local` は、静的ストレージ存続期間のあるデータ項目にのみ指定できます。 これには、グローバルなデータ オブジェクトが含まれます (どちらも**静的**と**extern**)、ローカルな静的オブジェクト、およびクラスの静的データ メンバー。 任意のローカル変数が宣言されている`thread_local`は他のストレージ クラスが提供されていない場合は、暗黙的に静的つまり、ブロック スコープで`thread_local`と等価`thread_local static`します。
+- `thread_local` は、静的ストレージ存続期間のあるデータ項目にのみ指定できます。 これには、グローバルなデータ オブジェクトが含まれます (どちらも**静的**と**extern**)、ローカルな静的オブジェクト、およびクラスの静的データ メンバー。 任意のローカル変数が宣言されている`thread_local`は他のストレージ クラスが提供されていない場合は、暗黙的に静的つまり、ブロック スコープで`thread_local`と等価`thread_local static`します。
 
--  宣言と定義が同じファイルと別々のファイルのどちらで発生する場合でも、スレッド ローカル オブジェクトの宣言と定義には `thread_local` を使用する必要があります。
+- 宣言と定義が同じファイルと別々のファイルのどちらで発生する場合でも、スレッド ローカル オブジェクトの宣言と定義には `thread_local` を使用する必要があります。
 
 Windows で`thread_local`は機能的に等価[_declspec](../cpp/thread.md)する点を除いて **_declspec**型定義に適用できるし、C コードでは無効です。 `thread_local` は C++ 標準の一部であり、移植性がより高いため、できるだけ常にこれを使用してください。
 

@@ -38,82 +38,82 @@ ms.author: mblome
 ms.workload:
 - cplusplus
 - data-storage
-ms.openlocfilehash: 76eb58936082c7efde7e7bc87f17e7326ecc8920
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8a19085ae5d46396415e5b54b9acada547bc8079
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071550"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50077791"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset クラス
 
-使用される、`CCommand`または`CTable`宣言します。  
-  
+使用される、`CCommand`または`CTable`宣言します。
+
 ## <a name="syntax"></a>構文
 
 ```cpp
-template <class TAccessor = CAccessorBase>  
-class CStreamRowset  
-```  
-  
-### <a name="parameters"></a>パラメーター  
+template <class TAccessor = CAccessorBase>
+class CStreamRowset
+```
+
+### <a name="parameters"></a>パラメーター
 
 *TAccessor*<br/>
-アクセサー クラス。  
+アクセサー クラス。
 
-## <a name="requirements"></a>要件  
+## <a name="requirements"></a>必要条件
 
-**ヘッダー:** atldbcli.h  
-  
-## <a name="members"></a>メンバー  
-  
-### <a name="methods"></a>メソッド  
-  
-|||  
-|-|-|  
-|[CStreamRowset](#cstreamrowset)|コンストラクターです。 インスタンスを作成し、初期化、`CStreamRowset`オブジェクト。|  
-|[閉じる](#close)|リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\))クラスのインターフェイス ポインター。|  
-  
-## <a name="remarks"></a>Remarks  
+**ヘッダー:** atldbcli.h
 
-使用`CStreamRowset`で、`CCommand`または`CTable`例については、宣言。  
-  
-[!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]  
-  
-または  
-  
-[!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]  
-  
-`ICommand::Execute` 返します、`ISequentialStream`ポインターに格納されている`m_spStream`します。 使用して、`Read`の XML 形式 (Unicode 文字列) のデータを取得します。 例えば:  
-  
-[!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]  
-  
-SQL Server 2000 では、XML 書式設定でを実行し、すべての列と 1 つの XML 文字列として行セットのすべての行が返されます。  
-  
+## <a name="members"></a>メンバー
+
+### <a name="methods"></a>メソッド
+
+|||
+|-|-|
+|[CStreamRowset](#cstreamrowset)|コンストラクターです。 インスタンスを作成し、初期化、`CStreamRowset`オブジェクト。|
+|[閉じる](#close)|リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035)クラスのインターフェイス ポインター。|
+
+## <a name="remarks"></a>Remarks
+
+使用`CStreamRowset`で、`CCommand`または`CTable`例については、宣言。
+
+[!code-cpp[NVC_OLEDB_Consumer#11](../../data/oledb/codesnippet/cpp/cstreamrowset-class_1.cpp)]
+
+または
+
+[!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
+
+`ICommand::Execute` 返します、`ISequentialStream`ポインターに格納されている`m_spStream`します。 使用して、`Read`の XML 形式 (Unicode 文字列) のデータを取得します。 例えば:
+
+[!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
+
+SQL Server 2000 では、XML 書式設定でを実行し、すべての列と 1 つの XML 文字列として行セットのすべての行が返されます。
+
 > [!NOTE]
->  この機能は、SQL Server 2000 でのみ動作します。  
-  
+>  この機能は、SQL Server 2000 でのみ動作します。
+
 ## <a name="cstreamrowset"></a> Cstreamrowset::cstreamrowset
 
-インスタンスを作成し、初期化、`CStreamRowset`オブジェクト。  
-  
-### <a name="syntax"></a>構文  
-  
+インスタンスを作成し、初期化、`CStreamRowset`オブジェクト。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-CStreamRowset();  
-```  
+CStreamRowset();
+```
 
 ## <a name="close"></a> Cstreamrowset::close
 
-リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035\(v=vs.85\))クラスのインターフェイス ポインター。  
-  
-### <a name="syntax"></a>構文  
-  
+リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035)クラスのインターフェイス ポインター。
+
+### <a name="syntax"></a>構文
+
 ```cpp
-void Close();   
-```  
-  
-## <a name="see-also"></a>関連項目  
+void Close();
+```
+
+## <a name="see-also"></a>関連項目
 
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

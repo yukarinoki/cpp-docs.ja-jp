@@ -30,12 +30,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 622f439355c9d8b059ac48f0bdc1f57c1b32e5eb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 82266e387bcba3e4e7f2e377c666ce890d258e0f
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387667"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162114"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer クラス
 
@@ -67,7 +67,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |名前|説明|
 |----------|-----------------|
 |[has_value](#has_value)|チェックするかどうかこの`overwrite_buffer`メッセージング ブロックはまだ値。|
-|[value](#value)|格納されているメッセージの現在のペイロードへの参照を取得、`overwrite_buffer`メッセージング ブロックします。|
+|[値](#value)|格納されているメッセージの現在のペイロードへの参照を取得、`overwrite_buffer`メッセージング ブロックします。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
@@ -160,7 +160,7 @@ bool has_value() const;
 
 ### <a name="return-value"></a>戻り値
 
-`true` ブロックは、値を受け取った場合`false`それ以外の場合。
+**true**ブロックは、値を受け取った場合**false**それ以外の場合。
 
 ##  <a name="link_target_notification"></a> link_target_notification
 
@@ -296,7 +296,7 @@ virtual bool supports_anonymous_source();
 
 ### <a name="return-value"></a>戻り値
 
-`true` ブロックは延期しないため、メッセージを提供します。
+**true**ブロックは延期しないため、メッセージを提供します。
 
 ##  <a name="release_message"></a> release_message
 
@@ -326,11 +326,11 @@ virtual bool reserve_message(runtime_object_identity _MsgId);
 
 ### <a name="return-value"></a>戻り値
 
-`true` 場合は、メッセージが正常に予約された、`false`それ以外の場合。
+**true**場合は、メッセージが正常に予約された、 **false**それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
 
-後`reserve`と呼ばれる場合は、返された場合`true`, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
+後`reserve`と呼ばれる場合は、返された場合**true**, か、`consume`または`release`かかるまたはメッセージの所有権を解放のいずれかを呼び出す必要があります。
 
 ##  <a name="resume_propagation"></a> resume_propagation
 

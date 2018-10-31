@@ -28,12 +28,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1106ad878f4053cacae67d9d0e343e9469b1a1c1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f4b3703d0bd4556090c08a874bce362120817397
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46061176"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49161802"
 ---
 # <a name="inheritance-keywords"></a>継承キーワード
 
@@ -83,6 +83,8 @@ int S::*p;
 
 > [!NOTE]
 >  メンバーへのクラス ポインター表現の同じ前方宣言は、そのクラスのメンバーへのポインターを宣言する各翻訳単位で発生する必要があり、その宣言はメンバーへのポインターを宣言する前に発生する必要があります。
+
+以前のバージョンとの互換性のため **_single_inheritance**、 **_multiple_inheritance**、および **_virtual_inheritance**のシノニムで **_ _single_inheritance**、 **_ _multiple_inheritance**、および **_ _virtual_inheritance**しない限り、コンパイラ オプション[/Za\(言語を無効にします。拡張機能)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 
 **Microsoft 固有の仕様はここまで**
 
