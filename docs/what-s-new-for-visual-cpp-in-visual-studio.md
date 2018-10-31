@@ -9,12 +9,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40c74633be8556fc075f10e328521209761f385c
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: 6f2b4dddd77b245de307173fbc2496181658be78
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890713"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50066072"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 における Visual C++ の新機能
 
@@ -42,11 +42,11 @@ Visual Studio 2017 には、Visual C++ 環境に対する多くの更新プロ�
 
 - Visual Studio 2017 では、[/sdl](build/reference/sdl-enable-additional-security-checks.md) を [/await](build/reference/await-enable-coroutine-support.md) と一緒に使うことができます。 コルーチンでの [/RTC](build/reference/rtc-run-time-error-checks.md) の制限がなくなりました。
 
-   **Visual Studio 2017 バージョン 15.3**:  
+   **Visual Studio 2017 バージョン 15.3**:
+
 - [/std:c++14 と /std:c++latest](build/reference/std-specify-language-standard-version.md): これらのコンパイラ オプションを使用すると、プロジェクトで ISO C++ プログラミング言語の特定のバージョンにオプトインできます。 ほとんどの新しいドラフト標準機能は、**/std:c++latest** オプションによって保護されています。
 
 - [/std:c++17](build/reference/std-specify-language-standard-version.md) を使用すると、コンパイラによって実装された C++17 機能セットが有効になります。 このオプションによって、C++17 後の C++ 標準のワーキング ドラフトおよび不具合の更新のバージョンで変更または更新された機能に対するコンパイラと標準ライブラリのサポートが無効になります。 これらの機能を有効にするには、**/std:c++latest** を使用します。
-
 
 ### <a name="codegen-security-diagnostics-and-versioning"></a>コード生成、セキュリティ、診断、バージョン管理
 
@@ -342,9 +342,9 @@ Visual Studio 2017 では、MSBuild プロジェクト ファイル (.vcxproj) �
 
   ![Cmake の [フォルダーを開く]](media/cmake_cpp.png "CMake Open Folder")
 
-**Visual Studio 2017 バージョン 15.3**: CMake Ninja generator のサポートが追加されました。 
+**Visual Studio 2017 バージョン 15.3**: CMake Ninja generator のサポートが追加されました。
 
-**Visual Studio 2017 バージョン 15.5**: 既存の CMake キャッシュをインポートするためのサポートが追加されました。 
+**Visual Studio 2017 バージョン 15.5**: 既存の CMake キャッシュをインポートするためのサポートが追加されました。
 
 **Visual Studio 2017 バージョン 15.7**: CMake 3.11、CMake プロジェクトでのコード分析、ソリューション エクスプローラーのターゲット ビュー、キャッシュ生成用のオプション、および単一ファイルのコンパイルのためのサポートが追加されました。 詳細については、「[CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)」 (Visual Studio での CMake のサポート) および「[Visual C++ で CMake プロジェクト](ide/cmake-tools-for-visual-cpp.md)」をご覧ください。
 
@@ -416,10 +416,11 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **/bi
 
 15.3 で使われていた警告番号の一部は 15.5 では使われなくなりました。 より具体的なチェックに置換されました。
 
-**Visual Studio 2017 バージョン 15.6**:  
-単一ファイルの分析、および分析実行時のパフォーマンス向上のサポートの追加。 詳細については、「[C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)」 (Visual Studio 2017 15.6 プレビュー 2 での C++ スタティック分析の改善) を参照してください。
+**Visual Studio 2017 バージョン 15.6**:
 
-**Visual Studio 2017 バージョン 15.7**:  
+- 単一ファイルの分析、および分析実行時のパフォーマンス向上のサポートの追加。 詳細については、「[C++ Static Analysis Improvements for Visual Studio 2017 15.6 Preview 2](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/c-static-analysis-improvements-for-visual-studio-2017-15-6-preview-2/)」 (Visual Studio 2017 15.6 プレビュー 2 での C++ スタティック分析の改善) を参照してください。
+
+**Visual Studio 2017 バージョン 15.7**:
 
 - どのコード分析ルールを実行するかを指定できる [/analyze: ruleset](build/reference/analyze-code-analysis.md)のサポートの追加。
 - 追加の C++ Core Guidelines ルールのサポートの追加。  詳細については、「[Using the C++ Core Guidelines checkers (C++ Core ガイドラインのチェッカーを使用する)](/visualstudio/code-quality/using-the-cpp-core-guidelines-checkers)」をご覧ください。
@@ -435,7 +436,7 @@ Google Test Adapter と Boost.Test Adapter は **C++ ワークロードによる
 - Boost.Test ダイナミック ライブラリのサポートの追加。
 - 現在、Boost.Test 項目テンプレートは IDE にあります。
 
-詳細については、「[Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)」 (Boost.Test 単体テスト: 動的なライブラリのサポートと新しい項目テンプレート) を参照してください。 
+詳細については、「[Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)」 (Boost.Test 単体テスト: 動的なライブラリのサポートと新しい項目テンプレート) を参照してください。
 
 **Visual Studio 2017 バージョン 15.7**:
 

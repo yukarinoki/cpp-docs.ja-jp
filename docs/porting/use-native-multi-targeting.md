@@ -15,12 +15,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 62404de4012bcd49888da527ae93ed1b2137a48a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3c66fe63d97f623011b3dade46266a4a9d8d83b1
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374146"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064422"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Visual Studio でネイティブ マルチターゲットを利用し、古いプロジェクトを作成する
 
@@ -52,11 +52,11 @@ Visual Studio では、プロジェクトのアップグレードが何度も要
 
 アップグレードしないことを選択した場合は、Visual Studio はソリューションまたはプロジェクト ファイルを変更しません。 プロジェクトをビルドしたときに生成されたバイナリは、古いバージョンの Visual Studio でビルドしたものと完全な互換性があります。 これは、Visual Studio が同じ C++ コンパイラを使用し、古い IDE に同梱されている同じライブラリをリンクするためです。 アップグレード ダイアログで、**[キャンセル]** を選択した場合にインストールされている古いバージョンの Visual Studio を保持するように促す警告が表示されるのもこのためです。
 
-## <a name="instructions-for-visual-studio-2008"></a>Visual Studio 2008 での手順  
-  
+## <a name="instructions-for-visual-studio-2008"></a>Visual Studio 2008 での手順
+
 Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビルドシステムがありました。 Visual Studio 2010 以降、**MSBuild** を使用するように Visual C プロジェクトが変更されました。 つまり、最新バージョンの Visual Studio で Visual Studio 2008 プロジェクトをビルドするには、更新手順を実行する必要があります。 更新されたプロジェクトでは、Visual Studio 2008 IDE を使用して作成されたバイナリと完全に互換性があるバイナリを引き続き生成します。
 
-最初に、Visual Studio の現在のバージョンだけでなく、Visual Studio 2008 と同じコンピューターに Visual Studio 2010 をインストールする必要があります。 Visual Studio 2008 プロジェクトを対象とするために必要な **MSBuild** スクリプトをインストールするのは、Visual Studio 2010 のみです。 
+最初に、Visual Studio の現在のバージョンだけでなく、Visual Studio 2008 と同じコンピューターに Visual Studio 2010 をインストールする必要があります。 Visual Studio 2008 プロジェクトを対象とするために必要な **MSBuild** スクリプトをインストールするのは、Visual Studio 2010 のみです。
 
 次に、Visual Studio 2008 のソリューションとプロジェクトを Visual Studio の現在のバージョンに更新する必要があります。 アップグレードの前に、プロジェクトおよびソリューション ファイルのバックアップを作成することをお勧めします。 アップグレード プロセスを開始するには、現在のバージョンの Visual Studio でソリューションを開きます。 アップグレードのプロンプトが表示された場合、表示された情報を確認し、**[OK]** を選択してアップグレードを開始します。 ソリューションに複数のプロジェクトがある場合、更新する必要があります。既存の .vcproj ファイルに加えて、ウィザードによって新しい .vcxproj プロジェクト ファイルが作成されます。 元の .sln ファイルのコピーを保持する限り、アップグレードによる既存の Visual Studio 2008 プロジェクトへの他の影響はありません。
 
@@ -77,4 +77,4 @@ Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビル�
 ## <a name="see-also"></a>参照
 
 [旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Visual Studio 2017 の C++ 準拠の強化](../cpp-conformance-improvements-2017.md)  
+[Visual Studio 2017 の C++ 準拠の強化](../cpp-conformance-improvements-2017.md)

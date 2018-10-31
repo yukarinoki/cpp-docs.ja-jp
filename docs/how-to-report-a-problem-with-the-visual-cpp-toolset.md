@@ -10,12 +10,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 279598c320131b163b936091560de45255c18a4d
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e2ca0f4aa5f3965adc97e4cdaef09e01646e8809
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235011"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50062120"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Visual C++ ツールセットまたはドキュメントの問題を報告する方法
 
@@ -381,7 +381,7 @@ C++ コンパイラ、リンカー、およびその他のツールやライブ�
 
 既定では、**レポート内の情報、およびコメントと応答はすべて公開されます**。 通常これには、コミュニティ全体が問題、解決策、および他のユーザーが見つけた回避策を閲覧できるという利点があります。 しかし、プライバシーや知的財産権の理由から、データや ID が公開されることを心配されている場合は、いくつかオプションがあります。
 
-身元を公開することついて心配がある場合は、個人情報を公開しない[新しい Microsoft アカウントを作成](https://signup.live.com/)します。 このアカウントを使用してレポートを作成します。 
+身元を公開することついて心配がある場合は、個人情報を公開しない[新しい Microsoft アカウントを作成](https://signup.live.com/)します。 このアカウントを使用してレポートを作成します。
 
 **公開される最初のレポートのタイトルや内容に、公開したくないことを含めないでください。** 代わりに、別のコメントで詳細を非公開で送信することができます。 レポートが適切な担当者に確実に送信されるようにするためには、問題レポートのトピックの一覧に **cppcompiler** を含めます。 問題レポートが作成されると、返信と添付ファイルを閲覧できる人を指定することができるようになります。
 

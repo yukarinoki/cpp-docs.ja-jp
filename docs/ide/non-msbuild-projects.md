@@ -14,12 +14,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: aefcd05f4187e22adf5f21c4beffa74ca8be39b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5c7473cd7d6f2f07d81011eca0826b8066513d23
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420557"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50069257"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C++ での "フォルダーを開く" プロジェクト
 
@@ -245,6 +245,7 @@ CppProperties.json では任意の数の構成を作成できます。 それぞ
   ]
 }
 ```
+
 ### <a name="define-tasks-with-tasksvsjson"></a>tasks.vs.json でタスクを定義する
 
 IDE でタスクとして直接実行することで、現在のワークスペースにあるファイルに対してビルド スクリプトやその他の外部操作を自動化できます。 ファイルまたはフォルダーを右クリックし、**[タスクの構成]** を選択すると、新しいタスクを構成できます。

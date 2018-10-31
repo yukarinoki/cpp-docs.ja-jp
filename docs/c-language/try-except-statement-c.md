@@ -20,12 +20,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f367bd5d9e61d44c24a876bf1d69ad24406d0630
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 957b76b6b39586016e9ed7b921b7bfa51a1fdf34
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036216"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50075139"
 ---
 # <a name="try-except-statement-c"></a>try-except ステートメント (C)
 
@@ -49,11 +49,11 @@ ms.locfileid: "46036216"
 
 1. 保護されたセクションの実行中または保護されたセクションで呼び出された任意のルーチンで例外が発生した場合、`__except` 式が評価され、返された値で例外の処理方法が決定されます。 次の 3 つの値があります。
 
-     `EXCEPTION_CONTINUE_SEARCH` 例外は認識されていません。 最初に **try-except** ステートメントを含むハンドラーを検索してから、次に優先順位が最も高いハンドラーについてスタックを検索し続けます。
+   `EXCEPTION_CONTINUE_SEARCH` 例外は認識されていません。 最初に **try-except** ステートメントを含むハンドラーを検索してから、次に優先順位が最も高いハンドラーについてスタックを検索し続けます。
 
-     `EXCEPTION_CONTINUE_EXECUTION` 例外が認識されましたが、破棄されました。 例外が発生した位置から実行を継続します。
+   `EXCEPTION_CONTINUE_EXECUTION` 例外が認識されましたが、破棄されました。 例外が発生した位置から実行を継続します。
 
-     `EXCEPTION_EXECUTE_HANDLER` 例外が認識されました。 `__except` 複合ステートメントの実行によって例外ハンドラーに制御を移動した後、例外が発生した時点から実行を続行します。
+   `EXCEPTION_EXECUTE_HANDLER` 例外が認識されました。 `__except` 複合ステートメントの実行によって例外ハンドラーに制御を移動した後、例外が発生した時点から実行を続行します。
 
 `__except` 式は C の式として評価されるため、1 つの値、条件式の演算子、またはコンマ演算子に制限されます。 より広範な処理が必要な場合、前に挙げた 3 つの値の 1 つを返すルーチンを式で呼び出すことができます。
 

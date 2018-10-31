@@ -14,12 +14,12 @@ dev_langs:
 - C++
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ed44479f6e6d1569a9b27a059e837cbbb924b803
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 70af45a860ff854faf244cf51ad7462262f183fe
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821432"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50072695"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows、Linux、および MacOS 用の C++ パッケージ マネージャー
 
@@ -37,11 +37,11 @@ Windows カタログ内のライブラリの場合、vcpkg はバイナリ[1] �
 
 [1] *注: 一部の独自のライブラリでは、ソースは入手できません。vcpkg では、このような場合に互換性のあるビルド済みのバイナリをダウンロードします。*
 
-## <a name="installation"></a>インストール 
+## <a name="installation"></a>インストール
 
 GitHub から vcpkg リポジトリを複製する: https://github.com/Microsoft/vcpkg 任意のフォルダー場所にダウンロードすることができます。
 
-ルート フォルダーのブートストラップを実行します。 
+ルート フォルダーのブートストラップを実行します。
 
 - **bootstrap-vcpkg.bat** (Windows)
 - **./bootstrap-vcpkg.sh** (Linux、MacOS)
@@ -76,7 +76,7 @@ taglib      1.11.1-2   TagLib Audio Meta-Data Library
 
 **vcpkg search** を使用してライブラリの名前を取得したら、**vcpkg install** を使用してライブラリをダウンロードしてからコンパイルします。 vcpkg では、ports ディレクトリのライブラリの portfile を使用します。 トリプレットが指定されていない場合、vcpkg はターゲット プラットフォームの既定のトリプレット (x86-windows、x64-linux.cmake、または x64-osx.cmake) をインストールしてコンパイルします。
 
-Linux ライブラリの場合、vcpkg はローカル コンピューターにインストールされている gcc に依存します。 MacOS では、vcpkg は Clang を使用します。 
+Linux ライブラリの場合、vcpkg はローカル コンピューターにインストールされている gcc に依存します。 MacOS では、vcpkg は Clang を使用します。
 
 portfile で依存関係が指定されている場合、vcpkg はそれもダウンロードしてインストールします。 ダウンロードの後、vcpkg はライブラリで使用される任意のビルド システムを使用して、ライブラリをビルドします。 CMake および (Windows 上の) MSBuild プロジェクト ファイルが優先されますが、MAKE は他のビルド システムと共にサポートされます。 vcpkg がローカル コンピューターで指定されたビルド システムを見つけられない場合、そのビルド システムがダウンロードされ、インストールされます。
 
@@ -91,7 +91,7 @@ Additional packages (*) will be installed to complete this operation.
 
 ```
 
-CMAKE プロジェクトの場合は、CMAKE_TOOLCHAIN_FILE を使用してライブラリを `find_package()` で使用できるようにします。 例:  
+CMAKE プロジェクトの場合は、CMAKE_TOOLCHAIN_FILE を使用してライブラリを `find_package()` で使用できるようにします。 例:
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)
@@ -132,14 +132,13 @@ zlib:x86-windows        1.2.11   A compression library
 1. **vcpkg install \<library>** を実行します。
 1. その後、**vcpkg integrate project** を使用して、プロジェクトごとにそのライブラリを参照する NuGet パッケージを作成できます。
 
-## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Visual Studio Code (Linux/MacOS) との統合 
+## <a name="integrate-with-visual-studio-code-linuxmacos"></a>Visual Studio Code (Linux/MacOS) との統合
 
 **vcpkg integrate install** を実行して、Linux/MacOS 上で vcpkg を登録する場所に Visual Studio Code を構成し、ソース ファイルで IntelliSense を有効にします。
 
 ## <a name="target-linux-from-windows-via-wsl"></a>WSL 経由で Windows から Linux をターゲットにする
 
 Windows Subsystem for Linux (WSL) を使用して、Windows コンピューターから Linux バイナリを生成できます。 指示に従って、[Windows 10 で WSL を設定](/windows/wsl/install-win10)し、[Linux 用の Visual Studio 拡張機能](https://blogs.msdn.microsoft.com/vcblog/2017/02/08/targeting-windows-subsystem-for-linux-from-visual-studio/)を使って構成します。 Windows と Linux の両方にビルドされたすべてのライブラリを同じフォルダーに配置すると、Windows と WSL の両方からアクセスできます。
-
 
 ## <a name="export_binaries_per_project"></a> コンパイル済みのバイナリとヘッダーをエクスポートする
 
