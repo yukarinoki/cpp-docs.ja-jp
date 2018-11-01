@@ -15,12 +15,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 31b9c0c8668ec16d84ad84627eb73a0f406eb21e
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 99fdb8f9c08845c5f440fc4ae1f100f8afd832e2
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328377"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136160"
 ---
 # <a name="ide-and-compiler-tools-for-visual-c-development"></a>IDE と Visual C++ 開発用コンパイラ ツール
 
@@ -30,7 +30,7 @@ Visual Studio IDE の共有ツールに加えて、MSVC には、ネイティブ
 
 ## <a name="create-projects"></a>プロジェクトを作成する
 
-*プロジェクト* は基本的には、実行可能ファイルに組み込まれている、イメージやデータ ファイルなどの一連のソース コード ファイルとリソースです。 
+*プロジェクト* は基本的には、実行可能ファイルに組み込まれている、イメージやデータ ファイルなどの一連のソース コード ファイルとリソースです。
 
 Visual Studio 2015 では、MSBuild プロジェクトのサポートを提供します。 Qt や CMake などの他のビルド システム向けの Visual Studio 拡張機能をダウンロードすることができます。
 
@@ -65,7 +65,7 @@ MFC アプリケーションのユーザー インターフェイスの作成方
 
 ## <a name="write-code"></a>コードの記述
 
-プロジェクトを作成すると、すべてのプロジェクト ファイルが**ソリューション エクスプローラー** ウィンドウに表示されます。 (*ソリューション*は、1 つまたは複数の関連プロジェクトのための論理コンテナーです。)**ソリューション エクスプローラー**で .h または .cpp ファイルをクリックすると、ファイルがコード エディターで開きます。 
+プロジェクトを作成すると、すべてのプロジェクト ファイルが**ソリューション エクスプローラー** ウィンドウに表示されます。 (*ソリューション*は、1 つまたは複数の関連プロジェクトのための論理コンテナーです。)**ソリューション エクスプローラー**で .h または .cpp ファイルをクリックすると、ファイルがコード エディターで開きます。
 
 ![ソリューション エクスプローラーとコード エディター](media/vs2017-solution-explorer-code-editor.png "Visual Studio 2017 のソリューション エクスプローラーとコード エディター")
 

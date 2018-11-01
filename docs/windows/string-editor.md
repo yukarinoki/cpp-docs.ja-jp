@@ -1,14 +1,8 @@
 ---
-title: 文字列エディター (C++) |Microsoft Docs
-ms.custom: ''
+title: 文字列エディター (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.string.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - String editor
 - string tables
@@ -18,17 +12,12 @@ helpviewer_keywords:
 - resource editors [C++], String editor
 - strings [C++], editing
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9026d016f54bc4aff37be9c6e318837ad1855d1a
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: add153f84259985066397b6340fb4281a11beb17
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49081532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513660"
 ---
 # <a name="string-editor-c"></a>文字列エディター (C++)
 
@@ -57,7 +46,7 @@ ms.locfileid: "49081532"
 
 マネージ プロジェクト (共通言語ランタイムを対象とするもの) にリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列をプロパティに割り当てる方法については、次を参照してください。[チュートリアル: Windows フォームのローカリゼーション](/previous-versions/visualstudio/visual-studio-2010/y99d1cd3)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 
