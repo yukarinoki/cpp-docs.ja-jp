@@ -1,10 +1,6 @@
 ---
-title: basic_ios クラス | Microsoft Docs
-ms.custom: ''
+title: basic_ios クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - ios/std::basic_ios
 - ios/std::basic_ios::char_type
@@ -32,8 +28,6 @@ f1_keywords:
 - ios/std::basic_ios::tie
 - ios/std::basic_ios::widen
 - ios/std::basic_ios::explicit operator bool
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::basic_ios [C++]
 - std::basic_ios [C++], char_type
@@ -61,16 +55,12 @@ helpviewer_keywords:
 - std::basic_ios [C++], tie
 - std::basic_ios [C++], widen
 ms.assetid: 4fdcd8e1-62d2-4611-8a70-1e4f58434007
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 175d7895331ec960244354870c6bd6845baf37d1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9787775acec6ffeb8eaeaad96af6e152d8cb1bac
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537230"
 ---
 # <a name="basicios-class"></a>basic_ios クラス
 
@@ -112,7 +102,7 @@ class basic_ios : public ios_base
 |-|-|
 |[basic_ios](#basic_ios)|`basic_ios` クラスを構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -154,7 +144,7 @@ class basic_ios : public ios_base
 |[operator void *](#op_void_star)|ストリームが依然として良好かどうかを示します。|
 |[operator!](#op_not)|ストリームが悪化していないかどうかを示します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<ios>
 

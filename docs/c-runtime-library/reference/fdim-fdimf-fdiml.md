@@ -1,11 +1,6 @@
 ---
-title: fdim、fdimf、fdiml | Microsoft ドキュメント
-ms.custom: ''
+title: fdim、fdimf、fdiml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fdim
 - fdimf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fdim
 - math/fdimf
 - math/fdiml
-dev_langs:
-- C++
 helpviewer_keywords:
 - fdim function
 - fdimf function
 - fdiml function
 ms.assetid: 2d4ac639-51e9-462d-84ab-fb03b06971a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdcad02c94717715fdda1b3a9d2e820fc16d0bf4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d8cea831e333ebcd9677d830641c60e460ba5ed4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397507"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515090"
 ---
 # <a name="fdim-fdimf-fdiml"></a>fdim、fdimf、fdiml
 
@@ -109,13 +98,13 @@ long double fdiml(
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**fdim**を受け取り、返します**float**と**長い****二重**型です。 C プログラムでは、 **fdim**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fdim**を受け取って返す**float**と**長い****二重**型。 C プログラムで**fdim**は、**二重**します。
 
-この関数は NaN 処理を除くと同じで、`fmax(x - y, 0)`です。
+この関数は NaN の処理を除くと等価では`fmax(x - y, 0)`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

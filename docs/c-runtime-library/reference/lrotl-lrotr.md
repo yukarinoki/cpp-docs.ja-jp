@@ -1,10 +1,6 @@
 ---
-title: _lrotl、_lrotr | Microsoft Docs
-ms.custom: ''
+title: _lrotl、_lrotr
 ms.date: 04/04/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lrotl
 - _lrotr
@@ -26,8 +22,6 @@ f1_keywords:
 - lrotl
 - _lrotr
 - _lrotl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrotl function
 - bits
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - _lrotl function
 - bits, rotating
 ms.assetid: d42f295b-35f9-49d2-9ee4-c66896ffe68e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0182256b06a3f04acbb941d02624e2b512b22a97
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 71ca61676e4551155f9f14e792c5c1cee65ddb7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400630"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518418"
 ---
 # <a name="lrotl-lrotr"></a>_lrotl、_lrotr
 
-ビットを左に回転させます (**_lrotl**) または右 (**_lrotr**)。
+左側のビットを回転 (**_lrotl**) または右 (**_lrotr**)。
 
 ## <a name="syntax"></a>構文
 
@@ -71,13 +61,13 @@ unsigned long _lrotr( unsigned long value, int shift );
 
 どちらの関数も、回転後の値を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Lrotl**と **_lrotr**関数回転*値*によって*shift*ビットです。 **_lrotl**は値の最上位ビットに向かって、左に回転します。 **_lrotr**重要度の低いビットに向かって、値右方向に回転します。 どちらの関数でも、回転により *value* の一端から溢れたビットは他端に折り返されます。
+**_Lrotl**と **_lrotr**関数回転*値*によって*shift*ビット。 **_lrotl**は値を最上位ビットに向かって、左に回転します。 **_lrotr**重要度の低いビットに向かって、値右方向に回転します。 どちらの関数でも、回転により *value* の一端から溢れたビットは他端に折り返されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_lrotl**、 **_lrotr**|\<stdlib.h>|
 

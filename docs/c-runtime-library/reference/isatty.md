@@ -1,10 +1,6 @@
 ---
-title: _isatty | Microsoft Docs
-ms.custom: ''
+title: _isatty
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isatty
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _isatty
-dev_langs:
-- C++
 helpviewer_keywords:
 - isatty function
 - character device checking
 - _isatty function
 - checking character devices
 ms.assetid: 9f1b2e87-0cd7-4079-b187-f2b7ca15fcbe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4be35fce0a790751683a4bf8a0cceaf938fea82
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef0df5f859779c081df47ef4bfe938ec2601d524
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402460"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545588"
 ---
 # <a name="isatty"></a>_isatty
 
@@ -58,17 +48,17 @@ int _isatty( int fd );
 
 ## <a name="return-value"></a>戻り値
 
-**_isatty**記述子がキャラクター デバイスに関連付けられている場合は、0 以外の値を返します。 それ以外の場合、 **_isatty** 0 を返します。
+**_isatty**記述子がキャラクター デバイスに関連付けられている場合は 0 以外の値を返します。 それ以外の場合、 **_isatty** 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Isatty**関数を判断するかどうか*fd*キャラクター デバイス (端末、コンソール、プリンター、またはシリアル ポート) に関連付けられています。
+**_Isatty**関数は決定かどうか*fd*キャラクター デバイス (端末、コンソール、プリンター、またはシリアル ポート) に関連付けられています。
 
-この関数は、検証、 *fd*パラメーター。 場合*fd* 、不適切なファイル ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、関数の戻り値 0 とセットの実行が許可された場合**errno**に**EBADF**です。
+この関数は、検証、 *fd*パラメーター。 場合*fd* 、不適切なファイル ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続、関数の戻り値 0 とセットが許可された場合**errno**に**EBADF**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_isatty**|\<io.h>|
 

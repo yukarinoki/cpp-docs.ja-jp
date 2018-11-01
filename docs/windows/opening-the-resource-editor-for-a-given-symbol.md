@@ -1,30 +1,19 @@
 ---
-title: 特定のシンボル (C++) のリソース エディターを開く |Microsoft Docs
-ms.custom: ''
+title: 特定のシンボル (C++) のリソース エディターを開く
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.resource
-dev_langs:
-- C++
 helpviewer_keywords:
 - resource symbols
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: f715807b-5af2-4627-be25-be63b23fd097
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6d8c478765a53c3884b736e798ffb51a46e73912
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2b8191896675f0ec51520ffa09a38138cdec8040
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385483"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537892"
 ---
 # <a name="opening-the-resource-editor-for-a-given-symbol-c"></a>特定のシンボル (C++) のリソース エディターを開く
 
@@ -42,7 +31,7 @@ ms.locfileid: "46385483"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 
