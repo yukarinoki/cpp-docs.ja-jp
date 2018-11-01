@@ -1,27 +1,17 @@
 ---
-title: 特定のアプリケーション ドメインで関数の呼び出し |Microsoft Docs
-ms.custom: ''
+title: 特定のアプリケーション ドメイン内での関数の呼び出し
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - application domains [C++], calling functions
 - functions [C++], calling in specific application domains
 ms.assetid: e1f59b39-8ffe-4a03-8e40-99593ce18d57
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 269225967ff63e98c1efe8a4ff38cd980d3485f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a6bc7d4e55cdb249f39636e3e84d8a4b8b381368
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668495"
 ---
 # <a name="calling-functions-in-a-specific-application-domain"></a>特定のアプリケーション ドメイン内での関数の呼び出し
 

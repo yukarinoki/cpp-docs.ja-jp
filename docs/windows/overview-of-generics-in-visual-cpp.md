@@ -1,12 +1,7 @@
 ---
-title: C++ のジェネリックの概要/cli CLI |Microsoft Docs
-ms.custom: ''
+title: C++ のジェネリックの概要/cli CLI
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - generics [C++], about generics
 - default initializers [C++]
@@ -17,17 +12,12 @@ helpviewer_keywords:
 - open constructed types [C++]
 - constructed types, closed [C++]
 ms.assetid: 21f10637-0fce-4916-b925-6c86a126d3aa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9e6240fd5e33f44c42d8a0d33302b9ef4cf9f8bb
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 1105025ebebdfcbce723505747f6677674c04334
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327857"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655170"
 ---
 # <a name="overview-of-generics-in-ccli"></a>C++ のジェネリックの概要/cli CLI
 

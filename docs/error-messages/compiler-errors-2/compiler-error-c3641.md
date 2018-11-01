@@ -1,37 +1,27 @@
 ---
-title: コンパイラ エラー C3641 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラ エラー C3641
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3641
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3641
 ms.assetid: e8d3613e-5e8d-46fe-a516-eb7d1de7cd21
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99aef6bcfd8ac7ea89cb62fda37c7aec012e16de
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: f6c27067e4f07c89b4226cf4d26adf2afb0b07ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704946"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648579"
 ---
 # <a name="compiler-error-c3641"></a>コンパイラ エラー C3641
 
-> '*関数*': の呼び出し規約 'calling_convention'/clr でコンパイルされた関数が無効です:/clr:pure または/clr:safe
+> '*関数*': 呼び出し/clr でコンパイルされた関数の場合、規則の 'calling_convention' が無効です:/clr:pure または/clr:safe
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-のみ[_ _clrcall](../../cpp/clrcall.md)と呼び出し規約が許可されている[/clr: 純粋な](../../build/reference/clr-common-language-runtime-compilation.md)します。
+のみ[_ _clrcall](../../cpp/clrcall.md)呼び出し規約は使用[/clr: 純粋な](../../build/reference/clr-common-language-runtime-compilation.md)します。
 
 ## <a name="example"></a>例
 
