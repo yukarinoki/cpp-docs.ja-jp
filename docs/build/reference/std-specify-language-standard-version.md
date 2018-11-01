@@ -1,4 +1,4 @@
----
+﻿---
 title: /std (言語標準バージョンの指定)
 ms.date: 11/16/2017
 f1_keywords:
