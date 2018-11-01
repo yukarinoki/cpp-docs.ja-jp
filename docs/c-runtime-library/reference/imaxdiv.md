@@ -1,10 +1,6 @@
 ---
-title: imaxdiv | Microsoft Docs
-ms.custom: ''
+title: imaxdiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxdiv
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxdiv
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxdiv function
 ms.assetid: 7d90126f-fdc2-4986-9cdf-94e4c9123d26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db2a57e9b91672d39fbce5eaee061043604a0998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 23067b2028fc11193fae707e25165fb0ce754515
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399697"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434459"
 ---
 # <a name="imaxdiv"></a>imaxdiv
 
@@ -61,15 +51,15 @@ imaxdiv_t imaxdiv(
 
 ## <a name="return-value"></a>戻り値
 
-**imaxdiv**型の引数で呼び出される[intmax_t](../../c-runtime-library/standard-types.md)型の構造体を返す[imaxdiv_t](../../c-runtime-library/standard-types.md)商と剰余で構成されています。
+**imaxdiv**型の引数で呼び出される[intmax_t](../../c-runtime-library/standard-types.md)型の構造体を返す[imaxdiv_t](../../c-runtime-library/standard-types.md)商と剰余で構成されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Imaxdiv**関数の除算*数値*によって*denom*商と剰余を計算します。 **Imaxdiv_t**構造に含まれる、商**intmax_t** **quot**、され、その残り**intmax_t** **rem**.商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
+**Imaxdiv**関数は*数値*によって*denom*し、それによって、商と剰余を計算します。 **Imaxdiv_t**構造に含まれる、商**intmax_t** **quot**、し、残りの**intmax_t** **rem**.商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**imaxdiv**|\<inttypes.h>|
 

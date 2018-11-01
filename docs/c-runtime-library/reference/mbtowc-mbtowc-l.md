@@ -1,10 +1,6 @@
 ---
-title: mbtowc、_mbtowc_l | Microsoft Docs
-ms.custom: ''
+title: mbtowc、_mbtowc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbtowc
 - _mbtowc_l
@@ -24,23 +20,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbtowc
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbtowc function
 - _mbtowc_l function
 - mbtowc_l function
 ms.assetid: dfd1c8a7-e73a-4307-9353-53b70b45d4d1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b6600706690dea3573f8eb1aa47f68b592b3bff1
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e5ef6db0f0986b102214229155e1c43c5d029284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43200308"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506198"
 ---
 # <a name="mbtowc-mbtowcl"></a>mbtowc、_mbtowc_l
 
@@ -84,7 +74,7 @@ int _mbtowc_l(
 
 **Mbtowc**関数に変換します*カウント*によって示される数以下のバイト*mbchar*場合は、 *mbchar*ない**NULL**、対応するワイド文字。 **mbtowc**で結果のワイド文字を格納*wchar、* 場合*wchar*ない**NULL**します。 **mbtowc**を検査しない複数の**MB_CUR_MAX**バイト。 **mbtowc**ロケールに依存する動作に現在のロケールを使用 **_mbtowc_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

@@ -1,29 +1,19 @@
 ---
-title: __func__ |Microsoft ドキュメント
-ms.custom: ''
+title: __func__
 ms.date: 10/19/2017
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - __func__
-dev_langs:
-- C++
 ms.assetid: a5299b8d-f0ee-4af2-91dd-8fb165e68798
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78a249fe5b111c17c29895edcdc3fa5ba2f27a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eecd3efea6239c92a8bc81c0ed13a9563e5b87d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413596"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438585"
 ---
 # <a name="func"></a>__func__
 
-**(C++ 11)** 事前定義の識別子&#95; &#95;func&#95; &#95; 、外側の関数の非修飾かつ非装飾名を含む文字列として暗黙的に定義されています。 &#95;&#95;func&#95; &#95;は、C++ 標準で必須であり、Microsoft 拡張機能ではありません。
+**(C++ 11)** 事前定義の識別子&#95; &#95;func&#95; &#95; 、外側の関数の非修飾かつ非装飾名を含む文字列として暗黙的に定義されます。 &#95;&#95;func&#95; &#95;が C++ 標準で必須し、は、Microsoft 拡張機能ではありません。
 
 ## <a name="syntax"></a>構文
 
@@ -33,7 +23,7 @@ __func__
 
 ## <a name="return-value"></a>戻り値
 
-返します。 null で終わる const char する文字の配列、関数名が含まれています。
+Null で終わる const char 配列を返します文字の関数の名前を格納します。
 
 ## <a name="example"></a>例
 
@@ -60,6 +50,6 @@ int main()
 }
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 C++11

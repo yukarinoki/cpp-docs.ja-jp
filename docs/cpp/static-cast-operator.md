@@ -1,27 +1,17 @@
 ---
-title: static_cast 演算子 |Microsoft Docs
-ms.custom: ''
+title: static_cast 演算子
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - static_cast_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c60eee337ba565c43217bf6afbcf7d9344337695
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8e39fe7eb0fb9b77a82b305fa2f8186ad4e855a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090035"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601709"
 ---
 # <a name="staticcast-operator"></a>static_cast 演算子
 
@@ -35,7 +25,7 @@ static_cast <type-id> ( expression )
 
 ## <a name="remarks"></a>Remarks
 
-標準 C++ では、変換の安全性を確認する実行時の型チェックはありません。 C++/CX では、コンパイル時チェックと実行時チェックが実行されます。 詳細については、次を参照してください。[キャスト](casting.md)します。
+標準 C++ では、変換の安全性を確認する実行時の型チェックはありません。 C++/CX では、コンパイル時チェックと実行時チェックが実行されます。 詳細については、「 [キャスト](casting.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。
 
 **Static_cast**演算子は派生クラスへのポインターを基底クラスへのポインターに変換するなどの操作に使用できます。 このような変換は、必ずしも安全であるとは限りません。
 

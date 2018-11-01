@@ -1,10 +1,6 @@
 ---
-title: wctrans | Microsoft Docs
-ms.custom: ''
+title: wctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctrans
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - character codes, wctrans
 - characters, codes
 - characters, converting
 - wctrans function
 ms.assetid: 215404bf-6d60-489c-9ae9-880e6b586162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 613c3c64885f10029a8b013504d84ffa8f35d664
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c7aace7a93160d2e9a4c1523d49bcaf6ae4dc20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410490"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656691"
 ---
 # <a name="wctrans"></a>wctrans
 
@@ -60,9 +50,9 @@ wctrans_t wctrans(
 
 ## <a name="return-value"></a>戻り値
 
-場合、 **LC_CTYPE**の現在のロケールのカテゴリが名前に一致するプロパティの文字列マッピングを定義していない*プロパティ*0 が返されます。 それ以外の場合、[towctrans](towctrans.md) への後続の呼び出しに対する 2 番目の引数として使用するのに適した 0 以外の値を返します。
+場合、 **LC_CTYPE**の現在のロケールのカテゴリが名前に一致するプロパティの文字列マッピングを定義しない*プロパティ*関数は 0 を返します。 それ以外の場合、[towctrans](towctrans.md) への後続の呼び出しに対する 2 番目の引数として使用するのに適した 0 以外の値を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 この関数では、文字コードの 1 つのセットから別のセットへのマッピングを指定します。
 
@@ -73,7 +63,7 @@ wctrans_t wctrans(
 |tolower(c)|towctrans (c、wctrans("towlower"))|
 |towupper(c)|towctrans (c、wctrans("toupper"))|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |-------------|---------------------|
