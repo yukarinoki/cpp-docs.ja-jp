@@ -1,10 +1,6 @@
 ---
-title: ARM 組み込み |Microsoft Docs
-ms.custom: ''
+title: ARM 組み込み
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - arm_neon/vsetq_lane_p8
 - armintr/_arm_uxtb
@@ -1931,22 +1927,16 @@ f1_keywords:
 - arm_neon/vrsra_n_s32
 - arm_neon/vabdl_u16
 - arm_neon/vsliq_n_s32
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 092ac94cac92b3ba327aa7c7853ec286268a00af
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e32c33a5e04314b05558fe445aaaebb33dd92ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434103"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453860"
 ---
 # <a name="arm-intrinsics"></a>ARM 組み込み
 
@@ -2169,7 +2159,7 @@ void __iso_volatile_store8(volatile __int8 * Location, __int8 Value)
 *場所*<br/>
 読み取る、または書き込むメモリ位置のアドレスです。
 
-*値*<br/>
+*[値]*<br/>
 指定したメモリ位置 (ストア用組み込みのみ) に書き込む値。
 
 #### <a name="return-value-load-intrinsics-only"></a>戻り値 (ロード用組み込みのみ)

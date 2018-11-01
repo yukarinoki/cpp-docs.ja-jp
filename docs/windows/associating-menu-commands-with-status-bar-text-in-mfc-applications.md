@@ -1,27 +1,16 @@
 ---
-title: MFC アプリケーションのステータス バーのテキストとメニュー コマンドの関連付け |Microsoft Docs
-ms.custom: ''
+title: メニュー コマンドと MFC アプリケーションのステータス バーのテキストとの関連付け
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - status bars [C++], associating menu items
 - menus [C++], status bar text
 ms.assetid: 757c0e02-bc97-493f-bccd-6cc6887ebc64
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 718766a8fc475f20bcbcc328973b38e486769d9c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fc39695358a9c1f2f62878487a5e4fedf5db2b82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389084"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468888"
 ---
 # <a name="associating-menu-commands-with-status-bar-text-in-mfc-applications"></a>メニュー コマンドと MFC アプリケーションのステータス バーのテキストとの関連付け
 
@@ -33,7 +22,7 @@ MFC アプリケーションでは、各ユーザーが選択メニュー コマ
 
 2. [[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window)で、関連付けるステータス バーのテキストを **[プロンプト]** ボックスに入力します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 MFC
 

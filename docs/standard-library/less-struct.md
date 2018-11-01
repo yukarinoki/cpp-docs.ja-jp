@@ -1,28 +1,18 @@
 ---
-title: less 構造体 | Microsoft Docs
-ms.custom: ''
+title: less 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::less
-dev_langs:
-- C++
 helpviewer_keywords:
 - less struct
 - less function
 ms.assetid: 39349da3-11cd-4774-b2cc-b46af5aae5d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 231b3f0267f50f68452d4ba0b6cb2f186a07e3e5
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 60a78859a9d218afa11174ef4117e86cbd2edea3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100938"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50475128"
 ---
 # <a name="less-struct"></a>less 構造体
 
@@ -117,7 +107,7 @@ Original vector v1 = (41 18467 6334 26500 19169 15724 11478)
 Sorted vector v1 = (41 6334 11478 15724 18467 19169 26500)
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 
