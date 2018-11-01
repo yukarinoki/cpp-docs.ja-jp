@@ -1,28 +1,17 @@
 ---
-title: Win32 の定義済みのシンボル |Microsoft Docs
-ms.custom: ''
+title: Win32 の定義済みシンボル
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Win32 [C++], predefined symbols
 - symbols [C++], Win32 predefined
 - Windows API [C++], predefined symbols
 ms.assetid: 45c8e193-ee2a-4024-bfc2-34d1ec9c9239
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 18edb56c03541f61607817d14fdbadb067a3630d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 703e00ebcf50c987fe3a0a9399cd7497bb9c95f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422780"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434698"
 ---
 # <a name="win32-predefined-symbols"></a>Win32 の定義済みシンボル
 
@@ -45,7 +34,7 @@ ms.locfileid: "46422780"
 |IDS_APP_TITLE|現在のアプリケーション名を文字列:|
 |IDYES|制御: ダイアログ ボックスの はい ボタンします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 
