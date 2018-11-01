@@ -1,29 +1,19 @@
 ---
-title: -WL (1 行診断の有効化) |マイクロソフトのドキュメント
-ms.custom: ''
+title: /WL (1 行診断の有効化)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /wl
-dev_langs:
-- C++
 helpviewer_keywords:
 - -WL compiler option [C++]
 - /WL compiler option [C++]
 - WL compiler option [C++]
 ms.assetid: 332cadb4-8ea6-45fe-b67d-33ddec1f2c2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e82a3273673d45d1abf3ac201d7a0f63334cecbb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2d2f3c1c7bac19fc0e401067f43e78e3770c6304
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718673"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50428159"
 ---
 # <a name="wl-enable-one-line-diagnostics"></a>/WL (1 行診断の有効化)
 

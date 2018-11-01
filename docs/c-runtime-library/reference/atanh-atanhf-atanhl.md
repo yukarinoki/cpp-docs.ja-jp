@@ -1,10 +1,6 @@
 ---
-title: atanh、atanhf、atanhl |Microsoft Docs
-ms.custom: ''
+title: atanh、atanhf、atanhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atanhl
 - atanhf
@@ -26,23 +22,17 @@ f1_keywords:
 - atanhl
 - atanhf
 - atanh
-dev_langs:
-- C++
 helpviewer_keywords:
 - atanhf function
 - atanhl function
 - atanh funciton
 ms.assetid: 83a43b5b-2580-4461-854f-dc84236d9f32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90a24945a7d630fac909e097728ea4df61ae2b40
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6044c40427e407ee9746867e4b04104c1ca29c7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393304"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435361"
 ---
 # <a name="atanh-atanhf-atanhl"></a>atanh、atanhf、atanhl
 
@@ -68,18 +58,18 @@ long double atanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Atanh**関数の逆ハイパーボリック タンジェント (アーク ハイパーボリック タンジェント) を返す*x*です。 場合*x*が 1、または-1 より小さい値を超える**errno**に設定されている**EDOM**され、結果は簡易な NaN です。 場合*x*は 1 または-1 に等しく、正または負の無限大が返されます、それぞれ、および**errno**に設定されている**ERANGE**です。
+**Atanh**関数の逆ハイパーボリック タンジェント (アーク ハイパーボリック タンジェント) を返す*x*します。 場合*x*が 1、または-1 より小さい場合よりも大きい**errno**に設定されている**EDOM**され、結果は簡易な NaN です。 場合*x*は 1 または-1 に等しいか、正または負の無限大が返されます、それぞれ、および**errno**に設定されている**ERANGE**します。
 
 |入力|SEH 例外|**Matherr**例外|
 |-----------|-------------------|-------------------------|
 |± QNAN、IND|none|none|
 |*X* ≥ 1 になります。*x* ≤-1|none|none|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**atanh**を受け取り、返します**float**または**長い****二重**値。 C プログラムでは、 **atanh**は**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **atanh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**atanh**は**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

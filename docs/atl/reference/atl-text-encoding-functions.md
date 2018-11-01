@@ -1,8 +1,6 @@
 ---
-title: ATL テキスト エンコード関数 |Microsoft Docs
-ms.custom: ''
+title: ATL テキスト エンコード関数
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - atlbase/ATL::AtlGetHexValue
 - atlbase/ATL::AtlGetVersion
@@ -27,16 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b77c814b3ce2f372ae34e3c0293951ec23cdf6a6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5fbd3b1c4e0ca1c09e34c3e04a4d0b0613e45e73
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430415"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL テキスト エンコード関数
 
@@ -68,7 +62,7 @@ ms.locfileid: "46090751"
 |[UUEncode](#uuencode)|データを uuencode します。 |
 |[UUEncodeGetRequiredLength](#uuencodegetrequiredlength)|指定したサイズのデータからエンコードされた文字列を格納できるバッファーのサイズを、文字数で取得します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlenc.h の関数
 
@@ -112,7 +106,7 @@ ATLAPI_(DWORD) AtlGetVersion(void* pReserved);
 
 [!code-cpp[NVC_ATL_Utilities#95](../../atl/codesnippet/cpp/atl-text-encoding-functions_1.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 

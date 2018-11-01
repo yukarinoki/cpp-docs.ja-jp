@@ -1,10 +1,6 @@
 ---
-title: tanh、tanhf、tanhl |Microsoft ドキュメント
-ms.custom: ''
+title: tanh、tanhf、tanhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tanh
 - tanhf
@@ -27,8 +23,6 @@ f1_keywords:
 - tanhf
 - tanhl
 - _tanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - tanhl function
 - _tanhl function
@@ -36,20 +30,16 @@ helpviewer_keywords:
 - tanhf function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 438c587099edafedbb2cc3feb4b3a285aa155a0d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3b9c7269d3c945301106098fc944383bbc364e5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408521"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432388"
 ---
 # <a name="tanh-tanhf-tanhl"></a>tanh、tanhf、tanhl
 
-双曲線正接を計算します。
+ハイパーボリック タンジェントを計算します。
 
 ## <a name="syntax"></a>構文
 
@@ -71,19 +61,19 @@ long double tanh( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Tanh**関数の双曲線正接を返す*x*です。 エラーの戻り値はありません。
+**Tanh**関数のハイパーボリック タンジェントを返します*x*します。 エラーの戻り値はありません。
 
 |入力|SEH 例外|**Matherr**例外|
 |-----------|-------------------|-------------------------|
 |± QNAN、IND|none|_DOMAIN|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**tanh**を受け取り、返します**float**または**長い****二重**値。 C プログラムでは、 **tanh**は**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **tanh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**tanh**は**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C)|
 |-------------|---------------------|-|
 |**tanh**、 **tanhf**、 **tanhl**|\<math.h>|\<cmath> または \<math.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: _finite、_finitef | Microsoft Docs
-ms.custom: ''
+title: _finite、_finitef
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _finite
 - _finitef
@@ -28,23 +24,17 @@ f1_keywords:
 - math/_finite
 - math/_finitef
 - float/_finite
-dev_langs:
-- C++
 helpviewer_keywords:
 - finite function
 - _finite function
 - _finitef function
 ms.assetid: 5a7d7ca7-befb-4e1f-831d-28713c6eb805
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3367f13e68aa85e53d9f5f0ee83521ef465d3996
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b1bce6f1b2da77ed9de255f49dd8d0160e33e31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396642"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431664"
 ---
 # <a name="finite-finitef"></a>_finite、_finitef
 
@@ -69,13 +59,13 @@ int _finitef(
 
 ## <a name="return-value"></a>戻り値
 
-両方 **_finite**と **_finitef**場合は、0 以外の値を返す引数*x*は有限です。 つまり場合は、-INF < *x* < + INF です。 引数が無限または NAN の場合は、0 を返します。
+両方 **_finite**と **_finitef**場合は、0 以外の値を返す引数*x*は有限; である場合は、-INF < *x* < + INF。 引数が無限または NAN の場合は、0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Finite**と **_finitef**関数は、Microsoft 固有の仕様です。 **_Finitef**関数は使用可能な場合にでは、プラットフォームを x86、ARM、または ARM64 用にコンパイルのみです。
+**_Finite**と **_finitef**関数は、Microsoft 固有の仕様。 **_Finitef**関数は x86、ARM、または ARM64 プラットフォームで利用可能な場合にコンパイルのみ。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー (C)|必須ヘッダー (C++)|
 |--------------|---------------------------|-------------------------------|
