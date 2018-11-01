@@ -1,10 +1,6 @@
 ---
-title: CTokenPrivileges クラス |Microsoft Docs
-ms.custom: ''
+title: CTokenPrivileges クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CTokenPrivileges
 - ATLSECURITY/ATL::CTokenPrivileges
@@ -19,21 +15,15 @@ f1_keywords:
 - ATLSECURITY/ATL::CTokenPrivileges::GetNamesAndAttributes
 - ATLSECURITY/ATL::CTokenPrivileges::GetPTOKEN_PRIVILEGES
 - ATLSECURITY/ATL::CTokenPrivileges::LookupPrivilege
-dev_langs:
-- C++
 helpviewer_keywords:
 - CTokenPrivileges class
 ms.assetid: 89590105-f001-4014-870d-142926091231
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9acbb55f09df3912ff61a54557cb013e86c48834
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e492ada977527d5c8709dd3afbf390bc678f789e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036632"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519796"
 ---
 # <a name="ctokenprivileges-class"></a>CTokenPrivileges クラス
 
@@ -89,7 +79,7 @@ class CTokenPrivileges
 
 Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsecurity.h
 

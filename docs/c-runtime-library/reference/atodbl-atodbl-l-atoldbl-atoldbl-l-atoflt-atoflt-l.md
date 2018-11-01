@@ -1,10 +1,6 @@
 ---
-title: _atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l |Microsoft Docs
-ms.custom: ''
+title: _atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoldbl
 - _atoldbl_l
@@ -38,8 +34,6 @@ f1_keywords:
 - atoflt
 - atoldbl_l
 - _atodbl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atodbl function
 - _atoldbl_l function
@@ -55,20 +49,16 @@ helpviewer_keywords:
 - _atoflt function
 - _atodbl_l function
 ms.assetid: 2d2530f4-4bd4-42e3-8083-f2d2fbc8432a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da36dfae81f33f5fb30a1a4bc93a57437980d720
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb8d711dc8dfa912333f34603ad607f0a74143bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393590"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552036"
 ---
 # <a name="atodbl-atodbll-atoldbl-atoldbll-atoflt-atofltl"></a>_atodbl、_atodbl_l、_atoldbl、_atoldbl_l、_atoflt、_atoflt_l
 
-文字列を double 型に変換 (**_atodbl**)、long double (**_atoldbl**)、または float (**_atoflt**)。
+文字列を double 型に変換 (**_atodbl**)、long double (**_atoldbl**)、または浮動小数点数 (**_atoflt**)。
 
 ## <a name="syntax"></a>構文
 
@@ -96,15 +86,15 @@ int _atoflt_l( _CRT_FLOAT * value, const char * str, locale_t locale );
 
 処理が正常に終了した場合は 0 を返します。 可能性のあるエラー コードは、 **_UNDERFLOW**または **_OVERFLOW**、ヘッダー ファイルで定義されている\<math.h >。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数は、文字列を浮動小数点値に変換します。 これらの関数の違い、および**atof**ファミリの関数はこれらの関数は浮動小数点コードを生成しないと、ハードウェア例外が発生しません。 代わりに、エラー状態がエラー コードとして報告されます。
+これらの関数は、文字列を浮動小数点値に変換します。 これらの関数の違い、 **atof**ファミリの関数は、これらの関数は浮動小数点コードを生成しないと、ハードウェア例外は発生しません。 代わりに、エラー状態がエラー コードとして報告されます。
 
 文字列には、浮動小数点値として有効な解釈がない場合*値*と戻り値の 0 に設定されている値は 0 です。
 
-これらの関数のバージョン、 **_l**サフィックスは同じバージョンに使用する点を除いて、サフィックスがない、*ロケール*は、現在のスレッドではなく渡されたパラメーターロケールです。
+これらの関数のバージョン、 **_l**サフィックスを使用する点を除いて、サフィックスがない、バージョン、*ロケール*現在のスレッドではなくに渡されるパラメーターロケール。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|

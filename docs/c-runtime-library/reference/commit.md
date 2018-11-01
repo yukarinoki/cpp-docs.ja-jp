@@ -1,10 +1,6 @@
 ---
-title: _commit | Microsoft Docs
-ms.custom: ''
+title: _commit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _commit
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _commit
 - commit
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], flushing
 - flushing files to disk
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _commit function
 - committing files to disk
 ms.assetid: d0c74d3a-4f2d-4fb0-b140-2d687db3d233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e9bc746c347bfb60fb78edbf025b676f8218c66
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8408158cb3d4ef0d29d9af24d8a2acbd28e00192
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394832"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523072"
 ---
 # <a name="commit"></a>_commit
 
@@ -62,17 +52,17 @@ int _commit(
 
 ## <a name="return-value"></a>戻り値
 
-**_commit**ファイルが正常に 0 を返しますディスクにフラッシュします。 戻り値-1 はエラーを示します。
+**_commit** 0 を返します、ファイルが正常にディスクにフラッシュします。 戻り値-1 はエラーを示します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Commit**関数は、オペレーティング システムに関連付けられているファイルに書き込む*fd*をディスクにします。 この関数を呼び出すと、オペレーティング システムのタイミングではなく、即時に指定したファイルがフラッシュされます。
+**_Commit**関数は、オペレーティング システムに関連付けられているファイルを書き込む*fd*をディスクにします。 この関数を呼び出すと、オペレーティング システムのタイミングではなく、即時に指定したファイルがフラッシュされます。
 
-場合*fd* 、無効なファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EBADF**です。
+場合*fd*は、無効なファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EBADF**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**_commit**|\<io.h>|\<errno.h>|
 

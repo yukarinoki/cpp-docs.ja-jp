@@ -1,10 +1,6 @@
 ---
-title: _locking | Microsoft Docs
-ms.custom: ''
+title: _locking
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _locking
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _locking
-dev_langs:
-- C++
 helpviewer_keywords:
 - locking function
 - bytes [C++], locking file
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], locking
 - _locking function
 ms.assetid: 099aaac1-d4ca-4827-aed6-24dff9844150
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1666f631d9bceccb8925b2002b797753e024ab9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1309d99d8e7040626384e38324c1e910e4731295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404147"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523810"
 ---
 # <a name="locking"></a>_locking
 
@@ -69,20 +59,20 @@ int _locking(
 
 ## <a name="return-value"></a>戻り値
 
-**_locking**正常終了した場合は 0 を返します。 戻り値-1 の失敗を示します、後者[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)は、次の値のいずれかに設定します。
+**_locking**成功した場合は 0 を返します。 戻り値-1 はエラーを示します後者[errno](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)値は次のいずれかに設定されます。
 
 |errno の値|条件|
 |-|-|
 **EACCES**|ロック違反 (ファイルはすでにロックされている場合もロック解除されている場合もある)。
 **EBADF**|無効なファイル記述子。
-**EDEADLOCK**|ロック違反。 ときに返される、 **_LK_LOCK**または **_LK_RLCK**フラグが指定されており、ファイルが 10 回の試行後にロックされていることはできません。
-**EINVAL**|無効な引数で指定された **_locking**です。
+**EDEADLOCK**|ロック違反。 ときに返される、 **_LK_LOCK**または **_LK_RLCK**フラグが指定されており、10 回試行した後、ファイルをロックできません。
+**EINVAL**|無効な引数が指定された **_locking**します。
 
 エラーの原因が無効なファイル記述子などの無効なパラメーターである場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Locking**関数は、ロックまたはロック解除*nbytes*バイトで指定されたファイルの*fd*です。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 すべてのロックまたはロック解除は、ファイル ポインターの現在の位置から開始され、次の *nbytes* バイトに進みます。 ファイルの終わりを超えてバイトをロックできます。
+**_Locking**関数は、ロックまたはロック解除*nbytes*バイトで指定されたファイルの*fd*します。 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 すべてのロックまたはロック解除は、ファイル ポインターの現在の位置から開始され、次の *nbytes* バイトに進みます。 ファイルの終わりを超えてバイトをロックできます。
 
 *mode* は、Locking.h で定義されている、次のマニフェスト定数のいずれかである必要があります。
 
@@ -90,15 +80,15 @@ int _locking(
 |-|-|
 **_LK_LOCK**|指定したバイトをロックします。 バイトをロックできない場合、プログラムによって 1 秒後に直ちに再試行されます。 10 回試行した後、バイトをロックできなかった場合、定数はエラーを返します。
 **_LK_NBLCK**|指定したバイトをロックします。 バイトをロックできない場合、定数はエラーを返します。
-**_LK_NBRLCK**|同じ **_LK_NBLCK**です。
-**_LK_RLCK**|同じ **_LK_LOCK**です。
+**_LK_NBRLCK**|同じ **_LK_NBLCK**します。
+**_LK_RLCK**|同じ **_LK_LOCK**します。
 **_LK_UNLCK**|指定したバイトのロックを解除します。バイトは既にロックされている必要があります。
 
-重複しない、ファイルの複数の領域をロックできます。 ロック解除の対象領域は、既にロックされている必要があります。 **_locking**はマージ隣接するリージョンではありません。 ロックされている 2 つの領域が隣接している場合は、各地域必要がありますロックを解除するとは別にします。 領域は短期間だけロックされ、ファイルを閉じる前またはプログラムを終了する前にはロックを解除する必要があります。
+重複しない、ファイルの複数の領域をロックできます。 ロック解除の対象領域は、既にロックされている必要があります。 **_locking**隣接する領域をマージしないのは、2 つのロックされた領域が隣接している場合は、各リージョンする必要がありますロックを解除するとは別にします。 領域は短期間だけロックされ、ファイルを閉じる前またはプログラムを終了する前にはロックを解除する必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_locking**|\<io.h> と \<sys/locking.h>|\<errno.h>|
 
