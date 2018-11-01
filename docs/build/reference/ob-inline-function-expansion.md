@@ -1,16 +1,10 @@
 ---
-title: -Ob (関数のインライン展開) |マイクロソフトのドキュメント
-ms.custom: ''
+title: /Ob (関数のインライン展開)
 ms.date: 09/25/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.InlineFunctionExpansion
 - VC.Project.VCCLCompilerTool.InlineFunctionExpansion
 - /ob
-dev_langs:
-- C++
 helpviewer_keywords:
 - inline functions, function expansion compiler option [C++]
 - -Ob1 compiler option [C++]
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43c67e4919680167bdde5e9f8ad9426229956fad
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a53069c44e72d0d873ccb0b600c48480527d111f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401993"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582665"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (関数のインライン展開)
 
@@ -73,7 +63,7 @@ ms.locfileid: "46401993"
 > [!NOTE]
 > プロファイリングのテスト実行から収集される情報にはそれ以外の場合に効果を指定する場合の最適化よりも優先されます **/Ob**、 **/Os**、または **/Ot**します。 詳細については、次を参照してください。[ガイド付き最適化の](../../build/reference/profile-guided-optimizations.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

@@ -1,10 +1,6 @@
 ---
-title: _strinc、_wcsinc、_mbsinc、_mbsinc_l | Microsoft Docs
-ms.custom: ''
+title: _strinc、_wcsinc、_mbsinc、_mbsinc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsinc
 - _wcsinc
@@ -32,8 +28,6 @@ f1_keywords:
 - wcsinc
 - mbsinc
 - _mbsinc_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsinc function
 - wcsinc function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _tcsinc function
 - tcsinc function
 ms.assetid: 54685943-8e2c-45e9-a559-2d94930dc6b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1d714499ebb33d1d4dc2636ab80b2ad727ccac39
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 1f23f57582d9f65ca728beac2c83804dff9935a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195159"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612902"
 ---
 # <a name="strinc-wcsinc-mbsinc-mbsincl"></a>_strinc、_wcsinc、_mbsinc、_mbsinc_l
 
@@ -108,7 +98,7 @@ unsigned char *_mbsinc_l(
 > [!IMPORTANT]
 > これらの関数は、バッファー オーバーランの脅威に対して脆弱な場合があります。 バッファー オーバーランは、認められていない特権の昇格の原因となるため、システムの攻撃に使用される可能性があります。 詳しくは、「 [バッファー オーバーランの回避](/windows/desktop/SecBP/avoiding-buffer-overruns)」をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

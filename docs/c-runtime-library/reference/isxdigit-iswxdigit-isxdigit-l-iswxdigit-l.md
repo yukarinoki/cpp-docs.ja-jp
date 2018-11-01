@@ -1,10 +1,6 @@
 ---
-title: isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l | Microsoft Docs
-ms.custom: ''
+title: isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswxdigit_l
 - iswxdigit
@@ -27,8 +23,6 @@ f1_keywords:
 - iswxdigit
 - isxdigit
 - _istxdigit
-dev_langs:
-- C++
 helpviewer_keywords:
 - isxdigit function
 - istxdigit function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - hexadecimal characters
 - iswxdigit function
 ms.assetid: c8bc5146-0b58-4e3f-bee3-f2318dd0f829
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92908e6d4c39f990da6fba5008c7ffe8af40ccc9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1c7f70fedb19cca746ffb1e276c69b5fc98388b5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403339"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659707"
 ---
 # <a name="isxdigit-iswxdigit-isxdigitl-iswxdigitl"></a>isxdigit、iswxdigit、_isxdigit_l、_iswxdigit_l
 
@@ -84,13 +74,13 @@ int _iswxdigit_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンを返す場合は 0 以外の各*c* 16 進数の特定の表現です。 **isxdigit**場合は 0 以外の値を返します*c*は 16 進数字 (A ~ F、a ~ f、または 0 - 9)。 **iswxdigit**場合は 0 以外の値を返します*c*の 16 進文字に対応するワイド文字します。 これらの各ルーチン 0 を返します*c*テスト条件を満たしていません。
+これらのルーチンを返します。 0 以外の場合の各*c*の 16 進数の特定の表現です。 **isxdigit**場合は、0 以外の値を返します*c*の 16 進数値は、(A ~ F、a ~ f、または 0 - 9)。 **iswxdigit**場合は、0 以外の値を返します*c* 16 進数の数字に対応するワイド文字します。 これらのルーチンの各場合 0 を返します*c*テスト条件を満たしていません。
 
-"C"ロケールの**iswxdigit**関数で Unicode の全角 16 進数の文字がサポートされていません。
+"C"ロケールの場合、 **iswxdigit**関数は Unicode の全角 16 進数の文字をサポートしていません。
 
-これらの関数を持つバージョン、 **_l**サフィックス、現在のロケールの代わりに、ロケールに依存する動作には、渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数がのバージョン、 **_l**サフィックスは、現在のロケールの代わりに渡されるロケールを使用して、ロケールに依存する動作。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-動作**isxdigit**と **_isxdigit_l**場合に定義されていない*c* EOF ではありませんか 0 ~ 0 xff、包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、これらの値、関数の発生いない 1 つです。
+動作**isxdigit**と **_isxdigit_l**場合は定義されません*c* EOF がないか 0 ~ 0 xff の包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、発生のこれらの値のいずれかにありません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -98,9 +88,9 @@ int _iswxdigit_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istxdigit**|**isxdigit**|**isxdigit**|**iswxdigit**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isxdigit**|\<ctype.h>|
 |**iswxdigit**|\<ctype.h> または \<wchar.h>|

@@ -1,31 +1,21 @@
 ---
-title: auto_gcroot::attach |Microsoft Docs
-ms.custom: ''
+title: auto_gcroot::attach
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - auto_gcroot.attach
 - auto_gcroot::attach
 - msclr::auto_gcroot::attach
 - msclr.auto_gcroot.attach
-dev_langs:
-- C++
 helpviewer_keywords:
 - auto_gcroot::attach
 ms.assetid: 996ede65-bcb5-41f2-bfbf-507f8a578241
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: acba9ad9641c11bbeb0389b10e7626f9b7d48de5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b4c2b3d2c9eb8554b342fb459946aa898ee4a406
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516104"
 ---
 # <a name="autogcrootattach"></a>auto_gcroot::attach
 
@@ -124,7 +114,7 @@ Hello from fourth A!
 in ClassA destructor:fourth
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー ファイル** \<msclr\auto_gcroot.h >
 

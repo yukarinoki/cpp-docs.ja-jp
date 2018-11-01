@@ -1,25 +1,15 @@
 ---
-title: 'チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: MFC Scribble アプリケーションの更新 (パート 2)'
 ms.date: 09/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3623eb594ff82660e97809eef609a33e74e74dc
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: d618d79c50892523b3e4a71be163b8778402e48e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235439"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570340"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>チュートリアル: MFC Scribble アプリケーションの更新 (パート 2)
 
@@ -190,7 +180,7 @@ ms.locfileid: "48235439"
 
 ### <a name="to-add-a-color-button-to-the-pen-panel"></a>ペンのパネルにカラー ボタンを追加するには
 
-1. 色のボタンを追加する前に、そのメニュー項目を作成します。 **リソース ビュー**ウィンドウを開いて、 **IDR_SCRIBBTYPE**メニュー リソース。 をクリックして、**ペン**メニュー項目を [ペン] メニューを開きます。 クリックして**ここへ入力**と種類`&Color`します。 表示するように入力したテキストを右クリックし、**プロパティ**ウィンドウ。 変更する ID`ID_PEN_COLOR`します。
+1. 色のボタンを追加する前に、そのメニュー項目を作成します。 **リソース ビュー**ウィンドウを開いて、 **IDR_SCRIBBTYPE**メニュー リソース。 をクリックして、**ペン**メニュー項目を [ペン] メニューを開きます。 クリックして**ここへ入力**と種類`&Color`します。 表示するように入力したテキストを右クリックし、**プロパティ**ウィンドウ。 ID を `ID_PEN_COLOR`に変更します。
 
 1. 色のボタンを追加します。 **ツールボックス**、ドラッグ、**カラー ボタン**を**ペン**パネル。
 

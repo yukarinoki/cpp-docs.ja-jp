@@ -1,27 +1,17 @@
 ---
-title: コンパイラ エラー C3850 |Microsoft Docs
-ms.custom: ''
+title: コンパイラ エラー C3850
 ms.date: 09/05/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3850
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3850
 ms.assetid: 028f3a37-f3ad-4ebc-9168-3cdea47524d4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: daa4b6128672b47891c563acfd4399952a17e7e6
-ms.sourcegitcommit: d10a2382832373b900b1780e1190ab104175397f
+ms.openlocfilehash: 9cd0428726f92c7347b162f74b46035f99cc2d3c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43894539"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572667"
 ---
 # <a name="compiler-error-c3850"></a>コンパイラ エラー C3850
 
@@ -33,7 +23,7 @@ ms.locfileid: "43894539"
 
 C としてコンパイルされたコードでユニバーサル文字名を表さない可能性が 0000 ~ 009 f の範囲内の文字が、0024 ('$') の例外の包括的 0040 ('\@') および 0060 (' ')。
 
-C++ としてコンパイルされたコードでは、文字列または文字リテラル内に、有効な Unicode コード ポイントのユニバーサル文字名を使用できます。 リテラルを除き、0000 ～ 001F または 007F ～ 009F の範囲内 (境界を含む) の制御文字、あるいは、基本ソース文字セットのメンバーを表すユニバーサル文字名を使用してはいけません。  詳細については、次を参照してください。[文字セット](../../cpp/character-sets.md)します。
+C++ としてコンパイルされたコードでは、文字列または文字リテラル内に、有効な Unicode コード ポイントのユニバーサル文字名を使用できます。 リテラルを除き、0000 ～ 001F または 007F ～ 009F の範囲内 (境界を含む) の制御文字、あるいは、基本ソース文字セットのメンバーを表すユニバーサル文字名を使用してはいけません。  詳細については、「 [Character Sets](../../cpp/character-sets.md)」を参照してください。
 
 ## <a name="example"></a>例
 

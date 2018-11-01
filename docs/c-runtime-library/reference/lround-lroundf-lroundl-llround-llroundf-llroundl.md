@@ -1,10 +1,6 @@
 ---
-title: lround、lroundf、lroundl、llround、llroundf、llroundl | Microsoft Docs
-ms.custom: ''
+title: lround、lroundf、lroundl、llround、llroundf、llroundl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - llround
 - llroundf
@@ -32,8 +28,6 @@ f1_keywords:
 - llround
 - lroundf
 - llroundf
-dev_langs:
-- C++
 helpviewer_keywords:
 - lround function
 - llroundl function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - llroundf function
 - lroundl function
 ms.assetid: cfb88a35-54c6-469f-85af-f7d695dcfdd8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ea24e45c26abe418023d4f065117928bb17ae2b
-ms.sourcegitcommit: 3f3f1d687e109b63399e14e2c8f4404787bdfae7
+ms.openlocfilehash: a1406f84179df555125b908caa13a0cde6516597
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49336536"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601449"
 ---
 # <a name="lround-lroundf-lroundl-llround-llroundf-llroundl"></a>lround、lroundf、lroundl、llround、llroundf、llroundl
 
@@ -109,7 +99,7 @@ long long llroundl(
 
 オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **lround**または**llround**を受け取って返す**float**と**長い** **二重**値。 C プログラムで**lround**と**llround**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

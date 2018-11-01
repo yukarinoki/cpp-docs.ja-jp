@@ -1,27 +1,16 @@
 ---
-title: コンパイラ属性 (C++ COM) |Microsoft Docs
-ms.custom: ''
+title: コンパイラ属性 (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, attributes
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9f0483676fd0dd60d893f8931511083d369539dd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 8fef953a520572b42e69a48ea391282c7b70ba44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791190"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667364"
 ---
 # <a name="compiler-attributes"></a>コンパイラ属性
 
@@ -33,7 +22,7 @@ ms.locfileid: "48791190"
 |[event_receiver](event-receiver.md)|イベント レシーバーを作成します。|
 |[event_source](event-source.md)|イベント ソースを作成します。|
 |[export](export.md)|.Idl ファイルに配置するデータ構造をによりします。|
-|[実装](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
+|[implements](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
 |[importidl](importidl.md)|生成された .idl ファイルには、指定された .idl ファイルを挿入します。|
 |[importlib](importlib.md)|既に他のタイプ ライブラリでコンパイル済みの型を、作成中のタイプ ライブラリで使用できるようにします。|
 |[includelib](includelib-cpp.md)|生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル。|

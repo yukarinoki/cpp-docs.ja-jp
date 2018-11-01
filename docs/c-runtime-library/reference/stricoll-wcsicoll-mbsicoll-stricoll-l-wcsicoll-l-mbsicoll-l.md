@@ -1,10 +1,6 @@
 ---
-title: _stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l | Microsoft Docs
-ms.custom: ''
+title: _stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsicoll_l
 - _stricoll_l
@@ -37,8 +33,6 @@ f1_keywords:
 - _tcsicoll
 - mbsicoll
 - stricoll_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - code pages, using for string comparisons
 - _ftcsicoll function
@@ -57,16 +51,12 @@ helpviewer_keywords:
 - strings [C++], comparing by code page
 - ftcsicoll function
 ms.assetid: 8ec93016-5a49-49d2-930f-721566661d82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f90f6a25c6ecf6796ba3d4d94b6d2f5722eabf9d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd2406751fd2855afd02743c98938e530398e7d1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416373"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579670"
 ---
 # <a name="stricoll-wcsicoll-mbsicoll-stricolll-wcsicolll-mbsicolll"></a>_stricoll、_wcsicoll、_mbsicoll、_stricoll_l、_wcsicoll_l、_mbsicoll_l
 
@@ -121,20 +111,20 @@ Null で終わる比較対象の文字列。
 
 |戻り値|string1 と string2 との関係|
 |------------------|----------------------------------------|
-|< 0|*string1*より小さい*string2*|
+|< 0|*string1*未満*string2*|
 |0|*string1*と同じ*string2*|
 |> 0|*string1*より大きい*string2*|
 |**すると**|エラーが発生しました。|
 
-これらの関数を返します**すると**です。 使用する**すると**、いずれかを含める\<string.h > または\<mbstring.h >。 **_wcsicoll**失敗する場合は、いずれか*string1*または*string2*照合シーケンスのドメイン外のワイド文字コードが含まれています。 エラーが発生するときに **_wcsicoll**設定**errno**に**EINVAL**です。 呼び出しでエラーを確認する **_wcsicoll**設定、 **errno**を 0 にし、確認**errno**呼び出した後 **_wcsicoll**です。
+これらの関数を返します。**すると**します。 使用する**すると**、いずれかを含める\<string.h > または\<mbstring.h >。 **_wcsicoll**場合に失敗できる*string1*または*string2*に照合シーケンスのドメイン外のワイド文字コードが含まれています。 エラーが発生したときに **_wcsicoll**設定**errno**に**EINVAL**します。 呼び出しでエラーをチェックする **_wcsicoll**設定**errno**を 0 にし、確認**errno**呼び出した後 **_wcsicoll**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数の実行の大文字と小文字*string1*と*string2*現在使用中のコード ページに従ってします。 これらの関数は、現在のコード ページの文字セット順序と辞書式文字順序との間に相違点があり、この違いが文字列比較に関係がある場合にのみ使用します。
+これらの各関数は、大文字と小文字を実行します。 *string1*と*string2*現在使用されているコード ページに従ってします。 これらの関数は、現在のコード ページの文字セット順序と辞書式文字順序との間に相違点があり、この違いが文字列比較に関係がある場合にのみ使用します。
 
-**_stricmp**とは異なります **_stricoll**点で、 **_stricmp**比較の影響を受ける**LC_CTYPE**であるのに対し、 **_stricoll**比較に基づいて、 **LC_CTYPE**と**LC_COLLATE**ロケールのカテゴリに分類します。 詳細については、 **LC_COLLATE**カテゴリを参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)と[ロケールのカテゴリ](../../c-runtime-library/locale-categories.md)です。 この関数のバージョン、 **_l**サフィックスを使用して、現在のロケール以外のバージョンで、 **_l**代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_stricmp**とは異なります **_stricoll**点で、 **_stricmp**比較が受ける**LC_CTYPE**であるのに対し、 **_stricoll**比較に基づいて、 **LC_CTYPE**と**LC_COLLATE**ロケールのカテゴリに分類します。 詳細については、 **LC_COLLATE**カテゴリを参照してください[setlocale](setlocale-wsetlocale.md)と[ロケールのカテゴリ](../../c-runtime-library/locale-categories.md)します。 この関数のバージョン、 **_l**サフィックスを使用しているバージョンは、現在のロケール、 **_l**代わりに渡されたロケールを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-これらのすべての関数では、パラメーターの検証が行われます。 いずれか*string1*または*string2*は**NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md). これらの関数を返すかどうかは、引き続き実行が許可された、**すると**設定と**errno**に**EINVAL**です。
+これらのすべての関数では、パラメーターの検証が行われます。 いずれか*string1*または*string2*は**NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md). これらの関数を返すかどうかは、引き続き実行が許可された、**すると**設定と**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -142,9 +132,9 @@ Null で終わる比較対象の文字列。
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsicoll**|**_stricoll**|**_mbsicoll**|**_wcsicoll**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_stricoll**、 **_stricoll_l**|\<string.h>|
 |**_wcsicoll**、 **_wcsicoll_l**|\<wchar.h>、\<string.h>|

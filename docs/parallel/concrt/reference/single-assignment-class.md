@@ -1,10 +1,6 @@
 ---
-title: single_assignment クラス |Microsoft Docs
-ms.custom: ''
+title: single_assignment クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - single_assignment
 - AGENTS/concurrency::single_assignment
@@ -20,21 +16,15 @@ f1_keywords:
 - AGENTS/concurrency::single_assignment::reserve_message
 - AGENTS/concurrency::single_assignment::resume_propagation
 - AGENTS/concurrency::single_assignment::send_message
-dev_langs:
-- C++
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee06d9a30339a72bd7137db6f277a1eb41028d50
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163090"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593480"
 ---
 # <a name="singleassignment-class"></a>single_assignment クラス
 
@@ -100,7 +90,7 @@ A`single_assignment`メッセージング ブロックがターゲットごと�
 
 `single_assignment`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 

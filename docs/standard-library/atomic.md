@@ -1,10 +1,6 @@
 ---
-title: '&lt;atomic&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;atomic&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <atomic>
 - atomic/std::atomic_int_least32_t
@@ -51,19 +47,13 @@ f1_keywords:
 - atomic/std::atomic_int8_t
 - atomic/std::atomic_int64_t
 - atomic/std::atomic_uint_least64_t
-dev_langs:
-- C++
 ms.assetid: e79a6b9f-52ff-48da-9554-654c4e1999f6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 54ea69a53204de2d304340ed042b3ba028dd404c
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: e2146c7424d4903523372ad54b0cd2eece525cbe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38966642"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600487"
 ---
 # <a name="ltatomicgt"></a>&lt;atomic&gt;
 
@@ -162,14 +152,14 @@ Typedef 名は、ヘッダー \<inttypes.h> で定義されている一部の型
 
 ## <a name="structs"></a>構造体
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[atomic 構造体](../standard-library/atomic-structure.md)|格納された値に対してアトミック操作を実行するオブジェクトについて記述します。|
 |[atomic_flag 構造体](../standard-library/atomic-flag-structure.md)|アトミックに設定し、クリアするオブジェクトについて説明します、 **bool**フラグ。|
 
 ## <a name="enums"></a>列挙体
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[memory_order 列挙型](../standard-library/atomic-enums.md#memory_order_enum)|メモリ位置に対する同期操作のシンボル名を提供します。 これらの操作は、1 つのスレッドの割り当てが別のスレッドにおいて表示される方法に影響します。|
 
@@ -177,7 +167,7 @@ Typedef 名は、ヘッダー \<inttypes.h> で定義されている一部の型
 
 次の一覧では、末尾が `_explicit` ではない関数は、`memory_order_seq_cst` の暗黙的な [memory_order](../standard-library/atomic-enums.md#memory_order_enum) 引数を持っている場合を除き、対応する `_explicit` のセマンティクスを持っています。
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[atomic_compare_exchange_strong](../standard-library/atomic-functions.md#atomic_compare_exchange_strong)|*アトミックの比較および交換*の操作を実行します。|
 |[atomic_compare_exchange_strong_explicit](../standard-library/atomic-functions.md#atomic_compare_exchange_strong_explicit)|*アトミックの比較および交換*の操作を実行します。|

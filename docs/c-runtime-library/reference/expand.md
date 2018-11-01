@@ -1,10 +1,6 @@
 ---
-title: _expand | Microsoft ドキュメント
-ms.custom: ''
+title: _expand
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _expand
 apilocation:
@@ -29,23 +25,17 @@ f1_keywords:
 - _nexpand
 - bexpand
 - _expand
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, changing size
 - _expand function
 - expand function
 ms.assetid: 4ac55410-39c8-45c7-bccd-3f1042ae2ed3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f709df131ded856881dc171c2e1549d3d5d378e1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1606bedbb1264bddb7674c829fe456f506d6584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402352"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665661"
 ---
 # <a name="expand"></a>_expand
 
@@ -62,7 +52,7 @@ void *_expand(
 
 ### <a name="parameters"></a>パラメーター
 
-*_expand*<br/>
+*memblock*<br/>
 以前に割り当てられたメモリ ブロックへのポインター。
 
 *size*<br/>
@@ -70,26 +60,26 @@ void *_expand(
 
 ## <a name="return-value"></a>戻り値
 
-**_expand**再割り当てされたメモリ ブロックへの void ポインターを返します。 **_expand**とは異なり、 **realloc**、そのサイズを変更するブロックを移動することはできません。 したがって、移動せず、ブロックを展開できる十分なメモリがある場合は、 *_expand*パラメーターを **_expand**戻り値と同じです。
+**_expand**再割り当てされたメモリ ブロックに void ポインターを返します。 **_expand**とは異なり、 **realloc**、そのサイズを変更するブロックを移動することはできません。 したがって、ブロックを移動せずに、展開できる十分なメモリがある場合は、*別*パラメーターを **_expand**戻り値と同じです。
 
-**_expand**返します**NULL**その操作中にエラーが検出された場合。 たとえば場合、 **_expand**はメモリ ブロックを縮小するために使用、可能性があります、少量のヒープや無効なブロック ポインターの破損を検出し、返す**NULL**です。
+**_expand**返します**NULL**操作中にエラーが検出された場合。 たとえば場合、 **_expand**はメモリ ブロックを縮小するために使用、小さなブロック ヒープや無効なブロック ポインターの破損を検出しがありますを返す**NULL**します。
 
-この関数を返しますのかどうかは、移動することがなく、特定のサイズにブロックを拡張する使用可能なメモリが不足して、 **NULL**です。 **_expand**サイズに拡張されるよりも小さい要求されたブロックを返しません。 失敗した場合、 **errno**エラーの性質を示すです。 詳細については**errno**を参照してください[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)です。
+かどうかは、メモリ不足のブロックを移動せずに指定されたサイズに拡張する、関数を返します**NULL**します。 **_expand**サイズに拡張される未満の要求されたブロックを返しません。 失敗した場合、 **errno**エラーの性質を示します。 詳細については**errno**を参照してください[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)します。
 
-戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 確認するには、項目の新しいサイズを使用して **_msize**です。 以外の型へのポインターを取得する**void**型、戻り値のキャストを使用します。
+戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 項目の新しいサイズを確認するには、使用 **_msize**します。 以外の型へのポインターを取得する**void**型、戻り値のキャストを使用します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Expand**関数を拡張またはヒープ内の場所を移動せず、ブロックを縮小しようとしています。 以前に割り当てられたメモリ ブロックのサイズを変更します。 *_Expand*パラメーターは、ブロックの先頭を指します。 *サイズ*パラメーターは、ブロックの新しいサイズをバイトで示します。 ブロックの内容は、新しいサイズと古いサイズのうち小さい方のサイズまでは変更されません。 *_expand*解放されたブロックをすることはできません。
+**_Expand**関数は、展開、またはヒープ内の場所を移動することがなくブロックを縮小しようとして、以前に割り当てられたメモリ ブロックのサイズを変更します。 *_Expand*パラメーターは、ブロックの先頭を指します。 *サイズ*パラメーターでは、ブロックの新しいサイズ (バイト単位)。 ブロックの内容は、新しいサイズと古いサイズのうち小さい方のサイズまでは変更されません。 *_expand*が解放されたブロックをすることはできません。
 
 > [!NOTE]
-> 64 ビット プラットフォームでは、 **_expand**可能性がありますいないコントラクトのブロック、ブロックのサイズは 16 K 未満、したがって Low Fragmentation Heap に割り当てられている場合、新しいサイズが現在のサイズより以外の場合は特に、小さい場合 **_expand**が変更されていないブロックを離れるし、返します *_expand*です。
+> 64 ビットのプラットフォームで **_expand**ブロック サイズが 16 K 未満、そのための Low Fragmentation Heap に割り当てられた場合、新しいサイズは特に、現在のサイズより小さい場合、ブロックを縮小しない可能性があります **_expand**が変更されていないブロックを離れたし、返します *_expand*します。
 
-C ランタイム ライブラリのデバッグ バージョンとリンクするアプリケーション **_expand**に解決される[_expand_dbg](expand-dbg.md)です。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
+アプリケーションが、C ランタイム ライブラリのデバッグ バージョンにリンクされている場合 **_expand**に解決される[_expand_dbg](expand-dbg.md)します。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-この関数は、パラメーターを検証します。 場合 *_expand* null ポインター」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**です。 場合*サイズ*がより大きい **_HEAP_MAXREQ**、 **errno**に設定されている**ENOMEM** 、関数を返します**NULL**.
+この関数は、パラメーターを検証します。 場合 *_expand* null ポインターの場合は、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**します。 場合*サイズ*がより大きい **_HEAP_MAXREQ**、 **errno**に設定されている**ENOMEM** 、関数を返します**NULL**.
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

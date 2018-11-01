@@ -1,10 +1,6 @@
 ---
-title: CButton クラス |Microsoft Docs
-ms.custom: ''
+title: CButton クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CButton
 - AFXWIN/CButton
@@ -42,8 +38,6 @@ f1_keywords:
 - AFXWIN/CButton::SetSplitStyle
 - AFXWIN/CButton::SetState
 - AFXWIN/CButton::SetTextMargin
-dev_langs:
-- C++
 helpviewer_keywords:
 - CButton [MFC], CButton
 - CButton [MFC], Create
@@ -80,16 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2f0f0ce6a893406fca73f25e040cbc3dbd29d08
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662853"
 ---
 # <a name="cbutton-class"></a>CButton クラス
 
@@ -192,7 +182,7 @@ class CButton : public CWnd
 
 `CButton`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 

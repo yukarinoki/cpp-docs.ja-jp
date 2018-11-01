@@ -1,10 +1,6 @@
 ---
-title: _umask | Microsoft Docs
-ms.custom: ''
+title: _umask
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _umask
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - file permissions [C++]
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3053bfb19cc81dff15d41d1b5bc6d405da619f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f51e2c19933953eb4910cdeb5e1ec50b7387bd59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677163"
 ---
 # <a name="umask"></a>_umask
 
@@ -60,13 +50,13 @@ int _umask( int pmode );
 
 ## <a name="return-value"></a>戻り値
 
-**_umask**の前の値を返します*pmode*です。 エラーの戻り値はありません。
+**_umask**の以前の値を返します*pmode*します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Umask**関数では、現在のプロセスのファイルのアクセス許可マスクを設定で指定されたモードに*pmode*です。 ファイルのアクセス許可マスクを新しく作成したファイルのアクセス許可の設定を変更 **_creat**、 **_open**、または **_sopen**です。 マスクのビットが 1 の場合は、ファイルの要求されたアクセス許可値に対応するビットは 0 (許可しない) に設定されます。 マスクのビットが 0 の場合は、対応するビットは変更されません。 新しいファイルのアクセス許可の設定は、そのファイルが最初に閉じられるまで、設定されません。
+**_Umask**関数では、現在のプロセスのファイルのアクセス許可マスクを設定で指定されたモードに*pmode*します。 ファイルのアクセス許可マスクは、新しく作成したファイルのアクセス許可の設定を変更します。 **_creat**、 **_open**、または **_sopen**します。 マスクのビットが 1 の場合は、ファイルの要求されたアクセス許可値に対応するビットは 0 (許可しない) に設定されます。 マスクのビットが 0 の場合は、対応するビットは変更されません。 新しいファイルのアクセス許可の設定は、そのファイルが最初に閉じられるまで、設定されません。
 
-整数型の式*pmode* SYS\STAT で定義されている、次のマニフェスト定数の一方または両方が含まれています。H:
+整数式*pmode* SYS\STAT で定義されている、次のマニフェスト定数の一方または両方が含まれています。H:
 
 |*pmode*||
 |-|-|
@@ -74,13 +64,13 @@ int _umask( int pmode );
 **_S_IREAD**|読み取りが許可されます。
 **_S_IREAD** \| **_S_IWRITE**|読み取りと書き込みが許可されます。
 
-これらはビットごとの OR 演算子で結合両方の定数を指定する場合 ( **|** )。 場合、 *pmode*引数は **_S_IREAD**読み取りが許可されていません (ファイルは書き込み専用)。 場合、 *pmode*引数は **_S_IWRITE**書き込みが許可されていません (ファイルは読み取り専用)。 たとえば、マスクに書き込みビットが設定されている場合、新しいファイルはいずれも読み取り専用となります。 MS-DOS および Windows オペレーティング システムでは、すべてのファイルは読み取り可能です。書き込み専用のアクセス許可を与えることはできません。 したがって、読み取りとビットを設定 **_umask**ファイルのモードにも何も起こりません。
+ビットごとの OR 演算子で参加している両方の定数を指定する場合 ( **|** )。 場合、 *pmode*引数が **_S_IREAD**読み取りが許可されていません (ファイルは書き込み専用)。 場合、 *pmode*引数が **_S_IWRITE**書き込みが許可されていません (ファイルは読み取り専用)。 たとえば、マスクに書き込みビットが設定されている場合、新しいファイルはいずれも読み取り専用となります。 MS-DOS および Windows オペレーティング システムでは、すべてのファイルは読み取り可能です。書き込み専用のアクセス許可を与えることはできません。 そのため、読み取りのビットを設定 **_umask**ファイルのモードに影響を与えません。
 
-場合*pmode*のマニフェスト定数のいずれかの組み合わせではありませんか、別のセットが組み込まれており、定数の関数は無視されるものです。
+場合*pmode*マニフェスト定数のいずれかの組み合わせではないまたは代替のセットを組み込んで、定数の関数は単にそれらを無視します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_umask**|\<io.h>、\<sys/stat.h>、\<sys/types.h>|
 

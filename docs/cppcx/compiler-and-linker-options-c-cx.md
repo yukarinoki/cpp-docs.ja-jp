@@ -1,20 +1,13 @@
 ---
-title: コンパイラとリンカーのオプション (C + + CX) |Microsoft Docs
-ms.custom: ''
+title: コンパイラとリンカーのオプション (C++/CX)
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: ecfadce8-3a3f-40cc-bb01-b4731f8d2fcb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61b9943488a9d6a720e8d86750b14ad044677112
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2165d802e6ff4bd530acac7c1ba6185c732a6499
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861838"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50577289"
 ---
 # <a name="compiler-and-linker-options-ccx"></a>コンパイラとリンカーのオプション (C++/CX)
 
@@ -28,7 +21,7 @@ ms.locfileid: "48861838"
 
 |オプション|説明|
 |------------|-----------------|
-|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Windows ランタイム言語拡張機能を有効にします。<br /><br /> `nostdlib` パラメーターは、コンパイラが、アセンブリと .winmd ファイルの検索に標準の定義済み検索パスを使用しないようにします。<br /><br /> **/ZW** コンパイラ オプションは、暗黙的に次のコンパイラ オプションを指定します。<br /><br />- **/FI** vccorlib.h-コンパイラで必要な多くの種類を定義する vccorlib.h ヘッダー ファイルのインクルードを強制します。<br />- [/FU](../build/reference/fu-name-forced-hash-using-file.md) windows.winmd-オペレーティング システムによって提供され、Windows ランタイムで多くの型を定義する Windows.winmd メタデータ ファイルのインクルードを強制します。<br />- **/FU** platform.winmd-コンパイラによって提供され、名前空間のプラットフォーム ファミリのほとんどの種類を定義する Platform.winmd メタデータ ファイルのインクルードを強制します。|
+|[/ZW](../build/reference/zw-windows-runtime-compilation.md)<br /><br /> /ZW:nostdlib|Windows ランタイム言語拡張機能を有効にします。<br /><br /> `nostdlib` パラメーターは、コンパイラが、アセンブリと .winmd ファイルの検索に標準の定義済み検索パスを使用しないようにします。<br /><br /> **/ZW** コンパイラ オプションは、暗黙的に次のコンパイラ オプションを指定します。<br /><br />- **/FI** vccorlib.h - コンパイラで必要な多くの型を定義する vccorlib.h ヘッダー ファイルのインクルードを強制します。<br />- [/FU](../build/reference/fu-name-forced-hash-using-file.md) windows.winmd-オペレーティング システムによって提供され、Windows ランタイムで多くの型を定義する Windows.winmd メタデータ ファイルのインクルードを強制します。<br />- **/FU** Platform.winmd - コンパイラが提供し、名前空間のプラットフォーム ファミリのほとんどの型を定義する Platform.winmd メタデータ ファイルのインクルードを強制します。|
 |[/AI](../build/reference/ai-specify-metadata-directories.md) *dir*|*dir* パラメーターに指定されたディレクトリを、コンパイラがアセンブリと .winmd ファイルを検索するために使用する検索パスに追加します。|
 |**/FU**  *ファイル*|指定されたモジュールまたは .winmd ファイルのインクルードを強制します。 つまり、ソース コード内に `#using`*file* を指定する必要はありません。 コンパイラは、独自の Windows メタデータ ファイル Platform.winmd のインクルードを自動的に強制します。|
 |/D"WINAPI_FAMILY = 2"|Windows ランタイムと互換性のある Win32 SDK のサブセットを使用できるように定義が作成されます。|

@@ -1,10 +1,6 @@
 ---
-title: wctomb、_wctomb_l | Microsoft Docs
-ms.custom: ''
+title: wctomb、_wctomb_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wctomb_l
 - wctomb
@@ -23,8 +19,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - string conversion, wide characters
 - wide characters, converting
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 4a543f0e-5516-4d81-8ff2-3c5206f02ed5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f10422d8efcebec62e77a495a6fb04c980da6060
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: b7d7907d14052aead789471bf80f0bc17a457d0d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652150"
 ---
 # <a name="wctomb-wctombl"></a>wctomb、_wctomb_l
 
@@ -81,7 +71,7 @@ int _wctomb_l(
 
 **wctomb**パラメーターを検証します。 場合*mbchar*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数は-1 を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

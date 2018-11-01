@@ -1,28 +1,17 @@
 ---
-title: is_nothrow_destructible クラス | Microsoft Docs
-ms.custom: ''
+title: is_nothrow_destructible クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_nothrow_destructible
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_nothrow_destructible
 ms.assetid: 0bbd8a28-e312-4d72-bd28-aac027f974d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 245dd02a8077d652baae87d678122830f95869bc
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 366b40af45c57d058d918c4c2f21d1b2ba486d35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110345"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656743"
 ---
 # <a name="isnothrowdestructible-class"></a>is_nothrow_destructible クラス
 
@@ -44,7 +33,7 @@ struct is_nothrow_destructible;
 
 場合、型述語のインスタンスは true を保持型*T* 、破棄可能な型であり、デストラクターは、コンパイラにスローしないと判明します。 それ以外の場合、false を保持します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

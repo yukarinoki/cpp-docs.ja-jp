@@ -1,28 +1,18 @@
 ---
-title: -検証-文字セット (互換性のある文字の検証) |Microsoft Docs
-ms.custom: ''
+title: /validate-charset (互換性のある文字の検証)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /validate-charset
 - validate-charset
-dev_langs:
-- C++
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 698a221dadf21e6d314f5556210d84b98853757f
-ms.sourcegitcommit: 92c568e9466ffd7346a4120c478c9bdea61c8756
+ms.openlocfilehash: 243d225f5acde0c6099050539687726ea082c898
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "47029529"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590490"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset (互換性のある文字の検証)
 
@@ -42,7 +32,7 @@ ms.locfileid: "47029529"
 
 Visual Studio では、として、ソース文字セットと、実行文字セットの間の変換中に内部の文字エンコーディング utf-8 を使用します。 Utf-8 変換が疑問符 () を置き換える場合は、実行文字セットでは、ソース ファイル内の文字を表すことができない、'?' 文字。 **/Validate-charset**オプションは、このような場合に警告をレポートにコンパイルします。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

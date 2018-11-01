@@ -1,10 +1,6 @@
 ---
-title: round、roundf、roundl | Microsoft Docs
-ms.custom: ''
+title: round、roundf、roundl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - round
 - roundl
@@ -26,23 +22,17 @@ f1_keywords:
 - roundf
 - roundl
 - round
-dev_langs:
-- C++
 helpviewer_keywords:
 - roundl function
 - round function
 - roundf function
 ms.assetid: 6be90877-193c-4b80-a32b-c3eca33f9c6f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83c157793b80ec851f2c6159a5454f7101d2baed
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 126c6bace2b79123094a7f8bcc8f3d3378391d96
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407240"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591773"
 ---
 # <a name="round-roundf-roundl"></a>round、roundf、roundl
 
@@ -75,19 +65,19 @@ long double roundl(
 
 ## <a name="return-value"></a>戻り値
 
-**丸める**関数に最も近い整数を表す浮動小数点値を返す*x*です。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
+**ラウンド**関数に最も近い整数を表す浮動小数点値を返す*x*します。 中間の値は、浮動小数点丸めモードの設定にかかわらず、ゼロから離れる方向に丸められます。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|none|**_DOMAIN**|
+|± **QNAN**、 **IND**|none|**(_D)**|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**丸める**を受け取り、返します**float**と**長い****二重**値。 C プログラムでは、**丸める**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、**ラウンド**を受け取って返す**float**と**長い****二重**値。 C プログラムで**ラウンド**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**丸める**、 **roundf**、 **roundl**|\<math.h>|
 

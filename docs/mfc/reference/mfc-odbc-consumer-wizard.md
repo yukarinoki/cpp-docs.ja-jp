@@ -1,33 +1,23 @@
 ---
-title: MFC ODBC コンシューマー ウィザード |Microsoft Docs
-ms.custom: ''
+title: MFC ODBC コンシューマー ウィザード
 ms.date: 10/03/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.mfc.consumer.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9623fae94891c62cca2ce34c621823251b65fe9
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: f86eded7cc7c04a85b1bcd93e917bd5a2b5c9696
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49082606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590880"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC コンシューマー ウィザード
 
 > [!WARNING]
-> Visual Studio 2017 バージョン 15.9 でこのコード ウィザードは非推奨し、Visual Studio の将来のバージョンで削除される予定です。 このウィザードはほとんど使用されません。 ATL と MFC の一般的なサポートは、このウィザードの削除による影響はありません。 この非推奨に関するご意見を共有する場合は、完了[このアンケート](https://www.surveymonkey.com/r/QDWKKCN)します。 ご意見、ご意見が重要です。
+> Visual Studio 2017 バージョン 15.9 では、このコード ウィザードは非推奨になっており、Visual Studio の今後のバージョンで削除されます。 このウィザードはほとんど使用されません。 このウィザードを削除しても、ATL と MFC の一般的なサポートには影響ありません。 この非推奨に関するご意見を共有したい場合は、[こちらのアンケート](https://www.surveymonkey.com/r/QDWKKCN)にお答えください。 お客様のご意見は私どもにとって重要です。
 
 このウィザードを設定する ODBC レコード セット クラスとデータ バインディング、指定されたデータ ソースにアクセスするために必要です。
 

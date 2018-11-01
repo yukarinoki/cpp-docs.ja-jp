@@ -1,10 +1,6 @@
 ---
-title: ferror | Microsoft Docs
-ms.custom: ''
+title: ferror
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - ferror
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - ferror
-dev_langs:
-- C++
 helpviewer_keywords:
 - ferror function
 - streams, testing for errors
 - errors [C++], testing for stream
 ms.assetid: 528a34bc-f2aa-4c3f-b89a-5b148e6864f7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49aaff776a90dd687ee4dae1902903ed01b83e20
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2be90ffe8a135b4108abd9504099bd2f6c28f249
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397370"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587890"
 ---
 # <a name="ferror"></a>ferror
 
@@ -59,15 +49,15 @@ int ferror(
 
 ## <a name="return-value"></a>戻り値
 
-エラーが発生していない場合*ストリーム*、 **ferror** 0 を返します。 それ以外の場合は、0 以外の値を返します。 ストリームが場合**NULL**、 **ferror** 」の説明に従って、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**は 0 を返します。
+エラーが発生していない場合*ストリーム*、 **ferror** 0 を返します。 それ以外の場合は、0 以外の値を返します。 ストリームが場合**NULL**、 **ferror**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**は 0 を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Ferror**ルーチン (関数とマクロの両方を実装) を読み取りまたは書き込みをエラーに関連付けられているファイルのテスト*ストリーム*です。 エラーが発生した場合、ストリームのエラー インジケーターの設定は、まで、または、ストリームが閉じているか、巻き戻され、まで**clearerr**に対して呼び出されます。
+**Ferror**ルーチン (関数とマクロの両方を実装) を読み取りまたは書き込みエラーに関連付けられているファイルをテスト*ストリーム*します。 エラーが発生した場合、ストリームが閉じているか、巻き戻されるまで、またはまで、ストリームのエラー インジケーターが設定のままになります**clearerr**に対してと呼びます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

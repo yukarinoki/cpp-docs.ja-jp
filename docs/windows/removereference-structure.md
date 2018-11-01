@@ -1,28 +1,18 @@
 ---
-title: RemoveReference 構造体 |Microsoft Docs
-ms.custom: ''
+title: RemoveReference 構造体
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::RemoveReference
-dev_langs:
-- C++
 helpviewer_keywords:
 - RemoveReference structure
 ms.assetid: 43ff91bb-815a-440e-b9fb-7dcbb7c863af
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d4c07a8f948895db098008f5efb90353912a13dd
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: fcb4d132198fff8dd6e2d55011f0c3a174b73f40
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48789060"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613695"
 ---
 # <a name="removereference-structure"></a>RemoveReference 構造体
 
@@ -62,7 +52,7 @@ struct RemoveReference<T&&>;
 
 `RemoveReference`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** internal.h
 

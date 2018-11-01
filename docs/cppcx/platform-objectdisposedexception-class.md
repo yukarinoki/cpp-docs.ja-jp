@@ -1,27 +1,19 @@
 ---
-title: Platform::objectdisposedexception クラス |Microsoft Docs
-ms.custom: ''
+title: Platform::ObjectDisposedException クラス
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ObjectDisposedException
 - VCCORLIB/Platform::ObjectDisposedException::ObjectDisposedException
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::ObjectDisposedException
 ms.assetid: 68506fe4-d09c-4407-999f-1e3edb261d41
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f0574885fb404572052fbf5066b522ed0208eba
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 41afe11efa23a3418ec9629a3c6f5a45015e2aa2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106926"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612954"
 ---
 # <a name="platformobjectdisposedexception-class"></a>Platform::ObjectDisposedException クラス
 
@@ -37,7 +29,7 @@ public ref class ObjectDisposedException : COMException,    IException,    IPrin
 
 詳細については、「 [COMException](../cppcx/platform-comexception-class.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **クライアントがサポートされている最小:** Windows 8
 

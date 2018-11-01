@@ -1,10 +1,6 @@
 ---
-title: vsscanf、vswscanf | Microsoft Docs
-ms.custom: ''
+title: vsscanf、vswscanf
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vsscanf
 - vswscanf
@@ -24,22 +20,16 @@ f1_keywords:
 - _vstscanf
 - vsscanf
 - vswscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - vswscanf function
 - vsscanf function
 ms.assetid: e96180f2-df46-423d-b4eb-0a49ab819bde
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7267e308f8b75a0e040e3fe33d51a9bdeea3914f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5bbe80cd2463c5c5b9b4ea55b8d6574675e42054
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415892"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478585"
 ---
 # <a name="vsscanf-vswscanf"></a>vsscanf、vswscanf
 
@@ -75,18 +65,18 @@ int vswscanf(
 
 これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 戻り値は**EOF**エラーの最初の変換の前に、文字列の末尾に達した場合またはします。
 
-場合*バッファー*または*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合*バッファー*または*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Vsscanf**関数からデータを読み取る*バッファー*で各引数によって指定されている位置に、 *arglist*引数リスト。 一覧の各引数は、型指定子に対応する型を持つ変数へのポインターである必要があります*形式*です。 *形式*引数コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*の引数、 **scanf**関数。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Vsscanf**関数からデータを読み取る*バッファー*の各引数で指定されている場所に、 *arglist*引数リスト。 リスト内のすべての引数に型指定子に対応する型を持つ変数へのポインターである必要があります*形式*します。 *形式*引数コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*の引数、 **scanf**関数。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> 使用すると**vsscanf**文字列を読み取る、向けに幅を必ず指定、 **%s**形式 (たとえば、 **「% 男女」** の代わりに **"%s"**) です。それ以外の場合、正しくない形式の入力には、バッファー オーバーランを可能性があります。
+> 使用すると**vsscanf**の幅を常に文字列を読み取り、指定、 **%s**形式 (たとえば、 **「% 男女」** の代わりに **"%s"**);それ以外の場合、正しくない形式の入力には、バッファー オーバーランを可能性があります。
 
-**vswscanf**のワイド文字バージョンは、 **vsscanf**; 引数**vswscanf**ワイド文字列です。 **vsscanf**マルチバイトの 16 進数文字を処理しません。 **vswscanf** Unicode の全角 16 進数または「互換区域」の文字を処理しません。 それ以外の場合、 **vswscanf**と**vsscanf**動作は同じです。
+**vswscanf**のワイド文字バージョンは、 **vsscanf**; 引数**vswscanf**はワイド文字列です。 **vsscanf**マルチバイトの 16 進数の文字を処理しません。 **vswscanf** Unicode の全角 16 進数または「互換区域」の文字を処理しません。 それ以外の場合、 **vswscanf**と**vsscanf**動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -94,9 +84,9 @@ int vswscanf(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstscanf**|**vsscanf**|**vsscanf**|**vswscanf**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**vsscanf**|\<stdio.h>|
 |**vswscanf**|\<stdio.h> または \<wchar.h>|

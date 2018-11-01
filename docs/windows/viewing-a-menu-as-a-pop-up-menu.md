@@ -1,27 +1,16 @@
 ---
-title: ポップアップ メニュー (C++) としてのメニューの表示 |Microsoft Docs
-ms.custom: ''
+title: ポップアップ メニュー (C++) としてのメニューの表示
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - pop-up menus
 - menus [C++], pop-up
 ms.assetid: 220a16dd-a6e8-4362-af85-68fbfce2870e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 30f6bac0e693b32d7ab6a761b6d4620244e85acd
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c8af24c7a39e8574e046da1bfce073a9a432387f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055894"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614813"
 ---
 # <a name="viewing-a-menu-as-a-pop-up-menu"></a>ポップアップ メニューとしてのメニューの表示
 

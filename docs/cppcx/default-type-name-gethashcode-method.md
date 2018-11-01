@@ -1,24 +1,15 @@
 ---
-title: '既定:: (type_name)::gethashcode メソッド |Microsoft Docs'
-ms.custom: ''
+title: default::(type_name)::GetHashCode メソッド
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 f1_keywords:
 - VCCORLIB/Platform::Object::GetHashCode
-dev_langs:
-- C++
 ms.assetid: 58ea60f8-f820-4103-9b9b-b6635ada3fa5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: edcb67686db871e4ebddb961ed254d260b630139
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 4d70140091779904965ac8c3a55973c41d69e780
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107149"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650854"
 ---
 # <a name="defaulttypenamegethashcode-method"></a>default::(type_name)::GetHashCode メソッド
 
@@ -34,7 +25,7 @@ public:int GetHashCode();
 
 対象のインスタンスのハッシュ コード。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **クライアントがサポートされている最小:** Windows 8
 

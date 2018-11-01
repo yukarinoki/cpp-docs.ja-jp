@@ -1,32 +1,22 @@
 ---
-title: 'チュートリアル: 軽量タスクを使用する既存のコードを改変. |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: 既存のコードを改変して軽量タスクを使用する'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8b8369075d2d931d794b8299660cb5f3aa614fe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a0e724ff6f43dc0c888e787350f4841f14383f14
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424626"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50654503"
 ---
 # <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>チュートリアル: 既存のコードを改変して軽量タスクを使用する
 
 ここでは、Windows API を使用する既存のコードを改変して、軽量タスクを使用するスレッドを作成および実行する方法について説明します。
 
-A*軽量タスク*から直接スケジュールするタスクを[concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)または[concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクト。 軽量タスクは、既存のコードを改変して同時実行ランタイムのスケジュール機能を使用する場合に有用です。
+A*軽量タスク*から直接スケジュールするタスクを[concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)または[concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクト。 軽量タスクは、既存のコードを改変してコンカレンシー ランタイムのスケジュール機能を使用する場合に有用です。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -50,7 +40,7 @@ Windows API を使用してスレッドを作成および実行する一般的�
 Parameters = 50, 100
 ```
 
-同時実行ランタイムを使用して同じタスクを実行するようにこのコード例を改変する手順を次に示します。
+コンカレンシー ランタイムを使用して同じタスクを実行するようにこのコード例を改変する手順を次に示します。
 
 ### <a name="to-adapt-the-example-to-use-a-lightweight-task"></a>軽量タスクを使用するように例を改変するには
 
@@ -62,7 +52,7 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]
 
-1. `MyThreadFunction` の宣言を次のように変更して、`__cdecl` 呼び出し規約を使用すると共に、`void` を返します。
+1. `MyThreadFunction` の宣言を次のように変更して、`__cdecl` 呼び出し規則を使用すると共に、`void` を返します。
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 

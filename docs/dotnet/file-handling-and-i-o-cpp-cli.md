@@ -1,12 +1,6 @@
 ---
-title: ファイル処理と I/o (C +/cli CLI) |Microsoft Docs
-ms.custom: ''
+title: ファイル処理と I/o (C +/cli CLI)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - .NET Framework [C++], file handling
 - files [C++], .NET Framework and
@@ -30,17 +24,12 @@ helpviewer_keywords:
 - files [C++], text
 - text files, writing in C++
 ms.assetid: 3296fd59-a83a-40d4-bd4a-6096cc13101b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: f6fa8dcf1488b693b53cde591c548122767f1af7
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 697d193f2239d9d22e8d94d479bbf24784e2c6ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50075113"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585654"
 ---
 # <a name="file-handling-and-io-ccli"></a>ファイル処理と I/O (C++/CLI)
 .NET Framework を使ったさまざまなファイル操作について説明します。
