@@ -1,10 +1,6 @@
 ---
-title: strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l | Microsoft Docs
-ms.custom: ''
+title: strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wcsncat_s_l
 - wcsncat_s
@@ -35,8 +31,6 @@ f1_keywords:
 - strncat_s
 - _mbsncat_s
 - _tcsncat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - _mbsncat_s function
@@ -53,16 +47,12 @@ helpviewer_keywords:
 - wcsncat_s_l function
 - mbsncat_s function
 ms.assetid: de77eca2-4d9c-4e66-abf2-a95fefc21e5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d88467034eeab3f3a269f735d5b158d94a429873
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb188f9cb5ab5f6f1a8bb66575364b7a94fe6e22
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418472"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500751"
 ---
 # <a name="strncats-strncatsl-wcsncats-wcsncatsl-mbsncats-mbsncatsl"></a>strncat_s、_strncat_s_l、wcsncat_s、_wcsncat_s_l、_mbsncat_s、_mbsncat_s_l
 
@@ -183,13 +173,13 @@ NULL で終わる元の文字列。
 |任意|任意|**NULL**|**EINVAL**|変更されない|
 |任意|0 または小さすぎる|任意|**ERANGE**|変更されない|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数が、最初に追加しようとしています*D*の文字*strSource*の末尾に*追加される文字*ここで、 *D* の小さい方が *。カウント*の長さと*strSource*です。 追加された場合は*D*内に収まる文字*追加される文字*(を指定すると*numberOfElements*) ままにし、null 終端記号をそれらの文字の領域を確保し追加すると、元の終端の null で始まる*追加される文字*、新しい終端の null は追加された、それ以外の*追加される文字*[0] の null 文字は、無効なパラメーターに設定されています。ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+これらの関数が、最初に追加しようとしています*D*の文字*strSource*の末尾に*追加される文字*ここで、 *D* のうちの小さい方が *。カウント*の長さと*strSource*します。 追加された場合は*D*内に収まる文字*追加される文字*(としてサイズが指定されて*numberOfElements*) し、null 終端記号をこれらの文字の余裕と追加すると、元の null の終端から始まる*追加される文字*、新しい終端の null は追加されるそれ以外と*追加される文字*[0] と無効なパラメーターの null 文字に設定されている。ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
 
-これには例外があります。 場合*カウント*は[_TRUNCATE](../../c-runtime-library/truncate.md) 、できるだけ多くの*strSource*に合わせる を追加だけでなく*追加される文字*を追加する領域を残して、null 終了しています。
+これには例外があります。 場合*数*は[_TRUNCATE](../../c-runtime-library/truncate.md)だけの*strSource*に合わせる を追加だけでなく*追加される文字*を追加する空きを残して、null 終了しています。
 
-たとえば、オブジェクトに適用された
+例えば以下のようにします。
 
 ```C
 char dst[5];
@@ -197,9 +187,9 @@ strncpy_s(dst, _countof(dst), "12", 2);
 strncat_s(dst, _countof(dst), "34567", 3);
 ```
 
-質問することを意味**strncat_s**バッファー 5 で 2 つの文字に 3 つの文字を追加する文字の長さですこれは余裕がない null 終端文字のため**strncat_s**文字列をゼロ。無効なパラメーター ハンドラーを呼び出します。
+確認していることを意味**strncat_s**バッファー 5 の 2 つの文字に 3 つの文字を追加する文字の長い; これは余裕がありません、null の終端ため**strncat_s**文字列をゼロ無効なパラメーター ハンドラーを呼び出します。
 
-切り捨て動作が必要に応じて、使用 **_TRUNCATE**を調整したり、*サイズ*パラメーターに応じて。
+切り捨て動作が必要な場合は **_TRUNCATE**を調整したり、*サイズ*パラメーターに応じて。
 
 ```C
 strncat_s(dst, _countof(dst), "34567", _TRUNCATE);
@@ -213,9 +203,9 @@ strncat_s(dst, _countof(dst), "34567", _countof(dst)-strlen(dst)-1);
 
 結果の文字列はすべて、null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-場合*strSource*または*追加される文字*は**NULL**、または*numberOfElements* 0 の場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行は継続許可されたかどうか、関数を返します**EINVAL**そのパラメーターを変更することがなくです。
+場合*strSource*または*追加される文字*は**NULL**、または*numberOfElements* 0 の場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返します**EINVAL**せず、パラメーターを変更します。
 
-**wcsncat_s**と **_mbsncat_s**のワイド文字とマルチバイト文字バージョンは、 **strncat_s**です。 文字列引数と戻り値の**wcsncat_s**ワイド文字は、文字列以外の **_mbsncat_s**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**wcsncat_s**と **_mbsncat_s**のワイド文字とマルチバイト文字バージョン**strncat_s**します。 文字列引数と戻り値の**wcsncat_s**はワイド文字列 **_mbsncat_s**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -230,11 +220,11 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**_tcsncat_s**|**strncat_s**|**_mbsnbcat_s**|**wcsncat_s**|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-**_strncat_s_l**と **_wcsncat_s_l**ロケールの依存関係を持ちません。 用に提供されている **_tcsncat_s_l**です。
+**_strncat_s_l**と **_wcsncat_s_l**ロケール依存性を持ちません。 に対してのみ用意されて **_tcsncat_s_l**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strncat_s**|\<string.h>|
 |**wcsncat_s**|\<string.h> または \<wchar.h>|

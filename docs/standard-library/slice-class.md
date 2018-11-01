@@ -1,33 +1,23 @@
 ---
-title: slice クラス | Microsoft Docs
-ms.custom: ''
+title: slice クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - valarray/std::slice
 - valarray/std::slice::size
 - valarray/std::slice::start
 - valarray/std::slice::stride
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::slice [C++]
 - std::slice [C++], size
 - std::slice [C++], start
 - std::slice [C++], stride
 ms.assetid: 00f0b03d-d657-4b81-ba53-5a9034bb2bf2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a2cff4aea707c98a4bce7060b16ce695d25c47d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: f2c054626b36083d67f9dbc4c87cf6283c12f001
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109007"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495421"
 ---
 # <a name="slice-class"></a>slice クラス
 
@@ -61,7 +51,7 @@ valarray での操作は、スライスによって定義されたソースと�
 |[start](#start)|`valarray` のスライスの開始インデックスを検索します。|
 |[stride](#stride)|`valarray` のスライスにある要素間の距離を検索します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<valarray>
 

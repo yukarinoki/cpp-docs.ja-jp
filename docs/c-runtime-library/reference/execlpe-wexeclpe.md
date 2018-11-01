@@ -1,10 +1,6 @@
 ---
-title: _execlpe、_wexeclpe | Microsoft ドキュメント
-ms.custom: ''
+title: _execlpe、_wexeclpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execlpe
 - _wexeclpe
@@ -26,24 +22,18 @@ f1_keywords:
 - execlpe
 - wexeclpe
 - _execlpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexeclpe function
 - _wexeclpe function
 - _execlpe function
 - execlpe function
 ms.assetid: 07b861da-3e7e-4f1d-bb80-ad69b55e5162
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6b0dd88ce15b3a74c491ae751d4f32196e914d09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e3aa4189d2a384a0092c742909e97c5efc52b5ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402177"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506858"
 ---
 # <a name="execlpe-wexeclpe"></a>_execlpe、_wexeclpe
 
@@ -84,7 +74,7 @@ intptr_t _wexeclpe(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 がいる場合、エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
 
 |**errno**値|説明|
 |-------------------|-----------------|
@@ -98,13 +88,13 @@ intptr_t _wexeclpe(
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらの関数は、新しいプロセスを読み込んで実行し、各コマンド ライン引数を個別のパラメーターとして渡し、環境設定へのポインターの配列も渡します。 これらの関数を使用して、**パス**環境変数を実行するファイルを検索します。
 
-**_Execlpe**関数は、パラメーターを検証します。 いずれか*cmdname*または*arg0* null 値は、これらの関数が」の説明に従って、無効なパラメーター ハンドラーを呼び出しますポインターまたは空の文字列、[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 新しいプロセスは開始されません。
+**_Execlpe**関数は、パラメーターを検証します。 いずれか*cmdname*または*arg0* null ポインターまたは空の文字列では、これらの関数は」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 新しいプロセスは開始されません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|

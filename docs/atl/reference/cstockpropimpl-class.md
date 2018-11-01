@@ -1,10 +1,6 @@
 ---
-title: CStockPropImpl クラス |Microsoft Docs
-ms.custom: ''
+title: CStockPropImpl クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CStockPropImpl
 - ATLCTL/ATL::CStockPropImpl
@@ -63,23 +59,17 @@ f1_keywords:
 - ATLCTL/ATL::putref_Font
 - ATLCTL/ATL::putref_MouseIcon
 - ATLCTL/ATL::putref_Picture
-dev_langs:
-- C++
 helpviewer_keywords:
 - CStockPropImpl class
 - controls [ATL], stock properties
 - stock properties, ATL controls
 ms.assetid: 45f11d7d-6580-4a0e-872d-3bc8b836cfda
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8de0378e34212649f7e1149bd038587f547e4eb2
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7befbce6e062bdb7944c2ed1f351d6927adfd75a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032030"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480861"
 ---
 # <a name="cstockpropimpl-class"></a>CStockPropImpl クラス
 
@@ -214,7 +204,7 @@ Visual C では、そのウィザードを使用するストック プロパテ�
 
 `CStockPropImpl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlctl.h
 

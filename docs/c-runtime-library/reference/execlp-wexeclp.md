@@ -1,10 +1,6 @@
 ---
-title: _execlp、_wexeclp | Microsoft ドキュメント
-ms.custom: ''
+title: _execlp、_wexeclp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wexeclp
 - _execlp
@@ -25,24 +21,18 @@ f1_keywords:
 - _wexeclp
 - wexeclp
 - _execlp
-dev_langs:
-- C++
 helpviewer_keywords:
 - execlp function
 - _execlp function
 - _wexeclp function
 - wexeclp function
 ms.assetid: 7b179163-4bcd-4d6a-8baf-68f886791928
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43105dc6dc12546dd8fbb99367ba430205a62a42
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: db13263ca4574d59821d5783b9ae83f278fef14d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399668"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506640"
 ---
 # <a name="execlp-wexeclp"></a>_execlp、_wexeclp
 
@@ -78,7 +68,7 @@ intptr_t _wexeclp(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 がいる場合、エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
 
 |**errno**値|説明|
 |-------------------|-----------------|
@@ -92,13 +82,13 @@ intptr_t _wexeclp(
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数の各読み込んでを個別のパラメーターとして各コマンドライン引数を渡すを使用して、新しいプロセスを実行し、**パス**環境変数を実行するファイルを検索します。
+これらの関数の各読み込んで個別のパラメーターとして各コマンドライン引数を渡すを使用して、新しいプロセスを実行し、**パス**環境変数を実行するファイルを検索します。
 
-**_Execlp**関数は、パラメーターを検証します。 場合*cmdname*または*arg0*が null ポインターまたは空の文字列」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 新しいプロセスは開始されません。
+**_Execlp**関数は、パラメーターを検証します。 場合*cmdname*または*arg0*が null ポインターまたは空の文字列」の説明に従って、これらの関数は無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 新しいプロセスは開始されません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|

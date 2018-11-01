@@ -1,8 +1,6 @@
 ---
-title: '&lt;allocators&gt; マクロ | Microsoft Docs'
-ms.custom: ''
+title: '&lt;allocators&gt; マクロ'
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - allocators/std::ALLOCATOR_DECL
 - allocators/std::CACHE_CHUNKLIST
@@ -16,12 +14,12 @@ helpviewer_keywords:
 - std::CACHE_FREELIST [C++]
 - std::CACHE_SUBALLOC [C++]
 - std::SYNC_DEFAULT [C++]
-ms.openlocfilehash: a24b854ac37dc0dfed44aec33fc1fb7e0bedcfc5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 736e587a41fa1006801dcf6930b33ee434c9a5ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842665"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492652"
 ---
 # <a name="ltallocatorsgt-macros"></a>&lt;allocators&gt; マクロ
 
@@ -38,7 +36,7 @@ ms.locfileid: "33842665"
 #define ALLOCATOR_DECL(cache, sync, name) <alloc_template>
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 マクロはテンプレート定義 `template <class Type> class name {.....}` と特殊化 `template <> class name<void> {.....}` を生成します。これらは両方で同期フィルター `sync` と型 `cache` のキャッシュを使用するアロケーター テンプレート クラスを定義します。
 
@@ -78,7 +76,7 @@ public:
 #define CACHE_CHUNKLIST <cache_class>
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="cache_freelist"></a>  CACHE_FREELIST
 
@@ -88,7 +86,7 @@ public:
 #define CACHE_FREELIST(max) <cache_class>
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="cache_suballoc"></a>  CACHE_SUBALLOC
 
@@ -98,7 +96,7 @@ public:
 #define CACHE_SUBALLOC <cache_class>
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="sync_default"></a>  SYNC_DEFAULT
 
@@ -108,7 +106,7 @@ public:
 #define SYNC_DEFAULT <sync_template>
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 コンパイラがシングル スレッド アプリケーションとマルチ スレッド アプリケーションの両方のコンパイルをサポートしている場合、マクロはシングル スレッド アプリケーションには `stdext::allocators::sync_none` を生成し、それ以外の場合は `stdext::allocators::sync_shared` を生成します。
 
