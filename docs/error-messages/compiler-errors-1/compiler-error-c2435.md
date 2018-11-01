@@ -1,37 +1,27 @@
 ---
-title: コンパイラ エラー C2435 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラ エラー C2435
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2435
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2435
 ms.assetid: be6aa8f8-579b-42ea-bdd8-2d01393646ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ddf078420da8aba170bbd21a0db775f9246cea4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 5cd7a83575da7ab2a30401406d0c2ccf6c1b603e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703643"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438534"
 ---
 # <a name="compiler-error-c2435"></a>コンパイラ エラー C2435
 
-> '*var*': 動的な初期化、マネージ CRT が必要ですが、/clr:safe と共にコンパイルできません
+> '*var*': 動的な初期化はマネージド CRT が必要です、/clr:safe でコンパイルできません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-アプリケーションごとのドメインのグローバル変数の初期化でコンパイルされた CRT が必要です。 `/clr:pure`、検証可能なイメージが生成されません。
+アプリケーションごとのドメインのグローバル変数の初期化には、CRT を使用してコンパイルが必要です。 `/clr:pure`、これは検証可能なイメージを生成しません。
 
 詳細については、「 [appdomain](../../cpp/appdomain.md) 」および「 [process](../../cpp/process.md)」を参照してください。
 

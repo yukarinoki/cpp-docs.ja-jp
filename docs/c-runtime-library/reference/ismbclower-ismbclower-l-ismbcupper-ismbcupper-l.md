@@ -1,10 +1,6 @@
 ---
-title: _ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l | Microsoft Docs
-ms.custom: ''
+title: _ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbclower
 - _ismbclower_l
@@ -26,8 +22,6 @@ apitype: DLLExport
 f1_keywords:
 - _ismbcupper
 - _ismbclower
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbcupper function
 - ismbclower function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - ismbclower_l function
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ef7b21cc10ca5e72a5054e34b0e228be89d74cb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402235"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431864"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 
@@ -85,24 +75,24 @@ int _ismbcupper_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 場合*c*< = 255 は、対応する **_ismbb 系**ルーチン (たとえば、 **_ismbcalnum**に対応する **_ismbbalnum**) では、結果は、戻り値の対応する **_ismbb 系**ルーチンです。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 場合*c*< = 255 は、対応する **_ismbb 系**ルーチン (たとえば、 **_ismbcalnum**に対応する **_ismbbalnum**)、結果は、戻り値に対応する **_ismbb 系**ルーチン。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらの各関数は特定の条件で特定のマルチバイト文字をテストします。
 
-これらの関数のバージョン、 **_l**そのロケールに依存する動作に現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数のバージョン、 **_l**ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用することを除き、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-|ルーチン|テスト条件|コード ページ 932 の例|
+|ルーチンによって返される値|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|小文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 小文字英字の 1 バイト表現である: 0x61 < =*c*< 0x7A を = です。|
-|**_ismbclower_l**|小文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 小文字英字の 1 バイト表現である: 0x61 < =*c*< 0x7A を = です。|
-|**_ismbcupper**|大文字の英字|場合にのみ、0 以外の値を返します*c* ASCII の大文字英語の文字の 1 バイト表現である: 0x41 < =*c*< 0x5A を = です。|
-|**_ismbcupper_l**|大文字の英字|場合にのみ、0 以外の値を返します*c* ASCII の大文字英語の文字の 1 バイト表現である: 0x41 < =*c*< 0x5A を = です。|
+|**_ismbclower**|小文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 小文字英字の 1 バイト表現である: 0x61 < =*c*< = 0x7A します。|
+|**_ismbclower_l**|小文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 小文字英字の 1 バイト表現である: 0x61 < =*c*< = 0x7A します。|
+|**_ismbcupper**|大文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 大文字英字の 1 バイト表現である: 0x41 < =*c*< = 0x5A します。|
+|**_ismbcupper_l**|大文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 大文字英字の 1 バイト表現である: 0x41 < =*c*< = 0x5A します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbclower**|\<mbstring.h>|
 |**_ismbclower_l**|\<mbstring.h>|

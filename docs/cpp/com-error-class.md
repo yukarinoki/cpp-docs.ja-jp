@@ -1,27 +1,17 @@
 ---
-title: _com_error クラス |Microsoft Docs
-ms.custom: ''
+title: _com_error クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - _com_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dfbaf1f0c88eaeb71bc4dfbbf2dca72c8d07251e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 093509d838ba6dc06a9b84b4c680c631a47826ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46117440"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435180"
 ---
 # <a name="comerror-class"></a>_com_error クラス
 
@@ -56,7 +46,7 @@ A **_com_error**オブジェクトは、タイプ ライブラリから生成さ
 |[説明](../cpp/com-error-description.md)|`IErrorInfo::GetDescription` 関数を呼び出します。|
 |[HelpContext](../cpp/com-error-helpcontext.md)|`IErrorInfo::GetHelpContext` 関数を呼び出します。|
 |[HelpFile](../cpp/com-error-helpfile.md)|`IErrorInfo::GetHelpFile` 関数を呼び出します。|
-|[Source](../cpp/com-error-source.md)|`IErrorInfo::GetSource` 関数を呼び出します。|
+|[ソース](../cpp/com-error-source.md)|`IErrorInfo::GetSource` 関数を呼び出します。|
 |[GUID](../cpp/com-error-guid.md)|`IErrorInfo::GetGUID` 関数を呼び出します。|
 
 ### <a name="format-message-extractor"></a>書式メッセージの抽出
@@ -74,7 +64,7 @@ A **_com_error**オブジェクトは、タイプ ライブラリから生成さ
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<comdef.h >
 

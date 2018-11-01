@@ -1,10 +1,6 @@
 ---
-title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock | Microsoft Docs
-ms.custom: ''
+title: _ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ungetch_nolock
 - _ungetwch_nolock
@@ -34,8 +30,6 @@ f1_keywords:
 - _ungettch_nolock
 - _ungettch
 - _ungetwch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ungetch function
 - ungetwch function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - ungetwch_nolock function
 - _ungetwch function
 ms.assetid: 70ae71c6-228c-4883-a57d-de6d5f873825
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c9c6f09c3bd6ce679662d9ea77f8a7b360521b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7407d26606bd5242c430961faa4f60090b83f036
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411297"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430304"
 ---
 # <a name="ungetch-ungetwch-ungetchnolock-ungetwchnolock"></a>_ungetch、_ungetwch、_ungetch_nolock、_ungetwch_nolock
 
@@ -92,11 +82,11 @@ wint_t _ungetwch_nolock(
 
 ## <a name="return-value"></a>戻り値
 
-どちらの関数は、文字を返します*c*正常終了した場合。 エラーがある場合 **_ungetch**の値を返します**EOF**と **_ungetwch**返します**WEOF**です。
+どちらの関数は、文字を返します*c*成功した場合。 エラーがある場合 **_ungetch**の値を返します**EOF**と **_ungetwch**返します**WEOF**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数は、文字をプッシュ*c* 、コンソールに戻って原因*c*によって読み取られた次の文字である **_getch**または **_getche** (または **_getwch**または **_getwche**)。 **_ungetch**と **_ungetwch**次が読み取られる前に複数回呼び出される場合は失敗します。 *C*引数ができない可能性があります**EOF** (または**WEOF**)。
+これらの関数の文字をプッシュする*c* 、コンソールに戻って原因*c*して読み取る次の文字にする **_getch**または **_getche** (または **_getwch**または **_getwche**)。 **_ungetch**と **_ungetwch**次が読み取られる前に複数回呼び出された場合は失敗します。 *C*引数ができない可能性があります**EOF** (または**WEOF**)。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
@@ -107,9 +97,9 @@ wint_t _ungetwch_nolock(
 |**_ungettch**|**_ungetch**|**_ungetch**|**_ungetwch**|
 |**_ungettch_nolock**|**_ungetch_nolock**|**_ungetch_nolock**|**_ungetwch_nolock**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ungetch**、 **_ungetch_nolock**|\<conio.h>|
 |**_ungetwch**、 **_ungetwch_nolock**|\<conio.h> または \<wchar.h>|

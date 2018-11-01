@@ -1,10 +1,6 @@
 ---
-title: _ftime_s、_ftime32_s、_ftime64_s | Microsoft Docs
-ms.custom: ''
+title: _ftime_s、_ftime32_s、_ftime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftime_s
 - _ftime64_s
@@ -29,8 +25,6 @@ f1_keywords:
 - _ftime32_s
 - ftime32_s
 - ftime64_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftime32_s function
 - ftime_s function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - _ftime_s function
 - _ftime32_s function
 ms.assetid: d03080d9-a520-45be-aa65-504bdb197e8b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a23b31fb88b60b05e587bf62ab07ec7e72de869
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 696b461cdb6b8d58bb668b996a99c5d0bb774d6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402989"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50435478"
 ---
 # <a name="ftimes-ftime32s-ftime64s"></a>_ftime_s、_ftime32_s、_ftime64_s
 
@@ -67,15 +57,15 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 ### <a name="parameters"></a>パラメーター
 
 *timeptr*<br/>
-ポインター、 **_timeb**、 **__timeb32**、または **_ _timeb64**構造体。
+ポインターを **_timeb**、 **__timeb32**、または **_ _timeb64**構造体。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 場合*timeptr*は**NULL**、戻り値は**EINVAL**です。
+正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 場合*timeptr*は**NULL**、戻り値は**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Ftime_s**関数は、現在の現地時刻を取得しが指す構造体に格納*timeptr*です。 **_Timeb**、 **__timeb32**、および **_ _timeb64** SYS\Timeb.h で定義されます。 これらは、次の表に示す 4 つのフィールドを含んでいます。
+**_Ftime_s**関数は、現在の現地時刻を取得しが指す構造体に格納*timeptr*します。 **_Timeb**、 **__timeb32**、および **_ _timeb64**構造体は、sys \timeb.h で定義されます。 これらは、次の表に示す 4 つのフィールドを含んでいます。
 
 |フィールド|説明|
 |-|-|
@@ -84,13 +74,13 @@ errno_t _ftime64_s( struct __timeb64 *timeptr );
 |**time**|世界協定時刻 (UTC: Coordinated Universal Time) の 1970 年 1 月 1 日の深夜 00:00:00 から経過した時間 (秒単位)。|
 |**timezone**|西に移動するときの UTC と現地時刻の間の差 (分単位)。 値**タイムゾーン**グローバル変数の値から設定されている **_timezone** (を参照してください **_tzset**)。|
 
-**_Ftime64_s**関数を使用して、 **_ _timeb64**構造体、ことができますを UTC; 3000 年 12 月 31 日 23時 59分: 59 秒を表現するファイルの作成日 **_ftime32_s**のみの 2038 年 1 月 18 日 23時 59分: 59 までの日付を表します。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
+**_Ftime64_s**関数を使用して、 **_ _timeb64**構造体、ことができますを UTC; 3000 年 12 月 31 日 23時 59分: 59 秒を表すファイルの作成日 **_ftime32_s**のみの 2038 年 1 月 18 日 23時 59分: 59 までの日付を表します。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
 
-**_Ftime_s**関数と同じ **_ftime64_s**、および **_timeb**しない限り、64 ビットの時刻を含む **_USE_32BIT_TIME_T**は定義されている場合、古い動作が有効になります。**_ftime_s** 32 ビットの時刻を使用し、 **_timeb** 32 ビットの時刻が含まれています。
+**_Ftime_s**関数は等価 **_ftime64_s**と **_timeb**しない限り、64 ビットの時刻を含む **_USE_32BIT_TIME_T**は定義されている場合、古い動作が有効にします。**_ftime_s**は 32 ビットの時刻を使用し、 **_timeb** 32 ビットの時刻が含まれています。
 
-**_ftime_s**パラメーターを検証します。 として null ポインターを渡された場合*timeptr*、」の説明に従って、関数が無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は設定**errno**に**EINVAL**です。
+**_ftime_s**パラメーターを検証します。 として null ポインターを渡された場合*timeptr*、」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は設定**errno**に**EINVAL**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

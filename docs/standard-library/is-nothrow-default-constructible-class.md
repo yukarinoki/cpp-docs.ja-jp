@@ -1,27 +1,17 @@
 ---
-title: is_nothrow_default_constructible クラス | Microsoft Docs
-ms.custom: ''
+title: is_nothrow_default_constructible クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_nothrow_default_constructible
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_nothrow_default_constructible
 ms.assetid: c576fcc9-5be1-43aa-b93a-64d3f1848887
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11480e8a2ee4272c80b775bb93006b1074da7b19
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d635c8a06d3acc45d214dbe7cb1eb7800f56dc86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109811"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429810"
 ---
 # <a name="isnothrowdefaultconstructible-class"></a>is_nothrow_default_constructible クラス
 
@@ -43,7 +33,7 @@ struct is_nothrow_default_constructible;
 
 場合、型述語のインスタンスは true を保持型*Ty* nothrow 既定コンス トラクターを持つ、それ以外の場合は false を保持します。 型述語のインスタンスは `is_nothrow_constructible<Ty>` と同じです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

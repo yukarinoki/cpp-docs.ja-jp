@@ -1,24 +1,16 @@
 ---
-title: Platform::box クラス |Microsoft Docs
-ms.custom: ''
+title: Platform::Box クラス
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
-dev_langs:
-- C++
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 133c8ebabe3e67526086661ab459bb6e96c4e727
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 387fa03caebed599d51292dd1b6d18ad4afd921c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106510"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429071"
 ---
 # <a name="platformbox-class"></a>Platform::Box クラス
 
@@ -31,14 +23,14 @@ ref class Box abstract;
 ```
   ### <a name="remarks"></a>Remarks
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** vccorlib.h
 
 **名前空間:** Platform
 |メンバー|説明|
 |------------|-----------------|
-|[Box](#ctor)|作成、`Box`指定した型の値をカプセル化することができます。|
+|[Box](#ctor)|指定された型の値をカプセル化する `Box` を作成します。|
 |[演算子ボックス&lt;const T&gt;^](#box-const-t)|`const` 値クラスの `T` または `enum` クラスの `T` から `Box<T>` へのボックス化変換を有効にします。|
 |[演算子ボックス&lt;const volatile T&gt;^](#box-const-volatile-t)|`const volatile` 値クラスの `T` または `enum` 型の `T` から `Box<T>` へのボックス化変換を有効にします。 |
 |[演算子ボックス&lt;T&gt;^](#box-t)|値クラス `T` から `Box<T>` へのボックス化変換を有効にします。|
@@ -56,7 +48,7 @@ Box(T valueArg);
 ### <a name="parameters"></a>パラメーター
 
 *valueArg*<br/>
-ボックス化される値の型: たとえば、 `int`、 `bool`、 `float64`、`DateTime`します。
+ボックス化される値の型 (たとえば、`int`、`bool`、`float64`、`DateTime`。)
 
 ## <a name="box-const-t"></a> Box::operator Box&lt;const T&gt;^ 演算子
 
