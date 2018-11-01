@@ -1,10 +1,6 @@
 ---
-title: offsetof マクロ | Microsoft Docs
-ms.custom: ''
+title: offsetof マクロ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -19,22 +15,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - offsetof
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure members, offset
 - offsetof macro
 ms.assetid: f3b4eb16-a882-4d38-afc9-eebd976a7352
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 308aac2493751cfe2147187ed9848347124a90d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a0f367dbe6fa2681a7d413304f32b5699b8f7cee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458321"
 ---
 # <a name="offsetof-macro"></a>offsetof マクロ
 
@@ -59,18 +49,18 @@ size_t offsetof(
 
 ## <a name="return-value"></a>戻り値
 
-**offsetof**親データ構造体の先頭から指定されたメンバーのバイト数でオフセットを返します。 ビット フィールドには定義されません。
+**offsetof**親データ構造体の先頭から指定されたメンバーのバイト オフセットを返します。 ビット フィールドには定義されません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Offsetof**マクロのオフセットのバイトで返します*memberName*で指定された構造体の先頭から*structName*型の値として**size_t**です。 持つ型を指定することができます、**構造体**キーワード。
+**Offsetof**マクロのバイト オフセットを返します*memberName*によって指定された構造体の先頭から*structName*型の値として**size_t**します。 型を指定することができます、**構造体**キーワード。
 
 > [!NOTE]
 > **offsetof**関数ではないと、C のプロトタイプを使用して説明することはできません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**offsetof**|\<stddef.h>|
 
