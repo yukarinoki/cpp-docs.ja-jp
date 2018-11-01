@@ -1,10 +1,6 @@
 ---
-title: CComDynamicUnkArray クラス |Microsoft Docs
-ms.custom: ''
+title: CComDynamicUnkArray クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComDynamicUnkArray
 - ATLCOM/ATL::CComDynamicUnkArray
@@ -18,22 +14,16 @@ f1_keywords:
 - ATLCOM/ATL::CComDynamicUnkArray::GetSize
 - ATLCOM/ATL::CComDynamicUnkArray::GetUnknown
 - ATLCOM/ATL::CComDynamicUnkArray::Remove
-dev_langs:
-- C++
 helpviewer_keywords:
 - connection points [C++], managing
 - CComDynamicUnkArray class
 ms.assetid: 202470d7-9a1b-498f-b96d-659d681acd65
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e776fd88799999ce175ba2efc137fc0353cbe65a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c18f28cac89288096b812635e77194bfb5dd224b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068469"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448686"
 ---
 # <a name="ccomdynamicunkarray-class"></a>CComDynamicUnkArray クラス
 
@@ -79,7 +69,7 @@ class CComDynamicUnkArray
 > [!NOTE]
 > **注**クラス`CComDynamicUnkArray`によって使用されます、**クラスの追加**接続ポイントを持つコントロールを作成するときにウィザード。 接続ポイントの数を手動で指定する場合は、変更からの参照を`CComDynamicUnkArray`に`CComUnkArray<` *n* `>`ここで、 *n*コネクション ポイントの数です必須。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 

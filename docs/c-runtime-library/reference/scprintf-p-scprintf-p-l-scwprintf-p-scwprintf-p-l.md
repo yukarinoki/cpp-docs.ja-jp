@@ -1,10 +1,6 @@
 ---
-title: _scprintf_p、_scprintf_p_l、_scwprintf_p、_scwprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _scprintf_p、_scprintf_p_l、_scwprintf_p、_scwprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _scwprintf_p
 - _scprintf_p_l
@@ -33,8 +29,6 @@ f1_keywords:
 - scwprintf_p_l
 - _scprintf_p
 - _scwprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - sctprintf_p_l function
 - _scwprintf_p_l function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - scwprintf_p_l function
 - _sctprintf_p_l function
 ms.assetid: 8390d1e1-2826-47a4-851f-6635a88087cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2120eaaee5acfa3628650b5df1f03448ee282a91
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 818dc5c24cca178fa03d08d1f609c23abbc7a013
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407185"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443070"
 ---
 # <a name="scprintfp-scprintfpl-scwprintfp-scwprintfpl"></a>_scprintf_p、_scprintf_p_l、_scwprintf_p、_scwprintf_p_l
 
@@ -102,15 +92,15 @@ int _scwprintf_p _l(
 
 文字列が出力されたか、指定した書式設定コードを使用してファイルまたはバッファーに送信された場合は、生成される文字数を返します。 戻り値には、終端の NULL 文字は含まれません。 **_scwprintf_p**ワイド文字に対して同じ機能を実行します。
 
-違い **_scprintf_p**と **_scprintf**される **_scprintf_p**する順序を指定できますでは位置指定パラメーター引数書式指定文字列で使用されます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+間の差 **_scprintf_p**と **_scprintf**される **_scprintf_p**する順序を指定できますでは位置指定パラメーターの引数書式指定文字列で使用されます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
-場合*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-各*引数*(存在する場合) に対応する書式指定に応じて変換*形式*です。 形式は、通常の文字と、同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)です。
+各*引数*(ある場合) に対応する書式指定に応じて変換が*形式*します。 形式は、通常の文字と同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)します。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
@@ -124,9 +114,9 @@ int _scwprintf_p _l(
 |**_sctprintf_p**|**_scprintf_p**|**_scprintf_p**|**_scwprintf_p**|
 |**_sctprintf_p_l**|**_scprintf_p_l**|**_scprintf_p_l**|**_scwprintf_p_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_scprintf_p**、 **_scprintf_p_l**|\<stdio.h>|
 |**_scwprintf_p**、 **_scwprintf_p_l**|\<stdio.h> または \<wchar.h>|

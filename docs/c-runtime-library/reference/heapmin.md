@@ -1,10 +1,6 @@
 ---
-title: _heapmin | Microsoft Docs
-ms.custom: ''
+title: _heapmin
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapmin
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapmin
 - heapmin
-dev_langs:
-- C++
 helpviewer_keywords:
 - heap memory
 - minimizing heaps
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - _heapmin function
 - heapmin function
 ms.assetid: c0bccdf6-2d14-4d7b-a7ff-d6a17bdb410f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec73905c6361d025b9f29c8cf4543ed200a4abbf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 130986894d1e2a68415e6ab9218641eff484ffd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397984"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455472"
 ---
 # <a name="heapmin"></a>_heapmin
 
@@ -56,17 +46,17 @@ int _heapmin( void );
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_heapmin** 0 を返します。 それ以外の場合は-1 を返します設定と**errno**に**返る**です。
+成功した場合、 **_heapmin** 0 を返します。 この関数は-1 を返しますそれ以外の場合、設定と**errno**に**返る**。
 
-このリターン コードとその他のリターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+このリターン コードとその他のリターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Heapmin**関数は、オペレーティング システムに使用されていないヒープ メモリの解放によって、ヒープを最小限に抑えます。 オペレーティング システムがサポートしていない場合 **_heapmin**(たとえば、Windows 98) は、関数は-1 を返します。 設定および**errno**に**返る**です。
+**_Heapmin**関数は、オペレーティング システムに使用されていないヒープ メモリを解放することによって、ヒープを最小限に抑えます。 オペレーティング システムがサポートされていない場合 **_heapmin**(たとえば、Windows 98) は、関数は-1 を返します。 設定および**errno**に**返る**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_heapmin**|\<malloc.h>|\<errno.h>|
 

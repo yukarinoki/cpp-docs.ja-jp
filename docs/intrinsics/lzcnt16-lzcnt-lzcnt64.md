@@ -1,16 +1,10 @@
 ---
-title: _ _lzcnt16、_ _lzcnt、_ _lzcnt64 |Microsoft Docs
-ms.custom: ''
+title: __lzcnt16、__lzcnt、__lzcnt64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __lzcnt64
 - __lzcnt16
 - __lzcnt
-dev_langs:
-- C++
 helpviewer_keywords:
 - __lzcnt intrinsic
 - lzcnt instruction
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4dd24a6fb51e32e7f1b83b1f238089fc973c0cd7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6e7685e13faa82a03640701539454ddc8729c94f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383156"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461400"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
 
@@ -60,7 +50,7 @@ unsigned __int64 __lzcnt64(
 
 先頭のゼロのビット数、`value`パラメーター。 場合`value`が 0 の場合、戻り値は、入力のオペランド (16、32、または 64) のサイズ。 場合、最もの上位ビット`value`は 1 つは、戻り値は 0。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
