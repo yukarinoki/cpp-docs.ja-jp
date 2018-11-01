@@ -1,29 +1,19 @@
 ---
-title: イベント (C +/cli および C++/cli CX) |Microsoft Docs
-ms.custom: ''
+title: イベント (C +/cli および C++/cli CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - event
 - event_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - event keyword [C++]
 ms.assetid: c4998e42-883c-4419-bbf4-36cdc979dd27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 85a3e2cb92df4396f607db920c3dfd280530c7e9
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 66125645582fbc95523aea74047563bfd4f712b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328507"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542468"
 ---
 # <a name="event--ccli-and-ccx"></a>イベント (C +/cli および C++/cli CX)
 
@@ -89,7 +79,7 @@ modifiereventdelegate^ event_name
 
 イベント ハンドラーを追加した後で削除する場合は、追加操作で返される EventRegistrationToken 構造体を保存する必要があります。 その後の削除操作で、削除するイベント ハンドラーを識別するために、保存しておいた EventRegistrationToken 構造体を使用します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -175,7 +165,7 @@ Visual C++ でイベントを作成して使用するには、次の手順に従
 
 - [インターフェイス内のイベント](../dotnet/how-to-use-events-in-cpp-cli.md)
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 
