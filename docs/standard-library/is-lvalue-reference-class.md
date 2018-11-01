@@ -1,28 +1,18 @@
 ---
-title: is_lvalue_reference クラス | Microsoft Docs
-ms.custom: ''
+title: is_lvalue_reference クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_lvalue_reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_lvalue_reference class
 - is_lvalue_reference
 ms.assetid: 7f11896b-935c-4de1-9c87-9d0127f904e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ecd065ff80b5c45bca863534e28bc467b3a4105c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e032522e790b7027886ba1a6199ed7fdf86c0936
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105381"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50460178"
 ---
 # <a name="islvaluereference-class"></a>is_lvalue_reference クラス
 
@@ -44,7 +34,7 @@ struct is_lvalue_reference;
 
 場合はこの型述語のインスタンスは true を保持型*Ty*または関数の場合、それ以外の場合は false を保持するオブジェクトへの参照です。 なお*Ty*右辺値参照ができない可能性があります。 右辺値の詳細については、「[右辺値参照宣言子: &&](../cpp/rvalue-reference-declarator-amp-amp.md)」をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

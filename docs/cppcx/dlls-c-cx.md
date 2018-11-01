@@ -1,20 +1,13 @@
 ---
-title: Dll (C + + CX) |Microsoft Docs
-ms.custom: ''
+title: DLL (C++/CX)
 ms.date: 02/06/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 5b8bcc57-64dd-4c54-9f24-26a25bd5dddd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac06336e5ba80406157285ebe660080aff6e319
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 1a72ecc5eb46abfbc7b9a52a168510ce0873ee04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43763634"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445709"
 ---
 # <a name="dlls-ccx"></a>DLL (C++/CX)
 
@@ -24,7 +17,7 @@ Visual Studio を使用して、標準の Win32 DLL または Windows ランタ�
 
 ほとんどの場合を作成するときに用の DLL は UWP アプリで使用、その名前のプロジェクト テンプレートを使用して、Windows ランタイム コンポーネントとして作成します。 パブリックまたはプライベートの Windows ランタイム型を持つ dll の場合は、Windows ランタイム コンポーネント プロジェクトを作成できます。 Windows ランタイム コンポーネントは、任意の Windows ランタイムと互換性のある言語で記述されたアプリからアクセスできます。 Windows ランタイム コンポーネント用のコンパイラ設定を既定には、プロジェクトの使用、 **/ZW**スイッチします。 .winmd ファイルには、ルート名前空間と同じ名前が必要です。 たとえば、A.B.C.MyClass という名前のクラスは、A.winmd または A.B.winmd または A.B.C.winmd という名前のメタデータ ファイルで定義されている場合のみインスタンス化できます。 DLL の名前が .winmd ファイル名と一致する必要はありません。
 
-詳細については、次を参照してください。 [C++ での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)です。
+詳細については、「 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)」を参照してください。
 
 ### <a name="to-reference-a-third-party-windows-runtime-component-binary-in-your-project"></a>サード パーティの Windows ランタイム コンポーネント プロジェクトのバイナリを参照するには
 

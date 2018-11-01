@@ -1,14 +1,8 @@
 ---
-title: 'MFC ActiveX コントロール: ActiveX コントロールにおけるピクチャの使用 |Microsoft Docs'
-ms.custom: ''
+title: 'MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - LPPICTUREDISP
-dev_langs:
-- C++
 helpviewer_keywords:
 - OnDraw method, MFC ActiveX controls
 - MFC ActiveX controls [MFC], pictures
@@ -16,16 +10,12 @@ helpviewer_keywords:
 - OnResetState method [MFC]
 - CLSID_CPicturePropPage [MFC]
 ms.assetid: 2e49735c-21b9-4442-bb3d-c82ef258eec9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a734e51f298f7f092dde341479293bad3a2d9434
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fe239f864f4b7730d28372ee3fc9d298131d28d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50072684"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50462102"
 ---
 # <a name="mfc-activex-controls-using-pictures-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるピクチャの使用
 

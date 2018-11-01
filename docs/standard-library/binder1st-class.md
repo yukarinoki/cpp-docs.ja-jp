@@ -1,27 +1,17 @@
 ---
-title: binder1st クラス | Microsoft Docs
-ms.custom: ''
+title: binder1st クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::binder1st
-dev_langs:
-- C++
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 876aa74de2a7cadd780198146b7902c1fcdeb2e6
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: a8e962e118d162e46e2edfca3ce11e7cbf322e10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314145"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439638"
 ---
 # <a name="binder1st-class"></a>binder1st クラス
 
@@ -122,7 +112,7 @@ The number of elements in v1 less than 10 is: 2.
 */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

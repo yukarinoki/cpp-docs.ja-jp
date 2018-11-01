@@ -1,10 +1,6 @@
 ---
-title: or_eq | Microsoft Docs
-ms.custom: ''
+title: or_eq
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,21 +17,15 @@ f1_keywords:
 - std::or_eq
 - or_eq
 - std.or_eq
-dev_langs:
-- C++
 helpviewer_keywords:
 - or_eq function
 ms.assetid: 1eb92464-ed58-40d8-a30e-f0a6aa2f4318
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9ecaefb43dfea22be2a0bdeb34a3de2e476b356
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e7ee465fc2c20ded1ec856f5722d1b1e6d259e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398625"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453535"
 ---
 # <a name="oreq"></a>or_eq
 
@@ -49,7 +39,7 @@ ms.locfileid: "32398625"
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 マクロにより &#124;= 演算子が生成されます。
 
@@ -79,6 +69,6 @@ int main( )
 3
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iso646.h>
