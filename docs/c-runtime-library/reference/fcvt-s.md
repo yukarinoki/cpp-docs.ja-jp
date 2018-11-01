@@ -1,10 +1,6 @@
 ---
-title: _fcvt_s | Microsoft ドキュメント
-ms.custom: ''
+title: _fcvt_s
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt_s
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - fcvt_s
 - _fcvt_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - fcvt_s function
 - converting floating point, to strings
 - floating-point functions, converting number to string
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2897c199b1b7022de8d5735c4da5f02d7627a418
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404062"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536852"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -91,36 +81,36 @@ errno_t _fcvt_s(
 
 正常終了した場合は 0。 障害が発生した場合、戻り値はエラー コードを示します。 エラー コードは、Errno.h で定義されています。 これらのエラーの一覧については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-パラメーターが次の表の無効な値の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**し、返します**EINVAL**です。
+パラメーターが次の表の無効な値の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、この関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**返します**EINVAL**します。
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*sizeInBytes*|value|count|dec|sign|Return|値で*バッファー*|
+|*バッファー*|*sizeInBytes*|値|count|dec|sign|Return|値*バッファー*|
 |--------------|-------------------|-----------|-----------|---------|----------|------------|-----------------------|
 |**NULL**|任意|任意|任意|任意|任意|**EINVAL**|変更されません。|
-|いない**NULL** (有効なメモリが指す)|<=0|任意|任意|任意|任意|**EINVAL**|変更されません。|
+|いない**NULL** (有効なメモリを指す)|<=0|任意|任意|任意|任意|**EINVAL**|変更されません。|
 |任意|任意|任意|任意|**NULL**|任意|**EINVAL**|変更されません。|
 |任意|任意|任意|任意|任意|**NULL**|**EINVAL**|変更されません。|
 
 ## <a name="security-issues"></a>セキュリティ上の問題
 
-**_fcvt_s**場合、アクセス違反を生成する可能性があります*バッファー*が有効なメモリを指していませんありいない**NULL**です。
+**_fcvt_s**場合、アクセス違反を生成する可能性があります*バッファー*が有効なメモリを指していないとが**NULL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Fcvt_s**関数は、null で終わる文字列を浮動小数点数に変換します。 *値*パラメーターは変換する浮動小数点数。 **_fcvt_s**の桁を格納*値*を文字列として null 文字 ('\0') を追加します。 *カウント*パラメーターは、小数点の後に格納される桁数を指定します。 余分な桁はに*カウント*を配置します。 も少ない場合*カウント*桁の有効桁数、文字列はゼロで埋められます。
+**_Fcvt_s**関数は、浮動小数点数を文字の null で終わる文字列に変換します。 *値*パラメーターは変換する浮動小数点数です。 **_fcvt_s**の桁を格納*値*を文字列として null 文字 ('\0') を追加します。 *カウント*パラメーターは、小数点より後に格納される桁数を指定します。 余分な桁は丸め*カウント*を配置します。 も少なかった場合*カウント*桁の文字列、有効桁数が 0 で埋められます。
 
-文字列には数字だけが格納されます。 小数点の記号の位置*値*から取得できます*dec*と*記号*呼び出しの後です。 *Dec*パラメーターが指す整数値です。 この整数値では、文字列の先頭に対する、小数点の位置。 0 または負の整数値は、小数点が文字列の先頭より左にあることを示します。 パラメーター*記号*の符号を示す整数を指す*値*です。 場合は、整数を 0 に設定*値*が正の値および 0 以外の場合の値に設定されている*値*が負の値。
+文字列には数字だけが格納されます。 符号、小数点の位置*値*から取得できます*dec*と*サインオン*呼び出しの後にします。 *Dec*パラメーターが指す整数値です。 この整数値では、文字列の先頭に対する小数点の位置。 0 または負の整数値は、小数点が文字列の先頭より左にあることを示します。 パラメーター*サインオン*の符号を示す整数を指す*値*します。 場合、整数は 0 に設定されて*値*が正の値および数値の場合は 0 以外の値に設定されている*値*が負の値。
 
-長さのバッファー **_CVTBUFSIZE**が十分で、浮動小数点値。
+長さのバッファー **_CVTBUFSIZE**がにとって十分で、任意の浮動小数点値。
 
-違い **_ecvt_s**と **_fcvt_s**の解釈時に、*カウント*パラメーター。 **_ecvt_s**解釈*カウント*として出力文字列に数字の合計数と **_fcvt_s**解釈*カウント*後に数字の数として、10 進数のポイント。
+間の差 **_ecvt_s**と **_fcvt_s**の解釈には、*カウント*パラメーター。 **_ecvt_s**解釈*カウント*として、出力文字列に数字の合計数と **_fcvt_s**解釈*カウント*の後の桁数として、小数点 10 進数。
 
 C++ では、テンプレートのオーバーロードによってこの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 この関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|

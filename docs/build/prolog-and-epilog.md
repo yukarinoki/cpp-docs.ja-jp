@@ -1,23 +1,13 @@
 ---
-title: プロローグとエピローグ |Microsoft Docs
-ms.custom: ''
+title: プロローグとエピローグ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 0453ed1a-3ff1-4bee-9cc2-d6d3d6384984
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c2a1a9b1891af1c5616e78932cf4a530a300786
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2b54737edd46a5e108a211ee032889885be2b1da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45718875"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543118"
 ---
 # <a name="prolog-and-epilog"></a>プロローグとエピローグ
 
@@ -61,7 +51,7 @@ _Chkstk ヘルパーでは、任意のレジスタ R10、R11、および条件�
 
 エピローグ コードは、例外および割り込みが確実にアンワインドする厳密な一連のアンワインド コードの規則に従う必要があります。 これは、量が減り、各エピローグを記述する追加のデータは必要ありませんので、必要なデータをアンワインドします。 代わりに、アンワインド コードは、エピローグを識別するコード ストリームを前方向にスキャンして、エピローグが実行されていることを確認できます。
 
-関数エピローグする必要があります最初の割り当てを解除、スタックの固定部分でフレーム ポインターを使用しない場合、不揮発性レジスタをポップ、および呼び出し元の関数に制御が返されます。 たとえば、オブジェクトに適用された
+関数エピローグする必要があります最初の割り当てを解除、スタックの固定部分でフレーム ポインターを使用しない場合、不揮発性レジスタをポップ、および呼び出し元の関数に制御が返されます。 例えば以下のようにします。
 
 ```
 add      RSP, fixed-allocation-size
