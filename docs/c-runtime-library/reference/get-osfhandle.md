@@ -1,10 +1,6 @@
 ---
-title: _get_osfhandle | Microsoft Docs
-ms.custom: ''
+title: _get_osfhandle
 ms.date: 05/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_osfhandle
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - get_osfhandle
 - _get_osfhandle
-dev_langs:
-- C++
 helpviewer_keywords:
 - operating systems, getting file handles
 - get_osfhandle function
 - _get_osfhandle function
 - file handles [C++], operating system
 ms.assetid: 0bdd728a-4fd8-410b-8c9f-01a121135196
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 88cf46d6352f0f58a91f4e5571006090ec693c42
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: beab4e4308bc7bcde287366b78671f61a89f8827
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43215699"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504534"
 ---
 # <a name="getosfhandle"></a>_get_osfhandle
 
@@ -67,7 +57,7 @@ intptr_t _get_osfhandle(
 
 オペレーティング システム (OS) のファイル ハンドルが取得したファイルを閉じる **_get_osfhandle**、呼び出す[_close](close.md)ファイル記述子に*fd*。 呼び出さない**CloseHandle**でこの関数の戻り値。 基になる OS ファイル ハンドルを所有、 *fd*ファイル記述子、および閉じられたときに、 [_close](close.md)で呼び出される*fd*します。 ファイル記述子が所有している場合、`FILE *`呼び出してストリーム[fclose](fclose-fcloseall.md)を`FILE *`ストリームは、両方のファイル記述子と基になる OS ファイル ハンドルを閉じます。 この場合、呼び出さない[_close](close.md)ファイル記述子。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

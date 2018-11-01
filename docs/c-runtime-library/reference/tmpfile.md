@@ -1,10 +1,6 @@
 ---
-title: tmpfile | Microsoft Docs
-ms.custom: ''
+title: tmpfile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile function
 - temporary files, creating
 ms.assetid: c4a4dc24-70da-438d-ae4e-98352d88e375
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ebcad2a25af2f2acb0056d882c4191f1a51293d3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98afcb7a3e04a96a1b08bc1b975634153e550839
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409070"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530326"
 ---
 # <a name="tmpfile"></a>tmpfile
 
@@ -52,19 +42,19 @@ FILE *tmpfile( void );
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **tmpfile**ストリーム ポインターを返します。 返しますそれ以外の場合、 **NULL**ポインター。
+成功した場合、 **tmpfile**ストリーム ポインターを返します。 それ以外を返します、 **NULL**ポインター。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **Tmpfile**関数は、一時ファイルを作成し、そのストリームへのポインターを返します。 一時ファイルはルート ディレクトリに作成されます。 ルート ディレクトリ以外のディレクトリに一時ファイルを作成するには、[tmpnam](tempnam-wtempnam-tmpnam-wtmpnam.md) または [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) を [fopen](fopen-wfopen.md) と共に使用します。
 
-ファイルを開けない場合**tmpfile**を返します、 **NULL**ポインター。 この一時ファイルは、通常、またはプログラムが終了するときに、ファイルが閉じられたときに自動的に削除 **_rmtmp**と呼ばれる場合は、現在の作業ディレクトリが変わらないことと仮定します。 一時ファイルを開いた**w + b** (バイナリ読み取り/書き込み) モード。
+ファイルを開けない場合**tmpfile**を返します、 **NULL**ポインター。 通常、またはプログラムの終了時に、ファイルが閉じられたときに、この一時ファイルが自動的に削除 **_rmtmp**と呼ばれる場合は、現在の作業ディレクトリが変更しないと仮定します。 一時ファイルを開いた**w + b** (バイナリ読み取り/書き込み) モード。
 
-TMP_MAX よりも多くしようとすると、エラーが発生する可能性が (STDIO を参照してください。H) を使用した呼び出し**tmpfile**です。
+TMP_MAX よりも多くしようとすると、エラーが発生する可能性が (STDIO を参照してください。H) 呼び出し**tmpfile**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**tmpfile**|\<stdio.h>|
 

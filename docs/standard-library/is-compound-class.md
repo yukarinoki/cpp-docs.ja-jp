@@ -1,28 +1,18 @@
 ---
-title: is_compound クラス | Microsoft Docs
-ms.custom: ''
+title: is_compound クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_compound
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_compound class
 - is_compound
 ms.assetid: bdad1167-cf3f-4f37-8321-62a5df159ead
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8916d92abcfb05dbef68e8909b8a52a82c35af24
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ea878af96908478b1956deee3858a9d2f48c2f0d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106997"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502077"
 ---
 # <a name="iscompound-class"></a>is_compound クラス
 
@@ -86,7 +76,7 @@ is_compound<void *> == true
 is_compound<int> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

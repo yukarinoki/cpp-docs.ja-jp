@@ -1,28 +1,18 @@
 ---
-title: '方法: 変換、OpenMP 並列 for ループを使用して、同時実行ランタイム |Microsoft Docs'
-ms.custom: ''
+title: '方法: OpenMP の parallel for ループを変換し、コンカレンシー ランタイムを使用する'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, parallel for loops
 - converting from OpenMP to the Concurrency Runtime, parallel loops
 - parallel for loops, converting from OpenMP to the Concurrency Runtime
 - parallel loops, converting from OpenMP to the Concurrency Runtime
 ms.assetid: d8a7b656-f86c-456e-9c5d-a7d52f94646e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5295a7e38ef511cd2703961ffe8fe6f22faa74ae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ab80df8bfe4c06ee36e0a60db4800be68576909
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407960"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488560"
 ---
 # <a name="how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime"></a>方法: OpenMP の parallel for ループを変換し、コンカレンシー ランタイムを使用する
 
@@ -30,7 +20,7 @@ ms.locfileid: "46407960"
 
 ## <a name="example"></a>例
 
-この例では、OpenMP と同時実行ランタイムの両方を使用して、ランダム値の配列に含まれる素数の数を計算します。
+この例では、OpenMP とコンカレンシー ランタイムの両方を使用して、ランダム値の配列に含まれる素数の数を計算します。
 
 [!code-cpp[concrt-openmp#1](../../parallel/concrt/codesnippet/cpp/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime_1.cpp)]
 

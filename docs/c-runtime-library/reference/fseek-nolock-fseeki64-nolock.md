@@ -1,10 +1,6 @@
 ---
-title: _fseek_nolock、_fseeki64_nolock | Microsoft Docs
-ms.custom: ''
+title: _fseek_nolock、_fseeki64_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fseek_nolock
 - _fseeki64_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - _fseeki64_nolock
 - fseek_nolock
 - fseeki64_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fseek_nolock function
 - fseeki64_nolock function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _fseeki64_nolock function
 - seek file pointers
 ms.assetid: 2dd4022e-b715-462b-b935-837561605a02
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b1ce866f7438ebc677156e6cfc9113f9725b65d
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: 57e9a57223d6af620f4f9160923675b4873ab3ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502454"
 ---
 # <a name="fseeknolock-fseeki64nolock"></a>_fseek_nolock、_fseeki64_nolock
 
@@ -85,7 +75,7 @@ int _fseeki64_nolock(
 
 これらの関数は、ロックしないバージョンの[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)、それぞれします。 これらは同じ[fseek](fseek-fseeki64.md)と[_fseeki64](fseek-fseeki64.md)する点を除いて、他のスレッドによる干渉から保護されません。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

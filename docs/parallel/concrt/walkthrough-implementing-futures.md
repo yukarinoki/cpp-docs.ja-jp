@@ -1,30 +1,20 @@
 ---
-title: 'チュートリアル: フューチャの実装 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: フューチャの実装'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - implementing futures [Concurrency Runtime]
 - futures, implementing [Concurrency Runtime]
 ms.assetid: 82ea75cc-aaec-4452-b10d-8abce0a87e5b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a3131e785c134f2e4875612f2d8a994f19ac766
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4c43719199ef4009433ec65d54fcc238d82ac305
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447077"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525659"
 ---
 # <a name="walkthrough-implementing-futures"></a>チュートリアル: フューチャの実装
 
-このトピックでは、アプリケーションにフューチャを実装する方法について説明します。 このトピックでは、同時実行ランタイムの既存の機能を組み合わせて、より効果的に使用する方法を示します。
+このトピックでは、アプリケーションにフューチャを実装する方法について説明します。 このトピックでは、コンカレンシー ランタイムの既存の機能を組み合わせて、より効果的に使用する方法を示します。
 
 > [!IMPORTANT]
 >  このトピックでは、デモンストレーションのために、将来の概念について説明します。 使用することをお勧めします。 [std::future](../../standard-library/future-class.md)または[concurrency::task](../../parallel/concrt/reference/task-class.md)後で使用できる値を計算する非同期タスクを必要とする場合。
