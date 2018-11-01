@@ -1,28 +1,18 @@
 ---
-title: _ _vmx_vmread |Microsoft Docs
-ms.custom: ''
+title: __vmx_vmread
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __vmx_vmread
-dev_langs:
-- C++
 helpviewer_keywords:
 - VMREAD instruction
 - __vmx_vmread intrinsic
 ms.assetid: 08bdd7a0-6435-4ea6-b9a0-f592d870e5aa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d9483dafd763112f31f5299a5e0e7e54c224459
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 0a4528bed4426ce5b611e986a69f4b0b8c750548
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821024"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499100"
 ---
 # <a name="vmxvmread"></a>__vmx_vmread
 
@@ -56,9 +46,9 @@ unsigned char __vmx_vmread(
 
 ## <a name="remarks"></a>Remarks
 
-`__vmx_vmread`関数は、`VMREAD`マシン語命令。 値、`Field`パラメーターは、Intel のドキュメントで説明されているエンコードされたフィールドのインデックス。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト、し、そのドキュメントの「付録 C を参照してください.
+`__vmx_vmread` 関数は `VMREAD` マシン語命令と同じです。 値、`Field`パラメーターは、Intel のドキュメントで説明されているエンコードされたフィールドのインデックス。 詳細については、検索、ドキュメント、「Intel 仮想化技術仕様 ia-32 Intel アーキテクチャ向け、」で番号 C97063-002、文書化、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト、し、そのドキュメントの「付録 C を参照してください.
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
