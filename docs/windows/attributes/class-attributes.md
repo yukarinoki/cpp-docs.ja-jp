@@ -1,26 +1,15 @@
 ---
-title: クラスの属性 (C++ COM) |Microsoft Docs
-ms.custom: ''
+title: クラス属性 (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a727bcf53a11e98ffd7e037037452c6bbdc4fe8a
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: bdc689107eb973b9701e3f1fbe37a10aa6ae8d85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791330"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50448868"
 ---
 # <a name="class-attributes"></a>クラス属性
 
@@ -49,16 +38,16 @@ ms.locfileid: "48791330"
 |[helpstringcontext](helpstringcontext.md)|.Hlp または .chm ファイルをヘルプ トピックの ID を指定します。|
 |[helpstring](helpstring.md)|適用先となる要素を記述するために使用される文字列を指定します。|
 |[hidden](hidden.md)|項目が存在しますが、ユーザー指向ブラウザーで表示する必要がありますされませんを示します。|
-|[実装](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
+|[implements](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
 |[implements_category](implements-category.md)|クラスの実装されたコンポーネントのカテゴリを指定します。|
-|[モジュール](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
+|[module](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
 |[noncreatable](noncreatable.md)|単独でインスタンス化できないオブジェクトを定義します。|
 |[progid](progid.md)|コントロールの ProgID を定義します。|
 |[registration_script](registration-script.md)|指定した登録スクリプトを実行します。|
 |[requestedit](requestedit.md)|プロパティをサポートしていることを示します、`OnRequestEdit`通知します。|
 |[source](source-cpp.md)|コネクション ポイントのソース インターフェイスのコントロールのクラスを指定します。 プロパティまたはメソッドで、`source`属性は、メンバーがオブジェクトを返すことを示しますまたは`VARIANT`イベントのソースは。|
 |[support_error_info](support-error-info.md)|ターゲット オブジェクトのエラー報告をサポートしています。|
-|[スレッド処理](threading-cpp.md)|コントロールのスレッド モデルを指定します。|
+|[threading](threading-cpp.md)|コントロールのスレッド モデルを指定します。|
 |[uuid](uuid-cpp-attributes.md)|クラスまたはインターフェイスの一意の ID を指定します。|
 |[version](version-cpp.md)|クラスの複数のバージョン間で特定のバージョンを識別します。|
 |[vi_progid](vi-progid.md)|ProgID のバージョンに依存しない形式を指定します。|

@@ -1,20 +1,13 @@
 ---
-title: 名前空間と型の可視性 (C + + CX) |Microsoft Docs
-ms.custom: ''
+title: 名前空間と型の参照範囲 (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 42457da3c85a73292b836c6da58b17f0341df1be
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102773"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440522"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>名前空間と型の参照範囲 (C++/CX)
 
@@ -41,13 +34,13 @@ Windows ランタイム型名前空間: 標準 C++ 型とは異なり、プラ�
 |private|既定のアクセシビリティ。 標準 C++ の場合と同じ意味です。|いいえ|
 |protected|標準 C++ の場合と同じ意味であり、アプリまたはコンポーネント内およびメタデータ内では両方。|はい|
 |public|標準 C++ の場合と同じ意味です。|はい|
-|`public protected` - または - `protected public`|メタデータでは保護されたアクセシビリティ、アプリまたはコンポーネント内ではパブリック。|はい|
+|`public protected` または `protected public`|メタデータでは保護されたアクセシビリティ、アプリまたはコンポーネント内ではパブリック。|はい|
 |`protected private` または `private protected`|メタデータでは非可視。アプリまたはコンポーネント内では保護されたアクセシビリティ。||
 |`internal` または `private public`|メンバーは、アプリまたはコンポーネント内ではパブリックですが、メタデータでは非可視です。|いいえ|
 
 ## <a name="windows-runtime-namespaces"></a>Windows ランタイム名前空間
 
-Windows API は、Windows で宣言されている型::\*名前空間。 これらの名前空間は Windows 用に予約されており、それらの名前空間に型を追加できません。 **オブジェクト ブラウザー**では、windows.winmd ファイル内でこれらの名前空間を表示できます。 これらの名前空間に関するドキュメントについては、次を参照してください。 [Windows API](https://msdn.microsoft.com/library/windows/apps/br211377)します。
+Windows API は、Windows で宣言されている型::\*名前空間。 これらの名前空間は Windows 用に予約されており、それらの名前空間に型を追加できません。 **オブジェクト ブラウザー**では、windows.winmd ファイル内でこれらの名前空間を表示できます。 これらの名前空間に関するドキュメントについては、「 [Windows API](https://msdn.microsoft.com/library/windows/apps/br211377)」を参照してください。
 
 ## <a name="ccx-namespaces"></a>C++/CX 名前空間
 

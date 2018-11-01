@@ -1,27 +1,17 @@
 ---
-title: mem_fun_t クラス | Microsoft Docs
-ms.custom: ''
+title: mem_fun_t クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::mem_fun_t
-dev_langs:
-- C++
 helpviewer_keywords:
 - mem_fun_t class
 ms.assetid: 242566d4-750c-4c87-9d63-2e2c9d19ca2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a32df3211d77a255421ceb794b6bd891f930733a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 32c66eb20215bc68efd0f0bb43c30f951da1bae9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456369"
 ---
 # <a name="memfunt-class"></a>mem_fun_t クラス
 
@@ -59,7 +49,7 @@ class mem_fun_t : public unary_function<Type *, Result> {
 
 `mem_fun_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun](../standard-library/functional-functions.md#mem_fun)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

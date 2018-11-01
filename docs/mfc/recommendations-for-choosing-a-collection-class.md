@@ -1,12 +1,6 @@
 ---
-title: コレクション クラスの選択に関する推奨事項 |Microsoft Docs
-ms.custom: ''
+title: コレクション クラスの選択に関する推奨事項
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - type safety of collection classes [MFC]
 - collection classes [MFC], serialization
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - collection classes [MFC], duplicates allowed
 - collection classes [MFC], shapes
 ms.assetid: a82188cd-443f-40d8-a244-edf292a53db4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0bb6338d7a40059da5f4e351dfac0d8d879e8c21
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2c8cb323feb44618909895a4ee536ad3b7832173
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404788"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446736"
 ---
 # <a name="recommendations-for-choosing-a-collection-class"></a>コレクション クラスの選択に関する推奨事項
 
@@ -95,11 +85,11 @@ ms.locfileid: "46404788"
 |`CUIntArray`|×|×|はい|はい 3|
 |`CWordArray`|いいえ|[はい]|はい|はい 3|
 
-1. をシリアル化には、コレクション オブジェクトの明示的に呼び出す必要があります`Serialize`関数、ダンプを明示的に呼び出す必要があります。 その`Dump`関数。 フォーム `ar << collObj` を使用してシリアル化を行うことはできません。また、フォーム `dmp` `<< collObj` を使用してダンプを行うこともできません。
+1. シリアル化を行うには、コレクション オブジェクトの `Serialize` 関数を明示的に呼び出す必要があります。ダンプを行うには、`Dump` 関数を明示的に呼び出す必要があります。 フォーム `ar << collObj` を使用してシリアル化を行うことはできません。また、フォーム `dmp` `<< collObj` を使用してダンプを行うこともできません。
 
-2. シリアル化ができるかどうかは、基になるコレクションの型に依存します。 たとえば、型付きポインター配列が `CObArray`に基づいている場合はシリアル化できますが、 `CPtrArray`に基づいている場合はシリアル化できません。 通常、"Ptr" が付くクラスはシリアル化できません。
+2. シリアル化ができるかどうかは、基になるコレクションの型に依存します。 たとえば、型付きポインター配列が `CObArray` に基づいている場合はシリアル化できますが、`CPtrArray` に基づいている場合はシリアル化できません。 通常、"Ptr" が付くクラスはシリアル化できません。
 
-3. この列が "はい" の非テンプレート コレクション クラスは、そのクラスの用途どおりに使うとタイプ セーフとなります。 たとえば、 `CByteArray`にバイト データを格納すると、その配列はタイプ セーフです。 しかし、文字データを格納すると、タイプ セーフは保証されません。
+3. この列が "はい" の非テンプレート コレクション クラスは、そのクラスの用途どおりに使うとタイプ セーフとなります。 たとえば、`CByteArray` にバイト データを格納すると、その配列はタイプ セーフです。 しかし、文字データを格納すると、タイプ セーフは保証されません。
 
 ## <a name="see-also"></a>関連項目
 

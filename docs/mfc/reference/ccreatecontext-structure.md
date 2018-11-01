@@ -1,27 +1,17 @@
 ---
-title: CCreateContext 構造体 |Microsoft Docs
-ms.custom: ''
+title: CCreateContext 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CCreateContext
-dev_langs:
-- C++
 helpviewer_keywords:
 - CCreateContext structure [MFC]
 ms.assetid: 337a0e44-d910-49a8-afc0-c7207666a9dc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 320f84a8c423c16c4647108af0154fe7c07ce653
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dd5659e7f91e3a2a1d653b61f12323ed1ae5a9b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447298"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438959"
 ---
 # <a name="ccreatecontext-structure"></a>CCreateContext 構造体
 
@@ -68,7 +58,7 @@ A`CCreateContext`構造体には、ドキュメント、フレーム ウィン�
 
 詳細については`CCreateContext`、MFC のサンプルを参照して[VIEWEX](../../visual-cpp-samples.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxext.h
 
