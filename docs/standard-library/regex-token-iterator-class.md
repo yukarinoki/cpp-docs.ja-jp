@@ -1,10 +1,6 @@
 ---
-title: regex_token_iterator クラス | Microsoft Docs
-ms.custom: ''
+title: regex_token_iterator クラス
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - regex/std::regex_token_iterator
 - regex/std::regex_token_iterator::regex_type
@@ -18,8 +14,6 @@ f1_keywords:
 - regex/std::regex_token_iterator::operator*
 - regex/std::regex_token_iterator::operator->
 - regex/std::regex_token_iterator::operator++
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::regex_token_iterator [C++]
 - std::regex_token_iterator [C++], regex_type
@@ -29,16 +23,12 @@ helpviewer_keywords:
 - std::regex_token_iterator [C++], pointer
 - std::regex_token_iterator [C++], reference
 ms.assetid: a213ba48-8e4e-4b6b-871a-2637acf05f15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 028d363b935ee48ef89c4d1ffdd7fa03ed714154
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2cb66ce4cbee0936211e5e991b18f3ae4b8a7fe5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705940"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473516"
 ---
 # <a name="regextokeniterator-class"></a>regex_token_iterator クラス
 
@@ -84,7 +74,7 @@ class regex_token_iterator
 |-|-|
 |[regex_token_iterator](#regex_token_iterator)|反復子を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -105,7 +95,7 @@ class regex_token_iterator
 |[operator==](#op_eq_eq)|反復子が等しいかどうかを比較します。|
 |[operator->](#op_arrow)|指定されたサブマッチにアクセスします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 

@@ -1,28 +1,18 @@
 ---
-title: InterfaceListHelper 構造体 |Microsoft Docs
-ms.custom: ''
+title: InterfaceListHelper 構造体
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::InterfaceListHelper
-dev_langs:
-- C++
 helpviewer_keywords:
 - InterfaceListHelper structure
 ms.assetid: 4297e419-c96b-45df-8a00-7568062125ba
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b8d8b44f6b3732c19977e6839e96d4ab5013a112
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: ae9bf9d9c1301c142f94cb23cf6b0c2774f79bb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464780"
 ---
 # <a name="interfacelisthelper-structure"></a>InterfaceListHelper 構造体
 
@@ -99,7 +89,7 @@ struct InterfaceListHelper<T0, Nil, Nil, Nil, Nil, Nil, Nil, Nil, Nil>;
 
 `InterfaceListHelper`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** implements.h
 

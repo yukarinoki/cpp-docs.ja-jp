@@ -1,33 +1,23 @@
 ---
-title: コンパイラの警告 (レベル 1) C4138 |Microsoft Docs
-ms.custom: ''
+title: コンパイラの警告 (レベル 1) C4138
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4138
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4138
 ms.assetid: 65ebf929-bba0-4237-923b-c1b66adfe17d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d2e637c73482b1a59034d6a269ea2240445bdef
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 96f8915b9bec166496ca4305d796ce8ef514ca15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46046914"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481680"
 ---
 # <a name="compiler-warning-level-1-c4138"></a>コンパイラの警告 (レベル 1) C4138
 
 始まりのデリミターがない閉じのコメントデリミター (*/) が見つかりました。
 
-終了のコメント区切り記号の前に、開始のコメント区切り記号がありません。 コンパイラには、アスタリスクの間にスペースが前提としています (<strong>\*</strong>) とフォワード スラッシュ (/)。
+終了のコメント区切り記号の前に、開始のコメント区切り記号がありません。 コンパイラでは、アスタリスク (<strong>\*</strong>) とスラッシュ (/) との間にスペースが必要です。
 
 ## <a name="example"></a>例
 
