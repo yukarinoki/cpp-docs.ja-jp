@@ -1,27 +1,17 @@
 ---
-title: SOCKADDR 構造体 |Microsoft Docs
-ms.custom: ''
+title: SOCKADDR 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - SOCKADDR
-dev_langs:
-- C++
 helpviewer_keywords:
 - SOCKADDR structure [MFC]
 ms.assetid: df1ed66a-f4b8-43f8-8db8-8c2533d25f68
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac6e433c0bbc70e6e1caa79599d5388aef49b4c5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 68d5261c6520b5baee8495b72a0b9d234a35a185
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543846"
 ---
 # <a name="sockaddr-structure"></a>SOCKADDR 構造体
 
@@ -48,7 +38,7 @@ struct sockaddr {
 
 Microsoft TCP/IP Sockets Developer's Kit では、インターネット アドレス ドメインのみをサポートします。 アドレスの各部分の値を実際に入力するために、`SOCKADDR_IN` データ構造体を使用します。この構造体は、このアドレス形式専用です。 `SOCKADDR` と `SOCKADDR_IN` の各データ構造体は同じサイズです。 2 つの構造体の種類の間で切り替えを行うには、単純に割り当てを行います。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** winsock2.h
 
