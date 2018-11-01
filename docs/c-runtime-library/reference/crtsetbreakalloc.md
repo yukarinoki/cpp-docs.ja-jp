@@ -1,10 +1,6 @@
 ---
-title: _CrtSetBreakAlloc | Microsoft Docs
-ms.custom: ''
+title: _CrtSetBreakAlloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetBreakAlloc
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetBreakAlloc
 - _CrtSetBreakAlloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetBreakAlloc function
 - _CrtSetBreakAlloc function
 ms.assetid: 33bfc6af-a9ea-405b-a29f-1c2d4d9880a1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32e8fedcd70d0e901c63cd5e794773451f436326
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbc4b0de553533dde95f37675b3c9234569e3505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395436"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487829"
 ---
 # <a name="crtsetbreakalloc"></a>_CrtSetBreakAlloc
 
@@ -60,17 +50,17 @@ long _CrtSetBreakAlloc(
 
 ブレークポイントが設定されていた、以前のオブジェクト割り当て順序番号を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_CrtSetBreakAlloc**アプリケーションでメモリ リークの検出を実行するには、特定の時点のメモリ割り当ての互換性に影響し、要求の起点までさかのぼってトレースします。 関数は、メモリ ブロックがヒープ上に割り当てられたときに決められた、シーケンシャルなオブジェクト割り当て順序番号を使用します。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていないへの呼び出し **_CrtSetBreakAlloc**プリプロセス時に削除されます。
+**_CrtSetBreakAlloc**により、特定の時点のメモリ割り当ての互換性に影響して、要求の送信元をさかのぼってしてメモリ リークの検出を実行するアプリケーション。 関数は、メモリ ブロックがヒープ上に割り当てられたときに決められた、シーケンシャルなオブジェクト割り当て順序番号を使用します。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない、呼び出し **_CrtSetBreakAlloc**プリプロセス時に削除されます。
 
-オブジェクト割り当て順序番号は、Crtdbg.h で定義されている **_CrtMemBlockHeader** 構造体の *lRequest* フィールドに格納されます。 デバッグ ダンプ関数のいずれかでメモリ ブロックに関する情報が報告されると、この番号はかっこで囲みますなど{36}です。
+オブジェクト割り当て順序番号は、Crtdbg.h で定義されている **_CrtMemBlockHeader** 構造体の *lRequest* フィールドに格納されます。 この番号がなど、中かっこで囲まれてデバッグ ダンプ関数のいずれかでメモリのブロックに関する情報が報告されると、{36}します。
 
-方法の詳細についての **_CrtSetBreakAlloc**他のメモリ管理関数と共に使用できるを参照してください[ヒープ割り当て要求の追跡](/visualstudio/debugger/crt-debug-heap-details)です。 デバッグ バージョンのベース ヒープでのメモリ ブロックの割り当て、初期化、管理の方法について詳しくは、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
+詳細について **_CrtSetBreakAlloc**他のメモリ管理関数と共に使用できるを参照してください[ヒープ割り当て要求の追跡](/visualstudio/debugger/crt-debug-heap-details)します。 デバッグ バージョンのベース ヒープでのメモリ ブロックの割り当て、初期化、管理の方法について詳しくは、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_CrtSetBreakAlloc**|\<crtdbg.h>|
 

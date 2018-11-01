@@ -1,10 +1,6 @@
 ---
-title: asin、asinf、asinl | Microsoft Docs
-ms.custom: ''
+title: asin、asinf、asinl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinf
 - asinl
@@ -26,8 +22,6 @@ f1_keywords:
 - asin
 - asinl
 - asinf
-dev_langs:
-- C++
 helpviewer_keywords:
 - asin function
 - asinl function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arcsine function
 ms.assetid: ca05f9ea-b711-49f6-9f32-2f4019abfd69
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee65e4c8ce884ac42de35a23c81dbf5009dd1185
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 20a2ffc37ea666207b9558cb5c282c414cfd4838
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476050"
 ---
 # <a name="asin-asinf-asinl"></a>asin、asinf、asinl
 
@@ -70,23 +60,23 @@ long double asin( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Asin**のアークサイン (逆サ イン関数) を返します*x*範囲 - π/2 ~ π/2 ラジアンにします。
+**Asin**のアークサイン (逆サ イン関数) を返します*x* π/2 ラジアンの範囲 - π/2 でします。
 
-既定では場合、 *x*が-1 未満か、1 より大きい**asin**は不定値を返します。
+既定では場合、 *x*が-1、1 より大きいか小さい**asin**は不定値を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± ∞|**無効です**|**_DOMAIN**|
-|± **QNAN**、 **IND**|none|**_DOMAIN**|
-|&#124;x&#124;>1|**無効です**|**_DOMAIN**|
+|± ∞|**無効です**|**(_D)**|
+|± **QNAN**、 **IND**|none|**(_D)**|
+|&#124;x&#124;>1|**無効です**|**(_D)**|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**asin**で**float**と**長い****二重**値。 C プログラムでは、 **asin**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **asin**で**float**と**長い****二重**値。 C プログラムで**asin**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
 |**asin**、 **asinf**、 **asinl**|\<math.h>|\<cmath> または \<math.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: gets_s、_getws_s | Microsoft Docs
-ms.custom: ''
+title: gets_s、_getws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getws_s
 - gets_s
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _getws_s
 - gets_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - getws_s function
 - _getws_s function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - gets_s function
 - standard input, reading from
 ms.assetid: 5880c36f-122c-4061-a1a5-aeeced6fe58c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3a5047871937d96288798768e17618ab791c75e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f71fafceaf1974bc5ff736ff175a67cf6c924ee6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401819"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482902"
 ---
 # <a name="getss-getwss"></a>gets_s、_getws_s
 
@@ -83,17 +73,17 @@ wchar_t *_getws_s( wchar_t (&buffer)[size] ); // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-返します*バッファー*正常終了した場合。 A **NULL**ポインターが、エラーまたはファイルの終端の条件を示します。 どちらが発生したかを確認するには、[ferror](ferror.md) または [feof](feof.md) を使用します。
+返します*バッファー*成功した場合。 エラーが発生した場合またはファイルの終端に達した場合は、**NULL** ポインターを返します。 どちらが発生したかを確認するには、 [ferror](ferror.md) または [feof](feof.md) を使用します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Gets_s**関数は、標準入力ストリームから行を読み取ります**stdin**に格納および*バッファー*です。 行は、最初の改行文字 ('\n') までのすべての文字 (改行文字を含む) で構成されます。 **gets_s** null 文字 ('\0') で、行を返す前に、改行文字を置き換えます。 これに対し、 **fgets_s**関数は、改行文字を保持します。
+**Gets_s**関数は、標準入力ストリームから行を読み取ります**stdin**に格納*バッファー*します。 行は、最初の改行文字 ('\n') までのすべての文字 (改行文字を含む) で構成されます。 **gets_s** null 文字 ('\0') で、行を返す前に、改行文字を置き換えます。 これに対し、 **fgets_s**関数は、改行文字を保持します。
 
-先頭に null 文字が格納されている最初の文字の読み取りがファイルの終端文字の場合は、*バッファー*と**NULL**が返されます。
+先頭に null 文字が格納されているファイルの終端文字の場合は、最初の文字を読み取る*バッファー*と**NULL**が返されます。
 
 **_getws_s**のワイド文字バージョンは、 **gets_s**; の引数と戻り値はワイド文字列です。
 
-場合*バッファー*は**NULL**または*sizeInCharacters*がゼロ未満か、バッファーが小さすぎて、入力行と null 終端文字を含める場合は、これらの関数を呼び出す無効なパラメーター ハンドラーを」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **NULL**を返し**ERANGE**です。
+場合*バッファー*は**NULL**または*sizeInCharacters*が 0 未満か、バッファーが小さすぎて入力行と終端の null を含める場合は、これらの関数を呼び出す」の説明に従って、無効なパラメーター ハンドラー[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **NULL**に errno を設定および**ERANGE**します。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -103,14 +93,14 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_getts_s**|**gets_s**|**gets_s**|**_getws_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**gets_s**|\<stdio.h>|
 |**_getws_s**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -1,28 +1,17 @@
 ---
-title: コントロール間の間隔の均等化 |Microsoft Docs
-ms.custom: ''
+title: コントロールの間隔の均等化
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], positioning
 - controls [C++], aligning
 - Space Evenly command
 ms.assetid: 97e80fb8-1db5-4e88-8ada-63540b5f2dab
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 7016a535eb420894d33cd46475ad8c1a75a10c59
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 766ff9a457687ba9a700fbaefc2194d62d48871d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395467"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495876"
 ---
 # <a name="evening-the-spacing-between-controls"></a>コントロールの間隔の均等化
 
@@ -40,7 +29,7 @@ ms.locfileid: "46395467"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 
