@@ -1,10 +1,6 @@
 ---
-title: _cexit、_c_exit | Microsoft Docs
-ms.custom: ''
+title: _cexit、_c_exit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _c_exit
 - _cexit
@@ -26,8 +22,6 @@ f1_keywords:
 - c_exit
 - _c_exit
 - cexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - cleanup operations during processes
 - cexit function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _cexit function
 - c_exit function
 ms.assetid: f3072045-9924-4b1a-9fef-b0dcd6d12663
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b0840ccec85d46a13984b65ebe99e53b968bedeb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a075e8a8e965a195765b86ffa21fed0915dbf5ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395823"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495135"
 ---
 # <a name="cexit-cexit"></a>_cexit、_c_exit
 
@@ -57,9 +47,9 @@ void _cexit( void );
 void _c_exit( void );
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Cexit**関数後入れ先出し (LIFO) の順序、によって登録された関数の呼び出し**atexit**と **_onexit**です。 **_Cexit**すべての I/O バッファーをフラッシュし、返す前にすべての開いているストリームを閉じます。 **_c_exit**と同じ **_exit**が、処理されず、呼び出し元プロセスを返す**atexit**または **_onexit**ストリーム バッファーのフラッシュまたはします。 動作**終了**、 **_exit**、 **_cexit**、および **_c_exit**は次の表に示すようにします。
+**_Cexit**関数呼び出しの最後で、先入れ先出し (LIFO) 順、によって登録された関数で**atexit**と **_onexit**します。 **_Cexit**すべての I/O バッファーをフラッシュしを返す前にすべての開いているストリームを閉じます。 **_c_exit**と同じ **_exit**処理を行わなくても、呼び出し元プロセスを返しますが、 **atexit**または **_onexit**またはストリーム バッファーをフラッシュします。 動作**終了**、 **_exit**、 **_cexit**、および **_c_exit**次の表に示します。
 
 |関数|動作|
 |--------------|--------------|
@@ -68,15 +58,15 @@ void _c_exit( void );
 |**_cexit**|完全な C ライブラリの終了処理を実行し、呼び出し元に戻りますが、プロセスを終了しません。|
 |**_c_exit**|高速な C ライブラリの終了処理を実行し、呼び出し元に戻りますが、プロセスを終了しません。|
 
-呼び出すと、 **_cexit**または **_c_exit**関数の呼び出し時に存在する一時または自動オブジェクトのデストラクターは呼び出されません。 自動オブジェクトとは、オブジェクトが静的と宣言されていない関数内で定義されるオブジェクトです。 一時オブジェクトはコンパイラによって作成されるオブジェクトです。 呼び出す前に自動オブジェクトを破棄する **_cexit**または **_c_exit**、明示的に次のように、オブジェクトのデストラクターを呼び出します。
+呼び出すと、 **_cexit**または **_c_exit**関数、呼び出し時に存在する一時または自動オブジェクトのデストラクターは呼び出されません。 自動オブジェクトとは、オブジェクトが静的と宣言されていない関数内で定義されるオブジェクトです。 一時オブジェクトはコンパイラによって作成されるオブジェクトです。 呼び出す前に自動オブジェクトを破棄する **_cexit**または **_c_exit**、明示的に次のように、オブジェクトのデストラクターを呼び出します。
 
 ```cpp
 myObject.myClass::~myClass( );
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cexit**|\<process.h>|
 |**_c_exit**|\<process.h>|

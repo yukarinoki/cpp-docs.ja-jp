@@ -1,10 +1,6 @@
 ---
-title: function クラス | Microsoft Docs
-ms.custom: ''
+title: function クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - functional/std::function
 - functional/std::function::result_type
@@ -14,8 +10,6 @@ f1_keywords:
 - functional/std::function::target_type
 - functional/std::function::operator unspecified
 - functional/std::function::operator()
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::function [C++]
 - std::function [C++], result_type
@@ -24,16 +18,12 @@ helpviewer_keywords:
 - std::function [C++], target
 - std::function [C++], target_type
 ms.assetid: 7b5ca76b-9ca3-4d89-8fcf-cad70a4aeae6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3cfafc2c17ef804cb8d87c1189c8a7f3163d3c46
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 80b0dd6e2145ce98e9191dd81bdff10b2870f4fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104135"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530508"
 ---
 # <a name="function-class"></a>function クラス
 
@@ -119,7 +109,7 @@ public:
 |-|-|
 |[function](#function)|空のラッパーまたは固定のシグネチャを持つ任意の型の呼び出し可能オブジェクトを格納するラッパーを作成します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -142,7 +132,7 @@ public:
 |[function::operator()](#op_call)|呼び出し可能オブジェクトを呼び出します。|
 |[function::operator=](#op_eq)|格納されている呼び出し可能オブジェクトを置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

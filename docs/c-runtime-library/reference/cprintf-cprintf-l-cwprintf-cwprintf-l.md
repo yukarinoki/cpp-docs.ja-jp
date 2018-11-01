@@ -1,10 +1,6 @@
 ---
-title: _cprintf、_cprintf_l、_cwprintf、_cwprintf_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_l
 - _cprintf_l
@@ -34,8 +30,6 @@ f1_keywords:
 - cprintf_l
 - _cprintf_l
 - _cwprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cprintf_l function
 - _cwprintf_l function
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - cwprintf_l function
 - _cprintf function
 ms.assetid: 67ffefd4-45b3-4be0-9833-d8d26ac7c4e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57eaced46b786352b794e68a1a11423ba13b0948
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce1913012ee37b19e15602daaa4eea042a69a3de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400874"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534044"
 ---
 # <a name="cprintf-cprintfl-cwprintf-cwprintfl"></a>_cprintf、_cprintf_l、_cwprintf、_cwprintf_l
 
@@ -94,7 +84,7 @@ int _cwprintf_l(
 書式指定文字列。
 
 *argument_list*<br/>
-書式指定文字列の省略可能なパラメーターです。
+書式指定文字列の省略可能なパラメーター。
 
 *locale*<br/>
 使用するロケール。
@@ -103,15 +93,15 @@ int _cwprintf_l(
 
 出力された文字数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数の書式設定し、一連の文字や、コンソールに直接値を使用して、 **_putch**関数 (**_putwch**の **_cwprintf**) 文字を出力する. 各引数は*argument_list* (存在する場合) は変換され、対応する書式指定に従って*形式*です。 *形式*引数は、 [printf 関数と wprintf 関数の指定の構文を書式設定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)です。 異なり、 **fprintf**、 **printf**、および**sprintf**関数も **_cprintf**も **_cwprintf**ライン フィード文字をキャリッジ リターンとライン フィード (CR-LF) の組み合わせに変換出力時にします。
+これらの関数の書式を設定し、一連の文字や、コンソールへの直接値を使用して、 **_putch**関数 (**_putwch**の **_cwprintf**) 文字を出力する. 各引数*argument_list* (ある場合) は変換されに対応する書式指定に応じて*形式*します。 *形式*引数は、[書式指定構文の printf および wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)します。 異なり、 **fprintf**、 **printf**、および**sprintf**関数も、 **_cprintf**も **_cwprintf**ライン フィード文字をキャリッジ リターンとライン フィード (CR-LF) の組み合わせに変換するときに出力します。
 
-重要な相違点は **_cwprintf** Windows で使用すると、Unicode 文字が表示されます。 異なり **_cprintf**、 **_cwprintf**コンソールの現在のロケール設定を使用します。
+重要な違いは **_cwprintf** Windows で使用すると、Unicode 文字が表示されます。 異なり **_cprintf**、 **_cwprintf**コンソールの現在のロケール設定を使用します。
 
 これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
-**_cprintf**を検証、*形式*パラメーター。 場合*形式*null ポインター」の説明に従って、関数が無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、関数の戻り値-1 とセットの実行が許可された場合**errno**に**EINVAL**です。
+**_cprintf**検証、*形式*パラメーター。 場合*形式*null ポインターの場合で説明されているように、関数が、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続、関数の戻り値-1 とセットが許可された場合**errno**に**EINVAL**します。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
@@ -123,9 +113,9 @@ int _cwprintf_l(
 |**_tcprintf**|**_cprintf**|**_cprintf**|**_cwprintf**|
 |**_tcprintf_l**|**_cprintf_l**|**_cprintf_l**|**_cwprintf_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cprintf**、 **_cprintf_l**|\<conio.h>|
 |**_cwprintf**、 **_cwprintf_l**|\<conio.h>|

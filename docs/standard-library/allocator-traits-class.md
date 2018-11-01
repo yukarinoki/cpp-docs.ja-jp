@@ -1,10 +1,6 @@
 ---
-title: allocator_traits クラス | Microsoft Docs
-ms.custom: ''
+title: allocator_traits クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - memory/std::allocator_traits
 - memory/std::allocator_traits::propagate_on_container_move_assignment
@@ -24,11 +20,7 @@ f1_keywords:
 - memory/std::allocator_traits::destroy
 - memory/std::allocator_traits::max_size
 - memory/std::allocator_traits::select_on_container_copy_construction
-dev_langs:
-- C++
 ms.assetid: 612974b8-b5d4-4668-82fb-824bff6821d6
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::allocator_traits [C++]
 - std::allocator_traits [C++], propagate_on_container_move_assignment
@@ -48,14 +40,12 @@ helpviewer_keywords:
 - std::allocator_traits [C++], destroy
 - std::allocator_traits [C++], max_size
 - std::allocator_traits [C++], select_on_container_copy_construction
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb00f7205dcb470785c9682335341ca07935aae5
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 66c8c998a91ddd3e6550b57415a513fae55856da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110439"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537762"
 ---
 # <a name="allocatortraits-class"></a>allocator_traits クラス
 
@@ -68,7 +58,7 @@ template <class Alloc>
 class allocator_traits;
 ```
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |名前|説明|
 |----------|-----------------|
@@ -97,7 +87,7 @@ class allocator_traits;
 |[max_size](#max_size)|指定したアロケーターを使用して割り当てることができるオブジェクトの最大数を決定する静的メソッド。|
 |[select_on_container_copy_construction](#select_on_container_copy_construction)|指定したアロケーターで `select_on_container_copy_construction` を呼び出す静的メソッド。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<memory>
 

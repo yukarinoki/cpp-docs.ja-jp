@@ -1,28 +1,18 @@
 ---
-title: is_arithmetic クラス | Microsoft Docs
-ms.custom: ''
+title: is_arithmetic クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_arithmetic
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_arithmetic class
 - is_arithmetic
 ms.assetid: ea427b7e-0141-4a04-848f-561054c53001
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72ab821d32b63800c9edeaef070bd745ef8eae86
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7aff4b051786c3d77dacb65ddbdbd29fa695ca48
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108877"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520654"
 ---
 # <a name="isarithmetic-class"></a>is_arithmetic クラス
 
@@ -76,7 +66,7 @@ is_arithmetic<int> == true
 is_arithmetic<float> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 
