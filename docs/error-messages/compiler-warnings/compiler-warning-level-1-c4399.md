@@ -1,41 +1,31 @@
 ---
-title: コンパイラの警告 (レベル 1) C4399 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラの警告 (レベル 1) C4399
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4399
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4399
 ms.assetid: f58d9ba7-71a0-4c3b-b26f-f946dda8af30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aedad6aed07a6056f74ad338037a7268c722627f
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 56fe0f314142d873fc02136bc2c3fe65e71f4dda
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703721"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544067"
 ---
 # <a name="compiler-warning-level-1-c4399"></a>コンパイラの警告 (レベル 1) C4399
 
-> '*シンボル*': プロセスごとのシンボルは/clr でコンパイルされるときにマークしないで: 純粋な
+> '*シンボル*': は/clr でコンパイルされたときに、プロセスごとのシンボルをマークしない必要があります: 純粋な
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-ネイティブ イメージまたはネイティブ モードと CLR コンストラクトを使用してイメージからのデータを純粋なイメージにインポートすることはできません。 この警告を解決するには、コンパイル時に **/clr** (いない **/clr: 純粋な**) を削除または`__declspec(dllimport)`です。
+ネイティブ イメージまたはネイティブ モードと CLR コンストラクトを使用してイメージからのデータを純粋なイメージにインポートすることはできません。 この警告を解決するには、使用してコンパイル **/clr** (いない **/clr: 純粋な**) を削除または`__declspec(dllimport)`します。
 
 ## <a name="example"></a>例
 
-次の例では、C4399 を生成します。
+次の例では、C4399 が生成されます。
 
 ```cpp
 // C4399.cpp

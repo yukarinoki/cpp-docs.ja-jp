@@ -1,10 +1,6 @@
 ---
-title: _snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: _snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _snwscanf_s_l
 - _snwscanf_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _sntscanf_s_l
 - _snscanf_s_l
 - sntscanf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _snscanf_s_l function
 - snwscanf_s function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - _sntscanf_s function
 - snwscanf_s_l function
 ms.assetid: 72356653-7362-461a-af73-597b9c0a8094
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 08c269d0139767f260c68d07d660ecc818b36cc4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7f6fbbcdb6e3fa9d3137337992b2de0d81c1287
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533329"
 ---
 # <a name="snscanfs-snscanfsl-snwscanfs-snwscanfsl"></a>_snscanf_s、_snscanf_s_l、_snwscanf_s、_snwscanf_s_l
 
@@ -102,7 +92,7 @@ int __cdecl _snwscanf_s_l(
 チェックする入力文字列。
 
 *length*<br/>
-検査する文字数*入力*です。
+チェックする文字数*入力*します。
 
 *format*<br/>
 1 つまたは複数の書式指定子。
@@ -111,24 +101,24 @@ int __cdecl _snwscanf_s_l(
 使用するロケール。
 
 *argument_list*<br/>
-書式設定文字列に従って割り当てられるに省略可能な引数。
+書式設定文字列に従って割り当てられるオプションの引数。
 
 ## <a name="return-value"></a>戻り値
 
 これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 戻り値は**EOF**エラーの最初の変換の前に、文字列の末尾に達した場合またはします。 詳細については、「[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)」を参照してください。
 
-場合*入力*または*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**設定と**errno**に**EINVAL**です。
+場合*入力*または*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数は**sscanf_s**固定、入力文字列の検査する文字数を指定する機能を提供する点が異なります。 詳細については、「[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)」を参照してください。
+この関数は**sscanf_s**する点を除いて、入力文字列から確認する文字の固定数を指定できるようになります。 詳細については、「[sscanf_s、_sscanf_s_l、swscanf_s、_swscanf_s_l](sscanf-s-sscanf-s-l-swscanf-s-swscanf-s-l.md)」を参照してください。
 
-バッファー サイズ パラメーターは、型フィールド文字で必要な**c**、 **C**、 **s**、 **S**、および **[**. 詳細については、「[scanf 関数の型フィールド文字](../../c-runtime-library/scanf-type-field-characters.md)」を参照してください。
+パラメーターのバッファー サイズが、型フィールド文字で必要な**c**、 **C**、 **s**、 **S**、および **[**. 詳細については、「[scanf 関数の型フィールド文字](../../c-runtime-library/scanf-type-field-characters.md)」を参照してください。
 
 > [!NOTE]
-> サイズ パラメーターの型は**符号なし**ではなく、 **size_t**です。
+> 型のサイズのパラメーターが**符号なし**ではなく、 **size_t**します。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
@@ -139,9 +129,9 @@ int __cdecl _snwscanf_s_l(
 |**_sntscanf_s**|**_snscanf_s**|**_snscanf_s**|**_snwscanf_s**|
 |**_sntscanf_s_l**|**_snscanf_s_l**|**_snscanf_s_l**|**_snwscanf_s_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_snscanf_s**、 **_snscanf_s_l**|\<stdio.h>|
 |**_snwscanf_s**、 **_snwscanf_s_l**|\<stdio.h> または \<wchar.h>|

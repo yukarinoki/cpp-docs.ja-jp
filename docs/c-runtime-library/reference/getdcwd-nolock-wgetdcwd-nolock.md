@@ -1,10 +1,6 @@
 ---
-title: _getdcwd_nolock、_wgetdcwd_nolock | Microsoft Docs
-ms.custom: ''
+title: _getdcwd_nolock、_wgetdcwd_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetdcwd_nolock
 - _getdcwd_nolock
@@ -27,8 +23,6 @@ f1_keywords:
 - _getdcwd_nolock
 - _tgetdcwd_nolock
 - getdcwd_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - getdcwd_nolock function
 - _tgetdcwd_nolock function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _wgetdcwd_nolock function
 - directories [C++], current working
 ms.assetid: d9bdf712-43f8-4173-8f9a-844e82beaa97
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aa969bb756754c1a6e1d28ac1b029ee443666ea0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47938c387ba30d7bcba038145c2dff9c7b59b750
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401579"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563688"
 ---
 # <a name="getdcwdnolock-wgetdcwdnolock"></a>_getdcwd_nolock、_wgetdcwd_nolock
 
@@ -82,15 +72,15 @@ wchar_t *_wgetdcwd_nolock(
 パスの格納場所。
 
 *maxlen*<br/>
-文字内のパスの最大長: **char**の **_getdcwd**と**wchar_t**の **_wgetdcwd**です。
+文字内のパスの最大長: **char**の **_getdcwd**と**wchar_t**の **_wgetdcwd**します。
 
 ## <a name="return-value"></a>戻り値
 
 「[_getdcwd、_wgetdcwd](getdcwd-wgetdcwd.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_getdcwd_nolock**と **_wgetdcwd_nolock**と同じ **_getdcwd**と **_wgetdcwd**をそれぞれから保護されないする点を除いて他のスレッドによる干渉します。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_getdcwd_nolock**と **_wgetdcwd_nolock**と同じ **_getdcwd**と **_wgetdcwd**をそれぞれから保護されない点を除いて、他のスレッドによる干渉します。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -98,9 +88,9 @@ wchar_t *_wgetdcwd_nolock(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tgetdcwd_nolock**|**_getdcwd_nolock**|**_getdcwd_nolock**|**_wgetdcwd_nolock**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getdcwd_nolock**|\<direct.h>|
 |**_wgetdcwd_nolock**|\<direct.h> または \<wchar.h>|

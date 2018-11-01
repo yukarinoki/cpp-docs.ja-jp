@@ -1,28 +1,17 @@
 ---
-title: is_literal_type クラス | Microsoft Docs
-ms.custom: ''
+title: is_literal_type クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_literal_type
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_literal_type
 ms.assetid: a03a4ebb-ee66-48d6-91bb-41cf72b2401f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd4481be124cbcbba04f6b45b4c5a08beb34f04d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 804ef0462308b967fc0c4c95d8dfa96476475aab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514001"
 ---
 # <a name="isliteraltype-class"></a>is_literal_type クラス
 
@@ -44,7 +33,7 @@ struct is_literal_type;
 
 場合、型述語のインスタンスは true を保持型*T*は、*リテラル型*、それ以外の場合は false を保持します。 リテラル型は、いずれかの**void**、スカラー型、参照型、リテラルの型の配列またはリテラル クラス型。 リテラル クラス型は、単純なデストラクターを持つクラス型であり、集計の型であるか、または少なくとも 1 つのムーブ禁止、コピー禁止の `constexpr` コンストラクターを持ち、そのすべての基底クラスと非静的データ メンバーは、非 volatile のリテラル型です。 リテラルの型は常にリテラル型ですが、リテラル型の概念は、コンパイラがコンパイル時に `constexpr` として評価できるあらゆるものを含みます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 
