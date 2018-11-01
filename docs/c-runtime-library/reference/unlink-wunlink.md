@@ -1,10 +1,6 @@
 ---
-title: _unlink、_wunlink | Microsoft Docs
-ms.custom: ''
+title: _unlink、_wunlink
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _unlink
 - _wunlink
@@ -26,8 +22,6 @@ f1_keywords:
 - _unlink
 - wunlink
 - _wunlink
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], deleting
 - _wunlink function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - files [C++], removing
 - _tunlink function
 ms.assetid: 5e4f5f1b-1e99-4391-9b18-9ac63c32fae8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ace694452467d6d559f8820216be71ecd85b54e0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7565679c58af83d64fd59419e8e841ee48133edf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544198"
 ---
 # <a name="unlink-wunlink"></a>_unlink、_wunlink
 
@@ -71,13 +61,13 @@ int _wunlink(
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合、これらの各関数は 0 を返します。 関数は-1 を返しますそれ以外の場合、およびセット**errno**に**EACCES**、読み取り専用ファイル、つまり、パスを指定しますまたは**ENOENT**、ファイルまたはパスが見つからない、またはパスは、ディレクトリを指定します。
+正常に終了した場合、これらの各関数は 0 を返します。 関数は-1 を返しますそれ以外の場合、およびセット**errno**に**EACCES**、読み取り専用ファイル、パスを指定しますまたは**ENOENT**、ファイルまたはパスが見つからないまたはパスは、ディレクトリを指定します。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Unlink**関数で指定されたファイルを削除*filename*です。 **_wunlink**のワイド文字バージョンは、 **_unlink**以外の場合は、 *filename*に渡す引数 **_wunlink**ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_Unlink**関数で指定されたファイルを削除*filename*します。 **_wunlink**のワイド文字バージョンです **_unlink**、 *filename*への引数 **_wunlink**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -85,9 +75,9 @@ int _wunlink(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tunlink**|**_unlink**|**_unlink**|**_wunlink**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_unlink**|\<io.h> および \<stdio.h>|
 |**_wunlink**|\<io.h> または \<wchar.h>|

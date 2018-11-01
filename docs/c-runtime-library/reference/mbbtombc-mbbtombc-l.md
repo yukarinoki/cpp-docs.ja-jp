@@ -1,10 +1,6 @@
 ---
-title: _mbbtombc、_mbbtombc_l | Microsoft Docs
-ms.custom: ''
+title: _mbbtombc、_mbbtombc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbbtombc_l
 - _mbbtombc
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbbtombc
 - mbbtombc_l
 - mbbtombc
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbbtombc_l function
 - mbbtombc function
 - _mbbtombc_l function
 - _mbbtombc function
 ms.assetid: 78593389-b0fc-43b6-8c1f-2a6bf702d64e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98053437d2e189c26b46b53ec34ef67740d62bce
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63b5dd33399201cd6ead7dbd1f710c8bebe53c69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401790"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547993"
 ---
 # <a name="mbbtombc-mbbtombcl"></a>_mbbtombc、_mbbtombc_l
 
@@ -74,19 +64,19 @@ unsigned int _mbbtombc_l(
 
 ## <a name="return-value"></a>戻り値
 
-場合 **_mbbtombc**変換が正常に*c*、マルチバイト文字を返します。 それ以外の場合を返します*c*です。
+場合 **_mbbtombc**を正常に変換*c*、マルチバイト文字を返します。 それ以外を返します*c*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbbtombc**関数が特定の 1 バイト マルチバイト文字を対応する 2 バイト マルチバイト文字に変換します。 文字が変換する 0 xdf の範囲 0x20-0x7E または 0xA1 - 内になければなりません。
+**_Mbbtombc**関数は、特定の 1 バイト マルチバイト文字を対応する 2 バイト マルチバイト文字に変換します。 文字は、0x20-0x7E または 0xA1 - の範囲内で変換する 0 xdf にする必要があります。
 
-出力値の設定の影響を受けた、 **LC_CTYPE** 、ロケールのカテゴリの設定; 参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 この関数のバージョンは同じですが、する点を除いて **_mbbtombc**このロケールに依存する動作に現在のロケールを使用し、 **_mbbtombc_l**代わりに渡されたロケール パラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 この関数のバージョンは同じですが、する点を除いて **_mbbtombc**このロケールに依存する動作に現在のロケールを使用し、 **_mbbtombc_l**で渡されるロケール パラメーターを代わりに使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンで **_mbbtombc**という名前でした**hantozen**です。 新しいコードを使用して **_mbbtombc**です。
+以前のバージョンで **_mbbtombc**という名前が**hantozen**します。 新しいコードを使用して **_mbbtombc**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbbtombc**|\<mbstring.h>|
 |**_mbbtombc_l**|\<mbstring.h>|

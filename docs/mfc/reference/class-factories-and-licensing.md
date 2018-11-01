@@ -1,27 +1,17 @@
 ---
-title: クラス ファクトリとライセンス |Microsoft Docs
-ms.custom: ''
+title: クラス ファクトリとライセンス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.classes
-dev_langs:
-- C++
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5cedcedce14ce2fa6638091f0785f0456dee9891
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419751"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514401"
 ---
 # <a name="class-factories-and-licensing"></a>クラス ファクトリとライセンス
 
@@ -62,7 +52,7 @@ DECLARE_OLECREATE_EX(class_name)
 
 [!code-cpp[NVC_MFCAxCtl#14](../../mfc/reference/codesnippet/cpp/class-factories-and-licensing_1.h)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -102,7 +92,7 @@ IMPLEMENT_OLECREATE_EX(
 
 このマクロは、DECLARE_OLECREATE_EX マクロまたは BEGIN_OLEFACTORY と END_OLEFACTORY マクロを使用するコントロール クラスの実装ファイルに表示する必要があります。 External name は、他のアプリケーションに公開されている OLE コントロールの識別子です。 コンテナーでは、この名前を使用して、このコントロール クラスのオブジェクトを要求します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -123,7 +113,7 @@ BEGIN_OLEFACTORY(class_name)
 
 クラス ファクトリのライセンスの関数の宣言は、BEGIN_OLEFACTORY 後すぐに開始する必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -140,7 +130,7 @@ END_OLEFACTORY(class_name)
 *$class_name$*<br/>
 これは、クラス ファクトリを持つコントロール クラスの名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -180,7 +170,7 @@ BOOL AFXAPI AfxVerifyLicFile(
 
 [!code-cpp[NVC_MFC_Utilities#36](../../mfc/codesnippet/cpp/class-factories-and-licensing_2.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
