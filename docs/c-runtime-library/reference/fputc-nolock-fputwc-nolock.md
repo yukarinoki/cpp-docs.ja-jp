@@ -1,10 +1,6 @@
 ---
-title: _fputc_nolock、_fputwc_nolock | Microsoft ドキュメント
-ms.custom: ''
+title: _fputc_nolock、_fputwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputwc_nolock
 - _fputc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - fputtc_nolock
 - _fputwc_nolock
 - _fputtc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - streams, writing characters to
 - fputwc_nolock function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _fputtc_nolock function
 - _fputwc_nolock function
 ms.assetid: c63eb3ad-58fa-46d0-9249-9c25f815eab9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2ef3afffe1cbd8764e389f613b3679e3fa5a580
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 370b7e9f20bcc32f6243cff804381b5453801dbd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398556"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579768"
 ---
 # <a name="fputcnolock-fputwcnolock"></a>_fputc_nolock、_fputwc_nolock
 
@@ -79,9 +69,9 @@ wint_t _fputwc_nolock(
 
 これらの各関数は、書き込まれた文字を返します。 エラーの詳細については、「[fputc、fputwc](fputc-fputwc.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_fputc_nolock**と **_fputwc_nolock**と同じ**fputc**と**fputwc**をそれぞれで干渉から保護されないする点を除いて他のスレッド。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_fputc_nolock**と **_fputwc_nolock**と同じ**fputc**と**fputwc**をそれぞれで干渉から保護されない点を除いて、他のスレッド。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ストリームが ANSI モードで開かれている場合、2 つの関数の動作は同じになります。 **_fputc_nolock** UNICODE ストリームへ現在出力をサポートしません。
 
@@ -91,14 +81,14 @@ wint_t _fputwc_nolock(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fputtc_nolock**|**_fputc_nolock**|**_fputc_nolock**|**_fputwc_nolock**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|
 |**_fputc_nolock**|\<stdio.h>|
 |**_fputwc_nolock**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル —**stdin**、 **stdout**、および**stderr**— C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル、**stdin**、 **stdout**、および**stderr**-C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

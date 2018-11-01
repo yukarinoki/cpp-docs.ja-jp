@@ -1,10 +1,6 @@
 ---
-title: _getch、_getwch | Microsoft Docs
-ms.custom: ''
+title: _getch、_getwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getch
 - _getwch
@@ -25,8 +21,6 @@ f1_keywords:
 - getwch
 - _getch
 - _getwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - getch function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _getch function
 - getwch function
 ms.assetid: cc116be7-cff2-4274-970f-5e7b18ccc05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b69149340d2fca15071292001b9936e9d3bd5470
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8f8ed4985810526552a3b66e81462fd656bb23
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400118"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666311"
 ---
 # <a name="getch-getwch"></a>_getch、_getwch
 
@@ -64,9 +54,9 @@ wint_t _getwch( void );
 
 読み取られた文字を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Getch**と **_getwch**関数では、コンソールから 1 つの文字を読み取る文字がエコーなし。 これらの関数のいずれも Ctrl + C の読み取りに使用することはできません。 ファンクション キーまたは方向キーを読み取るときは、各関数を 2 回呼び出す必要があります。最初の呼び出しは 0 または 0xE0 を返し、2 回目の呼び出しは、実際のキー コードを返します。
+**_Getch**と **_getwch**関数は、文字をエコーしないでコンソールから 1 つの文字を読み取ります。 これらの関数のいずれも Ctrl + C の読み取りに使用することはできません。 ファンクション キーまたは方向キーを読み取るときは、各関数を 2 回呼び出す必要があります。最初の呼び出しは 0 または 0xE0 を返し、2 回目の呼び出しは、実際のキー コードを返します。
 
 これらの関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンについては、「[_getch_nolock、_getwch_nolock](getch-nolock-getwch-nolock.md)」をご覧ください。
 
@@ -76,9 +66,9 @@ wint_t _getwch( void );
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_gettch**|**_getch**|**_getch**|**_getwch**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getch**|\<conio.h>|
 |**_getwch**|\<conio.h> または \<wchar.h>|

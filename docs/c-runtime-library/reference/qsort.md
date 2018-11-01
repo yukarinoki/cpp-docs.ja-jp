@@ -1,10 +1,6 @@
 ---
-title: qsort | Microsoft Docs
-ms.custom: ''
+title: qsort
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - qsort
 apilocation:
@@ -23,24 +19,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - qsort
-dev_langs:
-- C++
 helpviewer_keywords:
 - qsort function
 - quick-sort algorithm
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87e9ba6ef9bcb4a909e97466d7ea71ee18374991
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e912a7a53619e9347cf2c0cd40adf0f9162b314b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110202"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618492"
 ---
 # <a name="qsort"></a>qsort
 
@@ -78,7 +68,7 @@ void qsort(
 **qsort**呼び出し、*比較*日常的な 1 つまたは複数の並べ替え中にタイムアウトし、呼び出しごとに 2 つの配列要素へのポインターを渡します。
 
 ```C
-compare( (void *) & elem1, (void *) & elem2 );
+compare( (void *) & elem1, (void *) & elem2 );
 ```
 
 ルーチンは、要素を比較し、次の値のいずれかを返します。
@@ -93,7 +83,7 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 この関数は、パラメーターを検証します。 場合*比較*または*数*は**NULL**、または*基本*は**NULL**と **数* 0 以外の場合、または*幅*が小さい」の説明に従って、0 よりも、無効なパラメーター ハンドラーが呼び出さは[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返しますと**errno**に設定されている**EINVAL**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

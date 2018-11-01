@@ -1,10 +1,6 @@
 ---
-title: strtol、wcstol、_strtol_l、_wcstol_l | Microsoft Docs
-ms.custom: ''
+title: strtol、wcstol、_strtol_l、_wcstol_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strtol
 - wcstol
@@ -30,8 +26,6 @@ f1_keywords:
 - wcstol
 - _strtol_l
 - _tcstol_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcstol function
 - wcstol_l function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 70f854e9bb78932f5d9fc102c835476e6b52d68b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5aa69a44a2ce8bde0ee16b02ecd9923f247c7e65
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416328"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617465"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol、wcstol、_strtol_l、_wcstol_l
 
@@ -101,15 +91,15 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-**strtol**文字列で表される値を返します*strSource*オーバーフローを引き起こすよう、ときに場合を返します点を除いて、 **LONG_MAX**または**LONG_MIN**です。 **strtol**変換を実行できない場合は 0 を返します。 **wcstol**戻り値を返します**strtol**です。 両方の関数に対して**errno**に設定されている**ERANGE**オーバーフローまたはアンダー フローが発生した場合。
+**strtol**文字列で表される値を返します*strSource*オーバーフローを引き起こす、ときに場合を返しますただし、 **LONG_MAX**または**LONG_。MIN**します。 **strtol**変換を実行できない場合は 0 を返します。 **wcstol**と同様に値を返します**strtol**します。 両方の関数に対して**errno**に設定されている**ERANGE**オーバーフローやアンダー フローが発生した場合。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strtol**関数に変換*strSource*を**長い**です。 **strtol**文字列の読み取りを停止する*strSource*は、数値の一部として認識できない最初の文字です。 大きいか等しいには、最初の数値文字がある可能性がありますか終端の null 文字あります*基本*です。
+**Strtol**関数に変換します*strSource*を**長い**します。 **strtol**文字列の読み取りを停止する*strSource*数値の一部として認識できない最初の文字。 終端の null 文字がありますまたは以上の値には、最初の数値文字がある可能性があります*基本*します。
 
-**wcstol**のワイド文字バージョンは、 **strtol**以外の場合はその*strSource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**wcstol**のワイド文字バージョンは、 **strtol**、 *strSource*引数はワイド文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -118,19 +108,19 @@ NULL で終わる変換対象の文字列。
 |**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
-現在のロケールの**LC_NUMERIC**カテゴリの設定によっての小数点文字の認識 ** *; strSource*詳細については、次を参照してください。 [setlocale、_wsetlocale](setlocale-wsetlocale.md)です。 せず、関数、 **_l**サフィックスは現在のロケールを使用します。**_strtol_l**と **_wcstol_l**せず、対応する関数と同じでは、 **_l**サフィックスを代わりに渡されたロケール パラメーターを使用する点を除いて。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+現在のロケールの**LC_NUMERIC**の小数点文字のカテゴリの設定が認識 ** *; strSource*詳細については、次を参照してください。 [setlocale](setlocale-wsetlocale.md)します。 せず、関数、 **_l**サフィックスを使用して、現在のロケール **_strtol_l**と **_wcstol_l**ことがなく対応する関数と同じですが、 **_l**サフィックスを代わりに渡されたロケールを使用する点を除いて。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合*endptr*は**NULL**、スキャンを停止させた文字へのポインターが指す位置に格納されている*endptr*です。 変換を実行できない場合 (有効な数字が見つからないか無効な base を指定した) の値*strSource*が指す位置に格納されて*endptr*です。
+場合*endptr*ない**NULL**、スキャンを停止させた文字へのポインターが指す位置に格納されている*endptr*します。 変換を実行できない場合 (有効な数字が見つからないか、無効な base を指定した) の値*strSource*が指す位置に格納されて*endptr*します。
 
-**strtol**が必要ですが*strSource*して次の形式の文字列を指します。
+**strtol**が必要ですが*strSource*次の形式の文字列を指すようにします。
 
 > [*空白*] [{**+** &#124; **-**}] [**0** [{ **x**&#124; **X** }] [*桁*&#124; *文字*]  
 
-A*空白*は無視されますスペースやタブ文字で構成されている可能性があります。*桁*は 1 つ以上の 10 進数字です。*文字*1 つまたは複数の文字は、'a' から 'z' ('A' ~ 'Z')。  この形式に一致しない文字を見つけるとスキャンを停止します。 場合*基本*2 ~ 36 の間は、数値の基数として使用されます。 場合*基本*0 によって示される文字列の先頭の文字は、 *strSource*基数を判定するために使用します。 最初の文字が 0 で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば場合、*基本*0 は、スキャンされた最初の文字が '0' と見なされます、8 進数と、'8' または '9' の文字は、スキャンは停止します。
+A*空白*は無視されますスペースやタブ文字で構成されている可能性があります。*桁*は 1 つ以上の 10 進数字です。*文字*1 つまたは複数の文字を 'a' から 'z' (または 'A' ~ 'Z')。  この形式に一致しない文字を見つけるとスキャンを停止します。 場合*基本*が 2 ~ 36 の間の数値の基数として使用されます。 場合*基本*は 0 が指す文字列の先頭の文字です。 *strSource*を使用して、ベースを決定します。 最初の文字が 0 で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば場合、*基本*は 0 です。 および、スキャンされた最初の文字は '0'、8 進数の整数が想定されますと、'8' または '9' の文字は、スキャンは停止します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strtol**|\<stdlib.h>|
 |**wcstol**|\<stdlib.h> または \<wchar.h>|

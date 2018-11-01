@@ -1,24 +1,14 @@
 ---
-title: '方法: Windows 10 を使用して、Windows デスクトップ アプリケーションで SDK |Microsoft Docs'
+title: '方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用'
 ms.custom: get-started-article
 ms.date: 07/12/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: afe678ca4ea381709b126168639df3f710867b9e
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42611321"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50669119"
 ---
 # <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用
 
@@ -26,7 +16,7 @@ Visual Studio 2017 でクラシック Windows デスクトップ プロジェク
 
 SDK の以前のバージョンを対象とする場合は、開く**プロジェクト |プロパティ**し、Windows SDK のバージョンのドロップダウン リストで使用可能なその他の SDK バージョンを選択します。
 
-Visual Studio 2015 と Windows 10 SDK 以降、CRT ライブラリは、1 つ (ucrtbase) ユニバーサル Windows アプリで使用可能である関数を含む、他のすべて (vcruntime140) が含まれている 2 つの部分に分離されました。 Windows 10 SDK には、多数の C99 関数をはじめとする新しい関数が含まれているため、これらの関数を使用するために、次の手順に従う必要があります。 「[CRT ライブラリの機能](../c-runtime-library/crt-library-features.md)」を参照してください。
+Visual Studio 2015 と Windows 10 SDK 以降、CRT ライブラリは、1 つ (ucrtbase) ユニバーサル Windows アプリで使用可能である関数を含む、他のすべて (vcruntime140) が含まれている 2 つの部分に分離されました。 Windows 10 SDK には、多数の C99 関数をはじめとする新しい関数が含まれているため、これらの関数を使用するために、次の手順に従う必要があります。 「 [CRT Library Features](../c-runtime-library/crt-library-features.md)」を参照してください。
 
 ### <a name="to-target-the-windows-10-sdk"></a>Windows 10 SDK をターゲットとするには
 

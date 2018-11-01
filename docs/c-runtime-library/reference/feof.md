@@ -1,10 +1,6 @@
 ---
-title: feof | Microsoft Docs
-ms.custom: ''
+title: feof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - feof
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - feof
-dev_langs:
-- C++
 helpviewer_keywords:
 - end of file, testing for
 - feof function
 ms.assetid: 09081eee-7c4b-4189-861f-2fad95d3ec6d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3162fd72acdfedc198764a92deec043cd681a10
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9c023290df601bfc48f9708af86d32d91cd52dc4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397016"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580700"
 ---
 # <a name="feof"></a>feof
 
@@ -58,17 +48,17 @@ int feof(
 
 ## <a name="return-value"></a>戻り値
 
-**Feof**関数は、ファイルの終わりを超えて読み取るしようとしましたが、読み取り操作の場合に 0 以外の値を返します。 それ以外の場合は 0 を返します。 ストリーム ポインターがある場合**NULL**、」の説明に従って、関数が無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と**feof** 0 を返します。
+**Feof**関数は、ファイルの終端を越えて読み取りを実行しようとしましたが、読み取り操作の場合に 0 以外の値を返します。 それ以外の場合は 0 を返します。 ストリーム ポインターがある場合**NULL**、」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と**feof** 0 を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Feof**ルーチン (関数とマクロの両方を実装) を判別するかどうかの末尾*ストリーム*が渡されました。 ファイルの末尾が渡されると、読み取り操作が、ファイルの終端のインジケーターを返すまで、またはストリームが閉じられるまで[巻き戻し](rewind.md)、 **fsetpos**、 [fseek](fseek-fseeki64.md)、または**clearerr**に対して呼び出されます。
+**Feof**ルーチン (関数とマクロの両方を実装) を決定するかどうかの末尾*ストリーム*が渡されました。 ファイルの末尾が渡されると、読み取り操作がファイルの終わりインジケーターを返すまで、またはストリームが閉じられるまで[巻き戻し](rewind.md)、 **fsetpos**、 [fseek](fseek-fseeki64.md)、または**clearerr**に対してと呼びます。
 
-たとえば、ファイルが 10 バイトを格納し、ファイルから 10 バイトを読み取る場合**feof**ファイル ポインターは、ファイルの末尾にある、ありますが、終了していないのでに 0 を返します。 読み取りを試みてください 11 バイトと専用**feof** 0 以外の値を返します。
+など、ファイルには 10 バイトが含まれていて、ファイルから 10 バイトを読み取る**feof**は、ファイル ポインターは、ファイルの最後が、末尾を超えていないので 0 を返します。 だけを読み取る後 11 バイト**feof** 0 以外の値を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|
