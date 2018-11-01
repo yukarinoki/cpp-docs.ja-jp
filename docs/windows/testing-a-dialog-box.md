@@ -1,28 +1,17 @@
 ---
-title: ダイアログ ボックス (C++) のテスト |Microsoft Docs
-ms.custom: ''
+title: ダイアログ ボックス (C++) のテスト
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Test Dialog command
 - testing, dialog boxes
 - dialog boxes [C++], testing
 ms.assetid: 45034ee9-c554-4f4b-8c46-6ddefdee8951
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ca5e8cfc2a08b01d7917d540c61e04837169a457
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 101a2b556b2593953bfa6482f96d5b1aadc38d1c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438601"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625066"
 ---
 # <a name="testing-a-dialog-box-c"></a>ダイアログ ボックス (C++) のテスト
 
@@ -49,7 +38,7 @@ ms.locfileid: "46438601"
 
 マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

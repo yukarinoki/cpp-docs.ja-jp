@@ -1,10 +1,6 @@
 ---
-title: AFX メッセージ |Microsoft Docs
-ms.custom: ''
+title: AFX メッセージ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - SB_LINELEFT
 - SB_THUMBTRACK
@@ -65,21 +61,15 @@ f1_keywords:
 - AFX_WM_CREATETOOLBAR
 - SB_THUMBPOSITION
 - AFX_WM_POSTSETPREVIEWFRAME
-dev_langs:
-- C++
 helpviewer_keywords:
 - AFX messages [MFC]
 ms.assetid: 3d601f3c-af6d-47d3-8553-34f1318fa74f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 92f24c18de594cfe734b703ec13c3116b7b5d31b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 45c6a9174cbd39c4c0c24ffbdfdefb9d184a3cc1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390999"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594689"
 ---
 # <a name="afx-messages"></a>AFX メッセージ
 
@@ -100,7 +90,7 @@ ms.locfileid: "46390999"
 |AFX_WM_CHANGING_ACTIVE_TAB|親に送信される`CMFCTabCtrl`オブジェクト。  通知を受信する場合は、このメッセージを処理`CMFCTabCtrl`オブジェクトをユーザーがタブをリセットします。|アクティブ化していますが、タブのインデックス。|使用しません。|0 以外の値。|
 |AFX_WM_CHECKEMPTYMINIFRAME|内部使用のみ。|該当なし。|該当なし。|該当なし。|
 |AFX_WM_CREATETOOLBAR|送信された`CMFCToolBarsListPropertyPage`カスタマイズ プロセス中に、ユーザーが新しいツールバーを作成する場合。 カスタム CMFCToolBar から派生したオブジェクトをインスタンス化するには、このメッセージを処理することができます。 このメッセージを処理し、独自のツールバーを作成した場合は、既定のハンドラーへの呼び出しを省略します。|使用しません。|ツールバーの名前を含む文字列へのポインター。|新しく作成したツールバーへのポインター。 NULL では、ツールバーの作成が取り消されたことを示します。|
-|AFX_WM_CUSTOMIZEHELP|カスタマイズのプロパティ シートからメイン フレーム ウィンドウに送信された`CMFCToolbarCustomize Dialog`押されたとき、**ヘルプ**ボタンまたは F1 キーを押します。|カスタマイズのプロパティ シートの現在のページを指定します。|ポインターを`CMFCToolbarCustomize Dialog`オブジェクト。|0 を返します。|
+|AFX_WM_CUSTOMIZEHELP|カスタマイズのプロパティ シートからメイン フレーム ウィンドウに送信された`CMFCToolbarCustomize Dialog`押されたとき、**ヘルプ**ボタンまたは F1 キーを押します。|カスタマイズのプロパティ シートの現在のページを指定します。|`CMFCToolbarCustomize Dialog` オブジェクトへのポインター。|0 を返します。|
 |AFX_WM_CUSTOMIZETOOLBAR|`CMFCToolbarCustomize Dialog`親フレームに、ユーザーが新しいツールバーを作成することを通知するには、このメッセージを送信します。|TRUE のカスタマイズが開始されると、FALSE のカスタマイズが完了するとします。|使用しません。|0 を返します。|
 |AFX_WM_DELETETOOLBAR|ユーザーがカスタマイズ モードでツールバーを削除すると、メイン フレーム ウィンドウに送信されます。<br /><br /> ユーザーがカスタマイズ モードでツールバーを削除するときに、多くのアクションを実行するには、このメッセージを処理します。 既定のハンドラーを呼び出す必要がありますも (`OnToolbarDelete`)、これはツールバーを削除します。 既定のハンドラーは、ツールバーを削除することであるかどうかを示す値を返します。|使用しません。|ポインターを`CMFCToolBar`を削除するオブジェクト。|0 以外の場合、ツールバーを削除できません。それ以外の場合 0 を返します。|
 |AFX_WM_GETDOCUMENTCOLORS|`CMFCColorMenuButton` ドキュメントの色を取得するメイン フレーム ウィンドウには、このメッセージを送信します。|使用しません。|[入力、出力]ポインターを`CList<COLORREF, COLORREF>`オブジェクト。|0 を返します。|
@@ -127,7 +117,7 @@ ms.locfileid: "46390999"
 |AFX_WM_RESETKEYBOARD|フレームワークでは、ユーザーがカスタマイズするときにすべてのキーボード アクセラレータをリセットしたときに、このメッセージをメイン フレーム ウィンドウに送信します。|使用しません。|使用しません。|使用しません。|
 |AFX_WM_RESETMENU|フレームワークでは、このメッセージを送信 メニューの所有者 (フレーム ウィンドウ) に、ユーザーがカスタマイズするときに、アプリケーションのフレームのメニューをリセットすると|メニューの リソース id です。|使用しません。|使用しません。|
 |AFX_WM_RESETPROMPT|フレームワークは、ツールバー、ツールバーから、ユーザーのリセット ダイアログ ボックスをカスタマイズするときに、このメッセージを送信します。 既定のハンドラーでは、ユーザーがツールバーをリセットするかどうかを確認するメッセージ ボックスが表示されます。|使用しません。|使用しません。|使用しません。|
-|AFX_WM_RESETTOOLBAR|A`CMFCToolBar`ツールバーは復元元の状態には、リソースから読み込まれたときに、オブジェクトがこのメッセージを送信します。 ツールバーのボタンに同名のクラスから派生した、再挿入するには、このメッセージを処理`CMFCToolbarButton`します。 詳細については、「`CMFCToolbarComboBoxButton`」を参照してください。|状態が復元されたツールバーのリソース ID。|使用しません。|0 を返します。|
+|AFX_WM_RESETTOOLBAR|A`CMFCToolBar`ツールバーは復元元の状態には、リソースから読み込まれたときに、オブジェクトがこのメッセージを送信します。 ツールバーのボタンに同名のクラスから派生した、再挿入するには、このメッセージを処理`CMFCToolbarButton`します。 詳細については、「 `CMFCToolbarComboBoxButton` 」を参照してください。|状態が復元されたツールバーのリソース ID。|使用しません。|0 を返します。|
 |AFX_WM_SHOWREGULARMENU|`CMFCToolbarMenuButton` オブジェクトは、通常のメニュー ボタンをクリックすると、その所有者にこのメッセージを送信します。 使用するたびにこのメッセージを処理`CMFCToolbarMenuButton`ユーザーがボタンをクリックしたときに、ポップアップ メニューを表示します。|メッセージを送信するボタンのコマンド ID。|カーソルの画面座標。 下位ワードには、x 座標を指定します。 上位ワードには、y 座標を指定します。|使用しません。|
 |AFX_WM_TOOLBARMENU|マウス ポインターが、クライアントまたはウィンドウの非クライアント領域内にあるときに、ユーザーがマウスの右ボタンを離したときに、メイン フレーム ウィンドウに送信されます。|使用しません。|マウス ポインターの画面座標。 下位ワードには、x 座標を指定します。 上位ワードには、y 座標を指定します。|アプリケーションは、このメッセージを処理する場合は 0 します。それ以外の場合、0 以外の値。|
 |AFX_WM_UPDATETOOLTIPS|ツールヒント コントロールを再作成することを示すために、ツールヒントのすべての所有者に送信します。|このメッセージを処理するコントロールの型。 使用可能な値の一覧は、このトピックの後半の表を参照してください。|使用しません。|使用しません。|

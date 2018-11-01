@@ -1,31 +1,21 @@
 ---
-title: location クラス |Microsoft Docs
-ms.custom: ''
+title: location クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - location
 - CONCRT/concurrency::location
 - CONCRT/concurrency::location::location
 - CONCRT/concurrency::location::current
 - CONCRT/concurrency::location::from_numa_node
-dev_langs:
-- C++
 helpviewer_keywords:
 - location class
 ms.assetid: c3289f51-5bf1-4dff-a18d-d0dab8e5d9c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c2352662de2d55be823064afd16354ff7f2c72e
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: ffb469ec5f5542b5037d31bfdb5fd1eaab47ed38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163622"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596537"
 ---
 # <a name="location-class"></a>location クラス
 
@@ -65,7 +55,7 @@ class location;
 
 `location`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 

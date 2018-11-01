@@ -1,30 +1,20 @@
 ---
-title: 'チュートリアル: COM 対応アプリケーションでの同時実行ランタイムの使用 |Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: COM 対応アプリケーションでのコンカレンシー ランタイムの使用'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, use with COM
 - COM, use with the Concurrency Runtime
 ms.assetid: a7c798b8-0fc8-4bee-972f-22ef158f7f48
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb1134e88add6f4571c42627cb27f669cfd9f5c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 227d06c74826b8936909b774d1a7e3a222ac8023
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46383091"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554935"
 ---
 # <a name="walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application"></a>チュートリアル: COM 対応アプリケーションでのコンカレンシー ランタイムの使用
 
-このドキュメントでは、コンポーネント オブジェクト モデル (COM) を使用するアプリケーションで同時実行ランタイムを使用する方法について説明します。
+このドキュメントでは、コンポーネント オブジェクト モデル (COM) を使用するアプリケーションでコンカレンシー ランタイムを使用する方法について説明します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -42,7 +32,7 @@ COM の詳細については、次を参照してください。[コンポーネ
 
 ## <a name="managing-the-lifetime-of-the-com-library"></a>COM ライブラリの有効期間の管理
 
-同時実行ランタイムでの COM の使用は他の同時実行機構と同じ基本原則に従いますが、これらのライブラリを組み合わせて効率よく使用するには次のガイドラインが役に立ちます。
+コンカレンシー ランタイムでの COM の使用は他のコンカレンシー機構と同じ基本原則に従いますが、これらのライブラリを組み合わせて効率よく使用するには次のガイドラインが役に立ちます。
 
 - スレッドを呼び出す必要があります[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex) COM ライブラリを使用する前にします。
 
@@ -52,7 +42,7 @@ COM の詳細については、次を参照してください。[コンポーネ
 
 - あるスレッド アパートメントから別のアパートメントに切り替えるには、スレッドは新しいスレッド処理仕様で `CoInitializeEx` を呼び出す前に、COM ライブラリを完全に解放する必要があります。
 
-同時実行ランタイムで COM を使用する場合は、COM に関する他の基本原則が適用されます。 たとえば、オブジェクトをシングルスレッド アパートメント (STA: Single-Threaded Apartment) に作成し、そのオブジェクトを別のアパートメントにマーシャリングするアプリケーションでは、受信メッセージを処理するためのメッセージ ループも提供する必要があります。 また、アパートメント間でオブジェクトをマーシャリングすると、パフォーマンスが低下する可能性があることに注意してください。
+コンカレンシー ランタイムで COM を使用する場合は、COM に関する他の基本原則が適用されます。 たとえば、オブジェクトをシングルスレッド アパートメント (STA: Single-Threaded Apartment) に作成し、そのオブジェクトを別のアパートメントにマーシャリングするアプリケーションでは、受信メッセージを処理するためのメッセージ ループも提供する必要があります。 また、アパートメント間でオブジェクトをマーシャリングすると、パフォーマンスが低下する可能性があることに注意してください。
 
 ### <a name="using-com-with-the-parallel-patterns-library"></a>並列パターン ライブラリでの COM の使用
 

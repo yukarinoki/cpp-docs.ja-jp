@@ -1,10 +1,6 @@
 ---
-title: wctob | Microsoft Docs
-ms.custom: ''
+title: wctob
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wctob
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wctob
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters, converting
 - wctob function
 - characters, converting
 ms.assetid: 46aec98b-c2f2-4e9d-9d89-7db99ba8a9a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61d92c02c4410bdc01b76ac6307fb9bb2652880a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: c40fd6a6094aa6f0c8c153bb00420d1e990dbbb2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635484"
 ---
 # <a name="wctob"></a>wctob
 
@@ -67,7 +57,7 @@ int wctob(
 
 場合**wctob**が失敗して、対応するマルチバイト文字が見つからなかった関数設定**errno**に**EILSEQ** -1 を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

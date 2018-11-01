@@ -1,10 +1,6 @@
 ---
-title: div、ldiv、lldiv |Microsoft ドキュメント
-ms.custom: ''
+title: div、ldiv、lldiv
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - div
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - div
-dev_langs:
-- C++
 helpviewer_keywords:
 - div function
 - quotients, computing
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - dividing integers
 - remainder computing
 ms.assetid: 8ae80d97-54fd-499e-b14c-e30993b58119
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3ba1625105adf6edbc6419bd4fdabc8bda5d0e98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0ee1b3b6a5d7b15470ffe1e667b4077d1f9581e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396593"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50653428"
 ---
 # <a name="div-ldiv-lldiv"></a>div、ldiv、lldiv
 
@@ -84,17 +74,17 @@ lldiv_t div(
 
 ## <a name="return-value"></a>戻り値
 
-**div**型の引数を使用して呼び出す**int**型の構造体を返す**div_t**商と剰余で構成します。 型の引数と戻り値**長い**は**ldiv_t**、され、戻り値の型引数を持つ**長い****長い**は**lldiv_t**です。 **div_t**、 **ldiv_t**、および**lldiv_t**で定義された\<stdlib.h >。
+**div**型の引数を使用して呼び出す**int**型の構造体を返す**div_t**商と剰余で構成されます。 型の引数と戻り値**長い**は**ldiv_t**と型の引数と戻り値**長い****長い**は**lldiv_t**します。 **div_t**、 **ldiv_t**、および**lldiv_t**で定義された\<stdlib.h >。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Div**関数の除算*数値*によって*denom*商と剰余を計算します。 [Div_t](../../c-runtime-library/standard-types.md)構造に含まれる、商**quot**、され、その残り**rem**です。商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
+**Div**関数は*数値*によって*denom*し、それによって、商と剰余を計算します。 [Div_t](../../c-runtime-library/standard-types.md)構造に含まれる、商**quot**、し、残りの**rem**します。商の符号は、数学的な商の符号と同じです。 この絶対値が最も大きい整数であり、商の絶対値よりも小さくなります。 分母が 0 の場合、プログラムはエラー メッセージにより終了します。
 
-オーバー ロード**div**型の引数を受け取る**長い**または**長い****長い**C++ コードに限られます。 戻り値の型[ldiv_t](../../c-runtime-library/standard-types.md)と[lldiv_t](../../c-runtime-library/standard-types.md)メンバーを含む**quot**と**rem**のメンバーと同じ意味であります。**div_t**です。
+オーバー ロード**div**型の引数を受け取る**長い**または**長い****長い**はのみの C++ コードを使用できます。 戻り値の型[ldiv_t](../../c-runtime-library/standard-types.md)と[lldiv_t](../../c-runtime-library/standard-types.md)メンバーが含まれる**quot**と**rem**のメンバーと同じ意味であります。**div_t**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**div**、 **ldiv**、 **lldiv**|\<stdlib.h>|
 

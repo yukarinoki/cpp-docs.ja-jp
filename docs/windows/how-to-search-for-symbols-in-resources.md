@@ -1,27 +1,16 @@
 ---
-title: '方法: リソース (C++) 内のシンボルの検索 |Microsoft Docs'
-ms.custom: ''
+title: '方法: リソース (C++) 内のシンボルの検索'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 6efef8e8-d0d4-4c49-b895-314974e7791a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b4adac3b4e593ab19287e21e5a965f3a28d008b8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b289fa1c2e5e5e1997c5024b21cae3d7a22b2b8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655989"
 ---
 # <a name="how-to-search-for-symbols-in-resources-c"></a>方法: リソース (C++) 内のシンボルの検索
 
@@ -43,7 +32,7 @@ ms.locfileid: "46427616"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 リソースにアクセスする、マネージ プロジェクトにリソース ファイルを手動で追加するのには静的なリソースを表示して、リソースの割り当ては、プロパティに文字列です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

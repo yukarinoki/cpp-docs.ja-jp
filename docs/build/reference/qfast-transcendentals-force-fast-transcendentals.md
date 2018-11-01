@@ -1,28 +1,18 @@
 ---
-title: -Qfast_transcendentals (超越関数高速) |Microsoft Docs
-ms.custom: ''
+title: /Qfast_transcendentals (超越関数高速化の強制)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Qfast_transcendentals
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Qfast_transcendentals
 - Force Fast Transcendentals
 ms.assetid: 4de24bd1-38e6-49d4-9a05-04c9937d24ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8edfcdc6881ef3d140a80113047722a62e5bd517
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 512e658cf546e77bff6d58465932d2f830541521
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420258"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666129"
 ---
 # <a name="qfasttranscendentals-force-fast-transcendentals"></a>/Qfast_transcendentals (超越関数高速化の強制)
 
@@ -40,7 +30,7 @@ ms.locfileid: "46420258"
 
 このオプションは互換性がありません **/fp: 厳密な**します。 参照してください[/fp (浮動小数点の動作の指定)](../../build/reference/fp-specify-floating-point-behavior.md)浮動小数点コンパイラ オプションの詳細についてはします。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

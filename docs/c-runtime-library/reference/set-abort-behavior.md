@@ -1,10 +1,6 @@
 ---
-title: _set_abort_behavior | Microsoft Docs
-ms.custom: ''
+title: _set_abort_behavior
 ms.date: 1/02/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_abort_behavior
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _set_abort_behavior
 - set_abort_behavior
-dev_langs:
-- C++
 helpviewer_keywords:
 - aborting programs
 - _set_abort_behavior function
 - set_abort_behavior function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 299801cc4276118fc73a4be625a3df8cc84d58b2
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 8b36a771a3694c6d01573d619990743c7ddc0f3e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43692935"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643054"
 ---
 # <a name="setabortbehavior"></a>_set_abort_behavior
 
@@ -72,7 +62,7 @@ unsigned int _set_abort_behavior(
 
 2 つ[中止](abort.md)フラグ: **_WRITE_ABORT_MSG**と **_CALL_REPORTFAULT**します。 **_WRITE_ABORT_MSG**プログラムが異常終了したときに、テキスト メッセージが印刷されるかどうかを決定します。 メッセージは、アプリケーションが呼び出されていることを示す、[中止](abort.md)関数。 既定の動作はメッセージを表示することです。 **_CALL_REPORTFAULT**場合は、設定、報告されたときにワトソン クラッシュ ダンプが生成されることを指定します[中止](abort.md)が呼び出されます。 既定では、クラッシュ ダンプのレポートは、非デバッグ ビルドで有効になっています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: IEnumOnSTLImpl クラス |Microsoft Docs
-ms.custom: ''
+title: IEnumOnSTLImpl クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IEnumOnSTLImpl
 - ATLCOM/ATL::IEnumOnSTLImpl
@@ -16,21 +12,15 @@ f1_keywords:
 - ATLCOM/ATL::IEnumOnSTLImpl::m_iter
 - ATLCOM/ATL::IEnumOnSTLImpl::m_pcollection
 - ATLCOM/ATL::IEnumOnSTLImpl::m_spUnk
-dev_langs:
-- C++
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0abc7e3b87ef23e6350b54c3f64b50fbcfdd5b07
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0ec505871f057d90f6580e547c23a0879af4c3f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46031146"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638751"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl クラス
 
@@ -98,7 +88,7 @@ C++ 標準ライブラリ コンテナー クラス。
 
 `IEnumOnSTLImpl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 

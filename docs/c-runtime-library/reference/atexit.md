@@ -1,10 +1,6 @@
 ---
-title: atexit | Microsoft Docs
-ms.custom: ''
+title: atexit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atexit
 apilocation:
@@ -21,22 +17,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - atexit
-dev_langs:
-- C++
 helpviewer_keywords:
 - processing, at exit
 - atexit function
 ms.assetid: 92c156d2-8052-4e58-96dc-00128baac6f9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d66954348d5d812fac7eca0b231304267cc26157
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 48f0fbfa1f3350f73899fcdbb3bf7922f1c6174d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393135"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556645"
 ---
 # <a name="atexit"></a>atexit
 
@@ -59,23 +49,23 @@ int atexit(
 
 **atexit**成功した場合、0、エラーが発生した場合は 0 以外の値を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Atexit**関数には、関数のアドレスが渡されます*func*プログラムが正常に終了したときに呼び出されます。 連続して呼び出す**atexit** 、後入れ先出し (LIFO) の順序で実行される関数の登録を作成します。 渡される関数は、 **atexit**パラメーターを受け取ることはできません。 **atexit**と **_onexit**関数のレジスタを保持するために、ヒープを使用します。 したがって、登録可能な関数の数は、ヒープ メモリの量によってのみ制限されます。
+**Atexit**関数には、関数のアドレスが渡されます*func*プログラムが正常に終了したときに呼び出されます。 連続して呼び出す**atexit** 、後入れ先出し (LIFO) の順序で実行される関数のレジスタが作成されます。 渡される関数は、 **atexit**パラメーターを受け取ることはできません。 **atexit**と **_onexit**関数のレジスタを保持するために、ヒープを使用します。 したがって、登録可能な関数の数は、ヒープ メモリの量によってのみ制限されます。
 
-内のコード、 **atexit**関数が既にアンロードされているときに、DLL への依存が含まれていない必要があります、 **atexit**関数が呼び出されます。
+内のコード、 **atexit**関数は可能性がありますが既に読み込まれていない場合にある DLL への依存関係を含めることはできません、 **atexit**関数が呼び出されます。
 
-ANSI 準拠のアプリケーションを生成する、ANSI 標準を使用して**atexit**関数 (よく似ているのではなく **_onexit**関数)。
+ANSI 準拠のアプリケーションを生成するには、ANSI 標準を使用して**atexit**関数 (も同様ではなく **_onexit**関数)。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**atexit**|\<stdlib.h>|
 
 ## <a name="example"></a>例
 
-このプログラムのプッシュが 4 つの関数のときに実行される関数のスタックに**atexit**と呼びます。 プログラムの終了時に、後入れ先出し法でこれらのプログラムが実行されます。
+このプログラムのプッシュ 4 つの関数のときに実行される関数のスタックに**atexit**が呼び出されます。 プログラムの終了時に、後入れ先出し法でこれらのプログラムが実行されます。
 
 ```C
 // crt_atexit.c

@@ -1,10 +1,6 @@
 ---
-title: _cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: _cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwprintf_s_l
 - _cprintf_s_l
@@ -33,8 +29,6 @@ f1_keywords:
 - cprintf_s
 - _cwprintf_s
 - tcprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcprintf_s_l function
 - _cprintf_s_l function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - cprintf_s_l function
 - cwprintf_s_l function
 ms.assetid: c28504fe-0d20-4f06-8f97-ee33225922ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2d8a2f5f80b00eef47d09a8d505f31a42a0fab2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3652587c9622c2eb9fe316782d1b1c7c9644dc8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401345"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606520"
 ---
 # <a name="cprintfs-cprintfsl-cwprintfs-cwprintfsl"></a>_cprintf_s、_cprintf_s_l、_cwprintf_s、_cwprintf_s_l
 
@@ -105,18 +95,18 @@ int _cwprintf_s_l(
 
 出力された文字数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数の書式設定し、一連の文字や、コンソールに直接値を使用して、 **_putch**関数 (**_putwch**の **_cwprintf_s**) を出力する文字があります。 各*引数*(存在する場合) は変換され、対応する書式指定に従って*形式*です。 この形式は、同じ形式および機能として、*形式*のパラメーター、 [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)関数。 異なり、 **fprintf_s**、 **printf_s**、および**sprintf_s**関数も **_cprintf_s**も **_cwprintf_s**ライン フィード文字をキャリッジ リターンとライン フィード (CR-LF) の組み合わせに変換出力時にします。
+これらの関数の書式を設定し、一連の文字や、コンソールへの直接値を使用して、 **_putch**関数 (**_putwch**の **_cwprintf_s**) を出力文字。 各*引数*(ある場合) は変換されに対応する書式指定に応じて*形式*します。 形式が同じ形式し、機能、*形式*のパラメーター、 [printf_s](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)関数。 異なり、 **fprintf_s**、 **printf_s**、および**sprintf_s**関数も、 **_cprintf_s**も **_cwprintf_s**ライン フィード文字をキャリッジ リターンとライン フィード (CR-LF) の組み合わせに変換するときに出力します。
 
-重要な相違点は **_cwprintf_s** Windows NT で使用すると、Unicode 文字が表示されます。 異なり **_cprintf_s**、 **_cwprintf_s**コンソールの現在のロケールを使用
+重要な違いは **_cwprintf_s** Windows NT で使用すると、Unicode 文字が表示されます。 異なり **_cprintf_s**、 **_cwprintf_s**コンソールの現在のロケールを使用します。
 
 これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
 
-などのセキュリティ保護されていないバージョン (を参照してください[_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md))、これらの関数は、パラメーターを検証し、で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)場合は、*形式*null ポインターです。 これらの関数は、書式指定文字列自体の検証も行う点で、セキュリティが万全ではないバージョンと異なります。 未知の書式指定子や不適切な形式の書式指定子がある場合、これらの関数は無効なパラメーター ハンドラーを呼び出します。 すべてのケースで続けるには、実行が許可された場合、関数、-1 を返します設定と**errno**に**EINVAL**です。
+保護されていないバージョンと同様 (を参照してください[_cprintf、_cprintf_l、_cwprintf、_cwprintf_l](cprintf-cprintf-l-cwprintf-cwprintf-l.md))、これらの関数は、パラメーターを検証し、で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)場合は、*形式*null ポインターです。 これらの関数は、書式指定文字列自体の検証も行う点で、セキュリティが万全ではないバージョンと異なります。 未知の書式指定子や不適切な形式の書式指定子がある場合、これらの関数は無効なパラメーター ハンドラーを呼び出します。 すべてのケースで続けるには、実行が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -125,9 +115,9 @@ int _cwprintf_s_l(
 |**_tcprintf_s**|**_cprintf_s**|**_cprintf_s**|**_cwprintf_s**|
 |**_tcprintf_s_l**|**_cprintf_s_l**|**_cprintf_s_l**|**_cwprintf_s_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cprintf_s**、 **_cprintf_s_l**|\<conio.h>|
 |**_cwprintf_s**、 **_cwprintf_s_l**|\<conio.h>|

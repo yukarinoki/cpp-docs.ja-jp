@@ -1,10 +1,6 @@
 ---
-title: _cabs | Microsoft Docs
-ms.custom: ''
+title: _cabs
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cabs
 apilocation:
@@ -24,8 +20,6 @@ f1_keywords:
 - cabsl
 - _cabs
 - _cabsl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cabs function
 - cabsl function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - _cabs function
 - calculating absolute values
 ms.assetid: fea292ee-1a39-4a0a-b416-4a189346ff26
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cad3c873dd7e0bab2a7b75e785fb91c704e616de
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3e95b6f568ce66b8e9e5483bd1dcbcfaa7af3d28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645810"
 ---
 # <a name="cabs"></a>_cabs
 
@@ -70,7 +60,7 @@ double _cabs(
 
 **_Cabs**関数型の構造体である必要があります、複素数の絶対値を計算する[_complex](../../c-runtime-library/standard-types.md)します。 構造体*z*は実際のコンポーネントで構成されます*x*と虚数*y*します。 呼び出し **_cabs**と同等の式の値を生成`sqrt( z.x * z.x + z.y * z.y )`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

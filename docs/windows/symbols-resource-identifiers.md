@@ -1,14 +1,8 @@
 ---
-title: 'シンボル: リソース識別子 (C++) |Microsoft Docs'
-ms.custom: ''
+title: 'シンボル: リソース識別子 (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.identifiers
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], resource identifiers
 - symbols [C++], creating
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - symbols [C++], editing
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c3bbcc774115311cd4ed0f302e4d9812ecfc6505
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: abe6297d74df4941328d3e606fb3b0f646d36265
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422264"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530001"
 ---
 # <a name="symbols-resource-identifiers-c"></a>シンボル: リソース識別子 (C++)
 
@@ -69,7 +58,7 @@ IDC_EDITNAME = 5100
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

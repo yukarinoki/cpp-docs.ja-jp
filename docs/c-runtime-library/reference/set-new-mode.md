@@ -1,10 +1,6 @@
 ---
-title: _set_new_mode | Microsoft Docs
-ms.custom: ''
+title: _set_new_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_new_mode
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - set_new_mode
 - _set_new_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - handler modes
 - _set_new_mode function
 - set_new_mode function
 ms.assetid: 4d14039a-e54e-4689-8c70-74a4b9834768
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 78e3d346bca087a6fd855e6428e6a53779cd7355
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0228170e4ab5b55b4b061fa61a412766de77a063
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202517"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602463"
 ---
 # <a name="setnewmode"></a>_set_new_mode
 
@@ -72,7 +62,7 @@ _set_new_mode(1);
 
 この関数は、そのパラメーターを検証します。 場合*newhandlermode*で説明として、無効なパラメーター ハンドラーを呼び出す 0 または 1 の場合、関数以外の何も[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合<strong>_set_new_mode</strong> -1 を返し**errno**に`EINVAL`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: _get_fmode | Microsoft Docs
-ms.custom: ''
+title: _get_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_fmode
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - get_fmode
 - _get_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _get_fmode function
 - file translation [C++], default mode
 - get_fmode function
 ms.assetid: 22ea70e2-b9b5-422d-b514-64f4beaea45c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a28909e5e848712305fb28e8ac4d46180f8948cf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f326069c1c190b0fa1c1bbd5ee4ead7346481a38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398303"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658030"
 ---
 # <a name="getfmode"></a>_get_fmode
 
@@ -48,27 +38,27 @@ ms.locfileid: "32398303"
 ## <a name="syntax"></a>構文
 
 ```C
-errno_t _get_fmode( 
-   int * pmode 
+errno_t _get_fmode( 
+   int * pmode 
 );
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *pmode*<br/>
-現在の既定のモードが格納される整数へのポインター。 **_O_TEXT**または **_O_BINARY**です。
+現在の既定のモードを格納する整数へのポインター: **_O_TEXT**または **_O_BINARY**します。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 場合*pmode*は**NULL**、」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**EINVAL**です。
+正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 場合*pmode*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数は、[_fmode](../../c-runtime-library/fmode.md) グローバル変数の値を取得します。 この変数は低レベルの両方の既定ファイルの変換モードを指定しなどのファイル I/O 操作をストリーム **_open**、 **_pipe**、 **fopen**、および[freopen](freopen-wfreopen.md)です。
+この関数は、[_fmode](../../c-runtime-library/fmode.md) グローバル変数の値を取得します。 この変数は、低レベルの両方の既定のファイル変換モードを指定しなどのファイル I/O 操作をストリーム **_open**、 **_pipe**、 **fopen**、および[freopen](freopen-wfreopen.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_get_fmode**|\<stdlib.h>|\<fcntl.h>|
 

@@ -1,27 +1,17 @@
 ---
-title: basic_regex クラス |Microsoft Docs
-ms.custom: ''
+title: basic_regex クラス
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - regex/std::basic_regex
-dev_langs:
-- C++
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 531ecc65a23e0eecd3480c397c081061cffaf9d8
-ms.sourcegitcommit: 27b5712badd09a09c499d887e2e4cf2208a28603
+ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2018
-ms.locfileid: "44384944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633406"
 ---
 # <a name="basicregex-class"></a>basic_regex クラス
 
@@ -84,7 +74,7 @@ class basic_regex
 |-|-|
 |[basic_regex](#basic_regex)|正規表現オブジェクトを構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -109,7 +99,7 @@ class basic_regex
 |-|-|
 |[operator=](#op_eq)|値を正規表現オブジェクトに代入します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 
