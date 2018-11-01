@@ -1,30 +1,20 @@
 ---
-title: -Gh (_penter フック関数の有効化) |Microsoft Docs
-ms.custom: ''
+title: /Gh (_penter フック関数の有効化)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _penter
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Gh compiler option [C++]
 - Gh compiler option [C++]
 - _penter function
 - -Gh compiler option [C++]
 ms.assetid: 1510a082-8a0e-486e-a309-6add814b494f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 608472f3133464137d2d0f96128453e4239b16a2
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 8b013d3d6506c1436a1f7f2245461980c0493b5c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162088"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452313"
 ---
 # <a name="gh-enable-penter-hook-function"></a>/Gh (_penter フック関数の有効化)
 
@@ -48,7 +38,7 @@ void __declspec(naked) __cdecl _penter( void );
 
 この宣言は、64 ビットのプロジェクトで使用可能ではありません。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

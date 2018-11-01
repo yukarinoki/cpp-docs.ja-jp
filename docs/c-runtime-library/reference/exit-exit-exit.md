@@ -1,10 +1,6 @@
 ---
-title: exit、_Exit、_exit | Microsoft ドキュメント
-ms.custom: ''
+title: 終了、_Exit、_exit
 ms.date: 1/02/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _exit
 - exit
@@ -28,24 +24,18 @@ f1_keywords:
 - process/_Exit
 - stdlib/exit
 - stdlib/_Exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - exit function
 - _exit function
 - processes, terminating
 - function calls, terminating
 - process termination, calling
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb5bd1ef619c899a6b0faab33104a579fdb9f1d0
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 7b2a22649d779f382bb4055b1e44c14312627ccd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821283"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451754"
 ---
 # <a name="exit-exit-exit"></a>終了、_Exit、_exit
 
@@ -103,7 +93,7 @@ void last_fn() {}
 
 使用しない**DLL_PROCESS_ATTACH**を呼び出す**終了**から**DllMain**します。 終了する、 **DLLMain**関数を返す**FALSE**から**DLL_PROCESS_ATTACH**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

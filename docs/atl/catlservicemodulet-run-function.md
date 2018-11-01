@@ -1,29 +1,19 @@
 ---
-title: Catlservicemodulet::run 関数 |Microsoft Docs
-ms.custom: ''
+title: Catlservicemodulet::run 関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
 f1_keywords:
 - CServiceModule::Run
 - CServiceModule.Run
 - CSecurityDescriptor
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL services, security
 ms.assetid: 42c010f0-e60e-459c-a63b-a53a24cda93b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f7306e11bd1cc23e4de17e67f0941d2b3ee8473
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3abb6908a64864463c45d8fc4dc24bfc813db586
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46055296"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458667"
 ---
 # <a name="catlservicemoduletrun-function"></a>Catlservicemodulet::run 関数
 
@@ -37,7 +27,7 @@ ms.locfileid: "46055296"
 
 ## <a name="see-also"></a>関連項目
 
-[サービス](../atl/atl-services.md)<br/>
+[Services](../atl/atl-services.md)<br/>
 [CSecurityDesc クラス](../atl/reference/csecuritydesc-class.md)<br/>
 [CSid クラス](../atl/reference/csid-class.md)<br/>
 [CDacl クラス](../atl/reference/cdacl-class.md)<br/>
