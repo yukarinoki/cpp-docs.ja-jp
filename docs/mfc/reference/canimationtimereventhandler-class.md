@@ -1,10 +1,6 @@
 ---
-title: CAnimationTimerEventHandler クラス |Microsoft Docs
-ms.custom: ''
+title: CAnimationTimerEventHandler クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationTimerEventHandler
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnPreUpdate
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::OnRenderingTooSlow
 - AFXANIMATIONCONTROLLER/CAnimationTimerEventHandler::SetAnimationController
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], CreateInstance
 - CAnimationTimerEventHandler [MFC], OnPostUpdate
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CAnimationTimerEventHandler [MFC], OnRenderingTooSlow
 - CAnimationTimerEventHandler [MFC], SetAnimationController
 ms.assetid: 188dea3b-4b5e-4f6b-8df9-09d993a21619
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad48c372043c06c2bc3a64537734a30d79e81a50
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c94cb3849d4101365d137733c08135b86db23801
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395001"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518665"
 ---
 # <a name="canimationtimereventhandler-class"></a>CAnimationTimerEventHandler クラス
 
@@ -50,9 +40,9 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 |名前|説明|
 |----------|-----------------|
 |[CAnimationTimerEventHandler::CreateInstance](#createinstance)|インスタンスを作成します`CAnimationTimerEventHandler`コールバック。|
-|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|アニメーションの更新が完了した後に発生するイベントを処理します。 (`CUIAnimationTimerEventHandlerBase::OnPostUpdate` をオーバーライドします)。|
-|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|アニメーションの更新プログラムを開始する前に発生するイベントを処理します。 (`CUIAnimationTimerEventHandlerBase::OnPreUpdate` をオーバーライドします)。|
-|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|アニメーションのレンダリング フレーム レートが最小の望ましいフレーム レートを下回ったときに発生するイベントを処理します。 (`CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow` をオーバーライドします)。|
+|[CAnimationTimerEventHandler::OnPostUpdate](#onpostupdate)|アニメーションの更新が完了した後に発生するイベントを処理します。 ( `CUIAnimationTimerEventHandlerBase::OnPostUpdate`をオーバーライドします)。|
+|[CAnimationTimerEventHandler::OnPreUpdate](#onpreupdate)|アニメーションの更新プログラムを開始する前に発生するイベントを処理します。 ( `CUIAnimationTimerEventHandlerBase::OnPreUpdate`をオーバーライドします)。|
+|[CAnimationTimerEventHandler::OnRenderingTooSlow](#onrenderingtooslow)|アニメーションのレンダリング フレーム レートが最小の望ましいフレーム レートを下回ったときに発生するイベントを処理します。 ( `CUIAnimationTimerEventHandlerBase::OnRenderingTooSlow`をオーバーライドします)。|
 |[CAnimationTimerEventHandler::SetAnimationController](#setanimationcontroller)|イベントをルーティングするアニメーション コント ローラーへのポインターを格納します。|
 
 ## <a name="remarks"></a>Remarks
@@ -67,7 +57,7 @@ class CAnimationTimerEventHandler : public CUIAnimationTimerEventHandlerBase<CAn
 
 `CAnimationTimerEventHandler`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxanimationcontroller.h
 

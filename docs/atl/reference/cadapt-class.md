@@ -1,33 +1,23 @@
 ---
-title: CAdapt クラス |Microsoft Docs
-ms.custom: ''
+title: CAdapt クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAdapt
 - ATLCOMCLI/ATL::CAdapt
 - ATLCOMCLI/ATL::CAdapt::CAdapt
 - ATLCOMCLI/ATL::CAdapt::m_T
-dev_langs:
-- C++
 helpviewer_keywords:
 - address-of operator
 - adapter objects
 - '& operator, address-of operator'
 - CAdapt class
 ms.assetid: 0bb695a5-72fe-43d1-8f39-7e4da6e34765
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9292c354b630ca5aea8bda7c88f5beab6691ba08
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ec42ab7a9dd36648b1405859cf02bc194f75a73c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052843"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614735"
 ---
 # <a name="cadapt-class"></a>CAdapt クラス
 
@@ -79,7 +69,7 @@ class CAdapt
 
 通常 container-style クラスでは、`CAdapt`、`CComBSTR`、`CComPtr`、または `CComQIPtr` オブジェクトを保存する場合に `_com_ptr_t` を使用します。 これは、C++11 Standard のサポート前には C++ Standard Library コンテナーで最も一般的に必要とされていましたが、C++11 Standard Library コンテナーは `operator&()` をオーバーロードした型と共に自動的に動作します。 標準ライブラリ、これを使用して内部的に実現[std::addressof](../../standard-library/memory-functions.md#addressof)オブジェクトの場合は true。 アドレスを取得します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcomcli.h
 

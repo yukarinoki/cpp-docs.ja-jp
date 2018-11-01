@@ -1,25 +1,15 @@
 ---
-title: 'CFixedStringT: 例のカスタム文字列マネージャー |Microsoft Docs'
-ms.custom: ''
+title: 'CFixedStringT: 例のカスタム文字列マネージャー'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFixedStringT class, using a custom string manager
 ms.assetid: 1cf11fd7-51b8-4b94-87af-02bc25f47dd6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9f16bc5a9357199a5c5113fd33a62467d63e4f1d
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: d35c4c998a6e5913cd972312c511b2a102480c81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43768035"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663165"
 ---
 # <a name="cfixedstringt-example-of-a-custom-string-manager"></a>CFixedStringT: 例のカスタム文字列マネージャー
 
@@ -67,7 +57,7 @@ ATL ライブラリ クラスで使用されるカスタム文字列マネージ
 
 固定バッファーが、使用されていないときに`CFixedStringMgr`により、長さが 0 で初期化します。 これにより、nil の文字列として使用することができます。 おまけとして、`nAllocLength`固定バッファーのメンバーは常に完全な固定バッファーのサイズに設定します。 つまり、`CStringT`呼び出さずに文字列を拡張できる[IAtlStringMgr::Reallocate](../atl-mfc-shared/reference/iatlstringmgr-class.md#reallocate)nil 文字列場合でも、します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** cstringt.h
 

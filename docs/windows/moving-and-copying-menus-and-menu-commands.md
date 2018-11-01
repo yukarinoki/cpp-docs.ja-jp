@@ -1,29 +1,18 @@
 ---
-title: 移動またはコピー メニューとメニュー コマンド (C++) |Microsoft Docs
-ms.custom: ''
+title: 移動またはコピー メニューとメニュー コマンド (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - commands [C++], copying on menus
 - menu items, moving
 - commands [C++], moving on menus
 - menu items, copying
 ms.assetid: 1d8df535-9922-4579-a9c2-37aeac1856eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b12d9d09cd2e4b35c458c2acbefa48eee8c4b0a9
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8f2eeeae00305abb8fc81a48cba18031a09d408a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44312758"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50571276"
 ---
 # <a name="moving-and-copying-menus-and-menu-commands"></a>メニューとメニュー コマンドの移動およびコピー
 
@@ -56,7 +45,7 @@ ms.locfileid: "44312758"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 リソースにアクセスする、マネージ プロジェクトにリソース ファイルを手動で追加するのには静的なリソースを表示して、リソースの割り当ては、プロパティに文字列です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

@@ -1,31 +1,24 @@
 ---
-title: 型とメンバーを非推奨化 (C + + CX) |Microsoft Docs
-ms.custom: ''
+title: 型およびメンバーの非推奨化 (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: b20b01c1-a439-4ff0-8cf3-d7280c492813
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 500b93f3a84ecb39706b5c1575887a7339d1fdd4
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 661445c8a365451d94f938cfe262623866b0fa5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102092"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618635"
 ---
 # <a name="deprecating-types-and-members-ccx"></a>型およびメンバーの非推奨化 (C++/CX)
 
 C++/cli CX、プロデューサーおよびコンシューマーを使用して用の Windows ランタイム型とメンバーの非推奨となる、[非推奨](/uwp/api/windows.foundation.metadata.deprecatedattribute)属性はサポートされています。 この属性が適用された API を利用すると、その API は非推奨とされており、代替 API の使用を推奨する警告メッセージがコンパイル時に表示されます。 独自のパブリック型およびメソッドでこの属性を適用し、独自のカスタム メッセージを提供することもできます。
 
 > [!CAUTION]
-> [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)属性は Windows ランタイム型でのみ使用されます。 標準 C++ のクラスとメンバーは、次のように使用します。 [__declspec(deprecated)](../cpp/deprecated-cpp.md)します。
+> [Deprecated](/uwp/api/windows.foundation.metadata.deprecatedattribute)属性は Windows ランタイム型でのみ使用されます。 標準 C++ のクラスおよびメンバーの場合は、 [__declspec(deprecated)](../cpp/deprecated-cpp.md)を使用します。
 
 ### <a name="example"></a>例
 
-次の例では、たとえば Windows ランタイム コンポーネントで、独自のパブリック API を非推奨にする方法を示します。 2 番目のパラメーターの型の[Windows::deprecationtype::](/uwp/api/windows.foundation.metadata.deprecationtype) API がされているかどうかを指定します。 または削除された非推奨とされます。 現在 DeprecationType::Deprecated という値のみがサポートされています。 属性の 3 番目のパラメーターを指定します、 [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute)属性を適用します。
+次の例では、たとえば Windows ランタイム コンポーネントで、独自のパブリック API を非推奨にする方法を示します。 型 [Windows:Foundation::Metadata::DeprecationType](/uwp/api/windows.foundation.metadata.deprecationtype) 型の 2 番目のパラメーターは、API が非推奨であるか、削除済みであるかを指定します。 現在 DeprecationType::Deprecated という値のみがサポートされています。 属性の 3 番目のパラメーターは、属性の適用対象である [Windows::Foundation::Metadata::Platform](/uwp/api/windows.foundation.metadata.platformattribute) を指定します。
 
 ```
 

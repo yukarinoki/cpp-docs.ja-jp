@@ -1,25 +1,15 @@
 ---
-title: -sdl (追加のセキュリティ チェックを有効にする) |Microsoft Docs
-ms.custom: ''
+title: /sdl (追加のセキュリティ チェックの有効化)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.SDLCheck
-dev_langs:
-- C++
 ms.assetid: 3dcf86a0-3169-4240-9f29-e04a9f535826
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fda6d2c3a608050906626e499b1ddaa48ddd82b9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 84e3b7b80727c359e711f182e2f06a7332989549
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702625"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587461"
 ---
 # <a name="sdl-enable-additional-security-checks"></a>/sdl (追加のセキュリティ チェックの有効化)
 
@@ -65,7 +55,7 @@ ms.locfileid: "45702625"
 
 詳細については、次を参照してください。[警告、/sdl、および初期化されていない変数の検出の向上](https://cloudblogs.microsoft.com/microsoftsecure/2012/06/06/warnings-sdl-and-improving-uninitialized-variable-detection/)します。
 
-#### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+#### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

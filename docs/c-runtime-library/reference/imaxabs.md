@@ -1,10 +1,6 @@
 ---
-title: imaxabs | Microsoft Docs
-ms.custom: ''
+title: imaxabs
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - imaxabs
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - imaxabs
-dev_langs:
-- C++
 helpviewer_keywords:
 - imaxabs function
 ms.assetid: de2566a3-1415-4e9a-91b5-7ac3a49ebf5e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9476db108a4296811e1c88e820d12ddd24b1386
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a7492e08c3a078698292923ce395524ab5327ecf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400490"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666249"
 ---
 # <a name="imaxabs"></a>imaxabs
 
@@ -60,11 +50,11 @@ intmax_t imaxabs(
 **Imaxabs**関数は引数の絶対値を返します。 エラーの戻り値はありません。
 
 > [!NOTE]
-> を使用して表すことができる負の整数の範囲**intmax_t**範囲より大きいに渡す引数を指定することは、正の整数表現できる**imaxabs**変換できません。 引数の絶対値を戻り値で表現できない場合の入力の動作**imaxabs**が定義されていません。
+> を使用して表すことができる負の整数の範囲**intmax_t**範囲よりも大きい、表すことができる正の整数の引数を指定することは**imaxabs**変換することはできません。 引数の絶対値を戻り値で表すことができない場合は入力の動作**imaxabs**が定義されていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**imaxabs**|\<inttypes.h>|
 

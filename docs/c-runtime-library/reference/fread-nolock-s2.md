@@ -1,11 +1,6 @@
 ---
-title: _fread_nolock_s2 | Microsoft ドキュメント
-ms.custom: ''
+title: _fread_nolock_s2
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - _fread_nolock_s
 apilocation:
@@ -24,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - _fread_nolock_s
 - stdio/_fread_nolock_s
-dev_langs:
-- C++
 ms.assetid: 5badb9ab-11df-4e17-8162-30bda2a4572e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db0cd82d251595be586b46fb66a0f0262484e2f8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1dccbd362577e524f0455a2248d4d0f209ea6295
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398251"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580797"
 ---
 # <a name="freadnolocks"></a>_fread_nolock_s
 
@@ -75,11 +64,11 @@ size_t _fread_nolock_s(
 
 「[fread_s](fread-s.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数は、ロックしないバージョンの**fread_s**です。 同じである**fread_s**が、他のスレッドによる干渉から保護されますされません。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
+この関数は、ロックしないバージョンの**fread_s**します。 これは**fread_s**いない他のスレッドによる干渉から保護には、する点を除いて。 他のスレッドをロックするオーバーヘッドが発生しないため、処理が速くなる場合があります。 この関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみご使用ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

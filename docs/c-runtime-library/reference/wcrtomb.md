@@ -1,10 +1,6 @@
 ---
-title: wcrtomb | Microsoft Docs
-ms.custom: ''
+title: wcrtomb
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcrtomb
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - wcrtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters, converting
 - wcrtomb function
 - multibyte characters
 - characters, converting
 ms.assetid: 717f1b21-2705-4b7f-b6d0-82adc5224340
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eca27e81cbb1df26d04059974cdc1ce5313bafa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a5fad3f41c7ed459a1af3fae7c6a5a85c867d5ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412678"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659252"
 ---
 # <a name="wcrtomb"></a>wcrtomb
 
@@ -76,19 +66,19 @@ size_t wcrtomb(
 
 変換されたマルチバイト文字を表すのに必要なバイト数を返します。エラーが発生した場合は -1 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Wcrtomb**関数以降に含まれる指定した変換の状態では、ワイド文字に変換*呼び出すため*に含まれている値から*wchar*にはによって表されるアドレス*mbchar*です。 戻り値は、対応するマルチバイト文字を表すために必要なバイト数が、返すことはできません、複数の**MB_CUR_MAX**バイトです。
+**Wcrtomb**関数以降に含まれる指定された変換の状態では、ワイド文字に変換*呼び出すため*に含まれている値から*wchar*に、によって表されるアドレス*mbchar*します。 戻り値は、対応するマルチバイト文字を表すために必要なバイト数が、返すことはできません、複数の**MB_CUR_MAX**バイト。
 
-場合*呼び出すため*が null で、内部**mbstate_t**オブジェクトの変換状態を含む*mbchar*を使用します。 場合文字シーケンス*wchar*が対応するマルチバイト文字の表現、-1 が返され、 **errno**に設定されている**EILSEQ**です。
+場合*呼び出すため*が null の場合、内部**mbstate_t**オブジェクトの変換状態を含む*mbchar*使用されます。 場合の文字シーケンス*wchar*が対応するマルチバイト文字の表現、-1 が返されます、 **errno**に設定されている**EILSEQ**します。
 
-**Wcrtomb**関数とは異なります[wctomb、_wctomb_l](wctomb-wctomb-l.md)によって、再起動します。 変換状態が格納されている*呼び出すため*以降の呼び出し、同じまたは再開可能なその他の関数にします。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。 たとえば、アプリケーションは使用**後**なく**wcsnlen**場合、後続の呼び出しには、 **wcsrtombs**の代わりに使用された**wcstombs**.
+**Wcrtomb**関数とは異なります[wctomb、_wctomb_l](wctomb-wctomb-l.md)によってその再起動します。 変換の状態が格納されている*呼び出すため*同じか、またはその他の再開可能な関数を呼び出すのためです。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。 たとえば、アプリケーションは使用**後**なく**wcsnlen**後続の呼び出しの場合は、 **wcsrtombs**の代わりに使用された**wcstombs**.
 
 C++ では、この関数にテンプレートのオーバーロードがあります。このオーバーロードは、この関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 ## <a name="exceptions"></a>例外
 
-**Wcrtomb**関数が呼び出す関数、現在のスレッドがない限り、マルチ スレッド セーフは**setlocale、_wsetlocale**この関数の実行中の場合と中に、*呼び出すため*が null です。
+**Wcrtomb**関数は、現在のスレッドで関数が呼び出すない限り、マルチ スレッド セーフ**setlocale**中に、この関数の実行中に、*呼び出すため*が null です。
 
 ## <a name="example"></a>例
 
@@ -133,9 +123,9 @@ int main( void )
 The corresponding wide character "Q" was converted to the "Q" multibyte character.
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**wcrtomb**|\<wchar.h>|
 

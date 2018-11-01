@@ -1,10 +1,6 @@
 ---
-title: _findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64 | Microsoft Docs
-ms.custom: ''
+title: _findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _findfirst
 - _wfindfirst
@@ -56,8 +52,6 @@ f1_keywords:
 - tfindfirst32i64
 - _findfirst
 - _wfindfirst64
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tfindfirst64 function
 - _wfindfirst64i32 function
@@ -96,16 +90,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c57577208e9c2e8306f2c1c30f352e62c068c88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405641"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542081"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64
 
@@ -174,32 +164,32 @@ intptr_t _wfindfirst64i32(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **_findfirst**ファイルまたは一致するファイルのグループを識別する一意な検索のハンドルを返します、 *filespec*後続の呼び出しで使用できますの仕様[_findnext](findnext-functions.md)または[_findclose](findclose.md)です。 それ以外の場合、 **_findfirst** -1 を返し**errno**値は次のいずれかにします。
+成功した場合、 **_findfirst**ファイルまたは一致するファイルのグループを識別する一意の検索のハンドルを返します、 *filespec*仕様で、後続の呼び出しで使用できる[_findnext](findnext-functions.md)または[_findclose](findclose.md)します。 それ以外の場合、 **_findfirst** -1 を返し**errno**値は次のいずれかにします。
 
 |errno の値|条件|
 |-|-|
-**EINVAL**|パラメーターが無効です: *filespec*または*fileinfo*が**NULL**です。 または、オペレーティング システムが予期しないエラーを返しました。
+**EINVAL**|無効なパラメーター: *filespec*または*fileinfo*が**NULL**します。 または、オペレーティング システムが予期しないエラーを返しました。
 **ENOENT**|一致しないファイルの指定。
 **ENOMEM**|メモリ不足です。
-**EINVAL**|無効なファイル名の指定または指定されたファイル名がより大きい**MAX_PATH**です。
+**EINVAL**|無効なファイル名の指定または指定されたファイル名が超えて**MAX_PATH**します。
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 無効なパラメーターが渡されると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター ハンドラーを呼び出します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-呼び出す必要があります[_findclose](findclose.md)いずれかが完了した後、 **_findfirst**または[_findnext](findnext-functions.md)関数 (または任意のバリアント)。 呼び出すと、アプリケーション内でこれらの関数が使用しているリソースが解放されます。
+呼び出す必要があります[_findclose](findclose.md)いずれかで完了した後、 **_findfirst**または[_findnext](findnext-functions.md)関数 (または任意のバリアント)。 呼び出すと、アプリケーション内でこれらの関数が使用しているリソースが解放されます。
 
-これらの関数を持つバリエーション、 **w**プレフィックスは、ワイド文字バージョンです。 それ以外の場合は対応する 1 バイトの関数と同じです。
+これらの関数がのバリエーション、 **w**プレフィックスはワイド文字バージョンは、それ以外の場合、対応する 1 バイト関数と同じです。
 
-これらの関数のバリエーションは、32 ビットや 64 ビットの時刻型と、32 ビットや 64 ビットのファイル サイズをサポートします。 最初の数値のサフィックス (**32**または**64**); 時の型のサイズを示す 2 番目のサフィックスは、いずれかの**i32**または**i64**を示し、かどうか、ファイルのサイズは 32 ビットまたは 64 ビット整数として表されます。 32 ビットと 64 ビットの時刻型とファイル サイズをサポートするバージョンについては、次の表を参照してください。 **I32**または**i64**のでは time 型のサイズと同じ場合、サフィックスは省略されます **_findfirst64**も 64 ビット ファイルの長さをサポートし、 **_findfirst32** 32 ビット ファイルの長さだけをサポートしています。
+これらの関数のバリエーションは、32 ビットや 64 ビットの時刻型と、32 ビットや 64 ビットのファイル サイズをサポートします。 最初の数値のサフィックス (**32**または**64**) は、時刻型のサイズを示す 2 つ目のサフィックスは**i32**または**i64**を示し、かどうか、ファイルのサイズは 32 ビットまたは 64 ビット整数として表されます。 32 ビットと 64 ビットの時刻型とファイル サイズをサポートするバージョンについては、次の表を参照してください。 **I32**または**i64**のでこれは時の型のサイズと同じ場合、サフィックスは省略されます **_findfirst64**も 64 ビット ファイルの長さをサポートし、 **_findfirst32** 32 ビットのファイル長のみをサポートします。
 
-これらの関数のさまざまなフォームを使用して、 **_finddata_t**の構造体、 *fileinfo*パラメーター。 構造体の詳細については、「[ファイル名検索関数](../../c-runtime-library/filename-search-functions.md)」を参照してください。
+これらの関数を使用して、さまざまな形式の **_finddata_t**用の構造、 *fileinfo*パラメーター。 構造体の詳細については、「[ファイル名検索関数](../../c-runtime-library/filename-search-functions.md)」を参照してください。
 
 64 ビットの時刻型を使用するバリエーションでは、3000 年 12 月 31 日 23:59:59 (UTC) までのファイルの作成日を表現できます。 32 ビットの時刻型を使用するバリエーションでは、2038 年 1 月 18 日 23:59:59 (UTC) までの日付のみを表現できます。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
 
-使用時のサイズを明示的に指定するバージョンを使用する特定の理由がない限り **_findfirst**または **_wfindfirst** 3 GB を超えるファイル サイズをサポートする必要がある場合、または、 **_findfirsti64**または **_wfindfirsti64**です。 これらの関数はすべて 64 ビットの時刻型です。 以前のバージョンでは、これらの関数は 32 ビットの時刻型を使用していました。 これは、アプリケーションの互換性に影響する変更で場合 **_USE_32BIT_TIME_T**従来の動作に戻すには。 場合 **_USE_32BIT_TIME_T**が定義されている **_findfirst**、 **_finfirsti64**、し、対応する Unicode バージョンが 32 ビットの時刻を使用します。
+時間のサイズを明示的に指定するバージョンを使用する特定の理由がない限り **_findfirst**または **_wfindfirst** 3 GB を超えるファイル サイズをサポートする必要がある場合、または、 **_findfirsti64**または **_wfindfirsti64**します。 これらの関数はすべて 64 ビットの時刻型です。 以前のバージョンでは、これらの関数は 32 ビットの時刻型を使用していました。 アプリケーションの互換性に影響する変更の場合は、定義 **_USE_32BIT_TIME_T**古い動作に戻す。 場合 **_USE_32BIT_TIME_T**が定義されている **_findfirst**、 **_finfirsti64**、およびそれに対応する Unicode バージョンが 32 ビットの時刻を使用します。
 
 ### <a name="time-type-and-file-length-type-variations-of-findfirst"></a>_findfirst の時刻型とファイル長型のバリエーション
 
@@ -225,7 +215,7 @@ intptr_t _wfindfirst64i32(
 |**_tfindfirst32i64**|**_findfirst32i64**|**_findfirst32i64**|**_wfindfirst32i64**|
 |**_tfindfirst64i32**|**_findfirst64i32**|**_findfirst64i32**|**_wfindfirst64i32**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

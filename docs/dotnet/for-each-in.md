@@ -1,31 +1,21 @@
 ---
-title: ごとで |Microsoft Docs
-ms.custom: ''
+title: for each、in
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::foreach
 - for
 - each
 - in
-dev_langs:
-- C++
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 004cf2fa3534d309cd98f8d70a4dd00755cb71d0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 61ddf4f8dd4042f7be0b892b4fe239caa932a85e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378016"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532750"
 ---
 # <a name="for-each-in"></a>for each、in
 
@@ -73,7 +63,7 @@ ms.locfileid: "46378016"
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: **/ZW**
 
@@ -126,7 +116,7 @@ CLR の構文は同じ、**すべてのランタイム**構文では、次の手
 
 *式*を実装する型に評価される<xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、または型を定義する、`GetEnumerator`実装するメソッドの型を返すか<xref:System.Collections.IEnumerator>すべてで定義されているメソッドの宣言または`IEnumerator`.
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: **/clr**
 

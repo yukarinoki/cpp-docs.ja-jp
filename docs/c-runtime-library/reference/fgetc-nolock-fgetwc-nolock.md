@@ -1,10 +1,6 @@
 ---
-title: _fgetc_nolock、_fgetwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _fgetc_nolock、_fgetwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fgetc_nolock
 - _fgetwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _fgetc_nolock
 - _fgettc_nolock
 - fgetc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgetc_nolock function
 - fgetwc_nolock function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - reading characters from streams
 - _fgettc_nolock function
 ms.assetid: fb8e7c5b-4503-493a-879e-6a1db75aa114
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aed066ec8d0aecb916bae357697d6fd707e88e02
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 568a96caf481fbaf3e80cf60958dc826db49dd86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601722"
 ---
 # <a name="fgetcnolock-fgetwcnolock"></a>_fgetc_nolock、_fgetwc_nolock
 
@@ -76,9 +66,9 @@ wint_t _fgetwc_nolock(
 
 「[fgetc、fgetwc](fgetc-fgetwc.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_fgetc_nolock**と **_fgetwc_nolock**と同じ**fgetc**と**fgetwc**をそれぞれで干渉から保護されないする点を除いて他のスレッド。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_fgetc_nolock**と **_fgetwc_nolock**と同じ**fgetc**と**fgetwc**をそれぞれで干渉から保護されない点を除いて、他のスレッド。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -86,7 +76,7 @@ wint_t _fgetwc_nolock(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fgettc_nolock**|**_fgetc_nolock**|**_fgetc_nolock**|**_fgetwc_nolock**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

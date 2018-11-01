@@ -1,27 +1,17 @@
 ---
-title: system_error クラス | Microsoft Docs
-ms.custom: ''
+title: system_error クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - system_error/std::system_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - system_error class
 ms.assetid: 2eeaacbb-8a4a-4ad7-943a-997901a77f32
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bde8e448d54be41516e65969f60b0651cacc8ef1
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: bad260e5372965c35517986da8feb2cfa3c0e1d2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33854559"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622262"
 ---
 # <a name="systemerror-class"></a>system_error クラス
 
@@ -51,13 +41,13 @@ const error_code& code() const throw();
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 クラス [exception](../standard-library/exception-class.md) で `what` によって返される値は、`_Message` および型 [error_code](../standard-library/error-code-class.md) (`code` または `error_code(_Errval, _Errcat)` のいずれか) の格納されているオブジェクトから構築されます。
 
 メンバー関数 `code` は、格納されている [error_code](../standard-library/error-code-class.md) オブジェクトを返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<system_error>
 

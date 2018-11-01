@@ -1,10 +1,6 @@
 ---
-title: _putc_nolock、_putwc_nolock | Microsoft Docs
-ms.custom: ''
+title: _putc_nolock、_putwc_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putc_nolock
 - _putwc_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _putwc_nolock
 - _putc_nolock
 - putc_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - puttc_nolock function
 - putc_nolock function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - _puttc_nolock function
 - _putwc_nolock function
 ms.assetid: 3cfc7f21-c9e8-4b7f-b0fb-af0d4d85e7e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5975c25c015bb77c627eda3483566f358aedbedb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b2a30b83f0746b1b4f5ab03b4c3dfa0229656bb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50510915"
 ---
 # <a name="putcnolock-putwcnolock"></a>_putc_nolock、_putwc_nolock
 
@@ -80,11 +70,11 @@ wint_t _putwc_nolock(
 
 「**putc、putwc**」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_putc_nolock**と **_putwc_nolock**なしのバージョンと同じです、 **_nolock**他のスレッドによる干渉から保護されない点を除いて、サフィックスが付いています。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_putc_nolock**と **_putwc_nolock**なしのバージョンと同じですが、 **_nolock**サフィックス他のスレッドによる干渉から保護されません。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
-**_putwc_nolock**のワイド文字バージョンは、 **_putc_nolock**; ストリームが ANSI モードで開かれている場合、2 つの関数動作は同じです。 **_putc_nolock** UNICODE ストリームへの出力はサポートされていません。
+**_putwc_nolock**のワイド文字バージョンは、 **_putc_nolock**; 2 つの関数は、動作、ストリームが ANSI モードで開かれている場合は同じです。 **_putc_nolock** UNICODE ストリームへの出力をサポートされていません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -92,14 +82,14 @@ wint_t _putwc_nolock(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_puttc_nolock**|**_putc_nolock**|**_putc_nolock**|**_putwc_nolock**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_putc_nolock**|\<stdio.h>|
 |**_putwc_nolock**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

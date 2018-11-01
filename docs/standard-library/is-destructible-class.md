@@ -1,28 +1,17 @@
 ---
-title: is_destructible クラス | Microsoft Docs
-ms.custom: ''
+title: is_destructible クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_destructible
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_destructible
 ms.assetid: 3bb9b718-1ad5-49ae-93cc-92b93b546b4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bd23064123513281099fa14a690679fa046657fe
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1036a3756a736ee3916ed9fca84aa935bb0ba2cf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106628"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666180"
 ---
 # <a name="isdestructible-class"></a>is_destructible クラス
 
@@ -44,7 +33,7 @@ struct is_destructible;
 
 場合、型述語のインスタンスは true を保持型*T*は、破棄可能な型、それ以外の場合は false を保持します。 破棄可能な型は、参照型、オブジェクト型、および `U` に等しいいくつかの型 `remove_all_extents_t<T>` に対して、未評価オペランド `std::declval<U&>.~U()` が整形式である型です。 他の種類は、不完全な型を含めた**void**、関数の型とは、破棄可能な型ではありません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

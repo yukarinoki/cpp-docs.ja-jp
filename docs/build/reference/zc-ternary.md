@@ -1,25 +1,18 @@
 ---
-title: /Zc:ternary (条件演算子ルールの適用) |Microsoft Docs
+title: /Zc:ternary (条件演算子ルールの適用)
 ms.date: 3/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Zc:ternary
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-author: corob-msft
-ms.author: corob
-ms.openlocfilehash: a8cd0a4034b07d170bc9ca531d60cce508681a2a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2bc9e924656b9e1cb914255780adc4ae50220275
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717824"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618193"
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (条件演算子ルールの適用)
 
@@ -156,7 +149,7 @@ int main(int argc, char**) {
 
 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

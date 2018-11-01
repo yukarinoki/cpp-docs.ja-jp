@@ -1,12 +1,6 @@
 ---
-title: C++ AMP の概要 |Microsoft Docs
-ms.custom: ''
+title: C++ AMP の概要
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a4f574bc55b383fc35d37790f74ddcaa73df3e96
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 070f0885f11f29413aca3028d4f747e0edfd2413
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405477"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663789"
 ---
 # <a name="c-amp-overview"></a>C++ AMP の概要
 
@@ -489,9 +479,9 @@ C++ AMP には、アクセラレータ機能を使用するグラフィックス
 
 - [マネージド コードからのネイティブ関数の呼び出し](../../dotnet/calling-native-functions-from-managed-code.md)
 
-## <a name="c-amp-and-concurrency-visualizer"></a>C++ AMP と同時実行ビジュアライザー
+## <a name="c-amp-and-concurrency-visualizer"></a>C++ AMP とコンカレンシー ビジュアライザー
 
-同時実行ビジュアライザーには、C++ AMP コードのパフォーマンスを分析するためのサポートが含まれます。 これらの機能については、次の記事を参照してください。
+コンカレンシー ビジュアライザーには、C++ AMP コードのパフォーマンスを分析するためのサポートが含まれます。 これらの機能については、次の記事を参照してください。
 
 - [GPU アクティビティ グラフ](/visualstudio/profiling/gpu-activity-graph)
 

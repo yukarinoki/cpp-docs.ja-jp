@@ -1,28 +1,18 @@
 ---
-title: is_empty クラス | Microsoft Docs
-ms.custom: ''
+title: is_empty クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_empty
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_empty class
 - is_empty
 ms.assetid: 44a6fc92-7e55-4fbe-9a24-2a0ce2dccba0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90965b81b45b041be7cc9e717c4072efdbb9c2ac
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 83b03ed66d6a0eaec609127d437a5d01d4e7a25e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44099487"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633091"
 ---
 # <a name="isempty-class"></a>is_empty クラス
 
@@ -81,7 +71,7 @@ is_empty<empty> == true
 is_empty<int> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

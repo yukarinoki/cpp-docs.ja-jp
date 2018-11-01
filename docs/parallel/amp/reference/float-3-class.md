@@ -1,10 +1,6 @@
 ---
-title: float_3 クラス |Microsoft Docs
-ms.custom: ''
+title: float_3 クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3::get_zyx
 - amp_short_vectors/Concurrency::graphics::float_3::set_y
@@ -75,21 +71,15 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3::gbr
 - amp_short_vectors/Concurrency::graphics::float_3::operator*=
 - amp_short_vectors/Concurrency::graphics::float_3::get_xy
-dev_langs:
-- C++
 helpviewer_keywords:
 - amp_short_vectors/Concurrency::graphics::float_3
 ms.assetid: 209df7a5-08d7-48b4-8ba5-77603642cdd8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9b1f57232848f21c2e65496dfb227674c8a57cdb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ca8da31f37c74f80579a59fc77bec522e1ff9fe9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437392"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609437"
 ---
 # <a name="float3-class"></a>float_3 クラス
 
@@ -214,7 +204,7 @@ class float_3;
 
 `float_3`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp_short_vectors.h
 

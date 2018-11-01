@@ -1,10 +1,6 @@
 ---
-title: _chgsign、_chgsignf、_chgsignl | Microsoft Docs
-ms.custom: ''
+title: _chgsign、_chgsignf、_chgsignl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chgsignl
 - _chgsign
@@ -27,24 +23,18 @@ f1_keywords:
 - chgsign
 - _chgsignl
 - _chgsign
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chgsignl function
 - _chgsignf function
 - chgsign function
 - _chgsign function
 ms.assetid: a6646f8e-213d-4564-8617-f43bc66f989f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 781359972b67b2634f8f762fac98bf9216ef5ab5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dad60b1fec4d402d340eeb4c87028975ef09e3ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393444"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652635"
 ---
 # <a name="chgsign-chgsignf-chgsignl"></a>_chgsign、_chgsignf、_chgsignl
 
@@ -71,11 +61,11 @@ long double _chgsignl(
 
 ## <a name="return-value"></a>戻り値
 
-**_Chgsign**関数は、浮動小数点引数と同じ値を返す*x*、ですが、その符号を反転します。 エラーの戻り値はありません。
+**_Chgsign**関数は、浮動小数点引数と同じ値を返す*x*、しく、符号が逆になります。 エラーの戻り値はありません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_chgsign**|\<float.h>|
 |**_chgsignf**、 **_chgsignl**|\<math.h>|

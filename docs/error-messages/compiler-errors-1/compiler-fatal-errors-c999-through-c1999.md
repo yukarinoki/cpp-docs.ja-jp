@@ -1,10 +1,6 @@
 ---
-title: コンパイラ エラー (致命的なエラー) C999 C1999 から |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラ エラー (致命的なエラー) C999 から C1999
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1012
 - C1013
@@ -165,19 +161,13 @@ helpviewer_keywords:
 - C1901
 - C1903
 - C1904
-dev_langs:
-- C++
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bdd0949d2d76cad636f833a75ea1371246ee3ebf
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33237264"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677332"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>コンパイラ エラー (致命的なエラー) C999 から C1999
 
@@ -198,7 +188,7 @@ ms.locfileid: "33237264"
 |[致命的なエラー C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|'*string*' (オプション '*option*' 中) は認識できません。|
 |[致命的なエラー C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|入力ファイルが指定されていません。|
 |[致命的なエラー C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|コンパイラの制限: マクロの入れ子のレベルが深すぎます。|
-|[致命的なエラー C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。 追加忘れました ' #include <*ファイル*>' をソースですか?|
+|[致命的なエラー C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。 追加を忘れました ' #include <*ファイル*>'、ソースにでしょうか。|
 |致命的なエラー C1012|かっこが一致していません。'*character*' がありません。|
 |致命的なエラー C1013|コンパイラの制限: 始めかっこが多すぎます。|
 |致命的なエラー C1014|インクルード ファイルが多すぎます: 深さ = *number*|
@@ -224,7 +214,7 @@ ms.locfileid: "33237264"
 |致命的なエラー C1048|指定した '*string*' は '*option*' に対して有効な文字ではありません。|
 |致命的なエラー C1049|数値の引数 '*value*' が無効です。|
 |[致命的なエラー C1051](../../error-messages/compiler-errors-1/fatal-error-c1051.md)|プログラム データベース ファイル '*file*' は旧形式です。このファイルを削除して再コンパイルしてください。|
-|[致命的なエラー c1052 など](fatal-error-c1052.md)|プログラム データベース ファイルでは、'*filename*'、;/DEBUG:fastlink のリンカーによって生成されたコンパイラできませんこのような PDB ファイルを更新; してください削除するかまたは/Fd を使用して、別の PDB ファイル名を指定。|
+|[致命的なエラー C1052](fatal-error-c1052.md)|プログラム データベース ファイルでは、'*filename*'、;/DEBUG:fastlink のリンカーによって生成されたコンパイラできませんこのような PDB ファイルを更新; か削除してください、/Fd を使用して、別の PDB ファイル名を指定するには|
 |致命的なエラー C1053|'*function*': 関数が大きすぎます|
 |[致命的なエラー C1054](../../error-messages/compiler-errors-1/fatal-error-c1054.md)|コンパイラの制限: 初期化子の入れ子のレベルが深すぎます。|
 |[致命的なエラー C1055](../../error-messages/compiler-errors-1/fatal-error-c1055.md)|コンパイラの制限: キーが足りません。|
@@ -275,13 +265,13 @@ ms.locfileid: "33237264"
 |致命的なエラー C1111|テンプレート パラメーターやジェネリック パラメーターが多すぎます。|
 |致命的なエラー C1112|コンパイラの制限: `'number`' マクロの引数が多すぎます。制限は *number* です。|
 |[致命的なエラー C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using が '*file*' で失敗しました。|
-|致命的なエラー C1114|'*file*': WinRT はマネージ アセンブリの #using をサポートしていません。|
+|致命的なエラー C1114|'*file*': WinRT はマネージド アセンブリの #using をサポートしていません。|
 |[致命的なエラー C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|'*function*' の GetProcAddress の呼び出しに失敗しました。|
 |[致命的なエラー C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|CryptoAPI への呼び出しに失敗しました|
 |[致命的なエラー C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自動メモリ割り当てが *size*を超えました。|
 |[致命的なエラー C1128](../../error-messages/compiler-errors-1/fatal-error-c1128.md)|セクションの数がオブジェクト ファイル形式の制限を超えています: /bigobj と共にコンパイルしてください|
 |[致命的なエラー C1189](../../error-messages/compiler-errors-1/fatal-error-c1189.md)|#error: *message*|
-|致命的なエラー C1190|マネージ ターゲット コードには '/clr' が必要です。|
+|致命的なエラー C1190|マネージド ターゲット コードには '/clr' が必要です。|
 |[致命的なエラー C1191](../../error-messages/compiler-errors-1/fatal-error-c1191.md)|'*file*' はグローバル スコープでのみインポートできます。|
 |[致命的なエラー C1192](../../error-messages/compiler-errors-1/fatal-error-c1192.md)|#using が '*file*' で失敗しました。|
 |致命的なエラー C1193|*file*(*line*) で予期されたエラーは発生しませんでした。|
@@ -292,7 +282,7 @@ ms.locfileid: "33237264"
 |致命的なエラー C1202|再帰的な型の指定または関数の依存関係が複雑すぎます。|
 |致命的なエラー C1205|ジェネリックは、インストールされているランタイムのバージョンではサポートされていません|
 |致命的なエラー C1206|AppDomain ごとのデータは、インストールされているランタイムのバージョンではサポートされていません|
-|致命的なエラー C1207|マネージ テンプレートは、インストールされているランタイムのバージョンではサポートされていません|
+|致命的なエラー C1207|マネージド テンプレートは、インストールされているランタイムのバージョンではサポートされていません|
 |致命的なエラー C1208|スタック上での参照クラスの割り当ては、インストールされているランタイムのバージョンではサポートされていません|
 |致命的なエラー C1209|フレンド アセンブリは、インストールされているランタイムのバージョンではサポートされていません|
 |致命的なエラー C1210|/clr:pure および /clr:safe は、インストールされているランタイムのバージョンではサポートされていません|
@@ -316,7 +306,7 @@ ms.locfileid: "33237264"
 |[致命的なエラー C1382](../../error-messages/compiler-errors-1/fatal-error-c1382.md)|PCH ファイル '*file*' は、'*obj*' が生成された後にリビルドされています。 このオブジェクトをリビルドしてください。|
 |致命的なエラー C1383|コンパイラ オプション /GL は、インストールされた共通言語ランタイムのバージョンと互換性がありません|
 |致命的なエラー C1384|PGO_PATH_TRANSLATION の設定が正しくないため '*file*' とリンクできません。|
-|致命的なエラー C1451|concurrency::parallel_for_each の呼び出し先をコンパイルするときにデバッグ情報を生成できませんでした (concurrency::parallel_for_each の位置: '*callsite*')|
+|致命的なエラー C1451|'*callsite*' で concurrency::parallel_for_each の呼び出し先をコンパイルするときにデバッグ情報を生成できませんでした|
 |致命的なエラー C1505|コンパイラは、コードを評価できません。|
 |[致命的なエラー C1506](../../error-messages/compiler-errors-1/fatal-error-c1506.md)|ブロックが大きすぎて、コンパイルできません。|
 |致命的なエラー C1508|コンパイラの制限: '*function*': 引数のサイズが 65535 バイトを超えています。|

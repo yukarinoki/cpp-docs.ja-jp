@@ -1,26 +1,16 @@
 ---
-title: C/C++ プリプロセッサ リファレンス |Microsoft Docs
-ms.custom: ''
+title: C/C++ プリプロセッサ リファレンス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor
 - preprocessor, reference overview
 ms.assetid: e4a52843-7016-4f6d-8b40-cb1ace18f805
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c7c1b84c23ae16828e2d73cb1f45084dfd5806e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 1ad46a1a3006cbca52336bf65bcfbafd37e59752
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055334"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607663"
 ---
 # <a name="cc-preprocessor-reference"></a>C/C++ プリプロセッサ リファレンス
 *C/C++ プリプロセッサ リファレンス*Microsoft C/C で実装されているプリプロセッサについて説明します。 プリプロセッサは C および C++ ファイルをコンパイラに渡す前の準備的な処理を実行します。 プリプロセッサを使用して、コードの条件付きコンパイル、ファイルの挿入、コンパイル時のエラー メッセージの指定、コード セクションへのコンピューター固有の規則の適用を行うことができます。

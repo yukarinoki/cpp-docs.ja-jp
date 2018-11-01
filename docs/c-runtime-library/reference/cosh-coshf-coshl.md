@@ -1,10 +1,6 @@
 ---
-title: cosh、coshf、coshl |Microsoft ドキュメント
-ms.custom: ''
+title: cosh、coshf、coshl
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cosh
 - coshf
@@ -26,24 +22,18 @@ f1_keywords:
 - cosh
 - coshf
 - coshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosh function
 - coshf function
 - coshl function
 - trigonometric functions
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d77bb1d1b8f055bb4fe11d4c44c48fb3bf3be535
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0f55e084e760cb6d04dbe7ec4fefb5e2ac1d79fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395472"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609535"
 ---
 # <a name="cosh-coshf-coshl"></a>cosh、coshf、coshl
 
@@ -69,22 +59,22 @@ long double cosh( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-ハイパーボリック コサイン*x*です。
+ハイパーボリック コサイン*x*します。
 
-既定で結果が大きすぎる場合、 **cosh**、 **coshf**、または**coshl**呼び出すには、この関数を返します**HUGE_VAL** を設定および**errno**に**ERANGE**です。
+既定では、結果が大きすぎる場合、 **cosh**、 **coshf**、または**coshl**呼び出すには、関数を返します**HUGE_VAL** を設定し、**errno**に**ERANGE**します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|none|**_DOMAIN**|
+|± **QNAN**、 **IND**|none|**(_D)**|
 |*x* ≥ 7.104760 e + 002|**不正確な**+**オーバーフロー**|**オーバーフロー**|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**cosh**を受け取り、返します**float**または**長い****二重**値。 C プログラムでは、 **cosh**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cosh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**cosh**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
 |**coshf**、 **cosl**、 **coshl**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -92,7 +82,7 @@ C++ では、オーバー ロードできるよう、ためのオーバー ロ�
 
 ## <a name="example"></a>例
 
-例を参照してください[sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)です。
+例を参照してください。 [sinh、sinhf、sinhl](sinh-sinhf-sinhl.md)します。
 
 ## <a name="see-also"></a>関連項目
 

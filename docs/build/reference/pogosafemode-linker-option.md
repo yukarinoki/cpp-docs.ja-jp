@@ -1,58 +1,48 @@
 ---
-title: /POGOSAFEMODE (スレッド セーフ モードで実行 PGO) |Microsoft ドキュメント
-ms.custom: ''
+title: /POGOSAFEMODE (スレッド セーフ モードで実行 PGO)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 f1_keywords:
 - POGOSAFEMODE
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81392c67b47a0fa90c057ee4295667a054e34498
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f210884d693ef0d778943580b9c5a7b2ec2ea336
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32377334"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544431"
 ---
 # <a name="pogosafemode-run-pgo-in-thread-safe-mode"></a>/POGOSAFEMODE (スレッド セーフ モードで実行 PGO)
 
-**Visual Studio 2015 以降で/POGOSAFEMODE オプションは推奨されない**です。 使用して、 [/GENPROFILE: 正確な](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)と **/GENPROFILE:NOEXACT**オプションの代わりにします。 **/POGOSAFEMODE**リンカー オプションは、トレーニングの実行プロファイルのガイド付き最適化の (PGO) の中にプロファイル データのキャプチャにスレッド セーフ モードを使用する、インストルメント化されたビルドが作成されたことを指定します。
+**Visual Studio 2015 以降では、/POGOSAFEMODE オプションは非推奨**します。 使用して、 [/GENPROFILE: 正確な](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)と **/GENPROFILE:NOEXACT**オプションの代わりにします。 **/POGOSAFEMODE**リンカー オプションは、スレッド セーフ モードを使用して、トレーニングの実行プロファイル ガイド付き最適化の (PGO) の中にプロファイル データのキャプチャをインストルメント化されたビルドが作成されたことを指定します。
 
 ## <a name="syntax"></a>構文
 
 > **/POGOSAFEMODE**
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-最適化のガイド付きプロファイル (PGO) では、2 つのモードを持つ、プロファイリング フェーズ:*高速モード*と*セーフ モード*です。 高速モードでプロファイリングを行う、データ カウンター数を増やしますインクリメント命令が使用されます。 インクリメント命令は高速ですはスレッド セーフではありません。 セーフ モードでプロファイリングを行う、データ カウンター数を増やしますインタロック インクリメント命令が使用されます。 この命令は、時間がかかりますが、増分の命令があり、スレッド セーフでは、同様に、同じ機能を持ちます。
+最適化のガイド付きプロファイル (PGO) が、プロファイリング フェーズ中に 2 つのモードを持つ:*高速モード*と*セーフ モード*します。 高速モードでプロファイリングを行う、データ カウンター数を増やしますインクリメント命令が使用されます。 インクリメント命令は高速ですが、スレッド セーフではありません。 セーフ モードでプロファイリングを行う、データ カウンター数を増やしますインタロックされたインクリメント命令が使用されます。 この命令は、同じ機能を低速ですが、増分命令とスレッド セーフです。
 
-**/POGOSAFEMODE**オプションは、セーフ モードを使用してインストルメント化されたビルドを設定します。 このオプションは、必ず際に使用される、非推奨[/LTCG:PGINSTRUMENT](ltcg-link-time-code-generation.md) PGO instrumentation リンカーのフェーズ中に、指定します。
+**/POGOSAFEMODE**オプションは、セーフ モードを使用してインストルメント化されたビルドを設定します。 このオプションはのみに際に使用される、非推奨[/LTCG:PGINSTRUMENT](ltcg-link-time-code-generation.md) PGO インストルメンテーション リンカーのフェーズ中に指定されました。
 
 既定では、PGO プロファイリングは高速モードで動作します。 **/POGOSAFEMODE**がセーフ モードを使用するかどうかにのみ必要です。
 
-実行するには PGO プロファイリングをセーフ モードで、いずれかを使用する必要があります **/GENPROFILE: 正確な**(推奨)、環境変数を使用または[PogoSafeMode](environment-variables-for-profile-guided-optimizations.md)かリンカー スイッチ **/POGOSAFEMODE**、システムによって異なります。 x64 コンピューターでプロファイリングを実行する場合は、リンカー スイッチを使用する必要があります。 X86 でプロファイリングを実行するかどうか、コンピューター、リンカー スイッチを使用するか、PGO インストルメンテーション プロセスを開始する前に、任意の値を環境変数を定義することがあります。
+セーフ モードでの PGO プロファイリングを実行する、いずれかを使用する必要があります **/GENPROFILE: 正確な**(推奨)、環境変数を使用または[PogoSafeMode](environment-variables-for-profile-guided-optimizations.md)かリンカー スイッチ **/POGOSAFEMODE**、システムによって異なります。 x64 コンピューターでプロファイリングを実行する場合は、リンカー スイッチを使用する必要があります。 X86 でプロファイリングを実行するかどうか、コンピューター リンカー スイッチを使用するか、PGO インストルメンテーションのプロセスを開始する前に、任意の値を環境変数を定義することがあります。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「 [Visual C プロジェクト プロパティの設定](../../ide/working-with-project-properties.md)です。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **最適化**プロパティ ページ。
 
-1. **リンク時コード生成**プロパティを選択して**ガイド付き最適化のプロファイルのインストルメント化 (//ltcg:pginstrument)** です。
+1. **リンク時コード生成**プロパティ選択**ガイド付き最適化のプロファイル - インストルメント (//ltcg:pginstrument)** します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
-1. 入力、 **/POGOSAFEMODE**にオプション、**追加オプション**ボックス。 選択**OK**して変更を保存します。
+1. 入力、 **/POGOSAFEMODE**にオプション、**追加オプション**ボックス。 **OK** を選択して変更を保存してください。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>」を参照してください。
+- 以下を参照してください。<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.AdditionalOptions%2A>
 
 ## <a name="see-also"></a>関連項目
 

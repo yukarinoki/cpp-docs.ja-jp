@@ -1,14 +1,8 @@
 ---
-title: 'TN031: コントロール バー |Microsoft Docs'
-ms.custom: ''
+title: 'テクニカル ノート 31: コントロール バー'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.controls.bars
-dev_langs:
-- C++
 helpviewer_keywords:
 - control bars [MFC], styles
 - CStatusBar class [MFC], Tech Note 31 usage
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - TN031
 - styles [MFC], control bars
 ms.assetid: 8cb895c0-40ea-40ef-90ee-1dd29f34cfd1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 412dd9e0a4e81ee6152197634205401cbe71df2e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9029b8c0fb6aa20de62dbdf21aedeae6d8a15994
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463308"
 ---
 # <a name="tn031-control-bars"></a>テクニカル ノート 31: コントロール バー
 
@@ -74,7 +64,7 @@ A`ControlBar`は、 `CWnd`-派生クラスです。
 
 - 派生クラスの実装をサポートする。
 
-通常、C++ コントロール バー オブジェクトは `CFrameWnd` 派生クラスのメンバーとして埋め込まれ、親の `HWND` とオブジェクトが破棄された場合にはクリーンアップされます。 単に設定できます、ヒープ上のコントロール バー オブジェクトを割り当てる必要がある場合、 *m_bAutoDestruct*メンバーを**TRUE**して、コントロール バーを"**削除**"ときに、 `HWND`は破棄されます。
+通常、C++ コントロール バー オブジェクトは `CFrameWnd` 派生クラスのメンバーとして埋め込まれ、親の `HWND` とオブジェクトが破棄された場合にはクリーンアップされます。 ヒープ上にコントロール バー オブジェクトを割り当てる必要がある場合は、 *が破棄されたときにコントロール バーが "* delete this **" を実行するように、** m_bAutoDestruct**メンバーを**TRUE `HWND` に設定します。
 
 > [!NOTE]
 >  独自に作成する場合`CControlBar`-など、クラスの派生の MFC のいずれかを使用するのではなく、派生クラスで`CStatusBar`、 `CToolBar`、または`CDialogBar`を設定する必要があります、 *m_dwStyle*データ メンバー。 これは、オーバーライドで実行できます`Create`:

@@ -1,10 +1,6 @@
 ---
-title: strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l | Microsoft Docs
-ms.custom: ''
+title: strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbspbrk
 - wcspbrk
@@ -31,8 +27,6 @@ f1_keywords:
 - _tcspbrk
 - _ftcspbrk
 - wcspbrk
-dev_langs:
-- C++
 helpviewer_keywords:
 - fstrpbrk function
 - _ftcspbrk function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _mbspbrk function
 - mbspbrk_l function
 ms.assetid: 80b504f7-a167-4dde-97ad-4ae3000dc810
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: db26c60badceab6c1422146a32de3d6dd2ecb8bd
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: 059b0659a8088783c6d169288de486b41a6e8d82
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181134"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468966"
 ---
 # <a name="strpbrk-wcspbrk-mbspbrk-mbspbrkl"></a>strpbrk、wcspbrk、_mbspbrk、_mbspbrk_l
 
@@ -143,7 +133,7 @@ NULL で終わる文字セット。
 
 `strpbrk`関数内の文字の最初の出現箇所にポインターを返す*str*内の文字セットに属する*strCharSet*します。 検索には、終端の NULL 文字は含まれません。
 
-`wcspbrk` 関数と `_mbspbrk` 関数は、`strpbrk` 関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcspbrk` 関数の引数と戻り値はワイド文字列で、`_mbspbrk` 関数の引数と戻り値はマルチバイト文字列です。
+`wcspbrk` 関数と `_mbspbrk` 関数は、 `strpbrk`関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcspbrk` 関数の引数と戻り値はワイド文字列で、`_mbspbrk` 関数の引数と戻り値はマルチバイト文字列です。
 
 `_mbspbrk` はそのパラメーターを検証します。 場合*str*または*strCharSet*が null の場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合`_mbspbrk`NULL を返し、設定`errno`をします。 `strpbrk` および `wcspbrk` は、パラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
 

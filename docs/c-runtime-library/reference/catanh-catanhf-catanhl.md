@@ -1,11 +1,6 @@
 ---
-title: catanh、catanhf、catanhl | Microsoft Docs
-ms.custom: ''
+title: catanh、catanhf、catanhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - catanh
 - catanhf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/catanh
 - complex/catanhf
 - complex/catanhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - catanh function
 - catanhf function
 - catanhl function
 ms.assetid: 1b6021cb-647a-41b4-9d7f-919cc8b57b86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd74d00e7f5be5e7631bc33fb9b7ea13eb32a407
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c71d4e44de72b54fd334fc2464ca221f36855a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393951"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646363"
 ---
 # <a name="catanh-catanhf-catanhl"></a>catanh、catanhf、catanhl
 
-ブランチ カット実際の軸に沿った間隔 [-1; +1] 以外に、複素数の逆ハイパーボリック タンジェントを取得します。
+実軸に沿って区間 [-1; +1] の外側の分岐線法を複素数の逆ハイパーボリック タンジェントを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -79,15 +68,15 @@ _Lcomplex catanhl(
 
 ## <a name="return-value"></a>戻り値
 
-逆ハイパーボリック タンジェント*z*、(ラジアン単位)。 結果は実数の軸に沿っておよび間隔で範囲指定された [-iπ/2; + iπ/2] 虚数部の軸に沿ったです。 ドメイン エラーが発生*z*が [-1, +1] の間隔の範囲外です。 極エラーが発生*z*が-1 または +1。
+逆ハイパーボリック タンジェント*z*、(ラジアン単位)。 結果は、実軸に沿って、間隔 [-π/2; + π/2] 虚軸。 ドメイン エラーが発生*z*区間 [-1, +1] の外側です。 極エラーが発生*z*が-1 または +1。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**catanh**を受け取り、返します **_Fcomplex**と **_Lcomplex**値。 C プログラムでは、 **catanh**常に受け取りを返す、 **_Dcomplex**値。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **catanh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**catanh**は、 **_Dcomplex**値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**catanh**、 **catanhf**、 **catanhl**|\<complex.h>|\<ccomplex>|
 

@@ -1,27 +1,17 @@
 ---
-title: ジェネリックとテンプレート (C +/cli CLI) |Microsoft Docs
-ms.custom: ''
+title: ジェネリックとテンプレート (C +/cli CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - generics [C++], vs. templates
 - templates, C++
 ms.assetid: 63adec79-b1dc-4a1a-a21d-b8a72a8fce31
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 4cc12d48bc6de95d55ba56f34df54b60c0ded846
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 81b2812faa2fcb7acfdc272474d22039afa24655
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50066670"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660049"
 ---
 # <a name="generics-and-templates-ccli"></a>ジェネリックとテンプレート (C +/cli CLI)
 

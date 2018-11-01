@@ -1,10 +1,6 @@
 ---
-title: atoll、_atoll_l、_wtoll、_wtoll_l |Microsoft Docs
-ms.custom: ''
+title: atoll、_atoll_l、_wtoll、_wtoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoll
 - _atoll_l
@@ -31,28 +27,22 @@ f1_keywords:
 - _tstoll
 - _wtoll_l
 - atoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - atoll function
 - _wtoll_l function
 - _wtoll function
 - _atoll_l function
 ms.assetid: 5e85fcac-b351-4882-bff2-6e7c469b7fa8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15a0753a487d969d3f75e1e41b6509ea40b9b19f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a857e0f04ff875a740a8a5d1401484cdaf9d3c75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396116"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613979"
 ---
 # <a name="atoll-atolll-wtoll-wtolll"></a>atoll、_atoll_l、_wtoll、_wtoll_l
 
-文字列に変換、**長い****長い**整数。
+文字列に変換を**長い****長い**整数。
 
 ## <a name="syntax"></a>構文
 
@@ -83,27 +73,27 @@ long long _wtoll_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数を返します、**長い****長い**数として、入力文字列を解釈することによって生成された値。 戻り値**atoll**入力は、その型の値に変換できない場合は 0 です。
+各関数を返します、**長い****長い**入力文字を数字として解釈することによって生成される値。 戻り値**atoll**入力をその型の値に変換できない場合は 0 です。
 
-大きな正の整数値によるオーバーフローの**atoll**返します**含ま**、しを返します、大きい負の整数値でオーバーフローの**LLONG_MIN**です。
+大きい正の整数値によるオーバーフローの**atoll**返します**LLONG_MAX**、しを返します、大きい負の整数値によるオーバーフローの**LLONG_MIN**します。
 
-すべての範囲外の場合、 **errno**に設定されている**ERANGE**です。 渡されるパラメーターがある場合**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
+すべての範囲外の場合、 **errno**に設定されている**ERANGE**します。 渡されるパラメーターがある場合**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数に文字列を変換する、**長い****長い**整数値。
+これらの関数は文字の文字列を変換、**長い****長い**整数値。
 
 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
 *Str*引数**atoll**は次の形式があります。
 
-> [*空白*] [*記号*] [*桁*]
+> [*空白*] [*サインオン*] [*桁*]
 
-A*空白*は無視されますスペースまたはタブ文字で構成されています。*記号*いずれかですプラス (+) またはマイナス記号 (-); と*桁*は 1 つ以上の数字です。
+A*空白*は無視されますスペースまたはタブ文字含まれています。*記号*はプラス (+) またはマイナス (–) と*桁*は 1 つ以上の数字。
 
-**_wtoll**と同じ**atoll**ワイド文字の文字列をパラメーターとして受け取る点を除いて。
+**_wtoll**ヲェヒェケェ ・ **atoll**ワイド文字の文字列をパラメーターとして受け取る点を除いて。
 
-これらの関数を持つバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスが、それがないバージョンと同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数がのバージョン、 **_l**サフィックスが、現在のロケールの代わりに渡されるロケール パラメーターを使用することを除き、これがないバージョンと同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -113,7 +103,7 @@ A*空白*は無視されますスペースまたはタブ文字で構成され�
 |**_tstoll_l**|**_atoll_l**|**_atoll_l**|**_wtoll_l**|
 |**_ttoll**|**_atoll**|**_atoll**|**_wtoll**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|
@@ -122,7 +112,7 @@ A*空白*は無視されますスペースまたはタブ文字で構成され�
 
 ## <a name="example"></a>例
 
-このプログラムを使用する方法を示しています、 **atoll**数値を文字列として格納されている数値を変換する関数。
+このプログラムは、使用する方法を示します、 **atoll**数値を文字列として格納されている数字に変換する関数。
 
 ```C
 // crt_atoll.c

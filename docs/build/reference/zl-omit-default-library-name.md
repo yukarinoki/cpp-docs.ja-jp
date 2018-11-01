@@ -1,15 +1,9 @@
 ---
-title: -Zl (既定のライブラリ名の省略) |Microsoft Docs
-ms.custom: ''
+title: /Zl (既定のライブラリ名の省略)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /zi
 - VC.Project.VCCLCompilerTool.OmitDefaultLibName
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Zl compiler option [C++]
 - ZI compiler option
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f09abebb8fc142bbe2390f61d790a5885c9aebe
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: ba30efd76e94749dd261f3528535d674b5e155e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707318"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621911"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (既定のライブラリ名の省略)
 
@@ -64,7 +54,7 @@ void Test() {
 }
 ```
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

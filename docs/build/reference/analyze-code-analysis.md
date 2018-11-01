@@ -1,32 +1,22 @@
 ---
-title: 分析 (コード分析) |Microsoft Docs
-ms.custom: ''
+title: /analyze (コード分析)
 ms.date: 04/26/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnablePREfast
 - /analyze
 - VC.Project.VCCLCompilerTool.PREfastAdditionalOptions
 - VC.Project.VCCLCompilerTool.PREfastAdditionalPlugins
-dev_langs:
-- C++
 helpviewer_keywords:
 - /analyze compiler option [C++]
 - -analyze compiler option [C++]
 - analyze compiler option [C++]
 ms.assetid: 81da536a-e030-4bd4-be18-383927597d08
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 89f0402eedbe6e49d6ce4095dc8c91ec69e15447
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: a43cce2633fc2f54374bee6b5ef7196dbb87ad55
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723607"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663776"
 ---
 # <a name="analyze-code-analysis"></a>/analyze (コード分析)
 
@@ -87,7 +77,7 @@ set Esp.Extensions=CppCoreCheck.dll
 
 詳細については、次を参照してください。 [Code Analysis for C と C++ の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)と[c/c++ の警告のコード分析](/visualstudio/code-quality/code-analysis-for-c-cpp-warnings)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

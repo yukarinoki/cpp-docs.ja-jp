@@ -1,39 +1,29 @@
 ---
-title: コンパイラ エラー C2482 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラ エラー C2482
 ms.date: 09/15/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2482
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2482
 ms.assetid: 98c87da2-625c-4cc2-9bf7-78d15921e779
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3dd23069f389d0a02e10d26edb7ee4fd3c373cb
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 481920fa2d8c32bc872e7b8805188cc674e6fe28
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34256007"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50564815"
 ---
 # <a name="compiler-error-c2482"></a>コンパイラ エラー C2482
 
->'*識別子*': マネージまたは WinRT コードでは使用できません 'thread' のデータを動的に初期化
+>'*識別子*': 'thread' のデータ管理/WinRT コードでは使用できませんの動的な初期化
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-マネージ配列または WinRT コードを使用して宣言された変数、 [_declspec](../../cpp/thread.md)ストレージ クラス修飾子の属性または[thread_local](../../cpp/storage-classes-cpp.md#thread_local)ストレージ クラス指定子は、式で初期化できません実行時に評価が必要です。 静的な式が初期化に必要な`__declspec(thread)`または`thread_local`これらのランタイム環境でのデータ。
+マネージまたは WinRT のコードを使用して宣言された変数、 [_declspec](../../cpp/thread.md)ストレージ クラス修飾子の属性または[thread_local](../../cpp/storage-classes-cpp.md#thread_local)式では、ストレージ クラス指定子を初期化できません実行時に評価が必要です。 静的な式が初期化に必要な`__declspec(thread)`または`thread_local`これらのランタイム環境でのデータ。
 
 ## <a name="example"></a>例
 
-次のサンプルの生成 C2482 で管理されている (**/clr**) および WinRT (**/ZW**) コード。
+次のサンプルの生成 C2482 で管理されている (**/clr**) と WinRT (**/ZW**) コード。
 
 ```cpp
 // C2482.cpp
@@ -46,4 +36,4 @@ int j = j;   // OK in C++; C error
 Thread int tls_i2 = sizeof( tls_i2 );   // Okay in C and C++
 ```
 
-この問題を修正するには、定数を使用して、スレッド ローカル ストレージを初期化**constexpr**、または静的な式。 別に、スレッド固有の初期化を実行します。
+この問題を解決するには、定数を使用してスレッド ローカル ストレージを初期化します。 **constexpr**、または静的な式。 別に、スレッド固有の初期化を実行します。

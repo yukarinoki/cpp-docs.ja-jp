@@ -8,17 +8,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: e11b40b2-f3a4-4f06-b788-73334d58dfd9
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 060859879c6164bd8af10763ae5f828c9136abe5
-ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
+ms.openlocfilehash: 8ef0a8d3ecae6371603716ad31530776eed7ee86
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49307907"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143693"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Linux ワークロードのダウンロード、インストール、セットアップ
 
@@ -26,14 +26,14 @@ Windows で Visual Studio IDE を使用して、Linux 物理コンピュータ�
 
 ## <a name="visual-studio-setup"></a>Visual Studio のセットアップ
 
-1. Windows 検索メニューで「Visual Studio インストーラー」と入力して、**[アプリ]** 結果から検索し、これをダブルクリックします。 インストーラーが開いたら、**[変更]** を選択して **[ワークロード]** タブをクリックします。**[Other toolsets]\(その他のツールセット\)** まで下へスクロールして、**[C++ による Linux 開発]** ワークロードを選択します。
+1. Windows 検索ボックス (![Windows 検索ボックス](media/visual-studio-installer-search.png)) に「Visual Studio インストーラー」と入力します。
+2. **アプリ**の結果でインストーラーを探し、それをダブルクリックします。 インストーラーが開いたら、**[変更]** を選択して **[ワークロード]** タブをクリックします。**[Other toolsets]\(その他のツールセット\)** まで下へスクロールして、**[C++ による Linux 開発]** ワークロードを選択します。
 
    ![Visual C++ for Linux Development ワークロード](media/linuxworkload.png)
 
-1. CMake を使用するか、IoT または組み込みのプラットフォームを対象としている場合、**[C++ による Linux 開発]** の右側にある **[インストールの詳細]** ウィンドウに移動して、**[オプション コンポーネント]** を展開し、必要なコンポーネントを選択します。 
+1. CMake を使用するか、IoT または組み込みのプラットフォームを対象としている場合、**[C++ による Linux 開発]** の右側にある **[インストールの詳細]** ウィンドウに移動して、**[オプション コンポーネント]** を展開し、必要なコンポーネントを選択します。
 
 1. **[変更]** をクリックして、インストールを続行します。
-
 
 ## <a name="options-for-creating-a-linux-environment"></a>Linux 環境を作成するためのオプション
 
