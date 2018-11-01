@@ -1,10 +1,6 @@
 ---
-title: packaged_task クラス | Microsoft Docs
-ms.custom: ''
+title: packaged_task クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - future/std::packaged_task
 - future/std::packaged_task::packaged_task
@@ -15,11 +11,7 @@ f1_keywords:
 - future/std::packaged_task::valid
 - future/std::packaged_task::operator()
 - future/std::packaged_task::operator bool
-dev_langs:
-- C++
 ms.assetid: 0a72cbe3-f22a-4bfe-8e50-dcb268c98780
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::packaged_task [C++]
 - std::packaged_task [C++], packaged_task
@@ -28,14 +20,12 @@ helpviewer_keywords:
 - std::packaged_task [C++], reset
 - std::packaged_task [C++], swap
 - std::packaged_task [C++], valid
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d64c848e69cd7670b966159128ff340ac7dbf5f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e759b1bc8cb47c5c943f29545e3b03ee535f3df7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107098"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515766"
 ---
 # <a name="packagedtask-class"></a>packaged_task クラス
 
@@ -75,7 +65,7 @@ class packaged_task;
 |[packaged_task::operator()](#op_call)|関連付けられた非同期状態に格納された呼び出し可能オブジェクトを呼び出し、戻り値をアトミックに格納し、状態を *ready* に設定します。|
 |[packaged_task::operator bool](#op_bool)|オブジェクトが関連付けられた非同期状態であるかどうかを指定します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<将来 >
 

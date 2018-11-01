@@ -1,11 +1,6 @@
 ---
-title: fmin、fminf、fminl |Microsoft ドキュメント
-ms.custom: ''
+title: fmin、fminf、fminl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fmin
 - fminf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - fminf function
 - fminl function
 ms.assetid: 1916dfb5-99c1-4b0d-aefb-513525c3f2ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: abf16c4cc21d1dc396f0b81aadc8d495c6bdd4b9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f73853e18bd5d7f699cd2c3109fe5fb830859bf1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398946"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464364"
 ---
 # <a name="fmin-fminf-fminl"></a>fmin、fminf、fminl
 
@@ -89,23 +80,23 @@ long double fminl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合を返しますのうち、小さい方*x*または*y*です。
+成功した場合を返しますのうち、小さい方*x*または*y*します。
 
 |入力|結果|
 |-----------|------------|
 |*x* nan|*y*|
 |*y* nan|*x*|
-|*x*と*y* nan の場合|NaN|
+|*x*と*y* nan|NaN|
 
-関数は発生しません[_matherr](matherr.md)呼び出される浮動小数点の例外が発生するかの値を変更**errno**です。
+関数は発生しません[_matherr](matherr.md)呼び出される浮動小数点の例外が発生するかの値を変更**errno**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**fmin**を受け取り、返します**float**と**長い****二重**型です。 C プログラムでは、 **fmin**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fmin**を受け取って返す**float**と**長い****二重**型。 C プログラムで**fmin**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**fmin**、 **fminf**、 **fminl**|C: \<math.h><br />C++: \<math.h> または \<cmath>|
 

@@ -1,23 +1,13 @@
 ---
-title: タイルの使用 |Microsoft Docs
-ms.custom: ''
+title: タイルの使用
 ms.date: 06/28/2018
-ms.technology:
-- cpp-amp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: df2f449cce01dc2d0903ff802ffb94914b68bceb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 02a6f35801c30ce5e25e79a4e736e6c08776a1da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386269"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588516"
 ---
 # <a name="using-tiles"></a>タイルの使用
 
@@ -163,7 +153,7 @@ void main() {
 
 ## <a name="tile-synchronizationtilestatic-and-tilebarrierwait"></a>タイルの同期: tile_static と tile_barrier::wait
 
-前の例は、タイルのレイアウトとインデックスについて説明していますが、それ自体は有用ではありません。  タイルは、タイルがアルゴリズムに不可欠であり、`tile_static` 変数を十分に活用する場合に有用になります。 タイル内のすべてのスレッドは `tile_static` 変数にアクセスできるため、`tile_barrier::wait` 変数へのアクセスを同期するために `tile_static` の呼び出しが使用されます。 タイル内のすべてのスレッドが `tile_static` 変数にアクセスできますが、タイル内のスレッドの実行順序は保証されません。 次の例では、`tile_static` 変数と、`tile_barrier::wait` メソッドを使用して、各タイルの平均値を計算する方法を示します。 この例を理解するための鍵を次に示します。
+前の例は、タイルのレイアウトとインデックスについて説明していますが、それ自体は有用ではありません。  タイルは、タイルがアルゴリズムに不可欠であり、`tile_static` 変数を十分に活用する場合に有用になります。 タイル内のすべてのスレッドは `tile_static` 変数にアクセスできるため、`tile_static` 変数へのアクセスを同期するために `tile_barrier::wait` の呼び出しが使用されます。 タイル内のすべてのスレッドが `tile_static` 変数にアクセスできますが、タイル内のスレッドの実行順序は保証されません。 次の例では、`tile_static` 変数と、`tile_barrier::wait` メソッドを使用して、各タイルの平均値を計算する方法を示します。 この例を理解するための鍵を次に示します。
 
 1. rawData は 8 × 8 の行列に格納されます。
 
@@ -311,7 +301,7 @@ A*メモリ フェンス*により、アクセスがスレッド タイルの他
 
 必要な特定のフェンスを呼び出すことによって、アプリのパフォーマンスが向上する場合があります。 バリアの種類は、コンパイラやハードウェアによるステートメントの並べ替えに影響します。 たとえば、グローバル メモリ フェンスを使用する場合、フェンスはグローバル メモリ アクセスにのみ適用されます。このため、コンパイラやハードウェアは、フェンスの両側で `tile_static` 変数の読み取りや書き込みを並べ替える可能性があります。
 
-次の例では、バリアは `tileValues` 変数である `tile_static` への書き込みを同期します。 この例では、`tile_barrier::wait_with_tile_static_memory_fence` の代わりに `tile_barrier::wait` を呼び出しています。
+次の例では、バリアは `tile_static` 変数である `tileValues` への書き込みを同期します。 この例では、`tile_barrier::wait_with_tile_static_memory_fence` の代わりに `tile_barrier::wait` を呼び出しています。
 
 ```cpp
 // Using a tile_static memory fence.

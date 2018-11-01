@@ -1,10 +1,6 @@
 ---
-title: _sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _sprintf_p
 - _swprintf_p_l
@@ -31,8 +27,6 @@ f1_keywords:
 - swprint_p_l
 - swprintf_p
 - swprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - sprintf_p_l function
 - swprintf_p function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _stprintf_p_l function
 ms.assetid: a2ae78e8-6b0c-48d5-87a9-ea2365b0693d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02c28da8c066f51bb4366c7ed20e04266d37b074
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: c55dce7d37d63c79e8c8d9976a76adf331412812
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451413"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579597"
 ---
 # <a name="sprintfp-sprintfpl-swprintfp-swprintfpl"></a>_sprintf_p、_sprintf_p_l、_swprintf_p、_swprintf_p_l
 
@@ -115,15 +105,15 @@ int _swprintf_p_l(
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字数またはエラーが発生した場合は-1。
+エラーが発生した場合は-1 または書き込まれた文字数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Sprintf_p**関数は、書式化して、一連の文字と内の値を格納*バッファー*です。 各引数は、 *argument_list* (存在する場合) は変換され、対応する書式指定に従って*形式*です。 *形式*引数は、 [printf 関数と wprintf 関数の指定の構文を書式設定](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)です。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。 違い **_sprintf_p**と**sprintf_s**される **_sprintf_p**引数には、順序を指定できますでは位置指定パラメーター書式指定文字列で使用されます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+**_Sprintf_p**関数は、書式化して、一連の文字と値を格納*バッファー*します。 各引数、 *argument_list* (ある場合) は変換されに対応する書式指定に応じて*形式*します。 *形式*引数は、[書式指定構文の printf および wprintf 関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)します。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。 間の差 **_sprintf_p**と**sprintf_s**される **_sprintf_p**引数の順序を指定できますでは位置指定パラメーター書式指定文字列で使用されます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
-**_swprintf_p**のワイド文字バージョンは、 **_sprintf_p**; ポインター引数 **_swprintf_p**ワイド文字列です。 エンコーディング エラーの検出 **_swprintf_p**が異なる場合が **_sprintf_p**です。 **_swprintf_p**と**fwprintf_p**という点以外の動作は同じ **_swprintf_p**型の出力先ではなく文字列に出力を書き込みます**ファイル**、および **_swprintf_p**が必要です、*カウント*パラメーターを書き込む文字の最大数を指定します。 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**_swprintf_p**のワイド文字バージョンは、 **_sprintf_p**; へのポインター引数 **_swprintf_p**はワイド文字列です。 エンコーディング エラーの検出 **_swprintf_p**内で異なる場合があります **_sprintf_p**します。 **_swprintf_p**と**fwprintf_p**動作は同じことを除いて **_swprintf_p**型の出力先ではなく文字列に出力を書き込む**ファイル**と **_swprintf_p**が必要です、*カウント*書き込まれる文字の最大数を指定するパラメーター。 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
-**_sprintf_p**に格納されるバイト数を返します*バッファー*、終端の null 文字を含みません。 **_swprintf_p**で格納されるワイド文字の数を返します*バッファー*、終端の null ワイド文字を含みません。 場合*バッファー*または*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+**_sprintf_p**に格納されるバイト数を返します*バッファー*、終端の null 文字を含みません。 **_swprintf_p**で格納されるワイド文字の数を返します*バッファー*、終端の null ワイド文字を含みません。 場合*バッファー*または*形式*null ポインター、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -132,9 +122,9 @@ int _swprintf_p_l(
 |**_stprintf_p**|**_sprintf_p**|**_sprintf_p**|**_swprintf_p**|
 |**_stprintf_p_l**|**_sprintf_p_l**|**_sprintf_p_l**|**_swprintf_p_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_sprintf_p**、 **_sprintf_p_l**|\<stdio.h>|
 |**_swprintf_p**、 **_swprintf_p_l**|\<stdio.h> または \<wchar.h>|

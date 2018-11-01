@@ -1,10 +1,6 @@
 ---
-title: _cwait | Microsoft Docs
-ms.custom: ''
+title: _cwait
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwait
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _cwait
-dev_langs:
-- C++
 helpviewer_keywords:
 - cwait function
 - _cwait function
 ms.assetid: d9b596b5-45f4-4e03-9896-3f383cb922b8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64d312c75dcbebd968760c5f7d09d8458e68e4b0
-ms.sourcegitcommit: b92ca0b74f0b00372709e81333885750ba91f90e
+ms.openlocfilehash: f7a49497ac71ec15261e1215bd2bbed2e49f42ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2018
-ms.locfileid: "42572416"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489623"
 ---
 # <a name="cwait"></a>_cwait
 
@@ -88,7 +78,7 @@ Windows オペレーティング システムのアプリケーションでは N
 
 しない限り、 *procHandle*が-1 または-2 (現在のプロセスまたはスレッドへのハンドル) のハンドルは閉じられます。 したがって、この状況では、返されたハンドルは使用しないでください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|

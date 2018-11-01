@@ -1,10 +1,6 @@
 ---
-title: ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s | Microsoft Docs
-ms.custom: ''
+title: ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ctime64_s
 - _wctime32_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _tctime64_s
 - ctime_s
 - ctime32_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wctime32_s function
 - ctime64_s function
@@ -57,16 +51,12 @@ helpviewer_keywords:
 - _ctime32_s function
 - _tctime32_s function
 ms.assetid: 36ac419a-8000-4389-9fd8-d78b747a009b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3f9c5e6d9d6f0d910decae904cbbd75d995a6c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0410aeda4bbec33738d01a9514181c19f351e2c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496373"
 ---
 # <a name="ctimes-ctime32s-ctime64s-wctimes-wctime32s-wctime64s"></a>ctime_s、_ctime32_s、_ctime64_s、_wctime_s、_wctime32_s、_wctime64_s
 
@@ -137,11 +127,11 @@ errno_t _wctime64_s(
 
 - *sourceTime* UTC の午前 0 時、1970 年 1 月 1 日より前に、の日付を表します。
 
-- 使用する場合 **_ctime32_s**または **_wctime32_s**と*sourceTime* 23時 59分: 59 2038 年 1 月 18 日 (utc) より後の日付を表します。
+- 使用する場合 **_ctime32_s**または **_wctime32_s**と*sourceTime*後、2038 年 1 月 18 日 23時 59分: 59 までの日付を表します。
 
-- 使用する場合 **_ctime64_s**または **_wctime64_s**と*sourceTime* UTC 3000 年 12 月 31 日 23時 59分: 59 秒後に日付を表します。
+- 使用する場合 **_ctime64_s**または **_wctime64_s**と*sourceTime* UTC 3000 年 12 月 31 日 23時 59分: 59 秒より後の日付を表します。
 
-- 使用する場合 **_ctime_s**または **_wctime_s**、これらの関数は前の関数のラッパー。 「解説」を参照してください。
+- 使用する場合 **_ctime_s**または **_wctime_s**、これらの関数は前の関数のラッパーです。 「解説」を参照してください。
 
 *numberOfElements*<br/>
 バッファーのサイズ。
@@ -155,27 +145,27 @@ errno_t _wctime64_s(
 
 ## <a name="error-conditions"></a>エラー条件
 
-|*バッファー*|*numberOfElements*|*sourceTime*|Return|値で*バッファー*|
+|*バッファー*|*numberOfElements*|*sourceTime*|Return|値*バッファー*|
 |--------------|------------------------|------------|------------|-----------------------|
 |**NULL**|任意|任意|**EINVAL**|変更されない|
-|いない**NULL** (有効なメモリが指す)|0|任意|**EINVAL**|変更されない|
+|いない**NULL** (有効なメモリを指す)|0|任意|**EINVAL**|変更されない|
 |いない**NULL**|0< サイズ < 26|任意|**EINVAL**|空の文字列|
 |いない**NULL**|>= 26|NULL|**EINVAL**|空の文字列|
 |いない**NULL**|>= 26|< 0|**EINVAL**|空の文字列|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Ctime_s**関数として格納されている時刻の値を変換する、 [time_t](../../c-runtime-library/standard-types.md)文字の文字列に構造体。 *SourceTime*への呼び出しから値が取得した通常[時間](time-time32-time64.md)、午前 0 時から経過した秒数を返します (00: 00:00)、世界協定時刻 (UTC) 1970 年 1 月 1 日です。 戻り値には厳密に 26 文字が含まれ、次の形式になります。
+**Ctime_s**関数として格納されている時刻値の変換、 [time_t](../../c-runtime-library/standard-types.md)文字の文字列に構造体。 *SourceTime*値は、通常への呼び出しから取得[時間](time-time32-time64.md)、午前 0 時から経過した秒数を返します (00: 00:00)、世界協定時刻 (UTC) 1970 年 1 月 1 日です。 戻り値には厳密に 26 文字が含まれ、次の形式になります。
 
 `Wed Jan 02 02:03:55 1980\n\0`
 
 24 時間制が使用されます。 すべてのフィールドには一定の幅があります。 文字列の最後の 2 つの位置には、改行文字 ('\n') と null 文字 ('\0') が入ります。
 
-変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 参照してください、[時間](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)、および[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)関数のローカル時刻を構成する方法について、 [_tzset](tzset.md)については、タイム ゾーンの環境とグローバル変数を定義する関数。
+変換された文字列も、ローカル タイム ゾーンの設定に従って調整されます。 参照してください、[時間](time-time32-time64.md)、 [_ftime](ftime-ftime32-ftime64.md)、および[localtime32_s](localtime-s-localtime32-s-localtime64-s.md)関数をローカル時刻の構成については、 [_tzset](tzset.md)については、タイム ゾーン環境とグローバル変数を定義する関数。
 
-**_wctime32_s**と **_wctime64_s**のワイド文字バージョンは、 **_ctime32_s**と **_ctime64_s**; ワイド文字の文字列にポインターを返します。 それ以外の場合、 **_ctime64_s**、 **_wctime32_s**、および **_wctime64_s**と同様に動作 **_ctime32_s**です。
+**_wctime32_s**と **_wctime64_s**のワイド文字バージョン **_ctime32_s**と **_ctime64_s**; ワイド文字の文字列にポインターを返します。 それ以外の場合、 **_ctime64_s**、 **_wctime32_s**、および **_wctime64_s**と同様に動作 **_ctime32_s**します。
 
-**ctime_s**に評価されるインライン関数は、 **_ctime64_s**と**time_t**は等価 **_ _time64_t**です。 強制的に、コンパイラを解釈する必要がある場合**time_t**古い 32 ビットとして**time_t**を定義できます **_USE_32BIT_TIME_T**です。 これにより、その**ctime_s**を評価する **_ctime32_s**です。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
+**ctime_s**に評価されるインライン関数は、 **_ctime64_s**と**time_t**と等価 **_ _time64_t**します。 強制的にコンパイラを解釈する必要がある場合**time_t**古い 32 ビットとして**time_t**を定義できます **_USE_32BIT_TIME_T**します。 これにより**ctime_s**を評価する **_ctime32_s**します。 ただし、この方法は推奨されません。2038 年 1 月 18 日以降にアプリケーションがエラーになる可能性があり、また、64 ビット プラットフォームでは使用できないためです。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -187,9 +177,9 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 |**_tctime32_s**|**_ctime32_s**|**_ctime32_s**|**_wctime32_s**|
 |**_tctime64_s**|**_ctime64_s**|**_ctime64_s**|**_wctime64_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**ctime_s**、 **_ctime32_s**、 **_ctime64_s**|\<time.h>|
 |**_wctime_s**、 **_wctime32_s**、 **_wctime64_s**|\<time.h> または \<wchar.h>|

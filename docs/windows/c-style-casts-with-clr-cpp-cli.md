@@ -1,26 +1,16 @@
 ---
-title: C スタイル キャストと/clr (C +/cli CLI) |Microsoft Docs
-ms.custom: ''
+title: C スタイル キャストと/clr (C +/cli CLI)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - C-style casts and /clr
 ms.assetid: d2a4401a-156a-4da9-8d12-923743e26913
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: bc51d330e771d9861d510b77d1fbd69a9a790c7d
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: abbcd61f8c86709e16958e4220c0ea96e393c8bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49327987"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447074"
 ---
 # <a name="c-style-casts-with-clr-ccli"></a>C スタイル キャストと /clr (C++/CLI)
 
@@ -166,7 +156,7 @@ int main() {
 }
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

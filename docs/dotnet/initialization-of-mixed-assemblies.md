@@ -1,12 +1,6 @@
 ---
-title: 混在アセンブリの初期化 |Microsoft Docs
-ms.custom: ''
+title: 混在アセンブリの初期化
 ms.date: 03/09/2018
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - mixed assemblies [C++], loader lock
 - loader lock [C++]
@@ -16,23 +10,18 @@ helpviewer_keywords:
 - custom locales [C++]
 - mixed assemblies [C++], initilizing
 ms.assetid: bfab7d9e-f323-4404-bcb8-712b15f831eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: ba9f3143fb110b25f384e462e7dfcd69c0140802
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1f4ea7f5cfc6e99390c93ba9c2beadc46fce8584
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439576"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665011"
 ---
 # <a name="initialization-of-mixed-assemblies"></a>混在アセンブリの初期化
 
 中にコードを実行するときに、Windows 開発者のローダー ロックの必ず`DllMain`します。 ただし、C + を扱うときに影響するいくつか追加の考慮事項がある/cli clr 混合モードのアセンブリ。
 
-内のコード[DllMain](/windows/desktop/Dlls/dllmain) CLR にアクセスする必要があります。 つまり、 `DllMain` は、直接的にも間接的にもマネージ関数を呼び出すことができません。 `DllMain`ではマネージド コードを宣言または実装しないでください。また、 `DllMain`内では、ガベージ コレクションや自動ライブラリ読み込みは行われません。
+[DllMain](/windows/desktop/Dlls/dllmain) 内のコードは、CLR にはアクセスできません。 つまり、 `DllMain` は、直接的にも間接的にもマネージ関数を呼び出すことができません。 `DllMain`ではマネージド コードを宣言または実装しないでください。また、 `DllMain`内では、ガベージ コレクションや自動ライブラリ読み込みは行われません。
 
 ## <a name="causes-of-loader-lock"></a>ローダー ロックの原因
 
@@ -129,7 +118,7 @@ Visual Studio 2005 では、前に、リンカーは単に最大規模のさま�
 
 ローダー ロックを扱うユーザーの負担を減らすため、マネージドとネイティブの両方の実装が存在する場合、リンカーはネイティブの実装を選択するようになっています。 これにより、上記の問題は回避されます。 ただし、このリリースではコンパイラに未解決の問題が 2 つ残っているため、この規則には、次の 2 つの例外があります。
 
-- グローバル静的関数ポインターを介したインライン関数呼び出しである場合。 仮想関数はグローバル関数ポインターを介して呼び出されるため、このシナリオには特に注意する必要があります。 たとえば、オブジェクトに適用された
+- グローバル静的関数ポインターを介したインライン関数呼び出しである場合。 仮想関数はグローバル関数ポインターを介して呼び出されるため、このシナリオには特に注意する必要があります。 例えば以下のようにします。
 
 ```cpp
 #include "definesmyObject.h"

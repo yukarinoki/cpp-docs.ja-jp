@@ -1,10 +1,6 @@
 ---
-title: _set_doserrno | Microsoft Docs
-ms.custom: ''
+title: _set_doserrno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_doserrno
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _set_doserrno
 - set_doserrno
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_doserrno function
 - doserrno global variable
 - set_doserrno function
 - _doserrno global variable
 ms.assetid: 8686c159-3797-4705-a53e-7457869ca6f3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bb3a8e7503ae27177fded4ff240bbf5ec5a670e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a99d63b03aebd4a54ac50e98d5e5752e741fec85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406119"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607299"
 ---
 # <a name="setdoserrno"></a>_set_doserrno
 
@@ -49,25 +39,25 @@ ms.locfileid: "32406119"
 ## <a name="syntax"></a>構文
 
 ```C
-errno_t _set_doserrno( int error_value );
+errno_t _set_doserrno( int error_value );
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *error_value*<br/>
-新しい値 **_doserrno**です。
+新しい値 **_doserrno**します。
 
 ## <a name="return-value"></a>戻り値
 
 正常終了した場合は 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 使用できる値は Errno.h で定義します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_set_doserrno**|\<stdlib.h>|\<errno.h>|
 

@@ -1,29 +1,19 @@
 ---
-title: CDefaultHashTraits クラス |Microsoft Docs
-ms.custom: ''
+title: CDefaultHashTraits クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CDefaultHashTraits
 - ATLCOLL/ATL::CDefaultHashTraits
 - ATLCOLL/ATL::CDefaultHashTraits::Hash
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDefaultHashTraits class
 ms.assetid: d8ec4b37-6d58-447b-a0c1-8580c5b1ab85
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34aa546561e13c2728c633db3f96861a1d3ec987
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c8896ce27afc40ad095e02a2453628ffc05900da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46075684"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466145"
 ---
 # <a name="cdefaulthashtraits-class"></a>CDefaultHashTraits クラス
 
@@ -55,7 +45,7 @@ class CDefaultHashTraits
 
 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcoll.h
 

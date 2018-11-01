@@ -1,31 +1,21 @@
 ---
-title: time_point クラス |Microsoft Docs
-ms.custom: ''
+title: time_point クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::time_point
 - chrono/std::chrono::time_point::time_point
 - chrono/std::chrono::time_point::max
 - chrono/std::chrono::time_point::min
 - chrono/std::chrono::time_point::time_since_epoch
-dev_langs:
-- C++
 ms.assetid: 18be1e52-57b9-489a-8a9b-f58894f0aaad
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::chrono [C++], time_point
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb5390ad8fec7e355181c9711de1bb14d3b17820
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: f38cb883f1fc9e07c65d261ea7a6e074bf02db5a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45705979"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513751"
 ---
 # <a name="timepoint-class"></a>time_point クラス
 
@@ -71,7 +61,7 @@ class time_point;
 |[time_point::operator+=](#op_add_eq)|指定した値を格納された期間に加算します。|
 |[time_point::operator-=](#operator-_eq)|指定した値を格納された期間から減算します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<chrono >
 

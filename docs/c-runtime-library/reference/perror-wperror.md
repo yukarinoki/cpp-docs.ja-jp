@@ -1,10 +1,6 @@
 ---
-title: perror、_wperror | Microsoft Docs
-ms.custom: ''
+title: perror、_wperror
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wperror
 - perror
@@ -25,8 +21,6 @@ f1_keywords:
 - _wperror
 - _tperror
 - perror
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tperror function
 - tperror function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _wperror function
 - perror function
 ms.assetid: 34fce792-16fd-4673-9849-cd88b54b6cd5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1df9e064ac7af761a858c6e18d99526a9b3c7ffb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c9026a96ecc74640eb2bcd7004d5d1e0fc287e38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103789"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50474478"
 ---
 # <a name="perror-wperror"></a>perror、_wperror
 
@@ -85,7 +75,7 @@ void _wperror(
 
 いくつか、Windows オペレーティング システム、 **errno** ERRNO の値が一覧表示します。H、使用されません。 これらの値は、UNIX オペレーティング システムで使用するために予約されたものです。 参照してください[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)の一覧については**errno** Windows オペレーティング システムによって使用される値。 **perror**は空の文字列を出力します**errno**これらのプラットフォームで使用されていない値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

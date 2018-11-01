@@ -1,10 +1,6 @@
 ---
-title: _mbsbtype、_mbsbtype_l | Microsoft Docs
-ms.custom: ''
+title: _mbsbtype、_mbsbtype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsbtype_l
 - _mbsbtype
@@ -26,24 +22,18 @@ f1_keywords:
 - mbsbtype_l
 - _mbsbtype_l
 - _mbsbtype
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsbtype function
 - mbsbtype function
 - _mbsbtype_l function
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: be098cb1fe53e1345f0c4f40212657f4bfd97f4f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 5c2927b4e4b68b1284341fe7e767ec50feb21a44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451020"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50566804"
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype、_mbsbtype_l
 
@@ -79,26 +69,26 @@ int _mbsbtype_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsbtype**と **_mbsbtype_l**指定したバイトのテストの結果を示す整数値を返します。 次の表のマニフェスト定数は、Mbctype.h で定義されています。
+**_mbsbtype**と **_mbsbtype_l**指定されたバイトに対するテストの結果を示す整数値を返します。 次の表のマニフェスト定数は、Mbctype.h で定義されています。
 
 |戻り値|バイトの種類|
 |------------------|---------------|
-|**_MBC_SINGLE** (0)|1 バイト文字。 たとえば、コード ページ 932 で **_mbsbtype**指定したバイト範囲は、0x20-0x7E または 0xA1 - 0 xdf 場合 0 を返します。|
-|**_MBC_LEAD** (1)|マルチバイト文字の先行バイト。 たとえば、コード ページ 932 で **_mbsbtype**指定したバイト範囲は、0x81 から 0x9F または 0xE0 - - 0 xfc 場合 1 を返します。|
-|**_MBC_TRAIL** (2)|マルチバイト文字の後続バイト。 たとえば、コード ページ 932 で **_mbsbtype**指定したバイト範囲は、0x40 ~ 0x7E または 0x80 ~ 0 xfc 2 を返します。|
-|**継続**(-1)|**NULL**文字列、無効な文字、または null のバイト オフセット位置にバイトの前に見つかった*カウント*で*mbstr*です。|
+|**_MBC_SINGLE** (0)|1 バイト文字。 たとえば、コード ページ 932 で **_mbsbtype** 0 xdf の範囲 0x20-0x7E または 0xA1 - 指定したバイトがある場合は 0 を返します。|
+|**_MBC_LEAD** (1)|マルチバイト文字の先行バイト。 たとえば、コード ページ 932 で **_mbsbtype**指定したバイトが 0x81-0x81-0x9f または 0xe0-0xfc の範囲内で 0 xfc 場合 1 を返します。|
+|**_MBC_TRAIL** (2)|マルチバイト文字の後続バイト。 たとえば、コード ページ 932 で **_mbsbtype**指定したバイトが範囲 0x40 ~ 0x7E または 0x80 ~ 0 xfc 2 を返します。|
+|**継続**(-1)|**NULL**文字列、無効な文字、または null のバイト オフセット位置にバイトの前に見つかった*カウント*で*mbstr*します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbsbtype**関数はマルチバイト文字の文字列内のバイトの種類を決定します。 関数はオフセットでバイトしか*カウント*で*mbstr*、指定したバイトの前に無効な文字は無視されます。
+**_Mbsbtype**関数は、マルチバイト文字の文字列のバイトの種類を決定します。 関数はオフセット位置にあるバイトだけ*カウント*で*mbstr*、指定したバイトの前に無効な文字は無視されます。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数のバージョン、 **_l**サフィックスがこのロケールに依存する動作に現在のロケールを使用のバージョン、 **_l**渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じ代わりにします。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数のバージョン、 **_l**サフィックスは、このロケールに依存する動作の現在のロケールを使用とバージョン、 **_l**サフィックスは、渡されたロケール パラメーターを使用する点を除いて同じです代わりにします。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合は、入力文字列が**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**継続**です。
+入力文字列が場合**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**継続**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_mbsbtype**|\<mbstring.h>|\<mbctype.h>*|
 |**_mbsbtype_l**|\<mbstring.h>|\<mbctype.h>*|

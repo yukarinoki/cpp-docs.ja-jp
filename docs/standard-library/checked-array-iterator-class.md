@@ -1,34 +1,24 @@
 ---
-title: checked_array_iterator クラス | Microsoft Docs
-ms.custom: ''
+title: checked_array_iterator クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - iterator/checked_array_iterator
 - iterator/stdext::checked_array_iterator::difference_type
 - iterator/stdext::checked_array_iterator::pointer
 - iterator/stdext::checked_array_iterator::reference
 - iterator/stdext::checked_array_iterator::base
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::checked_array_iterator [C++], difference_type
 - stdext::checked_array_iterator [C++], pointer
 - stdext::checked_array_iterator [C++], reference
 - stdext::checked_array_iterator [C++], base
 ms.assetid: 7f07185e-d588-4ae3-9c4f-84ec4aa25a28
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b7c8f9e29cc71cd12c04d4135e4f02d273ab4725
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 2d7788a33321f794af6b395de3188bc51f662ad0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319033"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476603"
 ---
 # <a name="checkedarrayiterator-class"></a>checked_array_iterator クラス
 
@@ -155,7 +145,7 @@ int main()
 |-|-|
 |[checked_array_iterator](#checked_array_iterator)|基になる反復子の既定の `checked_array_iterator` または `checked_array_iterator` を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -189,7 +179,7 @@ int main()
 |[operator-](#operator-)|反復子からオフセットをデクリメントし、新しいオフセット位置に挿入された要素をアドレス指定する新しい `checked_array_iterator` アドレスを返します。|
 |[operator&#91;&#93;](#op_at)|`checked_array_iterator` によってアドレス指定される要素からの要素のオフセットへの参照を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iterator>
 
@@ -205,7 +195,7 @@ _Iterator base() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -264,7 +254,7 @@ checked_array_iterator(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -333,7 +323,7 @@ bool operator==(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -389,7 +379,7 @@ bool operator!=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -445,7 +435,7 @@ bool operator<(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -503,7 +493,7 @@ bool operator>(const checked_array_iterator<_Iterator>& right) const;
 
 コード サンプルについては、[checked_array_iterator::operator&lt;](#op_lt) を参照してください。
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ## <a name="lt_eq"></a>  checked_array_iterator::operator&lt;=
 
@@ -522,7 +512,7 @@ bool operator<=(const checked_array_iterator<_Iterator>& right) const;
 
 コード サンプルについては、 [checked_array_iterator::operator&gt;=](#op_gt_eq) を参照してください。
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ## <a name="gt_eq"></a>  checked_array_iterator::operator&gt;=
 
@@ -539,7 +529,7 @@ bool operator>=(const checked_array_iterator<_Iterator>& right) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -594,7 +584,7 @@ reference operator*() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -657,7 +647,7 @@ pointer operator->() const;
 
 コード サンプルについては、[checked_array_iterator::pointer](#pointer) を参照してください。
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ## <a name="op_add_add"></a>  checked_array_iterator::operator++
 
@@ -675,7 +665,7 @@ checked_array_iterator<_Iterator> operator++(int);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -723,7 +713,7 @@ checked_array_iterator<_Iterator> operator--(int);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -774,7 +764,7 @@ checked_array_iterator<_Iterator>& operator+=(difference_type _Off);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -822,7 +812,7 @@ checked_array_iterator<_Iterator> operator+(difference_type _Off) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -870,7 +860,7 @@ checked_array_iterator<_Iterator>& operator-=(difference_type _Off);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -923,7 +913,7 @@ difference_type operator-(const checked_array_iterator& right) const;
 
 コード サンプルについては、 [checked_array_iterator::operator-](#operator-) を参照してください。
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ## <a name="op_at"></a>  checked_array_iterator::operator[]
 
@@ -944,7 +934,7 @@ reference operator[](difference_type _Off) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 
@@ -987,7 +977,7 @@ typedef typename iterator_traits<_Iterator>::pointer pointer;
 
 コード サンプルについては、 [checked_array_iterator::operator*](#op_star) を参照してください。
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ## <a name="reference"></a>  checked_array_iterator::reference
 
@@ -1001,7 +991,7 @@ typedef typename iterator_traits<_Iterator>::reference reference;
 
 コード サンプルについては、[checked_array_iterator::operator[]](#op_at) を参照してください。
 
-詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

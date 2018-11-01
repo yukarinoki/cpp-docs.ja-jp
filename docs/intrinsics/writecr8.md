@@ -1,27 +1,17 @@
 ---
-title: __writecr8 |マイクロソフトのドキュメント
-ms.custom: ''
+title: __writecr8
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _writecr8
-dev_langs:
-- C++
 helpviewer_keywords:
 - _writecr8 intrinsic
 ms.assetid: 6f8bd632-dddb-4335-971e-1acee24aa2b9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a06b34ee7d38e5c0e99181c4af81d925b681ce75
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d401673e7ee6cd18b8bc05140efc3b819e48a30f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417307"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471996"
 ---
 # <a name="writecr8"></a>__writecr8
 
@@ -32,8 +22,8 @@ ms.locfileid: "46417307"
 ## <a name="syntax"></a>構文
 
 ```
-void writecr8( 
-   unsigned __int64 Data 
+void writecr8( 
+   unsigned __int64 Data 
 );
 ```
 
@@ -42,7 +32,7 @@ void writecr8(
 *データ*<br/>
 [in]CR8 レジスタに書き込む値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

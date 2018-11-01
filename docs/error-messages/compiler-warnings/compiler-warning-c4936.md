@@ -1,35 +1,25 @@
 ---
-title: コンパイラの警告 C4936 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラの警告 C4936
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4936
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4936
 ms.assetid: 6676de35-bf1b-4d0b-a70f-b5734130336c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0be4a565dd251da77174c401c23b8ed8bfc531b0
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: bbb69cccbf93be6e97d13db5008780f57e63f9da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703940"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537567"
 ---
 # <a name="compiler-warning-c4936"></a>コンパイラの警告 C4936
 
 > この __declspec は、/clr または /clr:pure でコンパイルされるときのみサポートされます
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 `__declspec` 修飾子が使用されましたが、この `__declspec` 修飾子は、いずれかの [/clr](../../build/reference/clr-common-language-runtime-compilation.md) オプションでコンパイルされた場合にのみ有効です。
 

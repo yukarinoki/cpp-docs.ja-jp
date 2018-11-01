@@ -1,10 +1,6 @@
 ---
-title: strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l | Microsoft Docs
-ms.custom: ''
+title: strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strncat
 - _strncat_l
@@ -38,8 +34,6 @@ f1_keywords:
 - _ftcsncat
 - wcsncat
 - _tcsncat
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - ftcsncat function
@@ -63,16 +57,12 @@ helpviewer_keywords:
 - _mbsncat_l function
 - tcsncat function
 ms.assetid: de67363b-68c6-4ca5-91e3-478610ad8159
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e689f29433712f2f8a2adc1730c803ab6c55ba82
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 6d44ec9f75ef1c6677c2f6053746592ba6e86382
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202869"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574279"
 ---
 # <a name="strncat-strncatl-wcsncat-wcsncatl-mbsncat-mbsncatl"></a>strncat、_strncat_l、wcsncat、_wcsncat_l、_mbsncat、_mbsncat_l
 
@@ -173,7 +163,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 > [!NOTE]
 > **_strncat_l**と **_wcsncat_l**ロケールの依存関係はありません。 して直接呼び出すためのものではありません。 による内部使用に提供されます **_tcsncat_l**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

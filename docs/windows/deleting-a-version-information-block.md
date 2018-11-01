@@ -1,30 +1,19 @@
 ---
-title: バージョン情報ブロック (C++) の削除 |Microsoft Docs
-ms.custom: ''
+title: バージョン情報ブロック (C++) の削除
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.version
-dev_langs:
-- C++
 helpviewer_keywords:
 - blocks, deleting
 - version information, deleting blocks
 - resources [C++], deleting version information
 ms.assetid: 4e1641eb-d5b2-4183-b273-bc5b51af1537
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6951904f0a579017c5a5a76f7fd8ba798017a34b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e0bdc719e3ca3a3ffa4493f1d7c578a91733a7f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425055"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648306"
 ---
 # <a name="deleting-a-version-information-block-c"></a>バージョン情報ブロック (C++) の削除
 
@@ -41,7 +30,7 @@ ms.locfileid: "46425055"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

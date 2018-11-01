@@ -1,10 +1,6 @@
 ---
-title: _execvpe、_wexecvpe | Microsoft ドキュメント
-ms.custom: ''
+title: _execvpe、_wexecvpe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvpe
 - _wexecvpe
@@ -26,24 +22,18 @@ f1_keywords:
 - execvpe
 - _wexecvpe
 - _execvpe
-dev_langs:
-- C++
 helpviewer_keywords:
 - wexecvpe function
 - execvpe function
 - _wexecvpe function
 - _execvpe function
 ms.assetid: c0c3c986-d9c0-4814-a96c-10f0b3092766
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97020ba4e1b20bfc95f48eaa1afe6fa111a9b769
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 064f8b94a9a97795015c09c11cd56e0370dcc60c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401231"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431695"
 ---
 # <a name="execvpe-wexecvpe"></a>_execvpe、_wexecvpe
 
@@ -80,7 +70,7 @@ intptr_t _wexecvpe(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 がいる場合、エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
 
 |**errno**値|説明|
 |-------------------|-----------------|
@@ -93,13 +83,13 @@ intptr_t _wexecvpe(
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらの関数は、新しいプロセスを読み込んで実行し、コマンド ライン引数へポインターの配列を、および環境の設定へポインターの配列を渡します。 これらの関数を使用して、**パス**環境変数を実行するファイルを検索します。
 
-**_Execvpe**関数は、パラメーターを検証します。 場合、 *cmdname*が null ポインターの場合、または*argv* null ポインター、空の配列へのポインターまたは最初の引数として空の文字列を格納している配列へのポインターは、これらの関数呼び出しは無効ですパラメーターのハンドラーを」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 プロセスは起動されません。
+**_Execvpe**関数は、パラメーターを検証します。 場合、 *cmdname*が null ポインターの場合、または*argv*が null ポインター、空の配列へのポインターまたは最初の引数として空の文字列を格納している配列へのポインターが、これらの関数は無効なを呼び出すパラメーターのハンドラーを」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 プロセスは起動されません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|

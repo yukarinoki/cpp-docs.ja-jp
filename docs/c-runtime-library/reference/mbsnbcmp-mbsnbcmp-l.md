@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcmp、_mbsnbcmp_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcmp、_mbsnbcmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcmp
 - _mbsnbcmp_l
@@ -27,8 +23,6 @@ f1_keywords:
 - _mbsnbcmp_l
 - mbsnbcmp_l
 - _mbsnbcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbsnbcmp_l function
 - mbsnbcmp function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - _tcsncmp function
 - _mbsnbcmp function
 ms.assetid: dbc99e50-cf85-4e57-a13f-067591f18ac8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a21d19a3de6a047366497283f2e8515aca37794
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4b21fde122f9804633ac037efaf1f343b5cb9440
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404637"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620006"
 ---
 # <a name="mbsnbcmp-mbsnbcmpl"></a>_mbsnbcmp、_mbsnbcmp_l
 
-最初の比較**n**の 2 つのマルチバイト文字列のバイト。
+最初の比較**n** 2 つのマルチバイト文字の文字列のバイト数。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -84,25 +74,25 @@ int _mbsnbcmp_l(
 
 ## <a name="return-value"></a>戻り値
 
-戻り値の部分文字列の序数に基づく関係を示す*string1*と*string2*です。
+戻り値の部分文字列の序数の関係を示す*string1*と*string2*します。
 
 |戻り値|説明|
 |------------------|-----------------|
 |< 0|*string1*部分文字列より小さい*string2*部分文字列。|
-|0|*string1*と同じでは部分文字列が*string2*部分文字列。|
+|0|*string1*部分文字列が同じ*string2*部分文字列。|
 |> 0|*string1*部分文字列がより大きい*string2*部分文字列。|
 
-パラメーター検証エラーが発生した、 **_mbsnbcmp**と **_mbsnbcmp_l**返す**すると**で定義されている\<string.h > と\<mbstring.h >。
+パラメーター検証エラー、 **_mbsnbcmp**と **_mbsnbcmp_l**返す**すると**、定義されている\<string.h > と\<mbstring.h >。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbsnbcmp**関数の最初の比較多くて*カウント*バイト*string1*と*string2*を示す値を返すと、部分文字列間のリレーションシップ。 **_mbsnbcmp**のバージョンが大文字小文字を区別 **_mbsnbicmp**です。 異なり **_mbsnbcoll**、 **_mbsnbcmp**ロケールの照合順序の影響を受けません。 **_mbsnbcmp**に基づいて、現在のマルチバイトのマルチバイト文字シーケンスを認識[コード ページ](../../c-runtime-library/code-pages.md)です。
+**_Mbsnbcmp**関数の最初の比較で最も*カウント*バイト*string1*と*string2*を示す値を返すと、これらの部分文字列間のリレーションシップ。 **_mbsnbcmp**の大文字バージョン **_mbsnbicmp**します。 異なり **_mbsnbcoll**、 **_mbsnbcmp**ロケールの照合順序の影響を受けません。 **_mbsnbcmp** 、現在のマルチバイトに従ってマルチバイト文字シーケンスを認識[コード ページ](../../c-runtime-library/code-pages.md)します。
 
-**_mbsnbcmp**に似た **_mbsncmp**する点を除いて、 **_mbsncmp**バイトではなく文字で文字列を比較します。
+**_mbsnbcmp**よう **_mbsncmp**ことを除いて、 **_mbsncmp**バイトではなく文字で文字列を比較します。
 
-出力値が影響を受けました、 **LC_CTYPE**カテゴリの先行バイトを指定すると、ロケールの設定および末尾のマルチバイト文字のバイト。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_Mbsnbcmp**関数は、このロケールに依存する動作に現在のロケールを使用します。 **_Mbsnbcmp_l**関数は、使用する点を除いて同一です、*ロケール*パラメーター代わりにします。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値を受ける、 **LC_CTYPE**先行バイトを指定すると、ロケールの設定と末尾のバイトのマルチバイト文字のカテゴリ。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_Mbsnbcmp**関数は、このロケールに依存する動作に現在のロケールを使用します。 **_Mbsnbcmp_l**関数を使用する点を除いて同一です、*ロケール*パラメーター代わりにします。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-いずれか*string1*または*string2* null ポインター」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数を返すかどうかは、引き続き実行が許可された、**すると**と**errno**に設定されている**EINVAL**です。
+いずれか*string1*または*string2* null ポインターの場合は、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数を返すかどうかは、引き続き実行が許可された、**すると**と**errno**に設定されている**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -111,9 +101,9 @@ int _mbsnbcmp_l(
 |**_tcsncmp**|[strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|**_mbsnbcmp**|[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|
 |**_tcsncmp_l**|[strncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|**_mbsnbcml**|[wcsncmp](strncmp-wcsncmp-mbsncmp-mbsncmp-l.md)|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbcmp**|\<mbstring.h>|
 |**_mbsnbcmp_l**|\<mbstring.h>|

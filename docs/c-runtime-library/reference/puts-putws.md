@@ -1,10 +1,6 @@
 ---
-title: puts、_putws | Microsoft Docs
-ms.custom: ''
+title: puts、_putws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putws
 - puts
@@ -25,8 +21,6 @@ f1_keywords:
 - _putts
 - _putws
 - puts
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _putts function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - putts function
 - _putws function
 ms.assetid: 32dada12-ed45-40ac-be06-3feeced9ecd6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d8a0b4f0c4924970905cb541d82450a807de1357
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0151d29f627a8f6b91142d619f64921333bb48f5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404530"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667325"
 ---
 # <a name="puts-putws"></a>puts、_putws
 
@@ -69,17 +59,17 @@ int _putws(
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了した場合は、0 以上の値を返します。 場合**配置**失敗すると、それを返します**EOF**以外の場合は **_putws**失敗すると、それを返します**WEOF**です。 場合*str* null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、この関数が設定**errno**に**EINVAL**返す**EOF**または**WEOF**です。
+正常に終了した場合は、0 以上の値を返します。 場合**配置**失敗すると、それを返します**EOF**場合 **_putws**失敗すると、それを返します**WEOF**します。 場合*str* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数が設定**errno**に**EINVAL**戻って**EOF**または**WEOF**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**配置**関数は*str*を標準出力ストリームに**stdout**、置換文字列の終端の null 文字 ('\0') は改行文字 ('\n') で、出力ストリーム。
+**配置**関数*str*を標準出力ストリームに**stdout**、置換文字列の終端の null 文字 ('\0') は改行文字 ('\n') で、出力ストリーム。
 
-**_putws**のワイド文字バージョンは、**配置**; ストリームが ANSI モードで開かれている場合、2 つの関数動作は同じです。 **配置**UNICODE ストリームへの出力はサポートされていません。
+**_putws**のワイド文字バージョンは、**配置**; 2 つの関数は、動作、ストリームが ANSI モードで開かれている場合は同じです。 **配置**UNICODE ストリームへの出力をサポートされていません。
 
-**_putwch**現在のコンソールのロケール設定を使用して Unicode 文字を書き込みます。
+**_putwch**は現在の CONSOLE LOCALE 設定を使用して Unicode 文字を書き出します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -87,14 +77,14 @@ int _putws(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_putts**|**puts**|**puts**|**_putws**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**puts**|\<stdio.h>|
 |**_putws**|\<stdio.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

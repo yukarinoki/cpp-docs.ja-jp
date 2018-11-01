@@ -1,10 +1,6 @@
 ---
-title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l | Microsoft Docs
-ms.custom: ''
+title: _mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctolower_l
 - _mbctoupper_l
@@ -32,8 +28,6 @@ f1_keywords:
 - mbctoupper
 - mbctolower
 - _mbctoupper_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctolower function
 - mbctolower_l function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _totlower function
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af1ae33d9f3b752ed58aaa7bd3dd3e22f7de8c2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403662"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539687"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
@@ -95,20 +85,20 @@ unsigned int _mbctoupper_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数の各変換後の文字を返します*c*可能であれば、します。 文字を返しますそれ以外の場合*c*変更されません。
+これらの関数の変換された文字を返します*c*、可能な場合。 文字を返しますそれ以外の場合*c*変更されません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-関数は、文字をテスト*c*し、可能であれば、次のような変換のいずれかを適用します。
+関数の文字をテストする*c*し、可能であれば、次の変換のいずれかを適用します。
 
 |ルーチン|変換|
 |--------------|--------------|
 |**_mbctolower**、 **_mbctolower_l**|大文字を小文字に変換します。|
 |**_mbctoupper**、 **_mbctoupper_l**|小文字を大文字に変換します。|
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数のバージョン、 **_l**サフィックスがこのロケールに依存する動作に現在のロケールを使用のバージョン、 **_l**ロケール パラメーターを使用する点を除いて、サフィックスは同じ代わりに渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数のバージョン、 **_l**サフィックスは、このロケールに依存する動作の現在のロケールを使用とバージョン、 **_l**サフィックスは、ロケール パラメーターを使用すると同じです代わりに渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンで **_mbctolower**が呼び出された**jtolower**、および **_mbctoupper**が呼び出された**jtoupper**です。 新しいコードでは、代わりに新しい名前を使用します。
+以前のバージョンで **_mbctolower**が呼び出された**jtolower**、および **_mbctoupper**が呼び出された**jtoupper**します。 新しいコードでは、代わりに新しい名前を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -119,7 +109,7 @@ unsigned int _mbctoupper_l(
 |**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
 |**変数**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|

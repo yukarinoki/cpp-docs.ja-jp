@@ -1,10 +1,6 @@
 ---
-title: COleDocObjectItem クラス |Microsoft Docs
-ms.custom: ''
+title: COleDocObjectItem クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDocObjectItem
 - AFXOLE/COleDocObjectItem
@@ -17,8 +13,6 @@ f1_keywords:
 - AFXOLE/COleDocObjectItem::OnPrint
 - AFXOLE/COleDocObjectItem::QueryCommand
 - AFXOLE/COleDocObjectItem::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDocObjectItem [MFC], COleDocObjectItem
 - COleDocObjectItem [MFC], DoDefaultPrinting
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0a1f126897dd6fd7cbd6c148087c34aa653ac2a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d12ee07c9e36f52fc176066be0e91ce1a7307858
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46410456"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659070"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem クラス
 
@@ -100,7 +90,7 @@ Active ドキュメント コンテナーが所有しているため、**ヘル�
 
 `COleDocObjectItem`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxole.h
 

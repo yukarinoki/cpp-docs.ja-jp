@@ -1,29 +1,19 @@
 ---
-title: task_handle クラス |Microsoft Docs
-ms.custom: ''
+title: task_handle クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
 - PPL/concurrency::task_handle::task_handle
-dev_langs:
-- C++
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75a1effbd833ec28da2285d3c38fb58ee5ce7928
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c1a12555b0b7277fd6b52d935518e4bb1f297285
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521360"
 ---
 # <a name="taskhandle-class"></a>task_handle クラス
 
@@ -56,7 +46,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 |名前|説明|
 |----------|-----------------|
-|[operator()](#task_handle__operator_call)|タスク ハンドルの作業を実行するために、ランタイムが呼び出す関数呼び出し演算子。|
+|[演算子 ()](#task_handle__operator_call)|タスク ハンドルの作業を実行するために、ランタイムが呼び出す関数呼び出し演算子。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -72,7 +62,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 `task_handle`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** ppl.h
 

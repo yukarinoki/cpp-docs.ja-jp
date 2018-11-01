@@ -1,25 +1,15 @@
 ---
-title: 宣言の概要 |Microsoft Docs
-ms.custom: ''
+title: 宣言の概要
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e04b92075e9871ad0cb9e753c472b445b731dbb0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8279dcb7f3cbc137320e46dded48d140d1429f8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020103"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583354"
 ---
 # <a name="overview-of-declarators"></a>宣言の概要
 
@@ -165,11 +155,11 @@ int a, *b, c[5], **d, &e=a;
 
 - `declarator` は次のいずれかとして定義されます。
 
-  - identifier 
-  - 修飾された名前 
+  - identifier 
+  - 修飾された名前 
   - 宣言子 (引数リスト) [cv qualfiers] [例外 spec]
   - 宣言子 [定数式]
-  - ポインター演算子の宣言子 
+  - ポインター演算子の宣言子 
   - (宣言子)
 
 - *ポインター演算子*の 1 つです。

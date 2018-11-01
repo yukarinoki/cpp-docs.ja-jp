@@ -1,27 +1,17 @@
 ---
-title: is_move_constructible クラス | Microsoft Docs
-ms.custom: ''
+title: is_move_constructible クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_move_constructible
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_move_constructible
 ms.assetid: becdf076-7419-488d-a335-78adf2478b9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f9c0b381cfbf32327eef4b29a9dbe23f1d991f1
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1b1e450338a123c51b80f40f2369207c8b987cd6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108773"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508994"
 ---
 # <a name="ismoveconstructible-class"></a>is_move_constructible クラス
 
@@ -43,7 +33,7 @@ struct is_move_constructible;
 
 型の場合に true に評価される型の述語*T*移動操作を使用して構築できます。 この述語は `is_constructible<T, T&&>` と同じです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

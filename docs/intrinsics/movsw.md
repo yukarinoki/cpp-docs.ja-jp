@@ -1,29 +1,19 @@
 ---
-title: _ _movsw |マイクロソフトのドキュメント
-ms.custom: ''
+title: __movsw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __movsw
-dev_langs:
-- C++
 helpviewer_keywords:
 - movsw instruction
 - rep movsw instruction
 - __movsw intrinsic
 ms.assetid: db402ad5-7f0e-449a-b0b0-eea9928d6435
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c8c361fa572435cb7c49320cc1f09abb5f6cd02
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4bb8a6411c3700b3338fb7d5bc76884f84bb2413
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453616"
 ---
 # <a name="movsw"></a>__movsw
 
@@ -34,10 +24,10 @@ ms.locfileid: "46439810"
 ## <a name="syntax"></a>構文
 
 ```
-void __movsw( 
-   unsigned short* Dest, 
-   unsigned short* Source, 
-   size_t Count 
+void __movsw( 
+   unsigned short* Dest, 
+   unsigned short* Source, 
+   size_t Count 
 );
 ```
 
@@ -46,13 +36,13 @@ void __movsw(
 *追加先*<br/>
 [out]操作の転送先。
 
-*Source*<br/>
+*ソース*<br/>
 [in]操作のソース。
 
 *カウント*<br/>
 [in]コピーする文字数です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

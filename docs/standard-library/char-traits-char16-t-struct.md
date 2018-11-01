@@ -1,28 +1,18 @@
 ---
-title: char_traits&lt;char16_t&gt; 構造体 | Microsoft Docs
-ms.custom: ''
+title: char_traits&lt;char16_t&gt; 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - char_traits<char16_t>
 - iosfwd/std::char_traits<char16_t>
-dev_langs:
-- C++
 helpviewer_keywords:
 - char_traits<char16_t> class
 ms.assetid: 5daf3b62-dd6e-451f-b189-0350a04ff966
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 24d6c3d5dd11290ce4151b5d54885ba492b8ee45
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: def0023b259a7b4816bdda29684c1dd9853d5f5b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845285"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619103"
 ---
 # <a name="chartraitsltchar16tgt-struct"></a>char_traits&lt;char16_t&gt; 構造体
 
@@ -35,11 +25,11 @@ template <>
 struct char_traits<char16_t>;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 特殊化により、構造体で型 `char16_t` のオブジェクトを操作するライブラリ関数を利用できます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<string>
 

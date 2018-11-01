@@ -1,30 +1,20 @@
 ---
-title: 構造体の配置の例を示します |Microsoft ドキュメント
-ms.custom: ''
+title: 構造体の配置例
 ms.date: 03/26/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structure alignment
 - examples [C++], structure alignment
 ms.assetid: 03d137bf-5cc4-472e-9583-6498f2534199
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a9c4e8cb27d02777e40af56217bd82dec6e647b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 27f7e89b1c7faec06347d8760247a76a33e0b91e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32367743"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466245"
 ---
 # <a name="examples-of-structure-alignment"></a>構造体の配置例
 
-次の 4 つ例では、固定された構造体または共用体、および対応する数値は、その構造体または共用メモリ内のレイアウトを示してを宣言します。 図内の各列は、メモリのバイトを表し、列の数がそのバイトの変位を示します。 各図の 2 行目の名前は、宣言内の変数の名前に対応します。 影付きの列は、指定された配置を実現するために必要なが埋め込みを示しています。
+次の 4 つ例では、配置済みの構造体または共用体、および対応する数値は、その構造体または共用メモリ内のレイアウトを示しています。 を宣言します。 図内の各列は、メモリのバイトを表し、列の数がそのバイトの移動距離を示します。 各図の 2 行目の名前は、宣言内の変数の名前に対応します。 影付きの列には、指定された配置を実現するために必要なは埋め込みが示されます。
 
 ## <a name="example-1"></a>例 1
 

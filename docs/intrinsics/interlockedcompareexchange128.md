@@ -1,29 +1,19 @@
 ---
-title: _InterlockedCompareExchange128 |Microsoft Docs
-ms.custom: ''
+title: _InterlockedCompareExchange128
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedCompareExchange128_cpp
 - _InterlockedCompareExchange128
-dev_langs:
-- C++
 helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7dfcdb0c7c2f6315ea7560c236c36d1a1ba449b9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 62c9501bb2a21aab241f37805d58c6ec12073ff8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389279"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629958"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 
@@ -62,7 +52,7 @@ unsigned char _InterlockedCompareExchange128(
 
 比較対照値が変換先の元の値と等しくない場合は 0 を返します。 変換先の値は変更されず、比較対照値の値は、変換先の値で上書きされます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

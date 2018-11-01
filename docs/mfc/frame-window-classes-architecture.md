@@ -1,27 +1,17 @@
 ---
-title: フレーム ウィンドウ クラス (アーキテクチャ) |Microsoft Docs
-ms.custom: ''
+title: フレーム ウィンドウ クラス (アーキテクチャ)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.classes.frame
-dev_langs:
-- C++
 helpviewer_keywords:
 - frame window classes [MFC], document/view architecture
 ms.assetid: 5da01fb4-f531-46cc-914f-e422e4f07f5d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 117554b2c34853aa166c12d80b4821d3721e5992
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d1022d9a49e12585a6588e7b3202155f533e4706
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46394128"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431708"
 ---
 # <a name="frame-window-classes-architecture"></a>フレーム ウィンドウ クラス (アーキテクチャ)
 
@@ -40,7 +30,7 @@ MDI アプリケーションのメイン フレーム ウィンドウの基本�
 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
 MDI アプリケーションのドキュメント フレーム ウィンドウの基本クラスです。
 
-[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)<br/>
+[クラスからではなく、](../mfc/reference/coleipframewnd-class.md)<br/>
 インプレース サーバー ドキュメントを編集するときに、フレーム ウィンドウ ビューを提供します。
 
 ## <a name="see-also"></a>関連項目

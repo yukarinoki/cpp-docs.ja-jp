@@ -1,10 +1,6 @@
 ---
-title: signal | Microsoft Docs
-ms.custom: ''
+title: signal
 ms.date: 04/12/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - signal
 apilocation:
@@ -22,20 +18,14 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - signal
-dev_langs:
-- C++
 helpviewer_keywords:
 - signal function
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f4e349707c22d8c252f56c08ea45fc78609e557
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 1a0f9f8448149ce18155e0f5b88343c56d9b3d7c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43690629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660708"
 ---
 # <a name="signal"></a>signal
 
@@ -116,7 +106,7 @@ volatile double d = 0.0f;
 
 呼び出しによって作成された子プロセスでシグナル設定が保持されません[_exec](../../c-runtime-library/exec-wexec-functions.md)または[_spawn](../../c-runtime-library/spawn-wspawn-functions.md)関数。 シグナル設定は、新しいプロセスでは既定値にリセットされます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -129,30 +119,30 @@ volatile double d = 0.0f;
 次の例は、使用する方法を示します**信号**にいくつかのカスタム動作を追加する、 **SIGABRT**信号。 中止動作の詳細については、「[_set_abort_behavior](set-abort-behavior.md)」を参照してください。
 
 ```C
-// crt_signal.c
-// compile with: /EHsc /W4
-// Use signal to attach a signal handler to the abort routine
-#include <stdlib.h>
-#include <signal.h>
-#include <tchar.h>
+// crt_signal.c
+// compile with: /EHsc /W4
+// Use signal to attach a signal handler to the abort routine
+#include <stdlib.h>
+#include <signal.h>
+#include <tchar.h>
 
-void SignalHandler(int signal)
+void SignalHandler(int signal)
 {
-    if (signal == SIGABRT) {
-        // abort signal handler code
-    } else {
-        // ...
-    }
+    if (signal == SIGABRT) {
+        // abort signal handler code
+    } else {
+        // ...
+    }
 }
 
-int main()
+int main()
 {
-    typedef void (*SignalHandlerPointer)(int);
+    typedef void (*SignalHandlerPointer)(int);
 
-    SignalHandlerPointer previousHandler;
-    previousHandler = signal(SIGABRT, SignalHandler);
+    SignalHandlerPointer previousHandler;
+    previousHandler = signal(SIGABRT, SignalHandler);
 
-    abort();
+    abort();
 }
 ```
 

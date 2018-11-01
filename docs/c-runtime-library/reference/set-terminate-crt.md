@@ -1,10 +1,6 @@
 ---
-title: set_terminate (CRT) | Microsoft Docs
-ms.custom: ''
+title: set_terminate (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - set_terminate
 apilocation:
@@ -22,27 +18,21 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - set_terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_terminate function
 - terminate function
 - exception handling, termination
 ms.assetid: 3ff1456a-7898-44bc-9266-a328a80b6006
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e62dc1e4f99a1d2707c6e7b86c79e0ffc8aa027
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 7be81dec7fba80a273d635cbd30b96b09928bc66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450977"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493913"
 ---
 # <a name="setterminate-crt"></a>set_terminate (CRT)
 
-によって呼び出される独自の終了ルーチンをインストール**終了**です。
+によって呼び出される独自の終了ルーチンをインストール**終了**します。
 
 ## <a name="syntax"></a>構文
 
@@ -57,28 +47,28 @@ terminate_function set_terminate( terminate_function termFunction );
 
 ## <a name="return-value"></a>戻り値
 
-によって登録前の関数のポインターを返します**set_terminate**前の関数を後で復元できるようにします。 戻り値を既定の動作を復元する使用可能性がありますの前の関数が設定されていない場合この値は、 **NULL**です。
+によって登録された前の関数へのポインターを返します**set_terminate**前の関数を後で復元できるようにします。 戻り値を既定の動作を復元する使用可能性があります前の関数が設定されていない場合この値は、 **NULL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Set_terminate**インストールに機能*termFunction*によって呼び出される関数として**終了**です。 **set_terminate** C++ 例外処理で使用され、例外がスローされる前に、プログラムのどの時点でも呼び出すことができます。 **終了**呼び出し[中止](abort.md)既定です。 この既定の設定を変更するには、独自の終了関数を記述して呼び出すこと**set_terminate**関数の引数としての名前に置き換えます。 **終了**に渡す引数として指定されている最後の関数を呼び出す**set_terminate**です。 必要なクリーンアップ タスクのいずれかを実行した後*termFunction*プログラムを終了する必要があります。 かどうかに終了しない場合、呼び出し元に返します)、[中止](abort.md)と呼びます。
+**Set_terminate**インストールに機能*termFunction*によって呼び出される関数として**終了**します。 **set_terminate**は C++ 例外処理で使用され、例外がスローされる前に、プログラムのどの時点でも呼び出すことができます。 **終了**呼び出し[中止](abort.md)既定。 この既定の設定を変更するには、独自の終了関数を作成し、呼び出すことによって**set_terminate**引数として関数の名前に置き換えます。 **終了**への引数として渡された最後関数を呼び出す**set_terminate**します。 必要なクリーンアップ タスクのいずれかを実行した後*termFunction*プログラムを終了する必要があります。 かどうか (この場合、呼び出し元に返す) 終了せず、[中止](abort.md)が呼び出されます。
 
 マルチ スレッド環境では、終了関数はスレッドごとに別々に管理されます。 新しいスレッドは各々、それぞれの終了関数をインストールする必要があります。 したがって、各スレッドがそれぞれの終了処理を担当します。
 
-**Terminate_function**型 EH で定義されます。終了のユーザー定義関数へのポインターとして H *termFunction*を返す**void**です。 ユーザー定義関数*termFunction*できる引数を取らず、呼び出し元には返されません。 その場合、[中止](abort.md)と呼びます。 内から、例外がスローされない場合があります*termFunction*です。
+**Terminate_function**型 EH で定義されます。ユーザー定義の終了関数へのポインターとして H *termFunction*を返す**void**します。 カスタム関数*termFunction*できます引数を受け取らず、呼び出し元には返されません。 その場合、[中止](abort.md)が呼び出されます。 内から例外をスローしない可能性が*termFunction*します。
 
 ```cpp
 typedef void ( *terminate_function )( );
 ```
 
 > [!NOTE]
-> **Set_terminate**機能は、デバッガーの外部でのみ機能します。
+> **Set_terminate**関数は、デバッガーの外部でのみ機能します。
 
-1 つ**set_terminate**のハンドラーを動的にリンクされる Dll または Exe; を呼び出す場合でも**set_terminate**を他のハンドラーを置き換えることができますか、別で設定されたハンドラーを置き換えることがありますDLL または EXE です。
+1 つは**set_terminate**ハンドラーを動的にリンクされる Dll または Exe; を呼び出す場合でも**set_terminate**を他のハンドラーを置き換えることができますか、別によって設定されたハンドラーを置き換えることがありますDLL または exe ファイル。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**set_terminate**|\<eh.h>|
 

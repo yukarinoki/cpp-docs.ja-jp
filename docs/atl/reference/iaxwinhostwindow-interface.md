@@ -1,10 +1,6 @@
 ---
-title: IAxWinHostWindow インターフェイス |Microsoft Docs
-ms.custom: ''
+title: IAxWinHostWindow インターフェイス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IAxWinHostWindow
 - ATLIFACE/ATL::IAxWinHostWindow
@@ -14,21 +10,15 @@ f1_keywords:
 - ATLIFACE/ATL::QueryControl
 - ATLIFACE/ATL::SetExternalDispatch
 - ATLIFACE/ATL::SetExternalUIHandler
-dev_langs:
-- C++
 helpviewer_keywords:
 - IAxWinHostWindow interface
 ms.assetid: 9821c035-cd52-4c46-b58a-9278064f09b4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bee312cd5e7a88dd0798778d5f8385df265d78a1
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1e389dc253f24eed2fee7e1d552be931a23f5e3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099775"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637321"
 ---
 # <a name="iaxwinhostwindow-interface"></a>IAxWinHostWindow インターフェイス
 
@@ -60,7 +50,7 @@ interface IAxWinHostWindow : IUnknown
 
 このインターフェイスは、オブジェクトのホスト、ATL の ActiveX コントロールによって公開されます。 作成や、ホストされるコントロールからインターフェイスを取得または Web ブラウザーをホストする場合は、外部のディスパッチ インターフェイスまたは使用するための UI ハンドラーを設定する、ホスト オブジェクトへのコントロールをアタッチするには、このインターフェイスでメソッドを呼び出します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 このインターフェイスの定義は、次に示すように IDL または C++ では、使用可能です。
 

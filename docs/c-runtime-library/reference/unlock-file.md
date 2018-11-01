@@ -1,10 +1,6 @@
 ---
-title: _unlock_file | Microsoft Docs
-ms.custom: ''
+title: _unlock_file
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _unlock_file
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _unlock_file
 - unlock_file
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], unlocking
 - unlock_file function
 - _unlock_file function
 - unlocking files
 ms.assetid: cf380a51-6d3a-4f38-bd64-2d4fb57b4369
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63b0950aaea5520849f9a32b2b08ab138cd8099b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e3d11cbd59ef5846b33908ae6b6c40d7ea6125e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107547"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552530"
 ---
 # <a name="unlockfile"></a>_unlock_file
 
@@ -63,7 +53,7 @@ void _unlock_file(
 
 **_Unlock_file**関数で指定されたファイルのロックを解除*ファイル*します。 ファイルのロックを解除すると、他のプロセスがそのファイルにアクセスできるようになります。 しない限り、この関数を呼び出さないで **_lock_file**が呼び出されていた、*ファイル*ポインター。 呼び出す **_unlock_file**でロックされていないファイルもデッドロックにつながる可能性があります。 例については、「[_lock_file](lock-file.md)」をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

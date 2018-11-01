@@ -1,15 +1,9 @@
 ---
-title: BASE (ベース アドレス) |Microsoft Docs
-ms.custom: ''
+title: /BASE (ベース アドレス)
 ms.date: 09/05/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /base
 - VC.Project.VCLinkerTool.BaseAddress
-dev_langs:
-- C++
 helpviewer_keywords:
 - base addresses [C++]
 - programs [C++], preventing relocation
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - at sign symbol for base address
 ms.assetid: 00b9f6fe-0bd2-4772-a69c-7365eb199069
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28e4e2ea0118d79e2746db93ba30478ed2563434
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 00bac7b15263d976fa840e22406f4be4c7836962
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48860538"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551711"
 ---
 # <a name="base-base-address"></a>/BASE (ベース アドレス)
 
@@ -56,7 +46,7 @@ ms.locfileid: "48860538"
 
 コマンド ラインでベース アドレスの応答ファイルを使用してベース アドレスを指定する別の方法です。 ベース アドレスの応答ファイルは、ベース アドレスと、プログラムで使用すると、すべての Dll は、各ベース アドレスに対して一意のテキストのキーの省略可能なサイズを含むテキスト ファイルです。 応答ファイルを使用してベース アドレスを指定するには、使用、アット マーク (**\@**) 後に、応答ファイルの名前*filename*、コンマ、その後に、*キー*ファイルで使用するベース アドレスの値。 リンカー *filename*か、指定されたパスのパスが指定されていない場合、LIB 環境変数で指定されたディレクトリでします。 内の各行*filename* 1 つの DLL を表し、次の構文します。
 
-> *キー* *アドレス*[*サイズ*] **;***コメント*
+> *キー* *アドレス*[*サイズ*] **;***コメント*
 
 *キー*英数字の文字列は、大文字小文字は区別されません。 通常、DLL の名前が必要はありません。 *キー*ベースが続く*アドレス*C 言語、16 進数、または 10 進表記で、省略可能な最大*サイズ*します。 3 つの引数は、スペースまたはタブで区切られます。 場合、リンカーが警告を発行した*サイズ*は、プログラムに必要な仮想アドレス空間よりも少ない。 A*コメント*をセミコロンで指定された (**;**)、同一または別の行を指定できます。 リンカーでは、行の末尾にセミコロンからすべてのテキストは無視されます。 この例では、このようなファイルの一部を示します。
 

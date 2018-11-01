@@ -1,37 +1,27 @@
 ---
-title: コンパイラ エラー C2975 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラ エラー C2975
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2975
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2975
 ms.assetid: 526f6b9d-6c76-4c12-9252-1b1d7c1e06c7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 53cb020dc0d456f10b7cfbae82a16b2ebe5fda6b
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 66b7c0d61cbc8141b9ed3e5f6eb329b68eb00477
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33246984"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609756"
 ---
 # <a name="compiler-error-c2975"></a>コンパイラ エラー C2975
 
-> '*引数*': 無効なテンプレート引数を'*型*'、コンパイル時定数式が必要です
+> '*引数*': 無効なテンプレート引数'*型*'、コンパイル時定数式が必要です
 
-テンプレート引数が、テンプレート宣言と一致しません山かっこ内の定数式が表示されます。 変数は、テンプレートの実引数としては許可されません。 テンプレートの定義を調べて正しい型が指定されていることをご確認ください。
+テンプレート引数は、テンプレート宣言; と一致しません定数式は、山かっこ内に表示する必要があります。 変数は、実際のテンプレート引数としては許可されません。 テンプレートの定義を調べて正しい型が指定されていることをご確認ください。
 
 ## <a name="example"></a>例
 
-次の例では、C2975 を生成し、正しい使用法も示しています。
+次の例では、C2975 を生成し、また正しい使用法を示します。
 
 ```cpp
 // C2975.cpp
@@ -45,7 +35,7 @@ int main() {
 }
 ```
 
-使用するときにも発生 C2975 &#95;&#95;行&#95;&#95;コンパイル時定数として[/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)です。 1 つのソリューションは、使用してコンパイルすること[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)の代わりに **/ZI**です。
+C2975 は、使用する場合にも発生します。 &#95;&#95;行&#95;&#95;コンパイル時定数として[/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)します。 1 つのソリューションを使用してコンパイルすること[/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)の代わりに **/ZI**します。
 
 ```cpp
 // C2975b.cpp

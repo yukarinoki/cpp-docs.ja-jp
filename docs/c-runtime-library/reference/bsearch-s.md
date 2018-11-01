@@ -1,10 +1,6 @@
 ---
-title: bsearch_s | Microsoft Docs
-ms.custom: ''
+title: bsearch_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - bsearch_s
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - bsearch_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [CRT], binary search
 - bsearch_s function
 ms.assetid: d5690d5e-6be3-4f1d-aa0b-5ca6dbded276
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2600b77031967bec5d5dd549a7dd8f34fc5c5e3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd621c1dae2cae847bbbf032dec7e6972c526203
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430837"
 ---
 # <a name="bsearchs"></a>bsearch_s
 
@@ -71,16 +61,16 @@ void *bsearch_s(
 要素の幅。
 
 *compare*<br/>
-2 つの要素を比較するコールバック関数。 最初の引数は、*コンテキスト*ポインター。 2 番目の引数がへのポインター、*キー*検索します。 3 番目の引数と比較する配列要素へのポインターは、*キー*です。
+2 つの要素を比較するコールバック関数。 最初の引数は、*コンテキスト*ポインター。 2 番目の引数がへのポインター、*キー*検索します。 3 番目の引数と比較する配列要素へのポインターは、*キー*します。
 
 *context*<br/>
 比較関数内でアクセスできるオブジェクトへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
-**bsearch_s**の発生個所へのポインターを返します*キー*が指す配列で*基本*です。 場合*キー*が見つからない場合、関数を返します**NULL**です。 配列が昇順でないか、同一キーで重複するレコードがある場合、結果は予測不可能になります。
+**bsearch_s**の発生個所へのポインターを返します*キー*が指す配列で*基本*します。 場合*キー*が見つからない、関数を返します**NULL**します。 配列が昇順でないか、同一キーで重複するレコードがある場合、結果は予測不可能になります。
 
-この関数に無効なパラメーターが渡されると、「 [Parameter Validation](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**です。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+この関数に無効なパラメーターが渡されると、「 [Parameter Validation](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**NULL**します。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
 ### <a name="error-conditions"></a>エラー条件
 
@@ -92,9 +82,9 @@ void *bsearch_s(
 |任意|任意|任意|任意|= 0|**EINVAL**|
 |任意|任意|**NULL**|1 つ|任意|**EINVAL**|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Bsearch_s**関数の並べ替えられた配列のバイナリ検索を実行する*数*の各要素は、*幅*バイトの列にします。 *基本*値は、検索対象の配列のベースへのポインターと*キー*検索されている値です。 *比較*パラメーターは配列要素への要求されたキーを比較し、それらのリレーションシップを指定する値は次のいずれかを返しますをユーザーが指定したルーチンへのポインター。
+**Bsearch_s**関数の並べ替え済み配列のバイナリ検索を実行する*数*の各要素は、*幅*サイズ (バイト)。 *基本*値は、検索対象の配列のベースへのポインターと*キー*検索されている値です。 *比較*パラメーターを配列要素への要求されたキーを比較し、それらの関係を指定する値は次のいずれかを返しますユーザー指定のルーチンへのポインターです。
 
 |によって返される値*比較*ルーチン|説明|
 |-----------------------------------------|-----------------|
@@ -102,11 +92,11 @@ void *bsearch_s(
 |0|キーは配列要素と等しい。|
 |> 0|キーは配列要素より大きい。|
 
-*コンテキスト*ポインターは、場合役立ちます検索対象のデータ構造体は、オブジェクトの一部であり、比較関数は、オブジェクトのメンバーにアクセスする必要があります。 *比較*関数はそのオブジェクトの適切なオブジェクトの種類とアクセス メンバーに void ポインターをキャストする可能性があります。 追加、*コンテキスト*パラメーターにより、 **bsearch_s**追加のコンテキストがデータを使用できるようにする静的変数の使用に関連付けられている再入バグを回避するためより安全な*比較*関数。
+*コンテキスト*検索対象のデータ構造体は、オブジェクトの一部との比較関数は、オブジェクトのメンバーにアクセスする必要がある場合、ポインターが便利な可能性があります。 *比較*関数はそのオブジェクトの適切なオブジェクトの種類とアクセスのメンバーに void ポインターをキャストすることがあります。 追加、*コンテキスト*パラメーターにより、 **bsearch_s**追加のコンテキストに関連付けられたデータを使用できるようにする静的変数を使用して、再入バグを回避するのに使用できるためより安全な*比較*関数。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**bsearch_s**|\<stdlib.h> および \<search.h>|
 
@@ -114,7 +104,7 @@ void *bsearch_s(
 
 ## <a name="example"></a>例
 
-このプログラムでは、[qsort_s](qsort-s.md) で文字列の配列を並べ替え、bsearch_s を使用して "cat" という単語を検索します。
+このプログラムでは、 [qsort_s](qsort-s.md)で文字列の配列を並べ替え、bsearch_s を使用して "cat" という単語を検索します。
 
 ```cpp
 // crt_bsearch_s.cpp

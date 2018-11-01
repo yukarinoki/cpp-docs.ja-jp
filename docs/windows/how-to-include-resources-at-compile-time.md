@@ -1,15 +1,9 @@
 ---
-title: '方法: リソースは、コンパイル時 (C++) |Microsoft Docs'
-ms.custom: ''
+title: '方法: リソースは、コンパイル時 (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vs.resvw.resource.including
 - vc.resvw.resource.including
-dev_langs:
-- C++
 helpviewer_keywords:
 - comments [C++], compiled files
 - resources [C++], including at compile time
@@ -17,17 +11,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0ed41f7025b3564ab05fe13e77d3e9400cd0f385
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8d6cfc2f18ec12354619c01ed79b740554ec4d95
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46420232"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495148"
 ---
 # <a name="how-to-include-resources-at-compile-time"></a>方法: コンパイル時にリソースをインクルードする
 
@@ -57,7 +46,7 @@ ms.locfileid: "46420232"
 
    この方法でインクルードされるリソースは、コンパイル時に実行可能ファイルの一部になります。 これらのリソースは、プロジェクトのメイン .rc ファイルを操作しているときに編集または変更の対象として直接操作できません。 インクルードされる .rc ファイルを別個に開く必要があります。 インクルードされるファイルのうち、.rc 拡張子を持たないファイルは、リソース エディターで編集できません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

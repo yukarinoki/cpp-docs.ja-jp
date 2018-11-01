@@ -1,25 +1,15 @@
 ---
-title: 同期データ構造体 |Microsoft Docs
-ms.custom: ''
+title: 同期データ構造
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f6a57495fdd5084b3ac329f45aa816eea9274f2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c91de87bb5d579916743051d06c15f6df6921bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436196"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495928"
 ---
 # <a name="synchronization-data-structures"></a>同期データ構造
 
@@ -124,5 +114,5 @@ ms.locfileid: "46436196"
 Windows API が提供する同期データ構造の動作を比較します。
 
 [コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)<br/>
-並列プログラミングを容易にする同時実行ランタイムについて説明します。また、関連トピックへのリンクを示します。
+並列プログラミングを容易にするコンカレンシー ランタイムについて説明します。また、関連トピックへのリンクを示します。
 

@@ -1,27 +1,17 @@
 ---
-title: invalid_scheduler_policy_thread_specification クラス |Microsoft Docs
-ms.custom: ''
+title: invalid_scheduler_policy_thread_specification クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - concrt/concurrency::invalid_scheduler_policy_thread_specification
-dev_langs:
-- C++
 helpviewer_keywords:
 - invalid_scheduler_policy_thread_specification class
 ms.assetid: 2d0fafb2-18f8-4284-8040-3db640d33303
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc0f52bc36157bcbc1e6adaa28f786a01ac05263
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b74439d1fca9ea990258ca5f7e36c865a2c49455
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404918"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491339"
 ---
 # <a name="invalidschedulerpolicythreadspecification-class"></a>invalid_scheduler_policy_thread_specification クラス
 
@@ -47,7 +37,7 @@ class invalid_scheduler_policy_thread_specification : public std::exception;
 
 `invalid_scheduler_policy_thread_specification`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 

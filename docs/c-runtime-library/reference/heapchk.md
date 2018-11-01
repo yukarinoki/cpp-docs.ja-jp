@@ -1,10 +1,6 @@
 ---
-title: _heapchk | Microsoft Docs
-ms.custom: ''
+title: _heapchk
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _heapchk
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - _heapchk
 - heapchk
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], heap-related problems
 - consistency checking of heaps
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - heaps, checking consistency
 - _heapchk function
 ms.assetid: 859619a5-1e35-4f02-9e09-11d9fa266ec0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b3fc500ee86bde40def0e1e2d3dd3edad3127daf
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b34b4ea1bb2512628213cabb55e26e2dad6d445c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580623"
 ---
 # <a name="heapchk"></a>_heapchk
 
@@ -65,15 +55,15 @@ int _heapchk( void );
 **_HEAPEMPTY**|ヒープが初期化されていません。
 **_HEAPOK**|ヒープは一貫性があると思われます。
 
-さらに、エラーが発生する場合に **_heapchk**設定**errno**に**返る**です。
+さらに、エラーが発生する場合に **_heapchk**設定**errno**に**返る**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Heapchk**関数は、ヒープの最小限の一貫性をチェックしてヒープ関連の問題をデバッグするのに役立ちます。 オペレーティング システムがサポートしていない場合 **_heapchk**関数を返します (たとえば、Windows 98) **_HEAPOK**設定と**errno**に**返る**.
+**_Heapchk**関数により、ヒープの最小限の一貫性をチェックしてヒープ関連の問題をデバッグします。 オペレーティング システムがサポートされていない場合 **_heapchk**関数を返します (たとえば、Windows 98) **_HEAPOK**設定と**errno**に**返る**.
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_heapchk**|\<malloc.h>|\<errno.h>|
 

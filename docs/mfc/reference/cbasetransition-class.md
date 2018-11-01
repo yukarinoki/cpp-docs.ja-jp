@@ -1,10 +1,6 @@
 ---
-title: CBaseTransition クラス |Microsoft Docs
-ms.custom: ''
+title: CBaseTransition クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -27,8 +23,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_pStartKeyframe
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_transition
 - AFXANIMATIONCONTROLLER/CBaseTransition::m_type
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBaseTransition [MFC], CBaseTransition
 - CBaseTransition [MFC], AddToStoryboard
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16c838d9ffbef8ace933990fdaa88dc84c1c56ee
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b4c15be574700730e847bce06aaa4a6f82aed4b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539127"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition クラス
 
@@ -124,7 +114,7 @@ class CBaseTransition : public CObject;
 
 `CBaseTransition`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxanimationcontroller.h
 

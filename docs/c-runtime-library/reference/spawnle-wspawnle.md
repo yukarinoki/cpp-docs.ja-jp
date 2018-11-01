@@ -1,10 +1,6 @@
 ---
-title: _spawnle、_wspawnle | Microsoft Docs
-ms.custom: ''
+title: _spawnle、_wspawnle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _spawnle
 - _wspawnle
@@ -26,8 +22,6 @@ f1_keywords:
 - _spawnle
 - wspawnle
 - _wspawnle
-dev_langs:
-- C++
 helpviewer_keywords:
 - spawnle function
 - processes, creating
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d8833364dcda0adf577dab63776f7ead5b61833
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7da0cf4f7232ad7b8b1c5edb1240ee67fdf393e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413474"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632285"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle、_wspawnle
 
@@ -87,14 +77,14 @@ intptr_t _wspawnle(
 実行されるファイルのパス。
 
 *arg0*、 *arg1*、.*argn*<br/>
-引数へのポインターのリスト。 *Arg0*引数がへのポインターでは通常*cmdname*です。 引数*arg1*を通じて*argn*新しい引数リストを形成する文字列へのポインターです。 次の*argn*、存在する必要があります、 **NULL**引数リストの末尾を示すへのポインター。
+引数へのポインターのリスト。 *Arg0*引数がへのポインターでは、通常*cmdname*します。 引数*arg1*を通じて*argn*新しい引数リストを形成する文字列へのポインターです。 次の*argn*、必要があります、 **NULL**引数リストの末尾へのポインター。
 
 *envp*<br/>
 環境設定へのポインターの配列。
 
 ## <a name="return-value"></a>戻り値
 
-同期からの戻り値 **_spawnle**または **_wspawnle** (**_P_WAIT**向けに指定された*モード*) が新しいプロセスの終了ステータスです. 非同期の戻り値 **_spawnle**または **_wspawnle** (**_P_NOWAIT**または **_P_NOWAITO**向けに指定された*モード*) がプロセス ハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 起動されたプロセスが明示的に呼び出す場合、0 以外の値を終了ステータスを設定することができます、**終了**0 以外の引数を持つルーチンです。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 は、(新しいプロセスは開始されません) エラーを示します。 この場合、 **errno**は、次の値のいずれかに設定します。
+同期からの戻り値 **_spawnle**または **_wspawnle** (**_P_WAIT**向けに指定された*モード*) は、新しいプロセスの終了ステータス. 非同期の戻り値 **_spawnle**または **_wspawnle** (**_P_NOWAIT**または **_P_NOWAITO**向けに指定された*モード*) は、プロセスのハンドルです。 プロセスが正常に終了した場合、終了ステータスは 0 です。 生成されたプロセスが明示的に呼び出す場合、0 以外の値を終了ステータスを設定できます、**終了**ルーチン 0 以外の引数。 新しいプロセスが明示的に終了ステータスを正の値に設定しなかった場合、正の値の終了ステータスは中止または割り込みによる異常終了を示します。 戻り値-1 は、(新しいプロセスは開始されません) エラーを示します。 この場合、 **errno**値は次のいずれかに設定されます。
 
 |||
 |-|-|
@@ -106,15 +96,15 @@ intptr_t _wspawnle(
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらの関数は、新しいプロセスを作成して実行し、各コマンド ライン引数を個別のパラメーターとして渡します。また環境設定へのポインターの配列も渡します。
 
-これらの関数では、パラメーターの検証が行われます。 いずれか*cmdname*または*arg0*空の文字列または null ポインターの場合、無効なパラメーター ハンドラーが呼び出され、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**、し、-1 を返します。 新しいプロセスは起動されません。
+これらの関数では、パラメーターの検証が行われます。 いずれか*cmdname*または*arg0*空の文字列または null ポインターの場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**-1 を返します。 新しいプロセスは起動されません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_spawnle**|\<process.h>|
 |**_wspawnle**|\<stdio.h> または \<wchar.h>|

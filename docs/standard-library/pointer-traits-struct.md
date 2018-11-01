@@ -1,10 +1,6 @@
 ---
-title: pointer_traits 構造体 | Microsoft Docs
-ms.custom: ''
+title: pointer_traits 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - memory/std::pointer_traits::element_type
 - memory/std::pointer_traits::pointer
@@ -17,19 +13,13 @@ f1_keywords:
 - xmemory0/std::pointer_traits::difference_type
 - xmemory0/std::pointer_traits::rebind
 - memory/std::pointer_traits::pointer_to
-dev_langs:
-- C++
 ms.assetid: 545aecf1-3561-4859-8b34-603c079fe1b3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d1485441dbea92f534314dafd9d86ab0ef8a4e69
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: b661d4b36ce48a08faba6638c5114f3f4e6981a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856450"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434789"
 ---
 # <a name="pointertraits-struct"></a>pointer_traits 構造体
 
@@ -42,7 +32,7 @@ template <class Ptr>
 struct pointer_traits;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 Ptr には `Ty *` 型の生のポインターまたは次のプロパティを持つクラスを指定できます。
 
@@ -59,7 +49,7 @@ struct Ptr
    };
 ```
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |名前|説明|
 |----------|-----------------|
@@ -79,7 +69,7 @@ struct Ptr
 |----------|-----------------|
 |[pointer_to](#pointer_to)|任意の参照をクラス `Ptr` のオブジェクトに変換します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<memory>
 

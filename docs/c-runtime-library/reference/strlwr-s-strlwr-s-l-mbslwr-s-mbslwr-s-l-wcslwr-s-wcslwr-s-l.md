@@ -1,10 +1,6 @@
 ---
-title: _strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l | Microsoft Docs
-ms.custom: ''
+title: _strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_s_l
 - _mbslwr_s_l
@@ -41,8 +37,6 @@ f1_keywords:
 - _mbslwr_s_l
 - wcslwr_s
 - _mbslwr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcslwr_s function
 - wcslwr_s function
@@ -66,16 +60,12 @@ helpviewer_keywords:
 - tcslwr_s_l function
 - strings [C++], converting case
 ms.assetid: 4883d31b-bdac-4049-83a1-91dfdeceee79
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61f3db37a61a30909e8deadee96c3bfbe2c46bb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b7eb9d81b1269018cd41c80c1f9c15aa92a4f85a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415340"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497260"
 ---
 # <a name="strlwrs-strlwrsl-mbslwrs-mbslwrsl-wcslwrs-wcslwrsl"></a>_strlwr_s、_strlwr_s_l、_mbslwr_s、_mbslwr_s_l、_wcslwr_s、_wcslwr_s_l
 
@@ -158,11 +148,11 @@ errno_t _wcslwr_s_l(
 
 正常終了した場合は 0 を返します。失敗した場合は 0 以外のエラー コードを返します。
 
-これらの関数では、パラメーターの検証が行われます。 場合*str*は有効な null で終わる文字列ではありません」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**です。 場合*numberOfElements*関数を返すことも、文字列の長さより小さいは**EINVAL**設定と**errno**に**EINVAL**です。
+これらの関数では、パラメーターの検証が行われます。 場合*str*は有効な null で終わる文字列はありません」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**します。 場合*numberOfElements*返すことも、関数が、文字列の長さより小さい**EINVAL**設定と**errno**に**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Strlwr_s**関数に変換の代わりに、内の大文字*str*小文字に変換します。 **_mbslwr_s**のマルチバイト文字バージョンは、 **_strlwr_s**です。 **_wcslwr_s**のワイド文字バージョンは、 **_strlwr_s**です。
+**_Strlwr_s**の場所で、関数に変換内の大文字*str*を小文字にします。 **_mbslwr_s**のマルチバイト文字バージョンです **_strlwr_s**します。 **_wcslwr_s**のワイド文字バージョンは、 **_strlwr_s**します。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -177,9 +167,9 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**_tcslwr_s**|**_strlwr_s**|**_mbslwr_s**|**_wcslwr_s**|
 |**_tcslwr_s_l**|**_strlwr_s_l**|**_mbslwr_s_l**|**_wcslwr_s_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strlwr_s**、 **_strlwr_s_l**|\<string.h>|
 |**_mbslwr_s**、 **_mbslwr_s_l**|\<mbstring.h>|

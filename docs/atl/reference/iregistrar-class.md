@@ -1,10 +1,6 @@
 ---
-title: IRegistrar インターフェイス |Microsoft Docs
-ms.custom: ''
+title: IRegistrar インターフェイス
 ms.date: 2/1/2017
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IRegistrar
 - ATLIFASE/ATL::IRegistrar
@@ -16,21 +12,15 @@ f1_keywords:
 - ATLIFASE/ATL::IRegistrar::StringUnregister
 - ATLIFASE/ATL::IRegistrar::ResourceRegister
 - ATLIFASE/ATL::IRegistrar::ResourceUnregister
-dev_langs:
-- C++
 helpviewer_keywords:
 - Iregistrar Interface
 ms.assetid: e88c04b7-0c93-4ae8-aeb9-ecd78f87421e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 10e5a6fda373c79b85dac5cfcf19739276a5c12f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3494920164ed3a62713298d2cafdbdc27dbb2b97
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46039518"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534772"
 ---
 # <a name="iregistrar-interface"></a>IRegistrar インターフェイス
 
@@ -61,7 +51,7 @@ typedef interface IRegistrar IRegistrar;
 |[IRegistrar::ResourceRegister](#resourceregister)|リソースを登録します。|
 |[IRegistrar::ResourceUnregister](#resourceunregister)|リソースを登録解除します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlifase.h
 

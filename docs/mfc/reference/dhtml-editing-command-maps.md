@@ -1,23 +1,13 @@
 ---
-title: DHTML 編集コマンド マップ |Microsoft Docs
-ms.custom: ''
+title: DHTML 編集コマンド マップ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e31490f62c170230c41a2a2a26fcbe116d39d415
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6c03e8e4a7d84776c3657994c57a72a906046f37
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425068"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558458"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編集コマンド マップ
 
@@ -58,7 +48,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxhtml.h
 
@@ -81,7 +71,7 @@ DHTML 編集コマンド マップは、ユーザー インターフェイスの
 
 BEGIN_DHTMLEDITING_CMDMAP マクロに続く、クラスの実装 (.cpp) ファイルに配置[DHTMLEDITING_CMD_ENTRY](#dhtmlediting_cmd_entry)クラスは、(たとえば、IDM_CUT に ID_EDIT_CUT) からマップするコマンドのマクロ。 使用して、 [END_DHTMLEDITING_CMDMAP](#end_dhtmlediting_cmdmap)マクロ イベント マップの終わりをマークします。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxhtml.h
 
@@ -101,7 +91,7 @@ END_DHTMLEDITING_CMDMAP()
 
 参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxhtml.h
 
@@ -125,7 +115,7 @@ ID_EDIT_COPY) などのコマンド ID。
 
 参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxhtml.h
 
@@ -152,7 +142,7 @@ ID_EDIT_COPY) などのコマンド ID。
 
 参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxhtml.h
 
@@ -179,7 +169,7 @@ ID_EDIT_COPY) などのコマンド ID。
 
 参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxhtml.h
 
@@ -209,7 +199,7 @@ ID_EDIT_COPY) などのコマンド ID。
 
 参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxhtml.h
 

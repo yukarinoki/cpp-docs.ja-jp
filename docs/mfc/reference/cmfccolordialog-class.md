@@ -1,10 +1,6 @@
 ---
-title: CMFCColorDialog クラス |Microsoft Docs
-ms.custom: ''
+title: CMFCColorDialog クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCColorDialog
 - AFXCOLORDIALOG/CMFCColorDialog
@@ -16,8 +12,6 @@ f1_keywords:
 - AFXCOLORDIALOG/CMFCColorDialog::SetNewColor
 - AFXCOLORDIALOG/CMFCColorDialog::SetPageOne
 - AFXCOLORDIALOG/CMFCColorDialog::SetPageTwo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCColorDialog [MFC], CMFCColorDialog
 - CMFCColorDialog [MFC], GetColor
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageOne
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9f02441bceb2b608c960df858c4d4068e858c51
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a786579797b9ffacca5b338e4cfd6991965704e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46416046"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50490367"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog クラス
 
@@ -64,7 +54,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|現在選択されている色を返します。|
 |[CMFCColorDialog::GetPalette](#getpalette)|色のパレットを返します。|
-|`CMFCColorDialog::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CDialogEx::PreTranslateMessage` をオーバーライドします)。|
+|`CMFCColorDialog::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 ( `CDialogEx::PreTranslateMessage`をオーバーライドします)。|
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|パレットは、システム パレットから派生します。|
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|現在の選択した色を設定します。|
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|指定された RGB 値に最も近い色を設定します。|
@@ -114,7 +104,7 @@ class CMFCColorDialog : public CDialogEx
 
 [!code-cpp[NVC_MFC_NewControls#3](../../mfc/reference/codesnippet/cpp/cmfccolordialog-class_1.cpp)]
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxcolordialog.h
 
@@ -136,7 +126,7 @@ CMFCColorDialog(
 [in]既定色を選択します。 値が指定されていない場合は、既定では RGB(0,0,0) (黒です)。
 
 *dwFlags*<br/>
-[in]予約されています。
+[in] 予約されています。
 
 *pParentWnd*<br/>
 [in]ウィンドウ、ダイアログ ボックスの親またはオーナー ウィンドウへのポインター。

@@ -1,29 +1,19 @@
 ---
-title: -bigobj (のセクションの数を増加します。Obj ファイル) |Microsoft Docs
-ms.custom: ''
+title: /bigobj (.obj ファイル内のセクションの数を増やす)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /bigobj
-dev_langs:
-- C++
 helpviewer_keywords:
 - -bigobj compiler option [C++]
 - /bigobj compiler option [C++]
 - bigobj compiler option [C++]
 ms.assetid: ba94d602-4015-4a8d-86ec-49241ab74c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f10456bea8be552df42efe135818ac9c47393fc
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d2deaf7b3e248dd1269d9f04037c9d38651a5b56
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721488"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50649710"
 ---
 # <a name="bigobj-increase-number-of-sections-in-obj-file"></a>/bigobj (.obj ファイル内のセクションの数を増やす)
 
@@ -43,7 +33,7 @@ ms.locfileid: "45721488"
 
 Visual C 2005 より前に付属していたリンカーで生成された .obj ファイルを読み取ることができません **/bigobj**します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

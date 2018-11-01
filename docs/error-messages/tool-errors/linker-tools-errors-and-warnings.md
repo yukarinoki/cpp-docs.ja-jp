@@ -1,31 +1,21 @@
 ---
-title: リンカ ツール エラーと警告 |Microsoft ドキュメント
-ms.custom: ''
+title: リンカー ツール エラーと警告
 ms.date: 11/17/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - errors [C++]
 - linker [C++], errors and warnings
 - errors [C++], linker
 ms.assetid: d4b12c0f-4dae-48b2-9b9e-fedf94c94cb0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f279c4e59f8eb7f655ae10f8ea99ec6ed31115ec
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7fc68641feae286c85d6f8ebec00387cdca1a43c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34569957"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521180"
 ---
 # <a name="linker-tools-errors-and-warnings"></a>リンカー ツール エラーと警告
 
-リンク、LIB、DUMPBIN、および EDITBIN は、これらのエラーと警告を生成します。
+リンク、LIB、DUMPBIN、および EDITBIN は、これらのエラーや警告を生成します。
 
 [!INCLUDE[error-boilerplate](../../error-messages/includes/error-boilerplate.md)]
 
@@ -133,7 +123,7 @@ ms.locfileid: "34569957"
 
 [リンカー ツール エラー LNK1314](../../error-messages/tool-errors/linker-tools-error-lnk1314.md)
 
-[リンカ ツール エラー LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
+[リンカー ツール エラー LNK1318](../../error-messages/tool-errors/linker-tools-error-lnk1318.md)
 
 [リンカー ツール エラー LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
 

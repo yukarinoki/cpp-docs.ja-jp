@@ -1,10 +1,6 @@
 ---
-title: istreambuf_iterator クラス | Microsoft Docs
-ms.custom: ''
+title: reverse_iterator クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xutility/std::reverse_iterator
 - iterator/std::reverse_iterator::difference_type
@@ -13,8 +9,6 @@ f1_keywords:
 - iterator/std::reverse_iterator::reference
 - iterator/std::reverse_iterator::base
 - iterator/std::reverse_iterator::operator_star
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::reverse_iterator [C++]
 - std::reverse_iterator [C++], difference_type
@@ -24,16 +18,12 @@ helpviewer_keywords:
 - std::reverse_iterator [C++], base
 - std::reverse_iterator [C++], operator_star
 ms.assetid: c0b34d04-ae9a-4999-9aff-28b313897ffa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 348cff70b46af133009703c513ac9d939486cd91
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c865caa6d47d68462740fb4e9b2f6b712d9b6df9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105914"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640220"
 ---
 # <a name="reverseiterator-class"></a>reverse_iterator クラス
 
@@ -68,7 +58,7 @@ RandomIterator 逆の順序で動作するように適合させる反復子を�
 |-|-|
 |[reverse_iterator](#reverse_iterator)|基になる反復子の既定の `reverse_iterator` または `reverse_iterator` を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -97,7 +87,7 @@ RandomIterator 逆の順序で動作するように適合させる反復子を�
 |[operator->](#operator-_gt)|`reverse_iterator` によってアドレス指定される要素へのポインターを返します。|
 |[operator&#91;&#93;](#op_at)|`reverse_iterator` によってアドレス指定される要素からの要素のオフセットへの参照を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iterator>
 

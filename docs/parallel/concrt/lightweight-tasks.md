@@ -1,32 +1,22 @@
 ---
-title: 軽量タスク |Microsoft Docs
-ms.custom: ''
+title: 軽量タスク
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c2d7624ce66513bd1447bc264e6c6cc29eab940c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7e155b82e963e7bf3f19fa44c66e4c22b8c602e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409091"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481433"
 ---
 # <a name="lightweight-tasks"></a>軽量タスク
 
 このドキュメントでは、軽量タスク、同時実行ランタイムでの役割について説明します。 A*軽量タスク*から直接スケジュールするタスクを`concurrency::Scheduler`または`concurrency::ScheduleGroup`オブジェクト。 軽量タスクが、Windows API に提供する関数に似ています[CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread)関数。 したがって、軽量タスクは、同時実行ランタイムのスケジューリング機能を使用する既存のコードを採用する場合に便利です。 同時実行ランタイム自体では、軽量タスクを使用して、非同期エージェントをスケジュールおよび非同期メッセージ ブロックの間でメッセージを送信します。
 
 > [!TIP]
->  同時実行ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
+>  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
 
 軽量タスクでは、非同期エージェントとタスク グループよりもオーバーヘッドが少ないを実行します。 たとえば、ランタイムは通知されず、軽量タスクが終了したとき。 さらに、ランタイムはキャッチまたは処理しない軽量タスクからスローされる例外。 例外処理と軽量タスクの詳細については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
 

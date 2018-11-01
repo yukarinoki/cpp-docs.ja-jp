@@ -1,28 +1,18 @@
 ---
-title: CDaoRelationInfo 構造体 |Microsoft Docs
-ms.custom: ''
+title: CDaoRelationInfo 構造体
 ms.date: 06/25/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDaoRelationInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - DAO (Data Access Objects), Relations collection
 - CDaoRelationInfo structure [MFC]
 ms.assetid: 92dda090-fe72-4090-84ec-429498a48aad
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ca5fceb25fdc9640248e0e510efb0c2f18eb506
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1bf60bd3f076dbf682b92898d66cc5f96841c9e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380088"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627280"
 ---
 # <a name="cdaorelationinfo-structure"></a>CDaoRelationInfo 構造体
 
@@ -87,7 +77,7 @@ Relation オブジェクトの一意名します。 詳細については、「N
 
 によって取得される情報、 [CDaoDatabase::GetRelationInfo](../../mfc/reference/cdaodatabase-class.md#getrelationinfo)にメンバー関数が格納されている、`CDaoRelationInfo`構造体。 `CDaoRelationInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoRelationInfo`オブジェクト。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 

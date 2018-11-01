@@ -1,10 +1,6 @@
 ---
-title: _get_printf_count_output | Microsoft Docs
-ms.custom: ''
+title: _get_printf_count_output
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_printf_count_output
 apilocation:
@@ -23,27 +19,21 @@ apitype: DLLExport
 f1_keywords:
 - get_printf_count_output
 - _get_printf_count_output
-dev_langs:
-- C++
 helpviewer_keywords:
 - '%n format'
 - get_printf_count_output function
 - _get_printf_count_output function
 ms.assetid: 850f9f33-8319-433e-98d8-6a694200d994
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 216df8d973f391db2b6114d9bbcb50dcf509c5b5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 477e4a9e987f27bd70b9707e91b9ea9d84b69993
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398371"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610636"
 ---
 # <a name="getprintfcountoutput"></a>_get_printf_count_output
 
-示すかどうか[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-ファミリの関数のサポート、 **%n**形式です。
+示すかどうか[printf、_printf_l、wprintf、_wprintf_l](printf-printf-l-wprintf-wprintf-l.md)-ファミリの関数のサポート、 **%n**形式。
 
 ## <a name="syntax"></a>構文
 
@@ -53,15 +43,15 @@ int _get_printf_count_output();
 
 ## <a name="return-value"></a>戻り値
 
-ゼロ以外の場合 **%n**はサポートされている場合は 0 **%n**はサポートされていません。
+0 以外の場合 **%n**はサポートされている場合は 0 **%n**はサポートされていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-場合 **%n**はサポートなし (既定値) が発生して **%n**のいずれかの書式指定文字列で、 **printf** 」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出しますが[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 場合 **%n**サポートが有効になっている (を参照してください[_set_printf_count_output](set-printf-count-output.md)) し、 **%n** 」の説明に従って動作[書式指定構文: printf および wprintf関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)です。
+場合 **%n**は (既定値) はサポートされていませんが発生して **%n**のいずれかの書式指定文字列で、 **printf** 」の説明に従って、関数は無効なパラメーター ハンドラーを呼び出しますが[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 場合 **%n**サポートが有効になっている (を参照してください[_set_printf_count_output](set-printf-count-output.md)) し、 **%n** 」の説明に従って動作[書式指定構文: printf および wprintf関数](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_get_printf_count_output**|\<stdio.h>|
 

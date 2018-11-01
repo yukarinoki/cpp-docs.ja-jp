@@ -1,27 +1,17 @@
 ---
-title: '右辺値参照宣言子: &amp; &amp; |Microsoft Docs'
-ms.custom: ''
+title: '右辺値参照宣言子: &amp;&amp;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - '&&'
-dev_langs:
-- C++
 helpviewer_keywords:
 - '&& rvalue reference declarator'
 ms.assetid: eab0ce3a-c5a3-4992-aa70-6a8ab1f7491d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64a42a65e112930767aa27f94612d06b7fb2d34a
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: caec1ae10db273b6ed604af29b20a1908b1313cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821635"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614644"
 ---
 # <a name="rvalue-reference-declarator-ampamp"></a>右辺値参照宣言子: &amp;&amp;
 
@@ -293,7 +283,7 @@ In g(MemoryBlock&&).
 
 渡される関数テンプレートを記述するが一般的 (または*転送*) を別の関数のパラメーター。 右辺値参照を受け取る関数テンプレートに対して、テンプレート型推論がどのように機能するかを理解しておくことは重要です。
 
-関数の引数が右辺値の場合、コンパイラは引数が右辺値参照であると推測します。 たとえば、パラメーターとして `X` 型を受け取るテンプレート関数に、`T&&` 型のオブジェクトへの右辺値参照を渡すと、テンプレート引数の推論は `T` が `X` であると推測します。 したがって、パラメーターの型は `X&&` になります。 関数の引数が左辺値である場合または**const**左辺値の場合、コンパイラは、左辺値参照にするには、その型を推測または**const**その型の左辺値参照。
+関数の引数が右辺値の場合、コンパイラは引数が右辺値参照であると推測します。 たとえば、パラメーターとして `T&&` 型を受け取るテンプレート関数に、`X` 型のオブジェクトへの右辺値参照を渡すと、テンプレート引数の推論は `T` が `X` であると推測します。 したがって、パラメーターの型は `X&&` になります。 関数の引数が左辺値である場合または**const**左辺値の場合、コンパイラは、左辺値参照にするには、その型を推測または**const**その型の左辺値参照。
 
 次の例では、1 つの構造テンプレートを宣言し、それをさまざまな参照型に特化します。 `print_type_and_value` 関数は、パラメーターとして右辺値参照を取り、`S::print` メソッドの適切な特殊化バージョンにそれを転送します。 `main` 関数は `S::print` メソッドを呼び出すさまざまな方法を示します。
 

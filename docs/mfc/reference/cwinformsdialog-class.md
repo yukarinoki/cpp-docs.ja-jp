@@ -1,10 +1,6 @@
 ---
-title: CWinFormsDialog クラス |Microsoft Docs
-ms.custom: ''
+title: CWinFormsDialog クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CWinFormsDialog
 - AFXWINFORMS/CWinFormsDialog
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXWINFORMS/CWinFormsDialog::GetControl
 - AFXWINFORMS/CWinFormsDialog::GetControlHandle
 - AFXWINFORMS/CWinFormsDialog::OnInitDialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWinFormsDialog [MFC], CWinFormsDialog
 - CWinFormsDialog [MFC], GetControl
 - CWinFormsDialog [MFC], GetControlHandle
 - CWinFormsDialog [MFC], OnInitDialog
 ms.assetid: e3cec000-a578-448e-b06a-8af256312f61
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3865fe1e1bf3c8dff9861dba2ef12ce1a34fe22a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3baa9f99a5a1ecefc0ad9bc9f0c56f0f67dc2e80
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428870"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573499"
 ---
 # <a name="cwinformsdialog-class"></a>CWinFormsDialog クラス
 
@@ -77,7 +67,7 @@ MFC アプリケーションに表示される .NET Framework ユーザー コ�
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)と[MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールをホストしている](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h
 

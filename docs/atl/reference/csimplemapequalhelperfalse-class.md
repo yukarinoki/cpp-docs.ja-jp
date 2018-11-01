@@ -1,30 +1,20 @@
 ---
-title: CSimpleMapEqualHelperFalse クラス |Microsoft Docs
-ms.custom: ''
+title: CSimpleMapEqualHelperFalse クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CSimpleMapEqualHelperFalse
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse::IsEqualKey
 - ATLSIMPCOLL/ATL::CSimpleMapEqualHelperFalse::IsEqualValue
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSimpleMapEqualHelperFalse class
 ms.assetid: a873eea3-e130-45cc-a476-61ee79511c3b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f26deca76ff887eff2cd0a2c33dad94fbdbff8ee
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 7ccfe59e6741c267aded8f59828947a1d98bfbc3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46052740"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572693"
 ---
 # <a name="csimplemapequalhelperfalse-class"></a>CSimpleMapEqualHelperFalse クラス
 
@@ -52,7 +42,7 @@ class CSimpleMapEqualHelperFalse
 
 値の比較は、常に false を返すし、さらが呼び出されます`ATLASSERT`引数が参照されている場合は false。 等しいかどうかテストが十分に定義されていない場合、このクラスは、ほとんどのメソッドに対して正常に動作しなどの比較に依存する方法を明確に定義された方法で失敗する可能性がキー/値ペアを含むマップを[CSimpleMap:。FindVal](../../atl/reference/csimplemap-class.md#findval)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsimpcoll.h
 

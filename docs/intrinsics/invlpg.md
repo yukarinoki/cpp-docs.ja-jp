@@ -1,29 +1,19 @@
 ---
-title: _ _invlpg |Microsoft Docs
-ms.custom: ''
+title: __invlpg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __invlpg
 - __invlpg_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - invlpg instruction
 - __invlpg intrinsic
 ms.assetid: 3fb3633f-d9b7-4ec0-9e7f-a7f2fa8ed794
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01a35d110c56bba6b89c5bf34dedec61bde90794
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0ff46aa15fbb8728ce02255209a32f01a168609b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403215"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629386"
 ---
 # <a name="invlpg"></a>__invlpg
 
@@ -44,7 +34,7 @@ void __invlpg(
 *アドレス*<br/>
 [in]64 ビットのアドレス。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

@@ -1,10 +1,6 @@
 ---
-title: CInterpolatorBase クラス |Microsoft Docs
-ms.custom: ''
+title: CInterpolatorBase クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CInterpolatorBase
 - AFXANIMATIONCONTROLLER/CInterpolatorBase
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetCustomInterpolator
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetDuration
 - AFXANIMATIONCONTROLLER/CInterpolatorBase::SetInitialValueAndVelocity
-dev_langs:
-- C++
 helpviewer_keywords:
 - CInterpolatorBase [MFC], CInterpolatorBase
 - CInterpolatorBase [MFC], CreateInstance
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5287c54aad0a4ec41145f8241123489ea74d19f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407904"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541467"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase クラス
 
@@ -66,14 +56,14 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 |名前|説明|
 |----------|-----------------|
 |[CInterpolatorBase::CreateInstance](#createinstance)|インスタンスを作成します`CInterpolatorBase`し、イベントを処理するカスタム補間へのポインターを格納します。|
-|[CInterpolatorBase::GetDependencies](#getdependencies)|補間の依存関係を取得します。 (`CUIAnimationInterpolatorBase::GetDependencies` をオーバーライドします)。|
-|[CInterpolatorBase::GetDuration](#getduration)|インターポレーターの期間を取得します。 (`CUIAnimationInterpolatorBase::GetDuration` をオーバーライドします)。|
-|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Interpolator が潜在顧客の最終的な値を取得します。 (`CUIAnimationInterpolatorBase::GetFinalValue` をオーバーライドします)。|
+|[CInterpolatorBase::GetDependencies](#getdependencies)|補間の依存関係を取得します。 ( `CUIAnimationInterpolatorBase::GetDependencies`をオーバーライドします)。|
+|[CInterpolatorBase::GetDuration](#getduration)|インターポレーターの期間を取得します。 ( `CUIAnimationInterpolatorBase::GetDuration`をオーバーライドします)。|
+|[CInterpolatorBase::GetFinalValue](#getfinalvalue)|Interpolator が潜在顧客の最終的な値を取得します。 ( `CUIAnimationInterpolatorBase::GetFinalValue`をオーバーライドします)。|
 |[CInterpolatorBase::InterpolateValue](#interpolatevalue)|指定されたオフセット値を補間 (オーバーライド`CUIAnimationInterpolatorBase::InterpolateValue`)。|
 |[CInterpolatorBase::InterpolateVelocity](#interpolatevelocity)|指定されたオフセット ベロシティの補間 (オーバーライド`CUIAnimationInterpolatorBase::InterpolateVelocity`)。|
 |[CInterpolatorBase::SetCustomInterpolator](#setcustominterpolator)|イベントを処理するカスタム補間へのポインターを格納します。|
 |[CInterpolatorBase::SetDuration](#setduration)|インターポレーターの期間を設定 (オーバーライド`CUIAnimationInterpolatorBase::SetDuration`)。|
-|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|インターポレーターの初期値と速度を設定します。 (`CUIAnimationInterpolatorBase::SetInitialValueAndVelocity` をオーバーライドします)。|
+|[CInterpolatorBase::SetInitialValueAndVelocity](#setinitialvalueandvelocity)|インターポレーターの初期値と速度を設定します。 ( `CUIAnimationInterpolatorBase::SetInitialValueAndVelocity`をオーバーライドします)。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -87,7 +77,7 @@ class CInterpolatorBase : public CUIAnimationInterpolatorBase<CInterpolatorBase>
 
 `CInterpolatorBase`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxanimationcontroller.h
 

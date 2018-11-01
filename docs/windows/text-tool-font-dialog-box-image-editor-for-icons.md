@@ -1,28 +1,17 @@
 ---
-title: テキスト ツール フォント ダイアログ ボックス (C++) (アイコン用イメージ エディター) |Microsoft Docs
-ms.custom: ''
+title: テキスト ツール フォント ダイアログ ボックス (C++) (アイコン用イメージ エディター)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Text Tool Font dialog box [C++]
 - fonts, changing on an image
 - text, on images
 ms.assetid: c398e2e7-0263-43c1-9ab4-768a280c2407
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b83acbc8b4ca6beb3288ed9e02667410b239c6e7
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1e701a2fc91b1917f99fd9bcc43aa0bbc9696f69
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45722047"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50489766"
 ---
 # <a name="text-tool-font-dialog-box-c-image-editor-for-icons"></a>テキスト ツール フォント ダイアログ ボックス (C++) (アイコン用イメージ エディター)
 
@@ -54,7 +43,7 @@ ms.locfileid: "45722047"
 
    指定したフォント用の利用可能な言語のスクリプトを一覧表示します。 別の言語のスクリプトを選択すると、文字セットの多言語のドキュメントを作成するために使用可能な言語になります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

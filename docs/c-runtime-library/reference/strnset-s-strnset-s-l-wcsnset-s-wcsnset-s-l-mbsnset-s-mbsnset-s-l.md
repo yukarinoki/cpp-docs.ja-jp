@@ -1,10 +1,6 @@
 ---
-title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l | Microsoft Docs
-ms.custom: ''
+title: _strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnset_s_l
 - _strnset_s
@@ -41,8 +37,6 @@ f1_keywords:
 - mbsnset_s_l
 - mbsnset_s
 - wcsnset_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsnset_s function
 - mbsnset_s_l function
@@ -60,16 +54,12 @@ helpviewer_keywords:
 - strnset_s function
 - _wcsnset_s function
 ms.assetid: 9cf1b321-b5cb-4469-b285-4c07cfbd8813
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 786f802a25964b118b997a2d5af7376932f8f74f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bb82e96c23e1554fb2ec5e2a36089823eaf55595
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416022"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459996"
 ---
 # <a name="strnsets-strnsetsl-wcsnsets-wcsnsetsl-mbsnsets-mbsnsetsl"></a>_strnset_s、_strnset_s_l、_wcsnset_s、_wcsnset_s_l、_mbsnset_s、_mbsnset_s_l
 
@@ -143,13 +133,13 @@ errno_t _mbsnset_s_l(
 
 正常に終了した場合は 0 を返し、それ以外の場合はエラー コードを返します。
 
-これらの関数は、引数を検証します。 場合*str*が有効な null で終わる文字列かサイズの引数が 0 以下でなければ無効なパラメーター ハンドラーが呼び出されると、その」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の続行には、これらの関数の戻り値はエラー コード セットが許可された場合**errno**をそのエラー コードにします。 既定のエラー コードは**EINVAL**特定の値が適用されない場合。
+これらの関数は、引数を検証します。 場合*str*が null で終わる有効な文字列でない、またはサイズ引数が 0 未満、無効なパラメーター ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、これらの関数の戻り値はエラー コードとセットを許可された場合**errno**にそのエラー コード。 既定のエラー コードは**EINVAL**より特定の値が適用されない場合。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数を設定、多くても 1 つ目*カウント*の文字*str*に*c*です。 場合*カウント*のサイズよりも大きい*str*では、サイズの*str*の代わりに使用*カウント*です。 エラーが発生*カウント*がより大きい*numberOfElements*両方のパラメーターがのサイズよりも大きいと*str*です。
+これらの関数セット、多くても最初*カウント*の文字*str*に*c*します。 場合*カウント*のサイズより大きい*str*、サイズの*str*の代わりに使用が*カウント*。 エラーが発生*カウント*がより大きい*numberOfElements*両方のパラメーターがのサイズを超えると*str*します。
 
-**_wcsnset_s**と **_mbsnset_s**のワイド文字とマルチバイト文字バージョンは、 **_strnset_s**です。 文字列引数 **_wcsnset_s**ワイド文字は、文字列以外の **_mbsnset_s**キーバットキー文字の文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wcsnset_s**と **_mbsnset_s**のワイド文字とマルチバイト文字バージョン **_strnset_s**します。 文字列引数 **_wcsnset_s**ワイド文字は、文字列以外の **_mbsnset_s**はマルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -162,9 +152,9 @@ errno_t _mbsnset_s_l(
 |**_tcsnset_s**|**_strnset_s**|**_mbsnbset_s**|**_wcsnset_s**|
 |**_tcsnset_s_l**|**_strnset_s_l**|**_mbsnbset_s_l**|**_wcsnset_s_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strnset_s**|\<string.h>|
 |**_strnset_s_l**|\<tchar.h>|

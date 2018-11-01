@@ -1,10 +1,6 @@
 ---
-title: _getw | Microsoft Docs
-ms.custom: ''
+title: _getw
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getw
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _getw
-dev_langs:
-- C++
 helpviewer_keywords:
 - _getw function
 - integers, getting from streams
 - getw function
 ms.assetid: ef75facc-b84e-470f-9f5f-8746c90822a0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3caffb90252780b833b80e3e5d1cd6d5ef6b0fcb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 615d3ac9bdc73ad200368eaeabf7c84951bc91ae
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487608"
 ---
 # <a name="getw"></a>_getw
 
@@ -59,15 +49,15 @@ int _getw(
 
 ## <a name="return-value"></a>戻り値
 
-**_getw**読み取られた整数値を返します。 戻り値の**EOF**エラーまたはファイルの最後のいずれかを示します。 ただし、ため、 **EOF**値も有効な整数値を使用して**feof**または**ferror**をファイルの最後またはエラー状態を確認します。 場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**EOF**です。
+**_getw**読み取られた整数値を返します。 戻り値**EOF**エラーまたはファイルの末尾のいずれかを示します。 ただし、ため、 **EOF**値も有効な整数値を使用して**feof**または**ferror**ファイルの終端またはエラー条件を確認します。 場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**EOF**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Getw**関数は、次のような種類のバイナリ値を読み取って**int**に関連付けられているファイルから*ストリーム*を指す (存在する場合) に関連付けられたファイル ポインターをインクリメントし、次の未読文字です。 **_getw**ストリーム内の項目の任意の特別な配置を前提としていません。 移植に関する問題が発生する可能性 **_getw**ためのサイズ、 **int**型および内のバイトの順序、 **int**型がシステムによって異なります。
+**_Getw**関数は次のような種類のバイナリ値を読み取ります**int**に関連付けられているファイルから*ストリーム*ポイントに関連付けられたファイル ポインター (存在する場合) をインクリメントして次の未読文字。 **_getw**ストリーム内の項目の特殊な配置を想定しません。 移植の問題が発生する **_getw**ためのサイズ、 **int**型と内のバイトの順序付け、 **int**システム間で型が異なります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getw**|\<stdio.h>|
 

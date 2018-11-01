@@ -1,29 +1,19 @@
 ---
-title: -Yl (デバッグ ライブラリの PCH 参照の挿入) |Microsoft Docs
-ms.custom: ''
+title: /Yl (デバッグ ライブラリの PCH 参照の挿入)
 ms.date: 01/29/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /yl
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Yl compiler option [C++]
 - Yl compiler option [C++]
 - /Yl compiler option [C++]
 ms.assetid: 8e4a396a-6790-4a9f-8387-df015a3220e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 378d8e6b43a391c6d94c55b278bc71789981d9e3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: c6828fb602c7c1c0aaa7732292604706ffd45230
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712375"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587035"
 ---
 # <a name="yl-inject-pch-reference-for-debug-library"></a>/Yl (デバッグ ライブラリの PCH 参照の挿入)
 
@@ -61,7 +51,7 @@ ms.locfileid: "45712375"
 
 - [プリコンパイル済みヘッダー ファイルの作成](../../build/reference/creating-precompiled-header-files.md)
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

@@ -1,28 +1,18 @@
 ---
-title: conditional クラス | Microsoft Docs
-ms.custom: ''
+title: conditional クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::conditional
-dev_langs:
-- C++
 helpviewer_keywords:
 - conditional class
 - conditional
 ms.assetid: ece9f539-fb28-4e26-a79f-3264bc984493
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a553c2975dd5a58673bd4caa6e7c9ba25d33183
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: be81a1bc32f2f86f1d79970868933bddb8dc3620
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106614"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523020"
 ---
 # <a name="conditional-class"></a>conditional クラス
 
@@ -53,7 +43,7 @@ B が false の場合の型の結果。
 
 テンプレート メンバー typedef`conditional<B, T1, T2>::type`に評価される*T1*とき*B*に評価される**true**に評価されると*T2*とき*B*に評価される**false**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

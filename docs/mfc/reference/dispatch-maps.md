@@ -1,29 +1,19 @@
 ---
-title: ディスパッチ マップ |Microsoft Docs
-ms.custom: ''
+title: ディスパッチ マップ
 ms.date: 06/20/2018
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
-dev_langs:
-- C++
 helpviewer_keywords:
 - dispatch maps [MFC], macros
 - dispatch maps [MFC]
 - dispatch map macros [MFC]
 ms.assetid: bef9d08b-ad35-4c3a-99d8-04150c7c04e2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d22c94513e80c4f353de9e10588f219a2d3be92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ebedaa02a03bcc7802110977b96659dae45f174
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388072"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585082"
 ---
 # <a name="dispatch-maps"></a>ディスパッチ マップ
 
@@ -62,7 +52,7 @@ DECLARE_DISPATCH_MAP()
 
 [!code-cpp[NVC_MFCAutomation#10](../../mfc/codesnippet/cpp/dispatch-maps_1.h)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -86,7 +76,7 @@ BEGIN_DISPATCH_MAP(theClass, baseClass)
 
 クラスのメンバー関数を定義する、実装 (.cpp) ファイルで BEGIN_DISPATCH_MAP マクロでディスパッチ マップを開始、ごと、ディスパッチ関数とプロパティのマクロのエントリを追加し、END_DISPATCH_ でディスパッチ マップを完了マップ マクロです。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -102,7 +92,7 @@ END_DISPATCH_MAP()
 
 これは、BEGIN_DISPATCH_MAP と組み合わせて使用する必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -156,7 +146,7 @@ DISP_FUNCTION(
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*VtsParams*引数は、スペースで区切られたリストから値の`VTS_*`定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 たとえば、オブジェクトに適用された
+*VtsParams*引数は、スペースで区切られたリストから値の`VTS_*`定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば以下のようにします。
 
 [!code-cpp[NVC_MFCAutomation#14](../../mfc/codesnippet/cpp/dispatch-maps_2.cpp)]
 
@@ -192,7 +182,7 @@ DISP_FUNCTION(
 |VTS_PUNKNOWN|`LPUNKNOWN*`|
 |VTS_NONE|パラメーターなし|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -243,7 +233,7 @@ DISP_PROPERTY(
 
 外部クライアントで、プロパティで指定されたメンバー変数の値が変更されたとき*memberName* ; の変更、変更の通知はありません。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -283,7 +273,7 @@ DISP_PROPERTY_EX(
 
 *VtPropType* VARTYPE 型の引数は、します。 この引数に指定できる値は、VARENUM 列挙から取得されます。 これらの値の一覧は、「解説」を参照してください、 *vtRetVal*パラメーター [DISP_FUNCTION](#disp_function)します。 プロパティのデータ型として VT_EMPTY、DISP_FUNCTION の注釈内に表示することはできませんに注意してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -338,7 +328,7 @@ DISP_PROPERTY で定義されたプロパティとは異なり DISP_PROPERTY_NOT
 |VT_VARIANT|VARIANT|
 |VT_UNKNOWN|LPUNKNOWN|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -398,7 +388,7 @@ Get の次の宣言を検討してください。 し、メンバーのプロパ
 
 [!code-cpp[NVC_MFCActiveXControl#12](../../mfc/codesnippet/cpp/dispatch-maps_6.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -424,7 +414,7 @@ DISP_DEFVALUE(theClass, pszName)
 
 オブジェクトの「既定値」では、取得またはオブジェクトへの参照は、プロパティ、またはメンバー関数を指定しない場合に設定されているプロパティです。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 

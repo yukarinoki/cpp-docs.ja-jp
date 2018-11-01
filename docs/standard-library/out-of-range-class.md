@@ -1,27 +1,17 @@
 ---
-title: out_of_range クラス | Microsoft Docs
-ms.custom: ''
+title: out_of_range クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdexcept/std::out_of_range
-dev_langs:
-- C++
 helpviewer_keywords:
 - out_of_range class
 ms.assetid: d0e14dc0-065e-4666-9ac9-51e52223c503
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aeb29538dc73ddbefe2ee443cf7f8bfa660eb528
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 59d1a0dc987ddb0dc538fb02bfe28e0b073d3a7e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852866"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449089"
 ---
 # <a name="outofrange-class"></a>out_of_range クラス
 
@@ -39,7 +29,7 @@ public:
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 [what](../standard-library/exception-class.md) によって返される値は、**message**`.`[data](../standard-library/basic-string-class.md#data) のコピーです。
 
@@ -73,7 +63,7 @@ int main() {
 Caught: invalid string position
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<stdexcept>
 

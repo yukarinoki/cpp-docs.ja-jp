@@ -1,10 +1,6 @@
 ---
-title: _msize_dbg | Microsoft Docs
-ms.custom: ''
+title: _msize_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize_dbg
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - _msize_dbg
 - msize_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - _msize_dbg function
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80d3f3a7b2b0086df6cba9654dc4365697520776
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451759"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629126"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -55,27 +45,27 @@ size_t _msize_dbg(
 
 ### <a name="parameters"></a>パラメーター
 
-*UserData*<br/>
+*userData*<br/>
 サイズを調べるメモリ ブロックへのポインター。
 
 *blockType*<br/>
-指定されたメモリ ブロックの型: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**です。
+指定されたメモリ ブロックの型: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**します。
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了、 **_msize_dbg**サイズを返します (バイト単位) です。 指定されたメモリ ブロックのを返しますそれ以外の場合**NULL**です。
+正常に完了 **_msize_dbg** (バイト単位) では、指定されたメモリ ブロックのサイズを返しますそれ以外の場合を返します**NULL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_msize_dbg** _ のデバッグ バージョン[msize](msize.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_msize_dbg**への呼び出しに減少 **_msize**です。 両方 **_msize**と **_msize_dbg**はベース ヒープ内のメモリ ブロックのサイズを計算しますが、 **_msize_dbg** 2 つのデバッグ機能を追加します: 両側のバッファーを含めるユーザーは、返されるサイズにメモリ ブロックの部分は、特定のブロックの型のサイズの計算を使用できます。
+**_msize_dbg** _ のデバッグ バージョンです[msize](msize.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_msize_dbg**への呼び出しに減少 **_msize**します。 両方 **_msize**と **_msize_dbg**ベースのヒープにメモリ ブロックのサイズを計算が **_msize_dbg** 2 つのデバッグ機能を追加します両側のバッファーが含まれています。ユーザーのサイズが返されると、メモリ ブロックの部分には、特定のブロックの型のサイズの計算が使用できます。
 
 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」をご覧ください。
 
-この関数は、そのパラメーターを検証します。 場合 *_expand* null ポインターでは、 **_msize** 」の説明に従って、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 エラーが処理される場合、関数は設定**errno**に**EINVAL**し、-1 を返します。
+この関数は、そのパラメーターを検証します。 場合 *_expand* null ポインターの場合は、 **_msize**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数は、エラーが処理される場合、設定**errno**に**EINVAL** -1 を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_msize_dbg**|\<crtdbg.h>|
 

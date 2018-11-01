@@ -1,10 +1,6 @@
 ---
-title: CComFakeCriticalSection クラス |Microsoft Docs
-ms.custom: ''
+title: CComFakeCriticalSection クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComFakeCriticalSection
 - ATLCORE/ATL::CComFakeCriticalSection
@@ -12,21 +8,15 @@ f1_keywords:
 - ATLCORE/ATL::CComFakeCriticalSection::Lock
 - ATLCORE/ATL::CComFakeCriticalSection::Term
 - ATLCORE/ATL::CComFakeCriticalSection::Unlock
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComFakeCriticalSection class
 ms.assetid: a4811b97-96bb-493b-ab9f-62822aeddb10
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b120b7be3e605b6ed2619cbd71011b0a693bdc
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: cf2408afb70dd6e2be27e22605f46b51b75ad602
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43757277"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519390"
 ---
 # <a name="ccomfakecriticalsection-class"></a>CComFakeCriticalSection クラス
 
@@ -55,7 +45,7 @@ class CComFakeCriticalSection
 
 通常、使用して`CComFakeCriticalSection`を通じて、`typedef`名か、`AutoCriticalSection`または`CriticalSection`します。 使用する場合[CComSingleThreadModel](../../atl/reference/ccomsinglethreadmodel-class.md)または[CComMultiThreadModelNoCS](../../atl/reference/ccommultithreadmodelnocs-class.md)、これらの両方の`typedef`名前参照`CComFakeCriticalSection`します。 使用する場合[CComMultiThreadModel](../../atl/reference/ccommultithreadmodel-class.md)を参照する[CComAutoCriticalSection](../../atl/reference/ccomautocriticalsection-class.md)と`CComCriticalSection`、それぞれします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcore.h
 

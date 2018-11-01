@@ -1,27 +1,17 @@
 ---
-title: underflow_error クラス | Microsoft Docs
-ms.custom: ''
+title: underflow_error クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - stdexcept/std::underflow_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - underflow_error class
 ms.assetid: d632f1f9-9c6c-4954-b96b-03041bfab22d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ef86d368a0ca9f7aa2c3b6700350ccaaa8f7836
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 84657677fc672fc227d40423ffb217b1b550761b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317330"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487660"
 ---
 # <a name="underflowerror-class"></a>underflow_error クラス
 
@@ -69,7 +59,7 @@ Type: class std::underflow_error
 */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<stdexcept>
 

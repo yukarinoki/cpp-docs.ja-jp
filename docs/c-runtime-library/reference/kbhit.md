@@ -1,10 +1,6 @@
 ---
-title: _kbhit | Microsoft Docs
-ms.custom: ''
+title: _kbhit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _kbhit
 apilocation:
@@ -24,8 +20,6 @@ f1_keywords:
 - _kbhit
 - kbhit
 - conio/_kbhit
-dev_langs:
-- C++
 helpviewer_keywords:
 - keyboard input
 - user input, checking for keyboard
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _kbhit function
 - keyboards, checking input
 ms.assetid: e82a1cc9-bbec-4150-b678-a7e433220fe4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f414403774a6f2dbd5e21b70d707ab8c8b20c63f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9133d73e92438327bb2381e3293fd37076dd27ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399050"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667997"
 ---
 # <a name="kbhit"></a>_kbhit
 
@@ -63,15 +53,15 @@ int _kbhit( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_kbhit**キーが押された場合は 0 以外の値を返します。 それ以外の場合は、0 を返します。
+**_kbhit**キーが押された場合は、0 以外の値を返します。 それ以外の場合は、0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **_Kbhit**関数は、最新のキーストロークのコンソールをチェックします。 関数がゼロ以外の値を返した場合、キーストロークがバッファー内で待機しています。 プログラムを呼び出すことが **_getch**または **_getche**キーストロークを取得します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_kbhit**|\<conio.h>|
 

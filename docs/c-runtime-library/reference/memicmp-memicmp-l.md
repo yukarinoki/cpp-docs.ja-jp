@@ -1,10 +1,6 @@
 ---
-title: _memicmp、_memicmp_l | Microsoft Docs
-ms.custom: ''
+title: _memicmp、_memicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _memicmp_l
 - _memicmp
@@ -25,24 +21,18 @@ f1_keywords:
 - _memicmp
 - memicmp_l
 - _memicmp_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - memicmp function
 - _memicmp function
 - memicmp_l function
 - _memicmp_l function
 ms.assetid: 0a6eb945-4077-4f84-935d-1aaebe8db8cb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3ddd09fbfbfd4de095bfbc67bc669cf9c794dee
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8beb632c8bd2cfac486fc58fc930b94490bdecbc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403054"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636814"
 ---
 # <a name="memicmp-memicmpl"></a>_memicmp、_memicmp_l
 
@@ -84,22 +74,22 @@ int _memicmp_l(
 
 |戻り値|buf1 と buf2 の最初の count バイトの関係|
 |------------------|--------------------------------------------------------|
-|< 0|*buffer1*より小さい*buffer2*です。|
-|0|*buffer1*と同じ*buffer2*です。|
-|> 0|*buffer1*より大きい*buffer2*です。|
+|< 0|*buffer1*未満*buffer2*します。|
+|0|*buffer1*と同じ*buffer2*します。|
+|> 0|*buffer1*より大きい*buffer2*します。|
 |**すると**|エラーが発生しました。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Memicmp**関数は、最初、比較*カウント*2 つのバッファーの文字*buffer1*と*buffer2* 1 バイトずつです。 比較では、大文字と小文字を区別しません。
+**_Memicmp**関数では、1 つ目を比較します。*カウント*2 つのバッファーの文字*buffer1*と*buffer2*バイトごと。 比較では、大文字と小文字を区別しません。
 
-いずれか*buffer1*または*buffer2* null ポインター」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行は継続許可されたかどうか、関数を返します**すると**設定と**errno**に**EINVAL**です。
+いずれか*buffer1*または*buffer2* null ポインターの場合は、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返します**すると**設定と**errno**に**EINVAL**します。
 
-**_memicmp**ロケールに依存する動作に現在のロケールを使用 **_memicmp_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_memicmp**ロケールに依存する動作に現在のロケールを使用 **_memicmp_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_memicmp**|\<memory.h> または \<string.h>|
 |**_memicmp_l**|\<memory.h> または \<string.h>|

@@ -1,10 +1,6 @@
 ---
-title: _matherr | Microsoft Docs
-ms.custom: ''
+title: _matherr
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _matherr
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _matherr
 - matherr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5f8cba1887fe806c3a6cfa795437d3d60ed7f31e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402326"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445722"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -56,17 +46,17 @@ int _matherr( struct _exception * except );
 
 ## <a name="return-value"></a>戻り値
 
-**_matherr**エラー、または成功を示すには 0 以外の値を示すために 0 を返します。 場合 **_matherr**返します 0、エラー メッセージを表示して**errno**が該当するエラー値に設定します。 場合 **_matherr** 0 以外の値、エラー メッセージが表示されますを返しますと**errno**は変更されません。
+**_matherr** 、エラーまたは成功を示すゼロ以外の値を示す 0 を返します。 場合 **_matherr**返します 0、エラー メッセージを表示できると**errno**該当するエラー値に設定されます。 場合 **_matherr**返します 0 以外の値、エラー メッセージが表示されますおよび**errno**は変更されません。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Matherr**関数は、数値演算ライブラリの浮動小数点関数によって生成されたエラーを処理します。 これらの関数を呼び出す **_matherr**エラーが検出された場合。
+**_Matherr**関数は、数値演算ライブラリの浮動小数点関数によって生成されたエラーを処理します。 これらの関数を呼び出す **_matherr**エラーが検出されたとき。
 
-特殊なエラー処理のための別の定義を提供できます **_matherr**です。 C ランタイム ライブラリ (CRT) の動的にリンクされているバージョンを使用する場合は、既定値を置き換えることができます **_matherr**クライアントのユーザー定義のバージョンで実行可能ファイルのルーチンです。 既定値を置き換えることはできませんただし、 **_matherr** CRT DLL の DLL のクライアントでルーチンです。
+特別なエラー処理のための別の定義を行うことができます **_matherr**します。 C ランタイム ライブラリ (CRT) の動的にリンクされているバージョンを使用する場合は、既定値を置き換えることができます **_matherr**クライアントのユーザー定義のバージョンで実行可能ファイルでルーチン。 既定値を置き換えることはできませんただし、 **_matherr** CRT DLL の DLL クライアント内に日常的な。
 
-数値演算ルーチンでエラーが発生したときに **_matherr**がへのポインターで呼び出される、**する**構造体の型 (で定義されている\<math.h >) を引数として。 **_exception** 構造体には次の要素が含まれます。
+数値演算ルーチンでエラーが発生したときに **_matherr**へのポインターを使用して呼び出した、 **_exception**構造体の型 (で定義されている\<math.h >) を引数として。 **_exception** 構造体には次の要素が含まれます。
 
 ```C
 struct _exception
@@ -83,20 +73,20 @@ struct _exception
 
 |マクロ|説明|
 |-|-|
-**_DOMAIN**|引数のドメイン エラー
-**_SING**|引数が無効
+**(_D)**|引数のドメイン エラー
+**_SING**|引数の特異点
 **_OVERFLOW**|オーバーフロー範囲エラー
-**_PLOSS**|基準値の一部が失われました。
+**_PLOSS**|有効桁の部分的な損失
 **_TLOSS**|基準値の合計が失われる
 **_UNDERFLOW**|結果が小さすぎて表現できない。 (この条件は現在サポートされていません。)
 
-構造体のメンバー **name** は、エラーの原因となった関数の名前を含む null で終わる文字列へのポインターです。 構造体のメンバー **arg1** と **arg2** は、エラーの原因となった値を指定します。 格納されているだけ 1 つの引数を指定すると、 **arg1**です。
+構造体のメンバー **name** は、エラーの原因となった関数の名前を含む null で終わる文字列へのポインターです。 構造体のメンバー **arg1** と **arg2** は、エラーの原因となった値を指定します。 格納されている 1 つの引数を指定すると、もしも**arg1**します。
 
 発生したエラーの既定の戻り値は **retval** です。 戻り値を変更する場合、戻り値はエラーが実際に発生したかどうかを指定する必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_matherr**|\<math.h>|
 

@@ -1,20 +1,13 @@
 ---
-title: 例外 (C + + CX) |Microsoft Docs
-ms.custom: ''
+title: 例外 (C++/CX)
 ms.date: 01/18/2018
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: 6cbdc1f1-e4d7-4707-a670-86365146432f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e7514fdfc07fcbb4a1fff42d80fd138ab7d6043
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7134cbb9e90f0355a3b2a912330027cf73876443
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471702"
 ---
 # <a name="exceptions-ccx"></a>例外 (C++/CX)
 
@@ -22,7 +15,7 @@ ms.locfileid: "44100249"
 
 ## <a name="exceptions"></a>例外
 
-C++ プログラムでスローおよび Windows ランタイム操作から派生したから派生した例外をキャッチ`std::exception`、またはユーザー定義型です。 アプリケーション バイナリ インターフェイス (ABI) の境界を越えるなど、例外をキャッチするコードが JavaScript で記述されたときに場合にのみ、Windows ランタイムの例外をスローする必要があります。 非 Windows ランタイム C++ 例外が ABI 境界に達すると、例外に変換されます、 `Platform::FailureException` E_FAIL HRESULT を表す例外。 ABI の詳細については、次を参照してください。 [C++ での Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)です。
+C++ プログラムでスローおよび Windows ランタイム操作から派生したから派生した例外をキャッチ`std::exception`、またはユーザー定義型です。 アプリケーション バイナリ インターフェイス (ABI) の境界を越えるなど、例外をキャッチするコードが JavaScript で記述されたときに場合にのみ、Windows ランタイムの例外をスローする必要があります。 非 Windows ランタイム C++ 例外が ABI 境界に達すると、例外に変換されます、 `Platform::FailureException` E_FAIL HRESULT を表す例外。 ABI の詳細については、「 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)」を参照してください。
 
 宣言することができます、 [platform::exception](platform-exception-class.md)を HRESULT パラメーター、または HRESULT パラメーターを受け取る 2 つのコンス トラクターのいずれかを使用して、 [platform::string](platform-string-class.md)^ パラメーター間で渡すことができますが、これを処理するすべての Windows ランタイム アプリに ABI です。 または、1 つの HRESULT パラメーター、または 1 つの HRESULT パラメーターと [パラメーターのいずれかを受け取る 2 つの](platform-exception-class.md#createexception) Exception::CreateException メソッド `Platform::String^` オーバーロードの 1 つを使用して、例外を宣言できます。
 
@@ -66,11 +59,11 @@ C + + CX は、一般的な HRESULT エラーを表す標準の例外のセッ�
 
 [!code-cpp[cx_exceptions#02](codesnippet/CPP/exceptiontest/class1.cpp#02)]
 
-非同期操作中にスローされる例外をキャッチするには、タスク クラスを使用し、エラー処理の継続を追加します。 エラー処理コードの継続は、他のスレッドでスローされる例外を呼び出し元のスレッドにマーシャリングして、発生する可能性があるすべての例外をコード中の 1 つのポイントで処理できるようにします。 詳細については、次を参照してください。 [C++ での非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)します。
+非同期操作中にスローされる例外をキャッチするには、タスク クラスを使用し、エラー処理の継続を追加します。 エラー処理コードの継続は、他のスレッドでスローされる例外を呼び出し元のスレッドにマーシャリングして、発生する可能性があるすべての例外をコード中の 1 つのポイントで処理できるようにします。 詳しくは、「 [C++ での非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)」を参照してください。
 
 ## <a name="unhandlederrordetected-event"></a>UnhandledErrorDetected イベント
 
-Windows 8.1 でにサブスクライブすることができます、 [:unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected)プロセスが停止される未処理のエラーへのアクセスを提供する、静的イベント。 このハンドラーになったエラーが発生した場所に関係なく、 [::core::unhandlederror](/uwp/api/windows.applicationmodel.core.unhandlederror)イベント引数が渡されるオブジェクト。 オブジェクトに対して `Propagate` を呼び出した場合、エラー コードに対応する型の `Platform::*Exception` が生成され、スローされます。 catch ブロックで、必要に応じて、ユーザー状態を保存することができ、その後、プロセスが `throw`を呼び出して終了すること、またはプログラムを既知の状態に戻すために他の作業を実行することを許可できます。 次の例に、基本的なパターンを示します。
+Windows 8.1 でにサブスクライブすることができます、 [:unhandlederrordetected](/uwp/api/windows.applicationmodel.core.icoreapplicationunhandlederror#Windows_ApplicationModel_Core_ICoreApplicationUnhandledError_UnhandledErrorDetected)プロセスが停止される未処理のエラーへのアクセスを提供する、静的イベント。 エラーがどこで発生したかにかかわりなく、イベントの引数によって渡される [Windows::ApplicationModel::Core::UnhandledError](/uwp/api/windows.applicationmodel.core.unhandlederror) オブジェクトという形で、このハンドラーに到達します。 オブジェクトに対して `Propagate` を呼び出した場合、エラー コードに対応する型の `Platform::*Exception` が生成され、スローされます。 catch ブロックで、必要に応じて、ユーザー状態を保存することができ、その後、プロセスが `throw`を呼び出して終了すること、またはプログラムを既知の状態に戻すために他の作業を実行することを許可できます。 次の例に、基本的なパターンを示します。
 
 で app.xaml.h:
 

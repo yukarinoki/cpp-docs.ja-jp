@@ -2,7 +2,7 @@
 title: Visual Studio で C++ の Linux ワークロードをインストールする | Microsoft Docs
 description: Visual Studio で C++ の Linux ワークロードをダウンロード、インストール、セットアップする方法について説明します。
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/12/2018
 ms.technology:
 - cpp-linux
 ms.tgt_pltfrm: Linux
@@ -13,12 +13,12 @@ ms.author: corob
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 403f1bcd8634c3f471f34ff1266501de5bf05d52
-ms.sourcegitcommit: 87d317ac62620c606464d860aaa9e375a91f4c99
+ms.openlocfilehash: 060859879c6164bd8af10763ae5f828c9136abe5
+ms.sourcegitcommit: b05cff71a8a6a8a4c7bbea1263fd0a711853f921
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2018
-ms.locfileid: "45601393"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49307907"
 ---
 # <a name="download-install-and-setup-the-linux-workload"></a>Linux ワークロードのダウンロード、インストール、セットアップ
 
@@ -41,7 +41,7 @@ Linux マシンがまだない場合は、Azure で Linux 仮想マシンを作�
 
 Windows 10 でのもう 1 つのオプションは、Windows Subsystem for Linux のアクティブ化です。 詳細については、「[Windows 10 Installation Guide](/windows/wsl/install-win10)」(Windows 10 インストール ガイド) を参照してください。
 
-## <a name="linux-setup"></a>Linux のセットアップ
+## <a name="linux-setup-ubuntu"></a>Linux の設定: Ubuntu
 
 インストール先の Linux コンピューターには **openssh-server**、**g++**、**gdb**、**gdbserver** がインストールされていて、ssh デーモンが実行している必要があります。 Intellisense サポート対応のローカル コンピューターでリモート ヘッダーを自動同期するには、**zip** が必須です。 これらのアプリケーションがまだない場合は、次の手順でインストールできます。
 
@@ -49,10 +49,27 @@ Windows 10 でのもう 1 つのオプションは、Windows Subsystem for Linux
 
    `sudo apt-get install openssh-server g++ gdb gdbserver zip`
 
-   sudo コマンドにより、root パスワードの入力を求められる場合があります。  その場合は、入力して続行します。  完了すると、これらのサービスとツールがインストールされます。
+   sudo コマンドにより、root パスワードの入力を求められる場合があります。  その場合は、入力して続行します。 完了すると、必要なサービスとツールがインストールされます。
 
 1. 次のコマンドを実行し、Linux コンピューターで ssh サービスを実行します。
 
    `sudo service ssh start`
 
-   サービスが開始されてバックグラウンドで実行し、接続を受け付けられる状態になります。
+   サービスが開始され、バックグラウンドで実行され、接続を受け付けられる状態になります。
+
+## <a name="linux-setup-fedora"></a>Linux の設定: Fedora
+
+Fedora を実行しているターゲット マシンで **dnf** パッケージ インストーラーを使用します。 **openssh-server**、**g++**、**gdb**、**gdbserver**、および **zip** をダウンロードし、ssh デーモンを再起動するには、次の手順を実行します。
+
+1. Linux コンピューターのシェル プロンプトで次のコマンドを実行します。
+
+   `sudo dnf install openssh-server g++ gdb gdbserver zip`
+
+   sudo コマンドにより、root パスワードの入力を求められる場合があります。  その場合は、入力して続行します。 完了すると、必要なサービスとツールがインストールされます。
+
+1. 次のコマンドを実行し、Linux コンピューターで ssh サービスを実行します。
+
+   `sudo systemctl start sshd`
+
+   サービスが開始され、バックグラウンドで実行され、接続を受け付けられる状態になります。
+

@@ -1,10 +1,6 @@
 ---
-title: _filelength、_filelengthi64 | Microsoft Docs
-ms.custom: ''
+title: _filelength、_filelengthi64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _filelengthi64
 - _filelength
@@ -25,8 +21,6 @@ f1_keywords:
 - _filelength
 - _filelengthi64
 - filelengthi64
-dev_langs:
-- C++
 helpviewer_keywords:
 - filelengthi64 function
 - lengths, file
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - files [C++], length
 - _filelengthi64 function
 ms.assetid: 3ab83d5a-543c-4079-b9d9-0abfc7da0275
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 33943eb81658b065116d30592f25ef004d4bfc1b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5434a6ea2155b75f1c034202477a67db36da8b3d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430487"
 ---
 # <a name="filelength-filelengthi64"></a>_filelength、_filelengthi64
 
@@ -68,9 +58,9 @@ __int64 _filelengthi64(
 
 ## <a name="return-value"></a>戻り値
 
-両方 **_filelength**と **_filelengthi64** (バイト単位) に関連付けられているターゲット ファイルのファイルの長さを返す*fd*です。 場合*fd* 、無効なファイル記述子には」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 どちらの関数がエラーを示す設定に-1 L を返しますの実行の継続が許可された場合**errno**に**EBADF**です。
+両方 **_filelength**と **_filelengthi64** (バイト単位) に関連付けられているターゲット ファイルのファイルの長さを返す*fd*します。 場合*fd* 、無効なファイル記述子には」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 どちらの関数がエラーを示すし、設定に-1 L を返しますの実行の継続が許可された場合**errno**に**EBADF**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

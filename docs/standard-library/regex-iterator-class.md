@@ -1,10 +1,6 @@
 ---
-title: regex_iterator クラス | Microsoft Docs
-ms.custom: ''
+title: regex_iterator クラス
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - regex/std::regex_iterator
 - regex/std::regex_iterator::operator==
@@ -12,8 +8,6 @@ f1_keywords:
 - regex/std::regex_iterator::operator*
 - regex/std::regex_iterator::operator->
 - regex/std::regex_iterator::operator++
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::regex_iterator
 - std::regex_iterator::operator==
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - std::regex_iterator::operator->
 - std::regex_iterator::operator++
 ms.assetid: 0cfd8fd0-5a95-4f3c-bf8e-6ef028c423d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b723294c0ecdbdf585acecc257174251b13d56ca
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 937c217cdef6895aaa3adb1499f1fde8f67fd513
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45710360"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482629"
 ---
 # <a name="regexiterator-class"></a>regex_iterator クラス
 
@@ -67,7 +57,7 @@ class regex_iterator
 |-|-|
 |[regex_iterator](#regex_iterator)|反復子を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -88,7 +78,7 @@ class regex_iterator
 |[operator=](#op_eq)|反復子が等しいかどうかを比較します。|
 |[operator->](#op_arrow)|指定した一致にアクセスします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 

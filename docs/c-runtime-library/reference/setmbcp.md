@@ -1,10 +1,6 @@
 ---
-title: _setmbcp | Microsoft Docs
-ms.custom: ''
+title: _setmbcp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _setmbcp
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _setmbcp
 - setmbcp
-dev_langs:
-- C++
 helpviewer_keywords:
 - setmbcp function
 - _setmbcp function
 - multibyte code pages
 ms.assetid: cfde53b5-0b73-4684-81b1-a8d3aafc85de
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 91993171def417adfc389420d1376e5a71f8cda0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1f4967baa5fda68a7df33bcd08935dca23fab16
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408069"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532211"
 ---
 # <a name="setmbcp"></a>_setmbcp
 
@@ -60,11 +50,11 @@ int _setmbcp(
 
 ## <a name="return-value"></a>戻り値
 
-コード ページが正常に設定されている場合は、0 を返します。 無効なコード ページの値が指定した場合*コードページ*-1 とコード ページの設定は変更を返します。 セット**errno**に**EINVAL**メモリ割り当てエラーが発生した場合。
+コード ページが正常に設定されている場合は、0 を返します。 無効なコード ページの値を指定した場合*コードページ*-1 とコード ページの設定は変更を返します。 セット**errno**に**EINVAL**メモリ割り当ての失敗が発生した場合。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Setmbcp**関数は新しいマルチバイト コード ページを指定します。 既定では、ランタイム システムはマルチバイト コード ページを、システムの既定の ANSI コード ページに自動的に設定します。 マルチバイト コード ページの設定は、ロケールに依存していないすべてのマルチバイトのルーチンに影響します。 ただし、可能であればに指示する **_setmbcp**現在のロケールに対して定義されているコード ページを使用する (次のマニフェスト定数の一覧を参照してくださいおよび関連する動作)。 マルチバイト コード ページではなく、ロケールのコード ページに依存しているマルチバイトのルーチンの一覧については、「[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)」を参照してください。
+**_Setmbcp**関数は新しいマルチバイト コード ページを指定します。 既定では、ランタイム システムはマルチバイト コード ページを、システムの既定の ANSI コード ページに自動的に設定します。 マルチバイト コード ページの設定は、ロケールに依存していないすべてのマルチバイトのルーチンに影響します。 ただし、ように指示することは **_setmbcp**現在のロケールに対して定義されているコード ページを使用する (次のマニフェスト定数の一覧を参照してくださいし、動作の結果に関連付けられている)。 マルチバイト コード ページではなく、ロケールのコード ページに依存しているマルチバイトのルーチンの一覧については、「[マルチバイト文字のシーケンスの解釈](../../c-runtime-library/interpretation-of-multibyte-character-sequences.md)」を参照してください。
 
 マルチバイト コード ページは、次のランタイム ライブラリ ルーチンによる、マルチバイト文字の処理にも影響します。
 
@@ -74,23 +64,23 @@ int _setmbcp(
 |[_fullpath](fullpath-wfullpath.md)|[_spawn 関数](../../c-runtime-library/spawn-wspawn-functions.md)|[_tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 |[_makepath](makepath-wmakepath.md)|[_splitpath](splitpath-wsplitpath.md)|[tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md)|
 
-さらに、マルチバイト文字が表示されるすべてのランタイム ライブラリ ルーチン*argv*または*envp*プログラムのパラメーターと引数 (など、 **_exec**と **_spawn**ファミリ) これらの文字列のマルチバイト コード ページに従って処理します。 したがって、これらのルーチンがへの呼び出しによって影響をも **_setmbcp**マルチバイト コード ページを変更します。
+さらに、マルチバイト文字が表示されるすべてのランタイム ライブラリ ルーチン*argv*または*envp*プログラム引数をパラメーターとして (など、 **_exec**と **_spawn**ファミリ) これらの文字列のマルチバイト コード ページに従って処理します。 そのため、これらのルーチンの呼び出しによって影響を受けるはも **_setmbcp**マルチバイト コード ページを変更します。
 
 *コードページ*引数は、次の値のいずれかに設定することができます。
 
-- **_MB_CP_ANSI**を使用して ANSI コード ページは、プログラムの起動時にオペレーティング システムから取得します。
+- **_MB_CP_ANSI**使用の ANSI コード ページは、プログラムの起動時にオペレーティング システムから取得します。
 
-- **_MB_CP_LOCALE**前の呼び出しから取得した現在のロケールのコード ページを使用して[setlocale、_wsetlocale](setlocale-wsetlocale.md)です。
+- **_Setmbcp**以前の呼び出しから取得した現在のロケールのコード ページを使用して[setlocale](setlocale-wsetlocale.md)します。
 
 - **_MB_CP_OEM**使用の OEM コード ページは、プログラムの起動時にオペレーティング システムから取得します。
 
-- **_MB_CP_SBCS** 1 バイト コード ページを使用します。 コード ページを設定すると **_MB_CP_SBCS**など、日常的な[_ismbblead](ismbblead-ismbblead-l.md)常に false を返します。
+- **_MB_CP_SBCS** 1 バイト コード ページを使用します。 コード ページを設定すると **_MB_CP_SBCS**などの日常的な[_ismbblead](ismbblead-ismbblead-l.md)常に false を返します。
 
 - 他の任意の有効なコード ページ値。値は、ANSI、OEM、またはその他のオペレーティング システムがサポートするコード ページであるかに関係ありません。ただし、サポートされていない UTF-7 と UTF-8 は除きます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_setmbcp**|\<mbctype.h>|
 

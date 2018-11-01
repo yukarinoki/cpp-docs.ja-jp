@@ -1,31 +1,21 @@
 ---
-title: back_insert_iterator クラス |Microsoft Docs
-ms.custom: ''
+title: back_insert_iterator クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - iterator/std::back_insert_iterator
 - iterator/std::back_insert_iterator::container_type
 - iterator/std::back_insert_iterator::reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::back_insert_iterator [C++]
 - std::back_insert_iterator [C++], container_type
 - std::back_insert_iterator [C++], reference
 ms.assetid: a1ee07f2-cf9f-46a1-8608-cfaf207f9713
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87eb15654be3f709da92d561d048b3a7961c985f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2a0510b6df656b7925fd42a4c97d768336537424
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44099617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557445"
 ---
 # <a name="backinsertiterator-class"></a>back_insert_iterator クラス
 
@@ -53,7 +43,7 @@ class back_insert_iterator;
 |-|-|
 |[back_insert_iterator](#back_insert_iterator)|コンテナー内の最後の要素の後に要素を挿入する `back_insert_iterator` を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -68,7 +58,7 @@ class back_insert_iterator;
 |[operator++](#op_add_add)|値を格納できる次の位置に `back_insert_iterator` をインクリメントします。|
 |[operator=](#op_eq)|出力反復子の式を実装するために使用される代入演算子\* `i`  =  `x`後方挿入の。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<iterator>
 

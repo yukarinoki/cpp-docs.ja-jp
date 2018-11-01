@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportHook2、_CrtSetReportHookW2 | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportHook2、_CrtSetReportHookW2
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportHook2
 - _CrtSetReportHookW2
@@ -25,24 +21,18 @@ f1_keywords:
 - CrtSetReportHook2
 - _CrtSetReportHookW2
 - _CrtSetReportHook2
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportHook2 function
 - _CrtSetReportHook2 function
 - _CrtSetReportHookW2 function
 - CrtSetReportHookW2 function
 ms.assetid: 12e5f68d-c8a7-4b1a-9a75-72ba4a8592d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 17dc0fc97a46e6ce0b5bda68ec8adc6ef37c4218
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1e850d3e83ed7b7c77873400deac073084708b78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402261"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446775"
 ---
 # <a name="crtsetreporthook2-crtsetreporthookw2"></a>_CrtSetReportHook2、_CrtSetReportHookW2
 
@@ -64,22 +54,22 @@ int _CrtSetReportHookW2(
 ### <a name="parameters"></a>パラメーター
 
 *モード*<br/>
-実行するアクション: **_CRT_RPTHOOK_INSTALL**または **_CRT_RPTHOOK_REMOVE**です。
+実行するアクション: **_CRT_RPTHOOK_INSTALL**または **_CRT_RPTHOOK_REMOVE**します。
 
 *pfnNewHook*<br/>
-レポート用のフックをインストールまたはこの関数のナロー文字またはワイド文字バージョンで削除します。
+この関数のナロー文字またはワイド文字バージョンでインストールまたは削除するレポート フック。
 
 ## <a name="return-value"></a>戻り値
 
-エラーが発生した場合は-1 と**EINVAL**または**ENOMEM**設定してください。 それ以外の場合の参照カウントを返します*pfnNewHook*呼び出しの後です。
+エラーが発生した場合は-1 で**EINVAL**または**ENOMEM**設定は、それ以外の場合の参照カウントを返します*pfnNewHook*呼び出しの後にします。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_CrtSetReportHook2**と **_CrtSetReportHookW2**一方を使用してフックしたり、関数をアンフック[_CrtSetReportHook](crtsetreporthook.md)のみ関数をフックすることができます。
+**_CrtSetReportHook2**と **_CrtSetReportHookW2**一方を使用すると、フックまたはアンフック関数の場合、 [_CrtSetReportHook](crtsetreporthook.md)のみ関数をフックすることができます。
 
-**_CrtSetReportHook2**または **_CrtSetReportHookW2**の代わりに使用する必要があります **_CrtSetReportHook** DLL にフックの呼び出しが行われる場合、ときに複数の Dll を読み込むことがあり、独自の設定関数をフックします。 そのような状況では、DLL はロードされたときとは異なる順序でアンロードできます。フック関数はアンロードされた DLL をポイントしたままにできます。 デバッグ出力用のフック関数を使用して追加された場合、プロセスがクラッシュした **_CrtSetReportHook**です。
+**_CrtSetReportHook2**または **_CrtSetReportHookW2**の代わりに使用する必要があります **_CrtSetReportHook** DLL でフックの呼び出しが行われる場合および複数の Dll が読み込まれることがときに、独自に設定関数をフックします。 そのような状況では、DLL はロードされたときとは異なる順序でアンロードできます。フック関数はアンロードされた DLL をポイントしたままにできます。 デバッグ出力用のフック関数を使用して追加された場合、プロセスがクラッシュする **_CrtSetReportHook**します。
 
-いずれかのフック関数を使用して追加 **_CrtSetReportHook**フック関数が追加ではない場合に呼び出されます **_CrtSetReportHook2**または **_CrtSetReportHookW2**またはすべてをフックする場合関数を使用して追加 **_CrtSetReportHook2**と **_CrtSetReportHookW2**返す**FALSE**です。
+フック関数を使用して追加 **_CrtSetReportHook**関数が追加でフックがない場合に呼び出される **_CrtSetReportHook2**または **_CrtSetReportHookW2**またはすべてのフック関数を使用して追加 **_CrtSetReportHook2**と **_CrtSetReportHookW2**返す**FALSE**します。
 
 関数のワイド文字バージョンが利用できます。 レポート用のフック関数は、使用されたこの関数のバージョンと型 (ワイド文字またはナロー文字) が一致しなければならない文字列を受け取ります。 この関数のワイド文字バージョンで使用されたレポート フックには、次の関数プロトタイプを使用します。
 
@@ -93,14 +83,14 @@ int YourReportHook( int reportType, wchar_t *message, int *returnValue );
 int YourReportHook( int reportType, char *message, int *returnValue );
 ```
 
-これらの関数では、パラメーターの検証が行われます。 場合*モード*または**pfnNewNook**は無効です。 これらの関数、無効なパラメーター ハンドラーを呼び出します」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
+これらの関数では、パラメーターの検証が行われます。 場合*モード*または**pfnNewNook**は無効な場合は、これらの関数、無効なパラメーター ハンドラーを呼び出します」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。
 
 > [!NOTE]
-> アプリケーションがコンパイルされた場合 **/clr**され、レポート関数が呼び出されたアプリケーションの終了後にメイン、CLR レポート機能は、CRT 関数を呼び出す場合、例外がスローされます。
+> アプリケーションをコンパイルした場合 **/clr**およびレポート関数を呼び出すと、アプリケーションの終了後にメイン、レポートの関数が CRT 関数を呼び出す場合に、CLR が例外をスローします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_CrtSetReportHook2**|\<crtdbg.h>|\<errno.h>|
 |**_CrtSetReportHookW2**|\<crtdbg.h>|\<errno.h>|

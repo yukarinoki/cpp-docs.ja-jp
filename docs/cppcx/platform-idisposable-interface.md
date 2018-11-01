@@ -1,26 +1,18 @@
 ---
-title: Platform::idisposable インターフェイス |Microsoft Docs
-ms.custom: ''
+title: Platform::IDisposable インターフェイス
 ms.date: 02/03/2017
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::IDisposable
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::IDisposable Interface
 ms.assetid: f4344056-7030-42ed-bc98-b140edffddcd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c596e4054729855ea3c8caedf632ca8dd50b796a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: f114959321c0ed3879a089b944a5ff1b19843118
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105069"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637438"
 ---
 # <a name="platformidisposable-interface"></a>Platform::IDisposable インターフェイス
 
@@ -50,7 +42,7 @@ IDisposable インターフェイスには、次のメソッドがあります�
 |------------|-----------------|
 |Dispose|アンマネージ リソースを解放するために使用されます。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **クライアントがサポートされている最小:** Windows 8
 

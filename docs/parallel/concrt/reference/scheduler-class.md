@@ -1,10 +1,6 @@
 ---
-title: Scheduler クラス |Microsoft Docs
-ms.custom: ''
+title: Scheduler クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - Scheduler
 - CONCRT/concurrency::Scheduler
@@ -22,21 +18,15 @@ f1_keywords:
 - CONCRT/concurrency::Scheduler::ResetDefaultSchedulerPolicy
 - CONCRT/concurrency::Scheduler::ScheduleTask
 - CONCRT/concurrency::Scheduler::SetDefaultSchedulerPolicy
-dev_langs:
-- C++
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 745ab1f4f992591927be101521e0f2902af0ccd7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638270"
 ---
 # <a name="scheduler-class"></a>Scheduler クラス
 
@@ -66,7 +56,7 @@ class Scheduler;
 |[CreateScheduleGroup](#createschedulegroup)|オーバーロードされます。 スケジューラ内で新しいスケジュール グループを作成します。 パラメーターを受け取るバージョン`_Placement`にそのパラメーターで指定された場所で実行に偏っていますが、新しく作成したスケジュール グループ内のタスクが原因です。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|スケジューラの仮想プロセッサの現在の数を返します。|
 |[GetPolicy](#getpolicy)|スケジューラが作成されたポリシーのコピーを返します。|
-|[Id](#id)|スケジューラの一意識別子を返します。|
+|[ID](#id)|スケジューラの一意識別子を返します。|
 |[IsAvailableLocation](#isavailablelocation)|特定の場所は、スケジューラに収録されているかどうかを判断します。|
 |[参照](#reference)|スケジューラの参照カウントをインクリメントします。|
 |[RegisterShutdownEvent](#registershutdownevent)|Windows のイベント ハンドルが渡された原因、`_Event`パラメーターがシグナル状態にスケジューラがシャット ダウンし、それ自体を破棄します。 イベントがシグナル状態に、スケジューラにスケジュールされていたすべての作業が完了しました。 このメソッドは、複数のシャット ダウン イベントを登録できます。|
@@ -85,7 +75,7 @@ class Scheduler;
 
 `Scheduler`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 

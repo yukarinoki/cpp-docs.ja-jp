@@ -1,29 +1,19 @@
 ---
-title: ref クラスと ref 構造体 (C +/cli および C++/cli CX) |Microsoft Docs
-ms.custom: ''
+title: ref クラスと ref 構造体 (C +/cli および C++/cli CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ref class keyword [C++]
 - value class keyword [C++]
 - value struct keyword [C++]
 - ref struct keyword [C++]
 ms.assetid: 5c360764-b229-49c6-9357-66213afbc372
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f2d7ceea7dd3253b28eab5b5fad28381f115225f
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: ab460d30dae49d3cbc8100799ffe0bdcda59249b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328076"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545887"
 ---
 # <a name="ref-class-and-ref-struct--ccli-and-ccx"></a>ref クラスと ref 構造体 (C +/cli および C++/cli CX)
 
@@ -104,7 +94,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 使用してオブジェクトを宣言するときに、**値クラス**または**値構造体**キーワード、宣言されたオブジェクトのオブジェクトの有効期間は監視対象外です。 このオブジェクトは、C++ の他の標準のクラスや構造体と同様です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -123,7 +113,7 @@ class_accessvalue structnamemodifier :  inherit_accessbase_type {};
 
 **値クラス**と**値構造体**割り当てられているクラスまたは構造体の値が関数に渡されるか、メンバーに格納されていることのキーワードがコンパイラに指示します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

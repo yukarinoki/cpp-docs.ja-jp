@@ -1,10 +1,6 @@
 ---
-title: _ftime、_ftime32、_ftime64 | Microsoft Docs
-ms.custom: ''
+title: _ftime、_ftime32、_ftime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftime64
 - _ftime
@@ -29,8 +25,6 @@ f1_keywords:
 - ftime64
 - ftime
 - ftime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftime64 function
 - _ftime64 function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - ftime32 function
 - time, getting current
 ms.assetid: 96bc464c-3bcd-41d5-a212-8bbd836b814a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8942dbaddcc1f4ab1ec5d571d08d95d8669d302d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 26178f8e559bddd3dafb7fa21edb822874244e93
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107056"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508330"
 ---
 # <a name="ftime-ftime32-ftime64"></a>_ftime、_ftime32、_ftime64
 
@@ -86,7 +76,7 @@ void _ftime64( struct __timeb64 *timeptr );
 
 **_ftime**パラメーターを検証します。 として null ポインターを渡された場合*timeptr*、」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は設定**errno**に**EINVAL**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

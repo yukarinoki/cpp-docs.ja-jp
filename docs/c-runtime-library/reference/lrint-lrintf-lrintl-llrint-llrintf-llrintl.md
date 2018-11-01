@@ -1,11 +1,6 @@
 ---
-title: lrint、lrintf、lrintl、llrint、llrintf、llrintl | Microsoft Docs
-ms.custom: ''
+title: lrint、lrintf、lrintl、llrint、llrintf、llrintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lrint
 - lrintl
@@ -39,8 +34,6 @@ f1_keywords:
 - math/llrint
 - math/llrintf
 - math/llrintl
-dev_langs:
-- C++
 helpviewer_keywords:
 - lrint function
 - lrintf function
@@ -49,16 +42,12 @@ helpviewer_keywords:
 - llrintf function
 - llrintl function
 ms.assetid: 28ccd5b3-5e6f-434f-997d-a21d51b8ce7f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ace427267a45c87213f62276e1d7799f27db1cd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a1fc404182d9d2a5cd6870fcb2cd1ff3e5f4da55
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401260"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500843"
 ---
 # <a name="lrint-lrintf-lrintl-llrint-llrintf-llrintl"></a>lrint、lrintf、lrintl、llrint、llrintf、llrintl
 
@@ -116,21 +105,21 @@ long long int llrintl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、角の丸い整数の値を返します*x*です。
+成功した場合の丸めた整数値を返します*x*します。
 
 |懸案事項|Return|
 |-----------|------------|
-|*x*戻り値の型の範囲外です<br /><br /> *x* ±∞ を =<br /><br /> *x* NaN を =|発生させます**ある**をゼロ (0) を返します。|
+|*x*戻り値の型の範囲外です<br /><br /> *x* ±∞ を =<br /><br /> *x* = NaN|発生させる**FE_INVALID**をゼロ (0) を返します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**lrint**と**llrint**を受け取る**float**と**長い** **二重**型です。 C プログラムでは、 **lrint**と**llrint**が常に、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **lrint**と**llrint**を受け取る**float**と**長い** **二重**型。 C プログラムで**lrint**と**llrint**常に、**二重**します。
 
-場合*x*の整数値、これらの関数の生成と等価の浮動小数点を表さない**FE_INEXACT**です。
+場合*x*の整数値、これらの関数の生成と等価の浮動小数点を表さない**FE_INEXACT**します。
 
 **Microsoft 固有**: 結果が戻りの型の範囲外の場合、またはパラメーターが非数 (NaN) または無限値 (infinity) の場合、戻り値は実装で定義されます。 Microsoft コンパイラは0 の値を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

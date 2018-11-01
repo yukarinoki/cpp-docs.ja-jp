@@ -1,10 +1,6 @@
 ---
-title: _scalb、_scalbf |Microsoft Docs
-ms.custom: ''
+title: _scalb、_scalbf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _scalb
 - _scalbf
@@ -25,24 +21,18 @@ f1_keywords:
 - scalb
 - _scalb
 - _scalbf
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - _scalb function
 - _scalbf function
 - scalb function
 ms.assetid: 148cf5a8-b405-44bf-a1f0-7487adba2421
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47b6e20c6395337113088aa51d8ba75744421922
-ms.sourcegitcommit: 7eadb968405bcb92ffa505e3ad8ac73483e59685
+ms.openlocfilehash: c3f776ec27c365601d4fe57fb6cf0a5c9b9e0cbd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2018
-ms.locfileid: "39207521"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551035"
 ---
 # <a name="scalb-scalbf"></a>_scalb、_scalbf
 
@@ -73,7 +63,7 @@ float _scalbf(
 
 正常終了した場合は指数値が返されます。 オーバーフローが発生 (の符号に応じて*x*)、 **_scalb** +/-返します**HUGE_VAL**、 **errno**に変数が設定されている**ERANGE**します。
 
-このリターン コードとその他のリターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+このリターン コードとその他のリターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 ## <a name="remarks"></a>Remarks
 

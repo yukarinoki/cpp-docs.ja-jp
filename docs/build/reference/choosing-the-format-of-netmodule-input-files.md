@@ -1,23 +1,13 @@
 ---
-title: .Netmodule の形式の選択の入力ファイル |Microsoft Docs
-ms.custom: ''
+title: .netmodule 入力ファイルの形式の選択
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1eaa48769525a907ecdcc1d0612d67a169fb6cd1
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 92f7aafa102a8591192f4394aee62afe86bb3549
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45715807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444318"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>.netmodule 入力ファイルの形式の選択
 

@@ -1,10 +1,6 @@
 ---
-title: _set_fmode | Microsoft Docs
-ms.custom: ''
+title: _set_fmode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_fmode
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _set_fmode
 - set_fmode
-dev_langs:
-- C++
 helpviewer_keywords:
 - file translation [C++], default mode
 - _set_fmode function
 - file translation [C++], setting mode
 - set_fmode function
 ms.assetid: f80eb9c7-733b-4652-a9bc-6b3790a35f12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 64b8be6d678a6907fc63018c99dd38d2fc8407ea
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: df6efcf3fd89ec87ad098200d1d9ba3d6b52c7e4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406395"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500361"
 ---
 # <a name="setfmode"></a>_set_fmode
 
@@ -49,29 +39,29 @@ ms.locfileid: "32406395"
 ## <a name="syntax"></a>構文
 
 ```C
-errno_t _set_fmode( 
-   int mode 
+errno_t _set_fmode( 
+   int mode 
 );
 ```
 
 ### <a name="parameters"></a>パラメーター
 
 *モード*<br/>
-必要なファイルの変換モード: **_O_TEXT**または **_O_BINARY**です。
+必要なファイルの変換モード: **_O_TEXT**または **_O_BINARY**します。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を、失敗した場合はエラー コードを返します。 場合*モード*は **_O_TEXT**または **_O_BINARY**または **_O_WTEXT** 」の説明に従って、無効なパラメーターハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**し、返します**EINVAL**です。
+正常終了した場合は 0 を、失敗した場合はエラー コードを返します。 場合*モード*ない **_O_TEXT**または **_O_BINARY**または **_O_WTEXT** 」の説明に従って、無効なパラメーターハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**返します**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数は、[_fmode](../../c-runtime-library/fmode.md) グローバル変数を設定します。 この変数は、ファイル I/O 操作の既定のファイル変換モードを指定 **_open**と **_pipe**です。
+この関数は、[_fmode](../../c-runtime-library/fmode.md) グローバル変数を設定します。 この変数は、ファイル I/O 操作の既定のファイル変換モードを指定 **_open**と **_pipe**します。
 
-**_O_TEXT**と **_O_BINARY** Fcntl.h で定義されます。 **EINVAL** Errno.h で定義されています。
+**_O_TEXT**と **_O_BINARY** Fcntl.h で定義されます。 **EINVAL** Errno.h で定義されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_set_fmode**|\<stdlib.h>|\<fcntl.h>、\<errno.h>|
 

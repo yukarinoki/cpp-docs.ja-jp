@@ -1,10 +1,6 @@
 ---
-title: _mbctombb、_mbctombb_l | Microsoft Docs
-ms.custom: ''
+title: _mbctombb、_mbctombb_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbctombb_l
 - _mbctombb
@@ -26,24 +22,18 @@ f1_keywords:
 - _mbctombb
 - mbctombb_l
 - mbctombb
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbctombb function
 - mbctombb_l function
 - mbctombb function
 - _mbctombb_l function
 ms.assetid: d90970b8-71ff-4586-b6a2-f9ceb811f776
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: adb233b489b5f4c190a4015805b07ab36770a283
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7395d94a6ec18f989d4a7153425b7af406a0bf45
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402905"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519835"
 ---
 # <a name="mbctombb-mbctombbl"></a>_mbctombb、_mbctombb_l
 
@@ -76,17 +66,17 @@ unsigned int _mbctombb_l(
 
 成功した場合、 **_mbctombb**と **_mbctombb_l**に対応する 1 バイト文字を返します*c*; 返します*c*.
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbctombb**と **_mbctombb_l**関数では、特定のマルチバイト文字を対応する 1 バイト マルチバイト文字に変換します。 文字が変換する 0 xdf の範囲 0x20-0x7E または 0xA1 - 1 バイトの文字に対応する必要があります。
+**_Mbctombb**と **_mbctombb_l**関数が特定のマルチバイト文字を対応する 1 バイト マルチバイト文字に変換します。 文字は 0 xdf に変換する範囲 0x20-0x7E または 0xA1 - 1 バイト文字に対応する必要があります。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数のバージョン、 **_l**サフィックスがこのロケールに依存する動作に現在のロケールを使用のバージョン、 **_l**渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じ代わりにします。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 この関数のバージョン、 **_l**サフィックスは、このロケールに依存する動作の現在のロケールを使用とバージョン、 **_l**サフィックスは、渡されたロケール パラメーターを使用する点を除いて同じです代わりにします。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-以前のバージョンで **_mbctombb**が呼び出された**zentohan**です。 使用して **_mbctombb**代わりにします。
+以前のバージョンで **_mbctombb**が呼び出された**zentohan**します。 使用 **_mbctombb**代わりにします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbctombb**|\<mbstring.h>|
 |**_mbctombb_l**|\<mbstring.h>|

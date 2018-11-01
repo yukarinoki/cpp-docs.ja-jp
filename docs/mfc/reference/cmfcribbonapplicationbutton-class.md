@@ -1,31 +1,21 @@
 ---
-title: CMFCRibbonApplicationButton クラス |Microsoft Docs
-ms.custom: ''
+title: CMFCRibbonApplicationButton クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonApplicationButton
 - AFXRIBBONBAR/CMFCRibbonApplicationButton
 - AFXRIBBONBAR/CMFCRibbonApplicationButton::CMFCRibbonApplicationButton
 - AFXRIBBONBAR/CMFCRibbonApplicationButton::SetImage
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonApplicationButton [MFC], CMFCRibbonApplicationButton
 - CMFCRibbonApplicationButton [MFC], SetImage
 ms.assetid: beb81757-fabd-4641-9130-876ba8505b78
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b82e0da2ac080ea65807b92f7eab549fe3301bf
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6bf62cc414162a15ee685361cacad8d72fc41b06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393803"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600347"
 ---
 # <a name="cmfcribbonapplicationbutton-class"></a>CMFCRibbonApplicationButton クラス
 
@@ -55,7 +45,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CMFCRibbonApplicationButton`クラス。 例では、アプリケーションのボタンにイメージを割り当てる方法と、ツールヒントを設定する方法を示します。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。
+`CMFCRibbonApplicationButton` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、アプリケーションのボタンにイメージを割り当てる方法と、ツールヒントを設定する方法を示します。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。
 
 [!code-cpp[NVC_MFC_DrawClient#4](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_1.h)]
 [!code-cpp[NVC_MFC_DrawClient#5](../../mfc/reference/codesnippet/cpp/cmfcribbonapplicationbutton-class_2.cpp)]
@@ -70,7 +60,7 @@ class CMFCRibbonApplicationButton : public CMFCRibbonButton
 
 [CMFCRibbonApplicationButton](../../mfc/reference/cmfcribbonapplicationbutton-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxRibbonBar.h
 

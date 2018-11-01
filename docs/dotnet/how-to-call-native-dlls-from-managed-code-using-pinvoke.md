@@ -1,29 +1,19 @@
 ---
-title: '方法: PInvoke を使用してマネージ コードからネイティブ Dll を呼び出す |Microsoft Docs'
+title: '方法: PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す'
 ms.custom: get-started-article
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - platform invoke [C++], calling native DLLs
 - interop [C++], calling native DLLs
 - marshaling [C++], calling native DLLs
 - data marshaling [C++], calling native DLLs
 ms.assetid: 3273eb4b-38d1-4619-92a6-71bda542be72
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: f849d2d9c3fd4a2d50d652ad159e93442b4c7ff3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 921a3504bd4fcb3f8dfe3d6c1a80c69d00298fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404645"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444409"
 ---
 # <a name="how-to-call-native-dlls-from-managed-code-using-pinvoke"></a>方法: PInvoke を使用してマネージド コードからネイティブ DLL を呼び出す
 

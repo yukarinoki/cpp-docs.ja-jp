@@ -1,27 +1,17 @@
 ---
-title: is_nothrow_copy_assignable クラス | Microsoft Docs
-ms.custom: ''
+title: is_nothrow_copy_assignable クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_nothrow_copy_assignable
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_nothrow_copy_assignable
 ms.assetid: baa8abd6-4f53-489f-abba-8d5d5c53bbbc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90b63179156b1bd3d9f2dc1594f51bfa10586522
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: bb3aca47b61bdcc5b28eeedc1a6b4edefc303c4e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102170"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583756"
 ---
 # <a name="isnothrowcopyassignable-class"></a>is_nothrow_copy_assignable クラス
 
@@ -43,7 +33,7 @@ struct is_nothrow_copy_assignable;
 
 型述語のインスタンスは、参照型の場合は true を保持*T*場所`is_nothrow_assignable<T&, const T&>`それ以外の場合は true を保持して false を保持します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

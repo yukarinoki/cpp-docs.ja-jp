@@ -1,27 +1,17 @@
 ---
-title: complex&lt;float&gt; | Microsoft Docs
-ms.custom: ''
+title: complex&lt;float&gt;
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - complex/std::complex<float>
-dev_langs:
-- C++
 helpviewer_keywords:
 - complex<float> function
 ms.assetid: 1178eb1e-39bd-4017-89cd-aea95f813939
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 832bf638a123a24b901509d66989738f15ad44f0
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: a09b6d0306f633754cad4b12a652eac557f96634
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48233820"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434711"
 ---
 # <a name="complexltfloatgt"></a>complex&lt;float&gt;
 
@@ -126,7 +116,7 @@ arg ( c3 ) = 0.927295 radians, which is 53.1301 degrees.
 */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<complex>
 

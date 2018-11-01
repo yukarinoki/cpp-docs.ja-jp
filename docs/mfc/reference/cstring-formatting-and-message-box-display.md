@@ -1,27 +1,17 @@
 ---
-title: CString の書式指定とメッセージ ボックスの表示 |Microsoft Docs
-ms.custom: ''
+title: CString の書式指定とメッセージ ボックスの表示
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.strings
-dev_langs:
-- C++
 helpviewer_keywords:
 - CString objects [MFC], formatting and message boxes
 ms.assetid: d1068cf4-9cc5-4952-b9e7-d612c53cbc28
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 125d0d3ec1549b9eba46cbfebfb7ecfe2c2186d9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b22eea0a20623bb6dfbbf60703b3db25ac4065d5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387186"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487933"
 ---
 # <a name="cstring-formatting-and-message-box-display"></a>CString の書式指定とメッセージ ボックスの表示
 
@@ -38,7 +28,7 @@ ms.locfileid: "46387186"
 |[AfxFormatString2](#afxformatstring2)|形式については、2 つの代替文字列は、「1」と"%2"、文字列の文字列テーブルに含まれる文字します。|
 |[AfxMessageBox](#afxmessagebox)|メッセージ ボックスを表示します。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -82,7 +72,7 @@ BOOL AFXAPI AfxExtractSubString (
 
 [!code-cpp[NVC_MFC_Utilities#48](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_1.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -118,7 +108,7 @@ void  AfxFormatString1(
 
 [!code-cpp[NVC_MFC_Utilities#25](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_2.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -158,7 +148,7 @@ void AfxFormatString2(
 
 [!code-cpp[NVC_MFC_Utilities#26](../../mfc/codesnippet/cpp/cstring-formatting-and-message-box-display_3.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 

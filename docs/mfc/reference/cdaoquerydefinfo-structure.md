@@ -1,28 +1,18 @@
 ---
-title: CDaoQueryDefInfo 構造体 |Microsoft Docs
-ms.custom: ''
+title: CDaoQueryDefInfo 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDaoQueryDefInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - DAO (Data Access Objects), QueryDefs collection
 - CDaoQueryDefInfo structure [MFC]
 ms.assetid: e20837dc-e78d-4171-a195-1b4075fb5d2a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 930626a2c28009f8f0174069a88a59a12c9059af
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f3c8b464a84bd33d15a19f24010b942bdea59620
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418542"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602996"
 ---
 # <a name="cdaoquerydefinfo-structure"></a>CDaoQueryDefInfo 構造体
 
@@ -111,7 +101,7 @@ Microsoft Jet データベース エンジンがタイムアウト エラーが�
 
 日付と時刻の設定は、クエリ定義が作成または最後に更新されたコンピューターから派生します。 マルチ ユーザー環境では、ユーザーは、使用して、ファイル サーバーから直接これらの設定を取得する必要があります、**時間を net** DateCreated および LastUpdated プロパティの設定の不一致を避けるためのコマンド。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 

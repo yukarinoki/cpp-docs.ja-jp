@@ -1,10 +1,6 @@
 ---
-title: sqrt、sqrtf、sqrtl | Microsoft Docs
-ms.custom: ''
+title: sqrt、sqrtf、sqrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sqrtl
 - sqrtf
@@ -26,8 +22,6 @@ f1_keywords:
 - sqrt
 - sqrtf
 - _sqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sqrtf function
 - sqrt function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - calculating square roots
 - square roots, calculating
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6eefbbf3269ad809cdf30dd3ea034f7ca6c8ad8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c44f8813812b2aeffc2680a0a666d968bb2b4da6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407302"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560577"
 ---
 # <a name="sqrt-sqrtf-sqrtl"></a>sqrt、sqrtf、sqrtl
 
@@ -76,13 +66,13 @@ long double sqrtl(
 *x*<br/>
 負でない浮動小数点値
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**sqrt**を受け取る**float**または**長い****二重**型です。 C プログラムでは、 **sqrt**は**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sqrt**を受け取る**float**または**長い****二重**型。 C プログラムで**sqrt**は**二重**します。
 
 ## <a name="return-value"></a>戻り値
 
-**Sqrt**関数の平方根を返します*x*です。 既定では場合、 *x*が負の値、 **sqrt**は不定値 NaN を返します。
+**Sqrt**関数の平方根を返します*x*します。 既定では場合、 *x*が負の値、 **sqrt**は不定値 NaN を返します。
 
 |入力|SEH 例外|**_matherr**例外|
 |-----------|-------------------|--------------------------|
@@ -90,7 +80,7 @@ C++ では、オーバー ロードできるよう、ためのオーバー ロ�
 |- ∞|none|_DOMAIN|
 |x<0|none|_DOMAIN|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

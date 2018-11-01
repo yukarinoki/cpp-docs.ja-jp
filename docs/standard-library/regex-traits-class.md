@@ -1,10 +1,6 @@
 ---
-title: regex_traits クラス | Microsoft Docs
-ms.custom: ''
+title: regex_traits クラス
 ms.date: 09/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - regex/std::regex_traits
 - regex/std::regex_traits::char_type
@@ -23,8 +19,6 @@ f1_keywords:
 - regex/std::regex_traits::value
 - regex/std::regex_traits::imbue
 - regex/std::regex_traits::getloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::regex_traits [C++]
 - std::regex_traits [C++], char_type
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - std::regex_traits [C++], imbue
 - std::regex_traits [C++], getloc
 ms.assetid: bc5a5eed-32fc-4eb7-913d-71c42e729e81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff45758e0c458ea333595ced51476826651b593e
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 80739d3d8f4bfd38dc3d252a5f3d6308653a7bb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723893"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484059"
 ---
 # <a name="regextraits-class"></a>regex_traits クラス
 
@@ -83,7 +73,7 @@ class regex_traits
 |-|-|
 |[regex_traits](#regex_traits)|オブジェクトを構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -107,9 +97,9 @@ class regex_traits
 |[transform_primary](#transform_primary)|同等のケースレス順序付きシーケンスに変換します。|
 |[翻訳](#translate)|一致する同等の要素に変換します。|
 |[translate_nocase](#translate_nocase)|一致する同等のケースレス要素に変換します。|
-|[value](#value)|要素を数値に変換します。|
+|[値](#value)|要素を数値に変換します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<regex>
 

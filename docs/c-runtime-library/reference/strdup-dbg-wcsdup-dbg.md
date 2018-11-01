@@ -1,10 +1,6 @@
 ---
-title: _strdup_dbg、_wcsdup_dbg | Microsoft Docs
-ms.custom: ''
+title: _strdup_dbg、_wcsdup_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup_dbg
 - _wcsdup_dbg
@@ -25,8 +21,6 @@ f1_keywords:
 - strdup_dbg
 - _strdup_dbg
 - wcsdup_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsdup_dbg function
 - stdup_dbg function
@@ -37,20 +31,16 @@ helpviewer_keywords:
 - _strdup_dbg function
 - wcsdup_dbg function
 ms.assetid: 681db70c-d124-43ab-b83e-5eeea9035097
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7b6e8f5f4634ec93cab619c1e073fa8071691fe6
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 3092c27df1e39c7b719f6e7037efa202d29c9e81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451381"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531158"
 ---
 # <a name="strdupdbg-wcsdupdbg"></a>_strdup_dbg、_wcsdup_dbg
 
-バージョンの[_strdup、_wcsdup](strdup-wcsdup-mbsdup.md)のデバッグ バージョンを使用する**malloc**です。
+バージョンの[_strdup、_wcsdup](strdup-wcsdup-mbsdup.md)のデバッグ バージョンを使用する**malloc**します。
 
 ## <a name="syntax"></a>構文
 
@@ -75,23 +65,23 @@ wchar_t *_wcsdup_dbg(
 NULL で終わる元の文字列。
 
 *blockType*<br/>
-要求されたメモリ ブロックの型: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**です。
+要求されたメモリ ブロックの種類: **_CLIENT_BLOCK**または **_NORMAL_BLOCK**します。
 
 *ファイル名*<br/>
-割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**です。
+割り当て操作を要求したソース ファイルの名前へのポインターまたは**NULL**します。
 
 *行番号*<br/>
-割り当て操作が要求されたソース ファイルの数の行または**NULL**です。
+割り当て操作が要求されたソース ファイルの数の行または**NULL**します。
 
 ## <a name="return-value"></a>戻り値
 
-コピーされた文字列の格納場所へのポインターを返しますこれらの関数または**NULL**記憶域を割り当てることができない場合。
+これらの関数の各コピーされた文字列の格納場所にポインターを返しますまたは**NULL**場合、記憶域を割り当てることができません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Strdup_dbg**と **_wcsdup_dbg**関数と同じ **_strdup**と **_wcsdup**する点を除いて、 **_デバッグ**が定義されている場合、これらの関数を使用してデバッグ バージョンの**malloc**、 **_malloc_dbg**、複製された文字列のメモリを割り当てられません。 デバッグ機能について **_malloc_dbg**を参照してください[_malloc_dbg](malloc-dbg.md)です。
+**_Strdup_dbg**と **_wcsdup_dbg**関数と同じ **_strdup**と **_wcsdup**する点を除いて、 **_デバッグ**が定義されている場合、これらの関数でのデバッグ バージョンを使用**malloc**、 **_malloc_dbg**、複製された文字列のメモリを割り当てられません。 デバッグ機能について **_malloc_dbg**を参照してください[_malloc_dbg](malloc-dbg.md)します。
 
-多くの場合、これらの関数を明示的に呼び出す必要はありません。 フラグを定義する代わりに、 **_CRTDBG_MAP_ALLOC**です。 ときに **_CRTDBG_MAP_ALLOC**が定義されているを呼び出す **_strdup**と **_wcsdup**に再マップ **_strdup_dbg**と **_wcsdup_dbg**をそれぞれに、 *blockType* 'éý' **_NORMAL_BLOCK**です。 したがって、必要はありません、ヒープ ブロックとしてマークする場合を除き、これらの関数を明示的に呼び出す **_CLIENT_BLOCK**です。 ブロック型の詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
+多くの場合、これらの関数を明示的に呼び出す必要はありません。 フラグを定義する代わりに、 **_CRTDBG_MAP_ALLOC**します。 ときに **_CRTDBG_MAP_ALLOC**が定義されている、呼び出し **_strdup**と **_wcsdup**にマップし直され **_strdup_dbg**と **_wcsdup_dbg**をそれぞれで、 *blockType*設定 **_NORMAL_BLOCK**します。 したがって、としてヒープ ブロックをマークする場合、これらの関数を明示的に呼び出す必要はない **_CLIENT_BLOCK**します。 ブロック型の詳細については、[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)に関する記事をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -99,9 +89,9 @@ NULL で終わる元の文字列。
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup_dbg**|**_strdup_dbg**|**_mbsdup**|**_wcsdup_dbg**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strdup_dbg**、 **_wcsdup_dbg**|\<crtdbg.h>|
 

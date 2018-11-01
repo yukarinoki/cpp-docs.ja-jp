@@ -1,27 +1,17 @@
 ---
-title: ツール バー コントロールでのイメージ リストの使用 |Microsoft Docs
-ms.custom: ''
+title: ツール バー コントロールでのイメージ リストの使い方
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbar controls [MFC], image
 - image lists [MFC], toolbar controls
 - CToolBarCtrl class [MFC], image lists
 ms.assetid: ccbe8df4-4ed9-4b54-bb93-9a1dcb3b97eb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3604de0b3b24b638e549c6823ea6c95036543c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f8b19cd54a6fb2dca940c354ef23e7d06b35f0b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401772"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584575"
 ---
 # <a name="using-image-lists-in-a-toolbar-control"></a>ツール バー コントロールでのイメージ リストの使い方
 

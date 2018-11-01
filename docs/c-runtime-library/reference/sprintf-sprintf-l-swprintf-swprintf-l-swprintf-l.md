@@ -1,10 +1,6 @@
 ---
-title: sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l | Microsoft Docs
-ms.custom: ''
+title: sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __swprintf_l
 - sprintf
@@ -33,8 +29,6 @@ f1_keywords:
 - sprintf
 - _stprintf
 - stprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _swprintf_l function
 - _stprintf function
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - sprintf_l function
 - formatted text [C++]
 ms.assetid: f6efe66f-3563-4c74-9455-5411ed939b81
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 02538d8c74de4f48cb4a3d6285e10c3c4e03c322
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d24ea0c83d934afe81368a9fe734c2a39d08c3d0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415937"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50451498"
 ---
 # <a name="sprintf-sprintfl-swprintf-swprintfl-swprintfl"></a>sprintf、_sprintf_l、swprintf、_swprintf_l、__swprintf_l
 
@@ -136,20 +126,20 @@ int _sprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字数またはエラーが発生した場合は-1。 場合*バッファー*または*形式*null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+エラーが発生した場合は-1 または書き込まれた文字数。 場合*バッファー*または*形式*null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 **sprintf**に格納されるバイト数を返します*バッファー*、終端の null 文字を含みません。 **swprintf**で格納されるワイド文字の数を返します*バッファー*、終端の null ワイド文字を含みません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Sprintf**関数は、書式化して、一連の文字と内の値を格納*バッファー*です。 各*引数*(存在する場合) は変換され、対応する書式指定に従って*形式*です。 形式は、通常の文字と、同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)です。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Sprintf**関数は、書式化して、一連の文字と値を格納*バッファー*します。 各*引数*(ある場合) は変換されに対応する書式指定に応じて*形式*します。 形式は、通常の文字と同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)します。 最後に書き込まれる文字の後に NULL 文字が追加されます。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> 使用して**sprintf**、書き込まれた文字を使用したコードのことを意味の数を制限する方法はありません**sprintf**バッファー オーバーランを受けやすくなります。 関連する関数の使用を検討[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)に書き込まれる文字の最大数を指定する*バッファー*、使用または[_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)を決定する大きさ、バッファーが必要です。 また、*形式*はユーザー定義の文字列ではありません。
+> 使用して**sprintf**、書き込まれた文字を使用してコードの数を制限する方法はありません**sprintf**バッファー オーバーランを受けやすくなります。 関連の関数の使用を検討[_snprintf](snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md)に書き込まれる文字の最大数を指定する*バッファー*、使用または[_scprintf](scprintf-scprintf-l-scwprintf-scwprintf-l.md)を決定する大きさをバッファーが必要です。 また、いることを確認*形式*ユーザー定義文字列ではありません。
 
-**swprintf**のワイド文字バージョンは、 **sprintf**; ポインター引数**swprintf**ワイド文字列です。 エンコーディング エラーの検出**swprintf**が異なる場合が**sprintf**です。 **swprintf**と**fwprintf**という点以外の動作は同じ**swprintf**型の出力先ではなく文字列に出力を書き込みます**ファイル**、および**swprintf**が必要です、*カウント*パラメーターを書き込む文字の最大数を指定します。 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
+**swprintf**のワイド文字バージョンは、 **sprintf**; へのポインター引数**swprintf**はワイド文字列です。 エンコーディング エラーの検出**swprintf**内で異なる場合があります**sprintf**します。 **swprintf**と**fwprintf**動作は同じことを除いて**swprintf**型の出力先ではなく文字列に出力を書き込む**ファイル**、および**swprintf**が必要です、*カウント*書き込まれる文字の最大数を指定するパラメーター。 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
-**swprintf** 、2 番目のパラメーターを必要とする ISO C 標準に準拠している*カウント*、型の**size_t**です。 古い非標準動作を強制的には、次のように定義します。**実行させるには**します。 この古い動作は、将来的には削除される可能性があるので、規格に準拠した新しい動作を使用するようにコードを変更する必要があります。
+**swprintf** 、2 番目のパラメーターを必要とする ISO C 標準に準拠している*カウント*、型の**size_t**します。 古い非標準動作を強制的には、次のように定義します。**実行させるには**します。 この古い動作は、将来的には削除される可能性があるので、規格に準拠した新しい動作を使用するようにコードを変更する必要があります。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -160,9 +150,9 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |**_stprintf**|**sprintf**|**sprintf**|**_swprintf**|
 |**_stprintf_l**|**_sprintf_l**|**_sprintf_l**|**__swprintf_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**sprintf**、 **_sprintf_l**|\<stdio.h>|
 |**swprintf**、 **_swprintf_l**|\<stdio.h> または \<wchar.h>|

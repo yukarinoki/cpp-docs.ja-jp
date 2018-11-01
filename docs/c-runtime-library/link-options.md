@@ -39,12 +39,12 @@ author: corob-msft
 ms.author: corob
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 98965b94c83b69e15c38319d7bc5a6e4151b323e
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 91b97c653a5f035a767fbedcfcbfdfa7ca178327
+ms.sourcegitcommit: 038f1406b1172318f8832371ad14176f788c44fa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704887"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50132154"
 ---
 # <a name="link-options"></a>リンク オプション
 
@@ -57,6 +57,7 @@ CRT lib ディレクトリには、コード変更を加えずに特定の CRT �
 |binmode.obj|pbinmode.obj|既定のファイルの変換モードをバイナリに設定します。 [_fmode](../c-runtime-library/fmode.md) をご覧ください。|
 |chkstk.obj|N/A|CRT を使用していない場合にスタック チェックと alloca サポートを提供します。|
 |commode.obj|pcommode.obj|グローバル コミット フラグを "コミット" に設定します。 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md) および [fopen_s、_wfopen_s](../c-runtime-library/reference/fopen-s-wfopen-s.md) をご覧ください。|
+|exe_initialize_mta.lib|N/A|EXE のセットアップ中に MTA アパートメントが初期化され、グローバルなスマート ポインターで COM オブジェクトが使用できるようになります。 このオプションではシャットダウン中に MTA アパートメントの参照がリークされるため、DLL では使用しないでください。 このリンクは、combase.h を含め、_EXE_INITIALIZE_MTA を定義する場合と同等です。 |
 |fp10.obj|N/A|既定の精度制御を 64 ビットに変更します。 「[浮動小数点サポート](../c-runtime-library/floating-point-support.md)」をご覧ください。|
 |invalidcontinue.obj|pinvalidcontinue.obj|何もしない既定の無効なパラメーター ハンドラーを設定します。つまり、CRT 関数に渡される無効なパラメーターによってエラー番号が設定され、エラーの結果が返されます。|
 |loosefpmath.obj|N/A|浮動小数点コードが非正規化値を許容するようにします。|

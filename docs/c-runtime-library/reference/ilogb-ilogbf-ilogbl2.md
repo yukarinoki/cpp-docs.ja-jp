@@ -1,11 +1,6 @@
 ---
-title: ilogb、ilogbf、ilogbl2 | Microsoft Docs
-ms.custom: ''
+title: ilogb、ilogbf、ilogbl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - ilogb
 - ilogbf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - ilogbf function
 - ilogbl function
 ms.assetid: 9ef19d57-1caa-41d5-8233-2faad3562fcb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1436874e1ab35cc72dc40390adf5597529d3bf57
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 63e04246d29fde50c745a5f353829bd337a814ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398180"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551984"
 ---
 # <a name="ilogb-ilogbf-ilogbl"></a>ilogb、ilogbf、ilogbl
 
@@ -82,7 +73,7 @@ int ilogbl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合の 2 を底と指数部を返す*x*符号付きとして**int**値。
+成功した場合、返す、ベース 2 の指数部の*x*符号付きとして**int**値。
 
 それ以外の場合、\<math.h > で定義されている次の値のいずれかを返します。
 
@@ -93,15 +84,15 @@ int ilogbl(
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**ilogb**を受け取り、返します**float**と**長い****二重**型です。 C プログラムでは、 **ilogb**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **ilogb**を受け取って返す**float**と**長い****二重**型。 C プログラムで**ilogb**は、**二重**します。
 
-この関数を呼び出すは、それと同等の呼び出しに似ています**logb**関数、その戻り値へのキャスト**int**です。
+この関数を呼び出すが、同等の呼び出しに似ています**logb**関数、その戻り値をキャスト**int**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**ilogb**、 **ilogbf**、 **ilogbl**|\<math.h>|\<cmath>|
 

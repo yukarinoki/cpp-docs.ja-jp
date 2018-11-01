@@ -1,31 +1,21 @@
 ---
-title: '&lt;future&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;future&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <future>
-dev_langs:
-- C++
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 140bdea373442e1e987ce30c2421057b9355796b
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38954019"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555764"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
 標準ヘッダー \<future> をインクルードして、テンプレート クラスとサポート テンプレートを定義します。これらのクラスやテンプレートによって、関数の実行 (場合によっては個別のスレッドでの実行) やその結果の取得が簡略化されます。 結果は、関数によって返される値、または関数によって生成されるが関数ではキャッチされない例外になります。
 
-このヘッダーでは同時実行ランタイム (ConcRT) が使用されます。これにより、このヘッダーを他の ConcRT メカニズムと共に使用できます。 ConcRT の詳細については、「[同時実行ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
+このヘッダーではコンカレンシー ランタイム (ConcRT) が使用されます。これにより、このヘッダーを他の ConcRT メカニズムと共に使用できます。 ConcRT の詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -83,7 +73,7 @@ ms.locfileid: "38954019"
 
 ### <a name="enumerations"></a>列挙
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[future_errc](../standard-library/future-enums.md#future_errc)|`future_error` クラスによって報告されるエラーのシンボル名を提供します。|
 |[future_status](../standard-library/future-enums.md#future_status)|期限が設定された wait 関数から返される理由のシンボル名を提供します。|

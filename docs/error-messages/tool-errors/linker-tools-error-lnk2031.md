@@ -1,41 +1,31 @@
 ---
-title: リンカ ツール エラー LNK2031 |Microsoft ドキュメント
-ms.custom: ''
+title: リンカ ツール エラー LNK2031
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK2031
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK2031
 ms.assetid: 18ed4b6e-3e75-443c-bbd8-2f6030dc89ee
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d86ea6da8a73d9ba2427e9455c4fca87cd32dd2b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 003b9a58bfb08130f034530f59e2de27efa2ae8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703666"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484838"
 ---
 # <a name="linker-tools-error-lnk2031"></a>リンカ ツール エラー LNK2031
 
-> p/invoke を生成できません"*function_declaration*" *decorated_name*; 呼び出し規約がメタデータに見つかりません。
+> p/invoke を生成できません"*function_declaration*" *decorated_name*; 呼び出し規約がメタデータに見つかりません
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-ネイティブ関数を純粋なイメージにインポートするは、ネイティブと純粋なコンパイルの間で暗黙の呼び出し規約が異なることに注意してください。 純粋なイメージの詳細については、次を参照してください。[純粋なコードと検証可能なコード (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)です。
+ネイティブ関数を純粋なイメージにインポートしようとすると、暗黙の呼び出し規約がネイティブと純粋なコンパイルの間で異なることに注意してください。 純粋なイメージの詳細については、次を参照してください。[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
 
-**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 ## <a name="example"></a>例
 
-このコード サンプルは、ネイティブ、エクスポートされた関数の呼び出し規約は暗黙的に持つコンポーネントを生成[_ _cdecl](../../cpp/cdecl.md)です。
+このコード サンプルには、呼び出し規約が暗黙的には、ネイティブ、エクスポートされた関数を使用したコンポーネントが生成されます[_ _cdecl](../../cpp/cdecl.md)します。
 
 ```cpp
 // LNK2031.cpp
@@ -47,7 +37,7 @@ extern "C" {
 
 ## <a name="example"></a>例
 
-次の例では、純粋なネイティブ関数を使用するクライアントを作成します。 ただし、下にある呼び出し規約 **/clr: 純粋な**は[_ _clrcall](../../cpp/clrcall.md)です。 次の例では、LNK2031 が生成されます。
+次の例では、ネイティブ関数を使用する純粋なクライアントを作成します。 ただし、下の呼び出し規約 **/clr: 純粋な**は[_ _clrcall](../../cpp/clrcall.md)します。 次の例では、LNK2031 が生成されます。
 
 ```cpp
 // LNK2031_b.cpp
@@ -62,7 +52,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-次の例では、純粋なイメージからネイティブ関数を使用する方法を示します。 明示的に注意してください **_ _cdecl**呼び出し規約の指定子。
+次の例では、純粋なイメージからネイティブ関数を使用する方法を示します。 明示的に注意してください **_ _cdecl**呼び出し元の規則の指定子。
 
 ```cpp
 // LNK2031_c.cpp

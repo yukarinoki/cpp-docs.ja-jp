@@ -1,10 +1,6 @@
 ---
-title: iscsym、iscsymf、__iscsym、__iswcsym、__iscsymf、__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l | Microsoft Docs
-ms.custom: ''
+title: iscsym、iscsymf、__iscsym、__iswcsym、__iscsymf、__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswcsym_l
 - __iswcsym
@@ -50,8 +46,6 @@ f1_keywords:
 - ctype/__iswcsymf
 - ctype/__iswcsym_l
 - ctype/__iswcsymf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - iscsymf_l function
 - iswsym_l function
@@ -68,16 +62,12 @@ helpviewer_keywords:
 - iscsym function
 - iscsymf function
 ms.assetid: 944dfb99-f2b8-498c-9f55-dbcf370d0a2c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b1561e93fc19832607d304f3d087ab33b04040de
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ee84243b98c08504ac0bb63593e39c32230b706
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401923"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617860"
 ---
 # <a name="iscsym-iscsymf-iscsym-iswcsym-iscsymf-iswcsymf-iscsyml-iswcsyml-iscsymfl-iswcsymfl"></a>iscsym、iscsymf、__iscsym、__iswcsym、__iscsymf、__iswcsymf、_iscsym_l、_iswcsym_l、_iscsymf_l、_iswcsymf_l
 
@@ -128,21 +118,21 @@ int _iswcsymf_l(
 
 ## <a name="return-value"></a>戻り値
 
-両方 **_ _iscsym**と **_ _iswcsym**場合は、0 以外の値を返す*c*が文字、アンダー スコア、または数字。 両方 **_ _iscsymf**と **_ _iswcsymf**場合は、0 以外の値を返す*c*が文字またはアンダー スコア。 これらの各ルーチン 0 を返します*c*テスト条件を満たしていません。 これらの関数のバージョン、 **_l**使用する点を除いて、サフィックスは同じ、*ロケール*そのロケールに依存する動作に現在のロケールの代わりに渡されました。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+両方 **_ _iscsym**と **_ _iswcsym**場合は、0 以外の値を返す*c*は文字、アンダー スコア、または数字。 両方 **_ _iscsymf**と **_ _iswcsymf**場合は、0 以外の値を返す*c*が文字またはアンダー スコア。 これらのルーチンの各場合 0 を返します*c*テスト条件を満たしていません。 これらの関数のバージョン、 **_l**を使用する点を除いて、サフィックスが同一、*ロケール*ロケールに依存する動作で、現在のロケールの代わりに渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらのルーチンは、プリプロセッサ マクロ _CTYPE_DISABLE_MACROS が定義されていない場合、マクロとして定義されます。 これらのルーチンのマクロ バージョンを使用する際には、引数を複数回評価できます。 引数リスト内で副作用がある式を使用するときにはご注意ください。
 
-旧バージョンと互換性のため、 **iscsym**と**iscsymf**マクロとして定義される場合にのみ[ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md)が定義されていないかが定義されています。0;それ以外の場合、定義されていません。
+旧バージョンと互換性のため、 **iscsym**と**iscsymf**マクロとして定義されている場合にのみ[ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md)が定義されていないかが定義されています。0 としてそれ以外の場合、定義されていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**iscsym**、 **iscsymf**、 **_ _iscsym**、 **_ _iswcsym**、 **_ _iscsymf**、 **_ _iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l**、 **_iswcsymf_l**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
 
-**Iscsym**、 **iscsymf**、 **_ _iscsym**、 **_ _iswcsym**、 **_ _iscsymf**、 **_ _iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l**、および **_iswcsymf_l**ルーチンは、Microsoft 固有の仕様です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**Iscsym**、 **iscsymf**、 **_ _iscsym**、 **_ _iswcsym**、 **_ _iscsymf**、 **_ _iswcsymf**、 **_iscsym_l**、 **_iswcsym_l**、 **_iscsymf_l**、および **_iswcsymf_l**ルーチンは、Microsoft 固有の仕様。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

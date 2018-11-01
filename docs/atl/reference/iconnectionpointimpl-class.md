@@ -1,10 +1,6 @@
 ---
-title: IConnectionPointImpl クラス |Microsoft Docs
-ms.custom: ''
+title: IConnectionPointImpl クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IConnectionPointImpl
 - ATLCOM/ATL::IConnectionPointImpl
@@ -14,22 +10,16 @@ f1_keywords:
 - ATLCOM/ATL::IConnectionPointImpl::GetConnectionPointContainer
 - ATLCOM/ATL::IConnectionPointImpl::Unadvise
 - ATLCOM/ATL::IConnectionPointImpl::m_vec
-dev_langs:
-- C++
 helpviewer_keywords:
 - connection points [C++], implementing
 - IConnectionPointImpl class
 ms.assetid: 27992115-3b86-45dd-bc9e-54f32876c557
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4b8d3155dd63afa6deb84349c11b0b086d039c4c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b850d9cfa9b2e2ea2a8b5e7f10e29e5cf26bc63e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46091323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655235"
 ---
 # <a name="iconnectionpointimpl-class"></a>IConnectionPointImpl クラス
 
@@ -85,7 +75,7 @@ ATL でのコネクション ポイントの使用に関する詳細について
 
 `IConnectionPointImpl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcom.h
 

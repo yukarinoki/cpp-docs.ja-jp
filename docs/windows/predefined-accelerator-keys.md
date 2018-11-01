@@ -1,30 +1,19 @@
 ---
-title: 定義済みのアクセラレータ キー (C++) |Microsoft Docs
-ms.custom: ''
+title: 定義済みのアクセラレータ キー (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator keys
 - keyboard shortcuts
 - keyboard shortcuts [C++], predefined
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 70392d5654c5ed550e61bccf460d641bd4995349
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ee884123bfe440e2246b6313ba1e37c0b01b494
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430606"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541623"
 ---
 # <a name="predefined-accelerator-keys-c"></a>定義済みのアクセラレータ キー (C++)
 
@@ -86,7 +75,7 @@ Windows アプリケーション プロジェクトの一部として使用で�
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

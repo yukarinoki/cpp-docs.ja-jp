@@ -1,10 +1,6 @@
 ---
-title: _getdcwd、_wgetdcwd | Microsoft Docs
-ms.custom: ''
+title: _getdcwd、_wgetdcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdcwd
 - _wgetdcwd
@@ -28,8 +24,6 @@ f1_keywords:
 - tgetdcwd
 - _wgetdcwd
 - _tgetdcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - wgetdcwd function
 - working directory
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - current working directory
 - directories [C++], current working
 ms.assetid: 184152f5-c7b0-495b-918d-f9a6adc178bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 45c03ed2c057781c082988ac15e838249db0f28a
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 87cccec82ce648498c2bd3a7ac0ecbe436cb9baf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43689716"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677020"
 ---
 # <a name="getdcwd-wgetdcwd"></a>_getdcwd、_wgetdcwd
 
@@ -100,9 +90,9 @@ wchar_t *_wgetdcwd(
 
 この関数は、スレッドセーフではない **GetFullPathName**に依存しますが、スレッドセーフです。 マルチ スレッド アプリケーションは、この両方の関数を呼び出す場合、スレッド セーフを侵害するただし、および[GetFullPathNameA](/windows/desktop/api/fileapi/nf-fileapi-getfullpathnamea)します。
 
-この関数のバージョン、 **_nolock**サフィックスの動作と同じこの関数はスレッド セーフではなく、他のスレッドによる干渉から保護されない点が異なります。 詳細については、[_getdcwd_nolock、_wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md) を参照してください。
+この関数のバージョン、 **_nolock**サフィックスの動作と同じこの関数はスレッド セーフではなく、他のスレッドによる干渉から保護されない点が異なります。 詳細については、「 [_getdcwd_nolock, _wgetdcwd_nolock](getdcwd-nolock-wgetdcwd-nolock.md)」を参照してください。
 
-ときに **_DEBUG**と **_CRTDBG_MAP_ALLOC**への呼び出しで定義されている **_getdcwd**と **_wgetdcwd** への呼び出しによって置き換えられます **_getdcwd_dbg**と **_wgetdcwd_dbg**メモリ割り当てをデバッグできるようにします。 詳細については、[_getdcwd_dbg、_wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md) を参照してください。
+ときに **_DEBUG**と **_CRTDBG_MAP_ALLOC**への呼び出しで定義されている **_getdcwd**と **_wgetdcwd** への呼び出しによって置き換えられます **_getdcwd_dbg**と **_wgetdcwd_dbg**メモリ割り当てをデバッグできるようにします。 詳しくは[_getdcwd_dbg, _wgetdcwd_dbg](getdcwd-dbg-wgetdcwd-dbg.md)をご覧ください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -110,7 +100,7 @@ wchar_t *_wgetdcwd(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tgetdcwd**|**_getdcwd**|**_getdcwd**|**_wgetdcwd**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -121,7 +111,7 @@ wchar_t *_wgetdcwd(
 
 ## <a name="example"></a>例
 
-[_getdrive](getdrive.md) の例を参照してください。
+[_getdrive](getdrive.md)の例をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,30 +1,19 @@
 ---
-title: 描画ツール (アイコン用イメージ エディター) の使用 |Microsoft Docs
-ms.custom: ''
+title: 描画ツールの使用 (アイコン用イメージ エディター)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.drawing
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], selecting drawing tools
 - Image editor [C++], toolbar
 - drawing tools
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0a95d246170776bab20f45e503ba01ca506ce670
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: de6308ad396a9f9e355ecefdecca444c551d51f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46431540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677085"
 ---
 # <a name="using-a-drawing-tool-image-editor-for-icons"></a>描画ツールの使用 (アイコン用イメージ エディター)
 
@@ -70,7 +59,7 @@ ms.locfileid: "46431540"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

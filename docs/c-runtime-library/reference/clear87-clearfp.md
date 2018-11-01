@@ -1,10 +1,6 @@
 ---
-title: _clear87、_clearfp | Microsoft Docs
-ms.custom: ''
+title: _clear87、_clearfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _clearfp
 - _clear87
@@ -26,8 +22,6 @@ f1_keywords:
 - _clearfp
 - _clear87
 - clear87
-dev_langs:
-- C++
 helpviewer_keywords:
 - clearing floating point status word
 - clearfp function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _clearfp function
 - clear87 function
 ms.assetid: 72d24a70-7688-4793-ae09-c96d33fcca52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 195bd9f78ed9edfa47ec9ebbd2babbee676e5644
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4148f85d82a4210033686455c73046081832e3c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477260"
 ---
 # <a name="clear87-clearfp"></a>_clear87、_clearfp
 
@@ -59,19 +49,19 @@ unsigned int _clearfp( void );
 
 ## <a name="return-value"></a>戻り値
 
-返される値のビットが呼び出しの前に、浮動小数点状態を示します **_clear87**または **_clearfp**です。 によって返されるビットの定義の詳細について **_clear87**Float.h を参照してください。 多くの数値演算ライブラリ関数は、8087/80287 ステータス ワードを変更しますが、その結果は予測できません。 値を返す **_clear87**と **_status87**浮動小数点演算が少ないが浮動小数点ステータス ワードの既知の状態の間で実行される、信頼性が高くなります。
+返される値のビットは、呼び出しの前に、浮動小数点のステータスを示します。 **_clear87**または **_clearfp**します。 によって返されるビットの定義の **_clear87**Float.h を参照してください。 多くの数値演算ライブラリ関数は、8087/80287 ステータス ワードを変更しますが、その結果は予測できません。 値を返す **_clear87**と **_status87**より少ない浮動小数点演算が浮動小数点ステータス ワードの既知の状態の間で実行される、信頼性が高くなります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Clear87**関数は、浮動小数点ステータス ワードの例外フラグをクリア、ビジー ビットを 0 に設定し、ステータス ワードを返します。 浮動小数点ステータス ワードは、8087/80287 ステータス ワードと、8087/80287 例外ハンドラーによって検出された浮動小数点スタック オーバーフローやアンダーフローなど、ほかの条件との組み合わせです。
+**_Clear87**関数の浮動小数点ステータス ワードの例外フラグのクリア、ビジー ビットを 0 に設定およびステータス ワードを返します。 浮動小数点ステータス ワードは、8087/80287 ステータス ワードと、8087/80287 例外ハンドラーによって検出された浮動小数点スタック オーバーフローやアンダーフローなど、ほかの条件との組み合わせです。
 
-**_clearfp**のプラットフォームに依存しない、ポータブル バージョン、 **_clear87**ルーチンです。 同じである **_clear87** Intel (x86) プラットフォームでは、x64 および ARM プラットフォームでサポートされてもします。 浮動小数点コードが x64 および ARM への移植性であることを確認するには使用 **_clearfp**です。 X86 を対象とのみ場合プラットフォームでは、いずれかを使用する **_clear87**または **_clearfp**です。
+**_clearfp**のプラットフォームに依存しない、移植可能なバージョンは、 **_clear87**ルーチン。 これは **_clear87** Intel (x86) プラットフォームでは、x64 および ARM プラットフォームによってもサポートされています。 浮動小数点コードが x64 および ARM に移植可能であることを確認するには使用 **_clearfp**します。 X86 を対象としているだけの場合、プラットフォームを使用できます **_clear87**または **_clearfp**。
 
-コンパイルすると、これらの関数は非推奨[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)共通言語ランタイムには、既定の浮動小数点精度のみがサポートされるためです。
+コンパイルするときに、これらの関数は非推奨[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)のため、共通言語ランタイムは浮動小数点の既定の精度のみをサポートします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_clear87**|\<float.h>|
 |**_clearfp**|\<float.h>|

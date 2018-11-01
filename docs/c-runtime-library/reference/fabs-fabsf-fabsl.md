@@ -1,10 +1,6 @@
 ---
-title: fabs、fabsf、fabsl | Microsoft ドキュメント
-ms.custom: ''
+title: fabs、fabsf、fabsl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fabsf
 - fabs
@@ -29,8 +25,6 @@ f1_keywords:
 - "math\fabs"
 - "math\fabsf"
 - "math\fabsl"
-dev_langs:
-- C++
 helpviewer_keywords:
 - absolute values
 - fabsf function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - fabs function
 - fabsl function
 ms.assetid: 23bca210-f408-4f5e-b46b-0ccaaec31e36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e97d8eef45c53c119fef663420ae70b4b4762e3e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8df36c06fb3ca9af9be4cf704998946b3eaf9a6c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395726"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623562"
 ---
 # <a name="fabs-fabsf-fabsl"></a>fabs、fabsf、fabsl
 
@@ -80,17 +70,17 @@ long double fabsl(
 
 ## <a name="return-value"></a>戻り値
 
-**Fabs**関数は引数の絶対値を返す*x*です。 エラーの戻り値はありません。
+**Fabs**関数は引数の絶対値を返す*x*します。 エラーの戻り値はありません。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
 |± QNAN、IND|none|_DOMAIN|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**fabs**を含める場合、 \<cmath > ヘッダー。 C プログラムでは、 **fabs**常に受け取りを返す、**二重**です。
+C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**fabs**を含める場合、 \<cmath > ヘッダー。 C プログラムで**fabs**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|-----------------------|---------------------------|

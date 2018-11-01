@@ -1,27 +1,17 @@
 ---
-title: is_trivially_move_constructible クラス | Microsoft Docs
-ms.custom: ''
+title: is_trivially_move_constructible クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_trivially_move_constructible
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_trivially_move_constructible
 ms.assetid: 740bdec7-65e5-47b3-b94f-a2479ceac3ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ad5631fc5d689ccb6632ac230aebdaf40f18f80
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a1aef356716fac903b4e44a358602c709572e8ff
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106484"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544353"
 ---
 # <a name="istriviallymoveconstructible-class"></a>is_trivially_move_constructible クラス
 
@@ -61,7 +51,7 @@ struct is_trivially_move_constructible;
 
 クラスの型配列のすべての非静的データ メンバーのクラスに自明な移動コンストラクターがある
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

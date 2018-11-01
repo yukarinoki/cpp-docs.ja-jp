@@ -1,11 +1,6 @@
 ---
-title: timespec_get、_timespec32_get、_timespec64_get1 | Microsoft Docs
-ms.custom: ''
+title: timespec_get、_timespec32_get、_timespec64_get1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - timespec_get
 - _timespec32_get
@@ -33,23 +28,17 @@ f1_keywords:
 - timespec
 - _timespec32
 - _timespec64
-dev_langs:
-- C++
 helpviewer_keywords:
 - timespec_get function
 - _timespec32_get function
 - _timespec64_get function
 ms.assetid: ed757258-b4f2-4c1d-a91b-22ea6ffce4ab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f00a59f8b5813398b47562b106f3ec0eff3363b1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c1d0cbaf194060d816e31d397a9319ef47f75371
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412834"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50638452"
 ---
 # <a name="timespecget-timespec32get-timespec64get"></a>timespec_get、_timespec32_get、_timespec64_get
 
@@ -83,21 +72,21 @@ int _timespec64_get(
 
 ## <a name="return-value"></a>戻り値
 
-値*基本*かどうかは成功すると、それ以外の場合、ゼロを返します。
+値*基本*かどうか成功すると、それ以外の場合、0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Timespec_get**関数が指す構造体で現在の時刻を設定、 *time_spec*引数。 この構造体のすべてのバージョンがある 2 つのメンバー、 **tv_sec**と**tv_nsec**です。 **Tv_sec**値が整数の秒に設定し、 **tv_nsec** によって指定されるエポックの開始以降、システムクロックの解像度に丸められますナノ秒の整数に、*基本*です。
+**Timespec_get**関数によって示される構造体で、現在の時刻の設定、 *time_spec*引数。 この構造体のすべてのバージョンが 2 つのメンバーを持つ**tv_sec**と**tv_nsec**します。 **Tv_sec**秒の整数に値を設定し、 **tv_nsec** によって指定されるエポックの開始以降、システム時計の解像度に丸められますナノ秒の整数に、*基本*します。
 
 **Microsoft 固有の仕様**
 
-これらの関数のサポートのみ**TIME_UTC**として、*基本*値。 これにより設定、 *time_spec*秒およびナノ秒エポックの開始、午前 0 時、1970 年 1 月 1 日、世界協定時刻 (UTC) からの数の値。 **構造体** **_timespec32**、 **tv_sec**は、 **_time32_t**値。 **構造体** **_timespec64**、 **tv_sec**は、 **_ _time64_t**値。 **構造体** **timespec**、 **tv_sec**は、 **time_t**型で、32 ビットまたは 64 ビットかどうかによって長さにプリプロセッサマクロ _USE_32BIT_TIME_T が定義されています。 **Timespec_get**関数を呼び出すインライン関数では **_timespec32_get**場合 _USE_32BIT_TIME_T が定義されている場合です。 それ以外の場合は呼び出します **_timespec64_get**です。
+これらの関数のサポートのみ**TIME_UTC**として、*基本*値。 これにより設定、 *time_spec*秒およびナノ秒エポックの開始、世界協定時刻 (UTC) の 1970 年 1 月 1 日午前 0 時からの数の値。 **構造体** **_timespec32**、 **tv_sec**は、 **_ _time32_t**値。 **構造体** **_timespec64**、 **tv_sec**は、 **_ _time64_t**値。 **構造体** **timespec**、 **tv_sec**は、 **time_t**型で、32 ビットまたは 64 ビット長かどうかに応じて、プリプロセッサマクロ _USE_32BIT_TIME_T が定義されます。 **Timespec_get**関数がインライン関数を呼び出す **_timespec32_get** _USE_32BIT_TIME_T が定義されている場合は、それ以外の場合、呼び出し **_timespec64_get**します。
 
 **END Microsoft 固有の仕様**
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**timespec_get**、 **_timespec32_get**、 **_timespec64_get**|C: \<time.h>、C++: \<ctime> または \<time.h>|
 

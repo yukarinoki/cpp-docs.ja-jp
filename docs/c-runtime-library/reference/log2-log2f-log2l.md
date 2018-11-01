@@ -1,11 +1,6 @@
 ---
-title: log2、log2f、log2l | Microsoft Docs
-ms.custom: ''
+title: log2、log2f、log2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log2
 - log2l
@@ -23,19 +18,13 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-math-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: 94d11b38-70b7-4d3a-94ac-523153c92b2e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 16fb56b1a3aef56e201d469974c5de434a08aa41
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5f1db48abdc7237dc46a0ea8a3ea5647a0fce62f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399528"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579310"
 ---
 # <a name="log2-log2f-log2l"></a>log2、log2f、log2l
 
@@ -73,7 +62,7 @@ long double log2l(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、戻り値が返さ log2 *x*です。
+成功した場合、戻り値が返さ log2 *x*します。
 
 それ以外の場合は、次の値のいずれかを返します。
 
@@ -89,11 +78,11 @@ long double log2l(
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数はの最上位 1 ビットの 0 から始まるインデックスを返します本質的に x が整数である場合は、 *x*です。
+この関数は基本的の最上位 1 ビットの 0 から始まるインデックスを返します x が整数である場合は、 *x*します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

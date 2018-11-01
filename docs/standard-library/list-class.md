@@ -1,10 +1,6 @@
 ---
-title: list クラス | Microsoft Docs
-ms.custom: ''
+title: list クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - list/std::list
 - list/std::list::allocator_type
@@ -53,8 +49,6 @@ f1_keywords:
 - list/std::list::splice
 - list/std::list::swap
 - list/std::list::unique
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::list [C++]
 - std::list [C++], allocator_type
@@ -104,16 +98,12 @@ helpviewer_keywords:
 - std::list [C++], swap
 - std::list [C++], unique
 ms.assetid: d3707f4a-10fd-444f-b856-f9ca2077c1cd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86e1c74d3aa53dd64a48676e4fe9bdbc2065b9c5
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 0f874cc6b9f00f72c4c4b6d15e4503b8b49fbf8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107489"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481914"
 ---
 # <a name="list-class"></a>list クラス
 
@@ -148,9 +138,9 @@ C++ 標準ライブラリ標準ヘッダー \<list> を定義するには、[コ
 
 |コンストラクター|説明|
 |-|-|
-|[list](#list)|特定のサイズのリスト、特定の値の要素を持つリスト、特定の `allocator` を持つリストを構築します。または他のリストのコピーとしてリストを構築します。|
+|[リスト](#list)|特定のサイズのリスト、特定の値の要素を持つリスト、特定の `allocator` を持つリストを構築します。または他のリストのコピーとしてリストを構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -212,7 +202,7 @@ C++ 標準ライブラリ標準ヘッダー \<list> を定義するには、[コ
 |-|-|
 |[list::operator=](#op_eq)|別のリストのコピーでリストの要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<list>
 
@@ -2370,7 +2360,7 @@ void splice(const_iterator Where, list<Type, Allocator>&& Source, const_iterator
 *Where*<br/>
 挿入されるターゲット リスト内の位置。
 
-*Source*<br/>
+*ソース*<br/>
 ターゲット リストに挿入されるソース リスト。
 
 *Iter*<br/>

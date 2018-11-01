@@ -1,10 +1,6 @@
 ---
-title: CMFCTabCtrl クラス |Microsoft Docs
-ms.custom: ''
+title: CMFCTabCtrl Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCTabCtrl
 - AFXTABCTRL/CMFCTabCtrl
@@ -57,8 +53,6 @@ f1_keywords:
 - AFXTABCTRL/CMFCTabCtrl::StopResize
 - AFXTABCTRL/CMFCTabCtrl::SynchronizeScrollBar
 - AFXTABCTRL/CMFCTabCtrl::m_bEnableActivate
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCTabCtrl [MFC], ActivateMDITab
 - CMFCTabCtrl [MFC], AllowDestroyEmptyTabbedPane
@@ -110,16 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36203486fbc7337ffc3d93278554b830bbc792ce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505122"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -147,7 +137,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|現在のタブ コントロールの指定したタブを表示し、そのタブにフォーカスを設定します。|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
 |[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|フレームワークがタブ コントロールの変更のユーザー インターフェイス要素のときに、すべてのタブ コントロール ウィンドウのクライアント領域のサイズを変更するかどうかを指定します。|
-|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|指定したタブ領域のサイズを縮小します。 (`CMFCBaseTabCtrl::CalcRectEdit` をオーバーライドします)。|
+|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|指定したタブ領域のサイズを縮小します。 ( `CMFCBaseTabCtrl::CalcRectEdit`をオーバーライドします)。|
 |[CMFCTabCtrl::Create](#create)|タブ コントロールを作成しにアタッチします、`CMFCTabCtrl`オブジェクト。|
 |`CMFCTabCtrl::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
 |[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|表示と [閉じる] ボタンを非表示 ( **X**) アクティブなタブにします。|
@@ -258,7 +248,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxtabctrl.h
 

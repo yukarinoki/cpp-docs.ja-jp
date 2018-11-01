@@ -1,10 +1,6 @@
 ---
-title: _vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l | Microsoft Docs
-ms.custom: ''
+title: _vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vsprintf_p
 - _vswprintf_p
@@ -29,8 +25,6 @@ f1_keywords:
 - vswprintf_p
 - _vsprintf_p
 - vstprintf_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - vstprintf_p_l function
 - _vsprintf_p_l function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _vsprintf_p function
 - _vstprintf_p_l function
 ms.assetid: 00821c0d-9fee-4d8a-836c-0669cfb11317
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab2c33301f5746065e46dcba9f166679a330c98f
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 15f368da84eb9cbf8c394a0e9b5eeec2611c3f7f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450880"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628372"
 ---
 # <a name="vsprintfp-vsprintfpl-vswprintfp-vswprintfpl"></a>_vsprintf_p、_vsprintf_p_l、_vswprintf_p、_vswprintf_p_l
 
@@ -98,7 +88,7 @@ int _vswprintf_p_l(
 出力の格納位置。
 
 *sizeInBytes*<br/>
-サイズ*バッファー*文字です。
+サイズ*バッファー*文字数。
 
 *count*<br/>
 この関数の Unicode バージョンで格納する最大文字数。
@@ -114,17 +104,17 @@ int _vswprintf_p_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_vsprintf_p**と **_vswprintf_p**を含まない終端の null 文字または負の値の出力エラーが発生した場合、書き込まれる文字数を返します。
+**_vsprintf_p**と **_vswprintf_p**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターを使用し、書式を設定し、が指すメモリに指定されたデータを書き込みます*バッファー*です。
+これらの各関数、引数リストへのポインターを受け取ると、書式を設定およびが指すメモリに指定されたデータを書き込みます*バッファー*します。
 
-これらの関数は異なる、 **vsprintf_s**と**vswprintf_s**位置指定パラメーターがサポートされるでのみです。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+これらの関数は異なる、 **vsprintf_s**と**vswprintf_s**位置指定パラメーターをサポートします。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
-場合、*バッファー*または*形式*パラメーターは**NULL**カウントが 0 の場合のポインター、または書式指定文字列に無効な書式設定が含まれているかどうかの文字で、無効なパラメーターハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合、*バッファー*または*形式*パラメーターは**NULL**カウントが 0 の場合は、ポインターまたは書式指定文字列に無効な書式設定が含まれているかどうかは文字、無効なパラメーターハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -133,9 +123,9 @@ int _vswprintf_p_l(
 |**_vstprintf_p**|**_vsprintf_p**|**_vsprintf_p**|**_vswprintf_p**|
 |**_vstprintf_p_l**|**_vsprintf_p_l**|**_vsprintf_p_l**|**_vswprintf_p_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**_vsprintf_p**、 **_vsprintf_p_l**|\<stdio.h> および \<stdarg.h>|\<varargs.h>*|
 |**_vswprintf_p**、 **_vswprintf_p_l**|\<stdio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|

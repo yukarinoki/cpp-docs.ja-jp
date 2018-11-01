@@ -1,37 +1,27 @@
 ---
-title: コンパイラ エラー C3768 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラ エラー C3768
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3768
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3768
 ms.assetid: 091f0d53-1dff-43fd-813d-5c43c85b6ab0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6b7a2d1617591609f75b2b07f1a94983ee22f4
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: e9c385fd178dc967e72f5e0ca7fab27b28ad962f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704959"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676737"
 ---
 # <a name="compiler-error-c3768"></a>コンパイラ エラー C3768
 
-> 純粋マネージ コードで仮想 vararg 関数のアドレスを取得することはできません。
+> 純粋なマネージ コードで仮想 vararg 関数のアドレスを取得できません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-コンパイルするときに **/clr: 純粋な**、仮想のアドレスを取得することはできません`vararg`関数。
+コンパイルするときに **/clr: 純粋な**、仮想のアドレスを取得できません`vararg`関数。
 
 ## <a name="example"></a>例
 

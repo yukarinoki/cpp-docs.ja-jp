@@ -1,10 +1,6 @@
 ---
-title: strncmp、wcsncmp、_mbsncmp、_mbsncmp_l | Microsoft Docs
-ms.custom: ''
+title: strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strncmp
 - _mbsncmp
@@ -33,8 +29,6 @@ f1_keywords:
 - strncmp
 - _mbsncmp
 - wcsncmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcsnccmp function
 - ftcsncmp function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - characters [C++], comparing
 - _ftcsnccmp function
 ms.assetid: 2fdbf4e6-77da-4b59-9086-488f6066b8af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a64d7248151287f4f2af38e666db62f9a15d833f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b8b5472289bacc940bb0cbea7876f246243660bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417354"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523765"
 ---
 # <a name="strncmp-wcsncmp-mbsncmp-mbsncmpl"></a>strncmp、wcsncmp、_mbsncmp、_mbsncmp_l
 
@@ -123,17 +113,17 @@ int _mbsncmp_l(
 |0|*string1*部分文字列と同じ*string2*部分文字列|
 |> 0|*string1*部分文字列より大きい*string2*部分文字列|
 
-パラメーター検証エラーが発生した、 **_mbsncmp**と **_mbsncmp_l**返す**すると**で定義されている\<string.h > と\<mbstring.h >。
+パラメーター検証エラー、 **_mbsncmp**と **_mbsncmp_l**返す**すると**、定義されている\<string.h > と\<mbstring.h >。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strncmp**関数は、最大で 1 つ目の序数に基づく比較を実行*カウント*内の文字*string1*と*string2*と部分文字列の関係を示す値を返します。 **strncmp**のバージョンが大文字小文字を区別 **_strnicmp**です。 **wcsncmp**と **_mbsncmp**のバージョンが大文字小文字を区別 **_wcsnicmp**と **_mbsnicmp**です。
+**Strncmp**関数は、最大で 1 つ目の序数に基づく比較を実行します*カウント*文字*string1*と*string2*と。これらの部分文字列間のリレーションシップを示す値を返します。 **strncmp**の大文字バージョン **_strnicmp**します。 **wcsncmp**と **_mbsncmp**の大文字バージョン **_wcsnicmp**と **_mbsnicmp**します。
 
-**wcsncmp**と **_mbsncmp**のワイド文字とマルチバイト文字バージョンは、 **strncmp**です。 引数**wcsncmp**ワイド文字は、文字列以外の **_mbsncmp**マルチバイト文字列です。 **_mbsncmp**マルチバイト コード ページに基づいてマルチバイト文字シーケンスを認識し、返します**すると**エラーが発生します。
+**wcsncmp**と **_mbsncmp**のワイド文字とマルチバイト文字バージョン**strncmp**します。 引数**wcsncmp**はワイド文字列 **_mbsncmp**はマルチバイト文字の文字列。 **_mbsncmp**マルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、返します**すると**エラーが発生します。
 
-また、 **_mbsncmp**と **_mbsncmp_l**パラメーターを検証します。 場合*string1*または*string2* null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbsncmp**と **_mbsncmp_l**返す**すると**設定と**errno**に**EINVAL**です。 **strncmp**と**wcsncmp**はそのパラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+また、 **_mbsncmp**と **_mbsncmp_l**パラメーターを検証します。 場合*string1*または*string2* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbsncmp**と **_mbsncmp_l**返す**すると**設定と**errno**に**EINVAL**します。 **strncmp**と**wcsncmp**パラメーターを検証できません。 それ以外では、これらの関数の動作は同じです。
 
-比較の動作の **_mbsncmp**と **_mbsncmp_l**の設定は、影響を受ける、 **LC_CTYPE**ロケールのカテゴリの設定。 これは、マルチバイト文字の先頭および末尾のバイトの検出を制御します。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_Mbsncmp**関数は、このロケールに依存する動作に現在のロケールを使用します。 **_Mbsncmp_l**関数は、使用する点を除いて同一です、*ロケール*パラメーター代わりにします。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。 これらの関数の動作と同じロケールが 1 バイトのロケールの場合は、 **strncmp**です。
+比較の動作の **_mbsncmp**と **_mbsncmp_l**の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定。 これは、マルチバイト文字の先頭および末尾のバイトの検出を制御します。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。 **_Mbsncmp**関数は、このロケールに依存する動作に現在のロケールを使用します。 **_Mbsncmp_l**関数を使用する点を除いて同一です、*ロケール*パラメーター代わりにします。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。 これらの関数の動作と同じですが、ロケールが 1 バイトのロケールの場合は、 **strncmp**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -144,9 +134,9 @@ int _mbsncmp_l(
 |**_tccmp**|マクロまたはインライン関数にマップされます|**_mbsncmp**|マクロまたはインライン関数にマップされます|
 |**該当なし**|**該当なし**|**_mbsncmp_l**|**該当なし**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strncmp**|\<string.h>|
 |**wcsncmp**|\<string.h> または \<wchar.h>|

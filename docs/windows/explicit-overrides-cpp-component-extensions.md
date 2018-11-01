@@ -1,26 +1,16 @@
 ---
-title: 明示的なオーバーライド (C +/cli および C++/cli CX) |Microsoft Docs
-ms.custom: ''
+title: 明示的なオーバーライド (C +/cli および C++/cli CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - overriding, override [C++]
 ms.assetid: 4ec3eaf5-163b-4df8-8f16-7a2ec04c3d0f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 689c8420c2526f94f88c8b2ba8433c2310281874
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 54f3d50b3a47890e6f3dd68c41832fa3d1e13e59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49328039"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459827"
 ---
 # <a name="explicit-overrides--ccli-and-ccx"></a>明示的なオーバーライド (C +/cli および C++/cli CX)
 
@@ -57,7 +47,7 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ## <a name="windows-runtime"></a>Windows ランタイム
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/ZW`
 
@@ -67,7 +57,7 @@ overriding-function-declarator = function { overriding-function-definition }
 
 ネイティブ コードでの情報について明示的なオーバーライドまたはコードをコンパイル`/clr:oldSyntax`を参照してください[明示的なオーバーライド](../cpp/explicit-overrides-cpp.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: `/clr`
 

@@ -1,26 +1,16 @@
 ---
-title: '値のカテゴリ: 左辺値と右辺値 (Visual C) |Microsoft Docs'
-ms.custom: ''
+title: '値のカテゴリ: 左辺値と右辺値 (Visual C)'
 ms.date: 04/06/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4f19a06ac0583dd4cb911818787408aeca30b2ec
-ms.sourcegitcommit: 2f84d56b6ab19ba745b32ecd96b193c73cd62adf
+ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48866216"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546355"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>左辺値と右辺値 (Visual C)
 
@@ -30,7 +20,7 @@ ms.locfileid: "48866216"
 
 - A *glvalue*式を指定するオブジェクト、ビット フィールド、または関数の id を決定します。
 - A *prvalue*をオブジェクトまたはビット フィールドを初期化しますまたは、演算子のオペランドの値を計算コンテキストで指定された、その次のように表示されます。 式を指定します。
-- *Xvalue*オブジェクトまたはビット フィールド (通常はその有効期間の末尾付近である) ために再利用できるリソースを示す glvalue です。 [例: 右辺値参照 (8.3.2) を含む式は、特定の種類は、戻り値の型が右辺値参照関数の呼び出しまたは参照型 rvalue へのキャストなど、xvalues を生成します。 ]
+- *Xvalue*オブジェクトまたはビット フィールド (通常はその有効期間の末尾付近である) ために再利用できるリソースを示す glvalue です。 [例: 右辺値参照 (8.3.2) を含む式は、特定の種類は、戻り値の型が右辺値参照関数の呼び出しまたは参照型 rvalue へのキャストなど、xvalues を生成します。 ]
 - *左辺値*xvalue にない glvalue が。
 - *Rvalue* prvalue または xvalue にします。
 

@@ -1,28 +1,18 @@
 ---
-title: 'TN014: カスタム コントロール |Microsoft Docs'
-ms.custom: ''
+title: 'テクニカル ノート 14: カスタム コントロール'
 ms.date: 06/28/2018
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
 f1_keywords:
 - vc.controls
-dev_langs:
-- C++
 helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bacba9ea15598e4c722682a081b64b80db34e00b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e773d270c302ef71a6f6527061ba13c870fa4500
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430567"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557821"
 ---
 # <a name="tn014-custom-controls"></a>テクニカル ノート 14: カスタム コントロール
 

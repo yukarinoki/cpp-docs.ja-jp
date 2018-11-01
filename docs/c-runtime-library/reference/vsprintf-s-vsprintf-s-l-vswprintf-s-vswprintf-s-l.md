@@ -1,10 +1,6 @@
 ---
-title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l | Microsoft Docs
-ms.custom: ''
+title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -26,8 +22,6 @@ f1_keywords:
 - vswprintf_s
 - vsprintf_s
 - _vstprintf_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _vstprintf_s_l function
 - vsprintf_s_l function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f1ee1235b5fe6c3904c6dc201e7c8a183d95647
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8ef1d99caddfcff78bc41c24f7c132c307958db2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616493"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 
@@ -105,7 +95,7 @@ int vswprintf_s(
 出力の格納位置。
 
 *numberOfElements*<br/>
-サイズ*バッファー*文字です。
+サイズ*バッファー*文字数。
 
 *format*<br/>
 書式の指定。
@@ -118,15 +108,15 @@ int vswprintf_s(
 
 ## <a name="return-value"></a>戻り値
 
-**vsprintf_s**と**vswprintf_s**を含まない終端の null 文字または負の値の出力エラーが発生した場合、書き込まれる文字数を返します。 場合*バッファー*または*形式*カウントが 0 の場合は null ポインターの場合、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返します設定と**errno**に**EINVAL**です。
+**vsprintf_s**と**vswprintf_s**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。 場合*バッファー*または*形式*カウントが 0 の場合は null ポインターの場合、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各関数は、引数リストへのポインターを使用し、書式を設定し、が指すメモリに指定されたデータを書き込みます*バッファー*です。
+これらの各関数、引数リストへのポインターを受け取ると、書式を設定およびが指すメモリに指定されたデータを書き込みます*バッファー*します。
 
-**vswprintf_s**の ISO C 標準に準拠している**vswprintf**、2 番目のパラメーターがありますが、*カウント*、型の**size_t**です。
+**vswprintf_s**の ISO C 標準に準拠している**vswprintf**、2 番目のパラメーターがありますが、*カウント*、型の**size_t**します。
 
 これらの関数は、セキュリティ保護されたバージョンが位置指定パラメーターをサポートする点を除いて、セキュリティが万全でないバージョンと同じです。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
@@ -141,9 +131,9 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |**_vstprintf_s**|**vsprintf_s**|**vsprintf_s**|**vswprintf_s**|
 |**_vstprintf_s_l**|**_vsprintf_s_l**|**_vsprintf_s_l**|**_vswprintf_s_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|
 |**vsprintf_s**、 **_vsprintf_s_l**|\<stdio.h> および \<stdarg.h>|\<varargs.h>*|
 |**vswprintf_s**、 **_vswprintf_s_l**|\<stdio.h> または \<wchar.h>、および \<stdarg.h>|\<varargs.h>*|

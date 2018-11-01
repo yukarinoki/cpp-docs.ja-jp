@@ -1,30 +1,19 @@
 ---
-title: リソース シンボル ダイアログ ボックス (C++) |Microsoft Docs
-ms.custom: ''
+title: リソース シンボル ダイアログ ボックス (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.resourcesymbols
-dev_langs:
-- C++
 helpviewer_keywords:
 - New Symbol dialog box [C++]
 - Resource Symbols dialog box [C++]
 - Change Symbol dialog box [C++]
 ms.assetid: 9706cde3-1f48-4fcd-bedb-2b03b455e3c1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 09d34d0247f7fd039bca3ea9b643802856734926
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 156b531bfcedca70c930d77773d3a308735735f3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719304"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50483513"
 ---
 # <a name="resource-symbols-dialog-box-c"></a>リソース シンボル ダイアログ ボックス (C++)
 
@@ -62,7 +51,7 @@ ms.locfileid: "45719304"
 
    対応するリソース エディターで、シンボルが含まれたリソースを開きます。 詳細については、次を参照してください。[特定のシンボル用のリソース エディターを開く](../windows/opening-the-resource-editor-for-a-given-symbol.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

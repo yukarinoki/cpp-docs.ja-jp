@@ -1,27 +1,19 @@
 ---
-title: Platform::operationcanceledexception クラス |Microsoft Docs
-ms.custom: ''
+title: Platform::OperationCanceledException クラス
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::OperationCanceledException::OperationCanceledException
 - VCCORLIB/Platform::OperationCanceledException
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::OperationCanceledException
 ms.assetid: 5351bc20-5408-423a-8169-f09acc8a3fbb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d2f4cea4199615ccaecf9d3de915c4666a20d1a9
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 11a5b6b9886fdf59512446e8f7c3deb5045b7ce3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108561"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506562"
 ---
 # <a name="platformoperationcanceledexception-class"></a>Platform::OperationCanceledException クラス
 
@@ -37,7 +29,7 @@ public ref class OperationCanceledException : COMException,    IException,    IP
 
 詳細については、 [COMException](../cppcx/platform-comexception-class.md) クラスを参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **クライアントがサポートされている最小:** Windows 8
 

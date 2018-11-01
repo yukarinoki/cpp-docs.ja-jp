@@ -1,10 +1,6 @@
 ---
-title: _execvp、_wexecvp | Microsoft ドキュメント
-ms.custom: ''
+title: _execvp、_wexecvp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execvp
 - _wexecvp
@@ -25,24 +21,18 @@ f1_keywords:
 - _execvp
 - wexecvp
 - _wexecvp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execvp function
 - _wexecvp function
 - wexecvp function
 - execvp function
 ms.assetid: a4db15df-b204-4987-be7c-de84c3414380
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47154bd999b421c2170118236a899dcc4e2860
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 876ace62ac46b80d42f3ed0a3549757839e0b47a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402219"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505314"
 ---
 # <a name="execvp-wexecvp"></a>_execvp、_wexecvp
 
@@ -74,7 +64,7 @@ intptr_t _wexecvp(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 がいる場合、エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
 
 |**errno**値|説明|
 |-------------------|-----------------|
@@ -88,13 +78,13 @@ intptr_t _wexecvp(
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらの関数の各読み込んでコマンドライン引数へポインターの配列を渡すを使用して、新しいプロセスを実行し、**パス**環境変数を実行するファイルを検索します。
 
-**_Execvp**関数は、パラメーターを検証します。 場合、 *cmdname* null ポインター、または*argv*が null ポインターの場合、空の配列へのポインターまたは配列には、最初の引数として空の文字列が含まれています、これらの関数は無効なパラメーター ハンドラーを呼び出します」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 プロセスは起動されません。
+**_Execvp**関数は、パラメーターを検証します。 場合、 *cmdname* null ポインター、または*argv*が null ポインターの場合、空の配列へのポインター、またはこれらの関数が無効なパラメーター ハンドラーを呼び出しますが、配列に最初の引数として空の文字列が含まれている場合」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し、-1 を返します。 プロセスは起動されません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|

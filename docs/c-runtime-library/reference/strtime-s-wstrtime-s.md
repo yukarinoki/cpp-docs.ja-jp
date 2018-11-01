@@ -1,10 +1,6 @@
 ---
-title: _strtime_s、_wstrtime_s | Microsoft Docs
-ms.custom: ''
+title: _strtime_s、_wstrtime_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime_s
 - _strtime_s
@@ -26,8 +22,6 @@ f1_keywords:
 - strtime_s
 - wstrtime_s
 - _strtime_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wstrtime_s function
 - copying time to buffers
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - time, copying
 - _strtime_s function
 ms.assetid: 42acf013-c334-485d-b610-84c0af8a46ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e7f9814bb783c763eef6d94e9d1372316a2393a6
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 579c4a99b52c66bd14cea947eaa1f301cc1127e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451248"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642365"
 ---
 # <a name="strtimes-wstrtimes"></a>_strtime_s、_wstrtime_s
 
@@ -97,15 +87,15 @@ errno_t _wstrtime_s(
 
 ## <a name="security-issues"></a>セキュリティ上の問題
 
-無効なを渡して非**NULL**値の場合、バッファーが、アクセス違反になるが、 *numberOfElements*パラメーターは、9 よりも大きいです。
+無効なを渡す以外**NULL**値の場合、バッファーが、アクセス違反になるが、 *numberOfElements*パラメーターが 9 よりも大きい。
 
-値を渡す*numberOfElements*バッファー オーバーランが発生、バッファーの実際のサイズよりも大きいです。
+値を渡す*numberOfElements*バッファー オーバーランが発生、バッファーの実際のサイズより大きい。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数のより安全なバージョンの提供[_strtime](strtime-wstrtime.md)と[_wstrtime](strtime-wstrtime.md)です。 **_Strtime_s**関数が指すバッファーに現在の現地時刻をコピー*で*です。 時間として書式設定**hh:mm:ss**場所**hh** 24 時間制で時間を表す 2 桁の数字は、 **mm**過去の時間、および分を表す2桁の数字は、**ss**は秒を表す 2 桁の数字です。 たとえば、文字列**18時 23分: 44** 23 分 44 秒午後 6 時を表します バッファーは少なくとも 9 バイト長である必要があります。実際のサイズは、2 番目のパラメーターによって指定されます。
+これらの関数のセキュリティを強化バージョンの提供[_strtime](strtime-wstrtime.md)と[_wstrtime](strtime-wstrtime.md)します。 **_Strtime_s**関数が指すバッファーに現在の現地時刻をコピー*で*します。 時間として書式設定**hh:mm:ss**場所**hh** 24 時間表記で時間を表す 2 桁の数字は、 **mm** 、時間、分を表す2桁の数字は、**ss**秒を表す 2 桁の数字です。 たとえば、文字列**18時 23分: 44** 23 分 44 秒午後 6 時を表します バッファーは少なくとも 9 バイト長である必要があります。実際のサイズは、2 番目のパラメーターによって指定されます。
 
-**_wstrtime**のワイド文字バージョンは、 **_strtime**; の引数と戻り値 **_wstrtime**ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wstrtime**のワイド文字バージョンは、 **_strtime**; の引数と戻り値 **_wstrtime**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -115,9 +105,9 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime_s**|**_strtime_s**|**_strtime_s**|**_wstrtime_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strtime_s**|\<time.h>|
 |**_wstrtime_s**|\<time.h> または \<wchar.h>|

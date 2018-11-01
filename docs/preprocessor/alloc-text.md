@@ -1,29 +1,19 @@
 ---
-title: alloc_text |Microsoft Docs
-ms.custom: ''
+title: alloc_text
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - vc-pragma.alloc_text
 - alloc_text_CPP
-dev_langs:
-- C++
 helpviewer_keywords:
 - alloc_text pragma
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d131cee2194ba139fdb99d9c0fa7ae2c922fe84d
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 43f516830d0aa0fb8de6195c5958beadbeba9df6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50073815"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450376"
 ---
 # <a name="alloctext"></a>alloc_text
 指定した関数定義が存在するコード セクションに名前を付けます。 このプラグマは、名前付き関数の関数宣言子と関数定義との間で指定する必要があります。

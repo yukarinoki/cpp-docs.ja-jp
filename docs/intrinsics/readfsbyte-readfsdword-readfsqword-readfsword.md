@@ -1,17 +1,11 @@
 ---
-title: _ _readfsbyte、_ _readfsdword、_ _readfsqword、_ _readfsword |Microsoft Docs
-ms.custom: ''
+title: __readfsbyte、__readfsdword、__readfsqword、__readfsword
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __readfsword
 - __readfsdword
 - __readfsbyte
 - __readfsqword
-dev_langs:
-- C++
 helpviewer_keywords:
 - __readfsword intrinsic
 - readfsword intrinsic
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 102eecb30c1ed857fdbb9a7294d95db9961a1765
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bbf963d3a7b927d46485465a61fa08328b8efb52
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392048"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507998"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
 
@@ -42,17 +32,17 @@ FS セグメントの先頭の相対オフセットで指定された場所か�
 ## <a name="syntax"></a>構文
 
 ```
-unsigned char __readfsbyte( 
-   unsigned long Offset 
+unsigned char __readfsbyte( 
+   unsigned long Offset 
 );
-unsigned short __readfsword( 
-   unsigned long Offset 
+unsigned short __readfsword( 
+   unsigned long Offset 
 );
-unsigned long __readfsdword( 
+unsigned long __readfsdword( 
    unsigned long Offset
 );
-unsigned __int64 __readfsqword( 
-   unsigned long Offset 
+unsigned __int64 __readfsqword( 
+   unsigned long Offset 
 );
 ```
 
@@ -65,7 +55,7 @@ unsigned __int64 __readfsqword(
 
 メモリの内容をバイト、ワード、ダブルワードを quadword (として呼び出される関数の名前で示されます) の場所に`FS:[Offset]`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

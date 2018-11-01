@@ -1,10 +1,6 @@
 ---
-title: isascii、__isascii、iswascii | Microsoft Docs
-ms.custom: ''
+title: isascii、__isascii、iswascii
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswascii
 - __isascii
@@ -30,8 +26,6 @@ f1_keywords:
 - ctype/isascii
 - ctype/__isascii
 - corecrt_wctype/iswascii
-dev_langs:
-- C++
 helpviewer_keywords:
 - __isascii function
 - _isascii function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - istascii function
 - iswascii function
 ms.assetid: ba4325ad-7cb3-4fb9-b096-58906d67971a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bffc46bae24689558999d188f96e5b9f8d21c54e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d150e7bb335dc77ed86f445128eebf97b8be5ac3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402274"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50433658"
 ---
 # <a name="isascii-isascii-iswascii"></a>isascii、__isascii、iswascii
 
@@ -75,13 +65,13 @@ int iswascii(
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンを返す場合は 0 以外の各**c** ASCII 文字の特定の表現です。 **_ _isascii**場合は 0 以外の値を返します**c** ASCII 文字 (0x00 の範囲内の 0x7F)。 **iswascii**場合は 0 以外の値を返します**c** ASCII 文字のワイド文字表現です。 これらの各ルーチン 0 を返します**c**テスト条件を満たしていません。
+これらのルーチンを返します。 0 以外の場合の各**c** ASCII 文字の特定の表現です。 **_ _isascii**場合は、0 以外の値を返します**c** ASCII 文字 (範囲内で、0x00 から 0x7F)。 **iswascii**場合は、0 以外の値を返します**c** ASCII 文字のワイド文字表現です。 これらのルーチンの各場合 0 を返します**c**テスト条件を満たしていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 両方 **_ _isascii**と**iswascii**プリプロセッサ マクロ _CTYPE_DISABLE_MACROS が定義されていない場合、マクロとして実装されます。
 
-旧バージョンと互換性のため、 **isascii**は場合にのみマクロとして実装[ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md)が定義されていないか、0 として定義されてそれ以外の場合は定義されません。
+旧バージョンと互換性のため、 **isascii**場合のみマクロとして実装されます[ &#95; &#95;STDC&#95; &#95; ](../../preprocessor/predefined-macros.md)が定義されていないか 0 として定義されてそれ以外の場合、定義されていません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -89,14 +79,14 @@ int iswascii(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_istascii**|**__isascii**|**__isascii**|**iswascii**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isascii**、 **_ _isascii**|C: \<ctype.h><br /><br /> C++: \<cctype> または \<ctype.h>|
 |**iswascii**|C: \<wctype.h>、\<ctype.h>、または \<wchar.h><br /><br /> C++: \<cwctype>、\<cctype>、\<wctype.h>、\<ctype.h>、または \<wchar.h>|
 
-**Isascii**、 **_ _isascii**と**iswascii**関数は、Microsoft 固有の仕様です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**Isascii**、 **_ _isascii**と**iswascii**関数は、Microsoft 固有の仕様。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

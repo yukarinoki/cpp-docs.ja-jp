@@ -1,10 +1,6 @@
 ---
-title: CMDIFrameWnd クラス |Microsoft Docs
-ms.custom: ''
+title: CMDIFrameWnd クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMDIFrameWnd
 - AFXWIN/CMDIFrameWnd
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXWIN/CMDIFrameWnd::MDIRestore
 - AFXWIN/CMDIFrameWnd::MDISetMenu
 - AFXWIN/CMDIFrameWnd::MDITile
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMDIFrameWnd [MFC], CMDIFrameWnd
 - CMDIFrameWnd [MFC], CreateClient
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4dcbf18656e04e0732dbf377dae960ab0655be82
-ms.sourcegitcommit: d3c41b16bf05af2149090e996d8e71cd6cd55c7a
+ms.openlocfilehash: a565e1c9d9c9e4d3773763b0ee78c49f61696723
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48890440"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617543"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd クラス
 
@@ -137,7 +127,7 @@ C++ を使用しないでください**削除**フレーム ウィンドウを�
 
 `CMDIFrameWnd`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 

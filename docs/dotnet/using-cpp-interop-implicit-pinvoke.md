@@ -1,12 +1,6 @@
 ---
-title: C++ Interop (暗黙の PInvoke) を使用して |Microsoft ドキュメント
-ms.custom: ''
+title: C++ Interop (暗黙の PInvoke) の使用
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - blittable types [C++]
 - platform invoke [C++], implicit
@@ -26,27 +20,22 @@ helpviewer_keywords:
 - C++ COM Interop
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: a095f252c4e46e212e42a7ab4cf3cb8d5ef6f53d
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: ffe4aaeecc3e0f65851a87840cd21f81c4806fb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704294"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464588"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>C++ Interop (暗黙の PInvoke) の使用
 
-その他の .NET 言語とは異なり、Visual C には相互運用性サポートと同じファイル内でも、同じアプリケーション内に存在するマネージ コードとアンマネージ コードを許可する (で、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)プラグマ)。 これにより、Visual C++ 開発者は、他のアプリケーションの動作を妨げることなく、既存の Visual C++ アプリケーションに .NET 機能を統合できます。
+その他の .NET 言語とは異なり、Visual C には相互運用性サポートと同じファイルであっても、同じアプリケーション内に存在するマネージ コードとアンマネージ コードを許可する (で、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)プラグマ)。 これにより、Visual C++ 開発者は、他のアプリケーションの動作を妨げることなく、既存の Visual C++ アプリケーションに .NET 機能を統合できます。
 
-使用して、管理対象のコンパイル単位からアンマネージ関数を呼び出すことができますも[dllexport、dllimport](../cpp/dllexport-dllimport.md)です。
+使用して、マネージ コンパイル単位からアンマネージ関数を呼び出すことができますも[dllexport、dllimport](../cpp/dllexport-dllimport.md)します。
 
 関数パラメーターのマーシャリング方法を指定したり、DllImportAttribute を明示的に呼び出す際に指定できるその他の詳細設定を行ったりする必要がない場合は、暗黙の PInvoke を使用すると便利です。
 
-Visual C++ では、マネージ関数とアンマネージ関数を相互運用するために 2 つの方法があります。
+Visual C++ では、マネージド関数とアンマネージド 関数を相互運用するために 2 つの方法があります。
 
 - [C++ での明示的な PInvoke (DllImport 属性) の使用方法](../dotnet/using-explicit-pinvoke-in-cpp-dllimport-attribute.md)
 
@@ -54,23 +43,23 @@ Visual C++ では、マネージ関数とアンマネージ関数を相互運用
 
 ## <a name="c-interop"></a>C++ Interop
 
-明示的な PInvoke よりも C++ Interop を使用することをお勧めします。C++ Interop は、より優れたタイプセーフを提供し、通常、実装も容易で、アンマネージ API が変更された場合もより柔軟に対処できるからです。また、明示的な PInvoke では不可能なパフォーマンスの向上も実現できます。 ただし、C++ Interop はアンマネージのソース コードを使用できない場合に可能ではありません。
+明示的な PInvoke よりも C++ Interop を使用することをお勧めします。C++ Interop は、より優れたタイプセーフを提供し、通常、実装も容易で、アンマネージ API が変更された場合もより柔軟に対処できるからです。また、明示的な PInvoke では不可能なパフォーマンスの向上も実現できます。 ただし、C++ Interop では、この非管理対象のソース コードが使用できない場合は、ことはできません。
 
 ## <a name="c-com-interop"></a>C++ COM Interop
 
-Visual C++ がサポートしている相互運用機能は、COM コンポーネントとの相互運用性において、他の .NET 言語に比べ特に優れた効果を発揮します。 .NET Framework の制限にとらわれることがなく[Tlbimp.exe (タイプ ライブラリ インポーター)](/dotnet/framework/tools/tlbimp-exe-type-library-importer)などのデータ型およびすべての COM インターフェイスのすべてのメンバーの必須の公開の制限付きサポートは、C++ Interop により、COMサービスにアクセスするにはコンポーネントでは、別の相互運用機能アセンブリは必要ありません。 Visual Basic および C# の場合とは異なり、Visual C が通常の COM 機構を使用して直接 COM オブジェクトを使用できます (など**CoCreateInstance**と**QueryInterface**)。 マネージとアンマネージ関数に移動し、再度遷移コードを自動的に挿入するコンパイラの原因になる C++ Interop 機能のため不可能です。
+Visual C++ がサポートしている相互運用機能は、COM コンポーネントとの相互運用性において、他の .NET 言語に比べ特に優れた効果を発揮します。 .NET Framework の制限にとらわれることがなく[Tlbimp.exe (タイプ ライブラリ インポーター)](/dotnet/framework/tools/tlbimp-exe-type-library-importer)、C++ 相互運用機能により、COM などのデータ型とすべての COM インターフェイスのすべてのメンバーの必須の露出を制限付きサポートアクセスするコンポーネントでは、個別の相互運用機能アセンブリは必要ありません。 Visual Basic とは異なり、 C#、Visual C は、通常の COM メカニズムを使用して直接 COM オブジェクトを使用できます (など**CoCreateInstance**と**QueryInterface**)。 これは、マネージとアンマネージ関数から移動し、再度遷移コードを自動的に挿入するコンパイラの原因になる C++ Interop 機能により、発生します。
 
-C++ Interop を使用して、COM コンポーネントを使用できますよく使われるものも、C++ のクラス内にラップできます。 これらのラッパー クラスは、カスタム ランタイム呼び出し可能ラッパーと呼ばれることも Crcw、し、アプリケーション コードで直接 COM の使用上の 2 つの利点。
+C++ Interop を使用して、COM コンポーネントできますように通常使用されているか、C++ のクラス内にラップできます。 これらのラッパー クラスはカスタム ランタイム呼び出し可能ラッパーと呼ばれるまたは Crcw、およびそれらに直接アプリケーション コードで COM を使用する場合より 2 つの利点があります。
 
-- このラッパー クラスは、Visual C 以外の言語から使用できます。
+- 結果として得られるクラスは、Visual C 以外の言語から使用できます。
 
-- COM インターフェイスの詳細については、管理されたクライアント コードから非表示にできます。 .NET データ型はネイティブ型は、代わりに使用して、CRCW 内のデータのマーシャ リングの詳細を透過的に実行できます。
+- 管理されたクライアント コードから COM インターフェイスの詳細を非表示にできます。 .NET データ型は、ネイティブな型の代わりに使用できるし、CRCW 内に、データのマーシャ リングの詳細を透過的に実行できます。
 
-かどうか、直接または、CRCW を介して COM が使用に関係なく、単純な blittable 型以外の引数の型をマーシャ リングする必要があります。
+COM を使用する直接または、CRCW 経由かどうか、単純で、blittable 型以外の引数の型をマーシャ リングする必要があります。
 
 ## <a name="blittable-types"></a>blittable 型
 
-単純な組み込みの型を使用するアンマネージ api (を参照してください[blittable 型と非 Blittable 型](/dotnet/framework/interop/blittable-and-non-blittable-types))、特殊なコーディングは必要ありませんので、これらのデータ型、メモリ内で同じ表現であるより複雑なデータ型が必要明示的なデータのマーシャ リングします。 例については、次を参照してください。[する方法: PInvoke を使用してコードをマネージからネイティブ Dll を呼び出す](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)です。
+シンプルな組み込み型を使用するアンマネージ Api の (を参照してください[blittable 型と非 Blittable 型](/dotnet/framework/interop/blittable-and-non-blittable-types))、特別なコーディングは必要ありませんので、これらのデータ型、メモリ内で同じ表現であるより複雑なデータ型が必要です明示的なデータをマーシャ リングします。 例については、次を参照してください。[方法: PInvoke を使用してコードのマネージからネイティブ Dll を呼び出す](../dotnet/how-to-call-native-dlls-from-managed-code-using-pinvoke.md)します。
 
 ## <a name="example"></a>例
 
@@ -154,8 +143,8 @@ Done
 
 - [方法: ネイティブ クラスを C# で使用できるようにラップする](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-相互運用シナリオではデリゲートの使用方法の詳細については、次を参照してください。 [delegate (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)です。
+相互運用機能のシナリオではデリゲートの使用方法の詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-- [マネージ コードからのネイティブ関数の呼び出し](../dotnet/calling-native-functions-from-managed-code.md)
+- [マネージド コードからのネイティブ関数の呼び出し](../dotnet/calling-native-functions-from-managed-code.md)

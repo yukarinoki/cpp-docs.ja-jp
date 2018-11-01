@@ -1,10 +1,6 @@
 ---
-title: _ftell_nolock、_ftelli64_nolock | Microsoft Docs
-ms.custom: ''
+title: _ftell_nolock、_ftelli64_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ftelli64_nolock
 - _ftell_nolock
@@ -26,8 +22,6 @@ f1_keywords:
 - ftelli64_nolock
 - ftell_nolock
 - _ftell_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - ftelli64_nolock function
 - _ftelli64_nolock function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - ftell_nolock function
 - file pointers [C++], getting current position
 ms.assetid: 84e68b0a-32f8-4c4a-90ad-3f2387685ede
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 15d1001b1f0465273771649404de306153edf920
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 58bfc8c7a8b8e820fdec09d52e24dfcb07f328f8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398457"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580844"
 ---
 # <a name="ftellnolock-ftelli64nolock"></a>_ftell_nolock、_ftelli64_nolock
 
@@ -68,13 +58,13 @@ __int64 _ftelli64_nolock(
 
 ## <a name="return-value"></a>戻り値
 
-同じ**ftell**と **_ftelli64**です。 詳細については、次を参照してください。 [ftell、_ftelli64](ftell-ftelli64.md)です。
+同じ**ftell**と **_ftelli64**します。 詳細については、次を参照してください。 [ftell、_ftelli64](ftell-ftelli64.md)します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数は、ロックしないバージョンの**ftell**と **_ftelli64**、それぞれします。 同一**ftell**と **_ftelli64**他のスレッドによる干渉から保護されない点を除いて、します。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+これらの関数は、ロックしないバージョンの**ftell**と **_ftelli64**、それぞれします。 同じですが**ftell**と **_ftelli64**する点を除いて、他のスレッドによる干渉から保護されません。 これらの関数では他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|

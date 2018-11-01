@@ -1,41 +1,31 @@
 ---
-title: コンパイラ エラー C3808 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラ エラー C3808
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3808
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3808
 ms.assetid: 2ee8ac97-3ea4-417a-8710-be73a7f98cf4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40668b8b2cc1a1f85b0ad4a7ef63d89956e922b3
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 0a1b0b82241c6e48d2c1941ff8122697d11492eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705206"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50587734"
 ---
 # <a name="compiler-error-c3808"></a>コンパイラ エラー C3808
 
-> '*型*': ComImport 属性を持つクラス メンバーを定義できません'*メンバー*' のみを抽象化、または dllimport 関数が許可されています。
+> '*型*': ComImport 属性を持つクラス メンバーを定義できません'*メンバー*'、のみを抽象化または dllimport 関数が許可されています。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-派生した型<xref:System.Runtime.InteropServices.ComImportAttribute>は定義できません*メンバー*です。
+派生した型<xref:System.Runtime.InteropServices.ComImportAttribute>は定義できません*メンバー*します。
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 ## <a name="example"></a>例
 
-次の例では、C3808 を生成します。
+次の例では、C3808 が生成されます。
 
 ```cpp
 // C3808.cpp

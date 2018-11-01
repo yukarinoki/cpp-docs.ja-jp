@@ -1,36 +1,26 @@
 ---
-title: Wmain の使用 |Microsoft Docs
-ms.custom: ''
+title: wmain の使用
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - wWinMain
-dev_langs:
-- C++
 helpviewer_keywords:
 - wide characters [C++], wmain function
 - wWinMain function
 - wmain function
 ms.assetid: 41213c41-668c-40a4-8a1e-77d9eded720d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bde65550b5c6561356fa5888b0985f6aee4702f7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 06ec38abb97088f1364a4370efdebb67a04d9294
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441708"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583782"
 ---
 # <a name="support-for-using-wmain"></a>wmain の使用
 
 Visual C のサポートを定義する、 **wmain**関数と、Unicode アプリケーションにワイド文字引数を渡します。 仮パラメーターを宣言する**wmain**のような形式を使用して`main`します。 さらに、ワイド文字の引数と、必要であればワイド文字環境ポインターもプログラムに渡すことができます。 **wmain** の引数 `argv` と `envp` の型は `wchar_t*` です。 例えば:
 
 ```cpp
-wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
+wmain( int argc, wchar_t *argv[ ], wchar_t *envp[ ] )
 ```
 
 > [!NOTE]

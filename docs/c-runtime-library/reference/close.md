@@ -1,10 +1,6 @@
 ---
-title: _close | Microsoft Docs
-ms.custom: ''
+title: _close
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _close
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _close
-dev_langs:
-- C++
 helpviewer_keywords:
 - _close function
 - close function
 - files [C++], closing
 ms.assetid: 4708a329-8acf-4cd9-b7b0-a952e1897247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eabf084d2e4dd7e280c0ff730d1ec34d86f1ed98
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: faea008903136e8abdc39297672b31800ada796d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394198"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528025"
 ---
 # <a name="close"></a>_close
 
@@ -59,19 +49,19 @@ int _close(
 
 ## <a name="return-value"></a>戻り値
 
-**_close**ファイルが正常に閉じられた場合は 0 を返します。 戻り値-1 はエラーを示します。
+**閉じる (_c)** ファイルが正常に閉じられた場合は 0 を返します。 戻り値-1 はエラーを示します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Close**関数に関連付けられているファイルを閉じます*fd*です。
+**_Close**関数が関連付けられているファイルを閉じます*fd*します。
 
-ファイル記述子と基になる OS ファイル ハンドルは閉じられます。 したがってを呼び出す必要はありません**CloseHandle**ファイルがもともと Win32 関数を使用して開かれた場合**CreateFile**ファイル記述子を使用して、変換および **_open_osfhandle**.
+ファイル記述子と基になる OS ファイル ハンドルは閉じられます。 したがってを呼び出す必要はありません**CloseHandle**ファイルがもともと Win32 関数を使用して開かれた場合**CreateFile**を使用してファイル記述子に変換および **_open_osfhandle**.
 
-この関数は、パラメーターを検証します。 場合*fd* 、無効なファイル記述子には」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EBADF**です。
+この関数は、パラメーターを検証します。 場合*fd*が正しくないファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EBADF**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_close**|\<io.h>|\<errno.h>|
 

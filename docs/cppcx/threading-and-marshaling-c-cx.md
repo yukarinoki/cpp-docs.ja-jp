@@ -1,9 +1,6 @@
 ---
-title: スレッドとマーシャ リング (C + + CX) |Microsoft Docs
-ms.custom: ''
+title: スレッドとマーシャリング (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 f1_keywords:
 - C4451
 helpviewer_keywords:
@@ -11,16 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3e02f69efb5658225f40f2c6dfcd74801bd04929
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: faf541a0705de3e0e3d1b795d1abbdc2e9707974
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100419"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582638"
 ---
 # <a name="threading-and-marshaling-ccx"></a>スレッドとマーシャリング (C++/CX)
 
@@ -68,7 +61,7 @@ ref class MyOptions
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-マーシャリング動作が「標準」のオブジェクトへの参照を (メンバー スコープまたはグローバル スコープで) 追加する場合、コンパイラは、`Platform::Agile<T>` で型をラップするように勧める警告を発行します。`Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead``Agile<T>` を使用すると、他のすべてのアジャイル クラスと同じようにクラスを使用できます。 次のような状況では、 `Platform::Agile<T>` を使用します。
+マーシャリング動作が「標準」のオブジェクトへの参照を (メンバー スコープまたはグローバル スコープで) 追加する場合、コンパイラは、`Platform::Agile<T>` で型をラップするように勧める警告を発行します。`Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead``Agile<T>` を使用すると、他のすべてのアジャイル クラスと同じようにクラスを使用できます。 次のような状況では、`Platform::Agile<T>` を使用します。
 
 - 非アジャイル変数は、グローバル スコープで宣言されます。
 

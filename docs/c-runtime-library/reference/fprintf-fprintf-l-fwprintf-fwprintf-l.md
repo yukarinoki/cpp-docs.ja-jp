@@ -1,10 +1,6 @@
 ---
-title: fprintf、_fprintf_l、fwprintf、_fwprintf_l | Microsoft ドキュメント
-ms.custom: ''
+title: fprintf、_fprintf_l、fwprintf、_fwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fwprintf
 - fprintf
@@ -26,8 +22,6 @@ f1_keywords:
 - fprintf
 - fwprintf
 - _ftprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fwprintf_l function
 - fprintf function
@@ -41,16 +35,12 @@ helpviewer_keywords:
 - print formatted data to streams
 - fwprintf_l function
 ms.assetid: 34a87e1c-6e4d-4d48-a611-58314dd4dc4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c7578a8a8c2bef7fe68e9a08ae987ac7c1609cb5
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d84ef50e6fd522e393bb87664fb1eb47f3d32bb4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403883"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637298"
 ---
 # <a name="fprintf-fprintfl-fwprintf-fwprintfl"></a>fprintf、_fprintf_l、fwprintf、_fwprintf_l
 
@@ -99,15 +89,15 @@ int _fwprintf_l(
 
 ## <a name="return-value"></a>戻り値
 
-**fprintf**書き込まれたバイト数を返します。 **fwprintf**書き込まれるワイド文字の数を返します。 これらの関数は、出力エラーが発生した場合、負の値を返します。 場合*ストリーム*または*形式*は**NULL**、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返します設定と**errno**に**EINVAL**です。 書式指定文字列の選択されていない有効な書式指定文字を使用しているときも**fprintf_s**または**fwprintf_s**です。
+**fprintf**書き込まれたバイト数を返します。 **fwprintf**書き込まれたワイド文字の数を返します。 これらの関数は、出力エラーが発生した場合、負の値を返します。 場合*ストリーム*または*形式*は**NULL**、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。 使用する場合は、有効な書式設定文字の書式指定文字列がチェックされません**fprintf_s**または**fwprintf_s**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**fprintf**書式化して、一連の文字と、出力に値を出力*ストリーム*です。 各関数*引数*(存在する場合) は変換され、対応する書式指定に従って*形式*です。 **Fprintf**、*形式*引数が同じ構文と使用が**printf**です。
+**fprintf**書式化して、一連の文字や、出力値を出力*ストリーム*します。 各関数*引数*(ある場合) は変換されに対応する書式指定に応じて*形式*します。 **Fprintf**、*形式*引数が同じ構文と使用ができるように**printf**します。
 
-**fwprintf**のワイド文字バージョンは、 **fprintf** **fwprintf**、*形式*ワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fprintf** UNICODE ストリームへ現在出力をサポートしません。
+**fwprintf**のワイド文字バージョンは、 **fprintf**、 **fwprintf**、*形式*はワイド文字列です。 ストリームが ANSI モードで開かれている場合、これらの関数の動作は同じになります。 **fprintf** UNICODE ストリームへ現在出力をサポートしません。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
@@ -123,7 +113,7 @@ int _fwprintf_l(
 
 詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-syntax-printf-and-wprintf-functions.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

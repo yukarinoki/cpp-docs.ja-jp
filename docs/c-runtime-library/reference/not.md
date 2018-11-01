@@ -1,10 +1,6 @@
 ---
-title: not | Microsoft Docs
-ms.custom: ''
+title: not
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,21 +17,15 @@ f1_keywords:
 - std::not
 - std.not
 - Not
-dev_langs:
-- C++
 helpviewer_keywords:
 - not function
 ms.assetid: d2ddbd5c-33c0-4aff-8961-feac155b4ba1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fea9560828890ab988448dc48dad2dabf88c13e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc20ab25470b10d21c19ded695343f196090f801
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400386"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514765"
 ---
 # <a name="not"></a>not
 
@@ -49,7 +39,7 @@ ms.locfileid: "32400386"
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 マクロにより ! 演算子が生成されます。
 
@@ -79,6 +69,6 @@ a is zero
 a is zero
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iso646.h>

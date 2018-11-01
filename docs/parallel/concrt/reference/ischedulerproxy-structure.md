@@ -1,10 +1,6 @@
 ---
-title: ISchedulerProxy 構造体 |Microsoft Docs
-ms.custom: ''
+title: ISchedulerProxy 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - ISchedulerProxy
 - CONCRTRM/concurrency::ISchedulerProxy
@@ -14,21 +10,15 @@ f1_keywords:
 - CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::Shutdown
 - CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::SubscribeCurrentThread
 - CONCRTRM/concurrency::ISchedulerProxy::ISchedulerProxy::UnbindContext
-dev_langs:
-- C++
 helpviewer_keywords:
 - ISchedulerProxy structure
 ms.assetid: af416973-7a1c-4c30-aa3b-4161c2aaea54
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 72fa49d763159385607330231994d15952f0c771
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a38b931da8ed2191f21d210449c100c410f74e85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163141"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523149"
 ---
 # <a name="ischedulerproxy-structure"></a>ISchedulerProxy 構造体
 
@@ -61,7 +51,7 @@ struct ISchedulerProxy;
 
 `ISchedulerProxy`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrtrm.h
 

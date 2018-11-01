@@ -1,10 +1,6 @@
 ---
-title: _mkdir、_wmkdir | Microsoft Docs
-ms.custom: ''
+title: _mkdir、_wmkdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmkdir
 - _mkdir
@@ -27,8 +23,6 @@ f1_keywords:
 - _tmkdir
 - wmkdir
 - _wmkdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wmkdir function
 - folders [C++], creating
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _mkdir function
 - _tmkdir function
 ms.assetid: 7f22d01d-63a5-4712-a6e7-d34878b2d840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 40641911af9c61285049a5943cdc8f5c21cba99b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d89e1f0930cf9131156a4691069f1f17c15c124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402141"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50496618"
 ---
 # <a name="mkdir-wmkdir"></a>_mkdir、_wmkdir
 
@@ -81,11 +71,11 @@ int _wmkdir(
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mkdir**関数は、指定した新しいディレクトリを作成*dirname です。* **_mkdir**呼び出しの最後のコンポーネントのみごとの 1 つだけの新しいディレクトリを作成できます*dirname*新しいディレクトリの名前ができます。 **_mkdir**パスの区切り記号では変換されません。 Windows NT では、バックスラッシュ (\\) とスラッシュ (/) のどちらもランタイム ルーチンの文字列内の有効なパス区切り記号です。
+**_Mkdir**関数は、指定した新しいディレクトリを作成します。 *dirname します。* **_mkdir**の最後のコンポーネントのみの呼び出しごとの 1 つだけの新しいディレクトリを作成できます*dirname*新しいディレクトリの名前を付けます。 **_mkdir**パスの区切り記号では変換されません。 Windows NT では、バックスラッシュ (\\) とスラッシュ (/) のどちらもランタイム ルーチンの文字列内の有効なパス区切り記号です。
 
-**_wmkdir**のワイド文字バージョンは、 **_mkdir**; *dirname*に渡す引数 **_wmkdir**ワイド文字列です。 **_wmkdir**と **_mkdir**それ以外の場合の動作は同じです。
+**_wmkdir**のワイド文字バージョンです **_mkdir**、 *dirname*引数 **_wmkdir**はワイド文字列です。 **_wmkdir**と **_mkdir**動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -93,9 +83,9 @@ int _wmkdir(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmkdir**|**_mkdir**|**_mkdir**|**_wmkdir**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mkdir**|\<direct.h>|
 |**_wmkdir**|\<direct.h> または \<wchar.h>|

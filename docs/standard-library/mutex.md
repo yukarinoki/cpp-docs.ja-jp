@@ -1,25 +1,15 @@
 ---
-title: '&lt;mutex&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;mutex&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <mutex>
-dev_langs:
-- C++
 ms.assetid: efb60c89-687a-4e38-8fe4-694e11c4e8a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9cd4f968543ff777b9178c8f6fa6b3c1699ee465
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 4655278e312647f4e69cf48cb772df854260ce57
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38965657"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482564"
 ---
 # <a name="ltmutexgt"></a>&lt;mutex&gt;
 
@@ -77,7 +67,7 @@ mutex 型は *lockable 型*とも呼ばれます。 メンバー関数 `try_lock
 
 ### <a name="structs"></a>構造体
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[adopt_lock_t 構造体](../standard-library/adopt-lock-t-structure.md)|`adopt_lock` の定義に使用する型を表します。|
 |[defer_lock_t 構造体](../standard-library/defer-lock-t-structure.md)|`unique_lock` のオーバーロード コンストラクターの 1 つを選択するために使用される、`defer_lock` オブジェクトを定義する型を表します。|
@@ -86,7 +76,7 @@ mutex 型は *lockable 型*とも呼ばれます。 メンバー関数 `try_lock
 
 ### <a name="variables"></a>変数
 
-|name|説明|
+|名前|説明|
 |----------|-----------------|
 |[adopt_lock](../standard-library/mutex-functions.md#adopt_lock)|`lock_guard` と `unique_lock` のコンストラクターに渡されるオブジェクを表し、同じコンストラクターに渡されるミューテックス オブジェクトがロックされていることを示します。|
 |[defer_lock](../standard-library/mutex-functions.md#defer_lock)|`unique_lock` のコンストラクターに渡すことのできるオブジェクトを表し、コンストラクターがそれに渡されるミューテックス オブジェクトをロックしないことを示しています。|
