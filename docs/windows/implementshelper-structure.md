@@ -1,9 +1,6 @@
 ---
-title: ImplementsHelper 構造体 |Microsoft Docs
-ms.custom: ''
+title: ImplementsHelper 構造体
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Details::ImplementsHelper
@@ -11,8 +8,6 @@ f1_keywords:
 - implements/Microsoft::WRL::Details::ImplementsHelper::CastToUnknown
 - implements/Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid
 - implements/Microsoft::WRL::Details::ImplementsHelper::IidCount
-dev_langs:
-- C++
 helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper structure
 - Microsoft::WRL::Details::ImplementsHelper::CanCastTo method
@@ -20,17 +15,12 @@ helpviewer_keywords:
 - Microsoft::WRL::Details::ImplementsHelper::FillArrayWithIid method
 - Microsoft::WRL::Details::ImplementsHelper::IidCount constant
 ms.assetid: b857ba80-81bd-4e53-92b6-210991954243
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d734e98d8d7713451be1a16e08e58676f2b0cde4
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 4ea3a75cf8788292fb030ee4c7f61cca8af0294c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163687"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449037"
 ---
 # <a name="implementshelper-structure"></a>ImplementsHelper 構造体
 
@@ -75,7 +65,7 @@ friend struct Details::ImplementsHelper;
 
 `ImplementsHelper`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** implements.h
 

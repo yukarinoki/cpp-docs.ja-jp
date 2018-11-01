@@ -1,10 +1,6 @@
 ---
-title: strrchr、wcsrchr、_mbsrchr、_mbsrchr_l | Microsoft Docs
-ms.custom: ''
+title: strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strrchr
 - wcsrchr
@@ -30,8 +26,6 @@ f1_keywords:
 - strrchr
 - wcsrchr
 - _mbsrchr
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsrchr function
 - tcsrchr function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - _ftcsrchr function
 - _mbsrchr_l function
 ms.assetid: 75cf2664-758e-49bb-bf6b-8a139cd474d2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 03b0ce2c9bd205f9065c783a4ff4d7e50d0ff803
-ms.sourcegitcommit: 04d327940787df1297b72d534f388a035d472af0
+ms.openlocfilehash: d07930f5e77d76ae950af1058c55e58cb296011b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/20/2018
-ms.locfileid: "39181160"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607702"
 ---
 # <a name="strrchr-wcsrchr-mbsrchr-mbsrchrl"></a>strrchr、wcsrchr、_mbsrchr、_mbsrchr_l
 
@@ -140,7 +130,7 @@ NULL で終わる検索対象の文字列。
 
 `strrchr`関数検索の最後に見つかった*c* (に変換**char**) で*str*します。 検索には、終端の null 文字が含まれます。
 
-`wcsrchr` 関数と `_mbsrchr` 関数は、`strrchr` 関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcsrchr` 関数の引数と戻り値はワイド文字列で、`_mbsrchr` 関数の引数と戻り値はマルチバイト文字列です。
+`wcsrchr` 関数と `_mbsrchr` 関数は、 `strrchr`関数のワイド文字バージョンとマルチバイト文字バージョンです。 `wcsrchr` 関数の引数と戻り値はワイド文字列で、`_mbsrchr` 関数の引数と戻り値はマルチバイト文字列です。
 
 C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方の C++ オーバー ロードの動作は、シンボル _CONST_RETURN を定義します。
 

@@ -1,10 +1,6 @@
 ---
-title: clearerr_s | Microsoft Docs
-ms.custom: ''
+title: clearerr_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - clearerr_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - clearerr_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - error indicator for streams
 - resetting stream error indicator
 - clearerr_s function
 ms.assetid: b74d014d-b7a8-494a-a330-e5ffd5614772
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34feccd2d4d6de53ed9c5a446bf6c7d065dd4e62
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 140d984c470bd505f347aa43065b033339ed38a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665024"
 ---
 # <a name="clearerrs"></a>clearerr_s
 
@@ -59,17 +49,17 @@ errno_t clearerr_s(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 します。**EINVAL**場合*ストリーム*は**NULL**です。
+成功した場合は 0 します。**EINVAL**場合*ストリーム*は**NULL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Clearerr_s**関数は、エラー インジケーターとのファイルの終端のインジケーターをリセット*ストリーム*です。 エラー インジケーターは自動的にクリアされません。このストリームでの操作が引き続きまでエラー値を返します、指定したストリームのエラー インジケーターを設定すると、 **clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[巻き戻し](rewind.md)と呼びます。
+**Clearerr_s**関数は、エラー インジケーターとファイルの終わりインジケーターをリセット*ストリーム*します。 エラー インジケーターは自動的にクリアされません。そのストリームに対する操作が引き続きまでエラー値を返し、指定したストリームのエラー インジケーターを設定すると、 **clearerr_s**、 **clearerr**、 [fseek](fseek-fseeki64.md)、 **fsetpos**、または[巻き戻し](rewind.md)が呼び出されます。
 
-場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**し、返します**EINVAL**です。
+場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**返します**EINVAL**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**clearerr_s**|\<stdio.h>|
 

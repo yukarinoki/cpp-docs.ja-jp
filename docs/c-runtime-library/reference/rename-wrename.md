@@ -1,10 +1,6 @@
 ---
-title: rename、_wrename | Microsoft Docs
-ms.custom: ''
+title: rename、_wrename
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rename
 - _wrename
@@ -25,8 +21,6 @@ f1_keywords:
 - _wrename
 - _trename
 - Rename
-dev_langs:
-- C++
 helpviewer_keywords:
 - trename function
 - directories [C++], renaming
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f02829b394649b86dfda9baad7c5792853fce746
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407474"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463987"
 ---
 # <a name="rename-wrename"></a>rename、_wrename
 
@@ -78,7 +68,7 @@ int _wrename(
 
 ## <a name="return-value"></a>戻り値
 
-名前が正常に変更された場合、これらの関数はそれぞれ 0 を返します。 エラーが発生したは、この関数は 0 以外の値を返します。 設定および**errno**値は次のいずれかに。
+名前が正常に変更された場合、これらの関数はそれぞれ 0 を返します。 エラー関数は 0 以外の値を返します。 設定および**errno**値は次のいずれかに。
 
 |errno の値|条件|
 |-|-|
@@ -88,11 +78,11 @@ int _wrename(
 
 その他の返される可能性のある戻り値については、「[_doserrno、_errno、syserrlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **rename** 関数は、*oldname* によって指定されたファイルまたはディレクトリの名前を *newname* によって指定された名前に変更します。 古い名前は、既存のファイルまたはディレクトリのパスである必要があります。 新しい名前を既存のファイルまたはディレクトリのパスにすることはできません。 **rename** を使用して、*newname* 引数で別のパスを指定することにより、1 つのディレクトリまたはデバイスから別のディレクトリまたはデバイスにファイルを移動することができます。 ただし、**rename** を使用してディレクトリを移動することはできません。 ディレクトリの名前を変更することはできますが、移動はできません。
 
-**_wrename**のワイド文字バージョンは、 **(_r)**; 引数 **_wrename**ワイド文字列です。 **_wrename**と **(_r)** それ以外の場合の動作は同じです。
+**_wrename**のワイド文字バージョンは、 **_rename**; 引数 **_wrename**はワイド文字列です。 **_wrename**と **_rename**動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -100,9 +90,9 @@ int _wrename(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_trename**|**rename**|**rename**|**_wrename**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**rename**|\<io.h> または \<stdio.h>|
 |**_wrename**|\<stdio.h> または \<wchar.h>|

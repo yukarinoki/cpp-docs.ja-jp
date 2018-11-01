@@ -1,24 +1,14 @@
 ---
-title: Microsoft::WRL::Details Namespace |Microsoft Docs
-ms.custom: ''
+title: Microsoft::WRL::Details 名前空間
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: d71fe149-d804-4c6f-961d-43fe21ef8630
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f95eaa49db5e09bceaefafc16312250d823e5d5c
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 3f8f6849ec20956d10147a0e6ecb2fd023874807
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250394"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644380"
 ---
 # <a name="microsoftwrldetails-namespace"></a>Microsoft::WRL::Details 名前空間
 
@@ -87,7 +77,7 @@ namespace Microsoft::WRL::Details;
 |[Swap 関数 (WRL)](../windows/swap-function-wrl.md)|指定された 2 つの引数の値を交換します。|
 |[TerminateMap 関数](../windows/terminatemap-function.md)|指定されたモジュールでクラス ファクトリをシャット ダウンします。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** async.h、client.h、corewrappers.h、event.h、ftm.h、implements.h、internal.h、module.h
 
