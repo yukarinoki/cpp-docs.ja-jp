@@ -1,10 +1,6 @@
 ---
-title: _futime、_futime32、_futime64 | Microsoft Docs
-ms.custom: ''
+title: _futime、_futime32、_futime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _futime64
 - _futime32
@@ -27,8 +23,6 @@ f1_keywords:
 - _futime
 - futime64
 - _futime64
-dev_langs:
-- C++
 helpviewer_keywords:
 - _futime function
 - futime32 function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - futime function
 - _futime32 function
 ms.assetid: b942ce8f-5cc7-4fa8-ab47-de5965eded53
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdd7b68ac9e3bf55f64b9a68f7b8075eab640faa
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f21e394acdcc7fbf8a91c5450a4c04daa050db21
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056821"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652505"
 ---
 # <a name="futime-futime32-futime64"></a>_futime、_futime32、_futime64
 
@@ -88,7 +78,7 @@ int _futime64(
 
 **_futime64**、使用、 **_ _utimbuf64**構造体を読み取り、変更は UTC 3000 年 12 月 31 日 23時 59分: 59 秒までの日付のファイルへの呼び出し **_futime32**場合は、ファイルの日付が失敗しました。2038 年 1 月 18 日 23時 59分: 59 までよりも後。 これらの関数の日付範囲の下限は、1970 年 1 月 1 日の午前 0 時です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|

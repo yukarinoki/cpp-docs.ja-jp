@@ -1,10 +1,6 @@
 ---
-title: _mbsnbcat_s、_mbsnbcat_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbsnbcat_s、_mbsnbcat_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcat_s_l
 - _mbsnbcat_s
@@ -26,8 +22,6 @@ f1_keywords:
 - mbsnbcat_s
 - _mbsnbcat_s_l
 - mbsnbcat_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcsncat function
 - mbsnbcat_s function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - mbsnbcat_s_l function
 - tcsncat function
 ms.assetid: 2c9e9be7-d979-4a54-8ada-23428b6648a9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cead47b21a066d7e55c22d6bc8fba63cb73a0224
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7e7a9d121336486e590ca3bd9e3967b02a2df08
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405115"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497332"
 ---
 # <a name="mbsnbcats-mbsnbcatsl"></a>_mbsnbcat_s、_mbsnbcat_s_l
 
-多くても 1 つ目のマルチバイト文字の文字列に付加されます**n**別のマルチバイト文字の文字列のバイト数。 これらは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) です。
+最大で 1 つ目のマルチバイト文字の文字列に追加します**n**もう 1 つのマルチバイト文字列のバイト数。 これらは、「[CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)」の説明にあるとおり、セキュリティが強化されたバージョンの [_mbsnbcat、_mbsnbcat_l](mbsnbcat-mbsnbcat-l.md) です。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -93,13 +83,13 @@ errno_t _mbsnbcat_s_l(
 NULL で終わるマルチバイト文字のコピー先文字列。
 
 *sizeInBytes*<br/>
-サイズ、 *dest*バッファーのバイト単位です。
+サイズ、 *dest*バッファー (バイト単位)。
 
 *src*<br/>
 NULL で終わるマルチバイト文字のコピー元文字列。
 
 *count*<br/>
-バイト数*src*に追加する*dest*です。
+バイト数*src*に追加する*dest*します。
 
 *locale*<br/>
 使用するロケール。
@@ -116,13 +106,13 @@ NULL で終わるマルチバイト文字のコピー元文字列。
 |どれでも可|<= 0|任意|**EINVAL**|
 |どれでも可|任意|**NULL**|**EINVAL**|
 
-いずれかのエラー条件が発生すると、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター エラーを生成します。 関数を返しますのかどうかは、エラーが処理される、 **EINVAL**設定と**errno**に**EINVAL**です。
+いずれかのエラー条件が発生すると、この関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター エラーを生成します。 エラーが処理されるかどうか、関数を返します**EINVAL**設定と**errno**に**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbsnbcat_s**に関数を追加*dest*、多くても 1 つ目*カウント*バイトの*src*です。場合は、直前にあるバイト内の null 文字は*dest*先行バイトの先頭のバイトによって上書きされます*src*です。それ以外の場合、最初のバイトの*src*の終端の null 文字を上書き*dest*です。 Null バイトが表示された場合*src*する前に*カウント*バイトを追加すると、 **_mbsnbcat_s**すべてのバイトを追加*src*、最大で、null文字があります。 場合*カウント*がの長さより大きい*src*の長さ*src*の代わりに使用される*カウント*です。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**_Mbsnbcat_s**に関数を追加します*dest*、最大で 1 つ目*カウント*バイトの*src*します。場合は、null 文字の直前にあるバイト*dest*が先行バイトの最初のバイトによって上書きされます*src*します。それ以外の場合、最初のバイトの*src*の終端の null 文字を上書き*dest*します。 Null バイトが表示される場合*src*する前に*カウント*バイトが追加され、 **_mbsnbcat_s**からすべてのバイトを追加します*src*、まで、null。文字。 場合*カウント*がの長さより大きい*src*の長さ*src*の代わりに使用されます*カウント*します。 結果の文字列は null 文字で終了します。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-出力値の設定の影響を受けた、 **LC_CTYPE** 、ロケールのカテゴリの設定; 参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 いないする点を除いて、これらの関数のバージョンは同じですが、 **_l**サフィックスを使用して、現在のロケールが付いている、 **_l**サフィックスは、ロケール パラメーターを代わりに使用します。渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 いないことを除いて、これらの関数のバージョンは同じですが、 **_l**サフィックスを使用して、現在のロケールが付いている、 **_l**サフィックスは、ロケール パラメーターを代わりに使用します。渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 C++ では、テンプレートのオーバーロードを利用すると、これらの関数の使用が簡素化されます。オーバーロードでは、バッファー長が自動的に推論されるのでサイズ引数を指定する必要がなくなるだけでなく、古くてセキュリティが万全ではない関数を新しくてセキュリティが強化された関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -135,9 +125,9 @@ C++ では、テンプレートのオーバーロードを利用すると、こ�
 |**_tcsncat**|[strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|**_mbsnbcat_s**|[wcsncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md)|
 |**_tcsncat_s_l**|**_strncat_s_l**|**_mbsnbcat_s_l**|**_wcsncat_s_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbcat_s**|\<mbstring.h>|
 |**_mbsnbcat_s_l**|\<mbstring.h>|

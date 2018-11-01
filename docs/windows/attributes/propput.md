@@ -1,28 +1,17 @@
 ---
-title: propput (C++ COM 属性) |Microsoft Docs
-ms.custom: ''
+title: propput (C++ COM 属性)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
 f1_keywords:
 - vc-attr.propput
-dev_langs:
-- C++
 helpviewer_keywords:
 - propput attribute
 ms.assetid: 1f84dda9-9cce-4e16-aaf0-b2c5219827f2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d9064a73dcafff8efbaffd50501dd86c2e91a29e
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 1902ba61417be457b4c296b513e1632bfdd8cec6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48792055"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492730"
 ---
 # <a name="propput"></a>propput
 
@@ -42,7 +31,7 @@ ms.locfileid: "48792055"
 
 例をご覧ください[バインド可能な](bindable.md)の使用サンプル**propput**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 
@@ -53,7 +42,7 @@ ms.locfileid: "48792055"
 |**必要な属性**|なし|
 |**無効な属性**|`propget`, `propputref`|
 
-属性コンテキストの詳細については、次を参照してください。[属性コンテキスト](cpp-attributes-com-net.md#contexts)します。
+属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

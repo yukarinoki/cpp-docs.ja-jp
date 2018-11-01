@@ -1,27 +1,17 @@
 ---
-title: LIB の概要 |マイクロソフトのドキュメント
-ms.custom: ''
+title: LIB の概要
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - Lib
-dev_langs:
-- C++
 helpviewer_keywords:
 - LIB [C++], modes
 ms.assetid: e997d423-f574-434f-8b56-25585d137ee0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 223f5284ed25b5a13fddef879e63ec2e480f3314
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 03209bc409453cab1769606cb972f4572d3617bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45703768"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548500"
 ---
 # <a name="overview-of-lib"></a>LIB の概要
 
@@ -51,11 +41,11 @@ LIB は、次のモードで使用できます。
 |**/LIBPATH**|   環境ライブラリ パスをオーバーライドします。<br/><br/>詳細については、次を参照してください。[ライブラリの管理](../../build/reference/managing-a-library.md)します。|
 |**/一覧表示**|   標準出力に出力ライブラリに関する情報を表示します。<br/><br/>詳細については、次を参照してください。[ライブラリの管理](../../build/reference/managing-a-library.md)します。|
 |**/LTCG**|   リンク時コード生成を使用してビルドするライブラリをによりします。<br/><br/>詳細については、次を参照してください。 [LIB の実行](../../build/reference/running-lib.md)します。|
-|**/マシン**|   プログラムのターゲット プラットフォームを指定します。<br/><br/>詳細については、次を参照してください。 [LIB の実行](../../build/reference/running-lib.md)します。|
+|**/MACHINE**|   プログラムのターゲット プラットフォームを指定します。<br/><br/>詳細については、次を参照してください。 [LIB の実行](../../build/reference/running-lib.md)します。|
 |**/名前**|   インポート ライブラリを構築する場合は、インポート ライブラリが構築されている DLL の名前を指定します。<br/><br/>詳細については、次を参照してください。[ライブラリの管理](../../build/reference/managing-a-library.md)します。|
 |**/NODEFAULTLIB**|   外部参照を解決するときに検索するライブラリの一覧から 1 つまたは複数の既定のライブラリを削除します。<br/><br/>詳細については、次を参照してください。[ライブラリの管理](../../build/reference/managing-a-library.md)します。|
 |**/NOLOGO**|   LIB 著作権メッセージとバージョン番号の表示を中止し、コマンド ファイルのエコーを防止します。<br/><br/>詳細については、次を参照してください。 [LIB の実行](../../build/reference/running-lib.md)します。|
-|**/入力出力**|   既定の出力ファイル名をオーバーライドします。<br/><br/>詳細については、次を参照してください。[ライブラリの管理](../../build/reference/managing-a-library.md)します。|
+|**/OUT**|   既定の出力ファイル名をオーバーライドします。<br/><br/>詳細については、次を参照してください。[ライブラリの管理](../../build/reference/managing-a-library.md)します。|
 |**/削除します。**|   出力ライブラリからオブジェクトを省略します。<br/><br/>詳細については、次を参照してください。[ライブラリの管理](../../build/reference/managing-a-library.md)します。|
 |**/SUBSYSTEM**|   出力ライブラリにリンクすることによって作成されたプログラムを実行する方法をオペレーティング システムに指示します。<br/><br/>詳細については、次を参照してください。[ライブラリの管理](../../build/reference/managing-a-library.md)します。|
 |**/VERBOSE**|   追加される .obj ファイルの名前を含め、セッションの進行状況の詳細を表示します。<br/><br/>詳細については、次を参照してください。 [LIB の実行](../../build/reference/running-lib.md)します。|

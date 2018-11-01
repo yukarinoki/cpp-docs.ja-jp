@@ -1,10 +1,6 @@
 ---
-title: strcpy_s、wcscpy_s、_mbscpy_s | Microsoft Docs
-ms.custom: ''
+title: strcpy_s、wcscpy_s、_mbscpy_s
 ms.date: 03/22/2086
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscpy_s
 - _mbscpy_s
@@ -28,8 +24,6 @@ f1_keywords:
 - _mbscpy_s
 - _tcscpy_s
 - wcscpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy_s function
 - _tcscpy_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - tcscpy_s function
 - wcscpy_s function
 ms.assetid: 611326f3-7929-4a5d-a465-a4683af3b053
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee648776d4c8b7df1089edf34d30b5c7e59a63c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d7deeb2d3286ca20518527df26c4765197f8a087
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616607"
 ---
 # <a name="strcpys-wcscpys-mbscpys"></a>strcpy_s、wcscpy_s、_mbscpy_s
 
@@ -102,7 +92,7 @@ errno_t _mbscpy_s(
 追加先の文字列バッファーの場所。
 
 *dest_size*<br/>
-移行先の文字列バッファーのサイズ**char**ナローとマルチバイト関数では、ユニットと**wchar_t**ワイド関数の単位。 この値は 0 より大きい値より大きくしたりする必要があります**RSIZE_MAX**です。
+変換先文字列バッファーのサイズ**char**狭いおよびマルチバイト関数でのユニットと**wchar_t**ワイド関数の単位。 この値は 0 より大きいとより大きくないあります**RSIZE_MAX**します。
 
 *src*<br/>
 null で終わる元の文字列バッファー。
@@ -116,22 +106,22 @@ null で終わる元の文字列バッファー。
 |*dest*|*dest_size*|*src*|戻り値|内容*dest*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**|任意|任意|**EINVAL**|変更されない|
-|任意|任意|**NULL**|**EINVAL**|*dest*を 0 に [0] の設定|
-|任意|0 または小さすぎる|任意|**ERANGE**|*dest*を 0 に [0] の設定|
+|任意|任意|**NULL**|**EINVAL**|*dest*[0] が 0 に設定|
+|任意|0 または小さすぎる|任意|**ERANGE**|*dest*[0] が 0 に設定|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strcpy_s**関数のアドレスの内容をコピーする*src*で指定されている場所に、終端の null 文字を含む*dest*です。 コピー先の文字列には、コピー元の文字列とその終端の NULL 文字を保持できるサイズが必要です。 動作**strcpy_s**元とコピー先文字列が重なり合っている場合に定義されていません。
+**Strcpy_s**関数のアドレスの内容をコピーする*src*で指定された場所に、終端の null 文字を含む*dest*します。 コピー先の文字列には、コピー元の文字列とその終端の NULL 文字を保持できるサイズが必要です。 動作**strcpy_s**元とコピー先文字列が重なり合う場合は定義されません。
 
-**wcscpy_s**のワイド文字バージョンは、 **strcpy_s**、および **_mbscpy_s**マルチバイト文字バージョンです。 引数**wcscpy_s**ワイド文字は、文字列以外の **_mbscpy_s**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**wcscpy_s**のワイド文字バージョンは、 **strcpy_s**、および **_mbscpy_s**マルチバイト文字バージョンです。 引数**wcscpy_s**はワイド文字列 **_mbscpy_s**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
-場合*dest*または*src*が null ポインターの場合は、移行先の文字列のサイズまたは*dest_size*小さすぎる、無効なパラメーター ハンドラーが呼び出される、 」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**とき*dest*または*src* null ポインターでは、返される**ERANGE**設定と**errno**に**ERANGE**コピー先文字列が小さすぎる場合です。
+場合*dest*または*src*が null ポインターの場合は、変換先の文字列サイズまたは*dest_size* 」の説明に従って、小さすぎる、無効なパラメーターハンドラーが呼び出されますが[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**とき*dest*または*src* null ポインターの場合は、返される**ERANGE**設定と**errno**に**ERANGE**コピー先文字列が小さすぎる場合。
 
 正常に実行されると、コピー先の文字列は常に NULL で終わります。
 
 C++ では、これらの関数をより簡単に使用できます。これはバッファー長を自動的に推論できるテンプレートのオーバーロードにより可能です。その結果、サイズの引数を指定する必要がなくなります。また、セキュリティが万全ではない以前の関数は、セキュリティが強化された新しい関数に自動的に置き換わります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-これらの関数のデバッグ ライブラリのバージョンは、最初にバッファーを 0 xfe でを入力します。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
+これらの関数のデバッグ ライブラリのバージョンは、最初にバッファーを 0 xfe を埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -139,9 +129,9 @@ C++ では、これらの関数をより簡単に使用できます。これは�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy_s**|**strcpy_s**|**_mbscpy_s**|**wcscpy_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strcpy_s**|\<string.h>|
 |**wcscpy_s**|\<string.h> または \<wchar.h>|
@@ -151,7 +141,7 @@ C++ では、これらの関数をより簡単に使用できます。これは�
 
 ## <a name="example"></a>例
 
-実稼働品質のコードは、このサンプルは、エラーをチェックせず、セキュリティで保護された文字列関数を呼び出します。
+運用環境品質のコードとは異なり、このサンプルは、エラーをチェックせず、セキュリティで保護された文字列関数を呼び出します。
 
 ```C
 // crt_strcpy_s.c
@@ -181,7 +171,7 @@ int main(void)
 String = Hello world from strcpy_s and strcat_s!
 ```
 
-C++ コードを作成するときにテンプレートのバージョンが使いやすい場合があります。
+C++ コードを作成するときに、テンプレートのバージョンが使いやすい可能性があります。
 
 ```cpp
 // crt_wcscpy_s.cpp

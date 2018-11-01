@@ -1,10 +1,6 @@
 ---
-title: condition_variable クラス | Microsoft Docs
-ms.custom: ''
+title: condition_variable クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - condition_variable/std::condition
 - condition_variable/std::condition_variable::condition_variable
@@ -14,11 +10,7 @@ f1_keywords:
 - condition_variable/std::condition_variable::wait
 - condition_variable/std::condition_variable::wait_for
 - condition_variable/std::condition_variable::wait_until
-dev_langs:
-- C++
 ms.assetid: 80b1295c-b73d-4d46-b664-6e183f2eec1b
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::condition
 - std::condition_variable::condition_variable
@@ -28,14 +20,12 @@ helpviewer_keywords:
 - std::condition_variable::wait
 - std::condition_variable::wait_for
 - std::condition_variable::wait_until
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e4d31a93ac8e0f7785ea567821c0ac6b0ad6a58
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 52e64df7522c5e58fa64398f599bffa4614a2684
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109837"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50586746"
 ---
 # <a name="conditionvariable-class"></a>condition_variable クラス
 
@@ -66,7 +56,7 @@ class condition_variable;
 |[wait_for](#wait_for)|スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。|
 |[wait_until](#wait_until)|スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<condition_variable >
 
@@ -94,7 +84,7 @@ native_handle_type native_handle();
 
 ### <a name="return-value"></a>戻り値
 
-`native_handle_type` は、同時実行ランタイムの内部データ構造へのポインターとして定義されます。
+`native_handle_type` は、コンカレンシー ランタイムの内部データ構造へのポインターとして定義されます。
 
 ## <a name="notify_all"></a>  condition_variable::notify_all
 

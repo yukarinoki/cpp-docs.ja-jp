@@ -1,10 +1,6 @@
 ---
-title: _rmdir、_wrmdir | Microsoft Docs
-ms.custom: ''
+title: _rmdir、_wrmdir
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wrmdir
 - _rmdir
@@ -27,8 +23,6 @@ f1_keywords:
 - wrmdir
 - _rmdir
 - _wrmdir
-dev_langs:
-- C++
 helpviewer_keywords:
 - _rmdir function
 - directories [C++], deleting
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wrmdir function
 - wrmdir function
 ms.assetid: 652c2a5a-b0ac-4493-864e-1edf484333c5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 11e6521060932bd1273b6a3888332ac2c8b2bb7b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1169405ae2f03a1e6affe2fcc00d594912e08ae1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406990"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50511125"
 ---
 # <a name="rmdir-wrmdir"></a>_rmdir、_wrmdir
 
@@ -72,7 +62,7 @@ int _wrmdir(
 
 ## <a name="return-value"></a>戻り値
 
-ディレクトリが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 戻り値-1 はエラーを示すと**errno**は、次の値のいずれかに設定します。
+ディレクトリが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 戻り値-1 はエラーを示しますと**errno**値は次のいずれかに設定されます。
 
 |errno の値|条件|
 |-|-|
@@ -82,11 +72,11 @@ int _wrmdir(
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Rmdir**関数で指定されたディレクトリを削除する*dirname*です。 ディレクトリは空である必要があり、現在の作業ディレクトリまたはルート ディレクトリではないことが必要です。
+**_Rmdir**関数で指定されたディレクトリを削除します。 *dirname*します。 ディレクトリは空である必要があり、現在の作業ディレクトリまたはルート ディレクトリではないことが必要です。
 
-**_wrmdir**のワイド文字バージョンは、 **_rmdir**; *dirname*に渡す引数 **_wrmdir**ワイド文字列です。 **_wrmdir**と **_rmdir**それ以外の場合の動作は同じです。
+**_wrmdir**のワイド文字バージョンです **_rmdir**、 *dirname*引数 **_wrmdir**はワイド文字列です。 **_wrmdir**と **_rmdir**動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -94,9 +84,9 @@ int _wrmdir(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_trmdir**|**_rmdir**|**_rmdir**|**_wrmdir**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_rmdir**|\<direct.h>|
 |**_wrmdir**|\<direct.h> または \<wchar.h>|

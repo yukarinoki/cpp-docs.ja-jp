@@ -1,26 +1,15 @@
 ---
-title: フレンド アセンブリ (C++) |Microsoft Docs
-ms.custom: ''
+title: フレンド アセンブリ (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 2dd6e7562f859909db2f3b91c113718bbb133b4b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8aa0b47c1de520693f43794df3ee10fea131c963
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430984"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50652622"
 ---
 # <a name="friend-assemblies-c"></a>フレンド アセンブリ (C++)
 
@@ -38,7 +27,7 @@ ms.locfileid: "46430984"
 
 (この言語機能は Windows ランタイムでないサポート)。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: **/ZW**
 
@@ -62,7 +51,7 @@ ms.locfileid: "46430984"
 
 フレンド アセンブリの機能を使用する代わりに、使用することができます<xref:System.Security.Permissions.StrongNameIdentityPermission>個々 の型へのアクセスを制限します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: **/clr**
 

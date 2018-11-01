@@ -1,10 +1,6 @@
 ---
-title: _chmod、_wchmod | Microsoft Docs
-ms.custom: ''
+title: _chmod、_wchmod
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chmod
 - _wchmod
@@ -25,8 +21,6 @@ f1_keywords:
 - _chmod
 - _wchmod
 - wchmod
-dev_langs:
-- C++
 helpviewer_keywords:
 - _chmod function
 - wchmod function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e4944f871195b276189014ed9d5d294b9b445fd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399954"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50595131"
 ---
 # <a name="chmod-wchmod"></a>_chmod、_wchmod
 
@@ -67,11 +57,11 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、アクセス許可の設定が正常に変更された場合に 0 を返します。 戻り値-1 はエラーを示します。 場合は、指定したファイルが見つかりません、 **errno**に設定されている**ENOENT**以外の場合は、パラメーターが無効、 **errno**に設定されている**EINVAL**です。
+これらの関数は、アクセス許可の設定が正常に変更された場合に 0 を返します。 戻り値-1 はエラーを示します。 指定したファイルが見つからない場合、 **errno**に設定されている**ENOENT**パラメーターが有効でない場合**errno**に設定されている**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Chmod**関数によって指定されたファイルのアクセス許可の設定を変更する*filename*です。 アクセス許可の設定は、ファイルに対する読み取りと書き込みのアクセスを制御します。 整数型の式*pmode* sys \stat.h で定義されている、次のマニフェスト定数の一方または両方が含まれています。
+**_Chmod**関数で指定されたファイルのアクセス許可の設定を変更する*filename*します。 アクセス許可の設定は、ファイルに対する読み取りと書き込みのアクセスを制御します。 整数式*pmode* sys \stat.h で定義されている、次のマニフェスト定数の一方または両方が含まれています。
 
 |*pmode*|説明|
 |-|-|
@@ -79,11 +69,11 @@ int _wchmod( const wchar_t *filename, int pmode );
 **_S_IWRITE**|書き込みが許可されます。 (実際には、読み取りと書き込みが許可されます)。
 **_S_IREAD** &AMP;#124; **_S_IWRITE**|読み取りと書き込みが許可されます。
 
-両方の定数を指定する場合は結合、ビットごとの or 演算子 (**|**)。 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 モードではこのため、 **_S_IWRITE**と **_S_IREAD** | **_S_IWRITE**は同等です。
+ビットごとに参加している両方の定数が指定されると、or 演算子 (**|**)。 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 モードではそのため、 **_S_IWRITE**と **_S_IREAD** | **_S_IWRITE**は同等です。
 
-**_wchmod**のワイド文字バージョンは、 **_chmod**以外の場合は、 *filename*に渡す引数 **_wchmod**ワイド文字列です。 **_wchmod**と **_chmod**それ以外の場合の動作は同じです。
+**_wchmod**のワイド文字バージョンです **_chmod**、 *filename*への引数 **_wchmod**はワイド文字列です。 **_wchmod**と **_chmod**動作は同じです。
 
-この関数は、パラメーターを検証します。 場合*pmode*のマニフェスト定数のいずれかの組み合わせではありませんか、別のセットが組み込まれており、定数の関数はこれらを無視します。 場合*filename*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数は-1 を返します。
+この関数は、パラメーターを検証します。 場合*pmode*マニフェスト定数のいずれかの組み合わせではないまたは代替のセットを組み込んで、定数の関数は、単にそれらを無視します。 場合*filename*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数は-1 を返します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -91,9 +81,9 @@ int _wchmod( const wchar_t *filename, int pmode );
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tchmod**|**_chmod**|**_chmod**|**_wchmod**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_chmod**|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
 |**_wchmod**|\<io.h> または \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|

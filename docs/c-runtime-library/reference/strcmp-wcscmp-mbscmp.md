@@ -1,10 +1,6 @@
 ---
-title: strcmp、wcscmp、_mbscmp | Microsoft Docs
-ms.custom: ''
+title: strcmp、wcscmp、_mbscmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcscmp
 - _mbscmp
@@ -31,8 +27,6 @@ f1_keywords:
 - strcmp
 - _tcscmp
 - _ftcscmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcscmp function
 - strcmp function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - _ftcscmp function
 - ftcscmp function
 ms.assetid: 5d216b57-7a5c-4cb3-abf0-0f4facf4396d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca1591bba9518b1b5f6122f51bf60f5a23fc7a26
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b7d8614fffc96a600c0d1f92b85503259cfc5cbb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44319007"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600526"
 ---
 # <a name="strcmp-wcscmp-mbscmp"></a>strcmp、wcscmp、_mbscmp
 
@@ -115,7 +105,7 @@ Null で終わる比較対象の文字列。
 
 **Strcmp**関数は大文字小文字を区別します。 **_stricmp**、 **_wcsicmp**、および **_mbsicmp**最初に変換してに小文字の形式の文字列を比較します。 'Z' の間にある文字が含まれている 2 つの文字列と ASCII の表の 'a' ('['、'\\'、']'、' ^'、'_' と'\`')、大文字と小文字によって異なる方法で、比較します。 たとえば、2 つの文字列"ABCDE"と"ABCD ^"場合は、比較では、小文字、1 つの方法を比較 ("abcde">"abcd ^") と、その他の方法 ("ABCDE"<"ABCD ^")、比較が大文字の場合。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

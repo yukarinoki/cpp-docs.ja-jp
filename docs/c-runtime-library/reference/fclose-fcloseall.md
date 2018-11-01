@@ -1,10 +1,6 @@
 ---
-title: fclose、_fcloseall | Microsoft ドキュメント
-ms.custom: ''
+title: fclose、_fcloseall
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fclose
 - _fcloseall
@@ -24,27 +20,21 @@ apitype: DLLExport
 f1_keywords:
 - fclose
 - _fcloseall
-dev_langs:
-- C++
 helpviewer_keywords:
 - fclose function
 - streams, closing
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 71b98a239cd1a6504611bf436533e7b5fbe1302c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400240"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536514"
 ---
 # <a name="fclose-fcloseall"></a>fclose、_fcloseall
 
-ストリームを閉じます (**fclose**) または開いているすべてのストリームを閉じる (**_fcloseall**)。
+ストリームを閉じます (**fclose**) またはすべての開いているストリームを閉じる (**_fcloseall**)。
 
 ## <a name="syntax"></a>構文
 
@@ -64,19 +54,19 @@ int _fcloseall( void );
 
 **fclose**ストリームが正常に閉じられた場合は 0 を返します。 **_fcloseall**閉じられたストリームの合計数を返します。 どちらの関数が返す**EOF**はエラーを示します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Fclose**関数の閉じ*ストリーム*です。 場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**fclose**設定**errno**に**EINVAL**し、返します**EOF**です。 推奨、*ストリーム*常にポインターがこの関数を呼び出す前にチェックします。
+**Fclose**関数の閉じ*ストリーム*します。 場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**fclose**設定**errno**に**EINVAL**返します**EOF**します。 推奨されます、*ストリーム*常にポインターがこの関数を呼び出す前にチェックされます。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-**_Fcloseall**関数は除く、開いているすべてのストリームをクローズ**stdin**、 **stdout**、 **stderr** (および、MS-DOS、 **_stdaux**と **_stdprn**)。 また、閉じ、によって作成された一時ファイルを削除**tmpfile**です。 両方の関数では、終了する前に、ストリームに関連付けられているすべてのバッファーがフラッシュされます。 システムによって割り当てられたバッファーについては、ストリームを閉じる際に解放します。 持つユーザーによって割り当てられたバッファー **setbuf**と**setvbuf**は自動的に解放されません。
+**_Fcloseall**関数を除くすべての開いているストリームを閉じます**stdin**、 **stdout**、 **stderr** (および、MS-DOS、 **_stdaux**と **_stdprn**)。 また終了し、によって作成された一時ファイルを削除します。 **tmpfile**します。 両方の関数では、終了する前に、ストリームに関連付けられているすべてのバッファーがフラッシュされます。 システムによって割り当てられたバッファーについては、ストリームを閉じる際に解放します。 持つユーザーによって割り当てられたバッファー **setbuf**と**setvbuf**は自動的に解放されません。
 
-**注:** これらの関数を使用してストリームを閉じる場合は、ストリームだけでなく基になるファイル記述子と OS ファイル ハンドル (またはソケット) も閉じられます。 したがって、ファイルが最初に開いた場合、ファイルとして処理ファイル記述子やを閉じるには**fclose**、呼び出しではないも **_close**をファイル記述子を閉じる以外の場合は、Win32 関数を呼び出す必要はありません**CloseHandle**ファイル ハンドルを閉じることです。
+**注:** これらの関数を使用してストリームを閉じる場合は、ストリームだけでなく基になるファイル記述子と OS ファイル ハンドル (またはソケット) も閉じられます。 そのため、ファイルが最初に開かれている場合、ファイルとして処理ファイル記述子やを閉じるには**fclose**、呼び出し **_close**にファイル記述子を閉じます Win32 関数を呼び出さないでください **。CloseHandle**ファイル ハンドルを閉じます。
 
-**fclose**と **_fcloseall**他のスレッドによる干渉から保護するコードを追加します。 ロックしないバージョンの**fclose**を参照してください **_fclose_nolock**です。
+**fclose**と **_fcloseall**他のスレッドによる干渉から保護するためのコードが含まれます。 ロックしないバージョンの**fclose**を参照してください **_fclose_nolock**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

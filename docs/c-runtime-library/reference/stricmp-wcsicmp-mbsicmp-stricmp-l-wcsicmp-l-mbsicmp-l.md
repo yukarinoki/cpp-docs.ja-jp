@@ -1,10 +1,6 @@
 ---
-title: _stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l | Microsoft Docs
-ms.custom: ''
+title: _stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _stricmp_l
 - _mbsicmp
@@ -39,8 +35,6 @@ f1_keywords:
 - _fstricmp
 - mbsicmp_l
 - mbsicmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsicmp function
 - _stricmp_l function
@@ -62,16 +56,12 @@ helpviewer_keywords:
 - mbsicmp_l function
 - _strcmpi function
 ms.assetid: 0e1ee515-0d75-435a-a445-8875d4669b50
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0014ea3c727db2a368123696c47df1eca6ba3bb4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d27b2128d79d7ff3ab0150e182d494fed52d46ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32418329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559078"
 ---
 # <a name="stricmp-wcsicmp-mbsicmp-stricmpl-wcsicmpl-mbsicmpl"></a>_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l
 
@@ -126,32 +116,32 @@ Null で終わる比較対象の文字列。
 
 |戻り値|説明|
 |------------------|-----------------|
-|< 0|*string1*より小さい*string2*|
+|< 0|*string1*未満*string2*|
 |0|*string1*と同じ*string2*|
 |> 0|*string1*より大きい*string2*|
 
-エラーが発生した、 **_mbsicmp**返します**すると**で定義されている\<string.h > と\<mbstring.h >。
+エラー、 **_mbsicmp**返します**すると**、定義されている\<string.h > と\<mbstring.h >。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Stricmp**関数序数に基づく比較*string1*と*string2*との関係を示す値を小文字で返す各文字を変換した後です。 **_stricmp**とは異なります **_stricoll**点で、 **_stricmp**比較がのみ影響を受けました**LC_CTYPE**、どの文字が上限を決定し、小文字します。 **_Stricoll**関数が両方に従って文字列を比較し、 **LC_CTYPE**と**LC_COLLATE**大文字と小文字および照合順序の両方が含まれているロケールのカテゴリ順序です。 詳細については、 **LC_COLLATE**カテゴリを参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)と[ロケールのカテゴリ](../../c-runtime-library/locale-categories.md)です。 この関数のバージョン、 **_l**サフィックスは、ロケールに依存する動作に現在のロケールを使用します。 サフィックスが付いているバージョンは、代わりに渡されたロケールを使用する点を除き、同じです。 ロケールが設定されていない場合は、C ロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_Stricmp**関数序数の比較*string1*と*string2*その関係を示す値を小文字で返す各文字を変換した後。 **_stricmp**とは異なります **_stricoll**で、 **_stricmp**比較がのみによって影響を受ける**LC_CTYPE**、どの文字が上限を決定し、小文字します。 **_Stricoll**関数は両方に基づいて文字列を比較、 **LC_CTYPE**と**LC_COLLATE**場合と、照合順序の両方を含む、ロケールのカテゴリ順序。 詳細については、 **LC_COLLATE**カテゴリを参照してください[setlocale](setlocale-wsetlocale.md)と[ロケールのカテゴリ](../../c-runtime-library/locale-categories.md)します。 この関数のバージョン、 **_l**サフィックスは、ロケールに依存する動作の現在のロケールを使用します。 サフィックスが付いているバージョンは、代わりに渡されたロケールを使用する点を除き、同じです。 ロケールが設定されていない場合は、C ロケールが使用されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!NOTE]
-> **_stricmp**は等価 **_strcmpi**です。 同じ意味で使用できますが、 **_stricmp**は標準の優先します。
+> **_stricmp**と等価 **_strcmpi**します。 同じ意味で使用できますが、 **_stricmp**が優先される標準です。
 
-**_Strcmpi**関数と同じ **_stricmp**旧バージョンとの互換性を保つのために提供されます。
+**_Strcmpi**関数は等価 **_stricmp**と旧バージョンとの互換性を保つのために提供されます。
 
-**_Stricmp**は小文字の比較、予期しない動作する可能性があります。
+**_Stricmp**は小文字の比較、予期しない動作可能性があります。
 
 ときに説明するためにで、大文字 **_stricmp**結果に影響の比較には、JOHNSTON と JOHN_HENRY は、2 つの文字列を使用するいると仮定します。 "_" の ASCII 値は小文字の S よりも小さいので、JOHN_HENRY は JOHNSTON よりも小さいとみなされます。実際、91 ～ 96 の ASCII 値を持つ文字はすべて、他の文字よりも小さいと判断されます。
 
-場合、 [strcmp](strcmp-wcscmp-mbscmp.md)関数がの代わりに使用される **_stricmp**JOHN_HENRY は JOHNSTON よりも大きい値を指定します。
+場合、 [strcmp](strcmp-wcscmp-mbscmp.md)の代わりに関数を使用して **_stricmp**JOHN_HENRY は JOHNSTON よりも大きくなります。
 
-**_wcsicmp**と **_mbsicmp**のワイド文字とマルチバイト文字バージョンは、 **_stricmp**です。 引数と戻り値の **_wcsicmp**ワイド文字は、文字列以外の **_mbsicmp**マルチバイト文字列です。 **_mbsicmp**現在のマルチバイト コード ページに基づいてマルチバイト文字シーケンスを認識し、返します**すると**エラーが発生します。 詳細については、「[コード ページ](../../c-runtime-library/code-pages.md)」をご覧ください。 それ以外では、これらの関数の動作は同じです。
+**_wcsicmp**と **_mbsicmp**のワイド文字とマルチバイト文字バージョン **_stricmp**します。 引数と戻り値の **_wcsicmp**はワイド文字列 **_mbsicmp**はマルチバイト文字の文字列。 **_mbsicmp**現在のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、返します**すると**エラーが発生します。 詳細については、「[コード ページ](../../c-runtime-library/code-pages.md)」をご覧ください。 それ以外では、これらの関数の動作は同じです。
 
-**_wcsicmp**と**wcscmp**という点以外の動作は同じ**wcscmp**その引数を比較する前に小文字に変換されません。 **_mbsicmp**と **_mbscmp**という点以外の動作は同じ **_mbscmp**その引数を比較する前に小文字に変換されません。
+**_wcsicmp**と**wcscmp**動作は同じことを除いて**wcscmp**それらを比較する前に小文字に引数を変換できません。 **_mbsicmp**と **_mbscmp**動作は同じことを除いて **_mbscmp**それらを比較する前に小文字に引数を変換できません。
 
-呼び出す必要があります[setlocale、_wsetlocale](setlocale-wsetlocale.md)の **_wcsicmp** Latin 1 文字を使用します。 既定では、C ロケールが有効になっているので、たとえば、ä は Ä と等しいと見なされません。 呼び出す**setlocale、_wsetlocale**呼び出しの前に、C ロケール以外のロケールで **_wcsicmp**です。 次のサンプルでどのように **_wcsicmp**ロケールは。
+呼び出す必要があります[setlocale](setlocale-wsetlocale.md)の **_wcsicmp** Latin 1 文字を使用します。 既定では、C ロケールが有効になっているので、たとえば、ä は Ä と等しいと見なされません。 呼び出す**setlocale**呼び出しの前に、C ロケール以外のロケールで **_wcsicmp**します。 次のサンプルではどのように **_wcsicmp**ロケールは。
 
 ```C
 // crt_stricmp_locale.c
@@ -167,9 +157,9 @@ int main() {
 }
 ```
 
-呼び出すには、代わりに[_create_locale、_wcreate_locale](create-locale-wcreate-locale.md)へのパラメーターとして返されたロケール オブジェクトを渡すと **_wcsicmp_l**です。
+呼び出す代わりには、 [_create_locale、_wcreate_locale](create-locale-wcreate-locale.md)へのパラメーターとして返されたロケール オブジェクトを渡すと **_wcsicmp_l**します。
 
-これらのすべての関数では、パラメーターの検証が行われます。 いずれか*string1*または*string2*が null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、**すると**設定と**errno**に**EINVAL**です。
+これらのすべての関数では、パラメーターの検証が行われます。 いずれか*string1*または*string2*が null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、**すると**設定と**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -177,9 +167,9 @@ int main() {
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsicmp**|**_stricmp**|**_mbsicmp**|**_wcsicmp**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_stricmp**、 **_stricmp_l**|\<string.h>|
 |**_wcsicmp**、 **_wcsicmp_l**|\<string.h> または \<wchar.h>|

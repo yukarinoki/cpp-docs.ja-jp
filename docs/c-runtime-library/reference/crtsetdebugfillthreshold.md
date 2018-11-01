@@ -1,10 +1,6 @@
 ---
-title: _CrtSetDebugFillThreshold | Microsoft Docs
-ms.custom: ''
+title: _CrtSetDebugFillThreshold
 ms.date: 03/21/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetDebugFillThreshold
 apilocation:
@@ -22,8 +18,6 @@ apitype: DLLExport
 f1_keywords:
 - _CrtSetDebugFillThreshold
 - CrtSetDebugFillThreshold
-dev_langs:
-- C++
 helpviewer_keywords:
 - debug, buffer-filling behavior
 - CrtSetDebugFillThreshold function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - buffer-filling behavior
 - 0xFD
 ms.assetid: 6cb360e8-56ae-4248-b17f-e28aee3e0ed7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0980331389a36fa123c6ee64989296f5afec5c8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ebe958ddc1c9a5c372f4ae68336e0dea3144e8b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398660"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602203"
 ---
 # <a name="crtsetdebugfillthreshold"></a>_CrtSetDebugFillThreshold
 
@@ -55,17 +45,17 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 ### <a name="parameters"></a>パラメーター
 
 *newThreshold*<br/>
-新しいしきい値サイズ バイト数。
+しきい値のサイズ (バイト単位) に新しいします。
 
 ## <a name="return-value"></a>戻り値
 
 以前のしきい値の値。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-一部のセキュリティが強化された CRT 関数のデバッグ バージョンは、特殊文字に渡されたバッファーを埋めます (0 xfe)。 関数に不適切なサイズが渡された場合、それを見つけることができます。 残念ながら、パフォーマンスを低下させます。 パフォーマンスを向上させるには、使用 **_CrtSetDebugFillThreshold**よりも大きいバッファーのバッファー入力に無効にする、 *newThreshold*しきい値です。 A *newThreshold* 0 の値は、すべてのバッファーを無効にします。
+一部のセキュリティが強化された CRT 関数のデバッグ バージョンは、特殊文字とそれに渡されたバッファーを埋めます (0 xfe)。 関数に不適切なサイズが渡された場合、それを見つけることができます。 残念ながら、パフォーマンスを低下させます。 パフォーマンスを向上させるのには、使用 **_CrtSetDebugFillThreshold**より大きいバッファーのバッファー入力に無効にする、 *newThreshold*しきい値。 A *newThreshold* 0 の値は、すべてのバッファーを無効にします。
 
-既定のしきい値は**SIZE_T_MAX**です。
+既定のしきい値は**SIZE_T_MAX**します。
 
 影響を受ける関数の一覧は次のようになります。
 
@@ -105,13 +95,13 @@ size_t _CrtSetDebugFillThreshold( size_t newThreshold );
 
 - [_strupr_s、_strupr_s_l、_mbsupr_s、_mbsupr_s_l、_wcsupr_s、_wcsupr_s_l](strupr-s-strupr-s-l-mbsupr-s-mbsupr-s-l-wcsupr-s-wcsupr-s-l.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_CrtSetDebugFillThreshold**|\<crtdbg.h>|
 
-この関数は、Microsoft に固有です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+この関数は、Microsoft 固有です。 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="libraries"></a>ライブラリ
 

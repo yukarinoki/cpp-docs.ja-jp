@@ -1,10 +1,6 @@
 ---
-title: mktime、_mktime32、_mktime64 | Microsoft Docs
-ms.custom: ''
+title: mktime、_mktime32、_mktime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mktime32
 - mktime
@@ -25,8 +21,6 @@ apitype: DLLExport
 f1_keywords:
 - mktime
 - _mktime64
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mktime32 function
 - mktime function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _mktime64 function
 - time, converting
 ms.assetid: 284ed5d4-7064-48a2-bd50-15effdae32cf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 68211c3807893d28adb5e90e8863967b7f60318f
-ms.sourcegitcommit: 3a141cf07b5411d5f1fdf6cf67c4ce928cf389c3
+ms.openlocfilehash: 8e9524249d6c90323bdcfc0b92ecf2dad281c79b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49083568"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499906"
 ---
 # <a name="mktime-mktime32-mktime64"></a>mktime、_mktime32、_mktime64
 
@@ -99,7 +89,7 @@ C ランタイム ライブラリは、[TZ](tzset.md) 環境変数から夏時�
 
 これらの関数では、パラメーターの検証が行われます。 *timeptr* が null ポインターである場合は、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

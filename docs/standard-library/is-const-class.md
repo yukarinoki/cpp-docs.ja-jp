@@ -1,28 +1,18 @@
 ---
-title: is_const クラス | Microsoft Docs
-ms.custom: ''
+title: is_const クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_const
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_const class
 - is_const
 ms.assetid: 55b8e887-9c3f-4a1d-823a-4a257337b205
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 83c929548d95ec0a741fd4b65c372402d22f2679
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 23a81922647c2e2f1a1fa327a036e079d9e38800
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44099552"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666753"
 ---
 # <a name="isconst-class"></a>is_const クラス
 
@@ -80,7 +70,7 @@ is_const<int> == false
 is_const<const int> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

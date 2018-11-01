@@ -1,31 +1,21 @@
 ---
-title: バイナリ出力ファイル | Microsoft Docs
-ms.custom: ''
+title: バイナリ出力ファイル
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - I/O [C++], binary output files
 - files [C++], binary output files
 - binary data, binary output files
 ms.assetid: 180954af-8cd6-444b-9a76-2f630a3389d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cdb101620b1a61f3a29057ee408cf9e89d38f9e8
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 99445275a8f92622f451e8a88082dc2b28fb60b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842353"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615645"
 ---
 # <a name="binary-output-files"></a>バイナリ出力ファイル
 
-ストリームは本来、テキスト向けとして設計されており、既定の出力モードはテキストです。 テキスト モードでは、改行文字 (16 進数の 10) は、改行 (16 ビットのみ) に展開されます。 この拡大は次のような問題を起こす可能性があります。
+ストリームは本来、テキスト向けとして設計されており、既定の出力モードはテキストです。 テキスト モードでは、改行文字 (16 進数 10) は、キャリッジ リターンとラインフィード (16 ビットのみ) に展開されます。 この拡大は次のような問題を起こす可能性があります。
 
 ```cpp
 // binary_output_files.cpp

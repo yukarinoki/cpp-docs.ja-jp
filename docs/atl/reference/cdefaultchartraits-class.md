@@ -1,30 +1,20 @@
 ---
-title: CDefaultCharTraits クラス |Microsoft Docs
-ms.custom: ''
+title: CDefaultCharTraits クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CDefaultCharTraits
 - ATLCOLL/ATL::CDefaultCharTraits
 - ATLCOLL/ATL::CDefaultCharTraits::CharToLower
 - ATLCOLL/ATL::CDefaultCharTraits::CharToUpper
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDefaultCharTraits class
 ms.assetid: f94a3934-597f-401d-8513-ed6924ae069a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69b6a7b94e993641452154ede11d65929424df5e
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8ea73da76f079359a4fc0250cacf70d10b545038
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46095756"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660836"
 ---
 # <a name="cdefaultchartraits-class"></a>CDefaultCharTraits クラス
 
@@ -55,7 +45,7 @@ class CDefaultCharTraits
 
 このクラスには、クラスによって使用されている関数[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcoll.h
 

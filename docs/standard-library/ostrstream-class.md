@@ -1,33 +1,23 @@
 ---
-title: ostrstream クラス | Microsoft Docs
-ms.custom: ''
+title: ostrstream クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - strstream/std::ostrstream::freeze
 - strstream/std::ostrstream::pcount
 - strstream/std::ostrstream::rdbuf
 - strstream/std::ostrstream::str
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::ostrstream [C++], freeze
 - std::ostrstream [C++], pcount
 - std::ostrstream [C++], rdbuf
 - std::ostrstream [C++], str
 ms.assetid: e2e34679-b266-4728-a8e1-8eda5d400e46
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 526ed4340446e78a723af97f43fbed401f574764
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2d4a7a780f1a7db27bcb600c13430deaa0dc35cd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106045"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50537736"
 ---
 # <a name="ostrstream-class"></a>ostrstream クラス
 
@@ -61,7 +51,7 @@ class ostrstream : public ostream
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
 |[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<strstream>
 

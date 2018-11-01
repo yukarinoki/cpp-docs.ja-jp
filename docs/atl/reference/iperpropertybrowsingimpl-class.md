@@ -1,10 +1,6 @@
 ---
-title: IPerPropertyBrowsingImpl クラス |Microsoft Docs
-ms.custom: ''
+title: IPerPropertyBrowsingImpl クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - IPerPropertyBrowsingImpl
 - ATLCTL/ATL::IPerPropertyBrowsingImpl
@@ -12,23 +8,17 @@ f1_keywords:
 - ATLCTL/ATL::IPerPropertyBrowsingImpl::GetPredefinedStrings
 - ATLCTL/ATL::IPerPropertyBrowsingImpl::GetPredefinedValue
 - ATLCTL/ATL::IPerPropertyBrowsingImpl::MapPropertyToPage
-dev_langs:
-- C++
 helpviewer_keywords:
 - IPerPropertyBrowsingImpl class
 - property pages, accessing information
 - IPerPropertyBrowsing, ATL implementation
 ms.assetid: 0b1a9be3-d242-4767-be69-663a21e4b728
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a8fc5cc44eeb06c5afec23b6a0a094c14987c599
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: ce7c581d4378cb1f6e5556d488164a9b5fd9098a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46096094"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50585303"
 ---
 # <a name="iperpropertybrowsingimpl-class"></a>IPerPropertyBrowsingImpl クラス
 
@@ -77,7 +67,7 @@ class ATL_NO_VTABLE IPerPropertyBrowsingImpl :
 
 `IPerPropertyBrowsingImpl`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlctl.h
 

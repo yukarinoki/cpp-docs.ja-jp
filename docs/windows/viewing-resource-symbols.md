@@ -1,30 +1,19 @@
 ---
-title: リソース シンボル (C++) の表示 |Microsoft Docs
-ms.custom: ''
+title: リソース シンボル (C++) の表示
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.managing
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++], viewing
 - resource symbols
 - symbols [C++], viewing
 ms.assetid: 4bcc06d9-7d36-486a-8a37-71da0541643c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0a0a73657d5ea2167e8156a2567e39acf16f055d
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 8c5d36b9338d700e69237306a4d97793bec593d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317681"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50547391"
 ---
 # <a name="viewing-resource-symbols"></a>リソース シンボルの表示
 
@@ -40,7 +29,7 @@ ms.locfileid: "44317681"
    > [!NOTE]
    > 定義済みのシンボルを表示するには、確認、**読み取り専用のシンボルを表示**チェック ボックスをオンします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

@@ -1,10 +1,6 @@
 ---
-title: OLE コントロールのダイアログ データの交換関数 |Microsoft Docs
-ms.custom: ''
+title: OLE コントロールのダイアログ データ エクスチェンジ (DDX) 関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - AFXDISP/DDX_OCBool
 - AFXDISP/DDX_OCBoolRO
@@ -18,22 +14,16 @@ f1_keywords:
 - AFXDISP/DDX_OCShortRO
 - AFXDISP/DDX_OCText
 - AFXDISP/DDX_OCTextRO
-dev_langs:
-- C++
 helpviewer_keywords:
 - OLE controls [MFC], DDX functions
 - DDX (dialog data exchange), OLE support
 ms.assetid: 7ef1f288-ff65-40d4-aad2-5497bc00bb27
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a24bac5e27b0a3e0b1c011b1bb6019be2160d281
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5d330d8dd423927a3f4abbe6475a8d6219fa9af2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382311"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531249"
 ---
 # <a name="dialog-data-exchange-functions-for-ole-controls"></a>OLE コントロールのダイアログ データ エクスチェンジ (DDX) 関数
 
@@ -84,9 +74,9 @@ void AFXAPI DDX_OCBool(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー :** afxdisp.h
 
@@ -118,9 +108,9 @@ void AFXAPI DDX_OCBoolRO(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -152,9 +142,9 @@ void AFXAPI DDX_OCColor(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -186,9 +176,9 @@ void AFXAPI DDX_OCColorRO(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -226,9 +216,9 @@ void AFXAPI DDX_OCFloat(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -266,9 +256,9 @@ void AFXAPI DDX_OCFloatRO(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -306,9 +296,9 @@ void AFXAPI DDX_OCInt(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -346,9 +336,9 @@ void AFXAPI DDX_OCIntRO(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -380,9 +370,9 @@ void AFXAPI DDX_OCShort(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -414,9 +404,9 @@ void AFXAPI DDX_OCShortRO(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -448,9 +438,9 @@ void AFXAPI DDX_OCText(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -482,9 +472,9 @@ void AFXAPI DDX_OCTextRO(
 
 ### <a name="remarks"></a>Remarks
 
-DDX の詳細については、次を参照してください。[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 

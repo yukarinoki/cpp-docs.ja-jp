@@ -1,11 +1,6 @@
 ---
-title: c16rtomb、c32rtomb1 | Microsoft Docs
-ms.custom: ''
+title: c16rtomb、c32rtomb1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - c16rtomb
 - c32rtomb
@@ -27,22 +22,16 @@ f1_keywords:
 - c32rtomb
 - uchar/c16rtomb
 - uchar/c32rtomb
-dev_langs:
-- C++
 helpviewer_keywords:
 - c16rtomb function
 - c32rtomb function
 ms.assetid: 7f5743ca-a90e-4e3f-a310-c73e16f4e14d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3282fb13e5b59ad3214c67410eef5186687114e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0d735363bbb317b06c1ebc73a2b0678479a243ee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394545"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536592"
 ---
 # <a name="c16rtomb-c32rtomb"></a>c16rtomb、c32rtomb
 
@@ -76,19 +65,19 @@ size_t c32rtomb(
 
 ## <a name="return-value"></a>戻り値
 
-配列オブジェクトに格納されるバイト数*mbchar*、シフト シーケンスを含むです。 場合*wchar*は有効なワイド文字値はありません (**size_t**)(-1) が返されます、 **errno**に設定されている**EILSEQ**の値*状態*は指定されていません。
+配列オブジェクトに格納されるバイト数*mbchar*、シフト シーケンスを含むです。 場合*wchar*有効なワイド文字で、値はありません (**size_t**)(-1) が返される**errno**に設定されている**EILSEQ**の値*状態*が指定されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**C16rtomb**関数 utf-16 文字に変換*wchar*を現在のロケールで同等のマルチバイトのナロウ文字シーケンスです。 場合*mbchar*が null ポインター、配列オブジェクトに変換されたシーケンスを指す関数ストア*mbchar*です。 最大**MB_CUR_MAX**に格納されるバイト*mbchar*、および*状態*が結果として得られるシフト状態に設定します。    場合*wchar* null ワイド文字に必要なシーケンスは、初期のシフト状態が格納されている、必要な場合、復元後に、null 文字で、および*状態*が初期変換状態に設定します。 **C32rtomb**関数は同一ですが、utf-32 文字に変換します。
+**C16rtomb**関数 utf-16 の文字変換*wchar*を現在のロケールで同等のマルチバイトのナロウ文字シーケンス。 場合*mbchar*によって示される配列オブジェクトに変換されたシーケンスの関数は、null ポインターではない*mbchar*します。 最大**MB_CUR_MAX**格納されるバイト*mbchar*と*状態*が結果として得られるマルチバイトのシフト状態に設定します。    場合*wchar* null ワイド文字に必要なシーケンスは、初期のシフト状態が格納されている、必要な場合、復元後に、null 文字と*状態*が初期の変換状態に設定します。 **C32rtomb**関数は同じですが、utf-32 文字に変換します。
 
-場合*mbchar* null ポインターでは、動作は同等の内部バッファーを置換する関数への呼び出しに*mbchar*とのワイド null 文字*wchar*です。
+場合*mbchar* null ポインターの場合は、動作は同等の内部バッファーを置換する関数への呼び出しに*mbchar*とのワイド null 文字*wchar*します。
 
-*状態*変換状態オブジェクトは、この関数とマルチバイト出力のシフト状態を維持するその他の再開可能な関数を続けて呼び出すことができます。 結果はへの呼び出しまたは再開可能なと再開不可能関数の使用を混在させた場合に定義されていない**setlocale、_wsetlocale**が再開可能な関数呼び出しの間で行われます。
+*状態*変換状態オブジェクトを使用すると、この関数とマルチバイト出力のシフト状態を維持するその他の再開可能関数への後続の呼び出しを行います。 結果は、再開可能と再開不可能関数の使用を混在させることへの呼び出しの場合、または未定義**setlocale**再開可能な関数呼び出しの間で確立します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**c16rtomb**、 **c32rtomb**|C、C++: \<uchar.h>|
 

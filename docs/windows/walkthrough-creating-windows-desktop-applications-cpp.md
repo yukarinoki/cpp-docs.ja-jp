@@ -1,27 +1,17 @@
 ---
-title: 'チュートリアル: 従来 Windows デスクトップ アプリケーション (C++) の作成 |Microsoft Docs'
+title: 'チュートリアル: 従来 Windows デスクトップ アプリケーション (C++) の作成します。'
 ms.custom: get-started-article
 ms.date: 09/18/2018
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0b50234efa193adda081520667658f57e42de1b4
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528379"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来 Windows デスクトップ アプリケーション (C++) の作成します。
 
@@ -142,7 +132,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
    この関数で処理するコードを記述する*メッセージ*アプリケーションが Windows から受信するときに*イベント*発生します。 たとえば場合は、ユーザーは、アプリケーションで、[ok] ボタンを選択、Windows では、メッセージを送信して、内のコードを記述することができます、`WndProc`はどのような作業が適切な関数です。 呼び出された*処理*イベント。 アプリケーションに関連するイベントを処理するだけです。
 
-   詳細については、次を参照してください。[ウィンドウ プロシージャ](https://msdn.microsoft.com/library/windows/desktop/ms632593)します。
+   詳細については、「 [ウィンドウ プロシージャ](https://msdn.microsoft.com/library/windows/desktop/ms632593)」を参照してください。
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>WinMain 関数に機能を追加するには
 
@@ -167,7 +157,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
    上記の構造体のフィールドの詳細については、次を参照してください。 [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)します。
 
-1. 登録、`WNDCLASSEX`で Windows メッセージを送信する方法と、ウィンドウの詳細が認識できるようにします。 使用して、 [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587)関数し、ウィンドウ クラス構造体を引数として渡します。 `_T`マクロを使用しているために使用、`TCHAR`型。
+1. 登録、`WNDCLASSEX`で Windows メッセージを送信する方法と、ウィンドウの詳細が認識できるようにします。 [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) 関数を使用して、ウィンドウ クラス構造体を引数として渡します。 `_T`マクロを使用しているために使用、`TCHAR`型。
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -181,7 +171,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    }
    ```
 
-1. これで、ウィンドウを作成できます。 使用して、 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)関数。
+1. これで、ウィンドウを作成できます。 [CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) 関数を使用します。
 
    ```cpp
    static TCHAR szWindowClass[] = _T("DesktopApp");
@@ -219,7 +209,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    }
    ```
 
-   この関数を返します、`HWND`ウィンドウのハンドルであります。 ハンドルは、Windows が開いているウィンドウを追跡するために使用するポインターのようなものです。 詳細については、次を参照してください。[データ型の Windows](/windows/desktop/WinProg/windows-data-types)します。
+   この関数を返します、`HWND`ウィンドウのハンドルであります。 ハンドルは、Windows が開いているウィンドウを追跡するために使用するポインターのようなものです。 詳細については、「 [Windows のデータ型](/windows/desktop/WinProg/windows-data-types)」を参照してください。
 
 1. この時点では、ウィンドウが作成されたらが表示されるように Windows に指示する必要があります。 このコードを行っています。
 
@@ -342,7 +332,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
    1 つの重要なメッセージを処理するためには、 [WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージ。 アプリケーションが受信、`WM_PAINT`メッセージとその表示されたウィンドウの一部を更新する必要があります。 これらのイベントが発生した場合、アプリケーションが認識しないと、ユーザーは、ウィンドウの前にウィンドウを移動し、移動しますから、もう一度イベントが発生します。 Windows のみを知っていればに通知するように`WM_PAINT`します。 最初に、ウィンドウが表示されるときにすべての更新する必要があります。
 
-   処理するために、`WM_PAINT`メッセージ、最初の呼び出し[BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)、テキスト、ボタン、およびウィンドウで、他のコントロールをレイアウトするすべてのロジックを処理し、呼び出す[EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)します。 アプリケーションで、最初の呼び出しと最後の呼び出しの間のロジックは文字列「こんにちは, Windows デスクトップ!」を表示するには ウィンドウです。 次のコードでわかるように、 [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta)関数は、文字列を表示するために使用します。
+   `WM_PAINT` メッセージを処理するには、まず [BeginPaint](/windows/desktop/api/winuser/nf-winuser-beginpaint)を呼び出して、ウィンドウのテキスト、ボタン、その他のコントロールをレイアウトするためのすべてのロジックを処理し、次に [EndPaint](/windows/desktop/api/winuser/nf-winuser-endpaint)を呼び出します。 アプリケーションで、最初の呼び出しと最後の呼び出しの間のロジックは文字列「こんにちは, Windows デスクトップ!」を表示するには ウィンドウです。 次のコードでは、文字列を表示するために [TextOut](/windows/desktop/api/wingdi/nf-wingdi-textouta) 関数が使用されていることに注意してください。
 
    ```cpp
    PAINTSTRUCT ps;

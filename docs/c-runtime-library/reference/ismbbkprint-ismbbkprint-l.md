@@ -1,10 +1,6 @@
 ---
-title: _ismbbkprint、_ismbbkprint_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbkprint、_ismbbkprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkprint
 - _ismbbkprint_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbkprint
 - _ismbbkprint
 - ismbbkprint_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkprint function
 - ismbbkprint_l function
 - ismbbkprint function
 - _ismbbkprint_l function
 ms.assetid: 8d1d3258-1e34-4365-81ed-97c95de25475
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a1a6a215bac14f81d29d83a856313133fb4e88a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9d30abb0bcb587aeb15087ceb80d60d54ac1bebe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399502"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50645979"
 ---
 # <a name="ismbbkprint-ismbbkprintl"></a>_ismbbkprint、_ismbbkprint_l
 
@@ -71,11 +61,11 @@ int _ismbbkprint_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbkprint**場合は 0 以外の値を返します、整数*c*されていない場合は、非 ASCII テキストまたは ASCII 以外の区切り記号。 たとえば、コード ページ 932 でのみ、**_ismbbkprint** はカタカナの英数字、またはカタカナの句読点 (範囲: 0xA1 - 0xDF) をテストします。 **_ismbbkprint**ロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbkprint_l**に渡されたロケールを使用する点を除いてと同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_ismbbkprint**場合は、0 以外の値を返します、整数*c*が非 ASCII テキストまたは非 ASCII 区切り記号でない場合。 たとえば、コード ページ 932 でのみ、**_ismbbkprint** はカタカナの英数字、またはカタカナの句読点 (範囲: 0xA1 - 0xDF) をテストします。 **_ismbbkprint**ロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbkprint_l**に渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbkprint**|\<mbctype.h>|
 |**_ismbbkprint_l**|\<mbctype.h>|

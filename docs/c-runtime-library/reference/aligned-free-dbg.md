@@ -1,10 +1,6 @@
 ---
-title: _aligned_free_dbg | Microsoft Docs
-ms.custom: ''
+title: _aligned_free_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_free_dbg
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_free_dbg
 - aligned_free_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_free_dbg function
 - aligned_free_dbg function
 ms.assetid: eb0cb3c8-0992-4db8-bac3-65f1b8311ca6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aae9adaf1037297dfae9ba78f6f872544a5555ef
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f51b9b9573ab2e23a0a60979c55a33d2e5cff747
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46081677"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50627540"
 ---
 # <a name="alignedfreedbg"></a>_aligned_free_dbg
 
@@ -53,7 +43,7 @@ void _aligned_free_dbg(
 
 ### <a name="parameters"></a>パラメーター
 
-*_expand*<br/>
+*memblock*<br/>
 返されたメモリ ブロックへのポインター、 [_aligned_malloc](aligned-malloc.md)または[_aligned_offset_malloc](aligned-offset-malloc.md)関数。
 
 ## <a name="remarks"></a>Remarks
@@ -66,7 +56,7 @@ void _aligned_free_dbg(
 
 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

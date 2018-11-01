@@ -1,10 +1,6 @@
 ---
-title: _creat、_wcreat | Microsoft Docs
-ms.custom: ''
+title: _creat、_wcreat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _creat
 - _wcreat
@@ -27,8 +23,6 @@ f1_keywords:
 - _creat
 - tcreat
 - _tcreat
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcreat function
 - _wcreat function
@@ -38,20 +32,16 @@ helpviewer_keywords:
 - creat function
 - _tcreat function
 ms.assetid: 3b3b795d-1620-40ec-bd2b-a4bbb0d20fe5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a6b987faa30439f0f374838fe7fcd4d942b8cc7
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 901a95a6a9361f95f38749dacf1a5001d97b3761
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451850"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494992"
 ---
 # <a name="creat-wcreat"></a>_creat、_wcreat
 
-新しいファイルを作成します。 **_creat**と **_wcreat**が推奨されていません。 使用[_sopen_s、_wsopen_s](sopen-s-wsopen-s.md)代わりにします。
+新しいファイルを作成します。 **_creat**と **_wcreat**非推奨とされました。 使用[_sopen_s、_wsopen_s](sopen-s-wsopen-s.md)代わりにします。
 
 ## <a name="syntax"></a>構文
 
@@ -80,7 +70,7 @@ int _wcreat(
 
 |**errno**設定|説明|
 |---------------------|-----------------|
-|**EACCES**|*filename*既存の読み取り専用ファイルを指定するか、ファイルではなくディレクトリを指定します。|
+|**EACCES**|*ファイル名*既存の読み取り専用ファイルを指定しますまたは、ファイルの代わりに、ディレクトリを指定します。|
 |**EMFILE**|ファイル記述子をこれ以上使用できません。|
 |**ENOENT**|指定されたファイルが見つかりませんでした。|
 
@@ -88,9 +78,9 @@ int _wcreat(
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Creat**関数新しいファイルを作成または開き、既存のものを切り捨てます。 **_wcreat**のワイド文字バージョンは、 **_creat**以外の場合は、 *filename*に渡す引数 **_wcreat**ワイド文字列です。 **_wcreat**と **_creat**それ以外の場合の動作は同じです。
+**_Creat**関数の新しいファイルを作成または開き、既存のものを切り捨てます。 **_wcreat**のワイド文字バージョンです **_creat**、 *filename*への引数 **_wcreat**はワイド文字列です。 **_wcreat**と **_creat**動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -98,7 +88,7 @@ int _wcreat(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcreat**|**_creat**|**_creat**|**_wcreat**|
 
-ファイルが指定された場合*filename*が存在しない新しいファイルが指定されたアクセス許可を設定して作成し、書き込み用に開きます。 ファイルが既に存在し、その設定が書き込み許可、 **_creat**ファイルを長さ 0 で、以前の内容の破棄によってが切り捨てられ、書き込み用に開きます。 アクセス許可の設定、 *pmode*、新しく作成されたファイルのみに適用されます。 新しいファイルは、最初に閉じた後に、指定されたアクセス許可設定を受け取ります。 整数型の式*pmode*マニフェスト定数の一方または両方を含む **_S_IWRITE**と **_S_IREAD**sys \stat.h で定義されている。 両方の定数を指定する場合は結合、ビットごとの or 演算子 ( **&#124;** )。 *Pmode*パラメーターは、次の値のいずれかに設定します。
+によって、ファイルが指定されている場合*filename*が存在しない新しいファイルが指定されたアクセス許可を設定して作成および書き込み用に開きます。 ファイルが既に存在し、そのアクセス許可の設定により、書き込み、 **_creat**切り捨てますファイルを長さ 0 の場合、以前の内容を破棄して、書き込み用に開きます。 アクセス許可の設定、 *pmode*、新しく作成されたファイルのみに適用されます。 新しいファイルは、最初に閉じた後に、指定されたアクセス許可設定を受け取ります。 整数式*pmode*マニフェスト定数の一方または両方を含む **_S_IWRITE**と **_S_IREAD**、sys \stat.h で定義されています。 ビットごとに参加している両方の定数が指定されると、or 演算子 ( **&#124;** )。 *Pmode*パラメーターは、次の値のいずれかに設定します。
 
 |[値]|定義|
 |-----------|----------------|
@@ -106,13 +96,13 @@ int _wcreat(
 |**_S_IREAD**|読み取りが許可されます。|
 |**_S_IREAD** &AMP;#124; **_S_IWRITE**|読み取りと書き込みが許可されます。|
 
-書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 モード **_S_IWRITE**と **_S_IREAD** | **_S_IWRITE**は同等になります。 使用して開かれたファイル **_creat**は常に、互換性モードで開く (を参照してください[_sopen](sopen-wsopen.md)) と **_SH_DENYNO**です。
+書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 モード **_S_IWRITE**と **_S_IREAD** | **_S_IWRITE**は同じになります。 使用して開かれたファイル **_creat**は常に、互換性モードで開く (を参照してください[_sopen](sopen-wsopen.md)) と **_SH_DENYNO**します。
 
-**_creat**を現在のファイルのアクセス許可マスクを適用*pmode*アクセス許可を設定する前に (を参照してください[_umask](umask.md))。 **_creat**は以前のライブラリとの互換性のため、主に提供します。 呼び出し **_open**で **_O_CREAT**と **_O_TRUNC**で、 *oflag*パラメーターは **_creat**し、新しいコードをお勧めします。
+**_creat** 、現在のファイルのアクセス許可マスクが適用される*pmode*アクセス許可を設定する前に (を参照してください[_umask](umask.md))。 **_creat**主以前のライブラリと互換性のために提供されます。 呼び出し **_open**で **_O_CREAT**と **_O_TRUNC**で、 *oflag*パラメーターは **_creat**し、新しいコードをお勧めします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_creat**|\<io.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|
 |**_wcreat**|\<io.h> または \<wchar.h>|\<sys/types.h>、\<sys/stat.h>、\<errno.h>|

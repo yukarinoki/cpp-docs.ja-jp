@@ -1,10 +1,6 @@
 ---
-title: _ASSERT、_ASSERTE、_ASSERT_EXPR マクロ | Microsoft Docs
-ms.custom: ''
+title: _ASSERT、_ASSERTE、_ASSERT_EXPR マクロ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -22,8 +18,6 @@ f1_keywords:
 - ASSERTE
 - _ASSERT
 - _ASSERT_EXPR
-dev_langs:
-- C++
 helpviewer_keywords:
 - debugging [CRT], using macros
 - _ASSERTE macro
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - _ASSERT macro
 - _ASSERT_EXPR macro
 ms.assetid: e98fd2a6-7f5e-4aa8-8fe8-e93490deba36
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 254550acf94acb846826bc0efe76ef26753c54b8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d2d83c3afa8e22c1f75480fe2afefa8bf68be858
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107591"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598459"
 ---
 # <a name="assert-asserte-assertexpr-macros"></a>_ASSERT、_ASSERTE、_ASSERT_EXPR マクロ
 
@@ -90,7 +80,7 @@ _CrtSetReportMode(CRT_ASSERT, _CRTDBG_MODE_WNDW);
 
 **_ASSERT_EXPR**、 **_ASSERT**と **_ASSERTE**マクロを含めることによって利用され\<crtdbg.h >、アプリケーションは、デバッグとリンクする必要がありますC ランタイム ライブラリのバージョンと **_DEBUG**が定義されているは、これらのマクロは、その他のランタイム関数を呼び出すためです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |マクロ|必須ヘッダー|
 |-----------|---------------------|

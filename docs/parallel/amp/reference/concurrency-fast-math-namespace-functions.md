@@ -1,8 +1,6 @@
 ---
-title: Concurrency::fast_math 名前空間関数 |Microsoft Docs
-ms.custom: ''
+title: Concurrency::fast_math 名前空間関数
 ms.date: 11/04/2016
-ms.topic: reference
 f1_keywords:
 - amp_math/Concurrency::fast_math::acos
 - amp_math/Concurrency::fast_math::asin
@@ -47,19 +45,13 @@ f1_keywords:
 - amp_math/Concurrency::fast_math::tanf
 - amp_math/Concurrency::fast_math::tanhf
 - amp_math/Concurrency::fast_math::trunc
-dev_langs:
-- C++
 ms.assetid: f5763d62-795b-4de6-a7a5-c7115f158708
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2f12ccee2bf282a324fcf4258190240ca8150bb2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fa024c781804d404870a0362a027e1bc436902ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446752"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50667637"
 ---
 # <a name="concurrencyfastmath-namespace-functions"></a>Concurrency::fast_math 名前空間関数
 
@@ -1281,7 +1273,7 @@ inline float truncf(float _X) restrict(amp);
 
 引数の整数部分を返します
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp_math.h **Namespace:** concurrency::fast_math
 

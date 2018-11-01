@@ -1,10 +1,6 @@
 ---
-title: basic_streambuf クラス |Microsoft Docs
-ms.custom: ''
+title: basic_streambuf クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - streambuf/std::basic_streambuf
 - streambuf/std::basic_streambuf::char_type
@@ -51,8 +47,6 @@ f1_keywords:
 - streambuf/std::basic_streambuf::underflow
 - streambuf/std::basic_streambuf::xsgetn
 - streambuf/std::basic_streambuf::xsputn
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::basic_streambuf [C++]
 - std::basic_streambuf [C++], char_type
@@ -100,16 +94,12 @@ helpviewer_keywords:
 - std::basic_streambuf [C++], xsgetn
 - std::basic_streambuf [C++], xsputn
 ms.assetid: 136af6c3-13bf-4501-9288-b93da26efac7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6bc4fa8da5d9fa2d15febc3c7b016622e614129a
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d15e38c63e335dbd574ad2d1c1ee23e0d5a70a30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100964"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565725"
 ---
 # <a name="basicstreambuf-class"></a>basic_streambuf クラス
 
@@ -174,7 +164,7 @@ class basic_streambuf;
 |-|-|
 |[basic_streambuf](#basic_streambuf)|`basic_streambuf` 型のオブジェクトを構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -234,7 +224,7 @@ class basic_streambuf;
 |-|-|
 |[operator=](#op_eq)|別の `basic_streambuf` オブジェクトの値をこのオブジェクトに割り当てます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<streambuf>
 

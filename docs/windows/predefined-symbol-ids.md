@@ -1,27 +1,16 @@
 ---
-title: 定義済みシンボル Id |Microsoft Docs
-ms.custom: ''
+title: 定義済みのシンボル ID
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a41df160f8b5c6fbfbe120902e6bbd398729db82
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: cb2f80315e0480c3fcb73092123cad88712dff05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317876"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477299"
 ---
 # <a name="predefined-symbol-ids"></a>定義済みのシンボル ID
 
@@ -40,7 +29,7 @@ ms.locfileid: "44317876"
    > [!NOTE]
    > 定義済みのシンボルは、常に読み取り専用です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32、MFC、または ATL
 

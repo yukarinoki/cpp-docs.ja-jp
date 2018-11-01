@@ -1,27 +1,17 @@
 ---
-title: COMPAREITEMSTRUCT 構造体 |Microsoft Docs
-ms.custom: ''
+title: COMPAREITEMSTRUCT 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COMPAREITEMSTRUCT
-dev_langs:
-- C++
 helpviewer_keywords:
 - COMPAREITEMSTRUCT structure [MFC]
 ms.assetid: 4b7131a5-5c7d-4e98-aac7-e85650262b52
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 450e6fa4694c35929196cc5df3bf2fd6b4e843c4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78a6e76ee3bbac5b32eb4bccf45578e63f763b75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406832"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465417"
 ---
 # <a name="compareitemstruct-structure"></a>COMPAREITEMSTRUCT 構造体
 
@@ -68,7 +58,7 @@ typedef struct tagCOMPAREITEMSTRUCT {
 
 アプリケーションでは、オーナー描画リスト ボックスまたは CBS_SORT または LBS_SORT スタイルで作成したコンボ ボックスに新しい項目を追加するたびに Windows は WM_COMPAREITEM メッセージ、所有者を送信します。 *LParam*メッセージのパラメーターにはへの long ポインターが含まれています、`COMPAREITEMSTRUCT`構造体。 メッセージを受信するとは、所有者は、2 つの項目を比較し、前に、その他のどの項目が並べ替えを示す値を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** winuser.h
 

@@ -1,10 +1,6 @@
 ---
-title: _get_unexpected | Microsoft Docs
-ms.custom: ''
+title: _get_unexpected
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_unexpected
 apilocation:
@@ -23,27 +19,21 @@ f1_keywords:
 - __get_unexpected
 - _get_unexpected
 - get_unexpected
-dev_langs:
-- C++
 helpviewer_keywords:
 - __get_unexpected function
 - get_unexpected function
 - _get_unexpected function
 ms.assetid: a5f7a7a0-18e0-485e-953d-db291068a1e8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e6f768d6f384e5b3b39e8d2884a7a7cb0362915
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 225158ecab60a5997ebedbad107eb43d82189234
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451655"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519406"
 ---
 # <a name="getunexpected"></a>_get_unexpected
 
-によって呼び出される終了ルーチンを返します**予期しない**です。
+によって呼び出される終了ルーチンを返します**予期しない**します。
 
 ## <a name="syntax"></a>構文
 
@@ -53,11 +43,11 @@ unexpected_function _get_unexpected( void );
 
 ## <a name="return-value"></a>戻り値
 
-[set_unexpected](set-unexpected-crt.md) で登録されている関数へのポインターを返します。 既定の動作を復元する関数が設定されていない場合、戻り値を使用できます。この値は、 **NULL**です。
+[set_unexpected](set-unexpected-crt.md) で登録されている関数へのポインターを返します。 戻り値を既定の動作を復元する使用可能性があります関数が設定されていない場合この値は、 **NULL**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_get_unexpected**|\<eh.h>|
 

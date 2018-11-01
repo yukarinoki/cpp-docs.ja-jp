@@ -1,10 +1,6 @@
 ---
-title: _execl、_wexecl | Microsoft ドキュメント
-ms.custom: ''
+title: _execl、_wexecl
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _execl
 - _wexecl
@@ -25,24 +21,18 @@ f1_keywords:
 - _execl
 - _wexecl
 - wexecl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _execl function
 - wexecl function
 - _wexecl function
 - execl function
 ms.assetid: 81fefb8a-0a06-4221-b2bc-be18e38e89f4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 32ec50c83a29f3c517955979c2df0de5203dc9a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3d736849f90782425e6e1c1cff04536972318c91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398504"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530309"
 ---
 # <a name="execl-wexecl"></a>_execl、_wexecl
 
@@ -78,7 +68,7 @@ intptr_t _wexecl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 がいる場合、エラーを示す、 **errno**グローバル変数を設定します。
+成功した場合、これらの関数が呼び出しプロセスに戻ることはありません。 戻り値-1 を場合エラーを示す、 **errno**グローバル変数を設定します。
 
 |errno の値|説明|
 |-----------------|-----------------|
@@ -90,13 +80,13 @@ intptr_t _wexecl(
 |**ENOEXEC**|指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。|
 |**ENOMEM**|新しいプロセスを実行するのに十分なメモリがないか、使用できるメモリが破損しているか、または無効なブロックが存在します (呼び出しプロセスが正しく割り当てられていないことを示します)。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらの各関数は新しいプロセスを読み込んで実行し、各コマンド ライン引数を個別のパラメーターとして渡します。 1 番目の引数はコマンドまたは実行可能ファイルの名前で、2 番目の引数は、1 番目と同じにする必要があります。 これは、実行されるプロセスの `argv[0]` になります。 3 番目の引数は、実行されるプロセスの 1 番目の引数 `argv[1]` です。
 
-**_Execl**関数は、パラメーターを検証します。 いずれか*cmdname*または*arg0*が null ポインターまたは空の文字列」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)場合の実行続けるには、これらの関数が許可された**errno**に**EINVAL**し、-1 を返します。 新しいプロセスは実行されません。
+**_Execl**関数は、パラメーターを検証します。 いずれか*cmdname*または*arg0*が null ポインターまたは空の文字列」の説明に従って、これらの関数は無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)場合の実行これらの関数の設定、継続が許可された**errno**に**EINVAL**し、-1 を返します。 新しいプロセスは実行されません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|

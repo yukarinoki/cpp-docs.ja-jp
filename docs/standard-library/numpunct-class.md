@@ -1,10 +1,6 @@
 ---
-title: numpunct クラス |Microsoft Docs
-ms.custom: ''
+title: numpunct クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocnum/std::numpunct
 - xlocnum/std::numpunct::char_type
@@ -19,8 +15,6 @@ f1_keywords:
 - xlocnum/std::numpunct::grouping
 - xlocnum/std::numpunct::thousands_sep
 - xlocnum/std::numpunct::truename
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::numpunct [C++]
 - std::numpunct [C++], char_type
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - std::numpunct [C++], thousands_sep
 - std::numpunct [C++], truename
 ms.assetid: 73fb93cc-ac11-4c98-987c-bfa6267df596
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81a176bd911203d04797f3437539730042b8dbae
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6084392c5cae151f6c7111fbe9fe7a45e103b74d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108981"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495569"
 ---
 # <a name="numpunct-class"></a>numpunct クラス
 
@@ -73,7 +63,7 @@ class numpunct : public locale::facet;
 |-|-|
 |[numpunct](#numpunct)|`numpunct` 型のオブジェクトのコンストラクター。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -95,7 +85,7 @@ class numpunct : public locale::facet;
 |[thousands_sep](#thousands_sep)|桁区切り記号として使用するロケール固有の要素を返します。|
 |[truename](#truename)|**true** 値のテキスト表現として使用する文字列を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

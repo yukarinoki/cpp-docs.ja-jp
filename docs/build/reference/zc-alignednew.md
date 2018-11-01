@@ -1,25 +1,18 @@
 ---
-title: /Zc:alignedNew (c++ 17 オーバーア ラインされている割り当て) |Microsoft Docs
+title: /Zc:alignedNew (c++ 17 オーバーア ラインされている割り当て)
 ms.date: 02/28/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Zc:alignedNew
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Zc:alignedNew
 - Zc:alignedNew
 - -Zc:alignedNew
-author: corob-msft
-ms.author: corob
-ms.openlocfilehash: aba188a69af0449dd05df4bff14567f79a72c068
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 0e6cf408e56dd6e5bc262c39dda460253a32dfc9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45721436"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662463"
 ---
 # <a name="zcalignednew-c17-over-aligned-allocation"></a>/Zc:alignedNew (c++ 17 オーバーア ラインされている割り当て)
 
@@ -102,7 +95,7 @@ aligned sized delete(009FE800, 256, 256)
 
 Visual C 準拠の問題については、次を参照してください。[非標準動作](../../cpp/nonstandard-behavior.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

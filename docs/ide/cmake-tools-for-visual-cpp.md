@@ -1,7 +1,7 @@
 ---
 title: Visual C++ での CMake プロジェクト | Microsoft Docs
 ms.custom: ''
-ms.date: 09/26/2018
+ms.date: 10/18/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -16,12 +16,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 76877a0559fd954661fb3e38131796e89c41679f
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
+ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235101"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50143732"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ での CMake プロジェクト
 
@@ -215,7 +215,7 @@ Visual Studio ジェネレーターを指定するには、メイン メニュ�
 
 1. **buildRoot**: **-DCMAKE_BINARY_DIR** スイッチに対応し、CMake キャッシュが作成される場所を指定します。 フォルダーが存在しない場合は、作成されます。
 
-1. **variables**: **-D**<_名前_>**=**<_値_> として CMake に渡される、CMake 変数の名前と値のペアを含みます。 CMake プロジェクトのビルド命令で CMake キャッシュ ファイルに直接変数を追加するように指定している場合は、代わりにここで追加することをお勧めします。 次の例は、名前と値のペアを指定する方法を示しています。
+1. **variables**: **-D** *_name_=_value_* として CMake に渡される、CMake 変数の名前と値のペアを含みます。 CMake プロジェクトのビルド命令で CMake キャッシュ ファイルに直接変数を追加するように指定している場合は、代わりにここで追加することをお勧めします。 次の例は、名前と値のペアを指定する方法を示しています。
 
 ```json
 "variables": [
@@ -285,7 +285,7 @@ CMakeSettings.json は、継承された環境をサポートするようにな�
 
 上の例は、**-arch=amd64 -host_arch=amd64** 引数を指定して **VS 2017 の開発者コマンド プロンプト**を実行するのと同じです。
 
-次の表では、既定値と、それに同等のコマンド ラインを示します。
+次の表は、既定の値を示します。
 
 |コンテキスト名|説明|
 |-----------|-----------------|

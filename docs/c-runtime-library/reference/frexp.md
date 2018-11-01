@@ -1,10 +1,6 @@
 ---
-title: frexp、frexpf、frexpl |Microsoft ドキュメント
-ms.custom: ''
+title: frexp、frexpf、frexpl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - frexp
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - frexp
 - _frexpl
-dev_langs:
-- C++
 helpviewer_keywords:
 - _frexpl function
 - mantissas, floating-point variables
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - frexp function
 - floating-point functions, mantissa and exponent
 ms.assetid: 9b020f2e-3967-45ec-a6a8-d467a071aa55
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3bf79e954274b1cedb104ed637ad14b8e1c6431
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c9e259f730d2d63d07032735be930f6f0fdb17e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400090"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563840"
 ---
 # <a name="frexp-frexpf-frexpl"></a>frexp、frexpf、frexpl
 
@@ -83,15 +73,15 @@ long double frexp(
 
 ## <a name="return-value"></a>戻り値
 
-**frexp**仮数部を返します。 場合*x*が 0 の場合、仮数と指数部の両方の場合は 0 を返します。 場合*expptr*は**NULL**、」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**は 0 を返します。
+**frexp**仮数部を返します。 場合*x*が 0 の場合、仮数と指数部の両方に 0 を返します。 場合*expptr*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**は 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Frexp**関数は浮動小数点値を分割 (*x*)、仮数部に (*m*) と指数部 (*n*) になるよう、絶対値*m*は 0.5 以上 1.0 未満と*x* = *m* * 2<sup>*n*</sup>. 整数の指数*n*が指す位置に格納されて*expptr*です。
+**Frexp**関数は浮動小数点値を分割 (*x*) を仮数部 (*m*) と指数部 (*n*) ような絶対値*m*が 0.5 以上 1.0 未満、および*x* = *m* * 2<sup>*n*</sup>. 整数の指数*n*が指す位置に格納されて*expptr*します。
 
-C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**frexp**です。 C プログラムでは、 **frexp**は常に、**二重**と**int**ポインターを返す、**二重**です。
+C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**frexp**します。 C プログラムで**frexp**は常に、**二重**と**int**ポインターを返します、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

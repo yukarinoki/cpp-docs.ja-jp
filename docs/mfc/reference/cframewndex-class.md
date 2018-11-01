@@ -1,10 +1,6 @@
 ---
-title: CFrameWndEx クラス |Microsoft Docs
-ms.custom: ''
+title: CFrameWndEx クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFrameWndEx
 - AFXFRAMEWNDEX/CFrameWndEx
@@ -94,8 +90,6 @@ f1_keywords:
 - AFXFRAMEWNDEX/CFrameWndEx::ShowPane
 - AFXFRAMEWNDEX/CFrameWndEx::UpdateCaption
 - AFXFRAMEWNDEX/CFrameWndEx::WinHelp
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFrameWndEx [MFC], ActiveItemRecalcLayout
 - CFrameWndEx [MFC], AddPane
@@ -184,16 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 50b895bc23d37918a521c3ebd19b6fbadf6cd69e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5e847fd3a3c5a4217db694ec5586a24313c8102f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612209"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx クラス
 
@@ -318,7 +308,7 @@ class CFrameWndEx : public CFrameWnd
 
 [CFrameWndEx](../../mfc/reference/cframewndex-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxframewndex.h
 
@@ -734,7 +724,7 @@ BOOL InsertPane(
 
 ### <a name="remarks"></a>Remarks
 
-使用して、それぞれのコントロール バーを登録する必要があります、 [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md)ドッキング レイアウトの一部を実行します。
+コントロール バーをドッキング レイアウトの一部にするには、 [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md) を使用してそれぞれのコントロール バーを登録する必要があります。
 
 ##  <a name="isfullscreen"></a>  CFrameWndEx::IsFullScreen
 

@@ -1,10 +1,6 @@
 ---
-title: _getch_nolock、_getwch_nolock | Microsoft Docs
-ms.custom: ''
+title: _getch_nolock、_getwch_nolock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getwch_nolock
 - _getch_nolock
@@ -28,8 +24,6 @@ f1_keywords:
 - _getwch_nolock
 - _gettch_nolock
 - gettch_nolock
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, getting from console
 - _getwch_nolock function
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - getch_nolock function
 - gettch_nolock function
 ms.assetid: 9d248546-26ca-482c-b0c6-55812a987e83
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e742dab8f77a4f66b77c7c9fdc4b45b5ace06be0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: dbfc670b70a278e97794fc19f170cef565626dbb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514297"
 ---
 # <a name="getchnolock-getwchnolock"></a>_getch_nolock、_getwch_nolock
 
@@ -69,9 +59,9 @@ wint_t _getwch_nolock( void );
 
 読み取られた文字を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_getch_nolock**と **_getwch_nolock**と同じ **_getch**と **_getchw**他のスレッドによる干渉から保護されないことを除きです。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
+**_getch_nolock**と **_getwch_nolock**と同じ **_getch**と **_getchw**する点を除いて、他のスレッドによる干渉から保護されません。 他のスレッドをロックアウトするオーバーヘッドが発生しないため、処理が速くなる場合があります。 これらの関数は、シングルスレッド アプリケーション、呼び出し元のスコープで既にスレッド分離を処理している場合などのスレッドセーフなコンテキストでのみ使用してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -79,9 +69,9 @@ wint_t _getwch_nolock( void );
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_gettch_nolock**|**_getch_nolock**|**_getch_nolock**|**_getwch_nolock**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getch_nolock**|\<conio.h>|
 |**_getwch_nolock**|\<conio.h> または \<wchar.h>|

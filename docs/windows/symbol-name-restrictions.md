@@ -1,30 +1,19 @@
 ---
-title: シンボル名の制限 |Microsoft Docs
-ms.custom: ''
+title: シンボル名の制限
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.restrictions.name
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbol names
 - symbols [C++], names
 - restrictions, symbol names
 ms.assetid: 4ae7f695-ca86-4f4b-989a-fe6f89650ff7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a2370a2f47e358358ed2c870f8fffcbe135a116f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7b6d8804dc7f3c9768dc9e86fde0e708f67c43fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406686"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624855"
 ---
 # <a name="symbol-name-restrictions"></a>シンボル名の制限
 
@@ -54,7 +43,7 @@ ms.locfileid: "46406686"
 |文字列|IDS_|文字列テーブル内の文字列|
 |MFC|AFX_|定義済みの MFC シンボル用に予約されています|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

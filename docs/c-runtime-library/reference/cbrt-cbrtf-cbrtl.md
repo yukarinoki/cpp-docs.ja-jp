@@ -1,10 +1,6 @@
 ---
-title: cbrt、cbrtf、cbrtl | Microsoft Docs
-ms.custom: ''
+title: cbrt、cbrtf、cbrtl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cbrt
 - cbrtf
@@ -26,23 +22,17 @@ f1_keywords:
 - cbrtl
 - cbrt
 - cbrtf
-dev_langs:
-- C++
 helpviewer_keywords:
 - cbrtl function
 - cbrtf function
 - cbrt function
 ms.assetid: ab51d916-3db2-4beb-b46a-28b4062cd33f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29dee00f35c2b4d75e838e5abe2ee24de9753013
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c395a063cfa07cdfb7e841f19bc64fb1c57ca796
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505535"
 ---
 # <a name="cbrt-cbrtf-cbrtl"></a>cbrt、cbrtf、cbrtl
 
@@ -75,17 +65,17 @@ long double cbrtl(
 
 ## <a name="return-value"></a>戻り値
 
-**Cbrt**関数を返しますの立方根*x*です。
+**Cbrt**関数の立方根を返します*x*します。
 
 |入力|SEH 例外|**_matherr**例外|
 |-----------|-------------------|--------------------------|
 |± ∞、QNAN、IND|none|none|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**cbrt**を受け取る**float**または**長い****二重**型です。 C プログラムでは、 **cbrt**は**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cbrt**を受け取る**float**または**長い****二重**型。 C プログラムで**cbrt**は**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

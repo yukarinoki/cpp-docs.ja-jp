@@ -1,29 +1,18 @@
 ---
-title: シンボルの新規作成 |Microsoft Docs
-ms.custom: ''
+title: シンボルの新規作成
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.symbol.creating
-dev_langs:
-- C++
 helpviewer_keywords:
 - New Symbol dialog box [C++]
 - symbols [C++], creating
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 156f5979cb27b18247c63f177fa036aa3eeabb79
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9305f5bf409d5c0d4da227d2aadd3f16dc85945c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46412120"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600113"
 ---
 # <a name="creating-new-symbols"></a>シンボルの新規作成
 
@@ -47,7 +36,7 @@ ms.locfileid: "46412120"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 リソースにアクセスする、マネージ プロジェクトにリソース ファイルを手動で追加するのには静的なリソースを表示して、リソースの割り当ては、プロパティに文字列です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

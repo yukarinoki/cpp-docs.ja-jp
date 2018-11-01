@@ -1,27 +1,17 @@
 ---
-title: is_trivially_copy_constructible クラス | Microsoft Docs
-ms.custom: ''
+title: is_trivially_copy_constructible クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_trivially_copy_constructible
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_trivially_copy_constructible
 ms.assetid: 4274cef5-afdd-4f2d-bc83-7562e7944ddf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1924b82f7c3035ea2aecb463199558c9ead45c91
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: aa6d6b19ae2bd5d6967c57db61c5697c0c6153e9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630517"
 ---
 # <a name="istriviallycopyconstructible-class"></a>is_trivially_copy_constructible クラス
 
@@ -45,7 +35,7 @@ struct is_trivially_copy_constructible;
 
 クラスのコピー コンス トラクター *T*は暗黙的に宣言しても、クラスに自明*T* 、仮想関数または仮想基底クラス、すべての直接基本クラスのない*T*が自明なコピー コンス トラクターは、クラス型のすべての非静的データ メンバーのクラスに自明なコピー コンス トラクターがあるし、クラスの型配列のすべての非静的データ メンバーのクラスが自明なコピー コンス トラクターを持ちます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

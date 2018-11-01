@@ -1,10 +1,6 @@
 ---
-title: _read | Microsoft Docs
-ms.custom: ''
+title: _read
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _read
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _read
-dev_langs:
-- C++
 helpviewer_keywords:
 - data [CRT]
 - _read function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - reading data [C++]
 - files [C++], reading
 ms.assetid: 2ce9c433-57ad-47fe-9ac1-4a7d4c883d30
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c67ce8ac0e754bf3003b23c56cd1d3f428be903
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c43cbbc2681433bda02038ae73a827fad904835
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658445"
 ---
 # <a name="read"></a>_read
 
@@ -70,23 +60,23 @@ int _read(
 
 ## <a name="return-value"></a>戻り値
 
-**読む (_r)** 小さい場合があります、読み取られたバイト数を返しますより*カウント*よりも少ない場合*カウント*ファイル内の残りのバイト数または場合は、ファイルがテキスト モードで開かれた場合、各キャリッジリターンとライン フィードのペア '\r\n' は、1 つの改行文字"\n"に置き換えられます。 戻り値ではその単一の改行文字だけがカウントされます。 この置き換えは、ファイル ポインターには影響しません。
+**_read**小さい可能性があります、読み取られたバイト数を返しますよりも*数*よりも少なかった場合*カウント*ファイル内の残りのバイトまたは場合は、ファイルがテキスト モードで開かれた場合は各キャリッジ改行のペア '\r\n' は、1 つのラインフィード文字"\n"に置き換えられます。 戻り値ではその単一の改行文字だけがカウントされます。 この置き換えは、ファイル ポインターには影響しません。
 
-この関数はファイルの終わりで読み取りをすると、0 を返します。 場合*fd*は無効ですが、ファイルが開いていないを読み取り、またはファイルがロックされているで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、関数の戻り値-1 とセットの実行が許可された場合**errno**に**EBADF**です。
+この関数はファイルの終わりで読み取りをすると、0 を返します。 場合*fd*が有効でないファイルが開いていない読み取り用か、またはファイルがロックされているで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続、関数の戻り値-1 とセットが許可された場合**errno**に**EBADF**します。
 
-*バッファー*が **NULL** の場合は、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EINVAL**です。
+*バッファー*が **NULL** の場合は、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、関数は-1 を返しますと**errno**に設定されている**EINVAL**します。
 
-このリターン コードとその他のリターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+このリターン コードとその他のリターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**読む (_r)** 関数は、最大数を読み取ります*カウント*にバイト*バッファー*に関連付けられているファイルから*fd*です。 読み取り操作は、指定されたファイルに関連付けられたファイル ポインターの現在の位置で開始されます。 読み取り操作後、ファイル ポインターは、次の未読の文字を指します。
+**_Read**関数はの最大値を読み取ります*カウント*バイト*バッファー*に関連付けられているファイルから*fd*します。 読み取り操作は、指定されたファイルに関連付けられたファイル ポインターの現在の位置で開始されます。 読み取り操作後、ファイル ポインターは、次の未読の文字を指します。
 
-読み取りを終了時に、ファイルがテキスト モードで開かれた場合**読む (_r)** ファイルの終端のインジケーターとして扱われる CTRL+Z 文字を検出します。 ファイルの終わりのインジケーターをクリアするには、[_lseek](lseek-lseeki64.md) を使用します。
+ときに、読み取りを終了、ファイルがテキスト モードで開かれた場合 **_read**ファイルの終わりを示すインジケーターとして扱われる CTRL+Z 文字を検出します。 ファイルの終わりのインジケーターをクリアするには、[_lseek](lseek-lseeki64.md) を使用します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_read**|\<io.h>|
 

@@ -1,8 +1,6 @@
 ---
-title: Platform::agile クラス |Microsoft Docs
-ms.custom: ''
+title: Platform::Agile クラス
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - AGILE/Platform::Platform
@@ -11,21 +9,15 @@ f1_keywords:
 - AGILE/Platform::Platform::Agile::GetAddressOf
 - AGILE/Platform::Platform::Agile::GetAddressOfForInOut
 - AGILE/Platform::Platform::Agile::Release
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::Agile
 ms.assetid: e34459a9-c429-4c79-97fd-030c43ca4155
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3745ead4fec8466df3f164c415b21d98f68c0ef7
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 9350d94fdff615056fca193d654b2bb001d78d72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109785"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471202"
 ---
 # <a name="platformagile-class"></a>Platform::Agile クラス
 
@@ -80,7 +72,7 @@ class Agile;
 
 `Agile`
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **クライアントがサポートされている最小:** Windows 8
 
@@ -162,11 +154,11 @@ T^* GetAddressOf() throw();
 
 ### <a name="return-value"></a>戻り値
 
-型のオブジェクトを識別するハンドルのアドレス`T`します。
+`T` 型のオブジェクトへのハンドルのアドレス。
 
 ### <a name="remarks"></a>Remarks
 
-この操作は、型のオブジェクトの現在の表現を解放`T`以外の場合、Agile オブジェクトのデータ メンバーを再初期化; 現在のスレッド コンテキストを取得し、表すことができるオブジェクトへのハンドル変数のアドレスを返します、非アジャイル オブジェクト。 Agile クラス インスタンス オブジェクトを表すためには、代入演算子を使用して、([agile::operator =](#operator-assign)) に、アジャイル クラスのインスタンスにオブジェクトを割り当てます。
+この操作は、`T` 型のオブジェクト (存在する場合) の現在の表現を解放し、Agile オブジェクトのデータ メンバーを再初期化し、現在のスレッドのコンテキストを取得し、非アジャイル オブジェクトを表現できるオブジェクトへのハンドル変数のアドレスを返します。 Agile クラス インスタンス オブジェクトを表すためには、代入演算子を使用して、([agile::operator =](#operator-assign)) に、アジャイル クラスのインスタンスにオブジェクトを割り当てます。
 
 ## <a name="getaddressofforinout"></a>  Agile::getaddressofforinout メソッド
 

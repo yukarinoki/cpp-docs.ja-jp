@@ -1,8 +1,6 @@
 ---
-title: Platform::writeonlyarray クラス |Microsoft Docs
-ms.custom: ''
+title: Platform::WriteOnlyArray クラス
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::WriteOnlyArray::begin
@@ -11,21 +9,15 @@ f1_keywords:
 - VCCORLIB/Platform::WriteOnlyArray::FastPass
 - VCCORLIB/Platform::WriteOnlyArray::Length
 - VCCORLIB/Platform::WriteOnlyArray::set
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fb37261de4bd68a73b27baa6bdab5200b616cd6
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 2c4c9fecd8e3c8e638af96bc7d047e03a0f31bfc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106692"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651322"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray クラス
 
@@ -54,7 +46,7 @@ private ref class WriteOnlyArray<T, 1>
 
 `WriteOnlyArray`
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 コンパイラ オプション: **/ZW**
 
@@ -194,4 +186,4 @@ HRESULT 値を解釈する方法の詳細については、次を参照してく
 ## <a name="see-also"></a>関連項目
 
 [プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
-[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[C++ で Windows ランタイム コンポーネントを作成する](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

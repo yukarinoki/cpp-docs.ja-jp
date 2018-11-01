@@ -1,31 +1,21 @@
 ---
-title: insert_iterator クラス | Microsoft Docs
-ms.custom: ''
+title: insert_iterator クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - iterator/std::insert_iterator
 - iterator/std::insert_iterator::container_type
 - iterator/std::insert_iterator::reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::insert_iterator [C++]
 - std::insert_iterator [C++], container_type
 - std::insert_iterator [C++], reference
 ms.assetid: d5d86405-872e-4e3b-9e68-c69a2b7e8221
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6011bd8f413a2e0a849e2ef9ba7c5bc229913c41
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fb18c67b6e7949486c33e95c7daf6bc6868d0baa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318838"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50567805"
 ---
 # <a name="insertiterator-class"></a>insert_iterator クラス
 
@@ -53,7 +43,7 @@ class insert_iterator;
 |-|-|
 |[insert_iterator](#insert_iterator)|コンテナーの指定された位置に要素を挿入する `insert_iterator` を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -68,7 +58,7 @@ class insert_iterator;
 |[operator++](#op_add_add)|値を格納できる次の位置に `insert_iterator` をインクリメントします。|
 |[operator=](#op_eq)|一般的な挿入のための出力反復子式 * `i` = `x` を実装するために使用される代入演算子。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<iterator>
 

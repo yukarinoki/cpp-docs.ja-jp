@@ -1,10 +1,6 @@
 ---
-title: sinh、sinhf、sinhl |Microsoft ドキュメント
-ms.custom: ''
+title: sinh、sinhf、sinhl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinhl
 - sinhf
@@ -26,8 +22,6 @@ f1_keywords:
 - sinh
 - sinhf
 - sinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - sinh function
 - sinhl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - sinhf function
 - sinhl function
 - hyperbolic functions
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 220bbeb1d78957be153e23b578f217c8098f7e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7327809a20569c520aa799690203458d54e30fb5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410464"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569807"
 ---
 # <a name="sinh-sinhf-sinhl"></a>sinh、sinhf、sinhl
 
@@ -72,7 +62,7 @@ long double sinh(long double x);  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Sinh**関数のハイパーボリック サインを返します*x*です。 既定では、結果が大きすぎるため場合、 **sinh**設定**errno**に**ERANGE** ± を返しますと**HUGE_VAL**です。
+**Sinh**関数のハイパーボリック サインを返します*x*します。 既定で、結果が大きすぎる、 **sinh**設定**errno**に**ERANGE** ± を返します**HUGE_VAL**します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -81,13 +71,13 @@ long double sinh(long double x);  // C++ only
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**sinh**を受け取り、返します**float**または**長い****二重**値。 C プログラムでは、 **sinh**は**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sinh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**sinh**は**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
 |**sinh**、 **sinhf**、 **sinhl**|\<math.h>|\<cmath> または \<math.h>|
 

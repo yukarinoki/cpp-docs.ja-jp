@@ -1,34 +1,25 @@
 ---
-title: コンパイラの警告 C4693 |Microsoft ドキュメント
+title: コンパイラの警告 C4693
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4693
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4693
 ms.assetid: 72d8db01-5e6f-4794-8731-76107e8f064a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8230e60d65c80b4f839cc8a1c97ccc0c7b18086
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 49d101ea56cd868e18489b6c74724a2d106c9265
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33273882"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536657"
 ---
 # <a name="compiler-warning-c4693"></a>コンパイラの警告 C4693
 
 > 'class': シールされた抽象クラスにインスタンス メンバー 'Test' を含めることはできません
 
-型がマークされている場合[シール](../../windows/sealed-cpp-component-extensions.md)と[抽象](../../windows/abstract-cpp-component-extensions.md)、静的メンバーを持つことができますのみです。
+型がマークされている場合[シール](../../windows/sealed-cpp-component-extensions.md)と[抽象](../../windows/abstract-cpp-component-extensions.md)、静的メンバーをのみがあることができます。
 
-この警告は、自動的にエラーになります。 この動作を変更する場合は、使用[#pragma 警告](../../preprocessor/warning.md)です。
+この警告は、自動的にエラーになります。 この動作を変更する場合を使用して、 [#pragma warning](../../preprocessor/warning.md)します。
 
 ## <a name="example"></a>例
 

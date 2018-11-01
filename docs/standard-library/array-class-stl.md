@@ -1,10 +1,6 @@
 ---
 title: array クラス (C++ 標準ライブラリ) |Microsoft Docs
-ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - array/std::array
 - array/std::array::const_iterator
@@ -38,8 +34,6 @@ f1_keywords:
 - array/std::array::swap
 - array/std::array::operator=
 - array/std::array::operator[]
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::array [C++]
 - std::array [C++], const_iterator
@@ -102,16 +96,12 @@ helpviewer_keywords:
 - std::array [C++], size
 - std::array [C++], swap
 ms.assetid: fdfd43a5-b2b5-4b9e-991f-93bf10fb4293
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c52a68e87e29aaa827a61e657e04364acf6205b4
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 0cb12cfc74578969f96476c2acaadefb4dbc19de
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318792"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50555923"
 ---
 # <a name="array-class-c-standard-library"></a>array クラス (C++ 標準ライブラリ)
 
@@ -176,7 +166,7 @@ class array;
 
 ## <a name="remarks"></a>Remarks
 
-この型は、既定のコンストラクター `array()` と既定代入演算子 `operator=` を持ち、`aggregate` の要件を満たします。 そのため、`array<Ty, N>` 型のオブジェクトは、集計初期化子を使用して初期化できます。 たとえば、オブジェクトに適用された
+この型は、既定のコンストラクター `array()` と既定代入演算子 `operator=` を持ち、`aggregate` の要件を満たします。 そのため、`array<Ty, N>` 型のオブジェクトは、集計初期化子を使用して初期化できます。 例えば以下のようにします。
 
 ```cpp
 array<int, 4> ai = { 1, 2, 3 };
@@ -184,7 +174,7 @@ array<int, 4> ai = { 1, 2, 3 };
 
 このコードは、4 つの整数値を保持するオブジェクト `ai` を作成し、最初の 3 つの要素はそれぞれ値 1、2、3 に初期化し、4 番目の要素は 0 に初期化します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **Header:** \<array>
 

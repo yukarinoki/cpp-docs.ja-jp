@@ -1,43 +1,33 @@
 ---
-title: コンパイラの警告 (レベル 3) C4398 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラの警告 (レベル 3) C4398
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4398
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4398
 ms.assetid: b6221432-9fed-4272-a547-a73f587904e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c38ade6b75242fdd5144481e3415e914cb6773c5
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 4126a1267b41cdf9c0161c7e85a9057b2a301d77
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704615"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578465"
 ---
 # <a name="compiler-warning-level-3-c4398"></a>コンパイラの警告 (レベル 3) C4398
 
-> '*変数*': プロセスごとのグローバル オブジェクトは複数の appdomain と共に動作しない可能性があります __declspec(appdomain) を使用してください。
+> '*変数*': プロセスごとのグローバル オブジェクトは複数の appdomain と共に動作しない可能性があります、__declspec(appdomain) を使用してみてください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-仮想関数と[_ _clrcall](../../cpp/clrcall.md)の作成をネイティブ型に規則を呼び出すと、アプリケーション ドメインの vtable ごとです。 複数のアプリケーション ドメインで使用する場合は、このような変数が適切に修正されない場合があります。
+仮想関数と[_ _clrcall](../../cpp/clrcall.md)の作成をネイティブ型で規則を呼び出すと、アプリケーション ドメインの vtable ごと。 複数のアプリケーション ドメインで使用する場合は、このような変数が適切に修正されない場合があります。
 
-この警告を解決するには、変数を明示的にマークすることによって`__declspec(appdomain)`です。 Visual Studio 2017 より前に、の Visual Studio のバージョンは、この警告を解決でコンパイルすると **/clr: 純粋な**、これにより、appdomain ごとのグローバル変数既定値です。 **/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+この警告を解決するには、変数を明示的にマークすることによって`__declspec(appdomain)`します。 Visual Studio 2017 の前に Visual Studio のバージョンでは、この警告を解決でコンパイルする **/clr: 純粋な**、appdomain ごとのグローバル変数は既定では、これです。 **/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-詳細については、次を参照してください。 [appdomain](../../cpp/appdomain.md)と[アプリケーション ドメインと Visual c](../../dotnet/application-domains-and-visual-cpp.md)です。
+詳細については、次を参照してください。 [appdomain](../../cpp/appdomain.md)と[アプリケーション ドメインと Visual c](../../dotnet/application-domains-and-visual-cpp.md)します。
 
 ## <a name="example"></a>例
 
-次の例では、C4398 を生成します。
+次の例では、C4398 が生成されます。
 
 ```cpp
 // C4398.cpp

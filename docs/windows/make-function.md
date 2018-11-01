@@ -1,28 +1,18 @@
 ---
-title: 関数の作成 |Microsoft Docs
-ms.custom: ''
+title: Make 関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - implements/Microsoft::WRL::Make
-dev_langs:
-- C++
 helpviewer_keywords:
 - Make function
 ms.assetid: 66704143-df99-4a95-904d-ed99607e1034
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a8b02b51dca4ae3712274b2b011c1967e5006637
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 94468e35abc8bb53f4b01b4295478e8d9c52ddb0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46422403"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501336"
 ---
 # <a name="make-function"></a>Make 関数
 
@@ -239,7 +229,7 @@ A`ComPtr<T>`成功。 それ以外の場合は、オブジェクト**nullptr**�
 
 参照してください[方法: 直接に WRL コンポーネントをインスタンス化](../windows/how-to-instantiate-wrl-components-directly.md)についてはこの関数の相違点と[Microsoft::WRL::Details::MakeAndInitialize](../windows/makeandinitialize-function.md)、および例についてはします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** implements.h
 

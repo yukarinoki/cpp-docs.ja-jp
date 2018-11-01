@@ -1,14 +1,8 @@
 ---
-title: アクセラレータ エディター (C++) |Microsoft Docs
-ms.custom: ''
+title: アクセラレータ エディター (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.accelerator.F1
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
 - tables [C++], accelerator key
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - resource editors [C++], Accelerator editor
 - keyboard shortcuts [C++], Accelerator editor
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 42870002ff84b697599443da8ab9b9b88dbbd7ca
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: fdb2d9cf0954142da990a0a9f995cb482060345d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44318799"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621495"
 ---
 # <a name="accelerator-editor-c"></a>アクセラレータ エディター (C++)
 
@@ -34,7 +23,7 @@ ms.locfileid: "44318799"
 
 通常、アクセラレータはメニューやツール バーでも使用できるプログラム コマンドのキーボード ショートカットとして使用されます。 しかし、アクセラレータ テーブルを使用すると、関連付けられているユーザー インターフェイス オブジェクトのないコマンドにキーの組み合わせを定義できます。
 
-使用することができます[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code)コードへのアクセス キーのコマンドをフックします。
+[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code) を使用して、コードにアクセス キーのコマンドをフックできます。
 
 **アクセラレータ**エディターができます。
 
@@ -54,7 +43,7 @@ ms.locfileid: "44318799"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

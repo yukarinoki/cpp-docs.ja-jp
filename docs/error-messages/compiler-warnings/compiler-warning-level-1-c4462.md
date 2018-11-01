@@ -1,26 +1,17 @@
 ---
-title: コンパイラの警告 (レベル 1) C4462 |Microsoft ドキュメント
+title: コンパイラの警告 (レベル 1) C4462
 ms.date: 10/25/2017
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4462
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4462
 ms.assetid: 4e20aca4-293e-4c75-a83d-961c27ab7840
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 105a78fe9f8a8d2b6442c9b403af0266de53d3b2
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 801a440f131e9428c7f217346a6fd26c72cc1374
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33281402"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50582326"
 ---
 # <a name="compiler-warning-level-1-c4462"></a>コンパイラの警告 (レベル 1) C4462
 
@@ -28,7 +19,7 @@ ms.locfileid: "33281402"
 
 C4462 警告は、パブリックな `TypedEventHandler` に、型パラメーターの 1 つとして外側のクラスへの参照が含まれる場合に、Windows ランタイム アプリケーションまたはコンポーネントで発生します。
 
-この警告は、自動的にエラーになります。 この動作を変更する場合は、使用[#pragma 警告](../../preprocessor/warning.md)です。 たとえば、C4462 に、レベル 4 の警告を発行するために、この行をソース コード ファイルに追加します。
+この警告は、自動的にエラーになります。 この動作を変更する場合を使用して、 [#pragma warning](../../preprocessor/warning.md)します。 たとえば、C4462 に、レベル 4 の警告を発行するために、この行をソース コード ファイルに追加します。
 
 ```cpp
 #pragma warning(4:4462)
@@ -36,23 +27,23 @@ C4462 警告は、パブリックな `TypedEventHandler` に、型パラメー�
 
 ## <a name="example"></a>例
 
-このサンプルでは、C4462 警告が生成されます。
+この例では、C4462 警告が生成されます。
 
 ```cpp
 namespace N
 {
-       public ref struct EventArgs sealed {};
-       public ref struct R sealed
-       {
-              R() {}
-              event Windows::Foundation::TypedEventHandler<R ^, EventArgs^>^ e;
-       };
+       public ref struct EventArgs sealed {};
+       public ref struct R sealed
+       {
+              R() {}
+              event Windows::Foundation::TypedEventHandler<R ^, EventArgs^>^ e;
+       };
 }
 
 [Platform::MTAThread]
 int main()
 {
-     auto x = ref new N::R();
+     auto x = ref new N::R();
 }
 ```
 

@@ -1,12 +1,6 @@
 ---
-title: ダイアログ ボックス (C++) のコントロールとコード間の切り替え |Microsoft Docs
-ms.custom: ''
+title: ダイアログ ボックス (C++) のコントロールとコード間の切り替え
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - events [C++], viewing for controls
 - Windows messages [C++], controls
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - controls [C++], jumping to code
 - Dialog Editor [C++], switching between controls and code
 ms.assetid: 7da73815-b853-4203-ba45-bbe570695122
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0ef2bcd7dc6bf70f4d0486334d71bd5f7798c83f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4d48386e93fcea6d30fee6c57c288944bbd8d9ed
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44314392"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50644302"
 ---
 # <a name="switching-between-dialog-box-c-controls-and-code"></a>ダイアログ ボックス (C++) のコントロールとコード間の切り替え
 
@@ -53,7 +42,7 @@ MFC アプリケーションで、ハンドラーのコードに移動する、�
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

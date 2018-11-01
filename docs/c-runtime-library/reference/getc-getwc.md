@@ -1,10 +1,6 @@
 ---
-title: getc、getwc | Microsoft Docs
-ms.custom: ''
+title: getc、getwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - getwc
 - getc
@@ -26,8 +22,6 @@ f1_keywords:
 - getwc
 - _gettchar
 - getc
-dev_langs:
-- C++
 helpviewer_keywords:
 - characters, reading
 - _gettc function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - getwc function
 - gettc function
 ms.assetid: 354ef514-d0c7-404b-92f5-995f6a834bb3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9a4908e8fa3343bb54191fe2494f738ff0edf887
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bbaee79eac6802959a11f7f1ba30eaf590ecf2f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404332"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664868"
 ---
 # <a name="getc-getwc"></a>getc、getwc
 
@@ -71,22 +61,22 @@ wint_t getwc(
 
 ## <a name="return-value"></a>戻り値
 
-読み取られた文字を返します。 読み取りエラーまたはファイルの終端状態を示す**getc**返します**EOF**、および**getwc**を返します**WEOF**です。 **Getc**を使用して**ferror**または**feof**エラーまたはファイルの末尾を確認します。 場合*ストリーム*は**NULL**、 **getc**と**getwc** 」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF** (または**WEOF**の**getwc**) を設定および**errno**に**EINVAL**です。
+読み取られた文字を返します。 読み取りエラーまたはファイルの終わりの条件を示す**getc**返します**EOF**と**getwc**返します**WEOF**します。 **Getc**を使用して、 **ferror**または**feof**エラーまたはファイルの終わりを確認します。 場合*ストリーム*は**NULL**、 **getc**と**getwc** 」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF** (または**WEOF**の**getwc**) を設定および**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-各ルーチンはファイルの現在の位置から 1 文字読み取り、関連付けられたファイル ポインター (定義されている場合) をインクリメントして次の文字を指します。 ファイルに関連付けられている*ストリーム*です。
+各ルーチンはファイルの現在の位置から 1 文字読み取り、関連付けられたファイル ポインター (定義されている場合) をインクリメントして次の文字を指します。 ファイルが関連付けられている*ストリーム*します。
 
 これらの関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンについては、「[_getc_nolock、_getwc_nolock](getc-nolock-getwc-nolock.md)」をご覧ください。
 
 ルーチン固有の解説は、次のとおりです。
 
-|ルーチン|コメント|
+|ルーチンによって返される値|Remarks|
 |-------------|-------------|
-|**getc**|同じ**fgetc**、関数およびマクロとしてでは実装します。|
-|**getwc**|ワイド文字バージョン**getc**です。 マルチバイト文字またはワイド文字であるかどうかに従って読み取り*ストリーム*はテキスト モードとバイナリ モードで開かれます。|
+|**getc**|同じ**fgetc**が、関数およびマクロとして実装されています。|
+|**getwc**|ワイド文字バージョン**getc**します。 マルチバイト文字またはワイド文字かどうかに従って読み取り*ストリーム*はテキスト モードとバイナリ モードで開かれます。|
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -94,9 +84,9 @@ wint_t getwc(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_gettc**|**getc**|**getc**|**getwc**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**getc**|\<stdio.h>|
 |**getwc**|\<stdio.h> または \<wchar.h>|

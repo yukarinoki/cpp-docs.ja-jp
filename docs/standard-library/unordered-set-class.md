@@ -1,10 +1,6 @@
 ---
-title: unordered_set クラス | Microsoft Docs
-ms.custom: ''
+title: unordered_set クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - unordered_set/std::unordered_set
 - unordered_set/std::unordered_set::allocator_type
@@ -51,8 +47,6 @@ f1_keywords:
 - unordered_set/std::unordered_set::unordered_set
 - unordered_set/std::unordered_set::operator=
 - unordered_set/std::unordered_set::hash_function
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::unordered_set
 - std::unordered_set::allocator_type
@@ -140,16 +134,12 @@ helpviewer_keywords:
 - std::unordered_set::size
 - std::unordered_set::swap
 ms.assetid: ac08084e-05a7-48c0-9ae4-d40c529922dd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dba290e01ae05021c55b824456384c5f6199991e
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 01c8b79f596c2fda8cef0a74a7b5dcdc70786dbf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48236063"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534993"
 ---
 # <a name="unorderedset-class"></a>unordered_set クラス
 
@@ -239,7 +229,7 @@ class unordered_set;
 
 被制御シーケンスに対するストレージの割り当ておよび解放は、格納されている [unordered_set::allocator_type](#allocator_type) 型のアロケーター オブジェクトを介して行われます。 このアロケーター オブジェクトは、`allocator` テンプレート クラスのオブジェクトと同じ外部インターフェイスを持っている必要があります。 コンテナー オブジェクトを代入しても、格納されているアロケーター オブジェクトはコピーされない点に注意してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<unordered_set >
 

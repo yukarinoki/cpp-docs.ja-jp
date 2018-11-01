@@ -1,10 +1,6 @@
 ---
-title: _CrtIsValidHeapPointer | Microsoft Docs
-ms.custom: ''
+title: _CrtIsValidHeapPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidHeapPointer
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidHeapPointer
 - _CrtIsValidHeapPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtIsValidHeapPointer function
 - CrtIsValidHeapPointer function
 ms.assetid: caf597ce-1b05-4764-9f37-0197a982bec5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bc4be3f464cb48647985a96550a8b9ea13ce5ef
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cdfb02c622cddc4c86a99f614e469abc527d8845
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396694"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662008"
 ---
 # <a name="crtisvalidheappointer"></a>_CrtIsValidHeapPointer
 
@@ -53,16 +43,16 @@ int _CrtIsValidHeapPointer(
 
 ### <a name="parameters"></a>パラメーター
 
-*UserData*<br/>
+*userData*<br/>
 割り当てられたメモリ ブロックの先頭へのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 **_CrtIsValidHeapPointer**指定したポインターがすべての CRT ライブラリ インスタンスによって共有されるヒープの場合は TRUE を返します。 これにより、Visual Studio 2010 以前のバージョンの CRT では、指定したポインターがローカル ヒープにある場合は、TRUE を返します。 それ以外の場合、関数は FALSE を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数を使用しないことをお勧めします。 Visual Studio 2010 CRT ライブラリ以降、すべての CRT ライブラリでは 1 つの OS ヒープ (*プロセス ヒープ*) を共有します。 **_CrtIsValidHeapPointer**関数かどうか、ポインターが割り当てられたヒープでは、CRT しない場合は、呼び出し元の CRT ライブラリによって割り当てられたことを報告します。 たとえば、Visual Studio 2010 バージョンの CRT ライブラリを使用して割り当てられたブロックがあるとします。 場合、 **_CrtIsValidHeapPointer** Visual Studio 2012 バージョンの CRT ライブラリによってエクスポートされた関数がポインターをテストするには TRUE を返します。 これは便利なテストではなくなりました。 Visual Studio 2010 以前のバージョンの CRT ライブラリでは、この関数は、特定のメモリ アドレスがローカル ヒープ内にあることを確認するために使用されます。 ローカル ヒープとは、C ランタイム ライブラリの特定のインスタンスによって作成および管理されるヒープを指します。 ダイナミック リンク ライブラリ (DLL) にランタイム ライブラリへの静的なリンクが含まれている場合、DLL はランタイム ヒープの独自のインスタンスを持つため、アプリケーションのローカル ヒープとは別の独自のヒープを持ちます。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていないへの呼び出し **_CrtIsValidHeapPointer**プリプロセス時に削除されます。
+この関数を使用しないことをお勧めします。 Visual Studio 2010 CRT ライブラリ以降、すべての CRT ライブラリでは 1 つの OS ヒープ (*プロセス ヒープ*) を共有します。 **_CrtIsValidHeapPointer**関数かどうか、ポインターが割り当てられた CRT ヒープでしない場合は、呼び出し元の CRT ライブラリによって割り当てられたことを報告します。 たとえば、Visual Studio 2010 バージョンの CRT ライブラリを使用して割り当てられたブロックがあるとします。 場合、 **_CrtIsValidHeapPointer** Visual Studio 2012 バージョンの CRT ライブラリによってエクスポートされた関数がポインターをテストする、TRUE を返します。 これは便利なテストではなくなりました。 Visual Studio 2010 以前のバージョンの CRT ライブラリでは、この関数は、特定のメモリ アドレスがローカル ヒープ内にあることを確認するために使用されます。 ローカル ヒープとは、C ランタイム ライブラリの特定のインスタンスによって作成および管理されるヒープを指します。 ダイナミック リンク ライブラリ (DLL) にランタイム ライブラリへの静的なリンクが含まれている場合、DLL はランタイム ヒープの独自のインスタンスを持つため、アプリケーションのローカル ヒープとは別の独自のヒープを持ちます。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない、呼び出し **_CrtIsValidHeapPointer**プリプロセス時に削除されます。
 
 この関数は TRUE または FALSE を返すため、[_ASSERT](assert-asserte-assert-expr-macros.md) 系マクロに渡すことによって、デバッグ用の単純なエラー処理機構を作成できます。 指定されたアドレスがローカル ヒープ内にない場合に、アサーションの失敗を発生させるには、次のように記述します。
 
@@ -70,11 +60,11 @@ int _CrtIsValidHeapPointer(
 _ASSERTE( _CrtIsValidHeapPointer( userData ) );
 ```
 
-方法の詳細についての **_CrtIsValidHeapPointer**他のデバッグ関数およびマクロと共に使用するを参照してください[レポート用マクロ](/visualstudio/debugger/macros-for-reporting)です。 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
+詳細について **_CrtIsValidHeapPointer**他のデバッグ関数およびマクロとで使用できるを参照してください[レポート用マクロ](/visualstudio/debugger/macros-for-reporting)します。 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_CrtIsValidHeapPointer**|\<crtdbg.h>|
 

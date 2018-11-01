@@ -1,27 +1,17 @@
 ---
-title: const_mem_fun1_t クラス | Microsoft Docs
-ms.custom: ''
+title: const_mem_fun1_t クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::const_mem_fun1_t
-dev_langs:
-- C++
 helpviewer_keywords:
 - const_mem_fun1_t class
 ms.assetid: 250fac30-9663-4133-9051-6303f76ea259
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d42bc03e9fcb16ba8c0832a10ee96b361c525523
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 53724c3d9b795d8cbde7a4bcda3531e43d41c4a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45699974"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50548787"
 ---
 # <a name="constmemfun1t-class"></a>const_mem_fun1_t クラス
 
@@ -61,7 +51,7 @@ class const_mem_fun1_t : public binary_function<const Type *, Arg, Result>
 
 `const_mem_fun1_t` のコンストラクターは通常は直接使用されません。ヘルパー関数 `mem_fun` を使用してメンバー関数を適合させます。 メンバー関数アダプターの使用例については、「[mem_fun](../standard-library/functional-functions.md#mem_fun)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

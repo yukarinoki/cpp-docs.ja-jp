@@ -1,27 +1,17 @@
 ---
-title: WINDOWPLACEMENT 構造体 |Microsoft Docs
-ms.custom: ''
+title: WINDOWPLACEMENT 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - WINDOWPLACEMENT
-dev_langs:
-- C++
 helpviewer_keywords:
 - WINDOWPLACEMENT structure [MFC]
 ms.assetid: ea7d61f6-eb57-478e-9b08-7c1d07091aa8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b163d93de22d313d72ca5dbfd384788077ae1b01
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: fecca306045805661a7799aca8d9ea57ea11f5b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518678"
 ---
 # <a name="windowplacement-structure"></a>WINDOWPLACEMENT 構造体
 
@@ -84,7 +74,7 @@ typedef struct tagWINDOWPLACEMENT {     /* wndpl */
 *rcNormalPosition*<br/>
 ウィンドウが通常の (復元) の位置にあるときは、ウィンドウの座標を指定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** winuser.h
 

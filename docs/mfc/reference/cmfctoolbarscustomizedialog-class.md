@@ -1,10 +1,6 @@
 ---
-title: CMFCToolBarsCustomizeDialog クラス |Microsoft Docs
-ms.custom: ''
+title: CMFCToolBarsCustomizeDialog クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCToolBarsCustomizeDialog
 - AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog
@@ -17,8 +13,6 @@ f1_keywords:
 - AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::GetFlags
 - AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::OnInitDialog
 - AFXTOOLBARSCUSTOMIZEDIALOG/CMFCToolBarsCustomizeDialog::PostNcDestroy
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], CMFCToolBarsCustomizeDialog
 - CMFCToolBarsCustomizeDialog [MFC], FillAllCommandsList
@@ -30,16 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7d0e9a8cd4cba5fd34842ada81550db9b76e0b86
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 026c7392c3eb93b37a712059939683e3e0ab852c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628996"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog クラス
 
@@ -82,7 +72,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 |`CMFCToolBarsCustomizeDialog::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::OnEditToolbarMenuImage](#onedittoolbarmenuimage)|イメージ エディターを起動し、ユーザーがツール バー ボタンまたはメニュー項目のアイコンをカスタマイズできます。|
 |[CMFCToolBarsCustomizeDialog::OnInitDialog](#oninitdialog)|プロパティ シートの初期化処理を強化するよりも優先されます。 (上書き[cpropertysheet::oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog))。|
-|[CMFCToolBarsCustomizeDialog::PostNcDestroy](#postncdestroy)|ウィンドウが破棄された後に、フレームワークによって呼び出されます。 (`CPropertySheet::PostNcDestroy` をオーバーライドします)。|
+|[CMFCToolBarsCustomizeDialog::PostNcDestroy](#postncdestroy)|ウィンドウが破棄された後に、フレームワークによって呼び出されます。 ( `CPropertySheet::PostNcDestroy`をオーバーライドします)。|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RemoveButton](#removebutton)|指定したカテゴリまたはすべてのカテゴリから、指定したコマンド ID を持つボタンを削除します。|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::RenameCategory](#renamecategory)|カテゴリのリスト ボックス内にあるカテゴリの名前を変更、**コマンド**タブ。|
 |`CMFCToolBarsCustomizeDialog::` [CMFCToolBarsCustomizeDialog::ReplaceButton](#replacebutton)|上のコマンドの一覧で ボタンの代わり、**コマンド**新しいツール バー ボタン オブジェクトを持つタブ。|
@@ -106,7 +96,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CMFCToolBarsCustomizeDialog`クラス。 例では、コマンドのリスト ボックスにツール バー ボタンを交換する方法を示しています、**コマンド** ページを使用して新しいツールバーの作成を有効にする、**カスタマイズ** ダイアログ ボックスで、表示、 **カスタマイズ** ダイアログ ボックス。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCToolBarsCustomizeDialog` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、コマンドのリスト ボックスにツール バー ボタンを交換する方法を示しています、**コマンド** ページを使用して新しいツールバーの作成を有効にする、**カスタマイズ** ダイアログ ボックスで、表示、 **カスタマイズ** ダイアログ ボックス。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]
 
@@ -122,7 +112,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 `CMFCToolBarsCustomizeDialog`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxToolBarsCustomizeDialog.h
 

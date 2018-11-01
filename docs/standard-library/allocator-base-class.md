@@ -1,10 +1,6 @@
 ---
-title: allocator_base クラス |Microsoft Docs
-ms.custom: ''
+title: allocator_base クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - allocators/stdext::allocator_base
 - allocators/stdext::allocators::allocator_base
@@ -23,8 +19,6 @@ f1_keywords:
 - allocators/stdext::allocator_base::deallocate
 - allocators/stdext::allocator_base::destroy
 - allocators/stdext::allocator_base::max_size
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::allocator_base [C++]
 - stdext::allocators [C++], allocator_base
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - stdext::allocator_base [C++], destroy
 - stdext::allocator_base [C++], max_size
 ms.assetid: f920b45f-2a88-4bb0-8ead-b6126b426ed4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f55a332032b081cba45d2235f263adafde7e10f8
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 59d5834b941791a659815ff0a03f1c68c8ce68bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101783"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591647"
 ---
 # <a name="allocatorbase-class"></a>allocator_base クラス
 
@@ -79,7 +69,7 @@ class allocator_base
 |-|-|
 |[allocator_base](#allocator_base)|`allocator_base` 型のオブジェクトを構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -104,7 +94,7 @@ class allocator_base
 |[destroy](#destroy)|オブジェクトが格納されたメモリの割り当てを解除せずに、オブジェクトのデストラクターを呼び出します。|
 |[max_size](#max_size)|空きメモリがすべて使用される前にクラス アロケーター オブジェクトによって割り当てることのできる、*Type* 型の要素の数を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<allocators>
 

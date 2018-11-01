@@ -1,30 +1,20 @@
 ---
-title: _mm_extract_si64、_mm_extracti_si64 |Microsoft Docs
-ms.custom: ''
+title: _mm_extract_si64、_mm_extracti_si64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _mm_extracti_si64
 - _mm_extract_si64
-dev_langs:
-- C++
 helpviewer_keywords:
 - extrq instruction
 - _mm_extracti_si64 intrinsic
 - _mm_extract_si64 intrinsic
 ms.assetid: 459fdd72-cc54-4ee5-bbd5-d2c6067a88e7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fab2bb7f1e4992d2f1e9e979d4eb6ea8cf426dc3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 21e2b23ca4ac3b98c44ea7152badc5c79f386c09
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46376513"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630101"
 ---
 # <a name="mmextractsi64-mmextractisi64"></a>_mm_extract_si64、_mm_extracti_si64
 
@@ -48,7 +38,7 @@ __m128i _mm_extracti_si64(
 
 #### <a name="parameters"></a>パラメーター
 
-*Source*<br/>
+*ソース*<br/>
 [in]下位 64 ビットの入力データでは、128 ビット フィールドです。
 
 *記述子*<br/>
@@ -64,7 +54,7 @@ __m128i _mm_extracti_si64(
 
 抽出された、最下位ビット フィールドは、128 ビット フィールドです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

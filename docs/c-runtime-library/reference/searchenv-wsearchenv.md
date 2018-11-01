@@ -1,10 +1,6 @@
 ---
-title: _searchenv、_wsearchenv | Microsoft Docs
-ms.custom: ''
+title: _searchenv、_wsearchenv
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _searchenv
 - _wsearchenv
@@ -27,8 +23,6 @@ f1_keywords:
 - wsearchenv
 - _searchenv
 - searchenv
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsearchenv function
 - files [C++], finding
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - searchenv function
 - environment paths
 ms.assetid: 9c944a27-d326-409b-aee6-410e8762d9d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: afcd461446f98024e04e44e28facae4fba65b0aa
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c1d2361fceec448c98fd9e5a368653aac38c83e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100406"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628255"
 ---
 # <a name="searchenv-wsearchenv"></a>_searchenv、_wsearchenv
 
@@ -120,7 +110,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsearchenv**|**_searchenv**|**_searchenv**|**_wsearchenv**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

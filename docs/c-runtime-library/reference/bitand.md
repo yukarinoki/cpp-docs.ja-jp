@@ -1,10 +1,6 @@
 ---
-title: bitand | Microsoft Docs
-ms.custom: ''
+title: bitand
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,21 +17,15 @@ f1_keywords:
 - std::bitand
 - std.bitand
 - bitand
-dev_langs:
-- C++
 helpviewer_keywords:
 - bitand function
 ms.assetid: 279cf9b5-fac1-49de-b329-f1a31b3481fe
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f918608740960fef278c615d8f4b8b627a3e96f4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5e57254d749409df1534db7bf03057cc45cded1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393174"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533251"
 ---
 # <a name="bitand"></a>bitand
 
@@ -49,7 +39,7 @@ ms.locfileid: "32393174"
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 マクロにより演算子が生成されます
 
@@ -79,6 +69,6 @@ int main( )
 0
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iso646.h>

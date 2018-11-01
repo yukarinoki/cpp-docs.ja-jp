@@ -1,23 +1,13 @@
 ---
-title: chrono リテラル | Microsoft Docs
-ms.custom: ''
+title: chrono リテラル
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 1a9e23b1-256f-4570-8226-5fa7364fb032
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a1508927300cad6d7b8c244bc341aaf4a44e7bb
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 838ae99f5a21660968e0215818aa959348f38305
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45711066"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494732"
 ---
 # <a name="chrono-literals"></a>chrono リテラル
 
@@ -82,7 +72,7 @@ constexpr auto week = 24h* 7;
 constexpr auto my_duration_unit = 108ms;
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<chrono>
 

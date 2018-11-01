@@ -1,26 +1,18 @@
 ---
-title: Platform::Collections::VectorViewIterator クラス |Microsoft Docs
-ms.custom: ''
+title: Platform::Collections::VectorViewIterator クラス
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
-dev_langs:
-- C++
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36e0421e002efbcabc4c4525ddcf592258f6f7d1
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 6ee03b546cf89aff3ef79fa9c89d15f39b4d9fe0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163700"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539140"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator クラス
 
@@ -82,7 +74,7 @@ VectorViewIterator テンプレート クラスの型名。
 
 `VectorViewIterator`
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** collection.h
 

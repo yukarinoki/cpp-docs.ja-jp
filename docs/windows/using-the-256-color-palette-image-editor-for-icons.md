@@ -1,12 +1,6 @@
 ---
-title: 256 色カラー パレット (アイコン用イメージ エディター) を使用して |Microsoft Docs
-ms.custom: ''
+title: 256 色カラー パレットの使用 (アイコン用イメージ エディター)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - 256-color palette
 - colors [C++], icons and cursors
@@ -15,17 +9,12 @@ helpviewer_keywords:
 - palettes, 256-color
 - icons, color
 ms.assetid: 1506ed00-669b-4a21-b1a4-39b6a84a78bb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: d9a8952ccdf4477f263a2fb960020e7abba19546
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f41ca69e7c13dfb722085648cefa11bfe43af819
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418152"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519263"
 ---
 # <a name="using-the-256-color-palette-image-editor-for-icons"></a>256 色カラー パレットの使用 (アイコン用イメージ エディター)
 
@@ -44,7 +33,7 @@ ms.locfileid: "46418152"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

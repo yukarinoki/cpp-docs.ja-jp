@@ -1,7 +1,7 @@
 ---
 title: C++ メイクファイル プロジェクトの作成 | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2018
+ms.date: 10/19/2018
 ms.technology:
 - cpp-ide
 ms.topic: conceptual
@@ -17,22 +17,22 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a3360d2ed86d220bc59d6f09f582c71b48f7d78c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f937c11b2453bd296468c5f153b7c9495eba290
+ms.sourcegitcommit: c045c3a7e9f2c7e3e0de5b7f9513e41d8b6d19b2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399484"
+ms.lasthandoff: 10/24/2018
+ms.locfileid: "49990244"
 ---
 # <a name="creating-a-c-makefile-project"></a>C++ メイクファイル プロジェクトの作成
 
-*makefile* は、一連の C++ ソース コード ファイルをコンパイルし、リンクする (あるいは*ビルド*する) 方法を含むテキスト ファイルです。 *make* プログラムによってメイクファイルが読み取られ、コンパイラ、リンカー、そしておそらくは他のプログラムが呼び出され、実行可能ファイルが作成されます。 Microsoft の *make* プログラム実装は **NMAKE** と呼ばれています。 (Visual Studio では既定で、.vcsproj ファイルに基づいて MSBuild システムが使用されます。これは **[ファイル]、[新規]、[プロジェクト]** で作成されます。)
+*makefile* は、一連の C++ ソース コード ファイルをコンパイルし、リンクする (あるいは*ビルド*する) 方法を含むテキスト ファイルです。 *make* プログラムによってメイクファイルが読み取られ、コンパイラ、リンカー、そしておそらくは他のプログラムが呼び出され、実行可能ファイルが作成されます。 Microsoft の *make* プログラム実装は **NMAKE** と呼ばれています。 (Visual Studio では既定で、.vcxproj ファイルに基づいて MSBuild システムが使用されます。これは **[ファイル]、[新規]、[プロジェクト]** で作成されます。)
 
 既存のメイクファイル プロジェクトがある場合、Visual Studio IDE でそれをコード化またはデバッグするとき、次の選択肢が表示されます。
 
 - Visual Studio で、既存のメイクファイルを使用して IDE でコードをビルドするメイクファイル プロジェクトを作成します。 (ネイティブの MSBuild プロジェクトで与えられる IDE 機能は一部のみ与えられます。)下の「[メイクファイル プロジェクトを作成するには](#create_a_makefile_project)」を参照してください。
 - **[既存コード ファイルからの新しいプロジェクトの作成]** ウィザードを使用し、ソース コードからネイティブ MSBuild プロジェクトを作成します。 詳細については、「[方法 : 既存のコードから C++ プロジェクトを作成する](how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。
-- **Visual Studio 2017 以降**: **[フォルダーを開く]** 機能を使用してメイクファイルを開きます。 詳細については、「[Open Folder projects in Visual C++ (Visual C++ の [フォルダーを開く] プロジェクト)](non-msbuild-projects.md)」をご覧ください。
+- **Visual Studio 2017 以降**: **[フォルダーを開く]** 機能を使用して MSBuild に変換せずにメイクファイル プロジェクトを開きます。 詳細については、「[Open Folder projects in Visual C++ (Visual C++ の [フォルダーを開く] プロジェクト)](non-msbuild-projects.md)」をご覧ください。
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> メイクファイル プロジェクト テンプレートでメイクファイル プロジェクトを作成するには
 

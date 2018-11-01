@@ -1,10 +1,6 @@
 ---
-title: condition_variable_any クラス | Microsoft Docs
-ms.custom: ''
+title: condition_variable_any クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - condition_variable/std::condition_variable_any
 - condition_variable/std::condition_variable_any::condition_variable_any
@@ -13,11 +9,7 @@ f1_keywords:
 - condition_variable/std::condition_variable_any::wait
 - condition_variable/std::condition_variable_any::wait_for
 - condition_variable/std::condition_variable_any::wait_until
-dev_langs:
-- C++
 ms.assetid: d8afe5db-1561-4ec2-8e85-21ea03ee4321
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::condition_variable_any
 - std::condition_variable_any::condition_variable_any
@@ -26,14 +18,12 @@ helpviewer_keywords:
 - std::condition_variable_any::wait
 - std::condition_variable_any::wait_for
 - std::condition_variable_any::wait_until
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9acd5abc941c3cc3ab2f1c22486298d7cc7da16c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c38c080b0a8dbd9d4b0b76496aa367fa55892f50
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106965"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50598160"
 ---
 # <a name="conditionvariableany-class"></a>condition_variable_any クラス
 
@@ -63,7 +53,7 @@ class condition_variable_any;
 |[wait_for](#wait_for)|スレッドをブロックし、スレッドがブロック解除されるまでの時間間隔を設定します。|
 |[wait_until](#wait_until)|スレッドをブロックし、スレッドがブロック解除される最大の時刻を設定します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<condition_variable >
 

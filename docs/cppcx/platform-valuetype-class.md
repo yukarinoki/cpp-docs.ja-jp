@@ -1,26 +1,18 @@
 ---
-title: Platform::valuetype クラス |Microsoft Docs
-ms.custom: ''
+title: Platform::ValueType クラス
 ms.date: 02/03/2017
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::ValueType::ToString
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::ValueType Class
 ms.assetid: 79aa8754-b140-4974-a5b1-be046938a10a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ae1cab3d5cde3bc39f131acd1b01976dcb6d522b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 57fb089f0d9dc53ba8a65cef41e3341168ffea45
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105108"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596405"
 ---
 # <a name="platformvaluetype-class"></a>Platform::ValueType クラス
 
@@ -42,7 +34,7 @@ public ref class ValueType : Object
 
 ValueType クラスは、値型を構築するために使用されます。 ValueType は Object (基本メンバーを持つ) から派生します。 ただし、コンパイラは、それらのメンバーを、ValueType クラスから派生する値型からデタッチします。 値型がボックス化されると、コンパイラは、その基本メンバーを再びアタッチします。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **クライアントがサポートされている最小:** Windows 8
 

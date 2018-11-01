@@ -1,25 +1,15 @@
 ---
-title: treat_as_floating_point 構造体 | Microsoft Docs
-ms.custom: ''
+title: treat_as_floating_point 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::treat_as_floating_point
-dev_langs:
-- C++
 ms.assetid: d0a2161c-bbb2-4924-8961-7568d5ad5434
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 96687959ce4fdd7b5431611a64b878cf05f855ab
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b7b58983032ee74ed3d88feb7325cd537e1cc2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853301"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50493861"
 ---
 # <a name="treatasfloatingpoint-structure"></a>treat_as_floating_point 構造体
 
@@ -32,11 +22,11 @@ template <class Rep>
 struct treat_as_floating_point : is_floating_point<Rep>;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 `Rep` は、特殊化 `treat_as_floating_point<Rep>` が [true_type](../standard-library/type-traits-typedefs.md#true_type) から派生したときにのみ浮動小数点型として処理できます。 このテンプレート クラスは、ユーザー定義型に特殊化することができます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<chrono >
 

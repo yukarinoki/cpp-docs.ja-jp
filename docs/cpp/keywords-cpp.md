@@ -1,12 +1,7 @@
 ---
-title: キーワード (C++) |Microsoft Docs
+title: キーワード (C++)
 ms.custom: index-page
 ms.date: 10/10/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, keywords
 - keywords [C++]
@@ -14,16 +9,12 @@ helpviewer_keywords:
 - Microsoft-specific keywords
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 86912ad8dfa3e048b74c67b6936eb09f74db308a
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 645a0edb053320499c3ecca1c9d2ffd639b15931
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659313"
 ---
 # <a name="keywords-c"></a>キーワード (C++)
 
@@ -85,7 +76,7 @@ ms.locfileid: "49162452"
 
 Microsoft C++ では、先頭に 2 つのアンダースコアが付いている識別子はコンパイラ実装用に予約されています。 Microsoft の規約では、Microsoft 固有のキーワードには先頭に 2 つのアンダースコアを付けることになっています。 したがって、これらの単語を識別子名として使用することはできません。
 
-Microsoft 拡張機能は既定で有効になっています。 プログラムには完全に移植可能であることを確認するには、する、指定することで、Microsoft の拡張機能を無効にする、 [/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)コンパイル時にオプション。 これを行うと、いくつかの Microsoft 固有キーワードは無効になります。
+Microsoft 拡張機能は既定で有効になっています。 完全に移植性のあるプログラムにするには、コンパイル時に [/Za \( 言語拡張機能の無効化)](../build/reference/za-ze-disable-language-extensions.md) オプション を指定することで、Microsoft 拡張機能を無効にできます。 これにより、Microsoft 固有のキーワードの一部が無効になります。
 
 Microsoft 拡張機能を有効にすると、Microsoft 固有のキーワードをプログラム内で使用できます。 ANSI 準拠のために、これらのキーワードは 2 つのアンダースコアで始まります。 旧バージョンと互換性のためは、二重文字キーワードの多くのアンダー スコア 1 バージョンがサポートされます。 さらに、 **_ _cdecl**は先頭にアンダー スコアなしで使用できます。
 

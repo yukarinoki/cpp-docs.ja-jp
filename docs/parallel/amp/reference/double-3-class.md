@@ -1,10 +1,6 @@
 ---
-title: double_3 クラス |Microsoft Docs
-ms.custom: ''
+title: double_3 クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_xzy
 - amp_short_vectors/Concurrency::graphics::double_3
@@ -75,19 +71,13 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_3::get_yx
 - amp_short_vectors/Concurrency::graphics::double_3::rbg
 - amp_short_vectors/Concurrency::graphics::double_3::get_yxz
-dev_langs:
-- C++
 ms.assetid: baeb3ff0-2862-4c81-857e-b1a4c085be25
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb0e6c20969fd4a810fbad5135127b2171fda9d9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 169c9ecb0fe68436a05c6c59a75a80a0d02f411c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391400"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508915"
 ---
 # <a name="double3-class"></a>double_3 クラス
 
@@ -212,7 +202,7 @@ class double_3;
 
 `double_3`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp_short_vectors.h
 

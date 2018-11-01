@@ -1,11 +1,6 @@
 ---
-title: log1p、log1pf、log1pl2 | Microsoft Docs
-ms.custom: ''
+title: log1p、log1pf、log1pl2
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - log1p
 - log1pf
@@ -35,16 +30,12 @@ helpviewer_keywords:
 - log1pf function
 - log1pl function
 ms.assetid: a40d965d-b4f6-42f4-ba27-2395546f7c12
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 650fb8f7567b4f2f3b0b9032397c2b54a99013dd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7984367aa4244a927bb9dabc5533a807d74ac1a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402749"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524996"
 ---
 # <a name="log1p-log1pf-log1pl"></a>log1p、log1pf、log1pl
 
@@ -82,7 +73,7 @@ long double log1pl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、自然を返します (基本 -*e*) のログ (*x* + 1)。
+成功した場合、自然対数を返します (底*e*) のログ (*x* + 1)。
 
 それ以外の場合は、次の値のいずれかを返します。
 
@@ -97,17 +88,17 @@ long double log1pl(
 |±SNaN|入力と同じ値。|INVALID||
 |±QNaN、不定値|入力と同じ値。|||
 
-**Errno**場合は、値を ERANGE に設定*x* -1 を = です。 **Errno**に値が設定されている**EDOM**場合*x* <-1 です。
+**Errno**場合、値は ERANGE に設定*x* =-1。 **Errno**値に設定されて**EDOM**場合*x* <-1。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Log1p**関数を使用するよりもより正確になる可能性があります`log(x + 1)`とき*x*が 0 に近いです。
+**Log1p**関数を使用するよりもより正確な可能性があります`log(x + 1)`とき*x* 0 に近いです。
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**log1p**を受け取り、返します**float**と**長い****二重**型です。 C プログラムでは、 **log1p**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **log1p**を受け取って返す**float**と**長い****二重**型。 C プログラムで**log1p**は、**二重**します。
 
-場合*x*自然数は、この関数は、数値の階乗の対数を返します (*x* - 1)。
+場合*x*が自然数では、この関数は、数値の階乗の対数を返します (*x* - 1)。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

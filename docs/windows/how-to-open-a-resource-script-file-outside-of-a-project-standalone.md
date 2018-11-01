@@ -1,31 +1,20 @@
 ---
-title: '方法: C++ プロジェクト (スタンドアロン) の外部のリソース スクリプト ファイルを開く |Microsoft Docs'
-ms.custom: ''
+title: '方法: C++ プロジェクト (スタンドアロン) の外部のリソース スクリプト ファイルを開く'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.resource
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++], viewing
 - rc files [C++], viewing resources
 - .rc files [C++], viewing resources
 - resource script files [C++], viewing resources
 ms.assetid: bc350c60-178d-4c5d-9a7e-6576b0c936e4
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 1e52d78de0026fa4a589877ee0a591da26107fde
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43b245c1d19e7468a9433473eb49dc970316eba5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529078"
 ---
 # <a name="how-to-open-a-resource-script-file-outside-of-a-c-project-standalone"></a>方法: C++ プロジェクト (スタンドアロン) の外部のリソース スクリプト ファイルを開く
 
@@ -68,7 +57,7 @@ ms.locfileid: "46391540"
 > [!NOTE]
 > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

@@ -1,29 +1,19 @@
 ---
-title: 封印された (C +/cli および C++/cli CX) |Microsoft Docs
-ms.custom: ''
+title: 封印された (C +/cli および C++/cli CX)
 ms.date: 10/12/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - sealed_cpp
 - sealed
-dev_langs:
-- C++
 helpviewer_keywords:
 - sealed keyword [C++]
 ms.assetid: 3d0d688a-41aa-45f5-a25a-65c44206521e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ee0ea65267320a4730c543cec978c2675ef1cc57
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: bbeaaa6b7d921cca600a665a961307ddac967367
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50071954"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551230"
 ---
 # <a name="sealed--ccli-and-ccx"></a>封印された (C +/cli および C++/cli CX)
 

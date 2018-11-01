@@ -1,7 +1,7 @@
 ---
 title: CMFCOutlookBarTabCtrl クラス |Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-mfc
 ms.topic: reference
@@ -54,12 +54,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7c4836a82c829dafee64c74237fa33c6199ace4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: 19550315f17982e019d1ba6f495dedee6d2f346d
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46396910"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50081014"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -85,7 +85,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 |名前|説明|
 |----------|-----------------|
 |[CMFCOutlookBarTabCtrl::AddControl](#addcontrol)|Outlook バーの新しいタブとしては、Windows コントロールを追加します。|
-|`CMFCOutlookBarTabCtrl::CalcRectEdit`|フレームワークによって呼び出されるとき、ユーザーに表示される編集ボックスのサイズを決定する名前を変更しますタブ。(`CMFCBaseTabCtrl::CalcRectEdit` をオーバーライドします)。|
+|`CMFCOutlookBarTabCtrl::CalcRectEdit`|フレームワークによって呼び出されるとき、ユーザーに表示される編集ボックスのサイズを決定する名前を変更しますタブ。( `CMFCBaseTabCtrl::CalcRectEdit`をオーバーライドします)。|
 |[CMFCOutlookBarTabCtrl::CanShowFewerPageButtons](#canshowfewerpagebuttons)|現在表示されているよりも少ない Outlook バー タブ ページのボタンを表示できる場合を判断するサイズ変更操作中に、フレームワークによって呼び出されます。|
 |[CMFCOutlookBarTabCtrl::CanShowMorePageButtons](#canshowmorepagebuttons)|現在表示されているよりも、複数の Outlook バー タブのページ ボタンを表示できる場合を判断するサイズ変更操作中に、フレームワークによって呼び出されます。|
 |[CMFCOutlookBarTabCtrl::Create](#create)|Outlook バーのタブ コントロールを作成します。|
@@ -102,7 +102,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 |[CMFCOutlookBarTabCtrl::IsMode2003](#ismode2003)|かどうか、Outlook バーのタブ コントロールが Microsoft Outlook 2003 をエミュレートするモードを決定します。|
 |`CMFCOutlookBarTabCtrl::IsPtInTabArea`|タブ領域の内部ポイントであるかどうかを判断します。 (上書き[CMFCBaseTabCtrl::IsPtInTabArea](../../mfc/reference/cmfcbasetabctrl-class.md#isptintabarea))。|
 |`CMFCOutlookBarTabCtrl::IsTabDetachable`|タブが切り離し可能かどうかを判断します。 (上書き[CMFCBaseTabCtrl::IsTabDetachable](../../mfc/reference/cmfcbasetabctrl-class.md#istabdetachable))。|
-|`CMFCOutlookBarTabCtrl::OnChangeTabs`|タブを挿入または削除されたときに、フレームワークによって呼び出されます。 (`CMFCBaseTabCtrl::OnChangeTabs` をオーバーライドします)。|
+|`CMFCOutlookBarTabCtrl::OnChangeTabs`|タブを挿入または削除されたときに、フレームワークによって呼び出されます。 ( `CMFCBaseTabCtrl::OnChangeTabs`をオーバーライドします)。|
 |[CMFCOutlookBarTabCtrl::OnShowFewerPageButtons](#onshowfewerpagebuttons)|表示されているタブ ページのボタンの数を減らすために、フレームワークによって呼び出されます。|
 |[CMFCOutlookBarTabCtrl::OnShowMorePageButtons](#onshowmorepagebuttons)|表示されているタブ ページのボタンの数を増やすために、フレームワークによって呼び出されます。|
 |[CMFCOutlookBarTabCtrl::OnShowOptions](#onshowoptions)|表示、**ナビゲーション ペイン オプション**ダイアログ。|
@@ -136,7 +136,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 [CMFCOutlookBarTabCtrl](../../mfc/reference/cmfcoutlookbartabctrl-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxoutlookbartabctrl.h
 
@@ -322,7 +322,6 @@ int GetBorderSize() const;
 
 ##  <a name="getvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::GetVisiblePageButtons
 
-
 ```
 int GetVisiblePageButtons() const;
 ```
@@ -505,14 +504,13 @@ Microsoft Office 2003 モードでツール バー ボタンに表示される�
 
 ##  <a name="setvisiblepagebuttons"></a>  CMFCOutlookBarTabCtrl::SetVisiblePageButtons
 
-
 ```
 void SetVisiblePageButtons(int nVisiblePageButtons);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nVisiblePageButtons*
+[in]*nVisiblePageButtons*<br/>
 
 ### <a name="remarks"></a>Remarks
 

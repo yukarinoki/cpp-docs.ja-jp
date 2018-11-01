@@ -1,31 +1,21 @@
 ---
-title: auto_gcroot::swap |Microsoft Docs
-ms.custom: ''
+title: auto_gcroot::swap
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr.auto_gcroot.swap
 - msclr::auto_gcroot::swap
 - auto_gcroot::swap
 - auto_gcroot.swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - auto_gcroot::swap
 ms.assetid: 4915c629-6a53-432c-8155-3a7511dc70cb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 1a34af7717de8d3920212c28c92da05007ec90a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8c968a12e3486715b3c91a7c12c4fc366d6fb5bf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403631"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50552097"
 ---
 # <a name="autogcrootswap"></a>auto_gcroot::swap
 
@@ -71,7 +61,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー ファイル** \<msclr\auto_gcroot.h >
 

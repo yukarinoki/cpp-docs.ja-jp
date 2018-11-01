@@ -1,10 +1,6 @@
 ---
-title: _ismbbtrail、_ismbbtrail_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbtrail、_ismbbtrail_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbtrail
 - _ismbbtrail_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbtrail
 - _ismbbtrail_l
 - ismbbtrail_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbtrail_l function
 - _ismbbtrail function
 - _ismbbtrail_l function
 - ismbbtrail function
 ms.assetid: dfdd0292-960b-4c1d-bf11-146e0fc80247
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e41ad2be1447946570f10028249582225386877
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c09884f013e878fca516388f1ad933a2a08b35a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399752"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545939"
 ---
 # <a name="ismbbtrail-ismbbtraill"></a>_ismbbtrail、_ismbbtrail_l
 
@@ -71,15 +61,15 @@ int _ismbbtrail_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbtrail**場合は 0 以外の値を返します、整数*c*がマルチバイト文字の 2 番目のバイト。 たとえば、コード ページ 932 でのみ、有効な範囲は 0x40 – 0x7E、0x80 – 0xFC です。
+**_ismbbtrail**場合は、0 以外の値を返します、整数*c*がマルチバイト文字の 2 番目のバイト。 たとえば、コード ページ 932 でのみ、有効な範囲は 0x40 – 0x7E、0x80 – 0xFC です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_ismbbtrail**ロケールに依存する動作に現在のロケールを使用します。 **_ismbbtrail_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_ismbbtrail**ロケールに依存する動作に現在のロケールを使用します。 **_ismbbtrail_l**代わりに渡されるロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_ismbbtrail**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
 |**_ismbbtrail_l**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|

@@ -1,31 +1,21 @@
 ---
-title: com::ptr クラス |Microsoft Docs
-ms.custom: ''
+title: com::ptr Class
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - com::ptr
 - msclr::com::ptr
 - msclr.com.ptr
 - com.ptr
-dev_langs:
-- C++
 helpviewer_keywords:
 - ptr class
 ms.assetid: 0144d0e4-919c-45f9-a3f8-fbc9edba32bf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: c90edb82b9efbd2a265c93ca6a0d6e16b22955fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: c4d5818698f553fe1d003aab6ca3c7f31e85f843
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397911"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665365"
 ---
 # <a name="comptr-class"></a>com::ptr Class
 
@@ -167,7 +157,7 @@ int main() {
 <word>persnickety</word>
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー ファイル** \<msclr\com\ptr.h >
 

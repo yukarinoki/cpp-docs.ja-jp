@@ -1,10 +1,6 @@
 ---
-title: _seh_filter_dll、_seh_filter_exe | Microsoft Docs
-ms.custom: ''
+title: _seh_filter_dll、_seh_filter_exe
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _XcptFilter
 - _seh_filter_dll
@@ -29,24 +25,18 @@ f1_keywords:
 - _seh_filter_exe
 - corecrt_startup/_seh_filter_exe
 - corecrt_startup/_seh_filter_dll
-dev_langs:
-- C++
 helpviewer_keywords:
 - XcptFilter function
 - _XcptFilter function
 - _seh_filter_dll function
 - _seh_filter_exe function
 ms.assetid: 747e5963-3a12-4bf5-b5c4-d4c1b6068e15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75b5b1b22067566d0096aa7ab616fb32c3850998
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 51d6a21b3867eb830a7d9f9b4b9b0ac844cd5aa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406477"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573033"
 ---
 # <a name="sehfilterdll-sehfilterexe"></a>_seh_filter_dll、_seh_filter_exe
 
@@ -77,7 +67,7 @@ int __cdecl _seh_filter_exe(
 
 例外処理の結果に基づいて実行するアクションを示す整数。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 次のメソッドが [try-except Statement](../../cpp/try-except-statement.md) の例外フィルター式によって呼び出されます。 このメソッドは、次に示すように、例外を特定して適切なアクションを決定するために定数内部テーブルを調べます。 例外番号は winnt.h で定義され、シグナル番号は signal.h で定義されます。
 
@@ -94,7 +84,7 @@ int __cdecl _seh_filter_exe(
 |STATUS_FLOAT_STACK_CHECK|SIGFPE|
 |STATUS_FLOAT_UNDERFLOW|SIGFPE|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** corecrt_startup.h
 

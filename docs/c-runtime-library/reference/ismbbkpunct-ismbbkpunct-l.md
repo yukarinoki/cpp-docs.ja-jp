@@ -1,10 +1,6 @@
 ---
-title: _ismbbkpunct、_ismbbkpunct_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbkpunct、_ismbbkpunct_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbkpunct_l
 - _ismbbkpunct
@@ -26,24 +22,18 @@ f1_keywords:
 - _ismbbkpunct_l
 - ismbbkpunct
 - _ismbbkpunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ismbbkpunct_l function
 - ismbbkpunct_l function
 - ismbbkpunct function
 - _ismbbkpunct function
 ms.assetid: a04c59cd-5ca7-4296-bec0-2b0d7f04edd0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e020957b418a2c6a61cda9a5c8c197fb149146d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 24a82bdf0dde2beb0978226208c151689e06ed72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400152"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491105"
 ---
 # <a name="ismbbkpunct-ismbbkpunctl"></a>_ismbbkpunct、_ismbbkpunct_l
 
@@ -71,11 +61,11 @@ int _ismbbkpunct_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbkpunct**場合は 0 以外の値を返します、整数*c*されていない場合は、非 ASCII 区切り記号、または 0 です。 たとえば、コード ページ 932 でのみ **_ismbbkpunct** は、カタカナ区切り文字をテストします。 **_ismbbkpunct**任意のロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbkpunct_l**に渡されるロケールを使用する点を除いてと同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_ismbbkpunct**場合は、0 以外の値を返します、整数*c*は非 ASCII 区切り記号、または 0 でない場合。 たとえば、コード ページ 932 でのみ **_ismbbkpunct** は、カタカナ区切り文字をテストします。 **_ismbbkpunct**任意のロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbkpunct_l**で渡されるロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbkpunct**|\<mbctype.h>|
 |**_ismbbkpunct_l**|\<mbctype.h>|

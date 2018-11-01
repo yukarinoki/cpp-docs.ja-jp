@@ -1,10 +1,6 @@
 ---
-title: _atoi64、_atoi64_l、_wtoi64、_wtoi64_l |Microsoft Docs
-ms.custom: ''
+title: _atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _atoi64_l
 - _wtoi64
@@ -35,8 +31,6 @@ f1_keywords:
 - wtoi64_l
 - _atoi64_l
 - atoi64_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstoi64 function
 - wtoi64 function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _wtoi64 function
 - _atoi64 function
 ms.assetid: 2c3e30fd-545d-4222-8364-0c5905df9526
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fbb0f49edcba73bdf2b7e83d6495573cc2cc0567
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c80480be8895db6afe499d5426b91dcde786d654
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396678"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50515480"
 ---
 # <a name="atoi64-atoi64l-wtoi64-wtoi64l"></a>_atoi64、_atoi64_l、_wtoi64、_wtoi64_l
 
@@ -96,13 +86,13 @@ __int64 _wtoi64_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数を返します、 **_ _int64**値は、入力文字列を数値として解釈して生成します。 戻り値は 0 です **_atoi64**場合は、入力は、その型の値に変換できません。
+各関数を返します、 **_ _int64**入力文字を数字として解釈して生成された値。 戻り値は 0 です **_atoi64**場合は、入力は、その型の値に変換できません。
 
-大きな正の整数値でオーバーフローの場合 **_atoi64**返します**I64_MAX**と**I64_MIN**大きい負の整数値でオーバーフローの場合。
+大きい正の整数値によるオーバーフローの場合 **_atoi64**返します**I64_MAX**と**I64_MIN**大きい負の整数値によるオーバーフローの場合。
 
-すべての範囲外の場合、 **errno**に設定されている**ERANGE**です。 パラメーターが渡された場合は、 **NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
+すべての範囲外の場合、 **errno**に設定されている**ERANGE**します。 パラメーターが渡される場合は、 **NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらの関数は、文字列を 64 ビット整数値に変換します。
 
@@ -110,11 +100,11 @@ __int64 _wtoi64_l(
 
 *Str*引数 **_atoi64**は次の形式があります。
 
-> [*空白*] [*記号*] [*桁*]
+> [*空白*] [*サインオン*] [*桁*]
 
-A*空白*は無視されますスペースまたはタブ文字で構成されています。*記号*いずれかですプラス (+) またはマイナス記号 (-); と*桁*は 1 つ以上の数字です。
+A*空白*は無視されますスペースまたはタブ文字含まれています。*記号*はプラス (+) またはマイナス (–) と*桁*は 1 つ以上の数字。
 
-**_wtoi64**と同じ **_atoi64**ワイド文字の文字列をパラメーターとして受け取る点を除いて。
+**_wtoi64**ヲェヒェケェ ・ **_atoi64**ワイド文字の文字列をパラメーターとして受け取る点を除いて。
 
 これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -125,7 +115,7 @@ A*空白*は無視されますスペースまたはタブ文字で構成され�
 |**_tstoi64**|**_atoi64**|**_atoi64**|**_wtoi64**|
 |**_ttoi64**|**_atoi64**|**_atoi64**|**_wtoi64**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|
@@ -134,7 +124,7 @@ A*空白*は無視されますスペースまたはタブ文字で構成され�
 
 ## <a name="example"></a>例
 
-このプログラムを使用して数値の値を文字列として保存されている数値を変換する方法を示しています、 **_atoi64**関数。
+このプログラムは、文字列として格納されている数字を使用して数値の値に変換する方法を示しています、 **_atoi64**関数。
 
 ```C
 // crt_atoi64.c

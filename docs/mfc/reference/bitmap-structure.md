@@ -1,27 +1,17 @@
 ---
-title: BITMAP 構造体 |Microsoft Docs
-ms.custom: ''
+title: BITMAP 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - BITMAP
-dev_langs:
-- C++
 helpviewer_keywords:
 - BITMAP structure [MFC]
 ms.assetid: 05d33b4d-7232-4643-a108-87dda8ff5f22
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3169d3b8baad29cb79ee1ff8a25685c06414ac98
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1a1079ea0b032f5d28995dc0e3b15b5ba6d16376
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427720"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50576086"
 ---
 # <a name="bitmap-structure"></a>BITMAP 構造体
 
@@ -86,7 +76,7 @@ Scan n-1
 
 各デバイスには、独自のカラー形式があります。 別に 1 つのデバイスからビットマップを転送するために使用して、 [GetDIBits](/windows/desktop/api/wingdi/nf-wingdi-getdibits)と[SetDIBits](/windows/desktop/api/wingdi/nf-wingdi-setdibits) Windows 関数。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** wingdi.h
 

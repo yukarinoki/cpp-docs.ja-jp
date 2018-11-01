@@ -1,27 +1,17 @@
 ---
-title: イベント シンク マップ |Microsoft Docs
-ms.custom: ''
+title: イベント シンク マップ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
-dev_langs:
-- C++
 helpviewer_keywords:
 - event sink maps [MFC]
 ms.assetid: a9757eb2-5f4a-45ec-a2cd-ce5eec85b16f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 05377af7edc1090c5e15b4bdef9e9c71e43bd9be
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 48bd859795dfb7fdac74fbf2003db0e2c0c3c04a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390260"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501414"
 ---
 # <a name="event-sink-maps"></a>イベント シンク マップ
 
@@ -63,7 +53,7 @@ BEGIN_EVENTSINK_MAP(theClass, baseClass)
 
 イベント シンク マップと OLE コントロールのコンテナーの詳細については、この記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -81,7 +71,7 @@ DECLARE_EVENTSINK_MAP()
 
 イベント シンク マップの詳細については、記事を参照してください。 [ActiveX コントロール コンテナー](../../mfc/activex-control-containers.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxwin.h
 
@@ -93,7 +83,7 @@ DECLARE_EVENTSINK_MAP()
 END_EVENTSINK_MAP()
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -132,7 +122,7 @@ BOOL 続けて短整数を含むリストを指定します。
 
 一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -184,7 +174,7 @@ BOOL 続けて短整数を含むリストを指定します。
 
 [!code-cpp[NVC_MFCAutomation#13](../../mfc/codesnippet/cpp/event-sink-maps_3.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -222,7 +212,7 @@ BOOL 続けて短整数を含むリストを指定します。
 
 一覧については、 **vts _** 定数を参照してください[EVENT_CUSTOM](event-maps.md#event_custom)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -292,7 +282,7 @@ ON_PROPNOTIFY_RANGE(theClass, idFirst, idLast, dispid, pfnRequest, pfnChanged)
 *pfnChanged*<br/>
 処理するメンバー関数へのポインター、`OnChanged`このプロパティに通知します。 関数があります、`BOOL`型を返すと`UINT`パラメーター。 通知が処理されたことを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -320,7 +310,7 @@ ON_PROPNOTIFY_REFLECT(theClass, dispid, pfnRequest, pfnChanged)
 *pfnChanged*<br/>
 処理するメンバー関数へのポインター、`OnChanged`このプロパティに通知します。 関数の型およびパラメーターを返すブール値が必要です。 関数は、通知が処理されたかを指定する場合は TRUE を返しますそれ以外の場合は FALSE です。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 

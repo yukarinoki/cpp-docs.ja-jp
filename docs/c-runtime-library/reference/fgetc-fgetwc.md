@@ -1,10 +1,6 @@
 ---
-title: fgetc、fgetwc | Microsoft Docs
-ms.custom: ''
+title: fgetc、fgetwc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fgetwc
 - fgetc
@@ -25,8 +21,6 @@ f1_keywords:
 - _fgettc
 - fgetwc
 - fgetc
-dev_langs:
-- C++
 helpviewer_keywords:
 - fgettc function
 - characters, reading
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - reading characters from streams
 - fgetwc function
 ms.assetid: 13348b7b-dc86-421c-9d6c-611ca79c8338
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f06c5c2f092932d97755a8f0cff63cde3a9682c6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a853a46fc43106c9ea57be84b37fb46a18041ba8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401286"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50639922"
 ---
 # <a name="fgetc-fgetwc"></a>fgetc、fgetwc
 
@@ -69,15 +59,15 @@ wint_t fgetwc(
 
 ## <a name="return-value"></a>戻り値
 
-**fgetc**として読み取られた文字を返します、 **int**を返しますまたは**EOF**エラーまたはファイルの終わりを示します。 **fgetwc**を返します、として、 [wint_t](../../c-runtime-library/standard-types.md)、ワイド文字を読み取る文字に対応するかを返す**WEOF**エラーまたはファイルの終わりを示します。 両方の関数を使用して**feof**または**ferror**エラーと、ファイルの終端状態を識別します。 読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 場合*ストリーム*は**NULL**、 **fgetc**と**fgetwc** 」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**返す**EOF**です。
+**fgetc**として読み取られた文字を返します、 **int**返しますまたは**EOF**エラーまたはファイルの終わりを示します。 **fgetwc**から制御が戻るとして、 [wint_t](../../c-runtime-library/standard-types.md)、ワイド文字を読み取る文字に対応する値または**WEOF**エラーまたはファイルの終わりを示します。 両方の関数を使用して、 **feof**または**ferror**エラーと、ファイルの終わり条件とを区別します。 読み取りエラーが発生すると、ストリームのエラー インジケーターが設定されます。 場合*ストリーム*は**NULL**、 **fgetc**と**fgetwc** 」の説明に従って、無効なパラメーター ハンドラーを呼び出す[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EOF**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-関連付けられているファイルの現在位置から 1 つの文字を読み取りますこれらの関数の各*ストリーム*です。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
+関連付けられているファイルの現在位置から 1 つの文字を読み取りますこれらの各関数*ストリーム*します。 関数は、次の文字 (定義されている場合) を指すように、関連ファイルのポインターをインクリメントします。 ストリームがファイルの末尾にある場合、ストリームのファイルの末尾を示すインジケーターが設定されます。
 
-**fgetc**は等価**getc**関数とマクロではなく、関数としてのみ実装されます。
+**fgetc**と等価**getc**関数とマクロではなく関数としてのみ実装されます。
 
-**fgetwc**のワイド文字バージョンは、 **fgetc**; 読み取り**c**マルチバイト文字またはワイド文字であるかどうかに従ってとして*ストリーム*で開くバイナリ モードまたはテキスト モード。
+**fgetwc**のワイド文字バージョンは、 **fgetc**; 読み取り**c**マルチバイト文字またはワイド文字かどうかに従ってとして*ストリーム*で開くテキスト モードまたはバイナリ モードの場合は。
 
 **_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。
 
@@ -89,7 +79,7 @@ wint_t fgetwc(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_fgettc**|**fgetc**|**fgetc**|**fgetwc**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

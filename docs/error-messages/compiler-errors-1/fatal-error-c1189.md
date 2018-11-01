@@ -1,39 +1,29 @@
 ---
-title: 致命的なエラー C1189 |Microsoft ドキュメント
-ms.custom: ''
+title: 致命的なエラー C1189
 ms.date: 04/27/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C1189
-dev_langs:
-- C++
 helpviewer_keywords:
 - C1189
 ms.assetid: 2e5c8a78-edd4-411c-b619-558a96be148a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 051b7eb965526d12311dfacaeae7a00e4fbe4e75
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 06d42316a0109ac063bba43cefebd9aab71c2e72
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33199795"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565530"
 ---
 # <a name="fatal-error-c1189"></a>致命的なエラー C1189
 
 > **\#エラー:** *ユーザーが指定したエラー メッセージ*
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C1189 がによって生成された、`#error`ディレクティブです。 ディレクティブをコード開発者は、エラー メッセージのテキストを指定します。 詳細については、次を参照してください。 [#error ディレクティブ (c/c++)](../../preprocessor/hash-error-directive-c-cpp.md)です。
+C1189 がによって生成された、`#error`ディレクティブ。 ディレクティブをコード開発者には、エラー メッセージのテキストを指定します。 詳細については、次を参照してください。 [#error ディレクティブ (c/c++)](../../preprocessor/hash-error-directive-c-cpp.md)します。
 
 ## <a name="example"></a>例
 
-次の例では、C1189 を生成します。 サンプルでは、開発者がカスタム エラー メッセージを発行、`_WIN32`識別子が定義されていません。
+次の例では、C1189 が生成されます。 ため、サンプルでは、開発者がカスタム エラー メッセージを発行、`_WIN32`識別子が定義されていません。
 
 ```cpp
 // C1189.cpp

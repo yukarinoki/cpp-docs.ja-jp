@@ -1,9 +1,6 @@
 ---
-title: 数値 (STL/CLR) |Microsoft Docs
-ms.custom: ''
+title: 数値 (STL/CLR)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - <cliext/numeric>
@@ -11,8 +8,6 @@ f1_keywords:
 - cliext::adjacent_difference
 - cliext::inner_product
 - cliext::partial_sum
-dev_langs:
-- C++
 helpviewer_keywords:
 - numeric functions [STL/CLR]
 - <cliext/numeric> header [STL/CLR]
@@ -22,17 +17,12 @@ helpviewer_keywords:
 - inner_product function [STL/CLR]
 - partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: e5e4a40c42aaf9aa62d8cd14fd1f5dbba784cefa
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 95449937dda62d8ef127d41625553f0e4294cf77
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46408187"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574249"
 ---
 # <a name="numeric-stlclr"></a>数値 (STL/CLR)
 
@@ -44,7 +34,7 @@ ms.locfileid: "46408187"
 #include <cliext/numeric>
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<cliext/数値 >
 

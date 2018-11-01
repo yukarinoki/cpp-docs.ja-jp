@@ -1,37 +1,27 @@
 ---
-title: リンカ ツール エラー LNK1313 |Microsoft ドキュメント
-ms.custom: ''
+title: リンカ ツール エラー LNK1313
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1313
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1313
 ms.assetid: 5df0b72e-bb3f-428c-8d84-6084238f9827
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6a896c8ba012c69755c5292475b2d155ad92066
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 380df2bff305acc47e423d69ea702d77c4eafdfd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705089"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604231"
 ---
 # <a name="linker-tools-error-lnk1313"></a>リンカ ツール エラー LNK1313
 
 > ijw/ネイティブ モジュールが検出されました。純粋なモジュールとリンクできません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-現在のバージョンの Visual C がでコンパイルされた .obj ファイルのネイティブまたは混合マネージ/ネイティブ .obj ファイルのリンクをサポートしていない **/clr: 純粋な**します。
+Visual C の現在のバージョンは、ネイティブまたは混合のマネージド/ネイティブ .obj ファイルでコンパイルされた .obj ファイルをリンクをサポートしていない **/clr: 純粋な**します。
 
-**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 ## <a name="example"></a>例
 

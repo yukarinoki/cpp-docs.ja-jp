@@ -1,10 +1,6 @@
 ---
-title: char_traits 構造体 | Microsoft Docs
-ms.custom: ''
+title: char_traits 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - iosfwd/std::char_traits
 - iosfwd/std::char_traits::char_type
@@ -27,22 +23,16 @@ f1_keywords:
 - iosfwd/std::char_traits::not_eof
 - iosfwd/std::char_traits::to_char_type
 - iosfwd/std::char_traits::to_int_type
-dev_langs:
-- C++
 helpviewer_keywords:
 - char_traits struct
 - char_traits class
 ms.assetid: 568e59f0-4521-4207-9223-9dcf6a16d620
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ba56cef1ecdcee246b9041b930eeb5bf04728def
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2975c839e07093a22d910f295be730fdd68839cf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45724608"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640376"
 ---
 # <a name="chartraits-struct"></a>char_traits 構造体
 
@@ -64,7 +54,7 @@ struct char_traits;
 
 テンプレート構造体は、型のさまざまな文字特性を説明します。`CharType`します。 テンプレート クラスは、 [basic_string](../standard-library/basic-string-class.md)など、いくつかの iostream テンプレート クラスと同様[basic_ios](../standard-library/basic-ios-class.md)、この情報を使用して型の要素を操作する`CharType`します。 このような要素型では、明示的な構築や破棄を要求できません。 既定のコンストラクター、コピー コンストラクター、および代入演算子を、必要なセマンティクスと共に指定する必要があります。 ビットごとのコピーは、代入と同じ効果を持つ必要があります。 char_traits 構造体のメンバー関数は、いずれも例外をスローしません。
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -94,7 +84,7 @@ struct char_traits;
 |[to_char_type](#to_char_type)|`int_type` の文字を `char_type` の対応する文字に変換し、その結果を返します。|
 |[to_int_type](#to_int_type)|`char_type` の文字を `int_type` の対応する文字に変換し、その結果を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<string>
 

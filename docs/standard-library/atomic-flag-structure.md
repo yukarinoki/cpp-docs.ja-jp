@@ -1,27 +1,17 @@
 ---
-title: atomic_flag 構造体 |Microsoft Docs
-ms.custom: ''
+title: atomic_flag 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - atomic/std::atomic_flag
 - atomic/std::atomic_flag::clear
 - atomic/std::atomic_flag::test_and_set
-dev_langs:
-- C++
 ms.assetid: 17f0c2f5-fd39-4a44-873a-b569720a670e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f763181424bafc4b8b3af41c135753dbe2f2577b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 13af0c26b765aa7ebbbd1ec22b5a0ed1b8cce0ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110319"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550424"
 ---
 # <a name="atomicflag-structure"></a>atomic_flag 構造体
 
@@ -46,7 +36,7 @@ struct atomic_flag;
 
 `atomic_flag` オブジェクトは、[atomic_flag_clear](../standard-library/atomic-functions.md#atomic_flag_clear)、[atomic_flag_clear_explicit](../standard-library/atomic-functions.md#atomic_flag_clear_explicit)、[atomic_flag_test_and_set](../standard-library/atomic-functions.md#atomic_flag_test_and_set)、および [atomic_flag_test_and_set_explicit](../standard-library/atomic-functions.md#atomic_flag_test_and_set_explicit) の非メンバー関数に渡すことができます。 これらは、`ATOMIC_FLAG_INIT` の値を使用して初期化できます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<atomic >
 

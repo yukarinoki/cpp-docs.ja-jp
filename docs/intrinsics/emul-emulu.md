@@ -1,31 +1,21 @@
 ---
-title: _ _emul、_ _emulu |Microsoft Docs
-ms.custom: ''
+title: __emul、__emulu
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __emulu_cpp
 - __emul
 - __emul_cpp
 - __emulu
-dev_langs:
-- C++
 helpviewer_keywords:
 - __emul intrinsic
 - __emulu intrinsic
 ms.assetid: 79545236-cca2-40b8-a4e1-8abce9b26311
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ebf248fa4a1f9534b4ec99ca1c0869312a930c9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9144ce4f25d2e8e5554602533c13d5619e15360a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46384293"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542455"
 ---
 # <a name="emul-emulu"></a>__emul、__emulu
 
@@ -58,7 +48,7 @@ unsigned __int64 __emulu(
 
 乗算の結果。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

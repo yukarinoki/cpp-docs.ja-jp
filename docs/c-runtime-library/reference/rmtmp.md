@@ -1,10 +1,6 @@
 ---
-title: _rmtmp | Microsoft Docs
-ms.custom: ''
+title: _rmtmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _rmtmp
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - rmtmp
 - _rmtmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - removing temporary files
 - _rmtmp function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - files [C++], removing
 - temporary files [C++], removing
 ms.assetid: 7419501e-2587-4f2a-b469-0dca07f84736
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 050f1c93fc38b9fdf722682c9688336098a3da45
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bf4f2cff48e8660682fc8a00d10d9a1fe960a6a7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405966"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50508889"
 ---
 # <a name="rmtmp"></a>_rmtmp
 
@@ -57,15 +47,15 @@ int _rmtmp( void );
 
 ## <a name="return-value"></a>戻り値
 
-**_rmtmp**閉じられ、削除、一時ファイルの数を返します。
+**_rmtmp**閉じられ削除された一時ファイルの数を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Rmtmp**関数は、現在のディレクトリ内のすべての一時ファイルをクリーンアップします。 関数によって作成されたファイルのみを削除する**tmpfile**; 一時ファイルが作成された同じディレクトリ内でのみ使用します。
+**_Rmtmp**関数は、現在のディレクトリ内のすべての一時ファイルをクリーンアップします。 関数によって作成されたファイルのみを削除します**tmpfile**; 一時ファイルが作成された同じディレクトリ内でのみ使用します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_rmtmp**|\<stdio.h>|
 

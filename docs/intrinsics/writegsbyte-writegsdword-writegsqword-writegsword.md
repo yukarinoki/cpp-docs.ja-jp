@@ -1,33 +1,23 @@
 ---
-title: _ _writegsbyte、_ _writegsdword、_ _writegsqword、_ _writegsword |Microsoft Docs
-ms.custom: ''
+title: __writegsbyte、__writegsdword、__writegsqword、__writegsword
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __writegsbyte
 - __writegsqword
 - __writegsdword
 - __writegsword
-dev_langs:
-- C++
 helpviewer_keywords:
 - __writegsqword intrinsic
 - __writegsbyte intrinsic
 - __writegsword intrinsic
 - __writegsdword intrinsic
 ms.assetid: 7746cf6d-2259-4139-9aab-c07dd75c8037
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8dded14f47c4c0305e4dc145ee2b006c76da9b8f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d0de62333500a7ced2c953d86502b4dfb08f5a04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46393556"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632468"
 ---
 # <a name="writegsbyte-writegsdword-writegsqword-writegsword"></a>__writegsbyte、__writegsdword、__writegsqword、__writegsword
 
@@ -38,21 +28,21 @@ GS セグメントの先頭の相対オフセットで指定された場所に�
 ## <a name="syntax"></a>構文
 
 ```
-void __writegsbyte( 
-   unsigned long Offset, 
-   unsigned char Data 
+void __writegsbyte( 
+   unsigned long Offset, 
+   unsigned char Data 
 );
-void __writegsword( 
-   unsigned long Offset, 
-   unsigned short Data 
+void __writegsword( 
+   unsigned long Offset, 
+   unsigned short Data 
 );
-void __writegsdword( 
-   unsigned long Offset, 
-   unsigned long Data 
+void __writegsdword( 
+   unsigned long Offset, 
+   unsigned long Data 
 );
-void __writegsqword( 
-   unsigned long Offset, 
-   unsigned __int64 Data 
+void __writegsqword( 
+   unsigned long Offset, 
+   unsigned __int64 Data 
 );
 ```
 
@@ -64,7 +54,7 @@ void __writegsqword(
 *データ*<br/>
 [in]書き込む値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

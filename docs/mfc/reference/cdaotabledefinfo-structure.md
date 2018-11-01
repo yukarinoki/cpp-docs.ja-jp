@@ -1,28 +1,18 @@
 ---
-title: CDaoTableDefInfo 構造体 |Microsoft Docs
-ms.custom: ''
+title: CDaoTableDefInfo 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDaoTableDefInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDaoTableDefInfo structure [MFC]
 - DAO (Data Access Objects), TableDefs collection
 ms.assetid: c01ccebb-5615-434e-883c-4f60eac943dd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0563cf930d9722adf175a2b82c1e7788ea3d066a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 10ff07ebcd9c6877d9bafc0b7c8724acb0bc45b9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415825"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542975"
 ---
 # <a name="cdaotabledefinfo-structure"></a>CDaoTableDefInfo 構造体
 
@@ -98,7 +88,7 @@ struct CDaoTableDefInfo
 
 日付と時刻の設定は、ベース テーブルが作成または最後に更新されたコンピューターから派生します。 マルチ ユーザー環境では、ユーザーはこれらのファイル サーバーから直接、DateCreated で不一致を避けるための設定および LastUpdated プロパティの設定を取得する必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 

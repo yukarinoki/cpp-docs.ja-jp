@@ -1,10 +1,6 @@
 ---
-title: _strdate_s、_wstrdate_s | Microsoft Docs
-ms.custom: ''
+title: _strdate_s、_wstrdate_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdate_s
 - _wstrdate_s
@@ -27,8 +23,6 @@ f1_keywords:
 - _wstrdate_s
 - strdate_s
 - _tstrdate_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - dates, copying
 - tstrdate_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _strdate_s function
 - _wstrdate_s function
 ms.assetid: d41d8ea9-e5ce-40d4-864e-1ac29b455991
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e4e9ff3783fc7a89e7af42ebf283209c034c0d6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 85c9ab7dcad68f3aa4832236461cd38b07d4ae44
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414312"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629009"
 ---
 # <a name="strdates-wstrdates"></a>_strdate_s、_wstrdate_s
 
@@ -98,17 +88,17 @@ errno_t _wstrdate_s(
 
 ## <a name="security-issues"></a>セキュリティ上の問題
 
-無効な非を渡して**NULL**値の場合、バッファーが、アクセス違反になるが、 *numberOfElements*パラメーターは、9 よりも大きいです。
+無効な非を渡して**NULL**値の場合、バッファーが、アクセス違反になるが、 *numberOfElements*パラメーターが 9 よりも大きい。
 
 実際のサイズより大きいサイズの値を渡すことは、*バッファー*バッファー オーバーランが発生します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数のより安全なバージョンの提供 **_strdate**と **_wstrdate**です。 **_Strdate_s**関数では、現在のシステム日付を指すバッファーにコピー*バッファー*、書式設定された**mm**/**dd** / **yy**ここで、 **mm** 、月を表す 2 桁の数字は、 **dd**は、日付を表す 2 桁の数字と**yy**年の最後の 2 つの桁がします。 たとえば、文字列**12/05/99** 1999 年 12 月 5 日を表します。 バッファーの長さは 9 文字以上でなければなりません。
+これらの関数のセキュリティを強化バージョンの提供 **_strdate**と **_wstrdate**します。 **_Strdate_s**関数では、現在のシステム日付が指すバッファーにコピー*バッファー*、書式設定された**mm**/**dd** / **yy**ここで、 **mm** 、月を表す 2 桁の数字は、 **dd**は、日付を表す 2 桁の数字と**yy**西暦の最後の 2 つの桁が。 たとえば、文字列**9905/12/** 1999 年 12 月 5 日を表します。 バッファーの長さは 9 文字以上でなければなりません。
 
-**_wstrdate_s**のワイド文字バージョンは、 **_strdate_s**; の引数と戻り値 **_wstrdate_s**ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wstrdate_s**のワイド文字バージョンは、 **_strdate_s**; の引数と戻り値 **_wstrdate_s**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
-場合*バッファー*は、 **NULL**ポインター、または*numberOfElements*より小さい 9 文字で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**場合は、バッファーが**NULL**場合*numberOfElements*が 0、またはセットに小さい**errno**に**ERANGE**場合*numberOfElements*は 9 未満です。
+場合*バッファー*は、 **NULL**ポインター、または*numberOfElements* 9 文字未満で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**バッファーが場合**NULL**場合*numberOfElements*が 0、またはセットに小さい**errno**に**ERANGE**場合*numberOfElements*が 9 より小さいです。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -118,9 +108,9 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrdate_s**|**_strdate_s**|**_strdate_s**|**_wstrdate_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strdate**|\<time.h>|
 |**_wstrdate**|\<time.h> または \<wchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: basic_istream クラス |Microsoft Docs
-ms.custom: ''
+title: basic_istream クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - istream/std::basic_istream
 - istream/std::basic_istream::gcount
@@ -21,8 +17,6 @@ f1_keywords:
 - istream/std::basic_istream::sync
 - istream/std::basic_istream::tellg
 - istream/std::basic_istream::unget
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::basic_istream [C++]
 - std::basic_istream [C++], gcount
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - std::basic_istream [C++], tellg
 - std::basic_istream [C++], unget
 ms.assetid: c7c27111-de6d-42b4-95a3-a7e65259bf17
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 51dc841efa3e9f64a106002945c07ce10bcf7565
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: d29bdc7cff2e212f216901ab58b8fffda611e482
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102617"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50509488"
 ---
 # <a name="basicistream-class"></a>basic_istream クラス
 
@@ -173,7 +163,7 @@ setstate(state);
 |[operator>>](#op_gt_gt)|入力ストリームで関数を呼び出すか、または入力ストリームから書式設定されたデータを読み取ります。|
 |[operator=](#op_eq)|演算子の右辺の `basic_istream` をこのオブジェクトに代入します。 これは、コピーを残さない `rvalue` 参照を伴う移動代入です。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<istream>
 

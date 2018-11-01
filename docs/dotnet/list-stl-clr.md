@@ -1,9 +1,6 @@
 ---
-title: 一覧 (STL/CLR) |Microsoft Docs
-ms.custom: ''
+title: list (STL/CLR)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::list
@@ -57,8 +54,6 @@ f1_keywords:
 - cliext::operator==(list)
 - cliext::operator>(list)
 - cliext::operator>=(list)
-dev_langs:
-- C++
 helpviewer_keywords:
 - <cliext/list> header [STL/CLR]
 - list class [STL/CLR]
@@ -114,17 +109,12 @@ helpviewer_keywords:
 - operator>(list) member [STL/CLR]
 - operator>=(list) member [STL/CLR]
 ms.assetid: a70c45c8-a257-4f6b-8434-b27ff6685bac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 96f666c80cfff5d3e768470291a153eca6f6f304
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8350e8b7036731cf3e09b9ce26278b2a656d80be
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46425276"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569586"
 ---
 # <a name="list-stlclr"></a>list (STL/CLR)
 
@@ -149,10 +139,10 @@ template<typename Value>
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*[値]*<br/>
 被制御シーケンス内の要素の型。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<cliext/一覧 >
 

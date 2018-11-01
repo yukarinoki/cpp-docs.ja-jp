@@ -1,27 +1,17 @@
 ---
-title: LINGER 構造体 |Microsoft Docs
-ms.custom: ''
+title: LINGER 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - LINGER
-dev_langs:
-- C++
 helpviewer_keywords:
 - LINGER structure [MFC]
 ms.assetid: 1fb1c5bf-a64e-4a6c-89d6-1734e4fdbb1b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2dda3aab3c4a967c82a699058868edc8fc183984
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78f1a5ce993373ea9e477262f0779515c52dbd8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46386380"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495318"
 ---
 # <a name="linger-structure"></a>LINGER 構造体
 
@@ -40,7 +30,7 @@ struct linger {
 
 メンバー関数でブロックされている SO_DONTLINGER オプションを設定できません`Close`未送信のデータの送信を待機中にします。 SO_LINGER の設定と同じには、このオプションを設定`l_onoff`を 0 に設定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** winsock2.h
 

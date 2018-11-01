@@ -1,29 +1,19 @@
 ---
-title: _assume |Microsoft Docs
-ms.custom: ''
+title: __assume
 ms.date: 10/09/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __assume
 - _assume
 - __assume_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - __assume keyword [C++]
 ms.assetid: d8565123-b132-44b1-8235-5a8c8bff85a7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 41542065a4fc7d3b90fd3159dca4c7a7d169c115
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: a1e5d096b996ef7b8a29c978be8070e3c682387d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163674"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662125"
 ---
 # <a name="assume"></a>__assume
 
@@ -61,7 +51,7 @@ __assume(
 
 以前のバージョンとの互換性のため **_assume**のシノニムです **_assume**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)は指定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

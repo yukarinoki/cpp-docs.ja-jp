@@ -1,32 +1,22 @@
 ---
-title: -doc (ドキュメント コメントの処理) (C++) |Microsoft Docs
-ms.custom: ''
+title: /doc (ドキュメント コメントの処理) (C/C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - /doc
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
-dev_langs:
-- C++
 helpviewer_keywords:
 - /doc compiler option [C++]
 - comments, C++ code
 - XML documentation, comments in source files
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 488ee353cf245303b5ea73be139a262aea5be49d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 39b614b1ab21a654a35e30b0d3acffa15d244fb0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706577"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530040"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (ドキュメント コメントの処理) (C/C++)
 
@@ -45,7 +35,7 @@ ms.locfileid: "45706577"
 
 .Xdc ファイルは、xdcmake.exe の .xml ファイルに処理されます。 詳細については、次を参照してください。 [XDCMake リファレンス](../../ide/xdcmake-reference.md)します。
 
-ソース コード ファイルには、ドキュメントのコメントを追加できます。 詳細については、次を参照してください。[ドキュメント コメント用の推奨タグ](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md)します。
+ソース コード ファイルには、ドキュメントのコメントを追加できます。 詳細については、「 [ドキュメント コメント用の推奨タグ](../../ide/recommended-tags-for-documentation-comments-visual-cpp.md)」を参照してください。
 
 IntelliSense を備えた、生成された .xml ファイルを使用するには、.xml ファイルをサポートし、.xml ファイルを配置するアセンブリと同じアセンブリと同じディレクトリ内のファイル名を確認します。 アセンブリは、Visual Studio プロジェクトで参照されて、.xml ファイルはあります。 詳細については、次を参照してください。[を使用して IntelliSense](/visualstudio/ide/using-intellisense)と[XML コード コメント](/visualstudio/ide/supplying-xml-code-comments)します。
 

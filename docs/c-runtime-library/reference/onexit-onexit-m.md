@@ -1,10 +1,6 @@
 ---
-title: _onexit、_onexit_m | Microsoft Docs
-ms.custom: ''
+title: _onexit、_onexit_m
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _onexit
 - _onexit_m
@@ -25,8 +21,6 @@ f1_keywords:
 - onexit_m
 - onexit
 - _onexit_m
-dev_langs:
-- C++
 helpviewer_keywords:
 - onexit function
 - registry, registering exit routines
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - registering exit routines
 - registering to be called on exit
 ms.assetid: 45743298-0e2f-46cf-966d-1ca44babb443
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c190ce2c78135625a502d7509e56771fd670aa3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c190f777032904802f771bab9fc323ba305ff32e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401709"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609606"
 ---
 # <a name="onexit-onexitm"></a>_onexit、_onexit_m
 
@@ -69,19 +59,19 @@ _onexit_t_m _onexit_m(
 
 ## <a name="return-value"></a>戻り値
 
-**_onexit**正常終了した場合、関数へのポインターを返しますまたは**NULL**関数ポインターを格納する領域がない場合。
+**_onexit**成功した場合、関数へのポインターを返しますまたは**NULL**関数ポインターを格納する領域がない場合。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Onexit**関数には、関数のアドレスが渡されます (*関数*) プログラムが正常に終了したときに呼び出されます。 連続して呼び出す **_onexit** LIFO (最後に、先出し) の順序で実行される関数の登録を作成します。 渡される関数は、 **_onexit**パラメーターを受け取ることはできません。
+**_Onexit**関数には、関数のアドレスが渡されます (*関数*) プログラムが正常に終了したときに呼び出されます。 連続して呼び出す **_onexit** LIFO (最後に、最初に取り出さ) の順序で実行される関数のレジスタが作成されます。 渡される関数は、 **_onexit**パラメーターを受け取ることはできません。
 
-場合と **_onexit**ルーチンに登録されている、DLL 内から呼び出さ **_onexit** DLL の実行の後にアンロードする**DllMain**がありますで呼び出されます。
+場合と **_onexit**で登録されたルーチン、DLL 内から呼び出される **_onexit** DLL の実行の後にアンロードする**DllMain**が DLL_PROCESS_DETACH で呼び出されます。
 
-**_onexit**は Microsoft 拡張機能です。 ANSI の移植性のためには、[atexit](atexit.md) を使用します。 **_Onexit_m**関数のバージョンは、混在モードの使用。
+**_onexit**は Microsoft 拡張機能です。 ANSI の移植性のためには、[atexit](atexit.md) を使用します。 **_Onexit_m**関数のバージョンは、混在モードを使用します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_onexit**|\<stdlib.h>|
 

@@ -1,28 +1,18 @@
 ---
-title: make_signed クラス | Microsoft Docs
-ms.custom: ''
+title: make_signed クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::make_signed
-dev_langs:
-- C++
 helpviewer_keywords:
 - make_signed class
 - make_signed
 ms.assetid: 686247c0-247c-496b-9b1b-ba9dcd633621
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f339b0e26475607ed95f60e33173aa624b892871
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c9fe9d54d503f1aa1dfb3debfaeb7649f2e5c18d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108942"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631648"
 ---
 # <a name="makesigned-class"></a>make_signed クラス
 
@@ -47,7 +37,7 @@ using make_signed_t = typename make_signed<T>::type;
 
 型修飾子のインスタンスを保持する、修飾型である*T*場合`is_signed<T>`true を保持します。 それ以外の場合は、`sizeof (T) <= sizeof (UT)` である最小の符号なしの型 `UT` になります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

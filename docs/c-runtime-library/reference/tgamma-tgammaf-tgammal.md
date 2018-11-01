@@ -1,11 +1,6 @@
 ---
-title: tgamma、tgammaf、tgammal | Microsoft Docs
-ms.custom: ''
+title: tgamma、tgammaf、tgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - tgamma
 - tgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/tgamma
 - math/tgammaf
 - math/tgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - tgamma function
 - tgammaf function
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7861b297646f4a704134e0d874fad8c924a7ebc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6cfe455b0e9e83cd5283d36fed33ca168bc97d0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409876"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570665"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -84,15 +73,15 @@ long double tgammal(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合は、ガンマ値を返します*x*です。
+成功した場合のガンマを返します*x*します。
 
-場合に、範囲のエラーが発生する可能性がありますの大きさ*x*が大きすぎるか小さすぎるため、データ型。 場合に、ドメイン エラーまたは範囲エラーが発生する*x* < 0 を = です。
+場合に、範囲エラーが発生する可能性がありますの大きさ*x*が大きすぎるか小さすぎるため、データ型。 場合に、ドメイン エラーまたは範囲エラーが発生する*x* < = 0。
 
 |懸案事項|Return|
 |-----------|------------|
 |x = ±0|±INFINITY|
 |x = 負の整数|NaN|
-|x = - 無限大|NaN|
+|x-= INFINITY|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |ドメイン エラー|NaN|
@@ -102,13 +91,13 @@ long double tgammal(
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**tgamma**を受け取り、返します**float**と**長い****二重**型です。 C プログラムでは、 **tgamma**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **tgamma**を受け取って返す**float**と**長い****二重**型。 C プログラムで**tgamma**は、**二重**します。
 
 x が自然数の場合、この関数は (x-1) の階乗を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

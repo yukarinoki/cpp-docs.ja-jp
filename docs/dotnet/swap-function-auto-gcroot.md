@@ -1,29 +1,19 @@
 ---
-title: swap 関数 (auto_gcroot) |Microsoft Docs
-ms.custom: ''
+title: swap 関数 (auto_gcroot)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - msclr::swap
 - msclr.swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - swap function
 ms.assetid: 2fe8146b-a7f7-445a-9ae9-53b5556be701
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 2606f49e4b8996d4e95abe91df9eb5c26d70929f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 084749bc92491593995904b6707ca94f6545981f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419407"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484280"
 ---
 # <a name="swap-function-autogcroot"></a>swap 関数 (auto_gcroot)
 
@@ -74,7 +64,7 @@ s1 = 'string one', s2 = 'string two'
 s1 = 'string two', s2 = 'string one'
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー ファイル** \<msclr\auto_gcroot.h >
 

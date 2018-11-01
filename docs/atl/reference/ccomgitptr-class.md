@@ -1,10 +1,6 @@
 ---
-title: CComGITPtr クラス |Microsoft Docs
-ms.custom: ''
+title: CComGITPtr クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComGITPtr
 - ATLBASE/ATL::CComGITPtr
@@ -15,21 +11,15 @@ f1_keywords:
 - ATLBASE/ATL::CComGITPtr::GetCookie
 - ATLBASE/ATL::CComGITPtr::Revoke
 - ATLBASE/ATL::CComGITPtr::m_dwCookie
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5707a7fd4ab83c8e3de3c4868ad41e3525621b07
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 36ef105b79da51348a61767117b637992e1f8c47
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033954"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557171"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr クラス
 
@@ -86,7 +76,7 @@ GIT で格納されるインターフェイス ポインターの型。
 > [!NOTE]
 >  グローバル インターフェイス テーブルの機能は、DCOM バージョン 1.1 で Windows 95 以降、Windows 98、Windows NT 4.0 Service Pack 3 以降、および Windows 2000 にできるだけです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 

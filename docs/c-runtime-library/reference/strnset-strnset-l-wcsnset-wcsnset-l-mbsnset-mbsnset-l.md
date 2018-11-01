@@ -1,10 +1,6 @@
 ---
-title: _strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l | Microsoft Docs
-ms.custom: ''
+title: _strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnset
 - _strnset
@@ -43,8 +39,6 @@ f1_keywords:
 - _mbsnset
 - _wcsnset
 - _tcsncset
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcsnset function
 - strnset_l function
@@ -71,16 +65,12 @@ helpviewer_keywords:
 - strings [C++], initializing
 - tcsnset_l function
 ms.assetid: 3f306489-5763-48e5-b939-aefee7c94ef5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9348b2797b137599e8c7f54e41e493003bc4fc58
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 7eefbe3a193157751a991bb069ebe94f48946e7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466697"
 ---
 # <a name="strnset-strnsetl-wcsnset-wcsnsetl-mbsnset-mbsnsetl"></a>_strnset、_strnset_l、_wcsnset、_wcsnset_l、_mbsnset、_mbsnset_l
 
@@ -145,13 +135,13 @@ unsigned char *_mbsnset_l(
 
 変更された文字列へのポインターを返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Strnset**関数設定すると、最大で 1 つ目*カウント*の文字*str*に*c* (に変換**char**). 場合*カウント*がの長さより大きい*str*の長さ*str*の代わりに使用される*カウント*です。
+**_Strnset**関数設定、最大で 1 つ目*カウント*の文字*str*に*c* (に変換**char**). 場合*カウント*がの長さより大きい*str*の長さ*str*の代わりに使用が*カウント*します。
 
-**_wcsnset**と **_mbsnset**のワイド文字とマルチバイト文字バージョンは、 **_strnset**です。 文字列引数と戻り値の **_wcsnset**ワイド文字は、文字列以外の **_mbsnset**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wcsnset**と **_mbsnset**のワイド文字とマルチバイト文字バージョン **_strnset**します。 文字列引数と戻り値の **_wcsnset**はワイド文字列 **_mbsnset**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
-**_mbsnset**はそのパラメーターを検証する場合は*str* null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbsnset**返します**NULL**設定と**errno**に**EINVAL**です。 **_strnset**と **_wcsnset**はそのパラメーターを検証しません。
+**_mbsnset**場合に、パラメーターを検証*str* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbsnset**返します**NULL**設定と**errno**に**EINVAL**します。 **_strnset**と **_wcsnset**パラメーターを検証できません。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -162,9 +152,9 @@ unsigned char *_mbsnset_l(
 |**_tcsnset**|**_strnset**|**_mbsnbset**|**_wcsnset**|
 |**_tcsnset_l**|**_strnset_l**|**_mbsnbset_l**|**_wcsnset_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strnset**|\<string.h>|
 |**_strnset_l**|\<tchar.h>|

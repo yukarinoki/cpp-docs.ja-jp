@@ -1,10 +1,6 @@
 ---
-title: atof、_atof_l、_wtof、_wtof_l |Microsoft Docs
-ms.custom: ''
+title: atof、_atof_l、_wtof、_wtof_l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtof_l
 - atof
@@ -36,8 +32,6 @@ f1_keywords:
 - corecrt_wstdlib/_wtof
 - _wtof_l
 - corecrt_wstdlib/_wtof_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - tstof function
 - atof_l function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - _wtof function
 - string conversion, to floating point values
 ms.assetid: eb513241-c9a9-4f5c-b7e7-a49b14abfb75
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d78fe14783200e1e145c39b9b274d9e7e3ddb6c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6c2ec158ac0b75a861b5b226d33de113d76988cb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396811"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471176"
 ---
 # <a name="atof-atofl-wtof-wtofl"></a>atof、_atof_l、_wtof、_wtof_l
 
@@ -96,11 +86,11 @@ double _wtof_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数を返します、**二重**値は、入力文字列を数値として解釈して生成します。 入力をその型の値に変換できない場合、戻り値は 0.0 になります。
+各関数を返します、**二重**入力文字を数字として解釈して生成された値。 入力をその型の値に変換できない場合、戻り値は 0.0 になります。
 
-すべての範囲外の場合、 **errno**に設定されている**ERANGE**です。 パラメーターが渡された場合は、 **NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
+すべての範囲外の場合、 **errno**に設定されている**ERANGE**します。 パラメーターが渡される場合は、 **NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらの関数は文字列を倍精度浮動小数点値に変換します。
 
@@ -108,13 +98,13 @@ double _wtof_l(
 
 *Str*引数**atof**と **_wtof**は次の形式があります。
 
-[*空白*] [*記号*] [*桁*] [__.__*桁*] [{**e** &#124; **E** } [*記号*]*桁*]
+[*空白*] [*サインオン*] [*桁*] [__.__*桁*] [{**e** &#124; **E** } [*サインオン*]*桁*]
 
-A*空白*は無視されますスペースまたはタブ文字で構成されています。*記号*かプラス (+) またはマイナス記号 (-) です。 と*桁の数字*は 1 つ以上の 10 進数字です。 小数点の前に数字がない場合は、少なくとも 1 つの数字が小数点の後に必要です。 10 進数字は、開始文字から成る指数部続くことがあります (**e**、または**E**) および必要に応じて符号付き 10 進整数。
+A*空白*は無視されますスペースまたはタブ文字含まれています。*記号*はプラス (+) またはマイナス (–) と*桁*は 1 つ以上の 10 進数字。 小数点の前に数字がない場合は、少なくとも 1 つの数字が小数点の後に必要です。 10 進数字の後に、指数部の開始文字で構成されること (**e**、または**E**) および必要に応じて符号付き 10 進整数。
 
-これらの関数の UCRT のバージョンは Fortran スタイルの変換をサポートしていません (**d**または**D**) 指数の文字です。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
+これらの関数の UCRT バージョンは Fortran スタイルの変換をサポートしていません (**d**または**D**) 指数の文字。 この非標準の拡張機能は、CRT の以前のバージョンでサポートされており、コードの互換性に影響する変更点がある可能性があります。
 
-これらの関数のバージョン、 **_l**使用する点を除いて、サフィックスは同じ、*ロケール*パラメーターは、現在のロケールの代わりに渡されます。
+これらの関数のバージョン、 **_l**を使用する点を除いて、サフィックスと同じですが、*ロケール*現在のロケールの代わりに渡されるパラメーター。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -123,7 +113,7 @@ A*空白*は無視されますスペースまたはタブ文字で構成され�
 |**_tstof**|**atof**|**atof**|**_wtof**|
 |**_ttof**|**atof**|**atof**|**_wtof**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |------------------|---------------------|
@@ -132,7 +122,7 @@ A*空白*は無視されますスペースまたはタブ文字で構成され�
 
 ## <a name="example"></a>例
 
-このプログラムを使用して数値の値を文字列として保存されている数値を変換する方法を示しています、 **atof**と **_atof_l**関数。
+このプログラムは、文字列として格納されている数字を使用して数値の値に変換する方法を示しています、 **atof**と **_atof_l**関数。
 
 ```C
 // crt_atof.c

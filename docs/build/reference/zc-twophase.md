@@ -1,30 +1,20 @@
 ---
-title: /Zc:twoPhase-(2 フェーズの名前参照を無効にする) |Microsoft Docs
-ms.custom: ''
+title: /Zc:twoPhase-(2 フェーズの名前参照を無効にする)
 ms.date: 03/06/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - twoPhase
 - /Zc:twoPhase
 - VC.Project.VCCLCompilerTool.EnforceTypeConversionRules
-dev_langs:
-- C++
 helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30647ab07984c393b10d7c0fb74d0e2be35cdf26
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: d5a53db5a5c0ae9c4cfec76e57f628499c8955c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45723295"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648761"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(2 フェーズの名前参照を無効にする)
 
@@ -170,7 +160,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 準拠の問題の詳細については、次を参照してください。 [Visual Studio での C++ 準拠の強化](../../cpp-conformance-improvements-2017.md)と[非標準動作](../../cpp/nonstandard-behavior.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

@@ -1,28 +1,18 @@
 ---
-title: Microsoft::WRL::Wrappers Namespace |Microsoft Docs
-ms.custom: ''
+title: Microsoft::WRL::Wrappers 名前空間
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers
-dev_langs:
-- C++
 helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2b1a63494e06ce3117e7e8fccd1d0cbca8cdb4d0
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: eac85d10351a141ce561da4272d033644128608f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250342"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50535487"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers 名前空間
 
@@ -47,7 +37,7 @@ namespace Microsoft::WRL::Wrappers;
 |名前|説明|
 |----------|-----------------|
 |[CriticalSection クラス](../windows/criticalsection-class.md)|クリティカル セクション オブジェクトを表します。|
-|[イベント クラス (WRL)](../windows/event-class-wrl.md)|イベントを表します。|
+|[Event クラス (WRL)](../windows/event-class-wrl.md)|イベントを表します。|
 |[HandleT クラス](../windows/handlet-class.md)|オブジェクトへのハンドルを表します。|
 |[HString クラス](../windows/hstring-class.md)|HSTRING ハンドルの操作をサポートします。|
 |[HStringReference クラス](../windows/hstringreference-class.md)|既存の文字列から作成された HSTRING を表します。|
@@ -56,7 +46,7 @@ namespace Microsoft::WRL::Wrappers;
 |[Semaphore クラス](../windows/semaphore-class.md)|ユーザーの数に制限をサポートできる共有リソースを制御する同期オブジェクトを表します。|
 |[SRWLock クラス](../windows/srwlock-class.md)|スリム リーダー/ライター ロックを表します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** corewrappers.h
 

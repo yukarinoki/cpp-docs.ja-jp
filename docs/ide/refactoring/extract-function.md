@@ -10,12 +10,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8ca75ca3b69fb175bea160d7f2a35d36416ea2f5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
+ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441370"
+ms.lasthandoff: 10/26/2018
+ms.locfileid: "50136121"
 ---
 # <a name="extract-function"></a>関数を抽出する
 **機能:** コードのフラグメントを独自の関数に変換できます。
@@ -41,7 +41,7 @@ ms.locfileid: "46441370"
 
 1. **[関数/メソッドの抽出 (試験的)]** ウィンドウで、新しい関数名を入力し、コードを配置する場所を選んで、**[OK]** ボタンをクリックします。
 
-   ![関数の抽出](images/extractfunction_dialog.png)
+   ![関数の抽出のダイアログ](images/extractfunction_dialog.png)
 
 1. 指定した場所に新しい関数が作成され、関数のプロトタイプが対応するヘッダー ファイルで宣言されて、元のコードはその関数の呼び出しに変更されます。
 

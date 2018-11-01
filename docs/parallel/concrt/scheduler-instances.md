@@ -1,32 +1,22 @@
 ---
-title: スケジューラ インスタンス |Microsoft Docs
-ms.custom: ''
+title: スケジューラ インスタンス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc11888c3f655572bbdf33a5238e07f8ef99ba90
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375655"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570171"
 ---
 # <a name="scheduler-instances"></a>スケジューラ インスタンス
 
 このドキュメントで使用する方法と、同時実行ランタイム スケジューラ インスタンスの役割を説明します、 [concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)と[:currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)クラスを作成および管理するにはスケジューラ インスタンス。 スケジューラ インスタンスは、特定の種類のワークロードに明示的なスケジューリング ポリシーを関連付ける場合に便利です。 たとえば、昇格したスレッド優先順位で一部のタスクを実行するようにスケジューラ インスタンスを 1 つ作成し、他のタスクについては既定のスケジューラを使用して通常のスレッド優先順位で実行することができます。
 
 > [!TIP]
->  同時実行ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
+>  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
 
 ##  <a name="top"></a> セクション
 

@@ -1,26 +1,16 @@
 ---
-title: コレクションと列挙子インターフェイス (ATL) の設計 |Microsoft Docs
-ms.custom: ''
+title: コレクションと列挙子インターフェイス (ATL) の設計
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - enumerator interfaces
 - collection interfaces
 ms.assetid: ea19a39e-6333-41a1-be62-5435c236640e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ffe40b583a9dabeb14ce5347de6ae3d14dae724
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 8c7f782f52391b162a8b32a97961269178999ee0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43751486"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50538204"
 ---
 # <a name="design-principles-for-collection-and-enumerator-interfaces"></a>コレクションと列挙子インターフェイスの設計原則
 

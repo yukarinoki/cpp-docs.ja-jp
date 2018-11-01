@@ -1,26 +1,15 @@
 ---
-title: '方法: ボックス化解除 |Microsoft Docs'
-ms.custom: ''
+title: '方法: ボックス化を解除する'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - unboxing
 ms.assetid: 75794696-9275-47bf-9a7d-5abe6585ab91
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: e13a45578772208f8828a7b6d7036d030f084acb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b2919ecce254a81d6a140fc7906d28646b50ab8e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618531"
 ---
 # <a name="how-to-unbox"></a>方法: ボックス化を解除する
 

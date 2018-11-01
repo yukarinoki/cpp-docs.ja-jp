@@ -1,10 +1,6 @@
 ---
-title: _tell、_telli64 | Microsoft Docs
-ms.custom: ''
+title: _tell、_telli64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _telli64
 - _tell
@@ -26,8 +22,6 @@ f1_keywords:
 - telli64
 - _telli64
 - _tell
-dev_langs:
-- C++
 helpviewer_keywords:
 - tell function
 - file pointers [C++], getting
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - telli64 function
 - _telli64 function
 ms.assetid: 1500e8f9-8fec-4253-9eec-ec66125dfc9b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8c47958fdb3723c16f8f2dce03ace54c75ce6176
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 628f37d3b8a39a75fb2329a1b2805426f15e821f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409987"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660149"
 ---
 # <a name="tell-telli64"></a>_tell、_telli64
 
@@ -71,17 +61,17 @@ __int64 _telli64(
 
 ファイル ポインターの現在の位置。 シーク非対応のデバイスでは、戻り値は未定義です。
 
-戻り値の-1 L では、エラーを示します。 場合*処理*、無効なファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EBADF** -1 L を返します。
+-1 L の戻り値は、エラーを示します。 場合*処理*は、無効なファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EBADF** -1 L を返します。
 
 戻り値の詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md) 」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **_Tell**関数に関連付けられたファイル ポインター (存在する場合) の現在位置を取得、*処理*引数。 位置は、ファイルの先頭からのバイト数で表されます。 **_Telli64**関数では、この値は 64 ビット整数として表されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_tell**、 **_telli64**|\<io.h>|
 

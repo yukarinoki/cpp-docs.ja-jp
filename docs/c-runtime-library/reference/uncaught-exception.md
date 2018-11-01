@@ -1,10 +1,6 @@
 ---
-title: __uncaught_exception | Microsoft Docs
-ms.custom: ''
+title: __uncaught_exception
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __uncaught_exception
 apilocation:
@@ -21,25 +17,19 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - __uncaught_exception
-dev_langs:
-- C++
 helpviewer_keywords:
 - __uncaught_exception
 ms.assetid: 4d9b75c6-c9c7-4876-b761-ea9ab1925e96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fcae75a5d25710866f781d766cfd77eceb977649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 19d1e18af27722d6f9da39ebaaf6c9415c281849
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408216"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579635"
 ---
 # <a name="uncaughtexception"></a>__uncaught_exception
 
-1 つまたは複数の例外がスローされたが、対応するによってまだ処理されていないかどうかを示す**キャッチ**のブロック、 [try catch](../../cpp/try-throw-and-catch-statements-cpp.md)ステートメントです。
+1 つまたは複数の例外がスローされたが、対応するによってまだ処理されていないかどうかを示します**キャッチ**のブロックを[try catch](../../cpp/try-throw-and-catch-statements-cpp.md)ステートメント。
 
 ## <a name="syntax"></a>構文
 
@@ -50,13 +40,13 @@ bool __uncaught_exception(
 
 ## <a name="return-value"></a>戻り値
 
-**true**で例外がスロー時刻から、**を再試行してください**、一致するまでブロック**キャッチ**ブロックは、それ以外の初期化**false**です。
+**true**から例外がスローされます、**お試しください**一致するまでブロック**キャッチ**ブロックが初期化された以外の場合、 **false**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |__uncaught_exception|eh.h|
 

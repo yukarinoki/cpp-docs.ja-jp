@@ -1,10 +1,6 @@
 ---
-title: _beginthread、_beginthreadex | Microsoft Docs
-ms.custom: ''
+title: _beginthread、_beginthreadex
 ms.date: 02/27/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _beginthread
 - _beginthreadex
@@ -26,8 +22,6 @@ f1_keywords:
 - _beginthread
 - beginthreadex
 - _beginthreadex
-dev_langs:
-- C++
 helpviewer_keywords:
 - _beginthread function
 - threading [C++], creating threads
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - beginthread function
 ms.assetid: 0df64740-a978-4358-a88f-fb0702720091
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e4bdae31c3a2f84dd959baf49fae7e43a6cc9eb0
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: d7e98ae38d91fbc0c1d428e94c6fa29fd8651e85
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43206398"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50626786"
 ---
 # <a name="beginthread-beginthreadex"></a>_beginthread、_beginthreadex
 
@@ -144,7 +134,7 @@ uintptr_t _beginthreadex( // MANAGED CODE
 
 **/Clr**コード、 **_beginthread**と **_beginthreadex**ある 2 つのオーバー ロードします。 ネイティブ呼び出し規約関数ポインターを受け取るものとは、その他、 **_ _clrcall**関数ポインター。 最初のオーバーロードは、アプリケーション ドメインセーフではなく、以降もそうなることはありません。 作成する場合 **/clr**マネージ リソースもコードにアクセスする前に、新しいスレッドが正しいアプリケーション ドメインが移行することを確認する必要があります。 そのためには、[call_in_appdomain 関数](../../dotnet/call-in-appdomain-function.md)などを使用します。 2 番目のオーバー ロードは、アプリケーション ドメイン セーフです。呼び出し元のアプリケーション ドメイン内に新しく作成されたスレッド、最終的に必ず **_beginthread**または **_beginthreadex**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

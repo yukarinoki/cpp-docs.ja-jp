@@ -1,32 +1,22 @@
 ---
-title: -Wp64 (64 ビット移植に関する問題の検出) |Microsoft Docs
-ms.custom: ''
+title: /Wp64 (64 ビット移植性の問題の検出)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.Detect64BitPortabilityProblems
 - VC.Project.VCCLCompilerTool.Detect64BitPortabilityProblems
 - /wp64
-dev_langs:
-- C++
 helpviewer_keywords:
 - 64-bit compiler [C++], detecting portability problems
 - /Wp64 compiler option [C++]
 - -Wp64 compiler option [C++]
 - Wp64 compiler option [C++]
 ms.assetid: 331ae5aa-e627-4d03-8f63-dd2c2d76dadd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac86fb6372db5aa88b4416dba07fd183f5f1df20
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 504d7594ab9c636fd3ce7415f3866fb4c0a5aadd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700740"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601839"
 ---
 # <a name="wp64-detect-64-bit-portability-issues"></a>/Wp64 (64 ビット移植性の問題の検出)
 
@@ -55,7 +45,7 @@ ms.locfileid: "45700740"
 
 通常 64 ビット、x64 を構築するコンパイラを使用して、アプリケーションをコンパイルする場合、コードだけを無効にできます **/Wp64** 32 ビットのコンパイル時に、64 ビット コンパイラでは、すべての問題を検出するためです。 対象の Windows の 64 ビットのオペレーティング システムをする方法の詳細については、次を参照してください。 [Visual c の 64 ビット x64 構成ターゲット](../../build/configuring-programs-for-64-bit-visual-cpp.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。
 

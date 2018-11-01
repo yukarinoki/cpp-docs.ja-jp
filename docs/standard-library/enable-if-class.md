@@ -1,28 +1,18 @@
 ---
-title: enable_if クラス | Microsoft Docs
-ms.custom: ''
+title: enable_if クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::enable_if
-dev_langs:
-- C++
 helpviewer_keywords:
 - enable_if class
 - enable_if
 ms.assetid: c6b8d41c-a18f-4e30-a39e-b3aa0e8fd926
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c4cdc26c66c05cda821b43367b806ecc2a2a8168
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: b6990dba20643b35dde36a492d40c3e3e76ae0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100807"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591881"
 ---
 # <a name="enableif-class"></a>enable_if クラス
 
@@ -141,7 +131,7 @@ func(make_pair("foo", "bar"));
 
 C++11 は、`enable_if` を使用してこの曖昧さを解決しました。`pair<A, B>(const pair<X, Y>&)` が、以下の場合**のみ**、つまり `const X&` が `A` に暗黙に変換され、`const Y&` が `B` に暗黙に変換される場合のみ存在するようにしています。  これにより、オーバーロード解決は、`pair<const char *, const char *>` が `pair<int, int>` に変換されないこと、および `pair<string, string>` となるオーバーロードが実行可能であることを決定できます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

@@ -1,30 +1,20 @@
 ---
-title: CDefaultCompareTraits クラス |Microsoft Docs
-ms.custom: ''
+title: CDefaultCompareTraits クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CDefaultCompareTraits
 - ATLCOLL/ATL::CDefaultCompareTraits
 - ATLCOLL/ATL::CDefaultCompareTraits::CompareElements
 - ATLCOLL/ATL::CDefaultCompareTraits::CompareElementsOrdered
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDefaultCompareTraits class
 ms.assetid: a17e2740-e7b4-48f2-aeb7-c80ce84b63f7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1aecfcb493bfc35e0d6f059c296af1b358eee93f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b7f51ccd266fce1b5d614dfe2c725e20fde6f297
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46103214"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575306"
 ---
 # <a name="cdefaultcomparetraits-class"></a>CDefaultCompareTraits クラス
 
@@ -57,7 +47,7 @@ class CDefaultCompareTraits
 
 詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlcoll.h
 

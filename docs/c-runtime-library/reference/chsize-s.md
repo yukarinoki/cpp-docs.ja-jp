@@ -1,10 +1,6 @@
 ---
-title: _chsize_s | Microsoft Docs
-ms.custom: ''
+title: _chsize_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize_s
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - chsize_s
 - _chsize_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - files [C++], changing size
 - chsize_s function
 - _chsize_s function
 ms.assetid: d88d2e94-6e3b-42a5-8631-16ac4d82fa38
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d131f5e21fa4980e77cfb9dc858d5329b94e2b93
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a56efe826d43c80dc2cdee295e58872e7dd3c9ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395112"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597601"
 ---
 # <a name="chsizes"></a>_chsize_s
 
@@ -64,21 +54,21 @@ errno_t _chsize_s(
 
 ## <a name="return-value"></a>戻り値
 
-**_chsize_s**ファイルのサイズが正常に変更された場合、値 0 を返します。 0 以外の戻り値がエラーを示します: 戻り値は**EACCES**アクセスに対して、指定したファイルがロックされている場合**EBADF**指定したファイルは読み取り専用または記述子が有効でない場合**ENOSPC**デバイスで、領域が残っていない場合または**EINVAL**サイズが 0 より小さい場合。 **errno**が同じ値に設定します。
+**_chsize_s**ファイル サイズが正常に変更された場合、値 0 を返します。 0 以外の戻り値は、エラーを示します戻り値は**EACCES**アクセスに対して、指定したファイルがロックされている場合**EBADF**場合、指定したファイルが読み取り専用または記述子が有効でない場合 **。ENOSPC** 、デバイス上の領域が残っていない場合または**EINVAL**サイズが 0 よりも小さい場合。 **errno**が同じ値に設定します。
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Chsize_s**関数の拡張またはに関連付けられているファイルを切り捨てます*fd*で指定された長さに*サイズ*です。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
+**_Chsize_s**関数の拡張またはに関連付けられているファイルを切り捨てます*fd*で指定された長さに*サイズ*します。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
 
-**_chsize_s**ファイル サイズが、64 ビットの整数を受け取るし、ファイルのサイズが 4 GB より大きい値を処理できます。 **_chsize**は 32 ビット ファイルのサイズに制限します。
+**_chsize_s**ファイル サイズとして 64 ビット整数を受け取り、4 GB を超えるファイル サイズを処理できます。 **_chsize**は 32 ビット ファイルのサイズに制限されます。
 
-この関数は、パラメーターを検証します。 場合*fd*は無効なパラメーター ハンドラーが呼び出されると、有効なファイル記述子またはサイズが 0 より小さい、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+この関数は、パラメーターを検証します。 場合*fd*は無効なパラメーター ハンドラーが呼び出される、有効なファイル記述子またはサイズが 0 より小さい」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_chsize_s**|\<io.h>|\<errno.h>|
 

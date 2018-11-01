@@ -1,10 +1,6 @@
 ---
-title: moneypunct クラス | Microsoft Docs
-ms.custom: ''
+title: moneypunct クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocmon/std::moneypunct
 - xlocmon/std::moneypunct::char_type
@@ -27,8 +23,6 @@ f1_keywords:
 - xlocmon/std::moneypunct::pos_format
 - xlocmon/std::moneypunct::positive_sign
 - xlocmon/std::moneypunct::thousands_sep
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::moneypunct [C++]
 - std::moneypunct [C++], char_type
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - std::moneypunct [C++], positive_sign
 - std::moneypunct [C++], thousands_sep
 ms.assetid: cf2650da-3e6f-491c-95d5-23e57f582ee6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a3c45dc2762c85a2b0f191b8dcf858ccb33b24b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 750b61100f7e3fe15851fffbedeb5b60d4d7034f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110098"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468654"
 ---
 # <a name="moneypunct-class"></a>moneypunct クラス
 
@@ -94,7 +84,7 @@ const 静的オブジェクト intl は、テンプレート パラメーター 
 |-|-|
 |[moneypunct](#moneypunct)|`moneypunct` 型のオブジェクトのコンストラクター。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -124,7 +114,7 @@ const 静的オブジェクト intl は、テンプレート パラメーター 
 |[positive_sign](#positive_sign)|正の記号として使用する要素のロケール固有のシーケンスを返します。|
 |[thousands_sep](#thousands_sep)|桁区切り記号として使用する要素のロケール固有のシーケンスを返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

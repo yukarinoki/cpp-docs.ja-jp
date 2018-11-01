@@ -1,10 +1,6 @@
 ---
-title: assert マクロ、_assert、_wassert | Microsoft Docs
-ms.custom: ''
+title: assert マクロ、_assert、_wassert
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - assert
 - _assert
@@ -27,23 +23,17 @@ f1_keywords:
 - _assert
 - _wassert
 - assert/_wassert
-dev_langs:
-- C++
 helpviewer_keywords:
 - aborting programs
 - assert function
 - assert macro
 ms.assetid: a9ca031a-648b-47a6-bdf1-65fc7399dd40
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 67fef1231d4488b1714cc2f0f2f0e892737e627d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7ac299213ba3de878f7cf2dc99b44c45273bc3b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101938"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590958"
 ---
 # <a name="assert-macro-assert-wassert"></a>assert マクロ、_assert、_wassert
 
@@ -97,9 +87,9 @@ CRT デバッグの詳細については、「 [CRT のデバッグ技術](/visu
 
 **_Assert**と **_wassert**関数は、内部 CRT 関数。 これらは、アサーションをサポートするためのオブジェクト ファイルに必要なコードを最小限に抑えるうえで役立ちます。 これらの関数を直接呼び出すことはお勧めしません。
 
-**アサート**マクロが C ランタイム ライブラリのリリースとデバッグ バージョンの両方で有効になっているときに**NDEBUG**が定義されていません。 ときに**NDEBUG**が定義されている場合、マクロが使用可能ながその引数は評価されず、影響を与えません。 有効にする場合、**アサート**マクロの呼び出し **_wassert**のため、実装します。 その他のアサーション マクロの [_ASSERT](assert-asserte-assert-expr-macros.md)、[_ASSERTE](assert-asserte-assert-expr-macros.md)、[_ASSERT_EXPR](assert-asserte-assert-expr-macros.md) も使用できますが、これらは、[_DEBUG](../../c-runtime-library/debug.md) マクロが定義されており、かつ C ランタイム ライブラリのデバッグ バージョンとリンクされたコードにある場合にのみ、渡される式を評価します。
+**アサート**マクロが C ランタイム ライブラリのリリースとデバッグ バージョンの両方で有効になっているときに**NDEBUG**が定義されていません。 ときに**NDEBUG**が定義されている場合、マクロが使用可能ながその引数は評価されず、影響を与えません。 有効にする場合、**アサート**マクロの呼び出し **_wassert**のため、実装します。 その他のアサーション マクロの [_ASSERT](assert-asserte-assert-expr-macros.md)、 [_ASSERTE](assert-asserte-assert-expr-macros.md) 、 [_ASSERT_EXPR](assert-asserte-assert-expr-macros.md)も使用できますが、これらは、 [_DEBUG](../../c-runtime-library/debug.md) マクロが定義されており、かつ C ランタイム ライブラリのデバッグ バージョンとリンクされたコードにある場合にのみ、渡される式を評価します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

@@ -1,11 +1,6 @@
 ---
-title: cacosh、cacoshf、cacoshl | Microsoft Docs
-ms.custom: ''
+title: cacosh、cacoshf、cacoshl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacosh
 - cacoshf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cacosh
 - complex/cacoshf
 - complex/cacoshl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacosh function
 - cacoshf function
 - cacoshl function
 ms.assetid: 83fd05eb-3587-4741-9be6-589a830a1703
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c61130dbfcc0363ef020216389299634cfcd002f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: aa31dfa1b29eda18d34528fc8aa9544e58a5a082
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394156"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668196"
 ---
 # <a name="cacosh-cacoshf-cacoshl"></a>cacosh、cacoshf、cacoshl
 
@@ -79,15 +68,15 @@ _Lcomplex cacoshl(
 
 ## <a name="return-value"></a>戻り値
 
-逆ハイパーボリック コサイン*z*、(ラジアン単位)。 結果は、unbounded と実際の軸に沿ったおよび間隔で負でない [-iπ、+ iπ] 虚数部の軸に沿ったです。
+逆双曲線余弦*z*、(ラジアン単位)。 結果は、unbounded と実際の軸に沿ったとの間隔で負でない [-π、+ π] 虚軸。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**cacosh**を受け取り、返します **_Fcomplex**と **_Lcomplex**値。 C プログラムでは、 **cacosh**常に受け取りを返す、 **_Dcomplex**値。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cacosh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**cacosh**は、 **_Dcomplex**値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**cacosh**、 **cacoshf**、 **cacoshl**|\<complex.h>|\<ccomplex>|
 

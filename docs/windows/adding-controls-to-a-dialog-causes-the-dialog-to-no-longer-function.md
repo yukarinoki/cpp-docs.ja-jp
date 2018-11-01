@@ -1,28 +1,17 @@
 ---
-title: ダイアログのコントロールを追加するダイアログ ボックスは不要になった機能 (C++) |Microsoft Docs
-ms.custom: ''
+title: ダイアログのコントロールを追加するダイアログ ボックスは不要になった機能 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], troubleshooting
 - dialog boxes [C++], troubleshooting
 - InitCommonControls
 ms.assetid: b2dd4574-ea59-4343-8d65-b387cead5da6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e4a639ad953593195401fe2eadeb5d7877a160
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d95c89c0a07e02ab0934a54ca1fe067961348766
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46445867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648293"
 ---
 # <a name="adding-controls-to-a-dialog-causes-the-dialog-to-no-longer-function-c"></a>ダイアログのコントロールを追加するダイアログ ボックスは不要になった機能 (C++)
 
@@ -64,7 +53,7 @@ ms.locfileid: "46445867"
 
 呼び出す必要があります`LoadLibrary`リッチ エディット コントロールの。 詳細については、次を参照してください。 [MFC での RichEdit 1.0 コントロールの使用](../windows/using-the-richedit-1-0-control-with-mfc.md)、[リッチのエディット コントロールについて](/windows/desktop/Controls/about-rich-edit-controls)、Windows sdk と[リッチ エディット コントロールの概要](../mfc/overview-of-the-rich-edit-control.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

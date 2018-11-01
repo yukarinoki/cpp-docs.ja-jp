@@ -1,41 +1,31 @@
 ---
-title: コンパイラおよびリンカーでの Unicode サポート |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラおよびリンカーでの Unicode のサポート
 ms.date: 12/15/2017
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.UseUnicodeResponseFiles
 - VC.Project.VCLibrarianTool.UseUnicodeResponseFiles
 - VC.Project.VCCLCompilerTool.UseUnicodeResponseFiles
 - VC.Project.VCXDCMakeTool.UseUnicodeResponseFiles
-dev_langs:
-- C++
 helpviewer_keywords:
 - Unicode, Visual C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ec0b84cd62f3fcca378ab55de16006925e685b37
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cb21165e51960c0ca2f728381413c1a7260c9f83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32376193"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494979"
 ---
 # <a name="unicode-support-in-the-compiler-and-linker"></a>コンパイラおよびリンカーでの Unicode のサポート
 
-ほとんどの Visual C ビルド ツールは、Unicode の入力と出力をサポートします。
+ほとんどの Visual C ビルド ツールでは、Unicode の入力と出力をサポートします。
 
 ## <a name="filenames"></a>ファイル名
 
-コマンドラインまたはコンパイラ ディレクティブを指定されたファイル名 (など`#include`) Unicode 文字を含めることがあります。
+コマンドラインまたはコンパイラ ディレクティブで指定されたファイル名 (など`#include`) の Unicode 文字を含めることができます。
 
 ## <a name="source-code-files"></a>ソース コード ファイル
 
-Unicode 文字には、識別子、マクロ、文字列リテラルおよび文字リテラル、およびコメントではサポートされています。  ユニバーサル文字名もサポートします。
+Unicode 文字には、識別子、マクロ、文字列と文字のリテラルやコメントではサポートされています。  ユニバーサル文字名もサポートされます。
 
 Unicode は、次のエンコーディングのソース コード ファイルに入力できます。
 
@@ -51,11 +41,11 @@ Unicode は、次のエンコーディングのソース コード ファイル�
 
 ## <a name="linker-response-files-and-def-files"></a>リンカー応答ファイルおよび .DEF ファイル
 
-応答ファイルおよび DEF ファイルは、いずれかの utf-16 BOM、または ANSI を指定できます。
+応答ファイルおよび DEF ファイルは、utf-16 BOM または ANSI を指定できます。
 
 ## <a name="asm-and-cod-dumps"></a>.asm ダンプおよび .cod ダンプ
 
-.asm ダンプおよび .cod ダンプは、MASM との互換性のために、既定で ANSI になっています。 使用して[/FAu](../../build/reference/fa-fa-listing-file.md) utf-8 を出力します。 指定した場合 **/FAs**、混在したソースが直接は印刷だけされ、ソース コードが utf-8 を指定しなかった場合の例については、文字化けして見えます **/FAsu**です。
+.asm ダンプおよび .cod ダンプは、MASM との互換性のために、既定で ANSI になっています。 使用[は/FAu](../../build/reference/fa-fa-listing-file.md)を utf-8 を出力します。 指定した場合 **/FAs**、混在したソースが直接は出力したとソース コードが utf-8 と指定しなかった場合の例については、文字が正しくなります **/FAsu**します。
 
 ## <a name="see-also"></a>関連項目
 

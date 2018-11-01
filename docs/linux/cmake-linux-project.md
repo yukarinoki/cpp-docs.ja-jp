@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: Linux
 ms.topic: conceptual
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-author: corob-msft
-ms.author: corob
+author: mikeblome
+ms.author: mblome
 ms.workload:
 - cplusplus
 - linux
-ms.openlocfilehash: 82134d48853896ccb70c2620cd70c803fcc74bc8
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: b7c28a8e67ef2731d26071262383e93d32be9583
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821050"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50064109"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake プロジェクトを構成する
 
@@ -29,8 +29,8 @@ Visual Studio に Linux C++ ワークロードをインストールすると、L
 
 このトピックは、Visual Studio の CMake サポートに関する基本的な知識が読者にあるものとして作成されています。 詳細については、「[CMake Tools for Visual C++](../ide/cmake-tools-for-visual-cpp.md)」 (Visual C++ の CMake ツール) をご覧ください。 CMake 自体の詳細については、「[Build, Test and Package Your Software With CMake](https://cmake.org/)」 (CMake でソフトウェアをビルド、テスト、パッケージ化する) を参照してください。
 
-> [!NOTE]  
-> Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Visual Studio で [CMake ターゲット ビュー](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/) ウィンドウをサポートする、Microsoft 提供の CMake バリアントの場合は、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) で最新のビルド済みバイナリをダウンロードします。 パッケージ マネージャーで 3.8 より古いバージョンの CMake が提供される場合は、[ソースから CMake をビルドする](#build-a-supported-cmake-release-from-source)か、標準の CMake の使用が好ましい場合、公式の [CMake ダウンロード ページ](https://cmake.org/download/)からダウンロードすることで、これを回避できます。 
+> [!NOTE]
+> Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Microsoft から提供されている CMake 変数の場合は、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) から最新のビルド済みバイナリをダウンロードします。
 
 ## <a name="open-a-folder"></a>フォルダーを開く
 
@@ -118,51 +118,11 @@ Linux ターゲットを指定すると、ソースが Linux マシンにコピ�
 
 そうしたオプションでは、ビルドの前後や CMake 生成の前にリモート ボックスでコマンドを実行できます。 リモート ボックスで有効なコマンドになります。 出力はパイプで Visual Studio に戻されます。
 
-## <a name="build-a-supported-cmake-release-from-source"></a>サポートされている CMake リリースをソースからビルドする
+## <a name="download-prebuilt-cmake-binaries"></a>ビルド済み CMake バイナリをダウンロードする
 
-Linux マシンで必須となる CMake の最小バージョンは 3.8 です。サーバー モードにも対応している必要があります。 確認するには、次のコマンドを実行します。
-
-```cmd
-cmake --version
-```
-
-サーバー モードが有効になっていることを確認するには、次を実行します。
-
-```cmd
-cmake -E capabilities
-```
-
-出力の中から **“serverMode”:true** を探します。 下の説明のようにソースから CMake をコンパイルするときでも、完了時に機能を確認してください。 サーバー モードの有効化を禁止する制約がお使いの Linux システムに存在する場合があります。
-
-Linux システムのシェルでソースから CMake のビルドを始めるには、パッケージ マネージャーが最新の状態であることと、git と cmake が利用できることを確認してください。
-
-最初に、Visual Studio の CMake サポート用のフォークが保持されている [Microsoft CMake リポジトリ](https://github.com/Microsoft/CMake)から、CMake のソースを複製します。
-
-```cmd
-sudo apt-get update
-sudo apt-get install -y git cmake
-git clone https://github.com/Microsoft/CMake.git
-cd CMake
-```
-
-次に、CMake の現行リリースを /usr/local/bin にビルドしてインストールするために、以下のコマンドを実行します。
-
-```cmd
-mkdir out
-cd out
-cmake ../
-make
-sudo make install
-```
-
-次に、以下のコマンドを実行して、バージョンが 3.8 以上であることと、サーバー モードが有効になっていることを確認します。
-
-```cmd
-/usr/local/bin/cmake –version
-cmake -E capabilities
-```
+Linux distro には古いバージョンの CMake が含まれている場合があります。 Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Microsoft から提供されている CMake 変数の場合は、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) から最新のビルド済みバイナリをダウンロードします。
 
 ## <a name="see-also"></a>参照
 
 [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)<br/>
-[Visual C++ 用の CMake ツール](../ide/cmake-tools-for-visual-cpp.md)  
+[Visual C++ 用の CMake ツール](../ide/cmake-tools-for-visual-cpp.md)

@@ -1,10 +1,6 @@
 ---
-title: _CrtGetReportHook | Microsoft Docs
-ms.custom: ''
+title: _CrtGetReportHook
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetReportHook
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetReportHook
 - _CrtGetReportHook
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtGetReportHook function
 - _CrtGetReportHook function
 ms.assetid: 922758ed-7edd-4359-9c92-0535192dc11a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d78c176d5d4de54f4ae5eea84b0483b9e6bc3bec
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b8b666093807c95312d4328ca9b3043ad1e09df
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536761"
 ---
 # <a name="crtgetreporthook"></a>_CrtGetReportHook
 
@@ -53,15 +43,15 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 
 現在のクライアント定義レポート関数を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_CrtGetReportHook**アプリケーションは、C ランタイム デバッグ ライブラリのレポート プロセスの現在のレポート関数を取得します。
+**_CrtGetReportHook**により、アプリケーションが C ランタイム デバッグ ライブラリのレポート プロセスの現在のレポート関数を取得します。
 
 フックをサポートするその他のランタイム関数の使い方の詳細と、独自のクライアント定義フック関数の記述方法については、「[デバッグ用フック関数の作成](/visualstudio/debugger/debug-hook-function-writing)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_CrtGetReportHook**|\<crtdbg.h>|
 
@@ -73,7 +63,7 @@ _CRT_REPORT_HOOK _CrtGetReportHook( void );
 
 ## <a name="example"></a>例
 
-使用する方法のサンプルについては **_CrtSetReportHook**を参照してください[レポート](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report)です。
+使用する方法の例については **_CrtSetReportHook**を参照してください[レポート](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/crt/report)します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,27 +1,16 @@
 ---
-title: '方法: マニフェスト リソース (C++) |Microsoft Docs'
-ms.custom: ''
+title: '方法: マニフェスト リソース (C++)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - manifest resources [C++]
 - resources [C++], opening
 ms.assetid: bd6f9c47-2a1e-417d-9d2a-c1ad7d3b9635
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 0825e34515a458d49b8353f3053654094d8b9526
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0e9f92a44636d91af14b139fc5f23a100b3f1e78
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407284"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50666389"
 ---
 # <a name="how-to-open-a-manifest-resource"></a>方法: マニフェスト リソースを開く
 
@@ -43,7 +32,7 @@ ms.locfileid: "46407284"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

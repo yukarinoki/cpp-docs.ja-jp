@@ -1,11 +1,6 @@
 ---
-title: feholdexcept |Microsoft ドキュメント
-ms.custom: ''
+title: feholdexcept
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - feholdexcept
 apilocation:
@@ -24,21 +19,15 @@ apitype: DLLExport
 f1_keywords:
 - feholdexcept
 - fenv/feholdexcept
-dev_langs:
-- C++
 helpviewer_keywords:
 - feholdexcept function
 ms.assetid: 88e512ae-b5d8-452c-afe9-c824cd3ef1d8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6250de98b2eb3f8cc8c475d341c1d63a79262362
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26097398b9f9d498ab4c56690dc9c6cbb950bafb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525738"
 ---
 # <a name="feholdexcept"></a>feholdexcept
 
@@ -55,21 +44,21 @@ int feholdexcept(
 ### <a name="parameters"></a>パラメーター
 
 *penv*<br/>
-ポインター、 **fenv_t**浮動小数点の環境のコピーを格納するオブジェクト。
+ポインター、 **fenv_t**浮動小数点環境のコピーを格納するオブジェクト。
 
 ## <a name="return-value"></a>戻り値
 
-関数が正常に停止以外の浮動小数点例外処理を有効にできない場合にのみ 0 を返します。
+関数が無停止の浮動小数点例外処理を正常に有効にできない場合にのみ 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Feholdexcept**である現在のフローティング ポイント環境の状態を保存する関数が使用される、 **fenv_t**によって指されるオブジェクト*penv*とに、環境を設定するには浮動小数点の例外で実行が中断します。 これは無停止モードと呼ばれます。  このモードは、[fesetenv](fesetenv1.md) または [feupdateenv](feupdateenv.md) を使用して環境が復元されるまで継続します。
+**Feholdexcept**で現在の浮動小数点環境の状態を保存する関数が使用される、 **fenv_t**指すオブジェクト*penv*とに、環境を設定するには浮動小数点例外での実行は中断されません。 これは無停止モードと呼ばれます。  このモードは、[fesetenv](fesetenv1.md) または [feupdateenv](feupdateenv.md) を使用して環境が復元されるまで継続します。
 
-この関数は、1 つまたは複数の浮動小数点例外を呼び出し元から隠す必要があるサブルーチンの開始時に使用できます。 例外を報告するための内容を消去望ましくない例外を使用して[feclearexcept、](feclearexcept1.md)への呼び出しで停止以外のモードを終了および**feupdateenv**です。
+この関数は、1 つまたは複数の浮動小数点例外を呼び出し元から隠す必要があるサブルーチンの開始時に使用できます。 例外を報告する内容を消去望ましくない例外を使用して[feclearexcept](feclearexcept1.md)しを呼び出して無停止モードを終了**feupdateenv**します。
 
 この関数を使用するには、呼び出しの前に `#pragma fenv_access(on)` ディレクティブを使用してアクセスを妨げる可能性のある浮動小数点の最適化をオフにする必要があります。 詳細については、「 [fenv_access](../../preprocessor/fenv-access.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

@@ -1,31 +1,21 @@
 ---
-title: CFormView クラス |Microsoft Docs
-ms.custom: ''
+title: CFormView クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CFormView
 - AFXEXT/CFormView
 - AFXEXT/CFormView::CFormView
 - AFXEXT/CFormView::IsInitDlgCompleted
-dev_langs:
-- C++
 helpviewer_keywords:
 - CFormView [MFC], CFormView
 - CFormView [MFC], IsInitDlgCompleted
 ms.assetid: a99ec313-36f0-4f28-9d2b-de11de14ac19
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d65a82cf66180de9b647f792ed5a4024ab425800
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 37ae7ca2efeb579cba388e22cf0fe450a068e721
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46372202"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50651959"
 ---
 # <a name="cformview-class"></a>CFormView クラス
 
@@ -75,7 +65,7 @@ MFC アプリケーション ウィザードと [クラスの追加] コマン�
 
 `CFormView`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxext.h
 

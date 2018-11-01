@@ -1,10 +1,6 @@
 ---
-title: wcstombs、_wcstombs_l | Microsoft Docs
-ms.custom: ''
+title: wcstombs、_wcstombs_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcstombs
 - _wcstombs_l
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - wcstombs
 - _wcstombs_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wcstombs_l function
 - wcstombs function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 91234252-9ea1-423a-af99-e9d0ce4a40e3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5cbc89ff9a6c353b0df1df606a08a8c2515ed04a
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 0396230454636759f58881a44a5ef7f7093415fd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43217135"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573564"
 ---
 # <a name="wcstombs-wcstombsl"></a>wcstombs、_wcstombs_l
 
@@ -111,7 +101,7 @@ size_t _wcstombs_l(
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

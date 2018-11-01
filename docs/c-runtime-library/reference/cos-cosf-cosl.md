@@ -1,10 +1,6 @@
 ---
-title: cos、cosf、cosl |Microsoft ドキュメント
-ms.custom: ''
+title: cos、cosf、cosl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - cos
 - cosf
@@ -26,8 +22,6 @@ f1_keywords:
 - cos
 - cosf
 - cosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cosines
 - cosl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - cosines, calculating
 ms.assetid: ae90435e-6b68-4a47-a81f-be87d5c08f16
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a49f8489d084b1f67bc46432970114350c56f09
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b050fd98a35028b121def8b665fce62ad58ec437
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395449"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519897"
 ---
 # <a name="cos-cosf-cosl"></a>cos、cosf、cosl
 
@@ -72,20 +62,20 @@ long double cos( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-コサイン*x*です。 場合*x*が 263 以上で、または小さいが同じかそれ以下-263、結果から有意性低下します。
+コサイン*x*します。 場合*x*が 263 以上で、または少ないよりまたは-263 等しくは、結果の有効桁数の損失が発生します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± QNAN、IND|none|**_DOMAIN**|
-|± INF|**無効です**|**_DOMAIN**|
+|± QNAN、IND|none|**(_D)**|
+|± INF|**無効です**|**(_D)**|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**cos**を受け取り、返します**float**または**長い****二重**値。 C プログラムでは、 **cos**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cos**を受け取って返す**float**または**長い****二重**値。 C プログラムで**cos**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
 |**cos**、 **cosh**、 **cosf**|\<math.h>|\<cmath> または \<math.h>|
 
@@ -93,7 +83,7 @@ C++ では、オーバー ロードできるよう、ためのオーバー ロ�
 
 ## <a name="example"></a>例
 
-例を参照してください[sin、sinf、sinl](sin-sinf-sinl.md)です。
+例を参照してください。 [sin、sinf、sinl](sin-sinf-sinl.md)します。
 
 ## <a name="see-also"></a>関連項目
 

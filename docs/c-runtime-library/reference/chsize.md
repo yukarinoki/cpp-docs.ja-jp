@@ -1,10 +1,6 @@
 ---
-title: _chsize | Microsoft Docs
-ms.custom: ''
+title: _chsize
 ms.date: 03/29/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _chsize
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _chsize
-dev_langs:
-- C++
 helpviewer_keywords:
 - size
 - _chsize function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - files [C++], changing size
 - chsize function
 ms.assetid: b3e881c5-7b27-4837-a3d4-c51591ab10ff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eb40d218439ebe308e7d7cf01ab5043a2ebb3b1e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5c60f3aa08a405eb9a83dc6ba8636cd316a32925
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395755"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50600643"
 ---
 # <a name="chsize"></a>_chsize
 
@@ -65,19 +55,19 @@ int _chsize(
 
 ## <a name="return-value"></a>戻り値
 
-**_chsize**ファイルのサイズが正常に変更された場合、値 0 を返します。 戻り値-1 はエラーを示します: **errno**に設定されている**EACCES**場合は、指定したファイルは読み取り専用または指定されたファイルがロックされている、アクセスに対してに**EBADF**場合、記述子が無効、 **ENOSPC**デバイスで、領域が残っていない場合または**EINVAL**場合*サイズ*が 0 未満です。
+**_chsize**ファイル サイズが正常に変更された場合、値 0 を返します。 戻り値-1 はエラーを示します: **errno**に設定されている**EACCES**指定したファイルが読み取り専用か、指定したファイルがアクセスに対してにロックされている**EBADF**場合、記述子が有効でない**ENOSPC** 、デバイス上の領域が残っていない場合または**EINVAL**場合*サイズ*0 未満です。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Chsize**関数の拡張またはに関連付けられているファイルを切り捨てます*fd*で指定された長さに*サイズ*です。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
+**_Chsize**関数の拡張またはに関連付けられているファイルを切り捨てます*fd*で指定された長さに*サイズ*します。 ファイルは、書き込みを許可するモードで開かれている必要があります。 ファイルが拡張される場合は、null 文字 ('\0') が追加されます。 ファイルが切り捨てられる場合、短くなったファイルの末尾からファイルの元の長さまでのすべてのデータは失われます。
 
-この関数は、パラメーターを検証します。 場合*サイズ*が 0 未満または*fd*は、無効なファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+この関数は、パラメーターを検証します。 場合*サイズ*が 0 未満または*fd*が正しくないファイル記述子で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_chsize**|\<io.h>|\<errno.h>|
 

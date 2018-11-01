@@ -1,11 +1,6 @@
 ---
-title: nearbyint、nearbyintf、nearbyintl |Microsoft ドキュメント
-ms.custom: ''
+title: nearbyint、nearbyintf、nearbyintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - nearbyint
 - nearbyintf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/nearbyint
 - math/narbyintf
 - math/narbyintl
-dev_langs:
-- C++
 helpviewer_keywords:
 - nearbyint function
 - nearbyintf function
 - nearbyintl function
 ms.assetid: dd39cb68-96b0-434b-820f-6ff2ea65584f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2362a68bf73a370f2fdf8eaa5ecb18b0a08bfaad
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4a36bddb28db9fb4c5809432dfaef9ca3ece4328
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403236"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668313"
 ---
 # <a name="nearbyint-nearbyintf-nearbyintl"></a>nearbyint、nearbyintf、nearbyintl
 
@@ -72,25 +61,25 @@ long double nearbyint( long double x ); //C++ only
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合を返します*x*によって報告された、現在の丸めの形式を使用して、最も近い整数に丸められた、 [fegetround](fegetround-fesetround2.md)です。 それ以外の場合は、関数から次の値のいずれかが返されます。
+成功した場合、返します*x*によって報告された、現在の丸め形式を使用して、最も近い整数に丸められた、 [fegetround](fegetround-fesetround2.md)します。 それ以外の場合は、関数から次の値のいずれかが返されます。
 
 |懸案事項|Return|
 |-----------|------------|
 |*x* ±INFINITY を =|±INFINITY、未変更の状態|
 |*x* ±0 を =|±0、未変更の状態|
-|*x* NaN を =|NaN|
+|*x* = NaN|NaN|
 
-エラーは報告されません[_matherr](matherr.md)。 具体的には、この関数はいずれかを報告できません**FE_INEXACT**例外。
+エラーは報告されません[_matherr](matherr.md)。 具体的には、この関数はいずれかを報告しない**FE_INEXACT**例外。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数の主な違いと[rint](rint-rintf-rintl.md)は、この関数には、不正確な浮動小数点の例外は発生しません。
+この関数の主な違いと[rint](rint-rintf-rintl.md)はこの関数では、不正確な浮動小数点例外は発生しません。
 
 浮動小数点の最大値は正確な整数であるため、この関数が単独でオーバーフローすることはありません。むしろ、使用する関数のバージョンによっては、出力で戻り値がオーバーフローすることがあります。
 
-C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**nearbyint**を受け取り、返します**float**または**長い****二重**パラメーター。 C プログラムでは、 **nearbyint**常に 2 つの double 値を受け取って、double 値を返します。
+C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**nearbyint**を受け取って返す**float**または**長い****二重**パラメーター。 C プログラムで**nearbyint**常に 2 つの double 値を受け取ってを double 値を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

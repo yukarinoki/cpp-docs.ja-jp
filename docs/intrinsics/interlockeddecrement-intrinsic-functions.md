@@ -1,10 +1,6 @@
 ---
-title: _InterlockedDecrement の組み込み関数 |Microsoft Docs
-ms.custom: ''
+title: _InterlockedDecrement の組み込み関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedDecrement16_rel_cpp
 - _InterlockedDecrement16_acq_cpp
@@ -27,8 +23,6 @@ f1_keywords:
 - _InterlockedDecrement64_cpp
 - _InterlockedDecrement_acq
 - _InterlockedDecrement_acq_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - InterlockedDecrement64_rel intrinsic
 - InterlockedDecrement64 intrinsic
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 61dceb2e91a903201919cb40767e1d9730130530
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 180b371bc7613922295bec4d0208cf9aea3046e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46432738"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541415"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement の組み込み関数
 
@@ -117,11 +107,11 @@ __int64 _InterlockedDecrement64_nf(
 
 戻り値は、デクリメントして生成された値です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`_InterlockedDecrement`、`_InterlockedDecrement16`、`_InterlockedDecrement64`|x86、ARM、x64|
+|`_InterlockedDecrement`、 `_InterlockedDecrement16`、 `_InterlockedDecrement64`|x86、ARM、x64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
 
 **ヘッダー ファイル** \<intrin.h >

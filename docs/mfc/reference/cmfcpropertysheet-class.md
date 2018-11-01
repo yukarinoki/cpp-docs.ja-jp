@@ -1,10 +1,6 @@
 ---
-title: CMFCPropertySheet クラス |Microsoft Docs
-ms.custom: ''
+title: CMFCPropertySheet クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -25,8 +21,6 @@ f1_keywords:
 - AFXPROPERTYSHEET/CMFCPropertySheet::RemovePage
 - AFXPROPERTYSHEET/CMFCPropertySheet::SetIconsList
 - AFXPROPERTYSHEET/CMFCPropertySheet::SetLook
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCPropertySheet [MFC], CMFCPropertySheet
 - CMFCPropertySheet [MFC], AddPage
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f5512f806b5abdee56b2c6eabe45f93545c8788e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531613"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet クラス
 
@@ -94,7 +84,7 @@ class CMFCPropertySheet : public CPropertySheet
 |[CMFCPropertySheet::OnDrawPageHeader](#ondrawpageheader)|カスタム プロパティ ページのヘッダーを描画するためにフレームワークによって呼び出されます。|
 |`CMFCPropertySheet::OnInitDialog`|処理、 [WM_INITDIALOG](/windows/desktop/dlgbox/wm-initdialog)メッセージ。 (上書き[cpropertysheet::oninitdialog](../../mfc/reference/cpropertysheet-class.md#oninitdialog))。|
 |[CMFCPropertySheet::OnRemoveTreePage](#onremovetreepage)|ツリー コントロールからプロパティ ページを削除するためにフレームワークによって呼び出されます。|
-|`CMFCPropertySheet::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 (`CPropertySheet::PreTranslateMessage` をオーバーライドします)。|
+|`CMFCPropertySheet::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 ( `CPropertySheet::PreTranslateMessage`をオーバーライドします)。|
 |[CMFCPropertySheet::RemoveCategory](#removecategory)|ツリー コントロールからノードを削除します。|
 |[CMFCPropertySheet::RemovePage](#removepage)|プロパティ シートからプロパティ ページを削除します。|
 |[CMFCPropertySheet::SetIconsList](#seticonslist)|Outlook ウィンドウのナビゲーション コントロールで使用されるイメージの一覧を指定します。|
@@ -144,7 +134,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 [CMFCPropertySheet](../../mfc/reference/cmfcpropertysheet-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxpropertysheet.h
 

@@ -1,28 +1,18 @@
 ---
-title: 独自クラスの &lt;&lt; 演算子のオーバーロード | Microsoft Docs
-ms.custom: ''
+title: 独自クラスの &lt;&lt; 演算子のオーバーロード
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - operator<<, overloading for your own classes
 - operator <<, overloading for your own classes
 ms.assetid: ad1d2c49-d84e-48a8-9c09-121f28b10bf0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b5f5129be6ebf7cac336373f00c7f9e989c23489
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 290491f7afb22873d60abb6662b470d8e7abefc1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33852534"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486932"
 ---
-# <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>独自クラスのための &lt;&lt; 演算子のオーバーロード
+# <a name="overloading-the-ltlt-operator-for-your-own-classes"></a>独自クラスの &lt;&lt; 演算子のオーバーロード
 
 出力ストリームは、標準型に挿入 (`<<`) 演算子を使用します。 独自クラスのための `<<` 演算子をオーバーロードすることもできます。
 
@@ -72,7 +62,7 @@ int main()
 5/6/92
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 オーバーロードされた演算子は元の `ostream` オブジェクトに参照を返すため、挿入を組み合わせることができます。
 

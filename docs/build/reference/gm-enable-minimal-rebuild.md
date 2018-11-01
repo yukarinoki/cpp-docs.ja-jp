@@ -1,17 +1,11 @@
 ---
-title: -Gm (簡易リビルドを有効にする) |マイクロソフトのドキュメント
-ms.custom: ''
+title: /Gm (簡易リビルドの有効化)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MinimalRebuild
 - /Gm
 - /FD
 - VC.Project.VCCLWCECompilerTool.MinimalRebuild
-dev_langs:
-- C++
 helpviewer_keywords:
 - /Gm compiler option [C++]
 - minimal rebuild
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - Gm compiler option [C++]
 - -Gm compiler option [C++]
 ms.assetid: d8869ce0-d2ea-40eb-8dae-6d2cdb61dd59
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f18881e79a3f82941f04dccbde210b2c62dcbca
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 2a5bc4008ab9376367b3a32040c2a4a70147187f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725765"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570405"
 ---
 # <a name="gm-enable-minimal-rebuild"></a>/Gm (簡易リビルドの有効化)
 
@@ -49,7 +39,7 @@ ms.locfileid: "45725765"
 
 Incremental linker を使用して、.obj ファイルに含まれる Windows メタデータをサポートしていないため、 [/ZW (Windows ランタイムのコンパイル)](../../build/reference/zw-windows-runtime-compilation.md)オプション、 **/Gm**オプションと互換性がない **/ZW**します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

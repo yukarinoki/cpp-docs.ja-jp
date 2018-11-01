@@ -1,28 +1,18 @@
 ---
-title: プロパティ ページ (MFC) |Microsoft Docs
-ms.custom: ''
+title: プロパティ ページ (MFC)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d6d72a6dbe8480e37751b760961f466db02c0c0d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403081"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50620910"
 ---
 # <a name="property-pages-mfc"></a>プロパティ ページ (MFC)
 
@@ -77,7 +67,7 @@ void AFXAPI DDP_CBIndex(
 *ID*<br/>
 リソース ID のコンボ ボックスで指定されたコントロール プロパティに関連付けられたコントロール*pszPropName*します。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたプロパティ ページのコントロールに関連付けられたメンバー変数*id*で指定されたプロパティと*pszPropName*します。
 
 *pszPropName*<br/>
@@ -87,7 +77,7 @@ void AFXAPI DDP_CBIndex(
 
 この関数は、対応する前に呼び出す必要がある`DDX_CBIndex`関数呼び出し。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -111,7 +101,7 @@ void AFXAPI DDP_CBString(
 *ID*<br/>
 リソース ID のコンボ ボックスで指定されたコントロール プロパティに関連付けられたコントロール*pszPropName*します。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたプロパティ ページのコントロールに関連付けられたメンバー変数*id*で指定されたプロパティと*pszPropName*します。
 
 *pszPropName*<br/>
@@ -121,7 +111,7 @@ void AFXAPI DDP_CBString(
 
 この関数は、対応する前に呼び出す必要がある`DDX_CBString`関数呼び出し。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -145,7 +135,7 @@ void AFXAPI DDP_CBStringExact(
 *ID*<br/>
 リソース ID のコンボ ボックスで指定されたコントロール プロパティに関連付けられたコントロール*pszPropName*します。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたプロパティ ページのコントロールに関連付けられたメンバー変数*id*で指定されたプロパティと*pszPropName*します。
 
 *pszPropName*<br/>
@@ -155,7 +145,7 @@ void AFXAPI DDP_CBStringExact(
 
 この関数は、対応する前に呼び出す必要がある`DDX_CBStringExact`関数呼び出し。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -179,7 +169,7 @@ void AFXAPI DDP_Check(
 *ID*<br/>
 指定されたコントロール プロパティに関連付けられているチェック ボックス コントロールのリソース ID *pszPropName*します。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたプロパティ ページのコントロールに関連付けられたメンバー変数*id*で指定されたプロパティと*pszPropName*します。
 
 *pszPropName*<br/>
@@ -189,7 +179,7 @@ void AFXAPI DDP_Check(
 
 この関数は、対応する前に呼び出す必要がある`DDX_Check`関数呼び出し。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -213,7 +203,7 @@ void AFXAPI DDP_LBIndex(
 *ID*<br/>
 リストのリソース ID で指定されたコントロール プロパティに関連付けられたコントロールのボックス*pszPropName*します。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたプロパティ ページのコントロールに関連付けられたメンバー変数*id*で指定されたプロパティと*pszPropName*します。
 
 *pszPropName*<br/>
@@ -223,7 +213,7 @@ void AFXAPI DDP_LBIndex(
 
 この関数は、対応する前に呼び出す必要がある`DDX_LBIndex`関数呼び出し。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -247,7 +237,7 @@ void AFXAPI DDP_LBString(
 *ID*<br/>
 リストのリソース ID で指定されたコントロール プロパティに関連付けられたコントロールのボックス*pszPropName*します。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたプロパティ ページのコントロールに関連付けられたメンバー変数*id*で指定されたプロパティと*pszPropName*します。
 
 *pszPropName*<br/>
@@ -257,7 +247,7 @@ void AFXAPI DDP_LBString(
 
 この関数は、対応する前に呼び出す必要がある`DDX_LBString`関数呼び出し。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -281,7 +271,7 @@ void AFXAPI DDP_LBStringExact(
 *ID*<br/>
 リストのリソース ID で指定されたコントロール プロパティに関連付けられたコントロールのボックス*pszPropName*します。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたプロパティ ページのコントロールに関連付けられたメンバー変数*id*で指定されたプロパティと*pszPropName*します。
 
 *pszPropName*<br/>
@@ -291,7 +281,7 @@ void AFXAPI DDP_LBStringExact(
 
 この関数は、対応する前に呼び出す必要がある`DDX_LBStringExact`関数呼び出し。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -314,7 +304,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -338,7 +328,7 @@ void AFXAPI DDP_Radio(
 *ID*<br/>
 オプションのリソース ID で指定されたコントロール プロパティに関連付けられたコントロールのボタン*pszPropName*します。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたプロパティ ページのコントロールに関連付けられたメンバー変数*id*で指定されたプロパティと*pszPropName*します。
 
 *pszPropName*<br/>
@@ -348,7 +338,7 @@ void AFXAPI DDP_Radio(
 
 この関数は、対応する前に呼び出す必要がある`DDX_Radio`関数呼び出し。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -414,7 +404,7 @@ void AFXAPI DDP_Text(
 *ID*<br/>
 指定されたコントロール プロパティに関連付けられたコントロールのリソース ID *pszPropName*します。
 
-*メンバー*<br/>
+*member*<br/>
 指定されたプロパティ ページのコントロールに関連付けられたメンバー変数*id*で指定されたプロパティと*pszPropName*します。
 
 *pszPropName*<br/>
@@ -424,7 +414,7 @@ void AFXAPI DDP_Text(
 
 この関数は、対応する前に呼び出す必要がある`DDX_Text`関数呼び出し。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -450,7 +440,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 プロパティ ページの詳細については、記事を参照してください。 [ActiveX コントロール: プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -467,7 +457,7 @@ END_PROPPAGEIDS(class_name)
 *$class_name$*<br/>
 プロパティ ページを所有するコントロール クラスの名前。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 
@@ -488,7 +478,7 @@ PROPPAGEID(clsid)
 
 すべて PROPPAGEID マクロは、コントロールの実装ファイルのほか、END_PROPPAGEIDS マクロの間に配置する必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxctl.h
 

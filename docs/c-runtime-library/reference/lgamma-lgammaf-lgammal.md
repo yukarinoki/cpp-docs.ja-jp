@@ -1,11 +1,6 @@
 ---
-title: lgamma、lgammaf、lgammal | Microsoft Docs
-ms.custom: ''
+title: lgamma、lgammaf、lgammal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - lgamma
 - lgammaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/lgamma
 - math/lgammaf
 - math/lgammal
-dev_langs:
-- C++
 helpviewer_keywords:
 - lgamma function
 - lgammal function
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fb668e1c24d3f24331e0892002530192afdaeb6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400253"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50533485"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -72,11 +61,11 @@ long double lgamma( long double x ); //C++ only
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、値のガンマ関数の絶対値の自然対数を返す*x*です。
+成功した場合、値のガンマ関数の絶対値の自然対数を返す*x*します。
 
 |懸案事項|Return|
 |-----------|------------|
-|*x* NaN を =|NaN|
+|*x* = NaN|NaN|
 |*x* ±0 を =|+INFINITY|
 |*x*負の整数を =|+INFINITY|
 |±INFINITY|+INFINITY|
@@ -85,13 +74,13 @@ long double lgamma( long double x ); //C++ only
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**lgamma**を受け取り、返します**float**と**長い****二重**型です。 C プログラムでは、 **lgamma**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **lgamma**を受け取って返す**float**と**長い****二重**型。 C プログラムで**lgamma**は、**二重**します。
 
-有理数を x には、この関数は、(x - 1) の階乗の対数を返します。
+X が有理数の場合は、この関数は、(x - 1) の階乗の対数を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

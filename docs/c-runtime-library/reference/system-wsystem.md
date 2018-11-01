@@ -1,10 +1,6 @@
 ---
-title: system、_wsystem | Microsoft Docs
-ms.custom: ''
+title: system、_wsystem
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - system
 - _wsystem
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - _tsystem
 - _wsystem
-dev_langs:
-- C++
 helpviewer_keywords:
 - _wsystem function
 - wsystem function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - commands, executing
 - command interpreter
 ms.assetid: 7d3df2b6-f742-49ce-bf52-012b0aee3df5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ca44648ed378d4484b8e4c32a38a6780b3eddd53
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fa034b164a188b1b5b7ccd8a4ca71ab7ac754fa1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414703"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624667"
 ---
 # <a name="system-wsystem"></a>system、_wsystem
 
@@ -71,7 +61,7 @@ int _wsystem(
 
 ## <a name="return-value"></a>戻り値
 
-場合*コマンド*は**NULL**し、コマンド インタープリターが見つかると、0 以外の値を返します。 コマンド インタープリターが見つからない場合は 0 を設定**errno**に**ENOENT**です。 場合*コマンド*は**NULL**、**システム**コマンド インタープリターから返される値を返します。 コマンド インタープリターから値 0 が返された場合にのみ、値 0 を返します。 戻り値 1 が、エラーを示すと**errno**値は次のいずれかに設定されています。
+場合*コマンド*は**NULL**コマンド インタープリターが見つかると、0 以外の値を返します。 コマンド インタープリターが見つからない場合は 0 を設定**errno**に**ENOENT**します。 場合*コマンド*ない**NULL**、**システム**コマンド インタープリターから返される値を返します。 コマンド インタープリターから値 0 が返された場合にのみ、値 0 を返します。 戻り値 1 のエラーを示すと**errno**値は次のいずれかに設定されます。
 
 |||
 |-|-|
@@ -82,13 +72,13 @@ int _wsystem(
 
 これらのリターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**システム**関数パス*コマンド*オペレーティング システム コマンドとして文字列が実行されるコマンド インタープリターにします。 **システム**を使用して、**文字列**と**パス**環境変数をコマンド インタープリター ファイル CMD.exe です。 場合*コマンド*は**NULL**関数がだけコマンド インタープリターが存在するかどうかを確認します。
+**システム**関数パス*コマンド*はコマンド インタープリターに文字列として、オペレーティング システムのコマンドを実行します。 **システム**を使用して、 **COMSPEC**と**パス**環境変数の検索コマンド インタープリター ファイル CMD.exe です。 場合*コマンド*は**NULL**関数がだけコマンド インタープリターが存在するかどうかを確認します。
 
-必要があります明示的にフラッシュするを使用して[fflush](fflush.md)または[_flushall](flushall.md)を呼び出す前に、ストリームを閉じるか**システム**です。
+使用して、フラッシュ明示的に[fflush](fflush.md)または[_flushall](flushall.md)を呼び出す前に、任意のストリームを閉じる**システム**します。
 
-**_wsystem**のワイド文字バージョンは、**システム**;*コマンド*に渡す引数 **_wsystem**ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wsystem**のワイド文字バージョンです**システム**、*コマンド*引数 **_wsystem**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -96,9 +86,9 @@ int _wsystem(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tsystem**|**system**|**system**|**_wsystem**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**system**|\<process.h> または \<stdlib.h>|
 |**_wsystem**|\<process.h> または \<stdlib.h> または \<wchar.h>|

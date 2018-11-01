@@ -1,29 +1,19 @@
 ---
-title: CMFCRibbonCustomizeDialog クラス |マイクロソフトのドキュメント
-ms.custom: ''
+title: CMFCRibbonCustomizeDialog クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonCustomizeDialog
 - AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizeDialog
 - AFXRIBBONCUSTOMIZEDIALOG/CMFCRibbonCustomizeDialog::CMFCRibbonCustomizeDialog
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonCustomizeDialog [MFC], CMFCRibbonCustomizeDialog
 ms.assetid: ce67de7f-5eaa-4c75-9b94-f290f36df073
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a51fe21594bc900923b7d8d0ff30e8599a378da8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 2931bdc06f98f7031692a0e00fa9cbfb4136a657
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46409351"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50542260"
 ---
 # <a name="cmfcribboncustomizedialog-class"></a>CMFCRibbonCustomizeDialog クラス
 
@@ -72,7 +62,7 @@ MFC では、AFX_WM_ON_RIBBON_CUSTOMIZE メッセージを処理しない場合�
 
 [CMFCRibbonCustomizeDialog](../../mfc/reference/cmfcribboncustomizedialog-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxribboncustomizedialog.h
 

@@ -1,10 +1,6 @@
 ---
-title: CVSListBox クラス |Microsoft Docs
-ms.custom: ''
+title: CVSListBox クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CVSListBox
 - AFXVSLISTBOX/CVSListBox
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXVSLISTBOX/CVSListBox::SelectItem
 - AFXVSLISTBOX/CVSListBox::SetItemData
 - AFXVSLISTBOX/CVSListBox::GetListHwnd
-dev_langs:
-- C++
 helpviewer_keywords:
 - CVSListBox [MFC], CVSListBox
 - CVSListBox [MFC], AddItem
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d4bb676685a05ee9cedd9074f6d04ba357c5085
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e44fa868fc573efbf89bb00147f670298f633381
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407752"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50513764"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox クラス
 
@@ -68,16 +58,16 @@ class CVSListBox : public CVSListBoxBase
 
 |名前|説明|
 |----------|-----------------|
-|[CVSListBox::AddItem](#additem)|リスト コントロールに文字列を追加します。 (`CVSListBoxBase::AddItem` をオーバーライドします)。|
-|[CVSListBox::EditItem](#edititem)|リスト コントロール項目のテキストの編集操作を開始します。 (`CVSListBoxBase::EditItem` をオーバーライドします)。|
-|[CVSListBox::GetCount](#getcount)|編集可能なリスト コントロール内の文字列の数を取得します。 (`CVSListBoxBase::GetCount` をオーバーライドします)。|
-|[CVSListBox::GetItemData](#getitemdata)|編集可能なリスト コントロール項目に関連付けられているアプリケーションに固有の 32 ビット値を取得します。 (`CVSListBoxBase::GetItemData` をオーバーライドします)。|
-|[CVSListBox::GetItemText](#getitemtext)|編集可能なリスト コントロール項目のテキストを取得します。 (`CVSListBoxBase::GetItemText` をオーバーライドします)。|
-|[CVSListBox::GetSelItem](#getselitem)|編集可能なリスト コントロールで現在選択されている項目の 0 から始まるインデックスを取得します。 (`CVSListBoxBase::GetSelItem` をオーバーライドします)。|
-|`CVSListBox::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 詳細とメソッド構文は、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CVSListBoxBase::PreTranslateMessage` をオーバーライドします)。|
-|[CVSListBox::RemoveItem](#removeitem)|編集可能なリスト コントロールから項目を削除します。 (`CVSListBoxBase::RemoveItem` をオーバーライドします)。|
-|[CVSListBox::SelectItem](#selectitem)|編集可能なリスト文字列を選択します。 (`CVSListBoxBase::SelectItem` をオーバーライドします)。|
-|[CVSListBox::SetItemData](#setitemdata)|アプリケーション固有の 32 ビット値を編集可能なリスト コントロール項目に関連付けます。 (`CVSListBoxBase::SetItemData` をオーバーライドします)。|
+|[CVSListBox::AddItem](#additem)|リスト コントロールに文字列を追加します。 ( `CVSListBoxBase::AddItem`をオーバーライドします)。|
+|[CVSListBox::EditItem](#edititem)|リスト コントロール項目のテキストの編集操作を開始します。 ( `CVSListBoxBase::EditItem`をオーバーライドします)。|
+|[CVSListBox::GetCount](#getcount)|編集可能なリスト コントロール内の文字列の数を取得します。 ( `CVSListBoxBase::GetCount`をオーバーライドします)。|
+|[CVSListBox::GetItemData](#getitemdata)|編集可能なリスト コントロール項目に関連付けられているアプリケーションに固有の 32 ビット値を取得します。 ( `CVSListBoxBase::GetItemData`をオーバーライドします)。|
+|[CVSListBox::GetItemText](#getitemtext)|編集可能なリスト コントロール項目のテキストを取得します。 ( `CVSListBoxBase::GetItemText`をオーバーライドします)。|
+|[CVSListBox::GetSelItem](#getselitem)|編集可能なリスト コントロールで現在選択されている項目の 0 から始まるインデックスを取得します。 ( `CVSListBoxBase::GetSelItem`をオーバーライドします)。|
+|`CVSListBox::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 詳細とメソッド構文は、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 ( `CVSListBoxBase::PreTranslateMessage`をオーバーライドします)。|
+|[CVSListBox::RemoveItem](#removeitem)|編集可能なリスト コントロールから項目を削除します。 ( `CVSListBoxBase::RemoveItem`をオーバーライドします)。|
+|[CVSListBox::SelectItem](#selectitem)|編集可能なリスト文字列を選択します。 ( `CVSListBoxBase::SelectItem`をオーバーライドします)。|
+|[CVSListBox::SetItemData](#setitemdata)|アプリケーション固有の 32 ビット値を編集可能なリスト コントロール項目に関連付けます。 ( `CVSListBoxBase::SetItemData`をオーバーライドします)。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
@@ -113,7 +103,7 @@ class CVSListBox : public CVSListBoxBase
 
 [CVSListBox](../../mfc/reference/cvslistbox-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxvslistbox.h
 

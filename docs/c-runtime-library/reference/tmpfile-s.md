@@ -1,10 +1,6 @@
 ---
-title: tmpfile_s | Microsoft Docs
-ms.custom: ''
+title: tmpfile_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpfile_s
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - tmpfile_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - temporary files
 - tmpfile_s function
 - temporary files, creating
 ms.assetid: 50879c69-215e-425a-a2a3-8b5467121eae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1cd7866a7135f04aa580910d5ac121311312c542
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 341e1c8ed6dd20ec7e6a3d71999fb365e45e614a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412151"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50488115"
 ---
 # <a name="tmpfiles"></a>tmpfile_s
 
@@ -67,19 +57,19 @@ errno_t tmpfile_s(
 |----------------|----------------------|---------------------------------|
 |**NULL**|**EINVAL**|変更されない|
 
-上記のパラメーターの検証エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**あり、戻り値は**EINVAL**です。
+上記のパラメーターの検証エラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、戻り値は**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Tmpfile_s**関数は、一時ファイルを作成し、そのストリームにポインターを格納、 *pFilePtr*引数。 一時ファイルはルート ディレクトリに作成されます。 ルート ディレクトリ以外のディレクトリに一時ファイルを作成するには、[tmpnam_s](tmpnam-s-wtmpnam-s.md) または [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) を [fopen](fopen-wfopen.md) と共に使用します。
+**Tmpfile_s**関数は、一時ファイルを作成しでそのストリームへのポインターを与えます、 *pFilePtr*引数。 一時ファイルはルート ディレクトリに作成されます。 ルート ディレクトリ以外のディレクトリに一時ファイルを作成するには、[tmpnam_s](tmpnam-s-wtmpnam-s.md) または [tempnam](tempnam-wtempnam-tmpnam-wtmpnam.md) を [fopen](fopen-wfopen.md) と共に使用します。
 
-ファイルを開けない場合**tmpfile_s**書き込みます**NULL**を*pFilePtr*パラメーター。 この一時ファイルは、通常、またはプログラムが終了するときに、ファイルが閉じられたときに自動的に削除 **_rmtmp**と呼ばれる場合は、現在の作業ディレクトリが変わらないことと仮定します。 一時ファイルを開いた**w + b** (バイナリ読み取り/書き込み) モード。
+ファイルを開けない場合**tmpfile_s**書き込みます**NULL**を*pFilePtr*パラメーター。 通常、またはプログラムの終了時に、ファイルが閉じられたときに、この一時ファイルが自動的に削除 **_rmtmp**と呼ばれる場合は、現在の作業ディレクトリが変更しないと仮定します。 一時ファイルを開いた**w + b** (バイナリ読み取り/書き込み) モード。
 
-しようとすると、エラーが発生する可能性が複数の**から**(STDIO を参照してください。H) を使用した呼び出し**tmpfile_s**です。
+しようとすると、エラーが発生する可能性が複数の**から**(STDIO を参照してください。H) 呼び出し**tmpfile_s**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**tmpfile_s**|\<stdio.h>|
 

@@ -1,28 +1,18 @@
 ---
-title: divides 構造体 | Microsoft Docs
-ms.custom: ''
+title: divides 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::divides
-dev_langs:
-- C++
 helpviewer_keywords:
 - divides struct
 - divides class
 ms.assetid: b9cf8e9c-6981-43a6-a6a3-8f761987dd7a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 55a97c1928babd32279253546ac53efd950d6c5e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 45555ea8e4ce53d97412c54cdc9fa8b4e87d86c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110332"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568066"
 ---
 # <a name="divides-struct"></a>divides 構造体
 
@@ -117,7 +107,7 @@ The element-wise quotients are: ( 0 1.75 2.33333 2.625 2.8 2.91667 )
 */
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

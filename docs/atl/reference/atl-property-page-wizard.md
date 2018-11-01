@@ -1,35 +1,25 @@
 ---
-title: ATL プロパティ ページ ウィザード |Microsoft Docs
-ms.custom: ''
+title: ATL プロパティ ページ ウィザード
 ms.date: 10/03/2018
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - vc.codewiz.class.atl.ppg.overview
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL projects, adding property pages
 - ATL Property Page Wizard
 ms.assetid: 6113e325-facd-4f68-b491-144d75209922
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 206fe83407421a7aabfd920214590a86e4727714
-ms.sourcegitcommit: d1527eb2d50156bf923f2a32ec3af9efc7fc4304
+ms.openlocfilehash: 9b698616dbde06452e9ab08f37c646a2cedbc37c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48250420"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50572771"
 ---
 # <a name="atl-property-page-wizard"></a>ATL プロパティ ページ ウィザード
 
 このウィザード[ATL プロジェクトにプロパティ ページを追加します。](../../atl/reference/adding-an-atl-property-page.md)または ATL サポートを MFC プロジェクトへです。 ATL プロパティ ページのプロパティを設定するためのユーザー インターフェイスを提供する (またはメソッドの呼び出し) の 1 つまたは複数の COM オブジェクト。
 
 > [!WARNING]
-> Visual Studio 2017 バージョン 15.9 でこのコード ウィザードは非推奨し、Visual Studio の将来のバージョンで削除される予定です。 このウィザードはほとんど使用されません。 ATL と MFC の一般的なサポートは、このウィザードの削除による影響はありません。 この非推奨に関するご意見を共有する場合は、完了[このアンケート](https://www.surveymonkey.com/r/QDWKKCN)します。 ご意見、ご意見が重要です。
+> Visual Studio 2017 バージョン 15.9 では、このコード ウィザードは非推奨になっており、Visual Studio の今後のバージョンで削除されます。 このウィザードはほとんど使用されません。 このウィザードを削除しても、ATL と MFC の一般的なサポートには影響ありません。 この非推奨に関するご意見を共有したい場合は、[こちらのアンケート](https://www.surveymonkey.com/r/QDWKKCN)にお答えください。 お客様のご意見は私どもにとって重要です。
 
 ## <a name="remarks"></a>Remarks
 
