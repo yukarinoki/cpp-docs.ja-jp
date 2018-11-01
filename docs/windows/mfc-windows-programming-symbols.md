@@ -1,28 +1,17 @@
 ---
-title: MFC Windows プログラミングのシンボル |Microsoft Docs
-ms.custom: ''
+title: MFC Windows プログラミングのシンボル
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC symbols
 - symbols [C++], MFC
 - Windows programming MFC symbols [C++]
 ms.assetid: fcc2194d-b639-4e0c-be2c-75f5579f2780
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c85b58c05f7602c216b23166b74b7748e2603c42
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5ee5cd216ef3bcbb6400ba94c63583429081b0be
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50458217"
 ---
 # <a name="mfc-windows-programming-symbols"></a>MFC Windows プログラミングのシンボル
 
@@ -66,7 +55,7 @@ ms.locfileid: "46378411"
 |IDNO|IDOK|IDP_OLE_INIT_FAILED|
 |IDRETRY|IDYES||
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 MFC
 

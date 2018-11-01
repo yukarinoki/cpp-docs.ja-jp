@@ -1,10 +1,6 @@
 ---
-title: _putenv_s、_wputenv_s | Microsoft Docs
-ms.custom: ''
+title: _putenv_s、_wputenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wputenv_s
 - _putenv_s
@@ -26,8 +22,6 @@ f1_keywords:
 - wputenv_s
 - _wputenv_s
 - _putenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wputenv_s function
 - _putenv_s function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - environment variables, creating
 - environment variables, modifying
 ms.assetid: fbf51225-a8da-4b9b-9d7c-0b84ef72df18
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de777c05d3b5186966e78b80e6fb1b10221d031a
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: f675c2c0a2b12db3cce841dd0db9fa722393f1b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42572645"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558952"
 ---
 # <a name="putenvs-wputenvs"></a>_putenv_s、_wputenv_s
 
@@ -110,7 +100,7 @@ errno_t _wputenv_s(
 > [!NOTE]
 > **_Putenv_s**と **_getenv_s**系関数はスレッド セーフではされません。 **_getenv_s**中に文字列ポインターを返すことができます **_putenv_s**は、文字列を変更し、ランダムにエラーの原因になります。 これらの関数の呼び出しが同期されていることを確認する必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

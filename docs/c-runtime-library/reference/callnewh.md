@@ -1,10 +1,6 @@
 ---
-title: _callnewh | Microsoft Docs
-ms.custom: ''
+title: _callnewh
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _callnewh
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _callnewh
-dev_langs:
-- C++
 helpviewer_keywords:
 - _callnewh
 ms.assetid: 4dcb73e9-6384-4d12-a973-a8807d4de7a8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a40d8f621b7098618b9be3872620d5294013fbe3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 98526f6c8c40b71104345563db71ef098b6cfb8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393093"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643665"
 ---
 # <a name="callnewh"></a>_callnewh
 
@@ -66,13 +56,13 @@ int _callnewh(
 
 *新しいハンドラー*が見つからない場合、[bad_alloc](../../standard-library/bad-alloc-class.md) をスローします。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 *新しいハンドラー*は、[new 演算子](../../cpp/new-operator-cpp.md)がメモリの割り当てに失敗した場合に呼び出されます。 新しいハンドラーは、後続の割り当てが成功するようにメモリを解放するなど、適切な処理を開始する場合があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |_callnewh|internal.h|
 

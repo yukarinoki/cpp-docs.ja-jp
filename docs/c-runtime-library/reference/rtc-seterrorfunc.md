@@ -1,10 +1,6 @@
 ---
-title: _RTC_SetErrorFunc | Microsoft Docs
-ms.custom: ''
+title: _RTC_SetErrorFunc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_SetErrorFunc
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - RTC_SetErrorFunc
 - _RTC_SetErrorFunc
-dev_langs:
-- C++
 helpviewer_keywords:
 - RTC_SetErrorFunc function
 - _RTC_SetErrorFunc function
 ms.assetid: b2292722-0d83-4092-83df-3d5b19880666
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e146f699f9026260470b1c540c7567f074896a38
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 6b292d685eea8eccb9e9b2a3c3e6cd903d501005
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451616"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50514739"
 ---
 # <a name="rtcseterrorfunc"></a>_RTC_SetErrorFunc
 
-実行時エラー チェック (RTC) を報告するためのハンドラーとして関数を指定します。 この関数は廃止されました。使用して **_RTC_SetErrorFuncW**代わりにします。
+実行時エラー チェック (RTC) を報告するためのハンドラーとして関数を指定します。 この関数が非推奨とされます。使用して、 **_RTC_SetErrorFuncW**代わりにします。
 
 ## <a name="syntax"></a>構文
 
@@ -58,15 +48,15 @@ _RTC_error_fn _RTC_SetErrorFunc(
 
 ## <a name="return-value"></a>戻り値
 
-以前に定義されたエラーの関数。 以前に定義された関数がない場合を返します**NULL**です。
+以前に定義されたエラーの関数。 以前に定義された関数がない場合は、返す**NULL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-この関数を使用しないでください。代わりに、 **_RTC_SetErrorFuncW**です。 これは下位互換性のためだけに残されています。
+この関数を使用しないでください。代わりに、 **_RTC_SetErrorFuncW**します。 これは下位互換性のためだけに残されています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_RTC_SetErrorFunc**|\<rtcapi.h>|
 

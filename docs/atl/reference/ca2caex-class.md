@@ -1,30 +1,20 @@
 ---
-title: CA2CAEX クラス |Microsoft Docs
-ms.custom: ''
+title: CA2CAEX クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CA2CAEX
 - ATLCONV/ATL::CA2CAEX
 - ATLCONV/ATL::CA2CAEX::CA2CAEX
 - ATLCONV/ATL::CA2CAEX::m_psz
-dev_langs:
-- C++
 helpviewer_keywords:
 - CA2CAEX class
 ms.assetid: 388e7c1d-a144-474c-a182-b15f69a74bd8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4abf96e3850f88b58e138745536ffc40aef11b68
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 42115df5d70121d90631bf18c5d3fa83b130485b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46024542"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487294"
 ---
 # <a name="ca2caex-class"></a>CA2CAEX クラス
 
@@ -88,7 +78,7 @@ class CA2CAEX
 
 参照してください[ATL と MFC 文字列変換マクロ](string-conversion-macros.md)のこれらの文字列変換マクロの使用例についてはします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlconv.h
 

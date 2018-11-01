@@ -1,10 +1,6 @@
 ---
-title: _fileno | Microsoft Docs
-ms.custom: ''
+title: _fileno
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fileno
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _fileno
-dev_langs:
-- C++
 helpviewer_keywords:
 - file handles [C++], getting from streams
 - fileno function
 - _fileno function
 - streams, getting file handles
 ms.assetid: 86474174-2f17-4100-bcc4-352dd976c7b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9bc03bcd92eb8040b7eefadd0c109e4e887f7304
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682ab4b01a663bd9a6314138aa692b1c05b7437a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398866"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646611"
 ---
 # <a name="fileno"></a>_fileno
 
@@ -60,18 +50,18 @@ int _fileno(
 
 ## <a name="return-value"></a>戻り値
 
-**_fileno**ファイル記述子を返します。 エラーの戻り値はありません。 結果が定義されていない場合は*ストリーム*開いているファイルを指定できません。 ストリームが場合**NULL**、 **_fileno** 」の説明に従って、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の続行には、この関数は-1 を返しセットが許可された場合**errno**に**EINVAL**です。
+**_fileno**ファイル記述子を返します。 エラーの戻り値はありません。 場合、結果は定義されません*ストリーム*開いているファイルを指定しません。 ストリームが場合**NULL**、 **_fileno**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、この関数は-1 を返し、セットを許可された場合**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
 > [!NOTE]
-> 場合**stdout**または**stderr**が関連付けられていない出力ストリーム (たとえば、コンソール ウィンドウのない Windows アプリケーション) に、返されるファイル記述子は-2 です。 以前のバージョンでは、返されるファイル記述子は -1 でした。 この変更で、アプリケーションはこの条件をエラーと区別できるようになりました。
+> 場合**stdout**または**stderr**が関連付けられていない (たとえば、コンソール ウィンドウがない Windows アプリケーション) での出力ストリームに返されるファイル記述子は-2 です。 以前のバージョンでは、返されるファイル記述子は -1 でした。 この変更で、アプリケーションはこの条件をエラーと区別できるようになりました。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Fileno**ルーチンが現在関連付けられているファイル記述子を返します*ストリーム*です。 このルーチンは、関数とマクロの両方として実装されています。 実装の使い分けについては、「[関数とマクロの使い分け](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)」を参照してください。
+**_Fileno**ルーチンに関連付けられているファイル記述子を返します*ストリーム*します。 このルーチンは、関数とマクロの両方として実装されています。 実装の使い分けについては、「[関数とマクロの使い分け](../../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

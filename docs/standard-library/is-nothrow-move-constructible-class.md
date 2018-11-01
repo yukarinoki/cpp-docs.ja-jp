@@ -1,27 +1,17 @@
 ---
-title: is_nothrow_move_constructible クラス | Microsoft Docs
-ms.custom: ''
+title: is_nothrow_move_constructible クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_nothrow_move_constructible
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_nothrow_move_constructible
 ms.assetid: d186d97b-7b89-470a-8d30-993046a83379
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bba1380df8acf85aaf6729b5a6bf80465439773d
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: f1f98a6172e37bd72182ccc043ca4612b71675d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44101652"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447191"
 ---
 # <a name="isnothrowmoveconstructible-class"></a>is_nothrow_move_constructible クラス
 
@@ -43,7 +33,7 @@ struct is_nothrow_move_constructible;
 
 場合、型述語のインスタンスは true を保持型*Ty* nothrow 移動コンス トラクターを持つ、それ以外の場合は false を保持します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

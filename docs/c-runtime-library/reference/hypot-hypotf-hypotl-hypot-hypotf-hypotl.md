@@ -1,10 +1,6 @@
 ---
-title: hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl | Microsoft Docs
-ms.custom: ''
+title: hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _hypotf
 - hypot
@@ -32,8 +28,6 @@ f1_keywords:
 - hypot
 - _hypot
 - _hypotf
-dev_langs:
-- C++
 helpviewer_keywords:
 - hypotenuse calculation
 - hypot function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - calculating hypotenuses
 - _hypot function
 ms.assetid: 6a13887f-bd53-43fc-9d77-5b42d6e49925
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3a8488b160c10eb29f0448127c44d3514f8debf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ea25ea87a0ec23a0e98dbdc7bb92ce691fc2fa0f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400204"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439534"
 ---
 # <a name="hypot-hypotf-hypotl-hypot-hypotf-hypotl"></a>hypot、hypotf、hypotl、_hypot、_hypotf、_hypotl
 
@@ -94,19 +84,19 @@ long double _hypotl(
 
 ## <a name="return-value"></a>戻り値
 
-成功した場合、 **hypot** ; オーバーフローについては斜辺の長さを返します**hypot** INF (無限) を返しますと**errno**に変数が設定されている**ERANGE**. 使用することができます **_matherr**エラー処理を修正します。
+成功した場合、 **hypot**はオーバーフローについては、斜辺の長さを返します**hypot** INF (無限) を返します、 **errno**に変数が設定されている**ERANGE**. 使用することができます **_matherr**エラー処理を修正します。
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Hypot**関数は、指定された 2 つの辺の長さ、直角三角形の斜辺の長さを計算*x*と*y* (つまり、他の平方根*x*<sup>2</sup> + *y*<sup>2</sup>)。
+**Hypot**関数が 2 つの辺の長さを指定された直角三角形の斜辺の長さを計算*x*と*y* (つまりの平方根*x*<sup>2</sup> + *y*<sup>2</sup>)。
 
 以前の標準との互換性のために、先頭にアンダースコアがある関数のバージョンが用意されています。 これらの動作は、先頭にアンダースコアがないバージョンと同じです。 新しいコードには、先頭にアンダースコアがないバージョンを使用することをお勧めします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**hypot**、 **hypotf**、 **hypotl**、 **_hypot**、 **_hypotf**、 **_hypotl**|\<math.h>|
 

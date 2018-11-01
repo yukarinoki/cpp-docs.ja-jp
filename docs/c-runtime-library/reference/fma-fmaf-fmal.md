@@ -1,11 +1,6 @@
 ---
-title: fma、fmaf、fmal | Microsoft ドキュメント
-ms.custom: ''
+title: fma、fmaf、fmal
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - fma
 - fmaf
@@ -30,23 +25,17 @@ f1_keywords:
 - math/fma
 - math/fmaf
 - math/fmal
-dev_langs:
-- C++
 helpviewer_keywords:
 - fma function
 - fmaf function
 - fmal function
 ms.assetid: 584a6037-da1e-4e86-9f0c-97aae86de0c0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b28009a9c3cc4edceb9032660a0c2a71916dfb2f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a3b540a72c6f2fc2264d6366111831fbe2a02a6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401478"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50529949"
 ---
 # <a name="fma-fmaf-fmal"></a>fma、fmaf、fmal
 
@@ -106,22 +95,22 @@ long double fmal(
 
 |懸案事項|Return|
 |-----------|------------|
-|*x* 、無限大*y* = 0 または<br /><br /> *x* = 0、 *y*無限大を =|NaN|
-|*x*または*y* = 正確な ± の無限大、 *z*逆の符号を持つ無限大を =|NaN|
-|*x*または*y* NaN を =|NaN|
-|されません (*x* = 0、 *y*= 無制限) と*z* NaN を =<br /><br /> されません (*x*= 不定値、 *y*= 0) と*z* NaN を =|NaN|
+|*x* = INFINITY、 *y* = 0 または<br /><br /> *x* = 0、 *y* = INFINITY|NaN|
+|*x*または*y* = 正確な ± 無限大、 *z*符号は逆の無限大を =|NaN|
+|*x*または*y* = NaN|NaN|
+|しない (*x* = 0、 *y*/a 1 >= indefinite) と*z* = NaN<br /><br /> しない (*x*= indefinite, *y*= 0) と*z* = NaN|NaN|
 |オーバーフロー範囲エラー|±HUGE_VAL、±HUGE_VALF、または ±HUGE_VALL|
 |アンダーフロー範囲エラー|丸めた後の正確な値。|
 
 エラーは、[_matherr](matherr.md) で指定されたとおりに報告されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**fma**を受け取り、返します**float**と**長い****二重**型です。 C プログラムでは、 **fma**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **fma**を受け取って返す**float**と**長い****二重**型。 C プログラムで**fma**は、**二重**します。
 
 この関数は、値を無限の精度とするかのように計算し、最終的な結果を丸めます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

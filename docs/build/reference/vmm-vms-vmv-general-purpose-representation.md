@@ -1,16 +1,10 @@
 ---
-title: -vmm では、-vms、-vmv (General Purpose 表現) |マイクロソフトのドキュメント
-ms.custom: ''
+title: /vmm、-vms、-vmv (一般的な目的の表現)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /vms
 - /vmm
 - /vmv
-dev_langs:
-- C++
 helpviewer_keywords:
 - Virtual Inheritance compiler option
 - general purpose representation compiler options
@@ -25,16 +19,12 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9cd0fb1eae8638f91ad97aec2ef24e0a578e7d7a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dd7b47245e3359bbc938578f2bcd07b8b295909
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385548"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578439"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm、/vms、/vmv (通常の最適化)
 
@@ -60,7 +50,7 @@ ms.locfileid: "46385548"
 
 これらの継承モデル オプションのいずれかを指定すると、そのモデルは、クラス後の継承の種類や前に、またはにポインターを宣言するかどうかに関係なく、クラス メンバーへのすべてのポインターに使用されます。 そのため、常に単一継承のクラスを使用する場合はサイズを小さくコードでコンパイルする **/vms**ただし、(ただし、最大のデータ表現) の最も一般的なケースを使用する場合は、コンパイル **。/vmv**します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
