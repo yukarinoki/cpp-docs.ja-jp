@@ -1,26 +1,17 @@
 ---
-title: end Function |Microsoft Docs
-ms.custom: ''
+title: end 関数
 ms.date: 01/22/2017
-ms.technology: cpp-windows
-ms.topic: language-reference
 f1_keywords:
 - collection/Windows::Foundation::Collections::end
-dev_langs:
-- C++
 helpviewer_keywords:
 - end Function
 ms.assetid: fb837bff-fc76-4bae-9096-facf0e03041c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff953d33fb882bf65af101c422093ddbc1aedf2e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 83e575ae29ca083642e1cf6296d6ffc8a989c316
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105238"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445994"
 ---
 # <a name="end-function"></a>end 関数
 
@@ -68,7 +59,7 @@ Windows ランタイムの任意のコレクション オブジェクトを IIte
 
 [によって返される](../cppcx/platform-collections-vectorviewiterator-class.md) Platform::Collections::VectorViewIterator `end` オブジェクトは、 `VectorProxy<T>`型の要素を格納するプロキシ反復子です。 ただし、プロキシ オブジェクトは、ユーザー コードにはほとんどは表示されません。 詳細については、「 [Collections (C++/CX) (コレクション (C++/CX))](../cppcx/collections-c-cx.md)」を参照してください。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** collection.h
 

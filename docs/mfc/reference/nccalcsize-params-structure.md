@@ -1,27 +1,17 @@
 ---
-title: NCCALCSIZE_PARAMS 構造体 |Microsoft Docs
-ms.custom: ''
+title: NCCALCSIZE_PARAMS 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - NCCALCSIZE_PARAMS
-dev_langs:
-- C++
 helpviewer_keywords:
 - NCCALCSIZE_PARAMS structure [MFC]
 ms.assetid: 3424cd9f-806a-4089-82fb-414187589edf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6290c7600584f3225fee6cf9ed6a0f94373584c8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3dbe1fcdb941a94876dd95a0eed86d6f4a3e15c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443772"
 ---
 # <a name="nccalcsizeparams-structure"></a>NCCALCSIZE_PARAMS 構造体
 
@@ -44,7 +34,7 @@ typedef struct tagNCCALCSIZE_PARAMS {
 *lppos*<br/>
 指す、 [WINDOWPOS](../../mfc/reference/windowpos-structure1.md)ウィンドウを移動またはサイズ変更の原因となった操作で指定されたサイズと位置の値を含む構造体。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** winuser.h
 
