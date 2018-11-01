@@ -17,12 +17,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 3f5e32599096b4e0fa451c18b3e05adf01b34ff4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b372959105407074cd2a7295837e2c47ef629da7
+ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46407597"
+ms.lasthandoff: 10/12/2018
+ms.locfileid: "49162166"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Visual C++ プロジェクトへの参照の追加
 
@@ -84,11 +84,11 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
 - **ローカル サテライト アセンブリにコピー**
 
-   ビルド時に、参照するアセンブリのサテライト アセンブリをターゲットの場所に自動的にコピーするかどうかを指定します。 **[ローカルにコピー]** が `true`の場合のみ使用します。
+   ビルド時に、参照するアセンブリのサテライト アセンブリをターゲットの場所に自動的にコピーするかどうかを指定します。 **[ローカルにコピー]** が **true** の場合にのみ使用します。
 
 - **参照アセンブリの出力**
 
-   このアセンブリがビルド処理で使用されることを指定します。 `true`の場合、ビルド時にコンパイラのコマンド ラインでアセンブリが使用されます。
+   このアセンブリがビルド処理で使用されることを指定します。 **true** の場合、ビルド時にコンパイラのコマンド ラインでアセンブリが使用されます。
 
 ### <a name="project-to-project-reference-properties"></a>プロジェクト間参照プロパティ
 
@@ -144,7 +144,7 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
 - **厳密な名前**
 
-   参照が厳密な名前を持つ場合は `true` です。 厳密な名前を持つアセンブリは、一意にバージョン管理されます。
+   参照が厳密な名前を持つ場合は`true` です。 厳密な名前を持つアセンブリは、一意にバージョン管理されます。
 
 - **Version**
 
