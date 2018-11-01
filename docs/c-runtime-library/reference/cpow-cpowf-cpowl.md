@@ -1,11 +1,6 @@
 ---
-title: cpow、cpowf、cpowl | Microsoft Docs
-ms.custom: ''
+title: cpow、cpowf、cpowl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cpow
 - cpowf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cpow
 - complex/cpowf
 - complex/copwl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cpow function
 - cpowf function
 - complex/cpowl function
 ms.assetid: 83fe2187-22b7-4295-ab16-4d77abdbb80b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8311b4c8bd8c082b03f01a2df253c55d170c560e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 588c437a01237de297e1db31fb2c507eb1145d90
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394783"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562488"
 ---
 # <a name="cpow-cpowf-cpowl"></a>cpow、cpowf、cpowl
 
@@ -82,15 +71,15 @@ _Lcomplex cpowl(
 
 ## <a name="return-value"></a>戻り値
 
-値*x*の累乗*y*分岐での切り取り*x*負の値の実際の軸に沿ったです。
+値*x*の累乗*y*分岐での切り取り*x*負の実軸に沿ってします。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**cpow**を受け取り、返します **_Fcomplex**と **_Lcomplex**値。 C プログラムでは、 **cpow**常に受け取りを返す、 **_Dcomplex**値。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cpow**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**cpow**は、 **_Dcomplex**値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**cpow**、 **cpowf**、 **cpowl**|\<complex.h>|\<ccomplex>|
 

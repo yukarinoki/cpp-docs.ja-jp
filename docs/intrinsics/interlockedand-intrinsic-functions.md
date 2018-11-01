@@ -1,10 +1,6 @@
 ---
-title: _InterlockedAnd の組み込み関数 |Microsoft Docs
-ms.custom: ''
+title: _InterlockedAnd の組み込み関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedAnd_rel
 - _InterlockedAnd_cpp
@@ -32,8 +28,6 @@ f1_keywords:
 - _InterlockedAnd64_rel
 - _InterlockedAnd_nf
 - _InterlockedAnd8_rel
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedAnd64_np intrinsic
 - _InterlockedAnd intrinsic
@@ -62,16 +56,12 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fc44da7470d8924900ed496958aac806d21ca5f0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b789679366a364197936db338d468862323749a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46434922"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50559732"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd の組み込み関数
 
@@ -192,7 +182,7 @@ __int64 _InterlockedAnd64_rel(
 
 最初のオペランドの元の値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|ヘッダー|
 |---------------|------------------|------------|
