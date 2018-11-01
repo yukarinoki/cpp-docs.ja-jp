@@ -1,30 +1,20 @@
 ---
-title: _ATL_FUNC_INFO 構造体 |Microsoft Docs
-ms.custom: ''
+title: _ATL_FUNC_INFO 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - _ATL_FUNC_INFO
 - ATL::_ATL_FUNC_INFO
 - ATL._ATL_FUNC_INFO
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ATL_FUNC_INFO structure
 - ATL_FUNC_INFO structure
 ms.assetid: 441ebe2c-f971-47de-9f52-a258e8d6f88e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac285921500107b85c30eba4d2f1940c93721d0a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8398bc999e9a62d03990fd1b205ad438b6428431
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46113059"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554025"
 ---
 # <a name="atlfuncinfo-structure"></a>_ATL_FUNC_INFO 構造体
 
@@ -69,7 +59,7 @@ IDL で定義されたディスパッチ インターフェイス メソッド�
 
 [!code-cpp[NVC_ATL_Windowing#140](../../atl/codesnippet/cpp/atl-func-info-structure_2.h)]
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ヘッダー: atlcom.h
 

@@ -1,10 +1,6 @@
 ---
-title: _strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l | Microsoft Docs
-ms.custom: ''
+title: _strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspnp
 - _wcsspnp
@@ -34,8 +30,6 @@ f1_keywords:
 - _wcsspnp
 - _strspnp
 - mbsspnp
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strspnp function
 - _wcsspnp function
@@ -48,16 +42,12 @@ helpviewer_keywords:
 - _tcsspnp function
 - tcsspnp function
 ms.assetid: 1ce18100-2edd-4c3b-af8b-53f204d80233
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 80f257d7aef9678258644758e083817cbbfbe134
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 272375948c8c650b226bfb71073c6c65c5b8acef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415297"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635293"
 ---
 # <a name="strspnp-wcsspnp-mbsspnp-mbsspnpl"></a>_strspnp、_wcsspnp、_mbsspnp、_mbsspnp_l
 
@@ -102,13 +92,13 @@ NULL で終わる文字セット。
 
 ## <a name="return-value"></a>戻り値
 
-**_strspnp**、 **_wcsspnp**、および **_mbsspnp**の最初の文字へのポインターを返す*str* 内の文字のセットに含まれない*charset*です。 これらの関数を返します**NULL**場合*str*から文字のみで成り立って*charset*です。 これらのルーチンでは、エラーを示す戻り値は予約されていません。
+**_strspnp**、 **_wcsspnp**、および **_mbsspnp**で最初の文字へのポインターを返す*str* 内の文字のセットに含まれない*charset*します。 これらの関数を返します。 **NULL**場合*str*全体の文字から*charset*します。 これらのルーチンでは、エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbsspnp**関数は、マルチバイト文字の最初の文字であるポインターを返す*str*内の文字のセットに含まれない*charset*です。 **_mbsspnp**に従ってマルチバイト文字シーケンスを認識、[マルチバイト コード ページ](../../c-runtime-library/code-pages.md)現在使用中です。 検索には、終端の NULL 文字は含まれません。
+**_Mbsspnp**関数の最初の文字をマルチバイト文字のポインターを返します*str*内の文字のセットに含まれない*charset*します。 **_mbsspnp**に従ってマルチバイト文字シーケンスを認識、[マルチバイト コード ページ](../../c-runtime-library/code-pages.md)現在使用されています。 検索には、終端の NULL 文字は含まれません。
 
-いずれか*str*または*charset* null ポインター」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行は継続許可されたかどうか、関数を返します**NULL**設定と**errno**に**EINVAL**です。
+いずれか*str*または*charset* null ポインターの場合は、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返します**NULL**設定と**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -116,13 +106,13 @@ NULL で終わる文字セット。
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsspnp**|**_strspnp**|**_mbsspnp**|**_wcsspnp**|
 
-**_strspnp**と **_wcsspnp**は 1 バイト文字とワイド文字バージョンの **_mbsspnp**です。 **_strspnp**と **_wcsspnp**と同様に動作 **_mbsspnp**それ以外の場合は、この割り当てにのみ提供され、他の何らかの理由では使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
+**_strspnp**と **_wcsspnp**は 1 バイト文字とワイド文字バージョンの **_mbsspnp**します。 **_strspnp**と **_wcsspnp**と同様に動作 **_mbsspnp** 。 それ以外の場合、このマッピングに対してのみ提供され、他の何らかの理由では使用しない必要があります。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
 
-**_mbsspnp_l**は、代わりに渡されたロケール パラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_mbsspnp_l**代わりに渡されたロケール パラメーターを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsspnp**|\<mbstring.h>|
 |**_strspnp**|\<tchar.h>|

@@ -1,10 +1,6 @@
 ---
-title: qsort_s | Microsoft Docs
-ms.custom: ''
+title: qsort_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - qsort_s
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - qsort_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - arrays [C++], sorting
 - quick-sort algorithm
 - qsort_s function
 - sorting arrays
 ms.assetid: 6ee817b0-4408-4355-a5d4-6605e419ab91
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b136dc29431164de195eeebf9085c2377664f869
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 1f0064fd9cf0a3c52456197568adf693fcdaa9a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105680"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581871"
 ---
 # <a name="qsorts"></a>qsort_s
 
@@ -105,7 +95,7 @@ compare( context, (void *) & elem1, (void *) & elem2 );
 
 **qsort_s**として動作は同じ**qsort**いますが、*コンテキスト*パラメーターとセット**errno**します。 渡すことによって、*コンテキスト*パラメーター、比較関数オブジェクト ポインターを使用できます、要素ポインターでオブジェクトの機能またはアクセスできません。 その他の情報にアクセスします。 追加、*コンテキスト*パラメーターにより、 **qsort_s**ためにのより安全な*コンテキスト*する静的変数を使用して、再入バグを回避するために使用できます利用可能な情報を共有、*比較*関数。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

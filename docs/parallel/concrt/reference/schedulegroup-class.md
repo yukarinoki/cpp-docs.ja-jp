@@ -1,10 +1,6 @@
 ---
-title: ScheduleGroup クラス |Microsoft Docs
-ms.custom: ''
+title: ScheduleGroup クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - ScheduleGroup
 - CONCRT/concurrency::ScheduleGroup
@@ -12,21 +8,15 @@ f1_keywords:
 - CONCRT/concurrency::ScheduleGroup::Reference
 - CONCRT/concurrency::ScheduleGroup::Release
 - CONCRT/concurrency::ScheduleGroup::ScheduleTask
-dev_langs:
-- C++
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90687a1e0cb77694fce9e60004f3e43d0ea9acf0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 6132ec6623a009c09a37b7d704ce683a58956a04
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46427421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50518717"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup クラス
 
@@ -50,7 +40,7 @@ class ScheduleGroup;
 
 |名前|説明|
 |----------|-----------------|
-|[Id](#id)|スケジュール グループが属するスケジューラ内で一意のスケジュール グループの識別子を返します。|
+|[ID](#id)|スケジュール グループが属するスケジューラ内で一意のスケジュール グループの識別子を返します。|
 |[参照](#reference)|スケジュール グループの参照カウントをインクリメントします。|
 |[Release](#release)|スケジュール グループの参照カウントをデクリメントします。|
 |[ScheduleTask](#scheduletask)|スケジュール グループ内の軽量タスクをスケジュールします。|
@@ -59,7 +49,7 @@ class ScheduleGroup;
 
 `ScheduleGroup`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 

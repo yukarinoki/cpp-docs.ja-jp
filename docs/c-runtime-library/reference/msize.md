@@ -1,10 +1,6 @@
 ---
-title: _msize | Microsoft Docs
-ms.custom: ''
+title: _msize
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _msize
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - msize
 - _msize
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks
 - msize function
 - _msize function
 ms.assetid: 02b1f89e-d0d7-4f12-938a-9eeba48a0f88
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9e27751072891bcabc0b068cb5ca57b571d35d0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0321e42face817a0a9f12d780f72c86c67ba308d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402154"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477273"
 ---
 # <a name="msize"></a>_msize
 
@@ -55,24 +45,24 @@ size_t _msize(
 
 ### <a name="parameters"></a>パラメーター
 
-*_expand*<br/>
+*memblock*<br/>
 メモリ ブロックへのポインター。
 
 ## <a name="return-value"></a>戻り値
 
 **_msize**サイズ (バイト) 符号なし整数として返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Msize**関数は、(バイト単位) への呼び出しによって割り当てられたメモリ ブロックのサイズを返します**calloc**、 **malloc**、または**realloc**です。
+**_Msize**関数への呼び出しによって割り当てられたメモリ ブロックのバイト単位のサイズを返します**calloc**、 **malloc**、または**realloc**します。
 
-C ランタイム ライブラリのデバッグ バージョンとリンクするアプリケーション **_msize**に解決される[_msize_dbg](msize-dbg.md)です。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
+アプリケーションが、C ランタイム ライブラリのデバッグ バージョンにリンクされている場合 **_msize**に解決される[_msize_dbg](msize-dbg.md)します。 デバッグ プロセス中のヒープの管理方法の詳細については、「[CRT デバッグ ヒープ](/visualstudio/debugger/crt-debug-heap-details)」を参照してください。
 
-この関数は、そのパラメーターを検証します。 場合 *_expand* null ポインターでは、 **_msize** 」の説明に従って、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 エラーが処理される場合、関数は設定**errno**に**EINVAL**し、-1 を返します。
+この関数は、そのパラメーターを検証します。 場合 *_expand* null ポインターの場合は、 **_msize**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数は、エラーが処理される場合、設定**errno**に**EINVAL** -1 を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_msize**|\<malloc.h>|
 

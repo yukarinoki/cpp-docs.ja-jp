@@ -1,10 +1,6 @@
 ---
-title: time、_time32、_time64 | Microsoft Docs
-ms.custom: ''
+title: time、_time32、_time64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - time
 - _time64
@@ -29,8 +25,6 @@ f1_keywords:
 - time/_time32
 - time/_time64
 - _time32
-dev_langs:
-- C++
 helpviewer_keywords:
 - time32 function
 - _time32 function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - system time
 - time64 function
 ms.assetid: 280e00f2-2b93-4ece-94cd-e048484c6cc7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3f627f0b9cbcfea1d048122d63c56d03aa61062d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0749ecbf0f88620e7293a043130b49dbe45aaf31
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410568"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546578"
 ---
 # <a name="time-time32-time64"></a>time、_time32、_time64
 
@@ -69,17 +59,17 @@ __time64_t _time64( __time64_t *destTime );
 
 ## <a name="return-value"></a>戻り値
 
-午前 0 時、1970 年 1 月 1 日、またはエラーの場合は-1 から経過した時間 (秒) は、時刻を返します。
+1970 年 1 月 1 日午前 0 時、エラーの場合は-1 から秒が経過したとして時刻を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**時間**関数では、午前 0 時から経過した秒数を返します (00: 00:00)、世界協定時刻 (UTC)、システム クロックに従って 1970 年 1 月 1 日です。 戻り値が指定した位置に格納されている*destTime*です。 このパラメーターがあります**NULL**、その場合、戻り値は格納されません。
+**時間**関数は、午前 0 時から経過した秒数を返します (00: 00:00)、世界協定時刻 (UTC)、システム クロックに従って 1970 年 1 月 1 日です。 戻り値が指定した位置に格納されている*destTime*します。 このパラメーターがあります**NULL**、その場合、戻り値は格納されません。
 
-**時間**用のラッパーです **_time64**と**time_t**は、既定と同じ **_ _time64_t**です。 強制的に、コンパイラを解釈する必要がある場合**time_t**古い 32 ビットとして**time_t**を定義できます **_USE_32BIT_TIME_T**です。 ただし、これは勧められていません。2038 年 1 月 18 日以降、64 ビット プラットフォームでは、このマクロをアプリケーションで使用することはできなくなり、エラーの原因となるためです。
+**時間**用のラッパーです **_time64**と**time_t** 、既定のと同じでは **_ _time64_t**します。 強制的にコンパイラを解釈する必要がある場合**time_t**古い 32 ビットとして**time_t**を定義できます **_USE_32BIT_TIME_T**します。 ただし、これは勧められていません。2038 年 1 月 18 日以降、64 ビット プラットフォームでは、このマクロをアプリケーションで使用することはできなくなり、エラーの原因となるためです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須の C ヘッダー|必須の C++ ヘッダー|
+|ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|
 |**時間**、 **_time32**、 **_time64**|\<time.h>|\<ctime > または\<time.h >|
 

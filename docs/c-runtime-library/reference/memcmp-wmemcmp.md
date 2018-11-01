@@ -1,10 +1,6 @@
 ---
-title: memcmp、wmemcmp | Microsoft Docs
-ms.custom: ''
+title: memcmp、wmemcmp
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcmp
 - wmemcmp
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - memcmp
 - wmemcmp
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemcmp function
 - memcmp function
 ms.assetid: 0c21c3e3-8ee4-40e5-add1-eb26d225fd8d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e40264c3ee7e48a545c88d7d48891126117ecc8
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9504635a2a96c4579afc7a8d9caf1844504c05b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404390"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50610468"
 ---
 # <a name="memcmp-wmemcmp"></a>memcmp、wmemcmp
 
@@ -75,19 +65,19 @@ int wmemcmp(
 
 戻り値は、バッファー間の関係を示しています。
 
-|戻り値|最初のリレーションシップ*カウント*buf1 と buf2 の文字|
+|戻り値|最初の*カウント*buf1 と buf2 の文字|
 |------------------|---------------------------------------------------------------|
-|< 0|*buffer1*より小さい*buffer2*|
+|< 0|*buffer1*未満*buffer2*|
 |0|*buffer1*と同じ*buffer2*|
 |> 0|*buffer1*より大きい*buffer2*|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-最初の比較*カウント*の文字*buffer1*と*buffer2*の関係を示す値を返します。 ゼロ以外の戻り値の符号は、バッファー間で最初に異なる値のペアの差の符号です。 値として解釈されます**符号なし** **char**の**memcmp**、として**wchar_t**の**wmemcmp**です。
+最初の比較*カウント*の文字*buffer1*と*buffer2*の関係を示す値を返します。 ゼロ以外の戻り値の符号は、バッファー間で最初に異なる値のペアの差の符号です。 値として解釈されます**符号なし** **char**の**memcmp**、として**wchar_t**の**wmemcmp**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**memcmp**|\<memory.h> または \<string.h>|
 |**wmemcmp**|\<wchar.h>|
