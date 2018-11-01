@@ -1,10 +1,6 @@
 ---
-title: _getcwd、_wgetcwd | Microsoft Docs
-ms.custom: ''
+title: _getcwd、_wgetcwd
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wgetcwd
 - _getcwd
@@ -28,8 +24,6 @@ f1_keywords:
 - _wgetcwd
 - tgetcwd
 - _tgetcwd
-dev_langs:
-- C++
 helpviewer_keywords:
 - getcwd function
 - working directory
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - wgetcwd function
 - directories [C++], current working
 ms.assetid: 888dc8c6-5595-4071-be55-816b38e3e739
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 10f242569579680c8e388b84bdcaca235a142a34
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 4c533f0e716cb9a13c152b9be3c46f60291118d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405290"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520239"
 ---
 # <a name="getcwd-wgetcwd"></a>_getcwd、_wgetcwd
 
@@ -73,23 +63,23 @@ wchar_t *_wgetcwd(
 パスの格納場所。
 
 *maxlen*<br/>
-文字数でパスの最大長: **char**の **_getcwd**と**wchar_t**の **_wgetcwd**です。
+パスの最大長: **char**の **_getcwd**と**wchar_t**の **_wgetcwd**します。
 
 ## <a name="return-value"></a>戻り値
 
-ポインターを返します*バッファー*です。 A **NULL** 、エラーを返すと**errno**に設定されているいずれかの**ENOMEM**に割り当てる十分なメモリがあることを示す*maxlen*バイト数 (ときに、 **NULL**として引数が指定されている*バッファー*)、または**ERANGE**、パスがより長いことを示す*maxlen*文字です。 場合*maxlen*以下が 0 の場合にこの関数によって呼び出されます、無効なパラメーター ハンドラーを」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
+ポインターを返します*バッファー*します。 A **NULL**戻り、エラー値と**errno**設定されて**ENOMEM**、割り当てるメモリが不足していることを示す*maxlen*バイト数 (ときに、 **NULL**として引数が指定されて*バッファー*)、または**ERANGE**、パスがより長いことを示す*maxlen*文字。 場合*maxlen*と同じかそれよりも少ない」の説明に従って、0 にこの関数が、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Getcwd**関数は、既定のドライブの現在の作業ディレクトリの完全パスを取得しに格納*バッファー*です。 整数の引数*maxlen*パスの最大長を指定します。 パス (終端の null 文字を含む) の長さを超えた場合にエラーが発生した*maxlen*です。 *バッファー*引数を指定できます**NULL**以外の場合は、少なくともサイズのバッファー *maxlen* (必要な場合にのみ以上) が自動的に割り当てられたを使用して**malloc**、パスを格納します。 このバッファーは、呼び出すことによって後で解放できます**空き**を渡すこと、 **_getcwd**値 (割り当てられたバッファーへのポインター) を返します。
+**_Getcwd**関数は、既定のドライブの現在の作業ディレクトリの完全なパスを取得しに格納*バッファー*します。 整数の引数*maxlen*パスの最大長を指定します。 (終端の null 文字を含む) のパスの長さを超えた場合にエラーが発生した*maxlen*します。 *バッファー*引数を指定できます**NULL**; バッファーのサイズ以上*maxlen* (必要な場合にのみ詳細) が自動的に割り当てられたを使用して**malloc**パスを格納するため、します。 このバッファーは、呼び出すことによって後で解放できます**無料**を渡して、 **_getcwd** (割り当てられたバッファーへのポインター) の値を返します。
 
-**_getcwd**を現在の作業ディレクトリのパスを表す文字列を返します。 現在の作業ディレクトリがルートの場合、文字列が、円記号で終わる ( **\\** )。 現在の作業ディレクトリがルート以外のディレクトリの場合、文字列は、円記号ではなく、ディレクトリの名前で終わります。
+**_getcwd**の現在の作業ディレクトリのパスを表す文字列を返します。 現在の作業ディレクトリがルートの場合、文字列が、円記号で終わる ( **\\** )。 現在の作業ディレクトリがルート以外のディレクトリの場合、文字列は、円記号ではなく、ディレクトリの名前で終わります。
 
-**_wgetcwd**のワイド文字バージョンは、 **_getcwd**;*バッファー*引数と戻り値の **_wgetcwd**ワイド文字列です。 **_wgetcwd**と **_getcwd**それ以外の場合の動作は同じです。
+**_wgetcwd**のワイド文字バージョンは、 **_getcwd**、*バッファー*引数と戻り値 **_wgetcwd**はワイド文字列です。 **_wgetcwd**と **_getcwd**動作は同じです。
 
-ときに **_DEBUG**と **_CRTDBG_MAP_ALLOC**への呼び出しで定義されている **_getcwd**と **_wgetcwd**への呼び出しによって置き換えられます **_getcwd_dbg**と **_wgetcwd_dbg**メモリ割り当てをデバッグできるようにします。 詳細については、「[_getcwd_dbg、_wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)」をご覧ください。
+ときに **_DEBUG**と **_CRTDBG_MAP_ALLOC**への呼び出しで定義されている **_getcwd**と **_wgetcwd**呼び出しに置き換え **_getcwd_dbg**と **_wgetcwd_dbg**デバッグのメモリ割り当てを許可します。 詳細については、「 [_getcwd_dbg, _wgetcwd_dbg](getcwd-dbg-wgetcwd-dbg.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -97,9 +87,9 @@ wchar_t *_wgetcwd(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tgetcwd**|**_getcwd**|**_getcwd**|**_wgetcwd**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getcwd**|\<direct.h>|
 |**_wgetcwd**|\<direct.h> または \<wchar.h>|

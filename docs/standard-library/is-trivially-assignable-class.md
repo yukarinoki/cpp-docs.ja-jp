@@ -1,28 +1,17 @@
 ---
-title: is_trivially_assignable クラス | Microsoft Docs
-ms.custom: ''
+title: is_trivially_assignable クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_trivially_assignable
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_trivially_assignable
 ms.assetid: 1284a8f7-4093-426d-9c9a-dabb46f90d6d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd0a8bbffd3a6e0f03635b659dd3743e12c9f077
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: eeef85a0b26c25eb745258c7e0e35394f0cab979
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700766"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495161"
 ---
 # <a name="istriviallyassignable-class"></a>is_trivially_assignable クラス
 
@@ -47,7 +36,7 @@ struct is_trivially_assignable;
 
 式 `declval<To>() = declval<From>()` は正しい形式である必要があり、トリビアルでない演算を必要としないことがコンパイラに判明している必要があります。 両方`From`と`To`完全な型は、必要があります**void**、または不明なバインドの配列。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

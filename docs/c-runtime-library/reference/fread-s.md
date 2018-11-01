@@ -1,10 +1,6 @@
 ---
-title: fread_s | Microsoft ドキュメント
-ms.custom: ''
+title: fread_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - fread_s
 apilocation:
@@ -23,19 +19,13 @@ apitype: DLLExport
 f1_keywords:
 - fread_s
 - stdio/fread_s
-dev_langs:
-- C++
 ms.assetid: ce735de0-f005-435d-a8f2-6f4b80ac775e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: febfab21889afab773dd9a8405b1e07dc7798f5c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 898e813c19fd53cfdacd536c2e9819743a62a8da
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401894"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519822"
 ---
 # <a name="freads"></a>fread_s
 
@@ -72,17 +62,17 @@ size_t fread_s(
 
 ## <a name="return-value"></a>戻り値
 
-**fread_s**可能性のあるバッファーに読み取られたアイテムの (全体) の数を返しますより小さい*カウント*読み取りエラーか、ファイルの末尾が前に発生したかどうか*カウント*に到達します。 使用して、 **feof**または**ferror**ファイルの終了条件からエラーを区別するために機能します。 場合*サイズ*または*カウント*0 の場合は、 **fread_s** 0 と、バッファーの内容は変更されませんを返します。 場合*ストリーム*または*バッファー* null ポインターでは、 **fread_s** 」の説明に従って、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**は 0 を返します。
+**fread_s**可能性のあるバッファーに読み取られた (全体) の数の項目を返しますより小さい*カウント*前に、読み取りエラーまたはファイルの末尾が見つかったかどうか*カウント*に到達します。 使用して、 **feof**または**ferror**ファイルの終わり条件からエラーを区別するために関数。 場合*サイズ*または*カウント*は 0 です。 **fread_s**返します 0 と、バッファーの内容は変更されません。 場合*ストリーム*または*バッファー* null ポインターの場合は、 **fread_s**で説明されているように、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md). 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**は 0 を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Fread_s**関数まで読み取ります*カウント*のアイテム*elementSize*入力からのバイト*ストリーム*に格納したり*バッファー*です。  関連付けられているファイル ポインター*ストリーム*(存在する場合) は実際に読み取られたバイト数が増加します。 指定したストリームがテキスト モードで開かれている場合は、キャリッジ リターンとライン フィードのペアが 1 つの改行文字に置き換えられます。 この置き換えは、ファイル ポインターまたは戻り値には影響しません。 エラーが発生した場合、ファイル ポインターの位置は不確定になります。 部分的に読み取られた項目の値を特定できません。
+**Fread_s**関数は、最大読み取ります*カウント*の項目*elementSize*入力からのバイト*ストリーム*で格納して*バッファー*します。  ファイル ポインターに関連付けられている*ストリーム*(1 つである) 場合は実際に読み取られたバイト数でインクリメントします。 指定したストリームがテキスト モードで開かれている場合、は、復帰と改行のペアが 1 つのラインフィード文字に置き換えられます。 この置き換えは、ファイル ポインターまたは戻り値には影響しません。 エラーが発生した場合、ファイル ポインターの位置は不確定になります。 部分的に読み取られた項目の値を特定できません。
 
-この関数は他のスレッドをロックします。 ロックしないバージョンを必要とする場合を使用して **_fread_nolock**です。
+この関数は他のスレッドをロックします。 ロックしないバージョンが必要な場合を使用して、 **_fread_nolock**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|
