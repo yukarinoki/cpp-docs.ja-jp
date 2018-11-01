@@ -1,32 +1,22 @@
 ---
-title: C++ 標準ライブラリの概要 | Microsoft Docs
-ms.custom: ''
+title: C++ 標準ライブラリの概要
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - headers, C++ library
 - C++ Standard Library
 - libraries, Standard C++
 - C++ Standard Library, headers
 ms.assetid: 7acb83a4-da73-4ad3-bc30-a71289db7f60
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2795ab431930627160b0275866b573aff36bb97b
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 57abafbcbd899d3eca7369205afba4ca262ad2c4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845321"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444994"
 ---
 # <a name="c-standard-library-overview"></a>C++ 標準ライブラリの概要
 
-すべての C++ ライブラリのエンティティは 1 つ以上の標準ヘッダーで宣言または定義されます。 この実装には、2 つの追加ヘッダーが含まれています。 \<hash_map > および\<hash_set >、C++ 標準でする必要はありません。 この実装がサポートするヘッダーの完全な一覧については、「[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)」をご覧ください。
+すべての C++ ライブラリのエンティティは 1 つ以上の標準ヘッダーで宣言または定義されます。 この実装には、2 つの追加のヘッダーが含まれています。 \<hash_map > と\<hash_set >、C++ 標準でする必要はありません。 この実装がサポートするヘッダーの完全な一覧については、「[ヘッダー ファイル リファレンス](../standard-library/cpp-standard-library-header-files.md)」をご覧ください。
 
 C++ ライブラリのフリースタンディング実装では、これらのヘッダーの一部のみが提供されます。
 

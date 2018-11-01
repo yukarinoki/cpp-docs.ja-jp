@@ -1,45 +1,35 @@
 ---
-title: リンカ ツール エラー LNK1318 |Microsoft ドキュメント
-ms.custom: ''
+title: リンカー ツール エラー LNK1318
 ms.date: 05/29/2018
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK1318
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK1318
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 364c819c6ec2bf6e1195011eced6e6ad1699877b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 8ed6489a27d4c0e117f7f18281ff188f40936e0a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34570697"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648735"
 ---
-# <a name="linker-tools-error-lnk1318"></a>リンカ ツール エラー LNK1318
+# <a name="linker-tools-error-lnk1318"></a>リンカー ツール エラー LNK1318
 
-> PDB の予期しないエラーです。*原因*'*詳細*'
+> 予期しない PDB エラーです。*原因*'*詳細*'
 
 リンカーでは、開く、読み取り、または PDB ファイルに書き込むときに予期しないエラーが発生しました。
 
-PDB ファイル内の一般的でない問題については、このエラー メッセージが生成されます。 *原因*と*詳細*障害が発生した場合、リンカーに利用できる情報を表すです。 これを PDB ファイルを処理する場合、個別のもっとわかりやすいエラー メッセージがあるときに一般的なエラーとして、非常に役にできない可能性があります。
+PDB ファイルでの一般的でない問題では、このエラー メッセージは生成されます。 *原因*と*詳細*障害が発生したときに、リンカーに利用可能な情報を表します。 これを PDB ファイルを扱うより多くの情報の個別のエラー メッセージがあるときに、一般的なエラーとして、非常に便利なできない可能性があります。
 
-エラーの原因が共通でないためにがある一般的なアドバイスのみこの問題を解決するために使用できます。
+エラーのソースが一般的なアドバイスが含まれてのみジェネリックこの問題を解決するために使用できます。
 
-- ビルド ディレクトリでクリーン操作を実行し、ソリューションの完全ビルドを実行します。
+- ビルド ディレクトリでクリーン操作を実行し、ソリューションの完全なビルドを実行します。
 
-- コンピューターを再起動して、または無効なまたはハング mspdbsrv.exe プロセスを確認および TaskManager でそれらを終了します。
+- コンピューターを再起動またははぐれたまたはハング mspdbsrv.exe プロセスを確認し、それらを TaskManager の終了します。
 
 - プロジェクトのディレクトリでのウイルス対策のチェックをオフにします。
 
-- 使用して、 [/Zf](../../build/reference/zf.md)コンパイラ オプションを使用する場合[/MP](../../build/reference/mp-build-with-multiple-processes.md) MSBuild または別の並列処理を構築します。
+- 使用して、 [/Zf](../../build/reference/zf.md)コンパイラ オプションを使用して場合[/MP](../../build/reference/mp-build-with-multiple-processes.md) MSBuild または別の並列ビルドのプロセス。
 
-- 64 ビットのホストされたツールセットを使用してビルドを再試行してください。
+- 64 ビットのホストされたツールセットを使用してビルドを試みます。
 
-- 必要な場合は、並列のリンクの問題を軽減するためにリンクをシリアル化します。 Mspdbsrv.exe リンクの 1 つのインスタンスが起動され、リンクの別のインスタンスが行われる前にシャット ダウンする場合は、このエラーを発生することができますを使用します。 これを修正する場合の欠点は、プロジェクトのビルドが完了するかなり長くかかる場合があります。
+- リンクが必要な場合、並列のリンクの問題を軽減するためにシリアル化します。 Mspdbsrv.exe はリンクの 1 つのインスタンスによって起動され、リンクの別のインスタンスを実行する前にシャット ダウンする場合は、このエラーを発生することができますを使用します。 この修正プログラムの欠点は、プロジェクトのビルドが完了するかなり長くかかる場合があります。

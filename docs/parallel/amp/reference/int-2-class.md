@@ -1,10 +1,6 @@
 ---
-title: int_2 クラス |Microsoft Docs
-ms.custom: ''
+title: int_2 クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::y
 - amp_short_vectors/Concurrency::graphics::int_2::set_x
@@ -31,19 +27,13 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::int_2::set_xy
 - amp_short_vectors/Concurrency::graphics::int_2::operator+=
 - amp_short_vectors/Concurrency::graphics::int_2::operator--
-dev_langs:
-- C++
 ms.assetid: 258b02e9-f1ee-46c2-8edd-dc9f69184846
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 77d5738572164255494ad4a37b2bb0816fcb27a1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e71cc1d253d3c280f6004d99c4906610dc7f98bd
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429210"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603022"
 ---
 # <a name="int2-class"></a>int_2 クラス
 
@@ -129,7 +119,7 @@ class int_2;
 
 `int_2`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp_short_vectors.h
 

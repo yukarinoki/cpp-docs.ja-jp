@@ -1,12 +1,6 @@
 ---
-title: ガイドのコントロールの配置 |Microsoft Docs
-ms.custom: ''
+title: ガイドのコントロールの配置
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - DLUs (dialog units)
 - controls [C++], aligning
@@ -20,17 +14,12 @@ helpviewer_keywords:
 - tick mark interval in Dialog editor
 - controls [C++], snap to guides/grid
 ms.assetid: 17db84ba-5288-4478-be57-afa748aa6447
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 648d78466b912f5f1f8c6a83065a07861ab9a7f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 182cae288f4882611ec3d535357b93bf6d6ea9c7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46374426"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491092"
 ---
 # <a name="aligning-controls-on-a-guide"></a>ガイドのコントロールの配置
 
@@ -56,7 +45,7 @@ ms.locfileid: "46374426"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

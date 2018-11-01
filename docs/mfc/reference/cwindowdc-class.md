@@ -1,31 +1,21 @@
 ---
-title: CWindowDC クラス |Microsoft Docs
-ms.custom: ''
+title: CWindowDC クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CWindowDC
 - AFXWIN/CWindowDC
 - AFXWIN/CWindowDC::CWindowDC
 - AFXWIN/CWindowDC::m_hWnd
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWindowDC [MFC], CWindowDC
 - CWindowDC [MFC], m_hWnd
 ms.assetid: 876a3641-4cde-471c-b0d1-fe58b32af79c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa21de880dbb2b15498fb1bbcc6e9dc35350b0b3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eccea1893979c4491f7080d0d3dc980adaf19025
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417579"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553050"
 ---
 # <a name="cwindowdc-class"></a>CWindowDC クラス
 
@@ -65,7 +55,7 @@ Windows 関数を呼び出す[GetWindowDC](/windows/desktop/api/winuser/nf-winus
 
 `CWindowDC`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ヘッダー: afxwin.h
 

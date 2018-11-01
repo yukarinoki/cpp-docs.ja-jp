@@ -1,10 +1,6 @@
 ---
-title: rint、rintf、rintl | Microsoft Docs
-ms.custom: ''
+title: rint、rintf、rintl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rintf
 - rintl
@@ -26,23 +22,17 @@ f1_keywords:
 - rintf
 - rintl
 - rint
-dev_langs:
-- C++
 helpviewer_keywords:
 - rintf function
 - rint function
 - rintl function
 ms.assetid: 312ae3e6-278c-459a-9393-11b8f87d9184
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 784a540982c41ba7aa144559d3846746b59481f7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9e0e3875b7484735b5439c6c0e0a7252940d4552
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407289"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50609483"
 ---
 # <a name="rint-rintf-rintl"></a>rint、rintf、rintl
 
@@ -68,18 +58,18 @@ long double rint( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Rint**関数に最も近い整数を表す浮動小数点値を返す*x*です。 中間の値が同じ浮動小数点丸めモードの現在の設定に従って丸められます、 **nearbyint**関数。 異なり、 **nearbyint** 、関数、 **rint**関数が発生する可能性が、 **FE_INEXACT**浮動小数点例外値が引数で、結果と異なる場合。 エラーの戻り値はありません。
+**Rint**関数に最も近い整数を表す浮動小数点値を返す*x*します。 中間の値が同じ浮動小数点丸めモードの現在の設定に従って丸められますが、 **nearbyint**関数。 異なり、 **nearbyint**関数の場合、 **rint**関数が生じる可能性がある、 **FE_INEXACT**引数からの値で、結果が異なる場合は、浮動小数点例外。 エラーの戻り値はありません。
 
 |入力|SEH 例外|**_matherr**例外|
 |-----------|-------------------|--------------------------|
 |± ∞、QNAN、IND|none|none|
 |非正規化数|EXCEPTION_FLT_UNDERFLOW|none|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**rint**を受け取り、返します**float**と**長い****二重**値。 C プログラムでは、 **rint**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **rint**を受け取って返す**float**と**長い****二重**値。 C プログラムで**rint**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|C ヘッダー|C++ ヘッダー|
 |--------------|--------------|------------------|

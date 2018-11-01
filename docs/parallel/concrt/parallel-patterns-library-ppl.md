@@ -1,29 +1,19 @@
 ---
-title: 並列パターン ライブラリ (PPL) |Microsoft Docs
-ms.custom: ''
+title: 並列パターン ライブラリ (PPL)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Parallel Patterns Library (PPL)
 ms.assetid: 40fd86b2-69fa-45e5-93d8-98a75636c242
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2bbed984f20c01544a972317f787a00abf6c7b94
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: deeede132a919084399be54d5559605b99c4e4fc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382532"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50459411"
 ---
 # <a name="parallel-patterns-library-ppl"></a>並列パターン ライブラリ (PPL)
 
-並列パターン ライブラリ (PPL: Parallel Patterns Library) は、同時実行アプリケーションの開発に不可欠な、スケーラビリティが高く使いやすいプログラミング モデルを提供します。 PPL は、同時実行ランタイムのスケジューリング コンポーネントとリソース管理コンポーネントに基づいています。 PPL には、データを並列的に操作する、タイプ セーフのジェネリックなアルゴリズムとコンテナーが用意されています。これらを使用すると、アプリケーション コードと基になるスレッド処理機構の間で抽象化のレベルを引き上げることができます。 また、PPL には共有状態に代わる手段が用意されているため、規模の変更に対応したアプリケーションの開発にも役立ちます。
+並列パターン ライブラリ (PPL: Parallel Patterns Library) は、同時実行アプリケーションの開発に不可欠な、スケーラビリティが高く使いやすいプログラミング モデルを提供します。 PPL は、コンカレンシー ランタイムのスケジューリング コンポーネントとリソース管理コンポーネントに基づいています。 PPL には、データを並列的に操作する、タイプ セーフのジェネリックなアルゴリズムとコンテナーが用意されています。これらを使用すると、アプリケーション コードと基になるスレッド処理機構の間で抽象化のレベルを引き上げることができます。 また、PPL には共有状態に代わる手段が用意されているため、規模の変更に対応したアプリケーションの開発にも役立ちます。
 
 PPL には次の機能があります。
 
@@ -61,11 +51,11 @@ fib(42): 267914296
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|PPL でのタスクおよびタスク グループの役割について説明します。|
 |[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)|`parallel_for` や `parallel_for_each` などの並列アルゴリズムの使用方法について説明します。|
 |[並列コンテナーと並列オブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)|PPL に用意されているさまざまな並列コンテナーと並列オブジェクトについて説明します。|
 |[PPL における取り消し処理](cancellation-in-the-ppl.md)|並列アルゴリズムによって行われている処理を取り消す方法について説明します。|
-|[コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)|並列プログラミングを容易にする同時実行ランタイムについて説明します。また、関連トピックへのリンクを示します。|
+|[コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)|並列プログラミングを容易にするコンカレンシー ランタイムについて説明します。また、関連トピックへのリンクを示します。|
 

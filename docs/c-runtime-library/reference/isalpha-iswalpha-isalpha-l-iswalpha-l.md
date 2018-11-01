@@ -1,10 +1,6 @@
 ---
-title: isalpha、iswalpha、_isalpha_l、_iswalpha_l | Microsoft Docs
-ms.custom: ''
+title: isalpha、iswalpha、_isalpha_l、_iswalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswalpha
 - _iswalpha_l
@@ -31,8 +27,6 @@ f1_keywords:
 - iswalpha
 - _istalpha_l
 - _iswalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _iswalpha_l function
 - _isalpha_l function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - istalpha function
 - _istalpha function
 ms.assetid: ed6cc2be-c4b0-4475-87ac-bc06d8c23064
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 28d533a7865a49df7cc962e0f2cc392f5e56d95d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 47b7e43172884524e50e332dcb421e84a99b9806
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401995"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591751"
 ---
 # <a name="isalpha-iswalpha-isalphal-iswalphal"></a>isalpha、iswalpha、_isalpha_l、_iswalpha_l
 
@@ -88,11 +78,11 @@ int _iswalpha_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンを返す場合は 0 以外の各*c*の文字は英字の特定の表現です。 **isalpha**場合は 0 以外の値を返します*c* A - Z または a - z の範囲内にあります。 **iswalpha**をワイド文字に対してのみ、0 以外の値を返します[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)または**iswlower**は 0 以外ですつまり、その文字は実装定義セットのいずれか。のどの**iswcntrl**、 **iswdigit**、 **iswpunct**、または**iswspace**は 0 以外。 これらの各ルーチン 0 を返します*c*テスト条件を満たしていません。
+これらのルーチンを返します。 0 以外の場合の各*c*英文字の特定の表現です。 **isalpha**場合は、0 以外の値を返します*c*が A-Z または a-z の範囲内で。 **iswalpha**をワイド文字に対してのみ、0 以外の値を返します[iswupper](isupper-isupper-l-iswupper-iswupper-l.md)または**iswlower** 0 以外の場合以外は、すべての文字は実装定義セットのいずれかのどの**iswcntrl**、 **iswdigit**、 **iswpunct**、または**iswspace**が 0 以外。 これらのルーチンの各場合 0 を返します*c*テスト条件を満たしていません。
 
-これらの関数を持つバージョン、 **_l**サフィックスが、現在のロケールの代わりに渡されたロケール パラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数がのバージョン、 **_l**サフィックスが、現在のロケールの代わりに渡されるロケール パラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-動作**isalpha**と **_isalpha_l**場合に定義されていない*c* EOF ではありませんか 0 ~ 0 xff、包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、これらの値、関数の発生いない 1 つです。
+動作**isalpha**と **_isalpha_l**場合は定義されません*c* EOF がないか 0 ~ 0 xff の包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、発生のこれらの値のいずれかにありません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -101,9 +91,9 @@ int _iswalpha_l(
 |**_istalpha**|**isalpha**|**_ismbcalpha**|**iswalpha**|
 |**_istalpha_l**|**_isalpha_l**|**_ismbcalpha_l**|**_iswalpha_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isalpha**|\<ctype.h>|
 |**iswalpha**|\<ctype.h> または \<wchar.h>|

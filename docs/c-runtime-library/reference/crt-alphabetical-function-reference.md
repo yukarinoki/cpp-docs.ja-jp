@@ -1,29 +1,19 @@
 ---
-title: UCRT アルファベット関数リファレンス |Microsoft ドキュメント
-ms.custom: ''
+title: UCRT のアルファベット順の関数リファレンス
 ms.date: 04/11/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - vc.tables.runtime
-dev_langs:
-- C++
 ms.assetid: c2169b0e-cd86-489a-a2fa-2ee15c03b5c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e5b6d73219bed94268ee3a9b8854d28d1fc6c06
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c8c16b0f3eeb21bc9ad665bffee9fac15607f21f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405459"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50520463"
 ---
-# <a name="ucrt-alphabetical-function-reference"></a>UCRT アルファベット関数リファレンス
+# <a name="ucrt-alphabetical-function-reference"></a>UCRT のアルファベット順の関数リファレンス
 
-Universal C Runtime (UCRT、多くの場合、単なる CRT) ライブラリのリファレンス ドキュメントは、ルーチンがアルファベット順に配置されています。 機能に基づいた CRT ルーチンを参照してください[ユニバーサル C カテゴリ別ランタイム ルーチン](../../c-runtime-library/run-time-routines-by-category.md)です。
+ルーチンがユニバーサル C ランタイム (UCRT、だけで多くの場合、CRT) ライブラリのリファレンス ドキュメントがアルファベット順に配置されています。 機能に基づいた CRT ルーチンを検索するには、次を参照してください。[カテゴリ別ユニバーサル C ランタイム ルーチン](../../c-runtime-library/run-time-routines-by-category.md)します。
 
 ## <a name="a"></a>A
 

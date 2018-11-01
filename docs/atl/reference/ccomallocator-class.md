@@ -1,31 +1,21 @@
 ---
-title: CComAllocator クラス |Microsoft Docs
-ms.custom: ''
+title: CComAllocator クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComAllocator
 - ATLBASE/ATL::CComAllocator
 - ATLBASE/ATL::CComAllocator::Allocate
 - ATLBASE/ATL::CComAllocator::Free
 - ATLBASE/ATL::CComAllocator::Reallocate
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComAllocator class
 ms.assetid: 0cd706fd-0c7b-42d3-9054-febe2966fc8e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f867d3a7ca81d190ee363c7539e56a62004eb377
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 83ea5cdbc2460d308edf89647dafba65cb327f03
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46088944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658875"
 ---
 # <a name="ccomallocator-class"></a>CComAllocator クラス
 
@@ -51,7 +41,7 @@ class CComAllocator
 
 このクラスによって使用されます[CComHeapPtr](../../atl/reference/ccomheapptr-class.md) COM メモリ割り当てルーチンを提供します。 対応するクラス、 [CCRTAllocator](../../atl/reference/ccrtallocator-class.md)、CRT ルーチンを使用して同じメソッドを提供します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 

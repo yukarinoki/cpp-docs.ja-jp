@@ -1,10 +1,6 @@
 ---
-title: _get_dstbias | Microsoft Docs
-ms.custom: ''
+title: _get_dstbias
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_dstbias
 - __dstbias
@@ -25,24 +21,18 @@ f1_keywords:
 - __dstbias
 - _get_dstbias
 - get_dstbias
-dev_langs:
-- C++
 helpviewer_keywords:
 - __dstbias
 - daylight saving time offset
 - get_dstbias function
 - _get_dstbias function
 ms.assetid: e751358c-1ecc-411b-ae2c-81b2ec54ea45
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82e334c6fcb282bebb003992219f6cf215ab7437
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 61807f854dc9c2f7de6f0acd5bbf4668987ce49e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397767"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50579105"
 ---
 # <a name="getdstbias"></a>_get_dstbias
 
@@ -61,19 +51,19 @@ error_t _get_dstbias( int* seconds );
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合や、0 **errno**値の場合は、エラーが発生します。
+成功した場合や、0 **errno**エラーが発生した場合の値します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **_Get_dstbias**関数は、整数としての夏時間の秒数を取得します。 夏時間が適用されている場合、既定のオフセットは 3,600 秒であり、これは 1 時間の秒数です (ただし、一部の地域は 2 時間のオフセットを実施しています)。
 
-場合*秒*は**NULL**、」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**し、返します**EINVAL**です。
+場合*秒*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**返します**EINVAL**します。
 
-マクロではなくこの関数を使用することをお勧め **_dstbias**非推奨の関数または **__dstbias**です。
+マクロの代わりにこの関数を使用することをお勧めします。 **_dstbias**または非推奨の関数 **__dstbias**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_get_dstbias**|\<time.h>|
 

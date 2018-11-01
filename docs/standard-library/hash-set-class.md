@@ -1,10 +1,6 @@
 ---
-title: hash_set クラス | Microsoft Docs
-ms.custom: ''
+title: hash_set クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - hash_set/stdext::hash_set
 - hash_set/stdext::hash_set::allocator_type
@@ -47,8 +43,6 @@ f1_keywords:
 - hash_set/stdext::hash_set::swap
 - hash_set/stdext::hash_set::upper_bound
 - hash_set/stdext::hash_set::value_comp
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdext::hash_set
 - stdext::hash_set::allocator_type
@@ -92,16 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f8a89252039a253d66ec88cc44a9c1e23969b3c2
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 12f177887552cb14edba6ae8cfeeab1abe24a45b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235881"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657510"
 ---
 # <a name="hashset-class"></a>hash_set クラス
 
@@ -220,7 +210,7 @@ hash_set クラスに用意されている反復子は双方向反復子です�
 |-|-|
 |[hash_set::operator=](#op_eq)|別の `hash_set` のコピーで `hash_set` の要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<hash_set>
 

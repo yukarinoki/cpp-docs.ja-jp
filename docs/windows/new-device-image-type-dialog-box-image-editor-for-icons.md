@@ -1,28 +1,17 @@
 ---
-title: 新しい&lt;デバイス&gt;画像の種類 ダイアログ ボックス (C++) (アイコン用イメージ エディター) |Microsoft Docs
-ms.custom: ''
+title: 新しい&lt;デバイス&gt;画像の種類 ダイアログ ボックス (C++) (アイコン用イメージ エディター)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.newimagetype
-dev_langs:
-- C++
 helpviewer_keywords:
 - New <Device> Image Type dialog box [C++]
 ms.assetid: 9c1344f5-dea0-42cd-9042-b13032f72be2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 81a5c4cac614f70aa422e56a3c1c61fa2b6bd24e
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 3e1505013edd211a3d838bdfcc957877d767bb18
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50583860"
 ---
 # <a name="new-ltdevicegt-image-type-dialog-box-c-image-editor-for-icons"></a>新しい&lt;デバイス&gt;画像の種類 ダイアログ ボックス (C++) (アイコン用イメージ エディター)
 
@@ -48,7 +37,7 @@ ms.locfileid: "48861916"
 
 表示されます、[カスタム イメージ ダイアログ ボックス](custom-image-dialog-box-image-editor-for-icons.md)でができるイメージを作成する新しいカスタム サイズと色の数を使用します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

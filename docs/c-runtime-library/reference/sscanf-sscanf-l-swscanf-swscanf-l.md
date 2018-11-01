@@ -1,10 +1,6 @@
 ---
-title: sscanf、_sscanf_l、swscanf、_swscanf_l | Microsoft Docs
-ms.custom: ''
+title: sscanf、_sscanf_l、swscanf、_swscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - swscanf
 - sscanf
@@ -29,8 +25,6 @@ f1_keywords:
 - _stscanf_l
 - sscanf
 - _swscanf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - swscanf function
 - _stscanf function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - sscanf_l function
 - stscanf_l function
 ms.assetid: c2dcf0d2-9798-499f-a4a8-06f7e2b9a80c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9ac67b27564f694631977fd21c96922132b633e2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60dbb8e89e531c3020c243d998a69370095424e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413607"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50661969"
 ---
 # <a name="sscanf-sscanfl-swscanf-swscanfl"></a>sscanf、_sscanf_l、swscanf、_swscanf_l
 
@@ -94,7 +84,7 @@ int _swscanf_l(
 格納されるデータ。
 
 *format*<br/>
-書式指定文字列。 詳細については、[書式の指定](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)に関する記事をご覧ください。
+書式指定文字列。 詳細については、「 [printf 関数と wprintf 関数の書式指定フィールド](../../c-runtime-library/format-specification-fields-scanf-and-wscanf-functions.md)」を参照してください。
 
 *argument*<br/>
 省略可能な引数。
@@ -106,18 +96,18 @@ int _swscanf_l(
 
 これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 戻り値は**EOF**エラーの最初の変換の前に、文字列の末尾に達した場合またはします。
 
-場合*バッファー*または*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合*バッファー*または*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Sscanf**関数からデータを読み取る*バッファー*各によって指定された場所に*引数*です。 各*引数*に型指定子に対応する型の変数へのポインターにする必要があります*形式*です。 *形式*引数コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*の引数、 **scanf**関数。 重なり合う文字列間でコピーした場合の動作は未定義です。
+**Sscanf**関数からデータを読み取る*バッファー*各によって指定された場所に*引数*します。 すべて*引数*に型指定子に対応する型の変数へのポインターである必要があります*形式*します。 *形式*引数コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*の引数、 **scanf**関数。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
 > [!IMPORTANT]
-> 含む文字列を読み取るとき**sscanf**、向けに幅を必ず指定します、 **%s**形式 (たとえば、 **「% 男女」** の代わりに **"%s"**) 以外の場合、適切な形式で入力バッファー オーバーランが発生しやすくします。
+> 含む文字列を読み取るときに**sscanf**、向けに幅を常に指定、 **%s**形式 (たとえば、 **「% 男女」** の代わりに **"%s"**) それ以外の場合。、適切な形式で入力バッファー オーバーランが発生しやすくします。
 
-**swscanf**のワイド文字バージョンは、 **sscanf**; 引数**swscanf**ワイド文字列です。 **sscanf**マルチバイトの 16 進数文字を処理しません。 **swscanf** Unicode の全角 16 進数または「互換区域」の文字を処理しません。 それ以外の場合、 **swscanf**と**sscanf**動作は同じです。
+**swscanf**のワイド文字バージョンは、 **sscanf**; 引数**swscanf**はワイド文字列です。 **sscanf**マルチバイトの 16 進数の文字を処理しません。 **swscanf** Unicode の全角 16 進数または「互換区域」の文字を処理しません。 それ以外の場合、 **swscanf**と**sscanf**動作は同じです。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
@@ -128,9 +118,9 @@ int _swscanf_l(
 |**_stscanf**|**sscanf**|**sscanf**|**swscanf**|
 |**_stscanf_l**|**_sscanf_l**|**_sscanf_l**|**_swscanf_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**sscanf**、 **_sscanf_l**|\<stdio.h>|
 |**swscanf**、 **_swscanf_l**|\<stdio.h> または \<wchar.h>|

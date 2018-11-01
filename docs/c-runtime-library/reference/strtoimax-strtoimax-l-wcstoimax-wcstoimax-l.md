@@ -1,10 +1,6 @@
 ---
-title: strtoimax、_strtoimax_l、wcstoimax、_wcstoimax_l | Microsoft Docs
-ms.custom: ''
+title: strtoimax、_strtoimax_l、wcstoimax、_wcstoimax_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcstoimax
 - _wcstoimax_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _wcstoimax_l
 - _strtoimax_l
 - _tcstoimax_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - strtoimax funciton
 - conversion functions
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _wcstoimax_l function
 - wcstoimax function
 ms.assetid: 4530d3dc-aaac-4a76-b7cf-29ae3c98d0ae
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 58ee8f4cbceaa2972de9a40a4192b1175b25488d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e0a320f90b2c0f8653109a6ae0056c4c0cdd7455
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32416541"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578153"
 ---
 # <a name="strtoimax-strtoimaxl-wcstoimax-wcstoimaxl"></a>strtoimax、_strtoimax_l、wcstoimax、_wcstoimax_l
 
@@ -97,21 +87,21 @@ NULL で終わる変換対象の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-**strtoimax**文字列で表される値を返します*strSource*、形式がオーバーフローを発生する場合を除く、その場合を返します**INTMAX_MAX**または**INTMAX_MIN**、および**errno**に設定されている**ERANGE**です。 この関数は、変換を実行できない場合には 0 を返します。 **wcstoimax**戻り値を返します**strtoimax**です。
+**strtoimax**文字列で表される値を返します*strSource*、を除き、表現はオーバーフローが発生すると、その場合を返します**INTMAX_MAX**または**INTMAX_MIN**、および**errno**に設定されている**ERANGE**します。 この関数は、変換を実行できない場合には 0 を返します。 **wcstoimax**と同様に値を返します**strtoimax**します。
 
 **INTMAX_MAX**と**INTMAX_MIN** stdint.h で定義されます。
 
-場合*strSource*は**NULL**または*基本*が 0 でないと、2 未満または 36 を超える**errno**に設定されている**EINVAL**.
+場合*strSource*は**NULL**または*基本*0 以外の場合は、いずれか 2 未満または 36 を超えると**errno**に設定されている**EINVAL**.
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strtoimax**関数に変換*strSource*を**intmax_t**です。 ワイド文字バージョン**strtoimax**は**wcstoimax**以外の場合はその*strSource*引数はワイド文字列です。 それ以外では、これらの関数の動作は同じです。 どちらの関数は、文字列の読み取りを停止*strSource*数値の一部として認識できない最初の文字です。 大きいか等しいには、最初の数値文字がある可能性がありますか終端の null 文字あります*基本*です。
+**Strtoimax**関数に変換します*strSource*を**intmax_t**します。 ワイド文字バージョン**strtoimax**は**wcstoimax**、 *strSource*引数はワイド文字の文字列。 それ以外では、これらの関数の動作は同じです。 どちらの関数は、文字列の読み取りを停止*strSource*数値の一部として認識できない最初の文字。 終端の null 文字がありますまたは最初の数値文字に以上である可能性がある*基本*します。
 
-ロケールの**LC_NUMERIC**カテゴリの設定によっての小数点文字の認識*strSource*。 詳細については、を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)です。 関数がない、 **_l**サフィックスは現在のロケールを使用します。**_strtoimax_l**と **_wcstoimax_l**が付いていない対応する関数と同じでは、 **_l**サフィックスをロケールを代わりに使用する点を除いての渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+ロケールの**LC_NUMERIC**の小数点文字のカテゴリの設定が認識*strSource*; 詳細についてを参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)します。 関数がない、 **_l**サフィックスを使用して、現在のロケール **_strtoimax_l**と **_wcstoimax_l**がない、対応する関数と同じですが、 **_l**ロケールを代わりに使用するサフィックスの渡されます。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-場合*endptr*は**NULL**が指す位置に、スキャンを停止させた文字へのポインターが格納されている*endptr*です。 変換を実行できない場合 (有効な数字が見つからないか無効な base を指定した) の値*strSource*が指す位置に格納されて*endptr*です。
+場合*endptr*ない**NULL**、場所を指しているスキャンを停止させた文字へのポインターが格納されている*endptr*します。 変換を実行できない場合 (有効な数字が見つからないか、無効な base を指定した) の値*strSource*によってポイントされている位置に格納されて*endptr*します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -120,15 +110,15 @@ NULL で終わる変換対象の文字列。
 |**_tcstoimax**|**strtoimax**|**strtoimax**|**wcstoimax**|
 |**_tcstoimax_l**|**strtoimax_l**|**_strtoimax_l**|**_wcstoimax_l**|
 
-**strtoimax**が必要ですが*strSource*して次の形式の文字列を指します。
+**strtoimax**が必要ですが*strSource*次の形式の文字列を指すようにします。
 
 > [*空白*] [{**+** &#124; **-**}] [**0** [{ **x**&#124; **X** }] [*桁*&#124; *文字*]  
 
-A*空白*は無視されますスペースやタブ文字で構成されている可能性があります。*桁*は 1 つ以上の 10 進数字です。*文字*1 つまたは複数の文字は、'a' から 'z' ('A' ~ 'Z')。 この形式に一致しない文字を見つけるとスキャンを停止します。 場合*基本*2 ~ 36 の間は、数値の基数として使用されます。 場合*基本*0 によって示される文字列の先頭の文字は、 *strSource*基数を判定するために使用します。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば場合、*基本*0 は、スキャンされた最初の文字が '0' と見なされます、8 進数と、'8' または '9' の文字は、スキャンは停止します。
+A*空白*は無視されますスペースやタブ文字で構成されている可能性があります。*桁*は 1 つ以上の 10 進数字です。*文字*1 つまたは複数の文字を 'a' から 'z' (または 'A' ~ 'Z')。 この形式に一致しない文字を見つけるとスキャンを停止します。 場合*基本*が 2 ~ 36 の間の数値の基数として使用されます。 場合*基本*は 0 が指す文字列の先頭の文字です。 *strSource*を使用して、ベースを決定します。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' 以外の場合、文字列は 8 進数と解釈されます。 最初の文字が '0' で、2 番目の文字が 'x' または 'X' である場合、文字列は 16 進数と解釈されます。 最初の文字が '1' ～ '9' の間の数値の場合、文字列は 10 進数と解釈されます。 'a' ～ 'z' (または 'A' ～ 'Z') の文字には、10 ～ 35 の値が割り当てられています。*基数*よりも小さい値が割り当てられている文字のみ許可されます。 基数の範囲外にある文字を最初に見つけた時点で、スキャンは停止されます。 たとえば場合、*基本*は 0 です。 および、スキャンされた最初の文字は '0'、8 進数の整数が想定されますと、'8' または '9' の文字は、スキャンは停止します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strtoimax**、 **_strtoimax_l**、 **wcstoimax**、 **_wcstoimax_l**|\<inttypes.h>|
 

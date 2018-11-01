@@ -1,35 +1,25 @@
 ---
-title: コンパイラの警告 (レベル 1) C4067 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラの警告 (レベル 1) C4067
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4067
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4067
 ms.assetid: 1d10353e-8cd5-4b01-9184-a06189b965a4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ee6b48327e8754f9388e0df8f43009a5be70c97
-ms.sourcegitcommit: 19a108b4b30e93a9ad5394844c798490cb3e2945
+ms.openlocfilehash: 012866e328433ec9511782c26a39265481ff4940
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34255454"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541190"
 ---
 # <a name="compiler-warning-level-1-c4067"></a>コンパイラの警告 (レベル 1) C4067
 
-> 予期しないトークン プリプロセッサ ディレクティブの後に改行が必要です
+> 予期しないトークン - 次のプリプロセッサ ディレクティブには、改行が必要です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-コンパイラが見つかりプリプロセッサ ディレクティブに続く余分な文字を無視します。 可能性があります、任意の予期しない文字では一般的な原因は無効なセミコロン ディレクティブの後です。 コメントでは、この警告は発生しません。 **/Za**コンパイラ オプションの既定の設定よりも詳細のプリプロセッサ ディレクティブには、この警告を有効にします。
+コンパイラは、検出し、余分な文字が次のプリプロセッサ ディレクティブは無視されます。 一般的な原因は、ディレクティブの後、無効なセミコロンは、予期しない文字によって発生ことができます。 コメントでは、この警告は発生しません。 **/Za**コンパイラ オプションは、既定の設定よりも詳細のプリプロセッサ ディレクティブには、この警告を使用できます。
 
 ## <a name="example"></a>例
 
@@ -49,7 +39,7 @@ int main()
 }
 ```
 
-この警告を解決するのには、無効な文字を削除またはコメント ブロック内に移動します。 削除することで、特定 C4067 警告を無効にすることがあります、 **/Za**コンパイラ オプション。
+この警告を解決するのには、無効な文字を削除またはコメント ブロックに移動します。 削除することによって特定 C4067 の警告を無効にすることがあります、 **/Za**コンパイラ オプション。
 
 ```cpp
 // C4067b.cpp
