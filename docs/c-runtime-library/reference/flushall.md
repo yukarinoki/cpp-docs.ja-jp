@@ -1,10 +1,6 @@
 ---
-title: _flushall | Microsoft ドキュメント
-ms.custom: ''
+title: _flushall
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _flushall
 apilocation:
@@ -22,24 +18,18 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _flushall
-dev_langs:
-- C++
 helpviewer_keywords:
 - flushall function
 - flushing streams
 - streams, flushing
 - _flushall function
 ms.assetid: 2cd73562-6d00-4ca2-b13c-80d0ae7870b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fb094e2f99e0554320df69946470f42f461819d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: de8caf30568816f41441f5d9487293c346d2bff1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398023"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50466239"
 ---
 # <a name="flushall"></a>_flushall
 
@@ -55,17 +45,17 @@ int _flushall( void );
 
 **_flushall** (入力と出力)、開いているストリームの数を返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-既定では、 **_flushall**適切なファイルを開いている出力ストリームに関連付けられているすべてのバッファーの内容を関数に書き込みます。 開いている入力ストリームに関連付けられているすべてのバッファーでは、現在の内容がクリアされます。 これらのバッファーは通常はオペレーティング システムによって保持され、データをディスクに自動的に書き込むための最適なタイミングが決定されます。タイミングとしては、バッファーがいっぱいになったとき、ストリームが閉じられるとき、プログラムがストリームを閉じずに正常に終了したときがあります。
+既定で、 **_flushall**適切なファイルを開いている出力ストリームに関連付けられているすべてのバッファーの内容を関数に書き込みます。 開いている入力ストリームに関連付けられているすべてのバッファーでは、現在の内容がクリアされます。 これらのバッファーは通常はオペレーティング システムによって保持され、データをディスクに自動的に書き込むための最適なタイミングが決定されます。タイミングとしては、バッファーがいっぱいになったとき、ストリームが閉じられるとき、プログラムがストリームを閉じずに正常に終了したときがあります。
 
-読み取りへの呼び出しに従う場合 **_flushall**、新しいデータがバッファーに入力ファイルから読み込まれます。 すべてのストリームが呼び出しの後に開いたまま **_flushall**です。
+読み取りの呼び出しに従う場合 **_flushall**バッファーに入力ファイルから新しいデータを読み取る。 呼び出しの後のすべてのストリームが開いたまま **_flushall**します。
 
-ランタイム ライブラリのディスクへのコミットの機能を使用すると、重要なデータをオペレーティング システムのバッファーではなく、ディスクに直接書き込むことができます。 プログラムのオブジェクト ファイルを Commode.obj にリンクすると、既存のプログラムを書き直さずに、この機能を有効にできます。呼び出し、結果として得られる実行可能ファイル **_flushall**すべてのバッファーの内容をディスクに書き込めません。 のみ **_flushall**と[fflush](fflush.md) Commode.obj の影響を受けます。
+ランタイム ライブラリのディスクへのコミットの機能を使用すると、重要なデータをオペレーティング システムのバッファーではなく、ディスクに直接書き込むことができます。 プログラムのオブジェクト ファイルを Commode.obj にリンクすると、既存のプログラムを書き直さずに、この機能を有効にできます。呼び出し、結果として得られる実行可能ファイルで **_flushall**をディスクにすべてのバッファーの内容を記述します。 のみ **_flushall**と[fflush](fflush.md) Commode.obj の影響を受けます。
 
 ディスクへのコミットの機能の制御については、「[ストリーム入出力](../../c-runtime-library/stream-i-o.md)」、「[fopen](fopen-wfopen.md)」、および「[_fdopen](fdopen-wfdopen.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

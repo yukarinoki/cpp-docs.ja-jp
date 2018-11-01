@@ -1,10 +1,6 @@
 ---
-title: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l | Microsoft Docs
-ms.custom: ''
+title: _ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbstrail
 - _ismbslead_l
@@ -34,8 +30,6 @@ f1_keywords:
 - _ismbstrail_l
 - ismbstrail
 - _ismbslead_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbstrail function
 - _ismbslead function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - ismbstrail_l function
 - _ismbstrail_l function
 ms.assetid: 86d2cd7a-3cff-443a-b713-14cc17a231e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c0dc0fb0a6912d728343de360b4e8f8a3a252566
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5b4d3f371f4be640cc22a1bdc3d920acf88e2585
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468914"
 ---
 # <a name="ismbslead-ismbstrail-ismbsleadl-ismbstraill"></a>_ismbslead、_ismbstrail、_ismbslead_l、_ismbstrail_l
 
@@ -100,17 +90,17 @@ int _ismbstrail_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbslead**文字が先頭バイトである場合は-1 を返しますと **_ismbstrail**文字が後続バイトである場合は-1 を返します。 入力文字列が有効であるものの、その文字が先頭バイトでも末尾バイトでもない場合、これらの関数は 0 を返します。 引数のいずれかが場合**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **NULL**設定と**errno**に**EINVAL**です。
+**_ismbslead**文字が先頭バイトである場合は-1 を返しますと **_ismbstrail**文字が後続バイトである場合は-1 を返します。 入力文字列が有効であるものの、その文字が先頭バイトでも末尾バイトでもない場合、これらの関数は 0 を返します。 引数のいずれかが場合**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **NULL**設定と**errno**に**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_ismbslead**と **_ismbstrail**よりも低速、 **_ismbblead**と **_ismbbtrail**バージョン アカウントに、文字列のコンテキストを受け取るためです。
+**_ismbslead**と **_ismbstrail**よりも低速、 **_ismbblead**と **_ismbbtrail**バージョンをアカウントに、文字列のコンテキストを受け取るためです。
 
-これらの関数を持つバージョン、 **_l**そのロケールに依存する動作に現在のロケールの代わりに渡されたロケールを使用することを除き、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数がのバージョン、 **_l**ロケールに依存する動作の現在のロケールの代わりに渡されるロケールを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_ismbslead**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|
 |**_ismbstrail**|\<mbctype.h> または \<mbstring.h>|\<ctype.h>、* \<limits.h>、\<stdlib.h>|

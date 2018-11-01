@@ -1,10 +1,6 @@
 ---
-title: _CrtSetReportFile | Microsoft Docs
-ms.custom: ''
+title: _CrtSetReportFile
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtSetReportFile
 apilocation:
@@ -22,26 +18,20 @@ apitype: DLLExport
 f1_keywords:
 - CrtSetReportFile
 - _CrtSetReportFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtSetReportFile function
 - _CrtSetReportFile function
 ms.assetid: 3126537e-511b-44af-9c1c-0605265eabc4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3df4f54ad8e191dac7110a914bdde1cec888ff9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32a560e09c47468daf48c185e23d6e289c6d1d9b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402339"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50464247"
 ---
 # <a name="crtsetreportfile"></a>_CrtSetReportFile
 
-使用した後[_CrtSetReportMode](crtsetreportmode.md)を指定する **_CRTDBG_MODE_FILE**メッセージのテキストを受信するファイル ハンドルを指定することができます。 **_CrtSetReportFile**もで使用される[_CrtDbgReport、_CrtDbgReportW](crtdbgreport-crtdbgreportw.md)をテキスト (デバッグ バージョンのみ) のコピー先を指定します。
+使用した後[_CrtSetReportMode](crtsetreportmode.md)を指定する **_CRTDBG_MODE_FILE**メッセージのテキストを受信するファイル ハンドルを指定することができます。 **_CrtSetReportFile**によっても使用されます[_CrtDbgReport、_CrtDbgReportW](crtdbgreport-crtdbgreportw.md)テキスト (デバッグ バージョンのみ) の出力先を指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -55,20 +45,20 @@ _HFILE _CrtSetReportFile(
 ### <a name="parameters"></a>パラメーター
 
 *reportType*<br/>
-レポートの種類:**前述**、 **_CRT_ERROR**、および **_CRT_ASSERT**です。
+レポートの種類:**前述**、 **_CRT_ERROR**、および **_CRT_ASSERT**します。
 
 *reportFile*<br/>
-に対して新しいレポート ファイル*reportType*です。
+に対して新しいレポート ファイル*reportType*します。
 
 ## <a name="return-value"></a>戻り値
 
-正常に終了、 **_CrtSetReportFile**で指定されたレポートの種類で定義されている以前のレポート ファイルが返されます*reportType*です。 無効な値が渡された場合*reportType*、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します **_CRTDBG_HFILE_ERROR**です。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
+正常に完了 **_CrtSetReportFile**前のレポート ファイルで指定されたレポートの種類の定義を返します*reportType*します。 無効な値が渡された場合*reportType*、」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します **_CRTDBG_HFILE_ERROR**します。 詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_CrtSetReportFile**と共に使用される、 [_CrtSetReportMode](crtsetreportmode.md) 、によって生成される特定のレポートの種類の宛先を定義する関数 **_CrtDbgReport**です。 ときに **_CrtSetReportMode**に割り当てるには呼び出されて、 **_CRTDBG_MODE_FILE**特定のレポートの種類のモードの reporting **_CrtSetReportFile**しを呼び出す必要があります特定のファイルまたはエクスポート先として使用するストリームを定義します。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていないへの呼び出し **_CrtSetReportFile**プリプロセス時に削除されます。
+**_CrtSetReportFile**を併用、 [_CrtSetReportMode](crtsetreportmode.md)関数によって生成される特定のレポートの種類の宛先を定義する **_CrtDbgReport**します。 ときに **_CrtSetReportMode**を割り当てるが呼び出された、 **_CRTDBG_MODE_FILE**の特定のレポートの種類、モードの reporting **_CrtSetReportFile**しを呼び出す必要があります特定のファイルまたはコピー先として使用するストリームを定義します。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない、呼び出し **_CrtSetReportFile**プリプロセス時に削除されます。
 
-次の一覧表示で使用できる選択肢*reportFile*と結果の動作 **_CrtDbgReport**です。 これらのオプションは、Crtdbg.h でビット フラグとして定義されています。
+次に示しますを使用できる選択肢*reportFile*と結果の動作の **_CrtDbgReport**します。 これらのオプションは、Crtdbg.h でビット フラグとして定義されています。
 
 - **ファイル ハンドル**
 
@@ -108,13 +98,13 @@ _HFILE _CrtSetReportFile(
 
 各レポートの種類によって使用されるレポート ファイルを個別に制御できます。 たとえば、ことを指定することは、 *reportType*の **_CRT_ERROR**に報告する**stderr**中、 *reportType* の **_CRT_ASSERT**ユーザー定義のファイル ハンドルまたはストリームに報告されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_CrtSetReportFile**|\<crtdbg.h>|\<errno.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 **ライブラリ:** [CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のデバッグ バージョンのみ。
 

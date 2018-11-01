@@ -1,10 +1,6 @@
 ---
-title: isalnum、iswalnum、_isalnum_l、_iswalnum_l | Microsoft Docs
-ms.custom: ''
+title: isalnum、iswalnum、_isalnum_l、_iswalnum_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _iswalnum_l
 - _isalnum_l
@@ -30,8 +26,6 @@ f1_keywords:
 - _isalnum_l
 - isalnum
 - _istalnum
-dev_langs:
-- C++
 helpviewer_keywords:
 - _istalnum function
 - _ismbcalnum_l function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _istalnum_l function
 - _iswalnum_l function
 ms.assetid: 0dc51306-ade8-4944-af27-e4176fc89093
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9c7c1156341d4c1b0b54d54f52a5a33eb6506e50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 97ac18eb85c62861c701f1498da0b4851021ca74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401543"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456629"
 ---
 # <a name="isalnum-iswalnum-isalnuml-iswalnuml"></a>isalnum、iswalnum、_isalnum_l、_iswalnum_l
 
@@ -76,11 +66,11 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンを返す場合は 0 以外の各*c*英数字 1 文字の特定の表現です。 **isalnum**場合は、0 以外の値を返します**isalpha**または**isdigit**は 0 です*c*,、つまり場合*c*内では、範囲 A ~ Z、a ~ z、または 0 - 9 です。 **iswalnum**場合は、0 以外の値を返します**iswalpha**または**iswdigit** 0 *c*です。 これらの各ルーチン 0 を返します*c*テスト条件を満たしていません。
+これらのルーチンを返します。 0 以外の場合の各*c*英数字の特定の表現です。 **isalnum**場合は、0 以外の値を返します**isalpha**または**isdigit**の 0 以外の場合は、 *c*、つまり場合*c*内では、範囲 A ~ Z、a ~ z、または 0 - 9 です。 **iswalnum**場合は、0 以外の値を返します**iswalpha**または**iswdigit**に対して*c*します。 これらのルーチンの各場合 0 を返します*c*テスト条件を満たしていません。
 
-これらの関数を持つバージョン、 **_l**サフィックスが、現在のロケールの代わりに渡されたロケール パラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数がのバージョン、 **_l**サフィックスが、現在のロケールの代わりに渡されるロケール パラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-動作**isalnum**と **_isalnum_l**場合に定義されていない*c* EOF ではありませんか 0 ~ 0 xff、包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、これらの値、関数の発生いない 1 つです。
+動作**isalnum**と **_isalnum_l**場合は定義されません*c* EOF がないか 0 ~ 0 xff の包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、発生のこれらの値のいずれかにありません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -89,9 +79,9 @@ int _iswalnum_l( wint_t c, _locale_t locale );
 |**_istalnum**|**isalnum**|[_ismbcalnum](ismbcalnum-functions.md)|**iswalnum**|
 |**_istalnum_l**|**_isalnum_l**|**_ismbcalnum_l**|**_iswalnum_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isalnum**|\<ctype.h>|
 |**iswalnum**|\<ctype.h> または \<wchar.h>|
