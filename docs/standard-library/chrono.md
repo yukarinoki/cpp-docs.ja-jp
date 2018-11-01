@@ -1,10 +1,6 @@
 ---
-title: '&lt;chrono&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;chrono&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - chrono/std::chrono::nanoseconds
 - chrono/std::chrono::minutes
@@ -13,25 +9,19 @@ f1_keywords:
 - chrono/std::chrono::hours
 - chrono/std::chrono::milliseconds
 - chrono/std::chrono::microseconds
-dev_langs:
-- C++
 ms.assetid: 844de749-f306-482e-89bc-6f53c99c8324
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4d701b290100f812f3c7845096960561cb101472
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 904e4df6b6c16b846ab4417d24a1d9836380d75b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33847495"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544548"
 ---
 # <a name="ltchronogt"></a>&lt;chrono&gt;
 
 期間と時点を表し、操作するクラスと関数を定義するために、標準ヘッダー \<chrono> を含めます。
 
-以降、Visual Studio 2015 の実装で`steady_clock`安定性と単調性の C++ 標準の要件を満たすに変更されました。 現在、`steady_clock` は QueryPerformanceCounter() に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 結果として、Visual C++ では現在、`steady_clock::time_point` は `chrono::time_point<steady_clock>` の typedef です。ただし、他の実装では異なる場合があります。
+Visual Studio 2015 での実装を開始`steady_clock`がされと単調性の C++ 標準の要件を満たすために変更します。 現在、`steady_clock` は QueryPerformanceCounter() に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 結果として、Visual C++ では現在、`steady_clock::time_point` は `chrono::time_point<steady_clock>` の typedef です。ただし、他の実装では異なる場合があります。
 
 ## <a name="syntax"></a>構文
 
@@ -99,9 +89,9 @@ ms.locfileid: "33847495"
 |Literal|説明|
 |-------------|-----------------|
 |chrono::hours operator "" h(unsigned long long Val)|時間を整数値として指定します。|
-|:duration\<double 比\<3600 >> operator""h (long double Val)|時間を浮動小数点値として指定します。|
+|chrono::duration\<二重、比率\<3600 >> 演算子""h (long double Val)|時間を浮動小数点値として指定します。|
 |chrono::minutes (operator "" min)(unsigned long long Val)|分を整数値として指定します。|
-|:duration\<double 比\<60 >> (operator""min) (long double 型 Val)|分を浮動小数点値として指定します。|
+|chrono::duration\<二重、比率\<60 >> (演算子""min) (Val と long double 型)|分を浮動小数点値として指定します。|
 |chrono::seconds operator "" s(unsigned long long Val)|分を整数値として指定します。|
 |chrono::duration\<double> operator "" s(long double Val)|秒を浮動小数点値として指定します。|
 |chrono::milliseconds operator "" ms(unsigned long long Val)|ミリ秒を整数値として指定します。|
@@ -120,7 +110,7 @@ constexpr auto week = 24h* 7;
 constexpr auto my_duration_unit = 108ms;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

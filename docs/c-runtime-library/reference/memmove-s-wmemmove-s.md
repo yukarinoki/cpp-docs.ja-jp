@@ -1,10 +1,6 @@
 ---
-title: memmove_s、wmemmove_s | Microsoft Docs
-ms.custom: ''
+title: memmove_s、wmemmove_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wmemmove_s
 - memmove_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemmove_s
 - memmove_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wmemmove_s function
 - memmove_s function
 ms.assetid: a17619e4-1307-4bb0-98c6-77f8c68dab2d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 39fde456dd2e45d38bdd1b6ba8d9d7eb9811dd05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b60174c3a06e60301a3e9123434220227f4f426
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403896"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561188"
 ---
 # <a name="memmoves-wmemmoves"></a>memmove_s、wmemmove_s
 
@@ -88,15 +78,15 @@ errno_t wmemmove_s(
 |任意|任意|**NULL**|**EINVAL**|変更されない|
 |任意|< *カウント*|任意|**ERANGE**|変更されない|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-コピー*カウント*から文字のバイトを*src*に*dest*です。 コピー元領域と、移行先の一部の領域が重なり合う場合**memmove_s**上書きされる前に、重複領域に元のコピー元のバイトがコピーされることを確認します。
+コピー*カウント*バイトの文字から*src*に*dest*します。 コピー元とコピー先の一部の領域が重なっている場合**memmove_s**により上書きされる前に、重複領域に元のコピー元のバイトがコピーされるようになります。
 
-場合*dest*場合*src* null ポインター、または」の説明に従って、これらの関数が、無効なパラメーター ハンドラーを呼び出します、コピー先文字列が小さすぎる場合、[パラメーターの検証](../../c-runtime-library/parameter-validation.md) . これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**です。
+場合*dest*場合*src* null ポインター、または」の説明に従って、これらの関数が、無効なパラメーター ハンドラーを呼び出しますコピー先文字列が小さすぎる場合[パラメーターの検証](../../c-runtime-library/parameter-validation.md) . これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**memmove_s**|\<string.h>|
 |**wmemmove_s**|\<wchar.h>|

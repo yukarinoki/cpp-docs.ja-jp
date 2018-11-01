@@ -1,26 +1,16 @@
 ---
-title: 文法の概要の定義 |Microsoft Docs
-ms.custom: ''
+title: 文法の概要での定義
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - preprocessor, definitions
 - preprocessor
 ms.assetid: cc752dc8-6f4e-4347-a556-e0d9ef4c46bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c11f2f839ef806d74eae65c9fc8fe3a71cd2e9c
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 133000c0cc8ef636a3f9752d2f6fc7f1934bd831
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43760818"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521126"
 ---
 # <a name="definitions-for-the-grammar-summary"></a>文法の概要での定義
 
@@ -30,9 +20,9 @@ ms.locfileid: "43760818"
 
 `constant`、*定数式*、*識別子*、*キーワード*、 `operator`、 `punctuator`
 
-オプションのコンポーネントが示される、添字で<sub>opt</sub>します。 たとえば、次の例では、省略可能な式が中かっこで囲まれています。
+省略可能な構成要素には添字 <sub>opt</sub> を付けます。 たとえば、次の例では、省略可能な式が中かっこで囲まれています。
 
-**{** *式*<sub>opt</sub> **}**
+**{** *expression*<sub>opt</sub> **}**
 
 ## <a name="see-also"></a>関連項目
 

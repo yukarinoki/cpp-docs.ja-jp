@@ -1,10 +1,6 @@
 ---
-title: _eof | Microsoft ドキュメント
-ms.custom: ''
+title: _eof
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _eof
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _eof
-dev_langs:
-- C++
 helpviewer_keywords:
 - eof function
 - end of file, testing for
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - testing, for end-of-file
 - end of file
 ms.assetid: 265703f4-d07e-4005-abf3-b1d0cdd9e0b0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7ccad98491762d30db2741f8c3d9fe0d784dc6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1da849c3721d4d83ff0b3166bc18f95728ebf124
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32395125"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50522396"
 ---
 # <a name="eof"></a>_eof
 
@@ -62,13 +52,13 @@ int _eof(
 
 ## <a name="return-value"></a>戻り値
 
-**_eof**されていない場合、現在の位置がファイルの最後または 0 の場合は 1 を返します。 戻り値-1 はエラーです。 を示しますこの例では、無効なパラメーター ハンドラーが呼び出される、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EBADF**、無効なファイル記述子を示します。
+**_eof**でない場合、現在の位置がファイルの最後または 0 の場合は 1 を返します。 戻り値-1 はエラーを示します無効なパラメーター ハンドラーが呼び出されるこの場合、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EBADF**、無効なファイル記述子を示します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Eof**関数では、ファイルの末尾に関連付けられているかどうかを判断*fd*に達しています。
+**_Eof**関数は、ファイルの末尾に関連付けられているかどうかを決定します。 *fd*に達しています。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|オプション ヘッダー|
 |--------------|---------------------|---------------------|

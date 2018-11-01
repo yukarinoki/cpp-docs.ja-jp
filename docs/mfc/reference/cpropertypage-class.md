@@ -50,12 +50,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5d8b1b2253a1355b6065d05052a86181907e4a43
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
-ms.translationtype: MT
+ms.openlocfilehash: bfdc096950e16c912503d95612855211af812cb9
+ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46400602"
+ms.lasthandoff: 10/25/2018
+ms.locfileid: "50060625"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage クラス
 
@@ -121,7 +121,7 @@ class CPropertyPage : public CDialog
 
 `CPropertyPage`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdlgs.h
 
@@ -152,18 +152,15 @@ void Construct(
     UINT nIDTemplate,
     UINT nIDCaption = 0);
 
-
 void Construct(
     LPCTSTR lpszTemplateName,
     UINT nIDCaption = 0);
-
 
 void Construct(
     UINT nIDTemplate,
     UINT nIDCaption,
     UINT nIDHeaderTitle,
     UINT nIDHeaderSubTitle = 0);
-
 
 void Construct(
     LPCTSTR lpszTemplateName,
@@ -214,18 +211,15 @@ void Construct(
 ```
 CPropertyPage();
 
-
 explicit CPropertyPage(
     UINT nIDTemplate,
     UINT nIDCaption = 0,
     DWORD dwSize = sizeof(PROPSHEETPAGE));
 
-
 explicit CPropertyPage(
     LPCTSTR lpszTemplateName,
     UINT nIDCaption = 0,
     DWORD dwSize = sizeof(PROPSHEETPAGE));
-
 
 CPropertyPage(
     UINT nIDTemplate,
@@ -233,7 +227,6 @@ CPropertyPage(
     UINT nIDHeaderTitle,
     UINT nIDHeaderSubTitle = 0,
     DWORD dwSize = sizeof(PROPSHEETPAGE));
-
 
 CPropertyPage(
     LPCTSTR lpszTemplateName,

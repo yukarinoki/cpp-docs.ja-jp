@@ -1,25 +1,15 @@
 ---
-title: コンテナー クラス::erase | Microsoft Docs
-ms.custom: ''
+title: コンテナー クラス::erase
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - erase method
 ms.assetid: abc091c5-5a80-4bd8-93a8-a2d9bde2efec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 368b722f03a68445ddd016705aa8bebc6f33e6f5
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 11e13fc74de779076b40ba338a21a6736eb04e06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842613"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553024"
 ---
 # <a name="container-classerase"></a>コンテナー クラス::erase
 
@@ -40,9 +30,9 @@ iterator erase(
     iterator last);
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-最初のメンバー関数によって示される、被制御シーケンスの要素を削除する *_Where*です。 2 番目のメンバー関数は、範囲 [`first`, `last`) の被制御シーケンスの要素を削除します。 どちらも、削除した要素の後に残る最初の要素を指定する反復子を返します。そのような要素が存在しない場合は、[end](../standard-library/container-class-end.md) を返します。
+最初のメンバー関数が指す被制御シーケンスの要素を削除する *_Where*します。 2 番目のメンバー関数は、範囲 [`first`, `last`) の被制御シーケンスの要素を削除します。 どちらも、削除した要素の後に残る最初の要素を指定する反復子を返します。そのような要素が存在しない場合は、[end](../standard-library/container-class-end.md) を返します。
 
 メンバー関数は、コピー操作が例外をスローする場合にのみ、例外をスローします。
 

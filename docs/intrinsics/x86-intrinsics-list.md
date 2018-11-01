@@ -1,25 +1,15 @@
 ---
-title: x86 組み込み一覧 |Microsoft Docs
-ms.custom: ''
+title: x86 組み込み一覧
 ms.date: 06/01/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, x86
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d3ae21e0c7f39ef1f4b2ab5379c556b987fcf37b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 251e4741f069cf44376c2f6a7ed4e92aa949452b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50560593"
 ---
 # <a name="x86-intrinsics-list"></a>x86 組み込み一覧
 
@@ -29,9 +19,9 @@ ms.locfileid: "46448468"
 
 - ヘッダー ファイル。 多数の組み込みが、ヘッダー ファイル内のコメント内に文書化されています。
 
-- [Intel Intrinsics Guide](https://software.intel.com/sites/landingpage/IntrinsicsGuide/)します。 検索ボックスを使って特定の組み込みを見つけてください。
+- [Intel Intrinsics Guide](https://software.intel.com/sites/landingpage/IntrinsicsGuide/)。 検索ボックスを使って特定の組み込みを見つけてください。
 
-- [Intel 64 および ia-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル](https://software.intel.com/articles/intel-sdm)
+- [Intel 64 and IA-32 Architectures Software Developer Manuals (インテル 64 および IA-32 アーキテクチャ ソフトウェア デベロッパーズ マニュアル)](https://software.intel.com/articles/intel-sdm)
 
 - [Intel アーキテクチャ命令セット拡張機能プログラミング リファレンス](https://software.intel.com/isa-extensions)
 
@@ -1277,4 +1267,4 @@ ms.locfileid: "46448468"
 
 [コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [ARM 組み込み](../intrinsics/arm-intrinsics.md)<br/>
-[x64 (amd64) 組み込み](../intrinsics/x64-amd64-intrinsics-list.md)
+[x64 (amd64) の組み込み](../intrinsics/x64-amd64-intrinsics-list.md)
