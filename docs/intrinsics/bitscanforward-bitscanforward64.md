@@ -1,32 +1,22 @@
 ---
-title: _BitScanForward、_BitScanForward64 |Microsoft Docs
-ms.custom: ''
+title: _BitScanForward、_BitScanForward64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _BitScanForward
 - _BitScanForward_cpp
 - _BitScanForward64_cpp
 - _BitScanForward64
-dev_langs:
-- C++
 helpviewer_keywords:
 - _BitScanForward intrinsic
 - bsf instruction
 - BitScanForward intrinsic
 ms.assetid: 405e60fb-0815-42a7-9b02-6fc035122203
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ad699dc5e209dfae01bdaefdc8184c4cd2149aae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 87bb2a20e786982d8e0c710696f0339f579a84e5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46379685"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440470"
 ---
 # <a name="bitscanforward-bitscanforward64"></a>_BitScanForward、_BitScanForward64
 
@@ -63,7 +53,7 @@ unsigned char _BitScanForward64(
 
 設定済みビットが見つかった場合は、最初に見つかった設定済みビットのビット位置が最初のパラメーターで返されます。 設定済みビットが見つからない場合は 0 が返されます。それ以外の場合は 1 が返されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

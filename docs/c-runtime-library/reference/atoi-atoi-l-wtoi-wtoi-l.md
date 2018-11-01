@@ -1,10 +1,6 @@
 ---
-title: atoi、_atoi_l、_wtoi、_wtoi_l |Microsoft Docs
-ms.custom: ''
+title: atoi、_atoi_l、_wtoi、_wtoi_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtoi
 - _wtoi_l
@@ -30,8 +26,6 @@ f1_keywords:
 - atoi
 - _atoi_l
 - _wtoi_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _atoi_l function
 - ttoi function
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - atoi function
 - wtoi function
 ms.assetid: ad7fda30-28ab-421f-aaad-ef0b8868663a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8ec426518aed278f98ca334ba4ed34830f5836a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b54c0a58a070fa42218a7b048d9eb57b05040738
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397156"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452248"
 ---
 # <a name="atoi-atoil-wtoi-wtoil"></a>atoi、_atoi_l、_wtoi、_wtoi_l
 
@@ -90,19 +80,19 @@ int _wtoi_l(
 
 ## <a name="return-value"></a>戻り値
 
-各関数を返します、 **int**値は、入力文字列を数値として解釈して生成します。 戻り値は 0 です**atoi**と **_wtoi**入力は、その型の値に変換できない場合は、します。
+各関数を返します、 **int**入力文字を数字として解釈して生成された値。 戻り値は 0 です**atoi**と **_wtoi**入力をその型の値に変換できない場合は、します。
 
-大きい負の整数値でオーバーフローの場合**LONG_MIN**が返されます。 **atoi**と **_wtoi**返す**INT_MAX**と**INT_MIN**にこれらの条件。 すべての範囲外の場合、 **errno**に設定されている**ERANGE**です。 パラメーターが渡された場合は、 **NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
+大きい負の整数値によるオーバーフローの場合**LONG_MIN**が返されます。 **atoi**と **_wtoi**返す**INT_MAX**と**INT_MIN**でこれらの条件。 すべての範囲外の場合、 **errno**に設定されている**ERANGE**します。 パラメーターが渡される場合は、 **NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**し 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数では、文字の文字列を整数値に変換 (**atoi**と **_wtoi**)。 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
+これらの関数は、整数値に文字の文字列を変換 (**atoi**と **_wtoi**)。 入力文字列は、指定された型の数値として解釈できる文字シーケンスです。 関数は、数値の一部として認識できない文字に最初に遭遇した時点で入力文字列の読み取りを停止します。 この文字は、文字列を終了する null 文字 ('\0' または L'\0') である場合があります。
 
 *Str*引数**atoi**と **_wtoi**は次の形式があります。
 
-> [*空白*] [*記号*] [*桁*]
+> [*空白*] [*サインオン*] [*桁*]
 
-A*空白*は無視されますスペースまたはタブ文字で構成されています。*記号*いずれかですプラス (+) またはマイナス記号 (-); と*桁*は 1 つ以上の数字です。
+A*空白*は無視されますスペースまたはタブ文字含まれています。*記号*はプラス (+) またはマイナス (–) と*桁*は 1 つ以上の数字。
 
 これらの関数のバージョン、 **_l**現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -113,7 +103,7 @@ A*空白*は無視されますスペースまたはタブ文字で構成され�
 |**_tstoi**|**atoi**|**atoi**|**_wtoi**|
 |**_ttoi**|**atoi**|**atoi**|**_wtoi**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチン|必須ヘッダー|
 |--------------|---------------------|
@@ -122,7 +112,7 @@ A*空白*は無視されますスペースまたはタブ文字で構成され�
 
 ## <a name="example"></a>例
 
-このプログラムを使用して数値の値を文字列として保存されている数値を変換する方法を示しています、 **atoi**関数。
+このプログラムは、文字列として格納されている数字を使用して数値の値に変換する方法を示しています、 **atoi**関数。
 
 ```C
 // crt_atoi.c

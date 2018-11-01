@@ -1,10 +1,6 @@
 ---
-title: _cscanf、_cscanf_l、_cwscanf、_cwscanf_l | Microsoft Docs
-ms.custom: ''
+title: _cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cscanf_l
 - _cscanf
@@ -34,8 +30,6 @@ f1_keywords:
 - _cwscanf_l
 - cscanf_l
 - _tcscanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - _cwscanf function
 - data [C++], reading from the console
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - reading data [C++], from the console
 - _cwscanf_l function
 ms.assetid: dbfe7547-b577-4567-a1cb-893fa640e669
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 851de3810008532efa6683dd29d415560146f274
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 8cb121166ab0103565260538521824d8999425e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451903"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468940"
 ---
 # <a name="cscanf-cscanfl-cwscanf-cwscanfl"></a>_cscanf、_cscanf_l、_cwscanf、_cwscanf_l
 
@@ -105,13 +95,13 @@ int _cwscanf_l(
 
 ## <a name="return-value"></a>戻り値
 
-正常に変換され、割り当てられたフィールドの数。 戻り値には、読まれたが割り当てられなかったフィールドは含まれません。 戻り値は**EOF**のファイルの末尾で読み取ろうとしています。 これは、キーボード入力がオペレーティング システムのコマンド ラインのレベルでリダイレクトされる場合に発生します。 戻り値が 0 の場合は、代入されたフィールドがなかったことを意味します。
+正常に変換され、割り当てられたフィールドの数。 戻り値には、読まれたが割り当てられなかったフィールドは含まれません。 戻り値は**EOF**のファイルの末尾で読み取ろうとします。 これは、キーボード入力がオペレーティング システムのコマンド ラインのレベルでリダイレクトされる場合に発生します。 戻り値が 0 の場合は、代入されたフィールドがなかったことを意味します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Cscanf**関数で指定した位置に、コンソールから直接データを読み取ります*引数*です。 [_getche](getch-getwch.md) 関数は文字を読み取るために使用されます。 省略可能な各パラメーターは、型指定子に対応する型の変数へのポインターである必要があります*形式*です。 形式のコントロールの入力の解釈のフィールドし、同じ形式し、機能、*形式*のパラメーター、 [scanf](scanf-scanf-l-wscanf-wscanf-l.md)関数。 中に **_cscanf**通常、入力文字がエコーされます、行われない場合、最後に呼び出した **_ungetch**です。
+**_Cscanf**関数で指定した位置に、コンソールから直接データを読み取ります*引数*します。 [_getche](getch-getwch.md) 関数は文字を読み取るために使用されます。 省略可能な各パラメーターに型指定子に対応する型の変数へのポインターをする必要があります*形式*します。 書式設定、入力の解釈のフィールドし、同じ形式し、機能、*形式*のパラメーター、 [scanf](scanf-scanf-l-wscanf-wscanf-l.md)関数。 中に **_cscanf**通常、入力文字をエコーする最後の呼び出しがあった場合、行われない **_ungetch**します。
 
-この関数は、パラメーターを検証します。 形式が場合**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**EOF**です。
+この関数は、パラメーターを検証します。 形式が場合**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** 、関数を返します**EOF**します。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
@@ -122,9 +112,9 @@ int _cwscanf_l(
 |**_tcscanf**|**_cscanf**|**_cscanf**|**_cwscanf**|
 |**_tcscanf_l**|**_cscanf_l**|**_cscanf_l**|**_cwscanf_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cscanf**、 **_cscanf_l**|\<conio.h>|
 |**_cwscanf**、 **_cwscanf_l**|\<conio.h> または \<wchar.h>|

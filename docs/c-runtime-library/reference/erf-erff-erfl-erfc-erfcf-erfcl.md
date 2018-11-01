@@ -1,10 +1,6 @@
 ---
-title: erf、erff、erfl、erfc、erfcf、erfcl | Microsoft ドキュメント
-ms.custom: ''
+title: erf、erff、erfl、erfc、erfcf、erfcl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - erff
 - erfl
@@ -26,23 +22,17 @@ f1_keywords:
 - erfl
 - erf
 - erff
-dev_langs:
-- C++
 helpviewer_keywords:
 - erfl function
 - erff function
 - erf function
 ms.assetid: 144d90d3-e437-41c2-a659-cd57596023b5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b7ab1448c3f1d77ab79266858a19d822b1cdb4f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 5723286add75a57844f177b9df5d86eb15080229
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396158"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450055"
 ---
 # <a name="erf-erff-erfl-erfc-erfcf-erfcl"></a>erf、erff、erfl、erfc、erfcf、erfcl
 
@@ -90,19 +80,19 @@ long double erfcl(
 
 ## <a name="return-value"></a>戻り値
 
-**Erf**関数は、ガウスの誤差関数を返します*x*です。 **Erfc**関数返すガウスの相補誤差関数の*x*です。
+**Erf**関数は、ガウスの誤差関数を返します*x*します。 **Erfc**関数返すガウスの相補誤差関数の*x*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **Erf**関数のガウスの誤差関数を計算する*x*、として定義されています。
 
 ![x の誤差関数](media/crt_erf_formula.PNG "CRT_erf_formula")
 
-ガウスの相補誤差関数が 1 - として定義されている erf (x)。 **Erf**関数は、1.0-1.0 の範囲内で値を返します。 エラーの戻り値はありません。 **Erfc**関数は、0 ~ 2 の範囲内で値を返します。 場合*x*が大きすぎて**erfc**、 **errno**に変数が設定されている**ERANGE**です。
+1 - として補完的なガウスの誤差関数が定義されている erf(x) します。 **Erf**関数は、1.0 の場合は-1.0 の範囲の値を返します。 エラーの戻り値はありません。 **Erfc**関数は、0 ~ 2 の範囲の値を返します。 場合*x*に対して大きすぎる**erfc**、 **errno**に変数が設定されている**ERANGE**します。
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**erf**と**erfc**を受け取り、返します**float**と**長い** **二重**型です。 C プログラムでは、 **erf**と**erfc**は、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **erf**と**erfc**を受け取って返す**float**と**長い** **二重**型。 C プログラムで**erf**と**erfc**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

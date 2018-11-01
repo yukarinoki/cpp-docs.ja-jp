@@ -1,33 +1,23 @@
 ---
-title: コンパイラの警告 (レベル 2) C4396 |Microsoft Docs
-ms.custom: ''
+title: コンパイラの警告 (レベル 2) C4396
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4396
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4396
 ms.assetid: 7cd6b283-db17-4574-b299-03e0b913ad70
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fa0a084e90db9d48f517bfe65c6340eb532f0ae6
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 84045ea2c285be8b1c1c9d1fd62b417db00dd29c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46118571"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445319"
 ---
 # <a name="compiler-warning-level-2-c4396"></a>コンパイラの警告 (レベル 2) C4396
 
 "name": フレンド宣言が関数の特殊化を参照している場合、テンプレートのインライン指定子を使用できません
 
-関数テンプレートの特殊化は、のいずれかを指定できません、[インライン](../../cpp/inline-functions-cpp.md)指定子。 コンパイラは、警告 C4396 を発行し、インライン指定子を無視します。
+関数テンプレートの特殊化では、いずれの [インライン](../../cpp/inline-functions-cpp.md) 指定子も指定できません。 コンパイラは、警告 C4396 を発行し、インライン指定子を無視します。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 

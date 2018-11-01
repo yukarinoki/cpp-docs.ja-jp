@@ -1,27 +1,17 @@
 ---
-title: イベント処理インターフェイスを実装する |Microsoft Docs
-ms.custom: ''
+title: イベント処理インターフェイスを実装します。
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - ATL, event handling
 - event handling, ATL
 - interfaces, event and event sink
 ms.assetid: eb2a5b33-88dc-4ce3-bee0-c5c38ea050d7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 57e685ea9ac4b1efc76f7657421d825b83f4a9b7
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 0e676076e09620cb3e69e788549d808be4f6df1c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078623"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455459"
 ---
 # <a name="implementing-the-event-handling-interface"></a>イベント処理インターフェイスを実装します。
 

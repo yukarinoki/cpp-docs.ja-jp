@@ -1,27 +1,17 @@
 ---
-title: WINDOWPOS 構造体 |Microsoft Docs
-ms.custom: ''
+title: WINDOWPOS 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - WINDOWPOS
-dev_langs:
-- C++
 helpviewer_keywords:
 - WINDOWPOS structure [MFC]
 ms.assetid: a4ea7cd9-c4c2-4480-9c55-cbbff72195e1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36e640187a87f3776a67a072e2fe77c141ed23f0
-ms.sourcegitcommit: 3f4e92266737ecb70507871e87dc8e2965ad7e04
+ms.openlocfilehash: 16d9122a4141d2516118304fcdb4dd1b8fc14421
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49334578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50439430"
 ---
 # <a name="windowpos-structure"></a>WINDOWPOS 構造体
 
@@ -90,7 +80,7 @@ typedef struct tagWINDOWPOS { /* wp */
 
 - SWP_SHOWWINDOW ウィンドウを表示します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** winuser.h
 

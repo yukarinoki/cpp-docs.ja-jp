@@ -1,14 +1,8 @@
 ---
-title: 保存と読み込み、さまざまなカラー パレット (アイコン用イメージ エディター) |Microsoft Docs
-ms.custom: ''
+title: さまざまなカラー パレットの保存と読み込み (アイコン用イメージ エディター)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
-dev_langs:
-- C++
 helpviewer_keywords:
 - color palettes [C++]
 - palettes
@@ -16,17 +10,12 @@ helpviewer_keywords:
 - colors [C++], Image editor
 - Image editor [C++], palettes
 ms.assetid: 694b6346-e606-4f19-aa01-9b4ceb47f423
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 50e74c65e080b11583e6ff1e591ef612b17e9533
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 847004210d5c0672fe013c51e59de5c9f849f977
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46438887"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447984"
 ---
 # <a name="saving-and-loading-different-color-palettes-image-editor-for-icons"></a>さまざまなカラー パレットの保存と読み込み (アイコン用イメージ エディター)
 
@@ -49,7 +38,7 @@ ms.locfileid: "46438887"
 
 2. [カラー パレットの読み込み ダイアログ ボックス](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md)、適切なディレクトリに移動し、読み込むパレットを選択します。 **色**パレットは、拡張子 .pal と共に保存されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 
