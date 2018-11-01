@@ -1,28 +1,18 @@
 ---
-title: char、wchar_t、char16_t、char32_t |Microsoft Docs
-ms.custom: ''
+title: char、wchar_t、char16_t、char32_t
 ms.date: 02/14/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - char_cpp
 - char16_t_cpp
 - wchar_t_cpp
 - char32_t_cpp
-dev_langs:
-- C++
 ms.assetid: 6b33e9f5-455b-4e49-8f12-a150cbfe2e5b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9855dc406c56f82eb3ed87248316103397e44007
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 542751cdbd5bb21bb70467163c823e2669373e24
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46112656"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663237"
 ---
 # <a name="char-wchart-char16t-char32t"></a>char、wchar_t、char16_t、char32_t
 
@@ -39,7 +29,7 @@ char32_t ch4{ U'a' };
 
 ## <a name="remarks"></a>Remarks
 
-**char** 型は、C および C++ に由来する文字型です。 **unsigned char**型はC ++で組み込み型ではない*バイト*を表現するためによく使用されます。 **char**型は、ASCII文字セットやISO-8859文字セットのいずれかの文字、Shift-JISやUnicode文字セットのUTF-8エンコーディングなどのマルチバイト文字の個々のバイトを格納するために使用できます。 **char**型の文字列は、マルチ バイト文字のエンコードに使用する場合でも、ナロー文字列と*呼ばれます*。 Microsoftコンパイラでは、**char** は8ビット型です。
+**char** 型は、C および C++ に由来する文字型です。 **unsigned char**型はC ++で組み込み型ではない*バイト*を表現するためによく使用されます。 **char**型は、ASCII文字セットやISO-8859文字セットのいずれかの文字、Shift-JISやUnicode文字セットのUTF-8エンコーディングなどのマルチバイト文字の個々のバイトを格納するために使用できます。 **char**型の文字列は、マルチ バイト文字のエンコードに使用する場合でも、ナロー文字列と*呼ばれます*。 Microsoft コンパイラで**char**は、8 ビット型です。
 
 **wchar_t**型は、ワイド文字の実装定義型です。 Microsoft コンパイラでするのに対して、UTF 16LE としてエンコードされた Unicode の格納に使用する 16 ビットのワイド文字を表す Windows オペレーティング システムでネイティブ文字の種類。 ユニバーサル C ランタイム (UCRT) ライブラリの関数の使用方法のワイド文字バージョン**wchar_t**し、そのポインターと配列の型パラメーターと戻り値としては、ネイティブ Windows API のワイド文字バージョンです。
 

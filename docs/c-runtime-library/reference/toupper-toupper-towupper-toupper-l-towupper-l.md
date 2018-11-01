@@ -1,10 +1,6 @@
 ---
-title: toupper、_toupper、towupper、_toupper_l、_towupper_l | Microsoft Docs
-ms.custom: ''
+title: toupper、_toupper、towupper、_toupper_l、_towupper_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _toupper_l
 - towupper
@@ -29,8 +25,6 @@ f1_keywords:
 - _toupper
 - _totupper
 - toupper
-dev_langs:
-- C++
 helpviewer_keywords:
 - _toupper function
 - towupper function
@@ -47,16 +41,12 @@ helpviewer_keywords:
 - characters, converting
 - toupper function
 ms.assetid: cdef1b0f-b19c-4d11-b7d2-cf6334c9b6cc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 73157691cc1635d038339d9fe707aa535e1df93f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7e0ae3f1c69b0e5f77ea2ed8141a93867fd43b33
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413461"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608892"
 ---
 # <a name="toupper-toupper-towupper-toupperl-towupperl"></a>toupper、_toupper、towupper、_toupper_l、_towupper_l
 
@@ -94,19 +84,19 @@ int _towupper_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンは変換のコピー *c*、可能であれば、結果を返します。
+これらの各ルーチンのコピーを変換*c*、可能な場合、結果を返します。
 
-場合*c*をワイド文字は、 **iswlower**は 0 以外の場合は、対応するワイド文字があると[iswupper](isupper-isupper-l-iswupper-iswupper-l.md) 0 以外の場合、 **towupper** 、対応するワイド文字を返しますそれ以外の場合、 **towupper**返します*c*変更されません。
+場合*c*をワイド文字は、 **iswlower**が 0 以外の場合は、対応するワイド文字があると[iswupper](isupper-isupper-l-iswupper-iswupper-l.md) 0 以外の場合、 **towupper**は対応するワイド文字を返しますそれ以外の場合、 **towupper**返します*c*変更されません。
 
 エラーを示す戻り値は予約されていません。
 
-順序で**toupper**を期待どおりの結果を出す[_ _isascii](isascii-isascii-iswascii.md)と[islower](islower-iswlower-islower-l-iswlower-l.md)必要がありますどちらも 0 以外を返します。
+順序で**toupper**予想どおりの結果を[_ _isascii](isascii-isascii-iswascii.md)と[islower](islower-iswlower-islower-l-iswlower-l.md)がどちらも返す 0 以外の値。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの各ルーチンは、変換が可能で適切な場合に、指定した小文字を適宜大文字に変換します。 大文字/小文字変換**towupper**ロケールに固有です。 現在のロケールに関連する文字の大文字/小文字のみが変換されます。 せず、関数、 **_l**サフィックスを使用して、現在設定されているロケール。 これらの関数のバージョン、 **_l**サフィックスは、ロケールをパラメーターとして受け取るし、現在設定されているの代わりに使用するロケール。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの各ルーチンは、変換が可能で適切な場合に、指定した小文字を適宜大文字に変換します。 大文字/小文字変換**towupper**ロケールに固有です。 現在のロケールに関連する文字の大文字/小文字のみが変換されます。 せず、関数、 **_l**サフィックスを使用して、現在設定されているロケール。 これらの関数のバージョン、 **_l**サフィックス ロケールをパラメーターとして受け取って現在設定されているのではなく使用するロケール。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-順序で**toupper**を期待どおりの結果を出す[_ _isascii](isascii-isascii-iswascii.md)と[isupper](isupper-isupper-l-iswupper-iswupper-l.md)必要がありますどちらも 0 以外を返します。
+順序で**toupper**予想どおりの結果を[_ _isascii](isascii-isascii-iswascii.md)と[isupper](isupper-isupper-l-iswupper-iswupper-l.md)がどちらも返す 0 以外の値。
 
 [データ変換ルーチン](../../c-runtime-library/data-conversion.md)
 
@@ -118,11 +108,11 @@ int _towupper_l(
 |**変数**|**_toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 > [!NOTE]
-> **_toupper_l**と **_towupper_l**ないロケール依存性があり、直接呼び出すことはできません。 内部で使用して提供される**変数**です。
+> **_toupper_l**と **_towupper_l**ロケールの依存関係はありません。 して直接呼び出すためのものではありません。 による内部使用に提供されます**変数**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**toupper**|\<ctype.h>|
 |**_toupper**|\<ctype.h>|

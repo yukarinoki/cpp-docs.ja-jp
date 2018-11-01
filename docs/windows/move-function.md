@@ -1,28 +1,18 @@
 ---
-title: 関数の移動 |Microsoft Docs
-ms.custom: ''
+title: Move 関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - internal/Microsoft::WRL::Details::Move
-dev_langs:
-- C++
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 6284ae68ef1c83a00a4d74488c48d4ea81a153ba
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a53dbbe54cef2ac2557648e66e5d8dafc4fb4768
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46439706"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591361"
 ---
 # <a name="move-function"></a>Move 関数
 
@@ -55,7 +45,7 @@ inline typename RemoveReference<T>::Type&& Move(
 
 詳細については、次を参照してください。、**移動セマンティクス**の[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** internal.h
 

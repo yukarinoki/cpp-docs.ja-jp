@@ -1,10 +1,6 @@
 ---
-title: free | Microsoft Docs
-ms.custom: ''
+title: free
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - free
 apilocation:
@@ -22,22 +18,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - free
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, deallocating
 - free function
 ms.assetid: 74ded9cf-1863-432e-9306-327a42080bb8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 35a1ae1a27b08db14673b125ecbc2978fd4738a3
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: f56212874f05ea5d4ab7bd826a7a4c145551dfc0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100484"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621235"
 ---
 # <a name="free"></a>free
 
@@ -53,7 +43,7 @@ void free(
 
 ### <a name="parameters"></a>パラメーター
 
-*_expand*<br/>
+*memblock*<br/>
 以前割り当てられ、解放されるメモリ ブロック。
 
 ## <a name="remarks"></a>Remarks
@@ -70,7 +60,7 @@ void free(
 
 [_malloca](malloca.md) を使用して割り当てられたメモリを解放するには、[_freea](freea.md) を使用します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

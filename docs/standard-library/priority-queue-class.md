@@ -1,10 +1,6 @@
 ---
-title: priority_queue クラス | Microsoft Docs
-ms.custom: ''
+title: priority_queue クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - queue/std::priority_queue::container_type
 - queue/std::priority_queue::size_type
@@ -14,8 +10,6 @@ f1_keywords:
 - queue/std::priority_queue::push
 - queue/std::priority_queue::size
 - queue/std::priority_queue::top
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::priority_queue [C++], container_type
 - std::priority_queue [C++], size_type
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8e431b09d0eab84bd6b58e64f71d5f5d98b728fa
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 1b276f427fc127fb04f4f8e09f0278033ef64754
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714364"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677176"
 ---
 # <a name="priorityqueue-class"></a>priority_queue クラス
 
@@ -83,7 +73,7 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 |-|-|
 |[priority_queue](#priority_queue)|空であるか、基本のコンテナー オブジェクトまたはその他の `priority_queue` の範囲のコピーである `priority_queue` を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -101,7 +91,7 @@ C++ 標準ライブラリで定義されたコンテナー アダプターには
 |[size](#size)|`priority_queue` 内の要素数を返します。|
 |[top](#top)|`priority_queue` の最上位にある最大要素への const 参照を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<queue>
 

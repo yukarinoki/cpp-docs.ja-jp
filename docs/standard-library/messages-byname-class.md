@@ -1,27 +1,17 @@
 ---
-title: messages_byname クラス | Microsoft Docs
-ms.custom: ''
+title: messages_byname クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocmes/std::messages_byname
-dev_langs:
-- C++
 helpviewer_keywords:
 - messages_byname class
 ms.assetid: c6c64841-3e80-43c8-b54c-fed41833ad6b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e03cb627e7e9db40d56a69112977d87141626696
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7b341f3e1dbf76021911c70560b83932b5302191
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100445"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605332"
 ---
 # <a name="messagesbyname-class"></a>messages_byname クラス
 
@@ -59,7 +49,7 @@ protected:
 
 名前付きのロケールでその動作が決まります *_Locname*します。 各コンストラクターは、[messages](../standard-library/messages-class.md#messages)\<CharType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

@@ -1,29 +1,19 @@
 ---
-title: '安全なライブラリ: C++ 標準ライブラリ | Microsoft Docs'
-ms.custom: ''
+title: '安全なライブラリ: C++ 標準ライブラリ'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - _SCL_SECURE_NO_DEPRECATE
-dev_langs:
-- C++
 helpviewer_keywords:
 - Safe Libraries
 - Safe Libraries, C++ Standard Library
 - Safe C++ Standard Library
 ms.assetid: 3993340f-1f29-4d81-b3f5-52a52bc8e148
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a139be1598dfdeaaece5c4b2cf8d253beb754ff
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 340d300efb442fedb18b738c275bc0a79f874991
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33859047"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630725"
 ---
 # <a name="safe-libraries-c-standard-library"></a>安全なライブラリ: C++ 標準ライブラリ
 
@@ -33,7 +23,7 @@ C++ 標準ライブラリに含まれる一部のメソッドは、バッファ�
 
 反復子とアルゴリズムにも、安全性を向上するためのいくつかの機能強化が行われています。 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」、「[反復子のデバッグのサポート](../standard-library/debug-iterator-support.md)」、および「[_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 次の表に、潜在的な危険性のある C++ 標準ライブラリのメソッドと、それと同等な安全なメソッドを示します。
 

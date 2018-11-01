@@ -1,27 +1,17 @@
 ---
-title: コネクション マップ |Microsoft Docs
-ms.custom: ''
+title: コネクション マップ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.maps
-dev_langs:
-- C++
 helpviewer_keywords:
 - connection maps
 ms.assetid: 1f25a9bc-6d09-4614-99cf-dc38e8ddfa73
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1af235a597b70ac736ccd11de429d99e184d37b6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 388b3d1961f9c7cf3598db08a986c2205ac34bc5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399640"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624810"
 ---
 # <a name="connection-maps"></a>コネクション マップ
 
@@ -72,7 +62,7 @@ BEGIN_CONNECTION_PART(theClass, localClass)
 
 クラスのメンバー関数を定義する宣言 (.h) ファイル、BEGIN_CONNECTION_PART マクロでは、接続ポイントを起動し、CONNECTION_IID マクロおよびを実装するその他のメンバー関数を追加して、接続を完了END_CONNECTION_PART マクロを含むマップをポイントします。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -89,7 +79,7 @@ END_CONNECTION_PART(localClass)
 *マクロ*<br/>
 ローカル接続ポイントを実装するクラスの名前を指定します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -114,7 +104,7 @@ CONNECTION_IID(iid)
 
 呼び出す接続ポイントを指定します、`ISinkInterface`インターフェイス。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -130,7 +120,7 @@ DECLARE_CONNECTION_MAP()
 
 コントロールは、追加の点をサポートする場合は、クラスの宣言の最後に DECLARE_CONNECTION_MAP マクロを使用します。 次に、クラスのメンバー関数を定義する .cpp ファイル、BEGIN_CONNECTION_MAP マクロ、CONNECTION_PART マクロの各コントロールの接続ポイント、および使用 END_CONNECTION_MAP マクロ接続マップの最後を宣言します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -154,7 +144,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 
 実装 (します。メンバーを定義する CPP) ファイルは、クラスの関数、BEGIN_CONNECTION_MAP マクロでは、接続のマップを開始しを使用して、接続ポイントの各マクロのエントリを追加、 [CONNECTION_PART](#connection_part)マクロ。 接続マップを最後に、完了、 [END_CONNECTION_MAP](#end_connection_map)マクロ。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -166,7 +156,7 @@ BEGIN_CONNECTION_MAP(theClass, theBase)
 END_CONNECTION_MAP()
 ```
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -197,7 +187,7 @@ CONNECTION_PART(theClass, iid, localClass)
 
 呼び出す接続ポイントとの接続マップを実装、`IID_ISinkInterface`インターフェイス。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdisp.h
 
@@ -239,7 +229,7 @@ BOOL AFXAPI AfxConnectionAdvise(
 
 [!code-cpp[NVC_MFCConnectionPoints#8](../../mfc/codesnippet/cpp/connection-maps_3.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxctl.h
 
@@ -281,7 +271,7 @@ True に設定して、接続の切断する必要がありますの参照カウ
 
 [!code-cpp[NVC_MFCConnectionPoints#9](../../mfc/codesnippet/cpp/connection-maps_4.cpp)]
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxctl.h
 

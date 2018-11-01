@@ -1,31 +1,21 @@
 ---
-title: '&lt;typeinfo&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;typeinfo&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - typeinfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - typeinfo header
 ms.assetid: 97ebc4d0-0e0e-41c3-9787-fdef2e38e56f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cb353276892dfadbdfcea1c03816d6735481aeef
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cb793bdc4bacec5ad21d1cbbed21f871370cb40e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647032"
 ---
 # <a name="lttypeinfogt"></a>&lt;typeinfo&gt;
 
-標準ヘッダーをインクルード\<typeinfo > 型を識別演算子に関連付けられているいくつかの型を定義する[typeid 演算子](../cpp/typeid-operator.md)について、静的および動的な型を生成します。
+標準ヘッダーを含める\<typeinfo > 型識別演算子に関連付けられているいくつかの型を定義する[typeid 演算子](../cpp/typeid-operator.md)、静的および動的の両方の種類の情報を生成します。
 
 ## <a name="syntax"></a>構文
 
@@ -34,7 +24,7 @@ ms.locfileid: "33853428"
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 \<typeinfo> で定義されるクラスの詳細については、次のトピックをご覧ください。
 

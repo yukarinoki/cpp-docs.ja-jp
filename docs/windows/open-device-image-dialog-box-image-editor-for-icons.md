@@ -1,28 +1,17 @@
 ---
-title: 開いている&lt;デバイス&gt;画像 ダイアログ ボックス (C++) (アイコン用イメージ エディター) |Microsoft Docs
-ms.custom: ''
+title: 開いている&lt;デバイス&gt;画像 ダイアログ ボックス (C++) (アイコン用イメージ エディター)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.opendeviceimage
-dev_langs:
-- C++
 helpviewer_keywords:
 - Open <Device> Image dialog box [C++]
 ms.assetid: 27cb60ec-8704-4e58-ab1c-8cc3b34e66be
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: b87de96f260bdd5bf0faaad6c590b0bd3d6f0dfe
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 93167712f2cdf79e21200567e17b7c08622b94d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395012"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604452"
 ---
 # <a name="open-ltdevicegt-image-dialog-box-c-image-editor-for-icons"></a>開いている&lt;デバイス&gt;画像 ダイアログ ボックス (C++) (アイコン用イメージ エディター)
 
@@ -32,7 +21,7 @@ ms.locfileid: "46395012"
 
 リソースに含まれるイメージを一覧表示します。 開きたい画像の種類を選択します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

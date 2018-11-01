@@ -1,10 +1,6 @@
 ---
-title: __max | Microsoft Docs
-ms.custom: ''
+title: __max
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __max
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - max
 - __max
-dev_langs:
-- C++
 helpviewer_keywords:
 - max macro
 - maximum macro
 - __max macro
 ms.assetid: 05c936f6-0e22-45d6-a58d-4bc102e9dae2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d223f4288ccf40646e8f560cec7243b7e8f9f649
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 32e1207ea4bb030ac5303de32c0566f98e0596a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398420"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613760"
 ---
 # <a name="max"></a>__max
 
@@ -59,13 +49,13 @@ ms.locfileid: "32398420"
 
 **_ _max**引数のうち、大きい方を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Max**マクロが 2 つの値を比較しより大きな 1 つの値を返します。 引数には、符号付きまたは符号なしのすべての数値データ型を指定できます。 引数と戻り値はともに同じデータ型である必要があります。
+**_Max**マクロは、2 つの値を比較しより大きな 1 つの値を返します。 引数には、符号付きまたは符号なしのすべての数値データ型を指定できます。 引数と戻り値はともに同じデータ型である必要があります。
 
-返される引数は、マクロが 2 回評価されます。 引数が式など、評価されるときに、その値を変更する場合、予期しない結果につながります`*p++`です。
+返される引数は、マクロで 2 回評価されます。 これにより、予期しない結果がそれを評価するときなど、その値を変更する式の引数の場合`*p++`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |マクロ|必須ヘッダー|
 |-------------|---------------------|

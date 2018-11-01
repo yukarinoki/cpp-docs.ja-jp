@@ -1,26 +1,16 @@
 ---
-title: '方法: 減少変数を使用して、同時実行ランタイムを使用する OpenMP ループを変換 |Microsoft Docs'
-ms.custom: ''
+title: '方法: 減少変数を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting from OpenMP to the Concurrency Runtime, reduction variables
 - reduction variables, converting from OpenMP to the Concurrency Runtime
 ms.assetid: 96623f36-5e57-4d3f-8c13-669e6cd535b1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8f9989e115bfdbe296bebb3f24bff39abfcc6ebb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b58f6025c41091b39375c566d2c1d4b4798437b2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46406985"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633078"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-a-reduction-variable-to-use-the-concurrency-runtime"></a>方法: 減少変数を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する
 
@@ -32,7 +22,7 @@ OpenMP `reduction` 句を使用すると、並列領域の最後にあるリダ�
 
 ## <a name="example"></a>例
 
-この例では、OpenMP と同時実行ランタイムの両方を使用して、最初の 35 個のフィボナッチ数の合計を計算します。
+この例では、OpenMP とコンカレンシー ランタイムの両方を使用して、最初の 35 個のフィボナッチ数の合計を計算します。
 
 [!code-cpp[concrt-openmp#7](../../parallel/concrt/codesnippet/cpp/convert-an-openmp-loop-that-uses-a-reduction-variable_1.cpp)]
 

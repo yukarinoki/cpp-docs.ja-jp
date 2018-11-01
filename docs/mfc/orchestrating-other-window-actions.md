@@ -1,12 +1,6 @@
 ---
-title: その他のウィンドウの動作の調整 |Microsoft Docs
-ms.custom: ''
+title: ほかのウィンドウの動作の調整
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - frame windows [MFC], print preview
 - context-sensitive Help [MFC], frame windows
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - frame windows [MFC], semimodal states
 - context-sensitive Help [MFC]
 ms.assetid: 5f34eea8-2bf8-4479-95c7-45e8f443db8f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c689504efbafe40cce54b9c333724a1390925cf9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ab034f8c22f99c166f41bb47107bda83eef439b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375841"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50657289"
 ---
 # <a name="orchestrating-other-window-actions"></a>ほかのウィンドウの動作の調整
 

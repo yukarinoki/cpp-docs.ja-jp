@@ -1,28 +1,18 @@
 ---
-title: _ReturnAddress |Microsoft Docs
-ms.custom: ''
+title: _ReturnAddress
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _ReturnAddress
-dev_langs:
-- C++
 helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c739590e5e208d9f83fa059f191ae80612a0dbd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 01916a9306faa4159f54225b745fd56c35b5ae16
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46380875"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50641784"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 
@@ -36,7 +26,7 @@ ms.locfileid: "46380875"
 
 ときに`_ReturnAddress`でコンパイルされたプログラムで使用[/clr](../build/reference/clr-common-language-runtime-compilation.md)、関数を含む、`_ReturnAddress`呼び出しは、ネイティブ関数としてコンパイルされます。 含まれる関数呼び出しとして関数をコンパイルするときに管理されている`_ReturnAddress`、`_ReturnAddress`期待どおりに動作しない可能性があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー ファイル** \<intrin.h >
 

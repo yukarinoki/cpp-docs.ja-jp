@@ -1,27 +1,17 @@
 ---
-title: moneypunct_byname クラス | Microsoft Docs
-ms.custom: ''
+title: moneypunct_byname クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocmon/std::moneypunct_byname
-dev_langs:
-- C++
 helpviewer_keywords:
 - moneypunct_byname class
 ms.assetid: e8a544d2-6aee-420d-b513-deb385c9b416
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2e4720ac87884a079bbc2ede6b625658adb9c29c
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 003ba2136e779c444c7edad9b1759a861a8b0803
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33858563"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50574436"
 ---
 # <a name="moneypunctbyname-class"></a>moneypunct_byname クラス
 
@@ -48,11 +38,11 @@ protected:
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 その動作は名前付きのロケール `_Locname` で決まります。 各コンストラクターは、[moneypunct](../standard-library/moneypunct-class.md#moneypunct)\<CharType, Intl>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

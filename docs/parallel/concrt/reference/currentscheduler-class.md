@@ -1,10 +1,6 @@
 ---
-title: CurrentScheduler クラス |Microsoft Docs
-ms.custom: ''
+title: CurrentScheduler クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - CurrentScheduler
 - CONCRT/concurrency::CurrentScheduler
@@ -18,21 +14,15 @@ f1_keywords:
 - CONCRT/concurrency::CurrentScheduler::IsAvailableLocation
 - CONCRT/concurrency::CurrentScheduler::RegisterShutdownEvent
 - CONCRT/concurrency::CurrentScheduler::ScheduleTask
-dev_langs:
-- C++
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27c295f1cf8c6d02721a999c46ce02d961cc3702
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46419023"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619181"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler クラス
 
@@ -56,7 +46,7 @@ class CurrentScheduler;
 |[Get](#get)|現在のスケジューラとも呼ばれます、呼び出し元コンテキストに関連付けられたスケジューラへのポインターを返します。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|呼び出し元のコンテキストに関連付けられているスケジューラの仮想プロセッサの現在の数を返します。|
 |[GetPolicy](#getpolicy)|現在のスケジューラが作成されたポリシーのコピーを返します。|
-|[Id](#id)|現在のスケジューラの一意識別子を返します。|
+|[ID](#id)|現在のスケジューラの一意識別子を返します。|
 |[IsAvailableLocation](#isavailablelocation)|特定の場所は、現在のスケジューラに収録されているかどうかを判断します。|
 |[RegisterShutdownEvent](#registershutdownevent)|Windows のイベント ハンドルが渡された原因、`_ShutdownEvent`パラメーターがシグナル状態に、現在のコンテキストに関連付けられているスケジューラがシャット ダウンし、それ自体を破棄します。 イベントがシグナル状態に、スケジューラにスケジュールされていたすべての作業が完了しました。 このメソッドは、複数のシャット ダウン イベントを登録できます。|
 |[ScheduleTask](#scheduletask)|オーバーロードされます。 呼び出し元のコンテキストに関連付けられたスケジューラ内での軽量タスクをスケジュールします。 軽量タスクは、ランタイムによって決定スケジュール グループに配置されます。 パラメーターを受け取るバージョン`_Placement`タスクが実行指定した位置に重きをさせます。|
@@ -69,7 +59,7 @@ class CurrentScheduler;
 
 `CurrentScheduler`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** concrt.h
 

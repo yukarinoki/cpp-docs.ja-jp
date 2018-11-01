@@ -1,10 +1,6 @@
 ---
-title: acos、acosf、acosl | Microsoft Docs
-ms.custom: ''
+title: acos、acosf、acosl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - acosf
 - acos
@@ -28,8 +24,6 @@ f1_keywords:
 - acosf
 - math/acosf
 - math/acosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - acos function
 - acosl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - arccosine function
 ms.assetid: 00b89c48-8faf-4824-aa95-fa4349a4975d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b645d7ab779a7d8c3f655c84a33a8916563c47a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 22149e9ff552015238d34a15166d04115438534b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46059865"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50636593"
 ---
 # <a name="acos-acosf-acosl"></a>acos、acosf、acosl
 
@@ -86,7 +76,7 @@ long double acos( long double x );   // C++ only
 
 オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **acos**を受け取って返す**float**と**長い****二重**型。 C プログラムで**acos**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|

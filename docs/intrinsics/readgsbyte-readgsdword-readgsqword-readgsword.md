@@ -1,33 +1,23 @@
 ---
-title: _ _readgsbyte、_ _readgsdword、_ _readgsqword、_ _readgsword |Microsoft Docs
-ms.custom: ''
+title: __readgsbyte、__readgsdword、__readgsqword、__readgsword
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __readgsbyte
 - __readgsdword
 - __readgsqword
 - __readgsword
-dev_langs:
-- C++
 helpviewer_keywords:
 - __readgsword intrinsic
 - __readgsdword intrinsic
 - __readgsqword intrinsic
 - __readgsbyte intrinsic
 ms.assetid: f822632d-854c-4558-a71b-cdfc3eea2236
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8afe4d646e77e87c1c679d8b7e3bd09679c7b16d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b3e5664064f9c32d6c5f5a1e6751712bc36cc7b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46414551"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668560"
 ---
 # <a name="readgsbyte-readgsdword-readgsqword-readgsword"></a>__readgsbyte、__readgsdword、__readgsqword、__readgsword
 
@@ -38,17 +28,17 @@ GS セグメントの先頭の相対オフセットで指定された場所か�
 ## <a name="syntax"></a>構文
 
 ```
-unsigned char __readgsbyte( 
-   unsigned long Offset 
+unsigned char __readgsbyte( 
+   unsigned long Offset 
 );
-unsigned short __readgsword( 
-   unsigned long Offset 
+unsigned short __readgsword( 
+   unsigned long Offset 
 );
-unsigned long __readgsdword( 
+unsigned long __readgsdword( 
    unsigned long Offset
 );
-unsigned __int64 __readgsqword( 
-   unsigned long Offset 
+unsigned __int64 __readgsqword( 
+   unsigned long Offset 
 );
 ```
 
@@ -61,7 +51,7 @@ unsigned __int64 __readgsqword(
 
 メモリの内容をバイト、ワード、ダブルワード、quadword (として呼び出される関数の名前で示されます) の場所に`GS:[Offset]`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

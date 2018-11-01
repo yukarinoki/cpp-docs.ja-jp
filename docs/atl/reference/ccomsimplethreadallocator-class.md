@@ -1,32 +1,22 @@
 ---
-title: CComSimpleThreadAllocator クラス |Microsoft Docs
-ms.custom: ''
+title: CComSimpleThreadAllocator クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComSimpleThreadAllocator
 - ATLBASE/ATL::CComSimpleThreadAllocator
 - ATLBASE/ATL::CComSimpleThreadAllocator::GetThread
-dev_langs:
-- C++
 helpviewer_keywords:
 - threading [ATL], selecting threads
 - ATL threads
 - CComSimpleThreadAllocator class
 - ATL threads, allocating
 ms.assetid: 66b2166a-8c50-49fd-b8e4-7f293470327d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1538d5148eeb1eb95c51150a43ef5dd7b107cae3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1644014048b27b7ab6076783c5025140527a7ff5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46033551"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50637542"
 ---
 # <a name="ccomsimplethreadallocator-class"></a>CComSimpleThreadAllocator クラス
 
@@ -50,7 +40,7 @@ class CComSimpleThreadAllocator
 
 `CComSimpleThreadAllocator` スレッドの選択を管理[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)します。 `CComSimpleThreadAllocator::GetThread` 単に各スレッドが繰り返しし、シーケンス内の次の 1 つ返されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 

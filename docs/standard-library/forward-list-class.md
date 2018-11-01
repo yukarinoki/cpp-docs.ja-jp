@@ -1,10 +1,6 @@
 ---
-title: forward_list クラス | Microsoft ドキュメント
-ms.custom: ''
+title: forward_list クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - forward_list/std::forward_list
 - forward_list/std::forward_list::allocator_type
@@ -44,8 +40,6 @@ f1_keywords:
 - forward_list/std::forward_list::splice_after
 - forward_list/std::forward_list::swap
 - forward_list/std::forward_list::unique
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::forward_list
 - std::forward_list::allocator_type
@@ -86,16 +80,12 @@ helpviewer_keywords:
 - std::forward_list::swap
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 017d5d5c2934fa687f91898b896a0ad6f1dcab6f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a818be72266e2cb8471c2eb29a6e058b8dd3ef7d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50612044"
 ---
 # <a name="forwardlist-class"></a>forward_list クラス
 
@@ -133,7 +123,7 @@ A`forward_list`割り当ておよび解放クラスの格納されているオ�
 |-|-|
 |[forward_list](#forward_list)|`forward_list` 型のオブジェクトを構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -186,7 +176,7 @@ A`forward_list`割り当ておよび解放クラスの格納されているオ�
 |-|-|
 |[operator=](#op_eq)|別の前方リストのコピーで前方リストの要素を置き換えます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<forward_list>
 
@@ -884,7 +874,7 @@ void splice_after(
 *Where*<br/>
 ターゲットの forward_list 内の挿入位置の直前の位置。
 
-*Source*<br/>
+*ソース*<br/>
 ターゲットの forward_list に挿入されるソースの forward_list。
 
 *Iter*<br/>

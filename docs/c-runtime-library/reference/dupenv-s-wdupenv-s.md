@@ -1,10 +1,6 @@
 ---
-title: _dupenv_s、_wdupenv_s | Microsoft Docs
-ms.custom: ''
+title: _dupenv_s、_wdupenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _dupenv_s
 - _wdupenv_s
@@ -28,8 +24,6 @@ f1_keywords:
 - dupenv_s
 - _tdupenv_s
 - _wdupenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _dupenv_s function
 - _tdupenv_s function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - dupenv_s function
 - tdupenv_s function
 ms.assetid: b729ecc2-a31d-4ccf-92a7-5accedb8f8c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a918b866b0b43fb0e6b31e2deb5d9861dabe9a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc8af3282b57c9fa411aac97f5fa4d414bc3305b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402115"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646501"
 ---
 # <a name="dupenvs-wdupenvs"></a>_dupenv_s、_wdupenv_s
 
@@ -78,7 +68,7 @@ errno_t _wdupenv_s(
 変数の値を格納するバッファー。
 
 *numberOfElements*<br/>
-サイズ*バッファー*です。
+サイズ*バッファー*します。
 
 *varname*<br/>
 環境変数名。
@@ -87,26 +77,26 @@ errno_t _wdupenv_s(
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-これらの関数は、パラメーターを検証します。場合*バッファー*または*varname*は**NULL**、」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、この関数が設定**errno**に**EINVAL**返す**EINVAL**です。
+これらの関数は、パラメーターを検証します。場合*バッファー*または*varname*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
 
-これらの関数は、十分なメモリを割り当てることはできません、入れもの*バッファー*に**NULL**と*numberOfElements* 0 であり、戻り値に**ENOMEM**です。
+設定する場合、これらの関数は、十分なメモリを割り当てることはできません、*バッファー*に**NULL**と*numberOfElements* 0、および戻り値に**ENOMEM**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Dupenv_s**関数は、環境変数の一覧を検索*varname*です。 見つかった場合は、変数は、 **_dupenv_s**バッファーを割り当てられ、バッファーに変数の値をコピーします。 バッファーのアドレスと長さがで返される*バッファー*と*numberOfElements*です。 自体は、バッファーを割り当てることによって **_dupenv_s**する方が便利な代替手段[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)です。
+**_Dupenv_s**関数用の環境変数の一覧を検索する*varname*します。 変数が見つかった場合 **_dupenv_s**はバッファーを割り当てるし、変数の値をバッファーにコピーします。 バッファーのアドレスと長さがで返される*バッファー*と*numberOfElements*します。 バッファー自体を割り当てることによって **_dupenv_s**に代わるより便利な手段を提供します。 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)します。
 
 > [!NOTE]
 > [free](free.md) の呼び出しによるメモリの解放は、呼び出し元プログラムが行います。
 
-変数が見つからない場合、し*バッファー*に設定されている**NULL**、 *numberOfElements*を 0 に設定されていると、このような状況がエラーであると見なされないために、戻り値は 0条件です。
+変数が見つからない場合、し*バッファー*に設定されている**NULL**、 *numberOfElements*を 0 に設定されているこのような状況は、エラーが発生すると見なされないため、戻り値は 0条件。
 
-バッファーのサイズを考慮していない場合は、渡す**NULL**の*numberOfElements*です。
+バッファーのサイズが必要ない場合は、渡す**NULL**の*numberOfElements*します。
 
-**_dupenv_s** Windows オペレーティング システムで大文字小文字は区別されません。 **_dupenv_s**グローバル変数が指す環境のコピーを使用して **_environ**環境にアクセスします。 「解説」を参照してください[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)のについて **_environ**です。
+**_dupenv_s** Windows オペレーティング システムで大文字小文字は区別されません。 **_dupenv_s**グローバル変数が指す環境のコピーを使用して **_environ**環境にアクセスします。 「解説」を参照してください。 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)の詳細については **_environ**します。
 
 値*バッファー*環境変数の値のコピーであることを変更しても環境への影響はありません。 環境変数の値を変更するには、[_putenv_s、_wputenv_s](putenv-s-wputenv-s.md) 関数を使います。
 
-**_wdupenv_s**のワイド文字バージョンは、 **_dupenv_s**; の引数 **_wdupenv_s**ワイド文字列です。 **_Wenviron**グローバル変数のワイド文字バージョンは、 **_environ**です。 「解説」を参照してください[getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)について **_wenviron**です。
+**_wdupenv_s**のワイド文字バージョンは、 **_dupenv_s**; の引数 **_wdupenv_s**はワイド文字列です。 **_Wenviron**グローバル変数はワイド文字バージョンの **_environ**します。 「解説」を参照してください。 [getenv_s、_wgetenv_s](getenv-s-wgetenv-s.md)について **_wenviron**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -114,9 +104,9 @@ errno_t _wdupenv_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tdupenv_s**|**_dupenv_s**|**_dupenv_s**|**_wdupenv_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_dupenv_s**|\<stdlib.h>|
 |**_wdupenv_s**|\<stdlib.h> または \<wchar.h>|

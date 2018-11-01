@@ -1,27 +1,16 @@
 ---
-title: パラメーター属性 (C++ COM) |Microsoft Docs
-ms.custom: ''
+title: パラメーター属性 (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - attributes [C++/CLI], parameter attributes
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 160e71111a9080367390302a59c41a53580ffe0b
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 56c168975c9b8a6fcf7462c26eefd07b4499d149
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791205"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619632"
 ---
 # <a name="parameter-attributes"></a>パラメーター属性
 
@@ -39,7 +28,7 @@ ms.locfileid: "48791205"
 |[lcid](lcid.md)|ロケール識別子を関数に渡すことができます。|
 |[length_is](length-is.md)|転送する配列要素の数を指定します。|
 |[max_is](max-is.md)|有効な配列のインデックスの最大値を指定します。|
-|[省略可能](optional-cpp.md)|メンバー関数のオプション パラメーターを指定します。|
+|[optional](optional-cpp.md)|メンバー関数のオプション パラメーターを指定します。|
 |[out](out-cpp.md)|呼び出されたプロシージャから呼び出したプロシージャ (サーバーからクライアント) に返されるポインター パラメーターを示します。|
 |[range](range-cpp.md)|引数または値を持つが実行時に設定されているフィールドに使用できる値の範囲を指定します。|
 |[ref](ref-cpp.md)|参照ポインターを識別します。|

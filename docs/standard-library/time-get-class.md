@@ -1,10 +1,6 @@
 ---
-title: time_get クラス | Microsoft Docs
-ms.custom: ''
+title: time_get クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xloctime/std::time_get
 - locale/std::time_get::char_type
@@ -23,8 +19,6 @@ f1_keywords:
 - locale/std::time_get::get_time
 - locale/std::time_get::get_weekday
 - locale/std::time_get::get_year
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::time_get [C++]
 - std::time_get [C++], char_type
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - std::time_get [C++], get_weekday
 - std::time_get [C++], get_year
 ms.assetid: 869d5f5b-dbab-4628-8333-bdea7e272023
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 98ef24f5a714b1df5cb9be0875cdfd5adcb3fe62
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: df5a6da3995b1485585a3105ac027f19a27dc8eb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45704875"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505184"
 ---
 # <a name="timeget-class"></a>time_get クラス
 
@@ -85,7 +75,7 @@ class time_get : public time_base;
 |-|-|
 |[time_get](#time_get)|`time_get` 型のオブジェクトのコンストラクター。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -111,7 +101,7 @@ class time_get : public time_base;
 |[get_weekday](#get_weekday)|曜日の名前として文字列を解析します。|
 |[get_year](#get_year)|年の名前として文字列を解析します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

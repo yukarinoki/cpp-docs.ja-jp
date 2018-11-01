@@ -1,10 +1,6 @@
 ---
-title: __min | Microsoft Docs
-ms.custom: ''
+title: __min
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __min
 apilocation:
@@ -23,28 +19,22 @@ f1_keywords:
 - __min
 - min
 - _min
-dev_langs:
-- C++
 helpviewer_keywords:
 - __min macro
 - min macro
 - minimum macro
 - _min macro
 ms.assetid: 2037f26c-b48a-4a69-8870-22519f052a3c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0cc69cb018cda6fc093c570dab86a8df4cf396b7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9e867cd1f3e3519e440c91895e61e317d9688a3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399609"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50617816"
 ---
 # <a name="min"></a>__min
 
-プリプロセッサ マクロには、2 つの値のいずれか小さい方を返します。
+プリプロセッサ マクロには、2 つの値のうち、小さい方を返します。
 
 ## <a name="syntax"></a>構文
 
@@ -55,21 +45,21 @@ ms.locfileid: "32399609"
 ### <a name="parameters"></a>パラメーター
 
 *a*、 *b*<br/>
-いずれかの値を入力する、 **<** 演算子で動作します。
+いずれかの値の型を**<** 演算子で動作します。
 
 ## <a name="return-value"></a>戻り値
 
 2 つの引数のうちの小さい方。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_ _Min**マクロが 2 つの値を比較し、小さいの 1 つの値を返します。 引数には、符号付きまたは符号なしのすべての数値データ型を指定できます。 引数と戻り値はともに同じデータ型である必要があります。
+**_ _Min**マクロは、2 つの値を比較し、小規模な 1 つの値を返します。 引数には、符号付きまたは符号なしのすべての数値データ型を指定できます。 引数と戻り値はともに同じデータ型である必要があります。
 
-返される引数は、マクロが 2 回評価されます。 引数が式など、評価されるときに、その値を変更する場合、予期しない結果につながります`*p++`です。
+返される引数は、マクロで 2 回評価されます。 これにより、予期しない結果がそれを評価するときなど、その値を変更する式の引数の場合`*p++`します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**__min**|\<stdlib.h>|
 

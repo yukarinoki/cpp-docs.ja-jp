@@ -1,30 +1,20 @@
 ---
-title: -cgthreads (コード生成スレッド) |Microsoft Docs
-ms.custom: ''
+title: /cgthreads (コード生成スレッド)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /cgthreads
-dev_langs:
-- C++
 helpviewer_keywords:
 - /cgthreads compiler option (C++)
 - -cgthreads compiler option (C++)
 - cgthreads compiler option (C++)
 - cgthreads
 ms.assetid: 64bc768c-6caa-4baf-9dea-7cfa1ffb01c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bb6849a4b30e903d05b5ac3d37fce558074110a5
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b06a800fca529a86b393ca00dcffce30ac7a21fe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719629"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606467"
 ---
 # <a name="cgthreads-code-generation-threads"></a>/cgthreads (コード生成スレッド)
 
@@ -47,7 +37,7 @@ cl.exe が使用できるスレッドの最大数で、1 から 8 の範囲。
 
 ビルドでは複数のレベルの並列化を指定できます。 Msbuild.exe スイッチ **/maxcpucount**並列に実行できる MSBuild プロセスの数を指定します。 [/MP (複数のプロセスを使用したビルド)](../../build/reference/mp-build-with-multiple-processes.md)コンパイラ フラグを同時にソース ファイルをコンパイルする cl.exe プロセスの数を指定します。 **/Cgthreads**オプションは、それぞれの cl.exe プロセスで使用されるスレッドの数を指定します。 プロセッサは、プロセッサ コアの数しかスレッドを同時に実行できないため、これらすべてのオプションに、より大きな値を同時に設定するのは効果的ではなく、逆効果になる場合もあります。 プロジェクトの並行ビルドする方法の詳細については、次を参照してください。[複数プロジェクトの並行ビルド](/visualstudio/msbuild/building-multiple-projects-in-parallel-with-msbuild)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

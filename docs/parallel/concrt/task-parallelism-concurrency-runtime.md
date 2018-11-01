@@ -1,12 +1,6 @@
 ---
-title: タスクの並列化 (同時実行ランタイム) |Microsoft Docs
-ms.custom: ''
+title: タスクの並列化 (コンカレンシー ランタイム)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - structured task groups [Concurrency Runtime]
 - structured tasks [Concurrency Runtime]
@@ -14,18 +8,14 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7ec6e99b3e4f1e86d9f0ee42ca92a93a57b1a1fb
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378086"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630426"
 ---
-# <a name="task-parallelism-concurrency-runtime"></a>タスクの並列化 (同時実行ランタイム)
+# <a name="task-parallelism-concurrency-runtime"></a>タスクの並列化 (コンカレンシー ランタイム)
 
 同時実行ランタイムで、*タスク*は特定のジョブを実行し、通常他のタスクと並列で実行される作業の単位です。 タスクに編成されたより細かな追加のタスクに分解することができます、*タスク グループ*します。
 
@@ -39,7 +29,7 @@ ms.locfileid: "46378086"
 
 - ラムダ式に変数を渡すときに参照渡しを使用する場合、タスクが終了するまでその変数の有効期間が続くようにする必要があります。
 
-- タスクを使用して、(、 [concurrency::task](../../parallel/concrt/reference/task-class.md)クラス) 非同期コードを記述するとき。 タスク クラスは、同時実行ランタイムではなく、Windows ThreadPool をスケジューラとして使用します。
+- タスクを使用して、(、 [concurrency::task](../../parallel/concrt/reference/task-class.md)クラス) 非同期コードを記述するとき。 タスク クラスは、コンカレンシー ランタイムではなく、Windows ThreadPool をスケジューラとして使用します。
 
 - タスク グループを使用して、(、 [concurrency::task_group](reference/task-group-class.md)クラスまたは[concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズム) に並列処理に小さい部分に分解し、これら小さなを待機したい場合完了する部分。
 
@@ -320,12 +310,12 @@ Message from task: 42
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[方法: 並列呼び出しを使用して並列並べ替えルーチンを記述する](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|`parallel_invoke` アルゴリズムを使用して、バイトニック ソート アルゴリズムのパフォーマンスを向上させる方法について説明します。|
 |[方法: Parallel.Invoke を使用して並列操作を実行する](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|`parallel_invoke` アルゴリズムを使用して、共有データ ソースに対して複数の操作を実行するプログラムのパフォーマンスを向上させる方法について説明します。|
 |[方法: 遅延後に完了するタスクを作成する](../../parallel/concrt/how-to-create-a-task-that-completes-after-a-delay.md)|使用する方法を示しています、 `task`、 `cancellation_token_source`、 `cancellation_token`、および`task_completion_event`遅延後に完了するタスクを作成するためのクラス。|
-|[チュートリアル: フューチャの実装](../../parallel/concrt/walkthrough-implementing-futures.md)|同時実行ランタイムの既存の機能を組み合わせて、より効果的に使用する方法を示します。|
+|[チュートリアル: フューチャの実装](../../parallel/concrt/walkthrough-implementing-futures.md)|コンカレンシー ランタイムの既存の機能を組み合わせて、より効果的に使用する方法を示します。|
 |[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|同時実行アプリケーションの開発に不可欠なプログラミング モデルを提供する PPL について説明します。|
 
 ## <a name="reference"></a>参照

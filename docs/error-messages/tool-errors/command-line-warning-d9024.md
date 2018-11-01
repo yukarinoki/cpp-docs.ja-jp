@@ -1,27 +1,17 @@
 ---
-title: コマンドラインの警告 D9024 |Microsoft Docs
-ms.custom: ''
+title: コマンド ラインの警告 D9024
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - D9024
-dev_langs:
-- C++
 helpviewer_keywords:
 - D9024
 ms.assetid: daf4896d-223d-4af0-9b6d-89109cf3d1bb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dae28f28a07049fa19b56af7efcf43285b2a751b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c577aceacef748045f867a6bc253a1dd6c84aafe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46092682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505271"
 ---
 # <a name="command-line-warning-d9024"></a>コマンド ラインの警告 D9024
 

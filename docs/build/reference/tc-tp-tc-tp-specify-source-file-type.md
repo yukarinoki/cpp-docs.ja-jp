@@ -1,16 +1,11 @@
 ---
-title: /Tc、/Tp、/TC、/TP (ソース ファイルの種類の指定) |マイクロソフトのドキュメント
+title: /Tc、/Tp、/TC、/TP (ソース ファイル タイプの指定)
 ms.date: 1/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.CompileAs
 - VC.Project.VCCLCompilerTool.CompileAs
 - /Tp
 - /tc
-dev_langs:
-- C++
 helpviewer_keywords:
 - Tp compiler option [C++]
 - /Tc compiler option [C++]
@@ -19,16 +14,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c6c264a11e4cec478502fbd0e1837ceba450ba9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: e435b48359a708408ff8659e53c9e7c4f7e80261
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714299"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619116"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc、/Tp、/TC、/TP (ソース ファイル タイプの指定)
 
@@ -54,7 +45,7 @@ C または C++ ソース ファイル。
 
 ときにいずれか、 **TC**または**Tc**オプションを指定すると、仕様、 [/Zc:wchar_t (wchar_t をネイティブ型)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)オプションは無視されます。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
