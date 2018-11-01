@@ -1,10 +1,6 @@
 ---
-title: strspn、wcsspn、_mbsspn、_mbsspn_l | Microsoft Docs
-ms.custom: ''
+title: strspn、wcsspn、_mbsspn、_mbsspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsspn_l
 - wcsspn
@@ -30,8 +26,6 @@ f1_keywords:
 - _mbsspn
 - _tcsspn
 - strspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsspn function
 - strings [C++], searching
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - mbsspn_l function
 - _tcsspn function
 ms.assetid: d077284a-809f-4068-959e-c6d6262677eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b7d826b72a006e0a8b011d89dfc96aa8aea4690
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 69463e23d0cddf4441716aacb11928f589ab2078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477315"
 ---
 # <a name="strspn-wcsspn-mbsspn-mbsspnl"></a>strspn、wcsspn、_mbsspn、_mbsspn_l
 
@@ -99,13 +89,13 @@ NULL で終わる文字セット。
 
 ## <a name="return-value"></a>戻り値
 
-部分文字列の長さを指定する整数値を返します*str*全体の文字で構成される*strCharSet*です。 場合*str*ではなく文字で始まる*strCharSet*0 を返します。
+内の部分文字列の長さを指定する整数値を返します*str*の文字だけで構成される*strCharSet*します。 場合*str*にない文字で始まる*strCharSet*0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strspn**関数の最初の文字のインデックスを返します*str*内の文字のセットに含まれない*strCharSet*です。 検索には、終端の NULL 文字は含まれません。
+**Strspn**関数は、最初の文字のインデックスを返します*str*内の文字のセットに含まれない*strCharSet*します。 検索には、終端の NULL 文字は含まれません。
 
-**wcsspn**と **_mbsspn**のワイド文字とマルチバイト文字バージョンは、 **strspn**です。 引数**wcsspn**ワイド文字は、文字列以外の **_mbsspn**マルチバイト文字列です。 **_mbsspn**パラメーターを検証します。 場合*str*または*strCharSet*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**継続**設定**errno**に**EINVAL**は 0 を返します。 **strspn**と**wcsspn**はそのパラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+**wcsspn**と **_mbsspn**のワイド文字とマルチバイト文字バージョン**strspn**します。 引数**wcsspn**はワイド文字列 **_mbsspn**はマルチバイト文字の文字列。 **_mbsspn**パラメーターを検証します。 場合*str*または*strCharSet*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**継続**設定**errno**に**EINVAL**は 0 を返します。 **strspn**と**wcsspn**パラメーターを検証できません。 それ以外では、これらの関数の動作は同じです。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -116,9 +106,9 @@ NULL で終わる文字セット。
 |**_tcsspn**|**strspn**|**_mbsspn**|**wcsspn**|
 |**該当なし**|**該当なし**|**_mbsspn_l**|**該当なし**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strspn**|\<string.h>|
 |**wcsspn**|\<string.h> または \<wchar.h>|

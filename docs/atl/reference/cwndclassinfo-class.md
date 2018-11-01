@@ -1,10 +1,6 @@
 ---
-title: CWndClassInfo クラス |Microsoft Docs
-ms.custom: ''
+title: CWndClassInfo クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CWndClassInfo
 - ATLWIN/ATL::CWndClassInfo
@@ -16,21 +12,15 @@ f1_keywords:
 - ATLWIN/ATL::m_szAutoName
 - ATLWIN/ATL::m_wc
 - ATLWIN/ATL::pWndProc
-dev_langs:
-- C++
 helpviewer_keywords:
 - CWndClassInfo class
 ms.assetid: c36fe7e1-75f1-4cf5-a06f-9f59c43fe6fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0d0b9da19ca3d1500e4e25822e8b10d5967a45cc
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 2ffe37059eb6ab81eb9dd67243ba125766b92dfc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50467302"
 ---
 # <a name="cwndclassinfo-class"></a>CWndClassInfo クラス
 
@@ -85,7 +75,7 @@ class CWndClassInfo
 
 ATL でのウィンドウの使用に関する詳細については、記事を参照してください。 [ATL ウィンドウ クラス](../../atl/atl-window-classes.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 

@@ -1,32 +1,22 @@
 ---
-title: スケジュール グループ |Microsoft Docs
-ms.custom: ''
+title: スケジュール グループ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4fa61772af96ba0d2602ff42a6a43b2b3a13a4e6
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 60d6bdaf863e60fa9923f7d7447309338c5dbed2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385900"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50453522"
 ---
 # <a name="schedule-groups"></a>スケジュール グループ
 
 このドキュメントでは、同時実行ランタイムのスケジュール グループの役割について説明します。 A*スケジュール グループ*で、またはグループ、関連するタスク化します。 すべてのスケジューラでは、1 つまたは複数のスケジュール グループがあります。 スケジュール グループは、タスク間で高いレベルの局所性が求められる場合 (たとえば、関連するタスクのグループが同一プロセッサ ノードでの実行によって恩恵を受ける場合) に使用します。 逆に、アプリケーションがある特定の品質要件、たとえば、一連のタスクに割り当てられている処理リソースの量を制限する場合に場合は、スケジューラ インスタンスを使用します。 スケジューラ インスタンスの詳細については、次を参照してください。[スケジューラ インスタンス](../../parallel/concrt/scheduler-instances.md)します。
 
 > [!TIP]
->  同時実行ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
+>  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
 
 すべて`Scheduler`オブジェクトがすべてのスケジューリング ノードの既定のスケジュール グループ。 A*スケジューリング ノード*基になるシステム トポロジにマップされます。 方の値が大きい、プロセッサ パッケージごとに 1 つのスケジュール ノードまたは Non-uniform Memory アーキテクチャ (NUMA) ノードに、ランタイムが作成されます。 スケジュール グループ、タスクを明示的に関連付けないはない場合、スケジューラはタスクを追加するグループを選択します。
 

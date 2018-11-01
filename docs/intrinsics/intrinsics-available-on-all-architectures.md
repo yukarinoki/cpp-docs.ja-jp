@@ -1,31 +1,21 @@
 ---
-title: すべてのアーキテクチャで利用可能な組み込み |Microsoft ドキュメント
-ms.custom: ''
+title: すべてのアーキテクチャで利用可能な組み込み
 ms.date: 04/11/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - cl.exe compiler, intrinsics
 ms.assetid: 1fe3958e-d2fe-4188-8e34-5896738246eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbe070c2bae69563d65344072a56003f808d1486
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 0a1331f53cd8b44c8a7bfc903216cbdbaf5fec1f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33340620"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473282"
 ---
 # <a name="intrinsics-available-on-all-architectures"></a>すべてのアーキテクチャで利用可能な組み込み
 
-Microsoft C/C コンパイラ ユニバーサル C ランタイム ライブラリ (UCRT) 一部の組み込み利用できるようにすべてのアーキテクチャにします。
+Microsoft C/C コンパイラ、ユニバーサル C ランタイム ライブラリ (UCRT) すべてのアーキテクチャで使用できるのいくつかの組み込みをようにします。
 
-## <a name="compiler-intrinsics"></a>コンパイラ組み込み関数
+## <a name="compiler-intrinsics"></a>コンパイラの組み込み
 
 x86、AMD64、および ARM の各アーキテクチャでは、次の組み込みが利用できます。
 
@@ -99,7 +89,7 @@ x86、AMD64、および ARM の各アーキテクチャでは、次の組み込�
 
 ## <a name="ucrt-intrinsics"></a>UCRT 組み込み
 
-次の UCRT 関数は、すべてのアーキテクチャで組み込み形式を持ちます。
+次の UCRT 関数では、組み込み形式を持つすべてのアーキテクチャで。
 
 |組み込み|Header|
 |---------------|------------|
