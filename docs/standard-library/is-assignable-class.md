@@ -1,27 +1,17 @@
 ---
-title: is_assignable クラス | Microsoft Docs
-ms.custom: ''
+title: is_assignable クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_assignable
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_assignable
 ms.assetid: 53444287-c8be-4ad2-9487-a85c066a4f84
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 339b3cdb2e2470fea976ef8257e6a84f089d3dd9
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b1357bf8c5ad4dfd5035855e34a8fd6a7ed73d15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712557"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50605960"
 ---
 # <a name="isassignable-class"></a>is_assignable クラス
 
@@ -46,7 +36,7 @@ struct is_assignable;
 
 評価されていない式 `declval<To>() = declval<From>()` は整形式である必要があります。 両方`From`と`To`完全な型は、必要があります**void**、または不明なバインドの配列。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

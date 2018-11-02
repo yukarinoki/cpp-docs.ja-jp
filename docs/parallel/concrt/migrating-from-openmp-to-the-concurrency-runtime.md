@@ -1,28 +1,18 @@
 ---
-title: OpenMP から同時実行ランタイムへの移行 |Microsoft Docs
-ms.custom: ''
+title: OpenMP からコンカレンシー ランタイムへの移行
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e6c6ca3da9e1f66e068980deebce938a5603a4cc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4b70aa57a6485fefe0dbb678e72ba127502c89e3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428181"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481927"
 ---
-# <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>OpenMP から同時実行ランタイムへの移行
+# <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>OpenMP からコンカレンシー ランタイムへの移行
 
 コンカレンシー ランタイムでは、さまざまなプログラミング モデルを使用できます。 これらのモデルは、他のライブラリのモデルと重複する場合や、他のライブラリのモデルを補完する場合があります。 このドキュメントのセクション比較[OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)同時実行ランタイムにし、同時実行ランタイムを使用する既存の OpenMP コードを移行する方法について例を示します。
 

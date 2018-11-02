@@ -1,10 +1,6 @@
 ---
-title: '&lt;iostream&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;iostream&gt;'
 ms.date: 09/20/2017
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <iostream>
 - iostream/std::cerr
@@ -15,21 +11,15 @@ f1_keywords:
 - iostream/std::wcin
 - iostream/std::wclog
 - iostream/std::wcout
-dev_langs:
-- C++
 helpviewer_keywords:
 - iostream header
 ms.assetid: de5d39e1-7e77-4b55-bcd1-7c77b41515c8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ed484dcfdb94b60545a84563c77a3f242cc6c316
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: aabdc761cc55507f4718a63a0c082325ae1badf7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33850653"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50504287"
 ---
 # <a name="ltiostreamgt"></a>&lt;iostream&gt;
 
@@ -42,7 +32,7 @@ ms.locfileid: "33850653"
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このオブジェクトは、次の 2 つのグループに分類されます。
 
@@ -81,7 +71,7 @@ extern ostream cerr;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>Remarks
 
 このオブジェクトは、バイト ストリームとして、標準エラー出力へのバッファリングされていない挿入を制御します。 オブジェクトが構築された時点で、式 `cerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) は 0 以外で、`cerr.tie() == &cout` になります。
 
@@ -127,7 +117,7 @@ extern istream cin;
 
 [istream](../standard-library/istream-typedefs.md#istream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>Remarks
 
 オブジェクトは、バイト ストリームとして標準入力からの抽出を制御します。 オブジェクトが構築されると、`cin.`[tie](../standard-library/basic-ios-class.md#tie) の呼び出しは `&`[cout](#cout) を返します。
 
@@ -180,7 +170,7 @@ extern ostream clog;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>Remarks
 
 このオブジェクトは、バイト ストリームとして、標準エラー出力へのバッファリングされている挿入を制御します。
 
@@ -200,7 +190,7 @@ extern ostream cout;
 
 [ostream](../standard-library/ostream-typedefs.md#ostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>Remarks
 
 このオブジェクトは、バイト ストリームとして、標準出力への挿入を制御します。
 
@@ -220,7 +210,7 @@ extern wostream wcerr;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>Remarks
 
 このオブジェクトは、ワイド ストリームとして、標準エラー出力へのバッファリングされていない挿入を制御します。 オブジェクトが構築された時点で、式 `wcerr.`[flags](../standard-library/ios-base-class.md#flags) `&` [unitbuf](../standard-library/ios-functions.md#unitbuf) は 0 以外になります。
 
@@ -240,7 +230,7 @@ extern wistream wcin;
 
 [wistream](../standard-library/istream-typedefs.md#wistream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>Remarks
 
 オブジェクトは、ワイド ストリームとして標準入力からの抽出を制御します。 オブジェクトが構築されると、`wcin.`[tie](../standard-library/basic-ios-class.md#tie) の呼び出しは `&`[wcout](#wcout) を返します。
 
@@ -260,7 +250,7 @@ extern wostream wclog;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>Remarks
 
 このオブジェクトは、ワイド ストリームとして、標準エラー出力へのバッファリングされている挿入を制御します。
 
@@ -280,7 +270,7 @@ extern wostream wcout;
 
 [wostream](../standard-library/ostream-typedefs.md#wostream) オブジェクト。
 
-#### <a name="remarks"></a>コメント
+#### <a name="remarks"></a>Remarks
 
 このオブジェクトは、ワイド ストリームとして、標準出力への挿入を制御します。
 

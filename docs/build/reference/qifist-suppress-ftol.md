@@ -1,29 +1,19 @@
 ---
-title: -Qifist (_ftol を呼び出さない) |Microsoft Docs
-ms.custom: ''
+title: /QIfist (_ftol を呼び出さない)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /qifist
-dev_langs:
-- C++
 helpviewer_keywords:
 - QIfist compiler option [C++]
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4b32557507cbe74fc1fde3963a1375318c7ef1e0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e01ee0b7af68127f3a78b4cfda1d110f6187fa74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50528113"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (_ftol を呼び出さない)
 
@@ -59,7 +49,7 @@ ms.locfileid: "46448278"
 
 **/QIfist**オプションは Visual Studio 2005 以降で非推奨とされます。 浮動小数点型から整数型への変換処理の速度が飛躍的に向上しました。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

@@ -1,10 +1,6 @@
 ---
-title: copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl | Microsoft Docs
-ms.custom: ''
+title: copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - copysignf
 - copysignl
@@ -32,8 +28,6 @@ f1_keywords:
 - _copysign
 - copysignl
 - _copysignf
-dev_langs:
-- C++
 helpviewer_keywords:
 - copysignl function
 - _copysignl function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _copysign function
 - copysignf function
 ms.assetid: 009216d6-72a2-402d-aa6c-91d924b2c9e4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f54b45e0b4488e76c501f67b1e98de071157ad7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6f450da4a4391f94d1905beefdeca8e3f01fec51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394731"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662814"
 ---
 # <a name="copysign-copysignf-copysignl-copysign-copysignf-copysignl"></a>copysign、copysignf、copysignl、_copysign、_copysignf、_copysignl
 
@@ -102,15 +92,15 @@ long double _copysignl(
 
 ## <a name="return-value"></a>戻り値
 
-**Copysign**関数の大きさを組み合わせた浮動小数点値を返す*x*符号*y*です。 エラーの戻り値はありません。
+**Copysign**関数の絶対値を組み合わせた浮動小数点値を返す*x*の符号と*y*します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**copysign**を受け取り、返します**float**または**長い****二重**値。 C プログラムでは、 **copysign**常に受け取りを返す、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **copysign**を受け取って返す**float**または**長い****二重**値。 C プログラムで**copysign**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_copysign**|\<float.h>|
 |**copysign**、 **copysignf**、 **copysignl**、 **_copysignf**、 **_copysignl**|\<math.h>|

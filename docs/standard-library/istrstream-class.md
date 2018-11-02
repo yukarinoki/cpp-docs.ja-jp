@@ -1,28 +1,18 @@
 ---
-title: istrstream クラス | Microsoft Docs
-ms.custom: ''
+title: istrstream クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - strstream/std::istrstream::rdbuf
 - strstream/std::istrstream::str
-dev_langs:
-- C++
 helpviewer_keywords:
 - istrstream class
 ms.assetid: c2d41c75-bd2c-4437-bd77-5939ce1b97af
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d979cab4dc25898b772c434f5a50682573ce4016
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 70e71ac5a6fd523f0b7589625f4e88fdb41ee0e2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44099539"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581936"
 ---
 # <a name="istrstream-class"></a>istrstream クラス
 
@@ -54,7 +44,7 @@ class istrstream : public istream
 |[rdbuf](#rdbuf)|ストリームの関連付けられた `strstreambuf` オブジェクトへのポインターを返します。|
 |[str](#str)|[freeze](../standard-library/strstreambuf-class.md#freeze) を呼び出し、被制御シーケンスの先頭へのポインターを返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<strstream>
 

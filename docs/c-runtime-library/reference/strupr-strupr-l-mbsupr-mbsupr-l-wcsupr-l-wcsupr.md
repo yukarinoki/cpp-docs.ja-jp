@@ -1,10 +1,6 @@
 ---
-title: _strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr | Microsoft Docs
-ms.custom: ''
+title: _strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsupr_l
 - _mbsupr
@@ -37,8 +33,6 @@ f1_keywords:
 - _strupr
 - mbsupr_l
 - _wcsupr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcsupr_l function
 - mbsupr function
@@ -66,16 +60,12 @@ helpviewer_keywords:
 - _tcsupr function
 - strings [C++], converting case
 ms.assetid: caac8f16-c233-41b6-91ce-575ec7061b77
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d34f0bd4e24fa70f37bb2191293cbc2a3e7ad9c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c3d155ebfdc40c5dd479cffed0b892dd73f80138
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415385"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603646"
 ---
 # <a name="strupr-struprl-mbsupr-mbsuprl-wcsuprl-wcsupr"></a>_strupr、_strupr_l、_mbsupr、_mbsupr_l、_wcsupr_l、_wcsupr
 
@@ -149,13 +139,13 @@ unsigned char *_mbsupr_l(
 
 変更された文字列へのポインターを返します。 同じ位置で変更が実行されるため、返されるポインターは入力引数として渡されるポインターと同じです。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Strupr**関数の代わりに、内の小文字の変換*str*を大文字にします。 変換がによって決定されます、 **LC_CTYPE**ロケールのカテゴリの設定。 他の文字は影響を受けません。 詳細については**LC_CTYPE**を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)です。 この関数のバージョン、 **_l**サフィックスを使用して、現在のロケール以外のバージョンで、 **_l**代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_Strupr**インプレースでの小文字の変換関数*str*を大文字にします。 変換がによって決定されます、 **LC_CTYPE**ロケールのカテゴリの設定。 他の文字は影響を受けません。 詳細については**LC_CTYPE**を参照してください[setlocale](setlocale-wsetlocale.md)します。 この関数のバージョン、 **_l**サフィックスを使用しているバージョンは、現在のロケール、 **_l**代わりに渡されたロケールを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**_wcsupr**と **_mbsupr**のワイド文字とマルチバイト文字バージョンは、 **_strupr**です。 引数と戻り値 **_wcsupr**ワイド文字は、文字列以外の **_mbsupr**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wcsupr**と **_mbsupr**のワイド文字とマルチバイト文字バージョン **_strupr**します。 引数と戻り値 **_wcsupr**はワイド文字列 **_mbsupr**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
-場合*str* null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の続行には、これらの関数の戻り値、元の文字列セットが許可された場合**errno**に**EINVAL**です。
+場合*str* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、これらの関数の戻り値、元の文字列とセットを許可された場合**errno**に**EINVAL**します。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -166,9 +156,9 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |**_tcsupr**|**_strupr**|**_mbsupr**|**_wcsupr**|
 |**_tcsupr_l**|**_strupr_l**|**_mbsupr_l**|**_wcsupr_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strupr**、 **_strupr_l**|\<string.h>|
 |**_wcsupr**、 **_wcsupr_l**|\<string.h> または \<wchar.h>|

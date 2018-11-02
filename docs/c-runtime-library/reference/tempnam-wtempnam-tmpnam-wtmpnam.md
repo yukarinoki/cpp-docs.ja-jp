@@ -1,10 +1,6 @@
 ---
-title: _tempnam、_wtempnam、tmpnam、_wtmpnam | Microsoft Docs
-ms.custom: ''
+title: _tempnam、_wtempnam、tmpnam、_wtmpnam
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wtempnam
 - _wtmpnam
@@ -30,8 +26,6 @@ f1_keywords:
 - tmpnam
 - _wtempnam
 - _tempnam
-dev_langs:
-- C++
 helpviewer_keywords:
 - wtempnam function
 - file names [C++], creating temporary
@@ -46,16 +40,12 @@ helpviewer_keywords:
 - _wtmpnam function
 - _wtempnam function
 ms.assetid: 3ce75f0f-5e30-42a6-9791-8d7cbfe70fca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce1b0a495c2556b39a18937635d9109eaaeb2433
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 29fa8fc836b1b52bcf66247b3f6aaba47b8c2eaa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691420"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506796"
 ---
 # <a name="tempnam-wtempnam-tmpnam-wtmpnam"></a>_tempnam、_wtempnam、tmpnam、_wtmpnam
 
@@ -125,7 +115,7 @@ TMP 環境変数がない場合、または TMP が有効なディレクトリ�
 |**_ttmpnam**|**tempnam**|**tempnam**|**_wtmpnam**|
 |**_ttempnam**|**_tempnam**|**_tempnam**|**_wtempnam**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
