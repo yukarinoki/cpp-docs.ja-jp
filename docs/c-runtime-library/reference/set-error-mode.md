@@ -1,10 +1,6 @@
 ---
-title: _set_error_mode | Microsoft Docs
-ms.custom: ''
+title: _set_error_mode
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_error_mode
 apilocation:
@@ -23,26 +19,20 @@ apitype: DLLExport
 f1_keywords:
 - set_error_mode
 - _set_error_mode
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_error_mode function
 - set_error_mode function
 ms.assetid: f0807be5-73d1-4a32-a701-3c9bdd139c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 130e9fee13401c8b598a5d6eef7d1fab3ed80ae9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8c95ed45423b791a688f05ea30f48e188826a797
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50502311"
 ---
 # <a name="seterrormode"></a>_set_error_mode
 
-変更 **_error_mode**を既定以外の場所が C ランタイムが、プログラムを終了する可能性があります、エラーのエラー メッセージを書き込む場所を決定します。
+変更 **_error_mode**を既定以外の場所が C ランタイムでのプログラムを終了する可能性がありますエラーのエラー メッセージの書き込み先を決定します。
 
 > [!IMPORTANT]
 > この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -64,26 +54,26 @@ int _set_error_mode(
 
 エラーが発生した場合、以前の設定または-1 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-値を設定して、エラー出力シンクを制御 **_error_mode**です。 たとえばに標準エラー出力を転送したり、使用、 **MessageBox** API です。
+値を設定して、エラー出力シンクを制御 **_error_mode**します。 たとえば、出力を標準エラー出力またはを使用して、**メッセージ ボックス**API。
 
 *Mode_val*パラメーターは、次の値のいずれかに設定することができます。
 
 |パラメーター|説明|
 |---------------|-----------------|
-|**_OUT_TO_DEFAULT**|エラー シンクはによって決まります **__app_type**です。|
+|**_OUT_TO_DEFAULT**|エラー シンクはによって決まります **__app_type**します。|
 |**_OUT_TO_STDERR**|エラー シンクは、標準エラーです。|
 |**_OUT_TO_MSGBOX**|エラー シンクは、メッセージ ボックスです。|
 |**_REPORT_ERRMODE**|現在のレポート **_error_mode**値。|
 
-リストされている以外の値が渡された場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合 **_set_error_mode**設定**errno**に**EINVAL**し、-1 を返します。
+リストされている以外の値が渡された場合、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合 **_set_error_mode**設定**errno**に**EINVAL** -1 を返します。
 
-使用した場合、[アサート](assert-macro-assert-wassert.md)、 **_set_error_mode**  ダイアログ ボックスで、障害が発生したステートメントを表示し、選択した場合のオプションを選択できます、**無視**ボタンをクリックすることができますプログラムを実行し続けます。
+と共に使用した場合、[アサート](assert-macro-assert-wassert.md)、 **_set_error_mode**  ダイアログ ボックスで失敗したステートメントを表示しを選択することができます、**無視**ボタンをクリックすることができます続行すると、プログラムを実行します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_set_error_mode**|\<stdlib.h>|
 

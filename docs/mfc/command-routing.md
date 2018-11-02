@@ -1,12 +1,6 @@
 ---
-title: コマンド ルーティング |Microsoft Docs
-ms.custom: ''
+title: コマンド ルーティング
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC, command routing
 - command handling [MFC], routing commands
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - handlers, command [MFC]
 - command routing
 ms.assetid: 9393a956-bdd4-47c5-9013-dbd680433f93
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 543b9e34c881285c295fb7ab7ee2107e36c99a9c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: add047984f5a32e505e8a739922daa137b5e671d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46418321"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541701"
 ---
 # <a name="command-routing"></a>コマンド ルーティング
 
@@ -45,11 +35,11 @@ ms.locfileid: "46418321"
 
 |コマンドを受信したオブジェクトの種類 . .|コマンドを処理する機会が与えられるコマンド ターゲット オブジェクトとその順序|
 |----------------------------------------------------------|-----------------------------------------------------------------------------------------------------|
-|MDI フレーム ウィンドウ (`CMDIFrameWnd`)|1.アクティブ `CMDIChildWnd`<br />2.このフレーム ウィンドウ<br />3.アプリケーション (`CWinApp`オブジェクト)|
-|ドキュメント フレーム ウィンドウ (`CFrameWnd`､ `CMDIChildWnd`)|1.アクティブ ビュー<br />2.このフレーム ウィンドウ<br />3.アプリケーション (`CWinApp`オブジェクト)|
+|MDI フレーム ウィンドウ (`CMDIFrameWnd`)|1.アクティブな `CMDIChildWnd`<br />2.このフレーム ウィンドウ<br />3.アプリケーション (`CWinApp` オブジェクト)|
+|ドキュメント フレーム ウィンドウ (`CFrameWnd`､ `CMDIChildWnd`)|1.アクティブ ビュー<br />2.このフレーム ウィンドウ<br />3.アプリケーション (`CWinApp` オブジェクト)|
 |表示|1.このビュー<br />2.ビューにアタッチされたドキュメント|
 |ドキュメント|1.このドキュメント<br />2.ドキュメントにアタッチされたドキュメント テンプレート|
-|ダイアログ ボックス|1.このダイアログ ボックス<br />2.ダイアログ ボックスを所有するウィンドウ<br />3.アプリケーション (`CWinApp`オブジェクト)|
+|ダイアログ ボックス|1.このダイアログ ボックス<br />2.ダイアログ ボックスを所有するウィンドウ<br />3.アプリケーション (`CWinApp` オブジェクト)|
 
 前の表の右側の列に他のオブジェクト (ドキュメントなど) が示されている場合は、左側の列の対応する項目を確認してください。 たとえば、右側の列を見ると、ビューがコマンドをドキュメントに転送していることがわかるので、左側の列の「ドキュメント」のルーティングも参照してください。
 

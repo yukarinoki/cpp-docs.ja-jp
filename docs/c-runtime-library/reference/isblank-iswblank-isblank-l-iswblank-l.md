@@ -1,10 +1,6 @@
 ---
-title: isblank、iswblank、_isblank_l、_iswblank_l | Microsoft Docs
-ms.custom: ''
+title: isblank、iswblank、_isblank_l、_iswblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isblank
 - _isblank_l
@@ -30,19 +26,13 @@ f1_keywords:
 - _istblank
 - _isblank_l
 - iswblank
-dev_langs:
-- C++
 ms.assetid: 33ce96c0-f387-411a-8283-c3d2a69e56bd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d2787be85aa4e12bf22d1be14f90568891b83824
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb088c4056e2277e188d7f98a57dd36216d013ad
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403314"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497319"
 ---
 # <a name="isblank-iswblank-isblankl-iswblankl"></a>isblank、iswblank、_isblank_l、_iswblank_l
 
@@ -77,11 +67,11 @@ int _iswblank_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンを返す場合は 0 以外の各*c*空白文字または水平タブ文字の特殊表現またはテキスト行内で単語を区切るために使用される文字のロケール固有の一連の 1 つです。 **isblank**場合は 0 以外の値を返します*c*は空白文字 (0x20) または水平タブ文字 (0x09)。 テスト条件の結果、 **isblank**関数によって異なります、 **LC_CTYPE**カテゴリ; 詳細については、ロケールの設定、表示[setlocale、_wsetlocale](setlocale-wsetlocale.md). これらの関数がないバージョン、 **_l**サフィックスを使用してすべてのロケールに依存する動作に現在のロケール以外の付いているバージョン、 **_l**使用する点を除いて、サフィックスが同一で、代わりに渡されるロケールです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらのルーチンを返します。 0 以外の場合の各*c*が特定の表現の空白文字または水平タブ文字、またはテキスト行内で単語を分離するために使用される文字のロケール固有の一連の 1 つです。 **isblank**場合は、0 以外の値を返します*c*は空白文字 (0x20) または水平タブ文字 (0x09)。 テスト条件の結果、 **isblank**関数によって異なります、 **LC_CTYPE**カテゴリの詳細については、ロケールの設定、表示[setlocale、_wsetlocale](setlocale-wsetlocale.md). これらの関数バージョンがない、 **_l** 、ロケールに依存する動作の現在のロケールのサフィックス使用; が付いているバージョン、 **_l**を使用する点を除いて、サフィックスと同じですが、代わりに渡されるロケールです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**iswblank**場合は 0 以外の値を返します*c*が標準的な場所に対応するワイド文字または水平タブ文字です。
+**iswblank**場合は、0 以外の値を返します*c*が標準的な場所に対応するワイド文字または水平タブ文字。
 
-動作**isblank**と **_isblank_l**場合に定義されていない*c* EOF ではありませんか 0 ~ 0 xff、包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、これらの値、関数の発生いない 1 つです。
+動作**isblank**と **_isblank_l**場合は定義されません*c* EOF がないか 0 ~ 0 xff の包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、発生のこれらの値のいずれかにありません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -90,9 +80,9 @@ int _iswblank_l(
 |**_istblank**|**isblank**|[_ismbcblank](ismbcgraph-functions.md)|**iswblank**|
 |**_istblank_l**|**_isblank_l**|[_ismbcblank_l](ismbcgraph-functions.md)|**_iswblank_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isblank**|\<ctype.h>|
 |**iswblank**|\<ctype.h> または \<wchar.h>|

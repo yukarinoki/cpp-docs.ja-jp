@@ -1,30 +1,20 @@
 ---
-title: -診断 (コンパイラの診断オプション) |Microsoft Docs
-ms.custom: ''
+title: /diagnostics (コンパイラの診断オプション)
 ms.date: 11/11/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /diagnostics
 - VC.Project.VCCLCompilerTool.DiagnosticsFormat
-dev_langs:
-- C++
 helpviewer_keywords:
 - /diagnostics compiler diagnostic options [C++]
 - -diagnostics compiler diagnostic options [C++]
 - diagnostics compiler diagnostic options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2d0e6567f8666df4ec170ad7911ef08f5a1d335
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: d9b485f749f4d4d9fce4e07d9bcd6d6de564fb58
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861630"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531797"
 ---
 # <a name="diagnostics-compiler-diagnostic-options"></a>/diagnostics (コンパイラの診断オプション)
 
@@ -52,7 +42,7 @@ Visual Studio 2017 以降、このオプションはサポートされていま�
 
 **/Diagnostics**オプションは、Visual Studio 2017 以降を使用します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの開く**プロパティ ページ** ダイアログ ボックス。
 
