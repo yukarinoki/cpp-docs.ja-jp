@@ -1,7 +1,7 @@
 ---
 title: C 関係演算子と等値演算子 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1bf3c406059fe8744843e1353ad997acc19c499b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9251aeb93ec53c47ca9c7474785b5180c36a3887
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46058238"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808954"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 関係演算子と等値演算子
 
@@ -31,32 +31,28 @@ ms.locfileid: "46058238"
 
 **構文**
 
-*relational-expression*: *shift-expression*
+*relational-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **&lt;=** *shift-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression* **>=** *shift-expression*<br/>
 
-*relational-expression*  **\<**  *shift-expression*
-
-*relational-expression*  **>**  *shift-expression*
-
-*relational-expression*  **\<=**  *shift-expression*
-
-*relational-expression*  **>=**  *shift-expression*
-
-*equality-expression*: *relational-expression*
-
-*equality-expression*  **==**  *relational-expression*
-
-*equality-expression*  **!=**  *relational-expression*
+*equality-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **==** *relational-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*equality-expression* **!=** *relational-expression*
 
 関係演算子と等値演算子は次の関係をテストします。
 
 |演算子|テスト対象の関係|
 |--------------|-------------------------|
-|**\<**|1 番目のオペランドが 2 番目のオペランドより小さい|
+|**&lt;**|1 番目のオペランドが 2 番目のオペランドより小さい|
 |**>**|1 番目のオペランドが 2 番目のオペランドより大きい|
-|**\<=**|1 番目のオペランドが 2 番目のオペランド以下|
+|**&lt;=**|1 番目のオペランドが 2 番目のオペランド以下|
 |**>=**|1 番目のオペランドが 2 番目のオペランド以上|
-|`==`|1 番目のオペランドが 2 番目のオペランドに等しい|
-|`!=`|1 番目のオペランドが 2 番目のオペランドに等しくない|
+|**==**|1 番目のオペランドが 2 番目のオペランドに等しい|
+|**!=**|1 番目のオペランドが 2 番目のオペランドに等しくない|
 
 上記の一覧で、最初の 4 つの演算子は等値演算子 (`==` と `!=`) より優先順位が高くなります。 [C 演算子の優先順位と結合規則](../c-language/precedence-and-order-of-evaluation.md)に関する表で優先順位を確認してください。
 
@@ -64,7 +60,7 @@ ms.locfileid: "46058238"
 
 - 関係演算子または等値演算子では、両方のオペランドが同じ型へのポインターである場合があります。 等値 (`==`) 演算子と非等値 (`!=`) 演算子の場合、比較の結果は、2 つのポインターが同じメモリ位置を指すかどうかを示します。 他の関係演算子 (**\<**、**>**、**\<**=、**>**=) の場合、比較の結果は、指し示されているオブジェクトの 2 つのメモリ アドレスの相対位置を表します。 関係演算子はオフセットのみを比較します。
 
-     ポインターの比較は、同じオブジェクトの一部に対してのみ定義されます。 ポインターが配列のメンバーを参照している場合、比較は対応する添字の比較と同じになります。 最初の配列要素のアドレスは、最後の要素のアドレスよりも小さくなります。 構造体の場合、後で宣言された構造体メンバーへのポインターは、構造体で既に宣言されているメンバーへのポインター "より大きく" なります。 同じ共用体のメンバーへのポインターは等しくなります。
+   ポインターの比較は、同じオブジェクトの一部に対してのみ定義されます。 ポインターが配列のメンバーを参照している場合、比較は対応する添字の比較と同じになります。 最初の配列要素のアドレスは、最後の要素のアドレスよりも小さくなります。 構造体の場合、後で宣言された構造体メンバーへのポインターは、構造体で既に宣言されているメンバーへのポインター "より大きく" なります。 同じ共用体のメンバーへのポインターは等しくなります。
 
 - ポインター値は、等値 (`==`) または非等値 (`!=`) の定数値 0 と比較できます。 値 0 のポインターは "null" ポインターと呼ばれます。つまり、有効なメモリ位置を指していません。
 
@@ -74,14 +70,14 @@ ms.locfileid: "46058238"
 
 次に関係演算子と等値演算子の例を示します。
 
-```
+```C
 int x = 0, y = 0;
 if ( x < y )
 ```
 
 `x` と `y` が等しいので、この例の式は値 0 になります。
 
-```
+```C
 char array[10];
 char *p;
 
@@ -91,7 +87,7 @@ for ( p = array; p < &array[10]; p++ )
 
 この例のフラグメントは null 文字定数に `array` の各要素を設定します。
 
-```
+```C
 enum color { red, white, green } col;
    .
    .
