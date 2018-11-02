@@ -1,10 +1,6 @@
 ---
-title: asinh、asinhf、asinhl | Microsoft Docs
-ms.custom: ''
+title: asinh、asinhf、asinhl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - asinh
 - asinhf
@@ -26,23 +22,17 @@ f1_keywords:
 - asinhf
 - asinhl
 - asinh
-dev_langs:
-- C++
 helpviewer_keywords:
 - asinh function
 - asinhl function
 - asinhf function
 ms.assetid: 4488babe-1a7e-44ca-8b7b-c2db0a70084f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1387e44b885d0f1ed58113b87d26ba5928768c18
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f6100268b77178487b7a7aa1cc3f10ac3ea7e9dc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393291"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662957"
 ---
 # <a name="asinh-asinhf-asinhl"></a>asinh、asinhf、asinhl
 
@@ -68,17 +58,17 @@ long double asinh( long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Asinh**関数の逆ハイパーボリック サイン (アーク ハイパーボリック サイン) を返す*x*です。 この関数は浮動小数点ドメインで有効です。 場合*x*簡易な NaN、不定値、または無限大の場合は、同じ値が返されます。
+**Asinh**関数の逆ハイパーボリック サイン (アーク ハイパーボリック サイン) を返す*x*します。 この関数は浮動小数点ドメインで有効です。 場合*x*は簡易な NaN、不定値、または無限大の場合、同じ値が返されます。
 
 |入力|SEH 例外|**_matherr**例外|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND、INF|none|none|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ を使用する場合は、オーバー ロードを呼び出すことができます**asinh**を受け取り、返します**float**または**長い****二重**値。 C プログラムでは、 **asinh**は**二重**です。
+C++ を使用する場合のオーバー ロードを呼び出すことができます**asinh**を受け取って返す**float**または**長い****二重**値。 C プログラムで**asinh**は**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|--------------|------------------|

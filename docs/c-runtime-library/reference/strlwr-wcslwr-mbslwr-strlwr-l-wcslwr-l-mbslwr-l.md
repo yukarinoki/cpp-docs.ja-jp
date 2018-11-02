@@ -1,10 +1,6 @@
 ---
-title: _strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l | Microsoft Docs
-ms.custom: ''
+title: _strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strlwr_l
 - _strlwr
@@ -35,8 +31,6 @@ f1_keywords:
 - strlwr_l
 - _tcslwr
 - mbslwr
-dev_langs:
-- C++
 helpviewer_keywords:
 - tcslwr function
 - _strlwr function
@@ -61,16 +55,12 @@ helpviewer_keywords:
 - strings [C++], converting case
 - _mbslwr_l function
 ms.assetid: d279181d-2e7d-401f-ab44-6e7c2786a046
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3468795c1f99bd6e79f9b10aae2a220a1876f4c7
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a442afd0ede8d9c6e892f50c12153b22f80733b0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413259"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505691"
 ---
 # <a name="strlwr-wcslwr-mbslwr-strlwrl-wcslwrl-mbslwrl"></a>_strlwr、_wcslwr、_mbslwr、_strlwr_l、_wcslwr_l、_mbslwr_l
 
@@ -144,13 +134,13 @@ unsigned char *_mbslwr_l(
 
 これらの各関数は、変換された文字列へのポインターを返します。 同じ位置で変更が実行されるため、返されるポインターは入力引数として渡されるポインターと同じです。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Strlwr**関数内の大文字を変換します*str*によって決定される小文字にする、 **LC_CTYPE**ロケールのカテゴリの設定。 他の文字は影響を受けません。 詳細については**LC_CTYPE**を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)です。 この関数のバージョン、 **_l**サフィックスを使用して、ロケールに依存する動作に現在のロケール以外のバージョンで、 **_l**に渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じその代わりに。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_Strlwr**関数が内の大文字に変換します*str*によって決定される小文字にする、 **LC_CTYPE**ロケールのカテゴリの設定。 他の文字は影響を受けません。 詳細については**LC_CTYPE**を参照してください[setlocale](setlocale-wsetlocale.md)します。 この関数のバージョン、 **_l**いるバージョンは、ロケールに依存する動作は、現在のロケール サフィックス使用、 **_l**に渡されたロケールを使用することを除き、サフィックスは同じですその代わりに。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**_Wcslwr**と **_mbslwr**関数のワイド文字とマルチバイト文字バージョンは、 **_strlwr**です。 引数と戻り値 **_wcslwr**ワイド文字は、文字列以外の **_mbslwr**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**_Wcslwr**と **_mbslwr**関数のワイド文字とマルチバイト文字バージョンは、 **_strlwr**します。 引数と戻り値 **_wcslwr**はワイド文字列 **_mbslwr**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
-場合*str*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の続行には、これらの関数の戻り値、元の文字列セットが許可された場合**errno**に**EINVAL**です。
+場合*str*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行が続行すると、これらの関数の戻り値、元の文字列とセットを許可された場合**errno**に**EINVAL**します。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -161,9 +151,9 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |**_tcslwr**|**_strlwr**|**_mbslwr**|**_wcslwr**|
 |**_tcslwr_l**|**_strlwr_l**|**_mbslwr_l**|**_wcslwr_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strlwr**、 **_strlwr_l**|\<string.h>|
 |**_wcslwr**、 **_wcslwr_l**|\<string.h> または \<wchar.h>|

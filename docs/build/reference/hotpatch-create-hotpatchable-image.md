@@ -1,31 +1,21 @@
 ---
-title: -hotpatch (ホットパッチ可能なイメージの作成) |マイクロソフトのドキュメント
-ms.custom: ''
+title: /hotpatch (ホットパッチ可能なイメージの作成)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /hotpatch
 - VC.Project.VCCLCompilerTool.CreateHotpatchableImage
-dev_langs:
-- C++
 helpviewer_keywords:
 - hot patching
 - -hotpatch compiler option [C++]
 - /hotpatch compiler option [C++]
 - hotpatching
 ms.assetid: aad539b6-c053-4c78-8682-853d98327798
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 97e1b6197ea60099457db7788ad7e24b96c9fcb8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b304edffc024fac084338789134269745111ba00
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45716977"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581442"
 ---
 # <a name="hotpatch-create-hotpatchable-image"></a>/hotpatch (ホットパッチ可能なイメージの作成)
 
@@ -45,7 +35,7 @@ ms.locfileid: "45716977"
 
 手順については、常に 2 バイトであるため、ARM アーキテクチャでより大きいまたは、x64 コンパイルは常に扱われます場合と **/hotpatch**指定されているを指定する必要はありません **/hotpatch**ときにこれらのターゲットのコンパイルします。ただし、するを使用してリンクする必要がありますも **/functionpadmin**にそれらのホットパッチ可能なイメージを作成します。 **/Hotpatch**コンパイラ オプションのみに影響を与えます x86 コンパイルします。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

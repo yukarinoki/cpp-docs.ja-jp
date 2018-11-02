@@ -1,10 +1,6 @@
 ---
-title: _ismbbalpha、_ismbbalpha_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbalpha、_ismbbalpha_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbalpha
 - _ismbbalpha_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbalpha_l
 - _ismbbalpha
 - _ismbbalpha_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbalpha function
 - ismbbalpha_l function
 - _ismbbalpha function
 - _ismbbalpha_l function
 ms.assetid: 8e54cb92-fc2b-41f5-8ab4-b22ac8aa9ad0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6fa4708cf4c5c297d5a537728d4e5988f21e21b6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c08a92ae0630c977f12deb1d0bd7587f575efd86
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399096"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588670"
 ---
 # <a name="ismbbalpha-ismbbalphal"></a>_ismbbalpha、_ismbbalpha_l
 
@@ -70,15 +60,15 @@ int _ismbbalpha_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbalpha**場合に 0 以外の値を返す式。
+**_ismbbalpha**場合 0 以外の値を返す式。
 
 `isalpha(c) || _ismbbkalnum(c)`
 
-0 です*c*、されていない場合は 0 です。 **_ismbbalpha**任意のロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbalpha_l**に渡されたロケールを使用する点を除いてと同じです。
+0 以外の場合は、 *c*、または 0 でない場合。 **_ismbbalpha**任意のロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbalpha_l**に渡されたロケールを使用すると同じです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbalpha**|\<mbctype.h>|
 |**_ismbbalpha_l**|\<mbctype.h>|

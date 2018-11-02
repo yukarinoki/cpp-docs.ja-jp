@@ -1,45 +1,35 @@
 ---
-title: コンパイラ エラー C2441 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラ エラー C2441
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C2441
-dev_langs:
-- C++
 helpviewer_keywords:
 - C2441
 ms.assetid: ffbd6573-777a-48dd-892f-5cf4a758dcab
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d4224d9090f3ace43f61a10c599fafa78d21600
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 7fcf333f62253eb676c0f0ada1c927ab962ae1ca
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705281"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551256"
 ---
 # <a name="compiler-error-c2441"></a>コンパイラ エラー C2441
 
-> '*変数*': __declspec(process) と共に宣言されたシンボルで const を指定する必要があります: 純粋モード
+> '*変数*': __declspec(process) と共に宣言されたシンボルは/clr では定数である必要があります: ピュア モード
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-既定では、変数は、アプリケーション ドメインごと **/clr: 純粋な**します。 変数のマーク`__declspec(process)` **/clr: 純粋な**が 1 つのアプリケーション ドメインで変更し、別の読み取り場合に発生したエラーを生じやすくなります。
+既定では、変数は、アプリケーション ドメインごと **/clr: 純粋な**します。 変数がマークされている`__declspec(process)` **/clr: 純粋な**が 1 つのアプリケーション ドメインで変更され、別の読み取りの場合、エラー傾向があります。
 
-コンパイラが 1 つのプロセス変数ではそのため、 `const`  **/clr: 純粋な**、すべてのアプリケーション ドメインでのみ読み取りそれらを作成します。
+コンパイラが 1 つの変数をするプロセスはそのため、 `const`  **/clr: 純粋な**、すべてのアプリケーション ドメインでのみそれらの読み取りを行う。
 
-詳細については、次を参照してください。[プロセス](../../cpp/process.md)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)です。
+詳細については、次を参照してください。[プロセス](../../cpp/process.md)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。
 
 ## <a name="example"></a>例
 
-次の例では、C2441 を生成します。
+次の例では、C2441 が生成されます。
 
 ```cpp
 // C2441.cpp

@@ -1,27 +1,18 @@
 ---
-title: ML の致命的でないエラー A2039 |Microsoft Docs
-ms.custom: ''
+title: ML の致命的でないエラー A2039
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
 ms.topic: error-reference
 f1_keywords:
 - A2039
-dev_langs:
-- C++
 helpviewer_keywords:
 - A2039
 ms.assetid: ad8cdaae-b20d-45f0-acb1-79880979c6b7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f51b1f9fcd114e1db6f8f1e3d8d0f1c5ad1989cb
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: f383de4acb8f8cce236d5357aea7d333e0df9df5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43687431"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50525022"
 ---
 # <a name="ml-nonfatal-error-a2039"></a>ML の致命的でないエラー A2039
 

@@ -1,10 +1,6 @@
 ---
-title: exp、expf、策の説明 |Microsoft ドキュメント
-ms.custom: ''
+title: exp、expf、expl
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - expf
 - expl
@@ -27,8 +23,6 @@ f1_keywords:
 - expf
 - expl
 - exp
-dev_langs:
-- C++
 helpviewer_keywords:
 - exponential calculations
 - expf function
@@ -36,18 +30,14 @@ helpviewer_keywords:
 - calculating exponentials
 - exp function
 ms.assetid: 7070016d-1143-407e-9e9a-6b059bb88867
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e9569eee475a80fc5c08c2ec1d099cf627c7b5fb
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b9fb38adcc442e60864ec632cd92793f16e47502
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396220"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50596756"
 ---
-# <a name="exp-expf-expl"></a>exp、expf、策の説明
+# <a name="exp-expf-expl"></a>exp、expf、expl
 
 指数を計算します。
 
@@ -74,11 +64,11 @@ long double expl(
 ### <a name="parameters"></a>パラメーター
 
 *x*<br/>
-浮動小数点値を exponentiate 自然対数の底*e*でします。
+自然対数の底 exponentiate に浮動小数点値*e*でします。
 
 ## <a name="return-value"></a>戻り値
 
-**Exp**関数は、浮動小数点パラメーターの指数値を返す*x*正常終了した場合、します。 その結果は*e*<sup>*x*</sup>ここで、 *e*自然対数の底です。 INF (無限) 関数の戻り値のオーバーフローおよびアンダー フロー、 **exp** 0 を返します。
+**Exp**関数は浮動小数点のパラメーターの指数値を返す*x*成功した場合、します。 つまり、結果が*e*<sup>*x*</sup>ここで、 *e*自然対数の底です。 関数は INF (無限) を返し、オーバーフロー、アンダー フロー、 **exp** 0 を返します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -89,15 +79,15 @@ long double expl(
 
 **Exp**関数には、ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**exp**を受け取る、 **float**または**long double**引数。 C プログラムでは、 **exp**常に受け取りを返す、**二重**です。
+C++ では、オーバー ロードのオーバー ロードを呼び出すことができますので**exp**を受け取る、 **float**または**long double**引数。 C プログラムで**exp**は、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須の C ヘッダー|必須の C++ ヘッダー|
 |--------------|---------------------|---|
-|**exp**、 **expf**、**策の説明**|\<math.h>|\<cmath> または \<math.h>|
+|**exp**、 **expf**、 **expl**|\<math.h>|\<cmath> または \<math.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

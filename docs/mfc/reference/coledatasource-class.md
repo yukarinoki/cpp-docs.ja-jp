@@ -1,10 +1,6 @@
 ---
-title: COleDataSource クラス |Microsoft Docs
-ms.custom: ''
+title: COleDataSource クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDataSource
 - AFXOLE/COleDataSource
@@ -23,8 +19,6 @@ f1_keywords:
 - AFXOLE/COleDataSource::OnRenderGlobalData
 - AFXOLE/COleDataSource::OnSetData
 - AFXOLE/COleDataSource::SetClipboard
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDataSource [MFC], COleDataSource
 - COleDataSource [MFC], CacheData
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - COleDataSource [MFC], OnSetData
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2aa5ea0b95235d778c6491cca5eeb6b4a826b8bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 539f3f1611d4d9d83d37754b66986c6b4f59549c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46428110"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614202"
 ---
 # <a name="coledatasource-class"></a>COleDataSource クラス
 
@@ -106,7 +96,7 @@ OLE のデータ ソースを直接作成することができます。 また�
 
 `COleDataSource`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxole.h
 

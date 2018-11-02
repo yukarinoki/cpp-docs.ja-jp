@@ -1,29 +1,19 @@
 ---
-title: '&lt;algorithm&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;algorithm&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <algorithm>
-dev_langs:
-- C++
 helpviewer_keywords:
 - algorithm header [C++]
 - C++ Standard Library, algorithms
 - <algorithm> header
 ms.assetid: 19f97711-7a67-4a65-8fd1-9a2bd3ca327d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9de7d5606d2bb178dd786d22bb0e5ab890fd16ff
-ms.sourcegitcommit: 3614b52b28c24f70d90b20d781d548ef74ef7082
+ms.openlocfilehash: 042523cddf640e7cf6fd7f9a1dac9f3adbc360b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38964237"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50484072"
 ---
 # <a name="ltalgorithmgt"></a>&lt;algorithm&gt;
 
@@ -92,7 +82,7 @@ C++ 標準ライブラリ アルゴリズムは、通常、その目的や要件
 |[max](../standard-library/algorithm-functions.md#max)|2 つのオブジェクトを比較し、大きい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。|
 |[max_element](../standard-library/algorithm-functions.md#max_element)|並べ替え基準をバイナリ述語で指定できる、指定された範囲内の最大の要素の最初の出現箇所を検索します。|
 |[merge](../standard-library/algorithm-functions.md#merge)|2 つの並べ替えられたソース範囲のすべての要素を単一の並べ替えられたターゲット範囲として連結します。順序の基準は二項述語によって指定できます。|
-|[min](../standard-library/algorithm-functions.md#min)|2 つのオブジェクトを比較し、小さい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。|
+|[分](../standard-library/algorithm-functions.md#min)|2 つのオブジェクトを比較し、小さい方のオブジェクトを返します。順序の基準は、二項述語によって指定できます。|
 |[min_element](../standard-library/algorithm-functions.md#min_element)|指定された範囲内の最小の要素の最初の出現箇所を検索します。順序の基準は二項述語によって指定できます。|
 |[minmax](../standard-library/algorithm-functions.md#minmax)|2 つの入力パラメーターを比較し、それらを昇順のペアとして返します。|
 |[minmax_element](../standard-library/algorithm-functions.md#minmax_element)|[min_element](../standard-library/algorithm-functions.md#min_element) と [max_element](../standard-library/algorithm-functions.md#max_element) によって実行される作業を 1 回の呼び出しで実行します。|

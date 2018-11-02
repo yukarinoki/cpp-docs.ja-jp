@@ -1,10 +1,6 @@
 ---
-title: _cgets_s、_cgetws_s | Microsoft Docs
-ms.custom: ''
+title: _cgets_s、_cgetws_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cgetws_s
 - _cgets_s
@@ -26,8 +22,6 @@ f1_keywords:
 - cgets_s
 - cgetws_s
 - _cgetws_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], getting from console
 - console, getting strings from
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - _cgetws_s function
 - cgetws_s function
 ms.assetid: 38b74897-afe6-4dd9-a43f-36a3c0d72c5c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 48b00f9eee699b7e556c2fcc3f88abd8d783a261
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 8341b775df3b9cbaececdfaa1f17e075d7c7416c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396798"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50588540"
 ---
 # <a name="cgetss-cgetwss"></a>_cgets_s、_cgetws_s
 
@@ -102,9 +92,9 @@ errno_t _cgetws_s(
 |いない**NULL**|ゼロ|任意|**EINVAL**|変更されない|
 |いない**NULL**|任意|**NULL**|**EINVAL**|長さゼロの文字列|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_cgets_s**と **_cgetws_s**コンソールから文字列を読み取るし、その文字列 (null 終端文字) にコピー*バッファー*です。 **_cgetws_s**を除いて、文字のサイズ、これら 2 つの関数の動作は同じ関数のワイド文字バージョンは、します。 読み取る文字列の最大サイズとして渡される、 *numberOfElements*パラメーター。 このサイズには、終端の null に対応する追加の文字を含める必要があります。 実際に読み取られた文字数に配置されます*読み取ら*です。
+**_cgets_s**と **_cgetws_s**コンソールから文字列を読み取るし、(null 終端文字の場合)、文字列をコピー*バッファー*します。 **_cgetws_s**はこの関数のワイド文字バージョンは、以外の文字のサイズ、これら 2 つの関数の動作は同じです。 読み取る文字列の最大サイズとして渡される、 *numberOfElements*パラメーター。 このサイズには、終端の null に対応する追加の文字を含める必要があります。 読み取られた文字数が実際に配置されます*読み取ら*します。
 
 操作中に、またはパラメーターを検証する際にエラーが発生した場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」の説明にあるとおり無効なパラメーター ハンドラーが呼び出されます。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と**EINVAL**が返されます。
 
@@ -116,9 +106,9 @@ C++ では、テンプレートのオーバーロードを利用すると、こ�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_cgetts_s**|**_cgets_s**|**_cgets_s**|**_cgetws_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cgets_s**|\<conio.h>|
 |**_cgetws_s**|\<conio.h> または \<wchar.h>|

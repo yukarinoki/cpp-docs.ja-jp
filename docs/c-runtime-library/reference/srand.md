@@ -1,10 +1,6 @@
 ---
-title: srand | Microsoft Docs
-ms.custom: ''
+title: srand
 ms.date: 1/02/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - srand
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - srand
-dev_langs:
-- C++
 helpviewer_keywords:
 - random starting point
 - random starting point, setting
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - pseudorandom numbers
 - starting points, setting random
 - starting points
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7972ddfe6ae9c1d591bdbd4cc5e208d78e826037
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e1670c030d8f073d928ccf23f38ac4b611e68632
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107554"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530222"
 ---
 # <a name="srand"></a>srand
 
@@ -66,7 +56,7 @@ void srand(
 
 **Srand**関数は、現在のスレッドで、一連の整数の擬似乱数を生成するための開始点を設定します。 結果の同じシーケンスを作成するコード ジェネレーターを再初期化を呼び出し、 **srand**関数を使用して、同じ*シード*引数を再度します。 その他の値の*シード*ジェネレーター擬似乱数シーケンス内のさまざまな開始点を設定します。 **rand**生成される擬似乱数を取得します。 呼び出す**rand**への呼び出しの前に**srand**呼び出すことと同じシーケンスを生成**srand**で*シード*1 として渡されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

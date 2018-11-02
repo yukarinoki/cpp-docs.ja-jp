@@ -1,27 +1,16 @@
 ---
-title: ツールバーのボタン (C++) の削除 |Microsoft Docs
-ms.custom: ''
+title: ツール バー ボタン (C++) を削除します。
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbar buttons [C++], deleting
 - Toolbar editor [C++], deleting buttons
 ms.assetid: 0888cb9b-6804-4717-93d0-3437bbc6241c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: ad1e420aa1ffe33cffb9649fdfbaca398540b2a3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5f11ba9d4f20e2daefae9e217138e069d908ac88
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46397540"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50603230"
 ---
 # <a name="deleting-a-toolbar-button-c"></a>ツール バー ボタン (C++) を削除します。
 
@@ -31,7 +20,7 @@ ms.locfileid: "46397540"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 MFC または ATL
 

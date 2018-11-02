@@ -1,10 +1,6 @@
 ---
-title: isnan、_isnan、_isnanf | Microsoft Docs
-ms.custom: ''
+title: isnan、_isnan、_isnanf
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isnan
 - _isnanf
@@ -29,8 +25,6 @@ f1_keywords:
 - math/_isnan
 - math/_isnanf
 - _isnanf
-dev_langs:
-- C++
 helpviewer_keywords:
 - NAN (not a number)
 - _isnan function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - Not a Number (NANs)
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: baf92397087ebbac27c7fea8cf5f524b33736b19
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ce111569b7caee9d0c7b8f35352c395571ad08b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401153"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50650867"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan、_isnan、_isnanf
 
@@ -81,21 +71,21 @@ bool isnan(
 
 ## <a name="return-value"></a>戻り値
 
-C では、 **isnan**マクロと **_isnan**と **_isnanf**場合、関数は 0 以外の値を返す引数*x* nan ですそれ以外の場合、。0 を返します。
+C では、 **isnan**マクロと **_isnan**と **_isnanf**関数が 0 以外の値を返す場合、引数*x* NAN は、それ以外の0 を返します。
 
-C++ では、 **isnan**テンプレート関数を返します**true**場合引数*x* nan です。 それ以外の場合を返します**false**。
+C++ では、 **isnan**テンプレート関数を返します**true**場合引数*x* NAN; は、それ以外の場合を返す**false**。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C **isnan**マクロと **_isnan**と **_isnanf**関数は浮動小数点値をテスト*x*場合は、0 以外の値を返す*x*ない数 (NAN) 値です。 NaN は、浮動小数点演算の結果が IEEE-754 浮動小数点形式の指定した型で表現できない場合に生成されます。 出力で NaN が表現される方法の詳細については、「[printf](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
+C **isnan**マクロと **_isnan**と **_isnanf**関数は浮動小数点値をテスト*x*、0 以外の値を返す場合*x*ない数 (NAN) 値。 NaN は、浮動小数点演算の結果が IEEE-754 浮動小数点形式の指定した型で表現できない場合に生成されます。 出力で NaN が表現される方法の詳細については、「[printf](printf-printf-l-wprintf-wprintf-l.md)」をご覧ください。
 
-C++ としてコンパイルするとき、 **isnan**マクロが定義されていないと、 **isnan**テンプレート関数が代わりに定義されています。 型の値を返します**bool**整数ではなくです。
+C++ としてコンパイルされるときに、 **isnan**マクロが定義されていないと**isnan**テンプレート関数は、代わりに定義されます。 型の値を返します**bool**整数ではなく。
 
-**_Isnan**と **_isnanf**関数は、Microsoft 固有の仕様です。 **_Isnanf**関数は、x64 用にコンパイルされたときに使用できるのみです。
+**_Isnan**と **_isnanf**関数は、Microsoft 固有の仕様。 **_Isnanf**関数は、x64 用にコンパイルされるときに使用できるのみです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------------|-------------------------------|
 |**isnan**、 **_isnanf**|\<math.h>|\<math.h> または \<cmath>|
 |**_isnan**|\<float.h>|\<float.h> または \<cfloat>|

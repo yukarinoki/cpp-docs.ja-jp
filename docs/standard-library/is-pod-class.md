@@ -1,28 +1,18 @@
 ---
-title: is_pod クラス | Microsoft Docs
-ms.custom: ''
+title: is_pod クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_pod
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_pod class
 - is_pod
 ms.assetid: d73ebdee-746b-4082-9fa4-2db71432eb0e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 652937aba7b1c5626b617cec4e80761a22b55066
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 3dff4650cf0337a5ff54065d3b1644e11008ecfe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44109824"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492239"
 ---
 # <a name="ispod-class"></a>is_pod クラス
 
@@ -104,7 +94,7 @@ is_pod<int> == true
 is_pod<throws> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

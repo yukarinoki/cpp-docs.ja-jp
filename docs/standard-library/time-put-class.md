@@ -1,18 +1,12 @@
 ---
-title: time_put クラス |Microsoft Docs
-ms.custom: ''
+title: time_put クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xloctime/std::time_put
 - locale/std::time_put::char_type
 - locale/std::time_put::iter_type
 - locale/std::time_put::do_put
 - locale/std::time_put::put
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::time_put [C++]
 - std::time_put [C++], char_type
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - std::time_put [C++], do_put
 - std::time_put [C++], put
 ms.assetid: df79493e-3331-48d2-97c3-ac3a745f0791
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 27a200ba94be8c4937342820fadf89e4225ba97d
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: b9c6f8db26cdc67d3a1bc752b9b5eb31f7dc220b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45719954"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452508"
 ---
 # <a name="timeput-class"></a>time_put クラス
 
@@ -61,7 +51,7 @@ class time_put : public locale::facet;
 |-|-|
 |[time_put](#time_put)|`time_put` 型のオブジェクトのコンストラクター。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -75,7 +65,7 @@ class time_put : public locale::facet;
 |[do_put](#do_put)|時刻と日付の情報を `CharType` のシーケンスとして出力する仮想関数。|
 |[put](#put)|時刻と日付の情報を `CharType` のシーケンスとして出力します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

@@ -1,28 +1,18 @@
 ---
-title: greater_equal 構造体 | Microsoft Docs
-ms.custom: ''
+title: greater_equal 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xfunctional/std::greater_equal
-dev_langs:
-- C++
 helpviewer_keywords:
 - greater_equal struct
 - greater_equal function
 ms.assetid: a8ba911b-7af8-4653-b972-d8618f4df7d5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b4b99c9b187e80a7c1e0a91badc4ccad06de593f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 89591fbcb2b520a83b6e49bd8e7450784258cf3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104252"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594195"
 ---
 # <a name="greaterequal-struct"></a>greater_equal 構造体
 
@@ -119,7 +109,7 @@ Sorted vector v1 = (41 6262 6262 6334 18467 19169 26500)
 Resorted vector v1 = (26500 19169 18467 6334 6262 6262 41)
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

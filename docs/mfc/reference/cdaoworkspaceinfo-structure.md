@@ -1,28 +1,18 @@
 ---
-title: CDaoWorkspaceInfo 構造体 |Microsoft Docs
-ms.custom: ''
+title: CDaoWorkspaceInfo 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDaoWorkspaceInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDaoWorkspaceInfo structure [MFC]
 - DAO (Data Access Objects), Workspaces collection
 ms.assetid: a1f4b25e-f9c6-4196-b075-d1df99c54124
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f46bfec2d74b0d1fd292b3c9852ba8ea568329a2
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e47df7323d130bee2a378a4cf7dcae8001641f6e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46441760"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562813"
 ---
 # <a name="cdaoworkspaceinfo-structure"></a>CDaoWorkspaceInfo 構造体
 
@@ -56,7 +46,7 @@ Workspace オブジェクトの所有者を表す値。 関連情報について
 
 によって取得される情報、 [CDaoWorkspace::GetWorkspaceInfo](../../mfc/reference/cdaoworkspace-class.md#getworkspaceinfo)にメンバー関数が格納されている、`CDaoWorkspaceInfo`構造体。 `CDaoWorkspaceInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoWorkspaceInfo`オブジェクト。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 

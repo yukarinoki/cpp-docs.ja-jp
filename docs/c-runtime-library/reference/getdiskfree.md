@@ -1,10 +1,6 @@
 ---
-title: _getdiskfree | Microsoft Docs
-ms.custom: ''
+title: _getdiskfree
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _getdiskfree
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - getdiskfree
 - _getdiskfree
-dev_langs:
-- C++
 helpviewer_keywords:
 - diskfree_t type
 - _getdiskfree function
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - disk size
 - getdiskfree function
 ms.assetid: 47a3f6cf-4816-452a-8f3d-1c3ae02a0f2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2fad5c67f247a40f1c8d65bec50ccf80f44b3d4d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c39802301406bc4250328983c8cf8bad94497f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401618"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602281"
 ---
 # <a name="getdiskfree"></a>_getdiskfree
 
@@ -65,13 +55,13 @@ unsigned _getdiskfree(
 情報を取得するディスク ドライブを指定します。
 
 *driveinfo*<br/>
-A **_diskfree_t**構造をドライブについての情報が設定されます。
+A **_diskfree_t**ドライブに関する情報が読み込まれる構造体。
 
 ## <a name="return-value"></a>戻り値
 
-関数が成功した場合の戻り値は 0 です。 関数が失敗した場合の戻り値はエラー コードです。 値**errno**がオペレーティング システムによって返されるエラーに設定します。 示されたエラー状態の詳細については**errno**を参照してください[errno 定数](../../c-runtime-library/errno-constants.md)です。
+関数が成功した場合の戻り値は 0 です。 関数が失敗した場合の戻り値はエラー コードです。 値**errno**オペレーティング システムによって返されるエラーに設定されています。 示されたエラー状態の詳細については**errno**を参照してください[errno 定数](../../c-runtime-library/errno-constants.md)します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **_Diskfree_t**構造体は Direct.h で定義されています。
 
@@ -84,11 +74,11 @@ struct _diskfree_t {
 };
 ```
 
-この関数は、パラメーターを検証します。 場合、 *driveinfo*ポインターが**NULL**または*ドライブ*が無効なドライブの指定」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行は継続許可されたかどうか、関数を返します**EINVAL**設定と**errno**に**EINVAL**です。 有効なドライブの範囲は、0 から 26 です。 A*ドライブ*0 の値が現在のドライブを指定します。 その後、番号にマップは英文字の文字を 1 はドライブ A、3 はドライブ C を示します。
+この関数は、パラメーターを検証します。 場合、 *driveinfo*ポインターが**NULL**または*ドライブ*が無効なドライブを指定します」の説明に従って、この関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返します**EINVAL**設定と**errno**に**EINVAL**します。 有効なドライブの範囲は、0 から 26 です。 A*ドライブ*0 の値を現在のドライブを指定します。 1 はドライブ A を示すことは、3 は、C ドライブを示しますの英語のアルファベットがこのような文字に数値がその後、マップします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_getdiskfree**|\<direct.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: _strdup、_wcsdup、_mbsdup | Microsoft Docs
-ms.custom: ''
+title: _strdup、_wcsdup、_mbsdup
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strdup
 - _mbsdup
@@ -30,8 +26,6 @@ f1_keywords:
 - _strdup
 - _ftcsdup
 - _wcsdup
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcsdup function
 - ftcsdup function
@@ -48,23 +42,19 @@ helpviewer_keywords:
 - tcsdup function
 - _tcsdup function
 ms.assetid: 8604f8bb-95e9-45d3-93ef-20397ebf247a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a88051cbf5ac32f51e18f6d3dd256b177b7044a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 094843fdb1432aa58ec04b3b4e39ac8861b928ec
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413513"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50461517"
 ---
 # <a name="strdup-wcsdup-mbsdup"></a>_strdup、_wcsdup、_mbsdup
 
 文字列を複製します。
 
 > [!IMPORTANT]
-> **_mbsdup** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)です。
+> **_mbsdup** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)します。
 
 ## <a name="syntax"></a>構文
 
@@ -87,13 +77,13 @@ NULL で終わる元の文字列。
 
 ## <a name="return-value"></a>戻り値
 
-コピーされた文字列の格納場所へのポインターを返しますこれらの関数または**NULL**記憶域を割り当てることができない場合。
+これらの関数の各コピーされた文字列の格納場所にポインターを返しますまたは**NULL**場合、記憶域を割り当てることができません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Strdup**関数呼び出し[malloc](malloc.md)のコピーの記憶域スペースを割り当てる*strSource*しコピー *strSource*に、割り当てられている領域。
+**_Strdup**関数呼び出し[malloc](malloc.md)のコピーの記憶域容量を割り当てる*strSource*し、コピー *strSource*に、割り当てられている領域。
 
-**_wcsdup**と **_mbsdup**のワイド文字とマルチバイト文字バージョンは、 **_strdup**です。 引数と戻り値の **_wcsdup**ワイド文字は、文字列以外の **_mbsdup**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wcsdup**と **_mbsdup**のワイド文字とマルチバイト文字バージョン **_strdup**します。 引数と戻り値の **_wcsdup**はワイド文字列 **_mbsdup**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -101,13 +91,13 @@ NULL で終わる元の文字列。
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcsdup**|**_strdup**|**_mbsdup**|**_wcsdup**|
 
-**_Strdup**呼び出し**malloc**のコピーの記憶域スペースを割り当てる*strSource*、常に、を呼び出すことによってこのメモリを解放することをお勧めは[空き](free.md)への呼び出しによって返されるポインターでルーチン **_strdup**です。
+**_Strdup**呼び出し**malloc**のコピーの記憶域スペースを割り当てる*strSource*、常に、を呼び出すことによって、このメモリを解放することをお勧めは[無料](free.md)への呼び出しによって返されるポインターで日常的な **_strdup**します。
 
-場合 **_DEBUG**と **_CRTDBG_MAP_ALLOC**定義すると、 **_strdup**と **_wcsdup**への呼び出しによって置き換えられます **_strdup_dbg**と **_wcsdup_dbg**メモリ割り当てをデバッグできるようにします。 詳細については、「[_strdup_dbg、_wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)」をご覧ください。
+場合 **_DEBUG**と **_CRTDBG_MAP_ALLOC**が定義されている、 **_strdup**と **_wcsdup**呼び出しに置き換え **_strdup_dbg**と **_wcsdup_dbg**デバッグのメモリ割り当てを許可します。 詳細については、「 [_strdup_dbg, _wcsdup_dbg](strdup-dbg-wcsdup-dbg.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strdup**|\<string.h>|
 |**_wcsdup**|\<string.h> または \<wchar.h>|

@@ -1,29 +1,18 @@
 ---
-title: 追加のリソース ダイアログ ボックス (C++) |Microsoft Docs
-ms.custom: ''
+title: 追加のリソース ダイアログ ボックス (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.insertresource
-dev_langs:
-- C++
 helpviewer_keywords:
 - resources [C++], adding
 - Add Resource dialog box [C++]
 ms.assetid: e9fb6967-738f-47e8-ab58-728cf35b3af0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f44a0be0fc7614ab9dd09e814e7e444ed90e8a4a
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: b20ec4a076e276c905a96c2deabd619ea10517f7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317668"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50503120"
 ---
 # <a name="add-resource-dialog-box"></a>[リソースの追加] ダイアログ ボックス
 
@@ -52,7 +41,7 @@ ms.locfileid: "44317668"
 
 開く、[新しいカスタム リソース ダイアログ ボックス](../windows/new-custom-resource-dialog-box.md)では、カスタム リソースを作成できます。 カスタム リソースを編集するには、バイナリ エディターを使用する必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

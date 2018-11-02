@@ -1,16 +1,10 @@
 ---
-title: -X (標準を無視するパスを含める) |マイクロソフトのドキュメント
-ms.custom: ''
+title: /X (標準インクルード パスの無視)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /x
 - VC.Project.VCCLCompilerTool.OVERWRITEStandardIncludePath
 - VC.Project.VCCLWCECompilerTool.OVERWRITEStandardIncludePath
-dev_langs:
-- C++
 helpviewer_keywords:
 - /X compiler option [C++]
 - include files, ignore standard path
@@ -19,16 +13,12 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 994568d74c63e612b55d1101ce957e646c555e4a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 23942803ae0a25aaddd7f5844b303528c2c7ccb9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707435"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663763"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (標準インクルード パスの無視)
 
@@ -44,7 +34,7 @@ ms.locfileid: "45707435"
 
 このオプションを使用することができます、 [/I (追加インクルード ディレクトリ)](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) オプション。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

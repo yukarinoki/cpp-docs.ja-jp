@@ -1,10 +1,6 @@
 ---
-title: _fpreset | Microsoft ドキュメント
-ms.custom: ''
+title: _fpreset
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fpreset
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _fpreset
 - fpreset
-dev_langs:
-- C++
 helpviewer_keywords:
 - fpreset function
 - floating-point numbers, resetting math package
 - _fpreset function
 ms.assetid: f31c6a04-b464-4f07-a7c4-42133360e328
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8b550df3e43b56038ae6d1b2d6695c86d90c3499
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 0b3ea4289cd0ff031fd2828e3c4183911459297c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398895"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592613"
 ---
 # <a name="fpreset"></a>_fpreset
 
@@ -51,13 +41,13 @@ ms.locfileid: "32398895"
 void _fpreset( void );
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Fpreset**関数は浮動小数点演算パッケージを再初期化します。 **_fpreset**で通常使用**信号**、**システム**、または **_exec**または **_spawn**関数。 プログラムは、浮動小数点エラー信号をトラップする場合 (**SIGFPE**) で**信号**、浮動小数点エラーから呼び出すことによって回復できます安全に **_fpreset** を使用して、**longjmp**です。
+**_Fpreset**関数は浮動小数点演算パッケージを再初期化します。 **_fpreset**通常併用**信号**、**システム**、または **_exec**または **_spawn**関数。 プログラムは、浮動小数点エラー シグナルをトラップする場合 (**SIGFPE**) と**信号**、安全に呼び出すことによって浮動小数点エラーから回復ができる **_fpreset** を使用して、**longjmp**します。
 
-コンパイルするときにこの関数は使用されなくなりました[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)共通言語ランタイムには、既定の浮動小数点精度のみがサポートされるためです。
+コンパイルするときに、この関数は非推奨[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)のため、共通言語ランタイムは浮動小数点の既定の精度のみをサポートします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

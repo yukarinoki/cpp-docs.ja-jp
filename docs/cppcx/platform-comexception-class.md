@@ -1,28 +1,20 @@
 ---
-title: Platform::comexception クラス |Microsoft Docs
-ms.custom: ''
+title: Platform::COMException クラス
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::COMException
 - VCCORLIB/Platform::Exception::HResult
 - VCCORLIB/Platform::Exception::Message
-dev_langs:
-- C++
 helpviewer_keywords:
 - Platform::COMException Class
 ms.assetid: 44fda4e5-574f-4d12-ab5f-4ff3f277448d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f00acda41149f89121338d967f65e040d62f5452
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 6ba387b8d3be0e3f91a844bb7633bedfdb7ee9d6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103959"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607806"
 ---
 # <a name="platformcomexception-class"></a>Platform::COMException クラス
 
@@ -79,7 +71,7 @@ COMException クラスには、次のプロパティがあります。
 |OutOfBoundsException|E_BOUNDS|操作が有効範囲外のデータにアクセスを試みるとスローされます。|
 |OutOfMemoryException|E_OUTOFMEMORY|メモリが不足して操作を完了できないときにスローされます。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **クライアントがサポートされている最小:** Windows 8
 

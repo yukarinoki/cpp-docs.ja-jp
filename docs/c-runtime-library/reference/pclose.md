@@ -1,10 +1,6 @@
 ---
-title: _pclose | Microsoft Docs
-ms.custom: ''
+title: _pclose
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _pclose
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _pclose
 - pclose
-dev_langs:
-- C++
 helpviewer_keywords:
 - _pclose function
 - pclose function
 - pipes, closing
 ms.assetid: e2e31a9e-ba3a-4124-bcbb-c4040110b3d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 01e58c23bc91e8819abb3cd24f1ed01ee161ff8f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eb0f54ec27992cd0e62b11d8fec5bd54c3daea4b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401777"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507719"
 ---
 # <a name="pclose"></a>_pclose
 
@@ -59,21 +49,21 @@ FILE *stream
 ### <a name="parameters"></a>パラメーター
 
 *ストリーム*<br/>
-前の呼び出しから値を返す **_popen**です。
+以前の呼び出しから値を返す **_popen**します。
 
 ## <a name="return-value"></a>戻り値
 
-エラーが発生した場合は、終了するコマンド プロセッサ、または-1 の終了ステータスを返します。 戻り値の形式はいるのと同じ **_cwait**上位と下位バイトが入れ替わることを除き、します。 ストリームが場合**NULL**、 **_pclose**設定**errno**に**EINVAL**し、-1 を返します。
+エラーが発生した場合は、終了するコマンド プロセッサ、または-1 の終了ステータスを返します。 戻り値の形式はの場合と同じ **_cwait**下位と上位バイトが交換を除き、します。 ストリームが場合**NULL**、 **_pclose**設定**errno**に**EINVAL** -1 を返します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Pclose**関数は、関連付けられているによって開始されたコマンド プロセッサ (Cmd.exe) のプロセス ID を検索 **_popen**呼び出し、実行、 [_cwait](cwait.md)新しいコマンドを呼び出すプロセッサ、および関連するパイプのストリームを閉じます。
+**_Pclose**関数は、関連付けられているによって開始されたコマンド プロセッサ (Cmd.exe) のプロセス ID **_popen**呼び出しを実行し、 [_cwait](cwait.md)で新しいコマンドを呼び出すプロセッサ、し、関連するパイプのストリームを閉じます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_pclose**|\<stdio.h>|
 

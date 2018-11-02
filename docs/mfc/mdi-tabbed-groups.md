@@ -1,26 +1,16 @@
 ---
-title: MDI タブ付きグループ |Microsoft Docs
-ms.custom: ''
+title: MDI タブ付きグループ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - mdi [MFC], tabbed groups
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 35113181a21a5ff265b12269f57ee853f6011abc
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: cefd97b377c2755b158830d8e649ac40f90fee11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442163"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544491"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI タブ付きグループ
 

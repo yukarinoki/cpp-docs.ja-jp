@@ -1,10 +1,6 @@
 ---
-title: sin、sinf、sinl |Microsoft ドキュメント
-ms.custom: ''
+title: sin、sinf、sinl
 ms.date: 04/10/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - sinl
 - sinf
@@ -27,8 +23,6 @@ f1_keywords:
 - sinf
 - sinl
 - sin
-dev_langs:
-- C++
 helpviewer_keywords:
 - _sinl function
 - sinl function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - trigonometric functions
 - sinf function
 ms.assetid: 737de73e-3590-45f9-8257-dc1c0c489dfc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99e7792e177c6203d38a368f3dd4125fe848a76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7006d7246837e5dc69733a007b3f7dab1c55280e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407578"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50430363"
 ---
 # <a name="sin-sinf-sinl"></a>sin、sinf、sinl
 
@@ -72,7 +62,7 @@ long double sin(long double x);  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**Sin**関数のサイン値を返します*x*です。 場合*x*が 263 以上で、または小さいが同じかそれ以下-263、結果から有意性低下します。
+**Sin**関数のサインを返します*x*します。 場合*x*が 263 以上で、または少ないよりまたは-263 等しくは、結果の有効桁数の損失が発生します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
@@ -81,13 +71,13 @@ long double sin(long double x);  // C++ only
 
 リターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**sin**を受け取り、返します**float**または**長い****二重**値。 C プログラムでは、 **sin**は**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sin**を受け取って返す**float**または**長い****二重**値。 C プログラムで**sin**は**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-|-|-|
 |**sin**、 **sinf**、 **sinl**|\<math.h>|\<cmath> または \<math.h>|
 

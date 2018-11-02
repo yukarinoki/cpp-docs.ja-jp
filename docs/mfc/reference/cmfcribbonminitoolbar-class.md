@@ -1,10 +1,6 @@
 ---
-title: CMFCRibbonMiniToolBar クラス |Microsoft Docs
-ms.custom: ''
+title: CMFCRibbonMiniToolBar クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CMFCRibbonMiniToolBar
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar
@@ -13,8 +9,6 @@ f1_keywords:
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::SetCommands
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::Show
 - AFXRIBBONMINITOOLBAR/CMFCRibbonMiniToolBar::ShowWithContextMenu
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], IsContextMenuMode
 - CMFCRibbonMiniToolBar [MFC], IsRibbonMiniToolBar
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - CMFCRibbonMiniToolBar [MFC], Show
 - CMFCRibbonMiniToolBar [MFC], ShowWithContextMenu
 ms.assetid: 7017e963-aeaf-4fe9-b540-e15a7ed41e94
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 738327ac44f7d2e28250c19eecdd64e8b761a361
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 665de65d64262415e20ca5ac05e1e06b2c1862c5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381921"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573382"
 ---
 # <a name="cmfcribbonminitoolbar-class"></a>CMFCRibbonMiniToolBar クラス
 
@@ -59,7 +49,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 |`CMFCRibbonMiniToolBar::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
 |`CMFCRibbonMiniToolBar::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|
 |[CMFCRibbonMiniToolBar::IsContextMenuMode](#iscontextmenumode)||
-|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|(`CMFCPopupMenu::IsRibbonMiniToolBar` をオーバーライドします)。|
+|[CMFCRibbonMiniToolBar::IsRibbonMiniToolBar](#isribbonminitoolbar)|( `CMFCPopupMenu::IsRibbonMiniToolBar`をオーバーライドします)。|
 |[CMFCRibbonMiniToolBar::SetCommands](#setcommands)|ツール バーに表示するコマンドのリストを設定します。|
 |[CMFCRibbonMiniToolBar::Show](#show)|指定した画面座標に、ミニ ツール バーを表示します。|
 |[CMFCRibbonMiniToolBar::ShowWithContextMenu](#showwithcontextmenu)|コンテキスト メニューとミニ ツール バーが表示されます。|
@@ -88,7 +78,7 @@ class CMFCRibbonMiniToolBar : public CMFCRibbonPanelMenu
 
 [CMFCRibbonMiniToolBar](../../mfc/reference/cmfcribbonminitoolbar-class.md)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxRibbonMiniToolBar.h
 

@@ -1,9 +1,6 @@
 ---
-title: deque (STL/CLR) |Microsoft Docs
-ms.custom: ''
+title: deque (STL/CLR)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
 ms.topic: reference
 f1_keywords:
 - cliext::deque
@@ -51,8 +48,6 @@ f1_keywords:
 - cliext::deque::operator==
 - cliext::deque::operator>
 - cliext::deque::operator>=
-dev_langs:
-- C++
 helpviewer_keywords:
 - deque class [STL/CLR]
 - <deque> header [STL/CLR]
@@ -103,17 +98,12 @@ helpviewer_keywords:
 - operator> member [STL/CLR]
 - operator>= member [STL/CLR]
 ms.assetid: dd669da3-3c0e-45e9-8596-f6b483720941
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: 9d5abbda25bc579bf635f27026f239da0f716499
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ff5ddcfa101baf4c85145d1c6d64a6a3b9e7df58
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448403"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445059"
 ---
 # <a name="deque-stlclr"></a>deque (STL/CLR)
 
@@ -142,10 +132,10 @@ template<typename Value>
 *GValue*<br/>
 被制御シーケンス内の要素のジェネリック型。
 
-*値*<br/>
+*[値]*<br/>
 被制御シーケンス内の要素の型。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<cliext/deque >
 

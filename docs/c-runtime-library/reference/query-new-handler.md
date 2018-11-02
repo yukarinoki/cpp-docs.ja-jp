@@ -1,10 +1,6 @@
 ---
-title: _query_new_handler | Microsoft Docs
-ms.custom: ''
+title: _query_new_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _query_new_handler
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _query_new_handler
 - query_new_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - query_new_handler function
 - handler routines
 - error handling
 - _query_new_handler function
 ms.assetid: 9a84b5c3-fe33-4c01-83a0-be87dc3ec518
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 340574a57bf1e6309ac9a5e1aa59b7e28632ae59
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: febefbe46d95b7e5c8de026806a20d7eff74e7cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401000"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516000"
 ---
 # <a name="querynewhandler"></a>_query_new_handler
 
@@ -56,15 +46,15 @@ _PNH _query_new_handler(
 
 ## <a name="return-value"></a>戻り値
 
-によって設定された現在の新しいハンドラー ルーチンのアドレスが返される **_set_new_handler**です。
+によって設定された現在の新しいハンドラー ルーチンのアドレスを返します **_set_new_handler**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ **_query_new_handler**関数は、C++ での設定の現在の例外処理関数のアドレスを返します[_set_new_handler](set-new-handler.md)関数。 **_set_new_handler**に制御を設定する場合は、例外処理関数の指定に使用される、**新しい**演算子がメモリの割り当てに失敗します。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../../cpp/new-and-delete-operators.md)」の説明をご覧ください。
+C++ **_query_new_handler**関数が C++ によって設定の現在の例外処理関数のアドレスを返します[_set_new_handler](set-new-handler.md)関数。 **_set_new_handler**に制御を設定する場合は例外処理関数を指定するために使用、**新しい**演算子がメモリの割り当てに失敗します。 詳細については、C++ 言語リファレンスの「[new および delete 演算子](../../cpp/new-and-delete-operators.md)」の説明をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_query_new_handler**|\<new.h>|
 

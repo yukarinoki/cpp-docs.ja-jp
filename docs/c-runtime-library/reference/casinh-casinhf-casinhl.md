@@ -1,11 +1,6 @@
 ---
-title: casinh、casinhf、casinhl | Microsoft Docs
-ms.custom: ''
+title: casinh、casinhf、casinhl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - casinh
 - casinhl
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/casinh
 - complex/casinhf
 - complex/casinhl
-dev_langs:
-- C++
 helpviewer_keywords:
 - casinh function
 - casinhf function
 - casinhl function
 ms.assetid: bd18340b-21dd-4c86-a14e-e8e15dd97e3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 460c5cdd41d49b9448aa8d4b7fbd2454e8301e4b
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c274f4dcdfb16317820ce5c39918fa6135210eea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393967"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580778"
 ---
 # <a name="casinh-casinhf-casinhl"></a>casinh、casinhf、casinhl
 
-複素数ブランチ カット範囲の外での逆ハイパーボリック サインを取得 [-i、+ i] 虚数部の軸に沿ったです。
+範囲外の分岐線法を複素数の逆双曲線正弦を取得します。 [-i, + は] 虚軸。
 
 ## <a name="syntax"></a>構文
 
@@ -79,15 +68,15 @@ _Lcomplex casinhl(
 
 ## <a name="return-value"></a>戻り値
 
-逆ハイパーボリック サイン*z*、(ラジアン単位)。 結果は実数の軸に沿ってと期間内にバインドされていない [-iπ/2 + iπ/2] 虚数部の軸に沿ったです。
+逆双曲線正弦*z*、(ラジアン単位)。 結果は、実軸に沿ってとの間隔でバインドされている [-π/2, + π/2] 虚軸。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**casinh**を受け取り、返します **_Fcomplex**と **_Lcomplex**値。 C プログラムでは、 **casinh**常に受け取りを返す、 **_Dcomplex**値。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **casinh**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**casinh**は、 **_Dcomplex**値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**casinh**、 **casinhf**、 **casinhl**|\<complex.h>|\<ccomplex>|
 

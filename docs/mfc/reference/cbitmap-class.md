@@ -1,10 +1,6 @@
 ---
-title: CBitmap クラス |Microsoft Docs
-ms.custom: ''
+title: CBitmap クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CBitmap
 - AFXWIN/CBitmap
@@ -22,8 +18,6 @@ f1_keywords:
 - AFXWIN/CBitmap::LoadOEMBitmap
 - AFXWIN/CBitmap::SetBitmapBits
 - AFXWIN/CBitmap::SetBitmapDimension
-dev_langs:
-- C++
 helpviewer_keywords:
 - CBitmap [MFC], CBitmap
 - CBitmap [MFC], CreateBitmap
@@ -40,16 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 322b13ee62e61a836d6b0c66ab619a11348adeae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375642"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624602"
 ---
 # <a name="cbitmap-class"></a>CBitmap クラス
 
@@ -107,7 +97,7 @@ class CBitmap : public CGdiObject
 
 `CBitmap`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -161,11 +151,11 @@ BOOL CreateBitmap(
 
 色のビットマップのいずれか、 *nplanes 1i*または*nBitcount*パラメーターを 1 に設定する必要があります。 両方のパラメーターを 1 に設定すると、 `CreateBitmap` によってモノクロのビットマップが作成されます。
 
-ディスプレイ デバイスのビットマップを直接選択することはできませんが選択できる「メモリ デバイス コンテキスト」現在のビットマップとしてを使用して[cdc::selectobject](../../mfc/reference/cdc-class.md#selectobject) 、を使用して任意の互換性のあるデバイスコンテキストにコピーおよび[Cdc::bitblt](../../mfc/reference/cdc-class.md#bitblt)関数。
+表示デバイス用のビットマップを直接選択することはできませんが、 [CDC::SelectObject](../../mfc/reference/cdc-class.md#selectobject) を使用して「メモリ デバイス コンテキスト」の現在のビットマップとして選択し、それを [CDC::BitBlt](../../mfc/reference/cdc-class.md#bitblt) 関数を使用して互換性のある任意のデバイス コンテキストにコピーできます。
 
 `CBitmap` 関数によって作成された `CreateBitmap` オブジェクトでの作業終了後、デバイス コンテキスト外のビットマップを最初に選択し、次に `CBitmap` オブジェクトを削除します。
 
-詳細については、の説明を参照して、`bmBits`フィールドに、`BITMAP`構造体。 [ビットマップ](../../mfc/reference/bitmap-structure.md)構造は」の説明、 [cbitmap::createbitmapindirect](#createbitmapindirect)メンバー関数。
+詳細については、の説明を参照して、`bmBits`フィールドに、`BITMAP`構造体。 [BITMAP](../../mfc/reference/bitmap-structure.md) 構造体については、 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) メンバー関数の下で説明されています。
 
 ##  <a name="createbitmapindirect"></a>  Cbitmap::createbitmapindirect
 

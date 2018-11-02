@@ -1,10 +1,6 @@
 ---
-title: _set_new_handler | Microsoft Docs
-ms.custom: ''
+title: _set_new_handler
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_new_handler
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _set_new_handler
 - set_new_handler
-dev_langs:
-- C++
 helpviewer_keywords:
 - _set_new_handler function
 - set_new_handler function
 - error handling
 - transferring control to error handler
 ms.assetid: 1d1781b6-5cf8-486a-b430-f365e0bb023f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 30cd0c2a991ec046b0b1f55100c58641833cb992
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bc7718503f59c69868a75cac9383286a548fc307
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32409811"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640311"
 ---
 # <a name="setnewhandler"></a>_set_new_handler
 
@@ -59,17 +49,17 @@ _PNH _set_new_handler( _PNH pNewHandler );
 
 ## <a name="return-value"></a>戻り値
 
-前の例外を処理して登録されている関数へのポインターを返します **_set_new_handler**、前の関数を後で復元できるようにします。 Previous 関数が設定されていない場合、戻り値を使用して、既定の動作を復元することができます。この値は、 **NULL**です。
+前の例外処理によって登録された関数へのポインターを返します **_set_new_handler**、前の関数を後で復元できるようにします。 既定の動作を復元する戻り値を使用できますの前の関数が設定されていない場合この値は**NULL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ **_set_new_handler**関数を場合は、制御を獲得する例外処理関数を指定します、**新しい**演算子がメモリの割り当てに失敗します。 場合**新しい**失敗した場合、実行時のシステムに自動的に関数を呼び出す例外処理への引数として渡された **_set_new_handler**です。 **_PNH**New.h で定義されている型を返す関数へのポインターには、 **int**型の引数を受け取ると**size_t**です。 使用して**size_t**に割り当てられる領域の量を指定します。
+C++ **_set_new_handler**関数を場合は、制御を獲得する例外処理関数を指定します、**新しい**演算子がメモリの割り当てに失敗します。 場合**新しい**失敗した場合、実行時のシステムは自動的に例外処理関数に引数として渡された呼び出し **_set_new_handler**します。 **_PNH**New.h に定義されている型を返す関数へのポインターには、 **int**型の引数を取ります**size_t**します。 使用**size_t**に割り当てられる領域の量を指定します。
 
 既定のハンドラーはありません。
 
-**_set_new_handler**ガベージ コレクション スキームでは基本的には、します。 ランタイム システムは、関数がゼロ以外の値を返すたびに割り当てを再試行し、関数がゼロを返すと失敗します。
+**_set_new_handler**は基本的に、ガベージ コレクション スキームです。 ランタイム システムは、関数がゼロ以外の値を返すたびに割り当てを再試行し、関数がゼロを返すと失敗します。
 
-発生した、 **_set_new_handler**プログラム内の関数は、ランタイム システムで、引数リストで指定された例外処理関数を登録します。
+発生、 **_set_new_handler**プログラムで関数が実行時のシステムと、引数リストで指定された例外処理関数を登録します。
 
 ```cpp
 // set_new_handler1.cpp
@@ -87,7 +77,7 @@ int main( void )
 }
 ```
 
-最後に渡された関数のアドレスを保存することができます、 **_set_new_handler**機能し、後で復元します。
+最後に渡された関数のアドレスを保存することができます、 **_set_new_handler**関数を後で再開します。
 
 ```cpp
    _PNH old_handler = _set_new_handler( my_handler );
@@ -98,7 +88,7 @@ int main( void )
    // . . .
 ```
 
-C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラー モードを示すかどうか、失敗した場合、 **malloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 **_set_new_handler**です。 既定では、 **malloc**メモリの割り当てに失敗した場合に新しいハンドラー ルーチンを呼び出しません。 この既定の動作をオーバーライドすることができるようにときに、 **malloc** 、メモリの割り当てに失敗する**malloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子が同じ理由で失敗します。 既定の動作を上書きするには、次の関数を呼び出します。
+C++ の [_set_new_mode](set-new-mode.md) 関数は、[malloc](malloc.md) 用の新しいハンドラー モードを設定します。 新しいハンドラー モードを示すかどうか、失敗した場合、 **malloc**によって設定された新しいハンドラー ルーチンを呼び出すには、 **_set_new_handler**します。 既定では、 **malloc**でメモリの割り当ての失敗によって新しいハンドラー ルーチンを呼び出しません。 この既定の動作をオーバーライドするように、 **malloc** 、メモリの割り当てに失敗した**malloc**に同じ新しいハンドラー ルーチンを呼び出す方法、**新しい**演算子が同じ理由で失敗しました。 既定の動作をオーバーライドするには、次の関数を呼び出します。
 
 ```cpp
 _set_new_mode(1);
@@ -106,15 +96,15 @@ _set_new_mode(1);
 
 この呼び出しはプログラムの最初の方で指定するか、Newmode.obj にリンクします。
 
-ユーザー定義する場合`operator new`は提供された場合、エラー発生時に新しいハンドラー関数が自動的に呼び出されません。
+ユーザー定義する場合`operator new`が指定されて、失敗した場合、新しいハンドラー関数が自動的に呼び出されません。
 
 詳細については、「*C++ 言語リファレンス*」の「[new](../../cpp/new-operator-cpp.md)」および「[delete](../../cpp/delete-operator-cpp.md)」を参照してください。
 
-1 つ **_set_new_handler**のハンドラーを動的にリンクされる Dll または実行可能ファイルですを呼び出す場合でも **_set_new_handler** 、ハンドラーを置き換える可能性があります、または交換する、。ハンドラーが別の DLL または実行可能ファイルで設定します。
+1 つは **_set_new_handler**ハンドラーを動的にリンクされる Dll または; の実行可能ファイルを呼び出す場合でも **_set_new_handler**別、ハンドラーが置き換えられること、または置換する、ハンドラーが別の DLL または実行可能ファイルで設定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_set_new_handler**|\<new.h>|
 

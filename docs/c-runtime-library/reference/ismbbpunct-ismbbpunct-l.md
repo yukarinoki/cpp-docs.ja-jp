@@ -1,10 +1,6 @@
 ---
-title: _ismbbpunct、_ismbbpunct_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbpunct、_ismbbpunct_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbpunct
 - _ismbbpunct_l
@@ -26,24 +22,18 @@ f1_keywords:
 - ismbbpunct_l
 - _ismbbpunct_l
 - _ismbbpunct
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbpunct function
 - _ismbbpunct function
 - ismbbpunct_l function
 - _ismbbpunct_l function
 ms.assetid: 1976c9d3-7d1a-415f-ac52-2715c7bb56eb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7881461b7468d27ac376ab942d35683928cc1651
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: acf23cf9da34ba50693aea7772cdbcfaeb146f2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400064"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50562996"
 ---
 # <a name="ismbbpunct-ismbbpunctl"></a>_ismbbpunct、_ismbbpunct_l
 
@@ -71,11 +61,11 @@ int _ismbbpunct_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbpunct**場合は 0 以外の値を返します、整数*c*非 ASCII 区切り記号。 **_ismbbpunct**任意のロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbpunct_l**に渡されるロケールを使用する点を除いてと同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_ismbbpunct**場合は、0 以外の値を返します、整数*c*非 ASCII 区切り記号です。 **_ismbbpunct**任意のロケールに依存する文字設定に現在のロケールを使用します。 **_ismbbpunct_l**で渡されるロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbpunct**|\<mbctype.h>|
 |**_ismbbpunct_l**|\<mbctype.h>|

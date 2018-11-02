@@ -1,10 +1,6 @@
 ---
-title: locale クラス | Microsoft Docs
-ms.custom: ''
+title: locale クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocale/std::locale
 - xlocale/std::locale::category
@@ -15,8 +11,6 @@ f1_keywords:
 - xlocale/std::locale::operator( )
 - xlocale/std::locale::facet
 - xlocale/std::locale::id
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::locale [C++]
 - std::locale [C++], category
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - std::locale [C++], facet
 - std::locale [C++], id
 ms.assetid: 7dd6d271-472d-4750-8fb5-ea8f55fbef62
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7fc38fe11fa267fe4f14d149d883da4ad5ec02e0
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 888aeff3e8661338d1a017c06325108a4240ace3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100755"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677917"
 ---
 # <a name="locale-class"></a>locale クラス
 
@@ -154,7 +144,7 @@ cout.imbue(loc);
 |-|-|
 |[locale](#locale)|ロケール、ロケールのコピー、またはファセットやカテゴリが別のロケールのファセットやカテゴリで置換されたロケールのコピーを作成します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -189,7 +179,7 @@ cout.imbue(loc);
 |[facet](#facet_class)|すべてのロケールのファセットの基底クラスとして機能するクラス。|
 |[ID](#id_class)|このメンバー クラスは、ロケール内でファセットを検索するためのインデックスとして使用される一意のファセット ID を提供します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

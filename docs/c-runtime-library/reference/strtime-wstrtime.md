@@ -1,10 +1,6 @@
 ---
-title: _strtime、_wstrtime | Microsoft Docs
-ms.custom: ''
+title: _strtime、_wstrtime
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wstrtime
 - _strtime
@@ -27,8 +23,6 @@ f1_keywords:
 - wstrtime
 - strtime
 - _tstrtime
-dev_langs:
-- C++
 helpviewer_keywords:
 - strtime function
 - _strtime function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _tstrtime function
 - time, copying
 ms.assetid: 9e538161-cf49-44ec-bca5-c0ab0b9e4ca3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b0ca776394b47f5209fbf034cbb10461c220634
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 9d874321418854a703886eb80ee23ac1cba57fa4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450785"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50431123"
 ---
 # <a name="strtime-wstrtime"></a>_strtime、_wstrtime
 
@@ -80,13 +70,13 @@ wchar_t *_wstrtime(
 
 ## <a name="return-value"></a>戻り値
 
-結果の文字列へのポインターを返します*で*です。
+結果の文字列へのポインターを返します*で*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Strtime**関数が指すバッファーに現在の現地時刻をコピー*で*です。 時間として書式設定**hh:mm:ss**場所**hh** 24 時間制で時間を表す 2 桁の数字は、 **mm**過去の時間、および分を表す2桁の数字は、**ss**は秒を表す 2 桁の数字です。 たとえば、文字列**18時 23分: 44** 23 分 44 秒午後 6 時を表します バッファーは 9 バイト以上の長さである必要があります。
+**_Strtime**関数が指すバッファーに現在の現地時刻をコピー*で*します。 時間として書式設定**hh:mm:ss**場所**hh** 24 時間表記で時間を表す 2 桁の数字は、 **mm** 、時間、分を表す2桁の数字は、**ss**秒を表す 2 桁の数字です。 たとえば、文字列**18時 23分: 44** 23 分 44 秒午後 6 時を表します バッファーは 9 バイト以上の長さである必要があります。
 
-**_wstrtime**のワイド文字バージョンは、 **_strtime**; の引数と戻り値 **_wstrtime**ワイド文字列です。 それ以外では、これらの関数の動作は同じです。 場合*で*は、 **NULL**ポインターまたは*で*形式が正しくありません、無効なパラメーター ハンドラーが呼び出されます」の説明に従って[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 例外は継続許可されたかどうか、これらの関数を返す、 **NULL**設定と**errno**に**EINVAL**場合*で*されました、 **NULL**設定または**errno**に**ERANGE**場合*で*形式が正しくありません。
+**_wstrtime**のワイド文字バージョンは、 **_strtime**; の引数と戻り値 **_wstrtime**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。 場合*で*は、 **NULL**ポインターまたは*で*形式が正しくない、無効なパラメーター ハンドラーが呼び出されます」の説明に従って[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうか、例外が許可された、引き続き、 **NULL**設定と**errno**に**EINVAL**場合*で*が、 **NULL**設定または**errno**に**ERANGE**場合*で*形式が正しくありません。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -96,9 +86,9 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tstrtime**|**_strtime**|**_strtime**|**_wstrtime**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strtime**|\<time.h>|
 |**_wstrtime**|\<time.h> または \<wchar.h>|

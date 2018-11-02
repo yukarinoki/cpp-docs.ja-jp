@@ -1,45 +1,35 @@
 ---
-title: コンパイラの警告 (レベル 1) C4382 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラの警告 (レベル 1) C4382
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4382
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4382
 ms.assetid: 34be9ad3-bae6-411a-8f80-0c8fd0d2c092
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29afe066fb86d0dd99216a63c057046ec76de55b
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: cca2f8cc13cc8317bac3736e142ef58e126ed994
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704322"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629217"
 ---
 # <a name="compiler-warning-level-1-c4382"></a>コンパイラの警告 (レベル 1) C4382
 
-> スロー '*型*': _ _clrcall デストラクターまたはコピー コンス トラクターを持つ型は/clr でしかキャッチできません: 純粋なモジュール
+> スロー '*型*': _ _clrcall デストラクターまたはコピー コンス トラクターを持つ型のみを/clr でキャッチできます純粋なモジュール。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-コンパイルしたときに **/clr** (いない **/clr: 純粋な**)、例外処理には、メンバー関数は、ネイティブ型にするが必要ですが[_ _cdecl](../../cpp/cdecl.md)および not [_ _clrcall](../../cpp/clrcall.md). 使用してメンバー関数を持つネイティブ型`__clrcall`でコンパイルされたモジュールの呼び出し規約をキャッチできない **/clr**です。
+コンパイルされたときに **/clr** (いない **/clr: 純粋な**)、例外処理には、メンバー関数は、ネイティブ型にするにが必要です[_ _cdecl](../../cpp/cdecl.md)なく[_ _clrcall](../../cpp/clrcall.md). ネイティブ型を使用してメンバー関数で`__clrcall`でコンパイルされたモジュールの呼び出し規約をキャッチできない **/clr**します。
 
-コンパイルされたモジュールのかどうか、例外がキャッチされる **/clr: 純粋な**、この警告を無視することができます。
+コンパイルされたモジュールで、例外がキャッチされるかどうか **/clr: 純粋な**、この警告を無視することができます。
 
 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
 ## <a name="example"></a>例
 
-次の例では、C4382 を生成します。
+次の例では、C4382 が生成されます。
 
 ```cpp
 // C4382.cpp

@@ -1,27 +1,17 @@
 ---
-title: collate_byname クラス | Microsoft Docs
-ms.custom: ''
+title: collate_byname クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::collate_byname
-dev_langs:
-- C++
 helpviewer_keywords:
 - collate_byname class
 ms.assetid: 3dc380df-867c-4763-b60e-ba62a8e63ca7
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b60e5aebcab11e839b6b1e6168aaac55a0202b7c
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 46eb139bafcf7368688f32cce37e38362c158c91
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110241"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569602"
 ---
 # <a name="collatebyname-class"></a>collate_byname クラス
 
@@ -59,7 +49,7 @@ protected:
 
 このテンプレート クラスは、[collate](../standard-library/collate-class.md#collate)\<CharType> 型の[ロケール ファセット](../standard-library/locale-class.md#facet_class)として使用できるオブジェクトを表します。 その動作によって決定されます、[という](../standard-library/locale-class.md#name)ロケール *_Locname*します。 各コンストラクターは、[collate](../standard-library/collate-class.md#collate)\<CharType>( `_Refs`) を使用して、その基本オブジェクトを初期化します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

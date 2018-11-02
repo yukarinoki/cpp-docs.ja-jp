@@ -1,10 +1,6 @@
 ---
-title: _CrtDoForAllClientObjects | Microsoft Docs
-ms.custom: ''
+title: _CrtDoForAllClientObjects
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtDoForAllClientObjects
 apilocation:
@@ -23,22 +19,16 @@ f1_keywords:
 - _CrtDoForAllClientObjects
 - CrtDoForAllClientObjects
 - crtdbg/_CrdDoForAllClientObjects
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtDoForAllClientObjects function
 - CrtDoForAllClientObjects function
 ms.assetid: d0fdb835-3cdc-45f1-9a21-54208e8df248
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 378ef3c6218d1f57cd1d817d8895b3ff8b081ecb
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 86268bd9ac49c8ea27f715404236bcb9291f5d8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105344"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50521191"
 ---
 # <a name="crtdoforallclientobjects"></a>_CrtDoForAllClientObjects
 
@@ -71,7 +61,7 @@ void _CrtDoForAllClientObjects(
 
 場合*pfn*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)に設定されている**EINVAL**関数を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

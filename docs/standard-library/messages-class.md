@@ -1,10 +1,6 @@
 ---
-title: messages クラス | Microsoft Docs
-ms.custom: ''
+title: messages クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - xlocmes/std::messages
 - xlocmes/std::messages::char_type
@@ -15,8 +11,6 @@ f1_keywords:
 - xlocmes/std::messages::do_open
 - xlocmes/std::messages::get
 - xlocmes/std::messages::open
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::messages [C++]
 - std::messages [C++], char_type
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - std::messages [C++], get
 - std::messages [C++], open
 ms.assetid: c4c71f40-4f24-48ab-9f7c-daccd8d5bd83
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f6b4faf2ac5f04a2dcc9e1e9112016038fa2fcec
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 7a024a8cad8c536b25127d033468874de5ebd8af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106452"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50568532"
 ---
 # <a name="messages-class"></a>messages クラス
 
@@ -69,7 +59,7 @@ class messages : public messages_base;
 |-|-|
 |[messages](#messages)|メッセージのファセット コンストラクター関数。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -87,7 +77,7 @@ class messages : public messages_base;
 |[get](#get)|メッセージ カタログを取得します。|
 |[open](#open)|メッセージ カタログを開きます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

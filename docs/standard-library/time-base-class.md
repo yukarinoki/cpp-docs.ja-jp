@@ -1,27 +1,17 @@
 ---
-title: time_base クラス | Microsoft Docs
-ms.custom: ''
+title: time_base クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::time_base
-dev_langs:
-- C++
 helpviewer_keywords:
 - time_base class
 ms.assetid: 9ae37f0b-9a42-496e-9870-3d9b71bab8fb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e4e371bd242dff337450fd87527455b50556afc
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: e790237e506aa32bafdb39938d841307bbc4d9c3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235777"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593402"
 ---
 # <a name="timebase-class"></a>time_base クラス
 
@@ -58,7 +48,7 @@ public:
 
 - `ydm` 注文年、日、その後、1979: 2 Dec のように、1 か月を指定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

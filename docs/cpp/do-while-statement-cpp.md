@@ -1,30 +1,20 @@
 ---
-title: while ステートメント (C++) |Microsoft Docs
-ms.custom: ''
+title: do-while ステートメント (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
 f1_keywords:
 - do_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - do keyword [C++], do-while
 - do-while keyword [C++]
 - do keyword [C++]
 - while keyword [C++], do-while
 ms.assetid: e01e6f7c-7da1-4591-87f9-c26ff848e7b0
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 37155be11caaee9c609a0e11ddbfeb5d62856903
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 014012166f3a659d71b2e3212d63a523f2b87b8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46071199"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50656134"
 ---
 # <a name="do-while-statement-c"></a>do-while ステートメント (C++)
 
@@ -34,19 +24,19 @@ ms.locfileid: "46071199"
 
 ```
 do
-   statement
+   statement
 while ( expression ) ;
 ```
 
 ## <a name="remarks"></a>Remarks
 
-終了条件のテストがループの各実行後に行われました。そのため、**は-中**ループは終了式の値に応じて、1 つまたは複数回実行されます。 **は-中に**ステートメントがときに終了することできますも、 [break](../cpp/break-statement-cpp.md)、 [goto](../cpp/goto-statement-cpp.md)、または[返す](../cpp/return-statement-cpp.md)ステートメントがステートメント本体で実行されます。
+終了条件のテストがループの各実行後に行われました。そのため、**は-中**ループは終了式の値に応じて、1 つまたは複数回実行されます。 **do-while** ステートメントは、[break](../cpp/break-statement-cpp.md)、[goto](../cpp/goto-statement-cpp.md)、または [return](../cpp/return-statement-cpp.md) ステートメントがステートメントの本体で実行されたときにも終了できます。
 
 *expression* は演算型またはポインター型であることが必要です。 次のように実行されます。
 
 1. ステートメントの本体が実行されます。
 
-1. 次に、*expression* が評価されます。 場合*式*が false の場合、**は-中**ステートメントが終了し、プログラムの次のステートメントに制御が移ります。 *式*が true (0 以外) の場合、プロセスは手順 1 から繰り返されます。
+1. 次に、*expression* が評価されます。 *expression* が false の場合、**do-while** ステートメントは終了し、プログラムの次のステートメントに制御が渡されます。 *式*が true (0 以外) の場合、プロセスは手順 1 から繰り返されます。
 
 ## <a name="example"></a>例
 

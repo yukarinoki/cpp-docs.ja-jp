@@ -1,10 +1,6 @@
 ---
-title: abs、labs、llabs、_abs64 | Microsoft Docs
-ms.custom: ''
+title: abs、labs、llabs、_abs64
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - abs
 - _abs64
@@ -33,8 +29,6 @@ f1_keywords:
 - llabs
 - math/llabs
 - cmath/abs
-dev_langs:
-- C++
 helpviewer_keywords:
 - absolute values
 - abs function
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _abs64 function
 - calculating absolute values
 ms.assetid: 60f789d1-4a1e-49f5-9e4e-0bdb277ea26a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1380a6e56ce444e80feccf3e8306a0a589c98d01
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 61aa0a48757a35708ffb85d2c0525bb4eac82d56
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085265"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506237"
 ---
 # <a name="abs-labs-llabs-abs64"></a>abs、labs、llabs、_abs64
 
@@ -89,7 +79,7 @@ float abs( float n );   // C++ only
 
 **Microsoft 固有の仕様**: 任意の整数型を使用して表すことができる負の整数の範囲はその型を使用して表すことができる正の整数の範囲より大きいため、これらの引数を指定することは変換できない機能です。 引数の絶対値を戻り値の型で表すことができない場合、 **abs**関数が変更されていない引数の値を返します。 具体的には、`abs(INT_MIN)` は `INT_MIN` を返し、`labs(LONG_MIN)` は `LONG_MIN` を返します。また `llabs(LLONG_MIN)` は `LLONG_MIN` を返し、`_abs64(_I64_MIN)` は `_I64_MIN` を返します。 つまり、 **abs**関数を使用して、正の値を保証することはできません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|-----------------------|---------------------------|

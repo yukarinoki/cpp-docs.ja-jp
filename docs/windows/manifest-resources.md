@@ -1,27 +1,16 @@
 ---
-title: マニフェスト リソース (C++) |Microsoft Docs
-ms.custom: ''
+title: マニフェスト リソース (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - manifest resources [C++]
 - resources [C++], manifest
 ms.assetid: 8615334c-22a0-44c0-93e0-5924528c9917
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 2da93d1baaf95799c7ef68d6cc854d554fbe6c47
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 081fd12a86c31973c7856ca7b9f3fcb129e2eb81
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46429566"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50578283"
 ---
 # <a name="manifest-resources-c"></a>マニフェスト リソース (C++)
 
@@ -43,7 +32,7 @@ C++ デスクトップ プロジェクトでは、マニフェスト リソー�
 </dependency>
 ```
 
-Windows XP または Windows Vista アプリケーションでは、マニフェスト リソースだけでなくことを指定、アプリケーションを使用して、最新バージョンの Windows コモン コントロール (v6.0、上記のよう) もサポートしています、 [Syslink コントロール](/windows/desktop/Controls/syslink-overview)します。
+Windows XP または Windows Vista アプリケーションのマニフェスト リソースは、アプリケーションで最新バージョンの Windows コモン コントロール (上の例で示すようにバージョン 6.0) を使用することを指定するだけではなく、 [Syslink コントロール](/windows/desktop/Controls/syslink-overview)をサポートします。
 
 バージョンを表示し、マニフェスト リソースに含まれる情報の入力には、XML ビューアーで、または Visual Studio テキスト エディターでファイルを開くことができます。 詳細については、 [Visual Studio テキスト エディターでマニフェスト リソースを開く方法](../windows/how-to-open-a-manifest-resource.md)に関するページを参照してください。
 
@@ -53,7 +42,7 @@ Windows XP または Windows Vista アプリケーションでは、マニフェ
 
 使用できるマニフェスト リソースは 1 つのモジュールにつき 1 つだけです。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

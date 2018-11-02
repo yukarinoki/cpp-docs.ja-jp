@@ -1,10 +1,6 @@
 ---
-title: /FA、/Fa (リスティング ファイル) |Microsoft Docs
-ms.custom: ''
+title: /FA、/Fa (リスティング ファイル)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AssemblerListingLocation
 - VC.Project.VCCLCompilerTool.ConfigureASMListing
@@ -13,8 +9,6 @@ f1_keywords:
 - /fa
 - VC.Project.VCCLCompilerTool.AssemblerOutput
 - VC.Project.VCCLCompilerTool.UseUnicodeForAssemblerListing
-dev_langs:
-- C++
 helpviewer_keywords:
 - FA compiler option [C++]
 - /FA compiler option [C++]
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eea3159bff6f2c69c94ef31d01b1d6a85104ef13
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861860"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50507303"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa (リスティング ファイル)
 
@@ -83,7 +73,7 @@ none<br/>
 *ディレクトリ*__\\__*filename.extension*<br/>
 という名前の一覧ファイル*filename.extension*に配置されますが、指定した*ディレクトリ*します。 1 つのソース コード ファイルをコンパイルするときにのみ有効です。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

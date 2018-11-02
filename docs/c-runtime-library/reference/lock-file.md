@@ -1,10 +1,6 @@
 ---
-title: _lock_file | Microsoft Docs
-ms.custom: ''
+title: _lock_file
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _lock_file
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _lock_file
 - lock_file
-dev_langs:
-- C++
 helpviewer_keywords:
 - file locking [C++]
 - _lock_file function
 - lock_file function
 ms.assetid: 75c7e0e6-efff-4747-b6ed-9bcf2b0894c3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 705210881faed70a32c1ddd52d7257b5b5e5f161
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 4c6d9ef3ae9e2f63e702dd3fc6b01f7edea40626
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107496"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50632818"
 ---
 # <a name="lockfile"></a>_lock_file
 
@@ -60,7 +50,7 @@ void _lock_file( FILE* file );
 
 **_Lock_file**ロック機能、**ファイル**で指定されたオブジェクト*ファイル*します。 によって、基になるファイルがロックされていない **_lock_file**します。 ファイルのロックを解除するには、[_unlock_file](unlock-file.md) を使用します。 呼び出す **_lock_file**と **_unlock_file**スレッド内で一致する必要があります。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

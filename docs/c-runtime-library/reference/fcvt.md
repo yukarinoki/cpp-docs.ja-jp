@@ -1,10 +1,6 @@
 ---
-title: _fcvt | Microsoft ドキュメント
-ms.custom: ''
+title: _fcvt
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fcvt
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _fcvt
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting floating point, to strings
 - _fcvt function
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - fcvt function
 - floating-point functions
 ms.assetid: 74584c88-f0dd-4907-8fca-52da5df583f5
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 272b8e4ba5e57d71b4b785bceef7e5ea2f0ac7c2
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: ae9323e3bb629fd61b35a8c844b00bfcc73235bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34450421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662060"
 ---
 # <a name="fcvt"></a>_fcvt
 
@@ -73,23 +63,23 @@ char *_fcvt(
 
 ## <a name="return-value"></a>戻り値
 
-**_fcvt** 、桁の数字の文字列へのポインターを返します**NULL**エラーが発生します。
+**_fcvt**桁の数字の文字列へのポインターを返します**NULL**エラーが発生します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Fcvt**関数は、null で終わる文字列を浮動小数点数に変換します。 *値*パラメーターは変換する浮動小数点数。 **_fcvt**の桁を格納*値*を文字列として null 文字 ('\0') を追加します。 *カウント*パラメーターは、小数点の後に格納される桁数を指定します。 余分な桁はに*カウント*を配置します。 も少ない場合*カウント*桁の有効桁数、文字列はゼロで埋められます。
+**_Fcvt**関数は、浮動小数点数を文字の null で終わる文字列に変換します。 *値*パラメーターは変換する浮動小数点数です。 **_fcvt**の桁を格納*値*を文字列として null 文字 ('\0') を追加します。 *カウント*パラメーターは、小数点より後に格納される桁数を指定します。 余分な桁は丸め*カウント*を配置します。 も少なかった場合*カウント*桁の文字列、有効桁数が 0 で埋められます。
 
-によって返される総桁数 **_fcvt**を超えない **_CVTBUFSIZE**です。
+によって返される総桁数 **_fcvt**が超えない **_CVTBUFSIZE**します。
 
-文字列には数字だけが格納されます。 小数点の記号の位置*値*から取得できます*dec*と呼び出しの後のサインイン。 *Dec*パラメーターが指す整数値です。 この整数値では、文字列の先頭に対する、小数点の位置。 0 または負の整数値は、小数点が文字列の先頭より左にあることを示します。 パラメーター*記号*の符号を示す整数を指す*値*です。 場合は、整数を 0 に設定*値*が正の値および 0 以外の場合の値に設定されている*値*が負の値。
+文字列には数字だけが格納されます。 符号、小数点の位置*値*から取得できます*dec*と呼び出しの後にサインオンします。 *Dec*パラメーターが指す整数値です。 この整数値では、文字列の先頭に対する小数点の位置。 0 または負の整数値は、小数点が文字列の先頭より左にあることを示します。 パラメーター*サインオン*の符号を示す整数を指す*値*します。 場合、整数は 0 に設定されて*値*が正の値および数値の場合は 0 以外の値に設定されている*値*が負の値。
 
-違い **_ecvt**と **_fcvt**の解釈時に、*カウント*パラメーター。 **_ecvt**解釈*カウント*として出力文字列に数字の合計数が **_fcvt**解釈*カウント*後に数字の数として、10 進数のポイント。
+間の差 **_ecvt**と **_fcvt**の解釈には、*カウント*パラメーター。 **_ecvt**解釈*カウント*として、出力文字列に数字の合計数は **_fcvt**解釈*カウント*の後の桁数として、小数点 10 進数。
 
 **_ecvt**と **_fcvt**変換に 1 つの静的に割り当てられたバッファーを使用します。 これらのルーチンを呼び出すたびに、前の呼び出しの結果は破棄されます。
 
-この関数は、パラメーターを検証します。 場合*dec*または*記号*は**NULL**、または*カウント*が 0 の無効なパラメーター ハンドラーが呼び出されます」の説明に従って場合、[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と**NULL**が返されます。
+この関数は、パラメーターを検証します。 場合*dec*または*サインオン*は**NULL**、または*カウント*が 0 の場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーター検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**と**NULL**が返されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

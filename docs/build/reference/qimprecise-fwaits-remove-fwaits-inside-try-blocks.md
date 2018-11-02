@@ -1,28 +1,18 @@
 ---
-title: -Qimprecise_fwaits (Try ブロック内部の fwaits を削除) |Microsoft Docs
-ms.custom: ''
+title: /Qimprecise_fwaits (try ブロック内部の fwaits を削除する)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /Qimprecise_fwaits
-dev_langs:
-- C++
 helpviewer_keywords:
 - -Qimprecise_fwaits compiler option (C++)
 - /Qimprecise_fwaits compiler option (C++)
 ms.assetid: b1501f21-7e08-4fea-95e8-176ec03a635b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cad23ebdd2289791b50b0e956368b934fe0f1087
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: eb01d39ccbbdac60d629f95b9eb821ca0f2f5731
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46385197"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662398"
 ---
 # <a name="qimprecisefwaits-remove-fwaits-inside-try-blocks"></a>/Qimprecise_fwaits (try ブロック内部の fwaits を削除する)
 
@@ -38,7 +28,7 @@ ms.locfileid: "46385197"
 
 このオプションには効果がない場合は **/fp: 除く**も指定されていません。 指定した場合、 **/fp: を除く**オプション、コンパイラが挿入されます、`fwait`コマンド内のコードの各行の周りを`try`ブロック。 これにより、コンパイラは、特定の例外が発生したコード行を識別できます。 **/Qimprecise_fwaits**内部削除`fwait`手順については、周囲の待機のみを残して、`try`ブロックします。 これは、パフォーマンスは向上しますが、コンパイラは指定できる`try`ブロック、例外では、どの行が発生します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

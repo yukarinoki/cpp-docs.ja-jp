@@ -1,39 +1,29 @@
 ---
-title: コンパイラの警告 C4959 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラの警告 C4959
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C4959
-dev_langs:
-- C++
 helpviewer_keywords:
 - C4959
 ms.assetid: 3a128f3e-4d8a-4565-ba1a-5d32fdeb5982
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2819664fa94ca777339156dc9a31da17b991c6da
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 646347dec7bc2bac7fa73c8f754d2f9549cb2ba6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34705165"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50473659"
 ---
 # <a name="compiler-warning-c4959"></a>コンパイラの警告 C4959
 
-> アンマネージ構造体を定義できません '*型*'/clr:safe で検証できないコードを生成するそのメンバーにアクセスするため。
+> アンマネージ構造体を定義できません '*型*'/clr:safe で検証できないコードを生成するそのメンバーにアクセスするため、。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 アンマネージ型のメンバーにアクセスすると、検証不可能な (peverify.exe) イメージが生成されます。
 
-詳細については、次を参照してください。[純粋なコードと検証可能なコード (C + + CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)です。
+詳細については、次を参照してください。[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
 
-**/Clr:safe**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 この警告は、エラーとして表示されます。無効にするには、 [warning](../../preprocessor/warning.md) プラグマ、または [/wd](../../build/reference/compiler-option-warning-level.md) コンパイラ オプションを使用します。
 

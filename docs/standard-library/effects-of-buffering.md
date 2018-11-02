@@ -1,26 +1,16 @@
 ---
-title: バッファリングの効果 | Microsoft Docs
-ms.custom: ''
+title: バッファリングの効果
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - buffers, effects of buffering
 - buffering, effects of
 ms.assetid: 5d544812-e95e-4f28-b15a-edef3f3414fd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c28deb0f5e30d3ec28fac4805a86645bebf27f22
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: e10b28edffdfe3411f86c031bfd12ea886410e20
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33842379"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631440"
 ---
 # <a name="effects-of-buffering"></a>バッファリングの効果
 
@@ -49,7 +39,7 @@ int main( )
 cout <<"Please wait..." <<flush;
 ```
 
-この手順ではバッファーがフラッシュされるため、必ず待機の前にメッセージが出力されます。 使用することも、`endl`マニピュレーター、バッファーをフラッシュし、改行を出力するか、使用することができます、`cin`オブジェクト。 通常、このオブジェクト (および `cerr` または `clog` オブジェクト) は `cout` オブジェクトに関連付けられています。 そのため、 `cin` (あるいは `cerr` または `clog` オブジェクト) を使用すると、 `cout` オブジェクトがフラッシュされます。
+この手順ではバッファーがフラッシュされるため、必ず待機の前にメッセージが出力されます。 使用することも、`endl`マニピュレーター、バッファーをフラッシュし、キャリッジ リターンとラインフィードを出力するまたは使用することができます、`cin`オブジェクト。 通常、このオブジェクト (および `cerr` または `clog` オブジェクト) は `cout` オブジェクトに関連付けられています。 そのため、 `cin` (あるいは `cerr` または `clog` オブジェクト) を使用すると、 `cout` オブジェクトがフラッシュされます。
 
 ## <a name="see-also"></a>関連項目
 

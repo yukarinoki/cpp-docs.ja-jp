@@ -1,17 +1,11 @@
 ---
-title: メイクファイルのプリプロセス ディレクティブ |Microsoft ドキュメント
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
+title: メイクファイルのプリプロセス ディレクティブ
+ms.date: 06/14/2018
 f1_keywords:
 - '!UNDEF'
 - '!INCLUDE'
 - '!IFNDEF'
 - '!MESSAGE'
-dev_langs:
-- C++
 helpviewer_keywords:
 - ERROR directive
 - '!MESSAGE directive'
@@ -45,59 +39,71 @@ helpviewer_keywords:
 - ELSE directive
 - ELSEIFDEF directive
 ms.assetid: bcedeccb-d981-469d-b9e8-ab5d097fd8c2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a84557388f521fb6c70c33ce6814ce33a5f6a1d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: adc81e5c4ea3d0d4a80e7efad4eaab15a5048cd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50593571"
 ---
 # <a name="makefile-preprocessing-directives"></a>メイクファイルのプリプロセス ディレクティブ
-前処理ディレクティブは、大文字小文字が区別されません。 初期の感嘆符 (!) は必要があります、行の先頭に表示されます。 ゼロ以上のスペースまたはタブは、インデント、感嘆符の後に表示できます。  
-  
- **!CMDSWITCHES**  
- {**+** &#124; **-**}*オプション*しています.各をオンに*オプション*オンまたはオフを一覧表示します。 スペースまたはタブは、前に指定する必要があります、+ または - 演算子です。演算子の間では何も配置と[文字をオプション](../build/nmake-options.md)です。 文字は、大文字小文字は区別されません、スラッシュ (/) せず指定されます。 一部のオプションおよび他のユーザーを無効にする場合の別の仕様を使用して **!CMDSWITCHES**です。  
-  
- のみの/D/メイクファイルでは、/N、および/S を使用できます。 Tools.ini、すべてのオプションは/F、/HELP、/NOLOGO を除く許可/X、および/ください。 記述ブロックで指定された変更では、次の記述ブロックされるまで有効になりません。 このディレクティブを更新**MAKEFLAGS**; 場合、再帰の中に変更が継承された**MAKEFLAGS**を指定します。  
-  
- **!エラー***テキスト*   
- 表示*テキスト*エラー U1050 が停止した、(nmake の) 場合でもで/K、/、**です。無視**、 **!CMDSWITCHES**、またはダッシュ (-) のコマンド修飾子を使用します。 スペースまたはタブで前に*テキスト*は無視されます。  
-  
- **!メッセージ***テキスト*   
- 表示*テキスト*を標準出力にします。 スペースまたはタブで前に*テキスト*は無視されます。  
-  
- **!含める**[ **\<**] *filename*[ **>**]  
- 読み取り*filename*メイクファイルでし、続けて現在のメイクファイルを使用します。 (Nmake の) 検索*filename*指定されているか、現在のディレクトリに次のいずれかのディレクトリを再帰的に親メイクファイルを次に場合、 *filename*が山かっこで囲まれている (\<>)、によって指定されたディレクトリで、 **INCLUDE**マクロで、最初は INCLUDE 環境変数に設定します。 渡す便利**です。サフィックス**設定、**です。貴重な**、および再帰的なメイクファイルを推論規則。  
-  
- **!もし**  `constantexpression`  
- 間でステートメントを処理 **!IF**と次の **!ELSE**または`!ENDIF`場合`constantexpression`0 以外の値に評価します。  
-  
- **!IFDEF***マクロ名*   
- 間でステートメントを処理`!IFDEF`と次の **!ELSE**または`!ENDIF`場合*macroname*が定義されています。 Null マクロは、定義すると見なされます。  
-  
- **!IFNDEF***マクロ名*   
- 間でステートメントを処理 **!IFNDEF**と次の **!ELSE**または`!ENDIF`場合*macroname*が定義されていません。  
-  
- **!ELSE**[**IF** *constantexpression* &#124; **IFDEF** *macroname* &#124; **IFNDEF** *macroname*]  
- 間でステートメントを処理 **!ELSE**と次の`!ENDIF`場合は、前に **!IF**、 `!IFDEF`、または **!IFNDEF**ステートメントが 0 に評価されます。 省略可能なキーワードは、さらに前処理を制御できるようにします。  
-  
- **!ELSEIF**  
- シノニム **!ELSE IF**です。  
-  
- **!ELSEIFDEF**  
- シノニム **!他の IFDEF**です。  
-  
- **!ELSEIFNDEF**  
- シノニム **!ELSE IFNDEF**です。  
-  
- `!ENDIF`  
- 末尾を示す、 **!IF**、 `!IFDEF`、または **!IFNDEF**ブロックします。 任意のテキストの後に`!ENDIF`同じ行には無視されます。  
-  
- **!UNDEF***マクロ名*   
- 未定義に*macroname*です。  
-  
-## <a name="see-also"></a>関連項目  
- [メイクファイルのプリプロセス](../build/makefile-preprocessing.md)
+
+プリプロセス ディレクティブは大文字小文字が区別されません。 初期の感嘆符 (!) する必要があります、行の先頭に表示されます。 0 以上のスペースまたはタブは、インデント、感嘆符の後に表示できます。
+
+- **!CMDSWITCHES** {**+** &#124; **-**}*オプション*.
+
+   それぞれに*オプション*オンまたはオフを一覧表示します。 前にスペースまたはタブを表示する必要があります、+ または - 演算子。演算子間なし に表示できる、[オプション文字](../build/nmake-options.md)します。 文字が小文字は区別されず、スラッシュ (/) なしで指定されます。 一部のオプションおよび他のユーザーを無効には、個別の仕様を使用して、 **!CMDSWITCHES**します。
+
+   のみの/D/メイクファイルでは、/N、および/S を使用できます。 /F、/HELP、/NOLOGO を除くすべてのオプションは許可 tools.ini、/、X と/ですか。 記述ブロックで指定した変更は次の記述ブロックされるまで有効になりません。 このディレクティブを更新**MAKEFLAGS**; 場合、再帰中に変更が継承される**MAKEFLAGS**を指定します。
+
+- **!エラー***テキスト* 
+
+   表示*テキスト*エラー U1050、し、停止 (nmake の)、偶数の場合に/K、/、**します。無視**、 **!CMDSWITCHES**、またはダッシュ (-) のコマンド修飾子を使用します。 スペースまたはタブの前に*テキスト*は無視されます。
+
+- **!メッセージ***テキスト* 
+
+   表示*テキスト*標準出力に出力します。 スペースまたはタブの前に*テキスト*は無視されます。
+
+- **!含める**[ **\<** ] *filename* [ **>** ]
+
+   読み取り*filename*メイクファイルをし、続けて現在のメイクファイルを使用します。 (Nmake の) 検索*filename*指定されているか、現在のディレクトリで次のいずれかのディレクトリを再帰的に親メイクファイル、次に場合、 *filename*山かっこで囲まれた (\<>)、によって指定されたディレクトリで、 **INCLUDE**マクロで、最初は、INCLUDE 環境変数に設定します。 渡す便利な**します。サフィックス**設定、**します。貴重な**、および再帰メイクファイルに推論規則。
+
+- **!IF** *constant_expression*
+
+   ステートメントの間での処理 **!IF**と次の **!ELSE**または **!ENDIF**場合*constant_expression* 0 以外の値に評価されます。
+
+- **!IFDEF***マクロ名* 
+
+   ステートメントの間での処理 **!IFDEF**と次の **!ELSE**または **!ENDIF**場合*macroname*が定義されています。 Null マクロを定義すると見なされます。
+
+- **!IFNDEF***マクロ名* 
+
+   ステートメントの間での処理 **!IFNDEF**と次の **!ELSE**または **!ENDIF**場合*macroname*が定義されていません。
+
+- **!ELSE** [**場合** *constant_expression* &#124; **IFDEF** *macroname* &#124; **IFNDEF** *macroname*]
+
+   ステートメントの間での処理 **!ELSE**と次の **!ENDIF**場合する前に、 **!IF**、 **!IFDEF**、または **!IFNDEF**ステートメントが 0 に評価されます。 省略可能なキーワードの前処理のコントロールをさらに与えます。
+
+- **!ELSEIF**
+
+   シノニム **!ELSE IF**します。
+
+- **!ELSEIFDEF**
+
+   シノニム **!他の IFDEF**します。
+
+- **!ELSEIFNDEF**
+
+   シノニム **!他の IFNDEF**します。
+
+- **!ENDIF**
+
+   終了をマークする **!IF**、 **!IFDEF**、または **!IFNDEF**ブロックします。 任意のテキストの後 **!ENDIF**同じ行には無視されます。
+
+- **!UNDEF***マクロ名* 
+
+   未定義に*macroname*します。
+
+## <a name="see-also"></a>関連項目
+
+- [メイクファイルのプリプロセス](../build/makefile-preprocessing.md)

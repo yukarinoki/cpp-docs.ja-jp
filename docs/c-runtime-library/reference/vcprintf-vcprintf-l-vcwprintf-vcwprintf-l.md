@@ -1,10 +1,6 @@
 ---
-title: _vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l | Microsoft Docs
-ms.custom: ''
+title: _vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _vcwprintf
 - _vcprintf_l
@@ -32,8 +28,6 @@ f1_keywords:
 - _vcprintf
 - vcprintf
 - vcwprintf_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - vcwprintf function
 - _vcwprintf_l function
@@ -49,16 +43,12 @@ helpviewer_keywords:
 - vtcprintf function
 - formatted text [C++]
 ms.assetid: 4ef8d237-6200-4b66-8731-8c57e5624bb1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d31ebd1e4df65ef35449c374a5cbb99b878f00a6
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: e78d2f0b873042bda4fc79df100374b52751aebc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43196785"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624758"
 ---
 # <a name="vcprintf-vcprintfl-vcwprintf-vcwprintfl"></a>_vcprintf、_vcprintf_l、_vcwprintf、_vcwprintf_l
 
@@ -123,7 +113,7 @@ int _vcwprintf_l(
 |**_vtcprintf**|**_vcprintf**|**_vcprintf**|**_vcwprintf**|
 |**_vtcprintf_l**|**_vcprintf_l**|**_vcprintf_l**|**_vcwprintf_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|---------------------|----------------------|

@@ -1,30 +1,19 @@
 ---
-title: ツールバー (C++) の新規作成 |Microsoft Docs
-ms.custom: ''
+title: 新しいツールバーを作成 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.toolbar
-dev_langs:
-- C++
 helpviewer_keywords:
 - toolbars [C++], creating
 - Toolbar editor [C++], creating new toolbars
 - Insert Resource
 ms.assetid: 1b28264b-0718-4df8-9f65-979805d2efef
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 9456f63d86952e21487da7a9458ce3e6a31d5a47
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 3c36579560c78ff77a624e4827df9d6a9302ae57
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44317083"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50551308"
 ---
 # <a name="creating-new-toolbars-c"></a>新しいツールバーを作成 (C++)
 
@@ -45,7 +34,7 @@ ms.locfileid: "44317083"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 MFC または ATL
 

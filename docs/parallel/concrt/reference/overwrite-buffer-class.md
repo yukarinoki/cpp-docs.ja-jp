@@ -1,10 +1,6 @@
 ---
-title: overwrite_buffer クラス |Microsoft Docs
-ms.custom: ''
+title: overwrite_buffer クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - overwrite_buffer
 - AGENTS/concurrency::overwrite_buffer
@@ -21,21 +17,15 @@ f1_keywords:
 - AGENTS/concurrency::overwrite_buffer::resume_propagation
 - AGENTS/concurrency::overwrite_buffer::send_message
 - AGENTS/concurrency::overwrite_buffer::supports_anonymous_source
-dev_langs:
-- C++
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 82266e387bcba3e4e7f2e377c666ce890d258e0f
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162114"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456001"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer クラス
 
@@ -102,7 +92,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 
 `overwrite_buffer`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 

@@ -1,10 +1,6 @@
 ---
-title: CScrollView クラス |Microsoft Docs
-ms.custom: ''
+title: CScrollView クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CScrollView
 - AFXWIN/CScrollView
@@ -19,8 +15,6 @@ f1_keywords:
 - AFXWIN/CScrollView::ScrollToPosition
 - AFXWIN/CScrollView::SetScaleToFitSize
 - AFXWIN/CScrollView::SetScrollSizes
-dev_langs:
-- C++
 helpviewer_keywords:
 - CScrollView [MFC], CScrollView
 - CScrollView [MFC], CheckScrollBars
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f259e190daa07ff3f6ed91a0ea92f60cbdfcbd29
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9ec6177b1f2cb071a6aa284c2936f3af4dbe4634
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46435963"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468277"
 ---
 # <a name="cscrollview-class"></a>CScrollView クラス
 
@@ -126,7 +116,7 @@ Standard から派生したクラスで自分でスクロールを処理でき�
 
 `CScrollView`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 

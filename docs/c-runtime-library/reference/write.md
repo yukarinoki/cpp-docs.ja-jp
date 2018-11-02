@@ -1,10 +1,6 @@
 ---
-title: _write | Microsoft Docs
-ms.custom: ''
+title: _write
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _write
 apilocation:
@@ -22,23 +18,17 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _write
-dev_langs:
-- C++
 helpviewer_keywords:
 - _write function
 - write function
 - files [C++], writing to
 ms.assetid: 7b868c33-766f-4e1a-95a7-e8d25f0604c4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 917309717d72048650d2b3975fefd74a1db50949
-ms.sourcegitcommit: e9ce38decc9f986edab5543de3464b11ebccb123
+ms.openlocfilehash: b3fa53b21d4ea23c5f8e59de673f4074deedb505
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "42571407"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519250"
 ---
 # <a name="write"></a>_write
 
@@ -81,7 +71,7 @@ Unicode 変換モードでファイルを開いたときに、たとえば場合
 
 テキスト モードで開かれたファイルに書き込むときに **_write** CTRL+Z 文字を論理ファイルの終わりとして扱います。 デバイスに書き込むときに **_write**を出力の終端として、バッファー内の CTRL+Z 文字を扱います。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

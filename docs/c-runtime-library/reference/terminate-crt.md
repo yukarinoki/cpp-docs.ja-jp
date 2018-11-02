@@ -1,10 +1,6 @@
 ---
-title: terminate (CRT) | Microsoft Docs
-ms.custom: ''
+title: terminate (CRT)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - terminate
 apilocation:
@@ -22,26 +18,20 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - terminate
-dev_langs:
-- C++
 helpviewer_keywords:
 - terminate function
 - exception handling, termination
 ms.assetid: 90e67402-08e9-4b2a-962c-66a8afd3ccb4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c743439b487f091b760e3747c47b471832e1ff3d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1f655d328b4d97a2989ad49005ed8a9f44fd9d79
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408675"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50438638"
 ---
 # <a name="terminate-crt"></a>terminate (CRT)
 
-呼び出し[中止](abort.md)または関数を指定するを使用して**set_terminate**です。
+呼び出し[中止](abort.md)を使用してを指定した関数または**set_terminate**します。
 
 ## <a name="syntax"></a>構文
 
@@ -49,9 +39,9 @@ ms.locfileid: "32408675"
 void terminate( void );
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**終了**関数は、C++ 例外処理で使用され、次の場合に呼び出されます。
+**終了**関数は、C++ 例外処理で使用されは、次の場合に呼び出されます。
 
 - スローされた C++ 例外と一致する catch ハンドラーが見つからない。
 
@@ -59,11 +49,11 @@ void terminate( void );
 
 - 例外をスローした後でスタックが破損した。
 
-**終了**呼び出し[中止](abort.md)既定です。 この既定の設定を変更するには、独自の終了関数を記述して呼び出すこと**set_terminate**関数の引数としての名前に置き換えます。 **終了**に渡す引数として指定されている最後の関数を呼び出す**set_terminate**です。 詳細については、「[Unhandled C++ Exceptions](../../cpp/unhandled-cpp-exceptions.md)」(ハンドルされない C++ 例外) を参照してください。
+**終了**呼び出し[中止](abort.md)既定。 この既定の設定を変更するには、独自の終了関数を作成し、呼び出すことによって**set_terminate**引数として関数の名前に置き換えます。 **終了**への引数として渡された最後関数を呼び出す**set_terminate**します。 詳細については、「[Unhandled C++ Exceptions](../../cpp/unhandled-cpp-exceptions.md)」(ハンドルされない C++ 例外) を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**terminate**|\<eh.h>|
 

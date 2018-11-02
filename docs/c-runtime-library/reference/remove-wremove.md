@@ -1,10 +1,6 @@
 ---
-title: remove、_wremove | Microsoft Docs
-ms.custom: ''
+title: remove、_wremove
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wremove
 - remove
@@ -25,8 +21,6 @@ f1_keywords:
 - remove
 - _wremove
 - _tremove
-dev_langs:
-- C++
 helpviewer_keywords:
 - tremove function
 - _wremove function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - wremove function
 - remove function
 ms.assetid: b6345ec3-3289-4645-93a4-28b9e478cc19
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 36cdc09107a66067b358cb2fd72ec9bd1b2b30a1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: d5636912ea36fd1b1412a556d516ac3e8184e0b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406434"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613971"
 ---
 # <a name="remove-wremove"></a>remove、_wremove
 
@@ -69,13 +59,13 @@ int _wremove(
 
 ## <a name="return-value"></a>戻り値
 
-ファイルが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 -1 を返しますそれ以外の場合、設定と**errno**のいずれか**EACCES**読み取り専用ファイルを指定するパスまたはファイルを開いて、ことを示すためにまたは**ENOENT**ことを示すために、ファイル名またはパスが存在しないかパスがディレクトリを指定します。
+ファイルが正常に削除された場合、これらの関数はそれぞれ 0 を返します。 -1 を返しますそれ以外の場合、設定と**errno**いずれかに**EACCES**読み取り専用ファイルを指定するパスまたはファイルを開いて、または**ENOENT**ことを示すために、ファイル名またはパスが見つからなかったか、パスがディレクトリを指定します。
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**remove** 関数は、*path* によって指定されたファイルを削除します。 **_wremove**のワイド文字バージョンは、**削除 (_r)**;*パス*に渡す引数 **_wremove**ワイド文字列です。 **_wremove**と**削除 (_r)** それ以外の場合の動作は同じです。 ファイルを削除する前に、ファイルへのすべてのハンドルを閉じる必要があります。
+**remove** 関数は、*path* によって指定されたファイルを削除します。 **_wremove**のワイド文字バージョンです**削除 (_r)**、*パス*引数 **_wremove**はワイド文字列です。 **_wremove**と**削除 (_r)** 動作は同じです。 ファイルを削除する前に、ファイルへのすべてのハンドルを閉じる必要があります。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -83,9 +73,9 @@ int _wremove(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tremove**|**remove**|**remove**|**_wremove**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**remove**|\<stdio.h> または \<io.h>|
 |**_wremove**|\<stdio.h> または \<wchar.h>|

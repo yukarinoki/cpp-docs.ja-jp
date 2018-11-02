@@ -1,10 +1,6 @@
 ---
-title: isgraph、iswgraph、_isgraph_l、_iswgraph_l | Microsoft Docs
-ms.custom: ''
+title: isgraph、iswgraph、_isgraph_l、_iswgraph_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - isgraph
 - iswgraph
@@ -31,8 +27,6 @@ f1_keywords:
 - _istgraph_l
 - _istgraph
 - iswgraph
-dev_langs:
-- C++
 helpviewer_keywords:
 - isgraph function
 - _istgraph_l function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _istgraph function
 - _ismbcgraph_l function
 ms.assetid: 531a5f34-4302-4d0a-8a4f-b7ea150ad941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b60e022471bdfa7cbbddb6b5263f757438572a2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: af3fae11536a869c0c3e3ebae285ebbaca5ea907
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401273"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50664803"
 ---
 # <a name="isgraph-iswgraph-isgraphl-iswgraphl"></a>isgraph、iswgraph、_isgraph_l、_iswgraph_l
 
@@ -84,11 +74,11 @@ int _iswgraph_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンを返す場合は 0 以外の各*c*スペース以外印刷可能な文字の特定の表現です。 **isgraph**場合は 0 以外の値を返します*c*スペース以外印刷可能な文字です。 **iswgraph**場合は 0 以外の値を返します*c*ワイド文字のスペース以外印刷可能なワイド文字します。 これらの各ルーチン 0 を返します*c*テスト条件を満たしていません。
+これらのルーチンを返します。 0 以外の場合の各*c*スペース以外印刷可能な文字の特定の表現です。 **isgraph**場合は、0 以外の値を返します*c*スペース以外印刷可能な文字です。 **iswgraph**場合は、0 以外の値を返します*c*ワイド文字のスペース以外印刷可能なワイド文字します。 これらのルーチンの各場合 0 を返します*c*テスト条件を満たしていません。
 
-これらの関数を持つバージョン、 **_l**サフィックス、現在のロケールの代わりに、ロケールに依存する動作には、渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数がのバージョン、 **_l**サフィックスは、現在のロケールの代わりに渡されるロケールを使用して、ロケールに依存する動作。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-動作**isgraph**と **_isgraph_l**場合に定義されていない*c* EOF ではありませんか 0 ~ 0 xff、包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、これらの値、関数の発生いない 1 つです。
+動作**isgraph**と **_isgraph_l**場合は定義されません*c* EOF がないか 0 ~ 0 xff の包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、発生のこれらの値のいずれかにありません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -97,9 +87,9 @@ int _iswgraph_l(
 |**_istgraph**|**isgraph**|[_ismbcgraph](ismbcgraph-functions.md)|**iswgraph**|
 |**_istgraph_l**|**_isgraph_l**|[_ismbcgraph_l](ismbcgraph-functions.md)|**_iswgraph_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isgraph**|\<ctype.h>|
 |**iswgraph**|\<ctype.h> または \<wchar.h>|

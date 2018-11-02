@@ -1,10 +1,6 @@
 ---
-title: _set_controlfp | Microsoft Docs
-ms.custom: ''
+title: _set_controlfp
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _set_controlfp
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - set_controlfp
 - _set_controlfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - set_controlfp function
 - floating-point functions, setting control word
 - _set_controlfp function
 ms.assetid: e0689d50-f68a-4028-a9c1-fb23eedee4ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a2647e9719c2aa3fe303393fcc1da55de0385581
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1187502f09849d7ca4d8e595c237cfa511d00c6b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32406421"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499027"
 ---
 # <a name="setcontrolfp"></a>_set_controlfp
 
@@ -66,15 +56,15 @@ void __cdecl _set_controlfp(
 
 なし。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Set_controlfp**関数がに似ていますが **_control87**を浮動小数点制御ワードにのみ設定が、 *newControl*です。 この値のビットは、浮動小数点のコントロールの状態を示します。 浮動小数点のコントロールの状態を使用すると、プログラムで使用する浮動小数点演算パッケージの精度、丸め、無限大の各モードを変更できます。 マスクまたはを使用して浮動小数点の例外をマスク解除することができますも **_set_controlfp**です。 詳細については、「[_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md)」を参照してください。
+**_Set_controlfp**機能に似ています **_control87**浮動小数点制御ワード設定だけを行いますが、 *newControl*します。 この値のビットは、浮動小数点のコントロールの状態を示します。 浮動小数点のコントロールの状態を使用すると、プログラムで使用する浮動小数点演算パッケージの精度、丸め、無限大の各モードを変更できます。 マスクを使用して浮動小数点の例外をマスクの **_set_controlfp**します。 詳細については、「[_control87、_controlfp、\__control87_2](control87-controlfp-control87-2.md)」を参照してください。
 
-コンパイルするときにこの関数は使用されなくなりました[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)共通言語ランタイムには、既定の浮動小数点精度のみがサポートされるためです。
+コンパイルするときに、この関数は非推奨[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)のため、共通言語ランタイムは浮動小数点の既定の精度のみをサポートします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|互換性|
+|ルーチンによって返される値|必須ヘッダー|互換性|
 |-------------|---------------------|-------------------|
 |**_set_controlfp**|\<float.h>|x86 プロセッサのみ|
 

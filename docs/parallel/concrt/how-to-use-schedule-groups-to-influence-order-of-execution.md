@@ -1,30 +1,20 @@
 ---
-title: '方法: スケジュール グループを使用して、実行の順序に影響を与える |Microsoft Docs'
-ms.custom: ''
+title: '方法: スケジュール グループを使用して実行順序に影響を与える'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - schedule groups, using [Concurrency Runtime]
 - using schedule groups [Concurrency Runtime]
 ms.assetid: 73124194-fc3a-491e-a23f-fbd7b5a4455c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 55417f1d72d6bd3e111a89f4b28f783543101b6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1117e0d24aae023fbb4dec4fbb9721e6da2ad768
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46415877"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642303"
 ---
 # <a name="how-to-use-schedule-groups-to-influence-order-of-execution"></a>方法: スケジュール グループを使用して実行順序に影響を与える
 
-同時実行ランタイムでは、タスクをスケジュールする順序は非確定的です。 ただし、スケジューリング ポリシーを使用して、タスクの実行順序に影響を与えることができます。 このトピックでは、と共にスケジュール グループを使用する方法を示します、 [concurrency::schedulingprotocol](reference/concurrency-namespace-enums.md#policyelementkey)タスクの実行順序に影響を与えるスケジューラ ポリシー。
+コンカレンシー ランタイムでは、タスクをスケジュールする順序は非確定的です。 ただし、スケジューリング ポリシーを使用して、タスクの実行順序に影響を与えることができます。 このトピックでは、と共にスケジュール グループを使用する方法を示します、 [concurrency::schedulingprotocol](reference/concurrency-namespace-enums.md#policyelementkey)タスクの実行順序に影響を与えるスケジューラ ポリシー。
 
 例では、一連のタスクを 2 回、それぞれ異なるスケジューリング ポリシーを使用して実行します。 どちらのポリシーでも、処理リソースの最大数は 2 つに制限されます。 最初の実行で、`EnhanceScheduleGroupLocality`ポリシーは、既定値し、2 つ目の実行で、`EnhanceForwardProgress`ポリシー。 `EnhanceScheduleGroupLocality` ポリシーでは、1 つのスケジュール グループ内の各タスクが終了または生成するまですべてのタスクを実行します。 `EnhanceForwardProgress` ポリシーでは、1 つのタスクが終了または生成すると、ラウンドロビン方式で次のスケジュール グループに移動します。
 

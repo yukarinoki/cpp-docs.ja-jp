@@ -1,10 +1,6 @@
 ---
-title: _free_dbg | Microsoft Docs
-ms.custom: ''
+title: _free_dbg
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _free_dbg
 apilocation:
@@ -22,24 +18,18 @@ apitype: DLLExport
 f1_keywords:
 - _free_dbg
 - free_dbg
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory blocks, deallocating
 - freeing memory
 - _free_dbg function
 - free_dbg function
 ms.assetid: fc5e8299-616d-48a0-b979-e037117278c6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b68404df0f56a4a75c89b5f3a44ff8c853c5cef4
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 5a0024101e4f5a74f1573b271d444b27738db8e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44103906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50442247"
 ---
 # <a name="freedbg"></a>_free_dbg
 
@@ -72,7 +62,7 @@ void _free_dbg(
 
 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

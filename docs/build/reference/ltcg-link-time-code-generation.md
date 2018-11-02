@@ -1,34 +1,24 @@
 ---
-title: /LTCG (リンク時コード生成) |Microsoft Docs
-ms.custom: ''
+title: /LTCG (リンク時のコード生成)
 ms.date: 03/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCLinkerTool.LinkTimeCodeGeneration
 - VC.Project.VCConfiguration.WholeProgramOptimization
 - VC.Project.VCCLWCECompilerTool.WholeProgramOptimization
 - /ltcg
 - VC.Project.VCCLCompilerTool.WholeProgramOptimization
-dev_langs:
-- C++
 helpviewer_keywords:
 - link-time code generation in C++ linker
 - /LTCG linker option
 - -LTCG linker option
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0e60bb086adbb1c573b21cafb54c61203c888e9a
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 68c12cc7666da489870da1cacacc5053aeca5b51
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45725169"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50523215"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (リンク時のコード生成)
 
@@ -146,7 +136,7 @@ ms.locfileid: "45725169"
 
 - **/LTCG:PGI**を使用してコンパイルしたネイティブ モジュールは受け入れません **/GL**と **/clr**
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 参照してください[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)します。
 

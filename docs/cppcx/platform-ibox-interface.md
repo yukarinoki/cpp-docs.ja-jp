@@ -1,25 +1,17 @@
 ---
-title: Platform::ibox インターフェイス |Microsoft Docs
-ms.custom: ''
+title: Platform::IBox インターフェイス
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - VCCORLIB/Namespace not found::Platform
 - VCCORLIB/Namespace not found::Platform::Value
-dev_langs:
-- C++
 ms.assetid: 774df45d-f8a7-45a3-ae24-eecc3c681040
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 540b759153b8fac0532a8817d89e704d55fbffd3
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 4cca648b3b81dbf0d9f8d3e5f87625464f1d8385
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102079"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50625045"
 ---
 # <a name="platformibox-interface"></a>Platform::IBox インターフェイス
 
@@ -41,7 +33,7 @@ interface class IBox
 
 `IBox<T>` インターフェイスは、「 [値クラスと構造体 (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md)」で説明されているように、主に内部的に使用され、null 許容値型を表します。 インターフェイスは、 `Object^`型のパラメーターを受け取る C++ のメソッドに渡される値の型をボックス化するためにも使用されます。 入力パラメーターは `IBox<SomeValueType>`として明示的に宣言できます。 例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 ### <a name="members"></a>メンバー
 
@@ -51,7 +43,7 @@ interface class IBox
 
 |メソッド|説明|
 |------------|-----------------|
-|[値](#value)|以前にこの `IBox` インスタンスに格納されていたことがあり、ボックス化が解除されている値を返します。|
+|[[値]](#value)|以前にこの `IBox` インスタンスに格納されていたことがあり、ボックス化が解除されている値を返します。|
 
 ## <a name="value"></a> Ibox::value プロパティ
 

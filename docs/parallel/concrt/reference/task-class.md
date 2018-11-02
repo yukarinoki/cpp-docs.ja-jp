@@ -1,10 +1,6 @@
 ---
-title: task クラス (同時実行ランタイム) |Microsoft Docs
-ms.custom: ''
+title: task クラス (コンカレンシー ランタイム)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - task
 - PPLTASKS/concurrency::task
@@ -15,21 +11,15 @@ f1_keywords:
 - PPLTASKS/concurrency::task::scheduler
 - PPLTASKS/concurrency::task::then
 - PPLTASKS/concurrency::task::wait
-dev_langs:
-- C++
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bac539fc2826b5628769126d9802688c01f01c7b
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: c2ac1df322a2778356ce8acca90392fc9f6a17f1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163206"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50482079"
 ---
 # <a name="task-class-concurrency-runtime"></a>task クラス (コンカレンシー ランタイム)
 
@@ -97,7 +87,7 @@ class task;
 
 `task`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** ppltasks.h
 

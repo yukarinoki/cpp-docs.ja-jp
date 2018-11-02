@@ -1,10 +1,6 @@
 ---
-title: _searchenv_s、_wsearchenv_s | Microsoft Docs
-ms.custom: ''
+title: _searchenv_s、_wsearchenv_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wsearchenv_s
 - _searchenv_s
@@ -26,8 +22,6 @@ f1_keywords:
 - _wsearchenv_s
 - wsearchenv_s
 - searchenv_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tsearchenv_s function
 - files [C++], finding
@@ -42,16 +36,12 @@ helpviewer_keywords:
 - _searchenv_s function
 - environment paths
 ms.assetid: 47f9fc29-250e-4c09-b52e-9e9f0ef395ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b14dee908cdf1cc0d564047035a72f501df130b4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 40c2d0c42a3d61f84db78015388eba19742af06e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32410916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505678"
 ---
 # <a name="searchenvs-wsearchenvs"></a>_searchenv_s、_wsearchenv_s
 
@@ -107,7 +97,7 @@ errno_t _wsearchenv_s(
 
 正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。
 
-場合*filename* 、空の文字列には、戻り値は**ENOENT**です。
+場合*filename*空の文字列には、戻り値は**ENOENT**します。
 
 ### <a name="error-conditions"></a>エラー条件
 
@@ -117,17 +107,17 @@ errno_t _wsearchenv_s(
 |**NULL**|任意|任意|任意|**EINVAL**|変更されない|
 |任意|任意|任意|<= 0|**EINVAL**|変更されない|
 
-上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラ―が呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**返す**EINVAL**です。
+上記のいずれかのエラー条件が発生すると、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように無効なパラメーター ハンドラ―が呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Searchenv_s**ルーチンは、指定したドメインでターゲット ファイルを検索します。 *Varname*変数が指定できる任意の環境またはディレクトリ パスの一覧をなどを指定するユーザー定義変数**パス**、 **LIB**、および**インクルード**. **_Searchenv_s**大文字小文字を区別、 *varname*環境変数の大文字と小文字が一致する必要があります。 場合*varname*プロセスの環境で定義されている環境変数の名前と一致しないのは、0 が返されます、 *pathname*変数は変更されません。
+**_Searchenv_s**日常的な指定したドメインでターゲット ファイルを検索します。 *Varname*変数が指定できる任意の環境またはユーザー定義の変数などのディレクトリのパスの一覧を示す**パス**、 **LIB**、および**インクルード**. **_Searchenv_s**と小文字は区別*varname*環境変数の大文字と小文字が一致する必要があります。 場合*varname*プロセスの環境で定義されている環境変数の名前と一致しません、関数は 0 を返します、 *pathname*変数は変更されません。
 
-このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されている次のディレクトリを検索します。 ターゲット ファイルは、これらのディレクトリのいずれかに新しく作成されたパスがコピー *pathname*です。 場合、 *filename*ファイルが見つからない*pathname* null で終わる空の文字列が含まれています。
+このルーチンは最初に現在の作業ディレクトリでファイルを検索します。 ファイルが見つからなかった場合、環境変数で指定されている次のディレクトリを検索します。 新しく作成されたパスをコピーする場合は、対象のファイルは、これらのディレクトリのいずれかでは、 *pathname*します。 場合、 *filename*ファイルが見つからない*pathname* null で終わる空の文字列が含まれています。
 
-*Pathname*バッファーは以上である必要があります **_MAX_PATH**作成されるパス名の長さを格納します。 それ以外の場合、 **_searchenv_s**オーバーラン可能性があります、 *pathname*バッファーで予期しない動作結果として得られます。
+*Pathname*バッファーは以上である必要があります **_MAX_PATH**作成されるパス名の長さを格納します。 それ以外の場合、 **_searchenv_s**オーバーランの可能性があります、 *pathname*予期しない動作のバッファー。
 
-**_wsearchenv_s**のワイド文字バージョンは、 **_searchenv_s**; 引数 **_wsearchenv_s**ワイド文字列です。 **_wsearchenv_s**と **_searchenv_s**それ以外の場合の動作は同じです。
+**_wsearchenv_s**のワイド文字バージョンは、 **_searchenv_s**; 引数 **_wsearchenv_s**はワイド文字列です。 **_wsearchenv_s**と **_searchenv_s**動作は同じです。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -137,9 +127,9 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tsearchenv_s**|**_searchenv_s**|**_searchenv_s**|**_wsearchenv_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_searchenv_s**|\<stdlib.h>|
 |**_wsearchenv_s**|\<stdlib.h> または \<wchar.h>|

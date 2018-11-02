@@ -1,26 +1,16 @@
 ---
-title: RemoveIUnknown クラス |Microsoft Docs
-ms.custom: ''
+title: RemoveIUnknown クラス
 ms.date: 10/03/2018
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - client/Microsoft::WRL::Details::RemoveIUnknown
-dev_langs:
-- C++
 ms.assetid: 998e711a-7d1a-44c6-a016-e6167aa40863
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c13f84916bf4733d906a1bd50411a85c6a5ed1e0
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 06b3ec86874bcf7968483eb4557b6b6b247ecdfe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48788956"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50556352"
 ---
 # <a name="removeiunknown-class"></a>RemoveIUnknown クラス
 
@@ -61,7 +51,7 @@ class RemoveIUnknown : public T;
 
 `RemoveIUnknown`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** client.h
 

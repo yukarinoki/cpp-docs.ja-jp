@@ -1,10 +1,6 @@
 ---
-title: _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l Microsoft Docs
-ms.custom: ''
+title: _printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _printf_p
 - _wprintf_p
@@ -31,8 +27,6 @@ f1_keywords:
 - _wprintf_p_l
 - _printf_p_l
 - wprintf_p_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - printf_p function
 - printf_p_l function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - tprintf_p_l function
 - _printf_p_l function
 ms.assetid: 1b7e9ef9-a069-45db-af9d-c2730168322e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 09a66fc0149b33d8fb5fe2d7eab411bf66e8dbdc
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c7d798bde3ab68541bdcd64b768275b864694284
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404249"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660363"
 ---
 # <a name="printfp-printfpl-wprintfp-wprintfpl"></a>_printf_p、_printf_p_l、_wprintf_p、_wprintf_p_l
 
@@ -98,20 +88,20 @@ int _wprintf_p_l(
 
 出力した文字数を返します。エラーが発生した場合は負の値を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Printf_p**関数がフォーマットされ、一連の文字や値を標準出力ストリームを出力**stdout**です。 引数に従う場合は、*形式*、文字列、*形式*文字列引数の出力形式を指定する必要があります (を参照してください[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)).
+**_Printf_p**関数は、書式化して、一連の文字と、標準出力ストリームに値を出力**stdout**します。 引数以下の場合、*形式*、文字列、*形式*文字列は、引数の出力形式の仕様を含める必要があります (を参照してください[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)).
 
-違い **_printf_p**と**printf_s**される **_printf_p**引数には、順序を指定できますでは位置指定パラメーター書式指定文字列で使用されます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
+間の差 **_printf_p**と**printf_s**される **_printf_p**引数の順序を指定できますでは位置指定パラメーター書式指定文字列で使用されます。 詳細については、「[printf_p の位置指定パラメーター](../../c-runtime-library/printf-p-positional-parameters.md)」をご覧ください。
 
-**_wprintf_p**のワイド文字バージョンは、 **_printf_p**; ストリームが ANSI モードで開かれている場合、動作は同じです。 **_printf_p** UNICODE ストリームへの出力はサポートされていません。
+**_wprintf_p**のワイド文字バージョンは、 **_printf_p**; ストリームが ANSI モードで開かれている場合、動作は同じです。 **_printf_p** UNICODE ストリームへの出力をサポートされていません。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
 > [!IMPORTANT]
 > *format* にユーザー定義の文字列を指定しないでください。
 
-場合*形式*または*引数*は**NULL**、または形式の文字列に無効な書式設定文字が含まれている **_printf_p**と **_wprintf_p** 」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、関数の戻り値-1 とセットの実行が許可された場合**errno**に**EINVAL**です。
+場合*形式*または*引数*は**NULL**、文字列には形式には、無効な書式設定文字が含まれていますか **_printf_p**と **_wprintf_p** 」の説明に従って、関数は、無効なパラメーター ハンドラーを呼び出す[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続、関数の戻り値-1 とセットが許可された場合**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -120,14 +110,14 @@ int _wprintf_p_l(
 |**_tprintf_p**|**_printf_p**|**_printf_p**|**_wprintf_p**|
 |**_tprintf_p_l**|**_printf_p_l**|**_printf_p_l**|**_wprintf_p_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_printf_p**、 **_printf_p_l**|\<stdio.h>|
 |**_wprintf_p**、 **_wprintf_p_l**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル**stdin**、 **stdout**、および**stderr**、C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

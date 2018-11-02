@@ -1,24 +1,17 @@
 ---
-title: 型演算子 ^ |Microsoft Docs
-ms.custom: ''
+title: Type^ 演算子
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: b24ffc83-0780-4f9a-8ee0-f5725db339d1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1b17b706c15e1cf996cb694842c05d70b33f8e1e
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: fca53abb9dc17588695591d496b7db2a76e319f6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44106542"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50553661"
 ---
 # <a name="operator-type"></a>Type^ 演算子
 
-変換を有効[::interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)に`Platform::Type`します。
+[Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) から `Platform::Type`への変換を有効にします。
 
 ## <a name="syntax"></a>構文
 
@@ -28,11 +21,11 @@ Operator Type^(Windows::UI::Xaml::Interop::TypeName typeName);
 
 ### <a name="return-value"></a>戻り値
 
-返します、`Platform::Type`が指定されると、 [::interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)します。
+`Platform::Type` Windows::UI::Xaml::Interop::TypeName [が指定されると、](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)を返します。
 
 ### <a name="remarks"></a>Remarks
 
-`TypeName` は、型情報を表すための、言語に依存しない Windows ランタイムの構造体です。 [Platform::Type](../cppcx/platform-type-class.md) は C++ に固有で、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を通じて渡すことはできません。 ここでの用途の 1 つは、`TypeName`の[Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx)関数。
+`TypeName` は、型情報を表すための、言語に依存しない Windows ランタイムの構造体です。 [Platform::Type](../cppcx/platform-type-class.md) は C++ に固有で、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を通じて渡すことはできません。 `TypeName`Navigate [関数での](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) の使用例を次に示します。
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
@@ -55,7 +48,7 @@ Type^ tx2 = (Type^)(tn);
 
 .NET framework プログラム プロジェクト`TypeName`として <xref:System.Type>
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 ## <a name="see-also"></a>関連項目
 

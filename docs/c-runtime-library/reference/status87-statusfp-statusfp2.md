@@ -1,10 +1,6 @@
 ---
-title: _status87、_statusfp、_statusfp2 | Microsoft Docs
-ms.custom: ''
+title: _status87、_statusfp、_statusfp2
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _statusfp2
 - _statusfp
@@ -29,8 +25,6 @@ f1_keywords:
 - _status87
 - status87
 - statusfp
-dev_langs:
-- C++
 helpviewer_keywords:
 - floating-point functions, getting status word
 - floating-point numbers, status word
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - floating-point functions
 - status word
 ms.assetid: 7ef963fa-b1fb-429d-94d6-fbf282ab7432
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 69297d7ff1e3ec40cfe4fc22dec86c356d1697d4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 271c28dd4e267e5b3b702858cc398689e3e35d6f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32412557"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50597522"
 ---
 # <a name="status87-statusfp-statusfp2"></a>_status87、_statusfp、_statusfp2
 
@@ -77,21 +67,21 @@ void _statusfp2(unsigned int *px86, unsigned int *pSSE2)
 
 ## <a name="return-value"></a>戻り値
 
-**_Status87**と **_statusfp**、返される値のビットは浮動小数点のステータスを示します。 浮動小数点数を参照してください。H インクルード ファイルによって返されるビットの定義を **_statusfp**です。 多くの数値演算ライブラリ関数は、予測できない結果を使用して浮動小数点ステータス ワードを変更します。 順序を変更、結合、およびへの呼び出しの周囲の浮動小数点演算を排除できます最適化 **_status87**、 **_statusfp**、および関連する関数。 浮動小数点演算の順序を変更する最適化を防ぐには、[/Od (無効 (デバッグ))](../../build/reference/od-disable-debug.md) コンパイラ オプションまたは [fenv_access](../../preprocessor/fenv-access.md) プラグマ ディレクティブを使用します。 値を返す **_clearfp**と **_statusfp**、および戻り値のパラメーターも **_statusfp2**より信頼性がより少ない浮動小数点演算が実行された場合浮動小数点ステータス ワードの既知の状態間。
+**_Status87**と **_statusfp**、返される値のビットは浮動小数点のステータスを示します。 浮動小数点数を参照してください。H によって返されるビットの定義のファイルをインクルードする **_statusfp**します。 多くの数値演算ライブラリ関数は、予測できない結果を使用して浮動小数点ステータス ワードを変更します。 順序を変更、結合、および浮動小数点演算の呼び出しの周りを排除できる最適化 **_status87**、 **_statusfp**、および関連する関数。 浮動小数点演算の順序を変更する最適化を防ぐには、[/Od (無効 (デバッグ))](../../build/reference/od-disable-debug.md) コンパイラ オプションまたは [fenv_access](../../preprocessor/fenv-access.md) プラグマ ディレクティブを使用します。 値を返す **_clearfp**と **_statusfp**、および戻り値のパラメーターも **_statusfp2**より少ない浮動小数点演算が実行された場合、信頼性が高く、浮動小数点ステータス ワードの既知の状態間。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Statusfp**関数は浮動小数点ステータス ワードを取得します。 ステータス ワードとは、浮動小数点例外によって検出された浮動小数点プロセッサのステータスやその他の条件 (浮動小数点スタック オーバーフローおよびアンダーフローなど) の組み合わせです。 マスクされていない例外は、ステータス ワードのコンテンツが返される前にチェックされます。 これは、呼び出し元に保留中の例外を通知することを意味します。 X86 プラットフォームでは、 **_statusfp**は x87 と SSE2 浮動小数点ステータスの組み合わせを返します。 x64 プラットフォームでは、返される状態は、SSE の MXCSR の状態に基づいています。 ARM プラットフォームで **_statusfp**は FPSCR レジスタからステータスを返します。
+**_Statusfp**関数は浮動小数点ステータス ワードを取得します。 ステータス ワードとは、浮動小数点例外によって検出された浮動小数点プロセッサのステータスやその他の条件 (浮動小数点スタック オーバーフローおよびアンダーフローなど) の組み合わせです。 マスクされていない例外は、ステータス ワードのコンテンツが返される前にチェックされます。 これは、呼び出し元に保留中の例外を通知することを意味します。 X86 プラットフォームでは、 **_statusfp**は x87 と SSE2 浮動小数点ステータスの組み合わせを返します。 x64 プラットフォームでは、返される状態は、SSE の MXCSR の状態に基づいています。 ARM プラットフォームで **_statusfp** FPSCR レジスタからステータスを返します。
 
-**_statusfp**のプラットフォームに依存しない、ポータブル バージョン **_status87**です。 同じである **_status87** Intel (x86) プラットフォームでは、x64 および ARM プラットフォームでサポートされてもします。 浮動小数点コードがすべてのアーキテクチャへの移植性であることを確認するには使用 **_statusfp**です。 X86 を対象とのみ場合プラットフォームでは、いずれかを使用する **_status87**または **_statusfp**です。
+**_statusfp**のプラットフォームに依存しない、移植可能なバージョンは、 **_status87**します。 これは **_status87** Intel (x86) プラットフォームでは、x64 および ARM プラットフォームによってもサポートされています。 浮動小数点コードがすべてのアーキテクチャに移植可能であることを確認するには使用 **_statusfp**します。 X86 を対象としているだけの場合、プラットフォームを使用できます **_status87**または **_statusfp**。
 
-お勧め **_statusfp2**を x87 と SSE2 浮動小数点プロセッサの両方を持つチップ (Pentium IV) などです。 **_Statusfp2**は x87 または SSE2 浮動小数点プロセッサの両方の浮動小数点ステータス ワードを使用して、アドレスを入力します。 場合は、1 に設定されている EM_AMBIGUOUS x87 と SSE2 浮動小数点プロセッサをサポートするチップ、 **_statusfp**または **_controlfp**が使用およびは x87 または SSE2 を参照しているため、操作があいまいです。浮動小数点ステータス ワード。 **_Statusfp2**関数が x86 でのみサポートされているプラットフォーム。
+お勧め **_statusfp2**を x87 および SSE2 の浮動小数点プロセッサの両方を持つチップ (Pentium IV) など。 **_Statusfp2**アドレスは、x87 または SSE2 浮動小数点プロセッサの両方の浮動小数点ステータス ワードを使用して設定します。 X87 と SSE2 浮動小数点プロセッサをサポートするチップ、EM_AMBIGUOUS が 1 の場合に設定されて **_statusfp**または **_controlfp**使用されていて、x87 または SSE2 を参照しているため、操作があいまいですが浮動小数点ステータス ワード。 **_Statusfp2**関数が x86 上でのみサポートされているプラットフォーム。
 
-これらの関数に不要な[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)共通言語ランタイム (CLR) には、既定の浮動小数点精度のみがサポートされるためです。
+これらの関数は適していない[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)共通言語ランタイム (CLR) には、浮動小数点の既定の精度だけがサポートされます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_status87**、 **_statusfp**、 **_statusfp2**|\<float.h>|
 

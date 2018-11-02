@@ -1,10 +1,6 @@
 ---
-title: _CrtGetDumpClient | Microsoft Docs
-ms.custom: ''
+title: _CrtGetDumpClient
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtGetDumpClient
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtGetDumpClient
 - _CrtGetDumpClient
-dev_langs:
-- C++
 helpviewer_keywords:
 - _CrtGetDumpClient function
 - CrtGetDumpClient function
 ms.assetid: 9051867f-341b-493b-b53d-45d2b454a3ad
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f15e41c91867c7728a1d006b8038aa1ca18010a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e4700bd936bec97014508c4a971f6e6c278c6a11
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394410"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50550736"
 ---
 # <a name="crtgetdumpclient"></a>_CrtGetDumpClient
 
@@ -53,15 +43,15 @@ _CRT_DUMP_CLIENT _CrtGetDumpClient( void );
 
 現在のダンプ ルーチンを返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_CrtGetDumpClient**関数が格納されているオブジェクトをダンプするための現在のフック関数を取得、 **_CLIENT_BLOCK**メモリ ブロックの C ランタイム デバッグ メモリ ダンプ プロセスです。
+**_CrtGetDumpClient**関数に格納されているオブジェクトをダンプするための現在のフック関数を取得する、 **_CLIENT_BLOCK**メモリ ブロックの C ランタイム デバッグ メモリ ダンプ プロセス。
 
 フックをサポートするその他のランタイム関数の使い方の詳細と、独自のクライアント定義フック関数の記述方法については、「[デバッグ用フック関数の作成](/visualstudio/debugger/debug-hook-function-writing)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_CrtGetDumpClient**|\<crtdbg.h>|
 

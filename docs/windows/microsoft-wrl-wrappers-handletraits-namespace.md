@@ -1,28 +1,18 @@
 ---
-title: Microsoft::WRL::Wrappers::HandleTraits Namespace |Microsoft Docs
-ms.custom: ''
+title: Microsoft::WRL::Wrappers::HandleTraits 名前空間
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - corewrappers/Microsoft::WRL::Wrappers::HandleTraits
-dev_langs:
-- C++
 helpviewer_keywords:
 - HandleTraits namespace
 ms.assetid: 2fb5c6d1-bfc2-4e09-91eb-31705064ffb3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 683759c3bf0b2152ee6fadbb638cd2398daecccd
-ms.sourcegitcommit: 6f8dd98de57bb80bf4c9852abafef1c35a7600f1
+ms.openlocfilehash: e558838ca9cd06fb5529f689d45a920db151d272
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2018
-ms.locfileid: "42586130"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643249"
 ---
 # <a name="microsoftwrlwrappershandletraits-namespace"></a>Microsoft::WRL::Wrappers::HandleTraits 名前空間
 
@@ -50,7 +40,7 @@ namespace Microsoft::WRL::Wrappers::HandleTraits;
 |[SRWLockExclusiveTraits 構造体](../windows/srwlockexclusivetraits-structure.md)|一般的な特性について説明します、`SRWLock`排他ロック モードでのクラス。|
 |[SRWLockSharedTraits 構造体](../windows/srwlocksharedtraits-structure.md)|一般的な特性について説明します、`SRWLock`共有ロック モードでのクラス。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** corewrappers.h
 

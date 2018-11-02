@@ -1,31 +1,21 @@
 ---
-title: 警告 |Microsoft Docs
-ms.custom: ''
+title: 警告
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - warning_CPP
 - vc-pragma.warning
-dev_langs:
-- C++
 helpviewer_keywords:
 - pragmas, warning
 - push pragma warning
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 90cb11a6e6ab0c088c0b2425856d61556e76564c
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48234633"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631724"
 ---
 # <a name="warning-pragma"></a>warning プラグマ
 コンパイラの警告メッセージの動作の選択的な変更を有効にします。
@@ -46,7 +36,7 @@ ms.locfileid: "48234633"
 |警告指定子|説明|
 |------------------------|-------------|
 |*1、2、3、4*|指定された警告に特定のレベルを適用します。 これは、既定で無効になっている指定された警告も有効にします。|
-|*default*|警告の動作を既定値にリセットします。 これは、既定で無効になっている指定された警告も有効にします。 警告は、既定の文書化されたレベルで生成されます。<br /><br /> 詳細については、次を参照してください。[コンパイラの警告 That Are Off by 既定](../preprocessor/compiler-warnings-that-are-off-by-default.md)します。|
+|*default*|警告の動作を既定値にリセットします。 これは、既定で無効になっている指定された警告も有効にします。 警告は、既定の文書化されたレベルで生成されます。<br /><br /> 詳細については、「 [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。|
 |*disable*|指定した警告メッセージを発行しません。|
 |*error*|指定した警告をエラーとして報告します。|
 |*once*|指定したメッセージを 1 回だけ表示します。|

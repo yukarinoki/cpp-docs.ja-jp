@@ -1,30 +1,20 @@
 ---
-title: Windows API の同期データ構造との比較 |Microsoft Docs
-ms.custom: ''
+title: 同期データ構造と Windows API の比較
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ff827c326f331acae4d16381856ad4df01550524
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: acbf5edb0f3284195052cfb3f4447f0b2ba7fe66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447051"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50554519"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>同期データ構造と Windows API の比較
 
-ここでは、同時実行ランタイムが提供する同期データ構造と Windows API が提供する同期データ構造の動作を比較します。
+ここでは、コンカレンシー ランタイムが提供する同期データ構造と Windows API が提供する同期データ構造の動作を比較します。
 
 同時実行ランタイムによって提供される同期データ構造に従って、*協調スレッド処理モデル*します。 協調スレッド処理モデルでは、同期プリミティブは処理リソースを他のスレッドに明示的に譲渡します。 これに対し、*プリエンプティブ スレッド処理モデル*制御スケジューラまたはオペレーティング システムによって、処理リソースを他のスレッドに転送されます場所、します。
 

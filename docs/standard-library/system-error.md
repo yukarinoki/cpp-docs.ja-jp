@@ -1,32 +1,22 @@
 ---
-title: '&lt;system_error&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;system_error&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <system_error>
 - system_error
-dev_langs:
-- C++
 helpviewer_keywords:
 - system_error header
 ms.assetid: 5e046c6e-48d9-4740-8c8a-05f3727c1215
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f182df5bda73f9b31c86407cc1475ee6c5ec9b9
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: cb4870a22fd06039751f87f26dfa40e8ddcf2500
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856945"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662762"
 ---
 # <a name="ltsystemerrorgt"></a>&lt;system_error&gt;
 
-ヘッダーをインクルード\<system_error > 例外クラスを定義する`system_error`と低レベルのシステム エラーを処理するためのテンプレートに関連します。
+ヘッダーを含める\<system_error > 例外クラスを定義する`system_error`関連の低レベル システム エラーを処理するためのテンプレートとします。
 
 ## <a name="syntax"></a>構文
 
@@ -41,7 +31,7 @@ ms.locfileid: "33856945"
 |[generic_category](../standard-library/system-error-functions.md#generic_category)|一般的なエラーのカテゴリを表します。|
 |[system_category](../standard-library/system-error-functions.md#system_category)|低レベル システム オーバーフローによって発生したエラーのカテゴリを表します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -79,7 +69,7 @@ ms.locfileid: "33856945"
 |[is_error_condition_enum](../standard-library/is-error-condition-enum-class.md)|[error_condition クラス](../standard-library/error-condition-class.md) 列挙型をテストする型の述語を表します。|
 |[system_error](../standard-library/system-error-class.md)|低レベル システム オーバーフローをレポートするためにスローされるすべての例外のための基底クラスを表します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<system_error>
 

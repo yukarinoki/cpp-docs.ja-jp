@@ -1,10 +1,6 @@
 ---
-title: CComControlBase クラス |Microsoft Docs
-ms.custom: ''
+title: CComControlBase クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CComControlBase
 - ATLCTL/ATL::CComControlBase
@@ -81,21 +77,15 @@ f1_keywords:
 - ATLCTL/ATL::CComControlBase::m_spDataAdviseHolder
 - ATLCTL/ATL::CComControlBase::m_spInPlaceSite
 - ATLCTL/ATL::CComControlBase::m_spOleAdviseHolder
-dev_langs:
-- C++
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18666cc619796bc7ee0216eb9cdf020bd8d8a6f7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: fa7562f49834bf71da6bd095aec19360a43f1538
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46035748"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447958"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase クラス
 
@@ -212,7 +202,7 @@ class ATL_NO_VTABLE CComControlBase
 
 コントロールの作成の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。 ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlctl.h
 

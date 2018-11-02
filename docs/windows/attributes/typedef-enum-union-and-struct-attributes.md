@@ -1,27 +1,16 @@
 ---
-title: Typedef、Enum、Union、および struct 型の属性 (C++ COM) |Microsoft Docs
-ms.custom: ''
+title: Typedef、Enum、Union、および struct 型の属性 (C++ COM)
 ms.date: 10/02/2018
-ms.technology:
-- cpp-windows
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - union attributes
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 89e1511df2aeabe7cbd63549a1dca6e53944fbe2
-ms.sourcegitcommit: 955ef0f9d966e7c9c65e040f1e28fa83abe102a5
+ms.openlocfilehash: 289935c3651535b5f935624dc33246fbe83a4ceb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48791426"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631063"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union、および Struct 型の属性
 
@@ -107,7 +96,7 @@ ms.locfileid: "48791426"
 |[requires_category](requires-category.md)|ターゲット クラスの必須コンポーネントのカテゴリを指定します。|
 |[size_is](size-is.md)|メモリのサイズがサイズのポインターに割り当てられた、サイズのポインター、および 1 次元または多次元配列へのポインターのサイズを指定します。|
 |[source](source-cpp.md)|クラスの場合、接続ポイント用の COM オブジェクトのソース インターフェイスを指定します。 プロパティまたはメソッドでは、オブジェクトまたはイベントのソースをバリアントにメンバーを返すことを示します。|
-|[スレッド処理](threading-cpp.md)|COM オブジェクトのスレッド モデルを指定します。|
+|[threading](threading-cpp.md)|COM オブジェクトのスレッド モデルを指定します。|
 |[unique](unique-cpp.md)|一意のポインターを指定します。|
 |[uuid](uuid-cpp-attributes.md)|クラスまたはインターフェイスの一意の ID を指定します。|
 |[version](version-cpp.md)|クラスの複数のバージョン間で特定のバージョンを識別します。|

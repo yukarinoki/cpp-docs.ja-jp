@@ -1,11 +1,6 @@
 ---
-title: norm、normf、norml |Microsoft ドキュメント
-ms.custom: ''
+title: norm、normf、norml
 ms.date: 04/05/2018
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - norm
 - normf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/norm
 - complex/normf
 - complex/norml
-dev_langs:
-- C++
 helpviewer_keywords:
 - norm function
 - normf function
 - norml function
 ms.assetid: 9786ecfe-0019-4553-b378-0af6c691e15c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 272f43a7b92c069da8fc4eda64a678ff38efd6ab
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3c1803a54f0dfc27975af5bb0eeb7e5c042b2579
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401130"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50628112"
 ---
 # <a name="norm-normf-norml"></a>norm、normf、norml
 
@@ -72,19 +61,19 @@ long double norm( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-2 乗の大きさ*z*です。
+2 乗の絶対値*z*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**norm**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**long double**値。 C プログラムでは、 **norm**は常に、 **_Dcomplex**値を返す、**二重**値。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **norm**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**long double**値。 C プログラムで**norm**は常に、 **_Dcomplex**値を返します、**二重**値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**norm**、 **normf**、 **norml**|\<complex.h>|\<complex.h>|
 
-**_Fcomplex**、 **_Dcomplex**、および **_Lcomplex**型が実装されていないネイティブ C99 型に相当する Microsoft 固有の仕様**float _complex型**、**二重 _complex型**、および**long double _complex型**、それぞれします。  互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+**_Fcomplex**、 **_Dcomplex**、および **_Lcomplex**型が実装されていないネイティブ C99 型の対応する Microsoft 固有**float _Complex**、 **double _Complex**、および**long double _Complex**、それぞれします。  互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

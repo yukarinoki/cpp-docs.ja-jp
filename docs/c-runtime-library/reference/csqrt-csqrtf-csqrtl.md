@@ -1,11 +1,6 @@
 ---
-title: csqrt、csqrtf、csqrtl | Microsoft Docs
-ms.custom: ''
+title: csqrt、csqrtf、csqrtl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - csqrt
 - csqrtf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/csqrt
 - complex/csqrtf
 - complex/csqrtl
-dev_langs:
-- C++
 helpviewer_keywords:
 - csqrt function
 - csqrtf function
 - csqrtl function
 ms.assetid: b65f086b-0f55-4622-a7a3-4e79d9c9c05c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 143bb55180b3394f8ac32b36f7641503dd346b76
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 00fe12d4f9c136278e56ceaf3fa62443092d0ec4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32396311"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449882"
 ---
 # <a name="csqrt-csqrtf-csqrtl"></a>csqrt、csqrtf、csqrtl
 
@@ -79,20 +68,20 @@ _Lcomplex csqrtl(
 
 ## <a name="return-value"></a>戻り値
 
-平方根*z*です。 結果は右の半平面です。
+平方根*z*します。 結果は右の半平面です。
 
 |入力|SEH 例外|**_matherr**例外|
 |-----------|-------------------|--------------------------|
 |± QNAN、IND|none|_DOMAIN|
 |- ∞|none|_DOMAIN|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**csqrt**を受け取り、返します **_Fcomplex**と **_Lcomplex**値。 C プログラムでは、 **csqrt**常に受け取りを返す、 **_Dcomplex**値。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **csqrt**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**csqrt**は、 **_Dcomplex**値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**csqrt**、 **csqrtf**、 **csqrtl**|\<complex.h>|\<ccomplex>|
 

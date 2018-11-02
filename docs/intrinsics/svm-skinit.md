@@ -1,28 +1,18 @@
 ---
-title: _ _svm_skinit |Microsoft Docs
-ms.custom: ''
+title: __svm_skinit
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __svm_skinit
-dev_langs:
-- C++
 helpviewer_keywords:
 - SKINIT instruction
 - __svm_skinit intrinsic
 ms.assetid: 787ec781-4cf2-40a2-aa20-5192334b131a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1fa468fddd24bd622d839bb1882af99d393a3d99
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 630d4b9d93802038bd00b65495bb18455b0c61a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426134"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591218"
 ---
 # <a name="svmskinit"></a>__svm_skinit
 
@@ -46,13 +36,13 @@ void __svm_skinit(
 
 ## <a name="remarks"></a>Remarks
 
-`__svm_skinit`関数は、`SKINIT`マシン語命令。 この関数は、プロセッサおよび信頼されたプラットフォーム モジュール (TPM) を確認し、セキュリティのカーネル (SK) と呼ばれる信頼されているソフトウェアの負荷を使用したセキュリティ システムの一部です。 仮想マシン モニターは、セキュリティのカーネルの例を示します。 セキュリティ システムでプログラム コンポーネントが初期化プロセス中に読み込まれ、コンポーネントをマルチプロセッサ コンピューターの場合は、割り込み、デバイスへのアクセス、または別のプログラムによる改ざんから保護を確認します。
+`__svm_skinit` 関数は `SKINIT` マシン語命令と同じです。 この関数は、プロセッサおよび信頼されたプラットフォーム モジュール (TPM) を確認し、セキュリティのカーネル (SK) と呼ばれる信頼されているソフトウェアの負荷を使用したセキュリティ システムの一部です。 仮想マシン モニターは、セキュリティのカーネルの例を示します。 セキュリティ システムでプログラム コンポーネントが初期化プロセス中に読み込まれ、コンポーネントをマルチプロセッサ コンピューターの場合は、割り込み、デバイスへのアクセス、または別のプログラムによる改ざんから保護を確認します。
 
 `SLB`パラメーターと呼ばれるメモリ 64 K のブロックの物理アドレスを指定、*ローダーのブロックをセキュリティで保護された*(SLB)。 SLB には、コンピューターのオペレーティング環境を確立し、その後セキュリティ カーネルが読み込まれますが、セキュリティで保護されたローダーのというプログラムが含まれています。
 
 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"ドキュメント番号 24593、3.11、リビジョン、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

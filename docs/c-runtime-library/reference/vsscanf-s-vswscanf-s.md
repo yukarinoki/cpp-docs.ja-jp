@@ -1,10 +1,6 @@
 ---
-title: vsscanf_s、vswscanf_s | Microsoft Docs
-ms.custom: ''
+title: vsscanf_s、vswscanf_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - vswscanf_s
 - vsscanf_s
@@ -24,19 +20,13 @@ f1_keywords:
 - vsscanf_s
 - vswscanf_s
 - _vstscanf_s
-dev_langs:
-- C++
 ms.assetid: 7b732e68-c6f4-4579-8917-122f5a7876e1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: dbcf6d0a8b54cc08242d613b24c415ac1ef05fd3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 3106e3533f5bb65334f8a4f3d38f55d886faef4c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417104"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477169"
 ---
 # <a name="vsscanfs-vswscanfs"></a>vsscanf_s、vswscanf_s
 
@@ -72,24 +62,24 @@ int vswscanf_s(
 
 これらの関数は、正常に変換および代入されたフィールドの数を返します。読み込まれただけで代入されなかったフィールドは戻り値には含まれません。 戻り値が 0 の場合は、代入されたフィールドがなかったことを示します。 戻り値は**EOF**エラーの最初の変換の前に、文字列の末尾に達した場合またはします。
 
-場合*バッファー*または*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合*バッファー*または*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Vsscanf_s**関数からデータを読み取る*バッファー*で各引数によって指定されている位置に、 *arglist*引数リスト。 引数リストの引数に型指定子に対応する型を持つ変数へのポインターを指定する*形式*です。 安全なバージョンとは異なり**vsscanf**、型フィールド文字を使用する場合は、バッファー サイズ パラメーターは必要な**c**、 **C**、 **s**、**S**、またはで囲まれた文字列コントロール セット **:operator[]** です。 バッファー サイズ (文字単位) は、バッファー サイズが必要な各バッファーの後に追加パラメーターとして指定する必要があります。
+**Vsscanf_s**関数からデータを読み取る*バッファー*の各引数で指定されている場所に、 *arglist*引数リスト。 引数リストの引数に型指定子に対応する型を持つ変数へのポインターを指定する*形式*します。 安全なバージョンとは異なり**vsscanf**、型フィールド文字を使用する場合は、バッファー サイズのパラメーターは必要な**c**、 **C**、 **s**、**S**、またはで囲まれた文字列コントロール セット **:operator[]** します。 バッファー サイズ (文字単位) は、バッファー サイズが必要な各バッファーの後に追加パラメーターとして指定する必要があります。
 
 バッファー サイズには、終端 null も含まれます。 読み取られたトークンがバッファーに確実に収まるように、幅指定フィールドが使用される場合もあります。 幅指定フィールドが使用されない場合で、読み取られたトークンがバッファーに収まらない場合、そのバッファーには何も書き込まれません。
 
 詳細については、「[scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)」と「[scanf 関数の型フィールド文字](../../c-runtime-library/scanf-type-field-characters.md)」を参照してください。
 
 > [!NOTE]
-> サイズ パラメーターの型は**符号なし**ではなく、 **size_t**です。
+> 型のサイズのパラメーターが**符号なし**ではなく、 **size_t**します。
 
 *形式*引数コントロール入力の解釈のフィールドし、同じ形式し、機能、*形式*の引数、 **scanf_s**関数。 重なり合う文字列間でコピーした場合の動作は未定義です。
 
-**vswscanf_s**のワイド文字バージョンは、 **vsscanf_s**; 引数**vswscanf_s**ワイド文字列です。 **vsscanf_s**マルチバイトの 16 進数文字を処理しません。 **vswscanf_s** Unicode の全角 16 進数または「互換区域」の文字を処理しません。 それ以外の場合、 **vswscanf_s**と**vsscanf_s**動作は同じです。
+**vswscanf_s**のワイド文字バージョンは、 **vsscanf_s**; 引数**vswscanf_s**はワイド文字列です。 **vsscanf_s**マルチバイトの 16 進数の文字を処理しません。 **vswscanf_s** Unicode の全角 16 進数または「互換区域」の文字を処理しません。 それ以外の場合、 **vswscanf_s**と**vsscanf_s**動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -97,9 +87,9 @@ int vswscanf_s(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_vstscanf_s**|**vsscanf_s**|**vsscanf_s**|**vswscanf_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**vsscanf_s**|\<stdio.h>|
 |**vswscanf_s**|\<stdio.h> または \<wchar.h>|

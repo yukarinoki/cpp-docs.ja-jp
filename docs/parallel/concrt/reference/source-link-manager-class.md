@@ -1,10 +1,6 @@
 ---
-title: source_link_manager クラス |Microsoft Docs
-ms.custom: ''
+title: source_link_manager クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - source_link_manager
 - AGENTS/concurrency::source_link_manager
@@ -18,21 +14,15 @@ f1_keywords:
 - AGENTS/concurrency::source_link_manager::release
 - AGENTS/concurrency::source_link_manager::remove
 - AGENTS/concurrency::source_link_manager::set_bound
-dev_langs:
-- C++
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 94c3e3c43f573cde22c9818752544eb18bf32191
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49162270"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50545991"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager クラス
 
@@ -90,7 +80,7 @@ class source_link_manager;
 
 `source_link_manager`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** agents.h
 

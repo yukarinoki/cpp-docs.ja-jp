@@ -1,10 +1,6 @@
 ---
-title: wctomb_s、_wctomb_s_l | Microsoft Docs
-ms.custom: ''
+title: wctomb_s、_wctomb_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wctomb_s_l
 - wctomb_s
@@ -24,8 +20,6 @@ apitype: DLLExport
 f1_keywords:
 - wctomb_s
 - _wctomb_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - wctomb_s function
 - wctomb_s_l function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - characters, converting
 - string conversion, multibyte character strings
 ms.assetid: 7e94a888-deed-4dbd-b5e9-d4a0455538b8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5bdc05f903c1313d4844be8d5fc4fa619505670
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 08e8cb0ddaac342682776600fd0fd8b3d26b8953
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43195120"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558292"
 ---
 # <a name="wctombs-wctombsl"></a>wctomb_s、_wctomb_s_l
 
@@ -107,7 +97,7 @@ errno_t _wctomb_s_l(
 
 **wctomb_s**ロケールに依存する情報の現在のロケールを使用 **_wctomb_s_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

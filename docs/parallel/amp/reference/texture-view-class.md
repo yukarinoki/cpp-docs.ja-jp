@@ -1,10 +1,6 @@
 ---
-title: texture_view クラス |Microsoft Docs
-ms.custom: ''
+title: texture_view クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - texture_view
 - AMP_GRAPHICS/texture_view
@@ -17,19 +13,13 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::sample
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::texture_view::value_type
-dev_langs:
-- C++
 ms.assetid: 6ec2e289-1626-4727-9592-07981cf1d27d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e8a87c303d4527f89a7d7f59b69b3cc8572e0e7b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e7099c247a68823fbe5467f47c6afe1dc5a33abc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387407"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50544457"
 ---
 # <a name="textureview-class"></a>texture_view クラス
 
@@ -91,7 +81,7 @@ class texture_view<const value_type, _Rank>
 
 |名前|説明|
 |----------|-----------------|
-|[operator()](#operator_call)|オーバーロードされます。 インデックスで要素の値を取得します。|
+|[演算子 ()](#operator_call)|オーバーロードされます。 インデックスで要素の値を取得します。|
 |[operator[]](#operator_at)|オーバーロードされます。 インデックスで要素の値を取得します。|
 |[operator=](#operator_eq)|オーバーロードされます。 代入演算子。|
 
@@ -107,7 +97,7 @@ class texture_view<const value_type, _Rank>
 
 `texture_view`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp_graphics.h
 

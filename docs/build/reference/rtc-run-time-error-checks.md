@@ -1,18 +1,12 @@
 ---
-title: -RTC (ランタイム エラー チェック) |マイクロソフトのドキュメント
-ms.custom: ''
+title: /RTC (ランタイム エラー チェック)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /rtc
 - VC.Project.VCCLCompilerTool.SmallerTypeCheck
 - VC.Project.VCCLCompilerTool.UninitializedVariableCheck
 - VC.Project.VCCLCompilerTool.StackFrameCheck
 - VC.Project.VCCLCompilerTool.BasicRuntimeChecks
-dev_langs:
-- C++
 helpviewer_keywords:
 - /RTCs compiler option [C++]
 - -RTC1 compiler option [C++]
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 29fd7e3ec71b38aec187f60548ce7cededd01c2b
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45709411"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50655002"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (ランタイム エラー チェック)
 
@@ -113,7 +103,7 @@ c = a;  // No run-time error with /RTCu
 
 いずれかを使用すると、_ _msvc_runtime_checks プリプロセッサ ディレクティブが定義される **/RTC**オプションまたは[/GZ](../../build/reference/gz-enable-stack-frame-run-time-error-checking.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

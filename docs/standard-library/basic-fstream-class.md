@@ -1,10 +1,6 @@
 ---
-title: basic_fstream クラス |Microsoft Docs
-ms.custom: ''
+title: basic_fstream クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - fstream/std::basic_fstream
 - fstream/std::basic_fstream::close
@@ -12,8 +8,6 @@ f1_keywords:
 - fstream/std::basic_fstream::open
 - fstream/std::basic_fstream::rdbuf
 - fstream/std::basic_fstream::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::basic_fstream [C++]
 - std::basic_fstream [C++], close
@@ -22,16 +16,12 @@ helpviewer_keywords:
 - std::basic_fstream [C++], rdbuf
 - std::basic_fstream [C++], swap
 ms.assetid: 8473817e-42a4-430b-82b8-b476c86bcf8a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2b4712a76be411d237ee2abc97ddbdd4b67e57f2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 894ac0bf7703bf68c9125d11023dbc32cfbb5941
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108359"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50486763"
 ---
 # <a name="basicfstream-class"></a>basic_fstream クラス
 
@@ -109,7 +99,7 @@ Writing to a basic_fstream object...
 |[rdbuf](#rdbuf)|pointer 型の格納されたストリーム バッファーのアドレスを [basic_filebuf](../standard-library/basic-filebuf-class.md)< `Elem`, `Tr`> に返します。|
 |[swap](#swap)|このオブジェクトの内容を別の `basic_fstream` オブジェクトの内容と交換します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<fstream>
 

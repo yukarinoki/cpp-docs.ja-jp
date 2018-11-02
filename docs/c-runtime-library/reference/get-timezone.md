@@ -1,10 +1,6 @@
 ---
-title: _get_timezone | Microsoft Docs
-ms.custom: ''
+title: _get_timezone
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_timezone
 apilocation:
@@ -23,23 +19,17 @@ apitype: DLLExport
 f1_keywords:
 - _get_timezone
 - get_timezone
-dev_langs:
-- C++
 helpviewer_keywords:
 - time zones
 - get_timezone function
 - _get_timezone function
 ms.assetid: 30ab0838-0ae9-4a2f-bfe6-a49ee443b21e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 111cbff00d1f6119fbd806cc5fc3d14c28a7d7c1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 26cf8114ab766bdb394d2db9ad5842622a447bd1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398277"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50613916"
 ---
 # <a name="gettimezone"></a>_get_timezone
 
@@ -60,17 +50,17 @@ UTC と現地時刻の秒単位の差。
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合や、0 **errno**値の場合は、エラーが発生します。
+成功した場合や、0 **errno**エラーが発生した場合の値します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Get_timezone**関数は、整数として UTC と現地時刻の秒単位で差を取得します。 既定値は、太平洋標準時 (UTC から 8 時間遅れ) を表す 28,800 秒です。
+**_Get_timezone**関数は、UTC と現地時刻の間で、整数として秒単位で差を取得します。 既定値は、太平洋標準時 (UTC から 8 時間遅れ) を表す 28,800 秒です。
 
-場合*秒*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**し、返します**EINVAL**です。
+場合*秒*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**返します**EINVAL**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_get_timezone**|\<time.h>|
 

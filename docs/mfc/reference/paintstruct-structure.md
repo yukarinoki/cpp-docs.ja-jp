@@ -1,27 +1,17 @@
 ---
-title: PAINTSTRUCT 構造体 |Microsoft Docs
-ms.custom: ''
+title: PAINTSTRUCT 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - PAINTSTRUCT
-dev_langs:
-- C++
 helpviewer_keywords:
 - PAINTSTRUCT structure [MFC]
 ms.assetid: 81ce4993-3e89-43b2-8c98-7946f1314d24
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 531dbc3c0e9b609aeaf5d9179491aa0fb3990363
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b5179a1bcba4a654ff235885ec2d0516e801fbb7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382922"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677124"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT 構造体
 
@@ -60,7 +50,7 @@ typedef struct tagPAINTSTRUCT {
 *rgbReserved [16]*<br/>
 予約済みのメンバー。 Windows によって内部的に使用されるメモリの予約済みのブロック。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** winuser.h
 

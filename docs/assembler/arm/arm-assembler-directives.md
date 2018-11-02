@@ -1,23 +1,13 @@
 ---
-title: ARM アセンブラー ディレクティブ |Microsoft Docs
-ms.custom: ''
+title: ARM アセンブラー ディレクティブ
 ms.date: 08/30/2018
-ms.technology:
-- cpp-masm
-ms.topic: reference
-dev_langs:
-- C++
 ms.assetid: 9cfa8896-ec10-4e77-855a-3135c40d7d2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5c37e010caa6c7cfb44ddaf2f7dd1e28bbb5c291
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9124f893b3334e0893073332c9d5f5a1388373d9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45717705"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592453"
 ---
 # <a name="arm-assembler-directives"></a>ARM アセンブラー ディレクティブ
 
@@ -49,7 +39,7 @@ ms.locfileid: "45717705"
 
    サポートされていません。
 
-- `DN`、`QN`、`SN`
+- `DN`、 `QN`、 `SN`
 
    型またはレジスタ エイリアスのレーンの仕様がサポートされていません。
 
@@ -67,7 +57,7 @@ ms.locfileid: "45717705"
 
    > **エクスポート**|**GLOBAL** <em>sym</em>{**[**<em>型</em>**]**}
 
-   *sym*はエクスポートする記号です。  [*型*]、指定した場合いずれかになります`[DATA]`シンボル データをポイントすることを示すまたは`[FUNC]`をシンボルがコードを指していることを示します。 `GLOBAL` シノニムです`EXPORT`します。
+   *sym*はエクスポートする記号です。  [*型*]、指定した場合いずれかになります`[DATA]`シンボル データをポイントすることを示すまたは`[FUNC]`をシンボルがコードを指していることを示します。 `GLOBAL` は `EXPORT`のシノニムです。
 
 - EXPORTAS
 
@@ -109,7 +99,7 @@ ms.locfileid: "45717705"
 
    サポートされていません。
 
-- `OPT`、`TTL`、`SUBT`
+- `OPT`、 `TTL`、 `SUBT`
 
    Microsoft ARM アセンブラーが番組表を生成しないため、サポートされていません。
 

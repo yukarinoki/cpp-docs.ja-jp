@@ -1,28 +1,18 @@
 ---
-title: _mm_cvtss_si64x |Microsoft Docs
-ms.custom: ''
+title: _mm_cvtss_si64x
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _mm_cvtss_si64x
-dev_langs:
-- C++
 helpviewer_keywords:
 - cvtss2si intrinsic
 - _mm_cvtss_si64x intrinsic
 ms.assetid: c279aff2-ee29-4271-8829-3ec691bf7718
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 928cd812df87fef20a6ba551bd596c4214bfdd9f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 259e3933c831ba685fa9d00d0f6471975a31f2cf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417014"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50606844"
 ---
 # <a name="mmcvtsssi64x"></a>_mm_cvtss_si64x
 
@@ -33,8 +23,8 @@ ms.locfileid: "46417014"
 ## <a name="syntax"></a>構文
 
 ```
-__int64 _mm_cvtss_si64x( 
-   __m128 value 
+__int64 _mm_cvtss_si64x( 
+   __m128 value 
 );
 ```
 
@@ -47,7 +37,7 @@ __int64 _mm_cvtss_si64x(
 
 64 ビット整数の場合、最初の浮動小数点値の整数値への変換の結果。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

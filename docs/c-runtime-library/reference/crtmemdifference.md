@@ -1,10 +1,6 @@
 ---
-title: _CrtMemDifference | Microsoft Docs
-ms.custom: ''
+title: _CrtMemDifference
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtMemDifference
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - _CrtMemDifference
 - CrtMemDifference
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtMemDifference function
 - _CrtMemDifference function
 ms.assetid: 0f327278-b551-482f-958b-76941f796ba4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 66bb770c2f24c0312277d23c14beef09e2265f88
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f2c6306bf604737d0ace142674b21845a08e2dee
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398053"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429654"
 ---
 # <a name="crtmemdifference"></a>_CrtMemDifference
 
@@ -56,33 +46,33 @@ int _CrtMemDifference(
 ### <a name="parameters"></a>パラメーター
 
 *stateDiff*<br/>
-ポインター、 **_CrtMemState**構造 (返された) 2 つのメモリ状態の相違点を格納するために使用します。
+ポインターを **_CrtMemState** (返される) の 2 つのメモリ状態の違いを格納するために使用する構造体。
 
 *oldState*<br/>
-以前のメモリ状態へのポインター (**_CrtMemState**構造体)。
+以前のメモリ状態へのポインター (**_CrtMemState**構造)。
 
 *newState*<br/>
-以降のメモリ状態へのポインター (**_CrtMemState**構造体)。
+以降のメモリ状態へのポインター (**_CrtMemState**構造)。
 
 ## <a name="return-value"></a>戻り値
 
 メモリの状態が大きく異なる場合 **_CrtMemDifference** TRUE を返します。 それ以外の場合、関数は FALSE を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_CrtMemDifference**関数の比較*oldState*と*newState*し、その違いを格納*stateDiff*、なることができますメモリ リークおよびその他のメモリの問題を検出するために、アプリケーションによって使用されます。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていないへの呼び出し **_CrtMemDifference**プリプロセス時に削除されます。
+**_CrtMemDifference**関数の比較*oldState*と*newState*し、その違いを*stateDiff*、しすることができますメモリ リークおよびその他のメモリの問題を検出するために、アプリケーションで使用されます。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない、呼び出し **_CrtMemDifference**プリプロセス時に削除されます。
 
-*newState*と*oldState*ことはできません有効なポインターを、 **_CrtMemState**によってに入力された、Crtdbg.h で定義されている構造[_CrtMemCheckpoint](crtmemcheckpoint.md)。呼び出す前に **_CrtMemDifference**です。 *stateDiff*の割り当て済みインスタンスへのポインターにする必要があります、 **_CrtMemState**構造体。 場合*stateDiff*、 *newState*、または*oldState*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)に設定されている**EINVAL**関数は、FALSE を返します。
+*newState*と*oldState*それぞれ有効なポインターである必要があります、 **_CrtMemState**での入力が完了するには、Crtdbg.h で定義されている構造[_CrtMemCheckpoint](crtmemcheckpoint.md)呼び出す前に **_CrtMemDifference**します。 *stateDiff*の以前に割り当てられたインスタンスへのポインターである必要があります、 **_CrtMemState**構造体。 場合*stateDiff*、 *newState*、または*oldState*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)に設定されている**EINVAL**関数は FALSE を返します。
 
-**_CrtMemDifference**を比較して、 **_CrtMemState**フィールド値内のブロックの*oldState*の*newState* で結果を格納および*stateDiff*です。 割り当てられているブロックの型の数または各型に割り当てられているブロックの合計数が 2 つのメモリ状態で異なる場合、この 2 つの状態は、大きく異なると言えます。 一度に割り当てられた 2 つの状態と割り当ての合計の差に 2 つの状態が保存されるも量の最大値の差*stateDiff*です。
+**_CrtMemDifference**比較、 **_CrtMemState**フィールド値内のブロックの*oldState*に*newState* に結果を格納および*stateDiff*します。 割り当てられているブロックの型の数または各型に割り当てられているブロックの合計数が 2 つのメモリ状態で異なる場合、この 2 つの状態は、大きく異なると言えます。 一度に割り当てられた 2 つの状態と割り当ての合計の差の 2 つの状態が格納されたもの量の最大値の差*stateDiff*します。
 
-既定では、内部 C ランタイム ブロック (**_CRT_BLOCK**) メモリ状態操作には含まれません。 [_CrtSetDbgFlag](crtsetdbgflag.md)を有効にする関数を使用することができます、 **_CRTDBG_CHECK_CRT_DF**ビットの **_crtDbgFlag**にこれらのブロックをリーク検出やその他のメモリ状態に含める操作です。 解放されたメモリ ブロック (**_FREE_BLOCK**) が発生しない **_CrtMemDifference**に TRUE を返します。
+既定では、内部 C ランタイム ブロック (**_CRT_BLOCK**) メモリ状態操作には含まれません。 [_CrtSetDbgFlag](crtsetdbgflag.md)を有効にする関数を使用できます、 **_CRTDBG_CHECK_CRT_DF**のビット **_crtDbgFlag**リークの検出とその他のメモリ状態にこれらのブロックを含める操作です。 解放されたメモリ ブロック (**_FREE_BLOCK**) が発生しない **_CrtMemDifference**に TRUE を返します。
 
-ヒープ状態関数の詳細については、 **_CrtMemState**構造体は、「[ヒープ状態をレポートする関数](/visualstudio/debugger/crt-debug-heap-details)です。 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
+ヒープ状態関数の詳細については、 **_CrtMemState**構造体は、「 [Heap State Reporting Functions](/visualstudio/debugger/crt-debug-heap-details)します。 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_CrtMemDifference**|\<crtdbg.h>|\<errno.h>|
 

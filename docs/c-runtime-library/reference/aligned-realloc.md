@@ -1,10 +1,6 @@
 ---
-title: _aligned_realloc | Microsoft Docs
-ms.custom: ''
+title: _aligned_realloc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_realloc
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - _aligned_realloc
 - aligned_realloc
-dev_langs:
-- C++
 helpviewer_keywords:
 - aligned_realloc function
 - _aligned_realloc function
 ms.assetid: 80ce96e8-6087-416f-88aa-4dbb8cb1d218
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b70e30b779dc9ede7f8477f6eab4787656a5619f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 456d57eeebfd47a2133b8a5813b11aaf77a300a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393057"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607378"
 ---
 # <a name="alignedrealloc"></a>_aligned_realloc
 
@@ -56,7 +46,7 @@ void * _aligned_realloc(
 
 ### <a name="parameters"></a>パラメーター
 
-*_expand*<br/>
+*memblock*<br/>
 現在のメモリ ブロック ポインター。
 
 *size*<br/>
@@ -67,19 +57,19 @@ void * _aligned_realloc(
 
 ## <a name="return-value"></a>戻り値
 
-**_aligned_realloc**再割り当てされた (移動された可能性のある) メモリ ブロックへの void ポインターを返します。 戻り値は**NULL**サイズが 0 と、バッファー引数がないかどうかは**NULL**、特定のサイズにブロックを拡張するための十分な使用可能なメモリがない場合またはします。 最初の場合には、元のブロックは解放されます。 2 番目の場合には、元のブロックは変更されません。 戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 void 以外の型へのポインターを取得するには、戻り値の型キャストを使用します。
+**_aligned_realloc**再割り当てされた (および移動) のメモリ ブロックに void ポインターを返します。 戻り値は**NULL** 、サイズが 0 のかどうか、およびバッファー引数ではありません**NULL**、または指定されたサイズにブロックを拡張するための十分な使用可能なメモリがない場合。 最初の場合には、元のブロックは解放されます。 2 番目の場合には、元のブロックは変更されません。 戻り値は、どの型のオブジェクトを格納する場合でも適切なアラインメントが保証されるストレージ領域を指します。 void 以外の型へのポインターを取得するには、戻り値の型キャストを使用します。
 
 メモリを再割り当てしてブロックのアラインメントを変更すると、エラーになります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_aligned_realloc**に基づく**malloc**です。 使用しての詳細については **_aligned_offset_malloc**を参照してください[malloc](malloc.md)です。
+**_aligned_realloc**に基づいて**malloc**します。 使用しての詳細については **_aligned_offset_malloc**を参照してください[malloc](malloc.md)します。
 
-この関数は、設定**errno**に**ENOMEM**メモリの割り当てが失敗するか、要求されたサイズより大きい場合 **_HEAP_MAXREQ**です。 詳細については**errno**を参照してください[errno、_doserrno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)です。 また、 **_aligned_realloc**パラメーターを検証します。 場合*配置*累乗 2 のこの関数によって呼び出されます、無効なパラメーター ハンドラーを」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行は継続許可されたかどうか、この関数を返します**NULL**設定と**errno**に**EINVAL**です。
+この関数は、設定**errno**に**ENOMEM** 、メモリの割り当てに失敗した場合、または要求されたサイズより大きい場合 **_HEAP_MAXREQ**します。 詳細については**errno**を参照してください[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)します。 また、 **_aligned_realloc**パラメーターを検証します。 場合*配置*が累乗でない」の説明に従って 2 に、この関数が、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、この関数を返します**NULL**設定と**errno**に**EINVAL**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_aligned_realloc**|\<malloc.h>|
 

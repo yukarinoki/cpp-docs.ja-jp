@@ -1,10 +1,6 @@
 ---
-title: _strninc、_wcsninc、_mbsninc、_mbsninc_l | Microsoft Docs
-ms.custom: ''
+title: _strninc、_wcsninc、_mbsninc、_mbsninc_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsninc
 - _mbsninc_l
@@ -34,8 +30,6 @@ f1_keywords:
 - _ftcsninc
 - _wcsninc
 - _mbsninc
-dev_langs:
-- C++
 helpviewer_keywords:
 - _mbsninc_l function
 - mbsninc function
@@ -48,20 +42,16 @@ helpviewer_keywords:
 - mbsninc_l function
 - _tcsninc function
 ms.assetid: 6caace64-f9e4-48c0-afa8-ea51824ad723
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 21218c411ad8bab9e3e4bd73eea266d0889f6c7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: ef30a9f57f0b8c84199befb00f3edc13342a1eaf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32411333"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50643184"
 ---
 # <a name="strninc-wcsninc-mbsninc-mbsnincl"></a>_strninc、_wcsninc、_mbsninc、_mbsninc_l
 
-文字列ポインターを進める**n**文字です。
+文字列ポインターを進めます**n**文字。
 
 > [!IMPORTANT]
 > **_mbsninc**と **_mbsninc_l** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -101,11 +91,11 @@ unsigned char *_mbsninc(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンへのポインターを返します*str*後*str*によってインクリメント*カウント*文字または**NULL**場合、指定されました。ポインターが**NULL**です。 場合*カウント*の文字数以上*str*結果は未定義です。
+これらの各ルーチンへのポインターを返します*str*後*str*によってがインクリメントされていた*カウント*文字または**NULL**場合、指定されました。ポインターが**NULL**します。 場合*カウント*の文字数以上*str*結果は未定義です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbsninc**関数のインクリメント*str*によって*カウント*マルチバイト文字。 **_mbsninc**に従ってマルチバイト文字シーケンスを認識、[マルチバイト コード ページ](../../c-runtime-library/code-pages.md)現在使用中です。
+**_Mbsninc**関数単位*str*によって*カウント*マルチバイト文字。 **_mbsninc**に従ってマルチバイト文字シーケンスを認識、[マルチバイト コード ページ](../../c-runtime-library/code-pages.md)現在使用されています。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -113,13 +103,13 @@ unsigned char *_mbsninc(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsninc**|**_strninc**|**_mbsninc**|**_wcsninc**|
 
-**_strninc**と **_wcsninc**は 1 バイト文字の文字列とワイド文字列バージョンの **_mbsninc**です。 **_wcsninc**と **_strninc**この割り当てにのみ提供され、それ以外の場合は使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
+**_strninc**と **_wcsninc**は 1 バイト文字の文字列とワイド文字の文字列バージョンの **_mbsninc**します。 **_wcsninc**と **_strninc**このマッピングにのみ提供され、それ以外の場合は使用できません。 詳細については、「[Using Generic-Text Mappings](../../c-runtime-library/using-generic-text-mappings.md)」(汎用テキスト マップの使用) および「[Generic-Text Mappings](../../c-runtime-library/generic-text-mappings.md)」(汎用テキスト マップ) をご覧ください。
 
-**_mbsninc_l**は、代わりに渡されたロケール パラメーターを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_mbsninc_l**代わりに渡されたロケール パラメーターを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsninc**|\<mbstring.h>|
 |**_mbsninc_l**|\<mbstring.h>|

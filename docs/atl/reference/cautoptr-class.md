@@ -1,10 +1,6 @@
 ---
-title: CAutoPtr クラス |Microsoft Docs
-ms.custom: ''
+title: CAutoPtr クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAutoPtr
 - ATLBASE/ATL::CAutoPtr
@@ -13,21 +9,15 @@ f1_keywords:
 - ATLBASE/ATL::CAutoPtr::Detach
 - ATLBASE/ATL::CAutoPtr::Free
 - ATLBASE/ATL::CAutoPtr::m_p
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAutoPtr class
 ms.assetid: 08988d53-4fb0-4711-bdfc-8ac29c63f410
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c3066f4586d34c4742cc03511d7f8739b642ccbd
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b328d58116d3b26645a2b3a3981c11fa705878ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46066246"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615255"
 ---
 # <a name="cautoptr-class"></a>CAutoPtr クラス
 
@@ -91,7 +81,7 @@ class CAutoPtr
 
 参照してください[CAutoPtrArray](../../atl/reference/cautoptrarray-class.md)と[CAutoPtrList](../../atl/reference/cautoptrlist-class.md)配列またはスマート ポインターのリストが必要な場合。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlbase.h
 

@@ -1,16 +1,10 @@
 ---
-title: -P (ファイルの前処理) |Microsoft Docs
-ms.custom: ''
+title: /P (プリプロセス出力のファイルへの書き込み)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GeneratePreprocessedFile
 - /p
 - VC.Project.VCCLWCECompilerTool.GeneratePreprocessedFile
-dev_langs:
-- C++
 helpviewer_keywords:
 - /P compiler option [C++]
 - -P compiler option [C++]
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - output files, preprocessor
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4cbec53526fe90d1b4644b5b9fdd667d0fffcbe8
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9b3d84d94ed75acd68011b895afbc4f190019673
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45714507"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50622241"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (プリプロセス出力のファイルへの書き込み)
 
@@ -47,7 +37,7 @@ C および C++ ソース ファイルを前処理し、ファイルを前処理
 
 **/P**オプションはコンパイルを中止します。 使用する場合でも、.obj ファイルは生成されません[/Fo (オブジェクト ファイル名)](../../build/reference/fo-object-file-name.md)します。 Compilation の前処理済みファイルを再送信する必要があります。 **/P**から出力ファイルも生成されません、 **/FA**、 **/Fa**、および **/Fm**オプション。 詳細については、次を参照してください。 [/FA、/Fa (リスティング ファイル)](../../build/reference/fa-fa-listing-file.md)と[/Fm (マップ ファイルの名前)](../../build/reference/fm-name-mapfile.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

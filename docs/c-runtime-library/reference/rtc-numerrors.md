@@ -1,10 +1,6 @@
 ---
-title: _RTC_NumErrors | Microsoft Docs
-ms.custom: ''
+title: _RTC_NumErrors
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _RTC_NumErrors
 apilocation:
@@ -22,23 +18,17 @@ apitype: DLLExport
 f1_keywords:
 - _RTC_NumErrors
 - RTC_NumErrors
-dev_langs:
-- C++
 helpviewer_keywords:
 - run-time errors
 - _RTC_NumErrors function
 - RTC_NumErrors function
 ms.assetid: 7e82adae-38e2-4f8b-bc0b-37bda8109fd1
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: af223e1e2d183f5357cf1d1bac96aabb042a99da
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e13f85f2140473d6e971d27abb6012effd36c37c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405914"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477195"
 ---
 # <a name="rtcnumerrors"></a>_RTC_NumErrors
 
@@ -56,9 +46,9 @@ int _RTC_NumErrors( void );
 
 Visual C++ の実行時エラー チェックで検出できるエラーの合計数を表す値を持つ整数。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_RTC_NumErrors**|\<rtcapi.h>|
 

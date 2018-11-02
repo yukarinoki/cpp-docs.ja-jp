@@ -1,10 +1,6 @@
 ---
-title: isspace、iswspace、_isspace_l、_iswspace_l | Microsoft Docs
-ms.custom: ''
+title: isspace、iswspace、_isspace_l、_iswspace_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - iswspace
 - _isspace_l
@@ -27,8 +23,6 @@ f1_keywords:
 - iswspace
 - _istspace
 - isspace
-dev_langs:
-- C++
 helpviewer_keywords:
 - iswspace function
 - isspace function
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - _istspace function
 - istspace function
 ms.assetid: b851e0c0-36bb-4dac-a1a3-533540939035
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 404fee8d74cec18c277f6c076a7cc41065a8b242
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cd93b196c23be5e91852e8c02d75055c1051b912
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402248"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50590454"
 ---
 # <a name="isspace-iswspace-isspacel-iswspacel"></a>isspace、iswspace、_isspace_l、_iswspace_l
 
@@ -83,11 +73,11 @@ int _iswspace_l(
 
 ## <a name="return-value"></a>戻り値
 
-これらのルーチンを返す場合は 0 以外の各*c*空白文字の特定の表現です。 **isspace**場合は 0 以外の値を返します*c*空白文字 (0x09-0x0D または 0x20)。 テスト条件の結果、 **isspace**関数によって異なります、 **LC_CTYPE** 、ロケールのカテゴリの設定; 参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 これらの関数がないバージョン、 **_l**サフィックスを使用してすべてのロケールに依存する動作に現在のロケール以外の付いているバージョン、 **_l**使用する点を除いて、サフィックスが同一で、代わりに渡されるロケールです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらのルーチンを返します。 0 以外の場合の各*c*空白文字の特定の表現です。 **isspace**場合は、0 以外の値を返します*c*は空白文字 (0x09-0 または 0x20)。 テスト条件の結果、 **isspace**関数によって異なります、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 これらの関数バージョンがない、 **_l** 、ロケールに依存する動作の現在のロケールのサフィックス使用; が付いているバージョン、 **_l**を使用する点を除いて、サフィックスと同じですが、代わりに渡されるロケールです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-**iswspace**場合は 0 以外の値を返します*c*は標準の空白文字に対応するワイド文字。
+**iswspace**場合は、0 以外の値を返します*c*標準の空白文字に対応するワイド文字します。
 
-動作**isspace**と **_isspace_l**場合に定義されていない*c* EOF ではありませんか 0 ~ 0 xff、包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、これらの値、関数の発生いない 1 つです。
+動作**isspace**と **_isspace_l**場合は定義されません*c* EOF がないか 0 ~ 0 xff の包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、発生のこれらの値のいずれかにありません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -95,9 +85,9 @@ int _iswspace_l(
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_** **istspace**|**isspace**|[_ismbcspace](ismbcgraph-functions.md)|**iswspace**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isspace**|\<ctype.h>|
 |**iswspace**|\<ctype.h> または \<wchar.h>|

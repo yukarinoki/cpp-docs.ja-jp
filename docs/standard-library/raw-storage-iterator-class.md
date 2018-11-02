@@ -1,31 +1,21 @@
 ---
-title: raw_storage_iterator クラス | Microsoft Docs
-ms.custom: ''
+title: raw_storage_iterator クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - memory/std::raw_storage_iterator
 - memory/std::raw_storage_iterator::element_type
 - memory/std::raw_storage_iterator::iter_type
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::raw_storage_iterator [C++]
 - std::raw_storage_iterator [C++], element_type
 - std::raw_storage_iterator [C++], iter_type
 ms.assetid: 6f033f15-f48e-452a-a326-647ea2cf346f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 848612f59c2d5cc24289b6d8c56b0c9eeaebc961
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8e13d03e577df4c64e85704993cfc0ff81af5f8f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45712791"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50503013"
 ---
 # <a name="rawstorageiterator-class"></a>raw_storage_iterator クラス
 
@@ -60,7 +50,7 @@ class raw_storage_iterator
 |-|-|
 |[raw_storage_iterator](#raw_storage_iterator)|指定した基になる出力反復子を使用して、生のストレージの反復子を構築します。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -75,7 +65,7 @@ class raw_storage_iterator
 |[operator=](#op_eq)|生のストレージ反復子式を実装するために使用される代入演算子は、 \* `i`  =  `x`メモリに格納するためです。|
 |[operator++](#op_add_add)|生のストレージ反復子の前置インクリメント演算子と後置インクリメント演算子。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<memory>
 

@@ -1,10 +1,6 @@
 ---
-title: _countof マクロ | Microsoft Docs
-ms.custom: ''
+title: _countof マクロ
 ms.date: 03/22/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -20,22 +16,16 @@ apitype: DLLExport
 f1_keywords:
 - _countof
 - countof
-dev_langs:
-- C++
 helpviewer_keywords:
 - countof macro
 - _countof macro
 ms.assetid: 86198767-f7e5-4beb-898d-3cbbf60350a3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f30df64b045e2af6181d343a4eafb962d22eaa05
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 60b4350d6cf14a545de67de0bdaee70ee2099006
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394744"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536137"
 ---
 # <a name="countof-macro"></a>_countof マクロ
 
@@ -54,15 +44,15 @@ ms.locfileid: "32394744"
 
 ## <a name="return-value"></a>戻り値
 
-表される、配列内の要素の数、 **size_t**です。
+表される、配列内の要素の数、 **size_t**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_countof**関数のようなプリプロセッサ マクロとして実装されます。 C++ バージョンには、ポインターが静的に宣言された配列の代わりに渡された場合は、コンパイル時に検出するために余分なテンプレートの機構です。
+**_countof**関数のようなプリプロセッサ マクロとして実装されます。 C++ のバージョンには、静的に宣言された配列の代わりに、ポインターが渡された場合は、コンパイル時に検出するために余分なテンプレート メカニズムがあります。
 
-いることを確認*配列*が実際には、配列、ポインターではありません。 C では、 **_countof**場合は、誤った結果を生成*配列*のポインターです。 C++ では、 **_countof**場合のコンパイルに失敗した*配列*のポインターです。  関数にパラメーターとして渡される配列*ポインターに減衰*、関数内で使用できないことを意味する **_countof**配列の範囲を確認します。
+いることを確認*配列*は実際には配列、ポインターではなくです。 C では、 **_countof**場合に、誤った結果を生成*配列*のポインターです。 C++ では、 **_countof**場合のコンパイルに失敗した*配列*のポインターです。  関数にパラメーターとして渡される配列*ポインターに減衰*、つまり、関数内で使用することはできません **_countof**配列の範囲を確認します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |マクロ|必須ヘッダー|
 |-----------|---------------------|

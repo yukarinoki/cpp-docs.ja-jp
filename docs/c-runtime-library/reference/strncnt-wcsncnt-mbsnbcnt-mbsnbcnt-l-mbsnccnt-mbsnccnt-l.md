@@ -1,10 +1,6 @@
 ---
-title: _strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l | Microsoft Docs
-ms.custom: ''
+title: _strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbsnbcnt_l
 - _mbsnccnt
@@ -38,8 +34,6 @@ f1_keywords:
 - mbsnccnt
 - _strncnt
 - _wcsncnt
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strncnt function
 - _mbsnbcnt function
@@ -56,16 +50,12 @@ helpviewer_keywords:
 - _mbsnccnt function
 - _wcsncnt function
 ms.assetid: 2a022e9e-a307-4acb-a66b-e56e5357f848
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 066431205ecd7aa2b193350ccda4a83decac0458
-ms.sourcegitcommit: 6e3cf8df676d59119ce88bf5321d063cf479108c
+ms.openlocfilehash: 6322f9511f0813eeaeb49383f49c73e361048cd9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2018
-ms.locfileid: "34451577"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50573434"
 ---
 # <a name="strncnt-wcsncnt-mbsnbcnt-mbsnbcntl-mbsnccnt-mbsnccntl"></a>_strncnt、_wcsncnt、_mbsnbcnt、_mbsnbcnt_l、_mbsnccnt、_mbsnccnt_l
 
@@ -112,30 +102,30 @@ size_t _mbsnccnt_l(
 調査する文字列。
 
 *count*<br/>
-文字数またはバイト数で調査する*str*です。
+数の文字またはバイトで調査する*str*します。
 
 *locale*<br/>
 使用するロケール。
 
 ## <a name="return-value"></a>戻り値
 
-**_mbsnbcnt**と **_mbsnbcnt_l**見つかったバイト数を返す最初の*カウント*のマルチバイト文字の*str*です。 **_mbsnccnt**と **_mbsnccnt_l**見つかった文字数を返す最初の*カウント*バイトの*str*です。 調査する前に null 文字が見つかったかどうか*str*がバイトまたは null 文字の前に見つかった文字の数を返す、完了します。 場合*str*よりも少ない数で構成されています*カウント*文字列内の文字またはバイト数文字またはバイトを返します。 場合*カウント*が小さい 0、0 を返します。 以前のバージョンでは、これらの関数は、型の戻り値を必要がある。 **int**なく**size_t**です。
+**_mbsnbcnt**と **_mbsnbcnt_l**見つかったバイト数を返す最初の*カウント*のマルチバイト文字の*str*します。 **_mbsnccnt**と **_mbsnccnt_l**見つかった文字数を返す最初の*カウント*のバイト数の*str*します。 Null 文字が見つかったかどうかは、調査する前に*str*が完了すると、バイトの null 文字の前に見つかった文字数を返します。 場合*str*よりも少ない数で構成されています。*カウント*、文字列内の文字またはバイト数文字またはバイトを返します。 場合*カウント*が小さい 0、0 を返します。 以前のバージョンでは、これらの関数は、型の戻り値を必要がある。 **int**なく**size_t**します。
 
-**_strncnt** 、最初の文字数を返します*カウント*バイトの 1 バイト文字列*str*です。 **_wcsncnt** 、最初の文字数を返します*カウント*ワイド文字の文字列のワイド文字*str*です。
+**_strncnt**最初の文字の数を返します*カウント*1 バイト文字列のバイト*str*します。 **_wcsncnt**最初の文字の数を返します*カウント*ワイド文字の文字列のワイド文字*str*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_mbsnbcnt**と **_mbsnbcnt_l**見つかったバイト数をカウント、最初の*カウント*のマルチバイト文字の*str*です。 **_mbsnbcnt**と **_mbsnbcnt_l**置換**mtob**の代わりに使用する必要がありますと**mtob**です。
+**_mbsnbcnt**と **_mbsnbcnt_l**見つかったバイト数をカウントする最初の*カウント*のマルチバイト文字の*str*します。 **_mbsnbcnt**と **_mbsnbcnt_l**置換**mtob**の代わりに使用する必要がありますと**mtob**します。
 
-**_mbsnccnt**と **_mbsnccnt_l**見つかった文字数をカウント、最初の*カウント*バイトの*str*です。 場合 **_mbsnccnt**と **_mbsnccnt_l** 2 バイト文字の 2 番目のバイトの null 文字が発生する、最初のバイトも null にすると見なされます、返された数の値には含まれません。 **_mbsnccnt**と **_mbsnccnt_l**置換**btom**の代わりに使用する必要がありますと**btom**です。
+**_mbsnccnt**と **_mbsnccnt_l**見つかった文字数をカウントする最初の*カウント*のバイト数の*str*します。 場合 **_mbsnccnt**と **_mbsnccnt_l** 2 バイト文字の 2 番目のバイトの null 文字が発生する場合、最初のバイトは null にすることも考慮が返された数の値には含まれません。 **_mbsnccnt**と **_mbsnccnt_l**置換**btom**の代わりに使用する必要がありますと**btom**します。
 
-場合*str*は、 **NULL**ポインター、または*カウント*が 0 の場合」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)、 **errno**に設定されている**EINVAL**関数は 0 を返します。
+場合*str*は、 **NULL**ポインター、または*カウント*が 0 の場合」の説明に従って、これらの関数は無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)、 **errno**に設定されている**EINVAL**関数は 0 を返します。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
-|ルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
+|ルーチンによって返される値|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |-------------|--------------------------------------|--------------------|-----------------------|
 |**_tcsnbcnt**|**_strncnt**|**_mbsnbcnt**|**_wcsncnt**|
 |**_tcsnccnt**|**_strncnt**|**_mbsnbcnt**|N/A|
@@ -143,9 +133,9 @@ size_t _mbsnccnt_l(
 |**_wcsncnt**|N/A|N/A|**_mbsnccnt**|
 |N/A|N/A|**_mbsnbcnt_l**|**_mbsnccnt_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbsnbcnt**|\<mbstring.h>|
 |**_mbsnbcnt_l**|\<mbstring.h>|

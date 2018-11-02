@@ -1,10 +1,6 @@
 ---
-title: rand | Microsoft Docs
-ms.custom: ''
+title: rand
 ms.date: 1/02/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - rand
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - rand
-dev_langs:
-- C++
 helpviewer_keywords:
 - generating pseudorandom numbers
 - random numbers, generating
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - rand function
 - pseudorandom numbers
 - numbers, generating pseudorandom
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 081e380dc639ed6a814913dd42c6fc1b55041b01
-ms.sourcegitcommit: a7046aac86f1c83faba1088c80698474e25fe7c3
+ms.openlocfilehash: 67e128fc4adea345807a2d59078a00e3c4bd1f07
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43681136"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50440730"
 ---
 # <a name="rand"></a>rand
 
@@ -62,7 +52,7 @@ int rand( void );
 
 **Rand**関数は、よく知られているシーケンスを生成し、暗号化関数として使用するために適切ではありません。 乱数の生成のより安全な暗号を使用して[rand_s](rand-s.md) 、関数では、C++ 標準ライブラリで宣言または[\<ランダム >](../../standard-library/random.md)します。 に関する問題について**rand**とどのように\<ランダム > このビデオ」を参照してください、これらの欠点を補い、 [rand 有害と見なされます](https://channel9.msdn.com/Events/GoingNative/2013/rand-Considered-Harmful)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

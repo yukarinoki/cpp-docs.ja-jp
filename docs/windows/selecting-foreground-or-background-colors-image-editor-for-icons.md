@@ -1,29 +1,18 @@
 ---
-title: 前景色または背景色 (アイコン用イメージ エディター) の選択 |Microsoft Docs
-ms.custom: ''
+title: 前景色または背景色の選択 (アイコン用イメージ エディター)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
 f1_keywords:
 - vc.editors.image.color
-dev_langs:
-- C++
 helpviewer_keywords:
 - Image editor [C++], colors
 - colors [C++], Image editor
 ms.assetid: 95b3673e-1f1f-40fe-9afd-da914a6d005f
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a4ede6b0fa9f53865defb5dbe5f7eb164589c5bd
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0189b493af0b62f98704b1816050ddbf238e9aa9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413784"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619467"
 ---
 # <a name="selecting-foreground-or-background-colors-image-editor-for-icons"></a>前景色または背景色の選択 (アイコン用イメージ エディター)
 
@@ -39,7 +28,7 @@ ms.locfileid: "46413784"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 なし
 

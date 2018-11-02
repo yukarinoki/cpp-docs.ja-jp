@@ -1,11 +1,6 @@
 ---
-title: cacos、cacosf、cacosl | Microsoft Docs
-ms.custom: ''
+title: cacos、cacosf、cacosl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cacos
 - cacosf
@@ -30,27 +25,21 @@ f1_keywords:
 - complex/cacos
 - complex/cacosf
 - complex/cacosl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cacos function
 - cacosf function
 - cacosl function
 ms.assetid: 78118c00-0a07-49c1-8a13-4bf19ce3aea8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a6734080e8aff91d9276ef59203e2a3911ee9e7f
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 18757ecd30f399ca3d1fdb77e8bff8213a265e74
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394458"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50543196"
 ---
 # <a name="cacos-cacosf-cacosl"></a>cacos、cacosf、cacosl
 
-ブランチ カット実際の軸に沿った間隔 [-1, +1] 以外に、複素数のアーク コサインを取得します。
+実軸に沿って区間 [-1, +1] の外側の分岐線法を複素数のアーク コサインを取得します。
 
 ## <a name="syntax"></a>構文
 
@@ -72,15 +61,15 @@ _Lcomplex cacos( _Lcomplex z );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-アーク コサイン*z*、(ラジアン単位)。 結果は、虚軸方向には無制限で、実軸方向には [0, π] の区間内になります。 ドメイン エラーが発生*z*が [-1, +1] の間隔の範囲外です。
+アーク コサイン*z*、(ラジアン単位)。 結果は、虚軸方向には無制限で、実軸方向には [0, π] の区間内になります。 ドメイン エラーが発生*z*区間 [-1, +1] の外側です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**cacos**を受け取り、返します **_Fcomplex**と **_Lcomplex**値。 C プログラムでは、 **cacos**常に受け取りを返す、 **_Dcomplex**値。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cacos**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**cacos**は、 **_Dcomplex**値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**cacos**、 **cacosf**、 **cacosl**|\<complex.h>|\<ccomplex>|
 

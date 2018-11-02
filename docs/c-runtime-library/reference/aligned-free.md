@@ -1,10 +1,6 @@
 ---
-title: _aligned_free | Microsoft Docs
-ms.custom: ''
+title: _aligned_free
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _aligned_free
 apilocation:
@@ -23,22 +19,16 @@ apitype: DLLExport
 f1_keywords:
 - aligned_free
 - _aligned_free
-dev_langs:
-- C++
 helpviewer_keywords:
 - _aligned_free function
 - aligned_free function
 ms.assetid: ed1ce952-cdfc-4682-85cc-f75d4101603d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 54700ad2a1eed391647a66a4c54a726b75e812f4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: e2d1dc1172d1cd0d31f8daa8125bd052252393c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46069717"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50432165"
 ---
 # <a name="alignedfree"></a>_aligned_free
 
@@ -54,7 +44,7 @@ void _aligned_free (
 
 ### <a name="parameters"></a>パラメーター
 
-*_expand*<br/>
+*memblock*<br/>
 `_aligned_malloc` または `_aligned_offset_malloc` 関数に返されたメモリ ブロックへのポインター。
 
 ## <a name="remarks"></a>Remarks
@@ -63,7 +53,7 @@ void _aligned_free (
 
 この関数は、他の _aligned CRT 関数とは異なり、パラメーターを検証しません。 場合 *_expand* NULL ポインターでは、この関数がないアクションを実行だけです。 この関数は `errno` を変更せず、無効なパラメーター ハンドラーを呼び出しません。 以前にメモリのブロックを割り当てるために _aligned 関数を使用しなかったために関数でエラーが発生する場合、または何らかの予期しない災害によってメモリの不整合が発生する場合、関数は [_RPT、_RPTF、_RPTW、_RPTFW のマクロ](rpt-rptf-rptw-rptfw-macros.md)からデバッグ レポートを生成します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

@@ -1,10 +1,6 @@
 ---
-title: CD2DLinearGradientBrush クラス |Microsoft Docs
-ms.custom: ''
+title: CD2DLinearGradientBrush クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CD2DLinearGradientBrush
 - AFXRENDERTARGET/CD2DLinearGradientBrush
@@ -20,8 +16,6 @@ f1_keywords:
 - AFXRENDERTARGET/CD2DLinearGradientBrush::SetStartPoint
 - AFXRENDERTARGET/CD2DLinearGradientBrush::m_LinearGradientBrushProperties
 - AFXRENDERTARGET/CD2DLinearGradientBrush::m_pLinearGradientBrush
-dev_langs:
-- C++
 helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], CD2DLinearGradientBrush
 - CD2DLinearGradientBrush [MFC], Attach
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - CD2DLinearGradientBrush [MFC], m_LinearGradientBrushProperties
 - CD2DLinearGradientBrush [MFC], m_pLinearGradientBrush
 ms.assetid: d4be9ff9-0ea8-45e6-9b8d-f3bc5673cbac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b33b49c818a290d5bcbae20864a4e73006dd1f01
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 03c370be5bcfc61e1dd398604f27313d3de15f8b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46403931"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50635826"
 ---
 # <a name="cd2dlineargradientbrush-class"></a>CD2DLinearGradientBrush クラス
 
@@ -105,7 +95,7 @@ class CD2DLinearGradientBrush : public CD2DGradientBrush;
 
 `CD2DLinearGradientBrush`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxrendertarget.h
 

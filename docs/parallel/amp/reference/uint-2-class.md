@@ -1,10 +1,6 @@
 ---
-title: uint_2 クラス |Microsoft Docs
-ms.custom: ''
+title: uint_2 クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: reference
 f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::set_xy
 - amp_short_vectors/Concurrency::graphics::uint_2::y
@@ -31,19 +27,13 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::g
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
-dev_langs:
-- C++
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ee6c51a084b3fca7a5665fe943cfeaff3a48afce
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: dc7b00d70a4f816845f5741bf605f1c1bb631ee2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391853"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589359"
 ---
 # <a name="uint2-class"></a>uint_2 クラス
 
@@ -128,7 +118,7 @@ class uint_2;
 
 `uint_2`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** amp_short_vectors.h
 

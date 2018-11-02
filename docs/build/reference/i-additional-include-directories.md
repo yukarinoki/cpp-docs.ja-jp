@@ -1,5 +1,5 @@
 ---
-title: /I (追加インクルード ディレクトリ)
+title: /I (追加のインクルード ディレクトリ)
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.AdditionalIncludeDirectories
@@ -14,24 +14,22 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: b922a4472246bb13bfed4022f2f85061c5d1217b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
+ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563866"
+ms.lasthandoff: 11/01/2018
+ms.locfileid: "50750393"
 ---
-# <a name="i-additional-include-directories"></a>/I (追加インクルード ディレクトリ)
+# <a name="i-additional-include-directories"></a>/I (追加のインクルード ディレクトリ)
 
 インクルード ファイルを検索するディレクトリの一覧には、ディレクトリを追加します。
 
 ## <a name="syntax"></a>構文
 
-```
-/I[ ]directory
-```
+> **/I***ディレクトリ*
 
-## <a name="arguments"></a>引数
+### <a name="arguments"></a>引数
 
 *ディレクトリ*<br/>
 ディレクトリの一覧に追加するディレクトリは、インクルード ファイルを検索します。
@@ -40,23 +38,21 @@ ms.locfileid: "50563866"
 
 1 つ以上のディレクトリを追加するには、このオプションを複数回使用します。 指定したインクルード ファイルが見つかるまでにのみ、ディレクトリが検索されます。
 
-このオプションを使用するには、標準インクルード パスの無視と ([/X (標準インクルード パスの無視)](../../build/reference/x-ignore-standard-include-paths.md)) オプション。
+このオプションを使用することができます、([/X (標準インクルード パスの無視)](../../build/reference/x-ignore-standard-include-paths.md)) オプション。
 
 コンパイラは、次の順序でディレクトリを検索します。
 
-1. ソース ファイルを含むディレクトリ。
+1. 使用して指定されている場合、 [#include ディレクティブ](../../preprocessor/hash-include-directive-c-cpp.md)二重引用符のフォームで最初に検索のローカル ディレクトリ。 含むファイルと同じディレクトリで検索を開始、 **#include**ステートメント。 検索できない場合は、ファイルを検索、開かれた逆の順序で現在開かれているディレクトリのインクルード ファイル。 ディレクトリの検索は親インクルード ファイルのディレクトリから始まり、上方向へ移動して親の親インクルード ファイルのディレクトリへと続きます。
 
-1. 指定されたディレクトリ、 **/I** CL で出現する順序でのオプション。
+1. 使用して指定されている場合、 **#include**ディレクティブの角度でフォームを角かっこまたはを使用して指定されたディレクトリを検索するローカル ディレクトリの検索が失敗した場合、 **/I** CL で出現する順序でのオプションコマンドライン。
 
 1. 指定されたディレクトリ、 **INCLUDE**環境変数。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
-1. **[C/C++]** フォルダーをクリックします。
-
-1. をクリックして、**全般**プロパティ ページ。
+1. 選択、**構成プロパティ** > **C/C++** > **全般**プロパティ ページ。
 
 1. 変更、**追加のインクルード ディレクトリ**プロパティ。
 
@@ -66,7 +62,7 @@ ms.locfileid: "50563866"
 
 ## <a name="example"></a>例
 
-次の順序で MAIN.c によって要求されたインクルード ファイルを探し、次のコマンド: MAIN.c、\INCLUDE ディレクトリから、\MY\INCLUDE ディレクトリ、しを格納していると、最後に、ディレクトリで、インクルードに割り当てられているディレクトリの先頭に環境変数。
+次の順序で MAIN.c によって要求されたインクルード ファイルを探し、次のコマンド: 最初に、二重引用符を使用して、指定した場合のローカル ファイルが検索されます。 次に、検索は、\INCLUDE ディレクトリから、\MY\INCLUDE ディレクトリを継続し、最後に、ディレクトリに、INCLUDE 環境変数に割り当てられています。
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

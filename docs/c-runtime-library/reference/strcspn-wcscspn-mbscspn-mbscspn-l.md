@@ -1,10 +1,6 @@
 ---
-title: strcspn、wcscspn、_mbscspn、_mbscspn_l | Microsoft Docs
-ms.custom: ''
+title: strcspn、wcscspn、_mbscspn、_mbscspn_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscspn_l
 - wcscspn
@@ -30,8 +26,6 @@ f1_keywords:
 - wcscspn
 - _ftcscspn
 - _tcscspn
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], searching
 - ftcscspn function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - mbscspn function
 - _tcscspn function
 ms.assetid: f73f51dd-b533-4e46-ba29-d05c553708a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e282aa9d796f06e2682278e08dfae4f24b7a65c4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bcb1699f9a3f3c4d9e5ee040fdcb2e999397ac30
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415175"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50446450"
 ---
 # <a name="strcspn-wcscspn-mbscspn-mbscspnl"></a>strcspn、wcscspn、_mbscspn、_mbscspn_l
 
@@ -98,15 +88,15 @@ NULL で終わる文字セット。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数の最初の文字のインデックスを返す*str*内にある*strCharSet*です。 内の文字の存在しない場合*str*に*strCharSet*、戻り値の長さは、その*str*です。
+これらの関数の最初の文字のインデックスを返す*str*内にある*strCharSet*します。 内の文字のない場合*str*に*strCharSet*、戻り値の長さは、その後*str*します。
 
 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**wcscspn**と **_mbscspn**のワイド文字とマルチバイト文字バージョンは、 **strcspn**です。 引数**wcscspn**ワイド文字は、文字列以外の **_mbscspn**マルチバイト文字列です。
+**wcscspn**と **_mbscspn**のワイド文字とマルチバイト文字バージョン**strcspn**します。 引数**wcscspn**はワイド文字列 **_mbscspn**はマルチバイト文字の文字列。
 
-**_mbscspn**パラメーターを検証します。 いずれか*str*または*strCharSet* null ポインターで説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、関数の戻り値 0 とセットの実行が許可された場合**errno**に**EINVAL**です。 **strcspn**と**wcscspn**はそのパラメーターを検証しません。 それ以外では、これらの関数の動作は同じです。
+**_mbscspn**パラメーターを検証します。 いずれか*str*または*strCharSet* null ポインターの場合で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続、関数の戻り値 0 とセットが許可された場合**errno**に**EINVAL**します。 **strcspn**と**wcscspn**パラメーターを検証できません。 それ以外では、これらの関数の動作は同じです。
 
 出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
@@ -117,9 +107,9 @@ NULL で終わる文字セット。
 |**_tcscspn**|**strcspn**|**_mbscspn**|**wcscspn**|
 |N/A|N/A|**_mbscspn_l**|N/A|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strcspn**|\<string.h>|
 |**wcscspn**|\<string.h> または \<wchar.h>|

@@ -1,8 +1,6 @@
 ---
-title: 'Platform::collections: クラス |Microsoft Docs'
-ms.custom: ''
+title: Platform::Collections::Vector クラス
 ms.date: 12/30/2016
-ms.technology: cpp-windows
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Vector::Vector
@@ -20,21 +18,15 @@ f1_keywords:
 - COLLECTION/Platform::Collections::Vector::SetAt
 - COLLECTION/Platform::Collections::Vector::Size
 - COLLECTION/Platform::Collections::Vector::VectorChanged
-dev_langs:
-- C++
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: acf3ae2fd16eb3aacbc0a2e681ae39aece1b4dd4
-ms.sourcegitcommit: 8480f16893f09911f08a58caf684405404f7ac8e
+ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49163219"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50499870"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
@@ -110,7 +102,7 @@ Vector オブジェクトに含まれている要素の型。
 
 `Vector`
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** collection.h
 

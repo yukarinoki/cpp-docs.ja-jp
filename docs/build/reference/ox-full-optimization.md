@@ -1,32 +1,22 @@
 ---
-title: -Ox (ほとんどの速度の最適化を有効にする) |Microsoft Docs
-ms.custom: ''
+title: /Ox (ほとんどの速度の最適化を有効にする)
 ms.date: 10/18/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.ToolOptimization
 - /Ox
 - /Oxs
-dev_langs:
-- C++
 helpviewer_keywords:
 - Ox compiler option [C++]
 - fast code [C++]
 - /Ox compiler option [C++]
 - -Ox compiler option [C++]
 ms.assetid: 3ad7c30b-c615-428c-b1d0-2e024f81c760
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f3f5a39201283567285b37a0901929022b688104
-ms.sourcegitcommit: 4cbde5d164d681204c4011dc95a921d75292f423
+ms.openlocfilehash: 5be751bda13e3bfe62508e4d70206b5f9f989df5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49459167"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50619086"
 ---
 # <a name="ox-enable-most-speed-optimizations"></a>/Ox (ほとんどの速度の最適化を有効にする)
 
@@ -64,7 +54,7 @@ ms.locfileid: "49459167"
 
 リリース ビルドの場合、ファイル レベルが使用可能なすべての最適化を適用する指定した勧め[/O2 (速度)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)の代わりに **/Ox**、および[/O1 (サイズを最小限に抑える)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)代わりに **/Oxs**します。 リリースでさらに多くの最適化がビルドも検討、 [/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプションと[/LTCG (リンク時コード生成)](../../build/reference/ltcg-link-time-code-generation.md)リンカー オプション。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

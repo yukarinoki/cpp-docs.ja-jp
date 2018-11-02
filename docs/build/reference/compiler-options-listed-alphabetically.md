@@ -1,28 +1,18 @@
 ---
-title: アルファベット順のコンパイラ オプションの一覧 |Microsoft Docs
-ms.custom: ''
+title: アルファベット順のコンパイラ オプション
 ms.date: 08/20/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - compiler options, C++
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f99df40d5718a450019fb7cd26aa0c00a59c0a48
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: fa5ae089e112c147fb5e18b13af2ef5b95a7fda3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701859"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646733"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
-次の表は、コンパイラ オプションをアルファベット順の一覧にしたものです。 カテゴリの一覧については、 [Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
+次の表は、コンパイラ オプションをアルファベット順の一覧にしたものです。 カテゴリ別の一覧については、「 [カテゴリ別のコンパイラ オプション](compiler-options-listed-by-category.md)」を参照してください。
 
 |オプション|目的|
 |------------|-------------|
@@ -79,9 +69,9 @@ ms.locfileid: "45701859"
 |[/guard:cf](guard-enable-control-flow-guard.md)|制御フロー ガードのセキュリティ チェックを追加します。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|`__vectorcall` 呼び出し規約を使用します。 (x86 と x64 のみ)。|
 |[/Gw](gw-optimize-global-data.md)|プログラム全体のグローバル データの最適化を有効にします。|
-|[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 使用[/EH](eh-exception-handling-model.md)代わりにします。|
+|[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 代わりに [/EH](eh-exception-handling-model.md) を使用してください。|
 |[/Gy](gy-enable-function-level-linking.md)|関数レベルのリンクを有効にします。|
-|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 同じ[/RTC1](rtc-run-time-error-checks.md)します。|
+|[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 [/RTC1](rtc-run-time-error-checks.md)と同じです。|
 |[/Gz](gd-gr-gv-gz-calling-convention.md)|`__stdcall` 呼び出し規約を使用します (x86 のみ)。|
 |[/H](h-restrict-length-of-external-names.md)|非推奨。 外部名 (パブリック名) の長さを制限します。|
 |[/HELP](help-compiler-command-line-help.md)|コンパイラ オプションのリストを出力します。|
@@ -155,7 +145,7 @@ ms.locfileid: "45701859"
 |[/X](x-ignore-standard-include-paths.md)|標準のインクルード ディレクトリを無視します。|
 |[/Y-](y-ignore-precompiled-header-options.md)|現在のビルドで、他のすべてのプリコンパイル済みヘッダー コンパイラ オプションを無視します。|
 |[/Yc](yc-create-precompiled-header-file.md)|プリコンパイル済みヘッダー ファイルを作成します。|
-|[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 使用[/Zi](z7-zi-zi-debug-information-format.md)代わりにします。|
+|[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 代わりに [/Zi](z7-zi-zi-debug-information-format.md) を使用してください。|
 |[/Yl](yl-inject-pch-reference-for-debug-library.md)|デバッグ ライブラリの作成時に PCH の参照を挿入します。|
 |[/Yu](yu-use-precompiled-header-file.md)|ビルド時にプリコンパイル済みヘッダー ファイルを使用します。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|C 7.0 互換のデバッグ情報を生成します。|

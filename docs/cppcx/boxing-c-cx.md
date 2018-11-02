@@ -1,24 +1,17 @@
 ---
-title: ボックス化 (C + + CX) |Microsoft Docs
-ms.custom: ''
+title: ボックス化 (C++/CX)
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: edfb12fa-2a9b-42f6-bdac-d4d76cb8274e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7e9ab84bf840f01fbb22ef3b2510056338d10c74
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: dd950e2463da7541ebad731e74275ce360a1c8a4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108384"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50491040"
 ---
 # <a name="boxing-ccx"></a>ボックス化 (C++/CX)
 
-*ボックス化*など、値型の変数をラッピングが[::datetime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)— または基本的スカラー型など、 `int`— を受け取るメソッドに変数が渡されたときに、ref クラスで[Platform::object ^](../cppcx/platform-object-class.md)入力型として。
+*ボックス化* とは、入力型として [Platform::Object^](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)を取るメソッドに変数が渡されたときに、ref クラス内で、値の型変数 ( `int`Windows::Foundation::DateTime [など) または基本的スカラー型 (](../cppcx/platform-object-class.md) など) をラップすることです。
 
 ## <a name="passing-a-value-type-to-an-object-parameter"></a>Object^ パラメーターへの値の型の引き渡し
 

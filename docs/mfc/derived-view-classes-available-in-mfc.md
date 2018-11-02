@@ -1,28 +1,18 @@
 ---
-title: MFC で使用できるビュー クラスを派生 |Microsoft Docs
-ms.custom: ''
+title: MFC で使用できる派生ビュー クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CView class [MFC], classes derived from
 - classes [MFC], derived
 - derived classes [MFC], view classes
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0f8d058891b361b3747caafd9c4bd279c7626856
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9972586bd0cc4059e81d81be954a8cf0cada1f0d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46426916"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594498"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC で使用できる派生ビュー クラス
 
@@ -34,7 +24,7 @@ ms.locfileid: "46426916"
 |-----------|-----------------|
 |[CView](../mfc/reference/cview-class.md)|すべてのビューの基本クラスです。|
 |[CCtrlView](../mfc/reference/cctrlview-class.md)|基本クラスの`CTreeView`、 `CListView`、 `CEditView`、および`CRichEditView`します。 これらのクラスを使用して、指定された Windows のコモン コントロールとドキュメント/ビュー アーキテクチャを使用できます。|
-|[CEditView](../mfc/reference/ceditview-class.md)|Windows に基づく単純なビューでは、ボックス コントロールを編集します。 入力とテキストの編集は、単純なテキスト エディター アプリケーションの基礎として使用できます。 「`CRichEditView`」も参照してください。|
+|[CEditView](../mfc/reference/ceditview-class.md)|Windows に基づく単純なビューでは、ボックス コントロールを編集します。 入力とテキストの編集は、単純なテキスト エディター アプリケーションの基礎として使用できます。 「 `CRichEditView`」も参照してください。|
 |[CRichEditView](../mfc/reference/cricheditview-class.md)|ビューを含む、 [CRichEditCtrl](../mfc/reference/cricheditctrl-class.md)オブジェクト。 このクラスに似ています`CEditView`とは異なり、 `CEditView`、`CRichEditView`書式設定されたテキストのハンドル。|
 |[CListView](../mfc/reference/clistview-class.md)|ビューを含む、 [CListCtrl](../mfc/reference/clistctrl-class.md)オブジェクト。|
 |[Ctreeview の比較](../mfc/reference/ctreeview-class.md)|ビューを含む、 [CTreeCtrl](../mfc/reference/ctreectrl-class.md) Visual C でソリューション エクスプ ローラー ウィンドウのようにビューのオブジェクト。|

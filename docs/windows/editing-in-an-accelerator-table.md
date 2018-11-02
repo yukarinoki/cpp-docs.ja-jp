@@ -1,27 +1,16 @@
 ---
-title: アクセラレータ テーブル (C++) での編集 |Microsoft Docs
-ms.custom: ''
+title: アクセラレータ テーブル (C++) での編集
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator tables [C++], editing
 - keyboard shortcuts [C++], editing in an accelerator table
 ms.assetid: 545b650b-4f26-4b20-8431-d942548443bd
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 57347b88fe7d54813e06cde6d5f4b3414e79f116
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 3955a74f9387c5f89d4217436e16e76b53bc3f6a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46395811"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463002"
 ---
 # <a name="editing-in-an-accelerator-table-c"></a>アクセラレータ テーブル (C++) での編集
 
@@ -46,7 +35,7 @@ ms.locfileid: "46395811"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

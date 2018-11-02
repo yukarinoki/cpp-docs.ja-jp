@@ -1,27 +1,17 @@
 ---
-title: レジスタの使用 |Microsoft ドキュメント
-ms.custom: ''
+title: レジスタの使用
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: ce58e2cf-afd3-4068-980e-28a209298265
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4c77469a8cef03827101f4bf367c00a3bb440820
-ms.sourcegitcommit: 4fc6869067d533b175207befd2dc60346afee285
+ms.openlocfilehash: fa04318ad4af298f300fbbbad8c01d0df9500ec7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/17/2018
-ms.locfileid: "34225220"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629984"
 ---
 # <a name="register-usage"></a>レジスタの使用
 
-浮動小数点の使用可能なアーキテクチャでは、16 個の XMM/YMM と同様に 16 個の汎用レジスタ (呼ぶ整数レジスタと)、x64 を登録します。 volatile レジスタは、呼び出しで使用された後に内容が破棄されることが、呼び出し元によって想定されているスクラッチ レジスタです。 関数呼び出しで使用された後もレジスタの値を保持するには非 volatile レジスタが必要です。使用された非 volatile レジスタの保存は、呼び出し先が行う必要があります。
+浮動小数点の使用可能な x64 のアーキテクチャ (呼ぶ整数レジスタと)、16 個の汎用レジスタと 16 個の XMM/YMM の提供を登録します。 volatile レジスタは、呼び出しで使用された後に内容が破棄されることが、呼び出し元によって想定されているスクラッチ レジスタです。 関数呼び出しで使用された後もレジスタの値を保持するには非 volatile レジスタが必要です。使用された非 volatile レジスタの保存は、呼び出し先が行う必要があります。
 
 ## <a name="register-volatility-and-preservation"></a>登録の更新頻度と保持
 
@@ -50,7 +40,7 @@ ms.locfileid: "34225220"
 |XMM5, YMM5|Volatile|必要に応じて、呼び出し元によって保持される必要があります。`__vectorcall` が使用された場合の 6 番目のベクター型引数。|
 |XMM6:XMM15, YMM6:YMM15|非 volatile (XMM)、volatile (YMM の上半分)|呼び出し先によって保持される必要があります。 必要に応じて、呼び出し元によって YMM レジスタが保持される必要があります。|
 
-関数の終了と C ランタイム ライブラリの呼び出しおよび Windows システムの呼び出しに関数のエントリは、CPU の方向フラグをクリアするフラグの登録が必要です。
+関数の終了と C ランタイム ライブラリの呼び出しおよび Windows システムの呼び出しを関数のエントリは、CPU の方向フラグをクリアするフラグの登録が必要です。
 
 ## <a name="see-also"></a>関連項目
 

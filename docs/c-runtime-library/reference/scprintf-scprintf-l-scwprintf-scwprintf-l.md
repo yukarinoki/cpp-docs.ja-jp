@@ -1,10 +1,6 @@
 ---
-title: _scprintf、_scprintf_l、_scwprintf、_scwprintf_l | Microsoft Docs
-ms.custom: ''
+title: _scprintf、_scprintf_l、_scwprintf、_scwprintf_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _scprintf_l
 - _scwprintf
@@ -33,8 +29,6 @@ f1_keywords:
 - _sctprintf_l
 - scwprintf_l
 - _sctprintf
-dev_langs:
-- C++
 helpviewer_keywords:
 - scprintf function
 - sctprintf_l function
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _scprintf function
 - scwprintf function
 ms.assetid: ecbb0ba6-5f4c-4ce6-a64b-144ad8b5fe92
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d9d912d039cc732ebfe5399a90422d8b68d51332
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 09c44bbf6f918211c1aa2ee875a23bfcc7ca2da5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407214"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50500855"
 ---
 # <a name="scprintf-scprintfl-scwprintf-scwprintfl"></a>_scprintf、_scprintf_l、_scwprintf、_scwprintf_l
 
@@ -105,13 +95,13 @@ int _scwprintf_l(
 
 文字列が出力されたか、指定した書式設定コードを使用してファイルまたはバッファーに送信された場合は、生成される文字数を返します。 戻り値には、終端の NULL 文字は含まれません。 **_scwprintf**ワイド文字に対して同じ機能を実行します。
 
-場合*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返します設定と**errno**に**EINVAL**です。
+場合*形式*は、 **NULL** 」の説明に従って、ポインター、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、これらの関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-各*引数*(存在する場合) に対応する書式指定に応じて変換*形式*です。 形式は、通常の文字と、同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)です。
+各*引数*(ある場合) に対応する書式指定に応じて変換が*形式*します。 形式は、通常の文字と同じ形式し、機能、*形式*引数[printf](printf-printf-l-wprintf-wprintf-l.md)します。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
@@ -125,9 +115,9 @@ int _scwprintf_l(
 |**_sctprintf**|**_scprintf**|**_scprintf**|**_scwprintf**|
 |**_sctprintf_l**|**_scprintf_l**|**_scprintf_l**|**_scwprintf_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_scprintf**、 **_scprintf_l**|\<stdio.h>|
 |**_scwprintf**、 **_scwprintf_l**|\<stdio.h> または \<wchar.h>|

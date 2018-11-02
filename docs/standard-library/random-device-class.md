@@ -1,18 +1,12 @@
 ---
-title: random_device クラス | Microsoft Docs
-ms.custom: ''
+title: random_device クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::random_device
 - random/std::random_device::min
 - random/std::random_device::max
 - random/std::random_device::entropy
 - random/std::random_device::operator()
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::random_device [C++]
 - std::random_device [C++], min
@@ -20,16 +14,12 @@ helpviewer_keywords:
 - std::random_device [C++], entropy
 - std::random_device [C++], entropy
 ms.assetid: 4393d515-0cb6-4e0d-a2ba-c780f05dc1bf
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1ac22e146ac305be92d0b4be214465e64e8b6873
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 783b8f587094c6d603cc02f41b516ebd7b1e9a08
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33856112"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580649"
 ---
 # <a name="randomdevice-class"></a>random_device クラス
 
@@ -66,7 +56,7 @@ public:
 |[random_device](#random_device)|[entropy](#entropy)|
 |[random_device::operator()](#op_call)||
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このクラスは乱数のソースを表します。ISO C++ 標準では、非確定的または暗号的に安全であることが認められていますが、要求されていはいません。 Visual Studio の実装では、生成される値は非確定的で暗号的に安全ですが、エンジンやエンジン アダプター ([mersenne_twister_engine](../standard-library/mersenne-twister-engine-class.md) など、大部分のアプリケーションで選択される高品質で高速のエンジン) から作成されるジェネレーターよりも実行は遅いです。
 
@@ -112,7 +102,7 @@ a random value == 213725214
 
 これは単純な例であり、このジェネレーターの一般的な使用例を表しているわけではありません。 代表的なコード サンプルについては、「[\<random>](../standard-library/random.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 
@@ -126,7 +116,7 @@ a random value == 213725214
 random_device(const std::string& = "");
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このコンストラクターは、文字列パラメーターを無視して必要に応じてジェネレーターを初期化します。 `random_device` を初期化できなかった場合は、[exception](../standard-library/exception-class.md) から派生された実装定義型の値をスローします。
 
@@ -138,7 +128,7 @@ random_device(const std::string& = "");
 double entropy() const noexcept;
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 このメンバー関数は、乱数発生源がどの程度の無作為性を持っているかの推定値を返します。評価の単位には、ビットが使用されます。
 
@@ -150,7 +140,7 @@ double entropy() const noexcept;
 result_type operator()();
 ```
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 閉区間 [ `min, max`] で、メンバー関数 `min()` および `max()` で定義されたように、一様に分布した値を返します。 乱数が取得できない場合は、[exception](../standard-library/exception-class.md) から導出される実装定義型の値をスローします。
 

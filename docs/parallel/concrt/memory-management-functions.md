@@ -1,32 +1,22 @@
 ---
-title: メモリ管理関数 |Microsoft Docs
-ms.custom: ''
+title: メモリ管理関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bfbef45593a95cb8b317e7585119a6afbffd7a4e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: d8dfc8bbb200258818c38e931e978cc3be292525
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423612"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50454082"
 ---
 # <a name="memory-management-functions"></a>メモリ管理関数
 
 このドキュメントでは、割り当てし、同時実行方式でメモリを解放するために、同時実行ランタイムを提供するメモリ管理関数について説明します。
 
 > [!TIP]
->  同時実行ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
+>  コンカレンシー ランタイムには既定のスケジューラが用意されているため、アプリケーションにスケジューラを作成する必要はありません。 開始するので、タスク スケジューラを使用してアプリケーションのパフォーマンスを微調整する、推奨、[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)または[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)場合新しい同時実行ランタイムにします。
 
 同時実行ランタイムでは、割り当てと、同時実行方式でメモリのブロックを解放するために最適化された 2 つのメモリ管理関数を提供します。 [Concurrency::alloc](reference/concurrency-namespace-functions.md#alloc)関数は、指定したサイズを使用してメモリ ブロックを割り当てます。 [Concurrency::free](reference/concurrency-namespace-functions.md#free)関数で割り当てられたメモリを解放する`Alloc`します。
 

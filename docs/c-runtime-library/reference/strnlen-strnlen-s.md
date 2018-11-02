@@ -1,10 +1,6 @@
 ---
-title: strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l | Microsoft Docs
-ms.custom: ''
+title: strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - wcsnlen
 - strnlen_s
@@ -40,8 +36,6 @@ f1_keywords:
 - _mbstrnlen
 - strnlen
 - _tcscnlen_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tcscnlen function
 - _mbstrnlen function
@@ -63,16 +57,12 @@ helpviewer_keywords:
 - string length
 - strnlen_l function
 ms.assetid: cc05ce1c-72ea-4ae4-a7e7-4464e56e5f80
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 22adcaafc54a6b086629b7b9087b7088001bba85
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f7f5050a0ab4ff0f35a28faf039688eedc2f3a8a
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417759"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50602567"
 ---
 # <a name="strnlen-strnlens-wcsnlen-wcsnlens-mbsnlen-mbsnlenl-mbstrnlen-mbstrnlenl"></a>strnlen、strnlen_s、wcsnlen、wcsnlen_s、_mbsnlen、_mbsnlen_l、_mbstrnlen、_mbstrnlen_l
 
@@ -133,22 +123,22 @@ NULL で終わる文字列。
 
 ## <a name="return-value"></a>戻り値
 
-これらの関数は、文字列内の文字数を返します (終端の null 文字は含まれません)。 内の null ターミネータがない場合*numberOfElements*バイトの文字列 (またはワイド文字**wcsnlen**)、し*numberOfElements*に返されますエラー条件です。null で終わる文字列の長さは、厳密にであるより小さい*numberOfElements*です。
+これらの関数は、文字列内の文字数を返します (終端の null 文字は含まれません)。 最初の null 終端文字がない場合*numberOfElements*バイトの文字列 (またはワイド文字**wcsnlen**)、し*numberOfElements*に返されますエラー条件します。null で終わる文字列の長さが厳密があるより小さい*numberOfElements*します。
 
-**_mbstrnlen**と **_mbstrnlen_l**文字列に無効なマルチバイト文字が含まれている場合、-1 を返します。
+**_mbstrnlen**と **_mbstrnlen_l**文字列に無効なマルチバイト文字が含まれている場合は、-1 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 > [!NOTE]
-> **strnlen**に代わるものではない**strlen**です。**strnlen**既知のサイズのバッファーに入力方向の信頼されていないデータのサイズを計算するためだけに使用するものでは、ネットワーク パケットなどです。 **strnlen**長さを計算しますが、文字列の終端がない場合、バッファーの末尾を越えた超えません。 その他の状況を使用して**strlen**です。 (同じ**wcsnlen**、 **_mbsnlen**、および **_mbstrnlen**)。
+> **strnlen**に代わるものでない**strlen**;**strnlen**既知のサイズのバッファーに入力方向の信頼されていないデータのサイズを計算するためだけに使用するためのものでは、ネットワーク パケットなどです。 **strnlen**長さを計算しますが、については説明しません、バッファーの末尾、文字列の終端がない場合。 その他の状況では、使用**strlen**します。 (同じ**wcsnlen**、 **_mbsnlen**、および **_mbstrnlen**)。
 
-これらの各関数の文字数を返しますで*str*、終端の null 文字を含まない。 ただし、 **strnlen**と**strnlen_s** 1 バイト文字の文字列として文字列を解釈し、そのため、戻り値は常に (バイト単位) の数と等しく、文字列には、マルチバイトが含まれている場合でも文字があります。 **wcsnlen**と**wcsnlen_s**のワイド文字バージョンは、 **strnlen**と**strnlen_s**の引数をそれぞれ; **wcsnlen**と**wcsnlen_s**ワイド文字列であり、文字数はワイド文字単位で。 それ以外の場合、 **wcsnlen**と**strnlen**の動作は同じ、しないで**strnlen_s**と**wcsnlen_s**です。
+これらの各関数の文字数を返します*str*、終端の null 文字が含まれていません。 ただし、 **strnlen**と**strnlen_s** 1 バイト文字の文字列として文字列を解釈し、そのため、戻り値は常に (バイト単位) の数と同じ場合でも、文字列には、マルチバイトが含まれています。文字。 **wcsnlen**と**wcsnlen_s**のワイド文字バージョン**strnlen**と**strnlen_s**引数それぞれ; **wcsnlen**と**wcsnlen_s**文字数はワイド文字単位では、ワイド文字列です。 それ以外の場合、 **wcsnlen**と**strnlen**の動作は同様に、同じ**strnlen_s**と**wcsnlen_s**します。
 
-**strnlen**、 **wcsnlen**、および **_mbsnlen**はそのパラメーターを検証しません。 場合*str*は**NULL**、アクセス違反が発生します。
+**strnlen**、 **wcsnlen**、および **_mbsnlen**パラメーターを検証できません。 場合*str*は**NULL**、アクセス違反が発生します。
 
 **strnlen_s**と**wcsnlen_s**パラメーターを検証します。 場合*str*は**NULL**関数は、0 を返します。
 
-**_mbstrnlen**もそのパラメーターを検証します。 場合*str*は**NULL**、または*numberOfElements*がより大きい**INT_MAX**、 **_mbstrnlen**」の説明に従って、無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbstrnlen**設定**errno**に**EINVAL**し、-1 を返します。
+**_mbstrnlen**もそのパラメーターを検証します。 場合*str*は**NULL**、または*numberOfElements*がより大きい**INT_MAX**、 **_mbstrnlen**説明されているように、無効なパラメーター例外を生成します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合 **_mbstrnlen**設定**errno**に**EINVAL** -1 を返します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -158,13 +148,13 @@ NULL で終わる文字列。
 |**_tcscnlen**|**strnlen**|**_mbsnlen**|**wcsnlen**|
 |**_tcscnlen_l**|**strnlen**|**_mbsnlen_l**|**wcsnlen**|
 
-**_mbsnlen**と **_mbstrnlen**マルチバイト文字の文字列のマルチバイト文字の数を返します。 **_mbsnlen**のマルチバイト コード ページに基づいてマルチバイト文字シーケンスを認識するが現在使用中かは、渡されたロケールに従って以外のマルチバイト文字の有効性テストは実行されません。 **_mbstrnlen**マルチバイト文字の有効性をテストし、マルチバイト文字のシーケンスを認識します。 場合に渡される文字列 **_mbstrnlen**に無効なマルチバイト文字を含む**errno**に設定されている**EILSEQ**です。
+**_mbsnlen**と **_mbstrnlen**マルチバイト文字列のマルチバイト文字数を返します。 **_mbsnlen**マルチバイト コード ページに従ってマルチバイト文字シーケンスを認識です。 現在使用中、または渡されたロケールに従ってマルチバイト文字の有効性テストは実行されません。 **_mbstrnlen**マルチバイト文字の有効性をテストし、マルチバイト文字シーケンスを認識します。 場合に渡される文字列 **_mbstrnlen**無効なマルチバイト文字が含まれています**errno**に設定されている**EILSEQ**します。
 
-出力値の設定の影響を受けた、 **LC_CTYPE** 、ロケールのカテゴリの設定; 参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 いないする点を除いて、これらの関数のバージョンが同じである、 **_l**サフィックスは、このロケールに依存する動作と付いているバージョンの現在のロケールを使用して、 **_l**サフィックス代わりに渡されたロケール パラメーターを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定; を参照してください[setlocale、_wsetlocale](setlocale-wsetlocale.md)詳細についてはします。 いないことを除いて、これらの関数バージョンが同じである、 **_l**サフィックスは、このロケールに依存する動作し、付いているバージョンの現在のロケールを使用して、 **_l**サフィックス渡されるロケール パラメーターを代わりに使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strnlen**、 **strnlen_s**|\<string.h>|
 |**wcsnlen**、 **wcsnlen_s**|\<string.h> または \<wchar.h>|
