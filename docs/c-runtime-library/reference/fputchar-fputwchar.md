@@ -1,10 +1,6 @@
 ---
-title: _fputchar、_fputwchar | Microsoft ドキュメント
-ms.custom: ''
+title: _fputchar、_fputwchar
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fputchar
 - _fputwchar
@@ -28,8 +24,6 @@ f1_keywords:
 - _fputtchar
 - fputchar
 - _fputchar
-dev_langs:
-- C++
 helpviewer_keywords:
 - fputchar function
 - standard output, writing to
@@ -39,16 +33,12 @@ helpviewer_keywords:
 - fputtchar function
 - _fputchar function
 ms.assetid: b92ff600-a924-4f2b-b0e7-3097ee31bdff
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3fd5a1d60c61fdde5864f3447b5f721f409bc3a4
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 57ec2350fa1d0b681c6eed0c4cfc4ec4660977e8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399593"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50477975"
 ---
 # <a name="fputchar-fputwchar"></a>_fputchar、_fputwchar
 
@@ -72,13 +62,13 @@ wint_t _fputwchar(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、書き込まれた文字を返します。 **_Fputchar**、戻り値の**EOF**はエラーを示します。 **_Fputwchar**、戻り値の**WEOF**はエラーを示します。 C が場合**NULL**、」の説明に従って、これらの関数は、無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 返されるかどうかは、引き続き実行が許可された、 **EOF** (または**WEOF**) を設定および**errno**に**EINVAL**です。
+これらの各関数は、書き込まれた文字を返します。 **_Fputchar**、戻り値の**EOF**はエラーを示します。 **_Fputwchar**、戻り値の**WEOF**はエラーを示します。 C が場合**NULL**、」の説明に従って、これらの関数は、無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 返されるかどうかは、引き続き実行が許可された、 **EOF** (または**WEOF**) を設定および**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数の両方の 1 つの文字を書き込みます*c*に**stdout**に応じてインジケーターを進めます。 **_fputchar**は等価`fputc( stdout )`です。 等価も**putchar**関数とマクロではなく、関数としてのみ実装されているが、します。 異なり**fputc**と**putchar**、これらの関数は ANSI 規格と互換性がありません。
+これらの関数の両方が 1 文字を書き込み*c*に**stdout**を適切なインジケーターを進めます。 **_fputchar**と等価`fputc( stdout )`します。 等しくも**putchar**が、関数とマクロではなく関数としてのみを実装します。 異なり**fputc**と**putchar**、これらの関数は ANSI 規格と互換性がありません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -86,14 +76,14 @@ wint_t _fputwchar(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_fputtchar**|**_fputchar**|**_fputchar**|**_fputwchar**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|
 |**_fputchar**|\<stdio.h>|
 |**_fputwchar**|\<stdio.h> または \<wchar.h>|
 
-コンソールは、ユニバーサル Windows プラットフォーム (UWP) アプリではサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル —**stdin**、 **stdout**、および**stderr**— C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
+ユニバーサル Windows プラットフォーム (UWP) アプリでは、コンソールがサポートされていません。 コンソールに関連付けられている標準ストリームのハンドル、**stdin**、 **stdout**、および**stderr**-C ランタイム関数が UWP アプリで使用する前にリダイレクトする必要があります. 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -1,25 +1,15 @@
 ---
-title: path クラス | Microsoft Docs
-ms.custom: ''
+title: path クラス
 ms.date: 09/27/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - filesystem/std::experimental::filesystem::path
-dev_langs:
-- C++
 ms.assetid: 8a1227ca-aeb2-4e0e-84aa-86e34e4f4fe8
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7674f07c92f8a0c9d8a9070f3f99e00dfde39140
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 486245df3433f552c289786a0b20deb33c8fb6c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235465"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50618219"
 ---
 # <a name="path-class"></a>path クラス
 
@@ -61,7 +51,7 @@ class path;
 |[empty](#empty)|`mypath.empty()` を返します。|
 |[end](#end)|型のシーケンス末尾の反復子を返します`iterator`します。|
 |[extension](#extension)|サフィックスを返します`filename()`します。|
-|[ファイル名](#filename)|myname のルート ディレクトリ コンポーネント (具体的には、`empty() path() : *--end()`) を返します。 このコンポーネントは、空になることもあります。|
+|[ファイル名](#filename)|myname のルート ディレクトリ コンポーネント (具体的には、 `empty() path() : *--end()`」を参照してください。 このコンポーネントは、空になることもあります。|
 |[generic_string](#generic_string)|すべての円記号がスラッシュに変換された `this->string<Elem, Traits, Alloc>(al)` を返します (Windows の場合)。|
 |[generic_u16string](#generic_u16string)|すべての円記号がスラッシュに変換された `u16string()` を返します (Windows の場合)。|
 |[generic_u32string](#generic_u32string)|すべての円記号がスラッシュに変換された `u32string()` を返します (Windows の場合)。|
@@ -106,7 +96,7 @@ class path;
 |[operator/=](#op_divide)|さまざまな`append`式。|
 |[operator string_type](#op_string)|`myname` を返します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<filesystem >
 
@@ -268,7 +258,7 @@ path extension() const;
 
 ## <a name="filename"></a> path::filename
 
-myname のルート ディレクトリ コンポーネント (具体的には、`empty() path() : *--end()`) を返します。 このコンポーネントは、空になることもあります。
+myname のルート ディレクトリ コンポーネント (具体的には、 `empty() path() : *--end()`」を参照してください。 このコンポーネントは、空になることもあります。
 
 ```cpp
 path filename() const;
@@ -775,13 +765,13 @@ string string() const;
 
 最初の (テンプレート) メンバー関数が格納されているシーケンスに変換します`mypath`と同じ方法。
 
-1. `string<char, Traits, Alloc>()` の `string()`
+1. `string()` の `string<char, Traits, Alloc>()`
 
-1. `string<wchar_t, Traits, Alloc>()` の `wstring()`
+1. `wstring()` の `string<wchar_t, Traits, Alloc>()`
 
-1. `string<char16_t, Traits, Alloc>()` の `u16string()`
+1. `u16string()` の `string<char16_t, Traits, Alloc>()`
 
-1. `string<char32_t, Traits, Alloc>()` の `u32string()`
+1. `u32string()` の `string<char32_t, Traits, Alloc>()`
 
 2 番目のメンバー関数が格納されているシーケンスに変換します`mypath`をホスト システムに適したエンコーディングを**char**シーケンスと型のオブジェクトに格納されていることを返します。`string`します。
 

@@ -1,16 +1,10 @@
 ---
-title: -EH (例外処理モデル) |Microsoft Docs
-ms.custom: ''
+title: /EH (例外処理モデル)
 ms.date: 08/14/2018
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLWCECompilerTool.ExceptionHandling
 - /eh
 - VC.Project.VCCLCompilerTool.ExceptionHandling
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception handling, compiler model
 - cl.exe compiler, exception handling
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e2c368ac8dfcb5a9d283f4b567e68d4a629c1ba4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46417424"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50615060"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (例外処理モデル)
 
@@ -101,7 +91,7 @@ int main() {
 
 ただし、スローしない属性は、関数からどの例外もスローされないことを保証するわけではありません。 動作とは異なり、 **noexcept**関数の場合、Visual C コンパイラは、使用して宣言された関数によってスローされる例外`throw()`、 `__declspec(nothrow)`、または**extern"C"** として定義されていません。動作です。 この 3 つの宣言属性を使用する関数は、例外のランタイム終了チェックを強制しません。 使用することができます、 **/EHr**エスケープする未処理の例外のランタイム チェックを生成するコンパイラを強制することで未定義の動作がこれを識別するためのオプション、 **noexcept**関数。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

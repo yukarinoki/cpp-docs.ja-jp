@@ -1,10 +1,6 @@
 ---
-title: xor_eq | Microsoft Docs
-ms.custom: ''
+title: xor_eq
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apilocation:
 - msvcrt.dll
 - msvcr80.dll
@@ -21,21 +17,15 @@ f1_keywords:
 - std.xor_eq
 - xor_eq
 - std::xor_eq
-dev_langs:
-- C++
 helpviewer_keywords:
 - xor_eq function
 ms.assetid: eca4b6b4-b77a-4d44-a09a-5a7e69fdb56c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 87bb77989b1ccdb37b5e59a9d85e902991d83055
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a6617d1df9cb4666288d13e73ee38203f350e77
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32408082"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50469889"
 ---
 # <a name="xoreq"></a>xor_eq
 
@@ -49,7 +39,7 @@ ms.locfileid: "32408082"
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 マクロにより ^= 演算子が生成されます。
 
@@ -82,6 +72,6 @@ int main( )
 1
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<iso646.h>

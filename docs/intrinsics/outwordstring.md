@@ -1,29 +1,19 @@
 ---
-title: _ _outwordstring |Microsoft Docs
-ms.custom: ''
+title: __outwordstring
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - __outwordstring
-dev_langs:
-- C++
 helpviewer_keywords:
 - rep outsw instruction
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d148f6b2b6078693e5e05c02310c3e52e710b3e7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 92ec21cdf7fb9d86ee7c8b9fa5090bbace2fe869
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392698"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50494615"
 ---
 # <a name="outwordstring"></a>__outwordstring
 
@@ -34,10 +24,10 @@ ms.locfileid: "46392698"
 ## <a name="syntax"></a>構文
 
 ```
-void __outwordstring( 
-   unsigned short Port, 
-   unsigned short* Buffer, 
-   unsigned long Count 
+void __outwordstring( 
+   unsigned short Port, 
+   unsigned short* Buffer, 
+   unsigned long Count 
 );
 ```
 
@@ -52,7 +42,7 @@ void __outwordstring(
 *カウント*<br/>
 [in]送信する文字数です。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

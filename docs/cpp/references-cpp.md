@@ -1,12 +1,6 @@
 ---
-title: 参照 (C++) |Microsoft Docs
-ms.custom: ''
+title: 参照 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - objects [C++], referencing
 - references [C++]
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - references, declaring
 - referencing objects, declarator syntax
 ms.assetid: 68156f7f-97a0-4b66-b26d-b25ade5e3bd8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a3a93d434907a2a3ff13053ee4b932201de22f3a
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: aafc582299402eabab2736ac7d07b6c4c397413c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861409"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50616457"
 ---
 # <a name="references-c"></a>参照 (C++)
 

@@ -1,27 +1,17 @@
 ---
-title: task_options クラス (同時実行ランタイム) |Microsoft Docs
-ms.custom: ''
+title: task_options クラス (コンカレンシー ランタイム)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: reference
 f1_keywords:
 - ppltasks/concurrency::task_options
-dev_langs:
-- C++
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7dccc4fec79ad11d7d4667c93b1b9ae8362ed92
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 78005e500e9fefae7fed6085e061af7ee4264d14
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437080"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50633104"
 ---
-# <a name="taskoptions-class-concurrency-runtime"></a>task_options クラス (同時実行ランタイム)
+# <a name="taskoptions-class-concurrency-runtime"></a>task_options クラス (コンカレンシー ランタイム)
 
 タスクの作成に使用できるオプションを表します。
 
@@ -55,7 +45,7 @@ class task_options;
 
 `task_options`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** ppltasks.h
 

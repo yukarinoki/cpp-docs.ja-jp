@@ -1,10 +1,6 @@
 ---
-title: mbrtowc | Microsoft Docs
-ms.custom: ''
+title: mbrtowc
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - mbrtowc
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - mbrtowc
-dev_langs:
-- C++
 helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 256c3df754607d0d9321f87d565e2ce94491035c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: bd719e7b336333f6e06a1db9b1e34784575a1602
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405316"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50581832"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -65,31 +55,31 @@ size_t mbrtowc(
 チェックするバイト数。
 
 *呼び出すため*<br/>
-変換状態のオブジェクトへのポインター。 この値が null ポインターの場合、関数は静的な内部変換状態オブジェクトを使用します。 内部**mbstate_t**オブジェクトはスレッド セーフであることをお勧めを常に渡す独自*呼び出すため*引数。
+変換状態のオブジェクトへのポインター。 この値が null ポインターの場合、関数は静的な内部変換状態オブジェクトを使用します。 内部**mbstate_t**オブジェクトはスレッド セーフではありませんを常に渡す独自ことをお勧めします。*呼び出すため*引数。
 
 ## <a name="return-value"></a>戻り値
 
 次のいずれかの値です。
 
-0、次へ*カウント*以下のバイトに格納されている null ワイド文字を表すマルチバイト文字を完成するまたは*wchar*場合は、 *wchar* null ポインターではありません。
+0、[次へ]*カウント*以下のバイトに格納されている null ワイド文字を表すマルチバイト文字を完成するまたは*wchar*場合は、 *wchar*が null ポインターでないです。
 
-1 ~*カウント*、包括的次*カウント*か、以下のバイト数が有効なマルチバイト文字を完成させます。 返される値は、マルチバイト文字を完成するのに必要なバイト数です。 同等のワイド文字が格納されている*wchar*場合は、 *wchar* null ポインターではありません。
+1 に*数*、包括的次*数*または以下のバイトが有効なマルチバイト文字を完成します。 返される値は、マルチバイト文字を完成するのに必要なバイト数です。 相当するワイド文字が格納されている*wchar*場合は、 *wchar* null ポインターではありません。
 
-(size_t)(-1)エンコード エラーが発生しました。 次*カウント*以下のバイト数は、完全かつ有効なマルチバイト文字に寄与しません。 この場合、 **errno**が EILSEQ に設定され、変換のシフト状態で*呼び出すため*は指定されていません。
+(size_t)(-1)エンコーディング エラーが発生しました。 次*カウント*または以下のバイトは、完全かつ有効なマルチバイト文字には影響しません。 この場合、 **errno** EILSEQ と変換のシフト状態に設定されている*呼び出すため*が指定されていません。
 
-(size_t)(-2)次へ*カウント*のバイト数は、不完全ながら有効になり得るマルチバイト文字とそのすべてに寄与*カウント*バイトが処理されています。 値が格納されていない*wchar*が*呼び出すため*関数を再起動する更新されます。
+(size_t)(-2)次*カウント*バイトは、不完全ながら有効マルチバイト文字とそのすべてに貢献*カウント*バイトが処理されています。 値は格納されません*wchar*が*呼び出すため*関数を再開するように更新します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-場合*mbchar* null ポインターでは、関数は、呼び出しに相当します。
+場合*mbchar* null ポインターの場合は、関数が呼び出しに相当します。
 
 `mbrtowc(NULL, "", 1, &mbstate)`
 
-この場合、引数の値で*wchar*と*カウント*は無視されます。
+この例では、引数の値で*wchar*と*カウント*は無視されます。
 
-場合*mbchar*が null ポインター、関数は*カウント*からバイト*mbchar*必要な次を完了するために必要なバイト数を決定するにはマルチバイト文字。 対応するマルチバイト文字が格納されている場合は、次の文字が有効では、 *wchar*場合は null ポインターではありません。 文字が、対応するワイド null 文字の結果の状態*呼び出すため*初期変換状態です。
+場合*mbchar* null ポインターでない関数は*カウント*からバイト*mbchar*必要な次の完了に必要なバイト数を決定するにはマルチバイト文字。 対応するマルチバイト文字が格納されている場合は、次の文字が有効な*wchar* null ポインターでない場合。 文字が、対応するワイド null 文字の結果の状態*呼び出すため*は初期の変換状態です。
 
-**Mbrtowc**関数とは異なります[mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)によって、再起動します。 変換状態が格納されている*呼び出すため*以降の呼び出し、同じまたは再開可能なその他の関数にします。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、アプリケーションを使用する必要があります**後**の代わりに**wcslen**場合、後続の呼び出しに**wcsrtombs**の代わりに使用される**wcstombs**.
+**Mbrtowc**関数とは異なります[mbtowc、_mbtowc_l](mbtowc-mbtowc-l.md)によってその再起動します。 変換の状態が格納されている*呼び出すため*同じか、またはその他の再開可能な関数を呼び出すのためです。 再開可能な関数と再開不可能な関数を混用した場合、結果は未定義です。  たとえば、アプリケーションで使用する**後**の代わりに**wcslen**場合、後続の呼び出し**wcsrtombs**の代わりに使用が**wcstombs**.
 
 ## <a name="example"></a>例
 
@@ -210,9 +200,9 @@ Multibyte String: AaBbCcÜïα∩≡xXyYzZ
 WC String: AaBbCcÜïα∩≡xXyYzZ
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**mbrtowc**|\<wchar.h>|
 

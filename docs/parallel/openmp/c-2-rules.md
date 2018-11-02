@@ -1,23 +1,13 @@
 ---
-title: C.2 規則 |Microsoft Docs
-ms.custom: ''
+title: C.2 規則
 ms.date: 11/04/2016
-ms.technology:
-- cpp-parallel
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 4d52fef7-3eb7-4480-a335-8ed48681092b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1c5845a9125bb32254fc0c03b03e9b6076a086d1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7c0de4c14e229716bcf764d9859be439090368b1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404775"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642807"
 ---
 # <a name="c2-rules"></a>C.2 規則
 
@@ -26,7 +16,7 @@ ms.locfileid: "46404775"
 **/\* C++ (ISO/IEC 14882:1998) \*/**
 
 *ステートメント seq*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*openmp ディレクティブ*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ステートメント seq ステートメント*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ステートメント seq openmp ディレクティブ*
@@ -34,7 +24,7 @@ ms.locfileid: "46404775"
 **/\* C90 で (ISO/IEC 9899:1990) \*/**
 
 *statement-list*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*openmp ディレクティブ*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ステートメント list ステートメント*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*ステートメントの一覧の openmp ディレクティブ*
@@ -42,8 +32,8 @@ ms.locfileid: "46404775"
 **/\* C99 (ISO/IEC 9899:1999) \*/**
 
 *ブロック アイテム*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*宣言*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*declaration*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*openmp ディレクティブ*
 
 **/\* 標準的なステートメント \*/**
@@ -68,7 +58,7 @@ ms.locfileid: "46404775"
 &nbsp;&nbsp;&nbsp;&nbsp;*flush ディレクティブ*
 
 *構造化ブロック*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*
+&nbsp;&nbsp;&nbsp;&nbsp;*statement*
 
 *並列構造*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*並列ディレクティブ構造化ブロック*
@@ -199,18 +189,18 @@ ms.locfileid: "46404775"
 &nbsp;&nbsp;&nbsp;&nbsp;*threadprivate ディレクティブ*
 
 *threadprivate ディレクティブ*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp threadprivate (** *変数一覧***)** *新しい行* 
+&nbsp;&nbsp;&nbsp;&nbsp;**# プラグマ omp threadprivate (** *変数一覧***)** *新しい行*
 
 *データ句*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**プライベート (** *変数一覧* **)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***変数一覧***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***変数一覧***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *変数一覧***)** <br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyprivate (***変数一覧***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**firstprivate (***変数一覧***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**lastprivate (** *変数一覧***)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**共有 (** *変数一覧* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**既定の (共有)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**既定 (なし)**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**削減 (***減少演算子***:***変数一覧***)** <br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***変数一覧***)** 
+&nbsp;&nbsp;&nbsp;&nbsp;**削減 (***減少演算子***:***変数一覧***)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**copyin (***変数一覧***)**
 
 *減少演算子*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;いずれか:  **+  \* -(& a) ^ &#124; (& a) (& a)&#124;&#124;**
