@@ -1,23 +1,13 @@
 ---
-title: C と C++ 言語および標準ライブラリ |Microsoft Docs
-ms.custom: ''
+title: C と C++ 言語および標準ライブラリ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 541dd02905f00cdd56042aca4df703a2d047f57f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: c071db1dcc6363e29f5dd7ca895330d738e021cf
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056626"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50614423"
 ---
 # <a name="cc-language-and-standard-libraries"></a>C と C++ 言語および標準ライブラリ
 
@@ -34,5 +24,5 @@ ms.locfileid: "46056626"
 |[C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)|C ランタイム (CRT) の Microsoft による実装の参照コンテンツです。|
 |[SafeInt ライブラリ](../windows/safeint-library.md)|オーバーフローのリスクなしで整数を処理する関数ライブラリの参照コンテンツです。|
 |[Visual C++](../visual-cpp-in-visual-studio.md)|Visual Studio での Visual C++ の主な機能について説明し、他の Visual C++ ドキュメントへのリンクを示します。|
-|[IDE と開発ツール](../ide/ide-and-tools-for-visual-cpp-development.md)|Visual Studio を使用する方法と、C++ アプリを作成、ビルド、配置する関連ツールについて説明する他の記事へのリンクが記載されています。|
+|[IDE と開発ツール](../ide/ide-and-tools-for-visual-cpp-development.md)。|Visual Studio を使用する方法と、C++ アプリを作成、ビルド、配置する関連ツールについて説明する他の記事へのリンクが記載されています。|
 |[Visual C++ の新機能](../what-s-new-for-visual-cpp-in-visual-studio.md)|このリリースの新機能および機能強化について説明します。|

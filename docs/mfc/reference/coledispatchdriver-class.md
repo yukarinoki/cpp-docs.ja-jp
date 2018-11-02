@@ -1,10 +1,6 @@
 ---
-title: COleDispatchDriver クラス |Microsoft Docs
-ms.custom: ''
+title: COleDispatchDriver クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - COleDispatchDriver
 - AFXDISP/COleDispatchDriver
@@ -18,8 +14,6 @@ f1_keywords:
 - AFXDISP/COleDispatchDriver::SetProperty
 - AFXDISP/COleDispatchDriver::m_bAutoRelease
 - AFXDISP/COleDispatchDriver::m_lpDispatch
-dev_langs:
-- C++
 helpviewer_keywords:
 - COleDispatchDriver [MFC], COleDispatchDriver
 - COleDispatchDriver [MFC], AttachDispatch
@@ -32,16 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: da7093d25e8221ce3fc3ec8d0d13f8bbc5b420d2
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: f6e52d993619929666d61f019c1f6d5d28243ab1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569227"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver クラス
 
@@ -105,7 +95,7 @@ OLE ディスパッチ インターフェイスでは、オブジェクトのメ
 
 `COleDispatchDriver`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -166,11 +156,11 @@ COleDispatchDriver(const COleDispatchDriver& dispatchSrc);
 
 ### <a name="example"></a>例
 
-  例をご覧ください[coledispatchdriver::createdispatch](#createdispatch)します。
+  [COleDispatchDriver::CreateDispatch](#createdispatch)の例を参照してください。
 
 ##  <a name="createdispatch"></a>  Coledispatchdriver::createdispatch
 
-作成、 [IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)インターフェイス オブジェクトにアタッチします、`COleDispatchDriver`オブジェクト。
+[IDispatch](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface) インターフェイス オブジェクトを作成して `COleDispatchDriver` オブジェクトにアタッチします。
 
 ```
 BOOL CreateDispatch(
@@ -240,7 +230,7 @@ void GetProperty(
 取得するプロパティを識別します。
 
 *vtProp*<br/>
-取得するプロパティを指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](#invokehelper)します。
+取得するプロパティを指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](#invokehelper)の「解説」をご覧ください。
 
 *pvProp*<br/>
 プロパティの値を受け取る変数のアドレス。 指定された型に一致する必要があります*vtProp*します。
@@ -304,7 +294,7 @@ void AFX_CDECL InvokeHelper(
 |VT_VARIANT|**バリアント**|
 |VT_UNKNOWN|LPUNKNOWN|
 
-*PbParamInfo*引数は、スペースで区切られたリストの**vts _** 定数。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 使用可能な値が付いて、 [EVENT_CUSTOM](event-maps.md#event_custom)マクロ。
+*PbParamInfo*引数は、スペースで区切られたリストの**vts _** 定数。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 使用可能な値は、 [EVENT_CUSTOM](event-maps.md#event_custom) マクロで一覧表示されます。
 
 この関数は VARIANTARG 値にパラメーターを変換し、呼び出す、 [idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)メソッド。 `Invoke` の呼び出しに失敗すると、この関数は、例外をスローします。 SCODE (状態コード) がによって返される場合`IDispatch::Invoke`DISP_E_EXCEPTION は、この関数がスローされます、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクト。 それ以外の場合、スロー、 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
 
@@ -312,7 +302,7 @@ void AFX_CDECL InvokeHelper(
 
 ### <a name="example"></a>例
 
-  例をご覧ください[coledispatchdriver::createdispatch](#createdispatch)します。
+  [COleDispatchDriver::CreateDispatch](#createdispatch)の例を参照してください。
 
 ##  <a name="m_bautorelease"></a>  COleDispatchDriver::m_bAutoRelease
 
@@ -407,7 +397,7 @@ void AFX_CDECL SetProperty(
 設定するプロパティを識別します。
 
 *vtProp*<br/>
-設定するプロパティの型を指定します。 使用可能な値は、「解説」を参照してください。 [coledispatchdriver::invokehelper](#invokehelper)します。
+設定するプロパティの型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](#invokehelper)の「解説」をご覧ください。
 
 *...*<br/>
 1 つのパラメーターで指定された型の*vtProp*します。

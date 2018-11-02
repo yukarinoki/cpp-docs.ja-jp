@@ -1,30 +1,20 @@
 ---
-title: _povolit |Microsoft Docs
-ms.custom: ''
+title: _enable
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _enable
 - _enable_cpp
-dev_langs:
-- C++
 helpviewer_keywords:
 - enable intrinsic
 - _enable intrinsic
 - ssm instruction
 ms.assetid: 8bee669b-6bd8-4e25-9383-bb7d57295b4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ce3b59bc6665c4622078285a0c3b4b5011bc7d9b
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1d129db17b489972555efb0b5df2de52e01fa649
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433381"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631242"
 ---
 # <a name="enable"></a>_enable
 
@@ -38,7 +28,7 @@ ms.locfileid: "46433381"
 void _enable(void);
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|

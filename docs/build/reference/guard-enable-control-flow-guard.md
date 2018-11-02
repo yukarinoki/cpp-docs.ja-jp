@@ -1,26 +1,16 @@
 ---
-title: -guard (有効にする制御フロー ガード) |Microsoft Docs
-ms.custom: ''
+title: /guard (制御フロー ガードを有効にする)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
-dev_langs:
-- C++
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f480dde44073b6674985f4c814fdc0c476da0144
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8b15318ab7ae4233d6cf02a505ffe901bbe1d689
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45701468"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50516074"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (制御フロー ガードを有効にする)
 
@@ -48,7 +38,7 @@ ms.locfileid: "45701468"
 
 **/guard:cf** を使用してコンパイルされたコードは、オプションを使用してコンパイルされないライブラリとオブジェクト ファイルにリンクできます。 **/guard:cf** オプションを使用してリンクされ、CFG に対応したオペレーティング システム上で実行されるとき、このコードのみが CFG に保護されます。 オプションを使用せずにコンパイルされたコードは攻撃を停止しないので、コンパイルするすべてのコードにオプションを使用することをお勧めします。 CFG チェックには実行時の負荷が少しありますが、コンパイラの分析は、間接的なジャンプでのチェックを除去するように最適化を試みるので、安全であることが証明されます。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

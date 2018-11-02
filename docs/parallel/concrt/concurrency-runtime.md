@@ -1,27 +1,17 @@
 ---
-title: 同時実行ランタイム |Microsoft Docs
-ms.custom: ''
+title: コンカレンシー ランタイム
 ms.date: 07/20/2018
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, getting started
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ac7999919daa7dc028bd8e12e7d98b737afc4e36
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46413810"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50495954"
 ---
 # <a name="concurrency-runtime"></a>コンカレンシー ランタイム
 
@@ -108,10 +98,10 @@ C++ のコンカレンシー ランタイムにより、信頼性が高く、ス
 
 |||
 |-|-|
-|[非同期プログラミング パターンし、Hilo (C++ と XAML を使った Windows ストア アプリ) でのヒント](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|同時実行ランタイムを使用して C++ と XAML を使った Windows ランタイム アプリである Hilo での非同期操作を実装する方法について説明します。|
-|[同時実行ランタイムと Visual Studio 2010 での並列パターン ライブラリのコード サンプル](http://go.microsoft.com/fwlink/p/?linkid=183875)|コンカレンシー ランタイムの例を示すサンプル アプリケーションおよびユーティリティを提供します。|
-|[ネイティブ コードのブログでの並列プログラミング](http://go.microsoft.com/fwlink/p/?linkid=183873)|コンカレンシー ランタイムでの並列プログラミングに関する詳細なブログ記事を別途紹介しています。|
-|[C++ とネイティブ コードのフォーラムでの並列コンピューティング](http://go.microsoft.com/fwlink/p/?linkid=183874)|コンカレンシー ランタイムに関するコミュニティ ディスカッションに参加できます。|
+|[Hilo での非同期プログラミング パターンとヒント (C++ と XAML を使った Windows ストア アプリ)](https://msdn.microsoft.com/library/windows/apps/jj160321.aspx)|同時実行ランタイムを使用して C++ と XAML を使った Windows ランタイム アプリである Hilo での非同期操作を実装する方法について説明します。|
+|[Code samples for the Concurrency Runtime and Parallel Pattern Library in Visual Studio 2010 (Visual Studio 2010 でコンカレンシー ランタイムと並列パターン ライブラリのコード サンプル)](http://go.microsoft.com/fwlink/p/?linkid=183875)|コンカレンシー ランタイムの例を示すサンプル アプリケーションおよびユーティリティを提供します。|
+|[Parallel Programming in Native Code blog (ネイティブ コードでの並行プログラミング ブログ)](http://go.microsoft.com/fwlink/p/?linkid=183873)|コンカレンシー ランタイムでの並列プログラミングに関する詳細なブログ記事を別途紹介しています。|
+|[Parallel Computing in C++ and Native Code forum (C++ とネイティブ コードでの並列コンピューティング フォーラム)](http://go.microsoft.com/fwlink/p/?linkid=183874)|コンカレンシー ランタイムに関するコミュニティ ディスカッションに参加できます。|
 |[並列プログラミング](/dotnet/standard/parallel-programming/index)|.NET Framework で使用できる並列プログラミング モデルについてを説明します。|
 
 ## <a name="see-also"></a>関連項目

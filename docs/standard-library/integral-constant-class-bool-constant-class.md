@@ -1,31 +1,21 @@
 ---
-title: integral_constant クラス、bool_constant クラス | Microsoft Docs
-ms.custom: ''
+title: integral_constant クラス、bool_constant クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::integral_constant
 - XTR1COMMON/std::integral_constant
 - type_traits/std::bool_constant
 - XTR1COMMON/std::bool_constant
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::integral_constant [C++]
 - std::bool_constant [C++]
 ms.assetid: 11c002c6-4d31-4042-9341-f2543f43e108
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 053816fcf18ec29b5e405f84b545432e848d2b59
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ef65a669b322c386a3ccc886b484c67fe2a0ea06
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104011"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623133"
 ---
 # <a name="integralconstant-class-boolconstant-class"></a>integral_constant クラス、bool_constant クラス
 
@@ -83,7 +73,7 @@ integral_constant<int, 5> == 5
 integral_constant<bool, false> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

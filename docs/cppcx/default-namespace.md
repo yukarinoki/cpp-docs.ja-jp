@@ -1,22 +1,13 @@
 ---
-title: 既定の名前空間 |Microsoft Docs
-ms.custom: ''
+title: 既定の名前空間
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 4712e9dc-57ba-43cc-811e-022e1dae4de8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c1cc9c3a133cc9931337f608c6f26eb059376ade
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: ffea9e1132b4c66f38661392cbafb94635b318e1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44108933"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50558721"
 ---
 # <a name="default-namespace"></a>既定の名前空間
 
@@ -55,7 +46,7 @@ namespace default;
 |`uint64`|64 ビット符号なし整数。|
 |`uint8`|8 ビット符号なし数値。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー:** vccorlib.h
 

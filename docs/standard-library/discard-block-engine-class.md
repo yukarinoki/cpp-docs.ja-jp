@@ -1,27 +1,17 @@
 ---
-title: discard_block_engine クラス | Microsoft Docs
-ms.custom: ''
+title: discard_block_engine クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - random/std::discard_block_engine
-dev_langs:
-- C++
 helpviewer_keywords:
 - discard_block_engine class
 ms.assetid: aa84808e-38fe-4fa0-9f73-d5b9a653345b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c9620003c1f57af966628dda2a5a0ab8352c6d2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: a0df754f53b52c134b9eb1126f90882ceaaf1e2f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44107329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50676825"
 ---
 # <a name="discardblockengine-class"></a>discard_block_engine クラス
 
@@ -58,7 +48,7 @@ class discard_block_engine;
 
 このテンプレート クラスは、ベースのエンジンによって返された値の一部を破棄することで値を生成するエンジン アダプターを表します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<random>
 

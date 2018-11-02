@@ -1,11 +1,6 @@
 ---
-title: clog10、clog10f、clog10l | Microsoft Docs
-ms.custom: ''
+title: clog10、clog10f、clog10l
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - clog10
 - clog10f
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/clog10
 - complex/clog10f
 - complex/clog10l
-dev_langs:
-- C++
 helpviewer_keywords:
 - clog10 function
 - clog10f function
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 81b082aff192a866ec46d22120806e6ba89379d2
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32394682"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50506913"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10、clog10f、clog10l
 
@@ -82,13 +71,13 @@ _Lcomplex clog10( _Lcomplex z );  // C++ only
 |NaN|NaN|
 |+ ∞|+ ∞|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**clog10**を受け取り、返します **_Fcomplex**と **_Lcomplex**値。 C プログラムでは、 **clog10**常に受け取りを返す、 **_Dcomplex**値。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **clog10**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**clog10**は、 **_Dcomplex**値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**clog10**、 **clog10f**、 **clogl**|\<complex.h>|\<ccomplex>|
 

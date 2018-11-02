@@ -1,30 +1,20 @@
 ---
-title: _U_STRINGorID クラス |Microsoft Docs
-ms.custom: ''
+title: _U_STRINGorID クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - ATL._U_STRINGorID
 - ATL::_U_STRINGorID
 - _U_STRINGorID
-dev_langs:
-- C++
 helpviewer_keywords:
 - _U_STRINGorID class
 - U_STRINGorID class
 ms.assetid: 443cdc00-d265-4b27-8ef3-2feb95f3e5e3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 000e43926a83bdd7457c33c656383ae44dce6259
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 8f94322912dc8645c88d32ac721d35bd2deb70af
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46046278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50557431"
 ---
 # <a name="ustringorid-class"></a>_U_STRINGorID クラス
 
@@ -59,7 +49,7 @@ class _U_STRINGorID
 
 クラスは、2 つのコンス トラクター オーバー ロードを定義します: LPCTSTR 引数を受け取るいずれかと UINT 引数を受け取る他。 UINT 引数を持つときはマクロと、クラスの 1 つのデータのメンバーに保存された結果を使用して Windows リソース管理機能と互換性のあるリソースの種類に変換[m_lpstr](#_u_stringorid__m_lpstr)します。 LPCTSTR コンス トラクターの引数は、変換せずに直接格納されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 

@@ -1,8 +1,6 @@
 ---
-title: _invalid_parameter、_invalid_parameter_noinfo、_invalid_parameter_noinfo_noreturn、_invoke_watson | Microsoft Docs
-ms.custom: ''
+title: _invalid_parameter、_invalid_parameter_noinfo、_invalid_parameter_noinfo_noreturn、_invoke_watson
 ms.date: 11/04/2016
-ms.topic: reference
 apiname:
 - _invalid_parameter
 - _invalid_parameter_noinfo
@@ -21,16 +19,12 @@ f1_keywords:
 - CORECRT/_invoke_watson
 - _invoke_watson
 ms.assetid: a4d6f1fd-ce56-4783-8719-927151a7a814
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 26e66b6ad47af521bb5188860d7d987e9d3b5f6b
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: e43d5caaeebb6303d209d870c804357117812985
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44100839"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50478365"
 ---
 # <a name="invalidparameter-invalidparameternoinfo-invalidparameternoinfonoreturn-invokewatson"></a>_invalid_parameter、_invalid_parameter_noinfo、_invalid_parameter_noinfo_noreturn、_invoke_watson
 
@@ -93,7 +87,7 @@ _invoke_watson(
 
 ときに、既定のハンドラー **_invoke_watson**と呼ばれる場合は、プロセッサがサポートしている場合、 [_ _fastfail を](../../intrinsics/fastfail.md)操作のパラメーターを使用してメソッドが呼び出された**FAST_FAIL_INVALID_ARG**プロセスが終了します。 それ以外の場合、Fail Fast 例外が発生します。これは、アタッチされているデバッガーでキャッチできます。 プロセスの継続が許可された場合は、Windows への呼び出しによって終了**TerminateProcess**の例外コード状態を使用して機能**STATUS_INVALID_CRUNTIME_PARAMETER**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|------------------|

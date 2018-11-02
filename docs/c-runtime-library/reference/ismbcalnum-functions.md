@@ -1,10 +1,6 @@
 ---
-title: _ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l | Microsoft Docs
-ms.custom: ''
+title: _ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbcalpha
 - _ismbcalnum
@@ -36,8 +32,6 @@ f1_keywords:
 - _ismbcalnum_l
 - _ismbcalnum
 - ismbcdigit_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbcalpha function
 - _ismbcalnum function
@@ -52,16 +46,12 @@ helpviewer_keywords:
 - ismbcalnum_l function
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a90fe131ff216bd9f758f3312d366e0ec29d79ae
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404270"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50532224"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 
@@ -112,23 +102,23 @@ int _ismbcdigit_l
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 場合*c*< = 255 は、対応する **_ismbb 系**ルーチン (たとえば、 **_ismbcalnum**に対応する **_ismbbalnum**) では、結果は、戻り値の対応する **_ismbb 系**ルーチンです。
+これらの各ルーチンでは、文字がテスト条件を満たす場合に 0 以外の値が返され、テスト条件を満たさない場合に 0 が返されます。 場合*c*< = 255 は、対応する **_ismbb 系**ルーチン (たとえば、 **_ismbcalnum**に対応する **_ismbbalnum**)、結果は、戻り値に対応する **_ismbb 系**ルーチン。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 これらの各ルーチンは特定の条件で特定のマルチバイト文字をテストします。
 
-これらの関数のバージョン、 **_l**そのロケールに依存する動作に現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの関数のバージョン、 **_l**ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用することを除き、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-|ルーチン|テスト条件|コード ページ 932 の例|
+|ルーチンによって返される値|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**、 **_ismbcalnum_l**|英数字|場合にのみ、0 以外の値を返します*c* ascii の 1 バイト表現である: の例を参照して **_ismbcdigit**と **_ismbcalpha**です。|
-|**_ismbcalpha**、 **_ismbcalpha_l**|alphabetic|場合にのみ、0 以外の値を返します*c* ascii の 1 バイト表現である: 0x41 < =*c*< = 0x5A または 0x61 < =*c*< = 0x7A; またはカタカナの文字。0xA6 < =*c*< 0 xdf を = です。|
-|**_ismbcdigit**、 **_ismbcdigit**|数字|場合にのみ、0 以外の値を返します*c* ASCII 数字の 1 バイト表現である: 0x30 < =*c*< 0x39 を = です。|
+|**_ismbcalnum**、 **_ismbcalnum_l**|英数字|場合にのみ、0 以外の値を返します*c* ASCII の英字の 1 バイト表現である: の例を参照してください。 **_ismbcdigit**と **_ismbcalpha**します。|
+|**_ismbcalpha**、 **_ismbcalpha_l**|alphabetic|場合にのみ、0 以外の値を返します*c* ASCII の英字の 1 バイト表現である: 0x41 < =*c*< = 0x5A または 0x61 < =*c*< = 0x7A; またはカタカナの文字。0xA6 < =*c*< = 0 xdf します。|
+|**_ismbcdigit**、 **_ismbcdigit**|数字|場合にのみ、0 以外の値を返します*c* ASCII 数字の 1 バイト表現である: 0x30 < =*c*< = 0x39 します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbcalnum**、 **_ismbcalnum_l**|\<mbstring.h>|
 |**_ismbcalpha**、 **_ismbcalpha_l**|\<mbstring.h>|

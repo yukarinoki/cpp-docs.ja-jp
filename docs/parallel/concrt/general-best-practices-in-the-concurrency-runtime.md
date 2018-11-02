@@ -1,29 +1,19 @@
 ---
-title: 同時実行ランタイムでの一般的なベスト プラクティス |Microsoft Docs
-ms.custom: ''
+title: コンカレンシー ランタイムに関する全般的なベスト プラクティス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Concurrency Runtime, general best practices
 ms.assetid: ce5c784c-051e-44a6-be84-8b3e1139c18b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3b998048db9f604ebda24d03eddc7e296519abb7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 445e985117929cae2ec9a26a1e148b3eff55c2a6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46392906"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647697"
 ---
 # <a name="general-best-practices-in-the-concurrency-runtime"></a>コンカレンシー ランタイムに関する全般的なベスト プラクティス
 
-ここでは、同時実行ランタイムの複数の領域に適用されるベスト プラクティスについて説明します。
+ここでは、コンカレンシー ランタイムの複数の領域に適用されるベスト プラクティスについて説明します。
 
 ##  <a name="top"></a> セクション
 
@@ -45,7 +35,7 @@ ms.locfileid: "46392906"
 
 ##  <a name="synchronization"></a> 可能であれば、協調的同期コンストラクトを使用して、
 
-同時実行ランタイムには、外部同期オブジェクトを必要としない同時実行セーフのコンストラクトが多数用意されています。 など、 [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)クラスは、同時実行セーフの追加と要素の操作にアクセスします。 ただし、リソースへの排他アクセスを必要とする場合、ランタイムは、 [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)、 [:reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)、および[同時実行: イベント](../../parallel/concrt/reference/event-class.md)クラス。 これらの型は協調的に動作するため、タスク スケジューラは、最初のタスクがデータを待っている間、処理リソースを別のコンテキストに再割り当てすることができます。 可能であれば、協調的に動作しない他の同期機構 (Windows API に用意されている同期機構など) の代わりに、これらの同期型を使用してください。 これらの同期型とコード例の詳細については、次を参照してください。[同期データ構造](../../parallel/concrt/synchronization-data-structures.md)と[Windows API への同期データ構造の比較](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)します。
+コンカレンシー ランタイムには、外部同期オブジェクトを必要としないコンカレンシー セーフのコンストラクトが多数用意されています。 など、 [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)クラスは、同時実行セーフの追加と要素の操作にアクセスします。 ただし、リソースへの排他アクセスを必要とする場合、ランタイムは、 [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)、 [:reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)、および[同時実行: イベント](../../parallel/concrt/reference/event-class.md)クラス。 これらの型は協調的に動作するため、タスク スケジューラは、最初のタスクがデータを待っている間、処理リソースを別のコンテキストに再割り当てすることができます。 可能であれば、協調的に動作しない他の同期機構 (Windows API に用意されている同期機構など) の代わりに、これらの同期型を使用してください。 これらの同期型とコード例の詳細については、次を参照してください。[同期データ構造](../../parallel/concrt/synchronization-data-structures.md)と[Windows API への同期データ構造の比較](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)します。
 
 [[トップ](#top)]
 
@@ -88,7 +78,7 @@ ms.locfileid: "46392906"
 
 同時実行ランタイムがなどの同期プリミティブを提供します[concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)、協調的ブロッキングや譲渡を互いにタスクを有効にします。 最初のタスクが協調的なブロッキングや譲渡を行った場合、タスク スケジューラは、そのタスクがデータを待っている間、処理リソースを別のコンテキストに再割り当てすることができます。
 
-同時実行ランタイムに用意されている協調的ブロッキング機構を使用できない場合もあります。 たとえば、使用する外部ライブラリによっては、別の同期機構が使用されることがあります。 別の例としては、Windows API `ReadFile` 関数を使用してネットワーク接続からデータを読み取る場合など、非常に長い待機時間が発生するような操作を実行する場合です。 このような場合、オーバーサブスクリプションを使用して、該当するタスクがアイドル状態のときに他のタスクが実行されるようにすることができます。 オーバーサブスクリプションを使用すると、使用可能なハードウェア スレッドよりも多くのスレッドを作成できます。
+コンカレンシー ランタイムに用意されている協調的ブロッキング機構を使用できない場合もあります。 たとえば、使用する外部ライブラリによっては、別の同期機構が使用されることがあります。 別の例としては、Windows API `ReadFile` 関数を使用してネットワーク接続からデータを読み取る場合など、非常に長い待機時間が発生するような操作を実行する場合です。 このような場合、オーバーサブスクリプションを使用して、該当するタスクがアイドル状態のときに他のタスクが実行されるようにすることができます。 オーバーサブスクリプションを使用すると、使用可能なハードウェア スレッドよりも多くのスレッドを作成できます。
 
 次の関数 `download` について考えます。この関数では、特定の URL にあるファイルをダウンロードします。 この例では、 [concurrency::Context::Oversubscribe](reference/context-class.md#oversubscribe)メソッドを一時的にアクティブなスレッド数を増やします。
 
@@ -100,7 +90,7 @@ ms.locfileid: "46392906"
 
 ##  <a name="memory"></a> 使用可能な場合に、同時実行メモリ管理関数
 
-メモリ管理関数を使用して、 [concurrency::alloc](reference/concurrency-namespace-functions.md#alloc)と[concurrency::free](reference/concurrency-namespace-functions.md#free)、きめ細かいタスク有効期間が比較的短い小さなオブジェクトを頻繁に割り当てることがある場合。 同時実行ランタイムでは、実行中のスレッドごとに別個のメモリ キャッシュが保持されます。 `Alloc` 関数と `Free` 関数は、ロックやメモリ バリアを使用することなく、これらのキャッシュからメモリの割り当てと解放を行います。
+メモリ管理関数を使用して、 [concurrency::alloc](reference/concurrency-namespace-functions.md#alloc)と[concurrency::free](reference/concurrency-namespace-functions.md#free)、きめ細かいタスク有効期間が比較的短い小さなオブジェクトを頻繁に割り当てることがある場合。 コンカレンシー ランタイムでは、実行中のスレッドごとに別個のメモリ キャッシュが保持されます。 `Alloc` 関数と `Free` 関数は、ロックやメモリ バリアを使用することなく、これらのキャッシュからメモリの割り当てと解放を行います。
 
 これらのメモリ管理関数の詳細については、次を参照してください。[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。 これらの関数を使用する例を参照してください[方法: 使用 Alloc と Free メモリ パフォーマンスを向上させる](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)します。
 
@@ -108,7 +98,7 @@ ms.locfileid: "46392906"
 
 ##  <a name="raii"></a> RAII を使用して、同時実行オブジェクトの有効期間を管理するには
 
-同時実行ランタイムでは、例外処理を使用して、取り消し処理などの機能を実装します。 したがって、ランタイムを呼び出す場合や、ランタイムを呼び出す別のライブラリを呼び出す場合は、例外セーフなコードを記述してください。
+コンカレンシー ランタイムでは、例外処理を使用して、取り消し処理などの機能を実装します。 したがって、ランタイムを呼び出す場合や、ランタイムを呼び出す別のライブラリを呼び出す場合は、例外セーフなコードを記述してください。
 
 *Resource Acquisition Is Initialization* (RAII) パターンは、特定のスコープでの同時実行オブジェクトの有効期間を安全に管理する方法の 1 つ。 RAII パターンでは、データ構造はスタック上に割り当てられます。 データ構造は、作成されたときにリソースを初期化または取得し、破棄されたときにそのリソースを破棄または解放します。 RAII パターンでは、外側のスコープが終了する前に、常にデストラクターが呼び出されます。 このパターンは、関数に複数の `return` ステートメントが含まれる場合に便利です。 また、このパターンは、例外セーフなコードを記述するのにも役立ちます。 `throw` ステートメントによってスタックがアンワインドされると、RAII オブジェクトのデストラクターが呼び出されます。そのため、リソースが常に正しく削除または解放されます。
 
@@ -118,7 +108,7 @@ ms.locfileid: "46392906"
 
 [!code-cpp[concrt-account-transactions#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_4.h)]
 
-次の例では、`account` オブジェクトに対して複数のトランザクションを並列に実行します。 この例では、`critical_section` オブジェクトを使用して、`account` オブジェクトへのアクセスを同期します。`account` クラスは同時実行セーフではないためです。 各並列操作では、`critical_section::scoped_lock` オブジェクトを使用して、操作が成功または失敗したときに `critical_section` オブジェクトのロックが確実に解除されるようにします。 口座残高が負の場合、`withdraw` 操作は例外をスローして失敗します。
+次の例では、`account` オブジェクトに対して複数のトランザクションを並列に実行します。 この例では、`critical_section` オブジェクトを使用して、`account` オブジェクトへのアクセスを同期します。`account` クラスはコンカレンシー セーフではないためです。 各並列操作では、`critical_section::scoped_lock` オブジェクトを使用して、操作が成功または失敗したときに `critical_section` オブジェクトのロックが確実に解除されるようにします。 口座残高が負の場合、`withdraw` 操作は例外をスローして失敗します。
 
 [!code-cpp[concrt-account-transactions#2](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_5.cpp)]
 
@@ -140,11 +130,11 @@ RAII パターンを使用して、同時実行オブジェクトの有効期間
 
 ##  <a name="global-scope"></a> グローバル スコープで同時実行オブジェクトを作成しません。
 
-グローバル スコープで同時実行オブジェクトを作成すると、アプリケーションでデッドロックやメモリ アクセス違反などの問題が発生する可能性があります。
+グローバル スコープでコンカレンシー オブジェクトを作成すると、アプリケーションでデッドロックやメモリ アクセス違反などの問題が発生する可能性があります。
 
-たとえば、同時実行ランタイム オブジェクトの作成時にスケジューラがまだ作成されていない場合、既定のスケジューラが作成されます。 グローバル オブジェクトの構築時に作成されるランタイム オブジェクトにより、ランタイムがこの既定のスケジューラを作成します。 ただし、このプロセスでは内部ロックが使用され、同時実行ランタイムのインフラストラクチャをサポートする他のオブジェクトの初期化を妨げる可能性があります。 まだ初期化されていない別のインフラストラクチャ オブジェクトでこの内部ロックが必要になる場合があるため、アプリケーションでデッドロックが発生する可能性があります。
+たとえば、コンカレンシー ランタイム オブジェクトの作成時にスケジューラがまだ作成されていない場合、既定のスケジューラが作成されます。 グローバル オブジェクトの構築時に作成されるランタイム オブジェクトにより、ランタイムがこの既定のスケジューラを作成します。 ただし、このプロセスでは内部ロックが使用され、コンカレンシー ランタイムのインフラストラクチャをサポートする他のオブジェクトの初期化を妨げる可能性があります。 まだ初期化されていない別のインフラストラクチャ オブジェクトでこの内部ロックが必要になる場合があるため、アプリケーションでデッドロックが発生する可能性があります。
 
-次の例では、グローバルの作成[concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)オブジェクト。 このパターンは、`Scheduler` クラスだけでなく、同時実行ランタイムに用意されている他のすべての型にも適用されます。 このパターンはアプリケーションの予期しない動作を引き起こす可能性があるため、使用しないことをお勧めします。
+次の例では、グローバルの作成[concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)オブジェクト。 このパターンは、`Scheduler` クラスだけでなく、コンカレンシー ランタイムに用意されている他のすべての型にも適用されます。 このパターンはアプリケーションの予期しない動作を引き起こす可能性があるため、使用しないことをお勧めします。
 
 [!code-cpp[concrt-global-scheduler#1](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_6.cpp)]
 
@@ -154,7 +144,7 @@ RAII パターンを使用して、同時実行オブジェクトの有効期間
 
 ##  <a name="shared-data"></a> 共有データ セグメントで同時実行オブジェクトを使用しないでください。
 
-同時実行ランタイムがによって作成されるデータ セクションなど、共有データ セクションでの同時実行オブジェクトの使用をサポートしていません、 [data_seg](../../preprocessor/data-seg.md) `#pragma`ディレクティブ。 同時実行オブジェクトがプロセス境界をまたいで共有される場合、ランタイムが不整合な状態または無効な状態になる可能性があります。
+同時実行ランタイムがによって作成されるデータ セクションなど、共有データ セクションでの同時実行オブジェクトの使用をサポートしていません、 [data_seg](../../preprocessor/data-seg.md) `#pragma`ディレクティブ。 コンカレンシー オブジェクトがプロセス境界をまたいで共有される場合、ランタイムが不整合な状態または無効な状態になる可能性があります。
 
 [[トップ](#top)]
 

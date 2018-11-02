@@ -1,28 +1,17 @@
 ---
-title: 未割り当てシンボルの削除 |Microsoft Docs
-ms.custom: ''
+title: 未使用のシンボルの削除
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - symbols [C++], deleting
 - symbols [C++], unassigned
 - unassigned symbols
 ms.assetid: 47641c46-1bad-44fb-8f85-79ae36919f13
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: c8ee38503698f6f4553ced630e996f58c76e08c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 64ae86f3cc3c46e697e8c9ce95a873c5dd8429aa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46436560"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50534720"
 ---
 # <a name="deleting-unassigned-symbols"></a>未使用のシンボルの削除
 
@@ -33,7 +22,7 @@ ms.locfileid: "46436560"
    > [!NOTE]
    > リソース ファイル内の未使用のシンボルを削除する前に、プログラム内の他の場所や、コンパイル時に含められるリソース ファイルで使用されていないことを確認してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

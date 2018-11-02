@@ -1,10 +1,6 @@
 ---
-title: timed_mutex クラス |Microsoft Docs
-ms.custom: ''
+title: timed_mutex クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - mutex/std::timed_mutex
 - mutex/std::timed_mutex::timed_mutex
@@ -13,11 +9,7 @@ f1_keywords:
 - mutex/std::timed_mutex::try_lock_for
 - mutex/std::timed_mutex::try_lock_until
 - mutex/std::timed_mutex::unlock
-dev_langs:
-- C++
 ms.assetid: cd198081-6f38-447a-9dba-e06dfbfafe59
-author: corob-msft
-ms.author: corob
 helpviewer_keywords:
 - std::timed_mutex [C++]
 - std::timed_mutex [C++], timed_mutex
@@ -26,14 +18,12 @@ helpviewer_keywords:
 - std::timed_mutex [C++], try_lock_for
 - std::timed_mutex [C++], try_lock_until
 - std::timed_mutex [C++], unlock
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4ed4f12e127c6ceef212ffefc512e764dd53fb19
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 9aae1205866a0bf982ab7c41b792aac0f63ea149
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45706551"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50524873"
 ---
 # <a name="timedmutex-class"></a>timed_mutex クラス
 
@@ -64,7 +54,7 @@ class timed_mutex;
 |[try_lock_until](#try_lock_until)|指定した時刻まで `mutex` の所有権の取得を試みます。|
 |[unlock](#unlock)|`mutex` の所有権を解放します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<mutex >
 

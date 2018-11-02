@@ -1,7 +1,7 @@
 ---
 title: C 加法演算子 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -18,12 +18,12 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7be460ace4e407a328c0cf23c9e6c9af09d17ca0
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 339904e3fe75c712254f3a7802fc76a0e283c8e5
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101480"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808356"
 ---
 # <a name="c-additive-operators"></a>C 加法演算子
 
@@ -31,14 +31,13 @@ ms.locfileid: "46101480"
 
 ## <a name="syntax"></a>構文
 
-*additive-expression*: *multiplicative-expression*
-
-*additive-expression*  **+**  *multiplicative-expression*
-
-*additive-expression*  **-**  *multiplicative-expression*
+*additive-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*multiplicative-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression* **+** *multiplicative-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression* **-** *multiplicative-expression*
 
 > [!NOTE]
->  *additive-expression* の構文に *multiplicative-expression* が含まれてますが、乗算を使用する式が必要なわけではありません。 「[C 言語の構文概要](../c-language/c-language-syntax-summary.md)」で、*multiplicative-expression*、*cast-expression*、および *unary-expression* の構文を参照してください。
+> *additive-expression* の構文に *multiplicative-expression* が含まれてますが、乗算を使用する式が必要なわけではありません。 「[C 言語の構文概要](../c-language/c-language-syntax-summary.md)」で、*multiplicative-expression*、*cast-expression*、および *unary-expression* の構文を参照してください。
 
 オペランドは整数値または浮動小数点値になります。 各演算子の説明に記載されているように、一部の加算演算はポインター値に対しても実行できます。
 

@@ -1,33 +1,23 @@
 ---
-title: コンパイラ エラー C3012 |Microsoft Docs
-ms.custom: ''
+title: コンパイラ エラー C3012
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3012
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3012
 ms.assetid: cc7040b1-b3fb-4da6-a474-877914d30332
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 99bdac5ffb75978479ae7ef420a48b3d1b2f8e64
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 9fe0ac7d3637cad3a5571c4631345dac1a0021bb
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063672"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50503090"
 ---
 # <a name="compiler-error-c3012"></a>コンパイラ エラー C3012
 
 > '*組み込み*': 組み込み関数は、並行領域内で直接許可されていません
 
-A[コンパイラ組み込み](../../intrinsics/compiler-intrinsics.md)で関数が許可されていません、`omp parallel`リージョン。 この問題を修正するには、組み込み関数をリージョンの外に移動または非組み込みと同等に置き換えます。
+[コンパイラ組み込み関数](../../intrinsics/compiler-intrinsics.md) は、 `omp parallel` 領域では使用できません。 この問題を修正するには、組み込み関数をリージョンの外に移動または非組み込みと同等に置き換えます。
 
 ## <a name="example"></a>例
 

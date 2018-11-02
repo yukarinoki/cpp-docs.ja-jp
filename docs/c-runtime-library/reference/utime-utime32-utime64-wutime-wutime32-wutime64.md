@@ -1,10 +1,6 @@
 ---
-title: _utime、_utime32、_utime64、_wutime、_wutime32、_wutime64 | Microsoft Docs
-ms.custom: ''
+title: _utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _utime64
 - _utime
@@ -40,8 +36,6 @@ f1_keywords:
 - _utime32
 - _tutime64
 - _wutime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - tutime function
 - utime32 function
@@ -64,16 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd8737d6391ea1effd50e967008520b2d77707e6
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32417712"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471094"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 
@@ -118,7 +108,7 @@ int _wutime64(
 
 ## <a name="return-value"></a>戻り値
 
-これらの各関数は、ファイルの変更時刻が変更されると、0 を返します。 戻り値-1 はエラーを示します。 無効なパラメーターが渡された場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返しますと**errno**は、次の値のいずれかに設定します。
+これらの各関数は、ファイルの変更時刻が変更されると、0 を返します。 戻り値-1 はエラーを示します。 無効なパラメーターが渡された場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は-1 を返し、 **errno**値は次のいずれかに設定されています。
 
 |errno の値|条件|
 |-|-|
@@ -129,24 +119,24 @@ int _wutime64(
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
-変更日が 1970 年 1 月 1 日午前 0 時以降で、使用する関数の終了日より前の場合、ファイルの日付を変更できます。 **_utime**と **_wutime**のため終了日は UTC の 3000 年 12 月 31 日 23時 59分: 59 秒、64 ビットの時刻の値を使用します。 場合 **_USE_32BIT_TIME_T**が定義されている、終了日の 23時 59分: 59 2038 年 1 月 18 日 (utc) が従来の動作を強制的にします。 **_utime32**または **_wutime32**かどうかに関係なく 32 ビット時刻型を使用して **_USE_32BIT_TIME_T**定義は、常に、以前の終了日。 **_utime64**または **_wutime64**常に 64 ビットの時刻型を使用するため、これらの関数は、以降の終了日を常にサポートします。
+変更日が 1970 年 1 月 1 日午前 0 時以降で、使用する関数の終了日より前の場合、ファイルの日付を変更できます。 **_utime**と **_wutime**終了日は UTC の 3000 年 12 月 31 日 23時 59分: 59 秒、64 ビットの時刻の値を使用します。 場合 **_USE_32BIT_TIME_T**が定義されている、以前の動作を強制的に終了日には、2038 年 1 月 18 日 23時 59分: 59 までです。 **_utime32**または **_wutime32**かどうかに関係なく 32 ビット時刻型を使用して、 **_USE_32BIT_TIME_T**が定義され、常に以前の終了日が設定されます。 **_utime64**または **_wutime64**のため、これらの関数は、後の終了日を常にサポートには 64 ビットの時刻型を常に使用します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Utime**関数によって指定されたファイルの変更時刻を設定する*filename * *。* プロセスは、時刻を変更するために、ファイルに対して書き込みアクセス権が必要です。 Windows オペレーティング システムでは、アクセス時間との変更時刻を変更できます、 **_utimbuf**構造体。 場合*回*は、 **NULL**ポインター、最終更新日は現在の現地時刻に設定します。 それ以外の場合、*回*型の構造体を指す必要があります **_utimbuf**に定義されている。H.
+**_Utime**関数で指定されたファイルの変更時刻を設定する*filename * *。* プロセスは、時刻を変更するために、ファイルに対して書き込みアクセス権が必要です。 アクセス時刻および変更時刻を変更する、Windows オペレーティング システムで、 **_utimbuf**構造体。 場合*回*は、 **NULL**ポインター、変更時刻は、現在の現地時刻に設定されます。 それ以外の場合、*回*型の構造体をポイントする必要があります **_utimbuf**の定義。H.
 
-**_Utimbuf**構造体で使用されるファイル アクセス、および変更時刻を格納する **_utime**ファイル変更日付を変更します。 構造には、次のフィールドは、型の両方とも**time_t**:
+**_Utimbuf**構造体で使用されるファイルへのアクセスおよび変更時刻を格納する **_utime**ファイル変更日付を変更します。 構造には、型のどちらも、次のフィールドは**time_t**:
 
 |フィールド||
 |-|-|
 **actime**|ファイルへのアクセス時刻
 **modtime**|ファイルの変更時刻
 
-特定のバージョンの **_utimbuf**構造 (**_utimebuf32**と **_ _utimbuf64**) 時の型の 32 ビットおよび 64 ビット バージョンを使用して定義されます。 これらは、この関数の 32 ビットおよび 64 ビットの特定バージョンで使用されます。 **_utimbuf**しない限り、64 ビット時刻型を使用して既定ではそれ自体 **_USE_32BIT_TIME_T**が定義されています。
+特定のバージョンの **_utimbuf**構造 (**_utimebuf32**と **_ _utimbuf64**) 時の型の 32 ビットおよび 64 ビット バージョンを使用して定義されます。 これらは、この関数の 32 ビットおよび 64 ビットの特定バージョンで使用されます。 **_utimbuf**しない限り、64 ビット時刻型を使用して既定自体 **_USE_32BIT_TIME_T**が定義されています。
 
-**_utime**と同じ **_futime**する点を除いて、 *filename*の引数 **_utime**はファイル名またはパスのファイル記述子ではなく、ファイルをファイルを開きます。
+**_utime**と同じです **_futime**する点を除いて、 *filename*の引数 **_utime**がファイル名またはパスのファイル記述子ではなく、ファイルをファイルを開きます。
 
-**_wutime**のワイド文字バージョンは、 **_utime**以外の場合は、 *filename*に渡す引数 **_wutime**ワイド文字列です。 それ以外では、これらの関数の動作は同じです。
+**_wutime**のワイド文字バージョンです **_utime**、 *filename*への引数 **_wutime**はワイド文字列です。 それ以外では、これらの関数の動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -156,9 +146,9 @@ int _wutime64(
 |**_tutime32**|**_utime32**|**_utime32**|**_wutime32**|
 |**_tutime64**|**_utime64**|**_utime64**|**_wutime64**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|省略可能なヘッダー|
+|ルーチンによって返される値|必須ヘッダー|省略可能なヘッダー|
 |-------------|----------------------|----------------------|
 |**_utime**、 **_utime32**、 **_utime64**|\<sys/utime.h>|\<errno.h>|
 |**_utime64**|\<sys/utime.h>|\<errno.h>|
@@ -168,7 +158,7 @@ int _wutime64(
 
 ## <a name="example"></a>例
 
-このプログラムは **_utime**ファイル変更時刻を現在の時刻に設定します。
+このプログラムを使用して **_utime**ファイル変更時刻を現在の時刻に設定します。
 
 ```C
 // crt_utime.c

@@ -1,10 +1,6 @@
 ---
-title: isleadbyte、_isleadbyte_l | Microsoft Docs
-ms.custom: ''
+title: isleadbyte、_isleadbyte_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isleadbyte_l
 - isleadbyte
@@ -25,8 +21,6 @@ f1_keywords:
 - _istleadbyte
 - _isleadbyte_l
 - isleadbyte
-dev_langs:
-- C++
 helpviewer_keywords:
 - lead bytes
 - _isleadbyte_l function
@@ -34,16 +28,12 @@ helpviewer_keywords:
 - istleadbyte function
 - isleadbyte function
 ms.assetid: 3b2bcf09-d82b-4803-9e80-59d04942802a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 682cdde6983c5e590920c43418e510b9c275b34e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 1a3f427e49e53bb553020da100b0e713350fab3f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401019"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531890"
 ---
 # <a name="isleadbyte-isleadbytel"></a>isleadbyte、_isleadbyte_l
 
@@ -66,15 +56,15 @@ int _isleadbyte_l( int c );
 
 ## <a name="return-value"></a>戻り値
 
-**isleadbyte**引数を満たしている場合、テスト条件または 0 以外の場合に、0 以外の値を返します。 "C"ロケールと 1 バイト文字セット (SBCS) のロケール**isleadbyte**常に 0 を返します。
+**isleadbyte**そうでない場合、テスト条件または 0 を引数が満たしている場合は、0 以外の値を返します。 文字セット (SBCS) のロケールの"C"ロケールでは 1 バイトで**isleadbyte**常に 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Isleadbyte**マクロがその引数がマルチバイト文字の最初のバイトの場合、0 以外の値を返します。 **isleadbyte** -1 から任意の整数引数に対して意味のある結果が生成されます (**EOF**) に**UCHAR_MAX** (0 xff) まで、包括的です。
+**Isleadbyte**マクロが、引数がマルチバイト文字の最初のバイトの場合、0 以外の値を返します。 **isleadbyte** -1 から任意の整数引数に対して意味のある結果が生成されます (**EOF**) に**UCHAR_MAX** (0 xff) まで。
 
-予想される引数の型**isleadbyte**は**int**です。 符号付き文字が渡されると、コンパイラが、整数に変換を予測できない結果を生成する、符号拡張しています。
+予想される引数の型の**isleadbyte**は**int**符号付き文字が渡された場合は、コンパイラが整数に変換が符号拡張、予期しない結果を生成しています。
 
-この関数のバージョン、 **_l**サフィックスは、そのロケールに依存する動作の現在のロケールの代わりに渡されたロケールを使用する点を除いて同じです。
+この関数のバージョン、 **_l**サフィックスは、そのロケールに依存する動作の現在のロケールではなく渡されたロケールを使用すると同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -82,9 +72,9 @@ int _isleadbyte_l( int c );
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_istleadbyte**|常に false を返します|**_isleadbyte**|常に false を返します|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**isleadbyte**|\<ctype.h>|
 |**_isleadbyte_l**|\<ctype.h>|

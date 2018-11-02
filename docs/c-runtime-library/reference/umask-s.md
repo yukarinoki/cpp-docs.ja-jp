@@ -1,10 +1,6 @@
 ---
-title: _umask_s | Microsoft Docs
-ms.custom: ''
+title: _umask_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _umask_s
 apilocation:
@@ -23,8 +19,6 @@ apitype: DLLExport
 f1_keywords:
 - unmask_s
 - _umask_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - masks, file-permission-setting
 - _umask_s function
@@ -33,16 +27,12 @@ helpviewer_keywords:
 - umask_s function
 - files [C++], permission settings for
 ms.assetid: 70898f61-bf2b-4d8d-8291-0ccaa6d33145
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d45cb3ded6fd2c3d7a380069a7d7f3fd79619810
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 878a22cb2884c36e792ff8dead1453582addb5b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414481"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480669"
 ---
 # <a name="umasks"></a>_umask_s
 
@@ -67,7 +57,7 @@ errno_t _umask_s(
 
 ## <a name="return-value"></a>戻り値
 
-場合、エラー コードを返します*モード*有効なモードで指定されていない、または*pOldMode*ポインターが**NULL**です。
+場合、エラー コードを返します*モード*で有効なモードが指定されていない、または*pOldMode*ポインターが**NULL**します。
 
 ### <a name="error-conditions"></a>エラー条件
 
@@ -76,13 +66,13 @@ errno_t _umask_s(
 |任意|**NULL**|**EINVAL**|変更されない|
 |無効なモード|任意|**EINVAL**|変更されない|
 
-上記のいずれかの条件が発生すると、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラ―が呼び出されます。 続けるには、実行が許可された場合 **_umask_s**返します**EINVAL**設定と**errno**に**EINVAL**です。
+上記のいずれかの条件が発生すると、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラ―が呼び出されます。 続けるには、実行が許可された場合 **_umask_s**返します**EINVAL**設定と**errno**に**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Umask_s**関数では、現在のプロセスのファイルのアクセス許可マスクを設定で指定されたモードに*モード*です。 ファイルのアクセス許可マスクを新しく作成したファイルのアクセス許可の設定を変更 **_creat**、 **_open**、または **_sopen**です。 マスクのビットが 1 の場合は、ファイルの要求されたアクセス許可値に対応するビットは 0 (許可しない) に設定されます。 マスクのビットが 0 の場合は、対応するビットは変更されません。 新しいファイルのアクセス許可の設定は、そのファイルが最初に閉じられるまで、設定されません。
+**_Umask_s**関数では、現在のプロセスのファイルのアクセス許可マスクを設定で指定されたモードに*モード*します。 ファイルのアクセス許可マスクは、新しく作成したファイルのアクセス許可の設定を変更します。 **_creat**、 **_open**、または **_sopen**します。 マスクのビットが 1 の場合は、ファイルの要求されたアクセス許可値に対応するビットは 0 (許可しない) に設定されます。 マスクのビットが 0 の場合は、対応するビットは変更されません。 新しいファイルのアクセス許可の設定は、そのファイルが最初に閉じられるまで、設定されません。
 
-整数型の式*pmode* SYS\STAT で定義されている、次のマニフェスト定数の一方または両方が含まれています。H:
+整数式*pmode* SYS\STAT で定義されている、次のマニフェスト定数の一方または両方が含まれています。H:
 
 |*pmode*||
 |-|-|
@@ -90,13 +80,13 @@ errno_t _umask_s(
 |**_S_IREAD**|読み取りが許可されます。|
 |**_S_IREAD** \| **_S_IWRITE**|読み取りと書き込みが許可されます。|
 
-これらはビットごとの OR 演算子で結合両方の定数を指定する場合 ( **|** )。 場合、*モード*引数は **_S_IREAD**読み取りが許可されていません (ファイルは書き込み専用)。 場合、*モード*引数は **_S_IWRITE**書き込みが許可されていません (ファイルは読み取り専用)。 たとえば、マスクに書き込みビットが設定されている場合、新しいファイルはいずれも読み取り専用となります。 MS-DOS および Windows オペレーティング システムでは、すべてのファイルは読み取り可能です。書き込み専用のアクセス許可を与えることはできません。 したがって、読み取りとビットを設定 **_umask_s**ファイルのモードにも何も起こりません。
+ビットごとの OR 演算子で参加している両方の定数を指定する場合 ( **|** )。 場合、*モード*引数が **_S_IREAD**読み取りが許可されていません (ファイルは書き込み専用)。 場合、*モード*引数が **_S_IWRITE**書き込みが許可されていません (ファイルは読み取り専用)。 たとえば、マスクに書き込みビットが設定されている場合、新しいファイルはいずれも読み取り専用となります。 MS-DOS および Windows オペレーティング システムでは、すべてのファイルは読み取り可能です。書き込み専用のアクセス許可を与えることはできません。 そのため、読み取りのビットを設定 **_umask_s**ファイルのモードに影響を与えません。
 
-場合*pmode*のマニフェスト定数のいずれかの組み合わせではありませんか、別のセットが組み込まれており、定数の関数は無視されるものです。
+場合*pmode*マニフェスト定数のいずれかの組み合わせではないまたは代替のセットを組み込んで、定数の関数は単にそれらを無視します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_umask_s**|\<io.h> と \<sys/stat.h> と \<sys/types.h>|
 

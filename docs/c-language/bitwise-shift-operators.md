@@ -1,7 +1,7 @@
 ---
 title: ビット処理シフト演算子 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 10/18/2018
 ms.technology:
 - cpp-language
 ms.topic: language-reference
@@ -17,34 +17,35 @@ author: mikeblome
 ms.author: mblome
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 4dfb5ffe13d8813eff0e3db4978eb1799bee1a85
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: b1abcfa37373702df371b42efbf228fe748bfc45
+ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46020122"
+ms.lasthandoff: 10/23/2018
+ms.locfileid: "49808200"
 ---
 # <a name="bitwise-shift-operators"></a>ビット処理シフト演算子
 
-シフト演算子では、2 番目のオペランドで指定された位置の数だけ最初のオペランドが左 (`<<`) または右 (`>>`) にシフトされます。
+シフト演算子では、2 番目のオペランドで指定された位置の数だけ最初のオペランドが左 (**&lt;&lt;**) または右 (**>>**) にシフトされます。
 
 ## <a name="syntax"></a>構文
 
-*shift-expression*: *additive-expression*
-
-*shift-expression*  `<<`  *additive-expression shift-expression*  `>>`  *additive-expression*
+*shift-expression*:<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **&lt;&lt;** *additive-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*shift-expression* **>>** *additive-expression*
 
 どちらのオペランドも整数値である必要があります。 これらの演算子は通常の算術変換を実行します。結果の型は、変換後の左オペランドの型です。
 
 左方向へシフトする場合、空いた右のビットは 0 に設定されます。 右方向へシフトする場合、空いた左ビットは、変換後に最初のオペランドの型に基づいて埋められます。 型が `unsigned` の場合は 0 に設定されます。 それ以外の場合は、符号ビットのコピーで埋められます。 オーバーフローのない左シフト演算子の例を次に示します。
 
-```
+```C
 expr1 << expr2
 ```
 
 上記のステートメントは 2<sup>expr2</sup> での乗算と同じになります。 右シフト演算子の例を次に示します。
 
-```
+```C
 expr1 >> expr2
 ```
 
@@ -54,7 +55,7 @@ expr1 >> expr2
 
 シフト演算子によって実行される変換ではオーバーフロー条件やアンダーフロー条件が提供されないため、シフト演算の結果を変換後の最初のオペランドの型で表すことができない場合、情報が失われる可能性があります。
 
-```
+```C
 unsigned int x, y, z;
 
 x = 0x00AA;

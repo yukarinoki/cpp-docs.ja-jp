@@ -1,10 +1,6 @@
 ---
-title: clock | Microsoft Docs
-ms.custom: ''
+title: clock
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - clock
 apilocation:
@@ -22,8 +18,6 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - clock
-dev_langs:
-- C++
 helpviewer_keywords:
 - processor time used, calculating
 - time, calculating processor
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - processor time used
 - calculating processor time used
 ms.assetid: 3e1853dd-498f-49ba-b06a-f2315f20904e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fd4b399900802d110ff5746a0ccb2424ba40e6b5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 4b58b33b533250447cf964134de9869bddee4498
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43209867"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50492640"
 ---
 # <a name="clock"></a>clock
 
@@ -62,7 +52,7 @@ clock_t clock( void );
 
 十分な時間を指定するには、によって返される値**クロック**の正の最大値を超える**clock_t**します。 ときに、プロセスが実行時間が長い、によって返される値**クロック**は常に`(clock_t)(-1)`ISO C99 標準 (7.23.2.1) と ISO C11 標準 (7.27.2.1) で指定されたとおりです。 Microsoft の実装**clock_t**として、**長い**、符号付き 32 ビット整数では、および**CLOCKS_PER_SEC**マクロは 1000 として定義されます。 これにより、最大**クロック**関数の戻り値は 2147483.647 秒、または約 24.8 日。 によって返される値に依存しない**クロック**でこの時間より長く実行されるプロセス。 64 ビットを使用する[時間](time-time32-time64.md)関数または、Windows [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904)関数を何年ものレコードの処理の経過時間。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

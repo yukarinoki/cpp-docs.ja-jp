@@ -1,14 +1,8 @@
 ---
-title: -Yu (プリコンパイル済みヘッダー ファイルの使用) |Microsoft Docs
-ms.custom: ''
+title: /Yu (プリコンパイル済みヘッダー ファイルの使用)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - /yu
-dev_langs:
-- C++
 helpviewer_keywords:
 - Yu compiler option [C++]
 - /Yu compiler option [C++]
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - .pch files, use existing
 - precompiled header files, use existing
 ms.assetid: 24f1bd0e-b624-4296-a17e-d4b53e374e1f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0b2935c10b5d99f4fa97163310a3e2cba3006b3
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 8d2b02c378179ac2603ec095efe89ce78f9f1afa
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45707747"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505343"
 ---
 # <a name="yu-use-precompiled-header-file"></a>/Yu (プリコンパイル済みヘッダー ファイルの使用)
 
@@ -69,7 +59,7 @@ ms.locfileid: "45707747"
 
 - [プリコンパイル済みヘッダー ファイルの作成](../../build/reference/creating-precompiled-header-files.md)
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. 指定[/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)プロジェクトで .cpp ファイルでします。
 
@@ -83,7 +73,7 @@ ms.locfileid: "45707747"
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- 「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A>」および「<xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>」を参照してください。
+- 「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.PrecompiledHeaderThrough%2A> 」および「 <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.UsePrecompiledHeader%2A>」を参照してください。
 
 ## <a name="examples"></a>使用例
 

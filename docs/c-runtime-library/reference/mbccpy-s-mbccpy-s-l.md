@@ -1,10 +1,6 @@
 ---
-title: _mbccpy_s、_mbccpy_s_l | Microsoft Docs
-ms.custom: ''
+title: _mbccpy_s、_mbccpy_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbccpy_s
 - _mbccpy_s_l
@@ -26,8 +22,6 @@ f1_keywords:
 - mbccpy_s_l
 - mbccpy_s
 - _mbccpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tccpy_s_l function
 - _tccpy_s function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _tccpy_s_l function
 - _mbccpy_s_l function
 ms.assetid: b6e965fa-53c1-4ec3-85ef-a1c4b4f2b2da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a3a52314209b62c818623e315757dcd358ec491
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: f9a7554630bd3b46196358c01c21b99978c53e53
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404029"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50575052"
 ---
 # <a name="mbccpys-mbccpysl"></a>_mbccpy_s、_mbccpy_s_l
 
@@ -96,7 +86,7 @@ errno_t _mbccpy_s_l(
 コピー先のバッファーのサイズ。
 
 *pCopied*<br/>
-コピーされたバイト数が格納されます (正常終了した場合は 1 または 2)。 渡す**NULL**数を考慮しない場合。
+コピーされたバイト数が格納されます (正常終了した場合は 1 または 2)。 渡す**NULL**数に関する重要でない場合。
 
 *src*<br/>
 コピーするマルチバイト文字。
@@ -106,15 +96,15 @@ errno_t _mbccpy_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 場合*src*または*dest*は**NULL**、数より多い場合、または**buffSizeinBytes**にバイトをコピーが*dest*、無効なパラメーター ハンドラーが呼び出される」の説明に従って、[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**と**errno**に設定されている**EINVAL**です。
+正常終了した場合は 0 を返します。失敗した場合はエラー コードを返します。 場合*src*または*dest*は**NULL**、数より多い場合、または**buffSizeinBytes**にバイトをコピーするは*dest*、無効なパラメーター ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**と**errno**に設定されている**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Mbccpy_s**関数から 1 つのマルチバイト文字をコピーする*src*に*dest*です。 場合*src*への暗黙的な呼び出しによって決定されるマルチバイト文字の先行バイトを指していない[_ismbblead](ismbblead-ismbblead-l.md)、1 バイトを*src*へのポインターをコピーします。 場合*src*先行バイトが後続のバイトへのポインターは 0 と無効ですしたがって、に 0 がコピー *dest*、 **errno**に設定されている**EILSEQ**、および。関数が返される**EILSEQ**です。
+**_Mbccpy_s**関数からの 1 つのマルチバイト文字のコピー *src*に*dest*します。 場合*src*への暗黙的な呼び出しによって決定されるマルチバイト文字の先行バイトを指していない[_ismbblead](ismbblead-ismbblead-l.md)、1 バイトを*src*へのポインターをコピーします。 場合*src*先行バイトが次のバイトへのポインターには、0 および無効なため、その後に 0 がコピーされます*dest*、 **errno**に設定されている**EILSEQ**、および関数が返される**EILSEQ**します。
 
-**_mbccpy_s**は null 終端文字を追加しません。 ただし、場合*src*に null をコピーし、null 文字を指す*dest* (これは、正規のコピーを 1 バイトだけです)。
+**_mbccpy_s** null 終端文字を追加しません。 ただし、場合*src*を null にコピーされますが、null 文字を指す*dest* (これは通常、1 バイトのコピーだけです)。
 
-値*pCopied*はコピーされたバイト数で塗りつぶされます。 操作が正常に終了した場合は、1 と 2 のどちらかの値となります。 場合**NULL**渡される、このパラメーターは無視されます。
+値*pCopied*コピーされたバイト数が入力されます。 操作が正常に終了した場合は、1 と 2 のどちらかの値となります。 場合**NULL**が渡される、このパラメーターは無視されます。
 
 |*src*|コピー *dest*|*pCopied*|戻り値|
 |-----------|----------------------|---------------|------------------|
@@ -123,9 +113,9 @@ errno_t _mbccpy_s_l(
 |後続が 0 以外の先行バイト|後続が 0 以外の先行バイト|2|0|
 |後続が 0 以外の先行バイト|0|1|**EILSEQ**|
 
-2 行目は、単に 1 行目の特殊なケースです。 表では、メモも*buffSizeInBytes* >= *pCopied*です。
+2 行目は、単に 1 行目の特殊なケースです。 表では、メモも*buffSizeInBytes* >= *pCopied*します。
 
-**_mbccpy_s**ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_s_l**と同じ **_mbccpy_s**する点を除いて **_mbccpy_s_l**のすべてのロケールに依存する動作に渡されたロケールを使用します。
+**_mbccpy_s**ロケールに依存する動作に現在のロケールを使用します。 **_mbccpy_s_l**と同じ **_mbccpy_s**する点を除いて **_mbccpy_s_l**の任意のロケールに依存する動作に渡されたロケールを使用します。
 
 C++ では、テンプレートのオーバーロードによってこれらの関数を簡単に使用できます。オーバーロードでは、バッファー長を自動的に推論できるため、サイズ引数を指定する必要がなくなります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -135,9 +125,9 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tccpy_s**|マクロまたはインライン関数に割り当てる。|**_mbccpy_s**|マクロまたはインライン関数に割り当てる。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_mbccpy_s**|\<mbstring.h>|
 |**_mbccpy_s_l**|\<mbstring.h>|

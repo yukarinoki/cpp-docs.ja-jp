@@ -1,10 +1,6 @@
 ---
-title: _makepath_s、_wmakepath_s | Microsoft Docs
-ms.custom: ''
+title: _makepath_s、_wmakepath_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _wmakepath_s
 - _makepath_s
@@ -26,8 +22,6 @@ f1_keywords:
 - makepath_s
 - _makepath_s
 - wmakepath_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - _makepath_s function
 - wmakepath_s function
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - _wmakepath_s function
 - makepath_s function
 ms.assetid: 4405e43c-3d63-4697-bb80-9b8dcd21d027
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a981e8758200e055693f24761238c98c3755311c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 6914299dd7ede97c9004dcc95e01b1a35188f5c8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404761"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50471917"
 ---
 # <a name="makepaths-wmakepaths"></a>_makepath_s、_wmakepath_s
 
@@ -99,16 +89,16 @@ errno_t _wmakepath_s(
 バッファーのサイズ (バイト単位)。
 
 *ドライブ*<br/>
-必要なドライブに対応する文字 (A、B など) と、省略可能である後続のコロンを含んでいます。 **_makepath_s**が存在しない場合、複合パスにコロンを自動的に挿入します。 場合*ドライブ*は**NULL** 、空の文字列へのポインター、ドライブ文字には表示されません複合または*パス*文字列。
+必要なドライブに対応する文字 (A、B など) と、省略可能である後続のコロンを含んでいます。 **_makepath_s**が存在しない場合、複合パスのコロンを自動的に挿入します。 場合*ドライブ*は**NULL**または空の文字列へのポインター、ドライブ文字は表示されません、合成*パス*文字列。
 
 *dir*<br/>
-ドライブ指定子も実際のファイル名も含まない、ディレクトリのパスを含んでいます。 末尾のスラッシュは省略可能とスラッシュ (/) または円記号 (\\) 1 つの両方を使用する場合がありますまたは*dir*引数。 末尾のスラッシュ (/ と \\ のいずれも) を指定していない場合は、スラッシュが自動的に挿入されます。 場合*dir*は**NULL**複合でないディレクトリのパス、空の文字列へのポインターを挿入または*パス*文字列。
+ドライブ指定子も実際のファイル名も含まない、ディレクトリのパスを含んでいます。 末尾のスラッシュは省略可能なとフォワード スラッシュ (/) または円記号 (\\) 1 つの両方を使用する場合がありますまたは*dir*引数。 末尾のスラッシュ (/ と \\ のいずれも) を指定していない場合は、スラッシュが自動的に挿入されます。 場合*dir*は**NULL**または空の文字列でないディレクトリ パスへのポインターは、合成挿入*パス*文字列。
 
 *fname*<br/>
-ファイル名拡張子がないベース ファイル名が含まれています。 場合*fname*は**NULL**複合にないファイル名を空の文字列へのポインターが挿入または*パス*文字列。
+ファイル名拡張子がないベース ファイル名が含まれています。 場合*fname*は**NULL**または空の文字列でないファイル名へのポインターは、合成挿入*パス*文字列。
 
 *ext*<br/>
-先行するピリオド (.) の有無を問わず、実際のファイル名拡張子が含まれています。 **_makepath_s**が表示されない場合は、期間を自動的に挿入します。 *ext*です。場合*ext*は**NULL**複合に拡張子がない、空の文字列へのポインターが挿入または*パス*文字列。
+先行するピリオド (.) の有無を問わず、実際のファイル名拡張子が含まれています。 **_makepath_s**が表示されない場合、期間を自動的に挿入*ext*します。場合*ext*は**NULL**または拡張子のない空の文字列の指すは、合成挿入*パス*文字列。
 
 ## <a name="return-value"></a>戻り値
 
@@ -121,11 +111,11 @@ errno_t _wmakepath_s(
 |**NULL**|任意|**EINVAL**|変更されない|
 |任意|<= 0|**EINVAL**|変更されない|
 
-上記のいずれかのエラー条件が発生すると、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数を返しますと**EINVAL**です。 **NULL**パラメーターは許可されて*ドライブ*、 *fname*、および*ext*です。これらのパラメーターが Null ポインターまたは空の文字列である場合の動作の詳細については、「コメント」セクションを参照してください。
+上記のいずれかのエラー条件が発生すると、これらの関数は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているように、無効なパラメーター ハンドラーを呼び出します。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**関数と**EINVAL**します。 **NULL**パラメーターは許可されて*ドライブ*、 *fname*、および*ext*します。これらのパラメーターが Null ポインターまたは空の文字列である場合の動作の詳細については、「コメント」セクションを参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Makepath_s**関数の結果を格納する、個々 のコンポーネントから複合パス文字列を作成する*パス*です。 *パス*ドライブ、ディレクトリのパス、ファイル名、およびファイル名拡張子を含めることがあります。 **_wmakepath_s**のワイド文字バージョンは、 **_makepath_s**; 引数 **_wmakepath_s**ワイド文字列です。 **_wmakepath_s**と **_makepath_s**それ以外の場合の動作は同じです。
+**_Makepath_s**関数の結果を格納する個別のコンポーネントから合成パス文字列を作成する*パス*します。 *パス*ドライブ文字、ディレクトリのパス、ファイル名、およびファイル名拡張子を含めることができます。 **_wmakepath_s**のワイド文字バージョンは、 **_makepath_s**; 引数 **_wmakepath_s**はワイド文字列です。 **_wmakepath_s**と **_makepath_s**動作は同じです。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -133,17 +123,17 @@ errno_t _wmakepath_s(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmakepath_s**|**_makepath_s**|**_makepath_s**|**_wmakepath_s**|
 
-*パス*引数は、空の完全なパスを保持するのに十分な大きさのバッファーを指す必要があります。 複合*パス*以下にする必要があります、 **_MAX_PATH** Stdlib.h で定義された定数です。
+*パス*引数は、空の完全なパスを保持するために十分な大きさのバッファーを指す必要があります。 複合*パス*を超える必要があります、 **_MAX_PATH** Stdlib.h で定義されている定数。
 
-パスが場合**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 さらに、 **errno**に設定されている**EINVAL**です。 **NULL**他のすべてのパラメーターの値が許可されます。
+パスがある場合**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 さらに、 **errno**に設定されている**EINVAL**します。 **NULL**他のすべてのパラメーター値を使用できます。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
 これらの関数のデバッグ バージョンは、最初にバッファーを 0xFD で埋めます。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_makepath_s**|\<stdlib.h>|
 |**_wmakepath_s**|\<stdlib.h> または \<wchar.h>|

@@ -1,27 +1,17 @@
 ---
-title: is_default_constructible クラス | Microsoft Docs
-ms.custom: ''
+title: is_default_constructible クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_default_constructible
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_default_constructible
 ms.assetid: dd8f1c44-dae5-4258-891f-c5e048d94092
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c60732a374c7458cc9acedc8a8e5a880ebacbc1f
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: de991f3b9fcfec1bd7815964c6d4e19265acdb4e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44102669"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565973"
 ---
 # <a name="isdefaultconstructible-class"></a>is_default_constructible クラス
 
@@ -78,7 +68,7 @@ is_default_constructible<Simple> == true
 is_default_constructible<Simple2> == false
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

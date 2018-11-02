@@ -1,11 +1,6 @@
 ---
-title: quick_exit1 | Microsoft Docs
-ms.custom: ''
+title: quick_exit1
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - quick_exit
 apilocation:
@@ -25,21 +20,15 @@ f1_keywords:
 - quick_exit
 - process/quick_exit
 - stdlib/quick_exit
-dev_langs:
-- C++
 helpviewer_keywords:
 - quick_exit function
 ms.assetid: ecfbdae6-01c4-45fa-aaeb-b368e1de2a9c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: de3eb88093db0eea470a0c1d775516574c466ddd
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 50f1ee72cce04c2bebc8f7396a2b6fad98301dd7
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32405732"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429016"
 ---
 # <a name="quickexit"></a>quick_exit
 
@@ -60,19 +49,19 @@ __declspec(noreturn) void quick_exit(
 
 ## <a name="return-value"></a>戻り値
 
-**Quick_exit**関数は、呼び出し元に返すことはできません。
+**Quick_exit**関数の呼び出し元に戻すことはできません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Quick_exit**関数は、通常のプログラムが終了します。 によって登録された関数が呼び出すない**atexit**、 **_onexit**またはシグナル ハンドラーによって登録されている、**信号**関数。 ときの動作は定義されている**quick_exit**に 1 回以上、または場合に呼び出されますが、**終了**関数とも呼びます。
+**Quick_exit**関数は、通常のプログラムの終了。 によって登録された関数が呼び出すない**atexit**、 **_onexit**またはシグナル ハンドラーが登録されている、**信号**関数。 場合の動作は定義されません**quick_exit**に 1 回以上、または場合に呼び出されますが、**終了**関数ともいいます。
 
-**Quick_exit**関数後入れ先出し (LIFO) の順序、によって登録された関数の呼び出し**at_quick_exit**を除き、関数が登録されている関数が既にときに呼び出されます。  [longjmp](longjmp.md) 呼び出しが、関数の呼び出しを終了する登録済み関数を呼び出している間に呼び出される場合、動作は定義されません。
+**Quick_exit**関数呼び出しの最後で、先入れ先出し (LIFO) 順、によって登録された関数で**at_quick_exit**関数が登録されたときに既に呼び出されている関数を除き、します。  [longjmp](longjmp.md) 呼び出しが、関数の呼び出しを終了する登録済み関数を呼び出している間に呼び出される場合、動作は定義されません。
 
-登録済みの関数が呼び出された後**quick_exit**呼び出します **_Exit**を使用して、*ステータス*にコントロールをホスト環境に返す値。
+登録済みの関数が呼び出された後**quick_exit**呼び出す **_Exit**を使用して、*状態*にコントロールをホスト環境に返される値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**quick_exit**|\<process.h> または \<stdlib.h>|
 

@@ -1,10 +1,6 @@
 ---
-title: _InterlockedExchange の組み込み関数 |Microsoft Docs
-ms.custom: ''
+title: _InterlockedExchange の組み込み関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedExchange_rel
 - _InterlockedExchange8_nf
@@ -30,8 +26,6 @@ f1_keywords:
 - _InterlockedExchange_HLERelease
 - _InterlockedExchange64_cpp
 - _InterlockedExchange8_rel
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedExchange8
 - _InterlockedExchange64 intrinsic
@@ -50,16 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f35e3a435025a9758d1ad713eadcef744333441d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 034e0bb0c8c3f60d0686a5f88ee4b19ed473d72d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46382428"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50450688"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange の組み込み関数
 
@@ -157,14 +147,14 @@ __int64 _InterlockedExchange64_rel(
 *Target*<br/>
 [入力、出力]交換する値へのポインター。 この関数は、この変数を `Value` に設定し、変数の前の値を返します。
 
-*値*<br/>
+*[値]*<br/>
 [in]によって示される値と交換される値`Target`します。
 
 ## <a name="return-value"></a>戻り値
 
 `Target` が指す初期値を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|ヘッダー|
 |---------------|------------------|------------|

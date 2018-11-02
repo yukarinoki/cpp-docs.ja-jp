@@ -1,27 +1,17 @@
 ---
-title: '&lt;数値&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;数値&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <numeric>
-dev_langs:
-- C++
 helpviewer_keywords:
 - <numeric> header
 ms.assetid: 6d6ccb94-48cc-479b-b4a9-bd9c78d4896a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c5705414bdc6915e758d66576855a45db5fcad23
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: ee93d254dcf49b38cb817ba460060fa72b81e01f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33853116"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456174"
 ---
 # <a name="ltnumericgt"></a>&lt;数値&gt;
 
@@ -33,7 +23,7 @@ ms.locfileid: "33853116"
 #include <numeric>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 この数値処理のアルゴリズムは　C++ 標準ライブラリの [\<algorithm>](algorithm.md) のアルゴリズムと似ており、さまざまなデータ構造体で操作できます。 これには、標準ライブラリ コンテナー クラス ([vector](../standard-library/vector-class.md) や [list](../standard-library/list-class.md) など) と、特定のアルゴリズムの要件を満たすプログラム定義のデータ構造体と要素の配列が含まれます。 アルゴリズムは、反復子によって間接的にコンテナー要素にアクセスし、走査することによって、このレベルの一般性を実現します。 アルゴリズムは、通常、開始位置または終了位置によって指定される反復子範囲を処理します。 参照される範囲は、範囲内のすべてのポインターが逆参照可能であるという意味において有効であり、かつ各範囲のシーケンス内で先頭位置からのインクリメントにより最後の位置に到達可能である必要があります。
 

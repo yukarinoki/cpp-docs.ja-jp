@@ -1,11 +1,6 @@
 ---
-title: cabs、cabsf、cabsl | Microsoft Docs
-ms.custom: ''
+title: cabs、cabsf、cabsl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - cabs
 - cabsf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/cabs
 - complex/cabsf
 - complex/cabsl
-dev_langs:
-- C++
 helpviewer_keywords:
 - cabs function
 - cabsf function
 - cabsl function
 ms.assetid: 6b8eb453-cc8f-4972-bebf-351cbdfdfc15
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c14252e7857331482b0fe6f99dd56e49ab838dd0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: cfa437a5d248a83568032d4c9ef8d4f938074dfe
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393564"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50623965"
 ---
 # <a name="cabs-cabsf-cabsl"></a>cabs、cabsf、cabsl
 
@@ -79,15 +68,15 @@ long double cabsl(
 
 ## <a name="return-value"></a>戻り値
 
-絶対値*z*です。
+絶対値*z*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**cabs**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い****二重**値。 C プログラムでは、 **cabs**は常に、 **_Dcomplex**値を返す、**二重**値。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **cabs**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い****二重**値。 C プログラムで**cabs**は常に、 **_Dcomplex**値を返します、**二重**値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**cabs**、 **cabsf**、 **cabsl**|\<complex.h>|\<ccomplex>|
 

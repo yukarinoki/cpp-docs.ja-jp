@@ -1,23 +1,13 @@
 ---
-title: 例外と C++ のスタックがアンワインド |Microsoft Docs
-ms.custom: ''
+title: C++ での例外とスタック アンワインド
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: a1a57eae-5fc5-4c49-824f-3ce2eb8129ed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6a413179ca2c44d1a66ae1702c690039383d1045
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 43d7945d53a0bd9993e75c04cceb3c8f5fec8ae2
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46032212"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50569716"
 ---
 # <a name="exceptions-and-stack-unwinding-in-c"></a>C++ での例外とスタック アンワインド
 
@@ -38,82 +28,82 @@ C++ 例外の機能では、制御は throw ステートメントから、スロ
 次の例では、例外がスローされたときにスタックをアンワインドする方法を示します。 スレッド上で実行すると、`C` の throw ステートメントから `main` の catch ステートメントにジャンプし、その途中の各関数をアンワインドします。 `Dummy` オブジェクトが作成され、スコープ外として破棄される順序に注意してください。 関数が catch ステートメントを含む `main` なしで完了しないことにも注意してください。 関数 `A` はその `B()` の呼び出しから戻りません。`B` はその `C()` の呼び出しから戻りません。 `Dummy` ポインターの定義と対応する DELETE ステートメントをコメントから外してプログラムを実行すると、ポインターは削除されなくなります。 これは、関数が例外の保証を提供しない場合に発生することがある問題を示しています。 詳細については、「方法: 例外に対してデザインする」を参照してください。 catch ステートメントをコメント アウトすると、未処理の例外によってプログラムが終了するときの動作が示されます。
 
 ```cpp
-#include <string>
-#include <iostream>
-using namespace std;
+#include <string>
+#include <iostream>
+using namespace std;
 
-class MyException{};
-class Dummy
+class MyException{};
+class Dummy
 {
-    public:
-    Dummy(string s) : MyName(s) { PrintMsg("Created Dummy:"); }
-    Dummy(const Dummy& other) : MyName(other.MyName){ PrintMsg("Copy created Dummy:"); }
-    ~Dummy(){ PrintMsg("Destroyed Dummy:"); }
-    void PrintMsg(string s) { cout << s  << MyName <<  endl; }
-    string MyName; 
-    int level;
+    public:
+    Dummy(string s) : MyName(s) { PrintMsg("Created Dummy:"); }
+    Dummy(const Dummy& other) : MyName(other.MyName){ PrintMsg("Copy created Dummy:"); }
+    ~Dummy(){ PrintMsg("Destroyed Dummy:"); }
+    void PrintMsg(string s) { cout << s  << MyName <<  endl; }
+    string MyName; 
+    int level;
 };
 
-void C(Dummy d, int i)
-{ 
-    cout << "Entering FunctionC" << endl;
-    d.MyName = " C";
-    throw MyException();   
+void C(Dummy d, int i)
+{ 
+    cout << "Entering FunctionC" << endl;
+    d.MyName = " C";
+    throw MyException();   
 
-    cout << "Exiting FunctionC" << endl;
+    cout << "Exiting FunctionC" << endl;
 }
 
-void B(Dummy d, int i)
+void B(Dummy d, int i)
 {
-    cout << "Entering FunctionB" << endl;
-    d.MyName = "B";
-    C(d, i + 1);   
-    cout << "Exiting FunctionB" << endl; 
+    cout << "Entering FunctionB" << endl;
+    d.MyName = "B";
+    C(d, i + 1);   
+    cout << "Exiting FunctionB" << endl; 
 }
 
-void A(Dummy d, int i)
-{ 
-    cout << "Entering FunctionA" << endl;
-    d.MyName = " A" ;
-  //  Dummy* pd = new Dummy("new Dummy"); //Not exception safe!!!
-    B(d, i + 1);
- //   delete pd; 
-    cout << "Exiting FunctionA" << endl;   
+void A(Dummy d, int i)
+{ 
+    cout << "Entering FunctionA" << endl;
+    d.MyName = " A" ;
+  //  Dummy* pd = new Dummy("new Dummy"); //Not exception safe!!!
+    B(d, i + 1);
+ //   delete pd; 
+    cout << "Exiting FunctionA" << endl;   
 }
 
-int main()
+int main()
 {
-    cout << "Entering main" << endl;
-    try
-    {
-        Dummy d(" M");
-        A(d,1);
-    }
-    catch (MyException& e)
-    {
-        cout << "Caught an exception of type: " << typeid(e).name() << endl;
-    }
+    cout << "Entering main" << endl;
+    try
+    {
+        Dummy d(" M");
+        A(d,1);
+    }
+    catch (MyException& e)
+    {
+        cout << "Caught an exception of type: " << typeid(e).name() << endl;
+    }
 
-    cout << "Exiting main." << endl;
-    char c;
-    cin >> c;
+    cout << "Exiting main." << endl;
+    char c;
+    cin >> c;
 }
 
-/* Output:
-    Entering main
-    Created Dummy: M
-    Copy created Dummy: M
-    Entering FunctionA
-    Copy created Dummy: A
-    Entering FunctionB
-    Copy created Dummy: B
-    Entering FunctionC
-    Destroyed Dummy: C
-    Destroyed Dummy: B
-    Destroyed Dummy: A
-    Destroyed Dummy: M
-    Caught an exception of type: class MyException
-    Exiting main.
+/* Output:
+    Entering main
+    Created Dummy: M
+    Copy created Dummy: M
+    Entering FunctionA
+    Copy created Dummy: A
+    Entering FunctionB
+    Copy created Dummy: B
+    Entering FunctionC
+    Destroyed Dummy: C
+    Destroyed Dummy: B
+    Destroyed Dummy: A
+    Destroyed Dummy: M
+    Caught an exception of type: class MyException
+    Exiting main.
 
 */
 ```

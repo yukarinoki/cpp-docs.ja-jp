@@ -1,28 +1,17 @@
 ---
-title: メニューとメニュー コマンド (C++) の削除 |Microsoft Docs
-ms.custom: ''
+title: メニューとメニュー コマンド (C++) の削除
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - menu items, deleting
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: bdfd5b6e-3275-4597-a8bb-cd19bea9f9ad
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: a70c7f477e20aed50e20670b975174ac4a700c4f
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 4cc014494dc0ea3cddcc0bef84cb728be3b04207
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44315757"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50476337"
 ---
 # <a name="deleting-menus-and-menu-commands-c"></a>メニューとメニュー コマンド (C++) の削除
 ### <a name="to-delete-a-menu-or-menu-command"></a>メニューまたはメニュー コマンドを削除するには
@@ -36,7 +25,7 @@ ms.locfileid: "44315757"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

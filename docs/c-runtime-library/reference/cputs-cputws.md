@@ -1,10 +1,6 @@
 ---
-title: _cputs、_cputws | Microsoft Docs
-ms.custom: ''
+title: _cputs、_cputws
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cputws
 - _cputs
@@ -25,8 +21,6 @@ f1_keywords:
 - cputws
 - _cputs
 - _cputws
-dev_langs:
-- C++
 helpviewer_keywords:
 - strings [C++], writing
 - _cputs function
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - console, sending strings to
 - cputws function
 ms.assetid: ec418484-0f8d-43ec-8d8b-198a556c659e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3c192adccb6fe0e0cee66f03b5d85d89fc2e446a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 81d2364cd1fc409ca3267bc416bd3cbd16c62a15
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399765"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50601176"
 ---
 # <a name="cputs-cputws"></a>_cputs、_cputws
 
@@ -74,11 +64,11 @@ int _cputws(
 
 成功した場合、 **_cputs** 0 を返します。 関数が失敗した場合は 0 以外の値を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Cputs**によって指される、null で終わる文字列を書き込みます*str*直接コンソールにします。 "復帰 - 改行" (CR-LF) の組み合わせは文字列に自動的に追加されません。
+**_Cputs**を指している null で終わる文字列を書き込みます*str*直接にコンソール。 "復帰 - 改行" (CR-LF) の組み合わせは文字列に自動的に追加されません。
 
-この関数は、そのパラメーターを検証します。 場合*str*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL**し、-1 が返されます。
+この関数は、そのパラメーターを検証します。 場合*str*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EINVAL** -1 が返されます。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -86,9 +76,9 @@ int _cputws(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_cputts**|**_cputs**|**_cputs**|**_cputws**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|オプション ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
 |**_cputs**|\<conio.h>|\<errno.h>|
 |**_cputws**|\<conio.h>|\<errno.h>|

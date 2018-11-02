@@ -1,10 +1,6 @@
 ---
-title: _ismbbprint、_ismbbprint_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbprint、_ismbbprint_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbprint_l
 - _ismbbprint
@@ -26,24 +22,18 @@ f1_keywords:
 - _ismbbprint
 - ismbbprint
 - ismbbprint_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbbprint_l function
 - ismbbprint function
 - _ismbbprint function
 - _ismbbprint_l function
 ms.assetid: d08a061c-18a8-48f2-a75d-bff4870aec9d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 49618a119f089e70e88bbdb9efcdae9bab616560
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2fc697dd3ee4fee487beedf5e6e3deb706cc5f75
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32400077"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50660487"
 ---
 # <a name="ismbbprint-ismbbprintl"></a>_ismbbprint、_ismbbprint_l
 
@@ -71,15 +61,15 @@ int _ismbbprint_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbprint**場合に 0 以外の値を返す式。
+**_ismbbprint**場合 0 以外の値を返す式。
 
 `isprint(c) || _ismbbkprint(c)`
 
-0 です*c*、されていない場合は 0 です。 **_ismbbprint**ロケールに依存する動作に現在のロケールを使用します。 **_ismbbprint_l**は、代わりに渡されるロケールを使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+0 以外の場合は、 *c*、または 0 でない場合。 **_ismbbprint**ロケールに依存する動作に現在のロケールを使用します。 **_ismbbprint_l**代わりに渡されたロケールを使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbprint**|\<mbctype.h>|
 |**_ismbbprint_l**|\<mbctype.h>|

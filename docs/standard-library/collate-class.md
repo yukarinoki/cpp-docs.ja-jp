@@ -1,10 +1,6 @@
 ---
-title: collate クラス | Microsoft Docs
-ms.custom: ''
+title: collate クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - locale/std::collate
 - locale/std::collate::char_type
@@ -15,8 +11,6 @@ f1_keywords:
 - locale/std::collate::do_transform
 - locale/std::collate::hash
 - locale/std::collate::transform
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::collate [C++]
 - std::collate [C++], char_type
@@ -28,16 +22,12 @@ helpviewer_keywords:
 - std::collate [C++], hash
 - std::collate [C++], transform
 ms.assetid: 92168798-9628-4a2e-be6e-fa62dcd4d6a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 054246ce78601abf61f36d070500845275b61761
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 21d5825f8d9ea00359f2aa1c87291b831d1f330f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44110374"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50630114"
 ---
 # <a name="collate-class"></a>collate クラス
 
@@ -65,7 +55,7 @@ class collate : public locale::facet;
 |-|-|
 |[collate](#collate)|文字列の並べ替え規則を処理するためにロケールのファセットとして機能する `collate` クラスのオブジェクトのコンストラクター。|
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -83,7 +73,7 @@ class collate : public locale::facet;
 |[hash](#hash)|ファセット固有の規則に従ってシーケンスのハッシュ値を決定します。|
 |[transform](#transform)|ロケールの文字シーケンスを、同じロケールから同様に変換された他の文字シーケンスとの辞書式の比較で使用できる文字列に変換します。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<locale>
 

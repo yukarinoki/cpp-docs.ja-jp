@@ -1,15 +1,9 @@
 ---
-title: -ZW (Windows ランタイムのコンパイル) |Microsoft Docs
-ms.custom: ''
+title: /ZW (Windows ランタイムのコンパイル)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
-dev_langs:
-- C++
 helpviewer_keywords:
 - /ZW
 - -ZW compiler option
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f793db1bf227006c4278eff55ce53092a864aa83
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 297697d215a78cbf1aefef30df53f6956c4e16b6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45700948"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50629763"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Windows ランタイムのコンパイル)
 
@@ -58,7 +48,7 @@ Incremental linker を使用して、.obj ファイルに含まれる Windows �
 
 詳細については、次を参照してください。 [Visual c 言語リファレンス](../../cppcx/visual-c-language-reference-c-cx.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 ## <a name="see-also"></a>関連項目
 

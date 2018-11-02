@@ -1,10 +1,6 @@
 ---
-title: towctrans | Microsoft Docs
-ms.custom: ''
+title: towctrans
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - towctrans
 apilocation:
@@ -22,21 +18,15 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - towctrans
-dev_langs:
-- C++
 helpviewer_keywords:
 - towctrans function
 ms.assetid: 1ed1e70d-7b31-490f-a7d9-42564b5924ca
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b9d70570339868feb62ee906a707cf16ca03d556
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b814c65d2f5d0bb18b19d97a539d79dd6df8a1c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32407630"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561409"
 ---
 # <a name="towctrans"></a>towctrans
 
@@ -61,15 +51,15 @@ wint_t towctrans(
 
 ## <a name="return-value"></a>戻り値
 
-文字*c*の後に**towctrans**の変換規則を使用する*カテゴリ*です。
+文字*c*後**towctrans**内の変換ルールを使用する*カテゴリ*します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-値*カテゴリ*を以前の正常な呼び出しによって返される必要があります[wctrans](wctrans.md)です。
+値*カテゴリ*を以前の正常な呼び出しによって返される必要があります[wctrans](wctrans.md)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**towctrans**|\<wctype.h>|
 
@@ -77,7 +67,7 @@ wint_t towctrans(
 
 ## <a name="example"></a>例
 
-参照してください**wctrans**を使用するサンプルの**towctrans**です。
+参照してください**wctrans**を使用するサンプルの**towctrans**します。
 
 ## <a name="see-also"></a>関連項目
 

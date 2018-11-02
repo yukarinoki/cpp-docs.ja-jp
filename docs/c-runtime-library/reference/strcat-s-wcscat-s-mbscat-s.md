@@ -1,10 +1,6 @@
 ---
-title: strcat_s、wcscat_s、_mbscat_s | Microsoft Docs
-ms.custom: ''
+title: strcat_s、wcscat_s、_mbscat_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcat_s
 - _mbscat_s
@@ -27,8 +23,6 @@ f1_keywords:
 - strcat_s
 - wcscat_s
 - _mbscat_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - wcscat_s function
 - strcat_s function
@@ -37,16 +31,12 @@ helpviewer_keywords:
 - _mbscat_s function
 - appending strings
 ms.assetid: 0f2f9901-c5c5-480b-98bc-f8f690792fc0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1f97152da60697edfcf337f8cceddfd77ed2704c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 7b622fbefc690317a4b57e3fd1bb54712b84f2a0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32414010"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50621313"
 ---
 # <a name="strcats-wcscats-mbscats"></a>strcat_s、wcscat_s、_mbscat_s
 
@@ -110,12 +100,12 @@ null で終わる元の文字列バッファー。
 |*strDestination*|*numberOfElements*|*strSource*|戻り値|内容*strDestination*|
 |----------------------|------------------------|-----------------|------------------|----------------------------------|
 |**NULL**または終端文字なし|任意|任意|**EINVAL**|変更されない|
-|任意|任意|**NULL**|**EINVAL**|*strDestination*を 0 に [0] の設定|
-|任意|0 または小さすぎる|任意|**ERANGE**|*strDestination*を 0 に [0] の設定|
+|任意|任意|**NULL**|**EINVAL**|*strDestination*[0] が 0 に設定|
+|任意|0 または小さすぎる|任意|**ERANGE**|*strDestination*[0] が 0 に設定|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strcat_s**関数は、追加*strSource*に*strDestination*し、null 文字を含む結果の文字列を終了します。 最初の文字*strSource*の終端の null 文字を上書き*strDestination*です。 動作**strcat_s**元とコピー先文字列が重なり合っている場合に定義されていません。
+**Strcat_s**関数は、追加*strSource*に*strDestination*し、結果の文字列を null 文字で終了します。 最初の文字の*strSource*の終端の null 文字を上書き*strDestination*します。 動作**strcat_s**元とコピー先文字列が重なり合う場合は定義されません。
 
 2 つ目のパラメーターは、バッファーの残りのサイズではなく、合計サイズであることに注意してください。
 
@@ -126,9 +116,9 @@ strcat_s(buf, 16, " End");               // Correct
 strcat_s(buf, 16 - strlen(buf), " End"); // Incorrect
 ```
 
-**wcscat_s**と **_mbscat_s**のワイド文字とマルチバイト文字バージョンは、 **strcat_s**です。 引数と戻り値の**wcscat_s**ワイド文字は、文字列以外の **_mbscat_s**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**wcscat_s**と **_mbscat_s**のワイド文字とマルチバイト文字バージョン**strcat_s**します。 引数と戻り値の**wcscat_s**はワイド文字列 **_mbscat_s**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
-場合*strDestination*に null ポインターでできないかが null で終わる場合、または*strSource*は、 **NULL**ポインター、コピー先文字列が小さすぎる場合、またはパラメーターが無効ですハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**です。
+場合*strDestination* null ポインター、または null で終わらない場合、または*strSource*は、 **NULL**ポインター、またはコピー先文字列が小さすぎる場合、無効なパラメーターハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**設定と**errno**に**EINVAL**します。
 
 C++ では、これらの関数の使用はテンプレートのオーバーロードによって簡素化されます。オーバーロードでは、バッファー長を自動的に推論できる (サイズの引数を指定する必要がなくなる) だけでなく、古くてセキュリティが万全ではない関数を新しく安全な関数に自動的に置き換えることができます。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -140,9 +130,9 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat_s**|**strcat_s**|**_mbscat_s**|**wcscat_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strcat_s**|\<string.h>|
 |**wcscat_s**|\<string.h> または \<wchar.h>|

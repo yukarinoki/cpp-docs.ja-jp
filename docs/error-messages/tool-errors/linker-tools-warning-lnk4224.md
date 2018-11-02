@@ -1,39 +1,29 @@
 ---
-title: リンカー ツールの警告 LNK4224 |Microsoft ドキュメント
-ms.custom: ''
+title: リンカー ツールの警告 LNK4224
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - LNK4224
-dev_langs:
-- C++
 helpviewer_keywords:
 - LNK4224
 ms.assetid: 8624b70e-0b93-43cf-b457-834d38632d0b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bdffdf3469cc3a0e5d41b0504b882513d44b63c
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: eb0a019cc80e5218a52697b8bcd5e91b811d04d3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34703988"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50465326"
 ---
 # <a name="linker-tools-warning-lnk4224"></a>リンカー ツールの警告 LNK4224
 
 > *オプション*はサポートされていません無視されます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 無効な古いリンカー オプションが指定され、無視されます。
 
-たとえば、LNK4224 発生する可能性が/comment ディレクティブが表示される場合 .obj。使用して追加されて、/comment ディレクティブ、[コメント (C/C++)](../../preprocessor/comment-c-cpp.md)プラグマによって、非推奨 exestr オプションを使用します。 Dumpbin を使用して[/all](../../build/reference/all.md)を .obj ファイル内のリンカー ディレクティブを表示します。
+たとえば、LNK4224 発生する可能性が/comment ディレクティブが表示される場合 .obj。経由で追加された/comment ディレクティブ、[コメント (C/C++)](../../preprocessor/comment-c-cpp.md)プラグマ、非推奨の exestr オプションを使用します。 Dumpbin を使用して、 [/all](../../build/reference/all.md)リンカー ディレクティブを .obj ファイルの表示にします。
 
-可能であれば、.obj ファイルのソースを変更し、このプラグマを削除します。 この警告を無視すると場合、.executable コンパイルされている可能性が **/clr: 純粋な**期待どおりに実行されません。 **/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+可能であれば、.obj ファイルのソースを変更し、プラグマを削除します。 この警告を無視する場合、.executable コンパイルされている可能性があります **/clr: 純粋な**は期待どおりに実行されません。 **/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 ## <a name="example"></a>例
 

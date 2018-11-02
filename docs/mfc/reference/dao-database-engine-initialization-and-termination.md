@@ -1,28 +1,18 @@
 ---
-title: DAO データベース エンジンの初期化と終了 |Microsoft Docs
-ms.custom: ''
+title: DAO データベース エンジンの初期化と終了
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros.data
-dev_langs:
-- C++
 helpviewer_keywords:
 - DAO (Data Access Objects), termination
 - DAO (Data Access Objects), initialization
 ms.assetid: a7edf31c-e7c2-4f3e-aada-63c3e48781da
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8cf54992896559f1b143247746ef9f9e0e8d8979
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ff924f0e0d599d447ef7dea0039de788d388d759
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404008"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50589632"
 ---
 # <a name="dao-database-engine-initialization-and-termination"></a>DAO データベース エンジンの初期化と終了
 
@@ -52,7 +42,7 @@ throw(CDaoException*);
 
 呼び出し元の例については、関連情報については、`AfxDaoInit`を参照してください[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 
@@ -73,7 +63,7 @@ void AfxDaoTerm();
 
 関連情報については、次を参照してください。[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdao.h
 

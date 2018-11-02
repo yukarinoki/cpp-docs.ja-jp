@@ -1,27 +1,17 @@
 ---
-title: ABCFLOAT 構造体 |Microsoft Docs
-ms.custom: ''
+title: ABCFLOAT 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - ABCFLOAT
-dev_langs:
-- C++
 helpviewer_keywords:
 - ABCFLOAT structure [MFC]
 ms.assetid: 338e7e15-9d2c-42d0-aa80-273acfde5cc5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5a9bbece0773c14a4a8b545bc56209bf682e22c0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: b9e3923e8c70e38fe5efe959db8da43118cc6445
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46375415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50443662"
 ---
 # <a name="abcfloat-structure"></a>ABCFLOAT 構造体
 
@@ -52,7 +42,7 @@ C の文字の間隔を指定します。 C の間隔は、文字のグリフの
 
 A、B、および C の幅は、フォントのベース ラインに沿って測定されます。 文字の文字のインクリメント (幅の合計) は、A、B、および C のスペースの合計です。 A または C 領域のいずれかをスペーシングまたはオーバー ハングを示す負にすることができます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** wingdi.h
 

@@ -1,29 +1,19 @@
 ---
-title: CSimpleArrayEqualHelperFalse クラス |Microsoft Docs
-ms.custom: ''
+title: CSimpleArrayEqualHelperFalse クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CSimpleArrayEqualHelperFalse
 - ATLSIMPCOLL/ATL::CSimpleArrayEqualHelperFalse
 - ATLSIMPCOLL/ATL::CSimpleArrayEqualHelperFalse::IsEqual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CSimpleArrayEqualHelperFalse class
 ms.assetid: 6918af6f-d23d-49eb-8482-c44272f5ffeb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6cc489850ea8e8d2704c92d1c2a671557a4db67a
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 91987d369291a092b6dfb5f7db9ca8ba1434a7cc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46084329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50594910"
 ---
 # <a name="csimplearrayequalhelperfalse-class"></a>CSimpleArrayEqualHelperFalse クラス
 
@@ -53,7 +43,7 @@ class CSimpleArrayEqualHelperFalse
 
 この特性クラスを補完するは、`CSimpleArray`クラス。 False、およびさらに、返しますは呼び出しは常に it`ATLASSERT`引数が参照されている場合は false。 等しいかどうかテストが十分に定義されていない場合、このクラスは、ほとんどのメソッドに対して正常に動作しなどの比較に依存する方法を明確に定義された方法で失敗する可能性が要素を含む配列[CSimpleArray:。検索](../../atl/reference/csimplearray-class.md#find)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlsimpcoll.h
 

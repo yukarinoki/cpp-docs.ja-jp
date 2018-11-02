@@ -1,11 +1,6 @@
 ---
-title: carg、cargf、cargl | Microsoft Docs
-ms.custom: ''
+title: carg、cargf、cargl
 ms.date: 11/04/2016
-ms.technology:
-- cpp
-- devlang-cpp
-ms.topic: reference
 apiname:
 - carg
 - cargf
@@ -30,23 +25,17 @@ f1_keywords:
 - complex/carg
 - complex/cargf
 - complex/cargl
-dev_langs:
-- C++
 helpviewer_keywords:
 - carg function
 - cargf function
 - cargl function
 ms.assetid: 610d6a93-b929-46ab-a966-b77db0b804be
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 34a5e55b4261c68d90c3bcb28cf2f0e7be1a2c50
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 584732594cd9ca9579907986e3dc3b5f3dbf52c0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393473"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50665596"
 ---
 # <a name="carg-cargf-cargl"></a>carg、cargf、cargl
 
@@ -79,15 +68,15 @@ long double cargl(
 
 ## <a name="return-value"></a>戻り値
 
-引数 (フェーズとも呼ばれます) *z*です。 結果は、間隔には [-π、+ π] です。
+引数 (フェーズとも呼ばれます) *z*します。 結果は、間隔 [-π、+ π]。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**carg**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い****二重**値。 C プログラムでは、 **carg**は常に、 **_Dcomplex**値を返す、**二重**値。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **carg**を受け取る **_Fcomplex**または **_Lcomplex**値、および戻り値**float**または**長い****二重**値。 C プログラムで**carg**は常に、 **_Dcomplex**値を返します、**二重**値。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|C ヘッダー|C++ ヘッダー|
+|ルーチンによって返される値|C ヘッダー|C++ ヘッダー|
 |-------------|--------------|------------------|
 |**carg**、 **cargf**、 **cargl**|\<complex.h>|\<ccomplex>|
 

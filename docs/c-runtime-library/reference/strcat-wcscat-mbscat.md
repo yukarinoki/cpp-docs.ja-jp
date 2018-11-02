@@ -1,10 +1,6 @@
 ---
-title: strcat、wcscat、_mbscat | Microsoft Docs
-ms.custom: ''
+title: strcat、wcscat、_mbscat
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _mbscat
 - wcscat
@@ -29,8 +25,6 @@ f1_keywords:
 - _tcscat
 - strcat
 - wcscat
-dev_langs:
-- C++
 helpviewer_keywords:
 - concatenating strings
 - mbscat function
@@ -45,16 +39,12 @@ helpviewer_keywords:
 - appending strings
 - wcscat function
 ms.assetid: c89c4ef1-817a-44ff-a229-fe22d06ba78a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f2daf6621cb2e72c38212227da20f6b847bb08e9
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49e2e39fb0acd9128a52e83bf704567bb82d532
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413415"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50546394"
 ---
 # <a name="strcat-wcscat-mbscat"></a>strcat、wcscat、_mbscat
 
@@ -107,14 +97,14 @@ NULL で終わる元の文字列。
 
 これらの関数の各コピー先の文字列を返します (*strDestination*)。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strcat**関数は、追加*strSource*に*strDestination*し、null 文字を含む結果の文字列を終了します。 最初の文字*strSource*の終端の null 文字を上書き*strDestination*です。 動作**strcat**元とコピー先文字列が重なり合っている場合に定義されていません。
+**Strcat**関数は、追加*strSource*に*strDestination*し、結果の文字列を null 文字で終了します。 最初の文字の*strSource*の終端の null 文字を上書き*strDestination*します。 動作**strcat**元とコピー先文字列が重なり合う場合は定義されません。
 
 > [!IMPORTANT]
-> **Strcat**に十分な領域をチェックしません*strDestination*追加の前に*strSource*、バッファー オーバーランの潜在的な原因であります。 代わりに [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) の使用を検討してください。
+> **Strcat**に十分な領域をチェックしません*strDestination*追加の前に*strSource*、バッファー オーバーランの潜在的な原因になります。 代わりに [strncat](strncat-strncat-l-wcsncat-wcsncat-l-mbsncat-mbsncat-l.md) の使用を検討してください。
 
-**wcscat**と **_mbscat**のワイド文字とマルチバイト文字バージョンは、 **strcat**です。 引数と戻り値の**wcscat**ワイド文字は、文字列以外の **_mbscat**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**wcscat**と **_mbscat**のワイド文字とマルチバイト文字バージョン**strcat**します。 引数と戻り値の**wcscat**はワイド文字列 **_mbscat**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -124,9 +114,9 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscat**|**strcat**|**_mbscat**|**wcscat**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strcat**|\<string.h>|
 |**wcscat**|\<string.h> または \<wchar.h>|

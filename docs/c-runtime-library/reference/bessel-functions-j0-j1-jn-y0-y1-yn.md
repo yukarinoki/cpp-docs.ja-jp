@@ -1,10 +1,6 @@
 ---
-title: 'Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn | Microsoft Docs'
-ms.custom: ''
+title: 'Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn'
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _j0
 - _j1
@@ -33,8 +29,6 @@ f1_keywords:
 - _y0
 - _y1
 - _yn
-dev_langs:
-- C++
 helpviewer_keywords:
 - Bessel functions
 - _j0 function
@@ -44,16 +38,12 @@ helpviewer_keywords:
 - _y1 function
 - _yn function
 ms.assetid: a21a8bf1-df9d-4ba0-a8c2-e7ef71921d96
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cf461a7737ee1f23650ff80f203524c427fb644d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 682eaa99d0be1b959152ff94cc10a86aa68d988d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393603"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50531864"
 ---
 # <a name="bessel-functions-j0-j1-jn-y0-y1-yn"></a>Bessel 系関数: _j0、_j1、_jn、_y0、_y1、_yn
 
@@ -94,27 +84,27 @@ Bessel 系関数の整数順序。
 
 ## <a name="return-value"></a>戻り値
 
-これらの各ルーチンの Bessel 関数を返します*x*です。 場合*x*負の値では、 **_y0**、 **_y1**、または **_yn**関数、日常的なセット**errno** に**EDOM**、印刷、 **_DOMAIN**エラー メッセージを**stderr**、し、返します **_HUGE_VAL**です。 エラーを使用して処理を変更することができます **_matherr**です。
+これらの各ルーチンの Bessel 関数を返します*x*します。 場合*x*負の値には、 **_y0**、 **_y1**、または **_yn**関数、日常的なセット**errno** に**EDOM**、印刷、 **(_d)** エラー メッセージを**stderr**、し、返します **_HUGE_VAL**します。 エラーを使用して処理を変更する **_matherr**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_J0**、 **_j1**と **_jn**ルーチンは関数の最初の種類の Bessel を返します。 順序は 0、1、n、それぞれします。
-
-|入力|SEH 例外|Matherr 例外|
-|-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
-
-**_Y0**、 **_y1**、および **_yn**ルーチンは、Bessel の 2 つ目の種類の関数を返します。 順序は 0、1、n、それぞれします。
+**_J0**、 **_j1**、および **_jn**ルーチンは bessel 系関数の最初の種類を返します。 順序は 0、1、および n、それぞれします。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|**無効です**|**_DOMAIN**|
+|± **QNAN**、 **IND**|**無効です**|**(_D)**|
+
+**_Y0**、 **_y1**、および **_yn**ルーチンは bessel 系関数の 2 つ目の種類を返します。 順序は 0、1、および n、それぞれします。
+
+|入力|SEH 例外|Matherr 例外|
+|-----------|-------------------|-----------------------|
+|± **QNAN**、 **IND**|**無効です**|**(_D)**|
 |± 0|**ZERODIVIDE**|**_SING**|
-|&#124;x&#124; < 0.0|**無効です**|**_DOMAIN**|
+|&#124;x&#124; < 0.0|**無効です**|**(_D)**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_j0**、 **_j1**、 **_jn**、 **_y0**、 **_y1**、 **_yn**|\<cmath> (C++), \<math.h> (C, C++)|
 

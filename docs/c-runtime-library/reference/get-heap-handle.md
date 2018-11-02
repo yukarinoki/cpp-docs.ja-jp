@@ -1,10 +1,6 @@
 ---
-title: _get_heap_handle | Microsoft Docs
-ms.custom: ''
+title: _get_heap_handle
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _get_heap_handle
 apilocation:
@@ -23,24 +19,18 @@ apitype: DLLExport
 f1_keywords:
 - _get_heap_handle
 - get_heap_handle
-dev_langs:
-- C++
 helpviewer_keywords:
 - heap functions
 - memory allocation, heap memory
 - _get_heap_handle function
 - get_heap_handle function
 ms.assetid: a4d05049-8528-494a-8281-a470d1e1115c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 238fab4ec2d900c8183c018f3cb03fe6dc1fb2f5
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 82ea108a41bec1d0276e2c952b3f509f36bab8ab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43202235"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50480029"
 ---
 # <a name="getheaphandle"></a>_get_heap_handle
 
@@ -60,7 +50,7 @@ C ランタイム システムで使用される Win32 ヒープのハンドル�
 
 [HeapSetInformation](/windows/desktop/api/heapapi/nf-heapapi-heapsetinformation) を呼び出し、CRT ヒープの Low Fragmentation Heap を有効にする場合は、この関数を使用します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

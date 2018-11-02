@@ -1,10 +1,6 @@
 ---
-title: strcpy、wcscpy、_mbscpy | Microsoft Docs
-ms.custom: ''
+title: strcpy、wcscpy、_mbscpy
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - strcpy
 - wcscpy
@@ -29,8 +25,6 @@ f1_keywords:
 - wcscpy
 - _tcscpy
 - strcpy
-dev_langs:
-- C++
 helpviewer_keywords:
 - strcpy function
 - tcscpy function
@@ -43,16 +37,12 @@ helpviewer_keywords:
 - _ftcscpy function
 - _mbscpy function
 ms.assetid: f97a4f81-e9ee-4f15-888a-0fa5d7094c5a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c996fc8ceb81d98d24e3c95330f2ed9c37097e7d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: a6846123fedf48601d36ab8779d7c9868e5e9917
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32413922"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50640064"
 ---
 # <a name="strcpy-wcscpy-mbscpy"></a>strcpy、wcscpy、_mbscpy
 
@@ -105,14 +95,14 @@ NULL で終わる元の文字列。
 
 これらの関数は、コピー先文字列を返します。 エラーを示す戻り値は予約されていません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Strcpy**関数のコピー *strSource*で指定されている場所に、終端の null 文字を含む*strDestination*です。 動作**strcpy**元とコピー先文字列が重なり合っている場合に定義されていません。
+**Strcpy**関数コピー *strSource*で指定された場所に、終端の null 文字を含む*strDestination*します。 動作**strcpy**元とコピー先文字列が重なり合う場合は定義されません。
 
 > [!IMPORTANT]
-> **Strcpy**に十分な領域をチェックしません*strDestination*をコピーする前に*strSource*、バッファー オーバーランの潜在的な原因であります。 したがって、代わりに [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) の使用をお勧めします。
+> **Strcpy**に十分な領域をチェックしません*strDestination*にコピーする前に*strSource*、バッファー オーバーランの潜在的な原因になります。 したがって、代わりに [strcpy_s](strcpy-s-wcscpy-s-mbscpy-s.md) の使用をお勧めします。
 
-**wcscpy**と **_mbscpy**は、それぞれ、ワイド文字とマルチバイト文字のバージョンの**strcpy**です。 引数と戻り値の**wcscpy**ワイド文字は、文字列以外の **_mbscpy**マルチバイト文字列です。 それ以外では、これらの関数の動作は同じです。
+**wcscpy**と **_mbscpy**は、それぞれ、ワイド文字とマルチバイト文字のバージョンの**strcpy**します。 引数と戻り値の**wcscpy**はワイド文字列 **_mbscpy**はマルチバイト文字の文字列。 それ以外では、これらの関数の動作は同じです。
 
 C++ では、これらの関数にテンプレートのオーバーロードがあります。このオーバーロードは、これらの関数に対応するセキュリティで保護された新しい関数を呼び出します。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
@@ -122,9 +112,9 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_tcscpy**|**strcpy**|**_mbscpy**|**wcscpy**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**strcpy**|\<string.h>|
 |**wcscpy**|\<string.h> または \<wchar.h>|

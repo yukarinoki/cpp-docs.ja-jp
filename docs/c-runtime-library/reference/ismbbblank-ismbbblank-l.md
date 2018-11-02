@@ -1,10 +1,6 @@
 ---
-title: _ismbbblank、_ismbbblank_l | Microsoft Docs
-ms.custom: ''
+title: _ismbbblank、_ismbbblank_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _ismbbblank_l
 - _ismbbblank
@@ -21,19 +17,13 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 apitype: DLLExport
-dev_langs:
-- C++
 ms.assetid: d21b2e41-7206-41f5-85bb-9c9ab4f3e21b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d4d2849eca58c7fa3d7fc8250ab3bad0d346e4a0
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c6709d5a5870c44d200b704e4a34043ff9c37226
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32399486"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646265"
 ---
 # <a name="ismbbblank-ismbbblankl"></a>_ismbbblank、_ismbbblank_l
 
@@ -64,11 +54,11 @@ int _ismbbblank_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_ismbbblank**場合は 0 以外の値を返します*c*が空白 (0x20) 文字、水平タブ (0x09) 文字、またはどののテキストの行内で単語を区切るために使用するロケール固有の文字を表す**isspace**は true。 それ以外の場合は、0 を返します。 **_ismbbblank**ロケールに依存する動作に現在のロケールを使用します。 **_ismbbblank_l**に渡されるロケールを代わりに使用する点を除いてと同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_ismbbblank**場合は、0 以外の値を返します*c*空白 (0x20) 文字、水平タブ (0x09) 文字、またはどののテキストの行内で単語を分離するために使用するロケール固有の文字を表す**isspace**がそれ以外の場合は true、0 を返します。 **_ismbbblank**ロケールに依存する動作に現在のロケールを使用します。 **_ismbbblank_l**で渡されるロケールを代わりに使用すると同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_ismbbblank**|\<mbctype.h>|
 |**_ismbbblank_l**|\<mbctype.h>|

@@ -1,27 +1,17 @@
 ---
-title: '&lt;cwchar&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;cwchar&gt;'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <cwchar>
-dev_langs:
-- C++
 helpviewer_keywords:
 - cwchar header
 ms.assetid: 7380b1bf-a220-46e5-b832-9f9f4e543aac
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 156c766abc82908206fd9ceb10a56e9ffb57076d
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: 1b0dcfeb625369822e73addfff5485525febfa43
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33841851"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50519740"
 ---
 # <a name="ltcwchargt"></a>&lt;cwchar&gt;
 
@@ -34,7 +24,7 @@ ms.locfileid: "33841851"
 
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 このヘッダーをインクルードすると、標準 C ライブラリ ヘッダーの外部リンケージで宣言された名前が、`std` 名前空間でも宣言されます。
 

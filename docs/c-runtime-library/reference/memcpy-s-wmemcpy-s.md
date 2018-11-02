@@ -1,10 +1,6 @@
 ---
-title: memcpy_s、wmemcpy_s | Microsoft Docs
-ms.custom: ''
+title: memcpy_s、wmemcpy_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - memcpy_s
 - wmemcpy_s
@@ -24,22 +20,16 @@ apitype: DLLExport
 f1_keywords:
 - wmemcpy_s
 - memcpy_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - memcpy_s function
 - wmemcpy_s function
 ms.assetid: 5504e20a-83d9-4063-91fc-3f55f7dabe99
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12bf97e596a7cb4e3befa4c0633a8ef2df29a6d1
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: e7d6cc7abdd5f343bf1482f534f5112eabbc96b8
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403795"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607156"
 ---
 # <a name="memcpys-wmemcpys"></a>memcpy_s、wmemcpy_s
 
@@ -86,18 +76,18 @@ errno_t wmemcpy_s(
 |------------|----------------|-----------|---|------------------|------------------------|
 |任意|任意|任意|0|0|変更されない|
 |**NULL**|任意|任意|0 以外|**EINVAL**|変更されない|
-|任意|任意|**NULL**|0 以外|**EINVAL**|*dest*はゼロに設定|
-|任意|< *カウント*|任意|0 以外|**ERANGE**|*dest*はゼロに設定|
+|任意|任意|**NULL**|0 以外|**EINVAL**|*dest*は 0 に設定|
+|任意|< *カウント*|任意|0 以外|**ERANGE**|*dest*は 0 に設定|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**memcpy_s**コピー*カウント*からバイト*src*に*dest*です。**wmemcpy_s**コピー*カウント*ワイド文字 (2 バイト)。 ソースと変換先が重なり合うかどうかの動作**memcpy_s**が定義されていません。 使用して**memmove_s**重なり合う領域を処理します。
+**memcpy_s**コピー*カウント*からバイト*src*に*dest*;**wmemcpy_s**コピー*カウント*ワイド文字 (2 バイト)。 ソースと変換先が重なり合うかどうかの動作**memcpy_s**が定義されていません。 使用**memmove_s**重なり合っている領域を処理します。
 
-これらの関数では、パラメーターの検証が行われます。 場合*カウント*ゼロ以外と*dest*または*src* null ポインター、または*destSize*よりも小さい*カウント*、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**または**ERANGE**設定と**errno**戻り値にします。
+これらの関数では、パラメーターの検証が行われます。 場合*カウント*0 以外の場合と*dest*または*src* null ポインター、または*destSize*よりも小さい*カウント*、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EINVAL**または**ERANGE**設定と**errno**戻り値にします。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**memcpy_s**|\<memory.h> または \<string.h>|
 |**wmemcpy_s**|\<wchar.h>|

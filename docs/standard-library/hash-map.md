@@ -1,27 +1,17 @@
 ---
-title: '&lt;hash_map&gt; | Microsoft Docs'
-ms.custom: ''
+title: '&lt;hash_map&gt;'
 ms.date: 01/18/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - <hash_map>
 - std::<hash_map>
-dev_langs:
-- C++
 helpviewer_keywords:
 - hash_map header
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0ef090aec97308a6d423c18daab5ee540efdd8a1
-ms.sourcegitcommit: f0c90000125a9497bf61e41624de189a043703c0
+ms.openlocfilehash: 9e8d53e841c93c474d6f6b7da925c8f72f73a8a1
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2018
-ms.locfileid: "44316323"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50561526"
 ---
 # <a name="lthashmapgt"></a>&lt;hash_map&gt;
 
@@ -56,7 +46,7 @@ ms.locfileid: "44316323"
 |[hash_map クラス](hash-map-class.md)|一意の並べ替えキーとそれに関連付けられている値のペアを要素として持つコレクションのデータを格納したり、迅速に取得したりするために使用されます。|
 |[hash_multimap クラス](hash-multimap-class.md)|必ずしも一意ではない並べ替えキーとそれに関連付けられている値のペアを要素として持つコレクションのデータを格納したり、迅速に取得したりするために使用されます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<hash_map>
 

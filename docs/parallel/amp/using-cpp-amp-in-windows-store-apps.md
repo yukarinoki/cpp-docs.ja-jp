@@ -1,23 +1,13 @@
 ---
-title: UWP アプリで C++ AMP の使用 |Microsoft Docs
-ms.custom: ''
+title: UWP アプリで C++ AMP の使用
 ms.date: 11/04/2016
-ms.technology:
-- cpp-amp
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 85577298-2c28-4209-9470-eb21048615db
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: faa26db2df606502bf4a80f21d7a5be4bafc1f9e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 9e17cb8691408d664f403b53e9cd8ad70fe6e5e0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46377801"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50447757"
 ---
 # <a name="using-c-amp-in-uwp-apps"></a>UWP アプリで C++ AMP の使用
 
@@ -126,4 +116,4 @@ concurrency::parallel_for_each(av_red.extent, [=](index<1> idx) restrict(amp)
 ## <a name="see-also"></a>関連項目
 
 [C++ を使った初めての UWP アプリを作成します。](/windows/uwp/get-started/create-a-basic-windows-10-app-in-cpp)<br/>
-[C++ で Windows ランタイム コンポーネントの作成](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)
+[C++ で Windows ランタイム コンポーネントを作成する](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)

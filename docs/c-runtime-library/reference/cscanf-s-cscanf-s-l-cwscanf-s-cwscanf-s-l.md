@@ -1,10 +1,6 @@
 ---
-title: _cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l | Microsoft Docs
-ms.custom: ''
+title: _cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _cwscanf_s_l
 - _cwscanf_s
@@ -35,8 +31,6 @@ f1_keywords:
 - _tcscanf_s_l
 - tcscanf_s
 - tcscanf_s_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - cscanf_s function
 - _cwscanf_s_l function
@@ -54,16 +48,12 @@ helpviewer_keywords:
 - _tcscanf_s function
 - tcscanf_s_l function
 ms.assetid: 9ccab74d-916f-42a6-93d8-920525efdf4b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2ca65c4746256611ed6958bc76d8779cd36ae1ff
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: b49c464c7262a60bb7744a68c0144234e152edd3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32403275"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463701"
 ---
 # <a name="cscanfs-cscanfsl-cwscanfs-cwscanfsl"></a>_cscanf_s、_cscanf_s_l、_cwscanf_s、_cwscanf_s_l
 
@@ -108,18 +98,18 @@ int _cwscanf_s_l(
 
 ## <a name="return-value"></a>戻り値
 
-正常に変換され、割り当てられたフィールドの数。 戻り値には、読まれたが割り当てられなかったフィールドは含まれません。 戻り値は**EOF**のファイルの末尾で読み取ろうとしています。 これは、キーボード入力がオペレーティング システムのコマンド ラインのレベルでリダイレクトされる場合に発生します。 戻り値が 0 の場合は、代入されたフィールドがなかったことを意味します。
+正常に変換され、割り当てられたフィールドの数。 戻り値には、読まれたが割り当てられなかったフィールドは含まれません。 戻り値は**EOF**のファイルの末尾で読み取ろうとします。 これは、キーボード入力がオペレーティング システムのコマンド ラインのレベルでリダイレクトされる場合に発生します。 戻り値が 0 の場合は、代入されたフィールドがなかったことを意味します。
 
-これらの関数では、パラメーターの検証が行われます。 場合*形式*null ポインター」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**と**errno**に設定されている**EINVAL**です。
+これらの関数では、パラメーターの検証が行われます。 場合*形式*null ポインターの場合は、」の説明に従って、これらの関数は、無効なパラメーター ハンドラーを呼び出します[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、 **EOF**と**errno**に設定されている**EINVAL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Cscanf_s**関数で指定した位置に、コンソールから直接データを読み取ります*引数*です。 [_getche](getch-getwch.md) 関数は文字を読み取るために使用されます。 省略可能な各パラメーターは、型指定子に対応する型の変数へのポインターである必要があります*形式*です。 形式のコントロールの入力の解釈のフィールドし、同じ形式し、機能、*形式*のパラメーター、 [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md)関数。 中に **_cscanf_s**通常、入力文字がエコーされます、行われない場合、最後に呼び出した **_ungetch**です。
+**_Cscanf_s**関数で指定した位置に、コンソールから直接データを読み取ります*引数*します。 [_getche](getch-getwch.md) 関数は文字を読み取るために使用されます。 省略可能な各パラメーターに型指定子に対応する型の変数へのポインターをする必要があります*形式*します。 書式設定、入力の解釈のフィールドし、同じ形式し、機能、*形式*のパラメーター、 [scanf_s](scanf-scanf-l-wscanf-wscanf-l.md)関数。 中に **_cscanf_s**通常、入力文字をエコーする最後の呼び出しがあった場合、行われない **_ungetch**します。
 
-内の関数のセキュリティで保護された他のバージョンと同様に、 **scanf**ファミリ、 **_cscanf_s**と **_cswscanf_s**型フィールド文字のサイズ引数を必要と**c**、 **C**、 **s**、 **S**、および **[** です。 詳細については、「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
+内の関数のセキュリティで保護されたその他のバージョンと同様、 **scanf**ファミリ、 **_cscanf_s**と **_cswscanf_s** 、型フィールド文字サイズ引数が必要です**c**、 **C**、 **s**、 **S**、および **[** します。 詳細については、「[scanf 関数の文字幅指定](../../c-runtime-library/scanf-width-specification.md)」を参照してください。
 
 > [!NOTE]
-> サイズ パラメーターの型は**符号なし**ではなく、 **size_t**です。
+> 型のサイズのパラメーターが**符号なし**ではなく、 **size_t**します。
 
 これらの関数のバージョン、 **_l**現在のスレッド ロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。
 
@@ -130,9 +120,9 @@ int _cwscanf_s_l(
 |**_tcscanf_s**|**_cscanf_s**|**_cscanf_s**|**_cwscanf_s**|
 |**_tcscanf_s_l**|**_cscanf_s_l**|**_cscanf_s_l**|**_cwscanf_s_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_cscanf_s**、 **_cscanf_s_l**|\<conio.h>|
 |**_cwscanf_s**、 **_cwscanf_s_l**|\<conio.h> または \<wchar.h>|

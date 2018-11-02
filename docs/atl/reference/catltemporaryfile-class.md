@@ -1,10 +1,6 @@
 ---
-title: CAtlTemporaryFile クラス |Microsoft Docs
-ms.custom: ''
+title: CAtlTemporaryFile クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - CAtlTemporaryFile
 - ATLFILE/ATL::CAtlTemporaryFile
@@ -23,21 +19,15 @@ f1_keywords:
 - ATLFILE/ATL::CAtlTemporaryFile::TempFileName
 - ATLFILE/ATL::CAtlTemporaryFile::UnlockRange
 - ATLFILE/ATL::CAtlTemporaryFile::Write
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c8d32094dd8ee55cdd76fc21f51a2f809b1b341d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f440476db3618c24f0fd1cfbfe028c959517a607
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46034929"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642272"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile クラス
 
@@ -90,7 +80,7 @@ class CAtlTemporaryFile
 
 `CAtlTemporaryFile` 作成し、一時ファイルを使用できるようになります。 ファイルが自動的にという名前の開く、閉じられ、削除します。 ファイルが閉じられた後、ファイルの内容が必要な場合は、指定した名前の新しいファイルに保存できます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlfile.h
 

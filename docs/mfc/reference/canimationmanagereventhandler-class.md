@@ -1,10 +1,6 @@
 ---
-title: CAnimationManagerEventHandler クラス |Microsoft Docs
-ms.custom: ''
+title: CAnimationManagerEventHandler クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationManagerEventHandler
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler
@@ -12,24 +8,18 @@ f1_keywords:
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::CreateInstance
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::OnManagerStatusChanged
 - AFXANIMATIONCONTROLLER/CAnimationManagerEventHandler::SetAnimationController
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationManagerEventHandler [MFC], CAnimationManagerEventHandler
 - CAnimationManagerEventHandler [MFC], CreateInstance
 - CAnimationManagerEventHandler [MFC], OnManagerStatusChanged
 - CAnimationManagerEventHandler [MFC], SetAnimationController
 ms.assetid: 6089ec07-e661-4805-b227-823b4652aade
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 96d3ba28d7cd1b60743aec7d9bd5b53b8cf59127
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 497b6e0f5bdeb817eccb0bb42f66763a97da2af0
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46405841"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50445735"
 ---
 # <a name="canimationmanagereventhandler-class"></a>CAnimationManagerEventHandler クラス
 
@@ -54,7 +44,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 |名前|説明|
 |----------|-----------------|
 |[CAnimationManagerEventHandler::CreateInstance](#createinstance)|インスタンスを作成します`CAnimationManagerEventHandler`オブジェクト。|
-|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|アニメーション マネージャーの状態が変更されたときに呼び出されます。 (`CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged` をオーバーライドします)。|
+|[CAnimationManagerEventHandler::OnManagerStatusChanged](#onmanagerstatuschanged)|アニメーション マネージャーの状態が変更されたときに呼び出されます。 ( `CUIAnimationManagerEventHandlerBase::OnManagerStatusChanged`をオーバーライドします)。|
 |[CAnimationManagerEventHandler::SetAnimationController](#setanimationcontroller)|イベントをルーティングするアニメーション コント ローラーへのポインターを格納します。|
 
 ## <a name="remarks"></a>Remarks
@@ -69,7 +59,7 @@ class CAnimationManagerEventHandler : public CUIAnimationManagerEventHandlerBase
 
 `CAnimationManagerEventHandler`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxanimationcontroller.h
 

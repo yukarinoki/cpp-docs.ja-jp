@@ -1,10 +1,6 @@
 ---
-title: _get_daylight | Microsoft Docs
-ms.custom: ''
+title: _get_daylight
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - __daylight
 - _get_daylight
@@ -24,23 +20,17 @@ apitype: DLLExport
 f1_keywords:
 - get_daylight
 - _get_daylight
-dev_langs:
-- C++
 helpviewer_keywords:
 - get_daylight function
 - daylight saving time offset
 - _get_daylight function
 ms.assetid: f85a6ba3-e187-4ca7-aed7-ffc694c8ac4c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0fbe7e36db2e5ca5365f43dc23281d9b5e79077d
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 03c3386e59379f460d3c07dc310153d990c02b05
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398124"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50444643"
 ---
 # <a name="getdaylight"></a>_get_daylight
 
@@ -59,19 +49,19 @@ error_t _get_daylight( int* hours );
 
 ## <a name="return-value"></a>戻り値
 
-正常終了した場合や、0 **errno**値の場合は、エラーが発生します。
+成功した場合や、0 **errno**エラーが発生した場合の値します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 **_Get_daylight**関数は、整数としての夏時間の時間数を取得します。 夏時間が有効な場合、既定のオフセットは 1 時間です (ただし、一部の地域は 2 時間のオフセットを実施しています)。
 
-場合*時間*は**NULL**、」の説明に従って、無効なパラメーター ハンドラーが呼び出される[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**し、返します**EINVAL**です。
+場合*時間*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合に、この関数が設定**errno**に**EINVAL**返します**EINVAL**します。
 
-マクロではなくこの関数を使用することをお勧め **_daylight**非推奨の関数または **__daylight**です。
+マクロの代わりにこの関数を使用することをお勧めします。 **_daylight**または非推奨の関数 **__daylight**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_get_daylight**|\<time.h>|
 

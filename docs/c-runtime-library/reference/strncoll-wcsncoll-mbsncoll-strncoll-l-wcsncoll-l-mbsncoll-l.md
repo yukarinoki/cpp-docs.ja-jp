@@ -1,10 +1,6 @@
 ---
-title: _strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l | Microsoft Docs
-ms.custom: ''
+title: _strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _strncoll
 - _mbsncoll_l
@@ -40,8 +36,6 @@ f1_keywords:
 - _strncoll
 - _tcsncoll
 - mbsncoll
-dev_langs:
-- C++
 helpviewer_keywords:
 - _strncoll_l function
 - code pages, using for string comparisons
@@ -66,16 +60,12 @@ helpviewer_keywords:
 - ftcsnccoll function
 - _wcsncoll_l function
 ms.assetid: e659a5a4-8afe-4033-8e72-17ffd4bdd8e9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 888484a80cc7c39921b973450afdaa361518432a
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: fe6c3283c9379b370911cc63184535e813b96d8c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32415908"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50658537"
 ---
 # <a name="strncoll-wcsncoll-mbsncoll-strncolll-wcsncolll-mbsncolll"></a>_strncoll、_wcsncoll、_mbsncoll、_strncoll_l、_wcsncoll_l、_mbsncoll_l
 
@@ -139,17 +129,17 @@ Null で終わる比較対象の文字列。
 
 |戻り値|string1 と string2 との関係|
 |------------------|----------------------------------------|
-|< 0|*string1*はより小さい*string2*です。|
-|0|*string1*と同じ*string2*です。|
-|> 0|*string1*がより大きい*string2*です。|
+|< 0|*string1*がより小さい*string2*します。|
+|0|*string1*ヲェヒェケェ ・ *string2*します。|
+|> 0|*string1*がより大きい*string2*します。|
 
-これらの関数を返します**すると**です。 使用する**すると**、STRING.h または MBSTRING.h です。 **_wcsncoll**失敗する場合は、いずれか*string1*または*string2*照合シーケンスのドメイン外のワイド文字コードが含まれています。 エラーが発生するときに **_wcsncoll**設定**errno**に**EINVAL**です。 呼び出しでエラーを確認する **_wcsncoll**設定、 **errno**を 0 にし、確認**errno**を呼び出した後 **_wcsncoll**です。
+これらの関数を返します。**すると**します。 使用する**すると**、STRING.h または MBSTRING.h を含めます。 **_wcsncoll**場合に失敗できる*string1*または*string2*に照合シーケンスのドメイン外のワイド文字コードが含まれています。 エラーが発生したときに **_wcsncoll**設定**errno**に**EINVAL**します。 呼び出しでエラーをチェックする **_wcsncoll**設定**errno**を 0 にし、確認**errno**を呼び出した後 **_wcsncoll**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-最初の大文字小文字を区別比較を実行の各関数*カウント*内の文字*string1*と*string2*、中ではコード ページに従って使用します。 これらの関数は、コード ページの文字セット順序と辞書式文字順序との間に相違点あり、この違いが文字列比較に関係がある場合にのみ使用します。 文字セット順序は、ロケールに依存します。 付いていないこれらの関数のバージョン、 **_l**サフィックスを使用して、現在のロケールが付いているバージョン、 **_l**サフィックスが渡されたロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+これらの各関数は最初の大文字小文字の比較を実行します*カウント*文字*string1*と*string2*では、現在のコード ページに従って使用します。 これらの関数は、コード ページの文字セット順序と辞書式文字順序との間に相違点あり、この違いが文字列比較に関係がある場合にのみ使用します。 文字セット順序は、ロケールに依存します。 これらの関数がないのバージョン、 **_l**現在のロケールでは、使用のサフィックスが付いているバージョン、 **_l**サフィックスが渡されるロケールを使用します。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-これらのすべての関数では、パラメーターの検証が行われます。 いずれか*string1*または*string2* null ポインター、または*カウント*がより大きい**INT_MAX**、無効なパラメーター ハンドラーが呼び出されると、」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、**すると**設定と**errno**に**EINVAL**です。
+これらのすべての関数では、パラメーターの検証が行われます。 いずれか*string1*または*string2* null ポインターの場合は、または*カウント*がより大きい**INT_MAX**、無効なパラメーター ハンドラーが呼び出されます」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 これらの関数を返すかどうかは、引き続き実行が許可された、**すると**設定と**errno**に**EINVAL**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -158,9 +148,9 @@ Null で終わる比較対象の文字列。
 |**_tcsnccoll**|**_strncoll**|**_mbsncoll**|**_wcsncoll**|
 |**_tcsncoll**|**_strncoll**|[_mbsnbcoll](mbsnbcoll-mbsnbcoll-l-mbsnbicoll-mbsnbicoll-l.md)|**_wcsncoll**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_strncoll**、 **_strncoll_l**|\<string.h>|
 |**_wcsncoll**、 **_wcsncoll_l**|\<wchar.h> または \<string.h>|

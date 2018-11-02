@@ -1,27 +1,17 @@
 ---
-title: XFORM 構造体 |Microsoft Docs
-ms.custom: ''
+title: XFORM 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - XFORM
-dev_langs:
-- C++
 helpviewer_keywords:
 - XFORM structure [MFC]
 ms.assetid: 4fb4ef5b-05d2-4884-82d1-1cb8f7be6302
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ab1a2fe23f364dc35a2368d325db5e4274fc8e64
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 621a01accf3c323f8098da68667f06f48b9d169b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46411639"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50457254"
 ---
 # <a name="xform-structure"></a>XFORM 構造体
 
@@ -51,7 +41,7 @@ typedef struct  tagXFORM {  /* xfrm */
 |`Shear`|Nothing|水平方向のプロポーショナル定数|垂直方向のプロポーショナル定数|Nothing|
 |`Reflection`|水平方向の反転コンポーネント|Nothing|Nothing|垂直方向の反転コンポーネント|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** wingdi.h
 

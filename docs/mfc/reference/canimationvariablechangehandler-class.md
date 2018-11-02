@@ -1,31 +1,21 @@
 ---
-title: CAnimationVariableChangeHandler クラス |Microsoft Docs
-ms.custom: ''
+title: CAnimationVariableChangeHandler クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CAnimationVariableChangeHandler
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::OnValueChanged
 - AFXANIMATIONCONTROLLER/CAnimationVariableChangeHandler::SetAnimationController
-dev_langs:
-- C++
 helpviewer_keywords:
 - CAnimationVariableChangeHandler [MFC], OnValueChanged
 - CAnimationVariableChangeHandler [MFC], SetAnimationController
 ms.assetid: 2ea4996d-5c04-4dfc-be79-d42d55050795
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 23521a9ee9706787df0568547fe3419fe7e4fae5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 589691f8bb2bc14eba46245082ff972ca6b97fcc
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46424600"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50604380"
 ---
 # <a name="canimationvariablechangehandler-class"></a>CAnimationVariableChangeHandler クラス
 
@@ -50,7 +40,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 |名前|説明|
 |----------|-----------------|
 |`CAnimationVariableChangeHandler::CreateInstance`|インスタンスを作成します`CAnimationVariableChangeHandler`オブジェクト。|
-|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|アニメーション変数の値が変更されたときに呼び出されます。 (`CUIAnimationVariableChangeHandlerBase::OnValueChanged` をオーバーライドします)。|
+|[CAnimationVariableChangeHandler::OnValueChanged](#onvaluechanged)|アニメーション変数の値が変更されたときに呼び出されます。 ( `CUIAnimationVariableChangeHandlerBase::OnValueChanged`をオーバーライドします)。|
 |[CAnimationVariableChangeHandler::SetAnimationController](#setanimationcontroller)|イベントをルーティングするアニメーション コント ローラーへのポインターを格納します。|
 
 ## <a name="remarks"></a>Remarks
@@ -65,7 +55,7 @@ class CAnimationVariableChangeHandler : public CUIAnimationVariableChangeHandler
 
 `CAnimationVariableChangeHandler`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxanimationcontroller.h
 

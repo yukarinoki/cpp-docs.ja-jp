@@ -1,28 +1,18 @@
 ---
-title: CDaoIndexFieldInfo 構造体 |Microsoft Docs
-ms.custom: ''
+title: CDaoIndexFieldInfo 構造体
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - CDaoIndexFieldInfo
-dev_langs:
-- C++
 helpviewer_keywords:
 - CDaoIndexFieldInfo structure [MFC]
 - DAO (Data Access Objects), Index Fields collection
 ms.assetid: 097ee8a6-83b1-4db7-8f05-d62a2deefe19
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1593ad1997baf0b5ce262f3177f0f063b49cec6e
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 358e6654060e92e0df83b118fa70e1c3a3a990b3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46378645"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50449583"
 ---
 # <a name="cdaoindexfieldinfo-structure"></a>CDaoIndexFieldInfo 構造体
 
@@ -54,7 +44,7 @@ Index オブジェクトには、多数のフィールド、フィールドに�
 
 呼び出す、`GetIndexInfo`でインデックスがコレクションは、親テーブルまたはレコード セット オブジェクトのメンバー関数は、興味のあるインデックス オブジェクトを格納します。 アクセスし、`m_pFieldInfos`のメンバー、 [CDaoIndexInfo](../../mfc/reference/cdaoindexinfo-structure.md)オブジェクト。 長さ、`m_pFieldInfos`に配列が格納されている`m_nFields`します。 `CDaoIndexFieldInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoIndexFieldInfo`オブジェクト。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxdao.h
 

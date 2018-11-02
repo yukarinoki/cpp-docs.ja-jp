@@ -1,29 +1,18 @@
 ---
-title: ダイアログ エディター ツールバー (C++) と非表示 |Microsoft Docs
-ms.custom: ''
+title: ダイアログ エディター ツールバー (C++) と非表示
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - controls [C++], showing or hiding Dialog editor toolbar
 - toolbars [C++], showing
 - toolbars [C++], hiding
 - Dialog Editor [C++], showing or hiding toolbar
 ms.assetid: 93c255e1-90eb-48b6-8602-450acda75bed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 02deeeed3eecf717cff380e43317e5a75c1fddf7
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: e025f560a47f85d17b8c56a4db19f322069d33ef
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46381245"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631089"
 ---
 # <a name="showing-or-hiding-the-dialog-editor-toolbar-c"></a>ダイアログ エディター ツールバー (C++) と非表示
 
@@ -54,7 +43,7 @@ ms.locfileid: "46381245"
 
 マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

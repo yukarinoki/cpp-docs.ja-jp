@@ -1,34 +1,24 @@
 ---
-title: -U、-u (シンボルの未定義) |Microsoft Docs
-ms.custom: ''
+title: /U、/u (定義済みマクロ シンボルの未定義化)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLWCECompilerTool.UndefinePreprocessorDefinitions
 - VC.Project.VCCLCompilerTool.UndefineAllPreprocessorDefinitions
 - /u
 - VC.Project.VCCLWCECompilerTool.UndefineAllPreprocessorDefinitions
-dev_langs:
-- C++
 helpviewer_keywords:
 - -U compiler option [C++]
 - Undefine Symbols compiler option
 - /U compiler option [C++]
 - U compiler option [C++]
 ms.assetid: 7bc0474f-6d1f-419b-807d-0d8816763b2a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a32106dd9802643a827f8a3e97298f389d31d3b4
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1ccda218a2bccc261653016ad6a47d419ddacfd9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430671"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624446"
 ---
 # <a name="u-u-undefine-symbols"></a>/U、/u (定義済みマクロ シンボルの未定義化)
 
@@ -65,7 +55,7 @@ ms.locfileid: "46430671"
 |_WIN32|WIN32 アプリケーションで定義されています。 これは、常に定義されます。|
 |_MT|定義されているときに、 [/MD、/MT または](../../build/reference/md-mt-ld-use-run-time-library.md)オプションを指定します。|
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

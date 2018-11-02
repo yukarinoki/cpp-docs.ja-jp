@@ -1,10 +1,6 @@
 ---
-title: _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32 | Microsoft Docs
-ms.custom: ''
+title: _fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _fstat32
 - _fstat64
@@ -38,8 +34,6 @@ f1_keywords:
 - _fstat
 - fstat32
 - _fstat64i32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _fstat64 function
 - fstati64 function
@@ -55,16 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 65d77bfdd7922387568ca8257e66f6e19dde1a35
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32404969"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677787"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
@@ -109,32 +99,32 @@ int _fstat64i32(
 
 ## <a name="return-value"></a>戻り値
 
-ファイルのステータス情報が取得されると、0 を返します。 戻り値-1 はエラーを示します。 ファイル記述子が有効でない場合または*バッファー*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EBADF**の場合は、無効なファイル記述子または**EINVAL**場合は、*バッファー***NULL**です。
+ファイルのステータス情報が取得されると、0 を返します。 戻り値-1 はエラーを示します。 ファイル記述子が有効でない場合または*バッファー*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**errno**に設定されている**EBADF**、無効なファイル記述子が場合または**EINVAL**場合は、*バッファー***NULL**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**_Fstat**関数に関連付けられている、開いているファイルに関する情報を取得する*fd*が指す構造体に格納および*バッファー*です。 **_Stat** 、sys \stat.h で定義された構造には、次のフィールドが含まれています。
+**_Fstat**関数に関連付けられている開いているファイルに関する情報を取得*fd*が指す構造体に格納*バッファー*します。 **_Stat** 、sys \stat.h で定義されている構造には、次のフィールドが含まれています。
 
 |フィールド|説明|
 |-|-|
 **st_atime**|ファイルの最後のアクセスの時間。
 **st_ctime**|ファイルの作成の時間。
-**st_dev**|場合、デバイス*fd*。 それ以外の場合に 0 です。
-**st_mode**|ファイル モード情報のビット マスク。 **_S_IFCHR**場合はビットがセット*fd*デバイスを参照します。 **_S_IFREG**場合はビットがセット*fd*は通常のファイルを参照します。 読み取り/書き込みのビットは、ファイルのアクセス許可モードに応じて設定されます。 **_S_IFCHR** sys \stat.h で他の定数が定義されているとします。
+**st_dev**|デバイスの場合*fd*。 それ以外の場合に 0 です。
+**st_mode**|ファイル モード情報のビット マスク。 **_S_IFCHR**場合に設定されます*fd*デバイスを参照します。 **_S_IFREG**場合に設定されます*fd*は通常のファイルを参照します。 読み取り/書き込みのビットは、ファイルのアクセス許可モードに応じて設定されます。 **_S_IFCHR** sys \stat.h で他の定数が定義されているとします。
 **st_mtime**|ファイルの最終変更時刻。
 **st_nlink**|非 NTFS ファイル システムでは常に 1 です。
-**st_rdev**|場合、デバイス*fd*。 それ以外の場合に 0 です。
+**st_rdev**|デバイスの場合*fd*。 それ以外の場合に 0 です。
 **st_size**|ファイルのサイズ (バイト単位)。
 
-場合*fd* 、デバイスを参照、 **st_atime**、 **st_ctime**、 **st_mtime**、および**st_size**フィールドは、意味をなさない。
+場合*fd*デバイスを参照、 **st_atime**、 **st_ctime**、 **st_mtime**、および**st_size**フィールドは、にとって意味がありません。
 
 Stat.h は Types.h で定義される [_dev_t](../../c-runtime-library/standard-types.md) 型を使用するため、コードで Stat.h の前に Types.h を組み込む必要があります。
 
-**_fstat64**が使用される、 **_ _stat64**構造体、その他の関数のみ 23時 59分: 59 まで年 1 月 18 日を表すファイルの作成日を UTC; 3000 年 12 月 31 日 23時 59分: 59 秒を表現することができますUTC の 2038 年です。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
+**_fstat64**、使用、 **_ _stat64**構造体をその他の関数しか 23時 59分: 59 年 1 月 18 日までの日付を表すファイルの作成日を UTC; 3000 年 12 月 31 日 23時 59分: 59 秒を表すことができますUTC の 2038 年。 これらの関数の日付範囲の下限は、いずれも 1970 年 1 月 1 日の午前 0 時です。
 
-これらの関数のバリエーションは、32 ビットや 64 ビットの時刻型と、32 ビットや 64 ビットのファイル長をサポートします。 最初の数字のサフィックス (**32**または**64**) 時間のサイズを表します型の使用です。 2 番目のサフィックスは、いずれかの**i32**または**i64**、。ファイルのサイズが 32 ビットまたは 64 ビット整数として表されるかどうかを示すです。
+これらの関数のバリエーションは、32 ビットや 64 ビットの時刻型と、32 ビットや 64 ビットのファイル長をサポートします。 最初の数字のサフィックス (**32**または**64**) 時間のサイズを表します型の使用は、2 番目のサフィックスは**i32**または**i64**、。ファイル サイズが 32 ビットまたは 64 ビット整数として表されるかどうかを示すです。
 
-**_fstat**は等価 **_fstat64i32**、および**構造体** **_stat** 64 ビットの時刻が含まれています。 これは該当しない限り、 **_USE_32BIT_TIME_T**が定義されている場合、従来の動作は有効になります。**_fstat** 32 ビットの時刻を使用し、**構造体** **_stat** 32 ビットの時刻が含まれています。 場合も同様です **_fstati64**です。
+**_fstat**と等価 **_fstat64i32**、および**構造体** **_stat** 64 ビットの時刻が含まれています。 これは、該当しない限り、 **_USE_32BIT_TIME_T**が定義されている場合、以前の動作が有効になります。**_fstat** 32 ビットの時刻を使用し、**構造体** **_stat** 32 ビットの時刻が含まれています。 場合も同様 **_fstati64**します。
 
 ### <a name="time-type-and-file-length-type-variations-of-stat"></a>_stat の時刻型とファイル長型のバリエーション
 
@@ -149,7 +139,7 @@ Stat.h は Types.h で定義される [_dev_t](../../c-runtime-library/standard-
 |**_fstat32i64**|マクロ定義の影響を受けない|32 ビット|64 ビット|
 |**_fstat64i32**|マクロ定義の影響を受けない|64 ビット|32 ビット|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|

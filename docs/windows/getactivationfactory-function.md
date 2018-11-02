@@ -1,30 +1,20 @@
 ---
-title: GetActivationFactory 関数 |Microsoft Docs
-ms.custom: ''
+title: GetActivationFactory 関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
 ms.topic: reference
 f1_keywords:
 - module/Microsoft::WRL::Details::GetActivationFactory
 - client/ABI::Windows::Foundation::GetActivationFactory
 - client/Windows::Foundation::GetActivationFactory
-dev_langs:
-- C++
 helpviewer_keywords:
 - GetActivationFactory function
 ms.assetid: 5736d285-6beb-42aa-8788-e261c0010afe
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: f5afaa14d926cc7dde86cdbdb6b5ca8162f81d7c
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a2581fce3c15c96317bf68de0ed918b19edd8b38
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46402149"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50481709"
 ---
 # <a name="getactivationfactory-function"></a>GetActivationFactory 関数
 
@@ -55,7 +45,7 @@ inline HRESULT GetActivationFactory(
 
 成功した場合は s_ok を返します。それ以外の場合、この操作が失敗した理由を示す HRESULT エラー。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** client.h
 

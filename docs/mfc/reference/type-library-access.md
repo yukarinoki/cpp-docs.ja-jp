@@ -1,27 +1,17 @@
 ---
-title: 入力ライブラリへのアクセス |Microsoft Docs
-ms.custom: ''
+title: タイプ ライブラリ アクセス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.mfc.macros
-dev_langs:
-- C++
 helpviewer_keywords:
 - type libraries [MFC], accessing
 ms.assetid: a03fa7f0-86c2-4119-bf81-202916fb74b3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1a361c1e50945b19562082424c178a21191bd0b9
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 4dc5a445f4a7736182350c16720686ca7e0bc27c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46404742"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50468381"
 ---
 # <a name="type-library-access"></a>タイプ ライブラリ アクセス
 
@@ -53,7 +43,7 @@ DECLARE_OLETYPELIB(class_name)
 
 コントロール クラスのヘッダー ファイルでこのマクロを使用します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 
@@ -83,7 +73,7 @@ IMPLEMENT_OLETYPELIB(class_name, tlid, wVerMajor,  wVerMinor)
 
 このマクロは、DECLARE_OLETYPELIB マクロを使用するコントロール クラスの実装ファイルに表示する必要があります。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxdisp.h
 

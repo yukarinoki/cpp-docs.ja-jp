@@ -1,10 +1,6 @@
 ---
-title: atan、atanf、atanl、atan2、atan2f、atan2l | Microsoft Docs
-ms.custom: ''
+title: atan、atanf、atanl、atan2、atan2f、atan2l
 ms.date: 04/05/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - atan2f
 - atan2l
@@ -32,8 +28,6 @@ f1_keywords:
 - atanl
 - atanf
 - atan2f
-dev_langs:
-- C++
 helpviewer_keywords:
 - atan function
 - atanf function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - trigonometric functions
 - atan2f function
 ms.assetid: 7a87a18e-c94d-4727-9cb1-1bb5c2725ae4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5e1f8b60c25c57e3e2eb6a9a964fd80664e3aa4c
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 59a67b0d213a11630f551fd7582b44aab60e314f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32393899"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50541727"
 ---
 # <a name="atan-atanf-atanl-atan2-atan2f-atan2l"></a>atan、atanf、atanl、atan2、atan2f、atan2l
 
-逆正接を計算**x** (**atan**、 **atanf**、および**atanl**) のアーク タンジェントまたは**y** /**x** (**atan2**、 **atan2f**、および**atan2l**)。
+アーク タンジェントを計算**x** (**atan**、 **atanf**、および**atanl**) のアーク タンジェントまたは**y** /**x** (**atan2**、 **atan2f**、および**atan2l**)。
 
 ## <a name="syntax"></a>構文
 
@@ -86,25 +76,25 @@ long double atan2( long double y, long double x );  // C++ only
 
 ## <a name="return-value"></a>戻り値
 
-**atan**のアーク タンジェントを返します*x*範囲 - π/2 ~ π/2 ラジアンにします。 **atan2**のアーク タンジェントを返します*y*/*x*範囲 π ~ π ラジアンにします。 場合*x* 0 の場合は、 **atan** 0 を返します。 場合の両方のパラメーター **atan2** 0 は、0 を返します。 すべての結果はラジアンにあります。
+**atan**のアーク タンジェントを返します*x* π/2 ラジアンの範囲 - π/2 でします。 **atan2**のアーク タンジェントを返します*y*/*x*範囲 π ~ π ラジアンにします。 場合*x*は 0 です。 **atan** 0 を返します。 場合の両方のパラメーター **atan2** 0、0 を返します。 すべての結果はラジアンにあります。
 
-**atan2**両方のパラメーターの記号を使用して、戻り値のクアドラントを判断します。
+**atan2**の両方のパラメーターの符号を使用して、戻り値のクアドラントを判断します。
 
 |入力|SEH 例外|Matherr 例外|
 |-----------|-------------------|-----------------------|
-|± **QNAN**、 **IND**|none|**_DOMAIN**|
+|± **QNAN**、 **IND**|none|**(_D)**|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Atan**関数のアーク タンジェント (逆タンジェント関数) を計算する*x*です。 **atan2**の逆正接を計算*y*/*x* (場合*x* 0 に等しい**atan2** π/2 を返します*y*が正の値、- π/2 の場合*y*負の値、または 0 の場合は、 *y*は 0 です)。
+**Atan**関数のアーク タンジェント (逆タンジェント関数) を計算する*x*します。 **atan2**のアーク タンジェントを計算*y*/*x* (場合*x* 0 に等しい**atan2** π/2 を返します*y*が正の値、- π/2 の場合*y* 、負の値または 0 の場合は、 *y*は 0 です)。
 
-**atan**ストリーミング SIMD 拡張命令 2 (SSE2) を使用する実装があります。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
+**atan**ストリーミング SIMD 拡張命令 2 (SSE2) を使用して実装されています。 SSE2 実装の使い方の詳細および制約については、「[_set_SSE2_enable](set-sse2-enable.md)」をご覧ください。
 
-C++ では、オーバー ロードできるよう、ためのオーバー ロードを呼び出すことができます**atan**と**atan2**を受け取る**float**または**長い** **double**引数。 C プログラムでは、 **atan**と**atan2**が常に**二重**引数と戻り値、**二重**です。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **atan**と**atan2**を受け取る**float**または**長い** **double**引数。 C プログラムで**atan**と**atan2**常に**二重**引数と戻り値、**二重**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー (C)|必須ヘッダー (C++)|
+|ルーチンによって返される値|必須ヘッダー (C)|必須ヘッダー (C++)|
 |-------------|---------------------|-|
 |**atan**、 **atan2**、 **atanf**、 **atan2f**、 **atanl**、 **atan2l**|\<math.h>|\<cmath> または \<math.h>|
 

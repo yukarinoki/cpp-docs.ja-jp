@@ -1,26 +1,17 @@
 ---
-title: 'チュートリアル: 作成し、使用して、独自のダイナミック リンク ライブラリ (C++) |Microsoft Docs'
+title: 'チュートリアル: 作成し、使用して、独自のダイナミック リンク ライブラリ (C++)'
 ms.custom: conceptual
 ms.date: 09/24/2018
-ms.technology:
-- cpp-tools
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 9806a17bfb603ff54609f2d509c50d0a5d91e15d
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48821258"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50591010"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>チュートリアル: 作成し、使用して、独自のダイナミック リンク ライブラリ (C++)
 
@@ -64,7 +55,7 @@ ms.locfileid: "48821258"
 
 ### <a name="to-create-a-dll-project-in-visual-studio-2017-version-153-or-later"></a>15.3 以降、Visual Studio 2017 バージョンで DLL プロジェクトを作成するには
 
-1. メニュー バーで、**ファイル** > **新規** > **プロジェクト**を開く、**新しいプロジェクト** ダイアログ ボックス。
+1. メニュー バーで **[ファイル]** > **[新規作成]** > **[プロジェクト]** の順に選択し、**[新しいプロジェクト]** ダイアログ ボックスを開きます。
 
 1. 左側のウィンドウで、**新しいプロジェクト** ダイアログ ボックスで、展開**インストール済み**と**Visual C**必要に応じて、選び、 **Windows デスクトップ**. 中央のウィンドウで次のように選択します。 **Windows デスクトップ ウィザード**します。 入力`MathLibrary`で、**名前**ボックスは、プロジェクトの名前を指定します。
 
@@ -405,7 +396,7 @@ int main()
 
 DLL とクライアント アプリケーションを作成するので、実験できます。 クライアント アプリのコードにブレークポイントを設定してくださいし、デバッガーでアプリを実行します。 ライブラリの呼び出しにステップ インするときの動作を参照してください。 ライブラリに他の関数を追加するか、DLL を使用する別のクライアント アプリを作成します。
 
-アプリを展開するときにも使用して Dll を展開する必要があります。 サードパーティ製の Dll をビルドする、または含めることをアプリが使用できるようにする最も簡単な方法とも呼ばれる、アプリと同じディレクトリに挿入するには*アプリのローカル展開*します。 展開の詳細については、次を参照してください。 [Deployment in Visual c](..\ide\deployment-in-visual-cpp.md)します。
+アプリを展開するときにも使用して Dll を展開する必要があります。 サードパーティ製の Dll をビルドする、または含めることをアプリが使用できるようにする最も簡単な方法とも呼ばれる、アプリと同じディレクトリに挿入するには*アプリのローカル展開*します。 配置の詳細については、「 [Deployment in Visual C++](..\ide\deployment-in-visual-cpp.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

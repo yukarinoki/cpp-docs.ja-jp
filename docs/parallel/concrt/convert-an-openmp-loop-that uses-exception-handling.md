@@ -1,26 +1,16 @@
 ---
-title: '方法: 同時実行ランタイムを使用する例外処理を使用する OpenMP ループを変換 |Microsoft Docs'
-ms.custom: ''
+title: '方法: 例外処理を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-concrt
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a5df38ada13e06f773a19436e80112946cc96157
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: f47beb7deffa0511e707768d2a1a84f47e489d5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46387329"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50608404"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>方法: 例外処理を使用する OpenMP ループを変換し、コンカレンシー ランタイムを使用する
 
@@ -32,7 +22,7 @@ OpenMP では、並列領域でスローされた例外は、同じスレッド�
 
 ## <a name="example"></a>例
 
-この例では、OpenMP `parallel` 領域および `parallel_for` の呼び出しで例外を処理する方法を示します。 `do_work`関数が成功しない場合、型の例外をスローするメモリ割り当て要求を実行します[std::bad_alloc](../../standard-library/bad-alloc-class.md)します。 OpenMP を使用するバージョンでは、例外をスローするスレッドは例外のキャッチも行う必要があります。 つまり、OpenMP 並列ループの各反復で例外が処理される必要があります。 同時実行ランタイムを使用するバージョンでは、メイン スレッドは別のスレッドによってスローされる例外をキャッチします。
+この例では、OpenMP `parallel` 領域および `parallel_for` の呼び出しで例外を処理する方法を示します。 `do_work`関数が成功しない場合、型の例外をスローするメモリ割り当て要求を実行します[std::bad_alloc](../../standard-library/bad-alloc-class.md)します。 OpenMP を使用するバージョンでは、例外をスローするスレッドは例外のキャッチも行う必要があります。 つまり、OpenMP 並列ループの各反復で例外が処理される必要があります。 コンカレンシー ランタイムを使用するバージョンでは、メイン スレッドは別のスレッドによってスローされる例外をキャッチします。
 
 [!code-cpp[concrt-openmp#3](../../parallel/concrt/codesnippet/cpp/convert-an-openmp-loop-that uses-exception-handling_1.cpp)]
 
@@ -54,11 +44,11 @@ Using the Concurrency Runtime...
 An error of type 'class std::bad_alloc' occurred.
 ```
 
-この例に示す OpenMP を使用するバージョンでは、各ループ反復で例外が発生し、処理されます。 同時実行ランタイムを使用するバージョンでは、ランタイムが例外を保存し、すべてのアクティブ タスクを停止すると共に、まだ開始されていないタスクを破棄し、`parallel_for` を呼び出すコンテキストに例外をマーシャリングします。
+この例に示す OpenMP を使用するバージョンでは、各ループ反復で例外が発生し、処理されます。 コンカレンシー ランタイムを使用するバージョンでは、ランタイムが例外を保存し、すべてのアクティブ タスクを停止すると共に、まだ開始されていないタスクを破棄し、`parallel_for` を呼び出すコンテキストに例外をマーシャリングします。
 
-OpenMP を使用するバージョンを例外発生後に終了する必要がある場合は、ブール型のフラグを使用して、エラーが発生したことを他のループ反復に通知します。 トピックの例のように[方法: を使用してキャンセルはされる同時実行ランタイムを使用する OpenMP ループを変換](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)、後続のループの反復は機能しません、フラグが設定されている場合。 一方、同時実行ランタイムを使用するループを例外発生後に続行する必要がある場合は、並列ループの本体で例外を処理します。
+OpenMP を使用するバージョンを例外発生後に終了する必要がある場合は、ブール型のフラグを使用して、エラーが発生したことを他のループ反復に通知します。 トピックの例のように[方法: を使用してキャンセルはされる同時実行ランタイムを使用する OpenMP ループを変換](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)、後続のループの反復は機能しません、フラグが設定されている場合。 一方、コンカレンシー ランタイムを使用するループを例外発生後に続行する必要がある場合は、並列ループの本体で例外を処理します。
 
-非同期エージェントや軽量タスクなど、同時実行ランタイムの他のコンポーネントでは、例外は転送されません。 代わりに、ハンドルされない例外のハンドラーが例外をキャッチし、既定ではプロセスを終了します。 例外処理の詳細については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
+非同期エージェントや軽量タスクなど、コンカレンシー ランタイムの他のコンポーネントでは、例外は転送されません。 代わりに、ハンドルされない例外のハンドラーが例外をキャッチし、既定ではプロセスを終了します。 例外処理の詳細については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
 
 詳細については`parallel_for`およびその他の並列アルゴリズムは、「[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
 

@@ -1,24 +1,17 @@
 ---
-title: 演算子::interop::typename |Microsoft Docs
-ms.custom: ''
+title: Windows::UI::Xaml::Interop::TypeName 演算子
 ms.date: 12/30/2016
-ms.technology: cpp-windows
-ms.topic: language-reference
 ms.assetid: a65a105e-7e3a-452f-932f-2cdaf00fbba5
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 262fb9d08da72201db041eff1a510a598851e3e2
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: c77655ed7692c4cdccc311bc27c492126d62e54e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44105966"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50659214"
 ---
 # <a name="operator-windowsuixamlinteroptypename"></a>Windows::UI::Xaml::Interop::TypeName 演算子
 
-変換を有効`Platform::Type`に[::interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)します。
+`Platform::Type` から [Windows::UI::Xaml::Interop::TypeName](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)変換できるようになります。
 
 ## <a name="syntax"></a>構文
 
@@ -28,11 +21,11 @@ Operator TypeName(Platform::Type^ type);
 
 ### <a name="return-value"></a>戻り値
 
-返します、 [::interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)が指定されると、`Platform::Type^`します。
+[が指定されていると、](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx) Windows::UI::Xaml::Interop::TypeName `Platform::Type^`が返されます。
 
 ### <a name="remarks"></a>Remarks
 
-`TypeName` は、型情報を表すための、言語に依存しない Windows ランタイムの構造体です。 [Platform::Type](../cppcx/platform-type-class.md) は C++ に固有で、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を通じて渡すことはできません。 ここでの用途の 1 つは、`TypeName`の[Navigate](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx)関数。
+`TypeName` は、型情報を表すための、言語に依存しない Windows ランタイムの構造体です。 [Platform::Type](../cppcx/platform-type-class.md) は C++ に固有で、アプリケーション バイナリ インターフェイス (ABI: Application Binary Interface) を通じて渡すことはできません。 `TypeName`Navigate [関数での](https://msdn.microsoft.com/library/windows/apps/hh702394.aspx) の使用例を次に示します。
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
@@ -55,7 +48,7 @@ Type^ tx2 = (Type^)(tn);
 
 .NET framework プログラム プロジェクト`TypeName`として[System.Type](assetId:///System.Type?qualifyHint=False&autoUpgrade=True)します。
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
 ## <a name="see-also"></a>関連項目
 

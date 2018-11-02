@@ -1,16 +1,10 @@
 ---
-title: -Oi (組み込み関数の生成) |Microsoft Docs
-ms.custom: ''
+title: /Oi (組み込み関数の生成)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - VC.Project.VCCLCompilerTool.EnableIntrinsicFunctions
 - /oi
 - VC.Project.VCCLWCECompilerTool.EnableIntrinsicFunctions
-dev_langs:
-- C++
 helpviewer_keywords:
 - Oi compiler option [C++]
 - intrinsic functions, generate
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 792d1e1bc0ea2f6044bc9ad145d30c1fda3e3648
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 067b8b11b716935c684a127632a8fadaf3d9a447
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46423872"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50646070"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (組み込み関数の生成)
 
@@ -57,7 +47,7 @@ ms.locfileid: "46423872"
 
 使用することも[組み込み](../../preprocessor/intrinsic.md)の組み込み関数を作成するまたは[関数 (C++)](../../preprocessor/function-c-cpp.md)を関数呼び出しを明示的に適用します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

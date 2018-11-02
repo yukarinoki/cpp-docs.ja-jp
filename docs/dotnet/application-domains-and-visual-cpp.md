@@ -1,12 +1,6 @@
 ---
-title: アプリケーション ドメインと Visual C |Microsoft ドキュメント
-ms.custom: ''
+title: アプリケーション ドメインと Visual C++
 ms.date: 11/04/2016
-ms.technology:
-- cpp-cli
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - interop [C++], application domains
 - application domains [C++], C++
@@ -14,21 +8,16 @@ helpviewer_keywords:
 - interoperability [C++], application domains
 - mixed assemblies [C++], application domains
 ms.assetid: 75a08efc-9b02-40ba-99b7-dcbd71010bbf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- dotnet
-ms.openlocfilehash: b935b9a5d1561fa1c8b961ee48b92f59b98e2bd2
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 2296654e6935bc40f301226b184cf34f77cb126d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704335"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50539270"
 ---
 # <a name="application-domains-and-visual-c"></a>アプリケーション ドメインと Visual C
 
-ある場合、`__clrcall`仮想関数は、vtable なりますあたりのアプリケーション ドメイン (appdomain)。 1 つの appdomain でオブジェクトを作成する場合は、appdomain 内から仮想関数のみ呼び出すことができます。 混在モードで (**/clr**) するは、プロセスごとの vtable がある場合、型なし`__clrcall`仮想関数。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+ある場合、`__clrcall`仮想関数は、vtable がアプリケーション ドメイン (appdomain) ごとになります。 1 つの appdomain でオブジェクトを作成する場合は、その appdomain 内で仮想関数からのみ呼び出すことができます。 混在モードで (**/clr**) の種類がにない場合、プロセスごとの vtable が`__clrcall`仮想関数。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
 詳細については次を参照してください:
 
@@ -40,4 +29,4 @@ ms.locfileid: "34704335"
 
 ## <a name="see-also"></a>関連項目
 
-- [混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)
+- [混在 (ネイティブおよびマネージド) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)

@@ -1,10 +1,6 @@
 ---
-title: _CrtIsValidPointer | Microsoft Docs
-ms.custom: ''
+title: _CrtIsValidPointer
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _CrtIsValidPointer
 apilocation:
@@ -22,22 +18,16 @@ apitype: DLLExport
 f1_keywords:
 - CrtlsValidPointer
 - _CrtIsValidPointer
-dev_langs:
-- C++
 helpviewer_keywords:
 - CrtIsValidPointer function
 - _CrtIsValidPointer function
 ms.assetid: 91c35590-ea5e-450f-a15d-ad8d62ade1fa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1bb78f8dee494fd213df6db16e2800cb9090bdf3
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 64197d460cdb7dd26d22196c08151be09df48573
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32397273"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50429249"
 ---
 # <a name="crtisvalidpointer"></a>_CrtIsValidPointer
 
@@ -68,9 +58,9 @@ int _CrtIsValidPointer(
 
 **_CrtIsValidPointer**指定したポインターが null でない場合は TRUE を返します。 Visual Studio 2010 より前のバージョンの CRT ライブラリでは、メモリ範囲で指定された操作が有効である場合に、TRUE を返します。 それ以外の場合、関数は FALSE を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-以降では、Visual Studio 2010 CRT ライブラリで、*サイズ*と*アクセス*パラメーターは無視されますと **_CrtIsValidPointer**は単に指定*アドレス*が null でないです。 このテストは自分で簡単に実行できるので、この関数を使用することはお勧めしません。 Visual Studio 2010 以前のバージョン、関数は、あることを確認で始まるメモリ範囲*アドレス*の拡張と*サイズ*bytes は、指定されたアクセシビリティ操作または操作に対して無効です。 ときに*アクセス*が TRUE に設定すると、メモリ範囲に対して確認が行わの読み取りと書き込みの両方です。 ときに*アクセス*false で、メモリの範囲の読み取りにのみ検証されます。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていないへの呼び出し **_CrtIsValidPointer**プリプロセス時に削除されます。
+Visual Studio 2010 では、CRT ライブラリ以降、*サイズ*と*アクセス*パラメーターは無視されますと **_CrtIsValidPointer**だけのことを確認します指定*アドレス*が null でないです。 このテストは自分で簡単に実行できるので、この関数を使用することはお勧めしません。 Visual Studio 2010 以前のバージョンでは、関数は、検証が行われますから始まるメモリ範囲*アドレス*の拡張と*サイズ*バイトは、指定されたアクセシビリティ操作に対して有効です。 ときに*アクセス*を TRUE に設定すると、メモリ範囲で読み取りと書き込みの両方の確認されます。 ときに*アクセス*false で、メモリの範囲は読み取りだけ確認します。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない、呼び出し **_CrtIsValidPointer**プリプロセス時に削除されます。
 
 この関数は TRUE または FALSE を返すため、[_ASSERT](assert-asserte-assert-expr-macros.md) 系マクロに渡すことによって、デバッグ用の単純なエラー処理機構を作成できます。 次の例では、メモリ範囲で読み取りと書き込みの両方が無効だった場合、アサーション エラーが発生します。
 
@@ -78,11 +68,11 @@ int _CrtIsValidPointer(
 _ASSERTE( _CrtIsValidPointer( address, size, TRUE ) );
 ```
 
-方法の詳細についての **_CrtIsValidPointer**他のデバッグ関数およびマクロと共に使用するを参照してください[レポート用マクロ](/visualstudio/debugger/macros-for-reporting)です。 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
+詳細について **_CrtIsValidPointer**他のデバッグ関数およびマクロとで使用できるを参照してください[レポート用マクロ](/visualstudio/debugger/macros-for-reporting)します。 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_CrtIsValidPointer**|\<crtdbg.h>|
 

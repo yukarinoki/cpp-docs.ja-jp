@@ -1,30 +1,20 @@
 ---
-title: _U_RECT クラス |Microsoft Docs
-ms.custom: ''
+title: _U_RECT クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-atl
-ms.topic: reference
 f1_keywords:
 - ATL::_U_RECT
 - _U_RECT
 - ATL._U_RECT
-dev_langs:
-- C++
 helpviewer_keywords:
 - U_RECT class
 - _U_RECT class
 ms.assetid: 5f880a2d-09cf-4327-bf32-a3519c4dcd63
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f96bf02a00459324b14dd26709b24088a03aec86
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: a4f3139498c9954026bd0247316eee1155f1b737
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46109297"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50642079"
 ---
 # <a name="urect-class"></a>_U_RECT クラス
 
@@ -57,7 +47,7 @@ class _U_RECT
 
 クラスは、2 つのコンス トラクター オーバー ロードを定義します: 1 つを受け入れる、 **RECT &** 引数と、その他を受け入れる、`LPRECT`引数。 最初のコンス トラクターはクラスの 1 つのデータ メンバーでは、参照の引数のアドレスを格納[ある m_lpRect](#_u_rect__m_lprect)します。 ポインターのコンス トラクター引数は、変換せずに直接格納されます。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** atlwin.h
 

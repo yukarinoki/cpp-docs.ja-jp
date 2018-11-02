@@ -1,10 +1,6 @@
 ---
-title: tmpnam_s、_wtmpnam_s | Microsoft Docs
-ms.custom: ''
+title: tmpnam_s、_wtmpnam_s
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - tmpnam_s
 - _wtmpnam_s
@@ -25,8 +21,6 @@ f1_keywords:
 - tmpnam_s
 - _wtmpnam_s
 - L_tmpnam_s
-dev_langs:
-- C++
 helpviewer_keywords:
 - tmpnam_s function
 - file names [C++], creating temporary
@@ -36,16 +30,12 @@ helpviewer_keywords:
 - file names [C++], temporary
 - wtmpnam_s function
 ms.assetid: e70d76dc-49f5-4aee-bfa2-f1baa2bcd29f
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2c5272f662580eff92e9ec15860b978ab739e613
-ms.sourcegitcommit: fb9448eb96c6351a77df04af16ec5c0fb9457d9e
+ms.openlocfilehash: 9bf994d16362ef461d8d25d72466721ba9a5890f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2018
-ms.locfileid: "44691602"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50497488"
 ---
 # <a name="tmpnams-wtmpnams"></a>tmpnam_s、_wtmpnam_s
 
@@ -88,7 +78,7 @@ errno_t _wtmpnam_s(
 
 |||||
 |-|-|-|-|
-|*str*|*sizeInChars*|**戻り値**|**内容***str* |
+|*str*|*sizeInChars*|**戻り値**|**内容***str*|
 |**NULL**|任意|**EINVAL**|変更されない|
 |いない**NULL** (有効なメモリを指す)|短すぎる|**ERANGE**|変更されない|
 
@@ -110,7 +100,7 @@ C++ では、テンプレートのオーバーロードによってこれらの�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |**_ttmpnam_s**|**tmpnam_s**|**tmpnam_s**|**_wtmpnam_s**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|

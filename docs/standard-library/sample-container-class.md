@@ -1,25 +1,15 @@
 ---
-title: サンプル コンテナー クラス | Microsoft Docs
-ms.custom: ''
+title: サンプル コンテナー クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - container classes [C++]
 ms.assetid: 5b1451f2-c708-45da-bbf0-9e42fd687a1a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 43a8851d11e6113d52b2ad128b1ff41e66c1ad12
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: dbfa076756b9e4829898d38e0277ad90106ba579
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43223236"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50536228"
 ---
 # <a name="sample-container-class"></a>サンプル コンテナー クラス
 
@@ -80,7 +70,7 @@ C++ 標準に従って、C++ 標準ライブラリで定義されたコンテナ
 
 - 型`Alloc::pointer`は同じである必要はありません`Ty *`します。 (ポインターには、クラスを指定できます。)
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<sample container>
 

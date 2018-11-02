@@ -1,10 +1,6 @@
 ---
-title: _putch、_putwch | Microsoft Docs
-ms.custom: ''
+title: _putch、_putwch
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _putwch
 - _putch
@@ -25,8 +21,6 @@ f1_keywords:
 - _putch
 - putwch
 - _putwch
-dev_langs:
-- C++
 helpviewer_keywords:
 - _putch function
 - characters, writing
@@ -35,16 +29,12 @@ helpviewer_keywords:
 - putch function
 - console, writing characters to
 ms.assetid: 3babc7cf-e333-405d-8449-c788d61d51aa
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a0a6e50a4cd6794e28cc59bb2b080c57c0993986
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: 9abd27a926e641e72595360ed3951fad9e888676
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32401806"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50434763"
 ---
 # <a name="putch-putwch"></a>_putch、_putwch
 
@@ -60,7 +50,7 @@ int _putch(
 int c
 );
 wint_t _putwch(
-   wchar_t c
+   wchar_t c
 );
 ```
 
@@ -71,13 +61,13 @@ wint_t _putwch(
 
 ## <a name="return-value"></a>戻り値
 
-処理が正常に終了した場合は、*c* を返します。 場合 **_putch**失敗すると、返す**EOF**以外の場合は **_putwch**失敗すると、それを返します**WEOF**です。
+処理が正常に終了した場合は、*c* を返します。 場合 **_putch**失敗すると、返す**EOF**場合 **_putwch**失敗すると、それを返します**WEOF**します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-これらの関数は、文字を書き込む*c*コンソールにバッファリングせずに直接、します。 Windows NT では、**_putwch** は現在のコンソールのロケール設定を使用して Unicode 文字を書き出します。
+これらの関数は、文字を書き込む*c*コンソールには、バッファーなしで直接、します。 Windows NT では、**_putwch** は現在のコンソールのロケール設定を使用して Unicode 文字を書き出します。
 
-**_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、次を参照してください。 **_putch_nolock**、 **_putwch_nolock**です。
+**_nolock** サフィックスが付いているバージョンは同じものですが、他のスレッドによる干渉から保護されない点が異なります。 詳細については、次を参照してください。 **_putch_nolock**、 **_putwch_nolock**します。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -85,9 +75,9 @@ wint_t _putwch(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_puttch**|**_putch**|**_putch**|**_putwch**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_putch**|\<conio.h>|
 |**_putwch**|\<conio.h>|

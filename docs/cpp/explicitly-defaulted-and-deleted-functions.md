@@ -1,23 +1,13 @@
 ---
-title: 明示的に既定化および削除された関数 |Microsoft Docs
-ms.custom: ''
+title: 明示的に既定された関数および削除された関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 5a588478-fda2-4b3f-a279-db3967f5e07e
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7c199f687f5004066bf67d087daa1bd7a5b27d01
-ms.sourcegitcommit: 997e6b7d336cddb388bb6e9e56527725fcaa0624
+ms.openlocfilehash: a090bd1b1a60dd7a5a5350fcf81dec7f17e083c6
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/08/2018
-ms.locfileid: "48861162"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50662606"
 ---
 # <a name="explicitly-defaulted-and-deleted-functions"></a>明示的に既定された関数および削除された関数
 

@@ -1,37 +1,27 @@
 ---
-title: コンパイラ エラー C3389 |Microsoft ドキュメント
-ms.custom: ''
+title: コンパイラ エラー C3389
 ms.date: 11/04/2016
-ms.technology:
-- cpp-diagnostics
-ms.topic: error-reference
 f1_keywords:
 - C3389
-dev_langs:
-- C++
 helpviewer_keywords:
 - C3389
 ms.assetid: eaaffe17-23f2-413c-b1ad-f7220cfa1334
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b540f87458c75ddf7d57626b6251248652b96213
-ms.sourcegitcommit: a4454b91d556a3dc43d8755cdcdeabcc9285a20e
+ms.openlocfilehash: 6a9568f3c3be88438eae1f28e12dc780301ead0b
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34704306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50584302"
 ---
 # <a name="compiler-error-c3389"></a>コンパイラ エラー C3389
 
 > _ _declspec (*キーワード*) では使用できません:/clr:pure または/clr:safe
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションが Visual Studio 2015 では廃止され、Visual Studio 2017 でサポートされていません。
+**/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-A [_ _declspec](../../cpp/declspec.md)修飾子の使用を意味するプロセスの状態ごとです。  [/clr: 純粋な](../../build/reference/clr-common-language-runtime-compilation.md)意味、あたり[appdomain](../../cpp/appdomain.md)状態です。  そのために変数を宣言する、 `keyword` **_ _declspec**修飾子と指定してコンパイル **/clr: 純粋な**は許可されていません。
+A [_ _declspec](../../cpp/declspec.md)修飾子の使用を意味するごとのプロセスの状態。  [/clr: 純粋な](../../build/reference/clr-common-language-runtime-compilation.md)意味、あたり[appdomain](../../cpp/appdomain.md)状態。  そのため、変数を宣言する、 `keyword` **_ _declspec**修飾子と指定してコンパイル **/clr: 純粋な**は許可されていません。
 
 ## <a name="example"></a>例
 

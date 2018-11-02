@@ -1,10 +1,6 @@
 ---
-title: _isctype、iswctype、_isctype_l、_iswctype_l | Microsoft Docs
-ms.custom: ''
+title: _isctype、iswctype、_isctype_l、_iswctype_l
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _isctype_l
 - iswctype
@@ -32,8 +28,6 @@ f1_keywords:
 - iswctype_l
 - isctype_l
 - _iswctype_l
-dev_langs:
-- C++
 helpviewer_keywords:
 - isctype_l function
 - iswctype_l function
@@ -44,20 +38,16 @@ helpviewer_keywords:
 - isctype function
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0a9ca4580ba19c4efc342186c0c3b348d76ce94e
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32402553"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50563163"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
-テスト*c* 、ctype プロパティで指定された、 *desc*引数。 有効な各値に対して*desc*、同等のワイド文字分類ルーチンがあります。
+テスト*c* ctype プロパティで指定された、 *desc*引数。 有効な各値に対して*desc*、同等のワイド文字分類ルーチンがあります。
 
 ## <a name="syntax"></a>構文
 
@@ -95,9 +85,9 @@ int _iswctype_l(
 
 ## <a name="return-value"></a>戻り値
 
-**_isctype**と**iswctype**場合は、0 以外の値を返す*c*によって指定されたプロパティを持つ*desc*で現在のロケールまたはそうでない場合は 0 です。 これらの関数のバージョン、 **_l**そのロケールに依存する動作に現在のロケールの代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+**_isctype**と**iswctype**場合は、0 以外の値を返す*c*で指定されたプロパティを持つ*desc*で現在のロケールまたはそうでない場合は 0。 これらの関数のバージョン、 **_l**ロケールに依存する動作に現在のロケールではなく渡されたロケールを使用することを除き、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
-動作 **_isctype**と **_isctype_l**場合に定義されていない*c* EOF ではありませんか 0 ~ 0 xff、包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、これらの値、関数の発生いない 1 つです。
+動作 **_isctype**と **_isctype_l**場合は定義されません*c* EOF がないか 0 ~ 0 xff の包括的な範囲内で。 CRT デバッグ ライブラリを使用する場合と*c*アサーションは、発生のこれらの値のいずれかにありません。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 
@@ -106,9 +96,9 @@ int _iswctype_l(
 |N/A|**_isctype**|N/A|**_iswctype**|
 |N/A|**_isctype_l**|N/A|**_iswctype_l**|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**_isctype**|\<ctype.h>|
 |**iswctype**|\<ctype.h> または \<wchar.h>|

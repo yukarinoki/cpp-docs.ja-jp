@@ -1,28 +1,18 @@
 ---
-title: is_volatile クラス | Microsoft Docs
-ms.custom: ''
+title: is_volatile クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - type_traits/std::is_volatile
-dev_langs:
-- C++
 helpviewer_keywords:
 - is_volatile class
 - is_volatile
 ms.assetid: 54922e8a-db4e-4cae-8931-b3352f0b8d3b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d35b28025370f7f8dc66c83a12a8e6142e6085ef
-ms.sourcegitcommit: 761c5f7c506915f5a62ef3847714f43e9b815352
+ms.openlocfilehash: 5ab65769a8f37e4991f4b17b7e4a8d2b3ff1bdd5
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44104278"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50530495"
 ---
 # <a name="isvolatile-class"></a>is_volatile クラス
 
@@ -80,7 +70,7 @@ is_volatile<int> == false
 is_volatile<volatile int> == true
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<type_traits>
 

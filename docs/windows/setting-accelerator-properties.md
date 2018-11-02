@@ -1,12 +1,6 @@
 ---
-title: アクセラレータ プロパティ (C++) の設定 |Microsoft Docs
-ms.custom: ''
+title: アクセラレータのプロパティの設定 (C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-windows
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - accelerator properties
 - properties [C++], accelerator properties
@@ -14,17 +8,12 @@ helpviewer_keywords:
 - Key property
 - Modifier property
 ms.assetid: 0fce9156-3025-4e18-b034-e219a4c65812
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- uwp
-ms.openlocfilehash: 85d32a3dc01f5c0a496e6471472dab1cfafa0ca0
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 47ebd54fdaff099e3a8ce828581a66b0ec871915
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46437470"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50647019"
 ---
 # <a name="setting-accelerator-properties"></a>アクセラレータのプロパティの設定
 
@@ -41,7 +30,7 @@ ms.locfileid: "46437470"
 
 - [プロパティを入力して](../windows/accelerator-type-property.md)として仮想 (VIRTKEY) と ASCII/ANSI キーが解釈されるかどうか決定します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 Win32
 

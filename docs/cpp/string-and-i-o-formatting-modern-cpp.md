@@ -1,49 +1,40 @@
 ---
-title: 文字列および I/o に書式設定 (Modern C) |Microsoft Docs
-ms.custom: ''
+title: 文字列および I/o に書式設定 (Modern C)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
 ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 3954e8de-a59b-4175-89c9-4ee842ab89ed
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8d73e42beb086f3db3e6a6fd060048fcb700156c
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 0cc0c84a6e4ffac3e6a80425039bfcc1db567911
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46099825"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50631843"
 ---
 # <a name="string-and-io-formatting-modern-c"></a>文字列および I/O の書式設定 (Modern C++)
 
 C++ [iostreams](../standard-library/iostream.md)の I/O の書式設定された文字列に対応します。 たとえば、次のコードは、整数を書式設定して 16 進数で出力するための cout を設定する方法を示します。まず現在の状態を保存し、後で再度設定します。これは、状態の書式設定が一度 cout に渡されると、1 行のコードの間だけでなく、変更されるまでその状態を保つためです。
 
 ```cpp
-#include <iostream>
-#include <iomanip>
+#include <iostream>
+#include <iomanip>
 
-using namespace std;
+using namespace std;
 
-int main() 
+int main() 
 {
-    ios state(nullptr);
+    ios state(nullptr);
 
-    cout << "The answer in decimal is: " << 42 << endl;
+    cout << "The answer in decimal is: " << 42 << endl;
 
-    state.copyfmt(cout); // save current formatting
-    cout << "In hex: 0x" // now load up a bunch of formatting modifiers
-        << hex 
-        << uppercase 
-        << setw(8) 
-        << setfill('0') 
-        << 42            // the actual value we wanted to print out
-        << endl;
-    cout.copyfmt(state); // restore previous formatting
+    state.copyfmt(cout); // save current formatting
+    cout << "In hex: 0x" // now load up a bunch of formatting modifiers
+        << hex 
+        << uppercase 
+        << setw(8) 
+        << setfill('0') 
+        << 42            // the actual value we wanted to print out
+        << endl;
+    cout.copyfmt(state); // restore previous formatting
 }
 ```
 
@@ -62,13 +53,13 @@ Boost.Format は C++ でビルドが[iostreams](../standard-library/iostream-pro
 次のコードは、Boost の書式設定機能のいくつかを示します。
 
 ```cpp
-    string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
-    // s contains "hello hello world"  
+    string s = str( format("%2% %2% %1%\n") % "world" % "hello" );
+    // s contains "hello hello world"  
 
-    for( auto i = 0; i < names.size(); ++i )
-        cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];
-    // Georges Benjamin Clemenceau             +33 (0) 123 456 789
-    // Jean de Lattre de Tassigny              +33 (0) 987 654 321
+    for( auto i = 0; i < names.size(); ++i )
+        cout << format("%1% %2% %|40t|%3%\n") % first[i] % last[i] % tel[i];
+    // Georges Benjamin Clemenceau             +33 (0) 123 456 789
+    // Jean de Lattre de Tassigny              +33 (0) 987 654 321
 ```
 
 ## <a name="see-also"></a>関連項目

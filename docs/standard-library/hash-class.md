@@ -1,10 +1,6 @@
 ---
-title: hash クラス | Microsoft Docs
-ms.custom: ''
+title: hash クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - functional/std::hash
 - bitset/std::hash
@@ -16,8 +12,6 @@ f1_keywords:
 - vector/std::hash
 - XSTDDEF/std::hash
 - xstring/std::hash
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
@@ -29,16 +23,12 @@ helpviewer_keywords:
 - std::hash [C++]
 - std::hash [C++]
 ms.assetid: e1b500c6-a5c8-4f6f-ad33-7ec52eb8e2e4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 47f29cc41c2dce270d89660c6d70a4028b0f1097
-ms.sourcegitcommit: d55ac596ba8f908f5d91d228dc070dad31cb8360
+ms.openlocfilehash: d40910d95e9c2fac2329498481ee71c36ff8c8b4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33845233"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50592466"
 ---
 # <a name="hash-class"></a>hash クラス
 
@@ -53,7 +43,7 @@ struct hash {
 };
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
 この関数オブジェクトは、*Ty* 型の値をインデックス値の分布にマッピングするのに適したハッシュ関数を定義します。 メンバー `operator()` は、テンプレート クラス `unordered_map`、`unordered_multimap`、`unordered_set`、および `unordered_multiset` での使用に適している *val* のハッシュ コードを返します。 標準ライブラリには、基本型の特殊化が用意されています。*Ty* は、ポインター型や列挙型など、任意のスカラー型にすることができます。 また、ライブラリ型 `string`、`wstring`、`u16string`、`u32string`、`string_view`、`wstring_view`、`u16string_view`、`u32string_view`、`bitset`、`error_code`、`error_condition`、`optional`、`shared_ptr`、`thread`、`type_index`、`unique_ptr`、`variant`、および `vector<bool>` の特殊化があります。
 
@@ -81,7 +71,7 @@ int main()
 3
 ```
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** \<functional>
 

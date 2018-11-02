@@ -1,10 +1,6 @@
 ---
-title: difftime、_difftime32、_difftime64 | Microsoft Docs
-ms.custom: ''
+title: difftime、_difftime32、_difftime64
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 apiname:
 - _difftime32
 - difftime
@@ -28,8 +24,6 @@ f1_keywords:
 - difftime64
 - _difftime32
 - difftime32
-dev_langs:
-- C++
 helpviewer_keywords:
 - _difftime32 function
 - difftime function
@@ -38,16 +32,12 @@ helpviewer_keywords:
 - _difftime64 function
 - difftime32 function
 ms.assetid: 4cc0ac2b-fc7b-42c0-8283-8c9d10c566d0
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: a972a8f7ee2cc5e97c22afeaa21f86e4b4d6d509
-ms.sourcegitcommit: be2a7679c2bd80968204dee03d13ca961eaa31ff
+ms.openlocfilehash: eefa946f0458f79950b443c0a84272866845df8d
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32398722"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50505951"
 ---
 # <a name="difftime-difftime32-difftime64"></a>difftime、_difftime32、_difftime64
 
@@ -71,21 +61,21 @@ double _difftime64( __time64_t timeEnd, __time64_t timeStart );
 
 ## <a name="return-value"></a>戻り値
 
-**difftime**から秒単位での経過時間を返します*timeStart*に*時刻終了*です。 返される値は、倍精度浮動小数点数です。 戻り値が 0 の場合は、エラーを示します。
+**difftime** (秒単位) からの経過時間を返します*timeStart*に*時刻終了*します。 返される値は、倍精度浮動小数点数です。 戻り値が 0 の場合は、エラーを示します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>Remarks
 
-**Difftime**関数が 2 つの指定された時間値の差を計算*timeStart*と*時刻終了*です。
+**Difftime**関数は、2 つの指定された時間値の差を計算*timeStart*と*時刻終了*します。
 
-時刻の値を指定する必要がありますの範囲内に収まる**time_t**です。 **time_t** 64 ビット値です。 したがって、範囲の終わりは、2038 年 1 月 18 日 23 時 59 分 59 秒 (UTC) から、3000 年 12 月 31 日 23 時 59 分 59 秒に拡張されました。 範囲の**time_t**は午前 0 時、1970 年 1 月 1 日のままです。
+時刻の値を指定する必要がありますの範囲内に収まる**time_t**します。 **time_t**は 64 ビット値です。 したがって、範囲の終わりは、2038 年 1 月 18 日 23 時 59 分 59 秒 (UTC) から、3000 年 12 月 31 日 23 時 59 分 59 秒に拡張されました。 範囲の**time_t** 1970 年 1 月 1 日午前 0 時が。
 
 **difftime**いずれかに評価されるインライン関数は、 **_difftime32**または **_difftime64**かどうかに応じて **_USE_32BIT_TIME_T**が定義されています。 _difftime32 と _difftime64 を直接使って、特定のサイズの時刻型の使用を強制できます。
 
-これらの関数では、パラメーターの検証が行われます。 どちらかのパラメーターが 0 または負の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効パラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は 0 を返します設定と**errno**に**EINVAL**です。
+これらの関数では、パラメーターの検証が行われます。 どちらかのパラメーターが 0 または負の場合は、「[パラメーターの検証](../../c-runtime-library/parameter-validation.md)」で説明されているとおり、無効パラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、これらの関数は 0 を返します設定と**errno**に**EINVAL**します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-|ルーチン|必須ヘッダー|
+|ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |**difftime**|\<time.h>|
 |**_difftime32**|\<time.h>|

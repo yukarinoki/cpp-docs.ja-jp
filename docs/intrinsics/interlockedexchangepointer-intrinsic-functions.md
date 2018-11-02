@@ -1,10 +1,6 @@
 ---
-title: _InterlockedExchangePointer の組み込み関数 |Microsoft Docs
-ms.custom: ''
+title: _InterlockedExchangePointer の組み込み関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-tools
-ms.topic: reference
 f1_keywords:
 - _InterlockedExchangePointer_cpp
 - _InterlockedExchangePointer_rel
@@ -14,8 +10,6 @@ f1_keywords:
 - _InterlockedExchangePointer
 - _InterlockedExchangePointer_acq_cpp
 - _InterlockedExchangePointer_HLEAcquire
-dev_langs:
-- C++
 helpviewer_keywords:
 - _InterlockedExchangePointer_rel intrinsic
 - _InterlockedExchangePointer_HLERelease intrinsic
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 881d8dbdb7563197beaea66c4c83d7dbc7921a3f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 7599d4221d7dbd0e08585b51982e839aa267a011
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46390943"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50512100"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer の組み込み関数
 
@@ -77,19 +67,19 @@ void * _InterlockedExchangePointer_HLERelease(
 *Target*<br/>
 [入力、出力]交換する値へのポインターへのポインター。 この関数は `Value` に値を設定し、その前の値を返します。
 
-*値*<br/>
+*[値]*<br/>
 [in]によって示される値と交換される値`Target`します。
 
 ## <a name="return-value"></a>戻り値
 
 この関数は、`Target` が指す初期値を返します。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
 |`_InterlockedExchangePointer`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedExchangePointer_acq`、`_InterlockedExchangePointer_rel`、`_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
+|`_InterlockedExchangePointer_acq`、 `_InterlockedExchangePointer_rel`、 `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
 |`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|HLE 対応 x64|\<immintrin.h>|
 
 x86 アーキテクチャでは、`_InterlockedExchangePointer` は `_InterlockedExchange` を呼び出すマクロです。
