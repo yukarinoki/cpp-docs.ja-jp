@@ -1,12 +1,6 @@
 ---
-title: アルゴリズム |Microsoft Docs
-ms.custom: ''
+title: アルゴリズム
 ms.date: 10/18/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - libraries [C++], C++ algorithm conventions
 - algorithms [C++], C++
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - algorithm template function C++ library conventions
 - conventions [C++], C++ algorithm
 ms.assetid: dec9b373-7d5c-46cc-b7d2-21a938ecd0a6
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0388a3c21fec2d902b74856e4a0ca596b4b3bcca
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: a0a1165d731e44568d530e3ed919d73e2a3e8e5e
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50063030"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50648029"
 ---
 # <a name="algorithms"></a>アルゴリズム
 
@@ -35,7 +25,7 @@ ms.locfileid: "50063030"
 
 - 語句"の範囲の\[ *A*、 *B*)"の 0 個以上の離散値を使用して、以降のシーケンスを意味*A*までが含まれていない*B*.範囲が有効な場合にのみ*B*から到達可能な*A;* 格納できる*A*オブジェクトで*N* (*N*  = *A*)、オブジェクトを 0 回以上インクリメント (+ +*N*)、オブジェクトが等しく、 *B*の増分値の有限数の後 (*N*  ==  *B*)。
 
-- 語句"各*N*範囲\[ *A*、 *B*)"ことを意味*N*値で始まる** と値が等しくなるまで、0 個以上の回インクリメントされる*B*します。N** == B* の場合は、範囲外です。
+- 語句"各*N*範囲\[ *A*、 *B*)"ことを意味*N*値で始まる*A*と値が等しくなるまで、0 個以上の回インクリメントされる*B*します。N* == *B* の場合は、範囲外です。
 
 - 語句"の最小値*N*範囲の\[ *A*、 *B*) ように*X*"条件つまり*X*ごとに決定されますが*N*範囲\[ *A*、 *B*) 条件まで*X*が満たされます。
 

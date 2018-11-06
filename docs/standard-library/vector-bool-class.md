@@ -1,10 +1,6 @@
 ---
-title: vector&lt;bool&gt; クラス | Microsoft Docs
-ms.custom: ''
+title: vector&lt;bool&gt; クラス
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: reference
 f1_keywords:
 - vector<bool>
 - vector/std::vector::const_pointer
@@ -12,8 +8,6 @@ f1_keywords:
 - vector/std::vector::pointer
 - vector/std::vector::flip
 - vector/std::vector::swap
-dev_langs:
-- C++
 helpviewer_keywords:
 - std::vector [C++], const_pointer
 - std::vector [C++], const_reference
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - std::vector [C++], flip
 - std::vector [C++], swap
 ms.assetid: 8028c8ed-ac9c-4f06-aba1-5de45c00aafb
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b158f6bedd2dba2d65f7b0778758eafe08e88851
-ms.sourcegitcommit: 92f2fff4ce77387b57a4546de1bd4bd464fb51b6
+ms.openlocfilehash: 79b2231882f65715f47c774119c0e6e0608f1676
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/17/2018
-ms.locfileid: "45702911"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50455485"
 ---
 # <a name="vectorltboolgt-class"></a>vector&lt;bool&gt; クラス
 
@@ -49,7 +39,7 @@ class vector<bool, Allocator>
 
 処理する操作、 **bool**型は、コンテナーのストレージの値に対応します。 `allocator_traits::construct` はこれらの値の構築には使用されません。
 
-### <a name="typedefs"></a>Typedefs
+### <a name="typedefs"></a>Typedef
 
 |型名|説明|
 |-|-|
@@ -74,7 +64,7 @@ class vector<bool, Allocator>
 |-|-|
 |[vector\<bool> reference クラス](#reference_class)|`bool&` の動作をシミュレートするためのプロキシとして機能するクラスで、そのオブジェクトは `vector<bool>` オブジェクト内の要素 (単一ビット) への参照を提供できます。|
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー**: \<vector>
 
@@ -163,7 +153,7 @@ vector&<bool&>::const_reference operator[](size_type Pos) const;
 
 ### <a name="remarks"></a>Remarks
 
-_ITERATOR_DEBUG_LEVEL セットでコンパイルする場合、実行時エラーには、ベクターの境界外にある要素にアクセスしようとした場合に発生します。  詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」を参照してください。
+_ITERATOR_DEBUG_LEVEL セットでコンパイルする場合、実行時エラーには、ベクターの境界外にある要素にアクセスしようとした場合に発生します。  詳細については、「 [Checked Iterators](../standard-library/checked-iterators.md)」を参照してください。
 
 ### <a name="example"></a>例
 

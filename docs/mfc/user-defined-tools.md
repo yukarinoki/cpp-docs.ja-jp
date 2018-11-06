@@ -1,25 +1,15 @@
 ---
-title: ユーザー定義のツール |Microsoft Docs
-ms.custom: ''
+title: ユーザー定義のツール
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b6aa9fdd5c50119b820ddd73d842dc8a60089e97
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
-ms.translationtype: HT
+ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50081980"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50607078"
 ---
 # <a name="user-defined-tools"></a>ユーザー定義のツール
 
@@ -27,7 +17,7 @@ MFC には、ユーザー定義のツールがサポートしています。 ユ
 
 カスタマイズ ダイアログ ボックスが自動的にユーザー定義のツールのサポートを有効にした場合、**ツール**タブ。次の図は、**ツール**ページ。
 
-![ツールは、[カスタマイズ] ダイアログ ボックスでタブ](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab")のカスタマイズ] ダイアログ ボックスの [ツール] タブ
+![ツールは、[カスタマイズ] ダイアログ ボックスでタブ](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab")のカスタマイズ ダイアログ ボックスの [ツール] タブ
 
 ## <a name="enabling-user-defined-tools-support"></a>ユーザー定義の有効化のツールのサポート
 

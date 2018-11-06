@@ -1,27 +1,17 @@
 ---
-title: MFC ActiveX コントロール ウィザード、アプリケーションの設定 |Microsoft Docs
-ms.custom: ''
+title: '[アプリケーションの設定] (MFC ActiveX コントロール ウィザード)'
 ms.date: 11/04/2016
-ms.technology:
-- cpp-mfc
-ms.topic: reference
 f1_keywords:
 - vc.appwiz.mfc.ctl.appset
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, application settings
 ms.assetid: 48475194-cc63-467f-8499-f142269a4c1c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cfaebdabb9011fd76b18701c81c722671ff8fc3d
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 17d8ad581640611a5b517edd15609aa8052ecae4
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46433550"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50677137"
 ---
 # <a name="application-settings-mfc-activex-control-wizard"></a>[アプリケーションの設定] \(MFC ActiveX コントロール ウィザード)
 
@@ -42,7 +32,7 @@ MFC ActiveX コントロール ウィザードのこのページを使用して�
 
    - .vcxproj ファイルには、プロジェクトがビルドされたときにヘルプ ファイルをビルドして構成するためのコードが含まれています。
 
-   - ファイル*projnamePropPage*.cpp ファイルが含まれています、 [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo)コンス トラクター関数。
+   - ファイル *projnamePropPage*.cpp ファイルには、コンストラクター内の [SetHelpInfo](../../mfc/reference/colepropertypage-class.md#sethelpinfo) 関数が含まれます。
 
    - ファイルの projname.hpj は、ActiveX コントロールのヘルプ ファイルを作成するためにヘルプ コンパイラで使用されるヘルプ プロジェクト ファイルです。 .hpj ファイルは、ヘルプ ファイルのビルド方法と、ヘルプ ファイルに含まれる追加のファイル (ビットマップなど) のパスに関する情報を含むテキスト ファイルです。
 
