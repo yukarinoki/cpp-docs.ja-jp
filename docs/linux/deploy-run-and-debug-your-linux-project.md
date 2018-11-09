@@ -1,24 +1,14 @@
 ---
-title: Visual Studio で C++ Linux プロジェクトを配置、実行、デバッグする | Microsoft Docs
+title: Visual Studio で C++ Linux プロジェクトを配置、実行、デバッグする
 description: Visual Studio の Linux C++ プロジェクト内からリモート ターゲット上のコードをコンパイル、実行、デバッグする方法について説明します。
-ms.custom: ''
 ms.date: 09/12/2018
-ms.technology:
-- cpp-linux
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: f7084cdb-17b1-4960-b522-f84981bea879
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 964da719da8d6f48131fc60f7e7fdfb247637fbf
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 685299f777f12abbd5534f58b13b3ba16d1cbe70
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50069948"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50501518"
 ---
 # <a name="deploy-run-and-debug-your-linux-project"></a>Linux プロジェクトのデプロイ、実行、デバッグ
 

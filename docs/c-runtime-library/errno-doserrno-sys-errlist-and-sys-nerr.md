@@ -1,10 +1,6 @@
 ---
-title: errno、_doserrno、_sys_errlist、_sys_nerr | Microsoft Docs
-ms.custom: ''
+title: errno、_doserrno、_sys_errlist、および _sys_nerr
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apiname:
 - _errno
 apilocation:
@@ -15,8 +11,6 @@ f1_keywords:
 - errno
 - _sys_nerr
 - _doserrno
-dev_langs:
-- C++
 helpviewer_keywords:
 - error codes, printing
 - sys_errlist global variable
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - _sys_nerr global variable
 - sys_nerr global variable
 ms.assetid: adbec641-6d91-4e19-8398-9a34046bd369
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 5ea13f86b99dd0a4678a715452122ee3f1a64d98
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 50b44c659aac66dbaddad711cceef635f277d2c3
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46054949"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50487726"
 ---
 # <a name="errno-doserrno-syserrlist-and-sysnerr"></a>errno、_doserrno、_sys_errlist、および _sys_nerr
 
@@ -63,7 +53,7 @@ ms.locfileid: "46054949"
 |------------------|----------------------------|
 |`_doserrno`|[_get_doserrno](../c-runtime-library/reference/get-doserrno.md)、[_set_doserrno](../c-runtime-library/reference/set-doserrno.md)|
 |`errno`|[_get_errno](../c-runtime-library/reference/get-errno.md)、[_set_errno](../c-runtime-library/reference/set-errno.md)|
-|`_sys_errlist`, `_sys_nerr`|[strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
+|`_sys_errlist`、 `_sys_nerr`|[strerror_s、_strerror_s、_wcserror_s、\__wcserror_s](../c-runtime-library/reference/strerror-s-strerror-s-wcserror-s-wcserror-s.md)|
 
 ライブラリの数値演算ルーチンでは、[_matherr](../c-runtime-library/reference/matherr.md) を呼び出して `errno` を設定します。 別の方法で数値演算エラーを処理するには、`_matherr` リファレンスの説明に従って独自のルーチンを記述し、`_matherr` という名前を付けます。
 
@@ -117,7 +107,7 @@ ms.locfileid: "46054949"
 |グローバル マクロ|必須ヘッダー|オプション ヘッダー|
 |------------------|---------------------|---------------------|
 |`errno`|\<errno.h> または \<stdlib.h>、\<cerrno> または \<cstdlib> (C++)||
-|`_doserrno`、`_sys_errlist`、`_sys_nerr`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
+|`_doserrno`、 `_sys_errlist`、 `_sys_nerr`|\<stdlib.h>、\<cstdlib> (C++)|\<errno.h>、\<cerrno> (C++)|
 
 `_doserrno`、`_sys_errlist`、および `_sys_nerr` マクロは Microsoft 拡張機能です。 互換性について詳しくは、「[互換性](../c-runtime-library/compatibility.md)」を参照してください。
 

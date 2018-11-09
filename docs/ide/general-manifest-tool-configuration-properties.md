@@ -1,10 +1,6 @@
 ---
-title: マニフェスト ツールの構成プロパティ (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: マニフェスト ツールの構成プロパティ (Visual C++)
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.MergeRulesFile
 - VC.Project.VCManifestTool.UseUnicodeResponseFiles
@@ -12,19 +8,13 @@ f1_keywords:
 - VC.Project.VCManifestTool.UseFAT32Workaround
 - VC.Project.VCManifestTool.VerboseOutput
 - VC.Project.VCManifestTool.AssemblyIdentity
-dev_langs:
-- C++
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: bf3fe573ff2a71c2a53e946655300219f190b4c8
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 5706a67ac3f6be7a916d6f4f0ee8ccfafdfb9475
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46447714"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50565218"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>[全般] ([&lt;プロジェクト名&gt; プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])
 
@@ -52,6 +42,6 @@ ms.locfileid: "46447714"
 
 ## <a name="see-also"></a>参照
 
-[ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)<br>
+[ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
 [[マニフェスト ツール] プロパティ ページ](../ide/manifest-tool-property-pages.md)<br>
 [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)
