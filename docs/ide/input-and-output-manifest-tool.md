@@ -1,10 +1,6 @@
 ---
-title: マニフェスト ツールの入力プロパティと出力プロパティ (Visual C++) | Microsoft Docs
-ms.custom: ''
+title: マニフェスト ツールの入力プロパティと出力プロパティ (Visual C++)
 ms.date: 08/27/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCManifestTool.OutputManifestFile
 - VC.Project.VCManifestTool.InputResourceManifests
@@ -13,19 +9,13 @@ f1_keywords:
 - VC.Project.VCManifestTool.DependencyInformationFile
 - VC.Project.VCManifestTool.OutputResourceManifest
 - VC.Project.VCManifestTool.GenerateCatalogFiles
-dev_langs:
-- C++
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: b4320339021f0de25d49cba3fbe1f5e4377cd062
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 8aa007e41cdabe0bf548f1184b801c1f81655596
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43201220"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50624702"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>[入力と出力] ([&lt;プロジェクト名&gt; プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])
 
@@ -73,6 +63,6 @@ ms.locfileid: "43201220"
 
 ## <a name="see-also"></a>参照
 
-[ClickOnce アプリケーション マニフェスト](/visualstudio/deployment/clickonce-application-manifest)<br/>
+[ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [[マニフェスト ツール] プロパティ ページ](../ide/manifest-tool-property-pages.md)<br/>
 [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)<br/>

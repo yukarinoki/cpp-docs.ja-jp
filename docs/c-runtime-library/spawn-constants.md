@@ -1,18 +1,12 @@
 ---
-title: spawn 定数 | Microsoft Docs
-ms.custom: ''
+title: spawn 定数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _P_NOWAIT
 - _P_OVERLAY
 - _P_WAIT
 - _P_DETACH
 - _P_NOWAITO
-dev_langs:
-- C++
 helpviewer_keywords:
 - _P_OVERLAY constant
 - P_DETACH constant
@@ -26,16 +20,12 @@ helpviewer_keywords:
 - P_WAIT constant
 - _P_WAIT constant
 ms.assetid: e0533e88-d362-46fc-b53c-5f193226d879
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8daaf38e60ca48b4a34deb2086bbd14eb45651e4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 1bfb13309ae4bd667a5e128300740f4c903f08be
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46116933"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50580949"
 ---
 # <a name="spawn-constants"></a>spawn 定数
 
@@ -53,7 +43,7 @@ ms.locfileid: "46116933"
 |--------------|-------------|
 |`_P_OVERLAY`|呼び出し元のプロセスを新しいプロセスでオーバーレイし、呼び出し元のプロセスを破棄します (`_exec` 呼び出しと同じ影響)。|
 |`_P_WAIT`|新しいプロセスの実行が完了するまで、呼び出し元のスレッドが中断されます (同期 `_spawn`)。|
-|`_P_NOWAIT`, `_P_NOWAITO`|新しいプロセスと同時に呼び出し元のプロセスを実行し続けます (非同期 `_spawn`)。|
+|`_P_NOWAIT`、 `_P_NOWAITO`|新しいプロセスと同時に呼び出し元のプロセスを実行し続けます (非同期 `_spawn`)。|
 |`_P_DETACH`|呼び出し元のプロセスの実行を継続します。新しいプロセスは、コンソールまたはキーボードへのアクセスなしでバックグラウンドで実行されます。 新しいプロセスに対する `_cwait` 呼び出しは失敗します。 これは、非同期の `_spawn` です。|
 
 ## <a name="see-also"></a>参照

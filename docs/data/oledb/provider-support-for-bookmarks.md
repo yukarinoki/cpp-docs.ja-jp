@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IRowsetLocate class
 - OLE DB providers, bookmark support
 ms.assetid: 1b14ccff-4f76-462e-96ab-1aada815c377
-ms.openlocfilehash: 4a0a0ea51cf6ac347cd79cb777f9cb6a51670063
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 326a52805cb78a3f31141d3eac6a0942a7fee477
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584627"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51264724"
 ---
 # <a name="provider-support-for-bookmarks"></a>プロバイダーのブックマーク サポート
 
@@ -60,7 +60,7 @@ END_COM_MAP()
 
 最後に、処理、`IColumnsInfo::GetColumnsInfo`呼び出します。 通常、これを行う PROVIDER_COLUMN_ENTRY マクロを使用します。 ただし、コンシューマーはブックマークを使用する場合があります。 ブックマークのコンシューマーが要求するかどうかによってプロバイダーから返す列を変更できる必要があります。
 
-処理するために、`IColumnsInfo::GetColumnsInfo`呼び出し、削除、`PROVIDER_COLUMN`でマップ、`CTextData`クラス。 関数を定義して PROVIDER_COLUMN_MAP マクロ`GetColumnInfo`します。 定義する必要が、独自`GetColumnInfo`関数。 関数宣言は、このようになります。
+処理するために、`IColumnsInfo::GetColumnsInfo`を呼び出すの PROVIDER_COLUMN マップの削除、`CTextData`クラス。 関数を定義して PROVIDER_COLUMN_MAP マクロ`GetColumnInfo`します。 独自に定義`GetColumnInfo`関数。 関数宣言は、このようになります。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -78,7 +78,7 @@ class CTextData
 };
 ```
 
-次に、実装、 `GetColumnInfo` CustomRS.cpp ファイルで次のように機能します。
+次に、実装、`GetColumnInfo`で機能、*カスタム*RS.cpp が次のようにファイルします。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////
@@ -119,7 +119,6 @@ ATLCOLUMNINFO* CommonGetColInfo(IUnknown* pPropsUnk, ULONG* pcCols)
                         DBCOLUMNFLAGS_ISBOOKMARK)
          ulCols++;
       }
-
    }
 
    // Next set the other columns up.
@@ -151,9 +150,9 @@ ATLCOLUMNINFO* CAgentMan::GetColumnInfo(RUpdateRowset* pThis, ULONG* pcCols)
 
 `GetColumnInfo` プロパティと呼ばれるかどうかを確認するのには、まず`DBPROP_IRowsetLocate`設定されます。 OLE DB では、行セット オブジェクトから省略可能なインターフェイスの各プロパティがあります。 コンシューマーは、これらの省略可能なインターフェイスのいずれかを使用する場合、true に、プロパティを設定します。 プロバイダーはこのプロパティを確認し、それに基づく特殊なアクションを実行します。
 
-実装では、コマンド オブジェクトへのポインターを使用してプロパティを取得します。 `pThis`ポインターが行セットまたはコマンドのクラスを表します。 ここでテンプレートを使用するためとでこれを渡す必要があります。、`void`ポインター、または、コードはコンパイルされません。
+実装では、コマンド オブジェクトへのポインターを使用してプロパティを取得します。 `pThis`ポインターが行セットまたはコマンドのクラスを表します。 ここでテンプレートを使用するためとでこれを渡す必要があります。、 **void**ポインター、または、コードはコンパイルされません。
 
-列情報を格納する静的配列を指定します。 ブックマーク列がしない場合は、コンシューマー、配列内のエントリが無駄になります。 この配列を動的に割り当てることができますが、適切に破棄されることを確認する必要があります。 この例を定義し、ADD_COLUMN_ENTRY と ADD_COLUMN_ENTRY_EX マクロを使用して、配列に情報を挿入します。 CustomRS.H ファイルに次のコードに示すように、マクロを追加できます。
+列情報を保持する静的配列を指定します。 コンシューマーは、ブックマーク列をたくない、配列内のエントリが無駄になります。 この配列を動的に割り当てることができますが、適切に破棄されることを確認する必要があります。 この例を定義し、ADD_COLUMN_ENTRY と ADD_COLUMN_ENTRY_EX マクロを使用して、配列に情報を挿入します。 マクロを追加することができます、*カスタム*RS。次のコードに示すように、ファイルを H:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -238,7 +237,7 @@ HRESULT hr = table.Compare(table.dwBookmark, table.dwBookmark,
 
 **中**ループには呼び出すコードが含まれています、`Compare`メソッドで、`IRowsetLocate`インターフェイス。 まったく同じブックマークを比較するためのコードには常に成功します。 後に使用できるように、また、一時変数に 1 つのブックマークが保存、**中**ループに呼び出しが完了すると、`MoveToBookmark`コンシューマー テンプレートの関数。 `MoveToBookmark`関数呼び出し、`GetRowsAt`メソッド`IRowsetLocate`します。
 
-また、コンシューマーでは、ユーザー レコードを更新する必要があります。 ブックマークと内のエントリを処理するクラスにエントリを追加、 `COLUMN_MAP`:
+また、コンシューマーでは、ユーザー レコードを更新する必要があります。 ブックマークと column_map エントリを処理するクラスでは、エントリを追加します。
 
 ```cpp
 ///////////////////////////////////////////////////////////////////////
@@ -263,7 +262,7 @@ END_ACCESSOR_MAP()
 };
 ```
 
-コードが更新されると、ビルドおよびを使用してプロバイダーを実行するはずの`IRowsetLocate`インターフェイス。
+ビルドして、プロバイダーを実行できる場合、コードを更新するときにする必要があります、`IRowsetLocate`インターフェイス。
 
 ## <a name="see-also"></a>関連項目
 
