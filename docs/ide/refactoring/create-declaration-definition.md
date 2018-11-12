@@ -1,21 +1,13 @@
 ---
-title: 宣言/定義の作成 | Microsoft Docs
-ms.custom: ''
+title: 宣言/定義の作成
 ms.date: 10/19/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: 6b1cdcb2-765e-4b93-8cef-92b861f64eba
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 21edf09eb78d339c06c709b06e8fe43ea72475c4
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: 56f15ba040314b07450dc8730a913a18361e092f
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808408"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50456967"
 ---
 # <a name="create-declaration--definition"></a>宣言/定義の作成
 **機能:** 関数の宣言または定義をすぐに生成できます。

@@ -1,20 +1,20 @@
 ---
 title: プロバイダーのサービスの有効化と無効化
-ms.date: 11/04/2016
+ms.date: 10/29/2018
 helpviewer_keywords:
 - OLE DB services [OLE DB], enabling and disabling
 - service providers [OLE DB]
 ms.assetid: 3deac1bb-f660-407a-92ef-95e139e280c0
-ms.openlocfilehash: ca621b005dd0bad60c70298e4d49abce6fb8d1d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23579b9561356e95d315c0fbe47132208753afa8
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665453"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265127"
 ---
 # <a name="enabling-and-disabling-services-for-a-provider"></a>プロバイダーのサービスの有効化と無効化
 
-各 OLE DB サービスを有効になっているまたは 1 つのプロバイダーにアクセスするすべてのアプリケーションに対して既定で無効になっていることができます。 プロバイダーの CLSID、OLEDB_SERVICES レジストリ エントリを追加することでこれは、`DWORD`次の表に示すように、有効または無効にすると、サービスを指定する値。
+各 OLE DB サービスを有効になっているまたは 1 つのプロバイダーにアクセスするすべてのアプリケーションに対して既定で無効になっていることができます。 これは、次の表に示すように、有効または無効にすると、サービスを指定する DWORD 値プロバイダーの CLSID、下の OLEDB_SERVICES レジストリ エントリを追加することで行います。
 
 |既定のサービスを有効になっています。|キーワードの値|
 |------------------------------|-------------------|
