@@ -8,12 +8,12 @@ helpviewer_keywords:
 - conformance testing [OLE DB]
 - OLE DB providers, testing
 ms.assetid: d1a4f147-2edd-476c-b452-0e6a0ac09891
-ms.openlocfilehash: f7c5435003866e2c3490bd07e28ec10eca0ec0cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7365176df314baf40ac1cc1ed53936598f05c79e
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491716"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265075"
 ---
 # <a name="passing-ole-db-conformance-tests"></a>OLE DB 準拠合致テスト
 
@@ -26,7 +26,7 @@ Visual C 6.0 では、OLE DB プロバイダー テンプレートは、多数�
 > [!NOTE]
 > OLE DB 準拠のテストに合格する、プロバイダーのいくつかの検証機能を追加する必要があります。
 
-このプロバイダーでは、2 つの検証ルーチンが必要です。 最初のルーチン`CRowsetImpl::ValidateCommandID`は、行セット クラスの一部です。 プロバイダー テンプレートによって、行セットの作成時に呼び出されます。 このサンプルでは、このルーチンを使用してインデックスがサポートされていないことをコンシューマーに通知します。 最初の呼び出しが、 `CRowsetImpl::ValidateCommandID` (注、プロバイダーで使用される、`_RowsetBaseClass`に対するインターフェイス マップに追加された typedef`CCustomRowset`で[プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)テンプレートの長い行を入力する必要はありませんので、引数)。 Index パラメーターが NULL でない場合、次に、DB_E_NOINDEX を返します (コンシューマーが私たちのインデックスを使用することを示します)。 コマンド Id の詳細については、OLE DB 仕様を参照してくださいし、探して`IOpenRowset::OpenRowset`します。
+このプロバイダーでは、2 つの検証ルーチンが必要です。 最初のルーチン`CRowsetImpl::ValidateCommandID`は、行セット クラスの一部です。 プロバイダー テンプレートによって、行セットの作成時に呼び出されます。 このサンプルでは、このルーチンを使用してインデックスをサポートしないことをコンシューマーに通知します。 最初の呼び出しが、 `CRowsetImpl::ValidateCommandID` (注、プロバイダーで使用される、`_RowsetBaseClass`に対するインターフェイス マップに追加された typedef`CCustomRowset`で[プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)テンプレートの長い行を入力する必要はありませんので、引数)。 次に、インデックス パラメーターが NULL (コンシューマーが私たちのインデックスを使用することを示します) でない場合は、DB_E_NOINDEX を返します。 コマンド Id の詳細については、OLE DB 仕様を参照してくださいし、探して`IOpenRowset::OpenRowset`します。
 
 次のコードは、`ValidateCommandID`検証ルーチン。
 
@@ -48,9 +48,9 @@ HRESULT ValidateCommandID(DBID* pTableID, DBID* pIndexID)
 }
 ```
 
-プロバイダー テンプレートの呼び出し、`OnPropertyChanged`メソッドでプロパティが変更されるたびに、`DBPROPSET_ROWSET`グループ。 適切なオブジェクトに追加の他のグループのプロパティを処理する場合 (つまり、`DBPROPSET_SESSION`チェックが移動、`CCustomSession`クラス)。
+プロバイダー テンプレートの呼び出し、`OnPropertyChanged`メソッド、データ メンバーのグループのプロパティが変更されるたびにします。 適切なオブジェクトに追加の他のグループのプロパティを処理する場合は、(は、そのプロパティの移動、`CCustomSession`クラス)。
 
-コードは、まず、プロパティを別にリンクされているかどうかを確認します。 プロパティがチェーンされている場合、設定、`DBPROP_BOOKMARKS`プロパティを`True`します。 OLE DB 仕様の「付録 C には、プロパティに関する情報が含まれていますいます。 この情報も示しますプロパティがもう 1 つにチェーンされているかどうか。
+コードは、まず、プロパティを別にリンクされているかどうかを確認します。 プロパティがチェーンされている場合、DBPROP_BOOKMARKS プロパティを設定`True`します。 OLE DB 仕様の「付録 C には、プロパティに関する情報が含まれていますいます。 この情報も示しますプロパティがもう 1 つにチェーンされているかどうか。
 
 追加することも、`IsValidValue`ルーチンをコードにします。 テンプレートの呼び出し`IsValidValue`プロパティを設定しようとしています。 プロパティ値を設定するときに、追加の処理を必要とする場合は、このメソッドをオーバーライドします。 プロパティ セットごとにこれらのメソッドのいずれかがあることができます。
 

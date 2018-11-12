@@ -1,12 +1,6 @@
 ---
-title: データ アプリケーションの移植 | Microsoft Docs
-ms.custom: ''
+title: データ アプリケーションの移植
 ms.date: 05/12/2017
-ms.technology:
-- devlang-cpp
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - MFC [C++], data access applications
 - databases [C++], MFC
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 8d10c285-c13f-4e6e-a09e-5ee0f2666b44
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 51b041c60cd1bb8f866a6174e3cbb41ad613acc0
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: ccdd4c05537991ab7605d29c6d2eba1a22851a10
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50078168"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50663932"
 ---
 # <a name="porting-data-applications"></a>データ アプリケーションの移植
 長年にわたって、Visual C ++ ではデータベースを操作するいくつかの方法を提供してきました。 2011 年に Microsoft は、ネイティブ コードから SQL Server 製品にアクセスするのに望ましいテクノロジである ODBC に合わせて調整中であると発表しました。 ODBC は業界標準であり、これを使用することで、複数のプラットフォームおよびデータ ソースでのコードの最大の移植性が得られます。 ほとんどの SQL データベース製品および多くの NoSQL 製品で ODBC がサポートされます。 ODBC は、低レベルの ODBC API を呼び出して直接使用できます。あるいは、MFC ODBC ラッパー クラス、またはサードパーティの C++ ラッパー ライブラリを使用することもできます。
