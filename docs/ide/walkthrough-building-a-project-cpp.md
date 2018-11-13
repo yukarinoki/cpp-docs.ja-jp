@@ -6,12 +6,12 @@ helpviewer_keywords:
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-ms.openlocfilehash: 53f9d1ca823385c17bf2b235d844e40886092e44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618363"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524158"
 ---
 # <a name="walkthrough-building-a-project-c"></a>チュートリアル: プロジェクトの構築 (C++)
 
@@ -27,15 +27,15 @@ ms.locfileid: "50618363"
 
 1. Game.cpp で、次のステートメントのように最後の行のセミコロンを削除します。
 
-    `return 0`
+   `return 0`
 
 1. メニュー バーで、**[ビルド]** > **[ソリューションのビルド]** の順にクリックします。
 
 1. **[エラー一覧]** ウィンドウに、プロジェクトのビルド中にエラーが発生したことを示すメッセージが表示されます。 たとえば、エラーの説明はこのエラー メッセージのようになります。
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  このエラーに関するヘルプ情報を表示するには、**[エラー一覧]** ウィンドウでそのエラーを強調表示し、**F1** キーを押します。
+   このエラーに関するヘルプ情報を表示するには、**[エラー一覧]** ウィンドウでそのエラーを強調表示し、**F1** キーを押します。
 
 1. 構文エラーのある行の最後に、セミコロンを戻します。
 
@@ -43,7 +43,7 @@ ms.locfileid: "50618363"
 
 1. メニュー バーで、**[ビルド]** > **[ソリューションのビルド]** の順にクリックします。
 
-  **[出力]** ウィンドウに、プロジェクトが正常にコンパイルされたことを示すメッセージが表示されます。
+   **[出力]** ウィンドウに、プロジェクトが正常にコンパイルされたことを示すメッセージが表示されます。
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

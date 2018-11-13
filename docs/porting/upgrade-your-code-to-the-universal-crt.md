@@ -2,12 +2,12 @@
 title: Universal CRT へのコードのアップグレード
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 5e417df380ff2239b7c09ba32cc02b784e9343d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 41b33698c1617cef02f1b98a654d3403843215d8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668612"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331751"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Universal CRT へのコードのアップグレード
 
@@ -37,7 +37,7 @@ UCRT は現在、Microsoft Windows オペレーティング システムのコ�
 
 UCRT は、Visual Studio 2015 または Visual Studio 2017 でサポートされている Windows の任意のバージョンで使用できます。 Windows 10 以外のサポートされているバージョンの Windows では、vcredist パッケージを使用して再配布することができます。 vcredist パッケージは、UCRT コンポーネントを含み、既定で、それらのコンポーネントがインストールされていない Windows オペレーティング システムにそれらを自動的にインストールします。 詳細については、「[Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)」を参照してください。
 
-UCRT のアプリのローカルの展開がサポートされていますが、パフォーマンスとセキュリティの両方の理由から推奨されません。 アプリのローカル展開用の DLL は、Windows SDK の一部として **redist** サブディレクトリに置かれています。 必要な DLL には、ucrtbase.dll および api-ms-win-_subset_.dll という名前の **APISet forwarder** DLL のセットなどがあります。 必要な DLL のセットはオペレーティング システムごとに異なるので、アプリのローカルの展開を使用するときにはすべての DLL を含めることをお勧めします。 アプリのローカルの展開に関するその他の詳細および注意事項については、「[Deployment in Visual C++](../ide/deployment-in-visual-cpp.md)」 (Visual c での展開) を参照してください。
+UCRT のアプリのローカルの展開がサポートされていますが、パフォーマンスとセキュリティの両方の理由から推奨されません。 アプリのローカル展開用の DLL は、Windows SDK の一部として **redist** サブディレクトリに置かれています。 必要な DLL には、ucrtbase.dll および api-ms-win-_subset_.dll という名前の **APISet forwarder** DLL のセットなどがあります。 必要な DLL のセットはオペレーティング システムごとに異なるので、アプリのローカルの展開を使用するときにはすべての DLL を含めることをお勧めします。 アプリのローカルの展開に関するその他の詳細および注意事項については、「[Deployment in Visual C++](../ide/deployment-in-visual-cpp.md)」 (Visual c での展開) を参照してください。
 
 ## <a name="changes-to-the-universal-crt-functions-and-macros"></a>ユニバーサル CRT 関数およびマクロの変更
 

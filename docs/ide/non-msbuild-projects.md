@@ -4,12 +4,12 @@ ms.date: 06/01/2018
 helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
-ms.openlocfilehash: 396b1fe9f879e7adcdfe9a69fee5c9e1916ff545
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6354cc656d501d1611219378f72831cc2fa94389
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542013"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524002"
 ---
 # <a name="open-folder-projects-in-visual-c"></a>Visual C++ での "フォルダーを開く" プロジェクト
 
@@ -33,7 +33,8 @@ CMake Tools for Visual C++ を使って Qt を対象に Qt プロジェクトを
 ## <a name="configuring-open-folder-projects"></a>"フォルダーを開く" プロジェクトの構成
 
 次の 3 つの JSON ファイルを使って、"フォルダーを開く" プロジェクトをカスタマイズできます。
-|||
+
+| | |
 |-|-|
 |CppProperties.json|参照のためのカスタム構成情報を指定します。 必要な場合は、ルート プロジェクト フォルダーにこのファイルを作成します。|
 |launch.vs.json|コマンド ライン引数を指定します。 指定するには、**ソリューション エクスプローラー**のコンテキスト メニュー項目 **[デバッグ設定と起動設定]** を使用します。|
@@ -58,6 +59,7 @@ IntelliSense と参照の動作は、#include のパス、コンパイラ スイ
   ]
 }
 ```
+
 構成には、次のどのプロパティでも含めることができます。
 
 |||
@@ -135,6 +137,7 @@ CppProperties.json では、カスタム環境変数をグローバルに、ま�
   ]
 }
 ```
+
 構成の内部で **environments** プロパティを定義することで、その構成のみにプロパティを適用して、同じ名前のグローバル変数をオーバーライドすることもできます。 次の例の x64 構成で定義されているローカルな **INCLUDE** 変数は、グローバルな値をオーバーライドします。
 
 ```json
@@ -186,6 +189,7 @@ CppProperties.json では、カスタム環境変数をグローバルに、ま�
 #### <a name="macros"></a>[マクロ]
 
 CppProperties.json 内の次の組み込みマクロにアクセスできます。
+
 |||
 |-|-|
 |`${workspaceRoot}`| ワークスペース フォルダーへの完全なパスです|
@@ -258,11 +262,13 @@ IDE でタスクとして直接実行することで、現在のワークスペ�
   ]
 }
 ```
+
 tasks.vs.json を保存した後、フォルダー内の任意の .cpp ファイルを右クリックし、コンテキスト メニューから **[Echo filename]** を選んで、[出力] ウィンドウにファイル名が表示されることを確認します。
 
 #### <a name="appliesto"></a>AppliesTo
 
 任意のファイルまたはフォルダーのタスクを作成するには、`appliesTo` フィールドに名前を指定します (例:`"appliesTo" : "hello.cpp"`)。 次のファイル マスクを値として使用できます。
+
 |||
 |-|-|
 |`"*"`| タスクは、ワークスペース内のすべてのファイルとフォルダーで使用できます|
@@ -340,4 +346,3 @@ tasks.vs.json でカスタム マクロを定義するには、タスク ブロ�
 ## <a name="see-also"></a>参照
 
 [IDE と Visual C++ 開発用ツール](ide-and-tools-for-visual-cpp-development.md)
-
