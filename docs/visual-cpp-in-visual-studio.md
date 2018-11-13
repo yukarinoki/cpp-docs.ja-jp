@@ -1,25 +1,19 @@
 ---
-title: Visual Studio の Visual C++ | Microsoft Docs
+title: Visual Studio の Visual C++
 description: Visual C++ とは、Microsoft C++ のコンパイラ、コード エディターおよび Visual Studio IDE の関連ツールの名称です。 Visual C++ を使用すると、Windows、Linux、Android および iOS 用のプログラムを開発できます。
-ms.custom: ''
 ms.date: 09/26/2018
 ms.technology:
 - cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8cb811ccd3291caa9b3da095310c74416fbd5799
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: fbabb949fa0dae03cabfb6db1c98c2ebc1f1af12
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50067944"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50668339"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio の Visual C++
 

@@ -1,28 +1,18 @@
 ---
-title: 左辺値と右辺値の式 | Microsoft Docs
-ms.custom: ''
+title: 左辺値と右辺値の式
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - L-values
 - member-selection expressions
 - R-value expressions
 - subscript expressions
 ms.assetid: b790303e-ec6f-4d0d-bc55-df42da267172
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 133a88494cfb318b39c5b16191ee8463037f1fac
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 5fe3297467705a9a54cf0ebc87e99801bf3a0fc9
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46055306"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549098"
 ---
 # <a name="l-value-and-r-value-expressions"></a>左辺値と右辺値の式
 
