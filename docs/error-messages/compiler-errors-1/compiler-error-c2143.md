@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2143
 ms.assetid: 1d8d1456-e031-4965-9240-09a6e33ba81c
-ms.openlocfilehash: 0a7cbad52697ccedac75af73012f6dc69eec5a25
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed4bc7eea85e5263d59817082caed99bde3d75d5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582612"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520115"
 ---
 # <a name="compiler-error-c2143"></a>コンパイラ エラー C2143
 
@@ -33,7 +33,6 @@ class MyClass
     {
     };
 };
-
 ```
 
 C++ では既定では、想定される`Ty::PutFuncType`; テンプレートではありません、次にそのため、`<`小として解釈されます-記号。  必要がありますをコンパイラに指示明示的にいる`PutFuncType`テンプレートは、山かっして正しく解析できるようにします。 このエラーを修正するには、使用、`template`依存の型の名前を次に示すようにキーワード。
@@ -46,7 +45,6 @@ class MyClass
     {
     };
 };
-
 ```
 
 C2143 が発生することがときに **/clr**使用と`using`ディレクティブは、構文エラー。

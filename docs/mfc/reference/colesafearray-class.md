@@ -60,12 +60,12 @@ helpviewer_keywords:
 - COleSafeArray [MFC], UnaccessData
 - COleSafeArray [MFC], Unlock
 ms.assetid: f45a5224-5f48-40ec-9ddd-287ef9740150
-ms.openlocfilehash: efffa6057f6322f3de3d9d0bfe050d6d2021d9b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07e507f0546849a64625ccd67a0f7463cd510841
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648098"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525406"
 ---
 # <a name="colesafearray-class"></a>COleSafeArray クラス
 
@@ -408,7 +408,7 @@ VARIANT Detach();
 
 ### <a name="remarks"></a>Remarks
 
-関数は、オブジェクトの VARTYPE を VT_EMPTY に設定して、セーフ配列内のデータをデタッチします。 Windows 関数を呼び出すことによって、配列を解放する呼び出し元の責任[VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)します。
+関数は、オブジェクトの VARTYPE を VT_EMPTY に設定して、セーフ配列内のデータをデタッチします。 Windows 関数を呼び出すことによって、配列を解放する呼び出し元の責任[VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear)します。
 
 エラー、関数、 [COleException](../../mfc/reference/coleexception-class.md)します。
 
@@ -674,7 +674,7 @@ void PutElement(
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、Windows の機能を自動的に呼び出します[SafeArrayLock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearraylock)と[SafeArrayUnlock](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock)前に、と後、要素を割り当てます。 データ要素が文字列、オブジェクト、バリアントの場合は、関数によって適切にコピーされ、既存の要素が文字列、オブジェクト、バリアントの場合は、関数によって適切にクリアされます。
+この関数は、Windows の機能を自動的に呼び出します[SafeArrayLock](/windows/desktop/api/oleauto/nf-oleauto-safearraylock)と[SafeArrayUnlock](/windows/desktop/api/oleauto/nf-oleauto-safearrayunlock)前に、と後、要素を割り当てます。 データ要素が文字列、オブジェクト、バリアントの場合は、関数によって適切にコピーされ、既存の要素が文字列、オブジェクト、バリアントの場合は、関数によって適切にクリアされます。
 
 配列は多重にロックできるため、配列が別の操作によってロックされている間に要素を配列に配置できることに注意してください。
 

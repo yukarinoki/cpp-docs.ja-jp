@@ -25,12 +25,12 @@ helpviewer_keywords:
 - sorting arrays
 - arrays [CRT], sorting
 ms.assetid: d6cb33eb-d209-485f-8d41-229eb743c027
-ms.openlocfilehash: e912a7a53619e9347cf2c0cd40adf0f9162b314b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd2fc9cd789b02f1fa1e0b9969b597aa51aceedd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618492"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327552"
 ---
 # <a name="qsort"></a>qsort
 
@@ -41,7 +41,7 @@ ms.locfileid: "50618492"
 ```C
 void qsort(
    void *base,
-   size_t num,
+   size_t number,
    size_t width,
    int (__cdecl *compare )(const void *, const void *)
 );
@@ -49,7 +49,7 @@ void qsort(
 
 ### <a name="parameters"></a>パラメーター
 
-<br/>
+*base*<br/>
 対象となる配列の先頭。
 
 *数*<br/>
@@ -68,7 +68,7 @@ void qsort(
 **qsort**呼び出し、*比較*日常的な 1 つまたは複数の並べ替え中にタイムアウトし、呼び出しごとに 2 つの配列要素へのポインターを渡します。
 
 ```C
-compare( (void *) & elem1, (void *) & elem2 );
+compare( (void *) & elem1, (void *) & elem2 );
 ```
 
 ルーチンは、要素を比較し、次の値のいずれかを返します。
@@ -81,7 +81,7 @@ compare( (void *) & elem1, (void *) & elem2 );
 
 配列は、比較関数による定義に従って、昇順で並べ替えられます。 配列を降順で並べ替えるには、比較関数の "より大きい" と "より小さい" の意味を入れ替えます。
 
-この関数は、パラメーターを検証します。 場合*比較*または*数*は**NULL**、または*基本*は**NULL**と **数* 0 以外の場合、または*幅*が小さい」の説明に従って、0 よりも、無効なパラメーター ハンドラーが呼び出さは[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返しますと**errno**に設定されている**EINVAL**します。
+この関数は、パラメーターを検証します。 場合*比較*または*数*は**NULL**、または*基本*は**NULL**と*数* 0 以外の場合、または*幅*が小さい」の説明に従って、0 よりも、無効なパラメーター ハンドラーが呼び出さは[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 かどうかは、引き続き実行が許可された、関数を返しますと**errno**に設定されている**EINVAL**します。
 
 ## <a name="requirements"></a>必要条件
 

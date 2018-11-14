@@ -5,12 +5,12 @@ helpviewer_keywords:
 - iterator conventions
 - C++ Standard Library, iterator conventions
 ms.assetid: 2f746be7-b37d-4bfc-bf05-be4336ca982f
-ms.openlocfilehash: cf1f519521d86f2b7782fb93ed3b4aca4ecd5b24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b6713a80244d7063baac2c75ffead76fe93facc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643444"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326500"
 ---
 # <a name="iterators"></a>Iterators
 
@@ -41,7 +41,7 @@ for (auto num : vec)
 
 反復子には、5 つのカテゴリがあります。 これらのカテゴリを、機能が低い方から順に示します。
 
-- **出力**。 *出力反復子*`X`できます前方に反復シーケンスを使用して、 **++** 演算子を使用して要素を 1 回だけ書き込むことができ、  **&ast;** 演算子。
+- **出力**。 *出力反復子*`X`できます前方に反復シーケンスを使用して、 **++** 演算子を使用して要素を 1 回だけ書き込むことができ、  __\*__ 演算子。
 
 - **入力**。 *入力反復子*`X`できます前方に反復シーケンスを使用して、+ + 演算子、および要素を読み取れる、時間の任意の数を使用して、 **&ast;** 演算子。 使用して、入力反復子を比較することができます、 **++** と **! =** 演算子。 入力反復子のコピーを増分すると、その他のコピーのいずれも、安全に比較、逆参照、または増分することができなくなります。
 

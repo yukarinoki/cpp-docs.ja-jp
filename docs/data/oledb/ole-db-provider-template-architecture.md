@@ -6,12 +6,12 @@ helpviewer_keywords:
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 3f12eb7c7da449715116e88c9f78ee2e32fc327f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6256328caa11d188f3a50445f62df096b6f6acb3
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596171"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557038"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB プロバイダー テンプレートのアーキテクチャ
 
@@ -39,7 +39,7 @@ OLE DB プロバイダー テンプレートを提供する、必要なすべて
 
 OLE DB プロバイダー テンプレートは、行と記憶域オブジェクトを実装していません。
 
-次の表は、上記のオブジェクトの必須および省略可能なインターフェイスに従い、 [OLE DB 2.6 SDK ドキュメント](/previous-versions/windows/desktop/ms722784)します。
+次の表は、上記のオブジェクトの必須および省略可能なインターフェイスに従い、 [OLE DB 2.6 SDK ドキュメント](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))します。
 
 |コンポーネント|Interface|コメント|
 |---------------|---------------|-------------|
@@ -58,4 +58,4 @@ OLE DB プロバイダー テンプレートは、行と記憶域オブジェク
 ## <a name="see-also"></a>関連項目
 
 [OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)<br/>
-[OLE DB インターフェイス](/previous-versions/windows/desktop/ms709709)<br/>
+[OLE DB インターフェイス](https://docs.microsoft.com/previous-versions/windows/desktop/ms709709(v=vs.85))<br/>

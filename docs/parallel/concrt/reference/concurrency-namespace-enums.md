@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 97d2e9fd8e64475d9194bb8b2ab12fdee315e176
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677345"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521077"
 ---
 # <a name="concurrency-namespace-enums"></a>同時実行の名前空間列挙型
 
@@ -164,6 +164,7 @@ enum DynamicProgressFeedbackType;
 |----------|-----------------|
 |`ProgressFeedbackDisabled`|スケジューラでは、進行状況に関する情報は収集しません。 再調整に基づいて行われます、基になるハードウェア スレッドのサブスクリプション レベルだけにします。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](IExecutionResource-structure.md)します。<br /><br /> この値は、使用するため、ランタイムによって予約されています。|
 |`ProgressFeedbackEnabled`|スケジューラは、進行状況の情報を収集し、リソース マネージャーに渡されます。 リソース マネージャーでは、この統計情報を基になるハードウェア スレッドのサブスクリプション レベルだけでなく、スケジューラに代わってリソースを再調整を利用します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](IExecutionResource-structure.md)します。|
+
 ##  <a name="join_type"></a>  join_type 列挙体
 
 `join` メッセージング ブロックの種類。

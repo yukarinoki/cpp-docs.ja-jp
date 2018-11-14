@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - RW2003
 ms.assetid: 9dc0ba70-6776-4aef-b316-5f1711d8e42e
-ms.openlocfilehash: 2e0a7d2d5b7e8fc4603b10450ba30dbf014e02cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f359c1f71f03ce0d946579776230398fb31d046f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583171"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520609"
 ---
 # <a name="resource-compiler-error-rw2003"></a>リソース コンパイラ エラー RW2003
 
@@ -51,10 +51,10 @@ ms.locfileid: "50583171"
 
    Windows 3.1、リソースは約 65000 バイトを超えることはできません。 存在する場合、リソースは、するできなく Visual C またはリソースのコマンド ライン コンパイラでコンパイルします。 この制限は、カーソル、アイコン、ビットマップ、またはその他のファイル ベースのリソースには適用されません。
 
-9. **リソース ファイルは 3.00 形式ではありません。**
+1. **リソース ファイルは 3.00 形式ではありません。**
 
    カーソルまたはアイコンより前のバージョン 3.00 形式を使用します。 リソースは、変換、またはバージョン 3.00 形式を使用して再描画以降である必要があります。
 
-10. **一時ファイルを開くことができません。**
+1. **一時ファイルを開くことができません。**
 
    リソース コンパイラまたは Visual C++ は、一時ファイルを開くことができませんでした。 考えられる原因は、ディレクトリに対する書き込みアクセス許可がないこととしているか、ディレクトリが存在しないことです。 リソース コンパイラまたは Visual C++ が、 **TMP** 環境変数で指定されたディレクトリ、または指定されていない場合は現在のディレクトリでこれらのファイルを使用しようとしています。

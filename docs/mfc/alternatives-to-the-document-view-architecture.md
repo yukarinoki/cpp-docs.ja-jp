@@ -6,12 +6,12 @@ helpviewer_keywords:
 - CDocument class [MFC], space requirements
 - views [MFC], applications without
 ms.assetid: 2c22f352-a137-45ce-9971-c142173496fb
-ms.openlocfilehash: 5a9026ca400c3e7c403ff8f2b86f486bcde79cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b4da7df691837b47daa35c4b474711062d4e5c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569781"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523170"
 ---
 # <a name="alternatives-to-the-documentview-architecture"></a>ドキュメント/ビュー アーキテクチャの代替手段
 
@@ -48,15 +48,15 @@ MFC アプリケーションは通常、情報、ファイル形式、および�
 
    宣言されている`CDocument`:
 
-   - 2 つ`CString`オブジェクト。
+  - 2 つ`CString`オブジェクト。
 
-   - 次の 3 つ**BOOL**秒。
+  - 次の 3 つ**BOOL**秒。
 
-   - 1 つ`CDocTemplate`ポインター。
+  - 1 つ`CDocTemplate`ポインター。
 
-   - 1 つ`CPtrList`ドキュメントのビューの一覧を含むオブジェクトです。
+  - 1 つ`CPtrList`ドキュメントのビューの一覧を含むオブジェクトです。
 
-   さらに、ドキュメントには、ドキュメント オブジェクト、そのオブジェクトの表示、フレーム ウィンドウ、およびドキュメントのテンプレート オブジェクトを作成する時間が必要です。
+  さらに、ドキュメントには、ドキュメント オブジェクト、そのオブジェクトの表示、フレーム ウィンドウ、およびドキュメントのテンプレート オブジェクトを作成する時間が必要です。
 
 - ドキュメントとビューの両方を使いませんとして扱います。 ビューではなく、フレーム ウィンドウで、データ管理と描画コードを配置します。 この方法は、C 言語のプログラミング モデルに近いです。
 

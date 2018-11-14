@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b820ea3687fd52947eff48e4814ab4173fd95c7
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586327"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519294"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession クラス
 
@@ -318,12 +318,12 @@ FTP サーバーの名前を含む文字列へのポインター。
 *pstrPassword*<br/>
 ログインに使用するパスワードを指定する null で終わる文字列へのポインター。 両方*pstrPassword*と*pstrUserName*匿名の既定のパスワードはユーザーの電子メール名が NULL の場合。 場合*pstrPassword*が NULL (または空の文字列) が、 *pstrUserName*が NULL でない空白のパスワードを使用します。 次の表の 4 種類の設定の動作は、 *pstrUserName*と*pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|FTP サーバーに送信されるユーザー名|FTP サーバーに送信されたパスワード|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL または""|NULL または""|「匿名」|ユーザーの電子メール名|
-|NULL 以外の文字列|NULL または""|*pstrUserName*|" "|
-|NULL|NULL 以外の文字列|ERROR|ERROR||
-|NULL 以外の文字列|NULL 以外の文字列|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | FTP サーバーに送信されるユーザー名 | FTP サーバーに送信されたパスワード |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   NULL または""   |   NULL または""   |         「匿名」         |      ユーザーの電子メール名      |
+| NULL 以外の文字列 |   NULL または""   |       *pstrUserName*        |             " "             |
+|      NULL       | NULL 以外の文字列 |            ERROR            |            ERROR            |
+| NULL 以外の文字列 | NULL 以外の文字列 |       *pstrUserName*        |       *pstrPassword*        |
 
 *ポート*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。

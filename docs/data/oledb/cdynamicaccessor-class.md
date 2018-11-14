@@ -127,12 +127,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: ba456f11973a33eb3b65b8de940e5be76b821f89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12953da220016c7f66e9a2f01b4b8860d2e508b8
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461477"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557025"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor クラス
 
@@ -156,7 +156,7 @@ class CDynamicAccessor : public CAccessorBase
 |-|-|
 |[AddBindEntry](#addbindentry)|既定のアクセサーをオーバーライドする場合は、出力列にバインド エントリを追加します。|
 |[CDynamicAccessor](#cdynamicaccessor)|インスタンスを作成し、初期化、`CDynamicAccessor`オブジェクト。|
-|[閉じる](#close)|すべての列をバインド解除、割り当て済みのメモリを解放し、解放、 [IAccessor](/previous-versions/windows/desktop/ms719672)クラスのインターフェイス ポインター。|
+|[閉じる](#close)|すべての列をバインド解除、割り当て済みのメモリを解放し、解放、 [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85))クラスのインターフェイス ポインター。|
 |[GetBlobHandling](#getblobhandling)|BLOB の処理の現在の行の値を取得します。|
 |[GetBlobSizeLimit](#getblobsizelimit)|BLOB の最大サイズ (バイト単位) を取得します。|
 |[GetBookmark](#getbookmark)|現在の行のブックマークを取得します。|
@@ -196,7 +196,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 #### <a name="parameters"></a>パラメーター
 
 *情報*<br/>
-[in]A`DBCOLUMNINFO`列情報を含む構造体。 「DBCOLUMNINFO 構造体」を参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704)で、 *OLE DB プログラマーズ リファレンス*します。
+[in]A`DBCOLUMNINFO`列情報を含む構造体。 「DBCOLUMNINFO 構造体」を参照してください[icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -233,7 +233,7 @@ BLOB の最大サイズ (バイト単位)この値を列データは、BLOB と�
 
 ## <a name="close"></a> Cdynamicaccessor::close
 
-すべての列をバインド解除、割り当て済みのメモリを解放し、解放、 [IAccessor](/previous-versions/windows/desktop/ms719672)クラスのインターフェイス ポインター。
+すべての列をバインド解除、割り当て済みのメモリを解放し、解放、 [IAccessor](https://docs.microsoft.com/previous-versions/windows/desktop/ms719672(v=vs.85))クラスのインターフェイス ポインター。
 
 ### <a name="syntax"></a>構文
 
@@ -313,7 +313,7 @@ DBORDINAL GetColumnCount() const throw();
 ### <a name="syntax"></a>構文
 
 ```cpp
-bool GetColumnFlags(DBORDINAL nColumn, 
+bool GetColumnFlags(DBORDINAL nColumn,
    DBCOLUMNFLAGS* pFlags) const throw();
 ```
 
@@ -323,7 +323,7 @@ bool GetColumnFlags(DBORDINAL nColumn, 
 [in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。
 
 *pFlags*<br/>
-[out]列の特性を記述するビットマスクへのポインター。 「DBCOLUMNFLAGS 列挙型」を参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704)で、 *OLE DB プログラマーズ リファレンス*します。
+[out]列の特性を記述するビットマスクへのポインター。 「DBCOLUMNFLAGS 列挙型」を参照してください[icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -340,22 +340,22 @@ bool GetColumnFlags(DBORDINAL nColumn, 
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT GetColumnInfo(IRowset* pRowset, 
-   DBORDINAL* pColumns, 
-   DBCOLUMNINFO** ppColumnInfo, 
+HRESULT GetColumnInfo(IRowset* pRowset,
+   DBORDINAL* pColumns,
+   DBCOLUMNINFO** ppColumnInfo,
    OLECHAR** ppStringsBuffer) throw();
 ```
 
 #### <a name="parameters"></a>パラメーター
 
 *ため*<br/>
-[in]ポインター、 [IRowset](/previous-versions/windows/desktop/ms720986)インターフェイス。
+[in]ポインター、 [IRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms720986(v=vs.85))インターフェイス。
 
 *pColumns*<br/>
 [out]行セットで列の数を返すメモリへのポインターこの数には、1 つを使用する必要がある場合に、ブックマーク列が含まれます。
 
 *ppColumnInfo*<br/>
-[out]配列を返すメモリへのポインター`DBCOLUMNINFO`構造体。 「DBCOLUMNINFO 構造体」を参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704)で、 *OLE DB プログラマーズ リファレンス*します。
+[out]配列を返すメモリへのポインター`DBCOLUMNINFO`構造体。 「DBCOLUMNINFO 構造体」を参照してください[icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *ppStringsBuffer*<br/>
 [out]すべての文字列値のストレージへのポインターを返すメモリへのポインター (内でいずれかの名前が使用*columnid*または*pwszName*) 1 つの割り当てブロック内で。
@@ -366,7 +366,7 @@ HRESULT GetColumnInfo(IRowset* pRowset, 
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704)で、 *OLE DB プログラマーズ リファレンス*データ型について`DBORDINAL`、 `DBCOLUMNINFO`、および`OLECHAR`します。
+参照してください[icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*データ型について`DBORDINAL`、 `DBCOLUMNINFO`、および`OLECHAR`します。
 
 ## <a name="getcolumnname"></a> Cdynamicaccessor::getcolumnname
 
@@ -394,7 +394,7 @@ LPOLESTR GetColumnName(DBORDINAL nColumn) const throw();
 ### <a name="syntax"></a>構文
 
 ```cpp
-bool GetColumnType(DBORDINAL nColumn, 
+bool GetColumnType(DBORDINAL nColumn,
    DBTYPE* pType) const throw();
 ```
 
@@ -417,13 +417,13 @@ bool GetColumnType(DBORDINAL nColumn, 
 ### <a name="syntax"></a>構文
 
 ```cpp
-bool GetLength(DBORDINAL nColumn, 
+bool GetLength(DBORDINAL nColumn,
    DBLENGTH* pLength) const throw();
 
-bool GetLength(const CHAR* pColumnName, 
+bool GetLength(const CHAR* pColumnName,
    DBLENGTH* pLength) const throw();
 
-bool GetLength(const WCHAR* pColumnName, 
+bool GetLength(const WCHAR* pColumnName,
    DBLENGTH* pLength) const throw();
 ```
 
@@ -479,7 +479,7 @@ bool GetOrdinal(const WCHAR* pColumnName,
 ### <a name="syntax"></a>構文
 
 ```cpp
-bool GetStatus(DBORDINAL nColumn, 
+bool GetStatus(DBORDINAL nColumn,
    DBSTATUS* pStatus) const throw();
 
 bool GetStatus(const CHAR* pColumnName,
@@ -498,7 +498,7 @@ bool GetStatus(const WCHAR* pColumnName,
 [in]列名を含む文字列へのポインター。
 
 *pStatus*<br/>
-[out]列の状態を格納する変数へのポインター。 参照してください[DBSTATUS](/previous-versions/windows/desktop/ms722617)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
+[out]列の状態を格納する変数へのポインター。 参照してください[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -608,13 +608,13 @@ BLOB の最大サイズを設定 (バイト単位)この値より大きい列の
 ### <a name="syntax"></a>構文
 
 ```cpp
-bool SetLength(DBORDINAL nColumn, 
+bool SetLength(DBORDINAL nColumn,
    DBLENGTH nLength)throw();
 
-bool SetLength(const CHAR* pColumnName, 
+bool SetLength(const CHAR* pColumnName,
    DBLENGTH nLength) throw();
 
-bool SetLength(const WCHAR* pColumnName, 
+bool SetLength(const WCHAR* pColumnName,
    DBLENGTH nLength) throw();
 ```
 
@@ -640,13 +640,13 @@ bool SetLength(const WCHAR* pColumnName, 
 ### <a name="syntax"></a>構文
 
 ```cpp
-bool SetStatus(DBORDINAL nColumn, 
+bool SetStatus(DBORDINAL nColumn,
    DBSTATUS status)throw();
 
-bool SetStatus(const CHAR* pColumnName, 
+bool SetStatus(const CHAR* pColumnName,
    DBSTATUS status) throw();
 
-bool SetStatus(const WCHAR* pColumnName, 
+bool SetStatus(const WCHAR* pColumnName,
    DBSTATUS status) throw();
 ```
 
@@ -656,7 +656,7 @@ bool SetStatus(const WCHAR* pColumnName, 
 [in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。
 
 *status*<br/>
-[in]列の状態。 参照してください[DBSTATUS](/previous-versions/windows/desktop/ms722617)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
+[in]列の状態。 参照してください[DBSTATUS](https://docs.microsoft.com/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
 *pColumnName*<br/>
 [in]列名を含む文字列へのポインター。
@@ -673,16 +673,16 @@ bool SetStatus(const WCHAR* pColumnName, 
 
 ```cpp
 template <class ctype>
-bool SetValue( 
-   DBORDINAL nColumn, 
+bool SetValue(
+   DBORDINAL nColumn,
    constctype& data) throw( );
 
-template <class ctype>  
-bool SetValue( 
-   const CHAR * pColumnName, 
+template <class ctype> 
+bool SetValue(
+   const CHAR * pColumnName,
    const ctype& data) throw( );
 
-template <class ctype> 
+template <class ctype>
 bool SetValue(
    const WCHAR *pColumnName,
    const ctype& data) throw( );

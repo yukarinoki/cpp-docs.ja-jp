@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB templates, about OLE DB templates
 - OLE DB templates
 ms.assetid: 0c780c1b-9bba-4788-8c33-8552d9f120ac
-ms.openlocfilehash: 97924110d6dd59e59eda9492713518dedf68af55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 079ec68afe2e538a40920fb2c6524f8d5b8aae89
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596600"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520642"
 ---
 # <a name="ole-db-templates-attributes-and-other-implementations"></a>OLE DB テンプレート、属性、およびその他の実装
 
@@ -25,7 +25,7 @@ OLE DB テンプレート、ATL (Active Template Library) の一部である、�
 
 - **OLE DB プロバイダー テンプレート**OLE DB サーバー (プロバイダー) アプリケーションを実装するために使用します。
 
-OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB を知らない場合は、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)します。
+OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB を知らない場合は、次を参照してください。 [OLE DB プログラマーズ リファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)します。
 
 詳細については、次の操作を実行できます。
 
@@ -37,7 +37,7 @@ OLE DB テンプレートを使用するには、C++ テンプレート、COM、
 
 - 一覧を参照してください。 [OLE DB テンプレート サンプル](https://github.com/Microsoft/VCSamples)します。
 
-- 参照してください[OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)(、Windows SDK) にします。
+- 参照してください[OLE DB プログラマーズ リファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)(、Windows SDK) にします。
 
 ## <a name="ole-db-attributes"></a>OLE DB 属性します。
 
@@ -49,7 +49,7 @@ MFC ライブラリの 1 つのクラス ライブラリが[COleDBRecordView](..
 
 ## <a name="ole-db-sdk-interfaces"></a>OLE DB SDK インターフェイス
 
-OLE DB テンプレートが OLE DB の機能をサポートしない場合、OLE DB インターフェイス自体を使用する必要があります。 詳細については、次を参照してください。 [OLE DB プログラマーズ リファレンス](/previous-versions/windows/desktop/ms713643)Windows SDK に含まれています。
+OLE DB テンプレートが OLE DB の機能をサポートしない場合、OLE DB インターフェイス自体を使用する必要があります。 詳細については、次を参照してください。 [OLE DB プログラマーズ リファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)Windows SDK に含まれています。
 
 ## <a name="see-also"></a>関連項目
 

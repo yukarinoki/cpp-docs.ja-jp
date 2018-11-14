@@ -52,16 +52,16 @@ helpviewer_keywords:
 - m_bCancelWhenExecuting
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
-ms.openlocfilehash: a3520ed34f356c70163b9063178df48e4bc66a7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5e599b437f7660801a1eb40618eb49bee84a918
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583587"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556817"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl クラス
 
-実装を提供、 [ICommand](/previous-versions/windows/desktop/ms709737)インターフェイス。
+実装を提供、 [ICommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709737(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -119,7 +119,7 @@ STDMETHOD(Cancel)();
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[icommand::cancel](/previous-versions/windows/desktop/ms714402)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommand::cancel](https://docs.microsoft.com/previous-versions/windows/desktop/ms714402(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="cancelexecution"></a> Icommandimpl::cancelexecution
 
@@ -178,7 +178,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 
 1 つ以上の行セットを作成するか、別の行セットを作成するための独自の条件を提供するには、別の呼び出しを配置`CreateRowset`内から`Execute`します。
 
-参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095)で、 *OLE DB プログラマーズ リファレンス。*
+参照してください[icommand::execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))で、 *OLE DB プログラマーズ リファレンス。*
 
 ## <a name="execute"></a> Icommandimpl::execute
 
@@ -196,7 +196,7 @@ HRESULT Execute(IUnknown* pUnkOuter,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommand::execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -217,7 +217,7 @@ STDMETHOD (GetDBSession) (REFIID riid,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[ICommand::GetDBSession](/previous-versions/windows/desktop/ms719622)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[ICommand::GetDBSession](https://docs.microsoft.com/previous-versions/windows/desktop/ms719622(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 

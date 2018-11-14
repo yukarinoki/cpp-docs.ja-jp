@@ -10,12 +10,12 @@ helpviewer_keywords:
 - SafeInt class
 - SafeInt class, constructor
 ms.assetid: 27a8f087-2511-46f9-8d76-2aeb66ca272f
-ms.openlocfilehash: 70343d4dbaf4b57c83d28e225419164906e2b1ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ff5aaf2eee84af1b1dddba21560e7b254f00069
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445150"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327214"
 ---
 # <a name="safeint-class"></a>SafeInt クラス
 
@@ -33,134 +33,134 @@ class SafeInt;
 
 ### <a name="parameters"></a>パラメーター
 
-テンプレート | 説明
--------- | -------------------------------------------------------------------
-T        | 整数またはブール型パラメーターの型を`SafeInt`が置き換えられます。
-E        | エラー処理ポリシーを定義する列挙型。
-U        | 整数またはブール型パラメーターの第 2 オペランドの型。
+| テンプレート  |  説明 |
+|--------|------------|
+| T         |  整数またはブール型パラメーターの型を`SafeInt`が置き換えられます。 |
+| E         |  エラー処理ポリシーを定義する列挙型。 |
+| U         |  整数またはブール型パラメーターの第 2 オペランドの型。 |
 
-パラメーター | 説明
---------- | ---------------------------------------------------------------------------------------------------------------------
-*rhs*     | [in]スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。
-*i*       | [in]スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。
-*Bits*    | [in]スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。
+| パラメーター  |  説明 |
+|---------|-----------------|
+| *rhs*      |  [in]スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。 |
+| *i*        |  [in]スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。 |
+| *Bits*     |  [in]スタンドアロンの関数をいくつかの演算子の右側にある値を表す入力パラメーター。 |
 
 ## <a name="members"></a>メンバー
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
-名前                         | 説明
----------------------------- | --------------------
-[SafeInt::SafeInt](#safeint) | 既定のコンストラクター
+| 名前                          |  説明 |
+|---------------------------|--------------------|
+| [SafeInt::SafeInt](#safeint)  |  既定のコンストラクター |
 
 ### <a name="assignment-operators"></a>代入演算子
 
-名前 | 構文
----- | ---------------------------------------------------------------------------------------
-=    | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const U& rhs)`
-=    | `SafeInt<T,E>& operator= (const T& rhs) throw()`
-=    | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator= (const SafeInt<U, E>& rhs)`
-=    | `SafeInt<T,E>& operator= (const SafeInt<T,E>& rhs) throw()`
+| 名前  |  構文 |
+|----|---------|
+| =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const U& rhs)` |
+| =     |  `SafeInt<T,E>& operator= (const T& rhs) throw()` |
+| =     |  `template<typename U>`<br />`SafeInt<T,E>& operator= (const SafeInt<U, E>& rhs)` |
+| =     |  `SafeInt<T,E>& operator= (const SafeInt<T,E>& rhs) throw()` |
 
 ### <a name="casting-operators"></a>キャスト演算子
 
-名前             | 構文
----------------- | -----------------------------------
-bool             | `operator bool() throw()`
-char             | `operator char() const`
-signed char      | `operator signed char() const`
-unsigned char    | `operator unsigned char() const`
-__int16          | `operator __int16() const`
-unsigned __int16 | `operator unsigned __int16() const`
-__int32          | `operator __int32() const`
-unsigned __int32 | `operator unsigned __int32() const`
-long             | `operator long() const`
-unsigned long    | `operator unsigned long() const`
-__int64          | `operator __int64() const`
-unsigned __int64 | `operator unsigned __int64() const`
-wchar_t          | `operator wchar_t() const`
+| 名前              |  構文 |
+|------|---------------------------------|
+| bool              |  `operator bool() throw()` |
+| char              |  `operator char() const` |
+| signed char       |  `operator signed char() const` |
+| unsigned char     |  `operator unsigned char() const` |
+| __int16           |  `operator __int16() const` |
+| unsigned __int16  |  `operator unsigned __int16() const` |
+| __int32           |  `operator __int32() const` |
+| unsigned __int32  |  `operator unsigned __int32() const` |
+| long              |  `operator long() const` |
+| unsigned long     |  `operator unsigned long() const` |
+| __int64           |  `operator __int64() const` |
+| unsigned __int64  |  `operator unsigned __int64() const` |
+| wchar_t           |  `operator wchar_t() const` |
 
 ### <a name="comparison-operators"></a>比較演算子
 
-名前 | 構文
----- | --------------------------------------------------------------------------
-<    | `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()`
-<    | `bool operator< (SafeInt<T,E> rhs) const throw()`
->=   | `template<typename U>`<br /><br /> `bool operator>= (U rhs) const throw()`
->=   | `Bool operator>= (SafeInt<T,E> rhs) const throw()`
->    | `template<typename U>`<br /><br /> `bool operator> (U rhs) const throw()`
->    | `Bool operator> (SafeInt<T,E> rhs) const throw()`
-<=   | `template<typename U>`<br /><br /> `bool operator<= (U rhs) const throw()`
-<=   | `bool operator<= (SafeInt<T,E> rhs) const throw()`
-==   | `template<typename U>`<br /><br /> `bool operator== (U rhs) const throw()`
-==   | `bool operator== (bool rhs) const throw()`
-==   | `bool operator== (SafeInt<T,E> rhs) const throw()`
-!=   | `template<typename U>`<br /><br /> `bool operator!= (U rhs) const throw()`
-!=   | `bool operator!= (bool b) const throw()`
-!=   | `bool operator!= (SafeInt<T,E> rhs) const throw()`
+| 名前  |  構文 |
+|----|----------------|
+| \<     |  `template<typename U>`<br /><br /> `bool operator< (U rhs) const throw()` |
+| \<     |  `bool operator< (SafeInt<T,E> rhs) const throw()` |
+| \>=    |  `template<typename U>`<br /><br /> `bool operator>= (U rhs) const throw()` |
+| \>=    |  `Bool operator>= (SafeInt<T,E> rhs) const throw()` |
+| \>     |  `template<typename U>`<br /><br /> `bool operator> (U rhs) const throw()` |
+| \>     |  `Bool operator> (SafeInt<T,E> rhs) const throw()` |
+| \<=    |  `template<typename U>`<br /><br /> `bool operator<= (U rhs) const throw()` |
+| \<=    |  `bool operator<= (SafeInt<T,E> rhs) const throw()` |
+| ==    |  `template<typename U>`<br /><br /> `bool operator== (U rhs) const throw()` |
+| ==    |  `bool operator== (bool rhs) const throw()` |
+| ==    |  `bool operator== (SafeInt<T,E> rhs) const throw()` |
+| !=    |  `template<typename U>`<br /><br /> `bool operator!= (U rhs) const throw()` |
+| !=    |  `bool operator!= (bool b) const throw()` |
+| !=    |  `bool operator!= (SafeInt<T,E> rhs) const throw()` |
 
 ### <a name="arithmetic-operators"></a>算術演算子
 
-名前 | 構文
----- | ---------------------------------------------------------------------------------
-+    | `const SafeInt<T,E>& operator+ () const throw()`
--    | `SafeInt<T,E> operator- () const`
-++   | `SafeInt<T,E>& operator++ ()`
---   | `SafeInt<T,E>& operator-- ()`
-%    | `template<typename U>`<br /><br /> `SafeInt<T,E> operator% (U rhs) const`
-%    | `SafeInt<T,E> operator% (SafeInt<T,E> rhs) const`
-%=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (U rhs)`
-%=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (SafeInt<U, E> rhs)`
-*    | `template<typename U>`<br /><br /> `SafeInt<T,E> operator* (U rhs) const`
-*    | `SafeInt<T,E> operator* (SafeInt<T,E> rhs) const`
-*=   | `SafeInt<T,E>& operator*= (SafeInt<T,E> rhs)`
-*=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (U rhs)`
-*=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (SafeInt<U, E> rhs)`
-/    | `template<typename U>`<br /><br /> `SafeInt<T,E> operator/ (U rhs) const`
-/    | `SafeInt<T,E> operator/ (SafeInt<T,E> rhs ) const`
-/=   | `SafeInt<T,E>& operator/= (SafeInt<T,E> i)`
-/=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (U i)`
-/=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (SafeInt<U, E> i)`
-+    | `SafeInt<T,E> operator+ (SafeInt<T,E> rhs) const`
-+    | `template<typename U>`<br /><br /> `SafeInt<T,E> operator+ (U rhs) const`
-+=   | `SafeInt<T,E>& operator+= (SafeInt<T,E> rhs)`
-+=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (U rhs)`
-+=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (SafeInt<U, E> rhs)`
--    | `template<typename U>`<br /><br /> `SafeInt<T,E> operator- (U rhs) const`
--    | `SafeInt<T,E> operator- (SafeInt<T,E> rhs) const`
--=   | `SafeInt<T,E>& operator-= (SafeInt<T,E> rhs)`
--=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (U rhs)`
--=   | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (SafeInt<U, E> rhs)`
+| 名前  |  構文 |
+|----|--------------|
+| +     |  `const SafeInt<T,E>& operator+ () const throw()` |
+| -     |  `SafeInt<T,E> operator- () const` |
+| ++    |  `SafeInt<T,E>& operator++ ()` |
+| --    |  `SafeInt<T,E>& operator-- ()` |
+| %     |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator% (U rhs) const` |
+| %     |  `SafeInt<T,E> operator% (SafeInt<T,E> rhs) const` |
+| %=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (U rhs)` |
+| %=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator%= (SafeInt<U, E> rhs)` |
+| \*     |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator* (U rhs) const` |
+| \*     |  `SafeInt<T,E> operator* (SafeInt<T,E> rhs) const` |
+| \*=    |  `SafeInt<T,E>& operator*= (SafeInt<T,E> rhs)` |
+| \*=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (U rhs)` |
+| \*=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator*= (SafeInt<U, E> rhs)` |
+| /     |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator/ (U rhs) const` |
+| /     |  `SafeInt<T,E> operator/ (SafeInt<T,E> rhs ) const` |
+| /=    |  `SafeInt<T,E>& operator/= (SafeInt<T,E> i)` |
+| /=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (U i)` |
+| /=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator/= (SafeInt<U, E> i)` |
+| +     |  `SafeInt<T,E> operator+ (SafeInt<T,E> rhs) const` |
+| +     |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator+ (U rhs) const` |
+| +=    |  `SafeInt<T,E>& operator+= (SafeInt<T,E> rhs)` |
+| +=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (U rhs)` |
+| +=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator+= (SafeInt<U, E> rhs)` |
+| -     |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator- (U rhs) const` |
+| -     |  `SafeInt<T,E> operator- (SafeInt<T,E> rhs) const` |
+| -=    |  `SafeInt<T,E>& operator-= (SafeInt<T,E> rhs)` |
+| -=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (U rhs)` |
+| -=    |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator-= (SafeInt<U, E> rhs)` |
 
 ### <a name="logical-operators"></a>論理演算子
 
-名前    | 構文
-------- | -----------------------------------------------------------------------------------------------
-!       | `bool operator !() const throw()`
-~       | `SafeInt<T,E> operator~ () const throw()`
-<<      | `template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (U bits) const throw()`
-<<      | `template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (SafeInt<U, E> bits) const throw()`
-<<=     | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (U bits) throw()`
-<<=     | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (SafeInt<U, E> bits) throw()`
->>      | `template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (U bits) const throw()`
->>      | `template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (SafeInt<U, E> bits) const throw()`
->>=     | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (U bits) throw()`
->>=     | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (SafeInt<U, E> bits) throw()`
-&       | `SafeInt<T,E> operator& (SafeInt<T,E> rhs) const throw()`
-&       | `template<typename U>`<br /><br /> `SafeInt<T,E> operator& (U rhs) const throw()`
-&=      | `SafeInt<T,E>& operator&= (SafeInt<T,E> rhs) throw()`
-&=      | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (U rhs) throw()`
-&=      | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (SafeInt<U, E> rhs) throw()`
-^       | `SafeInt<T,E> operator^ (SafeInt<T,E> rhs) const throw()`
-^       | `template<typename U>`<br /><br /> `SafeInt<T,E> operator^ (U rhs) const throw()`
-^=      | `SafeInt<T,E>& operator^= (SafeInt<T,E> rhs) throw()`
-^=      | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (U rhs) throw()`
-^=      | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (SafeInt<U, E> rhs) throw()`
-&#124;  | `SafeInt<T,E> operator&#124; (SafeInt<T,E> rhs) const throw()`
-&#124;  | `template<typename U>`<br /><br /> `SafeInt<T,E> operator&#124; (U rhs) const throw()`
-&#124;= | `SafeInt<T,E>& operator&#124;= (SafeInt<T,E> rhs) throw()`
-&#124;= | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()`
-&#124;= | `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()`
+| 名前     |  構文 |
+|------|--------------|
+| !        |  `bool operator !() const throw()` |
+| ~        |  `SafeInt<T,E> operator~ () const throw()` |
+| \<\<       |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (U bits) const throw()` |
+| \<\<       |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator<< (SafeInt<U, E> bits) const throw()` |
+| \<\<=      |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (U bits) throw()` |
+| \<\<=      |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator<<= (SafeInt<U, E> bits) throw()` |
+| \>\>       |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (U bits) const throw()` |
+| \>\>       |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator>> (SafeInt<U, E> bits) const throw()` |
+| \>\>=      |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (U bits) throw()` |
+| \>\>=      |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator>>= (SafeInt<U, E> bits) throw()` |
+| &        |  `SafeInt<T,E> operator& (SafeInt<T,E> rhs) const throw()` |
+| &        |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator& (U rhs) const throw()` |
+| &=       |  `SafeInt<T,E>& operator&= (SafeInt<T,E> rhs) throw()` |
+| &=       |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (U rhs) throw()` |
+| &=       |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&= (SafeInt<U, E> rhs) throw()` |
+| ^        |  `SafeInt<T,E> operator^ (SafeInt<T,E> rhs) const throw()` |
+| ^        |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator^ (U rhs) const throw()` |
+| ^=       |  `SafeInt<T,E>& operator^= (SafeInt<T,E> rhs) throw()` |
+| ^=       |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (U rhs) throw()` |
+| ^=       |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator^= (SafeInt<U, E> rhs) throw()` |
+| &#124;   |  `SafeInt<T,E> operator&#124; (SafeInt<T,E> rhs) const throw()` |
+| &#124;   |  `template<typename U>`<br /><br /> `SafeInt<T,E> operator&#124; (U rhs) const throw()` |
+| &#124;=  |  `SafeInt<T,E>& operator&#124;= (SafeInt<T,E> rhs) throw()` |
+| &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (U rhs) throw()` |
+| &#124;=  |  `template<typename U>`<br /><br /> `SafeInt<T,E>& operator&#124;= (SafeInt<U, E> rhs) throw()` |
 
 ## <a name="remarks"></a>Remarks
 

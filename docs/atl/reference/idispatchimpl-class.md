@@ -14,12 +14,12 @@ helpviewer_keywords:
 - IDispatchImpl class
 - IDispatch class support in ATL
 ms.assetid: 8108eb36-1228-4127-a203-3ab5ba488892
-ms.openlocfilehash: 8be209c8fb2e9f4d1f4dda4bbd3dc9e5220243b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 078bbaec870f6661bb33a9bbb844f5e062bba6f2
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490442"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523257"
 ---
 # <a name="idispatchimpl-class"></a>IDispatchImpl クラス
 
@@ -114,7 +114,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IDispatch::GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK にします。
+参照してください[IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK にします。
 
 ##  <a name="gettypeinfo"></a>  IDispatchImpl::GetTypeInfo
 
@@ -129,7 +129,7 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[が](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo)Windows SDK にします。
+参照してください[が](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo)Windows SDK にします。
 
 ##  <a name="gettypeinfocount"></a>  IDispatchImpl::GetTypeInfoCount
 
@@ -169,7 +169,7 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK にします。
+参照してください[idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK にします。
 
 ## <a name="see-also"></a>関連項目
 

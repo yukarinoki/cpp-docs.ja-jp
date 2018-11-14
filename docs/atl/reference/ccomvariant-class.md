@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: dd53bdea211610b208516860b29c1b0094f5a4da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523268"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522491"
 ---
 # <a name="ccomvariant-class"></a>CComVariant クラス
 
@@ -98,7 +98,7 @@ HRESULT Attach(VARIANT* pSrc);
 ### <a name="parameters"></a>パラメーター
 
 *pSrc*<br/>
-[in]指す、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)オブジェクトに接続します。
+[in]指す、[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)オブジェクトに接続します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -242,7 +242,7 @@ HRESULT Copy(const VARIANT* pSrc);
 ### <a name="parameters"></a>パラメーター
 
 *pSrc*<br/>
-[in]ポインター、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)をコピーします。
+[in]ポインター、[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)をコピーします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -342,7 +342,7 @@ CComVariant& operator=(char cSrc) throw();
 ### <a name="parameters"></a>パラメーター
 
 *varSrc*<br/>
-[in]`CComVariant`または[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)に割り当てられる、`CComVariant`オブジェクト。 コピー元のバリアントの内容は、変換せず、変換先にコピーされます。
+[in]`CComVariant`または[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)に割り当てられる、`CComVariant`オブジェクト。 コピー元のバリアントの内容は、変換せず、変換先にコピーされます。
 
 *bstrSrc*<br/>
 [in]割り当てられる BSTR、`CComVariant`オブジェクト。 種類、`CComVariant`オブジェクトは VT_BSTR になります。

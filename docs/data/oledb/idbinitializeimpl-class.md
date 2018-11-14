@@ -39,16 +39,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: b8411dd204eb3fbeb23508913eea6a580c655530
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4d9499262d0b4167d7c3941113f49bfa23e0467b
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512694"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556765"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl クラス
 
-実装を提供、 [IDBInitialize](/previous-versions/windows/desktop/ms713706)インターフェイス。
+実装を提供、 [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -118,7 +118,7 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[idbinitialize::initialize](/previous-versions/windows/desktop/ms718026)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[idbinitialize::initialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms718026(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="uninitialize"></a> Idbinitializeimpl::uninitialize
 
@@ -132,7 +132,7 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[:uninitialize](/previous-versions/windows/desktop/ms719648)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[:uninitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms719648(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="dwstatus"></a> Idbinitializeimpl::m_dwstatus
 

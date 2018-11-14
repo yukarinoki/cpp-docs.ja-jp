@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 2f63535210110e699daedd39a0b5a5ac25fc53c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9791f1c59bb393f7de64ffb16ccb95e99928b04c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505899"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525341"
 ---
 # <a name="coledatetime-class"></a>COleDateTime クラス
 
@@ -104,7 +104,7 @@ class COleDateTime
 
 `COleDateTime` 基本クラスはありません。
 
-使用可能な型の 1 つは、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)OLE オートメーションのデータ型。 A`COleDateTime`値は、絶対日付と時刻の値を表します。
+使用可能な型の 1 つは、[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)OLE オートメーションのデータ型。 A`COleDateTime`値は、絶対日付と時刻の値を表します。
 
 `DATE`型が浮動小数点値として実装されます。 日は、1899 年 12 月 30 日の午前 0 時に測定されます。 次の表は、一部の日付と関連付けられた値を示します。
 
@@ -828,7 +828,7 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **operator = (** `dateSrc` **)** 値とオペランドの状態は、これにコピーされます`COleDateTime`オブジェクト。
 
-- **operator = (** *varSrc* **)** 場合の変換、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)値 (または[COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト) を日付/時刻 (vt _ を付けます日付) が成功すると、変換後の値がこれにコピー`COleDateTime`オブジェクトとその状態が有効に設定されます。 このオブジェクトの値が 0 (1899 年 12 月 30 日午前 0 時) に設定されている変換が成功しなかった場合、その状態は無効にします。
+- **operator = (** *varSrc* **)** 場合の変換、[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)値 (または[COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト) を日付/時刻 (vt _ を付けます日付) が成功すると、変換後の値がこれにコピー`COleDateTime`オブジェクトとその状態が有効に設定されます。 このオブジェクトの値が 0 (1899 年 12 月 30 日午前 0 時) に設定されている変換が成功しなかった場合、その状態は無効にします。
 
 - **演算子 = (** `dtSrc` **)** 、`DATE`値にこのコピー`COleDateTime`オブジェクトとその状態が有効に設定されます。
 
@@ -836,11 +836,11 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **operator = (** *systimeSrc* **)** 、 [SYSTEMTIME](https://msdn.microsoft.com/library/windows/desktop/ms724950)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。
 
-- **operator = (** `udate` **)** 、`UDATE`値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。 A`UDATE`構造体は、「開」の日付を表します。 関数を参照してください。 [VarDateFromUdate](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)の詳細。
+- **operator = (** `udate` **)** 、`UDATE`値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。 A`UDATE`構造体は、「開」の日付を表します。 関数を参照してください。 [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)の詳細。
 
 - **operator = (** `filetimeSrc` **)** 、 [FILETIME](https://msdn.microsoft.com/library/windows/desktop/ms724284)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。それ以外の場合に設定されている無効にします。 `FILETIME` 世界協定時刻 (UTC) を使用するは、ため、UTC 時刻を構造に渡す場合、結果は UTC 時刻を現地時刻に変換され、バリアントの時刻として格納されます。 この動作は、Visual C 6.0 および Visual C .NET 2003 SP2 のように同じです。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。
 
-詳細については、次を参照してください。、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。
+詳細については、次を参照してください。、[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。
 
 詳細については、`time_t`データ型を参照してください、[時間](../../c-runtime-library/reference/time-time32-time64.md)で機能、*ランタイム ライブラリ リファレンス*します。
 
@@ -1083,7 +1083,7 @@ int SetDateTime(
 |*nMin*|0 - 59|
 |*nSec*|0 - 59|
 
-月の日がオーバーフローした場合に、次の月と、1 か月の正しい日付に変換されますや年がインクリメントされます。 ゼロの日付の値では、前の月の最終日を示します。 動作は同じ[SystemTimeToVariantTime](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime)します。
+月の日がオーバーフローした場合に、次の月と、1 か月の正しい日付に変換されますや年がインクリメントされます。 ゼロの日付の値では、前の月の最終日を示します。 動作は同じ[SystemTimeToVariantTime](/windows/desktop/api/oleauto/nf-oleauto-systemtimetovarianttime)します。
 
 パラメーターによって指定された日付または時刻の値が無効ですが、このオブジェクトの状態が無効ですし、このオブジェクトの値に設定する場合は変更されません。
 

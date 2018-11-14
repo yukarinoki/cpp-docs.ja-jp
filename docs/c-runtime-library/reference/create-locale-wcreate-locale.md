@@ -28,12 +28,12 @@ helpviewer_keywords:
 - create_locale function
 - __create_locale function
 ms.assetid: ca362464-9f4a-4ec6-ab03-316c55c5be81
-ms.openlocfilehash: 0ede14d56dc093b83078bf28eb01f5b5c55d8949
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 109a1d93692d0c65269b40fd0559381907ce1cab
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545926"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326564"
 ---
 # <a name="createlocale-wcreatelocale"></a>_create_locale、_wcreate_locale
 
@@ -72,14 +72,14 @@ _locale_t _wcreate_locale(
 
 *カテゴリ*引数は、影響を受けるロケール固有の動作の一部を指定します。 使用するフラグ*カテゴリ*影響されるプログラムの部分は次の表に示すようにします。
 
-|*カテゴリ*フラグ|影響が及ぶ対象|
-|-|-|
-**LC_ALL**|次に示すように、すべてのカテゴリです。
-**LC_COLLATE**|**Strcoll 系**、 **_stricoll**、 **wcscoll**、 **_wcsicoll**、 **strxfrm**、 **_strncoll**、 **_strnicoll**、 **_wcsncoll**、 **_wcsnicoll**、および**wcsxfrm**関数。
-**LC_CTYPE**|文字処理関数 (を除く**isdigit**、 **isxdigit**、 **mbstowcs**、および**mbtowc**、影響を受けない)。
-**LC_MONETARY**|によって返される通貨の書式設定情報、 **localeconv**関数。
-**LC_NUMERIC**|小数点文字の書式化出力ルーチン (など**printf**)、データ変換ルーチン、および非通貨の書式情報によって返される**localeconv**します。 小数点文字だけでなく**LC_NUMERIC**セット、数千の区切り記号と、グループ化の制御によって返される文字列[localeconv](localeconv.md)します。
-**LC_TIME**|**Strftime**と**wcsftime**関数。
+| *カテゴリ*フラグ | 影響が及ぶ対象 |
+|-----------------|---------|
+| **LC_ALL** |次に示すように、すべてのカテゴリです。 |
+| **LC_COLLATE** |**Strcoll 系**、 **_stricoll**、 **wcscoll**、 **_wcsicoll**、 **strxfrm**、 **_strncoll**、 **_strnicoll**、 **_wcsncoll**、 **_wcsnicoll**、および**wcsxfrm**関数。 |
+| **LC_CTYPE** | 文字処理関数 (を除く**isdigit**、 **isxdigit**、 **mbstowcs**、および**mbtowc**、影響を受けない)。 |
+| **LC_MONETARY** | によって返される通貨の書式設定情報、 **localeconv**関数。 |
+| **LC_NUMERIC** | 小数点文字の書式化出力ルーチン (など**printf**)、データ変換ルーチン、および非通貨の書式情報によって返される**localeconv**します。 小数点文字だけでなく**LC_NUMERIC**セット、数千の区切り記号と、グループ化の制御によって返される文字列[localeconv](localeconv.md)します。 |
+| **LC_TIME** | **Strftime**と**wcsftime**関数。 |
 
 この関数は、検証、*カテゴリ*と*ロケール*パラメーター。 カテゴリ パラメーターが、前の表で指定された値のいずれかでない場合、または場合*ロケール*は**NULL**、関数を返します**NULL**します。
 

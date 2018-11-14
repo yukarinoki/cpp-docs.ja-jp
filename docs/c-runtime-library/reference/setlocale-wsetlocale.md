@@ -30,12 +30,12 @@ helpviewer_keywords:
 - defining locales
 - _wsetlocale function
 ms.assetid: 3ffb684e-5990-4202-9553-b5339af9520d
-ms.openlocfilehash: 0f2c0478ba5898ab369a04362734891f6d45cf42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c9f44e9619b9c34c9424e0be78186d14f2d6a21
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548539"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327136"
 ---
 # <a name="setlocale-wsetlocale"></a>setlocale、_wsetlocale
 
@@ -96,12 +96,12 @@ en-US
 
 |*カテゴリ*フラグ|影響が及ぶ対象|
 |-|-|
-**LC_ALL**|次に示すように、すべてのカテゴリです。
-**LC_COLLATE**|**Strcoll 系**、 **_stricoll**、 **wcscoll**、 **_wcsicoll**、 **strxfrm**、 **_strncoll**、 **_strnicoll**、 **_wcsncoll**、 **_wcsnicoll**、および**wcsxfrm**関数。
-**LC_CTYPE**|文字処理関数 (を除く**isdigit**、 **isxdigit**、 **mbstowcs**、および**mbtowc**、影響を受けない)。
-**LC_MONETARY**|によって返される通貨の書式設定情報、 **localeconv**関数。
-**LC_NUMERIC**|小数点文字の書式化出力ルーチン (など**printf**)、データ変換ルーチン、および非通貨の書式情報によって返される**localeconv**します。 小数点文字だけでなく**LC_NUMERIC**セット、数千の区切り記号と、グループ化の制御によって返される文字列[localeconv](localeconv.md)します。
-**LC_TIME**|**Strftime**と**wcsftime**関数。
+| **LC_ALL** | 次に示すように、すべてのカテゴリです。 |
+| **LC_COLLATE** | **Strcoll 系**、 **_stricoll**、 **wcscoll**、 **_wcsicoll**、 **strxfrm**、 **_strncoll**、 **_strnicoll**、 **_wcsncoll**、 **_wcsnicoll**、および**wcsxfrm**関数。 |
+| **LC_CTYPE** | 文字処理関数 (を除く**isdigit**、 **isxdigit**、 **mbstowcs**、および**mbtowc**、影響を受けない)。 |
+| **LC_MONETARY** | によって返される通貨の書式設定情報、 **localeconv**関数。 |
+| **LC_NUMERIC** | 小数点文字の書式化出力ルーチン (など**printf**)、データ変換ルーチン、および非通貨の書式情報によって返される**localeconv**します。 小数点文字だけでなく**LC_NUMERIC**セット、数千の区切り記号と、グループ化の制御によって返される文字列[localeconv](localeconv.md)します。 |
+| **LC_TIME** | **Strftime**と**wcsftime**関数。 |
 
 この関数は、カテゴリ パラメーターを検証します。 カテゴリ パラメーターが前の表に示されている値のいずれでもない場合は、「[パラメータの検証](../../c-runtime-library/parameter-validation.md)」に説明されているように、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合、関数は設定**errno**に**EINVAL**返します**NULL**します。
 

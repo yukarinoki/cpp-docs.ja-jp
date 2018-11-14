@@ -7,12 +7,12 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: fdea70f8d87604ca0665baa64c8652c14295a670
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506575"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331270"
 ---
 # <a name="recordset-parameterizing-a-recordset-odbc"></a>レコードセット: パラメーターを利用したレコードセット (ODBC)
 
@@ -54,7 +54,7 @@ ms.locfileid: "50506575"
 
    格納されたレコード セットのフィルター文字列`m_strFilter`、ようになります。
 
-    ```
+    ```cpp
     "StudentID = ?"
     ```
 
@@ -62,7 +62,7 @@ ms.locfileid: "50506575"
 
    パラメーターの値を次のように割り当てます。
 
-    ```
+    ```cpp
     strInputID = "100";
     ...
     m_strParam = strInputID;
@@ -70,7 +70,7 @@ ms.locfileid: "50506575"
 
    このように、フィルター文字列を設定しません。
 
-    ```
+    ```cpp
     m_strFilter = "StudentID = 100";   // 100 is incorrectly quoted
                                        // for some drivers
     ```
@@ -79,15 +79,15 @@ ms.locfileid: "50506575"
 
    パラメーター値が異なる新しい学生 id、レコード セットを再実行するたびにです。
 
-    > [!TIP]
-    >  パラメーターを使用することは、単にフィルターよりも効率的です。 データベースのパラメーター化されたレコード セットでは、SQL を処理する必要があります**選択**ステートメントを 1 回のみです。 パラメーターを指定せず、フィルター選択されたレコード セットの**選択**ステートメントを処理する必要があるたび`Requery`フィルター値を新しい値。
+   > [!TIP]
+   > パラメーターを使用することは、単にフィルターよりも効率的です。 データベースのパラメーター化されたレコード セットでは、SQL を処理する必要があります**選択**ステートメントを 1 回のみです。 パラメーターを指定せず、フィルター選択されたレコード セットの**選択**ステートメントを処理する必要があるたび`Requery`フィルター値を新しい値。
 
 フィルターの詳細については、次を参照してください。[レコード セット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)します。
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> レコード セット クラスをパラメーター化
 
 > [!NOTE]
->  このセクションから派生したオブジェクトに適用されます`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチ、パラメーターの実装を使用している場合は、同様のプロセスです。 詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+> このセクションから派生したオブジェクトに適用されます`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチ、パラメーターの実装を使用している場合は、同様のプロセスです。 詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 レコード セット クラスを作成する前に、必要なパラメーターは、データ型は、レコード セットでの使用方法を決定します。
 
@@ -116,7 +116,7 @@ ms.locfileid: "50506575"
 
 1. 変更、 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) .cpp ファイル内のメンバー関数の定義。 クラスに追加する各パラメーターのデータ メンバーに対して RFX 関数の呼び出しを追加します。 RFX 関数の記述方法の詳細については、次を参照してください。[レコード フィールド エクス チェンジ: RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)します。 1 回の呼び出しでパラメーターの rfx 関数の呼び出しの前に。
 
-    ```
+    ```cpp
     pFX->SetFieldType( CFieldExchange::param );
     // RFX calls for parameter data members
     ```
@@ -130,11 +130,10 @@ ms.locfileid: "50506575"
    実行時に、"でしょうか。"プレース ホルダーは、順序で、パラメーターの値によって渡します。 最初のパラメーターのデータ メンバーを設定した後、 [SetFieldType](../../mfc/reference/cfieldexchange-class.md#setfieldtype)呼び出すには、最初が置き換えられます"でしょうか。"で SQL 文字列、2 番目のパラメーターのデータ メンバーは置き換えます 2 番目の"でしょうか。"など。
 
 > [!NOTE]
->  パラメーターの順序が重要です: RFX の順序の呼び出しのパラメーターに対して、`DoFieldExchange`関数は、SQL 文字列内のパラメーター プレース ホルダーの順序と一致する必要があります。
+> パラメーターの順序が重要です: RFX の順序の呼び出しのパラメーターに対して、`DoFieldExchange`関数は、SQL 文字列内のパラメーター プレース ホルダーの順序と一致する必要があります。
 
 > [!TIP]
-
->  使用する可能性が最も高い文字列が指定した文字列が (あれば) のクラスの[か](../../mfc/reference/crecordset-class.md#m_strfilter)データ メンバーが、一部の ODBC ドライバーは、他の SQL 句でパラメーターを許可可能性があります。
+> 使用する可能性が最も高い文字列が指定した文字列が (あれば) のクラスの[か](../../mfc/reference/crecordset-class.md#m_strfilter)データ メンバーが、一部の ODBC ドライバーは、他の SQL 句でパラメーターを許可可能性があります。
 
 ##  <a name="_core_passing_parameter_values_at_run_time"></a> 実行時にパラメーター値の受け渡し
 

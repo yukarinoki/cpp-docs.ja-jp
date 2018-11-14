@@ -49,12 +49,12 @@ helpviewer_keywords:
 - _fstati64 function
 - fstat32i64 function
 ms.assetid: 088f5e7a-9636-4cf7-ab8e-e28d2aa4280a
-ms.openlocfilehash: 2cec64e408b326dccc7b950656d0aa699c084f83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8b0d6480266f86136119a470fb7af5859a5b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677787"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331244"
 ---
 # <a name="fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32"></a>_fstat、_fstat32、_fstat64、_fstati64、_fstat32i64、_fstat64i32
 
@@ -107,14 +107,14 @@ int _fstat64i32(
 
 |フィールド|説明|
 |-|-|
-**st_atime**|ファイルの最後のアクセスの時間。
-**st_ctime**|ファイルの作成の時間。
-**st_dev**|デバイスの場合*fd*。 それ以外の場合に 0 です。
-**st_mode**|ファイル モード情報のビット マスク。 **_S_IFCHR**場合に設定されます*fd*デバイスを参照します。 **_S_IFREG**場合に設定されます*fd*は通常のファイルを参照します。 読み取り/書き込みのビットは、ファイルのアクセス許可モードに応じて設定されます。 **_S_IFCHR** sys \stat.h で他の定数が定義されているとします。
-**st_mtime**|ファイルの最終変更時刻。
-**st_nlink**|非 NTFS ファイル システムでは常に 1 です。
-**st_rdev**|デバイスの場合*fd*。 それ以外の場合に 0 です。
-**st_size**|ファイルのサイズ (バイト単位)。
+| **st_atime** | ファイルの最後のアクセスの時間。 |
+| **st_ctime** | ファイルの作成の時間。 |
+| **st_dev** | デバイスの場合*fd*。 それ以外の場合に 0 です。 |
+| **st_mode** | ファイル モード情報のビット マスク。 **_S_IFCHR**場合に設定されます*fd*デバイスを参照します。 **_S_IFREG**場合に設定されます*fd*は通常のファイルを参照します。 読み取り/書き込みのビットは、ファイルのアクセス許可モードに応じて設定されます。 **_S_IFCHR** sys \stat.h で他の定数が定義されているとします。 |
+| **st_mtime** | ファイルの最終変更時刻。 |
+| **st_nlink** | 非 NTFS ファイル システムでは常に 1 です。 |
+| **st_rdev** | デバイスの場合*fd*。 それ以外の場合に 0 です。 |
+| **st_size** | ファイルのサイズ (バイト単位)。 |
 
 場合*fd*デバイスを参照、 **st_atime**、 **st_ctime**、 **st_mtime**、および**st_size**フィールドは、にとって意味がありません。
 

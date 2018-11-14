@@ -90,12 +90,12 @@ helpviewer_keywords:
 - wfindfirst64i32 function
 - _wfindfirst64 function
 ms.assetid: 9bb46d1a-b946-47de-845a-a0b109a33ead
-ms.openlocfilehash: eaecf466617669e6abf156370854b88d16fc4086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceaa8fea4414bab4bbb035aa4525b415ca7ac0b8
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542081"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331439"
 ---
 # <a name="findfirst-findfirst32-findfirst32i64-findfirst64-findfirst64i32-findfirsti64-wfindfirst-wfindfirst32-wfindfirst32i64-wfindfirst64-wfindfirst64i32-wfindfirsti64"></a>_findfirst、_findfirst32、_findfirst32i64、_findfirst64、_findfirst64i32、_findfirsti64、_wfindfirst、_wfindfirst32、_wfindfirst32i64、_wfindfirst64、_wfindfirst64i32、_wfindfirsti64
 
@@ -166,12 +166,12 @@ intptr_t _wfindfirst64i32(
 
 成功した場合、 **_findfirst**ファイルまたは一致するファイルのグループを識別する一意の検索のハンドルを返します、 *filespec*仕様で、後続の呼び出しで使用できる[_findnext](findnext-functions.md)または[_findclose](findclose.md)します。 それ以外の場合、 **_findfirst** -1 を返し**errno**値は次のいずれかにします。
 
-|errno の値|条件|
+| errno の値 | 条件 |
 |-|-|
-**EINVAL**|無効なパラメーター: *filespec*または*fileinfo*が**NULL**します。 または、オペレーティング システムが予期しないエラーを返しました。
-**ENOENT**|一致しないファイルの指定。
-**ENOMEM**|メモリ不足です。
-**EINVAL**|無効なファイル名の指定または指定されたファイル名が超えて**MAX_PATH**します。
+| **EINVAL** | 無効なパラメーター: *filespec*または*fileinfo*が**NULL**します。 または、オペレーティング システムが予期しないエラーを返しました。 |
+| **ENOENT** | 一致しないファイルの指定。 |
+| **ENOMEM** | メモリ不足です。 |
+| **EINVAL** | 無効なファイル名の指定または指定されたファイル名が超えて**MAX_PATH**します。 |
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 

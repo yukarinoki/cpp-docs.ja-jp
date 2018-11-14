@@ -3,12 +3,12 @@ title: エラーと例外の処理 (Modern C++)
 ms.date: 09/17/2018
 ms.topic: conceptual
 ms.assetid: a6c111d0-24f9-4bbb-997d-3db4569761b7
-ms.openlocfilehash: 8f5e0070f3e52d20293ddd624a0d0de57660e316
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6192ab800667ceb35bf2e18dcbdc0be95ec70f5
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667994"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523289"
 ---
 # <a name="errors-and-exception-handling-modern-c"></a>エラーと例外の処理 (Modern C++)
 
@@ -58,7 +58,6 @@ int main()
     //...
     return 0;
 }
-
 ```
 
 C++ の例外は、C# や Java などの言語と似ています。 **を再試行してください**ブロック、例外がある場合*スロー*なります*キャッチ*の最初の関連付けられている**キャッチ**のと同じ型のブロック、例外。 つまり、実行が移動することから、**スロー**ステートメントを**キャッチ**ステートメント。 使用可能な catch ブロックが見つからない場合、`std::terminate` が呼び出されてプログラムが終了します。 C++ では、どの種類もスローされる可能性があります。ただし、`std::exception` から直接または間接的に派生した型をスローすることをお勧めします。 前の例では、例外の種類で[invalid_argument](../standard-library/invalid-argument-class.md)、標準ライブラリで定義されて、 [ \<stdexcept >](../standard-library/stdexcept.md)ヘッダー ファイル。 C++ を指定しないは必要ありません、**最後に**ブロックに例外がスローされた場合に、すべてのリソースが解放されるかどうかを確認します。 スマート ポインターを使用する Resource Acquisition Is Initialization (RAII) の表現形式には、リソース クリーンアップのための必須機能が用意されています。 詳細については、次を参照してください。[方法: 例外安全性のための設計](../cpp/how-to-design-for-exception-safety.md)します。 C++ のスタック アンワインド機構については、次を参照してください。[例外とスタック アンワインド](../cpp/exceptions-and-stack-unwinding-in-cpp.md)します。

@@ -2,12 +2,12 @@
 title: C++ での属性
 ms.date: 06/01/2018
 ms.assetid: 748340d9-8abf-4940-b0a0-91b6156a3ff8
-ms.openlocfilehash: a4d24324165f3cce60d259adf6e3d21638296cf8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 444abf2ddf6d4563dcbeb5b683adc52f903bd97f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471826"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520791"
 ---
 # <a name="attributes-in-c"></a>C++ での属性
 
@@ -45,16 +45,16 @@ void Foo(int);
 
 - `[[nodiscard]]` **Visual Studio 2017 バージョン 15.3 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 関数の戻り値が破棄されますを意図しないことを指定します。 この例で示すように、C4834 の警告を発生させます。
 
-   ```cpp
-   [[nodiscard]]
-   int foo(int i) { return i * i; }
+    ```cpp
+    [[nodiscard]]
+    int foo(int i) { return i * i; }
 
-   int main()
-   {
-       foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
-       return 0;
-   }
-   ```
+    int main()
+    {
+        foo(42); //warning C4834: discarding return value of function with 'nodiscard' attribute
+        return 0;
+    }
+    ```
 
 - `[[maybe_unused]]` **Visual Studio 2017 バージョン 15.3 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)) 変数、関数、クラス、typedef、非静的データ メンバー、列挙型、またはテンプレートの特殊化が意図的に使用しないことを指定します。 エンティティがマークされている場合、コンパイラは警告されません`[[maybe_unused]]`は使用されません。 属性を持つ、またはその逆の属性がない宣言されているエンティティ後で再宣言することができます。 エンティティは、マークされている最初の宣言を分析すると、および現在の翻訳単位の翻訳の残りの部分がマークされていると見なされます。
 
@@ -75,12 +75,12 @@ void Foo(int);
     }
     ```
 
-   この例では、これらの警告が発生します。
+  この例では、これらの警告が発生します。
 
-   - 26494 (型のルール 5: 常にオブジェクトを初期化します)。
+  - 26494 (型のルール 5: 常にオブジェクトを初期化します)。
 
-   - 26485 (境界ルール 3: 配列ポインターへの減退からなし)。
+  - 26485 (境界ルール 3: 配列ポインターへの減退からなし)。
 
-   - 26481 (ルール 1 の範囲: ポインター演算を使用しないでください。 スパン代わりに使用します。)
+  - 26481 (ルール 1 の範囲: ポインター演算を使用しないでください。 スパン代わりに使用します。)
 
-   最初の 2 つの警告は、インストールし、アクティブ化 CppCoreCheck コード分析ツールを使用してこのコードをコンパイルするときに発生します。 ただし、属性により、3 番目の警告イベントは発生しません。 全体の bounds プロファイルを抑制するには、特定のルールの数を含めずに [gsl::suppress(bounds)] を作成します。 安全なコードを記述するため、C++ Core Guidelines のものです。 非表示属性を簡単に必要ない場合、警告をオフにします。
+  最初の 2 つの警告は、インストールし、アクティブ化 CppCoreCheck コード分析ツールを使用してこのコードをコンパイルするときに発生します。 ただし、属性により、3 番目の警告イベントは発生しません。 全体の bounds プロファイルを抑制するには、特定のルールの数を含めずに [gsl::suppress(bounds)] を作成します。 安全なコードを記述するため、C++ Core Guidelines のものです。 非表示属性を簡単に必要ない場合、警告をオフにします。

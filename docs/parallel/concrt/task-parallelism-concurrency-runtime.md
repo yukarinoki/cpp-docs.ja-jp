@@ -8,12 +8,12 @@ helpviewer_keywords:
 - task parallelism
 - tasks [Concurrency Runtime]
 ms.assetid: 42f05ac3-2098-494a-ba84-737fcdcad077
-ms.openlocfilehash: 43af08f3be75bff7621cd2f57b9d50b658420f26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c9f18dfd1498538ce3700fd73a27ce6f6088ee42
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630426"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331218"
 ---
 # <a name="task-parallelism-concurrency-runtime"></a>タスクの並列化 (コンカレンシー ランタイム)
 
@@ -22,8 +22,7 @@ ms.locfileid: "50630426"
 非同期コードを記述して、非同期操作が完了したときに操作を実行する場合に、タスクを使用します。 たとえば、ファイルから非同期的に読み取り、別のタスクを使用してタスクを使用する可能性があります:、*継続タスク*、このドキュメントの後半で説明する — 使用可能になった後にデータを処理します。 逆に、タスク グループを使用して、並列処理を分解することができます。 たとえば、残存作業を 2 つのパーティションに分割する再帰的なアルゴリズムがあるとします。 タスク グループを使用すると、これらのパーティションを同時に実行して、分割処理の完了を待つことができます。
 
 > [!TIP]
-
->  同じルーチンを並列でのコレクションのすべての要素に適用する場合など、並列アルゴリズムの使用[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)、タスクまたはタスク グループ代わりにします。 並列アルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+> 同じルーチンを並列でのコレクションのすべての要素に適用する場合など、並列アルゴリズムの使用[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)、タスクまたはタスク グループ代わりにします。 並列アルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
 
 ## <a name="key-points"></a>主要なポイント
 
@@ -205,7 +204,6 @@ C++ と XAML を使用し、一連のファイルをディスクに書き込ん�
 1. MainPage.xaml.cpp で、例に示すように `WriteFilesAsync` を実装します。
 
 > [!TIP]
-
 > `when_all` は、その結果、`task` を生成する、非ブロッキング関数です。 異なり[task::wait](reference/task-class.md#wait)ASTA (アプリケーション STA) スレッドでの UWP アプリでこの関数を呼び出しても安全になります。
 
 ###  <a name="when-any"></a> When_any 関数
@@ -229,14 +227,14 @@ C++ と XAML を使用し、一連のファイルをディスクに書き込ん�
 この例では、タスク ベースの継続を作成するために `task<pair<int, size_t>>` を指定することもできます。
 
 > [!NOTE]
->  `when_all` と同様に、`when_any` に渡すタスクはすべて同じ型を返す必要があります。
+> `when_all` と同様に、`when_any` に渡すタスクはすべて同じ型を返す必要があります。
 
 次に示す例のように、`||` 構文を使用して、一連のタスクの最初のタスクの完了後に完了するタスクを生成することもできます。
 
 `auto t = t1 || t2; // same as when_any`
 
 > [!TIP]
->  同様`when_all`、`when_any`は非ブロッキングであり、ASTA スレッドでの UWP アプリで呼び出しても安全です。
+> 同様`when_all`、`when_any`は非ブロッキングであり、ASTA スレッドでの UWP アプリで呼び出しても安全です。
 
 ##  <a name="delayed-tasks"></a> 遅延したタスクの実行
 
@@ -257,8 +255,7 @@ PPL を使用して、 [concurrency::task_group](reference/task-group-class.md)�
 PPL タスク グループをこれら 2 つのカテゴリに分割する:*非構造化タスク グループ*と*タスク グループを構造化*します。 PPL では、`task_group` クラスを使用して非構造化タスク グループを表し、`structured_task_group` クラスを使用して構造化タスク グループを表します。
 
 > [!IMPORTANT]
-
->  また、PPL を定義します、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)使用するアルゴリズムを`structured_task_group`一連のタスクを並列に実行するクラス。 `parallel_invoke` アルゴリズムにはより簡潔な構文が用意されているため、可能であれば `structured_task_group` クラスの代わりに使用することをお勧めします。 トピック[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)説明`parallel_invoke`さらに詳しく説明します。
+> また、PPL を定義します、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)使用するアルゴリズムを`structured_task_group`一連のタスクを並列に実行するクラス。 `parallel_invoke` アルゴリズムにはより簡潔な構文が用意されているため、可能であれば `structured_task_group` クラスの代わりに使用することをお勧めします。 トピック[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)説明`parallel_invoke`さらに詳しく説明します。
 
 `parallel_invoke` は、同時に実行する独立したタスクが複数あり、すべてのタスクが終了するまで待機してから処理を続行する必要がある場合に使用します。 この手法として呼ば*フォークと結合*並列処理します。 `task_group` は、同時に実行する独立したタスクが複数あり、それらのタスクが終了するタイミングがまだ先である場合に使用します。 たとえば、`task_group` オブジェクトにタスクを追加して、それらのタスクが別の関数や別のストレッドで終了するまで待機できます。
 

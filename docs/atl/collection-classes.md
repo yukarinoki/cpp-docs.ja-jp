@@ -5,12 +5,12 @@ ms.topic: reference
 helpviewer_keywords:
 - collection classes
 ms.assetid: eff95de6-78ef-4212-9d7d-1dacbdd4cc58
-ms.openlocfilehash: 21c77f71fb576177a6e61ef38d1ef0459f14ab05
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a67afdf00f0a524a94b50643d6541251feca2c2c
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625174"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520258"
 ---
 # <a name="collection-classes"></a>コレクション クラス
 
@@ -32,9 +32,9 @@ ms.locfileid: "50625174"
 
 - [CComQIPtrElementTraits](../atl/reference/ccomqiptrelementtraits-class.md)このクラスは、静的関数、およびインターフェイス ポインターの typedef の COM のコレクションを作成するときに便利です。
 
-- [CComSafeArray](../atl/reference/ccomsafearray-class.md)このクラスは、のラッパー、 [SAFEARRAY Data Type](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)構造体。
+- [CComSafeArray](../atl/reference/ccomsafearray-class.md)このクラスは、のラッパー、 [SAFEARRAY Data Type](/windows/desktop/api/oaidl/ns-oaidl-tagsafearray)構造体。
 
-- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md)このクラスは、のラッパーを[SAFEARRAYBOUND](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound)構造体。
+- [CComSafeArrayBound](../atl/reference/ccomsafearraybound-class.md)このクラスは、のラッパーを[SAFEARRAYBOUND](/windows/desktop/api/oaidl/ns-oaidl-tagsafearraybound)構造体。
 
 - [CComUnkArray](../atl/reference/ccomunkarray-class.md)このクラスは格納**IUnknown**ポインターへのパラメーターとして使用するものでは、 [IConnectionPointImpl](../atl/reference/iconnectionpointimpl-class.md)テンプレート クラス。
 

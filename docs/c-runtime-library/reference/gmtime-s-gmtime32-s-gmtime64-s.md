@@ -35,12 +35,12 @@ helpviewer_keywords:
 - _gmtime_s function
 - _gmtime32_s function
 ms.assetid: 261c7df0-2b0c-44ba-ba61-cb83efaec60f
-ms.openlocfilehash: 1d9bfc7858dbc718e0f6c07358c5ebcec546063e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8225fed21ca9dc67440a4af5dcf43b2ad5cfdffb
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650009"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332466"
 ---
 # <a name="gmtimes-gmtime32s-gmtime64s"></a>gmtime_s、_gmtime32_s、_gmtime64_s
 
@@ -114,7 +114,7 @@ errno_t _gmtime64_s(
 
 |ルーチンによって返される値|必須の C ヘッダー|必須の C++ ヘッダー|
 |-------------|---------------------|-|
-|**gmtime_s**|、 **_gmtime32_s**、 **_gmtime64_s**|\<time.h>|\<ctime > または\<time.h >|
+|**gmtime_s**、 **_gmtime32_s**、 **_gmtime64_s**|\<time.h>|\<ctime > または\<time.h >|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 

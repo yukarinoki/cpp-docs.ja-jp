@@ -1,6 +1,6 @@
 ---
 title: CBasePane クラス
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CBasePane
 - AFXBASEPANE/CBasePane
@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: a04e60c3cbaecc018fb1d577770e70c2148efc3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eef6c6e08fec3b0ee89046aae19db9c23849f91f
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469369"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525419"
 ---
 # <a name="cbasepane-class"></a>CBasePane クラス
 
@@ -316,13 +316,13 @@ MFC で使用できる拡張のドッキング機能をサポートするウィ�
 
 - ウィンドウを作成するときに、いくつかの新しいスタイルを適用できます。
 
-    - AFX_CBRS_FLOAT により、ウィンドウの浮動小数点数です。
+  - AFX_CBRS_FLOAT により、ウィンドウの浮動小数点数です。
 
-    - AFX_CBRS_AUTOHIDE では、自動的に隠すモードを有効します。
+  - AFX_CBRS_AUTOHIDE では、自動的に隠すモードを有効します。
 
-    - AFX_CBRS_CLOSE (非表示)、終了するウィンドウを使用できます。
+  - AFX_CBRS_CLOSE (非表示)、終了するウィンドウを使用できます。
 
-   これらは、フラグのビットごとの OR 操作を組み合わせることができます。
+  これらは、フラグのビットごとの OR 操作を組み合わせることができます。
 
 `CBasePane` これらのフラグを反映するように、次の仮想ブール メソッドを実装: [cbasepane::canbeclosed](#canbeclosed)、 [CBasePane::CanAutoHide](#canautohide)、 [CBasePane::CanFloat](#canfloat)します。 動作をカスタマイズする派生クラスでオーバーライドできます。
 
@@ -1628,12 +1628,12 @@ virtual void OnDrawCaption();
 このメソッドは現在使用できません。
 
 ```
-virtual void OnMovePaneDivider(CPaneDivider*);
+virtual void OnMovePaneDivider(CPaneDivider* /* unused */);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*CPaneDivider\**<br/>
+*未使用*<br/>
 [in]使用されません。
 
 ##  <a name="onpanecontextmenu"></a>  CBasePane::OnPaneContextMenu

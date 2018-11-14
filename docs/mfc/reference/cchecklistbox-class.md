@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: 72038e119f7d4483dcd6c6b343d20fd3655856b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b3bf93a876f9092d5615b75ca45fea71341d3557
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533875"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327344"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox クラス
 
@@ -80,13 +80,13 @@ class CCheckListBox : public CListBox
 
 各メッセージ マップ エントリは、次の形式をとります。
 
-**On _** 通知 **(**`id`、 `memberFxn` **)**
+**ON\_**_通知_ **(** _id_、 _memberFxn_ **)**
 
 場所`id`通知を送信するコントロールの子ウィンドウ ID を指定および`memberFxn`通知を処理するために記述した親メンバー関数の名前を指定します。
 
 親の関数のプロトタイプは次のとおりです。
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 関連する 1 つだけのメッセージ マップ エントリがある`CCheckListBox`(メッセージ マップ エントリも参照してください。 ただし[CListBox](../../mfc/reference/clistbox-class.md))。
 

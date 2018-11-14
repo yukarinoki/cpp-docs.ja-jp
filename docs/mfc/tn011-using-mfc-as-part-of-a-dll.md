@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: e709404ed6e0ba79159131de1cbff80905e9f216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1c98056d5a5e2565e57044b1fb551db4f354f34
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517651"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326206"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>テクニカル ノート 11: DLL の構成要素としての MFC
 
@@ -33,7 +33,7 @@ DLL とアプリケーションの両方は、MFC を使用する場合、両方
 
 - MFC と静的にリンクされるレギュラー MFC Dll では、DLL のサイズは、使われ、リンクする MFC および C ランタイム ルーチンのみに依存します。
 
-- MFC と動的にリンクされるレギュラー MFC Dll では、MFC の共有バージョンを使用するとメモリを大幅に節約を重要なことがあります。 ただし、共有 Dll で Mfc を配布する必要があります*\<バージョン >*.dll と Msvvcrt*\<バージョン >*.dll、DLL とします。
+- MFC と動的にリンクされるレギュラー MFC Dll では、MFC の共有バージョンを使用するとメモリを大幅に節約を重要なことがあります。 ただし、共有 Dll で Mfc を配布する必要があります\<*バージョン*> .dll と Msvvcrt\<*バージョン*> .dll、DLL とします。
 
 - DLL のデザインは、クラスを実装する方法の依存しません。 必要に応じて Api にのみ、DLL の設計をエクスポートします。 その結果、実装が変更された場合、レギュラー MFC Dll が現在も有効です。
 

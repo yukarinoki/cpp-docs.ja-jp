@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - VCCORLIB/Platform::Box
 ms.assetid: b3d7ea37-e98a-4fbc-80b0-ad35e50250c6
-ms.openlocfilehash: 387fa03caebed599d51292dd1b6d18ad4afd921c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29cbe852dcd606ea5cf2953c709fc8e47b89e1f1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429071"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327032"
 ---
 # <a name="platformbox-class"></a>Platform::Box クラス
 
@@ -21,24 +21,29 @@ ms.locfileid: "50429071"
 ```cpp
 ref class Box abstract;
 ```
-  ### <a name="remarks"></a>Remarks
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** vccorlib.h
 
 **名前空間:** Platform
+
+### <a name="members"></a>メンバー
+
 |メンバー|説明|
 |------------|-----------------|
-|[Box](#ctor)|指定された型の値をカプセル化する `Box` を作成します。|
-|[演算子ボックス&lt;const T&gt;^](#box-const-t)|`const` 値クラスの `T` または `enum` クラスの `T` から `Box<T>` へのボックス化変換を有効にします。|
-|[演算子ボックス&lt;const volatile T&gt;^](#box-const-volatile-t)|`const volatile` 値クラスの `T` または `enum` 型の `T` から `Box<T>` へのボックス化変換を有効にします。 |
-|[演算子ボックス&lt;T&gt;^](#box-t)|値クラス `T` から `Box<T>` へのボックス化変換を有効にします。|
-|[演算子ボックス&lt;揮発性 T&gt;^](#box-volatile-t)|`volatile` 値クラスの `T` または `enum` 型の `T` から `Box<T>` へのボックス化変換を有効にします。|
-|[Box::operator T](#t)|値クラス `T` または `enum` クラスの `T` から `Box<T>` へのボックス化変換を有効にします。|
+|[Box](#ctor) | 指定された型の値をカプセル化する `Box` を作成します。 |
+|[演算子ボックス&lt;const T&gt;^](#box-const-t) | `const` 値クラスの `T` または `enum` クラスの `T` から `Box<T>` へのボックス化変換を有効にします。 |
+|[演算子ボックス&lt;const volatile T&gt;^](#box-const-volatile-t) | `const volatile` 値クラスの `T` または `enum` 型の `T` から `Box<T>` へのボックス化変換を有効にします。 |
+|[演算子ボックス&lt;T&gt;^](#box-t) | 値クラス `T` から `Box<T>` へのボックス化変換を有効にします。 |
+|[演算子ボックス&lt;揮発性 T&gt;^](#box-volatile-t) | `volatile` 値クラスの `T` または `enum` 型の `T` から `Box<T>` へのボックス化変換を有効にします。 |
+|[Box::operator T](#t) | 値クラス `T` または `enum` クラスの `T` から `Box<T>` へのボックス化変換を有効にします。 |
+|[Value プロパティ](#value) | `Box` オブジェクトにカプセル化された値を返します。 |
+
 ## <a name="ctor"></a> Box::box コンス トラクター
 
-作成、`Box`指定した型の値をカプセル化することができます | |[ 。Value プロパティ](#value)|カプセル化された値を返します、`Box`オブジェクトです |。
+指定された型の値をカプセル化する `Box` を作成します。
+
 ### <a name="syntax"></a>構文
 
 ```cpp

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - XMMWORD directive
 ms.assetid: 18026d32-5cab-403e-ad7e-382fb41aa9b8
-ms.openlocfilehash: a248c9318764cd632fed2afd8481ee2b2102fe31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59d1ba71260ed08b761c332e887cf27517762303
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479783"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326343"
 ---
 # <a name="xmmword"></a>XMMWORD
 
@@ -28,5 +28,5 @@ MMX と SSE (XMM) の手順では、128 ビットのマルチ メディア オ�
 ## <a name="example"></a>例
 
 ```asm
-    movdqa   xmm0, xmmword ptr [ebx]
+    movdqa   xmm0, xmmword ptr [ebx]
 ```
