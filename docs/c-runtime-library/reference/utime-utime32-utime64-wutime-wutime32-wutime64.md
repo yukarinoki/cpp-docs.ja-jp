@@ -58,12 +58,12 @@ helpviewer_keywords:
 - tutime64 function
 - tutime32 function
 ms.assetid: 8d482d40-19b9-4591-bfee-5d7f601d1a9e
-ms.openlocfilehash: f1e9633784ad78a2b46701e6600ad1ddb6b3318e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e52845a828e272ff3b8458b299c3757b8def748
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471094"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524639"
 ---
 # <a name="utime-utime32-utime64-wutime-wutime32-wutime64"></a>_utime、_utime32、_utime64、_wutime、_wutime32、_wutime64
 
@@ -112,10 +112,10 @@ int _wutime64(
 
 |errno の値|条件|
 |-|-|
-**EACCES**|パスにディレクトリまたは読み取り専用ファイルが指定されている
-**EINVAL**|無効な*回*引数
-**EMFILE**|開いているファイルが多すぎる (変更時刻を変更するにはファイルを開く必要があります)
-**ENOENT**|パスまたはファイル名が見つからない
+| **EACCES** | パスにディレクトリまたは読み取り専用ファイルが指定されている |
+| **EINVAL** | 無効な*回*引数 |
+| **EMFILE** | 開いているファイルが多すぎる (変更時刻を変更するにはファイルを開く必要があります) |
+| **ENOENT** | パスまたはファイル名が見つからない |
 
 リターン コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
@@ -123,14 +123,14 @@ int _wutime64(
 
 ## <a name="remarks"></a>Remarks
 
-**_Utime**関数で指定されたファイルの変更時刻を設定する*filename * *。* プロセスは、時刻を変更するために、ファイルに対して書き込みアクセス権が必要です。 アクセス時刻および変更時刻を変更する、Windows オペレーティング システムで、 **_utimbuf**構造体。 場合*回*は、 **NULL**ポインター、変更時刻は、現在の現地時刻に設定されます。 それ以外の場合、*回*型の構造体をポイントする必要があります **_utimbuf**の定義。H.
+**_Utime**関数で指定されたファイルの変更時刻を設定する*filename*します。 プロセスは、時刻を変更するために、ファイルに対して書き込みアクセス権が必要です。 アクセス時刻および変更時刻を変更する、Windows オペレーティング システムで、 **_utimbuf**構造体。 場合*回*は、 **NULL**ポインター、変更時刻は、現在の現地時刻に設定されます。 それ以外の場合、*回*型の構造体をポイントする必要があります **_utimbuf**の定義。H.
 
 **_Utimbuf**構造体で使用されるファイルへのアクセスおよび変更時刻を格納する **_utime**ファイル変更日付を変更します。 構造には、型のどちらも、次のフィールドは**time_t**:
 
-|フィールド||
-|-|-|
-**actime**|ファイルへのアクセス時刻
-**modtime**|ファイルの変更時刻
+| フィールド |   |
+|-------|---|
+| **actime** | ファイルへのアクセス時刻 |
+| **modtime** | ファイルの変更時刻 |
 
 特定のバージョンの **_utimbuf**構造 (**_utimebuf32**と **_ _utimbuf64**) 時の型の 32 ビットおよび 64 ビット バージョンを使用して定義されます。 これらは、この関数の 32 ビットおよび 64 ビットの特定バージョンで使用されます。 **_utimbuf**しない限り、64 ビット時刻型を使用して既定自体 **_USE_32BIT_TIME_T**が定義されています。
 

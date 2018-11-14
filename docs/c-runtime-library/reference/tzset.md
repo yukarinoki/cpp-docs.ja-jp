@@ -23,12 +23,12 @@ helpviewer_keywords:
 - time environment variables
 - environment variables, setting time
 ms.assetid: 3f6ed537-b414-444d-b272-5dd377481930
-ms.openlocfilehash: 33fd1cc0a618fccc4a59e5aff059d3f2cdeec8fe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6312297e6daa9b4790674bd26d21812d5bee34c6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661761"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330256"
 ---
 # <a name="tzset"></a>_tzset
 
@@ -51,11 +51,11 @@ void _tzset( void );
 
 |パラメーター|説明|
 |-|-|
-*tzn*|PST など、3 文字のタイム ゾーンの名前。 現地時刻から UTC への適切なオフセットを指定する必要があります。
-*hh*|UTC と現地時刻の時差。 正の値のための符号 (+) オプション。
-*mm*|分。 分離*hh*コロン (**:**)。
-*ss*|秒。 分離*mm*コロン (**:**)。
-*dzn*|PDT など、3 文字の夏時間のタイム ゾーン。 夏時間が有効で、局所性にされてない場合は、設定**TZ**の値がない*dzn*します。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間 (DST) を計算します。
+| *tzn* | PST など、3 文字のタイム ゾーンの名前。 現地時刻から UTC への適切なオフセットを指定する必要があります。 |
+| *hh* | UTC と現地時刻の時差。 正の値のための符号 (+) オプション。 |
+| *mm* | 分。 分離*hh*コロン (**:**)。 |
+| *ss* | 秒。 分離*mm*コロン (**:**)。 |
+| *dzn* | PDT など、3 文字の夏時間のタイム ゾーン。 夏時間が有効で、局所性にされてない場合は、設定**TZ**の値がない*dzn*します。 C ランタイム ライブラリでは、アメリカ合衆国の規則を前提に夏時間 (DST) を計算します。 |
 
 > [!NOTE]
 > 計算時には時差の符号に注意してください。 時差は現地時刻から UTC に変換する場合のオフセットである (逆ではない) であるため、符号は直感的に考えるものとは逆である場合があります。 UTC より早いタイム ゾーンの場合、時差は負になります。UTC より遅い場合、時差は正になります。

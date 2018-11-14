@@ -42,12 +42,12 @@ helpviewer_keywords:
 - C2895
 - C2899
 ms.assetid: e5de1e92-746a-4315-a331-c5d9efb76dbb
-ms.openlocfilehash: 1c1b001e4d55c913cd2b9a50ee2e4bb4d2915523
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c35cd91f836070ff45faa489e1c16c40909f922
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601111"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332076"
 ---
 # <a name="compiler-errors-c2800-through-c2899"></a>コンパイラ エラー C2800 C2899 から
 
@@ -74,7 +74,7 @@ ms.locfileid: "50601111"
 |[コンパイラ エラー C2812](compiler-error-c2812.md)|#import は/clr でサポートされていません:/clr:pure および/clr:safe|
 |[コンパイラ エラー C2813](compiler-error-c2813.md)|#import は /MP でサポートされていません|
 |[コンパイラ エラー C2814](compiler-error-c2814.md)|'*メンバー*': ネイティブ型をマネージまたは WinRT 型の中で入れ子にできません'*クラス*'|
-|[コンパイラ エラー C2815](compiler-error-c2815.md)|'operator delete': 最初の仮パラメーターがある必要があります 'void *' が、'* 型 *' が使用されました|
+|[コンパイラ エラー C2815](compiler-error-c2815.md)|'operator delete': 最初の仮パラメーターがある必要があります 'void \*' が、'*型*' が使用されました|
 |コンパイラ エラー C2816|互換性のために残されています。|
 |[コンパイラ エラー C2817](compiler-error-c2817.md)|'operator delete' の戻り値の型は 'void' である必要があります。|
 |[コンパイラ エラー C2818](compiler-error-c2818.md)|'operator ->' のアプリケーションがオーバー ロードが再帰的な型 '*クラス*'|
@@ -83,7 +83,7 @@ ms.locfileid: "50601111"
 |[コンパイラ エラー C2821](compiler-error-c2821.md)|最初の仮パラメーター 'operator new' は 'size_t ' 型である必要があります。|
 |コンパイラ エラー C2822|ローカル アンワインドはこのプラットフォームでサポートされていません|
 |[コンパイラ エラー C2823](compiler-error-c2823.md)|typedef のテンプレートまたはジェネリックは無効です。|
-|[コンパイラ エラー C2824](compiler-error-c2824.md)|型の戻り値の 'operator new' である必要があります ' void *'|
+|[コンパイラ エラー C2824](compiler-error-c2824.md)|型の戻り値の 'operator new' である必要があります ' void \*'|
 |[コンパイラ エラー C2825](compiler-error-c2825.md)|'*識別子*': クラスまたは名前空間続く場合があります ':: '|
 |コンパイラ エラー C2826|互換性のために残されています。|
 |[コンパイラ エラー C2827](compiler-error-c2827.md)|'operator*演算子*' 単項形式でグローバルに上書きすることはできません|

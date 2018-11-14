@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: 40294e0d0af3f5181ffe295a2a6c625fa5223f5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463389"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525277"
 ---
 # <a name="mfc-classes"></a>MFC クラス
 
@@ -1012,7 +1012,7 @@ OLE のビジュアル編集サーバー、オートメーション サーバー
 OLE の [リンクの編集] ダイアログ ボックスを使って、ドキュメント内の既存のリンク オブジェクトや埋め込みオブジェクトの更新のみを行います。これは、OLE の [リンクの編集] ダイアログ ボックスの特別な使い方です。
 
 [COleVariant クラス](../../mfc/reference/colevariant-class.md)<br/>
-[VARIANT](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant) データ型をカプセル化します。
+[VARIANT](/windows/desktop/api/oaidl/ns-oaidl-tagvariant) データ型をカプセル化します。
 
 [CPagerCtrl クラス](../../mfc/reference/cpagerctrl-class.md)<br/>
 `CPagerCtrl` クラスは、Windows のページャー コントロールをラップします。ページャー コントロールには、外側のウィンドウに収まらない内側のウィンドウをスクロールによって表示する機能があります。

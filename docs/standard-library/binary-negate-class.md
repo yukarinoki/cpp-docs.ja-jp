@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - binary_negate class
 ms.assetid: 7b86f02c-af7e-4c7f-9df1-08addae4dd65
-ms.openlocfilehash: a2aa5e2521eafbdd5ab7be93ad133f118a8d9356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ac5ebc991174ca5f835d30571b4995bedb5dea2
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536641"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329775"
 ---
 # <a name="binarynegate-class"></a>binary_negate クラス
 
@@ -49,7 +49,7 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、二項関数オブジェクト _ *Func* のコピーを格納します。 そのメンバー関数 `operator()` は **!**\_*Func(left, right) を返すように定義されています。*
+テンプレート クラスは、二項関数オブジェクトのコピーを格納する*Func*します。 そのメンバー関数`operator()`返すよう`!Func(left, right)`します。
 
 `binary_negate` のコンストラクターが直接使用されることはほとんどありません。 **binary_negator** アダプター述語を宣言し、使用するとき、通常、ヘルパー関数 [not2](../standard-library/functional-functions.md#not2) が選択されます。
 

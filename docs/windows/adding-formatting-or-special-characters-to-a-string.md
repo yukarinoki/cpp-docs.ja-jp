@@ -7,12 +7,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: c40f394a-8b2c-4896-ab30-6922863ddbb5
-ms.openlocfilehash: 740bf02d40dfcb236eef0dccbf55201dd79aec4c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b60f48983913f4dc146af1b4645710cd1393d072
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493848"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328332"
 ---
 # <a name="adding-formatting-or-special-characters-to-a-string-resource-c"></a>(C++) の文字列リソースへの書式設定や特殊文字を追加します。
 
@@ -29,12 +29,12 @@ ms.locfileid: "50493848"
 
    |これを取得するには|入力します。|
    |-----------------|---------------|
-   |改行|\n|
-   |キャリッジ リターン|\r|
-   |タブ|\t|
-   |円記号 (\\)|\\\|
-   |ASCII 文字|\ddd (8 進表記)|
-   |警告 (ベル)|\a|
+   | 改行 | \\N |
+   | キャリッジ リターン | \\R |
+   | タブ | \\t |
+   | 円記号 (\\) | \\\\ |
+   | ASCII 文字 | \\ddd (8 進表記) |
+   | 警告 (ベル) | \\a |
 
 > [!NOTE]
 > **文字列**エディターが ASCI のエスケープ文字の完全なセットをサポートしていません。 上記のリストにのみ使用できます。

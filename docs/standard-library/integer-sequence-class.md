@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::make_integer_sequence
 - std::index_sequence_for
 ms.assetid: 2cfdddee-819d-478e-bb78-c8a9c2696803
-ms.openlocfilehash: f9ce63aeba4db7c49aee36bc9b847e6832d26f8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c996fdc2756ee489dc3b0abf9321a1d9ce47aded
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638716"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332401"
 ---
 # <a name="integersequence-class"></a>integer_sequence クラス
 
@@ -45,7 +45,7 @@ struct integer_sequence
 |||
 |-|-|
 |`static size_t size() noexcept`|シーケンス内の要素の数。|
-|typedef T value_type|シーケンス内の各要素の型。 整数型である必要があります。|
+|`typedef T value_type`|シーケンス内の各要素の型。 整数型である必要があります。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -57,10 +57,9 @@ struct integer_sequence
 
 `a2t` 関数の `index_sequence` は、`size_t` 整数型に基づく `integer_sequence` のエイリアスです。 `make_index_sequence` は、0 から始まり、呼び出し元によって渡される配列と同じ数の要素を持つ `index_sequence` をコンパイル時に作成するエイリアスです。 `a2t` は値によって `index_sequence` を `a2t_` に渡します。ここで、式 `a[I]...` により `I` がアンパックされ、要素が `make_tuple` に渡されます。ここで、要素が個々の引数として使用されます。 たとえば、シーケンスに 3 つの要素が含まれる場合、`make_tuple` は make_tuple(a[0], a[1], a[2]) として呼び出されます。 もちろん、配列の要素は任意の型を持つことができます。
 
-apply 関数は、[std::tuple](../standard-library/tuple-class.md) を受け取り、`tuple_size` ヘルパー クラスを使用して integer_sequence を生成します。 [tuple_size](../standard-library/tuple-size-class-tuple.md) は参照型に対応しないため、[std::decay_t](../standard-library/decay-class.md) が必要であることに注意してください。 `apply_` 関数がタプルのメンバーをアンパックし、別個の引数として関数呼び出しに転送します。 この例の関数は、値を印刷する単純なラムダ式です。
+Apply 関数は、 [std::tuple](../standard-library/tuple-class.md)、し、生成、`integer_sequence`を使用して、`tuple_size`ヘルパー クラス。 なお[std::decay_t](../standard-library/decay-class.md)が必要なため、 [tuple_size](../standard-library/tuple-size-class-tuple.md)参照型では機能しません。 `apply_` 関数がタプルのメンバーをアンパックし、別個の引数として関数呼び出しに転送します。 この例の関数は、値を印刷する単純なラムダ式です。
 
-```
-
+```cpp
 #include <stddef.h>
 #include <iostream>
 #include <tuple>
@@ -114,7 +113,6 @@ int main()
     char c;
     cin >> c;
 }
-
 ```
 
 `index_sequence` をパラメーター パック用に設定するために `index_sequence_for`\<T...> を使用していますが、これは `make_index_sequence`\<sizeof...(T)> のエイリアスです。

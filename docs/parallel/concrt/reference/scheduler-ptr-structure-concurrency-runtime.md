@@ -8,12 +8,12 @@ f1_keywords:
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::get
 - PPLINTERFACE/concurrency::scheduler_ptr::scheduler_ptr::operator bool
 ms.assetid: e88c84af-c306-476d-aef1-f42a0fa0a80f
-ms.openlocfilehash: 7fd81a1ccf6702c74a013c5772d59f01121b61a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0da45fa18d12b3f1c93df6b8c8736ed1bfb58ade
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479223"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525005"
 ---
 # <a name="schedulerptr-structure"></a>scheduler_ptr 構造体
 
@@ -58,7 +58,7 @@ struct scheduler_ptr;
 
 ##  <a name="get"></a>  scheduler_ptr::get メソッド
 
-スケジューラへの生のポインターを返します。
+スケジューラには、生のポインターを返します。
 
 ```
 scheduler_interface* get() const;
@@ -70,37 +70,37 @@ scheduler_interface* get() const;
 
 スケジューラ ポインターが null 以外であるかどうかをテストします。
 
-```operator bool() const;
+```
+operator bool() const;
 ```
 
 ##  <a name="operator_ptr"></a>  scheduler_ptr::operator-&gt;
 
-Behave like a pointer
+ポインターのように動作します。
 
 ```
-scheduler_interface * 演算子は const; () を -> します。
+scheduler_interface* operator->() const;
 ```
 
-### Return Value
+### <a name="return-value"></a>戻り値
 
-##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr Constructor
+##  <a name="ctor"></a>  scheduler_ptr::scheduler_ptr コンス トラクター
 
-Creates a scheduler pointer from shared_ptr to scheduler
+Shared_ptr からスケジューラにスケジューラ ポインターを作成します。
 
 ```
 explicit scheduler_ptr(std::shared_ptr<scheduler_interface> scheduler);
-
-明示的な scheduler_ptr (_In_opt_ scheduler_interface * pScheduler)。
+explicit scheduler_ptr(_In_opt_ scheduler_interface* pScheduler);
 ```
 
-### Parameters
+### <a name="parameters"></a>パラメーター
 
 *scheduler*<br/>
-The scheduler to convert.
+変換するスケジューラー。
 
 *pScheduler*<br/>
-The scheduler pointer to convert.
+変換するスケジューラ ポインター。
 
-## See Also
+## <a name="see-also"></a>関連項目
 
-[concurrency Namespace](concurrency-namespace.md)
+[コンカレンシー名前空間](concurrency-namespace.md)

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - _wspawnv function
 - spawnv function
 ms.assetid: 72360ef4-dfa9-44c1-88c1-b3ecb660aa7d
-ms.openlocfilehash: 4f6e24135a040e0b081016041192d2ae196d1037
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5939b3665bef4d07a4eaca262c38d4a20b83aed5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576750"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326850"
 ---
 # <a name="spawnv-wspawnv"></a>_spawnv、_wspawnv
 
@@ -76,11 +76,11 @@ intptr_t _wspawnv(
 
 |||
 |-|-|
-**E2BIG**|引数リストが 1024 バイトを超えています。
-**EINVAL**|*モード*引数が無効です。
-**ENOENT**|ファイルまたはパスが見つかりません。
-**ENOEXEC**|指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。
-**ENOMEM**|新しいプロセスを実行するのに十分なメモリがありません。
+| **E2BIG** | 引数リストが 1024 バイトを超えています。 |
+| **EINVAL** | *モード*引数が無効です。 |
+| **ENOENT** | ファイルまたはパスが見つかりません。 |
+| **ENOEXEC** | 指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。 |
+| **ENOMEM** | 新しいプロセスを実行するのに十分なメモリがありません。 |
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 

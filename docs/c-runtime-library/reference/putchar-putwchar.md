@@ -28,12 +28,12 @@ helpviewer_keywords:
 - standard output, writing to
 - putwchar function
 ms.assetid: 93657c7f-cca1-4032-8e3a-cd6ab6193748
-ms.openlocfilehash: 69ae5d7a24d7cf440d1dfb5ad716ee106f91576c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: becee3d79f58ac018d1161c1af36e9a4646640bf
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483354"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327058"
 ---
 # <a name="putchar-putwchar"></a>putchar、putwchar
 
@@ -57,7 +57,7 @@ wint_t putwchar(
 
 ## <a name="return-value"></a>戻り値
 
-書き込まれた文字を返します。 エラーまたはファイルの終わりの状態を示す**putc**と**putchar**返す * * EOF`; **putwc`と**putwchar**返す**WEOF**します。 4 つすべてのルーチンで、[ferror](ferror.md) または [feof](feof.md) を使用して、エラーまたはファイルの終端を確認します。 Null ポインターを渡された場合*ストリーム*、」の説明に従って、これらの関数は、無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 返されるかどうかは、引き続き実行が許可された、 **EOF**または**WEOF**設定と**errno**に**EINVAL**します。
+書き込まれた文字を返します。 エラーまたはファイルの終わりの状態を示す**putc**と**putchar**返す**EOF**;**putwc**と**putwchar**返す**WEOF**します。 4 つすべてのルーチンで、[ferror](ferror.md) または [feof](feof.md) を使用して、エラーまたはファイルの終端を確認します。 Null ポインターを渡された場合*ストリーム*、」の説明に従って、これらの関数は、無効なパラメーター例外を生成[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 返されるかどうかは、引き続き実行が許可された、 **EOF**または**WEOF**設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 

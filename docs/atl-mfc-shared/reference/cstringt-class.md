@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 28b2f929e9f8695904bcd3f02dd2d315ab3ca349
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483409"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525497"
 ---
 # <a name="cstringt-class"></a>CStringT クラス
 
@@ -94,13 +94,10 @@ ms.locfileid: "50483409"
 ## <a name="syntax"></a>構文
 
 ```
-
 template<typename BaseType, class StringTraits>
 class CStringT :
-public CSimpleStringT<BaseType,
-                      _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>
-                      ::c_bIsMFCDLLTraits>
-
+    public CSimpleStringT<BaseType,
+        _CSTRING_IMPL_::_MFCDLLTraitsCheck<BaseType, StringTraits>::c_bIsMFCDLLTraits>
 ```
 
 #### <a name="parameters"></a>パラメーター
@@ -117,19 +114,19 @@ String クラスの文字型。 次のいずれかの値を指定します。
 *StringTraits*<br/>
 文字列クラスには、C ランタイム (CRT) ライブラリのサポートと文字列リソースが配置される必要があるかどうかを決定します。 次のいずれかの値を指定します。
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR、ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR、ChTraitsCRT < wchar_t** &#124; **char** &#124; **TCHAR >>**
 
    クラスは、CRT サポートおよびリソース文字列によって指定されたモジュールでの検索が必要です。 `m_hInstResource` (アプリケーションのモジュールのクラスのメンバー)。
 
-- **StrTraitATL < wchar_t** &#124; `char` &#124; **TCHAR、ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitATL < wchar_t** &#124; **char** &#124; **TCHAR、ChTraitsOS < wchar_t** &#124; **char** &#124; **TCHAR >>**
 
    クラスに、CRT サポートおよびリソース文字列によって指定されたモジュールでの検索は必要ありません`m_hInstResource`(アプリケーションのモジュールのクラスのメンバー)。
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR、ChTraitsCRT < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR、ChTraitsCRT < wchar_t** &#124; **char** &#124; **TCHAR >>**
 
    クラスには、CRT のサポートと MFC の標準の検索アルゴリズムを使用して、リソース文字列を検索が必要です。
 
-- **StrTraitMFC < wchar_t** &#124; `char` &#124; **TCHAR、ChTraitsOS < wchar_t** &#124; `char` &#124; **TCHAR >>**
+- **StrTraitMFC < wchar_t** &#124; **char** &#124; **TCHAR、ChTraitsOS < wchar_t** &#124; **char** &#124; **TCHAR >>**
 
    クラスは、CRT のサポートと MFC の標準の検索アルゴリズムを使用して、リソース文字列を検索には必要ありません。
 
@@ -295,9 +292,9 @@ BSTR AllocSysString() const;
 
 MFC プログラムで、 [CMemoryException クラス](../../mfc/reference/cmemoryexception-class.md)が不十分なメモリが存在する場合にスローされます。 ATL のプログラムで、 [CAtlException](../../atl/reference/catlexception-class.md)がスローされます。 この関数は通常、Automation で文字列を返すに使用します。
 
-一般的には、この文字列は、COM 関数に渡される場合は、[in] としてパラメーターで文字列を解放する呼び出し元が必要です。 これを使用して行うことができます[SysFreeString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)」の説明に従って、Windows SDK。 詳細については、次を参照してください。[割り当てと BSTR のメモリの解放](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)します。
+一般的には、この文字列は、COM 関数に渡される場合は、[in] としてパラメーターで文字列を解放する呼び出し元が必要です。 これを使用して行うことができます[SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)」の説明に従って、Windows SDK。 詳細については、次を参照してください。[割り当てと BSTR のメモリの解放](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)します。
 
-Windows での OLE 割り当て関数の詳細については、次を参照してください。 [SysAllocString](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK に含まれています。
+Windows での OLE 割り当て関数の詳細については、次を参照してください。 [SysAllocString](/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK に含まれています。
 
 ### <a name="example"></a>例
 

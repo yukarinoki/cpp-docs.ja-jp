@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::num_put [C++], do_put
 - std::num_put [C++], put
 ms.assetid: 36c5bffc-8283-4201-8ed4-78c4d81f8a17
-ms.openlocfilehash: c6866358cde7d381ec8a703d50aeb3193bef9d5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ede0ccd85f116f300939c819ae8209435da72b7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441861"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327331"
 ---
 # <a name="numput-class"></a>num_put クラス
 
@@ -258,7 +258,7 @@ virtual iter_type do_put(iter_type next,
 
 ブール値出力フィールドを生成する点を除いて、1 番目と同じ動作*val*します。
 
-ブール値出力フィールドは、次の 2 つの形式のいずれかになります。 場合**iosbase**します。 **フラグ** & `ios_base::`[boolalpha](../standard-library/ios-functions.md#boolalpha)は**false**、メンバー関数を返します`do_put`(_*次*、 \_*Iosbase*、 \_ *入力*、(**長い**) `val`)、通常 0 の生成されたシーケンスが作成されます (の**false**) または 1 (の**true**)。 それ以外の場合、生成されたシーケンスがいずれかが**fac**します。 [falsename](../standard-library/numpunct-class.md#falsename) `)` (の**false**)、または**fac**します。 [truename](../standard-library/numpunct-class.md#truename) (の**true**)。
+ブール値出力フィールドは、次の 2 つの形式のいずれかになります。 場合`iosbase.flags & ios_base::` [boolalpha](../standard-library/ios-functions.md#boolalpha)は**false**、メンバー関数を返します`do_put(_Next, _Iosbase, _Fill, (long)val)`、通常 0 の生成されたシーケンスが作成されます (の**false**)または 1 (の**true**)。 それ以外の場合、生成されたシーケンスがいずれかが*fac*.[falsename](../standard-library/numpunct-class.md#falsename) (の**false**)、または*fac*.[truename](../standard-library/numpunct-class.md#truename) (の**true**)。
 
 7 番目のプロテクト仮想メンバー関数:
 

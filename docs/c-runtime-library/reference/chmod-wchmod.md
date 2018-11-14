@@ -29,12 +29,12 @@ helpviewer_keywords:
 - files [C++], changing permissions
 - _wchmod function
 ms.assetid: 92f7cb86-b3b0-4232-a599-b8c04a2f2c19
-ms.openlocfilehash: 7f3133aac1548be5cb497fe32ae4f9f1c0e238d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 278ee1e6dda9e153b55676ce5c0ca389f383efd1
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595131"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518412"
 ---
 # <a name="chmod-wchmod"></a>_chmod、_wchmod
 
@@ -63,13 +63,13 @@ int _wchmod( const wchar_t *filename, int pmode );
 
 **_Chmod**関数で指定されたファイルのアクセス許可の設定を変更する*filename*します。 アクセス許可の設定は、ファイルに対する読み取りと書き込みのアクセスを制御します。 整数式*pmode* sys \stat.h で定義されている、次のマニフェスト定数の一方または両方が含まれています。
 
-|*pmode*|説明|
+| *pmode* | 説明 |
 |-|-|
-**_S_IREAD**|読み取りのみが許可されます。
-**_S_IWRITE**|書き込みが許可されます。 (実際には、読み取りと書き込みが許可されます)。
-**_S_IREAD** &AMP;#124; **_S_IWRITE**|読み取りと書き込みが許可されます。
+| **\_S\_IREAD** | 読み取りのみが許可されます。 |
+| **\_S\_IWRITE** | 書き込みが許可されます。 (実際には、読み取りと書き込みが許可されます)。 |
+| **\_S\_IREAD** &AMP;#124;  **\_S\_IWRITE** | 読み取りと書き込みが許可されます。 |
 
-ビットごとに参加している両方の定数が指定されると、or 演算子 (**|**)。 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 モードではそのため、 **_S_IWRITE**と **_S_IREAD** | **_S_IWRITE**は同等です。
+ビットごとに参加している両方の定数が指定されると、or 演算子 (**\|**)。 書き込みアクセス許可が与えられない場合、ファイルは読み取り専用になります。 ファイルはすべて常に読み取り可能です。書き込みのみのアクセス許可を与えることはできません。 モードではそのため、 **_S_IWRITE**と **_S_IREAD** \| **_S_IWRITE**は同等です。
 
 **_wchmod**のワイド文字バージョンです **_chmod**、 *filename*への引数 **_wchmod**はワイド文字列です。 **_wchmod**と **_chmod**動作は同じです。
 
@@ -157,7 +157,6 @@ int main( void )
 ```Output
 
 A line of text.
-
 ```
 
 ```Output

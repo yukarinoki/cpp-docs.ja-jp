@@ -28,12 +28,12 @@ helpviewer_keywords:
 - _ungettc function
 - ungetc function
 ms.assetid: e0754f3a-b4c6-408f-90c7-e6387b830d84
-ms.openlocfilehash: 95d2160ba4d008ab67f443d4e9dda7180d62b590
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c504540f8fbbe14961fa051bb93ebef350c2c1da
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633585"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332388"
 ---
 # <a name="ungetc-ungetwc"></a>ungetc、ungetwc
 
@@ -62,7 +62,7 @@ wint_t ungetwc(
 
 ## <a name="return-value"></a>戻り値
 
-成功すると、各これらの関数を返します。 文字引数*c*します。 場合*c*プッシュ バックできない文字を読まれなかった場合は、入力ストリームは変更されませんまたはと**ungetc**を返します * * EOF`; **ungetwc`返します**WEOF**します。 場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**EOF**または**WEOF**が返されますと**errno**に設定されている**EINVAL**します。
+成功すると、各これらの関数を返します。 文字引数*c*します。 場合*c*プッシュ バックできない文字を読まれなかった場合は、入力ストリームは変更されませんまたはと**ungetc**返します**EOF**;**ungetwc**返します**WEOF**します。 場合*ストリーム*は**NULL**で説明されているとおり、無効なパラメーター ハンドラーが呼び出されます[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 続けるには、実行が許可された場合**EOF**または**WEOF**が返されますと**errno**に設定されている**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 

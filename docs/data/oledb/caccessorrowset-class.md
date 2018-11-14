@@ -30,12 +30,12 @@ helpviewer_keywords:
 - FreeRecordMemory method
 - GetColumnInfo method
 ms.assetid: bd4f58ed-cebf-4d43-8985-1e5fcbf06953
-ms.openlocfilehash: 78e7bac10bb496e2ff1c270916fc732dbe71d8db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f870cf6c079786c49846bcf7c3010998ccdbe00
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573167"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556487"
 ---
 # <a name="caccessorrowset-class"></a>CAccessorRowset クラス
 
@@ -71,7 +71,7 @@ class CAccessorRowset : public TAccessor, public TRowset<TAccessor>
 |[CAccessorRowset](#caccessorrowset)|コンストラクターです。|
 |[閉じる](#close)|行セットとすべてのアクセサーを閉じます。|
 |[FreeRecordMemory](#freerecordmemory)|解放する必要がある現在のレコード内の列を解放します。|
-|[GetColumnInfo](#getcolumninfo)|実装[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704)します。|
+|[GetColumnInfo](#getcolumninfo)|実装[icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -142,7 +142,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -152,7 +152,7 @@ HRESULT GetColumnInfo(DBORDINAL* pColumns,
 
 ユーザーは、返される列情報と文字列バッファーを解放する必要があります。 使用する場合は、このメソッドの 2 番目のバージョンを使用して[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md)バインディングをオーバーライドする必要があります。
 
-詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704)で、 *OLE DB プログラマーズ リファレンス*します。
+詳細については、次を参照してください。 [icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

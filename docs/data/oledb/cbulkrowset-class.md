@@ -102,12 +102,12 @@ helpviewer_keywords:
 - ReleaseRows method
 - SetRows method
 ms.assetid: c6bde426-c543-4022-a98a-9519d9e2ae59
-ms.openlocfilehash: c62dd4ba7f4f91371378b7c1a6b0295edb3625e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb7f7ee0b4c190889daf661816a9e1c96575a052
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431071"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557090"
 ---
 # <a name="cbulkrowset-class"></a>CBulkRowset クラス
 
@@ -154,7 +154,7 @@ class CBulkRowset : public CRowset<TAccessor>
 
 ## <a name="addrefrows"></a> Cbulkrowset::addrefrows
 
-呼び出し[IRowset::AddRefRows](/previous-versions/windows/desktop/ms719619) bulk 行セットから取得した現在のすべての行の参照カウントをインクリメントします。
+呼び出し[IRowset::AddRefRows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719619(v=vs.85)) bulk 行セットから取得した現在のすべての行の参照カウントをインクリメントします。
 
 ### <a name="syntax"></a>構文
 
@@ -253,7 +253,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 ### <a name="return-value"></a>戻り値
 
-参照してください[irowset::getdata](/previous-versions/windows/desktop/ms716988)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowset::getdata](https://docs.microsoft.com/previous-versions/windows/desktop/ms716988(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="movetoratio"></a> Cbulkrowset::movetoratio
 
@@ -284,11 +284,11 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](/previous-versions/windows/desktop/ms709602)で、 *OLE DB プログラマーズ リファレンス*します。
+場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](https://docs.microsoft.com/previous-versions/windows/desktop/ms709602(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="releaserows"></a> Cbulkrowset::releaserows
 
-呼び出し[::releaserows](/previous-versions/windows/desktop/ms719771) bulk 行セットから取得した現在のすべての行の参照カウントをデクリメントします。
+呼び出し[::releaserows](https://docs.microsoft.com/previous-versions/windows/desktop/ms719771(v=vs.85)) bulk 行セットから取得した現在のすべての行の参照カウントをデクリメントします。
 
 ### <a name="syntax"></a>構文
 

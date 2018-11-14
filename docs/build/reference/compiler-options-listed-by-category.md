@@ -1,15 +1,15 @@
 ---
 title: カテゴリ別のコンパイラ オプション
-ms.date: 08/20/2018
+ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 20dab3e4ec1d0a409d591e2b470e127e20156a8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
+ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532952"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51598822"
 ---
 # <a name="compiler-options-listed-by-category"></a>コンパイラ オプションのカテゴリ別一覧
 
@@ -46,7 +46,7 @@ ms.locfileid: "50532952"
 |[/Gh](gh-enable-penter-hook-function.md)|フック関数 `_penter`を呼び出します。|
 |[/GH](gh-enable-pexit-hook-function.md)|フック関数 `_pexit`を呼び出します。|
 |[/GL](gl-whole-program-optimization.md)|プログラム全体の最適化を有効にします。|
-|[/Gm](gm-enable-minimal-rebuild.md)|簡易リビルドを有効にします。|
+|[/Gm](gm-enable-minimal-rebuild.md)|非推奨。 簡易リビルドを有効にします。|
 |[/GR](gr-enable-run-time-type-information.md)|ランタイム型情報 (RTTI: Run-Time Type Information) を有効にします。|
 |[/Gr](gd-gr-gv-gz-calling-convention.md)|`__fastcall` 呼び出し規約を使用します。 (x86 のみ)|
 |[/GS](gs-buffer-security-check.md)|バッファーのセキュリティをチェックします。|
@@ -202,6 +202,7 @@ ms.locfileid: "50532952"
 |[/clr:noAssembly](clr-common-language-runtime-compilation.md)|非推奨。 代わりに、 [/LN (Create MSIL Module)](ln-create-msil-module.md) を使用してください。|
 |[/Fr](fr-fr-create-dot-sbr-file.md)|非推奨。 ローカル変数を含まないブラウザー情報ファイルを作成します。|
 |[/Ge](ge-enable-stack-probes.md)|非推奨。 スタック プローブをアクティブにします。 既定でオンになります。|
+|[/Gm](gm-enable-minimal-rebuild.md)|非推奨。 簡易リビルドを有効にします。|
 |[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 代わりに [/EH](eh-exception-handling-model.md) を使用してください。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 高速チェックを有効にします 代わりに [/RTC1](rtc-run-time-error-checks.md) を使用してください。|
 |[/H](h-restrict-length-of-external-names.md)|非推奨。 外部名 (パブリック名) の長さを制限します。|

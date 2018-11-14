@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: acb0eaa446bf21a014d8be8c4dbeaedf0f282a1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b43db182d9274281020d7ce92cfa1b3efe724197
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648189"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326018"
 ---
 # <a name="unarynegate-class"></a>unary_negate クラス
 
@@ -44,7 +44,7 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレート クラスは、単項関数オブジェクト _ *Func* のコピーを格納します。 そのメンバー関数 `operator()` は **!**\_*Func(left) します。*
+テンプレート クラスは、単項関数オブジェクトのコピーを格納する *\_Func*します。 そのメンバー関数`operator()`返すよう`!_Func(left)`します。
 
 `unary_negate` のコンストラクターが直接使用されることはほとんどありません。 **unary_negator** アダプター述語を宣言して使用する場合、ヘルパー関数 [not1](../standard-library/functional-functions.md#not1) を利用した方が簡単です。
 

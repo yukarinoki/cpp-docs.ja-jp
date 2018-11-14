@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventSimpleImpl class
 ms.assetid: 971d82b7-a921-47fa-a4d8-909bed377ab0
-ms.openlocfilehash: a0be64cca6725c0ad0852752e6c6c440377c9e7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b78edf44a200f31a6455c0783e90fb65f5d9af38
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447906"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525328"
 ---
 # <a name="idispeventsimpleimpl-class"></a>IDispEventSimpleImpl クラス
 
@@ -198,7 +198,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IDispatch::GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK にします。
+参照してください[IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK にします。
 
 ##  <a name="gettypeinfo"></a>  IDispEventSimpleImpl::GetTypeInfo
 
@@ -213,7 +213,7 @@ STDMETHOD(GetTypeInfo)(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[が](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo)Windows SDK にします。
+参照してください[が](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfo)Windows SDK にします。
 
 ##  <a name="gettypeinfocount"></a>  IDispEventSimpleImpl::GetTypeInfoCount
 
@@ -225,7 +225,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* /* pctinfo */);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK にします。
+参照してください[IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK にします。
 
 ##  <a name="invoke"></a>  IDispEventSimpleImpl::Invoke
 
@@ -245,7 +245,7 @@ STDMETHOD(Invoke)(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)します。
+参照してください[idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)します。
 
 ##  <a name="unadvise"></a>  IDispEventSimpleImpl::Unadvise
 

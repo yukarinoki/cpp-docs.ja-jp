@@ -44,16 +44,16 @@ helpviewer_keywords:
 - GetErrorParameters method
 - GetErrorRecords method
 ms.assetid: 9a5c18a2-ee3e-40f5-ab4c-581288d7f737
-ms.openlocfilehash: fcf56dd32df4e8bf2161bdbc1a67f3b091f043c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4249fb7c6ac05a925ace34ade30aa50ffe3503e7
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653649"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556830"
 ---
 # <a name="cdberrorinfo-class"></a>CDBErrorInfo クラス
 
-OLE DB を使用して OLE DB エラー処理のサポートを提供します。 [IErrorRecords](/previous-versions/windows/desktop/ms718112)インターフェイス。
+OLE DB を使用して OLE DB エラー処理のサポートを提供します。 [IErrorRecords](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -72,10 +72,10 @@ class CDBErrorInfo
 |||
 |-|-|
 |[GetAllErrorInfo](#getallerrorinfo)|エラー レコードに含まれるすべてのエラー情報を返します。|
-|[GetBasicErrorInfo](#getbasicerrorinfo)|呼び出し[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907)指定したエラーに関する基本的な情報を返します。|
-|[GetCustomErrorObject](#getcustomerrorobject)|呼び出し[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417)カスタム エラー オブジェクトのインターフェイス ポインターを返します。|
-|[GetErrorInfo](#geterrorinfo)|呼び出し[IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230)を返す、`IErrorInfo`指定されたレコードへのインターフェイス ポインター。|
-|[GetErrorParameters](#geterrorparameters)|呼び出し[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793)エラー パラメーターを取得します。|
+|[GetBasicErrorInfo](#getbasicerrorinfo)|呼び出し[IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85))指定したエラーに関する基本的な情報を返します。|
+|[GetCustomErrorObject](#getcustomerrorobject)|呼び出し[IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85))カスタム エラー オブジェクトのインターフェイス ポインターを返します。|
+|[GetErrorInfo](#geterrorinfo)|呼び出し[IErrorRecords::GetErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85))を返す、`IErrorInfo`指定されたレコードへのインターフェイス ポインター。|
+|[GetErrorParameters](#geterrorparameters)|呼び出し[IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85))エラー パラメーターを取得します。|
 |[GetErrorRecords](#geterrorrecords)|指定したオブジェクトのエラー レコードを取得します。|
 
 ## <a name="remarks"></a>Remarks
@@ -122,7 +122,7 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合は s_ok を返します。 参照してください[IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230)で、 *OLE DB プログラマーズ リファレンス*の他の戻り値。
+成功した場合は s_ok を返します。 参照してください[IErrorRecords::GetErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*の他の戻り値。
 
 ### <a name="remarks"></a>Remarks
 
@@ -134,18 +134,18 @@ HRESULT GetAllErrorInfo(ULONG ulRecordNum,
 
 ## <a name="getbasicerrorinfo"></a> Cdberrorinfo::getbasicerrorinfo
 
-呼び出し[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907)リターン コードとプロバイダー固有のエラー数など、エラーに関する基本的な情報を返します。
+呼び出し[IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85))リターン コードとプロバイダー固有のエラー数など、エラーに関する基本的な情報を返します。
 
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT GetBasicErrorInfo(ULONG ulRecordNum, 
+HRESULT GetBasicErrorInfo(ULONG ulRecordNum,
    ERRORINFO* pErrorInfo) const throw();
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IErrorRecords::GetBasicErrorInfo](/previous-versions/windows/desktop/ms723907)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IErrorRecords::GetBasicErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms723907(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -153,18 +153,18 @@ HRESULT GetBasicErrorInfo(ULONG ulRecordNum, 
 
 ## <a name="getcustomerrorobject"></a> Cdberrorinfo::getcustomerrorobject
 
-呼び出し[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417)カスタム エラー オブジェクトのインターフェイス ポインターを返します。
+呼び出し[IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85))カスタム エラー オブジェクトのインターフェイス ポインターを返します。
 
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT GetCustomErrorObject(ULONG ulRecordNum, 
+HRESULT GetCustomErrorObject(ULONG ulRecordNum,
    REFIID riid,IUnknown** ppObject) const throw();
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IErrorRecords::GetCustomErrorObject](/previous-versions/windows/desktop/ms725417)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IErrorRecords::GetCustomErrorObject](https://docs.microsoft.com/previous-versions/windows/desktop/ms725417(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -172,18 +172,18 @@ HRESULT GetCustomErrorObject(ULONG ulRecordNum, 
 
 ## <a name="geterrorinfo"></a> Cdberrorinfo::geterrorinfo
 
-呼び出し[IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230)を返す、 [IErrorInfo](/previous-versions/windows/desktop/ms718112)指定されたレコードへのインターフェイス ポインター。
+呼び出し[IErrorRecords::GetErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85))を返す、 [IErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms718112(v=vs.85))指定されたレコードへのインターフェイス ポインター。
 
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT GetErrorInfo(ULONG ulRecordNum, 
+HRESULT GetErrorInfo(ULONG ulRecordNum,
    LCID lcid,IErrorInfo** ppErrorInfo) const throw();
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IErrorRecords::GetErrorInfo](/previous-versions/windows/desktop/ms711230)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IErrorRecords::GetErrorInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms711230(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -191,18 +191,18 @@ HRESULT GetErrorInfo(ULONG ulRecordNum, 
 
 ## <a name="geterrorparameters"></a> Cdberrorinfo::geterrorparameters
 
-呼び出し[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793)エラー パラメーターを取得します。
+呼び出し[IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85))エラー パラメーターを取得します。
 
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT GetErrorParameters(ULONG ulRecordNum, 
+HRESULT GetErrorParameters(ULONG ulRecordNum,
    DISPPARAMS* pdispparams) const throw();
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IErrorRecords::GetErrorParameters](/previous-versions/windows/desktop/ms715793)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IErrorRecords::GetErrorParameters](https://docs.microsoft.com/previous-versions/windows/desktop/ms715793(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -215,8 +215,8 @@ HRESULT GetErrorParameters(ULONG ulRecordNum, 
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT GetErrorRecords(IUnknown* pUnk, 
-   const IID& iid, 
+HRESULT GetErrorRecords(IUnknown* pUnk,
+   const IID& iid,
    ULONG* pcRecords) throw();
 
 HRESULT GetErrorRecords(ULONG* pcRecords) throw();

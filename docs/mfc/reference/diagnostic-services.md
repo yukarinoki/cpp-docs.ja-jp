@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: a6677d5d265b2de9f94160dae6afaedfb3c8b89f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a900a472a3783bde66584b64e361d80c606f0e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644328"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524561"
 ---
 # <a name="diagnostic-services"></a>診断サービス
 
@@ -657,7 +657,7 @@ BFF928E0: WINDOWS\SYSTEM\KERNEL32.DLL! UTUnRegister + 2492 bytes
 - IMAGEHLP ファイル。DLL は、パスにある必要があります。 この DLL がない、関数により、エラー メッセージが表示されます。 参照してください[イメージ ヘルプ ライブラリ](/windows/desktop/Debug/image-help-library)IMAGEHLP によって提供される関数のセットについてはします。
 
 - スタック フレームがモジュールには、デバッグ情報を含める必要があります。 デバッグ情報を含んでいない、スタック トレースでは、関数によって生成されますが、トレースがあまり詳しく説明。
-### <a name="requirements"></a>必要条件
+  ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
 

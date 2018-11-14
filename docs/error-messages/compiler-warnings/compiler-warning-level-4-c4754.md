@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4754
 ms.assetid: e0e4606a-754a-4f42-a274-21a34978d21d
-ms.openlocfilehash: 6ce6886c74a2a82a2a072a3f5d7e3222bb572bea
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82036017188acc3f882e9751096af8ab268fd9db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477377"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525172"
 ---
 # <a name="compiler-warning-level-4-c4754"></a>コンパイラの警告 (レベル 4) C4754
 
@@ -94,7 +94,6 @@ Warning C4754: Conversion rules for arithmetic operations in the comparison at C
 // that all the addition operands are 32-bit, so any overflow
 // is detected by the check.
 if (a + (unsigned long)sizeof(unsigned long) < a)
-
 ```
 
 **注**コンパイラの警告で参照される行番号は、ステートメントの最後の行。 複数の行にまたがる複雑な条件文に関する警告メッセージでは、コードの欠陥がある行は、報告された行の前の数行になる場合があります。 例えば:

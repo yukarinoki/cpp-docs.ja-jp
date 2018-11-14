@@ -8,18 +8,18 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: fbabb949fa0dae03cabfb6db1c98c2ebc1f1af12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b5f263bb6716d4f66673257115d37cd17a59051
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668339"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327188"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio の Visual C++
 
 > [!NOTE]
 > この開発者向けドキュメントは、Visual Studio 2015 と Visual Studio 2017 に適用されます。
-
+>
 > プログラムを実行するために Visual C++ 再頒布可能パッケージを探している場合、[Microsoft ダウンロード センター](http://www.microsoft.com/download/)にアクセスして検索ボックスに「**Visual C++**」と入力してください。
 
 

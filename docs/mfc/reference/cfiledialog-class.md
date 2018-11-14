@@ -204,13 +204,13 @@ class CFileDialog : public CCommonDialog
 |[CFileDialog::SetControlLabel](#setcontrollabel)|ボタンのテキスト ボックスのラベルの編集などのコントロールに関連付けられているテキストを設定します。|
 |[CFileDialog::SetControlState](#setcontrolstate)|現在の可視性を設定し、特定のコントロールの状態を有効にします。|
 |[CFileDialog::SetControlText](#setcontroltext)|エクスプ ローラー スタイルの指定したコントロールのテキストを設定**オープン**または**付けて**コモン ダイアログ ボックス。|
-|[ように cfiledialog::setdefext](#setdefext)|エクスプ ローラー スタイルの既定のファイル名拡張子を設定**オープン**または**付けて**コモン ダイアログ ボックス。|
+|[CFileDialog::SetDefExt](#setdefext)|エクスプローラー スタイルの**ファイルオープン**もしくは、**名前を付けて保存**コモンダイアログボックスでの既定のファイル名拡張子を設定します。|
 |[CFileDialog::SetEditBoxText](#seteditboxtext)|編集ボックス コントロールで現在のテキストを設定します。|
 |[CFileDialog::SetProperties](#setproperties)|保存される項目に対して使用される既定値を定義するプロパティ ストアを提供します。|
 |[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|オプション ボタン グループまたは ダイアログ ボックスで、特定のアイテムの選択状態を設定します。|
-|[CFileDialog::SetTemplate](#settemplate)|ダイアログ ボックスのテンプレートを設定、`CFileDialog`オブジェクト。|
+|[CFileDialog::SetTemplate](#settemplate)|`CFileDialog`オブジェクトで使用するダイアログ ボックスのテンプレートを設定します。|
 |[CFileDialog::StartVisualGroup](#startvisualgroup)|ダイアログ ボックスのビジュアルのグループを宣言します。 すべての"add"メソッドに後続の呼び出しでは、このグループにそれらの要素を追加します。|
-|[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)|格納されているデータを更新、`m_ofn`メンバー変数をファイル ダイアログ ボックスの現在の状態と一致します。|
+|[CFileDialog::UpdateOFNFromShellDialog](#updateofnfromshelldialog)|格納されているデータを更新して、`m_ofn`メンバー変数の内容をファイル ダイアログ ボックスの現在の状態と一致させます。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 

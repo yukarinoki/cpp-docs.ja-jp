@@ -8,12 +8,12 @@ helpviewer_keywords:
 - connection strings [C++], OLE DB consumers
 - ATL OLE DB Consumer Wizard
 ms.assetid: dcb68ed1-2224-422f-9f7b-108a74864204
-ms.openlocfilehash: 835b3e6246741c3859f51e017686531f450db194
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59ad635f62ab7a20a31de7255ec4522136e102ec
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499568"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524132"
 ---
 # <a name="atl-ole-db-consumer-wizard"></a>ATL OLE DB コンシューマー ウィザード
 
@@ -84,13 +84,13 @@ ms.locfileid: "50499568"
 
       **その他:** で**接続のタイムアウト**タイムアウトが発生する前に許容されるアイドル時間の秒数を指定します。 **アクセス許可**、データ接続のアクセス許可を指定します。
 
-       高度な初期化プロパティの詳細については、各 OLE DB プロバイダーに提供されるドキュメントを参照してください。
+      高度な初期化プロパティの詳細については、各 OLE DB プロバイダーに提供されるドキュメントを参照してください。
 
    - **すべて** タブ
 
       このタブには、データ ソースと指定した接続の初期化プロパティの概要が表示されます。 これらの値を編集することができます。
 
-   をクリックして**OK**を完了します。 **データベース オブジェクトの選択** ダイアログ ボックスが表示されます。 このダイアログ ボックスからテーブル、ビュー、またはコンシューマーが使用するストアド プロシージャを選択します。
+      をクリックして**OK**を完了します。 **データベース オブジェクトの選択** ダイアログ ボックスが表示されます。 このダイアログ ボックスからテーブル、ビュー、またはコンシューマーが使用するストアド プロシージャを選択します。
 
 - **クラス**
 

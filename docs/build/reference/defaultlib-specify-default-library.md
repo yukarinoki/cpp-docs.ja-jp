@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /DEFAULTLIB linker option
 - libraries, adding to list of
 ms.assetid: 6af7ff49-c170-4a13-97e2-2b9ae2de20c9
-ms.openlocfilehash: 408507bf0683ea3434ab138fd5ca3a815a1c6a33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59a4b48e412cee6b2a90608747aa6fb3e1b79ca7
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494238"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326387"
 ---
 # <a name="defaultlib-specify-default-library"></a>/DEFAULTLIB (既定のライブラリの指定)
 
@@ -27,9 +27,8 @@ ms.locfileid: "50494238"
 
 ### <a name="arguments"></a>引数
 
-|引数|説明|
-|-|-|
-*ライブラリ*|外部参照を解決するときに検索するライブラリの名前。
+*ライブラリ*<br/>
+外部参照を解決するときに検索するライブラリの名前。
 
 ## <a name="remarks"></a>Remarks
 

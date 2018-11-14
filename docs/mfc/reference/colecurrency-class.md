@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COleCurrency [MFC], m_cur
 - COleCurrency [MFC], m_status
 ms.assetid: 3a36e345-303f-46fb-a57c-858274378a8d
-ms.openlocfilehash: d831353c72c40ab4f35b64046ab5d5236aa9644a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3b0a369071571fb343d1b5030eebbf7c471bc81
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553492"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519192"
 ---
 # <a name="colecurrency-class"></a>COleCurrency クラス
 
@@ -132,11 +132,11 @@ COleCurrency(
 
 - COleCurrency (`curSrc`) を構築、`COleCurrency`既存のオブジェクト`COleCurrency`オブジェクト。 新しいオブジェクトには、ソース オブジェクトと同じ状態があります。
 
-- COleCurrency (`varSrc`) を構築、`COleCurrency`オブジェクト。 変換を試みます、[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)構造または`COleVariant`オブジェクト (VT_CY) の通貨値から。 新しい変換後の値がコピーされるこの変換が成功した場合は、`COleCurrency`オブジェクト。 値ではそうでない場合、`COleCurrency`オブジェクトがゼロ (0) とその状態を無効に設定します。
+- COleCurrency (`varSrc`) を構築、`COleCurrency`オブジェクト。 変換を試みます、[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)構造または`COleVariant`オブジェクト (VT_CY) の通貨値から。 新しい変換後の値がコピーされるこの変換が成功した場合は、`COleCurrency`オブジェクト。 値ではそうでない場合、`COleCurrency`オブジェクトがゼロ (0) とその状態を無効に設定します。
 
 - `COleCurrency(`nUnits`, `nFractionalUnits`) Constructs a `COleCurrency' 指定した数値のコンポーネントからのオブジェクト。 小数部分の絶対値が 10,000 を超える場合は、ユニットに適切な調整が行われます。 部と小数部が符号付き long 値が指定されているに注意してください。
 
-詳細については、次を参照してください。、[通貨](/windows/desktop/api/wtypes/ns-wtypes-tagcy)と[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。
+詳細については、次を参照してください。、[通貨](/windows/desktop/api/wtypes/ns-wtypes-tagcy)と[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。
 
 ### <a name="example"></a>例
 
@@ -314,7 +314,7 @@ const COleCurrency& operator=(const COleCurrency& curSrc);
 
 - **演算子 = (** *varSrc* **)** 場合の変換、`VARIANT`値 (または[COleVariant](../../mfc/reference/colevariant-class.md)オブジェクト) の通貨 ( `VT_CY`) は、成功すると、変換後の値はこれにコピーするは`COleCurrency`オブジェクトとその状態が有効に設定されます。 変換が成功すると、ない場合の値、`COleCurrency`オブジェクトが 0 とその状態を無効に設定します。
 
-詳細については、次を参照してください。、[通貨](/windows/desktop/api/wtypes/ns-wtypes-tagcy)と[バリアント](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。
+詳細については、次を参照してください。、[通貨](/windows/desktop/api/wtypes/ns-wtypes-tagcy)と[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。
 
 ### <a name="example"></a>例
 

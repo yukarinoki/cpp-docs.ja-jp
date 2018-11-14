@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: 317e24708a6f4e5666c59c0db870440895173d7c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3b77823608376fdfc12beacf7cab5dd810c415e
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550320"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556791"
 ---
 # <a name="csession-class"></a>CSession クラス
 
@@ -85,14 +85,14 @@ class CSession
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT Abort(BOID* pboidReason = NULL, 
-   BOOL bRetaining = FALSE, 
+HRESULT Abort(BOID* pboidReason = NULL,
+   BOOL bRetaining = FALSE,
    BOOL bAsync = FALSE) const throw();
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[itransaction::abort](/previous-versions/windows/desktop/ms709833)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[itransaction::abort](https://docs.microsoft.com/previous-versions/windows/desktop/ms709833(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -119,14 +119,14 @@ void Close() throw();
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT Commit(BOOL bRetaining = FALSE, 
-   DWORD grfTC = XACTTC_SYNC, 
+HRESULT Commit(BOOL bRetaining = FALSE,
+   DWORD grfTC = XACTTC_SYNC,
    DWORD grfRM = 0) const throw();
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[itransaction::commit](/previous-versions/windows/desktop/ms713008)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[itransaction::commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -134,7 +134,7 @@ HRESULT Commit(BOOL bRetaining = FALSE, 
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [itransaction::commit](/previous-versions/windows/desktop/ms713008)します。
+詳細については、次を参照してください。 [itransaction::commit](https://docs.microsoft.com/previous-versions/windows/desktop/ms713008(v=vs.85))します。
 
 ## <a name="gettransactioninfo"></a> Csession::gettransactioninfo
 
@@ -148,7 +148,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -156,7 +156,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975)で、 *OLE DB プログラマーズ リファレンス*します。
+詳細については、次を参照してください。 [ITransaction::GetTransactionInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714975(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="open"></a> Csession::open
 
@@ -176,10 +176,10 @@ HRESULT Open(const CDataSource& ds,
 [in]データ ソースは、セッションが開かれているのです。
 
 *pPropSet*<br/>
-[in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367)プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696)で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
+[in]配列へのポインター [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
 
 *ulPropSets*<br/>
-[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367)構造体が渡された、 *pPropSet*引数。
+[in]数[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))構造体が渡された、 *pPropSet*引数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -204,7 +204,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[itransactionlocal::starttransaction](/previous-versions/windows/desktop/ms709786)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[itransactionlocal::starttransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -212,7 +212,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [itransactionlocal::starttransaction](/previous-versions/windows/desktop/ms709786)で、 *OLE DB プログラマーズ リファレンス*します。
+詳細については、次を参照してください。 [itransactionlocal::starttransaction](https://docs.microsoft.com/previous-versions/windows/desktop/ms709786(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

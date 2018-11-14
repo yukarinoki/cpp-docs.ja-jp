@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: 44bb32f87379a05829816234ee8bc412de1f24b6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9d6823a5f82e3d52f82f568d3e3c00b68236fef
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608573"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329216"
 ---
 # <a name="parallel-diagnostic-tools-concurrency-runtime"></a>並列診断ツール (コンカレンシー ランタイム)
 
@@ -35,8 +35,13 @@ Visual Studio デバッガーに、**並列スタック**ウィンドウで、**
 
 |event|説明|[値]|
 |-----------|-----------------|-----------|
-
-|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|同時実行ランタイムの ETW プロバイダーの識別子 |。`f7b697a3-4db5-4d3b-be71-c4d284e6592f`| |[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|コンテキストに関連するイベントをマークします |。`5727a00f-50be-4519-8256-f7699871fecb`| |[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|マークの入口と出口の呼び出しを[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズム |。`31c8da6b-6165-4042-8b92-949e315f4d84`| |[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|マークの入口と出口の呼び出しを[concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズム |。`5cb7d785-9d66-465d-bae1-4611061b5434`| |[concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|マークの入口と出口の呼び出しを[concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズム |。`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`| |[concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|マークに関連するイベント、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)|。`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`| |[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|仮想プロセッサに関連するイベントをマークします |。`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
+|[concurrency::ConcRT_ProviderGuid](reference/concurrency-namespace-constants1.md#concrt_providerguid)|同時実行ランタイムの ETW プロバイダーの識別子。|`f7b697a3-4db5-4d3b-be71-c4d284e6592f`|
+|[concurrency::ContextEventGuid](reference/concurrency-namespace-constants1.md#contexteventguid)|コンテキストに関連するイベントをマークします。|`5727a00f-50be-4519-8256-f7699871fecb`|
+|[concurrency::PPLParallelForEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeventguid)|マークの入口と出口の呼び出しを[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズム。|`31c8da6b-6165-4042-8b92-949e315f4d84`|
+|[concurrency::PPLParallelForeachEventGuid](reference/concurrency-namespace-constants1.md#pplparallelforeacheventguid)|マークの入口と出口の呼び出しを[concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)アルゴリズム。|`5cb7d785-9d66-465d-bae1-4611061b5434`|
+|[concurrency::PPLParallelInvokeEventGuid](reference/concurrency-namespace-constants1.md#pplparallelinvokeeventguid)|マークの入口と出口の呼び出しを[concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズム。|`d1b5b133-ec3d-49f4-98a3-464d1a9e4682`|
+|[concurrency::SchedulerEventGuid](reference/concurrency-namespace-constants1.md#schedulereventguid)|マークに関連するイベント、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。|`e2091f8a-1e0a-4731-84a2-0dd57c8a5261`|
+|[concurrency::VirtualProcessorEventGuid](reference/concurrency-namespace-constants1.md#virtualprocessoreventguid)|仮想プロセッサに関連するイベントをマークします。|`2f27805f-1676-4ecc-96fa-7eb09d44302f`|
 
 同時実行ランタイムを定義すると、現在発生させません、次のイベント。 ランタイムでは、将来使用するため、これらのイベントは予約されます。
 

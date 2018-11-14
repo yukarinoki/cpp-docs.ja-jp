@@ -5,12 +5,12 @@ helpviewer_keywords:
 - servers, implementing
 - OLE server applications [MFC], implementing OLE servers
 ms.assetid: 5bd57e8e-3b23-4f23-9597-496fac2d24b5
-ms.openlocfilehash: bd5967fe07670bd4b3bd076ca23fda62b02b2177
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c89ff1256d557ef417b9e53ce76bbf1b5d6196
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566759"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518962"
 ---
 # <a name="servers-implementing-a-server"></a>サーバー : サーバーの実装
 
@@ -22,11 +22,11 @@ ms.locfileid: "50566759"
 
 - サーバーのリソースを定義するには。
 
-   - メニュー リソースをサーバーが、独自のウィンドウで埋め込みアイテムを編集するときに使用します。
+  - メニュー リソースをサーバーが、独自のウィンドウで埋め込みアイテムを編集するときに使用します。
 
-   - メニューとツールバーのリソースを場所に、サーバーがアクティブなときに使用します。
+  - メニューとツールバーのリソースを場所に、サーバーがアクティブなときに使用します。
 
-   これらのリソースの詳細については、次を参照してください。[メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)します。
+  これらのリソースの詳細については、次を参照してください。[メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)します。
 
 - 派生した item クラスを定義する`COleServerItem`します。 サーバーのアイテムの詳細については、次を参照してください。[サーバー: サーバー アイテム](../mfc/servers-server-items.md)します。
 

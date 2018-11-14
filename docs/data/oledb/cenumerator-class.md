@@ -22,21 +22,21 @@ helpviewer_keywords:
 - GetMoniker method
 - Open method
 ms.assetid: 25805f1b-26e3-402f-af83-1b5fe5ddebf7
-ms.openlocfilehash: c148bdb0a897e19bc3f3aeb7ed40e905073336b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb44af102f08e05edddc2fb692d1e30dd7e31717
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428602"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556678"
 ---
 # <a name="cenumerator-class"></a>CEnumerator クラス
 
-公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969)インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。
+公開する OLE DB 列挙子オブジェクトを使用して、 [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイスをすべてのデータ ソースと列挙子を記述する行セットを返します。
 
 ## <a name="syntax"></a>構文
 
 ```cpp
-class CEnumerator : 
+class CEnumerator :
    public CAccessorRowset< CAccessor <CEnumeratorAccessor >>
 ```
 
@@ -79,7 +79,7 @@ bool Find(TCHAR* szSearchName) throw();
 
 ### <a name="remarks"></a>Remarks
 
-この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](/previous-versions/windows/desktop/ms715969)インターフェイス。
+この名前にマップ、`SOURCES_NAME`のメンバー、 [ISourcesRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms715969(v=vs.85))インターフェイス。
 
 ## <a name="getmoniker"></a> Cenumerator::getmoniker
 
@@ -90,7 +90,7 @@ bool Find(TCHAR* szSearchName) throw();
 ```cpp
 HRESULT GetMoniker(LPMONIKER* ppMoniker) const throw();
 
-HRESULT GetMoniker(LPMONIKER* ppMoniker, 
+HRESULT GetMoniker(LPMONIKER* ppMoniker,
    LPCTSTR lpszDisplayName) const throw();
 ```
 
@@ -108,7 +108,7 @@ HRESULT GetMoniker(LPMONIKER* ppMoniker, 
 
 ## <a name="open"></a> Cenumerator::open
 
-指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](/previous-versions/windows/desktop/ms711200)します。
+指定されている 1 つを呼び出して列挙子の行セットを取得します。 場合、列挙子のモニカーをバインド[isourcesrowset::getsourcesrowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms711200(v=vs.85))します。
 
 ### <a name="syntax"></a>構文
 

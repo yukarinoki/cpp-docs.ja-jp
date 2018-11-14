@@ -34,12 +34,12 @@ helpviewer_keywords:
 - std::allocator [C++], max_size
 - std::allocator [C++], rebind
 ms.assetid: 3fd58076-56cc-43bb-ad58-b4b7c9c6b410
-ms.openlocfilehash: dbae9ef71927fd5b781488258bf801cf19f4fb90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40e99901d4d4105902010a9e5b71ed3edf7d00db
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450675"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518867"
 ---
 # <a name="allocator-class"></a>allocator クラス
 
@@ -63,7 +63,7 @@ class allocator
 
 たとえば、アロケーター オブジェクトは、プライベート ヒープまたは共有メモリ内でストレージを割り当てたり、小さなまたは大きなオブジェクトのサイズ用に最適化したりできます。 さらに、種類の型定義を介して、共有メモリを管理する特殊なアクセサー オブジェクトを経由で要素にアクセスすること、または自動ガベージ コレクションを実行することを指定できます。 そのため、アロケーター オブジェクトを使用してストレージを割り当てるクラスでは、C++ 標準ライブラリのコンテナーと同様に、これらの型を使用してポインターおよび参照オブジェクトを宣言する必要があります。
 
-**(C_++98/03 のみ)** allocator クラスから派生するときは、`_Other` typedef で新しく派生するクラスを参照する [rebind](#rebind) 構造体を指定する必要があります。
+<strong>(C++ 98/03 のみ)</strong> Allocator クラスから派生するときに指定する必要が、[再バインド](#rebind)構造体が`_Other`typedef で新しく派生するクラスを参照します。
 
 したがって、アロケーターは、次の型を定義します。
 

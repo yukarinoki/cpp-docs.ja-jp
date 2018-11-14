@@ -34,12 +34,12 @@ helpviewer_keywords:
 - names [C++], changing directory
 - renaming files
 ms.assetid: 9f0a6103-26a2-4dda-b14b-79a48946266a
-ms.openlocfilehash: 70793dee54460b6372bfbe815115aa9211670c6f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3536bfb6c38c99a8d6d943102fb9303dd4d85b7b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463987"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326141"
 ---
 # <a name="rename-wrename"></a>rename、_wrename
 
@@ -72,9 +72,9 @@ int _wrename(
 
 |errno の値|条件|
 |-|-|
-**EACCES**|*newname* によって指定されたファイルまたはディレクトリが既に存在するか、(無効なパスのため) 作成できない、または *oldname* がディレクトリであり、*newname* によって異なるパスが指定されています。
-**ENOENT**|*oldname* によって指定されたファイルまたはパスが見つかりません。
-**EINVAL**|名前に無効な文字が含まれています。
+| **EACCES** | *newname* によって指定されたファイルまたはディレクトリが既に存在するか、(無効なパスのため) 作成できない、または *oldname* がディレクトリであり、*newname* によって異なるパスが指定されています。 |
+| **ENOENT** | *oldname* によって指定されたファイルまたはパスが見つかりません。 |
+| **EINVAL** | 名前に無効な文字が含まれています。 |
 
 その他の返される可能性のある戻り値については、「[_doserrno、_errno、syserrlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 

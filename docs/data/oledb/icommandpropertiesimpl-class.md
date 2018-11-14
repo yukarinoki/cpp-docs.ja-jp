@@ -16,16 +16,16 @@ helpviewer_keywords:
 - GetProperties method
 - SetProperties method
 ms.assetid: b3cf6aea-527e-4f0d-96e0-669178b021a2
-ms.openlocfilehash: b1411f3df97aeaf66abcccc5be78c734e3a71f19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6736eac040b2186ddb1b1dc1c5c3a5b6b957d20
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603490"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556154"
 ---
 # <a name="icommandpropertiesimpl-class"></a>ICommandPropertiesImpl クラス
 
-実装を提供、 [ICommandProperties](/previous-versions/windows/desktop/ms723044)インターフェイス。
+実装を提供、 [ICommandProperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723044(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -67,15 +67,15 @@ class ATL_NO_VTABLE ICommandPropertiesImpl
 ### <a name="syntax"></a>構文
 
 ```cpp
-STDMETHOD(GetProperties)(const ULONG cPropertyIDSets, 
-   const DBPROPIDSET rgPropertyIDSets[], 
-   ULONG * pcPropertySets, 
+STDMETHOD(GetProperties)(const ULONG cPropertyIDSets,
+   const DBPROPIDSET rgPropertyIDSets[],
+   ULONG * pcPropertySets,
    DBPROPSET ** prgPropertySets);
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandproperties::getproperties](/previous-versions/windows/desktop/ms723119)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommandproperties::getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms723119(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -88,13 +88,13 @@ STDMETHOD(GetProperties)(const ULONG cPropertyIDSets, 
 ### <a name="syntax"></a>構文
 
 ```cpp
-STDMETHOD(SetProperties)(ULONG cPropertySets, 
+STDMETHOD(SetProperties)(ULONG cPropertySets,
    DBPROPSET rgPropertySets[]);
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandproperties::setproperties](/previous-versions/windows/desktop/ms711497)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommandproperties::setproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms711497(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

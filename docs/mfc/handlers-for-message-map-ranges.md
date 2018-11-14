@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: bd10b143753bf908a7a30f8675998e355f331b64
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d94f0391c1aebc95b51a1bc94bea28168c445086
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601085"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519387"
 ---
 # <a name="handlers-for-message-map-ranges"></a>範囲内のメッセージのハンドラー
 
@@ -37,9 +37,9 @@ ms.locfileid: "50601085"
 
 - コマンド Id の範囲を割り当てることができます。
 
-   - コマンドのハンドラー関数。
+  - コマンドのハンドラー関数。
 
-   - コマンド更新ハンドラー関数。
+  - コマンド更新ハンドラー関数。
 
 - コントロール Id の範囲のコントロールの通知メッセージは、メッセージ ハンドラー関数にマップできます。
 
@@ -63,25 +63,25 @@ ms.locfileid: "50601085"
 
 - メッセージ マップの範囲のマクロ:
 
-   - [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)
+  - [ON_COMMAND_RANGE](reference/message-map-macros-mfc.md#on_command_range)
 
-   - [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)
+  - [ON_UPDATE_COMMAND_UI_RANGE](reference/message-map-macros-mfc.md#on_update_command_ui_range)
 
-   - [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)
+  - [ON_CONTROL_RANGE](reference/message-map-macros-mfc.md#on_control_range)
 
 - マクロ パラメーター:
 
-   最初の 2 つのマクロは、次の 3 つのパラメーターをとります。
+  最初の 2 つのマクロは、次の 3 つのパラメーターをとります。
 
-   - 範囲の開始コマンド ID
+  - 範囲の開始コマンド ID
 
-   - 範囲の最後のコマンド ID
+  - 範囲の最後のコマンド ID
 
-   - メッセージ ハンドラー関数の名前
+  - メッセージ ハンドラー関数の名前
 
-   コマンド Id の範囲は連続している必要があります。
+  コマンド Id の範囲は連続している必要があります。
 
-   3 番目のマクロ`ON_CONTROL_RANGE`、追加の最初のパラメーターを受け取る: コントロールの通知メッセージなど、 **EN_CHANGE**します。
+  3 番目のマクロ`ON_CONTROL_RANGE`、追加の最初のパラメーターを受け取る: コントロールの通知メッセージなど、 **EN_CHANGE**します。
 
 ##  <a name="_core_declaring_the_handler_function"></a> ハンドラー関数の宣言
 

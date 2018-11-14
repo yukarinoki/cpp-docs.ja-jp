@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Detach method [C++]
 - VARIANT object
 ms.assetid: c348ac08-62cf-4657-a16f-974a79c12158
-ms.openlocfilehash: 4b19e3c1615912550cdf1eb6a2b0b3f906ee4af9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 719852c4556291747b612d54c44d4bf82caa9188
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522331"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519007"
 ---
 # <a name="varianttdetach"></a>_variant_t::Detach
 
@@ -34,7 +34,7 @@ VARIANT Detach( );
 
 ## <a name="remarks"></a>Remarks
 
-抽出し、カプセル化された返します`VARIANT`、これをクリア`_variant_t`オブジェクトを破棄します。 このメンバー関数を削除、`VARIANT`カプセル化し、セットから、`VARTYPE`この`_variant_t`VT_EMPTY するオブジェクト。 返されたを解放するかどうかは`VARIANT`呼び出すことによって、 [VariantClear](/previous-versions/windows/desktop/api/oleauto/nf-oleauto-variantclear)関数。
+抽出し、カプセル化された返します`VARIANT`、これをクリア`_variant_t`オブジェクトを破棄します。 このメンバー関数を削除、`VARIANT`カプセル化し、セットから、`VARTYPE`この`_variant_t`VT_EMPTY するオブジェクト。 返されたを解放するかどうかは`VARIANT`呼び出すことによって、 [VariantClear](/windows/desktop/api/oleauto/nf-oleauto-variantclear)関数。
 
 **Microsoft 固有の仕様はここまで**
 

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 8d4caca4d5a0b5c12b0af5a948b17b7e2ad05221
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4012f1f0729ff0f46a8504c44f27a37cd55c77e5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474270"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327448"
 ---
 # <a name="message-map-macros-mfc"></a>メッセージ マップ マクロ (MFC)
 
@@ -250,27 +250,8 @@ ON_COMMAND_EX(id, memberFxn);
 
 ### <a name="remarks"></a>Remarks
 
-コマンド メッセージ ハンドラーの拡張の形式は高度な用途のために使用できます。 ON_COMMAND_EX マクロは、このようなメッセージ ハンドラーを使用して、[ON_COMMAND] (#on_command) 機能のスーパー セットを提供します。  拡張のコマンド ハンドラー メンバー関数では、コマンド ID を含む UINT、1 つのパラメーターを受け取るし、ブール値を返します。 戻り値は TRUE をする必要があります。
-
-このマクロは、コマンド メッセージを拡張コマンド ハンドラー メンバー関数にマップします。
-
-### <a name="syntax"></a>構文
-
-```
-ON_COMMAND_EX(id,  memberFxn);
-```
-
-### <a name="parameters"></a>パラメーター
-
-*ID*<br/>
-コマンド ID。
-
-*memberFxn*<br/>
-コマンドがマップされているメッセージ ハンドラー関数の名前。
-
-### <a name="remarks"></a>Remarks
-
 コマンド メッセージ ハンドラーの拡張の形式は高度な用途のために使用できます。 ON_COMMAND_EX マクロは、このようなメッセージ ハンドラーを使用してのスーパー セットを提供します、 [ON_COMMAND](message-map-macros-mfc.md#on_command)機能します。 拡張のコマンド ハンドラー メンバー関数では、コマンド ID を含む UINT、1 つのパラメーターを受け取るし、ブール値を返します。 戻り値が、コマンドが処理されたことを指定する場合は TRUE にする必要があります。それ以外の場合、ルーティングは、その他のコマンド ターゲット オブジェクトを続けます。
+
 詳細については、テクニカル ノートを参照してください。 [TN006: メッセージ マップ] tm006-メッセージ-maps.md)。
 
 ### <a name="requirements"></a>必要条件

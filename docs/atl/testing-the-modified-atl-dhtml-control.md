@@ -1,17 +1,17 @@
 ---
 title: 変更した ATL DHTML コントロールのテスト
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 helpviewer_keywords:
 - HTML controls, testing
 - testing controls
 - DHTML controls, testing
 ms.assetid: 42316118-9433-410f-9d8a-0efcc1eff824
-ms.openlocfilehash: f0fec3e2430fd5956e3cc48cd64532efee30926d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99f55807a7da647af0961f73c600ae0e31166cdc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501674"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330971"
 ---
 # <a name="testing-the-modified-atl-dhtml-control"></a>変更した ATL DHTML コントロールのテスト
 
@@ -31,13 +31,13 @@ UI の一部ではないメソッドをテストできます。
 
 1. 境界線がアクティブになるように、コントロールを強調表示します。
 
-1. **コントロール** メニューのをクリックして**メソッドの呼び出し**します。
+1. **コントロール**] メニューの [選択**メソッドの呼び出し**します。
 
-ラベル リスト内のメソッド**メソッド名**メソッドが、コンテナーを呼び出すことができます:`MethodInvoked`と`GoToURL`します。 その他のすべてのメソッドは、UI によって制御されます。
+   ラベル リスト内のメソッド**メソッド名**メソッドが、コンテナーを呼び出すことができます:`MethodInvoked`と`GoToURL`します。 その他のすべてのメソッドは、UI によって制御されます。
 
-1. 呼び出すし、をクリックする方法を選択`Invoke`メソッドのメッセージ ボックスを表示するか、www.microsoft.com に移動します。
+1. 呼び出すし、選択する方法を選択**Invoke**メソッドのメッセージ ボックスを表示するかに移動し、`www.microsoft.com`します。
 
-1. **メソッドの呼び出し**ダイアログ ボックスで、をクリックして**閉じる**します。
+1. **メソッドの呼び出し** ダイアログ ボックスで、選択**閉じる**します。
 
 さまざまな要素と ATL DHTML コントロールを構成するファイルの詳細については、次を参照してください。 [DHTML コントロール プロジェクトの要素の識別](../atl/identifying-the-elements-of-the-dhtml-control-project.md)します。
 

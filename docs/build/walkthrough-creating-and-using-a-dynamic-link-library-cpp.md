@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: d997cb37c6cadb03bd3d16c4b1d4e56874f00018
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591010"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330542"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>チュートリアル: 作成し、使用して、独自のダイナミック リンク ライブラリ (C++)
 
@@ -396,7 +396,7 @@ int main()
 
 DLL とクライアント アプリケーションを作成するので、実験できます。 クライアント アプリのコードにブレークポイントを設定してくださいし、デバッガーでアプリを実行します。 ライブラリの呼び出しにステップ インするときの動作を参照してください。 ライブラリに他の関数を追加するか、DLL を使用する別のクライアント アプリを作成します。
 
-アプリを展開するときにも使用して Dll を展開する必要があります。 サードパーティ製の Dll をビルドする、または含めることをアプリが使用できるようにする最も簡単な方法とも呼ばれる、アプリと同じディレクトリに挿入するには*アプリのローカル展開*します。 配置の詳細については、「 [Deployment in Visual C++](..\ide\deployment-in-visual-cpp.md)」を参照してください。
+アプリを展開するときにも使用して Dll を展開する必要があります。 サードパーティ製の Dll をビルドする、または含めることをアプリが使用できるようにする最も簡単な方法とも呼ばれる、アプリと同じディレクトリに挿入するには*アプリのローカル展開*します。 配置の詳細については、「 [Deployment in Visual C++](../ide/deployment-in-visual-cpp.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

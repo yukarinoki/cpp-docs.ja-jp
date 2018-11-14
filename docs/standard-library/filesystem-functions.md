@@ -84,16 +84,17 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: ff908ab57b1130f959e5e9818e4185a8b3cfd348
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49a5b59234d92d2587abceff80382e477f66e762
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473580"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333309"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 関数
 
 [\<filesystem>](../standard-library/filesystem.md) ヘッダーに含まれるこれらの free 関数は、パス、ファイル、シンボリック リンク、およびディレクトリとボリュームの変更操作とクエリ操作を実行します。 詳細およびコード例については、「[ファイル システムのナビゲーション (C++)](../standard-library/file-system-navigation.md)」を参照してください。
+
 ||||
 |-|-|-|
 |[absolute](#absolute)|[begin](#begin)|[canonical](#canonical)|

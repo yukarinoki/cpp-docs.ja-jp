@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: f52b5b4313f8c9703a578f7d0d3ed672555f647e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53e9305dd308e77afbd8d53754614c1cfb559f94
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646114"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557077"
 ---
 # <a name="cdatasource-class"></a>CDataSource クラス
 
@@ -117,7 +117,7 @@ void Close() throw();
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT GetInitializationString(BSTR* pInitializationString, 
+HRESULT GetInitializationString(BSTR* pInitializationString,
    bool bIncludePassword = false) throw();
 ```
 
@@ -144,15 +144,15 @@ HRESULT GetInitializationString(BSTR* pInitializationString, 
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT GetProperties(ULONG ulPropIDSets, 
-   constDBPROPIDSET* pPropIDSet, 
-   ULONG* pulPropertySets, 
+HRESULT GetProperties(ULONG ulPropIDSets,
+   constDBPROPIDSET* pPropIDSet,
+   ULONG* pulPropertySets,
    DBPROPSET** ppPropsets) const throw();
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[idbproperties::getproperties](/previous-versions/windows/desktop/ms714344)で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
+参照してください[idbproperties::getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms714344(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -169,8 +169,8 @@ HRESULT GetProperties(ULONG ulPropIDSets, 
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT GetProperty(const GUID& guid, 
-   DBPROPID propid, 
+HRESULT GetProperty(const GUID& guid,
+   DBPROPID propid,
    VARIANT* pVariant) const throw();
 ```
 
@@ -228,13 +228,13 @@ HRESULT Open(const CEnumerator& enumerator,
 HRESULT Open(HWND hWnd = GetActiveWindow(),
    DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_WIZARDSHEET) throw();
 
-HRESULT Open(LPCWSTR szProgID, 
-   DBPROPSET* pPropSet = NULL, 
+HRESULT Open(LPCWSTR szProgID,
+   DBPROPSET* pPropSet = NULL,
    ULONG nPropertySets = 1) throw();
 
-HRESULT Open(LPCSTR szProgID, 
-   LPCTSTR pName,LPCTSTR pUserName = NULL, 
-   LPCTSTR pPassword = NULL, 
+HRESULT Open(LPCSTR szProgID,
+   LPCTSTR pName,LPCTSTR pUserName = NULL,
+   LPCTSTR pPassword = NULL,
    long nInitMode = 0) throw();
 ```
 
@@ -244,10 +244,10 @@ HRESULT Open(LPCSTR szProgID, 
 [in]`CLSID`のデータ プロバイダー。
 
 *pPropSet*<br/>
-[in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367)プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696)で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
+[in]配列へのポインター [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
 
 *nPropertySets*<br/>
-[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367)構造体が渡された、 *pPropSet*引数。
+[in]数[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))構造体が渡された、 *pPropSet*引数。
 
 *pName*<br/>
 [入力] 接続先のデータベース名。
@@ -259,7 +259,7 @@ HRESULT Open(LPCSTR szProgID, 
 [入力] ユーザーのパスワード。
 
 *nInitMode*<br/>
-[入力] データベースの初期化モード。 参照してください[初期化プロパティ](/previous-versions/windows/desktop/ms723127)で、 *OLE DB プログラマーズ リファレンス*有効な初期化モードの一覧については、Windows SDK に含まれています。 場合*nInitMode*がゼロ初期化モードが、接続を開くために使用するプロパティ セットに含まれます。
+[入力] データベースの初期化モード。 参照してください[初期化プロパティ](https://docs.microsoft.com/previous-versions/windows/desktop/ms723127(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*有効な初期化モードの一覧については、Windows SDK に含まれています。 場合*nInitMode*がゼロ初期化モードが、接続を開くために使用するプロパティ セットに含まれます。
 
 *szProgID*<br/>
 [入力] プログラム ID。
@@ -304,7 +304,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 *szFileName*<br/>
 [in] ファイル名、通常はデータ ソース接続 (.UDL) ファイル。
 
-データ リンク ファイル (.udl ファイル) の詳細については、次を参照してください。 [Data Link API の概要](/previous-versions/windows/desktop/ms718102)Windows SDK に含まれています。
+データ リンク ファイル (.udl ファイル) の詳細については、次を参照してください。 [Data Link API の概要](https://docs.microsoft.com/previous-versions/windows/desktop/ms718102(v=vs.85))Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -321,7 +321,7 @@ HRESULT OpenFromFileName(LPCOLESTR szFileName) throw();
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString, 
+HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString,
    bool fPromptForInfo= false) throw();
 ```
 
@@ -350,8 +350,8 @@ HRESULT OpenFromInitializationString(LPCOLESTR szInitializationString, 
 ### <a name="syntax"></a>構文
 
 ```cpp
-HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ), 
-   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE, 
+HRESULT OpenWithPromptFileName(HWND hWnd = GetActiveWindow(   ),
+   DBPROMPTOPTIONS dwPromptOptions = DBPROMPTOPTIONS_NONE,
    LPCOLESTR szInitialDirectory = NULL) throw();
 ```
 
@@ -399,10 +399,10 @@ HRESULT OpenWithServiceComponents (LPCSTR szProgID,
 [入力] データ プロバイダーのプログラム ID。
 
 *pPropset*<br/>
-[in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367)プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696)で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。 データ ソース オブジェクトが初期化されている場合、プロパティはデータ ソース プロパティ グループに属している必要があります。 同じプロパティが複数回指定されている場合*pPropset*プロバイダーに固有では使用されている値。 場合*ulPropSets* 0 の場合は、このパラメーターは無視されます。
+[in]配列へのポインター [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。 データ ソース オブジェクトが初期化されている場合、プロパティはデータ ソース プロパティ グループに属している必要があります。 同じプロパティが複数回指定されている場合*pPropset*プロバイダーに固有では使用されている値。 場合*ulPropSets* 0 の場合は、このパラメーターは無視されます。
 
 *ulPropSets*<br/>
-[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367)構造体が渡された、 *pPropSet*引数。 0 の場合は、プロバイダーは無視されます*pPropset*します。
+[in]数[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))構造体が渡された、 *pPropSet*引数。 0 の場合は、プロバイダーは無視されます*pPropset*します。
 
 ### <a name="return-value"></a>戻り値
 

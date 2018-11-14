@@ -1,12 +1,12 @@
 ---
 title: ARM64 例外処理
 ms.date: 07/11/2018
-ms.openlocfilehash: 82775a61adf8437565b5bb691716451b225e72e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5189c399a4cbff071d2ec846008229ba76306882
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620598"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333590"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外処理
 
@@ -56,7 +56,7 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
 
 フレーム チェーン関数では、最適化に関する考慮事項によって、ローカル変数領域内の任意の位置にある、fp と lr のペアを保存できます。 目標は、フレーム ポインター (r29) またはスタック ポインター (sp) に基づいて 1 つの単一の命令で到達可能なローカル変数の数を最大化します。 ただしの`alloca`関数チェーンを接続する必要があり、r29 はスタックの一番下を指す必要があります。 優れたレジスタのペアのアドレス指定-モードのカバレッジを許可するのには、不揮発性は aave 領域は、ローカル領域のスタックの一番上に配置されますを登録します。 ここでは、最も効率的なプロローグ シーケンスのいくつかを示す例です。 わかりやすくするため、キャッシュの局所性の向上のためには、呼び出し先保存済みレジスタを格納するすべての標準のプロローグでの順序は、「を増大」順序では。 `#framesz` 以下は、(alloca の領域を除く) スタック全体のサイズを表します。 `#localsz` `#outsz`ローカル領域のサイズを表す (など、保存するための領域、 \<r29、lr > ペア) とそれぞれのパラメーターのサイズを送信します。
 
-1. チェーン、#localsz < = 512
+1. チェーン、#localsz \<512 を =
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -95,7 +95,7 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
         sub    sp,#framesz-72           // allocate the remaining local area
     ```
 
-   すべてのローカル変数は、SP のベース \<r29、lr > 前のフレームを指します。 フレーム サイズ < = 512、"sp、sub…"regs 保存領域がスタックの一番下に移動した場合は、すぐ最適化できます。 その欠点は、上、その他のレイアウトと一貫性がありませんし、保存 regs ペア regs とオフセット前と後にインデックス付きのアドレス指定モードの範囲の一部を取得することは。
+   すべてのローカル変数は、SP のベース \<r29、lr > 前のフレームを指します。 フレームのサイズの\<= 512、"sp、sub…"regs 保存領域がスタックの一番下に移動した場合は、すぐ最適化できます。 その欠点は、上、その他のレイアウトと一貫性がありませんし、保存 regs ペア regs とオフセット前と後にインデックス付きのアドレス指定モードの範囲の一部を取得することは。
 
 1. チェーンは、リーフ以外の機能が (Int 保存領域に lr が保存されます)
 
@@ -131,7 +131,7 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
 
    すべてのローカル変数は、SP のベース \<r29 > 前のフレームを指します。
 
-1. チェーン、#framesz < = 512、#outsz = 0
+1. チェーン、#framesz \<512、#outsz を = = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -283,40 +283,40 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 アンワインド コードは、次の表に従ってエンコードされます。 すべてのアンワインド コードは大きなスタックによって割り当てられる 1 つを除くの 1 つまたは 2 バイト。 完全には、21 のアンワインド コードがあります。 各アンワインド コード マップ正確に 1 つの命令プロローグとエピローグで部分的に実行されたプロローグとエピローグのアンワインドを許可するために。
 
-アンワインド コード|Bits と解釈
+|アンワインド コード|Bits と解釈|
 |-|-|
-`alloc_s`|000xxxxx: サイズ < 512 で小さなスタックを割り当てる (2 ^5 * 16)。
-`save_r19r20_x`|    001zzzzz: 保存\<r19、r20 > [sp #Z * 8] にあるペア!、事前にインデックス付きのオフセット >-248 を =
-`save_fplr`|        01zzzzzz: 保存\<r29、lr > ペアで [sp + #Z * 8]、オフセット < 504 を = です。
-`save_fplr_x`|        10zzzzzz: 保存\<r29、lr > ペアで [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 を =
-`alloc_m`|        11000 xxx\|xxxxxxxx: < 16 k のサイズの大きなスタックを割り当てる (2 ^11 * 16)。
-`save_regp`|        110010xx\|xxzzzzzz: ある r(19+#X) ペアを保存する [sp + #Z * 8]、オフセット < 504 を =
-`save_regp_x`|        110011xx\|xxzzzzzz: ペア r(19+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 を =
-`save_reg`|        110100xx\|xxzzzzzz: reg r(19+#X) での保存 [sp + #Z * 8]、オフセット < 504 を =
-`save_reg_x`|        1101010 x\|xxxzzzzz: reg r(19+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット >-256 を =
-`save_lrpair`|         1101011 x\|xxzzzzzz: ペアの保存\<r19 + 2 *#X, lr > で [sp + #Z*8]、オフセット < 504 を =
-`save_fregp`|        1101100 x\|xxzzzzzz: 保存でペア d(8+#X) [sp + #Z * 8]、オフセット < 504 を =
-`save_fregp_x`|        1101101 x\|xxzzzzzz: ペアの d(8+#X) 保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 =
-`save_freg`|        1101110 x\|xxzzzzzz: reg d(8+#X) での保存 [sp + #Z * 8]、オフセット < 504 を =
-`save_freg_x`|        11011110\|xxxzzzzz: reg d(8+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット >-256 を =
-`alloc_l`|         11100000\|xxxxxxxx\|xxxxxxxx\|xxxxxxxx: < 256 M のサイズの大きなスタックを割り当てる (2 ^24 * 16)
-`set_fp`|        11100001: r29 設定: と: mov r29、sp
-`add_fp`|        11100010\|xxxxxxxx: r29 のセットアップ: r29、sp、#x 追加 * 8
-`nop`|            11100011: なしのアンワインド操作が必要です。
-`end`|            11100100: アンワインド コードの最後。 意味エピローグで廃止します。
-`end_c`|        11100101: チェーンの現在のスコープ内でのアンワインド コードの最後。
-`save_next`|        11100110: 次の非揮発性 Int を保存または FP はペアを登録します。
-`arithmetic(add)`|    11100111\| 000zxxxx: cookie reg(z) を lr を追加 (0 = x28、1 = sp); lr, lr, reg(z) の追加
-`arithmetic(sub)`|    11100111\| 001zxxxx: lr から cookie reg(z) を sub (0 = x28、1 = sp); lr, lr, reg(z) sub
-`arithmetic(eor)`|    11100111\| 010zxxxx: cookie reg(z) で eor lr (0 = x28、1 = sp); eor lr、lr、reg(z)
-`arithmetic(rol)`|    11100111\| 0110xxxx: cookie reg (x28) と lr のシミュレートされた rol; xip0 = neg x28; ror lr、xip0
-`arithmetic(ror)`|    11100111\| 100zxxxx: cookie reg(z) で ror lr (0 = x28、1 = sp); ror lr、lr、reg(z)
-||            11100111: xxxz---: 予約済み--
-||              11101xxx: asm ルーチンの生成のみカスタム スタック場合次に予約されています
-||              11101001: MSFT_OP_TRAP_FRAME のカスタム スタック
-||              11101010: MSFT_OP_MACHINE_FRAME のカスタム スタック
-||              11101011: MSFT_OP_CONTEXT のカスタム スタック
-||              1111xxxx: 予約済み
+|`alloc_s`|000xxxxx: サイズの小さいスタックを割り当てる\<512 (2 ^5 * 16)。|
+|`save_r19r20_x`|    001zzzzz: 保存\<r19、r20 > [sp #Z * 8] にあるペア!、事前にインデックス付きのオフセット >-248 を = |
+|`save_fplr`|        01zzzzzz: 保存\<r29、lr > ペアで [sp + #Z * 8]、オフセット\<504 を = です。 |
+|`save_fplr_x`|        10zzzzzz: 保存\<r29、lr > ペアで [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 を = |
+|`alloc_m`|        11000 xxx ' xxxxxxxx: サイズの大きなスタックを割り当てる\<16 k (2 ^11 * 16)。 |
+|`save_regp`|        110010xx'xxzzzzzz: ある r(19+#X) ペアを保存する [sp + #Z * 8]、オフセット\<504 を = |
+|`save_regp_x`|        110011xx'xxzzzzzz: ペア r(19+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 を = |
+|`save_reg`|        110100xx'xxzzzzzz: reg r(19+#X) での保存 [sp + #Z * 8]、オフセット\<504 を = |
+|`save_reg_x`|        1101010 x'xxxzzzzz: reg r(19+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット >-256 を = |
+|`save_lrpair`|         1101011 x'xxzzzzzz: ペアの保存\<r19 + 2 *#X, lr > で [sp + #Z*8]、オフセット\<504 を = |
+|`save_fregp`|        1101100 x'xxzzzzzz: 保存でペア d(8+#X) [sp + #Z * 8]、オフセット\<504 を = |
+|`save_fregp_x`|        1101101 x'xxzzzzzz: ペアの d(8+#X) 保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 = |
+|`save_freg`|        1101110 x'xxzzzzzz: reg d(8+#X) での保存 [sp + #Z * 8]、オフセット\<504 を = |
+|`save_freg_x`|        11011110' xxxzzzzz: reg d(8+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット >-256 を = |
+|`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx: サイズの大きなスタックを割り当てる\<256 M (2 ^24 * 16) |
+|`set_fp`|        11100001: r29 設定: と: mov r29、sp |
+|`add_fp`|        11100010' xxxxxxxx: r29 のセットアップ: r29、sp、#x 追加 * 8 |
+|`nop`|            11100011: なしのアンワインド操作が必要です。 |
+|`end`|            11100100: アンワインド コードの最後。 意味エピローグで廃止します。 |
+|`end_c`|        11100101: チェーンの現在のスコープ内でのアンワインド コードの最後。 |
+|`save_next`|        11100110: 次の非揮発性 Int を保存または FP はペアを登録します。 |
+|`arithmetic(add)`|    11100111' 000zxxxx: cookie reg(z) を lr を追加 (0 = x28、1 = sp)。lr, lr, reg(z) を追加します。 |
+|`arithmetic(sub)`|    11100111' 001zxxxx: lr から cookie reg(z) を sub (0 = x28、1 = sp)。lr, lr, reg(z) を sub します。 |
+|`arithmetic(eor)`|    11100111' 010zxxxx: cookie reg(z) で eor lr (0 = x28、1 = sp)。eor lr、lr、reg(z) |
+|`arithmetic(rol)`|    11100111' 0110xxxx: cookie reg (x28); と lr のシミュレートされた rolxip0 neg x28; を =ror lr、xip0 |
+|`arithmetic(ror)`|    11100111' 100zxxxx: cookie reg(z) で ror lr (0 = x28、1 = sp)。ror lr、lr、reg(z) |
+| |            11100111: xxxz---: 予約済み-- |
+| |              11101xxx: asm ルーチンの生成のみカスタム スタック場合次に予約されています |
+| |              11101001: MSFT_OP_TRAP_FRAME のカスタム スタック |
+| |              11101010: MSFT_OP_MACHINE_FRAME のカスタム スタック |
+| |              11101011: MSFT_OP_CONTEXT のカスタム スタック |
+| |              1111xxxx: 予約済み |
 
 複数のバイトをカバーする大きな値を含む手順については、最上位ビットが最初に格納されます。 上記のアンワインド コードは、アンワインド コードのバイト単位の合計サイズを把握することは単純に、コードの最初のバイトを探して、されるように設計されています。 プロローグ/エピローグに指示する命令を正確に各アンワインド コードがマップされている、プロローグまたはエピローグのサイズを計算する実行する必要があるすべてを決定する参照テーブルまたは同様のデバイスを使用して、最後に、シーケンスの先頭から説明しますが、どのくらいの期間 corオペコードの応答は次のとおりです。
 
@@ -382,7 +382,7 @@ c.|**CR** 11 を = = (& a) (& a) #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp
 5 d|(**CR** 00 = = \| \| **CR**01 = =) (&AMP; A) (&AMP; A)<br/>#locsz < 4088 を =|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** 00 = = \| \| **CR**01 = =) (&AMP; A) (&AMP; A)<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
-\***CR** 01 = = と**RegI**奇数、手順 2. と手順 1. で最後の save_rep が 1 つ save_regp にマージされます。
+\* 場合**CR** 01 = = と**RegI**奇数、手順 2. と手順 1. で最後の save_rep が 1 つ save_regp にマージされます。
 
 \*\* 場合**RegI** == **CR** 0、= = と**RegF** ! = 0、最初の stp、浮動小数点数は、前置デクリメント。
 
