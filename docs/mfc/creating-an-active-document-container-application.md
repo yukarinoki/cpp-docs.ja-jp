@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC COM, active document containment
 - applications [MFC], active document container
 ms.assetid: 14e2d022-a6c5-4249-8712-706b0f4433f7
-ms.openlocfilehash: ecce997c451b39600606550dd1198cddfd764334
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5cdd3de8f4efcc23f89b81cb61302b5950938800
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463337"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520414"
 ---
 # <a name="creating-an-active-document-container-application"></a>Active ドキュメント コンテナー アプリケーションの作成
 
@@ -37,15 +37,15 @@ Active ドキュメント コンテナー アプリケーションを作成す�
 
 1. **[完了]** をクリックします。
 
-9. MFC アプリケーション ウィザードでは、アプリケーションの生成が完了したら、ソリューション エクスプ ローラーを使用して、次のファイルを開きます。
+1. MFC アプリケーション ウィザードでは、アプリケーションの生成が完了したら、ソリューション エクスプ ローラーを使用して、次のファイルを開きます。
 
    - *MyProjview.cpp*
 
-10. *MyProjview.cpp*、次の変更します。
+1. *MyProjview.cpp*、次の変更します。
 
    - `CMyProjView::OnPreparePrinting`関数の内容を次のコードに置き換えます。
 
-         [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
+     [!code-cpp[NVC_MFCDocView#56](../mfc/codesnippet/cpp/creating-an-active-document-container-application_1.cpp)]
 
    `OnPreparePrinting` 印刷のサポートを提供します。 このコードで置き換えます`DoPreparePrinting`、これは、既定の印刷準備します。
 
@@ -59,7 +59,7 @@ Active ドキュメント コンテナー アプリケーションを作成す�
 
    静的メンバー関数は、`COleDocObjectItem::OnPrint`と`COleDocObjectItem::OnPreparePrinting`前のコードに実装されると、この強化された印刷スキームを処理します。
 
-11. 独自の実装を追加し、アプリケーションをビルドします。
+1. 独自の実装を追加し、アプリケーションをビルドします。
 
 ## <a name="see-also"></a>関連項目
 

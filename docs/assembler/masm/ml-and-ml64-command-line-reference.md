@@ -54,12 +54,12 @@ helpviewer_keywords:
 - command line, reference [ML]
 - /Ta MASM compiler option
 ms.assetid: 712623c6-f77e-47ea-a945-089e57c50b40
-ms.openlocfilehash: 64d56ea5eb29162e65782998e91fc1ff70cbf73b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a452bab03e31436ee5dde476117bce8b73c7571f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430226"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331257"
 ---
 # <a name="ml-and-ml64-command-line-reference"></a>ML および ML64 のコマンド ライン リファレンス
 
@@ -69,9 +69,9 @@ Ml64.exe の詳細については、次を参照してください。 [x64 用 M
 
 ## <a name="syntax"></a>構文
 
-> ML [*オプション*] *filename* [*オプション*] *filename*]
-
-> ML64 [*オプション*] *filename* [*オプション*] *filename*].[/link *linkoptions*]
+> ML \[*オプション*] *filename* \[ \[*オプション*] *filename*]
+>
+> ML64 \[*オプション*] *filename* \[ \[*オプション*] *filename*].\[/link *linkoptions*]
 
 ### <a name="parameters"></a>パラメーター
 

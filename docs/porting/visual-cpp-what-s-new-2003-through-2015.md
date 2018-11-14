@@ -2,12 +2,12 @@
 title: Visual C++ 2003 ～ 2015 の新機能
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: 7066b5bd8ea0fcd7cc7cda34ca05588199cbaef5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d79406e07b8839e196f15d9bc3aed96cbc3dca8
+ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499620"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51520183"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ～ 2015 の新機能
 
@@ -260,7 +260,7 @@ Visual Studio 2015 以降では、コンパイラの準拠に関する継続的�
    たとえば、コードで **placement new** と **placement delete** の両方を定義するとします。
 
    ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
    ```
 
@@ -306,15 +306,15 @@ Visual Studio 2015 以降では、コンパイラの準拠に関する継続的�
    の標準への適合が改善されました。 以前のバージョンのコンパイラでは、匿名共用体に対して明示的なコンストラクターとデストラクターが生成されていました。 これらは Visual Studio 2015 で削除されています。
 
    ```cpp
-    struct S {
-      S();
-     };
+   struct S {
+      S();
+   };
 
-     union {
-      struct {
-       S s;
-      };
-     } u; // C2280
+   union {
+      struct {
+         S s;
+      };
+   } u; // C2280
    ```
 
    上のコードを実行すると、Visual Studio 2015 で次のエラーが生成されます。
@@ -328,14 +328,14 @@ Visual Studio 2015 以降では、コンパイラの準拠に関する継続的�
 
    ```cpp
     struct S {
-    // Provide a default constructor by adding an empty function body.
-    S() {}
+       // Provide a default constructor by adding an empty function body.
+       S() {}
     };
 
     union {
-    struct {
-    S s;
-    };
+       struct {
+          S s;
+       };
     } u;
    ```
 
@@ -552,7 +552,7 @@ Visual Studio 2015 以降では、コンパイラの準拠に関する継続的�
     }
    ```
 
-  - または -
+  \- または -
 
    ```cpp
     class base;  // as above
@@ -586,7 +586,7 @@ Visual Studio 2015 以降では、コンパイラの準拠に関する継続的�
     void * __cdecl operator new(size_t cb, const std::nothrow_t&)  // removed 'static inline'
    ```
 
-      Additionally, although the compiler doesn't give a specific diagnostic, inline operator new is considered ill-formed.
+   また、コンパイラは特定の診断を行いませんが、インラインの operator new の形式は不適切であると見なされます。
 
 - **非クラス型で 'operator *type*()' (ユーザー定義の変換) を呼び出す** 以前のバージョンのコンパイラでは 'operator *type*()' を非クラス型で呼び出すことが許可されていましたが、それは何の警告もなく無視されていました。 この従来の動作のせいで、問題のあるコードが警告なしに生成される危険性が生じ、結果として、予期しないランタイム動作の原因となっていました。 コンパイラはこの方法で記述されたコードを受け入れなくなりました。代わりにコンパイラ エラー C2228 を発行します。
 
@@ -1673,10 +1673,10 @@ C++11 の明示的な変換演算子、初期化子リスト、スコープ指�
 - スコープ付きの列挙型のサポート。 C++ の enum class 列挙キーがサポートされるようになりました。 次のコードでは、この列挙キーが以前の enum の動作とどのように異なるかを示します。
 
    ```cpp
-enum class Element { Hydrogen, Helium, Lithium, Beryllium };
-void func1(Element e);
-func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
-func1(Element::Helium); // OK
+  enum class Element { Hydrogen, Helium, Lithium, Beryllium };
+  void func1(Element e);
+  func1(Hydrogen); // error C2065: 'Hydrogen' : undeclared identifier
+  func1(Element::Helium); // OK
    ```
 
 ### <a name="windows-runtime-app-development-support"></a>Windows ランタイム アプリ開発のサポート

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, field status
 - field status in OLE DB templates
 ms.assetid: 66e4e223-c60c-471e-860d-d23abcdfe371
-ms.openlocfilehash: 25bb370c0714bfef97bc6659deae2fbd21aed23f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 46cf285e07bffe178874546d13d196b5165cb28b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664569"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524359"
 ---
 # <a name="field-status-data-members-in-wizard-generated-accessors"></a>ウィザードで生成されたアクセサーのフィールド ステータスのデータ メンバー
 
@@ -58,7 +58,7 @@ public:
 
 特定のフィールドに NULL 値を設定するのに状態の値を使用することもできます。 これにより、フィールドの値を 0 ではなく、NULL として区別する場合に役立ちます。 NULL が有効な値、または特殊な値かどうかを判断し、アプリケーションが処理する方法を決定する責任です。 OLE DB は、ジェネリック、NULL 値を指定する適切な手段として、DBSTATUS_S_ISNULL を定義します。 コンシューマーは、データを読み取るし、値が null、status フィールドは、DBSTATUS_S_ISNULL に設定されます。 コンシューマーは、NULL 値を設定する場合、コンシューマーは、プロバイダーを呼び出す前に DBSTATUS_S_ISNULL にステータス値を設定します。
 
-次に、Oledb.h と DBSTATUSENUM の検索を開きます。 DBSTATUSENUM 列挙値に対して 0 以外の状態を表す数値を適合できます。 列挙型の名前を参照してください、何が問題を通知するだけで十分でない場合、**状態**でトピック、**データ値のバインド**のセクション、 [OLE DB プログラマ ガイド](/previous-versions/windows/desktop/ms713643)します。 このトピックには、作業またはデータを設定するときに使用される状態値のテーブルが含まれています。 長さの値については、次を参照してください。、**長さ**内の同じセクションのトピックです。
+次に、Oledb.h と DBSTATUSENUM の検索を開きます。 DBSTATUSENUM 列挙値に対して 0 以外の状態を表す数値を適合できます。 列挙型の名前を参照してください、何が問題を通知するだけで十分でない場合、**状態**でトピック、**データ値のバインド**のセクション、 [OLE DB プログラマ ガイド](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)します。 このトピックには、作業またはデータを設定するときに使用される状態値のテーブルが含まれています。 長さの値については、次を参照してください。、**長さ**内の同じセクションのトピックです。
 
 ## <a name="retrieving-the-length-or-status-of-a-column"></a>長さまたは列のステータスを取得します。
 

@@ -1,6 +1,6 @@
 ---
 title: 継承機能のレベルの指定
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 helpviewer_keywords:
 - CObject class [MFC], adding functionality to derived classes
 - runtime [MFC], class information
@@ -10,27 +10,26 @@ helpviewer_keywords:
 - run-time class [MFC], information support
 - levels [MFC]
 ms.assetid: 562669ba-c858-4f66-b5f1-b3beeea4f486
-ms.openlocfilehash: 3fb9b18712b24046e05f05834caaac2819fb73dc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2588a3b2a55ebfca4b57be875e26bb0348db83a0
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494654"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326213"
 ---
 # <a name="specifying-levels-of-functionality"></a>継承機能のレベルの指定
 
 この記事は、次の機能レベルを追加する方法を説明します、 [CObject](../mfc/reference/cobject-class.md)-クラスを派生します。
 
-- [ランタイム クラス情報](#_core_to_add_run.2d.time_class_information)
+- ランタイム クラス情報
 
-- [動的な作成サポート](#_core_to_add_dynamic_creation_support)
+- 動的な作成サポート
 
-- [シリアル化のサポート](#_core_to_add_serialization_support)
+- シリアル化のサポート
 
 一般的な説明について`CObject`機能、記事をご覧ください[CObject からクラスを派生する](../mfc/deriving-a-class-from-cobject.md)します。
 
-- [ランタイム クラス情報](#_core_to_add_run.2d.time_class_information)
-#### <a name="_core_to_add_run.2d.time_class_information"></a> ランタイム クラス情報を追加するには
+## <a name="to-add-run-time-class-information"></a>ランタイム クラス情報を追加するには
 
 1. クラスを派生`CObject`」の説明に従って、 [CObject からクラスを派生する](../mfc/deriving-a-class-from-cobject.md)記事。
 
@@ -43,9 +42,9 @@ ms.locfileid: "50494654"
    [!code-cpp[NVC_MFCCObjectSample#3](../mfc/codesnippet/cpp/specifying-levels-of-functionality_2.cpp)]
 
 > [!NOTE]
->  常に新規クラスを実装ファイルに配置 (します。CPP) クラス。 IMPLEMENT_DYNAMIC マクロは、コンパイル時に 1 回だけ評価される必要があり、そのため、インターフェイス、ファイルでは使用できません (します。H) は 1 つ以上のファイルに含める可能性のある可能性があります。
+> 常に新規クラスを実装ファイルに配置 (します。CPP) クラス。 IMPLEMENT_DYNAMIC マクロは、コンパイル時に 1 回だけ評価される必要があり、そのため、インターフェイス、ファイルでは使用できません (します。H) は 1 つ以上のファイルに含める可能性のある可能性があります。
 
-#### <a name="_core_to_add_dynamic_creation_support"></a> 動的な作成サポートを追加するには
+## <a name="to-add-dynamic-creation-support"></a>動的な作成サポートを追加するには
 
 1. クラスを派生`CObject`します。
 
@@ -55,14 +54,14 @@ ms.locfileid: "50494654"
 
 1. クラスの実装ファイルには、IMPLEMENT_DYNCREATE マクロを使用します。
 
-#### <a name="_core_to_add_serialization_support"></a> シリアル化のサポートを追加するには
+## <a name="to-add-serialization-support"></a>シリアル化のサポートを追加するには
 
 1. クラスを派生`CObject`します。
 
 1. 上書き、`Serialize`メンバー関数。
 
-    > [!NOTE]
-    >  呼び出す場合`Serialize`直接、つまり、たくないポリモーフィックなポインターを使用してオブジェクトをシリアル化、手順 3. ~ 5. を省略します。
+   > [!NOTE]
+   > 呼び出す場合`Serialize`直接、つまり、たくないポリモーフィックなポインターを使用してオブジェクトをシリアル化、手順 3. ~ 5. を省略します。
 
 1. クラス宣言で DECLARE_SERIAL マクロを使用します。
 
@@ -71,7 +70,7 @@ ms.locfileid: "50494654"
 1. IMPLEMENT_SERIAL マクロを使用して、クラス ファイルに実装します。
 
 > [!NOTE]
->  「ポリモーフィックなポインター」は、クラスのオブジェクトを指します (付けます A) または、(たとえば、B) から派生したクラスのオブジェクト。 ポリモーフィックなポインターを通じて、シリアル化するには、フレームワークがいくつかの基本クラス (A) から派生したクラスのオブジェクトがある可能性があるために、(B) をシリアル化するオブジェクトのランタイム クラスを判別する必要があります。
+> 「ポリモーフィックなポインター」は、クラスのオブジェクトを指します (付けます A) または、(たとえば、B) から派生したクラスのオブジェクト。 ポリモーフィックなポインターを通じて、シリアル化するには、フレームワークがいくつかの基本クラス (A) から派生したクラスのオブジェクトがある可能性があるために、(B) をシリアル化するオブジェクトのランタイム クラスを判別する必要があります。
 
 クラスを派生させる場合は、シリアル化を有効にする方法の詳細については`CObject`、記事を参照して[MFC のファイル](../mfc/files-in-mfc.md)と[シリアル化](../mfc/serialization-in-mfc.md)します。
 

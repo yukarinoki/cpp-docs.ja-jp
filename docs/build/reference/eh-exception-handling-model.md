@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: f118f55ddaa4a2dbc8a4a3ad1e596ec461a2b078
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615060"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329301"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (例外処理モデル)
 
@@ -29,12 +29,17 @@ ms.locfileid: "50615060"
 
 ## <a name="arguments"></a>引数
 
-|||
-|-|-|
-**a**|非同期の両方をキャッチする例外処理モデル (構造化) と c++ を使用して同期 (C++) 例外`catch(...)`構文。
-**s**|例外処理モデルを同期 (C++) 例外のみをキャッチし、コンパイラとして宣言された関数を想定する**extern"C"** 例外をスローする可能性があります。
-**c**|使用されている場合**s** (**/EHsc**)、C++ 例外のみをキャッチし、コンパイラとして宣言された関数を想定する**extern"C"** C++ 例外はスローされません。 **/EHca** は **/EHa**と同じです。
-**r**|すべてのランタイム終了チェックを常に生成するコンパイラに指示**noexcept**関数。 既定では、ランタイムのチェックの**noexcept**コンパイラ関数がのみ非スロー関数を呼び出すと判断した場合は、すぐ最適化可能性があります。
+**a**<br/>
+非同期の両方をキャッチする例外処理モデル (構造化) と c++ を使用して同期 (C++) 例外`catch(...)`構文。
+
+**s**<br/>
+例外処理モデルを同期 (C++) 例外のみをキャッチし、コンパイラとして宣言された関数を想定する**extern"C"** 例外をスローする可能性があります。
+
+**c**<br/>
+使用されている場合**s** (**/EHsc**)、C++ 例外のみをキャッチし、コンパイラとして宣言された関数を想定する**extern"C"** C++ 例外はスローされません。 **/EHca** は **/EHa**と同じです。
+
+**r**<br/>
+すべてのランタイム終了チェックを常に生成するコンパイラに指示**noexcept**関数。 既定では、ランタイムのチェックの**noexcept**コンパイラ関数がのみ非スロー関数を呼び出すと判断した場合は、すぐ最適化可能性があります。
 
 ## <a name="remarks"></a>Remarks
 

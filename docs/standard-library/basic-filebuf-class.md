@@ -40,12 +40,12 @@ helpviewer_keywords:
 - std::basic_filebuf [C++], uflow
 - std::basic_filebuf [C++], underflow
 ms.assetid: 3196ba5c-bf38-41bd-9a95-70323ddfca1a
-ms.openlocfilehash: fcf673d8e6d871a7920150b5f62fd3d62135b52c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 817e7fb2b434d06d6c0dfdfc100be8004f6fa4ef
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500530"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332648"
 ---
 # <a name="basicfilebuf-class"></a>basic_filebuf クラス
 
@@ -504,11 +504,11 @@ virtual int_type pbackfail(int_type _Meta = traits_type::eof);
 
 ### <a name="return-value"></a>戻り値
 
-関数が成功しない場合は、`traits_type::eof` が返されます。 それ以外の場合は、**traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(_ *Meta*) を返します。
+関数が成功しない場合は、`traits_type::eof` が返されます。 返しますそれ以外の場合、 **traits_type::**[not_eof](../standard-library/char-traits-struct.md#not_eof)(*\_メタ*)。
 
 ### <a name="remarks"></a>Remarks
 
-プロテクト仮想メンバー関数は要素を入力バッファーに戻してから、その要素を現在の要素に (ネクスト ポインターによって指されるように) します。 _ *Meta* **== traits_type::**[eof](../standard-library/char-traits-struct.md#eof) の場合、プッシュ バックする要素は、実質的に、現在の要素の前に既にストリームにある要素になります。 それ以外の場合、その要素が **ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) で置き換えられます。 この関数は、さまざまな方法で要素を戻すことができます。
+プロテクト仮想メンバー関数は要素を入力バッファーに戻してから、その要素を現在の要素に (ネクスト ポインターによって指されるように) します。 場合*\_メタ* **= traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プッシュ バックする要素が既に現在の要素より前に、のストリームで 1 つでは効果的にします。 それ以外の場合、その要素は置き換えられます**ch = traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*)。 この関数は、さまざまな方法で要素を戻すことができます。
 
 - 戻り位置が使用してに格納されている要素が等しい場合`ch`、入力バッファーのネクスト ポインターをデクリメントできます。
 

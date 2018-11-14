@@ -31,12 +31,12 @@ helpviewer_keywords:
 - processes, executing new
 - process creation
 ms.assetid: e171ebfa-70e7-4c44-8331-2a291fc17bd6
-ms.openlocfilehash: 079841800befcb7196c6428eb58a943410b13987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fa390c039a3d663cb79cb311667e568a6a053131
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525126"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327981"
 ---
 # <a name="spawnlpe-wspawnlpe"></a>_spawnlpe、_wspawnlpe
 
@@ -88,11 +88,11 @@ intptr_t _wspawnlpe(
 
 |||
 |-|-|
-**E2BIG**|引数リストが 1024 バイトを超えています。
-**EINVAL**|*モード*引数が無効です。
-**ENOENT**|ファイルまたはパスが見つかりません。
-**ENOEXEC**|指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。
-**ENOMEM**|新しいプロセスを実行するのに十分なメモリがありません。
+| **E2BIG** | 引数リストが 1024 バイトを超えています。 |
+| **EINVAL** | *モード*引数が無効です。 |
+| **ENOENT** | ファイルまたはパスが見つかりません。 |
+| **ENOEXEC** | 指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。 |
+| **ENOMEM** | 新しいプロセスを実行するのに十分なメモリがありません。 |
 
 これらのリターン コードとその他のリターン コードの詳細については、「[errno、_doserrno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 

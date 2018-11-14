@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::priority_queue [C++], size
 - std::priority_queue [C++], top
 ms.assetid: 69fca9cc-a449-4be4-97b7-02ca5db9cbb2
-ms.openlocfilehash: 1b276f427fc127fb04f4f8e09f0278033ef64754
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8f2b4ab788c82e531d1121f04dd0d422efb17cd
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677176"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333216"
 ---
 # <a name="priorityqueue-class"></a>priority_queue クラス
 
@@ -224,9 +224,9 @@ After a pop, the element at the top of the priority_queue is 20.
 ```cpp
 priority_queue();
 
-explicit priority_queue(const Traits&_comp);
+explicit priority_queue(const Traits& _comp);
 
-priority_queue(const Traits&_comp, const container_type& _Cont);
+priority_queue(const Traits& _comp, const container_type& _Cont);
 
 priority_queue(const priority_queue& right);
 
@@ -234,15 +234,15 @@ template <class InputIterator>
 priority_queue(InputIterator first, InputIterator last);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp);
 
 template <class InputIterator>
-priority_queue(InputIterator first, InputIterator last, const Traits&_comp, const container_type& _Cont);
+priority_queue(InputIterator first, InputIterator last, const Traits& _comp, const container_type& _Cont);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*_ comp*<br/>
+*_comp*<br/>
 priority_queue 内の要素の並べ替えに使用される、**constTraits** 型の比較関数。既定では基本コンテナーの関数を比較します。
 
 *_Cont*<br/>
@@ -263,7 +263,7 @@ priority_queue 内の要素の並べ替えに使用される、**constTraits** �
 
 4 番目のコンス トラクターには、priority_queue のコピーを示す*右*します。
 
-最後の 3 つのコンス トラクターは、範囲をコピーします [* 最初に、最終 *) 一部のコンテナー クラスの比較関数の種類を指定するときになるほど、priority_queue を初期化するために、値を使用**Traits**と`container_type`.
+最後の 3 つのコンス トラクターは、範囲をコピー \[*最初*、*最後*) 一部のコンテナーの種類を指定するときになるほど、priority_queue を初期化するために、値を使用クラスの比較関数`Traits`と`container_type`します。
 
 ### <a name="example"></a>例
 

@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 64774f5a8a81d7c4b3432800376c00f7d1e96d62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f25c552001411565e4ad370c6e454b4c0ae4ae48
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596847"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556999"
 ---
 # <a name="ccommand-class"></a>CCommand クラス
 
@@ -81,7 +81,7 @@ class CCommand :
 行セット クラスの型 (など`CArrayRowset`または`CNoRowset`) コマンドで使用します。 既定値は `CRowset` です。
 
 *TMultiple*<br/>
-複数の結果を返すことができる OLE DB コマンドを使用する指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)します。 それ以外の場合、使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)します。 詳細については、次を参照してください。 [IMultipleResults](/previous-versions/windows/desktop/ms721289)します。
+複数の結果を返すことができる OLE DB コマンドを使用する指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)します。 それ以外の場合、使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)します。 詳細については、次を参照してください。 [IMultipleResults](https://docs.microsoft.com/previous-versions/windows/desktop/ms721289(v=vs.85))します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -213,13 +213,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 [in]コマンドを実行するためのセッションです。
 
 *wszCommand*<br/>
-[in]を実行するコマンドは、Unicode 文字列として渡されます。 使用する場合、NULL を指定できます`CAccessor`に渡された値からのコマンドは、取得した場合、 [DEFINE_COMMAND](../../data/oledb/define-command.md)マクロ。 参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
+[in]を実行するコマンドは、Unicode 文字列として渡されます。 使用する場合、NULL を指定できます`CAccessor`に渡された値からのコマンドは、取得した場合、 [DEFINE_COMMAND](../../data/oledb/define-command.md)マクロ。 参照してください[icommand::execute](https://docs.microsoft.com/previous-versions/windows/desktop/ms718095(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
 *で*<br/>
 [in]同じ*wszCommand*する点を除いて、このパラメーターは、ANSI コマンド文字列を取得します。 このメソッドの 4 番目の形式は、NULL 値をとることができます。 詳細については、このトピックの後半の「解説」を参照してください。
 
 *pPropSet*<br/>
-[in]配列へのポインター [DBPROPSET](/previous-versions/windows/desktop/ms714367)プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](/previous-versions/windows/desktop/ms713696)で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
+[in]配列へのポインター [DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))プロパティおよび設定する値を含む構造体。 参照してください[プロパティ セットとプロパティ グループ](https://docs.microsoft.com/previous-versions/windows/desktop/ms713696(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
 
 *pRowsAffected*<br/>
 [入力/出力]コマンドによって影響を受ける行の数が返されるメモリへのポインター。 場合 *\*pRowsAffected*が null の場合、行カウントは返されません。 それ以外の場合、`Open`設定 *\*pRowsAffected*に従って、次の条件。
@@ -231,13 +231,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 |コマンドが更新されない、削除、または行を挿入|*\*pRowsAffected*が定義されていません。|
 
 *guidCommand*<br/>
-[in]コマンド テキストを解析中に、構文と使用するプロバイダーの一般的な規則を指定する GUID。 参照してください[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)と[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757)で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
+[in]コマンド テキストを解析中に、構文と使用するプロバイダーの一般的な規則を指定する GUID。 参照してください[ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85))と[icommandtext::setcommandtext](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
 *bBind*<br/>
 [in]実行されている後に、コマンドを自動的にバインドするかどうかを指定します。 既定値は**true**、それが原因で、コマンドを自動的に連結されます。 設定*bBind*に**false**手動でバインドできるように、コマンドの自動に連結します。 (手動バインドは、OLAP ユーザーにとって特に重要ですが) です。
 
 *ulPropSets*<br/>
-[in]数[DBPROPSET](/previous-versions/windows/desktop/ms714367)構造体が渡された、 *pPropSet*引数。
+[in]数[DBPROPSET](https://docs.microsoft.com/previous-versions/windows/desktop/ms714367(v=vs.85))構造体が渡された、 *pPropSet*引数。
 
 ### <a name="return-value"></a>戻り値
 
@@ -260,7 +260,7 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 ## <a name="create"></a> Ccommand::create
 
-呼び出し[ccommand::createcommand](../../data/oledb/ccommand-createcommand.md)指定したセッションのコマンドを作成するを呼び出して[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709825)コマンド テキストを指定します。
+呼び出し[ccommand::createcommand](../../data/oledb/ccommand-createcommand.md)指定したセッションのコマンドを作成するを呼び出して[icommandtext::setcommandtext](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85))コマンド テキストを指定します。
 
 ### <a name="syntax"></a>構文
 
@@ -286,7 +286,7 @@ HRESULT CCommandBase::Create(const CSession& session,
 [in]コマンド文字列の ANSI テキストへのポインター。
 
 *guidCommand*<br/>
-[in]コマンド テキストを解析中に、構文と使用するプロバイダーの一般的な規則を指定する GUID。 言語については、次を参照してください。 [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)で、 *OLE DB プログラマーズ リファレンス*します。
+[in]コマンド テキストを解析中に、構文と使用するプロバイダーの一般的な規則を指定する GUID。 言語については、次を参照してください。 [ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -333,7 +333,7 @@ HRESULT CCommandBase::GetParameterInfo(DB_UPARAMS* pParams,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandwithparameters::getparameterinfo](/previous-versions/windows/desktop/ms714917)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommandwithparameters::getparameterinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms714917(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -360,7 +360,7 @@ HRESULT CCommandBase::Prepare(ULONG cExpectedRuns = 0) throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、OLE DB メソッドをラップします。 [icommandprepare::prepare](/previous-versions/windows/desktop/ms718370)します。
+このメソッドは、OLE DB メソッドをラップします。 [icommandprepare::prepare](https://docs.microsoft.com/previous-versions/windows/desktop/ms718370(v=vs.85))します。
 
 ## <a name="releasecommand"></a> Ccommand::releasecommand
 
@@ -390,7 +390,7 @@ HRESULT CCommandBase::SetParameterInfo(DB_UPARAMS ulParams,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandwithparameters::setparameterinfo](/previous-versions/windows/desktop/ms725393)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommandwithparameters::setparameterinfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms725393(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -412,7 +412,7 @@ HRESULT CCommandBase::Unprepare() throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、OLE DB メソッドをラップします。 [ICommandPrepare::Unprepare](/previous-versions/windows/desktop/ms719635)します。
+このメソッドは、OLE DB メソッドをラップします。 [ICommandPrepare::Unprepare](https://docs.microsoft.com/previous-versions/windows/desktop/ms719635(v=vs.85))します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - std::auto_ptr [C++], release
 - std::auto_ptr [C++], reset
 ms.assetid: 7f9108b6-9eb3-4634-b615-cf7aa814f23b
-ms.openlocfilehash: 587168323b8af63d232b8df63e9dcac2f4601433
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0c8e0c1f4dc2e1082d5df230c74efafcae24f29
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620949"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327123"
 ---
 # <a name="autoptr-class"></a>auto_ptr クラス
 
@@ -282,11 +282,11 @@ auto_ptr<Type>& operator=(auto_ptr_ref<Type> right) throw();
 
 ### <a name="return-value"></a>戻り値
 
-型 `auto_ptr`\< **Type**> のオブジェクトへの参照。
+`auto_ptr<Type>` 型のオブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-割り当ては、式を評価`delete myptr`、場合にのみ格納されているポインター`myptr`代入の結果として変更します。 その後、*Right* に格納されているポインターの所有権を転送します。これは、\_ *Right*. [リリース](#release)で`myptr`します。 関数は **\*this** を返します。
+割り当ては、式を評価`delete myptr`、場合にのみ格納されているポインター`myptr`代入の結果として変更します。 これは、後に格納されているポインターの所有権を転送*右*、格納することにより*右*.[リリース](#release)で`myptr`します。 関数は __\*this__ を返します。
 
 ### <a name="example"></a>例
 

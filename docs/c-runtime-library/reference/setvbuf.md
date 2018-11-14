@@ -23,12 +23,12 @@ helpviewer_keywords:
 - stream buffering
 - setvbuf function
 ms.assetid: 6aa5aa37-3408-4fa0-992f-87f9f9c4baea
-ms.openlocfilehash: b2a5cfc08da7812e32ad84940ab4c78288017720
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4336c6cc478a035fcc0b9b059a7161d58bc4442
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445774"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328098"
 ---
 # <a name="setvbuf"></a>setvbuf
 
@@ -75,9 +75,9 @@ int setvbuf(
 
 |*モード*値|説明|
 |-|-|
-**_IOFBF**|フル バッファリングします。つまり、*バッファー*バッファーとして提供されると*サイズ*バッファーのサイズとして使用されます。 場合*バッファー*は**NULL**が自動的に割り当てられたバッファー*サイズ*バイト長を使用します。
-**_IOLBF**|一部のシステムでは、行バッファリングします。 ただし、win32 の動作は同じ **_IOFBF** -フル バッファリングします。
-**_IONBF**|使用に関係なく、バッファーがない*バッファー*または*サイズ*します。
+| **_IOFBF** | フル バッファリングします。つまり、*バッファー*バッファーとして提供されると*サイズ*バッファーのサイズとして使用されます。 場合*バッファー*は**NULL**が自動的に割り当てられたバッファー*サイズ*バイト長を使用します。 |
+| **_IOLBF** | 一部のシステムでは、行バッファリングします。 ただし、win32 の動作は同じ **_IOFBF** -フル バッファリングします。 |
+| **_IONBF** | 使用に関係なく、バッファーがない*バッファー*または*サイズ*します。 |
 
 ## <a name="requirements"></a>必要条件
 

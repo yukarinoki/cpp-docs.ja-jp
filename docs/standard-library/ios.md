@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - ios header
 ms.assetid: d3d4c161-2f37-4f04-93cc-0a2a89984a9c
-ms.openlocfilehash: 321924a622c04b09c1b1fdb47aef0d67ab8e0080
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1566f9105a61b1c037e86fd2e4b280ed6dd2020e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487738"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521597"
 ---
 # <a name="ltiosgt"></a>&lt;ios&gt;
 
@@ -22,7 +22,6 @@ iostream 操作の基礎となる型と関数を定義します。 このヘッ�
 
 ```cpp
 #include <ios>
-
 ```
 
 ## <a name="remarks"></a>Remarks

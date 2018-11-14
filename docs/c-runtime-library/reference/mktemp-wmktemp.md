@@ -33,12 +33,12 @@ helpviewer_keywords:
 - mktemp function
 - temporary files [C++]
 ms.assetid: 055eb539-a8c2-4a7d-be54-f5b6d1eb5c85
-ms.openlocfilehash: 9dbaba9e4a68523c0d79762c6a7ff54c238e397d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1c5f0ee12c9e07d76405014bb4a6a6ecc7d97e6
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554167"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326265"
 ---
 # <a name="mktemp-wmktemp"></a>_mktemp、_wmktemp
 
@@ -82,7 +82,7 @@ wchar_t *_wmktemp(
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tmktemp**|**_mktemp**|**_mktemp**|**_wmktemp**|
 
-*NameTemplate*引数の形式*基本 * * XXXXXX*ここで、*基本*提供する新しいファイル名の一部である、各 X はによって指定される文字のプレース ホルダー **_mktemp**します。 内の各プレース ホルダー文字*nameTemplate*は大文字の X をする必要があります **_mktemp**保持*基本*し、最初の後続の X を英字に置き換えます。 **_mktemp**末尾の次を置換する大文字の X を 5 桁の値です。 この値は、プロセス、またはマルチ スレッド プログラムの場合は、呼び出し元のスレッドには、呼び出し元を識別する一意の番号。
+*NameTemplate*引数の形式*基本*XXXXXX、場所*基本*提供する新しいファイル名の一部である、各 X はによって指定される文字のプレース ホルダー **_mktemp**します。 内の各プレース ホルダー文字*nameTemplate*は大文字の X をする必要があります **_mktemp**保持*基本*し、最初の後続の X を英字に置き換えます。 **_mktemp**末尾の次を置換する大文字の X を 5 桁の値です。 この値は、プロセス、またはマルチ スレッド プログラムの場合は、呼び出し元のスレッドには、呼び出し元を識別する一意の番号。
 
 呼び出しが成功した **_mktemp**変更*nameTemplate*します。 各後続の呼び出しと同じプロセスまたは同じスレッドで*nameTemplate*引数、 **_mktemp**によって返される名前と一致するファイル名に対してチェック **_mktemp**で前の呼び出し。 指定した名前のファイルが存在しない場合 **_mktemp**その名前を返します。 名前、以前に返したすべてのファイルが存在する場合 **_mktemp**英字部分 'a' ~ 'z' の順序で、[次へ] の使用可能な小文字文字を置き換えることで、新しい名前を作成します。 たとえば場合、*基本*は。
 

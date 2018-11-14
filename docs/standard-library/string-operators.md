@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::operator&lt; (string)
 - std::operator&lt;&lt; (string)
 - std::operator&lt;= (string), std::operator== (string)
-ms.openlocfilehash: a35188e0194a57ac399610f3130634132addf8f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3ca469058ba65f83b0df60a93c63895e34f916e
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644822"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332219"
 ---
 # <a name="ltstringgt-operators"></a>&lt;string&gt; 演算子
 
@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>Remarks
 
-関数はそれぞれ `operator+` をオーバーロードして、テンプレート クラス [basic_string クラス](../standard-library/basic-string-class.md)の 2 つのオブジェクトを連結します。 すべては実質的に戻り`basic_string` \< **CharType**、 **Traits**、**アロケーター**> (_*左*)。 [追加](../standard-library/basic-string-class.md#append)(\_ *右*)。
+関数はそれぞれ `operator+` をオーバーロードして、テンプレート クラス [basic_string クラス](../standard-library/basic-string-class.md)の 2 つのオブジェクトを連結します。 すべては実質的に戻り`basic_string< CharType, Traits, Allocator>(Left).append(right)`します。 詳細については、次を参照してください。[追加](../standard-library/basic-string-class.md#append)します。
 
 ### <a name="example"></a>例
 
@@ -575,7 +575,7 @@ basic_ostream<CharType, Traits>& operator<<(
 
 ### <a name="remarks"></a>Remarks
 
-テンプレート関数は **operator<<** をオーバーロードして、テンプレート クラス [basic_string](../standard-library/basic-string-class.md) のオブジェクト _ *Str* ストリーム \_ *Ostr* に挿入します。 関数は効果的に返します\_ *Ostr*します。 **書き込み**( \_ *Str*します。 [c_str](../standard-library/basic-string-class.md#c_str)、 \_ *Str*します。 [サイズ](../standard-library/basic-string-class.md#size))。
+テンプレート関数のオーバー ロード**演算子 <<** オブジェクトを挿入する*str*テンプレート クラスの[basic_string](../standard-library/basic-string-class.md)ストリームに *\_Ostr*します。 関数は効果的に返します`_Ostr.write( str.c_str, str.size )`します。
 
 ## <a name="op_gt"></a>  operator&gt;
 

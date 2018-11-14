@@ -6,16 +6,14 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: 932661227daa216934c061a8b6807b05ca8270ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443759"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51522312"
 ---
 # <a name="options-atl-control-wizard"></a>オプション、ATL コントロール ウィザード
-
-「検索結果」の概要をここに挿入します。
 
 ウィザードのこのページを使用して作成するコントロールの種類を定義して、インターフェイスのサポートのレベルが含まれます。
 
@@ -29,17 +27,17 @@ ms.locfileid: "50443759"
 
 - **複合コントロール**: ActiveX コントロール (ダイアログ ボックスに似ています) を含めることができる他の ActiveX コントロールまたは Windows のコントロール。 複合コントロールを次のとおりです。
 
-   - 複合コントロールを実装するダイアログ ボックスのテンプレート。
+  - 複合コントロールを実装するダイアログ ボックスのテンプレート。
 
-   - カスタム リソースの場合は、レジストリで、呼び出されたときに、複合コントロールを自動的に登録します。
+  - カスタム リソースの場合は、レジストリで、呼び出されたときに、複合コントロールを自動的に登録します。
 
-   - 複合コントロールを実装する C++ クラスです。
+  - 複合コントロールを実装する C++ クラスです。
 
-   - 複合コントロールによって公開される COM インターフェイスです。
+  - 複合コントロールによって公開される COM インターフェイスです。
 
-   - 複合コントロールを含む HTML テスト ページ。
+  - 複合コントロールを含む HTML テスト ページ。
 
-   既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。 シンクのマップを実装します。 詳細については、次を参照してください。 [DHTML コントロールのサポート](../../atl/atl-support-for-dhtml-controls.md)します。
+    既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。 シンクのマップを実装します。 詳細については、次を参照してください。 [DHTML コントロールのサポート](../../atl/atl-support-for-dhtml-controls.md)します。
 
 - **DHTML コントロール**: An ATL DHTML コントロールが HTML を使用して、ユーザー インターフェイスを指定します。 DHTML UI クラスには、COM マップが含まれています。 既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications, support in providers
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
-ms.openlocfilehash: 39e0fffa10af560537a932d503946ec2469bef5e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04db02bc8ad4db0c669e07a0bcf1b60ffa22e8ad
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570587"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521402"
 ---
 # <a name="creating-an-updatable-provider"></a>更新可能なプロバイダーの作成
 
@@ -40,7 +40,7 @@ ms.locfileid: "50570587"
 
 1. 行セット クラスから継承`IRowsetChangeImpl`または`IRowsetUpdateImpl`します。 これらのクラスは、データ ストアを変更するための適切なインターフェイスを提供します。
 
-     **IRowsetChange を追加します。**
+   **IRowsetChange を追加します。**
 
    追加`IRowsetChangeImpl`継承チェーンをこの形式を使用します。
 
@@ -50,7 +50,7 @@ ms.locfileid: "50570587"
 
    追加も`COM_INTERFACE_ENTRY(IRowsetChange)`を`BEGIN_COM_MAP`行セット クラスでセクション。
 
-     **IRowsetUpdate を追加します。**
+   **IRowsetUpdate を追加します。**
 
    追加`IRowsetUpdate`継承チェーンをこの形式を使用します。
 
@@ -58,22 +58,27 @@ ms.locfileid: "50570587"
     IRowsetUpdateImpl< rowset-name, storage>
     ```
 
-    > [!NOTE]
-    > 削除する必要があります、`IRowsetChangeImpl`継承チェーンからの行。 ディレクティブの前に説明したこの例外が 1 つのコードを含める必要があります`IRowsetChangeImpl`します。
+   > [!NOTE]
+   > 削除する必要があります、`IRowsetChangeImpl`継承チェーンからの行。 ディレクティブの前に説明したこの例外が 1 つのコードを含める必要があります`IRowsetChangeImpl`します。
 
 1. 次の COM マップに追加 (`BEGIN_COM_MAP ... END_COM_MAP`)。
 
-    |実装する場合|COM マップに追加します。|
-    |----------------------|--------------------|
-    |`IRowsetChangeImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)`|
-    |`IRowsetUpdateImpl`|`COM_INTERFACE_ENTRY(IRowsetChange)COM_INTERFACE_ENTRY(IRowsetUpdate)`|
+   |  実装する場合   |           COM マップに追加します。             |
+   |---------------------|--------------------------------------|
+   | `IRowsetChangeImpl` | `COM_INTERFACE_ENTRY(IRowsetChange)` |
+   | `IRowsetUpdateImpl` | `COM_INTERFACE_ENTRY(IRowsetUpdate)` |
+
+   | 実装する場合 | プロパティ セットのマップに追加します。 |
+   |----------------------|-----------------------------|
+   | `IRowsetChangeImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)` |
+   | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
 1. コマンドで、次のプロパティ セット マップに追加 (`BEGIN_PROPSET_MAP ... END_PROPSET_MAP`)。
 
-    |実装する場合|プロパティ セットのマップに追加します。|
-    |----------------------|-----------------------------|
-    |`IRowsetChangeImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`|
-    |`IRowsetUpdateImpl`|`PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)`|
+   |  実装する場合   |                                             プロパティ セットのマップに追加します。                                              |
+   |---------------------|------------------------------------------------------------------------------------------------------------------|
+   | `IRowsetChangeImpl` |                            `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)`                             |
+   | `IRowsetUpdateImpl` | `PROPERTY_INFO_ENTRY_VALUE(IRowsetChange, VARIANT_FALSE)PROPERTY_INFO_ENTRY_VALUE(IRowsetUpdate, VARIANT_FALSE)` |
 
 1. プロパティ セット マップにも含めますすべて、次の設定の下に表示されます。
 
@@ -97,41 +102,41 @@ ms.locfileid: "50570587"
 
    プロパティの Id と値を Atldb.h で探すことによってこれらのマクロの呼び出しで使用する値を見つけることができます (Atldb.h と異なる場合、オンライン ドキュメント、Atldb.h よりも優先されますマニュアルを参照)。
 
-    > [!NOTE]
-    > 多くは、`VARIANT_FALSE`と`VARIANT_TRUE`設定は、OLE DB テンプレートに必要な; OLE DB 仕様によれば、読み取り/書き込みができるが、OLE DB テンプレートは 1 つの値のみをサポートします。
+   > [!NOTE]
+   > 多くは、`VARIANT_FALSE`と`VARIANT_TRUE`設定は、OLE DB テンプレートに必要な; OLE DB 仕様によれば、読み取り/書き込みができるが、OLE DB テンプレートは 1 つの値のみをサポートします。
 
-     **IRowsetChangeImpl を実装する場合**
+   **IRowsetChangeImpl を実装する場合**
 
    実装する場合`IRowsetChangeImpl`プロバイダーに、次のプロパティを設定する必要があります。 これらのプロパティは、主にを介してインターフェイスを要求する使用`ICommandProperties::SetProperties`します。
 
-    - `DBPROP_IRowsetChange`: 設定セットでは自動的にこの`DBPROP_IRowsetChange`します。
+   - `DBPROP_IRowsetChange`: 設定セットでは自動的にこの`DBPROP_IRowsetChange`します。
 
-    - `DBPROP_UPDATABILITY`: でサポートされているメソッドを指定するビットマスク`IRowsetChange`: `SetData`、 `DeleteRows`、または`InsertRow`します。
+   - `DBPROP_UPDATABILITY`: でサポートされているメソッドを指定するビットマスク`IRowsetChange`: `SetData`、 `DeleteRows`、または`InsertRow`します。
 
-    - `DBPROP_CHANGEINSERTEDROWS`。 呼び出すことができますコンシューマー`IRowsetChange::DeleteRows`または`SetData`新しく挿入された行の。
+   - `DBPROP_CHANGEINSERTEDROWS`。 呼び出すことができますコンシューマー`IRowsetChange::DeleteRows`または`SetData`新しく挿入された行の。
 
-    - `DBPROP_IMMOBILEROWS`: 行セットは、挿入または更新された行を並べ替えられません。
+   - `DBPROP_IMMOBILEROWS`: 行セットは、挿入または更新された行を並べ替えられません。
 
-     **IRowsetUpdateImpl を実装する場合**
+   **IRowsetUpdateImpl を実装する場合**
 
    実装する場合`IRowsetUpdateImpl`、する必要があります、次プロパティを設定して、プロバイダー、さらにすべてのプロパティを設定する`IRowsetChangeImpl`上記に示した。
 
-    - `DBPROP_IRowsetUpdate`。
+   - `DBPROP_IRowsetUpdate`。
 
-    - `DBPROP_OWNINSERT`: READ_ONLY と VARIANT_TRUE をする必要があります。
+   - `DBPROP_OWNINSERT`: READ_ONLY と VARIANT_TRUE をする必要があります。
 
-    - `DBPROP_OWNUPDATEDELETE`: READ_ONLY と VARIANT_TRUE をする必要があります。
+   - `DBPROP_OWNUPDATEDELETE`: READ_ONLY と VARIANT_TRUE をする必要があります。
 
-    - `DBPROP_OTHERINSERT`: READ_ONLY と VARIANT_TRUE をする必要があります。
+   - `DBPROP_OTHERINSERT`: READ_ONLY と VARIANT_TRUE をする必要があります。
 
-    - `DBPROP_OTHERUPDATEDELETE`: READ_ONLY と VARIANT_TRUE をする必要があります。
+   - `DBPROP_OTHERUPDATEDELETE`: READ_ONLY と VARIANT_TRUE をする必要があります。
 
-    - `DBPROP_REMOVEDELETED`: READ_ONLY と VARIANT_TRUE をする必要があります。
+   - `DBPROP_REMOVEDELETED`: READ_ONLY と VARIANT_TRUE をする必要があります。
 
-    - `DBPROP_MAXPENDINGROWS`。
+   - `DBPROP_MAXPENDINGROWS`。
 
-        > [!NOTE]
-        > 通知をサポートする場合は、その他のプロパティも; をもがあります。参照してください`IRowsetNotifyCP`このリスト。
+   > [!NOTE]
+   > 通知をサポートする場合は、その他のプロパティも; をもがあります。参照してください`IRowsetNotifyCP`このリスト。
 
 ##  <a name="vchowwritingtothedatasource"></a> データ ソースへの書き込み
 

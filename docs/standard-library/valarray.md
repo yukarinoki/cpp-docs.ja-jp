@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - valarray header
 ms.assetid: 30835415-21c1-4801-8f24-6bbef7dd8ecd
-ms.openlocfilehash: efd3e750abb68ad84eb8894ea6b53fe8e29e0e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b8118722d7219e3b30e11ad67411595c3dc36ad
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447789"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332635"
 ---
 # <a name="ltvalarraygt"></a>&lt;valarray&gt;
 
@@ -21,12 +21,11 @@ ms.locfileid: "50447789"
 
 ```cpp
 #include <valarray>
-
 ```
 
 ## <a name="remarks"></a>Remarks
 
-これらのテンプレート クラスと関数には、パフォーマンス向上を目的として特別な許容度が認められています。 具体的には、**valarray\<** T1**>** 型を返す関数はすべて、他の T2 型のオブジェクトを返すこともできます。 その場合、**valarray\<** T2**>** 型の 1 つ以上の引数を受け取る関数すべてに、T2 型引数に置換された個々の引数が任意に組み合わされたものを受け取るオーバーロードが必要です。
+これらのテンプレート クラスと関数には、パフォーマンス向上を目的として特別な許容度が認められています。 型を返す関数は具体的には、すべて`valarray<T1>`いくつかその他の T2 型のオブジェクトを返す可能性があります。 その場合は、型の 1 つまたは複数の引数を受け取る関数すべて`valarray<T2>`を任意の組み合わせの T2 型の引数にそれぞれ置き換えられます。 これらの引数を受け取るオーバー ロードがあります。
 
 ### <a name="functions"></a>関数
 

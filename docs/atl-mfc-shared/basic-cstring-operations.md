@@ -9,12 +9,12 @@ helpviewer_keywords:
 - string comparison, CString operations
 - characters, accessing in CStrings
 ms.assetid: 41db66b2-9427-4bb3-845a-9b6869159a6c
-ms.openlocfilehash: d1f16e470123bd52cb2656541aafaabdfc16af8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b387cbb8671dda0aca63da9b57dd694e478b62a9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434076"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523131"
 ---
 # <a name="basic-cstring-operations"></a>CString の基本操作
 
@@ -91,11 +91,10 @@ CString オブジェクトを他の文字列型に変換する方法の詳細に
 
 CString を使用する`wcout`にオブジェクトを明示的にキャストする必要があります、`const wchar_t*`次の例に示すように。
 
-```
+```cpp
 CString cs("meow");
 
-    wcout <<(const wchar_t*) cs <<endl;
-
+wcout << (const wchar_t*) cs << endl;
 ```
 
 キャストなし`cs`として扱われますが、`void*`と`wcout`オブジェクトのアドレスを出力します。 この動作は、C++ の標準に準拠して正しい自体がテンプレート引数の推論とオーバー ロード解決の間の微妙な相互作用によって発生します。

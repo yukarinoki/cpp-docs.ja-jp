@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CRestrictions class
 - Open method
 ms.assetid: 0aaa2364-641c-4318-b110-7446aada4b4f
-ms.openlocfilehash: 0a6b6b10d4275cbfc2cd99180aa472d9476b17e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 95517931f3156c4850e07c78910ccbffff424faa
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565137"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556518"
 ---
 # <a name="crestrictions-class"></a>CRestrictions クラス
 
@@ -92,7 +92,7 @@ HRESULT Open(const CSession& session,
 
 スキーマ行セットでは、7 個の制限の最大数を指定できます。
 
-参照してください[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686)定義されている制限については、各スキーマ行セットにします。
+参照してください[IDBSchemaRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms713686(v=vs.85))定義されている制限については、各スキーマ行セットにします。
 
 ## <a name="see-also"></a>関連項目
 

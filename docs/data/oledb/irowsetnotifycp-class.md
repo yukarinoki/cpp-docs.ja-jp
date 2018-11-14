@@ -24,16 +24,16 @@ helpviewer_keywords:
 - Fire_OnRowChange method
 - Fire_OnRowsetChange method
 ms.assetid: ccef402b-94a0-4c2e-9a13-7e854ef82390
-ms.openlocfilehash: de27bef1131081ddfc244fe0d787a85b468cc7e0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 119cc79cf0f3ed5784e1b3b291fce52f06695d36
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523683"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556284"
 ---
 # <a name="irowsetnotifycp-class"></a>IRowsetNotifyCP クラス
 
-プロバイダーは、サイト接続ポイントのインターフェイスを実装する[IRowsetNotify](/previous-versions/windows/desktop/ms712959)します。
+プロバイダーは、サイト接続ポイントのインターフェイスを実装する[IRowsetNotify](https://docs.microsoft.com/previous-versions/windows/desktop/ms712959(v=vs.85))します。
 
 ## <a name="syntax"></a>構文
 
@@ -85,7 +85,7 @@ class IRowsetNotifyCP :
 
 ## <a name="onfieldchange"></a> Irowsetnotifycp::fire_onfieldchange
 
-ブロードキャスト、 [OnFieldChange](/previous-versions/windows/desktop/ms715961)列の値に対する変更をコンシューマーに通知するイベントです。
+ブロードキャスト、 [OnFieldChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85))列の値に対する変更をコンシューマーに通知するイベントです。
 
 ### <a name="syntax"></a>構文
 
@@ -101,11 +101,11 @@ HRESULT Fire_OnFieldChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[は、](/previous-versions/windows/desktop/ms715961)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[は、](https://docs.microsoft.com/previous-versions/windows/desktop/ms715961(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="onrowchange"></a> Irowsetnotifycp::fire_onrowchange
 
-ブロードキャスト、 [OnRowChange](/previous-versions/windows/desktop/ms722694)イベント接続ポイント上のすべてのリスナーを`IID_IRowsetNotify`行に影響する変更のコンシューマーに通知します。
+ブロードキャスト、 [OnRowChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85))イベント接続ポイント上のすべてのリスナーを`IID_IRowsetNotify`行に影響する変更のコンシューマーに通知します。
 
 ### <a name="syntax"></a>構文
 
@@ -120,11 +120,11 @@ HRESULT Fire_OnRowChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[は、](/previous-versions/windows/desktop/ms722694)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[は、](https://docs.microsoft.com/previous-versions/windows/desktop/ms722694(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="onrowsetchange"></a> Irowsetnotifycp::fire_onrowsetchange
 
-ブロードキャスト、 [OnRowsetChange](/previous-versions/windows/desktop/ms722669)イベント接続ポイント上のすべてのリスナーを`IID_IRowsetNotify`行セット全体に影響する変更のコンシューマーに通知します。
+ブロードキャスト、 [OnRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85))イベント接続ポイント上のすべてのリスナーを`IID_IRowsetNotify`行セット全体に影響する変更のコンシューマーに通知します。
 
 ### <a name="syntax"></a>構文
 
@@ -137,7 +137,7 @@ HRESULT Fire_OnRowsetChange(IRowset* pRowset,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[は、](/previous-versions/windows/desktop/ms722669)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[は、](https://docs.microsoft.com/previous-versions/windows/desktop/ms722669(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

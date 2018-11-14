@@ -108,12 +108,12 @@ helpviewer_keywords:
 - std::ios_base [C++], width
 - std::ios_base [C++], xalloc
 ms.assetid: 0f9e0abc-f70f-49bc-aa1f-003859f56cfe
-ms.openlocfilehash: 3c9b1081a7e2ccd45c64c1cbcd833dcda9470f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8911c3763e6a0c861c162611e1b2617ec26f0cf9
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648670"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333359"
 ---
 # <a name="iosbase-class"></a>ios_base クラス
 
@@ -914,7 +914,7 @@ fmtflags setf(
 
 ### <a name="remarks"></a>Remarks
 
-最初のメンバー関数は効果的に呼び出す[フラグ](#flags)(_*マスク* &#124; \_ *フラグ*) (選択したビットを設定) し、前の書式設定フラグを返します。 2 番目のメンバー関数は効果的に呼び出す**フラグ**(\_ *マスク* **& fmtfl、フラグ (& a) ~**`_Mask`) (選択されているビット マスクを置換)前の書式設定フラグを返します。
+最初のメンバー関数は効果的に呼び出す[フラグ](#flags)( *\_マスク* &#124; *\_フラグ*) (選択したビットを設定する) を返します、前の書式設定フラグ。 2 番目のメンバー関数は効果的に呼び出す`flags(_Mask & fmtfl, flags & ~_Mask)`(選択されているビット マスクを置換) し、前の書式設定フラグを返します。
 
 ### <a name="example"></a>例
 

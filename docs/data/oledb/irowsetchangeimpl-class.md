@@ -32,16 +32,16 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 13dadfdcaf912e5cb2d82361de997d09961f1ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dacf9de0835108ae946e7523472a0adf12e7e222
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514610"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556726"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl クラス
 
-OLE DB テンプレートの実装、 [IRowsetChange](/previous-versions/windows/desktop/ms715790) OLE DB 仕様のインターフェイス。
+OLE DB テンプレートの実装、 [IRowsetChange](https://docs.microsoft.com/previous-versions/windows/desktop/ms715790(v=vs.85)) OLE DB 仕様のインターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -124,7 +124,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetchange::deleterows](/previous-versions/windows/desktop/ms724362(v%3dvs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowsetchange::deleterows](https://docs.microsoft.com/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="insertrow"></a> Irowsetchangeimpl::insertrow
 
@@ -141,7 +141,7 @@ STDMETHOD (InsertRow )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetchange::insertrow](/previous-versions/windows/desktop/ms716921)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowsetchange::insertrow](https://docs.microsoft.com/previous-versions/windows/desktop/ms716921(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="setdata"></a> Irowsetchangeimpl::setdata
 
@@ -157,7 +157,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetchange::setdata](/previous-versions/windows/desktop/ms721232)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowsetchange::setdata](https://docs.microsoft.com/previous-versions/windows/desktop/ms721232(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="flushdata"></a> Irowsetchangeimpl::flushdata
 

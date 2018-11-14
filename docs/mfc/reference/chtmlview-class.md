@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: f30194d552f8bafb4d52597aeb53dbe02a780213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438117"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333642"
 ---
 # <a name="chtmlview-class"></a>CHtmlView クラス
 
@@ -1194,7 +1194,7 @@ virtual void OnDocumentComplete(LPCTSTR lpszURL);
 
 すべてのフレームが各フレームを起動するが、このイベントを発生させる、 [OnDownloadBegin](#ondownloadbegin) 、対応するイベントは起動`OnDocumentComplete`イベント。
 
-示された URL *lpszURL*ブラウザーがこの URL が、正規化と修飾 URL であるために移動すると言われました URL と異なる場合があります。 アプリケーションへの呼び出しで"www.microsoft.com"の URL を指定する場合など、 [Navigate](#navigate)または[Navigate2](#navigate2)、渡された URL`OnNavigateComplete2`なります"http://www.microsoft.com/"。 また、サーバーが別の URL にブラウザーをリダイレクトする場合、ここで、リダイレクトされる URL が反映されます。
+示された URL *lpszURL*ブラウザーがこの URL が、正規化と修飾 URL であるために移動すると言われました URL と異なる場合があります。 アプリケーションへの呼び出しで"www.microsoft.com"の URL を指定する場合など、 [Navigate](#navigate)または[Navigate2](#navigate2)、渡された URL`OnNavigateComplete2`なります"<http://www.microsoft.com/>"。 また、サーバーが別の URL にブラウザーをリダイレクトする場合、ここで、リダイレクトされる URL が反映されます。
 
 ##  <a name="ondocwindowactivate"></a>  CHtmlView::OnDocWindowActivate
 
@@ -1458,7 +1458,7 @@ URL に評価される文字列式 UNC ファイル名、またはに移動し�
 
 URL パラメーターには、URL の形式がありませんシェル名前空間エンティティの場合、PIDL を設定できます。
 
-含まれている URL に注意してください*strURL*ブラウザーがこの URL が、正規化と修飾 URL であるために移動すると言われました URL と異なる場合があります。 アプリケーションへの呼び出しで"www.microsoft.com"の URL を指定する場合など、 [Navigate](#navigate)または[Navigate2](#navigate2)、渡された URL`OnNavigateComplete2`なります"http://www.microsoft.com/"。 また、サーバーが別の URL にブラウザーをリダイレクトする場合、ここで、リダイレクトされる URL が反映されます。
+含まれている URL に注意してください*strURL*ブラウザーがこの URL が、正規化と修飾 URL であるために移動すると言われました URL と異なる場合があります。 アプリケーションへの呼び出しで"www.microsoft.com"の URL を指定する場合など、 [Navigate](#navigate)または[Navigate2](#navigate2)、渡された URL`OnNavigateComplete2`なります"<http://www.microsoft.com/>"。 また、サーバーが別の URL にブラウザーをリダイレクトする場合、ここで、リダイレクトされる URL が反映されます。
 
 ##  <a name="onnavigateerror"></a>  CHtmlView::OnNavigateError
 
