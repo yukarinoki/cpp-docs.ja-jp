@@ -25,12 +25,12 @@ helpviewer_keywords:
 - Clean Build option
 - output files, setting directory
 - Unicode, creating C++ build configuration
-ms.openlocfilehash: 5479b892a2cb97fb645dba4ffac70dd9ac4aeffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f7af0f3dd9ff373a458a6f93fb78fda443bd8e9
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594516"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51520479"
 ---
 # <a name="general-property-page-project"></a>[全般] プロパティ ページ (プロジェクト)
 
@@ -110,29 +110,29 @@ Windows 以外のプロジェクトについては、「[Linux C++ Property Page
 
 - **構成の種類**
 
-   選択できる構成ファイルの種類は以下のとおりです。
+  選択できる構成ファイルの種類は以下のとおりです。
 
-   - **アプリケーション (.exe)**
+  - **アプリケーション (.exe)**
 
-      リンカーのツールセット (C/C++ コンパイラ、MIDL、リソース コンパイラ、リンカー、BSCMake、XML Web サービス プロキシ ジェネレーター、カスタム ビルド、ビルド前のイベント、リンク前のイベント、ビルド後のイベント) を表示します。
+     リンカーのツールセット (C/C++ コンパイラ、MIDL、リソース コンパイラ、リンカー、BSCMake、XML Web サービス プロキシ ジェネレーター、カスタム ビルド、ビルド前のイベント、リンク前のイベント、ビルド後のイベント) を表示します。
 
-   - **ダイナミック ライブラリ (.dll)**
+  - **ダイナミック ライブラリ (.dll)**
 
-      リンカーのツールセットを表示し、/DLL リンカー オプションを指定し、_WINDLL 定義を CL に追加します。
+     リンカーのツールセットを表示し、/DLL リンカー オプションを指定し、_WINDLL 定義を CL に追加します。
 
-   - **メイクファイル**
+  - **メイクファイル**
 
-      メイクファイルのツールセット (NMake) を表示します。
+     メイクファイルのツールセット (NMake) を表示します。
 
-   - **スタティック ライブラリ (.lib)**
+  - **スタティック ライブラリ (.lib)**
 
-      ライブラリアンのツールセット (リンカーの代わりにライブラリアンを使用し、XML Web サービス プロキシ ジェネレーターがないこと以外はリンカーのツールセットと同じ) を表示します。
+     ライブラリアンのツールセット (リンカーの代わりにライブラリアンを使用し、XML Web サービス プロキシ ジェネレーターがないこと以外はリンカーのツールセットと同じ) を表示します。
 
-   - **ユーティリティ**
+  - **ユーティリティ**
 
-      ユーティリティのツールセット (MIDL、カスタム ビルド、ビルド前のイベント、ビルド後のイベント) を表示します。
+     ユーティリティのツールセット (MIDL、カスタム ビルド、ビルド前のイベント、ビルド後のイベント) を表示します。
 
-   プログラムを使用してこのプロパティにアクセスする方法については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>」を参照してください。
+  プログラムを使用してこのプロパティにアクセスする方法については、「<xref:Microsoft.VisualStudio.VCProjectEngine.VCConfiguration.ConfigurationType%2A>」を参照してください。
 
 - **MFC の使用法**
 
