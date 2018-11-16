@@ -33,12 +33,12 @@ helpviewer_keywords:
 - function calls [MFC], results
 - out-of-memory exceptions [MFC]
 ms.assetid: 0926627d-2ba7-44a6-babe-d851a4a2517c
-ms.openlocfilehash: fcc233b2cc0bfeeb589fec10c94343839f2c8032
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
+ms.openlocfilehash: 4b520072bd0c07e261f2cf4baf51d7ea3d14a5ab
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623445"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694557"
 ---
 # <a name="exception-handling-in-mfc"></a>例外処理 (MFC)
 
@@ -103,7 +103,7 @@ MFC 例外処理マクロを使用してアプリケーションを既に開発�
 |[CUserException クラス](../mfc/reference/cuserexception-class.md)|例外メッセージ ボックスでは、ユーザーに警告をスロー ジェネリック[CException クラス](../mfc/reference/cexception-class.md)|
 
 > [!NOTE]
->  MFC では、C++ 例外と MFC 例外処理マクロの両方をサポートします。 MFC によって直接サポートされない Windows NT 構造化例外ハンドラー (SEH) で説明したよう[構造化例外処理](https://msdn.microsoft.com/library/windows/desktop/ms680657)します。
+>  MFC では、C++ 例外と MFC 例外処理マクロの両方をサポートします。 MFC によって直接サポートされない Windows NT 構造化例外ハンドラー (SEH) で説明したよう[構造化例外処理](/windows/desktop/debug/structured-exception-handling)します。
 
 ##  <a name="_core_further_reading_about_exceptions"></a> 例外に関する詳細情報
 
