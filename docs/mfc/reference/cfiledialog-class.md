@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 94530f17c801c62005e837055ce3608e2eaa512f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499685"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694544"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog クラス
 
@@ -258,7 +258,7 @@ Windows メッセージ、`CFileDialog`クラスは、使用しているどの�
 ダイアログ ボックスのコントロールを初期化した後に呼び出し、 [CFileDialog::DoModal](#domodal)ダイアログを表示する方法、ユーザーが、パスとファイル名を入力するためのボックスです。 `DoModal` ユーザーには、[ok] \(IDOK) またはキャンセル (IDCANCEL) ボタンがクリックしたかどうかを返します。 場合`DoModal`IDOK を返しますのいずれかを使用することができます、`CFileDialog`情報を取得するパブリック メンバー関数は、ユーザーに配置します。
 
 > [!NOTE]
-> Windows vista またはそれ以降、複数回[IFileDialog::SetFileTypes](https://msdn.microsoft.com/library/windows/desktop/bb775980)エラーが発生します。 2 番目の呼び出し`SetFileTypes`のすべてのインスタンスを`CFileDialog`Windows Vista またはそれ以降の E_UNEXPECTED が返されます。 いくつか`CFileDialog`メソッドの関数呼び出し`SetFileTypes`します。 たとえば、2 回の呼び出しを`CFileDialog::DoModal`の同じインスタンスに対して、`CFileDialog`が生成されます[ASSERT](diagnostic-services.md#assert)します。
+> Windows vista またはそれ以降、複数回[IFileDialog::SetFileTypes](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes)エラーが発生します。 2 番目の呼び出し`SetFileTypes`のすべてのインスタンスを`CFileDialog`Windows Vista またはそれ以降の E_UNEXPECTED が返されます。 いくつか`CFileDialog`メソッドの関数呼び出し`SetFileTypes`します。 たとえば、2 回の呼び出しを`CFileDialog::DoModal`の同じインスタンスに対して、`CFileDialog`が生成されます[ASSERT](diagnostic-services.md#assert)します。
 
 `CFileDialog` 共有違反、ファイル名の検証および変更通知のリスト ボックスのカスタム処理を実行できるいくつかのプロテクト メンバーが含まれています。 これらのプロテクト メンバーは、コールバック関数が、ほとんどのアプリケーションを既定の処理は自動的に実行されるために使用する必要はありません。 標準の仮想関数であるために、これらの関数のメッセージ マップ エントリは必要ありません。
 
@@ -851,7 +851,7 @@ IFileOpenDialog* GetIFileOpenDialog();
 
 Windows Vista でのみ、またはを持つオブジェクトを後でこの関数を使用して*bVistaStyle*を TRUE に設定します。 場合、この関数は NULL を返します、`CFileDialog`でない、**オープン** ダイアログ ボックスまたは*bVistaStyle*が FALSE に設定します。 この最後のケースでのみ、NULL を返しますリリース モードでデバッグ モードでこれはアサーションをスローします。
 
-詳細については、`IFileOpenDialog`インターフェイスは、「 [IFileOpenDialog](https://msdn.microsoft.com/library/windows/desktop/bb775834)します。
+詳細については、`IFileOpenDialog`インターフェイスは、「 [IFileOpenDialog](/windows/desktop/api/shobjidl_core/nn-shobjidl_core-ifileopendialog)します。
 
 ### <a name="example"></a>例
 
