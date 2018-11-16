@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: ffe7b975443b8bdc050bcb19af4f990b2e5ffafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576632"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694455"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd クラス
 
@@ -142,7 +142,7 @@ virtual BOOL Create(
 ### <a name="parameters"></a>パラメーター
 
 *lpszClassName*<br/>
-Windows クラスの名前を示す文字の null で終わる文字列の指す (、 [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)構造)。 クラス名が登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数。 標準の NULL にする必要があります`CMDIChildWnd`します。
+Windows クラスの名前を示す文字の null で終わる文字列の指す (、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)構造)。 クラス名が登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数。 標準の NULL にする必要があります`CMDIChildWnd`します。
 
 *したとき*<br/>
 ウィンドウの名前を表す null で終わる文字列へのポインター。 タイトル バーのテキストとして使用します。

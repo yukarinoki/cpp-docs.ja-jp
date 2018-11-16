@@ -8,12 +8,12 @@ helpviewer_keywords:
 - memory [MFC], managing
 - memory allocation [MFC], MFC
 ms.assetid: 934ac81b-d630-4232-88e5-ea74f7187987
-ms.openlocfilehash: b5b91245d08c6c4a17c9ba96a0ca4dcf19932d9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22c5c2c835872a189fe342093a737d7887538256
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461383"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692751"
 ---
 # <a name="memory-management"></a>メモリ管理
 
@@ -21,7 +21,7 @@ ms.locfileid: "50461383"
 
 2 つの割り当て方法の 1 つの主な違いにフレームを割り当てられる実際のメモリを操作する通常ブロック自体には、ヒープ割り当てはするが常に指定のポインターのメモリ ブロックへ。 2 つのスキームのもう 1 つの主な違いは、フレーム オブジェクトが自動的に削除されたこと、中に、ヒープのオブジェクトは、プログラマが明示的に削除する必要があります。
 
-非 MFC プログラムで Windows 用のメモリ管理については、次を参照してください。[メモリ管理](https://msdn.microsoft.com/library/windows/desktop/aa366779)Windows SDK に含まれています。
+非 MFC プログラムで Windows 用のメモリ管理については、次を参照してください。[メモリ管理](/windows/desktop/memory/memory-management)Windows SDK に含まれています。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 

@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: c1eeb649917e8457af5a3a27324ae65ae8259ac8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477322"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694193"
 ---
 # <a name="cwinthread-class"></a>CWinThread クラス
 
@@ -445,7 +445,7 @@ BOOL PostThreadMessage(
 投稿されたメッセージは、メッセージ マップ マクロによって、適切なメッセージ ハンドラーにマップされます。
 
 > [!NOTE]
-> 呼び出すと[次](https://msdn.microsoft.com/library/windows/desktop/ms644946)メッセージは、スレッドのメッセージ キューに格納されます。 ただし、この方法が記載されたメッセージは、ウィンドウに関連付けられていないため、MFC はディスパッチにメッセージまたはコマンドのハンドラーにします。 これらのメッセージを処理するためにオーバーライド、 `PreTranslateMessage()` CWinApp から派生したは、関数クラスし、手動でメッセージを処理します。
+> 呼び出すと[次](/windows/desktop/api/winuser/nf-winuser-postthreadmessagea)メッセージは、スレッドのメッセージ キューに格納されます。 ただし、この方法が記載されたメッセージは、ウィンドウに関連付けられていないため、MFC はディスパッチにメッセージまたはコマンドのハンドラーにします。 これらのメッセージを処理するためにオーバーライド、 `PreTranslateMessage()` CWinApp から派生したは、関数クラスし、手動でメッセージを処理します。
 
 ##  <a name="pretranslatemessage"></a>  CWinThread::PreTranslateMessage
 

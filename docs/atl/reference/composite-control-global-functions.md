@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: 6438b9d125cc2b44c6c4525dcfa5a2bd95763304
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524431"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694180"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールに関するグローバル関数
 
@@ -490,7 +490,7 @@ inline BOOL AtlAxWinTerm();
 
 ### <a name="remarks"></a>Remarks
 
-この関数を呼び出すだけです[UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) Windows SDK で説明されているとします。
+この関数を呼び出すだけです[UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) Windows SDK で説明されているとします。
 
 呼び出した場合に既存のすべてのホスト ウィンドウが破棄された後にクリーンアップするには、この関数を呼び出す[AtlAxWinInit](#atlaxwininit)不要になったホスト ウィンドウを作成する必要があります。 この関数を呼び出さない場合、ウィンドウ クラスは登録解除する自動的にプロセスが終了します。
 

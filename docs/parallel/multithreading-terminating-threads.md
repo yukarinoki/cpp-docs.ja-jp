@@ -13,12 +13,12 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: c92d95bc2aa63d78c98d10e25de79344fe1ee0f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484020"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693296"
 ---
 # <a name="multithreading-terminating-threads-in-mfc"></a>マルチ スレッド: MFC 内のスレッドの終了
 
@@ -34,7 +34,7 @@ ms.locfileid: "50484020"
 
 ワーカー スレッドでは、スレッドの正常終了は単純です。制御関数を終了し、終了理由を呼び出し元に返すだけです。 いずれかを使用することができます、 [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)関数または**返す**ステートメント。 通常、0 を返して正常終了を通知しますが、返す値はプログラマが決めることができます。
 
-ユーザー インターフェイス スレッドでは、そのプロセスは同じように簡単: から、ユーザー インターフェイス スレッド内で呼び出す[PostQuitMessage](https://msdn.microsoft.com/library/windows/desktop/ms644945) Windows SDK に含まれています。 唯一のパラメーターを`PostQuitMessage`受け取りますが、スレッドの終了コード。 ワーカー スレッドの場合と同じように、通常は 0 を返して正常終了を通知します。
+ユーザー インターフェイス スレッドでは、そのプロセスは同じように簡単: から、ユーザー インターフェイス スレッド内で呼び出す[PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) Windows SDK に含まれています。 唯一のパラメーターを`PostQuitMessage`受け取りますが、スレッドの終了コード。 ワーカー スレッドの場合と同じように、通常は 0 を返して正常終了を通知します。
 
 ##  <a name="_core_premature_thread_termination"></a> スレッドの中断
 

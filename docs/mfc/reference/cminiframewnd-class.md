@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: f16a8cd21fe724c44a1ed648f29e42cb5d00dcd1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663307"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693527"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd クラス
 
@@ -167,7 +167,7 @@ virtual BOOL CreateEx(
 拡張スタイルを指定します、`CMiniFrameWnd`作成中です。 任意の適用、[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)ウィンドウにします。
 
 *lpClassName*<br/>
-Windows クラスの名前を示す文字の null で終わる文字列の指す (、 [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)構造)。 クラス名はグローバルに登録されている任意の名前を指定できます[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)関数またはそのいずれかの定義済みのコントロール クラス名。 NULL は指定できません。
+Windows クラスの名前を示す文字の null で終わる文字列の指す (、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)構造)。 クラス名はグローバルに登録されている任意の名前を指定できます[AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)関数またはそのいずれかの定義済みのコントロール クラス名。 NULL は指定できません。
 
 *lpWindowName*<br/>
 ウィンドウの名前を含む null で終わる文字列へのポインター。

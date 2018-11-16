@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], Win32
 - Windows Desktop applications [C++]
 - Windows API [C++]
-ms.openlocfilehash: fc2080470e3292a459325679a6c5dc00c01d6b35
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da95b1dac2f058de67719b4754d2df6dbeb6f7f0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528379"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694050"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来 Windows デスクトップ アプリケーション (C++) の作成します。
 
@@ -132,7 +132,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
    この関数で処理するコードを記述する*メッセージ*アプリケーションが Windows から受信するときに*イベント*発生します。 たとえば場合は、ユーザーは、アプリケーションで、[ok] ボタンを選択、Windows では、メッセージを送信して、内のコードを記述することができます、`WndProc`はどのような作業が適切な関数です。 呼び出された*処理*イベント。 アプリケーションに関連するイベントを処理するだけです。
 
-   詳細については、「 [ウィンドウ プロシージャ](https://msdn.microsoft.com/library/windows/desktop/ms632593)」を参照してください。
+   詳細については、「 [ウィンドウ プロシージャ](/windows/desktop/winmsg/window-procedures)」を参照してください。
 
 ### <a name="to-add-functionality-to-the-winmain-function"></a>WinMain 関数に機能を追加するには
 
@@ -157,7 +157,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
    上記の構造体のフィールドの詳細については、次を参照してください。 [WNDCLASSEX](https://msdn.microsoft.com/library/windows/desktop/ms633577)します。
 
-1. 登録、`WNDCLASSEX`で Windows メッセージを送信する方法と、ウィンドウの詳細が認識できるようにします。 [RegisterClassEx](https://msdn.microsoft.com/library/windows/desktop/ms633587) 関数を使用して、ウィンドウ クラス構造体を引数として渡します。 `_T`マクロを使用しているために使用、`TCHAR`型。
+1. 登録、`WNDCLASSEX`で Windows メッセージを送信する方法と、ウィンドウの詳細が認識できるようにします。 [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) 関数を使用して、ウィンドウ クラス構造体を引数として渡します。 `_T`マクロを使用しているために使用、`TCHAR`型。
 
    ```cpp
    if (!RegisterClassEx(&wcex))
@@ -237,7 +237,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    return (int) msg.wParam;
    ```
 
-   構造体とメッセージ ループ内の関数の詳細については、次を参照してください[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](https://msdn.microsoft.com/library/windows/desktop/ms644936)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)、および[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
+   構造体とメッセージ ループ内の関数の詳細については、次を参照してください[MSG](https://msdn.microsoft.com/library/windows/desktop/ms644958)、 [GetMessage](/windows/desktop/api/winuser/nf-winuser-getmessage)、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)、および[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage)。
 
    この段階では、 `WinMain` 関数のコードは次のようになります。
 

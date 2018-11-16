@@ -16,18 +16,18 @@ helpviewer_keywords:
 - processing [MFC]
 - background processing [MFC]
 ms.assetid: 5c7c46c1-6107-4304-895f-480983bb1e44
-ms.openlocfilehash: 1eff76e2e5fd98e63dccb9110882656f69da6539
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35078b944412142a07906791e74209fd5dab06d3
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604275"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693439"
 ---
 # <a name="idle-loop-processing"></a>アイドリング ループ処理
 
 多くのアプリケーションの実行時間のかかる処理"バック グラウンドします" 場合によってマルチ スレッドを使用して、このような作業のパフォーマンスに関する考慮事項に影響します。 MFC では、アイドル時間の作業のような単純なタスクには推奨されませんので、スレッドは、開発に余分なオーバーヘッドを伴う、 [OnIdle](../mfc/reference/cwinthread-class.md#onidle)関数。 この記事では、アイドル状態の処理について説明します。 詳細については、マルチ スレッドを参照してください[マルチ スレッドのトピック](../parallel/multithreading-support-for-older-code-visual-cpp.md)します。
 
-バック グラウンド処理の種類によっては、ユーザーがそれ以外の場合、アプリケーションと対話しない間隔中に適切に実行されます。 Microsoft Windows オペレーティング システム用に開発されたアプリケーションで、アプリケーションは、時間のかかるプロセスを多数の小さなフラグメントに分割してアイドル状態時の処理を実行できます。 各フラグメントを処理した後、アプリケーションが Windows を使用する実行の制御を生成、 [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943)ループします。
+バック グラウンド処理の種類によっては、ユーザーがそれ以外の場合、アプリケーションと対話しない間隔中に適切に実行されます。 Microsoft Windows オペレーティング システム用に開発されたアプリケーションで、アプリケーションは、時間のかかるプロセスを多数の小さなフラグメントに分割してアイドル状態時の処理を実行できます。 各フラグメントを処理した後、アプリケーションが Windows を使用する実行の制御を生成、 [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea)ループします。
 
 この記事では、アイドル、アプリケーションで処理を行う 2 つの方法について説明します。
 
@@ -37,7 +37,7 @@ ms.locfileid: "50604275"
 
 ##  <a name="_core_peekmessage_in_the_mfc_message_loop"></a> MFC のメッセージ ループで PeekMessage
 
-MFC で開発したアプリケーションは、メイン メッセージ ループで、`CWinThread`クラスには、呼び出すメッセージ ループが含まれています、 [PeekMessage](https://msdn.microsoft.com/library/windows/desktop/ms644943) Win32 API です。 これは、ループの呼び出しにも、`OnIdle`のメンバー関数`CWinThread`メッセージ間。 アプリケーションはオーバーライドすることでこのアイドル時間のメッセージを処理することができます、`OnIdle`関数。
+MFC で開発したアプリケーションは、メイン メッセージ ループで、`CWinThread`クラスには、呼び出すメッセージ ループが含まれています、 [PeekMessage](/windows/desktop/api/winuser/nf-winuser-peekmessagea) Win32 API です。 これは、ループの呼び出しにも、`OnIdle`のメンバー関数`CWinThread`メッセージ間。 アプリケーションはオーバーライドすることでこのアイドル時間のメッセージを処理することができます、`OnIdle`関数。
 
 > [!NOTE]
 >  `Run`、 `OnIdle`、およびその他の特定のメンバー関数は、クラスのメンバーであるようになりました`CWinThread`クラスのではなく`CWinApp`します。 `CWinApp` は、`CWinThread` から派生しています。

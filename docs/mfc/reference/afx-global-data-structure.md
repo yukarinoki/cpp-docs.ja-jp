@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 495d30f9fabcb3a9586504282dee881362988c3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523488"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694310"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 構造体
 
@@ -259,10 +259,10 @@ BOOL DrawTextOnGlass(
 [in]デバイス コンテキストへのポインター。
 
 *iPartId*<br/>
-[in]目的のテキストの外観を備えたコントロールの部分。 詳細については、「 [Parts and States (パーツと状態)](https://msdn.microsoft.com/library/windows/desktop/bb773210)」の表の「Parts (パーツ)」列を参照してください。 この値が 0 の場合、テキストは既定のフォント、またはデバイス コンテキストに選択されているフォントで描画されます。
+[in]目的のテキストの外観を備えたコントロールの部分。 詳細については、「 [Parts and States (パーツと状態)](/windows/desktop/controls/parts-and-states)」の表の「Parts (パーツ)」列を参照してください。 この値が 0 の場合、テキストは既定のフォント、またはデバイス コンテキストに選択されているフォントで描画されます。
 
 *iStateId*<br/>
-[in]目的のテキストの外観を備えたコントロールの状態。 詳細については、「 [Parts and States (パーツと状態)](https://msdn.microsoft.com/library/windows/desktop/bb773210)」の表の「States (状態)」列を参照してください。
+[in]目的のテキストの外観を備えたコントロールの状態。 詳細については、「 [Parts and States (パーツと状態)](/windows/desktop/controls/parts-and-states)」の表の「States (状態)」列を参照してください。
 
 *strText*<br/>
 [in]描画するテキスト。
@@ -293,7 +293,7 @@ BOOL DrawTextOnGlass(
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [COLORREF](/windows/desktop/gdi/colorref)<br/>
-[パーツと状態](https://msdn.microsoft.com/library/windows/desktop/bb773210)<br/>
+[パーツと状態](/windows/desktop/controls/parts-and-states)<br/>
 [CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
 [デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview)<br/>
@@ -431,7 +431,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="parameters"></a>パラメーター
 
 *情報*<br/>
-[入力、出力]A [NONCLIENTMETRICS](https://msdn.microsoft.com/library/windows/desktop/ff729175)最小化されていないウィンドウの非クライアント領域に関連付けられているスケーラブルなメトリックを含む構造体。
+[入力、出力]A [NONCLIENTMETRICS](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)最小化されていないウィンドウの非クライアント領域に関連付けられているスケーラブルなメトリックを含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -439,7 +439,7 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 
 ### <a name="see-also"></a>関連項目
 
-[NONCLIENTMETRICS 構造体](https://msdn.microsoft.com/library/windows/desktop/ff729175)
+[NONCLIENTMETRICS 構造体](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 

@@ -2,12 +2,12 @@
 title: ユニバーサル Windows アプリ (C++)
 ms.date: 03/30/2018
 ms.assetid: 357121cc-d390-4bae-b34a-39614861a9f4
-ms.openlocfilehash: e6e294b45e183e5e8baebcaad65cece846adb07e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ffcc38dfd849c9cd5eaf9e6466d53731becdd9a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481901"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693088"
 ---
 # <a name="universal-windows-apps-c"></a>ユニバーサル Windows アプリ (C++)
 
@@ -32,8 +32,9 @@ C +/cli WinRT は、ヘッダーのみの新しいライブラリに基づく C+
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用する UWP アプリ
 
-Windows ランタイム C++ テンプレート ライブラリでは、例外のない環境で Windows ランタイムを ISO C のコードからアクセスできる低レベルの COM インターフェイスを提供します。 ほとんどの場合、推奨使用すること C +/cli WinRT または C++/cli CX UWP アプリ開発用 Windows ランタイム C++ テンプレート ライブラリの代わりにします。 Windows ランタイム C++ テンプレート ライブラリについては、次を参照してください。 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)します。
+Windows ランタイム C++ テンプレート ライブラリでは、例外のない環境で Windows ランタイムを ISO C のコードからアクセスできる低レベルの COM インターフェイスを提供します。 ほとんどの場合、推奨使用すること C +/cli WinRT または C++/cli CX UWP アプリ開発用 Windows ランタイム C++ テンプレート ライブラリの代わりにします。 Windows ランタイム C++ テンプレート ライブラリについては、次を参照してください。 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](windows-runtime-cpp-template-library-wrl.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [Visual C++](../visual-cpp-in-visual-studio.md)<br/>
+[C++ でプログラミングする Windows の概要](overview-of-windows-programming-in-cpp.md)<br/>

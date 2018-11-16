@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CCtrlView [MFC], m_dwDefaultStyle
 - CCtrlView [MFC], m_strClass
 ms.assetid: ff488596-1e71-451f-8fec-b0831a7b44e0
-ms.openlocfilehash: 26a61f7874efc6494b41d201323a0a2a2d78548a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc202afa357dcb9d75a0dd73a3128b7b3f0cc14e
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50511762"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693400"
 ---
 # <a name="cctrlview-class"></a>CCtrlView クラス
 
@@ -145,7 +145,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="parameters"></a>パラメーター
 
 *cs*<br/>
-A [CREATESTRUCT](https://msdn.microsoft.com/library/windows/desktop/ms632603)構造体。
+A [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)構造体。
 
 ### <a name="return-value"></a>戻り値
 
