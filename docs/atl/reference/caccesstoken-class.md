@@ -52,12 +52,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAccessToken class
 ms.assetid: bb5c5945-56a5-4083-b442-76573cee83ab
-ms.openlocfilehash: faa715e8f5333a717689d281ccb89bd2369e9929
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8fadb6825bbdc970e952d2ea6c26a27b4837dfc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661267"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694531"
 ---
 # <a name="caccesstoken-class"></a>CAccessToken クラス
 
@@ -254,7 +254,7 @@ bool CreatePrimaryToken(
 
 ### <a name="remarks"></a>Remarks
 
-`CreatePrimaryToken` 呼び出し[DuplicateTokenEx](https://msdn.microsoft.com/library/windows/desktop/aa446617)新しいプライマリ トークンを作成します。
+`CreatePrimaryToken` 呼び出し[DuplicateTokenEx](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-duplicatetokenex)新しいプライマリ トークンを作成します。
 
 ##  <a name="createprocessasuser"></a>  CAccessToken::CreateProcessAsUser
 
@@ -289,7 +289,7 @@ bool CreateProcessAsUser(
 ポインターを[STARTUPINFO](/windows/desktop/api/processthreadsapi/ns-processthreadsapi-_startupinfoa)を新しいプロセスのメイン ウィンドウの表示方法を指定します。
 
 *は、*<br/>
-優先順位クラスとプロセスの作成を制御する追加のフラグを指定します。 Win32 関数を参照してください。 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)フラグの一覧についてはします。
+優先順位クラスとプロセスの作成を制御する追加のフラグを指定します。 Win32 関数を参照してください。 [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)フラグの一覧についてはします。
 
 *bLoadProfile*<br/>
 ユーザーのプロファイルが読み込まれる TRUE の場合、 [LoadUserProfile](/windows/desktop/api/userenv/nf-userenv-loaduserprofilea)します。
@@ -312,7 +312,7 @@ bool CreateProcessAsUser(
 
 ### <a name="remarks"></a>Remarks
 
-`CreateProcessAsUser` 使用して、`CreateProcessAsUser`によって表されるユーザーのセキュリティ コンテキストで実行されている新しいプロセスを作成する Win32 関数、`CAccessToken`オブジェクト。 説明を参照して、 [CreateProcessAsUser](https://msdn.microsoft.com/library/windows/desktop/ms682429)関数に必要なパラメーターの詳細についてはします。
+`CreateProcessAsUser` 使用して、`CreateProcessAsUser`によって表されるユーザーのセキュリティ コンテキストで実行されている新しいプロセスを作成する Win32 関数、`CAccessToken`オブジェクト。 説明を参照して、 [CreateProcessAsUser](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessasusera)関数に必要なパラメーターの詳細についてはします。
 
 このメソッドが成功する、 `CAccessToken` (制限付きトークンである) 場合を除き、オブジェクトは AssignPrimaryToken を保持する必要がありますと IncreaseQuota 特権。
 
@@ -348,7 +348,7 @@ A`CTokenPrivileges`制限付きトークンで削除する権限を指定する�
 
 ### <a name="remarks"></a>Remarks
 
-`CreateRestrictedToken` 使用して、 [CreateRestrictedToken](https://msdn.microsoft.com/library/windows/desktop/aa446583) Win32 関数を新しく作成する`CAccessToken`オブジェクトは、制限があります。
+`CreateRestrictedToken` 使用して、 [CreateRestrictedToken](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createrestrictedtoken) Win32 関数を新しく作成する`CAccessToken`オブジェクトは、制限があります。
 
 > [!IMPORTANT]
 >  使用する場合`CreateRestrictedToken`、以下を確認する: 既存のトークンが有効な (そして、ユーザーが入っていない) と*SidsToDisable*と*PrivilegesToDelete*が有効 (かつユーザーが入力されません)。 メソッドが FALSE を返した場合は、機能を拒否します。

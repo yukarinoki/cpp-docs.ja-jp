@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: a0aef399b734ad5b15a9a2d4028be3fde3f02505
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525308"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694778"
 ---
 # <a name="styles-used-by-mfc"></a>MFC で使用するスタイル
 
@@ -445,7 +445,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 ## <a name="window-styles"></a> ウィンドウ スタイル
 
-ウィンドウ スタイルを適用する[CWnd クラス](../../mfc/reference/cwnd-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[cwnd::create](../../mfc/reference/cwnd-class.md#create)または[とき](../../mfc/reference/cwnd-class.md#createex)します。 Windows でのウィンドウ スタイルの詳細については、次を参照してください。[ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)します。
+ウィンドウ スタイルを適用する[CWnd クラス](../../mfc/reference/cwnd-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[cwnd::create](../../mfc/reference/cwnd-class.md#create)または[とき](../../mfc/reference/cwnd-class.md#createex)します。 Windows でのウィンドウ スタイルの詳細については、次を参照してください。[ウィンドウ スタイル (Windows)](/windows/desktop/winmsg/window-styles)します。
 
 |スタイル|説明|
 |-----------|-----------------|
@@ -524,5 +524,5 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 [MessageBox 関数 (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox)<br/>
 [スクロール バー コントロールのスタイル (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)<br/>
 [静的コントロール スタイル (Windows)](/windows/desktop/Controls/static-control-styles)<br/>
-[ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)<br/>
+[ウィンドウ スタイル (Windows)](/windows/desktop/winmsg/window-styles)<br/>
 [拡張ウィンドウ スタイル (Windows)](/windows/desktop/winmsg/extended-window-styles)

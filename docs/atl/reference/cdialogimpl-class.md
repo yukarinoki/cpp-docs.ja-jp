@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 3ac8037e032112e269332d2bbf9c2065ade84ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04acfb9c653df85be8958d7248bafd93f3e0a30b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572100"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693682"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl クラス
 
@@ -93,7 +93,7 @@ template <class T,
 |コントロールの作成|[ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)|
 |ATL ダイアログ ボックスを使用|[ATL ウィンドウ クラス](../../atl/atl-window-classes.md)|
 |ATL プロジェクト ウィザード|[ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)|
-|ダイアログ ボックス|[ダイアログ ボックス](https://msdn.microsoft.com/library/windows/desktop/ms632588)と Windows SDK の後続のトピック|
+|ダイアログ ボックス|[ダイアログ ボックス](/windows/desktop/dlgbox/dialog-boxes)と Windows SDK の後続のトピック|
 
 ## <a name="requirements"></a>必要条件
 
@@ -197,7 +197,7 @@ INT_PTR DoModal(
 ### <a name="parameters"></a>パラメーター
 
 *hWndParent*<br/>
-[in]オーナー ウィンドウのハンドル。 既定値はの戻り値、 [GetActiveWindow](https://msdn.microsoft.com/library/windows/desktop/ms646292) Win32 関数。
+[in]オーナー ウィンドウのハンドル。 既定値はの戻り値、 [GetActiveWindow](/windows/desktop/api/winuser/nf-winuser-getactivewindow) Win32 関数。
 
 *dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。

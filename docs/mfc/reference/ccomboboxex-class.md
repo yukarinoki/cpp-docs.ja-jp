@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CComboBoxEx [MFC], SetItem
 - CComboBoxEx [MFC], SetWindowTheme
 ms.assetid: 33ca960a-2409-478c-84a4-a2ee8ecfe8f7
-ms.openlocfilehash: 92a81e318c74f1acd39fbfe870a7ad1277b25125
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05545051b145f3beb11e4b48e8f93fd7908a783a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501635"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694245"
 ---
 # <a name="ccomboboxex-class"></a>CComboBoxEx クラス
 
@@ -247,7 +247,7 @@ int DeleteItem(int iIndex);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は、メッセージの機能を実装[CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem)」の説明に従って、Windows SDK。 DeleteItem を呼び出すときに、 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583) CBEN_DELETEITEM 通知メッセージが親ウィンドウに送信されます。
+このメンバー関数は、メッセージの機能を実装[CBEM_DELETEITEM](/windows/desktop/Controls/cbem-deleteitem)」の説明に従って、Windows SDK。 DeleteItem を呼び出すときに、 [WM_NOTIFY](/windows/desktop/controls/wm-notify) CBEN_DELETEITEM 通知メッセージが親ウィンドウに送信されます。
 
 ##  <a name="getcomboboxctrl"></a>  CComboBoxEx::GetComboBoxCtrl
 
@@ -373,7 +373,7 @@ int InsertItem(const COMBOBOXEXITEM* pCBItem);
 
 ### <a name="remarks"></a>Remarks
 
-呼び出すと`InsertItem`、 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)メッセージである[CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem)を親ウィンドウに通知が送信されます。
+呼び出すと`InsertItem`、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)メッセージである[CBEN_INSERTITEM](/windows/desktop/Controls/cben-insertitem)を親ウィンドウに通知が送信されます。
 
 ##  <a name="setextendedstyle"></a>  CComboBoxEx::SetExtendedStyle
 

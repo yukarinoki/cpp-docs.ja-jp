@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 1025b3469611ee1e880a2abd5a4e553a1317a0d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570717"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51525523"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
@@ -64,19 +64,19 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
    移動された関数:
 
-   - double abs(double) および float abs(float)
+  - double abs(double) および float abs(float)
 
-   - double pow(double, int)、float pow(float, float)、float pow(float, int)、long double pow(long double, long double)、long double pow(long double, int)
+  - double pow(double, int)、float pow(float, float)、float pow(float, int)、long double pow(long double, long double)、long double pow(long double, int)
 
-   - 次の浮動小数点関数の float バージョンおよび long double バージョン: acos、acosh、asin、asinh、atan、atanh、atan2、cbrt、ceil、copysign、cos、cosh、erf、erfc、exp、exp2、expm1、fabs、fdim、floor、fma、fmax、fmin、fmod、frexp、hypot、ilogb、ldexp、lgamma、llrint、llround、log、log10、log1p、log2、lrint、lround、modf、nearbyint、nextafter、nexttoward、remainder、remquo、rint、round、scalbln、scalbn、sin、sinh、sqrt、tan、tanh、tgamma、trunc
+  - 次の浮動小数点関数の float バージョンおよび long double バージョン: acos、acosh、asin、asinh、atan、atanh、atan2、cbrt、ceil、copysign、cos、cosh、erf、erfc、exp、exp2、expm1、fabs、fdim、floor、fma、fmax、fmin、fmod、frexp、hypot、ilogb、ldexp、lgamma、llrint、llround、log、log10、log1p、log2、lrint、lround、modf、nearbyint、nextafter、nexttoward、remainder、remquo、rint、round、scalbln、scalbn、sin、sinh、sqrt、tan、tanh、tgamma、trunc
 
-   math.h ヘッダーだけが組み込まれている浮動小数点型の abs を使用するコードがある場合、浮動小数点バージョンは使用できなくなります。そのため、浮動小数点引数を持つ場合でも、現バージョンでは、abs(int) の呼び出しで解決します。 これによって、次のエラーが生成されます。
+  math.h ヘッダーだけが組み込まれている浮動小数点型の abs を使用するコードがある場合、浮動小数点バージョンは使用できなくなります。そのため、浮動小数点引数を持つ場合でも、現バージョンでは、abs(int) の呼び出しで解決します。 これによって、次のエラーが生成されます。
 
     ```Output
     warning C4244: 'argument' : conversion from 'float' to 'int', possible loss of data
     ```
 
-   この警告の修正方法は、`abs` の呼び出しを、`abs` の浮動小数点バージョン (double 引数の場合は `fabs`、float 引数の場合は `fabsf`) で置き換えるか、cmath ヘッダーを組み込んで `abs` を引き続き使用するかのどちらかです。
+  この警告の修正方法は、`abs` の呼び出しを、`abs` の浮動小数点バージョン (double 引数の場合は `fabs`、float 引数の場合は `fabsf`) で置き換えるか、cmath ヘッダーを組み込んで `abs` を引き続き使用するかのどちらかです。
 
 - **浮動小数点の準拠**
 
@@ -116,7 +116,7 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
    このライブラリを IDE のリンカー入力に追加するには、プロジェクト ノードのコンテキスト メニューを開き、**[プロパティ]** を選択し、**[プロジェクトのプロパティ]** ダイアログ ボックスで **[リンカー]** を選択し、**[リンカー入力]** を編集して `legacy_stdio_definitions.lib` をセミコロン区切りリストに追加します。
 
-   プロジェクトが、2015 より前のリリースの Visual Studio でコンパイルされた静的ライブラリとリンクする場合、リンカーによって、未解決の外部シンボルが報告される可能性があります。 これらのエラーは、_iob、_iob_func、または _imp\_* 形式の特定の stdio 関数の関連インポートの内部 stdio 定義を参照する可能性があります。 Microsoft は、プロジェクトをアップグレードするときに、最新バージョンの C++ コンパイラおよびライブラリですべての静的ライブラリを再コンパイルすることを推奨しています。 ライブラリが、ソースを使用できないサード パーティ ライブラリである場合、更新されたバイナリをサード パーティから要求するか、そのライブラリの使用を、古いバージョンのコンパイラおよびライブラリでコンパイルする別個の DLL にカプセル化する必要があります。
+   プロジェクトが、2015 より前のリリースの Visual Studio でコンパイルされた静的ライブラリとリンクする場合、リンカーによって、未解決の外部シンボルが報告される可能性があります。 これらのエラーは、`_iob`、`_iob_func`、または _imp_\* 形式の特定の stdio 関数の関連インポートの内部 stdio 定義を参照する可能性があります。 Microsoft は、プロジェクトをアップグレードするときに、最新バージョンの C++ コンパイラおよびライブラリですべての静的ライブラリを再コンパイルすることを推奨しています。 ライブラリが、ソースを使用できないサード パーティ ライブラリである場合、更新されたバイナリをサード パーティから要求するか、そのライブラリの使用を、古いバージョンのコンパイラおよびライブラリでコンパイルする別個の DLL にカプセル化する必要があります。
 
     > [!WARNING]
     > Windows SDK 8.1 以前とリンクする場合、これらの未解決外部シンボル エラーが発生する可能性があります。 その場合、前述のように、legacy_stdio_definitions.lib をリンカー入力に追加することにより、エラーを解決する必要があります。
@@ -139,27 +139,27 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
    以前のバージョンでは、無限大および NaNs は、MSVC 固有の sentinel 文字列のセットを使用して書式設定されていました。
 
-   - 無限大: 1.#INF
+  - 無限大: 1.#INF
 
-   - 簡易な NaN: 1.#QNAN
+  - 簡易な NaN: 1.#QNAN
 
-   - シグナリング NaN: 1.#SNAN
+  - シグナリング NaN: 1.#SNAN
 
-   - 無限大 NaN: 1.#IND
+  - 無限大 NaN: 1.#IND
 
-   これらにはすべて、プレフィックスとして符号が付けられていた可能性があります。また、書式設定はフィールドの幅と精度に応じて若干異なる可能性があります (まれな例として、`printf("%.2f\n", INFINITY)` は 1.#J と出力されます。これは、#INF が 2 桁の精度に "丸められる" ためです)。 C99 で、無限大と NaNs の書式設定の方法に関して新たな要件が導入されました。 現在、MSVC の実装は、これらの要件に準拠しています。 新しい文字列は、次のとおりです。
+  これらにはすべて、プレフィックスとして符号が付けられていた可能性があります。また、書式設定はフィールドの幅と精度に応じて若干異なる可能性があります (まれな例として、`printf("%.2f\n", INFINITY)` は 1.#J と出力されます。これは、#INF が 2 桁の精度に "丸められる" ためです)。 C99 で、無限大と NaNs の書式設定の方法に関して新たな要件が導入されました。 現在、MSVC の実装は、これらの要件に準拠しています。 新しい文字列は、次のとおりです。
 
-   - 無限台: inf
+  - 無限台: inf
 
-   - 簡易な NaN: nan
+  - 簡易な NaN: nan
 
-   - シグナリング NaN: nan(snan)
+  - シグナリング NaN: nan(snan)
 
-   - 無限大 NaN:nan(ind)
+  - 無限大 NaN:nan(ind)
 
-   これらにはすべて、プレフィックスとして符号が付けられます。 大文字の書式指定子が使用される場合 (%f ではなく %F)、文字列は大文字で出力されます (inf ではなく INF)。これは必須です。
+  これらにはすべて、プレフィックスとして符号が付けられます。 大文字の書式指定子が使用される場合 (%f ではなく %F)、文字列は大文字で出力されます (inf ではなく INF)。これは必須です。
 
-   [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 関数はこれらの新しい文字列を解析するよう変更され、これらの文字列は、printf および scanf によってラウンド トリップされます。
+  [scanf](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md) 関数はこれらの新しい文字列を解析するよう変更され、これらの文字列は、printf および scanf によってラウンド トリップされます。
 
 - **浮動小数点の書式設定と解析**
 
@@ -171,8 +171,16 @@ Visual Studio の新しいバージョンにアップグレードすると、以
     printf("%.0f\n", pow(2.0, 80))
     ```
 
+   古い出力:
+
     ```Output
-        Old:  1208925819614629200000000    New:  1208925819614629174706176
+    1208925819614629200000000
+    ```
+
+   新しい出力:
+
+    ```Output
+    1208925819614629174706176
     ```
 
    従来の解析アルゴリズムでは、入力文字列の最大 17 桁の有効桁数のみが考慮され、残りの桁は破棄されていました。 文字列によって表される値に非常に近い概算値を生成するにはこれで十分であり、結果は通常、正しく丸められた結果に非常に近い値になっていました。 新しい実装では、存在するすべての桁数を考慮に入れ、すべての入力を正しく丸めた結果が生成されます (最大長 768 桁)。 加えて、現在、これらの関数は丸めモードを採用しています (fesetround によって制御可能)。  これらの関数は異なる結果を出力する可能性があるため、これは互換性に影響する潜在的な動作の変更点になります。 新しい結果は常に、古い結果より正しくなります。
@@ -641,7 +649,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
    たとえば、コードで **placement new** と **placement delete** の両方を定義するとします。
 
     ```cpp
-    void * operator new(std::size_t, std::size_t);
+    void * operator new(std::size_t, std::size_t);
     void operator delete(void*, std::size_t) noexcept;
     ```
 
