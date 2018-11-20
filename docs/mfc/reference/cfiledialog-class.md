@@ -1489,7 +1489,7 @@ void SetControlText(
 
 このメソッドを使用して、OFN_EXPLORER スタイルでダイアログ ボックスを作成する必要があります。 それ以外の場合、アサーションと、関数は失敗します。
 
-##  <a name="setdefext"></a>  ように cfiledialog::setdefext
+##  <a name="setdefext"></a>  CFileDialog::SetDefExt
 
 エクスプ ローラー スタイルのオープンまたは名前を付けて保存の共通のダイアログ ボックスの既定のファイル名拡張子を設定するには、この関数を呼び出します。
 
