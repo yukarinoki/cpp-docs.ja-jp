@@ -1,13 +1,13 @@
 ---
 title: 'チュートリアル : 行列乗算'
-ms.date: 11/06/2018
+ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: d9516cf79b738ec03dd98133a4603b47f75eb2c8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ae86ff5a111348404616c8bb4fecd3bf22afc90c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327110"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176160"
 ---
 # <a name="walkthrough-matrix-multiplication"></a>チュートリアル : 行列乗算
 
@@ -41,13 +41,13 @@ ms.locfileid: "51327110"
 
 ここでは、次のように定義されている 2 つの行列 A と B の乗算を考えます。
 
-![3&#45;によって&#45;2 マトリックス](../../parallel/amp/media/campmatrixanontiled.png "campmatrixanontiled")
+![3&#45;によって&#45;2 行列 A](../../parallel/amp/media/campmatrixanontiled.png "3&#45;によって&#45;2 行列 A")
 
-![2&#45;によって&#45;3 マトリックス](../../parallel/amp/media/campmatrixbnontiled.png "campmatrixbnontiled")
+![2&#45;によって&#45;3 行列 B](../../parallel/amp/media/campmatrixbnontiled.png "2&#45;によって&#45;3 行列 B")
 
 A は、3 × 2 の行列であり、B は 2 × 3 の行列です。 A と B を乗算した積は、次のような 3 × 3 の行列になります。 この積は、要素ごとに A の行と B の列を乗算することによって計算されます。
 
-![3&#45;によって&#45;3 マトリックス](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;によって&#45;3 つのマトリックス")
+![3&#45;によって&#45;3 製品のマトリックス](../../parallel/amp/media/campmatrixproductnontiled.png "3&#45;によって&#45;3 製品のマトリックス")
 
 ### <a name="to-multiply-without-using-c-amp"></a>C++ AMP を使用せずに乗算するには
 
@@ -159,21 +159,21 @@ void main() {
 
 行列乗算でタイルを活用するには、アルゴリズムによって、行列をタイルに分割し、すばやくアクセスできるようにタイルのデータを `tile_static` 変数にコピーする必要があります。 この例では、行列は同じサイズのサブ行列に分割されます。 積はサブ行列を乗算することによって得られます。 この例の 2 つの行列とその積は次のとおりです。
 
-![4&#45;によって&#45;4 マトリックス](../../parallel/amp/media/campmatrixatiled.png "4&#45;によって&#45;4 行列 A")
+![4&#45;によって&#45;4 行列 A](../../parallel/amp/media/campmatrixatiled.png "4&#45;によって&#45;4 行列 A")
 
-![4&#45;によって&#45;4 マトリックス](../../parallel/amp/media/campmatrixbtiled.png "4&#45;によって&#45;4 行列 B")
+![4&#45;によって&#45;4 行列 B](../../parallel/amp/media/campmatrixbtiled.png "4&#45;によって&#45;4 行列 B")
 
-![4&#45;によって&#45;4 マトリックス](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;によって&#45;4 つの行列積")
+![4&#45;によって&#45;4 製品のマトリックス](../../parallel/amp/media/campmatrixproducttiled.png "4&#45;によって&#45;4 製品のマトリックス")
 
 この行列は、次のように定義された 4 個の 2 × 2 の行列に分割されます。
 
-![4&#45;によって&#45;4 つの行列を 2 にパーティション分割&#45;によって&#45;2 sub&#45;マトリックス](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;によって&#45;4 つの行列を 2 にパーティション分割&#45;によって&#45;2 sub&#45;マトリックス")
+![4&#45;によって&#45;4 マトリックス 2 にパーティション分割する&#45;によって&#45;2 sub&#45;マトリックス](../../parallel/amp/media/campmatrixapartitioned.png "4&#45;によって&#45;4 マトリックス 2 にパーティション分割する&#45;によって&#45;2 sub&#45;マトリックス")
 
-![4&#45;によって&#45;4 つの行列を 2 にパーティション分割&#45;によって&#45;2 sub&#45;マトリックス](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;によって&#45;4 つの行列を 2 にパーティション分割&#45;によって&#45;2 sub&#45;マトリックス")
+![4&#45;によって&#45;2 に 4 つの行列 B がパーティション分割&#45;によって&#45;2 sub&#45;マトリックス](../../parallel/amp/media/campmatrixbpartitioned.png "4&#45;によって&#45;2 に 4 つの行列 B がパーティション分割&#45;によって&#45;2 sub&#45;マトリックス")
 
 A と B の積は、次のように記述し、計算できます:
 
-![4&#45;によって&#45;4 つの行列を 2 にパーティション分割&#45;によって&#45;2 sub&#45;マトリックス](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;によって&#45;A の 4 つの行列積と B")
+![4&#45;によって&#45;4 行列、B が 2 にパーティション分割&#45;によって&#45;2 sub&#45;マトリックス](../../parallel/amp/media/campmatrixproductpartitioned.png "4&#45;によって&#45;4 行列、B が 2 にパーティション分割&#45;によって&#45;2 sub&#45;マトリックス")
 
 行列 `a` ～ `h` は 2 × 2 の行列であるため、すべての積とその合計も 2 × 2 の行列になります。 行われる、製品 A の B は 4 × 4 の行列が想定どおりであるとします。 アルゴリズムをすばやく確認するには、積の最初の行、最初の列の要素の値を計算します。 この例では、`ae + bg` の最初の行と最初の列の要素の値です。 各項について、`ae` と `bg` の最初の列と最初の行のみ計算する必要があります。 `ae` の値は `(1 * 1) + (2 * 5) = 11` です。 `bg` の値は `(3 * 1) + (4 * 5) = 23` です。 最終的な値は `11 + 23 = 34` となり、正しい値です。
 

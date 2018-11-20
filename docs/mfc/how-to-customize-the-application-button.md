@@ -1,21 +1,21 @@
 ---
 title: '方法: アプリケーション ボタンをカスタマイズする'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - application button [MFC], customizing
 ms.assetid: ebb11180-ab20-43df-a234-801feca9eb38
-ms.openlocfilehash: e556e9e6509179b692e4c86b67d59ff2e2ec0f02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba29e9ad65e0bb1d2163e4051c7c7b53664d8817
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592791"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175328"
 ---
 # <a name="how-to-customize-the-application-button"></a>方法: アプリケーション ボタンをカスタマイズする
 
 アプリケーション ボタンをクリックすると、コマンドのメニューが表示されます。 通常、ファイルに関連するコマンドを含む、メニューなど**オープン**、**保存**、**印刷**、および**終了**します。
 
-![MFC リボン アプリケーション ボタン](../mfc/media/application_button.png "application_button")
+![MFC リボン アプリケーション ボタン](../mfc/media/application_button.png "MFC リボン アプリケーション ボタン")
 
 アプリケーション ボタンをカスタマイズするでを開く、**プロパティ**ウィンドウで、そのプロパティを変更し、リボン コントロールをプレビューします。
 
@@ -57,4 +57,3 @@ ms.locfileid: "50592791"
 ## <a name="see-also"></a>関連項目
 
 [リボン デザイナー (MFC)](../mfc/ribbon-designer-mfc.md)
-

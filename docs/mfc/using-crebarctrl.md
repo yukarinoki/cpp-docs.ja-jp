@@ -1,6 +1,6 @@
 ---
 title: CReBarCtrl の使い方
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CReBarCtrl
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - combo boxes [MFC], in rebar controls
 - rebar controls
 ms.assetid: 2c0aeec2-ffc3-44b8-97b5-0f56e116a338
-ms.openlocfilehash: 0317ece49d3d5ee3c815df6f9716809ebb1fd27f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2749e4ec919e2014b3de50f1cd164ef66d2fa0ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562176"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175445"
 ---
 # <a name="using-crebarctrl"></a>CReBarCtrl の使い方
 
@@ -21,7 +21,7 @@ Rebar コントロールは、子ウィンドウのコンテナーとして機�
 
 次の図は、2 つのバンドを持つ rebar コントロールを示します。 グリッパー バー、テキスト ラベル ("Address")、およびコンボ ボックスの子ウィンドウが含まれています。 その他のバンドには、グリッパー バー、テキスト ラベル、およびフラット ツールバー (子ウィンドウで実装) が含まれています。
 
-![2 つのバンドを持つ rebar コントロール](../mfc/media/vc4ruz1.gif "vc4ruz1")
+![2 つのバンドを持つ rebar コントロール](../mfc/media/vc4ruz1.gif "を 2 つのバンドを持つ Rebar コントロール")
 
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 

@@ -1,16 +1,16 @@
 ---
 title: 非同期エージェント
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - asynchronous agents
 - agents [Concurrency Runtime]
 ms.assetid: 6cf6ccc6-87f1-4e14-af15-ea8ba58fef1a
-ms.openlocfilehash: 949074981d77702fd23ee3ff70f219c013fa6543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a99400e4df49e36e1cddda7068f315485b976cde
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467601"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176537"
 ---
 # <a name="asynchronous-agents"></a>非同期エージェント
 
@@ -22,7 +22,7 @@ ms.locfileid: "50467601"
 
 エージェントでは、一定のライフ サイクルがあります。 [Concurrency::agent_status](reference/concurrency-namespace-enums.md#agent_status)列挙体は、エージェントのさまざまな状態を定義します。 次の図は、1 つの状態から別のエージェントの進捗を示す状態図を示します。 この図では、実線は、アプリケーションから呼び出すメソッドを表します。点線は、ランタイムから呼び出されるメソッドを表します。
 
-![エージェントの状態ダイアグラム](../../parallel/concrt/media/agentstate.png "agentstate")
+![エージェントの状態ダイアグラム](../../parallel/concrt/media/agentstate.png "エージェントの状態ダイアグラム")
 
 次の表に、各状態で、`agent_status`列挙体。
 

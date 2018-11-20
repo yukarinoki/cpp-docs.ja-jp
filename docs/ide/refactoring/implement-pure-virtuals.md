@@ -2,14 +2,15 @@
 title: 純粋仮想の実装
 ms.date: 11/16/2016
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
-ms.openlocfilehash: e693fdc17057d3800053bf5a7bad64ec441bcc3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e4519f57a1d9bd9ba1cee1ed6ae41bea785a9f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614904"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692668"
 ---
 # <a name="implement-pure-virtuals"></a>純粋仮想の実装
+
 **機能:** クラスですべての純粋仮想を実装するために必要なコードをすぐに生成できます。
 
 **条件:** 純粋仮想関数のクラスからの継承が望まれるとき。

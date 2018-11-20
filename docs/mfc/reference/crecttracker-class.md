@@ -1,6 +1,6 @@
 ---
 title: CRectTracker クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CRectTracker
 - AFXEXT/CRectTracker
@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 519f88a3706812ae77d7dbd77e199b3e3ef4e97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c82b06903f0705a79a15b263b1dbdfc6aee4c8ca
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50473373"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176511"
 ---
 # <a name="crecttracker-class"></a>CRectTracker クラス
 
@@ -237,7 +237,7 @@ virtual UINT GetHandleMask() const;
 
 四角形が 8 のサイズ変更ハンドルが 0 ~ 7 の番号です。 各サイズ変更ハンドルで表されるビット マスク内ビットの値は 2 ^ *n*ここで、 *n*はサイズ変更ハンドルの数です。 ビット 0 ~ 3 は、時計回りに移動の左上に開始角のサイズ変更ハンドルに対応します。 ビット 4 ~ 7 の側面に対応にサイズ変更ハンドルの時計回りの上部で開始を指定します。 次の図は、四角形のサイズ変更を処理し、それに対応するハンドル番号と値のサイズを変更します。
 
-![ハンドル番号のサイズ変更](../../mfc/reference/media/vc35dp1.gif "vc35dp1")
+![ハンドル番号のサイズ変更](../../mfc/reference/media/vc35dp1.gif "サイズ変更ハンドルの番号")
 
 既定の実装`GetHandleMask`サイズ変更ハンドルが表示されるように、次のビット マスクを返します。 1 つのビットがある場合は、対応するサイズ変更ハンドルが描画されます。
 

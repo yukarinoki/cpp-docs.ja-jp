@@ -1,6 +1,6 @@
 ---
 title: キャスト
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - casting [C++]
 - coercion [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - polymorphic classes [C++]
 - classes [C++], polymorphism
 ms.assetid: 3dbeb06e-2f4b-4693-832d-624bc8ec95de
-ms.openlocfilehash: eb309319a4af6d604d8558552ce313ba1d0fb629
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02ade663ee92d3a301fda95bb385c3ffa48ead12
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560798"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175549"
 ---
 # <a name="casting"></a>キャスト
 
@@ -23,11 +23,13 @@ C++ 言語では、仮想関数を含む基底クラスからクラスが派生�
 
 派生クラスには派生元のすべての基底クラスの定義が完全に含まれるため、ポインターをクラスの階層構造の任意の基底クラスにキャストしても、安全です。 基底クラスへのポインターの場合は、下の階層にポインターを安全にキャストできる場合もあります。 ポイントされているオブジェクトが実際に基底クラスから派生した型である場合は、安全です。 この場合、実際のオブジェクトは "完全なオブジェクト" と呼ばれます。 基底クラスへのポインターは完全なオブジェクトの "サブオブジェクト" をポイントすると表現されます。 たとえば、次の図に示すクラスの階層構造を考えます。
 
-![クラス階層](../cpp/media/vc38zz1.gif "vc38ZZ1")クラス階層
+![クラス階層](../cpp/media/vc38zz1.gif "クラス階層") <br/>
+クラスの階層構造
 
 `C` 型のオブジェクトは、次の図に示すように視覚化できます。
 
-![Sub を持つクラス C&#45;オブジェクト B と A](../cpp/media/vc38zz2.gif "vc38ZZ2") B サブオブジェクトと A サブオブジェクトを持つクラス C
+![Sub を持つクラス C&#45;オブジェクト B と A](../cpp/media/vc38zz2.gif "sub 持つクラス C&#45;オブジェクト B と A") <br/>
+B サブオブジェクトと A サブオブジェクトを持つクラス C
 
 `C` クラスのインスタンスには、`B` サブオブジェクトと `A` サブオブジェクトがあります。 `C` サブオブジェクトと `A` サブオブジェクトを含む `B` のインスタンスは、「完全なオブジェクト」です。
 

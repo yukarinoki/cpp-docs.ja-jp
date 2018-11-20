@@ -1,6 +1,6 @@
 ---
 title: 'MFC ActiveX コントロール : ActiveX コントロールのライセンス'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - COleObjectFactory
 helpviewer_keywords:
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - GetLicenseKey method [MFC]
 - licensing ActiveX controls
 ms.assetid: cacd9e45-701a-4a1f-8f1f-b0b39f6ac303
-ms.openlocfilehash: 4001d49da8477ab9dd481d0eb3ee02cb10e1e18b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35ca5d410f642f2557d9ee797eda2d9529f7f4d1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465625"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176360"
 ---
 # <a name="mfc-activex-controls-licensing-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールのライセンス
 
 ライセンス サポート、ActiveX コントロールのオプション機能できますが、使用、またはコントロールを配布できるユーザーを制御します。 (ライセンスの問題の詳細については、ライセンスの問題を参照してください[既存の ActiveX コントロールのアップグレード](../mfc/upgrading-an-existing-activex-control.md)。)。
 
->[!IMPORTANT]
+> [!IMPORTANT]
 > ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 この記事では、次のトピックについて説明します。
@@ -43,13 +43,15 @@ ActiveX コントロールのライセンスのサポートを提供する、 [C
 
 次の図では、コンテナー アプリケーションの開発時に使用される ActiveX コントロールのライセンス認証を示します。 前述のように、コンテナー アプリケーションの開発者には、適切な必要があります。コントロールのインスタンスを作成する開発用コンピューターにインストールされている使用許諾契約書ファイルです。
 
-![ActiveX コントロールの開発時で検証をライセンス](../mfc/media/vc374d1.gif "vc374d1")ライセンスされた ActiveX コントロール開発時の検証
+![ActiveX コントロールの開発時で検証をライセンス](../mfc/media/vc374d1.gif "ライセンスされた ActiveX コントロールの開発時で検証") <br/>
+開発時の ActiveX コントロールのライセンス検査
 
 次の図に示すように、次のプロセスでは、エンド ユーザー コンテナー アプリケーションを実行するときに発生します。
 
 アプリケーションが開始されると、作成する、通常は、コントロールのインスタンス必要があります。 コンテナーでは、これを実現するを呼び出すことによって`CreateInstanceLic`、埋め込まれているライセンス キーのパラメーターとして渡します。 文字列比較が埋め込まれているライセンス キーとライセンス キーのコントロールのコピーになります。 一致が成功した場合は、コントロールのインスタンスを作成し、アプリケーションは正常に実行を継続します。 なお、します。使用許諾契約書ファイルでは、コントロールのユーザーのコンピューター上に存在する必要はありません。
 
-![実行時に検証する ActiveX コントロールのライセンス](../mfc/media/vc374d2.gif "vc374d2")ライセンスされた ActiveX コントロール中に実行するときの検証
+![実行時に検証する ActiveX コントロールのライセンス](../mfc/media/vc374d2.gif "ライセンスされた ActiveX コントロールの実行時に検証") <br/>
+実行時の ActiveX コントロールのライセンス検査
 
 コントロールのライセンスの 2 つの基本的なコンポーネントで構成されています: DLL のコントロール実装で特定のコードとライセンス ファイル。 コードは、2 つ (または 3 つ) の関数呼び出しと、「ライセンス文字列」、著作権情報を格納するいると呼ぶ文字列で構成されます。 これらの呼び出しとライセンスの文字列がコントロールの実装が見つかりました (します。CPP) ファイルです。 ActiveX コントロール ウィザード、によって生成された、ライセンス ファイルは、著作権表記を含むテキスト ファイルです。 という名前でプロジェクト名を使用して、します。例ではサンプルの使用許諾契約書拡張子。使用許諾契約書します。 ライセンス付きコントロールは、デザイン時の使用が必要な場合、ライセンス ファイルを添付してください。
 

@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPaneTaskGroup クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPaneTaskGroup
 - AFXTASKSPANE/CMFCTasksPaneTaskGroup
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCTasksPaneTaskGroup [MFC], m_rectGroup
 - CMFCTasksPaneTaskGroup [MFC], m_strName
 ms.assetid: 2111640b-a46e-4b27-b033-29e88632b86a
-ms.openlocfilehash: 25e714aa617cdccc4e02e288f1a24f636e05cb0f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ed50950bc62a0c2f382e42782c58a0d7354116f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539608"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176589"
 ---
 # <a name="cmfctaskspanetaskgroup-class"></a>CMFCTasksPaneTaskGroup クラス
 
@@ -72,19 +72,19 @@ class CMFCTasksPaneTaskGroup : public CObject
 
 次の図は、展開されたタスク グループを示しています。
 
-![展開されたタスク グループ](../../mfc/reference/media/nexttaskgrpexpand.png "nexttaskgrpexpand")
+![展開されたタスク グループ](../../mfc/reference/media/nexttaskgrpexpand.png "展開されたタスク グループ")
 
 次の図は、折りたたまれたタスク グループを示しています。
 
-![折りたたまれたタスク グループ](../../mfc/reference/media/nexttaskgrpcollapse.png "nexttaskgrpcollapse")
+![折りたたまれたタスク グループ](../../mfc/reference/media/nexttaskgrpcollapse.png "折りたたまれたタスク グループ")
 
 次の図は、キャプションのないタスク グループを示しています。
 
-![キャプションのないタスク グループ](../../mfc/reference/media/nexttaskgrpnocapt.png "nexttaskgrpnocapt")
+![キャプションのないタスク グループ](../../mfc/reference/media/nexttaskgrpnocapt.png "キャプションのないタスク グループ")
 
 次の図は、2 つのタスク グループを示します。 最初のタスク グループが設定して、特別なマーク、`m_bIsSpecial`フラグを true の場合、2 番目のタスク グループは特別ではありません。 最初のタスク グループのキャプションが 2 番目のタスク グループより暗い方法に注意してください。
 
-![特殊なタスク グループ](../../mfc/reference/media/nexttaskgrpspecial.png "nexttaskgrpspecial")
+![特殊なタスク グループ](../../mfc/reference/media/nexttaskgrpspecial.png "特殊なタスク グループ")
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

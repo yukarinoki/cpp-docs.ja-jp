@@ -1,15 +1,15 @@
 ---
 title: '方法: unique_ptr インスタンスを作成して使用する'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
-ms.openlocfilehash: 13823b34042d8658d0d690e6657e1f41db50f788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a3e5705b47a4cfdf17b9a4b4829f1e13565dd7ce
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610250"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174885"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>方法: unique_ptr インスタンスを作成して使用する
 
@@ -17,7 +17,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)そのポインターを�
 
 次の図では、2 つの `unique_ptr` のインスタンス間での所有権の移転を示します。
 
-![一意の所有権の移動&#95;ptr](../cpp/media/unique_ptr.png "unique_ptr")
+![一意の所有権の移動&#95;ptr](../cpp/media/unique_ptr.png "一意の所有権の移動&#95;ptr")
 
 `unique_ptr` 定義されている、 `<memory>` C++ 標準ライブラリのヘッダー。 生のポインターと同じくらい効率的と、C++ 標準ライブラリ コンテナーで使用できます。 追加`unique_ptr`C++ 標準ライブラリ コンテナーにインスタンスが効率的なための移動コンス トラクター、`unique_ptr`コピー操作の必要がなくなります。
 

@@ -1,6 +1,6 @@
 ---
 title: プリコンパイル済みヘッダー ファイルの作成
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - pch
 helpviewer_keywords:
@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cl.exe compiler, precompiling code
 - .pch files, creating
 ms.assetid: e2cdb404-a517-4189-9771-c869c660cb1b
-ms.openlocfilehash: 3014b2da9f9d9e03e9ea791c9a97ff59f842e8ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b570b76328ee9824610aac495d97cede19189cf9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482616"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176433"
 ---
 # <a name="creating-precompiled-header-files"></a>プリコンパイル済みヘッダー ファイルの作成
 
@@ -42,8 +42,6 @@ Microsoft C および C++ コンパイラは、インライン コードを含�
 
 プリコンパイル済みヘッダーに関連するコンパイラ オプションの参照については、次を参照してください。 [/Y (プリコンパイル済みヘッダー)](../../build/reference/y-precompiled-headers.md)します。
 
-<a name="when-to-precompile-source-code"></a>
-
 ## <a name="when-to-precompile-source-code"></a>ソース コードをプリコンパイルする時期
 
 プリコンパイル済みのコードは、特に場合、コンパイルの時間を短縮する開発サイクル中に便利です。
@@ -57,11 +55,9 @@ Microsoft C および C++ コンパイラは、インライン コードを含�
 C および C++ の両方のアプリケーションをプリコンパイルすることができます。 C++ プログラミングでは、ヘッダー ファイルにクラス インターフェイスの情報を分割する一般的なプラクティスを勧めします。 これらのヘッダー ファイルが後でクラスを使用するプログラムに含まれることができます。 これらのヘッダーをプリコンパイルするには、によってプログラムがコンパイルにかかる時間を削減できます。
 
 > [!NOTE]
->  ソース ファイルごと、1 つだけのプリコンパイル済みヘッダー (.pch) ファイルを使用できますが、プロジェクト内の複数の .pch ファイルを使用することができます。
+> ソース ファイルごと、1 つだけのプリコンパイル済みヘッダー (.pch) ファイルを使用できますが、プロジェクト内の複数の .pch ファイルを使用することができます。
 
-<a name="two-choices-for-precompiling-code"></a>
-
-# <a name="two-choices-for-precompiling-code"></a>コードをプリコンパイルする 2 つの方法
+## <a name="two-choices-for-precompiling-code"></a>コードをプリコンパイルする 2 つの方法
 
 Visual c には、C または C++ コードをプリコンパイルすることができます。プリコンパイル ヘッダー ファイルのみに限定されません。
 
@@ -73,13 +69,9 @@ Visual c には、C または C++ コードをプリコンパイルすること�
 
 コンパイラ オプションの参照トピック **/Yu**と **/Yc**開発環境では、この機能にアクセスする方法について説明します。
 
-<a name="precompiled-header-consistency-rules"></a>
-
 ## <a name="precompiled-header-consistency-rules"></a>プリコンパイル済みヘッダーの一貫性規則
 
 PCH ファイルには、マシンの環境に関する情報のほか、プログラムのメモリ アドレス情報が含まれている、ためにのみが作成されたコンピューターの PCH ファイルを使用する必要があります。
-
-<a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>
 
 ## <a name="consistency-rules-for-per-file-use-of-precompiled-headers"></a>PCH ファイルの使用時の一貫性規則
 
@@ -134,8 +126,6 @@ PCH ファイルには作成時に有効であったインクルード パスに
 |`data_seg`|`intrinsic`|`warning`|
 |`function`|`optimize`||
 
-<a name="consistency-rules-for-yc-and-yu"></a>
-
 ## <a name="consistency-rules-for-yc-and-yu"></a>/Yc および /Yu の一貫性規則
 
 /Yc、/Yu またはを使用して作成されたプリコンパイル済みヘッダーを使用すると、コンパイラは、PCH ファイルの作成時に存在している現在のコンパイル環境を比較します。 必ず、現在のコンパイルの前の 1 (一貫性のあるコンパイラ オプションや、プラグマを使用) と一貫性のある環境を指定してください。 コンパイラは、矛盾を検出した場合、警告を発行し、可能であれば、不整合を識別します。 このような警告ではありませんは、PCH ファイルの問題があるとは限りません競合の警告に単に使用します。 次のセクションでは、プリコンパイル済みヘッダーの整合性の要件について説明します。
@@ -155,15 +145,11 @@ PCH ファイルには作成時に有効であったインクルード パスに
 > [!NOTE]
 >  プリコンパイル済みヘッダーの機能は、C および C++ ソース ファイルでのみ使用を対象としています。
 
-<a name="using-precompiled-headers-in-a-project"></a>
-
 ## <a name="using-precompiled-headers-in-a-project"></a>プロジェクトでのプリコンパイル済みヘッダーの使用
 
 前のセクションでは、プリコンパイル済みヘッダーの概要を紹介:/Yc および/Yu、/Fp オプション、および[hdrstop](../../preprocessor/hdrstop.md)プラグマ。 このセクションは、プロジェクトで手動のプリコンパイル済みヘッダー オプションを使用する方法を説明します。サンプル メイクファイルと、管理しているコードで終了します。
 
 プロジェクトで手動のプリコンパイル済みヘッダー オプションを使用する別の方法については、Visual C の既定のセットアップ中に作成された mfc \src のディレクトリにメイクファイルのいずれかを調べます。 これらメイクファイルは、同じアプローチをここで説明したもの、Microsoft プログラムのメンテナンス ユーティリティ (NMAKE) マクロを使用していて、ビルド プロセスの制御を提供します。
-
-<a name="pch-files-in-the-build-process"></a>
 
 ## <a name="pch-files-in-the-build-process"></a>ビルド プロセスでの PCH ファイル
 
@@ -171,8 +157,8 @@ PCH ファイルには作成時に有効であったインクルード パスに
 
 図では、図表の 3 つのデバイスを使用して、ビルド プロセスのフローを示します。 という名前の四角形を表す各ファイルまたはマクロです。次の 3 つのマクロは、1 つまたは複数のファイルを表します。 影の部分では、各コンパイルまたはリンク アクションを表します。 矢印は、どのファイルとマクロがコンパイルまたはリンクの処理中に結合を示しています。
 
-![プリコンパイル済みヘッダー ファイルを使用するメイクファイル](../../build/reference/media/vc30ow1.gif "プリコンパイル済みヘッダー ファイルを使用するメイクファイルの構造")
-##### <a name="structure-of-a-makefile-that-uses-a-precompiled-header-file"></a>プリコンパイル済みヘッダー ファイルを使用するメイクファイルの構造
+![プリコンパイル済みヘッダー ファイルを使用するメイクファイルの構造](../../build/reference/media/vc30ow1.gif "プリコンパイル済みヘッダー ファイルを使用するメイクファイルの構造") <br/>
+プリコンパイル済みヘッダー ファイルを使用するメイクファイルの構造
 
 以降、図の上部にある STABLEHDRS と境界は、NMAKE マクロの再コンパイルを必要があります。 そうにないファイルを一覧表示します。 コマンド文字列によってこれらのファイルがコンパイルされます。
 
@@ -187,8 +173,6 @@ PCH ファイルには作成時に有効であったインクルード パスに
 MYAPP.obj では、最終的なアプリケーションを表します。 MYAPP.cpp から作成されます、ファイルが、UNSTABLEHDRS マクロに一覧表示され、プリコンパイル済みヘッダーからのコードをプリコンパイルします。
 
 実行可能ファイル (MYAPP 最後に。OBJ マクロ (APPLIB.obj および MYAPP.obj) で示されているファイルをリンクすることで、EXE) が作成されます。
-
-<a name="sample-makefile-for-pch"></a>
 
 ## <a name="sample-makefile-for-pch"></a>PCH のサンプル メイクファイル
 
@@ -254,8 +238,6 @@ NMAKE DEBUG=0
 ```
 
 メイクファイルの詳細については、次を参照してください。 [NMAKE リファレンス](../../build/nmake-reference.md)します。 参照してください[コンパイラ オプション](../../build/reference/compiler-options.md)と[リンカー オプション](../../build/reference/linker-options.md)します。
-
-<a name="example-code-for-pch"></a>
 
 ## <a name="example-code-for-pch"></a>PCH のサンプル コード
 

@@ -1,16 +1,16 @@
 ---
 title: DHTML コントロール プロジェクトの要素の識別
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - HTML controls, ATL support
 - DHTML controls, ATL support
 ms.assetid: b627547a-3768-4346-9900-4b7a21fb8e27
-ms.openlocfilehash: bb7fa67e6a3009922596c225895032bfb2f4fbb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e38b94e200754ce9dd37df2bfb17dfaa32cafe49
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533693"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175708"
 ---
 # <a name="identifying-the-elements-of-the-dhtml-control-project"></a>DHTML コントロール プロジェクトの要素の識別
 
@@ -26,7 +26,7 @@ DHTML コントロールは、ATL コントロールに似ていますを除く�
 
 次の図は、DLL、DHTML コントロール、Web ブラウザー、および HTML リソース間のリレーションシップを示しています。
 
-![DHTML コントロール プロジェクトの要素](../atl/media/vc52en1.gif "vc52en1")
+![DHTML コントロール プロジェクトの要素](../atl/media/vc52en1.gif "DHTML コントロール プロジェクトの要素")
 
 > [!NOTE]
 >  このグラフィックの名前は、プレース ホルダーです。 HTML のリソースと、コントロールに公開されるインターフェイスの名前は、ATL コントロール ウィザードで割り当てた名前に基づいています。
@@ -47,7 +47,7 @@ DHTML コントロールは、ATL コントロールに似ていますを除く�
 
 ATL コントロール ウィザードでは、HTML リソースおよび .cpp ファイルの両方で既定のコードを使用して、コントロールを生成します。 コンパイルし、ウィザードによって生成されると、コントロールを実行して、Web ブラウザーまたは ActiveX コントロール テスト コンテナーのいずれかで、コントロールを表示できます。 次の図は、テスト コンテナーに表示される 3 つのボタンで ATL DHTML コントロールの既定値を示しています。
 
-![ATL DHTML コントロール](../atl/media/vc52en2.gif "vc52en2")
+![ATL DHTML コントロール](../atl/media/vc52en2.gif "ATL DHTML コントロール")
 
 参照してください[ATL DHTML コントロールの作成](../atl/creating-an-atl-dhtml-control.md)DHTML コントロールの構築を開始します。 参照してください[テスト プロパティとテスト コンテナーでイベント](../mfc/testing-properties-and-events-with-test-container.md)テスト コンテナーにアクセスする方法についてはします。
 

@@ -1,6 +1,6 @@
 ---
 title: 単一継承
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - single inheritance
 - base classes [C++], indirect
@@ -10,18 +10,19 @@ helpviewer_keywords:
 - derived classes [C++], single base class
 - inheritance, single
 ms.assetid: 1cb946ed-8b1b-4cf1-bde0-d9cecbfdc622
-ms.openlocfilehash: a188780201c00451b125288b37c7c62fbe2322c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96af0c42a32f14280fd8c208a3e4eaec38a8ca3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461855"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175627"
 ---
 # <a name="single-inheritance"></a>単一継承
 
 継承の一般的な形態である "単一継承" では、クラスの持つ基底クラスは 1 つだけです。 次の図に示す関係を考えます。
 
-![1 つの基本的な&#45;継承グラフ](../cpp/media/vc38xj1.gif "vc38XJ1")単純 Single_inheritance グラフ
+![1 つの基本的な&#45;継承グラフ](../cpp/media/vc38xj1.gif "基本的な単一&#45;継承グラフ") <br/>
+単純な単一継承のグラフ
 
 図における一般から特殊への流れに注意してください。 ほとんどのクラス階層のデザインにあるもう 1 つの一般的な属性は、派生クラスが基底クラスと "kind of" (種類) 関係を持つことです。 図では、`Book` は `PrintedDocument` の 1 種であり、`PaperbackBook` は `book` の 1 種です。
 
@@ -47,12 +48,13 @@ class PaperbackBook : public Book {};
 
 クラスは、次の図に示すように、多くの特定のクラスの基底クラスとして機能します。
 
-![指示に従って有向非巡回グラフ](../cpp/media/vc38xj2.gif "vc38XJ2")サンプルの有向非循環有向グラフ
+![指示に従って有向非巡回グラフ](../cpp/media/vc38xj2.gif "ダイレクト有向非巡回グラフ") <br/>
+有向非循環グラフの例
 
 "有向非循環グラフ" ("DAG") と呼ばれる上記の図では、一部のクラスが複数の派生クラスの基底クラスになっています。 ただし、その逆は正しくありません。どの派生クラスにも直接基底クラスは 1 つしかありません。 図のグラフは、"単一継承" 構造を示しています。
 
 > [!NOTE]
->  有向非循環グラフは、単一継承に特有のものではありません。 多重継承グラフを記述するためにも使用されます。
+> 有向非循環グラフは、単一継承に特有のものではありません。 多重継承グラフを記述するためにも使用されます。
 
 継承の場合、派生クラスは、基底クラスのメンバーと、追加した新しいメンバーを含みます。 その結果、派生クラスは基底クラスのメンバーを参照できます (それらのメンバーが派生クラスで再定義されていない限り)。 直接または間接基底クラスのメンバーが派生クラスで再定義された場合は、スコープ解決演算子 (`::`) を使用してそれらのメンバーを参照できます。 次の例について考えます。
 

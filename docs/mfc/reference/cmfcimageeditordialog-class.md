@@ -1,6 +1,6 @@
 ---
 title: CMFCImageEditorDialog クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCImageEditorDialog
 - AFXIMAGEEDITORDIALOG/CMFCImageEditorDialog
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCImageEditorDialog [MFC], CMFCImageEditorDialog
 ms.assetid: 6a7d08f3-1ec2-4062-9b79-a0c2776b58d1
-ms.openlocfilehash: 84bbe72abeedc03f19f06a1f8498023ff54be95e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68cfa663f9be9f190a6d3425a2ebf6ceb73e2007
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503065"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175074"
 ---
 # <a name="cmfcimageeditordialog-class"></a>CMFCImageEditorDialog クラス
 
@@ -47,7 +47,7 @@ class CMFCImageEditorDialog : public CDialogEx
 
 次の図は、イメージ エディター ダイアログ ボックスを示しています。
 
-![[CMFCImageEditorDialog] ダイアログ ボックス](../../mfc/reference/media/imageedit.png "imageedit")
+![[CMFCImageEditorDialog] ダイアログ ボックス](../../mfc/reference/media/imageedit.png "CMFCImageEditorDialog ダイアログ ボックス")
 
 使用する方法の 1 つ、`CMFCImageEditorDialog`オブジェクトを渡すことが、`CBitmap`編集する画像。 イメージの編集領域が制限されたサイズと論理ピクセルのサイズが領域に合わせて調整するため、大きいイメージを作成できません。 呼び出す、`DoModal`モーダル ダイアログ ボックスを起動する方法。
 

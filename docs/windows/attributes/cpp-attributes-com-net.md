@@ -1,17 +1,17 @@
 ---
 title: COM および .NET C++ 属性
 ms.custom: index-page
-ms.date: 10/02/2018
+ms.date: 11/19/2018
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: bacfd4cb78c5bf65422fb4472a4563776041a87b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589281"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175770"
 ---
 # <a name="c-attributes-for-com-and-net"></a>COM および .NET C++ 属性
 
@@ -55,7 +55,7 @@ class CMyReceiver
 
 次の図は、コンパイラと属性プロバイダー間のリレーションシップを示しています。
 
-![コンポーネント属性コミュニケーション](../media/vccompattrcomm.gif "vcCompAttrComm")
+![コンポーネント属性コミュニケーション](../media/vccompattrcomm.gif "コンポーネント属性コミュニケーション")
 
 > [!NOTE]
 > 属性の使用方法には、ソース ファイルの内容は変更されません。 属性が生成されたコードが表示される唯一の時間は、デバッグ セッション中には。 さらに、プロジェクト内の各ソース ファイルの属性を置換した結果を表示するテキスト ファイルを生成できます。 この手順の詳細については、次を参照してください。 [/Fx (挿入されたコードのマージ)](../../build/reference/fx-merge-injected-code.md)と[挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)します。

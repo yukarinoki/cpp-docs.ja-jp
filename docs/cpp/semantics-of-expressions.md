@@ -1,18 +1,18 @@
 ---
 title: 式のセマンティクス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - grammar, expressions
 - expressions [C++], semantics
 - expression evaluation
 - expression evaluation, about expression evaluation
 ms.assetid: 4a792154-533b-48b9-8709-31bfc170f0a7
-ms.openlocfilehash: df86f73aa38ad9393adcbf193390cd785c934115
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2ce510478bcf1574429c85f704552e6b73100ea
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490962"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175786"
 ---
 # <a name="semantics-of-expressions"></a>式のセマンティクス
 
@@ -43,7 +43,8 @@ int main()
 54
 ```
 
-![式の評価順序](../cpp/media/vc38zv1.gif "vc38ZV1")式の評価順序
+![式の評価順序](../cpp/media/vc38zv1.gif "式の評価順序") <br/>
+式の評価順序
 
 上の図に示す式が評価される順序は、演算子の優先順位と結合規則によって決まります。
 
@@ -55,7 +56,8 @@ int main()
 
 かっこを使用して部分式がグループ化されている場合は、優先順位が変更されるため、次の図に示すように、式の評価順序も変更されます。
 
-![かっこ付きの式の評価順序](../cpp/media/vc38zv2.gif "vc38ZV2")をかっこで式の評価順序
+![かっこ付きの式の評価順序](../cpp/media/vc38zv2.gif "かっこ付きの式の評価順序") <br/>
+かっこで式の評価順序
 
 上の図のような式は、純粋に式の副作用 (この場合は標準出力デバイスへの情報転送) のためだけに評価されます。
 
@@ -68,7 +70,7 @@ C++ 言語では、オペランドを指定するときに、特定の互換性�
 |想定される型|許可される型|
 |-------------------|-------------------|
 |*type*|`const` *type*<br /> `volatile` *type*<br /> *type*&<br /> `const` *type*&<br /> `volatile` *type*&<br /> `volatile const` *type*<br /> `volatile const` *type*&|
-|*type*\*|*type*\*<br /> `const` *type*\*<br /> `volatile` *type*\*<br /> `volatile const` *type*\*|
+|*型* \*|*型* \*<br /> `const` *型* \*<br /> `volatile` *型* \*<br /> `volatile const` *型* \*|
 |`const` *type*|*type*<br /> `const` *type*<br />`const` *type*&|
 |`volatile` *type*|*type*<br /> `volatile` *type*<br /> `volatile` *type*&|
 

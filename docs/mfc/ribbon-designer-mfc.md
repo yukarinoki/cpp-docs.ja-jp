@@ -1,24 +1,24 @@
 ---
 title: リボン デザイナー (MFC)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - vc.editors.ribbon.F1
 helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 3b28783cb12aeeb03bf1687e5922b276af0d52c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 903adc96f4c9bc092ac23787781a76c0e7e3714c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521399"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175835"
 ---
 # <a name="ribbon-designer-mfc"></a>リボン デザイナー (MFC)
 
 リボン デザイナーを使用すると、MFC アプリケーションでリボンを作成してカスタマイズできます。 リボンは、複数のコマンドを 1 つの論理グループにまとめたユーザー インターフェイス (UI) 要素です。 これらのグループは、ウィンドウの上部に水平に並んで表示されるタブに別々に表示されます。 リボンは、メニュー バーとツール バーの代わりに表示されます。 リボンは、アプリケーションの使用性を大幅に向上させます。 詳細については、次を参照してください。[リボン](/windows/desktop/uxguide/cmd-ribbons)します。 リボンを次の図に示します。
 
-![MFC リボン リソース コントロール](../mfc/media/ribbon_no_callouts.png "ribbon_no_callouts")
+![MFC リボン リソース コントロール](../mfc/media/ribbon_no_callouts.png "MFC リボン リソース コントロール")
 
 リボンを Visual Studio の以前のバージョンなどの MFC リボン クラスを使用するコードを記述することで作成する必要がある[CMFCRibbonBar クラス](../mfc/reference/cmfcribbonbar-class.md)します。 Visual Studio 2010 以降では、リボン デザイナーは、リボンを構築するための別の方法を提供します。 最初に、リボンをリソースとして作成およびカスタマイズします。 次に、リボン リソースを MFC アプリケーションのコードから読み込みます。 リボン リソースと MFC リボン クラスを同時に使用することもできます。 たとえば、リボン リソースを作成でき、プログラムで要素を追加して実行時にコードを使用してできます。
 
@@ -71,7 +71,7 @@ MFC アプリケーションでリボン リソースを使用するには、呼
 
 リボン デザイナーのさまざまなコンポーネントを次の図に示します。
 
-![MFC リボン デザイナー](../mfc/media/ribbon_designer.png "ribbon_designer")
+![MFC リボン デザイナー](../mfc/media/ribbon_designer.png "MFC リボン デザイナー")
 
 - **ツールボックス:** デザイナー画面にドラッグできるコントロールが含まれています。
 
@@ -95,7 +95,7 @@ MFC アプリケーションでリボン リソースを使用するには、呼
 
 ## <a name="definitions-of-ribbon-elements"></a>リボン要素の定義
 
-![MFC リボン](../mfc/media/ribbon.png "リボン")
+![MFC リボン](../mfc/media/ribbon.png "MFC リボン")
 
 - **アプリケーション ボタン:** リボンの左上隅に表示されるボタン。 アプリケーション ボタンは [ファイル] メニューの代わりに表示され、リボンが最小化されている場合でも表示されます。 このボタンをクリックすると、コマンド リストを含むメニューが表示されます。
 

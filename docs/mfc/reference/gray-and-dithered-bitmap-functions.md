@@ -1,6 +1,6 @@
 ---
 title: 淡色表示 (灰色) ビットマップ関数とディザリングされたビットマップ関数
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - AFXWIN/AfxDrawGrayBitmap
 - AFXWIN/AfxGetGrayBitmap
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - gray and dithered bitmap functions [MFC]
 ms.assetid: cb139a77-b85e-4504-9d93-24156ad77a41
-ms.openlocfilehash: 1134cde55fbe5addac34b9c0433ff11df4c9bdc7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e1d4bd0e851a14680a46d7d6ae79dcf4bd190e4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490897"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176732"
 ---
 # <a name="gray-and-dithered-bitmap-functions"></a>淡色表示 (灰色) ビットマップ関数とディザリングされたビットマップ関数
 
@@ -22,7 +22,7 @@ ms.locfileid: "50490897"
 
 MFC には、ビットマップのコントロールが無効になっていることを示すための 2 つの関数が用意されています。
 
-![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "灰色と元のアイコンの比較")
 
 |||
 |-|-|
@@ -33,7 +33,7 @@ MFC には、ビットマップのコントロールが無効になっている�
 
 MFC には、ビットマップの背景をディザリングされたパターンに置き換える 2 つの関数も用意されています。
 
-![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "ディザリングされたと元のアイコンの比較")
 
 |||
 |-|-|
@@ -74,7 +74,7 @@ void AFXAPI AfxDrawGrayBitmap(
 
 `AfxDrawGrayBitmap` で描画されるビットマップの外観は、無効なコントロールになります。
 
-![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "灰色と元のアイコンの比較")
 
 ### <a name="example"></a>例
 
@@ -110,7 +110,7 @@ void AFXAPI AfxGetGrayBitmap(
 
 `AfxGetGrayBitmap` でコピーされるビットマップの外観は、無効なコントロールのようになります。
 
-![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "vcgraybitmap")
+![灰色と元のアイコンの比較](../../mfc/reference/media/vcgraybitmap.gif "灰色と元のアイコンの比較")
 
 ### <a name="example"></a>例
 
@@ -158,7 +158,7 @@ void AFXAPI AfxDrawDitheredBitmap(
 
 2 色でレプリケート先 DC に元のビットマップが描画されます (*cr1*と*cr2*) 格子模様のパターン ビットマップの背景を置換します。 ソース ビットマップの背景は、その白いピクセル、左上隅にあるビットマップのピクセルの色と一致するすべてのピクセルとして定義されます。
 
-![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "vcditheredbitmap")
+![ディザリングされたと元のアイコンの比較](../../mfc/reference/media/vcditheredbitmap.gif "ディザリングされたと元のアイコンの比較")
 
 ### <a name="example"></a>例
 

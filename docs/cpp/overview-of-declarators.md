@@ -1,21 +1,22 @@
 ---
 title: 宣言の概要
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declarators, about declarators
 ms.assetid: 0f2e2312-80bd-4154-8345-718bd9ed2173
-ms.openlocfilehash: 66f1068fd3f69d3e4546f159ec22b34024bd2057
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e651b4422a159bf947e364c82cc4aac1b888d30d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326759"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177083"
 ---
 # <a name="overview-of-declarators"></a>宣言の概要
 
 宣言子は、オブジェクトまたは関数の名前を指定する宣言の構成要素です。 また、宣言子は、名前付きオブジェクトがオブジェクト、ポインター、参照、または配列であるかどうかも指定します。  宣言子は基本型を指定しませんが、ポインター、参照、配列などの派生型を指定するために、基本型の型情報を変更します。  関数に適用されると、宣言子は型指定子と組み合わせて、関数の戻り値の型がオブジェクト、ポインター、または参照であるかを完全に指定します  (指定子で説明した[宣言と定義](declarations-and-definitions-cpp.md)型やストレージ クラスなどのプロパティを伝達します。 このセクションで説明した修飾子[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)、宣言子を変更します)。次の図は、`MyFunction` の宣言全体と宣言の構成要素を示します。
 
-![修飾子、指定子、および宣言子](../cpp/media/vc38qy1.gif "vc38QY1")指定子、修飾子、および宣言子
+![修飾子、指定子、および宣言子](../cpp/media/vc38qy1.gif "修飾子、指定子、および宣言子") <br/>
+指定子、修飾子、および宣言子
 
 **Microsoft 固有の仕様**
 

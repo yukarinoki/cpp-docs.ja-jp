@@ -1,6 +1,6 @@
 ---
 title: 'MFC ActiveX コントロール: フォントの使用'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - OnFontChanged
 - HeadingFont
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - SelectStockFont method [MFC]
 - fonts [MFC], ActiveX controls
 ms.assetid: 7c51d602-3f5a-481d-84d1-a5d8a3a71761
-ms.openlocfilehash: 6a647f67849d84119d58186fc71ec1b412713734
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb7668f65b04372b87059034c3ec6cd20abc48d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608918"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175822"
 ---
 # <a name="mfc-activex-controls-using-fonts"></a>MFC ActiveX コントロール: フォントの使用
 
@@ -204,7 +204,8 @@ BEGIN_PROPPAGEIDS マクロのカウント パラメーターは、いずれか�
 
 その通知は、コントロールは、ストック フォント プロパティを使用している場合、`OnFontChanged`のメンバー関数`COleControl`します。 カスタム フォントのプロパティを追加すると、同じ実装を使用して、そのことができます。 前のセクションの例で渡すことによってこれが &*トラクター*初期化するときに、*取り上げた*メンバー変数。
 
-![複数のフォント オブジェクト インターフェイスを実装する](../mfc/media/vc373q1.gif "vc373q1")複数のフォント オブジェクト インターフェイスを実装します。
+![複数のフォント オブジェクト インターフェイスを実装する](../mfc/media/vc373q1.gif "複数のフォント オブジェクト インターフェイスを実装します。") <br/>
+複数のフォント オブジェクト インターフェイスの実装
 
 上記の図の実線は、両方のフォント オブジェクトでの同じ実装を使用していることを表示`IFontNotification`します。 これにより、どのフォントが変更を区別する場合は問題が発生する可能性があります。
 

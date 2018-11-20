@@ -1,13 +1,13 @@
 ---
 title: コレクション (C++/CX)
-ms.date: 01/22/2017
+ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d139bcfc6cdf61940a40ca069dd157c1805e2034
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531590"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176394"
 ---
 # <a name="collections-ccx"></a>コレクション (C++/CX)
 
@@ -15,7 +15,7 @@ C +/cli/CX プログラムの場合は、標準テンプレート ライブラ�
 
 Windows ランタイムは、コレクションと関連する型、および C + 用のインターフェイスを定義します。/cli CX は collection.h ヘッダー ファイルで具象 C++ 実装を提供します。 この図は、コレクション型間のリレーションシップを示しています。
 
-![C&#43;&#43;&#47;/CX 継承ツリーのコレクション型](../cppcx/media/cppcxcollectionsinheritancetree.png "CPPCXCollectionsInheritanceTree")
+![C&#43;&#43;&#47;/CX 継承ツリーのコレクション型](../cppcx/media/cppcxcollectionsinheritancetree.png "C&#43;&#43;&#47;/CX 継承ツリーのコレクション型")
 
 - [Platform::Collections::Vector クラス](../cppcx/platform-collections-vector-class.md) は [std::vector クラス](../standard-library/vector-class.md)と似ています。
 
@@ -63,7 +63,7 @@ Windows ランタイムは、コレクションと関連する型、および C 
 
 `range for` に対する `IVector<Person^>`ループ処理の例を次に示します。 実行が 64 行のブレークポイントで停止していることに注意してください。 **[クイック ウォッチ]** ウィンドウには、反復子変数 `p` が実際には `VectorProxy<Person^>` メンバー変数と `m_v` メンバー変数を持つ `m_i` であることが示されています。 ただし、この変数で `GetType` を呼び出すと、 `Person` インスタンス `p2`と同一の型が返されます。 `VectorProxy` と `ArrowProxy` が **[クイック ウォッチ]**、デバッガーの一部のコンパイラ エラー、またはその他の場所に表示される場合でも、通常はそれらについて明示的にコーディングする必要はありません。
 
-![範囲内にある VectorProxy&#45;基づく for ループ](../cppcx/media/vectorproxy-1.png "VectorProxy_1")
+![範囲内にある VectorProxy&#45;基づく for ループ](../cppcx/media/vectorproxy-1.png "範囲内にある VectorProxy&#45;基づく for ループ")
 
 プロキシ オブジェクトに関してコーディングする必要があるのは、 `dynamic_cast` 要素コレクションで特定の型の XAML オブジェクトを探している場合など、要素で `UIElement` を実行する必要がある場合です。 この場合は、最初に [Platform::Object](../cppcx/platform-object-class.md)^ に要素をキャストし、その後に動的キャストを実行する必要があります。
 

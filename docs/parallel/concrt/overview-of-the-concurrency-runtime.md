@@ -1,18 +1,18 @@
 ---
 title: コンカレンシー ランタイムの概要
-ms.date: 07/20/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Concurrency Runtime, requirements
 - Concurrency Runtime, architecture
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: dab4860bcc69780fa6a6390e2ef111216642637a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693655"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176667"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>コンカレンシー ランタイムの概要
 
@@ -60,10 +60,10 @@ Visual Studio 2015 以降では、コンカレンシー ランタイムのタス
 
 **同時実行ランタイム アーキテクチャ**
 
-![同時実行ランタイム アーキテクチャ](../../parallel/concrt/media/concurrencyrun.png "concurrencyrun")
+![同時実行ランタイム アーキテクチャ](../../parallel/concrt/media/concurrencyrun.png "同時実行ランタイムのアーキテクチャ")
 
 > [!IMPORTANT]
->  タスク スケジューラと Resource Manager のコンポーネントは、ユニバーサル Windows プラットフォーム (UWP) アプリから、または ppltasks.h の task クラスまたはその他の種類を使用するときにご利用いただけません。
+> タスク スケジューラと Resource Manager のコンポーネントは、ユニバーサル Windows プラットフォーム (UWP) アプリから、または ppltasks.h の task クラスまたはその他の種類を使用するときにご利用いただけません。
 
 同時実行ランタイムが高*コンポーザブル*、つまりより多くの既存の機能を組み合わせることができます。 コンカレンシー ランタイムでは、下位のコンポーネントから、並列アルゴリズムなど多数の機能を構成します。
 

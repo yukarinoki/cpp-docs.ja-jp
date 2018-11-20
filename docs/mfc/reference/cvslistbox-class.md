@@ -1,6 +1,6 @@
 ---
 title: CVSListBox クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CVSListBox
 - AFXVSLISTBOX/CVSListBox
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: e44fa868fc573efbf89bb00147f670298f633381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb12f17aec43653931343e80926d59560d879c3a
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513764"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176213"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox クラス
 
@@ -81,7 +81,7 @@ class CVSListBox : public CVSListBoxBase
 
 編集可能なリスト コントロールの図を次に示します。 2 番目の一覧のエントリは、"Item2"のタイトルは編集用に選択します。
 
-![CVSListBox コントロール](../../mfc/reference/media/cvslistbox.png "cvslistbox")
+![CVSListBox コントロール](../../mfc/reference/media/cvslistbox.png "CVSListBox コントロール")
 
 リソース エディターを使用して、編集可能なリスト コントロールを追加する場合、**ツールボックス**エディターのペインが編集可能な定義済みのリスト コントロールを提供しません。 代わりなどの静的コントロールを追加、**グループ ボックス**コントロール。 フレームワークは、編集可能なリスト コントロールの位置とサイズを指定するのにプレース ホルダーとして静的コントロールを使用します。
 
