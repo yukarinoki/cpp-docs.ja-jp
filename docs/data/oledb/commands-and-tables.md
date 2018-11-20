@@ -1,6 +1,6 @@
 ---
 title: コマンドとテーブル
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB consumer templates, table support
 - CCommand class, OLE DB consumer templates
@@ -11,18 +11,18 @@ helpviewer_keywords:
 - tables [C++], OLE DB Consumer Templates
 - OLE DB consumer templates, command support
 ms.assetid: 4bd3787b-6d26-40a9-be0c-083080537c12
-ms.openlocfilehash: 0baa388fc1667769892c841a4cc5d68a1b9d0255
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94581339353866d78faf7e20335c80250fb6027b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543482"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175315"
 ---
 # <a name="commands-and-tables"></a>コマンドとテーブル
 
 コマンドとテーブルに行セットにアクセスすることを許可します。行セットを開き、コマンドを実行して、列をバインドします。 [CCommand](../../data/oledb/ccommand-class.md)と[CTable](../../data/oledb/ctable-class.md)クラスがそれぞれコマンドとテーブルのオブジェクトをインスタンス化します。 これらのクラスから派生[CAccessorRowset](../../data/oledb/caccessorrowset-class.md)次の図に示すようにします。
 
-![CCommand および CTable](../../data/oledb/media/vccommandstables.gif "vccommandstables")<br/>
+![CCommand および CTable](../../data/oledb/media/vccommandstables.gif "CCommand および CTable")<br/>
 コマンドとテーブル クラス
 
 前の表に`TAccessor`、アクセサーの型に指定できる[アクセサーの種類](../../data/oledb/accessors-and-rowsets.md)します。 `TRowset` 指定できる任意の行セットの種類ある[行セットの種類](../../data/oledb/accessors-and-rowsets.md)します。 `TMultiple` 結果の型 (1 つまたは複数の結果セット) を指定します。

@@ -1,6 +1,6 @@
 ---
 title: ドキュメント、ビュー、フレームワーク
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document templates [MFC], template objects
 - applications [MFC]
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - MFC object relationships
 - thread objects [MFC]
 ms.assetid: 409ddd9b-66ad-4625-84f7-bf55a41d697b
-ms.openlocfilehash: f9397c2a16d8411fe91cbf6c1c1de3ecdffbeae7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59e8b69dcdf0bf3b22d4286ba4692558a11e096
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662372"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175757"
 ---
 # <a name="documents-views-and-the-framework"></a>ドキュメント、ビュー、フレームワーク
 
@@ -59,7 +59,8 @@ MFC フレームワークの中核には、ドキュメントとビューの概�
 
 実行中のアプリケーションでこれらのオブジェクトは、協調的コマンドおよびその他のメッセージによって結合されて、ユーザーの操作に応答します。 1 つのアプリケーション オブジェクトは、1 つまたは複数のドキュメント テンプレートを管理します。 それぞれのドキュメント テンプレートを作成および (アプリケーションが SDI または MDI のどちらか) に応じて、1 つまたは複数のドキュメントを管理します。 ユーザーは、表示して、フレーム ウィンドウ内に含まれるビューを使用して、ドキュメントを操作できます。 次の図は、SDI アプリケーションのこれらのオブジェクト間の関係を示します。
 
-![実行中の SDI アプリケーション内のオブジェクト](../mfc/media/vc386v1.gif "vc386v1")中の SDI アプリケーションを実行しているオブジェクト
+![実行中の SDI アプリケーション内のオブジェクト](../mfc/media/vc386v1.gif "中の実行中の SDI アプリケーション オブジェクト") <br/>
+動作中の SDI アプリケーションのオブジェクト
 
 この一連のトピックの残りの部分では、framework のツール、MFC アプリケーション ウィザード、および、リソース エディターがこれらのオブジェクトを作成する方法、どのように連動する、および、プログラミングでの使用方法について説明します。 ドキュメント、ビュー、およびフレーム ウィンドウがで詳しく説明されている[ウィンドウ オブジェクト](../mfc/window-objects.md)と[ドキュメント/ビュー アーキテクチャ](../mfc/document-view-architecture.md)します。
 

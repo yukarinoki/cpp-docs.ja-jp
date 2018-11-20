@@ -1,6 +1,6 @@
 ---
 title: CMFCPropertySheet クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCPropertySheet
 - AFXPROPERTYSHEET/CMFCPropertySheet
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 8e643474d577c606e80f5f34c6166a59753610f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50531613"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176407"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet クラス
 
@@ -112,15 +112,15 @@ class CMFCPropertySheet : public CPropertySheet
 
 次の図は、埋め込みの Microsoft Outlook ツール バー スタイルのプロパティ シートを示しています。 プロパティ シートの左側に Outlook ツール バーが表示されます。
 
-![CMFCPropertySheet カラー コントロール](../../mfc/reference/media/cmfcpropertysheet_color.png "cmfcpropertysheet_color")
+![CMFCPropertySheet カラー コントロール](../../mfc/reference/media/cmfcpropertysheet_color.png "CMFCPropertySheet カラー コントロール")
 
 次の図を含むプロパティ シートを示しています、 [CMFCPropertyGridCtrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)オブジェクト。 このオブジェクトは、標準のコモン コントロール スタイルのプロパティ シートです。
 
-![CMFCPropertySheet リストおよびプロパティ コントロール](../../mfc/reference/media/cmfcpropertysheet_list.png "cmfcpropertysheet_list")
+![CMFCPropertySheet リストおよびプロパティ コントロール](../../mfc/reference/media/cmfcpropertysheet_list.png "CMFCPropertySheet リストおよびプロパティ コントロール")
 
 次の図は、ツリー コントロール スタイルのプロパティ シートを示しています。
 
-![プロパティ ツリー](../../mfc/reference/media/proptree.png "proptree")
+![プロパティ ツリー](../../mfc/reference/media/proptree.png "プロパティ ツリー")
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

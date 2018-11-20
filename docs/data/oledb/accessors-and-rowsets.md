@@ -1,6 +1,6 @@
 ---
 title: アクセサーと行セット
-ms.date: 10/22/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - accessors [C++]
 - OLE DB consumer templates, rowset support
@@ -17,12 +17,12 @@ helpviewer_keywords:
 - accessors [C++], rowsets
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
-ms.openlocfilehash: 74a839d36f96b115d1f4e0c35532bd76d998a4b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29c409f2ed410d9f697419e9a98b675eee7a69d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651257"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175715"
 ---
 # <a name="accessors-and-rowsets"></a>アクセサーと行セット
 
@@ -34,7 +34,7 @@ ms.locfileid: "50651257"
 
 次の図は、アクセサーの種類を示します。
 
-![アクセサーの種類](../../data/oledb/media/vcaccessortypes.gif "vcaccessortypes")<br/>
+![アクセサーの種類](../../data/oledb/media/vcaccessortypes.gif "アクセサーの種類")<br/>
 アクセサー クラス
 
 - [CAccessor](../../data/oledb/caccessor-class.md)デザイン時に、データベースのソースの構造がわかっている場合は、このアクセサーを使用します。 `CAccessor` 静的にバッファーを含むデータベースのレコードをデータ ソースにバインドします。
@@ -63,7 +63,7 @@ OLE DB テンプレートは、3 つの種類の行セット (上記の図を参
 
 次の図は、行セットの種類を示します。
 
-![RowsetType グラフィック](../../data/oledb/media/vcrowsettypes.gif "vcrowsettypes")<br/>
+![RowsetType グラフィック](../../data/oledb/media/vcrowsettypes.gif "RowsetType グラフィック")<br/>
 行セット クラス
 
 [スキーマ行セット](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)データ、データにアクセスしない格納しますが、代わりにメタデータと呼ばれる、データ ストアの情報にアクセスします。 スキーマ行セットがである場合、データベースの構造がコンパイル時に不明な実行時に取得する必要がありますで通常使用されます。

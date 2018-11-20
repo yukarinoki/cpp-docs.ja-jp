@@ -1,29 +1,34 @@
 ---
 title: ビジュアル マネージャー
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Visualization Manager
 ms.assetid: c9dd1365-27ac-42e5-8caa-1004525b4129
-ms.openlocfilehash: befff860f50677f9c70c0fbb6b45ac528c36e773
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c9dc19266d80d56f696953c5f5896eb9d99cc8b
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521373"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175575"
 ---
 # <a name="visualization-manager"></a>ビジュアル マネージャー
 
 ビジュアル マネージャーは、アプリケーション全体の外観を制御するオブジェクトです。 1 つのクラスとして機能、アプリケーションのすべての描画コードを配置することができます。 MFC ライブラリには、いくつかのビジュアル マネージャーが含まれています。 アプリケーションのカスタム ビューを作成する場合、独自のビジュアル マネージャーを作成することもできます。 次の図は、異なるビジュアル マネージャーが有効にすると、同じアプリケーションを示してください。
 
-![CMFCVisualManagerWindows で表示された MyApp](../mfc/media/vmwindows.png "vmwindows") MyApp CMFCVisualManagerWindows ビジュアル マネージャーを使用します。
+![CMFCVisualManagerWindows で表示された MyApp](../mfc/media/vmwindows.png "CMFCVisualManagerWindows で表示された MyApp") <br/>
+MyApp CMFCVisualManagerWindows ビジュアル マネージャーを使用します。
 
-![CMFCVisualManagerVS2005 で表示された MyApp](../mfc/media/vmvs2005.png "vmvs2005") MyApp CMFCVisualManagerVS2005 ビジュアル マネージャーを使用します。
+![CMFCVisualManagerVS2005 で表示された MyApp](../mfc/media/vmvs2005.png "CMFCVisualManagerVS2005 で表示された MyApp") <br/>
+MyApp CMFCVisualManagerVS2005 ビジュアル マネージャーを使用します。
 
-![CMFCVisualManagerOfficeXP で表示された MyApp](../mfc/media/vmofficexp.png "vmofficexp") MyApp CMFCVisualManagerOfficeXP ビジュアル マネージャーを使用します。
+![CMFCVisualManagerOfficeXP で表示された MyApp](../mfc/media/vmofficexp.png "CMFCVisualManagerOfficeXP で表示された MyApp") <br/>
+MyApp CMFCVisualManagerOfficeXP ビジュアル マネージャーを使用します。
 
-![CMFCVisualManagerOffice2003 で表示された MyApp](../mfc/media/vmoffice2003.png "vmoffice2003") MyApp CMFCVisualManagerOffice2003 ビジュアル マネージャーを使用します。
+![CMFCVisualManagerOffice2003 で表示された MyApp](../mfc/media/vmoffice2003.png "CMFCVisualManagerOffice2003 で表示された MyApp") <br/>
+MyApp CMFCVisualManagerOffice2003 ビジュアル マネージャーを使用します。
 
-![CMFCVisualManagerOffice2007 で表示された MyApp](../mfc/media/msoffice2007.png "msoffice2007") MyApp CMFCVisualManagerOffice2007 ビジュアル マネージャーを使用します。
+![CMFCVisualManagerOffice2007 で表示された MyApp](../mfc/media/msoffice2007.png "CMFCVisualManagerOffice2007 で表示された MyApp") <br/>
+MyApp CMFCVisualManagerOffice2007 ビジュアル マネージャーを使用します。
 
 既定では、ビジュアル マネージャーは、いくつかの GUI 要素の描画コードを保持します。 カスタムの UI 要素を提供するには、ビジュアル マネージャーの関連の描画メソッドをオーバーライドする必要があります。 これらのメソッドの一覧で、次を参照してください。 [CMFCVisualManager クラス](../mfc/reference/cmfcvisualmanager-class.md)します。 カスタムの外観を提供するオーバーライドできるメソッドで始まるすべてのメソッド`OnDraw`します。
 

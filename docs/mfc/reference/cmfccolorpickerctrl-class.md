@@ -1,6 +1,6 @@
 ---
 title: CMFCColorPickerCtrl クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCColorPickerCtrl
 - AFXCOLORPICKERCTRL/CMFCColorPickerCtrl
@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 073012642597d0b38dcb0f76cf5662666447adc1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 38fe09b5fdde85dad485e126f6c094196fe68ff4
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519055"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176927"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl クラス
 
@@ -97,7 +97,7 @@ class CMFCColorPickerCtrl : public CButton
 
 次の図はいくつか`CMFCColorPickerCtrl`オブジェクト。
 
-![CMFCColorPickerCtrl ダイアログ ボックス](../../mfc/reference/media/colorpicker.png "colorpicker")
+![CMFCColorPickerCtrl ダイアログ ボックス](../../mfc/reference/media/colorpicker.png "CMFCColorPickerCtrl ダイアログ ボックス")
 
 `CMFCColorPickerCtrl`スタイルの 2 つのペアをサポートします。 16 進数と HEX_GREYSCALE スタイルは、標準の色の選択に適しています。 ピッカーと輝度のスタイルは、カスタムの色の選択に適しています。
 

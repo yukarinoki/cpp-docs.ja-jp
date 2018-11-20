@@ -1,6 +1,6 @@
 ---
 title: 透明または不透明な背景の選択 (アイコン用イメージ エディター)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - opaque backgrounds [C++]
 - colors [C++], image
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - images [C++], transparency
 - images [C++], opaque background
 ms.assetid: 61b743d9-c86b-405d-9a81-0806431b4363
-ms.openlocfilehash: a7e4d427a6926d48b5115a1b5bb9ba2ca2d8068c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ceea31b998d5c4dca52657db570ace664f7e373f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653532"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175432"
 ---
 # <a name="choosing-a-transparent-or-opaque-background-image-editor-for-icons"></a>透明または不透明な背景の選択 (アイコン用イメージ エディター)
 
@@ -21,7 +21,7 @@ ms.locfileid: "50653532"
 
 透明な背景 (既定値) から、不透明な背景に切り替えるし、再びことができます。 選択ツールを使用するときに、**透明な背景**と**不透明な背景**オプションに表示されます、**オプション**セレクター、**イメージ エディター**ツールバー (以下に示す)。
 
-![オプションをバック グラウンド&#45;非透過または透過](../windows/media/vcimageeditoropaqtranspback.gif "vcImageEditorOpaqTranspBack")<br/>
+![オプションをバック グラウンド&#45;非透過または透過](../windows/media/vcimageeditoropaqtranspback.gif "オプションをバック グラウンド&#45;非透過または透過")<br/>
 **透過的かつ非透過オプション**上、**イメージ エディターのツールバー**
 
 ### <a name="to-switch-between-a-transparent-and-opaque-background"></a>透過的なと不透明な背景を切り替える
@@ -32,9 +32,9 @@ ms.locfileid: "50653532"
 
    - `Transparent Background (T)`: 既存のイメージは、選択範囲の現在の背景色に一致する部分を示します。
 
-\- または -
+   \- または -
 
-- **イメージ** を選択またはクリア**描画の不透明な**します。
+1. **イメージ** を選択またはクリア**描画の不透明な**します。
 
 選択範囲が既にイメージのどの部分は透明を変更する有効なときに、背景色を変更できます。
 

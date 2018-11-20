@@ -1,17 +1,17 @@
 ---
 title: メンバー アクセス コントロール (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - access control [C++]
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: ee4e9d89878aab4be2e4daf45525f9e951d214f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611420"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176226"
 ---
 # <a name="member-access-control-c"></a>メンバー アクセス コントロール (C++)
 
@@ -234,7 +234,8 @@ int main()
 
 仮想基底クラスを含む多重継承のグリッドでは、任意の名前に複数のパスを通じてアクセスできます。 パスが異なると適用できるアクセス制御も異なるため、コンパイラは最大のアクセスを許可するパスを選択します。 次の図を参照してください。
 
-![継承グラフのパスに沿ったアクセス](../cpp/media/vc38v91.gif "vc38V91")継承グラフのパスに沿ったアクセス
+![継承グラフのパスに沿ったアクセス](../cpp/media/vc38v91.gif "継承グラフのパスに沿ったアクセス") <br/>
+継承グラフのパスに沿ったアクセス
 
 図では、クラス `VBase` で宣言される名前は、必ずクラス `RightPath` 経由でアクセスされます。 `RightPath` が `VBase` をプライベート基底クラスとして宣言するのに対し、`LeftPath` は `VBase` をパブリック基底クラスとして宣言するため、右のパスの方がアクセスが簡単です。
 

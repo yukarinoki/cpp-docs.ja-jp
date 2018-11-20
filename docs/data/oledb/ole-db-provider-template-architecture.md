@@ -1,17 +1,17 @@
 ---
 title: OLE DB プロバイダー テンプレートのアーキテクチャ
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - OLE DB [C++], object model
 - architecture [C++], OLE DB Provider
 - OLE DB provider templates, object model
 ms.assetid: 639304a3-f9e0-44dc-8d0c-0ebd2455b363
-ms.openlocfilehash: 6256328caa11d188f3a50445f62df096b6f6acb3
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 099c29e141d721645c416e60be240c22d22cd869
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557038"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175640"
 ---
 # <a name="ole-db-provider-template-architecture"></a>OLE DB プロバイダー テンプレートのアーキテクチャ
 
@@ -19,7 +19,7 @@ ms.locfileid: "51557038"
 
 OLE DB プロバイダーのアーキテクチャには、データ ソース オブジェクトと 1 つまたは複数のセッションが含まれています。 データ ソース オブジェクトは、すべてのプロバイダーのインスタンスを作成する必要があります最初のオブジェクトです。 コンシューマー アプリケーション、データを必要とは併置プロバイダーを起動するデータ ソース オブジェクトを作成します。 データ ソース オブジェクトは、セッション オブジェクトを作成します (を使用して、`IDBCreateSession`インターフェイス)、データ ソース オブジェクトに接続し、コンシューマーから。 ODBC プログラマは、データ ソース オブジェクトと同じ働きを考えることができます、`HENV`と同等のセッション オブジェクト、`HDBC`します。
 
-![プロバイダー アーキテクチャ](../../data/oledb/media/vc4twb1.gif "vc4twb1")
+![プロバイダー アーキテクチャ](../../data/oledb/media/vc4twb1.gif "プロバイダーのアーキテクチャ")
 
 によって作成されたソース ファイルと共に、 **OLE DB プロバイダー ウィザード**、OLE DB テンプレートは、データ ソース オブジェクトを実装します。 セッションとは、OLE DB に対応するオブジェクト`TSession`します。
 

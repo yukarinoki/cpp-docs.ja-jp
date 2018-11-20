@@ -1,6 +1,6 @@
 ---
 title: 'MFC ActiveX コントロール : ActiveX コントロールにおけるデータ バインディングの使用'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 9efac8ba0889d648def622ca045b9398c8eeef11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518490"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175809"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるデータ バインディングの使用
 
@@ -30,7 +30,8 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
 
 この記事では、コントロール側でのタスクについて説明します。 データベースとの相互作用をデータ バインディングの実装は、コントロール コンテナーの責任です。 コンテナー内のデータベースとのやり取りを管理する方法はこのドキュメントの範囲外です。 データ バインド コントロールを準備する方法については、この記事の残りの部分で説明します。
 
-![データの概念図&#45;にバインドされたコントロール](../mfc/media/vc374v1.gif "vc374v1")データ バインド コントロールの概念図
+![データの概念図&#45;にバインドされたコントロール](../mfc/media/vc374v1.gif "、データの概念図&#45;にバインドされたコントロール") <br/>
+データ バインド コントロールの概念図
 
 `COleControl`クラスには、データ バインディングを実装する簡単なプロセスを構成する 2 つのメンバー関数が用意されています。 最初の関数では、 [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit)プロパティ値を変更するアクセス許可を要求するために使用します。 [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged)プロパティの値が変更された後、2 番目の関数が呼び出されます。
 

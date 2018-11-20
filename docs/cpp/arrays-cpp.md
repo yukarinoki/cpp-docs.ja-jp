@@ -1,17 +1,17 @@
 ---
 title: 配列 (C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - declaring arrays [C++], about declaring arrays
 - multidimensional arrays [C++]
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
-ms.openlocfilehash: 746a6b5a2122a7ccdd207d278d285af3e448d7ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550671"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176880"
 ---
 # <a name="arrays-c"></a>配列 (C++)
 
@@ -75,7 +75,8 @@ int i2[5][7];
 
 型の配列を指定します**int**、次の図に示すように 5 つの行と 7 つの列の 2 次元行列に概念的には配置後。
 
-![複数の概念レイアウト&#45;次元配列](../cpp/media/vc38rc1.gif "vc38RC1")多次元配列の概念レイアウト
+![複数の概念レイアウト&#45;次元配列](../cpp/media/vc38rc1.gif "マルチの概念レイアウト&#45;次元配列") <br/>
+多次元配列の概念レイアウト
 
 初期化子リストを持つ多次元配列の宣言で (」の説明に従って[初期化子](../cpp/initializers.md))、最初の次元の境界を指定する定数式を省略できます。 例えば:
 

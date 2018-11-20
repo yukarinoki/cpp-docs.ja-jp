@@ -1,6 +1,6 @@
 ---
 title: コネクション ポイント
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - IConnectionPoint
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - CCmdTarget class [MFC], and connection points
 - sinks, connection points
 ms.assetid: bc9fd7c7-8df6-4752-ac8c-0b177442c88d
-ms.openlocfilehash: cddbdb30cbc5f5ddb5fa98524ad067655f262be1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf21e7bf591a5b1977784db1542053817a73e6cd
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517638"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175484"
 ---
 # <a name="connection-points"></a>コネクション ポイント
 
@@ -30,7 +30,8 @@ ms.locfileid: "50517638"
 
 接続で 2 つの部分: ソースとのインターフェイスを実装するオブジェクトと呼ばれるインターフェイスを呼び出すオブジェクトには、シンクが呼び出されます。 接続ポイントは、ソースによって公開されるインターフェイスです。 接続ポイントを公開するでは、ソースは、シンク自体 (ソース) への接続の確立を許可します。 コネクション ポイント機構 (、`IConnectionPoint`インターフェイス)、ソース オブジェクトに、シンク インターフェイスへのポインターが渡されます。 このポインターは、一連のメンバー関数のシンクの実装にアクセス権を持つソースを提供します。 たとえば、シンクによって実装されるイベントを発生させるには、ソースは、シンクの実装の適切なメソッドを呼び出すことができます。 次の図は、接続を示して説明したポイント。
 
-![接続ポイントを実装](../mfc/media/vc37lh1.gif "vc37lh1") An 実装されたコネクション ポイント
+![接続ポイントを実装](../mfc/media/vc37lh1.gif "接続ポイントの実装") <br/>
+コネクション ポイントの実装
 
 MFC 実装では、このモデル、 [CConnectionPoint](../mfc/reference/cconnectionpoint-class.md)と[CCmdTarget](../mfc/reference/ccmdtarget-class.md)クラス。 派生したクラス`CConnectionPoint`実装、`IConnectionPoint`インターフェイス、その他のオブジェクトへの接続ポイントを公開するために使用します。 派生したクラス`CCmdTarget`実装、`IConnectionPointContainer`インターフェイスでは、すべてのオブジェクトの使用可能な接続ポイントを列挙または特定の接続ポイントを見つけることができます。
 
@@ -54,7 +55,8 @@ MFC 実装では、このモデル、 [CConnectionPoint](../mfc/reference/cconne
 
 このコードが挿入されると、 `CCmdTarget`-派生クラスの接続ポイントを公開する、`ISampleSink`インターフェイス。 次の図は、この例を示します。
 
-![MFC を使用して実装されたコネクション ポイント](../mfc/media/vc37lh2.gif "vc37lh2") A 接続ポイント MFC で実装されている場合
+![MFC を使用して実装されたコネクション ポイント](../mfc/media/vc37lh2.gif "MFC を使用して実装されたコネクション ポイント") <br/>
+MFC で実装されたコネクション ポイント
 
 接続ポイントが「マルチキャスト」をサポートする、通常は、同じインターフェイスに接続する複数のシンクにブロードキャストする機能。 次の例のフラグメントは、マルチキャスト コネクション ポイントで各シンクを反復処理する方法。
 

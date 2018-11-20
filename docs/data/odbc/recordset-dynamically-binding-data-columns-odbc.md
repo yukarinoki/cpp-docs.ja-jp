@@ -1,6 +1,6 @@
 ---
 title: 'レコードセット: データ列を動的に結びつける方法 (ODBC)'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
 - data binding [C++], recordset columns
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: 0284fbeed23c5fdad47cafd29af7a47251b923a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469681"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175666"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコードセット: データ列を動的に結びつける方法 (ODBC)
 
@@ -78,7 +78,7 @@ MFC アプリケーション ウィザード、デザイン時にまたは[MFC O
 
    1 つの方法では、(必要な) 場合、その戻り値、およびそのデータ型の 3 つ目の 1 つ以上の動的リスト、間、新しい列の名前のいずれかをビルドします。 値リスト、特に、これらのリストは、情報とバインディングのために必要なストレージを提供します。 次の図は、リストの構成を示しています。
 
-   ![動的にバインドする列のリスト](../../data/odbc/media/vc37w61.gif "vc37w61")<br/>
+   ![動的にバインドする列のリスト](../../data/odbc/media/vc37w61.gif "に動的にバインドする列のリスト")<br/>
    動的に結び付ける列のリストを生成する方法
 
 1. メイン レコード セットの RFX 関数の呼び出しを追加`DoFieldExchange`関数の各列を追加します。 これらの rfx 関数の呼び出しでは、レコードをフェッチしています。 追加の列など、それらのレコード セットのデータ メンバーまたは動的に指定されたストレージに、列のバインドの処理を行います。

@@ -1,13 +1,13 @@
 ---
 title: タイルの使用
-ms.date: 06/28/2018
+ms.date: 11/19/2018
 ms.assetid: acb86a86-2b7f-43f1-8fcf-bcc79b21d9a8
-ms.openlocfilehash: 02a6f35801c30ce5e25e79a4e736e6c08776a1da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ede62c80a83b5f5fc1d691bf52dde67140e68246
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588516"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176095"
 ---
 # <a name="using-tiles"></a>タイルの使用
 
@@ -27,7 +27,7 @@ ms.locfileid: "50588516"
 
 次の図は、2 × 3 のタイルに配置された 8 × 9 のデータ行列を示しています。
 
-![8&#45;によって&#45;2 分割 9 マトリックス&#45;によって&#45;3 タイル](../../parallel/amp/media/usingtilesmatrix.png "usingtilesmatrix")
+![8&#45;によって&#45;2 分割 9 マトリックス&#45;によって&#45;3 つのタイル](../../parallel/amp/media/usingtilesmatrix.png "8&#45;によって&#45;9 マトリックスが 2 に分かれています&#45;によって&#45;3 つのタイル")
 
 次の例では、このタイル化された行列のグローバル、タイル、およびローカル インデックスを表示します。 `array_view` オブジェクトは、`Description` 型の要素を使用して作成されます。 `Description` は、行列の要素のグローバル、タイル、およびローカル インデックスを保持します。 `parallel_for_each` の呼び出しのコードは、各要素のグローバル、タイル、およびローカル インデックスの値を設定します。 出力は `Description` 構造体の値を表示します。
 
