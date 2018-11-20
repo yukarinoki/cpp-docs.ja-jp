@@ -1,6 +1,6 @@
 ---
 title: データ アクセス プログラミング (MFC-ATL)
-ms.date: 11/04/2016
+ms.date: 11/16/2018
 helpviewer_keywords:
 - MFC [C++], data access applications
 - databases [C++], MFC
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-ms.openlocfilehash: 8341cf715c96783880fd83f1b8fbb197dbff6046
-ms.sourcegitcommit: b08ddf79ea76369c388173913e4e8f6fd8ad02d5
+ms.openlocfilehash: 5417918ee3cf966183e1910fdbc12bd7b8cc046e
+ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51830479"
+ms.lasthandoff: 11/19/2018
+ms.locfileid: "51949493"
 ---
 # <a name="data-access-programming-mfcatl"></a>データ アクセス プログラミング (MFC/ATL)
 
@@ -21,9 +21,11 @@ ms.locfileid: "51830479"
 
 OLE DB は、COM 仕様に基づく低レベルで高パフォーマンスの API であり、Windows でのみサポートされます。 プログラムで[リンク サーバー](/sql/relational-databases/linked-servers/linked-servers-database-engine)にアクセスする場合は、OLE DB を使用します。 ATL には OLE DB テンプレートが用意されており、カスタム OLE DB プロバイダーとコンシューマーを容易に作成できます。 最新バージョンの OLE DB は、SQL Native Client 11 に付属しています。
 
+## <a name="porting-data-applications"></a>データ アプリケーションの移植
+
 レガシ アプリケーションで OLE DB またはより高レベルの ADO インターフェイスを使用して SQL Server に接続し、リンク サーバーにアクセスしない場合は、近い将来に ODBC に移行することを検討する必要があります。 クロスプラット フォームの移植性または最新の SQL Server の機能が不要な場合は、Microsoft OLE DB Provider for ODBC (MSDASQL) を使用できる可能性があります。  MSDASQL では、OLE DB と ADO (内部的に OLEDB を使用する) に構築されたアプリケーションから、ODBC ドライバーを介してデータ ソースにアクセスできます。 変換レイヤーと MSDASQL データベースのパフォーマンスに影響します。 影響は、アプリケーションの重要なかどうかを判断するテストをする必要があります。 MSDASQL は Windows オペレーティング システムに付属しており、Windows Server 2008 および Windows Vista SP1 が、64 ビット バージョンのテクノロジを含めるための最初の Windows リリースです。
 
-単一の DLL に OLE DB と ODBC ドライバーをパッケージ化する、SQL Native Client コンポーネント (SNAC) は、ODBC アプリケーションでは非推奨とされます。 SQL Server 2012 バージョンの SNAC (SQLNCLI11.DLL) は SQL Server 2016 に付属しています。他の SQL Server コンポーネントがこれに依存しているためです。 ただし、ODBC 経由で SQL Server または Azure SQL Database に接続する新しい C++ アプリケーションでは、[最新の ODBC ドライバー](https://docs.microsoft.com/sql/connect/odbc/download-odbc-driver-for-sql-server)を使用する必要があります。 詳細については、「[SQL Server Native Client プログラミング](/sql/relational-databases/native-client/sql-server-native-client-programming)」を参照してください。
+単一の DLL に OLE DB と ODBC ドライバーをパッケージ化する、SQL Native Client コンポーネント (SNAC) は、ODBC アプリケーションでは非推奨とされます。 SQL Server 2012 バージョンの SNAC (SQLNCLI11.DLL) は SQL Server 2016 に付属しています。他の SQL Server コンポーネントがこれに依存しているためです。 ただし、ODBC 経由で SQL Server または Azure SQL Database に接続する新しい C++ アプリケーションでは、[最新の ODBC ドライバー](/sql/connect/odbc/download-odbc-driver-for-sql-server)を使用する必要があります。 詳細については、「[SQL Server Native Client プログラミング](/sql/relational-databases/native-client/sql-server-native-client-programming)」を参照してください。
 
 C++/CLI を使用する場合は、引き続き、通常どおり ADO.NET を使用できます。 詳細については、「[ADO.NET によるデータ アクセス (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)」と「[Visual Studio でのデータ アクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)」を参照してください。
 
@@ -34,5 +36,4 @@ Microsoft Windows でのデータ アクセス テクノロジの歴史の詳細
 ## <a name="see-also"></a>関連項目
 
 [データ アクセス](data-access-in-cpp.md)<br/>
-[Microsoft Open Database Connectivity (ODBC)](https://docs.microsoft.com/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
-[データ アクセス テクノロジのロードマップ](https://msdn.microsoft.com/library/ms810810.aspx)
+[Microsoft Open Database Connectivity (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc)<br/>
