@@ -1,6 +1,6 @@
 ---
 title: CSplitButton クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSplitButton
 - AFXCMN/CSplitButton
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: ca4899714fa336d058b2a53bcd5103c5b0c993e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 56c006eaa9b0c9860a973727602fd29a33d7ec43
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547278"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176629"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton クラス
 
@@ -58,7 +58,7 @@ class CSplitButton : public CButton
 
 次の図は、ページャー コントロールと (1) の分割ボタン コントロールを含むダイアログ ボックスを示しています。 既に (2) のドロップダウン矢印をクリックし、(3) のサブメニューを表示します。
 
-![Splitbutton およびページャー コントロールのダイアログ。](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Splitbutton およびページャー コントロールのダイアログ。](../../mfc/reference/media/splitbutton_pager.png "Splitbutton およびページャー コントロールのダイアログ。")
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -188,7 +188,7 @@ void SetDropDownMenu(CMenu* pMenu);
 
 次の図は、ページャー コントロールと (1) の分割ボタン コントロールを含むダイアログ ボックスを示しています。 既に (2) のドロップダウン矢印をクリックし、(3) のサブメニューを表示します。
 
-![Splitbutton およびページャー コントロールのダイアログ。](../../mfc/reference/media/splitbutton_pager.png "splitbutton_pager")
+![Splitbutton およびページャー コントロールのダイアログ。](../../mfc/reference/media/splitbutton_pager.png "Splitbutton およびページャー コントロールのダイアログ。")
 
 ### <a name="example"></a>例
 
