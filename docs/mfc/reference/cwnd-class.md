@@ -1,6 +1,6 @@
 ---
 title: CWnd クラス
-ms.date: 08/27/2018
+ms.date: 11/19/2018
 f1_keywords:
 - CWnd
 - AFXWIN/CWnd
@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 365ecea539d47892b8697bb7b6ce2015bc18cda3
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694895"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177109"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -2628,7 +2628,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 
 ##  <a name="dragacceptfiles"></a>  CWnd::DragAcceptFiles
 
-ウィンドウの中から、このメンバー関数を呼び出すを使用して、`CWnd`ポインターは、アプリケーションの[:initinstance](../../mfc/reference/cwinapp-class.md#initinstance)関数をウィンドウを受け入れることを示すために、Windows ファイル マネージャーまたはファイル エクスプ ローラーからファイルを削除します。
+ウィンドウの中から、このメンバー関数を呼び出すを使用して、`CWnd`ポインターは、アプリケーションの[:initinstance](../../mfc/reference/cwinapp-class.md#initinstance)関数をウィンドウを受け入れることを示すために、Windows ファイル マネージャーまたはファイル エクスプ ローラーからファイルを削除します.
 
 ```
 void DragAcceptFiles(BOOL bAccept = TRUE);
@@ -5688,10 +5688,10 @@ int MessageBox(
 
 |||
 |-|-|
-|![停止&#40;x&#41;アイコン](../../mfc/reference/media/vc364f1.gif "vc364f1")|MB_ICONHAND、MB_ICONSTOP、および MB_ICONERROR|
-|![ヘルプ&#40;&#41;アイコン](../../mfc/reference/media/vc364f2.gif "vc364f2")|MB_ICONQUESTION|
-|![重要な&#40; &#33; &#41;アイコン](../../mfc/reference/media/vc364f3.gif "vc364f3")|MB_ICONEXCLAMATION と MB_ICONWARNING|
-|![情報&#40;は&#41;アイコン](../../mfc/reference/media/vc364f4.gif "vc364f4")|MB_ICONASTERISK と MB_ICONINFORMATION|
+|![停止&#40;x&#41;アイコン](../../mfc/reference/media/vc364f1.gif "停止&#40;x&#41;アイコン")|MB_ICONHAND、MB_ICONSTOP、および MB_ICONERROR|
+|![ヘルプ&#40;でしょうか。&#41;アイコン](../../mfc/reference/media/vc364f2.gif "ヘルプ&#40;?&#41;アイコン")|MB_ICONQUESTION|
+|![重要な&#40; &#33; &#41;アイコン](../../mfc/reference/media/vc364f3.gif "重要&#40; &#33; &#41;アイコン")|MB_ICONEXCLAMATION と MB_ICONWARNING|
+|![情報&#40;は&#41;アイコン](../../mfc/reference/media/vc364f4.gif "情報&#40;は&#41;アイコン")|MB_ICONASTERISK と MB_ICONINFORMATION|
 
 ### <a name="example"></a>例
 
