@@ -20,7 +20,7 @@ ms.locfileid: "50496435"
 
 ここまでの関連チュートリアル (「[C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照) を完了することで、アプリケーションの作成が完了しました。最後の手順は、他のユーザーが自分のコンピューターにプログラムをインストールできるようにインストーラーを作成することです。 インストーラーを作成するには、新しいプロジェクトを既存のソリューションに追加します。 この新しいプロジェクトの出力は、別のコンピューターにアプリをインストールする setup.exe ファイルです。
 
-このチュートリアルでは、Windows インストーラーを使用してアプリケーションを配置する方法を示します。 アプリケーションの配置には ClickOnce を使用することもできます。 詳細については、「 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)」を参照してください。 一般的な配置の詳細については、「[アプリケーション、サービス、およびコンポーネントの配置](/visualstudio/deployment/deploying-applications-services-and-components)」をご覧ください。
+このチュートリアルでは、Windows インストーラーを使用してアプリケーションを配置する方法を示します。 アプリケーションの配置には ClickOnce を使用することもできます。 詳細については、「 [Visual C++ アプリケーションの ClickOnce 配置](../ide/clickonce-deployment-for-visual-cpp-applications.md)」を参照してください。 一般的な配置の詳細については、「[アプリケーション、サービス、およびコンポーネントの配置](/visualstudio/deployment/deploying-applications-services-and-components)」をご覧ください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -62,7 +62,7 @@ ms.locfileid: "50496435"
 
 1. **ソリューション エクスプローラー**で **[Game Installer]** プロジェクトを選択し、**[ビュー]** > **[プロパティ ウィンドウ]** を選択するか、または **F4** キーを押して **[プロパティ]** ウィンドウを開きます。
 
-1. インストーラーに表示する追加の詳細を指定します。  たとえば、**[製造元]** に "*Contoso*"、**[製品名]** に "*Game Installer*"、**[SupportUrl]** に "*http://www.contoso.com*" を使用します。
+1. インストーラーに表示する追加の詳細を指定します。  たとえば、**[製造元]** に "*Contoso*"、**[製品名]** に "*Game Installer*"、**[SupportUrl]** に *http://www.contoso.com* を使用します。
 
 1. メニュー バーで **[ビルド]** > **[構成マネージャー]** の順に選択します。 **[プロジェクト]** テーブルの **[ビルド]** 列で、**[Game Installer]** のボックスをオンにします。 **[閉じる]** をクリックします。
 
