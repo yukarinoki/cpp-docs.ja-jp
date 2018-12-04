@@ -94,4 +94,4 @@ DocFX を使用する方法はいくつかありますが、そのほとんど�
 
 PR がマージされる前に、[貢献者使用許諾契約書 (CLA)](LICENSE) に署名する必要があります。 これは、docs.microsoft.com 内のプロジェクトに対して 1 回だけ必要です。 [貢献者使用許諾契約書 (CLA)](https://en.wikipedia.org/wiki/Contributor_License_Agreement) について詳しくは、Wikipedia を参照してください。
 
-前もって契約に署名する必要はありません。 PR は通常どおり、複製、フォーク、送信できます。 PR が作成されると、CLA ボットで分類されます。 変更が軽微である (入力ミスの修正など) 場合は、PR に CLA-not-required のラベルが付けられます。 それ以外の場合は、CLA-required と分類されます。 CLA への署名後は、現在以降のすべてのプル要求に、CLA-singed のラベルが付けられます。
+前もって契約に署名する必要はありません。 PR は通常どおり、複製、フォーク、送信できます。 PR が作成されると、CLA ボットで分類されます。 変更が軽微である (入力ミスの修正など) 場合は、PR に CLA-not-required のラベルが付けられます。 それ以外の場合は、CLA-required と分類されます。 CLA への署名後は、現在以降のすべての pull requests に、CLA-singed のラベルが付けられます。
