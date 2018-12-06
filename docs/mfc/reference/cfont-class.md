@@ -49,9 +49,9 @@ class CFont : public CGdiObject
 
 |名前|説明|
 |----------|-----------------|
-|[CFont::CreateFont](#createfont)|初期化します、`CFont`と特性を指定します。|
-|[CFont::CreateFontIndirect](#createfontindirect)|初期化します、`CFont`オブジェクトで指定された特性を持つ、`LOGFONT`構造体。|
-|[CFont::CreatePointFont](#createpointfont)|初期化します、`CFont`指定の高さを持つポイント、および書体 0.1 単位で測定します。|
+|[CFont::CreateFont](#createfont)|指定された特性で`CFont`を初期化します。|
+|[CFont::CreateFontIndirect](#createfontindirect)|指定された`LOGFONT`構造体の特性で`CFont`オブジェクトを初期化します。|
+|[CFont::CreatePointFont](#createpointfont)|指定の0.1ポイント単位の高さおよび、書体を指定して、`CFont`を初期化します。|
 |[CFont::CreatePointFontIndirect](#createpointfontindirect)|同じ`CreateFontIndirect`する点を除いて、フォントの高さは論理ユニットではなく、ポイントの 10 分で測定されます。|
 |[CFont::FromHandle](#fromhandle)|ポインターを返します、 `CFont` Windows HFONT が指定されるとします。|
 |[CFont::GetLogFont](#getlogfont)|入力、`LOGFONT`にアタッチされている論理フォントに関する情報を含む、`CFont`オブジェクト。|
