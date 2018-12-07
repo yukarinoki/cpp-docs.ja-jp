@@ -1,6 +1,6 @@
 ---
 title: MFC でのステータス バーの実装
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - COldStatusBar
 helpviewer_keywords:
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - status indicators
 - status bars [MFC], Windows 95 implementation
 ms.assetid: be5cd876-38e3-4d5c-b8cb-16d57a16a142
-ms.openlocfilehash: 25848e4467a0d767c40ffb00a1bd4d50a062d3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 521b24646b673159d14e89bd57ea698a7ba73381
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496280"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175370"
 ---
 # <a name="status-bar-implementation-in-mfc"></a>MFC でのステータス バーの実装
 
@@ -33,7 +33,8 @@ A [CStatusBar](../mfc/reference/cstatusbar-class.md)オブジェクトはテキ�
 
 次の図には、いくつかのインジケーターを表示するステータス バーが表示されます。
 
-![ステータス バー](../mfc/media/vc37dy1.gif "vc37dy1") A ステータス バー
+![ステータス バー](../mfc/media/vc37dy1.gif "ステータス バー") <br/>
+ステータス バー
 
 ツールバーのようにステータス バーのオブジェクトは親フレーム ウィンドウに埋め込まれているし、フレーム ウィンドウが作成されるときに自動的に構築します。 すべてのコントロール バーのように、ステータス バーは自動的に破棄も親フレームが破棄されるときにします。
 

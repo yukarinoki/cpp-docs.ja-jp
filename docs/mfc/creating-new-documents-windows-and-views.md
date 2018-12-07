@@ -1,6 +1,6 @@
 ---
 title: 新しいドキュメント、ウィンドウ、ビューの作成
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - MDI [MFC], creating windows
 - window objects [MFC], creating
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - views [MFC], overriding default behavior
 - initializing views [MFC]
 ms.assetid: 88aa1f5f-2078-4603-b16b-a2b4c7b4a2a3
-ms.openlocfilehash: 20bc94c7a688d3cf88fa89fff060ab155d327606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57e558848ce76a7c74b5715529661ad24c9cbb8e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643899"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175393"
 ---
 # <a name="creating-new-documents-windows-and-views"></a>新しいドキュメント、ウィンドウ、ビューの作成
 
@@ -37,11 +37,14 @@ ms.locfileid: "50643899"
 
 このプロセスを完了したら、協調動作するオブジェクトが存在し、相互へのポインターを格納します。 次の図は、オブジェクトが作成されるシーケンスを示しています。 図、シーケンスを実行できます。
 
-![ドキュメントを作成するためのシーケンス](../mfc/media/vc387l1.gif "vc387l1")ドキュメントの作成過程
+![ドキュメントを作成するためのシーケンス](../mfc/media/vc387l1.gif "ドキュメント作成のシーケンス") <br/>
+ドキュメントの作成過程
 
-![フレーム ウィンドウ作成順序](../mfc/media/vc387l2.png "vc387l2")フレーム ウィンドウの作成過程
+![フレーム ウィンドウ作成順序](../mfc/media/vc387l2.png "フレーム ウィンドウ作成順序") <br/>
+フレーム ウィンドウの作成過程
 
-![ビューを作成するシーケンス](../mfc/media/vc387l3.gif "vc387l3")ビューの作成過程
+![ビューを作成するシーケンス](../mfc/media/vc387l3.gif "ビューを作成するシーケンス") <br/>
+ビューの作成過程
 
 フレームワークが新しいドキュメント、ビュー、およびフレーム ウィンドウ オブジェクトを初期化する方法については、クラスを参照してください[CDocument](../mfc/reference/cdocument-class.md)、 [CView](../mfc/reference/cview-class.md)、 [CFrameWnd](../mfc/reference/cframewnd-class.md)、 [。CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md)、および[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) MFC ライブラリのリファレンス。 参照してください[テクニカル ノート 22:](../mfc/tn022-standard-commands-implementation.md)、その説明のフレームワークの標準コマンドの作成および初期化プロセスがさらに説明しています、**新規**と**を開く**上の項目、**ファイル**メニュー。
 

@@ -1,15 +1,15 @@
 ---
 title: ユーザー定義のツール
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: 5c5773cdbbd641b30f39494b2d11c282d2d43954
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607078"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175731"
 ---
 # <a name="user-defined-tools"></a>ユーザー定義のツール
 
@@ -17,7 +17,8 @@ MFC には、ユーザー定義のツールがサポートしています。 ユ
 
 カスタマイズ ダイアログ ボックスが自動的にユーザー定義のツールのサポートを有効にした場合、**ツール**タブ。次の図は、**ツール**ページ。
 
-![ツールは、[カスタマイズ] ダイアログ ボックスでタブ](../mfc/media/custdialogboxtoolstab.png "custdialogboxtoolstab")のカスタマイズ ダイアログ ボックスの [ツール] タブ
+![ツールは、[カスタマイズ] ダイアログ ボックスでタブ](../mfc/media/custdialogboxtoolstab.png "カスタマイズ] ダイアログ ボックスで [ツール] タブ") <br/>
+カスタマイズ ダイアログ ボックスの ツール タブ
 
 ## <a name="enabling-user-defined-tools-support"></a>ユーザー定義の有効化のツールのサポート
 
@@ -57,4 +58,3 @@ MFC には、ユーザー定義のツールがサポートしています。 ユ
 [CUserTool クラス](../mfc/reference/cusertool-class.md)<br/>
 [CUserToolsManager クラス](../mfc/reference/cusertoolsmanager-class.md)<br/>
 [CWinAppEx クラス](../mfc/reference/cwinappex-class.md)
-

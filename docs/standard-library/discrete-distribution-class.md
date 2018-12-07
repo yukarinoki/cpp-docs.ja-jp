@@ -23,12 +23,12 @@ helpviewer_keywords:
 - std::discrete_distribution [C++], param_type
 - std::discrete_distribution [C++], param_type
 ms.assetid: 8c8ba8f8-c06f-4f07-b354-f53950142fcf
-ms.openlocfilehash: 5bf5deec5820976c742efa490bf02d0c0d830a09
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ad375c14e9034a55d280a2927d6ef00f098ddbc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464897"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693908"
 ---
 # <a name="discretedistribution-class"></a>discrete_distribution クラス
 
@@ -230,7 +230,7 @@ explicit discrete_distribution(const param_type& parm);
 
 パラメーター *firstW* と *lastW* のある反復子範囲コンストラクターは、区間シーケンス [*firstW*, *lastW*) 全体にわたる反復子から取得された重み値を使って分布オブジェクトを作成します。
 
-*weightlist* パラメーターを持つ初期化子リスト コンストラクターは、初期化子リスト *weightlist* の重みで分布オブジェクトを作成します。
+初期化子リスト コンス トラクター、 *weightlist*パラメーター初期化子リストから重みを持つ分布オブジェクトを構築します*weightlist*します。
 
 *count*、*low*、*high*、*weightfunc* パラメーターを持つコンストラクターは、以下のルールに基づいて初期化された分布オブジェクトを作成します。
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PAINTSTRUCT structure [MFC]
 ms.assetid: 81ce4993-3e89-43b2-8c98-7946f1314d24
-ms.openlocfilehash: b5179a1bcba4a654ff235885ec2d0516e801fbb7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f1b901ef26c61adbedb3bbe56808cd94bdfad30d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677124"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694648"
 ---
 # <a name="paintstruct-structure"></a>PAINTSTRUCT 構造体
 
@@ -36,7 +36,7 @@ typedef struct tagPAINTSTRUCT {
 描画に使用するディスプレイ コンテキストを識別します。
 
 *fErase*<br/>
-バック グラウンドが再描画する必要があるかどうかを指定します。 アプリケーションがバック グラウンドを再描画する場合は 0。 背景ブラシなし Windows ウィンドウ クラスを作成した場合、背景を描画するため、アプリケーションは、(の説明を参照して、`hbrBackground`のメンバー、 [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK の構造)。
+バック グラウンドが再描画する必要があるかどうかを指定します。 アプリケーションがバック グラウンドを再描画する場合は 0。 背景ブラシなし Windows ウィンドウ クラスを作成した場合、背景を描画するため、アプリケーションは、(の説明を参照して、`hbrBackground`のメンバー、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK の構造)。
 
 *rcPaint*<br/>
 左上隅を指定して、描画が要求された四角形の右下します。

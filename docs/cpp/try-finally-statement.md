@@ -1,6 +1,6 @@
 ---
 title: try-finally ステートメント
-ms.date: 10/09/2018
+ms.date: 11/19/2018
 f1_keywords:
 - __try
 - _try
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: 55d22951c4203c582f7823fef033a0476f8c9a52
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326922"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175922"
 ---
 # <a name="try-finally-statement"></a>try-finally ステートメント
 
@@ -68,7 +68,8 @@ ms.locfileid: "51326922"
 
 たとえば、次の図に示すように、一連の関数呼び出しで、関数 A を関数 D にリンクするとします。 各関数には、1 つの終了ハンドラーがあります。 関数 D で例外が発生し、A で処理されると、スタックがアンワインドされるときに、終了ハンドラーは D、C、B の順に呼び出されます。
 
-![終了の順序&#45;ハンドラーの実行](../cpp/media/vc38cx1.gif "vc38CX1")終了ハンドラーの実行の順序
+![終了の順序&#45;ハンドラーの実行](../cpp/media/vc38cx1.gif "終了の順序&#45;ハンドラーの実行") <br/>
+終了順序 - ハンドラーの実行
 
 > [!NOTE]
 > Try-finally の動作の使用をサポートする他の言語とは異なります**最後に**、c# など。  1 つ **_ _try**の両方ではなくが、必要があります **_ _finally**と **_ _except**します。  両方を一緒に使用する場合は、外側の try-except ステートメントで内側の try-finally ステートメントを囲む必要があります。  各ブロックがいつ実行されるかを指定する規則も異なります。

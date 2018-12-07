@@ -1,15 +1,15 @@
 ---
 title: '方法: shared_ptr インスタンスを作成して使用する'
 ms.custom: how-to
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 7d6ebb73-fa0d-4b0b-a528-bf05de96518e
-ms.openlocfilehash: f437ccb476456a8081fa3be293bf67adb4fb2d0e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 79d85de6859096bdff3e2bc17357b721e5ce5846
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606649"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176277"
 ---
 # <a name="how-to-create-and-use-sharedptr-instances"></a>方法: shared_ptr インスタンスを作成して使用する
 
@@ -17,33 +17,33 @@ ms.locfileid: "50606649"
 
 次の図に、1 つのメモリ位置を指す `shared_ptr` の複数のインスタンスを示します。
 
-[![共有ポインター](../cpp/media/shared_ptr.png "shared_ptr")]
+![共有ポインター ダイアグラム](../cpp/media/shared_ptr.png "共有ポインターの図")
 
-## <a name="example"></a>例
+## <a name="example-1"></a>例 1
 
 可能であればを使用して、 [make_shared](../standard-library/memory-functions.md#make_shared)関数を作成する、`shared_ptr`メモリ リソースが最初に作成されたとき。 `make_shared` は例外セーフです。 これは、コントロール ブロックとリソースにメモリを割り当てるために同じ呼び出しを使用し、その結果、構造のオーバーヘッドが削減されます。 `make_shared`を使用しない場合は、オブジェクトを `shared_ptr` コンストラクターに渡す前にオブジェクトを作成するために、明示的な新しい式を使用する必要があります。 次の例では、新しいオブジェクトと共に `shared_ptr` を宣言して初期化するさまざまな方法を示します。
 
 [!code-cpp[stl_smart_pointers#1](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_1.cpp)]
 
-## <a name="example"></a>例
+## <a name="example-2"></a>例 2
 
 次の例では、別の `shared_ptr`によって既に割り当てられているオブジェクトの共有所有権を取得する `shared_ptr` インスタンスを宣言して初期化する方法を示します。 `sp2` が初期化された `shared_ptr`であることを想定します。
 
 [!code-cpp[stl_smart_pointers#2](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_2.cpp)]
 
-## <a name="example"></a>例
+## <a name="example-3"></a>例 3
 
 `shared_ptr` 要素をコピーするアルゴリズムを使用しているときに、C++ 標準ライブラリ コンテナーに役立つも。 基になるメモリが、必要とされている間は有効であり、必要なくなった後は無効になることを理解している場合は、要素を `shared_ptr` 内でラップし、他のコンテナーにコピーすることができます。 次の例では、ベクター内の `replace_copy_if` インスタンスに対して `shared_ptr` アルゴリズムを使用する方法を示します。
 
 [!code-cpp[stl_smart_pointers#4](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_3.cpp)]
 
-## <a name="example"></a>例
+## <a name="example-4"></a>例 4
 
 `dynamic_pointer_cast`, `static_pointer_cast` および `const_pointer_cast` を使用して、`shared_ptr` をキャストすることができます。 これらの関数は、`dynamic_cast`、`static_cast`、および `const_cast` の各演算子に似ています。 次の例では、基底クラスの `shared_ptr` のベクター内にある各要素の派生型をテストし、要素をコピーし、それらに関する情報を表示する方法を示します。
 
 [!code-cpp[stl_smart_pointers#5](../cpp/codesnippet/CPP/how-to-create-and-use-shared-ptr-instances_4.cpp)]
 
-## <a name="example"></a>例
+## <a name="example-5"></a>例 5
 
 次の方法で、`shared_ptr` を別の関数に渡すことができます。
 
@@ -59,7 +59,7 @@ ms.locfileid: "50606649"
 
 - 時には、たとえば `std:vector<shared_ptr<T>>` のように、各 `shared_ptr` をラムダ式の本体または名前付き関数オブジェクトに渡す必要が生じることがあります。 ラムダまたは関数がそのポインターを格納しない場合は、`shared_ptr` の参照渡しを行い、各要素に対してコピー コンストラクターが呼び出されることを防止します。
 
-## <a name="example"></a>例
+## <a name="example-6"></a>例 6
 
 `shared_ptr` インスタンスによって所有されているメモリ上のポインター比較を有効にするために、`shared_ptr` がさまざまな比較演算子をオーバーロードする方法を次の例に示します。
 

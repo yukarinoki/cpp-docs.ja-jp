@@ -1,6 +1,6 @@
 ---
 title: 初期化子
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - array-element initializers
 - initializing arrays [C++], initializers
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - declarators, as initializers
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
-ms.openlocfilehash: 2948e65538359815da151a540e96227e56bbea6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544665"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176290"
 ---
 # <a name="initializers"></a>初期化子
 
@@ -528,7 +528,8 @@ Reference-type 変数は、以下の場合にのみ初期化子なしで宣言�
 
 reference-type 変数を初期化する場合、コンパイラではオブジェクトに対する参照の作成、または参照先の一時オブジェクトの作成のいずれかを選択するために、次の図に示す判定グラフを使用します。
 
-![参照型の初期化の判定グラフ](../cpp/media/vc38s71.gif "vc38S71")参照型の初期化の判定グラフ
+![参照型の初期化の判定グラフ](../cpp/media/vc38s71.gif "参照型の初期化の判定グラフ") <br/>
+参照型の初期化の判定グラフ
 
 参照**揮発性**型 (として宣言されている**揮発性** *typename* <strong>&</strong> *の識別子*)初期化できます**揮発性**オブジェクトとして宣言されていないオブジェクトと同じ型の**揮発性**します。 できませんただしで初期化する同じ**const**その型のオブジェクト。 同様への参照**const**型 (として宣言されている**const** *typename* <strong>&</strong> *識別子*) で初期化できます**const**同じ型のオブジェクト (またはとして宣言されていないオブジェクト、またはその型に変換が含まれている**const**)。 できませんただしで初期化する同じ**揮発性**その型のオブジェクト。
 

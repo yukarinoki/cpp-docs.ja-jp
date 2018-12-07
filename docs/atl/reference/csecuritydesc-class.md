@@ -34,12 +34,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityDesc class
 ms.assetid: 3767a327-378f-4690-ba40-4d9f6a1f5ee4
-ms.openlocfilehash: d06ec86b4a049daba945c347f4b424b5987010f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 615c9a409b66ca0f515b15fbb55fd794102524fd
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605806"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694076"
 ---
 # <a name="csecuritydesc-class"></a>CSecurityDesc クラス
 
@@ -186,7 +186,7 @@ bool GetControl(SECURITY_DESCRIPTOR_CONTROL* psdc) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出す[GetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa446647)します。
+このメソッドを呼び出す[GetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-getsecuritydescriptorcontrol)します。
 
 ##  <a name="getdacl"></a>  CSecurityDesc::GetDacl
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>パラメーター
 
 *ControlBitsOfInterest*<br/>
-設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、次を参照してください。 [SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582)します。
+設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、次を参照してください。 [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)します。
 
 *ControlBitsToSet*<br/>
 によって指定される制御ビットの新しい値を示す SECURITY_DESCRIPTOR_CONTROL マスク、 *ControlBitsOfInterest*マスク。 このパラメーターの一覧表示フラグの組み合わせを指定できます、 *ControlBitsOfInterest*パラメーター。
@@ -564,7 +564,7 @@ bool SetControl(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出す[SetSecurityDescriptorControl](https://msdn.microsoft.com/library/windows/desktop/aa379582)します。
+このメソッドを呼び出す[SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)します。
 
 ##  <a name="setdacl"></a>  CSecurityDesc::SetDacl
 

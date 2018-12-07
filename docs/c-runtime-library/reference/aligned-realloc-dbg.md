@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_realloc_dbg function
 - aligned_realloc_dbg function
 ms.assetid: 8aede920-991e-44cd-867f-83dc2165db47
-ms.openlocfilehash: 2a261b3e578bef5464bbfda8528ffd8b491acb23
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 136edf6b5c95149302920af0c8a8dc9c07458e3b
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545952"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977772"
 ---
 # <a name="alignedreallocdbg"></a>_aligned_realloc_dbg
 
@@ -70,7 +70,7 @@ void * _aligned_realloc_dbg(
 
 ## <a name="remarks"></a>Remarks
 
-**_aligned_realloc_dbg**のデバッグ バージョンです、 [_aligned_realloc](aligned-realloc.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_realloc_dbg**への呼び出しに減少 **_aligned_realloc**します。 両方 **_aligned_realloc**と **_aligned_realloc_dbg**ベースのヒープにメモリ ブロックを再割り当てが **_aligned_realloc_dbg**はいくつかのデバッグ機能を提供: 特定の割り当ての種類を追跡するためのブロック型パラメーターのリークをテストするブロックのユーザー部分の両側のバッファーと*filename*/*linenumber*割り当て要求の起点を特定する情報です。
+**_aligned_realloc_dbg**のデバッグ バージョンです、 [_aligned_realloc](aligned-realloc.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_realloc_dbg**への呼び出しに減少 **_aligned_realloc**します。 両方 **_aligned_realloc**と **_aligned_realloc_dbg**ベースのヒープにメモリ ブロックを再割り当てが **_aligned_realloc_dbg**はいくつかのデバッグ機能を提供:、リークをテストする、ブロックのユーザー部分の両側のバッファーと*filename*/*linenumber*割り当て要求の起点を特定する情報。 ブロックの型パラメーターを持つ特定の割り当ての種類の追跡は、アラインされた割り当てのサポートされているデバッグ機能ではありません。 アラインされた割り当ては、_NORMAL_BLOCK ブロックの型として表示されます。
 
 **_aligned_realloc_dbg** 、要求したよりも少し多い領域を指定されたメモリ ブロックを再割り当て*newSize*します。 *newSize*最初に割り当てられたメモリ ブロックのサイズよりも小さいか大きい場合があります。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 再割り当てによって、元のメモリ ブロックがヒープ内の別の位置に移動されたり、メモリ ブロックのサイズが変わったりする場合があります。 メモリ ブロックが移動される場合、元のブロックの内容は上書きされます。
 

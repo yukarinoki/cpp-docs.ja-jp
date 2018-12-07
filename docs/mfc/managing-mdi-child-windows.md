@@ -1,6 +1,6 @@
 ---
 title: MDI 子ウィンドウの管理
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - MDICLIENT
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - child windows [MFC]
 - MDI [MFC], frame windows
 ms.assetid: 1828d96e-a561-48ae-a661-ba9701de6bee
-ms.openlocfilehash: 2055c215392c6805791de729ff6ab8c6a9057308
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4b6ccf8a75cc7679f78fba48314073bc53b66a5
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629412"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176797"
 ---
 # <a name="managing-mdi-child-windows"></a>MDI 子ウィンドウの管理
 
@@ -25,7 +25,8 @@ MDI メイン フレーム ウィンドウ (アプリケーションごとに 1 
 
 MDI フレーム ウィンドウは、フレーム ウィンドウは、クイック ウォッチ ウィンドウで、コントロール バーと共に再配置を管理します。 [クイック ウォッチ] ウィンドウで、さらに、すべての MDI 子フレーム ウィンドウを管理します。 次の図は、MDI フレーム ウィンドウ、クイック ウォッチ ウィンドウ、およびその子ドキュメント フレーム ウィンドウ間の関係を示します。
 
-![子ウィンドウの MDI フレーム ウィンドウ](../mfc/media/vc37gb1.gif "vc37gb1") MDI フレーム Windows と子
+![子ウィンドウの MDI フレーム ウィンドウ](../mfc/media/vc37gb1.gif "子ウィンドウの MDI フレーム ウィンドウ") <br/>
+MDI フレーム ウィンドウと子ウィンドウ
 
 MDI フレーム ウィンドウは、1 つを使用する必要がある場合も、現在の MDI 子ウィンドウと組み合わせては機能します。 MDI フレーム ウィンドウは、自分で処理する前に、MDI 子ウィンドウにコマンド メッセージを委任します。
 

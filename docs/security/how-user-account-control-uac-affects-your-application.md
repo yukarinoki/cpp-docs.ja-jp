@@ -1,18 +1,18 @@
 ---
 title: 'ユーザー アカウント制御 (UAC: User Account Control) がアプリケーションに与える影響'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - UAC [C++]
 - security [C++], User Account Control
 - user accounts [C++]
 - User Account Control [C++]
 ms.assetid: 0d001870-253e-4989-b689-f78035953799
-ms.openlocfilehash: 336260ddc1c9da795478d5541af73d9801633843
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 04bfc16f2d82863faca806d4cb8d5295104a0cc9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556963"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177044"
 ---
 # <a name="how-user-account-control-uac-affects-your-application"></a>ユーザー アカウント制御 (UAC: User Account Control) がアプリケーションに与える影響
 
@@ -34,7 +34,7 @@ UAC を無効にした状態で Windows Vista で Visual C++ プロジェクト�
 
 UAC が有効な場合と無効な場合、またアプリケーションに UAC マニフェストがある場合とない場合のアプリケーションの動作の違いを次のフローチャートで説明します。
 
-![Windows Vista ローダーの動作](media/uacflowchart.png "UACflowchart")
+![Windows ローダーの動作](media/uacflowchart.png "Windows ローダーの動作")
 
 ## <a name="see-also"></a>関連項目
 

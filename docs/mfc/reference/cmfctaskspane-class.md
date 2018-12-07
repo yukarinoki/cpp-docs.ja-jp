@@ -1,6 +1,6 @@
 ---
 title: CMFCTasksPane クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCTasksPane
 - AFXTASKSPANE/CMFCTasksPane
@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: e11d1f95cf44756a39ab52fcd4dfeb87addc6e17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563658"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176810"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane クラス
 
@@ -350,11 +350,11 @@ class CMFCTasksPane : public CDockablePane
 
 次の図は、標準的な作業ウィンドウ コントロールを示しています。 最初のグループは、*特殊*グループとそのキャプションは濃い色。 3 番目のグループは折りたたまれています。 最後のグループは作業ウィンドウの最下部に揃えられており、キャプションはなく、このグループの最後のタスクは単純なラベルです。
 
-![作業ウィンドウの例](../../mfc/reference/media/nexttaskpane.png "nexttaskpane")
+![作業ウィンドウの例](../../mfc/reference/media/nexttaskpane.png "作業ウィンドウの例")
 
 作業ウィンドウの外観をカスタマイズするには、さまざまな余白やオフセットを調整します。 次の図に、それらの変数の意味を示します。
 
-![カスタム タスク グループ](../../mfc/reference/media/nexttaskgrpcustom.png "nexttaskgrpcustom")
+![カスタム タスク グループ](../../mfc/reference/media/nexttaskgrpcustom.png "カスタム タスク グループ")
 
 ## <a name="example"></a>例
 

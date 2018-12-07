@@ -2,14 +2,15 @@
 title: シグネチャの変更
 ms.date: 11/16/2016
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-ms.openlocfilehash: 776f777eb64128e9914e6d087551930593a490fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
+ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584042"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281949"
 ---
 # <a name="change-signature"></a>シグネチャの変更
+
 **機能:** 関数のパラメーターを変更できます。
 
 **条件:** さまざまな場所で現在使用されている関数のパラメーターを並べ替え、追加、削除、変更するとき。

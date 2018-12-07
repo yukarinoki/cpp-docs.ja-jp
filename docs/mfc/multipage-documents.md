@@ -1,6 +1,6 @@
 ---
 title: マルチページ ドキュメント
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - pagination [MFC]
 - overriding [MFC], View class functions for printing
@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: 0c0363c1741b713ff24ec7ca7837f0f3c1b3eaf1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587669"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176381"
 ---
 # <a name="multipage-documents"></a>マルチページ ドキュメント
 
@@ -68,7 +68,8 @@ ms.locfileid: "50587669"
 
 印刷プロセスの手順を示しています、場所を示しています。 次の図の各`CView`印刷メンバー関数が呼び出されます。 この記事の残りの部分では、これらの手順の詳細のほとんどについて説明します。 印刷プロセスの追加部分については、記事[GDI リソースの割り当て](../mfc/allocating-gdi-resources.md)します。
 
-![印刷ループ プロセス](../mfc/media/vc37c71.gif "vc37c71")印刷ループ
+![印刷ループ プロセス](../mfc/media/vc37c71.gif "印刷ループ処理") <br/>
+印刷ループ
 
 ##  <a name="_core_pagination"></a> 改ページ
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CREATESTRUCT structure [MFC]
 ms.assetid: 028c7b5e-4fdc-48da-a550-d3e4f9e6cc85
-ms.openlocfilehash: 13f715dc914ccc052945790aeaff9c47bd34ed46
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1de42ba3e26f7a06918a69358083e68f142836cc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619649"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694700"
 ---
 # <a name="createstruct-structure"></a>CREATESTRUCT 構造体
 
@@ -69,7 +69,7 @@ typedef struct tagCREATESTRUCT {
 新しいウィンドウの名前を指定する null で終わる文字列へのポインター。
 
 *lpszClass*<br/>
-新しいウィンドウの Windows クラス名を指定する null で終わる文字列の指す (、 [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)構造体は、詳細については、Windows SDK を参照してください)。
+新しいウィンドウの Windows クラス名を指定する null で終わる文字列の指す (、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)構造体は、詳細については、Windows SDK を参照してください)。
 
 *dwExStyle*<br/>
 指定します、[拡張スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)新しいウィンドウの。

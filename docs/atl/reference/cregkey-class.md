@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: 33ca9e1c07dc350845104a6027166e511b3bbe4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605083"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694856"
 ---
 # <a name="cregkey-class"></a>CRegKey クラス
 
@@ -892,7 +892,7 @@ LONG SetKeySecurity(SECURITY_INFORMATION si, PSECURITY_DESCRIPTOR psd) throw();
 |DACL_SECURITY_INFORMATION|キーの随意アクセス制御リスト (DACL) を設定します。 キーに対する WRITE_DAC アクセス許可を持っているか、呼び出し元のプロセスは、オブジェクトの所有者である必要があります。|
 |GROUP_SECURITY_INFORMATION|キーのプライマリ グループ セキュリティ識別子 (SID) を設定します。 キーは WRITE_OWNER アクセスが必要または呼び出し元のプロセスは、オブジェクトの所有者である必要があります。|
 |OWNER_SECURITY_INFORMATION|キーの所有者の SID を設定します。 キーは WRITE_OWNER アクセスが必要または呼び出し元のプロセスがオブジェクトの所有者であるか、有効になっている SE_TAKE_OWNERSHIP_NAME 権限を持っている必要があります。|
-|SACL_SECURITY_INFORMATION|キーのシステム アクセス制御リスト (SACL) を設定します。 ACCESS_SYSTEM_SECURITY アクセス キーが必要です。 このアクセスを取得するための適切が SE_SECURITY_NAME を有効にするには[特権](https://msdn.microsoft.com/library/windows/desktop/aa379306)呼び出し元の現在のアクセス トークンで ACCESS_SYSTEM_SECURITY へのアクセスのためのハンドルを開くし、特権を無効にします。|
+|SACL_SECURITY_INFORMATION|キーのシステム アクセス制御リスト (SACL) を設定します。 ACCESS_SYSTEM_SECURITY アクセス キーが必要です。 このアクセスを取得するための適切が SE_SECURITY_NAME を有効にするには[特権](/windows/desktop/secauthz/privileges)呼び出し元の現在のアクセス トークンで ACCESS_SYSTEM_SECURITY へのアクセスのためのハンドルを開くし、特権を無効にします。|
 
 *psd*<br/>
 ポインターを[SECURITY_DESCRIPTOR](/windows/desktop/api/winnt/ns-winnt-_security_descriptor)構造を指定したキーに設定するセキュリティ属性を指定します。

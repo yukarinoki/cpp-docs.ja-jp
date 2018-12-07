@@ -1,6 +1,6 @@
 ---
 title: C++ AMP の概要
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, requirements
 - C++ Accelerated Massive Parallelism, architecture
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, overview
 - C++ Accelerated Massive Parallelism
 ms.assetid: 9e593b06-6e3c-43e9-8bae-6d89efdd39fc
-ms.openlocfilehash: 070f0885f11f29413aca3028d4f747e0edfd2413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26f24e922769a565c88264032373662116eee290
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663789"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176992"
 ---
 # <a name="c-amp-overview"></a>C++ AMP の概要
 
@@ -362,7 +362,7 @@ void AddArraysWithFunction() {
 
 次の図は、タイルに配置されたサンプリング データの 2 次元配列を表します。
 
-![タイル化された範囲の値にインデックス](../../parallel/amp/media/camptiledgridexample.png "camptiledgridexample")
+![タイル化された範囲の値にインデックス](../../parallel/amp/media/camptiledgridexample.png "タイル化された範囲の値にインデックス")
 
 次のコード例では、前の図のサンプリング データを使用します。 このコードは、タイル内の各値を、タイル内の値の平均に置き換えます。
 

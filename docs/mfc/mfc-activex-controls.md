@@ -1,6 +1,6 @@
 ---
 title: MFC ActiveX コントロール
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - MFC ActiveX Controls (MFC)
 helpviewer_keywords:
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 95e1e1cc47d9c14448635fae5d6a9added8e15e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553273"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174876"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX コントロール
 
@@ -39,7 +39,8 @@ ActiveX コントロールは、独自のウィンドウに自らを描画し、
 
 ActiveX コントロールは、インプロセス サーバー (通常は小さなオブジェクト) として実装され、任意の OLE コンテナー内で使用することができます。 ActiveX コントロールに対応するように設計された OLE コンテナー内で ActiveX コントロールを使用する場合のみ、ActiveX コントロールのすべての機能を利用できることに注意してください。 参照してください[ActiveX コントロールの他のアプリケーション](../mfc/containers-for-activex-controls.md)ActiveX コントロールをサポートするコンテナーの一覧についてはします。 これ以後はこのコンテナーの種類を "コントロール コンテナー" と呼びますが、これらのコンテナーはコントロールのプロパティとメソッドを使用して ActiveX コントロールを操作し、イベントの形式で ActiveX コントロールからの通知を受け取ることができます。 次の図に、この双方向のやり取りを示します。
 
-![ActiveX コントロール コンテナーとコントロールの相互作用](../mfc/media/vc37221.gif "vc37221") an ActiveX コントロール コンテナーの間の対話とウィンドウ付き ActiveX コントロール
+![ActiveX コントロール コンテナーとコントロールの相互作用](../mfc/media/vc37221.gif "相互作用の ActiveX コントロール コンテナーとコントロール") <br/>
+ActiveX コントロール コンテナーとウィンドウを持つ ActiveX コントロールとの対話
 
 ActiveX コントロールの最適化についてのいくつか最近は、次を参照してください。 [MFC ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)します。
 
@@ -69,7 +70,8 @@ ActiveX コントロールは複数のプログラム要素を使用して、コ
 
 コントロール コンテナー内でコントロールを使用すると、コントロールは 2 つのメカニズムを使用して通信を行います。つまり、プロパティとメソッドを公開し、イベントを発生させます。 次の図に、これら 2 つのメカニズムを実装する方法を示します。
 
-![ActiveX コントロール コンテナーと通信](../mfc/media/vc37222.gif "vc37222") an ActiveX コントロール コンテナーの間の通信と ActiveX コントロール
+![ActiveX コントロール コンテナーと通信](../mfc/media/vc37222.gif "ActiveX コントロール コンテナーと通信") <br/>
+ActiveX コントロール コンテナーと ActiveX コントロールとの通信
 
 前の図では、コントロールが他の OLE インターフェイスを (オートメーションとイベント以外の方法で) 処理する方法も示します。
 
@@ -83,7 +85,8 @@ ActiveX コントロールは複数のプログラム要素を使用して、コ
 
 ウィンドウを持つコントロールがアクティブになると、コントロール コンテナー、ユーザー、および Windows との双方向のやり取りができます。 下の図では、ActiveX コントロール、コントロール コンテナー、およびオペレーティング システムの間の通信パスを示します。
 
-![Msg 処理ウィンドウ付き ActiveX コントロールをアクティブな](../mfc/media/vc37223.gif "vc37223")ウィンドウ付き ActiveX コントロール (ときにアクティブな) で Windows メッセージの処理
+![Msg 処理ウィンドウ付き ActiveX コントロールをアクティブな](../mfc/media/vc37223.gif "Msg 処理ウィンドウ付き ActiveX コントロールをアクティブ") <br/>
+ウィンドウを持つ ActiveX コントロールがアクティブになったときの Windows メッセージの処理
 
 ##  <a name="_core_serializing_activex_elements"></a> シリアル化
 

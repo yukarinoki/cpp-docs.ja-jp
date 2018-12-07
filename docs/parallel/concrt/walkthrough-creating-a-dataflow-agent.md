@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: データフロー エージェントの作成'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - creating dataflow agents [Concurrency Runtime]
 - dataflow agents, creating [Concurrency Runtime]
 ms.assetid: 9db5ce3f-c51b-4de1-b79b-9ac2a0cbd130
-ms.openlocfilehash: 35532fd01259bcbf64a70aaca16c621f875bb43f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26ea7d520c3dbc4935699e5d52871d21739a3d88
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487647"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176082"
 ---
 # <a name="walkthrough-creating-a-dataflow-agent"></a>チュートリアル: データフロー エージェントの作成
 
@@ -84,7 +84,7 @@ ms.locfileid: "50487647"
 
 次の図は、`dataflow_agent` クラスの完全なデータ フロー ネットワークを示しています。
 
-![データ フロー ネットワーク](../../parallel/concrt/media/concrt_dataflow.png "concrt_dataflow")
+![データ フロー ネットワーク](../../parallel/concrt/media/concrt_dataflow.png "データフロー ネットワーク")
 
 ネットワークのメンバーを次の表に示します。
 

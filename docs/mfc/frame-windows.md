@@ -1,6 +1,6 @@
 ---
 title: フレーム ウィンドウ
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - document frame windows [MFC]
 - windows [MFC], MDI
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - MDI [MFC], frame windows
 - splitter windows [MFC], and frame windows
 ms.assetid: 40677339-8135-4f5e-aba6-3fced3078077
-ms.openlocfilehash: 09db7bab392778297f17c14f7bb807f91af4d896
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76c2f303713644c5f78f20d2ea868bd67b9eae71
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619935"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175376"
 ---
 # <a name="frame-windows"></a>フレーム ウィンドウ
 
@@ -30,7 +30,8 @@ Windows アプリケーションを実行すると、ユーザーは、フレー
 
 MFC フレームワークでは、フレーム ウィンドウを使用して、表示が含まれます。 2 つのコンポーネント: フレームとコンテンツ-表され、2 つの異なるクラス (mfc の) によって管理します。 フレーム ウィンドウ クラスは、フレームを管理し、ビューのクラスがコンテンツを管理します。 [ビュー] ウィンドウでは、フレーム ウィンドウの子です。 描画と他のユーザーのやり取り、ドキュメント フレーム ウィンドウのクライアント領域ではなく、ビューのクライアント領域で実行します。 フレーム ウィンドウでは、ビュー、キャプション バーと標準ウィンドウ コントロールを最小化し、ウィンドウを最大化ボタン、コントロール メニューなどの周囲に枠を表示と、ウィンドウのサイズを制御できます。 「コンテンツ」は、ウィンドウのクライアント領域で、子ウィンドウによって占有されて完全で構成されています: ビュー。 次の図は、フレーム ウィンドウとビュー間の関係を示します。
 
-![フレーム ウィンドウ ビュー](../mfc/media/vc37fx1.gif "vc37fx1")フレーム ウィンドウとビュー
+![フレーム ウィンドウ ビュー](../mfc/media/vc37fx1.gif "フレーム ウィンドウの表示") <br/>
+フレーム ウィンドウとビュー
 
 ## <a name="frame-windows-and-splitter-windows"></a>フレームの Windows と Windows の分割
 

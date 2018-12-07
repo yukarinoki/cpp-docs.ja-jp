@@ -1,17 +1,17 @@
 ---
 title: 関数のオーバーロード
-ms.date: 1/25/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - function overloading [C++], about function overloading
 - function overloading
 - declaring functions [C++], overloading
 ms.assetid: 3c9884cb-1d5e-42e8-9a49-6f46141f929e
-ms.openlocfilehash: f37a539c74b995b1dce5f68344c555a679a87991
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: c05e4b840a02b3d9bbcd4ed259509be4c35c22c2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333372"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176303"
 ---
 # <a name="function-overloading"></a>関数のオーバーロード
 
@@ -280,7 +280,8 @@ volatile Over&
 
    - 派生クラスへのポインターから基底クラスへのポインターに変換すると、基底クラスが直接基底クラスに近ければ近いほど、一致の程度が向上します。 次の図に示すクラスの階層構造を考えます。
 
-![優先変換](../cpp/media/vc391t1.gif "vc391T1")グラフを示す優先変換
+![優先される変換のグラフ](../cpp/media/vc391t1.gif "優先される変換のグラフ") <br/>
+優先される変換を示すグラフ
 
 `D*` 型から `C*` 型への変換は、`D*` 型から `B*` 型への変換よりも適しています。 同様に、`D*` 型から `B*` 型への変換は、`D*` 型から `A*` 型への変換よりも適しています。
 
@@ -290,7 +291,8 @@ volatile Over&
 
 上記の規則は、派生の特定のパスに沿ってのみ適用されます。 次の図に示すグラフについて考えます。
 
-![マルチ&#45;優先される変換を示しています継承](../cpp/media/vc391t2.gif "vc391T2")優先される変換を示す複数継承グラフ。
+![複数&#45;優先される変換を示しています継承](../cpp/media/vc391t2.gif "複数&#45;優先される変換を示しています。 継承。") <br/>
+優先される変換を示す複数継承グラフ
 
 `C*` 型から `B*` 型への変換は、`C*` 型から `A*` 型への変換よりも適しています。 理由は、これらが同じパスにあり、`B*` の方が近いからです。 しかし、`C*` 型から `D*` 型への変換が、`A*` 型への変換より適しているというわけではありません。これらの変換は違うパスをたどるので、優先順位が決まらないからです。
 

@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: イメージ処理ネットワークの作成'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - image-processing networks, creating [Concurrency Runtime]
 - creating image-processing networks [Concurrency Runtime]
 ms.assetid: 78ccadc9-5ce2-46cc-bd62-ce0f99d356b8
-ms.openlocfilehash: 4eb1d6f9e5bc0055a1a4b4be5e18497b20c3a73a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93a20ca9967c8730e1563a653c8f4546d94161fb
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643639"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176173"
 ---
 # <a name="walkthrough-creating-an-image-processing-network"></a>チュートリアル: イメージ処理ネットワークの作成
 
@@ -134,7 +134,7 @@ ms.locfileid: "50643639"
 
 次の図は、イメージ処理ネットワークを示しています。
 
-![イメージ処理ネットワーク](../../parallel/concrt/media/concrt_imageproc.png "concrt_imageproc")
+![イメージ処理ネットワーク](../../parallel/concrt/media/concrt_imageproc.png "イメージ処理ネットワーク")
 
 `countdown_event`この例ではオブジェクトがすべてのイメージが処理されたときに、メイン アプリケーションを通知するために、イメージ処理ネットワークを使用できます。 `countdown_event`クラスで使用する[concurrency::event](../../parallel/concrt/reference/event-class.md)オブジェクトからカウンターの値が 0 に達したときに通知します。 メインのアプリケーションは、it がネットワークにファイル名を送信するたびにカウンターをインクリメントします。 ネットワーク デクリメントのターミナル ノードには、カウンターの各イメージの処理が完了します。 メインのアプリケーションでは、指定されたディレクトリを走査後の待機、`countdown_event`オブジェクトからそのカウンターをゼロに達したことを通知します。
 
@@ -152,7 +152,7 @@ ms.locfileid: "50643639"
 
 次の図は、サンプル出力を示します。 各ソース イメージは、その対応する変更後のイメージの上です。
 
-![サンプル出力の例では、](../../parallel/concrt/media/concrt_imageout.png "concrt_imageout")
+![サンプル出力の例では、](../../parallel/concrt/media/concrt_imageout.png "サンプル出力の例では、")
 
 `Lighthouse` Tom Alphin によってが作成され、そのため、グレースケールに変換されます。 `Chrysanthemum`、 `Desert`、 `Koala`、および`Tulips`主調色として red があるためと青と緑のカラー コンポーネントを削除しているし、暗くなります。 `Hydrangeas`、 `Jellyfish`、および`Penguins`既定条件に一致しているため toned セピアは。
 

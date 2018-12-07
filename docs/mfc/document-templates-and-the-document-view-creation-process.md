@@ -1,6 +1,6 @@
 ---
 title: ドキュメント テンプレートとドキュメント/ビューの作成手順
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - icons, for multiple document templates
 - document templates [MFC], and views
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - CDocTemplate class [MFC]
 - templates [MFC], document templates
 ms.assetid: 311ce4cd-fbdf-4ea1-a51b-5bb043abbcee
-ms.openlocfilehash: 544a9bf60ee2066688703faa7e430e2337454e66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29575166a188b0691465bef0a72810d2e3d97624
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606350"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174888"
 ---
 # <a name="document-templates-and-the-documentview-creation-process"></a>ドキュメント テンプレートとドキュメント/ビューの作成手順
 
@@ -24,7 +24,8 @@ ms.locfileid: "50606350"
 
 一部のアプリケーションでは、複数のドキュメント タイプをサポートします。 たとえば、アプリケーションでは、ドキュメントのテキストとグラフィックスのドキュメントをサポート可能性があります。 このようなアプリケーションは、ユーザーが [ファイル] メニューで [New]、ダイアログ ボックスはの新しいドキュメント型を開くの一覧を示します。 サポートされているドキュメントの種類ごとに、アプリケーションは、個別のドキュメント テンプレート オブジェクトを使用します。 次の図は、2 つのドキュメントの種類をサポートし、いくつかの開いているドキュメントを表示する MDI アプリケーションの構成を示しています。
 
-![2 つのドキュメント型を持つ MDI アプリケーション](../mfc/media/vc387h1.gif "vc387h1") MDI アプリケーション 2 種類のドキュメント
+![2 つのドキュメント型を持つ MDI アプリケーション](../mfc/media/vc387h1.gif "を 2 つのドキュメントの種類を持つ MDI アプリケーション") <br/>
+2 つのドキュメント タイプをサポートする MDI アプリケーション
 
 ドキュメント テンプレートを作成して、アプリケーション オブジェクトによって保持されます。 アプリケーションの中に、重要なタスクの 1 つ実行`InitInstance`機能の適切な種類の 1 つまたは複数のドキュメント テンプレートを作成することです。 この機能については、「[ドキュメント テンプレートの作成](../mfc/document-template-creation.md)です。 アプリケーション オブジェクトでは、テンプレートのリストにそれぞれのドキュメント テンプレートへのポインターを格納し、ドキュメント テンプレートを追加するためのインターフェイスを提供します。
 

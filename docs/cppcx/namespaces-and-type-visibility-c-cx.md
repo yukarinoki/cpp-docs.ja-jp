@@ -2,12 +2,12 @@
 title: 名前空間と型の参照範囲 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: e9efc207fe0ed49fecf30366d265019e7a3ee009
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440522"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693895"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>名前空間と型の参照範囲 (C++/CX)
 
@@ -40,7 +40,7 @@ Windows ランタイム型名前空間: 標準 C++ 型とは異なり、プラ�
 
 ## <a name="windows-runtime-namespaces"></a>Windows ランタイム名前空間
 
-Windows API は、Windows で宣言されている型::\*名前空間。 これらの名前空間は Windows 用に予約されており、それらの名前空間に型を追加できません。 **オブジェクト ブラウザー**では、windows.winmd ファイル内でこれらの名前空間を表示できます。 これらの名前空間に関するドキュメントについては、「 [Windows API](https://msdn.microsoft.com/library/windows/apps/br211377)」を参照してください。
+Windows API は、Windows で宣言されている型::\*名前空間。 これらの名前空間は Windows 用に予約されており、それらの名前空間に型を追加できません。 **オブジェクト ブラウザー**では、windows.winmd ファイル内でこれらの名前空間を表示できます。 これらの名前空間に関するドキュメントについては、「 [Windows API](/uwp/api/)」を参照してください。
 
 ## <a name="ccx-namespaces"></a>C++/CX 名前空間
 

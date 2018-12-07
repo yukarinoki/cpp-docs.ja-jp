@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 0a1d0c79e97cf9f9cb0c2b0c6b140654deb4c227
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3752e8b58560e522aecc3689e2a5c3be2649b1e1
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454653"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694167"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl クラス
 
@@ -210,7 +210,7 @@ LRESULT DefWindowProc();
 
 ### <a name="remarks"></a>Remarks
 
-既定では、`DefWindowProc`呼び出し、 [CallWindowProc](https://msdn.microsoft.com/library/windows/desktop/ms633571)ウィンドウ プロシージャで指定されたメッセージの情報を送信する Win32 関数[コンテナー内](#m_pfnsuperwindowproc)します。
+既定では、`DefWindowProc`呼び出し、 [CallWindowProc](/windows/desktop/api/winuser/nf-winuser-callwindowproca)ウィンドウ プロシージャで指定されたメッセージの情報を送信する Win32 関数[コンテナー内](#m_pfnsuperwindowproc)します。
 
 パラメーターなしの関数は、現在のメッセージから自動的に必要なパラメーターを取得します。
 

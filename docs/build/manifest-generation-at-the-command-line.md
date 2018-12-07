@@ -5,12 +5,12 @@ helpviewer_keywords:
 - manifests [C++]
 - manifest tool (mt.exe)
 ms.assetid: fc2ff255-82b1-4c44-af76-8405c5850292
-ms.openlocfilehash: e192122a5b9411f983683c2fa01fab2aded49ffe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 440bf785f61a438099a394319a6df6e7389a608d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505366"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692529"
 ---
 # <a name="manifest-generation-at-the-command-line"></a>コマンド ラインでのマニフェスト生成
 
@@ -18,7 +18,7 @@ Nmake または同様のツールを使用してコマンドラインからの C
 
 ## <a name="see-also"></a>関連項目
 
-[マニフェスト](https://msdn.microsoft.com/library/aa375365)<br/>
+[マニフェスト](/windows/desktop/sbscs/manifests)<br/>
 [/INCREMENTAL (インクリメンタル リンクを行う)](../build/reference/incremental-link-incrementally.md)<br/>
 [厳密名アセンブリ (アセンブリ署名) (C++/CLI)](../dotnet/strong-name-assemblies-assembly-signing-cpp-cli.md)<br/>
 [エディット コンティニュ](/visualstudio/debugger/edit-and-continue)<br/>

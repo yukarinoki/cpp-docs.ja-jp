@@ -1,6 +1,6 @@
 ---
 title: ドキュメント/ビュー アーキテクチャ
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - CView class [MFC], view architecture
 - CDocument class [MFC]
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: 943199e2398bcb49c7dddf6b3a67f5556c9c81a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0886f364637c8844aceb5d5d7b6b2ed7175225d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509280"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176850"
 ---
 # <a name="documentview-architecture"></a>ドキュメント/ビュー アーキテクチャ
 
@@ -47,7 +47,8 @@ MFC のドキュメント/ビュー アーキテクチャでは、複数のビ�
 
 次の図は、ドキュメントとビュー間の関係を示します。
 
-![ビューが表示されているドキュメントの一部](../mfc/media/vc379n1.gif "vc379n1")ドキュメントとビュー
+![ビューが表示されているドキュメントの一部](../mfc/media/vc379n1.gif "ビューが表示されているドキュメントの一部") <br/>
+ドキュメントとビュー
 
 クラス ライブラリのドキュメント/ビューの実装は、データ自体の表示と、データ上でユーザー操作からを区切ります。 データに対するすべての変更は、ドキュメントのクラスによって管理されます。 ビューにアクセスしてデータを更新するには、このインターフェイスを呼び出します。
 

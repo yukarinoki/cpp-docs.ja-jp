@@ -1,18 +1,18 @@
 ---
 title: 複数の基本クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - base classes [C++], multiple
 - derived classes [C++], multiple bases
 - multiple inheritance, class declaration
 - multiple base classes [C++]
 ms.assetid: a30c69fe-401c-4a87-96a0-e0da70c7c740
-ms.openlocfilehash: fbbe6d6194b878b4851cbde84b55d71b9e4fc02c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b58c238da37fbbaf7c2c2913b652c26d98fbd96e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50483461"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176364"
 ---
 # <a name="multiple-base-classes"></a>複数の基本クラス
 
@@ -52,11 +52,13 @@ class CollectionOfBook : public Book, public Collection {
 
 昼食の行列をシミュレートした、次の図のクラス階層構造を考えます。
 
-![Lunch-line シミュレーション グラフ](../cpp/media/vc38xp1.gif "vc38XP1")シミュレートされた Lunch-line グラフ
+![Lunch-line シミュレーション グラフ](../cpp/media/vc38xp1.gif "lunch-line シミュレーション グラフ") <br/>
+Lunch-line シミュレーション グラフ
 
 図で、`Queue` は、`CashierQueue` および `LunchQueue` の基底クラスです。 ただし、`LunchCashierQueue` を作成するために両方のクラスを組み合わせると、新しいクラスに、`Queue` 型のサブオブジェクトが 2 つ (1 つは `CashierQueue` のサブオブジェクト、もう 1 つは `LunchQueue` のサブオブジェクト) が含まれるという問題が生じます。 次の図は、概念的なメモリ レイアウトを示します (実際のメモリ レイアウトは最適化される場合があります)。
 
-![昼食をシミュレートした&#45;行オブジェクト](../cpp/media/vc38xp2.gif "vc38XP2")シミュレートされた Lunch-line オブジェクト
+![昼食をシミュレートした&#45;行オブジェクト](../cpp/media/vc38xp2.gif "昼食をシミュレートした&#45;行オブジェクト") <br/>
+Lunch-Line シミュレーション オブジェクト
 
 `Queue` オブジェクトに 2 つの `LunchCashierQueue` サブオブジェクトがあることに注意してください。 次のコードは、`Queue` が仮想基底クラスであることを宣言します。
 
@@ -71,15 +73,18 @@ class LunchCashierQueue : public LunchQueue, public CashierQueue {};
 
 **仮想**キーワードにより、サブオブジェクトの 1 つだけコピー`Queue`が含まれています (次の図を参照してください)。
 
-![昼食をシミュレートした&#45;行オブジェクト、仮想基底クラス](../cpp/media/vc38xp3.gif "vc38XP3")仮想基底クラスでのシミュレートされた Lunch-line オブジェクト
+![昼食をシミュレートした&#45;行オブジェクト、仮想基底クラス](../cpp/media/vc38xp3.gif "昼食をシミュレートした&#45;行オブジェクト、仮想基底クラス") <br/>
+仮想基底クラスを持つ、シミュレートされた lunch-line オブジェクト
 
 クラスは、指定された型の仮想コンポーネントと非仮想コンポーネントの両方を持つことができます。 これは、次の図に示されている条件で発生します。
 
-![クラスの仮想および非仮想コンポーネント](../cpp/media/vc38xp4.gif "vc38XP4")仮想と同じクラスの非仮想コンポーネント
+![仮想および非&#45;クラスの仮想コンポーネント](../cpp/media/vc38xp4.gif "仮想および非&#45;クラスの仮想コンポーネント") <br/>
+同じクラスの仮想および非仮想コンポーネント
 
 図では、`CashierQueue` と `LunchQueue` は仮想基底クラスとして `Queue` を使用します。 ただし、`TakeoutQueue` は、仮想基底クラスではなく、基底クラスとして `Queue` を指定します。 したがって、`LunchTakeoutCashierQueue` には型 `Queue` の 2 つのサブオブジェクトがあります。1 つは `LunchCashierQueue` を含む継承パスからのもので、もう 1 つは `TakeoutQueue` を含むパスからのものです。 これを次の図に示します。
 
-![オブジェクトのレイアウトにおける仮想および非仮想継承](../cpp/media/vc38xp5.gif "vc38XP5")仮想および非仮想継承でオブジェクトのレイアウト
+![仮想および非&#45;オブジェクトのレイアウトで仮想継承](../cpp/media/vc38xp5.gif "仮想および非&#45;オブジェクトのレイアウトで仮想継承") <br/>
+仮想および非仮想継承を持つオブジェクトのレイアウト
 
 > [!NOTE]
 >  仮想継承は、非仮想継承と比較してサイズに関して大きな利点があります。 ただし、余分な処理オーバーヘッドが生じる場合があります。
@@ -187,7 +192,8 @@ public:
 
 - アドレス演算子を使用して取得したポインターを、基底クラス型 `A` に明示的に変換する効果。 オブジェクトのアドレスを `A*` 型に強制変換しても、2 つのサブオブジェクトが存在する場合、`A` 型のどのサブオブジェクトを選択するのかについて十分な情報が必ずコンパイラに提供されるわけではありません。
 
-![基底クラスへのポインターのあいまいな変換](../cpp/media/vc38xt1.gif "vc38XT1")基底クラスへポインターのあいまいな変換
+![基底クラスへのポインターのあいまいな変換](../cpp/media/vc38xt1.gif "基底クラスへのポインターのあいまいな変換") <br/>
+基底クラスへのポインターのあいまいな変換
 
 `A*` 型のサブオブジェクトのどれが正しいかを識別する方法はないため、`A` 型への変換 (`A` へのポインター) はあいまいです。 次のように、使用するサブオブジェクトを明示的に指定することにより、あいまいさを避けることができます。
 
@@ -202,7 +208,8 @@ public:
 
 次の図は、仮想継承と非仮想継承を使用してオブジェクトがどのように構成されているかを示しています。
 
-![仮想派生および非仮想派生](../cpp/media/vc38xr1.gif "vc38XR1")仮想 vs します。非仮想派生
+![仮想派生および非&#45;仮想派生](../cpp/media/vc38xr1.gif "仮想派生および非&#45;仮想派生") <br/>
+仮想および非仮想派生
 
 この図では、非仮想基底クラスを通じてクラス `A` のメンバーにアクセスすると、あいまいさが発生します。コンパイラは、`B` に関連付けられているサブオブジェクトと `C` に関連付けられているサブジェクトのどちらを使用するかを示す情報を持ちません。 しかし、`A` が仮想基底クラスとして指定されている場合、どのサブオブジェクトがアクセスされているかは問題になりません。
 

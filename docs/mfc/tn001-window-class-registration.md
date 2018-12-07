@@ -8,16 +8,16 @@ helpviewer_keywords:
 - WNDCLASS [MFC]
 - AfxRegisterClass function
 ms.assetid: 1abf678e-f220-4606-85e0-03df32f64c54
-ms.openlocfilehash: 92d55780ad309a9c8392cf86e7fa4eaefc5f407a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f16480d238ca2a3e683219984c54d67159f806d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619155"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693867"
 ---
 # <a name="tn001-window-class-registration"></a>テクニカル ノート 1: ウィンドウ クラスの登録
 
-このノートには、特殊なを登録する MFC ルーチンがについて説明[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)es の Microsoft Windows が必要とします。 特定`WNDCLASS`MFC と Windows で使用される属性については説明します。
+このノートには、特殊なを登録する MFC ルーチンがについて説明[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)es の Microsoft Windows が必要とします。 特定`WNDCLASS`MFC と Windows で使用される属性については説明します。
 
 ## <a name="the-problem"></a>問題を
 

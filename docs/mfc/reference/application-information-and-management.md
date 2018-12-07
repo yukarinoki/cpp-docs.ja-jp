@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d5216cd399943cda67bc9387ea37c938e5cab48
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596665"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694336"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>パラメーター
 
 *lpWndClass*<br/>
-ポインターを[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)登録されるウィンドウ クラスに関する情報を含む構造体。 この構造体の詳細については、Windows SDK を参照してください。
+ポインターを[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)登録されるウィンドウ クラスに関する情報を含む構造体。 この構造体の詳細については、Windows SDK を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>パラメーター
 
 *nClassStyle*<br/>
-Windows クラスのスタイルまたはビットごとの OR を使用して作成されたスタイルの組み合わせを指定します ( **&#124;**) ウィンドウ クラスの演算子。 クラスのスタイルの一覧は、次を参照してください。、 [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK の構造体。 NULL の場合、既定値としては、次のように設定されます。
+Windows クラスのスタイルまたはビットごとの OR を使用して作成されたスタイルの組み合わせを指定します ( **&#124;**) ウィンドウ クラスの演算子。 クラスのスタイルの一覧は、次を参照してください。、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK の構造体。 NULL の場合、既定値としては、次のように設定されます。
 
 - CS_DBLCLKS、送信メッセージをダブルクリックしてウィンドウ プロシージャ、ユーザーがマウスをダブルクリックしたときにマウスのスタイルを設定します。
 

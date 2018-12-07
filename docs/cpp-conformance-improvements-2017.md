@@ -6,12 +6,12 @@ ms.technology:
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5dca047f6de1ee77734be8842f0ac68402b7dbfc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524252"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694401"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#update_159) での C++ 準拠の改善
 
@@ -1844,7 +1844,6 @@ struct A
   private:
     template <template <typename...> typename Type, typename... Args>
     static constexpr A<Args...> from_template(A<Type<Args...>>);
-
 };
 
 A<>::from_template_t<A<int>> a;
@@ -1852,7 +1851,7 @@ A<>::from_template_t<A<int>> a;
 
 Visual Studio 2017 バージョン 15.9 の **/permissive-** モードでは、コンパイラで C3861: *'from_template': 識別子が見つかりませんでした*が発生します。
 
-このエラーを解決するには、`A` の前に `a` を宣言します。
+このエラーを解決するには、`from_template_t` の前に `from_template` を宣言します。
 
 ### <a name="modules-changes"></a>モジュールの変更
 

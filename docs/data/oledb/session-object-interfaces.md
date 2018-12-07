@@ -1,6 +1,6 @@
 ---
 title: セッション オブジェクト インターフェイス
-ms.date: 10/24/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - session objects [OLE DB]
 - session objects [OLE DB], interfaces
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 6b4748b804572c72b75f63b8ea2473818bdac989
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 284f93d96b974a616e957a65ef0c8aa39b33a564
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556622"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176901"
 ---
 # <a name="session-object-interfaces"></a>セッション オブジェクト インターフェイス
 
@@ -42,7 +42,7 @@ ms.locfileid: "51556622"
 
 セッション オブジェクトは、行セット オブジェクトを作成します。 プロバイダーは、コマンドをサポートする場合、セッションもコマンド オブジェクトが作成されます (`CCommand`、OLE DB を実装する`TCommand`)。 コマンド オブジェクトを実装して、`ICommand`インターフェイスと使用、`ICommand::Execute`メソッドを次の図に示すように、行セットに対してコマンドを実行します。
 
-![プロバイダー コンセプチュアル ダイアグラム](../../data/oledb/media/vc4u551.gif "vc4u551")
+![プロバイダー コンセプチュアル ダイアグラム](../../data/oledb/media/vc4u551.gif "プロバイダー コンセプチュアル ダイアグラム")
 
 ## <a name="see-also"></a>関連項目
 

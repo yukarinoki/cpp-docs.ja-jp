@@ -6,12 +6,12 @@ helpviewer_keywords:
 - message handling [MFC]
 - message maps [MFC]
 ms.assetid: 62fe2a1b-944c-449d-a0f0-63c11ee0a3cb
-ms.openlocfilehash: 1b109a3f85ffd3311d08c3d749d543b1e625e77c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f76e9b2ef25c8a6c046cb6c47f0f5761854453c9
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628619"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694713"
 ---
 # <a name="message-handling-and-mapping"></a>メッセージの処理とマップ
 
@@ -23,7 +23,7 @@ WM_COMMAND メッセージ-通常、メニューのツールバーのボタン�
 
 メッセージ マップは (メニューやツールバーのボタン)、ユーザー インターフェイス オブジェクトを更新する方法を指定することも有効化または無効にすることに合わせて、現在のコンテキスト。
 
-メッセージと Windows でのメッセージ キューの詳細については、次を参照してください。[メッセージとメッセージ キュー](https://msdn.microsoft.com/library/windows/desktop/ms632590) Windows SDK に含まれています。
+メッセージと Windows でのメッセージ キューの詳細については、次を参照してください。[メッセージとメッセージ キュー](/windows/desktop/winmsg/messages-and-message-queues) Windows SDK に含まれています。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 
