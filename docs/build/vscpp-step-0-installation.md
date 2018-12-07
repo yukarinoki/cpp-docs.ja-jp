@@ -5,14 +5,14 @@ description: Visual Studio の Visual C サポートをインストールしま�
 ms.custom: mvc
 ms.date: 11/19/2018
 ms.topic: tutorial
-ms.devlang: C++
+ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: c0dd1c25cd17c67c310840396c80fe05dfc2b7e1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: ac8439e1709b6bbce6f32580bafee50c9ff30e3f
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175744"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977746"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ のサポートをインストール
 

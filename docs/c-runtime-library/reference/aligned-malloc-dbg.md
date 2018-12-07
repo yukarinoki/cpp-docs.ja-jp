@@ -22,12 +22,12 @@ helpviewer_keywords:
 - aligned_malloc_dbg function
 - _aligned_malloc_dbg function
 ms.assetid: fb0429c3-685d-4826-9075-2515c5bdc5c6
-ms.openlocfilehash: 4fc6789e5fecda38678052c7e805728a49219bc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eb58313c892ffe13e9f8e34e98b7940022899d14
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631872"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977811"
 ---
 # <a name="alignedmallocdbg"></a>_aligned_malloc_dbg
 
@@ -64,7 +64,7 @@ void * _aligned_malloc_dbg(
 
 ## <a name="remarks"></a>Remarks
 
-**_aligned_malloc_dbg**のデバッグ バージョンです、 [_aligned_malloc](aligned-malloc.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_malloc_dbg**への呼び出しに減少`_aligned_malloc`します。 両方`_aligned_malloc`と **_aligned_malloc_dbg**ベースのヒープのメモリのブロックを割り当てますが、 **_aligned_malloc_dbg**いくつかのデバッグ機能を提供しています: のユーザー部分の両側のバッファー、リークをテストするブロックと*filename*/*linenumber*割り当て要求の起点を特定する情報。
+**_aligned_malloc_dbg**のデバッグ バージョンです、 [_aligned_malloc](aligned-malloc.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_malloc_dbg**への呼び出しに減少`_aligned_malloc`します。 両方`_aligned_malloc`と **_aligned_malloc_dbg**ベースのヒープのメモリのブロックを割り当てますが、 **_aligned_malloc_dbg**いくつかのデバッグ機能を提供しています: のユーザー部分の両側のバッファー、リークをテストするブロックと*filename*/*linenumber*割り当て要求の起点を特定する情報。 ブロックの型パラメーターを持つ特定の割り当ての種類の追跡は、アラインされた割り当てのサポートされているデバッグ機能ではありません。 アラインされた割り当ては、_NORMAL_BLOCK ブロックの型として表示されます。
 
 **_aligned_malloc_dbg**メモリ ブロックを要求したよりも少し多い領域を割り当てます*サイズ*します。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 ブロックが割り当てられると、ブロックのユーザー部分には値 0xCD が設定され、各上書きバッファーには 0xFD が設定されます。
 
