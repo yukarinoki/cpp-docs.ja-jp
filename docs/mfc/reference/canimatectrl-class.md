@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 5bbd59101815d18cae92b9996aff54f0cadaf9ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6a22c88e1a19cd1aef1bbfacd7f255adc2b19d0e
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608430"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178261"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl クラス
 
@@ -152,7 +152,7 @@ virtual BOOL Create(
 アニメーション コントロールのスタイルを指定します。 以下の「解説」セクションとアニメーション コントロールのスタイルで説明されているスタイルが説明されている windows 任意組み合わせを適用[アニメーション コントロールのスタイル](/windows/desktop/Controls/animation-control-styles)Windows SDK に含まれています。
 
 *rect*<br/>
-アニメーション コントロールの位置とサイズを指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。
+アニメーション コントロールの位置とサイズを指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体。
 
 *pParentWnd*<br/>
 アニメーション コントロールの親ウィンドウを通常を指定します、`CDialog`します。 NULL は指定できません。

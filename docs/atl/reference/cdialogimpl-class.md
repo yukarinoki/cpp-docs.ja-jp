@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: 04acfb9c653df85be8958d7248bafd93f3e0a30b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: b4844ed2246b5e700d9dc1895c3292cdde4efe8b
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693682"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178149"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl クラス
 
@@ -263,7 +263,7 @@ BOOL MapDialogRect(LPRECT lpRect);
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、`CRect`オブジェクトまたは[RECT](../../mfc/reference/rect-structure.md)更新領域を囲む更新プログラムのクライアント座標を受け取る構造体。
+指す、`CRect`オブジェクトまたは[RECT](/windows/desktop/api/windef/ns-windef-tagrect)更新領域を囲む更新プログラムのクライアント座標を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
 

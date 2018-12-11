@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bcaf24c14938bcf56eb083ad2dd79e4c245c7c84
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613682"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178924"
 ---
 # <a name="cmenu-class"></a>CMenu クラス
 
@@ -322,7 +322,7 @@ UINT CheckMenuItem(
 
 ### <a name="return-value"></a>戻り値
 
-項目の以前の状態: をまたは MF_UNCHECKED、または 0 xffffffff メニュー項目が存在しなかった場合。
+項目の以前の状態:または MF_UNCHECKED、または 0 xffffffff メニュー項目が存在しなかった場合。
 
 ### <a name="remarks"></a>Remarks
 
@@ -551,7 +551,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDrawItemStruct*<br/>
-ポインターを[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)のために必要な図面の種類に関する情報を含む構造体。
+ポインターを[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)のために必要な図面の種類に関する情報を含む構造体。
 
 ### <a name="remarks"></a>Remarks
 

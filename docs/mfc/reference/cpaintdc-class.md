@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 991ea39ccf03cd4f2921a759d3278576c7a1fd92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e4e6ded945bac15b6584eadc21d8648f1a0f9ab3
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525750"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178331"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC クラス
 
@@ -41,7 +41,7 @@ class CPaintDC : public CDC
 
 |名前|説明|
 |----------|-----------------|
-|[CPaintDC::m_ps](#m_ps)|含まれています、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)クライアント領域を描画するために使用します。|
+|[CPaintDC::m_ps](#m_ps)|含まれています、 [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)クライアント領域を描画するために使用します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -71,7 +71,7 @@ A`CPaintDC`オブジェクトに応答する場合にのみ使用できます、
 
 ##  <a name="cpaintdc"></a>  CPaintDC::CPaintDC
 
-構築、`CPaintDC`オブジェクト、描画、アプリケーション ウィンドウを準備し、格納、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)構造体、[塗りつぶす対象となる](#m_ps)メンバー変数。
+構築、`CPaintDC`オブジェクト、描画、アプリケーション ウィンドウを準備し、格納、 [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)構造体、[塗りつぶす対象となる](#m_ps)メンバー変数。
 
 ```
 explicit CPaintDC(CWnd* pWnd);
@@ -108,7 +108,7 @@ HWND m_hWnd;
 
 ##  <a name="m_ps"></a>  CPaintDC::m_ps
 
-`m_ps` 型のパブリック メンバー変数[PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)します。
+`m_ps` 型のパブリック メンバー変数[PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)します。
 
 ```
 PAINTSTRUCT m_ps;

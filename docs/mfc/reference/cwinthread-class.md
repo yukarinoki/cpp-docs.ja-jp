@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 0f6c41b3675251df6b07e44003215fa67fb7e795
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694193"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178422"
 ---
 # <a name="cwinthread-class"></a>CWinThread クラス
 
@@ -126,7 +126,7 @@ class CWinThread : public CCmdTarget
 
 呼び出す代わりに`AfxBeginThread`、構築することができます、 `CWinThread`- オブジェクトを派生`CreateThread`します。 この 2 段階の構築方法を再利用する場合に便利ですが、`CWinThread`連続の作成とスレッド実行の終了間のオブジェクト。
 
-詳細については`CWinThread`、記事を参照して[C++ と MFC を使用するマルチ スレッド](../../parallel/multithreading-with-cpp-and-mfc.md)、[マルチ スレッド: ユーザー インターフェイス スレッドの作成](../../parallel/multithreading-creating-user-interface-threads.md)、[マルチ スレッド: ワーカーの作成スレッド](../../parallel/multithreading-creating-worker-threads.md)、および[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+詳細については`CWinThread`、記事を参照して[C++ と MFC を使用するマルチ スレッド](../../parallel/multithreading-with-cpp-and-mfc.md)、[マルチ スレッド。ユーザー インターフェイス スレッドを作成する](../../parallel/multithreading-creating-user-interface-threads.md)、[マルチ スレッド。ワーカー スレッドを作成する](../../parallel/multithreading-creating-worker-threads.md)、および[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -458,7 +458,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>パラメーター
 
 *pMsg*<br/>
-指す、 [MSG 構造体](../../mfc/reference/msg-structure1.md)処理するメッセージを格納しています。
+指す、 [MSG 構造体](/windows/desktop/api/winuser/ns-winuser-tagmsg)処理するメッセージを格納しています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -484,7 +484,7 @@ virtual BOOL ProcessMessageFilter(
 フック コードを指定します。 このメンバー関数では、コードを使用して、処理する方法を決定*lpMsg します。*
 
 *lpMsg*<br/>
-Windows へのポインター [MSG 構造体](../../mfc/reference/msg-structure1.md)します。
+Windows へのポインター [MSG 構造体](/windows/desktop/api/winuser/ns-winuser-tagmsg)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -512,7 +512,7 @@ virtual LRESULT ProcessWndProcException(
 未処理の例外を指します。
 
 *pMsg*<br/>
-指す、 [MSG 構造体](../../mfc/reference/msg-structure1.md)フレームワークが例外をスローする原因となった windows メッセージに関する情報を格納します。
+指す、 [MSG 構造体](/windows/desktop/api/winuser/ns-winuser-tagmsg)フレームワークが例外をスローする原因となった windows メッセージに関する情報を格納します。
 
 ### <a name="return-value"></a>戻り値
 
