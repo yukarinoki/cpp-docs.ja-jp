@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: f1d418cadd2739b840efd14874fd4bbd6afeb4c5
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0a27b78d873b0a561b84b13cc16c67aef9ff2e8b
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177109"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179085"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -1554,7 +1554,7 @@ CDC* BeginPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>パラメーター
 
 *lpPaint*<br/>
-指す、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)描画情報を受け取る構造体。
+指す、 [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)描画情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1854,10 +1854,10 @@ void ClientToScreen(LPPOINT lpPoint) const;  void ClientToScreen(LPRECT lpRect) 
 ### <a name="parameters"></a>パラメーター
 
 *lpPoint*<br/>
-指す、 [POINT 構造体](../../mfc/reference/point-structure1.md)または`CPoint`クライアントを含むオブジェクトを変換する座標します。
+指す、 [POINT 構造体](/windows/desktop/api/windef/ns-windef-tagpoint)または`CPoint`クライアントを含むオブジェクトを変換する座標します。
 
 *lpRect*<br/>
-指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)または`CRect`クライアントを含むオブジェクトを変換する座標します。
+指す、 [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)または`CRect`クライアントを含むオブジェクトを変換する座標します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2061,13 +2061,13 @@ BOOL CreateControl(
 Windows のスタイル。 使用可能なスタイルは、「解説」に一覧表示されます。
 
 *rect*<br/>
-コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)します。
+コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)します。
 
 *ppt*<br/>
-指す、 [POINT 構造体](../../mfc/reference/point-structure1.md)または`CPoint`コントロールの左上隅を含むオブジェクト。
+指す、 [POINT 構造体](/windows/desktop/api/windef/ns-windef-tagpoint)または`CPoint`コントロールの左上隅を含むオブジェクト。
 
 *pSize*<br/>
-指す、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または`CSize`コントロールのサイズを格納しているオブジェクト
+指す、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または`CSize`コントロールのサイズを格納しているオブジェクト
 
 *pParentWnd*<br/>
 コントロールの親ウィンドウを指定します。 NULL は指定できません。
@@ -2628,7 +2628,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 
 ##  <a name="dragacceptfiles"></a>  CWnd::DragAcceptFiles
 
-ウィンドウの中から、このメンバー関数を呼び出すを使用して、`CWnd`ポインターは、アプリケーションの[:initinstance](../../mfc/reference/cwinapp-class.md#initinstance)関数をウィンドウを受け入れることを示すために、Windows ファイル マネージャーまたはファイル エクスプ ローラーからファイルを削除します.
+ウィンドウの中から、このメンバー関数を呼び出すを使用して、`CWnd`ポインターは、アプリケーションの[:initinstance](../../mfc/reference/cwinapp-class.md#initinstance)関数をウィンドウを受け入れることを示すために、Windows ファイル マネージャーまたはファイル エクスプ ローラーからファイルを削除します。
 
 ```
 void DragAcceptFiles(BOOL bAccept = TRUE);
@@ -2977,7 +2977,7 @@ void EndPaint(LPPAINTSTRUCT lpPaint);
 ### <a name="parameters"></a>パラメーター
 
 *lpPaint*<br/>
-指す、 [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md)によって取得された描画情報を含む構造体、 [BeginPaint](#beginpaint)メンバー関数。
+指す、 [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct)によって取得された描画情報を含む構造体、 [BeginPaint](#beginpaint)メンバー関数。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3710,7 +3710,7 @@ void GetClientRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)または`CRect`クライアント座標を受け取るオブジェクト。 `left`と`top`メンバーは 0 になります。 `right`と`bottom`メンバーには、ウィンドウの高さと幅が含まれます。
+指す、 [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)または`CRect`クライアント座標を受け取るオブジェクト。 `left`と`top`メンバーは 0 になります。 `right`と`bottom`メンバーには、ウィンドウの高さと幅が含まれます。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3784,7 +3784,7 @@ static const MSG* PASCAL GetCurrentMessage();
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを返します、 [MSG](../../mfc/reference/msg-structure1.md)ウィンドウ メッセージを含む構造体が現在処理しています。 必要がある場合にのみ呼び出す、**で**<em>メッセージ</em>ハンドラー。
+ポインターを返します、 [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)ウィンドウ メッセージを含む構造体が現在処理しています。 必要がある場合にのみ呼び出す、**で**<em>メッセージ</em>ハンドラー。
 
 ### <a name="example"></a>例
 
@@ -4491,7 +4491,7 @@ void GetProperty(
 > [!NOTE]
 > この関数でのみ呼び出す必要があります、 `CWnd` ActiveX コントロールを表すオブジェクト。
 
-ActiveX コントロール コンテナーでこのメンバー関数の使用に関する詳細については、記事を参照してください。 [ActiveX コントロール コンテナー: ActiveX コントロール コンテナーで ActiveX コントロールをプログラミング](../../mfc/programming-activex-controls-in-a-activex-control-container.md)します。
+ActiveX コントロール コンテナーでこのメンバー関数の使用に関する詳細については、記事を参照してください。 [ActiveX コントロール コンテナー。ActiveX コントロール コンテナーで ActiveX コントロールのプログラミング](../../mfc/programming-activex-controls-in-a-activex-control-container.md)します。
 
 ##  <a name="getrendertarget"></a>  CWnd::GetRenderTarget
 
@@ -4864,7 +4864,7 @@ BOOL GetUpdateRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、`CRect`オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)更新領域を囲む更新プログラムのクライアント座標を受信します。
+指す、`CRect`オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)更新領域を囲む更新プログラムのクライアント座標を受信します。
 
 このパラメーターを更新領域内に存在するかどうかを決定する NULL に設定、`CWnd`します。 場合*lpRect*が NULL の場合、`GetUpdateRect`更新領域が存在し、1 つの場合は 0 がいない場合、メンバー関数が 0 以外の値を返します。 これは、WM_PAINT メッセージが無効な領域から発生したかどうかを決定する方法を提供します。 Windows のバージョン 3.0 での NULL およびそれ以前には、このパラメーターを設定しないでください。
 
@@ -5050,7 +5050,7 @@ BOOL GetWindowPlacement(WINDOWPLACEMENT* lpwndpl) const;
 
 ### <a name="remarks"></a>Remarks
 
-`flags`のメンバー、 [WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md)構造体のこの関数によって取得されるは常に 0 です。 場合`CWnd`が最大化、`showCmd`のメンバー `WINDOWPLACEMENT` SW_SHOWMAXIMIZED のです。 場合は、ウィンドウを最小化すると、このメンバーになります。 それ以外の場合になります。
+`flags`のメンバー、 [WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)構造体のこの関数によって取得されるは常に 0 です。 場合`CWnd`が最大化、`showCmd`のメンバー `WINDOWPLACEMENT` SW_SHOWMAXIMIZED のです。 場合は、ウィンドウを最小化すると、このメンバーになります。 それ以外の場合になります。
 
 ##  <a name="getwindowrect"></a>  CWnd::GetWindowRect
 
@@ -5063,7 +5063,7 @@ void GetWindowRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、`CRect`オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)左および右下隅の画面座標を受信します。
+指す、`CRect`オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)左および右下隅の画面座標を受信します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -5286,7 +5286,7 @@ void InvalidateRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、`CRect`オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)更新領域に追加する (クライアント座標) 内の四角形を格納しています。 場合*lpRect*が null の場合、クライアント領域全体が、領域に追加します。
+指す、`CRect`オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)更新領域に追加する (クライアント座標) 内の四角形を格納しています。 場合*lpRect*が null の場合、クライアント領域全体が、領域に追加します。
 
 *あらゆる*<br/>
 更新領域の背景を消去するかどうかを指定します。
@@ -5370,7 +5370,7 @@ void AFX_CDECL InvokeHelper(
 > [!NOTE]
 > この関数でのみ呼び出す必要があります、 `CWnd` ActiveX コントロールを表すオブジェクト。
 
-ActiveX コントロール コンテナーでこのメンバー関数の使用に関する詳細については、記事を参照してください。 [ActiveX コントロール コンテナー: ActiveX コントロール コンテナーで ActiveX コントロールをプログラミング](../../mfc/programming-activex-controls-in-a-activex-control-container.md)します。
+ActiveX コントロール コンテナーでこのメンバー関数の使用に関する詳細については、記事を参照してください。 [ActiveX コントロール コンテナー。ActiveX コントロール コンテナーで ActiveX コントロールのプログラミング](../../mfc/programming-activex-controls-in-a-activex-control-container.md)します。
 
 ##  <a name="ischild"></a>  CWnd::IsChild
 
@@ -5416,7 +5416,7 @@ BOOL IsDialogMessage(LPMSG lpMsg);
 ### <a name="parameters"></a>パラメーター
 
 *lpMsg*<br/>
-指す、 [MSG](../../mfc/reference/msg-structure1.md)確認するメッセージを含む構造体。
+指す、 [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)確認するメッセージを含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5649,7 +5649,7 @@ void MapWindowPoints(
 変換する点を持つは、四角形を指定します。 この関数の最初のバージョンは、Windows 3.1 には、後で使用できます。
 
 *lpPoint*<br/>
-配列へのポインター [POINT 構造体](../../mfc/reference/point-structure1.md)変換する点のセットが含まれています。
+配列へのポインター [POINT 構造体](/windows/desktop/api/windef/ns-windef-tagpoint)変換する点のセットが含まれています。
 
 *nCount*<br/>
 数を指定`POINT`によって示される、配列内の構造体*lpPoint*します。
@@ -5827,7 +5827,7 @@ void MoveWindow(
 指定するかどうか`CWnd`再描画します。 TRUE の場合、`CWnd`受信、 [WM_PAINT](/windows/desktop/gdi/wm-paint)メッセージでその[OnPaint](#onpaint)メッセージ ハンドラーを通常どおりです。 このパラメーターが FALSE の場合は、任意の種類の再描画は行われません。 これは、クライアント領域、(タイトルやスクロール バーを含む) の非クライアント領域、および検出の結果として親ウィンドウの任意の部分は適用されます。`CWnd`の移動。 アプリケーションの無効にしたりの任意の部分を再描画する必要があります明示的にこのパラメーターが FALSE の場合は、`CWnd`および親ウィンドウに描画する必要があります。
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)新しいサイズと位置を指定します。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)新しいサイズと位置を指定します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6099,7 +6099,7 @@ afx_msg void OnChangeUIState(
 
 - UISF_HIDEFOCUS フォーカス インジケーター。
 
-- UISF_ACTIVE Windows XP: コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。
+- UISF_ACTIVE Windows XP:コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6338,7 +6338,7 @@ afx_msg int OnCompareItem(
 WM_COMPAREITEM メッセージを送信したコントロールの識別子。
 
 *lpCompareItemStruct*<br/>
-Long ポインターが含まれています、 [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)識別子と、コンボ ボックスまたはリスト ボックス内の 2 つの項目のアプリケーションによって提供されるデータを含むデータ構造です。
+Long ポインターが含まれています、 [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)識別子と、コンボ ボックスまたはリスト ボックス内の 2 つの項目のアプリケーションによって提供されるデータを含むデータ構造です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6446,7 +6446,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpCreateStruct*<br/>
-指す、 [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)に関する情報を格納する構造体、`CWnd`作成されるオブジェクトします。
+指す、 [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)に関する情報を格納する構造体、`CWnd`作成されるオブジェクトします。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6581,7 +6581,7 @@ afx_msg void OnDeleteItem(
 WM_DELETEITEM メッセージを送信したコントロールの識別子。
 
 *lpDeleteItemStruct*<br/>
-Long ポインターを指定します、 [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)削除したリスト ボックスの項目に関する情報を含むデータ構造体。
+Long ポインターを指定します、 [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)削除したリスト ボックスの項目に関する情報を含むデータ構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -6749,7 +6749,7 @@ Long ポインターを指定します、`DRAWITEMSTRUCT`描画される項目�
 
 ### <a name="remarks"></a>Remarks
 
-`itemAction`のメンバー、 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)構造体を実行するには描画操作を定義します。 このメンバー内のデータには、どのような描画操作は必要かを決定するコントロールの所有者ができます。
+`itemAction`のメンバー、 [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)構造体を実行するには描画操作を定義します。 このメンバー内のデータには、どのような描画操作は必要かを決定するコントロールの所有者ができます。
 
 このメッセージを処理してから、戻る前に、アプリケーションがいることを確認で識別されるデバイス コンテキスト、 *hDC*のメンバー、`DRAWITEMSTRUCT`構造体は、既定の状態に復元されます。
 
@@ -7018,7 +7018,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO* lpMMI);
 ### <a name="parameters"></a>パラメーター
 
 *lpMMI*<br/>
-指す、`MINMAXINFO`ウィンドウに関する情報を含む構造体サイズと位置、および追跡の最小値と最大サイズを最大化します。 詳細については、この構造体は、次を参照してください。、 [MINMAXINFO](../../mfc/reference/minmaxinfo-structure.md)構造体。
+指す、`MINMAXINFO`ウィンドウに関する情報を含む構造体サイズと位置、および追跡の最小値と最大サイズを最大化します。 詳細については、この構造体は、次を参照してください。、 [MINMAXINFO](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo)構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -7502,7 +7502,7 @@ afx_msg void OnLButtonDblClk(
 
 ### <a name="remarks"></a>Remarks
 
-Windows のみを持つ、CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)スタイルが表示されます`OnLButtonDblClk`呼び出し。 これは、Microsoft Foundation Class の windows の既定値です。 Windows の呼び出し`OnLButtonDblClk`ユーザーがキーを押した、リリース、およびシステムの以内に再度マウスの左ボタンを押したときに、制限時間をダブルクリックします。 マウスの左ボタンをダブルクリックすると、実際に 4 つのイベントを生成: [WM_LBUTTONDOWN](#onlbuttondown)、 [WM_LBUTTONUP](#onlbuttonup)メッセージをボタンがときリリースしました。
+Windows のみを持つ、CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)スタイルが表示されます`OnLButtonDblClk`呼び出し。 これは、Microsoft Foundation Class の windows の既定値です。 Windows の呼び出し`OnLButtonDblClk`ユーザーがキーを押した、リリース、およびシステムの以内に再度マウスの左ボタンを押したときに、制限時間をダブルクリックします。 マウスの左ボタンをダブルクリックすると実際には、4 つのイベントを生成します。[WM_LBUTTONDOWN](#onlbuttondown)、 [WM_LBUTTONUP](#onlbuttonup)メッセージを別の WM_LBUTTONUP メッセージ、ボタンが離されたとき。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7601,7 +7601,7 @@ afx_msg void OnMButtonDblClk(
 
 ### <a name="remarks"></a>Remarks
 
-Windows のみを持つ、CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)スタイルが表示されます`OnMButtonDblClk`呼び出し。 これは、Microsoft Foundation Class のすべての windows の既定値です。 Windows の生成、`OnMButtonDblClk`ユーザーが、リリース、および システムの内でマウスの中央ボタンをもう一度押す制限時間をダブルクリックするときに呼び出します。 マウスの中央ボタンをダブルクリックすると、実際に 4 つのイベントを生成: [WM_MBUTTONDOWN](#onmbuttondown)と[WM_MBUTTONUP](#onmbuttonup)メッセージ、したときの呼び出し、および別の WM_MBUTTONUP メッセージ。
+Windows のみを持つ、CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)スタイルが表示されます`OnMButtonDblClk`呼び出し。 これは、Microsoft Foundation Class のすべての windows の既定値です。 Windows の生成、`OnMButtonDblClk`ユーザーが、リリース、および システムの内でマウスの中央ボタンをもう一度押す制限時間をダブルクリックするときに呼び出します。 マウスの中央ボタンをダブルクリックすると実際には、4 つのイベントを生成します。[WM_MBUTTONDOWN](#onmbuttondown)と[WM_MBUTTONUP](#onmbuttonup)メッセージ、したときの呼び出し、および別の WM_MBUTTONUP メッセージ。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -7714,7 +7714,7 @@ afx_msg void OnMeasureItem(
 コントロールの ID。
 
 *lpMeasureItemStruct*<br/>
-指す、 [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)オーナー描画コントロールのサイズを含むデータ構造です。
+指す、 [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)オーナー描画コントロールのサイズを含むデータ構造です。
 
 ### <a name="remarks"></a>Remarks
 
@@ -8149,7 +8149,7 @@ afx_msg void OnMoving(
 移動するウィンドウの端。
 
 *lpRect*<br/>
-アドレス、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT 構造体](../../mfc/reference/rect-structure1.md)アイテムの座標を格納します。
+アドレス、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)アイテムの座標を格納します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -8196,7 +8196,7 @@ afx_msg void OnNcCalcSize(
 クライアント領域のどの部分には、有効な情報が含まれています。 アプリケーションを指定する必要があるかどうかを指定します。 Windows は、有効な情報を新しいクライアント領域内の指定された領域にコピーされます。 このパラメーターが TRUE の場合、クライアント領域のどの部分が有効では、アプリケーションが指定する必要があります。
 
 *lpncsp*<br/>
-指す、 [NCCALCSIZE_PARAMS](../../mfc/reference/nccalcsize-params-structure.md)アプリケーションは、新しいサイズと位置の計算に使用できる情報を含むデータ構造体、`CWnd`四角形の (クライアント領域、境界線、キャプション、スクロール バー、およびなどを含む).
+指す、 [NCCALCSIZE_PARAMS](/windows/desktop/api/winuser/ns-winuser-tagnccalcsize_params)アプリケーションは、新しいサイズと位置の計算に使用できる情報を含むデータ構造体、`CWnd`四角形の (クライアント領域、境界線、キャプション、スクロール バー、およびなどを含む).
 
 ### <a name="remarks"></a>Remarks
 
@@ -8222,7 +8222,7 @@ afx_msg BOOL OnNcCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpCreateStruct*<br/>
-指す、 [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)用のデータ構造`CWnd`します。
+指す、 [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)用のデータ構造`CWnd`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -8791,7 +8791,7 @@ afx_msg void OnPaintClipboard(
 クリップボード アプリケーション ウィンドウへのポインターを指定します。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
 *hPaintStruct*<br/>
-クライアント領域のどの部分を描画するかを定義する [PAINTSTRUCT](../../mfc/reference/paintstruct-structure.md) データ構造を識別します。
+クライアント領域のどの部分を描画するかを定義する [PAINTSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagpaintstruct) データ構造を識別します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -8988,7 +8988,7 @@ afx_msg UINT OnQueryUIState();
 
 - UISF_HIDEACCEL キーボード アクセラレータは表示されません。
 
-- UISF_ACTIVE Windows XP: コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。
+- UISF_ACTIVE Windows XP:コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。
 
 ### <a name="remarks"></a>Remarks
 
@@ -9048,7 +9048,7 @@ X と y を指定します、カーソルの座標。 これらの座標は、�
 
 ### <a name="remarks"></a>Remarks
 
-Windows のみを持つ、CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)スタイルを受信できる`OnRButtonDblClk`呼び出し。 これは、windows、Microsoft Foundation Class ライブラリ内の既定値です。 Windows の呼び出し`OnRButtonDblClk`ユーザーがキーを押した、リリース、およびし、もう一度システムの内でマウスの右ボタンを押したときに、制限時間をダブルクリックします。 マウスの右ボタンをダブルクリックすると、実際に 4 つのイベントを生成: [WM_RBUTTONDOWN](#onrbuttondown)と[WM_RBUTTONUP](#onrbuttonup) 、メッセージ、`OnRButtonDblClk`呼び出しと、ボタンの場合リリースしました。
+Windows のみを持つ、CS_DBLCLKS [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)スタイルを受信できる`OnRButtonDblClk`呼び出し。 これは、windows、Microsoft Foundation Class ライブラリ内の既定値です。 Windows の呼び出し`OnRButtonDblClk`ユーザーがキーを押した、リリース、およびし、もう一度システムの内でマウスの右ボタンを押したときに、制限時間をダブルクリックします。 マウスの右ボタンをダブルクリックすると実際には、4 つのイベントを生成します。[WM_RBUTTONDOWN](#onrbuttondown)と[WM_RBUTTONUP](#onrbuttonup) 、メッセージ、`OnRButtonDblClk`呼び出しと、ボタンが離されたとき。
 
 > [!NOTE]
 > このメンバー関数は、アプリケーションで Windows メッセージを処理できるようにするためにフレームワークによって呼び出されます。 関数に渡されるパラメーターは、メッセージを受信したときにフレームワークが受信したパラメーターを反映します。 この関数の基底クラス実装を呼び出す場合、その実装は、関数に指定したパラメーターではなく、メッセージと共に渡されたパラメーターを使用します。
@@ -9410,7 +9410,7 @@ afx_msg void OnSizing(
 移動するウィンドウの端。
 
 *lpRect*<br/>
-アドレス、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT 構造体](../../mfc/reference/rect-structure1.md)アイテムの座標を格納します。
+アドレス、 [CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)アイテムの座標を格納します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -9961,7 +9961,7 @@ afx_msg void OnUniChar(
 |---------------|-----------------|
 |*NChar*|[in]押されたキーの文字のコードを指定します。|
 |*nRepCnt*|[in]現在のメッセージの繰り返し回数を指定します。 値は、キーストロークは、キーを押しながら、ユーザーの結果として autorepeated 回数の合計です。 キーストロークが保持されるのに十分な場合は、複数のメッセージが送信されます。 ただし、繰り返し回数は、累積的ではありません。|
-|*nFlags*|[in]次の表に示すように、コードのスキャン、拡張キー、コンテキストのコード、以前のキーの状態および遷移の状態を指定するフラグ。<br /><br /> **0-7:** スキャン コードを指定します。 値は、供給 (OEM) に依存します。<br /><br /> **8:** 拡張 101 または 102 key キーボードに表示される右 ALT および CTRL キーなど、拡張キーを指定します。 キーが拡張キーである場合、このフラグは 1それ以外の場合は 0 です。<br /><br /> **9-12:** Windows によって内部的に使用します。<br /><br /> **13:** コンテキスト コードを指定します。 ALT キーを押した状態でキーを押した場合、フラグが 1それ以外の場合、値は 0 です。<br /><br /> **14:** 前のキーの状態を指定します。 フラグは、メッセージが送信される前に、キーがダウンした場合、1 または 0 がキーをします。<br /><br /> **15:** 遷移状態を指定します。 フラグは、キーが押された場合は、キーがリリースされている場合は 1 または 0 です。|
+|*nFlags*|[in]次の表に示すように、コードのスキャン、拡張キー、コンテキストのコード、以前のキーの状態および遷移の状態を指定するフラグ。<br /><br /> **0-7:** スキャン コードを指定します。 値は、供給 (OEM) に依存します。<br /><br /> **8:** 拡張 101 または 102 key キーボードに表示される右 ALT および CTRL キーなど、拡張キーを指定します。 キーが拡張キーである場合、このフラグは 1それ以外の場合は 0 です。<br /><br /> **9-12:** Windows によって内部的に使用します。<br /><br /> **13:** コンテキスト コードを指定します。 ALT キーを押した状態でキーを押した場合、フラグが 1それ以外の場合、値は 0 です。<br /><br /> **14:** 前のキーの状態を指定します。 フラグは、メッセージが送信される前に、キーがダウンした場合、1 または 0 がキーをします。<br /><br /> **15:** 遷移の状態を指定します。 フラグは、キーが押された場合は、キーがリリースされている場合は 1 または 0 です。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -10022,7 +10022,7 @@ afx_msg void OnUpdateUIState(
 
 - UISF_HIDEFOCUS フォーカス インジケーター。
 
-- UISF_ACTIVE Windows XP: コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。
+- UISF_ACTIVE Windows XP:コントロールは、アクティブなコントロールで使用されるスタイルで描画する必要があります。
 
 ### <a name="remarks"></a>Remarks
 
@@ -10202,7 +10202,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS* lpwndpos);
 ### <a name="parameters"></a>パラメーター
 
 *lpwndpos*<br/>
-指す、 [WINDOWPOS](../../mfc/reference/windowpos-structure1.md)ウィンドウの新しいサイズと位置に関する情報を含むデータ構造体。
+指す、 [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)ウィンドウの新しいサイズと位置に関する情報を含むデータ構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -10226,7 +10226,7 @@ afx_msg void OnWindowPosChanging(WINDOWPOS* lpwndpos);
 
 ### <a name="remarks"></a>Remarks
 
-アプリケーションは設定や、該当するビットをオフにすると、ウィンドウに対する変更を防止することができます、**フラグ**のメンバー、 [WINDOWPOS](../../mfc/reference/windowpos-structure1.md)構造体。
+アプリケーションは設定や、該当するビットをオフにすると、ウィンドウに対する変更を防止することができます、**フラグ**のメンバー、 [WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)構造体。
 
 ウィンドウの[WS_OVERLAPPED](styles-used-by-mfc.md#window-styles)または[WS_THICKFRAME](styles-used-by-mfc.md#window-styles)スタイル、既定の実装を[WM_GETMINMAXINFO](/windows/desktop/winmsg/wm-getminmaxinfo)メッセージをウィンドウ。 これは、新しいサイズとウィンドウの位置を検証し、によりとなりクライアント スタイルを適用します。 アプリケーションでは、その基本クラスを呼び出さなかったことでこの機能をオーバーライドできます。
 
@@ -10549,7 +10549,7 @@ virtual BOOL PreCreateWindow(CREATESTRUCT& cs);
 ### <a name="parameters"></a>パラメーター
 
 *cs*<br/>
-A [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)構造体。
+A [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -10597,7 +10597,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>パラメーター
 
 *pMsg*<br/>
-指す、 [MSG](../../mfc/reference/msg-structure1.md)処理するメッセージを含む構造体。
+指す、 [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)処理するメッセージを含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -10719,7 +10719,7 @@ BOOL RedrawWindow(
 ### <a name="parameters"></a>パラメーター
 
 *lpRectUpdate*<br/>
-指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)更新四角形の座標を格納しています。 場合、このパラメーターは無視されます*prgnUpdate*有効なリージョンのハンドルが含まれています。
+指す、 [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)更新四角形の座標を格納しています。 場合、このパラメーターは無視されます*prgnUpdate*有効なリージョンのハンドルが含まれています。
 
 *prgnUpdate*<br/>
 更新領域を識別します。 両方*prgnUpdate*と*lpRectUpdate* NULL は、クライアント領域全体が更新領域に追加されます。
@@ -10889,10 +10889,10 @@ void RepositionBars(UINT nIDFirst,
 - `CWnd::reposExtra` 値を加算する*lpRectParam*のクライアント領域に*nIDLast*レイアウトによっても実行されます。
 
 *lpRectParam*<br/>
-指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md); うち使用量は、の値によって異なります。*指します*します。
+指す、 [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect); うち使用量は、の値によって異なります。*指します*します。
 
 *lpRectClient*<br/>
-指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)使用可能なクライアント領域を格納しています。 NULL の場合、ウィンドウのクライアント領域が使用されます。
+指す、 [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)使用可能なクライアント領域を格納しています。 NULL の場合、ウィンドウのクライアント領域が使用されます。
 
 *bStretch*<br/>
 バーをフレームのサイズに引き伸ばすかどうかを示します。
@@ -10939,10 +10939,10 @@ void ScreenToClient(LPPOINT lpPoint) const;  void ScreenToClient(LPRECT lpRect) 
 ### <a name="parameters"></a>パラメーター
 
 *lpPoint*<br/>
-指す、 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトまたは[POINT 構造体](../../mfc/reference/point-structure1.md)変換を画面座標を格納しています。
+指す、 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトまたは[POINT 構造体](/windows/desktop/api/windef/ns-windef-tagpoint)変換を画面座標を格納しています。
 
 *lpRect*<br/>
-指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)変換を画面座標を格納しています。
+指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)変換を画面座標を格納しています。
 
 ### <a name="remarks"></a>Remarks
 
@@ -10973,7 +10973,7 @@ void ScrollWindow(
 垂直方向のスクロールのデバイス単位の量を指定します。 このパラメーターは、上にスクロールする負の値を指定する必要があります。
 
 *lpRect*<br/>
-指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)をスクロールできるクライアント領域の部分を指定します。 場合*lpRect*が null の場合、クライアント領域全体をスクロールします。 カーソルの四角形には、スクロールする四角形と交差している場合、キャレットの位置を変更します。
+指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)をスクロールできるクライアント領域の部分を指定します。 場合*lpRect*が null の場合、クライアント領域全体をスクロールします。 カーソルの四角形には、スクロールする四角形と交差している場合、キャレットの位置を変更します。
 
 *lpClipRect*<br/>
 指す、`CRect`オブジェクトまたは`RECT`スクロールにクリッピング四角形を指定します。 この四角形内のビットだけがスクロールします。 この四角形の外側のビットである場合でも、 *lpRect*四角形。 場合*lpClipRect*が null の場合、スクロール バーの四角形の領域は実行されません。
@@ -11012,7 +11012,7 @@ int ScrollWindowEx(
 垂直方向のスクロールのデバイス単位の量を指定します。 このパラメーターは、上にスクロールする負の値をいる必要があります。
 
 *形*<br/>
-指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)をスクロールできるクライアント領域の部分を指定します。 このパラメーターが NULL の場合は、クライアント領域全体がスクロールされます。
+指す、 [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)をスクロールできるクライアント領域の部分を指定します。 このパラメーターが NULL の場合は、クライアント領域全体がスクロールされます。
 
 *lpRectClip*<br/>
 指す、`RECT`スクロールにクリッピング四角形を指定します。 この構造体、四角形によって示されるよりも優先*形*します。 この四角形内のビットだけがスクロールします。 この四角形の外側のビットである場合でも、*形*四角形。 このパラメーターが NULL の場合は、スクロールする四角形にクリップは実行されません。
@@ -11588,7 +11588,7 @@ void AFX_CDECL SetProperty(
 > [!NOTE]
 > この関数でのみ呼び出す必要があります、 `CWnd` OLE コントロールを表すオブジェクト。
 
-OLE コントロールのコンテナーでこのメンバー関数の使用に関する詳細については、記事を参照してください。 [ActiveX コントロール コンテナー: ActiveX コントロール コンテナーで ActiveX コントロールをプログラミング](../../mfc/programming-activex-controls-in-a-activex-control-container.md)します。
+OLE コントロールのコンテナーでこのメンバー関数の使用に関する詳細については、記事を参照してください。 [ActiveX コントロール コンテナー。ActiveX コントロール コンテナーで ActiveX コントロールのプログラミング](../../mfc/programming-activex-controls-in-a-activex-control-container.md)します。
 
 ##  <a name="setredraw"></a>  CWnd::SetRedraw
 
@@ -11811,7 +11811,7 @@ BOOL SetWindowPlacement(const WINDOWPLACEMENT* lpwndpl);
 ### <a name="parameters"></a>パラメーター
 
 *lpwndpl*<br/>
-指す、 [WINDOWPLACEMENT](../../mfc/reference/windowplacement-structure.md)構造体の新しい表示状態と位置を指定します。
+指す、 [WINDOWPLACEMENT](/windows/desktop/api/winuser/ns-winuser-tagwindowplacement)構造体の新しい表示状態と位置を指定します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -12304,7 +12304,7 @@ void ValidateRect(LPCRECT lpRect);
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)更新領域から削除する四角形のクライアント座標を格納しています。 場合*lpRect*が null の場合、ウィンドウ全体を検証します。
+指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)更新領域から削除する四角形のクライアント座標を格納しています。 場合*lpRect*が null の場合、ウィンドウ全体を検証します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -12342,7 +12342,7 @@ static CWnd* PASCAL WindowFromPoint(POINT point);
 ### <a name="parameters"></a>パラメーター
 
 *ポイント*<br/>
-指定します、 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトまたは[ポイント](../../mfc/reference/point-structure1.md)チェックするポイントを定義するデータ構造。
+指定します、 [CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクトまたは[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)チェックするポイントを定義するデータ構造。
 
 ### <a name="return-value"></a>戻り値
 
@@ -12420,7 +12420,7 @@ BOOL RegisterTouchWindow(
 True に登録する Windows タッチのサポート。FALSE それ以外の場合。
 
 *ulFlags*<br/>
-省略可能な変更を指定するビット フラグのセット。 このフィールドは、0 または値は次のいずれかを含めることができます: TWF_FINETOUCH、TWF_WANTPALM します。
+省略可能な変更を指定するビット フラグのセット。 このフィールドには、0 または値は次のいずれかを含めることができます。TWF_FINETOUCH、TWF_WANTPALM します。
 
 ### <a name="return-value"></a>戻り値
 
