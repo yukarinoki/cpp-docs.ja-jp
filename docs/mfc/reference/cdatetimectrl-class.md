@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: cff81b7d260749d5be344edf3e0401a473b4f9e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36ef44534803e35d3544b53dbeeca75a7fb3f475
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508824"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178526"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl クラス
 
@@ -381,7 +381,7 @@ BOOL GetIdealSize(LPSIZE psize) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*psize*|[out]ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)コントロールの適切なサイズを含む構造体。|
+|*psize*|[out]ポインターを[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)コントロールの適切なサイズを含む構造体。|
 
 ### <a name="return-value"></a>戻り値
 

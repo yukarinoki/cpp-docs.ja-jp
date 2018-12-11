@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: b33c4c89276b99b6b5f8a4129ef17f809f058ac5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a82793ce29765bf01e8c52c94257bd3150187505
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547317"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178463"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton クラス
 
@@ -567,7 +567,7 @@ virtual void OnDraw(
 [in]ボタンの外接する四角形への参照。
 
 *uiState*<br/>
-[in]ボタンの現在の状態。 詳細については、次を参照してください。、`itemState`のメンバー、 [DRAWITEMSTRUCT 構造体](../../mfc/reference/drawitemstruct-structure.md)トピック。
+[in]ボタンの現在の状態。 詳細については、次を参照してください。、`itemState`のメンバー、 [DRAWITEMSTRUCT 構造体](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)トピック。
 
 ### <a name="remarks"></a>Remarks
 
@@ -593,7 +593,7 @@ virtual void OnDrawBorder(
 [in]ボタンの外接する四角形への参照。
 
 *uiState*<br/>
-[in]ボタンの現在の状態。 詳細については、次を参照してください。、`itemState`のメンバー、 [DRAWITEMSTRUCT 構造体](../../mfc/reference/drawitemstruct-structure.md)トピック。
+[in]ボタンの現在の状態。 詳細については、次を参照してください。、`itemState`のメンバー、 [DRAWITEMSTRUCT 構造体](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)トピック。
 
 ### <a name="remarks"></a>Remarks
 

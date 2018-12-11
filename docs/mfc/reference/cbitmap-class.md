@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 295f61ed120e957bc0d5ec1746e7d3bdfbb6d001
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624602"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178175"
 ---
 # <a name="cbitmap-class"></a>CBitmap クラス
 
@@ -155,7 +155,7 @@ BOOL CreateBitmap(
 
 `CBitmap` 関数によって作成された `CreateBitmap` オブジェクトでの作業終了後、デバイス コンテキスト外のビットマップを最初に選択し、次に `CBitmap` オブジェクトを削除します。
 
-詳細については、の説明を参照して、`bmBits`フィールドに、`BITMAP`構造体。 [BITMAP](../../mfc/reference/bitmap-structure.md) 構造体については、 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) メンバー関数の下で説明されています。
+詳細については、の説明を参照して、`bmBits`フィールドに、`BITMAP`構造体。 [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) 構造体については、 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) メンバー関数の下で説明されています。
 
 ##  <a name="createbitmapindirect"></a>  Cbitmap::createbitmapindirect
 
@@ -168,7 +168,7 @@ BOOL CreateBitmapIndirect(LPBITMAP lpBitmap);
 ### <a name="parameters"></a>パラメーター
 
 *lpBitmap*<br/>
-指す、[ビットマップ](../../mfc/reference/bitmap-structure.md)ビットマップについての情報を含む構造体。
+指す、[ビットマップ](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)ビットマップについての情報を含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -286,7 +286,7 @@ int GetBitmap(BITMAP* pBitMap);
 ### <a name="parameters"></a>パラメーター
 
 *pBitMap*<br/>
-ポインターを[ビットマップ構造](../../mfc/reference/bitmap-structure.md)画像のプロパティを受信する構造体。 このパラメーターには、NULL は指定できません。
+ポインターを[ビットマップ](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap)画像のプロパティを受信する構造体。 このパラメーターには、NULL は指定できません。
 
 ### <a name="return-value"></a>戻り値
 

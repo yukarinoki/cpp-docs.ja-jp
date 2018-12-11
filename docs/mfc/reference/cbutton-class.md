@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 745b04751c96e79c6bfa332ebdde15b254578137
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694804"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178644"
 ---
 # <a name="cbutton-class"></a>CButton クラス
 
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDrawItemStruct*<br/>
-Long ポインター、 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)構造体。 構造体には、描画される項目および必要な図面の種類に関する情報が含まれています。
+Long ポインター、 [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)構造体。 構造体には、描画される項目および必要な図面の種類に関する情報が含まれています。
 
 ### <a name="remarks"></a>Remarks
 
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 最初のオーバー ロードで、 [CString](../../atl-mfc-shared/using-cstring.md)を現在のコマンド リンク コントロールに関連付けられたメモのテキストを含むオブジェクト。
 
-- または -
+または
 
 2 番目のオーバー ロードでは、このメソッドが成功した場合は TRUE します。それ以外の場合、FALSE です。
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pSize*|[out]ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)四角形の説明を受け取る。|
+|*pSize*|[out]ポインターを[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)四角形の説明を受け取る。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pSize*|[in]ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)外接する四角形を記述する構造体。|
+|*pSize*|[in]ポインターを[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)外接する四角形を記述する構造体。|
 
 ### <a name="return-value"></a>戻り値
 

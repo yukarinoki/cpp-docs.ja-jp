@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: 29fe705292b223a0ae367d34d67a99aa60fb719c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660019"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179033"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket クラス
 
@@ -160,12 +160,12 @@ class CAsyncSocket : public CObject
 
 このクラスは、ネットワーク通信を理解していることを前提に基づいています。 ブロック、バイト順序の違いを処理して、Unicode とマルチバイト文字の間の変換セット (MBCS) 文字列。 使いやすいインターフェイスがこれらの問題を管理する場合は、クラスを参照してください。 [CSocket](../../mfc/reference/csocket-class.md)します。
 
-使用する、 `CAsyncSocket` 、コンス トラクターを呼び出すオブジェクトを呼び出して、[作成](#create)基になるソケット ハンドルを作成する関数 (型`SOCKET`)、ソケットが受け入れられた場合は除きます。 サーバー ソケットの呼び出しの[リッスン](#listen)メンバー関数、およびクライアント ソケットの呼び出しに対して、 [Connect](#connect)メンバー関数。 サーバー ソケットを呼び出す必要があります、 [Accept](#accept)接続要求を受け取った関数。 使用して、残りの`CAsyncSocket`ソケットの間の通信を実行する関数。 完了すると、破棄、`CAsyncSocket`オブジェクト ヒープ上で作成された場合は、デストラクターが自動的に呼び出します、[閉じる](#close)関数。 ソケットのデータ型が、情報の記事で説明されている[Windows ソケット: バック グラウンド](../../mfc/windows-sockets-background.md)します。
+使用する、 `CAsyncSocket` 、コンス トラクターを呼び出すオブジェクトを呼び出して、[作成](#create)基になるソケット ハンドルを作成する関数 (型`SOCKET`)、ソケットが受け入れられた場合は除きます。 サーバー ソケットの呼び出しの[リッスン](#listen)メンバー関数、およびクライアント ソケットの呼び出しに対して、 [Connect](#connect)メンバー関数。 サーバー ソケットを呼び出す必要があります、 [Accept](#accept)接続要求を受け取った関数。 使用して、残りの`CAsyncSocket`ソケットの間の通信を実行する関数。 完了すると、破棄、`CAsyncSocket`オブジェクト ヒープ上で作成された場合は、デストラクターが自動的に呼び出します、[閉じる](#close)関数。 ソケットのデータ型が、情報の記事で説明されている[Windows ソケット。バック グラウンド](../../mfc/windows-sockets-background.md)します。
 
 > [!NOTE]
 >  静的にリンクされた MFC アプリケーションでセカンダリ スレッドで MFC ソケットを使用する場合を呼び出す必要があります`AfxSocketInit`ソケット ライブラリを初期化するためにソケットを使用する各スレッドにします。 既定では、`AfxSocketInit`は、プライマリ スレッドでのみ呼び出されます。
 
-詳細については、次を参照してください。 [Windows ソケット: を使用してクラス CAsyncSocket](../../mfc/windows-sockets-using-class-casyncsocket.md)おり、関連する記事、だけでなく[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)します。
+詳細については、次を参照してください。 [Windows ソケット。Casyncsocket クラスの](../../mfc/windows-sockets-using-class-casyncsocket.md)おり、関連する記事、および[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -194,7 +194,7 @@ virtual BOOL Accept(
 接続に使用される新しいソケットを識別する参照。
 
 *lpSockAddr*<br/>
-ポインターを[SOCKADDR](../../mfc/reference/sockaddr-structure.md)既知のネットワークの 接続のアドレスを受け取る構造体がソケットします。 正確な形式、 *lpSockAddr*引数は、ソケットが作成されたときに確立されているアドレス ファミリによって決定されます。 場合*lpSockAddr*や*lpSockAddrLen*に NULL 値が受け入れられたソケットのリモート アドレスに関する情報は返されません。
+ポインターを[SOCKADDR](/windows/desktop/winsock/sockaddr-2)既知のネットワークの 接続のアドレスを受け取る構造体がソケットします。 正確な形式、 *lpSockAddr*引数は、ソケットが作成されたときに確立されているアドレス ファミリによって決定されます。 場合*lpSockAddr*や*lpSockAddrLen*に NULL 値が受け入れられたソケットのリモート アドレスに関する情報は返されません。
 
 *lpSockAddrLen*<br/>
 内のアドレスの長さへのポインター *lpSockAddr* (バイト単位)。 *LpSockAddrLen*値結果パラメーター: によって示される領域の量を最初に格納する必要があります*lpSockAddr*; 返された場合は返されたアドレスの実際の長さ (単位: バイト) が含まれます。
@@ -207,7 +207,7 @@ virtual BOOL Accept(
 
 - WSAENETDOWN、Windows ソケットの実装では、ネットワーク サブシステムが失敗したことが検出されました。
 
-- WSAEFAULT、 *lpSockAddrLen*引数が小さすぎる (のサイズよりも小さいか、 [SOCKADDR](../../mfc/reference/sockaddr-structure.md)構造)。
+- WSAEFAULT、 *lpSockAddrLen*引数が小さすぎる (のサイズよりも小さいか、 [SOCKADDR](/windows/desktop/winsock/sockaddr-2)構造)。
 
 - Windows ソケットのブロックを呼び出す WSAEINPROGRESS A が進行中です。
 
@@ -268,7 +268,7 @@ BOOL AsyncSelect(long lEvent = FD_READ | FD_WRITE | FD_OOB | FD_ACCEPT | FD_CONN
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、ソケットの MFC コールバック通知関数が呼び出されるかを指定するに使用されます。 `AsyncSelect` このソケットを非ブロッキング モードに自動的に設定します。 詳細については、この記事を参照してください。 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)します。
+この関数は、ソケットの MFC コールバック通知関数が呼び出されるかを指定するに使用されます。 `AsyncSelect` このソケットを非ブロッキング モードに自動的に設定します。 詳細については、この記事を参照してください。 [Windows ソケット。通知のソケット](../../mfc/windows-sockets-socket-notifications.md)します。
 
 ##  <a name="attach"></a>  CAsyncSocket::Attach
 
@@ -330,7 +330,7 @@ BOOL Bind (
 ネットワーク アドレスでは、「128.56.22.8」などのピリオドで区切られた数値。 このパラメーターに文字列、NULL が渡される、`CAsyncSocket`インスタンスがすべてのネットワーク インターフェイス上のクライアント アクティビティを待機する必要があります。
 
 *lpSockAddr*<br/>
-ポインターを[SOCKADDR](../../mfc/reference/sockaddr-structure.md)このソケットに割り当てるアドレスを含む構造体。
+ポインターを[SOCKADDR](/windows/desktop/winsock/sockaddr-2)このソケットに割り当てるアドレスを含む構造体。
 
 *nSockAddrLen*<br/>
 内のアドレスの長さ*lpSockAddr* (バイト単位)。
@@ -345,7 +345,7 @@ BOOL Bind (
 
 - WSAEADDRINUSE 指定されたアドレスは既に使用します。 (下の SO_REUSEADDR ソケット オプションを参照してください[SetSockOpt](#setsockopt)。)。
 
-- WSAEFAULT、 *nSockAddrLen*引数が小さすぎる (のサイズよりも小さいか、 [SOCKADDR](../../mfc/reference/sockaddr-structure.md)構造)。
+- WSAEFAULT、 *nSockAddrLen*引数が小さすぎる (のサイズよりも小さいか、 [SOCKADDR](/windows/desktop/winsock/sockaddr-2)構造)。
 
 - Windows ソケットのブロックを呼び出す WSAEINPROGRESS A が進行中です。
 
@@ -410,7 +410,7 @@ BOOL Connect(
 ソケット アプリケーションを識別するポートです。
 
 *lpSockAddr*<br/>
-ポインターを[SOCKADDR](../../mfc/reference/sockaddr-structure.md)接続されたソケットのアドレスを格納する構造体。
+ポインターを[SOCKADDR](/windows/desktop/winsock/sockaddr-2)接続されたソケットのアドレスを格納する構造体。
 
 *nSockAddrLen*<br/>
 内のアドレスの長さ*lpSockAddr* (バイト単位)。
@@ -535,7 +535,7 @@ SOCK_STREAM または SOCK_DGRAM します。
 > [!IMPORTANT]
 > `Create` **いない**スレッド セーフです。  呼び出す場合、マルチ スレッド環境でどこに呼び出すことができる同時に別のスレッドで、必ず、ミュー テックスまたはその他の同期ロックでは、各呼び出しを保護してください。
 
-ストリームとデータグラム ソケットの詳細については、記事をご覧ください[Windows ソケット: バック グラウンド](../../mfc/windows-sockets-background.md)と[Windows ソケット: ポートとソケット アドレス](../../mfc/windows-sockets-ports-and-socket-addresses.md)と[Windows Sockets 2 API。](/windows/desktop/WinSock/windows-sockets-start-page-2).
+ストリームとデータグラム ソケットの詳細については、記事をご覧ください。 [Windows ソケット。バック グラウンド](../../mfc/windows-sockets-background.md)と[Windows ソケット。ポートとソケット アドレス](../../mfc/windows-sockets-ports-and-socket-addresses.md)と[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)します。
 
 ##  <a name="detach"></a>  CAsyncSocket::Detach
 
@@ -607,7 +607,7 @@ BOOL GetPeerName(
 ポートを格納する UINT への参照。
 
 *lpSockAddr*<br/>
-ポインター、 [SOCKADDR](../../mfc/reference/sockaddr-structure.md)ピア ソケットの名を受け取る構造体。
+ポインター、 [SOCKADDR](/windows/desktop/winsock/sockaddr-2)ピア ソケットの名を受け取る構造体。
 
 *lpSockAddrLen*<br/>
 内のアドレスの長さへのポインター *lpSockAddr* (バイト単位)。 返された場合、 *lpSockAddrLen*引数の実際のサイズに含まれる*lpSockAddr* (バイト単位) が返されます。
@@ -693,7 +693,7 @@ BOOL GetSockName(
 ポートを格納する UINT への参照。
 
 *lpSockAddr*<br/>
-ポインターを[SOCKADDR](../../mfc/reference/sockaddr-structure.md)ソケットのアドレスを受け取る構造体。
+ポインターを[SOCKADDR](/windows/desktop/winsock/sockaddr-2)ソケットのアドレスを受け取る構造体。
 
 *lpSockAddrLen*<br/>
 内のアドレスの長さへのポインター *lpSockAddr* (バイト単位)。
@@ -954,7 +954,7 @@ virtual void OnAccept(int nErrorCode);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)します。
+詳細については、次を参照してください。 [Windows ソケット。通知のソケット](../../mfc/windows-sockets-socket-notifications.md)します。
 
 ##  <a name="onclose"></a>  CAsyncSocket::OnClose
 
@@ -979,7 +979,7 @@ virtual void OnClose(int nErrorCode);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)します。
+詳細については、次を参照してください。 [Windows ソケット。通知のソケット](../../mfc/windows-sockets-socket-notifications.md)します。
 
 ##  <a name="onconnect"></a>  CAsyncSocket::OnConnect
 
@@ -1029,7 +1029,7 @@ virtual void OnConnect(int nErrorCode);
 > [!NOTE]
 >  [CSocket](../../mfc/reference/csocket-class.md)、`OnConnect`通知関数を呼び出すことはありません。 接続は、単に呼び出す`Connect`、(正常にまたはエラー)、接続が完了したときに返されます。 MFC 実装の詳細は、接続の通知を処理する方法。
 
-詳細については、次を参照してください。 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)します。
+詳細については、次を参照してください。 [Windows ソケット。通知のソケット](../../mfc/windows-sockets-socket-notifications.md)します。
 
 ### <a name="example"></a>例
 
@@ -1056,7 +1056,7 @@ virtual void OnOutOfBandData(int nErrorCode);
 
 帯域外のデータは、論理的に独立したチャネル型の接続されたソケットの各ペアに関連付けられているです。 チャネルは通常、緊急データの送信に使用されます。
 
-MFC クラスのユーザーが、帯域外のデータをサポートしている`CAsyncSocket`これを使用しないでください。 簡単な方法では、このようなデータを渡すための 2 つ目のソケットを作成します。 帯域外のデータの詳細については、次を参照してください。 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)します。
+MFC クラスのユーザーが、帯域外のデータをサポートしている`CAsyncSocket`これを使用しないでください。 簡単な方法では、このようなデータを渡すための 2 つ目のソケットを作成します。 帯域外のデータの詳細については、次を参照してください。 [Windows ソケット。通知のソケット](../../mfc/windows-sockets-socket-notifications.md)します。
 
 ##  <a name="onreceive"></a>  CAsyncSocket::OnReceive
 
@@ -1077,7 +1077,7 @@ virtual void OnReceive(int nErrorCode);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)します。
+詳細については、次を参照してください。 [Windows ソケット。通知のソケット](../../mfc/windows-sockets-socket-notifications.md)します。
 
 ### <a name="example"></a>例
 
@@ -1102,7 +1102,7 @@ virtual void OnSend(int nErrorCode);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [Windows ソケット: ソケット通知](../../mfc/windows-sockets-socket-notifications.md)します。
+詳細については、次を参照してください。 [Windows ソケット。通知のソケット](../../mfc/windows-sockets-socket-notifications.md)します。
 
 ### <a name="example"></a>例
 
@@ -1213,7 +1213,7 @@ virtual int Receive(
 
 ##  <a name="receivefrom"></a>  で
 
-データグラムを受信およびの送信元アドレスを格納するには、このメンバー関数を呼び出す、 [SOCKADDR](../../mfc/reference/sockaddr-structure.md)構造または*rSocketAddress*します。
+データグラムを受信およびの送信元アドレスを格納するには、このメンバー関数を呼び出す、 [SOCKADDR](/windows/desktop/winsock/sockaddr-2)構造または*rSocketAddress*します。
 
 ```
 int ReceiveFrom(
@@ -1246,7 +1246,7 @@ int ReceiveFrom(
 ポートを格納する UINT への参照。
 
 *lpSockAddr*<br/>
-ポインターを[SOCKADDR](../../mfc/reference/sockaddr-structure.md)戻り時にソース アドレスを保持する構造体。
+ポインターを[SOCKADDR](/windows/desktop/winsock/sockaddr-2)戻り時にソース アドレスを保持する構造体。
 
 *lpSockAddrLen*<br/>
 送信元アドレスの長さへのポインター *lpSockAddr* (バイト単位)。
@@ -1298,13 +1298,13 @@ IPv6 アドレスを処理する[CAsyncSocket::ReceiveFromEx](#receivefromex)し
 
 データグラム ソケットの場合は、指定されたバッファーのサイズの最大のエンキューされたデータグラムの最初からデータを抽出します。 データグラムが指定されたバッファーよりも大きい場合は、メッセージの最初の部分でバッファーの読み込みが、余分なデータが失われたと`ReceiveFrom`WSAEMSGSIZE にあふれたと、エラー コードの値のセットを返します。
 
-場合*lpSockAddr* 、0 以外の場合は、ソケットの SOCK_DGRAM の型が、データを送信するソケットのネットワーク アドレスは、対応するコピー [SOCKADDR](../../mfc/reference/sockaddr-structure.md)構造体。 によって示される値*lpSockAddrLen*は、この構造体のサイズに初期化されが格納されているアドレスの実際のサイズを示す戻り値に変更します。 ソケットに使用可能な受信データがない場合、`ReceiveFrom`データの到着、ソケットがない限り、呼び出しが待機する非ブロッキングします。 この場合、あふれたが WSAEWOULDBLOCK に設定エラー コードで返されます。 `OnReceive`より多くのデータの受信時に決定するコールバックを使用できます。
+場合*lpSockAddr* 、0 以外の場合は、ソケットの SOCK_DGRAM の型が、データを送信するソケットのネットワーク アドレスは、対応するコピー [SOCKADDR](/windows/desktop/winsock/sockaddr-2)構造体。 によって示される値*lpSockAddrLen*は、この構造体のサイズに初期化されが格納されているアドレスの実際のサイズを示す戻り値に変更します。 ソケットに使用可能な受信データがない場合、`ReceiveFrom`データの到着、ソケットがない限り、呼び出しが待機する非ブロッキングします。 この場合、あふれたが WSAEWOULDBLOCK に設定エラー コードで返されます。 `OnReceive`より多くのデータの受信時に決定するコールバックを使用できます。
 
 型のソケットがあり、リモート側が、接続を正常にシャット ダウンする場合、`ReceiveFrom`は 0 バイトを受信してすぐに完了します。
 
 ##  <a name="receivefromex"></a>  CAsyncSocket::ReceiveFromEx
 
-データグラムを受信およびの送信元アドレスを格納するには、このメンバー関数を呼び出す、 [SOCKADDR](../../mfc/reference/sockaddr-structure.md)構造または*rSocketAddress* (IPv6 アドレスのハンドル)。
+データグラムを受信およびの送信元アドレスを格納するには、このメンバー関数を呼び出す、 [SOCKADDR](/windows/desktop/winsock/sockaddr-2)構造または*rSocketAddress* (IPv6 アドレスのハンドル)。
 
 ```
 int ReceiveFromEx(
@@ -1376,7 +1376,7 @@ int ReceiveFromEx(
 
 データグラム ソケットの場合は、指定されたバッファーのサイズの最大のエンキューされたデータグラムの最初からデータを抽出します。 データグラムが指定されたバッファーよりも大きい場合は、メッセージの最初の部分でバッファーの読み込みが、余分なデータが失われたと`ReceiveFromEx`WSAEMSGSIZE にあふれたと、エラー コードの値のセットを返します。
 
-場合*lpSockAddr* 、0 以外の場合は、ソケットの SOCK_DGRAM の型が、データを送信するソケットのネットワーク アドレスは、対応するコピー [SOCKADDR](../../mfc/reference/sockaddr-structure.md)構造体。 によって示される値*lpSockAddrLen*は、この構造体のサイズに初期化されが格納されているアドレスの実際のサイズを示す戻り値に変更します。 ソケットに使用可能な受信データがない場合、`ReceiveFromEx`データの到着、ソケットがない限り、呼び出しが待機する非ブロッキングします。 この場合、あふれたが WSAEWOULDBLOCK に設定エラー コードで返されます。 `OnReceive`より多くのデータの受信時に決定するコールバックを使用できます。
+場合*lpSockAddr* 、0 以外の場合は、ソケットの SOCK_DGRAM の型が、データを送信するソケットのネットワーク アドレスは、対応するコピー [SOCKADDR](/windows/desktop/winsock/sockaddr-2)構造体。 によって示される値*lpSockAddrLen*は、この構造体のサイズに初期化されが格納されているアドレスの実際のサイズを示す戻り値に変更します。 ソケットに使用可能な受信データがない場合、`ReceiveFromEx`データの到着、ソケットがない限り、呼び出しが待機する非ブロッキングします。 この場合、あふれたが WSAEWOULDBLOCK に設定エラー コードで返されます。 `OnReceive`より多くのデータの受信時に決定するコールバックを使用できます。
 
 型のソケットがあり、リモート側が、接続を正常にシャット ダウンする場合、`ReceiveFromEx`は 0 バイトを受信してすぐに完了します。
 
@@ -1444,7 +1444,7 @@ virtual int Send(
 
 ### <a name="remarks"></a>Remarks
 
-`Send` 接続されているストリームまたはデータグラム ソケットで送信したデータの書き込みに使用します。 データグラム ソケットでは、注意が必要で、指定した、基になるサブネットの IP パケットの最大サイズを超えることはできません、`iMaxUdpDg`内の要素、 [WSADATA](../../mfc/reference/wsadata-structure.md)によって返される構造体`AfxSocketInit`します。 データが長すぎて、基になるプロトコルの場合、エラー WSAEMSGSIZE 経由で返されます`GetLastError`データは送信されません。
+`Send` 接続されているストリームまたはデータグラム ソケットで送信したデータの書き込みに使用します。 データグラム ソケットでは、注意が必要で、指定した、基になるサブネットの IP パケットの最大サイズを超えることはできません、`iMaxUdpDg`内の要素、 [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)によって返される構造体`AfxSocketInit`します。 データが長すぎて、基になるプロトコルの場合、エラー WSAEMSGSIZE 経由で返されます`GetLastError`データは送信されません。
 
 データグラム ソケットを正常に完了ことに注意を`Send`データが正常に配信されたことを示しません。
 
@@ -1496,7 +1496,7 @@ int SendTo(
 - MSG_OOB 帯域外のデータを送信 (SOCK_STREAM のみ)。
 
 *lpSockAddr*<br/>
-ポインターを[SOCKADDR](../../mfc/reference/sockaddr-structure.md)ターゲット ソケットのアドレスを含む構造体。
+ポインターを[SOCKADDR](/windows/desktop/winsock/sockaddr-2)ターゲット ソケットのアドレスを含む構造体。
 
 *nSockAddrLen*<br/>
 内のアドレスの長さ*lpSockAddr* (バイト単位)。
@@ -1513,7 +1513,7 @@ int SendTo(
 
 - WSAEINPROGRESS A が Windows ソケットのブロック操作が進行中です。
 
-- WSAEFAULT、 *lpBuf*または*lpSockAddr*パラメーターは、ユーザーのアドレス空間の一部ではない、または*lpSockAddr*引数が小さすぎる (、のサイズよりも小さい[SOCKADDR](../../mfc/reference/sockaddr-structure.md)構造)。
+- WSAEFAULT、 *lpBuf*または*lpSockAddr*パラメーターは、ユーザーのアドレス空間の一部ではない、または*lpSockAddr*引数が小さすぎる (、のサイズよりも小さい[SOCKADDR](/windows/desktop/winsock/sockaddr-2)構造)。
 
 - WSAEINVAL ホスト名が無効です。
 
@@ -1547,7 +1547,7 @@ int SendTo(
 
 ### <a name="remarks"></a>Remarks
 
-`SendTo` データグラムまたはストリーム ソケットで使用され、ソケットで送信したデータの書き込みに使用されます。 データグラム ソケットでは、注意が必要で、指定した、基になるサブネットの IP パケットの最大サイズを超えることはできません、`iMaxUdpDg`内の要素、 [WSADATA](../../mfc/reference/wsadata-structure.md)構造をして入力[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). データが長すぎて、基になるプロトコルの場合、エラー WSAEMSGSIZE が返され、データは送信されません。
+`SendTo` データグラムまたはストリーム ソケットで使用され、ソケットで送信したデータの書き込みに使用されます。 データグラム ソケットでは、注意が必要で、指定した、基になるサブネットの IP パケットの最大サイズを超えることはできません、`iMaxUdpDg`内の要素、 [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)構造をして入力[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). データが長すぎて、基になるプロトコルの場合、エラー WSAEMSGSIZE が返され、データは送信されません。
 
 なおが正常に完了、`SendTo`データが正常に配信されたことを示しません。
 
@@ -1603,7 +1603,7 @@ int SendToEx(
 
 - WSAEINPROGRESS A が Windows ソケットのブロック操作が進行中です。
 
-- WSAEFAULT、 *lpBuf*または*lpSockAddr*パラメーターは、ユーザーのアドレス空間の一部ではない、または*lpSockAddr*引数が小さすぎる (、のサイズよりも小さい[SOCKADDR](../../mfc/reference/sockaddr-structure.md)構造)。
+- WSAEFAULT、 *lpBuf*または*lpSockAddr*パラメーターは、ユーザーのアドレス空間の一部ではない、または*lpSockAddr*引数が小さすぎる (、のサイズよりも小さい[SOCKADDR](/windows/desktop/winsock/sockaddr-2)構造)。
 
 - WSAEINVAL ホスト名が無効です。
 
@@ -1639,7 +1639,7 @@ int SendToEx(
 
 このメソッドは、同じ[で](#sendto)IPv6 を処理する点を除いて、従来のプロトコルに対応します。
 
-`SendToEx` データグラムまたはストリーム ソケットで使用され、ソケットで送信したデータの書き込みに使用されます。 データグラム ソケットでは、注意が必要で、指定した、基になるサブネットの IP パケットの最大サイズを超えることはできません、`iMaxUdpDg`内の要素、 [WSADATA](../../mfc/reference/wsadata-structure.md)構造をして入力[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). データが長すぎて、基になるプロトコルの場合、エラー WSAEMSGSIZE が返され、データは送信されません。
+`SendToEx` データグラムまたはストリーム ソケットで使用され、ソケットで送信したデータの書き込みに使用されます。 データグラム ソケットでは、注意が必要で、指定した、基になるサブネットの IP パケットの最大サイズを超えることはできません、`iMaxUdpDg`内の要素、 [WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)構造をして入力[AfxSocketInit](../../mfc/reference/application-information-and-management.md#afxsocketinit). データが長すぎて、基になるプロトコルの場合、エラー WSAEMSGSIZE が返され、データは送信されません。
 
 なおが正常に完了、`SendToEx`データが正常に配信されたことを示しません。
 
@@ -1699,7 +1699,7 @@ BOOL SetSockOpt(
 
 `SetSockOpt` いずれかの状態で、あらゆる種類のソケットに関連付けられているソケット オプションの現在の値を設定します。 オプションが複数のプロトコル レベルで存在することができます、この仕様はのみが最上位の「ソケット」レベルに存在するオプションを定義します。 オプションでは、優先データは、通常のデータ ストリームで受信したブロードキャスト メッセージがソケットに送信できる具合かどうかどうかなどのソケット操作に影響します。
 
-ソケット オプションの 2 種類があります: ブール型のオプションを有効にするか、機能や動作を無効にして、整数値または構造体を必要とするオプション。 ブール型のオプションを有効に*は*ゼロ以外の整数を指します。 オプションを無効にする*は*0 に等しい整数を指します。 *nOptionLen*必要があります`sizeof(BOOL)`のブール型のオプション。 その他のオプションについて*は*整数またはオプションとして、目的の値を含む構造体を指すと*nOptionLen*整数または構造体の長さです。
+2 種類のソケット オプションにがあります。ブール型のオプションを有効にするか、機能や動作を無効にして、整数値または構造体を必要とするオプション。 ブール型のオプションを有効に*は*ゼロ以外の整数を指します。 オプションを無効にする*は*0 に等しい整数を指します。 *nOptionLen*必要があります`sizeof(BOOL)`のブール型のオプション。 その他のオプションについて*は*整数またはオプションとして、目的の値を含む構造体を指すと*nOptionLen*整数または構造体の長さです。
 
 SO_LINGER 未送信のデータがソケットでキューに置かれたときの動作を制御して、`Close`関数は、ソケットを閉じます。
 
@@ -1707,7 +1707,7 @@ SO_LINGER 未送信のデータがソケットでキューに置かれたとき�
 
 Windows ソケットの実装を通知するためにする、`Bind`目的のアドレスが既に別のソケットによって使用されているために、ソケットでの呼び出しが禁止される必要がない、アプリケーションが発行する前に、ソケットの SO_REUSEADDR ソケット オプションを設定する必要があります、`Bind`呼び出します。 時にのみ、オプションが解釈されることに注意してください、`Bind`呼び出す: 必要はありませんので (ただし、害のない) は、既存のアドレスにバインドするソケットでオプションを設定する設定し、または後にオプションをリセットして、`Bind`呼び出しにはこのまたはその他のソケットに影響を与えません。
 
-アプリケーションでは、Windows ソケットの実装が、接続のソケット オプションをオンにして「キープ アライブ」パケットで伝送制御プロトコル (TCP) 接続の使用を有効にすることを要求できます。 Windows Sockets 実装必要キープア ライブの使用をサポートしていません: 場合は、正確なセマンティクスは実装によって異なりますの RFC 1122 セクション 4.2.3.6 に準拠している必要があります:"Requirements for Internet Hosts-通信レイヤーです"。 結果として、接続が削除された場合「キープア ライブ」のエラー コードいるときが返さ進行中の呼び出しに、ソケットでれ接続保持の後続の呼び出しは失敗します。
+アプリケーションでは、Windows ソケットの実装が、接続のソケット オプションをオンにして「キープ アライブ」パケットで伝送制御プロトコル (TCP) 接続の使用を有効にすることを要求できます。 Windows Sockets 実装必要キープア ライブの使用をサポートしていません: 場合は、正確なセマンティクスは実装によって異なりますの RFC 1122 セクション 4.2.3.6 に準拠している必要があります。「Requirements for Internet Hosts-通信レイヤーです"。 結果として、接続が削除された場合「キープア ライブ」のエラー コードいるときが返さ進行中の呼び出しに、ソケットでれ接続保持の後続の呼び出しは失敗します。
 
 低下オプションには、Nagle アルゴリズムが無効にします。 Nagle アルゴリズムを使用すると、フルサイズのパケットを送信できるまで、未確認の送信データをバッファー処理によって、ホストによって送信された小さなパケットの数を減らします。 ただし、一部のアプリケーションのこのアルゴリズムは、パフォーマンスを妨げる、低下を無効にするために使用できます。 アプリケーションの作成者では、影響のためが十分に理解して、必要なため、ネットワーク パフォーマンスに大きな悪影響を及ぼすことができます低下を設定しない限り、低下は設定しないでください。 低下は、唯一サポートされているレベルの取得できる; を使用するソケット オプションその他のすべてのオプションでは、レベルの取得を使用します。
 
@@ -1809,17 +1809,17 @@ BOOL Socket(
 *lEvent*<br/>
 アプリケーションが必要とするネットワーク イベントの組み合わせを指定するビットマスク。
 
-- `FD_READ`: 読み取り用の準備完了の通知を受信します。
+- `FD_READ`:読み取り用の準備完了の通知を受信します。
 
-- `FD_WRITE`: 書き込みのための準備完了の通知を受信します。
+- `FD_WRITE`:書き込みのための準備完了の通知を受信します。
 
-- `FD_OOB`: の帯域外のデータの追加の通知を受信するとしてください。
+- `FD_OOB`:帯域外のデータの到着の通知を受信します。
 
-- `FD_ACCEPT`: 着信接続の通知を受信します。
+- `FD_ACCEPT`:着信の通知を受信します。
 
-- `FD_CONNECT`: 完全な接続の通知を受信します。
+- `FD_CONNECT`:完全な接続の通知を受信します。
 
-- `FD_CLOSE`: ソケット クロージャの通知を受信します。
+- `FD_CLOSE`:ソケットのクロージャの通知を受信します。
 
 *nProtocolType*<br/>
 指定されたアドレス ファミリに固有のソケットで使用するプロトコル。

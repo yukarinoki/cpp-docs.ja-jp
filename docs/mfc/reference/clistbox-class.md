@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 38463d5e7daf86c40cdef429cd80b18598e19025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656093"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178617"
 ---
 # <a name="clistbox-class"></a>CListBox クラス
 
@@ -339,7 +339,7 @@ Long ポインター、`COMPAREITEMSTRUCT`構造体。
 
 ### <a name="return-value"></a>戻り値
 
-説明されている 2 つの項目の相対位置を示す、 [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)構造体。 次の値のいずれかがある可能性があります。
+説明されている 2 つの項目の相対位置を示す、 [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)構造体。 次の値のいずれかがある可能性があります。
 
 |[値]|説明|
 |-----------|-------------|
@@ -426,7 +426,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDeleteItemStruct*<br/>
-Windows への long ポインター [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)削除された項目に関する情報を含む構造体。
+Windows への long ポインター [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)削除された項目に関する情報を含む構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -511,7 +511,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDrawItemStruct*<br/>
-Long ポインター、 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)のために必要な図面の種類に関する情報を含む構造体。
+Long ポインター、 [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)のために必要な図面の種類に関する情報を含む構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -770,7 +770,7 @@ int GetItemRect(
 項目の 0 から始まるインデックスを指定します。
 
 *lpRect*<br/>
-Long ポインターを指定します、 [RECT 構造体](../../mfc/reference/rect-structure1.md)項目のリスト ボックスのクライアント座標を受け取る。
+Long ポインターを指定します、 [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)項目のリスト ボックスのクライアント座標を受け取る。
 
 ### <a name="return-value"></a>戻り値
 
@@ -991,7 +991,7 @@ int InitStorage(
 
 この関数は、高速化する多数のアイテム (100 個以上) を持つリスト ボックスの初期化を使用します。 したがって後続のメモリ量の指定が事前に割り当てる[AddString](#addstring)、 [InsertString](#insertstring)、および[Dir](#dir)関数は、最短時間を取得します。 見積もりは、パラメーターを使用できます。 多くを指定した場合は、余分なメモリが割り当てられます。過小を評価する場合、通常の割り当てを事前に割り当てられる量を超える項目に対して使用されます。
 
-Windows 95/98 のみ: *nItems*パラメーターは 16 ビット値に制限されます。 つまり、リスト ボックスは、32,767 を超える項目を含めることはできません。 項目の数が制限されているが、リスト ボックス内の項目の合計サイズは、使用可能なメモリによってのみ制限されます。
+Windows 95/98 のみ:*NItems*パラメーターは 16 ビット値に制限されます。 つまり、リスト ボックスは、32,767 を超える項目を含めることはできません。 項目の数が制限されているが、リスト ボックス内の項目の合計サイズは、使用可能なメモリによってのみ制限されます。
 
 ### <a name="example"></a>例
 
@@ -1068,7 +1068,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpMeasureItemStruct*<br/>
-Long ポインター、 [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)構造体。
+Long ポインター、 [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)構造体。
 
 ### <a name="remarks"></a>Remarks
 

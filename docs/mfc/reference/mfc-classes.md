@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, classes
 - classes [MFC], MFC
 ms.assetid: 7b6db805-a572-43fd-9046-0fa6e3663e63
-ms.openlocfilehash: c35d7bf16b851fe9a96bdd896babfa450c726374
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ee64ca259f2466bb02f7dd650a10dc18f8d8f8a1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525277"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178955"
 ---
 # <a name="mfc-classes"></a>MFC クラス
 
@@ -1099,7 +1099,7 @@ MRU ファイル リストのコントロールをサポートします。
 コントロール内にデータベース レコードを表示するビューです。
 
 [CRect クラス](../../atl-mfc-shared/reference/crect-class.md)<br/>
-Windows のような[RECT 構造体](rect-structure.md)します。
+Windows のような[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)します。
 
 [CRectTracker クラス](../../mfc/reference/crecttracker-class.md)<br/>
 アイテムを異なる方法で表示、移動、サイズ変更できるようにします。
@@ -1165,7 +1165,7 @@ SDI (シングル ドキュメント インターフェイス) を実装する�
 アニメーション変数の初期ベロシティによって振幅が決まる正弦波ベロシティ遷移をカプセル化します。
 
 [CSize クラス](../../atl-mfc-shared/reference/csize-class.md)<br/>
-Windows の [SIZE](https://msdn.microsoft.com/library/windows/desktop/dd145106) 構造体と同様に、相対座標や位置を実装します。
+Windows の [SIZE](/windows/desktop/api/windef/ns-windef-tagsize) 構造体と同様に、相対座標や位置を実装します。
 
 [CSliderCtrl クラス](../../mfc/reference/csliderctrl-class.md)<br/>
 Windows コモン スライダー コントロールの機能を提供します。

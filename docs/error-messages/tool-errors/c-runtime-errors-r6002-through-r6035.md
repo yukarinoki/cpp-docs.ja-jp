@@ -4,18 +4,18 @@ ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 06d1885d01b5b3808a150e54ac68257b747c9764
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74494a92d9ac8d84da64af7a896f3c32913afc40
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530938"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178260"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C ランタイム エラー R6002 ～ R6035
 
 このセクションは、アプリの読み込みまたは実行時に、C ランタイム ライブラリ (CRT) によって生成される可能性のあるエラーに関するリファレンスです。 メッセージは、Microsoft Visual C ランタイムを参照している場合でも、これらのエラーは、アプリのコードでバグまたはメモリ不足など、ランタイム ライブラリを処理できない条件のいずれかを示します。 アプリのエンドユーザーをそれらが発生する条件を防ぐために、アプリのコードまたはこれらのエラーをキャプチャし、ユーザーにわかりやすいメッセージを提示するコードを記述しない場合、これらのエラーを表示可能性があります。
 
-Microsoft のパブリック フォーラムで、他のサポートについてのエラーと警告のあります。 エラーまたは警告の数を検索することができます、[開発者コミュニティ](https://developercommunity.visualstudio.com)サイト。 [Visual C 全般](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vcgeneral)フォーラムではその他のフォーラムで議論されていない Visual C についての質問。 エラーと警告検索およびで質問する可能性がありますも[Stack Overflow](http://stackoverflow.com/)解決策を検索します。
+Microsoft のパブリック フォーラムで、他のサポートについてのエラーと警告のあります。 エラーまたは警告の数を検索することができます、[開発者コミュニティ](https://developercommunity.visualstudio.com)サイト。 [Visual C 全般](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral)フォーラムではその他のフォーラムで議論されていない Visual C についての質問。 エラーと警告検索およびで質問する可能性がありますも[Stack Overflow](http://stackoverflow.com/)解決策を検索します。
 
 追加のヘルプおよびコミュニティ リソースへのリンクを参照してください。 [Visual c ヘルプおよびコミュニティ](../../visual-cpp-help-and-community.md)します。
 
