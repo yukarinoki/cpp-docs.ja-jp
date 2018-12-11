@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 06c68d02433ce53c2b27167a985fc5854ca49700
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176914"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179059"
 ---
 # <a name="cdc-class"></a>CDC クラス
 
@@ -913,7 +913,7 @@ BOOL Arc(
 (論理単位) に外接する四角形を指定します。 いずれか、LPRECT を渡すことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)このパラメーターのオブジェクト。
 
 *ptStart*<br/>
-円弧を定義する点の x 座標と y 座標の始点 (論理単位) を指定します。 このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
+円弧を定義する点の x 座標と y 座標の始点 (論理単位) を指定します。 このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
 
 *終点*<br/>
 (論理単位) で、円弧の終点を定義する点の x 座標と y 座標を指定します。 このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、`POINT`構造または`CPoint`このパラメーターのオブジェクト。
@@ -980,10 +980,10 @@ BOOL ArcTo(
 (論理単位) での円弧の終点を定義するポイントの y 座標を指定します。 このポイントは、円弧上正確にする必要はありません。
 
 *lpRect*<br/>
-(論理単位) に外接する四角形を指定します。 ポインターを渡すことができます、 [RECT](../../mfc/reference/rect-structure1.md)データ構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)このパラメーターのオブジェクト。
+(論理単位) に外接する四角形を指定します。 ポインターを渡すことができます、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)データ構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md)このパラメーターのオブジェクト。
 
 *ptStart*<br/>
-円弧を定義する点の x 座標と y 座標の始点 (論理単位) を指定します。 このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、[ポイント](../../mfc/reference/point-structure1.md)データ構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
+円弧を定義する点の x 座標と y 座標の始点 (論理単位) を指定します。 このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
 
 *終点*<br/>
 (論理単位) で、円弧の終点を定義する点の x 座標と y 座標を指定します。 このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、`POINT`データ構造体または`CPoint`このパラメーターのオブジェクト。
@@ -1169,7 +1169,7 @@ BOOL Chord(
 コードを定義するポイントの x 座標と y 座標の始点 (論理単位) を指定します。 このポイントは、コードで正確にあることはありません。 いずれかを渡すことができます、`POINT`構造または`CPoint`このパラメーターのオブジェクト。
 
 *終点*<br/>
-(論理単位) でコードの終了点を定義する点の x 座標と y 座標を指定します。 このポイントは、コードで正確にあることはありません。 いずれかを渡すことができます、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
+(論理単位) でコードの終了点を定義する点の x 座標と y 座標を指定します。 このポイントは、コードで正確にあることはありません。 いずれかを渡すことができます、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1361,7 +1361,7 @@ void DPtoHIMETRIC(LPSIZE lpSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpSize*<br/>
-指す、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
+指す、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1383,16 +1383,16 @@ void DPtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-配列を指す[ポイント](../../mfc/reference/point-structure1.md)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
+配列を指す[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
 
 *nCount*<br/>
 配列内の地点の数。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト。 デバイスのポイントから論理ポイントに 1 つの四角形を変換する単純なケースでは、このパラメーターは使用されます。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト。 デバイスのポイントから論理ポイントに 1 つの四角形を変換する単純なケースでは、このパラメーターは使用されます。
 
 *lpSize*<br/>
-指す、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
+指す、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1420,7 +1420,7 @@ void Draw3dRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-(論理単位) に外接する四角形を指定します。 ポインターを渡すことができます、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)このパラメーターのオブジェクト。
+(論理単位) に外接する四角形を指定します。 ポインターを渡すことができます、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)このパラメーターのオブジェクト。
 
 *clrTopLeft*<br/>
 3 次元の四角形の上および左の辺の色を指定します。
@@ -1465,13 +1465,13 @@ void DrawDragRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)四角形の論理座標を指定するオブジェクト: この場合、再描画される四角形の終了位置。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)四角形の論理座標を指定するオブジェクト: この場合、再描画される四角形の終了位置。
 
 *size*<br/>
 外側の境界線の四角形の内側の境界線 (つまり、境界線の太さなど) の左上隅を左上隅から移動距離を指定します。
 
 *lpRectLast*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)四角形の位置の論理座標を指定するオブジェクト: この場合、再描画される四角形の元の位置。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)四角形の位置の論理座標を指定するオブジェクト: この場合、再描画される四角形の元の位置。
 
 *sizeLast*<br/>
 外側の境界線の再描画される元の四角形の内側の境界線 (つまり、境界線の太さなど) の左上隅に左上隅から移動距離を指定します。
@@ -1555,7 +1555,7 @@ void DrawFocusRect(LPCRECT lpRect);
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを描画する四角形の論理座標を指定します。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトを描画する四角形の論理座標を指定します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1675,7 +1675,7 @@ BOOL DrawIcon(
 描画するアイコンのハンドルを識別します。
 
 *ポイント*<br/>
-アイコンの左上隅の論理 x 座標と y 座標を指定します。 渡すことができます、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
+アイコンの左上隅の論理 x 座標と y 座標を指定します。 渡すことができます、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1833,7 +1833,7 @@ int DrawText(
 文字列の文字数を指定します。 場合*nCount*は-1、 *lpszString* null で終わる文字列への long ポインターと見なされますと`DrawText`文字数を自動的に計算します。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)テキストの書式設定 (論理座標) の四角形を格納しているオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)テキストの書式設定 (論理座標) の四角形を格納しているオブジェクト。
 
 *str*<br/>
 A [CString](../../atl-mfc-shared/reference/cstringt-class.md)を描画する指定された文字を含むオブジェクト。
@@ -1890,7 +1890,7 @@ int DrawTextEx(
 文字列の文字数を指定します。 場合*nCount*は-1、 *lpszString* null で終わる文字列への long ポインターと見なされますと`DrawText`文字数を自動的に計算します。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)テキストの書式設定 (論理座標) の四角形を格納しているオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)テキストの書式設定 (論理座標) の四角形を格納しているオブジェクト。
 
 *str*<br/>
 A [CString](../../atl-mfc-shared/reference/cstringt-class.md)を描画する指定された文字を含むオブジェクト。
@@ -2301,7 +2301,7 @@ BOOL ExtTextOut(
 - ETO_OPAQUE を指定したこと、現在の背景色は、新たな、四角形を塗りつぶします。 (設定でき、クエリでは、現在の背景色、 [SetBkColor](#setbkcolor)と[GetBkColor](#getbkcolor)メンバー関数)。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)四角形の寸法を決定する構造体。 このパラメーターは、NULL を指定できます。 渡すことも、 [CRect](../../atl-mfc-shared/reference/crect-class.md)このパラメーターのオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)四角形の寸法を決定する構造体。 このパラメーターは、NULL を指定できます。 渡すことも、 [CRect](../../atl-mfc-shared/reference/crect-class.md)このパラメーターのオブジェクト。
 
 *lpszString*<br/>
 描画する指定された文字の文字列を指します。 渡すことも、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)このパラメーターのオブジェクト。
@@ -2354,7 +2354,7 @@ void FillRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)を格納する四角形の論理座標を含む構造体。 渡すことも、 [CRect](../../atl-mfc-shared/reference/crect-class.md)このパラメーターのオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)を格納する四角形の論理座標を含む構造体。 渡すことも、 [CRect](../../atl-mfc-shared/reference/crect-class.md)このパラメーターのオブジェクト。
 
 *pBrush*<br/>
 四角形の塗りつぶしに使用するブラシを識別します。
@@ -2419,7 +2419,7 @@ void FillSolidRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-(論理単位) に外接する四角形を指定します。 ポインターを渡すことができます、 [RECT](../../mfc/reference/rect-structure1.md)データ構造体または`CRect`このパラメーターのオブジェクト。
+(論理単位) に外接する四角形を指定します。 ポインターを渡すことができます、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)データ構造体または`CRect`このパラメーターのオブジェクト。
 
 *clr*四角形の塗りつぶしに使用する色を指定します。
 
@@ -2501,7 +2501,7 @@ void FrameRect(
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)四角形の左上隅および右下コーナーの論理座標を格納しているオブジェクト。 渡すことも、`CRect`このパラメーターのオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)四角形の左上隅および右下コーナーの論理座標を格納しているオブジェクト。 渡すことも、`CRect`このパラメーターのオブジェクト。
 
 *pBrush*<br/>
 四角形の境界線に使用されるブラシを識別します。
@@ -2767,10 +2767,10 @@ BOOL GetCharABCWidths(
 文字の幅が返される現在のフォントの文字の範囲の最後の文字を指定します。
 
 *lpabc*<br/>
-配列を指す[ABC](../../mfc/reference/abc-structure.md)関数が返す場合は、文字幅を受信する構造体。 この配列に含める必要があります多くとして少なくとも`ABC`構造体で指定された範囲の文字があると、 *nFirstChar*と*とも*パラメーター。
+配列を指す[ABC](/windows/desktop/api/wingdi/ns-wingdi-_abc)関数が返す場合は、文字幅を受信する構造体。 この配列に含める必要があります多くとして少なくとも`ABC`構造体で指定された範囲の文字があると、 *nFirstChar*と*とも*パラメーター。
 
 *lpABCF*<br/>
-アプリケーションによって提供されるバッファーの配列を指す[ABCFLOAT](../../mfc/reference/abcfloat-structure.md)関数が返す場合は、文字幅を受信する構造体。 この関数によって返される幅は、IEEE 浮動小数点形式では。
+アプリケーションによって提供されるバッファーの配列を指す[ABCFLOAT](/windows/desktop/api/wingdi/ns-wingdi-_abcfloat)関数が返す場合は、文字幅を受信する構造体。 この関数によって返される幅は、IEEE 浮動小数点形式では。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2911,7 +2911,7 @@ virtual int GetClipBox(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)四角形の大きさを受信するオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)四角形の大きさを受信するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2940,7 +2940,7 @@ BOOL GetColorAdjustment(LPCOLORADJUSTMENT lpColorAdjust) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpColorAdjust*<br/>
-指す、 [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md)色の調整値を受信するデータ構造体。
+指す、 [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)色の調整値を受信するデータ構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3513,7 +3513,7 @@ int GetPath(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-配列を指す[ポイント](../../mfc/reference/point-structure1.md)データ構造体または`CPoint`線の端点と曲線コントロール ポイントのオブジェクトが配置されます。
+配列を指す[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体または`CPoint`線の端点と曲線コントロール ポイントのオブジェクトが配置されます。
 
 *lpTypes*<br/>
 頂点の型が配置されているバイトの配列を指します。 値は、次のいずれかです。
@@ -3531,7 +3531,7 @@ PT_BEZIERTO 型は、3 つのセットで常に発生します。 その前に�
 - PT_CLOSEFIGURE では、図が対応する行の後に自動的に閉じられますまたは曲線を描画するを指定します。 図は、最後の直前に対応する点を直線または曲線のエンドポイントから行を描画することによって閉じられます。
 
 *nCount*<br/>
-合計数を指定します[ポイント](../../mfc/reference/point-structure1.md)内に配置できるデータ構造、 *lpPoints*配列。 この値に格納できるバイト数と同じである必要があります、 *lpTypes*配列。
+合計数を指定します[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)内に配置できるデータ構造、 *lpPoints*配列。 この値に格納できるバイト数と同じである必要があります、 *lpTypes*配列。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3578,7 +3578,7 @@ COLORREF GetPixel(POINT point) const;
 
 一部のデバイスでは、`GetPixel` 関数がサポートされていません。 詳細については、RC_BITBLT ラスター機能を参照してください、[調べるため](#getdevicecaps)メンバー関数。
 
-`GetPixel`メンバー関数が 2 つの形式。 1 つ目は 2 つの座標値。2 つ目は、いずれかを[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
+`GetPixel`メンバー関数が 2 つの形式。 1 つ目は 2 つの座標値。2 つ目は、いずれかを[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
 
 ##  <a name="getpolyfillmode"></a>  CDC::GetPolyFillMode
 
@@ -3841,7 +3841,7 @@ BOOL GetTextExtentExPointI(
 部分的なグリフのエクステントを受信する整数の配列へのポインター。 配列内の各要素は、グリフのインデックスの配列の先頭とで指定された領域に適合するグリフの 1 つの間の論理単位の距離*nMaxExtent*します。 この配列で指定されたグリフ インデックスとして少なくとも同じ数の要素を用意する必要があります*cgi*、配列で指定された数のグリフ インデックスのみのエクステントを埋める*lpnFit*します。 場合*lpnDx*が null の場合、関数は文字列の一部の幅が計算されません。
 
 *lpSize*<br/>
-ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)論理単位でのグリフのインデックスの配列のサイズを受け取る構造体。 この値は NULL をすることはできません。
+ポインターを[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)論理単位でのグリフのインデックスの配列のサイズを受け取る構造体。 この値は NULL をすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3871,7 +3871,7 @@ BOOL GetTextExtentPointI(
 指す配列のグリフ数を指定*pgiIn*します。
 
 *lpSize*<br/>
-ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)論理単位でのグリフのインデックスの配列のサイズを受け取る構造体。 この値は NULL をすることはできません。
+ポインターを[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)論理単位でのグリフのインデックスの配列のサイズを受け取る構造体。 この値は NULL をすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4130,7 +4130,7 @@ void HIMETRICtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpSize*<br/>
-指す、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
+指す、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4147,7 +4147,7 @@ void HIMETRICtoLP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpSize*<br/>
-指す、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
+指す、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4157,7 +4157,7 @@ OLE から HIMETRIC のサイズを取得し、アプリケーションの自然
 
 ##  <a name="intersectcliprect"></a>  CDC::IntersectClipRect
 
-現在のリージョンとで指定された四角形の交差部分を形成して新しいクリップ領域を作成します*x1*、 *y1*、 *x2*、および*y2*.
+現在のリージョンとで指定された四角形の交差部分を形成して新しいクリップ領域を作成します*x1*、 *y1*、 *x2*、および*y2*。
 
 ```
 int IntersectClipRect(
@@ -4309,16 +4309,16 @@ void LPtoDP(LPSIZE lpSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-ポイントの配列を指します。 配列内の各ポイントは、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
+ポイントの配列を指します。 配列内の各ポイントは、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)オブジェクト。
 
 *nCount*<br/>
 配列内の地点の数。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト。 このパラメーターは、デバイス単位を論理座標から四角形のマッピングの一般的なケースで使用されます。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクト。 このパラメーターは、デバイス単位を論理座標から四角形のマッピングの一般的なケースで使用されます。
 
 *lpSize*<br/>
-指す、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
+指す、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4713,7 +4713,7 @@ BOOL Pie(
 外接する四角形を指定します。 いずれかを渡すことができます、`CRect`オブジェクトまたはへのポインターを`RECT`このパラメーターの構造体。
 
 *ptStart*<br/>
-円弧の始点を指定します。このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、[ポイント](../../mfc/reference/point-structure1.md)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
+円弧の始点を指定します。このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
 
 *終点*<br/>
 円弧の終点を指定します。このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、`POINT`構造または`CPoint`このパラメーターのオブジェクト。
@@ -4850,7 +4850,7 @@ BOOL PolyBezier(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-配列を指す[ポイント](../../mfc/reference/point-structure1.md)エンドポイントおよびスプラインを制御するデータ構造体。
+配列を指す[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)エンドポイントおよびスプラインを制御するデータ構造体。
 
 *nCount*<br/>
 内の地点の数を指定します、 *lpPoints*配列。 この値は、スプラインを描画する数の 3 倍をいずれかに指定する必要があります、2 つの制御点と、エンドポイントと初期スプライン各ベジエ スプラインが必要なため、追加の開始点が必要です。
@@ -4878,7 +4878,7 @@ BOOL PolyBezierTo(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-配列を指す[ポイント](../../mfc/reference/point-structure1.md)エンドポイントとコントロールを含むデータ構造体をポイントします。
+配列を指す[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)エンドポイントとコントロールを含むデータ構造体をポイントします。
 
 *nCount*<br/>
 内の地点の数を指定します、 *lpPoints*配列。 この値は、各ベジエ スプラインは、2 つの制御点と終了ポイントが必要なために、スプラインを描画する数の 3 倍にすることがあります。
@@ -4909,7 +4909,7 @@ BOOL PolyDraw(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-配列を指す[ポイント](../../mfc/reference/point-structure1.md)ごとにエンドポイントを含むデータ構造が線のセグメントと、エンドポイントと各ベジエ スプラインのポイントを制御します。
+配列を指す[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)ごとにエンドポイントを含むデータ構造が線のセグメントと、エンドポイントと各ベジエ スプラインのポイントを制御します。
 
 *lpTypes*<br/>
 各内のポイントを指定する配列を指す、 *lpPoints*配列を使用します。 値には、次のいずれかを指定できます。
@@ -5016,7 +5016,7 @@ BOOL PolylineTo(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoints*<br/>
-配列を指す[ポイント](../../mfc/reference/point-structure1.md)行の頂点を格納するデータ構造体。
+配列を指す[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)行の頂点を格納するデータ構造体。
 
 *nCount*<br/>
 配列内の地点の数を指定します。
@@ -5932,7 +5932,7 @@ BOOL SetColorAdjustment(const COLORADJUSTMENT* lpColorAdjust);
 ### <a name="parameters"></a>パラメーター
 
 *lpColorAdjust*<br/>
-指す、 [COLORADJUSTMENT](../../mfc/reference/coloradjustment-structure.md)色の調整値を含むデータ構造体。
+指す、 [COLORADJUSTMENT](/windows/desktop/api/wingdi/ns-wingdi-tagcoloradjustment)色の調整値を含むデータ構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6219,7 +6219,7 @@ BOOL SetPixelV(
 ポイントの描画に使用する色を指定します。
 
 *ポイント*<br/>
-設定する点の論理 x 座標と y 座標を指定します。 いずれかを渡すことができます、[ポイント](../../mfc/reference/point-structure1.md)データ構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
+設定する点の論理 x 座標と y 座標を指定します。 いずれかを渡すことができます、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -6328,10 +6328,10 @@ int SetStretchBltMode(int nStretchMode);
 |COLORONCOLOR|ピクセル データを削除します。 このモードでは、その情報を保持しようとしないでピクセルの排除のすべての行を削除します。|
 |ハーフトーン|先の四角形のピクセルのブロック元の四角形からピクセルにマップします。 ピクセルのコピー先のブロックの平均的な色では、ソース ピクセルの色を概算します。|
 ||ハーフトーン ストレッチ モードを設定した後、アプリケーションが Win32 関数を呼び出す必要があります[SetBrushOrgEx](/windows/desktop/api/wingdi/nf-wingdi-setbrushorgex)ブラシの原点を設定します。 これを行うに失敗した場合は、ブラシの不整合が発生します。|
-|STRETCH_ANDSCANS|**Windows 95/98**: BLACKONWHITE と同じ|
-|STRETCH_DELETESCANS|**Windows 95/98**: COLORONCOLOR と同じ|
-|STRETCH_HALFTONE|**Windows 95/98**: ハーフトーンと同じです。|
-|終了しました。|**Windows 95/98**: WHITEONBLACK と同じ|
+|STRETCH_ANDSCANS|**Windows 95/98**:BLACKONWHITE と同じ|
+|STRETCH_DELETESCANS|**Windows 95/98**:COLORONCOLOR と同じ|
+|STRETCH_HALFTONE|**Windows 95/98**:ハーフトーンと同じです。|
+|終了しました。|**Windows 95/98**:WHITEONBLACK と同じ|
 |WHITEONBLACK|排除し、既存のピクセルの色の値を使用して、論理 OR 演算を実行します。 モノクロ ビットマップは、このモードは黒ピクセルが白のピクセルを保持します。|
 
 ### <a name="return-value"></a>戻り値

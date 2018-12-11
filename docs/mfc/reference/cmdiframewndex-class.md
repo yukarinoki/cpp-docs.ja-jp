@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: be9ecf2eaabb51f4c2dffd996bca76bd3f4c9128
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512868"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178631"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx クラス
 
@@ -270,7 +270,7 @@ MDI アプリケーションでカスタマイズ拡張機能を利用するア�
 
 ## <a name="example"></a>例
 
-次の例では、派生クラスから`CMDIFrameWndEx`します。 このコード スニペットに由来します[DrawClient サンプル: MFC Ribbon-Based OLE オブジェクトの描画アプリケーション](../../visual-cpp-samples.md)します。
+次の例では、派生クラスから`CMDIFrameWndEx`します。 このコード スニペットに由来します[DrawClient サンプル。MFC リボン ベース OLE オブジェクトの描画アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_DrawClient#1](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_1.h)]
 
@@ -364,11 +364,11 @@ BOOL AreMDITabs(int* pnMDITabsType=NULL) const;
 *pnMDITabsType*<br/>
 [out]どの機能が有効になっていることを示します整数の変数へのポインター。
 
-- 0: すべての機能を無効にします。
+- 0:すべての機能を無効にします。
 
-- 1: MDI タブが有効にします。
+- 1:MDI タブが有効になっているとします。
 
-- 2: MDI タブ付きグループを有効にします。
+- 2:MDI タブ付きグループは有効です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -449,7 +449,7 @@ virtual CMDIChildWndEx* CreateDocumentWindow(
 
 ### <a name="example"></a>例
 
-次の例はどのように`CreateDocumentWindow`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`CreateDocumentWindow`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 この例で`g_strStartViewName`ドキュメントの名前を"仮想"(「スタート ページ」など) のディスク ファイルから実際に読み込まれていない可能性があります。 そのためそのケースを処理する特別な処理が必要です。
 
@@ -505,7 +505,7 @@ void DockPane(
 
 ### <a name="example"></a>例
 
-`DockPane` メソッドの使用例を次に示します。 このコード スニペットに由来、 [VisualStudioDemo サンプル: Visual Studio アプリケーションを MFC](../../visual-cpp-samples.md)します。
+`DockPane` メソッドの使用例を次に示します。 このコード スニペットに由来します[VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#4](../../mfc/codesnippet/cpp/cmdiframewndex-class_3.cpp)]
 
@@ -537,7 +537,7 @@ BOOL DockPaneLeftOf(
 
 ### <a name="example"></a>例
 
-次の例は、どのように`DockPaneLeftOf`メソッドで使用されます、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例は、どのように`DockPaneLeftOf`でメソッドを使用、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#5](../../mfc/codesnippet/cpp/cmdiframewndex-class_4.cpp)]
 
@@ -568,7 +568,7 @@ BOOL EnableAutoHidePanes(DWORD dwDockStyle);
 
 ### <a name="example"></a>例
 
-次の例は、どのように`EnableAutoHidePanes`メソッドで使用されます、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例は、どのように`EnableAutoHidePanes`でメソッドを使用、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#6](../../mfc/codesnippet/cpp/cmdiframewndex-class_5.cpp)]
 
@@ -595,7 +595,7 @@ BOOL EnableDocking(DWORD dwDockStyle);
 
 ### <a name="example"></a>例
 
-次の例は、どのように`EnableDocking`メソッドで使用されます、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例は、どのように`EnableDocking`でメソッドを使用、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#7](../../mfc/codesnippet/cpp/cmdiframewndex-class_6.cpp)]
 
@@ -686,7 +686,7 @@ MDI タブ付きグループが既に有効になっている場合でも、子�
 
 ### <a name="example"></a>例
 
-次の例はどのように`EnableMDITabbedGroups`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`EnableMDITabbedGroups`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#8](../../mfc/codesnippet/cpp/cmdiframewndex-class_7.cpp)]
 
@@ -738,7 +738,7 @@ TRUE の場合、**閉じる**ボタンがアクティブなタブの代わり�
 
 ### <a name="example"></a>例
 
-次の例はどのように`EnableMDITabs`で使用されて、 [MDITabsDemo サンプル: MFC タブ付き MDI アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`EnableMDITabs`で使用されて、 [MDITabsDemo サンプル。MFC タブ付き MDI アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#3](../../mfc/reference/codesnippet/cpp/cmdiframewndex-class_8.cpp)]
 
@@ -807,7 +807,7 @@ void EnablePaneMenu(
 
 ### <a name="example"></a>例
 
-次の例はどのように`EnablePaneMenu`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`EnablePaneMenu`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#9](../../mfc/codesnippet/cpp/cmdiframewndex-class_9.cpp)]
 
@@ -849,7 +849,7 @@ void EnableWindowsDialog(
 
 ### <a name="example"></a>例
 
-次の例はどのように`EnableWindowsDialog`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`EnableWindowsDialog`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#10](../../mfc/codesnippet/cpp/cmdiframewndex-class_10.cpp)]
 
@@ -1224,7 +1224,7 @@ virtual BOOL LoadMDIState(LPCTSTR lpszProfileName);
 
 ### <a name="example"></a>例
 
-次の例はどのように`LoadMDIState`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`LoadMDIState`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#11](../../mfc/codesnippet/cpp/cmdiframewndex-class_11.cpp)]
 
@@ -1260,7 +1260,7 @@ void MDITabNewGroup(BOOL bVert=TRUE);
 
 ### <a name="example"></a>例
 
-次の例はどのように`MDITabNewGroup`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`MDITabNewGroup`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#12](../../mfc/codesnippet/cpp/cmdiframewndex-class_12.cpp)]
 
@@ -1280,7 +1280,7 @@ BOOL m_bCanCovertControlBarToMDIChild;
 
 ### <a name="example"></a>例
 
-次の例はどのように`m_bCanCovertControlBarToMDIChild`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`m_bCanCovertControlBarToMDIChild`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#13](../../mfc/codesnippet/cpp/cmdiframewndex-class_2.cpp)]
 
@@ -1322,7 +1322,7 @@ virtual BOOL NegotiateBorderSpace(
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-[入力、出力]ポインターを[RECT 構造体](../../mfc/reference/rect-structure1.md)または[CRect クラス](../../atl-mfc-shared/reference/crect-class.md)罫線の座標を指定するオブジェクト。
+[入力、出力]ポインターを[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)または[CRect クラス](../../atl-mfc-shared/reference/crect-class.md)罫線の座標を指定するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1621,7 +1621,7 @@ virtual BOOL OnShowMDITabContextMenu(
 
 ### <a name="example"></a>例
 
-次の例はどのように`OnShowMDITabContextMenu`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`OnShowMDITabContextMenu`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#14](../../mfc/codesnippet/cpp/cmdiframewndex-class_13.cpp)]
 
@@ -1746,7 +1746,7 @@ CBasePane* PaneFromPoint(
 ### <a name="parameters"></a>パラメーター
 
 *ポイント*<br/>
-[in](画面座標) をポイントします。
+[in]\(画面座標) をポイントします。
 
 *nSensitivity*<br/>
 [in]チェックされている各ウィンドウのウィンドウの四角形は、この値によって、すべての方向に拡大されます。
@@ -1856,7 +1856,7 @@ virtual BOOL SaveMDIState(LPCTSTR lpszProfileName);
 
 ### <a name="example"></a>例
 
-次の例はどのように`SaveMDIState`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`SaveMDIState`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#15](../../mfc/codesnippet/cpp/cmdiframewndex-class_14.cpp)]
 
@@ -1939,7 +1939,7 @@ void ShowPane(
 
 ### <a name="example"></a>例
 
-次の例はどのように`ShowPane`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`ShowPane`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#16](../../mfc/codesnippet/cpp/cmdiframewndex-class_15.cpp)]
 
@@ -1953,7 +1953,7 @@ void ShowWindowsDialog();
 
 ### <a name="example"></a>例
 
-次の例はどのように`ShowWindowsDialog`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`ShowWindowsDialog`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#18](../../mfc/codesnippet/cpp/cmdiframewndex-class_16.cpp)]
 
@@ -1980,7 +1980,7 @@ TRUE の場合、メソッドが成功、失敗した場合は FALSE。
 
 ### <a name="example"></a>例
 
-次の例はどのように`TabbedDocumentToControlBar`で使用されて、 [VisualStudioDemo サンプル: Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)。
+次の例はどのように`TabbedDocumentToControlBar`で使用されて、 [VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#19](../../mfc/codesnippet/cpp/cmdiframewndex-class_17.cpp)]
 
