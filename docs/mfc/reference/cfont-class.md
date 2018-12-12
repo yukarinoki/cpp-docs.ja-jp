@@ -64,11 +64,11 @@ class CFont : public CGdiObject
 
 ## <a name="remarks"></a>Remarks
 
-使用する、`CFont`オブジェクト、構築、`CFont`オブジェクトし、を使って Windows フォントをアタッチ[構築](#createfont)、 [CreateFontIndirect](#createfontindirect)、 [CreatePointFont](#createpointfont)、または[CreatePointFontIndirect](#createpointfontindirect)、し、オブジェクトのメンバー関数を使用してフォントを操作します。
+`CFont`オブジェクトを使用して、`CFont`オブジェクトを構築するか、 [CreateFont](#createfont)、 [CreateFontIndirect](#createfontindirect)、 [CreatePointFont](#createpointfont)、または[CreatePointFontIndirect](#createpointfontindirect)を使って Windows フォントをアタッチした後、オブジェクトのメンバー関数を使用してフォントを操作します。
 
-`CreatePointFont`と`CreatePointFontIndirect`関数は、多くの場合より使いやすく`CreateFont`または`CreateFontIndirect`フォントの高さの変換、ポイント サイズから論理ユニットを自動的に行うためです。
+`CreatePointFont`と`CreatePointFontIndirect`関数は、多くの場合、`CreateFont`または`CreateFontIndirect`よりも使いやすく、フォントの高さの変換、ポイント サイズから論理ユニットを自動的に行います。
 
-詳細については`CFont`を参照してください[グラフィック オブジェクト](../../mfc/graphic-objects.md)します。
+`CFont`の詳細については[グラフィック オブジェクト](../../mfc/graphic-objects.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
