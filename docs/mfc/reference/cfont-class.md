@@ -60,7 +60,7 @@ class CFont : public CGdiObject
 
 |名前|説明|
 |----------|-----------------|
-|[CFont::operator HFONT](#operator_hfont)|アタッチされている Windows GDI フォントのハンドルを返します、`CFont`オブジェクト。|
+|[CFont::operator HFONT](#operator_hfont)|`CFont`オブジェクトにアタッチされている Windows GDI フォントのハンドルを返します。|
 
 ## <a name="remarks"></a>Remarks
 
