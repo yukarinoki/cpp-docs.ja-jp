@@ -1,25 +1,15 @@
 ---
-title: .Xml ファイルの処理 | Microsoft Docs
-ms.custom: ''
+title: .Xml ファイルの処理
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: f7cdbbe704e283177e4e3b4f0767db66e2e284e5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46446323"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524171"
 ---
 # <a name="xml-file-processing"></a>.Xml ファイルの処理
 
@@ -33,50 +23,50 @@ ms.locfileid: "46446323"
 
 - ID 文字列の最初の部分は、単一の文字とそれに続くコロンで識別されるメンバーの種類を示します。 使用されるメンバー型は次のとおりです。
 
-   |文字|説明|
-   |---------------|-----------------|
-   |N|namespace<br /><br /> ドキュメント コメントを名前空間に追加することはできません。名前空間への cref 参照は可能です。|
-   |T|型: クラス、インターフェイス、構造体、列挙、デリゲート|
-   |D|typedef|
-   |F|フィールド|
-   |P|プロパティ (インデクサーまたはその他のインデックス付きプロパティを含む)|
-   |M|メソッド (コンストラクター、演算子などの特殊なメソッドを含む)|
-   |E|イベント|
-   |!|エラー文字列<br /><br /> あとに続く文字列で、エラーの情報を示します。 Visual C# コンパイラは、解決できないリンクのエラー情報を生成します。|
+  | 文字 | 説明 |
+  |---------------|-----------------|
+  | N | namespace<br /><br /> ドキュメント コメントを名前空間に追加することはできません。名前空間への cref 参照は可能です。 |
+  | T | 型: クラス、インターフェイス、構造体、列挙、デリゲート |
+  | D | typedef |
+  | F | フィールド |
+  | P | プロパティ (インデクサーまたはその他のインデックス付きプロパティを含む) |
+  | M | メソッド (コンストラクター、演算子などの特殊なメソッドを含む) |
+  | E | イベント |
+  | ! | エラー文字列<br /><br /> あとに続く文字列で、エラーの情報を示します。 Visual C# コンパイラは、解決できないリンクのエラー情報を生成します。 |
 
 - 文字列の 2 番目の部分は、項目の完全修飾名で、名前空間のルートから始まります。 項目の名前、それを囲む型、名前空間はピリオドで区切られます。 項目の名前自体にピリオドがある場合、名前のピリオドはハッシュ記号 ('#') に置き換えられます。 項目の名前には、ハッシュ記号がないことが前提です。 たとえば、`String` コンストラクターの完全修飾名は "System.String.#ctor" です。
 
 - プロパティおよびメソッドについては、メソッドに引数がある場合は、引数のリストをかっこで囲み、メソッドに続けて指定します。 引数がない場合は、かっこはありません。 引数はコンマで区切られます。 各引数のエンコードは、次に示す .NET Framework のシグネチャでの引数のエンコーディング方法にそのまま従います。
 
-   - 基本データ型。 通常の型 (ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE) は、型の完全修飾名で表されます。
+  - 基本データ型。 通常の型 (ELEMENT_TYPE_CLASS または ELEMENT_TYPE_VALUETYPE) は、型の完全修飾名で表されます。
 
-   - 組み込みの型 (たとえば、ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF や、 ELEMENT_TYPE_VOID) は、対応する完全な型の完全修飾名として表されます (例: **System.Int32** または **System.TypedReference**)。
+  - 組み込みの型 (たとえば、ELEMENT_TYPE_I4、ELEMENT_TYPE_OBJECT、ELEMENT_TYPE_STRING、ELEMENT_TYPE_TYPEDBYREF や、 ELEMENT_TYPE_VOID) は、対応する完全な型の完全修飾名として表されます (例: **System.Int32** または **System.TypedReference**)。
 
-   - ELEMENT_TYPE_PTR は、修飾される型に続けて '*' と表されます。
+  - ELEMENT_TYPE_PTR は、修飾される型に続けて '*' と表されます。
 
-   - ELEMENT_TYPE_BYREF は、修飾される型に続けて '\@' と表されます。
+  - ELEMENT_TYPE_BYREF は、修飾される型に続けて '\@' と表されます。
 
-   - ELEMENT_TYPE_PINNED は、修飾される型に続けて '^' と表されます。 これは Visual C++ コンパイラでは生成されません。
+  - ELEMENT_TYPE_PINNED は、修飾される型に続けて '^' と表されます。 これは Visual C++ コンパイラでは生成されません。
 
-   - ELEMENT_TYPE_CMOD_REQ は、修飾される型に続けて "&#124;" と修飾子クラスの完全修飾名で表されます。 これは Visual C++ コンパイラでは生成されません。
+  - ELEMENT_TYPE_CMOD_REQ は、修飾される型に続けて "&#124;" と修飾子クラスの完全修飾名で表されます。 これは Visual C++ コンパイラでは生成されません。
 
-   - ELEMENT_TYPE_CMOD_OPT は、修飾される型に続けて "!" と修飾子クラスの完全修飾名で表されます。
+  - ELEMENT_TYPE_CMOD_OPT は、修飾される型に続けて "!" と修飾子クラスの完全修飾名で表されます。
 
-   - ELEMENT_TYPE_SZARRAY は、配列の要素型に続けて "[]" と表されます。
+  - ELEMENT_TYPE_SZARRAY は、配列の要素型に続けて "[]" と表されます。
 
-   - ELEMENT_TYPE_GENERICARRAY は、配列の要素型に続けて "[?]" と表されます。 これは Visual C++ コンパイラでは生成されません。
+  - ELEMENT_TYPE_GENERICARRAY は、配列の要素型に続けて "[?]" と表されます。 これは Visual C++ コンパイラでは生成されません。
 
-   - ELEMENT_TYPE_ARRAY は、[*lowerbound*:`size`,*lowerbound*:`size`] の形式で表されます。ここで、コンマの個数はランク -1 個であり、各次元の下限とサイズは明らかな場合は、10 進数で表されます。 下限またはサイズの指定がない場合は省略されます。 特定の次元で下限およびサイズが省略されている場合は、':' も省略されます。 たとえば、ある 2 次元配列の下限が 1 で、サイズの指定がない場合は、[1:,1:] と表されます。
+  - ELEMENT_TYPE_ARRAY は、[*lowerbound*:`size`,*lowerbound*:`size`] の形式で表されます。ここで、コンマの個数はランク -1 個であり、各次元の下限とサイズは明らかな場合は、10 進数で表されます。 下限またはサイズの指定がない場合は省略されます。 特定の次元で下限およびサイズが省略されている場合は、':' も省略されます。 たとえば、ある 2 次元配列の下限が 1 で、サイズの指定がない場合は、[1:,1:] と表されます。
 
-   - ELEMENT_TYPE_FNPTR は、"=FUNC:`type`(*signature*)" と表されます。ここで、`type` は戻り値の型であり、*signature* はメソッドの引数です。 引数がない場合、かっこは省略されます。 これは Visual C++ コンパイラでは生成されません。
+  - ELEMENT_TYPE_FNPTR は、"=FUNC:`type`(*signature*)" と表されます。ここで、`type` は戻り値の型であり、*signature* はメソッドの引数です。 引数がない場合、かっこは省略されます。 これは Visual C++ コンパイラでは生成されません。
 
-   次に示すシグネチャ コンポーネントは、オーバーロードされるメソッドの区別には使用されることがないため、表されません。
+  次に示すシグネチャ コンポーネントは、オーバーロードされるメソッドの区別には使用されることがないため、表されません。
 
-   - 呼び出し規則
+  - 呼び出し規則
 
-   - 戻り値の型
+  - 戻り値の型
 
-   - ELEMENT_TYPE_SENTINEL
+  - ELEMENT_TYPE_SENTINEL
 
 - 変換演算子の場合のみ、上記のエンコードと同様に、メソッドの戻り値が "~" としてエンコードされ、それに続けて戻り値の型が表されます。
 
@@ -86,9 +76,9 @@ ms.locfileid: "46446323"
     <member name="T:MyClass`2">
     ```
 
-   `public class MyClass<T, U>` として定義されている型の場合。
+  `public class MyClass<T, U>` として定義されている型の場合。
 
-   パラメーターとしてジェネリック型を受け取るメソッドでは、ジェネリック型パラメーターは、前にアクサン グラーブが付いた数値 (\`0、\`1 など) として指定されます。  各数値は、型のジェネリック パラメーターに対する、0 から始まる配列表記を表しています。
+  パラメーターとしてジェネリック型を受け取るメソッドでは、ジェネリック型パラメーターは、前にアクサン グラーブが付いた数値 (\`0、\`1 など) として指定されます。  各数値は、型のジェネリック パラメーターに対する、0 から始まる配列表記を表しています。
 
 ## <a name="example"></a>例
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::basic_stringbuf [C++], str
 - std::basic_stringbuf [C++], underflow
 ms.assetid: 40c85f9e-42a5-4a65-af5c-23c8e3bf8113
-ms.openlocfilehash: 87ea8150e13076d176665bc3ddcc04482d639b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ed9deee46f7c99750ee3260a6b2a8de1f0f3397
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462026"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329645"
 ---
 # <a name="basicstringbuf-class"></a>basic_stringbuf クラス
 
@@ -183,7 +183,7 @@ virtual int_type overflow(int_type _Meta = traits_type::eof());
 
 ### <a name="remarks"></a>Remarks
 
-_ *Meta* が**traits_type::**[eof](../standard-library/char-traits-struct.md#eof) と等しくない場合、プロテクト仮想メンバー関数は、要素 **traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(\_ *Meta*) を出力バッファーに挿入しようとします。 これはさまざまな方法で行うことができます。
+場合*\_メタ*にも等しく**traits_type::**[eof](../standard-library/char-traits-struct.md#eof)、プロテクト仮想メンバー関数は、要素を挿入しようとする**traits_type::**[to_char_type](../standard-library/char-traits-struct.md#to_char_type)(*\_メタ*) 出力バッファーにします。 これはさまざまな方法で行うことができます。
 
 - 書き込み位置が使用可能な場合は、書き込み位置に要素を格納し、出力バッファーのネクスト ポインターをインクリメントできます。
 

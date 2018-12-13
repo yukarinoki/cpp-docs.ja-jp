@@ -1,23 +1,16 @@
 ---
-title: 生文字列に変換 | Microsoft Docs
-ms.custom: ''
+title: 生文字列に変換
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: fffbfee4-66ee-42ba-aeb9-df07fb702c51
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 75037ea542a5bd2160d9a89138b12f82867002a5
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: bf492e6796b9d2342b5952abb093bddd5ede114b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46388447"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692598"
 ---
 # <a name="convert-to-raw-string-literal"></a>生文字列に変換
+
 **機能:** あらゆる文字列を C++ 生文字に変換できます。
 
 **条件:** エスケープ文字として処理すべきではないエスケープ文字を含む文字列があるとき。

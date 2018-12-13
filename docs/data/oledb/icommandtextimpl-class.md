@@ -22,16 +22,16 @@ helpviewer_keywords:
 - m_strCommandText
 - SetCommandText method
 ms.assetid: 9c2715cc-1e55-4468-8327-85341617ed46
-ms.openlocfilehash: fafd1198776c558ff39ef35c0b7beca538e976ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d05af932d5f531a4dab02e7e0ca171f4484891a3
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677696"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556323"
 ---
 # <a name="icommandtextimpl-class"></a>ICommandTextImpl クラス
 
-実装を提供、 [ICommandText](/previous-versions/windows/desktop/ms714914)インターフェイス。
+実装を提供、 [ICommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms714914(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -76,13 +76,13 @@ class ATL_NO_VTABLE ICommandTextImpl
 ### <a name="syntax"></a>構文
 
 ```cpp
-STDMETHOD(GetCommandText)(GUID * pguidDialect, 
+STDMETHOD(GetCommandText)(GUID * pguidDialect,
    LPOLESTR * ppwszCommand);
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825)で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。
+参照してください[ICommandText::GetCommandText](https://docs.microsoft.com/previous-versions/windows/desktop/ms709825(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。 *既定で*パラメーターは既定では無視されます。
 
 ## <a name="setcommandtext"></a> Icommandtextimpl::setcommandtext
 
@@ -91,13 +91,13 @@ STDMETHOD(GetCommandText)(GUID * pguidDialect, 
 ### <a name="syntax"></a>構文
 
 ```cpp
-STDMETHOD(SetCommandText)(REFGUID rguidDialect, 
+STDMETHOD(SetCommandText)(REFGUID rguidDialect,
    LPCOLESTR pwszCommand);
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icommandtext::setcommandtext](/previous-versions/windows/desktop/ms709757)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icommandtext::setcommandtext](https://docs.microsoft.com/previous-versions/windows/desktop/ms709757(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="strcommandtext"></a> Icommandtextimpl::m_strcommandtext
 

@@ -1,25 +1,15 @@
 ---
-title: Visual Studio 2015 と Visual Studio 2017 の間の C++ バイナリ互換性 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio 2015 と Visual Studio 2017 の間の C++ バイナリ互換性
 ms.date: 09/24/2018
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - binary compatibility, Visual C++
 ms.assetid: 591580f6-3181-4bbe-8ac3-f4fbaca949e6
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6f6d81f5cdce8955194985f66863940b97e32d40
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: e526002bdca0eee122531f39c195aef3474cc61c
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50065526"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329827"
 ---
 # <a name="c-binary-compatibility-between-visual-studio-2015-and-visual-studio-2017"></a>Visual Studio 2015 と Visual Studio 2017 の間の C++ バイナリ互換性
 
@@ -33,4 +23,4 @@ ms.locfileid: "50065526"
 
 ## <a name="see-also"></a>参照
 
-[Visual C++ の変更履歴](..\porting\visual-cpp-change-history-2003-2015.md)
+[Visual C++ の変更履歴](../porting/visual-cpp-change-history-2003-2015.md)

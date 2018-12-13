@@ -1,49 +1,83 @@
 ---
-title: イベントの追加 (Visual C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
+title: イベントを追加する
+ms.date: 11/12/2018
+f1_keywords:
+- vc.codewiz.event.overview
 helpviewer_keywords:
 - ActiveX controls [C++], adding events to
 - MFC ActiveX controls [C++], adding events
 - events [C++], ActiveX controls
+- add event wizard [C++]
 ms.assetid: fe34832a-edfc-4f86-aacb-8df77001873d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cade82c94b022c3665795ca6f0ecfb02c29cc1ae
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1d5a8f5666dd04e00f8a438fdbf00320c37e14f4
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46421584"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693426"
 ---
-# <a name="adding-an-event-visual-c"></a>イベントの追加 (Visual C++)
+# <a name="add-an-event"></a>イベントを追加する
 
-クラス ビューから、[イベント追加ウィザード](../ide/add-event-wizard.md)を使用して [MFC ActiveX コントロール](../mfc/reference/creating-an-mfc-activex-control.md) プロジェクトのコントロール クラスにのみイベントを追加できます。 別の種類のプロジェクトをイベントに追加する場合は、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)の **[イベント]** ボタンを使用します。
+クラス ビューから、[イベント追加ウィザード](#add-event-wizard)を使用して [MFC ActiveX コントロール](../mfc/reference/creating-an-mfc-activex-control.md) プロジェクトのコントロール クラスにのみイベントを追加できます。 別の種類のプロジェクトをイベントに追加する場合は、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)の **[イベント]** ボタンを使用します。
 
-### <a name="to-add-an-event-to-your-mfc-activex-control-project"></a>MFC ActiveX コントロール プロジェクトにイベントを追加するには
+**MFC ActiveX コントロール プロジェクトにイベントを追加するには:**
 
 1. クラス ビューでプロジェクト ノードを展開して、プロジェクト内のクラスを表示します。
 
 1. プロジェクトのコントロール クラスを右クリックします。
 
-1. ショートカット メニューで、**[追加]**、**[イベントの追加]** の順にクリックして、イベント追加ウィザードを表示します。
+1. ショートカット メニューで、**[追加]**、**[イベントの追加]** の順に選択して、イベント追加ウィザードを表示します。
 
 1. 適切なウィザード ボックスにイベント情報を指定します。
 
-1. **[完了]** をクリックして、プロジェクトにイベントを追加します。
+1. **[完了]** を選択して、プロジェクトにイベントを追加します。
 
-## <a name="see-also"></a>参照
+## <a name="in-this-section"></a>このセクションの内容
 
-[コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[クラスの追加](../ide/adding-a-class-visual-cpp.md)<br>
-[メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)<br>
-[メンバー関数の追加](../ide/adding-a-member-function-visual-cpp.md)<br>
-[MFC メッセージ ハンドラー](../mfc/reference/adding-an-mfc-message-handler.md)<br>
-[クラス各部へのジャンプ](../ide/navigating-the-class-structure-visual-cpp.md)
+- [イベント追加ウィザード](#add-event-wizard)
+
+## <a name="add-event-wizard"></a>イベント追加ウィザード
+
+このウィザードでは、MFC ActiveX コントロール プロジェクトにイベントを追加できます。 独自のイベントの指定、通常のストック イベントのカスタマイズ、ストック イベントのリストからの選択が可能です。
+
+- **イベント名**
+
+   オートメーション クライアントが、クラスからイベントを要求するときに使用する名前を設定します。 名前を入力するか、リストから選択してください。
+
+- **イベントの種類**
+
+   追加するイベントの種類を示します。 **[イベント名]** リストから選択した場合のみ、使用することができます。
+
+   |オプション|説明|
+   |------------|-----------------|
+   |**ストック**|ボタン クリックなどのストック イベントがこのクラスに実装されることを指定します。 ストック イベントは、Microsoft Foundation Class (MFC) ライブラリに定義されています。|
+   |**カスタム**|イベントの独自の実装を使用していることを指定します。|
+
+- **内部名**
+
+   イベントを送るメンバー関数の名前を設定します。 カスタム イベントに対してのみ使用できます。 この名前は、**イベント名**に基づいています。 **イベント名**とは異なる名前を指定する場合は、内部名を変更することができます。
+
+- **パラメーターの型**
+
+   **パラメーター名**の型を設定します。 型はリストから選択します。
+
+- **パラメーター名**
+
+   イベントを介して渡すパラメーター名を設定します。 名前を入力したら、**[追加]** を選択してパラメーターのリストに追加する必要があります。
+
+   **[追加]** を選択すると、パラメーター名が **[パラメーター リスト]** に表示されます。
+
+   > [!NOTE]
+   > パラメーター名を指定し、**[追加]** を選択する前に **[完了]** を選択した場合、パラメーターはイベントに追加されません。 メソッドを検索し、パラメーターを手動で挿入する必要があります。
+
+- **[追加]**
+
+   指定するパラメーターを **[パラメーター名]** に、そしてその型を **[パラメーター リスト]** に追加します。 **[追加]** を選択して、リストにパラメーターを追加します。
+
+- **削除**
+
+   リストから **[パラメーター リスト]** で選択したパラメーターを削除します。
+
+- **パラメーター リスト**
+
+   そのメソッドに現在追加されているすべてのパラメーターとその型を表示します。 パラメーターを追加すると、ウィザードが **[パラメーター リスト]** を更新して、各パラメーターをその型と共に表示されます。

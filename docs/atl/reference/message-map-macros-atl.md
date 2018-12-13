@@ -37,12 +37,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: 5502dae40392679f47b691a822260accbf597dc0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555104"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694375"
 ---
 # <a name="message-map-macros-atl"></a>メッセージ マップ マクロ (ATL)
 
@@ -607,7 +607,7 @@ MESSAGE_HANDLER マクロで指定された任意の関数は、次のように�
 > [!NOTE]
 >  メッセージ マップは常に開始[送るに](#begin_msg_map)します。 代替の後続のメッセージ マップを宣言することができます[ALT_MSG_MAP](#alt_msg_map)します。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
 
-MESSAGE_HANDLER、に加えて使用できます[COMMAND_HANDLER](#command_handler)と[NOTIFY_HANDLER](#notify_handler)にマップする[WM_COMMAND](/windows/desktop/menurc/wm-command)と[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)メッセージ、それぞれします。
+MESSAGE_HANDLER、に加えて使用できます[COMMAND_HANDLER](#command_handler)と[NOTIFY_HANDLER](#notify_handler)にマップする[WM_COMMAND](/windows/desktop/menurc/wm-command)と[WM_NOTIFY](/windows/desktop/controls/wm-notify)メッセージ、それぞれします。
 
 ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
 
@@ -644,7 +644,7 @@ MESSAGE_RANGE_HANDLER( msgFirst, msgLast, func )
 
 ##  <a name="notify_code_handler"></a>  NOTIFY_CODE_HANDLER
 
-ような[NOTIFY_HANDLER](#notify_handler)、マップしますが、 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)メッセージ ベースの通知のコードに対してのみです。
+ような[NOTIFY_HANDLER](#notify_handler)、マップしますが、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)メッセージ ベースの通知のコードに対してのみです。
 
 ```
 NOTIFY_CODE_HANDLER(cd, func)
@@ -683,7 +683,7 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="remarks"></a>Remarks
 
-NOTIFY_HANDLER マップ、 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)通知コードとコントロールの識別子に基づいて、指定されたハンドラー関数にメッセージ。
+NOTIFY_HANDLER マップ、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)通知コードとコントロールの識別子に基づいて、指定されたハンドラー関数にメッセージ。
 
 NOTIFY_HANDLER マクロで指定された任意の関数は、次のように定義する必要があります。
 
@@ -708,7 +708,7 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 ##  <a name="notify_id_handler"></a>  NOTIFY_ID_HANDLER
 
-ような[NOTIFY_HANDLER](#notify_handler)、マップしますが、 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)メッセージ ベースのコントロール識別子でのみです。
+ような[NOTIFY_HANDLER](#notify_handler)、マップしますが、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)メッセージ ベースのコントロール識別子でのみです。
 
 ```
 NOTIFY_ID_HANDLER( id, func )
@@ -728,7 +728,7 @@ NOTIFY_ID_HANDLER( id, func )
 
 ##  <a name="notify_range_code_handler"></a>  NOTIFY_RANGE_CODE_HANDLER
 
-ような[NOTIFY_RANGE_HANDLER](#notify_range_handler)、マップしますが、 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)コントロールの範囲から 1 つのハンドラー関数の特定の通知コードを持つメッセージ。
+ような[NOTIFY_RANGE_HANDLER](#notify_range_handler)、マップしますが、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)コントロールの範囲から 1 つのハンドラー関数の特定の通知コードを持つメッセージ。
 
 ```
 NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
@@ -758,7 +758,7 @@ NOTIFY_RANGE_CODE_HANDLER( idFirst, idLast, cd, func )
 
 ##  <a name="notify_range_handler"></a>  NOTIFY_RANGE_HANDLER
 
-ような[NOTIFY_HANDLER](#notify_handler)、マップしますが、 [WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)コントロールの範囲から 1 つのハンドラー関数へのメッセージ。
+ような[NOTIFY_HANDLER](#notify_handler)、マップしますが、 [WM_NOTIFY](/windows/desktop/controls/wm-notify)コントロールの範囲から 1 つのハンドラー関数へのメッセージ。
 
 ```
 NOTIFY_RANGE_HANDLER( idFirst, idLast, func )

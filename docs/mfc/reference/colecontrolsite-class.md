@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: c9aa5b57b2610dbe0528d99d1c8ad996e1fc4a60
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437805"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178923"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite クラス
 
@@ -444,7 +444,7 @@ virtual BOOL EnableWindow(BOOL bEnable);
 ### <a name="parameters"></a>パラメーター
 
 *bEnable*<br/>
-有効または、ウィンドウを無効にするかどうかを指定します。 ウィンドウの入力が有効になっている、それ以外の場合は FALSE を指定する場合は TRUE。
+有効または、ウィンドウを無効にするかどうかを指定します。ウィンドウの入力が有効になっている、それ以外の場合は FALSE を指定する場合は TRUE。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1062,7 +1062,7 @@ virtual CWnd* SetFocus(LPMSG lpmsg);
 ### <a name="parameters"></a>パラメーター
 
 *lpmsg*<br/>
-ポインターを[MSG 構造体](../../mfc/reference/msg-structure1.md)します。 この構造体を含む、Windows メッセージをトリガーする、`SetFocus`コントロールの現在のサイトに含まれるコントロールを要求します。
+ポインターを[MSG 構造体](/windows/desktop/api/winuser/ns-winuser-tagmsg)します。 この構造体を含む、Windows メッセージをトリガーする、`SetFocus`コントロールの現在のサイトに含まれるコントロールを要求します。
 
 ### <a name="return-value"></a>戻り値
 

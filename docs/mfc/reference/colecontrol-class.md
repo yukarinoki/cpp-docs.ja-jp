@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: 176c076027a0b1b315fbcef3edd4104bad66ae34
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534135"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179020"
 ---
 # <a name="colecontrol-class"></a>COleControl クラス
 
@@ -556,7 +556,7 @@ OLE コントロールはウィンドウなしに使用される、インプレ�
 
 OLE コントロール オブジェクトは、ウィンドウをアクティブになったが、非アクティブ/アクティブの移行に必要な作業量が上がるし、移行の速度がダウンした場合にのみ作成もできます。 この問題が発生する場合: たとえば、テキスト ボックスのグリッドを検討してください。 ときに列をカーソルを上下、各コントロールがあります、インプレース アクティブ化され、非アクティブ化します。 非アクティブ/アクティブの移行の速度は、スクロール速度に直接影響します。
 
-OLE の制御フレームワークの開発に関する詳細については、記事をご覧ください。 [MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)と[概要: MFC ActiveX コントロール プログラムを作成する](../../mfc/reference/mfc-activex-control-wizard.md)します。 OLE コントロール、およびちらつきなしのコントロールなどの最適化については、次を参照してください。 [MFC ActiveX コントロール: 最適化](../../mfc/mfc-activex-controls-optimization.md)します。
+OLE の制御フレームワークの開発に関する詳細については、記事をご覧ください。 [MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)と[概要。MFC ActiveX コントロール プログラムを作成する](../../mfc/reference/mfc-activex-control-wizard.md)します。 OLE コントロール、およびちらつきなしのコントロールなどの最適化については、次を参照してください。 [MFC ActiveX コントロール。最適化](../../mfc/mfc-activex-controls-optimization.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -848,7 +848,7 @@ BOOL ClipCaretRect(LPRECT lpRect);
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-入力へのポインターを[RECT](../../mfc/reference/rect-structure1.md)調整されるカレット領域を含む構造体。 調整済みのキャレットの領域を出力します。 または、キャレットの四角形が完全に網羅されている場合は NULL。
+入力へのポインターを[RECT](/windows/desktop/api/windef/ns-windef-tagrect)調整されるカレット領域を含む構造体。 調整済みのキャレットの領域を出力します。 または、キャレットの四角形が完全に網羅されている場合は NULL。
 
 ### <a name="return-value"></a>戻り値
 
@@ -902,7 +902,7 @@ virtual void DisplayError(
 ### <a name="parameters"></a>パラメーター
 
 *scode*<br/>
-報告されるステータス コード値。 可能なコードの完全な一覧は、記事を参照してください。 [ActiveX コントロール: 高度なトピック](../../mfc/mfc-activex-controls-advanced-topics.md)します。
+報告されるステータス コード値。 可能なコードの完全な一覧は、記事を参照してください。 [ActiveX コントロール。トピックを advanced](../../mfc/mfc-activex-controls-advanced-topics.md)します。
 
 *lpszDescription*<br/>
 報告されるエラーの説明です。
@@ -934,7 +934,7 @@ void DoClick();
 
 オーバーライド可能な`COleControl::OnClick`メンバー関数を呼び出す、および在庫コントロールによってサポートされている場合、イベントが発生されます をクリックします。
 
-この関数はサポート、`COleControl`という DoClick ストック メソッドとして基本クラス。 詳細については、この記事を参照してください。 [ActiveX コントロール: メソッド](../../mfc/mfc-activex-controls-methods.md)します。
+この関数はサポート、`COleControl`という DoClick ストック メソッドとして基本クラス。 詳細については、この記事を参照してください。 [ActiveX コントロール。メソッド](../../mfc/mfc-activex-controls-methods.md)します。
 
 ##  <a name="dopropexchange"></a>  COleControl::DoPropExchange
 
@@ -953,7 +953,7 @@ virtual void DoPropExchange(CPropExchange* pPX);
 
 この関数での呼び出しは通常、 **px _** ファミリの読み込みまたは OLE コントロールの特定のユーザー定義プロパティを格納する関数。
 
-OLE コントロール プロジェクトを作成するコントロールのウィザードを使用して、この関数のオーバーライドされたバージョンがシリアル化でサポートされているストック プロパティ`COleControl`基底クラスの関数を呼び出して`COleControl::DoPropExchange`します。 OLE コントロールにユーザー定義のプロパティを追加すると、新しいプロパティをシリアル化するには、この関数を変更する必要があります。 シリアル化の詳細については、記事を参照してください。 [ActiveX コントロール: シリアル化する](../../mfc/mfc-activex-controls-serializing.md)します。
+OLE コントロール プロジェクトを作成するコントロールのウィザードを使用して、この関数のオーバーライドされたバージョンがシリアル化でサポートされているストック プロパティ`COleControl`基底クラスの関数を呼び出して`COleControl::DoPropExchange`します。 OLE コントロールにユーザー定義のプロパティを追加すると、新しいプロパティをシリアル化するには、この関数を変更する必要があります。 シリアル化の詳細については、記事を参照してください。 [ActiveX コントロール。シリアル化する](../../mfc/mfc-activex-controls-serializing.md)します。
 
 ##  <a name="dosuperclasspaint"></a>  COleControl::DoSuperclassPaint
 
@@ -977,7 +977,7 @@ void DoSuperclassPaint(
 
 アクティブでない OLE コントロールの描画を適切に処理するには、この関数を呼び出します。 この関数は、OLE コントロールでは、Windows コントロールをサブクラス化と呼び出す必要がある場合にのみ使用する必要があります、`OnDraw`コントロールの関数。
 
-この関数は、Windows コントロールをサブクラス化する方法の詳細については、記事を参照してください。 [ActiveX コントロール: Windows コントロールをサブクラス化](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)します。
+この関数は、Windows コントロールをサブクラス化する方法の詳細については、記事を参照してください。 [ActiveX コントロール。Windows コントロールをサブクラス化](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)します。
 
 ##  <a name="drawcontent"></a>  COleControl::DrawContent
 
@@ -1099,7 +1099,7 @@ BOOL ExchangeVersion(
 
 一般に、コントロールのオーバーライドによって呼び出される最初の関数には`COleControl::DoPropExchange`します。 この関数は、永続的なデータのバージョン番号を読み取るしの version 属性を設定を読み込むときに、 [CPropExchange](../../mfc/reference/cpropexchange-class.md)適宜オブジェクトします。 保存すると、この関数は、永続的なデータのバージョン番号を書き込みます。
 
-永続化とバージョン管理する方法の詳細については、記事を参照してください。 [ActiveX コントロール: シリアル化する](../../mfc/mfc-activex-controls-serializing.md)します。
+永続化とバージョン管理する方法の詳細については、記事を参照してください。 [ActiveX コントロール。シリアル化する](../../mfc/mfc-activex-controls-serializing.md)します。
 
 ##  <a name="fireclick"></a>  COleControl::FireClick
 
@@ -1143,7 +1143,7 @@ void FireError(
 ### <a name="parameters"></a>パラメーター
 
 *scode*<br/>
-報告されるステータス コード値。 可能なコードの完全な一覧は、記事を参照してください。 [ActiveX コントロール: 高度なトピック](../../mfc/mfc-activex-controls-advanced-topics.md)します。
+報告されるステータス コード値。 可能なコードの完全な一覧は、記事を参照してください。 [ActiveX コントロール。トピックを advanced](../../mfc/mfc-activex-controls-advanced-topics.md)します。
 
 *lpszDescription*<br/>
 報告されるエラーの説明です。
@@ -1690,7 +1690,7 @@ enum ControlFlags {
 |`windowlessActivate`|場合設定、コントロール ウィンドウなしのアクティベーションを使用することを示します。|
 |`canOptimizeDraw`|場合設定、コンテナーがサポートされている場合、コントロールが最適化された描画を実行することを示します。|
 
-詳細については`GetControlFlags`OLE コントロールの他の最適化を参照してくださいと[ActiveX コントロール: 最適化](../../mfc/mfc-activex-controls-optimization.md)します。
+詳細については`GetControlFlags`OLE コントロールの他の最適化を参照してくださいと[ActiveX コントロール。最適化](../../mfc/mfc-activex-controls-optimization.md)します。
 
 ##  <a name="getcontrolsize"></a>  COleControl::GetControlSize
 
@@ -1808,7 +1808,7 @@ LPFONTDISP GetFont();
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し元が完了すると、オブジェクトを解放する必要がありますに注意してください。 コントロールの実装内で使用して`InternalGetFont`コントロールのストックのフォント オブジェクトにアクセスします。 コントロールでのフォントの使用に関する詳細については、記事を参照してください。 [ActiveX コントロール: ActiveX コントロールのフォントの使用](../../mfc/mfc-activex-controls-using-fonts.md)します。
+呼び出し元が完了すると、オブジェクトを解放する必要がありますに注意してください。 コントロールの実装内で使用して`InternalGetFont`コントロールのストックのフォント オブジェクトにアクセスします。 コントロールでのフォントの使用に関する詳細については、記事を参照してください。 [ActiveX コントロール。ActiveX コントロールのフォントを使用して](../../mfc/mfc-activex-controls-using-fonts.md)します。
 
 ##  <a name="getfonttextmetrics"></a>  COleControl::GetFontTextMetrics
 
@@ -1989,7 +1989,7 @@ virtual IDropTarget* GetWindowlessDropTarget();
 
 ### <a name="remarks"></a>Remarks
 
-通常、このコントロールのウィンドウは、ドロップ先として登録する必要があります。 コンテナーは、ドロップ先として、独自のウィンドウを使用して、コントロールに、独自のウィンドウがあるないためです。 コントロールは、の実装を提供する必要があるだけ、`IDropTarget`インターフェイスをコンテナーは、適切な時点の呼び出しを委任できます。 例えば:
+通常、このコントロールのウィンドウは、ドロップ先として登録する必要があります。 コンテナーは、ドロップ先として、独自のウィンドウを使用して、コントロールに、独自のウィンドウがあるないためです。 コントロールは、の実装を提供する必要があるだけ、`IDropTarget`インターフェイスをコンテナーは、適切な時点の呼び出しを委任できます。 例:
 
 [!code-cpp[NVC_MFCAxCtl#2](../../mfc/reference/codesnippet/cpp/colecontrol-class_3.cpp)]
 
@@ -2448,7 +2448,7 @@ virtual BOOL OnEdit(
 
 これは、コントロールの OLEIVERB_UIACTIVATE 動詞を呼び出すのと同じ効果です。
 
-この関数は、通常は ON_OLEVERB メッセージ マップ エントリのハンドラー関数として使用します。 これにより、メニューのコントロールの「オブジェクト」、"Edit"動詞が使用可能なにします。 例えば:
+この関数は、通常は ON_OLEVERB メッセージ マップ エントリのハンドラー関数として使用します。 これにより、メニューのコントロールの「オブジェクト」、"Edit"動詞が使用可能なにします。 例:
 
 [!code-cpp[NVC_MFCAxCtl#5](../../mfc/reference/codesnippet/cpp/colecontrol-class_6.cpp)]
 
@@ -3565,7 +3565,7 @@ void Refresh();
 
 ### <a name="remarks"></a>Remarks
 
-この関数はサポート、`COleControl`更新と呼ばれる、ストック メソッドとして基本クラス。 これにより、特定の時点でコントロールを再描画 OLE コントロールのユーザーができます。 このメソッドの詳細については、記事を参照してください。 [ActiveX コントロール: メソッド](../../mfc/mfc-activex-controls-methods.md)します。
+この関数はサポート、`COleControl`更新と呼ばれる、ストック メソッドとして基本クラス。 これにより、特定の時点でコントロールを再描画 OLE コントロールのユーザーができます。 このメソッドの詳細については、記事を参照してください。 [ActiveX コントロール。メソッド](../../mfc/mfc-activex-controls-methods.md)します。
 
 ##  <a name="releasecapture"></a>  COleControl::ReleaseCapture
 
@@ -3636,9 +3636,9 @@ void ResetStockProps();
 
 ### <a name="remarks"></a>Remarks
 
-プロパティは、: 外観、背景色、BorderStyle、キャプション、Enabled、フォント、ForeColor、hWnd では、およびテキスト。 ストック プロパティの説明は、次を参照してください。 [ActiveX コントロール: ストック プロパティの追加](../../mfc/mfc-activex-controls-adding-stock-properties.md)します。
+次のプロパティです。外観、背景色、BorderStyle、キャプション、Enabled、フォント、ForeColor、hWnd では、およびテキスト。 ストック プロパティの説明は、次を参照してください。 [ActiveX コントロール。ストック プロパティの追加](../../mfc/mfc-activex-controls-adding-stock-properties.md)します。
 
-使用して、コントロールの初期化のバイナリのパフォーマンスを向上できます`ResetStockProps`と`ResetVersion`をオーバーライドする`COleControl::OnResetState`します。 下記の例を参照してください。 初期化の最適化の詳細については、次を参照してください。 [ActiveX コントロール: 最適化](../../mfc/mfc-activex-controls-optimization.md)します。
+使用して、コントロールの初期化のバイナリのパフォーマンスを向上できます`ResetStockProps`と`ResetVersion`をオーバーライドする`COleControl::OnResetState`します。 下記の例を参照してください。 初期化の最適化の詳細については、次を参照してください。 [ActiveX コントロール。最適化](../../mfc/mfc-activex-controls-optimization.md)します。
 
 ### <a name="example"></a>例
 
@@ -3659,7 +3659,7 @@ void ResetVersion(DWORD dwVersionDefault);
 
 ### <a name="remarks"></a>Remarks
 
-使用して、コントロールの初期化のバイナリのパフォーマンスを向上できます`ResetVersion`と`ResetStockProps`をオーバーライドする`COleControl::OnResetState`します。 例を参照してください。 [ResetStockProps](#resetstockprops)します。 初期化の最適化の詳細については、次を参照してください。 [ActiveX コントロール: 最適化](../../mfc/mfc-activex-controls-optimization.md)します。
+使用して、コントロールの初期化のバイナリのパフォーマンスを向上できます`ResetVersion`と`ResetStockProps`をオーバーライドする`COleControl::OnResetState`します。 例を参照してください。 [ResetStockProps](#resetstockprops)します。 初期化の最適化の詳細については、次を参照してください。 [ActiveX コントロール。最適化](../../mfc/mfc-activex-controls-optimization.md)します。
 
 ##  <a name="scrollwindow"></a>  COleControl::ScrollWindow
 
@@ -3741,7 +3741,7 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-使用して、コントロールのバイナリの永続化のパフォーマンスを向上できます`SerializeExtent`、 `SerializeStockProps`、および`SerializeVersion`をオーバーライドする`COleControl::Serialize`します。 下記の例を参照してください。 初期化の最適化の詳細については、次を参照してください。 [ActiveX コントロール: 最適化](../../mfc/mfc-activex-controls-optimization.md)します。
+使用して、コントロールのバイナリの永続化のパフォーマンスを向上できます`SerializeExtent`、 `SerializeStockProps`、および`SerializeVersion`をオーバーライドする`COleControl::Serialize`します。 下記の例を参照してください。 初期化の最適化の詳細については、次を参照してください。 [ActiveX コントロール。最適化](../../mfc/mfc-activex-controls-optimization.md)します。
 
 ### <a name="example"></a>例
 
@@ -3749,7 +3749,7 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 
 ##  <a name="serializestockprops"></a>  COleControl::SerializeStockProps
 
-シリアル化の状態を初期化します。 または、`COleControl`ストック プロパティ: 外観、BackColor、BorderStyle、キャプション、Enabled、フォント、前景色、およびテキスト。
+シリアル化の状態を初期化します。 または、`COleControl`ストック プロパティ。外観、BackColor、BorderStyle、キャプション、有効になっている、フォント、前景色、およびテキスト。
 
 ```
 void SerializeStockProps(CArchive& ar);
@@ -3762,9 +3762,9 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-ストック プロパティの説明は、次を参照してください。 [ActiveX コントロール: ストック プロパティの追加](../../mfc/mfc-activex-controls-adding-stock-properties.md)します。
+ストック プロパティの説明は、次を参照してください。 [ActiveX コントロール。ストック プロパティの追加](../../mfc/mfc-activex-controls-adding-stock-properties.md)します。
 
-使用して、コントロールのバイナリの永続化のパフォーマンスを向上できます`SerializeStockProps`、 `SerializeExtent`、および`SerializeVersion`をオーバーライドする`COleControl::Serialize`します。 例については、コードを参照してください。 [SerializeExtent](#serializeextent)します。 初期化の最適化の詳細については、次を参照してください。 [ActiveX コントロール: 最適化](../../mfc/mfc-activex-controls-optimization.md)します。
+使用して、コントロールのバイナリの永続化のパフォーマンスを向上できます`SerializeStockProps`、 `SerializeExtent`、および`SerializeVersion`をオーバーライドする`COleControl::Serialize`します。 例については、コードを参照してください。 [SerializeExtent](#serializeextent)します。 初期化の最適化の詳細については、次を参照してください。 [ActiveX コントロール。最適化](../../mfc/mfc-activex-controls-optimization.md)します。
 
 ##  <a name="serializeversion"></a>  COleControl::SerializeVersion
 
@@ -3794,7 +3794,7 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-使用して、コントロールのバイナリの永続化のパフォーマンスを向上できます`SerializeVersion`、 `SerializeExtent`、および`SerializeStockProps`をオーバーライドする`COleControl::Serialize`します。 例については、コードを参照してください。 [SerializeExtent](#serializeextent)します。 初期化の最適化の詳細については、次を参照してください。 [ActiveX コントロール: 最適化](../../mfc/mfc-activex-controls-optimization.md)します。
+使用して、コントロールのバイナリの永続化のパフォーマンスを向上できます`SerializeVersion`、 `SerializeExtent`、および`SerializeStockProps`をオーバーライドする`COleControl::Serialize`します。 例については、コードを参照してください。 [SerializeExtent](#serializeextent)します。 初期化の最適化の詳細については、次を参照してください。 [ActiveX コントロール。最適化](../../mfc/mfc-activex-controls-optimization.md)します。
 
 ##  <a name="setappearance"></a>  COleControl::SetAppearance
 
@@ -3811,7 +3811,7 @@ A**短い**コントロールの外観に使用する (VT_I2) 値。 ゼロの�
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、ストック プロパティは、次を参照してください。 [ActiveX コントロール: プロパティ](../../mfc/mfc-activex-controls-properties.md)します。
+詳細については、ストック プロパティは、次を参照してください。 [ActiveX コントロール。プロパティ](../../mfc/mfc-activex-controls-properties.md)します。
 
 ##  <a name="setbackcolor"></a>  COleControl::SetBackColor
 
@@ -3828,7 +3828,7 @@ void SetBackColor(OLE_COLOR dwBackColor);
 
 ### <a name="remarks"></a>Remarks
 
-このプロパティおよびその他の使用方法については関連のプロパティは、記事をご覧ください。 [ActiveX コントロール: プロパティ](../../mfc/mfc-activex-controls-properties.md)します。
+このプロパティおよびその他の使用方法については関連のプロパティは、記事をご覧ください。 [ActiveX コントロール。プロパティ](../../mfc/mfc-activex-controls-properties.md)します。
 
 ##  <a name="setborderstyle"></a>  COleControl::SetBorderStyle
 
@@ -3952,7 +3952,7 @@ void SetForeColor(OLE_COLOR dwForeColor);
 
 ### <a name="remarks"></a>Remarks
 
-このプロパティおよびその他の使用方法については関連のプロパティは、記事をご覧ください。 [ActiveX コントロール: プロパティ](../../mfc/mfc-activex-controls-properties.md)します。
+このプロパティおよびその他の使用方法については関連のプロパティは、記事をご覧ください。 [ActiveX コントロール。プロパティ](../../mfc/mfc-activex-controls-properties.md)します。
 
 ##  <a name="setinitialdataformats"></a>  COleControl::SetInitialDataFormats
 
@@ -3964,7 +3964,7 @@ virtual void SetInitialDataFormats();
 
 ### <a name="remarks"></a>Remarks
 
-既定の実装を 2 つの形式を指定します: CF_METAFILEPICT と永続的なプロパティを設定します。
+既定の実装では、2 つの形式を指定します。CF_METAFILEPICT と永続的なプロパティを設定します。
 
 ##  <a name="setinitialsize"></a>  COleControl::SetInitialSize
 
@@ -4086,7 +4086,7 @@ void ThrowError(
 ### <a name="parameters"></a>パラメーター
 
 *sc*<br/>
-報告されるステータス コード値。 可能なコードの完全な一覧は、記事を参照してください。 [ActiveX コントロール: 高度なトピック](../../mfc/mfc-activex-controls-advanced-topics.md)します。
+報告されるステータス コード値。 可能なコードの完全な一覧は、記事を参照してください。 [ActiveX コントロール。トピックを advanced](../../mfc/mfc-activex-controls-advanced-topics.md)します。
 
 *nDescriptionID*<br/>
 報告されることを例外の文字列リソース ID。

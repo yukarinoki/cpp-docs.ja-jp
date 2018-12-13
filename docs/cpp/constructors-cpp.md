@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C++], creating
 - instance constructors
 ms.assetid: 3e9f7211-313a-4a92-9584-337452e061a9
-ms.openlocfilehash: 66edab2950a752e00767e10e7b8c36a3a01240ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2027d967aebe68618e44e454ec268770b53ee4b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460880"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694063"
 ---
 # <a name="constructors-c"></a>コンストラクター (C++)
 
@@ -25,7 +25,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     explicit Box(int i) : m_width(i), m_length(i), m_height(i) // member init list
     {}
 
@@ -70,7 +70,7 @@ int main()
 
 コンス トラクターを必要に応じて、メンバー初期化子リスト コンス トラクター本体の実行前にクラス メンバーを初期化することができます。 (メンバー初期化子の一覧と同じものではありません、*初期化子リスト*型の[std::initializer_list\<T >](../standard-library/initializer-list-class.md))。
 
-メンバー初期化子リストを使用するは、直接のメンバーを初期化するので、コンス トラクターの本体の値より優先されます。 次の例を示しています、メンバー初期化子リストはすべての**identifier(argument)** コロンの後の式。
+メンバー初期化子リストを使用するは、直接のメンバーを初期化するので、コンス トラクターの本体で値より優先されます。 次の例を示しています、メンバー初期化子リストはすべての**identifier(argument)** コロンの後の式。
 
 ```cpp
     Box(int width, int length, int height)
@@ -127,7 +127,6 @@ int main() {
 ```cpp
     // Default constructor
     Box() = delete;
-
 ```
 
 コンパイラによって生成された既定のコンス トラクターは、クラス メンバーが既定で構造化可能でない場合に削除済みとして定義されます。 たとえば、クラス型のすべてのメンバーとそのクラス型のメンバーは既定のコンス トラクターとデストラクターがアクセスできるになければなりません。 参照のすべてのデータ メンバー型も、 **const**メンバーは、既定のメンバー初期化子をいる必要があります。
@@ -572,7 +571,7 @@ public:
     // Default constructor
     Box() {}
 
-    // Initalize a Box with equal dimensions (i.e. a cube)
+    // Initialize a Box with equal dimensions (i.e. a cube)
     Box(int i) :  Box(i, i, i);  // delegating constructor
     {}
 

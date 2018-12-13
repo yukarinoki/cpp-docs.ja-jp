@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: c27bcfa88ec5ba8b330a62f6ecfbad7e10a54d6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50547486"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178240"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl クラス
 
@@ -111,10 +111,10 @@ inline BOOL CreateManagedControl(
 作成するコントロールのデータ型。 必要があります、[型](https://msdn.microsoft.com/library/system.type)データ型。
 
 *dwStyle*<br/>
-コントロールに適用するウィンドウ スタイル。 組み合わせを指定[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。 現時点では、次のスタイルのみがサポートされています: WS_TABSTOP、WS_VISIBLE、WS_DISABLED および WS_GROUP します。
+コントロールに適用するウィンドウ スタイル。 組み合わせを指定[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。 現時点では、次のスタイルのみがサポートされています。WS_TABSTOP、WS_VISIBLE、WS_DISABLED および WS_GROUP します。
 
 *rect*<br/>
-A [RECT 構造体](../../mfc/reference/rect-structure1.md)コントロールの左上隅および右下隅の座標を定義する (最初のオーバー ロードのみ)。
+A [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)コントロールの左上隅および右下隅の座標を定義する (最初のオーバー ロードのみ)。
 
 *nPlaceHolderID*<br/>
 静的なプレース ホルダー コントロールのハンドルでは、リソース エディターで配置されます。 新しく作成された Windows フォーム コントロールの位置、z オーダーとスタイルと仮定すると、スタティック コントロールが置き換えられます (2 つ目のオーバー ロードのみ)。

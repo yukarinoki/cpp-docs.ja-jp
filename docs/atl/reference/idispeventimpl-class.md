@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
-ms.openlocfilehash: a07cf577ec6be2c6d2d895a85f49f44318596ded
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 75946005acc22874b17ee806cd89ec99095f9c35
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497463"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524301"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl クラス
 
@@ -151,7 +151,7 @@ HRESULT GetFuncInfoFromId(
 
 ##  <a name="getidsofnames"></a>  IDispEventImpl::GetIDsOfNames
 
-整数 Dispid を後続の呼び出しで使用できる、対応するセットを 1 つのメンバーとオプションの引数名のセットをマップ[idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)します。
+整数 Dispid を後続の呼び出しで使用できる、対応するセットを 1 つのメンバーとオプションの引数名のセットをマップ[idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)します。
 
 ```
 STDMETHOD(GetIDsOfNames)(
@@ -164,7 +164,7 @@ STDMETHOD(GetIDsOfNames)(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IDispatch::GetIDsOfNames](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK にします。
+参照してください[IDispatch::GetIDsOfNames](/windows/desktop/api/oaidl/nf-oaidl-idispatch-getidsofnames) Windows SDK にします。
 
 ##  <a name="gettypeinfo"></a>  IDispEventImpl::GetTypeInfo
 
@@ -189,7 +189,7 @@ STDMETHOD(GetTypeInfoCount)(UINT* pctinfo);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[IDispatch::GetTypeInfoCount](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK にします。
+参照してください[IDispatch::GetTypeInfoCount](/windows/desktop/api/oaidl/nf-oaidl-idispatch-gettypeinfocount) Windows SDK にします。
 
 ##  <a name="getuserdefinedtype"></a>  IDispEventImpl::GetUserDefinedType
 
@@ -204,7 +204,7 @@ VARTYPE GetUserDefinedType(
 ### <a name="parameters"></a>パラメーター
 
 *PTI*<br/>
-[in]ポインター、 [ITypeInfo](/previous-versions/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)ユーザー定義型を含むインターフェイス。
+[in]ポインター、 [ITypeInfo](/windows/desktop/api/oaidl/nn-oaidl-itypeinfo)ユーザー定義型を含むインターフェイス。
 
 *hrt*<br/>
 [in]取得する型の説明へのハンドル。
@@ -215,7 +215,7 @@ VARTYPE GetUserDefinedType(
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[ITypeInfo::GetRefTypeInfo](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo)します。
+参照してください[ITypeInfo::GetRefTypeInfo](/windows/desktop/api/oaidl/nf-oaidl-itypeinfo-getreftypeinfo)します。
 
 ##  <a name="idispeventimpl"></a>  IDispEventImpl::IDispEventImpl
 

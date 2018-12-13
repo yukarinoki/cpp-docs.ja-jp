@@ -8,12 +8,12 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 6148cbf3-ebe8-44f2-b277-de4b723991c7
-ms.openlocfilehash: 3f194f337288f86190177fc7fa0f63bf18f45665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 92e213b5accbf8fd5f48ac2111a169e585d82a1d
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444189"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328124"
 ---
 # <a name="argument-definitions"></a>引数定義
 
@@ -30,17 +30,17 @@ int wmain( int argc, wchar_t* argv[], wchar_t* envp[]);
 続く引数の数を格納する整数*argv*します。 *Argc*パラメーターが常に 1 以上です。
 
 *argv*<br/>
-プログラムのユーザーが入力したコマンド ライン引数を表す、null で終了する文字列配列。 慣例により、 `argv` **[0]** 、プログラムが起動されるコマンドは、 `argv` **[1]** までは、最初のコマンドライン引数と、 `argv` **[**`argc`**]** は常に NULL にします。 参照してください[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)コマンドライン処理の抑制について。
+プログラムのユーザーが入力したコマンド ライン引数を表す、null で終了する文字列配列。 慣例により、 `argv[0]` 、プログラムが起動されるコマンドは、`argv[1]`までは、最初のコマンドライン引数と、`argv[argc]`は常に NULL にします。 参照してください[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)コマンドライン処理の抑制について。
 
-最初のコマンドライン引数は常に`argv` **[1]** 、最後の 1 つは`argv` **[** `argc` - 1 **]** します。
+最初のコマンド ライン引数は、必ず `argv[1]` となり、最後のコマンド ライン引数は、`argv[argc - 1]` になります。
 
 > [!NOTE]
->  慣例では、`argv`**[0]** は、プログラムが起動されるコマンドです。  ただしを使用してプロセスを起動することは[CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)最初と 2 つ目の両方の引数を使用する場合 (*lpApplicationName*と*lpCommandLine*)、 `argv`**[0]** 実行可能ファイルができない可能性があります名; を使用して、 [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)実行可能ファイルの名前とその完全修飾パスを取得します。
+> 慣例により、`argv[0]`プログラムが起動されるコマンドです。  ただしを使用してプロセスを起動することは[CreateProcess](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)最初と 2 つ目の両方の引数を使用する場合 (*lpApplicationName*と*lpCommandLine*)、 `argv[0]` ; 実行可能ファイル名ではない可能性があります使用して、 [GetModuleFileName](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulefilenamea)実行可能ファイルの名前とその完全修飾パスを取得します。
 
 ## <a name="microsoft-specific"></a>Microsoft 固有の仕様
 
 *envp*<br/>
-*Envp* Microsoft C では、共通の拡張機能は、多くの UNIX システムでは、配列が使用されます。 これは、ユーザーの環境で設定された変数を表す文字列の配列です。 この配列は NULL エントリで終了します。 ポインターの配列として宣言できます**char (char** \*envp **)** またはへのポインターへのポインターとして**char (char** \* \*envp **)** します。 プログラムで使用する場合`wmain`の代わりに`main`を使用して、`wchar_t`データ型の代わりに**char**します。 渡される環境ブロック`main`と`wmain`「固定の」現在の環境のコピーです。 その後の呼び出しによって環境を変更した場合`putenv`または`_wputenv`、現在の環境 (によって返される`getenv` / `_wgetenv`と`_environ` /  `_wenviron`変数) は変更が、envp が指すブロックは変更されません。 参照してください[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)環境処理の抑制について。 この引数は、C では ANSI 互換ですが、C++ では非互換です。
+*Envp* Microsoft C では、共通の拡張機能は、多くの UNIX システムでは、配列が使用されます。 これは、ユーザーの環境で設定された変数を表す文字列の配列です。 この配列は NULL エントリで終了します。 ポインターの配列として宣言できます**char** (`char *envp[]`) またはへのポインターへのポインターとして**char** (`char **envp`)。 プログラムで使用する場合`wmain`の代わりに`main`を使用して、 **wchar_t**データ型の代わりに**char**します。 渡される環境ブロック`main`と`wmain`「固定の」現在の環境のコピーです。 後の呼び出しによって環境を変更した場合`putenv`または`_wputenv`、現在の環境 (によって返される`getenv`または`_wgetenv`と`_environ`または`_wenviron`変数) が指すブロックは変更されますenvp は変更されません。 参照してください[コマンドライン処理のカスタマイズ](../cpp/customizing-cpp-command-line-processing.md)環境処理の抑制について。 この引数は、C では ANSI 互換ですが、C++ では非互換です。
 
 **Microsoft 固有の仕様はここまで**
 

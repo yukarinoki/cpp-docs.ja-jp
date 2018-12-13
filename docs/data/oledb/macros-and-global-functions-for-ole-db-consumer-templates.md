@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 95d39b6068405a88a20b311a5851e593591a24db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445501"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51557116"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB コンシューマー テンプレート用マクロおよびグローバル関数
 
@@ -366,7 +366,7 @@ END_COLUMN_MAP マクロ BEGIN_COLUMN_MAP マクロが入力されます。 こ�
 
 ### <a name="blob_entry"></a> BLOB_ENTRY
 
-BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](/previous-versions/windows/desktop/ms711511))。
+BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。
 
 #### <a name="syntax"></a>構文
 
@@ -394,7 +394,7 @@ BLOB_ENTRY(nOrdinal, IID, flags, data)
 
 ### <a name="blob_entry_length"></a> BLOB_ENTRY_LENGTH
 
-BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](/previous-versions/windows/desktop/ms711511))。 ような[BLOB_ENTRY](../../data/oledb/blob-entry.md)も、このマクロは、BLOB 列のバイトの長さを取得する点を除いて、します。
+BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 ような[BLOB_ENTRY](../../data/oledb/blob-entry.md)も、このマクロは、BLOB 列のバイトの長さを取得する点を除いて、します。
 
 #### <a name="syntax"></a>構文
 
@@ -425,7 +425,7 @@ BLOB_ENTRY_LENGTH(nOrdinal, IID, flags, data, length)
 
 ### <a name="blob_entry_length_status"></a> BLOB_ENTRY_LENGTH_STATUS
 
-BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](/previous-versions/windows/desktop/ms711511))。 ような[BLOB_ENTRY](../../data/oledb/blob-entry.md)ただし、このマクロは、長さと、BLOB 列の状態も取得します。
+BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 ような[BLOB_ENTRY](../../data/oledb/blob-entry.md)ただし、このマクロは、長さと、BLOB 列の状態も取得します。
 
 #### <a name="syntax"></a>構文
 
@@ -465,7 +465,7 @@ BLOB_ENTRY_LENGTH_STATUS(
 
 ### <a name="blob_entry_status"></a> BLOB_ENTRY_STATUS
 
-バイナリ ラージ オブジェクトをバインドする BEGIN_COLUMN_MAP または BEGIN_ACCESSOR_MAP と共に使用 ([BLOB](/previous-versions/windows/desktop/ms711511))。 ような[BLOB_ENTRY](../../data/oledb/blob-entry.md)ただし、このマクロは、BLOB 列の状態も取得します。
+バイナリ ラージ オブジェクトをバインドする BEGIN_COLUMN_MAP または BEGIN_ACCESSOR_MAP と共に使用 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 ような[BLOB_ENTRY](../../data/oledb/blob-entry.md)ただし、このマクロは、BLOB 列の状態も取得します。
 
 #### <a name="syntax"></a>構文
 
@@ -496,7 +496,7 @@ BLOB_ENTRY_STATUS(nOrdinal, IID, flags, data, status)
 
 ### <a name="blob_name"></a> BLOB_NAME
 
-BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](/previous-versions/windows/desktop/ms711511))。 ような[BLOB_ENTRY](../../data/oledb/blob-entry.md)このマクロは列番号ではなく列名を点が異なります。
+BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 ような[BLOB_ENTRY](../../data/oledb/blob-entry.md)このマクロは列番号ではなく列名を点が異なります。
 
 #### <a name="syntax"></a>構文
 
@@ -524,7 +524,7 @@ BLOB_NAME(pszName, IID, flags, data )
 
 ### <a name="blob_name_length"></a> BLOB_NAME_LENGTH
 
-BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](/previous-versions/windows/desktop/ms711511))。 ような[BLOB_NAME](../../data/oledb/blob-name.md)も、このマクロは、BLOB のデータ列のバイトの長さを取得する点を除いて、します。
+BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 ような[BLOB_NAME](../../data/oledb/blob-name.md)も、このマクロは、BLOB のデータ列のバイトの長さを取得する点を除いて、します。
 
 #### <a name="syntax"></a>構文
 
@@ -551,7 +551,7 @@ BLOB_NAME_LENGTH(pszName, IID, flags, data, length )
 
 ### <a name="blob_name_length_status"></a> BLOB_NAME_LENGTH_STATUS
 
-BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](/previous-versions/windows/desktop/ms711511))。 ような[BLOB_NAME](../../data/oledb/blob-name.md)ただし、このマクロは、長さと BLOB のデータ列の状態も取得します。
+BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 ような[BLOB_NAME](../../data/oledb/blob-name.md)ただし、このマクロは、長さと BLOB のデータ列の状態も取得します。
 
 #### <a name="syntax"></a>構文
 
@@ -581,7 +581,7 @@ BLOB_NAME_LENGTH_STATUS(pszName, IID, flags, data, length, status )
 
 ### <a name="blob_name_status"></a> BLOB_NAME_STATUS
 
-BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](/previous-versions/windows/desktop/ms711511))。 ような[BLOB_NAME](../../data/oledb/blob-name.md)ただし、このマクロでは、BLOB のデータ列の状態も取得します。
+BEGIN_COLUMN_MAP と END_COLUMN_MAP バイナリ ラージ オブジェクトをバインドするために使用 ([BLOB](https://docs.microsoft.com/previous-versions/windows/desktop/ms711511(v=vs.85)))。 ような[BLOB_NAME](../../data/oledb/blob-name.md)ただし、このマクロでは、BLOB のデータ列の状態も取得します。
 
 #### <a name="syntax"></a>構文
 
@@ -672,7 +672,7 @@ END_COLUMN_MAP()
 #### <a name="see-also"></a>関連項目
 
 [CBookmark クラス](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](/previous-versions/windows/desktop/ms709728)
+[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -686,7 +686,7 @@ COLUMN_ENTRY(nOrdinal, data)
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]列の番号。
@@ -720,7 +720,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]列の番号。
@@ -772,7 +772,7 @@ COLUMN_ENTRY_LENGTH(nOrdinal, data, length)
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]以降では、1 つの列数。 ブックマークは、列 0 に対応します。
@@ -805,7 +805,7 @@ COLUMN_ENTRY_LENGTH_STATUS(nOrdinal, data, length, status)
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]列の番号。
@@ -841,7 +841,7 @@ COLUMN_ENTRY_PS(nOrdinal, nPrecision, nScale, data)
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]列の番号。
@@ -877,7 +877,7 @@ COLUMN_ENTRY_PS_LENGTH(nOrdinal, nPrecision, nScale, data, length)
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]以降では、1 つの列数。 ブックマークは、列 0 に対応します。
@@ -916,7 +916,7 @@ COLUMN_ENTRY_PS_LENGTH_STATUS(nOrdinal, nPrecision, nScale, data, length, status
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]列の番号。
@@ -958,7 +958,7 @@ COLUMN_ENTRY_PS_STATUS(nOrdinal, nPrecision, nScale, data, status)
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]列の番号。
@@ -997,7 +997,7 @@ COLUMN_ENTRY_STATUS(nOrdinal, data, status)
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[DBBINDING](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[DBBINDING](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *nOrdinal*<br/>
 [in]列の番号。
@@ -1547,7 +1547,7 @@ BEGIN_PARAM_MAP(x)
 
 #### <a name="remarks"></a>Remarks
 
-パラメーターの使用は[コマンド](/previous-versions/windows/desktop/ms724608)します。
+パラメーターの使用は[コマンド](https://docs.microsoft.com/previous-versions/windows/desktop/ms724608(v=vs.85))します。
 
 #### <a name="example"></a>例
 
@@ -1584,7 +1584,7 @@ SET_PARAM_TYPE(type)
 
 #### <a name="remarks"></a>Remarks
 
-プロバイダーは、基になるデータ ソースによってサポートされているパラメーター入出力タイプだけをサポートします。 種類は、1 つ以上を組み合わせた`DBPARAMIO`値 (を参照してください[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845)で、 *OLE DB プログラマーズ リファレンス*)。
+プロバイダーは、基になるデータ ソースによってサポートされているパラメーター入出力タイプだけをサポートします。 種類は、1 つ以上を組み合わせた`DBPARAMIO`値 (を参照してください[DBBINDING 構造体](https://docs.microsoft.com/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*)。
 
 - `DBPARAMIO_NOTPARAM` アクセサーにパラメーターがありません。 通常、設定`eParamIO`行アクセサーは、ユーザーに通知するパラメーターを無視することで、この値にします。
 

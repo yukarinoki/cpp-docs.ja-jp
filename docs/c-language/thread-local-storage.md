@@ -1,12 +1,6 @@
 ---
-title: スレッド ローカル ストレージ | Microsoft Docs
-ms.custom: ''
+title: スレッド ローカル ストレージ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - thread-local variables
 - TLS (thread local storage)
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: d0dca0359ea385e3a30f5dab6e8745a2d567ec1e
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 8a20e337cddcc45701f20941ac5d7fea5e4324a5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50055256"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330308"
 ---
 # <a name="thread-local-storage"></a>スレッド ローカル ストレージ
 
@@ -96,7 +86,7 @@ __declspec( thread ) int tls_i = 1;
 
    初期化される変数が含まれている sizeof 式は、式自体の参照が発生しないので、有効になります。
 
-- **__declspec(thread)** の属性の使用は、DLL のインポートの[遅延読み込み](../build/reference/linker-support-for-delay-loaded-dlls.md)に干渉する可能性があります **。**
+- **\_\_declspec(thread)** の使用は、DLL のインポートの[遅延読み込み](../build/reference/linker-support-for-delay-loaded-dlls.md)に干渉する可能性があります。
 
 スレッド属性の使用の詳細については、[マルチスレッドのトピック](../parallel/multithreading-support-for-older-code-visual-cpp.md)に関するページをご覧ください。
 

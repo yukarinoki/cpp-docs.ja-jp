@@ -25,7 +25,6 @@ f1_keywords:
 - async/Microsoft::WRL::AsyncBase::put_Id
 - async/Microsoft::WRL::AsyncBase::PutOnComplete
 - async/Microsoft::WRL::AsyncBase::PutOnProgress
-- async/Microsoft::WRL::AsyncBase::Start
 - async/Microsoft::WRL::AsyncBase::TryTransitionToCompleted
 - async/Microsoft::WRL::AsyncBase::TryTransitionToError
 helpviewer_keywords:
@@ -51,16 +50,15 @@ helpviewer_keywords:
 - Microsoft::WRL::AsyncBase::put_Id method
 - Microsoft::WRL::AsyncBase::PutOnComplete method
 - Microsoft::WRL::AsyncBase::PutOnProgress method
-- Microsoft::WRL::AsyncBase::Start method
 - Microsoft::WRL::AsyncBase::TryTransitionToCompleted method
 - Microsoft::WRL::AsyncBase::TryTransitionToError method
 ms.assetid: 64259b9b-f427-4ffd-a611-e7a2f82362b2
-ms.openlocfilehash: 71839fbea4300560dbf2b9617fe7b8d3864676b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19c4779dbd4d39260d5fe03967e8c0a530a75026
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599669"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556921"
 ---
 # <a name="asyncbase-class"></a>AsyncBase クラス
 
@@ -116,7 +114,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 [Asyncbase::put_id](#put-id)                 | 非同期操作のハンドルを設定します。
 [Asyncbase::putoncomplete](#putoncomplete)   | 完了イベントのハンドラーのアドレスを指定した値に設定します。
 [Asyncbase::putonprogress](#putonprogress)   | 進行状況イベント ハンドラーのアドレスを指定した値に設定します。
-[Asyncbase::start](#start)                   | 非同期操作を開始します。
+
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
@@ -130,6 +128,7 @@ class AsyncBase<TComplete, Details::Nil, resultType> :
 [Asyncbase::oncancel](#oncancel)                                             | 派生クラスでオーバーライドされると、非同期操作をキャンセルします。
 [Asyncbase::onclose](#onclose)                                               | 派生クラスでオーバーライドされると、非同期操作を終了します。
 [Asyncbase::onstart](#onstart)                                               | 派生クラスでオーバーライドされると、非同期操作を開始します。
+[Asyncbase::start](#start)                                                   | 非同期操作を開始します。
 [Asyncbase::trytransitiontocompleted](#trytransitiontocompleted)             | 現在の非同期操作が完了したかどうかを示します。
 [Asyncbase::trytransitiontoerror](#trytransitiontoerror)                     | 指定したエラー コードが内部エラー状態を変更できるかどうかを示します。
 
@@ -504,7 +503,7 @@ S_OK 場合は、操作の開始またはが既に開始します。それ以外
 
 ### <a name="remarks"></a>Remarks
 
-`Start()` 既定の実装は、 `IAsyncInfo::Start`、実際の作業を行いません。 実際には、非同期操作を開始するには、オーバーライド、`OnStart()`純粋仮想メソッド。
+`Start()` 外部から参照できないためは非同期操作に「ホット スタート」呼び出し元に返す前に保護されたメソッドです。
 
 ## <a name="trytransitiontocompleted"></a>Asyncbase::trytransitiontocompleted
 

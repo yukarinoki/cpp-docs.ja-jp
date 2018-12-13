@@ -1,10 +1,6 @@
 ---
-title: __getmainargs、__wgetmainargs | Microsoft Docs
-ms.custom: ''
+title: __getmainargs、__wgetmainargs
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apiname:
 - __wgetmainargs
 - __getmainargs
@@ -20,22 +16,16 @@ apitype: DLLExport
 f1_keywords:
 - __wgetmainargs
 - __getmainargs
-dev_langs:
-- C++
 helpviewer_keywords:
 - __wgetmainargs
 - __getmainargs
 ms.assetid: f72f54eb-9509-4bdf-8752-40fc49055439
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: c323780308d71158bf717898a05f3454fabf0c3d
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 6e2bf21f2ac50d3486af56f9581ff6c8d0e0c309
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46030244"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51523339"
 ---
 # <a name="getmainargs-wgetmainargs"></a>__getmainargs、__wgetmainargs
 
@@ -57,7 +47,6 @@ int __wgetmainargs (
    wchar_t ***_Env,
    int _DoWildCard,
    _startupinfo * _StartInfo)
-
 ```
 
 #### <a name="parameters"></a>パラメーター

@@ -1,48 +1,103 @@
 ---
-title: メンバー関数の追加 (Visual C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
+title: メンバー関数を追加する
+ms.date: 11/09/2018
 f1_keywords:
 - vc.codewiz.classes.member.function
-dev_langs:
-- C++
+- vc.codewiz.function.overview
 helpviewer_keywords:
 - member functions, adding to classes
 - classes [C++], adding members
+- add member function wizard [C++]
 ms.assetid: 55b25ddb-541d-44ed-957c-974ef91cfc85
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 41212e61144477eb05405e6df69b314f0f2cb37a
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 1cd7abbbc43ae56861b3b83451b41933b8b0b4f0
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46389409"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693413"
 ---
-# <a name="adding-a-member-function-visual-c"></a>メンバー関数の追加 (Visual C++)
+# <a name="add-a-member-function"></a>メンバー関数を追加する
 
 **クラス ビュー**では、メンバー関数をクラスに追加できます。 これを行うと、ヘッダー ファイルに宣言が追加され、スタブ メンバー関数本体がクラスの実装ファイルに追加されます。ファイルは編集できます。
 
-### <a name="to-add-a-member-function-to-a-class"></a>クラスにメンバー関数を追加するには
+**クラスにメンバー関数を追加するには:**
 
 1. **クラス ビュー**でプロジェクト ノードを展開して、プロジェクト内のクラスを表示します。 (**[クラス ビュー]** を開くには、メニュー バーで **[表示]**、**[クラス ビュー]** の順にクリックします。)
 
 1. メンバー関数を追加するクラスのショートカット メニューを開き、**[追加]**、**[関数の追加]** の順にクリックします。
 
-1. メンバー関数に関する適切な詳細情報を提供します。 詳細については、「[メンバー関数の追加ウィザード](../ide/add-member-function-wizard.md)」を参照してください。
+1. メンバー関数に関する適切な詳細情報を提供します。 詳細については、「[メンバー関数の追加ウィザード](#add-member-function-wizard)」を参照してください。
 
 1. **[完了]** をクリックしてメンバー関数コードを生成します。
 
-## <a name="see-also"></a>参照
+## <a name="in-this-section"></a>このセクションの内容
 
-[コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[クラスの追加](../ide/adding-a-class-visual-cpp.md)<br>
-[メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)<br>
-[仮想関数のオーバーライド](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
-[MFC メッセージ ハンドラー](../mfc/reference/adding-an-mfc-message-handler.md)<br>
-[クラス各部へのジャンプ](../ide/navigating-the-class-structure-visual-cpp.md)
+- [メンバー関数の追加ウィザード](#add-member-function-wizard)
+
+## <a name="add-member-function-wizard"></a>メンバー関数の追加ウィザード
+
+このウィザードでは、ヘッダー ファイルにメンバー関数宣言を追加できます。 また、選択されたクラスの実装ファイルにスタブ メンバー関数の実装も追加されます。
+
+このウィザードを使用してメンバー関数を追加すると、開発環境でそのコードを編集できます。
+
+- **戻り値の型**
+
+  追加するメンバー関数の戻り値の型を設定します。 独自の戻り値の型を設定することも、使用できる型の一覧から選択することもできます。 戻り値の型については、「[基本型](../cpp/fundamental-types-cpp.md)」を参照してください。
+
+  | | | |
+  |---|---|---|
+  | `char` | `int` | `unsigned int` |
+  | `double` | `long` | `unsigned long` |
+  | `float` | `short` | `void` |
+  | `HRESULT` | `unsigned char` | |
+
+- **関数名**
+
+  追加するメンバー関数の名前を設定します。
+
+- **パラメーターの型**
+
+  メンバー関数にパラメーターがある場合は、メンバー関数に追加するパラメーターの型を設定します。 独自のパラメーターの型を設定することも、使用できる型の一覧から選択することもできます。
+
+  | | | |
+  |---|---|---|
+  | `char` | `int` | `unsigned char` |
+  | `double` | `long` | `unsigned int` |
+  | `float` | `short` | `unsigned long` |
+
+- **パラメーター名**
+
+  メンバー関数にパラメーターがある場合は、メンバー関数に追加するパラメーターの名前を設定します。
+
+- **パラメーター リスト**
+
+  メンバー関数に追加したパラメーターのリストを表示します。 パラメーターをリストに追加するには、**[パラメーターの型]** ボックスにパラメーターの型を入力し、**[パラメーター名]** ボックスにパラメーター名を入力してから、**[追加]** を選択します。 一覧からパラメーターを削除するには、パラメーターを選択し、**[削除]** を選択します。
+
+- **アクセス**
+
+  メンバー関数へのアクセス権を設定します。 アクセス修飾子とは、メンバー関数に対して他のクラスが持つアクセス権を指定するキーワードです。 アクセス権の指定の詳細については、「[メンバー アクセス コントロール](../cpp/member-access-control-cpp.md)」を参照してください。 メンバー関数のアクセス レベルの既定の設定は、`public` です。
+
+  - [public](../cpp/public-cpp.md)
+  - [protected](../cpp/protected-cpp.md)
+  - [private](../cpp/private-cpp.md)
+
+  新しいメンバー関数が静的関数または仮想関数のいずれであるか、さらにインライン関数または純粋関数のいずれであるかを確認します。 メンバー関数を純粋関数に設定すると、**[Virtual]** チェック ボックスがオンになり、**[Inline]** チェック ボックスは使用できなくなります。 既定値は、非静的な非仮想メンバー関数です。
+
+  | オプション | 説明 |
+  |--------|-------------|
+  | [Static](../cpp/storage-classes-cpp.md) |  関数はグローバル関数と同様に動作し、クラスをインスタンス化せずにクラス外から呼び出すことができることを指定します。 メンバー関数は非静的メンバーにはアクセスできません。 `Static` として指定されたメンバー関数は、仮想メンバー関数にすることはできません。 |
+  | [Virtual](../cpp/virtual-cpp.md) | メンバー関数の呼び出しに使用する式に関係なく、オブジェクトに対して正しいメンバー関数が確実に呼び出されます。 `Virtual` として指定されたメンバー関数は、静的にすることはできません。 |
+  | **Pure** | 宣言されている仮想メンバー関数の実装が指定されていないことを示します。 **Pure** は、仮想メンバー関数でのみ指定できます。 純粋仮想メンバー関数を 1 つでも含むクラスは、抽象クラスと見なされます。 抽象クラスから派生したクラスは、純粋仮想メンバー関数を実装する必要があります。実装しないと、その派生クラスも抽象クラスになります。 |
+  | [Inline](../cpp/inline-functions-cpp.md) | メンバー関数本体のコピーをメンバー関数の各呼び出し位置に挿入するようにコンパイラに指示します。 **Inline** として指定されたメンバー関数を純粋メンバー関数にすることはできません。 |
+
+- **.cpp ファイル**
+
+  スタブ メンバー関数の実装が書き込まれるファイルの位置を設定します。 既定では、メンバー関数が追加されるクラスの .cpp ファイルに書き込まれます。 ファイル名を変更するには、[...] ボタンを選択します。 メンバー関数の実装は、選択したファイルの内容に追加されます。
+
+- **コメント**
+
+  メンバー関数のヘッダー ファイルにコメントを挿入します。
+
+- **関数シグネチャ**
+
+  **[完了]** を選択すると、コードのメンバー関数がそのまま表示されます。 このボックスのテキストは編集できません。 メンバー関数を変更するには、ウィザードで該当するボックスを変更します。

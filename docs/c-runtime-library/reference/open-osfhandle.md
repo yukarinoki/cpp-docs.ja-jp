@@ -24,12 +24,12 @@ helpviewer_keywords:
 - file handles [C++], associating
 - _open_osfhandle function
 ms.assetid: 30d94df4-7868-4667-a401-9eb67ecb7855
-ms.openlocfilehash: e8b7dc097c1af60894c627b8b660c4d9d81361db
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f45ca46cae459c8606f88a98d03b64c40e5d5f01
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519458"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327864"
 ---
 # <a name="openosfhandle"></a>_open_osfhandle
 
@@ -64,10 +64,10 @@ int _open_osfhandle (
 
 |||
 |-|-|
-**\_O\_追加**|書き込み操作の前に、毎回、ファイル ポインターをファイルの末尾に位置指定します。
-**\_O\_RDONLY**|読み取り専用でファイルを開きます。
-**\_O\_TEXT**|ファイルをテキスト (変換) モードで開きます。
-**\_O\_WTEXT**|Unicode (UTF-16 に変換) モードでファイルを開きます。
+| **\_O\_追加** | 書き込み操作の前に、毎回、ファイル ポインターをファイルの末尾に位置指定します。 |
+| **\_O\_RDONLY** | 読み取り専用でファイルを開きます。 |
+| **\_O\_TEXT** | ファイルをテキスト (変換) モードで開きます。 |
+| **\_O\_WTEXT** | Unicode (UTF-16 に変換) モードでファイルを開きます。 |
 
 **_Open_osfhandle**呼び出しは、ファイル記述子に、Win32 ファイル ハンドルの所有権を転送します。 開かれたファイルを閉じる **_open_osfhandle**、呼び出す[\_閉じます](close.md)します。 呼び出しによって基になる OS ファイル ハンドルが閉じられたも **_close**Win32 関数を呼び出す必要はありませんので、 **CloseHandle**元のハンドル。 ファイル記述子が所有している場合、**ファイル&#42;** 呼び出してストリーム[fclose](fclose-fcloseall.md)を**ファイル&#42;** ストリームは、ファイル記述子も閉じられます、基になるハンドル。 この場合、呼び出さない **_close**ファイル記述子。
 

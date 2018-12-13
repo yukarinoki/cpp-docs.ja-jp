@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: 5e847fd3a3c5a4217db694ec5586a24313c8102f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612209"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53179007"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx クラス
 
@@ -359,7 +359,7 @@ virtual void AdjustDockingLayout(HDWP hdwp=NULL);
 
 ### <a name="remarks"></a>Remarks
 
-Hdwp 構造体の初期化によって、 [BeginDeferWindowPos](https://msdn.microsoft.com/library/windows/desktop/ms632672)メソッド。
+Hdwp 構造体の初期化によって、 [BeginDeferWindowPos](/windows/desktop/api/winuser/nf-winuser-begindeferwindowpos)メソッド。
 
 ##  <a name="delayupdateframemenu"></a>  CFrameWndEx::DelayUpdateFrameMenu
 
@@ -1062,7 +1062,7 @@ afx_msg int OnCreate(LPCREATESTRUCT lpCreateStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpCreateStruct*<br/>
-[in]ポインター、 [CREATESTRUCT 構造体](../../mfc/reference/createstruct-structure.md)新しいフレームに対して。
+[in]ポインター、 [CREATESTRUCT 構造体](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)新しいフレームに対して。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1197,7 +1197,7 @@ afx_msg void OnGetMinMaxInfo(MINMAXINFO FAR* lpMMI);
 ### <a name="parameters"></a>パラメーター
 
 *lpMMI*<br/>
-[in]ポインターを[MINMAXINFO](https://msdn.microsoft.com/library/windows/desktop/ms632605)構造体。
+[in]ポインターを[MINMAXINFO](/windows/desktop/api/winuser/ns-winuser-tagminmaxinfo)構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1704,7 +1704,7 @@ afx_msg void OnSizing(
 [in]移動されるフレームの端。 パラメーターを*wParam*で[WM_SIZING 通知](/windows/desktop/winmsg/wm-sizing)します。
 
 *pRect*<br/>
-[入力、出力]ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT](../../mfc/reference/rect-structure1.md)フレームの座標を含む構造体。
+[入力、出力]ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT](/windows/desktop/api/windef/ns-windef-tagrect)フレームの座標を含む構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1874,7 +1874,7 @@ afx_msg void OnWindowPosChanged(WINDOWPOS FAR* lpwndpos);
 ### <a name="parameters"></a>パラメーター
 
 *lpwndpos*<br/>
-[in]ポインターを[WINDOWPOS](../../mfc/reference/windowpos-structure1.md)新しいサイズと位置を含む構造体。
+[in]ポインターを[WINDOWPOS](/windows/desktop/api/winuser/ns-winuser-tagwindowpos)新しいサイズと位置を含む構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1934,7 +1934,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>パラメーター
 
 *pMsg*<br/>
-[in]ポインターを[MSG](../../mfc/reference/msg-structure1.md)処理するメッセージを含む構造体。
+[in]ポインターを[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)処理するメッセージを含む構造体。
 
 ### <a name="return-value"></a>戻り値
 

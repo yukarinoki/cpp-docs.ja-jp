@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMetaFileDC [MFC], Create
 - CMetaFileDC [MFC], CreateEnhanced
 ms.assetid: ffce60fa-4181-4d46-9832-25e46fad4db4
-ms.openlocfilehash: 343ab1a5d0c38ab0d17c609fbfc134b144502553
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfbe03c5c81b2c7d6517dff7ce4e5f88b7c076bc
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471813"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178305"
 ---
 # <a name="cmetafiledc-class"></a>CMetaFileDC クラス
 
@@ -186,7 +186,7 @@ BOOL CreateEnhanced(
 Null で終わる文字列へのポインター。 作成する拡張メタファイルのファイル名を指定します。 メモリ ベースとその内容をオブジェクトが破棄されるとき、または紛失拡張メタファイルは、このパラメーターが NULL の場合、Win32`DeleteEnhMetaFile`関数が呼び出されます。
 
 *lpBounds*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure1.md)データ構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md) HIMETRIC 単位 (.01 ミリメートル単位)、図の拡張メタファイルに格納されるディメンションを指定するオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)データ構造体または[CRect](../../atl-mfc-shared/reference/crect-class.md) HIMETRIC 単位 (.01 ミリメートル単位)、図の拡張メタファイルに格納されるディメンションを指定するオブジェクト。
 
 *lpszDescription*<br/>
 画像のタイトルと同様に、画像を作成したアプリケーションの名前を指定する 0 で終わる文字列へのポインター。

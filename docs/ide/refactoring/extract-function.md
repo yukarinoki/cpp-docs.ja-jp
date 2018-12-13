@@ -1,23 +1,16 @@
 ---
-title: 関数を抽出する | Microsoft Docs
-ms.custom: ''
+title: 関数を抽出する
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: e31d1249-9705-4511-acbd-9f6fe73bdf2d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e032c2f1579294431b01d5a7695bf2c8a35aa421
-ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
+ms.openlocfilehash: ec3b9a0aeaef9e418b457bafdfb9bb1bbd2edffc
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50136121"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692321"
 ---
 # <a name="extract-function"></a>関数を抽出する
+
 **機能:** コードのフラグメントを独自の関数に変換できます。
 
 **条件:** 関数に、別の関数から呼び出される必要がある既存のコードのフラグメントがあるとき。

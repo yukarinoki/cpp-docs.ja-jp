@@ -26,23 +26,23 @@ helpviewer_keywords:
 - GetReferencedRowset method
 - GetSpecification method
 ms.assetid: 9c654155-7727-464e-bd31-143e68391a47
-ms.openlocfilehash: 39c4f441e7b18fd93510620f1052677cdd0e881e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61544658f2aef4b59b2b70baa310dcc09e2740fe
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50580285"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556206"
 ---
 # <a name="irowsetinfoimpl-class"></a>IRowsetInfoImpl クラス
 
-実装を提供、 [IRowsetInfo](/previous-versions/windows/desktop/ms724541)インターフェイス。
+実装を提供、 [IRowsetInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
 ```cpp
 template <class T, class PropClass = T>
 class ATL_NO_VTABLE IRowsetInfoImpl :
-   public IRowsetInfo,  
+   public IRowsetInfo, 
    public CUtlProps<PropClass>
 ```
 
@@ -87,7 +87,7 @@ STDMETHOD (GetProperties )(const ULONG cPropertyIDSets,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetinfo::getproperties](/previous-versions/windows/desktop/ms719611)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowsetinfo::getproperties](https://docs.microsoft.com/previous-versions/windows/desktop/ms719611(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="getreferencedrowset"></a> Irowsetinfoimpl::getreferencedrowset
 
@@ -103,7 +103,7 @@ STDMETHOD (GetReferencedRowset )(DBORDINAL iOrdinal,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IRowsetInfo::GetReferencedRowset](/previous-versions/windows/desktop/ms721145)で、 *OLE DB プログラマーズ リファレンス*します。 *IOrdinal*パラメーターはブックマーク列である必要があります。
+参照してください[IRowsetInfo::GetReferencedRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms721145(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。 *IOrdinal*パラメーターはブックマーク列である必要があります。
 
 ## <a name="getspecification"></a> Irowsetinfoimpl::getspecification
 
@@ -118,7 +118,7 @@ STDMETHOD (GetSpecification )(REFIID riid,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IRowsetInfo::GetSpecification](/previous-versions/windows/desktop/ms716746)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IRowsetInfo::GetSpecification](https://docs.microsoft.com/previous-versions/windows/desktop/ms716746(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="remarks"></a>Remarks
 

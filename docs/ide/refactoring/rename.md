@@ -1,23 +1,16 @@
 ---
-title: 名前の変更 | Microsoft Docs
-ms.custom: ''
+title: 名前の変更
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: 64b42a88-3bd9-4399-8b96-75bceffc353b
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 7a00eed341e0fc1ca8573e2f66744ea04055f259
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: a747784f46341f130d1271fd0f15475b63d7b6d8
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46399210"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692543"
 ---
 # <a name="rename"></a>名前の変更
+
 **概要:** フィールド、ローカル変数、メソッド、名前空間、プロパティ、型などのコード シンボルの識別子の名前を変更します。
 
 **タイミング:** すべてのインスタンスを検索して新しい名前をコピー/貼り付けすることなく、安全に名前を変更したいとき。

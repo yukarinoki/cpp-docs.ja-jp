@@ -31,12 +31,12 @@ helpviewer_keywords:
 - wspawnle function
 - _spawnle function
 ms.assetid: 80308892-2815-49b1-8cca-53894c366f5a
-ms.openlocfilehash: 7da0cf4f7232ad7b8b1c5edb1240ee67fdf393e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1caa949fab71a7ebc7731c91871e460869ca9f5b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632285"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329256"
 ---
 # <a name="spawnle-wspawnle"></a>_spawnle、_wspawnle
 
@@ -88,11 +88,11 @@ intptr_t _wspawnle(
 
 |||
 |-|-|
-**E2BIG**|引数リストが 1024 バイトを超えています。
-**EINVAL**|*モード*引数が無効です。
-**ENOENT**|ファイルまたはパスが見つかりません。
-**ENOEXEC**|指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。
-**ENOMEM**|新しいプロセスを実行するのに十分なメモリがありません。
+| **E2BIG** | 引数リストが 1024 バイトを超えています。 |
+| **EINVAL** | *モード*引数が無効です。 |
+| **ENOENT** | ファイルまたはパスが見つかりません。 |
+| **ENOEXEC** | 指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。 |
+| **ENOMEM** | 新しいプロセスを実行するのに十分なメモリがありません。 |
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 

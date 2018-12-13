@@ -6,12 +6,12 @@ helpviewer_keywords:
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: 0d3d883fa2199096d4dc880e2d8e78cff6d9830c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542559"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51333294"
 ---
 # <a name="parallel-containers-and-objects"></a>並列コンテナーと並列オブジェクト
 
@@ -95,15 +95,19 @@ A*同時実行オブジェクト*コンポーネント間で同時に共有さ�
 
 ||||
 |-|-|-|
-
-|[](reference/concurrent-vector-class.md#at)|[エンド](reference/concurrent-vector-class.md#end)|[演算子&#91;&#93;](reference/concurrent-vector-class.md#operator_at)| |[開始](reference/concurrent-vector-class.md#begin)|[前面](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)| |[戻る](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)| |[容量](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)| |[空](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[サイズ](reference/concurrent-vector-class.md#size)|
+|[at](reference/concurrent-vector-class.md#at)|[end](reference/concurrent-vector-class.md#end)|[operator&#91;&#93;](reference/concurrent-vector-class.md#operator_at)|
+|[begin](reference/concurrent-vector-class.md#begin)|[front](reference/concurrent-vector-class.md#front)|[push_back](reference/concurrent-vector-class.md#push_back)|
+|[back](reference/concurrent-vector-class.md#back)|[grow_by](reference/concurrent-vector-class.md#grow_by)|[rbegin](reference/concurrent-vector-class.md#rbegin)|
+|[capacity](reference/concurrent-vector-class.md#capacity)|[grow_to_at_least](reference/concurrent-vector-class.md#grow_to_at_least)|[rend](reference/concurrent-vector-class.md#rend)|
+|[empty](reference/concurrent-vector-class.md#empty)|[max_size](reference/concurrent-vector-class.md#max_size)|[size](reference/concurrent-vector-class.md#size)|
 
 たとえば、C++ 標準ライブラリでは、互換性のため、ランタイムを提供する operations `reserve`、同時実行セーフではありません。 次の表は、共通のメソッドと同時実行セーフではない演算子を示します。
 
 |||
 |-|-|
-
-|[割り当てる](reference/concurrent-vector-class.md#assign)|[予約](reference/concurrent-vector-class.md#reserve)| |[オフ](reference/concurrent-vector-class.md#clear)|[サイズを変更する](reference/concurrent-vector-class.md#resize)| |[演算子 =](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
+|[assign](reference/concurrent-vector-class.md#assign)|[reserve](reference/concurrent-vector-class.md#reserve)|
+|[clear](reference/concurrent-vector-class.md#clear)|[resize](reference/concurrent-vector-class.md#resize)|
+|[operator=](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
 
 既存の要素の値を変更する操作は、同時実行セーフではありません。 同期オブジェクトを使用して、 [reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)同時読み取りを同期操作と書き込みが同じデータ要素を操作するオブジェクト。 同期オブジェクトの詳細については、次を参照してください。[同期データ構造](../../parallel/concrt/synchronization-data-structures.md)します。
 

@@ -1,14 +1,8 @@
 ---
-title: プロセス制御と環境制御 | Microsoft Docs
-ms.custom: ''
+title: プロセス制御と環境制御
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.programs
-dev_langs:
-- C++
 helpviewer_keywords:
 - processes, stopping
 - processes, administrative tasks
@@ -17,16 +11,12 @@ helpviewer_keywords:
 - environment control routines
 - process control routines
 ms.assetid: 7fde74c3-c2a6-4d15-84b8-092160d60c3e
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0c314decf15886f8d99ed8be3b7bafe4fff3e36b
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: df080d1ed8c5a00711468a159acb07159ad31930
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46085759"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329411"
 ---
 # <a name="process-and-environment-control"></a>プロセス制御と環境制御
 
@@ -56,7 +46,7 @@ ms.locfileid: "46085759"
 |[exit](../c-runtime-library/reference/exit-exit-exit.md)|**atexit** および **_onexit** によって登録された関数の呼び出し、すべてのバッファーのフラッシュ、開いているすべてのファイルを閉じ、プロセスの終了を行う|
 |[_exit](../c-runtime-library/reference/exit-exit-exit.md)|**atexit** または **_onexit** の呼び出し、またはバッファーのフラッシュを行わずに直ちにプロセスを終了する|
 |[getenv、_wgetenv](../c-runtime-library/reference/getenv-wgetenv.md)、[getenv_s、_wgetenv_s](../c-runtime-library/reference/getenv-s-wgetenv-s.md)|環境変数の値を取得する|
-|[_getpid](../c-runtime-library/reference/getpid.md)|プロセス ID 番号を取得する|[System::Diagnostics::Process::Id](https://msdn.microsoft.com/library/system.diagnostics.process.id.aspx)|
+|[_getpid](../c-runtime-library/reference/getpid.md)|プロセス ID 番号を取得する|
 |[longjmp](../c-runtime-library/reference/longjmp.md)|保存したスタック環境を復元し、これを非ローカルの **goto** の実行に使用する|
 |[_onexit](../c-runtime-library/reference/onexit-onexit-m.md)|プログラムの終了時に実行されるルーチンをスケジュールする (Microsoft C/C++ version 7.0 以前のバージョンとの互換性のために使用)|
 |[_pclose](../c-runtime-library/reference/pclose.md)|新しいコマンド プロセッサを待機し、関連するパイプのストリームを閉じる|

@@ -1,28 +1,18 @@
 ---
-title: Visual C++ の新しい項目の追加テンプレートの使用方法 | Microsoft Docs
-ms.custom: ''
+title: Visual C++ の新しい項目の追加テンプレートの使用方法
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - Add New Item
 - Add New Item templates
 - Add New Item command
 - templates, Add New Item
 ms.assetid: 286d1be6-0473-407f-9a51-437dff1bfab7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ef47b8371b17aa8620ccb7547ed875a8450317c1
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 0e63a1e9b2ab5c479d5a85cd24e92ad41fb286ea
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46391684"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50549319"
 ---
 # <a name="using-visual-c-add-new-item-templates"></a>Visual C++ の新しい項目の追加テンプレートの使用方法
 

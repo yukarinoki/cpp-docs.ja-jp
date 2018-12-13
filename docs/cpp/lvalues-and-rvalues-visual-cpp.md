@@ -5,12 +5,12 @@ helpviewer_keywords:
 - R-values [C++]
 - L-values [C++]
 ms.assetid: a8843344-cccc-40be-b701-b71f7b5cdcaf
-ms.openlocfilehash: 261453d5640c122f23491304b71e53e27c06eb7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74bfac5f5bb56549eee41a5479babf8e71b00aa6
+ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546355"
+ms.lasthandoff: 11/28/2018
+ms.locfileid: "52453886"
 ---
 # <a name="lvalues-and-rvalues-visual-c"></a>左辺値と右辺値 (Visual C)
 
@@ -20,7 +20,7 @@ ms.locfileid: "50546355"
 
 - A *glvalue*式を指定するオブジェクト、ビット フィールド、または関数の id を決定します。
 - A *prvalue*をオブジェクトまたはビット フィールドを初期化しますまたは、演算子のオペランドの値を計算コンテキストで指定された、その次のように表示されます。 式を指定します。
-- *Xvalue*オブジェクトまたはビット フィールド (通常はその有効期間の末尾付近である) ために再利用できるリソースを示す glvalue です。 [例: 右辺値参照 (8.3.2) を含む式は、特定の種類は、戻り値の型が右辺値参照関数の呼び出しまたは参照型 rvalue へのキャストなど、xvalues を生成します。 ]
+- *Xvalue*オブジェクトまたはビット フィールド (通常はその有効期間の末尾付近である) ために再利用できるリソースを示す glvalue です。 例: 右辺値参照 (8.3.2) を含む式は、特定の種類は、戻り値の型が右辺値参照関数の呼び出しまたは参照型 rvalue へのキャストなど、xvalues を生成します。
 - *左辺値*xvalue にない glvalue が。
 - *Rvalue* prvalue または xvalue にします。
 
@@ -54,12 +54,12 @@ int main()
     // Correct usage: the dereferenced pointer is an lvalue.
     *p = i;
 
-    const int ci = 7;
-    // Incorrect usage: the variable is a non-modifiable lvalue (C3892).
-    ci = 9; // C3892
-
     // Correct usage: the conditional operator returns an lvalue.
     ((i < 3) ? i : j) = 7;
+    
+    // Incorrect usage: the constant ci is a non-modifiable lvalue (C3892).
+    const int ci = 7;
+    ci = 9; // C3892
 }
 ```
 

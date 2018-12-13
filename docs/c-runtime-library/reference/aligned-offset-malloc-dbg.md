@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _aligned_offset_malloc_dbg function
 - aligned_offset_malloc_dbg function
 ms.assetid: 6c242307-c59e-4d63-aae5-d8cbec8e021c
-ms.openlocfilehash: 481109a5ed7d137aa2d10c77955a2f460cba43c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96fe9e7fda0d0cdfdbfa5462e4f601e3649e2233
+ms.sourcegitcommit: beeb77b2976e997debc55b1af35024cc62e62799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507537"
+ms.lasthandoff: 12/06/2018
+ms.locfileid: "52977720"
 ---
 # <a name="alignedoffsetmallocdbg"></a>_aligned_offset_malloc_dbg
 
@@ -68,7 +68,7 @@ void * _aligned_offset_malloc_dbg(
 
 ## <a name="remarks"></a>Remarks
 
-**_aligned_offset_malloc_dbg**のデバッグ バージョンです、 [_aligned_offset_malloc](aligned-offset-malloc.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_offset_malloc_dbg**への呼び出しに減少 **_aligned_offset_malloc**します。 両方 **_aligned_offset_malloc**と **_aligned_offset_malloc_dbg**ベースのヒープのメモリのブロックを割り当てますが、 **_aligned_offset_malloc_dbg**いくつか提供していますデバッグ機能: リーク、特定の割り当ての種類を追跡するためのブロック型パラメーターをテストする、ブロックのユーザー部分の両側のバッファーと*filename*/*linenumber*割り当て要求の起点を特定する情報。
+**_aligned_offset_malloc_dbg**のデバッグ バージョンです、 [_aligned_offset_malloc](aligned-offset-malloc.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_aligned_offset_malloc_dbg**への呼び出しに減少 **_aligned_offset_malloc**します。 両方 **_aligned_offset_malloc**と **_aligned_offset_malloc_dbg**ベースのヒープのメモリのブロックを割り当てますが、 **_aligned_offset_malloc_dbg**いくつか提供していますデバッグ機能: リークをテストする、ブロックのユーザー部分の両側のバッファーと*filename*/*linenumber*の起点を特定する情報割り当て要求。 ブロックの型パラメーターを持つ特定の割り当ての種類の追跡は、アラインされた割り当てのサポートされているデバッグ機能ではありません。 アラインされた割り当ては、_NORMAL_BLOCK ブロックの型として表示されます。
 
 **_aligned_offset_malloc_dbg**メモリ ブロックを要求したよりも少し多い領域を割り当てます*サイズ*します。 追加の領域は、デバッグ メモリ ブロックをリンクし、アプリケーションにデバッグ ヘッダー情報と上書きバッファーを提供するために、デバッグ ヒープ マネージャーによって使用されます。 ブロックが割り当てられると、ブロックのユーザー部分には値 0xCD が設定され、各上書きバッファーには 0xFD が設定されます。
 

@@ -1,31 +1,21 @@
 ---
-title: ストリームの状態 | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
-dev_langs:
-- C++
+title: ストリームの状態
+ms.date: 11/19/2018
 helpviewer_keywords:
 - streams, states
 ms.assetid: 5f28c968-f132-403f-968c-8417ff315e52
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2bdf4b351b05204fab11be2f5a0a1a8b7f71f462
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 43d28fa504c64fcb25d5c7cd3ee2c6ed906acd7e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46056353"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175562"
 ---
 # <a name="stream-states"></a>ストリームの状態
 
 ストリームの有効な状態および状態遷移を、次の図に示します。
 
-![ストリーム](../c-runtime-library/media/stream.gif "stream")
+![ストリームの状態ダイアグラム](../c-runtime-library/media/stream.gif "ストリームの状態ダイアグラム")
 
 円の矢印はそれぞれ安定状態を示しています。 線の矢印はそれぞれストリームを操作する関数呼び出しの結果発生する、遷移を示しています。 5 つの関数グループで、状態遷移が発生する可能性があります。
 

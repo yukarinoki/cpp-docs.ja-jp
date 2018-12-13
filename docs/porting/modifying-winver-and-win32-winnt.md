@@ -1,26 +1,16 @@
 ---
-title: WINVER および _WIN32_WINNT の変更 | Microsoft Docs
-ms.custom: ''
+title: WINVER および _WIN32_WINNT の変更
 ms.date: 09/04/2017
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - WINVER in an upgraded Visual C++ project
 - _WIN32_WINNT in an upgraded Visual C++ project
 ms.assetid: 6a1f1d66-ae0e-48a7-81c3-524d8e8f3447
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: df0b01cebb9e88602a201e50cbfdc45daf44d615
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 3381b6657f78144e7804112135c437824d8555fe
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50070921"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332246"
 ---
 # <a name="modifying-winver-and-win32winnt"></a>WINVER および _WIN32_WINNT の変更
 
@@ -67,4 +57,4 @@ Visual C++ では、Windows 95、Windows 98、Windows ME、Windows NT、およ�
 
 ## <a name="see-also"></a>参照
 
-[Visual C++ の変更履歴](..\porting\visual-cpp-change-history-2003-2015.md)
+[Visual C++ の変更履歴](../porting/visual-cpp-change-history-2003-2015.md)

@@ -1,23 +1,13 @@
 ---
-title: 浮動小数点の移行に関する問題 | Microsoft Docs
-ms.custom: ''
+title: 浮動小数点の移行に関する問題
 ms.date: 05/17/2017
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 36a1b552-2f2b-4919-bc9d-c17f42434954
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 6d8edf03c07432fc113a27b5c0cd8bbecbd05d64
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: a259cf276c0347fda4954b46318cc79be88028ee
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50068373"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332349"
 ---
 # <a name="floating-point-migration-issues"></a>浮動小数点の移行に関する問題
 

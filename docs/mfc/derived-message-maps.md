@@ -1,18 +1,18 @@
 ---
 title: メッセージ マップの派生
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - message handling [MFC], derived message handlers
 - messages, routing
 - message maps [MFC], derived
 - derived message maps
 ms.assetid: 21829556-6e64-40c3-8279-fed85d99de77
-ms.openlocfilehash: 1413290bc04af37a6d3204150dff5244e1dcb5c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2ae536a53a43472a4fb81d30e685fbc3faaa603f
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662528"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175602"
 ---
 # <a name="derived-message-maps"></a>メッセージ マップの派生
 
@@ -20,7 +20,8 @@ ms.locfileid: "50662528"
 
 注意`CView`の基本クラス`CMyView`からさらに派生`CWnd`します。 したがって`CMyView`*は*、`CView`と*は*、`CWnd`します。 これらの各クラスは、独自のメッセージ マップがあります。 「A ビュー階層」以下では、クラスの階層関係を示しています。 図は、注意を`CMyView`オブジェクトが 3 つすべてのクラスの特性を持つ 1 つのオブジェクト。
 
-![ビューの階層](../mfc/media/vc38621.gif "vc38621") A ビュー階層
+![ビューの階層](../mfc/media/vc38621.gif "ビュー階層") <br/>
+階層の表示
 
 クラスで、メッセージを照合できない場合は、その`CMyView`のフレームワークのメッセージ マップも直接の基本クラスのメッセージ マップを検索します。 `BEGIN_MESSAGE_MAP`マクロをメッセージ マップの開始時は、その引数として 2 つのクラス名を指定します。
 

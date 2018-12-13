@@ -26,12 +26,12 @@ helpviewer_keywords:
 - per-thread locale
 - thread locale
 ms.assetid: 10e4050e-b587-4f30-80bc-6c76b35fc770
-ms.openlocfilehash: 244ef9ce93e39bef23a9d5d6792a10ca25355f5a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 99e10a0330ba4880ea181e9fe3d56f3fb6bd6493
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648384"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326044"
 ---
 # <a name="configthreadlocale"></a>_configthreadlocale
 
@@ -56,11 +56,11 @@ int _configthreadlocale( int per_thread_locale_type );
 
 **_Configurethreadlocale**スレッド固有のロケールの使用を制御する関数を使用します。 次のいずれかを使用して、 *per_thread_locale_type*オプションを指定またはスレッドごとのロケールの状態を確認します。
 
-|||
+| オプション | 説明 |
 |-|-|
-**_ENABLE_PER_THREAD_LOCALE**|現在のスレッドでスレッド固有のロケールを使用させます。 後続の呼び出し**setlocale**このスレッドでスレッドのロケールだけに影響します。
-**_DISABLE_PER_THREAD_LOCALE**|現在のスレッドでグローバルなロケールを使用させます。 後続の呼び出し**setlocale**このスレッドでグローバル ロケールを使用して他のスレッドに影響します。
-**0**|この特定のスレッドの現在の設定を取得します。
+| **_ENABLE_PER_THREAD_LOCALE** | 現在のスレッドでスレッド固有のロケールを使用させます。 後続の呼び出し**setlocale**このスレッドでスレッドのロケールだけに影響します。 |
+| **_DISABLE_PER_THREAD_LOCALE** | 現在のスレッドでグローバルなロケールを使用させます。 後続の呼び出し**setlocale**このスレッドでグローバル ロケールを使用して他のスレッドに影響します。 |
+| **0** | この特定のスレッドの現在の設定を取得します。 |
 
 これらの関数の動作に影響を与える**setlocale**、 **_tsetlocale**、 **_wsetlocale**、および **_setmbcp**します。 スレッドごとのロケールが無効になっている、その後の呼び出しの場合**setlocale**または **_wsetlocale**グローバル ロケールを使用するすべてのスレッドのロケールを変更します。 スレッドごとのロケールを有効にすると、 **setlocale**または **_wsetlocale**現在のスレッドのロケールにのみ影響します。
 

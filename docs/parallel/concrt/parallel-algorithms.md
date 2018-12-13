@@ -1,15 +1,15 @@
 ---
 title: 並列アルゴリズム
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: 0ad7f67016dcb7d4638de0f159feb23cd1282b19
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445592"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176446"
 ---
 # <a name="parallel-algorithms"></a>並列アルゴリズム
 
@@ -247,7 +247,7 @@ PPL では、3 つの並べ替えアルゴリズム: [:parallel_sort](reference/
 
 次の図より多くのグラフィックス、3 つの並列並べ替えアルゴリズムの重要なプロパティを示します。
 
-![並べ替えアルゴリズムの比較](../../parallel/concrt/media/concrt_parallel_sorting.png "concrt_parallel_sorting")
+![並べ替えアルゴリズムの比較](../../parallel/concrt/media/concrt_parallel_sorting.png "並べ替えアルゴリズムの比較")
 
 これらのアルゴリズムを並列並べ替え取り消しおよび例外処理の規則に従います。 キャンセルと同時実行ランタイムの例外処理の詳細については、次を参照してください。[並列アルゴリズムの取り消し](../../parallel/concrt/cancellation-in-the-ppl.md#algorithms)と[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
 

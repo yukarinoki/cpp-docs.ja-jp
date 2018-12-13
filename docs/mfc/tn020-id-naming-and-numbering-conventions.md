@@ -8,12 +8,12 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: c5ae31303d87840017320f580632e567be79e6a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464503"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518672"
 ---
 # <a name="tn020-id-naming-and-numbering-conventions"></a>テクニカル ノート 20: ID 名および番号に関する規約
 
@@ -89,13 +89,13 @@ MFC コマンド アーキテクチャを次のコマンドを ON_COMMAND コマ
 
 - MFC の内部フレームワークでは、これらの範囲が予約されています:
 
-   - 0x7000 ～ 0x7FFF (afxres.h を参照) 
+  - 0x7000 ～ 0x7FFF (afxres.h を参照) 
 
-   - 0xE000 ～ 0xEFFF (afxres.h を参照) 
+  - 0xE000 ～ 0xEFFF (afxres.h を参照) 
 
-   - 16000 ～ 18000 (afxribbonres.h を参照) 
+  - 16000 ～ 18000 (afxribbonres.h を参照) 
 
-   これらの範囲は、将来の MFC 実装で変更される可能性があります。
+  これらの範囲は、将来の MFC 実装で変更される可能性があります。
 
 - Windows システム コマンドの一部が 0xF000 ～ 0xFFFF を使用します。
 

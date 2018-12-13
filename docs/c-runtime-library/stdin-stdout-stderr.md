@@ -1,16 +1,10 @@
 ---
-title: stdin、stdout、stderr |Microsoft Docs
-ms.custom: ''
+title: stdin、stdout、stderr
 ms.date: 10/23/2018
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - stdin
 - stderr
 - stdout
-dev_langs:
-- C++
 helpviewer_keywords:
 - stdout function
 - standard output stream
@@ -19,25 +13,21 @@ helpviewer_keywords:
 - standard input stream
 - stderr function
 ms.assetid: badd4735-596d-4498-857c-ec8b7e670e4c
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 707811a9c05135cb46520dd72895d677cdc0a6e4
-ms.sourcegitcommit: 0164af5615389ffb1452ccc432eb55f6dc931047
+ms.openlocfilehash: f9ed1f842bd174c2b926572856152cd69ade5a56
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49808707"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328020"
 ---
 # <a name="stdin-stdout-stderr"></a>stdin、stdout、stderr
 
 ## <a name="syntax"></a>構文
 
 ```
-FILE *stdin; 
-FILE *stdout; 
-FILE *stderr; 
+FILE *stdin;
+FILE *stdout;
+FILE *stderr;
 #include <stdio.h>
 ```
 

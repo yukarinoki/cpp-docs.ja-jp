@@ -1,21 +1,21 @@
 ---
 title: 'チュートリアル: タスクおよび XML HTTP 要求を使用した接続'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - connecting to web services, UWP apps [C++]
 - IXMLHTTPRequest2 and tasks, example
 - IXHR2 and tasks, example
 ms.assetid: e8e12d46-604c-42a7-abfd-b1d1bb2ed6b3
-ms.openlocfilehash: 69e365c0f0bbee7014b6d754c920bd6241064fdf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dfe4f111e130520f1c4948dc00fdf340e4d3113e
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495559"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175848"
 ---
 # <a name="walkthrough-connecting-using-tasks-and-xml-http-requests"></a>チュートリアル: タスクおよび XML HTTP 要求を使用した接続
 
-この例は、使用する方法を示します、 [IXMLHTTPRequest2](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)と[IXMLHTTPRequest2Callback](/previous-versions/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) web サービスで、ユニバーサル Windows プラットフォーム (UWP に HTTP GET および POST 要求を送信するタスクとのインターフェイス) アプリです。 タスクと `IXMLHTTPRequest2` を組み合わせることによって、他のタスクと共に構成するコードを記述できます。 たとえば、タスクのチェーンの一部としてダウンロード タスクを使用できます。 ダウンロード タスクは、処理が取り消された場合にも応答できます。
+この例は、使用する方法を示します、 [IXMLHTTPRequest2](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)と[IXMLHTTPRequest2Callback](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2callback) web サービスで、ユニバーサル Windows プラットフォーム (UWP に HTTP GET および POST 要求を送信するタスクとのインターフェイス) アプリです。 タスクと `IXMLHTTPRequest2` を組み合わせることによって、他のタスクと共に構成するコードを記述できます。 たとえば、タスクのチェーンの一部としてダウンロード タスクを使用できます。 ダウンロード タスクは、処理が取り消された場合にも応答できます。
 
 > [!TIP]
 >  C++ アプリを使用して UWP アプリまたはデスクトップ C++ アプリから HTTP 要求を実行するのに C++ REST SDK を使用することもできます。 詳細については、次を参照してください。 [C++ REST SDK (コード名"Casablanca")](https://github.com/Microsoft/cpprestsdk)します。
@@ -69,39 +69,38 @@ ms.locfileid: "50495559"
 
    [!code-xml[concrt-using-ixhr2#A1](../../parallel/concrt/codesnippet/xaml/walkthrough-connecting-using-tasks-and-xml-http-requests_4.xaml)]
 
-1. MainPage.xaml.h で、この `#include` ディレクティブを追加します。
+2. MainPage.xaml.h で、この `#include` ディレクティブを追加します。
 
    [!code-cpp[concrt-using-ixhr2#A2](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_5.h)]
 
-1. MainPage.xaml.h で、これらの `private` メンバー変数を `MainPage` クラスに追加します。
+3. MainPage.xaml.h で、これらの `private` メンバー変数を `MainPage` クラスに追加します。
 
    [!code-cpp[concrt-using-ixhr2#A3](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_6.h)]
 
-1. MainPage.xaml.h で `private` メソッド `ProcessHttpRequest` を宣言します。
+4. MainPage.xaml.h で `private` メソッド `ProcessHttpRequest` を宣言します。
 
    [!code-cpp[concrt-using-ixhr2#A4](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_7.h)]
 
-1. MainPage.xaml.cpp で、これらの `using` ステートメントを追加します。
+5. MainPage.xaml.cpp で、これらの `using` ステートメントを追加します。
 
    [!code-cpp[concrt-using-ixhr2#A5](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_8.cpp)]
 
-1. MainPage.xaml.cpp で、`GetButton_Click` クラスの `PostButton_Click`、 `CancelButton_Click`、 `MainPage` メソッドを実装します。
+6. MainPage.xaml.cpp で、`GetButton_Click` クラスの `PostButton_Click`、 `CancelButton_Click`、 `MainPage` メソッドを実装します。
 
    [!code-cpp[concrt-using-ixhr2#A6](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_9.cpp)]
 
-    > [!TIP]
-
-    >  アプリは取り消しのサポートが必要としない場合は、渡す[concurrency::cancellation_token:: none](reference/cancellation-token-class.md#none)を`HttpRequest::GetAsync`と`HttpRequest::PostAsync`メソッド。
+   > [!TIP]
+   > アプリは取り消しのサポートが必要としない場合は、渡す[concurrency::cancellation_token:: none](reference/cancellation-token-class.md#none)を`HttpRequest::GetAsync`と`HttpRequest::PostAsync`メソッド。
 
 1. MainPage.xaml.cpp で `MainPage::ProcessHttpRequest` メソッドを実装します。
 
    [!code-cpp[concrt-using-ixhr2#A7](../../parallel/concrt/codesnippet/cpp/walkthrough-connecting-using-tasks-and-xml-http-requests_10.cpp)]
 
-1. プロジェクトのプロパティで **リンカー**、**入力**、指定`shcore.lib`と`msxml6.lib`します。
+8. プロジェクトのプロパティで **リンカー**、**入力**、指定`shcore.lib`と`msxml6.lib`します。
 
 実行中のアプリケーションを次に示します。
 
-![実行中の Windows ランタイム アプリ](../../parallel/concrt/media/concrt_usingixhr2.png "concrt_usingixhr2")
+![実行中の Windows ランタイム アプリ](../../parallel/concrt/media/concrt_usingixhr2.png "実行中の Windows ランタイム アプリ")
 
 ## <a name="next-steps"></a>次の手順
 

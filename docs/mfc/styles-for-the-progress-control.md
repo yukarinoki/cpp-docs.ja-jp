@@ -1,18 +1,18 @@
 ---
 title: プログレス コントロールのスタイル
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - PBS_SMOOTH style
 - progress controls [MFC], styles
 - PBS_VERTICAL style
 - CProgressCtrl class [MFC], styles
 ms.assetid: 39eb8081-bc20-4552-91b9-e7cdd1b7d8ae
-ms.openlocfilehash: 494f5df03d15e1662f20aff644fb414a7254ad5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d33e9306c1d70bb58ad628297360bc6e34e6ce2
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451728"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174955"
 ---
 # <a name="styles-for-the-progress-control"></a>プログレス コントロールのスタイル
 
@@ -34,11 +34,11 @@ PBS_VERTICAL を使用して、コントロールを水平方向にではなく�
 
 PBS_SMOOTH 形式: なし
 
-![標準の進行状況バー スタイル](../mfc/media/vc4ruw1.gif "vc4ruw1")
+![標準の進行状況バー スタイル](../mfc/media/vc4ruw1.gif "標準の進行状況バー スタイル")
 
 PBS_SMOOTH と PBS_VERTICAL スタイル。
 
-![進行状況バーがスタイル、スムーズおよび垂直方向](../mfc/media/vc4ruw2.gif "vc4ruw2")
+![進行状況バーがスタイル、スムーズおよび垂直方向](../mfc/media/vc4ruw2.gif "バーのスタイル、スムーズおよび垂直方向の進行状況")
 
 詳細については、次を参照してください。[ウィンドウ スタイル](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc)で、 *MFC リファレンス*します。
 

@@ -1,16 +1,16 @@
 ---
 title: キーボードとマウスのカスタマイズ
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - customizations [MFC], keyboard and mouse (MFC Extensions)
 - keyboard and mouse customizations (MFC Extensions)
 ms.assetid: 1f789f1b-5f2e-4b11-b974-e3e2a2e49d82
-ms.openlocfilehash: 8bb685974ed4020611ffe275ba504951d132afac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ccbe83185c48439273024a97c881f1c32a2ddc7
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50487388"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175681"
 ---
 # <a name="keyboard-and-mouse-customization"></a>キーボードとマウスのカスタマイズ
 
@@ -22,7 +22,8 @@ MFC は、キーボードとマウス入力の処理方法をカスタマイズ�
 
 次の図は、**キーボード**のタブ、**カスタマイズ** ダイアログ ボックス。
 
-![[カスタマイズ] ダイアログ ボックスの [キーボード] タブ](../mfc/media/mfcnextkeyboardtab.png "mfcnextkeyboardtab")キーボードのカスタマイズ タブ
+![[カスタマイズ] ダイアログ ボックスの [キーボード] タブ](../mfc/media/mfcnextkeyboardtab.png "カスタマイズ] ダイアログ ボックスでは、[キーボード] タブ") <br/>
+キーボードのカスタマイズタブ
 
 ユーザーがコマンドに 1 つまたは複数のキーボード ショートカットを割り当てるには、[キーボード] タブを操作します。 タブの左側にある使用可能なコマンドが表示されます。ユーザーは、メニューから使用可能なコマンドを選択できます。 メニュー コマンドのみをキーボード ショートカットと関連付けることができます。 ユーザーが、新しいショートカットを入力した後、**割り当てる**ボタンが有効になります。 ユーザーは、このボタンをクリックすると、アプリケーションは、そのショートカットを選択したコマンドを関連付けます。
 
@@ -36,7 +37,8 @@ MFC は、キーボードとマウス入力の処理方法をカスタマイズ�
 
 次の図は、**マウス**のタブ、**カスタマイズ** ダイアログ ボックス。
 
-![[カスタマイズ] ダイアログ ボックスの [マウス] タブ](../mfc/media/mfcnextmousetab.png "mfcnextmousetab")マウスのカスタマイズ タブ
+![[カスタマイズ] ダイアログ ボックスの [マウス] タブ](../mfc/media/mfcnextmousetab.png "カスタマイズ] ダイアログ ボックスでは、[マウス] タブ") <br/>
+マウスのカスタマイズタブ
 
 ユーザーがメニューを割り当てるには、このタブを操作コマンドをマウスのダブルクリック処理します。 ユーザーは、ウィンドウの左側にあるビューを選択し、右側にあるコントロールを使用して、コマンド、ダブルクリック アクションと関連付けます。 ユーザー後がクリックした**閉じる**ユーザーが、ビューの任意の場所をダブルクリックしたときに、アプリケーションが関連付けられているコマンドを実行します。
 

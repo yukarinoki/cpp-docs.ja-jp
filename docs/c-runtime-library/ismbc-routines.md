@@ -1,10 +1,6 @@
 ---
-title: _ismbc 系ルーチン | Microsoft Docs
-ms.custom: ''
+title: _ismbc 系ルーチン
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apilocation:
 - msvcr110.dll
 - msvcr110_clr0400.dll
@@ -16,22 +12,16 @@ apilocation:
 apitype: DLLExport
 f1_keywords:
 - _ismbc
-dev_langs:
-- C++
 helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2eb2c300c981bd79e08da181478cb486348b24a7
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036593"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326733"
 ---
 # <a name="ismbc-routines"></a>_ismbc 系ルーチン
 
@@ -52,7 +42,7 @@ ms.locfileid: "46036593"
 |ルーチンによって返される値|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
 |[_ismbcalnum、_ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|英数字|`c` が ASCII の英字の 1 バイト表現である場合に限り、0 以外の値を返します。`_ismbcdigit` と `_ismbcalpha` の例を参照してください。|
-|[_ismbcalpha、_ismbcalpha_\_](../c-runtime-library/reference/ismbcalnum-functions.md)|alphabetic|`c` が ASCII の英字 (`_ismbcupper` と `_ismbclower` の例を参照) またはカタカナ (0xA6<=`c`<=0xDF) の 1 バイト表現である場合に限り、0 以外の値を返します。|
+|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|alphabetic|`c` が ASCII の英字 (`_ismbcupper` と `_ismbclower` の例を参照) またはカタカナ (0xA6<=`c`<=0xDF) の 1 バイト表現である場合に限り、0 以外の値を返します。|
 |[_ismbcdigit、_ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|数字|`c` が ASCII 数字 (0x30<=`c`<=0x39) の 1 バイト表現である場合に限り、0 以外の値を返します。|
 |[_ismbcgraph、_ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|グラフィック|`c` が空白 ( ) を除く ASCII またはカタカナの印刷可能な文字の 1 バイト表現である場合に限り、0 以外の値を返します。 「`_ismbcdigit`」、「`_ismbcalpha`」、および「`_ismbcpunct`」の例を参照してください。|
 |[_ismbclegal、_ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|有効なマルチバイト文字|`c` の最初のバイトが 0x81 - 0x9F または 0xE0 - 0xFC の範囲内にあり、2 番目のバイトが 0x40 - 0x7E または 0x80 - FC の範囲内にある場合にのみ、0 以外の値を返します。|

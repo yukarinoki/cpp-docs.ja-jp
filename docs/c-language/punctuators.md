@@ -1,29 +1,20 @@
 ---
-title: 区切り記号 | Microsoft Docs
-ms.custom: ''
+title: 区切り記号
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - punctuators
 ms.assetid: 8377c8e1-3b7b-4a99-9db9-db7b96edef80
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0dbc2583cff995b32e6ed3a4da463f671923b1c9
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 008c15a0817d69cf830cb601277c5819e6d7f529
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46036658"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328917"
 ---
 # <a name="punctuators"></a>区切り記号
 
-`punctuator`: one of **[ ]   ( )   { }   \*   ,   :   =   ;   ...   #**
+*punctuator*: 次のいずれか<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**\[ ] ( ) { } \* , : = ; . #**
 
 ## <a name="see-also"></a>参照
 

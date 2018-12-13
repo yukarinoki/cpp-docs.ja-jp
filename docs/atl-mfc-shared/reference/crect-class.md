@@ -1,6 +1,6 @@
 ---
 title: CRect クラス
-ms.date: 11/04/2016
+ms.date: 11/06/2018
 f1_keywords:
 - CRect
 - ATLTYPES/ATL::CRect
@@ -34,16 +34,16 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 200f4a9345904055496a53ff2f751c3e2571e7d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50471488"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178754"
 ---
 # <a name="crect-class"></a>CRect クラス
 
-Windows のような[RECT](../../mfc/reference/rect-structure.md)構造体。
+Windows のような[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体。
 
 ## <a name="syntax"></a>構文
 
@@ -97,8 +97,8 @@ class CRect : public tagRECT
 |[CRect::operator! =](#operator_neq)|決定かどうか`CRect`四角形と等しくないです。|
 |[CRect::operator &amp;](#operator_amp)|交差部分を作成します。`CRect`と四角形を、その結果を返します`CRect`します。|
 |[CRect::operator &amp;=](#operator_amp_eq)|セット`CRect`の交差部分に等しい`CRect`と四角形。|
-|[CRect::operator |](#operator_or)|和集合を作成します。`CRect`と四角形を、その結果を返します`CRect`します。|
-|[CRect::operator |=](#operator_or_eq)|セット`CRect`の共用体に等しい`CRect`と四角形。|
+|[CRect::operator&#124;](#operator_or)|和集合を作成します。`CRect`と四角形を、その結果を返します`CRect`します。|
+|[CRect::operator &#124;=](#operator_or_eq)|セット`CRect`の共用体に等しい`CRect`と四角形。|
 |[CRect::operator +](#operator_add)|指定したオフセットを追加します。`CRect`拡張または`CRect`し、その結果を返します`CRect`します。|
 |[CRect::operator + =](#operator_add_eq)|指定したオフセットを追加します。`CRect`拡張または`CRect`します。|
 |[CRect::operator =](#operator_eq)|コピーする四角形の寸法`CRect`します。|
@@ -112,7 +112,7 @@ class CRect : public tagRECT
 A`CRect`オブジェクトは、関数のパラメーターとして渡すことがどこにも、`RECT`構造、 `LPCRECT`、または`LPRECT`渡すことができます。
 
 > [!NOTE]
->  このクラスから派生、`tagRECT`構造体。 (名前`tagRECT`のない、一般的に使用される名前は、`RECT`構造です)。つまり、データ メンバー (`left`、 `top`、 `right`、および`bottom`) の`RECT`構造体のアクセス可能なデータ メンバーである`CRect`します。
+> このクラスから派生、`tagRECT`構造体。 (名前`tagRECT`のない、一般的に使用される名前は、`RECT`構造です)。つまり、データ メンバー (`left`、 `top`、 `right`、および`bottom`) の`RECT`構造体のアクセス可能なデータ メンバーである`CRect`します。
 
 A`CRect`四角形の左と右下隅の点を定義するメンバー変数が含まれています。
 
@@ -120,7 +120,7 @@ A`CRect`四角形の左と右下隅の点を定義するメンバー変数が含
 
 操作するときに注意を使用して、`CRect`で、 [CDC::DPtoLP](../../mfc/reference/cdc-class.md#dptolp)と[CDC::LPtoDP](../../mfc/reference/cdc-class.md#lptodp)メンバー関数。 かどうかのディスプレイ コンテキスト マッピング モードは y 範囲が負の場合と`MM_LOENGLISH`、し`CDC::DPtoLP`は、変換、`CRect`上が下部にあるより大きいようにします。 などの関数`Height`と`Size`は、変換後の高さの負の値を返します、 `CRect`、正規化されていない、四角形になります。
 
-オーバー ロードを使用すると`CRect`演算子では、最初のオペランドがある必要があります、 `CRect`; 2 つ目は、いずれかを[RECT](../../mfc/reference/rect-structure.md)構造または`CRect`オブジェクト。
+オーバー ロードを使用すると`CRect`演算子では、最初のオペランドがある必要があります、 `CRect`; 2 つ目は、いずれかを[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`オブジェクト。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -249,7 +249,7 @@ void CopyRect(LPCRECT lpSrcRect) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpSrcRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`オブジェクトのコピーです。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`オブジェクトのコピーです。
 
 ### <a name="example"></a>例
 
@@ -301,7 +301,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 指定の下部にある`CRect`します。
 
 *srcRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造体の座標で`CRect`します。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体の座標で`CRect`します。
 
 *lpSrcRect*<br/>
 指す、`RECT`構造体の座標で`CRect`します。
@@ -382,10 +382,10 @@ void DeflateRect(int l, int t, int r, int b) throw();
 Deflate 上部と下部にユニットの数を指定します`CRect`します。
 
 *size*<br/>
-A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)または[CSize](csize-class.md) deflate をユニットの数を指定する`CRect`します。 `cx`値が左辺と右辺を圧縮する単位数を指定します、 `cy` deflate 上部と下部にユニットの数を指定します。
+A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)または[CSize](csize-class.md) deflate をユニットの数を指定する`CRect`します。 `cx`値が左辺と右辺を圧縮する単位数を指定します、 `cy` deflate 上部と下部にユニットの数を指定します。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`各辺を縮小するユニット数を指定します。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`各辺を縮小するユニット数を指定します。
 
 *l*<br/>
 左側にあるを圧縮する単位の数を指定します`CRect`します。
@@ -431,7 +431,7 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`四角形の左上隅および右下隅の座標を格納しているオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`四角形の左上隅および右下隅の座標を格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -443,11 +443,11 @@ BOOL EqualRect(LPCRECT lpRect) const throw();
 ### <a name="example"></a>例
 
 ```cpp
-   CRect rect1(35, 150, 10, 25);
-   CRect rect2(35, 150, 10, 25);
-   CRect rect3(98, 999, 6, 3);
+CRect rect1(35, 150, 10, 25);
+CRect rect2(35, 150, 10, 25);
+CRect rect3(98, 999, 6, 3);
 ASSERT(rect1.EqualRect(rect2));
-   ASSERT(!rect1.EqualRect(rect3));
+ASSERT(!rect1.EqualRect(rect3));
 // works just fine against RECTs, as well
 
 RECT test;
@@ -484,12 +484,8 @@ int Height() const throw();
 CRect rect(20, 30, 80, 70);
 int nHt = rect.Height();
 
-```cpp
-   CRect rect(20, 30, 80, 70);
-int nHt = rect.Height();
-
-   // nHt is now 40
-   ASSERT(nHt == 40);
+// nHt is now 40
+ASSERT(nHt == 40);
 ```
 
 ##  <a name="inflaterect"></a>  CRect::InflateRect
@@ -512,10 +508,10 @@ void InflateRect(int l, int t, int r,  int b) throw();
 上部と下部の膨張ユニットの数を指定します`CRect`します。
 
 *size*<br/>
-A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)または[CSize](csize-class.md)膨張ユニットの数を指定する`CRect`します。 `cx`値が左辺と右辺を拡大するためのユニットの数を指定します、`cy`上部と下部の膨張ユニットの数を指定します。
+A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)または[CSize](csize-class.md)膨張ユニットの数を指定する`CRect`します。 `cx`値が左辺と右辺を拡大するためのユニットの数を指定します、`cy`上部と下部の膨張ユニットの数を指定します。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`各辺を拡大するユニット数を指定します。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`各辺を拡大するユニット数を指定します。
 
 *l*<br/>
 左側にあるを拡大するためのユニットの数を指定します`CRect`します。
@@ -556,7 +552,7 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpRect1*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`ソース四角形を格納しているオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`ソース四角形を格納しているオブジェクト。
 
 *lpRect2*<br/>
 指す、`RECT`構造または`CRect`ソース四角形を格納しているオブジェクト。
@@ -578,7 +574,6 @@ BOOL IntersectRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 CRect rectOne(125, 0, 150, 200);
 CRect rectTwo(0, 75, 350,  95);
 CRect rectInter;
-
 ```cpp
    CRect rectOne(125,  0, 150, 200);
    CRect rectTwo(0, 75, 350, 95);
@@ -617,7 +612,6 @@ BOOL IsRectEmpty() const throw();
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -648,7 +642,6 @@ BOOL IsRectNull() const throw();
 ```cpp
 CRect rectNone(0, 0, 0, 0);
 CRect rectSome(35, 50, 135, 150);
-
 ```cpp
    CRect rectNone(0, 0, 0, 0);
    CRect rectSome(35, 50, 135, 150);
@@ -678,7 +671,6 @@ void MoveToX(int x) throw();
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
 rect.MoveToX(10);
@@ -712,7 +704,6 @@ A`POINT`四角形の絶対の左上隅を指定する構造体。
 ```cpp
 CRect rect(0, 0, 100, 100);
 rect.MoveToXY(10, 10);
-
 ```cpp
    CRect rect(0, 0, 100, 100);
    rect.MoveToXY(10, 10);
@@ -755,7 +746,7 @@ void NormalizeRect() throw();
 四角形を正規化第 4 象限は、次の配置、Windows は、通常の座標を使用します。 `NormalizeRect` 上端と下端の値を比較し、上部、下部にあるより大きい場合は、それらをスワップします。 同様に、左が右より大きい場合、左および右の値を交換します。 この関数は、別のマッピング モードを扱う場合に便利ですし、四角形を反転します。
 
 > [!NOTE]
-> 次`CRect`メンバー関数は、適切に機能するために正規化された四角形が必要です:[高さ](#height)、[幅](#width)、[サイズ](#size)、 [IsRectEmpty](#isrectempty)、 [PtInRect](#ptinrect)、 [EqualRect](#equalrect)、 [UnionRect](#unionrect)、[示します](#intersectrect)、 [SubtractRect](#subtractrect)、[演算子 = =](#operator_eq_eq)、[演算子! =](#operator_neq)、[演算子&#124; ](#operator_or)、[演算子&#124;=](#operator_or_eq)、[演算子 (& a)](#operator_amp)、および[演算子 (& a) =](#operator_amp_eq)します。
+> 次`CRect`メンバー関数が正常に動作するために正規化された四角形を必要とします。[高さ](#height)、[幅](#width)、[サイズ](#size)、 [IsRectEmpty](#isrectempty)、 [PtInRect](#ptinrect)、 [EqualRect](#equalrect)、[UnionRect](#unionrect)、[示します](#intersectrect)、 [SubtractRect](#subtractrect)、[演算子 = =](#operator_eq_eq)、[演算子! =](#operator_neq)、[演算子&#124; ](#operator_or)、[演算子&#124;=](#operator_or_eq)、[演算子 (& a)](#operator_amp)、および[演算子 (& a) =](#operator_amp_eq)します。
 
 ### <a name="example"></a>例
 
@@ -786,10 +777,10 @@ void OffsetRect(SIZE size) throw();
 上下に移動する量を指定します。 負の値を上へ移動する場合があります。
 
 *ポイント*<br/>
-含まれています、[ポイント](../../mfc/reference/point-structure.md)構造または[CPoint](cpoint-class.md)に移動する寸法の両方を指定するオブジェクト。
+含まれています、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](cpoint-class.md)に移動する寸法の両方を指定するオブジェクト。
 
 *size*<br/>
-含まれています、[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](csize-class.md)に移動する寸法の両方を指定するオブジェクト。
+含まれています、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize](csize-class.md)に移動する寸法の両方を指定するオブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -842,7 +833,7 @@ void operator=(const RECT& srcRect) throw();
 ### <a name="parameters"></a>パラメーター
 
 *srcRect*<br/>
-元の四角形を指します。 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
+元の四角形を指します。 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)または`CRect`します。
 
 ### <a name="example"></a>例
 
@@ -865,7 +856,7 @@ BOOL operator==(const RECT& rect) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *rect*<br/>
-元の四角形を指します。 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
+元の四角形を指します。 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)または`CRect`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -905,7 +896,7 @@ BOOL operator!=(const RECT& rect) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *rect*<br/>
-元の四角形を指します。 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
+元の四角形を指します。 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)または`CRect`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -947,13 +938,13 @@ void operator+=(LPCRECT lpRect) throw();
 ### <a name="parameters"></a>パラメーター
 
 *ポイント*<br/>
-A[ポイント](../../mfc/reference/point-structure.md)構造または[CPoint](cpoint-class.md)四角形を移動する単位の数を指定するオブジェクト。
+A[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](cpoint-class.md)四角形を移動する単位の数を指定するオブジェクト。
 
 *size*<br/>
-A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](csize-class.md)四角形を移動する単位の数を指定するオブジェクト。
+A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize](csize-class.md)四角形を移動する単位の数を指定するオブジェクト。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`のそれぞれの側を拡大するためのユニットの数を格納しているオブジェクト`CRect`します。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`のそれぞれの側を拡大するためのユニットの数を格納しているオブジェクト`CRect`します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -985,13 +976,13 @@ void operator-=(LPCRECT lpRect) throw();
 ### <a name="parameters"></a>パラメーター
 
 *ポイント*<br/>
-A[ポイント](../../mfc/reference/point-structure.md)構造または[CPoint](cpoint-class.md)四角形を移動する単位の数を指定するオブジェクト。
+A[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](cpoint-class.md)四角形を移動する単位の数を指定するオブジェクト。
 
 *size*<br/>
-A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](csize-class.md)四角形を移動する単位の数を指定するオブジェクト。
+A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize](csize-class.md)四角形を移動する単位の数を指定するオブジェクト。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`の各辺を縮小するユニット数を格納しているオブジェクト`CRect`します。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`の各辺を縮小するユニット数を格納しているオブジェクト`CRect`します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1021,7 +1012,7 @@ void operator&=(const RECT& rect) throw();
 ### <a name="parameters"></a>パラメーター
 
 *rect*<br/>
-含まれています、 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
+含まれています、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)または`CRect`します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1045,7 +1036,7 @@ void operator|=(const RECT& rect) throw();
 ### <a name="parameters"></a>パラメーター
 
 *rect*<br/>
-含まれています、`CRect`または[RECT](../../mfc/reference/rect-structure.md)します。
+含まれています、`CRect`または[RECT](/windows/desktop/api/windef/ns-windef-tagrect)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1078,13 +1069,13 @@ CRect operator+(SIZE size) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *ポイント*<br/>
-A[ポイント](../../mfc/reference/point-structure.md)構造または[CPoint](cpoint-class.md)戻り値を移動する単位の数を指定するオブジェクト。
+A[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](cpoint-class.md)戻り値を移動する単位の数を指定するオブジェクト。
 
 *size*<br/>
-A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または[CSize](csize-class.md)戻り値を移動する単位の数を指定するオブジェクト。
+A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize](csize-class.md)戻り値を移動する単位の数を指定するオブジェクト。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`戻り値のそれぞれの側を拡大するためのユニットの数を格納しているオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`戻り値のそれぞれの側を拡大するためのユニットの数を格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1121,13 +1112,13 @@ CRect operator-(LPCRECT lpRect) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *ポイント*<br/>
-A[ポイント](../../mfc/reference/point-structure.md)構造または`CPoint`戻り値を移動する単位の数を指定するオブジェクト。
+A[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または`CPoint`戻り値を移動する単位の数を指定するオブジェクト。
 
 *size*<br/>
-A[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造または`CSize`戻り値を移動する単位の数を指定するオブジェクト。
+A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または`CSize`戻り値を移動する単位の数を指定するオブジェクト。
 
 *lpRect*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`戻り値の各辺を縮小するユニット数を格納しているオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`戻り値の各辺を縮小するユニット数を格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1162,7 +1153,7 @@ CRect operator&(const RECT& rect2) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *rect2*<br/>
-含まれています、 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
+含まれています、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)または`CRect`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1199,7 +1190,7 @@ rect2) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *rect2*<br/>
-含まれています、 [RECT](../../mfc/reference/rect-structure.md)または`CRect`します。
+含まれています、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)または`CRect`します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1235,7 +1226,7 @@ BOOL PtInRect(POINT point) const throw();
 ### <a name="parameters"></a>パラメーター
 
 *ポイント*<br/>
-含まれています、[ポイント](../../mfc/reference/point-structure.md)構造または[CPoint](cpoint-class.md)オブジェクト。
+含まれています、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](cpoint-class.md)オブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1362,7 +1353,7 @@ BOOL SubtractRect(LPCRECT lpRectSrc1, LPCRECT lpRectSrc2) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpRectSrc1*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)構造または`CRect`四角形の減算する元のオブジェクト。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または`CRect`四角形の減算する元のオブジェクト。
 
 *lpRectSrc2*<br/>
 指す、`RECT`構造または`CRect`指す四角形から減算するオブジェクト、 *lpRectSrc1*パラメーター。
@@ -1450,7 +1441,7 @@ BOOL UnionRect(LPCRECT lpRect1, LPCRECT lpRect2) throw();
 ### <a name="parameters"></a>パラメーター
 
 *lpRect1*<br/>
-指す、 [RECT](../../mfc/reference/rect-structure.md)または`CRect`ソース四角形を格納しています。
+指す、 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)または`CRect`ソース四角形を格納しています。
 
 *lpRect2*<br/>
 指す、`RECT`または`CRect`ソース四角形を格納しています。
@@ -1512,5 +1503,5 @@ int Width() const throw();
 
 [CPoint クラス](cpoint-class.md)<br/>
 [CSize クラス](csize-class.md)<br/>
-[RECT](../../mfc/reference/rect-structure.md)
+[RECT](/windows/desktop/api/windef/ns-windef-tagrect)
 

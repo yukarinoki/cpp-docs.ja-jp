@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: a3acc035a1781bd67cfc3b5561eb6dbdef41de72
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586327"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178162"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession クラス
 
@@ -98,10 +98,10 @@ class CInternetSession : public CObject
 
 `CInternetSession` メンバー関数[SetCookie](#setcookie)、 [GetCookie](#getcookie)、および[GetCookieLength](#getcookielength)サーバーとスクリプトの管理により、Win32 cookie データベースを管理する手段を提供クライアント ワークステーションに関する状態情報。
 
-インターネットの基本的なプログラミング タスクの詳細については、記事を参照してください。[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)します。 MFC WinInet クラスを使用する全般については、記事を参照してください。[インターネットが WinInet を使用したプログラミング](../../mfc/win32-internet-extensions-wininet.md)します。
+インターネットの基本的なプログラミング タスクの詳細については、記事を参照してください。[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)します。 MFC WinInet クラスを使用する全般については、記事を参照してください。[インターネットが WinInet を使用したプログラミング](../../mfc/win32-internet-extensions-wininet.md)します。
 
 > [!NOTE]
-> `CInternetSession` スローされます、 [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)サポートされていないサービスの種類。 次の種類のサービスのみは現在サポートされています。 FTP、HTTP、gopher、およびファイル。
+> `CInternetSession` スローされます、 [AfxThrowNotSupportedException](exception-processing.md#afxthrownotsupportedexception)サポートされていないサービスの種類。 次の種類のサービスのみが現在サポートされています。FTP、HTTP、gopher、およびファイルです。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -223,7 +223,7 @@ DWORD_PTR GetContext() const;
 
 [OnStatusCallback](#onstatuscallback)によって返されるコンテキスト ID を使用して`GetContext`特定のアプリケーションの状態を報告します。 たとえば、ユーザーがステータス情報を返す必要がありますインターネット要求をアクティブ化、ステータス コールバックはその特定の要求の状態をレポートのコンテキスト ID を使用します。 場合は、ユーザーが 2 つの異なるインターネット要求のステータス情報を返す処理を伴う`OnStatusCallback`コンテキスト識別子を使用して、対応する要求の状態を返します。 その結果、すべてのステータス コールバック操作コンテキスト識別子が使用され、セッションが終了するまで、セッションに関連付けられています。
 
-非同期操作の詳細については、記事を参照してください。[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)します。
+非同期操作の詳細については、記事を参照してください。[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)します。
 
 ## <a name="getcookie"></a>  CInternetSession::GetCookie
 
@@ -318,12 +318,12 @@ FTP サーバーの名前を含む文字列へのポインター。
 *pstrPassword*<br/>
 ログインに使用するパスワードを指定する null で終わる文字列へのポインター。 両方*pstrPassword*と*pstrUserName*匿名の既定のパスワードはユーザーの電子メール名が NULL の場合。 場合*pstrPassword*が NULL (または空の文字列) が、 *pstrUserName*が NULL でない空白のパスワードを使用します。 次の表の 4 種類の設定の動作は、 *pstrUserName*と*pstrPassword*:
 
-|*pstrUserName*|*pstrPassword*|FTP サーバーに送信されるユーザー名|FTP サーバーに送信されたパスワード|
-|--------------------|--------------------|---------------------------------|---------------------------------|
-|NULL または""|NULL または""|「匿名」|ユーザーの電子メール名|
-|NULL 以外の文字列|NULL または""|*pstrUserName*|" "|
-|NULL|NULL 以外の文字列|ERROR|ERROR||
-|NULL 以外の文字列|NULL 以外の文字列|*pstrUserName*|*pstrPassword*|
+| *pstrUserName*  | *pstrPassword*  | FTP サーバーに送信されるユーザー名 | FTP サーバーに送信されたパスワード |
+|-----------------|-----------------|-----------------------------|-----------------------------|
+|   NULL または""   |   NULL または""   |         「匿名」         |      ユーザーの電子メール名      |
+| NULL 以外の文字列 |   NULL または""   |       *pstrUserName*        |             " "             |
+|      NULL       | NULL 以外の文字列 |            ERROR            |            ERROR            |
+| NULL 以外の文字列 | NULL 以外の文字列 |       *pstrUserName*        |       *pstrPassword*        |
 
 *ポート*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
@@ -457,7 +457,7 @@ virtual void OnStatusCallback(
 |-----------|-------------|
 |INTERNET_STATUS_RESOLVING_NAME|含まれる名の IP アドレスを調べる*lpvStatusInformation*します。|
 |INTERNET_STATUS_NAME_RESOLVED|含まれる名の IP アドレスを正常に見つかった*lpvStatusInformation*します。|
-|INTERNET_STATUS_CONNECTING_TO_SERVER|ソケット アドレスへの接続 ([SOCKADDR](../../mfc/reference/sockaddr-structure.md)) によって示される*lpvStatusInformation*します。|
+|INTERNET_STATUS_CONNECTING_TO_SERVER|ソケット アドレスへの接続 ([SOCKADDR](/windows/desktop/winsock/sockaddr-2)) によって示される*lpvStatusInformation*します。|
 |INTERNET_STATUS_CONNECTED_TO_SERVER|によって示されるソケット アドレス (SOCKADDR) に正常に接続されている*lpvStatusInformation*します。|
 |INTERNET_STATUS_SENDING_REQUEST|サーバーに要求を送信します。 *LpvStatusInformation*パラメーターが NULL です。|
 |INTERNET_STATUS_ REQUEST_SENT|サーバーに情報の要求が正常に送信します。 *LpvStatusInformation*パラメーターが NULL です。|
@@ -475,7 +475,7 @@ virtual void OnStatusCallback(
 
 [!code-cpp[NVC_MFCHtmlHttp#8](../../mfc/reference/codesnippet/cpp/cinternetsession-class_1.cpp)]
 
-非同期操作の詳細については、記事を参照してください。[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)します。
+非同期操作の詳細については、記事を参照してください。[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)します。
 
 ## <a name="openurl"></a>  できます
 

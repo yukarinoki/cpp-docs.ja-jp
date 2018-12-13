@@ -1,6 +1,6 @@
 ---
 title: CNetAddressCtrl クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CNetAddressCtrl
 - AFXCMN/CNetAddressCtrl
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CNetAddressCtrl [MFC], GetAllowType
 - CNetAddressCtrl [MFC], SetAllowType
 ms.assetid: cb4c6aca-3f49-4b52-b76c-65f57096155b
-ms.openlocfilehash: 09dfdb57fb22b958edc64ec8cbdce95527a304d4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee44c05fa6417aaca367798d7a94a900d521b896
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654679"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176239"
 ---
 # <a name="cnetaddressctrl-class"></a>CNetAddressCtrl クラス
 
@@ -64,7 +64,7 @@ class CNetAddressCtrl : public CEdit
 
 次の図は、ネットワーク アドレス コントロールを含むダイアログを示しています。 テキスト ボックス (1) ネットワーク アドレス コントロールの無効なネットワーク アドレスが含まれています。 ネットワーク アドレスが有効でない場合は、ツールチップ メッセージ (2) が表示されます。
 
-![ネットワーク アドレス コントロールおよび infotip を持つダイアログ。](../../mfc/reference/media/cnetaddctrl.png "cnetaddctrl")
+![ネットワーク アドレス コントロールおよび infotip を持つダイアログ。](../../mfc/reference/media/cnetaddctrl.png "ダイアログのネットワーク アドレス コントロールおよび infotip をします。")
 
 ## <a name="example"></a>例
 

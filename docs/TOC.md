@@ -1,6 +1,6 @@
 # [Visual Studio 2017 の Visual C++](visual-cpp-in-visual-studio.md)
 # [Visual Studio 2017 の Visual C++ の新機能](what-s-new-for-visual-cpp-in-visual-studio.md)
-# [Visual C++ のチュートリアル](build/vscpp-step-0-installation.md)
+# Visual C++ のチュートリアル
 ## [Visual Studio での C++ サポートのインストール](build/vscpp-step-0-installation.md)
 ## [C++ コンソール アプリ プロジェクトの作成](build/vscpp-step-1-create.md)
 ## [C++ コンソール アプリ プロジェクトのビルドと実行](build/vscpp-step-2-build.md)

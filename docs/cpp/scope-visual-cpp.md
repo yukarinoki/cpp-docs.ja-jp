@@ -1,6 +1,6 @@
 ---
 title: スコープ (C)
-ms.date: 04/08/2018
+ms.date: 11/19/2018
 helpviewer_keywords:
 - classes [C++], scope
 - scope [C++]
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, C++ names
 ms.assetid: 81fecbb0-338b-4325-8332-49f33e716352
-ms.openlocfilehash: f44b75be7b2b1459e3ee9d0472f9a5ef6dac9025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 534bb9711ff54e21ca091b399aa3d13ec5a7359d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506614"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176758"
 ---
 # <a name="scope-c"></a>スコープ (C)
 
@@ -41,7 +41,8 @@ ms.locfileid: "50506614"
 
 囲まれたブロック内で名前を宣言すると、その名前が非表示になります。 次の図では、内側のブロックで `i` が再宣言されています。そのため、外側のブロック スコープでは `i` に関連付けられた変数が隠し変数になります。
 
-![ブロック&#45;スコープの名前の隠ぺい](../cpp/media/vc38sf1.png "vc38SF1")ブロック スコープと名前が非表示
+![ブロック&#45;スコープの名前の隠ぺい](../cpp/media/vc38sf1.png "ブロック&#45;スコープの名前の隠ぺい") <br/>
+ブロック スコープおよび名前の隠ぺい
 
 このプログラムの出力を次の図に示します。
 

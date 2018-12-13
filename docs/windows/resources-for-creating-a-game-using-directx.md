@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows applications [C++], games
 - DirectX [C++]
 ms.assetid: 863090ed-6091-45db-aabb-7fd02f76c1df
-ms.openlocfilehash: d76db600c5cec1099daa195324e7102ed5cdbd24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f17b2ddcc6db68f2045d9887a799555fa6ed0643
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586798"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692597"
 ---
 # <a name="resources-for-creating-a-c-game-using-directx"></a>DirectX を使用して C++ ゲームを作成するためのリソース
 
@@ -25,7 +25,7 @@ Windows 8.1 以降、Windows SDK には、DirectX SDK が含まれます。 他�
 
 Windows 7、Windows Vista、または Windows XP の DirectX アプリを作成することができますをダウンロードするスタンドアロン[DirectX SDK](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)します。
 
-[DirectX のグラフィックスとゲーム](https://msdn.microsoft.com/library/windows/desktop/ee663274)情報があり、DirectX を使用した開始するのに役立つサンプルをプログラミングします。
+[DirectX のグラフィックスとゲーム](/windows/desktop/directx)情報があり、DirectX を使用した開始するのに役立つサンプルをプログラミングします。
 
 [Win32 Windows アプリケーション](../windows/windows-desktop-applications-cpp.md)基本的な Windows デスクトップ アプリを作成する方法を説明する記事が含まれます。
 

@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
-ms.openlocfilehash: d86978c6bf8aba87828cdda91c3e849a2f755a90
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b4abc1afc99a00d83c25574df06ebfb27141c65
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525269"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694180"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールに関するグローバル関数
 
@@ -95,7 +95,7 @@ CONTROL    "{04FE35E9-ADBC-4f1d-83FE-8FA4D1F71C7F}", IDC_TEST,
     "AtlAxWin80", WS_GROUP | WS_TABSTOP, 0, 0, 100, 100
 ```
 
-リソース スクリプトの編集の詳細については、次を参照してください。[方法: テキスト形式でリソース スクリプト ファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)します。 コントロールのリソース定義ステートメントの詳細については、次を参照してください。[共通管理パラメーター](/windows/desktop/menurc/common-control-parameters) Windows SDK で *: SDK Tools*します。
+リソース スクリプトの編集の詳細については、次を参照してください。[方法: テキスト形式でリソース スクリプト ファイルを開く](../../windows/how-to-open-a-resource-script-file-in-text-format.md)します。 コントロールのリソース定義ステートメントの詳細については、次を参照してください。[共通管理パラメーター](/windows/desktop/menurc/common-control-parameters) Windows SDK の下: SDK Tools。
 
 [全般] ダイアログ ボックスの詳細についてを参照してください[DialogBox](/windows/desktop/api/winuser/nf-winuser-dialogboxa)と[CreateDialogParam](/windows/desktop/api/winuser/nf-winuser-createdialogparama) Windows SDK にします。
 
@@ -160,7 +160,7 @@ ATLAPI AtlAxCreateControl(
 
 - "{8E27C92B-1264-101C-8A2F-040224009C02}"などの CLSID
 
-- などの URL"http://www.microsoft.com"
+- などの URL"<http://www.microsoft.com>"
 
 - などのアクティブなドキュメントへの参照を"file://\\\Documents\MyDoc.doc"
 
@@ -212,7 +212,7 @@ ATLAPI AtlAxCreateControlEx(
 
 - "{8E27C92B-1264-101C-8A2F-040224009C02}"などの CLSID
 
-- などの URL"http://www.microsoft.com"
+- などの URL"<http://www.microsoft.com>"
 
 - などのアクティブなドキュメントへの参照を"file://\\\Documents\MyDoc.doc"
 
@@ -271,7 +271,7 @@ ATLAPI AtlAxCreateControlLic(
 
 - "{8E27C92B-1264-101C-8A2F-040224009C02}"などの CLSID
 
-- などの URL"http://www.microsoft.com"
+- などの URL"<http://www.microsoft.com>"
 
 - などのアクティブなドキュメントへの参照を"file://\\\Documents\MyDoc.doc"
 
@@ -325,7 +325,7 @@ ATLAPI AtlAxCreateControlLicEx(
 
 - "{8E27C92B-1264-101C-8A2F-040224009C02}"などの CLSID
 
-- などの URL"http://www.microsoft.com"
+- などの URL"<http://www.microsoft.com>"
 
 - などのアクティブなドキュメントへの参照を"file://\\\Documents\MyDoc.doc"
 
@@ -490,7 +490,7 @@ inline BOOL AtlAxWinTerm();
 
 ### <a name="remarks"></a>Remarks
 
-この関数を呼び出すだけです[UnregisterClass](https://msdn.microsoft.com/library/windows/desktop/ms644899) Windows SDK で説明されているとします。
+この関数を呼び出すだけです[UnregisterClass](/windows/desktop/api/winuser/nf-winuser-unregisterclassa) Windows SDK で説明されているとします。
 
 呼び出した場合に既存のすべてのホスト ウィンドウが破棄された後にクリーンアップするには、この関数を呼び出す[AtlAxWinInit](#atlaxwininit)不要になったホスト ウィンドウを作成する必要があります。 この関数を呼び出さない場合、ウィンドウ クラスは登録解除する自動的にプロセスが終了します。
 

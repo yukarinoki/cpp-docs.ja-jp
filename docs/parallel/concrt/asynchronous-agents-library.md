@@ -1,16 +1,16 @@
 ---
 title: 非同期エージェント ライブラリ
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Agents Library
 - Asynchronous Agents Library
 ms.assetid: d2a72a31-8ba6-4220-ad7a-e403a6acaa42
-ms.openlocfilehash: 9086734b22523d395022299fb75b7a130a8e7a16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b4e8e6489e98aadb6ea41d32d5a9ba14efe2668
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629282"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175861"
 ---
 # <a name="asynchronous-agents-library"></a>非同期エージェント ライブラリ
 
@@ -26,7 +26,7 @@ ms.locfileid: "50629282"
 
 次の図は、2 つのエージェントがメッセージ ブロックとメッセージ パッシング関数を使用して通信する方法を示しています。 この図で`agent1`にメッセージを送信`agent2`を使用して、 [concurrency::send](reference/concurrency-namespace-functions.md#send)関数と[concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)オブジェクト。 `agent2` 使用して、 [concurrency::receive](reference/concurrency-namespace-functions.md#receive)メッセージを読み取る関数。 `agent2` は、同じメソッドを使用して `agent1` にメッセージを送信します。 破線の矢印は、エージェント間のデータの流れを表しています。 実線の矢印は、エージェントと、それが読み書きを行う対象のメッセージ ブロックを結んでいます。
 
-![エージェント ライブラリのコンポーネント](../../parallel/concrt/media/agent_librarycomp.png "agent_librarycomp")
+![エージェント ライブラリのコンポーネント](../../parallel/concrt/media/agent_librarycomp.png "エージェント ライブラリのコンポーネント")
 
 この図を実装するコード例については、このトピックで後述します。
 

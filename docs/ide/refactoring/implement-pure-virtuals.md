@@ -1,23 +1,16 @@
 ---
-title: 純粋仮想の実装 | Microsoft Docs
-ms.custom: ''
+title: 純粋仮想の実装
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: ea9b4719-34a3-474a-b4ec-05b1859f80f1
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 234ae9a67bcbc60ea156fbacb5169d0bd1573a91
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 59e4519f57a1d9bd9ba1cee1ed6ae41bea785a9f
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46442761"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51692668"
 ---
 # <a name="implement-pure-virtuals"></a>純粋仮想の実装
+
 **機能:** クラスですべての純粋仮想を実装するために必要なコードをすぐに生成できます。
 
 **条件:** 純粋仮想関数のクラスからの継承が望まれるとき。

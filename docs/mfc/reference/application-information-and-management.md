@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 71b5eb9c97b8c6370a08281fdf4be7074a579f8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596665"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178344"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 
@@ -114,7 +114,7 @@ CWinThread* AfxBeginThread(
 
 マルチスレッドは、アプリケーションによって有効化される必要があります。それ以外の場合、この関数は失敗します。 マルチ スレッドの有効化の詳細についてを参照してください[/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)  *Visual C コンパイラ オプション*します。
 
-詳細については`AfxBeginThread`、記事を参照して[マルチ スレッド: ワーカー スレッドの作成](../../parallel/multithreading-creating-worker-threads.md)と[マルチ スレッド: ユーザー インターフェイス スレッドの生成](../../parallel/multithreading-creating-user-interface-threads.md)します。
+詳細については`AfxBeginThread`、記事を参照して[マルチ スレッド。ワーカー スレッドを作成する](../../parallel/multithreading-creating-worker-threads.md)と[マルチ スレッド。ユーザー インターフェイス スレッドを作成する](../../parallel/multithreading-creating-user-interface-threads.md)します。
 
 ### <a name="example"></a>例
 
@@ -164,7 +164,7 @@ void AFXAPI AfxEndThread(
 
 終了するスレッド内からを呼び出す必要があります。
 
-詳細については`AfxEndThread`、記事をご覧ください[マルチ スレッド: スレッドの終了](../../parallel/multithreading-terminating-threads.md)します。
+詳細については`AfxEndThread`、記事をご覧ください[マルチ スレッド。スレッドの終了](../../parallel/multithreading-terminating-threads.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -567,9 +567,9 @@ HINSTANCE AFXAPI AfxLoadLibrary(LPCTSTR lpszModuleName);
 
 - 現在のフォルダー。
 
-- **Windows 95/98:** Windows システム ディレクトリ。 **Windows NT:** 32 ビット Windows システム ディレクトリ。 このディレクトリの名前は、SYSTEM32 です。
+- **Windows 95/98:** Windows システム フォルダー。 **Windows NT:** 32 ビット Windows システム ディレクトリ。 このディレクトリの名前は、SYSTEM32 です。
 
-- **Windows NT のみ:** 16 ビット Windows システム ディレクトリ。 このディレクトリのパスを取得する Win32 関数はありませんが、これが検索されます。 このディレクトリの名前は、システムです。
+- **Windows NT でのみ使用します。** 16 ビット Windows システム ディレクトリ。 このディレクトリのパスを取得する Win32 関数はありませんが、これが検索されます。 このディレクトリの名前は、システムです。
 
 - Windows ディレクトリ。
 
@@ -646,7 +646,7 @@ BOOL AFXAPI AfxRegisterClass(WNDCLASS* lpWndClass);
 ### <a name="parameters"></a>パラメーター
 
 *lpWndClass*<br/>
-ポインターを[WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576)登録されるウィンドウ クラスに関する情報を含む構造体。 この構造体の詳細については、Windows SDK を参照してください。
+ポインターを[WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)登録されるウィンドウ クラスに関する情報を含む構造体。 この構造体の詳細については、Windows SDK を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -681,7 +681,7 @@ LPCTSTR AFXAPI AfxRegisterWndClass(
 ### <a name="parameters"></a>パラメーター
 
 *nClassStyle*<br/>
-Windows クラスのスタイルまたはビットごとの OR を使用して作成されたスタイルの組み合わせを指定します ( **&#124;**) ウィンドウ クラスの演算子。 クラスのスタイルの一覧は、次を参照してください。、 [WNDCLASS](https://msdn.microsoft.com/library/windows/desktop/ms633576) Windows SDK の構造体。 NULL の場合、既定値としては、次のように設定されます。
+Windows クラスのスタイルまたはビットごとの OR を使用して作成されたスタイルの組み合わせを指定します ( **&#124;**) ウィンドウ クラスの演算子。 クラスのスタイルの一覧は、次を参照してください。、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa) Windows SDK の構造体。 NULL の場合、既定値としては、次のように設定されます。
 
 - CS_DBLCLKS、送信メッセージをダブルクリックしてウィンドウ プロシージャ、ユーザーがマウスをダブルクリックしたときにマウスのスタイルを設定します。
 
@@ -715,7 +715,7 @@ Microsoft Foundation Class ライブラリでは、いくつかの標準のウ�
 
 呼び出す場合`AfxRegisterWndClass`クラスごとに別のウィンドウ クラスを取得する代わりに、同じパラメーターを持つ複数の CWnd から派生したクラスの各クラスは、同じウィンドウ クラスを共有します。 これは CS_CLASSDC クラスのスタイルを使用する場合、問題が発生することができます。 複数の CS_CLASSDC ウィンドウ クラスではなく最終的に CS_CLASSDC ウィンドウ クラスの 1 つ、さらにそのクラスの共有と同じドメイン コント ローラーを使用して、すべての C++ windows。 この問題を回避するには、呼び出す[AfxRegisterClass](#afxregisterclass)クラスを登録します。
 
-テクニカル ノートを参照してください[TN001: ウィンドウ クラスの登録](../../mfc/tn001-window-class-registration.md)ウィンドウ クラスの登録の詳細については、`AfxRegisterWndClass`関数。
+テクニカル ノートを参照してください[TN001:ウィンドウ クラスの登録](../../mfc/tn001-window-class-registration.md)ウィンドウ クラスの登録の詳細については、`AfxRegisterWndClass`関数。
 
 ### <a name="example"></a>例
 
@@ -802,7 +802,7 @@ BOOL AfxSocketInit(WSADATA* lpwsaData = NULL);
 ### <a name="parameters"></a>パラメーター
 
 *lpwsaData*<br/>
-ポインターを[WSADATA](../../mfc/reference/wsadata-structure.md)構造体。 場合*lpwsaData*が null の場合、次のアドレスと等しく、`WSADATA`構造はへの呼び出しで塗りつぶされます`WSAStartup`します。 この関数も確実に`WSACleanup`アプリケーションが終了する前が呼び出されます。
+ポインターを[WSADATA](/windows/desktop/api/winsock2/ns-winsock2-wsadata)構造体。 場合*lpwsaData*が null の場合、次のアドレスと等しく、`WSADATA`構造はへの呼び出しで塗りつぶされます`WSAStartup`します。 この関数も確実に`WSACleanup`アプリケーションが終了する前が呼び出されます。
 
 ### <a name="return-value"></a>戻り値
 

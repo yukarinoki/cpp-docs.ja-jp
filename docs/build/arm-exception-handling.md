@@ -2,12 +2,12 @@
 title: ARM 例外処理
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: b2b6b9b3508dd7a4dd42a2e22ad1052851c7c0c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522274"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694349"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外処理
 
@@ -15,7 +15,7 @@ ARM 版 Windows は、ハードウェアで生成される非同期例外とソ�
 
 ## <a name="arm-exception-handling"></a>ARM 例外処理
 
-ARM 上の Windows を使用して*アンワインド コード*中にスタック アンワインドを制御する[例外処理を構造化](https://msdn.microsoft.com/library/windows/desktop/ms680657)(SEH)。 アンワインド コードは、実行可能イメージの .xdata セクションに格納されるバイトのシーケンスです。 これらのコードには、関数のプロローグおよびエピローグ コードの演算を抽象的な方法で記述し、呼び出し元のスタック フレームへのアンワインドに備えて、関数のプロローグの効果を元に戻すことができるようにします。
+ARM 上の Windows を使用して*アンワインド コード*中にスタック アンワインドを制御する[例外処理を構造化](/windows/desktop/debug/structured-exception-handling)(SEH)。 アンワインド コードは、実行可能イメージの .xdata セクションに格納されるバイトのシーケンスです。 これらのコードには、関数のプロローグおよびエピローグ コードの演算を抽象的な方法で記述し、呼び出し元のスタック フレームへのアンワインドに備えて、関数のプロローグの効果を元に戻すことができるようにします。
 
 ARM EABI (埋め込みアプリケーション バイナリ インターフェイス) には、アンワインド コードを使用する例外アンワインド モデルを指定しますが、Windows での SEH アンワインドの場合、プロセッサが関数のプロローグまたはエピローグの途中にある非同期の場合を処理する必要があるため、これは十分ではありません。 また、Windows では、アンワインド制御が関数レベルのアンワインドと言語固有スコープのアンワインドに分離されます。これは、ARM EABI で統合されます。 これらの理由から、ARM 版 Windows では、アンワインドのデータと手順の詳細が指定されます。
 

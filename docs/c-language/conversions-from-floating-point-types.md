@@ -1,26 +1,16 @@
 ---
-title: 浮動小数点型からの変換 | Microsoft Docs
-ms.custom: ''
+title: Conversions from Floating-Point Types (浮動小数点型からの変換)
 ms.date: 01/29/2018
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - converting floating point
 - floating-point conversion
 ms.assetid: 96804c8e-fa3b-4742-9006-0082ed9e57f2
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: eefbbde88704ffd53f8bcf1445186bb7e6cdd6af
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 87e1554897326039649829539443795cbc0fabab
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46017639"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50570554"
 ---
 # <a name="conversions-from-floating-point-types"></a>浮動小数点型からの変換
 

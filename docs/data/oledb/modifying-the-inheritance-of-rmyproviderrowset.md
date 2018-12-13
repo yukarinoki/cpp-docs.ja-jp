@@ -6,18 +6,18 @@ helpviewer_keywords:
 - inheritance [C++]
 - RCustomRowset
 ms.assetid: 33089c90-98a4-43e7-8e67-d4bb137e267e
-ms.openlocfilehash: 51cca65b6b55de8b628cb5d233ab06f0101f466d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34eb07611ebfff09918d62273d4ca4a8c9cf4f7b
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637958"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265153"
 ---
 # <a name="modifying-the-inheritance-of-rcustomrowset"></a>RCustomRowset の継承の変更
 
-追加する、`IRowsetLocate`インターフェイスの単純な読み取り専用プロバイダーの例の継承を変更する`RCustomRowset`します。 最初に、`RCustomRowset`継承`CRowsetImpl`します。 継承するように変更する必要がある`CRowsetBaseImpl`します。
+追加する、`IRowsetLocate`インターフェイスの単純な読み取り専用プロバイダーの例の継承を変更する`CCustomRowset`します。 最初に、`CCustomRowset`継承`CRowsetImpl`します。 継承するように変更する必要がある`CRowsetBaseImpl`します。
 
-これを行うには、新しいクラスを作成`CCustomRowsetImpl`CustomRS.h で。
+これを行うには、新しいクラスを作成`CCustomRowsetImpl`の*カスタム*RS.h:
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
@@ -42,13 +42,13 @@ END_COM_MAP()
 
 このコードに指示する COM インターフェイス マップを作成します`CMyRowsetImpl`を呼び出す`QueryInterface`両方に対して、`IRowset`と`IRowsetLocate`インターフェイス。 その他の行セットの実装のすべてを取得するクラスをマップのリンク、`CMyRowsetImpl`クラスを`CRowsetBaseImpl`OLE DB テンプレートで定義されているクラスは、map の COM マップをスキャンする OLE DB テンプレートに伝える COM_INTERFACE_ENTRY_CHAIN マクロを使用します。`CRowsetBaseImpl`への応答を`QueryInterface`呼び出します。
 
-最後に、リンク`RAgentRowset`に`CMyRowsetBaseImpl`を変更して`RAgentRowset`から継承する`CMyRowsetImpl`、次のようにします。
+最後に、リンク`CCustomRowset`に`CMyRowsetBaseImpl`を変更して`CCustomRowset`から継承する`CMyRowsetImpl`、次のようにします。
 
 ```cpp
-class RAgentRowset : public CMyRowsetImpl<RAgentRowset, CAgentMan, CCustomCommand>
+class CCustomRowset : public CMyRowsetImpl<CCustomRowset, CCustomWindowsFile, CCustomCommand>
 ```
 
-`RAgentRowset` 使用できるように、`IRowsetLocate`行セット クラスの実装の残りの部分を活用しながらインターフェイス。
+`CCustomRowset` 使用できるように、`IRowsetLocate`行セット クラスの実装の残りの部分を活用しながらインターフェイス。
 
 これは、ときに[コンシューマーに返される列を動的に決定](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)します。
 

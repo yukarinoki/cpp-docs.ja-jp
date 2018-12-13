@@ -1,28 +1,18 @@
 ---
-title: 'チュートリアル: プロジェクトとソリューションの使用 (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: プロジェクトとソリューションの使用 (C++)'
 ms.date: 09/14/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - solutions [C++]
 - projects [C++], about projects
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 56b5e41872ebe4b3cdc4800d7818cceb05f03dd1
-ms.sourcegitcommit: 1d9bd38cacbc783fccd3884b7b92062161c91c84
+ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2018
-ms.locfileid: "48235153"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519232"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>チュートリアル: プロジェクトとソリューションの使用 (C++)
 
@@ -80,7 +70,7 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 1. Cardgame.h ファイルを編集し、次の変更を行います。
 
    - クラス定義の左中かっこの後ろに、プライベート データ メンバーを 2 つ追加します。
-      <!--      [!code-cpp[NVC_Walkthrough_Working_With_Projects#100](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_1.h)] -->
+     <!--      [!code-cpp[NVC_Walkthrough_Working_With_Projects#100](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_1.h)] -->
 
       ```cpp
       int players;
@@ -102,18 +92,19 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
    変更後、Cardgame.h ファイルは次のコードのようになります。
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#103](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_4.h)]-->
-   ```cpp
-   #pragma once
-   class Cardgame
-   {
-       int players;
-       static int totalParticipants;
-   public:
-       Cardgame(int players);
-       ~Cardgame();
-       static int GetParticipants() { return totalParticipants; }
-   };
-   ```
+
+    ```cpp
+    #pragma once
+    class Cardgame
+    {
+        int players;
+        static int totalParticipants;
+    public:
+        Cardgame(int players);
+        ~Cardgame();
+        static int GetParticipants() { return totalParticipants; }
+    };
+    ```
 
    行 `#pragma once` は、1 回だけヘッダー ファイルを含むようにコンパイラに指示します。 詳細については、「[once](../preprocessor/once.md)」を参照してください。 上記のヘッダー ファイルの他の C++ キーワードについては、「[class](../cpp/class-cpp.md)」、「[int](../cpp/fundamental-types-cpp.md)」、「[static](../cpp/storage-classes-cpp.md)」、および「[public](../cpp/public-cpp.md)」を参照してください。
 
@@ -122,27 +113,28 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 1. ファイル内のすべてを削除して、次のコードに置き換えます。
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#111](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_5.cpp)]-->
-   ```cpp
-   #include "pch.h"
-   #include "Cardgame.h"
-   #include <iostream>
 
-   using namespace std;
+    ```cpp
+    #include "pch.h"
+    #include "Cardgame.h"
+    #include <iostream>
 
-   int Cardgame::totalParticipants = 0;
+    using namespace std;
 
-   Cardgame::Cardgame(int players)
-       : players(players)
-   {
-       totalParticipants += players;
-       cout << players << " players have started a new game.  There are now "
-            << totalParticipants << " players in total." << endl;
-   }
+    int Cardgame::totalParticipants = 0;
 
-   Cardgame::~Cardgame()
-   {
-   }
-   ```
+    Cardgame::Cardgame(int players)
+        : players(players)
+    {
+        totalParticipants += players;
+        cout << players << " players have started a new game.  There are now "
+             << totalParticipants << " players in total." << endl;
+    }
+
+    Cardgame::~Cardgame()
+    {
+    }
+    ```
 
    > [!NOTE]
    > コードを入力するときにオート コンプリートを使用できます。 たとえば、キーボードでこのコードを入力する場合、「*pl*」または「*tot*」を入力してから、**Ctrl** + **Space** キーを押すことができます。 オート コンプリートにより `players` または `totalParticipants` が入力されます。
@@ -156,31 +148,33 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 1. **Game.cpp** エディター ウィンドウで、既存のコードを次のコードに置き換えます。
 
    <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#120](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_6.cpp)]-->
-   ```cpp
-   // Game.cpp : Defines the entry point for the console application.
-   //
 
-   #include "pch.h"
-   #include "Cardgame.h"
-   #include <iostream>
+    ```cpp
+    // Game.cpp : Defines the entry point for the console application.
+    //
 
-   using namespace std;
+    #include "pch.h"
+    #include "Cardgame.h"
+    #include <iostream>
 
-   void PlayGames()
-   {
-       Cardgame bridge(4);
-       Cardgame blackjack(8);
-       Cardgame solitaire(1);
-       Cardgame poker(5);
-   }
+    using namespace std;
 
-   int main()
-   {
-       PlayGames();
-       return 0;
-   }
-   ```
-このコードでは、テスト関数 `PlayGames` をソース コードに追加し、それを `main` で呼び出します。
+    void PlayGames()
+    {
+        Cardgame bridge(4);
+        Cardgame blackjack(8);
+        Cardgame solitaire(1);
+        Cardgame poker(5);
+    }
+
+    int main()
+    {
+        PlayGames();
+        return 0;
+    }
+    ```
+
+   このコードでは、テスト関数 `PlayGames` をソース コードに追加し、それを `main` で呼び出します。
 
 ## <a name="build-and-run-your-app-project"></a>アプリ プロジェクトをビルドして実行する
 
@@ -192,15 +186,15 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
    ビルドからの出力は、**[出力]** ウィンドウに表示されます。 ビルドが成功した場合、出力は次のようになります。
 
-   ```Output
-   1>------ Build started: Project: Game, Configuration: Debug Win32 ------
-   1>pch.cpp
-   1>Cardgame.cpp
-   1>Game.cpp
-   1>Generating Code...
-   1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
-   ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
-   ```
+    ```Output
+    1>------ Build started: Project: Game, Configuration: Debug Win32 ------
+    1>pch.cpp
+    1>Cardgame.cpp
+    1>Game.cpp
+    1>Generating Code...
+    1>Game.vcxproj -> C:\Users\<username>\source\repos\Game\Debug\Game.exe
+    ========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+    ```
 
    **[出力]** ウィンドウはビルド構成によって異なる手順を表示しますが、プロジェクトのビルドが成功した場合、最後の行は次のような出力になります。
 
@@ -208,13 +202,14 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
 1. プロジェクトを実行するには、メニュー バーで **[デバッグ]** > **[デバッグなしで開始]** の順にクリックします。 コンソール ウィンドウが表示され、出力は次のようになります。
 
-   ```Output
-   4 players have started a new game.  There are now 4 players in total.
-   8 players have started a new game.  There are now 12 players in total.
-   1 players have started a new game.  There are now 13 players in total.
-   5 players have started a new game.  There are now 18 players in total.
-   ```
-コンソール ウィンドウを閉じるにはキーを押します。
+    ```Output
+    4 players have started a new game.  There are now 4 players in total.
+    8 players have started a new game.  There are now 12 players in total.
+    1 players have started a new game.  There are now 13 players in total.
+    5 players have started a new game.  There are now 18 players in total.
+    ```
+
+   コンソール ウィンドウを閉じるにはキーを押します。
 
 これでアプリ プロジェクトとソリューションが正常にビルドされました。 Visual Studio で C++ コード プロジェクトをビルドする方法についてさらに学習するには、チュートリアルを続行します。
 

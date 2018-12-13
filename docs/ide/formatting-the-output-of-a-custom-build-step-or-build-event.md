@@ -1,12 +1,6 @@
 ---
-title: カスタム ビルド ステップまたはビルド イベントの出力の書式設定 | Microsoft Docs
-ms.custom: ''
+title: カスタム ビルド ステップまたはビルド イベントの出力の書式設定
 ms.date: 08/27/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - builds [C++], build events
 - custom build steps [C++], output format
@@ -15,16 +9,12 @@ helpviewer_keywords:
 - build steps [C++], output format
 - builds [C++], custom build steps
 ms.assetid: 92ad3e38-24d7-4b89-90e6-5a16f5f998da
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 8a975951142c028ffcfb8ece870ab3ac2d2b60fc
-ms.sourcegitcommit: 9a0905c03a73c904014ec9fd3d6e59e4fa7813cd
+ms.openlocfilehash: 333d3af92da2388b42f51f197dee5da82900022d
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2018
-ms.locfileid: "43203250"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330412"
 ---
 # <a name="formatting-the-output-of-a-custom-build-step-or-build-event"></a>カスタム ビルド ステップまたはビルド イベントの出力の書式設定
 
@@ -53,7 +43,7 @@ ms.locfileid: "43203250"
 例:
 
 > C:\\*sourcefile.cpp*(134) : エラー C2143: 構文エラー: ';' が '}' の前にありません
-
+>
 > LINK : 致命的なエラー LNK1104: '*somelib.lib*' を開くことができません。
 
 ## <a name="see-also"></a>関連項目

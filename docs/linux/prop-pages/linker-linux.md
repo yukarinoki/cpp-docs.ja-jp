@@ -1,23 +1,13 @@
 ---
-title: リンカー プロパティ (Linux C++) | Microsoft Docs
-ms.custom: ''
+title: リンカー プロパティ (Linux C++)
 ms.date: 9/26/2017
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: Linux
-ms.topic: conceptual
 ms.assetid: a0243a94-8164-425b-b2fe-b84ff363d546
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-- linux
-ms.openlocfilehash: 9187222d2ced21ece2f183655591c483abc8d500
-ms.sourcegitcommit: 76b7653ae443a2b8eb1186b789f8503609d6453e
+ms.openlocfilehash: 2e5c3446d8daeeb052937b5e172fc9fa4b6ad302
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33333106"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678341"
 ---
 # <a name="linker-properties-linux-c"></a>リンカー プロパティ (Linux C++)
 

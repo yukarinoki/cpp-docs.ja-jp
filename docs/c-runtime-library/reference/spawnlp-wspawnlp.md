@@ -30,12 +30,12 @@ helpviewer_keywords:
 - process creation
 - spawnlp function
 ms.assetid: 74fc6e7a-4f24-4103-9387-7177875875e6
-ms.openlocfilehash: 5379d47fc6ecbc21b523764f3fd0fbb6ef727a9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44137aefcec8f6658a90117288a47696f4d31903
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590867"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328735"
 ---
 # <a name="spawnlp-wspawnlp"></a>_spawnlp、_wspawnlp
 
@@ -82,11 +82,11 @@ intptr_t _wspawnlp(
 
 |||
 |-|-|
-**E2BIG**|引数リストが 1024 バイトを超えています。
-**EINVAL**|*モード*引数が無効です。
-**ENOENT**|ファイルまたはパスが見つかりません。
-**ENOEXEC**|指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。
-**ENOMEM**|新しいプロセスを実行するのに十分なメモリがありません。
+| **E2BIG** | 引数リストが 1024 バイトを超えています。 |
+| **EINVAL** | *モード*引数が無効です。 |
+| **ENOENT** | ファイルまたはパスが見つかりません。 |
+| **ENOEXEC** | 指定されたファイルが実行可能ファイルでないか、無効な実行可能ファイル形式です。 |
+| **ENOMEM** | 新しいプロセスを実行するのに十分なメモリがありません。 |
 
 リターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 

@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 14: カスタム コントロール'
+title: TN014:カスタム コントロール
 ms.date: 06/28/2018
 f1_keywords:
 - vc.controls
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: e773d270c302ef71a6f6527061ba13c870fa4500
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f04029e47ee7d262cdc5e2eab463799acd7d943
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557821"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178409"
 ---
-# <a name="tn014-custom-controls"></a>テクニカル ノート 14: カスタム コントロール
+# <a name="tn014-custom-controls"></a>TN014:カスタム コントロール
 
 ここでは、カスタムおよび自己描画コントロール MFC サポートについて説明します。 動的なサブクラス化について説明しの間のリレーションシップについて説明します[CWnd](../mfc/reference/cwnd-class.md)オブジェクトと`HWND`秒。
 
@@ -88,7 +88,7 @@ MFC には、既定の実装が用意されています (で、`CWnd`と[CMenu](
     // insert code to delete an item from this combo box
     ```
 
-詳細については、オーナー描画の構造に ([DRAWITEMSTRUCT](../mfc/reference/drawitemstruct-structure.md)、 [MEASUREITEMSTRUCT](../mfc/reference/measureitemstruct-structure.md)、 [COMPAREITEMSTRUCT](../mfc/reference/compareitemstruct-structure.md)、および[DELETEITEMSTRUCT](../mfc/reference/deleteitemstruct-structure.md)) MFC のドキュメントを参照して`CWnd::OnDrawItem`、 `CWnd::OnMeasureItem`、 `CWnd::OnCompareItem`、および`CWnd::OnDeleteItem`それぞれします。
+詳細については、オーナー描画の構造に ([DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)、 [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)、 [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)、および[DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)) MFC のドキュメントを参照して`CWnd::OnDrawItem`、 `CWnd::OnMeasureItem`、 `CWnd::OnCompareItem`、および`CWnd::OnDeleteItem`それぞれします。
 
 ## <a name="using-self-draw-controls-and-menus"></a>自己描画コントロールとメニューを使用
 

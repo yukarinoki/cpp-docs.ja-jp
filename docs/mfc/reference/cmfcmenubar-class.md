@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: cb1143b51dafd9711e058134a9338e28ffcb44b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a15291b49127b6c5f1efd97d8102b272c126cc10
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599889"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694363"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar クラス
 
@@ -391,7 +391,7 @@ virtual BOOL CreateEx(
 
 代わりに、この関数を使用する必要があります[CMFCMenuBar::Create](#create)に加えて、ツールバーのスタイルのスタイルを指定する場合。 頻繁に使用されるいくつか追加スタイル バーオブジェクト、CBRS_TOP です。
 
-追加スタイルのリストは、次を参照してください。[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)、[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)、および[共通のウィンドウ スタイル](https://msdn.microsoft.com/library/windows/desktop/ms632600)します。
+追加スタイルのリストは、次を参照してください。[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)、[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)、および[共通のウィンドウ スタイル](/windows/desktop/winmsg/window-styles)します。
 
 ### <a name="example"></a>例
 

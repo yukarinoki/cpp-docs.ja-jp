@@ -17,12 +17,12 @@ helpviewer_keywords:
 - inner_product function [STL/CLR]
 - partial_sum function [STL/CLR]
 ms.assetid: 1dc4d9a3-e734-459c-9678-5d9be0ef4c79
-ms.openlocfilehash: 95449937dda62d8ef127d41625553f0e4294cf77
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0311b36ec1190631e053eeade443939703e69103
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574249"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328904"
 ---
 # <a name="numeric-stlclr"></a>数値 (STL/CLR)
 
@@ -91,7 +91,7 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 2 つの範囲の要素ごとの積の合計を計算し、それを指定された初期値に加算するか、または和や積の二項演算が指定された別の二項演算に置き換えられた汎用化されたプロシージャの結果を計算します。
 
-###<a name="syntax"></a>構文
+### <a name="syntax"></a>構文
 
 ```cpp
 template<class _InIt1, class _InIt2, class _Ty> inline

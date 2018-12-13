@@ -1,6 +1,6 @@
 ---
 title: CSmartDockingInfo クラス
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 f1_keywords:
 - CSmartDockingInfo
 - AFXDOCKINGMANAGER/CSmartDockingInfo
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CSmartDockingInfo [MFC], m_uiMarkerBmpResID
 - CSmartDockingInfo [MFC], m_uiMarkerLightBmpResID
 ms.assetid: cab04f38-4bc1-4378-9337-c56fc87fbd68
-ms.openlocfilehash: 885af55987c2d1e78cd0145fcee5ca0f4ef67dc5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8931af856bc75bd499d8237278998adfcdb02a6
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524661"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176771"
 ---
 # <a name="csmartdockinginfo-class"></a>CSmartDockingInfo クラス
 
@@ -75,7 +75,7 @@ class CSmartDockingInfo : public CObject
 
 内部的には、framework ハンドルでスマート ドッキング マーカー。 次の図は、標準のスマート ドッキング マーカーを示しています。
 
-![スマート ドッキングの標準的なマーカー](../../mfc/reference/media/nextsdmarkers.png "nextsdmarkers")
+![スマート ドッキングの標準的なマーカー](../../mfc/reference/media/nextsdmarkers.png "スマート ドッキングの標準マーカー")
 
 この図では、左側のイメージは、有効になっているタブへのドッキングを持たないサーバーの全体のグループのスマート ドッキング マーカーを示します。 中央のイメージは、右端のスマート ドッキング マーカーを示しています。 右側のイメージは、有効になっているタブへのドッキングが中央のグループのスマート ドッキング マーカーを示します。 サーバーの全体のグループのスマート ドッキング マーカーはメインのビットマップを備え、5 つのスマート ドッキング マーカー ビットマップ。
 
@@ -93,7 +93,7 @@ class CSmartDockingInfo : public CObject
 
 次の図は、カスタマイズされたスマート ドッキング マーカーの例を示します。
 
-![スマート ドッキング カスタム マーカー](../../mfc/reference/media/nextsdmarkerscustom.png "nextsdmarkerscustom")
+![スマート ドッキング カスタム マーカー](../../mfc/reference/media/nextsdmarkerscustom.png "スマート ドッキング カスタム マーカー")
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

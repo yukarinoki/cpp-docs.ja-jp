@@ -1,23 +1,17 @@
 ---
-title: Visual C++ のヘルプおよびコミュニティ | Microsoft Docs
-ms.custom: ''
+title: Visual C++ のヘルプおよびコミュニティ
 ms.date: 11/30/2017
 ms.technology:
 - cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: 6bc23c18-fcd9-47bc-bff2-17537700be4a
 author: mikeblome
 ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 1e74ed975cce0ac3a87716d9f7ad00da2d75d509
-ms.sourcegitcommit: a738519aa491a493a8f213971354356c0e6a5f3a
+ms.openlocfilehash: 5aee74c9fee1480d2bb61c36abba97edc5c5d4cf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2018
-ms.locfileid: "48820679"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178097"
 ---
 # <a name="visual-c-help-and-community"></a>Visual C++ のヘルプおよびコミュニティ
 
@@ -51,4 +45,4 @@ Microsoft デベロッパー コンテンツをオンラインで見ることが
 |[Visual C++ チーム ブログ](https://blogs.msdn.microsoft.com/vcblog/)|Visual C++ 製品チームの専門家によるさまざまなテーマの投稿が含まれています。|
 |[Channel 9](https://channel9.msdn.com/)|ビデオ インタビューや講義が含まれています。 C++ コンテンツを検索するには、Channel 9 ホーム ページの検索ボックスを使用します。|
 |[Visual Studio](https://visualstudio.microsoft.com/)|Visual Studio および関連する開発ツールに関する記事やニュースが含まれています。|
-|[MSDN フォーラム](https://social.msdn.microsoft.com/Forums/en-US/home?category=visualc)と[開発者コミュニティ](https://developercommunity.visualstudio.com)|Microsoft 公式のフォーラムです。C++ に関する質問を投稿し、その回答を Microsoft やコミュニティ内の専門家から得ることができます。|
+|[MSDN フォーラム](https://social.msdn.microsoft.com/Forums/home?category=visualc)と[開発者コミュニティ](https://developercommunity.visualstudio.com)|Microsoft 公式のフォーラムです。C++ に関する質問を投稿し、その回答を Microsoft やコミュニティ内の専門家から得ることができます。|

@@ -1,17 +1,17 @@
 ---
 title: 標準変換
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - standard conversions, categories of
 - L-values [C++]
 - conversions, standard
 ms.assetid: ce7ac8d3-5c99-4674-8229-0672de05528d
-ms.openlocfilehash: 7a42a4f35a29489fe23327c6b34ed49197a64724
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee100bdc7e8ba6dd7d06c6bca9ed39c09cf2d97
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575449"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176979"
 ---
 # <a name="standard-conversions"></a>標準変換
 
@@ -189,7 +189,8 @@ int main() {
 
 基底クラスにアクセスできるかどうかは、派生で使用される継承の種類によって決まります。 次の図に示す継承を考えます。
 
-![基本を示す継承グラフ&#45;クラス アクセシビリティ](../cpp/media/vc38xa1.gif "vc38XA1")の図の基底クラスのアクセシビリティの継承グラフ
+![基本を示す継承グラフ&#45;クラス アクセシビリティ](../cpp/media/vc38xa1.gif "ベースを示す継承グラフ&#45;クラス アクセシビリティ") <br/>
+基底クラスのアクセシビリティを示す継承グラフ
 
 次の表は、図で示す状況に対する基底クラスのアクセシビリティを示します。
 

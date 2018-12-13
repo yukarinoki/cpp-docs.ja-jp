@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: ae1b444d424693a2372389fb27fcec90133b3a7d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662853"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178644"
 ---
 # <a name="cbutton-class"></a>CButton クラス
 
@@ -153,13 +153,13 @@ class CButton : public CWnd
 
 各メッセージ マップ エントリは、次の形式をとります。
 
-**On _** 通知 **(**`id`、 `memberFxn` **)**
+**ON\_**_通知_ **(** _id_、 _memberFxn_ **)**
 
-場所`id`通知を送信するコントロールの子ウィンドウ ID を指定および`memberFxn`通知を処理するために記述した親メンバー関数の名前を指定します。
+場所*id*通知を送信するコントロールの子ウィンドウ ID を指定および*memberFxn*通知を処理するために記述した親メンバー関数の名前を指定します。
 
 親の関数のプロトタイプは次のとおりです。
 
-**afx_msg** `void` `memberFxn` **();**
+`afx_msg void memberFxn();`
 
 潜在的なメッセージ マップ エントリは次のとおりです。
 
@@ -265,7 +265,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDrawItemStruct*<br/>
-Long ポインター、 [DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)構造体。 構造体には、描画される項目および必要な図面の種類に関する情報が含まれています。
+Long ポインター、 [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)構造体。 構造体には、描画される項目および必要な図面の種類に関する情報が含まれています。
 
 ### <a name="remarks"></a>Remarks
 
@@ -384,7 +384,7 @@ BOOL GetIdealSize(SIZE* psize);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は」の説明に従って、BCM_GETIDEALSIZE メッセージの機能をエミュレート、[ボタン](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK の「します。
+このメンバー関数は」の説明に従って、BCM_GETIDEALSIZE メッセージの機能をエミュレート、[ボタン](/windows/desktop/controls/buttons)Windows SDK の「します。
 
 ##  <a name="getimagelist"></a>  CButton::GetImageList
 
@@ -405,7 +405,7 @@ BOOL GetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は」の説明に従って、BCM_GETIMAGELIST メッセージの機能をエミュレート、[ボタン](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK の「します。
+このメンバー関数は」の説明に従って、BCM_GETIMAGELIST メッセージの機能をエミュレート、[ボタン](/windows/desktop/controls/buttons)Windows SDK の「します。
 
 ##  <a name="getnote"></a>  CButton::GetNote
 
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 最初のオーバー ロードで、 [CString](../../atl-mfc-shared/using-cstring.md)を現在のコマンド リンク コントロールに関連付けられたメモのテキストを含むオブジェクト。
 
-- または -
+または
 
 2 番目のオーバー ロードでは、このメソッドが成功した場合は TRUE します。それ以外の場合、FALSE です。
 
@@ -532,7 +532,7 @@ BOOL GetSplitSize(LPSIZE pSize) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pSize*|[out]ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)四角形の説明を受け取る。|
+|*pSize*|[out]ポインターを[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)四角形の説明を受け取る。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -617,7 +617,7 @@ BOOL GetTextMargin(RECT* pmargin);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は」の説明に従って、BCM_GETTEXTMARGIN メッセージの機能をエミュレート、[ボタン](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK の「します。
+このメンバー関数は」の説明に従って、BCM_GETTEXTMARGIN メッセージの機能をエミュレート、[ボタン](/windows/desktop/controls/buttons)Windows SDK の「します。
 
 ##  <a name="setbitmap"></a>  CButton::SetBitmap
 
@@ -870,7 +870,7 @@ BOOL SetImageList(PBUTTON_IMAGELIST pbuttonImagelist);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は」の説明に従って、BCM_SETIMAGELIST メッセージの機能をエミュレート、[ボタン](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK の「します。
+このメンバー関数は」の説明に従って、BCM_SETIMAGELIST メッセージの機能をエミュレート、[ボタン](/windows/desktop/controls/buttons)Windows SDK の「します。
 
 ##  <a name="setnote"></a>  CButton::SetNote
 
@@ -1006,7 +1006,7 @@ BOOL SetSplitSize(LPSIZE pSize);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*pSize*|[in]ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)外接する四角形を記述する構造体。|
+|*pSize*|[in]ポインターを[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)外接する四角形を記述する構造体。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -1112,7 +1112,7 @@ BOOL SetTextMargin(RECT* pmargin);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は」の説明に従って、BCM_SETTEXTMARGIN メッセージの機能をエミュレート、[ボタン](https://msdn.microsoft.com/library/windows/desktop/bb775943)Windows SDK の「します。
+このメンバー関数は」の説明に従って、BCM_SETTEXTMARGIN メッセージの機能をエミュレート、[ボタン](/windows/desktop/controls/buttons)Windows SDK の「します。
 
 ## <a name="see-also"></a>関連項目
 

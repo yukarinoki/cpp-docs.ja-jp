@@ -1,59 +1,78 @@
 ---
-title: イベント ハンドラーの追加 (Visual C++) | Microsoft Docs
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
+title: イベント ハンドラーを追加する
+ms.date: 11/12/2018
 f1_keywords:
 - vc.codewiz.eventhandler.overview
-dev_langs:
-- C++
+- vc.codewiz.eventhandler.overview
 helpviewer_keywords:
 - event handlers, adding
 - properties [Visual Studio], MSBuild
 - MSBuild, properties
+- event handler wizard [C++]
 ms.assetid: 050bebf0-a9e0-474b-905c-796fe5ac8fc3
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd16628c48c30f6f554a842b70c5217753e305f3
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 8e6b2511b00b7f949718e5b0d9fd793ac53d0d8b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46430307"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694518"
 ---
-# <a name="adding-an-event-handler-visual-c"></a>イベント ハンドラーの追加 (Visual C++)
+# <a name="add-an-event-handler"></a>イベント ハンドラーを追加する
 
-リソース エディターで、[イベント ハンドラー ウィザード](../ide/event-handler-wizard.md)を使用するダイアログ ボックス コントロールで新しいイベント ハンドラーを追加したり、既存のイベント ハンドラーを編集したりできます。
+リソース エディターでは、[イベント ハンドラー ウィザード](#event-handler-wizard)を使用して、ダイアログ ボックス コントロールで新しいイベント ハンドラーを追加したり、既存のイベント ハンドラーを編集したりできます。
 
-[[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window)を使用すると、ダイアログ ボックスが実装されているクラスにイベントを追加できます。 ダイアログ ボックス クラス以外のクラスにイベントを追加する場合は、イベント ハンドラー ウィザードを使用します。
+[[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window)を使用すると、ダイアログ ボックスが実装されているクラスにイベントを追加できます。 ダイアログ ボックス クラス以外のクラスにイベントを追加するには、イベント ハンドラー ウィザードを使用します。
 
-### <a name="to-add-an-event-handler-to-a-dialog-box-control"></a>ダイアログ ボックス コントロールにイベント ハンドラーを追加するには
+**ダイアログ ボックス コントロールにイベント ハンドラーを追加するには:**
 
 1. [[リソース ビュー]](../windows/resource-view-window.md) のダイアログ ボックス リソースをダブルクリックして、[ダイアログ エディター](../windows/dialog-editor.md)のコントロールが含まれるダイアログ ボックス リソースを開きます。
 
 1. 通知イベントを処理するコントロールを右クリックします。
 
-1. ショートカット メニューの **[イベント ハンドラーの追加]** をクリックして、イベント ハンドラー ウィザードを表示します。
+1. ショートカット メニューの **[イベント ハンドラーの追加]** を選択して、イベント ハンドラー ウィザードを表示します。
 
 1. **[メッセージの種類]** ボックスでイベントを選択し、**[クラス] リスト** ボックスで選択されたクラスを追加します。
 
 1. **[Function handler name]\(関数ハンドラー名\)** ボックスの既定の名前を受け入れるか、任意の名前を指定します。
 
-1. **[Add and edit]\(追加と編集\)** をクリックして、プロジェクトにイベント ハンドラーを追加し、新しい関数に対してテキスト エディターを開き、適切なイベント ハンドラーのコードを追加します。
+1. **[Add and edit]\(追加と編集\)** を選択して、プロジェクトにイベント ハンドラーを追加し、新しい関数に対してテキスト エディターを開いて適切なイベント ハンドラー コードを追加します。
 
-   選択したメッセージの種類に選択したクラスのイベント ハンドラーが既にある場合、**[Add and edit]\(追加と編集\)** は使用できず、**[コードの編集]** を使用する必要があります。 **[コードの編集]** をクリックして、既存の関数に対してテキスト エディターを開きます。
+   選択したメッセージの種類に選択したクラスのイベント ハンドラーが既にある場合、**[Add and edit]\(追加と編集\)** は使用できず、**[コードの編集]** を使用する必要があります。 **[コードの編集]** を選択して、既存の関数に対してテキスト エディターを開きます。
 
-または、[[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window)からイベント ハンドラーを追加することも可能です。 詳しくは、「[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)」をご覧ください。
+または、[[プロパティ] ウィンドウ](/visualstudio/ide/reference/properties-window)からイベント ハンドラーを追加することも可能です。 詳細については、「[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="in-this-section"></a>このセクションの内容
 
-[コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
-[クラスの追加](../ide/adding-a-class-visual-cpp.md)<br>
-[メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)<br>
-[メンバー関数の追加](../ide/adding-a-member-function-visual-cpp.md)<br>
-[MFC メッセージ ハンドラー](../mfc/reference/adding-an-mfc-message-handler.md)<br>
-[クラス各部へのジャンプ](../ide/navigating-the-class-structure-visual-cpp.md)
+- [イベント ハンドラー ウィザード](#event-handler-wizard)
+
+## <a name="event-handler-wizard"></a>イベント ハンドラー ウィザード
+
+このウィザードは、ダイアログ ボックス コントロール用のイベント ハンドラーをクラスに追加します。 [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)からイベント ハンドラーを追加する場合は、ダイアログ ボックスを実装するクラスに対してのみ追加できます。 詳細については、「[ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)」をご覧ください。
+
+- **コマンド名**
+
+  選ばれているコントロールを示します。このコントロールにイベント ハンドラーが追加されます。 このボックスは変更できません。
+
+- **メッセージ型**
+
+  選ばれているコントロールで現在使用可能なメッセージ ハンドラーの一覧が表示されます。
+
+- **関数ハンドラー名**
+
+  イベントを処理するために追加される関数の名前が表示されます。 既定の名前は、メッセージ型とコマンドに基づき、先頭に `On` が付加されます。 たとえば、`IDC_BUTTON1` という名前のボタンでメッセージ型が `BN_CLICKED` の場合、関数ハンドラーの名前は `OnBnClickedButton1` になります。
+
+- **クラスの一覧**
+
+  イベント ハンドラーを追加できるクラスが表示されます。 選ばれているダイアログ ボックスのクラスは、赤で表示されます。
+
+- **ハンドラーの説明**
+
+  **[メッセージ型]** ボックスで選ばれている項目の説明が表示されます。 このボックスは変更できません。
+
+- **追加と編集**
+
+  選択したクラスまたはオブジェクトに、メッセージ ハンドラーを追加します。 また、新しい関数に対してテキスト エディターが開かれ、コントロール通知用のハンドラー コードを追加できるようになります。
+
+- **コードの編集**
+
+  選択した既存の関数がテキスト エディターで開き、コントロール通知ハンドラー コードを追加または編集できます。

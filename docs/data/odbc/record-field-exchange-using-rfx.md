@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - RFX (ODBC), implementing
 ms.assetid: ada8f043-37e6-4d41-9db3-92c997a61957
-ms.openlocfilehash: e1ecb43226c9e21f3b13c2d5b7c2a0f93b72f3cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d8ba1e66c1ffc46429b5c0e987be833aef2e72f
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469551"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51328535"
 ---
 # <a name="record-field-exchange-using-rfx"></a>レコード フィールド エクスチェンジ: RFX の使い方
 
@@ -30,10 +30,13 @@ ms.locfileid: "50469551"
 
 |プログラマの役割|フレームワークの役割|
 |---------|-------------------|
-
-|ウィザードを使用して、レコード セット クラスを宣言します。 フィールド データ メンバーの名前とデータ型を指定します |。ウィザードの派生を`CRecordset`クラスと書き込みを[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)をオーバーライドするなど、RFX 関数の各フィールド データ メンバーの呼び出し | | (。省略可能) パラメーターのデータ メンバーをクラスに必要に応じて手動で追加します。 RFX 関数の呼び出しを手動で追加`DoFieldExchange`、各パラメーターのデータ メンバーへの呼び出しを追加[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)、パラメーターのグループのパラメーターの合計数を指定し、 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). 参照してください[レコード セット: レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)| | | (。省略可能) 手動で追加の列をフィールド データ メンバーにバインドします。 手動でインクリメント[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)します。 参照してください[レコード セット: データ列 (ODBC) を動的に結びつける](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)| |。
-
-|レコード セット クラスのオブジェクトを構築します。 オブジェクトを使用する前に値を設定、そのパラメーターのデータ メンバーは、存在する場合 |。効率を高めるため、フレームワークは、ODBC を使用して、パラメーターを prebinds します。 パラメーターの値を渡すと、フレームワークはそれらをデータ ソースに渡します。 並べ替えやフィルター文字列を変更しない限り、クエリのパラメーターの値のみが送信されます |。|使用してレコード セット オブジェクトを開く[:open](../../mfc/reference/crecordset-class.md#open)|。レコード セットのクエリを実行する、レコード セットと呼び出しのフィールド データ メンバーへの列をバインド`DoFieldExchange`を選択した最初のレコードとレコード セットのフィールド データ メンバーの間でデータを交換します | |。使用して、レコード セット内をスクロール[CRecordset::Move](../../mfc/reference/crecordset-class.md#move)またはメニューまたはツールバーのコマンドです |。呼び出し`DoFieldExchange`フィールド データ メンバーを新しい現在のレコードからデータを転送します | |。追加、更新、およびレコードを削除します |。呼び出し`DoFieldExchange`データ ソースにデータを転送する |。
+|ウィザードを使用して、レコード セット クラスを宣言します。 フィールド データ メンバーの名前とデータ型を指定します。|ウィザードの派生を`CRecordset`クラスと書き込みを[DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)をオーバーライドするなど、RFX 関数の各フィールド データ メンバーの呼び出し。|
+|(省略可能)クラスに必要なパラメーターのデータ メンバーを手動で追加します。 RFX 関数の呼び出しを手動で追加`DoFieldExchange`、各パラメーターのデータ メンバーへの呼び出しを追加[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)、パラメーターのグループのパラメーターの合計数を指定し、 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams). 参照してください[レコード セット: レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。||
+|(省略可能)手動で追加の列をフィールド データ メンバーにバインドします。 手動でインクリメント[m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)します。 参照してください[レコード セット: データ列 (ODBC) を動的に結びつける](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)します。||
+|レコード セット クラスのオブジェクトを構築します。 オブジェクトを使用する前に存在する場合、パラメーターの値をデータ メンバーを設定します。|効率を高めるため、フレームワークは、ODBC を使用して、パラメーターを prebinds します。 パラメーターの値を渡すと、フレームワークはそれらをデータ ソースに渡します。 並べ替えやフィルター文字列を変更しない限り、クエリでのパラメーターの値のみが送信されます。|
+|使用してレコード セット オブジェクトを開く[:open](../../mfc/reference/crecordset-class.md#open)します。|レコード セットのクエリを実行する、レコード セットと呼び出しのフィールド データ メンバーへの列をバインド`DoFieldExchange`を選択した最初のレコードとレコード セットのフィールド データ メンバーの間でデータを交換します。|
+|使用して、レコード セット内をスクロール[CRecordset::Move](../../mfc/reference/crecordset-class.md#move)またはメニューまたはツールバーのコマンド。|呼び出し`DoFieldExchange`フィールド データ メンバーを新しい現在のレコードからデータを転送します。|
+|追加、更新、およびレコードを削除します。|呼び出し`DoFieldExchange`データ ソースにデータを転送します。|
 
 ## <a name="see-also"></a>関連項目
 

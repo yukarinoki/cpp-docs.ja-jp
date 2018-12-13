@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, calling
 - OLE DB providers, testing
 ms.assetid: e4aa30c1-391b-41f8-ac73-5270e46fd712
-ms.openlocfilehash: 18edc1ae13ef66f9646edbcf1d0fdfdbe0586cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cda4efcdb26499f910ad875b2bf7b7504a825cf6
+ms.sourcegitcommit: 943c792fdabf01c98c31465f23949a829eab9aad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611212"
+ms.lasthandoff: 11/07/2018
+ms.locfileid: "51265101"
 ---
 # <a name="testing-the-read-only-provider"></a>読み取り専用プロバイダーのテスト
 
@@ -24,11 +24,11 @@ ms.locfileid: "50611212"
 
 1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。
 
-1. **プロジェクトの種類**ペインで、 **Visual C プロジェクト**フォルダー。 **テンプレート**ペインで、 **MFC アプリケーション**します。
+1. **プロジェクトの種類**ペインで、**インストール済み** > **Visual C** > **MFC/ATL**フォルダー。 **テンプレート**ペインで、 **MFC アプリケーション**します。
 
 1. プロジェクト名を入力*TestProv*、順にクリックします**OK**します。
 
-   MFC アプリケーション ウィザードが表示されます。
+   **MFC アプリケーション**ウィザードが表示されます。
 
 1. **アプリケーションの種類**] ページで、[**ダイアログ ベース**します。
 
@@ -37,13 +37,14 @@ ms.locfileid: "50611212"
 > [!NOTE]
 > 追加する場合に、アプリケーションでオートメーションのサポートが必要ありません`CoInitialize`で`CTestProvApp::InitInstance`します。
 
-表示および編集することができます、 **TestProv**で選択 ダイアログ ボックス (IDD_TESTPROV_DIALOG)**リソース ビュー**します。 ダイアログ ボックスで、行セット内の各文字列に 1 つずつ、2 つのリスト ボックスを配置します。 並べ替えプロパティのキーを押して両方のリスト ボックスをオフにする**Alt**+**」と入力**リスト ボックスがオンの場合にクリックすると、**スタイル**タブをクリックし、をクリアします。**並べ替え**チェック ボックスをオンします。 また、配置、**実行**ファイルをフェッチするダイアログ ボックスのボタン。 完成した**TestProv**  ダイアログ ボックスが「文字列 1」と"2 を String"をそれぞれという 2 つのリスト ボックスにある必要があります以外もあります**OK**、**キャンセル**、および**実行。** ボタン。
+表示および編集することができます、 **TestProv**で選択 ダイアログ ボックス (IDD_TESTPROV_DIALOG)**リソース ビュー**します。 ダイアログ ボックスで、行セット内の各文字列に 1 つずつ、2 つのリスト ボックスを配置します。 並べ替えプロパティのキーを押して両方のリスト ボックスをオフにする**Alt**+**」と入力**リスト ボックスがオンの場合、設定、**並べ替え**プロパティを**False**します。 また、配置、**実行**ファイルをフェッチするダイアログ ボックスのボタン。 完成した**TestProv**  ダイアログ ボックスが「文字列 1」と"2 を String"をそれぞれという 2 つのリスト ボックスにある必要があります以外もあります**OK**、**キャンセル**、および**実行。** ボタン。
 
 (このケース TestProvDlg.h) で、ダイアログ クラスのヘッダー ファイルを開きます。 (、クラス宣言の外部のヘッダー ファイルに次のコードを追加します。
 
 ```cpp
 ////////////////////////////////////////////////////////////////////////
 // TestProvDlg.h
+#include <atldbcli.h>  
 
 class CProvider
 {
@@ -68,11 +69,11 @@ END_COLUMN_MAP()
 ///////////////////////////////////////////////////////////////////////
 // TestProvDlg.cpp
 
-void CtestProvDlg::OnRun()
+void CTestProvDlg::OnRun()
 {
    CCommand<CAccessor<CProvider>> table;
    CDataSource source;
-   CSession   session;
+   CSession session;
 
    if (source.Open("Custom.Custom.1", NULL) != S_OK)
       return;
@@ -91,36 +92,17 @@ void CtestProvDlg::OnRun()
 }
 ```
 
-`CCommand`、 `CDataSource`、および`CSession`OLE DB コンシューマー テンプレートに属しているすべてのクラス。 各クラスは、プロバイダーでの COM オブジェクトを模倣します。 `CCommand`オブジェクトは、`CProvider`クラス、テンプレート パラメーターとして、ヘッダー ファイルで宣言します。 `CProvider`パラメーターは、プロバイダーからデータにアクセスするために使用するバインドを表します。 ここでは、`Open`データ ソース、セッション、およびコマンドのコード。
-
-```cpp
-if (source.Open("Custom.Custom.1", NULL) != S_OK)
-   return;
-
-if (session.Open(source) != S_OK)
-   return;
-
-if (table.Open(session, _T("c:\\samples\\myprov\\myData.txt")) != S_OK)
-   return;
-```
+`CCommand`、 `CDataSource`、および`CSession`OLE DB コンシューマー テンプレートに属しているすべてのクラス。 各クラスは、プロバイダーでの COM オブジェクトを模倣します。 `CCommand`オブジェクトは、`CProvider`クラス、テンプレート パラメーターとして、ヘッダー ファイルで宣言します。 `CProvider`パラメーターは、プロバイダーからデータにアクセスするために使用するバインドを表します。 
 
 各クラスを開く行では、プロバイダーの各 COM オブジェクトを作成します。 プロバイダを探しを使用して、`ProgID`のプロバイダー。 取得することができます、`ProgID`システム レジストリからや Custom.rgs ファイル内の検索 (プロバイダーのディレクトリを開き、検索、`ProgID`キー)。
 
-MyData.txt ファイルに含まれている、`MyProv`サンプル。 独自のファイルを作成するには、エディターを使用して各文字列の間で ENTER キーを押して、文字列の偶数を入力します。 ファイルを移動する場合は、パス名を変更します。
+MyData.txt ファイルに含まれている、`MyProv`サンプル。 エディターの使用、独自のファイルを作成し、偶数のキーを押して文字列を入力する**Enter**各文字列の間。 ファイルを移動する場合は、パス名を変更します。
 
 文字列を渡す"c:\\\samples\\\myprov\\\MyData.txt"で、`table.Open`行。 ステップ インする場合、`Open`にこの文字列が渡されることを確認する呼び出し、`SetCommandText`プロバイダーのメソッド。 なお、`ICommandText::Execute`メソッドは、その文字列を使用します。
 
 データをフェッチする呼び出す`MoveNext`テーブルにします。 `MoveNext` 呼び出し、 `IRowset::GetNextRows`、 `GetRowCount`、および`GetData`関数。 これ以上の行がある場合 (つまり、行セット内の現在位置がより大きい`GetRowCount`)、ループを終了します。
 
-```cpp
-while (table.MoveNext() == S_OK)
-{
-   m_ctlString1.AddString(table.szField1);
-   m_ctlString2.AddString(table.szField2);
-}
-```
-
-これ以上の行が存在する場合、プロバイダーが DB_S_ENDOFROWSET を返すことに注意してください。 DB_S_ENDOFROWSET 値は、エラーではありません。 データのフェッチのループをキャンセルし、SUCCEEDED マクロを使用しない S_OK に対して常に確認する必要があります。
+これ以上の行が存在する場合、プロバイダーは、DB_S_ENDOFROWSET を返します。 DB_S_ENDOFROWSET 値は、エラーではありません。 データのフェッチのループをキャンセルし、SUCCEEDED マクロを使用しない S_OK に対して常に確認する必要があります。
 
 ビルドし、プログラムをテストできるようになりましたにします。
 

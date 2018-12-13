@@ -1,6 +1,6 @@
 ---
 title: 'MFC ActiveX コントロール : ActiveX コントロールにおけるデータ バインディングの使用'
-ms.date: 09/12/2018
+ms.date: 11/19/2018
 f1_keywords:
 - bindable
 - requestedit
@@ -14,12 +14,12 @@ helpviewer_keywords:
 - controls [MFC], data binding
 - bound controls [MFC], MFC ActiveX
 ms.assetid: 476b590a-bf2a-498a-81b7-dd476bd346f1
-ms.openlocfilehash: 54cfbc6d31c0c86163400df691dec47e0c093d36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5cb73496cd6678e3f45500d9d53c2127b0fb17c
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603659"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175809"
 ---
 # <a name="mfc-activex-controls-using-data-binding-in-an-activex-control"></a>MFC ActiveX コントロール : ActiveX コントロールにおけるデータ バインディングの使用
 
@@ -30,7 +30,8 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
 
 この記事では、コントロール側でのタスクについて説明します。 データベースとの相互作用をデータ バインディングの実装は、コントロール コンテナーの責任です。 コンテナー内のデータベースとのやり取りを管理する方法はこのドキュメントの範囲外です。 データ バインド コントロールを準備する方法については、この記事の残りの部分で説明します。
 
-![データの概念図&#45;にバインドされたコントロール](../mfc/media/vc374v1.gif "vc374v1")データ バインド コントロールの概念図
+![データの概念図&#45;にバインドされたコントロール](../mfc/media/vc374v1.gif "、データの概念図&#45;にバインドされたコントロール") <br/>
+データ バインド コントロールの概念図
 
 `COleControl`クラスには、データ バインディングを実装する簡単なプロセスを構成する 2 つのメンバー関数が用意されています。 最初の関数では、 [BoundPropertyRequestEdit](../mfc/reference/colecontrol-class.md#boundpropertyrequestedit)プロパティ値を変更するアクセス許可を要求するために使用します。 [BoundPropertyChanged](../mfc/reference/colecontrol-class.md#boundpropertychanged)プロパティの値が変更された後、2 番目の関数が呼び出されます。
 
@@ -45,7 +46,7 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
 必要になる可能性が高くなりますが、データ バインドのストック プロパティを作成することは、[バインド可能な get/set メソッド](#vchowcreatingbindablegetsetmethod)します。
 
 > [!NOTE]
->  ストック プロパティが、`bindable`と`requestedit`既定の属性。
+> ストック プロパティが、`bindable`と`requestedit`既定の属性。
 
 #### <a name="to-add-a-bindable-stock-property-using-the-add-property-wizard"></a>プロパティの追加ウィザードを使用してバインド可能なストック プロパティを追加するには
 
@@ -74,7 +75,7 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
 データ バインド メソッドを取得または設定するだけでなく作成することも、[バインド可能なストック プロパティ](#vchowcreatingbindablestockproperty)します。
 
 > [!NOTE]
->  この手順では、ActiveX コントロールをサブクラス化する Windows コントロールをプロジェクトがある前提としています。
+> この手順では、ActiveX コントロールをサブクラス化する Windows コントロールをプロジェクトがある前提としています。
 
 #### <a name="to-add-a-bindable-getset-method-using-the-add-property-wizard"></a>プロパティの追加ウィザードを使用してバインド可能な get と set メソッドを追加するには
 
@@ -96,37 +97,37 @@ ActiveX コントロールのより強力な用途の 1 つは、データ バ�
 
 1. **[実装型]** として、 **[Get/Set メソッド]** をクリックします。
 
-9. IDL 属性 タブから次のチェック ボックスを選択します:**バインド可能な**、 **requestedit**、 **displaybind**、および**defaultbind**を追加するにはプロジェクトのプロパティの定義に属性。IDL ファイルです。 これらの属性は、コントロールをユーザーに表示されるようにし、ストック プロパティの既定のバインド可能なプロパティを作成します。
+1. IDL 属性 タブから次のチェック ボックスを選択します:**バインド可能な**、 **requestedit**、 **displaybind**、および**defaultbind**を追加するにはプロジェクトのプロパティの定義に属性。IDL ファイルです。 これらの属性は、コントロールをユーザーに表示されるようにし、ストック プロパティの既定のバインド可能なプロパティを作成します。
 
-10. **[完了]** をクリックします。
+1. **[完了]** をクリックします。
 
-11. 本体を変更、`SetMyProp`関数の次のコードが含まれるようにします。
+1. 本体を変更、`SetMyProp`関数の次のコードが含まれるようにします。
 
    [!code-cpp[NVC_MFC_AxData#2](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_2.cpp)]
 
-12. 渡されるパラメーター、`BoundPropertyChanged`と`BoundPropertyRequestEdit`関数は、プロパティに id() 属性に渡されるパラメーターであると、プロパティの dispid します。IDL ファイルです。
+1. 渡されるパラメーター、`BoundPropertyChanged`と`BoundPropertyRequestEdit`関数は、プロパティに id() 属性に渡されるパラメーターであると、プロパティの dispid します。IDL ファイルです。
 
-13. 変更、[例](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)関数の次のコードが含まれるようにします。
+1. 変更、[例](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)関数の次のコードが含まれるようにします。
 
    [!code-cpp[NVC_MFC_AxData#1](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_1.cpp)]
 
-14. 変更、`OnDraw`関数の次のコードが含まれるようにします。
+1. 変更、`OnDraw`関数の次のコードが含まれるようにします。
 
    [!code-cpp[NVC_MFC_AxData#3](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_3.cpp)]
 
-15. コントロール クラスのヘッダー ファイルのヘッダー ファイルのパブリック セクションに次の定義 (コンス トラクター) のメンバー変数を追加します。
+1. コントロール クラスのヘッダー ファイルのヘッダー ファイルのパブリック セクションに次の定義 (コンス トラクター) のメンバー変数を追加します。
 
    [!code-cpp[NVC_MFC_AxData#4](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_4.h)]
 
-16. 次の行の最後の行を作成、`DoPropExchange`関数。
+1. 次の行の最後の行を作成、`DoPropExchange`関数。
 
    [!code-cpp[NVC_MFC_AxData#5](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_5.cpp)]
 
-17. 変更、`OnResetState`関数の次のコードが含まれるようにします。
+1. 変更、`OnResetState`関数の次のコードが含まれるようにします。
 
    [!code-cpp[NVC_MFC_AxData#6](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_6.cpp)]
 
-18. 変更、`GetMyProp`関数の次のコードが含まれるようにします。
+1. 変更、`GetMyProp`関数の次のコードが含まれるようにします。
 
    [!code-cpp[NVC_MFC_AxData#7](../mfc/codesnippet/cpp/mfc-activex-controls-using-data-binding-in-an-activex-control_7.cpp)]
 

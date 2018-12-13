@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCShellTreeCtrl [MFC], SetFlags
 - CMFCShellTreeCtrl [MFC], SetRelatedList
 ms.assetid: 3d1da715-9554-4ed7-968c-055c48146267
-ms.openlocfilehash: 5f257cb57e7b6f287d5032bdc2655bb65fe946cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf7e5f9c9b44524491737b27098bc91bb472cb32
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445878"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694285"
 ---
 # <a name="cmfcshelltreectrl-class"></a>CMFCShellTreeCtrl クラス
 
@@ -53,7 +53,7 @@ class CMFCShellTreeCtrl : public CTreeCtrl
 |名前|説明|
 |----------|-----------------|
 |[CMFCShellTreeCtrl::EnableShellContextMenu](#enableshellcontextmenu)|有効または、ショートカット メニューを無効にします。|
-|[CMFCShellTreeCtrl::GetFlags](#getflags)|渡されるフラグの組み合わせを返します[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)します。|
+|[CMFCShellTreeCtrl::GetFlags](#getflags)|渡されるフラグの組み合わせを返します[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)します。|
 |[CMFCShellTreeCtrl::GetItemPath](#getitempath)|アイテムへのパスを取得します。|
 |[CMFCShellTreeCtrl::GetRelatedList](#getrelatedlist)|ポインターを返します、 [CMFCShellListCtrl クラス](../../mfc/reference/cmfcshelllistctrl-class.md)これと共に使用されるオブジェクト`CMFCShellTreeCtrl`エクスプ ローラーのようなウィンドウを作成するオブジェクト。|
 |[CMFCShellTreeCtrl::OnChildNotify](#onchildnotify)|このメンバー関数は、このウィンドウに適用される通知メッセージを受信すると、このウィンドウの親ウィンドウによって呼び出されます。 (上書き[CWnd::OnChildNotify](../../mfc/reference/cwnd-class.md#onchildnotify))。|
@@ -118,7 +118,7 @@ DWORD GetFlags() const;
 
 ### <a name="remarks"></a>Remarks
 
-フラグを設定、 `CMFCShellTreeCtrl` 、メソッドに送信される[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)オブジェクトが更新されるたびにします。 使用するフラグを変更することができます、 [CMFCShellTreeCtrl::SetFlags](#setflags)メソッド。
+フラグを設定、 `CMFCShellTreeCtrl` 、メソッドに送信される[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)オブジェクトが更新されるたびにします。 使用するフラグを変更することができます、 [CMFCShellTreeCtrl::SetFlags](#setflags)メソッド。
 
 ##  <a name="getitempath"></a>  CMFCShellTreeCtrl::GetItemPath
 
@@ -269,7 +269,7 @@ void SetFlags(
 
 ### <a name="remarks"></a>Remarks
 
-`CMFCShellTreeCtrl`すべてにフラグを設定するパス[IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)します。 さまざまなフラグの値の詳細については、次を参照してください。 [IShellFolder::EnumObjects](https://msdn.microsoft.com/library/windows/desktop/bb775066)します。
+`CMFCShellTreeCtrl`すべてにフラグを設定するパス[IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)します。 さまざまなフラグの値の詳細については、次を参照してください。 [IShellFolder::EnumObjects](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ishellfolder-enumobjects)します。
 
 ##  <a name="setrelatedlist"></a>  CMFCShellTreeCtrl::SetRelatedList
 

@@ -1,14 +1,14 @@
 ---
 title: C++ 型システム (Modern C++)
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: 3e500980fbb5e6397e992f53b58f28fa710e7af0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 476ebabc4bfc19f995119649d6f012d4b39d8369
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602606"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176342"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 型システム (Modern C++)
 
@@ -59,7 +59,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 次の図は、組み込み型の相対サイズを示しています。
 
-![サイズのバイト単位で構築された&#45;型](../cpp/media/built-intypesizes.png "組み込み inTYpeSizes")
+![サイズ (バイト) のビルド&#45;の種類で](../cpp/media/built-intypesizes.png "のバイト サイズが構築された&#45;型")
 
 次の表は、最もよく使用される基本型の一覧です。
 
@@ -70,13 +70,13 @@ int maxValue;                // Not recommended! maxValue contains
 |bool|1 バイト|true または false になる値を表します。|
 |char|1 バイト|以前の C スタイル文字列内の ASCII 文字や、UNICODE に変換する必要がない std::string オブジェクトの ASCII 文字に使用します。|
 |wchar_t|2 バイト|UNICODE 形式でエンコードできるワイド文字を表します (Windows では UTF-16。他のオペレーティング システムでは異なる場合があります)。 これは、型 `std::wstring` の文字列で使用される文字型です。|
-|unsigned char|1 バイト|C++ には、組み込みの `byte` 型はありません。  バイト値を表すには unsigned char を使用します。|
+|符号なし&nbsp;char|1 バイト|C++ には、組み込みの `byte` 型はありません。  バイト値を表すには unsigned char を使用します。|
 |unsigned int|4 バイト|ビット フラグの既定のオプション。|
 |long long|8 バイト|非常に大きな整数値を表します。|
 
 ## <a name="the-void-type"></a>void 型
 
-**Void**型は、特殊な型; 型の変数を宣言することはできません**void**、型の変数を宣言することができますが、 `void *` (へのポインター **void**)、これは生 (型指定されていない) メモリを割り当てるときに必要な場合があります。 ただしへのポインター **void**はタイプ セーフではないと、一般にその使用は、最新の C++ で使用しないでください。 関数の宣言で、 **void**の一般的で適切な使用をこれは戻り値は、関数が値を返さないことを意味**void**します。 0 個のパラメーターを宣言する C 言語のために必要な関数の中に**void**パラメーター リストで`fou(void)`、この実習は最新の C++ で非推奨と宣言されなければなりません`fou()`します。 詳細については、次を参照してください。[型変換とタイプ セーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)します。
+**Void**型は、特殊な型; 型の変数を宣言することはできません**void**、型の変数を宣言することができますが、 __void \*__  (へのポインター**void**)、生 (型指定されていない) メモリを割り当てるときに必要な場合があります。 ただしへのポインター **void**はタイプ セーフではないと、一般にその使用は、最新の C++ で使用しないでください。 関数の宣言で、 **void**の一般的で適切な使用をこれは戻り値は、関数が値を返さないことを意味**void**します。 0 個のパラメーターを宣言する C 言語のために必要な関数の中に**void**パラメーター リストで`fou(void)`、この実習は最新の C++ で非推奨と宣言されなければなりません`fou()`します。 詳細については、次を参照してください。[型変換とタイプ セーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)します。
 
 ## <a name="const-type-qualifier"></a>const 型修飾子
 
@@ -86,7 +86,6 @@ int maxValue;                // Not recommended! maxValue contains
 
 const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
-
 ```
 
 **Const**修飾子は関数と変数の宣言で広く使用されて、「const の正確性」は、C++ の重要な概念と使用する場合は、基本的に; **const**を確実に、コンパイル時に、ある値が誤って変更されません。 詳細については、次を参照してください。 [const](../cpp/const-cpp.md)します。

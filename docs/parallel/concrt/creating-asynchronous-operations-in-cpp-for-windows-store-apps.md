@@ -1,16 +1,16 @@
 ---
 title: C++ における UWP アプリ用の非同期操作の作成
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: ecef168d2162adf3a478268ec08b0a61f35c6260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563203"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176953"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C++ における UWP アプリ用の非同期操作の作成
 
@@ -77,7 +77,7 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 
 次の表では、アプリケーションの非同期操作を定義するために使用できる組み合わせを示します。
 
-|この Windows ランタイム インターフェイスを作成するには|`create_async`|これらのパラメーターの型を処理関数に渡して、暗黙的なキャンセル トークンを使用する|これらのパラメーターの型を処理関数に渡して、明示的なキャンセル トークンを使用する|
+|この Windows ランタイム インターフェイスを作成するには| `create_async`|これらのパラメーターの型を処理関数に渡して、暗黙的なキャンセル トークンを使用する|これらのパラメーターの型を処理関数に渡して、明示的なキャンセル トークンを使用する|
 |----------------------------------------------------------------------------------|------------------------------------------|--------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------|
 |`IAsyncAction`|`void` または `task<void>`|(なし)|(`cancellation_token`)|
 |`IAsyncActionWithProgress<TProgress>`|`void` または `task<void>`|(`progress_reporter`)|(`progress_reporter`, `cancellation_token`)|
@@ -124,7 +124,7 @@ MainPage.xaml で、次のコードを `MainPage` クラスに追加します。
 
 次の図は、各オプションが選択された後の `Primes` アプリケーションを示しています。
 
-![Windows ランタイム Primes アプリ](../../parallel/concrt/media/concrt_windows_primes.png "concrt_windows_primes")
+![Windows ランタイム Primes アプリ](../../parallel/concrt/media/concrt_windows_primes.png "Windows ランタイム Primes アプリ")
 
 `create_async` を使って他の言語で使用される非同期タスクを作成する例については、「 [Bing Maps Trip Optimizer のサンプルでの C++ の使用](https://msdn.microsoft.com/library/windows/apps/hh699891.aspx) 」および「 [Windows 8 Asynchronous Operations in C++ with PPL (PPL を使った C++ による Windows 8 の非同期操作)](http://code.msdn.microsoft.com/windowsapps/windows-8-asynchronous-08009a0d)」を参照してください。
 
@@ -148,11 +148,10 @@ UI があるアプリケーションでは、ASTA (アプリケーション STA)
 次のセクションでは、ディスクからファイルを読み込み、そのファイルで最もよく使われている単語を検索し、結果を UI に表示するアプリケーションを示します。 UI を更新する最後の操作は、UI スレッドで発生します。
 
 > [!IMPORTANT]
->  この動作は、UWP アプリに固有です。 デスクトップ アプリケーションでは、継続が実行される場所を制御できません。 その代わりに、各継続が実行されるワーカー スレッドをスケジューラが選択します。
+> この動作は、UWP アプリに固有です。 デスクトップ アプリケーションでは、継続が実行される場所を制御できません。 その代わりに、各継続が実行されるワーカー スレッドをスケジューラが選択します。
 
 > [!IMPORTANT]
-
->  STA で実行される継続の本体で [concurrency::task::wait](reference/task-class.md#wait) を呼び出さないでください。 そうしないと、このメソッドが現在のスレッドをブロックして、アプリケーションが応答しなくなる場合があるため、ランタイムは [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) をスローします。 ただし、タスク ベースの継続で継続元タスクの結果を受け取るために [concurrency::task::get](reference/task-class.md#get) のメソッドを呼び出すことができます。
+> STA で実行される継続の本体で [concurrency::task::wait](reference/task-class.md#wait) を呼び出さないでください。 そうしないと、このメソッドが現在のスレッドをブロックして、アプリケーションが応答しなくなる場合があるため、ランタイムは [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) をスローします。 ただし、タスク ベースの継続で継続元タスクの結果を受け取るために [concurrency::task::get](reference/task-class.md#get) のメソッドを呼び出すことができます。
 
 ##  <a name="example-app"></a> 例: C++ および XAML での Windows ランタイム アプリでの実行を制御します。
 
@@ -187,7 +186,7 @@ MainPage.cpp で、 `MainPage::MakeWordList`、 `MainPage::FindCommonWords`、�
 
 次の図は `CommonWords` アプリケーションの結果を示しています。
 
-![Windows ランタイム CommonWords アプリ](../../parallel/concrt/media/concrt_windows_common_words.png "concrt_windows_common_words")
+![Windows ランタイム CommonWords アプリ](../../parallel/concrt/media/concrt_windows_common_words.png "Windows ランタイム CommonWords アプリ")
 
 この例では、 `task` をサポートする `create_async` オブジェクトが暗黙的なキャンセル トークンを使用しているため、取り消しをサポートできます。 タスクが協調的に取り消しに応答する必要がある場合には、 `cancellation_token` オブジェクトを受け取るように処理関数を定義します。 PPL での取り消し処理の詳細については、「 [Cancellation in the PPL](cancellation-in-the-ppl.md)」を参照してください。
 

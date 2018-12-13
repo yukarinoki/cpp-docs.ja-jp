@@ -26,12 +26,12 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_bAutoRelease
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
-ms.openlocfilehash: f6e52d993619929666d61f019c1f6d5d28243ab1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0ffba2e8b682a33dc435b0968c59844a858c72
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569227"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524938"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver クラス
 
@@ -258,7 +258,7 @@ void AFX_CDECL InvokeHelper(
 呼び出されるメソッドまたはプロパティを識別します。
 
 *wflags が*<br/>
-呼び出しのコンテキストを記述するフラグ`IDispatch::Invoke`します。 . 使用可能な値の一覧は、次を参照してください。、 *wFlags*パラメーター [idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK にします。
+呼び出しのコンテキストを記述するフラグ`IDispatch::Invoke`します。 . 使用可能な値の一覧は、次を参照してください。、 *wFlags*パラメーター [idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK にします。
 
 *変数*<br/>
 戻り値の型を指定します。 使用可能な値については、「解説」を参照してください。
@@ -296,9 +296,9 @@ void AFX_CDECL InvokeHelper(
 
 *PbParamInfo*引数は、スペースで区切られたリストの**vts _** 定数。 スペース (コンマではない) で区切られるこれらの値の 1 つ以上は、関数のパラメーター リストを指定します。 使用可能な値は、 [EVENT_CUSTOM](event-maps.md#event_custom) マクロで一覧表示されます。
 
-この関数は VARIANTARG 値にパラメーターを変換し、呼び出す、 [idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)メソッド。 `Invoke` の呼び出しに失敗すると、この関数は、例外をスローします。 SCODE (状態コード) がによって返される場合`IDispatch::Invoke`DISP_E_EXCEPTION は、この関数がスローされます、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクト。 それ以外の場合、スロー、 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
+この関数は VARIANTARG 値にパラメーターを変換し、呼び出す、 [idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)メソッド。 `Invoke` の呼び出しに失敗すると、この関数は、例外をスローします。 SCODE (状態コード) がによって返される場合`IDispatch::Invoke`DISP_E_EXCEPTION は、この関数がスローされます、 [COleException](../../mfc/reference/coleexception-class.md)オブジェクト。 それ以外の場合、スロー、 [COleDispatchException](../../mfc/reference/coledispatchexception-class.md)。
 
-詳細については、次を参照してください[VARIANTARG](/previous-versions/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [IDispatch インターフェイスを実装する](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)、 [idispatch::invoke](/previous-versions/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)、および[COM エラー コードの構造。](/windows/desktop/com/structure-of-com-error-codes) Windows SDK にします。
+詳細については、次を参照してください[VARIANTARG](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)、 [IDispatch インターフェイスを実装する](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)、 [idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke)、および[COM エラー コードの構造。](/windows/desktop/com/structure-of-com-error-codes) Windows SDK にします。
 
 ### <a name="example"></a>例
 

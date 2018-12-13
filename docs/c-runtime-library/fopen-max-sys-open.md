@@ -1,15 +1,9 @@
 ---
-title: FOPEN_MAX、_SYS_OPEN | Microsoft Docs
-ms.custom: ''
+title: FOPEN_MAX、_SYS_OPEN
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _SYS_OPEN
 - FOPEN_MAX
-dev_langs:
-- C++
 helpviewer_keywords:
 - SYS_OPEN constant
 - _SYS_OPEN constant
@@ -18,16 +12,12 @@ helpviewer_keywords:
 - maximum number of files
 - open files, maximum
 ms.assetid: 39cf5196-250a-459d-ae90-ce3d99f79039
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 18653eaae84e619e549146bd721dee3199f90ac5
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 41c9f2f1297c7338ff7b4b91dd7663fc1348ce81
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46090894"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51517177"
 ---
 # <a name="fopenmax-sysopen"></a>FOPEN_MAX、_SYS_OPEN
 
@@ -36,7 +26,6 @@ ms.locfileid: "46090894"
 ```
 
 #include <stdio.h>
-
 ```
 
 ## <a name="remarks"></a>コメント

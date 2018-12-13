@@ -1,10 +1,6 @@
 ---
-title: 数値演算エラー定数 | Microsoft Docs
-ms.custom: ''
+title: 数値演算エラー定数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _PLOSS
 - _UNDERFLOW
@@ -12,8 +8,6 @@ f1_keywords:
 - _SING
 - _DOMAIN
 - _OVERFLOW
-dev_langs:
-- C++
 helpviewer_keywords:
 - _TLOSS constant
 - _SING constant
@@ -29,16 +23,12 @@ helpviewer_keywords:
 - _PLOSS constant
 - math error constants
 ms.assetid: 4be933a6-674e-45a5-8ac9-090023542f5b
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 63da23d30b12859c79427432bce38e1156e190de
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f51d9a3a28118d922f81a44e31c9abc610645f13
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46063334"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524996"
 ---
 # <a name="math-error-constants"></a>数値演算エラー定数
 
@@ -47,7 +37,6 @@ ms.locfileid: "46063334"
 ```
 
 #include <math.h>
-
 ```
 
 ## <a name="remarks"></a>コメント

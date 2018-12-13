@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::WriteOnlyArray Class
 ms.assetid: 92d7dd56-ec58-4b8c-88ba-9c903668b687
-ms.openlocfilehash: 2c4c9fecd8e3c8e638af96bc7d047e03a0f31bfc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ff339bc2b144e22d7177638424dd8e617eecfb3b
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651322"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51330618"
 ---
 # <a name="platformwriteonlyarray-class"></a>Platform::WriteOnlyArray クラス
 
@@ -39,8 +39,12 @@ private ref class WriteOnlyArray<T, 1>
 
 |名前|説明|
 |----------|-----------------|
-
-|[Writeonlyarray::begin](#begin)|配列の最初の要素を指す反復子 |。|[Writeonlyarray::data](#data)|データ バッファーへのポインター |。|[Writeonlyarray::end](#end)|1 つ後ろの配列の最後の要素を指す反復子 |。|[Writeonlyarray::fastpass](#fastpass)|配列が、システムによって透過的に実行される最適化です FastPass 機構を使用できるかどうかを示します。 コードでこれを使用しません | |[Writeonlyarray::length](#length)|配列の要素の数を返します |。|[Writeonlyarray::set](#set)|指定した要素を指定した値に設定します |。
+|[Writeonlyarray::begin](#begin)|配列内の最初の要素を指す反復子。|
+|[Writeonlyarray::data](#data)|データ バッファーへのポインター。|
+|[Writeonlyarray::end](#end)|配列内の最後の要素の 1 つ後ろを指す反復子。|
+|[Writeonlyarray::fastpass](#fastpass)|配列が FastPass 機構を使用できるかどうかを示します。この機構は、システムで透過的に実行される最適化です。 コード内でこのプロパティを使用しないでください。|
+|[Writeonlyarray::length](#length)|配列内の要素の数を返します。|
+|[Writeonlyarray::set](#set)|指定した要素を指定した値に設定します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

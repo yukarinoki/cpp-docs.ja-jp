@@ -28,12 +28,12 @@ helpviewer_keywords:
 - file pointers [C++]
 - seek file pointers
 ms.assetid: f6bb1f8b-891c-426e-9e14-0e7e5c62df70
-ms.openlocfilehash: 15ff6e4a70069845369acdc3ffd153c48f228201
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5f775eab370f8f4a3b6a5c1d7f0918ec7efa3ff
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447542"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331088"
 ---
 # <a name="fseek-fseeki64"></a>fseek、_fseeki64
 
@@ -75,9 +75,9 @@ int _fseeki64(
 
 |配信元の値|説明|
 |-|-|
-**SEEK_CUR**|ファイル ポインターの現在の位置。
-**オフセット**|EOF (ファイル終端)。
-**SEEK_SET**|ファイルの先頭。
+| **SEEK_CUR** | ファイル ポインターの現在の位置。 |
+| **オフセット** | EOF (ファイル終端)。 |
+| **SEEK_SET** | ファイルの先頭。 |
 
 使用することができます**fseek**と **_fseeki64**ファイル内の任意の場所にポインターを移動します。 ポインターは、ファイルの末尾を越えて配置することもできます。 **fseek**と **_fseeki64** 、ファイルの終わりインジケーターをクリアし、前のすべての効果が無視されます[ungetc](ungetc-ungetwc.md)に対する*ストリーム*します。
 

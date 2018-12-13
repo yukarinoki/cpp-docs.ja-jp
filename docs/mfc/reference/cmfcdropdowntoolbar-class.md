@@ -1,6 +1,6 @@
 ---
 title: CMFCDropDownToolBar クラス
-ms.date: 10/188/2018
+ms.date: 11/19/2018
 f1_keywords:
 - CMFCDropDownToolBar
 - AFXDROPDOWNTOOLBAR/CMFCDropDownToolBar
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCDropDownToolBar [MFC], OnSendCommand
 - CMFCDropDownToolBar [MFC], OnUpdateCmdUI
 ms.assetid: 78818ec5-83ce-42fa-a0d4-2d9d5ecc8770
-ms.openlocfilehash: ccbdd69baea104f306cfdca69efb46985ee97b91
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9c5115d2453f21d83eda39950ac45a0290e9bfa8
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582001"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176940"
 ---
 # <a name="cmfcdropdowntoolbar-class"></a>CMFCDropDownToolBar クラス
 
@@ -60,7 +60,7 @@ A`CMFCDropDownToolBar`オブジェクトは、ポップアップ メニューの
 
 次の図は、`CMFCDropDownToolBar`オブジェクト。
 
-![CMFCDropDownToolbar の例](../../mfc/reference/media/cmfcdropdown.png "cmfcdropdown")
+![CMFCDropDownToolbar の例](../../mfc/reference/media/cmfcdropdown.png "CMFCDropDownToolbar の例")
 
 作成する、`CMFCDropDownToolBar`オブジェクトの通常のツールバーを作成すると同じ方法 (を参照してください[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md))。
 

@@ -200,12 +200,12 @@ helpviewer_keywords:
 - std::count_if [C++]
 - std::partition_copy [C++]
 - std::swap [C++]
-ms.openlocfilehash: fb928edf603a5eec2acf1ac53bcd73360a876735
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5fdb5a89bc475cf2d6a358768b84b8542da5e0e8
+ms.sourcegitcommit: d94714522428834a02ede6e6884572f0f6ca9824
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630966"
+ms.lasthandoff: 11/13/2018
+ms.locfileid: "51597565"
 ---
 # <a name="ltalgorithmgt-functions"></a>&lt;algorithm&gt; 関数
 
@@ -422,7 +422,6 @@ bool binary_search(
     ForwardIterator last,
     const Type& value,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -1012,27 +1011,26 @@ using namespace std;
 
 int main()
 {
-    vector<int> v1 { 0, 5, 10, 15, 20, 25 };
-    vector<int> v2 { 0, 5, 10, 15, 20, 25 };
-    vector<int> v3 { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
+    vector<int> v1 { 0, 5, 10, 15, 20, 25 };
+    vector<int> v2 { 0, 5, 10, 15, 20, 25 };
+    vector<int> v3 { 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50 };
 
-    // Using range-and-a-half equal:
-    bool b = equal(v1.begin(), v1.end(), v2.begin());
-    cout << "v1 and v2 are equal: "
-       << b << endl; // true, as expected
+    // Using range-and-a-half equal:
+    bool b = equal(v1.begin(), v1.end(), v2.begin());
+    cout << "v1 and v2 are equal: "
+       << b << endl; // true, as expected
 
-    b = equal(v1.begin(), v1.end(), v3.begin());
-    cout << "v1 and v3 are equal: "
-       << b << endl; // true, surprisingly
+    b = equal(v1.begin(), v1.end(), v3.begin());
+    cout << "v1 and v3 are equal: "
+       << b << endl; // true, surprisingly
 
-    // Using dual-range equal:
-    b = equal(v1.begin(), v1.end(), v3.begin(), v3.end());
-    cout << "v1 and v3 are equal with dual-range overload: "
-       << b << endl; // false
+    // Using dual-range equal:
+    b = equal(v1.begin(), v1.end(), v3.begin(), v3.end());
+    cout << "v1 and v3 are equal with dual-range overload: "
+       << b << endl; // false
 
-    return 0;
+    return 0;
 }
-
 ```
 
 ## <a name="equal_range"></a>  equal_range
@@ -1199,7 +1197,6 @@ int main()
     equal_range_demo<string>( v2, "fred" );
     equal_range_demo<string>( v2, "fred", shorter_than, "shorter_than" );
 }
-
 ```
 
 ## <a name="fill"></a>  fill
@@ -1347,7 +1344,6 @@ int main()
         cout << w << " ";
     cout << ")" << endl;
 }
-
 ```
 
 ## <a name="find"></a>  find
@@ -1788,7 +1784,6 @@ int main()
     find_if_print_result(v.begin(), v.end(), // lambda
         [](int i){ return ((i % 2) == 0); }, "even integer");
 }
-
 ```
 
 ## <a name="find_if_not"></a>  find_if_not
@@ -2118,7 +2113,6 @@ int main()
     generate_n(dq.begin(), elemcount, [&](){ return dist(engine); });
     print("deque dq is: ", dq);
 }
-
 ```
 
 ## <a name="includes"></a>  includes
@@ -2365,7 +2359,7 @@ void inplace_merge(
 
 `inplace_merge` アルゴリズムを適用するための事前条件として、それぞれの並べ替えられた連続する範囲は、結合された範囲の並べ替えにアルゴリズムが使用したのと同じ順序の基準に従って並べ替えられている必要があります。 各範囲内の要素の相対順序は維持されるため、操作は安定しています。 両方のソース範囲に同等の要素がある場合は、結合された範囲では、最初の範囲の要素が、2 番目の範囲の要素よりも前に置かれます。
 
-複雑さは、アルゴリズムがメモリを一時バッファーに割り当てる際に使用可能なメモリによって異なります。 最良の場合は線形的で十分なメモリを使用できる場合 (* - 姓 *) - 1 比較があります補助メモリが使用できない場合、最悪の場合は、 *N*ログ *(N)* ここで、  *。N* = (* - 姓*)。
+複雑さは、アルゴリズムがメモリを一時バッファーに割り当てる際に使用可能なメモリによって異なります。 最良の場合は線形的で十分なメモリを使用できる場合 (*最後* - *最初*) - 1 比較があります補助メモリが使用できない場合、最悪の場合は、 *N*。ログ (*N*) ここで、 *N* = (*最後* - *最初*)。
 
 ### <a name="example"></a>例
 
@@ -2705,7 +2699,6 @@ int main()
 
     return 0;
 }
-
 ```
 
 ## <a name="is_sorted"></a>  is_sorted
@@ -2788,7 +2781,6 @@ ForwardIterator is_sorted_until(
 ```cpp
 template<class ForwardIterator1, class ForwardIterator2>
 void iter_swap( ForwardIterator1 left, ForwardIterator2 right );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -2957,7 +2949,6 @@ bool lexicographical_compare(
     InputIterator2  first2,
     InputIterator2 Last2,
     BinaryPredicate  comp  );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -3103,7 +3094,6 @@ ForwardIterator lower_bound(
     ForwardIterator last,
     const Type& value,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -3224,7 +3214,6 @@ int main()
     cout << "The lower_bound in v3 for the element with a value of 3 is: "
         << *Result << "." << endl;
 }
-
 ```
 
 ## <a name="make_heap"></a>  make_heap
@@ -3242,7 +3231,6 @@ void make_heap(
     RandomAccessIterator first,
     RandomAccessIterator last,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -3533,7 +3521,6 @@ constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator las
 
 template<class ForwardIterator, class BinaryPredicate>
 constexpr ForwardIterator max_element(ForwardIterator first, ForwardIterator last, BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -3678,7 +3665,6 @@ OutputIterator merge(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -3717,7 +3703,7 @@ OutputIterator merge(
 
 入力反復子の値の型は、小なり (less-than) 比較ができる必要があります。これにより、2 つの要素が与えられたときに、それらが等しいか (いずれも他方より小さくない)、または一方が他方より小さいかを判断できます。 この結果、等価でない複数の要素間で順序が付けられます。 両方のソース範囲に同等の要素がある場合は、ターゲット範囲では、最初の範囲の要素が、2 番目のソース範囲の要素よりも前に置かれます。
 
-アルゴリズムの複雑さは線形的で最大で (* last1 - first1 *)-(* last2 - first2*) - 1 の比較。
+アルゴリズムの複雑さは線形的で最大で (*last1* - *first1*)-(*last2* - *first2*) - 1 の比較。
 
 [list クラス](../standard-library/list-class.md)には、2 つのリストの要素を結合するメンバー関数 "merge" が用意されています。
 
@@ -3852,7 +3838,6 @@ template<class Type, class Pr>
 constexpr Type min(
     initializer_list<Type>,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -4057,7 +4042,6 @@ constexpr ForwardIterator min_element(
     ForwardIterator first,
     ForwardIterator last,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -4259,7 +4243,6 @@ template<class Type, class BinaryPredicate>
 constexpr pair<Type&, Type&> minmax(
     initializer_list<Type>,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -4450,7 +4433,6 @@ C++14 vec_3 v. modified vec_4 with pred: mismatch. Left iterator at 60 right ite
 C++14: vec_1 and list_1 are a mismatch: false
 Press a key
 */
-
 ```
 
 ## <a name="alg_move"></a>  &lt;alg&gt; move
@@ -4490,7 +4472,6 @@ template<class BidirectionalIterator1, class BidirectionalIterator2>
        BidirectionalIterator1 first,
        BidirectionalIterator1 last,
        BidirectionalIterator2 destEnd);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -4520,7 +4501,6 @@ bool next_permutation(BidirectionalIterator first, BidirectionalIterator last);
 
 template<class BidirectionalIterator, class BinaryPredicate>
 bool next_permutation(BidirectionalIterator first, BidirectionalIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -4695,7 +4675,6 @@ void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomA
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void nth_element( RandomAccessIterator first, RandomAccessIterator _Nth, RandomAccessIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -4833,7 +4812,6 @@ void partial_sort(
     RandomAccessIterator sortEnd,
     RandomAccessIterator last
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -5065,7 +5043,6 @@ BidirectionalIterator partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -5207,7 +5184,6 @@ void pop_heap( RandomAccessIterator first, RandomAccessIterator last);
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void pop_heap(RandomAccessIterator first, RandomAccessIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -5316,7 +5292,6 @@ bool prev_permutation(
     BidirectionalIterator first,
     BidirectionalIterator last,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -5486,7 +5461,6 @@ void push_heap( RandomAccessIterator first, RandomAccessIterator last );
 
 template<class RandomAccessIterator, class BinaryPredicate>
 void push_heap( RandomAccessIterator first, RandomAccessIterator last, BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -5596,7 +5570,6 @@ Std::random_shuffle() 関数は非推奨、置き換え[std::shuffle](../standar
 ```cpp
 template<class ForwardIterator, class Type>
 ForwardIterator remove(ForwardIterator first, ForwardIterator last, const Type& val);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -5679,7 +5652,6 @@ int main() {
 ```cpp
 template<class InputIterator, class OutputIterator, class Type>
 OutputIterator remove_copy(InputIterator first, InputIterator last, OutputIterator result, const Type& val);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -5762,7 +5734,6 @@ int main() {
 ```cpp
 template<class InputIterator, class OutputIterator, class Predicate>
 OutputIterator remove_copy_if(InputIterator first, InputIterator Last, OutputIterator result, Predicate pred);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -5857,7 +5828,6 @@ ForwardIterator remove_if(
     ForwardIterator first,
     ForwardIterator last,
     Predicate pred);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -6126,7 +6096,6 @@ OutputIterator replace_copy_if(
     OutputIterator result,
     Predicate pred,
     const Type& val);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -6235,7 +6204,6 @@ void replace_if(
     ForwardIterator last,
     Predicate pred,
     const Type& val);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -6315,7 +6283,6 @@ int main() {
 ```cpp
 template<class BidirectionalIterator>
 void reverse(BidirectionalIterator first, BidirectionalIterator last);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -6382,7 +6349,6 @@ OutputIterator reverse_copy(
     BidirectionalIterator first,
     BidirectionalIterator Last,
     OutputIterator result);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -6454,7 +6420,6 @@ void rotate(
     ForwardIterator first,
     ForwardIterator middle,
     ForwardIterator last);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -6560,7 +6525,6 @@ OutputIterator rotate_copy(
     ForwardIterator middle,
     ForwardIterator last,
     OutputIterator result );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -6664,7 +6628,6 @@ ForwardIterator1 search(
     ForwardIterator2 first2,
     ForwardIterator2 last2
     Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -6813,7 +6776,6 @@ ForwardIterator1 search_n(
     Diff2 count,
     const Type& val,
     BinaryPredicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -7302,7 +7264,6 @@ OutputIterator set_symmetric_difference(
     InputIterator2 last2,
     OutputIterator result,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -7640,7 +7601,7 @@ int main()
 }
 ```
 
-## <a name="shuffle"></a>  std::shuffle
+## <a name="shuffle"></a>  シャッフル
 
 乱数ジェネレーターを使用して、指定された範囲の要素をシャッフル (再配置) します。
 
@@ -7681,7 +7642,6 @@ template<class RandomAccessIterator, class Predicate>
       RandomAccessIterator first,
       RandomAccessIterator last,
       Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -7877,7 +7837,6 @@ BidirectionalIterator stable_partition(
     BidirectionalIterator first,
     BidirectionalIterator last,
     Predicate pred );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -7959,7 +7918,6 @@ void stable_sort(
     BidirectionalIterator first,
     BidirectionalIterator last,
     BinaryPredicate comp );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -8061,7 +8019,6 @@ template<class Type, size_t N>
    void swap(
       Type (& left)[N],
       Type (& right)[N]);\r
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -8142,7 +8099,6 @@ ForwardIterator2 swap_ranges(
    ForwardIterator1 first1,
    ForwardIterator1 last1,
    ForwardIterator2 first2 );
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -8379,7 +8335,6 @@ template<class ForwardIterator, class Predicate>
       ForwardIterator first,
       ForwardIterator last,
       Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -8632,7 +8587,6 @@ template<class ForwardIterator, class Type, class Predicate>
       ForwardIterator last,
       const Type& value,
       Predicate comp);
-
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -8753,7 +8707,6 @@ int main()
     cout << "The upper_bound in v3 for the element with a value of 3 is: "
         << *Result << "." << endl;
 }
-
 ```
 
 ## <a name="see-also"></a>関連項目

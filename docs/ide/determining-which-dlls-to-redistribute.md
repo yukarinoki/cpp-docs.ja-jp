@@ -1,12 +1,6 @@
 ---
-title: 再配布する DLL の決定 | Microsoft Docs
-ms.custom: ''
+title: 再配布する DLL の決定
 ms.date: 06/08/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - redistributing DLLs
 - DLLs [C++], redistributing
@@ -14,16 +8,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 2a7b52e2c4d45d92f10b535b9d2d23b5a1e1a043
-ms.sourcegitcommit: 1c2e035f98fb55d9b3c08ec3bb562179a368d0d1
+ms.openlocfilehash: fdca832810312d2f36697da8fbaac539c5ce951c
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2018
-ms.locfileid: "35253868"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50452599"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>再配布する DLL の決定
 
@@ -52,13 +42,13 @@ Visual Studio に含まれているすべてのファイルを再配布するこ
 |vcruntime*version*.dll|ネイティブ コード用のランタイム ライブラリ|標準の C および C++ 言語の起動と終了サービスを使用するアプリケーション。|
 |vccorlib*version*.dll|マネージド コード用のランタイム ライブラリ。|マネージド コード用の C++ 言語サービスを使用するアプリケーション。|
 |msvcp*version*.dll および msvcp*version*_*dotnumber*.dll|ネイティブ コード用の C++ 標準ライブラリ。|[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)を使用するアプリケーション。|
-|concrt*version*.dll|ネイティブ コード用の同時実行ランタイム ライブラリ。|[同時実行ランタイム](../parallel/concrt/concurrency-runtime.md)を使用するアプリケーション。|
+|concrt*version*.dll|ネイティブ コード用のコンカレンシー ランタイム ライブラリ。|[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)を使用するアプリケーション。|
 |mfc*version*.dll|MFC (Microsoft Foundation Class) ライブラリ|[MFC ライブラリ](../mfc/mfc-desktop-applications.md)を使用するアプリケーション。|
 |mfc*version* *language*.dll|MFC (Microsoft Foundation Classes) ライブラリ リソース。|MFC 用の特定の言語リソースを使用するアプリケーション。|
 |mfc*version*u.dll|Unicode をサポートする MFC ライブラリ|[MFC ライブラリ](../mfc/mfc-desktop-applications.md)を使用し、Unicode のサポートを必要とするアプリケーション。|
-|mfcmifc80.dll|MFC マネージ インターフェイス ライブラリ|[MFC ライブラリ](../mfc/mfc-desktop-applications.md)と [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)を使用するアプリケーション。|
-|mfcm*version*.dll|MFC マネージ ライブラリ|[MFC ライブラリ](../mfc/mfc-desktop-applications.md)と [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)を使用するアプリケーション。|
-|mfcm*version*u.dll|Unicode をサポートする MFC マネージ ライブラリ|[MFC ライブラリ](../mfc/mfc-desktop-applications.md)と [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)を使用し、Unicode のサポートを必要とするアプリケーション。|
+|mfcmifc80.dll|MFC マネージド インターフェイス ライブラリ|[MFC ライブラリ](../mfc/mfc-desktop-applications.md)と [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)を使用するアプリケーション。|
+|mfcm*version*.dll|MFC マネージド ライブラリ|[MFC ライブラリ](../mfc/mfc-desktop-applications.md)と [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)を使用するアプリケーション。|
+|mfcm*version*u.dll|Unicode をサポートする MFC マネージド ライブラリ|[MFC ライブラリ](../mfc/mfc-desktop-applications.md)と [Windows フォーム コントロール](/dotnet/framework/winforms/controls/index)を使用し、Unicode のサポートを必要とするアプリケーション。|
 |vcamp*version*.dll|ネイティブ コード用の AMP ライブラリ。|[C++ AMP ライブラリ](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md) コードを使用するアプリケーション。|
 |vcomp*version*.dll|ネイティブ コード用の OpenMP ライブラリ。|[C++ OpenMP ライブラリ](../parallel/openmp/openmp-in-visual-cpp.md) コードを使用するアプリケーション。|
 

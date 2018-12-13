@@ -12,16 +12,16 @@ helpviewer_keywords:
 - IDBCreateCommandImpl class
 - CreateCommand method
 ms.assetid: eac4755e-1668-42e1-958e-a35620c385ae
-ms.openlocfilehash: 2ac243f5e2c91636183c31640b50fa7bef95254d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b8c713bcf00cd68f9621b8c112d4d6fd27aec01
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50459021"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556402"
 ---
 # <a name="idbcreatecommandimpl-class"></a>IDBCreateCommandImpl クラス
 
-実装を提供、 [IDBCreateCommand](/previous-versions/windows/desktop/ms711625)インターフェイス。
+実装を提供、 [IDBCreateCommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms711625(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -62,14 +62,14 @@ class ATL_NO_VTABLE IDBCreateCommandImpl
 ### <a name="syntax"></a>構文
 
 ```cpp
-STDMETHOD(CreateCommand)(IUnknown * pUnkOuter, 
-   REFIID riid, 
+STDMETHOD(CreateCommand)(IUnknown * pUnkOuter,
+   REFIID riid,
    IUnknown ** ppvCommand);
 ```
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[idbcreatecommand::createcommand](/previous-versions/windows/desktop/ms709772)で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[idbcreatecommand::createcommand](https://docs.microsoft.com/previous-versions/windows/desktop/ms709772(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 いくつかのパラメーターに対応*OLE DB プログラマーズ リファレンス*で説明されている別の名前のパラメーター `IDBCreateCommand::CreateCommand`:
 

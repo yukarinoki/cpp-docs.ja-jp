@@ -4,7 +4,7 @@
 ## [2015 と 2017 の間の C++ バイナリの互換性](binary-compat-2015-2017.md)
 ## [アップグレードに関する潜在的な問題 (Visual C++) の概要](overview-of-potential-upgrade-issues-visual-cpp.md)
 ## [サード パーティ ライブラリの移植](porting-third-party-libraries.md)
-## [データ アプリケーションの移植](porting-data-applications.md)
+## [データ アプリケーションの移植](../data/data-access-programming-mfc-atl.md)
 ## [移植およびアップグレード: 例とケース スタディ](porting-and-upgrading-examples-and-case-studies.md)
 ### [移植のガイド: MFC Scribble](porting-guide-mfc-scribble.md)
 ### [移植のガイド: COM Spy](porting-guide-com-spy.md)

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Microsoft::WRL::RuntimeClass::RuntimeClass, constructor
 - Microsoft::WRL::RuntimeClass::~RuntimeClass, destructor
 ms.assetid: d52f9d1a-98e5-41f2-a143-8fb629dd0727
-ms.openlocfilehash: 23b7d0237562324ddae2207435b2071e8d66e572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb3cd3447b500517150f0c7f50a5431730b414b
+ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596821"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281962"
 ---
 # <a name="runtimeclass-class"></a>RuntimeClass クラス
 
@@ -52,7 +52,7 @@ template <unsigned int classFlags, typename ...TInterfaces> class RuntimeClass;
 ### <a name="parameters"></a>パラメーター
 
 *classFlags*<br/>
-省略可能なパラメーター。 1 つ以上を組み合わせた[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。 `__WRL_CONFIGURATION_LEGACY__` ClassFlags プロジェクト内のすべてのランタイム クラスの既定値を変更するマクロを定義することができます。 定義されている場合、RuntimeClass インスタンスは既定でアジャイルです。 定義されていないときに、RuntimeClass インスタンスは、既定でアジャイルです。 あいまいさを避けるために指定常に、`Microsoft::WRL::FtmBase`で`TInterfaces`または`RuntimeClassType::InhibitFtmBase`します。 InhibitFtmBase と FtmBase はどちらもオブジェクトを使用している場合は、アジャイルになります。
+省略可能なパラメーターです。 1 つ以上を組み合わせた[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)列挙値。 `__WRL_CONFIGURATION_LEGACY__` ClassFlags プロジェクト内のすべてのランタイム クラスの既定値を変更するマクロを定義することができます。 定義されている場合、RuntimeClass インスタンスは既定でアジャイルです。 定義されていないときに、RuntimeClass インスタンスは、既定でアジャイルです。 あいまいさを避けるために指定常に、`Microsoft::WRL::FtmBase`で`TInterfaces`または`RuntimeClassType::InhibitFtmBase`します。 InhibitFtmBase と FtmBase はどちらもオブジェクトを使用している場合は、アジャイルになります。
 
 *TInterfaces*<br/>
 インターフェイスの一覧を超えるオブジェクトが実装されて`IUnknown`、`IInspectable`または他のインターフェイスによって制御される[RuntimeClassType](../windows/runtimeclasstype-enumeration.md)します。 特にから派生するその他のクラス リストが`Microsoft::WRL::FtmBase`アジャイル オブジェクトを作成して実装するために、`IMarshal`します。

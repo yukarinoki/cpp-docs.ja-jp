@@ -80,12 +80,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComControlBase class
 ms.assetid: 3d1bf022-acf2-4092-8283-ff8cee6332f3
-ms.openlocfilehash: fa7562f49834bf71da6bd095aec19360a43f1538
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: def8334cf0ed9b6b2ee821e1e0f1a717d90f2163
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447958"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694583"
 ---
 # <a name="ccomcontrolbase-class"></a>CComControlBase クラス
 
@@ -1547,7 +1547,7 @@ TRUE の場合は、呼び出し元のコントロールにキーボード フ�
 
 ### <a name="remarks"></a>Remarks
 
-ウィンドウを持つコントロール、Windows API 関数の[SetFocus](https://msdn.microsoft.com/library/windows/desktop/ms646312)が呼び出されます。 ウィンドウなしのコントロールの[IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus)が呼び出されます。 この呼び出しでは、ウィンドウなしのコントロールがキーボード フォーカスを取得やウィンドウのメッセージに応答できます。
+ウィンドウを持つコントロール、Windows API 関数の[SetFocus](/windows/desktop/api/winuser/nf-winuser-setfocus)が呼び出されます。 ウィンドウなしのコントロールの[IOleInPlaceSiteWindowless::SetFocus](/windows/desktop/api/ocidl/nf-ocidl-ioleinplacesitewindowless-setfocus)が呼び出されます。 この呼び出しでは、ウィンドウなしのコントロールがキーボード フォーカスを取得やウィンドウのメッセージに応答できます。
 
 ##  <a name="setdirty"></a>  CComControlBase::SetDirty
 

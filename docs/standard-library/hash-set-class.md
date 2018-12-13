@@ -86,12 +86,12 @@ helpviewer_keywords:
 - stdext::hash_set::upper_bound
 - stdext::hash_set::value_comp
 ms.assetid: c765c06e-cbb6-48c2-93ca-d15468eb28d7
-ms.openlocfilehash: 12f177887552cb14edba6ae8cfeeab1abe24a45b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7d5df87dc6c8529d18b9f5fb960148c7362129a
+ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657510"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51678575"
 ---
 # <a name="hashset-class"></a>hash_set クラス
 
@@ -565,7 +565,7 @@ hash_set に一致するキーを持つ要素が含まれていない場合は 0
 
 メンバー関数は、次の範囲内の要素の数を返します。
 
-[ **lower_bound** (_ *Key* ), **upper_bound** (\_ *Key* ) )
+\[ lower_bound (*キー*)、upper_bound (*キー*))。
 
 ### <a name="example"></a>例
 
@@ -1534,7 +1534,7 @@ key_compare key_comp() const;
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 これは、並べ替え順で `_xVal` が `_yVal` に先行しかつ等しくない場合に **true** を返します。
 
@@ -1875,7 +1875,7 @@ int main( )
         << *hs1_rIter << "." << endl;
 
    // begin can be used to start an iteration
-   // throught a hash_set in a forward order
+   // through a hash_set in a forward order
    cout << "The hash_set is: ";
    for ( hs1_Iter = hs1.begin( ) ; hs1_Iter != hs1.end( );
          hs1_Iter++ )
@@ -1883,7 +1883,7 @@ int main( )
    cout << endl;
 
    // rbegin can be used to start an iteration
-   // throught a hash_set in a reverse order
+   // through a hash_set in a reverse order
    cout << "The reversed hash_set is: ";
    for ( hs1_rIter = hs1.rbegin( ) ; hs1_rIter != hs1.rend( );
          hs1_rIter++ )
@@ -2010,7 +2010,7 @@ int main( )
         << *hs1_rIter << "." << endl;
 
    // end can be used to terminate an iteration
-   // throught a hash_set in a forward order
+   // through a hash_set in a forward order
    cout << "The hash_set is: ";
    for ( hs1_Iter = hs1.begin( ) ; hs1_Iter != hs1.end( );
          hs1_Iter++ )
@@ -2296,7 +2296,7 @@ value_compare value_comp() const;
 
 格納されているオブジェクトは以下のメンバー関数を定義します。
 
-**bool operator**( **const Key&** _ *xVal*, **const Key&** \_ `yVal`);
+`bool operator( const Key& _xVal, const Key& _yVal );`
 
 これは、並べ替え順で `_xVal` が `_yVal` に先行しかつ等しくない場合に **true** を返します。
 

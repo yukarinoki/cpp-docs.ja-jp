@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 2294890ad18d88efaf4d5dd54cad319565a23e02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481446"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178793"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd クラス
 
@@ -844,7 +844,7 @@ virtual BOOL NegotiateBorderSpace(
 - `borderSet` = 3
 
 *lpRectBorder*<br/>
-ポインターを[RECT](../../mfc/reference/rect-structure1.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)罫線の座標を指定するオブジェクト。
+ポインターを[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)罫線の座標を指定するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -902,7 +902,7 @@ virtual BOOL OnCreateClient(
 ### <a name="parameters"></a>パラメーター
 
 *lpc*<br/>
-Windows へのポインター [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)構造体。
+Windows へのポインター [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)構造体。
 
 *pContext*<br/>
 ポインターを[CCreateContext](../../mfc/reference/ccreatecontext-structure.md)構造体。
@@ -1190,7 +1190,7 @@ void SetProgressBarState(TBPFLAG tbpFlags);
 ### <a name="parameters"></a>パラメーター
 
 *tbpFlags*<br/>
-進捗状況ボタンの現在の状態を制御するフラグ。 すべての状態は相互に排他的であるため、次のいずれかにのみフラグを指定: TBPF_NOPROGRESS、TBPF_INDETERMINATE、TBPF_NORMAL、TBPF_ERROR、TBPF_PAUSED します。
+進捗状況ボタンの現在の状態を制御するフラグ。 すべての状態は相互に排他的であるため、次のフラグの 1 つだけを指定します。TBPF_NOPROGRESS、TBPF_INDETERMINATE、TBPF_NORMAL、TBPF_ERROR、TBPF_PAUSED します。
 
 ### <a name="remarks"></a>Remarks
 

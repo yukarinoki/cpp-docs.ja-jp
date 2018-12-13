@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrivateObjectSecurityDesc class
 ms.assetid: 2c4bbb13-bf99-4833-912a-197f6815bb5d
-ms.openlocfilehash: 6b8f84966ed58c5b031518bdf5e9f42cf7cedb48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2617113f2805f8d1c56e7fa6cbebfe669709c100
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429219"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694037"
 ---
 # <a name="cprivateobjectsecuritydesc-class"></a>CPrivateObjectSecurityDesc クラス
 
@@ -101,7 +101,7 @@ bool ConvertToAutoInherit(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは随意アクセス制御の Ace が (DACL) を一覧表示するかどうかを決定しようと現在のセキュリティ記述子のシステム アクセス制御リスト (SACL) は、親のセキュリティ記述子から継承されました。 呼び出す、 [ConvertToAutoInheritPrivateObjectSecurity](https://msdn.microsoft.com/library/windows/desktop/aa376403)関数。
+このメソッドは随意アクセス制御の Ace が (DACL) を一覧表示するかどうかを決定しようと現在のセキュリティ記述子のシステム アクセス制御リスト (SACL) は、親のセキュリティ記述子から継承されました。 呼び出す、 [ConvertToAutoInheritPrivateObjectSecurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-converttoautoinheritprivateobjectsecurity)関数。
 
 ##  <a name="cprivateobjectsecuritydesc"></a>  CPrivateObjectSecurityDesc::CPrivateObjectSecurityDesc
 
@@ -181,7 +181,7 @@ bool Create(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドを呼び出す[CreatePrivateObjectSercurity](https://msdn.microsoft.com/library/windows/desktop/aa376405)または[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)します。
+このメソッドを呼び出す[CreatePrivateObjectSercurity](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-createprivateobjectsecurity)または[CreatePrivateObjectSecurityEx](https://msdn.microsoft.com/library/windows/desktop/aa446581)します。
 
 2 番目のメソッドは、新しいオブジェクトのオブジェクトの種類の GUID を指定するか、Ace が継承される方法を制御するを許可します。
 

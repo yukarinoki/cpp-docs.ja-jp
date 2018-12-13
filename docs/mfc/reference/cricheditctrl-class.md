@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: e8575c2eb814bd7fb3cb307654b0e3622506c6c1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505418"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178994"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl クラス
 
@@ -427,7 +427,7 @@ virtual BOOL Create(
 編集コントロールのスタイルを指定します。 リストされているウィンドウのスタイルの組み合わせを適用、**解説**以下のセクションと[コントロールのスタイルを編集](/windows/desktop/Controls/edit-control-styles)Windows SDK で説明します。
 
 *rect*<br/>
-編集コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。
+編集コントロールのサイズと位置を指定します。 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体。
 
 *pParentWnd*<br/>
 編集コントロールの親ウィンドウを指定します (多くの場合、 [CDialog](../../mfc/reference/cdialog-class.md))。 NULL は指定できません。
@@ -552,7 +552,7 @@ BOOL DisplayBand(LPRECT pDisplayRect);
 ### <a name="parameters"></a>パラメーター
 
 *pDisplayRect*<br/>
-ポインターを[RECT](../../mfc/reference/rect-structure1.md)または[CRect](../../atl-mfc-shared/reference/crect-class.md)テキストを表示するデバイスの領域を指定するオブジェクト。
+ポインターを[RECT](/windows/desktop/api/windef/ns-windef-tagrect)または[CRect](../../atl-mfc-shared/reference/crect-class.md)テキストを表示するデバイスの領域を指定するオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -973,7 +973,7 @@ void GetRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)またはへのポインターを[RECT](../../mfc/reference/rect-structure1.md)この書式指定の四角形を受信する`CRichEditCtrl`オブジェクト。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)またはへのポインターを[RECT](/windows/desktop/api/windef/ns-windef-tagrect)この書式指定の四角形を受信する`CRichEditCtrl`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1855,7 +1855,7 @@ void SetRect(LPCRECT lpRect);
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-[CRect](../../atl-mfc-shared/reference/crect-class.md)またはへのポインターを[RECT](../../mfc/reference/rect-structure1.md)書式設定の四角形の新しい境界を示します。
+[CRect](../../atl-mfc-shared/reference/crect-class.md)またはへのポインターを[RECT](/windows/desktop/api/windef/ns-windef-tagrect)書式設定の四角形の新しい境界を示します。
 
 ### <a name="remarks"></a>Remarks
 

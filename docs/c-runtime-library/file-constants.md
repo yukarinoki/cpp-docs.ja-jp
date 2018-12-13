@@ -1,10 +1,6 @@
 ---
-title: ファイル定数 | Microsoft Docs
-ms.custom: ''
+title: ファイル定数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - _O_EXCL
 - _O_RDWR
@@ -13,8 +9,6 @@ f1_keywords:
 - _O_TRUNC
 - _O_CREAT
 - _O_WRONLY
-dev_langs:
-- C++
 helpviewer_keywords:
 - _O_RDWR constant
 - O_EXCL constant
@@ -31,16 +25,12 @@ helpviewer_keywords:
 - O_RDONLY constant
 - _O_WRONLY constant
 ms.assetid: c8fa5548-9ac2-4217-801d-eb45e86f2fa4
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: e026de7b18d6809251e49f71d382c741f62be512
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 672297b2a1d6466f28a7addf74b8d88e2460b15e
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028971"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51517586"
 ---
 # <a name="file-constants"></a>ファイル定数
 
@@ -49,7 +39,6 @@ ms.locfileid: "46028971"
 ```
 
 #include <fcntl.h>
-
 ```
 
 ## <a name="remarks"></a>コメント

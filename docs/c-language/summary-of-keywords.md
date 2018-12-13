@@ -1,27 +1,18 @@
 ---
-title: キーワードの概要 | Microsoft Docs
-ms.custom: ''
+title: キーワードの概要
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 ms.assetid: 341d8297-03eb-4351-9ed0-138ec59b375c
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: aee2818ab5020d1dc810ade6b389be52daa632c0
-ms.sourcegitcommit: 92dbc4b9bf82fda96da80846c9cfcdba524035af
+ms.openlocfilehash: 780cb80a3c311239eed825101bb1d12be0b58a56
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43752341"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51325913"
 ---
 # <a name="summary-of-keywords"></a>キーワードの概要
 
-*keyword*: 次のいずれか<br/>
+*keyword*: 次のいずれか
+
 |||||
 |-|-|-|-|
 |**auto**|**double**|**int**|**struct**|

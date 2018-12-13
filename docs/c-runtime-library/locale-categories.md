@@ -1,10 +1,6 @@
 ---
-title: ロケールのカテゴリ | Microsoft Docs
-ms.custom: ''
+title: ロケールのカテゴリ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - LC_MAX
 - LC_MIN
@@ -14,8 +10,6 @@ f1_keywords:
 - LC_COLLATE
 - LC_CTYPE
 - LC_ALL
-dev_langs:
-- C++
 helpviewer_keywords:
 - LC_MIN constant
 - LC_MONETARY constant
@@ -27,16 +21,12 @@ helpviewer_keywords:
 - LC_NUMERIC constant
 - LC_COLLATE constant
 ms.assetid: 868f1493-fe5d-4722-acab-bfcd374a063a
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 12162e7d6eabfc60b3b4c028b990b720a502f516
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 4c46f4803c7b6ff226fc41ddce7f8e4493b0db40
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46077881"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51521356"
 ---
 # <a name="locale-categories"></a>ロケールのカテゴリ
 
@@ -45,7 +35,6 @@ ms.locfileid: "46077881"
 ```
 
 #include <locale.h>
-
 ```
 
 ## <a name="remarks"></a>コメント

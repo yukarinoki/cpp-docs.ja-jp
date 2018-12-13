@@ -1,23 +1,13 @@
 ---
-title: Visual C++ 移植とアップグレードのガイド | Microsoft Docs
-ms.custom: ''
+title: Visual C++  移植とアップグレードのガイド
 ms.date: 09/18/2018
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: ed94830a2a048f6706371ed7a88a706d7df04ab7
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
+ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079845"
+ms.lasthandoff: 11/12/2018
+ms.locfileid: "51556869"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++  移植とアップグレードのガイド
 
@@ -73,7 +63,7 @@ Visual Studio のビルド システムを使用していない場合は、MSBui
 
 3. コードを簡略化し、プログラムのパフォーマンスを向上させる新しい言語機能を使用するよう一部のコードを更新したり、最新ライブラリを使用し、最新の標準とベスト プラクティスに準拠するようコードを更新することが可能です。
 
-プロジェクトをアップグレードしてテストしたら、コードをさらに改善させることを検討し、コードの今後の方向性を計画したり、場合によってはプロジェクトのアーキテクチャについても再考します。 継続中の開発作業を受け取ることはありますか。 コードを他のプラットフォームで実行することは重要ですか。  その場合は、どのプラットフォームですか。  C++ は、相互運用性とクロス プラットフォーム開発を念頭に置いて設計された標準化された言語ですが、多くの Windows アプリケーションのコードは、Windows プラットフォームに強く結びついています。 Windows プラットフォームに一層結びついているこれらのパーツを分離するために、コードをリファクタリングしますか。
+プロジェクトをアップグレードしてテストしたら、コードをさらに改善させることを検討し、コードの今後の方向性を計画したり、場合によってはプロジェクトのアーキテクチャについても再考します。 継続中の開発作業を受け取ることはありますか。 コードを他のプラットフォームで実行することは重要ですか。  その場合は、どのプラットフォームですか。  C++ は、移植性とクロス プラットフォーム開発を念頭に置いて設計された標準言語ですが、多くの Windows アプリケーションのコードは、Windows プラットフォームに強く結びついています。 Windows プラットフォームに一層結びついているこれらのパーツを分離するために、コードをリファクタリングしますか。
 
 ユーザー インターフェイスはどうでしょうか。 MFC を使用している場合は、UI を更新することができます。 Feature Pack として 2008 年に導入された、新しい MFC 機能のいずれかを使用していますか。 アプリ全体を作成し直さずに、アプリに新しいルック アンド フィールを提供する場合は、MFC のリボン API を使用するか、MFC の新機能の一部を使用することを検討できます。
 

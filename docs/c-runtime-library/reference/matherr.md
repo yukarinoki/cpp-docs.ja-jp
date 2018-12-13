@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _matherr function
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
-ms.openlocfilehash: 980bf8a14ceace82a76562cc47d353f78dbca582
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445722"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329632"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,12 +73,12 @@ struct _exception
 
 |マクロ|説明|
 |-|-|
-**(_D)**|引数のドメイン エラー
-**_SING**|引数の特異点
-**_OVERFLOW**|オーバーフロー範囲エラー
-**_PLOSS**|有効桁の部分的な損失
-**_TLOSS**|基準値の合計が失われる
-**_UNDERFLOW**|結果が小さすぎて表現できない。 (この条件は現在サポートされていません。)
+| **(_D)** | 引数のドメイン エラー |
+| **_SING** | 引数の特異点 |
+| **_OVERFLOW** | オーバーフロー範囲エラー |
+| **_PLOSS** | 有効桁の部分的な損失 |
+| **_TLOSS** | 基準値の合計が失われる |
+| **_UNDERFLOW** | 結果が小さすぎて表現できない。 (この条件は現在サポートされていません。) |
 
 構造体のメンバー **name** は、エラーの原因となった関数の名前を含む null で終わる文字列へのポインターです。 構造体のメンバー **arg1** と **arg2** は、エラーの原因となった値を指定します。 格納されている 1 つの引数を指定すると、もしも**arg1**します。
 

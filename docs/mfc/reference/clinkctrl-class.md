@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: 79c6aa9f0448ed399554d634d48f666aaaf60566
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597562"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178046"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl クラス
 
@@ -134,7 +134,7 @@ virtual BOOL Create(DWORD dwStyle,
 リンク コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 参照してください[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)で、`Windows SDK`詳細についてはします。
 
 *rect*<br/>
-リンク コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。
+リンク コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体。
 
 *pParentWnd*<br/>
 リンク コントロールの親ウィンドウを指定します。 NULL は指定できません。
@@ -196,7 +196,7 @@ virtual BOOL CreateEx(DWORD  dwExStyle,
 リンク コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 詳細については、次を参照してください。[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)Windows SDK に含まれています。
 
 *rect*<br/>
-リンク コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](../../mfc/reference/rect-structure1.md)構造体。
+リンク コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造体。
 
 *pParentWnd*<br/>
 リンク コントロールの親ウィンドウを指定します。 NULL は指定できません。
@@ -245,7 +245,7 @@ int GetIdealSize(
 |パラメーター|説明|
 |---------------|-----------------|
 |*cxMaxWidth*|[in]ピクセル単位で、リンクの最大の幅。|
-|[out]\* *pSize*|Windows へのポインター[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)構造体。 このメソッドが戻るとき、 *cy*のメンバー、`SIZE`構造で指定されているリンクのテキスト幅の理想的なリンクのテキストの高さに含まれる*cxMaxWidth*します。 *Cx*構造体のメンバーには、実際に必要なリンクのテキストの幅が含まれています。|
+|[out]\* *pSize*|Windows へのポインター[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体。 このメソッドが戻るとき、 *cy*のメンバー、`SIZE`構造で指定されているリンクのテキスト幅の理想的なリンクのテキストの高さに含まれる*cxMaxWidth*します。 *Cx*構造体のメンバーには、実際に必要なリンクのテキストの幅が含まれています。|
 
 ### <a name="return-value"></a>戻り値
 

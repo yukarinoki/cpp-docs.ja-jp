@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tree controls [MFC], image lists
 - CTreeCtrl class [MFC], image lists
 ms.assetid: f560c4f2-20d2-4d28-ac33-4017e65fb0a6
-ms.openlocfilehash: 2b680ece131df434b65f02501f78f0cdb6507f08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e42e601fbf803f8ccfe359a10664149ac8f11086
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551763"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693246"
 ---
 # <a name="tree-control-image-lists"></a>ツリー コントロールのイメージ リスト
 
@@ -25,7 +25,7 @@ ms.locfileid: "50551763"
 
 指定することによって、**番号**値、イメージのインデックスではなく項目が再描画するまでに、選択または選択されていないイメージを指定することを遅らせることができます。 **番号**指示を送信して、インデックスのアプリケーションをクエリするツリー コントロール、 [TVN_GETDISPINFO](/windows/desktop/Controls/tvn-getdispinfo)通知メッセージ。
 
-[GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist)メンバー関数は、ツリー コントロールのイメージ リストのハンドルを取得します。 この関数は、イメージを一覧に追加する必要がある場合に便利です。 イメージ リストの詳細については、次を参照してください[を使用して CImageList](../mfc/using-cimagelist.md)、 [CImageList](../mfc/reference/cimagelist-class.md)で、 *MFC リファレンス*、および[イメージ リスト](https://msdn.microsoft.com/library/windows/desktop/bb761389)で、。Windows SDK。
+[GetImageList](../mfc/reference/ctreectrl-class.md#getimagelist)メンバー関数は、ツリー コントロールのイメージ リストのハンドルを取得します。 この関数は、イメージを一覧に追加する必要がある場合に便利です。 イメージ リストの詳細については、次を参照してください[を使用して CImageList](../mfc/using-cimagelist.md)、 [CImageList](../mfc/reference/cimagelist-class.md)で、 *MFC リファレンス*、および[イメージ リスト](/windows/desktop/controls/image-lists)で、。Windows SDK。
 
 ## <a name="see-also"></a>関連項目
 

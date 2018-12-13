@@ -1,27 +1,15 @@
 ---
-title: Visual C++ での CMake プロジェクト | Microsoft Docs
-ms.custom: ''
+title: Visual C++ での CMake プロジェクト
 ms.date: 10/18/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 93cfa14e943e277b5255eeb486491c831eba0da3
-ms.sourcegitcommit: 8c2de32e96c84d0147af3cce1e89e4f28707ff12
+ms.openlocfilehash: a4f7b3931dc8ed8bd7206c7f30ce4b65633f08b6
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50143732"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51518985"
 ---
 # <a name="cmake-projects-in-visual-c"></a>Visual C++ での CMake プロジェクト
 
@@ -50,8 +38,11 @@ Visual Studio 2017 以降、**CMake の Visual C++ ツール** コンポーネ�
 **[ファイル] > [開く] > [フォルダー]** を選んで、CMakeLists.txt ファイルを含むフォルダーを開くと、次の処理が行われます。
 
 - Visual Studio は、CMake スクリプトを表示および編集するためのコマンドを含む **[CMake]** メニュー項目を、メイン メニューに追加します。
+
 - **ソリューション エクスプローラー**に、フォルダーの構造とファイルが表示されます。
+
 - Visual Studio は CMake.exe を実行して、既定の "*構成*" (x86 デバッグ) 用の CMake キャッシュを生成します。 CMake コマンド ラインおよび CMake からの追加出力が、**出力ウィンドウ**に表示されます。  **Visual Studio 2017 バージョン 15.7 以降**: キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログで無効にできます。
+
 - Visual Studio は、IntelliSense、情報の参照、リファクタリングなどを有効にするためのソース ファイルのインデックス付けを、バックグラウンドで開始します。 ユーザーが作業を行っている間、Visual Studio は、エディターおよびディスク上での変更を監視し、インデックスとソースの同期を維持します。
 
 開くフォルダーに含まれる CMake プロジェクトの数は制限されていません。 Visual Studio は、ワークスペース内にあるすべての "ルート" CMakeLists.txt ファイルを検出して構成します。 CMake の操作 (構成、ビルド、デバッグ) および C++ の IntelliSense と参照は、ワークスペース内のすべての CMake プロジェクトが使用できます。
@@ -89,7 +80,9 @@ Visual Studio 2017 以降、**CMake の Visual C++ ツール** コンポーネ�
 CMake プロジェクトをビルドするには、次の選択肢があります。
 
 1. **[デバッグ]** ドロップダウンでターゲットを選び、**F5** キーを押すか、**[実行]** (緑色の三角形) ボタンをクリックします。 Visual Studio ソリューションと同じように、プロジェクトは最初に自動的にビルドされます。
+
 1. CMakeLists.txt を右クリックして、コンテキスト メニューから **[ビルド]** を選びます。 フォルダー構造内に複数のターゲットがある場合は、すべてをビルドするか、特定の 1 つのターゲットだけをビルドするかを選べます。
+
 1. メイン メニューから、**[ビルド] > [ソリューションのビルド]** (**F7** キーまたは **Ctrl + Shift + B** キー) を選びます。 **[全般]** ツール バーの **[スタートアップ アイテム]** ドロップダウンで CMake ターゲットが既に選択されていることを確認します。
 
 ![CMake のビルド メニュー コマンド](media/cmake-build-menu.png "CMake のビルド コマンド メニュー")
@@ -194,20 +187,25 @@ JSON の IntelliSense は、CMakeSettings.json ファイルの編集を支援し
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
     },
-
 ```
 
 1. **name**: C++ の構成ドロップダウンに表示される名前です。 このプロパティ値をマクロ `${name}` として使って、他のプロパティ値を指定することもできます。 例については、CMakeSettings.json の **buildRoot** の定義をご覧ください。
 
 1. **generator**: **-G** スイッチに対応し、使用するジェネレーターを指定します。 このプロパティをマクロ `${generator}` として使って、他のプロパティ値を指定することもできます。 現在、Visual Studio では次の CMake ジェネレーターがサポートされています。
 
-    - "Ninja"
-    - "Visual Studio 14 2015"
-    - "Visual Studio 14 2015 ARM"
-    - "Visual Studio 14 2015 Win64"
-    - "Visual Studio 15 2017"
-    - "Visual Studio 15 2017 ARM"
-    - "Visual Studio 15 2017 Win64"
+   - "Ninja"
+
+   - "Visual Studio 14 2015"
+
+   - "Visual Studio 14 2015 ARM"
+
+   - "Visual Studio 14 2015 Win64"
+
+   - "Visual Studio 15 2017"
+
+   - "Visual Studio 15 2017 ARM"
+
+   - "Visual Studio 15 2017 Win64"
 
 Ninja は柔軟性や機能ではなく、ビルド速度が速いことを目的に設計されているため、既定値としてこれが設定されます。 ただし、CMake プロジェクトによっては、Ninja を使うと正しくビルドできないことがあります。 そのような場合は、代わりに Visual Studio プロジェクトを生成するように CMake に指示できます。
 
@@ -244,11 +242,17 @@ CMakeSettings.json では、上記のすべてのプロパティにおいて環�
 このファイルの内部で組み込みマクロにアクセスすることもできます。
 
 - `${workspaceRoot}` – ワークスペース フォルダーの完全なパスを提供します
+
 - `${workspaceHash}` – ワークスペースの場所のハッシュです。現在のワークスペースの一意識別子を作成するのに便利です (たとえば、フォルダーのパスで使用する場合)
+
 - `${projectFile}` – ルート CMakeLists.txt ファイルの完全なパスです
+
 - `${projectDir}` – ルート CMakeLists.txt ファイルのフォルダーの完全なパスです
+
 - `${thisFile}` – CMakeSettings.json ファイルの完全なパスです
+
 - `${name}` – 構成の名前です
+
 - `${generator}` – この構成で使用される CMake ジェネレーターの名前です
 
 ### <a name="ninja-command-line-arguments"></a>Ninja のコマンド ライン引数
@@ -405,9 +409,11 @@ CMakeSettings.json ファイルまたは CMakeLists.txt ファイルが大幅に
 ![CMake の単一ファイルのコンパイル](media/cmake-single-file-compile.png)
 
 ## <a name="run-cmake-from-the-command-line"></a>コマンド ラインから CMake を実行する
+
 Visual Studio インストーラーから CMake をインストールした場合は、次の手順に従ってコマンド ラインから実行できます。
 
 1. 適切な vsdevcmd.bat (x86 または x64) を実行します。 詳細については、[コマンド ラインでのビルド](../build/building-on-the-command-line.md)に関するページを参照してください。
-1. 出力フォルダーに移動します。
-1. CMake を実行してアプリをビルド/構成します。
 
+1. 出力フォルダーに移動します。
+
+1. CMake を実行してアプリをビルド/構成します。

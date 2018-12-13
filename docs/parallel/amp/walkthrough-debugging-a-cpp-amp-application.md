@@ -1,18 +1,18 @@
 ---
 title: 'チュートリアル : C++ AMP アプリケーションのデバッグ'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
 - C++ AMP, debugging
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 4f8cdc315b561b5cbb4538e8486208d6278af9df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579904"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176693"
 ---
 # <a name="walkthrough-debugging-a-c-amp-application"></a>チュートリアル : C++ AMP アプリケーションのデバッグ
 
@@ -201,7 +201,8 @@ ms.locfileid: "50579904"
 
 4. (約 67 行 70 行目) に、次の図に示すコードの行にブレークポイントを設定します。
 
-     ![CPU ブレークポイント](../../parallel/amp/media/campcpubreakpoints.png "campcpubreakpoints") CPU ブレークポイント
+   ![CPU ブレークポイント](../../parallel/amp/media/campcpubreakpoints.png "CPU ブレークポイント") <br/>
+   CPU ブレークポイント
 
 5. メニュー バーで、**[デバッグ]** > **[デバッグ開始]** の順に選択します。
 
@@ -229,7 +230,8 @@ ms.locfileid: "50579904"
 
 6. 次の図に示すように、30、行にブレークポイントを設定します。
 
-     ![GPU ブレークポイント](../../parallel/amp/media/campgpubreakpoints.png "campgpubreakpoints") GPU ブレークポイント
+   ![GPU ブレークポイント](../../parallel/amp/media/campgpubreakpoints.png "GPU ブレークポイント") <br/>
+   GPU ブレークポイント
 
 7. メニュー バーで、**[デバッグ]** > **[デバッグ開始]** の順に選択します。 行 67 と 70 行に CPU コード内のブレークポイントは、GPU がこれらのコード行は、CPU 上で実行されるため、デバッグ中には実行されません。
 
@@ -241,7 +243,8 @@ ms.locfileid: "50579904"
 
 2. ドッキング ステーション、 **GPU スレッド**Visual Studio の下部にあるウィンドウ。 選択、**スレッド スイッチの展開**タイルとスレッドのテキスト ボックスを表示するボタンをクリックします。 **GPU スレッド**ウィンドウでは、次の図に示すように、アクティブでブロックされた GPU スレッドの総数が表示されます。
 
-     ![4 つのアクティブなスレッドでの GPU スレッド ウィンドウ](../../parallel/amp/media/campc.png "campc") GPU スレッド ウィンドウ
+   ![4 つのアクティブなスレッドでの GPU スレッド ウィンドウ](../../parallel/amp/media/campc.png "4 つのアクティブなスレッドでの GPU スレッド ウィンドウ") <br/>
+   [GPU スレッド] ウィンドウ
 
    この計算に割り当てられた 313 のタイルがあります。 各タイルには、32 個のスレッドが含まれています。 ソフトウェア エミュレーターでローカルの GPU デバッグが発生するため、次の 4 つのアクティブな GPU スレッドがあります。 4 つのスレッドの指示を同時に実行し一緒に移動、次の命令。
 
@@ -263,13 +266,15 @@ ms.locfileid: "50579904"
 
 3. 必ず**スレッド**が左上隅にある一覧で選択されています。 次の図に、**並列スタック**ウィンドウで紹介した GPU スレッドのコール スタックに重点を置いたビューが表示されます、 **GPU スレッド**ウィンドウ。
 
-     ![4 つのアクティブ スレッドがある並列スタック ウィンドウ](../../parallel/amp/media/campd.png "campd")並列スタック ウィンドウ
+   ![4 つのアクティブ スレッドがある並列スタック ウィンドウ](../../parallel/amp/media/campd.png "4 アクティブ スレッドがある並列スタック ウィンドウ") <br/>
+   [並列スタック] ウィンドウ
 
    32 個のスレッドに問題が発生しました`_kernel_stub`ラムダ ステートメントに、`parallel_for_each`関数呼び出し、続いて、`sum_kernel_tiled`関数の場合、並列リダクションが発生します。 32 個のスレッドから 28 を使用するよう、 [tile_barrier::wait](reference/tile-barrier-class.md#wait)ステートメント、22 行目でブロックされたままに対し、他の 4 つのスレッドでアクティブのままにし、 `sum_kernel_tiled` 30 行での関数。
 
    使用可能な GPU スレッドのプロパティを検査することができます、 **GPU スレッド**ウィンドウの豊富なデータヒントで、**並列スタック**ウィンドウ。 これを行うには、スタック フレームにマウス ポインターを置く**sum_kernel_tiled**します。 次の図は、データヒントを示します。
 
-     ![並列スタック ウィンドウのデータヒント](../../parallel/amp/media/campe.png "campe") GPU スレッド データヒント
+   ![並列スタック ウィンドウのデータヒント](../../parallel/amp/media/campe.png "並列スタック ウィンドウのデータヒント") <br/>
+   GPU スレッド データヒント
 
    詳細については、**並列スタック**ウィンドウを参照してください[並列スタック ウィンドウを使用して](/visualstudio/debugger/using-the-parallel-stacks-window)します。
 
@@ -291,7 +296,8 @@ ms.locfileid: "50579904"
 
    選択、 **localA [localIdx [0]** 列の並べ替えに列ヘッダー。 次の図での並べ替えの結果**localA [localIdx [0]** します。
 
-     ![並列ウォッチ ウィンドウの並べ替えられた結果](../../parallel/amp/media/campf.png "campf")並べ替えの結果
+   ![並列ウォッチ ウィンドウの並べ替えられた結果](../../parallel/amp/media/campf.png "結果が並べ替えられて並列ウォッチ ウィンドウ") <br/>
+   並べ替えの結果
 
    コンテンツをエクスポートすることができます、**並列ウォッチ**を選択して excel ウィンドウ、 **Excel**ボタンをクリックし、 **Excel で開く**します。 開発用コンピューターに Excel をインストールした場合、コンテンツを含む Excel ワークシートが開きます。
 
@@ -313,7 +319,8 @@ ms.locfileid: "50579904"
 
    次の図は、4 つのアクティブなフラグが設定されたスレッド、 **GPU スレッド**ウィンドウ。
 
-     ![フラグが設定されたスレッドでの GPU スレッド ウィンドウ](../../parallel/amp/media/campg.png "campg") GPU スレッド ウィンドウのアクティブなスレッド
+   ![フラグが設定されたスレッドでの GPU スレッド ウィンドウ](../../parallel/amp/media/campg.png "フラグが設定されたスレッドでの GPU スレッド ウィンドウ") <br/>
+   [GPU スレッド] ウィンドウのアクティブなスレッド
 
    **並列ウォッチ**ウィンドウとのデータヒント、**並列スタック**両方のウィンドウでフラグが設定されたスレッドを示します。
 
@@ -321,8 +328,8 @@ ms.locfileid: "50579904"
 
    選択、**のみのフラグが設定を表示する**ボタンのいずれかを windows のか、**デバッグの場所**ツールバー。 次の図は、**のみのフラグが設定を表示する**のボタンでは、**デバッグの場所**ツールバー。
 
-     ![デバッグの場所 ツールバーのアイコンの表示のみにフラグが設定された](../../parallel/amp/media/camph.png "camph")
-**のみのフラグが設定を表示する**ボタン
+   ![デバッグの場所 ツールバーのアイコンの表示のみにフラグが設定された](../../parallel/amp/media/camph.png "アイコンの表示のみにフラグが設定されたデバッグの場所 ツールバー") <br/>
+   **フラグが設定のみを表示する**ボタン
 
    今すぐ、 **GPU スレッド**、**並列ウォッチ**と**並列スタック**windows フラグが設定されたスレッドのみを表示します。
 
@@ -340,7 +347,8 @@ ms.locfileid: "50579904"
 
    次の図の**GPU スレッド**4 つのすべてのスレッドが固定されているウィンドウに表示されます。
 
-     ![GPU スレッド ウィンドウの凍結されたスレッドを示す](../../parallel/amp/media/campk.png "campk")でスレッドを凍結、 **GPU スレッド**ウィンドウ
+   ![GPU スレッド ウィンドウの凍結されたスレッドを示す](../../parallel/amp/media/campk.png "GPU スレッド ウィンドウの凍結されたスレッドの表示") <br/>
+   スレッドを凍結、 **GPU スレッド**ウィンドウ
 
    同様に、**並列ウォッチ**4 つのすべてのスレッドが固定されているウィンドウに表示されます。
 
@@ -356,7 +364,8 @@ ms.locfileid: "50579904"
 
    内のスレッド、 **GPU スレッド**ウィンドウは、アドレスによってグループ化されます。 アドレスは、逆アセンブル時のスレッドの各グループが配置される命令に対応します。 24 のスレッドは 22 行目で、場所、 [tile_barrier::wait メソッド](reference/tile-barrier-class.md#wait)を実行します。 12 個のスレッドは、行 32 バリアの命令では。 これらのスレッドの 4 つはフラグが設定されます。 8 個のスレッドは、30 行のブレークポイントでは。 これらのスレッドの 4 つが固定されています。 次の図は、グループ化されたスレッド、 **GPU スレッド**ウィンドウ。
 
-     ![GPU スレッド ウィンドウのスレッドがアドレスでグループ化された](../../parallel/amp/media/campl.png "campl")内のスレッドをグループ化、 **GPU スレッド**ウィンドウ
+   ![GPU スレッド ウィンドウのスレッドがアドレスでグループ化された](../../parallel/amp/media/campl.png "アドレスでグループ化された GPU スレッド ウィンドウのスレッド") <br/>
+   内のスレッドをグループ化、 **GPU スレッド**ウィンドウ
 
 2. 実行することも、 **Group By**操作のデータ グリッドのショートカット メニューを開き、**並列ウォッチ**ウィンドウで、選択**Group By**メニューを選択しスレッドをグループ化する方法に対応する項目。
 

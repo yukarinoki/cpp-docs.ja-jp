@@ -1,6 +1,6 @@
 ---
 title: MFC モジュールの状態データの管理
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - global state [MFC]
 - data management [MFC], MFC modules
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - multiple modules [MFC]
 - module state restored [MFC]
 ms.assetid: 81889c11-0101-4a66-ab3c-f81cf199e1bb
-ms.openlocfilehash: 757fe9d8b4c9985cd3fa36d399cdc92057c03011
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1bed6f3b0dddf0d4ae5e8309d683e52c9e82410
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562215"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52174879"
 ---
 # <a name="managing-the-state-data-of-mfc-modules"></a>MFC モジュールの状態データの管理
 
@@ -28,11 +28,13 @@ ms.locfileid: "50562215"
 
 次の図に示すように、MFC には、アプリケーションで使用される各モジュールの状態データ。 このデータの例としては、Windows のインスタンス ハンドル (リソースの読み込みに使用)、現在へのポインター`CWinApp`と`CWinThread`アプリケーション、OLE モジュールの参照カウントとの間の接続を維持するマップのさまざまなオブジェクトWindows オブジェクトのハンドルと MFC オブジェクトの対応するインスタンス。 ただし、アプリケーションでは、複数のモジュールを使用するときに各モジュールの状態データはアプリケーション全体。 代わりに、各モジュールには、MFC の状態データの独自のコピーがいます。
 
-![1 つのモジュールのデータを状態&#40;アプリケーション&#41;](../mfc/media/vc387n1.gif "vc387n1")単一モジュール (アプリケーション) の状態データ
+![1 つのモジュールのデータを状態&#40;アプリケーション&#41;](../mfc/media/vc387n1.gif "状態データを 1 つのモジュールの&#40;アプリケーション&#41;") <br/>
+単一モジュール (アプリケーション) の状態データ
 
 モジュールの状態データは、構造体に含まれているしは常にその構造体へのポインターを使用して利用します。 実行のフローでは、次の図に示すように、特定のモジュールが入ると、そのモジュールの状態は「現在」または「効果的な」状態である必要があります。 そのため、各スレッド オブジェクトでは、そのアプリケーションの有効な状態の構造体へのポインターがあります。 このポインターのすべての更新を維持する時間が、アプリケーションのグローバル状態を管理して、各モジュールの状態の整合性を維持に不可欠です。 グローバル状態を正しく管理は、予期しないアプリケーションの動作につながります。
 
-![複数のモジュールのデータを状態](../mfc/media/vc387n2.gif "vc387n2")複数モジュールの状態データ
+![複数のモジュールのデータを状態](../mfc/media/vc387n2.gif "複数モジュールのデータの状態") <br/>
+複数モジュールの状態データ
 
 つまり、各モジュールは、すべてのエントリ ポイントにあるモジュールの状態を正しく切り替えるを担当します。 「エントリ ポイント"は、任意場所の実行フロー モジュール コードを入力できます。 エントリ ポイントは次のとおりです。
 
@@ -45,4 +47,3 @@ ms.locfileid: "50562215"
 ## <a name="see-also"></a>関連項目
 
 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - Concurrency Runtime, compared to other models
 ms.assetid: d8b9a1f4-f15f-43c3-a5b4-c0991edf9c86
-ms.openlocfilehash: 0b5c24761f176d9c256c1ef6aee85b25231cea2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82e1dca1345b909919320b911c4c107e965c9850
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655846"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51332674"
 ---
 # <a name="comparing-the-concurrency-runtime-to-other-concurrency-models"></a>コンカレンシー ランタイムとその他のコンカレンシー モデルの比較
 
@@ -33,7 +33,7 @@ ms.locfileid: "50655846"
 
 ### <a name="preemptive-and-cooperative-scheduling"></a>プリエンプティブ スケジューリングと協調スケジューリング
 
-*プリエンプティブ スケジューリング* は、ラウンド ロビン方式の優先順位ベースのメカニズムで、すべてのタスクに対し、コンピューティング リソースへの排他アクセス権を所定の時間だけ与え、その後別のタスクに切り替えます。 プリエンプティブ スケジューリングは、Windows などのマルチタスク オペレーティング システムで一般的です。*協調スケジューリング*は、すべてのタスクに対し、タスクが終了するまで、またはタスクがリソースへのアクセスを譲るまで、コンピューティング リソースへの排他アクセスを提供するメカニズムです。 コンカレンシー ランタイムは、処理リソースを最大限活用するために、協調スケジューリングを、オペレーティング システムのプリエンプティブ スケジューラと共に使用します。
+*プリエンプティブ スケジューリング* は、ラウンド ロビン方式の優先順位ベースのメカニズムで、すべてのタスクに対し、コンピューティング リソースへの排他アクセス権を所定の時間だけ与え、その後別のタスクに切り替えます。 プリエンプティブ スケジューリングは、Windows などのマルチタスク オペレーティング システムで一般的です。 *協調スケジューリング*タスクが終了するまで、またはタスクがリソースへのアクセスに、コンピューティング リソースをすべてタスクの排他アクセスを提供するメカニズムです。 コンカレンシー ランタイムは、処理リソースを最大限活用するために、協調スケジューリングを、オペレーティング システムのプリエンプティブ スケジューラと共に使用します。
 
 ### <a name="differences-between-preemptive-and-cooperative-schedulers"></a>プリエンプティブ スケジューラと協調スケジューラの違い
 

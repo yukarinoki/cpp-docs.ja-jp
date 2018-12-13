@@ -9,12 +9,12 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 9e39929b4e669b6d7ed5662484ee71f762b4ea42
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618453"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51329475"
 ---
 # <a name="recordset-how-recordsets-select-records-odbc"></a>レコードセット: レコード選択のしくみ (ODBC)
 
@@ -61,9 +61,8 @@ ms.locfileid: "50618453"
 
 - [並べ替え](../../data/odbc/recordset-sorting-records-odbc.md)、いずれかに含まれる場合、レコード セットの順序、[レコード](../../mfc/reference/crecordset-class.md#m_strsort)データ メンバー。 フレームワークでは、この文字列を使用して、SQL の構築**ORDER BY**句。
 
-
-    > [!TIP]
-    >  SQL を使用する**GROUP BY**句 (および場合によって、 **HAVING**句)、フィルター文字列の末尾に句を追加します。
+   > [!TIP]
+   > SQL を使用する**GROUP BY**句 (および場合によって、 **HAVING**句)、フィルター文字列の末尾に句を追加します。
 
 - 値を[パラメーター データ メンバー](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)クラスを指定します。 呼び出す直前に、パラメーター値を設定する`Open`または`Requery`します。 フレームワークにバインドするパラメーターの値"?"SQL 文字列内のプレース ホルダーです。 コンパイル時に、プレース ホルダーを含む文字列を指定します。 フレームワークは、実行時に渡すパラメーターの値に基づいて詳細で塗りつぶします。
 

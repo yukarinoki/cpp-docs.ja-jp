@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - shared classes, classes
 ms.assetid: ca8b4b6b-744d-430b-b31f-d5b2f17bf210
-ms.openlocfilehash: 6e63664020508252a61682c46439af85033cf068
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9943a9b56b660165f8ecfd46f0a69107ecaa632c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583873"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53177914"
 ---
 # <a name="classes-shared-by-mfc-and-atl"></a>MFC と ATL で共有クラス
 
@@ -23,10 +23,10 @@ ms.locfileid: "50583873"
 |[CImage](../../atl-mfc-shared/reference/cimage-class.md)|読み込み、JPEG、GIF、BMP、およびポータブル ネットワーク グラフィックス (PNG) 形式で画像を保存する機能など、ビットマップの拡張サポートを提供します。|atlimage.h|
 |[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)|OLE オートメーションで使用される日付データ型をカプセル化します。|atlcomtime.h|
 |[COleDateTimeSpan](../../atl-mfc-shared/reference/coledatetimespan-class.md)|時間間隔の相対的な時間を表します。|atlcomtime.h|
-|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Windows のようなクラス[ポイント](../../mfc/reference/point-structure.md)も操作するメンバー関数を含む構造`CPoint`と`POINT`構造体。|atltypes.h|
-|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Windows のようなクラス[RECT](../../mfc/reference/rect-structure.md)も操作するメンバー関数を含む構造`CRect`オブジェクトと Windows`RECT`構造体。|atltypes.h|
+|[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)|Windows のようなクラス[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)も操作するメンバー関数を含む構造`CPoint`と`POINT`構造体。|atltypes.h|
+|[CRect](../../atl-mfc-shared/reference/crect-class.md)|Windows のようなクラス[RECT](/windows/desktop/api/windef/ns-windef-tagrect)も操作するメンバー関数を含む構造`CRect`オブジェクトと Windows`RECT`構造体。|atltypes.h|
 |[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)|表す、`CSimpleStringT`オブジェクト。|atlsimpstr.h|
-|[CSize](../../atl-mfc-shared/reference/csize-class.md)|Windows のサイズの構造体は、相対座標や位置を実装するようなクラスです。|atltypes.h|
+|[CSize](../../atl-mfc-shared/reference/csize-class.md)|Windows のようなクラス[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体は、相対座標や位置を実装します。|atltypes.h|
 |[CStrBufT](../../atl-mfc-shared/reference/cstrbuft-class.md)|リソースの自動クリーンアップは、`GetBuffer`と`ReleaseBuffer`、既存の呼び出す`CStringT`オブジェクト。|atlsimpstr.h|
 |[CStringData](../../atl-mfc-shared/reference/cstringdata-class.md)|文字列オブジェクトのデータを表します。|atlsimpstr.h|
 |[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)|表す、`CStringT`オブジェクト。|cstringt.h (MFC 依存) atlstr.h (MFC 依存)|

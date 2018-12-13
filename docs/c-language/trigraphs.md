@@ -1,12 +1,6 @@
 ---
-title: トライグラフ | Microsoft Docs
-ms.custom: ''
+title: トライグラフ
 ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: language-reference
-dev_langs:
-- C++
 helpviewer_keywords:
 - ??) trigraph
 - ??- trigraph
@@ -21,16 +15,12 @@ helpviewer_keywords:
 - ??! trigraph
 - ??' trigraph
 ms.assetid: 617f76ec-b8e8-4cfe-916c-4bc32cbd9aeb
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: fb65bf8cf2f9585ff12ba0a098d9ca441310933f
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: f84e5c1a1455e35992aa4b118c345bc1fa6ae587
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46101939"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51331621"
 ---
 # <a name="trigraphs"></a>トライグラフ
 
@@ -44,29 +34,29 @@ C++ 17 では、言語からトライグラフが削除されます。 実装で
 
 ### <a name="trigraph-sequences"></a>トライグラフ シーケンス
 
-|トライグラフ|区切り文字|
-|--------------|---------------------------|
-|??=|#|
-|??(|[|
-|??/|\|
-|??)|]|
-|??'|^|
-|??\<|{|
-|??!|&#124;|
-|??>|}|
-|??-|~|
+| トライグラフ | 区切り文字 |
+|----------|-----------------------|
+| ??= | # |
+| ??( | \[ |
+| ??/ | \\ |
+| ??) | ] |
+| ??' | ^ |
+| ??\< | { |
+| ??! | &#124; |
+| ??> | } |
+| ??- | ~ |
 
 トライグラフは、常に 1 つのソース文字として処理されます。 トライグラフの変換は、文字列リテラルと文字定数のエスケープ文字を認識する前の、最初の[変換フェーズ](../preprocessor/phases-of-translation.md)で実行されます。 認識されるのは、上の表に示した 9 つのトライグラフだけです。 他の文字シーケンスは、変換されません。
 
 文字エスケープ シーケンス **\\?** を使用すると、トライグラフに似た文字シーケンスが誤ってトライグラフとして解釈されないようにできます。 (エスケープ シーケンスについては、「[エスケープ シーケンス](../c-language/escape-sequences.md)」を参照してください。)たとえば、`What??!` ステートメントを使用して文字列 `printf` を印刷しようとして、次のようにしたとします。
 
-```
+```C
 printf( "What??!\n" );
 ```
 
 出力される文字列は `What|` です。これは、`??!` がトライグラフ シーケンスであり、`|` 文字に置き換えられるためです。 この文字列を正しく印刷するには、次のようにステートメントを記述します。
 
-```
+```C
 printf( "What?\?!\n" );
 ```
 

@@ -1,10 +1,6 @@
 ---
-title: _spawn 系関数と _wspawn 系関数 | Microsoft Docs
-ms.custom: ''
+title: _spawn 系関数と _wspawn 系関数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 apilocation:
 - msvcr80.dll
 - msvcr110_clr0400.dll
@@ -26,8 +22,6 @@ f1_keywords:
 - _tspawnv
 - _tspawnle
 - wspawn
-dev_langs:
-- C++
 helpviewer_keywords:
 - _tspawnve function
 - _spawn functions
@@ -51,16 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cafa9e91ce16c2b18d80699363b615d55932bdb4
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46068560"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693715"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn 系関数と _wspawn 系関数
 
@@ -149,7 +139,7 @@ ms.locfileid: "46068560"
 
 `_spawn` を DLL または GUI アプリケーションから呼び出して、出力をパイプにリダイレクトするには、次の 2 つのオプションがあります。
 
-- Win32 API を使用してパイプを作成し、[AllocConsole](https://msdn.microsoft.com/library/windows/desktop/ms681944) を呼び出し、ハンドル値をスタートアップ構造体に設定し、[CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) を呼び出します。
+- Win32 API を使用してパイプを作成し、[AllocConsole](/windows/console/allocconsole) を呼び出し、ハンドル値をスタートアップ構造体に設定し、[CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa) を呼び出します。
 
 - [_popen、_wpopen](../c-runtime-library/reference/popen-wpopen.md) を呼び出してパイプを作成し、**cmd.exe /c** (または **command.exe /c**) を使用してアプリを呼び出します。
 

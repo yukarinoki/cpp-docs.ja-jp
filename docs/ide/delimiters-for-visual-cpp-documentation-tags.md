@@ -1,34 +1,25 @@
 ---
-title: Visual C++ ドキュメント タグの区切り記号 | Microsoft Docs
-ms.custom: ''
+title: Visual C++ ドキュメント タグの区切り記号
 ms.date: 11/04/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 44d867f9bc33c56bf57f55d75a4f8babbbf70748
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: 709c17138032a98ec2f8ff978d9b8364241989b1
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46401759"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326486"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ ドキュメント タグの区切り記号
 
 ドキュメント タグでは区切り記号を使用し、ドキュメント コメントの開始位置と終了位置をコンパイラに示す必要があります。
 
 XML ドキュメント タグでは、次の種類の区切り記号を使用できます。
-|||
+
+| | |
 |-|-|
-|`///`  | これは、ドキュメント例に示されている形式であり、Visual C++ プロジェクト テンプレートで使用されます。  |
+| `///` | これは、ドキュメント例に示されている形式であり、Visual C++ プロジェクト テンプレートで使用されます。  |
 | `/** */`  | これらは複数行の区切り記号です。  |
 
 `/** */` 区切り記号を使用する場合は、次のいくつかの書式設定規則があります。

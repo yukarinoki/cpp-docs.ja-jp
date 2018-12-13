@@ -1,23 +1,13 @@
 ---
-title: '移植のガイド: Spy++ | Microsoft ドキュメント'
-ms.custom: ''
-ms.date: 11/04/2016
-ms.technology:
-- cpp-language
-ms.topic: conceptual
-dev_langs:
-- C++
+title: '移植のガイド: Spy++'
+ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: cd85aa6ce1cfee3416d04291d484a7bad6359ea4
-ms.sourcegitcommit: 072e12d6b7a242765bdcc9afe4a14a284ade01fc
+ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50136186"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52177005"
 ---
 # <a name="porting-guide-spy"></a>移植のガイド: Spy++
 
@@ -35,7 +25,7 @@ Visual C++ 6.0 からの 2 つの古い .dsw ファイルのプロジェクト �
 
 2 つのプロジェクトをアップグレードした後、ソリューションは次のようになります。
 
-![Spy&#43;&#43; ソリューション](../porting/media/spyxxsolution.PNG "SpyxxSolution")
+![Spy&#43;&#43; ソリューション](../porting/media/spyxxsolution.PNG "Spy&#43;&#43; ソリューション")
 
 1 つは多数の C++ ファイルを持ち、もう 1 つは C で作成された DLL ファイルを持つ 2 つのプロジェクトがあります。
 

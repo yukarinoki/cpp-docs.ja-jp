@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CHotKeyCtrl [MFC], SetHotKey
 - CHotKeyCtrl [MFC], SetRules
 ms.assetid: 896f9766-0718-4f58-aab2-20325e118ca6
-ms.openlocfilehash: 1ab89c860813996360cddbf0caf5d4ebc395603d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a06f3bd8a8c5646f384c3f788518078b121bfe1
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452716"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178136"
 ---
 # <a name="chotkeyctrl-class"></a>CHotKeyCtrl クラス
 
@@ -67,7 +67,7 @@ class CHotKeyCtrl : public CWnd
 
 ユーザーがキーの組み合わせを選択した場合、アプリケーションはコントロールから、指定したキーの組み合わせを取得し、WM_SETHOTKEY メッセージを使用して、システムで、ホット キーを設定します。 押されたときに、ホット キー、その後、システムの任意の部分から WM_SETHOTKEY メッセージで指定されたウィンドウは SC_HOTKEY を指定する位置であるメッセージを受信します。 このメッセージには、受信するウィンドウがアクティブにします。 ホット キーは WM_SETHOTKEY 終了と呼ばれるアプリケーションまで有効です。
 
-このメカニズムは WM_HOTKEY メッセージと、Windows に依存する、ホット キーのサポートと異なる[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)と[UnregisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646327)関数。
+このメカニズムは WM_HOTKEY メッセージと、Windows に依存する、ホット キーのサポートと異なる[RegisterHotKey](https://msdn.microsoft.com/library/windows/desktop/ms646309)と[UnregisterHotKey](/windows/desktop/api/winuser/nf-winuser-unregisterhotkey)関数。
 
 使用しての詳細については`CHotKeyCtrl`を参照してください[コントロール](../../mfc/controls-mfc.md)と[を使用して CHotKeyCtrl](../../mfc/using-chotkeyctrl.md)します。
 
@@ -111,7 +111,7 @@ virtual BOOL Create(
 ホット キー コントロールのスタイルを指定します。 コントロールのスタイルの任意の組み合わせを適用します。 参照してください[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)詳細については、Windows sdk。
 
 *rect*<br/>
-ホット キー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](../../mfc/reference/rect-structure1.md)します。
+ホット キー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)します。
 
 *pParentWnd*<br/>
 通常、ホット キー コントロールの親ウィンドウを指定します、 [CDialog](../../mfc/reference/cdialog-class.md)します。 NULL は指定できません。

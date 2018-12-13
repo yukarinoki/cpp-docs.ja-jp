@@ -1,31 +1,21 @@
 ---
-title: fseek 定数と _lseek 定数 | Microsoft Docs
-ms.custom: ''
+title: fseek 定数と _lseek 定数
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - SEEK_END
 - SEEK_SET
 - SEEK_CUR
-dev_langs:
-- C++
 helpviewer_keywords:
 - SEEK_SET constant
 - SEEK_END constant
 - SEEK_CUR constant
 ms.assetid: 9deeb13e-5aa3-4c33-80d8-721c80a4de9d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3d48ead4532638461962a3bf88d2321cee775ab3
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 67599ced3ee775d9e6d702a9fb9e66e0580240e4
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46087659"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51519153"
 ---
 # <a name="fseek-lseek-constants"></a>fseek 定数と _lseek 定数
 
@@ -34,7 +24,6 @@ ms.locfileid: "46087659"
 ```
 
 #include <stdio.h>
-
 ```
 
 ## <a name="remarks"></a>コメント

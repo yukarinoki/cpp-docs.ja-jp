@@ -1,27 +1,17 @@
 ---
-title: 'チュートリアル: プロジェクトの構築 (C++) | Microsoft Docs'
-ms.custom: ''
+title: 'チュートリアル: プロジェクトの構築 (C++)'
 ms.date: 09/14/2018
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
-dev_langs:
-- C++
 helpviewer_keywords:
 - building projects [C++]
 - projects [C++], building
 - project building [C++]
 ms.assetid: d459bc03-88ef-48d0-9f9a-82d17f0b6a4d
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 3071b779338150816cb1d52d16932ac0e3878538
-ms.sourcegitcommit: a9dcbcc85b4c28eed280d8e451c494a00d8c4c25
+ms.openlocfilehash: c12cd50dd92e728c88945cd83029f7e5e62816da
+ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50079322"
+ms.lasthandoff: 11/10/2018
+ms.locfileid: "51524158"
 ---
 # <a name="walkthrough-building-a-project-c"></a>チュートリアル: プロジェクトの構築 (C++)
 
@@ -37,15 +27,15 @@ ms.locfileid: "50079322"
 
 1. Game.cpp で、次のステートメントのように最後の行のセミコロンを削除します。
 
-    `return 0`
+   `return 0`
 
 1. メニュー バーで、**[ビルド]** > **[ソリューションのビルド]** の順にクリックします。
 
 1. **[エラー一覧]** ウィンドウに、プロジェクトのビルド中にエラーが発生したことを示すメッセージが表示されます。 たとえば、エラーの説明はこのエラー メッセージのようになります。
 
-    `error C2143: syntax error: missing ';' before '}'`
+   `error C2143: syntax error: missing ';' before '}'`
 
-  このエラーに関するヘルプ情報を表示するには、**[エラー一覧]** ウィンドウでそのエラーを強調表示し、**F1** キーを押します。
+   このエラーに関するヘルプ情報を表示するには、**[エラー一覧]** ウィンドウでそのエラーを強調表示し、**F1** キーを押します。
 
 1. 構文エラーのある行の最後に、セミコロンを戻します。
 
@@ -53,7 +43,7 @@ ms.locfileid: "50079322"
 
 1. メニュー バーで、**[ビルド]** > **[ソリューションのビルド]** の順にクリックします。
 
-  **[出力]** ウィンドウに、プロジェクトが正常にコンパイルされたことを示すメッセージが表示されます。
+   **[出力]** ウィンドウに、プロジェクトが正常にコンパイルされたことを示すメッセージが表示されます。
 
     ```Output
     1>------ Build started: Project: Game, Configuration: Debug Win32 ------

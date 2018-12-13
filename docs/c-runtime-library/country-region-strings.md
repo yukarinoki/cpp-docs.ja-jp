@@ -1,29 +1,19 @@
 ---
-title: 国/地域別文字列 | Microsoft Docs
-ms.custom: ''
+title: 国/地域別文字列
 ms.date: 11/04/2016
-ms.technology:
-- cpp-standard-libraries
-ms.topic: conceptual
 f1_keywords:
 - c.strings
-dev_langs:
-- C++
 helpviewer_keywords:
 - country/region strings
 ms.assetid: 5baf0ccf-0d9b-40dc-83bd-323705287930
-author: corob-msft
-ms.author: corob
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 4e5cd978c5774a4deb8b5bb79fc2b8e59c198e45
-ms.sourcegitcommit: 913c3bf23937b64b90ac05181fdff3df947d9f1c
+ms.openlocfilehash: 3a3bbe9d1278cf733bafbeb23efcb0a1ad577228
+ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "46028390"
+ms.lasthandoff: 10/31/2018
+ms.locfileid: "50463467"
 ---
-# <a name="countryregion-strings"></a>Country/Region Strings
+# <a name="countryregion-strings"></a>国/地域別文字列
 
 国/地域識別文字列を言語識別文字列と組み合わせて、 `setlocale`、 `_wsetlocale`、 `_create_locale`、および `_wcreate_locale` の関数のロケール指定を作成できます。 Windows オペレーティング システムのさまざまなバージョンでサポートされている国と地域名の一覧については、[MS-LCID]: Windows Language Code Identifier (LCID) Reference ([MS-LCID]: Windows 言語コード識別子 (LCID) リファレンス) の「[Appendix A: Product Behavior](https://msdn.microsoft.com/library/cc233982.aspx)」(付録 A: 製品の動作) に記載されている表の、**[Language]**、**[Location]**、**[Language tag]** 列をご覧ください。 利用できるロケール名と関連する値を列挙するコードの例については、「[NLS: Name-based APIs Sample](/windows/desktop/intl/nls--name-based-apis-sample)」(NSL: 名前ベースの API のサンプル) をご覧ください。
 

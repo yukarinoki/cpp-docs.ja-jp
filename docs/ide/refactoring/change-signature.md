@@ -1,23 +1,16 @@
 ---
-title: シグネチャの変更 | Microsoft Docs
-ms.custom: ''
+title: シグネチャの変更
 ms.date: 11/16/2016
-ms.technology:
-- cpp-ide
-ms.topic: conceptual
 ms.assetid: 8daaa060-7305-4035-99d2-8b460b4f4454
-author: mikeblome
-ms.author: mblome
-ms.workload:
-- cplusplus
-ms.openlocfilehash: 0007cf50eafa7b61e48b550172eb2d316270c61f
-ms.sourcegitcommit: 799f9b976623a375203ad8b2ad5147bd6a2212f0
+ms.openlocfilehash: ec42fd00ecf48fb700042f02543e3fe194fe6975
+ms.sourcegitcommit: 7c05ebd2c75e9326fe774e95cbce7f150ba2eeba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2018
-ms.locfileid: "46448332"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52281949"
 ---
 # <a name="change-signature"></a>シグネチャの変更
+
 **機能:** 関数のパラメーターを変更できます。
 
 **条件:** さまざまな場所で現在使用されている関数のパラメーターを並べ替え、追加、削除、変更するとき。

@@ -37,12 +37,12 @@ helpviewer_keywords:
 - _strtol_l function
 - strtol function
 ms.assetid: 1787c96a-f283-4a83-9325-33cfc1c7e240
-ms.openlocfilehash: 5aa69a44a2ce8bde0ee16b02ecd9923f247c7e65
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73df5dd3ffcd4a9b2fca8b6b713b645ef94addb5
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617465"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326720"
 ---
 # <a name="strtol-wcstol-strtoll-wcstoll"></a>strtol、wcstol、_strtol_l、_wcstol_l
 
@@ -108,7 +108,7 @@ NULL で終わる変換対象の文字列。
 |**_tcstol**|**strtol**|**strtol**|**wcstol**|
 |**_tcstol_l**|**_strtol_l**|**_strtol_l**|**_wcstol_l**|
 
-現在のロケールの**LC_NUMERIC**の小数点文字のカテゴリの設定が認識 ** *; strSource*詳細については、次を参照してください。 [setlocale](setlocale-wsetlocale.md)します。 せず、関数、 **_l**サフィックスを使用して、現在のロケール **_strtol_l**と **_wcstol_l**ことがなく対応する関数と同じですが、 **_l**サフィックスを代わりに渡されたロケールを使用する点を除いて。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+現在のロケールの**LC_NUMERIC**の小数点文字のカテゴリの設定が認識*strSource*; 詳細についてを参照してください[setlocale](setlocale-wsetlocale.md)します。 せず、関数、 **_l**サフィックスを使用して、現在のロケール **_strtol_l**と **_wcstol_l**ことがなく対応する関数と同じですが、 **_l**サフィックスを代わりに渡されたロケールを使用する点を除いて。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 場合*endptr*ない**NULL**、スキャンを停止させた文字へのポインターが指す位置に格納されている*endptr*します。 変換を実行できない場合 (有効な数字が見つからないか、無効な base を指定した) の値*strSource*が指す位置に格納されて*endptr*します。
 

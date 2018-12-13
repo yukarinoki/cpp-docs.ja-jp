@@ -1,18 +1,18 @@
 ---
 title: Active ドキュメント コンテナー
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - active documents [MFC], containers
 - active document containers [MFC]
 - containers [MFC], active document
 - MFC COM, active document containment
 ms.assetid: ba20183a-8b4c-440f-9031-e5fcc41d391b
-ms.openlocfilehash: ec2e4d11e00040cf0b94957db8466d127e0b5420
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfd4018496f1516f8016bb56da2406f2e4b04c08
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510839"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176784"
 ---
 # <a name="active-document-containers"></a>Active ドキュメント コンテナー
 
@@ -54,7 +54,7 @@ Active ドキュメント コンテナー アクティブなドキュメント�
 
 次の図は、コンテナーとそのコンポーネント (左)、およびアクティブなドキュメント (右) には、そのビューの概念の関係を示します。 アクティブなドキュメント ストレージとデータを管理して、ビューを表示、または必要に応じてそのデータを出力します。 太字でインターフェイスが; アクティブなドキュメントへの参加に必要なもの太字で斜体は省略可能です。 その他のすべてのインターフェイスが必要です。
 
-![Active ドキュメント コンテナー インターフェイス](../mfc/media/vc37gj1.gif "vc37gj1")
+![Active ドキュメント コンテナー インターフェイス](../mfc/media/vc37gj1.gif "Active ドキュメント コンテナー インターフェイス")
 
 1 つのビューのみをサポートするドキュメントは、ドキュメントとビューの両方のコンポーネント (つまり、対応するインターフェイス) を 1 つの具象クラスに実装できます。 さらに、のみ、一度に 1 つのビューをサポートするコンテナーのサイトに結合できます、ドキュメント サイトとサイトの表示、1 つの具体的な site クラス。 ただし、コンテナーのフレームのオブジェクトがこの distinct、維持する必要があり、アーキテクチャの全体像を提供するコンテナーのドキュメントのコンポーネントがここに単なります。active ドキュメント コンテインメントのアーキテクチャによって、影響はありません。
 

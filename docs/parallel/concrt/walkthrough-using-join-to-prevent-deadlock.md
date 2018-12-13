@@ -1,18 +1,18 @@
 ---
 title: 'チュートリアル: join を使用したデッドロックの防止'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - preventing deadlock with joins [Concurrency Runtime]
 - deadlock, preventing [Concurrency Runtime]
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b98c2deb158b9b9fc71caa7133aeaeb2acfd369c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498823"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52175915"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>チュートリアル: join を使用したデッドロックの防止
 
@@ -48,7 +48,7 @@ ms.locfileid: "50498823"
 
 "食事する哲学者の問題" は、アプリケーションでどのようにデッドロックが発生するかを示します。 この問題では、5 人の哲学者が丸いテーブルを囲んで座っています。 どの哲学者も思索と食事を交互に行っています。 どの哲学者も左隣の哲学者と 1 本の箸を共有する必要があり、また右隣の哲学者とも別の 1 本の箸を共有する必要があります。 次の図は、この配置を表しています。
 
-![食事する哲学者の問題](../../parallel/concrt/media/dining_philosophersproblem.png "dining_philosophersproblem")
+![食事する哲学者の問題](../../parallel/concrt/media/dining_philosophersproblem.png "食事する哲学者の問題")
 
 食事をするには、哲学者は 2 本の箸を持つ必要があります。 すべての哲学者が 1 本の箸を持ち、もう 1 本の箸を待つと、どの哲学者も食事することができず、すべての哲学者が餓死することになります。
 

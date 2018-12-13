@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 80065bb4e67674c49761d0832395ae535bbfbf24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604278"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51326161"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (既定依存読み込みフラグを設定します)
 
@@ -27,9 +27,8 @@ ms.locfileid: "50604278"
 
 ### <a name="arguments"></a>引数
 
-|||
-|-|-|
-*loadflags*|10 進数、先行ゼロの場合は、8 進数または先頭の 16 進数のオプション"C"スタイル 16 ビット整数値`0x`、すべてに適用する依存読み込みフラグを指定する[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)呼び出し。 既定値は 0 です。
+*loadflags*<br/>
+10 進数、先行ゼロの場合は、8 進数または先頭の 16 進数のオプション"C"スタイル 16 ビット整数値`0x`、すべてに適用する依存読み込みフラグを指定する[LoadLibrary](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)呼び出し。 既定値は 0 です。
 
 ## <a name="remarks"></a>Remarks
 

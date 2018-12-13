@@ -16,12 +16,12 @@ helpviewer_keywords:
 - readfsqword intrinsic
 - __readfsqword intrinsic
 ms.assetid: f6ee7203-4179-402c-a464-0746c84ce6ac
-ms.openlocfilehash: bbf963d3a7b927d46485465a61fa08328b8efb52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5610fcd9be369718875f2f7a7bd358e7c2b07dc
+ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507998"
+ms.lasthandoff: 11/09/2018
+ms.locfileid: "51327682"
 ---
 # <a name="readfsbyte-readfsdword-readfsqword-readfsword"></a>__readfsbyte、__readfsdword、__readfsqword、__readfsword
 
@@ -32,17 +32,17 @@ FS セグメントの先頭の相対オフセットで指定された場所か�
 ## <a name="syntax"></a>構文
 
 ```
-unsigned char __readfsbyte( 
-   unsigned long Offset 
-);
-unsigned short __readfsword( 
-   unsigned long Offset 
-);
-unsigned long __readfsdword( 
+unsigned char __readfsbyte(
    unsigned long Offset
 );
-unsigned __int64 __readfsqword( 
-   unsigned long Offset 
+unsigned short __readfsword(
+   unsigned long Offset
+);
+unsigned long __readfsdword(
+   unsigned long Offset
+);
+unsigned __int64 __readfsqword(
+   unsigned long Offset
 );
 ```
 

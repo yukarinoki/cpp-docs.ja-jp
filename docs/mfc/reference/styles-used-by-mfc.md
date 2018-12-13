@@ -196,12 +196,12 @@ helpviewer_keywords:
 - WS_EX_TRANSPARENT constant [MFC]
 - WS_EX_WINDOWEDGE constant [MFC]
 ms.assetid: d3b9af37-31b5-4c97-a8ad-189fd724b04c
-ms.openlocfilehash: dc70059e2de054e4b1aac4800e1d61c58bc9b467
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b47fa90fff6753b805d7fd0495050e45bc915d5d
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642911"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51694778"
 ---
 # <a name="styles-used-by-mfc"></a>MFC で使用するスタイル
 
@@ -338,7 +338,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |LBS_HASSTRINGS|文字列で構成される項目を含むオーナー描画リスト ボックスを指定します。 アプリケーションが使用できるように、リスト ボックス保持メモリと、文字列のポインター、`GetText`メンバー関数は、特定の項目のテキストを取得します。|
 |LBS_MULTICOLUMN|水平方向にスクロールされて複数列のリスト ボックスを指定します。 `SetColumnWidth`メンバー関数は、列の幅を設定します。|
 |LBS_MULTIPLESEL|文字列の選択は、ユーザーがクリックするか、文字列をダブルクリックするたびを切り替えられます。 文字列の任意の数を選択することができます。|
-|LBS_NODATA|データなしのリスト ボックスを指定します。 リスト ボックス内の項目の数が 1,000 を超える場合は、このスタイルを指定します。 データなしのリスト ボックスは LBS_OWNERDRAWFIXED スタイルでは、必要がありますが、LBS_SORT または LBS_HASSTRINGS スタイルを持つことはできません。 <br /></br/> データなしのリスト ボックス似ていますが、オーナー描画リスト ボックス アイテムの文字列またはビットマップのデータを含んでいません。 コマンドを追加するには、挿入、またはアイテムの削除も、指定した項目のデータを常に無視します。リスト ボックス内で常に文字列を検索する要求が失敗します。 システムは、項目を描画する必要があるときに、ならなくをオーナー ウィンドウに送信します。 Itemid であるメンバー、`DRAWITEMSTRUCT`ならなくに渡された構造体を描画する項目の行番号を指定します。 データなしのリスト ボックスでは、WM_DELETEITEM メッセージは送信しません。|
+|LBS_NODATA|データなしのリスト ボックスを指定します。 リスト ボックス内の項目の数が 1,000 を超える場合は、このスタイルを指定します。 データなしのリスト ボックスは LBS_OWNERDRAWFIXED スタイルでは、必要がありますが、LBS_SORT または LBS_HASSTRINGS スタイルを持つことはできません。<br/><br/> データなしのリスト ボックスではないアイテムのデータ文字列またはビットマップにはが含まれていますが、オーナー描画リスト ボックスに似ています。 コマンドを追加するには、挿入、またはアイテムの削除も、指定した項目のデータを常に無視します。リスト ボックス内で常に文字列を検索する要求が失敗します。 システムは、項目を描画する必要があるときに、ならなくをオーナー ウィンドウに送信します。 Itemid であるメンバー、`DRAWITEMSTRUCT`ならなくに渡された構造体を描画する項目の行番号を指定します。 データなしのリスト ボックスでは、WM_DELETEITEM メッセージは送信しません。|
 |LBS_NOINTEGRALHEIGHT|リスト ボックスのサイズは、リスト ボックスが作成されたときに、アプリケーションで指定されたサイズだけです。 通常、Windows リスト ボックスで一部の項目が表示されないようにするリスト ボックスをサイズします。|
 |LBS_NOREDRAW|変更されたときに、リスト ボックスの表示は更新されません。 このスタイルは、WM_SETREDRAW メッセージを送信することによって、いつでも変更できます。|
 |LBS_NOSEL|リスト ボックスに表示することができますが、選択されていない項目が含まれているを指定します。|
@@ -350,7 +350,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |LBS_USETABSTOPS|認識し、その文字列を描画するときにタブ文字を展開するには、リスト ボックスを使用できます。 既定のタブ位置は、32 のダイアログ単位です。 (ダイアログ単位は水平方向または垂直方向の距離です。 1 つの水平ダイアログ単位は、現在のダイアログ ベースの幅の単位の 4 分の 1 と同じです。 ダイアログの基本単位は、高さと幅の現在のシステム フォントに基づいて計算されます。 `GetDialogBaseUnits` Windows 関数はピクセル単位で現在のダイアログ ボックスにベース ユニットの数を返します)。このスタイルは、LBS_OWNERDRAWFIXED いないに使用する必要があります。|
 |LBS_WANTKEYBOARDINPUT|リスト ボックスの所有者は、リスト ボックスに入力フォーカスがある状態でキーを押したときに、WM_VKEYTOITEM または WM_CHARTOITEM のメッセージを受信します。 これにより、キーボード入力で特別な処理を実行するアプリケーションです。|
 
-##<a name="message-box-styles"></a>  メッセージ ボックス スタイル
+## <a name="message-box-styles"></a>  メッセージ ボックス スタイル
 
 メッセージ ボックス スタイルを適用する[AfxMessageBox](../../mfc/reference/cstring-formatting-and-message-box-display.md#afxmessagebox)項目。 スタイルの組み合わせを指定、 *%n タイプ*パラメーターの`AfxMessageBox`します。 Windows でのメッセージ ボックス スタイルの詳細については、次を参照してください。 [MessageBox 関数 (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox)します。
 
@@ -383,6 +383,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 |MB_ICONINFORMATION|メッセージ ボックスに、"I"円の中から成るアイコンが表示されます。|
 |MB_ICONQUESTION|メッセージ ボックスに疑問符 () アイコンが表示されます。|
 |MB_ICONSTOP|メッセージ ボックスに、一時停止標識アイコンが表示されます。|
+
 ### <a name="message-box-default-buttons"></a>メッセージ ボックスの既定のボタン
 
 |スタイル|説明|
@@ -444,7 +445,7 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 
 ## <a name="window-styles"></a> ウィンドウ スタイル
 
-ウィンドウ スタイルを適用する[CWnd クラス](../../mfc/reference/cwnd-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[cwnd::create](../../mfc/reference/cwnd-class.md#create)または[とき](../../mfc/reference/cwnd-class.md#createex)します。 Windows でのウィンドウ スタイルの詳細については、次を参照してください。[ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)します。
+ウィンドウ スタイルを適用する[CWnd クラス](../../mfc/reference/cwnd-class.md)オブジェクト。 スタイルの組み合わせを指定、 *dwStyle*パラメーターの[cwnd::create](../../mfc/reference/cwnd-class.md#create)または[とき](../../mfc/reference/cwnd-class.md#createex)します。 Windows でのウィンドウ スタイルの詳細については、次を参照してください。[ウィンドウ スタイル (Windows)](/windows/desktop/winmsg/window-styles)します。
 
 |スタイル|説明|
 |-----------|-----------------|
@@ -523,5 +524,5 @@ MFC では、次のコンボ ボックス スタイルを使用できます。 W
 [MessageBox 関数 (Windows)](/windows/desktop/api/winuser/nf-winuser-messagebox)<br/>
 [スクロール バー コントロールのスタイル (Windows)](/windows/desktop/Controls/scroll-bar-control-styles)<br/>
 [静的コントロール スタイル (Windows)](/windows/desktop/Controls/static-control-styles)<br/>
-[ウィンドウ スタイル (Windows)](https://msdn.microsoft.com/library/windows/desktop/ms632600)<br/>
+[ウィンドウ スタイル (Windows)](/windows/desktop/winmsg/window-styles)<br/>
 [拡張ウィンドウ スタイル (Windows)](/windows/desktop/winmsg/extended-window-styles)

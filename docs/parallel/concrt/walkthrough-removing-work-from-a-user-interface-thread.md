@@ -1,16 +1,16 @@
 ---
 title: 'チュートリアル: ユーザー インターフェイス スレッドからの処理の除去'
-ms.date: 11/04/2016
+ms.date: 11/19/2018
 helpviewer_keywords:
 - user-interface threads, removing work from [Concurrency Runtime]
 - removing work from user-interface threads [Concurrency Runtime]
 ms.assetid: a4a65cc2-b3bc-4216-8fa8-90529491de02
-ms.openlocfilehash: 85622b68f94342ece2c9fc666b9ff6d515cfe10b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1230cf2b3fa510aeca8516e41cf30f9665987d05
+ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472438"
+ms.lasthandoff: 11/20/2018
+ms.locfileid: "52176316"
 ---
 # <a name="walkthrough-removing-work-from-a-user-interface-thread"></a>チュートリアル: ユーザー インターフェイス スレッドからの処理の除去
 
@@ -104,11 +104,11 @@ UI スレッドから作業を削除するには、ブロック操作をオフ�
 
    [!code-cpp[concrt-mandelbrot#8](../../parallel/concrt/codesnippet/cpp/walkthrough-removing-work-from-a-user-interface-thread_8.cpp)]
 
-9. 構築し実行すると、アプリケーションが正常に更新されたことを確認します。
+1. 構築し実行すると、アプリケーションが正常に更新されたことを確認します。
 
 次の図は、マンデルブロ アプリケーションの結果を示します。
 
-![マンデルブロ アプリケーション](../../parallel/concrt/media/mandelbrot.png "マンデルブロ")
+![マンデルブロ アプリケーション](../../parallel/concrt/media/mandelbrot.png "マンデルブロ アプリケーション")
 
 各ピクセルの計算は計算コストが高いため、UI スレッドは、計算全体が完了するまで追加のメッセージを処理できません。 これにより、アプリケーションの応答性が低下する可能性があります。 ただし、UI スレッドから作業を削除することで、この問題を軽減することができます。
 

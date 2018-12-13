@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: 9509b122e271ac22529c1b8a7b8e8d0b4b50025b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641104"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178780"
 ---
 # <a name="ccombobox-class"></a>CComboBox クラス
 
@@ -208,7 +208,7 @@ class CComboBox : public CWnd
 
 各メッセージ マップ エントリは、次の形式をとります。
 
-**On _** 通知 **(**`id`**、**`memberFxn`**)**
+**ON\_**_通知_ **(** _id_、 _memberFxn_ **)**
 
 場所`id`通知を送信するコンボ ボックス コントロールの子ウィンドウ ID を指定および`memberFxn`通知を処理するために記述した親メンバー関数の名前を指定します。
 
@@ -331,7 +331,7 @@ virtual int CompareItem(LPCOMPAREITEMSTRUCT lpCompareItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpCompareItemStruct*<br/>
-Long ポインター、 [COMPAREITEMSTRUCT](../../mfc/reference/compareitemstruct-structure.md)構造体。
+Long ポインター、 [COMPAREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcompareitemstruct)構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -383,7 +383,7 @@ virtual BOOL Create(
 コンボ ボックスのスタイルを指定します。 任意の組み合わせを適用[コンボ ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#combo-box-styles)します。
 
 *rect*<br/>
-コンボ ボックスのサイズと位置を指します。 [RECT 構造体](../../mfc/reference/rect-structure1.md)または`CRect`オブジェクト。
+コンボ ボックスのサイズと位置を指します。 [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)または`CRect`オブジェクト。
 
 *pParentWnd*<br/>
 コンボ ボックスの親ウィンドウを指定します (通常、 `CDialog`)。 NULL は指定できません。
@@ -450,7 +450,7 @@ virtual void DeleteItem(LPDELETEITEMSTRUCT lpDeleteItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDeleteItemStruct*<br/>
-Windows への long ポインター [DELETEITEMSTRUCT](../../mfc/reference/deleteitemstruct-structure.md)削除された項目に関する情報を含む構造体。 参照してください[構造体](../../mfc/reference/cwnd-class.md#ondeleteitem)この構造体の説明についてはします。
+Windows への long ポインター [DELETEITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdeleteitemstruct)削除された項目に関する情報を含む構造体。 参照してください[構造体](../../mfc/reference/cwnd-class.md#ondeleteitem)この構造体の説明についてはします。
 
 ### <a name="remarks"></a>Remarks
 
@@ -542,7 +542,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpDrawItemStruct*<br/>
-ポインターを[DRAWITEMSTRUCT](../../mfc/reference/drawitemstruct-structure.md)のために必要な図面の種類に関する情報を含む構造体。
+ポインターを[DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagdrawitemstruct)のために必要な図面の種類に関する情報を含む構造体。
 
 ### <a name="remarks"></a>Remarks
 
@@ -715,7 +715,7 @@ void GetDroppedControlRect(LPRECT lprect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lprect*<br/>
-指す、 [RECT 構造体](../../mfc/reference/rect-structure1.md)座標を受信します。
+指す、 [RECT 構造体](/windows/desktop/api/windef/ns-windef-tagrect)座標を受信します。
 
 ### <a name="example"></a>例
 
@@ -1028,7 +1028,7 @@ int InitStorage(
 
 多数のアイテムをリスト ボックスの部分に追加する前にこの関数を呼び出し、`CComboBox`します。
 
-Windows 95/98 のみ: *wParam*パラメーターは 16 ビット値に制限されます。 つまり、リスト ボックスは、32,767 を超える項目を含めることはできません。 項目の数が制限されているが、リスト ボックス内の項目の合計サイズは、使用可能なメモリによってのみ制限されます。
+Windows 95/98 のみ:*WParam*パラメーターは 16 ビット値に制限されます。 つまり、リスト ボックスは、32,767 を超える項目を含めることはできません。 項目の数が制限されているが、リスト ボックス内の項目の合計サイズは、使用可能なメモリによってのみ制限されます。
 
 この関数は、高速化する多数のアイテム (100 個以上) を持つリスト ボックスの初期化を使用します。 したがって後続のメモリ量の指定が事前に割り当てる[AddString](#addstring)、 [InsertString](#insertstring)、および[Dir](#dir)関数は、最短時間を取得します。 見積もりは、パラメーターを使用できます。 多くを指定した場合は、余分なメモリが割り当てられます。過小を評価する場合、通常の割り当てを事前に割り当てられる量を超える項目に対して使用されます。
 
@@ -1107,7 +1107,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 ### <a name="parameters"></a>パラメーター
 
 *lpMeasureItemStruct*<br/>
-Long ポインター、 [MEASUREITEMSTRUCT](../../mfc/reference/measureitemstruct-structure.md)構造体。
+Long ポインター、 [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser-tagmeasureitemstruct)構造体。
 
 ### <a name="remarks"></a>Remarks
 

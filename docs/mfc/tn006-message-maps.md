@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ON_COMMAND_EX macro [MFC]
 - message maps [MFC], Windows messaging
 ms.assetid: af4b6794-4b40-4f1e-ad41-603c3b7409bb
-ms.openlocfilehash: 91d1793999c12951bd80e0f592772bbae1e2d679
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ab08476923f253d666e024d8944aec64ed0af8da
+ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463301"
+ms.lasthandoff: 11/15/2018
+ms.locfileid: "51693675"
 ---
 # <a name="tn006-message-maps"></a>テクニカル ノート 6: メッセージ マップ
 
@@ -237,7 +237,7 @@ ON_CONTROL(wNotificationCode, id, memberFxn)
 > [!NOTE]
 > ClassWizard では、ユーザー インターフェイスで ON_CONTROL または ON_CONTROL_RANGE ハンドラーを作成することはできません。 テキスト エディターで手動で入力する必要があります。 ClassWizard では、これらのエントリが解析され、その他のメッセージ マップ エントリと同じように参照できます。
 
-Windows コモン コントロールを使用して、強力な[WM_NOTIFY](https://msdn.microsoft.com/library/windows/desktop/bb775583)の複雑なコントロールの通知。 このバージョンの MFC ON_NOTIFY メッセージと ON_NOTIFY_RANGE マクロを使用してこの新しいメッセージの直接サポートしています。 これらのマクロの詳細については、製品ドキュメントを参照してください。
+Windows コモン コントロールを使用して、強力な[WM_NOTIFY](/windows/desktop/controls/wm-notify)の複雑なコントロールの通知。 このバージョンの MFC ON_NOTIFY メッセージと ON_NOTIFY_RANGE マクロを使用してこの新しいメッセージの直接サポートしています。 これらのマクロの詳細については、製品ドキュメントを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
