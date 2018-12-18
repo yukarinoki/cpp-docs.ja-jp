@@ -1,5 +1,5 @@
 ---
-title: 終了、_Exit、_exit
+title: exit、_Exit、_exit
 ms.date: 1/02/2018
 apiname:
 - _exit
@@ -37,7 +37,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50451754"
 ---
-# <a name="exit-exit-exit"></a>終了、_Exit、_exit
+# <a name="exit-exit-exit"></a>exit、_Exit、_exit
 
 呼び出しプロセスを終了します。 **終了**はクリーンアップ後に、関数が終了されます。**_exit**と **_Exit**は直ちに終了します。
 
@@ -91,13 +91,13 @@ void last_fn() {}
 }
 ```
 
-使用しない**DLL_PROCESS_ATTACH**を呼び出す**終了**から**DllMain**します。 終了する、 **DLLMain**関数を返す**FALSE**から**DLL_PROCESS_ATTACH**します。
+使用しない**DLL_PROCESS_ATTACH**を呼び出す**exit**から**DllMain**します。 終了する、 **DLLMain**関数を返す**FALSE**から**DLL_PROCESS_ATTACH**します。
 
 ## <a name="requirements"></a>必要条件
 
 |関数|必須ヘッダー|
 |--------------|---------------------|
-|**終了**、 **_Exit**、 **_exit**|\<process.h> または \<stdlib.h>|
+|**exit**、 **_Exit**、 **_exit**|\<process.h> または \<stdlib.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
