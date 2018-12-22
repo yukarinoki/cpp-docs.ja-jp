@@ -49,26 +49,26 @@ class CFont : public CGdiObject
 
 |名前|説明|
 |----------|-----------------|
-|[CFont::CreateFont](#createfont)|初期化します、`CFont`と特性を指定します。|
-|[CFont::CreateFontIndirect](#createfontindirect)|初期化します、`CFont`オブジェクトで指定された特性を持つ、`LOGFONT`構造体。|
-|[CFont::CreatePointFont](#createpointfont)|初期化します、`CFont`指定の高さを持つポイント、および書体 0.1 単位で測定します。|
-|[CFont::CreatePointFontIndirect](#createpointfontindirect)|同じ`CreateFontIndirect`する点を除いて、フォントの高さは論理ユニットではなく、ポイントの 10 分で測定されます。|
-|[CFont::FromHandle](#fromhandle)|ポインターを返します、 `CFont` Windows HFONT が指定されるとします。|
-|[CFont::GetLogFont](#getlogfont)|入力、`LOGFONT`にアタッチされている論理フォントに関する情報を含む、`CFont`オブジェクト。|
+|[CFont::CreateFont](#createfont)|指定された特性で`CFont`を初期化します。|
+|[CFont::CreateFontIndirect](#createfontindirect)|指定された`LOGFONT`構造体の特性で`CFont`オブジェクトを初期化します。|
+|[CFont::CreatePointFont](#createpointfont)|指定の0.1ポイント単位の高さおよび書体を指定して、`CFont`を初期化します。|
+|[CFont::CreatePointFontIndirect](#createpointfontindirect)|`CreateFontIndirect`と同じですが、フォントの高さを論理ユニットではなく、0.1ポイント単位の値で指定する点が異なります。|
+|[CFont::FromHandle](#fromhandle)|Windows の HFONT を与えると、 `CFont` オブジェクトのポインターを返します。|
+|[CFont::GetLogFont](#getlogfont)|`CFont`オブジェクトにアタッチされている論理フォント情報を `LOGFONT` 構造体に格納します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CFont::operator HFONT](#operator_hfont)|アタッチされている Windows GDI フォントのハンドルを返します、`CFont`オブジェクト。|
+|[CFont::operator HFONT](#operator_hfont)|`CFont`オブジェクトにアタッチされている Windows GDI フォントのハンドルを返します。|
 
 ## <a name="remarks"></a>Remarks
 
-使用する、`CFont`オブジェクト、構築、`CFont`オブジェクトし、を使って Windows フォントをアタッチ[構築](#createfont)、 [CreateFontIndirect](#createfontindirect)、 [CreatePointFont](#createpointfont)、または[CreatePointFontIndirect](#createpointfontindirect)、し、オブジェクトのメンバー関数を使用してフォントを操作します。
+`CFont`オブジェクトを使用して、`CFont`オブジェクトを構築するか、 [CreateFont](#createfont)、 [CreateFontIndirect](#createfontindirect)、 [CreatePointFont](#createpointfont)、または[CreatePointFontIndirect](#createpointfontindirect)を使って Windows フォントをアタッチした後、オブジェクトのメンバー関数を使用してフォントを操作します。
 
-`CreatePointFont`と`CreatePointFontIndirect`関数は、多くの場合より使いやすく`CreateFont`または`CreateFontIndirect`フォントの高さの変換、ポイント サイズから論理ユニットを自動的に行うためです。
+`CreatePointFont`と`CreatePointFontIndirect`関数は、多くの場合、`CreateFont`または`CreateFontIndirect`よりも使いやすく、フォントの高さの変換、ポイント サイズから論理ユニットを自動的に行います。
 
-詳細については`CFont`を参照してください[グラフィック オブジェクト](../../mfc/graphic-objects.md)します。
+`CFont`の詳細については[グラフィック オブジェクト](../../mfc/graphic-objects.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -156,7 +156,7 @@ OEM 文字セットは、システムによって異なります。
 フォント マッパーでは、DEFAULT_CHARSET 値は使用しません。 アプリケーションでは、名前と完全に記述する論理フォントのフォントのサイズを許可するのに、この値を使用できます。 指定した名前のフォントが存在しない場合、任意の文字セットからのフォントは、指定したフォントの代わりに使用できます。 予期しない結果を避けるためには、アプリケーションは控えめ DEFAULT_CHARSET 値を使用する必要があります。
 
 *nOutPrecision*<br/>
-目的の出力の有効桁数を指定します。 出力の有効桁数は、要求されたフォントの高さ、幅、文字の方向、傾斜、およびピッチ、出力がどの程度一致する必要がありますを定義します。 参照してください、`lfOutPrecision`内のメンバー、`LOGFONT`と詳細については値の一覧については、Windows SDK で構造体。
+目的の出力の有効桁数を指定します。 出力の有効桁数は、要求されたフォントの高さ、幅、文字の方向、傾斜、およびピッチ、出力がどの程度一致しなければならないか定義します。 構造体`LOGFONT`内のメンバー`lfOutPrecision`の詳細については、Windows SDK を参照してください。
 
 *nClipPrecision*<br/>
 必要なクリッピング精度を指定します。 クリッピング精度は、部分的にクリッピング領域の外側にある文字をクリップする方法を定義します。 参照してください、`lfClipPrecision`内のメンバー、`LOGFONT`値の一覧については、Windows SDK で構造体。
@@ -169,7 +169,7 @@ OEM 文字セットは、システムによって異なります。
 実際の物理フォントの論理フォント属性が一致するように、GDI を試みる必要がありますに注意を定義するフォントの出力品質を指定します。 参照してください、`lfQuality`内のメンバー、`LOGFONT`値の一覧については、Windows SDK で構造体。
 
 *nPitchAndFamily*<br/>
-ピッチとファミリのフォントを指定します。 参照してください、`lfPitchAndFamily`内のメンバー、`LOGFONT`と詳細については値の一覧については、Windows SDK で構造体。
+ピッチとファミリのフォントを指定します。 構造体`lfPitchAndFamily`内のメンバー`LOGFONT`の詳細については、Windows SDK を参照してください。
 
 *lpszFacename*<br/>
 A`CString`またはフォントのタイプフェイス名を指定する null で終わる文字列へのポインター。 この文字列の長さは 30 文字を超えない必要があります。 Windows [EnumFontFamilies](/windows/desktop/api/wingdi/nf-wingdi-enumfontfamiliesa)関数は現在使用可能なすべてのフォントを列挙するために使用できます。 場合*lpszFacename*が null の場合、GDI がデバイスに依存しないタイプフェイスを使用します。
