@@ -28,7 +28,7 @@ ms.locfileid: "53178097"
 |Title|説明|
 |-----------|-----------------|
 |[Visual C++](visual-cpp-in-visual-studio.md)|Visual C++ のリファレンスと概念説明が含まれています。 MSDN ライブラリの一部です。|
-|[Windows デベロッパー センター](https://developer.microsoft.com/windows/)|C++ および他の言語を使用して Windows 8 用アプリを開発する方法に関する情報が含まれています。 Windows デベロッパー センターの一部です。C++ コンテンツは、ドキュメントと言語リファレンスに関するノードに含まれています。|
+|[Windows デベロッパー センター](https://developer.microsoft.com/windows/)|C++ および他の言語を使用して Windows 10 用アプリを開発する方法に関する情報が含まれています。 Windows デベロッパー センターの一部です。C++ コンテンツは、ドキュメントと言語リファレンスに関するノードに含まれています。|
 
 ### <a name="online-and-offline-documentation"></a>オンラインおよびオフラインのドキュメント
 
