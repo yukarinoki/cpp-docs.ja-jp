@@ -12,18 +12,18 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: bf7c5e58b88da4f60d2e784692cb6d4a0ed84970
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
+ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627508"
+ms.lasthandoff: 01/02/2019
+ms.locfileid: "53978297"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h における汎用テキスト マッピング
 
 国際対応のコードの転送を簡略化するのには、Microsoft ランタイム ライブラリは、多くのデータ型、ルーチン、およびその他のオブジェクトの Microsoft 固有の汎用テキスト マッピングを提供します。 1 バイト、マルチバイト、コンパイルできるジェネリック コードを記述する、tchar.h で定義されているこれらのマッピングを使用するかを使用して定義するマニフェスト定数に応じて、Unicode 文字のセットを`#define`ステートメント。 汎用テキスト マッピングは Microsoft 固有の拡張機能であり、ANSI とは互換性がありません。
 
-Tchar.h を使用すると、1 バイト、マルチバイト文字のセット (MBCS) と同じソースから Unicode アプリケーションを構築できます。 Tchar.h マクロを定義します (これには、プレフィックスが付いて`_tcs`) にマップされると、正しいプリプロセッサ定義`str`、 `_mbs`、または`wcs`関数は、適切な。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 Unicode をビルドするには、シンボルを定義`_UNICODE`します。 1 バイト アプリケーションをビルドする場合は、どちらも定義しません (既定)。 MFC アプリケーションでは、既定で `_MBCS` が定義されています。
+Tchar.h を使用すると、1 バイト、マルチバイト文字のセット (MBCS) と同じソースから Unicode アプリケーションを構築できます。 Tchar.h マクロを定義します (これには、プレフィックスが付いて`_tcs`) にマップされると、正しいプリプロセッサ定義`str`、 `_mbs`、または`wcs`関数は、適切な。 MBCS でビルドするには、シンボル `_MBCS` を定義します。 Unicode をビルドするには、シンボルを定義`_UNICODE`します。 1 バイト アプリケーションをビルドする場合は、どちらも定義しません (既定)。 MFC アプリケーションでは、既定で `_UNICODE` が定義されています。
 
 `_TCHAR`データ型は、tchar.h で条件付きで定義されます。 場合、シンボル`_UNICODE`、ビルドが定義されている`_TCHAR`として定義されます**wchar_t**。 そうしないと、1 バイト、MBCS のビルドとして定義されて**char**します。 (**wchar_t**、基本の Unicode ワイド文字データ型を 8 ビット符号付き 16 ビット版は、 **char**)。国際対応のアプリケーションでは、バイトではなく `_tcs` を扱う `_TCHAR` ファミリの関数を使う必要があります。 たとえば、`_tcsncpy`コピー `n` `_TCHARs`ではなく、`n`バイト。
 
