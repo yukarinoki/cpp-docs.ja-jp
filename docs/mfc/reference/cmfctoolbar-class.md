@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: d1677716db42f7f2e3b74e63562d00527291c144
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98de92a9473d64a87b9b7a9f2891adf4263e1951
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524668"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178968"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar クラス
 
@@ -519,7 +519,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 1. 呼び出す[CBasePane::EnableDocking](../../mfc/reference/cbasepane-class.md#enabledocking)ドッキング スタイルを指定します。
 
-特殊なボタンを挿入するのには、コンボ ボックスまたはドロップダウン ツール バーなどの予約、親リソースにダミー ボタンとを使用して実行時にダミーのボタンに置き換える[CMFCToolBar::ReplaceButton](#replacebutton)します。 詳細については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../walkthrough-putting-controls-on-toolbars.md)します。
+特殊なボタンを挿入するのには、コンボ ボックスまたはドロップダウン ツール バーなどの予約、親リソースにダミー ボタンとを使用して実行時にダミーのボタンに置き換える[CMFCToolBar::ReplaceButton](#replacebutton)します。 詳細については、次を参照してください。[チュートリアル。コントロールのツールバーに追加](../walkthrough-putting-controls-on-toolbars.md)します。
 
 `CMFCToolBar` MFC ライブラリ クラスの基本クラスは、 [CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)、 [CMFCPopupMenuBar クラス](../../mfc/reference/cmfcpopupmenubar-class.md)、および[CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)します。
 
@@ -1242,7 +1242,7 @@ void EnableReflections(BOOL bEnable = TRUE);
 
 コンボ ボックスなどの組み込みコントロールを含むツール バー ボタンのコマンドのリフレクションを有効にするには、このメソッドを呼び出します。
 
-コマンドのリフレクションの詳細については、次を参照してください。 [TN062: Windows コントロールへのメッセージ リフレクション](../../mfc/tn062-message-reflection-for-windows-controls.md)します。
+コマンドのリフレクションの詳細については、次を参照してください[TN062:。メッセージの Windows コントロールへのリフレクション](../../mfc/tn062-message-reflection-for-windows-controls.md)します。
 
 ##  <a name="enabletextlabels"></a>  CMFCToolBar::EnableTextLabels
 
@@ -2491,7 +2491,7 @@ static BOOL IsLastCommandFromButton(CMFCToolBarButton* pButton);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドへのポインターの取得、 [MSG 構造体](../../mfc/reference/msg-structure1.md)呼び出して`CWnd::GetCurrentMessage`します。 ボタンの HWND を比較して、`MSG::lParam`と`MSG::hwnd`ボタンがコマンドのソースでかどうかを確認するメンバー。
+このメソッドへのポインターの取得、 [MSG 構造体](/windows/desktop/api/winuser/ns-winuser-tagmsg)呼び出して`CWnd::GetCurrentMessage`します。 ボタンの HWND を比較して、`MSG::lParam`と`MSG::hwnd`ボタンがコマンドのソースでかどうかを確認するメンバー。
 
 ##  <a name="islocked"></a>  CMFCToolBar::IsLocked
 
@@ -3231,7 +3231,7 @@ void SetButtonInfo(
 [in]ボタンのスタイル。 参照してください[ツール バー コントロールのスタイル](../../mfc/reference/toolbar-control-styles.md)利用できるツール バー ボタンのスタイルの一覧についてはします。
 
 *画像を*<br/>
-[in](つまり、ツール バー イメージのコレクション内のインデックス) ボタンのイメージの 0 から始まるインデックス。
+[in]\(つまり、ツール バー イメージのコレクション内のインデックス) ボタンのイメージの 0 から始まるインデックス。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3905,5 +3905,5 @@ AFX_IMPORT_DATA static BOOL m_bDontScaleImages;
 [CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)<br/>
 [CMFCPopupMenuBar クラス](../../mfc/reference/cmfcpopupmenubar-class.md)<br/>
 [CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)<br/>
-[チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
+[チュートリアル:ツールバーのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
 

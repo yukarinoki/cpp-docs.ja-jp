@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: aa93158e518950efa9d1f2f8092aeabbc3c7724c
-ms.sourcegitcommit: 99437d7da4528ce72cabe6b6a65a9be5dfd090f8
+ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
+ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51598822"
+ms.lasthandoff: 12/11/2018
+ms.locfileid: "53248573"
 ---
 # <a name="compiler-options-listed-by-category"></a>コンパイラ オプションのカテゴリ別一覧
 
@@ -62,7 +62,7 @@ ms.locfileid: "51598822"
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。 このコンパイラ オプションは、x64 のみコンパイラ (ネイティブ コンパイルおよびクロス コンパイル)。|
 |[/hotpatch](hotpatch-create-hotpatchable-image.md)|ホットパッチ可能なイメージを作成します。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|高速超越関数を生成します。|
-|[QIfist](qifist-suppress-ftol.md)|非推奨。 浮動小数点型から整数型への変換が必要なときには、ヘルパー関数 `_ftol` を呼び出しません。 (x86 のみ)|
+|[/QIfist](qifist-suppress-ftol.md)|非推奨。 浮動小数点型から整数型への変換が必要なときには、ヘルパー関数 `_ftol` を呼び出しません。 (x86 のみ)|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|`fwait` ブロックの中にある `try` コマンドを削除します。|
 |[/Qpar](qpar-auto-parallelizer.md)|ループの自動並列化を有効にします。|
 |[/Qpar-report](qpar-report-auto-parallelizer-reporting-level.md)|自動並列化のレポート レベルを有効にします。|
@@ -207,7 +207,7 @@ ms.locfileid: "51598822"
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 高速チェックを有効にします 代わりに [/RTC1](rtc-run-time-error-checks.md) を使用してください。|
 |[/H](h-restrict-length-of-external-names.md)|非推奨。 外部名 (パブリック名) の長さを制限します。|
 |[/Og](og-global-optimizations.md)|非推奨。 グローバル最適化を使用します。|
-|[QIfist](qifist-suppress-ftol.md)|非推奨。 浮動小数点型から整数型に変換する方法を指定するために使われていました。|
+|[/QIfist](qifist-suppress-ftol.md)|非推奨。 浮動小数点型から整数型に変換する方法を指定するために使われていました。|
 |[/V](v-version-number.md)|非推奨。 .obj ファイル バージョン文字列を設定します。|
 |[/Wp64](wp64-detect-64-bit-portability-issues.md)|互換性のために残されています。 64 ビット移植性の問題を検出します。|
 |[/Yd](yd-place-debug-information-in-object-file.md)|非推奨。 すべてのオブジェクト ファイルに、詳細なデバッグ情報を取り込みます。 代わりに [/Zi](z7-zi-zi-debug-information-format.md) を使用してください。|

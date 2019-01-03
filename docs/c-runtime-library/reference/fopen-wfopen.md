@@ -143,7 +143,7 @@ Unicode モードで書き込むように開かれたファイルには、自動
 
 場合**t**または**b**には、指定しない*モード*、グローバル変数によって既定の変換モードが定義されている[_fmode](../../c-runtime-library/fmode.md)します。 場合**t**または**b**先頭に、引数、関数が失敗して返します**NULL**します。
 
-Unicode およびマルチバイトのストリーム入出力でテキスト モードとバイナリ モードを使用する方法について詳しくは、「 [Text and Binary Mode File I/O](../../c-runtime-library/text-and-binary-mode-file-i-o.md) 」および「 [Unicode Stream I/O in Text and Binary Modes](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)」をご覧ください。
+テキスト モードとバイナリ モードの Unicode およびマルチバイト ストリーム i/o を使用する方法の詳細については、次を参照してください。[テキスト モードとバイナリ モードのファイル入出力](../../c-runtime-library/text-and-binary-mode-file-i-o.md)と[テキストとバイナリ モードの Unicode Stream I/O](../../c-runtime-library/unicode-stream-i-o-in-text-and-binary-modes.md)します。
 
 次のオプションを追加できる*モード*追加の動作を指定します。
 

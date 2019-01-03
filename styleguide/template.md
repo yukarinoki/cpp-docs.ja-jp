@@ -13,8 +13,8 @@
 - 値 (タイトルなど) にコロンが含まれていると、メタデータ パーサーが中断します。 この場合は、タイトルを二重引用符で囲みます (例: `title: "Writing .NET Core console apps: An advanced step-by-step guide"`)。
 - **title**: このタイトルは検索エンジンの結果に表示されます。 パイプ (|) の後に製品名を追加することもできます (例: `title: Developing Libraries with Cross Platform Tools | .NET Core`)。 タイトルは H1 見出しのタイトルと同一でなくてもかまいません。65 文字以下にする必要があります (| 製品名を含む)。
 - **author**、**manager**、**ms.reviewer**: "author" フィールドには、作成者のエイリアスではなく、**GitHub ユーザー名**を含める必要があります。  一方、"manager" フィールドと "ms.reviewer" フィールドには Microsoft エイリアスを含める必要があります。 ms.reviewer は、記事または機能に関連付けられている PM/開発者の名前を指定します。
-- **ms.devlang** はテクノロジを定義します。 サポートされている値のいくつか: `dotnet`、 `cpp`、 `csharp`、 `fsharp`、`vb`と`xml`します。
-- **ms.assetid**: これは、ビジネス インテリジェンス (BI) などの内部追跡を目的に使用される記事の GUID です。 新しいマークダウン ファイルを作成するときの GUID を取得できます[オンライン GUID ジェネレーター](https://www.guidgenerator.com/)します。
+- **ms.devlang** はテクノロジを定義します。 サポートされる値には、`dotnet`、`cpp`、`csharp`、`fsharp`、`vb`、`xml` などがあります。
+- **ms.assetid**: これは、ビジネス インテリジェンス (BI) などの内部追跡を目的に使用される記事の GUID です。 新しいマークダウン ファイルを作成する場合は、[Online GUID Generator](https://www.guidgenerator.com/) から GUID を取得できます。
 
 ## <a name="basic-markdown-gfm-and-special-characters"></a>基本マークダウン、GFM、特殊文字
 
@@ -30,9 +30,9 @@
 
 ## <a name="markdown-editing-tools"></a>マークダウン編集ツール
 
-使用することができます[Visual Studio Code](https://code.visualstudio.com/) Markdown ドキュメントを編集します。 VS Code では、多くの便利な Markdown 拡張がなどがあります。
+[Visual Studio Code](https://code.visualstudio.com/) を使用すると、マークダウン ドキュメントを編集できます。 VS Code には、次のような便利なマークダウン拡張があります。
 
-- [docs markdown](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-markdown) microsoft
+- [docs-markdown](https://marketplace.visualstudio.com/items?itemName=docsmsft.docs-markdown) (Microsoft)
 - [markdownlint](https://marketplace.visualstudio.com/items?itemName=DavidAnson.vscode-markdownlint)
 
 ## <a name="file-name"></a>ファイル名
@@ -59,7 +59,7 @@
 
 見出しが `#` 文字で終わる場合は、タイトルを正しく表示するために末尾に余分の `#` 文字を追加する必要があります。 たとえば、`# Async Programming in F# #` のようにします。
 
-常にする (第 1 レベルの見出し) を除くの見出しの前後に空白行を 1 つ必要があります。
+見出しの前後 (一番上の見出しを除く) には、必ず空白の行を 1 行入れる必要があります。
 
 レベル 2 の見出しは、ページ上タイトルの下にある "この記事内" セクションに表示されるページ上の目次を生成します。
 
@@ -76,10 +76,10 @@
 ## <a name="text-styling"></a>テキストのスタイル指定
 
 *斜体*  
-ユーザーが生成したファイル名、フォルダー、およびパス (長い項目、独自の行に分割) の使用新しい用語です。パラメーター名。ユーザーが入力した値です。url (ない場合は、既定のリンクとしてレンダリングされます)。
+ユーザー生成のファイル名、フォルダー、パス (項目が長い場合。行の上で区別する)、新しい用語、パラメーター名、ユーザーが入力する値、URL (既定のようにリンクとして表示されていない場合) に使用します。
 
 **太字**  
-UI 要素と言語のキーワードを使用します。
+UI 要素と言語のキーワードに使用します。
 
 ## <a name="links"></a>リンク
 
@@ -99,15 +99,15 @@ ID はヘッダー テキストに基づいて自動生成されます。 その
 
 - 例: [.NET コミュニティ](../docs/welcome.md#community)
 
-### <a name="docs-links"></a>Docs へのリンク
+### <a name="docs-links"></a>ドキュメントのリンク
 
-別の Docs リポジトリ内のファイルにリンクするには、リンクとして、docs.microsoft.com の相対 URL を使用します。 .Md サフィックスを含めないでください。
+異なるドキュメント リポジトリのファイルにリンクするには、docs.microsoft.com の相対 URL をリンクとして使用します。 .md というサフィックスは含めないでください。
 
-- 例:[ユニバーサル Windows プラットフォームのドキュメント](/windows/uwp)
+- 例: [ユニバーサル Windows プラットフォーム ドキュメント](/windows/uwp)
 
 ### <a name="external-links"></a>外部リンク
 
-外部ファイルにリンクするには、完全な URL をリンクとして使用します。 該当する場合は、HTTPS URL を使用します。
+外部ファイルにリンクするには、完全な URL をリンクとして使用します。 必要に応じて HTTPS URL を使用します。
 
 - 例: [GitHub](https://www.github.com)
 
@@ -131,7 +131,7 @@ API にリンクする場合は、ソース コードから自動生成される
 
 この表記の使用に関する詳細は、「[Using cross reference (相互参照の使用)](https://dotnet.github.io/docfx/tutorial/links_and_cross_references.html#using-cross-reference)」を参照してください。
 
-> 現時点では、UID を検索する簡単な方法はありません。 API がこのリポジトリを使用して検索するには、UID を検索する最善の方法: [docascode/coreapi](https://github.com/docascode/coreapi)します。 将来的により優れたシステムを提供できるように取り組んでいます。
+> 現時点では、UID を検索する簡単な方法はありません。 API の UID を検索する最善の方法は、このリポジトリ [docascode/coreapi](https://github.com/docascode/coreapi) 内で検索する方法です。 将来的により優れたシステムを提供できるように取り組んでいます。
 
 UID に特殊文字 \` または \# が含まれている場合は、UID 値は次の例のようにそれぞれ %60 と %23 として HTML エンコードする必要があります。
 - 例: @System.Threading.Tasks.Task\`1 は `@System.Threading.Tasks.Task%601` になります
@@ -193,7 +193,7 @@ ___
 | 列 2 は      | 中央揃え      |   $12 |
 | 列 1 は既定の | 左揃え     |    $1 |
 
-[Markdown Table Generator ツール](https://www.tablesgenerator.com/markdown_tables)を使用して、より簡単にテーブルを作成できます。 参照してください[Markdown の編集ツール](#markdown-editing-tools)します。
+[Markdown Table Generator ツール](https://www.tablesgenerator.com/markdown_tables)を使用して、より簡単にテーブルを作成できます。 「[マークダウン編集ツール](#markdown-editing-tools)」も参照してください。
 
 ## <a name="code"></a>コード
 
@@ -291,7 +291,7 @@ function fancyAlert(arg) {
 
 ### <a name="inline-code"></a>インライン コード
 
-`inline code` には、バッククォート (&#96;) を使用します。 コマンド ライン コマンド、データベースのテーブルおよび列名と言語の式と関数名には、インライン コードを使用します。
+`inline code` には、バッククォート (&#96;) を使用します。 コマンド ライン コマンド、データベース テーブルと列名、言語式と関数名には、インラインコードを使用します。
 
 ## <a name="blockquotes"></a>ブロック引用
 
@@ -311,12 +311,12 @@ function fancyAlert(arg) {
 
 ### <a name="channel-9"></a>Channel 9
 
-[![Larry Osterman、彼 (DOS ネットワー キング スタック) 経由でビル ・ ゲイツに 1 つの対話](https://sec.ch9.ms/ch9/caf5/f8657a22-5b83-47a3-9748-4c1be9fecaf5/Larry-Osterman-His-one-interaction-with-Bill-Gate_960.jpg)
+[![Larry Osterman - His one interaction with Bill Gates (over DOS networking stack)](https://sec.ch9.ms/ch9/caf5/f8657a22-5b83-47a3-9748-4c1be9fecaf5/Larry-Osterman-His-one-interaction-with-Bill-Gate_960.jpg)
 ](https://channel9.msdn.com/Blogs/TheChannel9Team/Larry-Osterman-His-one-interaction-with-Bill-Gates-over-DOS-networking-stack)
 
 ### <a name="youtube"></a>YouTube
 
-[![.NET の 2016 年 2 月 4 - Scott Hunter](https://img.youtube.com/vi/g2a4W6Q7aRw/0.jpg)
+[![.NET 2016/2/4 - Scott Hunter](https://img.youtube.com/vi/g2a4W6Q7aRw/0.jpg)
 ](https://www.youtube.com/watch?v=g2a4W6Q7aRw)
 
 ## <a name="docsmicrosoft-extensions"></a>docs.microsoft 拡張機能

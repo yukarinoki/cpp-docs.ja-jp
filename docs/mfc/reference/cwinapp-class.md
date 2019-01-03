@@ -192,12 +192,12 @@ helpviewer_keywords:
 - CWinApp [MFC], m_nAutosaveInterval
 - CWinApp [MFC], m_pDataRecoveryHandler
 ms.assetid: e426a3cd-0d15-40d6-bd55-beaa5feb2343
-ms.openlocfilehash: c25d79dc1fb201d10e090f512a5a96f649efbcfe
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f9afdf18fcaff0d3613b4204d8690f915079e7d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542364"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178942"
 ---
 # <a name="cwinapp-class"></a>CWinApp クラス
 
@@ -347,7 +347,7 @@ Microsoft Foundation classes を使用する各アプリケーションから派
 
 - [AfxGetAppName](application-information-and-management.md#afxgetappname)アプリケーションの名前を含む文字列へのポインターを取得します。 またはへのポインターがある場合、`CWinApp`オブジェクトを使用して`m_pszExeName`アプリケーションの名前を取得します。
 
-参照してください[CWinApp: アプリケーション クラス](../../mfc/cwinapp-the-application-class.md)の詳細については、`CWinApp`など、次の概要については、クラス。
+参照してください[CWinApp:アプリケーション クラス](../../mfc/cwinapp-the-application-class.md)の詳細については、`CWinApp`など、次の概要については、クラス。
 
 - `CWinApp`-アプリケーション ウィザードによって作成されたコードを派生します。
 
@@ -1060,7 +1060,7 @@ virtual BOOL InitInstance();
 
 アプリケーションの初期化は概念的には 2 つのセクションに分かれています。: 1 回限りのアプリケーションの初期化は、最初に行われる、プログラムの実行の時間と、各実行のインスタンスを初期化時刻の最初の時間を含む、プログラムの実行のコピー。 フレームワークの実装の`WinMain`この関数を呼び出します。
 
-オーバーライド`InitInstance`を Windows で実行されているアプリケーションの新しいインスタンスを初期化します。 通常、オーバーライドする`InitInstance`をメイン ウィンドウ オブジェクトを構築し、設定、`CWinThread::m_pMainWnd`データ メンバーは、そのウィンドウをポイントします。 このメンバー関数のオーバーライドの詳細については、次を参照してください。 [CWinApp: アプリケーション クラス](../../mfc/cwinapp-the-application-class.md)します。
+オーバーライド`InitInstance`を Windows で実行されているアプリケーションの新しいインスタンスを初期化します。 通常、オーバーライドする`InitInstance`をメイン ウィンドウ オブジェクトを構築し、設定、`CWinThread::m_pMainWnd`データ メンバーは、そのウィンドウをポイントします。 このメンバー関数のオーバーライドの詳細については、次を参照してください[CWinApp:。アプリケーション クラス](../../mfc/cwinapp-the-application-class.md)します。
 
 > [!NOTE]
 > MFC アプリケーションは、シングルスレッド アパートメント (STA) として初期化する必要があります。 呼び出す場合[CoInitializeEx](/windows/desktop/api/combaseapi/nf-combaseapi-coinitializeex)で、`InitInstance`オーバーライド、COINIT_APARTMENTTHREADED (COINIT_MULTITHREADED ではなく) を指定します。
@@ -1437,7 +1437,7 @@ LPCTSTR m_pszAppName;
 グローバル関数によって返される[AfxGetAppName](application-information-and-management.md#afxgetappname)します。 `m_pszAppName` 型のパブリック変数**const char**<strong>\*</strong>します。
 
 > [!NOTE]
-> 値を割り当てる場合`m_pszAppName`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例えば:
+> 値を割り当てる場合`m_pszAppName`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例:
 
 [!code-cpp[NVC_MFCWindowing#57](../../mfc/reference/codesnippet/cpp/cwinapp-class_18.cpp)]
 
@@ -1458,7 +1458,7 @@ LPCTSTR m_pszExeName;
 異なり[m_pszAppName](#m_pszappname)、この名前は空白を含めることはできません。 `m_pszExeName` 型のパブリック変数**const char**<strong>\*</strong>します。
 
 > [!NOTE]
-> 値を割り当てる場合`m_pszExeName`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例えば:
+> 値を割り当てる場合`m_pszExeName`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例:
 
 [!code-cpp[NVC_MFCWindowing#58](../../mfc/reference/codesnippet/cpp/cwinapp-class_20.cpp)]
 
@@ -1475,7 +1475,7 @@ LPCTSTR m_pszHelpFilePath;
 既定では、フレームワークを初期化します`m_pszHelpFilePath`を使用してアプリケーションの名前に"。HLP"を追加します。 ヘルプ ファイルの名前を変更するには、次のように設定します。`m_pszHelpFilePath`目的のヘルプ ファイルの完全な名前を含む文字列を指すようにします。 これを行う便利な場所がアプリケーションの[InitInstance](#initinstance)関数。 `m_pszHelpFilePath` 型のパブリック変数**const char**<strong>\*</strong>します。
 
 > [!NOTE]
-> 値を割り当てる場合`m_pszHelpFilePath`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例えば:
+> 値を割り当てる場合`m_pszHelpFilePath`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例:
 
 [!code-cpp[NVC_MFCWindowing#59](../../mfc/reference/codesnippet/cpp/cwinapp-class_21.cpp)]
 
@@ -1492,7 +1492,7 @@ LPCTSTR m_pszProfileName;
 `m_pszProfileName` 型のパブリック変数**const char**<strong>\*</strong>します。
 
 > [!NOTE]
-> 値を割り当てる場合`m_pszProfileName`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例えば:
+> 値を割り当てる場合`m_pszProfileName`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例:
 
 [!code-cpp[NVC_MFCWindowing#60](../../mfc/reference/codesnippet/cpp/cwinapp-class_22.cpp)]
 
@@ -1508,9 +1508,9 @@ LPCTSTR m_pszRegistryKey;
 
 通常、このデータ メンバーは、読み取り専用として扱われます。
 
-- レジストリ キー値が格納されます。 アプリケーション プロファイルの設定の名前が次のレジストリ キーに追加されます: HKEY_CURRENT_USER/ソフトウェア/LocalAppWizard で生成されるとします。
+- レジストリ キー値が格納されます。 アプリケーション プロファイルの設定の名前は、次のレジストリ キーに追加されます。HKEY_CURRENT_USER/ソフトウェア/LocalAppWizard で生成されるとします。
 
-値を割り当てる場合`m_pszRegistryKey`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例えば:
+値を割り当てる場合`m_pszRegistryKey`ヒープに動的に割り当てる必要があります。 `CWinApp`デストラクター呼び出し**無料**このポインターに ()。 使用する多くの`_tcsdup`() のランタイム ライブラリ関数、割り当てを行う。 また、新しい値を割り当てる前に、現在のポインターに関連付けられているメモリを解放します。 例:
 
 [!code-cpp[NVC_MFCWindowing#61](../../mfc/reference/codesnippet/cpp/cwinapp-class_23.cpp)]
 
@@ -1793,7 +1793,7 @@ virtual BOOL PreTranslateMessage(MSG* pMsg);
 ### <a name="parameters"></a>パラメーター
 
 *pMsg*<br/>
-ポインターを[MSG](../../mfc/reference/msg-structure1.md)処理するメッセージを含む構造体。
+ポインターを[MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)処理するメッセージを含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1815,7 +1815,7 @@ virtual BOOL ProcessMessageFilter(
 フック コードを指定します。 このメンバー関数では、コードを使用して、処理する方法を決定*lpMsg します。*
 
 *lpMsg*<br/>
-Windows へのポインター [MSG](../../mfc/reference/msg-structure1.md)構造体。
+Windows へのポインター [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1886,7 +1886,7 @@ virtual LRESULT ProcessWndProcException(
 キャッチされない例外へのポインター。
 
 *pMsg*<br/>
-A [MSG](../../mfc/reference/msg-structure1.md)フレームワークが例外をスローする原因となった windows メッセージに関する情報を含む構造体。
+A [MSG](/windows/desktop/api/winuser/ns-winuser-tagmsg)フレームワークが例外をスローする原因となった windows メッセージに関する情報を含む構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2086,7 +2086,7 @@ BOOL RunEmbedded();
 
 ### <a name="remarks"></a>Remarks
 
-存在する場合、オプションは、コマンドラインから削除されます。 埋め込みの詳細については、記事を参照してください。[サーバー: サーバーを実装する](../../mfc/servers-implementing-a-server.md)します。
+存在する場合、オプションは、コマンドラインから削除されます。 埋め込みの詳細については、記事を参照してください。[サーバー。サーバーを実装する](../../mfc/servers-implementing-a-server.md)します。
 
 ##  <a name="saveallmodified"></a>  CWinApp::SaveAllModified
 
@@ -2118,7 +2118,7 @@ void SelectPrinter(
 ### <a name="parameters"></a>パラメーター
 
 *場合*<br/>
-識別するハンドルを[DEVNAMES](../../mfc/reference/devnames-structure.md)ドライバー、デバイス、および特定のプリンターの出力ポート名を識別する構造体。
+識別するハンドルを[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)ドライバー、デバイス、および特定のプリンターの出力ポート名を識別する構造体。
 
 *hDevMode*<br/>
 識別するハンドルを[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)デバイスの初期化とプリンターの環境に関する情報を指定する構造体。
@@ -2168,7 +2168,7 @@ void SetRegistryKey(UINT nIDRegistryKey);
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、設定*m_pszRegistryKey*で使用される、 `GetProfileInt`、 `GetProfileString`、 `WriteProfileInt`、および`WriteProfileString`のメンバー関数`CWinApp`します。 この関数が呼び出された場合、最近使用 (した MRU) ファイルの一覧は、レジストリにも格納されます。 レジストリ キーは、会社の名前です。 次の形式のキーに格納されている: \software\\< 会社名\>\\< アプリケーション名\>\\< セクション名\>\\< 値名前\>します。
+この関数は、設定*m_pszRegistryKey*で使用される、 `GetProfileInt`、 `GetProfileString`、 `WriteProfileInt`、および`WriteProfileString`のメンバー関数`CWinApp`します。 この関数が呼び出された場合、最近使用 (した MRU) ファイルの一覧は、レジストリにも格納されます。 レジストリ キーは、会社の名前です。 次の形式のキーに格納されます。\Software\\< 会社名\>\\< アプリケーション名\>\\< セクション名\>\\< 値の名前\>します。
 
 ##  <a name="supportsapplicationrecovery"></a>  CWinApp::SupportsApplicationRecovery
 
@@ -2395,4 +2395,4 @@ void SetAppID(LPCTSTR lpcszAppID);
 
 [CWinThread クラス](../../mfc/reference/cwinthread-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[方法: 再起動マネージャーのサポートを追加する](../../mfc/how-to-add-restart-manager-support.md)
+[操作方法：再起動マネージャーのサポートを追加します。](../../mfc/how-to-add-restart-manager-support.md)

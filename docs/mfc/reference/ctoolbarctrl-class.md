@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: d2214af96f3eba7d1b1d3c8e52f0c82873b982d7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463008"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178981"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 
@@ -1106,7 +1106,7 @@ BOOL GetMaxSize(LPSIZE pSize) const;
 ### <a name="parameters"></a>パラメーター
 
 *pSize*<br/>
-ポインターを[サイズ](https://msdn.microsoft.com/library/windows/desktop/dd145106)項目のサイズを受け取る。
+ポインターを[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)項目のサイズを受け取る。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1247,7 +1247,7 @@ int GetState(int nID) const;
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、ボタンの状態の 1 つ以上取得する場合に特に便利です。 だけ 1 つの状態を取得するには、次のメンバー関数のいずれかを使用: [IsButtonEnabled](#isbuttonenabled)、 [IsButtonChecked](#isbuttonchecked)、 [IsButtonPressed](#isbuttonpressed)、[に](#isbuttonhidden)、または[IsButtonIndeterminate](#isbuttonindeterminate)します。 ただし、`GetState`メンバー関数は TBSTATE_WRAP ボタンの状態を検出する唯一の方法です。
+この関数は、ボタンの状態の 1 つ以上取得する場合に特に便利です。 、1 つの状態を取得するには、次のメンバー関数のいずれかを使用します。[IsButtonEnabled](#isbuttonenabled)、 [IsButtonChecked](#isbuttonchecked)、 [IsButtonPressed](#isbuttonpressed)、[に](#isbuttonhidden)、または[IsButtonIndeterminate](#isbuttonindeterminate)します。 ただし、`GetState`メンバー関数は TBSTATE_WRAP ボタンの状態を検出する唯一の方法です。
 
 ##  <a name="getstring"></a>  CToolBarCtrl::GetString
 
@@ -2335,7 +2335,7 @@ BOOL SetState(
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、ボタンの状態の 1 つ以上を設定する場合に特に便利です。 だけ 1 つの状態を設定するには、次のメンバー関数のいずれかを使用: [EnableButton](#enablebutton)、[切り替わるよう](#checkbutton)、[に](#hidebutton)、[不定](#indeterminate)、または[PressButton](#pressbutton)します。
+この関数は、ボタンの状態の 1 つ以上を設定する場合に特に便利です。 1 つの状態を設定するだけです、するには、次のメンバー関数のいずれかを使用します。[EnableButton](#enablebutton)、[切り替わるよう](#checkbutton)、[に](#hidebutton)、[不確定](#indeterminate)、または[PressButton](#pressbutton)します。
 
 ##  <a name="setstyle"></a>  CToolBarCtrl::SetStyle
 

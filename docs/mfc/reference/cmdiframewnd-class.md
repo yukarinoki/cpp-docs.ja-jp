@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: a565e1c9d9c9e4d3773763b0ee78c49f61696723
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617543"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178383"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd クラス
 
@@ -160,7 +160,7 @@ virtual BOOL CreateClient(
 ### <a name="parameters"></a>パラメーター
 
 *lpCreateStruct*<br/>
-Long ポインター、 [CREATESTRUCT](../../mfc/reference/createstruct-structure.md)構造体。
+Long ポインター、 [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)構造体。
 
 *pWindowMenu*<br/>
 ウィンドウのポップアップ メニューへのポインター。
@@ -276,7 +276,7 @@ void MDICascade(int nType);
 ### <a name="parameters"></a>パラメーター
 
 *%n タイプ*<br/>
-Cascade フラグを指定します。 次のフラグだけを指定できます: もう、カスケードするを無効になっている MDI 子ウィンドウを実行できなくなります。
+Cascade フラグを指定します。 次のフラグだけを指定できます。もう、MDI 子ウィンドウを無効になっているが重ねて表示されていることを防ぎます。
 
 ### <a name="remarks"></a>Remarks
 

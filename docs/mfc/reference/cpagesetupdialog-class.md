@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], PreDrawPage
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
-ms.openlocfilehash: 136f172dcd406e323afddae87d6fb234b5d4b273
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d3fdcfa664de93f62b8b4dbcbc6184d08fdf591c
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544886"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178083"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog クラス
 
@@ -142,7 +142,7 @@ CPageSetupDialog(
 
 - PSD_DISABLEORIENTATION には、ページの向き ダイアログのコントロールが無効にします。
 
-- PSD_RETURNDEFAULT により`CPageSetupDialog`を返す[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](../../mfc/reference/devnames-structure.md)  ダイアログ ボックスを表示せずにシステムの既定のプリンターの初期化されている構造体。 ように仮定両方`hDevNames`と`hDevMode`エラーを返しますそれ以外の場合は NULL です。 古いプリンター ドライバー (Windows バージョン 3.0 より前)、システムの既定のプリンターがサポートされている場合のみ`hDevNames`が返されます。`hDevMode`は NULL です。
+- PSD_RETURNDEFAULT により`CPageSetupDialog`を返す[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)  ダイアログ ボックスを表示せずにシステムの既定のプリンターの初期化されている構造体。 ように仮定両方`hDevNames`と`hDevMode`エラーを返しますそれ以外の場合は NULL です。 古いプリンター ドライバー (Windows バージョン 3.0 より前)、システムの既定のプリンターがサポートされている場合のみ`hDevNames`が返されます。`hDevMode`は NULL です。
 
 - PSD_DISABLEPAPER には、用紙の選択コントロールが無効にします。
 
@@ -171,7 +171,7 @@ CPageSetupDialog(
 
 ##  <a name="createprinterdc"></a>  CPageSetupDialog::CreatePrinterDC
 
-プリンター デバイス コンテキストを作成、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](../../mfc/reference/devnames-structure.md)構造体。
+プリンター デバイス コンテキストを作成、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)構造体。
 
 ```
 HDC CreatePrinterDC();
@@ -262,7 +262,7 @@ void GetMargins(
 ### <a name="parameters"></a>パラメーター
 
 *lpRectMargins*<br/>
-ポインターを[RECT](rect-structure.md)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)現在選択されているプリンターの印刷の余白 (1/1000 インチまたは 1/100 mm) で記述するオブジェクト。 この四角形に興味がない場合は、このパラメーターは、NULL を渡します。
+ポインターを[RECT](/windows/desktop/api/windef/ns-windef-tagrect)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)現在選択されているプリンターの印刷の余白 (1/1000 インチまたは 1/100 mm) で記述するオブジェクト。 この四角形に興味がない場合は、このパラメーターは、NULL を渡します。
 
 *lpRectMinMargins*<br/>
 ポインターを`RECT`構造または`CRect`現在選択されているプリンターの印刷の余白の最小値 (1/1000 インチまたは 1/100 mm) で記述するオブジェクト。 この四角形に興味がない場合は、このパラメーターは、NULL を渡します。
@@ -341,7 +341,7 @@ virtual UINT OnDrawPage(
 - 戻り値のアドレス形式の WM_PSD_YAFULLPAGERECT 領域。 この領域は、サンプル ページ領域の端に拡張されます。
 
 *lpRect*<br/>
-ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT](rect-structure.md)描画領域の座標を格納しているオブジェクト。
+ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)または[RECT](/windows/desktop/api/windef/ns-windef-tagrect)描画領域の座標を格納しているオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 

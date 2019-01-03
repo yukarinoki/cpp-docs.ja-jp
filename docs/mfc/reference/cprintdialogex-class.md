@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CPrintDialogEx [MFC], PrintSelection
 - CPrintDialogEx [MFC], m_pdex
 ms.assetid: 1d506703-ee1c-44cc-b4ce-4e778fec26b8
-ms.openlocfilehash: 79d696f89ca7474220559abbf5464f32b6e684c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb88cc39ddaffe51b80484bbe8460507a1d0aecb
+ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543326"
+ms.lasthandoff: 12/10/2018
+ms.locfileid: "53178448"
 ---
 # <a name="cprintdialogex-class"></a>CPrintDialogEx クラス
 
@@ -154,7 +154,7 @@ CPrintDialogEx(
 
 ##  <a name="createprinterdc"></a>  CPrintDialogEx::CreatePrinterDC
 
-プリンター デバイス コンテキスト (DC) を作成、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](../../mfc/reference/devnames-structure.md)構造体。
+プリンター デバイス コンテキスト (DC) を作成、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)構造体。
 
 ```
 HDC CreatePrinterDC();
@@ -216,9 +216,9 @@ TRUE の場合は成功しましたが、それ以外の場合は FALSE。
 
 ### <a name="remarks"></a>Remarks
 
-プリンター デバイス コンテキスト (DC) を作成、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](../../mfc/reference/devnames-structure.md)構造体。
+プリンター デバイス コンテキスト (DC) を作成、 [DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)構造体。
 
-`GetDefaults` 印刷のプロパティ シートに表示されません。 代わりに、設定、`hDevNames`と`hDevMode`のメンバー [m_pdex](#m_pdex)へのハンドルを[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](../../mfc/reference/devnames-structure.md)構造体の初期化されている、システムの既定のプリンターです。 両方`hDevNames`と`hDevMode`が NULL の場合、または`GetDefaults`は失敗します。
+`GetDefaults` 印刷のプロパティ シートに表示されません。 代わりに、設定、`hDevNames`と`hDevMode`のメンバー [m_pdex](#m_pdex)へのハンドルを[DEVMODE](/windows/desktop/api/wingdi/ns-wingdi-_devicemodea)と[DEVNAMES](/windows/desktop/api/commdlg/ns-commdlg-tagdevnames)構造体の初期化されている、システムの既定のプリンターです。 両方`hDevNames`と`hDevMode`が NULL の場合、または`GetDefaults`は失敗します。
 
 PD_RETURNDC フラグが設定になっているかどうかはこの関数はしか返しません`hDevNames`と`hDevMode`(である`m_pdex.hDevNames`と`m_pdex.hDevMode`)、呼び出し元にはプリンター DC で返すことも`m_pdex.hDC`します。 プリンター DC を削除して、Windows の呼び出しの呼び出し元の責任[GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)関数が終了したら、ハンドルを`CPrintDialogEx`オブジェクト。
 
