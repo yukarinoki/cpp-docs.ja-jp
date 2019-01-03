@@ -1,5 +1,5 @@
 ---
-title: '#行ディレクティブ (C/C++)'
+title: '#line ディレクティブ (C/C++)'
 ms.date: 10/18/2017
 f1_keywords:
 - '#line'

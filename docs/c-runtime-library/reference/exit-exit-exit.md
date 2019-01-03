@@ -1,4 +1,4 @@
----
+﻿---
 title: exit、_Exit、_exit
 ms.date: 1/02/2018
 apiname:
