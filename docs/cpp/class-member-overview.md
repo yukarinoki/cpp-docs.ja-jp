@@ -30,7 +30,7 @@ ms.locfileid: "50637919"
 
 - 演算子
 
-- [クラス宣言を入れ子になった](nested-class-declarations.md)とします)。
+- [入れ子にされたクラス宣言](nested-class-declarations.md)
 
 - [共用体](unions.md)
 
