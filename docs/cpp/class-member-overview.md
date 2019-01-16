@@ -38,7 +38,7 @@ ms.locfileid: "50637919"
 
 - [ビット フィールド](../cpp/cpp-bit-fields.md)します。
 
-- [友人](../cpp/friend-cpp.md)します。
+- [friend](../cpp/friend-cpp.md)します。
 
 - [エイリアスと typedef](../cpp/aliases-and-typedefs-cpp.md)します。
 
