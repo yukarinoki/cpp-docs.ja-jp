@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 429e20c77c2a5715d1d45b74b3d020ee52daec97
+ms.sourcegitcommit: 2ebbf8093fadb9a1b78a4381439bcd5c01a89267
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 01/18/2019
+ms.locfileid: "54397369"
+---
 # [IDE と Visual C++ 開発用ツール](ide-and-tools-for-visual-cpp-development.md)
 # [コードの作成とリファクタリング (C++)](writing-and-refactoring-code-cpp.md)
 ## [署名の変更](refactoring/change-signature.md)
@@ -29,12 +37,8 @@
 ### [メイクファイル プロジェクトの作成](creating-a-makefile-project.md)
 #### [メイクファイル アプリケーション ウィザード](makefile-project-wizard.md)
 ##### [[アプリケーションの設定] (メイクファイル アプリケーション ウィザード)](application-settings-makefile-project-wizard.md)
-#### [方法 : メイクファイル プロジェクトで IntelliSense を使用可能にする](how-to-enable-intellisense-for-makefile-projects.md)
-### [方法 : 既存のコードから C++ プロジェクトを作成する](how-to-create-a-cpp-project-from-existing-code.md)
-#### [[プロジェクトの場所とソース ファイルの指定] (既存コード ファイルからの新しいプロジェクトの作成ウィザード)](specify-project-location-and-source-files.md)
-#### [[プロジェクト設定の指定] (既存コード ファイルからの新しいプロジェクトの作成ウィザード)](specify-project-settings-create-new-project-from-existing-code-files-wizard.md)
-#### [[デバッグ構成の設定の指定] (既存コード ファイルからの新しいプロジェクトの作成ウィザード)](specify-debug-configuration-settings.md)
-#### [[リリースの構成の設定] (既存コード ファイルからの新しいプロジェクトの作成ウィザード)](specify-release-configuration.md)
+#### [方法: メイクファイル プロジェクトで IntelliSense を使用可能にする](how-to-enable-intellisense-for-makefile-projects.md)
+### [方法: 既存のコードから C++ プロジェクトを作成する](how-to-create-a-cpp-project-from-existing-code.md)
 ## [プロジェクトのプロパティの操作](working-with-project-properties.md)
 ### [プロパティ ページ (Visual C++)](property-pages-visual-cpp.md)
 #### [[全般] プロパティ ページ (プロジェクト)](general-property-page-project.md)
@@ -51,19 +55,19 @@
 #### [[リソース] プロパティ ページ](resources-property-pages.md)
 #### [[マネージド リソース] プロパティ ページ](managed-resources-property-page.md)
 #### [[MIDL] プロパティ ページ](midl-property-pages.md)
-##### [[全般] ([MIDL] プロパティ ページ)](midl-property-pages-general.md)
-##### [[出力] ([MIDL] プロパティ ページ)](midl-property-pages-output.md)
-##### [[詳細] ([MIDL] プロパティ ページ)](midl-property-pages-advanced.md)
+##### [[MIDL] プロパティ ページ: 全般](midl-property-pages-general.md)
+##### [[MIDL] プロパティ ページ: 出力](midl-property-pages-output.md)
+##### [[MIDL] プロパティ ページ: 詳細](midl-property-pages-advanced.md)
 #### [[Web 参照] プロパティ ページ](web-references-property-page.md)
 #### [[XML データ ジェネレーター ツール] プロパティ ページ](xml-data-generator-tool-property-page.md)
 #### [[XML ドキュメント ジェネレーター] プロパティ ページ](xml-document-generator-tool-property-pages.md)
 #### [[カスタム ビルド ステップ] プロパティ ページ: 全般](custom-build-step-property-page-general.md)
 #### [[HLSL] プロパティ ページ](hlsl-property-pages.md)
-##### [[全般] ([HLSL] プロパティ ページ)](hlsl-property-pages-general.md)
-##### [[詳細] ([HLSL] プロパティ ページ)](hlsl-property-pages-advanced.md)
+##### [[HLSL] プロパティ ページ: 全般](hlsl-property-pages-general.md)
+##### [[HLSL] プロパティ ページ: 詳細](hlsl-property-pages-advanced.md)
 ##### [[HLSL] プロパティ ページ: 出力ファイル](hlsl-property-pages-output-files.md)
 ## [Visual C++ プロジェクトへの参照の追加](adding-references-in-visual-cpp-projects.md)
-## [方法 : ビルドのプロジェクト出力ファイルを編成する](how-to-organize-project-output-files-for-builds.md)
+## [方法: ビルドのプロジェクト出力ファイルを編成する](how-to-organize-project-output-files-for-builds.md)
 # [ネイティブ デスクトップ アプリケーションの配置 (Visual C++)](deploying-native-desktop-applications-visual-cpp.md)
 ## [Visual C++ での配置](deployment-in-visual-cpp.md)
 ## [配置の概念](deployment-concepts.md)
