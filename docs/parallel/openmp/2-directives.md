@@ -2,12 +2,12 @@
 title: 2. ディレクティブ
 ms.date: 01/18/2019
 ms.assetid: d1a69374-6c03-45fb-8c86-e91cea8adae8
-ms.openlocfilehash: bf96d5ee6963a76c2b2462d5b3a0639c1141ea15
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 125d2d83b277e62d007e3a208e426ea717d52790
+ms.sourcegitcommit: 382e247c0f1b4cb7c2dab837b8b6fdff24bff47a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894247"
+ms.lasthandoff: 01/28/2019
+ms.locfileid: "55087341"
 ---
 # <a name="2-directives"></a>2.ディレクティブ
 
@@ -111,12 +111,12 @@ iam = omp_get_thread_num() + index;
 ### <a name="cross-references"></a>相互参照
 
 - `private`、 `firstprivate`、 `default`、 `shared`、 `copyin`、および`reduction`句 ([セクション 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_NUM_THREADS](4-2-omp-num-threads.md)環境変数
-- [omp_set_dynamic](3-1-7-omp-set-dynamic-function.md)ライブラリ関数
-- [OMP_DYNAMIC](4-3-omp-dynamic.md)環境変数
-- [omp_set_nested](3-1-9-omp-set-nested-function.md)関数
-- [OMP_NESTED](4-4-omp-nested.md)環境変数
-- [omp_set_num_threads](3-1-1-omp-set-num-threads-function.md)ライブラリ関数
+- [OMP_NUM_THREADS](4-environment-variables.md#42-omp_num_threads)環境変数
+- [omp_set_dynamic](3-run-time-library-functions.md#317-omp_set_dynamic-function)ライブラリ関数
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)環境変数
+- [omp_set_nested](3-run-time-library-functions.md#319-omp_set_nested-function)関数
+- [OMP_NESTED](4-environment-variables.md#44-omp_nested)環境変数
+- [omp_set_num_threads](3-run-time-library-functions.md#311-omp_set_num_threads-function)ライブラリ関数
 
 ## <a name="24-work-sharing-constructs"></a>2.4 動作共有のコンストラクトします。
 
@@ -227,7 +227,7 @@ OpenMP は、次の作業の共有のコンストラクトを定義し、これ�
 #### <a name="cross-references"></a>相互参照
 
 - `private`、 `firstprivate`、 `lastprivate`、および`reduction`句 ([セクション 2.7.2](#272-data-sharing-attribute-clauses))
-- [OMP_SCHEDULE](4-1-omp-schedule.md)環境変数
+- [OMP_SCHEDULE](4-environment-variables.md#41-omp_schedule)環境変数
 - [順序付けられた](#266-ordered-construct)構築
 - [スケジュール](d-using-the-schedule-clause.md)句
 
@@ -520,7 +520,7 @@ if (x!=0) {
 
 このセクションでは、ディレクティブと次のように、並行領域の実行中にデータ環境を制御するためのいくつかの句では。
 
-- A`threadprivate`ディレクティブは、作成、ファイル スコープ、名前空間スコープ、または静的のブロック スコープ変数をこのスレッドにローカルに提供されます (次のセクションを参照してください)。
+- A [threadprivate](#271-threadprivate-directive)ディレクティブは、作成、ファイル スコープ、名前空間スコープ、または静的のブロック スコープ変数をこのスレッドにローカルに提供されます。
 
 - 並列または動作共有のコンストラクトの実行中の変数の共有の属性を制御するディレクティブで指定できる句が記載されて[セクション 2.7.2](#272-data-sharing-attribute-clauses)します。
 
@@ -582,8 +582,8 @@ void f(int n) {
 
 #### <a name="cross-references"></a>相互参照
 
-- [動的なスレッド](3-1-7-omp-set-dynamic-function.md)
-- [OMP_DYNAMIC](4-3-omp-dynamic.md)環境変数
+- [動的なスレッド](3-run-time-library-functions.md#317-omp_set_dynamic-function)
+- [OMP_DYNAMIC](4-environment-variables.md#43-omp_dynamic)環境変数
 
 ### <a name="272-data-sharing-attribute-clauses"></a>2.7.2 データ共有属性句
 
