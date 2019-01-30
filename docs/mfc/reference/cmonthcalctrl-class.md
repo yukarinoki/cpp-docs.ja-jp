@@ -594,7 +594,7 @@ int GetMonthRange(
 
 ### <a name="return-value"></a>戻り値
 
-によって示される 2 つの制限により展開されるか月で、範囲を表す整数を*refMinRange*と*refMaxRange*最初と 2 番目のバージョン、または*pMinRange**整数*で 3 番目のバージョン。
+によって示される 2 つの制限により展開されるか月で、範囲を表す整数を *refMinRange* と *refMaxRange* 最初と 2 番目のバージョン、または*pMinRange* *整数* で 3 番目のバージョン。
 
 ### <a name="remarks"></a>Remarks
 
