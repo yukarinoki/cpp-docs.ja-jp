@@ -14,6 +14,7 @@ apilocation:
 - msvcrt.dll
 - msvcr90.dll
 - msvcr120.dll
+- api-ms-win-crt-locale-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - ___mb_cur_max_func
@@ -26,12 +27,12 @@ helpviewer_keywords:
 - ___mb_cur_max_l_func
 - __p___mb_cur_max
 ms.assetid: 60d36108-1ca7-45a6-8ce7-68a91f13e3a1
-ms.openlocfilehash: cb84c77ebafc7fb53c1544f9ec07db3fba6f02d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e59f487825b49c8ee6fefe41b41100b571619c6c
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657042"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702792"
 ---
 # <a name="mbcurmaxfunc-mbcurmaxlfunc-pmbcurmax-mbcurmax"></a>___mb_cur_max_func、___mb_cur_max_l_func、__p___mb_cur_max、__mb_cur_max
 
@@ -62,12 +63,12 @@ locale 結果の取得元のロケール構造。 この値が null の場合は
 
 内部 CRT 関数は実装固有であり、各リリースでの変更の対象です。 コード内では使用しないことをお勧めします。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`___mb_cur_max_func`、 `___mb_cur_max_l_func`、 `__p___mb_cur_max`|\<ctype.h>、\<stdlib.h>|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [MB_CUR_MAX](../c-runtime-library/mb-cur-max.md)
