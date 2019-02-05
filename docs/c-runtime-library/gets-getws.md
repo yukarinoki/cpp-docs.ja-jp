@@ -12,6 +12,7 @@ apilocation:
 - msvcr110_clr0400.dll
 - msvcrt.dll
 - msvcr100.dll
+- api-ms-win-crt-stdio-l1-1-0.dll
 apitype: DLLExport
 f1_keywords:
 - _getts
@@ -27,12 +28,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: c0133832142f49cfe3674cf651173f1c30dfc0cb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 523a295e088fe692eb9abd8dcca6b3919d432c4e
+ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662840"
+ms.lasthandoff: 02/04/2019
+ms.locfileid: "55702740"
 ---
 # <a name="gets-getws"></a>gets、_getws
 
@@ -87,7 +88,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |---------------------|------------------------------------|--------------------|-----------------------|
 |`_getts`|`gets`|`gets`|`_getws`|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -121,7 +122,7 @@ int main( void )
 Hello there!The line entered was: Hello there!
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>「
 
 [ストリーム入出力](../c-runtime-library/stream-i-o.md)<br/>
 [fgets、fgetws](../c-runtime-library/reference/fgets-fgetws.md)<br/>
