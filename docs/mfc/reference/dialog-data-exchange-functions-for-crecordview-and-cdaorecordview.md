@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 6a4320b1f2c5d0c47dac64c486e7fb70ea5991bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481823"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55764013"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView と CDaoRecordView のダイアログ データ エクスチェンジ (DDX) 関数
 
@@ -73,7 +73,7 @@ void AFXAPI DDX_FieldCBIndex(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。
 
 *index*<br/>
@@ -121,10 +121,10 @@ void AFXAPI DDX_FieldCBString(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。
 
-*値*<br/>
+*value*<br/>
 関連付けられているフィールド データ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。
 
 *pRecordset*<br/>
@@ -169,10 +169,10 @@ void AFXAPI DDX_FieldCBStringExact(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。
 
-*値*<br/>
+*value*<br/>
 関連付けられているフィールド データ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。
 
 *pRecordset*<br/>
@@ -217,10 +217,10 @@ void AFXAPI DDX_FieldCheck(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールのプロパティに関連付けられているチェック ボックス コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのデータを交換するのメンバー変数への参照。
 
 *pRecordset*<br/>
@@ -259,7 +259,7 @@ void AFXAPI DDX_FieldLBIndex(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。
 
 *index*<br/>
@@ -307,10 +307,10 @@ void AFXAPI DDX_FieldLBString(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。
 
-*値*<br/>
+*value*<br/>
 関連付けられているフィールド データ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。
 
 *pRecordset*<br/>
@@ -355,10 +355,10 @@ void AFXAPI DDX_FieldLBStringExact(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。
 
-*値*<br/>
+*value*<br/>
 関連付けられているフィールド データ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。
 
 *pRecordset*<br/>
@@ -403,10 +403,10 @@ void AFXAPI DDX_FieldRadio(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 最初の ID の横にあるラジオ ボタン コントロールの (スタイル WS_GROUP) でのグループに、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。
 
-*値*<br/>
+*value*<br/>
 関連付けられているフィールド データ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。
 
 *pRecordset*<br/>
@@ -451,10 +451,10 @@ void AFXAPI DDX_FieldScroll(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 最初の ID の横にあるラジオ ボタン コントロールの (スタイル WS_GROUP) でのグループに、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。
 
-*値*<br/>
+*value*<br/>
 関連付けられているフィールド データ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。
 
 *pRecordset*<br/>
@@ -476,7 +476,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
   **ヘッダー** afxdao.h
 
-  ## <a name="nameddxfieldslidera--ddxfieldslider"></a>name="ddx_fieldslider"></a>  DDX_FieldSlider
+  ## <a name="ddx_fieldslider"></a>  DDX_FieldSlider
 `DDX_FieldSlider`関数は、レコード ビュー内のスライダー コントロールのサムネイルの位置を同期し、 **int**レコード ビュー (または整数変数にマップする) に関連付けられたレコード セットのフィールド データ メンバー。
 
 ### <a name="syntax"></a>構文
@@ -500,10 +500,10 @@ void AFXAPI DDX_FieldSlider(
 *pDX*<br/>
 ポインターを[CDataExchange](cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 スライダー コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 交換する値への参照。 このパラメーターを保持またはスライダー コントロールのつまみの現在の位置を設定するために使用されます。
 
 *pRecordset*<br/>
@@ -650,10 +650,10 @@ void AFXAPI DDX_FieldText(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールの ID、 [CRecordView](../../mfc/reference/crecordview-class.md)または[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)オブジェクト。
 
-*値*<br/>
+*value*<br/>
 関連付けられているフィールド データ メンバーへの参照を`CRecordset`または`CDaoRecordset`オブジェクト。 値のデータ型のオーバー ロードされたバージョンのうちに依存`DDX_FieldText`を使用します。
 
 *pRecordset*<br/>
