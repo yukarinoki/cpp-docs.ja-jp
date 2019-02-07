@@ -1,5 +1,5 @@
 ---
-title: 非推奨 (C/C++)
+title: deprecated (C/C++)
 ms.date: 11/04/2016
 f1_keywords:
 - vc-pragma.deprecated
@@ -15,9 +15,9 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50642820"
 ---
-# <a name="deprecated-cc"></a>非推奨 (C/C++)
+# <a name="deprecated-cc"></a>deprecated (C/C++)
 
-**非推奨とされます**関数、型、またはその他の識別子が可能性があります、将来にサポートされなくことを示すプラグマによりリリースかを使用する必要があります。
+**deprecated**プラグマを使用すると、関数、型、またはその他の識別子が将来のリリースでサポートされなくなる可能性があるか、使用できなくなることを示すことができます。
 
 > [!NOTE]
 > C++ 14 について`[[deprecated]]`属性、およびそれを使用するタイミングに関するガイダンスは、vs を Microsoft declspec または pragma 属性を参照してください[C++ の標準属性](../cpp/attributes.md)属性。
@@ -30,13 +30,13 @@ ms.locfileid: "50642820"
 
 ## <a name="remarks"></a>Remarks
 
-コンパイラがで指定された識別子を検出した場合、**非推奨とされます**プラグマ、コンパイラの警告を発行[C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)します。
+コンパイラがで指定された識別子を検出した場合、**deprecated**プラグマ、コンパイラの警告を発行[C4995](../error-messages/compiler-warnings/compiler-warning-level-3-c4995.md)します。
 
 マクロ名の使用を避けることができます。 マクロ名を引用符で囲んで配置します。そうしないと、マクロ展開が発生します。
 
-**非推奨とされます**プラグマは、すべての一致する識別子で機能し、アカウントに署名を受け取らない、オーバー ロードされた関数の特定のバージョンを非推奨の最適なオプションではありません。 スコープに取り込まれるすべての一致する関数名は、警告をトリガーします。
+**deprecated**プラグマは、すべての一致する識別子で機能し、アカウントに署名を受け取らない、オーバー ロードされた関数の特定のバージョンを非推奨の最適なオプションではありません。 スコープに取り込まれるすべての一致する関数名は、警告をトリガーします。
 
-C++ 14 を使用することをお勧めします。`[[deprecated]]`属性は、可能であれば、の代わりに、**非推奨とされます**プラグマ。 Microsoft 固有[__declspec(deprecated)](../cpp/deprecated-cpp.md)宣言修飾子はより多くの場合の方が適切でも、**非推奨とされます**プラグマ。 `[[deprecated]]`属性と`__declspec(deprecated)`修飾子を使用すると、オーバー ロードされた関数の特定のフォームの非推奨のステータスを指定できます。 診断の警告のみに表示されます、特定のオーバー ロードされた関数への参照属性または修飾子に適用されます。
+C++ 14 を使用することをお勧めします。`[[deprecated]]`属性は、可能であれば、の代わりに、**deprecated**プラグマ。 Microsoft 固有[__declspec(deprecated)](../cpp/deprecated-cpp.md)宣言修飾子はより多くの場合の方が適切でも、**deprecated**プラグマ。 `[[deprecated]]`属性と`__declspec(deprecated)`修飾子を使用すると、オーバー ロードされた関数の特定のフォームの非推奨のステータスを指定できます。 診断の警告のみに表示されます、特定のオーバー ロードされた関数への参照属性または修飾子に適用されます。
 
 ## <a name="example"></a>例
 
