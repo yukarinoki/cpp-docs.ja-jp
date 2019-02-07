@@ -1,18 +1,18 @@
 ---
 title: /validate-charset (互換性のある文字の検証)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - /validate-charset
 - validate-charset
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-ms.openlocfilehash: 243d225f5acde0c6099050539687726ea082c898
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 69b43b603ef4711e1acc0bd612e0e1c949722dc9
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590490"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850079"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset (互換性のある文字の検証)
 
@@ -38,7 +38,7 @@ Visual Studio では、として、ソース文字セットと、実行文字セ
 
 1. 展開、**構成プロパティ**、 **C/C++**、**コマンドライン**フォルダー。
 
-1. **オプションの高度な**、追加、 **/validate-charset**オプション、および、使用するエンコーディングを指定します。
+1. **追加オプション**、追加、 **/validate-charset**オプション、および、使用するエンコーディングを指定します。
 
 1. **OK** を選択して変更を保存してください。
 

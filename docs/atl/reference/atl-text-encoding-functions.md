@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 2ae1648b-2b87-4112-92aa-0069fcfd23da
-ms.openlocfilehash: a97f914905c2f98bc948b76e1d79d4af0f5dbadd
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2a076b666577920c940413fba4951f7de5f24fc6
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327500"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850260"
 ---
 # <a name="atl-text-encoding-functions"></a>ATL テキスト エンコード関数
 
@@ -680,7 +680,7 @@ inline BOOL UUEncode(
 *pnDestLen*<br/>
 文字の長さを格納する変数へのポインター*ときに szDest*します。 関数が成功すると、変数は、バッファーに書き込まれた文字数を受け取ります。 関数が失敗した場合、変数は、バッファーの文字で、必要な長さを受け取ります。
 
-*プリケーション*<br/>
+*lpszFile*<br/>
 ATLSMTP_UUENCODE_HEADER がで指定した場合、ヘッダーに追加するファイル*dwFlags*します。
 
 *dwFlags*<br/>
@@ -721,7 +721,7 @@ inline int UUEncodeGetRequiredLength(int nSrcLen) throw ();
 
 この実装は uuencoding POSIX P1003.2b/D11 仕様に従っています。
 
-### <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
-[概念](../../atl/active-template-library-atl-concepts.md)<br/>
-[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)
+[概念](../active-template-library-atl-concepts.md)<br/>
+[ATL COM デスクトップ コンポーネント](../atl-com-desktop-components.md)

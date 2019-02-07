@@ -2,12 +2,12 @@
 title: ATL HTTP ユーティリティ関数
 ms.date: 11/04/2016
 ms.assetid: 4db57ef2-31fa-4696-bbeb-79a9035033ed
-ms.openlocfilehash: 43813d91daf572ad6094a5a9fe070234e5086593
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be38dc8b8547574ea47021f8b14f21060a0755f0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481717"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849649"
 ---
 # <a name="atl-http-utility-functions"></a>ATL HTTP ユーティリティ関数
 
@@ -28,7 +28,7 @@ ms.locfileid: "50481717"
 
 **ヘッダー:** atlutil.h
 
-## <a name="atlcanonicalizeurl"></a> どうか
+## <a name="atlcanonicalizeurl"></a> AtlCanonicalizeUrl
 
 URL を標準形式に変換します。安全でない文字や空白をエスケープ シーケンスに変換する処理などが含まれます。
 
@@ -76,10 +76,6 @@ inline BOOL AtlCanonicalizeUrl(
 
 現在のバージョンのように動作[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla) WinInet または Internet Explorer をインストールするのには必要ありません。
 
-### <a name="see-also"></a>関連項目
-
-[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)
-
 ## <a name="atlcombineurl"></a> AtlCombineUrl
 
 ベース URL と相対 URL を結合して、1 つの標準形式の URL にします。
@@ -101,7 +97,7 @@ inline BOOL AtlCombineUrl(
 *szRelativeUrl*<br/>
 ベース URL の相対 URL です。
 
-*しなかった*<br/>
+*szBuffer*<br/>
 正規化された URL を受信する呼び出し元が割り当てたバッファー。
 
 *pdwMaxLength*<br/>
@@ -287,5 +283,6 @@ RFC 2616 で定義されている HTTP に日付時刻を受け取る文字列�
 
 ## <a name="see-also"></a>関連項目
 
-[概念](../../atl/active-template-library-atl-concepts.md)<br/>
-[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)
+[概念](../active-template-library-atl-concepts.md)<br/>
+[ATL COM デスクトップ コンポーネント](../atl-com-desktop-components.md)<br/>
+[InternetCanonicalizeUrl](/windows/desktop/api/wininet/nf-wininet-internetcanonicalizeurla)

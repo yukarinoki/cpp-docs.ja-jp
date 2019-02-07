@@ -1,6 +1,6 @@
 ---
 title: /execution-charset (実行文字セット)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - execution-charset
 - /execution-charset
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /execution-charset compiler option
 - -execution-charset compiler option
 ms.assetid: 0e02f487-2236-45bc-95f3-5760933a8f96
-ms.openlocfilehash: 3535b60d7aad50f7efc5d1f32726560431ac86a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 13ff185cf7026f1b42f732aae26c11e98d13e9a2
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663971"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849610"
 ---
 # <a name="execution-charset-set-execution-character-set"></a>/execution-charset (実行文字セット)
 
@@ -47,7 +47,7 @@ IANA で定義されている文字セットの名前。
 
 1. 展開、**構成プロパティ**、 **C/C++**、**コマンドライン**フォルダー。
 
-1. **オプションの高度な**、追加、 **/execution-charset**オプション、および、使用するエンコーディングを指定します。
+1. **追加オプション**、追加、 **/execution-charset**オプション、および、使用するエンコーディングを指定します。
 
 1. **OK** を選択して変更を保存してください。
 

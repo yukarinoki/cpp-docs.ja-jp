@@ -13,12 +13,12 @@ helpviewer_keywords:
 - MFC, exceptions
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
-ms.openlocfilehash: d44928d9fda20082496df1c475d8b3ab05ba4fc4
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 8b40afbfcc453a4908b434dc53b7b86959673453
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522091"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851683"
 ---
 # <a name="exception-processing"></a>例外処理
 
@@ -123,7 +123,7 @@ CATCH(exception_class, exception_object_pointer_name)
 *exception_class*<br/>
 テストする例外の種類を指定します。 標準の例外クラスの一覧は、クラスを参照してください。 [CException](../../mfc/reference/cexception-class.md)します。
 
-*ことは*<br/>
+*exception_object_pointer_name*<br/>
 マクロによって作成される例外オブジェクト ポインターの名前を指定します。 内の例外オブジェクトにアクセスするポインターの名前を使用することができます、**キャッチ**ブロックします。 この変数が宣言されています。
 
 ### <a name="remarks"></a>Remarks
@@ -153,7 +153,7 @@ CATCH_ALL(exception_object_pointer_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*ことは*<br/>
+*exception_object_pointer_name*<br/>
 マクロによって作成される例外オブジェクト ポインターの名前を指定します。 内の例外オブジェクトにアクセスするポインターの名前を使用することができます、`CATCH_ALL`ブロックします。 この変数が宣言されています。
 
 ### <a name="remarks"></a>Remarks
@@ -186,7 +186,7 @@ AND_CATCH(exception_class, exception_object_pointer_name)
 *exception_class*<br/>
 テストする例外の種類を指定します。 標準の例外クラスの一覧は、クラスを参照してください。 [CException](../../mfc/reference/cexception-class.md)します。
 
-*ことは*<br/>
+*exception_object_pointer_name*<br/>
 マクロによって作成される例外オブジェクトのポインターの名前。 内の例外オブジェクトにアクセスするポインターの名前を使用することができます、 **AND_CATCH**ブロックします。 この変数が宣言されています。
 
 ### <a name="remarks"></a>Remarks
@@ -215,7 +215,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*ことは*<br/>
+*exception_object_pointer_name*<br/>
 マクロによって作成される例外オブジェクトのポインターの名前。 内の例外オブジェクトにアクセスするポインターの名前を使用することができます、 **AND_CATCH_ALL**ブロックします。 この変数が宣言されています。
 
 ### <a name="remarks"></a>Remarks
@@ -343,7 +343,7 @@ void AfxThrowFileException(
 *lOsError*<br/>
 オペレーティング システムのエラー番号が含まれています (ある場合)、例外の原因を示します。 エラー コードの一覧については、オペレーティング システムのマニュアルを参照してください。
 
-*場合*<br/>
+*lpszFileName*<br/>
 (該当する場合)、例外の原因となったファイルの名前を含む文字列を指します。
 
 ### <a name="remarks"></a>Remarks
@@ -371,12 +371,6 @@ void AfxThrowInvalidArgException( );
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
-
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[CInvalidArgException クラス](cinvalidargexception-class.md)<br/>
-[スローします。](#throw)
 
 ##  <a name="afxthrowmemoryexception"></a>  AfxThrowMemoryException
 
@@ -527,7 +521,7 @@ DAO、SCODE 型から OLE エラー コード。 詳しくは、次を参照し�
 
 フレームワークも呼び出します`AfxThrowDaoException`します。 呼び出しでは、パラメーターのいずれかまたは両方を渡すことができます。 たとえばのいずれかが発生する場合、エラーで定義されている**CDaoException::nAfxDaoError**についてもかまわないが、 *scode*パラメーターで有効なコードを渡す、 *nAfxDaoError*パラメーターの既定値をそのまま使用し、 *scode*します。
 
-MFC DAO クラスに関連する例外については、クラスを参照してください。`CDaoException`この書籍と記事[例外: データベースの例外](../../mfc/exceptions-database-exceptions.md)します。
+MFC DAO クラスに関連する例外については、クラスを参照してください。`CDaoException`この書籍と記事[例外。データベース例外](../../mfc/exceptions-database-exceptions.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -546,10 +540,10 @@ void AfxThrowDBException(
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*<br/>
+*nRetCode*<br/>
 RETCODE がスローされる例外の原因となったエラーの種類を定義する型の値。
 
-*pdb ファイル*<br/>
+*pdb*<br/>
 ポインター、`CDatabase`例外が関連付けられているデータ ソース接続を表すオブジェクト。
 
 *hstmt*<br/>
@@ -587,5 +581,6 @@ void  AfxAbort();
 
 ## <a name="see-also"></a>関連項目
 
-[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CException クラス](../../mfc/reference/cexception-class.md)
+[マクロとグローバル](mfc-macros-and-globals.md)<br/>
+[CException クラス](cexception-class.md)<br/>
+[CInvalidArgException クラス](cinvalidargexception-class.md)

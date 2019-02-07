@@ -20,12 +20,12 @@ helpviewer_keywords:
 - databases [MFC], dialog data exchange (DDX) support
 - DAO [MFC], dialog data exchange (DDX) support
 ms.assetid: 0d8cde38-3a2c-4100-9589-ac80a7b1ce91
-ms.openlocfilehash: 7a6de35f9e3154b6d182eddcc51fd7a14cbd0dd5
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 36341a1b122e6dcb1c475f2f95e03d384c3a034f
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55764013"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850036"
 ---
 # <a name="dialog-data-exchange-functions-for-crecordview-and-cdaorecordview"></a>CRecordView と CDaoRecordView のダイアログ データ エクスチェンジ (DDX) 関数
 
@@ -527,10 +527,6 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 **ヘッダー:** afxdao.h
 
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)
-
 ##  <a name="ddx_fieldtext"></a>  DDX_FieldText
 
 `DDX_FieldText`関数の転送を管理**int**、**短い**、**長い**、DWORD、 [CString](../../atl-mfc-shared/reference/cstringt-class.md)、 **float**、**二重**、 **BOOL**、または**バイト**編集ボックス コントロールとレコード セットのフィールド データ メンバーの間のデータ。
@@ -679,4 +675,4 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="see-also"></a>関連項目
 
-[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
+[マクロとグローバル](mfc-macros-and-globals.md)

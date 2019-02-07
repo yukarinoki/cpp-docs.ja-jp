@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - run-time object model services macros
 ms.assetid: 4a3e79df-2ee3-43a4-8193-20298828de85
-ms.openlocfilehash: fb5d35782e70924605fd344e2c330e18d611f44c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: fce6fb938b501da7bc9251de51c71714e4613fd5
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519209"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850286"
 ---
 # <a name="run-time-object-model-services"></a>ランタイム オブジェクト モデル サービス
 
@@ -25,7 +25,7 @@ ms.locfileid: "51519209"
 
 次の表では、ランタイム クラス情報をシリアル化、および動的な作成をサポートする MFC マクロを示します。
 
-これらのサービスの実行時のオブジェクトとシリアル化する方法の詳細については、記事を参照してください。 [CObject クラス: クラス情報にアクセスする](../../mfc/accessing-run-time-class-information.md)します。
+これらのサービスの実行時のオブジェクトとシリアル化する方法の詳細については、記事を参照してください。 [CObject クラス。ランタイム クラス情報にアクセスする](../../mfc/accessing-run-time-class-information.md)します。
 
 ### <a name="run-time-object-model-services-macros"></a>実行時のオブジェクト モデル サービス マクロ
 
@@ -34,7 +34,7 @@ ms.locfileid: "51519209"
 |[DECLARE_DYNAMIC](#declare_dynamic)|(クラス宣言で使用する必要があります)、ランタイム クラス情報にアクセスできるようにします。|
 |[DECLARE_DYNCREATE](#declare_dyncreate)|動的な作成および (クラス宣言で使用する必要があります)、ランタイム クラス情報へのアクセスを使用できます。|
 |[DECLARE_SERIAL](#declare_serial)|シリアル化および (クラス宣言で使用する必要があります)、ランタイム クラス情報へのアクセスを使用できます。|
-|[新規クラス](#implement_dynamic)|(クラスの実装で使用する必要があります)、ランタイム クラス情報にアクセスできるようにします。|
+|[IMPLEMENT_DYNAMIC](#implement_dynamic)|(クラスの実装で使用する必要があります)、ランタイム クラス情報にアクセスできるようにします。|
 |[IMPLEMENT_DYNCREATE](#implement_dyncreate)|動的な作成および実行時の情報 (クラスの実装で使用する必要があります) へのアクセスを使用できます。|
 |[IMPLEMENT_SERIAL](#implement_serial)|シリアル化および (クラスの実装で使用する必要があります)、ランタイム クラス情報へのアクセスを許可します。|
 |[RUNTIME_CLASS](#runtime_class)|返します、`CRuntimeClass`名前付きのクラスに対応する構造体。|
@@ -79,11 +79,6 @@ AFX_COMCTL32_IF_EXISTS(  proc );
 
 afxcomctl32.h、afxcomctl32.inl は
 
-### <a name="see-also"></a>関連項目
-
-[MFC コモン コントロール ライブラリの分離](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS2](#afx_comctl32_if_exists2)
-
 ## <a name="afx_comctl32_if_exists2"></a>  AFX_COMCTL32_IF_EXISTS2
 
 コモン コントロール ライブラリは、指定された API を実装するかどうかを決定します (これは Unicode バージョンの[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists))。
@@ -107,11 +102,6 @@ AFX_COMCTL32_IF_EXISTS2( proc );
 
 afxcomctl32.h、afxcomctl32.inl は
 
-### <a name="see-also"></a>関連項目
-
-[MFC コモン コントロール ライブラリの分離](../isolation-of-the-mfc-common-controls-library.md)<br/>
-[AFX_COMCTL32_IF_EXISTS](#afx_comctl32_if_exists)
-
 ##  <a name="declare_dynamic"></a>  DECLARE_DYNAMIC
 
 クラスを派生する場合、オブジェクトのクラスに関する実行時の情報にアクセスする機能を追加します。`CObject`します。
@@ -122,7 +112,7 @@ DECLARE_DYNAMIC(class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 クラスの実際の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -153,7 +143,7 @@ DECLARE_DYNCREATE(class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 クラスの実際の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -189,7 +179,7 @@ DECLARE_OLECTLTYPE( class_name )
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 コントロール クラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -199,10 +189,6 @@ DECLARE_OLECTLTYPE( class_name )
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxctl.h
-
-### <a name="see-also"></a>関連項目
-
-[IMPLEMENT_OLECTLTYPE](#implement_olectltype)
 
 ## <a name="declareproppageids"></a>DECLARE_PROPPAGEIDS
 
@@ -216,23 +202,18 @@ DECLARE_PROPPAGEIDS( class_name )
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 プロパティ ページを所有するコントロール クラスの名前。
 
 ### <a name="remarks"></a>Remarks
 
 使用して、`DECLARE_PROPPAGEIDS`クラスの宣言の最後にマクロ。 クラスのメンバー関数を定義する .cpp ファイルを使用して、`BEGIN_PROPPAGEIDS`マクロ、マクロのエントリの各コントロールのプロパティ ページで、`END_PROPPAGEIDS`プロパティ ページの一覧の末尾を宣言するマクロ。
 
-プロパティ ページの詳細については、記事を参照してください。 [ActiveX コントロール: プロパティ ページ](../mfc-activex-controls-property-pages.md)します。
+プロパティ ページの詳細については、記事を参照してください。 [ActiveX コントロール。プロパティ ページ](../mfc-activex-controls-property-pages.md)します。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxctl.h
-
-### <a name="see-also"></a>関連項目
-
-[BEGIN_PROPPAGEIDS](#begin_proppageids)<br/>
-[END_PROPPAGEIDS](#end_proppageids)
 
 ##  <a name="declare_serial"></a>  DECLARE_SERIAL
 
@@ -244,7 +225,7 @@ DECLARE_SERIAL(class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 クラスの実際の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -271,7 +252,7 @@ DECLARE_SERIAL マクロの詳細については、次を参照してくださ�
 
 **ヘッダー:** afx.h
 
-##  <a name="implement_dynamic"></a>  新規クラス
+##  <a name="implement_dynamic"></a>  IMPLEMENT_DYNAMIC
 
 動的なために必要な C++ コードを生成`CObject`-クラス名と、階層内の位置に、実行時アクセス権を持つクラスを派生します。
 
@@ -281,7 +262,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 クラスの実際の名前。
 
 *base_class_name*<br/>
@@ -313,7 +294,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 クラスの実際の名前。
 
 *base_class_name*<br/>
@@ -352,7 +333,7 @@ IMPLEMENT_OLECREATE_FLAGS( class_name, external_name, nFlags,
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 クラスの実際の名前。
 
 *external_name*<br/>
@@ -382,12 +363,6 @@ OLE クラス ID は、オブジェクトの一意の 128 ビット識別子で�
 
 **ヘッダー :** afxdisp.h
 
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECREATE](#declare_olecreate)<br/>
-[CLSID キー](/windows/desktop/com/clsid-key-hklm)
-
 ## <a name="implement_olecreate"></a> IMPLEMENT_OLECTLTYPE
 
 実装、`GetUserTypeNameID`と`GetMiscStatus`コントロール クラスのメンバー関数。
@@ -400,7 +375,7 @@ DECLARE_OLECTLTYPE( class_name, idsUserTypeName, dwOleMisc )
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 コントロール クラスの名前。
 
 *idsUserTypeName*<br/>
@@ -416,16 +391,11 @@ IMPLEMENT_OLECTLTYPE、だけでなく、コントロール クラスの宣言�
 `GetUserTypeNameID`メンバー関数は、コントロール クラスを識別する、リソース文字列を返します。 `GetMiscStatus` コントロールの入りますビットを返します。 この列挙体には、コントロールの他の特性を説明する設定のコレクションを指定します。 入ります設定の詳細については、次を参照してください。[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK に含まれています。
 
 > [!NOTE]
->  ActiveX ControlWizard で使用される既定の設定: されて、OLEMISC_SETCLIENTSITEFIRST、OLEMISC_INSIDEOUT、OLEMISC_CANTLINKINSIDE、および OLEMISC_RECOMPOSEONRESIZE します。
+>  ActiveX ControlWizard で使用される既定の設定は次のとおりです。されて、OLEMISC_SETCLIENTSITEFIRST、OLEMISC_INSIDEOUT、OLEMISC_CANTLINKINSIDE、および OLEMISC_RECOMPOSEONRESIZE します。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxctl.h
-
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[DECLARE_OLECTLTYPE](#declare_olectltype)
 
 ##  <a name="implement_serial"></a>  IMPLEMENT_SERIAL
 
@@ -437,7 +407,7 @@ IMPLEMENT_SERIAL(class_name, base_class_name, wSchema)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 クラスの実際の名前。
 
 *base_class_name*<br/>
@@ -474,7 +444,7 @@ RUNTIME_CLASS(class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 (引用符で囲まれていない) クラスの実際の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -501,7 +471,7 @@ DECLARE_OLECREATE(class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 クラスの実際の名前。
 
 ### <a name="remarks"></a>Remarks
@@ -526,7 +496,7 @@ IMPLEMENT_OLECREATE(class_name, external_name, l, w1, w2, b1, b2, b3, b4, b5, b6
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 クラスの実際の名前。
 
 *external_name*<br/>
@@ -549,5 +519,7 @@ OLE クラス ID は、オブジェクトの一意の 128 ビット識別子で�
 
 ## <a name="see-also"></a>関連項目
 
-[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
+[マクロとグローバル](mfc-macros-and-globals.md)<br/>
+[MFC コモン コントロール ライブラリの分離](../isolation-of-the-mfc-common-controls-library.md)<br/>
+[CLSID キー](/windows/desktop/com/clsid-key-hklm)
 

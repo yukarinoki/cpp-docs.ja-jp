@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: c1e742d3320dae4140cc4886c47d34dbe9b6071f
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178344"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850299"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 
@@ -138,10 +138,6 @@ CContextMenuManager* afxContextMenuManager;
 
 **ヘッダー:** afxcontextmenumanager.h
 
-### <a name="see-also"></a>関連項目
-
-[CContextMenuManager クラス](ccontextmenumanager-class.md)
-
 ##  <a name="afxendthread"></a>  AfxEndThread
 
 現在実行中のスレッドを終了するには、この関数を呼び出します。
@@ -209,10 +205,6 @@ HINSTANCE AFXAPI AfxFindResourceHandle( LPCTSTR lpszName,  LPCTSTR lpszType );
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
-
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)
 
 ##  <a name="afxfreelibrary"></a>  AfxFreeLibrary
 
@@ -490,11 +482,6 @@ BOOL AFXAPI AfxIsExtendedFrameClass( CWnd* pWnd );
 
 **ヘッダー:** afxpriv.h
 
-### <a name="see-also"></a>関連項目
-
-[CWnd クラス](cwnd-class.md)<br/>
-[CFrameWndEx クラス](cframewndex-class.md)
-
 ## <a name="afxismfctoolbar"></a> AfxIsMFCToolBar
 
 指定されたウィンドウがツール バー オブジェクトであるかどうかを判断します。
@@ -522,11 +509,6 @@ BOOL AFXAPI AfxIsMFCToolBar(CWnd* pWnd);
 
 **ヘッダー:** afxpriv.h
 
-### <a name="see-also"></a>関連項目
-
-[CWnd クラス](cwnd-class.md)<br/>
-[CMFCToolBar クラス](cmfctoolbar-class.md)
-
 ## <a name="afxkeyboardmanager"></a> AfxKeyboardManager
 
 グローバルへのポインター[キーボード manager](ckeyboardmanager-class.md)します。
@@ -540,11 +522,6 @@ CKeyboardManager* afxKeyboardManager;
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxkeyboardmanager.h
-
-### <a name="see-also"></a>関連項目
-
-[マクロ、グローバル関数、およびグローバル変数](mfc-macros-and-globals.md)<br/>
-[CKeyboardManager クラス](ckeyboardmanager-class.md)
 
 ##  <a name="afxloadlibrary"></a>  AfxLoadLibrary
 
@@ -613,10 +590,6 @@ CMenuTearOffManager* g_pTearOffMenuManager;
 
 **ヘッダー:** afxmenutearoffmanager.h
 
-### <a name="see-also"></a>関連項目
-
-[CMenuTearOffManager クラス](cmenutearoffmanager-class.md)
-
 ## <a name="afxmousemanager"></a>  AfxMouseManager
 
 グローバルへのポインター[マウス manager](cmousemanager-class.md)します。
@@ -630,10 +603,6 @@ CMouseManager* afxMouseManager;
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxmousemanager.h
-
-### <a name="see-also"></a>関連項目
-
-[CMouseManager クラス](cmousemanager-class.md)
 
 ##  <a name="afxregisterclass"></a>  AfxRegisterClass
 
@@ -787,10 +756,6 @@ CShellManager* afxShellManager;
 
 **ヘッダー:** afxshellmanager.h
 
-### <a name="see-also"></a>関連項目
-
-[CShellManager クラス](cshellmanager-class.md)
-
 ##  <a name="afxsocketinit"></a>  AfxSocketInit
 
 この関数を呼び出して、 `CWinApp::InitInstance` Windows Sockets を初期化するためにオーバーライドします。
@@ -829,10 +794,6 @@ CUserToolsManager* afxUserToolsManager;
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxusertoolsmanager.h
-
-### <a name="see-also"></a>関連項目
-
-[CUserToolsManager クラス](cusertoolsmanager-class.md)
 
 ##  <a name="afxwininit"></a>  AfxWinInit
 
@@ -879,5 +840,14 @@ GUI アプリケーションのメイン ウィンドウの表示方法を指定
 
 ## <a name="see-also"></a>関連項目
 
-[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)<br/>
-[CWinApp クラス](../../mfc/reference/cwinapp-class.md)
+[マクロとグローバル](mfc-macros-and-globals.md)<br/>
+[CWinApp クラス](cwinapp-class.md)<br/>
+[CContextMenuManager クラス](ccontextmenumanager-class.md)<br/>
+[CWnd クラス](cwnd-class.md)<br/>
+[CFrameWndEx クラス](cframewndex-class.md)<br/>
+[CMFCToolBar クラス](cmfctoolbar-class.md)<br/>
+[CKeyboardManager クラス](ckeyboardmanager-class.md)<br/>
+[CMenuTearOffManager クラス](cmenutearoffmanager-class.md)<br/>
+[CMouseManager クラス](cmousemanager-class.md)<br/>
+[CShellManager クラス](cshellmanager-class.md)<br/>
+[CUserToolsManager クラス](cusertoolsmanager-class.md)

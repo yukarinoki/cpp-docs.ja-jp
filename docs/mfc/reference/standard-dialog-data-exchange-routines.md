@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data exchange routines
 ms.assetid: c6adb7f3-f9af-4cc5-a9ea-315c5b60ad1a
-ms.openlocfilehash: 06153a72ce6ed6e5422022255eec333110709778
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 374618aba297fb2c055ce02f93d0c7c93b38dc06
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618310"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850178"
 ---
 # <a name="standard-dialog-data-exchange-routines"></a>標準的なダイアログ データ エクスチェンジ ルーチン
 
@@ -55,7 +55,7 @@ void AFXAPI DDX_CBIndex(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールのプロパティに関連付けられているコンボ ボックス コントロールのリソース ID。
 
 *index*<br/>
@@ -87,10 +87,10 @@ void AFXAPI DDX_CBString(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールのプロパティに関連付けられているコンボ ボックス コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのデータを交換するのメンバー変数への参照。
 
 ### <a name="remarks"></a>Remarks
@@ -122,10 +122,10 @@ void AFXAPI DDX_CBStringExact(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールのプロパティに関連付けられているコンボ ボックス コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのデータを交換するのメンバー変数への参照。
 
 ### <a name="remarks"></a>Remarks
@@ -157,10 +157,10 @@ void AFXAPI DDX_Check(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールのプロパティに関連付けられているチェック ボックス コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのデータを交換するのメンバー変数への参照。
 
 ### <a name="remarks"></a>Remarks
@@ -189,7 +189,7 @@ void AFXAPI DDX_Control(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。
 
-*各*<br/>
+*nIDC*<br/>
 サブクラス化されたコントロールのリソース ID。
 
 *rControl*<br/>
@@ -231,10 +231,10 @@ void AFXAPI DDX_DateTimeCtrl(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。 このオブジェクトを削除する必要はありません。
 
-*各*<br/>
+*nIDC*<br/>
 メンバー変数に関連付けられている日付と時刻の選択コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 最初の 2 つのバージョンへの参照を`CTime`または`COleDateTime`メンバー変数、ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトを使用するには、データを交換します。 3 番目のバージョンへの参照を`CString`データ メンバーのコントロール ビュー オブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -268,7 +268,7 @@ void DDX_ManagedControl(
 *pDX*<br/>
 ポインターを[CDataExchange クラス](cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロール プロパティに関連付けられたコントロールのリソース ID。
 
 *control*<br/>
@@ -278,16 +278,11 @@ void DDX_ManagedControl(
 
 `DDX_ManagedControl` 呼び出し[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)リソース コントロールの ID に一致するコントロールを作成するには 使用`DDX_ManagedControl`内のリソース Id からコントロールを作成する[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)します。 データ交換では、Windows フォーム コントロールで DDX/DDV 関数を使用する必要はありません。
 
-詳細については、次を参照してください。[方法: Windows フォームで DDX/DDV データ バインディングを行う](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)します。
+詳細については、「[方法 :Windows フォームで DDX/DDV データ バインディング](../../dotnet/how-to-do-ddx-ddv-data-binding-with-windows-forms.md)します。
 
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwinforms.h
-
-### <a name="see-also"></a>関連項目
-
-[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
-[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
 
 ##  <a name="ddx_ipaddress"></a>  DDX_IPAddress
 
@@ -305,10 +300,10 @@ void AFXAPI DDX_IPAddress(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールのプロパティに関連付けられている IP アドレス コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 IP アドレス コントロールの 4 つのフィールドの値を含む DWORD への参照。 フィールドが設定または次のように読み込まれます。
 
 |フィールド|ビット フィールドの値を格納しています。|
@@ -346,7 +341,7 @@ void AFXAPI DDX_LBIndex(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロール プロパティに関連付けられたリスト ボックス コントロールのリソース ID。
 
 *index*<br/>
@@ -378,10 +373,10 @@ void AFXAPI DDX_LBString(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロール プロパティに関連付けられたリスト ボックス コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのデータを交換するのメンバー変数への参照。
 
 ### <a name="remarks"></a>Remarks
@@ -415,10 +410,10 @@ void AFXAPI DDX_LBStringExact(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロール プロパティに関連付けられたリスト ボックス コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのデータを交換するのメンバー変数への参照。
 
 ### <a name="remarks"></a>Remarks
@@ -457,10 +452,10 @@ void AFXAPI DDX_MonthCalCtrl(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。 このオブジェクトを削除する必要はありません。
 
-*各*<br/>
+*nIDC*<br/>
 月間予定表コントロールのリソース ID は、メンバー変数に関連付けられています。
 
-*値*<br/>
+*value*<br/>
 参照を`CTime`または`COleDateTime`メンバー変数のダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトを使用するには、データを交換します。
 
 ### <a name="remarks"></a>Remarks
@@ -492,10 +487,10 @@ void AFXAPI DDX_Radio(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 最初のラジオ コントロール、グループ内のリソース ID。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのデータを交換するのメンバー変数への参照。
 
 ### <a name="remarks"></a>Remarks
@@ -526,10 +521,10 @@ void AFXAPI DDX_Scroll(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 コントロールのプロパティに関連付けられているスクロール バー コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 データの交換相手になるダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのメンバー変数への参照。
 
 ### <a name="remarks"></a>Remarks
@@ -558,10 +553,10 @@ void AFXAPI DDX_Slider(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 スライダー コントロールのリソース ID。
 
-*値*<br/>
+*value*<br/>
 交換する値への参照。 このパラメーターを保持またはスライダー コントロールの現在位置を設定します。
 
 ### <a name="remarks"></a>Remarks
@@ -640,10 +635,10 @@ void AFXAPI DDX_Text(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*各*<br/>
+*nIDC*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトの編集コントロールの ID。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはコントロール ビュー オブジェクトのデータ メンバーへの参照。 データ型*値*のオーバー ロードされたバージョンのうちに依存`DDX_Text`を使用します。
 
 ### <a name="remarks"></a>Remarks
@@ -656,5 +651,7 @@ DDX の詳細については、「 [ダイアログ データ エクスチェン
 
 ## <a name="see-also"></a>関連項目
 
-[標準的なダイアログ データ検証ルーチン](../../mfc/reference/standard-dialog-data-validation-routines.md)<br/>
-[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
+[標準的なダイアログ データ検証ルーチン](standard-dialog-data-validation-routines.md)<br/>
+[マクロとグローバル](mfc-macros-and-globals.md)<br/>
+[CWinFormsControl::CreateManagedControl](cwinformscontrol-class.md#createmanagedcontrol)<br/>
+[CDialog::OnInitDialog](cdialog-class.md#oninitdialog)
