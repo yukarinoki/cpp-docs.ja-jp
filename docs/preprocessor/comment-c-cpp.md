@@ -1,5 +1,5 @@
 ---
-title: コメント (C/C++)
+title: comment (C/C++)
 ms.date: 11/04/2016
 f1_keywords:
 - vc-pragma.comment
@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/31/2018
 ms.locfileid: "50612824"
 ---
-# <a name="comment-cc"></a>コメント (C/C++)
+# <a name="comment-cc"></a>comment (C/C++)
 
 オブジェクト ファイルまたは実行可能ファイル内にコメント レコードを配置します。
 
