@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 6d5f3e21e14c34ffbeb335bc1ec4feebd5148c7f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493614"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850092"
 ---
 # <a name="platformobject-class"></a>Platform::Object クラス
 
@@ -57,7 +57,7 @@ public ref class Object : Object
 
 **ヘッダー:** vccorlib.h
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 ## <a name="equals"></a> Object::equals メソッド
 
@@ -124,12 +124,6 @@ A [platform::type](../cppcx/platform-type-class.md)オブジェクトのラン�
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);
 ```
 
-## <a name="see-also"></a>関連項目
-
-[Platform::Type クラス](../cppcx/platform-type-class.md)<br/>
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)<br/>
-[システムの種類](../cppcx/type-system-c-cx.md
-
 ## <a name="ctor"></a>  Object::object コンス トラクター
 
 Object クラスの新しいインスタンスを初期化します。
@@ -191,4 +185,6 @@ public:
 
 ## <a name="see-also"></a>関連項目
 
-[プラットフォーム Namespace](platform-namespace-c-cx.md)
+[プラットフォーム Namespace](platform-namespace-c-cx.md)<br/>
+[Platform::Type クラス](platform-type-class.md)<br/>
+[型システム](type-system-c-cx.md)

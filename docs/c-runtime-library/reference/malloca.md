@@ -23,12 +23,12 @@ helpviewer_keywords:
 - malloca function
 - _malloca function
 ms.assetid: 293992df-cfca-4bc9-b313-0a733a6bb936
-ms.openlocfilehash: 8c8ce8bdf8ab40cae45ecec9c4b182bdf3d6bc82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 22a63002c900d69e8a7706a54acedf0b4b4f6376
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563983"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850411"
 ---
 # <a name="malloca"></a>_malloca
 
@@ -51,13 +51,13 @@ void *_malloca(
 
 **_Malloca**ルーチンを返します、 **void**どの型のオブジェクトの記憶域の適切なアラインメントが保証されている、割り当てられた領域へのポインター。 場合*サイズ*は 0 です。 **_malloca**長さ 0 の項目を割り当てると、その項目の有効なポインターを返します。
 
-領域の割り当てができない場合、スタック オーバーフロー例外が生成されます。 スタック オーバーフロー例外は C++ 例外ではなく、構造化例外です。 C++ 例外処理を使用する代わりに、[構造化例外処理](../../cpp/structured-exception-handling-c-cpp.md) (SEH) を使用する必要があります。
+場合*サイズ*がより大きい **_ALLOCA_S_THRESHOLD**、し **_malloca**ヒープに割り当てようとして、領域を割り当てることができない場合は、null ポインターを返します。 場合*サイズ*に等しいまたはそれよりも小さい **_ALLOCA_S_THRESHOLD**、し **_malloca**領域ができない場合、スタック上、スタック オーバーフロー例外を割り当てようとするが生成されます割り当てられます。 スタック オーバーフロー例外いない C++ の例外です。構造化例外になります。 C++ 例外処理を使用して、代わりに使用する必要があります[構造化例外処理](../../cpp/structured-exception-handling-c-cpp.md)この例外をキャッチする (SEH)。
 
 ## <a name="remarks"></a>Remarks
 
 **_malloca**割り当てます*サイズ*プログラム スタックまたはヒープの場合は、要求で指定されたバイト数で特定のサイズを超えていますからバイト **_ALLOCA_S_THRESHOLD**します。 間の差 **_malloca**と **_alloca**される **_alloca**サイズに関係なく、スタックで常に割り当てます。 異なり **_alloca**、する必要がありますまたはへの呼び出しを許可しません**無料**、メモリを解放する **_malloca**の使用を要求[_freea](freea.md)メモリを解放します。 デバッグ モードで **_malloca**常に、ヒープからメモリを割り当てます。
 
-明示的に呼び出すには制限 **_malloca**例外ハンドラー (EH)。 x86 クラスのプロセッサで動作する EH ルーチンは、自身のメモリ フレーム内で処理されるため、外側の関数のスタック ポインターが示す現在位置を基にしたメモリ領域ではタスクを実行しません。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 そのため、明示的に呼び出す **_malloca**呼び出した EH ルーチンへの復帰時にプログラム エラー シナリオ結果は次のいずれかで。
+明示的に呼び出すには制限 **_malloca**例外ハンドラー (EH)。 X86 クラスのプロセッサ上で実行される EH ルーチンは、独自のメモリ フレームで動作します。外側の関数のスタック ポインターの現在の場所には基づいていないメモリ領域でタスクを実行します。 最も一般的な実装には、Windows NT 構造化例外処理 (SEH) や C++ catch 句の式などがあります。 そのため、明示的に呼び出す **_malloca**呼び出した EH ルーチンへの復帰時にプログラム エラー シナリオ結果は次のいずれかで。
 
 - Windows NT SEH 例外フィルター式: **_ _except** (`_malloca ()` )
 

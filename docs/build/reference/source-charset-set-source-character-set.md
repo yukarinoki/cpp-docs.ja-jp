@@ -1,18 +1,18 @@
 ---
 title: /source-charset (ソース文字セット)
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - source-charset
 - /source-charset
 helpviewer_keywords:
 - /execution-charset compiler option
 ms.assetid: d3c5bf7f-526d-4ee4-acc5-c1a02a4fc481
-ms.openlocfilehash: 6927c6e54a89f619182916c561dcbe7d1c92a25b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a204000be6e4e434b6ef4aabf6bbc0db1593fb0
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50663828"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55849718"
 ---
 # <a name="source-charset-set-source-character-set"></a>/source-charset (ソース文字セット)
 
@@ -48,7 +48,7 @@ IANA で定義されている文字セットの名前。
 
 1. 展開、**構成プロパティ**、 **C/C++**、**コマンドライン**フォルダー。
 
-1. **オプションの高度な**、追加、 **/source-charset**オプション、および、使用するエンコーディングを指定します。
+1. **追加オプション**、追加、 **/source-charset**オプション、および、使用するエンコーディングを指定します。
 
 1. **OK** を選択して変更を保存してください。
 

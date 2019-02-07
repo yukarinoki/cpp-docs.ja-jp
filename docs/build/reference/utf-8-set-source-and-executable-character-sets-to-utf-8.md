@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /utf-8 compiler option
 ms.assetid: f0e1f3cb-6cae-46eb-9483-04ed13d9b504
-ms.openlocfilehash: cb71e1846348adf4cf8a8eb385e6c5f7ac2bac74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: efe37f66790832874f7ff2aa9623b07b5fba5371
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636528"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55851636"
 ---
 # <a name="utf-8-set-source-and-executable-character-sets-to-utf-8"></a>/utf-8 (ソースの設定と実行可能ファイルの文字セットを utf-8)
 
@@ -35,7 +35,7 @@ ms.locfileid: "50636528"
 
 1. 展開、**構成プロパティ**、 **C/C++**、**コマンドライン**フォルダー。
 
-1. **オプションの高度な**、追加、 **/utf-8**オプション、および、使用するエンコーディングを指定します。
+1. **追加オプション**、追加、 **/utf-8**使用するエンコーディングを指定するオプション。
 
 1. **OK** を選択して変更を保存してください。
 

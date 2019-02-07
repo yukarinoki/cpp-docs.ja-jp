@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - standard dialog, data validation routines
 ms.assetid: 44dbc222-a897-4949-925e-7660e8964ccd
-ms.openlocfilehash: b5813600bbf8eb2a7b25992b3e1b020fcf8dfa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dce982f76e25da424c02d621c1b760ec29e88918
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513946"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850165"
 ---
 # <a name="standard-dialog-data-validation-routines"></a>標準的なダイアログ データ検証ルーチン
 
@@ -54,7 +54,7 @@ void AFXAPI DDV_MaxChars(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *文字数*<br/>
@@ -85,7 +85,7 @@ void AFXAPI DDV_MinMaxByte(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -159,7 +159,7 @@ void AFXAPI DDV_MinMaxDouble(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -193,7 +193,7 @@ void AFXAPI DDV_MinMaxDWord(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -227,7 +227,7 @@ void AFXAPI DDV_MinMaxFloat(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -261,7 +261,7 @@ void AFXAPI DDV_MinMaxInt(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -295,7 +295,7 @@ void AFXAPI DDV_MinMaxLong(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -329,7 +329,7 @@ void AFXAPI DDV_MinMaxLongLong(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -403,7 +403,7 @@ void AFXAPI DDV_MinMaxShort(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -437,7 +437,7 @@ void AFXAPI DDV_MinMaxSlider(
 *pDX*<br/>
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 検証する値への参照。 このパラメーターを保持またはスライダー コントロールのつまみの現在の位置を設定します。
 
 *minVal*<br/>
@@ -471,7 +471,7 @@ void AFXAPI DDV_MinMaxUInt(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -505,7 +505,7 @@ void AFXAPI DDV_MinMaxULongLong(
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -521,11 +521,6 @@ DDV の詳細については、次を参照してください。[ダイアログ
 ### <a name="requirements"></a>必要条件
 
   **ヘッダー** afxdd_.h
-
-## <a name="see-also"></a>関連項目
-
-[標準的なダイアログ データ エクスチェンジ ルーチン](../../mfc/reference/standard-dialog-data-exchange-routines.md)<br/>
-[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
 
 ## <a name="ddvminmaxunsigned"></a>DDV_MinMaxUnsigned
 
@@ -546,7 +541,7 @@ DDV の詳細については、次を参照してください。[ダイアログ
 *pDX*<br/>
 `CDataExchange` オブジェクトへのポインター。 フレームワークは、データ交換のコンテキスト (交換方向を含みます) を確定するためにこのオブジェクトを提供します。
 
-*値*<br/>
+*value*<br/>
 ダイアログ ボックス、フォーム ビュー、またはデータを検証するコントロール ビュー オブジェクトのメンバー変数への参照。
 
 *minVal*<br/>
@@ -563,9 +558,10 @@ DDV の詳細については、次を参照してください。[ダイアログ
 
 **ヘッダー:** afxdd_.h
 
-### <a name="see-also"></a>関連項目
+## <a name="see-also"></a>関連項目
 
+[標準的なダイアログ データ エクスチェンジ ルーチン](standard-dialog-data-exchange-routines.md)<br/>
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[DDX_Slider](#ddx_slider)<br/>
-[DDX_FieldSlider](#ddx_fieldslider)
+[DDX_Slider](standard-dialog-data-exchange-routines.md#ddx_slider)<br/>
+[DDX_FieldSlider](dialog-data-exchange-functions-for-crecordview-and-cdaorecordview.md#ddx_fieldslider)
 

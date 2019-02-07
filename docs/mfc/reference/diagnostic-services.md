@@ -20,12 +20,12 @@ helpviewer_keywords:
 - diagnostics [MFC], diagnostic services
 - diagnostic functions and variables [MFC]
 ms.assetid: 8d78454f-9fae-49c2-88c9-d3fabd5393e8
-ms.openlocfilehash: dbb243453b6d869082a4232b12b27f5510d84aa5
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: a4979ab7bbc0e396de5629fba1b86f3bfb602dcf
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657631"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850441"
 ---
 # <a name="diagnostic-services"></a>診断サービス
 
@@ -320,12 +320,6 @@ ENSURE_VALID は、ASSERT_VALID マクロ (これは、デバッグ ビルドで
 
 **ヘッダー:** afx.h
 
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[VERIFY](#verify)<br/>
-[ATLENSURE](#altensure)
-
 ## <a name="this_file"></a> THIS_FILE
 
 コンパイルされるファイルの名前に展開されます。
@@ -355,12 +349,6 @@ static char THIS_FILE[] = __FILE__;
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
-
-### <a name="see-also"></a>関連項目
-
-[マクロとグローバル](mfc-macros-and-globals.md)<br/>
-[ASSERT](#assert)<br/>
-[VERIFY](#verify)
 
 ##  <a name="trace"></a>  TRACE
 
@@ -464,10 +452,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
-
-### <a name="see-also"></a>関連項目
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxmemdf"></a>  afxMemDF
 
@@ -581,10 +565,6 @@ void AfxDump(const CObject* pOb);
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー:** afx.h
-
-### <a name="see-also"></a>関連項目
-
-[CObject::Dump](cobject-class.md#dump)
 
 ##  <a name="afxdumpstack"></a>  AfxDumpStack
 
@@ -744,7 +724,7 @@ BOOL AfxIsMemoryBlock(
 *nBytes*<br/>
 メモリ ブロックのバイトの長さが含まれています。
 
-*値を返す*<br/>
+*plRequestNumber*<br/>
 指す、**長い**整数メモリ ブロックの割り当てのシーケンス番号が格納されるか、現在アクティブなメモリ ブロックを表していない場合は 0 です。
 
 ### <a name="return-value"></a>戻り値
@@ -818,7 +798,7 @@ BOOL  AfxIsValidString(
 *lpsz*<br/>
 テストへのポインター。
 
-*されて*<br/>
+*nLength*<br/>
 (バイト単位) をテストする文字列の長さを指定します。 値-1 は、null で終わる文字列をすることを示します。
 
 ### <a name="return-value"></a>戻り値
@@ -856,7 +836,7 @@ AFX_ALLOC_HOOK AfxSetAllocHook(AFX_ALLOC_HOOK pfnAllocHook);
 
 Microsoft Foundation Class ライブラリのデバッグ メモリ アロケーターは、メモリの割り当てを監視して、割り当てが許可されているかどうかを制御するユーザーを許可するユーザー定義フック関数を呼び出すことができます。 割り当てフック関数は、次のようにプロトタイプ宣言されて。
 
-**BOOL AFXAPI AllocHook (size_t** `nSize` **、BOOL** `bObject`**長い** `lRequestNumber` **)。**
+**BOOL AFXAPI AllocHook( size_t** `nSize`**, BOOL** `bObject`**, LONG** `lRequestNumber` **);**
 
 *nSize*<br/>
 提案されたメモリの割り当てのサイズ。
@@ -942,4 +922,5 @@ void AfxDoForAllObjects(
 
 ## <a name="see-also"></a>関連項目
 
-[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)
+[マクロとグローバル](mfc-macros-and-globals.md)<br/>
+[CObject::Dump](cobject-class.md#dump)

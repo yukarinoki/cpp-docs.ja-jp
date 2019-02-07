@@ -55,12 +55,12 @@ helpviewer_keywords:
 - AFX_GLOBAL_DATA structure [MFC]
 - AFX_GLOBAL_DATA constructor
 ms.assetid: c7abf2fb-ad5e-4336-a01d-260c29ed53a2
-ms.openlocfilehash: 9b6a462cf359bbd31958509c4fe7d0d71e490d11
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 0fd8143564beecccd8943f3ceba531e8697151d1
+ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694310"
+ms.lasthandoff: 02/07/2019
+ms.locfileid: "55850325"
 ---
 # <a name="afxglobaldata-structure"></a>AFX_GLOBAL_DATA 構造体
 
@@ -121,7 +121,7 @@ struct AFX_GLOBAL_DATA
 |----------|-----------------|
 |[AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)|Microsoft Active Accessibility のサポートを有効または無効にします。 Active Accessibility は、ユーザー インターフェイス要素に関する情報を公開するための信頼できる方法を提供します。|
 |[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)|Microsoft Active Accessibility のサポートが有効かどうかを示します。|
-|[:Iswindowslayersupportavailable](#iswindowslayersupportavailable)|オペレーティング システムがレイヤード ウィンドウをサポートするかどうかを示します。|
+|[AFX_GLOBAL_DATA::IsWindowsLayerSupportAvailable](#iswindowslayersupportavailable)|オペレーティング システムがレイヤード ウィンドウをサポートするかどうかを示します。|
 
 ### <a name="data-members"></a>データ メンバー
 
@@ -153,11 +153,6 @@ struct AFX_GLOBAL_DATA
 ### <a name="requirements"></a>必要条件
 
 **ヘッダー :** afxglobals.h
-
-### <a name="see-also"></a>関連項目
-
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
 
 ## <a name="bisosalphablendingsupport"></a> AFX_GLOBAL_DATA::bIsOSAlphaBlendingSupport
 
@@ -192,13 +187,13 @@ HRESULT D2D1MakeRotateMatrix(
 
 ### <a name="parameters"></a>パラメーター
 
-*角度*<br/>
+*angle*<br/>
 時計回りの回転角度 (度単位)。
 
 *Center*<br/>
 回転の中心点。
 
-*マトリックス*<br/>
+*matrix*<br/>
 このメソッドが戻るときに、新しい回転変換が含まれています。 このパラメーターは、記憶域を割り当てる必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -289,16 +284,6 @@ BOOL DrawTextOnGlass(
 
 テーマは、アプリケーションの視覚スタイルを定義します。 場合、テキストの描画にテーマが使用できません、 *hTheme*パラメーターが null の場合、または、 [DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)メソッドがサポートされていません場合[デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview) (DWM) の構成無効です。
 
-### <a name="see-also"></a>関連項目
-
-[階層図](../../mfc/hierarchy-chart.md)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[パーツと状態](/windows/desktop/controls/parts-and-states)<br/>
-[CDC::DrawText](../../mfc/reference/cdc-class.md#drawtext)<br/>
-[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
-[デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview)<br/>
-[DWM 合成を有効化と制御](/windows/desktop/dwm/composition-ovw)
-
 ## <a name="enableaccessibilitysupport"></a> AFX_GLOBAL_DATA::EnableAccessibilitySupport
 
 Microsoft Active Accessibility のサポートを有効または無効にします。
@@ -317,11 +302,6 @@ void EnableAccessibilitySupport(BOOL bEnable=TRUE);
 Active Accessibility は、プログラムと支援技術製品と共に、Windows オペレーティング システムの作業を改善する COM ベース テクノロジです。 ユーザー インターフェイス要素に関する情報を公開するための信頼性の高いメソッドを提供します。 ただし、Microsoft UI オートメーションと呼ばれる新しいユーザー補助モデルでは、使用できるようになりました。 2 つのテクノロジの比較は、次を参照してください。 [UI オートメーションと Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)します。
 
 使用して、 [AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport) Microsoft Active Accessibility のサポートが有効になっているかどうかを判断するメソッド。
-
-### <a name="see-also"></a>関連項目
-
-[UI オートメーションと Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
-[AFX_GLOBAL_DATA::IsAccessibilitySupport](#isaccessibilitysupport)
 
 ## <a name="excludetag"></a> AFX_GLOBAL_DATA::ExcludeTag
 
@@ -361,13 +341,13 @@ XML タグのペアは開始と指定したバッファー内のテキストの�
 
 |シンボル|エスケープ文字|
 |------------|----------------------|
-|_T ("\\\t")|_T("\t")|
-|_T ("\\\n")|_T("\n")|
-|_T ("\\\r")|_T("\r")|
-|_T ("\\\b")|_T("\b")|
-|_T("LT")|_T ("\<")|
-|_T("GT")|_T("&GT;")|
-|_T("AMP")|_T("&AMP;")|
+|_T("\\\t")|_T("\t")|
+|_T("\\\n")|_T("\n")|
+|_T("\\\r")|_T("\r")|
+|_T("\\\b")|_T("\b")|
+|_T("LT")|_T("\<")|
+|_T("GT")|_T(">")|
+|_T("AMP")|_T("&")|
 
 ## <a name="getcolor"></a> AFX_GLOBAL_DATA::GetColor
 
@@ -389,12 +369,6 @@ COLORREF GetColor(int nColor);
 ### <a name="remarks"></a>Remarks
 
 場合、 *nColor*パラメーターが範囲外には、戻り値は 0。 0 は有効な RGB 値でもあるので、システム カラーが現在のオペレーティング システムでサポートされているかどうかを判断するのにこのメソッドを使用できません。 代わりに、使用、 [GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)メソッドで、色がサポートされていない場合は NULL を返します。
-
-### <a name="see-also"></a>関連項目
-
-[GetSysColor 関数](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)
 
 ## <a name="getdirect2dfactory"></a> AFX_GLOBAL_DATA::GetDirect2dFactory
 
@@ -436,10 +410,6 @@ BOOL GetNonClientMetrics(NONCLIENTMETRICS& info);
 ### <a name="return-value"></a>戻り値
 
 このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。
-
-### <a name="see-also"></a>関連項目
-
-[NONCLIENTMETRICS 構造体](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)
 
 ## <a name="gettextheight"></a> AFX_GLOBAL_DATA::GetTextHeight
 
@@ -538,10 +508,6 @@ Microsoft Active Accessibility は、以前のソリューションのアプリ�
 
 使用して、 [AFX_GLOBAL_DATA::EnableAccessibilitySupport](#enableaccessibilitysupport)メソッドを有効または Active Accessibility のサポートを無効にします。
 
-### <a name="see-also"></a>関連項目
-
-[UI オートメーションと Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)
-
 ## <a name="isd2dinitialized"></a> AFX_GLOBAL_DATA::IsD2DInitialized
 
 D2D が初期化されたかどうかを決定します。
@@ -565,11 +531,6 @@ BOOL IsDwmCompositionEnabled();
 ### <a name="return-value"></a>戻り値
 
 TRUE の場合[デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview) (DWM) コンポジションを有効になっている、それ以外は FALSE。
-
-### <a name="see-also"></a>関連項目
-
-[デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview)<br/>
-[DWM 合成を有効化と制御](/windows/desktop/dwm/composition-ovw)
 
 ## <a name="ishighcontrastmode"></a> AFX_GLOBAL_DATA::IsHighContrastMode
 
@@ -743,11 +704,6 @@ CString RegisterWindowClass(LPCTSTR lpszClassNamePrefix);
 
 戻り値はコロン区切りの一覧、 *lpszClassNamePrefix*パラメーター文字列、および現在のアプリケーション インスタンスのハンドルの 16 進数のテキスト表現の矢印は、アプリケーションのカーソル識別子を持つ IDC_ARROW; は、カーソル背景のブラシ。 MFC ウィンドウ クラスの登録の詳細については、次を参照してください。 [AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)します。
 
-### <a name="see-also"></a>関連項目
-
-[AfxRegisterClass](../../mfc/reference/application-information-and-management.md#afxregisterclass)<br/>
-[AfxThrowResourceException](../../mfc/reference/exception-processing.md#afxthrowresourceexception)
-
 ## <a name="resume"></a> AFX_GLOBAL_DATA::Resume
 
 Windows テーマと視覚スタイルをサポートするメソッドにアクセスする内部関数ポインターを再初期化します。
@@ -793,11 +749,6 @@ BOOL SetLayeredAttrib(
 ### <a name="return-value"></a>戻り値
 
 このメソッドが成功した場合は TRUE。それ以外の場合、FALSE です。
-
-### <a name="see-also"></a>関連項目
-
-[COLORREF](/windows/desktop/gdi/colorref)<br/>
-[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
 
 ## <a name="setmenufont"></a> AFX_GLOBAL_DATA::SetMenuFont
 
@@ -903,7 +854,7 @@ int GetShellAutohideBars();
 
 ### <a name="return-value"></a>戻り値
 
-自動の位置を指定するフラグをエンコードされた整数値には、バーが非表示にします。 次の値を組み合わせることもできます: AFX_AUTOHIDE_BOTTOM、AFX_AUTOHIDE_TOP、AFX_AUTOHIDE_LEFT、AFX_AUTOHIDE_RIGHT します。
+自動の位置を指定するフラグをエンコードされた整数値には、バーが非表示にします。 次の値に組み合わせることもできます。AFX_AUTOHIDE_BOTTOM、AFX_AUTOHIDE_TOP、AFX_AUTOHIDE_LEFT、AFX_AUTOHIDE_RIGHT します。
 
 ## <a name="releasetaskbarrefs"></a> AFX_GLOBAL_DATA::ReleaseTaskBarRefs
 
@@ -943,3 +894,20 @@ HRESULT ShellCreateItemFromParsingName(
 
 成功した場合は S_OK を返します。それ以外の場合エラー値。
 
+## <a name="see-also"></a>関連項目
+
+[階層図](../hierarchy-chart.md)<br/>
+[構造体、スタイル、コールバック関数とメッセージ マップ](structures-styles-callbacks-and-message-maps.md)<br/>
+[COLORREF](/windows/desktop/gdi/colorref)<br/>
+[パーツと状態](/windows/desktop/controls/parts-and-states)<br/>
+[CDC::DrawText](cdc-class.md#drawtext)<br/>
+[DrawThemeTextEx](/windows/desktop/api/uxtheme/nf-uxtheme-drawthemetextex)<br/>
+[デスクトップ ウィンドウ マネージャー](/windows/desktop/dwm/dwm-overview)<br/>
+[DWM 合成を有効化と制御](/windows/desktop/dwm/composition-ovw)<br/>
+[UI オートメーションと Microsoft Active Accessibility](/dotnet/framework/ui-automation/ui-automation-and-microsoft-active-accessibility)<br/>
+[GetSysColor 関数](/windows/desktop/api/winuser/nf-winuser-getsyscolor)<br/>
+[GetSysColorBrush](/windows/desktop/api/winuser/nf-winuser-getsyscolorbrush)<br/>
+[NONCLIENTMETRICS 構造体](/windows/desktop/api/winuser/ns-winuser-tagnonclientmetricsa)<br/>
+[AfxRegisterClass](application-information-and-management.md#afxregisterclass)<br/>
+[AfxThrowResourceException](exception-processing.md#afxthrowresourceexception)<br/>
+[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)
