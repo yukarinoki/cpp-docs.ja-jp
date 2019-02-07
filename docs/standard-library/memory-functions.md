@@ -1,6 +1,6 @@
 ---
 title: '&lt;memory&gt; 関数'
-ms.date: 11/04/2016
+ms.date: 02/06/2019
 f1_keywords:
 - memory/std::addressof
 - memory/std::align
@@ -74,12 +74,12 @@ helpviewer_keywords:
 - std::uninitialized_copy_n [C++]
 - std::uninitialized_fill [C++]
 - std::uninitialized_fill_n [C++]
-ms.openlocfilehash: e0a62b7afd215a9cad62ba1d0469f68459e6f403
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 71cae7bfbb8bfc0bef79a087d4450505c2880e5c
+ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519179"
+ms.lasthandoff: 02/06/2019
+ms.locfileid: "55763935"
 ---
 # <a name="ltmemorygt-functions"></a>&lt;memory&gt; 関数
 
@@ -647,13 +647,13 @@ make_unique(Types&&...) = delete;
 
 ### <a name="remarks"></a>Remarks
 
-最初のオーバーロードは、単一オブジェクトに対して使用されます。2 番目のオーバーロードは、配列に対して呼び出されます。3 番目のオーバーロードは、ユーザーが型引数 (make_unique\<T[N]>) で配列のサイズを指定することを防ぎます。この構造は、現在の標準ではサポートされていません。 `make_unique` を使用して、配列への `unique_ptr` を作成する場合、配列要素を個別に初期化する必要があります。 このオーバーロードを検討している場合、[std::vector](../standard-library/vector-class.md) の使用が適切である可能性があります。
+最初のオーバー ロードは、1 つのオブジェクトの使用は、2 番目のオーバー ロードは、配列に対して呼び出されるおよび 3 番目のオーバー ロードすることはできません型の引数の配列のサイズを指定する (make_unique\<T [N] >) この構造は現在サポートされていません。標準です。 `make_unique` を使用して、配列への `unique_ptr` を作成する場合、配列要素を個別に初期化する必要があります。 このオーバーロードを検討している場合、[std::vector](../standard-library/vector-class.md) の使用が適切である可能性があります。
 
 `make_unique` は、例外セーフを目的として慎重に実装されるため、`make_unique` コンストラクターを直接呼び出す代わりに、`unique_ptr` を使用することをお勧めします。
 
 ### <a name="example"></a>例
 
-次の例は、`make_unique` を使用する方法を示しています。 その他の例については、「[方法: unique_ptr インスタンスを作成して使用する](../cpp/how-to-create-and-use-unique-ptr-instances.md)」を参照してください。
+次の例は、`make_unique` を使用する方法を示しています。 その他の例については、「[方法:作成し、unique_ptr インスタンスを使用して](../cpp/how-to-create-and-use-unique-ptr-instances.md)します。
 
 [!code-cpp[stl_smart_pointers#214](../cpp/codesnippet/CPP/memory-functions_1.cpp)]
 
@@ -700,7 +700,7 @@ struct owner_less<weak_ptr<Type>>
 
 ### <a name="parameters"></a>パラメーター
 
-*_ 左*<br/>
+*_left*<br/>
 共有またはウィーク ポインター。
 
 *right*<br/>
