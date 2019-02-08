@@ -10,15 +10,28 @@ helpviewer_keywords:
 - menus [C++], adding items
 - commands [C++], adding to menus
 - menu items, adding to menus
+- submenus
+- submenus [C++], creating
+- menus [C++], creating
+- context menus [C++], Menu Editor
+- pop-up menus [C++], creating
+- menus [C++], pop-up
+- menus [C++], creating
+- shortcut menus [C++], creating
+- pop-up menus [C++], displaying
+- pop-up menus [C++], connecting to applications
+- context menus [C++], connecting to applications
+- shortcut menus [C++], connecting to applications
+- pop-up menus
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: 438480032f1fe9208e406b4ee499267e42148a48
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
+ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702805"
+ms.lasthandoff: 02/08/2019
+ms.locfileid: "55905772"
 ---
-# <a name="creating-a-menu-c"></a>メニュー (C++) の作成
+# <a name="creating-menus-c"></a>メニュー (C++) の作成
 
 > [!NOTE]
 > **リソース ウィンドウ**Express エディションでは使用できません。
@@ -45,6 +58,14 @@ ms.locfileid: "55702805"
 
    > [!NOTE]
    > メニュー バーの単一項目のメニューを作成するには、設定、**ポップアップ**プロパティを**False**します。
+
+## <a name="to-create-a-submenu"></a>サブメニューを作成するには
+
+1. サブメニューを作成するメニュー コマンドを選択します。
+
+1. 右側に表示される **[新しいアイテム]** ボックスに、新しいメニュー コマンドの名前を入力します。 サブメニューのメニューには、この新しいコマンドが最初に表示されます。
+
+1. サブメニューのメニューにメニュー コマンドを追加します。
 
 ## <a name="to-insert-a-new-menu-between-existing-menus"></a>既存のメニュー間に新規メニューを挿入するには
 
@@ -82,6 +103,53 @@ ms.locfileid: "55702805"
 1. キーを押して**Enter**メニュー コマンドを完了します。
 
    新しい項目ボックスが選択され、追加のメニュー コマンドを作成できるようになります。
+
+## <a name="to-create-pop-up-menus"></a>ポップアップ メニューを作成するには
+
+[ポップアップ メニュー](../mfc/menus-mfc.md) には、頻繁に使用するコマンドが表示されます。 これらは状況依存となっていて、マウス ポインターの場所に応じて表示できます。 アプリケーションでポップアップ メニューを使用には、メニュー自体をビルドし、アプリケーション コードに接続する必要があります。
+
+アプリケーション コードがメニュー リソースをロードして使用する必要があるメニュー リソースを作成したら、 [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu)がメニューを表示します。 外部を選択して、ポップアップ メニューが閉じるか、コマンドが選択すると、その関数を返します。 ユーザーがコマンドを選択した場合は、そのコマンドのメッセージが、ハンドルが渡されたウィンドウに送信されます。
+
+### <a name="to-create-a-pop-up-menu"></a>ポップアップ メニューを作成するには
+
+1. 空のタイトルで[メニューを作成](../windows/creating-a-menu.md) します ( **キャプション**は指定しません)。
+
+1. [新しいメニューにメニュー コマンドを追加](../windows/adding-commands-to-a-menu.md)します。 最初のメニュー コマンド、空のメニュー タイトルの下に移動 (一時的なキャプションという`Type Here`)。 **キャプション** とその他の情報を入力します。
+
+   ポップアップ メニューのその他のメニュー コマンドに対して、この手順を繰り返します。
+
+1. メニュー リソースを保存します。
+
+### <a name="to-connect-a-pop-up-menu-to-your-application"></a>ショートカット メニューをアプリケーションに関連付けるには
+
+1. (たとえば) WM_CONTEXTMENU のメッセージ ハンドラーを追加します。 詳細については、次を参照してください。[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)します。
+
+1. 次のコードをメッセージ ハンドラーに追加します。
+
+    ```cpp
+    CMenu menu;
+    VERIFY(menu.LoadMenu(IDR_MENU1));
+    CMenu* pPopup = menu.GetSubMenu(0);
+    ASSERT(pPopup != NULL);
+    pPopup->TrackPopupMenu(TPM_LEFTALIGN | TPM_RIGHTBUTTON, point.x, point.y, AfxGetMainWnd());
+    ```
+
+   > [!NOTE]
+   > [CPoint](../atl-mfc-shared/reference/cpoint-class.md)渡されたハンドラーが画面座標では、メッセージによって。
+
+   > [!NOTE]
+   > ポップアップ メニューをアプリケーションに接続するには、MFC が必要です。
+
+### <a name="to-view-a-menu-resource-as-a-pop-up-menu"></a>メニュー リソースをポップアップ メニューとして表示するには
+
+通常、作業するとき、**メニュー**エディター、メニュー バーでメニュー リソースが表示されます。 ただし、プログラムの実行中にアプリケーションのメニュー バーにメニュー リソースが追加されている場合もあります。
+
+メニューを右クリックし、**ポップアップ表示**ショートカット メニューから。
+
+   このオプションは、単なる表示設定で、メニューは変更されません。
+
+   > [!NOTE]
+   > メニュー バーの表示に戻すに、次のようにクリックします。**ポップアップ表示**もう一度 (チェック マークが削除と、メニュー バーの表示を返します)。
 
 ## <a name="requirements"></a>必要条件
 
