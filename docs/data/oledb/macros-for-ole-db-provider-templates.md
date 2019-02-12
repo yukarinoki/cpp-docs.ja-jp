@@ -1,6 +1,6 @@
 ---
 title: OLE DB プロバイダー テンプレート用マクロ
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - BEGIN_PROPERTY_SET
@@ -51,12 +51,12 @@ helpviewer_keywords:
 - END_SCHEMA_MAP macro
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
-ms.openlocfilehash: 8fbad23d49490f42416dd7e7234776ff1c5ac7bf
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: a2a5bf14da1a39439db67a4fb062fd06763754fc
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557052"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151118"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB プロバイダー テンプレート用マクロ
 
@@ -155,7 +155,7 @@ BEGIN_PROPSET_MAP(Class)
 
 #### <a name="parameters"></a>パラメーター
 
-*クラス*<br/>
+*Class*<br/>
 [in]このプロパティが設定されているクラスを指定します。 プロパティ セットは、次の OLE DB オブジェクトで指定できます。
 
 - [データ ソース オブジェクト](https://docs.microsoft.com/previous-versions/windows/desktop/ms721278(v=vs.85))
@@ -298,7 +298,7 @@ PROPERTY_INFO_ENTRY_VALUE(dwPropID, value)
 *dwPropID*<br/>
 [入力] プロパティ セット GUID と組み合わせて使用してプロパティを特定する [DBPROPID](https://docs.microsoft.com/previous-versions/windows/desktop/ms723882(v=vs.85)) 値。
 
-*値*<br/>
+*value*<br/>
 [入力] `DWORD`型のプロパティ値。
 
 #### <a name="remarks"></a>Remarks
@@ -583,9 +583,9 @@ BEGIN_SCHEMA_MAP(SchemaClass);
 END_SCHEMA_MAP()
 ```
 
-#### <a name="see-also"></a>関連項目
+#### <a name="remarks"></a>Remarks
 
-[IDBSchemaRowsetImpl クラス](../../data/oledb/idbschemarowsetimpl-class.md)
+詳細については、次を参照してください。 [IDBSchemaRowsetImpl クラス](../../data/oledb/idbschemarowsetimpl-class.md)します。
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 

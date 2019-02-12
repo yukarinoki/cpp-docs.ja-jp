@@ -11,18 +11,18 @@ helpviewer_keywords:
 - __popcnt64
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
-ms.openlocfilehash: a0a5a51bfcb5265f7b415433c3f6b64423840ebe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: a6424f3414d9da17e52c0a9f78290497f5e5e01e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522460"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56146893"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16、__popcnt、__popcnt64
 
 **Microsoft 固有の仕様**
 
-1 つの数をカウント 16 ビット、32 ビットまたは 64 バイト符号なし整数のビット (カタログ作成数)。
+1 つの数をカウント 16 ビット、32 ビットまたは 64 ビット符号なし整数のビット (カタログ作成数)。
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +40,7 @@ unsigned __int64 __popcnt64(
 
 #### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 [in]16 ビット、32 ビットまたは 64 ビット符号なし整数のビットの数をいたします。
 
 ## <a name="return-value"></a>戻り値
@@ -59,7 +59,7 @@ unsigned __int64 __popcnt64(
 
 ## <a name="remarks"></a>Remarks
 
-これらの組み込みの生成、`popcnt`命令。  値のサイズを`popcnt`命令は、引数のサイズと同じを返します。  32 ビット モードではありません 64 ビット汎用レジスタ、したがっていいえ 64 ビット`popcnt`します。
+これらの組み込みの生成、`popcnt`命令。 32 ビット モードではありません 64 ビット汎用レジスタ、したがっていいえ 64 ビット`popcnt`します。
 
 ハードウェア サポートの決定を`popcnt`命令、呼び出し、`__cpuid`で組み込み`InfoType=0x00000001`のビット 23 をチェックし、`CPUInfo[2] (ECX)`します。 命令がサポートされていればこのビットは 1 となり、サポートされていなければ 0 となります。 `popcnt`命令が搭載されていないハードウェア上でこの組み込み関数を呼び出した場合、その結果は保証されません。
 

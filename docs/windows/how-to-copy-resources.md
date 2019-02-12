@@ -1,10 +1,13 @@
 ---
-title: '方法: リソースのコピー (C++)'
+title: '方法: リソース (C++) の管理します。'
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resvw.resource.copying
 - vs.resvw.resource.copying
 - vc.resvw.resource.changing
+- vb.xmldesigner.data
+- vs.resvw.resource.importing
+- vc.resvw.resource.importing
 helpviewer_keywords:
 - resources [C++], moving between files
 - resources [C++], copying
@@ -13,15 +16,32 @@ helpviewer_keywords:
 - .rc files [C++], copying resources between
 - rc files [C++], copying resources between
 - Language property [C++]
+- .resx files [C++], editing
+- resource files [C++], editing
+- resx files [C++], editing
+- resources [C++], exporting
+- graphics [C++], exporting
+- graphics [C++], importing
+- resources [C++], importing
+- bitmaps [C++], importing and exporting
+- toolbars [C++], importing
+- images [C++], importing
+- toolbars [C++], exporting
+- cursors [C++], importing and exporting
+- images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 772c9b905d4cb0c4e2ccab9ec51aa02860b2db32
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: e8b976f974e397b8012ebf59ede08ee64f4f7191
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849662"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150793"
 ---
-# <a name="how-to-copy-resources-c"></a>方法: リソースのコピー (C++)
+# <a name="how-to-manage-resources-c"></a>方法: リソース (C++) の管理します。
+
+マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+
+## <a name="to-copy-resources"></a>リソースをコピーするには
 
 変更せずに別の 1 つのファイルからのリソースをコピーすることができます、またはコピー中に言語またはリソースの条件を変更することができます。
 
@@ -32,24 +52,24 @@ ms.locfileid: "55849662"
 
 開いている .rc ファイル間でドラッグ アンド ドロップを使用する[プロジェクトの外部に](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)します。
 
-## <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>ドラッグ アンド ドロップ メソッドを使用してファイル間でリソースをコピーするには
+### <a name="to-copy-resources-between-files-using-the-drag-and-drop-method"></a>ドラッグ アンド ドロップ メソッドを使用してファイル間でリソースをコピーするには
 
-1. スタンドアロン両方のリソース ファイルを開きます (詳細については、次を参照してください。 [、.rc ファイルの外部のプロジェクトでリソースを表示する](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 たとえば、Source1.rc と Source2.rc を開きます。
+1. スタンドアロン両方のリソース ファイルを開きます (詳細については、次を参照してください。[プロジェクト外部で .rc ファイル内のリソースを表示](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 たとえば、開く*Source1.rc*と*Source2.rc*します。
 
-1. 最初の .rc ファイル内でコピーするリソースを選択します。 たとえば、 `Source1.rc`、 **IDD_DIALOG1**します。
+1. 最初の .rc ファイル内でコピーするリソースを選択します。 たとえば、 *Source1.rc*、 **IDD_DIALOG1**します。
 
-1. 押しながら、 **Ctrl**キーし、2 番目の .rc ファイルにリソースをドラッグします。 たとえば、ドラッグ**IDD_DIALOG1**から`Source1.rc`に`Source2.rc`します。
+1. 押しながら、 **Ctrl**キーし、2 番目の .rc ファイルにリソースをドラッグします。 たとえば、ドラッグ**IDD_DIALOG1**から*Source1.rc*に*Source2.rc*します。
 
    > [!NOTE]
    > 保持することがなくリソースをドラッグする、 **Ctrl**キーはコピーすることではなく、リソースが移動します。
 
-## <a name="to-copy-resources-using-copy-and-paste"></a>コピーを使用してリソースをコピーして貼り付ける
+### <a name="to-copy-resources-using-copy-and-paste"></a>コピーを使用してリソースをコピーして貼り付ける
 
-1. スタンドアロン両方のリソース ファイルを開きます (詳細については、次を参照してください。 [、.rc ファイルの外部のプロジェクトでリソースを表示する](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 たとえば、Source1.rc と source2.rc を開きます。
+1. スタンドアロン両方のリソース ファイルを開きます (詳細については、次を参照してください。[プロジェクト外部で .rc ファイル内のリソースを表示](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md))。 たとえば、 *Source1.rc*と*Source2.rc*します。
 
-1. リソースをコピーするソース ファイル内 (たとえば、 `Source1.rc`) でリソースを右クリックし、選択**コピー**ショートカット メニューから。
+1. リソースをコピーするソース ファイル内 (たとえば、 *Source1.rc*) でリソースを右クリックし、選択**コピー**ショートカット メニューから。
 
-1. 貼り付けなど、リソース ファイルを右クリックし (たとえば、 `Source2.rc`)。 選択**貼り付け**ショートカット メニューから。
+1. 貼り付けなど、リソース ファイルを右クリックし (たとえば、 *Source2.rc*)。 選択**貼り付け**ショートカット メニューから。
 
    > [!NOTE]
    > ドラッグ アンド ドロップ、コピー、切り取り、またはプロジェクト内のリソース ファイル間に貼り付けることはできません (**リソース ビュー**) とスタンドアロンの .rc ファイル (ドキュメント ウィンドウで開きます)。 これは、製品の以前のバージョンで実行できます。
@@ -57,7 +77,7 @@ ms.locfileid: "55849662"
    > [!NOTE]
    > シンボル名または既存のファイル内の値との競合を避けるためには、Visual C が転送されるリソースのシンボル値またはシンボル名や値を変更、新しいファイルをコピーする場合。
 
-## <a name="to-change-the-language-or-condition-of-a-resource-while-copying-c"></a>(C++) のコピー中に、言語またはリソースの条件を変更するには
+### <a name="to-change-the-language-or-condition-of-a-resource-while-copying"></a>コピー中に、言語またはリソースの条件を変更するには
 
 リソースのコピー時に、リソースの言語プロパティ、条件プロパティ、またはその両方を変更できます。
 
@@ -65,13 +85,13 @@ ms.locfileid: "55849662"
 
 - リソースの条件とは、リソースの特定のコピーが使用される条件を識別する定義済みのシンボルです。
 
-リソースの言語と条件は、[ワークスペース] ウィンドウで、リソース名の後に、かっこで囲んで表示されます。 この例で、リソース idd_aboutbox が言語のとしてフィンランド語を使用して、条件が XX33 します。
+言語とリソースの条件でリソースの名前の後にかっこ内に表示されます、**ワークスペース**ウィンドウ。 この例で、リソースの名前`IDD_AboutBox`を使用している`Finnish`、言語およびその条件としては`XX33`します。
 
 ```cpp
 IDD_AboutBox (Finnish - XX33)
 ```
 
-### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>既存のリソースをコピーして、そのリソースの言語または条件を変更するには
+既存のリソースをコピーし、その言語または条件を変更します。
 
 1. .Rc ファイルまたは、[リソース ビュー](../windows/resource-view-window.md)ウィンドウで、コピーするリソースを右クリックします。
 
@@ -83,7 +103,39 @@ IDD_AboutBox (Finnish - XX33)
 
    - **条件**ボックスに、条件を入力します。
 
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+## <a name="to-edit-managed-resource-files"></a>マネージ リソース ファイルを編集するには
+
+マネージ リソース ファイル (.resx) は、XML ファイルです。 マネージ リソース ファイルからプロジェクトに追加すると、**新しい項目の追加** ダイアログ ボックスで、**マネージ リソース エディター**が既定で開きます。
+
+## <a name="to-import-and-export-resources"></a>リソースをインポートおよびエクスポート
+
+グラフィカル リソース (ビットマップ、アイコン、カーソル、ツール バー)、HTML ファイル、および Visual C++ で使用するためのカスタム リソースをインポートすることができます。 Visual C++ プロジェクトから、同じ種類のファイルを別のファイルにエクスポートして、開発環境の外部で使用することができます。
+
+> [!NOTE]
+> アクセラレータ、ダイアログ ボックス、文字列テーブルなどのリソースの種類は、スタンドアロンのファイルの種類ではないため、インポートまたはエクスポートすることはできません。
+
+### <a name="to-import-an-individual-resource-into-your-current-resource-file"></a>1 つのリソースを現在のリソース ファイルにインポートするには
+
+1. [リソース ビュー](../windows/resource-view-window.md)、リソース スクリプトのノードを右クリックして (* .rc) ファイルのリソースを追加します。
+
+1. 選択**インポート**ショートカット メニューの します。
+
+1. インポートするビットマップ (.bmp)、アイコン (.ico)、カーソル (.cur)、Html ファイル (.htm)、またはその他のファイルを見つけてそのファイル名を選択します。
+
+1. 選択**OK**で選択したファイルにリソースを追加する**リソース**ビュー。
+
+   > [!NOTE]
+   > どの種類のリソースを選択した場合も、インポート プロセスは同じように実行されます。 インポートされたリソースは、そのリソースの種類の適切なノードに自動的に追加されます。
+
+### <a name="to-export-a-bitmap-icon-or-cursor-as-a-separate-file-for-use-outside-of-visual-c"></a>(Visual C++ の外部で使用するために) ビットマップ、アイコン、またはカーソルを別のファイルとしてエクスポートするには
+
+1. **リソース**ビューで、エクスポートするリソースを右クリックします。
+
+1. 選択**エクスポート**ショートカット メニューの します。
+
+1. **リソースのエクスポート** ダイアログ ボックスで、現在のファイル名をそのまま使用するか、新しい名前を入力します。
+
+1. ファイルを保存フォルダーに移動します**エクスポート**します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -92,5 +144,4 @@ Win32
 ## <a name="see-also"></a>関連項目
 
 [リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
-[リソース エディター](../windows/resource-editors.md)<br/>
-[方法: プロジェクトの外側で (スタンドアロンで) リソース スクリプト ファイルを開く](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)<br/>
+[リソース エディター](../windows/resource-editors.md)
