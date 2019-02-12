@@ -1,6 +1,6 @@
 ---
 title: OLE DB コンシューマー テンプレート用マクロおよびグローバル関数
-ms.date: 11/04/2016
+ms.date: 02/11/2019
 f1_keywords:
 - vc.templates.ole
 - ATL.AtlTraceErrorRecords
@@ -100,12 +100,12 @@ helpviewer_keywords:
 - END_PARAM_MAP macro
 - SET_PARAM_TYPE macro
 ms.assetid: 8765eb7b-32dd-407c-bacf-8890ef959837
-ms.openlocfilehash: 4254c2637c4ed937a3196310ffa83c48504911af
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1826f674e219b850e62fdae07b3a97e8b8cf2d48
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51557116"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148999"
 ---
 # <a name="macros-and-global-functions-for-ole-db-consumer-templates"></a>OLE DB コンシューマー テンプレート用マクロおよびグローバル関数
 
@@ -198,11 +198,7 @@ inline void AtlTraceErrorRecords(HRESULT hrErr = S_OK);
 
 #### <a name="remarks"></a>Remarks
 
-場合*だ*は S_OK、`AtlTraceErrorRecords`ダンプ デバイスに OLE DB エラー レコード情報をダンプ (、**デバッグ**ファイルまたは出力ウィンドウのタブ)。 プロバイダーから取得されるエラー レコード情報には、各エラー レコード エントリの行番号、ソース、説明、ヘルプ ファイル、コンテキスト、および GUID が含まれます。 `AtlTraceErrorRecords` デバッグ ビルドでのみこの情報をダンプします。 リリース ビルドでは、out に最適化された空のスタブを勧めします。
-
-#### <a name="see-also"></a>関連項目
-
-[CDBErrorInfo クラス](../../data/oledb/cdberrorinfo-class.md)
+場合*だ*は S_OK、`AtlTraceErrorRecords`ダンプ デバイスに OLE DB エラー レコード情報をダンプ (、**デバッグ**ファイルまたは出力ウィンドウのタブ)。 プロバイダーから取得されるエラー レコード情報には、各エラー レコード エントリの行番号、ソース、説明、ヘルプ ファイル、コンテキスト、および GUID が含まれます。 `AtlTraceErrorRecords` デバッグ ビルドでのみこの情報をダンプします。 リリース ビルドでは、out に最適化された空のスタブを勧めします。詳細については、次を参照してください。 [CDBErrorInfo クラス](../../data/oledb/cdberrorinfo-class.md)します。
 
 ### <a name="begin_accessor"></a> BEGIN_ACCESSOR
 
@@ -669,10 +665,7 @@ END_COLUMN_MAP()
 };
 ```
 
-#### <a name="see-also"></a>関連項目
-
-[CBookmark クラス](../../data/oledb/cbookmark-class.md)<br/>
-[DBPROP_BOOKMARKS](https://docs.microsoft.com/previous-versions/windows/desktop/ms709728(v=vs.85))
+詳細については、次を参照してください。[ブックマークを使って](using-bookmarks.md)と[CBookmark クラス](../../data/oledb/cbookmark-class.md)します。
 
 ### <a name="column_entry"></a> COLUMN_ENTRY
 
@@ -728,7 +721,7 @@ COLUMN_ENTRY_EX(nOrdinal, wType, nLength, nPrecision, nScale, data, length, stat
 *wType*<br/>
 [in]データ型。
 
-*されて*<br/>
+*nLength*<br/>
 [in]データ サイズ (バイト単位)。
 
 *nPrecision*<br/>
@@ -1061,7 +1054,7 @@ COLUMN_ENTRY_TYPE_SIZE(nOrdinal, wType, nLength, data)
 *wType*<br/>
 [in]列のエントリのデータ型。
 
-*されて*<br/>
+*nLength*<br/>
 [in] (バイト単位) の列のエントリのサイズです。
 
 *data*<br/>
@@ -1117,7 +1110,7 @@ COLUMN_NAME_EX(pszName, wType, nLength, nPrecision, nScale, data, length, status
 *wType*<br/>
 [in]データ型。
 
-*されて*<br/>
+*nLength*<br/>
 [in]データ サイズ (バイト単位)。
 
 *nPrecision*<br/>
@@ -1415,7 +1408,7 @@ COLUMN_NAME_TYPE_SIZE(pszName, wType, nLength, data)
 *wType*<br/>
 [in]データ型。
 
-*されて*<br/>
+*nLength*<br/>
 [in]データ サイズ (バイト単位)。
 
 *data*<br/>
@@ -1489,7 +1482,7 @@ DEFINE_COMMAND(x, szCommand)
 *x*<br/>
 [in]ユーザー レコード (コマンド) クラスの名前。
 
-*で*<br/>
+*szCommand*<br/>
 [in]使用する場合、行セットの作成に使用されるコマンド文字列[CCommand](../../data/oledb/ccommand-class.md)します。
 
 #### <a name="remarks"></a>Remarks
