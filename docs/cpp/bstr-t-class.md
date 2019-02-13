@@ -19,7 +19,7 @@ ms.locfileid: "50524691"
 
 **Microsoft 固有の仕様**
 
-`_bstr_t`オブジェクトは [BSTR データ型](/previous-versions/windows/desktop/automat/bstr) をカプセル化します。 クラスは、必要に応じて関数`SysAllocString`、`SysFreeString`およびその他の`BSTR`API の呼び出すことでリソースの割り当てと割り当て解除を管理します。 **_Bstr_t**クラスは過大なオーバーヘッドを回避するため参照カウントを使用します。
+`_bstr_t` オブジェクトは [BSTR データ型](/previous-versions/windows/desktop/automat/bstr) をカプセル化します。クラスは、必要に応じて関数 `SysAllocString`、`SysFreeString`およびその他の `BSTR`API を呼び出すことでリソースの割り当てと割り当て解除を管理します。**_Bstr_t** クラスは過大なオーバーヘッドを回避するため参照カウントを使用します。
 
 ### <a name="construction"></a>構築
 
@@ -44,10 +44,10 @@ ms.locfileid: "50524691"
 |||
 |-|-|
 |[operator=](../cpp/bstr-t-operator-equal.md)|既存の `_bstr_t` オブジェクトに新しい値を代入します。|
-|[operator+=](../cpp/bstr-t-operator-add-equal-plus.md)|`_bstr_t` の末尾に文字を追加します。|
-|[operator+](../cpp/bstr-t-operator-add-equal-plus.md)|2 つの文字列を連結します。|
-|[operator!](../cpp/bstr-t-operator-logical-not.md)|場合にチェック カプセル化された`BSTR`は、NULL 文字列です。|
-|[operator==, !=, \<>, \<=, >=](../cpp/bstr-t-relational-operators.md)|2 つの `_bstr_t` オブジェクトを比較します。|
+|[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|`_bstr_t` の末尾に文字を追加します。|
+|[operator +](../cpp/bstr-t-operator-add-equal-plus.md)|2 つの文字列を連結します。|
+|[operator !](../cpp/bstr-t-operator-logical-not.md)|場合にチェック カプセル化された`BSTR`は、NULL 文字列です。|
+|[operator ==、!=、<、>、<=、>=](../cpp/bstr-t-relational-operators.md)|2 つの `_bstr_t` オブジェクトを比較します。|
 |[operator wchar_t\* &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|カプセル化された Unicode またはマルチバイト `BSTR` オブジェクトへのポインターを抽出します。|
 
 **Microsoft 固有の仕様はここまで**
@@ -56,7 +56,7 @@ ms.locfileid: "50524691"
 
 **Header:** \<comutil.h>
 
-**Lib:** comsuppw.lib または comsuppwd.lib (詳細は[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)を参照してください)
+**Lib:** comsuppw.lib または comsuppwd.lib (詳細は「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください)
 
 ## <a name="see-also"></a>関連項目
 
