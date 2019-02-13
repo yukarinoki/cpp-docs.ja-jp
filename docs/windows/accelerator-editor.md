@@ -3,19 +3,42 @@ title: アクセラレータ エディター (C++)
 ms.date: 11/04/2016
 f1_keywords:
 - vc.editors.accelerator.F1
+- vc.editors.accelerator
 helpviewer_keywords:
 - accelerator tables [C++], editing
 - tables [C++], accelerator key
 - accelerator keys [C++]
 - resource editors [C++], Accelerator editor
 - keyboard shortcuts [C++], Accelerator editor
+- accelerator properties
+- properties [C++], accelerator properties
+- Type property
+- Key property
+- Modifier property
+- VIRTKEY
+- Key property
+- ID property
+- accelerator tables [C++], editing
+- keyboard shortcuts [C++], editing in an accelerator table
+- searching, in accelarator tables
+- accelerator tables [C++], finding entries
+- accelerator tables [C++], adding entries
+- New Accelerator command
+- accelerator tables [C++], deleting entries
+- keyboard shortcuts [C++], deleting entry from accelerator table
+- accelerator tables [C++], copying entries
+- rc files [C++], moving an accelerator table entry
+- .rc files [C++], moving accelerator table entries
+- accelerator tables [C++], moving entries
+- keyboard shortcuts [C++], property changing
+- accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: fdb2d9cf0954142da990a0a9f995cb482060345d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5ece5c7e85a3ef59b728474746e9553a751d43c6
+ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621495"
+ms.lasthandoff: 02/13/2019
+ms.locfileid: "56226346"
 ---
 # <a name="accelerator-editor-c"></a>アクセラレータ エディター (C++)
 
@@ -25,15 +48,7 @@ ms.locfileid: "50621495"
 
 [クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code) を使用して、コードにアクセス キーのコマンドをフックできます。
 
-**アクセラレータ**エディターができます。
-
-- [アクセラレータ プロパティの設定](../windows/setting-accelerator-properties.md)
-
-- [アクセス キーとメニュー項目との関連付け](../windows/associating-an-accelerator-key-with-a-menu-item.md)
-
-- [アクセラレータ テーブルの編集](../windows/editing-accelerator-tables.md)
-
-- [定義済みのアクセス キーの使用](../windows/predefined-accelerator-keys.md)
+定義済みのアクセラレータ キーの一覧は、次を参照してください。[アクセラレータ キーの定義済みの](../windows/predefined-accelerator-keys.md)します。
 
    > [!TIP]
    > 使用しているときに、**アクセラレータ**エディター、頻繁に使用されるコマンドのショートカット メニューを表示する右クリックできます。 使用できるコマンドは、ポインターの位置によって異なります。
@@ -41,7 +56,154 @@ ms.locfileid: "50621495"
    > [!NOTE]
    > Windows では、空のアクセラレータ テーブルは作成できません。 エントリがないアクセラレータ テーブルを作成すると、テーブルを保存する際に自動的に削除されます。
 
-マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+
+## <a name="accelerator-properties"></a>アクセラレータのプロパティ
+
+アクセラレータのプロパティで設定できる、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)いつでもです。 使用することも、**アクセラレータ**エディターのアクセラレータ テーブルでアクセラレータのプロパティを変更します。 使用して行われた変更、**プロパティ**ウィンドウまたは**アクセラレータ**エディターが、同じ結果がある: アクセラレータ テーブルでの編集をすぐに反映されます。
+
+### <a name="id-property"></a>ID プロパティ
+
+**ID**プロパティは、プログラム コード内の各アクセラレータ テーブル エントリを参照します。 このエントリは、アクセラレータ キーまたはキーの組み合わせを押すと、プログラムを受信するコマンドの値です。 アクセラレータ メニュー項目と同じをくださいその Id と同じ (限りアクセラレータ テーブルの ID では、メニュー リソースの ID と同じです)。
+
+アクセラレータ ID ごとに 3 つのプロパティがあります。**修飾子**プロパティ、**キー**プロパティ、および**型**プロパティ。
+
+#### <a name="modifier-property"></a>Modifier プロパティ
+
+**修飾子**プロパティは、アクセラレータ キーの組み合わせをコントロールに設定します。
+
+> [!NOTE]
+> **プロパティ**ウィンドウで、このプロパティは、3 つの異なるとして表示されます**ブール**プロパティ、すべてのことができますが個別に制御します。**Alt キーを押し**、 **Ctrl**、および**Shift**します。
+
+有効なエントリを次に、**修飾子**アクセラレータ テーブル内のプロパティ。
+
+   |[値]|説明|
+   |-----------|-----------------|
+   |**None**|ユーザーが押したのみ、**キー**値。 として解釈される ASCII]/[ANSI 値 001 026、経由でこの値は使用が最も効果的に ^ A ~ ^ Z (**Ctrl + A**を通じて**Ctrl + Z**)。|
+   |**Alt**|ユーザーが押す必要があります、 **Alt**する前にキー、**キー**値。|
+   |**Ctrl**|ユーザーが押す必要があります、 **Ctrl**する前にキー、**キー**値。 ASCII 型では無効です。|
+   |**Shift**|ユーザーが押す必要があります、 **Shift**する前にキー、**キー**値。|
+   |**Ctrl + Alt**|ユーザーが押す必要があります、 **Ctrl**キーと**Alt**する前にキー、**キー**値。 ASCII 型では無効です。|
+   |**Ctrl + Shift**|ユーザーが押す必要があります、 **Ctrl**キーと**Shift**する前にキー、**キー**値。 ASCII 型では無効です。|
+   |**Alt + Shift**|ユーザーが押す必要があります、 **Alt**キーと**Shift**する前にキー、**キー**値。 ASCII 型では無効です。|
+   |**Ctrl + Alt + Shift**|ユーザーが押す必要があります**Ctrl**、 **Alt**と**Shift**する前に、**キー**値。 ASCII 型では無効です。|
+
+#### <a name="key-property"></a>Key プロパティ
+
+**キー**プロパティは、アクセス キーとして使用する実際のキーを設定します。
+
+有効なエントリを次に、**キー**アクセラレータ テーブル内のプロパティ。
+
+   |[値]|説明|
+   |-----------|-----------------|
+   |0 ~ 255 の 10 進形式の範囲の整数。|値は、値が ASCII または ANSI として次のように扱われるかどうかを決定します。<br/><br/>-1 桁の数字は、常に、ASCII または ANSI の値ではなく、対応するキーとして解釈されます。<br/>の 1 ~ 26、ゼロが付く場合から値として解釈されます ^ A ~ ^ Z で押されたときに、アルファベットの文字の ASCII 値を表す、 **Ctrl**キーが押し続けられます。<br/>の 27 ~ 32 値は常に、3 桁の 10 進値 027 ~ 032 として解釈されます。<br/>-前に 0 がまたはいない、ANSI 値として解釈されるかどうかに 033 ~ 255 の値です。|
+   |1 つのキーボード文字。|A ~ Z の大文字または数字 0 - 9 は、ASCII または仮想キー値のいずれかを指定できます。その他の任意の文字には ASCII のみです。|
+   |A ~ Z の範囲内の 1 つのキーボード文字 (大文字のみ)、キャレット (^) に続く (たとえば、^ C)。|と一緒に押したときに、このオプションは、キーの ASCII 値を入力、 **Ctrl**キーが押し続けられます。|
+   |有効な仮想キー識別子。|アクセラレータ テーブルで、ドロップダウン リスト キーのボックスには、標準の仮想キー識別子の一覧が含まれています。|
+
+> [!NOTE]
+> ASCII 値を入力するには、修飾子プロパティのオプションが制限されています。 使用するため利用可能な唯一のコントロール キーは、 **Alt**キー。
+
+> [!TIP]
+> アクセラレータ キーを定義する別の方法は、エントリ、または複数のアクセラレータ テーブル エントリを右クリックし、選択する**キー タイピング登録**ショートカット メニューからのキーまたはキーの組み合わせのいずれか、キーボードのキーを押します。 **キー タイピング登録**コマンドが表示されます、**編集**メニュー。
+
+#### <a name="type-property"></a>Type プロパティ
+
+**型**プロパティは、アクセラレータ ID に関連付けられているショートカット キーの組み合わせが ASCII/ANSI キーの値または仮想キー (VIRTKEY) の組み合わせとして解釈されるかどうかを決定します。
+
+- 場合、**型**プロパティは、ASCII、**修飾子**プロパティがありますのみ`None`または`Alt`、またはアクセラレータを使用することができます、 **Ctrl** (キー前のキーで指定された、 `^`)。
+
+- 場合、**型**プロパティは VIRTKEY を任意に組み合わせた`Modifier`と`Key`値が無効です。
+
+> [!NOTE]
+> アクセラレータ テーブルに値を入力して ASCII/ANSI をクリックすることとして扱う値を設定する場合、**型**ドロップダウン リストから ASCII を選択、テーブル内のエントリ。 ただし、使用する場合、 **キー タイピング登録**コマンド (**編集**メニュー) を指定する、 `Key`、変更する必要があります、**型**プロパティ VIRTKEY から ASCIIに*する前に*入力、`Key`コード。
+
+## <a name="accelerator-tables"></a>アクセラレータ テーブル
+
+インプレース編集を直接アクセラレータ テーブルを編集する C++ プロジェクトで、**アクセラレータ**エディター。
+
+以下の手順は、標準のプロパティ ページの使用を参照してください、ただし、インプレース編集とプロパティ ページのメソッドの両方にある同じ結果になります。 プロパティ ページを使用して、またはインプレース編集を使用して行われた変更は、アクセラレータ テーブルですぐに反映されます。
+
+> [!NOTE]
+> プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
+
+### <a name="to-edit-in-an-accelerator-table"></a>アクセラレータ テーブルで編集するには
+
+1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+
+1. テーブルでエントリを選択し、インプレース編集をアクティブ化を選択します。
+
+1. 変更するには、ドロップダウン コンボ ボックスから選択するか、インプレースで入力します。
+
+   - **ID**でリストまたは入力して編集を選択します。
+
+   - **修飾子**を一覧から選択します。
+
+   - **キー**でリストまたは入力して編集を選択します。
+
+   - **型**、 **ASCII**または**VIRTKEY**一覧から。
+
+### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>開いているアクセラレータ テーブルでエントリを検索するには
+
+1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+
+1. 列の内容をアルファベット順に並べ替える列見出しを選択します。 たとえば、 **ID**アクセラレータ テーブル内のすべての Id をアルファベット順に表示します。
+
+これで、一覧に目を通しながらエントリを探すことができます。
+
+### <a name="to-add-an-entry-to-an-accelerator-table"></a>アクセラレータ テーブルにエントリを追加するには
+
+1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+
+1. アクセラレータ テーブル内で右クリックし、**新しいアクセラレータ**からショートカット メニューのまたはテーブルの下部にある空の行エントリを選択します。
+
+1. 選択、 **ID** ID のドロップダウン リストからボックスまたは新しい ID を入力、 **ID**ボックス。
+
+1. 型、**キー**アクセラレータまたは右クリックとして使用する**キー タイピング登録**キーの組み合わせを設定するショートカット メニュー (、 **キー タイピング登録**コマンドは、使用可能な**編集**メニュー)。
+
+1. 変更、**修飾子**と**型**、必要な場合。
+
+1. **Enter** キーを押します。
+
+   > [!NOTE]
+   > 定義するすべてのアクセラレータが一意であることを確認します。 たとえば、同じ ID に割り当てられているいくつかのキーの組み合わせがあることができます**Ctrl** + **P**と**F8**どちらも ID_PRINT に割り当てる割り当てすることができます。 ただし、1 つ以上の ID は、うまく機能しませんなどに割り当てられているキーの組み合わせを持つ**Ctrl** + **Z** ID_SPELL_CHECK と ID_THESAURUS の両方に割り当てられます。
+
+### <a name="to-delete-an-entry-from-an-accelerator-table"></a>アクセラレータ テーブルのエントリを削除するには
+
+1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+
+1. 削除するエントリを選択します (を押しながら、 **Ctrl**または**Shift**複数のエントリを選択することを選択するのにはキーです)。
+
+1. 右クリックし、**削除**、ショートカット メニューから (または選択**削除**から、**編集**メニュー)。
+
+> [!TIP]
+> 削除のショートカットは、キーを押す、**削除**キー。
+
+### <a name="to-move-or-copy-an-accelerator-table-entry-to-another-resource-script-file"></a>アクセラレータ テーブルのエントリを別のリソース スクリプト ファイルに移動またはコピーするには
+
+1. 両方のリソース スクリプト ファイルでアクセラレータ テーブルを開きます。
+
+1. 移動するエントリを選択します。
+
+1. **編集**] メニューの [選択**コピー**または**切り取り**します。
+
+1. 移動先またはコピー先のリソース スクリプト ファイルでエントリを選択します。
+
+1. **編集**] メニューの [選択**貼り付け**します。
+
+   > [!NOTE]
+   > コピーと貼り付けのショートカット キーも使用できます。
+
+### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>複数のアクセラレータ キーのプロパティを変更するには
+
+1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+
+1. 押しながら変更するアクセラレータ キーの選択、 **Ctrl**キーの 1 つを選択するとします。
+
+1. 移動して、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)し、すべて、選択したアクセラレータを共有するのに必要な値を入力します。
+
+   > [!NOTE]
+   > ブール型プロパティとして各修飾子の値が表示されます、**プロパティ**ウィンドウ。 変更した場合、[修飾子](../windows/accelerator-modifier-property.md)値、**プロパティ**ウィンドウで、アクセラレータ テーブルで、れていた、修飾子の追加として新しい修飾子が扱われます。 このため場合は、修飾子の値を設定する必要がありますすべて同じすべてのアクセラレータを共有することを確認するを設定する**修飾子**設定します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -50,3 +212,6 @@ Win32
 ## <a name="see-also"></a>関連項目
 
 [リソース エディター](../windows/resource-editors.md)
+
+[アクセラレータ テーブルでのエントリの編集](../windows/editing-in-an-accelerator-table.md)<br/>
+[定義済みのアクセラレータ キー](../windows/predefined-accelerator-keys.md)<br/>
