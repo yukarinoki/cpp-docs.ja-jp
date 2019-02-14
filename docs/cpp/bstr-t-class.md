@@ -47,14 +47,14 @@ ms.locfileid: "50524691"
 |[operator +=](../cpp/bstr-t-operator-add-equal-plus.md)|`_bstr_t` の末尾に文字を追加します。|
 |[operator +](../cpp/bstr-t-operator-add-equal-plus.md)|2 つの文字列を連結します。|
 |[operator !](../cpp/bstr-t-operator-logical-not.md)|場合にチェック カプセル化された`BSTR`は、NULL 文字列です。|
-|[演算子 = =、! =、 \<、>、 \<=、> =](../cpp/bstr-t-relational-operators.md)|2 つの `_bstr_t` オブジェクトを比較します。|
-|[演算子 wchar_t * &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|カプセル化された Unicode またはマルチバイト `BSTR` オブジェクトへのポインターを抽出します。|
+|[operator ==、!=、\<、>、\<=、>=](../cpp/bstr-t-relational-operators.md)|2 つの `_bstr_t` オブジェクトを比較します。|
+|[operator wchar_t\* &#124; char\*](../cpp/bstr-t-wchar-t-star-bstr-t-char-star.md)|カプセル化された Unicode またはマルチバイト `BSTR` オブジェクトへのポインターを抽出します。|
 
 **Microsoft 固有の仕様はここまで**
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** \<comutil.h >
+**Header:** \<comutil.h >
 
 **Lib:** comsuppw.lib または comsuppwd.lib (詳細は「[/Zc:wchar_t (wchar_t をネイティブ型として認識)](../build/reference/zc-wchar-t-wchar-t-is-native-type.md)」を参照してください)
 
