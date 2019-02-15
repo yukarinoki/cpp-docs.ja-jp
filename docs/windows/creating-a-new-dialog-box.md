@@ -8,15 +8,37 @@ helpviewer_keywords:
 - Dialog Editor [C++], creating dialog boxes
 - modal dialog boxes [C++], logon screens
 - logon screens
+- Test Dialog command
+- testing, dialog boxes
+- dialog boxes [C++], testing
+- dialog boxes [C++], size
+- dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: 928432000fb9a6347433b78b224e15f07ce810d2
-ms.sourcegitcommit: 52c05e10b503e834c443ef11e7ca1987e332f876
+ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
+ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742649"
+ms.lasthandoff: 02/14/2019
+ms.locfileid: "56264817"
 ---
 # <a name="creating-a-dialog-box-c"></a>ダイアログ ボックス (C++) の作成
+
+場所と C++ のダイアログ ボックスと場所のサイズと、内のコントロールのサイズは、ダイアログ単位で測定されます。 個々 のコントロールと、ダイアログ ボックスの値は、Visual Studio のステータス バーの選択した場合の右下に表示されます。
+
+ダイアログ ボックスを設計するときにもシミュレートし、プログラムをコンパイルせずに、実行時の動作をテストします。 このモードでは、次を行うことができます。
+
+- テキストの入力、コンボ ボックスの一覧での選択、オプションのオンとオフの切り替え、コマンドの選択。
+
+- タブ オーダーのテスト。
+
+- オプション ボタンやチェック ボックスなど、コントロールのグループ化のテスト。
+
+- ダイアログ ボックスにあるコントロールのキーボード ショートカットのテスト。
+
+   > [!NOTE]
+   > ウィザードを使用したダイアログ ボックスのコードへの接続は、シミュレーションに含まれません。
+
+通常、テストするダイアログ ボックスはメイン プログラム ウィンドウの相対位置に表示されます。 ダイアログ ボックスの設定した場合**Absolute Align**プロパティを**True**画面の左上隅に対して相対的な位置にあるダイアログ ボックスが表示されます。
 
 マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
@@ -52,7 +74,15 @@ ms.locfileid: "55742649"
 > [!NOTE]
 > MFC アプリケーションの場合にユーザーが終了できないダイアログ ボックスを作成する必要があります動作をオーバーライドする、既定の`OnOK`と`OnCancel`に関連付けられたボタンを削除する場合でもダイアログ ボックスはキーを押しても閉じることができますので**入力**または**Esc**します。
 
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)します。
+## <a name="to-specify-the-location-and-size-of-a-dialog-box"></a>ダイアログ ボックスのサイズと場所を指定するには
+
+設定できる 3 つのプロパティがある、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window) ダイアログ ボックスを画面に表示を指定します。 **Center** 、値を設定する場合、プロパティはブール値。 **True**、画面の中央で、ダイアログ ボックスが表示されます。 設定した場合**False**、設定することができます、 **XPos**と**YPos**プロパティ ダイアログ ボックスが表示され、画面上の場所を明示的に定義します。 位置プロパティとして定義されている表示領域の左上隅からのオフセット値を`{X=0, Y=0}`します。 位置もに基づいて、 **Absolute Align**プロパティ: 場合**True**、座標は画面場合**False**座標は、ダイアログ ボックス所有者のウィンドウです。
+
+## <a name="to-test-a-dialog-box"></a>ダイアログ ボックスをテストするには
+
+1. ときに、**ダイアログ**エディターがアクティブなウィンドウ、メニュー バーで、選択**形式** > **テスト ダイアログ**します。
+
+1. シミュレーションを終了するには、キーを押します**Esc**、かのみを選んで、**閉じる** ダイアログ ボックスでテストしているボタンをクリックします。
 
 ## <a name="requirements"></a>必要条件
 
@@ -60,6 +90,7 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[方法: リソースを作成する](../windows/how-to-create-a-resource.md)<br/>
+[リソースを作成する](../windows/how-to-create-a-resource.md)<br/>
 [リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
-[ダイアログ エディター](../windows/dialog-editor.md)
+[ダイアログ エディター](../windows/dialog-editor.md)<br/>
+[ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)<br/>
