@@ -1,6 +1,6 @@
 ---
 title: アクセラレータ キー (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator
 helpviewer_keywords:
@@ -10,16 +10,14 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 1e87d80b8995760eecda34334dab702480bd9669
-ms.sourcegitcommit: 5beace7dcc6bf0e8b8cc96a930e7424f9daa05cb
+ms.openlocfilehash: 6ef8f84564d6fd1957452971cb1e88dc99aa27e9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55232124"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320511"
 ---
 # <a name="accelerator-keys-c"></a>アクセラレータ キー (C++)
-
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
 
 ## <a name="predefined-accelerator-keys"></a>定義済みのアクセラレータ キー
 
@@ -79,7 +77,7 @@ Windows アプリケーション プロジェクトの一部として使用で�
 |VK_XBUTTON1|Windows の場合:X1 マウス ボタン|
 |VK_XBUTTON2|Windows の場合:X2 マウス ボタン|
 
-## <a name="associating-an-accelerator-key-with-a-menu-item"></a>アクセラレータ キーとメニュー項目との関連付け
+## <a name="accelerator-key-association"></a>アクセラレータ キーの関連付け
 
 メニュー項目とキーボードの組み合わせで同じプログラム コマンドを発行したいと思うことはよくあります。 これを行うには、メニュー項目とアプリケーションのアクセラレータ テーブル内のエントリに同じリソース識別子 (ID) を割り当てます。 次に、メニュー項目のキャプションを編集して、アクセラレータの名前を表示します。 メニュー項目とアクセラレータ キーの詳細については、次を参照してください。[アクセラレータ キーとメニュー項目の関連付け](../windows/associating-a-menu-command-with-an-accelerator-key.md)します。
 
@@ -90,4 +88,3 @@ Win32
 ## <a name="see-also"></a>関連項目
 
 [アクセラレータ エディター](../windows/accelerator-editor.md)<br/>
-[リソース エディター](../windows/resource-editors.md)

@@ -1,6 +1,6 @@
 ---
 title: '方法: シンボル (C++) の作成します。'
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.creating
 - vc.editors.symbol.managing
@@ -19,12 +19,12 @@ helpviewer_keywords:
 - View Use button
 - resource editors [C++], resource symbols
 ms.assetid: 35168d31-3af6-4ecd-9362-3707d47b53f3
-ms.openlocfilehash: 49860f2277dbb462c7e1cd8cb59b86a3edbd3cc9
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 01b810d162da4d59c2044fe02a1da5c0929d41b9
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226333"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320602"
 ---
 # <a name="how-to-create-symbols-c"></a>方法: シンボル (C++) の作成します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "56226333"
 ダイアログ ボックスには、次のプロパティが含まれています。
 
 |プロパティ|説明|
-|---|---|
+|--------------------------|------------------------------------------|
 |**Name**|シンボルの名前を表示します。 詳細については、次を参照してください。[シンボル名の制限](../windows/symbol-name-restrictions.md)します。|
 |**[値]**|シンボルの数値を表示します。 詳細については、次を参照してください。[シンボル値の制限](../windows/symbol-value-restrictions.md)します。|
 |**使用中**|シンボルが 1 つ以上のリソースで使用されることを指定する場合にオンにします。 リソースの一覧が [次のリソースで使用] ボックスに表示されます。|
@@ -45,9 +45,9 @@ ms.locfileid: "56226333"
 |**変更**|開く、**シンボルの変更** ダイアログ ボックスで、名前またはシンボルの値を変更することができます。 使用中のコントロールまたはリソースのシンボルを変更するには、対応するリソース エディターを使用する必要があります。 詳細については、次を参照してください。[未使用のシンボルを変更する](../windows/changing-unassigned-symbols.md)します。|
 |**ビューの使用**|対応するリソース エディターで、シンボルが含まれたリソースを開きます。|
 
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
+## <a name="create-symbols"></a>シンボルを作成します。
 
-## <a name="to-create-a-new-symbol"></a>新しいシンボルを作成するには
+### <a name="to-create-a-new-symbol"></a>新しいシンボルを作成するには
 
 1. **リソース シンボル** ダイアログ ボックスで、選択**新規**します。
 
@@ -60,7 +60,7 @@ ms.locfileid: "56226333"
 > [!NOTE]
 > 既に存在するシンボルの名前を入力すると、その名前のシンボルが既に定義されていることを示すメッセージ ボックスが表示されます。 複数の同じ名前のシンボルを定義することはできませんが、同じ数値を持つ異なるシンボルを定義することができます。 詳細については、次を参照してください。[シンボル名の制限](../windows/symbol-name-restrictions.md)と[シンボル値の制限](../windows/symbol-value-restrictions.md)します。
 
-## <a name="to-view-resource-symbols"></a>リソース シンボルを表示するには
+### <a name="to-view-resource-symbols"></a>リソース シンボルを表示するには
 
 1. [リソース ビュー](../windows/resource-view-window.md)、.rc ファイルを右クリックします。
 
@@ -72,11 +72,11 @@ ms.locfileid: "56226333"
    > [!NOTE]
    > 定義済みのシンボルを表示するには、確認、**読み取り専用のシンボルを表示**チェック ボックスをオンします。
 
-## <a name="to-open-the-resource-editor-for-a-given-symbol"></a>特定のシンボルに対するリソース エディターを開く
+### <a name="to-open-the-resource-editor-for-a-given-symbol"></a>特定のシンボルに対するリソース エディターを開く
 
 シンボルを参照しているときに、**リソース シンボル**、特定のシンボルの使用方法の詳細についてをする可能性があります。 **ビュー使用**ボタンはこの情報を取得する簡単な方法を提供します。
 
-### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>シンボルが使用されている場所のリソース エディターに移動するには
+#### <a name="to-move-to-the-resource-editor-where-a-symbol-is-being-used"></a>シンボルが使用されている場所のリソース エディターに移動するには
 
 1. 内のシンボルを選択して、**名前**のボックス、**リソース シンボル** ダイアログ ボックス。
 
@@ -92,5 +92,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル:リソース識別子](../windows/symbols-resource-identifiers.md)<br/>
-[定義済みシンボル ID](../windows/predefined-symbol-ids.md)
+[リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>
+[シンボルを管理します。](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[定義済みシンボル ID](../windows/predefined-symbol-ids.md)<br/>

@@ -1,6 +1,6 @@
 ---
 title: '方法: シンボルを管理します。'
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.symbol.changing
 - vc.editors.symbol.restrictions.name
@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 4bc0376b6b5ff402f0cc9f40093e000763ad6656
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 4f1c44e8fc2ae34ddcb65ec23ca8d98e11d50ec0
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226372"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320589"
 ---
 # <a name="how-to-manage-symbols"></a>方法: シンボルを管理します。
 
@@ -49,8 +49,6 @@ ms.locfileid: "56226372"
 1 つのリソースに関連付けられているシンボルを使用することも、**プロパティ**シンボル値を変更するウィンドウ。 使用することができます、[リソース シンボル ダイアログ ボックス](../windows/resource-symbols-dialog-box.md)リソースに割り当てられていないシンボルの値を変更します。
 
 通常、すべてのシンボルが定義に保存`Resource.h`します。 ただし、同じディレクトリ内の複数のリソース ファイルを使用する場合などに、このインクルード ファイル名の変更が必要になることがあります。
-
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。
 
 > [!NOTE]
 > 場合は、プロジェクトに .rc ファイル含まれていないを参照してください。[リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)です。
@@ -142,7 +140,7 @@ ms.locfileid: "56226372"
 
 新しい値は、次回のプロジェクトの保存時に、シンボル ヘッダー ファイルに格納されます。 [ID] ボックスでは、シンボル名だけが表示されます。等号と値が検証している後に表示されません。
 
-## <a name="change-or-delete-unassigned-symbols"></a>変更または未使用のシンボルの削除
+## <a name="change-or-delete-symbols"></a>変更または削除記号
 
 [リソース シンボル ダイアログ ボックス](../windows/resource-symbols-dialog-box.md)、編集またはリソースまたはオブジェクトに既に割り当てられていない既存のシンボルを削除することができます。
 
@@ -162,7 +160,7 @@ ms.locfileid: "56226372"
    > [!NOTE]
    > リソース ファイル内の未使用のシンボルを削除する前に、プログラム内の他の場所や、コンパイル時に含められるリソース ファイルで使用されていないことを確認してください。
 
-## <a name="include-shared-read-only-or-calculated-symbols"></a>共有 (読み取り専用) または計算型シンボル
+## <a name="include-symbols"></a>シンボルを含める
 
 別のアプリケーションによって作成されたリソース ファイルを開発環境に初めて読み取るとき、インクルードされるすべてのヘッダー ファイルが読み取り専用とマークされます。 使用することができますが、 [] ダイアログ ボックスの [リソース インクルード](../windows/resource-includes-dialog-box.md)追加の読み取り専用シンボル ヘッダー ファイルを追加します。
 
@@ -217,6 +215,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[シンボル:リソース識別子](../windows/symbols-resource-identifiers.md)<br/>
+[リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>
+[シンボルを作成します。](../windows/creating-new-symbols.md)<br/>
 [定義済みシンボル ID](../windows/predefined-symbol-ids.md)<br/>
-[リソース シンボルの表示](../windows/viewing-resource-symbols.md)<br/>

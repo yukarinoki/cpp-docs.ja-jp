@@ -1,6 +1,6 @@
 ---
 title: アクセラレータ エディター (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.editors.accelerator.F1
 - vc.editors.accelerator
@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 5ece5c7e85a3ef59b728474746e9553a751d43c6
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: 90ef142336cf88c5e40f78f6cc651b2bb35a0f6c
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226346"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320641"
 ---
 # <a name="accelerator-editor-c"></a>アクセラレータ エディター (C++)
 
@@ -55,8 +55,6 @@ ms.locfileid: "56226346"
 
    > [!NOTE]
    > Windows では、空のアクセラレータ テーブルは作成できません。 エントリがないアクセラレータ テーブルを作成すると、テーブルを保存する際に自動的に削除されます。
-
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
 ## <a name="accelerator-properties"></a>アクセラレータのプロパティ
 
@@ -123,9 +121,6 @@ ms.locfileid: "56226346"
 インプレース編集を直接アクセラレータ テーブルを編集する C++ プロジェクトで、**アクセラレータ**エディター。
 
 以下の手順は、標準のプロパティ ページの使用を参照してください、ただし、インプレース編集とプロパティ ページのメソッドの両方にある同じ結果になります。 プロパティ ページを使用して、またはインプレース編集を使用して行われた変更は、アクセラレータ テーブルですぐに反映されます。
-
-> [!NOTE]
-> プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
 
 ### <a name="to-edit-in-an-accelerator-table"></a>アクセラレータ テーブルで編集するには
 
@@ -211,7 +206,5 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[リソース エディター](../windows/resource-editors.md)
-
-[アクセラレータ テーブルでのエントリの編集](../windows/editing-in-an-accelerator-table.md)<br/>
+[リソース エディター](../windows/resource-editors.md)<br/>
 [定義済みのアクセラレータ キー](../windows/predefined-accelerator-keys.md)<br/>
