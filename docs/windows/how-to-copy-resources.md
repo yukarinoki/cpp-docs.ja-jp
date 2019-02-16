@@ -1,6 +1,6 @@
 ---
 title: '方法: リソース (C++) の管理します。'
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vc.resvw.resource.copying
 - vs.resvw.resource.copying
@@ -30,18 +30,16 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: e8b976f974e397b8012ebf59ede08ee64f4f7191
-ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
+ms.openlocfilehash: 1f176b3fa19374b402039ecca60e690ade5c0cef
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56150793"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320628"
 ---
 # <a name="how-to-manage-resources-c"></a>方法: リソース (C++) の管理します。
 
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
-
-## <a name="to-copy-resources"></a>リソースをコピーするには
+## <a name="copy-resources"></a>リソースのコピー
 
 変更せずに別の 1 つのファイルからのリソースをコピーすることができます、またはコピー中に言語またはリソースの条件を変更することができます。
 
@@ -77,7 +75,7 @@ ms.locfileid: "56150793"
    > [!NOTE]
    > シンボル名または既存のファイル内の値との競合を避けるためには、Visual C が転送されるリソースのシンボル値またはシンボル名や値を変更、新しいファイルをコピーする場合。
 
-### <a name="to-change-the-language-or-condition-of-a-resource-while-copying"></a>コピー中に、言語またはリソースの条件を変更するには
+### <a name="change-the-language-or-condition-of-a-resource-while-copying"></a>コピー中に、言語またはリソースの条件を変更します。
 
 リソースのコピー時に、リソースの言語プロパティ、条件プロパティ、またはその両方を変更できます。
 
@@ -91,23 +89,21 @@ ms.locfileid: "56150793"
 IDD_AboutBox (Finnish - XX33)
 ```
 
-既存のリソースをコピーし、その言語または条件を変更します。
+#### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>既存のリソースをコピーして、そのリソースの言語または条件を変更するには
 
 1. .Rc ファイルまたは、[リソース ビュー](../windows/resource-view-window.md)ウィンドウで、コピーするリソースを右クリックします。
 
-1. 選択**コピーの挿入**ショートカット メニューから。
-
-1. **リソース コピーの挿入** ダイアログ ボックス。
+1. 選択**コピーの挿入**ショートカット メニューと、次のセットから。
 
    - **言語**ボックスの一覧で、言語を選択します。
 
    - **条件**ボックスに、条件を入力します。
 
-## <a name="to-edit-managed-resource-files"></a>マネージ リソース ファイルを編集するには
+## <a name="edit-resources"></a>リソースを編集します。
 
 マネージ リソース ファイル (.resx) は、XML ファイルです。 マネージ リソース ファイルからプロジェクトに追加すると、**新しい項目の追加** ダイアログ ボックスで、**マネージ リソース エディター**が既定で開きます。
 
-## <a name="to-import-and-export-resources"></a>リソースをインポートおよびエクスポート
+## <a name="import-and-export-resources"></a>インポートおよびエクスポートのリソース
 
 グラフィカル リソース (ビットマップ、アイコン、カーソル、ツール バー)、HTML ファイル、および Visual C++ で使用するためのカスタム リソースをインポートすることができます。 Visual C++ プロジェクトから、同じ種類のファイルを別のファイルにエクスポートして、開発環境の外部で使用することができます。
 
@@ -131,9 +127,7 @@ IDD_AboutBox (Finnish - XX33)
 
 1. **リソース**ビューで、エクスポートするリソースを右クリックします。
 
-1. 選択**エクスポート**ショートカット メニューの します。
-
-1. **リソースのエクスポート** ダイアログ ボックスで、現在のファイル名をそのまま使用するか、新しい名前を入力します。
+1. 選択**エクスポート**ショートカット メニューと現在のファイル名を受け入れるか、新しい名前を入力します。
 
 1. ファイルを保存フォルダーに移動します**エクスポート**します。
 
@@ -144,4 +138,5 @@ Win32
 ## <a name="see-also"></a>関連項目
 
 [リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
-[リソース エディター](../windows/resource-editors.md)
+[リソースを作成します。](../windows/how-to-create-a-resource-script-file.md)<br/>
+[コンパイル時にリソースを含める](../windows/how-to-include-resources-at-compile-time.md)<br/>

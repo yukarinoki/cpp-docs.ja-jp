@@ -1,6 +1,6 @@
 ---
 title: リソース エディター (C++)
-ms.date: 11/04/2016
+ms.date: 02/14/2019
 f1_keywords:
 - vs.editors.resource
 - vc.resvw.resource.editors
@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 43eab011cefed116723bd983b685c1c8c230326f
-ms.sourcegitcommit: bec1480a03e7b4070b469a6c131a69f516bbac70
+ms.openlocfilehash: aeeca87ceb5b2c5e54da7087b5020ccbc1c39039
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56226320"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320810"
 ---
 # <a name="resource-editors-c"></a>リソース エディター (C++)
 
@@ -36,8 +36,6 @@ A**リソース**エディターは、専用の環境の作成または Visual S
 
 > [!NOTE]
 > マネージ プロジェクトでは、リソース スクリプト ファイルは使用しないのでからリソースを開く必要があります**ソリューション エクスプ ローラー**します。 [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集はサポートしていません。
-
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
 |使用|編集|
 |----------------|----------------|
@@ -51,7 +49,10 @@ A**リソース**エディターは、専用の環境の作成または Visual S
 |[ツール バー エディター](../windows/toolbar-editor.md)|Visual C++ プロジェクトのツール バー リソース。 ツール バー エディターは、イメージ エディターの一部です。|
 |[バージョン エディター](../windows/version-information-editor.md)|Visual C++ プロジェクトのバージョン情報です。|
 
-## <a name="view-and-edit-resources-in-a-resource-editor"></a>リソースはリソース エディターで表示して編集
+> [!NOTE]
+> プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
+
+## <a name="view-and-edit-resources"></a>ビューと編集リソース
 
 各リソースの種類が、**リソース**そのリソースの種類に固有のエディター。 再配置してサイズ変更、コントロールと機能を追加するか、またはそれ以外の場合、関連付けられているエディターを使用してリソースの側面を変更できます。 内のリソースを編集することもできます。[テキスト形式](../windows/how-to-open-a-resource-script-file-in-text-format.md)と[バイナリ形式](../windows/opening-a-resource-for-binary-editing.md)します。
 
@@ -62,16 +63,13 @@ A**リソース**エディターは、専用の環境の作成または Visual S
 > [!NOTE]
 > リソースのプロパティの[プロパティ ウィンドウを使用して変更できる](../windows/changing-the-properties-of-a-resource.md)します。
 
-リソースのプロパティを編集するには。
+### <a name="to-edit-the-properties-of-a-resource"></a>リソースのプロパティを変更するには
 
 1. [リソース ビュー](../windows/resource-view-window.md)、編集するリソースを右クリックして**プロパティ**ショートカット メニューから。
 
-   > [!NOTE]
-   > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
-
 1. [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)リソースのプロパティを変更します。
 
-リソースのプロパティに加えられた変更を元に戻すには。
+### <a name="to-undo-a-change-made-to-the-properties-of-a-resource"></a>リソースのプロパティに加えられた変更を元に戻す
 
 1. リソースがフォーカスを必ず**リソース ビュー**します。
 
@@ -81,7 +79,7 @@ A**リソース**エディターは、専用の環境の作成または Visual S
 
 Win32 リソースにアクセスすることができます、[リソース ビュー](../windows/resource-view-window.md)ウィンドウ。
 
-リソース エディターで Win32 リソースを表示します。
+#### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>リソース エディターで、Win32 リソースを表示するには
 
 1. 選択**リソース ビュー**から、**ビュー**メニュー。
 
@@ -89,37 +87,30 @@ Win32 リソースにアクセスすることができます、[リソース ビ
 
 1. **リソース ビュー**、表示するリソースを含むプロジェクトのフォルダーを展開します。 たとえば、ダイアログ リソースを表示する場合は、展開、**ダイアログ**フォルダー。
 
-   > [!NOTE]
-   > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
-
 1. たとえば、リソースをダブルクリックして**IDD_ABOUTBOX**します。
 
    リソースが適切なエディターで開きます。 たとえば、ダイアログ リソースの場合は、リソースで開きます、**ダイアログ**エディター。
 
    できます[、プロジェクトを開く必要はありません (リソース スクリプト) .rc ファイル内のリソースを表示](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)します。
 
-既存の win32 リソースを削除します。
+#### <a name="to-delete-an-existing-win-32-resource"></a>既存の win32 リソースを削除するには
 
 1. **リソース ビュー**リソースの種類のノードを展開します。
 
-2. 削除するリソースを右クリックして**削除**ショートカット メニューから。
+1. 削除するリソースを右クリックして**削除**ショートカット メニューから。
 
    > [!NOTE]
    > .Rc ファイルをプロジェクトの外部のドキュメント ウィンドウで開いているときに、同じショートカット メニューのコマンドを使用してリソースを削除することができます。
 
-### <a name="resources-in-managed-projects"></a>マネージ プロジェクト内のリソース
+### <a name="managed-project-resources"></a>マネージ プロジェクトのリソース
 
 マネージ プロジェクトでは、リソース スクリプト ファイルを使用しないためにからリソースを開く必要があります**ソリューション エクスプ ローラー**します。 [イメージ エディター](../windows/image-editor-for-icons.md) と [バイナリ エディター](binary-editor.md) を使用して、マネージド プロジェクトのリソース ファイルを操作できます。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集をサポートされていません。
 
-リソース エディターでマネージ リソースを表示します。
-
-**ソリューション エクスプ ローラー**、たとえば、リソースをダブルクリックして*Bitmap1.bmp*します。
+- リソース エディターでマネージ リソースを表示する**ソリューション エクスプ ローラー**などのリソースをダブルクリックして*Bitmap1.bmp*します。
 
    リソースが適切なエディターで開きます。
 
-既存のマネージ リソースを削除します。
-
-**ソリューション エクスプ ローラー**、削除するリソースを右クリックして**削除**ショートカット メニューから。
+- 既存のマネージ リソースを削除する**ソリューション エクスプ ローラー**、削除するリソースを右クリックして**削除**ショートカット メニューから。
 
 ## <a name="preview-resources"></a>プレビューのリソース
 
@@ -132,12 +123,9 @@ Win32 リソースにアクセスすることができます、[リソース ビ
 > [!NOTE]
 > リソースをプレビューするには、Win32 が必要です。
 
-リソースをプレビューするには。
+### <a name="to-preview-resources"></a>リソースをプレビューするには
 
 1. [リソース ビュー](../windows/resource-view-window.md)または、リソースを選択して、ドキュメント ウィンドウ`IDD_ABOUTBOX`します。
-
-   > [!NOTE]
-   > プロジェクトに .rc ファイルがまだ含まれていない場合は、「 [リソース スクリプト ファイルの新規作成](../windows/how-to-create-a-resource-script-file.md)」を参照してください。
 
 1. [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)を選択、**プロパティ ページ**ボタンをクリックします。
 
@@ -154,5 +142,4 @@ Win32 リソースにアクセスすることができます、[リソース ビ
 
 [リソース ファイルの操作](../windows/working-with-resource-files.md)<br/>
 [リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
-[シンボル:リソース識別子](../windows/symbols-resource-identifiers.md)<br/>
-[メニューとその他のリソース](https://msdn.microsoft.com/library/windows/desktop/ms632583.aspx)
+[リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>

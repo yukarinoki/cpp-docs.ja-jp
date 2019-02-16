@@ -23,13 +23,23 @@ helpviewer_keywords:
 - context menus [C++], connecting to applications
 - shortcut menus [C++], connecting to applications
 - pop-up menus
+- menu commands [C++], selecting
+- menus [C++], selecting
+- commands [C++], menu commands
+- commands [C++], copying on menus
+- menu items, moving
+- commands [C++], moving on menus
+- menu items, copying
+- menu items, deleting
+- commands [C++], deleting from menus
+- menus [C++], deleting
 ms.assetid: 66f94448-9b97-4b73-bf97-10d4bf87cc65
-ms.openlocfilehash: e3b3cc58b82f68c55ac98601fd11775422c901e5
-ms.sourcegitcommit: 5a7dbd640376e13379f5d5b2cf66c4842e5e737b
+ms.openlocfilehash: da5fc355ae11ee5efb1c58be9e33bd4fb8bff02d
+ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55905772"
+ms.lasthandoff: 02/15/2019
+ms.locfileid: "56320524"
 ---
 # <a name="creating-menus-c"></a>メニュー (C++) の作成
 
@@ -38,7 +48,7 @@ ms.locfileid: "55905772"
 
 マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
-## <a name="to-create-a-standard-menu"></a>標準メニューを作成するには
+## <a name="create-a-standard-menu"></a>標準のメニューを作成します。
 
 1. **ビュー**メニューの **リソース ビュー**を右クリックし、**メニュー**見出しと選択**リソースの追加**します。 **[メニュー]** をクリックします。
 
@@ -59,7 +69,7 @@ ms.locfileid: "55905772"
    > [!NOTE]
    > メニュー バーの単一項目のメニューを作成するには、設定、**ポップアップ**プロパティを**False**します。
 
-## <a name="to-create-a-submenu"></a>サブメニューを作成するには
+## <a name="create-a-submenu"></a>サブメニューを作成します。
 
 1. サブメニューを作成するメニュー コマンドを選択します。
 
@@ -75,7 +85,7 @@ ms.locfileid: "55905772"
 
 メニュー バーを右クリックし、選択**Insert New**ショートカット メニューから。
 
-## <a name="to-add-commands-to-a-menu"></a>メニューにコマンドを追加するには
+## <a name="add-commands-to-a-menu"></a>メニューにコマンドを追加します。
 
 1. メニューを作成します。
 
@@ -104,7 +114,7 @@ ms.locfileid: "55905772"
 
    新しい項目ボックスが選択され、追加のメニュー コマンドを作成できるようになります。
 
-## <a name="to-create-pop-up-menus"></a>ポップアップ メニューを作成するには
+## <a name="create-pop-up-menus"></a>ポップアップ メニューを作成します。
 
 [ポップアップ メニュー](../mfc/menus-mfc.md) には、頻繁に使用するコマンドが表示されます。 これらは状況依存となっていて、マウス ポインターの場所に応じて表示できます。 アプリケーションでポップアップ メニューを使用には、メニュー自体をビルドし、アプリケーション コードに接続する必要があります。
 
@@ -150,6 +160,52 @@ ms.locfileid: "55905772"
 
    > [!NOTE]
    > メニュー バーの表示に戻すに、次のようにクリックします。**ポップアップ表示**もう一度 (チェック マークが削除と、メニュー バーの表示を返します)。
+
+## <a name="edit-multiple-menus-or-menu-commands"></a>複数のメニューやメニュー コマンドを編集します。
+
+### <a name="to-select-multiple-menu-commands"></a>複数のメニュー コマンドを選択するには
+
+複数のメニュー名または削除、またはプロパティを変更するなどの一括操作を実行するメニュー コマンドを選択することができます。
+
+押しながら、 **Ctrl**キーで、メニューまたはサブメニューのコマンドを選択します。
+
+### <a name="to-move-and-copy-menus-and-menu-commands"></a>移動し、メニューとメニュー コマンドをコピーするには
+
+ドラッグ アンド ドロップ操作またはショートカット メニュー (右クリック メニュー) のコマンドを使用して、メニューとメニュー コマンドを移動またはコピーすることができます。
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-the-drag-and-drop-method"></a>ドラッグ アンド ドロップ操作を使用してメニューやメニュー コマンドを移動またはコピーするには
+
+1. 移動する項目を次の場所にドラッグまたはコピーします。
+
+   - 現在のメニュー上の新しい場所。
+
+   - 別のメニュー (他のメニューに移動するには、そのメニューにマウス ポインターをドラッグします)。
+
+1. 挿入ガイドで目的の位置が示されたら、メニュー コマンドをドロップします。
+
+#### <a name="to-move-or-copy-menus-or-menu-commands-using-shortcut-menu-commands"></a>ショートカット メニューのコマンドを使用してメニューやメニュー コマンドを移動またはコピーするには
+
+1. 1 つ以上のメニューまたはメニュー コマンドを右クリックします。
+
+1. ショートカット メニューの **[切り取り]** (移動する場合) または **[コピー]** を選択します。
+
+1. 別のメニュー項目を移動する場合はリソースまたはリソース スクリプト ファイル、[別のウィンドウで開きます](/visualstudio/ide/customizing-window-layouts-in-visual-studio)します。
+
+1. メニューやメニュー コマンドを移動またはコピーする位置を選択します。
+
+1. ショートカット メニューの **[貼り付け]** を選択します。 移動またはコピーする項目は、選択した項目の前に配置されます。
+
+   > [!NOTE]
+   > ドラッグでコピーした項目を別のメニュー ウィンドウの別のメニューに貼り付けることもできます。
+
+### <a name="to-delete-a-menu-or-menu-command"></a>メニューまたはメニュー コマンドを削除するには
+
+1. メニュー名またはコマンドを右クリックします。
+
+1. ショートカット メニューの **[削除]** を選択します。
+
+   > [!NOTE]
+   > 同様に、ショートカット メニューを使用して、コピー、切り取り、貼り付け、新しい項目の挿入、区切り記号の挿入、ID の編集、ポップアップとして表示、ニーモニックの確認などの操作を実行することができます。
 
 ## <a name="requirements"></a>必要条件
 
