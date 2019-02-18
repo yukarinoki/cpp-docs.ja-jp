@@ -1,6 +1,6 @@
 ---
-title: メニュー コマンドのプロパティ (C++)
-ms.date: 11/04/2016
+title: メニュー コマンド (C++)
+ms.date: 02/15/2019
 helpviewer_keywords:
 - menu items, properties
 - keyboard shortcuts [C++], menu association
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - mnemonics [C++], uniqueness checking
 - Check Mnemonics command
 ms.assetid: 6d308205-3c9e-42f2-ab42-45e656940e45
-ms.openlocfilehash: 8989b96640bbb64eb5dcba09d60363dd0989263f
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 9f91973fdf2d5a45c631f24d3eed41482a91a834
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320576"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336606"
 ---
-# <a name="menu-command-properties-c"></a>メニュー コマンドのプロパティ (C++)
+# <a name="menu-commands-c"></a>メニュー コマンド (C++)
 
 以下の情報はに従って構成されています、**メニュー**に表示されるプロパティ、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)メニュー コマンドを選択するとします。 アルファベット順になっていますが、**プロパティ**ウィンドウではこれらのプロパティをカテゴリ別に表示することもできます。
 
@@ -47,8 +47,6 @@ ms.locfileid: "56320576"
 
 メニュー コマンドとキーボードの組み合わせで同じプログラム コマンドを発行したいと思うことはよくあります。 使用して同じコマンドを発行、**メニュー**エディター メニュー コマンドをアプリケーションのアクセラレータ テーブル内のエントリに同じリソース識別子を割り当てできます。 次に、メニュー コマンドの [キャプション](../windows/menu-command-properties.md) を編集して、アクセラレータ キーの名前を表示します。
 
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
-
 ### <a name="to-associate-a-menu-command-with-an-accelerator-key"></a>メニュー コマンドをアクセラレータ キーと関連付けるには
 
 1. **メニュー** エディターで、目的のメニュー コマンドを選択します。
@@ -59,13 +57,13 @@ ms.locfileid: "56320576"
 
    - 修飾子キーの名前を入力 (**Ctrl**、 **Alt**、または**Shift**) プラス記号 (**+**) と名前、文字、または追加のキーの記号です。
 
-       割り当てるにはたとえば、 **Ctrl**+**O**を**オープン**コマンドを**ファイル**] メニューの [メニュー コマンドを変更します。**キャプション**次のテキストのように見えるようにします。
+   割り当てるにはたとえば、 **Ctrl**+**O**を**オープン**コマンドを**ファイル**] メニューの [メニュー コマンドを変更します。**キャプション**次のテキストのように見えるようにします。
 
-        ```
-        &Open...\tCtrl+O
-        ```
+   ```
+   &Open...\tCtrl+O
+   ```
 
-       メニュー コマンド、**メニュー**エディターは、入力すると、新しいキャプションを反映するように更新されます。
+   メニュー コマンド、**メニュー**エディターは、入力すると、新しいキャプションを反映するように更新されます。
 
 1. [アクセラレータ](../windows/adding-an-entry-to-an-accelerator-table.md) エディターで **アクセラレータ テーブル エントリ** を作成し、メニュー コマンドと同じ識別子をそれに割り当てます。 使用するキーの組み合わせは、覚えやすいものにしてください。
 
@@ -98,5 +96,4 @@ Win32
 ## <a name="see-also"></a>関連項目
 
 [メニュー エディター](../windows/menu-editor.md)<br/>
-[メニューへのコマンドの追加](../windows/adding-commands-to-a-menu.md)<br/>
 [文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)<br/>

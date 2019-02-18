@@ -1,6 +1,6 @@
 ---
 title: ダイアログ エディター (C++)
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog.dialog
 - vc.editors.dialog.F1
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - Dialog Editor [C++], switching between controls and code
 - Dialog Editor [C++], shortcut keys
 ms.assetid: d94884ef-2cca-49d8-9b58-775f34848134
-ms.openlocfilehash: 827a7610aa919d5349313346ac0bfa80bd0647b0
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: fef4a7f0d4c785a40ea946127d8e3c84c797e1aa
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264895"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336697"
 ---
 # <a name="dialog-editor-c"></a>ダイアログ エディター (C++)
 
@@ -38,28 +38,18 @@ ms.locfileid: "56264895"
 
 ダイアログ ボックスをテンプレートとして格納すると、後で再利用できます。 また、ダイアログ ボックスのデザインと実装コードの編集の間の切り替えも簡単です。
 
-さらに、ダイアログ エディターでは、単一または複数のコントロールのプロパティを編集できます。 タブ オーダーを変更することができます、つまり、フォーカス コントロールを取得する順序、**タブ**キーが押された、またはユーザーがキーボードを使用してコントロールを選択できるアクセス キー (キーの組み合わせ) を定義することができます。 事前に設定されているアクセス キーの一覧については、「 [ダイアログ エディターのアクセラレータ キー](../windows/accelerator-keys-for-the-dialog-editor.md)」を参照してください。
+さらに、ダイアログ エディターでは、単一または複数のコントロールのプロパティを編集できます。 タブ オーダーを変更することができます、つまり、フォーカス コントロールを取得する順序、**タブ**キーが押された、またはユーザーがキーボードを使用してコントロールを選択できるアクセス キー (キーの組み合わせ) を定義することができます。
 
 **ダイアログ**エディターでは ActiveX コントロールなどのカスタム コントロールを使用することもできます。 さらに、 [フォーム ビュー](../mfc/reference/cformview-class.md)、 [レコード ビュー](../data/record-views-mfc-data-access.md)、または [ダイアログ バー](../mfc/dialog-bars.md)も編集できます。
 
 Visual Studio 2015 以降では、ダイアログ エディターを使用して、コントロールの移動方法と、ユーザーがダイアログをサイズ変更時にサイズを変更する方法を指定する、動的なレイアウトを定義します。 詳細については、「 [Dynamic Layout](../mfc/dynamic-layout.md)」を参照してください。
 
-- [ダイアログ ボックスの新規作成](../windows/creating-a-new-dialog-box.md)
-
-- [ユーザーが実行時に終了できないダイアログ ボックスの作成](../windows/creating-a-dialog-box-that-users-cannot-exit.md)
+- [方法: 作成 ダイアログ ボックス](../windows/creating-a-new-dialog-box.md)
 
 - [ダイアログ ボックスのコントロール](../windows/controls-in-dialog-boxes.md)
 
-- [ダイアログ ボックス コントロールへのイベント ハンドラーの追加](../windows/adding-event-handlers-for-dialog-box-controls.md)
-
-- [ダイアログ ボックスのテスト](../windows/testing-a-dialog-box.md)
-
-- [ダイアログ エディターのトラブルシューティング](../windows/troubleshooting-the-dialog-editor.md)
-
    > [!TIP]
-   > 使用しているときに、**ダイアログ**エディターの多くの場合で、頻繁に使用されるコマンドのショートカット メニューを表示する、マウスの右ボタンをクリックすることができます。
-
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+   > 使用しているときに、**ダイアログ**エディター、多くの場合はボタンを選択するマウスの右頻繁に使用されるコマンドのショートカット メニューを表示します。
 
 ## <a name="dialog-editor-toolbar"></a>ダイアログ エディター ツール バー
 

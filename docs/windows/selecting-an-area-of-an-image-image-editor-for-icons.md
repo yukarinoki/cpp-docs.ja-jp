@@ -1,6 +1,6 @@
 ---
-title: イメージの編集
-ms.date: 11/04/2016
+title: '方法: イメージを編集します。'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.editing
 - vc.editors.image.editing
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 928a37d1b85378c3c50f41dba441259ace2d3af9
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 906244b692253a8423af55eb91d46622087713e3
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320680"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336530"
 ---
-# <a name="editing-an-image"></a>イメージの編集
+# <a name="how-to-edit-an-image"></a>方法: イメージを編集します。
 
 選択内容 ツールを使用すると、切り取り、コピー、クリア、サイズを変更、反転、または移動するイメージの領域を定義します。 **矩形選択**ツールを定義し、イメージの四角形の領域を選択します。 **不規則選択**ツール、切り取り、コピー、またはその他の操作を選択する領域のフリーハンドのアウトラインを描画できます。
 
@@ -56,9 +56,7 @@ ms.locfileid: "56320680"
 
 選択範囲からカスタム ブラシを作成することもできます。 詳細については、次を参照してください。[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)です。
 
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
-
-## <a name="selecting-an-image"></a>イメージを選択します。
+## <a name="select-an-image"></a>イメージを選択します。
 
 1. **イメージ エディター**ツールバー (またはから、**イメージ**] メニューの [**ツール**コマンド)、目的の選択ツールを選択します。
 
@@ -72,7 +70,7 @@ ms.locfileid: "56320680"
 
 1. 現在の選択範囲の外部でイメージを選択します。 選択範囲の境界線は、フォーカスを変更し、もう一度画像全体が含まれます。
 
-## <a name="editing-parts-of-an-image"></a>イメージの一部の編集
+## <a name="edit-parts-of-an-image"></a>イメージの一部を編集します。
 
 標準の編集操作を行うことができます: 切り取り、コピー、消去、および移動-で、[選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)選択範囲がイメージ全体またはその一部だけであるかどうか、です。 **イメージ**エディターを使用して、 **Windows クリップボード**、間でのイメージを転送することができます、**イメージ**エディターおよびその他の Windows アプリケーション。
 
@@ -119,7 +117,7 @@ ms.locfileid: "56320680"
 
 選択した場合、描画の詳細については、次を参照してください。[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)です。
 
-## <a name="flipping-an-image"></a>イメージの回転
+## <a name="flip-an-image"></a>イメージを反転させる
 
 反転または元のミラー イメージを作成する、イメージを上下逆に、有効にするか、右側にイメージを一度に 90 度回転イメージを回転させることができます。
 
@@ -132,7 +130,7 @@ ms.locfileid: "56320680"
    > [!NOTE]
    > 使用することもできます、[アクセラレータ (ショートカット) キー](../windows/accelerator-keys-image-editor-for-icons.md)これらのコマンドのショートカット メニュー (イメージ エディターの中にイメージの外側をクリックします) から、コマンドにアクセスしたりします。
 
-## <a name="resizing-an-image"></a>イメージのサイズ変更
+## <a name="resize-an-image"></a>イメージのサイズ変更します。
 
 動作、**イメージ**イメージのサイズ変更中にエディターがしたかどうかに依存[選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)イメージ全体または一部だけです。
 
@@ -185,7 +183,7 @@ ms.locfileid: "56320680"
 
 1. 選択範囲が適切なサイズになるまでは、サイズ変更ハンドルのいずれかをドラッグします。
 
-## <a name="editing-an-image-outside-of-a-project"></a>プロジェクト外部でのイメージの編集
+## <a name="edit-an-image-outside-of-a-project"></a>プロジェクトの外側でイメージを編集します。
 
 開くし、グラフィックス アプリケーションと同様に、開発環境でイメージを編集できます。 使用するイメージをスタンドアロン編集用に Visual Studio プロジェクトの一部にする必要がありますはできません。
 
@@ -197,7 +195,7 @@ ms.locfileid: "56320680"
 
 1. 編集しイメージを開きます。
 
-## <a name="changing-image-properties"></a>イメージのプロパティの変更
+## <a name="change-image-properties"></a>イメージ プロパティの変更
 
 設定またはを使用して、イメージのプロパティを変更することができます、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。
 

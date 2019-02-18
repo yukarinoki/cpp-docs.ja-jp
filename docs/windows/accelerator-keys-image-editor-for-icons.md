@@ -1,6 +1,6 @@
 ---
 title: アクセラレータ キー (アイコン用イメージ エディターを C++)
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.bitmap
 - vc.editors.icon
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 062b860849d968e18657afb66b568a1bf6f2b6d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505106"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336539"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>アクセラレータ キー (アイコン用イメージ エディターを C++)
 
@@ -61,8 +61,6 @@ ms.locfileid: "50505106"
 |Image.UseSelectionAsBrush|**Ctrl キーを押し** + **U**|現在の選択項目をブラシとして使用して描画します。|
 |Image.ZoomIn|**Ctrl キーを押し** + **Shift** + **します。** (ピリオド)<br /><br /> または<br /><br /> **Ctrl キーを押し** + **上向きの矢印**|現在のビューの拡大率を上げます。|
 |Image.ZoomOut|**Ctrl キーを押し** + **、** (コンマ)<br /><br /> または<br /><br /> **Ctrl キーを押し** + **下矢印をクリック**|現在のビューの拡大率を下げます。|
-
-マネージ プロジェクトにリソースを追加する方法についてを参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
 ## <a name="requirements"></a>必要条件
 

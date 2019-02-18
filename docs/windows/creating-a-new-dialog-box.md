@@ -1,6 +1,6 @@
 ---
-title: ダイアログ ボックス (C++) の作成
-ms.date: 11/04/2016
+title: '方法: 作成 ダイアログ ボックス (C++)'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.dialog
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - dialog boxes [C++], size
 - dialog boxes [C++], positioning
 ms.assetid: 303de801-c4f8-42e1-b622-353f6423f688
-ms.openlocfilehash: a3b8143d3a70906f910a445816a188913a593e5d
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: c757c82978a5107374e6de2f8cff24319ed64f9c
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264817"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336476"
 ---
-# <a name="creating-a-dialog-box-c"></a>ダイアログ ボックス (C++) の作成
+# <a name="how-to-create-a-dialog-box-c"></a>方法: 作成 ダイアログ ボックス (C++)
 
 場所と C++ のダイアログ ボックスと場所のサイズと、内のコントロールのサイズは、ダイアログ単位で測定されます。 個々 のコントロールと、ダイアログ ボックスの値は、Visual Studio のステータス バーの選択した場合の右下に表示されます。
 
@@ -39,8 +39,6 @@ ms.locfileid: "56264817"
    > ウィザードを使用したダイアログ ボックスのコードへの接続は、シミュレーションに含まれません。
 
 通常、テストするダイアログ ボックスはメイン プログラム ウィンドウの相対位置に表示されます。 ダイアログ ボックスの設定した場合**Absolute Align**プロパティを**True**画面の左上隅に対して相対的な位置にあるダイアログ ボックスが表示されます。
-
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
 ## <a name="to-create-a-new-dialog-box"></a>新しいダイアログ ボックスを作成するには
 
@@ -82,7 +80,7 @@ ms.locfileid: "56264817"
 
 1. ときに、**ダイアログ**エディターがアクティブなウィンドウ、メニュー バーで、選択**形式** > **テスト ダイアログ**します。
 
-1. シミュレーションを終了するには、キーを押します**Esc**、かのみを選んで、**閉じる** ダイアログ ボックスでテストしているボタンをクリックします。
+1. シミュレーションを終了するには、キーを押します**Esc**または選択、**閉じる** ダイアログ ボックスでテストしているボタンをクリックします。
 
 ## <a name="requirements"></a>必要条件
 

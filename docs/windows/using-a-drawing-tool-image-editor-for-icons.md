@@ -1,6 +1,6 @@
 ---
-title: 描画ツールの使用
-ms.date: 11/04/2016
+title: '方法: 描画ツールを使用して、'
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.image.drawing
 helpviewer_keywords:
@@ -16,16 +16,18 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 72224581e021a22b31ec5e6fa5940ff5a568a4e0
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320550"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336554"
 ---
-# <a name="using-a-drawing-tool"></a>描画ツールの使用
+# <a name="how-to-use-a-drawing-tool"></a>方法: 描画ツールを使用して、
 
 **イメージ**エディターの手描きツールと同じ方法ですべての作業のツールを消去: ツールを選択して、必要に応じて、[前景色と背景色を選択します。](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)とサイズおよび図形オプション。 イメージにポインターを移動し、クリックしてまたはドラッグした描画、消去します。
+
+## <a name="drawing-tools"></a>描画ツール
 
 選択すると、**消しゴム**ツール、**ブラシ**ツール、または**エアブラシ**ツール オプション セレクターがそのツールのオプションが表示されます。
 
@@ -34,7 +36,7 @@ ms.locfileid: "56320550"
 
 いずれかの描画ツールを選択することができます、**イメージ エディター**ツールバーまたは**イメージ**メニュー。
 
-## <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>選択して、イメージ エディターのツールバーから描画ツールを使用するには
+### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>選択して、イメージ エディターのツールバーから描画ツールを使用するには
 
 1. ボタンを選択、**イメージ エディター**ツールバー。
 
@@ -65,7 +67,7 @@ ms.locfileid: "56320550"
 
 1. カスケード型のサブメニューを使用するツールを選択します。
 
-## <a name="drawing-lines-or-closed-figures"></a>線または閉じた図形の描画
+## <a name="lines-or-closed-figures"></a>線または閉じた図形
 
 線を描画用イメージ エディターのツールし、同じ方法で作業できるすべての閉じた図形。 1 つのポイントにカーソルを配置し、別にドラッグします。 線、これらのポイントは、エンドポイントが。 閉じた図形は、これらのポイントは、図を囲む四角形の反対側の角です。
 
@@ -97,7 +99,7 @@ ms.locfileid: "56320550"
 
 1. 対角にポインターをドラッグします。
 
-## <a name="create-a-custom-brush"></a>カスタム ブラシを作成します。
+## <a name="custom-brushes"></a>カスタム ブラシ
 
 カスタム ブラシは四角形の部分を取得しのいずれかのように使用するイメージの**イメージ**エディターの既製のブラシ。 選択範囲に対して実行できるすべての操作、カスタム ブラシも実行できます。
 
@@ -105,11 +107,7 @@ ms.locfileid: "56320550"
 
 1. [イメージの一部を選択します。](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)ブラシに使用します。
 
-1. 保持している、 **Shift**キーを選択範囲の選択、画像をドラッグします。
-
-   \- または -
-
-1. **イメージ**] メニューの [選択**ブラシとして使用して選択**します。
+1. 保持、 **Shift**キーを選択範囲の選択、画像をドラッグします。 または、**イメージ**] メニューの [選択**ブラシとして使用して選択**します。
 
    選択内容では、画像の選択範囲の色を分散するカスタム ブラシになります。 ドラッグするパスに沿った選択範囲のコピーが残されます。 緩やかに変化をドラッグする、複数のコピーを作成します。
 
@@ -138,8 +136,6 @@ ms.locfileid: "56320550"
 
 キーを押して**Esc**または別の描画ツールを選択します。
 
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
-
 ## <a name="requirements"></a>必要条件
 
 なし
@@ -149,4 +145,4 @@ ms.locfileid: "56320550"
 [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 [グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)<br/>
-[カラーを使用します。](../windows/working-with-color-image-editor-for-icons.md)
+[色の調整](../windows/working-with-color-image-editor-for-icons.md)

@@ -1,6 +1,6 @@
 ---
 title: ダイアログ ボックス (C++) のコントロール |Microsoft Docs
-ms.date: 11/04/2016
+ms.date: 02/15/2019
 f1_keywords:
 - Custom Control
 helpviewer_keywords:
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 1f231a376b335d7fb711ef2039c13f49624e6bfb
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: 6360491ebb4478ee4ce22115eced7ed672866565
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264843"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336515"
 ---
 # <a name="controls-in-dialog-boxes-c"></a>ダイアログ ボックス (C++) のコントロール
 
@@ -30,25 +30,11 @@ ms.locfileid: "56264843"
 
 キャプションなどのプロパティを変更するには、ダイアログ ボックスにコントロールを追加した後、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。 複数のコントロールを選択し、そのプロパティをすべて一度に変更できます。
 
-- [コントロールの追加、編集、または削除](adding-editing-or-deleting-controls.md)
+- [方法: 追加、編集、またはコントロールを削除](adding-editing-or-deleting-controls.md)
 
-- [コントロールの選択](../windows/selecting-controls.md)
+- [方法: コントロールを配置します。](../windows/arrangement-of-controls-on-dialog-boxes.md)
 
-- [各コントロールのサイズ変更](../windows/sizing-individual-controls.md)
-
-- [複数のコントロールに対する同一の幅、高さ、またはサイズの設定](../windows/making-controls-the-same-width-height-or-size.md)
-
-- [コンボ ボックスとドロップダウン リストのサイズの設定](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)
-
-- [コンボ ボックス コントロールへの値の追加](../windows/adding-values-to-a-combo-box-control.md)
-
-- [水平スクロール バーの幅の設定](../windows/setting-the-width-of-a-horizontal-scroll-bar.md)
-
-- [ダイアログ ボックスのコントロールの配置](../windows/arrangement-of-controls-on-dialog-boxes.md)
-
-- [ニーモニック (アクセス キー) の定義](../windows/defining-mnemonics-access-keys.md)
-
-- [ダイアログ ボックスの位置とサイズの指定](../windows/specifying-the-location-and-size-of-a-dialog-box.md)
+- [方法: アクセス制御と値を定義します。](../windows/defining-mnemonics-access-keys.md)
 
 使用できる標準のコントロール、**ツールボックス**イベントは、既定値。
 
@@ -110,8 +96,6 @@ ms.locfileid: "56264843"
 - コントロールのスタイルを設定する 32 ビット 16 進値を入力します。
 
 - 拡張スタイルを設定します。
-
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
 ## <a name="requirements"></a>必要条件
 
