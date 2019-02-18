@@ -1,6 +1,6 @@
 ---
-title: アイコン用イメージ エディター
-ms.date: 10/17/2018
+title: (C++) のアイコン用イメージ エディター
+ms.date: 02/15/2019
 f1_keywords:
 - vc.editors.cursor.F1
 - vc.editors.icon.F1
@@ -42,14 +42,14 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 48b363b7b9021042fe6242be70c74f0daeade0c2
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 782462a4aeba72252c4d6043bd192f6892a3966f
+ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320706"
+ms.lasthandoff: 02/18/2019
+ms.locfileid: "56336580"
 ---
-# <a name="image-editor-for-icons"></a>アイコン用イメージ エディター
+# <a name="image-editor-for-icons-c"></a>(C++) のアイコン用イメージ エディター
 
 ソリューション エクスプ ローラーで、イメージ ファイル (.ico、.bmp、.png) などをクリックすると、イメージがコード ファイルは、コード エディターを開くことと同じ方法で、イメージ エディターを開きます。 イメージ エディター タブがアクティブで作成およびイメージを編集するための多くのツールを使用してツールバーを参照してください。 ビットマップ、アイコン、カーソルと共にコマンドを使用して gif 形式や JPEG 形式のイメージを編集することができます、**イメージ**メニューとツールで、**イメージ エディター**ツールバー。
 
@@ -231,8 +231,6 @@ ms.locfileid: "56320706"
 ## <a name="managed-resources"></a>マネージド リソース
 
 使用することができます、**イメージ**エディターと[バイナリ エディター](binary-editor.md)マネージ プロジェクトのリソース ファイルを使用します。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集をサポートされていません。
-
-マネージ プロジェクトにリソースを追加する方法については、次を参照してください。 [Resources in Desktop Apps](/dotnet/framework/resources/index)で、 *.NET Framework 開発者ガイド*します。 マネージ プロジェクトにリソース ファイルを手動で追加、リソースへのアクセス、静的リソースの表示方法、およびリソース文字列のプロパティを割り当てる方法については、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 管理対象アプリ内のリソースのグローバリゼーションとローカリゼーションについては、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
 ## <a name="requirements"></a>必要条件
 
