@@ -1,17 +1,17 @@
 ---
 title: /CETCOMPAT (制御フローの強制テクノロジ互換)
-ms.date: 02/01/2019
+ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 3adb147804674b52a5d77030c48567ec04da6aa6
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
+ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703465"
+ms.lasthandoff: 02/19/2019
+ms.locfileid: "56418693"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/CETCOMPAT (制御フローの強制テクノロジ互換)
 
@@ -24,7 +24,7 @@ ms.locfileid: "55703465"
 ## <a name="arguments"></a>引数
 
 **違います**<br/>
-Executalbe マークしないで中央ヨーロッパ標準時との互換性を指定します。
+実行可能ファイル マークしないで中央ヨーロッパ標準時との互換性を指定します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -44,7 +44,7 @@ Executalbe マークしないで中央ヨーロッパ標準時との互換性を
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-- このオプションでは、同等のプログラムはありません。
+このオプションでは、同等のプログラムはありません。
 
 ## <a name="see-also"></a>関連項目
 
