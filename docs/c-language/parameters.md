@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ellipses (...), parameters
 - '... ellipsis'
 ms.assetid: 8f2b8026-78b5-4e21-86a3-bf0f91f05689
-ms.openlocfilehash: 2b4b549ae6059cddf3ab868950cda215fb043d8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0652fe6076899020050d94378649018721b4b188
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506939"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147231"
 ---
 # <a name="parameters"></a>パラメーター
 
@@ -74,6 +74,6 @@ void new( double x, double y, double z )
 
 コンパイラは、必要に応じて、パラメーターごと、引数ごとに、通常の算術変換を個別に実行します。 変換後、`int` より短いパラメーターはなく、パラメーターの型をプロトタイプで **float** として明示的に指定しない限り、パラメーターに **float** 型はありません。 これは、たとえば、パラメーターを `char` として宣言すると、それを `int` として宣言する場合と同じ効果があることを意味しています。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 関数の定義](../c-language/c-function-definitions.md)
