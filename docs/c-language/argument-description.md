@@ -8,18 +8,18 @@ helpviewer_keywords:
 - argv argument
 - argc argument
 ms.assetid: 91c2cbe3-9aca-4277-afa1-6137eb8fb704
-ms.openlocfilehash: 64c94798587ad64f369ca0ed03a7251d0eb9acb5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 71301bd5eedf2806e97b8d24d95beaf2843427ad
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447152"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148505"
 ---
 # <a name="argument-description"></a>引数の説明
 
 **main** 関数および**wmain** 関数の `argc` パラメーターは、コマンド ラインからプログラムに渡される引数の数を指定する整数です。 プログラム名は引数と見なされるため、`argc` の値は 1 以上です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `argv` パラメーターは、プログラム引数を表す null で終わる文字列へのポインターの配列です。 配列の各要素は、**main** (または **wmain**) に渡された引数の文字列表現を指します (配列については、「[配列の宣言](../c-language/array-declarations.md)」を参照)。`argv` パラメーターは、`char` 型 (`char *argv[]`) へのポインターの配列として、または `char` 型 (`char **argv`) へのポインターへのポインターとして宣言できます。 **wmain** の場合、`argv` パラメーターは `wchar_t` (`wchar_t *argv[]`) 型へのポインターの配列として、または `wchar_t` (`wchar_t **argv`) 型へポインターへのポインターとして宣言できます。
 
@@ -33,6 +33,6 @@ ms.locfileid: "50447152"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [main 関数とプログラム実行](../c-language/main-function-and-program-execution.md)
