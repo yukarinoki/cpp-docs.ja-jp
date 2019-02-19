@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lifetime, and visibility
 - visibility, identifiers
 ms.assetid: ea05a253-7658-482c-9a6b-abd71169c42d
-ms.openlocfilehash: 5bb53db4d6bcb9b4694fddd9abd5471c6c6197c7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438dd855fbbfec01a31a8d4a1a53078e3c44658c
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50474803"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151781"
 ---
 # <a name="summary-of-lifetime-and-visibility"></a>有効期間と可視性の概要
 
@@ -66,6 +66,6 @@ int main()  // main function defined at external level
 
 この例では、4 つの表示レベルとして、外部レベルと 3 つのブロック レベルがあります。 値は、各ステートメントに続くコメントに示すとおりに画面に出力されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [有効期間、スコープ、可視性、およびリンケージ](../c-language/lifetime-scope-visibility-and-linkage.md)

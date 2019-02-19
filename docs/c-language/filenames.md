@@ -2,12 +2,12 @@
 title: ファイル名
 ms.date: 11/04/2016
 ms.assetid: f08d2b81-4bfc-49bc-986c-bfb2face8138
-ms.openlocfilehash: 903347791b2c156402b60dffc7bd42bcb3fbfbdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2157b9ff5d40805e0867d5775166138d6df1a4d
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655979"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148479"
 ---
 # <a name="filenames"></a>ファイル名
 
@@ -17,6 +17,6 @@ ms.locfileid: "50655979"
 
 詳細については、「[ファイルに名前を付ける](/windows/desktop/FileIO/naming-a-file)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ライブラリ関数](../c-language/library-functions.md)

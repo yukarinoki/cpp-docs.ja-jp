@@ -11,12 +11,12 @@ helpviewer_keywords:
 - slash (/) operator
 - multiplication operator [C++], multiplicative operators
 ms.assetid: 495471c9-319b-4eb4-bd97-039a025fd3a9
-ms.openlocfilehash: debda69d693286aef03363eafd450b5aa531e987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fdf208ffba3e3d63d8672b84af8cf6168b34dc3f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506926"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147752"
 ---
 # <a name="c-multiplicative-operators"></a>C 乗算演算子
 
@@ -80,7 +80,7 @@ n = i % j;
 
 **Microsoft 固有の仕様**
 
-剰余の符号は、被除数の符号と同じです。 例:
+剰余の符号は、被除数の符号と同じです。 次に例を示します。
 
 ```
 50 % -6 = 2
@@ -91,6 +91,6 @@ n = i % j;
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [乗算演算子と剰余演算子](../cpp/multiplicative-operators-and-the-modulus-operator.md)

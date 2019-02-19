@@ -5,12 +5,12 @@ helpviewer_keywords:
 - conversions, assignment
 - assignment conversions
 ms.assetid: 4ee01013-de32-4aae-b12e-0051d0cde927
-ms.openlocfilehash: fb3da57af62171ef9670267f94f01ccc097e5942
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6caed3d7a8079bc6b02e9ad17859cd4062cbee7f
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649112"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152717"
 ---
 # <a name="assignment-conversions"></a>代入変換
 
@@ -28,6 +28,6 @@ ms.locfileid: "50649112"
 
 型修飾子は変換の許容性には影響しませんが、代入の左辺で **const** 値は使用できません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [型変換](../c-language/type-conversions-c.md)

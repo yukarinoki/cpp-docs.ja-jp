@@ -8,12 +8,12 @@ helpviewer_keywords:
 - equality operator, syntax
 - operators [C], relational
 ms.assetid: c89a3815-a65e-4e0d-8333-0e8dc7fdb30b
-ms.openlocfilehash: fb33fd051c7639ccb77c59c5f88f46e45be58d17
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78dfd9f208b4c5cf484f0ff43c5e07ce1aadec35
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507283"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149649"
 ---
 # <a name="c-relational-and-equality-operators"></a>C 関係演算子と等値演算子
 
@@ -90,7 +90,7 @@ enum color { red, white, green } col;
 
 これらのステートメントは、`col` タグを使用して `color` という列挙型変数を宣言します。 常に、この変数には整数値 0、1、または 2 が格納されます。これらの値は、`color` 列挙セットのいずれかの要素 (赤、白、緑) を表します。 **if** ステートメントが実行されるときに `col` に 0 が含まれていると、**if** に依存するすべてのステートメントが実行されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関係演算子: \<、>、\<=、および >=](../cpp/relational-operators-equal-and-equal.md)<br/>
 [等値演算子: == および !=](../cpp/equality-operators-equal-equal-and-exclpt-equal.md)

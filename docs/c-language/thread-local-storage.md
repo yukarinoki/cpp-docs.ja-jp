@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thread-local storage
 - storage, thread local storage
 ms.assetid: a0f1b109-c953-4079-aa10-e47f5483173d
-ms.openlocfilehash: 8a20e337cddcc45701f20941ac5d7fea5e4324a5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 4b1aa32b384f3a5db5203883c1cc03bd61de7b19
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330308"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56152132"
 ---
 # <a name="thread-local-storage"></a>スレッド ローカル ストレージ
 
@@ -75,7 +75,7 @@ __declspec( thread ) int tls_i = 1;
     int *p = &tls_i;      /* Error */
     ```
 
-- C では、自分自身を参照している式で変数を初期化できます。ただし、この場合のオブジェクトは、非静的なものに限られます。 例:
+- C では、自分自身を参照している式で変数を初期化できます。ただし、この場合のオブジェクトは、非静的なものに限られます。 次に例を示します。
 
     ```C
     #define Thread   __declspec( thread )
@@ -92,6 +92,6 @@ __declspec( thread ) int tls_i = 1;
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 拡張ストレージ クラス属性](../c-language/c-extended-storage-class-attributes.md)
