@@ -5,12 +5,12 @@ helpviewer_keywords:
 - lexical conventions
 - conventions, lexical
 ms.assetid: 20668a49-cab7-4153-a6d9-7439aac3ff3b
-ms.openlocfilehash: d6aa0e4b8ec3efb0b4212168d05b829e25bf9f69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af220854f71a84902d9ad417242b6d037d4ba0f2
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451637"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148076"
 ---
 # <a name="elements-of-c"></a>C の要素
 
@@ -38,6 +38,6 @@ ms.locfileid: "50451637"
 
 演算子は、値の操作方法を指定するシンボル (単一文字および文字の組み合わせ) です。 各シンボルはトークンと呼ばれる 1 つの単位として解釈されます。 詳細については、「[演算子](../c-language/c-operators.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 言語リファレンス](../c-language/c-language-reference.md)

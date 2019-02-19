@@ -9,12 +9,12 @@ helpviewer_keywords:
 - storage class specifiers, C storage classes
 - storage duration
 ms.assetid: 893fb929-f7a9-43dc-a0b3-29cb1ef845c1
-ms.openlocfilehash: cb472ea0db67e0fd8d7f2a8e2af4513ffb0fbe1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85eb11397b2336363fe4f55da26623fac720faf3
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466184"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151794"
 ---
 # <a name="c-storage-classes"></a>C ストレージ クラス
 
@@ -50,6 +50,6 @@ C には、次のストレージ クラス指定子が用意されています�
 
 「[Storage-Class Specifiers for External-Level Declarations (外部レベル宣言のストレージ クラス指定子)](../c-language/storage-class-specifiers-for-external-level-declarations.md)」および「[Storage-Class Specifiers for Internal-Level Declarations (内部レベル宣言のストレージ クラス指定子)](../c-language/storage-class-specifiers-for-internal-level-declarations.md)」では、各種宣言の *storage-class-specifier* 終端要素について記載し、変数から *storage-class-specifier* が省略されている場合の既定の動作について説明しています。 「[Storage-Class Specifiers with Function Declarations (関数宣言を伴うストレージ クラス指定子)](../c-language/storage-class-specifiers-with-function-declarations.md)」では、関数と共に使用されるストレージ クラス指定子について説明します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [宣言と型](../c-language/declarations-and-types.md)

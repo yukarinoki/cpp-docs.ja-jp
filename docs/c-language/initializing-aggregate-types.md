@@ -8,12 +8,12 @@ helpviewer_keywords:
 - union keyword [C]
 - aggregates [C++], initializing
 ms.assetid: a8f8ed75-39db-4592-93b9-d3920d915810
-ms.openlocfilehash: ebc7f6185c8115df6e6b77a034307f8998b1c2ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6816a6f63de262b927a3c5aeed8774ba29c2eaa
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530303"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56151495"
 ---
 # <a name="initializing-aggregate-types"></a>集約型の初期化
 
@@ -150,6 +150,6 @@ union
 
 共用体変数 `y` は、この例では初期化されます。 共用体の最初の要素は配列であるため、初期化子は初期化子の集約です。 初期化子リスト `{'1'}` は配列の最初の行に値を割り当てます。 リストには 1 種類の値のみが表示されるため、最初の列の要素は、文字 `1` に初期化され、行の残りの 2 つの要素は、既定で値 0 に初期化されます。 同様に、`x` の 2 番目の行の最初の要素は、文字 `4` に初期化され、行の残りの 2 つの要素は値 0 に初期化されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [初期化](../c-language/initialization.md)

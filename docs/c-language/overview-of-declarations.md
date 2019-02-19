@@ -5,12 +5,12 @@ helpviewer_keywords:
 - declarations, about declarations
 - type qualifiers
 ms.assetid: fcd2364c-c2a5-4fbf-9027-19dac4144cb5
-ms.openlocfilehash: 4e6c166763afd18db79798024d8b2f159ffed76d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 439bc878bbcd1c9778fb74738cb3b32b908a5943
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582755"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56148349"
 ---
 # <a name="overview-of-declarations"></a>宣言の概要
 
@@ -65,7 +65,7 @@ C で定義されている *storage-class-specifier* 終端要素には、**auto
 
 *type-qualifier* 終端要素は、**const** と `volatile` の 2 つがあります。 これらの修飾子は、関連する型の追加のプロパティを指定します (その型のオブジェクトに左辺値を通じてアクセスする場合のみ)。 **const** および `volatile` の詳細については、「[型修飾子](../c-language/type-qualifiers.md)」を参照してください。 左辺値の定義については、「[左辺値と右辺値の式](../c-language/l-value-and-r-value-expressions.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C 言語の構文概要](../c-language/c-language-syntax-summary.md)<br/>
 [宣言と型](../c-language/declarations-and-types.md)<br/>

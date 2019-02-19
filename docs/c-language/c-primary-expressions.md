@@ -4,12 +4,12 @@ ms.date: 10/21/2018
 helpviewer_keywords:
 - primary expressions
 ms.assetid: 49ac134f-0f8a-44f7-800e-86f31f2bd51c
-ms.openlocfilehash: 386a486bce455f150d9b2705e762c21f4fedff4a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e88126a0ed9b3e6252bfc98f8b43d5570bf5db64
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605986"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56149610"
 ---
 # <a name="c-primary-expressions"></a>C 一次式
 
@@ -27,6 +27,6 @@ ms.locfileid: "50605986"
 &nbsp;&nbsp;&nbsp;&nbsp;*assignment-expression*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*expression* **,** *assignment-expression*<br/>
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [オペランドおよび式](../c-language/operands-and-expressions.md)

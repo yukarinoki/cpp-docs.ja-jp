@@ -12,12 +12,12 @@ helpviewer_keywords:
 - function body
 - declaring functions, variables
 ms.assetid: ebab23c8-6eb8-46f3-b21d-570cd8457a80
-ms.openlocfilehash: dd396cb182aeae9ef587ab58f04893cf0283a8a9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61662caf28fad2f961a580cf280799711a6909bb
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507212"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147686"
 ---
 # <a name="c-function-definitions"></a>C 関数定義
 
@@ -93,6 +93,6 @@ ms.locfileid: "50507212"
 
 「[関数の属性](../c-language/function-attributes.md)」、「[ストレージ クラス](../c-language/storage-class.md)」、「[戻り値の型](../c-language/return-type.md)」、「[パラメーター](../c-language/parameters.md)」、および「[関数本体](../c-language/function-body.md)」の各セクションでは、関数定義のコンポーネントについて詳しく説明します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数](../c-language/functions-c.md)

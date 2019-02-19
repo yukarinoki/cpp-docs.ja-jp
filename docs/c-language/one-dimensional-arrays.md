@@ -10,12 +10,12 @@ helpviewer_keywords:
 - square brackets [ ], arrays
 - subscript expressions
 ms.assetid: e28536e5-3b77-46b5-97fd-9b938c771816
-ms.openlocfilehash: 2e1d168cd3b6f3a5ca29cf9e6d981430d5bf671a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd3b495483a460f01fe1951ee4c8b5ac3b447701
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506263"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56147637"
 ---
 # <a name="one-dimensional-arrays"></a>1 次元配列
 
@@ -59,6 +59,6 @@ b[a]
 
 `line[0]` によって表されるアドレスからのオフセットが 0 であるため、添字式 `line` は、行の最初の要素の値を表します。 同様に、`line[5]` のような式は、行から 5 位置オフセットされた要素、つまり配列の 6 番目の要素を参照します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [添字演算子:](../cpp/subscript-operator.md)
