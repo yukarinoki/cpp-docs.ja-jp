@@ -7,12 +7,12 @@ helpviewer_keywords:
 - portability [C++], type int
 - signed integers
 ms.assetid: 0067ce9a-281e-491a-ae63-632952981e13
-ms.openlocfilehash: 6391e167ad214bb793b8d6b3b62637a113039afc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 848c9799e7ab5cfdfd2b25cc84e55de02c673f3e
+ms.sourcegitcommit: f4be868c0d1d78e550fba105d4d3c993743a1f4b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437194"
+ms.lasthandoff: 02/12/2019
+ms.locfileid: "56150013"
 ---
 # <a name="type-int"></a>int 型
 
@@ -22,13 +22,13 @@ ms.locfileid: "50437194"
 
 **Microsoft 固有の仕様**
 
-符号付き整数は、2 の補数形式で表されます。 最上位ビットは符号を表し、負の数ならば 1、正の数とゼロならば 0 です。 値の範囲は、「[C++ 整数の制限](../c-language/cpp-integer-limits.md)」に示されており、LIMITS.H ヘッダー ファイルから取得されます。
+符号付き整数は、2 の補数形式で表されます。 最上位ビットにより符号が保持されます。負の場合は 1、正および 0 の場合は 0 です。 値の範囲は、「[C++ 整数の制限](../c-language/cpp-integer-limits.md)」に示されており、LIMITS.H ヘッダー ファイルから取得されます。
 
 **Microsoft 固有の仕様はここまで**
 
 > [!NOTE]
 >  int 型指定子と unsigned int 型指定子は、コンピューターで最も効率的に整数値を処理できるので、C プログラムで広く使用されます。 ただし、int 型と unsigned int 型のサイズは固定されていないため、特定の int サイズに依存するプログラムは、他のコンピューターに移植できない場合があります。 プログラムの移植可能性を高めるには、ハードコーディングされたデータ サイズではなく、sizeof 演算子 (「[sizeof 演算子](../c-language/sizeof-operator-c.md)」で説明) を式で使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [基本型の格納](../c-language/storage-of-basic-types.md)
