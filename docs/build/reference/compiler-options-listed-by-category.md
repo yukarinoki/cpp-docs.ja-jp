@@ -4,18 +4,18 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: ef61ebbfad62e6a7bf764bad35204247e47d8ddb
-ms.sourcegitcommit: 6990f842fefc27b522b15cf352f3517b319d78da
+ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
+ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53248573"
+ms.lasthandoff: 02/22/2019
+ms.locfileid: "56676501"
 ---
 # <a name="compiler-options-listed-by-category"></a>コンパイラ オプションのカテゴリ別一覧
 
 この記事には、コンパイラ オプションのカテゴリ別の一覧が含まれています。 アルファベット順一覧については、「 [Compiler Options Listed Alphabetically](compiler-options-listed-alphabetically.md)」を参照してください。
 
-### <a name="optimization"></a>最適化
+## <a name="optimization"></a>最適化
 
 |オプション|目的|
 |------------|-------------|
@@ -31,7 +31,7 @@ ms.locfileid: "53248573"
 |[/Oy](oy-frame-pointer-omission.md)|フレーム ポインターなし (x86 のみ)|
 |[/favor](favor-optimize-for-architecture-specifics.md)|指定したアーキテクチャまたは一連のアーキテクチャ用に最適化されたコードを生成します。|
 
-### <a name="code-generation"></a>コード生成
+## <a name="code-generation"></a>コード生成
 
 |オプション|目的|
 |------------|-------------|
@@ -72,7 +72,7 @@ ms.locfileid: "53248573"
 |[/RTC](rtc-run-time-error-checks.md)|ランタイム エラー チェックを有効にします。|
 |[/volatile](volatile-volatile-keyword-interpretation.md)|volatile キーワードの解釈方法を選択します。|
 
-### <a name="output-files"></a>出力ファイル
+## <a name="output-files"></a>出力ファイル
 
 |オプション|目的|
 |------------|-------------|
@@ -87,7 +87,7 @@ ms.locfileid: "53248573"
 |[/Fp](fp-name-dot-pch-file.md)|プリコンパイル済みヘッダー ファイルの名前を指定します。|
 |[/FR、/Fr](fr-fr-create-dot-sbr-file.md)|名前には、ブラウザーの .sbr ファイルが生成されます。|
 
-### <a name="preprocessor"></a>プリプロセッサ
+## <a name="preprocessor"></a>プリプロセッサ
 
 |オプション|目的|
 |------------|-------------|
@@ -105,7 +105,7 @@ ms.locfileid: "53248573"
 |[/u](u-u-undefine-symbols.md)|すべての定義済みマクロを削除します。|
 |[/X](x-ignore-standard-include-paths.md)|標準のインクルード ディレクトリを無視します。|
 
-### <a name="language"></a>言語
+## <a name="language"></a>言語
 
 |オプション|目的|
 |------------|-------------|
@@ -129,7 +129,7 @@ ms.locfileid: "53248573"
 |[/Zs](zs-syntax-check-only.md)|構文だけをチェックします。|
 |[/ZW](zw-windows-runtime-compilation.md)|Windows ランタイムで実行する出力ファイルを作成します。|
 
-### <a name="linking"></a>リンク
+## <a name="linking"></a>リンク
 
 |オプション|目的|
 |------------|-------------|
@@ -143,7 +143,7 @@ ms.locfileid: "53248573"
 |[/MT](md-mt-ld-use-run-time-library.md)|LIBCMT.lib を使用して、マルチスレッド実行可能ファイルをコンパイルして作成します。|
 |[/MTd](md-mt-ld-use-run-time-library.md)|LIBCMTD.lib を使用して、デバッグ バージョンのマルチスレッド実行可能ファイルをコンパイルして作成します。|
 
-### <a name="miscellaneous"></a>その他
+## <a name="miscellaneous"></a>その他
 
 |オプション|目的|
 |------------|-------------|
@@ -195,7 +195,7 @@ ms.locfileid: "53248573"
 |[/permissive-](permissive-standards-conformance.md)|標準準拠モードを設定します。|
 |[/std](std-specify-language-standard-version.md)|C++ 標準バージョンの互換性セレクター。|
 
-### <a name="deprecated-and-removed-compiler-options"></a>非推奨と削除されたコンパイラ オプション
+## <a name="deprecated-and-removed-compiler-options"></a>非推奨と削除されたコンパイラ オプション
 
 |オプション|目的|
 |------------|-------------|
