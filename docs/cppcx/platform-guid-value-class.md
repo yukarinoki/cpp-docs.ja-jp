@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Guid Struct
 ms.assetid: 25c0bfb2-7f93-44d8-bdf4-ef4fbac3424a
-ms.openlocfilehash: ad71ed4965a3dd4846c9ba5d8ed2627ed8f7e056
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: bf7d73e1e50bb77a84267f3a5388c07a49c54c79
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334652"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809699"
 ---
 # <a name="platformguid-value-class"></a>Platform::Guid 値クラス
 
@@ -30,7 +30,8 @@ public value struct Guid
 
 |メンバー|説明|
 |------------|-----------------|
-|[Guid](#ctor)|`Platform::Guid` の新しいインスタンスを初期化します。|
+|[Guid](#ctor)|
+  `Platform::Guid` の新しいインスタンスを初期化します。|
 |[operator==](#operator-equality)|等値演算子。|
 |[operator!=](#operator-inequality)|非等値演算子。|
 |[operator&lt;](#operator-less)|小なり演算子。|
@@ -38,7 +39,7 @@ public value struct Guid
 
 ### <a name="remarks"></a>Remarks
 
-新しいを生成する方法の例については`Platform::Guid`Windows 関数を使用して[CoCreateGuid](/windows/desktop/api/combaseapi/nf-combaseapi-cocreateguid)を参照してください[WinRT コンポーネント。GUID を生成する方法は?](https://www.eternalcoding.com/?p=383)
+新しいを生成する`Platform::Guid`を使用して、 [Windows::Foundation::GuidHelper::CreateNewGuid](/uwp/api/windows.foundation.guidhelper.createnewguid#Windows_Foundation_GuidHelper_CreateNewGuid)静的メソッド。
 
 ### <a name="requirements"></a>必要条件
 
@@ -52,7 +53,8 @@ public value struct Guid
 
 ## <a name="ctor"></a> Guid::guid コンス トラクター
 
-`Platform::Guid` の新しいインスタンスを初期化します。
+
+  `Platform::Guid` の新しいインスタンスを初期化します。
 
 ### <a name="syntax"></a>構文
 
@@ -141,6 +143,10 @@ static bool Platform::Guid::operator==(Platform::Guid guid1, Platform::Guid guid
 ### <a name="return-value"></a>戻り値
 
 True の場合、2 つ`Platform::Guid`インスタンスが等しい。
+
+### <a name="remarks"></a>Remarks
+
+使用して必要に応じて、`==`演算子の代わりに、 [Windows::Foundation::GuidHelper::Equals](/uwp/api/windows.foundation.guidhelper.equals)静的メソッド。
 
 ## <a name="operator-inequality"></a> Guid::operator! = 演算子
 
