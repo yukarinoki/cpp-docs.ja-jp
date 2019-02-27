@@ -1,17 +1,16 @@
-﻿---
-title: Visual Studio における Visual C++ の新機能
+---
+title: Visual Studio の Visual C++ の新機能
 ms.date: 11/15/2017
-ms.technology:
-- cpp-ide
+ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 5a9bbf86d6febfdec5ab5cbd9969cd5076672c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620143"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809790"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 における Visual C++ の新機能
 
@@ -25,13 +24,13 @@ Visual Studio 2017 には、Visual C++ 環境に対する多くの更新プロ�
 
 このリリースでは、C++ コンパイラと標準ライブラリを更新して C++11 と C++14 機能のサポートを強化し、C++17 標準に組み込まれると予想される特定の機能について予備的なサポートを追加しました。 詳しくは、「[C++ Conformance Improvements in Visual Studio 2017](cpp-conformance-improvements-2017.md)」(Visual Studio 2017 での C++ 準拠の強化) をご覧ください。
 
-**Visual Studio 2017 バージョン 15.5**: コンパイラは C++17 の新機能の約 75% をサポートしています。その中には構造化バインド、`constexpr` ラムダ、`if constexpr`、インライン変数、フォールド式、型システムへの `noexcept` の追加が含まれます。 これらは **/std:c++17** オプションの下にあります。 詳細については、[Visual Studio 2017 での C++ 準拠の強化](cpp-conformance-improvements-2017.md)に関するページをご覧ください。
+**Visual Studio 2017 バージョン 15.5**:コンパイラは C++17 の新機能の約 75% をサポートしています。その中には構造化バインド、`constexpr` ラムダ、`if constexpr`、インライン変数、フォールド式、型システムへの `noexcept` の追加が含まれます。 これらは **/std:c++17** オプションの下にあります。 詳細については、[Visual Studio 2017 での C++ 準拠の強化](cpp-conformance-improvements-2017.md)に関するページをご覧ください。
 
-**Visual Studio 2017 バージョン 15.7**: Visual Studio バージョン 15.7 の MSVC コンパイラ ツールセットが、C++ 標準に準拠となりました。 詳細については、「[Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/)」 (発表: MSVC の C++ への準拠) および「[Visual C++ 言語への準拠](visual-cpp-language-conformance.md)」を参照してください。
+**Visual Studio 2017 バージョン 15.7**:Visual Studio バージョン 15.7 の MSVC コンパイラ ツールセットが、C++ 標準に準拠となりました。 詳細については、「[Announcing: MSVC Conforms to the C++ Standard](https://blogs.msdn.microsoft.com/vcblog/2018/05/07/announcing-msvc-conforms-to-the-c-standard/)」(発表: MSVC の C++ への準拠) および「[Visual C++ 言語の準拠](visual-cpp-language-conformance.md)」を参照してください。
 
 ### <a name="new-compiler-options"></a>新しいコンパイラ オプション
 
-- [/permissive-](build/reference/permissive-standards-conformance.md): すべての厳密な標準準拠コンパイラ オプションを有効にして、ほとんどの Microsoft 固有コンパイラ拡張機能 (ただし、たとえば `__declspec(dllimport)` は除きます) を無効にします。 このオプションは、Visual Studio 2017 バージョン 15.5 では既定でオンになっています。  **/permissive-** 準拠モードは、2 フェーズの名前参照に対応しています。 詳しくは、「[C++ Conformance Improvements in Visual Studio 2017](cpp-conformance-improvements-2017.md)」 (Visual Studio 2017 での C++ 準拠の強化) をご覧ください。
+- [/permissive -](build/reference/permissive-standards-conformance.md): すべての厳密な標準準拠コンパイラ オプションを有効にして、ほとんどの Microsoft 固有コンパイラ拡張機能 (ただし、たとえば `__declspec(dllimport)` は除きます) を無効にします。 このオプションは、Visual Studio 2017 バージョン 15.5 では既定でオンになっています。  **/permissive-** 準拠モードは、2 フェーズの名前参照に対応しています。 詳しくは、「[C++ Conformance Improvements in Visual Studio 2017](cpp-conformance-improvements-2017.md)」 (Visual Studio 2017 での C++ 準拠の強化) をご覧ください。
 
 - [/diagnostics](build/reference/diagnostics-compiler-diagnostic-options.md): 診断エラーまたは警告が検出された場所の、行番号、行番号と列、または行番号、列、コード行の下のカレットを表示できるようにします。
 
@@ -41,7 +40,7 @@ Visual Studio 2017 には、Visual C++ 環境に対する多くの更新プロ�
 
    **Visual Studio 2017 バージョン 15.3**:
 
-- [/std:c++14 と /std:c++latest](build/reference/std-specify-language-standard-version.md): これらのコンパイラ オプションを使用すると、プロジェクトで ISO C++ プログラミング言語の特定のバージョンにオプトインできます。 ほとんどの新しいドラフト標準機能は、**/std:c++latest** オプションによって保護されています。
+- [/std:c++14 および /std:c++latest](build/reference/std-specify-language-standard-version.md): これらのコンパイラ オプションを使用すると、プロジェクトで ISO C++ プログラミング言語の特定のバージョンにオプトインできます。 ほとんどの新しいドラフト標準機能は、**/std:c++latest** オプションによって保護されています。
 
 - [/std:c++17](build/reference/std-specify-language-standard-version.md) を使用すると、コンパイラによって実装された C++17 機能セットが有効になります。 このオプションによって、C++17 後の C++ 標準のワーキング ドラフトおよび不具合の更新のバージョンで変更または更新された機能に対するコンパイラと標準ライブラリのサポートが無効になります。 これらの機能を有効にするには、**/std:c++latest** を使用します。
 
@@ -53,7 +52,7 @@ Visual Studio 2017 には、Visual C++ 環境に対する多くの更新プロ�
 - コード セキュリティの向上: バッファー オーバーラン コンパイラ診断の出力が向上し、[/guard:cf](build/reference/guard-enable-control-flow-guard.md) によりジャンプ テーブルを生成する switch ステートメントが保護されるようになりました。
 - バージョン管理: 組み込みプリプロセッサ マクロ **\_MSC\_VER** の値が、Visual C++ ツールセットの更新のたびに単調に更新されるようになりました。 詳しくは、「[Visual C++ Compiler Version](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/)」(Visual C++ コンパイラのバージョン) をご覧ください。
 - 新しいツールセット レイアウト: 開発用コンピューターでのコンパイラおよび関連するビルド ツールの場所とディレクトリ構造が新しくなりました。 新しいレイアウトでは、複数のバージョンのコンパイラのサイド バイ サイド インストールが可能です。 詳細については、「[Compiler Tools Layout in Visual Studio "15" (Visual Studio "15" でのコンパイラ ツール レイアウト) ](https://blogs.msdn.microsoft.com/vcblog/2016/10/07/compiler-tools-layout-in-visual-studio-15/)」をご覧ください。
-- 診断の強化: 出力ウィンドウにエラーが発生した列が表示されるようになりました。 詳細については、「[C++ compiler diagnostics improvements in VS "15" Preview 5 (VS "15" Preview 5 での C++ コンパイラの診断の機能強化)](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/)」をご覧ください。
+- 改善された診断機能: 出力ウィンドウにエラーが発生した列が表示されるようになりました。 詳細については、「[C++ compiler diagnostics improvements in VS "15" Preview 5 (VS "15" Preview 5 での C++ コンパイラの診断の機能強化)](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/c-compiler-diagnostics-improvements-in-vs-15-rc/)」をご覧ください。
 - コルーチンを使用する場合、試験的キーワード **yield** (**/await** オプションによって使用可能) は削除されています。 代わりにコードを書き直し、`co_yield` を使用する必要があります。 詳細については、「[Visual C++ チーム ブログ](https://blogs.msdn.microsoft.com/vcblog/)」を参照してください。
 
 **Visual Studio 2017 バージョン 15.3**:
@@ -246,7 +245,7 @@ C++17 の追加機能がいくつか実装されました。 詳細について�
 
 ### <a name="open-source-library-support"></a>オープン ソース ライブラリのサポート
 
-**Vcpkg** は、Visual Studio でオープン ソースの C++ スタティック ライブラリと DLL を取得してビルドするプロセスを大幅に単純化するオープン ソースのコマンド ライン ツールです。 詳細については、「[vcpkg: C++ 用のパッケージ マネージャー](vcpkg.md)」を参照してください。
+**Vcpkg** は、Visual Studio でオープン ソースの C++ スタティック ライブラリと DLL を取得してビルドするプロセスを大幅に単純化するオープン ソースのコマンド ライン ツールです。 詳細については、[vcpkg: C++ 用のパッケージ マネージャー](vcpkg.md)に関する記事を参照してください。
 
 **Visual Studio 2017 バージョン 15.5**:
 
@@ -339,11 +338,11 @@ Visual Studio 2017 では、MSBuild プロジェクト ファイル (.vcxproj) �
 
   ![Cmake の [フォルダーを開く]](media/cmake_cpp.png "CMake Open Folder")
 
-**Visual Studio 2017 バージョン 15.3**: CMake Ninja generator のサポートが追加されました。
+**Visual Studio 2017 バージョン 15.3**:CMake Ninja generator のサポートが追加されました。
 
-**Visual Studio 2017 バージョン 15.5**: 既存の CMake キャッシュをインポートするためのサポートが追加されました。
+**Visual Studio 2017 バージョン 15.5**:既存の CMake キャッシュをインポートするためのサポートが追加されました。
 
-**Visual Studio 2017 バージョン 15.7**: CMake 3.11、CMake プロジェクトでのコード分析、ソリューション エクスプローラーのターゲット ビュー、キャッシュ生成用のオプション、および単一ファイルのコンパイルのためのサポートが追加されました。 詳細については、「[CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)」 (Visual Studio での CMake のサポート) および「[Visual C++ で CMake プロジェクト](ide/cmake-tools-for-visual-cpp.md)」をご覧ください。
+**Visual Studio 2017 バージョン 15.7**:CMake 3.11、CMake プロジェクトでのコード分析、ソリューション エクスプローラーのターゲット ビュー、キャッシュ生成用のオプション、および単一ファイルのコンパイルのためのサポートが追加されました。 詳細については、「[CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)」 (Visual Studio での CMake のサポート) および「[Visual C++ で CMake プロジェクト](ide/cmake-tools-for-visual-cpp.md)」をご覧ください。
 
 ## <a name="windows-desktop-development-with-c"></a>C++ による Windows デスクトップ開発
 
@@ -391,7 +390,7 @@ Android および iOS を対象とするモバイル アプリを、Visual Studi
 ## <a name="new-options-for-c-on-universal-windows-platform-uwp"></a>ユニバーサル Windows プラットフォーム (UWP) での C++ の新しいオプション
 ユニバーサル Windows プラットフォームおよび Windows ストア用の C++ アプリケーションを記述およびパッケージ化するための新しいオプションが追加されました。デスクトップ ブリッジ インフラストラクチャを使うと、Windows ストアまたはサイドローディングを経由した既存のチャネルを通してデプロイできるように、既存のデスクトップ アプリケーションまたは COM オブジェクトをパッケージ化できます。 Windows 10 の新機能を使用すると、さまざまな方法で、デスクトップ アプリケーションに UWP 機能を追加できます。 詳細については、[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)に関するページをご覧ください。
 
-**Visual Studio 2017 バージョン 15.5**: **Windows アプリケーション パッケージ プロジェクト**というプロジェクト テンプレートが追加されました。このテンプレートでは、デスクトップ ブリッジを使用してデスクトップ アプリケーションをパッケージ化する作業が、大幅に簡略化されます。 **[ファイル]、[新規]、[プロジェクト]、[インストール]、[Visual C++]、[ユニバーサル Windows プラットフォーム]** の下にあります。 詳細については、「[Visual Studio を使ったアプリのパッケージ化 (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)」をご覧ください。
+**Visual Studio 2017 バージョン 15.5**:**Windows アプリケーション パッケージ プロジェクト**というプロジェクト テンプレートが追加されました。このテンプレートでは、デスクトップ ブリッジを使用してデスクトップ アプリケーションをパッケージ化する作業が、大幅に簡略化されます。 **[ファイル]、[新規]、[プロジェクト]、[インストール]、[Visual C++]、[ユニバーサル Windows プラットフォーム]** の下にあります。 詳細については、「[Visual Studio を使ったアプリのパッケージ化 (デスクトップ ブリッジ)](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)」をご覧ください。
 
 新しいコードを作成するときに、ヘッダー ファイルだけに実装される Windows ランタイム向けの標準 C++ 言語プロジェクションである C++/WinRT を使うことができるようになりました。 これにより、標準準拠の任意の C++ コンパイラを使って、Windows ランタイム API を作成および使用できます。 C++/WinRT は、C++ の開発者が最新の Windows API に最適にアクセスできるように設計されています。 詳しくは、「[C++/WinRT Available on GitHub](https://moderncpp.com/)」 (C++/WinRT が GitHub で入手可能) をご覧ください。
 
@@ -407,9 +406,9 @@ Visual Studio 2017 に同梱されている Clang/C2 ツールセットが **/bi
 
 ![CppCoreCheck](media/CppCoreCheck.png "CppCoreCheck properties page")
 
-**Visual Studio 2017 バージョン 15.3**: リソース管理に関連するルールのサポートが追加されました。
+**Visual Studio 2017 バージョン 15.3**:リソース管理に関連するルールのサポートが追加されました。
 
-**Visual Studio 2017 バージョン 15.5**: 新しい C++ Core Guidelines チェックでは、スマート ポインターが正しいこと、グローバル初期化子の使い方が正しいこと、コンストラクトのフラグ使用 (`goto` や不良キャストなど) が確認されます。
+**Visual Studio 2017 バージョン 15.5**:新しい C++ Core Guidelines チェックでは、スマート ポインターが正しいこと、グローバル初期化子の使い方が正しいこと、コンストラクトのフラグ使用 (`goto` や不良キャストなど) が確認されます。
 
 15.3 で使われていた警告番号の一部は 15.5 では使われなくなりました。 より具体的なチェックに置換されました。
 
@@ -433,7 +432,7 @@ Google Test Adapter と Boost.Test Adapter は **C++ ワークロードによる
 - Boost.Test ダイナミック ライブラリのサポートの追加。
 - 現在、Boost.Test 項目テンプレートは IDE にあります。
 
-詳細については、「[Boost.Test Unit Testing: Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)」 (Boost.Test 単体テスト: 動的なライブラリのサポートと新しい項目テンプレート) を参照してください。
+詳細については、「[Boost.Test Unit Testing:Dynamic Library support and New Item Template](https://blogs.msdn.microsoft.com/vcblog/2018/01/10/boost-test-unit-testing-dynamic-library-support-and-new-item-template/)」(Boost.Test 単体テスト: 動的ライブラリのサポートと新しい項目テンプレート) を参照してください。
 
 **Visual Studio 2017 バージョン 15.7**:
 
@@ -473,7 +472,7 @@ Visual Studio のグラフィックス診断は、Direct3D アプリのレンダ
 
   ![フレームの検証](media/frame-validation.png)
 
-- **D3D12 のフレーム分析:** フレーム分析を使って、指示された "what-if" 実験で描画呼び出しのパフォーマンスを分析します。 [フレーム分析] タブに切り替え、分析を実行してレポートを表示します。 詳しくは、「[GoingNative 25: Visual Studio Graphics Frame Analysis](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)」(GoingNative 25: Visual Studio のグラフィックス フレーム分析) のビデオをご覧ください。
+- **D3D12 のフレーム分析:** フレーム分析を使って、指示された "what-if" 実験で描画呼び出しのパフォーマンスを分析します。 [フレーム分析] タブに切り替え、分析を実行してレポートを表示します。 詳細については、「[GoingNative 25: Visual Studio Graphics Frame Analysis](https://channel9.msdn.com/Shows/C9-GoingNative/GoingNative-25-Offline-Analysis-Graphics-Tool)」(GoingNative 25: Visual Studio のグラフィックス フレーム分析) のビデオをご覧ください。
 
   ![フレーム分析](media/frame-analysis.png)
 

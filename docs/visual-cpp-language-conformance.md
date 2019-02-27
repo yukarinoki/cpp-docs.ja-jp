@@ -1,17 +1,16 @@
-﻿---
+---
 title: Visual C++ 言語の準拠
 ms.date: 11/15/2017
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 78c4be98ecc8e0a42e2cd0967f2bedece9dabc86
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 604057753e67d08c12204f9d3b09bce0e1212966
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630413"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809764"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 言語の準拠
 
@@ -92,22 +91,22 @@ Visual Studio 2017 で加えられた準拠の強化とその他の変更点の�
 |----|---|
 |__C++17 コア言語機能 (不具合報告)__|__サポート状況__|
 |&nbsp;&nbsp;[P0702R1 初期化子リスト ctors のクラス テンプレート引数の推論の修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[P0588R1 暗黙の lambda キャプチャの簡略化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|×|
-|&nbsp;&nbsp;[CWG 1581: constexpr メンバー関数を定義するタイミング](https://wg21.cmeerw.net/cwg/issue1581)|×|
-|&nbsp;&nbsp;[P0962R1 構造化バインディング カスタマイゼーション ポイントを見つけるルールの緩和](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|×|
-|&nbsp;&nbsp;[P0962R2 範囲 for ループのカスタマイゼーション ポイントを見つけるルールの緩和](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|×|
-|&nbsp;&nbsp;[P0969R0 アクセス可能なメンバーへの構造化バインディングの許可](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|×|
+|&nbsp;&nbsp;[P0588R1 暗黙の lambda キャプチャの簡略化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|いいえ|
+|&nbsp;&nbsp;[CWG 1581: constexpr メンバー関数を定義するタイミング](https://wg21.cmeerw.net/cwg/issue1581)|いいえ|
+|&nbsp;&nbsp;[P0962R1 構造化バインディング カスタマイゼーション ポイントを見つけるルールの緩和](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0961r1.html)|いいえ|
+|&nbsp;&nbsp;[P0962R2 範囲 for ループのカスタマイゼーション ポイントを見つけるルールの緩和](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0962r1.html)|いいえ|
+|&nbsp;&nbsp;[P0969R0 アクセス可能なメンバーへの構造化バインディングの許可](http://open-std.org/JTC1/SC22/WG21/docs/papers/2018/p0969r0.pdf)|いいえ|
 
 |機能分野| |
 |----|---|
 |__C++20 Core 言語機能__|__サポート状況__|
-|&nbsp;&nbsp;[P0306R4 コンマ省略とコンマ削除のための &#95;&#95;VA_OPT&#95;&#95; の追加](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|×|
-|&nbsp;&nbsp;[P0329R4 指定の初期化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|×|
-|&nbsp;&nbsp;[P0409R2 ラムダ キャプチャ [=, this] の許可](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|×|
-|&nbsp;&nbsp;[P0428R2 汎用ラムダの使い慣れたテンプレート構文](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|×|
-|&nbsp;&nbsp;[P0683R1 ビット フィールドの既定のメンバー初期化子](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0683r1.html)|×|
-|&nbsp;&nbsp;[P0704R1 メンバーへの const lvalue ref-qualified ポインターの修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|×|
-|&nbsp;&nbsp;[P0734R0 概念](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0734r0.pdf)|×|
+|&nbsp;&nbsp;[P0306R4 コンマ省略とコンマ削除のための &#95;&#95;VA_OPT&#95;&#95; の追加](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0306r4.pdf)|いいえ|
+|&nbsp;&nbsp;[P0329R4 指定の初期化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0329r4.pdf)|いいえ|
+|&nbsp;&nbsp;[P0409R2 ラムダ キャプチャ [=, this] の許可](http://open-std.org/JTC1/SC22/WG21/docs/papers/2017/p0409r2.html)|いいえ|
+|&nbsp;&nbsp;[P0428R2 汎用ラムダの使い慣れたテンプレート構文](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0428r2.pdf)|いいえ|
+|&nbsp;&nbsp;[P0683R1 ビット フィールドの既定のメンバー初期化子](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0683r1.html)|いいえ|
+|&nbsp;&nbsp;[P0704R1 メンバーへの const lvalue ref-qualified ポインターの修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0704r1.html)|いいえ|
+|&nbsp;&nbsp;[P0734R0 概念](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0734r0.pdf)|いいえ|
 
 ## <a name="standard-library-features"></a>標準ライブラリの機能
 
@@ -115,28 +114,28 @@ Visual Studio 2017 で加えられた準拠の強化とその他の変更点の�
 |---|---|
 |__C++20 標準ライブラリの機能__|__サポート状況__|
 |&nbsp;&nbsp; [P0777R1 不要な Decay の回避](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0777r1.pdf)|VS 2017 15.7 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp;[P0463R1 エンディアン](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|×|
-|&nbsp;&nbsp;[P0674R1 配列の make_shared()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|×|
+|&nbsp;&nbsp;[P0463R1 エンディアン](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0463r1.html)|いいえ|
+|&nbsp;&nbsp;[P0674R1 配列の make_shared()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0674r1.html)|いいえ|
 |&nbsp;&nbsp;[P0858R0 Constexpr 反復子の要件](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0858r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0809R0 順序なしのコンテナーの比較](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0809r0.pdf)| VS 2010 <sup>[14](#note_14)</sup>|
-|&nbsp;&nbsp; [P0020R3 atomic\<float>、atomic\<double>、atomic\<long double>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|×|
-|&nbsp;&nbsp; [P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br />&nbsp;&nbsp; [P0753R2 osyncstream マニピュレーター](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|×|
-|&nbsp;&nbsp; [P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|×|
-|&nbsp;&nbsp; [P0202R3 \<algorithm> および exchange() に対する constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|×|
-|&nbsp;&nbsp; [P0355R7 \<chrono> カレンダーおよびタイム ゾーン](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|×|
-|&nbsp;&nbsp; [P0415R1 \<complex> に対する constexpr (再度)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|×|
-|&nbsp;&nbsp; [P0439R0 列挙型クラス memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|×|
-|&nbsp;&nbsp; [P0457R2 basic_string/basic_string_view の starts_with()/ends_with()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|×|
-|&nbsp;&nbsp; [P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|×|
-|&nbsp;&nbsp; [P0551R3 std 関数テンプレートの特殊化の禁止](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0551r3.pdf)|×|
-|&nbsp;&nbsp; [P0600R1 \[STL の \[nodiscard\]\]、パート 1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|×|
-|&nbsp;&nbsp; [P0616R0 \<numeric> での move() の使用](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|×|
-|&nbsp;&nbsp; [P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|×|
-|&nbsp;&nbsp; [P0718R2 atomic\<shared_ptr\<T>>、atomic\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|×|
-|&nbsp;&nbsp; [P0754R2 \<version>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0754r2.pdf)|×|
-|&nbsp;&nbsp; [P0767R1 is_pod の非推奨](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|×|
-|&nbsp;&nbsp; [P0768R1 宇宙船比較演算子のライブラリ サポート\<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|×|
-|&nbsp;&nbsp; [P0966R1 string::reserve() は縮小しない](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0966r1.html)|×|
+|&nbsp;&nbsp; [P0020R3 atomic\<float>、atomic\<double>、atomic\<long double>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0020r6.html)|いいえ|
+|&nbsp;&nbsp; [P0053R7 \<syncstream>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0053r7.pdf)<br />&nbsp;&nbsp; [P0753R2 osyncstream マニピュレーター](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0753r2.pdf)|いいえ|
+|&nbsp;&nbsp; [P0122R7 \<span>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0122r7.pdf)|いいえ|
+|&nbsp;&nbsp; [P0202R3 \<algorithm> および exchange() に対する constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0202r3.html)|いいえ|
+|&nbsp;&nbsp; [P0355R7 \<chrono> カレンダーおよびタイム ゾーン](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0355r7.html)|いいえ|
+|&nbsp;&nbsp; [P0415R1 \<complex> に対する constexpr (再度)](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0415r1.html)|いいえ|
+|&nbsp;&nbsp; [P0439R0 列挙型クラス memory_order](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0439r0.html)|いいえ|
+|&nbsp;&nbsp; [P0457R2 basic_string/basic_string_view の starts_with()/ends_with()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0457r2.html)|いいえ|
+|&nbsp;&nbsp; [P0550R2 remove_cvref](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0550r2.pdf)|いいえ|
+|&nbsp;&nbsp; [P0551R3 std 関数テンプレートの特殊化の禁止](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0551r3.pdf)|いいえ|
+|&nbsp;&nbsp; [P0600R1 \[STL の \[nodiscard\]\]、パート 1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0600r1.pdf)|いいえ|
+|&nbsp;&nbsp; [P0616R0 \<numeric> での move() の使用](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0616r0.pdf)|いいえ|
+|&nbsp;&nbsp; [P0653R2 to_address()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0653r2.html)|いいえ|
+|&nbsp;&nbsp; [P0718R2 atomic\<shared_ptr\<T>>、atomic\<weak_ptr\<T>>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0718r2.html)|いいえ|
+|&nbsp;&nbsp; [P0754R2 \<version>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0754r2.pdf)|いいえ|
+|&nbsp;&nbsp; [P0767R1 is_pod の非推奨](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0767r1.html)|いいえ|
+|&nbsp;&nbsp; [P0768R1 宇宙船比較演算子のライブラリ サポート\<=>](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0768r1.pdf)|いいえ|
+|&nbsp;&nbsp; [P0966R1 string::reserve() は縮小しない](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0966r1.html)|いいえ|
 |__C++17 標準ライブラリの機能__|__サポート状況__|
 |&nbsp;&nbsp;[P0433R2 標準ライブラリへの、クラス テンプレートのテンプレートの推論の統合](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0433r2.html)<br />&nbsp;&nbsp;[P0739R0 標準ライブラリへのクラス テンプレート引数の推論の統合の強化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0739r0.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[P0426R1 char_traits の constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html)|VS 2017 15.7|
@@ -157,7 +156,7 @@ Visual Studio 2017 で加えられた準拠の強化とその他の変更点の�
 |&nbsp;&nbsp;[P0521R0 shared_ptr::unique() の廃止](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0521r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0607R0 標準ライブラリのインライン変数](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0607r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0618R0 \<codecvt> を非推奨にする](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0618r0.html)|VS 2017 15.5 <sup>[17](#note_17)</sup>|
-|&nbsp;&nbsp;[N4562 Library Fundamentals: ボイヤー-ムーア法による search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 サーチャーの戻り値の型を修正する](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
+|&nbsp;&nbsp;[N4562 Library Fundamentals: Boyer-Moore search()](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/n4562.html#func.searchers.boyer_moore)<br/>&nbsp;&nbsp;[P0253R1 サーチャーの戻り値の型を修正する](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0253r1.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0031R0 \<array> (再度) と \<iterator> の constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2015/p0031r0.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0040R3 メモリ管理ツールの拡張](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0040r3.html)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0084R2 戻り値の型の配置](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0084r2.pdf)|VS 2017 15.3 <sup>[17](#note_17)</sup>|
@@ -296,7 +295,7 @@ __VS 2017 15.7__ は、Visual Studio 2017 バージョン 15.7 でサポート�
 
 <a name="note_charconv"></a>__charconv__ from_chars() および to_chars() は整数で使用できます。 現在、浮動小数点 from_chars() に取り組んでおり、次いで浮動小数点 to_chars() に取り組む予定です。
 
-<a name ="note_parallel"></a> __parallel__  C++17 の並列アルゴリズムは完了しました。 なお、これはすべてのアルゴリズムがすべての場合において並列化されているということではありません。最も重要なアルゴリズムが並列化され、実行ポリシーの署名は、アルゴリズムが並列化されていないときでも提供されます。 STL 実装の中心の内部ヘッダー、yvals.h には、「C++ allows an implementation to implement parallel algorithms as calls to the serial algorithms」 (C++ には、シリアル アルゴリズムへの呼び出しとして並列アルゴリズムを実装することが許可されています。) という “並列アルゴリズムに関するメモ” が含まれています。   この実装では、いくつかの一般的なアルゴリズムの呼び出しを並列化しますが、すべては行いません。
+<a name ="note_parallel"></a> __parallel__  C++17 の並列アルゴリズムは完了しました。 なお、これはすべてのアルゴリズムがすべての場合において並列化されているということではありません。最も重要なアルゴリズムが並列化され、実行ポリシーの署名は、アルゴリズムが並列化されていないときでも提供されます。 STL 実装の中央内部ヘッダー yvals.h には、次の “並列アルゴリズムのメモ“ が含まれています。C++ ではシリアル アルゴリズムへの呼び出しとして並列アルゴリズムを実装することが許可されています。   この実装では、いくつかの一般的なアルゴリズムの呼び出しを並列化しますが、すべては行いません。
 
 並列化されるアルゴリズムは以下のとおりです。
 

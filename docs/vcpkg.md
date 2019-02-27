@@ -3,16 +3,15 @@ title: vcpkg-- Windows、Linux、および MacOS 用の C++ パッケージ マ�
 description: vcpkg はコマンド ライン パッケージ マネージャーであり、Windows でのオープン ソースの C++ ライブラリの取得およびインストール作業を大幅に簡素化できます。
 author: mikeblome
 ms.author: mblome
-ms.date: 05/14/2018
-ms.technology:
-- cpp-ide
+ms.date: 02/22/2019
+ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: 2f7dc6f1d9c78d894c5cf0e6ba20c8bdfc54e67a
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518685"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809712"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows、Linux、および MacOS 用の C++ パッケージ マネージャー
 
@@ -32,7 +31,7 @@ Windows カタログ内のライブラリの場合、vcpkg はバイナリ[1] �
 
 ## <a name="installation"></a>インストール
 
-GitHub から vcpkg リポジトリを複製する: https://github.com/Microsoft/vcpkg 任意のフォルダー場所にダウンロードすることができます。
+GitHub から vcpkg リポジトリを複製する: [https://github.com/Microsoft/vcpkg](https://github.com/Microsoft/vcpkg)。 任意のフォルダー場所にダウンロードすることができます。
 
 ルート フォルダーのブートストラップを実行します。
 
@@ -82,7 +81,7 @@ The following packages will be built and installed:
 Additional packages (*) will be installed to complete this operation.
 ```
 
-CMAKE プロジェクトの場合は、CMAKE_TOOLCHAIN_FILE を使用してライブラリを `find_package()` で使用できるようにします。 例:
+CMAKE プロジェクトの場合は、CMAKE_TOOLCHAIN_FILE を使用してライブラリを `find_package()` で使用できるようにします。 次に例を示します。
 
 ```cmd
 cmake .. -DCMAKE_TOOLCHAIN_FILE=vcpkg/scripts/buildsystems/vcpkg.cmake (Linux/MacOS)

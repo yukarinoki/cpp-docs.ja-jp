@@ -1,17 +1,16 @@
 ---
 title: C++ 準拠の強化
 ms.date: 10/31/2018
-ms.technology:
-- cpp-language
+ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: ad34e2721723e113417b45cf7c1da0da4575837f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
+ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694401"
+ms.lasthandoff: 02/25/2019
+ms.locfileid: "56809751"
 ---
 # <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#update_159) での C++ 準拠の改善
 
@@ -790,7 +789,7 @@ void f()
 
 テンプレート クラス内のメンバー関数のアウトオブライン定義では、既定の引数が許可されません。コンパイラは **/permissive** では警告を発し、**/permissive-** ではハード エラーを発します。
 
-Visual Studio の以前のバージョンでは、形式が間違っている次のコードでランタイム クラッシュが発生する可能性がありました。 Visual Studio 2017 バージョン 15.3 では、警告 C5034: "'A\<T>::f' クラス テンプレートのメンバーのアウトオブライン定義において既定の引数を使用することはできません" が生成されます。
+Visual Studio の以前のバージョンでは、形式が間違っている次のコードでランタイム クラッシュが発生する可能性がありました。 Visual Studio 2017 バージョン 15.3 では次の警告 C5034 が発生します。'A\<T>::f': クラス テンプレートのメンバーのアウトオブライン定義において既定の引数を使用することはできません。
 
 ```cpp
 template <typename T>
@@ -865,7 +864,7 @@ extern "C" __declspec(noinline) HRESULT __stdcall
 
 ### <a name="decltype-and-calls-to-deleted-destructors"></a>decltype と削除されたデストラクターの呼び出し
 
-以前のバージョンの Visual Studio では、"decltype" と関連付けられた式での削除されたデストラクターの呼び出しを、コンパイラは検出しませんでした。 Visual Studio 2017 バージョン 15.3 では、次のようなコードでは、"エラー C2280: 'A\<T>::~A(void)': 削除された関数を参照しようとしています" が発生します。
+以前のバージョンの Visual Studio では、"decltype" と関連付けられた式での削除されたデストラクターの呼び出しを、コンパイラは検出しませんでした。 Visual Studio 2017 バージョン 15.3 では、次のコードに対して "エラー C2280: 'A\<T>::~A(void)': 削除された関数を参照しようとしています" が発生します。
 
 ```cpp
 template<typename T>
@@ -888,7 +887,7 @@ void h()
 
 ### <a name="uninitialized-const-variables"></a>初期化されていない const 変数
 
-Visual Studio 2017 RTW リリースには、"const" 変数が初期化されていないと C++ コンパイラが診断を生成しないという回帰がありました。 この回帰は、Visual Studio 2017 バージョン 15.3 で修正されました。 次のコードでは、"警告 C4132: 'Value': const オブジェクトは初期化しなければなりません" が生成されます。
+Visual Studio 2017 RTW リリースには、"const" 変数が初期化されていないと C++ コンパイラが診断を生成しないという回帰がありました。 この回帰は、Visual Studio 2017 バージョン 15.3 で修正されました。 次のコードに対しては、"警告 C4132: 'Value': const オブジェクトは初期化しなければなりません" が発生するようになりました。
 
 ```cpp
 const int Value; //C4132
@@ -1532,7 +1531,7 @@ struct D : B<T*> {
 };
 ```
 
-Visual Studio 2017 バージョン 15.7 (**/std:c++17 モード**) では、D の `using` ステートメントで `typename` キーワードを必要とします。`typename` が指定されていない場合、コンパイラは "*'B<T\*>::type': 依存名が型でない*" という内容の警告 C4346 と、"*構文エラー: 識別子 '型'*" という内容のエラー C2061 を生成します。
+Visual Studio 2017 バージョン 15.7 の **/std:c++17** モードでは、D の `using` ステートメントにキーワード `typename` が必要です。`typename` がないと、コンパイラで警告 C4346: *'B<T\*>::type': 依存名は型ではありません*、およびエラー C2061: *構文エラー: 識別子 'type'* が発生します。
 
 ```cpp
 template<typename T>
@@ -1563,7 +1562,7 @@ int main() {
 
 Visual Studio の以前のエディションでは、テンプレート引数のない可変個引数テンプレート コンストラクター ベース クラス初期化リストが誤ってエラーなしで許可されていました。 Visual Studio 2017 バージョン 15.7 では、コンパイラ エラーが発生します。
 
-Visual Studio 2017 バージョン 15.7 の次のコード例では、"*エラー C2614: D\<int>: イニシャライズ リスト内のクラス 'B' が基底クラスでもメンバーでもありません*" が発生します。
+Visual Studio 2017 バージョン 15.7 の次のコード例では、*エラー C2614: D\<int>: イニシャライズ リスト内の 'B' が基底クラスでもメンバーでもありません* が発生します
 
 ```cpp
 template<typename T>
@@ -1685,7 +1684,7 @@ C++ 標準では、ユーザーが事前宣言または定義を名前空間 `st
 
 Microsoft は今後どこかの時点で、一部の STL 型を定義する場所を移動します。 これが行われると、名前空間 `std` に事前宣言を追加する既存のコードが破損します。 新しい警告 C4643 は、このようなソースの問題の特定に役立ちます。 この警告は **/default** モードでは有効に、既定では無効になっています。 **/Wall** または **/WX** でコンパイルされるプログラムに影響があります。
 
-次のコードにより、C4643: *Forward declaring 'vector' in namespace std is not permitted by the C++ Standard\(名前空間 std での事前宣言 'vector' は C++ 標準で許可されていません\)* が発生します。
+次のコードで C4643: *名前空間 std での 'vector' の事前宣言は C++ 標準では許可されていません* が発生するようになりました。
 
 ```cpp
 namespace std {
@@ -1701,7 +1700,7 @@ namespace std {
 
 ### <a name="constructors-that-delegate-to-themselves"></a>それ自体にデリゲートするコンストラクター
 
-C++ 標準では、コンストラクターがそれ自体にデリゲートするときにはコンパイラで診断を出力することを提案しています。 Microsoft C++ コンパイラの [/std:c++17](build/reference/std-specify-language-standard-version.md) モードと [/std:c++latest](build/reference/std-specify-language-standard-version.md) モードで、C7535: *'X::X': デリゲート コンストラクターはそのコンストラクター自体を呼び出します*が発生します。
+C++ 標準では、コンストラクターがそれ自体にデリゲートするときにはコンパイラで診断を出力することを提案しています。 Microsoft C++ コンパイラの [/std:c++17](build/reference/std-specify-language-standard-version.md) モードと [/std:c++latest](build/reference/std-specify-language-standard-version.md) モードで、C7535: *'X::X': デリゲート コンストラクターはそのコンストラクター自体を呼び出します* が発生するようになりました。
 
 このエラーがないと、次のプログラムでコンパイルされますが、無限ループが生成されます。
 
@@ -1865,9 +1864,9 @@ cl /EHsc /std:c++17 m.ixx /experimental:module
 cl /experimental:module /module:reference m.ifc main.cpp /std:c++14
 ```
 
-コンパイラでは、これらの両方のケースに対して C5050 が発生します: *警告 C5050: Possible incompatible environment while importing module 'm': mismatched C++ versions.Current "201402" module version "201703"\(C++ のバージョンが一致せず環境に互換性がないためモジュール 'm' をインポートできない可能性があります: 現在 "201402" モジュール バージョン "201703"\)*.
+このどちらの場合でも、コンパイラで次の C5050 が発生します。*警告 C5050: モジュール 'm' のインポート中に互換性のない環境が発生する可能性があります: C++ のバージョンが一致しません。Current "201402" module version "201703"\(C++ のバージョンが一致せず環境に互換性がないためモジュール 'm' をインポートできない可能性があります: 現在 "201402" モジュール バージョン "201703"\)*.
 
-さらに、.ifc ファイルが改ざんされている場合には必ずコンパイラで C7536 が発生します。 モジュール インターフェイスのヘッダーの下には、コンテンツの SHA2 ハッシュが含まれています。 インポート時に .ifc ファイルが同じようにハッシュされ、ヘッダーに提供されたハッシュと照合されます。これらが一致しない場合は C7536: *ifc が整合性チェックに失敗しました。SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6' が必要です*が発生します。
+さらに、.ifc ファイルが改ざんされている場合には必ずコンパイラで C7536 が発生します。 モジュール インターフェイスのヘッダーの下には、コンテンツの SHA2 ハッシュが含まれています。 インポート時に .ifc ファイルが同じようにハッシュされ、ヘッダーに提供されたハッシュと照合されます。これらが一致しない場合は C7536: *ifc が整合性チェックに失敗しました。SHA2: '66d5c8154df0c71d4cab7665bab4a125c7ce5cb9a401a4d8b461b706ddd771c6' が必要です* が発生します。
 
 ### <a name="partial-ordering-involving-aliases-and-non-deduced-contexts"></a>別名と非推定コンテキストが含まれる部分的な順序付け
 
