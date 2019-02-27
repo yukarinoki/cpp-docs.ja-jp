@@ -89,8 +89,8 @@ ms.locfileid: "56336580"
 |**選択範囲をブラシとして使用します。**|イメージの一部からカスタム ブラシを作成できます。 選択内容では、画像の選択範囲の色を分散するカスタム ブラシになります。 ドラッグするパスに沿った選択範囲のコピーが残されます。 緩やかに変化をドラッグする、複数のコピーを作成します。 詳細については、次を参照してください。[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)です。|
 |**コピーとアウトラインの選択**|現在の選択領域のコピーを作成し、その外枠を描画します。 背景色が、現在の選択範囲に含まれている、それが含まれる場合した[透過的な](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)選択します。
 |**色を調整します。**|開く、[カスタム カラー セレクター](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)イメージを使用する色をカスタマイズできます。 詳細については、次を参照してください。[カスタマイズまたは変更する色](../windows/customizing-or-changing-colors-image-editor-for-icons.md)します。|
-|**パレットの読み込み**|開く、[カラー パレットの読み込み ダイアログ ボックス](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md)、*.pal ファイルに保存されているパレットをロードできます。|
-|**パレットを保存します。**|パレットの色を *.pal ファイルに保存します。|
+|**パレットの読み込み**|開く、[カラー パレットの読み込み ダイアログ ボックス](../windows/load-palette-colors-dialog-box-image-editor-for-icons.md)、.pal ファイルに保存されているパレットをロードできます。|
+|**パレットを保存します。**|パレットの色を .pal ファイルに保存します。|
 |**不透明なを描画します。**|選択すると、現在の選択も不透明にします。 オフにすると、現在の選択範囲を透明します。 詳細については、次を参照してください。[を不透明または透明な背景を選択する](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)します。|
 |**ツール バー エディター**|開く、[新規ツール バー リソース ダイアログ ボックス](../windows/new-toolbar-resource-dialog-box.md)します。|
 |**グリッドの設定**|開く、**グリッドの設定** ダイアログ ボックスのグリッドをイメージを指定できます。|
