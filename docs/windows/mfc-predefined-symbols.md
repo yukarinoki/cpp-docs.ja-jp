@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 2f36f42ce24c2cdf1f3ac4c93248d430ec75f30a
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320862"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954953"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC の定義済みシンボル
 
@@ -23,12 +23,12 @@ ms.locfileid: "56320862"
 ```cpp
 #include <afxwin.h>      //MFC core and standard components
 #include <afxext.h>      //MFC extensions
-#include <afxdisp.h      //MFC automation classes
+#include <afxdisp.h>      //MFC automation classes
 #include <afxdtctl.h>   //MFC support for Internet Explorer common controls
 #include <afxcmn.h>      //MFC support for Windows common controls.
 ```
 
-ヘッダー ファイルには、MFC の一般的な値のシンボル ID の値が含まれます。 これらのシンボルを使用できるは、MFC プロジェクトで作業している場合だけです。 AFX _ プリフィックスには、標準のシンボル名のプレフィックスが付いています。
+ヘッダー ファイルには、MFC の一般的な値のシンボル ID の値が含まれます。 これらのシンボルを使用できるは、MFC プロジェクトで作業している場合だけです。 `AFX_`プレフィックスの標準のシンボル名のプレフィックスが続きます。
 
 |||
 |-|-|
@@ -211,7 +211,7 @@ ms.locfileid: "56320862"
 |AFX_IDS_UPDATING_ITEMS|AFX_IDS_USER_EXCEPTION|
 |AFX_IDS_VERB_EDIT|AFX_IDS_VERB_PROPERTIES|
 
-## <a name="mfc-database-programming-symbols"></a>MFC データベース プログラミング シンボル
+## <a name="mfc-database-programming"></a>MFC データベース プログラミング
 
 このテーブル内のシンボルは、データベースのサポートが追加されたときに、MFC プロジェクトでのみ表示されます。 SQL server とデータベース プログラミングへの接続を MFC をサポートしています。
 
@@ -232,9 +232,11 @@ ms.locfileid: "56320862"
 |AFX_IDP_SQL_SNAPSHOT_ NOT_SUPPORTED|AFX_IDP_SQL_SQL_CONFORMANCE|
 |AFX_IDP_SQL_SQL_NO_TOTAL|AFX_IDP_SQL_UPDATE_DELETE_FAILED|
 
-## <a name="mfc-windows-programming-symbols"></a>MFC Windows プログラミングのシンボル
+## <a name="mfc-windows-programming"></a>MFC Windows プログラミング
 
-これらのシンボルは、MFC のサポート ファイルの一部でも、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、メニューで使用されます。 メニューを使用する場合、**メニュー エディター**、これらのシンボルが表示されます、**プロパティ ウィンドウ**一般的なメニュー コマンドに関連付けられています。 たとえば、アプリケーションがある場合、**ファイル**メニューで、**終了**コマンド、コマンドは ID_APP_EXIT シンボルに関連付けられますことで、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)。
+これらのシンボルは、MFC のサポート ファイルの一部でも、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、メニューで使用されます。
+
+メニューを使用するときに、**メニュー エディター**、これらのシンボルが表示されます、**プロパティ ウィンドウ**一般的なメニュー コマンドに関連付けられています。 たとえば、アプリケーションがある場合、**ファイル**メニューで、**終了**コマンド、コマンドは ID_APP_EXIT シンボルに関連付けられますことで、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)。
 
 ||||
 |-|-|-|

@@ -5,29 +5,31 @@ helpviewer_keywords:
 - symbols [C++], ATL predefined
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
-ms.openlocfilehash: bb8b0db77b2add584e2fa8716a2d1821f5cae1fc
-ms.sourcegitcommit: 470de1337035dd33682d935b4b6c6d8b1bdb0bbb
+ms.openlocfilehash: 16991746c5c858310466f7eebd91a8478d2dcc5c
+ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56320459"
+ms.lasthandoff: 02/27/2019
+ms.locfileid: "56954849"
 ---
 # <a name="atl-predefined-symbols"></a>ATL の定義済みシンボル
 
-これらのシンボルは、ATL ヘッダー ファイルで定義されているが、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、ダイアログ ボックスが主に使用されます。 ダイアログとコントロールを使用する場合に、[ダイアログ エディター](../windows/dialog-editor.md)にこれらのシンボルが表示されます、**プロパティ**コモン コントロールに関連付けられているウィンドウ。 たとえば、ダイアログ ボックスがある場合、**キャンセル**ボタン、コマンドは IDCANCEL シンボルに関連付けられますことで、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)。
+これらのシンボルは、ATL ヘッダー ファイルで定義されているが、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、ダイアログ ボックスが主に使用されます。
+
+ダイアログとコントロールを使用する場合に、[ダイアログ エディター](../windows/dialog-editor.md)にこれらのシンボルが表示されます、**プロパティ**コモン コントロールに関連付けられているウィンドウ。 たとえば、ダイアログ ボックスがある場合、**キャンセル**ボタン、コマンドは IDCANCEL シンボルに関連付けられますことで、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)。
 
 |||
 |-|-|
-|IDABORT|制御:ダイアログ ボックスの中止 ボタン|
-|IDC_STATIC|制御:スタティック コントロール|
-|IDCANCEL|制御:ダイアログ ボックスの [キャンセル] ボタン|
-|IDIGNORE|制御:ダイアログ ボックス [無視] ボタン|
-|IDNO|制御:ダイアログ ボックスのボタンがないです。|
-|IDOK|制御:ダイアログ ボックスの [OK] ボタン|
-|IDR_ACCELERATOR1|リソース:アクセラレータ テーブル|
-|IDRETRY|制御:ダイアログ ボックスの [再試行] ボタン|
-|IDS_PROJNAME|文字列: 現在のアプリケーション名|
-|IDYES|制御:ダイアログ ボックスの [はい] ボタン|
+|IDABORT|(コントロール)ダイアログ ボックスで、中止 ボタン|
+|IDC_STATIC|(コントロール)スタティック コントロール|
+|IDCANCEL|(コントロール)ダイアログ ボックスで、[キャンセル] ボタン|
+|IDIGNORE|(コントロール)ダイアログ ボックスで、[無視] ボタン|
+|IDNO|(コントロール)ダイアログ ボックスで、 ボタンがないです。|
+|IDOK|(コントロール)ダイアログ ボックスで、[ok] ボタン|
+|IDR_ACCELERATOR1|(リソース)アクセラレータ テーブル|
+|IDRETRY|(コントロール)ダイアログ ボックスで、[再試行] ボタン|
+|IDS_PROJNAME|(string)現在のアプリケーション名|
+|IDYES|(コントロール)ダイアログ ボックスで、[はい] ボタン|
 
 ## <a name="requirements"></a>必要条件
 
