@@ -1,21 +1,21 @@
 ---
 title: binder1st クラス
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::binder1st
+- functional/std::binder1st
 helpviewer_keywords:
 - binder1st class
 ms.assetid: 6b8ee343-c82f-48f8-867d-06f9d1d324c0
-ms.openlocfilehash: a8e962e118d162e46e2edfca3ce11e7cbf322e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f70a1a4a0903b66edf5f42e59788b9a2d97fc967
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439638"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006631"
 ---
 # <a name="binder1st-class"></a>binder1st クラス
 
-指定した値に二項関数の 1 番目の引数をバインドして二項関数オブジェクトを単項関数オブジェクトに変換するコンストラクターを提供するテンプレート クラス。
+指定した値に二項関数の 1 番目の引数をバインドして二項関数オブジェクトを単項関数オブジェクトに変換するコンストラクターを提供するテンプレート クラス。 優先の c++ 11 で非推奨と[バインド](functional-functions.md#bind)、c++ 17 で削除します。
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +29,7 @@ public:
     typedef typename Operation::argument_type argument_type;
     typedef typename Operation::result_type result_type;
     binder1st(
-        const Operation& Func,
+        const Operation& binary_fn,
         const typename Operation::first_argument_type& left);
 
     result_type operator()(const argument_type& right) const;
@@ -43,7 +43,7 @@ protected:
 
 ### <a name="parameters"></a>パラメーター
 
-*Func*<br/>
+*binary_fn*<br/>
 単項関数オブジェクトに変換する二項関数オブジェクト。
 
 *left*<br/>
@@ -58,9 +58,9 @@ protected:
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスは、二項関数オブジェクトのコピーを格納する*Func*で`op`のコピーと*左*で`value`します。 そのメンバー関数 `operator()` は **op**( **value**, `right`) を返すように定義されています。
+テンプレート クラスは、二項関数オブジェクトのコピーを格納する*binary_fn*で`op`のコピーと*左*で`value`します。 そのメンバー関数`operator()`返すよう`op( value, right )`します。
 
-場合*Func*型のオブジェクトは、`Operation`と`c`が定数の場合、 [bind1st](../standard-library/functional-functions.md#bind1st) ( `Func`、 `c` ) と同じですが、`binder1st`クラスのコンス トラクター`binder1st` \< **操作**> ( `Func`、 `c` ) でより便利です。
+場合*binary_fn*型のオブジェクトは、`Operation`と`c`が定数の場合、`bind1st( binary_fn, c )`より便利な相当するは`binder1st<Operation>( binary_fn, c )`します。 詳細については、次を参照してください。 [bind1st](../standard-library/functional-functions.md#bind1st)します。
 
 ## <a name="example"></a>例
 

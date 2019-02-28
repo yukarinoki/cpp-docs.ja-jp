@@ -1,21 +1,21 @@
 ---
 title: binary_function 構造体
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- functional/std::binary
+- functional/std::binary_function
 helpviewer_keywords:
 - binary_function class
 ms.assetid: 79b6d53d-644c-4add-b0ba-3a5f40f69c60
-ms.openlocfilehash: 5a153d85f9f6dcb93a074725ee9582ccfc1a66ad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2a6735ab558480039a0d2fa0e83ee4c5de02c5f2
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466769"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006267"
 ---
 # <a name="binaryfunction-struct"></a>binary_function 構造体
 
-二項関数オブジェクトを提供する派生クラスによって継承される可能性がある型を定義する空の基底構造体。
+二項関数オブジェクトを提供する派生クラスによって継承される可能性がある型を定義する空の基底構造体。 C++ 11、c++ 17 では削除では、非推奨とされます。
 
 ## <a name="syntax"></a>構文
 
@@ -31,7 +31,7 @@ struct binary_function {
 
 このテンプレート構造体は、フォームのメンバー関数を定義するクラスの基本として機能します。
 
-> *result_type* * * operator() (const * * <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**(& a)) 定数**
+> *result_type* ** operator()( const** <em>first_argument_type</em>**&, const** <em>second_argument_type</em>**& ) const**
 
 このような二項関数はすべて、最初の引数の型として *first_argument_type* を参照し、2 つ目の引数の型として *second_argument_type* を参照し、戻り値の型として *result_type* を参照できます。
 

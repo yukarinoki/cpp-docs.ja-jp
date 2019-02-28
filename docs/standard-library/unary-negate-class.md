@@ -1,21 +1,21 @@
 ---
 title: unary_negate クラス
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::unary_negate
+- functional/std::unary_negate
 helpviewer_keywords:
 - unary_negate class
 ms.assetid: e3b86eec-3205-49b9-ab83-f55225af4e0c
-ms.openlocfilehash: b43db182d9274281020d7ce92cfa1b3efe724197
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 96d70a24b87a84275f17813e76473a82fbff90da
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326018"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006709"
 ---
 # <a name="unarynegate-class"></a>unary_negate クラス
 
-指定した単項関数の戻り値を否定するメンバー関数を提供するテンプレート クラス。
+指定した単項関数の戻り値を否定するメンバー関数を提供するテンプレート クラス。 C++ 17 の優先で非推奨と[not_fn](functional-functions.md#not_fn)します。
 
 ## <a name="syntax"></a>構文
 
