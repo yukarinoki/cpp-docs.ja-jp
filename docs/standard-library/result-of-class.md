@@ -1,6 +1,6 @@
 ---
 title: result_of クラス
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
 - type_traits/std::result_of
 - type_traits/std::result_of_t
@@ -10,16 +10,16 @@ helpviewer_keywords:
 - std::result_of_t
 - std::result_of::type
 ms.assetid: 5374a096-4b4a-4712-aa97-6852c5cdd6be
-ms.openlocfilehash: 84a0fbc9ecfb1a6ba18a10aafce8cd8e50cd5ec6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f60a3ef6528da33fd1117fc940e961e9fe0987df
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563827"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006553"
 ---
 # <a name="resultof-class"></a>result_of クラス
 
-指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。
+指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。 C++ 14、c++ 17 では非推奨に追加されます。
 
 ## <a name="syntax"></a>構文
 
@@ -45,7 +45,7 @@ template<class T>
 
 ## <a name="remarks"></a>Remarks
 
-このテンプレートを使用して、コンパイル時の結果の型を決定`Fn`(`ArgTypes`) ここで、 *Fn*が呼び出し可能型、関数への参照またはで型の引数リストを使用して呼び出される呼び出し可能型への参照*ArgTypes*します。 評価されていない式 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` が整形式の場合、テンプレート クラスの `type` メンバーによって、`decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` の結果の型が指定されます。 それ以外の場合、このテンプレート クラスはメンバー `type` を持ちません。 型*Fn*パラメーター パック内のすべての型と*ArgTypes*完全な型は、必要があります**void**、または不明なバインドの配列。
+このテンプレートを使用して、コンパイル時の結果の型を決定`Fn`(`ArgTypes`) ここで、 *Fn*が呼び出し可能型、関数への参照またはで型の引数リストを使用して呼び出される呼び出し可能型への参照*ArgTypes*します。 評価されていない式 `std::invoke(declval<Fn>(), declval<ArgTypes>()...)` が整形式の場合、テンプレート クラスの `type` メンバーによって、`decltype(std::invoke(declval<Fn>(), declval<ArgTypes>()...))` の結果の型が指定されます。 それ以外の場合、このテンプレート クラスはメンバー `type` を持ちません。 型*Fn*パラメーター パック内のすべての型と*ArgTypes*完全な型は、必要があります**void**、または不明なバインドの配列。 優先の非推奨[invoke_result](invoke-result-class.md) c++ 17 でします。
 
 ## <a name="requirements"></a>必要条件
 
@@ -56,3 +56,4 @@ template<class T>
 ## <a name="see-also"></a>関連項目
 
 [<type_traits>](../standard-library/type-traits.md)<br/>
+[invoke_result クラス](invoke-result-class.md)<br/>

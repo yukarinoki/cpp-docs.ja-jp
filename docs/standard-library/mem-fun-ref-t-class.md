@@ -1,21 +1,21 @@
 ---
 title: mem_fun_ref_t クラス
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::mem_fun_ref_t
+- functional/std::mem_fun_ref_t
 helpviewer_keywords:
 - mem_fun_ref_t class
 ms.assetid: 7dadcac3-8d33-4e4b-a792-81bd53d3df39
-ms.openlocfilehash: 752b3aeb4126ba41b7a0741ed9de68db018dd6c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0eb7d20037598e1fa03fa7bf8e1d6b79a788ae1e
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50488037"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006319"
 ---
 # <a name="memfunreft-class"></a>mem_fun_ref_t クラス
 
-使用するアダプター クラスを`non_const`参照引数による初期化時に、単項関数オブジェクトとして呼び出せるようにする引数を受け取らないメンバー関数。
+使用するアダプター クラスを`non_const`参照引数による初期化時に、単項関数オブジェクトとして呼び出せるようにする引数を受け取らないメンバー関数。 C++ 11、c++ 17 では削除では、非推奨とされます。
 
 ## <a name="syntax"></a>構文
 

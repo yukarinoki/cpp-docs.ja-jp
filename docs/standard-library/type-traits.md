@@ -1,22 +1,22 @@
 ---
 title: '&lt;type_traits&gt;'
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
 - <type_traits>
 helpviewer_keywords:
 - typetrait header
 - type_traits
 ms.assetid: 2260b51f-8160-4c66-a82f-00b534cb60d4
-ms.openlocfilehash: f56334cbb25132d45dfabb68cbcd5b832096a87c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c80629fd8771206d193b53aa7c32073de0ba45dd
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514683"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006728"
 ---
 # <a name="lttypetraitsgt"></a>&lt;type_traits&gt;
 
-型引数のプロパティに関する情報を提供する、または変換された型を生成する、コンパイル時定数を備えたテンプレートを定義します。
+コンパイル時の定数、型引数のプロパティに関する情報を提供または変換後の型を生成するためのテンプレートを定義します。
 
 ## <a name="syntax"></a>構文
 
@@ -26,29 +26,33 @@ ms.locfileid: "50514683"
 
 ## <a name="remarks"></a>Remarks
 
-クラスとテンプレートは、 \<type_traits > 型の推定、分類、および種類関連のエラーを検出して、ジェネリック コードを最適化するため、コンパイル時に変換をサポートするために使用されます。 これらのクラスとテンプレートには、型のプロパティについて記述する単項の型の特徴、型間の関係を記述する二項の型の特徴、および型のプロパティを変更する変換の特徴が含まれます。
+クラスとテンプレートは、 \<type_traits > 型の推定、分類、およびコンパイル時に変換をサポートするために使用されます。 これらは、型関連のエラーを検出して、ジェネリック コードを最適化するためにも使用されます。 単項の型の特徴の種類のプロパティを説明する、バイナリ型の特徴は、型の間の関係を記述および変換の特徴は、型のプロパティを変更します。
 
-型の特徴をサポートするために、ヘルパー クラス `integral_constant` が定義されています。 これには、型の述語の基底クラスを形成するテンプレート特殊化 `true_type` と `false_type` があります。 *型の述語*は、1 つ以上の型引数を受け取るテンプレートです。 型の述語が *true を保持*する場合は、[true_type](../standard-library/type-traits-typedefs.md#true_type) からパブリックに (直接または間接的に) 派生されます。 型の述語が *false を保持*する場合は、[false_type](../standard-library/type-traits-typedefs.md#false_type) からパブリックに (直接または間接的に) 派生されます。
+ヘルパー クラス`integral_constant`し、そのテンプレートの特殊化`true_type`と`false_type`型の述語の基底クラスを形成します。 *型の述語*は、1 つ以上の型引数を受け取るテンプレートです。 型の述語*true を保持*、パブリックに派生、直接的または間接的にから[true_type](../standard-library/type-traits-typedefs.md#true_type)します。 型の述語*false を保持*、パブリックに派生、直接的または間接的にから[false_type](../standard-library/type-traits-typedefs.md#false_type)します。
 
 *型修飾子*または*変換の特徴*は、1 つ以上のテンプレート引数を受け取り、変更された型のシノニムである 1 つのメンバー、`type` を持つテンプレートです。
 
 ### <a name="alias-templates"></a>エイリアス テンプレート
 
-型の特徴の式を簡略化するために、`typename some_trait<T>::type` の[エイリアス テンプレート](../cpp/aliases-and-typedefs-cpp.md)が提供されます。" `some_trait`" はテンプレート クラス名です。 たとえば、[add_const](../standard-library/add-const-class.md) には、その型 `add_const_t` のエイリアス テンプレートがあり、次のように定義されています。
+型の特徴の式を簡略化する[エイリアス テンプレート](../cpp/aliases-and-typedefs-cpp.md)の`typename some_trait<T>::type`が提供されます*some_trait*はテンプレート クラスの名前です。 たとえば、[add_const](../standard-library/add-const-class.md) には、その型 `add_const_t` のエイリアス テンプレートがあり、次のように定義されています。
 
 ```cpp
 template <class T>
 using add_const_t = typename add_const<T>::type;
 ```
 
-|||||
-|-|-|-|-|
-|add_const_t|aligned_storage_t|make_signed_t|remove_pointer_t|
-|add_cv_t|aligned_union_t|make_unsigned_t|remove_reference_t|
-|add_lvalue_reference_t|common_type_t|remove_all_extents_t|remove_volatile_t|
-|add_pointer_t|conditional_t|remove_const_t|result_of_t|
-|add_rvalue_reference_t|decay_t|remove_cv_t|underlying_type_t|
-|add_volatile_t|enable_if_t|remove_extent_t||
+これらは、指定されたエイリアス、`type`メンバー。
+
+||||
+|-|-|-|
+| add_const_t | add_cv_t | add_lvalue_reference_t |
+| add_pointer_t | add_rvalue_reference_t | add_volatile_t |
+| aligned_storage_t | aligned_union_t | common_type_t |
+| conditional_t | decay_t | enable_if_t |
+| invoke_result_t | make_signed_t | make_unsigned_t |
+| remove_all_extents_t | remove_const_t | remove_cv_t |
+| remove_extent_t | remove_pointer_t | remove_reference_t |
+| remove_volatile_t | result_of_t | underlying_type_t |
 
 ### <a name="classes"></a>クラス
 
@@ -133,6 +137,10 @@ using add_const_t = typename add_const<T>::type;
 |[is_nothrow_move_assignable](../standard-library/type-traits-functions.md#is_nothrow_move_assignable)|型が、移動で割り当て可能で、割り当てがスローしないと判明しているかどうかをテストします。|
 |[is_nothrow_destructible](../standard-library/is-nothrow-destructible-class.md)|型が破棄可能で、デストラクターがスローしないと判明しているかどうかをテストします。|
 |`has_virtual_destructor`|型に仮想デストラクターが存在するかどうかをテストします。|
+| [is_invocable](is-invocable-classes.md) | 指定した引数型を使用して、呼び出し可能型を呼び出すことがあるかどうかをテストします。<br/> C++ 17 で追加されます。 |
+| [is_invocable_r](is-invocable-classes.md) | 指定した型に変換が指定した引数型と、結果を使用して、呼び出し可能型を呼び出すことがかどうかテストします。<br/> C++ 17 で追加されます。 |
+| [is_nothrow_invocable](is-invocable-classes.md) | 例外をスローしないが判明し、指定された引数を使用して、呼び出し可能型を呼び出すことがあるかどうかをテストします。<br/> C++ 17 で追加されます。 |
+| [is_nothrow_invocable_r](is-invocable-classes.md) | 呼び出し可能型の指定した引数型を使用して呼び出すことができるかどうかと、スローしないと判明例外、および結果は、指定した型に変換できるかをテストします。<br/> C++ 17 で追加されます。 |
 
 型プロパティのクエリ
 
@@ -200,7 +208,8 @@ const/volatile の変更
 |[conditional](../standard-library/conditional-class.md)|条件が true の場合は、最初に指定された型が生成され、それ以外の場合、2 番目に指定された型になります。|
 |[decay](../standard-library/decay-class.md)|値で渡された型を生成します。 非参照、非定数、非揮発の型、または型へのポインターを作成します。|
 |[enable_if](../standard-library/enable-if-class.md)|条件が true の場合は、指定された型が生成され、それ以外の場合、型は生成されません。|
-|[result_of](../standard-library/result-of-class.md)|指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。|
+|[invoke_result](invoke-result-class.md)|指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。 <br/>C++ 17 で追加されます。 |
+|[result_of](../standard-library/result-of-class.md)|指定された引数型を受け取る呼び出し可能型の戻り値の型を決定します。 <br/>C++ 14、c++ 17 では非推奨に追加されます。 |
 |[underlying_type](../standard-library/underlying-type-class.md)|列挙型の基になる整数型を生成します。|
 
 ## <a name="see-also"></a>関連項目
