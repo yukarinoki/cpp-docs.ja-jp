@@ -21,6 +21,7 @@ apilocation:
 - ucrtbase.dll
 - api-ms-win-crt-multibyte-l1-1-0.dll
 - api-ms-win-crt-string-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _tcsncpy_s
@@ -45,12 +46,12 @@ helpviewer_keywords:
 - _tcsncpy_s function
 - wcsncpy_s_l function
 ms.assetid: a971c800-94d1-4d88-92f3-a2fe236a4546
-ms.openlocfilehash: 8a6fc997ed874ba976e96f87df377e6fafd84a6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2372cab4cfb689aa52de81d9e15602f2478ddde7
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430070"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210823"
 ---
 # <a name="strncpys-strncpysl-wcsncpys-wcsncpysl-mbsncpys-mbsncpysl"></a>strncpy_s、_strncpy_s_l、wcsncpy_s、_wcsncpy_s_l、_mbsncpy_s、_mbsncpy_s_l
 
@@ -224,7 +225,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 |-------------|---------------------|
 |**strncpy_s**、 **_strncpy_s_l**|\<string.h>|
 |**wcsncpy_s**、 **_wcsncpy_s_l**|\<string.h> または \<wchar.h>|
-|**_mbsncpy_s**、 **_mbsncpy_s_l**|\<mbstring.h>|
+|**_mbsncpy_s**, **_mbsncpy_s_l**|\<mbstring.h>|
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
