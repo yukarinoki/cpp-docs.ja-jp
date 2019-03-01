@@ -27,6 +27,7 @@ apilocation:
 - msvcr120_clr0400.dll
 - ucrtbase.dll
 - api-ms-win-crt-convert-l1-1-0.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - _itoa
@@ -98,12 +99,12 @@ helpviewer_keywords:
 - converting numbers, to strings
 - _itoa function
 ms.assetid: 46592a00-77bb-4e73-98c0-bf629d96cea6
-ms.openlocfilehash: 182e7190554382f56d43f94fefe209fd38a7b78b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 016f3474345b623415be9fe33556bb9f466542ad
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464091"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57210537"
 ---
 # <a name="itoa-itoa-ltoa-ltoa-ultoa-ultoa-i64toa-ui64toa-itow-ltow-ultow-i64tow-ui64tow"></a>itoa、_itoa、ltoa、_ltoa、ultoa、_ultoa、_i64toa、_ui64toa、_itow、_ltow、_ultow、_i64tow、_ui64tow
 
@@ -164,7 +165,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 変換される数値。
 
 *バッファー*<br/>
@@ -187,7 +188,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 > [!IMPORTANT]
 > これらの関数は、小さすぎてバッファーの末尾に記述できます。 バッファー オーバーランを回避することを確認します*バッファー*変換された数字および末尾の null 文字と記号の文字を保持するのに十分な大きさです。 これらの関数の誤用重大なセキュリティの問題が原因で、コード。
 
-これらの関数が非推奨の警告を発生するセキュリティ問題については、既定では、その可能性があるのため[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**この関数または変数が安全可能性があります。使用を検討して** *safe_function* **代わりにします。非推奨を無効にするには、_CRT_SECURE_NO_WARNINGS を使用します。** 使用するソース コードを変更することをお勧めします。、 *safe_function*警告メッセージをお勧めします。 安全な関数には、指定されたバッファー サイズより多くの文字は書き込みません。 詳細については、次を参照してください。 [_itoa_s、_itow_s 関数](itoa-s-itow-s.md)します。
+これらの関数が非推奨の警告を発生するセキュリティ問題については、既定では、その可能性があるのため[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**この関数または変数が安全なない可能性があります。使用を検討して** *safe_function* **代わりにします。非推奨を無効にするには、_CRT_SECURE_NO_WARNINGS を使用します。** 使用するソース コードを変更することをお勧めします。、 *safe_function*警告メッセージをお勧めします。 安全な関数には、指定されたバッファー サイズより多くの文字は書き込みません。 詳細については、次を参照してください。 [_itoa_s、_itow_s 関数](itoa-s-itow-s.md)します。
 
 非推奨の警告なくこれらの関数を使用する定義、 **_CRT_SECURE_NO_WARNINGS** CRT ヘッダーをインクルードする前にプリプロセッサ マクロ。 これを行う開発者コマンド プロンプトでコマンド ラインで追加することで、 **/D_CRT_SECURE_NO_WARNINGS**コンパイラ オプションを**cl**コマンド。 それ以外の場合、ソース ファイルで、マクロを定義します。 プリコンパイル済みヘッダーを使用する場合は、プリコンパイル済みヘッダーの上部にあるマクロを定義します。 通常 stdafx.h ファイルを含めるようにします。 ソース コードでマクロを定義するには、使用、 **#define**ディレクティブがこの例のように、すべての CRT ヘッダーをインクルードする前に。
 
