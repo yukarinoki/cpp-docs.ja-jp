@@ -1,21 +1,21 @@
 ---
 title: const_mem_fun1_ref_t クラス
-ms.date: 11/04/2016
+ms.date: 02/21/2019
 f1_keywords:
-- xfunctional/std::const_mem_fun1_ref_t
+- functional/std::const_mem_fun1_ref_t
 helpviewer_keywords:
 - const_mem_fun1_ref_t class
 ms.assetid: 8220d373-fa1c-44be-a21d-96d49b3ea6bb
-ms.openlocfilehash: e90ac09543c0704cf900e0fc5448e295034dcb66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21d53178bf7ed80b5e0b170619e6221826393dab
+ms.sourcegitcommit: 4299caac2dc9e806c74ac833d856a3838b0f52a1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516445"
+ms.lasthandoff: 02/28/2019
+ms.locfileid: "57006449"
 ---
 # <a name="constmemfun1reft-class"></a>const_mem_fun1_ref_t クラス
 
-参照引数による初期化を行うときに、1 つの引数を使用する **const** メンバー関数を二項関数オブジェクトとして呼び出せるようにするアダプター クラス。
+参照引数による初期化を行うときに、1 つの引数を使用する **const** メンバー関数を二項関数オブジェクトとして呼び出せるようにするアダプター クラス。 C++ 11、c++ 17 では削除では、非推奨とされます。
 
 ## <a name="syntax"></a>構文
 
@@ -46,7 +46,7 @@ class const_mem_fun1_ref_t
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート クラスのコピーを格納する*Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数 `operator()` は、(`left`.\*Pm)(`right`) **const** を返すように定義されています。
+テンプレート クラスのコピーを格納する*Pm*、クラスのメンバー関数へのポインターでなければならない`Type`、プライベート メンバー オブジェクトにします。 そのメンバー関数 `operator()` は、(`left`.\**Pm*)(`right`) **const** を返すように定義されています。
 
 ## <a name="example"></a>例
 
