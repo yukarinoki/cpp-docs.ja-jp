@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler instances
 ms.assetid: 4819365f-ef99-49cc-963e-50a2a35a8d6b
-ms.openlocfilehash: 370f8a3a8fdcc8e1daaee2d3424f939fb719a449
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19bd871857dcef6aaef153798388c0272239fa1f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570171"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301299"
 ---
 # <a name="scheduler-instances"></a>スケジューラ インスタンス
 
@@ -38,7 +38,7 @@ ms.locfileid: "50570171"
 
 通常、`CurrentScheduler`クラスは、現在のスケジューラへのアクセスに使用されます。 `Scheduler`クラスは、現在ではないスケジューラを管理する必要がある場合に便利です。
 
-次のセクションでは、作成してスケジューラ インスタンスを管理する方法について説明します。 これらのタスクを示す完全な例を参照してください[方法: スケジューラ インスタンスを管理](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)します。
+次のセクションでは、作成してスケジューラ インスタンスを管理する方法について説明します。 これらのタスクを示す完全な例を参照してください[方法。スケジューラ インスタンスを管理](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)します。
 
 [[トップ](#top)]
 
@@ -95,7 +95,7 @@ ms.locfileid: "50570171"
 |------------|-----------------|
 |[作成します。](reference/currentscheduler-class.md#create)|作成、`Scheduler`オブジェクトを指定したポリシーを使用し、現在のコンテキストに関連付けます。|
 |[Get](reference/currentscheduler-class.md#get)|ポインターを取得、`Scheduler`現在のコンテキストに関連付けられているオブジェクト。 このメソッドの参照カウントをインクリメントしていない、`Scheduler`オブジェクト。|
-|[デタッチ](reference/currentscheduler-class.md#detach)|現在のコンテキストから現在のスケジューラをデタッチし、現在のスケジューラとして 1 つ前を設定します。|
+|[Detach](reference/currentscheduler-class.md#detach)|現在のコンテキストから現在のスケジューラをデタッチし、現在のスケジューラとして 1 つ前を設定します。|
 |[RegisterShutdownEvent](reference/currentscheduler-class.md#registershutdownevent)|現在のスケジューラが破棄されるときに、ランタイムが設定されるイベントを登録します。|
 |[CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)|作成、 [concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)現在のスケジューラ内のオブジェクト。|
 |[ScheduleTask](reference/currentscheduler-class.md#scheduletask)|現在のスケジューラのスケジュール キューには、軽量タスクを追加します。|
@@ -106,7 +106,7 @@ ms.locfileid: "50570171"
 |メソッド|説明|
 |------------|-----------------|
 |[作成します。](reference/scheduler-class.md#create)|作成、`Scheduler`オブジェクトを指定したポリシーを使用します。|
-|[添付](reference/scheduler-class.md#attach)|関連付けます、`Scheduler`と共に、現在のコンテキスト オブジェクト。|
+|[Attach](reference/scheduler-class.md#attach)|関連付けます、`Scheduler`と共に、現在のコンテキスト オブジェクト。|
 |[参照](reference/scheduler-class.md#reference)|参照カウンターをインクリメント、`Scheduler`オブジェクト。|
 |[Release](reference/scheduler-class.md#release)|デクリメントの参照カウンター、`Scheduler`オブジェクト。|
 |[RegisterShutdownEvent](reference/scheduler-class.md#registershutdownevent)|ときに、ランタイムが設定されるイベントを登録、`Scheduler`オブジェクトは破棄されます。|
@@ -120,7 +120,7 @@ ms.locfileid: "50570171"
 
 ##  <a name="example"></a> 「例」
 
-作成してスケジューラ インスタンスを管理する方法の基本的な例については、次を参照してください。[方法: スケジューラ インスタンスを管理](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)します。
+作成してスケジューラ インスタンスを管理する方法の基本的な例については、次を参照してください。[方法。スケジューラ インスタンスを管理](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -128,4 +128,3 @@ ms.locfileid: "50570171"
 [方法: スケジューラ インスタンスを管理する](../../parallel/concrt/how-to-manage-a-scheduler-instance.md)<br/>
 [スケジューラ ポリシー](../../parallel/concrt/scheduler-policies.md)<br/>
 [スケジュール グループ](../../parallel/concrt/schedule-groups.md)
-

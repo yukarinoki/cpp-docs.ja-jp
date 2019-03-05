@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ACL object global functions
 - security IDs [C++]
 ms.assetid: 6a584bfe-16b7-47f4-8439-9c789c41567a
-ms.openlocfilehash: 95074860c5fc5bef02852600b51751e9a028465a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c9a6fd31850ed137167b6987ddf2f83f34c64a1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555234"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295878"
 ---
 # <a name="security-global-functions"></a>セキュリティに関するグローバル関数
 
@@ -274,7 +274,7 @@ inline bool AtlGetSacl(
 *ObjectType*<br/>
 値を指定します、 [SE_OBJECT_TYPE](/windows/desktop/api/accctrl/ne-accctrl-_se_object_type)で識別されるオブジェクトの種類を示す列挙体、 *hObject*パラメーター。
 
-*psacl の値として*<br/>
+*pSacl*<br/>
 取得したセキュリティ情報を含む SACL のオブジェクトへのポインター。
 
 *bRequestNeededPrivileges*<br/>

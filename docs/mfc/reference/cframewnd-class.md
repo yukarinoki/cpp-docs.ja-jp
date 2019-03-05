@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CFrameWnd [MFC], m_bAutoMenuEnable
 - CFrameWnd [MFC], rectDefault
 ms.assetid: e2220aba-5bf4-4002-b960-fbcafcad01f1
-ms.openlocfilehash: 3259780d73004c9d1654c26434b55627923cfe23
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 7bdb681754a500ab86538f3397b4c07284b850d0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178793"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300890"
 ---
 # <a name="cframewnd-class"></a>CFrameWnd クラス
 
@@ -161,10 +161,10 @@ class CFrameWnd : public CWnd
 |[CFrameWnd::LoadFrame](#loadframe)|リソースの情報からフレーム ウィンドウを動的に作成するを呼び出します。|
 |[CFrameWnd::NegotiateBorderSpace](#negotiateborderspace)|フレーム ウィンドウの境界領域をネゴシエートします。|
 |[CFrameWnd::OnBarCheck](#onbarcheck)|指定したコントロール バーで、アクションが実行されるたびに呼び出されます。|
-|[受信](#oncontexthelp)|インプレース項目については、shift キーを押しながら f1 キーを処理します。|
-|[Cframewnd::onsetpreviewmode](#onsetpreviewmode)|印刷プレビュー モードの内外には、アプリケーションのメイン フレーム ウィンドウを設定します。|
+|[CFrameWnd::OnContextHelp](#oncontexthelp)|インプレース項目については、shift キーを押しながら f1 キーを処理します。|
+|[CFrameWnd::OnSetPreviewMode](#onsetpreviewmode)|印刷プレビュー モードの内外には、アプリケーションのメイン フレーム ウィンドウを設定します。|
 |[CFrameWnd::OnUpdateControlBarMenu](#onupdatecontrolbarmenu)|関連付けられているメニューが更新されたときに、フレームワークによって呼び出されます。|
-|[表示](#recalclayout)|コントロール バーの位置を変更、`CFrameWnd`オブジェクト。|
+|[CFrameWnd::RecalcLayout](#recalclayout)|コントロール バーの位置を変更、`CFrameWnd`オブジェクト。|
 |[CFrameWnd::SaveBarState](#savebarstate)|コントロール バーの設定を保存する呼び出しです。|
 |[CFrameWnd::SetActivePreviewView](#setactivepreviewview)|リッチ プレビュー用のアクティブなビューを指定されたビューを指定します。|
 |[CFrameWnd::SetActiveView](#setactiveview)|アクティブな設定`CView`オブジェクト。|
@@ -323,7 +323,7 @@ virtual BOOL Create(
 *lpszClassName*<br/>
 Windows クラスの名前を示す文字の null で終わる文字列を指します。 クラス名が登録されている任意の名前を指定できます、`AfxRegisterWndClass`グローバル関数または`RegisterClass`Windows 関数。 NULL の場合は、定義済みの既定値を使用して`CFrameWnd`属性。
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 ウィンドウの名前を表す null で終わる文字列へのポインター。 タイトル バーのテキストとして使用します。
 
 *dwStyle*<br/>
@@ -396,7 +396,7 @@ void DockControlBar(
 *pBar*<br/>
 ドッキング コントロール バーへのポインター。
 
-*辺*<br/>
+*nDockBarID*<br/>
 フレーム ウィンドウにドッキングのどの辺を決定します。 0 または 1 つ以上の次を指定できます。
 
 - フレーム ウィンドウの最上位の側にドッキングする AFX_IDW_DOCKBAR_TOP。
@@ -459,7 +459,7 @@ virtual void EndModalState();
 
 `EndModalState` により、すべてのウィンドウで無効になって[BeginModalState](#beginmodalstate)します。
 
-##  <a name="floatcontrolbar"></a>  切り離すには
+##  <a name="floatcontrolbar"></a>  CFrameWnd::FloatControlBar
 
 この関数をいないフレーム ウィンドウにドッキング コントロール バーを呼び出します。
 
@@ -871,7 +871,7 @@ afx_msg BOOL OnBarCheck(UINT nID);
 
 コントロール バーが存在する場合は 0 以外それ以外の場合 0 を返します。
 
-##  <a name="oncontexthelp"></a>  受信
+##  <a name="oncontexthelp"></a>  CFrameWnd::OnContextHelp
 
 インプレース項目については、shift キーを押しながら f1 キーを処理します。
 
@@ -934,7 +934,7 @@ virtual void OnHideMenuBar();
 
 このイベント ハンドラーは、システムは、メニューを非表示にするときに、カスタム アクションを実行するアプリケーションを使用します。 非表示から、メニューを防ぐことはできませんが、たとえば、メニューのスタイルまたは状態を取得するには、その他のメソッドを呼び出すことができます。
 
-##  <a name="onsetpreviewmode"></a>  Cframewnd::onsetpreviewmode
+##  <a name="onsetpreviewmode"></a>  CFrameWnd::OnSetPreviewMode
 
 印刷プレビュー モードの内外にアプリケーションのメイン フレーム ウィンドウを設定するには、このメンバー関数を呼び出します。
 
@@ -980,10 +980,10 @@ afx_msg void OnUpdateControlBarMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 ポインターを[CCmdUI](../../mfc/reference/ccmdui-class.md) update コマンドが生成されるメニューを表すオブジェクト。 更新ハンドラーは、[を有効にする](../../mfc/reference/ccmdui-class.md#enable)のメンバー関数、`CCmdUI`オブジェクト*対応付けられた*ユーザー インターフェイスを更新します。
 
-##  <a name="recalclayout"></a>  表示
+##  <a name="recalclayout"></a>  CFrameWnd::RecalcLayout
 
 オンまたはオフに標準のコントロール バーが切り替えられたときに、またはフレーム ウィンドウのサイズが変更されたときに、フレームワークによって呼び出されます。
 
@@ -1093,7 +1093,7 @@ virtual BOOL SetMenuBarState(DWORD nState);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*状態*|[in]メニューを表示または非表示にするかどうかを指定します。 *状態*パラメーターは、次の値を持つことができます。<br /><br />AFX_MBS_VISIBLE (0x01) - 場合は、非表示が表示されている場合は、効果はありませんが、メニューを表示します。<br />AFX_MBS_HIDDEN (0x02) - には、メニューが非表示に、表示されても、非表示になっている場合は、効果がありません。|
+|*nState*|[in]メニューを表示または非表示にするかどうかを指定します。 *状態*パラメーターは、次の値を持つことができます。<br /><br />AFX_MBS_VISIBLE (0x01) - 場合は、非表示が表示されている場合は、効果はありませんが、メニューを表示します。<br />AFX_MBS_HIDDEN (0x02) - には、メニューが非表示に、表示されても、非表示になっている場合は、効果がありません。|
 
 ### <a name="return-value"></a>戻り値
 

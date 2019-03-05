@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 28: 状況依存のヘルプのサポート'
+title: TN028:状況依存のヘルプのサポート
 ms.date: 11/04/2016
 f1_keywords:
 - vc.help
@@ -8,19 +8,19 @@ helpviewer_keywords:
 - TN028
 - resource identifiers, context-sensitive Help
 ms.assetid: 884f1c55-fa27-4d4c-984f-30907d477484
-ms.openlocfilehash: 580046810243593c17dbf7e1c3ca427b37bd14a8
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e3ac2742f2c57c01c645c72c933234a96ece773a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520157"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288286"
 ---
-# <a name="tn028-context-sensitive-help-support"></a>テクニカル ノート 28: 状況依存のヘルプのサポート
+# <a name="tn028-context-sensitive-help-support"></a>TN028:状況依存のヘルプのサポート
 
 ここでは、ヘルプ コンテキスト Id と MFC の他のヘルプの問題を割り当てるための規則について説明します。 状況依存のヘルプのサポートには、Visual C で使用できるヘルプ コンパイラが必要です。
 
 > [!NOTE]
->  WinHelp を使用して、状況依存のヘルプを実装するだけでなく、HTML ヘルプの使用を MFC もサポートします。 このサポートおよび HTML ヘルプを使用したプログラミングの詳細については、次を参照してください。 [HTML ヘルプ: プログラムの状況依存のヘルプ](../mfc/html-help-context-sensitive-help-for-your-programs.md)します。
+>  WinHelp を使用して、状況依存のヘルプを実装するだけでなく、HTML ヘルプの使用を MFC もサポートします。 このサポートおよび HTML ヘルプを使用したプログラミングの詳細については、次を参照してください。 [HTML ヘルプ。プログラムの状況依存のヘルプ](../mfc/html-help-context-sensitive-help-for-your-programs.md)します。
 
 ## <a name="types-of-help-supported"></a>サポートされているヘルプの種類
 
@@ -132,7 +132,7 @@ HIWORD(lParam) には、y 軸座標が含まれています。
 
 MFC アプリケーション ウィザードでは、ヘルプ ファイル (.cnt および .hpj ファイル) をビルドするために必要なファイルを作成します。 Microsoft ヘルプ コンパイラによって受け入れられる事前構築済みの .rtf ファイル数も含まれています。 完了すると、多くのトピックがいくつかは、特定のアプリケーションを変更する必要があります。
 
-「ヘルプ マッピング」ファイルの自動作成は、makehm ユーティリティによってサポートされます。 MAKEHM ユーティリティでは、アプリケーションのリソースを翻訳できます。ヘルプのマッピング ファイルを H ファイルです。 例えば:
+「ヘルプ マッピング」ファイルの自動作成は、makehm ユーティリティによってサポートされます。 MAKEHM ユーティリティでは、アプリケーションのリソースを翻訳できます。ヘルプのマッピング ファイルを H ファイルです。 例:
 
 ```
 #define IDD_MY_DIALOG   2000
@@ -180,4 +180,3 @@ int AFXAPI AfxMessageBox(UINT nIDPrompt,
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

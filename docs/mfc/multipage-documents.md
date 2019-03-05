@@ -25,12 +25,12 @@ helpviewer_keywords:
 - printing [MFC], pagination
 - documents [MFC], paginating
 ms.assetid: 69626b86-73ac-4b74-b126-9955034835ef
-ms.openlocfilehash: b4ec9f456443b9cd180f1558946829281bc10a36
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 81e03657977d31827c5c7c3d3272e3d4255a4a8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176381"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295007"
 ---
 # <a name="multipage-documents"></a>マルチページ ドキュメント
 
@@ -99,7 +99,7 @@ ms.locfileid: "52176381"
 
 [OnPrint](../mfc/reference/cview-class.md#onprint)メンバー関数は、ページの印刷を実行します。 記事[既定の印刷を行う方法](../mfc/how-default-printing-is-done.md)フレームワークを呼び出す方法を示しています。 [OnDraw](../mfc/reference/cview-class.md#ondraw)印刷を実行するプリンター デバイス コンテキストを使用します。 フレームワークによって正確には、`OnPrint`で、`CPrintInfo`構造と、デバイス コンテキストと`OnPrint`デバイス コンテキストを渡します`OnDraw`。 オーバーライド`OnPrint`印刷時にのみ、および画面表示ではなく行う必要があるすべてのレンダリングを実行します。 たとえば、ヘッダーまたはフッターを印刷する (記事をご覧ください[ヘッダーとフッター](../mfc/headers-and-footers.md)詳細については)。 呼び出して`OnDraw`のオーバーライドから`OnPrint`画面表示の両方に共通の表示と印刷を行う。
 
-事実を`OnDraw`レンダリングでは、両方の画面表示と印刷の場合、アプリケーションが WYSIWYG であることを意味は:"どのような you see is what you get"。 ただし、WYSIWYG アプリケーションを作成するいないとします。 たとえば、テキスト エディターを印刷の太字のフォントを使用しますが、画面上の太字のテキストを示す制御コードが表示されますを検討します。 このような状況でを使用して`OnDraw`画面に対して厳密にします。 オーバーライドする場合`OnPrint`への呼び出しを置き換える`OnDraw`描画の個別の関数の呼び出しで。 その関数は、画面に表示しない属性を使用する用紙に表示される方法をドキュメントに描画します。
+という事実を`OnDraw`レンダリングは、両方の画面表示と印刷の場合、アプリケーションが WYSIWYG であることを意味します。「表示されている取得する。」 ただし、WYSIWYG アプリケーションを作成するいないとします。 たとえば、テキスト エディターを印刷の太字のフォントを使用しますが、画面上の太字のテキストを示す制御コードが表示されますを検討します。 このような状況でを使用して`OnDraw`画面に対して厳密にします。 オーバーライドする場合`OnPrint`への呼び出しを置き換える`OnDraw`描画の個別の関数の呼び出しで。 その関数は、画面に表示しない属性を使用する用紙に表示される方法をドキュメントに描画します。
 
 ##  <a name="_core_printer_pages_vs.._document_pages"></a> プリンターのページとドキュメント ページ
 

@@ -19,12 +19,12 @@ f1_keywords:
 - AGENTS/concurrency::unbounded_buffer::send_message
 - AGENTS/concurrency::unbounded_buffer::supports_anonymous_source
 ms.assetid: 6b1a939a-1819-4385-b1d8-708f83d4ec47
-ms.openlocfilehash: b4a54e80067c5bc4cea9cd0dac0e24a66e1858e0
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1474381a2d1c0947b2428ab4cf0b4683198eef84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694752"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288145"
 ---
 # <a name="unboundedbuffer-class"></a>unbounded_buffer クラス
 
@@ -41,7 +41,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 
 #### <a name="parameters"></a>パラメーター
 
-*種類 (_t)*<br/>
+*_Type*<br/>
 メッセージのペイロードの型が格納され、バッファーによって反映されます。
 
 ## <a name="members"></a>メンバー
@@ -162,7 +162,7 @@ bool enqueue(
 
 ### <a name="parameters"></a>パラメーター
 
-*(_I)*<br/>
+*_Item*<br/>
 追加する項目。
 
 ### <a name="return-value"></a>戻り値
@@ -198,7 +198,8 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-`message` オブジェクトを指すポインター。
+
+  `message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -294,7 +295,8 @@ virtual message_status send_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-`message` オブジェクトを指すポインター。
+
+  `message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -362,7 +364,7 @@ unbounded_buffer(
 
 型`filter_method`シグネチャを持つ、ファンクターは、`bool (_Type const &)`これによって呼び出される`unbounded_buffer`メッセージング ブロックを提供されたメッセージを受け入れる必要があるかどうかを判断します。
 
-##  <a name="dtor"></a> ~ unbounded_buffer
+##  <a name="dtor"></a> ~unbounded_buffer
 
 破棄、`unbounded_buffer`メッセージング ブロックします。
 
@@ -375,4 +377,3 @@ unbounded_buffer(
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [overwrite_buffer クラス](overwrite-buffer-class.md)<br/>
 [single_assignment クラス](single-assignment-class.md)
-

@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - ScheduleGroup class
 ms.assetid: 86d380ff-f2e8-411c-b1a8-22bd3079824a
-ms.openlocfilehash: 6132ec6623a009c09a37b7d704ce683a58956a04
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ce7734a1330f2d6e495565338879764482439d09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518717"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283853"
 ---
 # <a name="schedulegroup-class"></a>ScheduleGroup クラス
 
@@ -142,7 +142,7 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 軽量タスクの本体を実行するために実行する関数へのポインター。
 
-*(_D)*<br/>
+*_Data*<br/>
 タスクの本体にパラメーターとして渡されるデータへの void ポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -155,4 +155,3 @@ virtual void ScheduleTask(
 [CurrentScheduler クラス](currentscheduler-class.md)<br/>
 [Scheduler クラス](scheduler-class.md)<br/>
 [タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

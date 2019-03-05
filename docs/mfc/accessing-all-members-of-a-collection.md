@@ -15,12 +15,12 @@ helpviewer_keywords:
 - ', '
 - ', '
 ms.assetid: 7bbae518-062e-4393-81f9-b22abd2e5f59
-ms.openlocfilehash: b6c79164bc1049f39ce0af4e00341df8f234b34a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae866b71d2a9f001c56b2c61d99749cab824b313
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628814"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282501"
 ---
 # <a name="accessing-all-members-of-a-collection"></a>コレクションの全メンバーへのアクセス
 
@@ -76,4 +76,3 @@ MFC の配列コレクション クラスでは、テンプレート クラス�
 ## <a name="see-also"></a>関連項目
 
 [コレクション](../mfc/collections.md)
-

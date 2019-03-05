@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlModule class
 ms.assetid: 63fe02f1-4c4b-4e7c-ae97-7ad7b4252415
-ms.openlocfilehash: 4d1c8dbfc7606efda50637ba17790ecafc80a976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f01734d4ec9de323325dc793756f421388542ef2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456824"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302014"
 ---
 # <a name="catlmodule-class"></a>CAtlModule クラス
 
@@ -43,7 +43,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 |名前|説明|
 |----------|-----------------|
-|[不要](#catlmodule)|コンストラクターです。|
+|[CAtlModule::CAtlModule](#catlmodule)|コンストラクターです。|
 |[CAtlModule:: ~ CAtlModule](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -57,16 +57,16 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 |[CAtlModule::Lock](#lock)|ロック カウントをインクリメントします。|
 |[CAtlModule::Term](#term)|すべてのデータ メンバーを解放します。|
 |[CAtlModule::Unlock](#unlock)|ロック カウントをデクリメントします。|
-|[して](#updateregistryfromresourced)|登録またはオブジェクトを登録解除に指定されたリソースに含まれるスクリプトを実行します。|
+|[CAtlModule::UpdateRegistryFromResourceD](#updateregistryfromresourced)|登録またはオブジェクトを登録解除に指定されたリソースに含まれるスクリプトを実行します。|
 |[CAtlModule::UpdateRegistryFromResourceDHelper](#updateregistryfromresourcedhelper)|このメソッドを呼び出して`UpdateRegistryFromResourceD`レジストリの更新を実行します。|
-|[方法については](#updateregistryfromresources)|登録またはオブジェクトを登録解除に指定されたリソースに含まれるスクリプトを実行します。 このメソッドは、ATL レジストリ コンポーネントに静的にリンクします。|
+|[CAtlModule::UpdateRegistryFromResourceS](#updateregistryfromresources)|登録またはオブジェクトを登録解除に指定されたリソースに含まれるスクリプトを実行します。 このメソッドは、ATL レジストリ コンポーネントに静的にリンクします。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
 |名前|説明|
 |----------|-----------------|
 |[CAtlModule::m_libid](#m_libid)|現在のモジュールの GUID が含まれています。|
-|[されます](#m_pgit)|グローバル インターフェイス テーブルへのポインター。|
+|[CAtlModule::m_pGIT](#m_pgit)|グローバル インターフェイス テーブルへのポインター。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -129,7 +129,7 @@ HRESULT AddTermFunc(_ATL_TERMFUNC* pFunc, DWORD_PTR dw) throw();
 
 成功した場合、S_OK または失敗時にエラーの hresult 値を返します。
 
-##  <a name="catlmodule"></a>  不要
+##  <a name="catlmodule"></a>  CAtlModule::CAtlModule
 
 コンストラクターです。
 
@@ -210,7 +210,7 @@ virtual LONG Lock() throw();
 static GUID m_libid;
 ```
 
-##  <a name="m_pgit"></a>  されます
+##  <a name="m_pgit"></a>  CAtlModule::m_pGIT
 
 グローバル インターフェイス テーブルへのポインター。
 
@@ -242,7 +242,7 @@ virtual LONG Unlock() throw();
 
 ロック カウントをデクリメントし、更新された値を返します。 この値には、診断に役立ちますし、デバッグがあります。
 
-##  <a name="updateregistryfromresourced"></a>  して
+##  <a name="updateregistryfromresourced"></a>  CAtlModule::UpdateRegistryFromResourceD
 
 登録またはオブジェクトを登録解除に指定されたリソースに含まれるスクリプトを実行します。
 
@@ -314,7 +314,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 
 このメソッドの実装を提供[として](#updateregistryfromresourced)します。
 
-##  <a name="updateregistryfromresources"></a>  方法については
+##  <a name="updateregistryfromresources"></a>  CAtlModule::UpdateRegistryFromResourceS
 
 登録またはオブジェクトを登録解除に指定されたリソースに含まれるスクリプトを実行します。 このメソッドは、ATL レジストリ コンポーネントに静的にリンクします。
 

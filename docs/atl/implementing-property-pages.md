@@ -6,12 +6,12 @@ helpviewer_keywords:
 - IPropertyPage class
 - property pages, implementing
 ms.assetid: 62f29440-33a7-40eb-a1ef-3634c95f640c
-ms.openlocfilehash: 415dae4a54b71a901a7976bda92361690c150e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e335c20464d8ea71fd75ce2e67f67ca14edacb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543313"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299323"
 ---
 # <a name="implementing-property-pages"></a>プロパティ ページの実装
 
@@ -40,7 +40,7 @@ ATL を使用してプロパティ ページを作成します。
    |[適用します。](../atl/reference/ipropertypageimpl-class.md#apply)|プロパティの設定を検証し、オブジェクトを更新します。|これは何もトレースとは別の呼び出しから基本クラスの実装を呼び出す必要はありません。|
    |[非アクティブ化します。](../atl/reference/ipropertypageimpl-class.md#deactivate)|ウィンドウの関連項目をクリーンアップします。|基本クラスの実装では、プロパティ ページを表す ダイアログ ボックスを破棄します。 ダイアログ ボックスが破棄される前に、クリーンアップする必要がある場合は、基本クラスを呼び出す前に、コードを追加する必要があります。|
 
-例プロパティ ページの実装を参照してください。[例: プロパティ ページを実装する](../atl/example-implementing-a-property-page.md)します。
+例プロパティ ページの実装を参照してください。[例。プロパティ ページを実装する](../atl/example-implementing-a-property-page.md)します。
 
 > [!NOTE]
 > プロパティ ページに ActiveX コントロールをホストする場合は、ウィザードで生成されたクラスの派生を変更する必要があります。 置換**CDialogImpl\<CYourClass >** で**CAxDialogImpl\<CYourClass >** 基底クラスの一覧にします。

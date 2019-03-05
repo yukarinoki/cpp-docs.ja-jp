@@ -1,5 +1,5 @@
 ---
-title: '方法: タイプ セーフなコレクションを作成する'
+title: '方法: タイプ セーフなコレクションを作成します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - type-safe collections [MFC]
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: 12ecec7562a9241fab30b859727a22e467e6eeb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581793"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295189"
 ---
-# <a name="how-to-make-a-type-safe-collection"></a>方法: タイプ セーフなコレクションを作成する
+# <a name="how-to-make-a-type-safe-collection"></a>方法: タイプ セーフなコレクションを作成します。
 
 この記事では、独自のデータ型のタイプ セーフなコレクションを作成する方法について説明します。 ここでは、次の内容について説明します。
 
@@ -33,11 +33,11 @@ Microsoft Foundation Class ライブラリでは、C++ テンプレートに基�
 
 #### <a name="to-use-template-based-classes"></a>テンプレート ベースのクラスを使用するには
 
-1. コレクション クラスの型の変数を宣言します。 例えば:
+1. コレクション クラスの型の変数を宣言します。 例:
 
    [!code-cpp[NVC_MFCCollections#7](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_1.cpp)]
 
-1. メンバーのコレクション オブジェクトの関数を呼び出します。 例えば:
+1. メンバーのコレクション オブジェクトの関数を呼び出します。 例:
 
    [!code-cpp[NVC_MFCCollections#8](../mfc/codesnippet/cpp/how-to-make-a-type-safe-collection_2.cpp)]
 
@@ -100,4 +100,3 @@ MFC には、MFC バージョン 1.0 で導入されたコレクション クラ
 ## <a name="see-also"></a>関連項目
 
 [コレクション](../mfc/collections.md)
-

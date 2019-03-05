@@ -1,18 +1,18 @@
 ---
-title: 'チュートリアル: エージェント ベースのアプリケーションの作成'
+title: 'チュートリアル: エージェント ベースのアプリケーションを作成します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - asynchronous agents, creating
 - agent class, example
 ms.assetid: 730f42ce-6d58-4753-b948-fd9c9ef2ce6c
-ms.openlocfilehash: 1d5e7ed085481b714423760cebf2984084626645
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d55c9879a3dd90bb4a40b61a3bf958dbe960bc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509345"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290093"
 ---
-# <a name="walkthrough-creating-an-agent-based-application"></a>チュートリアル: エージェント ベースのアプリケーションの作成
+# <a name="walkthrough-creating-an-agent-based-application"></a>チュートリアル: エージェント ベースのアプリケーションを作成します。
 
 ここでは、基本的なエージェント ベースのアプリケーションの作成方法について説明します。 このチュートリアルでは、テキスト ファイルから非同期的にデータを読み取るエージェントを作成できます。 このアプリケーションでは、Adler-32 チェックサム アルゴリズムを使用して、そのファイルの内容のチェックサムを計算します。
 
@@ -62,7 +62,8 @@ ms.locfileid: "50509345"
 
 ##  <a name="createagentclass"></a> File_reader クラスの作成
 
-ここでは、`file_reader` クラスの作成方法について説明します。 ランタイムは、各エージェントがそれぞれのコンテキストで処理を実行するようにスケジュールを設定します。 そのため、処理を同期的に実行する一方で、他のコンポーネントとは非同期的に通信するエージェントを作成できます。 `file_reader` クラスでは、指定された入力ファイルからデータを読み取り、そのファイルのデータを指定されたターゲット コンポーネントに送信します。
+ここでは、`file_reader` クラスの作成方法について説明します。 ランタイムは、各エージェントがそれぞれのコンテキストで処理を実行するようにスケジュールを設定します。 そのため、処理を同期的に実行する一方で、他のコンポーネントとは非同期的に通信するエージェントを作成できます。 
+  `file_reader` クラスでは、指定された入力ファイルからデータを読み取り、そのファイルのデータを指定されたターゲット コンポーネントに送信します。
 
 #### <a name="to-create-the-filereader-class"></a>file_reader クラスを作成するには
 
@@ -80,25 +81,32 @@ ms.locfileid: "50509345"
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-   `_file_name` メンバーは、エージェントが読み取る対象のファイル名です。 `_target`メンバーは、 [concurrency::itarget](../../parallel/concrt/reference/itarget-class.md)オブジェクト、エージェントが、ファイルの内容を書き込みます。 `_error` メンバーでは、エージェントの有効期間中に発生したエラーを保持します。
+   
+  `_file_name` メンバーは、エージェントが読み取る対象のファイル名です。 `_target`メンバーは、 [concurrency::itarget](../../parallel/concrt/reference/itarget-class.md)オブジェクト、エージェントが、ファイルの内容を書き込みます。 
+  `_error` メンバーでは、エージェントの有効期間中に発生したエラーを保持します。
 
-1. `file_reader` クラスの `public` セクションに `file_reader` コンストラクターの次のコードを追加します。
+1. 
+  `file_reader` クラスの `public` セクションに `file_reader` コンストラクターの次のコードを追加します。
 
 [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
 
    各コンストラクター オーバーロードによって、`file_reader` データ メンバーが設定されます。 2 番目と 3 番目のコンストラクター オーバーロードによって、アプリケーションでエージェントに対して特定のスケジューラを使用できるようにします。 最初のオーバーロードでは、エージェントに対して既定のスケジューラを使用します。
 
-1. `get_error` クラスのパブリック セクションに `file_reader` メソッドを追加します。
+1. 
+  `get_error` クラスのパブリック セクションに `file_reader` メソッドを追加します。
 
 [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
 
-   `get_error` メソッドにより、エージェントの有効期間中に発生したエラーを取得します。
+   
+  `get_error` メソッドにより、エージェントの有効期間中に発生したエラーを取得します。
 
 1. 実装、 [concurrency::agent::run](reference/agent-class.md#run)メソッドで、`protected`クラスのセクション。
 
 [!code-cpp[concrt-basic-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_7.h)]
 
-`run` メソッドによりファイルを開き、そこからデータを読み取ります。 `run` メソッドでは、例外処理を使用して、ファイルの処理中に発生したエラーをキャプチャします。
+
+  `run` メソッドによりファイルを開き、そこからデータを読み取ります。 
+  `run` メソッドでは、例外処理を使用して、ファイルの処理中に発生したエラーをキャプチャします。
 
    このメソッドは、ファイルからデータを読み取るたびに呼び出す、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)ターゲット バッファーにデータを送信します。 処理の終了を示す際には、空の文字列をターゲット バッファーに送信します。
 
@@ -140,7 +148,8 @@ file_reader.h の内容全体の例を次に示します。
 
 [!code-cpp[concrt-basic-agent#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_14.cpp)]
 
-1. `call` オブジェクトがすべてのデータを受け取り、終了するまで待機します。
+1. 
+  `call` オブジェクトがすべてのデータを受け取り、終了するまで待機します。
 
 [!code-cpp[concrt-basic-agent#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_15.cpp)]
 
@@ -180,7 +189,7 @@ Adler-32 sum is fefb0d75
 
 ## <a name="next-steps"></a>次の手順
 
-エージェント ベースのアプリケーションの別の例を参照してください。[チュートリアル: join デッドロックの防止を使用した](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)します。
+エージェント ベースのアプリケーションの別の例を参照してください。[チュートリアル。Join デッドロックの防止を使用した](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -189,4 +198,3 @@ Adler-32 sum is fefb0d75
 [メッセージ パッシング関数](../../parallel/concrt/message-passing-functions.md)<br/>
 [同期データ構造](../../parallel/concrt/synchronization-data-structures.md)<br/>
 [チュートリアル: join を使用したデッドロックの防止](../../parallel/concrt/walkthrough-using-join-to-prevent-deadlock.md)
-

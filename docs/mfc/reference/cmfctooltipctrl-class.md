@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCToolTipCtrl [MFC], SetLocation
 - CMFCToolTipCtrl [MFC], SetParams
 ms.assetid: 9fbfcfb1-a8ab-417f-ae29-9a9ca85ee58f
-ms.openlocfilehash: e8ab9485cb2613e88ef136b3c470af9915bf7725
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aaf9d9570906b7886d8ec78575c39db5d62099f7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564868"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293200"
 ---
 # <a name="cmfctooltipctrl-class"></a>CMFCToolTipCtrl クラス
 
@@ -57,7 +57,7 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCToolTipCtrl::CMFCToolTipCtrl`|既定のコンストラクター|
+|`CMFCToolTipCtrl::CMFCToolTipCtrl`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -75,7 +75,8 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 |[CMFCToolTipCtrl::SetFixedWidth](#setfixedwidth)||
 |[CMFCToolTipCtrl::SetHotRibbonButton](#sethotribbonbutton)||
 |[CMFCToolTipCtrl::SetLocation](#setlocation)||
-|[CMFCToolTipCtrl::SetParams](#setparams)|`CMFCToolTipInfo` オブジェクトを使用して、ツールヒントの外観を指定します。|
+|[CMFCToolTipCtrl::SetParams](#setparams)|
+  `CMFCToolTipInfo` オブジェクトを使用して、ツールヒントの外観を指定します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -85,7 +86,8 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 
 1. 使用して、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)アプリケーションでツールヒント マネージャーを初期化します。
 
-2. `CMFCToolTipInfo` 構造体を作成し、必要な表示スタイルを指定します。
+2. 
+  `CMFCToolTipInfo` 構造体を作成し、必要な表示スタイルを指定します。
 
 ```
 CMFCToolTipInfo params;
@@ -120,7 +122,8 @@ CMFCToolTipInfo params;
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
     RUNTIME_CLASS (CMFCToolTipCtrl), &params);
 ```
-`CMFCToolTipCtrl` から新しいクラスを派生させて、ツールヒントの動作や描画を制御することもできます。 新しいツールヒント コントロール クラスを指定するには、`CTooltipManager::SetTooltipParams` メソッドを使用します。
+
+  `CMFCToolTipCtrl` から新しいクラスを派生させて、ツールヒントの動作や描画を制御することもできます。 新しいツールヒント コントロール クラスを指定するには、`CTooltipManager::SetTooltipParams` メソッドを使用します。
 
 ```
 myApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
@@ -384,7 +387,7 @@ void SetFixedWidth(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nWidthRegular*<br/>
+[in] *nWidthRegular*<br/>
 [in]*nWidthLargeImage*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -397,7 +400,7 @@ void SetHotRibbonButton(CMFCRibbonButton* pRibbonButton);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pRibbonButton*<br/>
+[in] *pRibbonButton*<br/>
 
 ### <a name="remarks"></a>Remarks
 

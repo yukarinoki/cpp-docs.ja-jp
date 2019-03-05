@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: e9fba929017edfe547f2cc20105ea4f4bcdc9c33
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644393"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291627"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -101,13 +101,15 @@ class CControlBar : public CWnd
 
 通常、コントロール バーは、フレーム ウィンドウの左側または右側にアラインされるウィンドウです。 いずれかの Windows メッセージに応答を生成する windows には、HWND ベースのコントロールや windows でないし、アプリケーション コードまたはフレームワーク コードによって管理されている非 HWND ベースの項目が子項目に含めることができます。 リスト ボックスやエディット コントロール、HWND ベースのコントロールの例ステータス バー ペインやビットマップ ボタンは、HWND ベースのコントロールの例を示します。
 
-通常、コントロール バーのウィンドウは親フレーム ウィンドウの子ウィンドウであり、通常はクライアント ビューまたはフレーム ウィンドウの MDI クライアントの兄弟です。 `CControlBar` オブジェクトは、親ウィンドウのクライアント領域の四角形に関する情報を使用して、それ自体を配置します。 次に、親ウィンドウのクライアント領域においてどの程度の未割り当て領域が残っているかについて、親ウィンドウに通知します。
+通常、コントロール バーのウィンドウは親フレーム ウィンドウの子ウィンドウであり、通常はクライアント ビューまたはフレーム ウィンドウの MDI クライアントの兄弟です。 
+  `CControlBar` オブジェクトは、親ウィンドウのクライアント領域の四角形に関する情報を使用して、それ自体を配置します。 次に、親ウィンドウのクライアント領域においてどの程度の未割り当て領域が残っているかについて、親ウィンドウに通知します。
 
-`CControlBar` の詳細については、次を参照してください。
+
+  `CControlBar` の詳細については、次を参照してください。
 
 - [コントロール バー](../../mfc/control-bars.md)
 
-- [テクニカル ノート 31: コントロール バー](../../mfc/tn031-control-bars.md)します。
+- [テクニカル ノート 31:コントロール バー](../../mfc/tn031-control-bars.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -135,7 +137,7 @@ virtual CSize CalcDynamicLayout(
 
 ### <a name="parameters"></a>パラメーター
 
-*されて*<br/>
+*nLength*<br/>
 コントロール バー、水平方向または垂直方向に応じてのいずれかの要求されたディメンション*寸法*します。
 
 *nMode*<br/>
@@ -320,7 +322,7 @@ void EnableDocking(DWORD dwDockStyle);
 
 指定した辺は、移行先フレーム ウィンドウのドッキングの辺のいずれかに一致する必要がありますか、そのフレーム ウィンドウにコントロール バーをドッキングすることはできません。
 
-##  <a name="getbarstyle"></a>  したとき
+##  <a name="getbarstyle"></a>  CControlBar::GetBarStyle
 
 判断するためには、この関数を呼び出す**cbrs _** (コントロール バーのスタイル) の設定は、コントロール バーに現在設定されています。
 

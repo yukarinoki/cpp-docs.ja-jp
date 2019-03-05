@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: 9d9a2d33f61aa9033bb17c090989b4f08ee82bd7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178383"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282449"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd クラス
 
@@ -69,7 +69,7 @@ class CMDIFrameWnd : public CFrameWnd
 |[CMDIFrameWnd::MDIActivate](#mdiactivate)|別の MDI 子ウィンドウをアクティブにします。|
 |[CMDIFrameWnd::MDICascade](#mdicascade)|すべての子ウィンドウを重ねて表示を整列します。|
 |[CMDIFrameWnd::MDIGetActive](#mdigetactive)|子が最大化されているかどうかを示すフラグと共に、現在アクティブな MDI 子ウィンドウを取得します。|
-|[ある最小化されました。](#mdiiconarrange)|最小化されたドキュメントのすべての子ウィンドウを整列します。|
+|[CMDIFrameWnd::MDIIconArrange](#mdiiconarrange)|最小化されたドキュメントのすべての子ウィンドウを整列します。|
 |[CMDIFrameWnd::MDIMaximize](#mdimaximize)|MDI 子ウィンドウを最大化します。|
 |[CMDIFrameWnd::MDINext](#mdinext)|現在アクティブな子ウィンドウの背後にすぐに子ウィンドウをアクティブにし、その他のすべての子ウィンドウの背後にある現在アクティブな子ウィンドウを配置します。|
 |[CMDIFrameWnd::MDIPrev](#mdiprev)|前の子ウィンドウをアクティブにし、すぐ後ろに、現在アクティブな子ウィンドウを配置します。|
@@ -275,7 +275,7 @@ void MDICascade(int nType);
 
 ### <a name="parameters"></a>パラメーター
 
-*%n タイプ*<br/>
+*nType*<br/>
 Cascade フラグを指定します。 次のフラグだけを指定できます。もう、MDI 子ウィンドウを無効になっているが重ねて表示されていることを防ぎます。
 
 ### <a name="remarks"></a>Remarks
@@ -307,7 +307,7 @@ CMDIChildWnd* MDIGetActive(BOOL* pbMaximized = NULL) const;
 
 例をご覧ください[CMDIChildWnd::MDIMaximize](../../mfc/reference/cmdichildwnd-class.md#mdimaximize)します。
 
-##  <a name="mdiiconarrange"></a>  ある最小化されました。
+##  <a name="mdiiconarrange"></a>  CMDIFrameWnd::MDIIconArrange
 
 最小化されたドキュメントのすべての子ウィンドウを整列します。
 
@@ -440,7 +440,7 @@ void MDITile(int nType);
 
 ### <a name="parameters"></a>パラメーター
 
-*%n タイプ*<br/>
+*nType*<br/>
 並べて表示フラグを指定します。 このパラメーターは、次のフラグのいずれかを指定できます。
 
 - MDITILE_HORIZONTAL タイルの MDI 子ウィンドウを 1 つのウィンドウが別の上に表示します。

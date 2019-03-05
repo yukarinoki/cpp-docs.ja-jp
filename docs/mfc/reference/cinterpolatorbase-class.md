@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CInterpolatorBase [MFC], SetDuration
 - CInterpolatorBase [MFC], SetInitialValueAndVelocity
 ms.assetid: bbc3dce7-8398-47f9-b97e-e4fd2d737232
-ms.openlocfilehash: e428478f2f437654ea2f0890993245afc53c01f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 379aa5607e459ad8acfd99c5899315afb84ac4a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541467"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302287"
 ---
 # <a name="cinterpolatorbase-class"></a>CInterpolatorBase クラス
 
@@ -162,7 +162,7 @@ IFACEMETHOD(GetFinalValue)(__out DOUBLE* value);
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 出力します。 移行の最後に変数の最終的な値。
 
 ### <a name="return-value"></a>戻り値
@@ -184,7 +184,7 @@ IFACEMETHOD(InterpolateValue)(
 *オフセット*<br/>
 移行の開始からのオフセット。 オフセットは、常により大きいまたは 0 に等しいと遷移の期間より小さい。 遷移の期間が 0 の場合、このメソッドは呼び出されません。
 
-*値*<br/>
+*value*<br/>
 出力します。 補間値。
 
 ### <a name="return-value"></a>戻り値
@@ -255,7 +255,7 @@ IFACEMETHOD(SetInitialValueAndVelocity)(
 
 ### <a name="parameters"></a>パラメーター
 
-*初期値*<br/>
+*initialValue*<br/>
 移行の開始時の変数の値。
 
 *initialVelocity*<br/>

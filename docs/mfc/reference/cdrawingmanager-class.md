@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: c7295d8003b364b36a84fcb5b2c5921ae9899b51
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465989"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293447"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager クラス
 
@@ -159,7 +159,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |パラメーター|説明|
 |*size*|[in]A [CSize](../../atl-mfc-shared/reference/csize-class.md)ビットマップのサイズを示すパラメーターです。|
 |*pBits*|[out]DIB の場所を受信するデータ ポインターへのポインターのビット値。|
-|*ビットマップ*|元のビットマップを識別するハンドル|
+|*bitmap*|元のビットマップを識別するハンドル|
 |*clrTransparent*|元のビットマップの透明色を指定する RGB 値。|
 
 ### <a name="return-value"></a>戻り値
@@ -272,7 +272,7 @@ BOOL DrawGradientRing(
 
 によって定義された四角*rect*少なくとも 5 ピクセル高さ全体に適用され、5 ピクセルにする必要があります。
 
-##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine、CDrawingManager::DrawLineA
+##  <a name="drawline_cdrawingmanager__drawlinea"></a>  CDrawingManager::DrawLine, CDrawingManager::DrawLineA
 
 線を描画します。
 

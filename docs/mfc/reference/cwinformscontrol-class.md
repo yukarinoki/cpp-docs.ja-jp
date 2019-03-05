@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CWinFormsControl [MFC], GetControl
 - CWinFormsControl [MFC], GetControlHandle
 ms.assetid: 6406dd7b-fb89-4a18-ac3a-c010d6b6289a
-ms.openlocfilehash: e8728c876badcf6648740cc842a1f289789bf0f4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 91691203f88f07f597aaad6a5db32b03e7ad11c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178240"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289313"
 ---
 # <a name="cwinformscontrol-class"></a>CWinFormsControl クラス
 
@@ -57,8 +57,8 @@ MFC アプリケーションに表示される .NET Framework Windows フォー�
 
 |名前|説明|
 |----------|-----------------|
-|[CWinFormsControl::operator-&gt;](#operator_-_gt)|置換[CWinFormsControl::GetControl](#getcontrol)式で。|
-|[CWinFormsControl::operator TManagedControl ^](#operator_tmanagedcontrol)|Windows フォーム コントロールへのポインターとして型をキャストします。|
+|[CWinFormsControl::operator -&gt;](#operator_-_gt)|置換[CWinFormsControl::GetControl](#getcontrol)式で。|
+|[CWinFormsControl::operator TManagedControl^](#operator_tmanagedcontrol)|Windows フォーム コントロールへのポインターとして型をキャストします。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -107,7 +107,7 @@ inline BOOL CreateManagedControl(
 
 ### <a name="parameters"></a>パラメーター
 
-*p 入力してください。*<br/>
+*pType*<br/>
 作成するコントロールのデータ型。 必要があります、[型](https://msdn.microsoft.com/library/system.type)データ型。
 
 *dwStyle*<br/>
@@ -190,7 +190,7 @@ Windows フォーム コントロールにハンドルを返します。
 
 `GetControlHandle` .NET Framework のコントロール プロパティに格納されているウィンドウ ハンドルを返すヘルパー メソッド。 ウィンドウのハンドル値をコピー [CWnd::m_hWnd](../../mfc/reference/cwnd-class.md#m_hwnd)呼び出し中に[CWnd::Attach](../../mfc/reference/cwnd-class.md#attach)します。
 
-##  <a name="operator_-_gt"></a>  CWinFormsControl::operator-&gt;
+##  <a name="operator_-_gt"></a>  CWinFormsControl::operator -&gt;
 
 置換[CWinFormsControl::GetControl](#getcontrol)式で。
 
@@ -204,7 +204,7 @@ inline TManagedControl^  operator->() const;
 
 Windows フォームの詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
-##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl ^
+##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl^
 
 Windows フォーム コントロールへのポインターとして型をキャストします。
 

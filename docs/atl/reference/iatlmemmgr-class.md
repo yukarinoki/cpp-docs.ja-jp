@@ -13,12 +13,12 @@ helpviewer_keywords:
 - memory, managing
 - memory, memory manager
 ms.assetid: 18b2c569-25fe-4464-bdb6-3b1abef7154a
-ms.openlocfilehash: ed1dfd1dc8767b4f198ec6cc8dd626a04800bffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b9b6ac6dc265378f617e053bc48ac6030425cef4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596769"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297919"
 ---
 # <a name="iatlmemmgr-class"></a>IAtlMemMgr クラス
 
@@ -776,7 +776,7 @@ STDMETHOD(AttachControl)(IUnknown* pUnkControl, HWND hWnd);
 
 標準の HRESULT 値。
 
-##  <a name="createcontrol"></a>  については
+##  <a name="createcontrol"></a>  IAxWinHostWindow::CreateControl
 
 コントロールを作成し、初期化して、識別されるウィンドウでホスト*hWnd*します。
 
@@ -810,7 +810,7 @@ STDMETHOD(CreateControl)(
 
 ライセンスされた ActiveX コントロールを作成するを参照してください。 [IAxWinHostWindowLic::CreateControlLic](#createcontrollicex)します。
 
-##  <a name="createcontrolex"></a>  詳細
+##  <a name="createcontrolex"></a>  IAxWinHostWindow::CreateControlEx
 
 ActiveX コントロールを作成、初期化、および指定したウィンドウでホスト[については](#createcontrol)します。
 
@@ -939,7 +939,7 @@ STDMETHOD(CreateControlLic)(
 
 参照してください[ActiveX コントロール ATL を使用しての AXHost をホストしている](../../atl/hosting-activex-controls-using-atl-axhost.md)を使用するサンプルの`IAxWinHostWindowLic::CreateControlLic`します。
 
-##  <a name="createcontrollicex"></a>  呼び出し
+##  <a name="createcontrollicex"></a>  IAxWinHostWindowLic::CreateControlLicEx
 
 ライセンスされた ActiveX コントロールを作成し、それを初期化し、指定したウィンドウでホスト[については](#createcontrol)します。
 

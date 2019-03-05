@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 10991745fb5ccdac145f4b1d589e7d59c6ed6f4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513959"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297386"
 ---
 # <a name="clist-class"></a>CList クラス
 
@@ -85,7 +85,7 @@ class CList : public CObject
 |[CList::Find](#find)|ポインター値で指定された要素の位置を取得します。|
 |[CList::FindIndex](#findindex)|0 から始まるインデックスで指定した要素の位置を取得します。|
 |[CList::GetAt](#getat)|指定された位置に要素を取得します。|
-|[呼び出す](#getcount)|この一覧には、要素の数を返します。|
+|[CList::GetCount](#getcount)|この一覧には、要素の数を返します。|
 |[CList::GetHead](#gethead)|(空にすることはできません) の一覧の先頭の要素を返します。|
 |[CList::GetHeadPosition](#getheadposition)|リストの先頭の要素の位置を返します。|
 |[CList::GetNext](#getnext)|反復処理するためには、次の要素を取得します。|
@@ -107,7 +107,7 @@ class CList : public CObject
 *TYPE*<br/>
 リストに格納されているオブジェクトの型。
 
-*中*<br/>
+*ARG_TYPE*<br/>
 型リストに格納されているオブジェクトを参照するために使用します。 参照であることができます。
 
 ## <a name="remarks"></a>Remarks
@@ -149,7 +149,7 @@ void AddHead(CList* pNewList);
 
 ### <a name="parameters"></a>パラメーター
 
-*中*<br/>
+*ARG_TYPE*<br/>
 一覧の要素の型を指定するテンプレート パラメーター (参照を使用できます)。
 
 *newElement*<br/>
@@ -181,7 +181,7 @@ void AddTail(CList* pNewList);
 
 ### <a name="parameters"></a>パラメーター
 
-*中*<br/>
+*ARG_TYPE*<br/>
 一覧の要素の型を指定するテンプレート パラメーター (参照を使用できます)。
 
 *newElement*<br/>
@@ -235,7 +235,7 @@ POSITION Find(
 
 ### <a name="parameters"></a>パラメーター
 
-*中*<br/>
+*ARG_TYPE*<br/>
 一覧の要素の型を指定するテンプレート パラメーター (参照を使用できます)。
 
 *searchValue*<br/>
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TYPE*<br/>
 一覧でオブジェクトの種類を指定するテンプレート パラメーター。
 
-*位置*<br/>
+*position*<br/>
 取得する要素のリスト内の位置。
 
 ### <a name="return-value"></a>戻り値
@@ -308,7 +308,7 @@ const TYPE& GetAt(POSITION position) const;
 
   例をご覧ください[CList::GetHeadPosition](#getheadposition)します。
 
-##  <a name="getcount"></a>  呼び出す
+##  <a name="getcount"></a>  CList::GetCount
 
 この一覧には、要素の数を取得します。
 
@@ -515,10 +515,10 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>パラメーター
 
-*位置*<br/>
+*position*<br/>
 以前、によって返される位置値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出し。
 
-*中*<br/>
+*ARG_TYPE*<br/>
 リストの要素の型を指定するテンプレート パラメーター。
 
 *newElement*<br/>
@@ -542,10 +542,10 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>パラメーター
 
-*位置*<br/>
+*position*<br/>
 以前、によって返される位置値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出し。
 
-*中*<br/>
+*ARG_TYPE*<br/>
 一覧の要素の型を指定するテンプレート パラメーター (参照を使用できます)。
 
 *newElement*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>パラメーター
 
-*位置*<br/>
+*position*<br/>
 一覧から削除する要素の位置。
 
 ### <a name="remarks"></a>Remarks
@@ -679,7 +679,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 *pos*<br/>
 設定する要素の位置。
 
-*中*<br/>
+*ARG_TYPE*<br/>
 一覧の要素の型を指定するテンプレート パラメーター (参照を使用できます)。
 
 *newElement*<br/>

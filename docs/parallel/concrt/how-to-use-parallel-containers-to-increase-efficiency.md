@@ -1,19 +1,19 @@
 ---
-title: '方法: 並列コンテナーを使用して効率を向上させる'
+title: '方法: 並列コンテナーを使用して、効率を向上させる'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - increasing efficiency with parallel containers [Concurrency Runtime]
 - concurrent_queue class, examples
 - concurrent_vector class, examples
 ms.assetid: bd00046d-e9b6-4ae1-b661-3995f671b867
-ms.openlocfilehash: a9c428ee54853fbd8106901434823e69b402eace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2479915b167ee3dbc2ce43d9c2733efc74818bbe
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439183"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300636"
 ---
-# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>方法: 並列コンテナーを使用して効率を向上させる
+# <a name="how-to-use-parallel-containers-to-increase-efficiency"></a>方法: 並列コンテナーを使用して、効率を向上させる
 
 ここでは、並列コンテナーを使用して、データの格納とアクセスを並行して効率的に行う方法について説明します。
 
@@ -37,7 +37,8 @@ ms.locfileid: "50439183"
 
 次の例は、`prime_factors_of` 関数を示しています。この関数は試行除算を使用して、指定された値のすべての素因数を検出します。
 
-この関数を使用して、 [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)素数のコレクションを反復処理するアルゴリズム。 `concurrent_vector` オブジェクトを使用すると、並行ループで素因数を結果に同時に加算できます。
+この関数を使用して、 [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)素数のコレクションを反復処理するアルゴリズム。 
+  `concurrent_vector` オブジェクトを使用すると、並行ループで素因数を結果に同時に加算できます。
 
 [!code-cpp[concrt-carmichael-primes#3](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-containers-to-increase-efficiency_3.cpp)]
 
@@ -67,7 +68,7 @@ Prime factors of 1050985 are: 5 13 19 23 37.
 
 コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`carmichael-primes.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
 
-**cl.exe/EHsc carmichael-primes.cpp**
+**cl.exe /EHsc carmichael-primes.cpp**
 
 ## <a name="see-also"></a>関連項目
 

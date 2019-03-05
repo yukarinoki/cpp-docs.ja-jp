@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC, initializing
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
-ms.openlocfilehash: 6e430d30dc62a14008fad9e41e3b2cde7ddffc8b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c96d009cf19981a475209233ee397af1cdcb352d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450597"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289391"
 ---
 # <a name="initinstance-member-function"></a>InitInstance メンバー関数
 
@@ -39,4 +39,4 @@ Windows オペレーティング システムは、複数のコピー、また�
 
 ## <a name="see-also"></a>関連項目
 
-[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp:アプリケーション クラス](../mfc/cwinapp-the-application-class.md)

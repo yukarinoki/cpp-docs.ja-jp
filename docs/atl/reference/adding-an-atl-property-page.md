@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ATL projects, adding property pages
 - controls [ATL], property pages
 ms.assetid: ddf92b49-42a2-46d2-b6b8-d37baedebeca
-ms.openlocfilehash: ed715cd822aaf0f55b8898efc80b5514938ca8ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f666865d3e1db4cdcf2dc6d3e07c2113a79c7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668071"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290015"
 ---
 # <a name="adding-an-atl-property-page"></a>ATL プロパティ ページを追加します。
 
@@ -36,4 +36,4 @@ Active Template Library (ATL) のプロパティ ページをプロジェクト�
 
 [プロパティ ページ](../../atl/atl-com-property-pages.md)<br/>
 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
-[例: プロパティ ページの実装](../../atl/example-implementing-a-property-page.md)
+[例:プロパティ ページの実装](../../atl/example-implementing-a-property-page.md)

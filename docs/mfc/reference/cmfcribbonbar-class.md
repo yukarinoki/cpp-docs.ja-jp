@@ -188,16 +188,17 @@ helpviewer_keywords:
 - CMFCRibbonBar [MFC], ToggleMimimizeState
 - CMFCRibbonBar [MFC], TranslateChar
 ms.assetid: a65d06fa-1a28-4cc0-8971-bc9d7c9198fe
-ms.openlocfilehash: 78566eaa15eb695d892471925a9dadcad9655c5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3656b6a135757a4658f2ef08b80a54efffe89012
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640246"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288416"
 ---
 # <a name="cmfcribbonbar-class"></a>CMFCRibbonBar クラス
 
-`CMFCRibbonBar` クラスは、Office 2007 で使用されているものに似たリボン バーを実装します。
+
+  `CMFCRibbonBar` クラスは、Office 2007 で使用されているものに似たリボン バーを実装します。
 
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
 
@@ -213,7 +214,7 @@ class CMFCRibbonBar : public CPane
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCRibbonBar::CMFCRibbonBar`|既定のコンストラクター|
+|`CMFCRibbonBar::CMFCRibbonBar`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -221,7 +222,7 @@ class CMFCRibbonBar : public CPane
 |----------|-----------------|
 |[CMFCRibbonBar::ActivateContextCategory](#activatecontextcategory)|既に表示されているコンテキスト カテゴリをアクティブにします。|
 |[CMFCRibbonBar::AddCategory](#addcategory)|新しいリボン カテゴリをリボンに追加します。|
-|[Cmfcribbonbar::addcontextcategory](#addcontextcategory)|コンテキスト カテゴリを追加します。|
+|[CMFCRibbonBar::AddContextCategory](#addcontextcategory)|コンテキスト カテゴリを追加します。|
 |[CMFCRibbonBar::AddMainCategory](#addmaincategory)|新しいメイン リボン カテゴリを追加します。|
 |[CMFCRibbonBar::AddPrintPreviewCategory](#addprintpreviewcategory)||
 |[CMFCRibbonBar::AddQATOnlyCategory](#addqatonlycategory)||
@@ -277,7 +278,7 @@ class CMFCRibbonBar : public CPane
 |[CMFCRibbonBar::IsToolTipEnabled](#istooltipenabled)|リボン バーのツールヒントが有効かどうかを決定します。|
 |[CMFCRibbonBar::IsTransparentCaption](#istransparentcaption)||
 |[CMFCRibbonBar::IsWindows7Look](#iswindows7look)|リボンの外観が Windows 7 スタイル (小さな四角形のアプリケーション ボタン) であるかどうかを示します。|
-|[Cmfcribbonbar::loadfromresource](#loadfromresource)|オーバーロードされます。 アプリケーション リソースからリボン バーを読み込みます。|
+|[CMFCRibbonBar::LoadFromResource](#loadfromresource)|オーバーロードされます。 アプリケーション リソースからリボン バーを読み込みます。|
 |[CMFCRibbonBar::OnClickButton](#onclickbutton)||
 |[CMFCRibbonBar::OnEditContextMenu](#oneditcontextmenu)||
 |[CMFCRibbonBar::OnRTLChanged](#onrtlchanged)|( `CPane::OnRTLChanged`をオーバーライドします)。|
@@ -317,9 +318,10 @@ Microsoft は、Microsoft Office 2007 のリリースと同時に Office Fluent 
 
 リボン バーに表示される要素を拡大および縮小することで、スペースを最大限に活用します。 たとえば、リボン パネルに要素を表示するための十分なスペースがない場合、リボン パネルはポップアップ メニューにサブアイテムを表示するメニュー ボタンになります。 リボン バーは、静的 (フローティングでない) コントロール バーとして動作し、フレームの上部にドッキングできます。
 
-`CMFCRibbonStatusBar` クラスを使用すると、Office 2007 で使われているようなステータス バーを実装できます。 リボン カテゴリが含まれています (表示) のグループと[リボン パネル](../../mfc/reference/cmfcribbonpanel-class.md)します。 各リボン パネルから派生した、1 つまたは複数のリボン要素が含まれています。 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)します。
 
-既存の MFC アプリケーションにリボン バーを追加する方法については、次を参照してください。[チュートリアル: MFC Scribble アプリケーションの更新](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)します。
+  `CMFCRibbonStatusBar` クラスを使用すると、Office 2007 で使われているようなステータス バーを実装できます。 リボン カテゴリが含まれています (表示) のグループと[リボン パネル](../../mfc/reference/cmfcribbonpanel-class.md)します。 各リボン パネルから派生した、1 つまたは複数のリボン要素が含まれています。 [CMFCRibbonBaseElement](../../mfc/reference/cmfcribbonbaseelement-class.md)します。
+
+既存の MFC アプリケーションにリボン バーを追加する方法については、次を参照してください。[チュートリアル。MFC Scribble アプリケーションの更新](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -410,7 +412,7 @@ CMFCRibbonCategory* AddCategory(
 
 [!code-cpp[NVC_MFC_RibbonApp#5](../../mfc/reference/codesnippet/cpp/cmfcribbonbar-class_1.cpp)]
 
-##  <a name="addcontextcategory"></a>  Cmfcribbonbar::addcontextcategory
+##  <a name="addcontextcategory"></a>  CMFCRibbonBar::AddContextCategory
 
 作成し、リボン バーの新しいコンテキスト カテゴリを初期化します。
 
@@ -660,7 +662,7 @@ BOOL CreateEx(
 *pParentWnd*<br/>
 [in]リボン バーの親ウィンドウへのポインター。
 
-*ツール バー*<br/>
+*dwCtrlStyle*<br/>
 [in]このパラメーターは使用されません。
 
 *dwStyle*<br/>
@@ -798,7 +800,7 @@ CMFCRibbonBaseElement* FindByData(
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 [in]リボン要素に関連付けられたデータ。
 
 *bVisibleOnly*<br/>
@@ -854,7 +856,7 @@ int FindCategoryIndexByData(DWORD dwData) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 [in]リボン カテゴリに関連付けられたデータ。
 
 ### <a name="return-value"></a>戻り値
@@ -2053,7 +2055,7 @@ TRUE の場合、リボンになります。 Windows 7それ以外の場合は F
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="loadfromresource"></a>  Cmfcribbonbar::loadfromresource
+##  <a name="loadfromresource"></a>  CMFCRibbonBar::LoadFromResource
 
 オーバーロードされます。 アプリケーション リソースからリボン バーを読み込みます。
 
@@ -2156,4 +2158,3 @@ TRUE は、リボンのレイアウトを再計算します。FALSE それ以外
 [CMFCRibbonPanel クラス](../../mfc/reference/cmfcribbonpanel-class.md)<br/>
 [CMFCRibbonBaseElement クラス](../../mfc/reference/cmfcribbonbaseelement-class.md)<br/>
 [チュートリアル: MFC Scribble アプリケーションの更新](../../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
-

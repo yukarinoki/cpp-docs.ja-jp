@@ -37,12 +37,12 @@ f1_keywords:
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_CODE_HANDLER
 - atlwin/ATL::REFLECTED_NOTIFY_RANGE_HANDLER
 ms.assetid: eefdd546-8934-4a30-b263-9c06a8addcbd
-ms.openlocfilehash: a246e907d401167011b5a3e1306c146a338e233a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: bedef3a8563e27f72017720530e3b7addb78ec3d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694375"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290379"
 ---
 # <a name="message-map-macros-atl"></a>メッセージ マップ マクロ (ATL)
 
@@ -51,11 +51,11 @@ ms.locfileid: "51694375"
 |||
 |-|-|
 |[ALT_MSG_MAP](#alt_msg_map)|代替メッセージ マップの先頭をマークします。|
-|[送るに](#begin_msg_map)|既定のメッセージ マップの先頭をマークします。|
+|[BEGIN_MSG_MAP](#begin_msg_map)|既定のメッセージ マップの先頭をマークします。|
 |[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|基底クラスのマップに代替メッセージをチェインします。|
 |[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|クラスのデータ メンバーのマップに代替メッセージをチェインします。|
 |[CHAIN_MSG_MAP](#chain_msg_map)|基本クラスの既定のメッセージ マップにチェーンします。|
-|[場合](#chain_msg_map_dynamic)|実行時に別のクラスのメッセージ マップにチェーンします。|
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|実行時に別のクラスのメッセージ マップにチェーンします。|
 |[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|クラスのデータ メンバーの既定のメッセージ マップにチェーンします。|
 |[COMMAND_CODE_HANDLER](#command_code_handler)|WM_COMMAND メッセージは、通知コードに基づいて、ハンドラー関数にマップします。|
 |[COMMAND_HANDLER](#command_handler)|WM_COMMAND メッセージは、通知コードとメニュー項目、コントロール、またはアクセラレータの識別子に基づいて、ハンドラー関数にマップします。|
@@ -64,7 +64,7 @@ ms.locfileid: "51694375"
 |[COMMAND_RANGE_HANDLER](#command_range_handler)|WM_COMMAND メッセージを連続した範囲のコントロール id に基づく、ハンドラー関数にマップします。|
 |[DECLARE_EMPTY_MSG_MAP](#declare_empty_msg_map)|空のメッセージ マップを実装します。|
 |[DEFAULT_REFLECTION_HANDLER](#default_reflection_handler)|それ以外の場合は処理されないリフレクション メッセージ用の既定のハンドラーを提供します。|
-|[も](#end_msg_map)|メッセージ マップの最後をマークします。|
+|[END_MSG_MAP](#end_msg_map)|メッセージ マップの最後をマークします。|
 |[FORWARD_NOTIFICATIONS](#forward_notifications)|親ウィンドウへの通知メッセージを転送します。|
 |[MESSAGE_HANDLER](#message_handler)|Windows メッセージをハンドラー関数にマップします。|
 |[MESSAGE_RANGE_HANDLER](#message_range_handler)|連続した範囲の Windows メッセージをハンドラー関数にマップします。|
@@ -128,7 +128,7 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 **ヘッダー:** atlwin.h
 
-##  <a name="begin_msg_map"></a>  送るに
+##  <a name="begin_msg_map"></a>  BEGIN_MSG_MAP
 
 既定のメッセージ マップの先頭をマークします。
 
@@ -168,7 +168,7 @@ BEGIN_MSG_MAP(theClass)
 |[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)|クラスのデータ メンバーの既定のメッセージ マップにチェーンします。|
 |[CHAIN_MSG_MAP_ALT](#chain_msg_map_alt)|基底クラスのマップに代替メッセージをチェインします。|
 |[CHAIN_MSG_MAP_ALT_MEMBER](#chain_msg_map_alt_member)|クラスのデータ メンバーのマップに代替メッセージをチェインします。|
-|[場合](#chain_msg_map_dynamic)|実行時に別のクラスの既定のメッセージ マップにチェーンします。|
+|[CHAIN_MSG_MAP_DYNAMIC](#chain_msg_map_dynamic)|実行時に別のクラスの既定のメッセージ マップにチェーンします。|
 
 次のマクロでは、親ウィンドウから「反映」のメッセージを送信します。 たとえば、コントロールを通常通知メッセージを送信用の親ウィンドウに、処理しますが、親ウィンドウは、コントロールにメッセージを反映できます。
 
@@ -303,7 +303,7 @@ ATL でメッセージ マップの使用に関する詳細については、次
 
 **ヘッダー:** atlwin.h
 
-##  <a name="chain_msg_map_dynamic"></a>  場合
+##  <a name="chain_msg_map_dynamic"></a>  CHAIN_MSG_MAP_DYNAMIC
 
 メッセージ マップ エントリを定義します。
 
@@ -397,7 +397,7 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*id*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
 *code*<br/>
@@ -408,7 +408,7 @@ COMMAND_HANDLER(id, code, func)
 
 ### <a name="remarks"></a>Remarks
 
-COMMAND_HANDLER マップ、 [WM_COMMAND](/windows/desktop/menurc/wm-command)通知コードとコントロールの識別子に基づいて、指定されたハンドラー関数にメッセージ。 例えば:
+COMMAND_HANDLER マップ、 [WM_COMMAND](/windows/desktop/menurc/wm-command)通知コードとコントロールの識別子に基づいて、指定されたハンドラー関数にメッセージ。 例:
 
 [!code-cpp[NVC_ATL_Windowing#119](../../atl/codesnippet/cpp/message-map-macros-atl_6.h)]
 
@@ -439,7 +439,7 @@ COMMAND_ID_HANDLER(id, func)
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*id*<br/>
 [in]メニュー項目、コントロール、またはメッセージを送信するアクセラレータの識別子。
 
 *func*<br/>
@@ -532,7 +532,7 @@ DEFAULT_REFLECTION_HANDLER()
 
 **ヘッダー:** atlwin.h
 
-##  <a name="end_msg_map"></a>  も
+##  <a name="end_msg_map"></a>  END_MSG_MAP
 
 メッセージ マップの最後をマークします。
 
@@ -588,7 +588,7 @@ MESSAGE_HANDLER( msg, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*msg*<br/>
 [in]Windows メッセージ。
 
 *func*<br/>
@@ -672,7 +672,7 @@ NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*id*<br/>
 [in]メッセージを送信するコントロールの識別子です。
 
 *cd*<br/>
@@ -716,7 +716,7 @@ NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*id*<br/>
 [in]メッセージを送信するコントロールの識別子です。
 
 *func*<br/>
@@ -829,7 +829,7 @@ REFLECTED_COMMAND_HANDLER( id, code, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*id*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
 *code*<br/>
@@ -852,7 +852,7 @@ REFLECTED_COMMAND_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*id*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
 *func*<br/>
@@ -941,7 +941,7 @@ REFLECTED_NOTIFY_HANDLER( id, cd, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*id*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
 *cd*<br/>
@@ -964,7 +964,7 @@ REFLECTED_NOTIFY_ID_HANDLER( id, func )
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*id*<br/>
 [in]メニュー項目、コントロール、またはアクセラレータの識別子。
 
 *func*<br/>

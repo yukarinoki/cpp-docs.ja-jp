@@ -19,12 +19,12 @@ helpviewer_keywords:
 - UpdateData method [MFC]
 - retrieving dialog box data [MFC]
 ms.assetid: 4675f63b-41d2-45ed-b6c3-235ad8ab924b
-ms.openlocfilehash: f80d80dc9e212dbe0d87da65ac92943ad1f0edad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 338630aef358d9490461179288d5c45a2d3b821c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175497"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302314"
 ---
 # <a name="dialog-data-exchange"></a>ダイアログ データ エクスチェンジ
 
@@ -54,4 +54,3 @@ MFC には、exchange のさまざまな種類の多くの DDX 関数が用意�
 [ダイアログ データ エクスチェンジとダイアログ データ検証](../mfc/dialog-data-exchange-and-validation.md)<br/>
 [ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)<br/>
 [ダイアログ データ検証](../mfc/dialog-data-validation.md)
-

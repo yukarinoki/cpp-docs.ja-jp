@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE controls [MFC], persistence
 - persistence, OLE controls
 ms.assetid: 64f8dc80-f110-41af-b3ea-14948f6bfdf7
-ms.openlocfilehash: e510cdb2ae64b5b3ed5f8b69bc8ad9c22800a167
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b8bcba63c8e09873fe7f30e4fd07d652850be1f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609420"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299648"
 ---
 # <a name="persistence-of-ole-controls"></a>OLE コントロールの永続化
 
@@ -413,7 +413,7 @@ BOOL PX_Long(
 *pszPropName*<br/>
 交換されるプロパティの名前。
 
-*左辺値*<br/>
+*lValue*<br/>
 プロパティが格納されている変数への参照を (通常、クラスのメンバー変数)。
 
 *lDefault*<br/>
@@ -648,7 +648,7 @@ BOOL PX_VBXFontConvert(
 
 この関数は、VBX コントロールの直接の置き換えとして設計されている OLE コントロールのみで使用する必要があります。 コントロールを呼び出すが、Visual Basic 開発環境では、対応する置換 OLE コントロールを使用する VBX コントロールを含む形式に変換、 `IDataObject::SetData` VBX コントロールのプロパティのデータを含むプロパティ セットを渡す関数。 この操作により、コントロールの`DoPropExchange`呼び出される関数。 `DoPropExchange` 呼び出すことができます`PX_VBXFontConvert`VBX コントロールのフォント関連プロパティに変換する (たとえば、"FontName、""FontSize、"など) OLE コントロールのフォントのプロパティの対応するコンポーネントにします。
 
-`PX_VBXFontConvert` コントロールが VBX フォーム アプリケーションから実際に変換されている場合にのみ呼び出す必要があります。 例えば:
+`PX_VBXFontConvert` コントロールが VBX フォーム アプリケーションから実際に変換されている場合にのみ呼び出す必要があります。 例:
 
 [!code-cpp[NVC_MFCActiveXControl#14](../../mfc/codesnippet/cpp/persistence-of-ole-controls_1.cpp)]
 [!code-cpp[NVC_MFCActiveXControl#15](../../mfc/codesnippet/cpp/persistence-of-ole-controls_2.cpp)]

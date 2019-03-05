@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: f18866dca3610db275c629bbb2ac885c21cbdcb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455810"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289963"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -181,7 +181,7 @@ class CEdit : public CWnd
 
 各メッセージ マップ エントリは、次の形式をとります。
 
-  **On _**_通知_**(** _id_**、** _memberFxn_ **)**
+  **ON_**_NOTIFICATION_**(** _id_**,** _memberFxn_ **)**
 
 場所`id`、通知を送信するエディット コントロールの子ウィンドウ ID を指定し、`memberFxn`通知を処理するために記述した親メンバー関数の名前を指定します。
 
@@ -608,7 +608,7 @@ int GetLine(
 *lpszBuffer*<br/>
 行のコピーを受け取るバッファーへのポインター。 バッファーの最初の単語は、バッファーにコピーする文字の最大数を指定する必要があります。
 
-*格納*<br/>
+*nMaxLength*<br/>
 バッファーにコピーするバイトの最大数を指定します。 `GetLine` 最初の単語でこの値を配置*lpszBuffer* Windows への呼び出しを行う前にします。
 
 ### <a name="return-value"></a>戻り値
@@ -996,7 +996,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*されています。*<br/>
+*lpszNewText*<br/>
 置換テキストを含む null で終わる文字列へのポインター。
 
 *bCanUndo*<br/>

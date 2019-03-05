@@ -72,12 +72,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::unorm_3::get_yz
 - amp_short_vectors/Concurrency::graphics::unorm_3::rbg
 ms.assetid: ea4e7a17-5256-464c-af28-8b01962564c0
-ms.openlocfilehash: 2ea10af6ffa1c3e4731b889ddec2d6f0c86ec981
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: befbf350bbd591d168f19e87c81370220d29ef9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50458033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300909"
 ---
 # <a name="unorm3-class"></a>unorm_3 クラス
 
@@ -205,7 +205,7 @@ class unorm_3;
 
 **ヘッダー:** amp_short_vectors.h
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency::graphics
 
 ##  <a name="ctor"></a> unorm_3
 
@@ -271,7 +271,7 @@ explicit inline unorm_3(
 *_V2*<br/>
 2 要素を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>

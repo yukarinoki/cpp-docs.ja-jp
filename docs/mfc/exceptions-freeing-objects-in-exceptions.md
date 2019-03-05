@@ -1,5 +1,5 @@
 ---
-title: '例外処理 : 例外処理でのオブジェクトの解放'
+title: 例外:例外オブジェクトの解放
 ms.date: 11/04/2016
 helpviewer_keywords:
 - throwing exceptions [MFC], freeing objects in exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - throwing exceptions [MFC], after destroying
 - exception handling [MFC], destroying objects
 ms.assetid: 3b14b4ee-e789-4ed2-b8e3-984950441d97
-ms.openlocfilehash: 6e03d46a2600458f3107efa6e0b6b0d643c9b160
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23fe85018d1bc2c41371afec2ad6931755e4e682
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50442472"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298134"
 ---
-# <a name="exceptions-freeing-objects-in-exceptions"></a>例外処理 : 例外処理でのオブジェクトの解放
+# <a name="exceptions-freeing-objects-in-exceptions"></a>例外:例外オブジェクトの解放
 
 この記事では、必要性と例外が発生したときに、オブジェクトを解放する方法について説明します。 ここでは、次の内容について説明します。
 
@@ -62,9 +62,8 @@ ms.locfileid: "50442472"
 
 例外をスローする関数を呼び出す場合は使用できます**try ~ catch**ブロックを必ず、例外をキャッチして、作成した任意のオブジェクトを破棄する可能性があります。 具体的には、MFC 関数の多くが例外をスローすることもあります。
 
-詳細については、次を参照してください。[例外。 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+詳細については、次を参照してください。[例外。キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [例外処理](../mfc/exception-handling-in-mfc.md)
-

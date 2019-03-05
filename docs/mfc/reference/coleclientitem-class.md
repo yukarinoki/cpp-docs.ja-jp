@@ -164,12 +164,12 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnScrollBy
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
-ms.openlocfilehash: 80d28aa6a71adb72b8a3e0f5cd997577d61d0a52
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: ec3048e7bd033e5c296b558dd2083c648bc377e7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678588"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295358"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem クラス
 
@@ -198,7 +198,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::AttachDataObject](#attachdataobject)|OLE オブジェクトのデータにアクセスします。|
 |[COleClientItem::CanCreateFromData](#cancreatefromdata)|コンテナー アプリケーションが、埋め込みオブジェクトを作成できるかどうかを示します。|
 |[COleClientItem::CanCreateLinkFromData](#cancreatelinkfromdata)|コンテナー アプリケーションがリンクされたオブジェクトを作成できるかどうかを示します。|
-|[置き換えるには](#canpaste)|埋め込み可能なまたは静的 OLE アイテムがクリップボードに含まれるかどうかを示します。|
+|[COleClientItem::CanPaste](#canpaste)|埋め込み可能なまたは静的 OLE アイテムがクリップボードに含まれるかどうかを示します。|
 |[置き換えるには](#canpastelink)|OLE 項目をリンク可能がクリップボードに含まれるかどうかを示します。|
 |[COleClientItem::Close](#close)|サーバーへのリンクを閉じますが、OLE 項目を破棄しません。|
 |[COleClientItem::ConvertTo](#convertto)|項目を別の型に変換します。|
@@ -207,7 +207,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::CreateFromClipboard](#createfromclipboard)|クリップボードから埋め込みアイテムを作成します。|
 |[COleClientItem::CreateFromData](#createfromdata)|データ オブジェクトから埋め込みアイテムを作成します。|
 |[COleClientItem::CreateFromFile](#createfromfile)|ファイルから埋め込みアイテムを作成します。|
-|[リンク](#createlinkfromclipboard)|クリップボードからのリンクされた項目を作成します。|
+|[COleClientItem::CreateLinkFromClipboard](#createlinkfromclipboard)|クリップボードからのリンクされた項目を作成します。|
 |[COleClientItem::CreateLinkFromData](#createlinkfromdata)|データ オブジェクトからリンクされた項目を作成します。|
 |[COleClientItem::CreateLinkFromFile](#createlinkfromfile)|ファイルからのリンクされた項目を作成します。|
 |[COleClientItem::CreateNewItem](#createnewitem)|サーバー アプリケーションを起動して新しい埋め込みアイテムを作成します。|
@@ -216,7 +216,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::Deactivate](#deactivate)|アイテムを非アクティブ化します。|
 |[COleClientItem::DeactivateUI](#deactivateui)|コンテナー アプリケーションのユーザー インターフェイスは、元の状態に復元します。|
 |[COleClientItem::Delete](#delete)|削除するか、またはリンクされた項目があった場合、OLE 項目を閉じます。|
-|[クラス](#dodragdrop)|ドラッグ アンド ドロップ操作を実行します。|
+|[COleClientItem::DoDragDrop](#dodragdrop)|ドラッグ アンド ドロップ操作を実行します。|
 |[COleClientItem::DoVerb](#doverb)|指定した動詞を実行します。|
 |[値](#draw)|OLE 項目を描画します。|
 |[COleClientItem::GetActiveView](#getactiveview)|場所に項目がアクティブにビューを取得します。|
@@ -241,7 +241,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::IsRunning](#isrunning)|アイテムのサーバー アプリケーションが実行されている場合は、TRUE を返します。|
 |[COleClientItem::OnActivate](#onactivate)|アイテムがアクティブ化されることを通知するためにフレームワークによって呼び出されます。|
 |[COleClientItem::OnActivateUI](#onactivateui)|アクティブになるし、そのユーザー インターフェイスを表示する必要がありますが、アイテムを通知するためにフレームワークによって呼び出されます。|
-|[として](#onchange)|サーバーは OLE 項目を変更するときに呼び出されます。 必要な実装です。|
+|[COleClientItem::OnChange](#onchange)|サーバーは OLE 項目を変更するときに呼び出されます。 必要な実装です。|
 |[COleClientItem::OnDeactivate](#ondeactivate)|項目が非アクティブ化されたときに、フレームワークによって呼び出されます。|
 |[COleClientItem::OnDeactivateUI](#ondeactivateui)|サーバーがその場所でのユーザー インターフェイスを削除すると、フレームワークによって呼び出されます。|
 |[COleClientItem::OnGetClipboardData](#ongetclipboarddata)|クリップボードにコピーするデータを取得するためにフレームワークによって呼び出されます。|
@@ -268,11 +268,11 @@ class COleClientItem : public CDocItem
 |名前|説明|
 |----------|-----------------|
 |[COleClientItem::CanActivate](#canactivate)|埋めこみ先編集が許可されているかどうかを判断するためにフレームワークによって呼び出されます。|
-|[に](#onchangeitemposition)|アイテムの位置が変更されたときに、フレームワークによって呼び出されます。|
+|[COleClientItem::OnChangeItemPosition](#onchangeitemposition)|アイテムの位置が変更されたときに、フレームワークによって呼び出されます。|
 |[COleClientItem::OnDeactivateAndUndo](#ondeactivateandundo)|アクティブ化の後に元に戻すために、フレームワークによって呼び出されます。|
 |[COleClientItem::OnDiscardUndoState](#ondiscardundostate)|項目の元に戻す状態情報を破棄するためにフレームワークによって呼び出されます。|
 |[COleClientItem::OnGetClipRect](#ongetcliprect)|アイテムのクリッピング四角形の座標を取得するためにフレームワークによって呼び出されます。|
-|[状態](#ongetitemposition)|ビューの基準とする項目の位置を取得するためにフレームワークによって呼び出されます。|
+|[COleClientItem::OnGetItemPosition](#ongetitemposition)|ビューの基準とする項目の位置を取得するためにフレームワークによって呼び出されます。|
 |[COleClientItem::OnGetWindowContext](#ongetwindowcontext)|場所に項目がアクティブになったときに、フレームワークによって呼び出されます。|
 |[COleClientItem::OnScrollBy](#onscrollby)|項目をスクロールして表示するためにフレームワークによって呼び出されます。|
 |[COleClientItem::OnShowItem](#onshowitem)|OLE 項目を表示するためにフレームワークによって呼び出されます。|
@@ -287,7 +287,7 @@ OLE アイテムは、いずれか埋め込みまたはリンクされていま�
 
 `COleClientItem` いずれかで使用できる、 [COleDocument](../../mfc/reference/coledocument-class.md)、 [COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)、または[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)クラス。 使用する`COleClientItem`、そこから派生クラスを作成および実装、 [OnChange](#onchange)メンバー関数は、コンテナーが項目に加えられた変更をどのように応答する方法を定義します。 インプレース アクティブ化をサポートするためにオーバーライド、 [:ongetitemposition](#ongetitemposition)メンバー関数。 この関数は、OLE アイテムの表示位置に関する情報を提供します。
 
-詳細については、コンテナー インターフェイスを使用して、記事をご覧ください。[コンテナー: コンテナーの実装](../../mfc/containers-implementing-a-container.md)と[アクティベーション](../../mfc/activation-cpp.md)。
+詳細については、コンテナー インターフェイスを使用して、記事をご覧ください。[コンテナー。コンテナーの実装](../../mfc/containers-implementing-a-container.md)と[アクティベーション](../../mfc/activation-cpp.md)します。
 
 > [!NOTE]
 >  Windows SDK は、「オブジェクト」として埋め込みおよびリンクされた項目を参照し、「クラスです」として項目の種類を参照 この参照は、OLE のエンティティを対応する C++ オブジェクトや C++ クラスから OLE カテゴリを区別するためには、"type"という用語と区別するのに、"item"という用語を使用します。
@@ -457,7 +457,7 @@ static BOOL PASCAL CanCreateLinkFromData(const COleDataObject* pDataObject);
 
 詳細については、この記事を参照してください。[データ オブジェクトとデータ ソース (OLE)](../../mfc/data-objects-and-data-sources-ole.md)します。
 
-##  <a name="canpaste"></a>  置き換えるには
+##  <a name="canpaste"></a>  COleClientItem::CanPaste
 
 埋め込み OLE アイテムは、クリップボードから貼り付けができるかどうかを確認するには、この関数を呼び出します。
 
@@ -473,7 +473,7 @@ static BOOL PASCAL CanPaste();
 
 詳細については、次を参照してください。 [OleGetClipboard](/windows/desktop/api/ole2/nf-ole2-olegetclipboard)と[OleQueryCreateFromData](/windows/desktop/api/ole2/nf-ole2-olequerycreatefromdata) Windows SDK に含まれています。
 
-##  <a name="canpastelink"></a>  置き換えるには
+##  <a name="canpastelink"></a>  COleClientItem::CanPasteLink
 
 この関数では、リンクされている OLE 項目をクリップボードから貼り付けができるかどうかを参照してください。
 
@@ -627,7 +627,7 @@ BOOL CreateFromClipboard(
 
 ### <a name="parameters"></a>パラメーター
 
-*レンダリング*<br/>
+*render*<br/>
 サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。
 
 *cfFormat*<br/>
@@ -663,7 +663,7 @@ BOOL CreateFromData(
 *pDataObject*<br/>
 ポインター、 [COleDataObject](../../mfc/reference/coledataobject-class.md) OLE 項目の作成元のオブジェクト。
 
-*レンダリング*<br/>
+*render*<br/>
 サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。
 
 *cfFormat*<br/>
@@ -697,13 +697,13 @@ BOOL CreateFromFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*lpszFileName*<br/>
 OLE 項目の作成元のファイルの名前へのポインター。
 
 *clsid*<br/>
 将来使用するために予約されています。
 
-*レンダリング*<br/>
+*render*<br/>
 サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。
 
 *cfFormat*<br/>
@@ -722,7 +722,7 @@ OLE 項目を作成するときにキャッシュするクリップボード デ
 
 詳細については、次を参照してください。 [OleCreateFromFile](/windows/desktop/api/ole/nf-ole-olecreatefromfile)、 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender)、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK に含まれています。
 
-##  <a name="createlinkfromclipboard"></a>  リンク
+##  <a name="createlinkfromclipboard"></a>  COleClientItem::CreateLinkFromClipboard
 
 クリップボードの内容からリンクされた項目を作成するには、この関数を呼び出します。
 
@@ -735,7 +735,7 @@ BOOL CreateLinkFromClipboard(
 
 ### <a name="parameters"></a>パラメーター
 
-*レンダリング*<br/>
+*render*<br/>
 サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。
 
 *cfFormat*<br/>
@@ -771,7 +771,7 @@ BOOL CreateLinkFromData(
 *pDataObject*<br/>
 ポインター、 [COleDataObject](../../mfc/reference/coledataobject-class.md) OLE 項目の作成元のオブジェクト。
 
-*レンダリング*<br/>
+*render*<br/>
 サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。
 
 *cfFormat*<br/>
@@ -804,10 +804,10 @@ BOOL CreateLinkFromFile(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*lpszFileName*<br/>
 OLE 項目の作成元のファイルの名前へのポインター。
 
-*レンダリング*<br/>
+*render*<br/>
 サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。
 
 *cfFormat*<br/>
@@ -843,7 +843,7 @@ BOOL CreateNewItem(
 *clsid*<br/>
 作成する OLE 項目の種類を一意に識別する ID です。
 
-*レンダリング*<br/>
+*render*<br/>
 サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。
 
 *cfFormat*<br/>
@@ -875,7 +875,7 @@ BOOL CreateStaticFromClipboard(
 
 ### <a name="parameters"></a>パラメーター
 
-*レンダリング*<br/>
+*render*<br/>
 サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。
 
 *cfFormat*<br/>
@@ -911,7 +911,7 @@ BOOL CreateStaticFromData(
 *pDataObject*<br/>
 ポインター、 [COleDataObject](../../mfc/reference/coledataobject-class.md) OLE 項目の作成元のオブジェクト。
 
-*レンダリング*<br/>
+*render*<br/>
 サーバーが OLE 項目を表示する方法を指定するフラグ。 有効な値では、次を参照してください。 [OLERENDER](/windows/desktop/api/oleidl/ne-oleidl-tagolerender) Windows SDK に含まれています。
 
 *cfFormat*<br/>
@@ -981,7 +981,7 @@ void Delete(BOOL bAutoDelete = TRUE);
 
 この関数を呼び出して、[リリース](#release)メンバー関数は、さらに、項目、完全に削除する OLE 項目、ドキュメントから C++ オブジェクトを削除します。 OLE 項目が埋め込まれている場合、項目のネイティブのデータは削除されます。 常に、実行中のサーバーが閉じられますそのため、項目がリンクを開く場合、それを閉じます。
 
-##  <a name="dodragdrop"></a>  クラス
+##  <a name="dodragdrop"></a>  COleClientItem::DoDragDrop
 
 呼び出す、`DoDragDrop`ドラッグ アンド ドロップ操作を実行するメンバー関数。
 
@@ -996,7 +996,7 @@ DROPEFFECT DoDragDrop(
 
 ### <a name="parameters"></a>パラメーター
 
-*示す*<br/>
+*lpItemRect*<br/>
 クライアント座標 (ピクセル単位) 画面でアイテムの四角形。
 
 *ptOffset*<br/>
@@ -1071,7 +1071,7 @@ virtual BOOL DoVerb(
 
 主動詞し、で 0 が指定された場合、 *nVerb* OLE 項目の編集を許可するパラメーター、サーバー アプリケーションを起動します。 コンテナー アプリケーションでは、インプレース アクティブ化をサポートする場合は、インプレース編集を実行できます。 場合は、コンテナーは、インプレース アクティブ化 (または Open 動詞が指定されているかどうか) をサポートしていない、別のウィンドウで、サーバーを起動し、編集しが実行できます。 通常、コンテナー アプリケーションのユーザーが主動詞の値である OLE 項目をダブルクリックときに、 *nVerb*パラメーターは、ユーザーが実行できるアクションを決定します。 ただし、サーバーは、1 つのみのアクションをサポートする場合は、その操作が、関係なく、値がで指定された、 *nVerb*パラメーター。
 
-##  <a name="draw"></a>  値
+##  <a name="draw"></a>  COleClientItem::Draw
 
 指定したデバイス コンテキストを使用して、指定した外接する四角形に OLE 項目を描画するには、この関数を呼び出します。
 
@@ -1328,13 +1328,13 @@ UINT GetItemState() const;
 
 ### <a name="return-value"></a>戻り値
 
-A`COleClientItem::ItemState`列挙値で、次のいずれかを指定できます: `emptyState`、 `loadedState`、 `openState`、 `activeState`、`activeUIState`します。 これらの状態については、この記事を参照してください。[コンテナー: クライアント アイテムの状態](../../mfc/containers-client-item-states.md)します。
+A`COleClientItem::ItemState`列挙値で、次のいずれかを指定できます: `emptyState`、 `loadedState`、 `openState`、 `activeState`、`activeUIState`します。 これらの状態については、この記事を参照してください。[コンテナー。クライアント アイテムの状態](../../mfc/containers-client-item-states.md)します。
 
 ### <a name="remarks"></a>Remarks
 
 OLE 項目の状態が変更されたときの通知を使用して、 [OnChange](#onchange)メンバー関数。
 
-詳細については、この記事を参照してください。[コンテナー: クライアント アイテムの状態](../../mfc/containers-client-item-states.md)します。
+詳細については、この記事を参照してください。[コンテナー。クライアント アイテムの状態](../../mfc/containers-client-item-states.md)します。
 
 ##  <a name="getlaststatus"></a>  COleClientItem::GetLastStatus
 
@@ -1540,7 +1540,7 @@ virtual void OnActivateUI();
 
 既定の実装は後で、サーバーの HWND を記憶`GetServerWindow`呼び出し。
 
-##  <a name="onchange"></a>  として
+##  <a name="onchange"></a>  COleClientItem::OnChange
 
 ユーザーを変更、保存すると、または OLE 項目を終了するときに、フレームワークによって呼び出されます。
 
@@ -1563,7 +1563,7 @@ virtual void OnChange(
 
 - OLE_CHANGED_STATE、OLE アイテムは、別の 1 つの状態から変更されました。
 
-*について*<br/>
+*dwParam*<br/>
 場合*nCode*でまたは OLE_CLOSED は、このパラメーターは使用されません。 場合*nCode* OLE_CHANGED は、このパラメーターが変更された OLE 項目の外観を指定します。 使用可能な値は、次を参照してください。、*について*パラメーターの[値](#draw)します。 場合*nCode* OLE_CHANGED_STATE は、このパラメーターは、`COleClientItem::ItemState`列挙値と、入力されている状態について説明します。 次の値のいずれかのことができます: `emptyState`、 `loadedState`、 `openState`、 `activeState`、または`activeUIState`します。
 
 ### <a name="remarks"></a>Remarks
@@ -1574,7 +1574,7 @@ OLE_CHANGED_STATE の現在の状態が返される[GetItemState](#getitemstate)
 
 OLE 項目の状態の変更に応答するには、この関数をオーバーライドします。 通常、項目の外観を更新するには、項目を表示する領域を無効にすること。 オーバーライドの先頭には、基本クラスの実装を呼び出します。
 
-##  <a name="onchangeitemposition"></a>  に
+##  <a name="onchangeitemposition"></a>  COleClientItem::OnChangeItemPosition
 
 コンテナーに、インプレース アクティブ化中に OLE 項目の範囲が変更されたことを通知するためにフレームワークによって呼び出されます。
 
@@ -1709,7 +1709,7 @@ virtual void OnGetClipRect(CRect& rClipRect);
 
 既定の実装は、単に、項目が、インプレース アクティブ ビューのクライアントの四角形を返します。
 
-##  <a name="ongetitemposition"></a>  状態
+##  <a name="ongetitemposition"></a>  COleClientItem::OnGetItemPosition
 
 フレームワークによって、`OnGetItemPosition`インプレース編集されている項目の座標を取得します。
 
@@ -1741,13 +1741,13 @@ virtual BOOL OnGetWindowContext(
 
 ### <a name="parameters"></a>パラメーター
 
-*ときは*<br/>
+*ppMainFrame*<br/>
 メイン フレーム ウィンドウへのポインターへのポインター。
 
-*き*<br/>
+*ppDocFrame*<br/>
 ドキュメント フレーム ウィンドウへのポインターへのポインター。
 
-*は*<br/>
+*lpFrameInfo*<br/>
 ポインター、[受け取る](/windows/desktop/api/oleidl/ns-oleidl-tagoifi)フレーム ウィンドウの情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1780,7 +1780,7 @@ virtual void OnInsertMenus(
 空のメニューへのポインター。
 
 *lpMenuWidths*<br/>
-次のメニュー グループの各メニューの数を示す 6 つの長い値の配列を指す: ファイル、編集、コンテナー、オブジェクト、ウィンドウのヘルプ。 コンテナー アプリケーションは、ファイル、コンテナー、およびウィンドウ] メニューの [グループの 0、2、および 4 がこの配列の要素に対応します。
+次のメニュー グループの各メニューの数を示す 6 つの長い値の配列を指します。ファイルを編集、コンテナー、オブジェクト、ウィンドウのヘルプ。 コンテナー アプリケーションは、ファイル、コンテナー、およびウィンドウ] メニューの [グループの 0、2、および 4 がこの配列の要素に対応します。
 
 ### <a name="remarks"></a>Remarks
 

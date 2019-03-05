@@ -1,19 +1,19 @@
 ---
-title: 'Windows ソケット: アーカイブを使用するソケットの例'
+title: Windows ソケット:アーカイブを使用するソケットの例
 ms.date: 11/04/2016
 helpviewer_keywords:
 - sockets [MFC], with archives
 - examples [MFC], Windows Sockets
 - Windows Sockets [MFC], with archives
 ms.assetid: 2e3c9bb2-7e7b-4f28-8dc5-6cb7a484edac
-ms.openlocfilehash: 285053c79b13ebea23aedc7dae52eabe85f55a12
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4ea1e2911b156066360da09993fa7302db79f12b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436271"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295260"
 ---
-# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows ソケット: アーカイブを使用するソケットの例
+# <a name="windows-sockets-example-of-sockets-using-archives"></a>Windows ソケット:アーカイブを使用するソケットの例
 
 この記事では、クラスを使用する例を示します[CSocket](../mfc/reference/csocket-class.md)します。 この例では`CArchive`ソケットを使用してデータをシリアル化されるオブジェクト。 このドキュメントのシリアル化する、またはファイルからではないことに注意してください。
 
@@ -43,22 +43,21 @@ ms.locfileid: "50436271"
 「受信」という単語でこの通信モデルでは、メッセージで送信、 *strText*変数は、データのパケット数がされていることを受信側ユーザーを指定するため、通信のもう一方の端に表示が受信したとします。 受信側は、元の送信者の画面に"Sent"、表示するための質問のような文字列で応答します。 両方の文字列の確認メッセージは、正常な通信が発生したことを示します。
 
 > [!CAUTION]
->  確立された (非 MFC) サーバーとの通信に MFC クライアント プログラムを記述する場合は、アーカイブから C++ オブジェクトを送信しません。 サーバーは、送信するオブジェクトの種類を認識する MFC アプリケーションでない限りは、受信し、オブジェクトを逆シリアル化することはできません。 この記事の例[Windows ソケット: バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)この種類の通信を示しています。
+>  確立された (非 MFC) サーバーとの通信に MFC クライアント プログラムを記述する場合は、アーカイブから C++ オブジェクトを送信しません。 サーバーは、送信するオブジェクトの種類を認識する MFC アプリケーションでない限りは、受信し、オブジェクトを逆シリアル化することはできません。 この記事の例[Windows ソケット。バイトの順序付け](../mfc/windows-sockets-byte-ordering.md)この種類の通信を示しています。
 
 詳細については、Windows ソケット仕様を参照してください: **htonl**、 **htons**、 **ntohl**、 **ntohs**します。 また、詳細については、次のように表示します。
 
-- [Windows ソケット: ソケット クラスからの派生](../mfc/windows-sockets-deriving-from-socket-classes.md)
+- [Windows ソケット:ソケット クラスから派生します。](../mfc/windows-sockets-deriving-from-socket-classes.md)
 
-- [Windows ソケット: アーカイブ付きソケットの動作](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows ソケット:アーカイブ付きソケットのしくみ](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows ソケット: 予備知識](../mfc/windows-sockets-background.md)
+- [Windows ソケット:バック グラウンド](../mfc/windows-sockets-background.md)
 
 ## <a name="see-also"></a>関連項目
 
 [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)<br/>
-[用](../mfc/reference/carchive-class.md#isstoring)<br/>
+[CArchive::IsStoring](../mfc/reference/carchive-class.md#isstoring)<br/>
 [CArchive::operator <<](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [CArchive::operator >>](../mfc/reference/carchive-class.md#operator_lt_lt)<br/>
 [ときは](../mfc/reference/carchive-class.md#flush)<br/>
 [Cobject::serialize](../mfc/reference/cobject-class.md#serialize)
-

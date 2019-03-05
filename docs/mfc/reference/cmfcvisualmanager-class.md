@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 000f5229c14699c80e2ce18e4125d0c2ac6e382b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653051"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294331"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager クラス
 
@@ -369,7 +369,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCVisualManager::CMFCVisualManager`|既定のコンストラクター|
+|`CMFCVisualManager::CMFCVisualManager`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -538,7 +538,7 @@ class CMFCVisualManager : public CMFCBaseVisualManager
 |[CMFCVisualManager::OnUpdateSystemColors](#onupdatesystemcolors)|システム カラーの設定を変更するときに、フレームワークによって呼び出されます。|
 |[CMFCVisualManager::RedrawAll](#redrawall)|アプリケーションでは、すべてのコントロール バーを再描画されます。|
 |[CMFCVisualManager::RibbonCategoryColorToRGB](#ribboncategorycolortorgb)||
-|[Cmfcvisualmanager::setdefaultmanager](#setdefaultmanager)|既定のビジュアル マネージャーを設定します。|
+|[CMFCVisualManager::SetDefaultManager](#setdefaultmanager)|既定のビジュアル マネージャーを設定します。|
 |[CMFCVisualManager::SetEmbossDisabledImage](#setembossdisabledimage)|有効または無効になっているツール バー イメージのエンボスのモードを無効にします。|
 |[CMFCVisualManager::SetFadeInactiveImage](#setfadeinactiveimage)|有効または、メニューまたはツールバーを非アクティブなイメージの照明効果を無効にします。|
 |[CMFCVisualManager::SetMenuFlatLook](#setmenuflatlook)|アプリケーションのメニュー ボタンの外観がフラットかどうかを示すフラグを設定します。|
@@ -674,7 +674,7 @@ void DoDrawHeaderSortArrow(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*bIsUp*<br/>
-[in]*bDlgCtrl*<br/>
+[in] *bDlgCtrl*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -753,10 +753,10 @@ virtual BOOL DrawTextOnGlass(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*strText*<br/>
+[in] *strText*<br/>
 [in]*rect*<br/>
 [in]*dwFlags*<br/>
-[in]*nGlowSize*<br/>
+[in] *nGlowSize*<br/>
 [in]*clrText*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -1059,7 +1059,7 @@ virtual COLORREF GetRibbonHyperlinkTextColor(CMFCRibbonLinkCtrl* pHyperLink);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pHyperLink*<br/>
+[in] *pHyperLink*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1128,9 +1128,9 @@ virtual void GetRibbonSliderColors(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pSlider*<br/>
-[in]*bIsHighlighted*<br/>
-[in]*bIsPressed*<br/>
-[in]*bIsDisabled*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsDisabled*<br/>
 [in]*clrLine*<br/>
 [in]*clrFill*<br/>
 
@@ -1144,7 +1144,7 @@ virtual COLORREF GetRibbonStatusBarTextColor(CMFCRibbonStatusBar* pStatusBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pStatusBar*<br/>
+[in] *pStatusBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1161,7 +1161,7 @@ virtual int GetShowAllMenuItemsHeight(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*sizeDefault*<br/>
+[in] *sizeDefault*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1177,8 +1177,8 @@ virtual void GetSmartDockingBaseGuideColors(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*clrBaseGroupBackground*<br/>
-[in]*clrBaseGroupBorder*<br/>
+[in] *clrBaseGroupBackground*<br/>
+[in] *clrBaseGroupBorder*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1202,7 +1202,7 @@ virtual AFX_SMARTDOCK_THEME GetSmartDockingTheme();
 
 ### <a name="return-value"></a>戻り値
 
-次の列挙値のいずれかを返します: AFX_SDT_DEFAULT、AFX_SDT_VS2005、AFX_SDT_VS2008 します。
+次の列挙値のいずれかが返されます。AFX_SDT_DEFAULT、AFX_SDT_VS2005、AFX_SDT_VS2008 します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1216,7 +1216,7 @@ virtual COLORREF GetStatusBarPaneTextColor(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pStatusBar*<br/>
+[in] *pStatusBar*<br/>
 [in]*pPane*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -1885,7 +1885,7 @@ virtual void OnDrawButtonSeparator(
 [in]*pButton*<br/>
 [in]*rect*<br/>
 [in]*状態*<br/>
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1942,11 +1942,11 @@ virtual void OnDrawCaptionBarButtonBorder(
 [in]*pDC*<br/>
 [in]*pBar*<br/>
 [in]*rect*<br/>
-[in]*bIsPressed*<br/>
-[in]*bIsHighlighted*<br/>
-[in]*bIsDisabled*<br/>
-[in]*bHasDropDownArrow*<br/>
-[in]*bIsSysButton*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsDisabled*<br/>
+[in] *bHasDropDownArrow*<br/>
+[in] *bIsSysButton*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -2048,7 +2048,7 @@ virtual void OnDrawCheckBoxEx(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*状態*<br/>
+[in] *nState*<br/>
 [in]*bHighlighted*<br/>
 [in]*bPressed*<br/>
 [in]*bEnabled*<br/>
@@ -2139,7 +2139,7 @@ virtual void OnDrawControlBorder(CWnd* pWndCtrl);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pWndCtrl*<br/>
+[in] *pWndCtrl*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -2225,8 +2225,8 @@ virtual void OnDrawExpandingBox(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*bIsOpened*<br/>
-[in]*colorBox*<br/>
+[in] *bIsOpened*<br/>
+[in] *colorBox*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -2340,7 +2340,7 @@ virtual void OnDrawMenuArrowOnCustomizeList(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectCommand*<br/>
+[in] *rectCommand*<br/>
 [in]*bSelected*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -2388,7 +2388,7 @@ virtual void OnDrawMenuCheck(
 [in]*pButton*<br/>
 [in]*rect*<br/>
 [in]*bHighlight*<br/>
-[in]*bIsRadio*<br/>
+[in] *bIsRadio*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -2503,11 +2503,11 @@ virtual void OnDrawMenuShadow(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectClient*<br/>
-[in]*rectExclude*<br/>
-[in]*nDepth*<br/>
-[in]*iMinBrightness*<br/>
-[in]*iMaxBrightness*<br/>
+[in] *rectClient*<br/>
+[in] *rectExclude*<br/>
+[in] *nDepth*<br/>
+[in] *iMinBrightness*<br/>
+[in] *iMaxBrightness*<br/>
 [in]*pBmpSaveBottom*<br/>
 [in]*pBmpSaveRight*<br/>
 [in]*bRTL*<br/>
@@ -2564,8 +2564,8 @@ virtual void OnDrawMiniFrameBorder(
 
 [in]*pDC*<br/>
 [in]*pFrameWnd*<br/>
-[in]*rectBorder*<br/>
-[in]*rectBorderSize*<br/>
+[in] *rectBorder*<br/>
+[in] *rectBorderSize*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -2700,7 +2700,7 @@ virtual void OnDrawPaneDivider(
 [in]*pDC*<br/>
 [in]*pSlider*<br/>
 [in]*rect*<br/>
-[in]*bAutoHideMode*<br/>
+[in] *bAutoHideMode*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -2731,7 +2731,7 @@ virtual void OnDrawPopupWindowButtonBorder(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectClient*<br/>
+[in] *rectClient*<br/>
 [in]*pButton*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -2748,7 +2748,7 @@ virtual COLORREF OnDrawPopupWindowCaption(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectCaption*<br/>
+[in] *rectCaption*<br/>
 [in]*pPopupWnd*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -2994,9 +2994,9 @@ virtual void OnDrawRibbonCheckBoxOnList(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*pCheckBox*<br/>
+[in] *pCheckBox*<br/>
 [in]*rect*<br/>
-[in]*bIsSelected*<br/>
+[in] *bIsSelected*<br/>
 [in]*bHighlighted*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -3020,15 +3020,15 @@ virtual void OnDrawRibbonColorPaletteBox(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*pColorButton*<br/>
+[in] *pColorButton*<br/>
 [in]*pIcon*<br/>
 [in]*色*<br/>
 [in]*rect*<br/>
 [in]*bDrawTopEdge*<br/>
-[in]*bDrawBottomEdge*<br/>
-[in]*bIsHighlighted*<br/>
-[in]*bIsChecked*<br/>
-[in]*bIsDisabled*<br/>
+[in] *bDrawBottomEdge*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsChecked*<br/>
+[in] *bIsDisabled*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -3087,7 +3087,7 @@ virtual void OnDrawRibbonDefaultPaneButtonIndicator(
 [in]*pDC*<br/>
 [in]*pButton*<br/>
 [in]*rect*<br/>
-[in]*bIsSelected*<br/>
+[in] *bIsSelected*<br/>
 [in]*bHighlighted*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -3105,7 +3105,7 @@ virtual void OnDrawRibbonGalleryBorder(
 
 [in]*pDC*<br/>
 [in]*pButton*<br/>
-[in]*rectBorder*<br/>
+[in] *rectBorder*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -3561,7 +3561,7 @@ virtual void OnDrawScrollButtons(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*nBorderSize*<br/>
+[in] *nBorderSize*<br/>
 [in]*画像を*<br/>
 [in]*bHilited*<br/>
 
@@ -3635,7 +3635,7 @@ virtual void OnDrawSpinButtons(
 *rectSpin*<br/>
 [in]スピン コントロールの境界を示す四角形。
 
-*状態*<br/>
+*nState*<br/>
 [in]スピン コントロールの状態を示すフラグ。 詳細については、次の「解説」を参照してください。
 
 *bOrientation*<br/>
@@ -4087,8 +4087,8 @@ virtual void OnDrawTasksGroupIcon(
 [in]*pDC*<br/>
 [in]*pGroup*<br/>
 [in]*nIconHOffset*<br/>
-[in]*bIsHighlighted*<br/>
-[in]*bIsSelected*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsSelected*<br/>
 [in]*bCanCollapse*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -4174,7 +4174,7 @@ virtual void OnErasePopupWindowButton(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectClient*<br/>
+[in] *rectClient*<br/>
 [in]*pButton*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -4386,11 +4386,11 @@ virtual COLORREF OnFillCaptionBarButton(
 [in]*pDC*<br/>
 [in]*pBar*<br/>
 [in]*rect*<br/>
-[in]*bIsPressed*<br/>
-[in]*bIsHighlighted*<br/>
-[in]*bIsDisabled*<br/>
-[in]*bHasDropDownArrow*<br/>
-[in]*bIsSysButton*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
+[in] *bIsDisabled*<br/>
+[in] *bHasDropDownArrow*<br/>
+[in] *bIsSysButton*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -4988,7 +4988,7 @@ virtual COLORREF RibbonCategoryColorToRGB(AFX_RibbonCategoryColor color);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="setdefaultmanager"></a>  Cmfcvisualmanager::setdefaultmanager
+##  <a name="setdefaultmanager"></a>  CMFCVisualManager::SetDefaultManager
 
 既定のマネージャーを設定します。
 
@@ -5098,4 +5098,3 @@ void SetShadowHighlightedImage(BOOL bShadow = TRUE);
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CMFCVisualManager::GetInstance](#getinstance)<br/>
 [ビジュアル マネージャー](../../mfc/visualization-manager.md)
-

@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: c30ced2f19602dca17badeec6e1b27ad1e90bf5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612733"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285348"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx クラス
 
@@ -139,11 +139,11 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 |[COleIPFrameWndEx::InsertPane](#insertpane)||
 |[COleIPFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|メニュー バーのオブジェクトへのポインターが `NULL`ではないかどうかを判断します。|
 |[COleIPFrameWndEx::IsPointNearDockSite](#ispointneardocksite)||
-|[COleIPFrameWndEx::LoadFrame](#loadframe)|( `COleIPFrameWnd::LoadFrame`をオーバーライドします)。|
+|[COleIPFrameWndEx::LoadFrame](#loadframe)|(`COleIPFrameWnd::LoadFrame` をオーバーライドします)。|
 |[COleIPFrameWndEx::OnCloseDockingPane](#onclosedockingpane)||
 |[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||
 |[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|アクティブなポップアップ メニューが WM_DESTROY メッセージを処理するときに、フレームワークによって呼び出されます。|
-|[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|( `CFrameWnd::OnCmdMsg`をオーバーライドします)。|
+|[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|(`CFrameWnd::OnCmdMsg` をオーバーライドします)。|
 |[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|メニュー項目に関連付けられているイメージが描画されるときに、フレームワークによって呼び出されます。|
 |[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトが WM_PAINT メッセージを処理するときに、フレームワークによって呼び出されます。|
 |[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトが WM_NCHITTEST Microsoft を処理するときに、フレームワークによって呼び出されます。|
@@ -154,8 +154,8 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 |[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|ポップアップ メニューがアクティブにされるときにフレームワークによって呼び出されます。|
 |[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|ティアオフ バーのあるメニューがアクティブ化されるときにフレームワークによって呼び出されます。|
 |[COleIPFrameWndEx::PaneFromPoint](#panefrompoint)||
-|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|( `COleIPFrameWnd::PreTranslateMessage`をオーバーライドします)。|
-|[COleIPFrameWndEx::RecalcLayout](#recalclayout)|( `COleIPFrameWnd::RecalcLayout`をオーバーライドします)。|
+|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|(`COleIPFrameWnd::PreTranslateMessage` をオーバーライドします)。|
+|[COleIPFrameWndEx::RecalcLayout](#recalclayout)|(`COleIPFrameWnd::RecalcLayout` をオーバーライドします)。|
 |[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||
 |[COleIPFrameWndEx::SetDockState](#setdockstate)|フレーム ウィンドウに属しているウィンドウに、指定のドッキング状態を適用します。|
 |[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|ダミーの項目を検索して、指定されたユーザー定義の項目で置き換えることで、ツールバーのオブジェクトを変更します。|
@@ -225,7 +225,7 @@ virtual void AdjustDockingLayout(HDWP hdwp = NULL);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -241,7 +241,7 @@ void DockPane(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pBar*<br/>
-[in]*辺*<br/>
+[in] *nDockBarID*<br/>
 [in]*lpRect*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -316,8 +316,8 @@ void EnablePaneMenu(
 
 [in]*bEnable*<br/>
 [in]*uiCustomizeCmd*<br/>
-[in]*strCustomizeLabel*<br/>
-[in]*uiViewToolbarsMenuEntryID*<br/>
+[in] *strCustomizeLabel*<br/>
+[in] *uiViewToolbarsMenuEntryID*<br/>
 [in]*bContextMenuShowsToolbarsOnly*<br/>
 [in]*bViewMenuShowsToolbarsOnly*<br/>
 
@@ -540,8 +540,8 @@ BOOL IsPointNearDockSite(
 ### <a name="parameters"></a>パラメーター
 
 [in]*ポイント*<br/>
-[in]*dwBarAlignment*<br/>
-[in]*bOuterEdge*<br/>
+[in] *dwBarAlignment*<br/>
+[in] *bOuterEdge*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -560,8 +560,8 @@ virtual BOOL LoadFrame(
 ### <a name="parameters"></a>パラメーター
 
 [in]*可能*<br/>
-[in]*dwDefaultStyle*<br/>
-[in]*pParentWnd*<br/>
+[in] *dwDefaultStyle*<br/>
+[in] *pParentWnd*<br/>
 [in]*pContext*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -628,7 +628,7 @@ virtual BOOL OnCmdMsg(
 [in]*nID*<br/>
 [in]*nCode*<br/>
 [in]*pExtra*<br/>
-[in]*pHandlerInfo*<br/>
+[in] *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -754,7 +754,7 @@ virtual BOOL OnShowCustomizePane(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pMenuPane*<br/>
-[in]*uiToolbarID*<br/>
+[in] *uiToolbarID*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -842,8 +842,8 @@ CBasePane* PaneFromPoint(
 [in]*ポイント*<br/>
 [in]*nSensitivity*<br/>
 [in]*bExactBar*<br/>
-[in]*pRTCBarType*<br/>
-[in]*場合*<br/>
+[in] *pRTCBarType*<br/>
+[in] *dwAlignment*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -891,7 +891,7 @@ void RemovePaneFromDockManager(
 [in]*pControlBar*<br/>
 [in]*bDestroy*<br/>
 [in]*bAdjustLayout*<br/>
-[in]*bAutoHide*<br/>
+[in] *bAutoHide*<br/>
 [in]*pBarReplacement*<br/>
 
 ### <a name="remarks"></a>Remarks

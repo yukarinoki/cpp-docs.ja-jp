@@ -1,5 +1,5 @@
 ---
-title: 'マルチ スレッド: MFC のプログラミングのヒント'
+title: マルチ スレッド。MFC プログラミングのヒント
 ms.date: 08/27/2018
 helpviewer_keywords:
 - multithreading [C++], programming tips
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - troubleshooting [C++], multithreading
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
-ms.openlocfilehash: 0fbee2e836c2e898488da348e4dec9ea00ac4370
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494279"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290802"
 ---
-# <a name="multithreading-mfc-programming-tips"></a>マルチ スレッド: MFC のプログラミングのヒント
+# <a name="multithreading-mfc-programming-tips"></a>マルチ スレッド。MFC プログラミングのヒント
 
 マルチ スレッド アプリケーションでは、目的の順序で操作が発生して、複数のスレッドによってアクセスされるすべてのデータが破損していないことを確認して、シングル スレッド アプリケーションより慎重が必要です。 このトピックでは、MFC (Microsoft Foundation Class) ライブラリを使用してマルチスレッド アプリケーションを開発する場合にこのような問題を回避する手法について説明します。
 
@@ -43,7 +43,7 @@ MFC オブジェクトは、単独でスレッド セーフではできません
 
 ##  <a name="_core_accessing_mfc_objects_from_non.2d.mfc_threads"></a> 非 MFC スレッドから MFC オブジェクトへのアクセス
 
-使用して以外の方法でスレッドを作成するマルチ スレッド アプリケーションがある場合、 [CWinThread](../mfc/reference/cwinthread-class.md)オブジェクト、そのスレッドから MFC オブジェクトにアクセスすることはできません。 つまり、セカンダリ スレッドから MFC オブジェクトにアクセスする場合は、作成する必要がそのスレッドで説明する方法のいずれかで[マルチ スレッド: ユーザー インターフェイス スレッドの作成](multithreading-creating-user-interface-threads.md)または[マルチ スレッド。ワーカー スレッドを作成する](multithreading-creating-worker-threads.md)します。 ほかの方法では、マルチスレッド アプリケーションの実行に必要な内部変数をクラス ライブラリで初期化できません。
+使用して以外の方法でスレッドを作成するマルチ スレッド アプリケーションがある場合、 [CWinThread](../mfc/reference/cwinthread-class.md)オブジェクト、そのスレッドから MFC オブジェクトにアクセスすることはできません。 つまり、セカンダリ スレッドから MFC オブジェクトにアクセスする場合は、作成する必要がそのスレッドで説明する方法のいずれかで[マルチ スレッド。ユーザー インターフェイス スレッドを作成する](multithreading-creating-user-interface-threads.md)または[マルチ スレッド。ワーカー スレッドを作成する](multithreading-creating-worker-threads.md)します。 ほかの方法では、マルチスレッド アプリケーションの実行に必要な内部変数をクラス ライブラリで初期化できません。
 
 ##  <a name="_core_windows_handle_maps"></a> Windows ハンドルのマップ
 
@@ -57,7 +57,7 @@ MFC オブジェクトは、単独でスレッド セーフではできません
 
 ##  <a name="_core_communicating_between_threads"></a> スレッド間通信
 
-MFC には、スレッドからオブジェクトへのアクセスを同期化して、スレッドの安全性を保証するクラスがあります。 これらのクラスの使用方法については、「[マルチ スレッド: 同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)と[マルチ スレッド: 同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。 これらのオブジェクトの詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。
+MFC には、スレッドからオブジェクトへのアクセスを同期化して、スレッドの安全性を保証するクラスがあります。 これらのクラスの使用方法については、「[マルチ スレッド。同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)と[マルチ スレッド。同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。 これらのオブジェクトの詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,17 +1,17 @@
 ---
-title: 'チュートリアル: MFC Scribble アプリケーションの更新 (パート 2)'
+title: 'チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - walkthroughs [MFC]
 ms.assetid: 602df5c2-17d4-4cd9-8cf6-dff652c4cae5
-ms.openlocfilehash: 6a52486658307f001001e91772dad1167730def2
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: c4c4ecce92bce3fbd2cb37f69b9aa02a9af4d7c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519270"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291432"
 ---
-# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>チュートリアル: MFC Scribble アプリケーションの更新 (パート 2)
+# <a name="walkthrough-updating-the-mfc-scribble-application-part-2"></a>チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新
 
 [第 1 部](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)クラシックに、Office Fluent リボンを追加する方法を説明しました。 このチュートリアルの Scribble アプリケーション。 この部分は、リボン パネルとユーザーがメニューとコマンドの代わりに使用できるコントロールを追加する方法を示します。
 
@@ -338,4 +338,4 @@ MFC Scribble アプリケーションを更新しました。 既存のアプリ
 ## <a name="see-also"></a>関連項目
 
 [チュートリアル](../mfc/walkthroughs-mfc.md)<br/>
-[チュートリアル: MFC Scribble アプリケーションの更新 (パート 1)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)
+[チュートリアル: MFC Scribble アプリケーション (パート 1) の更新](../mfc/walkthrough-updating-the-mfc-scribble-application-part-1.md)

@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_map class
 ms.assetid: b2d879dd-87ef-4af9-a266-a5443fd538b8
-ms.openlocfilehash: 50868d020224e7bade9766f7307bfcc46ce4be47
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 43ad777b0dfb1285a82d662f37329c079410c78d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657592"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284347"
 ---
 # <a name="concurrentunorderedmap-class"></a>concurrent_unordered_map クラス
 
@@ -96,12 +96,14 @@ false>>;
 
 |名前|説明|
 |----------|-----------------|
-|[at](#at)|オーバーロードされます。 `concurrent_unordered_map` 内の指定されたキー値を持つ要素を検索します。 このメソッドはコンカレンシー セーフです。|
+|[at](#at)|オーバーロードされます。 
+  `concurrent_unordered_map` 内の指定されたキー値を持つ要素を検索します。 このメソッドはコンカレンシー セーフです。|
 |[hash_function](#hash_function)|格納されているハッシュ関数オブジェクトを取得します。|
 |[insert](#insert)|オーバーロードされます。 要素を `concurrent_unordered_map` オブジェクトに追加します。|
 |[key_eq](#key_eq)|格納された等価比較関数のオブジェクトを取得します。|
 |[swap](#swap)|2 つの `concurrent_unordered_map` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。|
-|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 `concurrent_unordered_map` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
+|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 
+  `concurrent_unordered_map` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -130,7 +132,8 @@ false>>;
 
 ##  <a name="at"></a> で
 
-`concurrent_unordered_map` 内の指定されたキー値を持つ要素を検索します。 このメソッドはコンカレンシー セーフです。
+
+  `concurrent_unordered_map` 内の指定されたキー値を持つ要素を検索します。 このメソッドはコンカレンシー セーフです。
 
 ```
 mapped_type& at(const key_type& KVal);
@@ -250,7 +253,7 @@ concurrent_unordered_map(
 *開始 (_b)*<br/>
 コピーする要素範囲内の最初の要素の位置。
 
-*(_E)*<br/>
+*_End*<br/>
 コピーする要素範囲を超える最初の要素の位置。
 
 *_Umap*<br/>
@@ -443,7 +446,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 
 ### <a name="remarks"></a>Remarks
 
-最初のメンバー関数は、要素 X がのと同じ順序付けキーを持つが、シーケンス内に存在するかどうかを決定します。`value`します。 場合は、このような要素 X を作成して初期化で`value`します。 関数は、反復子を決定し、 `where` X を指定します。挿入が発生したかどうか、関数を返します`std::pair(where, true)`します。 返しますそれ以外の場合、`std::pair(where, false)`します。
+最初のメンバー関数は、要素 X がのと同じ順序付けキーを持つが、シーケンス内に存在するかどうかを決定します。`value`します。 場合は、このような要素 X を作成して初期化で`value`します。 関数は、反復子を決定し、 `where` X を指定します。挿入が発生したかどうか、関数を返します`std::pair(where, true)`します。 それ以外の場合は、 `std::pair(where, false)`を返します。
 
 2 番目のメンバー関数は、挿入を返します ( `value`) を使用して、`_Where`として挿入ポイントを検索する被制御シーケンス内の開始場所。
 
@@ -621,7 +624,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
+*_Bucket*<br/>
 バケットのインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -667,7 +670,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
+*_Bucket*<br/>
 検索するバケット。
 
 ### <a name="return-value"></a>戻り値
@@ -684,7 +687,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
+*_Bucket*<br/>
 バケットのインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -701,7 +704,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
+*_Bucket*<br/>
 バケットのインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -720,7 +723,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
+*_Bucket*<br/>
 バケットのインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -729,7 +732,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ##  <a name="unsafe_erase"></a> unsafe_erase
 
-`concurrent_unordered_map` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
+
+  `concurrent_unordered_map` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 iterator unsafe_erase(
@@ -751,7 +755,7 @@ size_type unsafe_erase(
 *開始 (_b)*<br/>
 消去する要素の範囲の最初の要素の位置。
 
-*(_E)*<br/>
+*_End*<br/>
 消去する要素の範囲を超える先頭の要素の位置。
 
 *KVal*<br/>
@@ -783,4 +787,3 @@ size_type unsafe_max_bucket_count() const;
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [並列コンテナーと並列オブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)
-

@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: 11bfa8304b51ed25b934a97109db7da7bb39f49a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50590139"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293941"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase クラス
 
@@ -395,10 +395,10 @@ HRESULT AddToGlyphTable(
 画像の URL。
 
 *nTagType*<br/>
-タグの種類: 0 は、イメージは開始タグのみを意味します。 1 は、イメージは終了タグのみを意味します。 2 では、タグと終了タグの両方のことを意味します。 タグの種類を 0 に設定された br やコメントなどの 1 つのタグを追加する必要があります。
+タグの種類:0 は、イメージは開始タグのみを表します。 1 は、イメージは終了タグのみを意味します。 2 では、タグと終了タグの両方のことを意味します。 タグの種類を 0 に設定された br やコメントなどの 1 つのタグを追加する必要があります。
 
 *nAlignment*<br/>
-配置 (四角形要素のみ): このパラメーターは、アラインメント属性を持つ要素のイメージであることを示します。 Left = 0、center = 1、右 = 2、および未定義の 3 を = です。 左、右、または center 属性する必要があります明示的に設定する要素。
+配置 (四角形要素のみ):このパラメーターは、アラインメント属性を持つ要素のイメージであることを示します。 Left = 0、center = 1、右 = 2、および未定義の 3 を = です。 左、右、または center 属性する必要があります明示的に設定する要素。
 
 *nPosInfo*<br/>
 位置情報。 どのようなカスケード スタイル シート (CSS) の配置値、グリフ、適用される静的な決定配置 = 0、絶対配置 = 1、相対的な位置指定 = 2、およびすべて = 3。 このフィールドには、1 つのグリフ位置していない場合、タグとタグが配置されているときに、アンカー ポイントを表示する別のグリフを指定することができます。
@@ -2566,4 +2566,3 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [HTMLEdit サンプル](../../visual-cpp-samples.md)
-

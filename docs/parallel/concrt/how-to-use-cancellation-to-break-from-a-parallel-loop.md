@@ -1,18 +1,18 @@
 ---
-title: '方法: キャンセル処理を使用して並列ループを中断する'
+title: '方法: 取り消しを使用して並列ループを中断する'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel search algorithm [Concurrency Runtime]
 - parallel search algorithm, writing [Concurrency Runtime]
 ms.assetid: 421cd2de-f058-465f-b890-dd8fcc0df273
-ms.openlocfilehash: 2a19c2874ce331be2d4f5840f61cabf7bca9abf6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08f33a75bc5c5391333a2d9368d4ed6563e117c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612746"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299570"
 ---
-# <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>方法: キャンセル処理を使用して並列ループを中断する
+# <a name="how-to-use-cancellation-to-break-from-a-parallel-loop"></a>方法: 取り消しを使用して並列ループを中断する
 
 この例では、キャンセルを使用して基本的な並列検索アルゴリズムを実装する方法を示します。
 
@@ -28,7 +28,7 @@ ms.locfileid: "50612746"
 
 コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`parallel-array-search.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
 
-**cl.exe/EHsc 並列-配列-search.cpp**
+**cl.exe /EHsc parallel-array-search.cpp**
 
 ## <a name="see-also"></a>関連項目
 

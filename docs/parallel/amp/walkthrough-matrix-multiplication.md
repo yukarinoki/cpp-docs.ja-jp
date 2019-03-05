@@ -1,21 +1,21 @@
 ---
-title: 'チュートリアル : 行列乗算'
+title: 'チュートリアル: 行列乗算'
 ms.date: 11/19/2018
 ms.assetid: 61172e8b-da71-4200-a462-ff3a908ab0cf
-ms.openlocfilehash: ae86ff5a111348404616c8bb4fecd3bf22afc90c
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 597ba0f47c7b081f62c82bf8e1ca01c286d35140
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300974"
 ---
-# <a name="walkthrough-matrix-multiplication"></a>チュートリアル : 行列乗算
+# <a name="walkthrough-matrix-multiplication"></a>チュートリアル: 行列乗算
 
 このチュートリアルでは、C++ AMP を使用して行列乗算の実行を高速化する方法を示します。 タイルを使用する場合と使用しない場合の 2 つのアルゴリズムを紹介します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-始める前に
+開始する前に:
 
 - 読み取り[C++ AMP の概要](../../parallel/amp/cpp-amp-overview.md)します。
 

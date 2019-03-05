@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 6fcff646a577500fd05b7c938b2c336ebe725957
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894316"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301897"
 ---
 # <a name="csid-class"></a>CSid クラス
 
@@ -77,7 +77,7 @@ class CSid
 
 |||
 |-|-|
-|[演算子 =](#operator_eq)|代入演算子。|
+|[operator=](#operator_eq)|代入演算子。|
 |[演算子の const SID *](#operator_const_sid__star)|キャストを`CSid`オブジェクトへのポインターを`SID`構造体。|
 
 ### <a name="global-operators"></a>グローバル演算子

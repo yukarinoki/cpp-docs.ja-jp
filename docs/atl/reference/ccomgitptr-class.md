@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComGITPtr class
 ms.assetid: af895acb-525a-4555-bb67-b241b7df515b
-ms.openlocfilehash: 36ef105b79da51348a61767117b637992e1f8c47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf509d027833610e4251c009d4e444dad3fdd5ce
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557171"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296034"
 ---
 # <a name="ccomgitptr-class"></a>CComGITPtr クラス
 
@@ -44,7 +44,7 @@ GIT で格納されるインターフェイス ポインターの型。
 |名前|説明|
 |----------|-----------------|
 |[CComGITPtr::CComGITPtr](#ccomgitptr)|コンストラクターです。|
-|[CComGITPtr:: ~ CComGITPtr](#dtor)|デストラクターです。|
+|[CComGITPtr::~CComGITPtr](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -123,7 +123,7 @@ CComGITPtr(CComGITPtr&& rv);
 *p*<br/>
 [in]グローバル インターフェイス テーブル (GIT) に格納されるインターフェイス ポインター。
 
-*Git*<br/>
+*git*<br/>
 [in]既存への参照を`CComGITPtr`オブジェクト。
 
 *dwCookie*<br/>
@@ -138,7 +138,7 @@ CComGITPtr(CComGITPtr&& rv);
 
 コンス トラクターの利用*rv*移動コンス トラクターです。 元のデータを移動*rv*、し*rv*がオフになっています。
 
-##  <a name="dtor"></a>  CComGITPtr:: ~ CComGITPtr
+##  <a name="dtor"></a>  CComGITPtr::~CComGITPtr
 
 デストラクターです。
 
@@ -231,7 +231,7 @@ CComGITPtr& operator= (CComGITPtr&& rv);
 *p*<br/>
 [in]インターフェイスへのポインター。
 
-*Git*<br/>
+*git*<br/>
 [in]参照を`CComGITPtr`オブジェクト。
 
 *dwCookie*<br/>

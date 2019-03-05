@@ -1,5 +1,5 @@
 ---
-title: '例外処理 : データベースの例外'
+title: 例外:データベース例外
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DAO [MFC], exceptions
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - databases [MFC], exception handling
 - error codes [MFC], database exception handling
 ms.assetid: 28daf260-f824-4be6-aecc-1f859e6dec26
-ms.openlocfilehash: 17a52787462301e839cb2e960fad8b480380ba49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2f7f3bff9f28968361ecfa7374a235a727443004
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492798"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285556"
 ---
-# <a name="exceptions-database-exceptions"></a>例外処理 : データベースの例外
+# <a name="exceptions-database-exceptions"></a>例外:データベース例外
 
 この記事では、データベースの例外を処理する方法について説明します。 この記事の内容のほとんどには、使用する MFC クラスの Open Database Connectivity (ODBC) または MFC クラスのデータ アクセス オブジェクト (DAO) かどうかが適用されます。 いずれかまたはその他のモデルに固有のマテリアルが明示的にマークします。 ここでは、次の内容について説明します。
 
@@ -77,4 +77,3 @@ Microsoft Jet (.mdb) データベース、およびほとんどの場合は、OD
 ## <a name="see-also"></a>関連項目
 
 [例外処理](../mfc/exception-handling-in-mfc.md)
-

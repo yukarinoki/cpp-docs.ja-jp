@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.codewiz.class.atl.mts.options
 ms.assetid: 2fbe259c-6be1-4d0e-9cfe-721c75c97cb1
-ms.openlocfilehash: 014193f4017aa47b819558cbd4753e6abcffcaaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0fa649ba41a684be6ed18bd05d48954503c5db16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562059"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295977"
 ---
 # <a name="com-10-atl-com-10-component-wizard"></a>COM+ 1.0、ATL COM+ 1.0 コンポーネント ウィザード
 
@@ -24,7 +24,7 @@ ATL プロジェクトや ATL COM クラスの詳細については、次を参�
    |オプション|説明|
    |------------|-----------------|
    |**デュアル**|オブジェクトがデュアル インターフェイスをサポートしていることを指定します (その vtable がカスタム インターフェイス関数と遅延バインディング`IDispatch`メソッド)。 COM クライアントおよびオートメーション コント ローラーがオブジェクトへのアクセスを許可します。|
-   |**カスタム**|オブジェクトが (その vtable がカスタム インターフェイス関数) カスタム インターフェイスをサポートするように指定します。 カスタム インターフェイスはプロセスの境界をまたいで、デュアル インターフェイスよりも高速化できます。<br /><br /> - **互換性のある automation**カスタム インターフェイスをオートメーションのサポートを追加します。 属性付きプロジェクトは、設定、 **oleautomation**コクラスの属性。|
+   |**Custom**|オブジェクトが (その vtable がカスタム インターフェイス関数) カスタム インターフェイスをサポートするように指定します。 カスタム インターフェイスはプロセスの境界をまたいで、デュアル インターフェイスよりも高速化できます。<br /><br /> - **互換性のある automation**カスタム インターフェイスをオートメーションのサポートを追加します。 属性付きプロジェクトは、設定、 **oleautomation**コクラスの属性。|
 
 - **Queueable**
 
@@ -37,7 +37,7 @@ ATL プロジェクトや ATL COM クラスの詳細については、次を参�
    |オプション|説明|
    |------------|-----------------|
    |**ISupportErrorInfo**|作成のサポート、 [ISupportErrorInfo](../../atl/reference/isupporterrorinfoimpl-class.md)インターフェイスのため、オブジェクトは、クライアントにエラー情報を返すことができます。|
-   |**IObjectControl**|3 つに、オブジェクトへのアクセスを提供します。 [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol)メソッド:[アクティブ化](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)、 [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)、および[非アクティブ化](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)します。|
+   |**IObjectControl**|3 つに、オブジェクトへのアクセスを提供します。 [IObjectControl](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectcontrol)メソッド。[アクティブ化](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-activate)、 [CanBePooled](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-canbepooled)、および[非アクティブ化](/windows/desktop/api/comsvcs/nf-comsvcs-iobjectcontrol-deactivate)します。|
    |**IObjectConstruct**|作成のサポート、 [IObjectConstruct](/windows/desktop/api/comsvcs/nn-comsvcs-iobjectconstruct)他のメソッドやオブジェクトからパラメーターの受け渡しを管理するインターフェイス。|
 
 - **トランザクション**
@@ -55,4 +55,3 @@ ATL プロジェクトや ATL COM クラスの詳細については、次を参�
 
 [ATL COM+ 1.0 コンポーネント ウィザード](../../atl/reference/atl-com-plus-1-0-component-wizard.md)<br/>
 [ATL COM + 1.0 コンポーネント](../../atl/reference/adding-an-atl-com-plus-1-0-component.md)
-

@@ -46,16 +46,16 @@ helpviewer_keywords:
 - OCM_NOTIFY message [MFC]
 - reflected messages
 ms.assetid: 3417ff51-ff9f-458c-bff4-17c200f00d96
-ms.openlocfilehash: 238fafee5201ec01e24be21512c73d1b33b706f1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2f6aea30fbf86865b5d42ea8da364685010c95c0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693556"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302092"
 ---
 # <a name="reflected-window-message-ids"></a>返送されたウィンドウ メッセージの ID
 
-ActiveX コントロール、またはその他の特殊なコントロールを作成する簡単な方法は、ウィンドウをサブクラスです。 詳細については、次を参照してください。 [MFC ActiveX コントロール: Windows コントロールをサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)します。
+ActiveX コントロール、またはその他の特殊なコントロールを作成する簡単な方法は、ウィンドウをサブクラスです。 詳細については、次を参照してください。 [MFC ActiveX コントロール。Windows コントロールをサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)します。
 
 コントロールのコンテナーがサブクラス化された Windows コントロール、ウィンドウ メッセージを受信するを防ぐために[COleControl](../mfc/reference/colecontrol-class.md)を特定のウィンドウ メッセージをインターセプトし、それらをコントロールに送信する"reflector"ウィンドウを作成します。 コントロールのウィンドウ プロシージャでは、ActiveX コントロールの適切なアクションを実行して返送されたメッセージを処理できます。
 
@@ -71,12 +71,12 @@ ActiveX コントロール、またはその他の特殊なコントロールを
 |[WM_CTLCOLORSCROLLBAR](/windows/desktop/Controls/wm-ctlcolorscrollbar)|OCM_CTLCOLORSCROLLBAR|
 |[WM_CTLCOLORSTATIC](/windows/desktop/Controls/wm-ctlcolorstatic)|OCM_CTLCOLORSTATIC|
 |[WM_DRAWITEM](/windows/desktop/Controls/wm-drawitem)|OCM_DRAWITEM|
-|[ため](/windows/desktop/Controls/wm-measureitem)|OCM_MEASUREITEM|
+|[WM_MEASUREITEM](/windows/desktop/Controls/wm-measureitem)|OCM_MEASUREITEM|
 |[WM_DELETEITEM](/windows/desktop/Controls/wm-deleteitem)|OCM_DELETEITEM|
 |[WM_VKEYTOITEM](/windows/desktop/Controls/wm-vkeytoitem)|OCM_VKEYTOITEM|
 |[WM_CHARTOITEM](/windows/desktop/Controls/wm-chartoitem)|OCM_CHARTOITEM|
 |[WM_COMPAREITEM](/windows/desktop/Controls/wm-compareitem)|OCM_COMPAREITEM|
-|[兄弟](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
+|[WM_HSCROLL](/windows/desktop/Controls/wm-hscroll)|OCM_HSCROLL|
 |[WM_VSCROLL](/windows/desktop/Controls/wm-vscroll)|OCM_VSCROLL|
 |[WM_PARENTNOTIFY](/previous-versions/windows/desktop/inputmsg/wm-parentnotify)|OCM_PARENTNOTIFY|
 |[WM_NOTIFY](/windows/desktop/controls/wm-notify)|OCM_NOTIFY|
@@ -86,6 +86,5 @@ ActiveX コントロール、またはその他の特殊なコントロールを
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール: Windows コントロールのサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
-[テクニカル ノート 62: Windows コントロールへのメッセージ リフレクション (メッセージ返送)](../mfc/tn062-message-reflection-for-windows-controls.md)
-
+[MFC ActiveX コントロール:Windows コントロールをサブクラス化](../mfc/mfc-activex-controls-subclassing-a-windows-control.md)<br/>
+[TN062:Windows のコントロールのメッセージ リフレクション](../mfc/tn062-message-reflection-for-windows-controls.md)

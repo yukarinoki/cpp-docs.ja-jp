@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - structured_task_group class
 ms.assetid: 742afa8c-c7b6-482c-b0ba-04c809927b22
-ms.openlocfilehash: 486829b7d990aab7860059feed78b26207d0074d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 27610539ab500a113ea41021744c55425fe9cd9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600669"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299297"
 ---
 # <a name="structuredtaskgroup-class"></a>structured_task_group クラス
 
@@ -43,7 +43,7 @@ class structured_task_group;
 
 |名前|説明|
 |----------|-----------------|
-|[キャンセル](#cancel)|このタスク グループをルートとする作業のサブツリーの取り消しを試行する最善の努力は、します。 タスク グループでスケジュールのすべてのタスクはキャンセル推移的に可能な場合。|
+|[cancel](#cancel)|このタスク グループをルートとする作業のサブツリーの取り消しを試行する最善の努力は、します。 タスク グループでスケジュールのすべてのタスクはキャンセル推移的に可能な場合。|
 |[is_canceling](#is_canceling)|かどうか、タスク グループは現在キャンセル中、呼び出し元に通知します。 これは必ずしもを`cancel`でメソッドが呼び出された、`structured_task_group`オブジェクト (もちろんを返すには、このメソッドを修飾などが**true**)。 ケースがある可能性があります`structured_task_group`オブジェクトはインラインで実行し、さらに、タスク グループを作業ツリーが取り消されました。 これらの場所などの場合、ランタイムがキャンセルは、このフローは前もって確認できます`structured_task_group`オブジェクト、 **true**も返されます。|
 |[run](#run)|オーバーロードされます。 タスクをスケジュール、`structured_task_group`オブジェクト。 呼び出し元の有効期間の管理、`task_handle`で渡されるオブジェクト、`_Task_handle`パラメーター。 パラメーターを受け取るバージョン`_Placement`タスクがそのパラメーターで指定された場所を実行して重きをさせます。|
 |[run_and_wait](#run_and_wait)|オーバーロードされます。 呼び出し元のコンテキストでのインラインを実行するタスクをスケジュール、`structured_task_group`オブジェクトの完全なキャンセルのサポート。 場合、`task_handle`オブジェクトがパラメーターとして渡される`run_and_wait`の有効期間を管理するため、呼び出し元は、`task_handle`オブジェクト。 すべての作業になるまでにその後、関数が待機、`structured_task_group`オブジェクトが完了したか取り消されました。|

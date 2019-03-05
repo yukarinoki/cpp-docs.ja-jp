@@ -334,12 +334,12 @@ helpviewer_keywords:
 - COleControl [MFC], IsInvokeAllowed
 - COleControl [MFC], SetInitialDataFormats
 ms.assetid: 53e95299-38e8-447b-9c5f-a381d27f5123
-ms.openlocfilehash: ef44c917411efefeb6719af95185ddf7993fbab1
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 8587eb76f38c07d54234c810dfd6ab79f487e740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179020"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283424"
 ---
 # <a name="colecontrol-class"></a>COleControl クラス
 
@@ -738,7 +738,7 @@ short AmbientTextAlign();
 |------------------|-------------|
 |0|[全般] (数値、テキストを左に) の配置。|
 |1|左揃え|
-|2|Center |
+|2|中央揃え|
 |3|右揃え|
 
 ### <a name="remarks"></a>Remarks
@@ -2224,7 +2224,7 @@ BOOL LockInPlaceActive(BOOL bLock);
 
 ### <a name="parameters"></a>パラメーター
 
-*ブロック*<br/>
+*bLock*<br/>
 コントロールのインプレース アクティブな状態が; ロックされる場合は TRUE。ロックを解除するのには、その場合は FALSE。
 
 ### <a name="return-value"></a>戻り値
@@ -2879,7 +2879,7 @@ virtual void OnInactiveMouseMove(
 *y*<br/>
 マウスの位置を含むウィンドウのクライアント座標の y 座標。
 
-*ドロップ*<br/>
+*dwKeyState*<br/>
 キーボードのキーボードの修飾子キーの現在の状態を識別します。 有効な値は、MK_CONTROL、MK_SHIFT、MK_ALT、MK_BUTTON、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON フラグのいずれかの組み合わせを指定できます。
 
 ### <a name="remarks"></a>Remarks
@@ -3409,7 +3409,7 @@ virtual BOOL OnWindowlessMessage(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ*<br/>
+*msg*<br/>
 Windows で渡されるメッセージの識別子です。
 
 *wParam*<br/>

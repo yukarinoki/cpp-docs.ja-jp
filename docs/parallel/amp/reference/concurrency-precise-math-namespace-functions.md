@@ -90,12 +90,12 @@ f1_keywords:
 - amp_math/Concurrency::precise_math::trunc
 - amp_math/Concurrency::precise_math::truncf
 ms.assetid: fae53ab4-d1c5-45bb-a6a0-a74258e9aea3
-ms.openlocfilehash: ccbb9bdda3132626a6bf76161104c9716a9b5c89
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7690c0629e7035d0130f0a7dbdcabf3e959ae7b6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469356"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297347"
 ---
 # <a name="concurrencyprecisemath-namespace-functions"></a>Concurrency::precise_math 名前空間関数
 
@@ -831,7 +831,7 @@ inline double expm1(double exponent) restrict(amp);
 
 ### <a name="parameters"></a>パラメーター
 
-*指数*<br/>
+*exponent*<br/>
 指数項*n*算術式の`e` <sup>n</sup>ここで、`e`自然対数の底です。
 
 ### <a name="return-value"></a>戻り値
@@ -848,7 +848,7 @@ inline float expm1f(float exponent) restrict(amp);
 
 ### <a name="parameters"></a>パラメーター
 
-*指数*<br/>
+*exponent*<br/>
 指数項*n*算術式の`e` <sup>n</sup>ここで、`e`自然対数の底です。
 
 ### <a name="return-value"></a>戻り値
@@ -1768,7 +1768,8 @@ inline double modf(
 
 ### <a name="return-value"></a>戻り値
 
-`_X` の符号付の小数部分。
+
+  `_X` の符号付の小数部分。
 
 ##  <a name="modff"></a>  modff
 
@@ -1790,7 +1791,8 @@ inline float modff(
 
 ### <a name="return-value"></a>戻り値
 
-`_X` の符号付き小数部を返します。
+
+  `_X` の符号付き小数部を返します。
 
 ##  <a name="nan"></a>  nan
 
@@ -2139,7 +2141,8 @@ inline double remquo(
 
 ### <a name="return-value"></a>戻り値
 
-`_X` を `_Y` で割った剰余を返します。
+
+  `_X` を `_Y` で割った剰余を返します。
 
 ##  <a name="remquof"></a>  remquof
 
@@ -2165,7 +2168,8 @@ inline float remquof(
 
 ### <a name="return-value"></a>戻り値
 
-`_X` を `_Y` で割った剰余を返します。
+
+  `_X` を `_Y` で割った剰余を返します。
 
 ##  <a name="round"></a>  round
 

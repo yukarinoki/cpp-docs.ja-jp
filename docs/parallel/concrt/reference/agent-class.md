@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - agent class
 ms.assetid: 1b09e3d2-5e37-4966-b016-907ef1512456
-ms.openlocfilehash: ad096eea3467346d85ce4249e910915cbd73488d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 98ad5f817361d8410e5a60648fb23baec06c42d7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560252"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289144"
 ---
 # <a name="agent-class"></a>agent クラス
 
@@ -47,7 +47,7 @@ class agent;
 
 |名前|説明|
 |----------|-----------------|
-|[キャンセル](#cancel)|いずれかからのエージェントの移動、`agent_created`または`agent_runnable`状態を`agent_canceled`状態。|
+|[cancel](#cancel)|いずれかからのエージェントの移動、`agent_created`または`agent_runnable`状態を`agent_canceled`状態。|
 |[start](#start)|エージェントからの移動、`agent_created`状態、`agent_runnable`状態、および実行をスケジュールします。|
 |[status](#status)|エージェントからのステータス情報の同期ソースです。|
 |[status_port](#status_port)|非同期エージェントからのステータス情報のソース。|
@@ -203,7 +203,7 @@ static agent_status __cdecl wait(
 *_PAgent*<br/>
 待機する、エージェントへのポインター。
 
-*タイムアウト _t*<br/>
+*_Timeout*<br/>
 ミリ秒単位の待機する最大時間。
 
 ### <a name="return-value"></a>戻り値
@@ -239,7 +239,7 @@ static void __cdecl wait_for_all(
 *_PStatus*<br/>
 エージェントの状態の配列へのポインター。 各状態の値は、メソッドが戻るときに、対応するエージェントの状態を表します。
 
-*タイムアウト _t*<br/>
+*_Timeout*<br/>
 ミリ秒単位の待機する最大時間。
 
 ### <a name="remarks"></a>Remarks
@@ -275,7 +275,7 @@ static void __cdecl wait_for_one(
 *_Index*<br/>
 エージェントのインデックスを格納する変数への参照。
 
-*タイムアウト _t*<br/>
+*_Timeout*<br/>
 ミリ秒単位の待機する最大時間。
 
 ### <a name="remarks"></a>Remarks

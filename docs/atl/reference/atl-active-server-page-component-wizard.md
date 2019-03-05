@@ -7,12 +7,12 @@ helpviewer_keywords:
 - ASP components, creating in ATL
 - ATL Active Server Page Component Wizard
 ms.assetid: 5a5cb904-dbbf-44ea-ad3d-2ddd14c1d3c5
-ms.openlocfilehash: 80d7eefaa4b12d5aab8970f4b3c81fc644226e07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f020ed9b58f631bfff09fe54c70e36146eb03368
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510865"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288091"
 ---
 # <a name="atl-active-server-page-component-wizard"></a>ATL Active Server Page コンポーネント ウィザード
 
@@ -47,7 +47,7 @@ Visual Studio 2008 以降では、このウィザードによって生成され�
 
    ウィザードではファイルは上書きされません。 既存のファイルの名前を選択する場合、**[完了]** をクリックすると、ウィザードからクラス宣言をファイルのコンテンツに追加するかどうかを指定するように求められます。 ファイルを追加するには、**[はい]** をクリックします。ウィザードに戻り、別のファイル名を指定するには、**[いいえ]** をクリックします。
 
-- **クラス**
+- **Class**
 
    作成するクラスの名前を設定します。 この名前がで指定した名前に基づいて**短い名前**'C'、クラス名の一般的なプレフィックスが付いた、します。
 
@@ -75,7 +75,7 @@ Visual Studio 2008 以降では、このウィザードによって生成され�
 
    オブジェクトによってサポートされるインターフェイスの一覧を含むコンポーネント クラスの名前を設定します。 ATL が含まれていないために、このオプションを変更することはできません、プロジェクトまたはこのオブジェクトは、属性を使用している場合、**コクラス**属性。
 
-- **Type**
+- **型**
 
    コクラスのレジストリに表示されるオブジェクトの説明を設定します。
 

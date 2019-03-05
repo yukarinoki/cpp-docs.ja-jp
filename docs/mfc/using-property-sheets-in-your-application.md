@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: ac6315d1b450fa41158f1393471d723627ecec24
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509387"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301689"
 ---
 # <a name="using-property-sheets-in-your-application"></a>アプリケーションでのプロパティ シートの使用
 
@@ -42,7 +42,7 @@ ms.locfileid: "50509387"
 
 1. このプロパティ ページの値を保持する変数のメンバーを作成します。 プロパティ ページにメンバー変数を追加するプロセスは、プロパティ ページが特別なダイアログ ボックスであるため正確に ダイアログ ボックスでは、メンバー変数を追加すると同じです。 詳細については、次を参照してください。[ダイアログ コントロールのメンバー変数を定義する](../windows/defining-member-variables-for-dialog-controls.md)します。
 
-1. 構築、 [CPropertySheet](../mfc/reference/cpropertysheet-class.md)ソース コード内のオブジェクト。 通常、構築、`CPropertySheet`プロパティ シートを表示するコマンドのハンドラー内のオブジェクト。 このオブジェクトは、プロパティ シート全体を表します。 持つモーダル プロパティ シートを作成する場合、 [DoModal](../mfc/reference/cpropertysheet-class.md#domodal)関数、フレームワークは、既定では次の 3 つのコマンド ボタンを提供します。 [ok]、[キャンセル]、適用します。 フレームワークにはコマンド ボタン作成なしで作成したモードレス プロパティ シートの[作成](../mfc/reference/cpropertysheet-class.md#create)関数。 クラスを派生する必要はありません`CPropertySheet`(プレビュー ウィンドウ) などの他のコントロールを追加するか、モードレス プロパティ シートを表示する場合を除き、します。 プロパティ シートを閉じてするために使用する既定のコントロールが含まれていないために、この手順はモードレス プロパティ シートの必要があります。
+1. 構築、 [CPropertySheet](../mfc/reference/cpropertysheet-class.md)ソース コード内のオブジェクト。 通常、構築、`CPropertySheet`プロパティ シートを表示するコマンドのハンドラー内のオブジェクト。 このオブジェクトは、プロパティ シート全体を表します。 持つモーダル プロパティ シートを作成する場合、 [DoModal](../mfc/reference/cpropertysheet-class.md#domodal)関数、フレームワークは、既定で 3 つのコマンド ボタンを提供します。[Ok] をキャンセルし、適用します。 フレームワークにはコマンド ボタン作成なしで作成したモードレス プロパティ シートの[作成](../mfc/reference/cpropertysheet-class.md#create)関数。 クラスを派生する必要はありません`CPropertySheet`(プレビュー ウィンドウ) などの他のコントロールを追加するか、モードレス プロパティ シートを表示する場合を除き、します。 プロパティ シートを閉じてするために使用する既定のコントロールが含まれていないために、この手順はモードレス プロパティ シートの必要があります。
 
 1. プロパティ シートに追加するには、各ページには、次の操作を行います。
 
@@ -63,4 +63,3 @@ ms.locfileid: "50509387"
 ## <a name="see-also"></a>関連項目
 
 [プロパティ シート](../mfc/property-sheets-mfc.md)
-
