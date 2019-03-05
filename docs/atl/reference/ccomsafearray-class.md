@@ -28,12 +28,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComSafeArray class
 ms.assetid: ee349aef-33db-4c85-bd08-5d86a3c9d53a
-ms.openlocfilehash: 861fdefe19a0c5b78a7874be3386873d6c253a3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 0262764c950b01acdb610873a995a9a6fd912997
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521415"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280681"
 ---
 # <a name="ccomsafearray-class"></a>CComSafeArray クラス
 
@@ -64,13 +64,13 @@ class CComSafeArray
 
 |名前|説明|
 |----------|-----------------|
-|[Ccomsafearray::add](#add)|1 つまたは複数の要素を追加または`SAFEARRAY`構造体、`CComSafeArray`します。|
+|[CComSafeArray::Add](#add)|1 つまたは複数の要素を追加または`SAFEARRAY`構造体、`CComSafeArray`します。|
 |[CComSafeArray::Attach](#attach)|アタッチを`SAFEARRAY`構造体を`CComSafeArray`オブジェクト。|
-|[:Copyfrom](#copyfrom)|内容をコピー、`SAFEARRAY`に構造体、`CComSafeArray`オブジェクト。|
+|[CComSafeArray::CopyFrom](#copyfrom)|内容をコピー、`SAFEARRAY`に構造体、`CComSafeArray`オブジェクト。|
 |[CComSafeArray::CopyTo](#copyto)|`CComSafeArray` オブジェクトのコピーを作成します。|
 |[オブジェクトは、](#create)|`CComSafeArray` オブジェクトを作成します。|
 |[CComSafeArray::Destroy](#destroy)|`CComSafeArray` オブジェクトを破棄します。|
-|[Ccomsafearray::detach](#detach)|デタッチ、`SAFEARRAY`から、`CComSafeArray`オブジェクト。|
+|[CComSafeArray::Detach](#detach)|デタッチ、`SAFEARRAY`から、`CComSafeArray`オブジェクト。|
 |[CComSafeArray::GetAt](#getat)|1 次元配列から 1 つの要素を取得します。|
 |[CComSafeArray::GetCount](#getcount)|配列内の要素の数を返します。|
 |[CComSafeArray::GetDimensions](#getdimensions)|配列内の次元数を返します。|
@@ -82,7 +82,7 @@ class CComSafeArray
 |[CComSafeArray::MultiDimGetAt](#multidimgetat)|多次元配列から 1 つの要素を取得します。|
 |[CComSafeArray::MultiDimSetAt](#multidimsetat)|多次元配列の要素の値を設定します。|
 |[CComSafeArray::Resize](#resize)|`CComSafeArray` オブジェクトのサイズを変更します。|
-|[:Setat](#setat)|1 次元配列の要素の値を設定します。|
+|[CComSafeArray::SetAt](#setat)|1 次元配列の要素の値を設定します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -136,7 +136,7 @@ class CComSafeArray
 
 [!code-cpp[NVC_ATL_Utilities#75](../../atl/codesnippet/cpp/ccomsafearray-class_1.cpp)]
 
-##  <a name="add"></a>  Ccomsafearray::add
+##  <a name="add"></a>  CComSafeArray::Add
 
 1 つまたは複数の要素を追加または`SAFEARRAY`構造体、`CComSafeArray`します。
 
@@ -211,7 +211,8 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 ### <a name="parameters"></a>パラメーター
 
 *バインドされています。*<br/>
-`SAFEARRAYBOUND` 構造。
+
+  `SAFEARRAYBOUND` 構造。
 
 *ulCount*<br/>
 配列の要素数。
@@ -247,7 +248,7 @@ CComSafeArray(const SAFEARRAY* psaSrc);
 
 割り当てられているすべてのリソースを解放します。
 
-##  <a name="copyfrom"></a>  :Copyfrom
+##  <a name="copyfrom"></a>  CComSafeArray::CopyFrom
 
 内容をコピー、`SAFEARRAY`に構造体、`CComSafeArray`オブジェクト。
 
@@ -336,7 +337,7 @@ HRESULT Destroy();
 
 既存の破棄`CComSafeArray`オブジェクトとすべてのデータが含まれています。
 
-##  <a name="detach"></a>  Ccomsafearray::detach
+##  <a name="detach"></a>  CComSafeArray::Detach
 
 デタッチ、`SAFEARRAY`から、`CComSafeArray`オブジェクト。
 
@@ -633,7 +634,7 @@ HRESULT Resize(ULONG ulCount, LONG lLBound = 0);
 
 このメソッドは、右端の次元のみ変更します。 返す配列サイズがない`IsResizable`false に設定します。
 
-##  <a name="setat"></a>  :Setat
+##  <a name="setat"></a>  CComSafeArray::SetAt
 
 1 次元配列の要素の値を設定します。
 

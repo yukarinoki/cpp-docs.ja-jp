@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CurrentScheduler class
 ms.assetid: 31c20e0e-4cdf-49b4-8220-d726130aad2b
-ms.openlocfilehash: 46bd55c39e79ca01664c3800d10e4efa8cf7d042
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a27ec7c25962b6addd26e61af8f33130d4c653ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619181"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326791"
 ---
 # <a name="currentscheduler-class"></a>CurrentScheduler クラス
 
@@ -42,7 +42,7 @@ class CurrentScheduler;
 |----------|-----------------|
 |[作成します。](#create)|動作が説明されている新しいスケジューラを作成、`_Policy`パラメーター呼び出し元のコンテキストにアタッチします。 新しく作成されたスケジューラには、呼び出し元のコンテキストの現在のスケジューラになります。|
 |[CreateScheduleGroup](#createschedulegroup)|オーバーロードされます。 呼び出し元のコンテキストに関連付けられたスケジューラ内で新しいスケジュール グループを作成します。 パラメーターを受け取るバージョン`_Placement`にそのパラメーターで指定された場所で実行に偏っていますが、新しく作成したスケジュール グループ内のタスクが原因です。|
-|[デタッチ](#detach)|呼び出し元のコンテキストから現在のスケジューラをデタッチし、存在する場合、現在のスケジューラとして以前に接続されているスケジューラを復元します。 呼び出し元のコンテキストがいずれかを使用して、コンテキストに接続されていたスケジューラによって管理し、このメソッドから制御が戻た後、`CurrentScheduler::Create`または`Scheduler::Attach`メソッド。|
+|[Detach](#detach)|呼び出し元のコンテキストから現在のスケジューラをデタッチし、存在する場合、現在のスケジューラとして以前に接続されているスケジューラを復元します。 呼び出し元のコンテキストがいずれかを使用して、コンテキストに接続されていたスケジューラによって管理し、このメソッドから制御が戻た後、`CurrentScheduler::Create`または`Scheduler::Attach`メソッド。|
 |[Get](#get)|現在のスケジューラとも呼ばれます、呼び出し元コンテキストに関連付けられたスケジューラへのポインターを返します。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|呼び出し元のコンテキストに関連付けられているスケジューラの仮想プロセッサの現在の数を返します。|
 |[GetPolicy](#getpolicy)|現在のスケジューラが作成されたポリシーのコピーを返します。|
@@ -75,7 +75,7 @@ static void __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポリシー (_p)*<br/>
+*_Policy*<br/>
 スケジューラ ポリシーを新しく作成されたスケジューラの動作について説明します。
 
 ### <a name="remarks"></a>Remarks
@@ -257,7 +257,7 @@ static void __cdecl ScheduleTask(
 *_Proc*<br/>
 軽量タスクの本体を実行するために実行する関数へのポインター。
 
-*(_D)*<br/>
+*_Data*<br/>
 タスクの本体にパラメーターとして渡されるデータへの void ポインター。
 
 *(_P)*<br/>
@@ -273,4 +273,3 @@ static void __cdecl ScheduleTask(
 [Scheduler クラス](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

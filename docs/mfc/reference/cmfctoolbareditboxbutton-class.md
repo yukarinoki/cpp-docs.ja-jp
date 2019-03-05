@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CMFCToolBarEditBoxButton [MFC], SetContextMenuID
 - CMFCToolBarEditBoxButton [MFC], SetFlatMode
 ms.assetid: b21d9b67-6bf7-4ca9-bd62-b237756e0ab3
-ms.openlocfilehash: bf71bb508bf0327a7fdf34b128bdb825323cd3a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac07ff4e6bf97518e2c659a9d6df9bd721b6b806
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525720"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291614"
 ---
 # <a name="cmfctoolbareditboxbutton-class"></a>CMFCToolBarEditBoxButton クラス
 
@@ -123,11 +123,12 @@ class CMFCToolBarEditBoxButton : public CMFCToolBarButton
 
 1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。
 
-2. `CMFCToolBarEditBoxButton` オブジェクトを構築します。
+2. 
+  `CMFCToolBarEditBoxButton` オブジェクトを構築します。
 
 3. AFX_WM_RESETTOOLBAR メッセージを処理するメッセージ ハンドラーで、ダミー ボタンを置き換える新しいコンボ ボックス ボタンを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)します。
 
-詳細については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../../mfc/walkthrough-putting-controls-on-toolbars.md)します。
+詳細については、「[チュートリアル:コントロールのツールバーに追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)します。
 
 ## <a name="example"></a>例
 
@@ -193,7 +194,7 @@ CMFCToolBarEditBoxButton(
 
 既定のコンス トラクターでは、次の組み合わせをエディット コントロールのスタイルを設定します。
 
-WS_CHILD |WS_VISIBLE |ES_AUTOHSCROLL
+WS_CHILD | WS_VISIBLE | ES_AUTOHSCROLL
 
 コントロールの既定の幅は、150 ピクセルです。
 
@@ -492,7 +493,7 @@ virtual HBRUSH OnCtlColor(
 *pDC*<br/>
 [in]ボタンを表示するデバイス コンテキスト。
 
-*ため*<br/>
+*nCtlColor*<br/>
 [in]使用されていません。
 
 ### <a name="return-value"></a>戻り値
@@ -692,5 +693,4 @@ virtual void SetStyle(UINT nStyle);
 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CEdit クラス](../../mfc/reference/cedit-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[チュートリアル: ツールバーのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)

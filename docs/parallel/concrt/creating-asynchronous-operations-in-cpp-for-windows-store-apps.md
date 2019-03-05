@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 59630c7702dffc4b606943e174e44fdba6aecfe8
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176953"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302274"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C++ における UWP アプリ用の非同期操作の作成
 
@@ -37,11 +37,11 @@ ms.locfileid: "52176953"
 
 - [非同期操作を作成する](#create-async)
 
-- [例: C++ での Windows ランタイム コンポーネントの作成](#example-component)
+- [例:C++ Windows ランタイム コンポーネントの作成](#example-component)
 
 - [実行スレッドを制御する](#exethread)
 
-- [例: C++ および XAML での Windows ランタイム アプリでの実行を制御します。](#example-app)
+- [例:C++ と XAML の Windows ランタイム アプリでの実行を制御します。](#example-app)
 
 ##  <a name="create-async"></a> 非同期操作を作成する
 
@@ -57,10 +57,10 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
 進行状況を報告する非同期アクションを表します。
 
-[:Iasyncoperation\<TResult >](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
+[Windows::Foundation::IAsyncOperation\<TResult>](https://msdn.microsoft.com/library/windows/apps/br206598.aspx)<br/>
 結果を返す非同期操作を表します。
 
-[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress >](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
+[Windows::Foundation::IAsyncOperationWithProgress\<TResult, TProgress>](https://msdn.microsoft.com/library/windows/apps/br206594.aspx)<br/>
 結果を返し、進行状況を報告する、非同期操作を表します。
 
 *アクション* の概念は、非同期タスクが値を生成しないことを意味します ( `void`を返す関数を考えてみてください)。 *操作* の概念は、非同期タスクが値を生成することを意味します。 *進行状況* の概念は、タスクが呼び出し元に進行状況を報告できることを意味します。 JavaScript、.NET Framework および Visual C++ はそれぞれ、ABI の境界を越えて使用するため、これらのインターフェイスのインスタンスを作成する独自の方法を提供します。 Visual C++ では、PPL は [concurrency::create_async](reference/concurrency-namespace-functions.md#create_async) 関数を提供します。 この関数は、Windows ランタイムの非同期アクションまたはタスクの完了を表す操作を作成します。 `create_async`関数と処理関数 (通常はラムダ式) を受け取り、内部的に作成、`task`オブジェクト、および 4 つの非同期 Windows ランタイム インターフェイスのいずれかでタスクをラップします。
@@ -70,7 +70,7 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 
 `create_async` の戻り値の型は、引数の型によって決まります。 たとえば、作業関数が値を返さず、進行状況を報告しない場合、 `create_async` は `IAsyncAction`を返します。 作業関数が値を返さず、進行状況を報告する場合、 `create_async` は `IAsyncActionWithProgress`を返します。 進行状況を報告するには、作業関数のパラメーターとして [concurrency::progress_reporter](../../parallel/concrt/reference/progress-reporter-class.md) オブジェクトを提供します。 進行状況を報告する機能により、実行された作業量と残りの作業量を報告できます (たとえば、パーセントにより)。 結果が使用できるようになったらそれを報告することができます。
 
-`IAsyncAction`、 `IAsyncActionWithProgress<TProgress>`、 `IAsyncOperation<TResult>`、および `IAsyncActionOperationWithProgress<TProgress, TProgress>` インターフェイスはそれぞれ、非同期操作を取り消すことができるように `Cancel` メソッドを提供しています。 `task` クラスは、キャンセル トークンを使用します。 作業を取り消すためにキャンセル トークンを使用すると、ランタイムはそのトークンをサブスクライブする新しい作業を開始しません。 既にアクティブである作業はそのキャンセル トークンを監視でき、可能な場合には停止できます。 この機構については、ドキュメント「 [Cancellation in the PPL](cancellation-in-the-ppl.md)」で詳しく説明します。 タスクのキャンセルを接続するには、Windows ランタイムと`Cancel`メソッドは 2 つあります。 最初に、`create_async` に渡す処理関数が [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) オブジェクトとなるように定義できます。 `Cancel` メソッドが呼び出されると、このキャンセル トークンは取り消され、 `task` 呼び出しをサポートする、基になる `create_async` オブジェクトに、正常な取り消しの規則が適用されます。 `cancellation_token` オブジェクトを指定しない場合、基になる `task` オブジェクトが暗黙的に定義します。 処理関数の取り消しに協調的に応答する必要がある場合は `cancellation_token` オブジェクトを定義します。 セクション[例: C++ および XAML での Windows ランタイム アプリでの実行の制御](#example-app)c# およびカスタム Windows ランタイム C++ を使用して XAML でユニバーサル Windows プラットフォーム (UWP) アプリで取り消し処理を実行する方法の例を示しますコンポーネント。
+`IAsyncAction`、 `IAsyncActionWithProgress<TProgress>`、 `IAsyncOperation<TResult>`、および `IAsyncActionOperationWithProgress<TProgress, TProgress>` インターフェイスはそれぞれ、非同期操作を取り消すことができるように `Cancel` メソッドを提供しています。 `task` クラスは、キャンセル トークンを使用します。 作業を取り消すためにキャンセル トークンを使用すると、ランタイムはそのトークンをサブスクライブする新しい作業を開始しません。 既にアクティブである作業はそのキャンセル トークンを監視でき、可能な場合には停止できます。 この機構については、ドキュメント「 [Cancellation in the PPL](cancellation-in-the-ppl.md)」で詳しく説明します。 タスクのキャンセルを接続するには、Windows ランタイムと`Cancel`メソッドは 2 つあります。 最初に、`create_async` に渡す処理関数が [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md) オブジェクトとなるように定義できます。 `Cancel` メソッドが呼び出されると、このキャンセル トークンは取り消され、 `task` 呼び出しをサポートする、基になる `create_async` オブジェクトに、正常な取り消しの規則が適用されます。 `cancellation_token` オブジェクトを指定しない場合、基になる `task` オブジェクトが暗黙的に定義します。 処理関数の取り消しに協調的に応答する必要がある場合は `cancellation_token` オブジェクトを定義します。 セクション[例。C++ と XAML の Windows ランタイム アプリでの実行を制御する](#example-app)、ユニバーサル Windows プラットフォーム (UWP) アプリケーションで取り消し処理を実行する方法の例を示しますC#およびカスタム Windows ランタイム C++ コンポーネントを使用して XAML。
 
 > [!WARNING]
 >  タスクの継続のチェーンでは、キャンセル トークンが取り消された場合に、常に状態をクリーンアップしてから、[concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task) を呼び出します。 `cancel_current_task`を呼び出す代わりにすぐに制御を返す場合は、操作は、取り消された状態でなく、完了の状態に遷移します。
@@ -90,7 +90,7 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 
 [!code-cpp[concrt-windowsstore-primes#100](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_1.cpp)]
 
-##  <a name="example-component"></a> 例: C++ Windows ランタイム コンポーネントを作成して C# から使用する
+##  <a name="example-component"></a> 例:C++ Windows ランタイム コンポーネントを作成してから使用するには.C#
 
 コンピューティング集中型の操作を実行するには、UI と C++ Windows ランタイム コンポーネントを定義する XAML と c# を使用するアプリを検討してください。 この例では、C++ コンポーネントは特定の範囲での素数を計算します。 4 つの Windows ランタイムの非同期タスク インターフェイス間の違いを示すためには、まず、Visual Studio で、作成、**空のソリューション**とします`Primes`します。 次に、ソリューションに **[Windows ランタイム コンポーネント]** プロジェクトを追加し、名前を `PrimesLibrary`とします。 生成された C++ ヘッダー ファイル (この例では Class1.h の名前を Primes.h に変更しています) に次のコードを追加します。 `public` の各メソッドは 4 つの非同期インターフェイスの 1 つを定義します。 値を返すメソッドを返す、 [:ivector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)オブジェクト。 進行状況を報告するメソッドは、全体の作業のうち完了した割合を定義する `double` の値を生成します。
 
@@ -153,7 +153,7 @@ UI があるアプリケーションでは、ASTA (アプリケーション STA)
 > [!IMPORTANT]
 > STA で実行される継続の本体で [concurrency::task::wait](reference/task-class.md#wait) を呼び出さないでください。 そうしないと、このメソッドが現在のスレッドをブロックして、アプリケーションが応答しなくなる場合があるため、ランタイムは [concurrency::invalid_operation](../../parallel/concrt/reference/invalid-operation-class.md) をスローします。 ただし、タスク ベースの継続で継続元タスクの結果を受け取るために [concurrency::task::get](reference/task-class.md#get) のメソッドを呼び出すことができます。
 
-##  <a name="example-app"></a> 例: C++ および XAML での Windows ランタイム アプリでの実行を制御します。
+##  <a name="example-app"></a> 例:C++ と XAML の Windows ランタイム アプリでの実行を制御します。
 
 ディスクからファイルを読み込み、そのファイルで最もよく使われている単語を検索し、結果を UI に表示する C++ XAML アプリケーションを考えてみます。 このアプリを作成するには、まず、Visual Studio を作成、**空のアプリ (ユニバーサル Windows)** プロジェクトし、その名前を付け`CommonWords`します。 アプリケーション マニフェストで、 **[ドキュメント ライブラリ]** の機能を指定して、アプリケーションがドキュメント フォルダーにアクセスできるようにします。 また、アプリケーション マニフェストの宣言セクションにテキスト (.txt) ファイルの種類を追加します。 アプリケーションの機能および宣言に関する詳細については、「 [アプリ パッケージと展開](https://msdn.microsoft.com/library/windows/apps/hh464929.aspx)」を参照してください。
 

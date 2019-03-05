@@ -133,16 +133,17 @@ f1_keywords:
 - AMP_MATH/Concurrency::trunc
 - AMP_MATH/Concurrency::truncf
 ms.assetid: ba653308-dc28-4384-b2fd-6cd718a72f91
-ms.openlocfilehash: 6d4f05595f1501fb55938d6875f21b9a9079d043
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bc023d1cc27601b7da0a87aee7c3c1ac66479a7c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462336"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288327"
 ---
 # <a name="concurrencyprecisemath-namespace"></a>Concurrency::precise_math 名前空間
 
-`precise_math` 名前空間の関数は C99 に準拠しています。 単一精度と倍精度浮動小数点精度バージョンの各関数が含まれています。 たとえば、`acos`倍精度のバージョンと`acosf`単精度バージョンです。 これらの関数は、単精度関数を含む、アクセラレータ上での倍精度の拡張サポートが必要です。 使用することができます、 [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision)するかどうかは、特定のアクセラレータでこれらの関数を実行できます。
+
+  `precise_math` 名前空間の関数は C99 に準拠しています。 単一精度と倍精度浮動小数点精度バージョンの各関数が含まれています。 たとえば、`acos`倍精度のバージョンと`acosf`単精度バージョンです。 これらの関数は、単精度関数を含む、アクセラレータ上での倍精度の拡張サポートが必要です。 使用することができます、 [accelerator::supports_double_precision](accelerator-class.md#supports_double_precision)するかどうかは、特定のアクセラレータでこれらの関数を実行できます。
 
 ## <a name="syntax"></a>構文
 
@@ -294,7 +295,7 @@ namespace precise_math;
 
 **ヘッダー:** amp_math.h
 
-**名前空間:** Concurrency
+**名前空間:** コンカレンシー
 
 ## <a name="see-also"></a>関連項目
 

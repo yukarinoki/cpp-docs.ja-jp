@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_source class
 ms.assetid: 3548b1a0-12b0-4334-95db-4bf57141c066
-ms.openlocfilehash: e0b636d22eede9eb6a9d9268241f912bb80fcbf9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 330473db1011af661e2cfa2c5861987bce786e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50446749"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296788"
 ---
 # <a name="cancellationtokensource-class"></a>cancellation_token_source クラス
 
@@ -41,7 +41,7 @@ class cancellation_token_source;
 
 |名前|説明|
 |----------|-----------------|
-|[キャンセル](#cancel)|トークンを取り消します。 トークンを利用するすべての `task_group`、`structured_task_group`、および `task` は、このメソッドが呼び出されたときに取り消され、次の割り込みポイントで例外がスローされます。|
+|[cancel](#cancel)|トークンを取り消します。 トークンを利用するすべての `task_group`、`structured_task_group`、および `task` は、このメソッドが呼び出されたときに取り消され、次の割り込みポイントで例外がスローされます。|
 |[create_linked_source](#create_linked_source)|オーバーロードされます。 指定されたトークンが取り消されたときに取り消される `cancellation_token_source` を作成します。|
 |[get_token](#get_token)|このソースに関連付けられたキャンセル トークンを返します。 返されたトークンは、取り消すためにポーリングしたり、取り消しが発生した場合にコールバックを指定したりできます。|
 
@@ -63,7 +63,7 @@ class cancellation_token_source;
 
 **名前空間:** concurrency
 
-##  <a name="dtor"></a> ~ cancellation_token_source
+##  <a name="dtor"></a> ~cancellation_token_source
 
 ```
 ~cancellation_token_source();
@@ -117,12 +117,13 @@ static cancellation_token_source create_linked_source(_Iter _Begin, _Iter _End);
 *開始 (_b)*<br/>
 C++ 標準ライブラリ反復子に対応するトークンの範囲の先頭の取り消しをリッスンします。
 
-*(_E)*<br/>
+*_End*<br/>
 C++ 標準ライブラリする反復子のトークンの範囲の終了に対応する取り消しをリッスンします。
 
 ### <a name="return-value"></a>戻り値
 
-`cancellation_token_source` パラメーターによって指定されたトークンが取り消されたときに取り消される `_Src`。
+
+  `cancellation_token_source` パラメーターによって指定されたトークンが取り消されたときに取り消される `_Src`。
 
 ##  <a name="get_token"></a> get_token
 

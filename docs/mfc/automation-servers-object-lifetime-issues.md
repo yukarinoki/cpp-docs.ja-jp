@@ -1,5 +1,5 @@
 ---
-title: 'オートメーション サーバー : オブジェクトの生成と破棄'
+title: オートメーション サーバー:オブジェクトの有効期間に関する問題
 ms.date: 11/04/2016
 helpviewer_keywords:
 - objects [MFC], lifetime
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - Automation servers, object lifetime
 - servers, lifetime of Automation
 ms.assetid: 342baacf-4015-4a0e-be2f-321424f1cb43
-ms.openlocfilehash: 904c3023d7f27bd144c306d9d92810a91a48ecfa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f9dbc6e4f321ba10fdffa013c158d53b84331e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50637646"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293578"
 ---
-# <a name="automation-servers-object-lifetime-issues"></a>オートメーション サーバー : オブジェクトの生成と破棄
+# <a name="automation-servers-object-lifetime-issues"></a>オートメーション サーバー:オブジェクトの有効期間に関する問題
 
 オートメーション クライアントを作成または OLE 項目をアクティブ化、サーバー、クライアントにポインターを渡しますそのオブジェクト。 クライアントが OLE 関数の呼び出しを使用してオブジェクトへの参照を確立[iunknown::addref](/windows/desktop/api/unknwn/nf-unknwn-iunknown-addref)します。 この参照は、クライアントが有効になって[:release](/windows/desktop/api/unknwn/nf-unknwn-iunknown-release)します。 (Microsoft Foundation Class ライブラリの OLE クラスで記述されたクライアント アプリケーションでは、これらの呼び出しをする必要がなくなります。 フレームワークは)。OLE システムとサーバー自体には、オブジェクトへの参照を設定できます。 オブジェクトへの外部参照が有効に残っている限り、サーバーはオブジェクトを破棄できません。
 
@@ -32,4 +32,3 @@ Windows SDK を参照してください。`IUnknown::AddRef`と`IUnknown::Releas
 
 [オートメーション サーバー](../mfc/automation-servers.md)<br/>
 [AfxOleCanExitApp](../mfc/reference/application-control.md#afxolecanexitapp)
-

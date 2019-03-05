@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 29: 分割ウィンドウ'
+title: TN029:分割ウィンドウ
 ms.date: 11/04/2016
 f1_keywords:
 - vc.windows.splitter
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - TN029
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
-ms.openlocfilehash: 245ad33dd7bc7d3b6365463d4d2ae9538a12bfdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c27545c6f425eda952e87c80ed1d37de9e1093a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501986"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294994"
 ---
-# <a name="tn029-splitter-windows"></a>テクニカル ノート 29: 分割ウィンドウ
+# <a name="tn029-splitter-windows"></a>TN029:分割ウィンドウ
 
 この注の説明、MFC [CSplitterWnd クラス](../mfc/reference/csplitterwnd-class.md)ウィンドウを分割し、他のウィンドウのウィンドウのサイズ変更の管理を提供します。
 
@@ -54,17 +54,17 @@ A`CSplitterWnd`ウィンドウの分割の 2 つの異なるスタイルをサ�
 
 分割ウィンドウに固有の用語の一覧を次に示します。
 
-`CSplitterWnd`: ペイン分割コントロールと上の行または列のすべてのペイン間で共有されるスクロール バーを提供するウィンドウ。 0 から始まる番号を持つ行と列を指定する (最初のウィンドウは、行 = 0 and 列 = 0)。
+`CSplitterWnd`:ペイン分割コントロールと上の行または列のすべてのペイン間で共有されるスクロール バーを提供するウィンドウです。 0 から始まる番号を持つ行と列を指定する (最初のウィンドウは、行 = 0 and 列 = 0)。
 
-ウィンドウ: 特定のアプリケーション ウィンドウを`CSplitterWnd`を管理します。 ペインがから派生したオブジェクトでは通常、 [CView クラス](../mfc/reference/cview-class.md)、いずれかを指定できますが、 [CWnd](../mfc/reference/cwnd-class.md)適切な子ウィンドウ ID を持つオブジェクト
+ウィンドウ:特定のアプリケーション ウィンドウを`CSplitterWnd`を管理します。 ペインがから派生したオブジェクトでは通常、 [CView クラス](../mfc/reference/cview-class.md)、いずれかを指定できますが、 [CWnd](../mfc/reference/cwnd-class.md)適切な子ウィンドウ ID を持つオブジェクト
 
 使用する、 `CWnd`-派生オブジェクトを渡すオブジェクトの対象となる、`CreateView`関数を使用していた場合と同様、 `CView`-クラスを派生します。 クラスは、フレームワークは、実行時に動的な作成を使用するため DECLARE_DYNCREATE と IMPLEMENT_DYNCREATE を使用する必要があります。 大量のコードが`CSplitterWnd`に固有です、`CView`クラス、[使うため](../mfc/reference/cobject-class.md#iskindof)はこれらのアクションを実行する前に常に使用します。
 
-分割バー ペインの行と列の間に配置されるコントロール。 これを使用して、行のサイズまたはウィンドウの列を調整できます。
+分割バー:ペインの行と列の間に配置されるコントロール。 これを使用して、行のサイズまたはウィンドウの列を調整できます。
 
-分割ボックス動的なコントロールの`CSplitterWnd`ペインの新しい行または列の作成を行えます。 または、水平スクロール バーの左側に垂直スクロール バーの上部になります。
+分割ボックス:動的コントロール`CSplitterWnd`ペインの新しい行または列の作成を行えます。 または、水平スクロール バーの左側に垂直スクロール バーの上部になります。
 
-スプリッターの積集合: 垂直方向の分割バーと水平方向の分割バーの交差部分。 同時にウィンドウの列や行のサイズを調整するドラッグすることができます。
+スプリッターの積集合:垂直方向の分割バーと水平方向の分割バーの交差部分。 同時にウィンドウの列や行のサイズを調整するドラッグすることができます。
 
 ## <a name="shared-scroll-bars"></a>共有のスクロール バー
 
@@ -140,4 +140,3 @@ A`CSplitterWnd`ウィンドウの分割の 2 つの異なるスタイルをサ�
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

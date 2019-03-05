@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: 21a8e6ed28498756130e6ddb418e93b0e9ad86cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50662775"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303345"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages クラス
 
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in]TRUE の場合、`CMFCToolBarImages`オブジェクトは、新しいイメージの色深度 (1 ピクセルあたりのビット) を使用FALSE の場合、`CMFCToolbarImages`オブジェクトが現在の色深度を保持します。
 
-*イメージ リスト*<br/>
+*imageList*<br/>
 [in]参照を`CMFCToolbarImages`を追加するイメージを含むオブジェクト。
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>パラメーター
 
-*イメージ リスト*<br/>
+*imageList*<br/>
 [in]ツール バー イメージのソースとして使用するイメージ リスト。
 
 ### <a name="return-value"></a>戻り値
@@ -518,11 +518,11 @@ BOOL DrawEx(
 
 [in]*pDC*<br/>
 [in]*rect*<br/>
-[in]*iImageIndex*<br/>
+[in] *iImageIndex*<br/>
 [in]*horzAlign*<br/>
-[in]*vertAlign*<br/>
-[in]*rectSrc*<br/>
-[in]*alphaSrc*<br/>
+[in] *vertAlign*<br/>
+[in] *rectSrc*<br/>
+[in] *alphaSrc*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -536,7 +536,7 @@ static void __stdcall EnableRTL(BOOL bIsRTL = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bIsRTL*<br/>
+[in] *bIsRTL*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -921,9 +921,9 @@ BOOL LoadStr(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lpszResourceName*<br/>
+[in] *lpszResourceName*<br/>
 [in]*hinstRes*<br/>
-[in]*bAdd*<br/>
+[in] *bAdd*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -958,7 +958,7 @@ BOOL MapTo3dColors(
 ### <a name="parameters"></a>パラメーター
 
 [in]*bUseRGBQUAD*<br/>
-[in]*clrSrc*<br/>
+[in] *clrSrc*<br/>
 [in]*clrDest*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -1086,7 +1086,7 @@ BOOL PreMultiplyAlpha(HBITMAP hbmp);
 ### <a name="parameters"></a>パラメーター
 
 [in]*hbmp*<br/>
-[in]*bAutoCheckPremlt*<br/>
+[in] *bAutoCheckPremlt*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1166,7 +1166,7 @@ void SetAlwaysLight(BOOL bAlwaysLight = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bAlwaysLight*<br/>
+[in] *bAlwaysLight*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1180,7 +1180,7 @@ static void SetDisabledImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*nValue*<br/>
 [in]アルファ チャネルの新しい値。
 
 ### <a name="remarks"></a>Remarks
@@ -1195,7 +1195,7 @@ static void __stdcall SetFadedImageAlpha(BYTE nValue);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*値*<br/>
+[in] *nValue*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1226,7 +1226,7 @@ void SetLightPercentage(int nValue);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*値*<br/>
+[in] *nValue*<br/>
 
 ### <a name="remarks"></a>Remarks
 

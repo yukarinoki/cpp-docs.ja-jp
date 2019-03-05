@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 627fc6788dd359779bf07da3da1901be4c3aeafd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630686"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289664"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception クラス
 
@@ -33,7 +33,8 @@ class runtime_exception : public std::exception;
 |名前|説明|
 |----------|-----------------|
 |[runtime_exception コンス トラクター](#ctor)|`runtime_exception` クラスの新しいインスタンスを初期化します。|
-|[~ runtime_exception デストラクター](#dtor)|`runtime_exception` オブジェクトを破棄します。|
+|[~ runtime_exception デストラクター](#dtor)|
+  `runtime_exception` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -57,7 +58,7 @@ class runtime_exception : public std::exception;
 
 **ヘッダー:** amprt.h
 
-**名前空間:** Concurrency
+**名前空間:** コンカレンシー
 
 ## <a name="runtime_exception__ctor"></a>  runtime_exception コンス トラクター
 
@@ -79,7 +80,7 @@ runtime_exception(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 この例外の原因になったエラーの説明。
 
 *_Hresult*<br/>

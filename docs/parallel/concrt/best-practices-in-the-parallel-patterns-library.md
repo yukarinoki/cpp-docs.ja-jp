@@ -7,12 +7,12 @@ helpviewer_keywords:
 - best practices, Parallel Patterns Library
 - Parallel Patterns Library, best practices
 ms.assetid: e43e0304-4d54-4bd8-a3b3-b8673559a9d7
-ms.openlocfilehash: 153dbf461176ee62f42dbe41a1c426a8c34ae716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc120ecc122678b54c7dd27b95445f523bc114a6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50503299"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293616"
 ---
 # <a name="best-practices-in-the-parallel-patterns-library"></a>並列パターン ライブラリに関するベスト プラクティス
 
@@ -66,7 +66,8 @@ fork-join モデルはさまざまな問題を解決するのに役立ちます�
 
 [!code-cpp[concrt-image-processing-filter#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_3.cpp)]
 
-次の例では、ループで `ProcessImage` 関数を呼び出す fork-join コンストラクトを示します。 `ProcessImage` を呼び出すたびに制御が戻されるのではなく、各サブタスクが終了してから戻されます。
+次の例では、ループで `ProcessImage` 関数を呼び出す fork-join コンストラクトを示します。 
+  `ProcessImage` を呼び出すたびに制御が戻されるのではなく、各サブタスクが終了してから戻されます。
 
 [!code-cpp[concrt-image-processing-filter#21](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_4.cpp)]
 
@@ -76,21 +77,23 @@ fork-join モデルはさまざまな問題を解決するのに役立ちます�
 
 [!code-cpp[concrt-image-processing-filter#22](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_5.cpp)]
 
-パイプラインを使用して並列でイメージ処理を実行するような例を参照してください。[チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)です。
+パイプラインを使用して並列でイメージ処理を実行するような例を参照してください。[チュートリアル。イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)です。
 
 [[トップ](#top)]
 
 ##  <a name="divide-and-conquer"></a> Parallel_invoke 分割と整理の問題の解決を使用してください。
 
-A*分割統治*問題は、再帰を使用してタスクをサブタスクに分割する fork-join コンストラクトの一種です。 加え、 [concurrency::task_group](reference/task-group-class.md)と[concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)クラスを使用することも、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズム分割と整理の問題を解決します。 `parallel_invoke` アルゴリズムでは、タスク グループ オブジェクトよりも簡単な構文を使用できます。このアルゴリズムは、並列タスクの数が固定されている場合に役立ちます。
+A*分割統治*問題は、再帰を使用してタスクをサブタスクに分割する fork-join コンストラクトの一種です。 加え、 [concurrency::task_group](reference/task-group-class.md)と[concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)クラスを使用することも、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズム分割と整理の問題を解決します。 
+  `parallel_invoke` アルゴリズムでは、タスク グループ オブジェクトよりも簡単な構文を使用できます。このアルゴリズムは、並列タスクの数が固定されている場合に役立ちます。
 
 次の例では、`parallel_invoke` アルゴリズムを使用して、バイトニック ソート アルゴリズムを実装します。
 
 [!code-cpp[concrt-parallel-bitonic-sort#12](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_6.cpp)]
 
-`parallel_invoke` アルゴリズムでは、オーバーヘッドを低減するために、一連のタスクの最後のタスクを呼び出し元のコンテキストで実行します。
 
-この例の完全なバージョンを参照してください。[方法: parallel.invoke を使用して並列並べ替えルーチンを記述する](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)します。 詳細については、`parallel_invoke`アルゴリズムを参照してください[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+  `parallel_invoke` アルゴリズムでは、オーバーヘッドを低減するために、一連のタスクの最後のタスクを呼び出し元のコンテキストで実行します。
+
+この例の完全なバージョンを参照してください。[方法。Parallel_invoke を使用して並列並べ替えルーチンを記述する](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)します。 詳細については、`parallel_invoke`アルゴリズムを参照してください[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
 
 [[トップ](#top)]
 
@@ -102,17 +105,19 @@ PPL では、2 とおりの方法を使用して、タスク グループまた�
 
 [!code-cpp[concrt-parallel-array-search#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_7.cpp)]
 
-並列アルゴリズムではタスク グループが使用されるため、並列反復処理のいずれかによって親タスク グループが取り消されると、タスク全体が取り消されます。 この例の完全なバージョンを参照してください。[方法: 並列ループから Break を使用してキャンセル](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)します。
+並列アルゴリズムではタスク グループが使用されるため、並列反復処理のいずれかによって親タスク グループが取り消されると、タスク全体が取り消されます。 この例の完全なバージョンを参照してください。[方法。取り消しを使用して並列ループを中断する](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)します。
 
 例外処理を使用して並列処理を取り消す方法は、取り消し機構を使用する方法よりも効率の面で劣りますが、例外処理の方が適している状況もあります。 たとえば、次のメソッド `for_all` では、`tree` 構造体の各ノードに対して処理関数を再帰的に実行します。 この例で、`_children`データ メンバーは、 [std::list](../../standard-library/list-class.md)を格納している`tree`オブジェクト。
 
 [!code-cpp[concrt-task-tree-search#6](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_8.cpp)]
 
-ツリーの各要素に対して処理関数を呼び出す必要がない場合、`tree::for_all` メソッドの呼び出し元は例外をスローすることができます。 次の例は `search_for_value` 関数で、提供された `tree` オブジェクト内で値を検索します。 `search_for_value` 関数で使用される処理関数は、ツリーの現在の要素と提供された値が一致する場合に例外をスローします。 `search_for_value` 関数は、`try-catch` ブロックを使用して例外をキャプチャし、結果をコンソールに出力します。
+ツリーの各要素に対して処理関数を呼び出す必要がない場合、`tree::for_all` メソッドの呼び出し元は例外をスローすることができます。 次の例は `search_for_value` 関数で、提供された `tree` オブジェクト内で値を検索します。 
+  `search_for_value` 関数で使用される処理関数は、ツリーの現在の要素と提供された値が一致する場合に例外をスローします。 
+  `search_for_value` 関数は、`try-catch` ブロックを使用して例外をキャプチャし、結果をコンソールに出力します。
 
 [!code-cpp[concrt-task-tree-search#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_9.cpp)]
 
-この例の完全なバージョンを参照してください。[方法: 例外処理を使用して中断する並列ループから](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)します。
+この例の完全なバージョンを参照してください。[方法。並列ループから処理を中断する例外を使用して](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)します。
 
 キャンセルと PPL によって提供される例外処理メカニズムの概要については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)と[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
 
@@ -140,7 +145,8 @@ Container 1: Freeing resources...Exiting program...
 
 - 親タスクのキャンセルと子タスクへの呼び出し[concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)も取り消されます。 そのため、これら 2 つのリソースは解放されません。
 
-- 親タスクを取り消すと、子タスクが内部例外をスローします。 `Container` デストラクターではこの例外は処理されないため、例外が上位に伝達され、3 つ目のリソースは解放されません。
+- 親タスクを取り消すと、子タスクが内部例外をスローします。 
+  `Container` デストラクターではこの例外は処理されないため、例外が上位に伝達され、3 つ目のリソースは解放されません。
 
 - 子タスクによってスローされた例外が、`Container` デストラクターを通じて伝達されます。 デストラクターからスローされることにより、アプリケーションが未定義の状態になります。
 
@@ -156,7 +162,8 @@ Container 1: Freeing resources...Exiting program...
 
 並列ループの本体がときどきブロックする程度であれば、この機構によりタスクの全体的なスループットが最大限に高まります。 ただし、反復処理で頻繁にブロックが発生する場合は、追加の処理を実行するために多数のスレッドが作成される可能性があります。 それに伴って、メモリ不足の状態に陥ったり、ハードウェア リソースが不適切に使用されたりする場合があります。
 
-呼び出す次の例を検討してください、 [concurrency::send](reference/concurrency-namespace-functions.md#send)の各反復で関数を`parallel_for`ループします。 `send` は協調的にブロックするため、`send` を呼び出すたびに、追加の処理を実行するための新しいスレッドが作成されます。
+呼び出す次の例を検討してください、 [concurrency::send](reference/concurrency-namespace-functions.md#send)の各反復で関数を`parallel_for`ループします。 
+  `send` は協調的にブロックするため、`send` を呼び出すたびに、追加の処理を実行するための新しいスレッドが作成されます。
 
 [!code-cpp[concrt-repeated-blocking#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_12.cpp)]
 
@@ -174,7 +181,8 @@ Container 1: Freeing resources...Exiting program...
 
 [!code-cpp[concrt-blocking-cancel#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_13.cpp)]
 
-`new` 演算子は、ブロッキングの対象となる可能性のあるヒープ割り当てを実行します。 タスクが協調的ブロッキング呼び出しへの呼び出しなどを実行する場合にのみ、ランタイムがその他の作業を実行[concurrency::critical_section::lock](reference/critical-section-class.md#lock)します。
+
+  `new` 演算子は、ブロッキングの対象となる可能性のあるヒープ割り当てを実行します。 タスクが協調的ブロッキング呼び出しへの呼び出しなどを実行する場合にのみ、ランタイムがその他の作業を実行[concurrency::critical_section::lock](reference/critical-section-class.md#lock)します。
 
 次の例では、不要な処理を回避し、それによってパフォーマンスを向上させる方法を示します。 この例では、`Answer` オブジェクト用のストレージを割り当てる前に、タスク グループを取り消します。
 
@@ -192,13 +200,15 @@ Container 1: Freeing resources...Exiting program...
 
 また、頻繁なロック操作によってループが事実上シリアル化されるため、パフォーマンスが低下する可能性もあります。 さらに、コンカレンシー ランタイム オブジェクトがブロック操作を実行すると、スケジューラによって追加のスレッドが作成され、最初のスレッドがデータを待っている間に他の処理が実行される可能性があります。 共有データを待つタスクが多数存在し、それに対処するためにランタイムで多数のスレッドが作成されると、アプリケーションのパフォーマンス低下やリソース不足状態が発生することがあります。
 
-PPL の定義、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスは、ロック制御不要の方法で共有リソースへのアクセスを提供することで、共有状態を回避するのに役立ちます。 `combinable` クラスにはスレッド ローカル ストレージが用意されており、詳細な計算を実行した後、その計算を最終結果にマージできます。 `combinable` オブジェクトは減少変数と考えることができます。
+PPL の定義、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスは、ロック制御不要の方法で共有リソースへのアクセスを提供することで、共有状態を回避するのに役立ちます。 
+  `combinable` クラスにはスレッド ローカル ストレージが用意されており、詳細な計算を実行した後、その計算を最終結果にマージできます。 
+  `combinable` オブジェクトは減少変数と考えることができます。
 
 次の例では、前の例を変更し、合計を計算するときに `critical_section` オブジェクトの代わりに `combinable` オブジェクトを使用するようにしています。 この例では、各スレッドが合計のローカル コピーをそれぞれ保持するため、効率が改善されます。 この例では、 [concurrency::combinable::combine](reference/combinable-class.md#combine)最終的な結果に、ローカルの計算をマージするメソッド。
 
 [!code-cpp[concrt-parallel-sum-of-primes#3](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_16.cpp)]
 
-この例の完全なバージョンを参照してください。[方法: パフォーマンスを向上させる combinable を使用して](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)します。 詳細については、`combinable`クラスを参照してください[並列コンテナーとオブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)します。
+この例の完全なバージョンを参照してください。[方法。パフォーマンスを向上させる combinable を使用して](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)します。 詳細については、`combinable`クラスを参照してください[並列コンテナーとオブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)します。
 
 [[トップ](#top)]
 
@@ -220,7 +230,8 @@ PPL の定義、 [concurrency::combinable](../../parallel/concrt/reference/combi
 
 この例では、メモリ キャッシュのサイズが 64 バイト以下であると仮定しています。
 
-使用することをお勧め、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスのタスク間でデータを共有する必要があります。 `combinable` クラスは、偽共有が発生する可能性を減らすようにスレッド ローカル変数を作成します。 詳細については、`combinable`クラスを参照してください[並列コンテナーとオブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)します。
+使用することをお勧め、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラスのタスク間でデータを共有する必要があります。 
+  `combinable` クラスは、偽共有が発生する可能性を減らすようにスレッド ローカル変数を作成します。 詳細については、`combinable`クラスを参照してください[並列コンテナーとオブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)します。
 
 [[トップ](#top)]
 
@@ -228,7 +239,9 @@ PPL の定義、 [concurrency::combinable](../../parallel/concrt/reference/combi
 
 タスク グループまたは並列アルゴリズムにラムダ式を渡す場合、ラムダ式の本体で外側のスコープ内の変数を値でアクセスするのか参照でアクセスするのかは、capture 句で指定します。 ラムダ式に変数を渡すときに参照渡しを使用する場合、タスクが終了するまでその変数の有効期間が続くようにする必要があります。
 
-次の例について考えます。この例では、`object` クラスと `perform_action` 関数を定義します。 `perform_action` 関数は、`object` 変数を作成し、その変数に対していくつかのアクションを非同期的に実行します。 `perform_action` 関数から制御が戻される前にタスクが終了するとは限らないため、タスクの実行中に `object` 変数が破棄されると、プログラムのクラッシュや未定義の動作が発生します。
+次の例について考えます。この例では、`object` クラスと `perform_action` 関数を定義します。 
+  `perform_action` 関数は、`object` 変数を作成し、その変数に対していくつかのアクションを非同期的に実行します。 
+  `perform_action` 関数から制御が戻される前にタスクが終了するとは限らないため、タスクの実行中に `object` 変数が破棄されると、プログラムのクラッシュや未定義の動作が発生します。
 
 [!code-cpp[concrt-lambda-lifetime#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_20.cpp)]
 
@@ -238,7 +251,8 @@ PPL の定義、 [concurrency::combinable](../../parallel/concrt/reference/combi
 
 [!code-cpp[concrt-lambda-lifetime#2](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-parallel-patterns-library_21.cpp)]
 
-`object` 変数は値渡しで渡されるため、この変数の状態変化が発生しても、元のコピーには反映されません。
+
+  `object` 変数は値渡しで渡されるため、この変数の状態変化が発生しても、元のコピーには反映されません。
 
 次の例では、 [::task_group::wait](reference/task-group-class.md#wait)前にタスクが終了するかどうかを確認するメソッド、`perform_action`関数が返される。
 
@@ -270,4 +284,3 @@ PPL の定義、 [concurrency::combinable](../../parallel/concrt/reference/combi
 [方法: combinable を使用してパフォーマンスを向上させる](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)<br/>
 [非同期エージェント ライブラリに関するベスト プラクティス](../../parallel/concrt/best-practices-in-the-asynchronous-agents-library.md)<br/>
 [コンカレンシー ランタイムに関する全般的なベスト プラクティス](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

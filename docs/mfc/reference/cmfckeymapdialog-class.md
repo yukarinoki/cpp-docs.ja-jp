@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: e1ed48c851243611b052c79d13721076d27dcf8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94c6968d2f534ed0b6d247420e67910ecf906b05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452677"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294604"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog クラス
 
@@ -210,7 +210,7 @@ virtual int OnPrintHeader(
 *dc*<br/>
 [in]プリンター デバイス コンテキスト。
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [in]印刷するページ番号。
 
 *cx*<br/>

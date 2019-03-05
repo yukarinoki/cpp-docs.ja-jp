@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CAxWindow class
 - ATL, hosting ActiveX controls
 ms.assetid: 85e79261-43e4-4770-bde0-1ff87f222b0f
-ms.openlocfilehash: f1a1e7fe00218efe7514fe59ea78ea30b33b878f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 3cf1c773c96a2bf1bc6c67420d72052e68ee2a53
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329567"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297594"
 ---
 # <a name="caxwindow-class"></a>CAxWindow クラス
 
@@ -56,7 +56,7 @@ class CAxWindow : public CWindow
 
 |||
 |-|-|
-|[演算子 =](#operator_eq)|既存の HWND を割り当てます`CAxWindow`オブジェクト。|
+|[operator=](#operator_eq)|既存の HWND を割り当てます`CAxWindow`オブジェクト。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -111,7 +111,7 @@ CAxWindow(HWND hWnd = NULL);
 *hWnd*<br/>
 既存のウィンドウ オブジェクトへのハンドル。
 
-##  <a name="createcontrol"></a>  については
+##  <a name="createcontrol"></a>  CAxWindow::CreateControl
 
 ActiveX コントロールを作成して初期化し、指定されたウィンドウでホストします。
 
@@ -138,7 +138,7 @@ HRESULT CreateControl(
 
 - などの URL"<http://www.microsoft.com>"
 
-- などのアクティブなドキュメントへの参照を"file://\\\Documents\MyDoc.doc"
+- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
 
 - などの HTML のフラグメント"MSHTML:\<HTML >\<本文 > これは、行のテキスト\</BODY >\</HTML >"
 
@@ -151,7 +151,7 @@ HRESULT CreateControl(
 *ppUnkContainer*<br/>
 [out]受信するポインターのアドレス、`IUnknown`のコンテナー。 NULL にすることができます。
 
-*され*<br/>
+*dwResID*<br/>
 HTML リソースのリソース ID。 WebBrowser コントロールが作成され、指定されたリソースで読み込まれます。
 
 ### <a name="return-value"></a>戻り値
@@ -205,7 +205,7 @@ HRESULT CreateControlEx(
 
 - などの URL"<http://www.microsoft.com>"
 
-- などのアクティブなドキュメントへの参照を"file://\\\Documents\MyDoc.doc"
+- A reference to an Active document such as "file://\\\Documents\MyDoc.doc"
 
 - などの HTML のフラグメント"MSHTML:\<HTML >\<本文 > これは、行のテキスト\</BODY >\</HTML >"
 
@@ -227,7 +227,7 @@ HRESULT CreateControlEx(
 *punkSink*<br/>
 [in]ポインター、`IUnknown`で指定された、含まれるオブジェクトの接続ポイントに接続されているシンク オブジェクトのインターフェイス*れて*します。
 
-*され*<br/>
+*dwResID*<br/>
 [in]HTML リソースのリソース ID。 WebBrowser コントロールが作成され、指定されたリソースで読み込まれます。
 
 ### <a name="return-value"></a>戻り値
@@ -372,4 +372,3 @@ HRESULT SetExternalUIHandler(IDocHostUIHandlerDispatch* pUIHandler);
 [複合コントロールの基本](../../atl/atl-composite-control-fundamentals.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [コントロール コンテインメント:](../../atl/atl-control-containment-faq.md)
-

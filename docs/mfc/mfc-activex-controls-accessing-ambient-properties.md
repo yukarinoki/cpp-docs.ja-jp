@@ -1,18 +1,18 @@
 ---
-title: 'MFC ActiveX コントロール : アンビエント プロパティへのアクセス'
+title: MFC ActiveX コントロール:アンビエント プロパティへのアクセス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], accessing ambient properties
 - properties [MFC], accessing ambient
 ms.assetid: fdc9db29-e6b0-45d2-a879-8bd60e2058a7
-ms.openlocfilehash: f6daff09969e82daa4e8f76c8b1eb4972ddd6eeb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 585ec8720a654bbcb728330d70ddb914f2543e41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585628"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305225"
 ---
-# <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX コントロール : アンビエント プロパティへのアクセス
+# <a name="mfc-activex-controls-accessing-ambient-properties"></a>MFC ActiveX コントロール:アンビエント プロパティへのアクセス
 
 この記事では、ActiveX コントロールを使用して、コントロール コンテナーのアンビエント プロパティにアクセスする方法について説明します。
 
@@ -58,4 +58,3 @@ ms.locfileid: "50585628"
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - ISource class
 ms.assetid: c7b73463-42f6-4dcc-801a-81379b12d35a
-ms.openlocfilehash: 4e96dc11455015a83af9be545ba15c96b5e2f779
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b0704f3d666eca08bafb33f9236709478d347d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620520"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288767"
 ---
 # <a name="isource-class"></a>ISource クラス
 
@@ -51,7 +51,8 @@ class ISource;
 
 |名前|説明|
 |----------|-----------------|
-|[~ ISource デストラクター](#dtor)|`ISource` オブジェクトを破棄します。|
+|[~ ISource デストラクター](#dtor)|
+  `ISource` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -150,9 +151,10 @@ virtual message<T>* consume(
 
 `consume`メソッドは`accept`への呼び出しでは前に必ず必要がありますが、`reserve`返さ**true**します。
 
-##  <a name="dtor"></a> ~ ISource
+##  <a name="dtor"></a> ~ISource
 
-`ISource` オブジェクトを破棄します。
+
+  `ISource` オブジェクトを破棄します。
 
 ```
 virtual ~ISource();

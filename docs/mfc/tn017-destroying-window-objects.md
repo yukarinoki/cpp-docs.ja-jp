@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 17: ウィンドウ オブジェクトの破棄'
+title: TN017:ウィンドウ オブジェクトの破棄
 ms.date: 11/04/2016
 f1_keywords:
 - vc.objects
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - TN017
 - PostNcDestroy method [MFC]
 ms.assetid: 5bf208a5-5683-439b-92a1-547c5ded26cd
-ms.openlocfilehash: 06553677e67a4314116077e7942381bd847c64d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e52112bed0f583a3f5652f9213bd5049d543a80
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502233"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294111"
 ---
-# <a name="tn017-destroying-window-objects"></a>テクニカル ノート 17: ウィンドウ オブジェクトの破棄
+# <a name="tn017-destroying-window-objects"></a>TN017:ウィンドウ オブジェクトの破棄
 
 この注の説明の使用、 [:postncdestroy](../mfc/reference/cwnd-class.md#postncdestroy)メソッド。 カスタマイズされた割り当てを実行する場合は、このメソッドを使用して`CWnd`の派生オブジェクト。 このメモを使用する理由についても説明[に](../mfc/reference/cwnd-class.md#destroywindow)の代わりに、C++ Windows オブジェクトを破棄する、**削除**演算子。
 
@@ -97,4 +97,3 @@ Warning: calling DestroyWindow in CWnd::~CWnd
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

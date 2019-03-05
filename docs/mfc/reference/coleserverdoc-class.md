@@ -82,12 +82,12 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnSetItemRects
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
-ms.openlocfilehash: b9d339b11b3e1fa8452c845cfa8a8f41c5194f8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3069c5f53b37984cbeae8bee1379bb8b0c36ccc3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604946"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285283"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc クラス
 
@@ -133,7 +133,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 |[COleServerDoc::OnResizeBorder](#onresizeborder)|コンテナー アプリケーションのフレーム ウィンドウまたはドキュメント ウィンドウのサイズ変更時に、フレームワークによって呼び出されます。|
 |[COleServerDoc::OnShowControlBars](#onshowcontrolbars)|またはインプレース編集用のコントロール バーを非表示にフレームワークによって呼び出されます。|
 |[COleServerDoc::OnUpdateDocument](#onupdatedocument)|埋め込み項目がサーバー ドキュメントを保存すると、アイテムのコンテナーのコピーを更新するときに、フレームワークによって呼び出されます。|
-|[から](#requestpositionchange)|埋め込み先編集フレームの位置を変更します。|
+|[COleServerDoc::RequestPositionChange](#requestpositionchange)|埋め込み先編集フレームの位置を変更します。|
 |[COleServerDoc::SaveEmbedding](#saveembedding)|ドキュメントを保存するコンテナーのアプリケーションに指示します。|
 |[COleServerDoc::ScrollContainerBy](#scrollcontainerby)|コンテナーのドキュメントをスクロールします。|
 |[COleServerDoc::UpdateAllItems](#updateallitems)|ユーザーのドキュメントが変更されたことをコンテナーに通知します。|
@@ -149,7 +149,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 |[COleServerDoc::OnExecOleCmd](#onexecolecmd)|指定したコマンドを実行またはコマンドのヘルプを表示します。|
 |[COleServerDoc::OnFrameWindowActivate](#onframewindowactivate)|コンテナーのフレーム ウィンドウがアクティブ化または非アクティブ化されたときに、フレームワークによって呼び出されます。|
 |[COleServerDoc::OnGetEmbeddedItem](#ongetembeddeditem)|取得するという、`COleServerItem`ドキュメント全体を表します。 埋め込みアイテムを取得するために使用します。 必要な実装です。|
-|[されて](#onreactivateandundo)|一括編集中に行われた変更を元に戻すために、フレームワークによって呼び出されます。|
+|[COleServerDoc::OnReactivateAndUndo](#onreactivateandundo)|一括編集中に行われた変更を元に戻すために、フレームワークによって呼び出されます。|
 |[COleServerDoc::OnSetHostNames](#onsethostnames)|コンテナーは、埋め込みオブジェクトのウィンドウのタイトルを設定すると、フレームワークによって呼び出されます。|
 |[COleServerDoc::OnSetItemRects](#onsetitemrects)|コンテナー アプリケーションのウィンドウ内で埋め込み先編集フレーム ウィンドウを配置するためにフレームワークによって呼び出されます。|
 |[COleServerDoc::OnShowDocument](#onshowdocument)|または、ドキュメントを非表示にフレームワークによって呼び出されます。|
@@ -168,7 +168,7 @@ class AFX_NOVTABLE COleServerDoc : public COleLinkingDoc
 
 必要な`COleServerDoc`-サーバーの各種類のドキュメント、アプリケーションがサポートするクラスを派生します。 などの場合は、サーバー アプリケーションでは、ワークシートとグラフをサポートする必要があります 2 `COleServerDoc`-クラスを派生します。
 
-サーバーの詳細については、記事を参照してください。[サーバー: サーバーを実装する](../../mfc/servers-implementing-a-server.md)します。
+サーバーの詳細については、記事を参照してください。[サーバー。サーバーを実装する](../../mfc/servers-implementing-a-server.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -335,7 +335,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 
 DocObject サーバーがアクティブになって、クライアントが DocObjects をサポートできる NULL 以外のポインターの戻り値が表示されます。 既定の実装では、NULL を返します。
 
-DocObjects をサポートするドキュメントの一般的な実装は、新しい単純に割り当てる`CDocObjectServer`オブジェクトし、呼び出し元に戻すこと。 例えば:
+DocObjects をサポートするドキュメントの一般的な実装は、新しい単純に割り当てる`CDocObjectServer`オブジェクトし、呼び出し元に戻すこと。 例:
 
 [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]
 
@@ -393,7 +393,7 @@ void GetItemPosition(LPRECT lpPosRect) const;
 
 アイテムの位置は、項目を表示する (か非表示) する程度を調べますの現在のクリッピング四角形と比較する画面。
 
-##  <a name="getzoomfactor"></a>  先
+##  <a name="getzoomfactor"></a>  COleServerDoc::GetZoomFactor
 
 `GetZoomFactor`メンバー関数は、インプレース編集をアクティブ化された項目の「倍率」を決定します。
 
@@ -635,7 +635,7 @@ OLECMDEXECOPT_SHOWHELP
 *pvarargIn*<br/>
 コマンドの入力引数を含む VARIANTARG へのポインター。 NULL にすることができます。
 
-*元*<br/>
+*pvarargOut*<br/>
 出力を受信するパラメータ リストへのポインターは、コマンドからの値を返します。 NULL にすることができます。
 
 ### <a name="return-value"></a>戻り値
@@ -700,7 +700,7 @@ virtual COleServerItem* OnGetEmbeddedItem() = 0;
 
 既定の実装はありません。 ドキュメント全体を表す項目を返すには、この関数をオーバーライドする必要があります。 この戻り値のオブジェクトである必要があります、 `COleServerItem`-クラスを派生します。
 
-##  <a name="onreactivateandundo"></a>  されて
+##  <a name="onreactivateandundo"></a>  COleServerDoc::OnReactivateAndUndo
 
 フレームワークは、インプレース アクティブ化、変更、およびその後に非アクティブ化された項目に加えられた変更を元に戻す、ユーザーが選択したときに、この関数を呼び出します。
 
@@ -851,7 +851,7 @@ virtual BOOL OnUpdateDocument();
 
 既定の実装、 [COleServerDoc::NotifySaved](#notifysaved)と[COleServerDoc::SaveEmbedding](#saveembedding)メンバー関数し、クリーンとしてマークします。 特別な埋め込みアイテムを更新するときの処理を実行する場合は、この関数をオーバーライドします。
 
-##  <a name="requestpositionchange"></a>  から
+##  <a name="requestpositionchange"></a>  COleServerDoc::RequestPositionChange
 
 コンテナー アプリケーションを項目の位置を変更するには、このメンバー関数を呼び出します。
 

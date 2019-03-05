@@ -4,16 +4,17 @@ ms.date: 11/04/2016
 f1_keywords:
 - amp_math/Concurrency::fast_math
 ms.assetid: 54fed939-9902-49db-9f29-e98fd9821508
-ms.openlocfilehash: 5ca81d056ddf431b502f868f8a76959381b26260
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e774c2d8e4431960e796ee1e6cc87b924d04174b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455979"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287961"
 ---
 # <a name="concurrencyfastmath-namespace"></a>Concurrency::fast_math 名前空間
 
-`fast_math` 名前空間の関数は精度が低く、単精度 (`float`) のみをサポートし、DirectX の組み込み関数を呼び出します。 各関数には、2 種類のバージョン (たとえば、`cos` と `cosf`) があります。 どちらのバージョンも `float` を受け取り、返しますが、それぞれの DirectX の同じ組み込み関数を呼び出します。
+
+  `fast_math` 名前空間の関数は精度が低く、単精度 (`float`) のみをサポートし、DirectX の組み込み関数を呼び出します。 各関数には、2 種類のバージョン (たとえば、`cos` と `cosf`) があります。 どちらのバージョンも `float` を受け取り、返しますが、それぞれの DirectX の同じ組み込み関数を呼び出します。
 
 ## <a name="syntax"></a>構文
 
@@ -97,7 +98,7 @@ namespace fast_math;
 
 **ヘッダー:** amp_math.h
 
-**Namespace:** concurrency::fast_math
+**名前空間:** Concurrency::fast_math
 
 ## <a name="see-also"></a>関連項目
 

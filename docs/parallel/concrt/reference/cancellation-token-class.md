@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token class
 ms.assetid: 2787df2b-e9d3-440e-bfd0-841a46a9835f
-ms.openlocfilehash: 60028ce439dc344696bb3814efb74e0daa21f6ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 23821c91cd4158f6ec3989cdf537a5d8067e8225
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522201"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282293"
 ---
 # <a name="cancellationtoken-class"></a>cancellation_token クラス
 
@@ -67,7 +67,7 @@ class cancellation_token;
 
 **名前空間:** concurrency
 
-##  <a name="dtor"></a> ~ cancellation_token
+##  <a name="dtor"></a> ~cancellation_token
 
 ```
 ~cancellation_token();
@@ -178,7 +178,7 @@ bool operator== (const cancellation_token& _Src) const;
 
 ##  <a name="register_callback"></a> register_callback
 
-コールバック関数をトークンに登録します。 トークンが取り消された場合、コールバックが行われます。 このメソッドが呼び出された時点で既にトークンが取り消されている場合、コールバックは即座に同期的に行われることに注意してください。
+コールバック関数をトークンに登録します。 トークンが取り消された場合、コールバックが行われます。 このメソッドが呼び出された時点で既にコールバックが取り消されている場合、コールバックは即座に同期的に行われることに注意してください。
 
 ```
 template<typename _Function>
@@ -195,7 +195,8 @@ template<typename _Function>
 
 ### <a name="return-value"></a>戻り値
 
-`cancellation_token_registration` メソッドで利用できる `deregister` オブジェクト。その利用目的は、以前に登録されたコールバックの登録を解除し、コールバックが行われないようにすることです。 メソッドがスローされます、 [invalid_operation](invalid-operation-class.md)で呼び出される場合は例外を`cancellation_token`を使用して作成されたオブジェクト、 [cancellation_token::none](#none)メソッド。
+
+  `cancellation_token_registration` メソッドで利用できる `deregister` オブジェクト。その利用目的は、以前に登録されたコールバックの登録を解除し、コールバックが行われないようにすることです。 メソッドがスローされます、 [invalid_operation](invalid-operation-class.md)で呼び出される場合は例外を`cancellation_token`を使用して作成されたオブジェクト、 [cancellation_token::none](#none)メソッド。
 
 ## <a name="see-also"></a>関連項目
 

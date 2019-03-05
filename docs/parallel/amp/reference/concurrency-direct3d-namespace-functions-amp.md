@@ -21,12 +21,12 @@ f1_keywords:
 - amp/Concurrency::direct3d::step
 - amp/Concurrency::direct3d::umin
 ms.assetid: 28943b62-52c9-42dc-baf1-ca7b095c1a19
-ms.openlocfilehash: b721d19cd51a9eb1d07de8898b18728854decb4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a2977faf094aafb6290063e39e062ffaeaaec81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519734"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281332"
 ---
 # <a name="concurrencydirect3d-namespace-functions-amp"></a>Concurrency::direct3d 名前空間関数 (AMP)
 
@@ -44,7 +44,7 @@ ms.locfileid: "50519734"
 
 ## <a name="requirements"></a>必要条件
 
-**ヘッダー:** amp.h **Namespace:** 同時実行
+**ヘッダー:** amp.h **Namespace:** コンカレンシー
 
 ##  <a name="abs"></a>  abs
 
@@ -92,7 +92,8 @@ inline int clamp(
 
 ### <a name="return-value"></a>戻り値
 
-`_X` の固定された値。
+
+  `_X` の固定された値。
 
 ##  <a name="countbits"></a>  countbits
 
@@ -150,13 +151,15 @@ Direct3D デバイス インターフェイスへのポインター。
 
 この関数は、Direct3D デバイス インターフェイスへの既存のポインターから新しい `accelerator_view` オブジェクトを作成します。 関数呼び出しが成功した場合、パラメーターの参照カウントはインターフェイスに対する `AddRef` 呼び出しを使用してインクリメントされます。 DirectX コードで不要になった場合は、オブジェクトを安全に解放できます。 メソッドの呼び出しに失敗した場合、 [runtime_exception](runtime-exception-class.md)がスローされます。
 
-この関数を使用して作成する `accelerator_view` オブジェクトはスレッド セーフです。 `accelerator_view` オブジェクトの同時使用を同期する必要があります。 `accelerator_view` オブジェクトと生の ID3D11Device インターフェイスを非同期で同時に使用すると、未定義の動作が発生します。
+この関数を使用して作成する `accelerator_view` オブジェクトはスレッド セーフです。 
+  `accelerator_view` オブジェクトの同時使用を同期する必要があります。 
+  `accelerator_view` オブジェクトと生の ID3D11Device インターフェイスを非同期で同時に使用すると、未定義の動作が発生します。
 
 C++ AMP ランタイムは、`D3D11_CREATE_DEVICE_DEBUG` フラグを使用すると D3D デバッグ レイヤーを使用してデバッグ モードで詳細なエラー情報を提供します。
 
 ##  <a name="d3d_access_lock"></a>  d3d_access_lock
 
-accelerator_view と共有されるリソースに対して安全に D3D 演算を実行する目的で、accelerator_view のロックを取得します。 accelerator_view および内部でこの accelerator_view に関連付けられているすべての C++ AMP リソースは、演算を実行するときにこのロックを取得し、別のスレッドが D3D アクセス ロックを保持している間はブロックします。 このロックは非再帰的です。既にロックを保持しているスレッドからこの関数を呼び出したときの動作は定義されていません。 D3D のアクセスのロックを保持しているスレッドから、accelerator_view または accelerator_view に関連付けられているデータ コンテナーに対して演算を実行したときの動作は定義されていません。 スコープ ベースの D3D アクセス ロックの RAII スタイル クラスである、scoped_d3d_access_lock も参照してください。
+accelerator_view と共有されるリソースに対して安全に D3D 演算を実行する目的で、accelerator_view のロックを取得します。 accelerator_view および内部でこの accelerator_view に関連付けられているすべての C++ AMP リソースは、演算を実行するときにこのロックを取得し、別のスレッドが D3D アクセス ロックを保持している間はブロックします。 このロックは、再帰的には。既にロックを保持しているスレッドからこの関数を呼び出す未定義の動作になります。 D3D のアクセスのロックを保持しているスレッドから、accelerator_view または accelerator_view に関連付けられているデータ コンテナーに対して演算を実行したときの動作は定義されていません。 スコープ ベースの D3D アクセス ロックの RAII スタイル クラスである、scoped_d3d_access_lock も参照してください。
 
 ```
 void __cdecl d3d_access_lock(accelerator_view& _Av);

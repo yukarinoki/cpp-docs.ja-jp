@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 759f4cdb66c1e16f022731e9d3183ad1192e0975
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585134"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291640"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -68,7 +68,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[Cmfcdesktopalertwnd::create](#create)|作成して、デスクトップの通知ウィンドウを初期化します。|
+|[CMFCDesktopAlertWnd::Create](#create)|作成して、デスクトップの通知ウィンドウを初期化します。|
 |[CMFCDesktopAlertWnd::GetAnimationSpeed](#getanimationspeed)|アニメーションの速度を返します。|
 |[CMFCDesktopAlertWnd::GetAnimationType](#getanimationtype)|アニメーションの種類を返します。|
 |[CMFCDesktopAlertWnd::GetAutoCloseTime](#getautoclosetime)|自動終了時間帯を返します。|
@@ -100,7 +100,8 @@ class CMFCDesktopAlertWnd : public CWnd
 
 カスタム ダイアログ ボックスをポップアップ ウィンドウに表示するには、次の手順に従います。
 
-1. `CMFCDesktopAlertDialog` の派生クラスを作成します。
+1. 
+  `CMFCDesktopAlertDialog` の派生クラスを作成します。
 
 1. リソースに子ダイアログ ボックスのテンプレートを作成します。
 
@@ -138,7 +139,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 **ヘッダー:** afxDesktopAlertWnd.h
 
-##  <a name="create"></a>  Cmfcdesktopalertwnd::create
+##  <a name="create"></a>  CMFCDesktopAlertWnd::Create
 
 作成して、デスクトップの通知ウィンドウを初期化します。
 
@@ -352,9 +353,9 @@ virtual BOOL OnCommand(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*wParam*<br/>
+[in] *wParam*<br/>
 
-[in]*lParam*<br/>
+[in] *lParam*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -489,7 +490,7 @@ virtual CSize GetDialogSize();
 
 ### <a name="return-value"></a>戻り値
 
-### <a name="remarks"></a>コメント
+### <a name="remarks"></a>Remarks
 
 ## <a name="see-also"></a>関連項目
 

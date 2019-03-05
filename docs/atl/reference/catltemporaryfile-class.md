@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTemporaryFile class
 ms.assetid: 05f0f2a5-94f6-4594-8dae-b114292ff5f9
-ms.openlocfilehash: f440476db3618c24f0fd1cfbfe028c959517a607
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c1da5037deb0143c6d05009baccc8c1553616028
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642272"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288191"
 ---
 # <a name="catltemporaryfile-class"></a>CAtlTemporaryFile クラス
 
@@ -74,7 +74,7 @@ class CAtlTemporaryFile
 
 |名前|説明|
 |----------|-----------------|
-|[CAtlTemporaryFile::operator ハンドル](#operator_handle)|一時ファイルを識別するハンドルを返します。|
+|[CAtlTemporaryFile::operator HANDLE](#operator_handle)|一時ファイルを識別するハンドルを返します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -275,7 +275,7 @@ HRESULT LockRange(ULONGLONG nPos, ULONGLONG nCount) throw();
 
 ファイル内のバイトをロックすると、他のプロセスがそれらのバイトにアクセスできなくなります。 ファイルの 1 つ以上の領域をロックすることができますが、重なり合う領域は許可されません。 領域を正常にロックを解除するには使用[CAtlTemporaryFile::UnlockRange](#unlockrange)、以前にロックされた領域に正確に対応するバイト範囲のことを確認します。 `LockRange` 隣接する領域をマージできません。ロックされている 2 つの領域が隣接している場合とは別に解除各する必要があります。
 
-##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator ハンドル
+##  <a name="operator_handle"></a>  CAtlTemporaryFile::operator HANDLE
 
 一時ファイルを識別するハンドルを返します。
 
