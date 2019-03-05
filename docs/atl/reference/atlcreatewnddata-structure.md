@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _AtlCreateWndData structure
 - AtlCreateWndData structure
 ms.assetid: 76ed5382-bfbf-4b8b-8a29-912688dfd2ae
-ms.openlocfilehash: 860d5772279d0ca0581a8cac1e0ef224f829586d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6e3168b5c86de5bce3c3b9d3b0fbdea28ae604f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534187"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286929"
 ---
 # <a name="atlcreatewnddata-structure"></a>_AtlCreateWndData 構造体
 
@@ -48,4 +48,3 @@ ms.locfileid: "50534187"
 ## <a name="see-also"></a>関連項目
 
 [クラスと構造体](../../atl/reference/atl-classes.md)
-

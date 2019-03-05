@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCBaseVisualManager [MFC], CleanUpThemes
 - CMFCBaseVisualManager [MFC], UpdateSystemColors
 ms.assetid: d56f3afc-cdea-4de1-825a-a08999c571e0
-ms.openlocfilehash: a9d3be75331004529ca1bd71a0d9422f45cac40b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c26c0c9c9026f8312218b2ac15f83a50a67be79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440197"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292212"
 ---
 # <a name="cmfcbasevisualmanager-class"></a>CMFCBaseVisualManager クラス
 
@@ -56,7 +56,8 @@ class CMFCBaseVisualManager: public CObject
 |||
 |-|-|
 |名前|説明|
-|[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|`CMFCBaseVisualManager` オブジェクトを構築して初期化します。|
+|[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|
+  `CMFCBaseVisualManager` オブジェクトを構築して初期化します。|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -111,7 +112,8 @@ void CleanUpThemes();
 
 ##  <a name="cmfcbasevisualmanager"></a>  CMFCBaseVisualManager::CMFCBaseVisualManager
 
-`CMFCBaseVisualManager` オブジェクトを構築して初期化します。
+
+  `CMFCBaseVisualManager` オブジェクトを構築して初期化します。
 
 ```
 CMFCBaseVisualManager();
@@ -144,7 +146,7 @@ virtual BOOL DrawCheckBox(
 *bHighlighted*<br/>
 [in]チェック ボックスが強調表示されているかどうかを指定します。
 
-*状態*<br/>
+*nState*<br/>
 [in] 0 チェックの通常のチェックを行わない、1
 
 混合で通常の 2。
@@ -163,7 +165,7 @@ virtual BOOL DrawCheckBox(
 
 値*状態*次のチェック ボックスのスタイルに対応しています。
 
-|状態|チェック ボックスのスタイル|
+|nState|チェック ボックスのスタイル|
 |------------|---------------------|
 |0|CBS_UNCHECKEDNORMAL|
 |1|CBS_CHECKEDNORMAL|

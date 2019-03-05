@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CArchive class [MFC], about CArchive class [MFC]
 - buffering, serializable objects
 ms.assetid: 843f1825-288d-4d89-a1fa-70e1f92d9b8b
-ms.openlocfilehash: 08260d1a1b21658e879410ff5201e5f455535332
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4bae451168449ce3e120ba9d172a615864ac2157
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519341"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270398"
 ---
 # <a name="what-is-a-carchive-object"></a>CArchive オブジェクトとは
 
@@ -29,5 +29,4 @@ A`CArchive`オブジェクトまたはからにシリアル化可能なオブジ
 
 ## <a name="see-also"></a>関連項目
 
-[シリアル化: オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)
-
+[シリアル化:オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)

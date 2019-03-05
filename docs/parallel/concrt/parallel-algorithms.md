@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - parallel algorithms [Concurrency Runtime]
 ms.assetid: 045dca7b-4d73-4558-a44c-383b88a28473
-ms.openlocfilehash: b8a08919ce6792babb9b8b1b809e242465a200f9
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 75491130e8e5fc426116685332490efd2c5fe60b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176446"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262871"
 ---
 # <a name="parallel-algorithms"></a>並列アルゴリズム
 
@@ -31,7 +31,7 @@ ms.locfileid: "52176446"
 
     - [Parallel_reduce アルゴリズム](#parallel_reduce)
 
-    - [例: のマップし、縮小を並行実行します。](#map_reduce_example)
+    - [例:マップし、縮小を並行実行します。](#map_reduce_example)
 
 - [作業をパーティション分割](#partitions)
 
@@ -78,7 +78,7 @@ ms.locfileid: "52176446"
 
 `parallel_for`アルゴリズムは並列内の各項目に対して、値がコンソールに出力する順序によって異なります。
 
-使用する完全な例については、`parallel_for`アルゴリズムを参照してください[方法: parallel_for ループを記述](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)します。
+使用する完全な例については、`parallel_for`アルゴリズムを参照してください[方法。Parallel_for ループを記述](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)します。
 
 [[トップ](#top)]
 
@@ -104,7 +104,7 @@ ms.locfileid: "52176446"
 
 `parallel_for_each`アルゴリズムは並列内の各項目に対して、値がコンソールに出力する順序によって異なります。
 
-使用する完全な例については、`parallel_for_each`アルゴリズムを参照してください[方法: parallel_for_each ループを記述](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)します。
+使用する完全な例については、`parallel_for_each`アルゴリズムを参照してください[方法。Parallel_for_each ループを記述](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)します。
 
 [[トップ](#top)]
 
@@ -128,7 +128,7 @@ ms.locfileid: "52176446"
 108 11.2 HelloHello
 ```
 
-使用して、完全な例について、`parallel_invoke`アルゴリズムを参照してください[方法: parallel.invoke を使用して並列並べ替えルーチンを記述する](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)と[方法: parallel.invoke to Execute Parallel Operations を使用して](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)します。
+使用する完全な例については、`parallel_invoke`アルゴリズムを参照してください[方法。Parallel_invoke を使用して並列並べ替えルーチンを記述する](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)と[方法。Parallel.invoke to Execute Parallel Operations を使用して](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)します。
 
 [[トップ](#top)]
 
@@ -181,7 +181,7 @@ ms.locfileid: "52176446"
 
 多くの場合、考えることができます`parallel_reduce`使用するための短縮形として、`parallel_for_each`アルゴリズムと共に、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラス。
 
-###  <a name="map_reduce_example"></a> 例: のマップし、縮小を並行実行します。
+###  <a name="map_reduce_example"></a> 例:マップし、縮小を並行実行します。
 
 A*マップ*操作では、シーケンス内の各値に関数を適用します。 A*削減*操作がシーケンスに値を 1 つの要素を結合します。 C++ 標準ライブラリを使用する[std::transform](../../standard-library/algorithm-functions.md#transform)と[std::accumulate](../../standard-library/numeric-functions.md#accumulate)マップを実行し、操作を低減する関数。 ただし、多くの問題では、使用できます、`parallel_transform`マップ操作を並列的に実行するためのアルゴリズムと`parallel_reduce`アルゴリズムは並列に reduce 操作を実行します。
 
@@ -189,7 +189,7 @@ A*マップ*操作では、シーケンス内の各値に関数を適用しま�
 
 [!code-cpp[concrt-parallel-map-reduce-sum-of-primes#1](../../parallel/concrt/codesnippet/cpp/parallel-algorithms_7.cpp)]
 
-マップを実行し、並列操作を減らす別の例では、次を参照してください。[方法: 実行のマップと削減の操作を並列](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)します。
+マップを実行し、並列操作を減らす別の例では、次を参照してください。[方法。マップを実行し、縮小操作を並列](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)します。
 
 [[トップ](#top)]
 
@@ -311,12 +311,14 @@ PPL では、3 つの並べ替えアルゴリズム: [:parallel_sort](reference/
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[方法: parallel_for ループを記述する](../../parallel/concrt/how-to-write-a-parallel-for-loop.md)|使用する方法を示しています、`parallel_for`行列の乗算を実行するアルゴリズム。|
 |[方法: parallel_for_each ループを記述する](../../parallel/concrt/how-to-write-a-parallel-for-each-loop.md)|使用する方法を示しています、`parallel_for_each`内の素数の数を計算するアルゴリズム、 [std::array](../../standard-library/array-class-stl.md)並列オブジェクト。|
-|[方法: 並列呼び出しを使用して並列並べ替えルーチンを記述する](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|`parallel_invoke` アルゴリズムを使用して、バイトニック ソート アルゴリズムのパフォーマンスを向上させる方法について説明します。|
-|[方法: Parallel.Invoke を使用して並列操作を実行する](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|`parallel_invoke` アルゴリズムを使用して、共有データ ソースに対して複数の操作を実行するプログラムのパフォーマンスを向上させる方法について説明します。|
+|[方法: 並列呼び出しを使用して並列並べ替えルーチンを記述する](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md)|
+  `parallel_invoke` アルゴリズムを使用して、バイトニック ソート アルゴリズムのパフォーマンスを向上させる方法について説明します。|
+|[方法: Parallel.Invoke を使用して並列操作を実行する](../../parallel/concrt/how-to-use-parallel-invoke-to-execute-parallel-operations.md)|
+  `parallel_invoke` アルゴリズムを使用して、共有データ ソースに対して複数の操作を実行するプログラムのパフォーマンスを向上させる方法について説明します。|
 |[方法: マップ操作と縮小操作を並列実行する](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)|使用する方法を示しています、`parallel_transform`と`parallel_reduce`マップを実行し、ファイル内の単語の出現回数をカウントする操作を低減するアルゴリズム。|
 |[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|スケーラビリティと同時実行アプリケーションを開発するためやすさを促進する命令型プログラミング モデルを提供する PPL について説明します。|
 |[PPL における取り消し処理](cancellation-in-the-ppl.md)|PPL、並列処理を取り消す方法、およびタスク グループが取り消された場合を判断する方法での取り消し処理の役割について説明します。|
@@ -343,4 +345,3 @@ PPL では、3 つの並べ替えアルゴリズム: [:parallel_sort](reference/
 [parallel_buffered_sort 関数](reference/concurrency-namespace-functions.md#parallel_buffered_sort)
 
 [parallel_radixsort 関数](reference/concurrency-namespace-functions.md#parallel_radixsort)
-

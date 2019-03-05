@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
-ms.openlocfilehash: a75d413874056d57f0d474f44e514cf93f273626
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492295"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304783"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue クラス
 
@@ -150,12 +150,13 @@ concurrent_priority_queue(
 このオブジェクトに対して使用するアロケーター クラス。
 
 *_Init_capacity*<br/>
-`concurrent_priority_queue` オブジェクトの初期容量。
+
+  `concurrent_priority_queue` オブジェクトの初期容量。
 
 *開始 (_b)*<br/>
 コピーする要素範囲内の最初の要素の位置。
 
-*(_E)*<br/>
+*_End*<br/>
 コピーする要素範囲を超える最初の要素の位置。
 
 *_Src*<br/>
@@ -259,7 +260,7 @@ void swap(concurrent_priority_queue& _Queue);
 
 ### <a name="parameters"></a>パラメーター
 
-*_Fronty*<br/>
+*_Queue*<br/>
 `concurrent_priority_queue`コンテンツを交換するオブジェクト。
 
 ##  <a name="try_pop"></a> try_pop
@@ -283,4 +284,3 @@ bool try_pop(reference _Elem);
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [並列コンテナーと並列オブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)
-

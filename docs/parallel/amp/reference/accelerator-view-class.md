@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - accelerator_view class
 ms.assetid: 9f298c21-bf62-46e0-88b8-01c5c78ef144
-ms.openlocfilehash: e17284ef8652e5d08b2305dc07d27f080ec64239
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6f95efb17b95dc55cb6f6977439760fa7ea1afe9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568049"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264848"
 ---
 # <a name="acceleratorview-class"></a>accelerator_view クラス
 
@@ -45,19 +45,25 @@ class accelerator_view;
 |名前|説明|
 |----------|-----------------|
 |[accelerator_view コンス トラクター](#ctor)|`accelerator_view` クラスの新しいインスタンスを初期化します。|
-|[~ accelerator_view デストラクター](#dtor)|`accelerator_view` オブジェクトを破棄します。|
+|[~ accelerator_view デストラクター](#dtor)|
+  `accelerator_view` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
 |[create_marker](#create_marker)|これまでにこの `accelerator_view` オブジェクトに送信されたすべてのコマンドの完了を追跡するために予定を返します。|
-|[flush](#flush)|`accelerator_view` オブジェクトのキューに格納されたすべての保留中のコマンドを実行のためにアクセラレータに送信します。|
-|[get_accelerator](#get_accelerator)|`accelerator` オブジェクトの `accelerator_view` オブジェクトを返します。|
+|[flush](#flush)|
+  `accelerator_view` オブジェクトのキューに格納されたすべての保留中のコマンドを実行のためにアクセラレータに送信します。|
+|[get_accelerator](#get_accelerator)|
+  `accelerator` オブジェクトの `accelerator_view` オブジェクトを返します。|
 |[get_is_auto_selection](#get_is_auto_selection)|ランタイムの適切なアクセラレータが自動的に選択するかどうかを示すブール値を返すときに、`accelerator_view`にオブジェクトが渡される、 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)。|
-|[get_is_debug](#get_is_debug)|`accelerator_view` オブジェクトに広範なエラー レポートに有効なデバッグ レイヤーがあるかどうかを示すブール値を返します。|
-|[get_queuing_mode](#get_queuing_mode)|`accelerator_view` オブジェクトのキュー モードを返します。|
-|[get_version](#get_version)|`accelerator_view` のバージョンを返します。|
+|[get_is_debug](#get_is_debug)|
+  `accelerator_view` オブジェクトに広範なエラー レポートに有効なデバッグ レイヤーがあるかどうかを示すブール値を返します。|
+|[get_queuing_mode](#get_queuing_mode)|
+  `accelerator_view` オブジェクトのキュー モードを返します。|
+|[get_version](#get_version)|
+  `accelerator_view` のバージョンを返します。|
 |[wait](#wait)|終了する `accelerator_view` オブジェクトに送信されるすべてのコマンドを待機します。|
 
 ### <a name="public-operators"></a>パブリック演算子
@@ -72,10 +78,13 @@ class accelerator_view;
 
 |名前|説明|
 |----------|-----------------|
-|[accelerator](#accelerator)|`accelerator` オブジェクトの `accelerator_view` オブジェクトを取得します。|
+|[accelerator](#accelerator)|
+  `accelerator` オブジェクトの `accelerator_view` オブジェクトを取得します。|
 |[is_auto_selection](#is_auto_selection)|ランタイムの適切なアクセラレータが自動的に選択するかどうかを示すブール値を取得ときに、`accelerator_view`にオブジェクトが渡される、 [parallel_for_each](concurrency-namespace-functions-amp.md#parallel_for_each)します。|
-|[is_debug](#is_debug)|`accelerator_view` オブジェクトに広範なエラー レポートに有効なデバッグ レイヤーがあるかどうかを示すブール値を取得します。|
-|[queuing_mode](#queuing_mode)|`accelerator_view` オブジェクトのキュー モードを取得します。|
+|[is_debug](#is_debug)|
+  `accelerator_view` オブジェクトに広範なエラー レポートに有効なデバッグ レイヤーがあるかどうかを示すブール値を取得します。|
+|[queuing_mode](#queuing_mode)|
+  `accelerator_view` オブジェクトのキュー モードを取得します。|
 |[version](#version)|accelerator のバージョンを取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -84,7 +93,8 @@ class accelerator_view;
 
 ### <a name="remarks"></a>Remarks
 
-`accelerator_view` オブジェクトは、アクセラレータの論理的で分離されたビューを表します。 単一の物理計算デバイスは、多くの論理的で分離された `accelerator_view` オブジェクトを使用できます。 各アクセラレータには既定の `accelerator_view` オブジェクトがあります。 追加の `accelerator_view` オブジェクトを作成できます。
+
+  `accelerator_view` オブジェクトは、アクセラレータの論理的で分離されたビューを表します。 単一の物理計算デバイスは、多くの論理的で分離された `accelerator_view` オブジェクトを使用できます。 各アクセラレータには既定の `accelerator_view` オブジェクトがあります。 追加の `accelerator_view` オブジェクトを作成できます。
 
 物理デバイスは、多くのクライアント スレッド間で共有できます。 クライアント スレッドがアクセラレータの同じ `accelerator_view` オブジェクトを協調的に使用することができるか、または、各クライアントが他のクライアント スレッドから分離するために独立した `accelerator_view` オブジェクトを使用して計算デバイスと通信できます。
 
@@ -94,7 +104,7 @@ class accelerator_view;
 
 **ヘッダー:** amprt.h
 
-**名前空間:** Concurrency
+**名前空間:** コンカレンシー
 
 ## <a name="accelerator"></a> アクセラレータ
 
@@ -333,7 +343,7 @@ void wait();
 
 場合、 [queuing_mode](concurrency-namespace-enums-amp.md#queuing_mode)は`immediate`、このメソッドをブロックすることがなくすぐに返します。
 
-##  <a name="dtor"></a> ~ accelerator_view
+##  <a name="dtor"></a> ~accelerator_view
 
 Accelerator_view オブジェクトを破棄します。
 

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CRecentDockSiteInfo [MFC], SetInfo
 - CRecentDockSiteInfo [MFC], StoreDockInfo
 ms.assetid: 2dd14f95-d5a2-4461-a7a5-2c6c36a3a165
-ms.openlocfilehash: aee66ea9893325921c62bfaef9cd501ef40e817a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a522d4dc88e7d1937ffa5b859aec32615939f21
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50615281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275247"
 ---
 # <a name="crecentdocksiteinfo-class"></a>CRecentDockSiteInfo クラス
 
@@ -53,7 +53,7 @@ class CRecentDockSiteInfo : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|`CRecentDockSiteInfo::CRecentDockSiteInfo`|既定のコンストラクター|
+|`CRecentDockSiteInfo::CRecentDockSiteInfo`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -75,9 +75,11 @@ class CRecentDockSiteInfo : public CObject
 
 ## <a name="remarks"></a>Remarks
 
-`CRecentDockSiteInfo` クラスは、データ管理クラスです。 ドッキング状態とフローティング状態の間で切り替わる `CPane` の最後の状態を追跡します。 ユーザーがフローティング状態のドッキング可能ペインをダブルクリックすると、ペインはドッキング状態になります。 ドッキング状態のペインをダブルクリックすると、ペインは前の位置、サイズ、および状態に戻ります。 同様に、ペインを再びドッキング状態にすると、前のドッキング位置が復元されます。 このデータ クラスは、この機能を実現します。 このクラスのメンバーはドッキング状態のペインの状態情報を格納するため、アプリケーションで直接変更しないでください。
 
-`CRecentDockSiteInfo` オブジェクトは、ペインが作成されるたびに作成されます。 各`CPane`オブジェクトには、メンバー変数[:m_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)、この情報を格納します。
+  `CRecentDockSiteInfo` クラスは、データ管理クラスです。 ドッキング状態とフローティング状態の間で切り替わる `CPane` の最後の状態を追跡します。 ユーザーがフローティング状態のドッキング可能ペインをダブルクリックすると、ペインはドッキング状態になります。 ドッキング状態のペインをダブルクリックすると、ペインは前の位置、サイズ、および状態に戻ります。 同様に、ペインを再びドッキング状態にすると、前のドッキング位置が復元されます。 このデータ クラスは、この機能を実現します。 このクラスのメンバーはドッキング状態のペインの状態情報を格納するため、アプリケーションで直接変更しないでください。
+
+
+  `CRecentDockSiteInfo` オブジェクトは、ペインが作成されるたびに作成されます。 各`CPane`オブジェクトには、メンバー変数[:m_recentdockinfo](../../mfc/reference/cpane-class.md#m_recentdockinfo)、この情報を格納します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -236,7 +238,7 @@ void SaveListOfRecentPanes(CList<HWND,
 ### <a name="parameters"></a>パラメーター
 
 [in]*CList < HWND*<br/>
-[in]*lstOrg*<br/>
+[in] *lstOrg*<br/>
 [in]*bForSlider*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -266,8 +268,8 @@ virtual void StoreDockInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pRecentContainer*<br/>
-[in]*pTabbedBar*<br/>
+[in] *pRecentContainer*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 

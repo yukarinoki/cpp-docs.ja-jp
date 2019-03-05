@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DAO (Data Access Objects), Fields collection
 - CDaoFieldInfo structure [MFC]
 ms.assetid: 91b13e3f-bdb8-440c-86fc-ba4181ea0182
-ms.openlocfilehash: 80a541028a6ba7daf60a8d1afbd6cf7ba3557202
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a5c4013a323c85ad19a3fade20f76852e053362a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629425"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275143"
 ---
 # <a name="cdaofieldinfo-structure"></a>CDaoFieldInfo 構造体
 
@@ -117,7 +117,7 @@ DAO field オブジェクトに Null 以外の値が必要かどうかを示し�
 *m_bAllowZeroLength*<br/>
 示すかどうか、空の文字列 ("") データ型がテキストまたはメモの DAO フィールド オブジェクトの有効な値です。 このプロパティが TRUE の場合、空の文字列は、有効な値です。 このプロパティは、フィールドの値を設定する空の文字列を使用できないことを確認する場合は FALSE に設定できます。 詳細については、「AllowZeroLength プロパティ」DAO ヘルプのトピックを参照してください。 テーブル定義でのこのプロパティを設定することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)します。
 
-*返さ*<br/>
+*m_lCollatingOrder*<br/>
 文字列比較または並べ替え用のテキストの並べ替え順序を指定します。 詳細については、"をカスタマイズする Windows レジストリの設定に Data Access"DAO ヘルプのトピックを参照してください。 返される値の一覧を参照してください、`m_lCollatingOrder`のメンバー、 [CDaoDatabaseInfo](../../mfc/reference/cdaodatabaseinfo-structure.md)構造体。 テーブル定義でのこのプロパティを設定することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)します。
 
 *m_strForeignName*<br/>
@@ -144,7 +144,7 @@ DAO フィールド オブジェクトの既定値。 新しいレコードが�
 
 プライマリ、セカンダリ、および上記のすべてへの参照情報がによって返される方法を示すため、`GetFieldInfo`クラスのメンバー関数[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)、 [CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)、および[CDaoRecordset](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)します。
 
-オブジェクトのフィールドは、MFC クラスでは表されません。 次のクラスの MFC オブジェクトを基になる DAO オブジェクトがフィールド オブジェクトのコレクションを格納する代わりに、: [CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)、および[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)します。 これらのクラスのフィールドについては、各アイテムにアクセスするメンバー関数を指定するか、それらを一度にすべてにアクセスできます、`CDaoFieldInfo`オブジェクトを呼び出すことによって、`GetFieldInfo`親オブジェクトのメンバー関数。
+オブジェクトのフィールドは、MFC クラスでは表されません。 代わりに、次のクラスの MFC オブジェクトを基になる DAO オブジェクトには、フィールド オブジェクトのコレクションが含まれます。[CDaoTableDef](../../mfc/reference/cdaotabledef-class.md)、 [CDaoRecordset](../../mfc/reference/cdaorecordset-class.md)、および[CDaoQueryDef](../../mfc/reference/cdaoquerydef-class.md)します。 これらのクラスのフィールドについては、各アイテムにアクセスするメンバー関数を指定するか、それらを一度にすべてにアクセスできます、`CDaoFieldInfo`オブジェクトを呼び出すことによって、`GetFieldInfo`親オブジェクトのメンバー関数。
 
 オブジェクトのプロパティを確認するための用途以外使用することも`CDaoFieldInfo`テーブル定義に新しいフィールドを作成するための入力パラメーターを作成します。 単純なオプションはこのタスクで使用できますが、さらに細かく制御する場合は、バージョンを使用することができます[CDaoTableDef::CreateField](../../mfc/reference/cdaotabledef-class.md#createfield)を受け取る、`CDaoFieldInfo`パラメーター。
 
@@ -160,4 +160,3 @@ DAO フィールド オブジェクトの既定値。 新しいレコードが�
 [CDaoTableDef::GetFieldInfo](../../mfc/reference/cdaotabledef-class.md#getfieldinfo)<br/>
 [CDaoRecordset::GetFieldInfo](../../mfc/reference/cdaorecordset-class.md#getfieldinfo)<br/>
 [CDaoQueryDef::GetFieldInfo](../../mfc/reference/cdaoquerydef-class.md#getfieldinfo)
-

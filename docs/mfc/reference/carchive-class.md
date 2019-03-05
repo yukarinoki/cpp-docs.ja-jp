@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CArchive [MFC], WriteString
 - CArchive [MFC], m_pDocument
 ms.assetid: 9e950d23-b874-456e-ae4b-fe00781a7699
-ms.openlocfilehash: f1e5701e95ec080845f3d2422da5d6ce4b9c906b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f169964c6a313f37b5ea50a5105af29af7b59b1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465612"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266329"
 ---
 # <a name="carchive-class"></a>CArchive クラス
 
@@ -87,11 +87,11 @@ class CArchive
 |[CArchive::GetFile](#getfile)|取得、`CFile`このアーカイブのオブジェクト ポインター。|
 |[CArchive::GetObjectSchema](#getobjectschema)|呼び出される、`Serialize`逆シリアル化するオブジェクトのバージョンを判断する関数。|
 |[CArchive::IsBufferEmpty](#isbufferempty)|Windows ソケットの中にバッファーを空になっていないかどうかを決定します。 プロセスを受信します。|
-|[場合](#isloading)|アーカイブが読み込み中かどうかを判断します。|
-|[用](#isstoring)|アーカイブを格納するかどうかを判断します。|
+|[CArchive::IsLoading](#isloading)|アーカイブが読み込み中かどうかを判断します。|
+|[CArchive::IsStoring](#isstoring)|アーカイブを格納するかどうかを判断します。|
 |[CArchive::MapObject](#mapobject)|ファイルにシリアル化されませんが、参照のサブオブジェクトとして入手可能なマップ内のオブジェクトを配置します。|
-|[読み書きするとき](#read)|生のバイトを読み取ります。|
-|[場合](#readclass)|クラスの参照が以前に格納されている読み取り`WriteClass`します。|
+|[CArchive::Read](#read)|生のバイトを読み取ります。|
+|[CArchive::ReadClass](#readclass)|クラスの参照が以前に格納されている読み取り`WriteClass`します。|
 |[CArchive::ReadObject](#readobject)|オブジェクトの呼び出し`Serialize`読み込み関数。|
 |[CArchive::ReadString](#readstring)|1 行のテキストを読み取ります。|
 |[CArchive::SerializeClass](#serializeclass)|読み取りまたは書き込みへの参照をクラス、`CArchive`オブジェクトの方向に応じて、`CArchive`します。|
@@ -132,7 +132,7 @@ class CArchive
 
 `CArchive` Windows ソケットの MFC クラスを使用したプログラミングにもサポート[CSocket](../../mfc/reference/csocket-class.md)と[CSocketFile](../../mfc/reference/csocketfile-class.md)します。 [時](#isbufferempty)メンバー関数は、その使用状況をサポートしています。
 
-詳細については`CArchive`、記事を参照して[シリアル化](../../mfc/serialization-in-mfc.md)と[Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
+詳細については`CArchive`、記事を参照して[シリアル化](../../mfc/serialization-in-mfc.md)と[Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -298,9 +298,9 @@ MFC Windows Sockets クラスを使用したプログラミングをサポート
 
 使用する理由`IsBufferEmpty`に関連付けられているアーカイブを使用して、`CSocketFile`オブジェクトは、アーカイブのバッファーにが 1 つ以上のメッセージまたはレコードに含まれます。 1 つのメッセージを受信するには、後に使用する必要があります`IsBufferEmpty`バッファーが空になるまでデータの受信を継続するループを制御します。 詳細については、次を参照してください。、[受信](../../mfc/reference/casyncsocket-class.md#receive)クラスのメンバー関数`CAsyncSocket`、使用する方法を示す`IsBufferEmpty`します。
 
-詳細については、次を参照してください。 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
+詳細については、次を参照してください。 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
 
-##  <a name="isloading"></a>  場合
+##  <a name="isloading"></a>  CArchive::IsLoading
 
 アーカイブはデータを読み込むかどうかを判断します。
 
@@ -320,7 +320,7 @@ BOOL IsLoading() const;
 
 [!code-cpp[NVC_MFCSerialization#16](../../mfc/codesnippet/cpp/carchive-class_5.cpp)]
 
-##  <a name="isstoring"></a>  用
+##  <a name="isstoring"></a>  CArchive::IsStoring
 
 アーカイブがデータを格納するかどうかを判断します。
 
@@ -539,7 +539,7 @@ IMPLEMENT_SERIAL マクロをクラスの実装で使用したかどうかは、
 
 [!code-cpp[NVC_MFCSerialization#34](../../mfc/codesnippet/cpp/carchive-class_15.cpp)]
 
-##  <a name="read"></a>  読み書きするとき
+##  <a name="read"></a>  CArchive::Read
 
 アーカイブから指定したバイト数を読み取ります。
 
@@ -569,7 +569,7 @@ UINT Read(void* lpBuf, UINT nMax);
 
 [!code-cpp[NVC_MFCSerialization#24](../../mfc/codesnippet/cpp/carchive-class_16.cpp)]
 
-##  <a name="readclass"></a>  場合
+##  <a name="readclass"></a>  CArchive::ReadClass
 
 以前に格納されているクラスへの参照を読み取るには、このメンバー関数を呼び出す[WriteClass](#writeclass)します。
 

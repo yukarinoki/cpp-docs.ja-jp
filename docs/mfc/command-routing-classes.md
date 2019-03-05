@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC, command routing
 - command routing [MFC], classes
 ms.assetid: 4b50e689-2c54-4e6c-90f0-37333e22b2a1
-ms.openlocfilehash: 637f2056b76b7d55933b43a8e0822ec00212301a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 264e931ba0468cdc44f27c55e5d259948c5392b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50574760"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281970"
 ---
 # <a name="command-routing-classes"></a>コマンド ルーティング クラス
 
@@ -29,4 +29,3 @@ ms.locfileid: "50574760"
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

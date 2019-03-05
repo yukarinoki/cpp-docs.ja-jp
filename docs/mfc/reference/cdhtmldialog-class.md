@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 08db42929fb3c6a7feb79abae5110bd88169f11b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594962"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263612"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog クラス
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |名前|説明|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|CDHtmlDialog オブジェクトを構築します。|
-|[CDHtmlDialog:: ~ CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|CDHtmlDialog オブジェクトを破棄します。|
+|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|CDHtmlDialog オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -304,7 +304,7 @@ HTML リソースの ID 番号が含まれています。
 
 コンス トラクターの 2 番目の形式は、テンプレート名を使用して、ダイアログ リソースへのアクセスを提供します。 コンス トラクターの 3 番目のフォームは、リソースのテンプレートの ID を使用して、ダイアログ リソースへのアクセスを提供します。 通常、ID が始まり、 **idd _** プレフィックス。
 
-##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog:: ~ CDHtmlDialog
+##  <a name="_dtorcdhtmldialog"></a>  CDHtmlDialog::~CDHtmlDialog
 
 CDHtmlDialog オブジェクトを破棄します。
 
@@ -402,7 +402,7 @@ void DDX_DHtml_CheckBox(
 *szId*<br/>
 HTML コントロールの ID パラメーターに指定した値。
 
-*値*<br/>
+*value*<br/>
 交換する値。
 
 ### <a name="example"></a>例
@@ -468,7 +468,7 @@ HTML コントロールの ID パラメーターに指定した値。
 *dispid*<br/>
 データを交換する HTML 要素のディスパッチ ID。
 
-*値*<br/>
+*value*<br/>
 交換する値。
 
 ##  <a name="ddx_dhtml_radio"></a>  CDHtmlDialog::DDX_DHtml_Radio
@@ -490,7 +490,7 @@ void DDX_DHtml_Radio(
 *szId*<br/>
 HTML コントロールの ID パラメーターに指定した値。
 
-*値*<br/>
+*value*<br/>
 交換する値。
 
 ##  <a name="ddx_dhtml_selectindex"></a>  CDHtmlDialog::DDX_DHtml_SelectIndex
@@ -512,7 +512,7 @@ void DDX_DHtml_SelectIndex(
 *szId*<br/>
 HTML コントロールの id パラメーターに指定した値。
 
-*値*<br/>
+*value*<br/>
 交換する値。
 
 ##  <a name="ddx_dhtml_selectstring"></a>  CDHtmlDialog::DDX_DHtml_SelectString
@@ -534,7 +534,7 @@ void DDX_DHtml_SelectString(
 *szId*<br/>
 HTML コントロールの ID パラメーターに指定した値。
 
-*値*<br/>
+*value*<br/>
 交換する値。
 
 ##  <a name="ddx_dhtml_selectvalue"></a>  CDHtmlDialog::DDX_DHtml_SelectValue
@@ -556,7 +556,7 @@ void DDX_DHtml_SelectValue(
 *szId*<br/>
 HTML コントロールの ID パラメーターに指定した値。
 
-*値*<br/>
+*value*<br/>
 交換する値。
 
 ### <a name="example"></a>例
@@ -1296,7 +1296,8 @@ void SetElementHtml(
 HTML 要素の ID。
 
 *bstrText*<br/>
-`innerHTML` プロパティの新しい値。
+
+  `innerHTML` プロパティの新しい値。
 
 *punkElem*<br/>
 `IUnknown` HTML 要素のポインター。
@@ -1343,7 +1344,8 @@ void SetElementText(
 HTML 要素の ID。
 
 *bstrText*<br/>
-`innerText` プロパティの新しい値。
+
+  `innerText` プロパティの新しい値。
 
 *punkElem*<br/>
 `IUnknown` HTML 要素のポインター。
@@ -1527,4 +1529,3 @@ E_NOTIMPL を返します。
 [MFC サンプル DHtmlExplore](../../visual-cpp-samples.md)<br/>
 [DDX_DHtml Helper マクロ](#ddx_dhtml_helper_macros)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

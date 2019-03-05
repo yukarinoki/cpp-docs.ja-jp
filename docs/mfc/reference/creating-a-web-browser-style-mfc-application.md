@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: 1fd61b3e6bcb2f429c43edcabb41e166bcec95c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 207a6e162da6bc14e27c575ac163b160ab8e1ac1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466158"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265594"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Web ブラウザー形式の MFC アプリケーションの作成
 
@@ -54,7 +54,7 @@ void CWebView::OnInitialUpdate()
 }
 ```
 
-このサイトは、独自のいずれかで置き換えることができます。 または使用できます、 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)メンバー関数は、ビューの既定の内容として、プロジェクトのリソース スクリプトに存在する HTML ページを開きます。 例えば:
+このサイトは、独自のいずれかで置き換えることができます。 または使用できます、 [LoadFromResource](../../mfc/reference/chtmlview-class.md#loadfromresource)メンバー関数は、ビューの既定の内容として、プロジェクトのリソース スクリプトに存在する HTML ページを開きます。 例:
 
 ```cpp
 void CWebView::OnInitialUpdate()
@@ -74,4 +74,3 @@ void CWebView::OnInitialUpdate()
 [プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)<br/>
 [プロパティ ページ](../../ide/property-pages-visual-cpp.md)<br/>
 [プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)
-

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - schedule groups
 ms.assetid: 03523572-5891-4d17-89ce-fa795605f28b
-ms.openlocfilehash: 60d6bdaf863e60fa9923f7d7447309338c5dbed2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: febcc0a9c7af75801962ea6be687ce87cc5501d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453522"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295976"
 ---
 # <a name="schedule-groups"></a>スケジュール グループ
 
@@ -20,7 +20,7 @@ ms.locfileid: "50453522"
 
 すべて`Scheduler`オブジェクトがすべてのスケジューリング ノードの既定のスケジュール グループ。 A*スケジューリング ノード*基になるシステム トポロジにマップされます。 方の値が大きい、プロセッサ パッケージごとに 1 つのスケジュール ノードまたは Non-uniform Memory アーキテクチャ (NUMA) ノードに、ランタイムが作成されます。 スケジュール グループ、タスクを明示的に関連付けないはない場合、スケジューラはタスクを追加するグループを選択します。
 
-`SchedulingProtocol`スケジューラ ポリシー、スケジューラが各スケジュール グループ内のタスクが実行される順序に影響を与えます。 ときに`SchedulingProtocol`に設定されている`EnhanceScheduleGroupLocality`(既定では、)、タスク スケジューラは、現在のタスクが完了するか、協調的に生成するときに使用するスケジュール グループから次のタスクを選択します。 [次へ] の使用可能なグループを移動する前に、タスク スケジューラは作業の現在のスケジュール グループを検索します。 これに対し、`SchedulingProtocol`に設定されている`EnhanceForwardProgress`スケジューラは、各タスクが終了または生成後に次のスケジュール グループに移動します。 これらのポリシーと比較する例を参照してください[方法: スケジュール グループを使用して注文の実行に影響する](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)します。
+`SchedulingProtocol`スケジューラ ポリシー、スケジューラが各スケジュール グループ内のタスクが実行される順序に影響を与えます。 ときに`SchedulingProtocol`に設定されている`EnhanceScheduleGroupLocality`(既定では、)、タスク スケジューラは、現在のタスクが完了するか、協調的に生成するときに使用するスケジュール グループから次のタスクを選択します。 [次へ] の使用可能なグループを移動する前に、タスク スケジューラは作業の現在のスケジュール グループを検索します。 これに対し、`SchedulingProtocol`に設定されている`EnhanceForwardProgress`スケジューラは、各タスクが終了または生成後に次のスケジュール グループに移動します。 これらのポリシーと比較する例を参照してください[方法。スケジュール グループを使用して、実行の順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)します。
 
 ランタイムを使用して、 [concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)スケジュール グループを表すクラス。 作成する、`ScheduleGroup`オブジェクトを呼び出し、 [concurrency::CurrentScheduler::CreateScheduleGroup](reference/currentscheduler-class.md#createschedulegroup)または[concurrency::Scheduler::CreateScheduleGroup](reference/scheduler-class.md#createschedulegroup)メソッド。 ランタイムでは、参照カウントのメカニズムを使用して、有効期間を制御`ScheduleGroup`オブジェクトの場合と同様`Scheduler`オブジェクト。 作成するときに、`ScheduleGroup`オブジェクト、ランタイムはカウンターを 1 つの参照を設定します。 [Concurrency::ScheduleGroup::Reference](reference/schedulegroup-class.md#reference)メソッドを 1 つの参照カウンターをインクリメントします。 [Concurrency::ScheduleGroup::Release](reference/schedulegroup-class.md#release)メソッドをデクリメントを 1 つの参照カウンター。
 
@@ -30,11 +30,10 @@ ms.locfileid: "50453522"
 
 ## <a name="example"></a>例
 
-使用がタスクの実行順序を制御するグループをスケジュール例では、次を参照してください。[方法: スケジュール グループを使用して注文の実行に影響する](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)します。
+使用がタスクの実行順序を制御するグループをスケジュール例では、次を参照してください。[方法。スケジュール グループを使用して、実行の順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [スケジューラ インスタンス](../../parallel/concrt/scheduler-instances.md)<br/>
 [方法: スケジュール グループを使用して実行順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)
-

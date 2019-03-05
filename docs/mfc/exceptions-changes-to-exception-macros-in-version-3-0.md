@@ -1,5 +1,5 @@
 ---
-title: '例外処理 : MFC 3.0 での変更点'
+title: 例外:バージョン 3.0 での例外処理マクロの変更
 ms.date: 11/04/2016
 helpviewer_keywords:
 - C++ exception handling [MFC], upgrade considerations
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - exceptions [MFC], what's changed
 - THROW_LAST macro [MFC]
 ms.assetid: 3aa20d8c-229e-449c-995c-ab879eac84bc
-ms.openlocfilehash: 54826ee7a7ac129ae69715b45770a0a66596a2a3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb51ad91e001f0ed153bf4fdb5aa598ab5ba5042
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607988"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291224"
 ---
-# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外処理 : MFC 3.0 での変更点
+# <a name="exceptions-changes-to-exception-macros-in-version-30"></a>例外:バージョン 3.0 での例外処理マクロの変更
 
 これは、高度なトピックです。
 
@@ -58,9 +58,8 @@ Catch ブロックでは、その例外はキャッチ例外ポインターと�
 
 使用して**スロー** catch ブロックが、ポインター`e`外側の catch のサイトは無効なポインターを受け取れるように、削除します。 使用**THROW_LAST**再スローする`e`します。
 
-詳細については、次を参照してください。[例外。 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+詳細については、次を参照してください。[例外。キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [例外処理](../mfc/exception-handling-in-mfc.md)
-

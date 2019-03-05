@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CStdioFile [MFC], WriteString
 - CStdioFile [MFC], m_pStream
 ms.assetid: 88c2274c-4f0e-4327-882a-557ba4b3ae15
-ms.openlocfilehash: dd1a13e7cef066350f8409782b0efeba11b9d11e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fd42934107591905a1bbc273ee9eec4b37e58ea7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456213"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258789"
 ---
 # <a name="cstdiofile-class"></a>CStdioFile クラス
 
@@ -84,7 +84,8 @@ Stream ファイルは、バッファーに格納され、テキスト モード
 
 ##  <a name="cstdiofile"></a>  CStdioFile::CStdioFile
 
-`CStdioFile` オブジェクトを構築して初期化します。
+
+  `CStdioFile` オブジェクトを構築して初期化します。
 
 ```
 CStdioFile();
@@ -106,7 +107,7 @@ CStdioFile(
 *pOpenStream*<br/>
 C ランタイム関数の呼び出しによって返されたファイル ポインターを指定します[fopen](../../c-runtime-library/reference/fopen-wfopen.md)します。
 
-*場合*<br/>
+*lpszFileName*<br/>
 目的のファイルへのパスを表す文字列を指定します。 相対パスまたは絶対パスができます。
 
 *nOpenFlags*<br/>
@@ -164,7 +165,7 @@ virtual BOOL Open(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*lpszFileName*<br/>
 目的のファイルのパスを表す文字列。 相対パスまたは絶対パスができます。
 
 *nOpenFlags*<br/>
@@ -240,11 +241,11 @@ virtual ULONGLONG Seek(
 *nFrom*<br/>
 ポインターの移動モード。 値は次のいずれかを指定する必要があります。
 
-- `CFile::begin`: ファイル ポインターを移動する*lOff*ファイルの先頭からバイトを転送します。
+- `CFile::begin`:ファイル ポインターを移動*lOff*ファイルの先頭からバイトを転送します。
 
-- `CFile::current`: ファイル ポインターを移動する*lOff*ファイル内の現在位置からのバイト数。
+- `CFile::current`:ファイル ポインターを移動*lOff*ファイル内の現在位置からのバイト数。
 
-- `CFile::end`: ファイル ポインターを移動する*lOff*ファイルの終端からのバイト。 なお*lOff*する必要がありますが負では、既存をシークするファイル; 正の値は、ファイルの末尾を越えたシークします。
+- `CFile::end`:ファイル ポインターを移動*lOff*ファイルの終端からのバイト。 なお*lOff*する必要がありますが負では、既存をシークするファイル; 正の値は、ファイルの末尾を越えたシークします。
 
 ### <a name="return-value"></a>戻り値
 

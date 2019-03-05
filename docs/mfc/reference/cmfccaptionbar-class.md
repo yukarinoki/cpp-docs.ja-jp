@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 857427c12dd0f763bf88c99a65d5f9cf3eca1270
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429355"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264990"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar クラス
 
@@ -195,7 +195,7 @@ BOOL Create(
 *uID*<br/>
 キャプション バー コントロールの ID。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 キャプション バー コントロールのピクセル単位の高さ。 -1 の場合は、高さが、アイコン、テキスト、キャプション バー コントロールを表示するボタンの高さに基づいて計算されます。
 
 *bIsMessageBarMode*<br/>
@@ -246,7 +246,7 @@ BarElementAlignment GetAlignment(BarElement elem);
 
 ### <a name="parameters"></a>パラメーター
 
-*Elem*<br/>
+*elem*<br/>
 [in]キャプション バーには、配置を取得するための要素が表示されます。
 
 ### <a name="return-value"></a>戻り値

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - tree controls [MFC], item states overview
 - CTreeCtrl class [MFC], item states
 ms.assetid: 2db11ae0-0d87-499d-8c1f-5e0dbe9e94c8
-ms.openlocfilehash: 389c273f7c8727ecbb4ed5455987126e21e26a63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57c6714073f4939ffb791a78454e9eac6342309b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467952"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264600"
 ---
 # <a name="tree-control-item-states-overview"></a>ツリー コントロール項目の状態の概要
 
@@ -31,4 +31,3 @@ ms.locfileid: "50467952"
 
 [CTreeCtrl の使い方](../mfc/using-ctreectrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

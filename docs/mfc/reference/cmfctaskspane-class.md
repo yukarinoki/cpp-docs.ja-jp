@@ -194,18 +194,19 @@ helpviewer_keywords:
 - CMFCTasksPane [MFC], Update
 - CMFCTasksPane [MFC], OnActivateTasksPanePage
 ms.assetid: b456328e-2525-4642-b78b-9edd1a1a7d3f
-ms.openlocfilehash: aaf0e68391dd1273c3f973315ac58fe0d6bd1c24
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 137f30262ce01ad82c075302b6e85bf67ae7b9be
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176810"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293772"
 ---
 # <a name="cmfctaskspane-class"></a>CMFCTasksPane クラス
 
 詳細についてにあるソース コードを参照してください、 **VC\\atlmfc\\src\\mfc** Visual Studio のインストールのフォルダー。
 
-`CMFCTasksPane` クラスは、クリック可能な項目 (タスク) のリストを実装します。
+
+  `CMFCTasksPane` クラスは、クリック可能な項目 (タスク) のリストを実装します。
 
 ## <a name="syntax"></a>構文
 
@@ -225,19 +226,19 @@ class CMFCTasksPane : public CDockablePane
 
 |名前|説明|
 |----------|-----------------|
-|[Cmfctaskspane::addgroup](#addgroup)|タスクの新しいグループを作業ウィンドウ コントロールに追加します。|
-|[Cmfctaskspane::addlabel](#addlabel)|指定したタスク グループに新しい静的ラベルを追加します。|
-|[Cmfctaskspane::addmrufileslist](#addmrufileslist)|最近使用した (MRU) ファイル リストに指定されているタスクをグループに追加します。|
+|[CMFCTasksPane::AddGroup](#addgroup)|タスクの新しいグループを作業ウィンドウ コントロールに追加します。|
+|[CMFCTasksPane::AddLabel](#addlabel)|指定したタスク グループに新しい静的ラベルを追加します。|
+|[CMFCTasksPane::AddMRUFilesList](#addmrufileslist)|最近使用した (MRU) ファイル リストに指定されているタスクをグループに追加します。|
 |[CMFCTasksPane::AddPage](#addpage)|作業ウィンドウに新しいページを追加します。|
 |[CMFCTasksPane::AddSeparator](#addseparator)||
-|[:Addtask](#addtask)|指定したタスク グループに新しいタスクを追加します。|
+|[CMFCTasksPane::AddTask](#addtask)|指定したタスク グループに新しいタスクを追加します。|
 |[CMFCTasksPane::AddWindow](#addwindow)|作業ウィンドウに子ウィンドウを追加します。|
 |[CMFCTasksPane::CollapseAllGroups](#collapseallgroups)||
 |[CMFCTasksPane::CollapseGroup](#collapsegroup)|プログラムを使用してグループを折りたたみます。|
 |[CMFCTasksPane::CreateDefaultMiniframe](#createdefaultminiframe)|(上書き[cpane::createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe))。|
 |[CMFCTasksPane::CreateMenu](#createmenu)|メニューを作成するためにフレームワークによって呼び出される、**その他のタスク ウィンドウ**メニュー ボタンをクリックします。|
 |[CMFCTasksPane::EnableAnimation](#enableanimation)|タスク グループの展開または折りたたみ中のアニメーションを有効または無効にします。|
-|[:Enablegroupcollapse](#enablegroupcollapse)|タスク グループを折りたたみ可能にするかどうかを指定します。|
+|[CMFCTasksPane::EnableGroupCollapse](#enablegroupcollapse)|タスク グループを折りたたみ可能にするかどうかを指定します。|
 |[CMFCTasksPane::EnableHistoryMenuButtons](#enablehistorymenubuttons)|有効またはでドロップダウン メニューを無効に**次**と**前**ナビゲーション ボタン。|
 |[CMFCTasksPane::EnableNavigationToolbar](#enablenavigationtoolbar)|ナビゲーション ツール バーを有効または無効にします。|
 |[CMFCTasksPane::EnableOffsetCustomControls](#enableoffsetcustomcontrols)||
@@ -326,7 +327,8 @@ class CMFCTasksPane : public CDockablePane
 
 ## <a name="remarks"></a>Remarks
 
-`CMFCTasksPane` クラスは次の機能を実装します。
+
+  `CMFCTasksPane` クラスは次の機能を実装します。
 
 - 項目をグループ化し、項目の各グループにキャプションを関連付ける。
 
@@ -338,7 +340,8 @@ class CMFCTasksPane : public CDockablePane
 
 アプリケーションで、`CMFCTasksPane` コントロールを使用するには、次の手順に従います。
 
-1. `CMFCTasksPane` オブジェクトをメイン フレーム ウィンドウ クラスに埋め込みます。
+1. 
+  `CMFCTasksPane` オブジェクトをメイン フレーム ウィンドウ クラスに埋め込みます。
 
 1. WM_CREATE メッセージを処理するときに呼び出す、`Create`メソッド。 標準を使用する[CControlBar](../../mfc/reference/ccontrolbar-class.md)スタイル。 詳細については、「 `CControlBar::Create` 」を参照してください。
 
@@ -358,7 +361,8 @@ class CMFCTasksPane : public CDockablePane
 
 ## <a name="example"></a>例
 
-`CMFCTasksPane` オブジェクトを構築して `CMFCTasksPane` クラスのさまざまなメソッドを使用する方法を次の例に示します。 ドロップダウン メニューを有効にするタスク グループの折りたたみを有効にする方法の例に示します、**次**と**前**ナビゲーション ボタン、スクロール バーではなくスクロール ボタンを有効にする、という単語を有効にします。ラベルのテキストの折り返しは、グループ キャプションのテキストの色を設定し、水平および垂直方向の余白を設定する [タスク] ウィンドウのキャプション名を設定します。
+
+  `CMFCTasksPane` オブジェクトを構築して `CMFCTasksPane` クラスのさまざまなメソッドを使用する方法を次の例に示します。 ドロップダウン メニューを有効にするタスク グループの折りたたみを有効にする方法の例に示します、**次**と**前**ナビゲーション ボタン、スクロール バーではなくスクロール ボタンを有効にする、という単語を有効にします。ラベルのテキストの折り返しは、グループ キャプションのテキストの色を設定し、水平および垂直方向の余白を設定する [タスク] ウィンドウのキャプション名を設定します。
 
 [!code-cpp[NVC_MFC_RibbonApp#28](../../mfc/reference/codesnippet/cpp/cmfctaskspane-class_1.cpp)]
 
@@ -374,7 +378,7 @@ class CMFCTasksPane : public CDockablePane
 
 **ヘッダー:** afxTasksPane.h
 
-##  <a name="addgroup"></a>  Cmfctaskspane::addgroup
+##  <a name="addgroup"></a>  CMFCTasksPane::AddGroup
 
 タスクの新しいグループを作業ウィンドウ コントロールに追加します。
 
@@ -420,7 +424,7 @@ int AddGroup(
 
 フレームワークでは、作業ウィンドウ コントロールの上部または下部にある、タスク グループが表示されます。 フレームワークは、下部にある 1 つのグループを表示できます。このグループは、最後に追加する必要があります。
 
-##  <a name="addlabel"></a>  Cmfctaskspane::addlabel
+##  <a name="addlabel"></a>  CMFCTasksPane::AddLabel
 
 指定したタスク グループにラベルを追加します。
 
@@ -434,7 +438,7 @@ int AddLabel(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]グループのラベルを追加する位置のインデックスを指定します。
 
 *lpszLabelName*<br/>
@@ -454,7 +458,7 @@ int AddLabel(
 
 フレームワークは、タスクとラベルを異なる方法で処理します。 ユーザーがタスクをクリックしたときに、フレームワークは、コマンドを実行します。 ユーザーがラベルをクリックすると、コマンドは実行されません。 詳細については、次を参照してください。 [::addtask](#addtask)します。
 
-##  <a name="addmrufileslist"></a>  Cmfctaskspane::addmrufileslist
+##  <a name="addmrufileslist"></a>  CMFCTasksPane::AddMRUFilesList
 
 最近使用したファイル (MRU) ファイルの一覧をグループに格納されているファイルごとにタスクを追加します。
 
@@ -466,7 +470,7 @@ int AddMRUFilesList(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]グループのインデックスを指定します。 このメソッドは、このパラメーターで指定されたグループに、MRU ファイル リストを追加します。
 
 *nMaxFiles*<br/>
@@ -507,7 +511,7 @@ int AddSeparator(int nGroup);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="addtask"></a>  :Addtask
+##  <a name="addtask"></a>  CMFCTasksPane::AddTask
 
 指定したタスク グループには、タスクを追加します。
 
@@ -522,7 +526,7 @@ int AddTask(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]タスクを追加する位置グループ インデックスを指定します。
 
 *lpszTaskName*<br/>
@@ -556,7 +560,7 @@ int AddWindow(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]ウィンドウの追加先グループ インデックスを指定します。
 
 *hwndTask*<br/>
@@ -600,7 +604,7 @@ void CollapseAllGroups(
 ### <a name="parameters"></a>パラメーター
 
 [in]*bCollapse*<br/>
-[in]*nPageIdx*<br/>
+[in] *nPageIdx*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -626,7 +630,7 @@ BOOL CollapseGroup(
 *bCollapse*<br/>
 [in]グループを折りたたむ場合は TRUE。グループを展開する場合は FALSE。
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]グループの内部一覧に折りたたむには、グループの 0 から始まるインデックスを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -686,7 +690,7 @@ void EnableAnimation(BOOL bEnable = TRUE);
 
 既定では、タスク グループを展開または折りたたむ場合に発生するアニメーションが有効にします。
 
-##  <a name="enablegroupcollapse"></a>  :Enablegroupcollapse
+##  <a name="enablegroupcollapse"></a>  CMFCTasksPane::EnableGroupCollapse
 
 ユーザーがタスク グループを折りたたむかどうかを指定します。
 
@@ -898,7 +902,7 @@ BOOL GetGroupLocation(
 *pGroup*<br/>
 [in]位置を取得するタスク グループを指定します。
 
-*n グループ*<br/>
+*nGroup*<br/>
 [out]タスク グループの 0 から始まるインデックスが含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -957,10 +961,10 @@ BOOL GetPageByGroup(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]タスク グループの 0 から始まるインデックスを指定します。
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [out]指定したグループのページ インデックスが含まれています。 タスク グループには、既定のページのみが含まれる場合、返される値は 0 です。
 
 ### <a name="return-value"></a>戻り値
@@ -987,7 +991,7 @@ void GetPreviousPages(CStringList& lstPrevPages) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lstPrevPages*<br/>
+[in] *lstPrevPages*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1017,7 +1021,7 @@ CMFCTasksPaneTask* GetTask(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]タスクが含まれているグループの 0 から始まるインデックスを指定します。
 
 *%n タスク*<br/>
@@ -1037,7 +1041,7 @@ int GetTaskCount(int nGroup) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]タスク グループのインデックスを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -1054,7 +1058,7 @@ CMFCTasksPaneTaskGroup* GetTaskGroup(int nGroup) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]取得するには、グループの 0 から始まるインデックスを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -1087,7 +1091,7 @@ BOOL GetTaskLocation(
 *uiCommandID*<br/>
 [in]検索するタスクのコマンド ID を指定します。
 
-*n グループ*<br/>
+*nGroup*<br/>
 [out]タスクのグループのインデックスが含まれています。
 
 *%n タスク*<br/>
@@ -1296,8 +1300,8 @@ virtual BOOL LoadState(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lpszProfileName*<br/>
-[in]*nIndex*<br/>
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
 [in]*uiID*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -1429,7 +1433,7 @@ virtual BOOL OnSetAccData(long lVal);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lVal*<br/>
+[in] *lVal*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1511,7 +1515,7 @@ void RemoveAllTasks(int nGroup);
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]グループの 0 から始まるインデックスを指定します。
 
 ##  <a name="removegroup"></a>  CMFCTasksPane::RemoveGroup
@@ -1524,7 +1528,7 @@ void RemoveGroup(int nGroup);
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]削除するグループの 0 から始まるインデックスを指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -1559,7 +1563,7 @@ BOOL RemoveTask(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]削除するタスクが含まれているタスク グループの 0 から始まるインデックスを指定します。
 
 *%n タスク*<br/>
@@ -1583,8 +1587,8 @@ virtual BOOL SaveState(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lpszProfileName*<br/>
-[in]*nIndex*<br/>
+[in] *lpszProfileName*<br/>
+[in] *nIndex*<br/>
 [in]*uiID*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -1694,7 +1698,7 @@ BOOL SetGroupName(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]グループの 0 から始まるインデックスを指定します。
 
 *lpszGroupName*<br/>
@@ -1717,7 +1721,7 @@ BOOL SetGroupTextColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]グループの 0 から始まるインデックスを指定します。
 
 *色*<br/>
@@ -1836,7 +1840,7 @@ BOOL SetTaskName(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]タスク グループの 0 から始まるインデックスを指定します。
 
 *%n タスク*<br/>
@@ -1908,7 +1912,7 @@ BOOL SetTaskTextColor(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]タスクが含まれているタスク グループの 0 から始まるインデックスを指定します。
 
 *%n タスク*<br/>
@@ -1960,7 +1964,7 @@ BOOL SetWindowHeight(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]ウィンドウ コントロールを含むグループの 0 から始まるインデックスを指定します。
 
 *hwndTask*<br/>
@@ -1985,7 +1989,7 @@ virtual void ShowCommandMessageString(UINT uiCmdId);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCmdId*<br/>
+[in] *uiCmdId*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -2003,7 +2007,7 @@ BOOL ShowTask(
 
 ### <a name="parameters"></a>パラメーター
 
-*n グループ*<br/>
+*nGroup*<br/>
 [in]グループの 0 から始まるインデックスを指定します。
 
 *%n タスク*<br/>

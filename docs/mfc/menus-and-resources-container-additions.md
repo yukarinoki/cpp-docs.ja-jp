@@ -1,5 +1,5 @@
 ---
-title: 'メニューとリソース : コンテナーの変更点'
+title: メニューとリソース:コンテナーの変更点
 ms.date: 11/04/2016
 f1_keywords:
 - IDP_OLE_INIT_FAILED
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ea4159f8eb60f43f60eacd5831ce148c81aeb572
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546615"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279339"
 ---
-# <a name="menus-and-resources-container-additions"></a>メニューとリソース : コンテナーの変更点
+# <a name="menus-and-resources-container-additions"></a>メニューとリソース:コンテナーの変更点
 
 この記事では、メニューとビジュアル編集コンテナー アプリケーションでは、その他のリソースをする必要がある変更について説明します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "50546615"
 
 この記事に記載の変更、に加えて、ソース ファイルは AFXOLECL を含める必要があります。RC では、Microsoft Foundation Class ライブラリの実装に必要です。 新規オブジェクトの挿入は、必要な唯一のメニューに追加します。 その他の項目を追加することができますが、ここに示したものは最も一般的です。
 
-含まれている項目のインプレース アクティブ化をサポートする場合は、コンテナー アプリケーションの新しいメニューを作成する必要があります。 このメニューは、同じファイル メニューおよびウィンドウのショートカット メニューを開いているファイルがそれらの間に配置する 2 つの区切り記号がある場合に使用で構成されます。 これらの区切り文字を使用して、サーバー (コンポーネント) アイテム (アプリケーション) がインプレース アクティブ化されるときに、そのメニューを配置する場所を指定します。 このメニューのマージ方法の詳細については、次を参照してください。[メニューとリソース: メニューのマージ](../mfc/menus-and-resources-menu-merging.md)します。
+含まれている項目のインプレース アクティブ化をサポートする場合は、コンテナー アプリケーションの新しいメニューを作成する必要があります。 このメニューは、同じファイル メニューおよびウィンドウのショートカット メニューを開いているファイルがそれらの間に配置する 2 つの区切り記号がある場合に使用で構成されます。 これらの区切り文字を使用して、サーバー (コンポーネント) アイテム (アプリケーション) がインプレース アクティブ化されるときに、そのメニューを配置する場所を指定します。 このメニューのマージ方法の詳細については、次を参照してください。[メニューとリソース。メニューのマージ](../mfc/menus-and-resources-menu-merging.md)します。
 
 ##  <a name="_core_container_application_accelerator_table_additions"></a> コンテナー アプリケーションのアクセラレータ テーブルの追加
 
@@ -86,5 +86,4 @@ ms.locfileid: "50546615"
 ## <a name="see-also"></a>関連項目
 
 [メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)<br/>
-[メニューとリソース: サーバーの変更点](../mfc/menus-and-resources-server-additions.md)
-
+[メニューとリソース:サーバーの変更点](../mfc/menus-and-resources-server-additions.md)

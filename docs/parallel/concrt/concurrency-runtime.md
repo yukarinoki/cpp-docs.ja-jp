@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ConcRT (see Concurrency Runtime)
 - Concurrency Runtime
 ms.assetid: 874bc58f-8dce-483e-a3a1-4dcc9e52ed2c
-ms.openlocfilehash: bed1d7680d9bc6615476c7d5d4b700d729026c66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 245984d9702c997f16601bf5e2a9bd049ae5fed9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495954"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258334"
 ---
 # <a name="concurrency-runtime"></a>コンカレンシー ランタイム
 
@@ -107,4 +107,3 @@ C++ のコンカレンシー ランタイムにより、信頼性が高く、ス
 ## <a name="see-also"></a>関連項目
 
 [参照](../../parallel/concrt/reference/reference-concurrency-runtime.md)
-

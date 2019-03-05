@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [MFC], tool tips
 - handler functions [MFC], tool tips
 ms.assetid: cad5ef0f-02e3-4151-ad0d-3d42e6932b0e
-ms.openlocfilehash: 2545bda725428835c256ad81edc9070bd004d474
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d44f2c503b689360f040e6804d319c331d5c0ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620299"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260661"
 ---
 # <a name="tool-tips-in-windows-not-derived-from-cframewnd"></a>CFrameWnd から派生していないウィンドウのツール ヒント
 
@@ -37,4 +37,3 @@ Windows によって提供される既定のツール ヒント[CWnd::EnableTool
 ## <a name="see-also"></a>関連項目
 
 [ツール ヒント](../mfc/tool-tips.md)
-

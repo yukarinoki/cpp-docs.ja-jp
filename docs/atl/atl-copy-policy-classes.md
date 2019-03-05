@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 535bd1a3129bab15f546f6a82d77cf4e152fc605
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452755"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296346"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL コピー ポリシー クラス
 
@@ -82,4 +82,3 @@ VCUE_Copy.h には、このクラスの次の特殊化も含まれています: 
 
 [C++ 標準ライブラリに基づくコレクションの実装](../atl/implementing-an-stl-based-collection.md)<br/>
 [ATLCollections サンプル](../visual-cpp-samples.md)
-

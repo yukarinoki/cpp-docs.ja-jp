@@ -5,12 +5,12 @@ helpviewer_keywords:
 - exception handling, converting from OpenMP to the Concurrency Runtime
 - converting from OpenMP to the Concurrency Runtime, exception handling
 ms.assetid: 03c28196-21ba-439e-8641-afab1c283e1a
-ms.openlocfilehash: 9fa5ff2bcdfa6680dde6e9316d143089bf586671
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 118cf3e485fa78ae3eaa5efe34708924b89d6588
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53740500"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285153"
 ---
 # <a name="how-to-convert-an-openmp-loop-that-uses-exception-handling-to-use-the-concurrency-runtime"></a>方法: 同時実行ランタイムを使用する例外処理を使用する OpenMP ループを変換します。
 
@@ -56,11 +56,10 @@ OpenMP を使用するバージョンを例外発生後に終了する必要が�
 
 コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`concrt-omp-exceptions.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
 
-**cl.exe/EHsc/openmp concrt-omp-exceptions.cpp**
+**cl.exe /EHsc /openmp concrt-omp-exceptions.cpp**
 
 ## <a name="see-also"></a>関連項目
 
 [OpenMP からコンカレンシー ランタイムへの移行](../../parallel/concrt/migrating-from-openmp-to-the-concurrency-runtime.md)<br/>
 [例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)<br/>
 [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)
-

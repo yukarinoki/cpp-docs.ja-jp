@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], OnSend
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
-ms.openlocfilehash: b138c4f84a10823d9c340218baefd530c016027a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179033"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260011"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket クラス
 
@@ -115,7 +115,7 @@ class CAsyncSocket : public CObject
 |[CAsyncSocket::GetLastError](#getlasterror)|最後の操作に失敗したは、エラー状態を取得します。|
 |[で](#getpeername)|ソケットが接続されているピア ソケットのアドレスを取得します。|
 |[CAsyncSocket::GetPeerNameEx](#getpeernameex)|ピア ソケット、ソケットが接続されている (ハンドルの IPv6 アドレス) のアドレスを取得します。|
-|[で](#getsockname)|ソケットのローカル名を取得します。|
+|[CAsyncSocket::GetSockName](#getsockname)|ソケットのローカル名を取得します。|
 |[CAsyncSocket::GetSockNameEx](#getsocknameex)|ソケット (IPv6 アドレスのハンドル) のローカル名を取得します。|
 |[CAsyncSocket::GetSockOpt](#getsockopt)|ソケット オプションを取得します。|
 |[CAsyncSocket::IOCtl](#ioctl)|ソケットのモードを制御します。|
@@ -387,7 +387,7 @@ virtual void Close();
 
 `CAsyncSocket`ではなく`CSocket`のセマンティクス`Close`SO_LINGER と SO_DONTLINGER ソケット オプションの影響を受けます。 詳細については、メンバー関数を参照してください。`GetSockOpt`します。
 
-##  <a name="connect"></a>  不要なため
+##  <a name="connect"></a>  CAsyncSocket::Connect
 
 データグラム ソケットまたは未接続のストリームへの接続を確立するには、このメンバー関数を呼び出します。
 
@@ -584,7 +584,7 @@ static int PASCAL GetLastError();
 
 エラー コードの詳細については、次を参照してください。 [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)します。
 
-##  <a name="getpeername"></a>  で
+##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName
 
 このソケットが接続されているピア ソケットのアドレスを取得するには、このメンバー関数を呼び出します。
 
@@ -670,7 +670,7 @@ BOOL GetPeerNameEx(
 
 この関数は、同じ[で](#getpeername)IPv6 を処理する点を除いて、従来のプロトコルに対応します。
 
-##  <a name="getsockname"></a>  で
+##  <a name="getsockname"></a>  CAsyncSocket::GetSockName
 
 ソケットのローカル名を取得するには、このメンバー関数を呼び出します。
 
@@ -777,7 +777,7 @@ BOOL GetSockOpt(
 *nOptionName*<br/>
 値を取得するソケット オプション。
 
-*関連付け*<br/>
+*lpOptionValue*<br/>
 要求されたオプションの値が返されるバッファーへのポインター。 バッファーで選択したオプションに関連付けられている値が返される*は*します。 によって示される整数*lpOptionLen* (バイト単位) には、このバッファーのサイズを含める必要があります最初とに、返された場合は、返される値のサイズに設定されます。 SO_LINGER のサイズの場合は、`LINGER`構造体は他のすべてのオプションのブール値のサイズであること、または**int**オプションに応じて。 オプションと、「解説」には、そのサイズの一覧を参照してください。
 
 *lpOptionLen*<br/>
@@ -1125,7 +1125,7 @@ void operator=(const CAsyncSocket& rSrc);
 
 既存のコピーするには、この関数を呼び出す`CAsyncSocket`を別のオブジェクト`CAsyncSocket`オブジェクト。
 
-##  <a name="operator_socket"></a>  CAsyncSocket::operator ソケット
+##  <a name="operator_socket"></a>  CAsyncSocket::operator SOCKET
 
 この演算子を使用してのソケット ハンドルを取得する、`CAsyncSocket`オブジェクト。
 
@@ -1211,7 +1211,7 @@ virtual int Receive(
 
   例をご覧ください[CAsyncSocket::OnReceive](#onreceive)します。
 
-##  <a name="receivefrom"></a>  で
+##  <a name="receivefrom"></a>  CAsyncSocket::ReceiveFrom
 
 データグラムを受信およびの送信元アドレスを格納するには、このメンバー関数を呼び出す、 [SOCKADDR](/windows/desktop/winsock/sockaddr-2)構造または*rSocketAddress*します。
 
@@ -1664,7 +1664,7 @@ BOOL SetSockOpt(
 *nOptionName*<br/>
 値を設定するソケット オプション。
 
-*関連付け*<br/>
+*lpOptionValue*<br/>
 要求されたオプションの値が指定されているバッファーへのポインター。
 
 *nOptionLen*<br/>
@@ -1707,7 +1707,7 @@ SO_LINGER 未送信のデータがソケットでキューに置かれたとき�
 
 Windows ソケットの実装を通知するためにする、`Bind`目的のアドレスが既に別のソケットによって使用されているために、ソケットでの呼び出しが禁止される必要がない、アプリケーションが発行する前に、ソケットの SO_REUSEADDR ソケット オプションを設定する必要があります、`Bind`呼び出します。 時にのみ、オプションが解釈されることに注意してください、`Bind`呼び出す: 必要はありませんので (ただし、害のない) は、既存のアドレスにバインドするソケットでオプションを設定する設定し、または後にオプションをリセットして、`Bind`呼び出しにはこのまたはその他のソケットに影響を与えません。
 
-アプリケーションでは、Windows ソケットの実装が、接続のソケット オプションをオンにして「キープ アライブ」パケットで伝送制御プロトコル (TCP) 接続の使用を有効にすることを要求できます。 Windows Sockets 実装必要キープア ライブの使用をサポートしていません: 場合は、正確なセマンティクスは実装によって異なりますの RFC 1122 セクション 4.2.3.6 に準拠している必要があります。「Requirements for Internet Hosts-通信レイヤーです"。 結果として、接続が削除された場合「キープア ライブ」のエラー コードいるときが返さ進行中の呼び出しに、ソケットでれ接続保持の後続の呼び出しは失敗します。
+アプリケーションでは、Windows ソケットの実装が、接続のソケット オプションをオンにして「キープ アライブ」パケットで伝送制御プロトコル (TCP) 接続の使用を有効にすることを要求できます。 Windows Sockets 実装必要キープア ライブの使用をサポートしていません: 場合は、正確なセマンティクスは実装によって異なりますの RFC 1122 セクション 4.2.3.6 に準拠している必要があります。"Requirements for Internet Hosts — Communication Layers." 結果として、接続が削除された場合「キープア ライブ」のエラー コードいるときが返さ進行中の呼び出しに、ソケットでれ接続保持の後続の呼び出しは失敗します。
 
 低下オプションには、Nagle アルゴリズムが無効にします。 Nagle アルゴリズムを使用すると、フルサイズのパケットを送信できるまで、未確認の送信データをバッファー処理によって、ホストによって送信された小さなパケットの数を減らします。 ただし、一部のアプリケーションのこのアルゴリズムは、パフォーマンスを妨げる、低下を無効にするために使用できます。 アプリケーションの作成者では、影響のためが十分に理解して、必要なため、ネットワーク パフォーマンスに大きな悪影響を及ぼすことができます低下を設定しない限り、低下は設定しないでください。 低下は、唯一サポートされているレベルの取得できる; を使用するソケット オプションその他のすべてのオプションでは、レベルの取得を使用します。
 
@@ -1757,7 +1757,7 @@ BOOL ShutDown(int nHow = sends);
 
 - **受信 = 0**
 
-- **送信 = 1**
+- **sends = 1**
 
 - **両方 = 2**
 

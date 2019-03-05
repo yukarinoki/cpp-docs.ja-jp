@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: ebb0d0abcff069deca4597ffb5a3a2d4e67cab9c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894537"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276547"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -858,8 +858,9 @@ class CWnd : public CCmdTarget
 |[CWnd::BeginModalState](#beginmodalstate)|フレーム ウィンドウをモーダルにします。|
 |[CWnd::BeginPaint](#beginpaint)|描画用の `CWnd` を準備します。|
 |[CWnd::BindDefaultProperty](#binddefaultproperty)|タイプ ライブラリに示されているように、呼び出し元オブジェクトの既定の単純バインド プロパティを、データ ソース コントロールに関連付けられているカーソルにバインドします。|
-|[CWnd::BindProperty](#bindproperty)|データ バインディング コントロールのカーソル バインド プロパティをデータ ソース コントロールにバインドし、そのリレーションシップを MFC バインド マネージャーに登録します。|
-|[CWnd::BringWindowToTop](#bringwindowtotop)|`CWnd` を重なったウィンドウのスタックの最上位に移動します。|
+|[Cwnd::bindproperty](#bindproperty)|データ バインディング コントロールのカーソル バインド プロパティをデータ ソース コントロールにバインドし、そのリレーションシップを MFC バインド マネージャーに登録します。|
+|[CWnd::BringWindowToTop](#bringwindowtotop)|
+  `CWnd` を重なったウィンドウのスタックの最上位に移動します。|
 |[CWnd::CalcWindowRect](#calcwindowrect)|クライアントの四角形からウィンドウ四角形を計算するために呼び出されます。|
 |[CWnd::CancelToolTips](#canceltooltips)|ツール ヒント コントロールを無効にします。|
 |[CWnd::CenterWindow](#centerwindow)|ウィンドウをその親ウィンドウの中央に揃えます。|
@@ -870,16 +871,19 @@ class CWnd : public CCmdTarget
 |[CWnd::ClientToScreen](#clienttoscreen)|ディスプレイ上の指定された点または四角形のクライアント座標を画面座標に変換します。|
 |[CWnd::CloseWindow](#closewindow)|ウィンドウを最小化します。|
 |[CWnd::ContinueModal](#continuemodal)|ウィンドウのモーダル ステータスを継続します。|
-|[CWnd::Create](#create)|`CWnd` オブジェクトに関連付けられる子ウィンドウを作成し、初期化します。|
+|[CWnd::Create](#create)|
+  `CWnd` オブジェクトに関連付けられる子ウィンドウを作成し、初期化します。|
 |[CWnd::CreateAccessibleProxy](#createaccessibleproxy)|指定されたオブジェクトの Active Accessibility プロキシを作成します。|
 |[CWnd::CreateCaret](#createcaret)|システム キャレットの新しい形を作成し、そのキャレットの所有権を取得します。|
 |[CWnd::CreateControl](#createcontrol)|MFC プログラムでは `CWnd` オブジェクトによって表される ActiveX コントロールを作成します。|
 |[CWnd::CreateEx](#createex)|Windows のオーバーラップ ウィンドウ、ポップアップ ウィンドウ、または子ウィンドウを作成し、`CWnd` オブジェクトに関連付けます。|
 |[CWnd::CreateGrayCaret](#creategraycaret)|灰色のブロックでシステム キャレットを作成し、そのキャレットの所有権を取得します。|
 |[CWnd::CreateSolidCaret](#createsolidcaret)|純色のブロックでシステム キャレットを作成し、そのキャレットの所有権を取得します。|
-|[CWnd::DeleteTempMap](#deletetempmap)|`FromHandle` 関数で作成した一時的な `CWnd` オブジェクトをすべて削除するために、`CWinApp` のアイドル処理ハンドラーによって自動的に呼び出されます。|
+|[CWnd::DeleteTempMap](#deletetempmap)|
+  `FromHandle` 関数で作成した一時的な `CWnd` オブジェクトをすべて削除するために、`CWinApp` のアイドル処理ハンドラーによって自動的に呼び出されます。|
 |[CWnd::DestroyWindow](#destroywindow)|関連付けられている Windows のウィンドウを破棄します。|
-|[CWnd::Detach](#detach)|`CWnd` オブジェクトから Windows のハンドルを切り離し、そのハンドルを返します。|
+|[CWnd::Detach](#detach)|
+  `CWnd` オブジェクトから Windows のハンドルを切り離し、そのハンドルを返します。|
 |[CWnd::DlgDirList](#dlgdirlist)|リスト ボックスにファイル リストまたはディレクトリ リストを設定します。|
 |[CWnd::DlgDirListComboBox](#dlgdirlistcombobox)|コンボ ボックスにファイル リストまたはディレクトリ リストを設定します。|
 |[CWnd::DlgDirSelect](#dlgdirselect)|リスト ボックスから現在の選択を取得します。|
@@ -906,8 +910,10 @@ class CWnd : public CCmdTarget
 |[CWnd::FindWindowEx](#findwindowex)|ウィンドウのハンドルを返します。ウィンドウのハンドルはそのウィンドウ名とウィンドウ クラスによって識別されます。|
 |[CWnd::FlashWindow](#flashwindow)|ウィンドウを 1 回フラッシュします。|
 |[CWnd::FlashWindowEx](#flashwindowex)|ウィンドウをフラッシュし、追加の機能を実行します。|
-|[CWnd::FromHandle](#fromhandle)|ウィンドウのハンドルが指定されている場合、`CWnd` オブジェクトへのポインターを返します。 `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。|
-|[CWnd::FromHandlePermanent](#fromhandlepermanent)|ウィンドウのハンドルが指定されている場合、`CWnd` オブジェクトへのポインターを返します。 `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。|
+|[CWnd::FromHandle](#fromhandle)|ウィンドウのハンドルが指定されている場合、`CWnd` オブジェクトへのポインターを返します。 
+  `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。|
+|[CWnd::FromHandlePermanent](#fromhandlepermanent)|ウィンドウのハンドルが指定されている場合、`CWnd` オブジェクトへのポインターを返します。 
+  `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。|
 |[CWnd::get_accChild](#get_accchild)|指定された子の `IDispatch` インターフェイスのアドレスを取得するために、フレームワークによって呼び出されます。|
 |[CWnd::get_accChildCount](#get_accchildcount)|このオブジェクトに属する子の数を取得するために、フレームワークによって呼び出されます。|
 |[CWnd::get_accDefaultAction](#get_accdefaultaction)|オブジェクトの既定のアクションを記述する文字列を取得するために、フレームワークによって呼び出されます。|
@@ -927,16 +933,19 @@ class CWnd : public CCmdTarget
 |[CWnd::GetCapture](#getcapture)|マウス キャプチャを持つ `CWnd` を取得します。|
 |[CWnd::GetCaretPos](#getcaretpos)|キャレットの現在位置を示すクライアント座標を取得します。|
 |[CWnd::GetCheckedRadioButton](#getcheckedradiobutton)|ボタンのグループ内で現在チェックされているオプション ボタンの ID を返します。|
-|[CWnd::GetClientRect](#getclientrect)|`CWnd` クライアント領域の寸法を取得します。|
+|[CWnd::GetClientRect](#getclientrect)|
+  `CWnd` クライアント領域の寸法を取得します。|
 |[CWnd::GetClipboardOwner](#getclipboardowner)|クリップボードの現在のオーナーへのポインターを取得します。|
 |[CWnd::GetClipboardViewer](#getclipboardviewer)|クリップボード ビューアーのチェインの最初のウィンドウへのポインターを取得します。|
 |[CWnd::GetControlUnknown](#getcontrolunknown)|不明な ActiveX コントロールへのポインターを取得します。|
 |[CWnd::GetDC](#getdc)|クライアント領域のディスプレイ コンテキストを取得します。|
 |[CWnd::GetDCEx](#getdcex)|クライアント領域のディスプレイ コンテキストを取得し、描画中のクリッピングを有効にします。|
-|[CWnd::GetDCRenderTarget](#getdcrendertarget)|`CWnd` ウィンドウのデバイス コンテキスト (DC) レンダー ターゲットを取得します。|
+|[CWnd::GetDCRenderTarget](#getdcrendertarget)|
+  `CWnd` ウィンドウのデバイス コンテキスト (DC) レンダー ターゲットを取得します。|
 |[CWnd::GetDescendantWindow](#getdescendantwindow)|すべての子孫ウィンドウを検索し、指定された ID を持つウィンドウを返します。|
 |[CWnd::GetDesktopWindow](#getdesktopwindow)|Windows のデスクトップ ウィンドウを取得します。|
-|[CWnd::GetDlgCtrlID](#getdlgctrlid)|`CWnd` が子ウィンドウの場合、この関数を呼び出すと、その ID 値が返されます。|
+|[CWnd::GetDlgCtrlID](#getdlgctrlid)|
+  `CWnd` が子ウィンドウの場合、この関数を呼び出すと、その ID 値が返されます。|
 |[CWnd::GetDlgItem](#getdlgitem)|指定されたダイアログ ボックスから指定された ID を持つコントロールを取得します。|
 |[CWnd::GetDlgItemInt](#getdlgitemint)|指定されたダイアログ ボックスにあるコントロールのテキストを整数値に変換します。|
 |[CWnd::GetDlgItemText](#getdlgitemtext)|コントロールに関連付けられているキャプションまたはテキストを取得します。|
@@ -947,7 +956,8 @@ class CWnd : public CCmdTarget
 |[CWnd::GetFont](#getfont)|現在のフォントを取得します。|
 |[CWnd::GetForegroundWindow](#getforegroundwindow)|手前のウィンドウ (ユーザーが現在作業しているトップレベル ウィンドウ) へのポインターを返します。|
 |[CWnd::GetIcon](#geticon)|アイコンへのハンドルを取得します。|
-|[CWnd::GetLastActivePopup](#getlastactivepopup)|`CWnd` が所有するポップアップ ウィンドウのうち、直前にアクティブだったウィンドウを調べます。|
+|[CWnd::GetLastActivePopup](#getlastactivepopup)|
+  `CWnd` が所有するポップアップ ウィンドウのうち、直前にアクティブだったウィンドウを調べます。|
 |[CWnd::GetLayeredWindowAttributes](#getlayeredwindowattributes)|レイヤード ウィンドウの不透明度および透明度のカラー キーを取得します。|
 |[CWnd::GetMenu](#getmenu)|指定されたメニューへのポインターを取得します。|
 |[CWnd::GetNextDlgGroupItem](#getnextdlggroupitem)|コントロールのグループ内で、指定されたコントロールの直前または次に位置するコントロールを検索します。|
@@ -955,9 +965,12 @@ class CWnd : public CCmdTarget
 |[CWnd::GetNextWindow](#getnextwindow)|ウィンドウ マネージャーのリストから次 (または前) のウィンドウを返します。|
 |[CWnd::GetOleControlSite](#getolecontrolsite)|指定された ActiveX コントロールのカスタム サイトを取得します。|
 |[CWnd::GetOpenClipboardWindow](#getopenclipboardwindow)|現在クリップボードが開いているウィンドウへのポインターを取得します。|
-|[CWnd::GetOwner](#getowner)|`CWnd` のオーナーへのポインターを取得します。|
-|[CWnd::GetParent](#getparent)|`CWnd` の親ウィンドウがある場合、そのウィンドウを取得します。|
-|[CWnd::GetParentFrame](#getparentframe)|`CWnd` オブジェクトの親フレーム ウィンドウを取得します。|
+|[CWnd::GetOwner](#getowner)|
+  `CWnd` のオーナーへのポインターを取得します。|
+|[CWnd::GetParent](#getparent)|
+  `CWnd` の親ウィンドウがある場合、そのウィンドウを取得します。|
+|[CWnd::GetParentFrame](#getparentframe)|
+  `CWnd` オブジェクトの親フレーム ウィンドウを取得します。|
 |[CWnd::GetParentOwner](#getparentowner)|子ウィンドウの親ウィンドウへのポインターを返します。|
 |[CWnd::GetProperty](#getproperty)|ActiveX コントロール プロパティを取得します。|
 |[CWnd::GetRenderTarget](#getrendertarget)|このウィンドウに関連付けられているレンダー ターゲットを取得します。|
@@ -965,7 +978,8 @@ class CWnd : public CCmdTarget
 |[CWnd::GetSafeOwner](#getsafeowner)|指定されたウィンドウのセーフ オーナーを取得します。|
 |[CWnd::GetScrollBarCtrl](#getscrollbarctrl)|兄弟スクロール バーのコントロールを返します。|
 |[CWnd::GetScrollBarInfo](#getscrollbarinfo)|指定されたスクロール バーの情報を取得します。|
-|[CWnd::GetScrollInfo](#getscrollinfo)|`SCROLLINFO` 構造体がスクロール バーについて保持している情報を取得します。|
+|[CWnd::GetScrollInfo](#getscrollinfo)|
+  `SCROLLINFO` 構造体がスクロール バーについて保持している情報を取得します。|
 |[CWnd::GetScrollLimit](#getscrolllimit)|スクロール バーの限界値を取得します。|
 |[CWnd::GetScrollPos](#getscrollpos)|スクロール ボックスの現在位置を取得します。|
 |[CWnd::GetScrollRange](#getscrollrange)|指定されたスクロール バーの現在の最小位置と最大位置をコピーします。|
@@ -975,9 +989,12 @@ class CWnd : public CCmdTarget
 |[CWnd::GetTopLevelFrame](#gettoplevelframe)|ウィンドウのトップレベルのフレーム ウィンドウを取得します。|
 |[CWnd::GetTopLevelOwner](#gettoplevelowner)|トップ レベルのウィンドウを取得します。|
 |[CWnd::GetTopLevelParent](#gettoplevelparent)|ウィンドウのトップレベルの親ウィンドウを取得します。|
-|[CWnd::GetTopWindow](#gettopwindow)|`CWnd` に属する第 1 レベルの子ウィンドウを返します。|
-|[CWnd::GetUpdateRect](#getupdaterect)|`CWnd` 更新領域を完全に囲む最小の四角形の座標を取得します。|
-|[CWnd::GetUpdateRgn](#getupdatergn)|`CWnd` 更新領域を取得します。|
+|[CWnd::GetTopWindow](#gettopwindow)|
+  `CWnd` に属する第 1 レベルの子ウィンドウを返します。|
+|[CWnd::GetUpdateRect](#getupdaterect)|
+  `CWnd` 更新領域を完全に囲む最小の四角形の座標を取得します。|
+|[CWnd::GetUpdateRgn](#getupdatergn)|
+  `CWnd` 更新領域を取得します。|
 |[CWnd::GetWindow](#getwindow)|対象となるウィンドウとの間に指定された関係が成り立つウィンドウを返します。|
 |[CWnd::GetWindowContextHelpId](#getwindowcontexthelpid)|ヘルプ コンテキスト識別子を取得します。|
 |[CWnd::GetWindowDC](#getwindowdc)|キャプション バー、メニュー、スクロール バーを含むウィンドウ全体のディスプレイ コンテキストを取得します。|
@@ -985,7 +1002,8 @@ class CWnd : public CCmdTarget
 |[CWnd::GetWindowInfo](#getwindowinfo)|ウィンドウに関する情報を返します。|
 |[CWnd::GetWindowlessChildCount](#getwindowlesschildcount)|関連付けられているウィンドウなしの子ウィンドウの数を返します。|
 |[CWnd::GetWindowPlacement](#getwindowplacement)|ウィンドウの表示状態、通常の位置 (復元された位置)、最小化された位置、および最大表示された位置を取得します。|
-|[CWnd::GetWindowRect](#getwindowrect)|`CWnd` の画面座標を取得します。|
+|[CWnd::GetWindowRect](#getwindowrect)|
+  `CWnd` の画面座標を取得します。|
 |[CWnd::GetWindowRgn](#getwindowrgn)|ウィンドウのウィンドウ領域のコピーを取得します。|
 |[CWnd::GetWindowText](#getwindowtext)|ウィンドウのテキストまたはキャプション タイトル (ある場合) を返します。|
 |[CWnd::GetWindowTextLength](#getwindowtextlength)|ウィンドウのテキストまたはキャプション タイトルの長さを返します。|
@@ -996,23 +1014,28 @@ class CWnd : public CCmdTarget
 |[CWnd::InvalidateRect](#invalidaterect)|指定された四角形を現在の更新領域に追加して、その四角形内のクライアント領域を無効にします。|
 |[CWnd::InvalidateRgn](#invalidatergn)|指定された領域を現在の更新領域に追加して、その領域内のクライアント領域を無効にします。|
 |[CWnd::InvokeHelper](#invokehelper)|ActiveX コントロール メソッドまたはプロパティを呼び出します。|
-|[CWnd::IsChild](#ischild)|`CWnd` が指定されたウィンドウの子ウィンドウか、または指定されたウィンドウの別の直系の子孫ウィンドウであるかを示します。|
+|[CWnd::IsChild](#ischild)|
+  `CWnd` が指定されたウィンドウの子ウィンドウか、または指定されたウィンドウの別の直系の子孫ウィンドウであるかを示します。|
 |[CWnd::IsD2DSupportEnabled](#isd2dsupportenabled)|D2D のサポートが有効になっているかどうかを判断します。|
 |[CWnd::IsDialogMessage](#isdialogmessage)|指定されたメッセージがモードレス ダイアログ ボックス用かどうかを判断します。モードレス ダイアログ ボックス用のメッセージである場合は、そのメッセージを処理します。|
 |[CWnd::IsDlgButtonChecked](#isdlgbuttonchecked)|ボタン コントロールがチェックされているかどうかを判断します。|
 |[CWnd::IsDynamicLayoutEnabled](#isdynamiclayoutenabled)|このウィンドウで動的レイアウトが有効かどうかを判断します。 動的レイアウトが有効な場合は、ユーザーが親ウィンドウのサイズを変更したときに、子ウィンドウの位置とサイズを変更できます。|
-|[CWnd::IsIconic](#isiconic)|`CWnd` が最小化 (アイコン化) されているかどうかを判断します。|
-|[CWnd::IsTouchWindow](#istouchwindow)|`CWnd` でタッチ操作がサポートされているかどうかを示します。|
+|[CWnd::IsIconic](#isiconic)|
+  `CWnd` が最小化 (アイコン化) されているかどうかを判断します。|
+|[CWnd::IsTouchWindow](#istouchwindow)|
+  `CWnd` でタッチ操作がサポートされているかどうかを示します。|
 |[CWnd::IsWindowEnabled](#iswindowenabled)|ウィンドウでマウス入力およびキーボード入力が有効かどうかを判断します。|
 |[CWnd::IsWindowVisible](#iswindowvisible)|ウィンドウが表示可能かどうかを判断します。|
-|[CWnd::IsZoomed](#iszoomed)|`CWnd` が最大表示されているかどうかを判断します。|
+|[CWnd::IsZoomed](#iszoomed)|
+  `CWnd` が最大表示されているかどうかを判断します。|
 |[CWnd::KillTimer](#killtimer)|システム タイマーを中止します。|
 |[CWnd::LockWindowUpdate](#lockwindowupdate)|指定されたウィンドウでの描画を無効化、または再有効化します。|
 |[CWnd::MapWindowPoints](#mapwindowpoints)|複数の点を `CWnd` の座標空間から他のウィンドウの座標空間へ変換 (マップ) します。|
 |[CWnd::MessageBox](#messagebox)|アプリケーションで用意されたメッセージとキャプションを含むウィンドウを作成し、表示します。|
 |[CWnd::ModifyStyle](#modifystyle)|現在のウィンドウ スタイルを変更します。|
 |[CWnd::ModifyStyleEx](#modifystyleex)|ウィンドウの拡張スタイルを変更します。|
-|[CWnd::MoveWindow](#movewindow)|`CWnd` の位置と寸法を変更します。|
+|[CWnd::MoveWindow](#movewindow)|
+  `CWnd` の位置と寸法を変更します。|
 |[CWnd::NotifyWinEvent](#notifywinevent)|定義済みイベントが発生したことをシステムに通知します。|
 |[CWnd::OnAmbientProperty](#onambientproperty)|アンビエント プロパティ値を実装します。|
 |[CWnd::OnDrawIconicThumbnailOrLivePreview](#ondrawiconicthumbnailorlivepreview)|Windows 7 のタブのサムネイルに表示する、またはアプリケーションのピーク用にクライアントで表示するビットマップを取得する必要があるときに、フレームワークによって呼び出されます。|
@@ -1024,7 +1047,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OpenClipboard](#openclipboard)|クリップボードを開きます。 他のアプリケーションでは、まで、Windows クリップボードを変更できません[CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard)関数が呼び出されます。|
 |[CWnd::PaintWindowlessControls](#paintwindowlesscontrols)|コントロール コンテナーのウィンドウなしのコントロールを描画します。|
 |[CWnd::PostMessage](#postmessage)|メッセージをアプリケーション キューに配置し、ウィンドウがメッセージを処理するのを待たずに制御を返します。|
-|[CWnd::PreCreateWindow](#precreatewindow)|`CWnd` オブジェクトに関連付けられている Windows のウィンドウが作成される前に呼び出されます。|
+|[CWnd::PreCreateWindow](#precreatewindow)|
+  `CWnd` オブジェクトに関連付けられている Windows のウィンドウが作成される前に呼び出されます。|
 |[CWnd::PreSubclassWindow](#presubclasswindow)|により、前に発生するために必要なその他のサブクラス化[SubclassWindow](#subclasswindow)が呼び出されます。|
 |[CWnd::PreTranslateMessage](#pretranslatemessage)|ウィンドウ メッセージが Windows 関数の `TranslateMessage` および `DispatchMessage` にディスパッチされる前に、メッセージにフィルターをかけるために `CWinApp` によって使用されます。|
 |[CWnd::Print](#print)|指定されたデバイス コンテキストで現在のウィンドウを描画します。|
@@ -1037,10 +1061,12 @@ class CWnd : public CCmdTarget
 |[CWnd::RunModalLoop](#runmodalloop)|モーダル ステータスであるウィンドウのメッセージを取得、変換、またはディスパッチします。|
 |[CWnd::ScreenToClient](#screentoclient)|ディスプレイ上の指定された点または四角形の画面座標をクライアント座標に変換します。|
 |[CWnd::ScrollWindow](#scrollwindow)|クライアント領域の内容をスクロールします。|
-|[CWnd::ScrollWindowEx](#scrollwindowex)|クライアント領域の内容をスクロールします。 `ScrollWindow` と同様に、追加機能があります。|
+|[CWnd::ScrollWindowEx](#scrollwindowex)|クライアント領域の内容をスクロールします。 
+  `ScrollWindow` と同様に、追加機能があります。|
 |[CWnd::SendChildNotifyLastMsg](#sendchildnotifylastmsg)|子ウィンドウがタスクを処理できるように、親ウィンドウから子ウィンドウへ通知メッセージを送信します。|
 |[CWnd::SendDlgItemMessage](#senddlgitemmessage)|指定されたコントロールにメッセージを送信します。|
-|[CWnd::SendMessage](#sendmessage)|`CWnd` オブジェクトにメッセージを送信し、メッセージが処理されるまで待機します。|
+|[CWnd::SendMessage](#sendmessage)|
+  `CWnd` オブジェクトにメッセージを送信し、メッセージが処理されるまで待機します。|
 |[CWnd::SendMessageToDescendants](#sendmessagetodescendants)|対象となるウィンドウのすべての子孫ウィンドウにメッセージを送信します。|
 |[CWnd::SendNotifyMessage](#sendnotifymessage)|指定されたメッセージをウィンドウに送信し、呼び出し元のスレッドがウィンドウを作成したかどうかに応じて、できるだけ早く制御を返します。|
 |[CWnd::SetActiveWindow](#setactivewindow)|ウィンドウをアクティブにします。|
@@ -1056,10 +1082,12 @@ class CWnd : public CCmdTarget
 |[CWnd::SetIcon](#seticon)|特定のアイコンへのハンドルを設定します。|
 |[CWnd::SetLayeredWindowAttributes](#setlayeredwindowattributes)|レイヤード ウィンドウの不透明度および透明度のカラー キーを設定します。|
 |[CWnd::SetMenu](#setmenu)|メニューを指定されたメニューに設定します。|
-|[CWnd::SetOwner](#setowner)|`CWnd` のオーナーを変更します。|
+|[CWnd::SetOwner](#setowner)|
+  `CWnd` のオーナーを変更します。|
 |[CWnd::SetParent](#setparent)|親ウィンドウを変更します。|
 |[CWnd::SetProperty](#setproperty)|ActiveX コントロール プロパティを設定します。|
-|[CWnd::SetRedraw](#setredraw)|`CWnd` の変更内容を再描画したり、または再描画を禁止したりできます。|
+|[CWnd::SetRedraw](#setredraw)|
+  `CWnd` の変更内容を再描画したり、または再描画を禁止したりできます。|
 |[CWnd::SetScrollInfo](#setscrollinfo)|スクロール バーの情報を設定します。|
 |[CWnd::SetScrollPos](#setscrollpos)|スクロール ボックスの現在位置を設定します。また、指定されている場合は、新しい位置で表示されるようにスクロール バーを再描画します。|
 |[CWnd::SetScrollRange](#setscrollrange)|指定されたスクロール バーの最小位置と最大位置の値を設定します。|
@@ -1075,7 +1103,8 @@ class CWnd : public CCmdTarget
 |[CWnd::ShowWindow](#showwindow)|ウィンドウを表示または非表示にします。|
 |[CWnd::SubclassDlgItem](#subclassdlgitem)|Windows コントロールを `CWnd` オブジェクトに関連付け、`CWnd` のメッセージ マップを通じてそのオブジェクトにメッセージを送信します。|
 |[CWnd::SubclassWindow](#subclasswindow)|ウィンドウを `CWnd` オブジェクトに関連付け、その `CWnd` のメッセージ マップを通じてメッセージがルーティングされるようにします。|
-|[CWnd::UnlockWindowUpdate](#unlockwindowupdate)|`CWnd::LockWindowUpdate` でロックされていたウィンドウのロックを解除します。|
+|[CWnd::UnlockWindowUpdate](#unlockwindowupdate)|
+  `CWnd::LockWindowUpdate` でロックされていたウィンドウのロックを解除します。|
 |[CWnd::UnsubclassWindow](#unsubclasswindow)|ウィンドウを切り離します、`CWnd`オブジェクト|
 |[CWnd::UpdateData](#updatedata)|ダイアログ ボックスのデータを初期化または取得します。|
 |[CWnd::UpdateDialogControls](#updatedialogcontrols)|ダイアログの各ボタンの状態および他のコントロールの状態を更新します。|
@@ -1096,20 +1125,24 @@ class CWnd : public CCmdTarget
 |[CWnd::GetCurrentMessage](#getcurrentmessage)|ウィンドウが現在処理しているメッセージへのポインターを返します。 必要がある場合にのみ呼び出す、 `On`*メッセージ*メッセージ ハンドラー メンバー関数。|
 |[CWnd::InitDynamicLayout](#initdynamiclayout)|ウィンドウの動的レイアウトを初期化するために、フレームワークによって呼び出されます。|
 |[CWnd::LoadDynamicLayoutResource](#loaddynamiclayoutresource)|リソース ファイルから動的レイアウト情報を読み込みます。|
-|[CWnd::OnActivate](#onactivate)|`CWnd` がアクティブまたは非アクティブになるときに呼び出されます。|
+|[CWnd::OnActivate](#onactivate)|
+  `CWnd` がアクティブまたは非アクティブになるときに呼び出されます。|
 |[CWnd::OnActivateApp](#onactivateapp)|アプリケーションがアクティブまたは非アクティブになるときに呼び出されます。|
 |[CWnd::OnAppCommand](#onappcommand)|ユーザーがアプリケーションのコマンド イベントを生成するときに呼び出されます。|
 |[CWnd::OnAskCbFormatName](#onaskcbformatname)|クリップボード オーナーがクリップボードの内容を表示するときに、クリップボード ビューアーによって呼び出されます。|
-|[CWnd::OnCancelMode](#oncancelmode)|`CWnd` でマウスのキャプチャなどの内部モードを取り消すことができるようにするために呼び出されます。|
+|[CWnd::OnCancelMode](#oncancelmode)|
+  `CWnd` でマウスのキャプチャなどの内部モードを取り消すことができるようにするために呼び出されます。|
 |[CWnd::OnCaptureChanged](#oncapturechanged)|マウス キャプチャを失うウィンドウにメッセージを送信します。|
 |[CWnd::OnChangeCbChain](#onchangecbchain)|指定されたウィンドウがチェインから削除されようとしていることを通知します。|
 |[CWnd::OnChangeUIState](#onchangeuistate)|ユーザー インターフェイス (UI) 状態を変更する必要があるときに呼び出されます。|
 |[CWnd::OnChar](#onchar)|キーストロークが非システム文字に変換されるときに呼び出されます。|
 |[CWnd::OnCharToItem](#onchartoitem)|子のリスト ボックスによって呼び出される、 [LBS_WANTKEYBOARDINPUT](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)スタイルへの応答を[WM_CHAR](#onchar)メッセージ。|
-|[CWnd::OnChildActivate](#onchildactivate)|`CWnd` のサイズや位置が変更されたり、`CWnd` がアクティブになったりした場合に、マルチ ドキュメント インターフェイス (MDI) 子ウィンドウに対して呼び出されます。|
+|[CWnd::OnChildActivate](#onchildactivate)|
+  `CWnd` のサイズや位置が変更されたり、`CWnd` がアクティブになったりした場合に、マルチ ドキュメント インターフェイス (MDI) 子ウィンドウに対して呼び出されます。|
 |[CWnd::OnChildNotify](#onchildnotify)|親ウィンドウによって呼び出されます。親ウィンドウにメッセージを送るコントロールが、コントロール通知に対応できるようにします。|
 |[CWnd::OnClipboardUpdate](#onclipboardupdate)|クリップボードの内容が変更されたときに呼び出されます。|
-|[CWnd::OnClose](#onclose)|`CWnd` を終了するシグナルとして呼び出されます。|
+|[CWnd::OnClose](#onclose)|
+  `CWnd` を終了するシグナルとして呼び出されます。|
 |[CWnd::OnColorizationColorChanged](#oncolorizationcolorchanged)|非クライアント領域のレンダリングのポリシーが変更されたときに呼び出されます。|
 |[CWnd::OnCommand](#oncommand)|ユーザーがコマンドを選択すると呼び出されます。|
 |[CWnd::OnCompacting](#oncompacting)|Windows がシステム メモリの低下を検出すると呼び出されます。|
@@ -1118,17 +1151,20 @@ class CWnd : public CCmdTarget
 |[CWnd::OnContextMenu](#oncontextmenu)|ウィンドウ内でマウスの右ボタンをクリックすると呼び出されます。|
 |[CWnd::OnCopyData](#oncopydata)|あるアプリケーションから他のアプリケーションにデータをコピーします。|
 |[CWnd::OnCreate](#oncreate)|ウィンドウの作成の一部として呼び出されます。|
-|[CWnd::OnCtlColor](#onctlcolor)|`CWnd` がコントロールの親である場合、コントロールの描画時に呼び出されます。|
+|[CWnd::OnCtlColor](#onctlcolor)|
+  `CWnd` がコントロールの親である場合、コントロールの描画時に呼び出されます。|
 |[CWnd::OnDeadChar](#ondeadchar)|キーストロークが非システムのデッド文字 (アクセント記号付き文字など) に変換されるときに呼び出されます。|
 |[CWnd::OnDeleteItem](#ondeleteitem)|オーナー描画の子リスト ボックスやコンボ ボックスが破棄されるとき、または項目がコントロールから削除されるときに呼び出されます。|
-|[CWnd::OnDestroy](#ondestroy)|`CWnd` が破棄されているときに呼び出されます。|
+|[CWnd::OnDestroy](#ondestroy)|
+  `CWnd` が破棄されているときに呼び出されます。|
 |[CWnd::OnDestroyClipboard](#ondestroyclipboard)|Windows を呼び出すことによって、クリップボードが空になったときに呼び出されます[EmptyClipboard](/windows/desktop/api/winuser/nf-winuser-emptyclipboard)関数。|
 |[CWnd::OnDeviceChange](#ondevicechange)|デバイスやコンピューターのハードウェア構成が変更されたときに、アプリケーションまたはデバイス ドライバーに通知します。|
 |[CWnd::OnDevModeChange](#ondevmodechange)|ユーザーがデバイス モードの設定を変更したときに、すべてのトップ レベルのウィンドウに対して呼び出されます。|
 |[CWnd::OnDrawClipboard](#ondrawclipboard)|クリップボードの内容が変更されるときに呼び出されます。|
 |[CWnd::OnDrawItem](#ondrawitem)|オーナー描画の子ボタン コントロール、コンボ ボックス コントロール、リスト ボックス コントロール、またはメニューの外観を描画する必要があるときに呼び出されます。|
 |[CWnd::OnDropFiles](#ondropfiles)|ドロップされたファイルを受け取るように登録したウィンドウ上で、ユーザーがマウスの左ボタンを離したときに呼び出されます。|
-|[CWnd::OnEnable](#onenable)|`CWnd` が有効または無効になるときに呼び出されます。|
+|[CWnd::OnEnable](#onenable)|
+  `CWnd` が有効または無効になるときに呼び出されます。|
 |[CWnd::OnEndSession](#onendsession)|セッションが終了するときに呼び出されます。|
 |[CWnd::OnEnterIdle](#onenteridle)|モーダル ダイアログ ボックスまたはメニューがアイドル状態になることをアプリケーションのメイン ウィンドウ プロシージャに通知するために呼び出されます。|
 |[CWnd::OnEnterMenuLoop](#onentermenuloop)|メニュー モーダル ループに入るときに呼び出されます。|
@@ -1141,9 +1177,11 @@ class CWnd : public CCmdTarget
 |[CWnd::OnGetMinMaxInfo](#ongetminmaxinfo)|Windows が最大表示されたときの位置や寸法、または最小や最大のトラッキング サイズを知る必要があるときに、必ず呼び出されます。|
 |[CWnd::OnHelpInfo](#onhelpinfo)|ユーザーが F1 キーを押したときに、フレームワークによって呼び出されます。|
 |[CWnd::OnHotKey](#onhotkey)|ユーザーがシステム全体でのショートカット キーを押したときに呼び出されます。|
-|[CWnd::OnHScroll](#onhscroll)|`CWnd` の水平スクロール バーをクリックすると、呼び出されます。|
+|[CWnd::OnHScroll](#onhscroll)|
+  `CWnd` の水平スクロール バーをクリックすると、呼び出されます。|
 |[CWnd::OnHScrollClipboard](#onhscrollclipboard)|クリップボード オーナーがクリップボード内のイメージをスクロールし、適切な部分を無効にし、スクロール バーの値を更新する必要がある場合に呼び出されます。|
-|[CWnd::OnIconEraseBkgnd](#oniconerasebkgnd)|`CWnd` が最小化 (アイコン化) され、アイコンを描画する前にアイコンの背景を設定する必要があるときに呼び出されます。|
+|[CWnd::OnIconEraseBkgnd](#oniconerasebkgnd)|
+  `CWnd` が最小化 (アイコン化) され、アイコンを描画する前にアイコンの背景を設定する必要があるときに呼び出されます。|
 |[CWnd::OnInitMenu](#oninitmenu)|メニューがアクティブになるときに呼び出されます。|
 |[CWnd::OnInitMenuPopup](#oninitmenupopup)|ポップアップ メニューがアクティブになるときに呼び出されます。|
 |[CWnd::OnInputDeviceChange](#oninputdevicechange)|I/O デバイスがシステムで追加または削除されたときに呼び出されます。|
@@ -1151,7 +1189,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnInputLangChangeRequest](#oninputlangchangerequest)|ユーザーが新しい入力言語を選択するときに呼び出されます。|
 |[CWnd::OnKeyDown](#onkeydown)|非システム キーが押されると呼び出されます。|
 |[CWnd::OnKeyUp](#onkeyup)|非システム キーが離されると呼び出されます。|
-|[CWnd::OnKillFocus](#onkillfocus)|`CWnd` が入力フォーカスを失う直前に呼び出されます。|
+|[CWnd::OnKillFocus](#onkillfocus)|
+  `CWnd` が入力フォーカスを失う直前に呼び出されます。|
 |[CWnd::OnLButtonDblClk](#onlbuttondblclk)|マウスの左ボタンをダブルクリックすると呼び出されます。|
 |[CWnd::OnLButtonDown](#onlbuttondown)|マウスの左ボタンを押すと呼び出されます。|
 |[CWnd::OnLButtonUp](#onlbuttonup)|マウスの左ボタンを離すと呼び出されます。|
@@ -1171,13 +1210,15 @@ class CWnd : public CCmdTarget
 |[CWnd::OnMouseLeave](#onmouseleave)|前回の呼び出しで指定されたウィンドウのクライアント領域をカーソルが離れるときに呼び出されます[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)します。|
 |[CWnd::OnMouseMove](#onmousemove)|マウスのカーソルの移動時に呼び出されます。|
 |[CWnd::OnMouseWheel](#onmousewheel)|マウス ホイールの回転時に呼び出されます。 Windows NT 4.0 メッセージ処理を使用します。|
-|[CWnd::OnMove](#onmove)|`CWnd` の位置が変更されると、呼び出されます。|
+|[CWnd::OnMove](#onmove)|
+  `CWnd` の位置が変更されると、呼び出されます。|
 |[CWnd::OnMoving](#onmoving)|ユーザーが `CWnd` オブジェクトを移動中であることを示します。|
 |[CWnd::OnNcActivate](#onncactivate)|アクティブまたは非アクティブ状態を示すために、非クライアント領域を変更する必要があるときに呼び出されます。|
 |[CWnd::OnNcCalcSize](#onnccalcsize)|クライアント領域のサイズと位置を計算する必要があるときに呼び出されます。|
 |[CWnd::OnNcCreate](#onnccreate)|前に呼び出されます[OnCreate](#oncreate)非クライアント領域の作成時。|
 |[CWnd::OnNcDestroy](#onncdestroy)|非クライアント領域が破棄されるときに呼び出されます。|
-|[CWnd::OnNcHitTest](#onnchittest)|`CWnd` がカーソルを含む場合、または `SetCapture` を使用してマウス入力をキャプチャした場合に、マウスを移動するごとに Windows によって呼び出されます。|
+|[CWnd::OnNcHitTest](#onnchittest)|
+  `CWnd` がカーソルを含む場合、または `SetCapture` を使用してマウス入力をキャプチャした場合に、マウスを移動するごとに Windows によって呼び出されます。|
 |[CWnd::OnNcLButtonDblClk](#onnclbuttondblclk)|カーソルが `CWnd` の非クライアント領域内にあるときに、マウスの左ボタンをダブルクリックすると呼び出されます。|
 |[CWnd::OnNcLButtonDown](#onnclbuttondown)|カーソルが `CWnd` の非クライアント領域内にあるときに、マウスの左ボタンを押すと呼び出されます。|
 |[CWnd::OnNcLButtonUp](#onnclbuttonup)|カーソルが `CWnd` の非クライアント領域内にあるときに、マウスの左ボタンを離すと呼び出されます。|
@@ -1186,7 +1227,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnNcMButtonUp](#onncmbuttonup)|カーソルが `CWnd` の非クライアント領域内にあるときに、マウスの中央ボタンを離すと呼び出されます。|
 |[CWnd::OnNcMouseHover](#onncmousehover)|前回の呼び出しで指定された期間、ウィンドウの非クライアント領域上にカーソルがときに呼び出されます[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)します。|
 |[CWnd::OnNcMouseLeave](#onncmouseleave)|前回の呼び出しで指定されたウィンドウの非クライアント領域をカーソルが離れるときに、フレームワークはこのメンバー関数を呼び出します[TrackMouseEvent](/windows/desktop/api/winuser/nf-winuser-trackmouseevent)します。|
-|[CWnd::OnNcMouseMove](#onncmousemove)|`CWnd` の非クライアント領域内でカーソルが移動するときに呼び出されます。|
+|[CWnd::OnNcMouseMove](#onncmousemove)|
+  `CWnd` の非クライアント領域内でカーソルが移動するときに呼び出されます。|
 |[CWnd::OnNcPaint](#onncpaint)|非クライアント領域を描画する必要があるときに呼び出されます。|
 |[CWnd::OnNcRButtonDblClk](#onncrbuttondblclk)|カーソルが `CWnd` の非クライアント領域内にあるときに、マウスの右ボタンをダブルクリックすると呼び出されます。|
 |[CWnd::OnNcRButtonDown](#onncrbuttondown)|カーソルが `CWnd` の非クライアント領域内にあるときに、マウスの右ボタンを押すと呼び出されます。|
@@ -1207,7 +1249,8 @@ class CWnd : public CCmdTarget
 |[CWnd::OnQueryDragIcon](#onquerydragicon)|最小化 (アイコン化) された `CWnd` をユーザーがドラッグするときに呼び出されます。|
 |[CWnd::OnQueryEndSession](#onqueryendsession)|ユーザーが Windows セッションを終了するときに呼び出されます。|
 |[CWnd::OnQueryNewPalette](#onquerynewpalette)|もうすぐ入力フォーカスを受け取ることを、`CWnd` に通知します。|
-|[CWnd::OnQueryOpen](#onqueryopen)|`CWnd` がアイコンであり、ユーザーがそのアイコンを開こうとしたときに呼び出されます。|
+|[CWnd::OnQueryOpen](#onqueryopen)|
+  `CWnd` がアイコンであり、ユーザーがそのアイコンを開こうとしたときに呼び出されます。|
 |[CWnd::OnQueryUIState](#onqueryuistate)|ウィンドウのユーザー インターフェイス (UI) 状態を取得するために呼び出されます。|
 |[CWnd::OnRawInput](#onrawinput)|現在のウィンドウが生の入力を取得するときに呼び出されます。|
 |[CWnd::OnRButtonDblClk](#onrbuttondblclk)|マウスの右ボタンをダブルクリックすると呼び出されます。|
@@ -1217,10 +1260,13 @@ class CWnd : public CCmdTarget
 |[CWnd::OnRenderFormat](#onrenderformat)|遅延レンダリングされた固有フォーマットのレンダリングが必要なときに、クリップボード オーナーに対して呼び出されます。|
 |[CWnd::OnSessionChange](#onsessionchange)|セッション状態の変更をアプリケーションに通知するために呼び出されます。|
 |[CWnd::OnSetCursor](#onsetcursor)|マウス入力がキャプチャされずに、ウィンドウ内のカーソルが移動された場合に呼び出されます。|
-|[CWnd::OnSetFocus](#onsetfocus)|`CWnd` が入力フォーカスを取得すると呼び出されます。|
+|[CWnd::OnSetFocus](#onsetfocus)|
+  `CWnd` が入力フォーカスを取得すると呼び出されます。|
 |[CWnd::OnSettingChange](#onsettingchange)|Win32 `SystemParametersInfo` 関数がシステム全体の設定を変更するときに呼び出されます。|
-|[CWnd::OnShowWindow](#onshowwindow)|`CWnd` が非表示になるか表示されるときに呼び出されます。|
-|[CWnd::OnSize](#onsize)|`CWnd` のサイズが変更された後に呼び出されます。|
+|[CWnd::OnShowWindow](#onshowwindow)|
+  `CWnd` が非表示になるか表示されるときに呼び出されます。|
+|[CWnd::OnSize](#onsize)|
+  `CWnd` のサイズが変更された後に呼び出されます。|
 |[CWnd::OnSizeClipboard](#onsizeclipboard)|クリップボード ビューアー ウィンドウのクライアント領域のサイズが変更されたときに呼び出されます。|
 |[CWnd::OnSizing](#onsizing)|四角形のサイズを変更中であることを示します。|
 |[CWnd::OnSpoolerStatus](#onspoolerstatus)|プリント マネージャーのキューでジョブが追加または削除されるたびに、プリント マネージャーから呼び出されます。|
@@ -1255,7 +1301,8 @@ class CWnd : public CCmdTarget
 |[CWnd::ReflectChildNotify](#reflectchildnotify)|メッセージをソースに反映するヘルパー関数です。|
 |[CWnd::ReflectLastMsg](#reflectlastmsg)|最後のメッセージを子ウィンドウに反映します。|
 |[CWnd::ResizeDynamicLayout](#resizedynamiclayout)|ウィンドウで動的レイアウトが有効な場合、子ウィンドウのレイアウトを調整するためにウィンドウのサイズが変更されると、フレームワークによって呼び出されます。|
-|[CWnd::WindowProc](#windowproc)|`CWnd` にウィンドウ プロシージャを提供します。 既定では、メッセージ マップを通じてメッセージをディスパッチします。|
+|[CWnd::WindowProc](#windowproc)|
+  `CWnd` にウィンドウ プロシージャを提供します。 既定では、メッセージ マップを通じてメッセージをディスパッチします。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -1273,11 +1320,14 @@ class CWnd : public CCmdTarget
 
 ## <a name="remarks"></a>Remarks
 
-`CWnd` オブジェクトは、Windows のウィンドウとは異なりますが、両者は密接にリンクされています。 `CWnd` オブジェクトは、`CWnd` コンストラクターとデストラクターによって作成され、破棄されます。 Windows のウィンドウがによって作成される Windows の内部データ構造を一方では、`Create`メンバー関数によって破棄されると、`CWnd`仮想デストラクターです。 [DestroyWindow](#destroywindow)関数は、オブジェクトを破棄することがなく Windows ウィンドウを破棄します。
+
+  `CWnd` オブジェクトは、Windows のウィンドウとは異なりますが、両者は密接にリンクされています。 
+  `CWnd` オブジェクトは、`CWnd` コンストラクターとデストラクターによって作成され、破棄されます。 Windows のウィンドウがによって作成される Windows の内部データ構造を一方では、`Create`メンバー関数によって破棄されると、`CWnd`仮想デストラクターです。 [DestroyWindow](#destroywindow)関数は、オブジェクトを破棄することがなく Windows ウィンドウを破棄します。
 
 `CWnd`クラスと非表示にするメッセージ マップ機構、`WndProc`関数。 受信 Windows 通知メッセージは自動的に適切なメッセージ マップを通じてルーティング**で**<em>メッセージ</em>`CWnd`メンバー関数。 オーバーライドする、**で**<em>メッセージ</em>メンバー関数は、派生クラスでメンバーの特定のメッセージを処理します。
 
-`CWnd` クラスでは、アプリケーションの Windows 子ウィンドウも作成できます。 アプリケーション固有のデータを格納するには、`CWnd` からクラスを派生させ、その派生クラスにメンバー変数を追加します。 ウィンドウにメッセージが送られたときに行われる処理を指定するには、派生クラスにメッセージ処理メンバー関数とメッセージ マップを実装します。
+
+  `CWnd` クラスでは、アプリケーションの Windows 子ウィンドウも作成できます。 アプリケーション固有のデータを格納するには、`CWnd` からクラスを派生させ、その派生クラスにメンバー変数を追加します。 ウィンドウにメッセージが送られたときに行われる処理を指定するには、派生クラスにメッセージ処理メンバー関数とメッセージ マップを実装します。
 
 子ウィンドウは 2 つのステップで作成します。 最初に、コンス トラクターを呼び出す`CWnd`を構築する、`CWnd`オブジェクトを呼び出して、[作成](#create)メンバー関数は、子ウィンドウを作成し、アタッチ先、`CWnd`オブジェクト。
 
@@ -1642,7 +1692,8 @@ void BindProperty(
 
 ##  <a name="bringwindowtotop"></a>  CWnd::BringWindowToTop
 
-`CWnd` を重なったウィンドウのスタックの最上位に移動します。
+
+  `CWnd` を重なったウィンドウのスタックの最上位に移動します。
 
 ```
 void BringWindowToTop();
@@ -1650,9 +1701,11 @@ void BringWindowToTop();
 
 ### <a name="remarks"></a>Remarks
 
-また、`BringWindowToTop` により、ポップアップ ウィンドウ、トップレベル ウィンドウ、および MDI 子ウィンドウがアクティブになります。 `BringWindowToTop` メンバー関数は、重なったウィンドウによって部分的または完全に隠されているウィンドウを表示する場合に使用します。
+また、`BringWindowToTop` により、ポップアップ ウィンドウ、トップレベル ウィンドウ、および MDI 子ウィンドウがアクティブになります。 
+  `BringWindowToTop` メンバー関数は、重なったウィンドウによって部分的または完全に隠されているウィンドウを表示する場合に使用します。
 
-この関数では、Win32 呼び出します[BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)関数。 呼び出す、 [SetWindowPos](#setwindowpos) Z オーダーでウィンドウの位置を変更する関数。 `BringWindowToTop` 関数では、ウィンドウ スタイルが変更され、そのウィンドウがトップレベル ウィンドウになることはありません。 詳細については、次を参照してください[HWND_TOP と HWND_TOPMOST の違い。](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
+この関数では、Win32 呼び出します[BringWindowToTop](/windows/desktop/api/winuser/nf-winuser-bringwindowtotop)関数。 呼び出す、 [SetWindowPos](#setwindowpos) Z オーダーでウィンドウの位置を変更する関数。 
+  `BringWindowToTop` 関数では、ウィンドウ スタイルが変更され、そのウィンドウがトップレベル ウィンドウになることはありません。 詳細については、次を参照してください[HWND_TOP と HWND_TOPMOST の違い。](http://blogs.msdn.com/b/oldnewthing/archive/2005/11/21/495246.aspx)
 
 ### <a name="example"></a>例
 
@@ -2385,7 +2438,8 @@ virtual BOOL DestroyWindow();
 
 ##  <a name="detach"></a>  CWnd::Detach
 
-`CWnd` オブジェクトから Windows のハンドルを切り離し、そのハンドルを返します。
+
+  `CWnd` オブジェクトから Windows のハンドルを切り離し、そのハンドルを返します。
 
 ```
 HWND Detach();
@@ -3162,7 +3216,8 @@ Flash のステータスを指定します。 値の完全な一覧を参照し�
 
 ##  <a name="fromhandle"></a>  CWnd::FromHandle
 
-ウィンドウのハンドルが指定されている場合、`CWnd` オブジェクトへのポインターを返します。 `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。
+ウィンドウのハンドルが指定されている場合、`CWnd` オブジェクトへのポインターを返します。 
+  `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。
 
 ```
 static CWnd* PASCAL FromHandle(HWND hWnd);
@@ -3175,7 +3230,8 @@ Windows のウィンドウの HWND。
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウのハンドルが指定されている場合、`CWnd` オブジェクトへのポインターを返します。 `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。
+ウィンドウのハンドルが指定されている場合、`CWnd` オブジェクトへのポインターを返します。 
+  `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。
 
 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
@@ -3864,7 +3920,8 @@ CDC* GetDCEx(
 
 ##  <a name="getdcrendertarget"></a>  CWnd::GetDCRenderTarget
 
-`CWnd` ウィンドウのデバイス コンテキスト (DC) レンダー ターゲットを取得します。
+
+  `CWnd` ウィンドウのデバイス コンテキスト (DC) レンダー ターゲットを取得します。
 
 ```
 CDCRenderTarget* GetDCRenderTarget();
@@ -4162,7 +4219,8 @@ True の場合は 32 ピクセルのアイコンによって 32 ピクセルを�
 
 ##  <a name="getlastactivepopup"></a>  CWnd::GetLastActivePopup
 
-`CWnd` が所有するポップアップ ウィンドウのうち、直前にアクティブだったウィンドウを調べます。
+
+  `CWnd` が所有するポップアップ ウィンドウのうち、直前にアクティブだったウィンドウを調べます。
 
 ```
 CWnd* GetLastActivePopup() const;
@@ -4454,7 +4512,8 @@ CWnd* GetParentOwner() const;
 
 ### <a name="return-value"></a>戻り値
 
-`CWnd` オブジェクトへのポインター。 `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
+`CWnd` オブジェクトへのポインター。 
+  `CWnd` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CWnd` オブジェクトが生成され、関連付けられます。 ポインターは一時的である可能性があり、後で使用するために格納しないでください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -5483,7 +5542,8 @@ BOOL IsIconic() const;
 
 ##  <a name="istouchwindow"></a>  CWnd::IsTouchWindow
 
-`CWnd` でタッチ操作がサポートされているかどうかを示します。
+
+  `CWnd` でタッチ操作がサポートされているかどうかを示します。
 
 ```
 BOOL IsTouchWindow() const;

@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CScrollBar [MFC], SetScrollRange
 - CScrollBar [MFC], ShowScrollBar
 ms.assetid: f3735ca5-73ea-46dc-918b-4d824c9fe47f
-ms.openlocfilehash: 3b8e7dc78ddfa22097c97fb4e97fff92f0984c07
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d677d72b7e758fcdaa7df0e2918e9bbec3e18ee9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571263"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263114"
 ---
 # <a name="cscrollbar-class"></a>CScrollBar クラス
 
@@ -194,7 +194,8 @@ BOOL EnableScrollBar(UINT nArrowFlags = ESB_ENABLE_BOTH);
 
 ##  <a name="getscrollbarinfo"></a>  CScrollBar::GetScrollBarInfo
 
-`SCROLLBARINFO` 構造体がスクロール バーについて保持している情報を取得します。
+
+  `SCROLLBARINFO` 構造体がスクロール バーについて保持している情報を取得します。
 
 ```
 BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
@@ -215,7 +216,8 @@ BOOL GetScrollBarInfo(PSCROLLBARINFO pScrollInfo) const;
 
 ##  <a name="getscrollinfo"></a>  CScrollBar::GetScrollInfo
 
-`SCROLLINFO` 構造体がスクロール バーについて保持している情報を取得します。
+
+  `SCROLLINFO` 構造体がスクロール バーについて保持している情報を取得します。
 
 ```
 BOOL GetScrollInfo(
@@ -298,7 +300,7 @@ void GetScrollRange(
 *lpMinPos*<br/>
 最小の位置を受け取る整数変数を指します。
 
-*最大位置*<br/>
+*lpMaxPos*<br/>
 最大の位置を受け取る整数変数を指します。
 
 ### <a name="remarks"></a>Remarks

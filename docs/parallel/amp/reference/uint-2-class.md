@@ -28,12 +28,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::uint_2::operator++
 - amp_short_vectors/Concurrency::graphics::uint_2::rg
 ms.assetid: 9fcc9129-72b1-4da7-9012-4d3be15f1c52
-ms.openlocfilehash: dc7b00d70a4f816845f5741bf605f1c1bb631ee2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42c4f238e7277174a5f6b04a9e692f541b32a3e0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589359"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296724"
 ---
 # <a name="uint2-class"></a>uint_2 クラス
 
@@ -122,7 +122,7 @@ class uint_2;
 
 **ヘッダー:** amp_short_vectors.h
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency::graphics
 
 ##  <a name="ctor"></a> uint_2
 
@@ -174,7 +174,7 @@ explicit inline uint_2(
 *_V1*<br/>
 1 要素を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>

@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: f722268cbba2e63227836188c26d8c3d1b0b5c2e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b221abf772df06541ecde247a9db9401c0ed3c3a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631036"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278016"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar クラス
 
@@ -146,7 +146,7 @@ BOOL Create(
 *pParentWnd*<br/>
 [入力、出力]この rebar コントロールの親ウィンドウへのポインター。
 
-*ツール バー*<br/>
+*dwCtrlStyle*<br/>
 [in]Rebar コントロールのスタイルを指定します。 既定のスタイルの値は**RBS_BANDBORDERS**これが表示されますが、rebar コントロールでの隣接するバンドの区切り線を絞り込みます。 有効なスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)Windows SDK のドキュメント。
 
 *dwStyle*<br/>
@@ -188,7 +188,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="parameters"></a>パラメーター
 
 [in]*bStretch*<br/>
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -280,7 +280,7 @@ virtual void SetPaneAlignment(DWORD dwAlignment);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*場合*<br/>
+[in] *dwAlignment*<br/>
 
 ### <a name="remarks"></a>Remarks
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CMFCTabDropTarget [MFC], OnDropEx
 - CMFCTabDropTarget [MFC], Register
 ms.assetid: 9777b7b6-10da-4c4b-b1d1-7ea795b0f1cb
-ms.openlocfilehash: bd68179be21fec85c0ebb901c2a8c9a4491ff401
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b24d7679edfaab4d4eeb6d59770f30cd4253580
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534828"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303938"
 ---
 # <a name="cmfctabdroptarget-class"></a>CMFCTabDropTarget クラス
 
@@ -40,7 +40,7 @@ class CMFCTabDropTarget : public COleDropTarget
 |||
 |-|-|
 |名前|説明|
-|`CMFCTabDropTarget::CMFCTabDropTarget`|既定のコンストラクター|
+|`CMFCTabDropTarget::CMFCTabDropTarget`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -61,7 +61,8 @@ class CMFCTabDropTarget : public COleDropTarget
 
 ## <a name="example"></a>例
 
-`CMFCTabDropTarget` オブジェクトを構築して、その `Register` メソッドを使用する方法を、次の例に示します。
+
+  `CMFCTabDropTarget` オブジェクトを構築して、その `Register` メソッドを使用する方法を、次の例に示します。
 
 [!code-cpp[NVC_MFC_RibbonApp#39](../../mfc/reference/codesnippet/cpp/cmfctabdroptarget-class_1.cpp)]
 
@@ -98,7 +99,7 @@ virtual DROPEFFECT OnDragEnter(
 |パラメーター|説明|
 |*我が物*|[in]使用されていません。|
 |*pDataObject*|[in]ユーザーがドラッグされるオブジェクトへのポインター。|
-|*ドロップ*|[in]修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。|
+|*dwKeyState*|[in]修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。|
 |*ポイント*|[in]クライアント座標でのカーソルの位置。|
 
 ### <a name="return-value"></a>戻り値
@@ -159,7 +160,7 @@ virtual DROPEFFECT OnDragOver(
 |パラメーター|説明|
 |*我が物*|[in]使用されていません。|
 |*pDataObject*|[in]ユーザーがドラッグされるオブジェクトへのポインター。|
-|*ドロップ*|[in]修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。|
+|*dwKeyState*|[in]修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。|
 |*ポイント*|[in]クライアント座標でマウス ポインターの位置。|
 
 ### <a name="return-value"></a>戻り値
@@ -203,7 +204,7 @@ virtual DROPEFFECT OnDropEx(
 |*我が物*|[in]使用されていません。|
 |*pDataObject*|[in]ユーザーがドラッグされるオブジェクトへのポインター。|
 |*dropEffect*|[in]既定のドロップ操作。|
-|*ドロップダウン リスト*|[in]使用されていません。|
+|*dropList*|[in]使用されていません。|
 |*ポイント*|[in]クライアント座標でマウス ポインターの位置。|
 
 ### <a name="return-value"></a>戻り値
@@ -254,4 +255,3 @@ BOOL Register(CMFCBaseTabCtrl *pOwner);
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)
-

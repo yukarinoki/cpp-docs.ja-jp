@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Control Wizard, options
 ms.assetid: 4607c51a-992d-433e-9281-919c6f519a3d
-ms.openlocfilehash: e607e35b2b3970f329692ba8d2c612d7f6a6591b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 1dd136739162c72d8064deb9b1498794f1985e1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522312"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282982"
 ---
 # <a name="options-atl-control-wizard"></a>オプション、ATL コントロール ウィザード
 
@@ -23,9 +23,9 @@ ms.locfileid: "51522312"
 
 作成するコントロールの種類。
 
-- **標準コントロール**: ActiveX コントロール。
+- **標準コントロール**:ActiveX コントロール。
 
-- **複合コントロール**: ActiveX コントロール (ダイアログ ボックスに似ています) を含めることができる他の ActiveX コントロールまたは Windows のコントロール。 複合コントロールを次のとおりです。
+- **複合コントロール**:ActiveX コントロール (ダイアログ ボックスに似ています) を含めることができる他の ActiveX コントロールまたは Windows のコントロール。 複合コントロールを次のとおりです。
 
   - 複合コントロールを実装するダイアログ ボックスのテンプレート。
 
@@ -39,7 +39,7 @@ ms.locfileid: "51522312"
 
     既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。 シンクのマップを実装します。 詳細については、次を参照してください。 [DHTML コントロールのサポート](../../atl/atl-support-for-dhtml-controls.md)します。
 
-- **DHTML コントロール**: An ATL DHTML コントロールが HTML を使用して、ユーザー インターフェイスを指定します。 DHTML UI クラスには、COM マップが含まれています。 既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。
+- **DHTML コントロール**:ATL DHTML コントロールでは、HTML を使用して、ユーザー インターフェイスを指定します。 DHTML UI クラスには、COM マップが含まれています。 既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。
 
    詳細については、次を参照してください。 [DHTML コントロール プロジェクトの要素の識別](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)します。
 
@@ -51,25 +51,25 @@ ms.locfileid: "51522312"
 
 作成するコントロールの集計のサポートを追加します。 詳細については、次を参照してください。[集計](../../atl/aggregation.md)します。
 
-- **[はい]**: 集計が可能なコントロールを作成します。
+- **[はい]**:集計可能なコントロールを作成します。
 
-- **いいえ**: 集計が不可能なコントロールを作成します。
+- **いいえ**:集計が不可能なコントロールを作成します。
 
-- **のみ**: 集計をのみインスタンス化するコントロールを作成します。
+- **のみ**:集計をのみインスタンス化するコントロールを作成します。
 
 ### <a name="threading-model"></a>スレッド モデル
 
 スレッド処理モデルが、コントロールによって使用されることを指定します。
 
-- **1 つ**: コントロールがプライマリ COM スレッドでのみ実行されます。
+- **1 つ**:コントロールは、プライマリ COM スレッドでのみ実行されます。
 
-- **アパートメント**: 任意の 1 つのスレッド アパートメントでコントロールを作成できます。 これが既定値です。
+- **アパートメント**:コントロールは、任意の 1 つのスレッド アパートメントで作成できます。 これが既定値です。
 
 ### <a name="interface"></a>Interface
 
 このコントロールがコンテナーに公開するインターフェイスの型。
 
-- **デュアル**: プロパティとメソッドを公開するインターフェイスを作成します。 `IDispatch` 、VTBL を介して直接、します。
+- **デュアル**:プロパティとメソッドを公開するインターフェイスを作成します。 `IDispatch` 、VTBL を介して直接、します。
 
 - **カスタム**: VTBL によって直接メソッドを公開するインターフェイスを作成します。
 
@@ -81,11 +81,10 @@ ms.locfileid: "51522312"
 
 コントロールの他のサポートを設定します。
 
-- **接続ポイント**: オブジェクトの接続ポイントからの派生オブジェクトのクラスを作成することにより[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)とソース インターフェイスを公開することができます。
+- **接続ポイント**:オブジェクトの接続ポイントからの派生オブジェクトのクラスを作成することにより[IConnectionPointContainerImpl](../../atl/reference/iconnectionpointcontainerimpl-class.md)とソース インターフェイスを公開することができます。
 
-- **ライセンス**: コントロールのサポートが追加[ライセンス](/windows/desktop/com/licensing)します。 クライアント コンピューターに適切なライセンスがある場合にのみ、ライセンスされたコントロールをホストすることができます。
+- **ライセンス**:コントロールのサポートが追加[ライセンス](/windows/desktop/com/licensing)します。 クライアント コンピューターに適切なライセンスがある場合にのみ、ライセンスされたコントロールをホストすることができます。
 
 ## <a name="see-also"></a>関連項目
 
 [ATL コントロール ウィザード](../../atl/reference/atl-control-wizard.md)
-

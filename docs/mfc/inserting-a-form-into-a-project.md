@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Insert New dialog box [MFC]
 - forms, adding to projects
 ms.assetid: f3bd2998-3ce2-496d-ac5c-57ca70eec7cb
-ms.openlocfilehash: 5f5758e84e89f23f06fb9d5f2fa97220d0279725
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fa344f2d84b39be4ee36fd845edb82c14b6c519
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666623"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286531"
 ---
 # <a name="inserting-a-form-into-a-project"></a>プロジェクトへのフォームの挿入
 
@@ -42,4 +42,3 @@ Visual C から開始できるように、ダイアログ エディター内で�
 ## <a name="see-also"></a>関連項目
 
 [フォーム ビュー](../mfc/form-views-mfc.md)
-

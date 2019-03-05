@@ -12,16 +12,17 @@ f1_keywords:
 helpviewer_keywords:
 - tile_barrier class
 ms.assetid: b4ccdccb-0032-4e11-b7bd-dc9d43445dee
-ms.openlocfilehash: 7902ba2315fe348789527e755e124e7fc0ba965f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4336a4cc317344c881f60e5ed4c5bdf8328a34b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301169"
 ---
 # <a name="tilebarrier-class"></a>tile_barrier クラス
 
-`wait` メソッドを使用してスレッド グループ (タイル) で実行されているスレッドの実行を同期します。 ランタイムのみがこのクラスをインスタンス化できます。
+
+  `wait` メソッドを使用してスレッド グループ (タイル) で実行されているスレッドの実行を同期します。 ランタイムのみがこのクラスをインスタンス化できます。
 
 ### <a name="syntax"></a>構文
 
@@ -54,7 +55,7 @@ class tile_barrier;
 
 **ヘッダー:** amp.h
 
-**名前空間:** Concurrency
+**名前空間:** コンカレンシー
 
 ## <a name="tile_barrier__ctor"></a>  tile_barrier コンス トラクター
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ActiveX controls [MFC], testing
 - properties [MFC], testing
 ms.assetid: 626867cf-fe53-4c30-8973-55bb93ef3917
-ms.openlocfilehash: cf36514c6ce2cd25a49901165fcf919cffd5da7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2b1d023488e8d547217dafffd224ab9fc05bd876
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633365"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267902"
 ---
 # <a name="testing-properties-and-events-with-test-container"></a>テスト コンテナーでのプロパティとイベントのテスト
 
@@ -23,7 +23,7 @@ Visual C に付属して、テスト コンテナー アプリケーションは
 
 ### <a name="to-access-the-activex-control-test-container"></a>ActiveX コントロール テスト コンテナーへのアクセス
 
-1. ビルド、 [TSTCON サンプル: ActiveX コントロール テスト コンテナー](../visual-cpp-samples.md)します。
+1. ビルド、 [TSTCON サンプル。ActiveX コントロール テスト コンテナー](../visual-cpp-samples.md)します。
 
 ### <a name="to-test-your-activex-control"></a>ActiveX コントロールをテストするには
 
@@ -57,5 +57,4 @@ Visual C に付属して、テスト コンテナー アプリケーションは
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
-[方法 : ActiveX コントロールをデバッグする](/visualstudio/debugger/how-to-debug-an-activex-control)
-
+[方法: ActiveX コントロールをデバッグする](/visualstudio/debugger/how-to-debug-an-activex-control)

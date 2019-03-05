@@ -178,12 +178,12 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], UpdateCaption
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
-ms.openlocfilehash: a0e6861ecf3a6704ddb31c39f7bb2c44cb75ccd8
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 6ba0c2b5449cb0058c1b274d9d9c0d7ae33bcd7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179007"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302984"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx クラス
 
@@ -209,7 +209,7 @@ class CFrameWndEx : public CFrameWnd
 |[CFrameWndEx::DockPane](#dockpane)|フレーム ウィンドウに、指定したウィンドウをドッキングします。|
 |[CFrameWndEx::DockPaneLeftOf](#dockpaneleftof)|ウィンドウを別のウィンドウの左側にドッキングします。|
 |[CFrameWndEx::EnableAutoHidePanes](#enableautohidepanes)|メイン フレーム ウィンドウの指定した辺にドッキングされている場合は、ウィンドウの自動非表示モードを有効にします。|
-|[Cframewndex::enabledocking](#enabledocking)|フレーム ウィンドウに属しているウィンドウのドッキングを有効にします。|
+|[CFrameWndEx::EnableDocking](#enabledocking)|フレーム ウィンドウに属しているウィンドウのドッキングを有効にします。|
 |[CFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|全画面表示モードのメイン メニューの表示と非表示を切り替えます。|
 |[CFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|フレーム ウィンドウの全画面表示モードを有効にします。|
 |[CFrameWndEx::EnableLoadDockState](#enableloaddockstate)|有効またはドッキング状態の読み込みを無効にします。|
@@ -392,7 +392,7 @@ void DockPane(
 *pBar*<br/>
 [in]ドッキング コントロール バーへのポインター。
 
-*辺*<br/>
+*nDockBarID*<br/>
 [in]ドッキングするフレーム ウィンドウの側の ID。
 
 *lpRect*<br/>
@@ -465,7 +465,7 @@ TRUE の場合、バー ウィンドウがで指定されているフレーム �
 
 - CBRS_ALIGN_RIGHT: は、フレーム ウィンドウのクライアント領域の右側にドッキング コントロール バーを使用できます。
 
-##  <a name="enabledocking"></a>  Cframewndex::enabledocking
+##  <a name="enabledocking"></a>  CFrameWndEx::EnableDocking
 
 フレーム ウィンドウのペインのドッキングを有効にします。
 
@@ -885,7 +885,7 @@ afx_msg void OnActivate(
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*nState*<br/>
 [in]フレームがアクティブまたは非アクティブかどうか。 使用可能な値は、「解説」表を参照してください。
 
 *pWndOther*<br/>
@@ -1677,7 +1677,7 @@ afx_msg void OnSize(
 
 ### <a name="parameters"></a>パラメーター
 
-*%n タイプ*<br/>
+*nType*<br/>
 [in]サイズ変更の種類。 使用可能な値は、パラメーターを参照してください。 *wParam*で[WM_SIZE 通知](/windows/desktop/winmsg/wm-size)します。
 
 *cx*<br/>
@@ -1806,7 +1806,7 @@ afx_msg LRESULT OnToolbarDelete(
 
 ### <a name="parameters"></a>パラメーター
 
-*未使用*<br/>
+*unused*<br/>
 [in]このパラメーターは使用されません。
 
 *lp*<br/>
@@ -1858,7 +1858,7 @@ afx_msg void OnUpdatePaneMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 [in]ウィンドウのユーザー インターフェイス オブジェクトへのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -1910,7 +1910,7 @@ CBasePane* PaneFromPoint(
 *pRTCBarType*<br/>
 [in]NULL 以外の場合、メソッドは、指定した型のコントロール バーのみを検索します。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [out]成功した場合、このパラメーターには、指定したポイントに最も近いコントロール バーの側が含まれています。 それ以外の場合、このパラメーターは初期化されていません。
 
 ### <a name="return-value"></a>戻り値
@@ -2105,7 +2105,7 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 依存するデータ、 *nCmd*パラメーター。 使用可能な値の一覧については、次を参照してください。 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)します。
 
 *nCmd*<br/>

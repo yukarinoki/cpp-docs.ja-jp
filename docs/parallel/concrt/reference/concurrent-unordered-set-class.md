@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_unordered_set class
 ms.assetid: c61f9a9a-4fd9-491a-9251-e300737ecf4b
-ms.openlocfilehash: c7a00cbb68d24cb515384645e943414b29549536
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43bce15f001e0daee817d9dae345b5d0858f2baa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652687"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286206"
 ---
 # <a name="concurrentunorderedset-class"></a>concurrent_unordered_set クラス
 
@@ -91,7 +91,8 @@ _Allocator_type,
 |[insert](#insert)|オーバーロードされます。 要素を `concurrent_unordered_set` オブジェクトに追加します。|
 |[key_eq](#key_eq)|格納された等価比較関数のオブジェクトを返します。|
 |[swap](#swap)|2 つの `concurrent_unordered_set` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。|
-|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 `concurrent_unordered_set` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
+|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 
+  `concurrent_unordered_set` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -387,7 +388,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 *V*<br/>
 セットに挿入された値の型。
 
-*値*<br/>
+*value*<br/>
 挿入する値。
 
 *_Where*<br/>
@@ -405,7 +406,7 @@ typename std::enable_if<!std::is_same<const_iterator,
 
 ### <a name="remarks"></a>Remarks
 
-最初のメンバー関数は、要素 X がのと同じ順序付けキーを持つが、シーケンス内に存在するかどうかを決定します。`value`します。 場合は、このような要素 X を作成して初期化で`value`します。 関数は、反復子を決定し、 `where` X を指定します。挿入が発生したかどうか、関数を返します`std::pair(where, true)`します。 返しますそれ以外の場合、`std::pair(where, false)`します。
+最初のメンバー関数は、要素 X がのと同じ順序付けキーを持つが、シーケンス内に存在するかどうかを決定します。`value`します。 場合は、このような要素 X を作成して初期化で`value`します。 関数は、反復子を決定し、 `where` X を指定します。挿入が発生したかどうか、関数を返します`std::pair(where, true)`します。 それ以外の場合は、 `std::pair(where, false)`を返します。
 
 2 番目のメンバー関数は、挿入を返します ( `value`) を使用して、`_Where`として挿入ポイントを検索する被制御シーケンス内の開始場所。
 
@@ -554,7 +555,7 @@ const_local_iterator unsafe_begin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
+*_Bucket*<br/>
 バケットのインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -600,7 +601,7 @@ size_type unsafe_bucket_size(size_type _Bucket);
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
+*_Bucket*<br/>
 検索するバケット。
 
 ### <a name="return-value"></a>戻り値
@@ -617,7 +618,7 @@ const_local_iterator unsafe_cbegin(size_type _Bucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
+*_Bucket*<br/>
 バケットのインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -634,7 +635,7 @@ const_local_iterator unsafe_cend(size_type _Bucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
+*_Bucket*<br/>
 バケットのインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -653,7 +654,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*_ バケット*<br/>
+*_Bucket*<br/>
 バケットのインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -662,7 +663,8 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ##  <a name="unsafe_erase"></a> unsafe_erase
 
-`concurrent_unordered_set` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
+
+  `concurrent_unordered_set` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 iterator unsafe_erase(
@@ -714,4 +716,3 @@ size_type unsafe_max_bucket_count() const;
 
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [並列コンテナーと並列オブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)
-

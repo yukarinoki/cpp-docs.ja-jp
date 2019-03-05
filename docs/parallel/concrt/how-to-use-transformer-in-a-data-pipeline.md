@@ -1,23 +1,24 @@
 ---
-title: '方法: データ パイプラインでトランスフォーマーを使用する'
+title: '方法: データ パイプラインでトランスフォーマーを使用します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transformer class, example
 - data pipelines, using transformer [Concurrency Runtime]
 - using transformer in data pipelines [Concurrency Runtime]
 ms.assetid: ca49cb3f-4dab-4b09-a9c9-d3a109ae4c29
-ms.openlocfilehash: b94cf3fb7554ba32c03a404fa6616ef1b187e008
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59c4854eea985b3c91fad6e7dc6c47ca9b07d333
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461426"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57291471"
 ---
-# <a name="how-to-use-transformer-in-a-data-pipeline"></a>方法: データ パイプラインでトランスフォーマーを使用する
+# <a name="how-to-use-transformer-in-a-data-pipeline"></a>方法: データ パイプラインでトランスフォーマーを使用します。
 
-このトピックでには使用する方法を示す基本的な例が含まれています、 [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md)データ パイプラインでのクラス。 データ パイプラインを使用してイメージ処理を実行するより詳細な例を参照してください。[チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)です。
+このトピックでには使用する方法を示す基本的な例が含まれています、 [concurrency::transformer](../../parallel/concrt/reference/transformer-class.md)データ パイプラインでのクラス。 データ パイプラインを使用してイメージ処理を実行するより詳細な例を参照してください。[チュートリアル。イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)です。
 
-*データのパイプライン処理*同時実行プログラミングにおける一般的なパターンです。 データ パイプラインは一連のステージで構成され、各ステージで処理を実行し、その処理の結果を次のステージに渡します。 `transformer` クラスは、入力値を受け取り、その値に対して処理を実行し、別のコンポーネントで使用する結果を生成するため、データ パイプラインにおいて重要なコンポーネントとなっています。
+*データのパイプライン処理*同時実行プログラミングにおける一般的なパターンです。 データ パイプラインは一連のステージで構成され、各ステージで処理を実行し、その処理の結果を次のステージに渡します。 
+  `transformer` クラスは、入力値を受け取り、その値に対して処理を実行し、別のコンポーネントで使用する結果を生成するため、データ パイプラインにおいて重要なコンポーネントとなっています。
 
 ## <a name="example"></a>例
 
@@ -59,4 +60,3 @@ The result is -42.
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)<br/>
 [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)
-

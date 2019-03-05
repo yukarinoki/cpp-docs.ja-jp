@@ -58,12 +58,12 @@ helpviewer_keywords:
 - CDaoDatabase [MFC], m_pDAODatabase
 - CDaoDatabase [MFC], m_pWorkspace
 ms.assetid: 8ff5b342-964d-449d-bef1-d0ff56aadf6d
-ms.openlocfilehash: 6bdabafc905b1ae5d6ed9a1fcd83ab1982871c3b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1e9db1ddebe05d42cbb8c4ba242938d6d86cc81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50439282"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272902"
 ---
 # <a name="cdaodatabase-class"></a>CDaoDatabase クラス
 
@@ -105,7 +105,7 @@ class CDaoDatabase : public CObject
 |[CDaoDatabase::GetRelationCount](#getrelationcount)|データベース内のテーブル間で定義されている関係の数を返します。|
 |[CDaoDatabase::GetRelationInfo](#getrelationinfo)|データベース内のテーブル間で定義されているリレーションシップに関する情報を返します。|
 |[CDaoDatabase::GetTableDefCount](#gettabledefcount)|データベースで定義されているテーブルの数を返します。|
-|[Cdaodatabase::gettabledefinfo](#gettabledefinfo)|データベースでは、指定されたテーブルに関する情報を返します。|
+|[CDaoDatabase::GetTableDefInfo](#gettabledefinfo)|データベースでは、指定されたテーブルに関する情報を返します。|
 |[CDaoDatabase::GetVersion](#getversion)|データベースに関連付けられているデータベース エンジンのバージョンを返します。|
 |[CDaoDatabase::IsOpen](#isopen)|場合は 0 以外の値を返します、`CDaoDatabase`オブジェクトが現在のデータベースに接続されています。|
 |[CDaoDatabase::Open](#open)|データベースへの接続を確立します。|
@@ -587,9 +587,9 @@ void GetQueryDefInfo(
 
 - AFX_DAO_PRIMARY_INFO (既定値) の名前、型
 
-- プライマリ AFX_DAO_SECONDARY_INFO 情報に加えて: 作成された日付、最終更新日付、レコードを返す、更新可能
+- プラス AFX_DAO_SECONDARY_INFO プライマリ情報:日付、最終更新レコードを返す、更新可能な日付を作成します。
 
-- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて: SQL、Connect、補足
+- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて:SQL では、補足を接続します。
 
 *lpszName*<br/>
 名前で検索する場合、データベースで定義されているクエリの名前を含む文字列。
@@ -715,7 +715,7 @@ short GetTableDefCount();
 
 `GetTableDefCount` データベースのテーブル定義のコレクション内のすべてのテーブルをループ処理する必要がある場合に便利です。 コレクション内の特定のテーブルに関する情報を取得するには、次を参照してください。[プライマリ](#gettabledefinfo)します。
 
-##  <a name="gettabledefinfo"></a>  Cdaodatabase::gettabledefinfo
+##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo
 
 さまざまな種類のデータベースで定義されているテーブルに関する情報を取得するには、このメンバー関数を呼び出します。
 
@@ -744,9 +744,9 @@ void GetTableDefInfo(
 
 - 更新可能な AFX_DAO_PRIMARY_INFO (既定値) の名前の属性します。
 
-- プライマリ AFX_DAO_SECONDARY_INFO 情報に加えて: 作成された日付を最終更新日付、ソース テーブル名、接続
+- プラス AFX_DAO_SECONDARY_INFO プライマリ情報:作成された日付、日付、最終更新時刻ソース テーブル名、接続
 
-- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて: 検証規則、検証のテキスト レコードの数
+- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて:検証規則、入力テキスト、レコード カウント
 
 *lpszName*<br/>
 名前で検索する場合、テーブル定義オブジェクトの名前。

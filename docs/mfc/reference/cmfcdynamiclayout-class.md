@@ -15,12 +15,12 @@ f1_keywords:
 - AFXLAYOUT/CMFCDynamicLayout::LoadResource
 - AFXLAYOUT/CMFCDynamicLayout::SetMinSize
 ms.assetid: c2df2976-f049-47fc-9cf0-abe3e01948bc
-ms.openlocfilehash: da512b5e05f3d5ff0229cc44a0a8268148a43f82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 40dedbe2737a79b7531b8acd47870ce7cb788604
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640636"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288403"
 ---
 # <a name="cmfcdynamiclayout-class"></a>CMFCDynamicLayout クラス
 
@@ -45,13 +45,13 @@ class CMFCDynamicLayout : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[Cmfcdynamiclayout::additem](#additem)|子ウィンドウ (通常はコントロール) を、動的レイアウト マネージャーによって制御されているウィンドウのリストに追加します。|
-|[Cmfcdynamiclayout::adjust](#adjust)|子ウィンドウ (通常はコントロール) を、動的レイアウト マネージャーによって制御されているウィンドウのリストに追加します。|
+|[CMFCDynamicLayout::AddItem](#additem)|子ウィンドウ (通常はコントロール) を、動的レイアウト マネージャーによって制御されているウィンドウのリストに追加します。|
+|[CMFCDynamicLayout::Adjust](#adjust)|子ウィンドウ (通常はコントロール) を、動的レイアウト マネージャーによって制御されているウィンドウのリストに追加します。|
 |[CMFCDynamicLayout::Create](#create)|ホスト ウィンドウを格納し、検証します。|
 |[CMFCDynamicLayout::GetHostWnd](#gethostwnd)|ホスト ウィンドウへのポインターを返します。|
 |[CMFCDynamicLayout::GetMinSize](#getminsize)|レイアウト調整の下限のウィンドウ サイズを返します。|
 |[CMFCDynamicLayout::GetWindowRect](#getwindowrect)|ウィンドウの現在のクライアント領域の長方形を取得します。|
-|[Cmfcdynamiclayout::hasitem](#hasitem)|子コントロールが動的レイアウトに追加されたかどうかを確認します。|
+|[CMFCDynamicLayout::HasItem](#hasitem)|子コントロールが動的レイアウトに追加されたかどうかを確認します。|
 |[Cmfcdynamiclayout::isempty](#isempty)|動的なレイアウトに子ウィンドウが追加されていないことを確認します。|
 |[CMFCDynamicLayout::LoadResource](#loadresource)|AFX_DIALOG_LAYOUT リソースから動的レイアウトを読み取り、ホスト ウィンドウにそのレイアウトを適用します。|
 |静的[CMFCDynamicLayout::MoveHorizontal](#movehorizontal)|取得、 [MoveSettings](#movesettings_structure)量子コントロールは、ユーザーがホストしているウィンドウをサイズ変更時に水平方向に移動を定義する値。|
@@ -83,7 +83,7 @@ class CMFCDynamicLayout : public CObject
 
 **ヘッダー:** afxlayout.h
 
-##  <a name="additem"></a>  Cmfcdynamiclayout::additem
+##  <a name="additem"></a>  CMFCDynamicLayout::AddItem
 
 子ウィンドウ (通常はコントロール) を、動的レイアウト マネージャーによって制御されているウィンドウのリストに追加します。
 
@@ -197,7 +197,7 @@ void GetHostWndRect(CRect& rect,);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="hasitem"></a>  Cmfcdynamiclayout::hasitem
+##  <a name="hasitem"></a>  CMFCDynamicLayout::HasItem
 
 子コントロールが動的レイアウトに追加されたかどうかを確認します。
 
@@ -248,7 +248,7 @@ static BOOL LoadResource(CWnd* pHostWnd,
 *lpResource*<br/>
 AFX_DIALOG_LAYOUT リソースが含まれるバッファーへのポインター。
 
-*ない dwSize*<br/>
+*dwSize*<br/>
 バイト単位のバッファー サイズ。
 
 ### <a name="return-value"></a>戻り値
@@ -334,7 +334,8 @@ BOOL IsHorizontal() const
 
 ## <a name="return-value"></a>戻り値
 
-`MoveSettings` オブジェクトが 0 以外の水平方向の移動を指定している場合は TRUE です。
+
+  `MoveSettings` オブジェクトが 0 以外の水平方向の移動を指定している場合は TRUE です。
 
 ## <a name="cmfcdynamiclayoutmovesettingsisnone"></a>CMFCDynamicLayout::MoveSettings::IsNone
 
@@ -346,7 +347,8 @@ BOOL IsNone() const
 
 ## <a name="return-value"></a>戻り値
 
-`MoveSettings` オブジェクトが移動なしを指定している場合は TRUE です。
+
+  `MoveSettings` オブジェクトが移動なしを指定している場合は TRUE です。
 
 ## <a name="cmfcdynamiclayoutmovesettingsisvertical"></a>CMFCDynamicLayout::MoveSettings::IsVertical
 
@@ -358,7 +360,8 @@ BOOL IsVertical() const
 
 ## <a name="return-value"></a>戻り値
 
-`MoveSettings` オブジェクトが 0 以外の垂直方向の移動を指定している場合は TRUE です。
+
+  `MoveSettings` オブジェクトが 0 以外の垂直方向の移動を指定している場合は TRUE です。
 
 ##  <a name="movevertical"></a>  CMFCDynamicLayout::MoveVertical
 
@@ -473,7 +476,8 @@ BOOL IsHorizontal() const
 
 ## <a name="return-value"></a>戻り値
 
-`SizeSettings` オブジェクトが、0 以外の水平方向のサイズ変更枠を指定している場合は TRUE です。
+
+  `SizeSettings` オブジェクトが、0 以外の水平方向のサイズ変更枠を指定している場合は TRUE です。
 
 ## <a name="cmfcdynamiclayoutsizesettingsisnone"></a>CMFCDynamicLayout::SizeSettings::IsNone
 
@@ -485,7 +489,8 @@ BOOL IsNone() const
 
 ## <a name="return-value"></a>戻り値
 
-`SizeSettings` オブジェクトがサイズ変更枠を指定しない場合は TRUE です。
+
+  `SizeSettings` オブジェクトがサイズ変更枠を指定しない場合は TRUE です。
 
 ## <a name="cmfcdynamiclayoutsizesettingsisvertical"></a>CMFCDynamicLayout::SizeSettings::IsVertical
 
@@ -497,7 +502,8 @@ BOOL IsVertical() const
 
 ## <a name="return-value"></a>戻り値
 
-`SizeSettings` オブジェクトが、0 以外の垂直方向のサイズ変更枠を指定している場合は TRUE です。
+
+  `SizeSettings` オブジェクトが、0 以外の垂直方向のサイズ変更枠を指定している場合は TRUE です。
 
 ##  <a name="sizevertical"></a>  CMFCDynamicLayout::SizeVertical
 

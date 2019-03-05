@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - registry, ATL macros
 ms.assetid: 3ee041da-c63b-42a4-89cf-2a4b2a6f81ae
-ms.openlocfilehash: bced900cd7bac666daf415d91a4540828c769025
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e05d6a47ea67138e8d1d456077526dd3178cc44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660383"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292917"
 ---
 # <a name="registry-macros"></a>レジストリに関するマクロ
 
@@ -30,8 +30,8 @@ ms.locfileid: "50660383"
 |[DECLARE_NO_REGISTRY](#declare_no_registry)|既定の ATL 登録を回避できます。|
 |[DECLARE_REGISTRY](#declare_registry)|入るか、システム レジストリの主要なオブジェクトのエントリを削除します。|
 |[DECLARE_REGISTRY_APPID_RESOURCEID](#declare_registry_appid_resourceid)|自動的に登録するために必要な情報を指定します、 *appid*します。|
-|[に](#declare_registry_resource)|名前付きリソースを検索し、レジストリ スクリプトを実行します。|
-|[代入](#declare_registry_resourceid)|ID 番号で識別されるリソースを検索し、レジストリ スクリプトを実行します。|
+|[DECLARE_REGISTRY_RESOURCE](#declare_registry_resource)|名前付きリソースを検索し、レジストリ スクリプトを実行します。|
+|[DECLARE_REGISTRY_RESOURCEID](#declare_registry_resourceid)|ID 番号で識別されるリソースを検索し、レジストリ スクリプトを実行します。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -108,7 +108,7 @@ DECLARE_REGISTRY(
 [in]プログラムの説明として使用するレジストリ内のリソース文字列のインデックスである UINT します。
 
 *flags*<br/>
-[in]レジストリで、プログラムのスレッド処理モデルを含む DWORD。 次の値のいずれかを指定する必要があります: THREADFLAGS_APARTMENT、THREADFLAGS_BOTH、または AUTPRXFLAG します。
+[in]レジストリで、プログラムのスレッド処理モデルを含む DWORD。 値は次のいずれかを指定する必要があります。THREADFLAGS_APARTMENT、THREADFLAGS_BOTH、または AUTPRXFLAG します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -142,7 +142,7 @@ DECLARE_REGISTRY_APPID_RESOURCEID を使用して、 `CAtlModuleT`-クラスを�
 
 クラスの追加コード ウィザードを使用して、ATL プロジェクトに追加されたクラスは、このマクロを使用してサンプルを必要があります。
 
-##  <a name="declare_registry_resource"></a>  に
+##  <a name="declare_registry_resource"></a>  DECLARE_REGISTRY_RESOURCE
 
 レジストリ ファイルを含む名前付きリソースを取得し、システム レジストリにオブジェクトを入力するか、システム レジストリから削除するスクリプトを実行します。
 
@@ -167,7 +167,7 @@ ATL 実行時に置換値を置換する場合は、代入マクロを指定し�
 
 置き換え可能パラメーターとスクリプト作成する方法の詳細については、記事を参照してください。 [、ATL レジストリ コンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)します。
 
-##  <a name="declare_registry_resourceid"></a>  代入
+##  <a name="declare_registry_resourceid"></a>  DECLARE_REGISTRY_RESOURCEID
 
 同じ[に](#declare_registry_resource)をウィザードで生成された UINT 文字列名ではなく、リソースを識別するために使用します。
 

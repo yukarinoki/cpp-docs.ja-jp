@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 6722011bf343a391fcc7180558eead5c039afc59
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178175"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296729"
 ---
 # <a name="cbitmap-class"></a>CBitmap クラス
 
@@ -64,7 +64,7 @@ class CBitmap : public CGdiObject
 |名前|説明|
 |----------|-----------------|
 |[CBitmap::CreateBitmap](#createbitmap)|デバイスに依存するメモリのビットマップを指定した幅、高さ、およびビット パターンを持つオブジェクトを初期化します。|
-|[Cbitmap::createbitmapindirect](#createbitmapindirect)|指定されたビットマップの幅、高さ、および (指定されている) 場合、ビット パターンを持つオブジェクトを初期化します、`BITMAP`構造体。|
+|[CBitmap::CreateBitmapIndirect](#createbitmapindirect)|指定されたビットマップの幅、高さ、および (指定されている) 場合、ビット パターンを持つオブジェクトを初期化します、`BITMAP`構造体。|
 |[CBitmap::CreateCompatibleBitmap](#createcompatiblebitmap)|指定されたデバイスと互換性のあるあるように、ビットマップでオブジェクトを初期化します。|
 |[CBitmap::CreateDiscardableBitmap](#creatediscardablebitmap)|指定されたデバイスと互換性がある破棄できるビットマップでオブジェクトを初期化します。|
 |[CBitmap::FromHandle](#fromhandle)|ポインターを返します、`CBitmap`を Windows にハンドルが指定されると`HBITMAP`ビットマップ。|
@@ -131,7 +131,7 @@ BOOL CreateBitmap(
 *nWidth*<br/>
 ビットマップの幅 (ピクセル単位) を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 ビットマップの高さ (ピクセル単位) を指定します。
 
 *nplanes 1i*<br/>
@@ -157,7 +157,7 @@ BOOL CreateBitmap(
 
 詳細については、の説明を参照して、`bmBits`フィールドに、`BITMAP`構造体。 [BITMAP](/windows/desktop/api/wingdi/ns-wingdi-tagbitmap) 構造体については、 [CBitmap::CreateBitmapIndirect](#createbitmapindirect) メンバー関数の下で説明されています。
 
-##  <a name="createbitmapindirect"></a>  Cbitmap::createbitmapindirect
+##  <a name="createbitmapindirect"></a>  CBitmap::CreateBitmapIndirect
 
 ビットマップの幅、高さ、およびが指す構造体で指定されたビット パターン (指定されている) 場合のある初期化*lpBitmap*します。
 
@@ -201,7 +201,7 @@ BOOL CreateCompatibleBitmap(
 *nWidth*<br/>
 ビットマップの幅 (ピクセル単位) を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 ビットマップの高さ (ピクセル単位) を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -239,7 +239,7 @@ BOOL CreateDiscardableBitmap(
 *nWidth*<br/>
 (Bits) で、ビットマップの幅を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 (Bits) で、ビットマップの高さを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -294,7 +294,7 @@ int GetBitmap(BITMAP* pBitMap);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="getbitmapbits"></a>  列
+##  <a name="getbitmapbits"></a>  CBitmap::GetBitmapBits
 
 指定されたバッファーに割り当てられているビットマップのビット パターンをコピーします。
 
@@ -508,7 +508,7 @@ CSize SetBitmapDimension(
 *nWidth*<br/>
 (0.1 ミリメートル単位) で、ビットマップの幅を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 (0.1 ミリメートル単位) で、ビットマップの高さを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -524,4 +524,3 @@ GDI はこれらの値を返すにアプリケーションを呼び出す以外�
 [MFC サンプル MDI](../../visual-cpp-samples.md)<br/>
 [CGdiObject クラス](../../mfc/reference/cgdiobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

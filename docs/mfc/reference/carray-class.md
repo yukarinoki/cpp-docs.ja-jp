@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: e97a50b2687029ddff3d946f634e145f6709aa48
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557678"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266134"
 ---
 # <a name="carray-class"></a>CArray クラス
 
@@ -65,7 +65,7 @@ class CArray : public CObject
 *TYPE*<br/>
 配列に格納されているオブジェクトの種類を指定するテンプレート パラメーター。 *型*によって返されるパラメーターは、`CArray`します。
 
-*中*<br/>
+*ARG_TYPE*<br/>
 配列に格納されているオブジェクトへのアクセスに使用される引数の型を指定するテンプレート パラメーター。 参照を多くの場合、*型*します。 *中*に渡されるパラメーターは、`CArray`します。
 
 ## <a name="members"></a>メンバー
@@ -86,9 +86,9 @@ class CArray : public CObject
 |[CArray::ElementAt](#elementat)|配列内の要素ポインターへの一時的な参照を返します。|
 |[CArray::FreeExtra](#freeextra)|現在の上限を超えている未使用のメモリをすべて解放します。|
 |[CArray::GetAt](#getat)|指定されたインデックス位置にある値を返します。|
-|[呼び出す](#getcount)|この配列内の要素の数を取得します。|
+|[CArray::GetCount](#getcount)|この配列内の要素の数を取得します。|
 |[CArray::GetData](#getdata)|配列内の要素へのアクセスを許可します。 NULL にすることができます。|
-|[呼び出す](#getsize)|この配列内の要素の数を取得します。|
+|[CArray::GetSize](#getsize)|この配列内の要素の数を取得します。|
 |[CArray::GetUpperBound](#getupperbound)|有効な最大のインデックスを返します。|
 |[CArray::InsertAt](#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|
 |[CArray::IsEmpty](#isempty)|配列が空かどうかを判断します。|
@@ -114,7 +114,8 @@ class CArray : public CObject
 C 言語の配列では、アクセスする時間と同様、`CArray`が定数であり、配列のサイズに依存しないインデックス付けされた要素。
 
 > [!TIP]
->  使用して配列を使用する前に[SetSize](#setsize)そのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
+>  使用して配列を使用する前に[SetSize](#setsize)そのサイズを設定し、メモリを割り当てます。 
+  `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
 
 配列内の個々 の要素のダンプが必要な場合は、深さを設定する必要があります、 [CDumpContext](../../mfc/reference/cdumpcontext-class.md)を 1 つ以上のオブジェクト。
 
@@ -144,7 +145,7 @@ INT_PTR Add(ARG_TYPE newElement);
 
 ### <a name="parameters"></a>パラメーター
 
-*中*<br/>
+*ARG_TYPE*<br/>
 この配列内の要素を参照する引数の型を指定するテンプレート パラメーター。
 
 *newElement*<br/>
@@ -299,7 +300,7 @@ const TYPE& GetAt(INT_PTR nIndex) const;
 
 [!code-cpp[NVC_MFCCollections#26](../../mfc/codesnippet/cpp/carray-class_5.cpp)]
 
-##  <a name="getcount"></a>  呼び出す
+##  <a name="getcount"></a>  CArray::GetCount
 
 配列要素の数を返します。
 
@@ -347,7 +348,7 @@ TYPE* GetData();
 
 [!code-cpp[NVC_MFCCollections#28](../../mfc/codesnippet/cpp/carray-class_7.cpp)]
 
-##  <a name="getsize"></a>  呼び出す
+##  <a name="getsize"></a>  CArray::GetSize
 
 配列のサイズを返します。
 
@@ -401,7 +402,7 @@ void InsertAt(
 *nIndex*<br/>
 によって返される値よりも大きい可能性がある整数インデックス`GetUpperBound`します。
 
-*中*<br/>
+*ARG_TYPE*<br/>
 この配列内の要素の型を指定するテンプレート パラメーター。
 
 *newElement*<br/>
@@ -555,7 +556,7 @@ void SetAt(INT_PTR nIndex, ARG_TYPE newElement);
 *nIndex*<br/>
 0 以上である整数インデックスによって返される値以下[です](#getupperbound)します。
 
-*中*<br/>
+*ARG_TYPE*<br/>
 配列の要素を参照するために使用される引数の型を指定するテンプレート パラメーター。
 
 *newElement*<br/>
@@ -584,7 +585,7 @@ void SetAtGrow(INT_PTR nIndex, ARG_TYPE newElement);
 *nIndex*<br/>
 0 以上である整数のインデックス。
 
-*中*<br/>
+*ARG_TYPE*<br/>
 配列内の要素の型を指定するテンプレート パラメーター。
 
 *newElement*<br/>
@@ -620,7 +621,8 @@ void SetSize(
 
 新しいサイズが元のサイズより小さい場合は、配列が切り捨てられるし、すべての未使用メモリは解放されます。
 
-この関数を使用すると、配列を使用して開始する前に、配列のサイズを設定できます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
+この関数を使用すると、配列を使用して開始する前に、配列のサイズを設定できます。 
+  `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
 
 *NGrowBy*パラメーターは、配列が増加しているときに内部メモリの割り当てに影響します。 使用には影響せず、配列のサイズによって報告された[GetSize](#getsize)と[です](#getupperbound)します。 既定値を使用する場合、MFC はメモリの断片化を避けるため、ほとんどの場合の効率を最適化するように計算でメモリを割り当てます。
 

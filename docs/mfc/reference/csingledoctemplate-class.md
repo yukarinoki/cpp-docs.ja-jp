@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
-ms.openlocfilehash: fffaa57fc6c04f051b40021c89dc6aaccb343b38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe85119761d2b56ca72c8efff00664c62d4767bb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435595"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299531"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate クラス
 
@@ -82,7 +82,7 @@ CSingleDocTemplate(
 *可能*<br/>
 ドキュメントの種類で使用するリソースの ID を指定します。 これには、メニューのアイコン、アクセラレータ テーブル、および文字列リソースを含めることができます。
 
-文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれていない場合、'\n' 文字は、プレース ホルダーとして必要ですただし、末尾の '\n' 文字は必要ありません);。これらの部分文字列には、ドキュメントの種類について説明します。 部分文字列の詳細については、次を参照してください。 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)します。 この文字列リソースには、アプリケーションのリソース ファイルが記載されています。 例えば:
+文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれていない場合、'\n' 文字は、プレース ホルダーとして必要ですただし、末尾の '\n' 文字は必要ありません);。これらの部分文字列には、ドキュメントの種類について説明します。 部分文字列の詳細については、次を参照してください。 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)します。 この文字列リソースには、アプリケーションのリソース ファイルが記載されています。 例:
 
 ```RC
 // MYCALC.RC

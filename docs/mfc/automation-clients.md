@@ -7,12 +7,12 @@ helpviewer_keywords:
 - type libraries, Automation clients
 - clients
 ms.assetid: 84e34a79-06f6-4752-a33b-ae0ede1d8ecf
-ms.openlocfilehash: 30511ec6c9f0e00f4cec51e00f85ea5e32453327
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 098c41ea981d9d0069130d5439632aa7b0d6cbbd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50465495"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304497"
 ---
 # <a name="automation-clients"></a>オートメーション クライアント
 
@@ -40,7 +40,6 @@ Automation により、別のアプリケーションで実装されているオ
 
 ## <a name="see-also"></a>関連項目
 
-[オートメーション クライアント: タイプ ライブラリの使用](../mfc/automation-clients-using-type-libraries.md)<br/>
+[オートメーション クライアント:タイプ ライブラリの使用](../mfc/automation-clients-using-type-libraries.md)<br/>
 [オートメーション](../mfc/automation.md)<br/>
 [MFC アプリケーション ウィザード](../mfc/reference/mfc-application-wizard.md)
-

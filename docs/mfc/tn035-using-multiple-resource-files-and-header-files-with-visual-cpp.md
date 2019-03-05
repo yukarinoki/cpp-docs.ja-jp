@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 35: Visual C++ における複数のリソース ファイルとヘッダー ファイルの使用'
+title: TN035:Visual C での複数のリソース ファイルとヘッダー ファイルの使用
 ms.date: 11/04/2016
 f1_keywords:
 - vc.resources
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 6f89e10c2a05d1352dc2347af0aa0215079ea56c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567662"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279920"
 ---
-# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>テクニカル ノート 35: Visual C++ における複数のリソース ファイルとヘッダー ファイルの使用
+# <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:Visual C での複数のリソース ファイルとヘッダー ファイルの使用
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -111,7 +111,7 @@ AFXRES.H は、フレームワークによって使用され、特に AFXRES.RC 
 
 ## <a name="_mfcnotes_tn035_including"></a> 追加のヘッダー ファイルを含む
 
-AppWizard で作成したアプリケーションには、RESOURCE.H、および AFXRES.H という 2 つのヘッダー ファイルのみが含まれています。 RESOURCE.H のみがアプリケーション固有です。 次の状況では、追加の読み取り専用なヘッダー ファイルをインクルードする必要が生じることがあります。
+AppWizard で作成したアプリケーションには、2 つのヘッダー ファイルが含まれます。リソースです。H およびコマします。H. RESOURCE.H のみがアプリケーション固有です。 次の状況では、追加の読み取り専用なヘッダー ファイルをインクルードする必要が生じることがあります。
 
 ヘッダー ファイルは、外部ソースから提供することがあります。または、複数のプロジェクト間でヘッダー ファイルを共有するか、同じプロジェクトの複数の部分で共有することもあります。
 
@@ -300,7 +300,7 @@ Visual C++ は .RC ファイルを保存するときに必ず、.RC ファイル
 
 次に、Visual C++ がこれらの情報を .RC ファイル内で保持する方法について説明します。 Visual C++ を使用するうえでこの情報は必須ではありませんが、[インクルード ファイルの設定] に関する理解を深め、より自信を持ってこの機能を使用できるようになる可能性があります。
 
-[インクルード ファイルの設定] の上記の 3 種類の情報それぞれは、.RC ファイル内に 2 つの形式で格納されます。(1) #include、またはリソース コンパイラで解釈可能な他のディレクティブ。および、(2) Visual C++ でのみ解釈買おうな特殊な TEXTINCLUDE リソース。
+格納されているは、上記の 3 種類の情報の設定が含まれていますが、します。2 つの形式の RC ファイル:(1) #include include またはその他のディレクティブ解釈可能なリソース コンパイラでは、および (2) と特殊な TEXTINCLUDE のリソースが Visual C でのみ解釈します。
 
 TEXTINCLUDE リソースの目的は、Visual C の内で容易に表現する形式で含める設定情報を安全に格納する**設定が含まれています** ダイアログ ボックス。 TEXTINCLUDE は、*リソースの種類*Visual C で定義されています。 Visual C++ は、リソース ID 番号 1、2、および 3 を持つ、3 つの特定の TEXTINCLUDE リソースを認識します。
 
@@ -383,4 +383,3 @@ END
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

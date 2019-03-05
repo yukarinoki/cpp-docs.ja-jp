@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: 2dd300e4bbf63ed59554d5722c716f8a3f795570
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561422"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303171"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton クラス
 
@@ -128,11 +128,12 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。
 
-2. `CMFCToolBarComboBoxButton` オブジェクトを構築します。
+2. 
+  `CMFCToolBarComboBoxButton` オブジェクトを構築します。
 
 3. AFX_WM_RESETTOOLBAR メッセージを処理するメッセージ ハンドラーで、ダミー ボタンを置き換える新しいコンボ ボックス ボタンを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)します。
 
-詳細については、次を参照してください。[チュートリアル: ツールバーにコントロールを配置する](../../mfc/walkthrough-putting-controls-on-toolbars.md)します。 コンボ ボックスのツールバーのボタンの例は、VisualStudioDemo プロジェクト例を参照してください。
+詳細については、「[チュートリアル:コントロールのツールバーに追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)します。 コンボ ボックスのツールバーのボタンの例は、VisualStudioDemo プロジェクト例を参照してください。
 
 ## <a name="example"></a>例
 
@@ -168,7 +169,7 @@ virtual INT_PTR AddItem(
 *lpszItem*<br/>
 [in]リスト ボックスに追加する項目のテキスト。
 
-*指定*<br/>
+*dwData*<br/>
 [in]リスト ボックスに追加する項目に関連付けられたデータ。
 
 ### <a name="return-value"></a>戻り値
@@ -196,7 +197,7 @@ virtual INT_PTR AddSortedItem(
 *lpszItem*<br/>
 [in]リスト ボックスに追加する項目のテキスト。
 
-*指定*<br/>
+*dwData*<br/>
 [in]リスト ボックスに追加する項目に関連付けられたデータ。
 
 ### <a name="return-value"></a>戻り値
@@ -379,7 +380,7 @@ BOOL DeleteItem(DWORD_PTR dwData);
 *iIndex*<br/>
 [in]削除する項目の 0 から始まるインデックス。
 
-*指定*<br/>
+*dwData*<br/>
 [in]削除する項目に関連付けられたデータ。
 
 *lpszText*<br/>
@@ -961,7 +962,7 @@ virtual HBRUSH OnCtlColor(
 *pDC*<br/>
 [in]コンボ ボックス ボタンを表示しているデバイス コンテキスト。
 
-*ため*<br/>
+*nCtlColor*<br/>
 [in]使用されていません。
 
 ### <a name="return-value"></a>戻り値
@@ -1145,7 +1146,7 @@ BOOL SelectItem(LPCTSTR lpszText);
 *bNotify*<br/>
 [in]選択範囲のコンボ ボックス ボタンに通知する場合は TRUEそれ以外の場合は FALSE です。
 
-*指定*<br/>
+*dwData*<br/>
 [in]リスト ボックス内の項目に関連付けられたデータ。
 
 *lpszText*<br/>
@@ -1183,7 +1184,7 @@ static BOOL SelectItemAll(
 *iIndex*<br/>
 [in]リスト ボックス内の項目の 0 から始まるインデックス。 値-1 は、リスト ボックス内の現在の選択を削除し、編集ボックスをクリアします。
 
-*指定*<br/>
+*dwData*<br/>
 [in]リスト ボックス内の項目のデータ。
 
 *lpszText*<br/>
@@ -1274,7 +1275,7 @@ void SetDropDownHeight(int nHeight);
 
 ### <a name="parameters"></a>パラメーター
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 [in]リスト ボックスのピクセル単位の高さ。
 
 ### <a name="remarks"></a>Remarks
@@ -1335,5 +1336,4 @@ void SetText(LPCTSTR lpszText);
 [CMFCToolBarButton クラス](../../mfc/reference/cmfctoolbarbutton-class.md)<br/>
 [CComboBox クラス](../../mfc/reference/ccombobox-class.md)<br/>
 [CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)<br/>
-[チュートリアル: ツール バーへのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)
-
+[チュートリアル: ツールバーのコントロールの追加](../../mfc/walkthrough-putting-controls-on-toolbars.md)

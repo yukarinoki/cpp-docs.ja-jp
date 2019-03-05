@@ -1,17 +1,17 @@
 ---
-title: 'チュートリアル : 新しい MFC シェル コントロールの使用'
+title: 'チュートリアル: 新しい MFC シェル コントロールの使用'
 ms.date: 09/20/2018
 helpviewer_keywords:
 - shell controls (MFC)
 ms.assetid: f0015caa-199d-4aaf-9501-5a239fce9095
-ms.openlocfilehash: 4ff585123fb30a4fc31460c95f8960f5cfd7b7bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9314eec7c02ed0286a7ae3fcf14bae6572dd710c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507566"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288789"
 ---
-# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>チュートリアル : 新しい MFC シェル コントロールの使用
+# <a name="walkthrough-using-the-new-mfc-shell-controls"></a>チュートリアル: 新しい MFC シェル コントロールの使用
 
 このチュートリアルでは、ファイル エクスプ ローラーのようなアプリケーションを作成します。 2 つのペインのあるウィンドウを作成します。 左側のウィンドウを保持する、 [CMFCShellTreeCtrl](../mfc/reference/cmfcshelltreectrl-class.md)階層ビューで、デスクトップを表示するオブジェクト。 右側のウィンドウを保持する、 [CMFCShellListCtrl](../mfc/reference/cmfcshelllistctrl-class.md)左側のウィンドウで選択されているフォルダーにファイルを表示します。
 
@@ -88,7 +88,8 @@ ms.locfileid: "50507566"
    }
    ```
 
-1. `CMFCShellControlsView` Windows メッセージを処理するように `WM_CREATE` クラスを更新します。 開く、**クラス ビュー**ウィンドウと選択、`CMFCShellControlsView`クラス。 右クリックして**プロパティ**します。
+1. 
+  `CMFCShellControlsView` Windows メッセージを処理するように `WM_CREATE` クラスを更新します。 開く、**クラス ビュー**ウィンドウと選択、`CMFCShellControlsView`クラス。 右クリックして**プロパティ**します。
 
     次に、**プロパティ**ウィンドウで、をクリックして、**メッセージ**アイコン。 スクロール ダウンして `WM_CREATE` メッセージを探します。 次に、ドロップダウン リストからリスト`WM_CREATE`、 **\<追加 > OnCreate**します。 コマンドは、私たちにとってメッセージ ハンドラーを作成し、MFC メッセージ マップが自動的に更新します。
 
@@ -109,7 +110,9 @@ ms.locfileid: "50507566"
     }
     ```
 
-1. `WM_SIZE` メッセージについて、前の手順を繰り返します。 アプリケーションのビューをユーザーがアプリケーション ウィンドウのサイズを変更するたびに再描画が発生します。 `OnSize` メソッドの定義を次のコードに置き換えます。
+1. 
+  `WM_SIZE` メッセージについて、前の手順を繰り返します。 アプリケーションのビューをユーザーがアプリケーション ウィンドウのサイズを変更するたびに再描画が発生します。 
+  `OnSize` メソッドの定義を次のコードに置き換えます。
 
     ```cpp
     void CMFCShellControlsView::OnSize(UINT nType, int cx, int cy)
@@ -158,7 +161,9 @@ ms.locfileid: "50507566"
 
 1. アプリケーションをビルドして実行することにより、アプリケーションが正常に作成されたことを確認します。 アプリケーションを構築する、**ビルド**メニューの **ソリューションのビルド**します。 場合は、アプリケーションが正常にビルド、実行を選択して**デバッグの開始**から、**デバッグ**メニュー。
 
-   `CMFCShellTreeCtrl` で選択されている項目の詳細が、ビュー ペインに表示されるようになりました。 `CMFCShellTreeCtrl` でノードをクリックすると、`CMFCShellListCtrl` が自動的に更新されます。 また、`CMFCShellListCtrl` でフォルダーをダブルクリックすると、`CMFCShellTreeCtrl` が自動的に更新されます。
+   
+  `CMFCShellTreeCtrl` で選択されている項目の詳細が、ビュー ペインに表示されるようになりました。 
+  `CMFCShellTreeCtrl` でノードをクリックすると、`CMFCShellListCtrl` が自動的に更新されます。 また、`CMFCShellListCtrl` でフォルダーをダブルクリックすると、`CMFCShellTreeCtrl` が自動的に更新されます。
 
    ツリー コントロールで、またはリスト コントロールで項目を右クリックします。 実際を使用した場合と同じコンテキスト メニューを取得する**ファイル エクスプ ローラー**します。
 

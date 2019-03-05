@@ -1,5 +1,5 @@
 ---
-title: 'マルチ スレッド: MFC ユーザー インターフェイス スレッドを作成します。'
+title: マルチ スレッド。MFC ユーザー インターフェイス スレッドの作成
 ms.date: 08/27/2018
 f1_keywords:
 - CREATE_SUSPENDED
@@ -11,16 +11,17 @@ helpviewer_keywords:
 - user interface threads [C++]
 - threading [MFC], user interface threads
 ms.assetid: 446925c1-db59-46ea-ae5b-d5ae5d5b91d8
-ms.openlocfilehash: e618f11e3c574e5f53dff150beeb313d26fd4a6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac22fad95041b07e132d31a2d246e58c3b40d30c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566830"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293317"
 ---
-# <a name="multithreading-creating-mfc-user-interface-threads"></a>マルチ スレッド: MFC ユーザー インターフェイス スレッドを作成します。
+# <a name="multithreading-creating-mfc-user-interface-threads"></a>マルチ スレッド。MFC ユーザー インターフェイス スレッドの作成
 
-ユーザー インターフェイス スレッドでは、主にユーザー入力を処理し、ユーザーが生成したイベントに応答します。この処理は、アプリケーションのほかの部分を実行しているスレッドとは無関係に行われます。 `CWinApp` の派生クラスで提供されるメイン アプリケーション スレッドは、既に生成され実行を開始しています。 このトピックでは、ユーザー インターフェイス スレッドを作成するための手順について説明します。
+ユーザー インターフェイス スレッドでは、主にユーザー入力を処理し、ユーザーが生成したイベントに応答します。この処理は、アプリケーションのほかの部分を実行しているスレッドとは無関係に行われます。 
+  `CWinApp` の派生クラスで提供されるメイン アプリケーション スレッドは、既に生成され実行を開始しています。 このトピックでは、ユーザー インターフェイス スレッドを作成するための手順について説明します。
 
 まず、ユーザー インターフェイス スレッドを作成するときに行う必要がありますからクラスを派生[CWinThread](../mfc/reference/cwinthread-class.md)します。 宣言し、これを実装するクラスを使用して、 [DECLARE_DYNCREATE](../mfc/reference/run-time-object-model-services.md#declare_dyncreate)と[IMPLEMENT_DYNCREATE](../mfc/reference/run-time-object-model-services.md#implement_dyncreate)マクロ。 このクラスでは、一部の関数をオーバーライドする必要があります。また、他の関数も必要に応じてオーバーライドできます。 次の表に、各関数とその用途を示します。
 
@@ -29,7 +30,7 @@ ms.locfileid: "50566830"
 |関数|目的|
 |--------------|-------------|
 |[ExitInstance](../mfc/reference/cwinthread-class.md#exitinstance)|スレッド終了時の後処理を行います。 通常、オーバーライドします。|
-|[Initinstance 関数](../mfc/reference/cwinthread-class.md#initinstance)|スレッドのインスタンスを初期化します。 必ずオーバーライドします。|
+|[InitInstance](../mfc/reference/cwinthread-class.md#initinstance)|スレッドのインスタンスを初期化します。 必ずオーバーライドします。|
 |[OnIdle](../mfc/reference/cwinthread-class.md#onidle)|スレッド固有のアイドル処理ハンドラーを行います。 通常、オーバーライドしません。|
 |[PreTranslateMessage](../mfc/reference/cwinthread-class.md#pretranslatemessage)|ディスパッチされる前に、メッセージをフィルター処理`TranslateMessage`と`DispatchMessage`します。 通常、オーバーライドしません。|
 |[ProcessWndProcException](../mfc/reference/cwinthread-class.md#processwndprocexception)|スレッドのメッセージ ハンドラーおよびコマンド ハンドラーがスローした未処理例外を受け取ります。 通常、オーバーライドしません。|
@@ -51,9 +52,9 @@ MFC は、パラメーターのオーバーロードによって `AfxBeginThread
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [マルチスレッド: スレッドの終了](multithreading-terminating-threads.md)
+- [マルチ スレッド。スレッドの終了](multithreading-terminating-threads.md)
 
-- [マルチスレッド: ワーカー スレッドの生成](multithreading-creating-worker-threads.md)
+- [マルチ スレッド。ワーカー スレッドを作成します。](multithreading-creating-worker-threads.md)
 
 - [プロセスとスレッド](/windows/desktop/ProcThread/processes-and-threads)
 

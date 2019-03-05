@@ -1,5 +1,5 @@
-﻿---
-title: 'テクニカル ノート 53: DAO データベース クラス用カスタム DFX ルーチン'
+---
+title: TN053:DAO データベース クラス用カスタム DFX ルーチン
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.dfx
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - DFX (DAO record field exchange) [MFC]
 - custom DFX routines [MFC]
 ms.assetid: fdcf3c51-4fa8-4517-9222-58aaa4f25cac
-ms.openlocfilehash: 81529dd1e34d06dd3e5d541d39dbe91bb5eda1b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b610604c1b7a68128dc9eb6fb5515225ed22b16e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517768"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282410"
 ---
-# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>テクニカル ノート 53: DAO データベース クラス用カスタム DFX ルーチン
+# <a name="tn053-custom-dfx-routines-for-dao-database-classes"></a>TN053:DAO データベース クラス用カスタム DFX ルーチン
 
 > [!NOTE]
 >  Visual C 環境とウィザードは、(DAO クラスが含まれていますし、それらを使用することもできます) が DAO をサポートしています。 使用することをお勧めします。 [OLE DB テンプレート](../data/oledb/ole-db-templates.md)または[ODBC と MFC](../data/odbc/odbc-and-mfc.md)の新しいプロジェクト。 DAO は、既存のアプリケーションを維持するためにのみ使用する必要があります。
@@ -153,7 +153,7 @@ DAO`GetRows`いくつかの方法で作業できます。
 
 DFX 関数で実装される最も重要な操作が正常に呼び出すに必要なデータ構造を設定することをする必要があるの説明からは`GetRows`します。 DFX 関数をサポートする必要がありますも、その他の操作が、重要なまたは正しくに備えるように複雑なとして none のいくつか、`GetRows`呼び出します。
 
-DFX の使用は、オンライン ドキュメントで説明します。 基本的には、2 つの要件があります。 最初に、メンバーを追加する必要があります、`CDaoRecordset`各束縛のフィールドとパラメーターのクラスを派生します。 次のこの`CDaoRecordset::DoFieldExchange`オーバーライドする必要があります。 メンバーのデータ型が重要なことに注意してください。 データベースのフィールドからのデータと一致または以上では、その型に変換可能であること必要があります。 たとえば、長整数などのデータベース内の数値フィールドは、常にテキストに変換して'CString'メンバーにバインドできますが、データベース内のテキストフィールドは必ずしも数値表現に変換されるとは限りません。長整数などの長整数メンバーにバインドされています。 DAO および Microsoft Jet データベース エンジンは、変換 (なく MFC) を行います。
+DFX の使用は、オンライン ドキュメントで説明します。 基本的には、2 つの要件があります。 最初に、メンバーを追加する必要があります、`CDaoRecordset`各束縛のフィールドとパラメーターのクラスを派生します。 次のこの`CDaoRecordset::DoFieldExchange`オーバーライドする必要があります。 メンバーのデータ型が重要なことに注意してください。 データベースのフィールドからのデータと一致または以上では、その型に変換可能であること必要があります。 たとえば、長整数などのデータベース内の数値フィールドは、常にテキストに変換して`CString`メンバーにバインドできますが、データベース内のテキストフィールドは必ずしも数値表現に変換されるとは限りません。長整数などの長整数メンバーにバインドされています。 DAO および Microsoft Jet データベース エンジンは、変換 (なく MFC) を行います。
 
 ##  <a name="_mfcnotes_tn053_details_of_dfx_text"></a> DFX_Text の詳細
 
@@ -220,4 +220,3 @@ DFX の使用は、オンライン ドキュメントで説明します。 基�
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

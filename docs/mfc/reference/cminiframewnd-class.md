@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMiniFrameWnd [MFC], Create
 - CMiniFrameWnd [MFC], CreateEx
 ms.assetid: b8f534ed-0532-4d8e-9657-5595cf677749
-ms.openlocfilehash: a6fdef34ba5873718caed509100cbe7e905d880d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 70f090e2d9830ccfdd98640b54ff07440064d542
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693527"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293265"
 ---
 # <a name="cminiframewnd-class"></a>CMiniFrameWnd クラス
 
@@ -41,7 +41,7 @@ class CMiniFrameWnd : public CFrameWnd
 
 |名前|説明|
 |----------|-----------------|
-|[には](#create)|作成、`CMiniFrameWnd`構築後のオブジェクト。|
+|[CMiniFrameWnd::Create](#create)|作成、`CMiniFrameWnd`構築後のオブジェクト。|
 |[CMiniFrameWnd::CreateEx](#createex)|作成、`CMiniFrameWnd`構築後 (その他のオプション) を含むオブジェクト。|
 
 ## <a name="remarks"></a>Remarks
@@ -80,7 +80,7 @@ CMiniFrameWnd();
 
 ウィンドウを作成するには[には](#create)します。
 
-##  <a name="create"></a>  には
+##  <a name="create"></a>  CMiniFrameWnd::Create
 
 Windows のミニフレーム ウィンドウを作成しにアタッチします、`CMiniFrameWnd`オブジェクト。
 

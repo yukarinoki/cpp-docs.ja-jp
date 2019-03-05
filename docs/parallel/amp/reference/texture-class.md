@@ -17,12 +17,12 @@ f1_keywords:
 - AMP_GRAPHICS/concurrency::graphics::texture::depth_pitch
 - AMP_GRAPHICS/concurrency::graphics::texture::row_pitch
 ms.assetid: 16e85d4d-e80a-474a-995d-8bf63fbdf34c
-ms.openlocfilehash: 8e427206379f1e7d094362411f074ad9cafb43fd
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: cfcb65fa23fe4593e7dcf11da3b5da4b1785ce71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657540"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279745"
 ---
 # <a name="texture-class"></a>texture クラス
 
@@ -57,7 +57,8 @@ class texture;
 |名前|説明|
 |----------|-----------------|
 |[テクスチャのコンス トラクター](#ctor)|`texture` クラスの新しいインスタンスを初期化します。|
-|[~ texture デストラクター](#ctor)|`texture` オブジェクトを破棄します。|
+|[~ texture デストラクター](#ctor)|
+  `texture` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -83,7 +84,8 @@ class texture;
 
 |名前|説明|
 |----------|-----------------|
-|[rank 定数](#rank)|`texture` オブジェクトのランクを取得します。|
+|[rank 定数](#rank)|
+  `texture` オブジェクトのランクを取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -103,11 +105,12 @@ class texture;
 
 **ヘッダー:** amp_graphics.h
 
-**Namespace:** Concurrency::graphics
+**名前空間:** Concurrency::graphics
 
 ##  <a name="dtor"></a> ~ テクスチャ
 
-`texture` オブジェクトを破棄します。
+
+  `texture` オブジェクトを破棄します。
 
 ```
 ~texture() restrict(cpu);
@@ -303,7 +306,8 @@ texture& operator= (
 
 ##  <a name="rank"></a> ランク
 
-`texture` オブジェクトのランクを取得します。
+
+  `texture` オブジェクトのランクを取得します。
 
 ```
 static const int rank = _Rank;
@@ -552,7 +556,7 @@ texture(
 *_Bits_per_scalar_element*<br/>
 テクスチャの基になるスカラー型のスカラー要素ごとのビット数。 一般に、サポートされている値は 8、16、32、および 64 です。 0 を指定すると、ビット数は基になる scalar_type と同じです。 64 は、倍精度ベースのテクスチャに対してのみ有効です。
 
-*展開*<br/>
+*_Ext*<br/>
 テクスチャの各次元の範囲。
 
 *_E0*<br/>

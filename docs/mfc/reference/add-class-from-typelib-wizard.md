@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add Class from TypeLib Wizard [MFC]
 - COM interfaces, adding classes
 ms.assetid: 96152afd-9374-4649-a6ab-b0fa2a5592a3
-ms.openlocfilehash: c0423ac06aa46b65c1fb0ffb3935d4bb54821ee9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2c291e1c9e78d288bdb2d15f224520d764dfa1b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654338"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273882"
 ---
 # <a name="add-class-from-typelib-wizard"></a>Typelib クラス追加ウィザード
 
@@ -34,7 +34,7 @@ ms.locfileid: "50654338"
 
    システムに現在登録されているタイプ ライブラリを一覧表示します。 そのインターフェイスを表示するには、このリストからタイプ ライブラリを選択して、**インターフェイス**一覧。
 
-   「内で分散 COM:: タイプ ライブラリと言語の統合」タイプ ライブラリの登録の詳細については、MSDN ライブラリを参照してください。
+   参照してください"内で分散 COM:タイプ ライブラリと言語統合"タイプ ライブラリの登録の詳細については、MSDN ライブラリ。
 
 - **場所**
 
@@ -57,7 +57,7 @@ ms.locfileid: "50654338"
 
    このリストでクラスを選択して [**<**] をクリックすると、クラスを削除できます。 すべてのクラスを削除する生成されたクラス ボックスで、クラスを選択する必要はありません。クリックして**<<**、すべてのクラスを削除する、**生成済みクラス**ボックス。
 
-- **クラス**
+- **Class**
 
    **[完了]** をクリックしたときにウィザードで追加される、**[生成されたクラス]** ボックスで選択されるクラスの名前を指定します。 **Class** ボックスで名前を編集できます。
 
@@ -70,5 +70,4 @@ ms.locfileid: "50654338"
 ## <a name="see-also"></a>関連項目
 
 [タイプ ライブラリからの MFC クラス](../../mfc/reference/adding-an-mfc-class-from-a-type-library.md)<br/>
-[オートメーション クライアント: タイプ ライブラリの使用](../../mfc/automation-clients-using-type-libraries.md)
-
+[オートメーション クライアント:タイプ ライブラリの使用](../../mfc/automation-clients-using-type-libraries.md)

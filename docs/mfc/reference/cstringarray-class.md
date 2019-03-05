@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 6c637e06-bba8-4c08-b0fc-cf8cb067ce34
-ms.openlocfilehash: f96c9eee1ca1d0d89a4ce401c8705984efabfeaa
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 85422e5abd313aad4f87052748610e099363c1c6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657358"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276060"
 ---
 # <a name="cstringarray-class"></a>CStringArray クラス
 
@@ -113,14 +113,16 @@ class CStringArray : public CObject
 
 ## <a name="remarks"></a>Remarks
 
-`CStringArray` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 `CString` オブジェクトの配列がアーカイブに格納される場合、オーバーロードされた挿入演算子または `Serialize` メンバー関数によって、各要素は順にシリアル化されます。
+`CStringArray` シリアル化とその要素のダンプをサポートするために IMPLEMENT_SERIAL マクロが組み込まれています。 
+  `CString` オブジェクトの配列がアーカイブに格納される場合、オーバーロードされた挿入演算子または `Serialize` メンバー関数によって、各要素は順にシリアル化されます。
 
 > [!NOTE]
 >  配列を使用する前に、`SetSize` を使用してそのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
 
 配列内の個別の文字列要素をダンプする必要があるときは、ダンプ コンテキストの深さを 1 以上に設定する必要があります。
 
-`CString` 配列が削除されたとき、またはその要素が削除されたときは、文字列メモリは状況に応じて解放されます。
+
+  `CString` 配列が削除されたとき、またはその要素が削除されたときは、文字列メモリは状況に応じて解放されます。
 
 使用しての詳細については`CStringArray`、記事をご覧ください[コレクション](../../mfc/collections.md)します。
 
@@ -138,4 +140,3 @@ class CStringArray : public CObject
 
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

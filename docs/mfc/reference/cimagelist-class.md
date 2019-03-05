@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 5bcf815fce4123ca1014e1679fd810c1ce321be4
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178591"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298920"
 ---
 # <a name="cimagelist-class"></a>CImageList クラス
 
@@ -120,7 +120,8 @@ class CImageList : public CObject
 |[CImageList::DrawIndirect](#drawindirect)|イメージの一覧からイメージを描画します。|
 |[CImageList::EndDrag](#enddrag)|ドラッグ操作を終了します。|
 |[CImageList::ExtractIcon](#extracticon)|アイコンのイメージとイメージ リスト内のマスクに基づいて作成します。|
-|[CImageList::FromHandle](#fromhandle)|ポインターを返します、`CImageList`イメージ リストへのハンドルが指定されるとします。 `CImageList` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CImageList` オブジェクトが生成され、関連付けられます。|
+|[CImageList::FromHandle](#fromhandle)|ポインターを返します、`CImageList`イメージ リストへのハンドルが指定されるとします。 
+  `CImageList` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CImageList` オブジェクトが生成され、関連付けられます。|
 |[CImageList::FromHandlePermanent](#fromhandlepermanent)|ポインターを返します、`CImageList`イメージ リストへのハンドルが指定されるとします。 場合、`CImageList`ハンドルには、オブジェクトはアタッチされていない、NULL が返されます。|
 |[CImageList::GetBkColor](#getbkcolor)|イメージ リストの現在の背景色を取得します。|
 |[CImageList::GetDragImage](#getdragimage)|ドラッグで使用する一時イメージ リストを取得します。|
@@ -241,7 +242,7 @@ BOOL BeginDrag(
 
 ### <a name="parameters"></a>パラメーター
 
-*あり*<br/>
+*nImage*<br/>
 ドラッグするイメージの 0 から始まるインデックス。
 
 *ptHotSpot*<br/>
@@ -359,7 +360,7 @@ BOOL Create(CImageList* pImageList);
 
 |[値]|説明|
 |-----------|-------------|
-|組み合わせて指定|指定されていない他の組み合わせて指定 * フラグの場合は、既定の動作を使用します。 通常、既定では ILC_COLOR4;以前のディスプレイ ドライバーでは、既定値は ILC_COLORDDB します。|
+|ILC_COLOR|指定されていない他の組み合わせて指定 * フラグの場合は、既定の動作を使用します。 通常、既定では ILC_COLOR4;以前のディスプレイ ドライバーでは、既定値は ILC_COLORDDB します。|
 |ILC_COLOR4|イメージの一覧については、ビットマップとして 4 ビット (16 色) のデバイスに依存しないビットマップ (DIB) セクションを使用します。|
 |ILC_COLOR8|8 ビット DIB のセクションを使用します。 カラー テーブルに使用される色は、ハーフトーン パレットの色と同じです。|
 |ILC_COLOR16|16 ビット (32/64 k の色) DIB セクション。|
@@ -582,7 +583,7 @@ BOOL Draw(
 *pDC*<br/>
 コピー先のデバイス コンテキストへのポインター。
 
-*あり*<br/>
+*nImage*<br/>
 描画するイメージの 0 から始まるインデックス。
 
 *pt*<br/>
@@ -594,7 +595,7 @@ BOOL Draw(
 |[値]|説明|
 |-----------|-------------|
 |ILD_BLEND25、ILD_FOCUS|システムの強調表示色を 25% を混合して、イメージを描画します。 イメージ リストには、マスクが含まれていない場合は、この値を指定しても効果はありません。|
-|ILD_BLEND50 ILD_SELECTED、ILD_BLEND|システムの強調表示色を 50% を混合して、イメージを描画します。 イメージ リストには、マスクが含まれていない場合は、この値を指定しても効果はありません。|
+|ILD_BLEND50, ILD_SELECTED, ILD_BLEND|システムの強調表示色を 50% を混合して、イメージを描画します。 イメージ リストには、マスクが含まれていない場合は、この値を指定しても効果はありません。|
 |ILD_MASK|マスクを描画します。|
 |に|イメージ リストの背景色を使用してイメージを描画します。 しますの背景色は、透過的にマスクを使用して、イメージが描画されます。|
 |ILD_TRANSPARENT|透過的に背景色に関係なく、マスクを使用してイメージを描画します。|
@@ -627,7 +628,7 @@ BOOL DrawEx(
 *pDC*<br/>
 コピー先のデバイス コンテキストへのポインター。
 
-*あり*<br/>
+*nImage*<br/>
 描画するイメージの 0 から始まるインデックス。
 
 *pt*<br/>
@@ -687,7 +688,7 @@ BOOL DrawIndirect(
 *pDC*<br/>
 コピー先のデバイス コンテキストへのポインター。 これを削除する必要があります[CDC](../../mfc/reference/cdc-class.md)でそれが済んだらオブジェクトします。
 
-*あり*<br/>
+*nImage*<br/>
 描画するイメージの 0 から始まるインデックス。
 
 *pt*<br/>
@@ -699,7 +700,7 @@ A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体を描画す
 *ptOrigin*<br/>
 A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)イメージ自体に関して描画操作の左上隅を指定する x 座標と y 座標を含む構造体。 左側の x 座標と y 座標の上にある画像のピクセルは描画されません。
 
-*について*<br/>
+*fStyle*<br/>
 描画スタイルと、必要に応じて、オーバーレイのイメージを指定するフラグ。 オーバーレイ画像では、「解説」を参照してください。 MFC の既定の実装に、イメージ リストの背景色を使用してイメージを描画します。 しますの背景色は、透過的にマスクを使用して、イメージが描画されます。
 
 可能なその他のスタイルは、「、*は*のメンバー、[された](/windows/desktop/api/commctrl/ns-commctrl-_imagelistdrawparams)構造体。
@@ -780,7 +781,7 @@ HICON ExtractIcon(int nImage);
 
 ### <a name="parameters"></a>パラメーター
 
-*あり*<br/>
+*nImage*<br/>
 イメージの 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -911,7 +912,7 @@ BOOL GetImageInfo(
 
 ### <a name="parameters"></a>パラメーター
 
-*あり*<br/>
+*nImage*<br/>
 イメージの 0 から始まるインデックス。
 
 *pImageInfo*<br/>
@@ -1006,7 +1007,7 @@ BOOL Remove(int nImage);
 
 ### <a name="parameters"></a>パラメーター
 
-*あり*<br/>
+*nImage*<br/>
 削除するイメージの 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -1038,7 +1039,7 @@ int Replace(
 
 ### <a name="parameters"></a>パラメーター
 
-*あり*<br/>
+*nImage*<br/>
 置換するイメージの 0 から始まるインデックス。
 
 *pbmImage*<br/>
@@ -1150,7 +1151,7 @@ BOOL SetOverlayImage(
 
 ### <a name="parameters"></a>パラメーター
 
-*あり*<br/>
+*nImage*<br/>
 オーバーレイ マスクとして使用するイメージの 0 から始まるインデックス。
 
 *nOverlay*<br/>

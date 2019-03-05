@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CToolBarCtrl class [MFC], accessing toolbar
 - toolbar controls [MFC], accessing
 ms.assetid: b19409d5-3831-42c7-80ae-195c49dc9085
-ms.openlocfilehash: 856f45f4b9c78f5bd7d1a2e712f3fe9acd8004f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88c00bf60f2ce1fccecd757d13b2f814e3a18be4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260505"
 ---
 # <a name="working-with-the-toolbar-control"></a>ToolBar コントロールの操作
 
@@ -60,4 +60,3 @@ Windows コモン コントロールの使い方の詳細については、次�
 ## <a name="see-also"></a>関連項目
 
 [MFC ツール バーの実装](../mfc/mfc-toolbar-implementation.md)
-

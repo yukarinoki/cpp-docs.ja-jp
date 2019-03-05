@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: 7d11420ca48bfcecbd2534123a36364314b9651c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611004"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273609"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection クラス
 
@@ -39,7 +39,7 @@ class CHttpConnection : public CInternetConnection
 
 |名前|説明|
 |----------|-----------------|
-|[しないで](#openrequest)|HTTP 要求を開きます。|
+|[CHttpConnection::OpenRequest](#openrequest)|HTTP 要求を開きます。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -103,10 +103,10 @@ CHttpConnection(
 *pstrServer*<br/>
 サーバー名を含む文字列へのポインター。
 
-*独自*<br/>
+*dwContext*<br/>
 コンテキスト識別子を`CInternetConnection`オブジェクト。 参照してください**解説**の詳細については*独自*します。
 
-*ポート*<br/>
+*nPort*<br/>
 この接続のインターネットのポートを識別する番号。
 
 *pstrUserName*<br/>
@@ -129,7 +129,7 @@ CHttpConnection(
 
 作成することはありません、`CHttpConnection`直接します。 呼び出してオブジェクトを作成する代わりに、[代わりに](../../mfc/reference/cinternetsession-class.md#gethttpconnection)します。
 
-##  <a name="openrequest"></a>  しないで
+##  <a name="openrequest"></a>  CHttpConnection::OpenRequest
 
 このメンバー関数を呼び出して HTTP 接続を開きます。
 
@@ -164,8 +164,9 @@ CHttpFile* OpenRequest(
 *pstrReferer*<br/>
 元のドキュメントのアドレス (URL) を指定する文字列へのポインター、要求内の URL ( *pstrObjectName*) が取得されました。 NULL の場合、HTTP ヘッダーを指定しません。
 
-*独自*<br/>
-`OpenRequest` 操作のコンテキスト識別子。 に関する詳細については、「解説」を参照してください*独自*します。
+*dwContext*<br/>
+
+  `OpenRequest` 操作のコンテキスト識別子。 に関する詳細については、「解説」を参照してください*独自*します。
 
 *ppstrAcceptTypes*<br/>
 クライアントが受け入れるコンテンツ タイプを示す文字列への null で終わる配列へのポインター。 場合*ppstrAcceptTypes*が null の場合、クライアントでは型のドキュメントのみを受け入れる、サーバーは解釈"テキスト/*"(つまり、テキスト ドキュメントのみとしない画像または他のバイナリ ファイル)。 コンテンツ タイプは CGI 変数 CONTENT_TYPE と同等です。HTTP POST や PUT など情報が添付されるクエリのデータの形式を識別します。
@@ -205,7 +206,8 @@ HTTP 要求の種類に関連付けられた番号。 次のいずれかの値�
 |INTERNET_FLAG_SECURE|安全なトランザクション セマンティクスを使用します。 これは、SSL/PCT を使用するように変換され、HTTP 要求でのみ意味があります。|
 |INTERNET_FLAG_NO_AUTO_REDIRECT|HTTP でのみ使用、リダイレクトする必要がありますいない処理されるように指定自動的で[chttpfile::sendrequest](../../mfc/reference/chttpfile-class.md#sendrequest)します。|
 
-`dwContext` の既定値をオーバーライドして、コンテキスト識別子を独自の値に設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CHttpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+
+  `dwContext` の既定値をオーバーライドして、コンテキスト識別子を独自の値に設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CHttpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 この関数では例外がスローされる場合があります。
 

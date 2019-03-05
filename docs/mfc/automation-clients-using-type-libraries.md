@@ -1,5 +1,5 @@
 ---
-title: 'オートメーション クライアント : タイプ ライブラリの使用'
+title: オートメーション クライアント:タイプ ライブラリの使用
 ms.date: 11/04/2016
 f1_keywords:
 - MkTypLib
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - MkTypLib tool
 - .odl files
 ms.assetid: d405bc47-118d-4786-b371-920d035b2047
-ms.openlocfilehash: bd11bd8f2666bb2c211f7abe93d473f466963bd6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32179f3913b52ca46f9ea7314b9957f4f4970713
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437051"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282943"
 ---
-# <a name="automation-clients-using-type-libraries"></a>オートメーション クライアント : タイプ ライブラリの使用
+# <a name="automation-clients-using-type-libraries"></a>オートメーション クライアント:タイプ ライブラリの使用
 
 オートメーション クライアントは、クライアントがサーバーのオブジェクトを操作する場合、サーバー オブジェクトのプロパティとメソッドについての情報にすることが必要です。 プロパティがあるデータ型。メソッドは、多くの場合、戻り値とパラメーターをそのまま使用します。 クライアントでは、サーバー オブジェクトの型に静的にバインドするためにこれらすべてのデータ型に関する情報が必要です。
 
@@ -61,4 +61,3 @@ Visual C を使用するプロジェクトの作成時にオートメーショ�
 ## <a name="see-also"></a>関連項目
 
 [オートメーション クライアント](../mfc/automation-clients.md)
-

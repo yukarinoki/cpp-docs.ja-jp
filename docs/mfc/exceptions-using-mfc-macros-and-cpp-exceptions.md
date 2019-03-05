@@ -1,5 +1,5 @@
 ---
-title: '例外処理 : MFC マクロと C++ 例外機構の使用'
+title: 例外:MFC マクロと C++ 例外を使用します。
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception objects [MFC]
@@ -16,14 +16,14 @@ helpviewer_keywords:
 - heap corruption [MFC]
 - nested catch blocks [MFC]
 ms.assetid: d664a83d-879b-44d4-bdf0-029f0aca69e9
-ms.openlocfilehash: 021f80f71a3921ed10b07f481ff7b7ce934d9f7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 00e88ddabf3a8e8b591bebae7ebc8ced0e1dc637
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443382"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297711"
 ---
-# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>例外処理 : MFC マクロと C++ 例外機構の使用
+# <a name="exceptions-using-mfc-macros-and-c-exceptions"></a>例外:MFC マクロと C++ 例外を使用します。
 
 この記事では、MFC の例外処理マクロと C++ 例外処理のキーワードの両方を使用するコードの記述に関する考慮事項について説明します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "50443382"
 
 ##  <a name="_core_mixing_exception_keywords_and_macros"></a> 例外のキーワードとマクロの混在
 
-MFC 例外マクロと同じプログラム内での C++ 例外のキーワードを混在させることができます。 ただし、マクロは、例外オブジェクトを自動的に削除、有効範囲外に出ると、例外処理キーワードを使用して、コードは実行されませんので、同じブロック内の C++ 例外のキーワードを持つ MFC マクロを混ぜることはできません。 詳細については、この記事を参照してください。[例外。 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+MFC 例外マクロと同じプログラム内での C++ 例外のキーワードを混在させることができます。 ただし、マクロは、例外オブジェクトを自動的に削除、有効範囲外に出ると、例外処理キーワードを使用して、コードは実行されませんので、同じブロック内の C++ 例外のキーワードを持つ MFC マクロを混ぜることはできません。 詳細については、この記事を参照してください。[例外。キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
 
 マクロとキーワードの主な違いでは、例外がスコープ外になる、マクロがそのキャッチされた例外を「自動的に」削除することです。 キーワードを使用してコードを削除しません。catch ブロックでキャッチされた例外を明示的に削除する必要があります。 マクロと C++ 例外のキーワードまたは、メモリ リークが発生する例外オブジェクトを削除できなかった場合、ヒープの破損、例外が 2 回削除されるとします。
 
@@ -53,9 +53,8 @@ MFC 例外マクロと同じプログラム内での C++ 例外のキーワー�
 
 [!code-cpp[NVC_MFCExceptions#12](../mfc/codesnippet/cpp/exceptions-using-mfc-macros-and-cpp-exceptions_3.cpp)]
 
-詳細については、次を参照してください。[例外。 例外の内容の調査](../mfc/exceptions-examining-exception-contents.md)します。
+詳細については、次を参照してください。[例外。例外の内容の調査](../mfc/exceptions-examining-exception-contents.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [例外処理](../mfc/exception-handling-in-mfc.md)
-
