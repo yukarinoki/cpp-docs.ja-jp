@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b52ae91b7ce0111725e5ba21a7f8ca8aaa6779e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517677"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292277"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu クラス
 
@@ -310,8 +310,8 @@ static BOOL __stdcall ActivatePopupMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pTopFrame*<br/>
-[in]*pPopupMenu*<br/>
+[in] *pTopFrame*<br/>
+[in] *pPopupMenu*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -381,7 +381,7 @@ void CloseMenu(BOOL bSetFocusToBar = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bSetFocusToBar*<br/>
+[in] *bSetFocusToBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -435,7 +435,7 @@ virtual BOOL Create(
 *hMenu*<br/>
 [in]メニュー リソースへのハンドル。
 
-*ブロックされています。*<br/>
+*bLocked*<br/>
 [in]メニューは、カスタマイズ可能なかどうかを示すブール値パラメーター。 FALSE は、ポップアップ メニューがカスタマイズ可能なことを示します。
 
 *bOwnMessage*<br/>
@@ -466,9 +466,9 @@ virtual CPane* CreateTearOffBar(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pWndMain*<br/>
+[in] *pWndMain*<br/>
 [in]*uiID*<br/>
-[in]*lpszName*<br/>
+[in] *lpszName*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -497,7 +497,7 @@ void EnableMenuLogo(
 ### <a name="parameters"></a>パラメーター
 
 *iLogoSize*<br/>
-[in](ピクセル単位)、ロゴのサイズ。
+[in]\(ピクセル単位)、ロゴのサイズ。
 
 *nLogoLocation*<br/>
 [in]ロゴの位置を示す列挙型。
@@ -569,7 +569,7 @@ CMFCToolBarMenuButton* FindSubItemByCommand(UINT uiCmd) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCmd*<br/>
+[in] *uiCmd*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -754,7 +754,7 @@ virtual CWnd* GetParentArea(CRect& rectParentBtn);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectParentBtn*<br/>
+[in] *rectParentBtn*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1107,7 +1107,7 @@ virtual void OnChangeHot(int nHot);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nHot*<br/>
+[in] *nHot*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1119,7 +1119,7 @@ virtual void OnChooseItem(UINT uidCmdID);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uidCmdID*<br/>
+[in] *uidCmdID*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1138,7 +1138,7 @@ virtual BOOL OnCmdMsg(
 [in]*nID*<br/>
 [in]*nCode*<br/>
 [in]*pExtra*<br/>
-[in]*pHandlerInfo*<br/>
+[in] *pHandlerInfo*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1152,7 +1152,7 @@ BOOL PostCommand(UINT uiCommandID);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCommandID*<br/>
+[in] *uiCommandID*<br/>
 
 ### <a name="return-value"></a>戻り値
 

@@ -4,12 +4,12 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - user-defined tools (MFC Extensions)
 ms.assetid: cb887421-78ce-4652-bc67-96a53984ccaa
-ms.openlocfilehash: df8ba98fa1986052bae82b2afbdf40725298bef7
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 785e37c63653dde91176bedd0321fc58ac122c7e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175731"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269709"
 ---
 # <a name="user-defined-tools"></a>ユーザー定義のツール
 
@@ -17,7 +17,7 @@ MFC には、ユーザー定義のツールがサポートしています。 ユ
 
 カスタマイズ ダイアログ ボックスが自動的にユーザー定義のツールのサポートを有効にした場合、**ツール**タブ。次の図は、**ツール**ページ。
 
-![ツールは、[カスタマイズ] ダイアログ ボックスでタブ](../mfc/media/custdialogboxtoolstab.png "カスタマイズ] ダイアログ ボックスで [ツール] タブ") <br/>
+![ツールは、[カスタマイズ] ダイアログ ボックスでタブ](../mfc/media/custdialogboxtoolstab.png "カスタマイズ ダイアログ ボックスで [ツール] タブ") <br/>
 カスタマイズ ダイアログ ボックスの ツール タブ
 
 ## <a name="enabling-user-defined-tools-support"></a>ユーザー定義の有効化のツールのサポート

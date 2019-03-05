@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CPaneFrameWnd [MFC], OnDrawBorder
 - CPaneFrameWnd [MFC], m_bUseSaveBits
 ms.assetid: ea3423a3-2763-482e-b763-817036ded10d
-ms.openlocfilehash: e31b390d9464b3cbe6babd744e987ce7222e58bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3172556b3b12141aaae45992dee36061aebf2a15
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450168"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278822"
 ---
 # <a name="cpaneframewnd-class"></a>CPaneFrameWnd クラス
 
@@ -241,7 +241,8 @@ class CPaneFrameWnd : public CWnd
 
 ミニフレーム ウィンドウには、含まれているペインのスタイルに従って、キャプションのボタンが表示されます。 場合は、ウィンドウを閉じることができます ( [cbasepane::canbeclosed](../../mfc/reference/cbasepane-class.md#canbeclosed))、[閉じる] ボタンが表示されます。 ウィンドウが AFX_CBRS_AUTO_ROLLUP スタイルは、pin が表示されます。
 
-`CPaneFrameWnd` からクラスを派生させる場合は、フレームワークで作成方法を定義する必要があります。 オーバーライドすることで、クラスを作成するか[cpane::createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)、設定や、`CPane::m_pMiniFrameRTC`メンバーことが、クラスのランタイム クラス情報を指すようにします。
+
+  `CPaneFrameWnd` からクラスを派生させる場合は、フレームワークで作成方法を定義する必要があります。 オーバーライドすることで、クラスを作成するか[cpane::createdefaultminiframe](../../mfc/reference/cpane-class.md#createdefaultminiframe)、設定や、`CPane::m_pMiniFrameRTC`メンバーことが、クラスのランタイム クラス情報を指すようにします。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -419,7 +420,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 [in]ミニフレーム ウィンドウに表示されるテキストを指定します。
 
 *dwStyle*<br/>
@@ -461,7 +462,7 @@ virtual BOOL CreateEx(
 *dwStyleEx*<br/>
 [in]拡張ウィンドウ スタイルを指定します。 詳細については、次を参照してください[拡張ウィンドウ スタイル。](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 [in]ミニフレーム ウィンドウに表示されるテキストを指定します。
 
 *dwStyle*<br/>
@@ -925,7 +926,7 @@ virtual void OnMovePane(
 ### <a name="parameters"></a>パラメーター
 
 *pBar*<br/>
-[in](無視) ウィンドウへのポインター。
+[in]\(無視) ウィンドウへのポインター。
 
 *ptOffset*<br/>
 [in]ウィンドウを移動するためのオフセット。
@@ -1131,7 +1132,7 @@ void SetDelayShow(BOOL bDelayShow);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bDelayShow*<br/>
+[in] *bDelayShow*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -1157,7 +1158,7 @@ void SetDockingTimer(UINT nTimeOut);
 
 ### <a name="parameters"></a>パラメーター
 
-*タイムアウト*<br/>
+*nTimeOut*<br/>
 [in]タイムアウト値 (ミリ秒単位)。
 
 ##  <a name="setdockstate"></a>  CPaneFrameWnd::SetDockState
@@ -1269,7 +1270,7 @@ virtual void StoreRecentTabRelatedInfo(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDockingBar*<br/>
-[in]*pTabbedBar*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 

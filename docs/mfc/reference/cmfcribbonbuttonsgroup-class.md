@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CMFCRibbonButtonsGroup [MFC], SetImages
 - CMFCRibbonButtonsGroup [MFC], SetParentCategory
 ms.assetid: b993d93e-fc1a-472f-a87f-1d7b7b499845
-ms.openlocfilehash: 0babda16ee29671a584599699b459062c22406e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3a0806d5c45f429f975b7b8ef0085252fe2b2528
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592739"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295891"
 ---
 # <a name="cmfcribbonbuttonsgroup-class"></a>CMFCRibbonButtonsGroup クラス
 
@@ -238,7 +238,7 @@ virtual void OnDrawImage(
 [in]イメージを描画するためのボタンをクリックします。
 
 *nImageIndex*<br/>
-[in](通常、強調表示されている、または無効になっているボタンの 3 つのイメージの配列のいずれか) のボタンを描画するイメージのインデックス。
+[in]\(通常、強調表示されている、または無効になっているボタンの 3 つのイメージの配列のいずれか) のボタンを描画するイメージのインデックス。
 
 ### <a name="remarks"></a>Remarks
 
