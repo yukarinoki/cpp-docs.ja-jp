@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 7d550268fb417301116b5168d4c0ff76fdc35716
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571144"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302873"
 ---
 # <a name="ccmdui-class"></a>CCmdUI クラス
 
@@ -50,7 +50,7 @@ class CCmdUI
 |名前|説明|
 |----------|-----------------|
 |[CCmdUI::ContinueRouting](#continuerouting)|ハンドラーのチェーンに現在のメッセージのルーティングを続行するコマンド ルーティング メカニズムに指示します。|
-|[関数](#enable)|有効またはこのコマンドのユーザー インターフェイス項目を無効にします。|
+|[CCmdUI::Enable](#enable)|有効またはこのコマンドのユーザー インターフェイス項目を無効にします。|
 |[CCmdUI::SetCheck](#setcheck)|このコマンドのユーザー インターフェイスの項目のチェックの状態を設定します。|
 |[CCmdUI::SetRadio](#setradio)|ように、`SetCheck`メンバー関数では、オプション ボタン グループが動作します。|
 |[CCmdUI::SetText](#settext)|このコマンドのユーザー インターフェイスの項目のテキストを設定します。|
@@ -107,7 +107,7 @@ void ContinueRouting();
 
 これは、高度なメンバー関数は FALSE を返す ON_COMMAND_EX ハンドラーと組み合わせて使用する必要があります。 詳細については、次を参照してください。[テクニカル ノート 6](../../mfc/tn006-message-maps.md)します。
 
-##  <a name="enable"></a>  関数
+##  <a name="enable"></a>  CCmdUI::Enable
 
 有効またはこのコマンドのユーザー インターフェイス項目を無効にするには、このメンバー関数を呼び出します。
 

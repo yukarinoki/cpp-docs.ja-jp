@@ -108,12 +108,12 @@ helpviewer_keywords:
 - CComboBox [MFC], SetTopIndex
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
-ms.openlocfilehash: e7472b808d8b5d743d884d9e3806df7ffe499836
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 847927a36bac8540dd95307ae3c0259d0adba12a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178780"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304471"
 ---
 # <a name="ccombobox-class"></a>CComboBox クラス
 
@@ -144,10 +144,10 @@ class CComboBox : public CWnd
 |[CComboBox::Create](#create)|コンボ ボックスを作成し、それにアタッチします、`CComboBox`オブジェクト。|
 |[CComboBox::Cut](#cut)|(切り取り) 現在の選択範囲のいずれかの編集コントロールし、されているテキスト形式で、削除されたテキストをクリップボードにコピー場合。|
 |[CComboBox::DeleteItem](#deleteitem)|リスト項目がオーナー描画コンボ ボックスから削除されたときに、フレームワークによって呼び出されます。|
-|[オーナー](#deletestring)|コンボ ボックスのリスト ボックスから文字列を削除します。|
+|[CComboBox::DeleteString](#deletestring)|コンボ ボックスのリスト ボックスから文字列を削除します。|
 |[CComboBox::Dir](#dir)|コンボ ボックスのリスト ボックスにファイル名の一覧を追加します。|
 |[CComboBox::DrawItem](#drawitem)|ビジュアルな部分のオーナー描画コンボ ボックスが変更されたときにフレームワークによって呼び出されます。|
-|[Ccombobox::findstring](#findstring)|コンボ ボックスの一覧ボックスで指定したプレフィックスを含む最初の文字列を検索します。|
+|[CComboBox::FindString](#findstring)|コンボ ボックスの一覧ボックスで指定したプレフィックスを含む最初の文字列を検索します。|
 |[CComboBox::FindStringExact](#findstringexact)|指定した文字列と一致する、(コンボ ボックス) でのボックスの一覧の最初文字列を検索します。|
 |[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|に関する情報を取得、`CComboBox`オブジェクト。|
 |[CComboBox::GetCount](#getcount)|コンボ ボックスのリスト ボックス内の項目の数を取得します。|
@@ -208,13 +208,13 @@ class CComboBox : public CWnd
 
 各メッセージ マップ エントリは、次の形式をとります。
 
-**ON\_**_通知_ **(** _id_、 _memberFxn_ **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
 場所`id`通知を送信するコンボ ボックス コントロールの子ウィンドウ ID を指定および`memberFxn`通知を処理するために記述した親メンバー関数の名前を指定します。
 
 親の関数のプロトタイプは次のとおりです。
 
-**afx_msg** `void` `memberFxn` **();**
+**afx_msg** `void` `memberFxn` **( );**
 
 特定の通知を送信する順序を予測することはできません。 具体的には前、にまたは後 CBN_CLOSEUP 通知 CBN_SELCHANGE 通知が発生する可能性があります。
 
@@ -262,7 +262,7 @@ class CComboBox : public CWnd
 
 **ヘッダー:** afxwin.h
 
-##  <a name="addstring"></a>  Ccombobox:
+##  <a name="addstring"></a>  CComboBox::AddString
 
 コンボ ボックスのリスト ボックスに文字列を追加します。
 
@@ -460,7 +460,7 @@ Windows への long ポインター [DELETEITEMSTRUCT](/windows/desktop/api/winu
 
 [!code-cpp[NVC_MFC_CComboBox#8](../../mfc/reference/codesnippet/cpp/ccombobox-class_8.cpp)]
 
-##  <a name="deletestring"></a>  オーナー
+##  <a name="deletestring"></a>  CComboBox::DeleteString
 
 位置に項目を削除します*nIndex*コンボ ボックスから。
 
@@ -554,7 +554,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 [!code-cpp[NVC_MFC_CComboBox#11](../../mfc/reference/codesnippet/cpp/ccombobox-class_11.cpp)]
 
-##  <a name="findstring"></a>  Ccombobox::findstring
+##  <a name="findstring"></a>  CComboBox::FindString
 
 検出されるしますが、コンボ ボックスの一覧ボックスで指定したプレフィックスを含む最初の文字列を選択しません。
 
@@ -599,7 +599,7 @@ int FindStringExact(
 *nIndexStart*<br/>
 最初の項目を検索する前にある項目の 0 から始まるインデックスを指定します。 指定された項目に、リスト ボックスの上部から続行、検索では、リスト ボックスの下部に達すると、 *nIndexStart*します。 場合*nIndexStart* -1 で、最初からリスト ボックス全体が検索されます。
 
-*中から*<br/>
+*lpszFind*<br/>
 検索する null で終わる文字列へのポインター。 この文字列は、拡張子を含む、完全なファイル名を含めることができます。 検索は大文字小文字が区別はないため、この文字列は、任意の大文字と小文字を含めることができます。
 
 ### <a name="return-value"></a>戻り値

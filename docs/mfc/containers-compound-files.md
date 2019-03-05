@@ -1,5 +1,5 @@
 ---
-title: 'コンテナー : 複合ファイル'
+title: コンテナー:複合ファイル
 ms.date: 11/04/2016
 helpviewer_keywords:
 - compound files [MFC]
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OLE containers [MFC], compound files
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
-ms.openlocfilehash: 5a8ba0821d92ab41a4b95fb7b2a26da63c1df285
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643270"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326623"
 ---
-# <a name="containers-compound-files"></a>コンテナー : 複合ファイル
+# <a name="containers-compound-files"></a>コンテナー:複合ファイル
 
 この記事では、コンポーネントと複合ファイルと利点の実装と、OLE アプリケーションで複合ファイルを使用する短所について説明します。
 
@@ -85,6 +85,6 @@ OLE 複合ファイルで実装される 3 種類のオブジェクトを使用�
 ## <a name="see-also"></a>関連項目
 
 [コンテナー](../mfc/containers.md)<br/>
-[コンテナー: ユーザー インターフェイスの問題](../mfc/containers-user-interface-issues.md)<br/>
+[コンテナー:ユーザー インターフェイスの問題](../mfc/containers-user-interface-issues.md)<br/>
 [COleStreamFile クラス](../mfc/reference/colestreamfile-class.md)<br/>
 [COleDocument クラス](../mfc/reference/coledocument-class.md)

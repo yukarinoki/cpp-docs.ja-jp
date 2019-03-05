@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: 50fb7da1a59d35d96f1f65428b3a361e3a226607
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694455"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304991"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd クラス
 
@@ -144,7 +144,7 @@ virtual BOOL Create(
 *lpszClassName*<br/>
 Windows クラスの名前を示す文字の null で終わる文字列の指す (、 [WNDCLASS](/windows/desktop/api/winuser/ns-winuser-tagwndclassa)構造)。 クラス名が登録されている任意の名前を指定できます、 [AfxRegisterWndClass](application-information-and-management.md#afxregisterwndclass)グローバル関数。 標準の NULL にする必要があります`CMDIChildWnd`します。
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 ウィンドウの名前を表す null で終わる文字列へのポインター。 タイトル バーのテキストとして使用します。
 
 *dwStyle*<br/>
@@ -171,7 +171,7 @@ Windows クラスの名前を示す文字の null で終わる文字列の指す
 
 ### <a name="example"></a>例
 
-例 1:
+例 1: 
 
 [!code-cpp[NVC_MFCWindowing#7](../../mfc/reference/codesnippet/cpp/cmdichildwnd-class_1.cpp)]
 

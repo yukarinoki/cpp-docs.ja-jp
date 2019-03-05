@@ -7,12 +7,12 @@ helpviewer_keywords:
 - sockets classes [MFC]
 - Windows Sockets [MFC], classes
 ms.assetid: 58b9ab8d-9e44-4db3-8265-e04e713d2e9a
-ms.openlocfilehash: 18537c0de09185c8cd219e3d17ef8bb297e1d711
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4abdd8f8fbfc115b5014ffd0b3a37df357852b16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50433606"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303821"
 ---
 # <a name="windows-sockets-classes"></a>Windows Sockets クラス
 
@@ -30,4 +30,3 @@ Windows ソケットは、2 台のコンピューター間で通信するネッ�
 ## <a name="see-also"></a>関連項目
 
 [クラスの概要](../mfc/class-library-overview.md)
-

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - MMC Snap-In classes
 ms.assetid: 4af1d5af-687f-48b1-b2c5-fa252241b4d6
-ms.openlocfilehash: 242a517cfa2e4547ffcae43f292edf8b4bc417a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cde7fe3fb7ec635e30c592e890ced323777c9a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595027"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326206"
 ---
 # <a name="mmc-snap-in-classes"></a>MMC スナップイン クラス
 
@@ -26,4 +26,3 @@ ms.locfileid: "50595027"
 
 [クラスの概要](../atl/atl-class-overview.md)<br/>
 [スナップイン オブジェクトに関するマクロ](../atl/reference/snap-in-object-macros.md)
-

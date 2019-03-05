@@ -20,16 +20,17 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetColumnsNumber
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
-ms.openlocfilehash: c284906a85ec93c5c5419acb783f6f46ebcf03e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65c2c22c93dc3acb50fc4627c3710a3f0c86aeb0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575736"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303964"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty クラス
 
-`CMFCPropertyGridColorProperty` クラスは、色の選択用のダイアログ ボックスを開くプロパティ リスト コントロール項目をサポートします。
+
+  `CMFCPropertyGridColorProperty` クラスは、色の選択用のダイアログ ボックスを開くプロパティ リスト コントロール項目をサポートします。
 
 ## <a name="syntax"></a>構文
 
@@ -65,11 +66,13 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 ## <a name="remarks"></a>Remarks
 
-`CMFCPropertyGridColorProperty` クラスは、プロパティ リスト コントロールに追加できるカラー プロパティをサポートします。 詳細については、次を参照してください。、 [CMFCPropertyGridCtrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)します。
+
+  `CMFCPropertyGridColorProperty` クラスは、プロパティ リスト コントロールに追加できるカラー プロパティをサポートします。 詳細については、次を参照してください。、 [CMFCPropertyGridCtrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)します。
 
 ## <a name="example"></a>例
 
-`CMFCPropertyGridColorProperty` クラスのオブジェクトを構築する方法、および `CMFCPropertyGridColorProperty` クラスの各種メソッドを使用してこのオブジェクトを構成する方法を次の例に示します。 このコードでは、自動ボタンとその他ボタンを有効にする方法、および色と列番号を設定する方法を示しています。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+
+  `CMFCPropertyGridColorProperty` クラスのオブジェクトを構築する方法、および `CMFCPropertyGridColorProperty` クラスの各種メソッドを使用してこのオブジェクトを構成する方法を次の例に示します。 このコードでは、自動ボタンとその他ボタンを有効にする方法、および色と列番号を設定する方法を示しています。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#13](../../mfc/reference/codesnippet/cpp/cmfcpropertygridcolorproperty-class_1.cpp)]
 
@@ -112,7 +115,7 @@ CMFCPropertyGridColorProperty(
 *lpszDescr*<br/>
 [in]プロパティの説明。 既定値は、NULL です。
 
-*指定*<br/>
+*dwData*<br/>
 [in]整数プロパティに関連付けられているその他のデータへのポインターなどのアプリケーションに固有のデータ。 既定値は 0 です。
 
 ##  <a name="enableautomaticbutton"></a>  CMFCPropertyGridColorProperty::EnableAutomaticButton

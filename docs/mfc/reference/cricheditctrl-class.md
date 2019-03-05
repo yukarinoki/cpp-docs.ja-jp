@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: c42f7b77c04b2c94923908fa8b9542bea313b154
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ca6185e7ee41726c7bf583056cb66eeb1be7021c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178994"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303435"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl クラス
 
@@ -295,7 +295,7 @@ BOOL CanPaste(UINT nFormat = 0) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*パラメーター*<br/>
+*nFormat*<br/>
 クエリするクリップボード データ形式。 このパラメーターは、定義済みのクリップボード形式またはによって返される値のいずれかを指定できます[独自のデータ](/windows/desktop/api/winuser/nf-winuser-registerclipboardformata)します。
 
 ### <a name="return-value"></a>戻り値
@@ -635,7 +635,7 @@ DWORD FindWordBreak(
 *nCode*<br/>
 実行するアクションを示します。 使用可能な値の一覧は、パラメーターの説明を参照してください。*コード*EM_FINDWORDBREAK Windows sdk にします。
 
-*n 開始*<br/>
+*nStart*<br/>
 開始する 0 から始まる文字位置。
 
 ### <a name="return-value"></a>戻り値
@@ -833,7 +833,7 @@ int GetLine(
 *lpszBuffer*<br/>
 テキストを受け取るバッファーへのポインター。 バッファーの最初の単語は、バッファーにコピーするバイトの最大数を指定する必要があります。
 
-*格納*<br/>
+*nMaxLength*<br/>
 コピーできる文字の最大数*lpszBuffer*します。 2 番目の形式の`GetLine`で指定したバッファーの最初の単語にこの値を配置*lpszBuffer*します。
 
 ### <a name="return-value"></a>戻り値
@@ -1201,10 +1201,10 @@ int GetTextRange(
 
 ### <a name="parameters"></a>パラメーター
 
-*n 最初*<br/>
+*nFirst*<br/>
 範囲の最初の文字の直前の文字の位置のインデックス。
 
-*n 最後*<br/>
+*nLast*<br/>
 範囲の最後の文字の直後の文字位置。
 
 *refString*<br/>
@@ -1451,7 +1451,7 @@ void PasteSpecial(
 *nClipFormat*<br/>
 クリップボードの形式にこれを貼り付ける`CRichEditCtrl`オブジェクト。
 
-*型*<br/>
+*dvAspect*<br/>
 クリップボードから取得するデータのデバイスのアスペクト。
 
 *hMF*<br/>
@@ -1516,7 +1516,7 @@ void ReplaceSel(
 
 ### <a name="parameters"></a>パラメーター
 
-*されています。*<br/>
+*lpszNewText*<br/>
 置換テキストを含む null で終わる文字列へのポインター。
 
 *bCanUndo*<br/>
@@ -2098,7 +2098,7 @@ long StreamIn(
 
 ### <a name="parameters"></a>パラメーター
 
-*パラメーター*<br/>
+*nFormat*<br/>
 入力データの形式を指定するフラグ。 詳細については、次の「解説」を参照してください。
 
 *es*<br/>
@@ -2140,7 +2140,7 @@ long StreamOut(
 
 ### <a name="parameters"></a>パラメーター
 
-*パラメーター*<br/>
+*nFormat*<br/>
 出力データ形式を指定するフラグ。 詳細については、次の「解説」を参照してください。
 
 *es*<br/>

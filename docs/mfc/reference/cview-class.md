@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: 679cdc5b5a0a85ade09fe1999e8de40300a8ae8e
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694388"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305017"
 ---
 # <a name="cview-class"></a>CView クラス
 
@@ -86,12 +86,12 @@ class AFX_NOVTABLE CView : public CWnd
 |[CView::IsSelected](#isselected)|ドキュメント項目が選択されているかどうかをテストします。 OLE のサポートが必要です。|
 |[CView::OnDragEnter](#ondragenter)|項目が最初に、ビューのドラッグ アンド ドロップ領域にドラッグされたときに呼び出されます。|
 |[CView::OnDragLeave](#ondragleave)|ドラッグした項目がビューのドラッグ アンド ドロップ領域を離れると呼び出されます。|
-|[直前](#ondragover)|項目がビューのドラッグ アンド ドロップ領域にドラッグされるときに呼び出されます。|
+|[CView::OnDragOver](#ondragover)|項目がビューのドラッグ アンド ドロップ領域にドラッグされるときに呼び出されます。|
 |[CView::OnDragScroll](#ondragscroll)|カーソルがウィンドウのスクロール領域にドラッグされるかどうかを判断するには、呼び出されます。|
-|[この関数](#ondrop)|項目がビュー、既定のハンドラーのドラッグ アンド ドロップ領域にドロップされたときに呼び出されます。|
+|[CView::OnDrop](#ondrop)|項目がビュー、既定のハンドラーのドラッグ アンド ドロップ領域にドロップされたときに呼び出されます。|
 |[CView::OnDropEx](#ondropex)|項目がビュー、プライマリのハンドラーのドラッグ アンド ドロップ領域にドロップされたときに呼び出されます。|
-|[:Oninitialupdate](#oninitialupdate)|ビューがドキュメントに最初にアタッチされた後に呼び出されます。|
-|[付け](#onpreparedc)|前に呼び出される、`OnDraw`画面表示のメンバー関数を呼び出す、または`OnPrint`印刷または印刷プレビューのメンバー関数が呼び出されます。|
+|[CView::OnInitialUpdate](#oninitialupdate)|ビューがドキュメントに最初にアタッチされた後に呼び出されます。|
+|[CView::OnPrepareDC](#onpreparedc)|前に呼び出される、`OnDraw`画面表示のメンバー関数を呼び出す、または`OnPrint`印刷または印刷プレビューのメンバー関数が呼び出されます。|
 |[CView::OnScroll](#onscroll)|OLE アイテムは、ビューの境界を越えるドラッグされたときに呼び出されます。|
 |[CView::OnScrollBy](#onscrollby)|アクティブなインプレース OLE 項目を含むビューがスクロールされたときに呼び出されます。|
 
@@ -101,12 +101,12 @@ class AFX_NOVTABLE CView : public CWnd
 |----------|-----------------|
 |[CView::OnActivateFrame](#onactivateframe)|ビューを含むフレーム ウィンドウがアクティブ化または非アクティブ化されたときに呼び出されます。|
 |[CView::OnActivateView](#onactivateview)|ビューがアクティブ化されるときに呼び出されます。|
-|[値](#onbeginprinting)|印刷ジョブが開始したときに呼び出されますグラフィックス デバイス インターフェイス (GDI) のリソースの割り当てをオーバーライドします。|
-|[詳細](#ondraw)|画面の表示、印刷、または印刷プレビューのドキュメントのイメージを表示するために呼び出されます。 必要な実装です。|
+|[CView::OnBeginPrinting](#onbeginprinting)|印刷ジョブが開始したときに呼び出されますグラフィックス デバイス インターフェイス (GDI) のリソースの割り当てをオーバーライドします。|
+|[CView::OnDraw](#ondraw)|画面の表示、印刷、または印刷プレビューのドキュメントのイメージを表示するために呼び出されます。 必要な実装です。|
 |[CView::OnEndPrinting](#onendprinting)|印刷ジョブの終了時に呼び出されますGDI リソースの割り当てを解除するオーバーライドです。|
 |[CView::OnEndPrintPreview](#onendprintpreview)|プレビュー モードが終了したときに呼び出されます。|
 |[関数](#onprepareprinting)|ドキュメントが印刷またはプレビューされる前に呼び出されます[印刷] ダイアログ ボックスを初期化するためにオーバーライドします。|
-|[のみ](#onprint)|印刷またはプレビューのドキュメントのページと呼ばれます。|
+|[CView::OnPrint](#onprint)|印刷またはプレビューのドキュメントのページと呼ばれます。|
 |[CView::OnUpdate](#onupdate)|そのドキュメントが表示されているビューに通知するという変更します。|
 
 ## <a name="remarks"></a>Remarks
@@ -247,7 +247,7 @@ virtual void OnActivateFrame(
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*nState*<br/>
 フレーム ウィンドウがされているかどうかを指定します。 アクティブ化または非アクティブ化します。 次の値のいずれかを指定できます。
 
 - WA_INACTIVE フレーム ウィンドウが非アクティブにします。
@@ -293,7 +293,7 @@ virtual void OnActivateView(
 
 これらのパラメーターが異なるとき[CFrameWnd::SetActiveView](../../mfc/reference/cframewnd-class.md#setactiveview)ものとは異なるビューを使用して呼び出した[CFrameWnd::GetActiveView](../../mfc/reference/cframewnd-class.md#getactiveview)を返します。 これは、分割ウィンドウで最もよく発生します。
 
-##  <a name="onbeginprinting"></a>  値
+##  <a name="onbeginprinting"></a>  CView::OnBeginPrinting
 
 `OnPreparePrinting` が呼び出された後で、印刷または印刷プレビュー ジョブの開始時にフレームワークによって呼び出されます。
 
@@ -333,8 +333,8 @@ virtual DROPEFFECT OnDragEnter(
 *pDataObject*<br/>
 指す、 [COleDataObject](../../mfc/reference/coledataobject-class.md)ビューのドロップ領域にドラッグしています。
 
-*ドロップ*<br/>
-修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
+*dwKeyState*<br/>
+修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
 
 *ポイント*<br/>
 ビューのクライアント領域を基準と現在のマウスの位置。
@@ -357,7 +357,7 @@ DROPEFFECT からの値の列挙型で、ユーザーがこの位置にあるオ
 
 既定の実装では、何もせずにします。
 
-今後の呼び出しを準備するには、この関数をオーバーライド、 [OnDragOver](#ondragover)メンバー関数。 この時点で後で使用できるデータ オブジェクトから必要なすべてのデータを取得する必要が、`OnDragOver`メンバー関数。 ビューは、ユーザーの視覚的フィードバックを提供するには、この時点でも更新する必要があります。 詳細については、この記事を参照してください。[ドラッグ アンド ドロップ: ドロップ ターゲットの実装](../../mfc/drag-and-drop-implementing-a-drop-target.md)します。
+今後の呼び出しを準備するには、この関数をオーバーライド、 [OnDragOver](#ondragover)メンバー関数。 この時点で後で使用できるデータ オブジェクトから必要なすべてのデータを取得する必要が、`OnDragOver`メンバー関数。 ビューは、ユーザーの視覚的フィードバックを提供するには、この時点でも更新する必要があります。 詳細については、この記事を参照してください。[ドラッグ アンド ドロップします。ドロップ ターゲットの実装](../../mfc/drag-and-drop-implementing-a-drop-target.md)します。
 
 ##  <a name="ondragleave"></a>  CView::OnDragLeave
 
@@ -371,7 +371,7 @@ virtual void OnDragLeave();
 
 現在のビューは、中に行った操作をクリーンアップする必要がある場合は、この関数をオーバーライド[OnDragEnter](#ondragenter)または[OnDragOver](#ondragover)オブジェクトがドラッグ アンド ドロップ中に、ビジュアル ユーザー フィードバックを削除するなどの呼び出し.
 
-##  <a name="ondragover"></a>  直前
+##  <a name="ondragover"></a>  CView::OnDragOver
 
 マウスがドロップ ターゲット ウィンドウに移動するドラッグ操作中に、フレームワークが呼び出します。
 
@@ -387,8 +387,8 @@ virtual DROPEFFECT OnDragOver(
 *pDataObject*<br/>
 指す、 [COleDataObject](../../mfc/reference/coledataobject-class.md)ドロップ ターゲット上にドラッグします。
 
-*ドロップ*<br/>
-修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
+*dwKeyState*<br/>
+修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
 
 *ポイント*<br/>
 ビューのクライアント領域を基準と現在のマウスの位置。
@@ -411,7 +411,7 @@ DROPEFFECT からの値の列挙型で、ユーザーがこの位置にあるオ
 
 既定の実装では、何もせずにします。
 
-ドラッグ操作中にユーザーの視覚的フィードバックを提供するには、この関数をオーバーライドします。 この関数は継続的に呼び出される、のでそれに含まれる任意のコードを可能な限り最適化してください。 詳細については、この記事を参照してください。[ドラッグ アンド ドロップ: ドロップ ターゲットの実装](../../mfc/drag-and-drop-implementing-a-drop-target.md)します。
+ドラッグ操作中にユーザーの視覚的フィードバックを提供するには、この関数をオーバーライドします。 この関数は継続的に呼び出される、のでそれに含まれる任意のコードを可能な限り最適化してください。 詳細については、この記事を参照してください。[ドラッグ アンド ドロップします。ドロップ ターゲットの実装](../../mfc/drag-and-drop-implementing-a-drop-target.md)します。
 
 ##  <a name="ondragscroll"></a>  CView::OnDragScroll
 
@@ -425,8 +425,8 @@ virtual DROPEFFECT OnDragScroll(
 
 ### <a name="parameters"></a>パラメーター
 
-*ドロップ*<br/>
-修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
+*dwKeyState*<br/>
+修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
 
 *ポイント*<br/>
 画面を基準 (ピクセル単位)、カーソルの位置が含まれています。
@@ -449,9 +449,9 @@ DROPEFFECT からの値の列挙型で、ユーザーがこの位置にあるオ
 
 ### <a name="remarks"></a>Remarks
 
-このイベントの特別な動作を提供したい場合は、この関数をオーバーライドします。 既定の実装では、カーソルが各ウィンドウの枠線内で、既定のスクロール領域にドラッグされるときに windows が自動的にスクロールします。詳細については、この記事を参照してください。[ドラッグ アンド ドロップ: ドロップ ターゲットの実装](../../mfc/drag-and-drop-implementing-a-drop-target.md)します。
+このイベントの特別な動作を提供したい場合は、この関数をオーバーライドします。 既定の実装では、カーソルが各ウィンドウの枠線内で、既定のスクロール領域にドラッグされるときに windows が自動的にスクロールします。詳細については、この記事を参照してください。[ドラッグ アンド ドロップします。ドロップ ターゲットの実装](../../mfc/drag-and-drop-implementing-a-drop-target.md)します。
 
-##  <a name="ondraw"></a>  詳細
+##  <a name="ondraw"></a>  CView::OnDraw
 
 ドキュメントのイメージをレンダリングするためにフレームワークによって呼び出されます。
 
@@ -472,7 +472,7 @@ virtual void OnDraw(CDC* pDC) = 0;
 
 描画を最適化するために呼び出す、[ため](../../mfc/reference/cdc-class.md#rectvisible)指定の四角形を描画するかどうかを確認するデバイス コンテキストのメンバー関数。 通常の画面表示と印刷を区別する必要がある場合は、呼び出し、 [IsPrinting](../../mfc/reference/cdc-class.md#isprinting)デバイス コンテキストのメンバー関数。
 
-##  <a name="ondrop"></a>  この関数
+##  <a name="ondrop"></a>  CView::OnDrop
 
 ユーザーが有効なドロップ ターゲット上でデータ オブジェクトを離したときに、フレームワークによって呼び出されます。
 
@@ -532,7 +532,7 @@ virtual DROPEFFECT OnDropEx(
 *dropDefault*<br/>
 現在のキーの状態に基づいて既定のドロップ操作に対して、ユーザーが選択した結果。 せずがある可能性があります。 ドロップ効果は、「解説」で説明します。
 
-*ドロップダウン リスト*<br/>
+*dropList*<br/>
 ドロップ ソースがサポートしているドロップ効果の一覧。 ビットごとの OR を使用して、ドロップ効果の値を結合することができます ( **&#124;**) 操作。 ドロップ効果は、「解説」で説明します。
 
 *ポイント*<br/>
@@ -630,7 +630,7 @@ virtual void OnEndPrintPreview(
 
 基底クラスのバージョンを常に呼び出す`OnEndPrintPreview`関数の末尾には通常、オーバーライドします。
 
-##  <a name="oninitialupdate"></a>  :Oninitialupdate
+##  <a name="oninitialupdate"></a>  CView::OnInitialUpdate
 
 ビューが最初に、ドキュメントに接続されているが、ビューが最初に表示される前に、フレームワークによって呼び出されます。
 
@@ -642,7 +642,7 @@ virtual void OnInitialUpdate();
 
 この関数の既定の実装、 [OnUpdate](#onupdate)ヒント情報なしでメンバー関数 (つまり、0 の既定値を使用して、 *lHint*パラメーターとの場合は NULL、 *pHint*パラメーター)。 ドキュメントに関する情報を必要とする任意の one-time initialization を実行するには、この関数をオーバーライドします。 たとえば、アプリケーションは、固定サイズのドキュメントに、ドキュメントのサイズに基づくビューのスクロール範囲を初期化するためにこの関数を使用できます。 アプリケーションでは、可変サイズのドキュメントをサポートする場合は、使用[OnUpdate](#onupdate)スクロールを更新する時間を制限すべてドキュメントの変更。
 
-##  <a name="onpreparedc"></a>  付け
+##  <a name="onpreparedc"></a>  CView::OnPrepareDC
 
 前にフレームワークによって呼び出されます、 [OnDraw](#ondraw)画面表示とする前に、メンバー関数が呼び出されます、 [OnPrint](#onprint)印刷または印刷のプレビュー期間中の各ページのメンバー関数が呼び出されます。
 
@@ -680,7 +680,7 @@ virtual void OnPrepareDC(
 
 [!code-cpp[NVC_MFCDocView#183](../../mfc/codesnippet/cpp/cview-class_1.cpp)]
 
-##  <a name="onprepareprinting"></a>  関数
+##  <a name="onprepareprinting"></a>  CView::OnPreparePrinting
 
 ドキュメントを印刷またはプレビュー前に、フレームワークによって呼び出されます。
 
@@ -719,7 +719,7 @@ virtual BOOL OnPreparePrinting(CPrintInfo* pInfo);
 
 [!code-cpp[NVC_MFCDocView#185](../../mfc/codesnippet/cpp/cview-class_3.cpp)]
 
-##  <a name="onprint"></a>  のみ
+##  <a name="onprint"></a>  CView::OnPrint
 
 印刷または印刷ドキュメントのページをプレビューするためにフレームワークによって呼び出されます。
 

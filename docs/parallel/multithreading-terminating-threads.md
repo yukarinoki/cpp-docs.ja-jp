@@ -1,5 +1,5 @@
 ---
-title: 'マルチ スレッド: MFC 内のスレッドの終了'
+title: マルチ スレッド。MFC でのスレッドの終了
 ms.date: 08/27/2018
 f1_keywords:
 - CREATE_SUSPENDED
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - stopping threads
 - AfxEndThread method
 ms.assetid: 4c0a8c6d-c02f-456d-bd02-0a8c8d006ecb
-ms.openlocfilehash: 37a7a6fc443e172f80cc7c30c462ec4d69b3e8de
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: dd11f5db646e172d7ea2c2cc646841249d95ef31
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693296"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303632"
 ---
-# <a name="multithreading-terminating-threads-in-mfc"></a>マルチ スレッド: MFC 内のスレッドの終了
+# <a name="multithreading-terminating-threads-in-mfc"></a>マルチ スレッド。MFC でのスレッドの終了
 
 通常、スレッドは、次の 2 つの条件で終了します。1 つは制御関数が終了した場合、もう 1 つはスレッドを最後まで実行できなかった場合です。 ワード プロセッサでバックグラウンド印刷用のスレッドを使っている場合、印刷が正常に終了すると、制御関数が正常に終了します。 ただし、ユーザーが印刷をキャンセルするときは、バッググラウンド印刷用のスレッドを途中で終了する必要があります。 このトピックでは、この 2 つの終了処理を実現する方法と、スレッド終了時の終了コードを取得する方法について説明します。
 
@@ -32,13 +32,13 @@ ms.locfileid: "51693296"
 
 ##  <a name="_core_normal_thread_termination"></a> スレッドの正常終了
 
-ワーカー スレッドでは、スレッドの正常終了は単純です。制御関数を終了し、終了理由を呼び出し元に返すだけです。 いずれかを使用することができます、 [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)関数または**返す**ステートメント。 通常、0 を返して正常終了を通知しますが、返す値はプログラマが決めることができます。
+ワーカー スレッドのスレッドの正常終了は単純です。制御関数を終了し、終了の理由を示す値を返します。 いずれかを使用することができます、 [AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)関数または**返す**ステートメント。 通常、0 を返して正常終了を通知しますが、返す値はプログラマが決めることができます。
 
 ユーザー インターフェイス スレッドでは、そのプロセスは同じように簡単: から、ユーザー インターフェイス スレッド内で呼び出す[PostQuitMessage](/windows/desktop/api/winuser/nf-winuser-postquitmessage) Windows SDK に含まれています。 唯一のパラメーターを`PostQuitMessage`受け取りますが、スレッドの終了コード。 ワーカー スレッドの場合と同じように、通常は 0 を返して正常終了を通知します。
 
 ##  <a name="_core_premature_thread_termination"></a> スレッドの中断
 
-シンプルには、スレッドを途中で終了しています: 呼び出す[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)から、スレッド内で。 パラメーターは終了コードだけです。 この関数はスレッドの実行を停止し、スレッドが占有していたスタック領域を解放し、スレッドにアタッチしているすべての DLL をデタッチし、メモリからスレッド オブジェクトを削除します。
+スレッドの中断は、シンプルには。呼び出す[AfxEndThread](../mfc/reference/application-information-and-management.md#afxendthread)から、スレッド内で。 パラメーターは終了コードだけです。 この関数はスレッドの実行を停止し、スレッドが占有していたスタック領域を解放し、スレッドにアタッチしているすべての DLL をデタッチし、メモリからスレッド オブジェクトを削除します。
 
 関数 `AfxEndThread` は終了するスレッドから呼び出します。 あるスレッドを別のスレッドから終了させるには、2 つのスレッド間の通信メソッドを設定する必要があります。
 

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - lightweight tasks
 ms.assetid: b6dcfc7a-9fa9-4144-96a6-2845ea272017
-ms.openlocfilehash: 7e155b82e963e7bf3f19fa44c66e4c22b8c602e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19918cf73c2b5b03db895c4751b22b1666ce01de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481433"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326687"
 ---
 # <a name="lightweight-tasks"></a>軽量タスク
 
@@ -26,10 +26,9 @@ ms.locfileid: "50481433"
 
 ## <a name="example"></a>例
 
-例については、軽量タスクを使用する既存のコードを改変する方法については、次を参照してください。[チュートリアル: 既存のコードを使用して軽量タスクを適応](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)します。
+例については、軽量タスクを使用する既存のコードを改変する方法については、次を参照してください。[チュートリアル。軽量タスクを使用する既存のコードを適合させる](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [チュートリアル: 既存のコードを改変して軽量タスクを使用する](../../parallel/concrt/walkthrough-adapting-existing-code-to-use-lightweight-tasks.md)
-

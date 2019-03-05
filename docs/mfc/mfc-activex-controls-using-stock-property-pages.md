@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : ストック プロパティ ページの使用'
+title: MFC ActiveX コントロール:ストック プロパティ ページを使用します。
 ms.date: 09/12/2018
 f1_keywords:
 - CLSID_CPicturePropPage
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - CLSID_CPicturePropPage [MFC]
 - MFC ActiveX controls [MFC], property pages
 ms.assetid: 22638d86-ff3e-4124-933e-54b7c2a25968
-ms.openlocfilehash: f31bf245e35231b6cc62497e7bbc57ff7f0e6af1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b73a027422cfe9cbf03afece400c1b513cace151
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545393"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304705"
 ---
-# <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX コントロール : ストック プロパティ ページの使用
+# <a name="mfc-activex-controls-using-stock-property-pages"></a>MFC ActiveX コントロール:ストック プロパティ ページを使用します。
 
 この記事では、ストック プロパティ ページを使用できる ActiveX コントロールとその使用方法について説明します。
 
@@ -31,9 +31,9 @@ ms.locfileid: "50545393"
 
 ActiveX コントロールのプロパティ ページの使用に関する詳細については、次の記事を参照してください。
 
-- [MFC ActiveX コントロール: プロパティ ページ](../mfc/mfc-activex-controls-property-pages.md)
+- [MFC ActiveX コントロール:プロパティ ページ](../mfc/mfc-activex-controls-property-pages.md)
 
-- [MFC ActiveX コントロール: カスタム プロパティ ページの追加](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
+- [MFC ActiveX コントロール:別のカスタム プロパティ ページの追加](../mfc/mfc-activex-controls-adding-another-custom-property-page.md)
 
 MFC ActiveX コントロールで使用するための 3 つのストック プロパティ ページの提供: `CLSID_CColorPropPage`、 `CLSID_CFontPropPage`、および`CLSID_CPicturePropPage`します。 これらのページでは、株価の色、フォント、および画像のプロパティのユーザー インターフェイスをそれぞれ表示されます。
 
@@ -54,5 +54,4 @@ BEGIN_PROPPAGEIDS マクロでのプロパティ ページの数は 4 である�
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
-[MFC ActiveX コントロール: ストック プロパティの追加](../mfc/mfc-activex-controls-adding-stock-properties.md)
-
+[MFC ActiveX コントロール:ストック プロパティの追加](../mfc/mfc-activex-controls-adding-stock-properties.md)
