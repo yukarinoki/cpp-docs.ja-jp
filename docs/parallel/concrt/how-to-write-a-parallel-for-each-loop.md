@@ -1,18 +1,18 @@
 ---
-title: '方法: parallel_for_each ループを記述する'
+title: '方法: Parallel_for_each ループを記述します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - writing a parallel_for_each loop [Concurrency Runtime]
 - parallel_for_each function, example
 ms.assetid: fa9c0ba6-ace0-4f88-8681-c7c1f52aff20
-ms.openlocfilehash: e3b19ec180f9f4e75a2f280a0ecd159e5b932565
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19af9be8ef6d9c38a0942e7c85caa0a8bc4e6813
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610510"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272218"
 ---
-# <a name="how-to-write-a-parallelforeach-loop"></a>方法: parallel_for_each ループを記述する
+# <a name="how-to-write-a-parallelforeach-loop"></a>方法: Parallel_for_each ループを記述します。
 
 この例は、使用する方法を示します、 [concurrency::parallel_for_each](reference/concurrency-namespace-functions.md#parallel_for_each)内の素数の数を計算するアルゴリズム、 [std::array](../../standard-library/array-class-stl.md)並列オブジェクト。
 
@@ -38,14 +38,14 @@ took 1653 ms
 
 コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`parallel-count-primes.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
 
-**cl.exe/EHsc 並列-カウント-います**
+**cl.exe /EHsc parallel-count-primes.cpp**
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
-この例で `parallel_for_each` アルゴリズムに渡すラムダ式では、`InterlockedIncrement` 関数を使用して、ループの反復処理を並列で行い、カウンターを同時にインクリメントします。 `InterlockedIncrement` などの関数を使用して共有リソースへのアクセスを同期化すると、コードのパフォーマンスのボトルネックを示すことができます。 たとえば、ロックフリー同期メカニズムを使用することができます、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)共有リソースへの同時アクセスをなくすのクラス。 使用する例については、`combinable`この方法でクラスを参照してください[方法: パフォーマンスを向上させる combinable を使用して](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)します。
+この例で `parallel_for_each` アルゴリズムに渡すラムダ式では、`InterlockedIncrement` 関数を使用して、ループの反復処理を並列で行い、カウンターを同時にインクリメントします。 
+  `InterlockedIncrement` などの関数を使用して共有リソースへのアクセスを同期化すると、コードのパフォーマンスのボトルネックを示すことができます。 たとえば、ロックフリー同期メカニズムを使用することができます、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)共有リソースへの同時アクセスをなくすのクラス。 使用する例については、`combinable`この方法でクラスを参照してください[方法。パフォーマンスを向上させる combinable を使用して](../../parallel/concrt/how-to-use-combinable-to-improve-performance.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)<br/>
 [parallel_for_each 関数](reference/concurrency-namespace-functions.md#parallel_for_each)
-

@@ -8,12 +8,12 @@ f1_keywords:
 - AMP_GRAPHICS/Concurrency::graphics::writeonly_texture_view::set
 - AMP_GRAPHICS/Concurrency::graphics::rank Constant
 ms.assetid: 8d117ad3-0a1c-41ae-b29c-7c95fdd4d04d
-ms.openlocfilehash: 022450469a69e9fe127f23a50b799092e7e057b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5244ae5df99b06c77f4eb27317e5829b21fabf24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524692"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274389"
 ---
 # <a name="writeonlytextureview-class"></a>writeonly_texture_view クラス
 
@@ -57,7 +57,8 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 |名前|説明|
 |----------|-----------------|
 |[writeonly_texture_view コンス トラクター](#ctor)|`writeonly_texture_view` クラスの新しいインスタンスを初期化します。|
-|[~ writeonly_texture_view デストラクター](#ctor)|`writeonly_texture_view` オブジェクトを破棄します。|
+|[~ writeonly_texture_view デストラクター](#ctor)|
+  `writeonly_texture_view` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -75,7 +76,8 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 
 |名前|説明|
 |----------|-----------------|
-|[rank 定数](#rank)|`writeonly_texture_view` オブジェクトのランクを取得します。|
+|[rank 定数](#rank)|
+  `writeonly_texture_view` オブジェクトのランクを取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -87,11 +89,12 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 
 **ヘッダー:** amp_graphics.h
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency::graphics
 
 ##  <a name="dtor"></a> ~writeonly_texture_view
 
-`writeonly_texture_view` オブジェクトを破棄します。
+
+  `writeonly_texture_view` オブジェクトを破棄します。
 
 ```
 ~writeonly_texture_view() restrict(amp,cpu);
@@ -117,7 +120,8 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 
 ##  <a name="rank"></a> ランク
 
-`writeonly_texture_view` オブジェクトのランクを取得します。
+
+  `writeonly_texture_view` オブジェクトのランクを取得します。
 
 ```
 static const int rank = _Rank;
@@ -138,7 +142,7 @@ void set(
 *_Index*<br/>
 要素のインデックス。
 
-*値*<br/>
+*value*<br/>
 要素の新しい値。
 
 ##  <a name="ctor"></a> writeonly_texture_view

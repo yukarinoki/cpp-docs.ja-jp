@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], OnIllegalFileName
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
-ms.openlocfilehash: a16d7508f273fc444be65c1e6cc176911fd28e03
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d1f603f8439815c92360af40ccb807446d0e84a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643301"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273284"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl クラス
 
@@ -49,14 +49,14 @@ class CMFCEditBrowseCtrl : public CEdit
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|既定のコンストラクター|
+|`CMFCEditBrowseCtrl::CMFCEditBrowseCtrl`|既定のコンストラクターです。|
 |`CMFCEditBrowseCtrl::~CMFCEditBrowseCtrl`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[:Enablebrowsebutton](#enablebrowsebutton)|有効または (非表示にします) を無効に、[参照] ボタンをクリックします。|
+|[CMFCEditBrowseCtrl::EnableBrowseButton](#enablebrowsebutton)|有効または (非表示にします) を無効に、[参照] ボタンをクリックします。|
 |[CMFCEditBrowseCtrl::EnableFileBrowseButton](#enablefilebrowsebutton)|[参照] ボタンを有効し、参照機能付きコントロールを*ファイル参照*モード。|
 |[CMFCEditBrowseCtrl::EnableFolderBrowseButton](#enablefolderbrowsebutton)|[参照] ボタンを有効し、参照機能付きコントロールを*フォルダーの参照*モード。|
 |[CMFCEditBrowseCtrl::GetMode](#getmode)|現在のブラウズ モードを返します。|
@@ -88,7 +88,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
    参照 ボタンをクリックすると、標準のフォルダーの選択 ダイアログ ボックスが表示されます。
 
-## <a name="how-to-specify-an-edit-browse-control"></a>方法: 参照機能付きコントロールを指定します。
+## <a name="how-to-specify-an-edit-browse-control"></a>方法:参照機能付きコントロールを指定します。
 
 アプリケーションの参照機能付きコントロールを組み込むには、次の手順に従います。
 
@@ -129,7 +129,7 @@ class CMFCEditBrowseCtrl : public CEdit
 
 **ヘッダー:** afxeditbrowsectrl.h
 
-##  <a name="enablebrowsebutton"></a>  :Enablebrowsebutton
+##  <a name="enablebrowsebutton"></a>  CMFCEditBrowseCtrl::EnableBrowseButton
 
 表示または現在の参照機能付きコントロールでは、参照ボタンは表示されません。
 
@@ -271,7 +271,7 @@ virtual void OnDrawBrowseButton(
 *pDC*<br/>
 デバイス コンテキストへのポインター。
 
-*rect*<br/>
+*矩形*<br/>
 [参照] ボタンの外接する四角形。
 
 *bIsButtonPressed*<br/>

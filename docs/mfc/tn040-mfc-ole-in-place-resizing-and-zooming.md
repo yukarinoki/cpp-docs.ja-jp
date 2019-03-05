@@ -1,5 +1,5 @@
 ---
-title: 'TN040: MFC/OLE 埋め込み先サイズ変更とズーム'
+title: TN040:MFC OLE インプレースでサイズ変更とズーム
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.ole
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: 072ebe0180bb44145cef694e2283e91a0cacf602
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477208"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283762"
 ---
-# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>テクニカル ノート 40: MFC/OLE 埋め込み先サイズ変更とズーム
+# <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040:MFC/OLE 埋め込み先サイズ変更とズーム
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -88,4 +88,3 @@ MFC は、OLE 2 の仕様」の説明に従って完全インプレースでサ�
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

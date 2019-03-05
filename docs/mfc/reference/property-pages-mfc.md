@@ -7,12 +7,12 @@ helpviewer_keywords:
 - property page data transfer functions in MFC
 - property pages [MFC], global MFC functions
 ms.assetid: 734f88bc-c776-4136-9b0e-f45c761a45c1
-ms.openlocfilehash: 4f8e56ed4be6bf4c7a5283894493ee46c4ed2ff4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2f75044c7cfbc1f9d2af1d9bda5c108f9afa881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620910"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269215"
 ---
 # <a name="property-pages-mfc"></a>プロパティ ページ (MFC)
 
@@ -35,11 +35,11 @@ ms.locfileid: "50620910"
 |[DDP_Radio](#ddp_radio)|コントロールのプロパティを使用して、コントロールのプロパティ ページでラジオ ボタン グループのリンクです。|
 |[DDP_Text](#ddp_text)|コントロールのプロパティを使用して、コントロールのプロパティ ページのコントロールをリンクします。 この関数はなどさまざまな種類のプロパティ] の [**二重**、**短い**、BSTR、および**長い**します。|
 
-詳細については、`DoDataExchange`関数やプロパティ ページでは、記事をご覧ください[ActiveX コントロール: プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)します。
+詳細については、`DoDataExchange`関数やプロパティ ページでは、記事をご覧ください[ActiveX コントロール。プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)します。
 
 作成し、OLE コントロールのプロパティ ページを管理するために使用するマクロの一覧を次には。
 
-### <a name="property-pages"></a>プロパティ ページ
+### <a name="property-pages"></a>[プロパティ ページ]
 
 |||
 |-|-|
@@ -300,7 +300,7 @@ void AFXAPI DDP_PostProcessing(CDataExchange * pDX);
 
 ### <a name="remarks"></a>Remarks
 
-すべてのデータ交換関数が完了した後は、この関数を呼び出す必要があります。 例えば:
+すべてのデータ交換関数が完了した後は、この関数を呼び出す必要があります。 例:
 
 [!code-cpp[NVC_MFCAxCtl#15](../../mfc/reference/codesnippet/cpp/property-pages-mfc_1.cpp)]
 
@@ -428,7 +428,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 プロパティのページが指定されているコントロール クラスの名前。
 
 *count*<br/>
@@ -438,7 +438,7 @@ BEGIN_PROPPAGEIDS(class_name,  count)
 
 クラスのメンバー関数を定義する、実装 (.cpp) ファイルで BEGIN_PROPPAGEIDS マクロでは、プロパティ ページの一覧を起動しの各プロパティ ページ、マクロのエントリを追加し、後でプロパティ ページのリストを完了マクロ。
 
-プロパティ ページの詳細については、記事を参照してください。 [ActiveX コントロール: プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)します。
+プロパティ ページの詳細については、記事を参照してください。 [ActiveX コントロール。プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -454,7 +454,7 @@ END_PROPPAGEIDS(class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 プロパティ ページを所有するコントロール クラスの名前。
 
 ### <a name="requirements"></a>必要条件

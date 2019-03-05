@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CMFCAutoHideButton [MFC], ShowButton
 - CMFCAutoHideButton [MFC], UnSetAutoHideMode
 ms.assetid: c80e6b8b-25ca-4d12-9d27-457731028ab0
-ms.openlocfilehash: 454db8578fd061147948538b8d993205181edcdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15b449b4b9f9074966ac269787b1b3ca6f977f48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264587"
 ---
 # <a name="cmfcautohidebutton-class"></a>CMFCAutoHideButton クラス
 
@@ -106,7 +106,8 @@ class CMFCAutoHideButton : public CObject
 
 ## <a name="example"></a>例
 
-`CMFCAutoHideButton` オブジェクトを構築して `CMFCAutoHideButton` クラスのさまざまなメソッドを使用する方法を次の例に示します。 この例では、`Create` メソッドを使用して `CMFCAutoHideButton` オブジェクトを初期化する方法、関連付けられている `CDockablePane` クラスを表示する方法、および自動非表示ボタンを表示する方法を示しています。
+
+  `CMFCAutoHideButton` オブジェクトを構築して `CMFCAutoHideButton` クラスのさまざまなメソッドを使用する方法を次の例に示します。 この例では、`Create` メソッドを使用して `CMFCAutoHideButton` オブジェクトを初期化する方法、関連付けられている `CDockablePane` クラスを表示する方法、および自動非表示ボタンを表示する方法を示しています。
 
 [!code-cpp[NVC_MFC_RibbonApp#32](../../mfc/reference/codesnippet/cpp/cmfcautohidebutton-class_1.cpp)]
 
@@ -147,7 +148,7 @@ virtual BOOL Create(
 *pAutoHideWnd*<br/>
 [in]ポインターを[CDockablePane](../../mfc/reference/cdockablepane-class.md)オブジェクト。 この自動的に隠すボタンが非表示になり、ことを示しています`CDockablePane`します。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]メイン フレーム ウィンドウのボタンの配置を指定する値。
 
 ### <a name="return-value"></a>戻り値
@@ -421,7 +422,7 @@ void ReplacePane(CDockablePane* pNewBar);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pNewBar*<br/>
+[in] *pNewBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ISupportErrorInfoImpl class
 - error information, ATL
 ms.assetid: e33a4b11-a123-41cf-bcea-7b19743902af
-ms.openlocfilehash: b3227142d6ca31d0015411a3619281894eb5e419
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f7e300e30ff0f14b56d2a1bae86b00e090674679
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520050"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290045"
 ---
 # <a name="isupporterrorinfoimpl-class"></a>ISupportErrorInfoImpl クラス
 
@@ -49,7 +49,7 @@ class ATL_NO_VTABLE ISupportErrorInfoImpl
 
 [ISupportErrorInfo インターフェイス](/windows/desktop/api/oaidl/nn-oaidl-isupporterrorinfo)により、クライアントにエラー情報を返されることができます。 使用するオブジェクト`IErrorInfo`実装する必要があります`ISupportErrorInfo`します。
 
-クラス`ISupportErrorInfoImpl`の既定の実装を提供します。 `ISupportErrorInfo` 、1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。 例えば:
+クラス`ISupportErrorInfoImpl`の既定の実装を提供します。 `ISupportErrorInfo` 、1 つのインターフェイスのみがオブジェクトのエラーを生成するときに使用できます。 例:
 
 [!code-cpp[NVC_ATL_COM#48](../../atl/codesnippet/cpp/isupporterrorinfoimpl-class_1.h)]
 

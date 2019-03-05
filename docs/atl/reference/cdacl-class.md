@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDacl class
 ms.assetid: 2dc76616-6362-4967-b6cf-e2d39ca37ddd
-ms.openlocfilehash: 63eaa9fe21b9d920aa3615f76be5822194d19b66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: edfa7a47fa94e659d6529706d04021dfc800c269
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462895"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280122"
 ---
 # <a name="cdacl-class"></a>CDacl クラス
 
@@ -186,7 +186,7 @@ CDacl () throw();
 
 `CDacl`オブジェクトをオプションで作成した既存`ACL`構造体。 DACL (随意アクセス制御リスト) のみを確認することが重要と SACL ではありません (システム アクセス制御リスト) は、このパラメーターとして渡す必要があります。 デバッグ ビルドでは、SACL を渡すことするとアサートが発生します。 リリース ビルドでは、SACL を渡すことにより、(アクセス制御エントリ) の Ace は無視され、ACL でと、エラーは発生しません。
 
-##  <a name="dtor"></a>  CDacl:: ~ CDacl
+##  <a name="dtor"></a>  CDacl::~CDacl
 
 デストラクターです。
 

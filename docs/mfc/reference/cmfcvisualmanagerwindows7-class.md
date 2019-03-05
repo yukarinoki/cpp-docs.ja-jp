@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerWindows7 Class [MFC]
 ms.assetid: e8d87df1-0c09-4b58-8ade-4e911f796e42
-ms.openlocfilehash: b71cce32d364200e6f6a8684ffd696c4ea33f1d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 296ccc0accdf2937406d9965118c1807aeb2604c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591673"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269397"
 ---
 # <a name="cmfcvisualmanagerwindows7-class"></a>CMFCVisualManagerWindows7 クラス
 
@@ -33,8 +33,8 @@ class CMFCVisualManagerWindows7 : public CMFCVisualManagerWindows;
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|既定のコンストラクター|
-|[CMFCVisualManagerWindows7:: ~ CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|既定のデストラクター。|
+|[CMFCVisualManagerWindows7::CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7)|既定のコンストラクターです。|
+|[CMFCVisualManagerWindows7::~CMFCVisualManagerWindows7](#cmfcvisualmanagerwindows7__~cmfcvisualmanagerwindows7)|既定のデストラクター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -127,7 +127,7 @@ virtual ~CMFCVisualManagerWindows7();
 
 ##  <a name="cmfcvisualmanagerwindows7"></a>  CMFCVisualManagerWindows7::CMFCVisualManagerWindows7
 
-既定のコンストラクター
+既定のコンストラクターです。
 
 ```
 CMFCVisualManagerWindows7();

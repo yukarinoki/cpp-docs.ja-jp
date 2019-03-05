@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - target_block class
 ms.assetid: 3ce181b4-b94a-4894-bf7b-64fc09821f9f
-ms.openlocfilehash: cb8880b66ebeef12018ef7449c9c383b99ec396c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6033da1347e116b4b68cf719a461a1cf6ff5d04f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269449"
 ---
 # <a name="targetblock-class"></a>target_block クラス
 
@@ -64,7 +64,8 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
 |名前|説明|
 |----------|-----------------|
 |[target_block](#ctor)|`target_block` オブジェクトを構築します。|
-|[~ target_block デストラクター](#dtor)|`target_block` オブジェクトを破棄します。|
+|[~ target_block デストラクター](#dtor)|
+  `target_block` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -207,7 +208,8 @@ virtual message_status propagate(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-`message` オブジェクトを指すポインター。
+
+  `message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -233,7 +235,8 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-`message` オブジェクトを指すポインター。
+
+  `message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -280,7 +283,8 @@ virtual message_status send(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-`message` オブジェクトを指すポインター。
+
+  `message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -338,7 +342,8 @@ target_block();
 
 ##  <a name="dtor"></a> ~target_block
 
-`target_block` オブジェクトを破棄します。
+
+  `target_block` オブジェクトを破棄します。
 
 ```
 virtual ~target_block();

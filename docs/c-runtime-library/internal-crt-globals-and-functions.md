@@ -293,6 +293,7 @@ apilocation:
 - vcruntime140_app.dll
 - msvcp140_app.dll
 - ntdll.dll
+- ntoskrnl.exe
 apitype: DLLExport
 f1_keywords:
 - __acrt_iob_func
@@ -847,12 +848,12 @@ helpviewer_keywords:
 - _Xbad_alloc
 - _Xlength_error
 ms.assetid: 99a27f11-fa5a-449e-bfbb-aab578d1cc4f
-ms.openlocfilehash: 70b6036befb1f5da012375475a00d4f771c0e5cb
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: 291d509315a6825cd6b4e56c8bfe095f0149be4e
+ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703169"
+ms.lasthandoff: 03/01/2019
+ms.locfileid: "57211070"
 ---
 # <a name="internal-crt-globals-and-functions"></a>内部 CRT グローバルおよび関数
 
@@ -1187,6 +1188,6 @@ C ランタイム (CRT) ライブラリには、パブリック ライブラリ 
 |_Xbad_alloc|
 |_Xlength_error|
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>参照
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

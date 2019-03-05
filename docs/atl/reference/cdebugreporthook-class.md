@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - CDebugReportHook class
 ms.assetid: 798076c3-6e63-4286-83b8-aa1bbcd0c20c
-ms.openlocfilehash: 370581effcd7233d0f1f474c80a273809be58551
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7c5993d1b96daaa73e7fc9509c93e66daed77f3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551490"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262455"
 ---
 # <a name="cdebugreporthook-class"></a>CDebugReportHook クラス
 
@@ -83,7 +83,7 @@ CDebugReportHook(
 *dwTimeout*<br/>
 このクラスで使用可能になる名前付きパイプが待機するミリ秒単位の時間。
 
-##  <a name="dtor"></a>  CDebugReportHook:: ~ CDebugReportHook
+##  <a name="dtor"></a>  CDebugReportHook::~CDebugReportHook
 
 呼び出し[CDebugReportHook::RemoveHook](#removehook)します。
 
@@ -110,7 +110,7 @@ static int __cdecl CDebugReportHookProc(
 *message*<br/>
 メッセージ文字列。
 
-*戻り値*<br/>
+*returnValue*<br/>
 によって返される値[_CrtDbgReport](../../c-runtime-library/reference/crtdbgreport-crtdbgreportw.md)します。
 
 ### <a name="return-value"></a>戻り値

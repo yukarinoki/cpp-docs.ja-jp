@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - COM interfaces, COM interface entry macros
 ms.assetid: 19dcb768-2e1f-4b8d-a618-453a01a4bd00
-ms.openlocfilehash: 8341061ba6365beb97f4413aab8bfbbfdc25e035
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: ed2b8445a0f13b82338d2904d43fd17688d05b9e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693921"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276378"
 ---
 # <a name="cominterfaceentry-macros"></a>COM_INTERFACE_ENTRY マクロ
 
@@ -35,7 +35,7 @@ ms.locfileid: "51693921"
 |[COM_INTERFACE_ENTRY2](#com_interface_entry2)|継承の 2 つの分岐を解消するために、このマクロを使用します。|
 |[COM_INTERFACE_ENTRY_IID](#com_interface_entry_iid)|このマクロを使用して、インターフェイスを COM マップに入力し、インターフェイスの IID を指定します。|
 |[COM_INTERFACE_ENTRY2_IID](#com_interface_entry2_iid)|同じ[COM_INTERFACE_ENTRY2](#com_interface_entry2)。 ただし、別の IID を指定することができます。|
-|[定義](#com_interface_entry_aggregate)|インターフェイスがで識別される*iid*照会、`COM_INTERFACE_ENTRY_AGGREGATE`転送`punk`します。|
+|[COM_INTERFACE_ENTRY_AGGREGATE](#com_interface_entry_aggregate)|インターフェイスがで識別される*iid*照会、`COM_INTERFACE_ENTRY_AGGREGATE`転送`punk`します。|
 |[COM_INTERFACE_ENTRY_AGGREGATE_BLIND](#com_interface_entry_aggregate_blind)|同じ[で定義](#com_interface_entry_aggregate)にクエリを転送するために結果の任意の IID のクエリを実行することを除いて、 *punk*します。|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)|同じ[で定義](#com_interface_entry_aggregate)、場合を除く*punk*が null の場合で説明されている集計を自動的に作成、 *clsid*します。|
 |[COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](#com_interface_entry_autoaggregate_blind)|同じ[COM_INTERFACE_ENTRY_AUTOAGGREGATE](#com_interface_entry_autoaggregate)にクエリを転送するために結果の任意の IID のクエリを実行することを除いて、 *punk*、場合*punk*が null の場合、自動的に作成します。説明されている集計、 *clsid*します。|
@@ -147,7 +147,7 @@ COM_INTERFACE_ENTRY2_IID(iid, x, x2)
 *x2*<br/>
 [in]クラスのオブジェクトが直接から派生する 2 番目のインターフェイスの名前。
 
-##  <a name="com_interface_entry_aggregate"></a>  定義
+##  <a name="com_interface_entry_aggregate"></a>  COM_INTERFACE_ENTRY_AGGREGATE
 
 インターフェイスがで識別される*iid*で定義を転送するは、クエリが実行*punk*します。
 
@@ -328,7 +328,7 @@ COM_INTERFACE_ENTRY_CHAIN(classname)
 
 [!code-cpp[NVC_ATL_Windowing#116](../../atl/codesnippet/cpp/com-map-macros_9.h)]
 
-COM マップの最初のエントリは、COM マップを格納しているオブジェクトのインターフェイスである必要がありますに注意してください。 したがって、COM_INTERFACE_ENTRY_CHAIN、これにより、ポイントで検索する別のオブジェクトの COM マップで、COM マップ エントリを開始することはできません、 **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** オブジェクトの COM マップに表示されます。 別のオブジェクトの COM マップを最初に検索する場合は、インターフェイスのエントリを追加`IUnknown`COM マップに、その他のオブジェクトの COM マップし、チェーンします。 例えば:
+COM マップの最初のエントリは、COM マップを格納しているオブジェクトのインターフェイスである必要がありますに注意してください。 したがって、COM_INTERFACE_ENTRY_CHAIN、これにより、ポイントで検索する別のオブジェクトの COM マップで、COM マップ エントリを開始することはできません、 **COM_INTERFACE_ENTRY_CHAIN (**`COtherObject`**)** オブジェクトの COM マップに表示されます。 別のオブジェクトの COM マップを最初に検索する場合は、インターフェイスのエントリを追加`IUnknown`COM マップに、その他のオブジェクトの COM マップし、チェーンします。 例:
 
 [!code-cpp[NVC_ATL_Windowing#111](../../atl/codesnippet/cpp/com-map-macros_10.h)]
 
@@ -397,4 +397,3 @@ COM_INTERFACE_ENTRY_NOINTERFACE(x)
 インターフェイスが特定のケースで使用されていることを防ぐために、このマクロを使用することができます。 たとえば、インターフェイスのクエリが集計の内部の"不明"に転送されることを防ぐために COM_INTERFACE_ENTRY_AGGREGATE_BLIND 直前、COM マップに、このマクロを挿入できます。
 
 インターフェイスの IID を追加することによって構築されます*x*に`IID_`します。 たとえば場合、 *x*は`IPersistStorage`、IID がなります`IID_IPersistStorage`。
-

@@ -1,25 +1,25 @@
 ---
-title: '方法: call クラスおよび transformer クラスに処理関数を提供する'
+title: '方法: 呼び出しおよび transformer クラスに処理関数を提供します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - call class, example
 - using the transformer class [Concurrency Runtime]
 - using the call class [Concurrency Runtime]
 ms.assetid: df715ce4-8507-41ca-b204-636d11707a73
-ms.openlocfilehash: d9d472ddd8d5c7baf3cb16e1df33a2bdb74c5381
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c41c29dae277105f268171503e662e2a02e3857e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501001"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277692"
 ---
-# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>方法: call クラスおよび transformer クラスに処理関数を提供する
+# <a name="how-to-provide-work-functions-to-the-call-and-transformer-classes"></a>方法: 呼び出しおよび transformer クラスに処理関数を提供します。
 
 このトピックでは、作業関数を提供するいくつかの方法を示しています、 [concurrency::call](../../parallel/concrt/reference/call-class.md)と[concurrency::transformer](../../parallel/concrt/reference/transformer-class.md)クラス。
 
 最初の例では、ラムダ式を `call` オブジェクトに渡す方法を示します。 2 番目の例では、関数オブジェクトを `call` オブジェクトに渡す方法を示します。 3 番目の例では、クラス メソッドを `call` オブジェクトにバインドする方法を示します。
 
-このトピックの説明では、すべての例で `call` クラスを使用します。 使用する例については、`transformer`クラスを参照してください[方法: データ パイプラインでトランスフォーマーを使用する](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)します。
+このトピックの説明では、すべての例で `call` クラスを使用します。 使用する例については、`transformer`クラスを参照してください[方法。データ パイプラインでトランスフォーマーを使用する](../../parallel/concrt/how-to-use-transformer-in-a-data-pipeline.md)します。
 
 ## <a name="example"></a>例
 

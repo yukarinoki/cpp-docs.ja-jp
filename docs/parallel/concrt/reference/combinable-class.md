@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - combinable class
 ms.assetid: fe0bfbf6-6250-47da-b8d0-f75369f0b5be
-ms.openlocfilehash: b392a46c3aafac9ab5f3ca2b626f5f78daebc85d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05256516c0a693a282b8d0de56d6c9e7465f2740
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630751"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299974"
 ---
 # <a name="combinable-class"></a>combinable クラス
 
@@ -102,7 +102,7 @@ combinable(const combinable& _Copy);
 *_FnInitialize*<br/>
 型の新しい各スレッド プライベート値を初期化するために呼び出される関数`T`します。 シグネチャを持つ関数呼び出し演算子をサポートする必要があります`T ()`します。
 
-*コピー (_c)*<br/>
+*_Copy*<br/>
 既存の`combinable`この 1 つにコピーされるオブジェクト。
 
 ### <a name="remarks"></a>Remarks
@@ -188,7 +188,7 @@ combinable& operator= (const combinable& _Copy);
 
 ### <a name="parameters"></a>パラメーター
 
-*コピー (_c)*<br/>
+*_Copy*<br/>
 既存の`combinable`この 1 つにコピーされるオブジェクト。
 
 ### <a name="return-value"></a>戻り値

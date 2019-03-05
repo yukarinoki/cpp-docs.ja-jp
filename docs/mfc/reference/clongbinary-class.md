@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLongBinary class [MFC]
 ms.assetid: f4320059-aeb4-4ee5-bc2b-25f19d898ef5
-ms.openlocfilehash: a7dbb7e38ec01743d994dafd6c7945e306de51ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed3a153ec89785a9c9da43037d20f7d88b5661ff
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656037"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260713"
 ---
 # <a name="clongbinary-class"></a>CLongBinary クラス
 
@@ -53,7 +53,7 @@ class CLongBinary : public CObject
 
 埋め込まれたレコード セットを破棄する`CLongBinary`オブジェクトが破棄されることも、およびそのデストラクターが割り当て解除、`HGLOBAL`データ ハンドル。
 
-ラージ オブジェクトとの使用の詳細については`CLongBinary`、記事を参照して[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)と[レコード セット: 大規模なデータ項目 (ODBC) での作業](../../data/odbc/recordset-working-with-large-data-items-odbc.md)します。
+ラージ オブジェクトとの使用の詳細については`CLongBinary`、記事を参照して[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)と[レコード セット。大規模なデータ アイテム (ODBC) の操作](../../data/odbc/recordset-working-with-large-data-items-odbc.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

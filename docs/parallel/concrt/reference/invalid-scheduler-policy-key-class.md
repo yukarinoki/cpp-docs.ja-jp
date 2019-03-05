@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_scheduler_policy_key class
 ms.assetid: 6a7c42fe-9bc4-4a02-bebb-99fe9ef9817d
-ms.openlocfilehash: 775b98d2394dce04b362e92927db1a408b8e1656
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1bc2f1cffdeba5f81bd96932ecef23a563fac351
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677410"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274064"
 ---
 # <a name="invalidschedulerpolicykey-class"></a>invalid_scheduler_policy_key クラス
 
@@ -31,7 +31,8 @@ class invalid_scheduler_policy_key : public std::exception;
 
 |名前|説明|
 |----------|-----------------|
-|[invalid_scheduler_policy_key](#ctor)|オーバーロードされます。 `invalid_scheduler_policy_key` オブジェクトを構築します。|
+|[invalid_scheduler_policy_key](#ctor)|オーバーロードされます。 
+  `invalid_scheduler_policy_key` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -47,7 +48,8 @@ class invalid_scheduler_policy_key : public std::exception;
 
 ##  <a name="ctor"></a> invalid_scheduler_policy_key
 
-`invalid_scheduler_policy_key` オブジェクトを構築します。
+
+  `invalid_scheduler_policy_key` オブジェクトを構築します。
 
 ```
 explicit _CRTIMP invalid_scheduler_policy_key(_In_z_ const char* _Message) throw();
@@ -57,7 +59,7 @@ invalid_scheduler_policy_key() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
 ## <a name="see-also"></a>関連項目

@@ -13,12 +13,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_link_registry class
 ms.assetid: 09540a4e-c34e-4ff9-af49-21b8612b6ab3
-ms.openlocfilehash: 4f706b4551d71c77e136e4d65d2d6a3183293d8d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 20032f393964c8919d2c1a49ec8545400cd9e392
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454497"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290132"
 ---
 # <a name="singlelinkregistry-class"></a>single_link_registry クラス
 
@@ -33,7 +33,7 @@ class single_link_registry : public network_link_registry<_Block>;
 
 #### <a name="parameters"></a>パラメーター
 
-*(_B)*<br/>
+*_Block*<br/>
 ブロックのデータ型に格納されている、`single_link_registry`オブジェクト。
 
 ## <a name="members"></a>メンバー
@@ -43,7 +43,8 @@ class single_link_registry : public network_link_registry<_Block>;
 |名前|説明|
 |----------|-----------------|
 |[single_link_registry](#ctor)|`single_link_registry` オブジェクトを構築します。|
-|[~ single_link_registry デストラクター](#dtor)|`single_link_registry` オブジェクトを破棄します。|
+|[~ single_link_registry デストラクター](#dtor)|
+  `single_link_registry` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -156,7 +157,8 @@ single_link_registry();
 
 ##  <a name="dtor"></a> ~single_link_registry
 
-`single_link_registry` オブジェクトを破棄します。
+
+  `single_link_registry` オブジェクトを破棄します。
 
 ```
 virtual ~single_link_registry();

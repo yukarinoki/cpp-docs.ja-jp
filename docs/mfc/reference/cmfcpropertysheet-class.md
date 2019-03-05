@@ -40,16 +40,17 @@ helpviewer_keywords:
 - CMFCPropertySheet [MFC], SetIconsList
 - CMFCPropertySheet [MFC], SetLook
 ms.assetid: 01d93573-9698-440f-a6a4-5bebbee879dc
-ms.openlocfilehash: 1168375606ef86061269454aa361a076efa331a4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 7e5b553e6a10bee0e5b05bb32b9af3069269ca91
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176407"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294565"
 ---
 # <a name="cmfcpropertysheet-class"></a>CMFCPropertySheet クラス
 
-`CMFCPropertySheet` クラスは、各プロパティ ページがページ タブ、ツール バー ボタン、ツリー コントロールのノード、またはリスト項目で示されるプロパティ シートをサポートします。
+
+  `CMFCPropertySheet` クラスは、各プロパティ ページがページ タブ、ツール バー ボタン、ツリー コントロールのノード、またはリスト項目で示されるプロパティ シートをサポートします。
 
 ## <a name="syntax"></a>構文
 
@@ -92,11 +93,14 @@ class CMFCPropertySheet : public CPropertySheet
 
 ## <a name="remarks"></a>Remarks
 
-`CMFCPropertySheet` クラスは、プロパティ シート (タブ ダイアログ ボックスとも呼ばれます) を表します。 `CMFCPropertySheet` クラスは、さまざまな方法でプロパティ ページを表示できます。
+
+  `CMFCPropertySheet` クラスは、プロパティ シート (タブ ダイアログ ボックスとも呼ばれます) を表します。 
+  `CMFCPropertySheet` クラスは、さまざまな方法でプロパティ ページを表示できます。
 
 アプリケーションで `CMFCPropertySheet` クラスを使用するには、次の手順を実行します。
 
-1. `CMFCPropertySheet` クラスから派生クラスを作成し、名前 (CMyPropertySheet など) を付けます。
+1. 
+  `CMFCPropertySheet` クラスから派生クラスを作成し、名前 (CMyPropertySheet など) を付けます。
 
 1. 構築、 [CMFCPropertyPage](../../mfc/reference/cmfcpropertypage-class.md)各プロパティ ページのオブジェクト。
 
@@ -106,7 +110,8 @@ class CMFCPropertySheet : public CPropertySheet
 
 1. 呼び出す、 [cmfcpropertysheet::addpage](#addpage)各プロパティ ページのメソッド。
 
-1. `CMFCPropertySheet` コントロールを作成し、その `DoModal` メソッドを呼び出します。
+1. 
+  `CMFCPropertySheet` コントロールを作成し、その `DoModal` メソッドを呼び出します。
 
 ## <a name="illustrations"></a>図
 
@@ -138,7 +143,7 @@ class CMFCPropertySheet : public CPropertySheet
 
 **ヘッダー:** afxpropertysheet.h
 
-##  <a name="addpage"></a>  Cmfcpropertysheet::addpage
+##  <a name="addpage"></a>  CMFCPropertySheet::AddPage
 
 プロパティ シートにページを追加します。
 
@@ -383,7 +388,7 @@ virtual void OnDrawPageHeader(
 *pDC*<br/>
 [in]デバイス コンテキストへのポインター。
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [in]プロパティの 0 から始まるページ番号。
 
 *rectHeader*<br/>
@@ -441,7 +446,7 @@ void RemovePage(int nPage);
 *pPage*<br/>
 [in]削除するプロパティ ページを表す page オブジェクトのプロパティへのポインター。 Nll は指定できません。
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [in]削除するページの 0 から始まるインデックス。
 
 ### <a name="remarks"></a>Remarks
@@ -484,7 +489,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 このメソッドをサポートする方法の詳細については、次を参照してください。 [CImageList::Create](../../mfc/reference/cimagelist-class.md#create)と[CImageList::Add](../../mfc/reference/cimagelist-class.md#add)します。 プロパティ シートのスタイルを設定する方法の詳細については、次を参照してください。 [:setlook](#setlook)します。
 
-##  <a name="setlook"></a>  :Setlook
+##  <a name="setlook"></a>  CMFCPropertySheet::SetLook
 
 プロパティ シートの外観を指定します。
 
@@ -496,7 +501,7 @@ void SetLook(
 
 ### <a name="parameters"></a>パラメーター
 
-*ほら*<br/>
+*look*<br/>
 [in]プロパティ シートの外観を指定する列挙値の 1 つ。 プロパティ シートの既定のスタイルは`CMFCPropertySheet::PropSheetLook_Tabs`します。 詳細については、このトピックの「解説」セクションの表を参照してください。
 
 *nNavControlWidth*<br/>

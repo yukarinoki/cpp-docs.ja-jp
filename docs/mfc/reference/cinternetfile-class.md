@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetFile [MFC], WriteString
 - CInternetFile [MFC], m_hFile
 ms.assetid: 96935681-ee71-4a8d-9783-5abc7b3e6f10
-ms.openlocfilehash: 309d4210f72f7ecd83ed6a8eb79874a1c8170d59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65bc36856e253d086cc430a600daa9255e21ea75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586876"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279979"
 ---
 # <a name="cinternetfile-class"></a>CInternetFile クラス
 
@@ -65,7 +65,7 @@ class CInternetFile : public CStdioFile
 |[CInternetFile::Close](#close)|閉じる、`CInternetFile`し、そのリソースを解放します。|
 |[CInternetFile::Flush](#flush)|書き込みバッファーの内容をフラッシュし、ターゲット コンピューターにメモリ内のデータが書き込まれるようにします。|
 |[CInternetFile::GetLength](#getlength)|ファイルのサイズを返します。|
-|[細かい](#read)|指定されたバイト数を読み取ります。|
+|[CInternetFile::Read](#read)|指定されたバイト数を読み取ります。|
 |[CInternetFile::ReadString](#readstring)|文字のストリームを読み取ります。|
 |[CInternetFile::Seek](#seek)|ファイルを開くには、ポインターを移動します。|
 |[CInternetFile::SetReadBufferSize](#setreadbuffersize)|データが読み取られるバッファーのサイズを設定します。|
@@ -161,7 +161,7 @@ CInternetFile(
 *pstrServer*<br/>
 サーバーの名前を含む文字列へのポインター。
 
-*独自*<br/>
+*dwContext*<br/>
 コンテキスト識別子を`CInternetFile`オブジェクト。 参照してください[WinInet の基礎](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ### <a name="remarks"></a>Remarks
@@ -216,7 +216,7 @@ HINTERNET m_hFile;
 operator HINTERNET() const;
 ```
 
-##  <a name="read"></a>  細かい
+##  <a name="read"></a>  CInternetFile::Read
 
 開始位置として、指定されたメモリに読み込むには、このメンバー関数を呼び出す*lpvBuf*、指定された数 (バイト単位) の*nCount*します。
 

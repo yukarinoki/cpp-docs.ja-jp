@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleVariant [MFC], GetByteArrayFromVariantArray
 - COleVariant [MFC], SetString
 ms.assetid: e1b5cd4a-b066-4b9b-b48b-6215ed52d998
-ms.openlocfilehash: b37105cf1afdcf966176a2e2615f9c141022088d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2b2d0935380caed8ad9d6741b9107a5f879f7903
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51520519"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268061"
 ---
 # <a name="colevariant-class"></a>COleVariant クラス
 
@@ -63,7 +63,7 @@ class COleVariant : public tagVARIANT
 |[COleVariant::operator LPCVARIANT](#operator_lpcvariant)|変換を`COleVariant`値に、`LPCVARIANT`します。|
 |[COleVariant::operator LPVARIANT](#operator_lpvariant)|変換を`COleVariant`オブジェクトを`LPVARIANT`します。|
 |[COleVariant::operator =](#operator_eq)|コピーを`COleVariant`値。|
-|[COleVariant::operator = =](#operator_eq_eq)|2 つ`COleVariant`値。|
+|[COleVariant::operator ==](#operator_eq_eq)|2 つ`COleVariant`値。|
 |[COleVariant::operator &lt; &lt;、 &gt;&gt;](#operator_lt_lt__gt_gt)|出力を`COleVariant`値を`CArchive`または`CDumpContext`入力し、`COleVariant`オブジェクトから`CArchive`します。|
 
 ## <a name="remarks"></a>Remarks
@@ -157,7 +157,7 @@ A [CString](../../atl-mfc-shared/reference/cstringt-class.md)新しいにコピ�
 *curSrc*<br/>
 A [COleCurrency](../../mfc/reference/colecurrency-class.md)新しいにコピーされるオブジェクト`COleVariant`オブジェクト。
 
-*fltSrc*、 *dblSrc*<br/>
+*fltSrc*, *dblSrc*<br/>
 新しい `COleVariant` オブジェクトにコピーされる数値。
 
 *timeSrc*<br/>
@@ -390,7 +390,7 @@ void SetString(LPCTSTR lpszSrc, VARTYPE vtSrc);
 *lpszSrc*<br/>
 新しいにコピーされる null で終わる文字列`COleVariant`オブジェクト。
 
-*vtSrc*<br/>
+*VtSrc*<br/>
 新しい VARTYPE`COleVariant`オブジェクト。
 
 ### <a name="remarks"></a>Remarks

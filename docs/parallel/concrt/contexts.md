@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
-ms.openlocfilehash: b7d1a5bbc63781e865be8053cb4365d6a8590935
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529172"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285907"
 ---
 # <a name="contexts"></a>コンテキスト
 
@@ -26,7 +26,7 @@ ms.locfileid: "50529172"
 
 ### <a name="example"></a>例
 
-使用する例については、 `wait` 、現在のコンテキストを生成する関数を確認を実行するには、その他のコンテキストを許可してしまう[方法: スケジュール グループを使用して注文の実行に影響する](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)します。
+使用する例については、 `wait` 、現在のコンテキストを生成する関数を確認を実行するには、その他のコンテキストを許可してしまう[方法。スケジュール グループを使用して、実行の順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)します。
 
 ## <a name="the-context-class"></a>Context クラス
 
@@ -34,7 +34,8 @@ ms.locfileid: "50529172"
 
 ### <a name="cooperative-blocking"></a>協調ブロッキング
 
-`Context` クラスを使用すると、現在の実行コンテキストをブロックまたは生成できます。 リソースが利用できないため、現在のコンテキストを続行できない場合、ブロックまたは生成する機能は便利です。
+
+  `Context` クラスを使用すると、現在の実行コンテキストをブロックまたは生成できます。 リソースが利用できないため、現在のコンテキストを続行できない場合、ブロックまたは生成する機能は便利です。
 
 [Concurrency::Context::Block](reference/context-class.md#block)メソッドは、現在のコンテキストをブロックします。 ブロックされているコンテキストでは、ランタイムは、その他のタスクを実行できるように、処理リソースが生成されます。 [Concurrency::Context::Unblock](reference/context-class.md#unblock)メソッド ブロックされているコンテキストのブロックを解除します。 `Context::Unblock`と呼ばれるものとは異なるコンテキストからメソッドを呼び出す必要があります`Context::Block`します。 ランタイムによってスロー [concurrency::context_self_unblock](../../parallel/concrt/reference/context-self-unblock-class.md)コンテキスト自体のブロックを解除しようとするとします。
 
@@ -46,7 +47,7 @@ ms.locfileid: "50529172"
 
 #### <a name="example"></a>例
 
-使用する例については、 `Context::Block`、 `Context::Unblock`、および`Context::Yield`協調セマフォ クラスを実装するメソッドを参照してください[方法: コンテキスト クラスを使用して協調セマフォを実装する](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)します。
+使用する例については、 `Context::Block`、 `Context::Unblock`、および`Context::Yield`協調セマフォ クラスを実装するメソッドを参照してください[方法。コンテキスト クラスを使用して協調セマフォを実装する](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)します。
 
 ##### <a name="oversubscription"></a>オーバーサブスクリプション
 
@@ -66,7 +67,7 @@ ms.locfileid: "50529172"
 
 ###### <a name="example"></a>例
 
-オーバー サブスクリプションを使用して、ネットワーク接続からデータを読み取ることによって発生した待機時間を短縮する例を参照してください[方法: 待機時間のオフセットを使用してオーバー サブスクリプション](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)します。
+オーバー サブスクリプションを使用して、ネットワーク接続からデータを読み取ることによって発生した待機時間を短縮する例を参照してください[方法。オーバー サブスクリプションを使用して、待機時間を短縮する](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -74,4 +75,3 @@ ms.locfileid: "50529172"
 [方法: スケジュール グループを使用して実行順序に影響を与える](../../parallel/concrt/how-to-use-schedule-groups-to-influence-order-of-execution.md)<br/>
 [方法: Context クラスを使用して協調セマフォを実装する](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)<br/>
 [方法: オーバーサブスクリプションを使用して待機時間を短縮する](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)
-

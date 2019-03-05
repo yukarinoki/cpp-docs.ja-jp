@@ -9,12 +9,12 @@ helpviewer_keywords:
 - MFC Feature Pack, update existing application
 - walkthroughs [MFC], update existing application
 ms.assetid: aa6330d3-6cfc-4c79-8fcb-0282263025f7
-ms.openlocfilehash: 85ff0c17f8ec523fc5cb52101fb44cfc37dd9b50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 213bc8087b58eac232cc8fcfccc88e13785a807e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481849"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258763"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>チュートリアル: MFC Scribble アプリケーション (パート 1) の更新
 
@@ -24,7 +24,7 @@ ms.locfileid: "50481849"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-[Scribble 1.0 MFC サンプル](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)します。 Visual Studio 2017 に変換する方法については、次を参照してください。[移植のガイド: MFC Scribble](../porting/porting-guide-mfc-scribble.md)します。
+[Scribble 1.0 MFC サンプル](http://download.microsoft.com/download/4/0/9/40946FEC-EE5C-48C2-8750-B0F8DA1C99A8/MFC/general/Scribble.zip.exe)します。 Visual Studio 2017 に変換する方法については、次を参照してください。[移植のガイド。MFC Scribble](../porting/porting-guide-mfc-scribble.md)します。
 
 ##  <a name="top"></a> セクション
 
@@ -87,11 +87,14 @@ ms.locfileid: "50481849"
 
 1. mainfrm.cpp ファイルでは、次の手順に従います。
 
-    1. `m_wndToolBar.SetBarStyle` を `m_wndToolBar.SetPaneStyle` に置き換えます。
+    1. 
+  `m_wndToolBar.SetBarStyle` を `m_wndToolBar.SetPaneStyle` に置き換えます。
 
-    1. `m_wndToolBar.GetBarStyle` を `m_wndToolBar.GetPaneStyle` に置き換えます。
+    1. 
+  `m_wndToolBar.GetBarStyle` を `m_wndToolBar.GetPaneStyle` に置き換えます。
 
-    1. `DockControlBar(&m_wndToolBar)` を `DockPane(&m_wndToolBar)` に置き換えます。
+    1. 
+  `DockControlBar(&m_wndToolBar)` を `DockPane(&m_wndToolBar)` に置き換えます。
 
 1. ipframe.cpp ファイルでは、コードの次の 3 行をコメント アウトします。
 
@@ -113,7 +116,7 @@ ms.locfileid: "50481849"
 
 - 適切なリソース ファイルを別のアプリケーションからプロジェクトにコピーし、そのファイルからビットマップをインポートします。
 
-このチュートリアルでは、リソース ファイルをコピーで作成された例から[チュートリアル: リボン アプリケーションで使用して MFC を作成する](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)します。
+このチュートリアルでは、リソース ファイルをコピーで作成された例から[チュートリアル。MFC によるリボン アプリケーションの作成](../mfc/walkthrough-creating-a-ribbon-application-by-using-mfc.md)です。
 
 ### <a name="to-add-bitmaps-to-the-project"></a>ビットマップをプロジェクトに追加するには
 
@@ -169,7 +172,7 @@ ms.locfileid: "50481849"
 
 1. カスタマイズすることができます、**アプリケーション**そのプロパティを変更してボタンをクリックします。 このコードで使用されているメッセージ ID は、Scribble 1.0 用のメニューで定義済みです。
 
-1. デザイン ビューでクリックして、**アプリケーション**プロパティを表示するボタンをクリックします。 プロパティ値を次のように変更:**イメージ**に`IDB_RIBBON_MAIN`、**プロンプト**に`File`、**キー**に`f`、 **Large Images**に`IDB_RIBBON_FILELARGE`、および**Small Images**に`IDB_RIBBON_FILESMALL`します。
+1. デザイン ビューでクリックして、**アプリケーション**プロパティを表示するボタンをクリックします。 プロパティの値を次の手順に変更します。**イメージ**に`IDB_RIBBON_MAIN`、**プロンプト**に`File`、**キー**に`f`、 **Large Images**に`IDB_RIBBON_FILELARGE`、および**Small Images**に`IDB_RIBBON_FILESMALL`します。
 
 1. 次の変更は、ユーザーがクリックしたときに表示されるメニューを作成、**アプリケーション**ボタンをクリックします。 省略記号をクリックします (**.**) 横に**Main Items**を開く、**項目エディター**します。
 
@@ -238,7 +241,7 @@ ms.locfileid: "50481849"
 
 ### <a name="to-add-a-home-category-and-edit-panel"></a>[Home] カテゴリと [Edit] パネルを追加するには
 
-1. この Scribble プログラムに必要なカテゴリは 1 つだけです。 デザイン ビューでの**ツールボックス**、 をダブルクリックします**カテゴリ**を 1 つ追加してそのプロパティを表示します。 プロパティ値を次のように変更:**キャプション**に`&Home`、 **Large Images**に`IDB_RIBBON_HOMELARGE`、 **Small Images**に`IDB_RIBBON_HOMESMALL`します。
+1. この Scribble プログラムに必要なカテゴリは 1 つだけです。 デザイン ビューでの**ツールボックス**、 をダブルクリックします**カテゴリ**を 1 つ追加してそのプロパティを表示します。 プロパティの値を次の手順に変更します。**キャプション**に`&Home`、 **Large Images**に`IDB_RIBBON_HOMELARGE`、 **Small Images**に`IDB_RIBBON_HOMESMALL`します。
 
 1. 各リボン カテゴリは名前付きパネルに整理されます。 各パネルには、関連する操作完了するには一連コントロールにはが含まれています。 このカテゴリには 1 つのパネルがあります。 クリックして**パネル**、し、変更**キャプション**に`Edit`します。
 
@@ -269,4 +272,4 @@ A*ビジュアル マネージャー*はアプリケーションのすべての�
 ## <a name="see-also"></a>関連項目
 
 [チュートリアル](../mfc/walkthroughs-mfc.md)<br/>
-[チュートリアル: MFC Scribble アプリケーションの更新 (パート 2)](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)
+[チュートリアル: MFC Scribble アプリケーション (第 2 部) の更新](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)

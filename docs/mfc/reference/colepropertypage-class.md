@@ -38,12 +38,12 @@ helpviewer_keywords:
 - COlePropertyPage [MFC], SetModifiedFlag
 - COlePropertyPage [MFC], SetPageName
 ms.assetid: e9972872-8e6b-4550-905e-d36a274d64dc
-ms.openlocfilehash: 905f92ef7875dac984b6c0d537e4687dcc779f49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 55f4b7304d0b50004585b55142804e0bb4234c16
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605713"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271256"
 ---
 # <a name="colepropertypage-class"></a>COlePropertyPage クラス
 
@@ -89,7 +89,7 @@ class AFX_NOVTABLE COlePropertyPage : public CDialog
 
 各コントロールをカスタムまたはストック プロパティ ダイアログ コントロール、コントロールのユーザーが現在のプロパティ値を表示し、必要な場合は、その値を変更できるようにすることができます。
 
-使用しての詳細については`COlePropertyPage`、記事をご覧ください[ActiveX コントロール: プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)します。
+使用しての詳細については`COlePropertyPage`、記事をご覧ください[ActiveX コントロール。プロパティ ページ](../../mfc/mfc-activex-controls-property-pages.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

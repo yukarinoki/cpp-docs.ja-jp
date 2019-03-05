@@ -28,12 +28,12 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], GetSelectionType
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
-ms.openlocfilehash: 247514c37ef62987baa31be83efc73e05735904a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d135a2a254f71a4123a8bd338e1d6e9f87b74c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530027"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303315"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog クラス
 
@@ -60,7 +60,7 @@ class COlePasteSpecialDialog : public COleDialog
 |[COlePasteSpecialDialog::AddFormat](#addformat)|アプリケーションで貼り付けできる形式の一覧には、カスタム書式を追加します。|
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|サポートされているクリップボード形式の一覧に新しいエントリを追加します。|
 |[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|CF_BITMAP、CF_DIB、CF_METAFILEPICT を追加し、必要に応じて CF_LINKSOURCE 形式の一覧にアプリケーションに貼り付けることができます。|
-|[静的オブジェクト](#createitem)|指定した形式を使用して、コンテナーのドキュメントで、項目を作成します。|
+|[COlePasteSpecialDialog::CreateItem](#createitem)|指定した形式を使用して、コンテナーのドキュメントで、項目を作成します。|
 |[COlePasteSpecialDialog::DoModal](#domodal)|貼り付け特別なダイアログ ボックスが表示されます。|
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|かどうかのアイテムをアイコンとして描画するかどうかを指示します。|
 |[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|この項目の象徴的な形式に関連付けられているメタファイルを識別するハンドルを取得します。|
@@ -151,7 +151,7 @@ void AddFormat(
 
 ### <a name="remarks"></a>Remarks
 
-この関数は、追加されているテキストまたは呼び出すなどの標準的な形式か、カスタム形式、アプリケーションがシステムに登録されているを呼び出すことができます。 データ オブジェクトを貼り付け、アプリケーションの詳細については、記事を参照してください。[データ オブジェクトとデータ ソース: 操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。
+この関数は、追加されているテキストまたは呼び出すなどの標準的な形式か、カスタム形式、アプリケーションがシステムに登録されているを呼び出すことができます。 データ オブジェクトを貼り付け、アプリケーションの詳細については、記事を参照してください。[データ オブジェクトとデータ ソース。操作](../../mfc/data-objects-and-data-sources-manipulation.md)します。
 
 詳細については、次を参照してください。、 [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed)列挙型、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK の構造体。
 
@@ -237,7 +237,7 @@ COlePasteSpecialDialog(
 
 詳細については、次を参照してください。、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙します。
 
-##  <a name="createitem"></a>  静的オブジェクト
+##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem
 
 貼り付け ダイアログ ボックスで選択された新しい項目を作成します。
 

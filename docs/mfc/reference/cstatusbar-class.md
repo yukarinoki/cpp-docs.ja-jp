@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: 70d700197e3d249812e8b09a2cba744a0fbc9803
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e7aa577d237c1800ca9df3f0af4c44acdaae9ae2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649281"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279498"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar クラス
 
@@ -108,7 +108,7 @@ class CStatusBar : public CControlBar
 
 呼び出す[SetPaneStyle](#setpanestyle)ステータス バー ペインのスタイルを更新します。
 
-使用しての詳細については`CStatusBar`、記事をご覧ください[MFC でのステータス バーの実装](../../mfc/status-bar-implementation-in-mfc.md)と[テクニカル ノート 31: コントロール バー](../../mfc/tn031-control-bars.md)します。
+使用しての詳細については`CStatusBar`、記事をご覧ください[MFC でのステータス バーの実装](../../mfc/status-bar-implementation-in-mfc.md)と[テクニカル ノート 31。コントロール バー](../../mfc/tn031-control-bars.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -136,7 +136,7 @@ int CommandToIndex(UINT nIDFind) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*始まり*<br/>
+*nIDFind*<br/>
 文字列を取得するインデックスは、インジケーターの ID です。
 
 ### <a name="return-value"></a>戻り値
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
 *pParentWnd*<br/>
 ポインター、 [CWnd](../../mfc/reference/cwnd-class.md)ステータス バーの親である Windows ウィンドウを持つオブジェクト。
 
-*ツール バー*<br/>
+*dwCtrlStyle*<br/>
 埋め込まれたを作成するための追加スタイル[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)オブジェクト。 既定値の指定、サイズ変更グリップとツールヒントなしのステータス バーをサポートします。 ステータス バーのスタイルがサポートされている次のとおりです。
 
 - SBARS_SIZEGRIP、ステータス バー コントロールには、ステータス バーの右端にあるサイズ変更グリップが含まれています。 サイズ変更グリップはサイズ変更境界線; に似ていますユーザーがクリックして親ウィンドウのサイズをドラッグ四角形の領域になります。
@@ -482,10 +482,10 @@ BOOL SetPaneText(
 *nIndex*<br/>
 テキストを設定するペインのインデックス。
 
-*されています。*<br/>
+*lpszNewText*<br/>
 新しいウィンドウのテキストへのポインター。
 
-*b 更新*<br/>
+*bUpdate*<br/>
 TRUE の場合、テキストを設定した後、ウィンドウが無効にします。
 
 ### <a name="return-value"></a>戻り値

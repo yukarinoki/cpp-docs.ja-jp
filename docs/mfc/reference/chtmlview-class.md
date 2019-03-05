@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: b37cff8bd3eb3bd05bc7030c4cc12b9b84568b1f
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333642"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295995"
 ---
 # <a name="chtmlview-class"></a>CHtmlView クラス
 
@@ -383,7 +383,7 @@ virtual BOOL Create(
 *lpszClassName*<br/>
 Windows クラスの名前を示す文字の null で終わる文字列を指します。 クラス名が登録されている任意の名前を指定できます、 [AfxRegisterWndClass](../../mfc/reference/application-information-and-management.md#afxregisterwndclass)グローバル関数または`RegisterClass`Windows 関数。 NULL の場合は、定義済みの既定値を使用して[CFrameWnd](../../mfc/reference/cframewnd-class.md)属性。
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 ウィンドウの名前を表す null で終わる文字列へのポインター。
 
 *dwStyle*<br/>
@@ -1171,7 +1171,7 @@ virtual void OnCommandStateChange(
 
 ### <a name="parameters"></a>パラメーター
 
-*%n されたコマンド*<br/>
+*nCommand*<br/>
 有効な状態が変化したコマンドの識別子です。
 
 *bEnable*<br/>
@@ -1861,13 +1861,13 @@ void PutProperty(
 *dValue*<br/>
 プロパティの新しい値。
 
-*左辺値*<br/>
+*lValue*<br/>
 プロパティの新しい値。
 
 *lpszValue*<br/>
 プロパティの新しい値を含む文字列へのポインター。
 
-*値*<br/>
+*nValue*<br/>
 プロパティの新しい値。
 
 ### <a name="remarks"></a>コメント
@@ -2237,4 +2237,3 @@ Internet Explorer と WebBrowser に適用されます。
 [CFormView クラス](../../mfc/reference/cformview-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
-

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - frame window classes [MFC], created by application wizards
 - CMainFrame class [MFC]
 ms.assetid: 9947df73-4470-49a0-ac61-7b6ee401a74e
-ms.openlocfilehash: 581ceb25e675da6506d06bca3798fb22ca8fd389
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a0610ae901b817a1c8f7707d9ba87c15d634e134
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629256"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298062"
 ---
 # <a name="frame-window-classes-created-by-the-application-wizard"></a>アプリケーション ウィザードで作成されるフレーム ウィンドウ クラス
 
@@ -37,4 +37,3 @@ ms.locfileid: "50629256"
 
 [フレーム ウィンドウ クラス](../mfc/frame-window-classes.md)<br/>
 [MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル](../ide/mfc-program-or-control-source-and-header-files.md)
-

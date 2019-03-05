@@ -13,12 +13,12 @@ f1_keywords:
 - amp/Concurrency::global_memory_fence
 - amp/Concurrency::tile_static_memory_fence
 ms.assetid: 2bef0985-cb90-4ece-90b9-66529aec73c9
-ms.openlocfilehash: 43be1fc3a5df52f6edcc05b501b1463bd5da7e6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7baae51480c273ca023856253af7963ac83d7c92
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481797"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284841"
 ---
 # <a name="concurrency-namespace-functions-amp"></a>Concurrency 名前空間関数 (AMP)
 
@@ -79,8 +79,9 @@ inline bool atomic_compare_exchange(
 *_Expected_value*<br/>
 比較される 2 番目の値が読み取られる位置。
 
-*値*<br/>
-`_Dest` が `_Dest` と等しい場合、`_Expected_value` によって指定したメモリ位置に格納される値。
+*value*<br/>
+
+  `_Dest` が `_Dest` と等しい場合、`_Expected_value` によって指定したメモリ位置に格納される値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -112,7 +113,7 @@ inline float atomic_exchange(
 *_Dest*<br/>
 接続先の場所へのポインター。
 
-*値*<br/>
+*value*<br/>
 新しい値。
 
 ### <a name="return-value"></a>戻り値
@@ -140,7 +141,7 @@ inline unsigned int atomic_fetch_add(
 *_Dest*<br/>
 メモリ位置へのポインター。
 
-*値*<br/>
+*value*<br/>
 追加する値。
 
 ### <a name="return-value"></a>戻り値
@@ -168,7 +169,7 @@ inline unsigned int atomic_fetch_and(
 *_Dest*<br/>
 メモリ位置へのポインター。
 
-*値*<br/>
+*value*<br/>
 ビットごとの AND の計算に使用する値。
 
 ### <a name="return-value"></a>戻り値
@@ -235,7 +236,7 @@ inline unsigned int atomic_fetch_max(
 *_Dest*<br/>
 比較される値の 1 つが読み取られ、2 つの値の最大値が格納される位置。
 
-*値*<br/>
+*value*<br/>
 指定した位置の値と比較する値。
 
 ### <a name="return-value"></a>戻り値
@@ -263,7 +264,7 @@ inline unsigned int atomic_fetch_min(
 *_Dest*<br/>
 比較される値の 1 つが読み取られ、2 つの値の最小値が格納される位置。
 
-*値*<br/>
+*value*<br/>
 指定した位置の値と比較する値。
 
 ### <a name="return-value"></a>戻り値
@@ -291,7 +292,7 @@ inline unsigned int atomic_fetch_or(
 *_Dest*<br/>
 メモリ位置へのポインター。
 
-*値*<br/>
+*value*<br/>
 ビットごとの OR の計算に使用する値。
 
 ### <a name="return-value"></a>戻り値
@@ -319,7 +320,7 @@ inline unsigned int atomic_fetch_sub(
 *_Dest*<br/>
 接続先の場所へのポインター。
 
-*値*<br/>
+*value*<br/>
 減算される値。
 
 ### <a name="return-value"></a>戻り値
@@ -347,7 +348,7 @@ inline unsigned int atomic_fetch_xor(
 *_Dest*<br/>
 メモリ位置へのポインター。
 
-*値*<br/>
+*value*<br/>
 XOR の計算に使用する値。
 
 ### <a name="return-value"></a>戻り値
@@ -546,7 +547,7 @@ concurrency::completion_future copy_async(
 
 ##  <a name="direct3d_abort"></a>  direct3d_abort
 
-制限句 `restrict(amp)` を使用して関数の実行を中止します。 AMP ランタイムが呼び出しを検出すると、 [runtime_exception](runtime-exception-class.md) 例外が発生し、"リファレンス ラスタライザー: シェーダー中止命令が発行" というエラー メッセージが返されます。
+制限句 `restrict(amp)` を使用して関数の実行を中止します。 AMP ランタイムは、呼び出しが検出されると発生する[runtime_exception](runtime-exception-class.md)エラー メッセージで例外"リファレンス ラスタライザー。シェーダー中止命令"。
 
 ```
 void direct3d_abort() restrict(amp);
@@ -644,13 +645,16 @@ void parallel_for_each(
 計算用のデータを含む `extent` オブジェクト。
 
 *_Dim0*<br/>
-`tiled_extent` オブジェクトの次元。
+
+  `tiled_extent` オブジェクトの次元。
 
 *_Dim1*<br/>
-`tiled_extent` オブジェクトの次元。
+
+  `tiled_extent` オブジェクトの次元。
 
 *_Dim2*<br/>
-`tiled_extent` オブジェクトの次元。
+
+  `tiled_extent` オブジェクトの次元。
 
 *_Kernel*<br/>
 型の引数を受け取るラムダまたは関数オブジェクトを"インデックス\<_Rank >"し、並列計算を実行します。

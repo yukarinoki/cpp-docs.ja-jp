@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _beginthreadex function
 - _endthreadex function
 ms.assetid: 39d0529c-c392-4c6f-94f5-105d1e8054e4
-ms.openlocfilehash: ea04e42730b0e7d1f0fafe5d3139d2b1a6aed970
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 392fc8e842d86a17013502ffc68c89eb65ba23db
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299982"
 ---
 # <a name="c-run-time-library-functions-for-thread-control"></a>スレッド コントロールのための C ランタイム ライブラリ関数
 
@@ -22,14 +22,16 @@ Win32 プログラムはすべて、スレッドを少なくとも 1 つ持っ�
 
 LIBCMT と MSVCRT の C ランタイム ライブラリは、スレッドの作成および終了のため、次の機能を提供します。 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)と[_endthread、_endthreadex](../c-runtime-library/reference/endthread-endthreadex.md)します。
 
-`_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成し、スレッドが正常に作成されるとスレッド識別子を返します。 スレッドは、実行を完了した時点で自動的に終了するか、`_endthread` または `_endthreadex` を呼び出すことによってそのスレッド自体を終了します。
+
+  `_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成し、スレッドが正常に作成されるとスレッド識別子を返します。 スレッドは、実行を完了した時点で自動的に終了するか、`_endthread` または `_endthreadex` を呼び出すことによってそのスレッド自体を終了します。
 
 > [!NOTE]
 > Libcmt.lib を使用してビルドしたプログラムから C ランタイム ルーチンを呼び出す場合は、`_beginthread` 関数または `_beginthreadex` 関数でスレッドを起動する必要があります。 Win32 の `ExitThread` 関数および `CreateThread` 関数は使用しないでください。 また、C ランタイム ライブラリのデータ構造体へアクセス中のスレッドがあって、その完了を待っている複数のスレッドが存在する場合に `SuspendThread` を使うと、デッドロック状態になります。
 
 ##  <a name="_core_the__beginthread_function"></a> _Beginthread および _beginthreadex 関数
 
-`_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成します。 スレッドは、プロセスのコードやデータ セグメントをプロセス内の他のスレッドと共有しますが、各スレッドには、独自のレジスタ値、スタック領域、および現在の命令アドレスがあります。 それぞれのスレッドに CPU 時間が与えられるので、プロセス中のすべてのスレッドを同時に実行できます。
+
+  `_beginthread` 関数および `_beginthreadex` 関数は、新しいスレッドを作成します。 スレッドは、プロセスのコードやデータ セグメントをプロセス内の他のスレッドと共有しますが、各スレッドには、独自のレジスタ値、スタック領域、および現在の命令アドレスがあります。 それぞれのスレッドに CPU 時間が与えられるので、プロセス中のすべてのスレッドを同時に実行できます。
 
 `_beginthread` `_beginthreadex`に似ていますが、 [CreateThread](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createthread) Win32 api 関数が、これらの違い。
 

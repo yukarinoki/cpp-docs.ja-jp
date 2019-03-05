@@ -1,22 +1,23 @@
 ---
-title: '方法: Alloc および Free を使用してメモリ パフォーマンスを改善する'
+title: '方法: 割り当てを使用し、メモリのパフォーマンスを向上させるために無料'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Alloc and Free, using [Concurrency Runtime]
 - Using Alloc and Free [Concurrency Runtime]
 ms.assetid: e1fab9e8-a97d-4104-bead-e95958db79f9
-ms.openlocfilehash: d91734859cd7d3499979566f427c10a0f026941b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f55bf360ac2b4c7162c1ed2b917ac6ce8c7cd11f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467822"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296125"
 ---
-# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>方法: Alloc および Free を使用してメモリ パフォーマンスを改善する
+# <a name="how-to-use-alloc-and-free-to-improve-memory-performance"></a>方法: 割り当てを使用し、メモリのパフォーマンスを向上させるために無料
 
 このドキュメントは、使用する方法を示します、 [concurrency::alloc](reference/concurrency-namespace-functions.md#alloc)と[concurrency::free](reference/concurrency-namespace-functions.md#free)メモリのパフォーマンスを向上させるために機能します。 ここでは、それぞれが `new` 演算子と `delete` 演算子を指定する、配列の 3 種類の要素を並行して反転するときの所要時間を比較します。
 
-`Alloc` 関数と `Free` 関数は、複数のスレッドで `Alloc` と `Free` の両方を頻繁に呼び出す場合に最も役に立ちます。 ランタイムは、スレッドごとに個別のメモリ キャッシュを保持します。したがって、ランタイムは、ロックまたはメモリ バリアを使用せずにメモリを管理します。
+
+  `Alloc` 関数と `Free` 関数は、複数のスレッドで `Alloc` と `Free` の両方を頻繁に呼び出す場合に最も役に立ちます。 ランタイムは、スレッドごとに個別のメモリ キャッシュを保持します。したがって、ランタイムは、ロックまたはメモリ バリアを使用せずにメモリを管理します。
 
 ## <a name="example"></a>例
 
@@ -26,7 +27,10 @@ ms.locfileid: "50467822"
 
 ## <a name="example"></a>例
 
-`swap` 関数および `reverse_array` 関数の例を次に示します。 `swap` 関数は、配列の指定されたインデックス位置の内容を交換します。 また、テンポラリ変数のヒープからメモリを割り当てます。 `reverse_array` 関数は、大きな配列を作成し、その配列を並行して複数回反転したときの所要時間を計算します。
+
+  `swap` 関数および `reverse_array` 関数の例を次に示します。 
+  `swap` 関数は、配列の指定されたインデックス位置の内容を交換します。 また、テンポラリ変数のヒープからメモリを割り当てます。 
+  `reverse_array` 関数は、大きな配列を作成し、その配列を並行して複数回反転したときの所要時間を計算します。
 
 [!code-cpp[concrt-allocators#2](../../parallel/concrt/codesnippet/cpp/how-to-use-alloc-and-free-to-improve-memory-performance_2.cpp)]
 
@@ -63,4 +67,3 @@ Took 656 ms with Alloc/Free.
 [メモリ管理関数](../../parallel/concrt/memory-management-functions.md)<br/>
 [Alloc 関数](reference/concurrency-namespace-functions.md#alloc)<br/>
 [Free 関数](reference/concurrency-namespace-functions.md#free)
-

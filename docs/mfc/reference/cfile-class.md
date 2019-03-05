@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: dc0e6f75f4794b94d6e94d77f2e427b9c1df9f06
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644146"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289870"
 ---
 # <a name="cfile-class"></a>CFile クラス
 
@@ -89,19 +89,19 @@ class CFile : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[解放](#abort)|すべての警告とエラーを無視してファイルを閉じます。|
-|[データ](#close)|ファイルを閉じて、オブジェクトを削除します。|
+|[CFile::Abort](#abort)|すべての警告とエラーを無視してファイルを閉じます。|
+|[CFile::Close](#close)|ファイルを閉じて、オブジェクトを削除します。|
 |[CFile::Duplicate](#duplicate)|このファイルに基づく重複したオブジェクトを構築します。|
 |[CFile::Flush](#flush)|記述するには、まだすべてのデータをフラッシュします。|
 |[CFile::GetFileName](#getfilename)|選択したファイルのファイル名を取得します。|
 |[CFile::GetFilePath](#getfilepath)|選択したファイルの完全ファイル パスを取得します。|
 |[CFile::GetFileTitle](#getfiletitle)|選択したファイルのタイトルを取得します。|
-|[結び付けてその中](#getlength)|ファイルの長さを取得します。|
-|[実行](#getposition)|現在のファイル ポインターを取得します。|
-|[Cfile::getstatus](#getstatus)|または、静的バージョンで、開いているファイルの状態を取得、指定されたファイル (静的、仮想関数) の状態を取得します。|
+|[CFile::GetLength](#getlength)|ファイルの長さを取得します。|
+|[CFile::GetPosition](#getposition)|現在のファイル ポインターを取得します。|
+|[CFile::GetStatus](#getstatus)|または、静的バージョンで、開いているファイルの状態を取得、指定されたファイル (静的、仮想関数) の状態を取得します。|
 |[CFile::LockRange](#lockrange)|ファイル内のバイトの範囲をロックします。|
 |[CFile::Open](#open)|安全に、エラー テスト オプションを使用してファイルを開きます。|
-|[:Read](#read)|ファイルの現在の位置にあるファイルからの読み取り (バッファーなし) のデータ。|
+|[CFile::Read](#read)|ファイルの現在の位置にあるファイルからの読み取り (バッファーなし) のデータ。|
 |[CFile::Remove](#remove)|指定したファイル (静的関数) を削除します。|
 |[CFile::Rename](#rename)|指定したファイル (静的関数) の名前を変更します。|
 |[CFile::Seek](#seek)|現在のファイル ポインターを移動します。|
@@ -154,7 +154,7 @@ class CFile : public CObject
 
 **ヘッダー:** afx.h
 
-##  <a name="abort"></a>  解放
+##  <a name="abort"></a>  CFile::Abort
 
 このオブジェクトに関連付けられたファイルを閉じて、ファイルを読み取りまたは書き込みに使用できなくなります。
 
@@ -176,7 +176,8 @@ virtual void Abort();
 
 ##  <a name="cfile"></a>  ほか
 
-`CFile` オブジェクトを構築して初期化します。
+
+  `CFile` オブジェクトを構築して初期化します。
 
 ```
 CFile();
@@ -196,10 +197,12 @@ CAtlTransactionManager* pTM);
 ### <a name="parameters"></a>パラメーター
 
 *hFile*<br/>
-`CFile` オブジェクトにアタッチするためのファイル ハンドル。
 
-*場合*<br/>
-`CFile` オブジェクトにアタッチするための相対パスまたは完全パス。
+  `CFile` オブジェクトにアタッチするためのファイル ハンドル。
+
+*lpszFileName*<br/>
+
+  `CFile` オブジェクトにアタッチするための相対パスまたは完全パス。
 
 *nOpenFlags*<br/>
 指定されたファイルのファイル アクセス オプションのビットごとの組み合わせ (OR)。 使用できるオプションについては、「解説」を参照してください。
@@ -264,15 +267,17 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 2 つのパラメーターを持つコンストラクターでは、メンバーは初期化され、指定されたファイルを開くことが試行されます。 このコンストラクターによって、指定されたファイルが正常に開かれると、ファイルは `CFile` オブジェクトにアタッチされます。それ以外の場合は、このコンストラクターによって `CInvalidArgException` オブジェクトへのポインターがスローされます。 例外を処理する方法の詳細については、次を参照してください。[例外](../../mfc/exception-handling-in-mfc.md)します。
 
-`CFile` オブジェクトによって、指定されたファイルが正常に開かれた場合、このファイルは `CFile` オブジェクトが破棄されたときに自動的に閉じられます。それ以外の場合は、`CFile` オブジェクトにアタッチされなくなった後でファイルを明示的に閉じる必要があります。
+
+  `CFile` オブジェクトによって、指定されたファイルが正常に開かれた場合、このファイルは `CFile` オブジェクトが破棄されたときに自動的に閉じられます。それ以外の場合は、`CFile` オブジェクトにアタッチされなくなった後でファイルを明示的に閉じる必要があります。
 
 ### <a name="example"></a>例
 
-`CFile` の使用例を次のコードに示します。
+
+  `CFile` の使用例を次のコードに示します。
 
 [!code-cpp[NVC_MFCFiles#4](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]
 
-##  <a name="close"></a>  データ
+##  <a name="close"></a>  CFile::Close
 
 このオブジェクトに関連付けられたファイルを閉じて、ファイルを読み取りまたは書き込みに使用できなくなります。
 
@@ -390,7 +395,7 @@ virtual CString GetFileTitle() const;
 
 例をご覧ください[GetFileName](#getfilename)します。
 
-##  <a name="getlength"></a>  結び付けてその中
+##  <a name="getlength"></a>  CFile::GetLength
 
 現在の論理ファイルのバイトの長さを取得します。
 
@@ -406,7 +411,7 @@ virtual ULONGLONG GetLength() const;
 
 [!code-cpp[NVC_MFCFiles#7](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_4.cpp)]
 
-##  <a name="getposition"></a>  実行
+##  <a name="getposition"></a>  CFile::GetPosition
 
 後続の呼び出しで使用できるファイル ポインターの現在の値を取得します。`Seek`します。
 
@@ -422,7 +427,7 @@ virtual ULONGLONG GetPosition() const;
 
 [!code-cpp[NVC_MFCFiles#8](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_5.cpp)]
 
-##  <a name="getstatus"></a>  Cfile::getstatus
+##  <a name="getstatus"></a>  CFile::GetStatus
 
 このメソッドに関連するステータス情報を取得する指定された`CFile`オブジェクト インスタンスまたは指定されたファイル パス。
 
@@ -452,7 +457,7 @@ static BOOL PASCAL GetStatus(
 
 - `char m_szFullName[_MAX_PATH]` Windows の文字セットで絶対ファイル名。
 
-*場合*<br/>
+*lpszFileName*<br/>
 Windows の文字の文字列は、目的のファイルにパスで設定されています。 パスには、相対パスまたは絶対、またはネットワーク パス名を含めることができます。
 
 *pTM*<br/>
@@ -574,7 +579,7 @@ virtual BOOL Open(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*lpszFileName*<br/>
 目的のファイルのパスを表す文字列。 相対パス、絶対パス、またはネットワーク名 (UNC) パスができます。
 
 *nOpenFlags*<br/>
@@ -602,8 +607,8 @@ CAtlTransactionManager オブジェクトへのポインター。
 |--------------|------------------------|------------------|----------------------------|
 |NULL|いいえ|true|N/A|
 |ポインター `CFileException`|いいえ|true|変更なし|
-|NULL|はい|false|N/A|
-|ポインター `CFileException`|はい|false|初期化エラーを記述するには|
+|NULL|[はい]|false|N/A|
+|ポインター `CFileException`|[はい]|false|初期化エラーを記述するには|
 
 ### <a name="example"></a>例
 
@@ -619,7 +624,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 operator HANDLE() const;
 ```
 
-##  <a name="read"></a>  :Read
+##  <a name="read"></a>  CFile::Read
 
 関連付けられているファイルからバッファーにデータを読み取り、`CFile`オブジェクト。
 
@@ -659,7 +664,7 @@ static void PASCAL Remove(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*lpszFileName*<br/>
 目的のファイルのパスを表す文字列。 パスは相対パスまたは絶対とネットワーク名を含めることができます。
 
 *pTM*<br/>
@@ -840,7 +845,7 @@ static void PASCAL SetStatus(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*lpszFileName*<br/>
 目的のファイルのパスを表す文字列。 パスは相対パスまたは絶対とネットワーク名を含めることができます。
 
 *status*<br/>

@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CLinkCtrl [MFC], SetItemState
 - CLinkCtrl [MFC], SetItemUrl
 ms.assetid: d1cd876a-ecca-42db-8ac4-9cd327df0cd4
-ms.openlocfilehash: b24b92006b73dff2ae9f091256ef8401efc64fe9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 38f529f46623bc7095879b29fba09427626073ec
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178046"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260402"
 ---
 # <a name="clinkctrl-class"></a>CLinkCtrl クラス
 
@@ -64,7 +64,7 @@ class CLinkCtrl : public CWnd
 |名前|説明|
 |----------|-----------------|
 |[CLinkCtrl::Create](#create)|リンク コントロールを作成し、それにアタッチします、`CLinkCtrl`オブジェクト。|
-|[適用](#createex)|拡張スタイルを使用してリンク コントロールを作成しにアタッチします、`CLinkCtrl`オブジェクト。|
+|[CLinkCtrl::CreateEx](#createex)|拡張スタイルを使用してリンク コントロールを作成しにアタッチします、`CLinkCtrl`オブジェクト。|
 |[CLinkCtrl::GetIdealHeight](#getidealheight)|リンク コントロールの適切な高さを取得します。|
 |[CLinkCtrl::GetIdealSize](#getidealsize)|リンクの指定した幅に応じて、現在のリンク コントロールのリンク テキストの適切な高さを計算します。|
 |[CLinkCtrl::GetItem](#getitem)|状態とリンク コントロールの項目の属性を取得します。|
@@ -164,7 +164,7 @@ virtual BOOL Create(DWORD dwStyle,
 
 [!code-cpp[NVC_MFC_CLinkCtrl_s1#1](../../mfc/reference/codesnippet/cpp/clinkctrl-class_2.cpp)]
 
-##  <a name="createex"></a>  適用
+##  <a name="createex"></a>  CLinkCtrl::CreateEx
 
 拡張スタイルを使用してリンク コントロールを作成しにアタッチします、`CLinkCtrl`オブジェクト。
 
@@ -245,7 +245,7 @@ int GetIdealSize(
 |パラメーター|説明|
 |---------------|-----------------|
 |*cxMaxWidth*|[in]ピクセル単位で、リンクの最大の幅。|
-|[out]\* *pSize*|Windows へのポインター[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体。 このメソッドが戻るとき、 *cy*のメンバー、`SIZE`構造で指定されているリンクのテキスト幅の理想的なリンクのテキストの高さに含まれる*cxMaxWidth*します。 *Cx*構造体のメンバーには、実際に必要なリンクのテキストの幅が含まれています。|
+|[out] \* *pSize*|Windows へのポインター[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体。 このメソッドが戻るとき、 *cy*のメンバー、`SIZE`構造で指定されているリンクのテキスト幅の理想的なリンクのテキストの高さに含まれる*cxMaxWidth*します。 *Cx*構造体のメンバーには、実際に必要なリンクのテキストの幅が含まれています。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -337,7 +337,7 @@ BOOL GetItemState(
 *pnState*<br/>
 指定した状態の項目の値。
 
-*対象*<br/>
+*stateMask*<br/>
 取得するには、どの状態項目を記述するフラグの組み合わせ。 値の一覧は、の説明を参照して、`state`内のメンバー、 [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)構造体。 使用可能な項目はで許可されているものとまったく同じ`state`します。
 
 ### <a name="return-value"></a>戻り値
@@ -475,7 +475,7 @@ BOOL SetItemState(
 *pnState*<br/>
 設定されている指定された状態の項目の値。
 
-*対象*<br/>
+*stateMask*<br/>
 設定されている状態の項目を記述するフラグの組み合わせ。 値の一覧は、の説明を参照して、`state`内のメンバー、 [LITEM](/windows/desktop/api/commctrl/ns-commctrl-taglitem)構造体。 使用可能な項目はで許可されているものとまったく同じ`state`します。
 
 ### <a name="return-value"></a>戻り値

@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComCurrency class
 ms.assetid: a1c3d10a-bba6-40cc-8bcf-aed9023c8a9e
-ms.openlocfilehash: 5a619eef33a60dc1a34d31c3d51614de20fc8f28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2c07bc9c0b1e96f34798b20207dc0eb0362e534
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451156"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277723"
 ---
 # <a name="ccomcurrency-class"></a>CComCurrency クラス
 
@@ -38,39 +38,46 @@ class CComCurrency
 
 |名前|説明|
 |----------|-----------------|
-|[CComCurrency::CComCurrency](#ccomcurrency)|`CComCurrency` オブジェクトのコンストラクター。|
+|[CComCurrency::CComCurrency](#ccomcurrency)|
+  `CComCurrency` オブジェクトのコンストラクター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|`m_currency` データ メンバーのアドレスを返します。|
-|[Ccomcurrency::getfraction](#getfraction)|`CComCurrency` オブジェクトの小数部を返すには、このメソッドを呼び出します。|
-|[CComCurrency::GetInteger](#getinteger)|`CComCurrency` オブジェクトの整数部を返すには、このメソッドを呼び出します。|
-|[CComCurrency::Round](#round)|`CComCurrency` オブジェクトを最も近い整数値に四捨五入するには、このメソッドを呼び出します。|
-|[CComCurrency::SetFraction](#setfraction)|`CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。|
-|[CComCurrency::SetInteger](#setinteger)|`CComCurrency` オブジェクトの整数部を設定するには、このメソッドを呼び出します。|
+|[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|
+  `m_currency` データ メンバーのアドレスを返します。|
+|[CComCurrency::GetFraction](#getfraction)|
+  `CComCurrency` オブジェクトの小数部を返すには、このメソッドを呼び出します。|
+|[CComCurrency::GetInteger](#getinteger)|
+  `CComCurrency` オブジェクトの整数部を返すには、このメソッドを呼び出します。|
+|[CComCurrency::Round](#round)|
+  `CComCurrency` オブジェクトを最も近い整数値に四捨五入するには、このメソッドを呼び出します。|
+|[CComCurrency::SetFraction](#setfraction)|
+  `CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。|
+|[CComCurrency::SetInteger](#setinteger)|
+  `CComCurrency` オブジェクトの整数部を設定するには、このメソッドを呼び出します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[CComCurrency::operator-](#operator_-)|この演算子は、`CComCurrency` オブジェクトで減算を実行するために使用します。|
-|[CComCurrency::operator! =](#operator_neq)|2 つの `CComCurrency` オブジェクトが等しくないかどうかを比較します。|
+|[CComCurrency::operator -](#operator_-)|この演算子は、`CComCurrency` オブジェクトで減算を実行するために使用します。|
+|[CComCurrency::operator !=](#operator_neq)|2 つの `CComCurrency` オブジェクトが等しくないかどうかを比較します。|
 |[CComCurrency::operator *](#operator_star)|この演算子は、`CComCurrency` オブジェクトで乗算を実行するために使用します。|
 |[CComCurrency::operator * =](#operator_star_eq)|この演算子は、`CComCurrency` オブジェクトで乗算を実行し、オブジェクトに結果を代入するために使用します。|
-|[CComCurrency::operator/](#operator_div)|この演算子は、`CComCurrency` オブジェクトで除算を実行するために使用します。|
-|[CComCurrency::operator/=](#operator_div_eq)|この演算子は、`CComCurrency` オブジェクトで除算を実行し、オブジェクトに結果を代入するために使用します。|
+|[CComCurrency::operator /](#operator_div)|この演算子は、`CComCurrency` オブジェクトで除算を実行するために使用します。|
+|[CComCurrency::operator /=](#operator_div_eq)|この演算子は、`CComCurrency` オブジェクトで除算を実行し、オブジェクトに結果を代入するために使用します。|
 |[CComCurrency::operator +](#operator_add)|この演算子は、`CComCurrency` オブジェクトで加算を実行するために使用します。|
-|[CComCurrency::operator + =](#operator_add_eq)|この演算子は、`CComCurrency` オブジェクトで加算を実行し、結果を現在のオブジェクトに代入するために使用します。|
+|[CComCurrency::operator +=](#operator_add_eq)|この演算子は、`CComCurrency` オブジェクトで加算を実行し、結果を現在のオブジェクトに代入するために使用します。|
 |[CComCurrency::operator <](#operator_lt)|この演算子は、2 つの `CComCurrency` オブジェクトを比較して、小さい方を決定します。|
-|[CComCurrency::operator < =](#operator_lt_eq)|この演算子では、2 つの `CComCurrency` オブジェクトを比較して、等しいかどうか、または小さい方を決定します。|
+|[CComCurrency::operator <=](#operator_lt_eq)|この演算子では、2 つの `CComCurrency` オブジェクトを比較して、等しいかどうか、または小さい方を決定します。|
 |[CComCurrency::operator =](#operator_eq)|この演算子は、`CComCurrency` オブジェクトに新しい値を割り当てます。|
-|[CComCurrency::operator =](#operator_-_eq)|この演算子は、`CComCurrency` オブジェクトで減算を実行し、オブジェクトに結果を代入するために使用します。|
-|[CComCurrency::operator = =](#operator_eq_eq)|この演算子は、2 つの `CComCurrency` オブジェクトが等しいかどうかを比較します。|
+|[CComCurrency::operator -=](#operator_-_eq)|この演算子は、`CComCurrency` オブジェクトで減算を実行し、オブジェクトに結果を代入するために使用します。|
+|[CComCurrency::operator ==](#operator_eq_eq)|この演算子は、2 つの `CComCurrency` オブジェクトが等しいかどうかを比較します。|
 |[CComCurrency::operator >](#operator_gt)|この演算子は、2 つの `CComCurrency` オブジェクトを比較して、大きい方を決定します。|
-|[CComCurrency::operator > =](#operator_gt_eq)|この演算子は、2 つの `CComCurrency` オブジェクトを比較して、等しいかどうか、または大きい方を決定します。|
-|[CComCurrency::operator 通貨](#operator_currency)|通貨オブジェクトにキャストします。|
+|[CComCurrency::operator >=](#operator_gt_eq)|この演算子は、2 つの `CComCurrency` オブジェクトを比較して、等しいかどうか、または大きい方を決定します。|
+|[CComCurrency::operator CURRENCY](#operator_currency)|通貨オブジェクトにキャストします。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -84,7 +91,8 @@ class CComCurrency
 
 `CComCurrency`ラッパーは、この固定小数点型の算術演算子、代入、および比較の操作を実装します。 固定小数点数の計算中に発生する可能性のある丸め誤差を制御するために、サポートするアプリケーションが選択されています。
 
-`CComCurrency` オブジェクトは、小数点の左側に値を格納する整数部と小数点の右側に値を格納する小数部という 2 つの構成要素を使用した形で、小数点の左側と右側の数値にアクセスできます。 小数部は、-9999 (CY_MIN_FRACTION) から +9999 (CY_MAX_FRACTION) を整数値として内部的に格納されます。 メソッド[ccomcurrency::getfraction](#getfraction)係数 10,000 (CY_SCALE) で拡大された値を返します。
+
+  `CComCurrency` オブジェクトは、小数点の左側に値を格納する整数部と小数点の右側に値を格納する小数部という 2 つの構成要素を使用した形で、小数点の左側と右側の数値にアクセスできます。 小数部は、-9999 (CY_MIN_FRACTION) から +9999 (CY_MAX_FRACTION) を整数値として内部的に格納されます。 メソッド[ccomcurrency::getfraction](#getfraction)係数 10,000 (CY_SCALE) で拡大された値を返します。
 
 整数部と小数部を指定するときに、`CComCurrency`オブジェクト、小数部が 0 ~ 9999 の範囲の数に注意してください。 これは、小数点の後の有効桁数に 2 桁のみを使用して金額を表す米ドルなどの通貨を扱う場合に重要です。 最後の 2 桁が表示されていない場合でも考慮する必要があります。
 
@@ -159,7 +167,8 @@ explicit CComCurrency(LPCSTR szSrc);
 
 ##  <a name="getcurrencyptr"></a>  CComCurrency::GetCurrencyPtr
 
-`m_currency` データ メンバーのアドレスを返します。
+
+  `m_currency` データ メンバーのアドレスを返します。
 
 ```
 CURRENCY* GetCurrencyPtr() throw();
@@ -169,7 +178,7 @@ CURRENCY* GetCurrencyPtr() throw();
 
 アドレスを返して、`m_currency`データ メンバー
 
-##  <a name="getfraction"></a>  Ccomcurrency::getfraction
+##  <a name="getfraction"></a>  CComCurrency::GetFraction
 
 小数部を返すには、このメソッドを呼び出して、`CComCurrency`オブジェクト。
 
@@ -217,7 +226,7 @@ CURRENCY m_currency;
 
 このメンバーは、このクラスのメソッドがアクセスおよび操作の通貨を保持します。
 
-##  <a name="operator_-"></a>  CComCurrency::operator-
+##  <a name="operator_-"></a>  CComCurrency::operator -
 
 この演算子は、`CComCurrency` オブジェクトで減算を実行するために使用します。
 
@@ -239,7 +248,7 @@ CComCurrency operator-(const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#55](../../atl/codesnippet/cpp/ccomcurrency-class_3.cpp)]
 
-##  <a name="operator_neq"></a>  CComCurrency::operator! =
+##  <a name="operator_neq"></a>  CComCurrency::operator !=
 
 この演算子は、2 つの非等値オブジェクトを比較します。
 
@@ -310,7 +319,7 @@ const CComCurrency& operator*= (const CComCurrency& cur);
 
 [!code-cpp[NVC_ATL_Utilities#58](../../atl/codesnippet/cpp/ccomcurrency-class_6.cpp)]
 
-##  <a name="operator_div"></a>  CComCurrency::operator/
+##  <a name="operator_div"></a>  CComCurrency::operator /
 
 この演算子は、`CComCurrency` オブジェクトで除算を実行するために使用します。
 
@@ -331,7 +340,7 @@ CComCurrency operator/(long nOperand) const;
 
 [!code-cpp[NVC_ATL_Utilities#59](../../atl/codesnippet/cpp/ccomcurrency-class_7.cpp)]
 
-##  <a name="operator_div_eq"></a>  CComCurrency::operator/=
+##  <a name="operator_div_eq"></a>  CComCurrency::operator /=
 
 この演算子は、`CComCurrency` オブジェクトで除算を実行し、オブジェクトに結果を代入するために使用します。
 
@@ -373,7 +382,7 @@ CComCurrency operator+(const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#61](../../atl/codesnippet/cpp/ccomcurrency-class_9.cpp)]
 
-##  <a name="operator_add_eq"></a>  CComCurrency::operator + =
+##  <a name="operator_add_eq"></a>  CComCurrency::operator +=
 
 この演算子は、`CComCurrency` オブジェクトで加算を実行し、結果を現在のオブジェクトに代入するために使用します。
 
@@ -473,7 +482,7 @@ const CComCurrency& operator= (DECIMAL dSrc);
 
 [!code-cpp[NVC_ATL_Utilities#65](../../atl/codesnippet/cpp/ccomcurrency-class_13.cpp)]
 
-##  <a name="operator_-_eq"></a>  CComCurrency::operator =
+##  <a name="operator_-_eq"></a>  CComCurrency::operator -=
 
 この演算子は、`CComCurrency` オブジェクトで減算を実行し、オブジェクトに結果を代入するために使用します。
 
@@ -494,7 +503,7 @@ const CComCurrency& operator-= (const CComCurrency& cur);
 
 [!code-cpp[NVC_ATL_Utilities#66](../../atl/codesnippet/cpp/ccomcurrency-class_14.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CComCurrency::operator = =
+##  <a name="operator_eq_eq"></a>  CComCurrency::operator ==
 
 この演算子は、2 つの `CComCurrency` オブジェクトが等しいかどうかを比較します。
 
@@ -557,7 +566,7 @@ bool operator>= (const CComCurrency& cur) const;
 
 [!code-cpp[NVC_ATL_Utilities#69](../../atl/codesnippet/cpp/ccomcurrency-class_17.cpp)]
 
-##  <a name="operator_currency"></a>  CComCurrency::operator 通貨
+##  <a name="operator_currency"></a>  CComCurrency::operator CURRENCY
 
 これらの演算子を使用して、キャスト、`CComCurrency`を通貨データ型のオブジェクト。
 
@@ -597,7 +606,8 @@ HRESULT Roundint nDecimals);
 
 ##  <a name="setfraction"></a>  CComCurrency::SetFraction
 
-`CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。
+
+  `CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。
 
 ```
 HRESULT SetFraction(SHORT nFraction);
@@ -618,7 +628,8 @@ HRESULT SetFraction(SHORT nFraction);
 
 ##  <a name="setinteger"></a>  CComCurrency::SetInteger
 
-`CComCurrency` オブジェクトの整数部を設定するには、このメソッドを呼び出します。
+
+  `CComCurrency` オブジェクトの整数部を設定するには、このメソッドを呼び出します。
 
 ```
 HRESULT SetInteger(LONGLONG nInteger);

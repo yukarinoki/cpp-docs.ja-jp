@@ -9,18 +9,18 @@ helpviewer_keywords:
 - messages [MFC], Windows
 - MFC, messages
 ms.assetid: 3f9855e4-9d7d-4b64-8f3f-a19ea3cf79ba
-ms.openlocfilehash: dda989318d6c6915ef8bc4e668fd238e8167de08
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91b7f21d92b2f899895b008b3fab8b541aec9963
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599187"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300103"
 ---
 # <a name="message-maps-mfc"></a>メッセージ マップ (MFC)
 
 参照のこのセクションでは、すべて一覧表示[メッセージ マップ マクロ](../../mfc/reference/message-map-macros-mfc.md)すべて[CWnd](../../mfc/reference/cwnd-class.md)メッセージ マップ エントリと、対応するメンバー関数のプロトタイプ。
 
-|カテゴリ|説明|
+|Category|説明|
 |--------------|-----------------|
 |ON\_コマンド メッセージ ハンドラー|処理`WM_COMMAND`ユーザー メニューの選択項目またはメニュー アクセス キーによって生成されるメッセージ。|
 |[子ウィンドウの通知メッセージ ハンドラー](../../mfc/reference/child-window-notification-message-handlers.md)|子ウィンドウからの通知メッセージを処理します。|
@@ -35,7 +35,8 @@ Microsoft Foundation Class ライブラリには、メッセージベースの�
 
 [!code-cpp[NVC_MFCMessageMaps#16](../../mfc/reference/codesnippet/cpp/message-maps-mfc_1.cpp)]
 
-`ON_COMMAND` マクロは、メニュー、ボタン、およびアクセラレータ キーによって生成されるコマンド メッセージを処理するために使用します。 [マクロ](../../mfc/reference/message-map-macros-mfc.md)は、次のマップを使用できます。
+
+  `ON_COMMAND` マクロは、メニュー、ボタン、およびアクセラレータ キーによって生成されるコマンド メッセージを処理するために使用します。 [マクロ](../../mfc/reference/message-map-macros-mfc.md)は、次のマップを使用できます。
 
 ## <a name="windows-messages"></a>Windows メッセージ
 
@@ -67,4 +68,3 @@ Microsoft Foundation Class ライブラリには、メッセージベースの�
 ## <a name="see-also"></a>関連項目
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-

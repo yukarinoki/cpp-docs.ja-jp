@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CBrush [MFC], FromHandle
 - CBrush [MFC], GetLogBrush
 ms.assetid: e5ef2c62-dd95-4973-9090-f52f605900e1
-ms.openlocfilehash: dbc5e36fdf613f1db2818ac6193709829e3bd001
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 38f9c6953999e07f1a72ed6a9c0661184f075ea0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178708"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303078"
 ---
 # <a name="cbrush-class"></a>CBrush クラス
 
@@ -74,7 +74,7 @@ class CBrush : public CGdiObject
 
 ハッチ、およびパターン、ブラシは、solid できます。
 
-詳細については`CBrush`を参照してください[グラフィック オブジェクト](../../mfc/graphic-objects.md)します。
+`CBrush`の詳細については[グラフィック オブジェクト](../../mfc/graphic-objects.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

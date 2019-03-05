@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWin32Heap class
 ms.assetid: 69176022-ed98-4e3b-96d8-116b0c58ac95
-ms.openlocfilehash: 8ab0d7b8a0eda44adc900884ef5337b22e621806
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c12a58adc846e0db6d7ee23f19984acbcfa861
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508317"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297256"
 ---
 # <a name="cwin32heap-class"></a>CWin32Heap クラス
 
@@ -54,7 +54,7 @@ class CWin32Heap : public IAtlMemMgr
 |[CWin32Heap::Detach](#detach)|既存のヒープからヒープ オブジェクトをデタッチします。|
 |[Cwin32heap::free](#free)|以前は、ヒープから割り当てられたメモリを解放します。|
 |[CWin32Heap::GetSize](#getsize)|ヒープ オブジェクトから割り当てられたメモリ ブロックのサイズを返します。|
-|[Cwin32heap::reallocate](#reallocate)|ヒープ オブジェクトからメモリ ブロックを再割り当てします。|
+|[CWin32Heap::Reallocate](#reallocate)|ヒープ オブジェクトからメモリ ブロックを再割り当てします。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -81,7 +81,7 @@ class CWin32Heap : public IAtlMemMgr
 
 **ヘッダー:** atlmem.h
 
-##  <a name="allocate"></a>  Cwin32heap::allocate
+##  <a name="allocate"></a>  CWin32Heap::Allocate
 
 ヒープ オブジェクトからメモリ ブロックを割り当てます。
 
@@ -157,7 +157,8 @@ CWin32Heap(
 
 [!code-cpp[NVC_ATL_Utilities#92](../../atl/codesnippet/cpp/cwin32heap-class_1.cpp)]
 
-また、コンストラクターに既存のヒープ ハンドルを提供できますが、その場合には新しいオブジェクトはヒープの所有権を引き継ぎません。 `CWin32Heap` オブジェクトが削除されても、元のヒープ ハンドルは依然として有効です。
+また、コンストラクターに既存のヒープ ハンドルを提供できますが、その場合には新しいオブジェクトはヒープの所有権を引き継ぎません。 
+  `CWin32Heap` オブジェクトが削除されても、元のヒープ ハンドルは依然として有効です。
 
 既存のヒープを新しいに添付することもできます。 オブジェクトを使用して[cwin32heap::attach](#attach)します。
 
@@ -243,7 +244,7 @@ HANDLE m_hHeap;
 
 ヒープ オブジェクトを識別するハンドルを格納するために使用する変数です。
 
-##  <a name="reallocate"></a>  Cwin32heap::reallocate
+##  <a name="reallocate"></a>  CWin32Heap::Reallocate
 
 ヒープ オブジェクトからメモリ ブロックを再割り当てします。
 

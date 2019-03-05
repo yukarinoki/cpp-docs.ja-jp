@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheck
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
-ms.openlocfilehash: b1e64e947f798becef32fa4d99f21e61133cc8fc
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b34891c4f46679e43aea36a9b52d6399e020ef71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177837"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273063"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox クラス
 
@@ -51,14 +51,14 @@ class CCheckListBox : public CListBox
 
 |名前|説明|
 |----------|-----------------|
-|[サンプル](#cchecklistbox)|`CCheckListBox` オブジェクトを構築します。|
+|[CCheckListBox::CCheckListBox](#cchecklistbox)|`CCheckListBox` オブジェクトを構築します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
 |[CCheckListBox::Create](#create)|Windows チェックリスト ボックスを作成し、それにアタッチ、`CCheckListBox`オブジェクト。|
-|[Cchecklistbox:](#drawitem)|ビジュアルな部分のオーナー描画リスト ボックスが変更されたときにフレームワークによって呼び出されます。|
+|[CCheckListBox::DrawItem](#drawitem)|ビジュアルな部分のオーナー描画リスト ボックスが変更されたときにフレームワークによって呼び出されます。|
 |[CCheckListBox::Enable](#enable)|有効またはチェックリスト ボックスの項目を無効にします。|
 |[CCheckListBox::GetCheck](#getcheck)|項目のチェック ボックスの状態を取得します。|
 |[CCheckListBox::GetCheckStyle](#getcheckstyle)|コントロールのチェック ボックスのスタイルを取得します。|
@@ -80,7 +80,7 @@ class CCheckListBox : public CListBox
 
 各メッセージ マップ エントリは、次の形式をとります。
 
-**ON\_**_通知_ **(** _id_、 _memberFxn_ **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
 場所`id`通知を送信するコントロールの子ウィンドウ ID を指定および`memberFxn`通知を処理するために記述した親メンバー関数の名前を指定します。
 
@@ -112,7 +112,7 @@ class CCheckListBox : public CListBox
 
 **ヘッダー:** afxwin.h
 
-##  <a name="cchecklistbox"></a>  サンプル
+##  <a name="cchecklistbox"></a>  CCheckListBox::CCheckListBox
 
 `CCheckListBox` オブジェクトを構築します。
 
@@ -182,7 +182,7 @@ virtual BOOL Create(
 
 - WS_TABSTOP にこのコントロールにタブ移動を許可します。
 
-##  <a name="drawitem"></a>  Cchecklistbox:
+##  <a name="drawitem"></a>  CCheckListBox::DrawItem
 
 ビジュアルな部分のオーナー描画のチェックリスト ボックスが変更されたときにフレームワークによって呼び出されます。
 

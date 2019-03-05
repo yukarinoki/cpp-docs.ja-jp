@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandUI interface [MFC]
 ms.assetid: 134afe8d-dcdf-47ca-857a-a166a6b665dd
-ms.openlocfilehash: dd5f79b8ecd65428ce1231777fa6632777859a00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31157ba2445a432af274650011b839fb3df9b3c2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467100"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268175"
 ---
 # <a name="icommandui-interface"></a>ICommandUI インターフェイス
 
@@ -51,7 +51,7 @@ interface class ICommandUI
 
 `ICommandUI` ON_UPDATE_COMMAND_UI ハンドラー内で使用されて、[し、ICommandTarget](../../mfc/reference/icommandtarget-interface.md)-クラスを派生します。 有効になっている、各メニュー項目、メニューが表示されます (選択または数回のクリック)、アプリケーションのユーザーがアクティブ化または無効にします。 各メニュー コマンドのターゲットは、ON_UPDATE_COMMAND_UI ハンドラーを実装することでこの情報を提供します。 アプリケーション内のコマンドのユーザー インターフェイス オブジェクトごとに、[プロパティ] ウィンドウを使用して、メッセージ マップ エントリと各ハンドラーの関数プロトタイプを作成します。
 
-方法の詳細については`ICommandUI`コマンド ルーティングのインターフェイスを使用してを参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。
+方法の詳細については`ICommandUI`コマンド ルーティングのインターフェイスを使用してを参照してください[方法。コマンドの追加フォーム コントロールを Windows へのルーティング](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
@@ -80,7 +80,7 @@ void ContinueRouting();
 
 ## <a name="remarks"></a>Remarks
 
-これは、高度なメンバー関数は FALSE を返す ON_COMMAND_EX ハンドラーと組み合わせて使用する必要があります。 詳細については、テクニカル ノート TN006 を参照してください: メッセージ マップです。
+これは、高度なメンバー関数は FALSE を返す ON_COMMAND_EX ハンドラーと組み合わせて使用する必要があります。 詳細については、テクニカル ノート TN006 を参照してください。メッセージ マップです。
 
 ## <a name="enabled"></a> ICommandUI::Enabled
 

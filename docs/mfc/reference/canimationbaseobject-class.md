@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CAnimationBaseObject [MFC], m_nObjectID
 - CAnimationBaseObject [MFC], m_pParentController
 ms.assetid: 76b25917-940e-4eba-940f-31d270702603
-ms.openlocfilehash: 6527abf5c91cf440bbbe76d0d5fe49ce2c5dbef7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 18b2319ea3c51edf79b6a90095b8363db830d66c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430447"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258919"
 ---
 # <a name="canimationbaseobject-class"></a>CAnimationBaseObject クラス
 
@@ -74,7 +74,7 @@ class CAnimationBaseObject : public CObject;
 |名前|説明|
 |----------|-----------------|
 |[CAnimationBaseObject::CAnimationBaseObject](#canimationbaseobject)|オーバーロードされます。 アニメーション オブジェクトを構築します。|
-|[CAnimationBaseObject:: ~ CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|デストラクターです。 アニメーション オブジェクトが破棄されるときに呼び出されます。|
+|[CAnimationBaseObject::~CAnimationBaseObject](#canimationbaseobject__~canimationbaseobject)|デストラクターです。 アニメーション オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -126,7 +126,7 @@ class CAnimationBaseObject : public CObject;
 
 **ヘッダー:** afxanimationcontroller.h
 
-##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject:: ~ CAnimationBaseObject
+##  <a name="_dtorcanimationbaseobject"></a>  CAnimationBaseObject::~CAnimationBaseObject
 
 デストラクターです。 アニメーション オブジェクトが破棄されるときに呼び出されます。
 
@@ -315,7 +315,7 @@ virtual void GetAnimationVariableList(
 
 ### <a name="remarks"></a>Remarks
 
-これは純粋仮想メソッドを派生クラスでオーバーライドする必要があります。 その種類に応じて、アニメーション オブジェクトには、1 つまたは複数のアニメーション変数が含まれています。 CAnimationPoint では、X および Y 座標をそれぞれの 2 つの変数を含まれています。 基本クラス CAnimationBaseObject、アニメーション変数の一覧で操作を実行するいくつかのジェネリック メソッドの実装: ApplyTransitions、ClearTransitions、EnableValueChangedEvent、EnableIntegerValueChangedEvent します。 これらのメソッドは呼び出す GetAnimationVariableList で、特定のアニメーション オブジェクトに含まれる実際のアニメーション変数が派生クラスに入力されます、リストをループし、必要なアクションを実行します。 カスタム アニメーション オブジェクトを作成する場合は、そのオブジェクトに含まれるすべてのアニメーション変数を lst を追加する必要があります。
+これは純粋仮想メソッドを派生クラスでオーバーライドする必要があります。 その種類に応じて、アニメーション オブジェクトには、1 つまたは複数のアニメーション変数が含まれています。 CAnimationPoint では、X および Y 座標をそれぞれの 2 つの変数を含まれています。 CAnimationBaseObject の基本クラスは、アニメーション変数の一覧で操作を実行するいくつかのジェネリック メソッドを実装します。ApplyTransitions, ClearTransitions, EnableValueChangedEvent, EnableIntegerValueChangedEvent. これらのメソッドは呼び出す GetAnimationVariableList で、特定のアニメーション オブジェクトに含まれる実際のアニメーション変数が派生クラスに入力されます、リストをループし、必要なアクションを実行します。 カスタム アニメーション オブジェクトを作成する場合は、そのオブジェクトに含まれるすべてのアニメーション変数を lst を追加する必要があります。
 
 ##  <a name="getautodestroytransitions"></a>  CAnimationBaseObject::GetAutodestroyTransitions
 

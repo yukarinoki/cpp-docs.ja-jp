@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CGdiObject [MFC], UnrealizeObject
 - CGdiObject [MFC], m_hObject
 ms.assetid: 1cba3ba5-3d49-4e43-8293-209299f2f6f4
-ms.openlocfilehash: 87545d67addb6a1f0931007d8912989968f7a74a
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 1b2b87173bf504455ba314fdd89ffae298cae6a8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177850"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301221"
 ---
 # <a name="cgdiobject-class"></a>CGdiObject クラス
 
@@ -75,7 +75,7 @@ class CGdiObject : public CObject
 |名前|説明|
 |----------|-----------------|
 |[CGdiObject::operator! =](#operator_neq)|2 つの GDI オブジェクトが等しく論理的にないかどうかを決定します。|
-|[CGdiObject::operator = =](#operator_eq_eq)|2 つの GDI オブジェクトが論理的に等しいかどうかを決定します。|
+|[CGdiObject::operator ==](#operator_eq_eq)|2 つの GDI オブジェクトが論理的に等しいかどうかを決定します。|
 |[CGdiObject::operator HGDIOBJ](#operator_hgdiobj)|アタッチされている Windows GDI オブジェクトを識別するハンドルを取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
@@ -88,7 +88,7 @@ class CGdiObject : public CObject
 
 作成することはありません、`CGdiObject`直接します。 代わりに、オブジェクトを作成するその派生クラスのいずれかからなど`CPen`または`CBrush`します。
 
-詳細については`CGdiObject`を参照してください[グラフィック オブジェクト](../../mfc/graphic-objects.md)します。
+`CGdiObject`の詳細については[グラフィック オブジェクト](../../mfc/graphic-objects.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -341,7 +341,7 @@ BOOL operator!=(const CGdiObject& obj) const;
 
 左側にある GDI オブジェクトが右側にある GDI オブジェクトと等しくないかどうかを決定します。
 
-##  <a name="operator_eq_eq"></a>  CGdiObject::operator = =
+##  <a name="operator_eq_eq"></a>  CGdiObject::operator ==
 
 2 つの GDI オブジェクトが論理的に等しいかどうかを決定します。
 

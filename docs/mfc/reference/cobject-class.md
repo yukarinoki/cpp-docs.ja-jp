@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CObject [MFC], IsSerializable
 - CObject [MFC], Serialize
 ms.assetid: 95e9acd3-d9eb-4ac0-b52b-ca4a501a7a3a
-ms.openlocfilehash: eb0580f6fef39df29d66e15cfd051a0460cb8d56
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 515c4e90ee6ab77a6c7c1ae108393ea1aafb7c17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50584016"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304068"
 ---
 # <a name="cobject-class"></a>CObject クラス
 
@@ -43,16 +43,16 @@ class AFX_NOVTABLE CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CObject::CObject](#cobject)|既定のコンストラクター|
+|[CObject::CObject](#cobject)|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[Cobject::assertvalid](#assertvalid)|このオブジェクトの整合性を検証します。|
+|[CObject::AssertValid](#assertvalid)|このオブジェクトの整合性を検証します。|
 |[CObject::Dump](#dump)|このオブジェクトの診断ダンプを生成します。|
 |[CObject::GetRuntimeClass](#getruntimeclass)|返します、`CRuntimeClass`このオブジェクトのクラスに対応する構造体。|
-|[使うため](#iskindof)|特定のクラスをこのオブジェクトのリレーションシップをテストします。|
+|[CObject::IsKindOf](#iskindof)|特定のクラスをこのオブジェクトのリレーションシップをテストします。|
 |[CObject::IsSerializable](#isserializable)|このオブジェクトをシリアル化できるかどうかを確認するかをテストします。|
 |[Cobject::serialize](#serialize)|読み込みまたはアーカイブをオブジェクトを格納します。|
 
@@ -93,7 +93,7 @@ class AFX_NOVTABLE CObject
 
 **ヘッダー:** afx.h
 
-##  <a name="assertvalid"></a>  Cobject::assertvalid
+##  <a name="assertvalid"></a>  CObject::AssertValid
 
 このオブジェクトの整合性を検証します。
 
@@ -217,7 +217,7 @@ virtual CRuntimeClass* GetRuntimeClass() const;
 
 [!code-cpp[NVC_MFCCObjectSample#10](../../mfc/codesnippet/cpp/cobject-class_4.cpp)]
 
-##  <a name="iskindof"></a>  使うため
+##  <a name="iskindof"></a>  CObject::IsKindOf
 
 特定のクラスをこのオブジェクトのリレーションシップをテストします。
 
@@ -366,7 +366,7 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 
 `Serialize` によって呼び出される[CArchive::ReadObject](../../mfc/reference/carchive-class.md#readobject)と[CArchive::WriteObject](../../mfc/reference/carchive-class.md#writeobject)します。 これらの関数が関連付けられている、`CArchive`挿入演算子 ( **< \<**) と抽出演算子 ( **>>**)。
 
-シリアル化の例は、記事を参照してください。[シリアル化: オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
+シリアル化の例は、記事を参照してください。[シリアル化します。オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
 
 ### <a name="example"></a>例
 
@@ -377,4 +377,3 @@ A`CArchive`またはからにシリアル化するオブジェクト。
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)
-

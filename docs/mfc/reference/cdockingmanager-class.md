@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: e1cc4a4a0d6841523aaafcc1865173ba5402948c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519985"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260388"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager クラス
 
@@ -432,7 +432,7 @@ virtual BOOL AdjustRectToClientArea(
 *rectResult*<br/>
 [in]参照を`CRect`オブジェクト
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]配置、`CRect`オブジェクト
 
 ### <a name="return-value"></a>戻り値
@@ -503,7 +503,7 @@ void BringBarsToTop(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]他のウィンドウの一番上に置かれるドッキング バーの配置です。
 
 *bExcludeDockedBars*<br/>
@@ -660,7 +660,7 @@ void DockPane(
 *pBar*<br/>
 [in]バーへのポインターにドッキングするウィンドウ。
 
-*辺*<br/>
+*nDockBarID*<br/>
 [in]ドッキングするのには、バーの id。
 
 *lpRect*<br/>
@@ -787,7 +787,7 @@ virtual CDockSite* FindDockSite(
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]バーの配置ウィンドウ。
 
 *bOuter*<br/>
@@ -1227,7 +1227,7 @@ void LockUpdate(BOOL bLock);
 
 ### <a name="parameters"></a>パラメーター
 
-*ブロック*<br/>
+*bLock*<br/>
 [in]TRUE の場合は、ウィンドウがロックされています。FALSE それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
@@ -1387,7 +1387,7 @@ virtual CBasePane* PaneFromPoint(
 *bCheckVisibility*<br/>
 [in]表示ペインにのみを確認する場合は TRUEそれ以外の場合、FALSE です。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [out]指定した時点で、ウィンドウが見つかった場合、このパラメーターには、指定したポイントに最も近いいたペインの横にはが含まれています。 詳細については、「解説」を参照してください。
 
 *pBarToIgnore*<br/>
@@ -1640,7 +1640,7 @@ static void SetDockingMode(
 新しいドッキング モードを指定します。 詳細については、「解説」を参照してください。
 
 *テーマ*<br/>
-スマート ドッキング マーカーに使用されるテーマを指定します。 次の列挙値のいずれか: AFX_SDT_DEFAULT、AFX_SDT_VS2005、AFX_SDT_VS2008 します。
+スマート ドッキング マーカーに使用されるテーマを指定します。 次の列挙値のいずれかを指定できます。AFX_SDT_DEFAULT、AFX_SDT_VS2005、AFX_SDT_VS2008 します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1760,7 +1760,7 @@ static AFX_SMARTDOCK_THEME __stdcall GetSmartDockingTheme();
 
 ### <a name="return-value"></a>戻り値
 
-次の列挙値のいずれかを返します: AFX_SDT_DEFAULT、AFX_SDT_VS2005、AFX_SDT_VS2008 します。
+次の列挙値のいずれかが返されます。AFX_SDT_DEFAULT、AFX_SDT_VS2005、AFX_SDT_VS2008 します。
 
 ### <a name="remarks"></a>Remarks
 

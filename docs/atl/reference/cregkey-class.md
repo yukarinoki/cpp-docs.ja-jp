@@ -42,12 +42,12 @@ helpviewer_keywords:
 - registry, writing to
 - registry, deleting keys
 ms.assetid: 3afce82b-ba2c-4c1a-8404-dc969e1af74b
-ms.openlocfilehash: cf2f97c1c3b389d0ee2b3d4bcdd2d9da2dbb3c8d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 56a3289d5546db21c42d22b5e8544913bdaa78cf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694856"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283658"
 ---
 # <a name="cregkey-class"></a>CRegKey クラス
 
@@ -81,11 +81,11 @@ class CRegKey
 |[CRegKey::DeleteSubKey](#deletesubkey)|指定したキーをレジストリから削除するには、このメソッドを呼び出します。|
 |[CRegKey::DeleteValue](#deletevalue)|値フィールドを削除するには、このメソッドを呼び出す[m_hKey](#m_hkey)します。|
 |[CRegKey::Detach](#detach)|デタッチするには、このメソッドを呼び出す、 [m_hKey](#m_hkey)からメンバーのハンドル、`CRegKey`オブジェクトし、設定`m_hKey`を NULL にします。|
-|[して](#enumkey)|開いているレジストリ キーのサブキーの列挙には、このメソッドを呼び出します。|
+|[CRegKey::EnumKey](#enumkey)|開いているレジストリ キーのサブキーの列挙には、このメソッドを呼び出します。|
 |[CRegKey::Flush](#flush)|すべての開いているレジストリ キーの属性をレジストリに書き込むには、このメソッドを呼び出します。|
 |[CRegKey::GetKeySecurity](#getkeysecurity)|開いているレジストリ キーを保護するセキュリティ記述子のコピーを取得するには、このメソッドを呼び出します。|
 |[CRegKey::NotifyChangeKeyValue](#notifychangekeyvalue)|このメソッドでは、属性またはレジストリ キーの内容の変更について、呼び出し元に通知します。|
-|[Cregkey::open](#open)|指定したキーを開き、設定するには、このメソッドを呼び出す[m_hKey](#m_hkey)にこのキーのハンドル。|
+|[CRegKey::Open](#open)|指定したキーを開き、設定するには、このメソッドを呼び出す[m_hKey](#m_hkey)にこのキーのハンドル。|
 |[CRegKey::QueryBinaryValue](#querybinaryvalue)|指定された値の名前のバイナリ データを取得するには、このメソッドを呼び出します。|
 |[CRegKey::QueryDWORDValue](#querydwordvalue)|DWORD データ値を指定した名前を取得するには、このメソッドを呼び出します。|
 |[CRegKey::QueryGUIDValue](#queryguidvalue)|GUID データ値を指定した名前を取得するには、このメソッドを呼び出します。|
@@ -296,7 +296,7 @@ HKEY Detach() throw();
 
 関連付けられている、HKEY、`CRegKey`オブジェクト。
 
-##  <a name="enumkey"></a>  して
+##  <a name="enumkey"></a>  CRegKey::EnumKey
 
 開いているレジストリ キーのサブキーの列挙には、このメソッドを呼び出します。
 
@@ -316,7 +316,7 @@ LONG EnumKey(
 *pszName*<br/>
 終端の null 文字を含む、サブキーの名前を受け取るバッファーへのポインター。 バッファーに完全なキーの階層ではないサブキーの名前のみがコピーされます。
 
-*戻る*<br/>
+*pnNameLength*<br/>
 指定したバッファーの Tchar で、サイズを指定する変数へのポインター、 *pszName*パラメーター。 このサイズは、終端の null 文字を含める必要があります。 メソッドが返す場合は、変数が指す*戻る*バッファーに格納されている文字の数が含まれています。 返されるカウントでは、終端の null 文字は含まれません。
 
 *pftLastWriteTime*<br/>
@@ -438,7 +438,7 @@ LONG NotifyChangeKeyValue(
 
 詳細およびサンプル プログラムでは、次を参照してください。 [RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue)します。
 
-##  <a name="open"></a>  Cregkey::open
+##  <a name="open"></a>  CRegKey::Open
 
 指定したキーを開き、設定するには、このメソッドを呼び出す[m_hKey](#m_hkey)にこのキーのハンドル。
 

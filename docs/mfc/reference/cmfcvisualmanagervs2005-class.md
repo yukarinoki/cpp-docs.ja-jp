@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCVisualManagerVS2005 [MFC], OnFillMiniFrameCaption
 - CMFCVisualManagerVS2005 [MFC], OnUpdateSystemColors
 ms.assetid: ea39b9ae-327e-4a51-bce7-dc84c78f005b
-ms.openlocfilehash: 0b89757380aa50af5092979c3824d3e15f29ca2a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 212ef69350fbc85e6e0cc76bd505b2a895e75c8e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526812"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279966"
 ---
 # <a name="cmfcvisualmanagervs2005-class"></a>CMFCVisualManagerVS2005 クラス
 
@@ -136,7 +136,7 @@ virtual COLORREF GetPropertyGridGroupColor(CMFCPropertyGridCtrl* pPropList);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pPropList*<br/>
+[in] *pPropList*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -164,10 +164,10 @@ virtual void GetTabFrameColors(
 [in]*clrBlack*<br/>
 [in]*clrHighlight*<br/>
 [in]*clrFace*<br/>
-[in]*clrDarkShadow*<br/>
+[in] *clrDarkShadow*<br/>
 [in]*clrLight*<br/>
-[in]*pbrFace*<br/>
-[in]*pbrBlack*<br/>
+[in] *pbrFace*<br/>
+[in] *pbrBlack*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -195,7 +195,7 @@ virtual void OnDrawAutoHideButtonBorder(
 
 [in]*pDC*<br/>
 [in]*rectBounds*<br/>
-[in]*rectBorderSize*<br/>
+[in] *rectBorderSize*<br/>
 [in]*pButton*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -218,10 +218,10 @@ virtual void OnDrawCaptionButton(
 [in]*pDC*<br/>
 [in]*pButton*<br/>
 [in]*描画*<br/>
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 [in]*bMaximized*<br/>
 [in]*bDisabled*<br/>
-[in]*nImageID*<br/>
+[in] *nImageID*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -241,7 +241,7 @@ virtual COLORREF OnDrawPaneCaption(
 [in]*pDC*<br/>
 [in]*pBar*<br/>
 [in]*描画*<br/>
-[in]*rectCaption*<br/>
+[in] *rectCaption*<br/>
 [in]*rectButtons*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -263,7 +263,7 @@ virtual void OnDrawSeparator(
 [in]*pDC*<br/>
 [in]*pBar*<br/>
 [in]*rect*<br/>
-[in]*bIsHoriz*<br/>
+[in] *bIsHoriz*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -281,9 +281,9 @@ virtual void OnDrawTab(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectTab*<br/>
+[in] *rectTab*<br/>
 [in]*iTab*<br/>
-[in]*bIsActive*<br/>
+[in] *bIsActive*<br/>
 [in]*pTabWnd*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -369,7 +369,7 @@ virtual COLORREF OnFillMiniFrameCaption(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*rectCaption*<br/>
+[in] *rectCaption*<br/>
 [in]*pFrameWnd*<br/>
 [in]*描画*<br/>
 

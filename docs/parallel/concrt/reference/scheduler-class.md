@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
-ms.openlocfilehash: 1b2b4de2a0aa844f9450af9d853b11ea6f485274
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638270"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57287903"
 ---
 # <a name="scheduler-class"></a>Scheduler クラス
 
@@ -51,7 +51,7 @@ class Scheduler;
 
 |名前|説明|
 |----------|-----------------|
-|[添付](#attach)|呼び出し元のコンテキストにスケジューラをアタッチします。 このメソッドから制御が戻た後は、呼び出し元のコンテキストは、スケジューラによって管理され、スケジューラは、現在のスケジューラになります。|
+|[Attach](#attach)|呼び出し元のコンテキストにスケジューラをアタッチします。 このメソッドから制御が戻た後は、呼び出し元のコンテキストは、スケジューラによって管理され、スケジューラは、現在のスケジューラになります。|
 |[作成します。](#create)|動作が説明されている新しいスケジューラを作成、`_Policy`パラメーターは、スケジューラに最初の参照を配置し、ポインターを返します。|
 |[CreateScheduleGroup](#createschedulegroup)|オーバーロードされます。 スケジューラ内で新しいスケジュール グループを作成します。 パラメーターを受け取るバージョン`_Placement`にそのパラメーターで指定された場所で実行に偏っていますが、新しく作成したスケジュール グループ内のタスクが原因です。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|スケジューラの仮想プロセッサの現在の数を返します。|
@@ -109,7 +109,7 @@ static Scheduler* __cdecl Create(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポリシー (_p)*<br/>
+*_Policy*<br/>
 スケジューラ ポリシーを新しく作成されたスケジューラの動作について説明します。
 
 ### <a name="return-value"></a>戻り値
@@ -234,7 +234,7 @@ virtual void RegisterShutdownEvent(HANDLE _Event) = 0;
 
 ### <a name="parameters"></a>パラメーター
 
-*(_E)*<br/>
+*_Event*<br/>
 スケジューラがシャット ダウンし、それ自体を破棄するときに、ランタイムによって通知される Windows イベント オブジェクトへのハンドル。
 
 ##  <a name="release"></a> リリース
@@ -307,7 +307,7 @@ virtual void ScheduleTask(
 *_Proc*<br/>
 軽量タスクの本体を実行するために実行する関数へのポインター。
 
-*(_D)*<br/>
+*_Data*<br/>
 タスクの本体にパラメーターとして渡されるデータへの void ポインター。
 
 *(_P)*<br/>
@@ -323,7 +323,7 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 
 ### <a name="parameters"></a>パラメーター
 
-*ポリシー (_p)*<br/>
+*_Policy*<br/>
 既定のスケジューラ ポリシーとして設定するポリシー。
 
 ### <a name="remarks"></a>Remarks
@@ -336,4 +336,3 @@ static void __cdecl SetDefaultSchedulerPolicy(const SchedulerPolicy& _Policy);
 [Scheduler クラス](scheduler-class.md)<br/>
 [PolicyElementKey](concurrency-namespace-enums.md)<br/>
 [タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)
-

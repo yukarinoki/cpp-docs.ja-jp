@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: e3abda8326d6f89939b9aa41cf2282496d5974d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7fc1215fb1b286423d6c50337bf5d94cac3298e2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530534"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273631"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider クラス
 
@@ -176,7 +176,8 @@ class CPaneDivider : public CBasePane
 
 ## <a name="example"></a>例
 
-`CWorkspaceBar` オブジェクトから `CPaneDivider` オブジェクトを取得する方法を次の例に示します。 このコード スニペットの一部、 [MDI タブのデモ サンプル](../../visual-cpp-samples.md)します。
+
+  `CWorkspaceBar` オブジェクトから `CPaneDivider` オブジェクトを取得する方法を次の例に示します。 このコード スニペットの一部、 [MDI タブのデモ サンプル](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]
 
@@ -242,9 +243,9 @@ virtual BOOL AddPaneContainer(
 ### <a name="parameters"></a>パラメーター
 
 [in]*barContainerManager*<br/>
-[in]*bOuterEdge*<br/>
+[in] *bOuterEdge*<br/>
 [in]*pTargetBar*<br/>
-[in]*場合*<br/>
+[in] *dwAlignment*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -280,7 +281,7 @@ virtual void CalcExpectedDockedRect(
 [in]*pWndToDock*<br/>
 [in]*ptMouse*<br/>
 [in]*rectResult*<br/>
-[in]*bDrawTab*<br/>
+[in] *bDrawTab*<br/>
 [in]*ppTargetBar*<br/>
 
 ### <a name="remarks"></a>Remarks
@@ -296,7 +297,7 @@ virtual CSize CalcFixedLayout(
 ### <a name="parameters"></a>パラメーター
 
 [in]*bStretch*<br/>
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -346,9 +347,9 @@ virtual BOOL CreateEx(
 ### <a name="parameters"></a>パラメーター
 
 [in]*dwStyleEx*<br/>
-[in]*dwStyle*<br/>
+[in] *dwStyle*<br/>
 [in]*rect*<br/>
-[in]*pParentWnd*<br/>
+[in] *pParentWnd*<br/>
 [in]*nID*<br/>
 [in]*pContext*<br/>
 
@@ -387,7 +388,7 @@ CPaneContainer* FindPaneContainer(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pBar*<br/>
-[in]*bLeftBar*<br/>
+[in] *bLeftBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -518,9 +519,9 @@ virtual BOOL InsertPane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pBarToInsert*<br/>
+[in] *pBarToInsert*<br/>
 [in]*pTargetBar*<br/>
-[in]*場合*<br/>
+[in] *dwAlignment*<br/>
 [in]*lpRect*<br/>
 
 ### <a name="return-value"></a>戻り値
@@ -676,7 +677,7 @@ virtual void RepositionPanes(
 ### <a name="parameters"></a>パラメーター
 
 [in]*rectNew*<br/>
-[in]*hdwp*<br/>
+[in] *hdwp*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -700,7 +701,7 @@ void ShowWindow(int nCmdShow);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nCmdShow*<br/>
+[in] *nCmdShow*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -727,7 +728,7 @@ void StoreRecentTabRelatedInfo(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDockingBar*<br/>
-[in]*pTabbedBar*<br/>
+[in] *pTabbedBar*<br/>
 
 ### <a name="remarks"></a>Remarks
 

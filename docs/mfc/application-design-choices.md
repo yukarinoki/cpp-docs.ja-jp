@@ -11,12 +11,12 @@ helpviewer_keywords:
 - server applications [MFC], vs. client applications on Internet
 - client applications [MFC], vs. server applications on Internet
 ms.assetid: 9b96172c-b4d4-4c69-bfb2-226ce0de6d08
-ms.openlocfilehash: b9b794070d1c4ff4f05f33895a7af5532a524ad1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cdb294e4ab808a7e4cbcec457f6e744eff9f12cb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50602931"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302814"
 ---
 # <a name="application-design-choices"></a>アプリケーションのデザイン上の検討事項
 
@@ -52,7 +52,7 @@ ms.locfileid: "50602931"
 
 アプリケーションは、クライアント コンピューターまたはサーバー コンピューター上で実行できます。 アプリケーションは、可能性がありますも、サーバーに格納されていると、ダウンロード、インターネット経由でし実行するクライアント コンピューター。 MFC WinInet クラスは、ファイルをダウンロードするクライアント アプリケーションのために使用されます。 MFC と非同期モニカー クラスは、ファイルをダウンロードし、コントロールのプロパティに使用されます。 ActiveX コントロールとアクティブなドキュメントのクラスは、クライアント アプリケーションと、クライアントで実行するサーバーからダウンロードされるアプリケーションに使用されます。
 
-##  <a name="_core_the_web_page"></a> Web ページ: HTML、アクティブなドキュメントは、ActiveX コントロール
+##  <a name="_core_the_web_page"></a> Web ページ:HTML、アクティブなドキュメントは、ActiveX コントロール
 
 Microsoft では、Web ページのコンテンツを提供するためのいくつかの方法を提供します。 標準の HTML または HTML web ページを使用できる ActiveX コントロールなどの動的なコンテンツを提供する、オブジェクト タグなどの拡張機能。
 
@@ -83,7 +83,7 @@ ActiveX コントロールは、インターネット サイト上のドキュ�
 |このプロトコルを使用します。|これらの条件下で|これらのクラスを使用します。|
 |-----------------------|----------------------------|-------------------------|
 |[インターネットの非同期モニカー](../mfc/asynchronous-monikers-on-the-internet.md)|COM、ActiveX コントロールを使用して非同期転送およびインターネット プロトコル。|[CAsyncMonikerFile](../mfc/reference/casyncmonikerfile-class.md)、 [CDataPathProperty](../mfc/reference/cdatapathproperty-class.md)|
-|[Wininet の基礎](../mfc/win32-internet-extensions-wininet.md)|HTTP、FTP、および gopher インターネット プロトコル。 データは同期的または非同期的に転送できるし、システム全体のキャッシュに格納されます。|[CInternetSession](../mfc/reference/cinternetsession-class.md)、 [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)、 [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)、その他。|
+|[WinInet](../mfc/win32-internet-extensions-wininet.md)|HTTP、FTP、および gopher インターネット プロトコル。 データは同期的または非同期的に転送できるし、システム全体のキャッシュに格納されます。|[CInternetSession](../mfc/reference/cinternetsession-class.md)、 [CFtpFileFind](../mfc/reference/cftpfilefind-class.md)、 [CGopherFileFind](../mfc/reference/cgopherfilefind-class.md)、その他。|
 |[WinSock](../mfc/windows-sockets-in-mfc.md)|効率を最大化および制御します。 ソケットおよび TCP/IP プロトコルを理解が必要です。|[CSocket](../mfc/reference/csocket-class.md)、 [CAsyncSocket](../mfc/reference/casyncsocket-class.md)|
 
 ## <a name="see-also"></a>関連項目
@@ -92,4 +92,3 @@ ActiveX コントロールは、インターネット サイト上のドキュ�
 [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)<br/>
 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)<br/>
 [インターネット上の非同期モニカー](../mfc/asynchronous-monikers-on-the-internet.md)
-

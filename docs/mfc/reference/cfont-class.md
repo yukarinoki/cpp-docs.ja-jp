@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CFont [MFC], FromHandle
 - CFont [MFC], GetLogFont
 ms.assetid: 3fad6bfe-d6ce-4ab9-967a-5ce0aa102800
-ms.openlocfilehash: f925940f0813e1912be9f2382b676e80db8240c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60a717136f69b29df48dd8f449ddaffe5c15ccbf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607898"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271867"
 ---
 # <a name="cfont-class"></a>CFont クラス
 
@@ -122,7 +122,7 @@ BOOL CreateFont(
 
 ### <a name="parameters"></a>パラメーター
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 フォントの高さを (論理単位) で指定します。 参照してください、`lfHeight`のメンバー、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)説明については、Windows SDK で構造体。 絶対値*パラメーター nHeight*は変換後、16,384 デバイス単位を超えない必要があります。 すべての高さの比較は、すべてのフォントが要求されたサイズを超える場合も、フォント マッパーは要求されたサイズを超えていない最大のフォントまたは最小のフォントを探します。
 
 *nWidth*<br/>
@@ -362,4 +362,3 @@ operator HFONT() const;
 [MFC サンプル HIERSVR](../../visual-cpp-samples.md)<br/>
 [CGdiObject クラス](../../mfc/reference/cgdiobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

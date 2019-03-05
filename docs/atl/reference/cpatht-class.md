@@ -49,12 +49,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: cf845d04c008e83d0e9851718c995036bc810b55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449349"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273024"
 ---
 # <a name="cpatht-class"></a>CPathT クラス
 
@@ -284,7 +284,7 @@ CPathT<StringType> CommonPrefix(PCXSTR pszOther);
 
 ### <a name="remarks"></a>Remarks
 
-プレフィックスは、これらの型のいずれかの:"c:\\\\「,」です","..","..\\\\". 詳細については、次を参照してください。 [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)します。
+プレフィックスでは、これらの型の 1 つです。"C:\\\\「,」.「,」..「,」..\\\\". 詳細については、次を参照してください。 [PathCommonPrefix](/windows/desktop/api/shlwapi/nf-shlwapi-pathcommonprefixa)します。
 
 ##  <a name="compactpath"></a>  CPathT::CompactPath
 
@@ -471,7 +471,7 @@ BOOL IsPrefix(PCXSTR pszPrefix) const;
 ### <a name="parameters"></a>パラメーター
 
 *pszPrefix*<br/>
-検索対象のプレフィックス。 プレフィックスは、これらの型のいずれかの:"c:\\\\「,」です","..","..\\\\".
+検索対象のプレフィックス。 プレフィックスでは、これらの型の 1 つです。"C:\\\\「,」.「,」..「,」..\\\\".
 
 ### <a name="return-value"></a>戻り値
 
@@ -631,7 +631,7 @@ BOOL MatchSpec(PCXSTR pszSpec) const;
 
 詳細については、次を参照してください。 [PathMatchSpec](/windows/desktop/api/shlwapi/nf-shlwapi-pathmatchspeca)します。
 
-##  <a name="operator_add_eq"></a>  CPathT::operator + =
+##  <a name="operator_add_eq"></a>  CPathT::operator +=
 
 この演算子は、パスに文字列を追加します。
 

@@ -6,29 +6,29 @@ f1_keywords:
 helpviewer_keywords:
 - MFC ActiveX Control Wizard, control settings
 ms.assetid: 2ccaa4fc-0d52-413e-afa3-ecd474c3f6f0
-ms.openlocfilehash: 3eedf24fa4b0bb527b374dbc9f538408f20de953
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34cc49fff88399a6c3cf5f7db71410c88e5c9bab
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548240"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289638"
 ---
 # <a name="control-settings-mfc-activex-control-wizard"></a>[コントロールの設定] (MFC ActiveX コントロール ウィザード)
 
 ウィザードのこのページを使用して、動作を制御する方法を指定します。 たとえば、標準の Windows コントロールの種類のコントロールの基本、動作と外観を最適化、またはコントロールが他のコントロールのコンテナーとして機能することを示します。
 
-このページで、コントロールの効率を最大化のオプションを選択する方法の詳細については、次を参照してください。 [MFC ActiveX コントロール: 最適化](../../mfc/mfc-activex-controls-optimization.md)します。
+このページで、コントロールの効率を最大化のオプションを選択する方法の詳細については、次を参照してください。 [MFC ActiveX コントロール。最適化](../../mfc/mfc-activex-controls-optimization.md)します。
 
 ## <a name="uielement-list"></a>UIElement の一覧
 
 - **コントロールに基づく作成します。**
 
-   この一覧で、コントロールを継承元となるコントロールの種類を選択できます。 リストが使用可能なコントロール クラスのサブセット`CreateWindowEx`と commctrl.h で指定されている一般的なコントロールを追加します。 選択範囲内のコントロールのスタイルを決定する、`PreCreateWindow`で機能、 *ProjName*Ctrl.cpp ファイル。 詳細については、次を参照してください。 [MFC ActiveX コントロール: Windows コントロールをサブクラス化](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)します。
+   この一覧で、コントロールを継承元となるコントロールの種類を選択できます。 リストが使用可能なコントロール クラスのサブセット`CreateWindowEx`と commctrl.h で指定されている一般的なコントロールを追加します。 選択範囲内のコントロールのスタイルを決定する、`PreCreateWindow`で機能、 *ProjName*Ctrl.cpp ファイル。 詳細については、次を参照してください。 [MFC ActiveX コントロール。Windows コントロールをサブクラス化](../../mfc/mfc-activex-controls-subclassing-a-windows-control.md)します。
 
    |コントロール|説明|
    |-------------|-----------------|
    |**ボタン**|Windows ボタン コントロール|
-   |**コンボ ボックス**|Windows コンボ ボックス コントロール|
+   |**COMBOBOX**|Windows コンボ ボックス コントロール|
    |**編集します。**|Windows のエディット ボックス コントロール|
    |**リスト ボックス**|Windows のリスト ボックス コントロール|
    |**スクロール バー**|Windows のスクロール バー コントロール|
@@ -98,4 +98,3 @@ ms.locfileid: "50548240"
 [MFC ActiveX コントロール ウィザード](../../mfc/reference/mfc-activex-control-wizard.md)<br/>
 [[アプリケーションの設定] (MFC ActiveX コントロール ウィザード)](../../mfc/reference/application-settings-mfc-activex-control-wizard.md)<br/>
 [[コントロール名] (MFC ActiveX コントロール ウィザード)](../../mfc/reference/control-names-mfc-activex-control-wizard.md)
-

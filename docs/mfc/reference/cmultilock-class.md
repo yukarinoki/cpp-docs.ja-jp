@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMultiLock [MFC], Lock
 - CMultiLock [MFC], Unlock
 ms.assetid: c5b7c78b-1f81-4387-b7dd-2c813c5b6b61
-ms.openlocfilehash: 27c0eb396ac1384b691f51bf7089f6820157cf8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 107ed227c5515cbf2fcb08e957a64a4a17d8287a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613422"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288667"
 ---
 # <a name="cmultilock-class"></a>CMultiLock クラス
 
@@ -57,7 +57,7 @@ class CMultiLock
 
 `CMultiLock` オブジェクトは、スレッドの数が多いが最も役に立つ`CEvent`オブジェクトに対応できます。 すべてを含む配列を作成、`CEvent`ポインター、および呼び出し`Lock`します。 これにより、イベントのいずれかが通知されるまで待機するスレッド。
 
-使用する方法の詳細についての`CMultiLock`オブジェクトは、記事を参照して[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+使用する方法の詳細についての`CMultiLock`オブジェクトは、記事をご覧ください。[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -191,4 +191,3 @@ BOOL Unlock(
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)
-

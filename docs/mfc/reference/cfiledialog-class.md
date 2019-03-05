@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CFileDialog [MFC], OnTypeChange
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
-ms.openlocfilehash: 87f99b4f037c8cc881b33e1d07b4f07596ee9a1b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: aaa05fc3e97fe690e8d6a0cd9eba826c482b410d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694544"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262104"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog クラス
 
@@ -232,7 +232,7 @@ class CFileDialog : public CCommonDialog
 
 |名前|説明|
 |----------|-----------------|
-|[:M_ofn](#m_ofn)|Windows`OPENFILENAME`構造体。 基本的なファイル ダイアログ ボックスのパラメーターへのアクセスを提供します。|
+|[CFileDialog::m_ofn](#m_ofn)|Windows`OPENFILENAME`構造体。 基本的なファイル ダイアログ ボックスのパラメーターへのアクセスを提供します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -251,7 +251,7 @@ class CFileDialog : public CCommonDialog
 
 - [CDialog::OnSetFont](../../mfc/reference/cdialog-class.md#onsetfont)
 
-Windows メッセージ、`CFileDialog`クラスは、使用しているどのオペレーティング システムによって異なります。 たとえば、Windows XP はサポートされません[CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel)と[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)の`CFileDialog`クラス。 ただし、Windows Vista およびそれ以降のオペレーティング システムはサポートしています。 詳細については、生成されるさまざまなメッセージと受信される順序は、次を参照してください。 [CFileDialog サンプル: ログ イベントの順序](../../visual-cpp-samples.md)します。
+Windows メッセージ、`CFileDialog`クラスは、使用しているどのオペレーティング システムによって異なります。 たとえば、Windows XP はサポートされません[CDialog::OnCancel](../../mfc/reference/cdialog-class.md#oncancel)と[CDialog::OnOK](../../mfc/reference/cdialog-class.md#onok)の`CFileDialog`クラス。 ただし、Windows Vista およびそれ以降のオペレーティング システムはサポートしています。 詳細については、生成されるさまざまなメッセージと受信される順序は、次を参照してください。 [CFileDialog サンプル。イベントの順序のログ記録](../../visual-cpp-samples.md)します。
 
 使用する、`CFileDialog`オブジェクトは、まずを使用して、オブジェクトを作成、`CFileDialog`コンス トラクター。 ダイアログ ボックスが構築した後は、設定または任意の値を変更、 [::m_ofn](#m_ofn)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_ofn`型の構造は、`OPENFILENAME`します。 詳細については、次を参照してください。、 [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK の構造体。
 
@@ -546,7 +546,7 @@ explicit CFileDialog(
 *lpszDefExt*<br/>
 [in]既定のファイル名拡張子。 ユーザーにはファイル名 ボックスでの既知の拡張子 (ユーザーのコンピューターでアソシエーションを持つもの) が含まれていない場合、拡張機能が指定された*lpszDefExt*ファイル名に自動的に追加されます。 このパラメーターが NULL の場合は、拡張機能は追加されません。
 
-*場合*<br/>
+*lpszFileName*<br/>
 [in]ファイル名ボックスに表示される初期ファイル名。 NULL の場合、初期ファイル名は表示されません。
 
 *dwFlags*<br/>
@@ -558,7 +558,7 @@ explicit CFileDialog(
 *pParentWnd*<br/>
 [in]ファイル ダイアログ ボックスの親またはオーナー ウィンドウへのポインター。
 
-*ない dwSize*<br/>
+*dwSize*<br/>
 [in]サイズ、`OPENFILENAME`構造体。 この値は、オペレーティング システムのバージョンによって異なります。 MFC では、作成するのに ダイアログ ボックスの適切な種類は、このパラメーターを使用します。 既定のサイズが 0 の場合、MFC コードが適切なダイアログ ボックスのサイズを決定するプログラムを実行するオペレーティング システムのバージョンに基づいています。
 
 *bVistaStyle*<br/>
@@ -1056,7 +1056,7 @@ BOOL IsPickFoldersMode() const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="m_ofn"></a>  :M_ofn
+##  <a name="m_ofn"></a>  CFileDialog::m_ofn
 
 `m_ofn` 型の構造体は、`OPENFILENAME`します。 この構造内のデータの現在の状態を表す、`CFileDialog`します。
 
@@ -1300,7 +1300,7 @@ virtual UINT OnShareViolation(LPCTSTR lpszPathName);
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*<br/>
+*lpszPathName*<br/>
 共有違反が発生したファイルのパス。
 
 ### <a name="return-value"></a>戻り値
@@ -1642,4 +1642,3 @@ Windows Vista 以降では、`m_ofn`データ構造が自動的に更新され�
 
 [CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 450699d001ee7246742fe23d9bf89d03c2d61cb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50600513"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302105"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd クラス
 
@@ -456,7 +456,7 @@ virtual void DeleteRow(int rowDelete);
 
 ### <a name="parameters"></a>パラメーター
 
-*行を削除します。*<br/>
+*rowDelete*<br/>
 削除する行を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -487,7 +487,7 @@ virtual void DeleteView(
 
 このメンバー関数は (つまり、分割ウィンドウでは、SPLS_DYNAMIC_SPLIT スタイルがある) 場合は、動的分割ウィンドウのロジックを実装するためにフレームワークによって呼び出されます。 これはカスタマイズ可能な仮想関数と共に[CreateView](#createview)より高度な動的分割ウィンドウを実装します。
 
-##  <a name="dokeyboardsplit"></a>  あると
+##  <a name="dokeyboardsplit"></a>  CSplitterWnd::DoKeyboardSplit
 
 キーボード分割コマンドでは、通常は「ウィンドウの分割します。」を実行します。
 
@@ -807,7 +807,7 @@ virtual void OnDrawSplitter(
 *pDC*<br/>
 描画するためのデバイス コンテキストへのポインター。 場合*pDC*が null の場合、 [CWnd::RedrawWindow](../../mfc/reference/cwnd-class.md#redrawwindow)と呼びますフレームワークおよびありません分割によってウィンドウが描画されます。
 
-*%n タイプ*<br/>
+*nType*<br/>
 値、`enum ESplitType`次のいずれかを指定することができます。
 
     - `splitBox` 分割ドラッグ ボックス。
