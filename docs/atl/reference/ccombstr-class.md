@@ -29,12 +29,12 @@ helpviewer_keywords:
 - CComBSTR class
 - CComBSTR
 ms.assetid: 8fea1879-a05e-47a5-a803-8dec60eaa534
-ms.openlocfilehash: 52e8472e315932978af38d405c753b0a62fcbe45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48447b9e6a211927d8e729dd761d2e14ecd89615
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50475648"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282358"
 ---
 # <a name="ccombstr-class"></a>CComBSTR クラス
 
@@ -53,7 +53,7 @@ class CComBSTR
 |名前|説明|
 |----------|-----------------|
 |[CComBSTR::CComBSTR](#ccombstr)|コンストラクターです。|
-|[CComBSTR:: ~ CComBSTR](#dtor)|デストラクターです。|
+|[CComBSTR::~CComBSTR](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -89,7 +89,7 @@ class CComBSTR
 |[CComBSTR::operator + =](#operator_add_eq)|追加、`CComBSTR`オブジェクトにします。|
 |[CComBSTR::operator <](#operator_lt)|比較、`CComBSTR`文字列を使用します。|
 |[CComBSTR::operator =](#operator_eq)|値を代入`m_str`します。|
-|[CComBSTR::operator = =](#operator_eq_eq)|比較、`CComBSTR`文字列を使用します。|
+|[CComBSTR::operator ==](#operator_eq_eq)|比較、`CComBSTR`文字列を使用します。|
 |[CComBSTR::operator >](#operator_gt)|比較、`CComBSTR`文字列を使用します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
@@ -346,7 +346,7 @@ CComBSTR(CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 [!code-cpp[NVC_ATL_Utilities#37](../../atl/codesnippet/cpp/ccombstr-class_6.cpp)]
 
-##  <a name="dtor"></a>  CComBSTR:: ~ CComBSTR
+##  <a name="dtor"></a>  CComBSTR::~CComBSTR
 
 デストラクターです。
 
@@ -389,7 +389,7 @@ HRESULT CopyTo(VARIANT* pvarDest) throw();
 *pbstr*<br/>
 [out]このメソッドによって割り当てられた文字列が返される BSTR のアドレス。
 
-*呼び出した*<br/>
+*pvarDest*<br/>
 [out]このメソッドによって割り当てられた文字列が返されるバリアントのアドレス。
 
 ### <a name="return-value"></a>戻り値
@@ -571,7 +571,7 @@ BSTR* operator&() throw();
 
 [!code-cpp[NVC_ATL_Utilities#47](../../atl/codesnippet/cpp/ccombstr-class_15.cpp)]
 
-##  <a name="operator_add_eq"></a>  CComBSTR::operator + =
+##  <a name="operator_add_eq"></a>  CComBSTR::operator +=
 
 文字列を追加、`CComBSTR`オブジェクト。
 
@@ -633,7 +633,7 @@ CComBSTR& operator= (CComBSTR&& src) throw(); // (Visual Studio 2017)
 
 例をご覧ください[CComBSTR::Copy](#copy)します。
 
-##  <a name="operator_eq_eq"></a>  CComBSTR::operator = =
+##  <a name="operator_eq_eq"></a>  CComBSTR::operator ==
 
 比較、`CComBSTR`文字列を使用します。 `CComBSTR`s は、ユーザーの既定のロケールのコンテキストでは、テキストと比較されます。
 

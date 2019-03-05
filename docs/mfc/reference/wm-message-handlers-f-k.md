@@ -1,5 +1,5 @@
 ---
-title: 'WM_ で始まるメッセージのハンドラー : F - K'
+title: Wm _ で始まるメッセージ ハンドラー:F-K
 ms.date: 11/27/2018
 f1_keywords:
 - ON_WM_FONTCHANGE
@@ -29,14 +29,14 @@ helpviewer_keywords:
 - WM_ messages [MFC]
 - ON_WM_KEYDOWN [MFC]
 ms.assetid: 0e7de191-1499-499f-859c-62742797808e
-ms.openlocfilehash: e21889a44d26cd57ce0645e2050eeeb2839ef17d
-ms.sourcegitcommit: e9568560cdb95e83a8fba1e9bca21ece910d20b7
+ms.openlocfilehash: fcb343994498f65fb58be3a499ac3e0fdc2166aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52453899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282085"
 ---
-# <a name="wm-message-handlers-f---k"></a>WM_ で始まるメッセージのハンドラー : F - K
+# <a name="wm-message-handlers-f---k"></a>Wm _ で始まるメッセージ ハンドラー:F-K
 
 左側で、次のマップ エントリは、右側の関数プロトタイプに対応します。
 
@@ -64,4 +64,3 @@ ms.locfileid: "52453899"
 
 [メッセージ マップ](../../mfc/reference/message-maps-mfc.md)<br/>
 [WM_ で始まるメッセージのハンドラー](../../mfc/reference/handlers-for-wm-messages.md)
-
