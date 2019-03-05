@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
-ms.openlocfilehash: 5a27fb6cdc13fbbd3ceb8a85adacf5491ddc3ce1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593480"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268962"
 ---
 # <a name="singleassignment-class"></a>single_assignment クラス
 
@@ -56,7 +56,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 |名前|説明|
 |----------|-----------------|
 |[has_value](#has_value)|チェックするかどうかこれ`single_assignment`メッセージング ブロックを値はまだ初期化されています。|
-|[値](#value)|格納されているメッセージの現在のペイロードへの参照を取得、`single_assignment`メッセージング ブロックします。|
+|[value](#value)|格納されているメッセージの現在のペイロードへの参照を取得、`single_assignment`メッセージング ブロックします。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
@@ -176,7 +176,8 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-`message` オブジェクトを指すポインター。
+
+  `message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -253,7 +254,8 @@ virtual message_status send_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-`message` オブジェクトを指すポインター。
+
+  `message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -333,4 +335,3 @@ T const& value();
 [コンカレンシー名前空間](concurrency-namespace.md)<br/>
 [overwrite_buffer クラス](overwrite-buffer-class.md)<br/>
 [unbounded_buffer クラス](unbounded-buffer-class.md)
-

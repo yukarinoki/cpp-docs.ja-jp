@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 3066f3308d0c7e5c9a04f7746585be9a9dd5bc9b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259881"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget クラス
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |名前|説明|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|CRenderTarget オブジェクトを構築します。|
-|[CRenderTarget:: ~ CRenderTarget](#crendertarget__~crendertarget)|デストラクターです。 レンダー ターゲットのオブジェクトが破棄されるときに呼び出されます。|
+|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|デストラクターです。 レンダー ターゲットのオブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -204,7 +204,7 @@ class CRenderTarget : public CObject;
 
 |名前|説明|
 |----------|-----------------|
-|[CRenderTarget::operator ID2D1RenderTarget *](#operator_id2d1rendertarget_star)|返します ID2D1RenderTarget インターフェイス|
+|[CRenderTarget::operator ID2D1RenderTarget*](#operator_id2d1rendertarget_star)|返します ID2D1RenderTarget インターフェイス|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -402,7 +402,7 @@ void DrawEllipse(
 
 ### <a name="parameters"></a>パラメーター
 
-*楕円*<br/>
+*ellipse*<br/>
 位置と (デバイス非依存ピクセル単位) を描画する楕円の半径。
 
 *pBrush*<br/>
@@ -573,7 +573,7 @@ void DrawText(
 *pForegroundBrush*<br/>
 テキストの描画に使用するブラシ。
 
-*TextFormat*<br/>
+*textFormat*<br/>
 詳細、フォント、フォント サイズ、およびフローの方向など、描画するテキストの書式設定を説明するオブジェクト。
 
 *options*<br/>
@@ -632,7 +632,7 @@ void FillEllipse(
 
 ### <a name="parameters"></a>パラメーター
 
-*楕円*<br/>
+*ellipse*<br/>
 位置と、楕円の描画のデバイスに依存しないピクセル単位の半径。
 
 *pBrush*<br/>
@@ -955,7 +955,7 @@ ID2D1RenderTarget* m_pRenderTarget;
 CD2DTextFormat* m_pTextFormatDefault;
 ```
 
-##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget *
+##  <a name="operator_id2d1rendertarget_star"></a>  CRenderTarget::operator ID2D1RenderTarget*
 
 返します ID2D1RenderTarget インターフェイス
 

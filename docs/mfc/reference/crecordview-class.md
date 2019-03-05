@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CRecordView [MFC], OnMove
 - CRecordView [MFC], OnMove
 ms.assetid: 9b4b0897-bd50-4d48-a0b4-f3323f5ccc55
-ms.openlocfilehash: c7013fb53562fd76744bff19d1d37ce972a52d52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a91a9e320b4221b04bbcf996ffa60f1de4b35ec5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50643867"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262468"
 ---
 # <a name="crecordview-class"></a>CRecordView クラス
 
@@ -62,7 +62,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 ビューが、フォーム ビューに直接接続されている、`CRecordset`オブジェクト。 ビューはダイアログ テンプレート リソースから作成されのフィールドが表示されます、`CRecordset`ダイアログ テンプレートのコントロール内のオブジェクト。 `CRecordView`オブジェクト ダイアログ データ エクス (チェンジ DDX) とレコード フィールド エクス (チェンジ RFX) を使用して、フォーム上のコントロールとレコード セットのフィールドの間のデータの移動を自動化します。 `CRecordView` 移動するための既定の実装を提供、最初に [次へ]、前、または最後のレコードとインターフェイス ビューで現在のレコードを更新します。
 
 > [!NOTE]
->  Open Database Connectivity (ODBC) クラスではなく、データ アクセス オブジェクト (DAO) クラスを使用している場合は、クラスを使用して[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)代わりにします。 詳細については、この記事を参照してください。[概要: データベース プログラミング](../../data/data-access-programming-mfc-atl.md)します。
+>  Open Database Connectivity (ODBC) クラスではなく、データ アクセス オブジェクト (DAO) クラスを使用している場合は、クラスを使用して[CDaoRecordView](../../mfc/reference/cdaorecordview-class.md)代わりにします。 詳細については、この記事を参照してください。[概要。データベース プログラミング](../../data/data-access-programming-mfc-atl.md)します。
 
 レコード ビューを作成する最も一般的な方法は、アプリケーション ウィザードでです。 アプリケーション ウィザードでは、レコード ビュー クラスとその関連するレコード セット クラスは、初期アプリケーションのスケルトンの一部としての両方を作成します。 アプリケーション ウィザードを使用してレコード ビュー クラスを作成しない場合に、後で ClassWizard で作成できます。 1 つのフォームが単に必要な場合は、アプリケーション ウィザードを使用が簡単です。 ClassWizard では、開発プロセスの後半で、レコード ビューを使用するかを決定できます。 レコード セット クラスの名前付けで詳細に制御が提供されるため、最も柔軟なアプローチは ClassWizard を使用してレコード ビューとレコード セットを個別に作成し、それらを接続するとします。H/。CPP ファイル。 このアプローチでは、同じのレコード セット クラスで複数のレコード ビューがあることもできます。
 
@@ -94,7 +94,7 @@ class AFX_NOVTABLE CRecordView : public CFormView
 
 **ヘッダー:** afxdb.h
 
-##  <a name="crecordview"></a>  よ
+##  <a name="crecordview"></a>  CRecordView::CRecordView
 
 派生した型のオブジェクトを作成するときに`CRecordView`、いずれかの形式のビュー オブジェクトを初期化し、ビューの基になるダイアログ リソースの識別にコンス トラクターを呼び出します。
 
@@ -180,7 +180,7 @@ virtual CRecordset* OnGetRecordset() = 0;
 
 構築またはレコード セット オブジェクトを取得してにポインターを返すには、このメンバー関数をオーバーライドする必要があります。 ClassWizard で、レコード ビュー クラスを宣言する場合、ウィザードの既定のオーバーライドを書き込みます。 ClassWizard の既定の実装では、1 つが存在する場合は、レコード ビューに格納されているレコード セットのポインターを返します。 Classwizard で指定した型のレコード セット オブジェクトを作成しますがそうでない場合、`Open`メンバー関数、テーブルを開くか、クエリを実行して、オブジェクトへのポインターを返します。
 
-詳細と例については、この記事を参照してください。[レコード ビュー: レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)します。
+詳細と例については、この記事を参照してください。[レコード ビュー。レコード ビューを使用して](../../data/using-a-record-view-mfc-data-access.md)します。
 
 ##  <a name="onmove"></a>  CRecordView::OnMove
 

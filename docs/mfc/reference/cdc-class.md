@@ -402,12 +402,12 @@ helpviewer_keywords:
 - CDC [MFC], m_hAttribDC
 - CDC [MFC], m_hDC
 ms.assetid: 715b3334-cb2b-4c9c-8067-02eb7c66c8b2
-ms.openlocfilehash: 0c8944846e249e4f752183b057bf8d2857022ab5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fc5d41221ab0f9679e7d38a399464efc1a38dd52
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53179059"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305082"
 ---
 # <a name="cdc-class"></a>CDC クラス
 
@@ -479,7 +479,8 @@ class CDC : public CObject
 |[CDC::FloodFill](#floodfill)|現在のブラシで領域を塗りつぶします。|
 |[CDC::FrameRect](#framerect)|四角形の境界線を描画します。|
 |[CDC::FrameRgn](#framergn)|境界線を描画ブラシを使用して、特定のリージョン。|
-|[CDC::FromHandle](#fromhandle)|ポインターを返します、`CDC`デバイス コンテキストを識別するハンドルが指定されるとします。 `CDC` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CDC` オブジェクトが生成され、関連付けられます。|
+|[CDC::FromHandle](#fromhandle)|ポインターを返します、`CDC`デバイス コンテキストを識別するハンドルが指定されるとします。 
+  `CDC` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CDC` オブジェクトが生成され、関連付けられます。|
 |[CDC::GetArcDirection](#getarcdirection)|デバイス コンテキストの現在の円弧の方向を取得します。|
 |[CDC::GetAspectRatioFilter](#getaspectratiofilter)|現在の縦横比のフィルターの設定を取得します。|
 |[CDC::GetBkColor](#getbkcolor)|現在の背景色を取得します。|
@@ -915,7 +916,7 @@ BOOL Arc(
 *ptStart*<br/>
 円弧を定義する点の x 座標と y 座標の始点 (論理単位) を指定します。 このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
 
-*終点*<br/>
+*ptEnd*<br/>
 (論理単位) で、円弧の終点を定義する点の x 座標と y 座標を指定します。 このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、`POINT`構造または`CPoint`このパラメーターのオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -985,7 +986,7 @@ BOOL ArcTo(
 *ptStart*<br/>
 円弧を定義する点の x 座標と y 座標の始点 (論理単位) を指定します。 このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)データ構造体または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
 
-*終点*<br/>
+*ptEnd*<br/>
 (論理単位) で、円弧の終点を定義する点の x 座標と y 座標を指定します。 このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、`POINT`データ構造体または`CPoint`このパラメーターのオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1068,7 +1069,7 @@ BOOL BitBlt(
 *nWidth*<br/>
 コピー先の四角形と元のビットマップの幅を (論理単位) で指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 コピー先の四角形と元のビットマップの高さを (論理単位) で指定します。
 
 *pSrcDC*<br/>
@@ -1168,7 +1169,7 @@ BOOL Chord(
 *ptStart*<br/>
 コードを定義するポイントの x 座標と y 座標の始点 (論理単位) を指定します。 このポイントは、コードで正確にあることはありません。 いずれかを渡すことができます、`POINT`構造または`CPoint`このパラメーターのオブジェクト。
 
-*終点*<br/>
+*ptEnd*<br/>
 (論理単位) でコードの終了点を定義する点の x 座標と y 座標を指定します。 このポイントは、コードで正確にあることはありません。 いずれかを渡すことができます、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -1255,7 +1256,7 @@ BOOL CreateDC(
 *lpszOutput*<br/>
 出力の物理メディア (ファイルまたは出力ポート) のファイルまたはデバイス名を指定する null で終わる文字列へのポインター。 渡すことも、`CString`このパラメーターのオブジェクト。
 
-*いるとき*<br/>
+*lpInitData*<br/>
 指す、`DEVMODE`デバイス ドライバーのデバイス固有の初期化データを含む構造体。 Windows`DocumentProperties`関数は、特定のデバイスに入力します。 この構造体を取得します。 *いるとき*パラメーターは、デバイス ドライバーは、コントロール パネルからユーザーが指定した既定の初期化 (ある場合) を使用する場合に、NULL にする必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -1291,7 +1292,7 @@ BOOL CreateIC(
 *lpszOutput*<br/>
 (ファイルまたはポート) は、物理出力メディアのファイルまたはデバイス名を指定する null で終わる文字列へのポインター。 渡すことができます、`CString`このパラメーターのオブジェクト。
 
-*いるとき*<br/>
+*lpInitData*<br/>
 デバイス ドライバーのデバイス固有の初期化データを指します。 *いるとき*パラメーターは、デバイス ドライバーは、コントロール パネルからユーザーが指定した既定の初期化 (ある場合) を使用する場合に、NULL にする必要があります。 参照してください`CreateDC`デバイス固有の初期化のデータ形式。
 
 ### <a name="return-value"></a>戻り値
@@ -1580,10 +1581,10 @@ BOOL DrawFrameControl(
 *lpRect*<br/>
 ポインター、`RECT`四角形の論理座標を含む構造体。
 
-*%n タイプ*<br/>
+*nType*<br/>
 描画するフレーム コントロールの種類を指定します。 参照してください、 *uType*パラメーター [DrawFrameControl](/windows/desktop/api/winuser/nf-winuser-drawframecontrol)このパラメーターの使用可能な値の一覧については、Windows sdk。
 
-*状態*<br/>
+*nState*<br/>
 Frame コントロールの初期状態を指定します。 説明されている値の 1 つ以上を指定することができます、 *uState*パラメーター `DrawFrameControl` Windows sdk。 使用して、*状態*DFCS_ADJUSTRECT プッシュ ボタンの周囲の端を除外する外接する四角形を調整する値します。
 
 ### <a name="return-value"></a>戻り値
@@ -1838,7 +1839,7 @@ int DrawText(
 *str*<br/>
 A [CString](../../atl-mfc-shared/reference/cstringt-class.md)を描画する指定された文字を含むオブジェクト。
 
-*パラメーター*<br/>
+*nFormat*<br/>
 テキストの書式設定の方法を指定します。 説明されている値の任意の組み合わせであることができます、 *uFormat*パラメーター [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) Windows SDK にします。 (結合のビットごとの OR 演算子を使用して)。
 
 > [!NOTE]
@@ -1895,7 +1896,7 @@ int DrawTextEx(
 *str*<br/>
 A [CString](../../atl-mfc-shared/reference/cstringt-class.md)を描画する指定された文字を含むオブジェクト。
 
-*パラメーター*<br/>
+*nFormat*<br/>
 テキストの書式設定の方法を指定します。 説明されている値の任意の組み合わせであることができます、 *uFormat*パラメーター [DrawText](/windows/desktop/api/winuser/nf-winuser-drawtext) Windows SDK にします。 (ビット演算を使用して結合**または**演算子)。
 
 > [!NOTE]
@@ -2095,7 +2096,7 @@ int Escape(
 *lpszInData*<br/>
 このエスケープの必要な入力データ構造体を指します。
 
-*れないとき*<br/>
+*lpOutData*<br/>
 このエスケープから出力を受け取る構造体をポイントします。 *れないとき*データが返されない場合、パラメーターが NULL です。
 
 *nInputSize*<br/>
@@ -2537,7 +2538,7 @@ BOOL FrameRgn(
 *nWidth*<br/>
 デバイス単位での垂直方向のブラシで、罫線の幅を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 デバイス単位で水平方向のブラシのストロークの境界線の高さを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -2567,7 +2568,8 @@ Windows デバイス コンテキストを識別するハンドルが含まれ�
 
 ### <a name="remarks"></a>Remarks
 
-`CDC` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CDC` オブジェクトが生成され、関連付けられます。
+
+  `CDC` オブジェクトがハンドルに関連付けられていない場合は、一時的な `CDC` オブジェクトが生成され、関連付けられます。
 
 ### <a name="example"></a>例
 
@@ -2763,7 +2765,7 @@ BOOL GetCharABCWidths(
 *nFirstChar*<br/>
 文字の幅が返される現在のフォントの文字の範囲の最初の文字を指定します。
 
-*とも*<br/>
+*nLastChar*<br/>
 文字の幅が返される現在のフォントの文字の範囲の最後の文字を指定します。
 
 *lpabc*<br/>
@@ -2810,7 +2812,7 @@ BOOL GetCharABCWidthsI(
 *cgi*<br/>
 グリフのインデックスの数を指定します。
 
-*pgi ビルド*<br/>
+*pgi*<br/>
 グリフのインデックスを含む配列へのポインター。 値が NULL の場合、 *giFirst*パラメーターを代わりに使用されます。 *Cgi*パラメーターは、この配列のグリフのインデックスの数を指定します。
 
 *lpabc*<br/>
@@ -2845,7 +2847,7 @@ BOOL GetCharWidth(
 *nFirstChar*<br/>
 現在のフォントの文字の連続したグループ内の最初の文字を指定します。
 
-*とも*<br/>
+*nLastChar*<br/>
 現在のフォントの文字の連続したグループ内の最後の文字を指定します。
 
 *lpBuffer*<br/>
@@ -2886,7 +2888,7 @@ BOOL GetCharWidthI(
 *cgi*<br/>
 グリフのインデックスの数を指定します。
 
-*pgi ビルド*<br/>
+*pgi*<br/>
 グリフのインデックスを含む配列へのポインター。 値が NULL の場合、 *giFirst*パラメーターを代わりに使用されます。 *Cgi*パラメーターは、この配列のグリフのインデックスの数を指定します。
 
 *lpBuffer*<br/>
@@ -3174,7 +3176,7 @@ DWORD GetGlyphOutline(
 *NChar*<br/>
 情報が返される対象の文字を指定します。
 
-*パラメーター*<br/>
+*nFormat*<br/>
 情報を返す関数の形式を指定します。 次の値の 1 つまたは 0 を指定できます。
 
 |[値]|説明|
@@ -3350,13 +3352,13 @@ UINT GetOutlineTextMetrics(
 
 ### <a name="parameters"></a>パラメーター
 
-*規定*<br/>
+*lpotm*<br/>
 配列を指す[OUTLINETEXTMETRIC](/windows/desktop/api/wingdi/ns-wingdi-_outlinetextmetrica)構造体。 このパラメーターが NULL の場合は、取得されたメトリック データに必要なバッファーのサイズを返します。
 
 *cbData*<br/>
 情報が返されるバッファーのバイト単位で、サイズを指定します。
 
-*規定*<br/>
+*lpotm*<br/>
 指す、`OUTLINETEXTMETRIC`構造体。 このパラメーターが NULL の場合は、取得したメトリック情報に必要なバッファーのサイズを返します。
 
 ### <a name="return-value"></a>戻り値
@@ -3383,7 +3385,7 @@ BOOL GetOutputCharWidth(
 *nFirstChar*<br/>
 現在のフォントの文字の連続したグループ内の最初の文字を指定します。
 
-*とも*<br/>
+*nLastChar*<br/>
 現在のフォントの文字の連続したグループ内の最後の文字を指定します。
 
 *lpBuffer*<br/>
@@ -4045,7 +4047,7 @@ BOOL GradientFill(
 *nMeshElements*<br/>
 内の要素 (三角形または四角形) の数*pMesh*します。
 
-*寸法*<br/>
+*dwMode*<br/>
 グラデーションの塗りつぶしモードを指定します。 使用可能な値の一覧は、次を参照してください。 [GradientFill](/windows/desktop/api/wingdi/nf-wingdi-gradientfill) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
@@ -4098,7 +4100,7 @@ virtual BOOL GrayString(
 *nWidth*<br/>
 文字列を囲む四角形の幅を (論理単位) で指定します。 場合*nWidth*は 0 です。`GrayString`領域の幅を計算すると仮定すると*lpData*文字列へのポインターです。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 文字列を囲む四角形の高さを (論理単位) で指定します。 場合*パラメーター nHeight*は 0 です。 `GrayString` 、領域の高さを計算すると仮定すると*lpData*文字列へのポインターです。
 
 ### <a name="return-value"></a>戻り値
@@ -4157,7 +4159,7 @@ OLE から HIMETRIC のサイズを取得し、アプリケーションの自然
 
 ##  <a name="intersectcliprect"></a>  CDC::IntersectClipRect
 
-現在のリージョンとで指定された四角形の交差部分を形成して新しいクリップ領域を作成します*x1*、 *y1*、 *x2*、および*y2*。
+現在のリージョンとで指定された四角形の交差部分を形成して新しいクリップ領域を作成します*x1*、 *y1*、 *x2*、および*y2*.
 
 ```
 int IntersectClipRect(
@@ -4399,7 +4401,7 @@ BOOL MaskBlt(
 *nWidth*<br/>
 論理ユニットは、コピー先の四角形と元のビットマップの幅を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 論理ユニットは、コピー先の四角形と元のビットマップの高さを指定します。
 
 *pSrcDC*<br/>
@@ -4550,7 +4552,7 @@ virtual CPoint OffsetViewportOrg(
 *nWidth*<br/>
 現在の原点の x 座標に追加するデバイス単位の数を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 現在の原点の y 座標に追加するデバイス単位の数を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -4572,7 +4574,7 @@ CPoint OffsetWindowOrg(
 *nWidth*<br/>
 現在の原点の x 座標に追加する論理ユニットの数を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 現在の原点の y 座標に追加する論理ユニットの数を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -4636,7 +4638,7 @@ BOOL PatBlt(
 *nWidth*<br/>
 (論理単位) で、パターンを受信する四角形の幅を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 (論理単位) で、パターンを受信する四角形の高さを指定します。
 
 *dwRop*<br/>
@@ -4715,7 +4717,7 @@ BOOL Pie(
 *ptStart*<br/>
 円弧の始点を指定します。このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、[ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)このパラメーターのオブジェクト。
 
-*終点*<br/>
+*ptEnd*<br/>
 円弧の終点を指定します。このポイントは、円弧上正確にする必要はありません。いずれかを渡すことができます、`POINT`構造または`CPoint`このパラメーターのオブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -4805,7 +4807,7 @@ BOOL PlgBlt(
 *nWidth*<br/>
 論理ユニットは、元の四角形の幅を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 論理ユニットは、元の四角形の高さを指定します。
 
 *maskBitmap*<br/>
@@ -6753,7 +6755,7 @@ BOOL StretchBlt(
 *nWidth*<br/>
 コピー先の四角形の幅を (論理単位で) 指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 コピー先の四角形の高さを (論理単位で) 指定します。
 
 *pSrcDC*<br/>
@@ -6816,7 +6818,8 @@ BOOL StretchBlt(
 
 `StretchBlt`場合、関数は、ビットマップのミラー イメージを作成しますの症状、 *nSrcWidth*と*nWidth*または*nSrcHeight*と*パラメーター nHeight。* パラメーターは異なります。 場合*nSrcWidth*と*nWidth*符号が異なる関数が x 軸に沿ったビットマップのミラー イメージを作成します。 場合*nSrcHeight*と*パラメーター nHeight*符号が異なる、関数は、y 軸に沿ったビットマップのミラー イメージを作成します。
 
-`StretchBlt` 関数は、メモリ内のコピー元ビットマップを拡大または縮小し、その結果をコピー先にコピーします。 パターンを結果とマージする場合、そのパターンは、拡大されたコピー元ビットマップがコピー先にコピーされるまでマージされません。 ブラシを使用する場合、そのブラシは、コピー先デバイス コンテキストで選択されたブラシです。 コピー先の座標は、コピー先デバイス コンテキストに従って変換されます。コピー元の座標は、コピー元デバイス コンテキストに従って変換されます。
+
+  `StretchBlt` 関数は、メモリ内のコピー元ビットマップを拡大または縮小し、その結果をコピー先にコピーします。 パターンを結果とマージする場合、そのパターンは、拡大されたコピー元ビットマップがコピー先にコピーされるまでマージされません。 ブラシを使用する場合、そのブラシは、コピー先デバイス コンテキストで選択されたブラシです。 コピー先の座標は、コピー先デバイス コンテキストに従って変換されます。コピー元の座標は、コピー元デバイス コンテキストに従って変換されます。
 
 コピー先ビットマップ、コピー元ビットマップ、およびパターン ビットマップの色の形式が異なる場合は、`StretchBlt` によって、コピー元ビットマップとパターン ビットマップが、コピー先ビットマップに合わせて変換されます。 変換では、コピー先デバイス コンテキストの前景色と背景色が使用されます。
 

@@ -22,12 +22,12 @@ f1_keywords:
 helpviewer_keywords:
 - array class
 ms.assetid: 0832b6c1-40f0-421d-9104-6b1baa0c63a7
-ms.openlocfilehash: 93ef654bb71a342a6215ce5cd60786f36cadedf7
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 16d18d23c370a8a603ab6150fcee18455ae47c48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657553"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259024"
 ---
 # <a name="array-class"></a>array クラス
 
@@ -55,7 +55,8 @@ friend class array;
 |名前|説明|
 |----------|-----------------|
 |[array コンス トラクター](#ctor)|`array` クラスの新しいインスタンスを初期化します。|
-|[~ array デストラクター](#dtor)|`array` オブジェクトを破棄します。|
+|[~ array デストラクター](#dtor)|
+  `array` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -67,7 +68,8 @@ friend class array;
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|2 つ目の取得[accelerator_view](accelerator-view-class.md)オブジェクトをインスタンス化するステージング コンス トラクターが呼び出されたときに、パラメーターとして渡される、`array`オブジェクト。|
 |[get_cpu_access_type](#get_cpu_access_type)|返します、 [access_type](concurrency-namespace-enums-amp.md#access_type)の配列。 このメソッドは CPU 上でのみアクセスできます。|
 |[get_extent](#get_extent)|返します、[エクステント](extent-class.md)オブジェクトの配列。|
-|[reinterpret_as](#reinterpret_as)|`array` オブジェクトのすべての要素を含む 1 次元配列を返します。|
+|[reinterpret_as](#reinterpret_as)|
+  `array` オブジェクトのすべての要素を含む 1 次元配列を返します。|
 |[section](#section)|指定された原点にある `array` オブジェクトのサブセクションを返し、これは必要に応じて範囲が指定されます。|
 |[view_as](#view_as)|返します、 [array_view](array-view-class.md)から構築されたオブジェクトを`array`オブジェクト。|
 
@@ -105,7 +107,8 @@ friend class array;
 
 配列が別の配列にコピーされる場合は詳細コピーが実行されるため、配列は論理的に値型であると見なされます。 2 つの配列が同じデータを指すことはありません。
 
-`array<T,N>` 型はいくつかのシナリオで使用されます。
+
+  `array<T,N>` 型はいくつかのシナリオで使用されます。
 
 - アクセラレータの計算で使用できるデータ コンテナーとして。
 
@@ -121,11 +124,12 @@ friend class array;
 
 **ヘッダー:** amp.h
 
-**Namespace:** コンカレンシー
+**名前空間:** コンカレンシー
 
 ##  <a name="dtor"></a> ~ 配列
 
-`array` オブジェクトを破棄します。
+
+  `array` オブジェクトを破棄します。
 
 ```
 ~array() restrict(cpu);
@@ -141,7 +145,8 @@ __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view ac
 
 ##  <a name="ctor"></a> 配列
 
-新しいインスタンスを初期化、 [array クラス](array-class.md)します。 `array<T,N>` の既定のコンストラクターがありません。 すべてのコンストラクターは CPU でのみ実行されます。 これらは、Direct3D ターゲットで実行することはできません。
+新しいインスタンスを初期化、 [array クラス](array-class.md)します。 
+  `array<T,N>` の既定のコンストラクターがありません。 すべてのコンストラクターは CPU でのみ実行されます。 これらは、Direct3D ターゲットで実行することはできません。
 
 ```
 explicit array(
@@ -477,7 +482,8 @@ __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;
 
 ##  <a name="data"></a> データ
 
-`array` の生データへのポインターを返します。
+
+  `array` の生データへのポインターを返します。
 
 ```
 value_type* data() restrict(amp, cpu);
@@ -775,7 +781,7 @@ array_view<const value_type,3> section(
 *_E2*<br/>
 このセクションの範囲の最下位のコンポーネント。
 
-*展開*<br/>
+*_Ext*<br/>
 [エクステント](extent-class.md)セクションの範囲を指定するオブジェクト。 原点は 0 です。
 
 *_Idx*<br/>
@@ -804,7 +810,8 @@ array_view<const value_type,3> section(
 
 ### <a name="return-value"></a>戻り値
 
-指定された原点にある `array` オブジェクトのサブセクションを返し、これは必要に応じて範囲が指定されます。 `index` オブジェクトのみを指定すると、サブセクションには `index` オブジェクトの要素のインデックスより大きなインデックスを持つ関連するグリッドのすべての要素が含まれます。
+指定された原点にある `array` オブジェクトのサブセクションを返し、これは必要に応じて範囲が指定されます。 
+  `index` オブジェクトのみを指定すると、サブセクションには `index` オブジェクトの要素のインデックスより大きなインデックスを持つ関連するグリッドのすべての要素が含まれます。
 
 ##  <a name="view_as"></a> view_as
 

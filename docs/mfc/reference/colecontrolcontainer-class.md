@@ -72,12 +72,12 @@ helpviewer_keywords:
 - COleControlContainer [MFC], m_pWnd
 - COleControlContainer [MFC], m_siteMap
 ms.assetid: f7ce9246-0fb7-4f07-a83a-6c2390d0fdf8
-ms.openlocfilehash: e89096b553814285f61093af81e31b294e3ad2bb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6e97f7ceafb92098d701cba64b4ec01d26d3991a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603010"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274987"
 ---
 # <a name="colecontrolcontainer-class"></a>COleControlContainer クラス
 
@@ -176,7 +176,7 @@ void AttachControlSite(
 *我が物*<br/>
 `CWnd` オブジェクトへのポインター。
 
-*各*<br/>
+*nIDC*<br/>
 アタッチされるコントロールの ID。
 
 ### <a name="remarks"></a>Remarks
@@ -305,7 +305,7 @@ BOOL CreateControl(
 *clsid*<br/>
 コントロールの一意のクラス ID。
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 コントロールに表示されるテキストへのポインター。 (指定されている場合) は、コントロールのキャプションまたはテキストのプロパティの値を設定します。 NULL の場合、コントロールのキャプションまたはテキストのプロパティは変更されません。
 
 *dwStyle*<br/>
@@ -785,7 +785,7 @@ virtual void SetDlgItemInt(
 *nID*<br/>
 コントロールの識別子です。
 
-*値*<br/>
+*nValue*<br/>
 表示される整数値。
 
 *bSigned*<br/>

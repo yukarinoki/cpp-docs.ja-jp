@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CTabCtrl class [MFC], adding tabs
 - tabs [MFC], adding to CTabCtrl class [MFC]
 ms.assetid: 7f3d9340-e3c7-4c71-9912-be57534ecc78
-ms.openlocfilehash: be622035355a68d1527a515bfdcb633a3af274d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f769de7bcf3e410cca717c17237d1e49ef8562c9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618271"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293590"
 ---
 # <a name="adding-tabs-to-a-tab-control"></a>タブ コントロールへのタブの追加
 
@@ -32,4 +32,3 @@ ms.locfileid: "50618271"
 
 [CTabCtrl の使い方](../mfc/using-ctabctrl.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

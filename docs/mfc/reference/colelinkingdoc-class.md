@@ -16,12 +16,12 @@ helpviewer_keywords:
 - COleLinkingDoc [MFC], OnFindEmbeddedItem
 - COleLinkingDoc [MFC], OnGetLinkedItem
 ms.assetid: 9f547f35-2f95-427f-b9c0-85c31940198b
-ms.openlocfilehash: ed96d0a88755827bff27255326db8262698fcfb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 275119b2343c4d13b6a32f939fc8c3b2b5d5890c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300409"
 ---
 # <a name="colelinkingdoc-class"></a>COleLinkingDoc クラス
 
@@ -77,7 +77,7 @@ class COleLinkingDoc : public COleDocument
 
 サンプルについては、 `CWinApp`-派生したクラスの定義と`InitInstance`関数、OCLIENT を参照してください。H および OCLIENT します。MFC サンプル CPP [OCLIENT](../../visual-cpp-samples.md)します。
 
-使用しての詳細については`COleLinkingDoc`、記事を参照して[コンテナー: コンテナーの実装](../../mfc/containers-implementing-a-container.md)と[コンテナー: 高度な機能](../../mfc/containers-advanced-features.md)します。
+使用しての詳細については`COleLinkingDoc`、記事を参照して[コンテナー。コンテナーの実装](../../mfc/containers-implementing-a-container.md)と[コンテナー。機能の高度な](../../mfc/containers-advanced-features.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -164,7 +164,7 @@ BOOL Register(
 *pFactory*<br/>
 (NULL を指定できます) OLE ファクトリ オブジェクトへのポインター。
 
-*終了*<br/>
+*lpszPathName*<br/>
 コンテナー ドキュメントの完全修飾パスへのポインター。
 
 ### <a name="return-value"></a>戻り値

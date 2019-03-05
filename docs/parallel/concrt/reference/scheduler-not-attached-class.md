@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - scheduler_not_attached class
 ms.assetid: 26001970-b400-463b-be3d-8623359c399a
-ms.openlocfilehash: 159202445f95e8fbac93902dec43fc0f99180e8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be8a04c7cf6ef5aa4d6070e92df14e643395ef00
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560668"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262266"
 ---
 # <a name="schedulernotattached-class"></a>scheduler_not_attached クラス
 
@@ -57,7 +57,7 @@ scheduler_not_attached() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
 ## <a name="see-also"></a>関連項目

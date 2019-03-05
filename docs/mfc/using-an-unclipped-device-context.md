@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], unclipped device context
 ms.assetid: 9c020063-73da-4803-bf7b-2e1fd950c9ed
-ms.openlocfilehash: 222a3fb60d07176b1ba8e586e142865164bc215f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0f129c0bfa5bd76df4ba34b117e7ed8aa08c2ecb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596515"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270671"
 ---
 # <a name="using-an-unclipped-device-context"></a>クリッピングを行わないデバイス コンテキストの使用
 
-コントロールは、そのクライアントの四角形の外側は描画されませんがわかっている場合への呼び出しを無効にして小さくても検出可能な速度向上を実現できます`IntersectClipRect`はによって作成される`COleControl`します。 これを行うには、削除、 *clipPaintDC*フラグによって返されるフラグのセットから[オン](../mfc/reference/colecontrol-class.md#getcontrolflags)します。 例えば:
+コントロールは、そのクライアントの四角形の外側は描画されませんがわかっている場合への呼び出しを無効にして小さくても検出可能な速度向上を実現できます`IntersectClipRect`はによって作成される`COleControl`します。 これを行うには、削除、 *clipPaintDC*フラグによって返されるフラグのセットから[オン](../mfc/reference/colecontrol-class.md#getcontrolflags)します。 例:
 
 [!code-cpp[NVC_MFC_AxOpt#5](../mfc/codesnippet/cpp/using-an-unclipped-device-context_1.cpp)]
 [!code-cpp[NVC_MFC_AxOpt#14](../mfc/codesnippet/cpp/using-an-unclipped-device-context_2.cpp)]
@@ -25,5 +25,4 @@ ms.locfileid: "50596515"
 
 ## <a name="see-also"></a>関連項目
 
-[MFC ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)
-
+[MFC ActiveX コントロール:最適化](../mfc/mfc-activex-controls-optimization.md)

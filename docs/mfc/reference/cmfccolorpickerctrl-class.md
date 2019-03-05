@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 38fe09b5fdde85dad485e126f6c094196fe68ff4
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176927"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276014"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl クラス
 
@@ -199,7 +199,7 @@ void GetHLS(
 *輝度*<br/>
 [out]輝度情報を受け取る double 型の変数へのポインター。
 
-*彩度*<br/>
+*saturation*<br/>
 [out]鮮やかさの情報を受け取る double 型の変数へのポインター。
 
 ### <a name="remarks"></a>Remarks
@@ -323,7 +323,7 @@ void SetHLS(
 *輝度*<br/>
 [in]輝度値。
 
-*彩度*<br/>
+*saturation*<br/>
 [in]鮮やかさの値。
 
 *bInvalidate*<br/>

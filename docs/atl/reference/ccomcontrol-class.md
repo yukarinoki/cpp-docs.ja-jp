@@ -19,12 +19,12 @@ helpviewer_keywords:
 - ambient properties
 - controls [ATL], properties
 ms.assetid: 55368c27-bd16-45a7-b701-edb36157c8e8
-ms.openlocfilehash: 3fe01128fc5f0a9d3058df2d6f95a6c038b28062
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 29eeb31c0823a0614fa1404cf7efc1c281bab3a4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644198"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261584"
 ---
 # <a name="ccomcontrol-class"></a>CComControl クラス
 
@@ -220,7 +220,7 @@ int MessageBox(
 *lpszCaption*<br/>
 ダイアログ ボックスのタイトル。 場合は NULL (既定)、「エラー」が使用されるタイトル。
 
-*%n タイプ*<br/>
+*nType*<br/>
 内容と、ダイアログ ボックスの動作を指定します。 参照してください、[メッセージ ボックス](/windows/desktop/api/winuser/nf-winuser-messagebox)使用可能なさまざまなメッセージ ボックスの一覧については、Windows SDK ドキュメント内のエントリ。 既定では、単純な**OK**ボタンをクリックします。
 
 ### <a name="return-value"></a>戻り値

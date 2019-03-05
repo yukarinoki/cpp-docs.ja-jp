@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Concurrency Runtime, migrating from OpenMP
 - OpenMP, migrating to the Concurrency Runtime
 ms.assetid: 9bab7bb1-e45d-44b2-8509-3b226be2c93b
-ms.openlocfilehash: 78fa83c30bc55d82ffa5d2ba1e7d65472643f86b
-ms.sourcegitcommit: ee0103752884425843556a19cf418a504dc3cd02
+ms.openlocfilehash: 16b0f175867e18e127997749098cce998674b3d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/21/2018
-ms.locfileid: "53737625"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259504"
 ---
 # <a name="migrating-from-openmp-to-the-concurrency-runtime"></a>OpenMP からコンカレンシー ランタイムへの移行
 
@@ -48,17 +48,17 @@ OpenMP は、並列化の度合いが事前に決定され、システムで使�
 
 ## <a name="related-topics"></a>関連トピック
 
-[方法: 変換、OpenMP 並列 for ループ、同時実行ランタイムを使用するには](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
+[方法: OpenMP の parallel for ループを変換し、同時実行ランタイムを使用する](../../parallel/concrt/how-to-convert-an-openmp-parallel-for-loop-to-use-the-concurrency-runtime.md)
 
 OpenMP を使用する基本的なループを指定された[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)と[の](../../parallel/openmp/reference/for-openmp.md)ディレクティブでは、同時実行ランタイムを使用するように変換する方法を示します[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)アルゴリズム。
 
-[方法: 取り消しを使用して、同時実行ランタイムを使用する OpenMP ループを変換します。](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
+[方法: キャンセル処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that-uses-cancellation.md)<br/>
 OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)ループを実行するすべての反復処理を必要としないが、同時実行ランタイムの取り消し機構を使用するように変換する方法を示します。
 
-[方法: 同時実行ランタイムを使用する例外処理を使用する OpenMP ループを変換します。](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
+[方法: 例外処理を使用する OpenMP ループを変換し、同時実行ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that-uses-exception-handling.md)<br/>
 OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)例外の処理を実行するループが、同時実行ランタイムの例外処理メカニズムを使用するように変換する方法を示します。
 
-[方法: 減少変数を使用して、同時実行ランタイムを使用する OpenMP ループを変換します。](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
+[方法: 減少変数を使用する OpenMP ループを変換し、同時実行ランタイムを使用する](../../parallel/concrt/convert-an-openmp-loop-that-uses-a-reduction-variable.md)<br/>
 OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine.md#parallel)[の](../../parallel/openmp/reference/for-openmp.md)ループを使用する、[削減](../../parallel/openmp/reference/reduction.md)句は、同時実行ランタイムを使用するように変換する方法を示します。
 
 ## <a name="see-also"></a>関連項目
@@ -67,4 +67,3 @@ OpenMP を与え[並列](../../parallel/concrt/how-to-use-parallel-invoke-to-wri
 [OpenMP](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md#openmp)<br/>
 [並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)<br/>
 [非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)
-

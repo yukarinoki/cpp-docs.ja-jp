@@ -7,12 +7,12 @@ f1_keywords:
 - PPL/concurrency::task_group::task_group
 helpviewer_keywords:
 - task_group class
-ms.openlocfilehash: 1ba7251afca80c561bd8861968c35e3242c1507a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 545b368b3042da74a42db5a6ea30e97054d5fd03
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588852"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57294136"
 ---
 # <a name="taskgroup-class"></a>task_group クラス
 
@@ -37,7 +37,7 @@ class task_group;
 
 |名前|説明|
 |----------|-----------------|
-|[キャンセル](#cancel)|このタスク グループをルートとする作業のサブツリーの取り消しを試行する最善の努力は、します。 タスク グループでスケジュールのすべてのタスクはキャンセル推移的に可能な場合。|
+|[cancel](#cancel)|このタスク グループをルートとする作業のサブツリーの取り消しを試行する最善の努力は、します。 タスク グループでスケジュールのすべてのタスクはキャンセル推移的に可能な場合。|
 |[is_canceling](#is_canceling)|かどうか、タスク グループは現在キャンセル中、呼び出し元に通知します。 これは必ずしもを`cancel`でメソッドが呼び出された、`task_group`オブジェクト (もちろんを返すには、このメソッドを修飾などが`true`)。 ケースがある可能性があります`task_group`オブジェクトはインラインで実行し、さらに、タスク グループを作業ツリーが取り消されました。 これらの場所などの場合、ランタイムがキャンセルは、このフローは前もって確認できます`task_group`オブジェクト、`true`も返されます。|
 |[run](#run)|オーバーロードされます。 タスクをスケジュール、`task_group`オブジェクト。 場合、`task_handle`オブジェクトがパラメーターとして渡される`run`の有効期間を管理するため、呼び出し元は、`task_handle`オブジェクト。 バージョンのパラメーターは、可能性のあるランタイム内でヒープ割り当て関数のオブジェクトへの参照を受け取るメソッドへの参照を受け取るバージョンを使用してより適切に機能しないの実行、`task_handle`オブジェクト。 パラメーターを受け取るバージョン`_Placement`タスクがそのパラメーターで指定された場所を実行して重きをさせます。|
 |[run_and_wait](#run_and_wait)|オーバーロードされます。 呼び出し元のコンテキストでのインラインを実行するタスクをスケジュール、`task_group`オブジェクトの完全なキャンセルのサポート。 すべての作業になるまでにその後、関数が待機、`task_group`オブジェクトが完了したか取り消されました。 場合、`task_handle`オブジェクトがパラメーターとして渡される`run_and_wait`の有効期間を管理するため、呼び出し元は、`task_handle`オブジェクト。|
@@ -211,7 +211,7 @@ task_group(
 
 キャンセル トークンを受け取るコンス トラクターを作成、`task_group`ですが、トークンに関連付けられたソースが取り消されたときにキャンセルされます。 別のトークンまたはトークンを設定せずに親グループからの暗黙的なキャンセルに参加している場合は、このタスク グループを分離も、明示的なキャンセル トークンを提供します。
 
-##  <a name="dtor"></a> ~ task_group
+##  <a name="dtor"></a> ~task_group
 
 `task_group` オブジェクトを破棄します。 呼び出すか、予想される、`wait`または`run_and_wait`実行する前に、デストラクター、デストラクターがスタック アンワインドにより例外結果として実行しない限り、オブジェクトのメソッド。
 

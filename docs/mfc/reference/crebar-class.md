@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CReBar [MFC], Create
 - CReBar [MFC], GetReBarCtrl
 ms.assetid: c1ad2720-1d33-4106-8e4e-80aa84f93559
-ms.openlocfilehash: 344886ca4af45d55b85cc7471c1e558d73cbebf6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 4216898e85ebbec748598e10ebb31ce5510f7908
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175887"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267785"
 ---
 # <a name="crebar-class"></a>CReBar クラス
 
@@ -134,7 +134,7 @@ virtual BOOL Create(
 *pParentWnd*<br/>
 ポインター、`CWnd`ステータス バーの親である Windows ウィンドウを持つオブジェクト。 通常、フレーム ウィンドウです。
 
-*ツール バー*<br/>
+*dwCtrlStyle*<br/>
 Rebar コントロールのスタイル。 既定では、RBS_BANDBORDERS rebar コントロール内の隣接するバンドを分離する細い線を表示します。 参照してください[Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)スタイルの一覧については、Windows SDK に含まれています。
 
 *dwStyle*<br/>
@@ -178,4 +178,3 @@ Windows rebar の一般的なコントロール、rebar のカスタマイズで
 [MFC サンプル MFCIE](../../visual-cpp-samples.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

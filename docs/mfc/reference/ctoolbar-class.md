@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CToolBar [MFC], SetHeight
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
-ms.openlocfilehash: 938df6599ca3bfec3e08e77d7a60106133f54324
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: ee1820601f80ed270221b3186188793f7fdcbe08
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178539"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301455"
 ---
 # <a name="ctoolbar-class"></a>CToolBar クラス
 
@@ -74,7 +74,7 @@ class CToolBar : public CControlBar
 |名前|説明|
 |----------|-----------------|
 |[CToolBar::CommandToIndex](#commandtoindex)|指定されたコマンド ID を持つボタンのインデックスを返します|
-|[用意されて](#create)|Windows ツールバーを作成しにアタッチします、`CToolBar`オブジェクト。|
+|[CToolBar::Create](#create)|Windows ツールバーを作成しにアタッチします、`CToolBar`オブジェクト。|
 |[CToolBar::CreateEx](#createex)|作成、 `CToolBar` 、埋め込みの追加のスタイルを使用してオブジェクト`CToolBarCtrl`オブジェクト。|
 |[CToolBar::GetButtonInfo](#getbuttoninfo)|ID、スタイル、およびボタンのイメージ数を取得します。|
 |[CToolBar::GetButtonStyle](#getbuttonstyle)|ボタンのスタイルを取得します。|
@@ -169,14 +169,14 @@ int CommandToIndex(UINT nIDFind) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*始まり*<br/>
+*nIDFind*<br/>
 ツール バー ボタンのコマンド ID。
 
 ### <a name="return-value"></a>戻り値
 
 ボタン、またはボタンに指定されたコマンド ID があるない場合は-1 のインデックス
 
-##  <a name="create"></a>  用意されて
+##  <a name="create"></a>  CToolBar::Create
 
 このメンバー関数は、Windows ツールバー (子ウィンドウ) を作成しに関連付けます、`CToolBar`オブジェクト。
 
@@ -250,7 +250,7 @@ virtual BOOL CreateEx(
 *pParentWnd*<br/>
 ツールバーの親ウィンドウへのポインター。
 
-*ツール バー*<br/>
+*dwCtrlStyle*<br/>
 埋め込まれたを作成するための追加スタイル[CToolBarCtrl](../../mfc/reference/ctoolbarctrl-class.md)オブジェクト。 既定では、この値は TBSTYLE_FLAT に設定します。 ツール バー スタイルの完全な一覧を参照してください。 *dwStyle*します。
 
 *dwStyle*<br/>

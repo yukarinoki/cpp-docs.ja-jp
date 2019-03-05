@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], Refresh
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
-ms.openlocfilehash: 4aa6da49f7d8235e0358f4fd042d3c720521eb0f
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: a08cfff3996d3dce617cf80293a96675083a39d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694206"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302547"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl クラス
 
@@ -299,8 +299,8 @@ virtual int OnCompareItems(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*lParam1*<br/>
-[in]*lParam2*<br/>
+[in] *lParam1*<br/>
+[in] *lParam2*<br/>
 [in]*iColumn*<br/>
 
 ### <a name="return-value"></a>戻り値

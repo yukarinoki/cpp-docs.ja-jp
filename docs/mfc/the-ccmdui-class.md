@@ -10,12 +10,12 @@ helpviewer_keywords:
 - update handlers [MFC]
 - toolbars [MFC], updating
 ms.assetid: 2f2bae62-8c29-45a4-bbce-490eb01907d5
-ms.openlocfilehash: 47ef359f71d9dd30f2ba1ff1c4cf504bccd33ffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8e0af0703924d6fae626d3753b8523efe0c56652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667949"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326624"
 ---
 # <a name="the-ccmdui-class"></a>CCmdUI クラス
 
@@ -27,5 +27,4 @@ ms.locfileid: "50667949"
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス オブジェクトの更新方法](../mfc/how-to-update-user-interface-objects.md)
-
+[方法: ユーザー インターフェイス オブジェクトを更新します。](../mfc/how-to-update-user-interface-objects.md)

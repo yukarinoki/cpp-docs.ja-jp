@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CException [MFC], Delete
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
-ms.openlocfilehash: 53dac18b2ee0176eba0a869a0af254ff2978cffd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562228"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270424"
 ---
 # <a name="cexception-class"></a>CException クラス
 
@@ -180,7 +180,7 @@ virtual int ReportError(
 
 ### <a name="parameters"></a>パラメーター
 
-*%n タイプ*<br/>
+*nType*<br/>
 メッセージ ボックスのスタイルを指定します。 任意の組み合わせを適用、[メッセージ ボックス スタイル](styles-used-by-mfc.md#message-box-styles)します。 このパラメーターを指定しない場合、既定値は MB_OK は。
 
 *nMessageID*<br/>
@@ -231,5 +231,4 @@ else
 [CObject クラス](cobject-class.md)<br/>
 [階層図](../hierarchy-chart.md)<br/>
 [例外処理](exception-processing.md)<br/>
-[方法: 独自のカスタム例外クラスを作成します。](http://go.microsoft.com/fwlink/p/?linkid=128045)
-
+[How Do i:独自のカスタム例外クラスを作成します。](http://go.microsoft.com/fwlink/p/?linkid=128045)

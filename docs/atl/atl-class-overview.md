@@ -7,12 +7,12 @@ helpviewer_keywords:
 - classes [C++], ATL
 - ATL, class reference
 ms.assetid: c38ac93d-c3a2-4ce7-8153-f1d34c0f0fa6
-ms.openlocfilehash: df5ae8da3bb8e192737a06396ab71ba138562b98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d0e74a02a114392a3fc686142f84a9a807d1537
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529668"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288052"
 ---
 # <a name="atl-class-overview"></a>ATL クラスの概要
 
@@ -27,7 +27,7 @@ Active Template Library (ATL) のクラスは、次のように分類できま�
 |[複合コントロール](../atl/composite-controls-classes.md)|[プロパティとプロパティ ページ](../atl/properties-and-property-pages-classes.md)|
 |[接続ポイント](../atl/connection-points-classes.md)|[レジストリのサポート](../atl/registry-support-classes.md)|
 |[コントロール コンテインメント](../atl/control-containment-classes.md)|[オブジェクトの実行](../atl/running-objects-classes.md)|
-|[コントロール: 一般的なサポート](../atl/controls-general-support-classes.md)|[セキュリティ](../atl/security-classes.md)|
+|[コントロール:一般的なサポート](../atl/controls-general-support-classes.md)|[セキュリティ](../atl/security-classes.md)|
 |[データ転送](../atl/data-transfer-classes.md)|[サービス プロバイダーのサポート](../atl/service-provider-support-classes.md)|
 |[データの種類](../atl/data-types-classes.md)|[サイトの情報](../atl/site-information-classes.md)|
 |[デバッグと例外](../atl/debugging-and-exceptions-classes.md)|[文字列とテキスト](../atl/string-and-text-classes.md)|
@@ -48,4 +48,3 @@ ATL プロジェクトで使用できる追加のクラスでは、次を参照�
 [グローバル変数](../atl/reference/atl-global-variables.md)<br/>
 [[マクロ]](../atl/reference/atl-macros.md)<br/>
 [Typedefs](../atl/reference/atl-typedefs.md)
-

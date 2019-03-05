@@ -6,12 +6,12 @@ f1_keywords:
 - amp_graphics/Concurrency::graphics::direct3d::make_sampler
 - amp_graphics/Concurrency::graphics::direct3d::make_texture
 ms.assetid: 11ee1d42-333e-4ae9-95ac-4cf68c06d13d
-ms.openlocfilehash: c19cc8697820c038875d55b41cde61120bda9df7
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 18fb409b033ea14c3a140ea6600fc43cf3a8d603
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518374"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57326089"
 ---
 # <a name="concurrencygraphicsdirect3d-namespace-functions"></a>Concurrency::graphics::direct3d 名前空間関数
 
@@ -150,7 +150,7 @@ inline uint4 msad4(
 
 ### <a name="parameters"></a>パラメーター
 
-*(_R)*<br/>
+*_Reference*<br/>
 1 個の uint 値の 4 バイトの参照配列。
 
 *_Source*<br/>
@@ -167,7 +167,7 @@ inline uint4 msad4(
 
 **ヘッダー:** amp_graphics.h
 
-**Namespace:** Concurrency::graphics::direct3d
+**名前空間:** Concurrency::graphics::direct3d
 
 ## <a name="see-also"></a>関連項目
 

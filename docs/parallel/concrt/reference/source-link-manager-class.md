@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - source_link_manager class
 ms.assetid: 287487cf-e0fe-4c35-aa3c-24f081d1ddae
-ms.openlocfilehash: 881b4f15c7238e69a91def08e5d20ad8955ec4e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4979eaf9065183be646be72cfdd5a94500edf55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295202"
 ---
 # <a name="sourcelinkmanager-class"></a>source_link_manager クラス
 
@@ -56,7 +56,8 @@ class source_link_manager;
 |名前|説明|
 |----------|-----------------|
 |[source_link_manager](#ctor)|`source_link_manager` オブジェクトを構築します。|
-|[~ source_link_manager デストラクター](#dtor)|`source_link_manager` オブジェクトを破棄します。|
+|[~ source_link_manager デストラクター](#dtor)|
+  `source_link_manager` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -213,7 +214,8 @@ source_link_manager();
 
 ##  <a name="dtor"></a> ~source_link_manager
 
-`source_link_manager` オブジェクトを破棄します。
+
+  `source_link_manager` オブジェクトを破棄します。
 
 ```
 ~source_link_manager();

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MFC, document templates
 - templates [MFC], document templates
 ms.assetid: c87f1821-7cbf-442e-9690-f126ae7fb783
-ms.openlocfilehash: f5c0691deab3d475a72cda0e86d681ea0c4ddfa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 85ff6ad47b37d85c812608dbee918f0543730eae
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480172"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271679"
 ---
 # <a name="document-template-creation"></a>ドキュメント テンプレートの作成
 
@@ -31,4 +31,3 @@ ms.locfileid: "50480172"
 [ドキュメント/ビューの作成](../mfc/document-view-creation.md)<br/>
 [各種 MFC オブジェクト間の関係](../mfc/relationships-among-mfc-objects.md)<br/>
 [新しいドキュメント、ウィンドウ、ビューの作成](../mfc/creating-new-documents-windows-and-views.md)
-

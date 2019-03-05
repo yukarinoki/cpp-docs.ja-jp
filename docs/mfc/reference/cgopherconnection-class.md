@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CGopherConnection [MFC], GetAttribute
 - CGopherConnection [MFC], OpenFile
 ms.assetid: b5b96aea-ac99-430e-bd84-d1372b43f78f
-ms.openlocfilehash: f9c2a99c30213a28f4c20ba0f4a2eebea85bef76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d960d566a63531af211592a7a8ae8f1cb35c5958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519666"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300722"
 ---
 # <a name="cgopherconnection-class"></a>CGopherConnection クラス
 
@@ -54,7 +54,7 @@ class CGopherConnection : public CInternetConnection
 
 Gopher サービスでは、MFC WinInet クラスによって認識される 3 つのインターネット サービスの 1 つです。
 
-クラスは、`CGopherConnection`コンス トラクターと gopher サービスを管理する 3 つの追加のメンバー関数が含まれています: [OpenFile](#openfile)、 [CreateLocator](#createlocator)、および[GetAttribute](#getattribute).
+クラスは、`CGopherConnection`コンス トラクターと gopher サービスを管理する 3 つの追加のメンバー関数が含まれています。[OpenFile](#openfile)、 [CreateLocator](#createlocator)、および[GetAttribute](#getattribute)します。
 
 Gopher インターネット サーバーと通信のインスタンスを作成する必要がありますまず[CInternetSession](../../mfc/reference/cinternetsession-class.md)を呼び出して[代わり](../../mfc/reference/cinternetsession-class.md#getgopherconnection)、作成し、 `CGopherConnection`オブジェクトし、ポインターを返します。 作成することはありません、`CGopherConnection`オブジェクトに直接します。
 
@@ -103,7 +103,7 @@ CGopherConnection(
 *pstrServer*<br/>
 FTP サーバーの名前を含む文字列へのポインター。
 
-*独自*<br/>
+*dwContext*<br/>
 操作のコンテキストの識別子。 *独自*によって返される操作の状態情報を識別する[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)します。 既定値を 1 に設定します。ただし、操作の特定のコンテキスト ID を明示的に割り当てることができます。 オブジェクトとその動作はコンテキスト ID に関連付けられる
 
 *pstrUserName*<br/>
@@ -119,7 +119,7 @@ FTP サーバーの名前を含む文字列へのポインター。
 |NULL 以外の文字列が NULL|ERROR|ERROR||
 |NULL 以外の文字列|NULL 以外の文字列|*pstrUserName*|*pstrPassword*|
 
-*ポート*<br/>
+*nPort*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
 ### <a name="remarks"></a>Remarks
@@ -163,7 +163,7 @@ Gopher ドキュメントまたは取得するディレクトリの名前を含�
 *pstrServerName*<br/>
 Gopher サーバー名を含む文字列へのポインター。
 
-*ポート*<br/>
+*nPort*<br/>
 この接続のインターネットのポートを識別する番号。
 
 ### <a name="return-value"></a>戻り値
@@ -224,7 +224,7 @@ INTERNET_FLAG_ * フラグの組み合わせ。 参照してください[でき�
 *pstrView*<br/>
 ファイル ビューの文字列へのポインター。 ファイルのいくつかのビューは、サーバーに存在する場合、このパラメーターを開くには、どのファイル ビューを指定します。 場合*pstrView*が null の場合、既定のファイル ビューを使用します。
 
-*独自*<br/>
+*dwContext*<br/>
 開いているファイルのコンテキスト ID。 参照してください**解説**の詳細については*独自*します。
 
 ### <a name="return-value"></a>戻り値
@@ -233,7 +233,7 @@ INTERNET_FLAG_ * フラグの組み合わせ。 参照してください[でき�
 
 ### <a name="remarks"></a>Remarks
 
-上書き、*独自*の既定値は、独自の値にコンテキスト id を設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CGopherConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+上書き、*独自*の既定値は、独自の値にコンテキスト id を設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CGopherConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ## <a name="see-also"></a>関連項目
 

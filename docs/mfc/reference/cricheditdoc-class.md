@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 8e97b17a3620d75660a5ac2109bc440f8ad27b16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453458"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295137"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc クラス
 
@@ -45,7 +45,7 @@ class CRichEditDoc : public COleServerDoc
 
 |名前|説明|
 |----------|-----------------|
-|[:M_brtf](#m_brtf)|ストリーム入出力が書式設定を含めるかどうかを示します。|
+|[CRichEditDoc::m_bRTF](#m_brtf)|ストリーム入出力が書式設定を含めるかどうかを示します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -136,7 +136,7 @@ virtual CRichEditView* GetView() const;
 
 テキストと書式設定情報内に含まれる、`CRichEditView`オブジェクト。 `CRichEditDoc`オブジェクトはシリアル化のために OLE 項目を保持します。 1 つだけあります`CRichEditView`各`CRichEditDoc`します。
 
-##  <a name="m_brtf"></a>  :M_brtf
+##  <a name="m_brtf"></a>  CRichEditDoc::m_bRTF
 
 TRUE の場合、ことを示します。 [CRichEditCtrl::StreamIn](../../mfc/reference/cricheditctrl-class.md#streamin)と[CRichEditCtrl::StreamOut](../../mfc/reference/cricheditctrl-class.md#streamout)段落と文字書式の特性を格納する必要があります。
 

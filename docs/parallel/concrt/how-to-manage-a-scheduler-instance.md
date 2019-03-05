@@ -5,12 +5,12 @@ helpviewer_keywords:
 - managing a scheduler instance [Concurrency Runtime]
 - scheduler instances, managing [Concurrency Runtime]
 ms.assetid: 2cc804f0-5ff3-498b-97f1-a9f67a005448
-ms.openlocfilehash: d8e79f7c132abd8e43f661f4dc7c7bb758cb2a6d
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: bc7adfaeb4c96245488bbcb5cd70cdae9daf9e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893991"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276164"
 ---
 # <a name="how-to-manage-a-scheduler-instance"></a>方法: スケジューラ インスタンスを管理します。
 
@@ -44,7 +44,8 @@ ms.locfileid: "54893991"
 
 次のコードに、スケジューラ インスタンスを管理するための 2 つの方法を示します。 どちらの例でも、最初に既定のスケジューラを使用して、現在のスケジューラの一意の識別子を印刷するタスクを実行します。 次に、スケジューラ インスタンスを使用して同じタスクを再び実行します。 最後に、既定のスケジューラを現在のスケジューラとして復元した後、もう一度同じタスクを実行します。
 
-最初の例では、 [:currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)スケジューラ インスタンスを作成し、現在のコンテキストに関連付けるクラス。 2 番目の例では、 [concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)クラスを同じタスクを実行します。 通常は、現在のスケジューラを操作するのに `CurrentScheduler` クラスを使用します。 `Scheduler` クラスを使用する 2 つ目の例は、スケジューラを現在のコンテキストに関連付けるタイミングを制御したり、特定のスケジューラを特定のタスクに関連付けたりする場合に有用です。
+最初の例では、 [:currentscheduler](../../parallel/concrt/reference/currentscheduler-class.md)スケジューラ インスタンスを作成し、現在のコンテキストに関連付けるクラス。 2 番目の例では、 [concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)クラスを同じタスクを実行します。 通常は、現在のスケジューラを操作するのに `CurrentScheduler` クラスを使用します。 
+  `Scheduler` クラスを使用する 2 つ目の例は、スケジューラを現在のコンテキストに関連付けるタイミングを制御したり、特定のスケジューラを特定のタスクに関連付けたりする場合に有用です。
 
 [!code-cpp[concrt-scheduler-instance#1](../../parallel/concrt/codesnippet/cpp/how-to-manage-a-scheduler-instance_1.cpp)]
 
@@ -79,4 +80,3 @@ Current scheduler id: 0
 
 [スケジューラ インスタンス](../../parallel/concrt/scheduler-instances.md)<br/>
 [方法: 特定のスケジューラ ポリシーを指定する](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)
-

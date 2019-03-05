@@ -15,12 +15,12 @@ helpviewer_keywords:
 - events [MFC], ActiveX controls
 - MFC ActiveX controls [MFC]
 ms.assetid: c911fb74-3afc-4bf3-a0f5-7922b14d9a1b
-ms.openlocfilehash: 10ad0645e873a1a745168be9b839bbf97a1c05a6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: a33273c46562e8beba12910702d9ddc1a092575d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52174876"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262611"
 ---
 # <a name="mfc-activex-controls"></a>MFC ActiveX コントロール
 
@@ -42,7 +42,7 @@ ActiveX コントロールは、インプロセス サーバー (通常は小さ
 ![ActiveX コントロール コンテナーとコントロールの相互作用](../mfc/media/vc37221.gif "相互作用の ActiveX コントロール コンテナーとコントロール") <br/>
 ActiveX コントロール コンテナーとウィンドウを持つ ActiveX コントロールとの対話
 
-ActiveX コントロールの最適化についてのいくつか最近は、次を参照してください。 [MFC ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)します。
+ActiveX コントロールの最適化についてのいくつか最近は、次を参照してください。 [MFC ActiveX コントロール。最適化](../mfc/mfc-activex-controls-optimization.md)します。
 
 MFC ActiveX コントロールを作成するを参照してください。 [ActiveX コントロール プロジェクトを作成する](../mfc/reference/mfc-activex-control-wizard.md)します。
 
@@ -62,9 +62,9 @@ ActiveX コントロールは複数のプログラム要素を使用して、コ
 
 独自に開発するすべての ActiveX コントロール オブジェクトは、MFC 基底クラス `COleControl` から強力な機能セットを継承します。 これらの機能には、埋め込み先でのアクティブ化機能と、オートメーション ロジックが含まれています。 `COleControl` はコントロール オブジェクトに対して、MFC ウィンドウ オブジェクトと同じ機能、およびイベント発生機能を提供できます。 `COleControl` 指定できます[ウィンドウなしのコントロール](../mfc/providing-windowless-activation.md)ウィンドウのヘルプ機能の一部をそのコンテナーに依存するは、(マウスのキャプチャ、キーボード フォーカス、スクロール) がはるかに高速の表示を提供します。
 
-コントロール クラスは `COleControl` から派生するため、特定の条件が満たされている場合は、コントロール コンテナーに対して、イベントとも呼ばれるメッセージを送信、つまり "発生させる" 機能を継承します。 これらのイベントは、コントロール内で重要な動作が発生したときにそのことをコントロール コンテナーに通知するために使用されます。 イベントにパラメーターをアタッチして、イベントに関する追加情報をコントロール コンテナーに送信することもできます。 ActiveX コントロールのイベントの詳細については、記事を参照してください。 [MFC ActiveX コントロール: イベント](../mfc/mfc-activex-controls-events.md)します。
+コントロール クラスは `COleControl` から派生するため、特定の条件が満たされている場合は、コントロール コンテナーに対して、イベントとも呼ばれるメッセージを送信、つまり "発生させる" 機能を継承します。 これらのイベントは、コントロール内で重要な動作が発生したときにそのことをコントロール コンテナーに通知するために使用されます。 イベントにパラメーターをアタッチして、イベントに関する追加情報をコントロール コンテナーに送信することもできます。 ActiveX コントロールのイベントの詳細については、記事を参照してください。 [MFC ActiveX コントロール。イベント](../mfc/mfc-activex-controls-events.md)します。
 
-最後の要素はコントロール ユーザーに対して一連の関数 (メソッド) と属性 (プロパティ) を公開するために使用されるディスパッチ マップです。 プロパティを使用すると、コントロール コンテナーまたはコントロール ユーザーがさまざまな方法でコントロールを操作できます。 ユーザーはコントロールの外観の変更、コントロールの特定の値の変更、コントロールが維持する特定のデータへのアクセスなど、コントロールに対する要求を実行することもできます。 このインターフェイスは、コントロールの開発者によって決定されを使用して定義**クラス ビュー**します。 ActiveX コントロールのメソッドとプロパティの詳細については、記事をご覧ください。 [MFC ActiveX コントロール: メソッド](../mfc/mfc-activex-controls-methods.md)と[プロパティ](../mfc/mfc-activex-controls-properties.md)します。
+最後の要素はコントロール ユーザーに対して一連の関数 (メソッド) と属性 (プロパティ) を公開するために使用されるディスパッチ マップです。 プロパティを使用すると、コントロール コンテナーまたはコントロール ユーザーがさまざまな方法でコントロールを操作できます。 ユーザーはコントロールの外観の変更、コントロールの特定の値の変更、コントロールが維持する特定のデータへのアクセスなど、コントロールに対する要求を実行することもできます。 このインターフェイスは、コントロールの開発者によって決定されを使用して定義**クラス ビュー**します。 ActiveX コントロールのメソッドとプロパティの詳細については、記事をご覧ください。 [MFC ActiveX コントロール。メソッド](../mfc/mfc-activex-controls-methods.md)と[プロパティ](../mfc/mfc-activex-controls-properties.md)します。
 
 ##  <a name="_core_interaction_between_controls_with_windows_and_activex_control_containers"></a> Windows のコントロールおよび ActiveX コントロール コンテナー間の相互作用
 
@@ -92,7 +92,7 @@ ActiveX コントロール コンテナーと ActiveX コントロールとの�
 
 永続化とも呼ばれるデータのシリアル化機能により、コントロールは自らのプロパティの値を永続ストレージに書き込むことができます。 その後、ストレージからオブジェクトの状態を読み取ることで、コントロールを再作成できます。
 
-コントロールは、ストレージ メディアにアクセスする役割を果たさないことに注意してください。 代わりに、適切なときに使用できるように、コントロール コンテナーがストレージ メディアをコントロールに提供する役割を果たします。 シリアル化の詳細については、記事を参照してください。 [MFC ActiveX コントロール: シリアル化する](../mfc/mfc-activex-controls-serializing.md)します。 シリアル化を最適化する方法の詳細については、次を参照してください。[を最適化する永続化と初期化](../mfc/optimizing-persistence-and-initialization.md)で ActiveX コントロール: 最適化します。
+コントロールは、ストレージ メディアにアクセスする役割を果たさないことに注意してください。 代わりに、適切なときに使用できるように、コントロール コンテナーがストレージ メディアをコントロールに提供する役割を果たします。 シリアル化の詳細については、記事を参照してください。 [MFC ActiveX コントロール。シリアル化する](../mfc/mfc-activex-controls-serializing.md)します。 シリアル化を最適化する方法の詳細については、次を参照してください。[を最適化する永続化と初期化](../mfc/optimizing-persistence-and-initialization.md)で ActiveX コントロール。最適化します。
 
 ##  <a name="_core_installing_activex_control_classes_and_tools"></a> ActiveX コントロール クラスとツールのインストール
 
@@ -116,7 +116,7 @@ Visual C++ をインストールするときに、セットアップで ActiveX 
 
    MFC を使用して ActiveX コントロールを開発するために必要なライブラリを格納します。
 
-また、MFC ActiveX コントロール用のサンプルもあります。 これらのサンプルの詳細については、次を参照してください[コントロールのサンプル: MFC-Based ActiveX コントロール。](../visual-cpp-samples.md)
+また、MFC ActiveX コントロール用のサンプルもあります。 これらのサンプルの詳細については、次を参照してください。[コントロールのサンプル。MFC ベースの ActiveX コントロール](../visual-cpp-samples.md)
 
 ## <a name="see-also"></a>関連項目
 

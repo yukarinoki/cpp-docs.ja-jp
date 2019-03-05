@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: ec5b6692197dc224f503be050a537e6fa265f6d5
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694661"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275234"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton クラス
 
@@ -183,7 +183,8 @@ class CMFCToolBarButton : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|`CMFCToolBarButton` オブジェクトを構築して初期化します。|
+|[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|
+  `CMFCToolBarButton` オブジェクトを構築して初期化します。|
 |`CMFCToolBarButton::~CMFCToolBarButton`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -365,7 +366,8 @@ virtual BOOL CanBeStretched() const;
 
 ##  <a name="cmfctoolbarbutton"></a>  CMFCToolBarButton::CMFCToolBarButton
 
-`CMFCToolBarButton` オブジェクトを構築して初期化します。
+
+  `CMFCToolBarButton` オブジェクトを構築して初期化します。
 
 ```
 CMFCToolBarButton(
@@ -390,7 +392,7 @@ CMFCToolBarButton(
 *bUserButton*<br/>
 [in]ボタンがユーザー定義かどうかを判断するブール値。 このパラメーターが TRUE の場合は、ボタンがユーザー定義します。 それ以外の場合、ボタンのイメージは、リソースから読み込まれます。
 
-*ブロックされています。*<br/>
+*bLocked*<br/>
 [in]ボタンをカスタマイズできるかどうかを決定するブール値。 このパラメーターが TRUE の場合、ボタンをカスタマイズできません。 それ以外の場合、ボタンをカスタマイズできます。
 
 ##  <a name="comparewith"></a>  CMFCToolBarButton::CompareWith
@@ -1201,7 +1203,7 @@ virtual BOOL OnContextHelp(CWnd* pWnd);
 
 このメソッドの既定の実装では、何も行われませんし、FALSE を返します。 ボタンは、ヘルプ メッセージを処理する場合は、0 以外の値を返すには、このメソッドをオーバーライドします。
 
-領域のメッセージの詳細については、次を参照してください。 [TN028: 状況依存ヘルプ サポート](../../mfc/tn028-context-sensitive-help-support.md)します。
+領域のメッセージの詳細については、次を参照してください[TN028:。状況依存のヘルプのサポート](../../mfc/tn028-context-sensitive-help-support.md)します。
 
 ##  <a name="onctlcolor"></a>  CMFCToolBarButton::OnCtlColor
 
@@ -1218,7 +1220,7 @@ virtual HBRUSH OnCtlColor(
 *pDC*<br/>
 [in]ボタンを表示するデバイス コンテキスト。
 
-*ため*<br/>
+*nCtlColor*<br/>
 [in]特定の色の通知。
 
 ### <a name="return-value"></a>戻り値
@@ -1582,7 +1584,7 @@ virtual void Serialize(CArchive& ar);
 
 このメソッドは、クリップボードまたはドラッグ アンド ドロップ操作などのデータ転送プロセスをサポートします。 読み取るか、または、提供された ID、テキスト ラベル、およびイメージの ID などのボタンのプロパティに書き込みます`CArchive`オブジェクト。
 
-シリアル化の例については、次を参照してください。[シリアル化: オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
+シリアル化の例については、次を参照してください。[シリアル化します。オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 

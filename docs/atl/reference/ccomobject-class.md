@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComObject class
 ms.assetid: e2b6433b-6349-4749-b4bc-acbd7a22c8b0
-ms.openlocfilehash: 57c054915ce98dd8cff6bb772cdd40f4b0f2b768
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 045292e4d06b1e86e991a755b267660b72a178da
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660474"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299557"
 ---
 # <a name="ccomobject-class"></a>CComObject クラス
 
@@ -42,7 +42,7 @@ class CComObject : public Base
 |名前|説明|
 |----------|-----------------|
 |[CComObject::CComObject](#ccomobject)|コンストラクターです。|
-|[CComObject:: ~ CComObject](#dtor)|デストラクターです。|
+|[CComObject::~CComObject](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -100,7 +100,7 @@ CComObject(void* = NULL);
 
 場合、 `CComObject`-を使用して派生オブジェクトが正常に作成、**新しい**オペレーターは、初期の参照カウントが 0 です。 参照カウントを適切な値 (1) を設定するへの呼び出しを行い、 [AddRef](#addref)関数。
 
-##  <a name="dtor"></a>  CComObject:: ~ CComObject
+##  <a name="dtor"></a>  CComObject::~CComObject
 
 デストラクターです。
 

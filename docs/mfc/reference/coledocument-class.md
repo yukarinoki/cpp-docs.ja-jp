@@ -52,12 +52,12 @@ helpviewer_keywords:
 - COleDocument [MFC], OnUpdatePasteLinkMenu
 - COleDocument [MFC], OnUpdatePasteMenu
 ms.assetid: dc2ecb99-03e1-44c7-bb69-48056dd1b672
-ms.openlocfilehash: 2f28178240f7d17e124970d91ec7eb338ef110e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f36557a4a993e8abd3004dc59372cc5a089e044
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452153"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259751"
 ---
 # <a name="coledocument-class"></a>COleDocument クラス
 
@@ -117,7 +117,7 @@ class COleDocument : public CDocument
 
 単純なコンテナー アプリケーションを作成する場合からドキュメント クラスを派生`COleDocument`します。 ドキュメントが含まれている埋め込みアイテムへのリンクをサポートするコンテナー アプリケーションを作成する場合からドキュメント クラスを派生[COleLinkingDoc](../../mfc/reference/colelinkingdoc-class.md)します。 作成する場合、サーバー アプリケーションまたは組み合わせのコンテナー/サーバーからドキュメント クラスを派生[COleServerDoc](../../mfc/reference/coleserverdoc-class.md)します。 `COleLinkingDoc` `COleServerDoc`から派生`COleDocument`これらのクラスで利用できるすべてのサービスを継承するので、`COleDocument`と`CDocument`します。
 
-使用する`COleDocument`、そこから派生クラスを作成およびアプリケーションの非 OLE データだけでなく埋め込みまたはリンクされた項目を管理する機能を追加します。 定義する場合`CDocItem`-アプリケーションのネイティブ データを格納するクラスの派生によって定義された既定の実装を使用する`COleDocument`OLE と非 OLE データの両方を格納します。 OLE 項目から個別に非 OLE データを格納するための独自のデータ構造を設計することもできます。 詳細については、記事を参照してください[コンテナー: 複合ファイル](../../mfc/containers-compound-files.md)..
+使用する`COleDocument`、そこから派生クラスを作成およびアプリケーションの非 OLE データだけでなく埋め込みまたはリンクされた項目を管理する機能を追加します。 定義する場合`CDocItem`-アプリケーションのネイティブ データを格納するクラスの派生によって定義された既定の実装を使用する`COleDocument`OLE と非 OLE データの両方を格納します。 OLE 項目から個別に非 OLE データを格納するための独自のデータ構造を設計することもできます。 詳細については、この記事を参照してください。[コンテナー。複合ファイル](../../mfc/containers-compound-files.md).
 
 `CDocument` サポート メール サポート (MAPI) が存在する場合にメールを使ってドキュメントを送信します。 `COleDocument` 更新が[OnFileSendMail](#onfilesendmail)複合ドキュメントを正しく処理します。 詳細については、記事を参照してください[MAPI](../../mfc/mapi.md)と[MFC での MAPI サポート](../../mfc/mapi-support-in-mfc.md)..
 
@@ -206,7 +206,7 @@ void EnableCompoundFile(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-これは構造化ストレージとも呼ばれます。 通常のコンス トラクターからこの関数を呼び出す、 `COleDocument`-クラスを派生します。 複合ドキュメントの詳細については、記事を参照してください[コンテナー: 複合ファイル](../../mfc/containers-compound-files.md)..
+これは構造化ストレージとも呼ばれます。 通常のコンス トラクターからこの関数を呼び出す、 `COleDocument`-クラスを派生します。 複合ドキュメントの詳細については、記事を参照してください。[コンテナー。複合ファイル](../../mfc/containers-compound-files.md).
 
 このメンバー関数を呼び出さない場合は、構造化されていない (「フラット」) ファイル形式でドキュメントに格納されています。
 
@@ -438,7 +438,7 @@ afx_msg void OnUpdateEditChangeIcon(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 ポインター、 `CCmdUI` update コマンドが生成されるメニューを表す構造体です。 更新ハンドラーは、`Enable`のメンバー関数、`CCmdUI`を通じて構造体*対応付けられた*ユーザー インターフェイスを更新します。
 
 ### <a name="remarks"></a>Remarks
@@ -455,7 +455,7 @@ afx_msg void OnUpdateEditLinksMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 ポインター、 `CCmdUI` update コマンドが生成されるメニューを表す構造体です。 更新ハンドラーは、`Enable`のメンバー関数、`CCmdUI`を通じて構造体*対応付けられた*ユーザー インターフェイスを更新します。
 
 ### <a name="remarks"></a>Remarks
@@ -472,7 +472,7 @@ afx_msg void OnUpdateObjectVerbMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 ポインター、 `CCmdUI` update コマンドが生成されるメニューを表す構造体です。 更新ハンドラーは、`Enable`のメンバー関数、`CCmdUI`を通じて構造体*対応付けられた*ユーザー インターフェイスを更新します。
 
 ### <a name="remarks"></a>Remarks
@@ -489,7 +489,7 @@ afx_msg void OnUpdatePasteLinkMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 ポインター、 `CCmdUI` update コマンドが生成されるメニューを表す構造体です。 更新ハンドラーは、`Enable`のメンバー関数、`CCmdUI`を通じて構造体*対応付けられた*ユーザー インターフェイスを更新します。
 
 ### <a name="remarks"></a>Remarks
@@ -506,7 +506,7 @@ afx_msg void OnUpdatePasteMenu(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 ポインター、 `CCmdUI` update コマンドが生成されるメニューを表す構造体です。 更新ハンドラーは、`Enable`のメンバー関数、`CCmdUI`を通じて構造体*対応付けられた*ユーザー インターフェイスを更新します。
 
 ### <a name="remarks"></a>Remarks
@@ -548,4 +548,3 @@ virtual void UpdateModifiedFlag();
 [MFC サンプル MFCBIND](../../visual-cpp-samples.md)<br/>
 [CDocument クラス](../../mfc/reference/cdocument-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

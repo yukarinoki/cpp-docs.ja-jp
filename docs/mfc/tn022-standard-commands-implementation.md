@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 22: 標準コマンドの実装'
+title: TN022:標準コマンドの実装
 ms.date: 11/04/2016
 f1_keywords:
 - vc.commands
@@ -59,14 +59,14 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 0f79aaaf59f12e226220e51681f64d0bf1131303
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504339"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57279362"
 ---
-# <a name="tn022-standard-commands-implementation"></a>テクニカル ノート 22: 標準コマンドの実装
+# <a name="tn022-standard-commands-implementation"></a>TN022:標準コマンドの実装
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -468,30 +468,29 @@ MFC の標準的なコマンドは、範囲 0 xefff に 0xE000 に収まりま�
 
 いくつかの標準コマンド Id は、ステータス バーのインジケーターとして使用されます。 これらを使用して同じ処理機構の更新コマンド UI アプリケーションのアイドル時間中に、現在の状態を表示します。 ユーザーが選択できないので (つまり、ステータス バー ペインをプッシュできません、) これらのコマンド Id、ON_COMMAND ハンドラーを指定しても意味ができなくなります。
 
-- ID_INDICATOR_CAPS: CAP ロック インジケーター。
+- ID_INDICATOR_CAPS:CAP ロック インジケーター。
 
-- ID_INDICATOR_NUM: NUM lock インジケーター。
+- ID_INDICATOR_NUM:NUM lock インジケーター。
 
-- ID_INDICATOR_SCRL: SCRL ロック インジケーター。
+- ID_INDICATOR_SCRL:SCRL ロック インジケーター。
 
-- ID_INDICATOR_KANA: かなロック インジケーター (日本語のシステムにのみ該当する場合)。
+- ID_INDICATOR_KANA:ひらがなは、インジケーター (日本語のシステムにのみ適用) をロックします。
 
 これらの 3 つすべてがで実装された`CFrameWnd::OnUpdateKeyIndicator`、コマンド ID を使用して、適切な仮想キーにマップする実装ヘルパー。 一般的な実装を有効または無効にします (状態のペインが無効になっている = なしテキスト)、`CCmdUI`仮想キーが現在ロックされているかどうかに依存するオブジェクト。
 
 このコマンド ハンドラーのカスタマイズは推奨されません。
 
-- ID_INDICATOR_EXT: 拡張選択インジケーター。
+- ID_INDICATOR_EXT :拡張選択インジケーター。
 
-- ID_INDICATOR_OVR: 上書きインジケーター。
+- ID_INDICATOR_OVR:上書きインジケーター。
 
-- ID_INDICATOR_REC: は、インジケーターを記録します。
+- ID_INDICATOR_REC:録画のインジケーター。
 
 現在これらのインジケーターの標準の実装ではありません。
 
-これらのインジケーターの Id と、ステータス バー、インジケーターの順序を使用するをお勧めこれらのインジケーターを実装するために選択した場合 (つまり、この順序で: EXT、CAP、NUM、SCRL、上書、推奨値)。
+これらのインジケーターの Id と、ステータス バー、インジケーターの順序を使用するをお勧めこれらのインジケーターを実装するために選択した場合 (つまり、この順序で。EXT、CAP、NUM、SCRL、上書、推奨値)。
 
 ## <a name="see-also"></a>関連項目
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-
