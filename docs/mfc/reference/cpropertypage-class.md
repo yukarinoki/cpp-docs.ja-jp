@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPropertyPage [MFC], SetModified
 - CPropertyPage [MFC], m_psp
 ms.assetid: d9000a21-aa81-4530-85d9-f43432afb4dc
-ms.openlocfilehash: 1816e6ee2dc0f358cb2da4c8bab572daa33a29c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef46001e230813afb0abb857b7aee39bf5fba05d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561240"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260752"
 ---
 # <a name="cpropertypage-class"></a>CPropertyPage クラス
 
@@ -75,7 +75,7 @@ class CPropertyPage : public CDialog
 |[CPropertyPage::OnApply](#onapply)|今すぐ適用 ボタンがクリックされたときに、フレームワークによって呼び出されます。|
 |[CPropertyPage::OnCancel](#oncancel)|[キャンセル] ボタンがクリックされたときに、フレームワークによって呼び出されます。|
 |[CPropertyPage::OnKillActive](#onkillactive)|現在のページがアクティブでなくなったときに、フレームワークによって呼び出されます。 ここでデータの検証を実行します。|
-|[送るに](#onok)|Ok、今すぐ適用または 閉じる ボタンがクリックされたときに、フレームワークによって呼び出されます。|
+|[CPropertyPage::OnOK](#onok)|Ok、今すぐ適用または 閉じる ボタンがクリックされたときに、フレームワークによって呼び出されます。|
 |[CPropertyPage::OnQueryCancel](#onquerycancel)|キャンセルが行われる前に、[キャンセル] ボタンがクリックされたときに、フレームワークによって呼び出されます。|
 |[CPropertyPage::OnReset](#onreset)|[キャンセル] ボタンがクリックされたときに、フレームワークによって呼び出されます。|
 |[CPropertyPage::OnSetActive](#onsetactive)|ページには、アクティブなページが行われたときに、フレームワークによって呼び出されます。|
@@ -234,7 +234,7 @@ CPropertyPage(
 *nIDCaption*<br/>
 このページのタブに配置する名前の ID。 0 の場合は、このページのダイアログ テンプレートから、名前を取得します。
 
-*ない dwSize*<br/>
+*dwSize*<br/>
 *lpszTemplateName*このページのテンプレートの名前を含む文字列を指します。 Nll は指定できません。
 
 *nIDHeaderTitle*<br/>
@@ -357,7 +357,7 @@ virtual BOOL OnKillActive();
 
 [!code-cpp[NVC_MFCDocView#115](../../mfc/codesnippet/cpp/cpropertypage-class_5.cpp)]
 
-##  <a name="onok"></a>  送るに
+##  <a name="onok"></a>  CPropertyPage::OnOK
 
 ユーザーが framework 呼び出しの直後に、[ok] または [今すぐ適用] ボタンのいずれかに、このメンバー関数が、フレームワークによって呼び出されます[OnKillActive](#onkillactive)します。
 

@@ -73,12 +73,12 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetTextAlign
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
-ms.openlocfilehash: 094b91bb730f125ee3a159c80626a8724c10f93e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1a8f601c9f5798494ee34d3c3987222c14ecfa7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578907"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292192"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit クラス
 
@@ -106,7 +106,8 @@ class CMFCRibbonEdit : public CMFCRibbonButton
 |[CMFCRibbonEdit::CMFCRibbonEdit](#cmfcribbonedit)|`CMFCRibbonEdit` オブジェクトを構築します。|
 |[CMFCRibbonEdit::CopyFrom](#copyfrom)|指定した状態をコピー`CMFCRibbonEdit`現在オブジェクト`CMFCRibbonEdit`オブジェクト。|
 |[CMFCRibbonEdit::CreateEdit](#createedit)|新しいテキスト ボックスを作成、`CMFCRibbonEdit`オブジェクト。|
-|[CMFCRibbonEdit::DestroyCtrl](#destroyctrl)|`CMFCRibbonEdit` オブジェクトを破棄します。|
+|[CMFCRibbonEdit::DestroyCtrl](#destroyctrl)|
+  `CMFCRibbonEdit` オブジェクトを破棄します。|
 |[CMFCRibbonEdit::DropDownList](#dropdownlist)|リスト ボックスの一覧を削除します。|
 |[CMFCRibbonEdit::EnableSpinButtons](#enablespinbuttons)|有効にし、テキスト ボックスのスピン ボタンの範囲を設定します。|
 |[CMFCRibbonEdit::GetCompactSize](#getcompactsize)|コンパクト サイズを取得、`CFMCRibbonEdit`オブジェクト。|
@@ -187,7 +188,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in]ラベル、`CMFCRibbonEdit`コントロール。
 
-*あり*<br/>
+*nImage*<br/>
 [in]使用する小さいイメージのインデックス、`CMFCRibbonEdit`コントロール。 小さいイメージのコレクションは、親のリボン カテゴリによって管理されます。
 
 ### <a name="remarks"></a>Remarks

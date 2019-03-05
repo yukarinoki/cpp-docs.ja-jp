@@ -9,19 +9,19 @@ helpviewer_keywords:
 - parallel work trees [Concurrency Runtime]
 - canceling parallel tasks [Concurrency Runtime]
 ms.assetid: baaef417-b2f9-470e-b8bd-9ed890725b35
-ms.openlocfilehash: 1cb5404ff8c18492b940f7396ab4c8f4154d69e6
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: fae45e04d8b573cca29cc31403a39fc7ee53cc6a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177018"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271737"
 ---
 # <a name="cancellation-in-the-ppl"></a>PPL における取り消し処理
 
 このドキュメントでは、並列パターン ライブラリ (PPL: Parallel Patterns Library) での取り消し処理の役割、並列処理を取り消す方法、および並列処理の取り消しを判定する方法について説明します。
 
 > [!NOTE]
->  ランタイムは例外処理を使用して取り消し処理を実装します。 これらの例外をコードでキャッチまたは処理しないでください。 さらに、タスクの関数本体では例外セーフなコードを作成することをお勧めします。 たとえば、使用することができます、 *Resource Acquisition Is Initialization* (RAII) パターンをリソースのタスクの本体で例外がスローされたときに正しく処理されることを確認します。 RAII パターンを使用して、キャンセル可能なタスクでリソースをクリーンアップする完全な例を参照してください。[チュートリアル: ユーザー インターフェイス スレッドからの処理の除去](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)します。
+>  ランタイムは例外処理を使用して取り消し処理を実装します。 これらの例外をコードでキャッチまたは処理しないでください。 さらに、タスクの関数本体では例外セーフなコードを作成することをお勧めします。 たとえば、使用することができます、 *Resource Acquisition Is Initialization* (RAII) パターンをリソースのタスクの本体で例外がスローされたときに正しく処理されることを確認します。 RAII パターンを使用して、キャンセル可能なタスクでリソースをクリーンアップする完全な例を参照してください。[チュートリアル。ユーザー インターフェイス スレッドからの処理の除去](../../parallel/concrt/walkthrough-removing-work-from-a-user-interface-thread.md)します。
 
 ## <a name="key-points"></a>主要なポイント
 
@@ -31,7 +31,7 @@ ms.locfileid: "52177018"
 
 - キャンセル トークンを使用するときに使用して、 [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel)取り消し処理を開始するメソッドと[concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)に応答する関数キャンセルします。 使用して、 [concurrency::cancellation_token::is_canceled](reference/cancellation-token-class.md#is_canceled)他のタスクがキャンセルを要求したかどうかを確認する方法。
 
-- キャンセルは即座には発生しません。 タスクまたはタスク グループが取り消される場合、新しい処理は開始されませんが、アクティブな処理は取り消し状態をチェックし、取り消し処理に応答する必要があります。
+- 取り消し処理はすぐに実行されません。 タスクまたはタスク グループが取り消される場合、新しい処理は開始されませんが、アクティブな処理は取り消し状態をチェックし、取り消し処理に応答する必要があります。
 
 - 値ベースの継続は、継続元タスクのキャンセル トークンを継承します。 タスク ベースの継続は、継続元タスクのトークンを継承しません。
 
@@ -63,7 +63,8 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 [!code-cpp[concrt-task-tree#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_1.cpp)]
 
-使用することも、 [concurrency::task_group](reference/task-group-class.md)同様の処理ツリーを作成するクラス。 [Concurrency::task](../../parallel/concrt/reference/task-class.md)クラスには、処理ツリーの概念もサポートしています。 ただし、`task` ツリーは依存ツリーです。 `task` ツリーでは、将来の処理は現在の処理の後に完了します。 タスク グループ ツリーでは、内部処理は外部処理の前に完了します。 タスクとタスク グループの違いの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+使用することも、 [concurrency::task_group](reference/task-group-class.md)同様の処理ツリーを作成するクラス。 [Concurrency::task](../../parallel/concrt/reference/task-class.md)クラスには、処理ツリーの概念もサポートしています。 ただし、`task` ツリーは依存ツリーです。 
+  `task` ツリーでは、将来の処理は現在の処理の後に完了します。 タスク グループ ツリーでは、内部処理は外部処理の前に完了します。 タスクとタスク グループの違いの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 
 [[トップ](#top)]
 
@@ -71,28 +72,31 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 並列処理を取り消すには複数の方法があります。 推奨する方法は、キャンセル トークンを使用する方法です。 また、タスクにグループのサポート、 [concurrency::task_group::cancel](reference/task-group-class.md#cancel)メソッドと[::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)メソッド。 最後の方法は、タスクの処理関数の本体で例外をスローする方法です。 どの方法を選択した場合でも、取り消し処理はすぐに実行されません。 タスクまたはタスク グループが取り消される場合、新しい処理は開始されませんが、アクティブな処理は取り消し状態をチェックし、取り消し処理に応答する必要があります。
 
-並列タスクの取り消しの詳細については、次を参照してください[チュートリアル: を使用してタスクの接続および XML HTTP 要求](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)、[方法: 並列ループから Break を使用してキャンセル](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)、および[方法: 使用。並列ループから処理を中断する例外](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)します。
+並列タスクの取り消しの詳細については、次を参照してください。[チュートリアル。タスクおよび XML HTTP 要求を使用して接続](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)、[方法。取り消しを使用して並列ループを中断する](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)、および[方法。並列ループから処理を中断する例外を使用して](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)します。
 
 ###  <a name="tokens"></a> キャンセル トークンを使用して並列処理の取り消し
 
-`task`、`task_group`、および `structured_task_group` の各クラスでは、キャンセル トークンを使用した取り消し処理をサポートしています。 PPL の定義、 [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)と[concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)この目的のためのクラス。 作業を取り消すためにキャンセル トークンを使用すると、ランタイムはそのトークンをサブスクライブする新しい作業を開始しません。 既にアクティブな作業に使用できる、 [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled)メンバー関数にキャンセル トークンを監視し、可能なときに終了します。
+
+  `task`、`task_group`、および `structured_task_group` の各クラスでは、キャンセル トークンを使用した取り消し処理をサポートしています。 PPL の定義、 [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)と[concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)この目的のためのクラス。 作業を取り消すためにキャンセル トークンを使用すると、ランタイムはそのトークンをサブスクライブする新しい作業を開始しません。 既にアクティブな作業に使用できる、 [is_canceled](../../parallel/concrt/reference/cancellation-token-class.md#is_canceled)メンバー関数にキャンセル トークンを監視し、可能なときに終了します。
 
 取り消し処理を開始するを呼び出して、 [concurrency::cancellation_token_source::cancel](reference/cancellation-token-source-class.md#cancel)メソッド。 次の方法で取り消し処理に応答します。
 
 - `task` 、オブジェクトを使用して、 [concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)関数。 `cancel_current_task` が現在のタスクとすべての値ベースの継続を取り消します (取り消し操作は取り消されません*トークン*タスクまたはその継続に関連付けられている)。
 
-- タスク グループと並列アルゴリズムでは、使用して、 [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)キャンセルを検出し、この関数によって返されるときにタスクの本体から直ちにを返す関数を**は true。**. (タスク グループから `cancel_current_task` を呼び出さないでください)。
+- タスク グループと並列アルゴリズムでは、使用して、 [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)キャンセルを検出し、この関数によって返されるときにタスクの本体から直ちにを返す関数を**は true**. (タスク グループから `cancel_current_task` を呼び出さないでください)。
 
 次の例では、タスク取り消し処理の最初の基本的なパターンを示しています。 タスクの本体は、ループ内の取り消し状態を適宜チェックします。
 
 [!code-cpp[concrt-task-basic-cancellation#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_2.cpp)]
 
-`cancel_current_task` 関数がスローします。したがって、現在のループまたは関数から明示的に戻る必要はありません。
+
+  `cancel_current_task` 関数がスローします。したがって、現在のループまたは関数から明示的に戻る必要はありません。
 
 > [!TIP]
 > 代わりに、呼び出すことができます、 [concurrency::interruption_point](reference/concurrency-namespace-functions.md#interruption_point)関数の代わりに`cancel_current_task`します。
 
-取り消し処理に応答するときは `cancel_current_task` を呼び出すことが重要です。この関数によって、タスクが取り消し状態に遷移します。 `cancel_current_task` を呼び出さずに早期に戻った場合、操作は完了状態に遷移し、すべての値ベースの継続が実行されます。
+取り消し処理に応答するときは `cancel_current_task` を呼び出すことが重要です。この関数によって、タスクが取り消し状態に遷移します。 
+  `cancel_current_task` を呼び出さずに早期に戻った場合、操作は完了状態に遷移し、すべての値ベースの継続が実行されます。
 
 > [!CAUTION]
 > コードから `task_canceled` をスローしないでください。 代わりに `cancel_current_task` を呼び出してください。
@@ -136,7 +140,9 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 キャンセル トークンを `when_all` 関数または `when_any` 関数に指定すると、その関数は、そのキャンセル トークンが取り消されたとき、または参加タスクの 1 つが取り消し状態になるか例外をスローしたときにのみ取り消します。
 
-`when_all` 関数にキャンセル トークンを指定していない場合、この関数は、操作全体を構成する各タスクからキャンセル トークンを継承します。 `when_all` から返されるタスクは、これらのトークンのいずれかが取り消され、1 つ以上の参加タスクがまだ開始されていないか実行中のときに取り消されます。 同様の動作は、タスクのいずれかの例外をスローします - タスクから返されるときに発生します。`when_all`その例外はすぐに取り消されます。
+
+  `when_all` 関数にキャンセル トークンを指定していない場合、この関数は、操作全体を構成する各タスクからキャンセル トークンを継承します。 
+  `when_all` から返されるタスクは、これらのトークンのいずれかが取り消され、1 つ以上の参加タスクがまだ開始されていないか実行中のときに取り消されます。 同様の動作は、タスクのいずれかの例外をスローします - タスクから返されるときに発生します。`when_all`その例外はすぐに取り消されます。
 
 ランタイムは、タスクが完了したときに `when_any` 関数から返されるタスクのキャンセル トークンを選択します。 完了状態になった参加タスクがなく、1 つまたは複数のタスクが例外をスローした場合、スローしたタスクの 1 つが `when_any` を完了するために選択され、そのトークンが最後のタスクのトークンとして選択されます。 複数のタスクが完了状態になった場合、`when_any` タスクから返されるタスクは、完了状態になります。 ランタイムは、他の実行中のタスクが後で完了する可能性がある場合でも、`when_any` から返されるタスクがすぐに取り消されないように、完了時にトークンが取り消されていない完了したタスクを選択しようとします。
 
@@ -144,7 +150,9 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 ###  <a name="cancel"></a> Cancel メソッドを並列処理の取り消しを使用します。
 
-[Concurrency::task_group::cancel](reference/task-group-class.md#cancel)と[::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)メソッドが取り消された状態にタスク グループを設定します。 `cancel` を呼び出すと、それ以降はタスク グループでタスクが開始されなくなります。 `cancel` メソッドは、複数の子タスクから呼び出すことができます。 取り消されたタスクによって、 [::task_group::wait](reference/task-group-class.md#wait)と[concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait)メソッドを返す[:canceled](reference/concurrency-namespace-enums.md#task_group_status)します。
+[Concurrency::task_group::cancel](reference/task-group-class.md#cancel)と[::structured_task_group::cancel](reference/structured-task-group-class.md#cancel)メソッドが取り消された状態にタスク グループを設定します。 
+  `cancel` を呼び出すと、それ以降はタスク グループでタスクが開始されなくなります。 
+  `cancel` メソッドは、複数の子タスクから呼び出すことができます。 取り消されたタスクによって、 [::task_group::wait](reference/task-group-class.md#wait)と[concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait)メソッドを返す[:canceled](reference/concurrency-namespace-enums.md#task_group_status)します。
 
 ランタイムを各子タスクからの呼び出しをトリガーできるタスク グループが取り消された場合、*割り込みポイント*、それが原因でスローおよび内部例外の種類をアクティブなタスクのキャンセルをキャッチするランタイム。 コンカレンシー ランタイムでは、特定の割り込みポイントが定義されていません。割り込みポイントは、ランタイムに対する任意の呼び出しで発生します。 ランタイムは、取り消し処理を実行するために、自身がスローした例外を処理する必要があります。 このため、タスクの本体で不明な例外を処理しないでください。
 
@@ -156,11 +164,14 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 親タスク グループ オブジェクトにアクセスしない場合は、呼び出し、 [concurrency::is_current_task_group_canceling](reference/concurrency-namespace-functions.md#is_current_task_group_canceling)親タスク グループが取り消されたかどうかを判断する関数。
 
-`cancel` メソッドは、子タスクにのみ影響を及ぼします。 たとえば、並列処理ツリーの図のタスク グループ `tg1` を取り消すと、ツリー内のすべてのタスク (`t1`、`t2`、`t3`、`t4`、および `t5`) が取り消されます。 入れ子になったタスク グループ `tg2` を取り消すと、タスク `t4` および `t5` のみ影響を受けます。
 
-`cancel` メソッドを呼び出すと、子タスク グループもすべて取り消されます。 しかし、取り消し処理は、並列処理ツリーにおけるタスク グループの親には影響しません。 以降の例では、並列処理ツリーの図に基づいてこのことを示します。
+  `cancel` メソッドは、子タスクにのみ影響を及ぼします。 たとえば、並列処理ツリーの図のタスク グループ `tg1` を取り消すと、ツリー内のすべてのタスク (`t1`、`t2`、`t3`、`t4`、および `t5`) が取り消されます。 入れ子になったタスク グループ `tg2` を取り消すと、タスク `t4` および `t5` のみ影響を受けます。
 
-最初の例では、タスク グループ `t4` の子であるタスク `tg2` の処理関数を作成します。 この処理関数は、関数 `work` をループ内で呼び出します。 `work` の呼び出しが失敗すると、タスクは親タスク グループを取り消します。 これにより、タスク グループ `tg2` が取り消された状態になりますが、タスク グループ `tg1` は取り消されません。
+
+  `cancel` メソッドを呼び出すと、子タスク グループもすべて取り消されます。 しかし、取り消し処理は、並列処理ツリーにおけるタスク グループの親には影響しません。 以降の例では、並列処理ツリーの図に基づいてこのことを示します。
+
+最初の例では、タスク グループ `t4` の子であるタスク `tg2` の処理関数を作成します。 この処理関数は、関数 `work` をループ内で呼び出します。 
+  `work` の呼び出しが失敗すると、タスクは親タスク グループを取り消します。 これにより、タスク グループ `tg2` が取り消された状態になりますが、タスク グループ `tg1` は取り消されません。
 
 [!code-cpp[concrt-task-tree#2](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_7.cpp)]
 
@@ -168,10 +179,12 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 [!code-cpp[concrt-task-tree#3](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_8.cpp)]
 
-`structured_task_group` クラスはスレッドセーフではありません。 したがって、子タスクが親 `structured_task_group` オブジェクトのメソッドを呼び出すと、未定義の動作が実行されます。 このルールの例外は、`structured_task_group::cancel`と[:is_canceling](reference/structured-task-group-class.md#is_canceling)メソッド。 子タスクがこれらのメソッドを呼び出すことで、親タスク グループを取り消したり、取り消し状態をチェックしたりできます。
+
+  `structured_task_group` クラスはスレッドセーフではありません。 したがって、子タスクが親 `structured_task_group` オブジェクトのメソッドを呼び出すと、未定義の動作が実行されます。 このルールの例外は、`structured_task_group::cancel`と[:is_canceling](reference/structured-task-group-class.md#is_canceling)メソッド。 子タスクがこれらのメソッドを呼び出すことで、親タスク グループを取り消したり、取り消し状態をチェックしたりできます。
 
 > [!CAUTION]
->  `task` オブジェクトの子として実行するタスク グループによって実行される処理を取り消すためにキャンセル トークンを使用できますが、タスク グループで実行する `task_group::cancel` オブジェクトを取り消すために `structured_task_group::cancel` メソッドまたは `task` メソッドは使用できません。
+>  
+  `task` オブジェクトの子として実行するタスク グループによって実行される処理を取り消すためにキャンセル トークンを使用できますが、タスク グループで実行する `task_group::cancel` オブジェクトを取り消すために `structured_task_group::cancel` メソッドまたは `task` メソッドは使用できません。
 
 [[トップ](#top)]
 
@@ -182,7 +195,8 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 > [!CAUTION]
 >  必要なときにだけを並列処理を取り消すために例外を使用することをお勧めします。 キャンセル トークンとタスク グループの `cancel` メソッドの方が効率的で、エラーが発生する可能性も低くなります。
 
-タスク グループに渡す処理関数の本体で例外をスローすると、ランタイムはその例外を保存して、タスク グループの終了を待機するコンテキストにその例外をマーシャリングします。 `cancel` メソッドの場合と同様に、ランタイムはまだ開始されていないタスクを破棄し、新しいタスクを受け付けません。
+タスク グループに渡す処理関数の本体で例外をスローすると、ランタイムはその例外を保存して、タスク グループの終了を待機するコンテキストにその例外をマーシャリングします。 
+  `cancel` メソッドの場合と同様に、ランタイムはまだ開始されていないタスクを破棄し、新しいタスクを受け付けません。
 
 次の 3 つ目の例は、2 つ目の例と似ていますが、タスク `t4` が例外をスローすることでタスク グループ `tg2` を取り消している点が異なります。 この例では、 `try` - `catch`取り消し状態をチェックするブロックと、タスク グループ`tg2`その子タスクが終了するまで待機します。 最初の例と同様に、これによってタスク グループ `tg2` が取り消された状態になりますが、タスク グループ `tg1` は取り消されません。
 
@@ -192,7 +206,8 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 
 [!code-cpp[concrt-task-tree#5](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_10.cpp)]
 
-`task_group::wait` メソッドと `structured_task_group::wait` メソッドは、子タスクが例外をスローしたときに実行されるため、これらのメソッドから戻り値を受け取ることはありません。
+
+  `task_group::wait` メソッドと `structured_task_group::wait` メソッドは、子タスクが例外をスローしたときに実行されるため、これらのメソッドから戻り値を受け取ることはありません。
 
 [[トップ](#top)]
 
@@ -202,11 +217,15 @@ PPL の並列アルゴリズム (`parallel_for` など) は、タスク グル�
 
 以降の例では、並列アルゴリズムを取り消すためのいくつかの方法を示します。
 
-`run_with_cancellation_token` 関数を使用して `parallel_for` アルゴリズムを呼び出す例を次に示します。 `run_with_cancellation_token` 関数は、引数としてキャンセル トークンを受け取り、指定された処理関数を同期的に呼び出します。 並列アルゴリズムはタスクに基づいて構築されるため、親タスクのキャンセル トークンを継承します。 したがって、`parallel_for` は取り消し処理に応答できます。
+
+  `run_with_cancellation_token` 関数を使用して `parallel_for` アルゴリズムを呼び出す例を次に示します。 
+  `run_with_cancellation_token` 関数は、引数としてキャンセル トークンを受け取り、指定された処理関数を同期的に呼び出します。 並列アルゴリズムはタスクに基づいて構築されるため、親タスクのキャンセル トークンを継承します。 したがって、`parallel_for` は取り消し処理に応答できます。
 
 [!code-cpp[concrt-cancel-parallel-for#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_11.cpp)]
 
-次の例では、 [::structured_task_group::run_and_wait](reference/structured-task-group-class.md#run_and_wait)メソッドを呼び出す、`parallel_for`アルゴリズム。 `structured_task_group::run_and_wait` メソッドは、指定されたタスクの終了を待機します。 `structured_task_group` オブジェクトによって、処理関数でタスクを取り消すことができるようになります。
+次の例では、 [::structured_task_group::run_and_wait](reference/structured-task-group-class.md#run_and_wait)メソッドを呼び出す、`parallel_for`アルゴリズム。 
+  `structured_task_group::run_and_wait` メソッドは、指定されたタスクの終了を待機します。 
+  `structured_task_group` オブジェクトによって、処理関数でタスクを取り消すことができるようになります。
 
 [!code-cpp[concrt-task-tree#7](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_12.cpp)]
 
@@ -242,10 +261,11 @@ Caught 50
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[方法: キャンセル処理を使用して並列ループを中断する](../../parallel/concrt/how-to-use-cancellation-to-break-from-a-parallel-loop.md)|取り消し処理を使用して並列検索アルゴリズムを実装する方法について説明します。|
-|[方法: 例外処理を使用して並列ループを中断する](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|`task_group` クラスを使用して基本的なツリー構造の検索アルゴリズムを作成する方法を示します。|
+|[方法: 例外処理を使用して並列ループを中断する](../../parallel/concrt/how-to-use-exception-handling-to-break-from-a-parallel-loop.md)|
+  `task_group` クラスを使用して基本的なツリー構造の検索アルゴリズムを作成する方法を示します。|
 |[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)|タスク グループ、軽量タスク、および非同期エージェントによってスローされた例外をランタイムが処理するしくみ、およびアプリケーション内で例外に応答する方法を説明します。|
 |[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)|タスクとタスク グループの関係のほか、アプリケーションで非構造化タスクと構造化タスクを使用する方法について説明します。|
 |[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)|データのコレクションに対して同時処理を実行する並列アルゴリズムについて説明します。|
@@ -264,4 +284,3 @@ Caught 50
 [structured_task_group クラス](../../parallel/concrt/reference/structured-task-group-class.md)
 
 [parallel_for 関数](reference/concurrency-namespace-functions.md#parallel_for)
-

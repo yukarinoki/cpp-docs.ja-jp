@@ -156,12 +156,12 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bCanCovertControlBarToMDIChild
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
-ms.openlocfilehash: 7ed2d1de2a91f90cd4e7efecac728e66f86d95a6
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 81d227c241adf0ce72ccd4a554134d7d858b4a6d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178631"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275429"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx クラス
 
@@ -197,7 +197,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|全画面表示モードでのメイン メニューの表示と非表示を切り替えます。|
 |[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|フレーム ウィンドウの全画面表示モードを有効にします。|
 |[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|有効またはドッキング状態の読み込みを無効にします。|
-|[Cmdiframewndex::enablemditabbedgroups](#enablemditabbedgroups)|有効または MDI タブ付きグループ機能を無効にします。|
+|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|有効または MDI タブ付きグループ機能を無効にします。|
 |[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|有効または MDI タブの機能を無効にします。 有効な場合、フレーム ウィンドウには、各 MDI 子ウィンドウのタブが表示されます。|
 |[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|ユーザーが現在のタブを閉じるときに、最後のアクティブなタブをアクティブにする必要があるかどうかを指定します。|
 |[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|有効または、アプリケーション ウィンドウの一覧を表示するポップアップ ウィンドウのメニューの自動作成と管理を無効にします。  .|
@@ -493,7 +493,7 @@ void DockPane(
 *pBar*<br/>
 [in]ドッキング ウィンドウへのポインター。
 
-*辺*<br/>
+*nDockBarID*<br/>
 [in]ドッキングするフレーム ウィンドウのどの辺を指定します。
 
 *lpRect*<br/>
@@ -646,7 +646,7 @@ void EnableLoadDockState(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="enablemditabbedgroups"></a>  Cmdiframewndex::enablemditabbedgroups
+##  <a name="enablemditabbedgroups"></a>  CMDIFrameWndEx::EnableMDITabbedGroups
 
 有効またはフレーム ウィンドウの MDI タブ付きグループ機能を無効にします。
 
@@ -1757,7 +1757,7 @@ CBasePane* PaneFromPoint(
 *pRTCBarType*<br/>
 [in]NULL 以外の場合、メソッドが指定した型のウィンドウのみを反復処理します。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [out]ウィンドウが見つかった場合、このパラメーターは、ウィンドウのどちら側が、指定したポイントに最も近いを指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -2014,7 +2014,7 @@ virtual void WinHelp(
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 [in]指定されたヘルプの種類に必要なデータを指定します。 *nCmd*します。
 
 *nCmd*<br/>
