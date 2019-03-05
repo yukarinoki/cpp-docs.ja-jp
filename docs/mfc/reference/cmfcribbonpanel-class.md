@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: a679ca48b054a545752483ff5349442e7c4a0ddd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505392"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305056"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel クラス
 
@@ -139,13 +139,14 @@ class CMFCRibbonPanel : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|`CMFCRibbonPanel` オブジェクトを構築して初期化します。|
+|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|
+  `CMFCRibbonPanel` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[Cmfcribbonpanel::add](#add)|パネルには、リボン要素を追加します。|
+|[CMFCRibbonPanel::Add](#add)|パネルには、リボン要素を追加します。|
 |[CMFCRibbonPanel::AddSeparator](#addseparator)|リボン パネルには、区切り記号を追加します。|
 |[CMFCRibbonPanel::AddToolBar](#addtoolbar)|リボン パネルには、ツールバーを追加します。|
 |[CMFCRibbonPanel::FindByData](#findbydata)||
@@ -221,7 +222,7 @@ class CMFCRibbonPanel : public CObject
 
 **ヘッダー:** afxRibbonPanel.h
 
-##  <a name="add"></a>  Cmfcribbonpanel::add
+##  <a name="add"></a>  CMFCRibbonPanel::Add
 
 リボン パネルに含まれるリボン要素の配列に指定されたリボン要素を追加します。
 
@@ -315,7 +316,7 @@ CMFCRibbonBaseElement* FindByData(DWORD_PTR dwData) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 [in]リボン要素に関連付けられたデータ。
 
 ### <a name="return-value"></a>戻り値
@@ -854,7 +855,7 @@ int nHeight);
 *pDC*<br/>
 [in]リボン パネル用のデバイス コンテキストへのポインター。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 [in]リボン パネルの高さ。
 
 ### <a name="remarks"></a>Remarks
@@ -976,7 +977,7 @@ void SetData(DWORD_PTR dwData);
 
 ### <a name="parameters"></a>パラメーター
 
-*指定*<br/>
+*dwData*<br/>
 [in]設定するユーザー定義データを指定します。
 
 ### <a name="remarks"></a>Remarks
