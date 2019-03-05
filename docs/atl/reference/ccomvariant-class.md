@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CComVariant class
 - VARIANT macro, ATL
 ms.assetid: 4d31149c-d005-44b5-a509-10f84afa2b61
-ms.openlocfilehash: 6a6ad49533028dbcb8c45b63c55a51090533137e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6be05b52b96ada7871f955c687036a83b4e0b493
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522491"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281097"
 ---
 # <a name="ccomvariant-class"></a>CComVariant クラス
 
@@ -44,7 +44,7 @@ class CComVariant : public tagVARIANT
 |名前|説明|
 |----------|-----------------|
 |[CComVariant::CComVariant](#ccomvariant)|コンストラクターです。|
-|[CComVariant:: ~ CComVariant](#dtor)|デストラクターです。|
+|[CComVariant::~CComVariant](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -59,7 +59,7 @@ class CComVariant : public tagVARIANT
 |[CComVariant::GetSize](#getsize)|内容のバイト数のサイズを返します、`CComVariant`オブジェクト。|
 |[CComVariant::ReadFromStream](#readfromstream)|ストリームからのバリアントを読み込みます。|
 |[CComVariant::SetByRef](#setbyref)|初期化します、`CComVariant`オブジェクトと設定、 `vt` VT_BYREF するメンバー。|
-|[な](#writetostream)|基になるバリアントをストリームに保存します。|
+|[CComVariant::WriteToStream](#writetostream)|基になるバリアントをストリームに保存します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -68,7 +68,7 @@ class CComVariant : public tagVARIANT
 |[CComVariant::operator <](#operator_lt)|示すかどうか、`CComVariant`オブジェクトが指定されたバリアント型より小さい。|
 |[CComVariant::operator >](#operator_gt)|示すかどうか、`CComVariant`オブジェクトが指定されたバリアント型よりも大きい。|
 |[operator !=](#operator_neq)|示すかどうか、`CComVariant`オブジェクトが、指定されたバリアント型と一致しません。|
-|[演算子 =](#operator_eq)|値を割り当てます、`CComVariant`オブジェクト。|
+|[operator=](#operator_eq)|値を割り当てます、`CComVariant`オブジェクト。|
 |[operator ==](#operator_eq_eq)|示すかどうか、`CComVariant`オブジェクトが指定されたバリアント型。|
 
 ## <a name="remarks"></a>Remarks
@@ -373,7 +373,7 @@ CComVariant& operator=(char cSrc) throw();
 *cSrc*<br/>
 [in]割り当てられる char、`CComVariant`オブジェクト。 種類、 `CComVariant` VT_I1 がオブジェクトになります。
 
-##  <a name="operator_eq_eq"></a>  CComVariant::operator = =
+##  <a name="operator_eq_eq"></a>  CComVariant::operator ==
 
 示すかどうか、`CComVariant`オブジェクトが指定されたバリアント型。
 
@@ -465,11 +465,11 @@ void SetByRef(T* pT) throw();
 
 ### <a name="remarks"></a>Remarks
 
-`SetByRef` 関数テンプレートを初期化するには、`CComVariant`オブジェクト ポインターを*pT*設定と、 `vt` VT_BYREF するメンバー。 例えば:
+`SetByRef` 関数テンプレートを初期化するには、`CComVariant`オブジェクト ポインターを*pT*設定と、 `vt` VT_BYREF するメンバー。 例:
 
 [!code-cpp[NVC_ATL_Utilities#76](../../atl/codesnippet/cpp/ccomvariant-class_1.cpp)]
 
-##  <a name="writetostream"></a>  な
+##  <a name="writetostream"></a>  CComVariant::WriteToStream
 
 基になるバリアントをストリームに保存します。
 

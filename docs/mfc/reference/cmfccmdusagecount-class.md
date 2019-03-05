@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CMFCCmdUsageCount [MFC], Serialize
 - CMFCCmdUsageCount [MFC], SetOptions
 ms.assetid: 9c33b783-37c0-43ea-9f31-3c75e246c841
-ms.openlocfilehash: af48451bcba9bf0d5f07cd96da99be4c2a6ae99b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4ad9a60831feb6fa1147ea3f8bcfd5c6badd06c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549397"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275364"
 ---
 # <a name="cmfccmdusagecount-class"></a>CMFCCmdUsageCount クラス
 
@@ -44,7 +44,7 @@ class CMFCCmdUsageCount : public CObject
 |||
 |-|-|
 |名前|説明|
-|`CMFCCmdUsageCount::CMFCCmdUsageCount`|既定のコンストラクター|
+|`CMFCCmdUsageCount::CMFCCmdUsageCount`|既定のコンストラクターです。|
 |`CMFCCmdUsageCount::~CMFCCmdUsageCount`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -206,7 +206,7 @@ virtual void Serialize(CArchive& ar);
 
 このメソッドは、コマンドの数のマップの構造体をシリアル化します`m_CmdUsage`、および合計コマンドの使用法、 `m_nTotalUsage`、または指定されたアーカイブするカウンター。
 
-シリアル化の例については、次を参照してください。[シリアル化: オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
+シリアル化の例については、次を参照してください。[シリアル化します。オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
 
 ##  <a name="setoptions"></a>  CMFCCmdUsageCount::SetOptions
 

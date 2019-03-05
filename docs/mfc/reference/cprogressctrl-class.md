@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: ba97dd27fbf70c34461d45755fd008e6ad9099b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585901"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260271"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
 
@@ -77,7 +77,7 @@ class CProgressCtrl : public CWnd
 |[CProgressCtrl::GetBkColor](#getbkcolor)|現在の進行状況バーの背景色を取得します。|
 |[CProgressCtrl::GetPos](#getpos)|進行状況バーの現在の位置を取得します。|
 |[CProgressCtrl::GetRange](#getrange)|進行状況バー コントロールの範囲の下限と上限の制限を取得します。|
-|[Cprogressctrl::getstate](#getstate)|現在の進行状況バー コントロールの状態を取得します。|
+|[CProgressCtrl::GetState](#getstate)|現在の進行状況バー コントロールの状態を取得します。|
 |[CProgressCtrl::GetStep](#getstep)|進行状況バーが、現在の進行状況バー コントロールのステップの増分値を取得します。|
 |[CProgressCtrl::OffsetPos](#offsetpos)|指定された増分で進行状況バー コントロールの現在位置を進めます、新しい位置を反映するようにバーを再描画します。|
 |[CProgressCtrl::SetBarColor](#setbarcolor)|現在の進行状況バー コントロールでは、進行状況インジケーターのバーの色を設定します。|
@@ -86,7 +86,7 @@ class CProgressCtrl : public CWnd
 |[CProgressCtrl::SetPos](#setpos)|進行状況バー コントロールの現在の位置を設定し、新しい位置を反映するようにバーを再描画します。|
 |[CProgressCtrl::SetRange](#setrange)|進行状況バー コントロールの最小値と最大範囲を設定し、新しい範囲を反映するようにバーを再描画します。|
 |[CProgressCtrl::SetState](#setstate)|現在の進行状況バー コントロールの状態を設定します。|
-|[増分](#setstep)|進行状況バー コントロールのステップの増分値を指定します。|
+|[CProgressCtrl::SetStep](#setstep)|進行状況バー コントロールのステップの増分値を指定します。|
 |[CProgressCtrl::StepIt](#stepit)|増分の進行状況バー コントロールの現在位置を進めます (を参照してください[SetStep](#setstep)) し、新しい位置を反映するように、バーを再描画します。|
 
 ## <a name="remarks"></a>Remarks
@@ -271,10 +271,10 @@ void GetRange(
 
 ### <a name="parameters"></a>パラメーター
 
-*上限値*<br/>
+*nLower*<br/>
 進行状況バー コントロールの下限値を受け取る整数への参照。
 
-*下限*<br/>
+*nUpper*<br/>
 進行状況バー コントロールの上限値を受け取る整数への参照。
 
 ### <a name="remarks"></a>Remarks
@@ -285,7 +285,7 @@ void GetRange(
 
 [!code-cpp[NVC_MFC_CProgressCtrl#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_4.cpp)]
 
-##  <a name="getstate"></a>  Cprogressctrl::getstate
+##  <a name="getstate"></a>  CProgressCtrl::GetState
 
 現在の進行状況バー コントロールの状態を取得します。
 
@@ -507,10 +507,10 @@ void SetRange32(
 
 ### <a name="parameters"></a>パラメーター
 
-*上限値*<br/>
+*nLower*<br/>
 範囲の下限値を指定します (既定値は 0)。
 
-*下限*<br/>
+*nUpper*<br/>
 範囲の上限を指定します (既定値は 100)。
 
 ### <a name="remarks"></a>Remarks
@@ -555,7 +555,7 @@ int SetState(int iState);
 
 [!code-cpp[NVC_MFC_CProgressCtrl_s1#4](../../mfc/reference/codesnippet/cpp/cprogressctrl-class_14.cpp)]
 
-##  <a name="setstep"></a>  増分
+##  <a name="setstep"></a>  CProgressCtrl::SetStep
 
 進行状況バー コントロールのステップの増分値を指定します。
 
@@ -607,4 +607,3 @@ int StepIt();
 [MFC サンプル CMNCTRL2](../../visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

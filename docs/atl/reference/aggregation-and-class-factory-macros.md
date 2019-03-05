@@ -17,12 +17,12 @@ helpviewer_keywords:
 - class factories, ATL macros
 - aggregation [C++], ATL macros
 ms.assetid: d99d379a-0eec-481f-8daa-252dac18f163
-ms.openlocfilehash: c0e3b6903e382ad56be9500792bec895a7641f00
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 889ed4bbfc21209a64cfd9e4fee4b2335ce62010
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50497188"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274896"
 ---
 # <a name="aggregation-and-class-factory-macros"></a>集計とクラス ファクトリに関するマクロ
 
@@ -38,7 +38,7 @@ ms.locfileid: "50497188"
 |[DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)|宣言[CComClassFactorySingleton](../../atl/reference/ccomclassfactorysingleton-class.md)クラス ファクトリを使用します。|
 |[DECLARE_GET_CONTROLLING_UNKNOWN](#declare_get_controlling_unknown)|仮想宣言`GetControllingUnknown`関数。|
 |[DECLARE_NOT_AGGREGATABLE](#declare_not_aggregatable)|オブジェクトを集約できないことを宣言します。|
-|[集約](#declare_only_aggregatable)|オブジェクトを集約する必要があることを宣言します。|
+|[DECLARE_ONLY_AGGREGATABLE](#declare_only_aggregatable)|オブジェクトを集約する必要があることを宣言します。|
 |[DECLARE_POLY_AGGREGATABLE](#declare_poly_aggregatable)|不明な外部の値をチェックし、集計または集計可能でない、必要に応じて、オブジェクトを宣言します。|
 |[アグリゲート](#declare_protect_final_construct)|内部オブジェクトの構築時に削除されないように、外側のオブジェクトを保護します。|
 |[DECLARE_VIEW_STATUS](#declare_view_status)|コンテナーにな VIEWSTATUS フラグを指定します。|
@@ -181,7 +181,7 @@ class  CComClassFactory2 : public IClassFactory2,
 
 `CComClassFactory2` 実装して、 [IClassFactory2](/windows/desktop/api/ocidl/nn-ocidl-iclassfactory2)インターフェイスで、拡張機能の[IClassFactory](/windows/desktop/api/unknwnbase/nn-unknwnbase-iclassfactory)します。 `IClassFactory2` コントロール オブジェクトのライセンスで作成します。 ライセンスされたコンピューターで実行するクラス ファクトリと、実行時のライセンス キーを提供できます。 このライセンス キーにより、完全なマシンのライセンスが存在しない場合は、オブジェクトをインスタンス化するアプリケーションです。
 
-ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](#declare_classfactory)、宣言する[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)既定のクラス ファクトリとして。 使用する`CComClassFactory2`、指定、 [DECLARE_CLASSFACTORY2](#declare_classfactory2)オブジェクトのクラス定義でマクロ。 例えば:
+ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](#declare_classfactory)、宣言する[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)既定のクラス ファクトリとして。 使用する`CComClassFactory2`、指定、 [DECLARE_CLASSFACTORY2](#declare_classfactory2)オブジェクトのクラス定義でマクロ。 例:
 
 [!code-cpp[NVC_ATL_COM#2](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_4.h)]
 
@@ -225,7 +225,7 @@ public CComObjectRootEx<CComGlobalsThreadModel>
 
 `CComClassFactoryAutoThread` ような[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)が複数のアパートメント内に作成するオブジェクトを許可します。 このサポートを利用する、EXE のモジュールから派生させる[CComAutoThreadModule](../../atl/reference/ccomautothreadmodule-class.md)します。
 
-ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](#declare_classfactory)、宣言する[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)既定のクラス ファクトリとして。 使用する`CComClassFactoryAutoThread`、指定、 [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)オブジェクトのクラス定義でマクロ。 例えば:
+ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](#declare_classfactory)、宣言する[CComClassFactory](../../atl/reference/ccomclassfactory-class.md)既定のクラス ファクトリとして。 使用する`CComClassFactoryAutoThread`、指定、 [DECLARE_CLASSFACTORY_AUTO_THREAD](#declare_classfactory_auto_thread)オブジェクトのクラス定義でマクロ。 例:
 
 [!code-cpp[NVC_ATL_COM#9](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_6.h)]
 
@@ -271,7 +271,7 @@ class CComClassFactorySingleton : public CComClassFactory
 
 ### <a name="remarks"></a>Remarks
 
-ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](#declare_classfactory)、宣言する`CComClassFactory`既定のクラス ファクトリとして。 使用する`CComClassFactorySingleton`、指定、 [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)オブジェクトのクラス定義でマクロ。 例えば:
+ATL オブジェクトから派生することによって、クラス ファクトリを取得する通常[CComCoClass](../../atl/reference/ccomcoclass-class.md)します。 このクラスには、マクロが含まれています。 [DECLARE_CLASSFACTORY](#declare_classfactory)、宣言する`CComClassFactory`既定のクラス ファクトリとして。 使用する`CComClassFactorySingleton`、指定、 [DECLARE_CLASSFACTORY_SINGLETON](#declare_classfactory_singleton)オブジェクトのクラス定義でマクロ。 例:
 
 [!code-cpp[NVC_ATL_COM#10](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_7.h)]
 
@@ -310,7 +310,7 @@ DECLARE_NOT_AGGREGATABLE により`CreateInstance`が試みられた場合は、
 
 [!code-cpp[NVC_ATL_Windowing#121](../../atl/codesnippet/cpp/aggregation-and-class-factory-macros_1.h)]
 
-##  <a name="declare_only_aggregatable"></a>  集約
+##  <a name="declare_only_aggregatable"></a>  DECLARE_ONLY_AGGREGATABLE
 
 オブジェクトを集計する必要がありますを指定します。
 
@@ -354,7 +354,7 @@ DECLARE_POLY_AGGREGATABLE を使用する利点は、両方を持つように`CC
 
 DECLARE_POLY_AGGREGATABLE マクロは、ATL コントロール ウィザードを使用するフル コントロールを作成する場合に自動的に、オブジェクトで宣言されます。
 
-##  <a name="declare_protect_final_construct"></a>  アグリゲート
+##  <a name="declare_protect_final_construct"></a>  DECLARE_PROTECT_FINAL_CONSTRUCT
 
 削除されるオブジェクトを保護する (中に[finalconstruct 関数](ccomobjectrootex-class.md#finalconstruct)) 内部の集計されたオブジェクトが、数を 0 にデクリメントして参照カウントをインクリメントします。
 

@@ -13,16 +13,17 @@ f1_keywords:
 - AMP/Concurrency::tiled_extent::tile_dim2
 - AMP/Concurrency::tiled_extent::tile_extent
 ms.assetid: 671ecaf8-c7b0-4ac8-bbdc-e30bd92da7c0
-ms.openlocfilehash: 77d16eefa61fb30614cb6527792014cc8655abe0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 51e7696b8103e81d42beec0987a49f26fe041643
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476896"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264325"
 ---
 # <a name="tiledextent-class"></a>tiled_extent クラス
 
-`tiled_extent` オブジェクトは 3 つの次元のいずれかの `extent` オブジェクトであり、範囲空間を 1、2、または 3 次元のタイルに再分割します。
+
+  `tiled_extent` オブジェクトは 3 つの次元のいずれかの `extent` オブジェクトであり、範囲空間を 1、2、または 3 次元のタイルに再分割します。
 
 ### <a name="syntax"></a>構文
 
@@ -69,7 +70,8 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 |名前|説明|
 |----------|-----------------|
-|[get_tile_extent](#get_tile_extent)|`extent` テンプレート引数 `tiled_extent`、`_Dim0`、および `_Dim1` の値をキャプチャする `_Dim2` オブジェクトを返します。|
+|[get_tile_extent](#get_tile_extent)|
+  `extent` テンプレート引数 `tiled_extent`、`_Dim0`、および `_Dim1` の値をキャプチャする `_Dim2` オブジェクトを返します。|
 |[pad](#pad)|タイルの次元によって均等に分割できる範囲を上方調整した新しい `tiled_extent` オブジェクトを返します。|
 |[truncate](#truncate)|タイルの次元によって均等に分割できるように範囲を下方調整した新しい `tiled_extent` オブジェクトを返します。|
 
@@ -91,7 +93,8 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 |名前|説明|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|`tiled_extent` テンプレート引数 `_Dim0`、`_Dim1`、および `_Dim2` の値をキャプチャする `extent` オブジェクトを取得します。|
+|[tile_extent](#tile_extent)|
+  `tiled_extent` テンプレート引数 `_Dim0`、`_Dim1`、および `_Dim2` の値をキャプチャする `extent` オブジェクトを取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -103,7 +106,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 **ヘッダー:** amp.h
 
-**名前空間:** Concurrency
+**名前空間:** コンカレンシー
 
 ## <a name="ctor"> </a>  tiled_extent コンス トラクター
 

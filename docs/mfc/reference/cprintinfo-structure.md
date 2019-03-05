@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - CPrintInfo structure [MFC]
 ms.assetid: 0b3de849-d050-4386-9a14-f4c1a25684f7
-ms.openlocfilehash: 259dfd6808a5e975fb22d11d0a8c569237733eae
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: e08885fc9893d175e819c0acbf571d96d425a2c4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524522"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273362"
 ---
 # <a name="cprintinfo-structure"></a>CPrintInfo 構造体
 
@@ -67,7 +67,7 @@ A`CPrintInfo`オブジェクトは、印刷プロセス中に、フレームワ�
 
 別の例は、印刷されるまで、ドキュメントの長さは認識されません。 このような状況では、ビュー クラスは、ページが印刷されるたびを文書の最後のテストします。 最後に達すると、ビュー クラスの設定、`m_bContinuePrinting`のメンバー`CPrintInfo`印刷ループを停止するためにフレームワークに通知を FALSE にします。
 
-`CPrintInfo` メンバー関数によって使用される`CView`表示」も参照してください"。 Microsoft Foundation Class ライブラリによって提供される印刷のアーキテクチャの詳細については、次を参照してください[フレーム Windows](../../mfc/frame-windows.md)と[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)と情報の記事[。印刷](../../mfc/printing.md)と[印刷: マルチページ ドキュメント](../../mfc/multipage-documents.md)します。
+`CPrintInfo` メンバー関数によって使用される`CView`表示」も参照してください"。 Microsoft Foundation Class ライブラリによって提供される印刷のアーキテクチャの詳細については、次を参照してください[フレーム Windows](../../mfc/frame-windows.md)と[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)と情報の記事[。印刷](../../mfc/printing.md)と[印刷します。マルチページ ドキュメント](../../mfc/multipage-documents.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -319,10 +319,9 @@ void SetMinPage(UINT nMinPage);
 
 [MFC サンプル DIBLOOK](../../visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[値](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
+[CView::OnBeginPrinting](../../mfc/reference/cview-class.md#onbeginprinting)<br/>
 [CView::OnEndPrinting](../../mfc/reference/cview-class.md#onendprinting)<br/>
 [CView::OnEndPrintPreview](../../mfc/reference/cview-class.md#onendprintpreview)<br/>
-[付け](../../mfc/reference/cview-class.md#onpreparedc)<br/>
+[CView::OnPrepareDC](../../mfc/reference/cview-class.md#onpreparedc)<br/>
 [関数](../../mfc/reference/cview-class.md#onprepareprinting)<br/>
-[のみ](../../mfc/reference/cview-class.md#onprint)
-
+[CView::OnPrint](../../mfc/reference/cview-class.md#onprint)

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSemaphore [MFC], CSemaphore
 ms.assetid: 385fc7e4-8f86-4be2-85e1-d23b38c12f7f
-ms.openlocfilehash: e8e71af6fa33dc748bfb8d19266a72495f216502
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f2a05963f39393bcc73650beb44c5dbb8e5535ee
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447022"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274220"
 ---
 # <a name="csemaphore-class"></a>CSemaphore クラス
 
@@ -45,7 +45,7 @@ class CSemaphore : public CSyncObject
 
 また、作成することができます、 `CSemaphore` 、スタンドアロン オブジェクトし、制御されたリソースへのアクセスを試みる前に明示的にアクセスします。 だれかが、ソース コードを読むにはわかり、このメソッドは、エラーが発生しやすいです。
 
-使用する方法の詳細についての`CSemaphore`オブジェクトは、記事を参照して[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+使用する方法の詳細についての`CSemaphore`オブジェクトは、記事をご覧ください。[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -96,4 +96,3 @@ CSemaphore(
 
 [CSyncObject クラス](../../mfc/reference/csyncobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

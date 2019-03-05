@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CTaskDialog [MFC], ShowDialog
 - CTaskDialog [MFC], TaskDialogCallback
 ms.assetid: 1991ec98-ae56-4483-958b-233809c8c559
-ms.openlocfilehash: 7b95252c830e27a0602f149f880258511ec24e64
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 04c8a60f546700be8eeb2ec8a948e0ea321d12f8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265016"
 ---
 # <a name="ctaskdialog-class"></a>CTaskDialog Class
 
@@ -159,7 +159,7 @@ class CTaskDialog : public CObject
 |[CTaskDialog::GetVerificationCheckboxState](#getverificationcheckboxstate)|確認のチェック ボックスの状態を取得します。|
 |[CTaskDialog::IsCommandControlEnabled](#iscommandcontrolenabled)|コマンド ボタン コントロールまたは一般的なボタンが有効かどうかを判断します。|
 |[CTaskDialog::IsRadioButtonEnabled](#isradiobuttonenabled)|ラジオ ボタンが有効になっているかどうかを判断します。|
-|[:Issupported](#issupported)|アプリケーションを実行しているコンピューターをサポートするかどうかを決定、`CTaskDialog`します。|
+|[CTaskDialog::IsSupported](#issupported)|アプリケーションを実行しているコンピューターをサポートするかどうかを決定、`CTaskDialog`します。|
 |[CTaskDialog::LoadCommandControls](#loadcommandcontrols)|文字列テーブルからデータを使用して、コマンド ボタン コントロールを追加します。|
 |[CTaskDialog::LoadRadioButtons](#loadradiobuttons)|文字列テーブルからデータを使用して、オプション ボタンを追加します。|
 |[CTaskDialog::NavigateTo](#navigateto)|別にフォーカスが移動`CTaskDialog`します。|
@@ -247,7 +247,7 @@ CTaskDialog のサンプル
 
 ## <a name="requirements"></a>必要条件
 
-**必要なオペレーティング システムの最小:** Windows Vista
+**最低限必要なオペレーティング システム:** Windows Vista
 
 **ヘッダー:** afxtaskdialog.h
 
@@ -387,7 +387,7 @@ CTaskDialog(
 *strMainInstruction*<br/>
 [in]メイン インストラクション、`CTaskDialog`します。
 
-*されません*<br/>
+*strTitle*<br/>
 [in]タイトル、`CTaskDialog`します。
 
 *nCommonButtons*<br/>
@@ -624,7 +624,7 @@ BOOL IsRadioButtonEnabled(int nRadioButtonID) const;
 
 [!code-cpp[NVC_MFC_CTaskDialog#3](../../mfc/reference/codesnippet/cpp/ctaskdialog-class_2.cpp)]
 
-##  <a name="issupported"></a>  :Issupported
+##  <a name="issupported"></a>  CTaskDialog::IsSupported
 
 アプリケーションを実行しているコンピューターをサポートするかどうかを決定、`CTaskDialog`します。
 
@@ -995,7 +995,7 @@ void SetCommonButtonOptions(
 *nDisabledButtonMask*<br/>
 [in]無効にする一般的なボタンのマスク。
 
-*扱わ*<br/>
+*nElevationButtonMask*<br/>
 [in]昇格が必要な一般的なボタンのマスク。
 
 ### <a name="remarks"></a>Remarks
@@ -1029,7 +1029,7 @@ void SetCommonButtons(
 *nDisabledButtonMask*<br/>
 [in]無効にするボタンのマスク。
 
-*扱わ*<br/>
+*nElevationButtonMask*<br/>
 [in]昇格が必要なボタンのマスク。
 
 ### <a name="remarks"></a>Remarks
@@ -1399,7 +1399,7 @@ void SetProgressBarState(int nState = PBST_NORMAL);
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*nState*<br/>
 [in]進行状況バーの状態。 使用可能な値は、「解説」を参照してください。
 
 ### <a name="remarks"></a>Remarks
@@ -1527,7 +1527,7 @@ static INT_PTR ShowDialog(
 *strMainInstruction*<br/>
 [in]メイン インストラクション、`CTaskDialog`します。
 
-*されません*<br/>
+*strTitle*<br/>
 [in]タイトル、`CTaskDialog`します。
 
 *nIDCommandControlsFirst*<br/>

@@ -1,18 +1,18 @@
 ---
-title: 'コンテナー : コンテナーの実装'
+title: コンテナー:コンテナーの実装
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 89bb8b483dba6e635eef5d9857bb558eca8e8fec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546706"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271425"
 ---
-# <a name="containers-implementing-a-container"></a>コンテナー : コンテナーの実装
+# <a name="containers-implementing-a-container"></a>コンテナー:コンテナーの実装
 
 この記事では、コンテナーを実装する手順を概説し、コンテナーの実装についての説明の詳細を提供するその他の記事へのリンクします。 オプションの OLE 機能を実装することも、これらの機能を説明する記事も一覧表示されます。
 
@@ -46,7 +46,7 @@ ms.locfileid: "50546706"
 
 アプリケーション ウィザードでは、クラスを派生させ、されますが、オーバーライドする必要があります`OnChange`し、手順 2. で、前の手順とその他の関数が一覧表示します。 スケルトンの実装は、これらの関数は、次の 1 つのアプリケーションから異なる方法で実装されるため、ほとんどのアプリケーションでカスタマイズする必要があります。 この例については、MFC のサンプルを参照してください。 [DRAWCLI](../visual-cpp-samples.md)と[コンテナー](../visual-cpp-samples.md)します。
 
-項目の数は、OLE をサポートするために、コンテナー アプリケーションのメニュー構造に追加する必要があります。 これらの詳細については、次を参照してください。[メニューとリソース: コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)します。
+項目の数は、OLE をサポートするために、コンテナー アプリケーションのメニュー構造に追加する必要があります。 これらの詳細については、次を参照してください。[メニューとリソース。コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)します。
 
 コンテナー アプリケーションで、次の機能の一部をサポートすることもします。
 
@@ -60,10 +60,9 @@ ms.locfileid: "50546706"
 
 - 埋め込みオブジェクトやコンテナー/サーバー アプリケーションの組み合わせへのリンク。
 
-   詳細については、次を参照してください。[コンテナー: 高度な機能](../mfc/containers-advanced-features.md)します。
+   詳細については、次を参照してください。[コンテナー。機能の高度な](../mfc/containers-advanced-features.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [コンテナー](../mfc/containers.md)<br/>
-[コンテナー: クライアント アイテム](../mfc/containers-client-items.md)
-
+[コンテナー:クライアント アイテム](../mfc/containers-client-items.md)

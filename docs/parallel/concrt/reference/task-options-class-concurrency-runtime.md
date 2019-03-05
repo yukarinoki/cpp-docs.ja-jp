@@ -1,17 +1,17 @@
 ---
-title: task_options クラス (コンカレンシー ランタイム)
+title: task_options クラス (同時実行ランタイム)
 ms.date: 11/04/2016
 f1_keywords:
 - ppltasks/concurrency::task_options
 ms.assetid: f93d146b-70f7-46ec-8c2f-c33b8bb0af69
-ms.openlocfilehash: 78005e500e9fefae7fed6085e061af7ee4264d14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c832ce759c556765fa412b2ef77333bc6612b8c3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633104"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265211"
 ---
-# <a name="taskoptions-class-concurrency-runtime"></a>task_options クラス (コンカレンシー ランタイム)
+# <a name="taskoptions-class-concurrency-runtime"></a>task_options クラス (同時実行ランタイム)
 
 タスクの作成に使用できるオプションを表します。
 

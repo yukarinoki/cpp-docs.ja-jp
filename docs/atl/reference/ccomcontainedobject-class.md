@@ -14,12 +14,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComContainedObject class
 ms.assetid: e8616b41-c200-47b8-bf2c-fb9f713ebdad
-ms.openlocfilehash: 289174fbfc61b0bbca65233fe24d93537627e17d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 15ea9be2a3576081901c9e744d89d33688fe838a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492574"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273583"
 ---
 # <a name="ccomcontainedobject-class"></a>CComContainedObject クラス
 
@@ -47,7 +47,7 @@ class CComContainedObject : public Base
 |名前|説明|
 |----------|-----------------|
 |[CComContainedObject::CComContainedObject](#ccomcontainedobject)|コンストラクターです。 所有者のオブジェクトのメンバーのポインターを初期化します`IUnknown`します。|
-|[CComContainedObject:: ~ CComContainedObject](#dtor)|デストラクターです。|
+|[CComContainedObject::~CComContainedObject](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -101,7 +101,7 @@ CComContainedObject(void* pv);
 
 セット、`m_pOuterUnknown`メンバー ポインター (から継承、`Base`クラス) に*pv*します。
 
-##  <a name="dtor"></a>  CComContainedObject:: ~ CComContainedObject
+##  <a name="dtor"></a>  CComContainedObject::~CComContainedObject
 
 デストラクターです。
 

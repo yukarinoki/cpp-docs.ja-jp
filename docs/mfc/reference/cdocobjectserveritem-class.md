@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: cecbab366b64c85b39131a13233598abec83d5ab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536527"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275272"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem クラス
 
@@ -55,7 +55,7 @@ class CDocObjectServerItem : public COleServerItem
 
 ## <a name="remarks"></a>Remarks
 
-`CDocObjectServerItem` オーバーライド可能なメンバー関数を定義します。 [OnHide](#onhide)、 [OnDoVerb](#ondoverb)、および[OnShow](#onshow)します。
+`CDocObjectServerItem` オーバーライド可能なメンバー関数を定義します。[OnHide](#onhide)、 [OnDoVerb](#ondoverb)、および[OnShow](#onshow)します。
 
 使用する`CDocObjectServerItem`、確認するため、 [OnGetEmbeddedItem](../../mfc/reference/coleserverdoc-class.md#ongetembeddeditem)で上書き、 `COleServerDoc`-新しい派生クラスを返します`CDocObjectServerItem`オブジェクト。 機能で、項目を変更する必要がある場合は、独自の新しいインスタンスを作成することができます`CDocObjectServerItem`-クラスを派生します。
 

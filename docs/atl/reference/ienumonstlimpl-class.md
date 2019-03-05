@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - IEnumOnSTLImpl class
 ms.assetid: 1789e77b-88b8-447d-a490-806b918912ce
-ms.openlocfilehash: 0ec505871f057d90f6580e547c23a0879af4c3f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8ff29522351b542d0b674bc173040d4468d00f1c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638751"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277449"
 ---
 # <a name="ienumonstlimpl-class"></a>IEnumOnSTLImpl クラス
 
@@ -58,7 +58,7 @@ C++ 標準ライブラリ コンテナー クラス。
 |名前|説明|
 |----------|-----------------|
 |[IEnumOnSTLImpl::Clone](#clone)|実装**複製**します。|
-|[保ちます](#init)|列挙子を初期化します。|
+|[IEnumOnSTLImpl::Init](#init)|列挙子を初期化します。|
 |[IEnumOnSTLImpl::Next](#next)|実装**次**します。|
 |[IEnumOnSTLImpl::Reset](#reset)|実装**リセット**します。|
 |[IEnumOnSTLImpl::Skip](#skip)|実装**スキップ**します。|
@@ -92,7 +92,7 @@ C++ 標準ライブラリ コンテナー クラス。
 
 **ヘッダー:** atlcom.h
 
-##  <a name="init"></a>  保ちます
+##  <a name="init"></a>  IEnumOnSTLImpl::Init
 
 列挙子を初期化します。
 

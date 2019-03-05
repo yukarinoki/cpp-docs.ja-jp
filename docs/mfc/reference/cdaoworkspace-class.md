@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDaoWorkspace [MFC], SetLoginTimeout
 - CDaoWorkspace [MFC], m_pDAOWorkspace
 ms.assetid: 64f60de6-4df1-4d4a-a65b-c489b5257d52
-ms.openlocfilehash: 92b2827d556583524b46f88f8bd9efeb57a5d83a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6aa404c5eb543db198043dba68d55a4b925739c8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472866"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263456"
 ---
 # <a name="cdaoworkspace-class"></a>CDaoWorkspace クラス
 
@@ -109,7 +109,7 @@ class CDaoWorkspace : public CObject
 |[CDaoWorkspace::GetWorkspaceInfo](#getworkspaceinfo)|データベース エンジンのワークスペース コレクションで定義されている指定された DAO ワークスペースに関する情報を返します。|
 |[CDaoWorkspace::Idle](#idle)|バック グラウンド タスクを実行するデータベース エンジンを使用します。|
 |[CDaoWorkspace::IsOpen](#isopen)|ワークスペースがある場合、0 以外の値を返しますが開きます。|
-|[ので、使用できません。](#open)|DAO の既定のワークスペースに関連付けられているワークスペース オブジェクトを明示的に開きます。|
+|[CDaoWorkspace::Open](#open)|DAO の既定のワークスペースに関連付けられているワークスペース オブジェクトを明示的に開きます。|
 |[CDaoWorkspace::RepairDatabase](#repairdatabase)|破損したデータベースの修復を試みます。|
 |[CDaoWorkspace::Rollback](#rollback)|現在のトランザクションを終了し、変更を保存できません。|
 |[CDaoWorkspace::SetDefaultPassword](#setdefaultpassword)|データベース エンジンがパスワードを指定せずにワークスペースを作成するときに使用するパスワードを設定します。|
@@ -462,9 +462,9 @@ void GetDatabaseInfo(
 
 - 更新可能トランザクション AFX_DAO_PRIMARY_INFO (既定値) 名
 
-- プライマリ AFX_DAO_SECONDARY_INFO 情報に加えて: バージョンについては、照合順序では、クエリのタイムアウト
+- プラス AFX_DAO_SECONDARY_INFO プライマリ情報:バージョンについては、照合順序、クエリのタイムアウト
 
-- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて: 接続
+- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて:[接続]
 
 *lpszName*<br/>
 名前で検索する場合、データベース オブジェクトの名前。 名前は、新しい workspace オブジェクトの一意名を最大 14 文字の文字列です。
@@ -632,9 +632,9 @@ void GetWorkspaceInfo(
 
 - AFX_DAO_PRIMARY_INFO (既定値) の名前
 
-- プライマリ AFX_DAO_SECONDARY_INFO 情報に加えて: ユーザー名
+- プラス AFX_DAO_SECONDARY_INFO プライマリ情報:ユーザー名
 
-- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて: ODBCTrans の分離
+- AFX_DAO_ALL_INFO プライマリとセカンダリの情報に加えて:ODBCTrans を分離します。
 
 *lpszName*<br/>
 名前で検索する場合、workspace オブジェクトの名前。 名前は、新しい workspace オブジェクトの一意名を最大 14 文字の文字列です。
@@ -653,7 +653,7 @@ static void PASCAL Idle(int nAction = dbFreeLocks);
 
 ### <a name="parameters"></a>パラメーター
 
-*%5%6%7%8.%12%0*<br/>
+*nAction*<br/>
 アイドル状態の処理中に実行するアクション。 現在、唯一の有効なアクションは`dbFreeLocks`します。
 
 ### <a name="remarks"></a>Remarks
@@ -695,7 +695,7 @@ BOOL IsOpen() const;
 
 DAO オブジェクトに直接アクセスする方法の詳細については、次を参照してください。[テクニカル ノート 54](../../mfc/tn054-calling-dao-directly-while-using-mfc-dao-classes.md)します。
 
-##  <a name="open"></a>  ので、使用できません。
+##  <a name="open"></a>  CDaoWorkspace::Open
 
 DAO の既定のワークスペースに関連付けられているワークスペース オブジェクトを明示的に開きます。
 
@@ -722,7 +722,7 @@ virtual void Open(LPCTSTR lpszName = NULL);
 
 ||||
 |-|-|-|
-|[作成します。](#create)|[バージョンの取得](#getversion)|[SetDefaultUser](#setdefaultuser)|
+|[作成します。](#create)|[GetVersion](#getversion)|[SetDefaultUser](#setdefaultuser)|
 |[GetIniPath](#getinipath)|[アイドル状態します。](#idle)|[SetIniPath](#setinipath)|
 |[GetLoginTimeout](#getlogintimeout)|[SetDefaultPassword](#setdefaultpassword)|[SetLoginTimeout](#setlogintimeout)|
 

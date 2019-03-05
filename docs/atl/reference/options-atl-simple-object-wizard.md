@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
-ms.openlocfilehash: efd79c877fcf71ae33b1539e41d3d13379b834de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50650505"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273395"
 ---
 # <a name="options-atl-simple-object-wizard"></a>オプション、ATL シンプル オブジェクト ウィザード
 
@@ -40,7 +40,7 @@ ATL プロジェクトや ATL COM クラスの詳細については、次を参�
    |オプション|説明|
    |------------|-----------------|
    |**はい**|オブジェクトを集計できることを指定します。 これが既定値です。|
-   |**No**|オブジェクトが集計されないことを指定します。|
+   |**いいえ**|オブジェクトが集計されないことを指定します。|
    |**のみ**|オブジェクトを集計する必要がありますを指定します。|
 
 - **Interface**
@@ -50,7 +50,7 @@ ATL プロジェクトや ATL COM クラスの詳細については、次を参�
    |オプション|説明|
    |------------|-----------------|
    |**デュアル**|オブジェクトがデュアル インターフェイスをサポートしていることを指定します (その vtable がカスタム インターフェイス関数と遅延バインディング`IDispatch`メソッド)。 により、両方の COM クライアントと[オートメーション コント ローラー](../../mfc/automation-clients.md)オブジェクトにアクセスします。 これが既定値です。|
-   |**カスタム**|オブジェクトが (その vtable がカスタム インターフェイス関数) カスタム インターフェイスをサポートするように指定します。 カスタム インターフェイスはプロセスの境界をまたいで、デュアル インターフェイスよりも高速化できます。<br /><br /> - **互換性のある automation**カスタム インターフェイスのサポートのあるオブジェクトへのアクセスは、オートメーション コント ローラー。|
+   |**Custom**|オブジェクトが (その vtable がカスタム インターフェイス関数) カスタム インターフェイスをサポートするように指定します。 カスタム インターフェイスはプロセスの境界をまたいで、デュアル インターフェイスよりも高速化できます。<br /><br /> - **互換性のある automation**カスタム インターフェイスのサポートのあるオブジェクトへのアクセスは、オートメーション コント ローラー。|
 
 - **サポート**
 
@@ -68,4 +68,3 @@ ATL プロジェクトや ATL COM クラスの詳細については、次を参�
 [ATL シンプル オブジェクト ウィザード](../../atl/reference/atl-simple-object-wizard.md)<br/>
 [ATL シンプル オブジェクト](../../atl/reference/adding-an-atl-simple-object.md)<br/>
 [プロセス サーバーのスレッド処理の問題](/windows/desktop/com/in-process-server-threading-issues)
-

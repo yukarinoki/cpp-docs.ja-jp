@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: ed786f3449f172f1aa4255a4ca677a400b767e83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429368"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281525"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton クラス
 
@@ -126,7 +126,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[Cmfctoolbarmenubutton::copyfrom](#copyfrom)|現在のボタンには、別のツール バー ボタンのプロパティをコピーします。 (上書き[CMFCToolBarButton::CopyFrom](../../mfc/reference/cmfctoolbarbutton-class.md#copyfrom))。|
 |[CMFCToolBarMenuButton::CreateFromMenu](#createfrommenu)|ツールバーのメニュー Windows メニューのハンドルからを初期化します。|
 |[CMFCToolBarMenuButton::CreateMenu](#createmenu)|ツール バー メニュー内のコマンドで構成されている Windows メニューを作成します。 Windows メニューへのハンドルを返します。|
-|[Cmfctoolbarmenubutton::createpopupmenu](#createpopupmenu)|ポップアップ メニュー オブジェクトを作成します ( [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)) ツールバーのメニューを表示します。|
+|[CMFCToolBarMenuButton::CreatePopupMenu](#createpopupmenu)|ポップアップ メニュー オブジェクトを作成します ( [CMFCPopupMenu クラス](../../mfc/reference/cmfcpopupmenu-class.md)) ツールバーのメニューを表示します。|
 |[CMFCToolBarMenuButton::EnableQuickCustomize](#enablequickcustomize)||
 |[CMFCToolBarMenuButton::GetCommands](#getcommands)|ツールバーのメニューにコマンドの一覧への読み取り専用アクセスを提供します。|
 |[CMFCToolBarMenuButton::GetImageRect](#getimagerect)|ボタンのイメージの外接する四角形を取得します。|
@@ -137,7 +137,7 @@ class CMFCToolBarMenuButton : public CMFCToolBarButton
 |[CMFCToolBarMenuButton::IsBorder](#isborder)||
 |[CMFCToolBarMenuButton::IsClickedOnMenu](#isclickedonmenu)||
 |[CMFCToolBarMenuButton::IsDroppedDown](#isdroppeddown)|ポップアップ メニューが表示されるかどうかを判断します。|
-|[Cmfctoolbarmenubutton::isemptymenuallowed](#isemptymenuallowed)|ユーザーが選択されたメニュー項目のサブメニューを開くことができるかどうかを判断するためにフレームワークによって呼び出されます。|
+|[CMFCToolBarMenuButton::IsEmptyMenuAllowed](#isemptymenuallowed)|ユーザーが選択されたメニュー項目のサブメニューを開くことができるかどうかを判断するためにフレームワークによって呼び出されます。|
 |[CMFCToolBarMenuButton::IsExclusive](#isexclusive)|かどうか、ボタンが排他モード、つまり、かどうか、ポップアップ メニューは開いたまま、ユーザーが別のツール バーまたはボタンの上にポインターを移動するときにも決定します。|
 |[CMFCToolBarMenuButton::IsMenuPaletteMode](#ismenupalettemode)|ポップアップ メニューがパレット モードかどうかを判断します。|
 |[CMFCToolBarMenuButton::IsQuickMode](#isquickmode)||
@@ -259,7 +259,7 @@ virtual BOOL CompareWith(const CMFCToolBarButton& other) const;
 
 ### <a name="remarks"></a>Remarks
 
-##  <a name="copyfrom"></a>  Cmfctoolbarmenubutton::copyfrom
+##  <a name="copyfrom"></a>  CMFCToolBarMenuButton::CopyFrom
 
 ```
 virtual void CopyFrom(const CMFCToolBarButton& src);
@@ -306,7 +306,7 @@ virtual HMENU CreateMenu() const;
 
 メニューの生成方法をカスタマイズする派生クラスでこのメソッドをオーバーライドすることができます。
 
-##  <a name="createpopupmenu"></a>  Cmfctoolbarmenubutton::createpopupmenu
+##  <a name="createpopupmenu"></a>  CMFCToolBarMenuButton::CreatePopupMenu
 
 作成、`CMFCPopupMenu`ツール バー メニューを表示するオブジェクト。
 
@@ -481,7 +481,7 @@ virtual BOOL IsDroppedDown() const;
 
 ツールバーのメニュー ボタンにサブメニューが表示される場合は TRUE。それ以外の場合は FALSE です。
 
-##  <a name="isemptymenuallowed"></a>  Cmfctoolbarmenubutton::isemptymenuallowed
+##  <a name="isemptymenuallowed"></a>  CMFCToolBarMenuButton::IsEmptyMenuAllowed
 
 メニュー項目が空のサブメニューを表示するかどうかを指定します。
 
@@ -591,8 +591,8 @@ virtual SIZE OnCalculateSize(
 ### <a name="parameters"></a>パラメーター
 
 [in]*pDC*<br/>
-[in]*sizeDefault*<br/>
-[in]*bHorz*<br/>
+[in] *sizeDefault*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -614,7 +614,7 @@ virtual void OnChangeParentWnd(CWnd* pWndParent);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pWndParent*<br/>
+[in] *pWndParent*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -686,10 +686,10 @@ virtual void OnDraw(
 [in]*pDC*<br/>
 [in]*rect*<br/>
 [in]*pImages*<br/>
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 [in]*bCustomizeMode*<br/>
 [in]*bHighlight*<br/>
-[in]*bDrawBorder*<br/>
+[in] *bDrawBorder*<br/>
 [in]*bGrayDisabledButtons*<br/>
 
 ### <a name="remarks"></a>Remarks

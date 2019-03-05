@@ -36,12 +36,12 @@ helpviewer_keywords:
 - COleObjectFactory [MFC], VerifyLicenseKey
 - COleObjectFactory [MFC], VerifyUserLicense
 ms.assetid: ab179c1e-4af2-44aa-a576-37c48149b427
-ms.openlocfilehash: 4aa6d688de59884c7279b441d12dda9dcdf2ff6c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25dce92f49ba9de08fcf33d54db8e97d520f5ea4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50476012"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266381"
 ---
 # <a name="coleobjectfactory-class"></a>COleObjectFactory クラス
 
@@ -97,7 +97,7 @@ class COleObjectFactory : public CCmdTarget
 
 - OLE システム レジストリには、コントロールのオブジェクト ファクトリを登録しています。
 
-オブジェクトの作成の詳細については、記事をご覧ください。[データ オブジェクトとデータ ソース (OLE)](../../mfc/data-objects-and-data-sources-ole.md)と[データ オブジェクトとデータ ソース: 作成と破棄](../../mfc/data-objects-and-data-sources-creation-and-destruction.md)します。 登録の詳細については「[登録](../../mfc/registration.md)します。
+オブジェクトの作成の詳細については、記事をご覧ください。[データ オブジェクトとデータ ソース (OLE)](../../mfc/data-objects-and-data-sources-ole.md)と[データ オブジェクトとデータ ソース。作成と破棄](../../mfc/data-objects-and-data-sources-creation-and-destruction.md)します。 登録の詳細については「[登録](../../mfc/registration.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -340,7 +340,7 @@ virtual BOOL UpdateRegistry(BOOL bRegister);
 
    MFC ActiveX ControlWizard をプロジェクトの作成に使用する場合、ControlWizard には、この純粋仮想関数をオーバーライドが用意されています。
 
-##  <a name="updateregistryall"></a>  されます
+##  <a name="updateregistryall"></a>  COleObjectFactory::UpdateRegistryAll
 
 OLE システム レジストリには、すべてのアプリケーションのオブジェクト ファクトリを登録します。
 

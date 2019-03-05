@@ -25,12 +25,12 @@ f1_keywords:
 helpviewer_keywords:
 - CAtlTransactionManager class
 ms.assetid: b01732dc-1d16-4b42-bfac-b137fca2b740
-ms.openlocfilehash: e69ea2b7446e784bb643050bd122c93ea53a0676
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 031d72903d72af77f6929072e4605d32d81585a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463779"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270203"
 ---
 # <a name="catltransactionmanager-class"></a>CAtlTransactionManager クラス
 
@@ -66,7 +66,7 @@ class CAtlTransactionManager;
 |[FindFirstFile](#findfirstfile)|トランザクション処理された操作としては、ディレクトリのファイルまたはサブディレクトリを検索します。|
 |[GetFileAttributes](#getfileattributes)|トランザクション処理された操作として指定したファイルまたはディレクトリのファイル システム属性を取得します。|
 |[GetFileAttributesEx](#getfileattributesex)|トランザクション処理された操作として指定したファイルまたはディレクトリのファイル システム属性を取得します。|
-|[このインターフェイスの GetHandle](#gethandle)|トランザクション ハンドルを返します。|
+|[GetHandle](#gethandle)|トランザクション ハンドルを返します。|
 |[IsFallback](#isfallback)|フォールバックの呼び出しが有効になっているかどうかを判断します。|
 |[MoveFile](#movefile)|既存のファイルまたはトランザクション処理された操作として、その子を含む、ディレクトリに移動します。|
 |[RegCreateKeyEx](#regcreatekeyex)|指定されたレジストリ キーを作成し、トランザクションに関連付けます。 キーが既に存在する場合は、関数が開きます。|
@@ -92,7 +92,7 @@ class CAtlTransactionManager;
 
 **ヘッダー:** atltransactionmanager.h
 
-##  <a name="dtor"></a>  ~ CAtlTransactionManager
+##  <a name="dtor"></a>  ~CAtlTransactionManager
 
 CAtlTransactionManager デストラクターです。
 
@@ -191,16 +191,16 @@ inline HANDLE CreateFile(
 作成または開くオブジェクトの名前。
 
 *dwDesiredAccess*<br/>
-読み取り、書き込み、またはどちらも、両方 (ゼロ) としてまとめることができるオブジェクトへのアクセス。 最もよく使用される値は、GENERIC_READ、GENERIC_WRITE、またはその両方: GENERIC_READ &#124; GENERIC_WRITE します。
+読み取り、書き込み、またはどちらも、両方 (ゼロ) としてまとめることができるオブジェクトへのアクセス。 最もよく使用される値とは、GENERIC_READ、GENERIC_WRITE、またはその両方です。GENERIC_READ &AMP;#124; GENERIC_WRITE します。
 
 *dwShareMode*<br/>
-読み取り、書き込み、両方が、削除、または、これらのすべてのオブジェクトの共有モード: FILE_SHARE_DELETE、FILE_SHARE_READ、FILE_SHARE_WRITE は 0。
+オブジェクトを読み取り、書き込み、どちらも、削除、または、これらのすべての共有モード:0, FILE_SHARE_DELETE, FILE_SHARE_READ, FILE_SHARE_WRITE.
 
 *lpSecurityAttributes*<br/>
 オプションのセキュリティ記述子を含み、また、返されたハンドルを子プロセスに継承できるかどうかを判断します SECURITY_ATTRIBUTES 構造体へのポインター。 パラメーターは、NULL にすることができます。
 
 *dwCreationDisposition*<br/>
-ファイルが存在し、存在しないを実行するアクション。 このパラメーターは、組み合わせることはできません、次の値のいずれかを指定する必要があります: CREATE_ALWAYS、CREATE_NEW、OPEN_ALWAYS、OPEN_EXISTING の場合、または TRUNCATE_EXISTING します。
+ファイルが存在し、存在しないを実行するアクション。 このパラメーターは、組み合わせることはできません、次の値のいずれかを指定する必要があります。CREATE_ALWAYS、CREATE_NEW、OPEN_ALWAYS、OPEN_EXISTING の場合、または TRUNCATE_EXISTING します。
 
 *dwFlagsAndAttributes*<br/>
 ファイルの属性とフラグ。 このパラメーターは、使用可能なファイル属性 (FILE_ATTRIBUTE_ *) の任意の組み合わせを含めることができます。 その他のすべてのファイル属性は、FILE_ATTRIBUTE_NORMAL をオーバーライドします。 このパラメーターは、フラグの組み合わせを含めることも (file_flag _\*) バッファリング動作の制御、アクセス モード、およびその他の特殊なフラグ。 これらを組み合わせて、任意 FILE_ATTRIBUTE_ で\*値。
@@ -302,7 +302,7 @@ inline BOOL GetFileAttributesEx(
 
 このラッパーの呼び出し、`GetFileAttributesTransacted`関数。
 
-##  <a name="gethandle"></a>  このインターフェイスの GetHandle
+##  <a name="gethandle"></a>  GetHandle
 
 トランザクション ハンドルを返します。
 
@@ -402,7 +402,7 @@ inline LSTATUS RegCreateKeyEx(
 このキーのユーザー定義のクラス。 このパラメーターは無視できます。 このパラメーターは、NULL を指定できます。
 
 *dwOptions*<br/>
-このパラメーターは、次の値のいずれかを指定できます: REG_OPTION_BACKUP_RESTORE、REG_OPTION_NON_VOLATILE、または REG_OPTION_VOLATILE します。
+このパラメーターには、次の値のいずれかを指定できます。REG_OPTION_BACKUP_RESTORE、REG_OPTION_NON_VOLATILE、または REG_OPTION_VOLATILE します。
 
 *samDesired*<br/>
 キーのアクセス権を指定するマスク。
@@ -414,7 +414,7 @@ inline LSTATUS RegCreateKeyEx(
 開くか、作成したキーを識別するハンドルを受け取る変数へのポインター。 キーが定義済みのレジストリ キーの 1 つでない場合は、呼び出し、`RegCloseKey`ハンドルの使用が完了した後に機能します。
 
 *lpdwDisposition*<br/>
-廃棄値は次のいずれかを受け取る変数へのポインター: ポインター。
+廃棄値は次のいずれかを受け取る変数へのポインター。REG_CREATED_NEW_KEY またはポインター。
 
 ### <a name="return-value"></a>戻り値
 

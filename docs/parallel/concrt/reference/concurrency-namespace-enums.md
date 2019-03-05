@@ -12,12 +12,12 @@ f1_keywords:
 - CONCRT/concurrency::join_type
 - CONCRT/concurrency::message_status Enumeration
 ms.assetid: a40e3b2d-ad21-4229-9880-2cfa84f7ab8f
-ms.openlocfilehash: 342655e290167315b7f10caba979804461e10658
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: d3eb49cd1555f23cc83efb0d8d912998295b3c55
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521077"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271191"
 ---
 # <a name="concurrency-namespace-enums"></a>同時実行の名前空間列挙型
 
@@ -217,16 +217,16 @@ enum PolicyElementKey;
 
 |名前|説明|
 |----------|-----------------|
-|`ContextPriority`|スケジューラの各コンテキストのオペレーティング システムのスレッド優先順位。 このキーが値に設定されている場合`INHERIT_THREAD_PRIORITY`スケジューラのコンテキストは、スケジューラを作成したスレッドの優先順位を継承します。<br /><br /> 有効な値: Windows の有効な値のいずれかの`SetThreadPriority`関数、および特殊な値 `INHERIT_THREAD_PRIORITY`<br /><br /> 既定値: `THREAD_PRIORITY_NORMAL`|
-|`ContextStackSize`|キロバイト単位で scheduler では、各コンテキストの予約済みのスタック サイズ。<br /><br /> 有効な値: 正の整数<br /><br /> 既定値: `0`、スタック サイズのプロセスの既定値を使用することを示します。|
-|`DynamicProgressFeedback`|スケジューラのリソースをスケジューラから収集された、または基になるハードウェア スレッドのサブスクリプション レベルに基づいてのみの統計情報に従って調整されるかどうかを判断します。 詳細については、次を参照してください。 [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)します。<br /><br /> 有効な値: のメンバー、`DynamicProgressFeedbackType`列挙, か、`ProgressFeedbackEnabled`または `ProgressFeedbackDisabled`<br /><br /> 既定値: `ProgressFeedbackEnabled`|
-|`LocalContextCacheSize`|ときに、`SchedulingProtocol`ポリシー キーが値に設定されている`EnhanceScheduleGroupLocality`、仮想プロセッサのローカル キューごとにキャッシュできる実行可能なコンテキストの最大数を指定します。 このようなコンテキストは、後入れ先出し (LIFO) の順序を可能になる原因となった仮想プロセッサ上で通常実行されます。 このポリシーのキーはない場合、`SchedulingProtocol`キーが値に設定されている`EnhanceForwardProgress`します。<br /><br /> 有効な値: 正の整数<br /><br /> 既定値: `8`|
-|`MaxConcurrency`|スケジューラによって必要なレベルの最大同時実行します。 リソース マネージャーは、最初にこのような多数の仮想プロセッサを割り当てるを試みます。 特殊な値[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)必要な同時実行レベルが、マシン上のハードウェア スレッドの数と同じであることを示します。 値が指定されている場合`MinConcurrency`がコンピューター上のハードウェア スレッドの数よりも大きいと`MaxConcurrency`として指定されて`MaxExecutionResources`の値は、`MaxConcurrency`が設定されているものと一致する発生`MinConcurrency`。<br /><br /> 有効な値: 正の整数と特殊な値 `MaxExecutionResources`<br /><br /> 既定値: `MaxExecutionResources`|
+|`ContextPriority`|スケジューラの各コンテキストのオペレーティング システムのスレッド優先順位。 このキーが値に設定されている場合`INHERIT_THREAD_PRIORITY`スケジューラのコンテキストは、スケジューラを作成したスレッドの優先順位を継承します。<br /><br /> 有効な値:Windows の有効な値のいずれかの`SetThreadPriority`関数、および特殊な値 `INHERIT_THREAD_PRIORITY`<br /><br /> 既定値: `THREAD_PRIORITY_NORMAL`|
+|`ContextStackSize`|キロバイト単位で scheduler では、各コンテキストの予約済みのスタック サイズ。<br /><br /> 有効な値:正の整数<br /><br /> 既定値: `0`、スタック サイズのプロセスの既定値を使用することを示します。|
+|`DynamicProgressFeedback`|スケジューラのリソースをスケジューラから収集された、または基になるハードウェア スレッドのサブスクリプション レベルに基づいてのみの統計情報に従って調整されるかどうかを判断します。 詳細については、次を参照してください。 [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)します。<br /><br /> 有効な値:メンバー、`DynamicProgressFeedbackType`列挙, か、`ProgressFeedbackEnabled`または `ProgressFeedbackDisabled`<br /><br /> 既定値: `ProgressFeedbackEnabled`|
+|`LocalContextCacheSize`|ときに、`SchedulingProtocol`ポリシー キーが値に設定されている`EnhanceScheduleGroupLocality`、仮想プロセッサのローカル キューごとにキャッシュできる実行可能なコンテキストの最大数を指定します。 このようなコンテキストは、後入れ先出し (LIFO) の順序を可能になる原因となった仮想プロセッサ上で通常実行されます。 このポリシーのキーはない場合、`SchedulingProtocol`キーが値に設定されている`EnhanceForwardProgress`します。<br /><br /> 有効な値:負でない整数<br /><br /> 既定値: `8`|
+|`MaxConcurrency`|スケジューラによって必要なレベルの最大同時実行します。 リソース マネージャーは、最初にこのような多数の仮想プロセッサを割り当てるを試みます。 特殊な値[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)必要な同時実行レベルが、マシン上のハードウェア スレッドの数と同じであることを示します。 値が指定されている場合`MinConcurrency`がコンピューター上のハードウェア スレッドの数よりも大きいと`MaxConcurrency`として指定されて`MaxExecutionResources`の値は、`MaxConcurrency`が設定されているものと一致する発生`MinConcurrency`。<br /><br /> 有効な値:正の整数と特殊な値 `MaxExecutionResources`<br /><br /> 既定値: `MaxExecutionResources`|
 |`MaxPolicyElementKey`|最大ポリシー要素のキー。 有効な要素キーではありません。|
-|`MinConcurrency`|リソース マネージャーで、スケジューラに提供する必要があります最小同時実行レベルです。 スケジューラに割り当てられている仮想プロセッサの数は最小値を下回ることはありません。 特殊な値[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)最小同時実行レベルが、マシン上のハードウェア スレッドの数と同じであることを示します。 値が指定されている場合`MaxConcurrency`がコンピューター上のハードウェア スレッドの数より小さいと`MinConcurrency`として指定されて`MaxExecutionResources`の値は、`MinConcurrency`設定されているものと一致する値を下げた`MaxConcurrency`します。<br /><br /> 有効な値: 正の整数と特殊な値`MaxExecutionResources`します。 同時実行ランタイム スケジューラ、値の構築に使用されるスケジューラ ポリシーの`0`が無効です。<br /><br /> 既定値: `1`|
-|`SchedulerKind`|実行コンテキストを基になるは、スケジューラを利用するスレッドの種類。 詳細については、次を参照してください。 [SchedulerType](#schedulertype)します。<br /><br /> 有効な値: のメンバー、`SchedulerType`列挙型、たとえば、 `ThreadScheduler`<br /><br /> 既定値:`ThreadScheduler`します。 これは、すべてのオペレーティング システム上の Win32 スレッドに変換されます。|
-|`SchedulingProtocol`|スケジューラによって使用されるスケジューリング アルゴリズムについて説明します。 詳細については、次を参照してください。 [SchedulingProtocolType](#schedulingprotocoltype)します。<br /><br /> 有効な値: のメンバー、`SchedulingProtocolType`列挙, か、`EnhanceScheduleGroupLocality`または `EnhanceForwardProgress`<br /><br /> 既定値: `EnhanceScheduleGroupLocality`|
-|`TargetOversubscriptionFactor`|一時的なハードウェア スレッドごとの仮想プロセッサ数。 ターゲットのオーバー サブスクリプション ファクター増やすことができます、リソース マネージャーによってを満たすために、必要に応じて`MaxConcurrency`マシン上のハードウェア スレッドにします。<br /><br /> 有効な値: 正の整数<br /><br /> 既定値: `1`|
+|`MinConcurrency`|リソース マネージャーで、スケジューラに提供する必要があります最小同時実行レベルです。 スケジューラに割り当てられている仮想プロセッサの数は最小値を下回ることはありません。 特殊な値[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)最小同時実行レベルが、マシン上のハードウェア スレッドの数と同じであることを示します。 値が指定されている場合`MaxConcurrency`がコンピューター上のハードウェア スレッドの数より小さいと`MinConcurrency`として指定されて`MaxExecutionResources`の値は、`MinConcurrency`設定されているものと一致する値を下げた`MaxConcurrency`します。<br /><br /> 有効な値:負でない整数と特殊な値`MaxExecutionResources`します。 同時実行ランタイム スケジューラ、値の構築に使用されるスケジューラ ポリシーの`0`が無効です。<br /><br /> 既定値: `1`|
+|`SchedulerKind`|実行コンテキストを基になるは、スケジューラを利用するスレッドの種類。 詳細については、次を参照してください。 [SchedulerType](#schedulertype)します。<br /><br /> 有効な値:メンバー、`SchedulerType`列挙型、たとえば、 `ThreadScheduler`<br /><br /> 既定値:`ThreadScheduler`します。 これは、すべてのオペレーティング システム上の Win32 スレッドに変換されます。|
+|`SchedulingProtocol`|スケジューラによって使用されるスケジューリング アルゴリズムについて説明します。 詳細については、次を参照してください。 [SchedulingProtocolType](#schedulingprotocoltype)します。<br /><br /> 有効な値:メンバー、`SchedulingProtocolType`列挙, か、`EnhanceScheduleGroupLocality`または `EnhanceForwardProgress`<br /><br /> 既定値: `EnhanceScheduleGroupLocality`|
+|`TargetOversubscriptionFactor`|一時的なハードウェア スレッドごとの仮想プロセッサ数。 ターゲットのオーバー サブスクリプション ファクター増やすことができます、リソース マネージャーによってを満たすために、必要に応じて`MaxConcurrency`マシン上のハードウェア スレッドにします。<br /><br /> 有効な値:正の整数<br /><br /> 既定値: `1`|
 |`WinRTInitialization`||
 
 ### <a name="requirements"></a>必要条件
@@ -307,7 +307,7 @@ enum task_group_status;
 |----------|-----------------|
 |`canceled`|`task_group` オブジェクトまたは `structured_task_group` オブジェクトは取り消されました。 1 つまたは複数のタスクが実行されていない可能性があります。|
 |`completed`|`task_group` オブジェクトまたは `structured_task_group` オブジェクトのキューに格納されたタスクは、正常に完了しました。|
-|`not_complete`|`task_group` オブジェクトのキューに格納されたタスクは完了していません。 この値は、コンカレンシー ランタイムによって現在返されていないことに注意してください。|
+|`not_complete`|`task_group` オブジェクトのキューに格納されたタスクは完了していません。 この値は、同時実行ランタイムによって現在返されていないことに注意してください。|
 
 ### <a name="requirements"></a>必要条件
 

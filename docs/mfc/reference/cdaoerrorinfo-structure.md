@@ -7,12 +7,12 @@ helpviewer_keywords:
 - CDaoErrorInfo structure [MFC]
 - DAO (Data Access Objects), Errors collection
 ms.assetid: cd37ef71-b0b3-401d-bc2b-540c9147f532
-ms.openlocfilehash: 6afe6c711d3bd6a6bb6f277121b63c924d082057
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dd9610fce88c18ac42de81ed712492766ee705de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659528"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266012"
 ---
 # <a name="cdaoerrorinfo-structure"></a>CDaoErrorInfo 構造体
 
@@ -52,7 +52,7 @@ Microsoft Windows のヘルプ ファイルのトピックのコンテキスト 
 
 MFC は、DAO クラスでオブジェクトのエラーをカプセル化しません。 代わりに、 [CDaoException](../../mfc/reference/cdaoexception-class.md)クラスは、DAO に含まれるエラー コレクションにアクセスするためのインターフェイスを提供します。`DBEngine`オブジェクト、すべてのワークスペースが含まれているオブジェクト。 MFC DAO 操作がスローした場合、`CDaoException`をキャッチすることは、MFC は、オブジェクト、`CDaoErrorInfo`構造体であり、例外オブジェクトの格納[m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo)メンバー。 (直接 DAO を呼び出すことを選択する場合は、例外オブジェクトを呼び出す必要があります[GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo)メンバー関数を`m_pErrorInfo`)。
 
-DAO のエラー処理の詳細については、記事を参照してください。[例外: データベースの例外](../../mfc/exceptions-database-exceptions.md)します。 関連情報については、「エラー オブジェクト」DAO ヘルプのトピックを参照してください。
+DAO のエラー処理の詳細については、記事を参照してください。[例外。データベース例外](../../mfc/exceptions-database-exceptions.md)します。 関連情報については、「エラー オブジェクト」DAO ヘルプのトピックを参照してください。
 
 によって取得される情報、 [CDaoException::GetErrorInfo](../../mfc/reference/cdaoexception-class.md#geterrorinfo)にメンバー関数が格納されている、`CDaoErrorInfo`構造体。 確認、 [m_pErrorInfo](../../mfc/reference/cdaoexception-class.md#m_perrorinfo)からのデータ メンバーを`CDaoException`、例外ハンドラー、または呼び出しをキャッチするオブジェクト`GetErrorInfo`から、`CDaoException`可能性のあるエラーを確認するために明示的に作成するオブジェクトDAO インターフェイスへの直接の呼び出し中に発生します。 `CDaoErrorInfo` 定義、`Dump`デバッグでのメンバー関数を作成します。 使用することができます`Dump`の内容をダンプする`CDaoErrorInfo`オブジェクト。
 

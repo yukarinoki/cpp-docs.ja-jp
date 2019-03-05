@@ -1,5 +1,5 @@
 ---
-title: 'クリップボード : その他のデータ形式の追加'
+title: クリップボード:その他のデータ形式の追加
 ms.date: 11/04/2016
 helpviewer_keywords:
 - formats [MFC], Clipboard
@@ -9,16 +9,16 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 991736714d52b4b5fb1a001fb17f1daefed5ddb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560564"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280219"
 ---
-# <a name="clipboard-adding-other-formats"></a>クリップボード : その他のデータ形式の追加
+# <a name="clipboard-adding-other-formats"></a>クリップボード:その他のデータ形式の追加
 
-このトピックでは、OLE サポートするためのサポートされている形式の一覧を展開する方法について説明します。 トピック[クリップボード: データのコピーと貼り付け](../mfc/clipboard-copying-and-pasting-data.md)コピーと、クリップボードから貼り付けをサポートするために必要な最低限の実装について説明します。 クリップボードにコピーのみの形式は、すべてを実装する場合は、 **CF_METAFILEPICT**、 **CF_EMBEDSOURCE**、 **CF_OBJECTDESCRIPTOR**、および場合によって**CF_LINKSOURCE**します。 ほとんどのアプリケーションには、これらの 3 つよりも、クリップボードにその他の形式が必要です。
+このトピックでは、OLE サポートするためのサポートされている形式の一覧を展開する方法について説明します。 トピック[クリップボード。コピーと貼り付けデータ](../mfc/clipboard-copying-and-pasting-data.md)コピーと、クリップボードから貼り付けをサポートするために必要な最低限の実装について説明します。 クリップボードにコピーのみの形式は、すべてを実装する場合は、 **CF_METAFILEPICT**、 **CF_EMBEDSOURCE**、 **CF_OBJECTDESCRIPTOR**、および場合によって**CF_LINKSOURCE**します。 ほとんどのアプリケーションには、これらの 3 つよりも、クリップボードにその他の形式が必要です。
 
 ##  <a name="_core_registering_custom_formats"></a> 形式のカスタムの登録
 
@@ -48,5 +48,4 @@ MFC OLE サンプル プログラムでこの手法が使用される[HIERSVR](.
 
 ## <a name="see-also"></a>関連項目
 
-[クリップボード: OLE クリップボード機構の使用方法](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)
-
+[クリップボード:OLE クリップボード機構の使用方法](../mfc/clipboard-using-the-ole-clipboard-mechanism.md)

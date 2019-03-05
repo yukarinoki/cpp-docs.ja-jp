@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComEnumImpl class
 ms.assetid: cc0d8e76-e608-46db-87cd-4c7161fe32d2
-ms.openlocfilehash: 2104d98cbc068eb5d8f1408cdda0898fd55c9473
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd083f3bfd9ae694c97e466fcb40b348fec0c27
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467146"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273777"
 ---
 # <a name="ccomenumimpl-class"></a>CComEnumImpl クラス
 
@@ -58,17 +58,17 @@ COM の列挙子インターフェイス。 参照してください[IEnumString
 |名前|説明|
 |----------|-----------------|
 |[CComEnumImpl::CComEnumImpl](#ccomenumimpl)|コンストラクターです。|
-|[CComEnumImpl:: ~ CComEnumImpl](#dtor)|デストラクターです。|
+|[CComEnumImpl::~CComEnumImpl](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
 |[CComEnumImpl::Clone](#clone)|実装、**複製**インターフェイスのメソッドを列挙します。|
-|[保ちます](#init)|列挙子を初期化します。|
+|[CComEnumImpl::Init](#init)|列挙子を初期化します。|
 |[CComEnumImpl::Next](#next)|実装**次**します。|
 |[CComEnumImpl::Reset](#reset)|実装**リセット**します。|
-|[より](#skip)|実装**スキップ**します。|
+|[CComEnumImpl::Skip](#skip)|実装**スキップ**します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -111,7 +111,7 @@ COM の列挙子インターフェイス。 参照してください[IEnumString
 CComEnumImpl();
 ```
 
-##  <a name="dtor"></a>  CComEnumImpl:: ~ CComEnumImpl
+##  <a name="dtor"></a>  CComEnumImpl::~CComEnumImpl
 
 デストラクターです。
 
@@ -119,7 +119,7 @@ CComEnumImpl();
 ~CComEnumImpl();
 ```
 
-##  <a name="init"></a>  保ちます
+##  <a name="init"></a>  CComEnumImpl::Init
 
 クライアントに返す列挙子インターフェイスへのポインターを渡す前に、このメソッドを呼び出す必要があります。
 
@@ -271,7 +271,7 @@ STDMETHOD(Reset)(void);
 
 標準の HRESULT 値。
 
-##  <a name="skip"></a>  より
+##  <a name="skip"></a>  CComEnumImpl::Skip
 
 このメソッドの実装を提供、**スキップ**メソッド。
 

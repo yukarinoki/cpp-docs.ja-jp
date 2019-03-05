@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - event class
 ms.assetid: fba35a53-6568-4bfa-9aaf-07c0928cf73d
-ms.openlocfilehash: 323b9a6e2c46bea8d82f0f589d1174041c1f0780
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aa9d46b868c1a31729a9590db3b3f67179903881
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480107"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264667"
 ---
 # <a name="event-class"></a>event クラス
 
@@ -126,7 +126,7 @@ size_t wait(unsigned int _Timeout = COOPERATIVE_TIMEOUT_INFINITE);
 
 ### <a name="parameters"></a>パラメーター
 
-*タイムアウト _t*<br/>
+*_Timeout*<br/>
 待機がタイムアウトするまでのミリ秒数。この値が `COOPERATIVE_TIMEOUT_INFINITE` である場合、タイムアウトが存在しないことを意味します。
 
 ### <a name="return-value"></a>戻り値
@@ -159,7 +159,7 @@ static size_t __cdecl wait_for_multiple(
 *_FWaitAll*<br/>
 場合、値に設定**true**、配列内のすべてのイベントがで指定されたパラメーターで指定、`_PPEvents`パラメーターは、待機を満たすためにシグナル状態になる必要があります。 場合、値に設定**false**、配列内のすべてのイベントで指定したことを指定します、`_PPEvents`パラメーターがシグナル状態になる、待機が満たされます。
 
-*タイムアウト _t*<br/>
+*_Timeout*<br/>
 待機がタイムアウトするまでのミリ秒数。この値が `COOPERATIVE_TIMEOUT_INFINITE` である場合、タイムアウトが存在しないことを意味します。
 
 ### <a name="return-value"></a>戻り値
@@ -168,7 +168,8 @@ static size_t __cdecl wait_for_multiple(
 
 ### <a name="remarks"></a>Remarks
 
-`_FWaitAll` パラメーターの値を `true` に設定した場合は、すべてのイベントがシグナル状態になって初めて待機条件を満たしたことになります。その場合、この関数によって返されるインデックスには、`COOPERATIVE_WAIT_TIMEOUT` 値ではないという事実を除いて、特別な意味はありません。
+
+  `_FWaitAll` パラメーターの値を `true` に設定した場合は、すべてのイベントがシグナル状態になって初めて待機条件を満たしたことになります。その場合、この関数によって返されるインデックスには、`COOPERATIVE_WAIT_TIMEOUT` 値ではないという事実を除いて、特別な意味はありません。
 
 > [!IMPORTANT]
 > ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出さないでください`wait_for_multiple`ASTA のスレッドこの呼び出しは、現在のスレッドをブロックすることができ、アプリが応答しなくなる可能性があるためです。

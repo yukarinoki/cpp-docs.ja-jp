@@ -20,12 +20,12 @@ helpviewer_keywords:
 - COleStreamFile [MFC], GetStream
 - COleStreamFile [MFC], OpenStream
 ms.assetid: e4f93698-e17c-4a18-a7c0-4b4df8eb4d93
-ms.openlocfilehash: 25d3da4ac9092fe53e84e446e93ff7aa030e6709
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bc943c74f456302b13db77bf28b6e4b21a5524b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50577542"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258733"
 ---
 # <a name="colestreamfile-class"></a>COleStreamFile クラス
 
@@ -62,7 +62,7 @@ class COleStreamFile : public CFile
 
 `COleStreamFile` オブジェクトの操作と同様に[CFile](../../mfc/reference/cfile-class.md)オブジェクト。
 
-ストリームとストレージ操作の詳細については、記事を参照してください[コンテナー: 複合ファイル](../../mfc/containers-compound-files.md)..
+ストリームとストレージ操作の詳細については、記事を参照してください。[コンテナー。複合ファイル](../../mfc/containers-compound-files.md).
 
 詳細については、次を参照してください。 [IStream](/windows/desktop/api/objidl/nn-objidl-istream)と[IStorage](/windows/desktop/api/objidl/nn-objidl-istorage) Windows SDK に含まれています。
 
@@ -245,4 +245,3 @@ BOOL OpenStream(
 
 [CFile クラス](../../mfc/reference/cfile-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

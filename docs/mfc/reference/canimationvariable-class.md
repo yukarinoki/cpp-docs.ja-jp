@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CAnimationVariable [MFC], m_pParentObject
 - CAnimationVariable [MFC], m_variable
 ms.assetid: 506e697e-31a8-4033-a27e-292f4d7b42d9
-ms.openlocfilehash: 1ad14060c7607698cd647ae34fb35b6ea3ae547c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 335d29e1e2e8e5b54ec1434a4c072ff3909b3823
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559563"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269033"
 ---
 # <a name="canimationvariable-class"></a>CAnimationVariable クラス
 
@@ -68,7 +68,7 @@ class CAnimationVariable;
 |名前|説明|
 |----------|-----------------|
 |[CAnimationVariable::CAnimationVariable](#canimationvariable)|アニメーション変数のオブジェクトを構築します。|
-|[CAnimationVariable:: ~ CAnimationVariable](#canimationvariable__~canimationvariable)|デストラクターです。 CAnimationVariable オブジェクトが破棄されるときに呼び出されます。|
+|[CAnimationVariable::~CAnimationVariable](#canimationvariable__~canimationvariable)|デストラクターです。 CAnimationVariable オブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -339,7 +339,7 @@ HRESULT GetValue(INT32& nValue);
 *dblValue*<br/>
 アニメーション変数の現在の値。
 
-*値*<br/>
+*nValue*<br/>
 アニメーション変数の現在の値。
 
 ### <a name="return-value"></a>戻り値

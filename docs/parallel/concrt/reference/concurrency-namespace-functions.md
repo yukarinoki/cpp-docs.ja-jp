@@ -33,12 +33,12 @@ f1_keywords:
 - ppltasks/concurrency::when_all
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
-ms.openlocfilehash: 7550e6f0ef44abd19b3fab89127ff898c72738f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436180"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278211"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 名前空間関数
 
@@ -54,7 +54,7 @@ ms.locfileid: "50436180"
 |[make_greedy_join](#make_greedy_join)|[make_join](#make_join)|[make_task](#make_task)|
 |[parallel_buffered_sort](#parallel_buffered_sort)|[parallel_for](#parallel_for)|[parallel_for_each](#parallel_for_each)|
 |[parallel_invoke](#parallel_invoke)|[parallel_radixsort](#parallel_radixsort)|[parallel_reduce](#parallel_reduce)|
-|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[受信](#receive)|
+|[parallel_sort](#parallel_sort)|[parallel_transform](#parallel_transform)|[receive](#receive)|
 |[run_with_cancellation_token](#run_with_cancellation_token)|[send](#send)|[set_ambient_scheduler](#set_ambient_scheduler)|
 |[set_task_execution_resources](#set_task_execution_resources)|[swap](#swap)|[task_from_exception](#task_from_exception)|
 |[task_from_result](#task_from_result)|[try_receive](#try_receive)|[wait](#wait)|
@@ -105,7 +105,7 @@ bool asend(
 *_Trg*<br/>
 ポインターまたはデータが送信されるターゲットへの参照。
 
-*(_D)*<br/>
+*_Data*<br/>
 送信されるデータへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -173,7 +173,8 @@ IAsyncAction によって表される非同期構造 ^、IAsyncActionWithProgres
 
 ラムダでは、引数を使用しない場合、または 1 つか 2 つの引数を使用する場合があります。 有効な引数は `progress_reporter<TProgress>` と `cancellation_token` です。これらを両方とも使用する場合は、この順序で指定してください。 ラムダで引数を使用しないと、進行状況の報告機能を持たない非同期構造が作成されます。 ラムダで progress_reporter\<TProgress > により`create_async`を毎回型 TProgress の進行状況を報告する非同期構造を返す、 `report` progress_reporter オブジェクトのメソッドが呼び出されます。 cancellation_token を使用するラムダでは、そのトークンを利用して取り消しを確認する場合があります。また、作成されるタスクにこのトークンを渡す場合もあります。これにより、非同期構造を取り消すと、それらのタスクも取り消されます。
 
-ラムダまたは関数オブジェクトの本体が結果を返す場合 (task\<TResult >)、タスク、ランタイムのコンテキスト内の MTA が暗黙的に作成するプロセス内で、ラムダを非同期的に実行されます。 `IAsyncInfo::Cancel` のメソッドにより、暗黙のタスクが取り消されます。
+ラムダまたは関数オブジェクトの本体が結果を返す場合 (task\<TResult >)、タスク、ランタイムのコンテキスト内の MTA が暗黙的に作成するプロセス内で、ラムダを非同期的に実行されます。 
+  `IAsyncInfo::Cancel` のメソッドにより、暗黙のタスクが取り消されます。
 
 ラムダの本体がタスクを返す場合、ラムダはインラインで実行されます。また、ラムダが型 `cancellation_token` の引数を使用するように宣言すると、タスクの作成時にこのトークンを渡すことによって、ラムダ内で作成されるタスクの取り消しをトリガーできます。 また、トークンに対して `register_callback` メソッドを使用すると、生成される非同期操作や非同期アクションで `IAsyncInfo::Cancel` を呼び出すときに、ランタイムでコールバックを呼び出すこともできます。
 
@@ -237,7 +238,8 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
 
 2 番目のオーバーロードは、新しく作成されたタスクで指定されたキャンセル トークンを関連付けます。 このオーバーロードを使用すると、最初のパラメーターとして別の `task` オブジェクトを渡すことができません。
 
-返されたタスクの種類は、関数の最初のパラメーターから推測されます。 `_Param` が `task_completion_event<T>`、`task<T>`、または型 `T` か型 `task<T>` を返すファンクタの場合、作成されたタスクの型は `task<T>` です。
+返されたタスクの種類は、関数の最初のパラメーターから推測されます。 
+  `_Param` が `task_completion_event<T>`、`task<T>`、または型 `T` か型 `task<T>` を返すファンクタの場合、作成されたタスクの型は `task<T>` です。
 
 UWP アプリで場合`_Param`型:iasyncoperation\<T > ^ または Windows::Foundation::IAsyncOperationWithProgress\<T, P > ^、またはそれらの型のいずれかを返すファンクタの場合、作成されたタスクになります型`task<T>`します。 場合`_Param`型:iasyncaction ^ または Windows::Foundation::IAsyncActionWithProgress\<P > ^、またはそれらの型のいずれかを返すファンクタの場合、作成されたタスクは入力が`task<void>`します。
 
@@ -276,7 +278,8 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 ### <a name="parameters"></a>パラメーター
 
 *_PAllocation*<br/>
-以前に `Alloc` メソッドによって割り当てられた解放するメモリへのポインター。 `_PAllocation` パラメーターの値が `NULL` に設定されている場合、このメソッドはそれを無視してすぐに制御を戻します。
+以前に `Alloc` メソッドによって割り当てられた解放するメモリへのポインター。 
+  `_PAllocation` パラメーターの値が `NULL` に設定されている場合、このメソッドはそれを無視してすぐに制御を戻します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -672,7 +675,7 @@ C++ 標準ライブラリの互換性のあるメモリ アロケーターの型
 *開始 (_b)*<br/>
 並べ替えられる範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*(_E)*<br/>
+*_End*<br/>
 並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
 *_Alloc*<br/>
@@ -1081,7 +1084,7 @@ C++ 標準ライブラリの互換性のあるメモリ アロケーターの型
 *開始 (_b)*<br/>
 並べ替えられる範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*(_E)*<br/>
+*_End*<br/>
 並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
 *_Alloc*<br/>
@@ -1150,7 +1153,7 @@ inline _Reduce_type parallel_reduce(
 *開始 (_b)*<br/>
 入力反復子の範囲の最初の要素をアドレス指定にすることです。
 
-*(_E)*<br/>
+*_End*<br/>
 縮小の範囲の最後の要素の次の位置を 1 つである要素を示す入力反復子。
 
 *_Identity*<br/>
@@ -1205,7 +1208,7 @@ inline void parallel_sort(
 *開始 (_b)*<br/>
 並べ替えられる範囲内の最初の要素の位置を示すランダム アクセス反復子。
 
-*(_E)*<br/>
+*_End*<br/>
 並べ替えられる範囲内の最後の要素の 1 つ後ろの位置を示すランダム アクセス反復子。
 
 *_Func*<br/>
@@ -1385,7 +1388,7 @@ T receive(
 *_Src*<br/>
 ポインターまたはデータが必要です元のソースへの参照。
 
-*タイムアウト _t*<br/>
+*_Timeout*<br/>
 データ (ミリ秒単位) では、メソッドが対象の最大時間。
 
 *_Filter_proc*<br/>
@@ -1447,7 +1450,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 *_Trg*<br/>
 ポインターまたはデータが送信されるターゲットへの参照。
 
-*(_D)*<br/>
+*_Data*<br/>
 送信されるデータへの参照。
 
 ### <a name="return-value"></a>戻り値
@@ -1532,7 +1535,7 @@ inline void swap(
 
 ### <a name="remarks"></a>Remarks
 
-テンプレート関数は、コンテナー クラスに特化したアルゴリズム`concurrent_vector`メンバー関数の実行に`_A`します。 [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`)。 これらは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン`template <class T> void swap(T&, T&)`アルゴリズムでクラスは代入によって機能し、低速な操作です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
+テンプレート関数は、コンテナー クラスに特化したアルゴリズム`concurrent_vector`メンバー関数の実行に`_A`します。 [concurrent_vector::swap](concurrent-vector-class.md#swap)( `_B`). これらは、コンパイラによる関数テンプレートの部分的な順序付けのインスタンスです。 テンプレートと関数呼び出しの照合が一意にならないようにテンプレート関数がオーバーロードされた場合、コンパイラは、最も特化したバージョンのテンプレート関数を選択します。 テンプレート関数の一般的なバージョン`template <class T> void swap(T&, T&)`アルゴリズムでクラスは代入によって機能し、低速な操作です。 各コンテナー内の特化バージョンのほうが、コンテナー クラスの内部表現で使用できるため大幅に高速になります。
 
 このメソッドはコンカレンシー セーフではありません。 他のスレッドも操作を行って同時実行ベクターのどちらかでこのメソッドを呼び出すときにすることを確認する必要があります。
 
@@ -1600,7 +1603,7 @@ void Trace_agents_register_name(
 *_PObject*<br/>
 メッセージ ブロックまたはトレースに名前が、エージェントへのポインター。
 
-*名 (_n)*<br/>
+*_Name*<br/>
 指定したオブジェクトの名前。
 
 ##  <a name="try_receive"></a>  try_receive
@@ -1688,7 +1691,7 @@ auto when_all(
 *開始 (_b)*<br/>
 結果のタスクに組み込まれる要素範囲内にある最初の要素の位置。
 
-*(_E)*<br/>
+*_End*<br/>
 結果のタスクに組み込まれる要素範囲外にある最初の要素の位置。
 
 *_TaskOptions*<br/>
@@ -1740,7 +1743,7 @@ auto when_any(
 *開始 (_b)*<br/>
 結果のタスクに組み込まれる要素範囲内にある最初の要素の位置。
 
-*(_E)*<br/>
+*_End*<br/>
 結果のタスクに組み込まれる要素範囲外にある最初の要素の位置。
 
 *_TaskOptions*<br/>

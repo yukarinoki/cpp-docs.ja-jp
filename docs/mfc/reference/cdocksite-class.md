@@ -86,12 +86,12 @@ helpviewer_keywords:
 - CDockSite [MFC], ShowRow
 - CDockSite [MFC], SwapRows
 ms.assetid: 0fcfff79-5f50-4281-b2de-a55653bbea40
-ms.openlocfilehash: 08acf9e47a26d4cbc5bcb96cbff086b19768e972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccd1bc115f92e0c2605fe5f587a0567f672c6c09
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486308"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259803"
 ---
 # <a name="cdocksite-class"></a>CDockSite Class
 
@@ -125,7 +125,7 @@ class CDockSite: public CBasePane
 |[CDockSite::FixupVirtualRects](#fixupvirtualrects)||
 |[CDockSite::GetDockSiteID](#getdocksiteid)||
 |[CDockSite::GetDockSiteRowsList](#getdocksiterowslist)||
-|[CDockSite::IsAccessibilityCompatible](#isaccessibilitycompatible)|( `CBasePane::IsAccessibilityCompatible`をオーバーライドします)。|
+|[CDockSite::IsAccessibilityCompatible](#isaccessibilitycompatible)|(`CBasePane::IsAccessibilityCompatible` をオーバーライドします)。|
 |[CDockSite::IsDragMode](#isdragmode)||
 |[CDockSite::IsLastRow](#islastrow)||
 |[CDockSite::IsRectWithinDockSite](#isrectwithindocksite)||
@@ -186,7 +186,7 @@ CDockingPanesRow* AddRow(
 
 [in]*pos*<br/>
 
-[in]*パラメーター nHeight*<br/>
+[in] *nHeight*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -219,7 +219,7 @@ void AlignDockSite(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectToAlignBy*<br/>
+[in] *rectToAlignBy*<br/>
 
 [in]*rectResult*<br/>
 
@@ -239,7 +239,7 @@ virtual CSize CalcFixedLayout(
 
 [in]*bStretch*<br/>
 
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -275,13 +275,13 @@ virtual BOOL CreateEx(
 
 [in]*dwStyleEx*<br/>
 
-[in]*dwStyle*<br/>
+[in] *dwStyle*<br/>
 
 [in]*rect*<br/>
 
-[in]*pParentWnd*<br/>
+[in] *pParentWnd*<br/>
 
-[in]*dwControlBarStyle*<br/>
+[in] *dwControlBarStyle*<br/>
 
 [in]*pContext*<br/>
 
@@ -300,11 +300,11 @@ virtual CDockingPanesRow* CreateRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pParentDockBar*<br/>
+[in] *pParentDockBar*<br/>
 
 [in]*nOffset*<br/>
 
-[in]*nRowHeight*<br/>
+[in] *nRowHeight*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -543,7 +543,7 @@ virtual void OnRemoveRow(
 
 [in]*pos*<br/>
 
-[in]*bByShow*<br/>
+[in] *bByShow*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -577,7 +577,7 @@ virtual void OnSizeParent(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectAvailable*<br/>
+[in] *rectAvailable*<br/>
 
 [in]*nSide*<br/>
 
@@ -699,9 +699,9 @@ BOOL ReplacePane(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pOldBar*<br/>
+[in] *pOldBar*<br/>
 
-[in]*pNewBar*<br/>
+[in] *pNewBar*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -715,7 +715,7 @@ virtual void RepositionPanes(CRect& rectNewClientArea);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectNewClientArea*<br/>
+[in] *rectNewClientArea*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -729,9 +729,9 @@ void ResizeDockSite(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nNewWidth*<br/>
+[in] *nNewWidth*<br/>
 
-[in]*nNewHeight*<br/>
+[in] *nNewHeight*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -748,7 +748,7 @@ int ResizeRow(
 
 [in]*pRow*<br/>
 
-[in]*nNewSize*<br/>
+[in] *nNewSize*<br/>
 
 [in]*bAdjustLayout*<br/>
 
@@ -819,9 +819,9 @@ void SwapRows(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pFirstRow*<br/>
+[in] *pFirstRow*<br/>
 
-[in]*pSecondRow*<br/>
+[in] *pSecondRow*<br/>
 
 ### <a name="remarks"></a>Remarks
 

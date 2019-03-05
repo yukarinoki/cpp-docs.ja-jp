@@ -238,12 +238,12 @@ helpviewer_keywords:
 - CMFCBaseTabCtrl [MFC], m_bActivateTabOnRightClick
 - CMFCBaseTabCtrl [MFC], m_bAutoDestroyWindow
 ms.assetid: 7270c55f-6f6e-4dd2-b0d2-291afeac3882
-ms.openlocfilehash: d12c7a8c9363e93baf56d53ad7b8d81401984228
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 889bb9c48899691554a22435ffee71d6f68a6409
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51330399"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261857"
 ---
 # <a name="cmfcbasetabctrl-class"></a>CMFCBaseTabCtrl Class
 
@@ -317,7 +317,7 @@ class CMFCBaseTabCtrl : public CWnd
 |[CMFCBaseTabCtrl::GetVisibleTabsNum](#getvisibletabsnum)|表示されるタブの数を返します。|
 |[CMFCBaseTabCtrl::HasImage](#hasimage)||
 |[CMFCBaseTabCtrl::HideSingleTab](#hidesingletab)|ウィンドウ タブを非表示にするオプションを設定します。ただし、タブ付きウィンドウに表示されるタブが 1 つのみの場合に限ります。|
-|[Cmfcbasetabctrl::inserttab](#inserttab)|新しいタブを挿入します。|
+|[CMFCBaseTabCtrl::InsertTab](#inserttab)|新しいタブを挿入します。|
 |[CMFCBaseTabCtrl::InvalidateTab](#invalidatetab)||
 |[CMFCBaseTabCtrl::IsActiveTabCloseButton](#isactivetabclosebutton)||
 |[CMFCBaseTabCtrl::IsAutoColor](#isautocolor)|タブ付きウィンドウが自動設定色のモードであるかどうかを示す値を返します。|
@@ -488,7 +488,7 @@ virtual void ApplyRestoredTabInfo(BOOL bUseTabIndexes = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bUseTabIndexes*<br/>
+[in] *bUseTabIndexes*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -604,7 +604,7 @@ void EnableActivateLastActive(BOOL bLastActive = TRUE);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bLastActive*<br/>
+[in] *bLastActive*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -768,7 +768,7 @@ virtual void FireChangeActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nNewTab*<br/>
+[in] *nNewTab*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -780,7 +780,7 @@ virtual BOOL FireChangingActiveTab(int nNewTab);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nNewTab*<br/>
+[in] *nNewTab*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -938,7 +938,7 @@ virtual CWnd* GetLastVisibleTab(int& iTabNum);
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*iTabNum*<br/>
+[in] *iTabNum*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -1037,7 +1037,7 @@ virtual int GetTabByID(int id) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*id*<br/>
 [in]タブの id。
 
 ### <a name="return-value"></a>戻り値
@@ -1363,7 +1363,7 @@ virtual void HideSingleTab(BOOL bHide = TRUE);
 
 1 つのタブを非表示にする、アプリケーションが構成されると、フレームワークでタブ コントロールに 2 番目のタブが追加されたときに、タブが自動的に表示されます。
 
-##  <a name="inserttab"></a>  Cmfcbasetabctrl::inserttab
+##  <a name="inserttab"></a>  CMFCBaseTabCtrl::InsertTab
 
 タブをタブ コントロールに挿入します。
 
@@ -1761,7 +1761,7 @@ virtual void MoveTab(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*%n ソース*<br/>
+[in] *nSource*<br/>
 
 [in]*nDest*<br/>
 
@@ -2369,9 +2369,9 @@ virtual void SwapTabs(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*nFisrtTabID*<br/>
+[in] *nFisrtTabID*<br/>
 
-[in]*nSecondTabID*<br/>
+[in] *nSecondTabID*<br/>
 
 ### <a name="remarks"></a>Remarks
 

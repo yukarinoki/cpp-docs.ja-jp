@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - cancellation_token_registration class
 ms.assetid: 823d63f4-7233-4d65-8976-6152ccf12d0e
-ms.openlocfilehash: ca664d78f80a0c335a8669454b1345955aaefcb2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6ca8061181ec057110282fa297666235e898ff6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644666"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270828"
 ---
 # <a name="cancellationtokenregistration-class"></a>cancellation_token_registration クラス
 
@@ -52,7 +52,7 @@ class cancellation_token_registration;
 
 **名前空間:** concurrency
 
-##  <a name="dtor"></a> ~ cancellation_token_registration
+##  <a name="dtor"></a> ~cancellation_token_registration
 
 ```
 ~cancellation_token_registration();

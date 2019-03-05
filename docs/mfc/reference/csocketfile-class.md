@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSocketFile [MFC], CSocketFile
 ms.assetid: 7924c098-5f72-40d6-989d-42800a47958f
-ms.openlocfilehash: f31bbda1bb6428b6bcca25d6eddce98156fac1d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f3fa73320ae34283b0cdac559111a53a879c031c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588839"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274272"
 ---
 # <a name="csocketfile-class"></a>CSocketFile クラス
 
@@ -50,7 +50,7 @@ class CSocketFile : public CFile
 
 [!code-cpp[NVC_MFCSocketThread#4](../../mfc/reference/codesnippet/cpp/csocketfile-class_1.cpp)]
 
-詳細については、次を参照してください。 [MFC における Windows ソケット](../../mfc/windows-sockets-in-mfc.md)、 [Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)、だけでなく[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)します。
+詳細については、次を参照してください。 [MFC における Windows ソケット](../../mfc/windows-sockets-in-mfc.md)、 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)、だけでなく[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -79,7 +79,7 @@ explicit CSocketFile(
 *pSocket*<br/>
 アタッチするソケット、`CSocketFile`オブジェクト。
 
-*で*<br/>
+*bArchiveCompatible*<br/>
 ファイル オブジェクトで使用するかどうかを指定する`CArchive`オブジェクト。 パスを使用する場合にのみ FALSE、`CSocketFile`を単独でオブジェクトのスタンドアロンどおり`CFile`オブジェクトは、制限事項があります。 このフラグを変更する方法、`CArchive`オブジェクトにアタッチされて、`CSocketFile`オブジェクトが読み取り用には、そのバッファーを管理します。
 
 ### <a name="remarks"></a>Remarks
@@ -93,7 +93,7 @@ explicit CSocketFile(
 
 `CSocketFile`、ただし、データは、メッセージ ベース; バッファーは、複数のメッセージを含めることができます、要求されたバイト数よりも少ないのため受信ファイルの終わりを意味しません。 アプリケーションでは、それほどで、ここではブロックされません`CFile`バッファーが空になるまで、バッファーからメッセージの読み取りを続けます。 [CArchive::IsBufferEmpty](../../mfc/reference/carchive-class.md#isbufferempty)関数は、このような場合、アーカイブのバッファーの状態を監視するために役立ちます。
 
-使用の詳細については`CSocketFile`、記事を参照して[Windows ソケット: アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)と[Windows ソケット: 例のソケットを使用してアーカイブ](../../mfc/windows-sockets-example-of-sockets-using-archives.md)します。
+使用の詳細については`CSocketFile`、記事を参照して[Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)と[Windows ソケット。アーカイブを使用するソケットの例](../../mfc/windows-sockets-example-of-sockets-using-archives.md)します。
 
 ## <a name="see-also"></a>関連項目
 

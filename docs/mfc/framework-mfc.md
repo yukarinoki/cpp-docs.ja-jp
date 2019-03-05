@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows API [MFC], encapsulation by MFC
 - encapsulated Win32 API [MFC]
 ms.assetid: 3be0fec8-9843-4119-ae42-ece993ef500b
-ms.openlocfilehash: ff29a867a8351a51ad7f09a5ca31d871fc67bab8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 933fcf97c24ed0903395e2c718f8c89d42473494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269020"
 ---
 # <a name="framework-mfc"></a>フレームワーク (MFC)
 
@@ -41,7 +41,7 @@ Microsoft Foundation Class (MFC) ライブラリ、フレームワークを使�
 
 [フレームワークと記述したコードとの関係](../mfc/how-the-framework-calls-your-code.md)
 
-[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp:アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
 
 [ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)
 

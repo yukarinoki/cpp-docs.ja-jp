@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 96e279e8ab3080c0239f1e41895142ba23c5a7c9
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693974"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261662"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT クラス
 
@@ -73,7 +73,7 @@ class CContainedWindowT : public TBase
 |[CContainedWindowT::SubclassWindow](#subclasswindow)|ウィンドウをサブクラス化します。|
 |[CContainedWindowT::SwitchMessageMap](#switchmessagemap)|変更をメッセージ マップが含まれているウィンドウのメッセージの処理に使用します。|
 |[CContainedWindowT::UnsubclassWindow](#unsubclasswindow)|前にサブクラス化されたウィンドウを復元します。|
-|[この段階](#windowproc)|(静的)コンテナー内のウィンドウに送信されるメッセージを処理します。|
+|[CContainedWindowT::WindowProc](#windowproc)|(静的)コンテナー内のウィンドウに送信されるメッセージを処理します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -103,7 +103,7 @@ class CContainedWindowT : public TBase
 
 [!code-cpp[NVC_ATL_Windowing#40](../../atl/codesnippet/cpp/ccontainedwindowt-class_3.h)]
 
-|詳細情報:|解決方法については、|
+|詳細情報:|解決方法|
 |--------------------------------|---------|
 |コントロールの作成|[ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)|
 |ATL でのウィンドウの使用|[ATL ウィンドウ クラス](../../atl/atl-window-classes.md)|
@@ -426,7 +426,7 @@ HWND UnsubclassWindow(BOOL bForce = FALSE);
 
 ウィンドウが破棄される前に、元のウィンドウ プロシージャを復元する場合にのみ、このメソッドを使用します。 それ以外の場合、 [WindowProc](#windowproc)ウィンドウが破棄されるときに、これは自動的にします。
 
-##  <a name="windowproc"></a>  この段階
+##  <a name="windowproc"></a>  CContainedWindowT::WindowProc
 
 この静的メソッドでは、ウィンドウ プロシージャを実装します。
 
@@ -465,6 +465,6 @@ static LRESULT CALLBACK WindowProc(
 [CWindow クラス](../../atl/reference/cwindow-class.md)<br/>
 [CWindowImpl クラス](../../atl/reference/cwindowimpl-class.md)<br/>
 [CMessageMap クラス](../../atl/reference/cmessagemap-class.md)<br/>
-[送るに](message-map-macros-atl.md#begin_msg_map)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

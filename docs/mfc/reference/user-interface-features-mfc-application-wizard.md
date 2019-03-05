@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, user interface features
 ms.assetid: 59e7b829-a665-42eb-be23-3f2a36eb2dad
-ms.openlocfilehash: 99785e2e6ef1c0644833d582774380bff792ac9c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ca67d4cac3786ce8bb059464d47acf17e3ecdc7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429277"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266068"
 ---
 # <a name="user-interface-features-mfc-application-wizard"></a>[ユーザー インターフェイスの機能] (MFC アプリケーション ウィザード)
 
@@ -64,4 +64,3 @@ ms.locfileid: "50429277"
 ## <a name="see-also"></a>関連項目
 
 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)
-

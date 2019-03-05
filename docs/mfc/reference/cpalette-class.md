@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CPalette [MFC], ResizePalette
 - CPalette [MFC], SetPaletteEntries
 ms.assetid: 8cd95498-53ed-4852-85e1-70e522541114
-ms.openlocfilehash: 1022d05265fc7c2b349dec22e41984e7d41820b2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8abd03ff2b133eb6040799eff6879a19a64783ef
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586057"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274662"
 ---
 # <a name="cpalette-class"></a>CPalette クラス
 
@@ -107,7 +107,7 @@ void AnimatePalette(
 *nStartIndex*<br/>
 アニメーション化するパレットの最初のエントリを指定します。
 
-*とも*<br/>
+*nNumEntries*<br/>
 アニメーション化するパレット内のエントリの数を指定します。
 
 *lpPaletteColors*<br/>
@@ -241,7 +241,7 @@ UINT GetPaletteEntries(
 *nStartIndex*<br/>
 取得する論理パレットの最初のエントリを指定します。
 
-*とも*<br/>
+*nNumEntries*<br/>
 論理パレットを取得するエントリの数を指定します。
 
 *lpPaletteColors*<br/>
@@ -279,7 +279,7 @@ BOOL ResizePalette(UINT nNumEntries);
 
 ### <a name="parameters"></a>パラメーター
 
-*とも*<br/>
+*nNumEntries*<br/>
 サイズ変更された後、パレット内のエントリの数を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -308,7 +308,7 @@ UINT SetPaletteEntries(
 *nStartIndex*<br/>
 設定する論理パレットの最初のエントリを指定します。
 
-*とも*<br/>
+*nNumEntries*<br/>
 設定する論理パレットのエントリの数を指定します。
 
 *lpPaletteColors*<br/>
@@ -331,4 +331,3 @@ Windows 構造体の詳細については`PALETTEENTRY`を参照してくださ�
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CPalette::GetPaletteEntries](#getpaletteentries)<br/>
 [CPalette::SetPaletteEntries](#setpaletteentries)
-

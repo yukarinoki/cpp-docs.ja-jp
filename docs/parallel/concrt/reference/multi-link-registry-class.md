@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - multi_link_registry class
 ms.assetid: b2aa73a8-e8a6-4255-b117-d07530c328b2
-ms.openlocfilehash: 6f4e6db693a5839fd3add503bfb9697679a98dd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 388cc0082f69041368d1a444179855451d552ce6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50635407"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264764"
 ---
 # <a name="multilinkregistry-class"></a>multi_link_registry クラス
 
@@ -34,7 +34,7 @@ class multi_link_registry : public network_link_registry<_Block>;
 
 #### <a name="parameters"></a>パラメーター
 
-*(_B)*<br/>
+*_Block*<br/>
 ブロックのデータ型に格納されている、`multi_link_registry`オブジェクト。
 
 ## <a name="members"></a>メンバー

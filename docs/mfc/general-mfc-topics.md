@@ -6,12 +6,12 @@ helpviewer_keywords:
 - class libraries [MFC], MFC
 - MFC, application development
 ms.assetid: 617e9945-9bb3-471d-a3ba-e235fcfb55d1
-ms.openlocfilehash: ceedf5c02d92059058bc72942a74852eb8146d38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a55bfae8599e2b221cb853cb17bd4113839fb9c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564724"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270970"
 ---
 # <a name="general-mfc-topics"></a>MFC の一般的なトピック
 
@@ -33,7 +33,7 @@ MFC フレームワークは、Windows の熟練プログラマの成果を基�
 
 [フレームワークを使ったアプリケーションの作成](../mfc/building-on-the-framework.md)
 
-[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp:アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
 
 [ドキュメント テンプレートとドキュメント/ビューの作成手順](../mfc/document-templates-and-the-document-view-creation-process.md)
 
@@ -47,7 +47,7 @@ MFC フレームワークは、Windows の熟練プログラマの成果を基�
 
 [Windows Vista コモン コントロールの作成要件](../mfc/build-requirements-for-windows-vista-common-controls.md)
 
-[方法: 再起動マネージャーのサポートを追加する](../mfc/how-to-add-restart-manager-support.md)
+[方法: 再起動マネージャーのサポートを追加します。](../mfc/how-to-add-restart-manager-support.md)
 
 [動的レイアウト](../mfc/dynamic-layout.md)
 
@@ -58,4 +58,3 @@ ATL については、次を参照してください。[アクティブ テン�
 ## <a name="see-also"></a>関連項目
 
 [ウィンドウ オブジェクトの操作](../mfc/working-with-window-objects.md)
-

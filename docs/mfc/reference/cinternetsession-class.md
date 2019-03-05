@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CInternetSession [MFC], SetCookie
 - CInternetSession [MFC], SetOption
 ms.assetid: ef54feb4-9d0f-4e65-a45d-7a4cf6c40e51
-ms.openlocfilehash: 216f3bf0ce62eb6e69ad0650289c4c2d91f95159
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 5ad1a1a0dde32358828d58a8f237337c4f62f3e5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178162"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261298"
 ---
 # <a name="cinternetsession-class"></a>CInternetSession クラス
 
@@ -67,10 +67,10 @@ class CInternetSession : public CObject
 |[CInternetSession::GetCookie](#getcookie)|指定した URL とそのすべての親の Url の cookie を返します。|
 |[CInternetSession::GetCookieLength](#getcookielength)|バッファーに格納されているクッキーの長さを指定する変数を取得します。|
 |[CInternetSession::GetFtpConnection](#getftpconnection)|サーバーと FTP セッションを開きます。 ユーザーをログオンします。|
-|[代わり](#getgopherconnection)|接続を開こうとするアプリケーションを gopher サーバーを開きます。|
-|[代わりに](#gethttpconnection)|接続を開こうとしているアプリケーションの HTTP サーバーを開きます。|
-|[代入できます。](#onstatuscallback)|ステータス コールバックが有効にすると、操作の状態を更新します。|
-|[できます](#openurl)|解析し、URL が開かれます。|
+|[CInternetSession::GetGopherConnection](#getgopherconnection)|接続を開こうとするアプリケーションを gopher サーバーを開きます。|
+|[CInternetSession::GetHttpConnection](#gethttpconnection)|接続を開こうとしているアプリケーションの HTTP サーバーを開きます。|
+|[CInternetSession::OnStatusCallback](#onstatuscallback)|ステータス コールバックが有効にすると、操作の状態を更新します。|
+|[CInternetSession::OpenURL](#openurl)|解析し、URL が開かれます。|
 |[CInternetSession::SetCookie](#setcookie)|指定された URL の cookie を設定します。|
 |[CInternetSession::SetOption](#setoption)|インターネット セッションのオプションを設定します。|
 
@@ -131,10 +131,10 @@ CInternetSession(
 *pstrAgent*<br/>
 アプリケーションまたはインターネットの機能 (たとえば、「Microsoft インターネット ブラウザー」) を呼び出してエンティティ名前を識別する文字列へのポインター。 場合*pstrAgent* NULL (既定)、フレームワークによって、グローバル関数は、 [AfxGetAppName](application-information-and-management.md#afxgetappname)アプリケーションの名前を含む null で終わる文字列が返されます。 一部のプロトコルは、サーバーにアプリケーションを識別するために、この文字列を使用します。
 
-*独自*<br/>
+*dwContext*<br/>
 操作のコンテキストの識別子。 *独自*によって返される操作の状態情報を識別する[対応](#onstatuscallback)します。 既定値を 1 に設定します。ただし、操作の特定のコンテキスト ID を明示的に割り当てることができます。 オブジェクトとその動作はコンテキスト ID に関連付けられる
 
-*は*<br/>
+*dwAccessType*<br/>
 必要なアクセスの種類。 次に、有効な値、うち 1 つだけを指定することがあります。
 
 - INTERNET_OPEN_TYPE_PRECONFIG 接続に使用するには、レジストリの設定が構成済みです。 このアクセスの種類は、既定値として設定されます。 このプロキシ経由の接続に次のように設定します。*は*; でこの値にする、レジストリを適切に設定します。
@@ -325,7 +325,7 @@ FTP サーバーの名前を含む文字列へのポインター。
 |      NULL       | NULL 以外の文字列 |            ERROR            |            ERROR            |
 | NULL 以外の文字列 | NULL 以外の文字列 |       *pstrUserName*        |       *pstrPassword*        |
 
-*ポート*<br/>
+*nPort*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
 *bPassive*<br/>
@@ -343,7 +343,7 @@ FTP サーバーの名前を含む文字列へのポインター。
 
 例をご覧ください[CFtpFileFind](../../mfc/reference/cftpfilefind-class.md)します。
 
-## <a name="getgopherconnection"></a>  代わり
+## <a name="getgopherconnection"></a>  CInternetSession::GetGopherConnection
 
 Gopher の新しい接続を確立し、ポインターを取得するには、このメンバー関数を呼び出して、`CGopherConnection`オブジェクト。
 
@@ -366,7 +366,7 @@ Gopher サーバー名を含む文字列へのポインター。
 *pstrPassword*<br/>
 アクセスのパスワードを含む文字列へのポインター。
 
-*ポート*<br/>
+*nPort*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
 ### <a name="return-value"></a>戻り値
@@ -377,7 +377,7 @@ Gopher サーバー名を含む文字列へのポインター。
 
 `GetGopherConnection` gopher サーバーに接続し、作成してへのポインターを返します、`CGopherConnection`オブジェクト。 サーバー上の特定の操作を行うことはできません。 読み取りまたは書き込みする場合は、たとえば、別の手順としてこれらの操作を実行する必要があります。 クラスを参照してください。 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md)、 [CGopherFile](../../mfc/reference/cgopherfile-class.md)、および[CGopherFileFind](../../mfc/reference/cgopherfilefind-class.md)ファイルの検索方法の詳細については、開く、ファイルの読み取りやファイルへの書き込み。 FTP サイトの参照については、メンバー関数を参照してください。 [OpenURL](#openurl)します。 記事をご覧ください[インターネットが WinInet を使用したプログラミング](../../mfc/win32-internet-extensions-wininet.md)gopher 接続の一般的なタスクを実行する手順について。
 
-## <a name="gethttpconnection"></a>  代わりに
+## <a name="gethttpconnection"></a>  CInternetSession::GetHttpConnection
 
 HTTP 接続を確立し、ポインターを取得するには、このメンバー関数を呼び出して、`CHttpConnection`オブジェクト。
 
@@ -401,7 +401,7 @@ CHttpConnection* GetHttpConnection(
 *pstrServer*<br/>
 HTTP サーバー名を含む文字列へのポインター。
 
-*ポート*<br/>
+*nPort*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
 *pstrUserName*<br/>
@@ -421,7 +421,7 @@ HTTP サーバー名を含む文字列へのポインター。
 
 `GetHttpConnection` HTTP サーバーに接続して作成してへのポインターを返します、`CHttpConnection`オブジェクト。 サーバー上の特定の操作を行うことはできません。 HTTP ヘッダーを照会する場合は、たとえば、別のステップとしてこの操作を実行する必要があります。 クラスを参照してください。 [CHttpConnection](../../mfc/reference/chttpconnection-class.md)と[CHttpFile](../../mfc/reference/chttpfile-class.md)操作については、HTTP サーバーへの接続を使用して行うことができます。 HTTP サイトをブラウズする方法の詳細については、メンバー関数を参照してください。 [OpenURL](#openurl)します。 記事をご覧ください[インターネットが WinInet を使用したプログラミング](../../mfc/win32-internet-extensions-wininet.md)HTTP 接続の一般的なタスクを実行する手順について。
 
-## <a name="onstatuscallback"></a>  代入できます。
+## <a name="onstatuscallback"></a>  CInternetSession::OnStatusCallback
 
 このメンバー関数は、ステータス コールバックが有効にし、操作が保留中の状態を更新するためにフレームワークによって呼び出されます。
 
@@ -435,7 +435,7 @@ virtual void OnStatusCallback(
 
 ### <a name="parameters"></a>パラメーター
 
-*独自*<br/>
+*dwContext*<br/>
 アプリケーションによって提供されるコンテキストの値です。
 
 *dwInternetStatus*<br/>
@@ -477,7 +477,7 @@ virtual void OnStatusCallback(
 
 非同期操作の詳細については、記事を参照してください。[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)します。
 
-## <a name="openurl"></a>  できます
+## <a name="openurl"></a>  CInternetSession::OpenURL
 
 HTTP サーバーを指定された要求を送信し、MIME 追加 RFC822 を指定するクライアントを許可するには、関数、または、要求と共に送信する HTTP ヘッダーは、このメンバーを呼び出します。
 
@@ -495,7 +495,7 @@ CStdioFile* OpenURL(
 *pstrURL*<br/>
 読み取りの開始 URL の名前へのポインター。 Url のみファイルで始まる: ftp: gopher: または http: はサポートされています。 場合アサート*pstrURL*は NULL です。
 
-*独自*<br/>
+*dwContext*<br/>
 コールバックに返されるハンドルを使用して、アプリケーション定義の値が渡されます。
 
 *dwFlags*<br/>

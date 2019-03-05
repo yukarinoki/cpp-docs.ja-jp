@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComHeap class
 ms.assetid: c74183ce-98ae-46fb-b186-93ea4cf0222b
-ms.openlocfilehash: ae076ee7e2b1e04a997d0b345a2d89b4cc59183d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f8966c215ed53279f1391ce00adfc783f34f2d1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496071"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276165"
 ---
 # <a name="ccomheap-class"></a>CComHeap クラス
 
@@ -38,9 +38,9 @@ class CComHeap : public IAtlMemMgr
 |名前|説明|
 |----------|-----------------|
 |[CComHeap::Allocate](#allocate)|メモリ ブロックを割り当てるには、このメソッドを呼び出します。|
-|[Ccomheap::free](#free)|このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。|
+|[CComHeap::Free](#free)|このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。|
 |[CComHeap::GetSize](#getsize)|このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得するには、このメソッドを呼び出します。|
-|[Ccomheap::reallocate](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|
+|[CComHeap::Reallocate](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -83,7 +83,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 使用して実装[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)します。
 
-##  <a name="free"></a>  Ccomheap::free
+##  <a name="free"></a>  CComHeap::Free
 
 このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。
 
@@ -121,7 +121,7 @@ virtual size_t GetSize(void* p) throw();
 
 使用して実装[IMalloc::GetSize](/windows/desktop/api/objidlbase/nf-objidlbase-imalloc-getsize)します。
 
-##  <a name="reallocate"></a>  Ccomheap::reallocate
+##  <a name="reallocate"></a>  CComHeap::Reallocate
 
 このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。
 

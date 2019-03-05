@@ -17,12 +17,12 @@ helpviewer_keywords:
 - CComAutoThreadModule class
 - apartment model modules
 ms.assetid: 13063ea5-a57e-4aac-97d3-227137262811
-ms.openlocfilehash: 805227144887b29d85b1948f62060ffe9eb2d0e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b0fa685bf9a7de94b158bd62b00161c1b58562d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271997"
 ---
 # <a name="ccomautothreadmodule-class"></a>CComAutoThreadModule クラス
 
@@ -75,7 +75,7 @@ class CComAutoThreadModule : public CComModule
 
 モジュールからの派生`CComAutoThreadModule`複数アパートメント内でオブジェクトを作成する場合。 含める必要があります、 [DECLARE_CLASSFACTORY_AUTO_THREAD](aggregation-and-class-factory-macros.md#declare_classfactory_auto_thread)を指定するオブジェクトのクラス定義でマクロ[CComClassFactoryAutoThread](../../atl/reference/ccomclassfactoryautothread-class.md)クラス ファクトリとして。
 
-既定では、ATL COM AppWizard (Visual Studio .NET で ATL プロジェクト ウィザード) のモジュールからは派生`CComModule`します。 使用する`CComAutoThreadModule`、クラス定義を変更します。 例えば:
+既定では、ATL COM AppWizard (Visual Studio .NET で ATL プロジェクト ウィザード) のモジュールからは派生`CComModule`します。 使用する`CComAutoThreadModule`、クラス定義を変更します。 例:
 
 [!code-cpp[NVC_ATL_AxHost#2](../../atl/codesnippet/cpp/ccomautothreadmodule-class_1.cpp)]
 

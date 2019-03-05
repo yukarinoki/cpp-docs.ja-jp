@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CWinThread [MFC], m_pActiveWnd
 - CWinThread [MFC], m_pMainWnd
 ms.assetid: 10cdc294-4057-4e76-ac7c-a8967a89af0b
-ms.openlocfilehash: 9c2b393354f65195e0d0060a08b83e321e3d5b1d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 0e02f123580696519e59d828ec590456cbd2a81c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178422"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270132"
 ---
 # <a name="cwinthread-class"></a>CWinThread クラス
 
@@ -79,7 +79,7 @@ class CWinThread : public CCmdTarget
 
 |名前|説明|
 |----------|-----------------|
-|[:Createthread](#createthread)|実行を開始、`CWinThread`オブジェクト。|
+|[CWinThread::CreateThread](#createthread)|実行を開始、`CWinThread`オブジェクト。|
 |[CWinThread::ExitInstance](#exitinstance)|スレッドの終了時にクリーンアップをオーバーライドします。|
 |[CWinThread::GetMainWnd](#getmainwnd)|スレッドのメイン ウィンドウへのポインターを取得します。|
 |[CWinThread::GetThreadPriority](#getthreadpriority)|現在のスレッドの優先順位を取得します。|
@@ -91,7 +91,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::ProcessMessageFilter](#processmessagefilter)|アプリケーションに到達する前に、特定のメッセージを受け取ります。|
 |[CWinThread::ProcessWndProcException](#processwndprocexception)|スレッドのメッセージとコマンド ハンドラーによってスローされたすべてのハンドルされない例外を受け取ります。|
 |[CWinThread::PumpMessage](#pumpmessage)|スレッドのメッセージ ループが含まれています。|
-|[Cwinthread::resumethread](#resumethread)|スレッドのデクリメントは、カウントを中断します。|
+|[CWinThread::ResumeThread](#resumethread)|スレッドのデクリメントは、カウントを中断します。|
 |[CWinThread::Run](#run)|スレッドのメッセージ ポンプの制御関数。 既定のメッセージ ループのカスタマイズをオーバーライドします。|
 |[CWinThread::SetThreadPriority](#setthreadpriority)|現在のスレッドの優先順位を設定します。|
 |[CWinThread::SuspendThread](#suspendthread)|スレッドの増分数を中断します。|
@@ -110,7 +110,7 @@ class CWinThread : public CCmdTarget
 |[CWinThread::m_hThread](#m_hthread)|現在のスレッドへのハンドルします。|
 |[CWinThread::m_nThreadID](#m_nthreadid)|現在のスレッドの ID。|
 |[CWinThread::m_pActiveWnd](#m_pactivewnd)|OLE サーバーがアクティブである場合は、コンテナー アプリケーションのメイン ウィンドウへのポインター。|
-|[ため](#m_pmainwnd)|アプリケーションのメイン ウィンドウへのポインターを保持します。|
+|[CWinThread::m_pMainWnd](#m_pmainwnd)|アプリケーションのメイン ウィンドウへのポインターを保持します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -140,7 +140,7 @@ class CWinThread : public CCmdTarget
 
 **ヘッダー:** afxwin.h
 
-##  <a name="createthread"></a>  :Createthread
+##  <a name="createthread"></a>  CWinThread::CreateThread
 
 呼び出し元のプロセスのアドレス空間内で実行するスレッドを作成します。
 
@@ -156,7 +156,8 @@ BOOL CreateThread(
 *dwCreateFlags*<br/>
 スレッドの作成を制御する追加のフラグを指定します。 このフラグは、2 つの値の 1 つを含めることができます。
 
-- CREATE_SUSPENDED 中断カウントが 1 つのスレッドを開始します。 メンバー データの初期化に使用する場合は、CREATE_SUSPENDED を使用して、`CWinThread`などオブジェクト[m_bAutoDelete](#m_bautodelete)またはスレッドが実行を開始する前に、派生クラスのメンバー。 使用して、初期化が完了すると、 [cwinthread::resumethread](#resumethread)を実行しているスレッドを開始します。 `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
+- CREATE_SUSPENDED 中断カウントが 1 つのスレッドを開始します。 メンバー データの初期化に使用する場合は、CREATE_SUSPENDED を使用して、`CWinThread`などオブジェクト[m_bAutoDelete](#m_bautodelete)またはスレッドが実行を開始する前に、派生クラスのメンバー。 使用して、初期化が完了すると、 [cwinthread::resumethread](#resumethread)を実行しているスレッドを開始します。 
+  `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
 
 - **0**作成後すぐにスレッドを開始します。
 
@@ -311,7 +312,8 @@ BOOL m_bAutoDelete;
 
 `m_bAutoDelete`データ メンバーは、BOOL 型のパブリック変数です。
 
-`m_bAutoDelete` の値は、基になるスレッド ハンドルを閉じる方法に影響しません。 スレッド ハンドルは、`CWinThread` オブジェクトが破棄されるときに必ず閉じられます。
+
+  `m_bAutoDelete` の値は、基になるスレッド ハンドルを閉じる方法に影響しません。 スレッド ハンドルは、`CWinThread` オブジェクトが破棄されるときに必ず閉じられます。
 
 ##  <a name="m_hthread"></a>  CWinThread::m_hThread
 
@@ -355,7 +357,7 @@ Microsoft Foundation Class ライブラリは自動的に終了スレッドに�
 
 オーバーライドする場合にこのメンバー変数を設定する通常、`InitInstance`します。 ワーカー スレッドでは、このデータ メンバーの値は親スレッドから継承されます。
 
-##  <a name="m_pmainwnd"></a>  ため
+##  <a name="m_pmainwnd"></a>  CWinThread::m_pMainWnd
 
 このデータ メンバーを使用すると、スレッドのメイン ウィンドウのオブジェクトへのポインターを格納できます。
 
@@ -398,7 +400,7 @@ virtual BOOL OnIdle(LONG lCount);
 
 までのメッセージを処理できないため、`OnIdle`戻り値は、この関数で時間のかかるタスクは行いません。
 
-##  <a name="operator_handle"></a>  CWinThread::operator ハンドル
+##  <a name="operator_handle"></a>  CWinThread::operator HANDLE
 
 ハンドルを取得、`CWinThread`オブジェクト。
 
@@ -547,7 +549,7 @@ virtual BOOL PumpMessage();
 
 呼び出す`PumpMessage`直接あり高度なユーザーのみ、既定の動作のオーバーライドはお勧めします。
 
-##  <a name="resumethread"></a>  Cwinthread::resumethread
+##  <a name="resumethread"></a>  CWinThread::ResumeThread
 
 によって中断されたスレッドの実行を再開すると呼ばれる、 [SuspendThread](#suspendthread)メンバー関数、または CREATE_SUSPENDED フラグで作成されたスレッド。
 

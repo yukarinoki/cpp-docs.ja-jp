@@ -12,12 +12,12 @@ helpviewer_keywords:
 - upgrading ActiveX controls
 - licensing ActiveX controls
 ms.assetid: 4d12ddfa-b491-4f9f-a0b7-b51458e05651
-ms.openlocfilehash: 18641c6e25aaccd6b5d0bcbbddbf8fc73b2a3c52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc7313c862d3536326894c947fa371d833e8fab8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525802"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276986"
 ---
 # <a name="upgrading-an-existing-activex-control"></a>既存の ActiveX コントロールのアップグレード
 
@@ -42,7 +42,7 @@ Web ページ上にコントロールを使用する場合は、追加の考慮�
 
 - [Internet Explorer ブラウザーの安全性レベルとコントロールの動作](#_core_internet_explorer_browser_safety_levels_and_control_behavior)
 
-最適化を追加することも[ActiveX コントロール: 最適化](../mfc/mfc-activex-controls-optimization.md)します。 プロパティをダウンロードするモニカーを使用でき、サイズの大きな Blob を非同期的に、」の説明に従って[インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)します。
+最適化を追加することも[ActiveX コントロール。最適化](../mfc/mfc-activex-controls-optimization.md)します。 プロパティをダウンロードするモニカーを使用でき、サイズの大きな Blob を非同期的に、」の説明に従って[インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)します。
 
 ##  <a name="_core_packaging_code_for_downloading"></a> ダウンロード用のコードをパッケージ化
 
@@ -220,7 +220,7 @@ Internet Explorer でライセンスされた ActiveX コントロールを使�
 </OBJECT>
 ```
 
-コントロールのライセンスの詳細については、次を参照してください。 [ActiveX コントロール: ActiveX コントロールのライセンス](../mfc/mfc-activex-controls-licensing-an-activex-control.md)します。
+コントロールのライセンスの詳細については、次を参照してください。 [ActiveX コントロール。ActiveX コントロールのライセンス](../mfc/mfc-activex-controls-licensing-an-activex-control.md)します。
 
 ##  <a name="_core_signing_code"></a> コードの署名
 
@@ -274,5 +274,4 @@ OCX 96 ガイドラインでは、コントロールは、バック グラウン
 
 [MFC インターネット プログラミングの作業](../mfc/mfc-internet-programming-tasks.md)<br/>
 [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)<br/>
-[MFC ActiveX コントロール: ActiveX コントロールのライセンス](../mfc/mfc-activex-controls-licensing-an-activex-control.md)
-
+[MFC ActiveX コントロール:ActiveX コントロールのライセンス](../mfc/mfc-activex-controls-licensing-an-activex-control.md)

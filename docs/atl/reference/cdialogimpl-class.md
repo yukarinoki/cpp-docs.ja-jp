@@ -17,12 +17,12 @@ helpviewer_keywords:
 - dialog boxes, ATL
 - CDialogImpl class
 ms.assetid: d430bc7b-8a28-4ad3-9507-277bdd2c2c2e
-ms.openlocfilehash: b4844ed2246b5e700d9dc1895c3292cdde4efe8b
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: f44b7df7f1e4051f3cb07445952620861965f1d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178149"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263417"
 ---
 # <a name="cdialogimpl-class"></a>CDialogImpl クラス
 
@@ -88,7 +88,7 @@ template <class T,
 
 場所`MyDlg`は、**短い名前**ウィザードの 入力**名**ページ。
 
-|詳細情報:|解決方法については、|
+|詳細情報:|解決方法|
 |--------------------------------|---------|
 |コントロールの作成|[ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)|
 |ATL ダイアログ ボックスを使用|[ATL ウィンドウ クラス](../../atl/atl-window-classes.md)|
@@ -222,7 +222,7 @@ BOOL EndDialog(int nRetCode);
 
 ### <a name="parameters"></a>パラメーター
 
-*終了*<br/>
+*nRetCode*<br/>
 [in]によって返される値[CDialogImpl::DoModal](#domodal)します。
 
 ### <a name="return-value"></a>戻り値
@@ -326,5 +326,5 @@ static LRESULT CALLBACK StartDialogProc(
 
 ## <a name="see-also"></a>関連項目
 
-[送るに](message-map-macros-atl.md#begin_msg_map)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

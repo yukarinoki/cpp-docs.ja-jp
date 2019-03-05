@@ -106,12 +106,12 @@ helpviewer_keywords:
 - COleControlSite [MFC], m_pWndCtrl
 - COleControlSite [MFC], m_rect
 ms.assetid: 43970644-5eab-434a-8ba6-56d144ff1e3f
-ms.openlocfilehash: 26d0f5e875c4f3982705a2cf571b15cd5bfac985
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 31502f2ecda1c14cb68c83da98cf2b764baba461
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178923"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57264132"
 ---
 # <a name="colecontrolsite-class"></a>COleControlSite クラス
 
@@ -319,7 +319,7 @@ virtual HRESULT CreateControl(
 *clsid*<br/>
 コントロールの一意のクラス ID。
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 コントロールに表示されるテキストへのポインター。 (ある場合)、winodw のキャプションまたはテキストのプロパティの値を設定します。
 
 *dwStyle*<br/>
@@ -368,7 +368,8 @@ Windows のサブセットのみ*dwStyle*でフラグがサポートされる`Cr
 
 ##  <a name="destroycontrol"></a>  COleControlSite::DestroyControl
 
-`COleControlSite` オブジェクトを破棄します。
+
+  `COleControlSite` オブジェクトを破棄します。
 
 ```
 virtual BOOL DestroyControl();
@@ -625,7 +626,7 @@ virtual void AFX_CDECL InvokeHelper(
 *wflags が*<br/>
 Idispatch::invoke への呼び出しのコンテキストを記述するフラグ。 可能性があるのため*wflags が*値を参照してください`IDispatch::Invoke`Windows SDK に含まれています。
 
-*変数*<br/>
+*vtRet*<br/>
 戻り値の型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *pvRet*<br/>
@@ -665,7 +666,7 @@ virtual void InvokeHelperV(
 *wflags が*<br/>
 Idispatch::invoke への呼び出しのコンテキストを記述するフラグ。
 
-*変数*<br/>
+*vtRet*<br/>
 戻り値の型を指定します。 使用できる値については、 [COleDispatchDriver::InvokeHelper](../../mfc/reference/coledispatchdriver-class.md#invokehelper)の「解説」をご覧ください。
 
 *pvRet*<br/>
@@ -962,7 +963,7 @@ virtual void MoveWindow(
 *nWidth*<br/>
 新しいウィンドウの幅
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 ウィンドウの新しい高さ。
 
 ##  <a name="quickactivate"></a>  COleControlSite::QuickActivate

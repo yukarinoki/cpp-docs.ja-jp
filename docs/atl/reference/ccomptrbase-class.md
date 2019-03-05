@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - CComPtrBase class
 ms.assetid: 6dbe9543-dee8-4a97-b02f-dd3a25f4a1a0
-ms.openlocfilehash: 8d7c96ff047a6340511ee1d67f025db0ad7c5368
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bb599b88671447e219421efacac7a2d8a5f7b06
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452690"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261701"
 ---
 # <a name="ccomptrbase-class"></a>CComPtrBase クラス
 
@@ -69,10 +69,11 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|キャスト演算子です。|
 |[CComPtrBase::operator!](#operator_not)|NOT 演算子。|
 |[CComPtrBase::operator (& a)](#operator_amp)|& 演算子。|
-|[CComPtrBase::operator *](#operator_star)|\* 演算子。|
+|[CComPtrBase::operator *](#operator_star)|
+  \* 演算子。|
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|小さいの演算子よりもします。|
-|[CComPtrBase::operator = =](#operator_eq_eq)|等値演算子。|
-|[CComPtrBase::operator -> します。](#operator_ptr)|メンバーへのポインター演算子。|
+|[CComPtrBase::operator ==](#operator_eq_eq)|等値演算子。|
+|[CComPtrBase::operator ->](#operator_ptr)|メンバーへのポインター演算子。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -269,7 +270,8 @@ T** operator&() throw();
 
 ##  <a name="operator_star"></a>  CComPtrBase::operator \*
 
-\* 演算子。
+
+  \* 演算子。
 
 ```
 T& operator*() const throw();
@@ -281,7 +283,7 @@ T& operator*() const throw();
 
 場合に、アサーション エラーが発生するデバッグ ビルドで場合、[解放](#p)は NULL と等しくありません。
 
-##  <a name="operator_eq_eq"></a>  CComPtrBase::operator = =
+##  <a name="operator_eq_eq"></a>  CComPtrBase::operator ==
 
 等値演算子。
 
@@ -298,7 +300,7 @@ bool operator== (T* pT) const throw();
 
 場合は true を返します`CComPtrBase`と*pT*オブジェクトを指す同じ、false それ以外の場合。
 
-##  <a name="operator_ptr"></a>  CComPtrBase::operator-&gt;
+##  <a name="operator_ptr"></a>  CComPtrBase::operator -&gt;
 
 メンバーへのポインター演算子。
 
@@ -343,7 +345,7 @@ operator T*() const throw();
 
 クラス テンプレートで定義されたオブジェクト データ型へのポインターを返します。
 
-##  <a name="p"></a>  解放
+##  <a name="p"></a>  CComPtrBase::p
 
 ポインターのデータ メンバー変数です。
 

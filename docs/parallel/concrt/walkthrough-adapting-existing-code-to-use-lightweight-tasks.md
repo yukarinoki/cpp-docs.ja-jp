@@ -1,18 +1,18 @@
 ---
-title: 'チュートリアル: 既存のコードを改変して軽量タスクを使用する'
+title: 'チュートリアル: 軽量タスクを使用する既存のコードを適合させる'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - using lightweight tasks [Concurrency Runtime]
 - lightweight tasks, using [Concurrency Runtime]
 ms.assetid: 1edfe818-d274-46de-bdd3-e92967c9bbe0
-ms.openlocfilehash: a0e724ff6f43dc0c888e787350f4841f14383f14
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43e928e7d82b41b83fde5e8a7abaeeeb8d6fefa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654503"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261220"
 ---
-# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>チュートリアル: 既存のコードを改変して軽量タスクを使用する
+# <a name="walkthrough-adapting-existing-code-to-use-lightweight-tasks"></a>チュートリアル: 軽量タスクを使用する既存のコードを適合させる
 
 ここでは、Windows API を使用する既存のコードを改変して、軽量タスクを使用するスレッドを作成および実行する方法について説明します。
 
@@ -48,11 +48,13 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]
 
-1. `using` 名前空間の `concurrency` ディレクティブを追加します。
+1. 
+  `using` 名前空間の `concurrency` ディレクティブを追加します。
 
 [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]
 
-1. `MyThreadFunction` の宣言を次のように変更して、`__cdecl` 呼び出し規則を使用すると共に、`void` を返します。
+1. 
+  `MyThreadFunction` の宣言を次のように変更して、`__cdecl` 呼び出し規約を使用すると共に、`void` を返します。
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
@@ -68,7 +70,8 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]
 
-1. `CloseHandle` 呼び出しを削除します。
+1. 
+  `CloseHandle` 呼び出しを削除します。
 
 1. 手順 3. に合わせて、`MyThreadFunction` の定義のシグネチャを変更します。
 
@@ -78,7 +81,8 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 
-10. `return` ステートメントを `MyThreadFunction` から削除します。
+10. 
+  `return` ステートメントを `MyThreadFunction` から削除します。
 
 ## <a name="example"></a>例
 

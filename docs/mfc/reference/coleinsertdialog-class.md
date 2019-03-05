@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], GetSelectionType
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
-ms.openlocfilehash: c99344c71d3f9789905516d661749b3668b57d50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 750243ddf6494ecc4a6a28c0cb47b05ca7089c33
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50546307"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260687"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog クラス
 
@@ -53,7 +53,7 @@ class COleInsertDialog : public COleDialog
 
 |名前|説明|
 |----------|-----------------|
-|[クリック](#createitem)|ダイアログ ボックスで選択した項目を作成します。|
+|[COleInsertDialog::CreateItem](#createitem)|ダイアログ ボックスで選択した項目を作成します。|
 |[COleInsertDialog::DoModal](#domodal)|OLE の [オブジェクトの挿入] ダイアログ ボックスが表示されます。|
 |[COleInsertDialog::GetClassID](#getclassid)|選択した項目に関連付けられた CLSID を取得します。|
 |[COleInsertDialog::GetDrawAspect](#getdrawaspect)|アイコンとして項目を描画するかどうかを通知します。|
@@ -134,7 +134,7 @@ COleInsertDialog (
 
 ダイアログ ボックスを表示するには[DoModal](#domodal)関数。
 
-##  <a name="createitem"></a>  クリック
+##  <a name="createitem"></a>  COleInsertDialog::CreateItem
 
 型のオブジェクトを作成するには、この関数を呼び出す[COleClientItem](../../mfc/reference/coleclientitem-class.md)場合にのみ[DoModal](#domodal) IDOK を返します。
 

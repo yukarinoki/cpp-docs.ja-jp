@@ -1,18 +1,18 @@
 ---
-title: 'MFC ActiveX コントロール : カスタム メソッドの追加'
+title: MFC ActiveX コントロール:カスタム メソッドの追加
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], methods
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
-ms.openlocfilehash: bd67e5f248f389755b1bf25854867322af60878e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4f5a7dc844d80ae94df8af7c0b2eea141376f9e9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554558"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278848"
 ---
-# <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX コントロール : カスタム メソッドの追加
+# <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX コントロール:カスタム メソッドの追加
 
 実装されていないことで、ストック メソッドのカスタム メソッドとは異なる`COleControl`します。 コントロールに追加する各カスタム メソッドの実装を指定する必要があります。
 
@@ -26,7 +26,7 @@ ActiveX コントロールのユーザーは、コントロールに固有の操
 次の手順では、ActiveX コントロールのスケルトン コードに PtInCircle カスタム メソッドを追加することを示します。 PtInCircle は、コントロールに渡される座標が内側または外側の円かどうかを判断します。 これと同じ手順が他のカスタム メソッドを追加することもできます。 自分のカスタム メソッドの名前と PtInCircle メソッドの名前およびパラメーターについては、そのパラメーターに置き換えてください。
 
 > [!NOTE]
->  この例では、`InCircle`記事イベントからの関数。 この関数の詳細については、記事を参照してください。 [MFC ActiveX コントロール: ActiveX コントロールのカスタム イベントの追加](../mfc/mfc-activex-controls-adding-custom-events.md)します。
+>  この例では、`InCircle`記事イベントからの関数。 この関数の詳細については、記事を参照してください。 [MFC ActiveX コントロール。ActiveX コントロールにカスタム イベントの追加](../mfc/mfc-activex-controls-adding-custom-events.md)します。
 
 #### <a name="to-add-the-ptincircle-custom-method-using-the-add-method-wizard"></a>メソッドの追加ウィザードを使用して、PtInCircle カスタム メソッドを追加するには
 
@@ -80,4 +80,3 @@ DISP_FUNCTION マクロは、メソッドをマップ`PtInCircle`コントロー
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)<br/>
 [[クラス ビュー] ウィンドウとオブジェクト ブラウザーのアイコン](/visualstudio/ide/class-view-and-object-browser-icons)
-

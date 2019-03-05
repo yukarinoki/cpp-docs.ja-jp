@@ -12,12 +12,12 @@ helpviewer_keywords:
 - BEGIN_SINK_MAP macro
 - IDispEventImpl class, declaring
 ms.assetid: b957f930-6a5b-4598-8e4d-8027759957e7
-ms.openlocfilehash: 909f62c88908d7dabf4141fa8ea42be7ea1facb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcc3be5d905bf3f5680902e2f480472c6251aa7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517807"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273817"
 ---
 # <a name="supporting-idispeventimpl"></a>IDispEventImpl のサポート
 
@@ -84,4 +84,3 @@ COM オブジェクトの一意な性質では、この手順は異なります�
 ## <a name="see-also"></a>関連項目
 
 [ATL COM オブジェクトの基礎](../atl/fundamentals-of-atl-com-objects.md)
-
