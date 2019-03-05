@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - concurrent_queue class
 ms.assetid: c2218996-d0ea-40e9-b002-e9a15b085f51
-ms.openlocfilehash: 36e4b5956e0739b44481fbabe6114c9648e7b229
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d5bbd361dc2dedc24c2a59050ffa680517186494
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477091"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304692"
 ---
 # <a name="concurrentqueue-class"></a>concurrent_queue クラス
 
@@ -68,14 +68,14 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 |名前|説明|
 |----------|-----------------|
-|[clear](#clear)|破棄、同時実行のキューをクリアします。 現在のキューに格納された要素。 このメソッドはコンカレンシー セーフではありません。|
-|[empty](#empty)|現時点で同時実行のキューが空かどうか、このメソッドが呼び出されます。 このメソッドはコンカレンシー セーフです。|
-|[get_allocator](#get_allocator)|同時実行のキューの構築に使用するアロケーターのコピーを返します。 このメソッドはコンカレンシー セーフです。|
-|[push](#push)|オーバーロードされます。 同時実行のキューの末尾にある項目をエンキューします。 このメソッドはコンカレンシー セーフです。|
-|[try_pop](#try_pop)|ある場合は、キューから項目をデキューします。 このメソッドはコンカレンシー セーフです。|
-|[unsafe_begin](#unsafe_begin)|オーバーロードされます。 型の反復子を返します`iterator`または`const_iterator`同時実行のキューの先頭にします。 このメソッドはコンカレンシー セーフではありません。|
-|[unsafe_end](#unsafe_end)|オーバーロードされます。 型の反復子を返します`iterator`または`const_iterator`同時実行のキューの末尾にします。 このメソッドはコンカレンシー セーフではありません。|
-|[unsafe_size](#unsafe_size)|キュー内の項目の数を返します。 このメソッドはコンカレンシー セーフではありません。|
+|[clear](#clear)|破棄、同時実行のキューをクリアします。 現在のキューに格納された要素。 このメソッドは同時実行セーフではありません。|
+|[empty](#empty)|現時点で同時実行のキューが空かどうか、このメソッドが呼び出されます。 このメソッドは同時実行セーフです。|
+|[get_allocator](#get_allocator)|同時実行のキューの構築に使用するアロケーターのコピーを返します。 このメソッドは同時実行セーフです。|
+|[push](#push)|オーバーロードされます。 同時実行のキューの末尾にある項目をエンキューします。 このメソッドは同時実行セーフです。|
+|[try_pop](#try_pop)|ある場合は、キューから項目をデキューします。 このメソッドは同時実行セーフです。|
+|[unsafe_begin](#unsafe_begin)|オーバーロードされます。 型の反復子を返します`iterator`または`const_iterator`同時実行のキューの先頭にします。 このメソッドは同時実行セーフではありません。|
+|[unsafe_end](#unsafe_end)|オーバーロードされます。 型の反復子を返します`iterator`または`const_iterator`同時実行のキューの末尾にします。 このメソッドは同時実行セーフではありません。|
+|[unsafe_size](#unsafe_size)|キュー内の項目の数を返します。 このメソッドは同時実行セーフではありません。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -93,7 +93,7 @@ class concurrent_queue: public ::Concurrency::details::_Concurrent_queue_base_v4
 
 ##  <a name="clear"></a> オフ
 
-破棄、同時実行のキューをクリアします。 現在のキューに格納された要素。 このメソッドはコンカレンシー セーフではありません。
+破棄、同時実行のキューをクリアします。 現在のキューに格納された要素。 このメソッドは同時実行セーフではありません。
 
 ```
 void clear();
@@ -134,7 +134,7 @@ concurrent_queue(_InputIterator _Begin,
 *開始 (_b)*<br/>
 コピーする要素範囲内の最初の要素の位置。
 
-*(_E)*<br/>
+*_End*<br/>
 コピーする要素範囲を超える最初の要素の位置。
 
 ### <a name="remarks"></a>Remarks
@@ -159,7 +159,7 @@ concurrent_queue(_InputIterator _Begin,
 
 ##  <a name="empty"></a> 空
 
-現時点で同時実行のキューが空かどうか、このメソッドが呼び出されます。 このメソッドはコンカレンシー セーフです。
+現時点で同時実行のキューが空かどうか、このメソッドが呼び出されます。 このメソッドは同時実行セーフです。
 
 ```
 bool empty() const;
@@ -175,7 +175,7 @@ bool empty() const;
 
 ##  <a name="get_allocator"></a> get_allocator
 
-同時実行のキューの構築に使用するアロケーターのコピーを返します。 このメソッドはコンカレンシー セーフです。
+同時実行のキューの構築に使用するアロケーターのコピーを返します。 このメソッドは同時実行セーフです。
 
 ```
 allocator_type get_allocator() const;
@@ -187,7 +187,7 @@ allocator_type get_allocator() const;
 
 ##  <a name="push"></a> プッシュ
 
-同時実行のキューの末尾にある項目をエンキューします。 このメソッドはコンカレンシー セーフです。
+同時実行のキューの末尾にある項目をエンキューします。 このメソッドは同時実行セーフです。
 
 ```
 void push(const T& _Src);
@@ -206,7 +206,7 @@ void push(T&& _Src);
 
 ##  <a name="try_pop"></a> try_pop
 
-ある場合は、キューから項目をデキューします。 このメソッドはコンカレンシー セーフです。
+ある場合は、キューから項目をデキューします。 このメソッドは同時実行セーフです。
 
 ```
 bool try_pop(T& _Dest);
@@ -229,7 +229,7 @@ bool try_pop(T& _Dest);
 
 ##  <a name="unsafe_begin"></a> unsafe_begin
 
-型の反復子を返します`iterator`または`const_iterator`同時実行のキューの先頭にします。 このメソッドはコンカレンシー セーフではありません。
+型の反復子を返します`iterator`または`const_iterator`同時実行のキューの先頭にします。 このメソッドは同時実行セーフではありません。
 
 ```
 iterator unsafe_begin();
@@ -247,7 +247,7 @@ const_iterator unsafe_begin() const;
 
 ##  <a name="unsafe_end"></a> unsafe_end
 
-型の反復子を返します`iterator`または`const_iterator`同時実行のキューの末尾にします。 このメソッドはコンカレンシー セーフではありません。
+型の反復子を返します`iterator`または`const_iterator`同時実行のキューの末尾にします。 このメソッドは同時実行セーフではありません。
 
 ```
 iterator unsafe_end();
@@ -265,7 +265,7 @@ const_iterator unsafe_end() const;
 
 ##  <a name="unsafe_size"></a> unsafe_size
 
-キュー内の項目の数を返します。 このメソッドはコンカレンシー セーフではありません。
+キュー内の項目の数を返します。 このメソッドは同時実行セーフではありません。
 
 ```
 size_type unsafe_size() const;

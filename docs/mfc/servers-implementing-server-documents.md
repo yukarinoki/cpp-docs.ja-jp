@@ -1,5 +1,5 @@
 ---
-title: 'サーバー : サーバー ドキュメントの実装'
+title: サーバー:サーバー ドキュメントの実装
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE server applications [MFC], managing server documents
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - servers, server documents
 - server documents [MFC], implementing
 ms.assetid: cca1451a-ad09-47ed-b56e-bccd78fc86d1
-ms.openlocfilehash: 17c90eb6350a2bf3cd5b695a99dea954dd89a033
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17ced1cdb0b40b13fbda68150030efde5735ba7b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436492"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261870"
 ---
-# <a name="servers-implementing-server-documents"></a>サーバー : サーバー ドキュメントの実装
+# <a name="servers-implementing-server-documents"></a>サーバー:サーバー ドキュメントの実装
 
 この記事では、アプリケーション ウィザードで、OLE サーバー オプションを指定しなかった場合、サーバーのドキュメントを適切に実装するために行う手順について説明します。
 
@@ -28,7 +28,7 @@ ms.locfileid: "50436492"
 
    `OnGetEmbeddedItem` コンテナー アプリケーションのユーザーを作成または埋め込みアイテムを編集すると呼び出されます。 ドキュメント全体を表す項目が返されます。 オブジェクトがあります、 `COleServerItem`-クラスを派生します。
 
-1. 上書き、`Serialize`メンバー関数は、ドキュメントの内容をシリアル化します。 ドキュメントでネイティブのデータを表すために使用されていない場合は、サーバーのアイテムの一覧をシリアル化する必要はありません。 詳細については、次を参照してください。*サーバー アイテムの実装*記事[サーバー: サーバー アイテム](../mfc/servers-server-items.md)します。
+1. 上書き、`Serialize`メンバー関数は、ドキュメントの内容をシリアル化します。 ドキュメントでネイティブのデータを表すために使用されていない場合は、サーバーのアイテムの一覧をシリアル化する必要はありません。 詳細については、次を参照してください。*サーバー アイテムの実装*記事[サーバー。サーバー項目](../mfc/servers-server-items.md)します。
 
 サーバーのドキュメントが作成されると、フレームワークは、ドキュメントを自動的に OLE システム Dll に登録します。 これにより、サーバーのドキュメントを識別する Dll です。
 
@@ -37,7 +37,6 @@ ms.locfileid: "50436492"
 ## <a name="see-also"></a>関連項目
 
 [サーバー](../mfc/servers.md)<br/>
-[サーバー: サーバー アイテム](../mfc/servers-server-items.md)<br/>
-[サーバー: サーバーの実装](../mfc/servers-implementing-a-server.md)<br/>
-[サーバー: 埋め込み先フレーム ウィンドウの実装](../mfc/servers-implementing-in-place-frame-windows.md)
-
+[サーバー:サーバー項目](../mfc/servers-server-items.md)<br/>
+[サーバー:サーバーの実装](../mfc/servers-implementing-a-server.md)<br/>
+[サーバー:フレームの Windows を実装します。](../mfc/servers-implementing-in-place-frame-windows.md)

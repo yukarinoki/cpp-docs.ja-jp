@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: d144731d05e861f4b462c4d58022b5155fdeb79b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694271"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303608"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager クラス
 
@@ -69,7 +69,7 @@ class CKeyboardManager : public CObject
 |[CKeyboardManager::LoadState](#loadstate)|Windows レジストリから、ショートカット キーのテーブルを読み込みます。|
 |[CKeyboardManager::ResetAll](#resetall)|アプリケーション リソースからのショートカット キーのテーブルを再読み込みします。|
 |[CKeyboardManager::SaveState](#savestate)|ショートカット キーのテーブルを Windows レジストリに保存します。|
-|[:Showallaccelerators](#showallaccelerators)|フレームワークは、すべてのコマンドのショートカット キーのすべてまたはコマンドごとに 1 つのショートカット キーを表示するかどうかを指定します。 このメソッドは、1 つだけの関連付けられているショートカット キーを持つコマンドには影響しません。|
+|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|フレームワークは、すべてのコマンドのショートカット キーのすべてまたはコマンドごとに 1 つのショートカット キーを表示するかどうかを指定します。 このメソッドは、1 つだけの関連付けられているショートカット キーを持つコマンドには影響しません。|
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|文字を大文字レジスタに変換します。|
 |[CKeyboardManager::UpdateAccelTable](#updateacceltable)|新しいショートカット キー テーブルのショートカット キーのテーブルを更新します。|
 
@@ -292,7 +292,7 @@ BOOL SaveState(
 
 既定のウィンドウを指定しない場合は、メイン フレーム ウィンドウを使用して既定のウィンドウとして。
 
-##  <a name="showallaccelerators"></a>  :Showallaccelerators
+##  <a name="showallaccelerators"></a>  CKeyboardManager::ShowAllAccelerators
 
 メニュー コマンドに関連付けられているすべてのショートカット キーを示します。
 
@@ -382,4 +382,3 @@ BOOL UpdateAccelTable(
 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)<br/>
 [CWinAppEx::InitKeyboardManager](../../mfc/reference/cwinappex-class.md#initkeyboardmanager)<br/>
 [キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)
-

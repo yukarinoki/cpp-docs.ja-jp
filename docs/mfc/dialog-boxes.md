@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 400107a7b61ae28ca1d3ec69ee3217d58f55d9e2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9add6f003f0f6cd4ab85980e1e35370770da43aa
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665076"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282059"
 ---
 # <a name="dialog-boxes"></a>ダイアログ ボックス
 
@@ -33,7 +33,7 @@ Windows 用のアプリケーションは、ダイアログ ボックスを通�
 
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 
-- [例: メニュー コマンドによるダイアログ ボックスの表示](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
+- [例:メニュー コマンドによるダイアログ ボックスを表示します。](../mfc/example-displaying-a-dialog-box-via-a-menu-command.md)
 
 - [フレームワークのダイアログ ボックス コンポーネント](../mfc/dialog-box-components-in-the-framework.md)
 

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComAggObject class
 ms.assetid: 7aa90d69-d399-477b-880d-e2cdf0ef7881
-ms.openlocfilehash: 3598e625351f80a1a183b3128bf46a72143a02f6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 52cdddb1d922ca21e24122422ca14d9c12d13a83
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50626838"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301663"
 ---
 # <a name="ccomaggobject-class"></a>CComAggObject クラス
 
@@ -48,7 +48,7 @@ class CComAggObject : public IUnknown,
 |名前|説明|
 |----------|-----------------|
 |[CComAggObject::CComAggObject](#ccomaggobject)|コンストラクターです。|
-|[CComAggObject:: ~ CComAggObject](#dtor)|デストラクターです。|
+|[CComAggObject::~CComAggObject](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -118,7 +118,7 @@ CComAggObject(void* pv);
 
 モジュールのロック カウントをデストラクター デクリメントします。
 
-##  <a name="dtor"></a>  CComAggObject:: ~ CComAggObject
+##  <a name="dtor"></a>  CComAggObject::~CComAggObject
 
 デストラクターです。
 
@@ -238,6 +238,6 @@ STDMETHOD_(ULONG, Release)();
 [CComObject クラス](../../atl/reference/ccomobject-class.md)<br/>
 [CComPolyObject クラス](../../atl/reference/ccompolyobject-class.md)<br/>
 [DECLARE_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_aggregatable)<br/>
-[集約](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
+[DECLARE_ONLY_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_only_aggregatable)<br/>
 [DECLARE_NOT_AGGREGATABLE](aggregation-and-class-factory-macros.md#declare_not_aggregatable)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

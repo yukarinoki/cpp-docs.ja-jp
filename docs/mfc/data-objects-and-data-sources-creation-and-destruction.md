@@ -1,5 +1,5 @@
 ---
-title: 'データ オブジェクトとデータ ソース : 作成と破棄'
+title: データ オブジェクトとデータ ソース:作成と破棄
 ms.date: 11/04/2016
 helpviewer_keywords:
 - destroying data objects [MFC]
@@ -15,14 +15,14 @@ helpviewer_keywords:
 - destruction [MFC], data objects
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
-ms.openlocfilehash: a46cc15a101618699b9e7fa988155517de673fdb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 74119d7ea33eef68f0cb4a67c8419514cbb73c10
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614969"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304439"
 ---
-# <a name="data-objects-and-data-sources-creation-and-destruction"></a>データ オブジェクトとデータ ソース : 作成と破棄
+# <a name="data-objects-and-data-sources-creation-and-destruction"></a>データ オブジェクトとデータ ソース:作成と破棄
 
 この記事で説明したよう[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)、データ オブジェクトとデータ ソースは、データ転送の両側を表します。 ここでは、データ転送を正しく実行するために、これらのオブジェクトとソースをいつ作成し、いつ破棄するかについて説明します。
 
@@ -68,13 +68,14 @@ ms.locfileid: "50614969"
 
 1. これがある場合、**切り取り**操作または`DoDragDrop`返します**行った**、手順 1. で選択したデータは、ドキュメントから削除されます。
 
-このシナリオは、MFC OLE サンプルで実装され[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md)します。 `GetClipboardData` 関数と `OnGetClipboardData` 関数を除くすべてについて、各アプリケーションの `CView` から派生したクラスのソースを確認してください。 これらの 2 つの関数は、`COleClientItem` または `COleServerItem` から派生したクラスの実装に含まれています。 これらのサンプル プログラムでは、これらの概念を実装する方法の良い例を示しています。
+このシナリオは、MFC OLE サンプルで実装され[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md)します。 
+  `GetClipboardData` 関数と `OnGetClipboardData` 関数を除くすべてについて、各アプリケーションの `CView` から派生したクラスのソースを確認してください。 これらの 2 つの関数は、`COleClientItem` または `COleServerItem` から派生したクラスの実装に含まれています。 これらのサンプル プログラムでは、これらの概念を実装する方法の良い例を示しています。
 
-さらに、ドラッグ アンド ドロップ操作の既定の動作を変更する場合にも、`COleDataSource` オブジェクトの作成が必要になることがあります。 詳細については、次を参照してください。、[ドラッグ アンド ドロップ: カスタマイズ](../mfc/drag-and-drop-customizing.md)記事。
+さらに、ドラッグ アンド ドロップ操作の既定の動作を変更する場合にも、`COleDataSource` オブジェクトの作成が必要になることがあります。 詳細については、次を参照してください。、[ドラッグ アンド ドロップします。カスタマイズ](../mfc/drag-and-drop-customizing.md)記事。
 
 ##  <a name="_core_destroying_data_sources"></a> データ ソースの破棄
 
-データ ソースは、現在データ ソースを管理しているアプリケーションによって破棄する必要があります。 OLE にデータ ソースを配信する場合、呼び出しなど[された](../mfc/reference/coledatasource-class.md#dodragdrop)、呼び出す必要がある`pDataSrc->InternalRelease`します。 例えば:
+データ ソースは、現在データ ソースを管理しているアプリケーションによって破棄する必要があります。 OLE にデータ ソースを配信する場合、呼び出しなど[された](../mfc/reference/coledatasource-class.md#dodragdrop)、呼び出す必要がある`pDataSrc->InternalRelease`します。 例:
 
 [!code-cpp[NVC_MFCListView#1](../atl/reference/codesnippet/cpp/data-objects-and-data-sources-creation-and-destruction_1.cpp)]
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CHtmlEditCtrl [MFC], GetDHtmlDocument
 - CHtmlEditCtrl [MFC], GetStartDocument
 ms.assetid: 0fc4a238-b05f-4874-9edc-6a6701f064d9
-ms.openlocfilehash: ce2db15b801d84ed0315345f5ab8084c437ef8ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c1447c3157bceb4540007eca5c3eb85e8269bd2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563645"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57285309"
 ---
 # <a name="chtmleditctrl-class"></a>CHtmlEditCtrl クラス
 
@@ -92,7 +92,7 @@ virtual BOOL Create(
 
 ### <a name="parameters"></a>パラメーター
 
-*したとき*<br/>
+*lpszWindowName*<br/>
 このパラメーターは使用されません。
 
 *dwStyle*<br/>
@@ -138,4 +138,3 @@ virtual LPCTSTR GetStartDocument();
 ## <a name="see-also"></a>関連項目
 
 [階層図](../../mfc/hierarchy-chart.md)
-

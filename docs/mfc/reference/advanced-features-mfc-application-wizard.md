@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 1af16f7009ceb97ea86d641f47cf56ea5a398c26
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694297"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278224"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>[高度な機能]\ (MFC アプリケーション ウィザード)
 
@@ -21,7 +21,7 @@ ms.locfileid: "51694297"
 
    F1 とヘルプ メニューを使用して、またはをクリックして利用できる状況依存のヘルプのヘルプ ファイルのセットを生成、**ヘルプ** ダイアログ ボックスのボタン。 ヘルプ サポートにはヘルプ コンパイラが必要です。 ヘルプ コンパイラがない場合は、セットアップを再実行することによってインストールできます。
 
-   参照してください[HTML ヘルプ: プログラムの状況依存のヘルプ](../../mfc/html-help-context-sensitive-help-for-your-programs.md)と[ヘルプ ファイル (HTML ヘルプ)](../../ide/help-files-html-help.md)詳細についてはします。
+   参照してください[HTML ヘルプ。プログラムの状況依存のヘルプ](../../mfc/html-help-context-sensitive-help-for-your-programs.md)と[ヘルプ ファイル (HTML ヘルプ)](../../ide/help-files-html-help.md)詳細についてはします。
 
 - **印刷と印刷プレビュー**
 
@@ -57,7 +57,7 @@ ms.locfileid: "51694297"
 
 - **再起動マネージャーのサポート**
 
-   サポートが追加されて、 [Windows 再起動マネージャー](/windows/desktop/RstMgr/using-restart-manager)します。 このビデオは、MFC から再起動マネージャーを使用する方法を示します:[方法: 新しい再起動マネージャーを使用](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100))します。
+   サポートが追加されて、 [Windows 再起動マネージャー](/windows/desktop/RstMgr/using-restart-manager)します。 このビデオでは、MFC から再起動マネージャーを使用する方法を示します。[How Do i:新しい再起動マネージャーを使用して、](/previous-versions/visualstudio/visual-studio-2010/dd831853(v%3dvs.100))します。
 
 - **高度なフレーム ペイン**
 
@@ -76,4 +76,3 @@ ms.locfileid: "51694297"
 ## <a name="see-also"></a>関連項目
 
 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)
-

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CEvent [MFC], SetEvent
 - CEvent [MFC], Unlock
 ms.assetid: df676042-ce27-4702-800a-e73ff4f44395
-ms.openlocfilehash: 883f3065c9d15ad793e6c0d548b911f10d166c0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d7731c87c6d6b0ebdec9a0c72c24b04334aa0662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667899"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300272"
 ---
 # <a name="cevent-class"></a>CEvent クラス
 
@@ -66,7 +66,7 @@ class CEvent : public CSyncObject
 
 によって制御されるリソースにアクセスする、`CEvent`オブジェクトのこの方法では、まずいずれかの型の変数を作成[CSingleLock](../../mfc/reference/csinglelock-class.md)または型[CMultiLock](../../mfc/reference/cmultilock-class.md)リソースのアクセス方法にします。 呼び出して、`Lock`ロック オブジェクトのメソッド (たとえば、 [CMultiLock::Lock](../../mfc/reference/cmultilock-class.md#lock))。 この時点では、スレッドか、リソース、リリースされると、アクセスを取得またはリソースが解放されるを待機するリソースの待機、タイムアウトへのアクセスをリソースへのアクセスに失敗します。 いずれの場合も、リソースがスレッド セーフな方法でアクセスされました。 リソースを解放する呼び出し`SetEvent`、イベント オブジェクトを通知し、使用して、`Unlock`ロック オブジェクトのメソッド (たとえば、 [CMultiLock::Unlock](../../mfc/reference/cmultilock-class.md#unlock))、またはロック オブジェクトがスコープ外に分類されます。
 
-使用する方法の詳細についての`CEvent`、オブジェクトを参照してください[マルチ スレッド: 同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
+使用する方法の詳細についての`CEvent`、オブジェクトを参照してください[マルチ スレッド。同期クラスの使用方法](../../parallel/multithreading-how-to-use-the-synchronization-classes.md)します。
 
 ## <a name="example"></a>例
 
@@ -107,7 +107,8 @@ TRUE の場合、スレッド、`CMultilock`または`CSingleLock`オブジェ�
 TRUE の場合は、イベント オブジェクトは、手動イベント、それ以外の場合、イベント オブジェクトは、自動のイベントを指定します。
 
 *lpszName*<br/>
-`CEvent` オブジェクトの名前。 プロセスの境界を越えてオブジェクトを使用する場合を指定する必要があります。 名前が既存のイベントに一致する場合、コンス トラクターは新しい`CEvent`その名前のイベントを参照するオブジェクト。 名前には、イベントではない既存の同期オブジェクトが一致すると、構築は失敗します。 NULL の場合、名前が null になります。
+
+  `CEvent` オブジェクトの名前。 プロセスの境界を越えてオブジェクトを使用する場合を指定する必要があります。 名前が既存のイベントに一致する場合、コンス トラクターは新しい`CEvent`その名前のイベントを参照するオブジェクト。 名前には、イベントではない既存の同期オブジェクトが一致すると、構築は失敗します。 NULL の場合、名前が null になります。
 
 *lpsaAttribute*<br/>
 イベント オブジェクトのセキュリティ属性。 この構造体の詳細については、次を参照してください。 [SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560) Windows SDK に含まれています。
@@ -195,4 +196,3 @@ BOOL Unlock();
 
 [CSyncObject クラス](../../mfc/reference/csyncobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

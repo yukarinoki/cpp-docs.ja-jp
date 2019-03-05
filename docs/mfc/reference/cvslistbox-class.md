@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CVSListBox [MFC], SetItemData
 - CVSListBox [MFC], GetListHwnd
 ms.assetid: c79be7b4-46ed-4af8-a41e-68962782d8ef
-ms.openlocfilehash: fb12f17aec43653931343e80926d59560d879c3a
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 618f4f386db477dd301ada862ebd2094a6c6651f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176213"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301520"
 ---
 # <a name="cvslistbox-class"></a>CVSListBox クラス
 
@@ -58,16 +58,16 @@ class CVSListBox : public CVSListBoxBase
 
 |名前|説明|
 |----------|-----------------|
-|[CVSListBox::AddItem](#additem)|リスト コントロールに文字列を追加します。 ( `CVSListBoxBase::AddItem`をオーバーライドします)。|
-|[CVSListBox::EditItem](#edititem)|リスト コントロール項目のテキストの編集操作を開始します。 ( `CVSListBoxBase::EditItem`をオーバーライドします)。|
-|[CVSListBox::GetCount](#getcount)|編集可能なリスト コントロール内の文字列の数を取得します。 ( `CVSListBoxBase::GetCount`をオーバーライドします)。|
-|[CVSListBox::GetItemData](#getitemdata)|編集可能なリスト コントロール項目に関連付けられているアプリケーションに固有の 32 ビット値を取得します。 ( `CVSListBoxBase::GetItemData`をオーバーライドします)。|
-|[CVSListBox::GetItemText](#getitemtext)|編集可能なリスト コントロール項目のテキストを取得します。 ( `CVSListBoxBase::GetItemText`をオーバーライドします)。|
-|[CVSListBox::GetSelItem](#getselitem)|編集可能なリスト コントロールで現在選択されている項目の 0 から始まるインデックスを取得します。 ( `CVSListBoxBase::GetSelItem`をオーバーライドします)。|
-|`CVSListBox::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 詳細とメソッド構文は、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 ( `CVSListBoxBase::PreTranslateMessage`をオーバーライドします)。|
-|[CVSListBox::RemoveItem](#removeitem)|編集可能なリスト コントロールから項目を削除します。 ( `CVSListBoxBase::RemoveItem`をオーバーライドします)。|
-|[CVSListBox::SelectItem](#selectitem)|編集可能なリスト文字列を選択します。 ( `CVSListBoxBase::SelectItem`をオーバーライドします)。|
-|[CVSListBox::SetItemData](#setitemdata)|アプリケーション固有の 32 ビット値を編集可能なリスト コントロール項目に関連付けます。 ( `CVSListBoxBase::SetItemData`をオーバーライドします)。|
+|[CVSListBox::AddItem](#additem)|リスト コントロールに文字列を追加します。 (`CVSListBoxBase::AddItem` をオーバーライドします)。|
+|[CVSListBox::EditItem](#edititem)|リスト コントロール項目のテキストの編集操作を開始します。 (`CVSListBoxBase::EditItem` をオーバーライドします)。|
+|[CVSListBox::GetCount](#getcount)|編集可能なリスト コントロール内の文字列の数を取得します。 (`CVSListBoxBase::GetCount` をオーバーライドします)。|
+|[CVSListBox::GetItemData](#getitemdata)|編集可能なリスト コントロール項目に関連付けられているアプリケーションに固有の 32 ビット値を取得します。 (`CVSListBoxBase::GetItemData` をオーバーライドします)。|
+|[CVSListBox::GetItemText](#getitemtext)|編集可能なリスト コントロール項目のテキストを取得します。 (`CVSListBoxBase::GetItemText` をオーバーライドします)。|
+|[CVSListBox::GetSelItem](#getselitem)|編集可能なリスト コントロールで現在選択されている項目の 0 から始まるインデックスを取得します。 (`CVSListBoxBase::GetSelItem` をオーバーライドします)。|
+|`CVSListBox::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 詳細とメソッド構文は、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 (`CVSListBoxBase::PreTranslateMessage` をオーバーライドします)。|
+|[CVSListBox::RemoveItem](#removeitem)|編集可能なリスト コントロールから項目を削除します。 (`CVSListBoxBase::RemoveItem` をオーバーライドします)。|
+|[CVSListBox::SelectItem](#selectitem)|編集可能なリスト文字列を選択します。 (`CVSListBoxBase::SelectItem` をオーバーライドします)。|
+|[CVSListBox::SetItemData](#setitemdata)|アプリケーション固有の 32 ビット値を編集可能なリスト コントロール項目に関連付けます。 (`CVSListBoxBase::SetItemData` をオーバーライドします)。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
@@ -123,7 +123,7 @@ virtual int AddItem(
 *strIext*<br/>
 [in]文字列への参照。
 
-*指定*<br/>
+*dwData*<br/>
 [in]文字列に関連付けられているアプリケーション固有の 32 ビット値。 既定値は 0 です。
 
 *iIndex*<br/>
@@ -311,7 +311,7 @@ virtual void SetItemData(
 *iIndex*<br/>
 [in]編集可能なリスト コントロール項目の 0 から始まるインデックス。
 
-*指定*<br/>
+*dwData*<br/>
 [in]32 ビット値。 この値は、アプリケーション固有の整数またはその他のデータへのポインターを指定できます。
 
 ### <a name="remarks"></a>Remarks

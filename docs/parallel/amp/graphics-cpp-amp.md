@@ -2,12 +2,12 @@
 title: グラフィックス (C++ AMP)
 ms.date: 11/04/2016
 ms.assetid: 190a98a4-5f7d-442e-866b-b374ca74c16f
-ms.openlocfilehash: fcc1f11ff716654aadef91d86137b97e93b0a80f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a40575d84c9a0efedcb3c7c9717fc310870b530
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570319"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260882"
 ---
 # <a name="graphics-c-amp"></a>グラフィックス (C++ AMP)
 
@@ -29,8 +29,8 @@ Short ベクター ライブラリは、いくつかの機能の[ベクター型
 
 ||長さ 2|長さが 3|長さ 4|
 |-|--------------|--------------|--------------|
-|double|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
-|float|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
+|二重線|double_2<br /><br /> double2|double_3<br /><br /> double3|double_4<br /><br /> double4|
+|フローティング|float_2<br /><br /> float2|float_3<br /><br /> float3|float_4<br /><br /> float4|
 |int|int_2<br /><br /> int2|int_3<br /><br /> int3|int_4<br /><br /> int4|
 |norm|norm_2<br /><br /> norm2|norm_3<br /><br /> norm3|norm_4<br /><br /> norm4|
 |uint|uint_2<br /><br /> uint2|uint_3<br /><br /> uint3|uint_4<br /><br /> uint4|
@@ -259,7 +259,7 @@ void copyHostArrayToTexture() { // Copy from source array to texture object by u
 }
 ```
 
-コピーすることも 1 つのテクスチャから間を使用して、 [texture::copy_to](reference/texture-class.md#copy_to)メソッド。 2 つのテクスチャは異なる accelerator_views に置くことができます。 `writeonly_texture_view` オブジェクトにコピーすると、データは基になる `texture` オブジェクトにコピーされます。 スカラー要素ごとのビットおよび範囲はコピー元とコピー先の `texture` オブジェクトで同じにする必要があります。 これらの要件が満たされない場合、ランタイムは例外をスローします。
+コピーすることも 1 つのテクスチャから間を使用して、 [texture::copy_to](reference/texture-class.md#copy_to)メソッド。 2 つのテクスチャは異なる accelerator_views に置くことができます。 `writeonly_texture_view` オブジェクトにコピーすると、データは基になる `texture` オブジェクトにコピーされます。 スカラー要素ごとのビットおよび範囲はコピー元とコピー先の `texture` オブジェクトで同じにする必要があります。 これらの条件が満たされない場合、ランタイムは例外をスローします。
 
 ## <a name="texture-view-classes"></a>テクスチャ ビューのクラス
 
@@ -273,9 +273,9 @@ C++ AMP の紹介、 [texture_view クラス](../../parallel/amp/reference/textu
 
 テクスチャ ビューは、配列のビューに似ていますは得られません。 データの自動管理および移動機能を、 [array_view クラス](../../parallel/amp/reference/array-view-class.md)比べ、 [array クラス](../../parallel/amp/reference/array-class.md)します。 `texture_view` は、基になるテクスチャ データが存在するアクセラレータ ビューにのみアクセスできます。
 
-### <a name="writeonlytextureview-deprecated"></a>非推奨とされる writeonly_texture_view
+### <a name="writeonlytextureview-deprecated"></a>使用されない writeonly_texture_view
 
-Visual Studio 2013 で C++ AMP サンプリングや mipmap でサポートされていませんでしたなどのハードウェア テクスチャ機能に対する優れたサポートが導入されています、 [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md)します。 最近導入された `texture_view` クラスは `writeonly_texture_view` の機能のスーパーセットをサポートしており、その結果、`writeonly_texture_view` は非推奨とされます。
+Visual Studio 2013 で C++ AMP サンプリングや mipmap でサポートされていませんでしたなどのハードウェア テクスチャ機能に対する優れたサポートが導入されています、 [writeonly_texture_view クラス](../../parallel/amp/reference/writeonly-texture-view-class.md)します。 最近導入された `texture_view` クラスは `writeonly_texture_view` の機能のスーパーセットをサポートしており、その結果、`writeonly_texture_view` は使用されません。
 
 少なくとも新しいコードについては、以前は `texture_view` によって提供された機能へのアクセスに `writeonly_texture_view` を使用することをお勧めします。 2 つのコンポーネント (int_2) を持つテクスチャ オブジェクトに書き込む、次の 2 つのコード例を比較します。 どちらのケースでも、ビュー `wo_tv4` はラムダ式の値でキャプチャされる必要があることに注意してください。 新しい `texture_view` クラスを使用する例を次に示します。
 
@@ -291,7 +291,7 @@ void write2ComponentTexture() {
 }
 ```
 
-非推奨とされる `writeonly_texture_view` クラスを次に示します：
+使用されていない `writeonly_texture_view` クラスを次に示します。
 
 ```cpp
 void write2ComponentTexture() {
@@ -344,8 +344,8 @@ void declareTextureViews()
 
 |型|コンポーネント|読み取り|Write|サンプリング|MIPMAP アクセス|
 |----------|----------------|----------|-----------|--------------|-------------------|
-|texture_view\<const T, N >|1, 2, 4|はい|いいえ (1)|はい|○、インデックス可能。 範囲はインスタンス化時に決定。|
-|Texture_view\<T, N >|1<br /><br /> 2, 4|はい<br /><br /> いいえ (2)|はい<br /><br /> はい|いいえ (1)<br /><br /> いいえ (1)|○、1 レベル。 レベルはインスタンス化時に決定。<br /><br /> ○、1 レベル。 レベルはインスタンス化時に決定。|
+|texture_view\<const T, N >|1, 2, 4|[はい]|いいえ (1)|[はい]|○、インデックス可能。 範囲はインスタンス化時に決定。|
+|Texture_view\<T, N >|1<br /><br /> 2, 4|[はい]<br /><br /> いいえ (2)|[はい]<br /><br /> [はい]|いいえ (1)<br /><br /> いいえ (1)|○、1 レベル。 レベルはインスタンス化時に決定。<br /><br /> ○、1 レベル。 レベルはインスタンス化時に決定。|
 
 このテーブルから、読み取り専用のテクスチャ ビューはビューに書き込めない代わりに新しい機能を完全にサポートすることを確認できます。 書き込み可能なテクスチャ ビューは 1 つの MIPMAP レベルにのみアクセスできるように制限されています。 読み取り/書き込みテクスチャ ビューは書き込み可能なテクスチャ ビューよりもさらに特殊化されています。これはテクスチャ ビューの要素型が 1 つのコンポーネントのみを持っているという要件が追加されているためです。 これは読み取り指向の操作であるため、サンプリングは書き込み可能テクスチャ ビューではサポートされないことに注意してください。
 

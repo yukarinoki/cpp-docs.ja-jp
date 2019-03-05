@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - memory management functions [Concurrency Runtime]
 ms.assetid: d303dd2a-dfa4-4d90-a508-f6aa290bb9ea
-ms.openlocfilehash: d8dfc8bbb200258818c38e931e978cc3be292525
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a7810267c3eaa11ad7592774440365620e7e8f4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454082"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276937"
 ---
 # <a name="memory-management-functions"></a>メモリ管理関数
 
@@ -30,10 +30,9 @@ ms.locfileid: "50454082"
 
 ## <a name="example"></a>例
 
-使用する例については、`Alloc`と`Free`メモリのパフォーマンスを向上させるために関数を参照してください[方法: 使用 Alloc と Free メモリ パフォーマンスを向上させる](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)します。
+使用する例については、`Alloc`と`Free`メモリのパフォーマンスを向上させるために関数を参照してください[方法。割り当てを使用して、およびメモリのパフォーマンスを向上させるためにテープを空き](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [方法: Alloc および Free を使用してメモリ パフォーマンスを改善する](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)
-

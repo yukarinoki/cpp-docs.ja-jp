@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - overwrite_buffer class
 ms.assetid: 5cc428fe-3697-419c-9fb2-78f6181c9293
-ms.openlocfilehash: 680c07015538a2eacc9480d3cd22da9a36071e32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adac6e220a60a49a2b9bfa9463f16f8956b08d2e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456001"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299310"
 ---
 # <a name="overwritebuffer-class"></a>overwrite_buffer クラス
 
@@ -57,7 +57,7 @@ class overwrite_buffer : public propagator_block<multi_link_registry<ITarget<T>>
 |名前|説明|
 |----------|-----------------|
 |[has_value](#has_value)|チェックするかどうかこの`overwrite_buffer`メッセージング ブロックはまだ値。|
-|[値](#value)|格納されているメッセージの現在のペイロードへの参照を取得、`overwrite_buffer`メッセージング ブロックします。|
+|[value](#value)|格納されているメッセージの現在のペイロードへの参照を取得、`overwrite_buffer`メッセージング ブロックします。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 

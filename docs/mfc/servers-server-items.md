@@ -1,5 +1,5 @@
 ---
-title: 'サーバー : サーバー アイテム'
+title: サーバー:サーバー項目
 ms.date: 11/04/2016
 helpviewer_keywords:
 - server items, implementing
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - server items
 - OLE server applications [MFC], server items
 ms.assetid: 28ba81a1-726a-4728-a52d-68bc7efd5a3c
-ms.openlocfilehash: ea04a3eefff0f127873ffbf67ea39ade3a6b9b85
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0adaea1c4f1dd0525ead82dfffdf267326ac865c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453691"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262286"
 ---
-# <a name="servers-server-items"></a>サーバー : サーバー アイテム
+# <a name="servers-server-items"></a>サーバー:サーバー項目
 
 サーバー アプリケーションをコンテナーでは、ユーザーは埋め込みまたはリンクされている OLE 項目を編集できるように、サーバーが起動したらと、「サーバー項目」を作成します 派生したクラスのオブジェクトではサーバー項目`COleServerItem`サーバーのドキュメントとコンテナー アプリケーション間のインターフェイスを提供します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "50453691"
 
    Framework 呼び出し`OnDraw`メタファイルに OLE 項目を表示するためにします。 コンテナー アプリケーションでは、項目を表示するためにこのメタファイルを使用します。 アプリケーションのビューのクラスがあります、`OnDraw`メンバー関数は、サーバー アプリケーションがアクティブなときに、項目を表示するために使用します。
 
-1. 実装のオーバーライドを`OnGetEmbeddedItem`サーバー ドキュメント クラス。 詳細については、この記事を参照してください。[サーバー: サーバー ドキュメントの実装](../mfc/servers-implementing-server-documents.md)と MFC OLE サンプル[HIERSVR](../visual-cpp-samples.md)します。
+1. 実装のオーバーライドを`OnGetEmbeddedItem`サーバー ドキュメント クラス。 詳細については、この記事を参照してください。[サーバー。サーバー ドキュメントの実装](../mfc/servers-implementing-server-documents.md)と MFC OLE サンプル[HIERSVR](../visual-cpp-samples.md)します。
 
 1. サーバー項目クラスの実装`OnGetExtent`メンバー関数。 フレームワークは、アイテムのサイズを取得するには、この関数を呼び出します。 既定の実装では、何も行われません。
 
@@ -52,4 +52,3 @@ ms.locfileid: "50453691"
 ## <a name="see-also"></a>関連項目
 
 [サーバー](../mfc/servers.md)
-

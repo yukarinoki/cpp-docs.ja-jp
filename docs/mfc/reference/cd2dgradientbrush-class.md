@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CD2DGradientBrush [MFC], m_extendMode
 - CD2DGradientBrush [MFC], m_pGradientStops
 ms.assetid: 5bf133e6-16b7-4e3a-845d-0ce63fafe5ec
-ms.openlocfilehash: bc26dd495fb9bd91aaf5eac192011faad80bc668
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f49a3a1a1aaebed47b05bf003926379c6f0b8102
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506055"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290977"
 ---
 # <a name="cd2dgradientbrush-class"></a>CD2DGradientBrush クラス
 
@@ -110,7 +110,7 @@ GradientStops 配列内のグラデーションの分岐点の数を指定する
 *colorInterpolationGamma*<br/>
 グラデーションの分岐点間の補間を実行する色で領域。
 
-*オン*<br/>
+*extendMode*<br/>
 [0, 1] の正規化された範囲外のグラデーションの動作です。
 
 *pBrushProperties*<br/>

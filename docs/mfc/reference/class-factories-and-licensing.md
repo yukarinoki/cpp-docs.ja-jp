@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - class factories [MFC], and licensing
 ms.assetid: 53c4856a-4062-46db-9f69-dd4339f746b3
-ms.openlocfilehash: bfe4957312a3e1f5c08768af6fe96eb0c2e8b1f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3788d904bf903481d57dd73a28bf6eafadd5f019
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50514401"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289578"
 ---
 # <a name="class-factories-and-licensing"></a>クラス ファクトリとライセンス
 
 OLE コントロールのインスタンスを作成するには、コンテナー アプリケーションは、コントロールのクラス ファクトリのメンバー関数を呼び出します。 コントロールは、実際の OLE オブジェクトであるために、クラス ファクトリが、コントロールのインスタンスを作成する責任を負います。 すべての OLE コントロール クラスには、クラス ファクトリが必要です。
 
-OLE コントロールのもう 1 つの重要な機能では、ライセンスを強制できる点です。 ControlWizard は、コントロール プロジェクトの作成時にライセンスを反映することができます。 コントロールのライセンスの詳細については、この記事を参照してください。 [ActiveX コントロール: ActiveX コントロールの ライセンス](../../mfc/mfc-activex-controls-licensing-an-activex-control.md)。
+OLE コントロールのもう 1 つの重要な機能では、ライセンスを強制できる点です。 ControlWizard は、コントロール プロジェクトの作成時にライセンスを反映することができます。 コントロールのライセンスの詳細については、この記事を参照してください。 [ActiveX コントロール。ActiveX コントロールのライセンス](../../mfc/mfc-activex-controls-licensing-an-activex-control.md)します。
 
 次の表は、いくつかのマクロと関数を宣言し、コントロールのクラス ファクトリを実装するために使用して、コントロールのライセンス。
 
@@ -41,7 +41,7 @@ DECLARE_OLECREATE_EX(class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 コントロール クラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -79,7 +79,7 @@ IMPLEMENT_OLECREATE_EX(
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 コントロールのプロパティ ページ クラスの名前。
 
 *external_name*<br/>
@@ -106,7 +106,7 @@ BEGIN_OLEFACTORY(class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 これは、クラス ファクトリを持つコントロール クラスの名前を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -127,7 +127,7 @@ END_OLEFACTORY(class_name)
 
 ### <a name="parameters"></a>パラメーター
 
-*$class_name$*<br/>
+*class_name*<br/>
 これは、クラス ファクトリを持つコントロール クラスの名前。
 
 ### <a name="requirements"></a>必要条件

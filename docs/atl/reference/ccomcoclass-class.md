@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CComCoClass class
 - aggregation [C++], aggregation models
 ms.assetid: 67cfefa4-8df9-47fa-ad58-2d1a1ae25762
-ms.openlocfilehash: 51da70cc1972e6a69e28d7699703f803b6fa8701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c52e1a95483807f9c842b0b904cd2314258f0e26
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630699"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57282644"
 ---
 # <a name="ccomcoclass-class"></a>CComCoClass クラス
 
@@ -44,7 +44,7 @@ class CComCoClass
 
 |名前|説明|
 |----------|-----------------|
-|[あって](#createinstance)|(静的)クラスとインターフェイスのクエリのインスタンスを作成します。|
+|[CComCoClass::CreateInstance](#createinstance)|(静的)クラスとインターフェイスのクエリのインスタンスを作成します。|
 |[CComCoClass::Error](#error)|(静的)クライアントに詳細なエラー情報を返します。|
 |[CComCoClass::GetObjectCLSID](#getobjectclsid)|(静的)オブジェクトのクラス識別子を返します。|
 |[CComCoClass::GetObjectDescription](#getobjectdescription)|(静的)オブジェクトの説明を返すようにオーバーライドします。|
@@ -67,7 +67,7 @@ class CComCoClass
 
 **ヘッダー:** atlcom.h
 
-##  <a name="createinstance"></a>  あって
+##  <a name="createinstance"></a>  CComCoClass::CreateInstance
 
 これらを使用して、 `CreateInstance` COM のインスタンスを作成する関数オブジェクトし、COM API を使用せず、インターフェイス ポインターを取得します。
 
@@ -213,7 +213,7 @@ static LPCTSTR WINAPI GetObjectDescription();
 
 ### <a name="remarks"></a>Remarks
 
-既定の実装では、NULL を返します。 このメソッドをオーバーライドすることができます、 [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description)マクロ。 例えば:
+既定の実装では、NULL を返します。 このメソッドをオーバーライドすることができます、 [DECLARE_OBJECT_DESCRIPTION](object-map-macros.md#declare_object_description)マクロ。 例:
 
 [!code-cpp[NVC_ATL_COM#12](../../atl/codesnippet/cpp/ccomcoclass-class_3.h)]
 

@@ -31,12 +31,12 @@ helpviewer_keywords:
 - CComModule class
 - DLL modules [C++], ATL
 ms.assetid: f5face2c-8fd8-40e6-9ec3-54ab74701769
-ms.openlocfilehash: 73d25f15aaeed15e3972c48e682c70f0b8c505c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6d95460902c44ff058a4c7b90c810ab44489d952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50589450"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298933"
 ---
 # <a name="ccommodule-class"></a>CComModule クラス
 
@@ -61,7 +61,7 @@ class CComModule : public _ATL_MODULE
 |[CComModule::GetModuleInstance](#getmoduleinstance)|`m_hInst` を返します。|
 |[CComModule::GetResourceInstance](#getresourceinstance)|`m_hInstResource` を返します。|
 |[CComModule::GetTypeLibInstance](#gettypelibinstance)|`m_hInstTypeLib` を返します。|
-|[Ccommodule::init](#init)|データ メンバーを初期化します。|
+|[CComModule::Init](#init)|データ メンバーを初期化します。|
 |[CComModule::RegisterClassHelper](#registerclasshelper)|オブジェクトの標準のクラスの登録をシステム レジストリに入力します。|
 |[CComModule::RegisterClassObjects](#registerclassobjects)|クラスのオブジェクトを登録します。 Exe のみです。|
 |[CComModule::RegisterServer](#registerserver)|オブジェクト マップ内の各オブジェクトのシステム レジストリを更新します。|
@@ -201,7 +201,7 @@ HINSTANCE。
 
 返します、 [m_hInstTypeLib](#m_hinsttypelib)データ メンバー。
 
-##  <a name="init"></a>  Ccommodule::init
+##  <a name="init"></a>  CComModule::Init
 
 ATL 7.0 では、時点で`CComModule`は廃止されています。 を参照してください[ATL モジュール クラス](../../atl/atl-module-classes.md)の詳細。
 

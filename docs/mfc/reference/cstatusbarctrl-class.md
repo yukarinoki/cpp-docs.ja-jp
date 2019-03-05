@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 71ae39cb62da7938880973dc48b65ed69b9c8b92
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50569733"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272842"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl クラス
 
@@ -80,8 +80,8 @@ class CStatusBarCtrl : public CWnd
 |[CStatusBarCtrl::GetIcon](#geticon)|現在のステータス バー コントロールのパーツ (ウィンドウとも呼ばれます) のアイコンを取得します。|
 |[CStatusBarCtrl::GetParts](#getparts)|ステータス バー コントロールの部品の数を取得します。|
 |[CStatusBarCtrl::GetRect](#getrect)|ステータス バー コントロールでの部分の外接する四角形を取得します。|
-|[Cstatusbarctrl::gettext](#gettext)|ステータス バー コントロールの特定の部分からテキストを取得します。|
-|[Cstatusbarctrl::gettextlength](#gettextlength)|ステータス バー コントロールの特定の部分からテキストの文字の長さを取得します。|
+|[CStatusBarCtrl::GetText](#gettext)|ステータス バー コントロールの特定の部分からテキストを取得します。|
+|[CStatusBarCtrl::GetTextLength](#gettextlength)|ステータス バー コントロールの特定の部分からテキストの文字の長さを取得します。|
 |[CStatusBarCtrl::GetTipText](#gettiptext)|ステータス バーで、ウィンドウのツールヒントのテキストを取得します。|
 |[CStatusBarCtrl::IsSimple](#issimple)|簡易モードでは、ステータス ウィンドウ コントロールを確認します。|
 |[CStatusBarCtrl::SetBkColor](#setbkcolor)|ステータス バーの背景色を設定します。|
@@ -354,7 +354,7 @@ BOOL GetRect(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#4](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_6.cpp)]
 
-##  <a name="gettext"></a>  Cstatusbarctrl::gettext
+##  <a name="gettext"></a>  CStatusBarCtrl::GetText
 
 ステータス バー コントロールの特定の部分からテキストを取得します。
 
@@ -377,7 +377,7 @@ int GetText(
 *nPane*<br/>
 テキストの取得元となる部分の 0 から始まるインデックス。
 
-*p 入力してください。*<br/>
+*pType*<br/>
 型情報を受け取る整数へのポインター。 型には、これらの値のいずれかを指定できます。
 
 - **0**ステータス バーの平面より低く見える境界線と共に、テキストを描画します。
@@ -396,7 +396,7 @@ int GetText(
 
 [!code-cpp[NVC_MFC_CStatusBarCtrl#5](../../mfc/reference/codesnippet/cpp/cstatusbarctrl-class_7.cpp)]
 
-##  <a name="gettextlength"></a>  Cstatusbarctrl::gettextlength
+##  <a name="gettextlength"></a>  CStatusBarCtrl::GetTextLength
 
 ステータス バー コントロールの特定の部分からテキストの文字の長さを取得します。
 
@@ -411,7 +411,7 @@ int GetTextLength(
 *nPane*<br/>
 テキストの取得元となる部分の 0 から始まるインデックス。
 
-*p 入力してください。*<br/>
+*pType*<br/>
 型情報を受け取る整数へのポインター。 型には、これらの値のいずれかを指定できます。
 
 - **0**ステータス バーの平面より低く見える境界線と共に、テキストを描画します。
@@ -613,7 +613,7 @@ BOOL SetText(
 *nPane*<br/>
 設定される部分の 0 から始まるインデックス。 この値が 255 の場合、ステータス バー コントロールは 1 つの部分のみで構成される単純なコントロールと見なされます。
 
-*%n タイプ*<br/>
+*nType*<br/>
 描画操作の種類。 参照してください[SB_SETTEXT メッセージ](/windows/desktop/Controls/sb-settext)使用可能な値の一覧についてはします。
 
 ### <a name="return-value"></a>戻り値

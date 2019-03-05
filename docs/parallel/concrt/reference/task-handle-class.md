@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 060be8614fc3a0a93d446c747b65de82b863ab3c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518881"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298088"
 ---
 # <a name="taskhandle-class"></a>task_handle クラス
 
@@ -46,7 +46,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 |名前|説明|
 |----------|-----------------|
-|[演算子 ()](#task_handle__operator_call)|タスク ハンドルの作業を実行するために、ランタイムが呼び出す関数呼び出し演算子。|
+|[operator()](#task_handle__operator_call)|タスク ハンドルの作業を実行するために、ランタイムが呼び出す関数呼び出し演算子。|
 
 ## <a name="remarks"></a>Remarks
 

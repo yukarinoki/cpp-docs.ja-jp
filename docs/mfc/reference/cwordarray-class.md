@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: 7c8915b8d82f96ed0bd1fad11e1a4f0687b40493
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530170"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259452"
 ---
 # <a name="cwordarray-class"></a>CWordArray クラス
 
@@ -136,7 +136,7 @@ interface class ICommandSource
 
 MFC ビューでユーザー コントロールをホストするときに[CWinFormsView クラス](../../mfc/reference/cwinformsview-class.md)ルート コマンドおよび更新コマンド UI メッセージをユーザー コントロールを MFC のコマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理できるようにします。 を実装するを与えることに、ユーザー コントロールへの参照、`ICommandSource`オブジェクト。
 
-参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`ICommandTarget`します。
+「[方法:Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`ICommandTarget`します。
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
@@ -162,7 +162,7 @@ void AddCommandHandler(
 
 このメソッドは、コマンド ハンドラーを追加します。 *cmdHandler*コマンド ソース オブジェクトにし、そのハンドラーに*cmdID*します。
 
-参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`AddCommandHandler`します。
+「[方法:Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`AddCommandHandler`します。
 
 ##  <a name="addcommandrangehandler"></a>  ICommandSource::AddCommandRangeHandler
 
@@ -362,7 +362,7 @@ interface class ICommandTarget
 
 MFC ビューでユーザー コントロールをホストするときに[CWinFormsView](../../mfc/reference/cwinformsview-class.md)ルート コマンドおよび更新コマンド UI メッセージをユーザー コントロールを MFC のコマンド (たとえば、フレームのメニュー項目やツールバーのボタン) を処理できるようにします。 実装することによって`ICommandTarget`、ユーザー コントロールに、オブジェクトへの参照を提供します。
 
-参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`ICommandTarget`します。
+「[方法:Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`ICommandTarget`します。
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
@@ -383,7 +383,7 @@ void Initialize(ICommandSource^ cmdSource);
 
 MFC ビューでユーザー コントロールをホストするときに[CWinFormsView](../../mfc/reference/cwinformsview-class.md)ルート コマンドおよび更新コマンド UI メッセージをユーザー コントロールを MFC のコマンドを処理できるようにします。
 
-このメソッドは、コマンド ターゲット オブジェクトを初期化し、指定したコマンドのソース オブジェクトに関連付けます*cmdSource*します。 ユーザー コントロール クラスの実装で呼び出す必要があります。 初期化でする必要がありますに登録するコマンド ハンドラー コマンド ソース オブジェクトを呼び出して[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)で、`Initialize`実装します。 参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`Initialize`これを行う。
+このメソッドは、コマンド ターゲット オブジェクトを初期化し、指定したコマンドのソース オブジェクトに関連付けます*cmdSource*します。 ユーザー コントロール クラスの実装で呼び出す必要があります。 初期化でする必要がありますに登録するコマンド ハンドラー コマンド ソース オブジェクトを呼び出して[ICommandSource::AddCommandHandler](../../mfc/reference/icommandsource-interface.md)で、`Initialize`実装します。 「[方法:Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)を使用する方法の例については`Initialize`これを行う。
 
 ##  <a name="icommandui_interface"></a>  ICommandUI インターフェイス
 
@@ -399,7 +399,7 @@ interface class ICommandUI
 
 `ICommandUI` 内で使用されて、`ON_UPDATE_COMMAND_UI`ハンドラーは、派生クラスでします。 有効になっている、各メニュー項目、メニューが表示されます (選択または数回のクリック)、アプリケーションのユーザーがアクティブ化または無効にします。 各メニュー コマンドのターゲットが実装することでこの情報を提供する`ON_UPDATE_COMMAND_UI`ハンドラー。 アプリケーション内のコマンドのユーザー インターフェイス オブジェクトごとに、[プロパティ] ウィンドウを使用して、メッセージ マップ エントリと各ハンドラーの関数プロトタイプを作成します。
 
-方法の詳細については`ICommandUI`コマンド ルーティングのインターフェイスを使用してを参照してください[方法: Windows フォーム コントロールにコマンド ルーティングを追加](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。
+方法の詳細については`ICommandUI`コマンド ルーティングのインターフェイスを使用してを参照してください[方法。コマンドの追加フォーム コントロールを Windows へのルーティング](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。
 
 Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
 
@@ -433,7 +433,7 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Remarks
 
-これは、高度なメンバー関数と組み合わせて使用する必要がありますが、 [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex)は FALSE を返すハンドラー。 詳細については、テクニカル ノートを参照してください。 [TN006: メッセージ マップ](../../mfc/tn006-message-maps.md)します。
+これは、高度なメンバー関数と組み合わせて使用する必要がありますが、 [ON_COMMAND_EX](message-map-macros-mfc.md#on_command_ex)は FALSE を返すハンドラー。 詳細については、テクニカル ノートを参照してください[TN006:。メッセージ マップ](../../mfc/tn006-message-maps.md)します。
 
 ##  <a name="enabled"></a>  ICommandUI::Enabled
 
@@ -521,7 +521,7 @@ void OnActivateView(bool activate);
 
 ### <a name="parameters"></a>パラメーター
 
-*アクティブ化します。*<br/>
+*activate*<br/>
 表示されているかどうかを示しますがアクティブまたは非アクティブ化します。
 
 ##  <a name="oninitialupdate"></a>  IView::OnInitialUpdate
@@ -549,4 +549,3 @@ void OnUpdate();
 [MFC サンプルの収集](../../visual-cpp-samples.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

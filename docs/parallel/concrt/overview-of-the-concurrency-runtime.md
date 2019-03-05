@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Concurrency Runtime, overview
 - Concurrency Runtime, lambda expressions
 ms.assetid: 56237d96-10b0-494a-9cb4-f5c5090436c5
-ms.openlocfilehash: ffaf560361da2fd54febb5e38af121ad5149f012
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 810d77abd37ff2c6f29e980b84645d16526744d8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176667"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305238"
 ---
 # <a name="overview-of-the-concurrency-runtime"></a>コンカレンシー ランタイムの概要
 
@@ -143,4 +143,3 @@ C++ でのラムダ関数の詳細については、次を参照してくださ�
 コンカレンシー ランタイムは、C ランタイム ライブラリ (CRT) の一部として提供されます。 CRT を使用するアプリケーションを構築する方法の詳細については、次を参照してください。 [CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)します。
 
 [[トップ](#top)]
-

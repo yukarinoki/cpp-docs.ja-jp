@@ -2,12 +2,12 @@
 title: アクセラレータおよび accelerator_view オブジェクトの使用
 ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
-ms.openlocfilehash: 4144adf288ddefd7f7dd00ada91f97aea94e6bce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668599"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272901"
 ---
 # <a name="using-accelerator-and-acceleratorview-objects"></a>アクセラレータおよび accelerator_view オブジェクトの使用
 
@@ -90,7 +90,8 @@ void pick_with_most_memory()
 ```
 
 > [!NOTE]
-> `accelerator::get_all` によって返されるアクセラレータの 1 つが、CPU アクセラレータです。 CPU アクセラレータではコードを実行できません。 CPU アクセラレータを除外するには、値を比較、 [device_path](reference/accelerator-class.md#device_path)プロパティによって返されるアクセラレータの`accelerator::get_all`の値を持つ、 [accelerator::cpu_accelerator](reference/accelerator-class.md#cpu_accelerator)します。 詳細については、この記事で後述する「特別なアクセラレータ」のセクションを参照してください。
+> 
+  `accelerator::get_all` によって返されるアクセラレータの 1 つが、CPU アクセラレータです。 CPU アクセラレータではコードを実行できません。 CPU アクセラレータを除外するには、値を比較、 [device_path](reference/accelerator-class.md#device_path)プロパティによって返されるアクセラレータの`accelerator::get_all`の値を持つ、 [accelerator::cpu_accelerator](reference/accelerator-class.md#cpu_accelerator)します。 詳細については、この記事で後述する「特別なアクセラレータ」のセクションを参照してください。
 
 ## <a name="shared-memory"></a>共有メモリ
 
@@ -127,11 +128,14 @@ int main()
 }
 ```
 
-`accelerator_view` は、関連付けられた `default_cpu_access_type` の `accelerator` を常に反映し、その `access_type` をオーバーライドまたは変更するためのインターフェイスを提供しません。
+
+  `accelerator_view` は、関連付けられた `default_cpu_access_type` の `accelerator` を常に反映し、その `access_type` をオーバーライドまたは変更するためのインターフェイスを提供しません。
 
 ## <a name="changing-the-default-accelerator"></a>既定のアクセラレータを変更する
 
-`accelerator::set_default` メソッドを呼び出して、既定のアクセラレータを変更できます。 アプリの実行ごとに既定のアクセラレータを 1 度だけ変更することができますが、コードが GPU で実行される前に変更する必要があります。 アクセラレータを変更する後続の関数呼び出しを返す**false**します。 `parallel_for_each` の呼び出しに別のアクセラレータを使用する場合は、この記事の「複数のアクセラレータを使用する」のセクションを参照してください。 次のコード例では、既定のアクセラレータをエミュレートおよびディスプレイへの接続が行われておらず、倍精度をサポートしているアクセラレータに設定します。
+
+  `accelerator::set_default` メソッドを呼び出して、既定のアクセラレータを変更できます。 アプリの実行ごとに既定のアクセラレータを 1 度だけ変更することができますが、コードが GPU で実行される前に変更する必要があります。 アクセラレータを変更する後続の関数呼び出しを返す**false**します。 
+  `parallel_for_each` の呼び出しに別のアクセラレータを使用する場合は、この記事の「複数のアクセラレータを使用する」のセクションを参照してください。 次のコード例では、既定のアクセラレータをエミュレートおよびディスプレイへの接続が行われておらず、倍精度をサポートしているアクセラレータに設定します。
 
 ```cpp
 bool pick_accelerator()
@@ -168,11 +172,11 @@ bool pick_accelerator()
 
 3 つの特別なアクセラレータのデバイス パスは `accelerator` クラスのプロパティとして使用できます。
 
-- [accelerator::direct3d_ref データ メンバー](reference/accelerator-class.md#direct3d_ref): このシングル スレッド アクセラレータは、一般的なグラフィックス カードをエミュレートするために、CPU 上でソフトウェアを使用します。 これはデバッグのために既定で使用されますが、ハードウェア アクセラレータよりも遅いため、稼働中には役に立ちません。 また、DirectX SDK と Windows SDK でのみ使用が可能で、顧客のコンピューターにインストールされることはないと思われます。 詳細については、次を参照してください。 [GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)します。
+- [accelerator::direct3d_ref データ メンバー](reference/accelerator-class.md#direct3d_ref):このシングル スレッド アクセラレータは、一般的なグラフィックス カードをエミュレートするために、CPU 上でソフトウェアを使用します。 これはデバッグのために既定で使用されますが、ハードウェア アクセラレータよりも遅いため、稼働中には役に立ちません。 また、DirectX SDK と Windows SDK でのみ使用が可能で、顧客のコンピューターにインストールされることはないと思われます。 詳細については、次を参照してください。 [GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)します。
 
-- [accelerator::direct3d_warp データ メンバー](reference/accelerator-class.md#direct3d_warp): このアクセラレータ ストリーミング SIMD 拡張命令 (SSE) を使用するマルチコア Cpu で C++ AMP コードを実行するためのフォールバック ソリューションを提供します。
+- [accelerator::direct3d_warp データ メンバー](reference/accelerator-class.md#direct3d_warp):このアクセラレータは、ストリーミング SIMD 拡張命令 (SSE) を使用するマルチコア Cpu で C++ AMP コードを実行するためのフォールバック ソリューションを提供します。
 
-- [accelerator::cpu_accelerator データ メンバー](reference/accelerator-class.md#cpu_accelerator): ステージング配列を設定するため、このアクセラレータを使用することができます。 これは C++ AMP コードを実行できません。 詳細については、次を参照してください。、 [C++ AMP のステージング配列](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)ネイティブ コードのブログでの並行プログラミングに投稿します。
+- [accelerator::cpu_accelerator データ メンバー](reference/accelerator-class.md#cpu_accelerator):ステージング配列を設定するため、このアクセラレータを使用することができます。 これは C++ AMP コードを実行できません。 詳細については、次を参照してください。、 [C++ AMP のステージング配列](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)ネイティブ コードのブログでの並行プログラミングに投稿します。
 
 ## <a name="interoperability"></a>相互運用性
 

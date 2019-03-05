@@ -1,18 +1,18 @@
 ---
-title: '方法: オーバーサブスクリプションを使用して待機時間を短縮する'
+title: '方法: オーバー サブスクリプションを使用して、待機時間を短縮するには'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - oversubscription, using [Concurrency Runtime]
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
-ms.openlocfilehash: fc16fa5cfeddf82b9fcb0164796fb7f4c90aef15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653077"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257944"
 ---
-# <a name="how-to-use-oversubscription-to-offset-latency"></a>方法: オーバーサブスクリプションを使用して待機時間を短縮する
+# <a name="how-to-use-oversubscription-to-offset-latency"></a>方法: オーバー サブスクリプションを使用して、待機時間を短縮するには
 
 オーバーサブスクリプションを使用すると、待機時間の長いタスクが含まれた一部のアプリケーションの全体的な効率を向上できます。 このトピックでは、オーバーサブスクリプションを使用して、ネットワーク接続からのデータの読み込みが原因で発生する待機時間を短縮する方法について説明します。
 
@@ -70,7 +70,8 @@ Downloaded 1801040 bytes in 3276 ms.
 
 使用することができます、 *Resource Acquisition Is Initialization*オーバー サブスクリプションを特定のスコープを制限する (RAII) パターンです。 RAII パターンでは、データ構造はスタック上に割り当てられます。 データ構造は、作成されたときにリソースを初期化または取得し、破棄されたときにそのリソースを破棄または解放します。 RAII パターンでは、外側のスコープが終了する前に、常にデストラクターが呼び出されます。 したがって、例外がスローされた場合や、関数に複数の `return` ステートメントが含まれている場合でも、リソースは適切に管理されます。
 
-次の例では、`scoped_blocking_signal` という名前の構造を定義します。 `scoped_blocking_signal` 構造のコンストラクターによってオーバーサブスクリプションが有効になり、デストラクターによってオーバーサブスクリプションが無効になります。
+次の例では、`scoped_blocking_signal` という名前の構造を定義します。 
+  `scoped_blocking_signal` 構造のコンストラクターによってオーバーサブスクリプションが有効になり、デストラクターによってオーバーサブスクリプションが無効になります。
 
 [!code-cpp[concrt-download-oversubscription#2](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_2.cpp)]
 
@@ -82,4 +83,3 @@ Downloaded 1801040 bytes in 3276 ms.
 
 [コンテキスト](../../parallel/concrt/contexts.md)<br/>
 [Context::oversubscribe メソッド](reference/context-class.md#oversubscribe)
-

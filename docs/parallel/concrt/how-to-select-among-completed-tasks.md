@@ -1,24 +1,26 @@
 ---
-title: '方法: 完了したタスクから選択する'
+title: '方法: 完了したタスクから選択します'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - selecting among completed tasks [Concurrency Runtime]
 - completed tasks, selecting among [Concurrency Runtime]
 ms.assetid: c8ccc160-043f-4599-847b-32ed270bb257
-ms.openlocfilehash: c9137c3d1e354a5e3f50f0d281ecbbd247642597
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d31f9bd16aaa70cc773e60e4f1193e66ec520f0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551633"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278029"
 ---
-# <a name="how-to-select-among-completed-tasks"></a>方法: 完了したタスクから選択する
+# <a name="how-to-select-among-completed-tasks"></a>方法: 完了したタスクから選択します
 
 この例は、使用する方法を示します、 [concurrency::choice](../../parallel/concrt/reference/choice-class.md)と[concurrency::join](../../parallel/concrt/reference/join-class.md)クラスを検索アルゴリズムを完了する最初のタスクを選択します。
 
 ## <a name="example"></a>例
 
-次の例では 2 つの検索アルゴリズムを並列で実行し、最初のアルゴリズムを選択して完了します。 この例では、従業員の数値 ID と給与を格納する `employee` 型を定義します。 `find_employee` 関数は、指定された ID と指定された給与に該当する最初の従業員を検索します。 また、`find_employee` 関数は、指定された ID または指定された給与に該当する従業員がいない場合の処理も行います。 `wmain` 関数は、`employee` オブジェクトの配列を作成して複数の ID および給与の値を検索します。
+次の例では 2 つの検索アルゴリズムを並列で実行し、最初のアルゴリズムを選択して完了します。 この例では、従業員の数値 ID と給与を格納する `employee` 型を定義します。 
+  `find_employee` 関数は、指定された ID と指定された給与に該当する最初の従業員を検索します。 また、`find_employee` 関数は、指定された ID または指定された給与に該当する従業員がいない場合の処理も行います。 
+  `wmain` 関数は、`employee` オブジェクトの配列を作成して複数の ID および給与の値を検索します。
 
 次の例では、`choice` オブジェクトを使用して、次の事例を選択します。
 
@@ -28,7 +30,9 @@ ms.locfileid: "50551633"
 
 1. 指定された ID または給与に該当しない従業員。
 
-最初の 2 つのケースの例を使用して、 [concurrency::single_assignment](../../parallel/concrt/reference/single-assignment-class.md)識別子を保持するオブジェクト`single_assignment`給与を保持するオブジェクト。 この例は、3 番目の事例に対して `join` オブジェクトを使用します。 `join` オブジェクトは、2 つの別の `single_assignment` オブジェクトで構成されます。1 つは、指定された ID を持つ従業員がいない事例に使用し、もう 1 つは指定された給与に該当する従業員がいない事例に使用します。 `join` オブジェクトは、その各メンバーがメッセージを受信したときにメッセージを送信します。 この例では、`join` オブジェクトは、指定された ID または給与に該当する従業員がいない場合にメッセージを送信します。
+最初の 2 つのケースの例を使用して、 [concurrency::single_assignment](../../parallel/concrt/reference/single-assignment-class.md)識別子を保持するオブジェクト`single_assignment`給与を保持するオブジェクト。 この例は、3 番目の事例に対して `join` オブジェクトを使用します。 
+  `join` オブジェクトは、2 つの別の `single_assignment` オブジェクトで構成されます。1 つは、指定された ID を持つ従業員がいない事例に使用し、もう 1 つは指定された給与に該当する従業員がいない事例に使用します。 
+  `join` オブジェクトは、その各メンバーがメッセージを受信したときにメッセージを送信します。 この例では、`join` オブジェクトは、指定された ID または給与に該当する従業員がいない場合にメッセージを送信します。
 
 この例では、 [concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)両方の検索アルゴリズムを並列で実行するオブジェクト。 各検索タスクが、指定された従業員が存在するかどうかを示す値を `single_assignment` オブジェクトの 1 つに書き込みます。 この例では、 [concurrency::receive](reference/concurrency-namespace-functions.md#receive)メッセージを含む最初のバッファーのインデックスを取得する関数と`switch`結果を印刷するブロック。
 

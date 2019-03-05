@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 965842dd42033910366ec4686e7c0abf775f2d5c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530794"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258399"
 ---
 # <a name="toolbar-fundamentals"></a>ツール バーに関する基本事項
 
@@ -105,4 +105,3 @@ ms.locfileid: "50530794"
 ## <a name="see-also"></a>関連項目
 
 [MFC ツール バーの実装](../mfc/mfc-toolbar-implementation.md)
-

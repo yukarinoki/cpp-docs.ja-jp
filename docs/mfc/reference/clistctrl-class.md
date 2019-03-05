@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 4bc50a8a77a4964cf92d003ed1e06213398f401c
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525549"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304523"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 
@@ -387,7 +387,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::SetColumn](#setcolumn)|リスト ビューの列の属性を設定します。|
 |[CListCtrl::SetColumnOrderArray](#setcolumnorderarray)|リスト ビュー コントロールの列順序 (左右から) を設定します。|
 |[CListCtrl::SetColumnWidth](#setcolumnwidth)|レポート ビューまたはリスト ビュー内の列の幅を変更します。|
-|[かざして](#setextendedstyle)|リスト ビュー コントロールの現在の拡張スタイルを設定します。|
+|[CListCtrl::SetExtendedStyle](#setextendedstyle)|リスト ビュー コントロールの現在の拡張スタイルを設定します。|
 |[CListCtrl::SetGroupInfo](#setgroupinfo)|指定したリスト ビュー コントロールのグループの情報を設定します。|
 |[CListCtrl::SetGroupMetrics](#setgroupmetrics)|リスト ビュー コントロールのグループのメトリックを設定します。|
 |[CListCtrl::SetHotCursor](#sethotcursor)|リスト ビュー コントロールのホット トラッキングが有効になっているときに使用するカーソルを設定します。|
@@ -428,7 +428,7 @@ class CListCtrl : public CWnd
 
 簡単な概要を次に、`CListCtrl`クラス。 詳細な概念については、次を参照してください。[使い方](../../mfc/using-clistctrl.md)と[コントロール](../../mfc/controls-mfc.md)します。
 
-## <a name="views"></a>Views
+## <a name="views"></a>ビュー
 
 リスト ビュー コントロールは、"views"という 4 つの異なる方法でその内容を表示できます。
 
@@ -446,9 +446,9 @@ class CListCtrl : public CWnd
 
 - レポート ビュー
 
-   各項目は、右側の列に追加の情報を含む独自の行に表示されます。 小さいアイコンとラベルを左端の列が含まれています、2 列目以降は、アプリケーションで指定されたサブ項目を含めることができます。 埋め込みヘッダー コントロール (クラス[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) これらの列を実装します。 ヘッダー コントロールおよびレポート ビューの列の詳細については、次を参照してください。[使い方: 列の追加 (レポート ビュー) のコントロールに](../../mfc/adding-columns-to-the-control-report-view.md)します。
+   各項目は、右側の列に追加の情報を含む独自の行に表示されます。 小さいアイコンとラベルを左端の列が含まれています、2 列目以降は、アプリケーションで指定されたサブ項目を含めることができます。 埋め込みヘッダー コントロール (クラス[CHeaderCtrl](../../mfc/reference/cheaderctrl-class.md)) これらの列を実装します。 ヘッダー コントロールおよびレポート ビューの列の詳細については、次を参照してください。[使い方。制御 (レポート ビュー) に列を追加](../../mfc/adding-columns-to-the-control-report-view.md)します。
 
-コントロールの現在のリスト ビューのスタイルは、現在のビューを決定します。 これらのスタイルとその使用方法の詳細については、次を参照してください。[使い方: リスト コントロール スタイルの変更](../../mfc/changing-list-control-styles.md)します。
+コントロールの現在のリスト ビューのスタイルは、現在のビューを決定します。 これらのスタイルとその使用方法の詳細については、次を参照してください。[使い方。リスト コントロール スタイルの変更](../../mfc/changing-list-control-styles.md)します。
 
 ## <a name="extended-styles"></a>拡張スタイル
 
@@ -460,7 +460,7 @@ class CListCtrl : public CWnd
 
 - 仮想リスト ビュー
 
-   有効な場合、DWORD 項目までをサポートするコントロールを使用します。 アプリケーションのアイテムのデータの管理のオーバーヘッドを配置することで可能です。 項目の選択とフォーカス情報を除くすべての項目の情報は、アプリケーションによって管理する必要があります。 詳細については、次を参照してください。[使い方: 仮想リスト コントロール](../../mfc/virtual-list-controls.md)します。
+   有効な場合、DWORD 項目までをサポートするコントロールを使用します。 アプリケーションのアイテムのデータの管理のオーバーヘッドを配置することで可能です。 項目の選択とフォーカス情報を除くすべての項目の情報は、アプリケーションによって管理する必要があります。 詳細については、次を参照してください。[使い方。仮想リスト コントロール](../../mfc/virtual-list-controls.md)します。
 
 - クリック 1 回、2 つのアクティブ化
 
@@ -470,7 +470,7 @@ class CListCtrl : public CWnd
 
    有効な場合は、ドラッグ アンド ドロップ リスト ビュー コントロール内の列の順序が変更できます。 レポート ビューでのみ使用できます。
 
-これらの新しい使用方法については拡張スタイルを参照してください。[使い方: リスト コントロール スタイルの変更](../../mfc/changing-list-control-styles.md)します。
+これらの新しい使用方法については拡張スタイルを参照してください。[使い方。リスト コントロール スタイルの変更](../../mfc/changing-list-control-styles.md)します。
 
 ## <a name="items-and-subitems"></a>項目とサブ項目
 
@@ -478,7 +478,7 @@ class CListCtrl : public CWnd
 
 クラス`CListCtrl`挿入、削除、検索、およびこれらの項目の変更のいくつかの機能を提供します。 詳細については、次を参照してください[CListCtrl::GetItem](#getitem)、 [CListCtrl::InsertItem](#insertitem)、および[CListCtrl::FindItem](#finditem)、 [コントロールへの項目の追加](../adding-items-to-the-control.md)。、および[スクロール、整列、並べ替え、およびリスト コントロール内の検索](../scrolling-arranging-sorting-and-finding-in-list-controls.md)します。
 
-既定では、リスト ビュー コントロールが項目のアイコンとテキスト属性を格納する責任を負います。 ただし、これらの項目の種類だけでなくクラス`CListCtrl`「コールバック項目」をサポートしています 「コールバック項目」は対象のリスト ビュー項目アプリケーション-コントロールではなく、テキスト、アイコン、またはその両方を格納します。 コールバック マスクは、どの項目の属性 (テキストまたはアイコン) は、アプリケーションによって提供される指定に使用されます。 アプリケーションでは、コールバック項目を使用する場合、オンデマンドでテキストやアイコンの属性を提供できる必要があります。 コールバック アイテムは、この情報の一部を保持しているアプリケーションときに役立ちます。 詳細については、次を参照してください。[使い方: コールバック項目とコールバック マスク](../callback-items-and-the-callback-mask.md)します。
+既定では、リスト ビュー コントロールが項目のアイコンとテキスト属性を格納する責任を負います。 ただし、これらの項目の種類だけでなくクラス`CListCtrl`「コールバック項目」をサポートしています 「コールバック項目」は対象のリスト ビュー項目アプリケーション-コントロールではなく、テキスト、アイコン、またはその両方を格納します。 コールバック マスクは、どの項目の属性 (テキストまたはアイコン) は、アプリケーションによって提供される指定に使用されます。 アプリケーションでは、コールバック項目を使用する場合、オンデマンドでテキストやアイコンの属性を提供できる必要があります。 コールバック アイテムは、この情報の一部を保持しているアプリケーションときに役立ちます。 詳細については、次を参照してください。[使い方。コールバック アイテムとコールバック マスク](../callback-items-and-the-callback-mask.md)します。
 
 ## <a name="image-lists"></a>イメージ リスト
 
@@ -500,7 +500,7 @@ class CListCtrl : public CWnd
 
    各ヘッダー コントロールの項目に表示される小さいイメージのレポート ビューで使用します。
 
-既定では、リスト ビュー コントロールが破棄されるときに割り当てられているイメージ リストを破棄します。ただし、開発者は、アプリケーションによって決定されるを使用できなくする場合に各イメージのリストを破棄すると、この動作をカスタマイズできます。 詳細については、次を参照してください。[使い方: リスト項目とイメージ リスト](../list-items-and-image-lists.md)します。
+既定では、リスト ビュー コントロールが破棄されるときに割り当てられているイメージ リストを破棄します。ただし、開発者は、アプリケーションによって決定されるを使用できなくする場合に各イメージのリストを破棄すると、この動作をカスタマイズできます。 詳細については、次を参照してください。[使い方。リスト項目とイメージ リスト](../list-items-and-image-lists.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -709,7 +709,7 @@ CImageList* CreateDragImage(
 
 ### <a name="remarks"></a>Remarks
 
-`CImageList`オブジェクトが永続的であり、作業完了後に削除する必要があります。 例えば:
+`CImageList`オブジェクトが永続的であり、作業完了後に削除する必要があります。 例:
 
 ```cpp
         CImageList* pImageList = m_myListCtrl.CreateDragImage(nItem, &point);
@@ -930,7 +930,7 @@ int FindItem(
 *pFindInfo*<br/>
 ポインター、[保持](/windows/desktop/api/commctrl/ns-commctrl-taglvfindinfoa)を検索する項目に関する情報を含む構造体。
 
-*n 開始*<br/>
+*nStart*<br/>
 使用すると、検索を開始するアイテムを最初から開始する場合は-1 のインデックス。 位置にある項目*n 開始*場合は、検索から除外*n 開始*-1 と等しくないです。
 
 ### <a name="return-value"></a>戻り値
@@ -2018,7 +2018,7 @@ CString GetItemText(
 *nItem*<br/>
 テキストを取得するアイテムのインデックス。
 
-*ラベル*<br/>
+*nSubItem*<br/>
 テキストが取得するにはサブ項目を指定します。
 
 *lpszText*<br/>
@@ -2671,13 +2671,13 @@ int InsertColumn(
 *lpszColumnHeading*<br/>
 列の見出しを含む文字列のアドレス。
 
-*パラメーター*<br/>
-列の配置を指定する整数。 これらの値のいずれか: どれをや LVCFMT_CENTER します。
+*nFormat*<br/>
+列の配置を指定する整数。 これらの値のいずれかを指定できます。どれをや LVCFMT_CENTER します。
 
 *nWidth*<br/>
 ピクセル単位で、列の幅。 このパラメーターが-1 の場合、列の幅は設定されていません。
 
-*ラベル*<br/>
+*nSubItem*<br/>
 列に関連付けられたサブ項目のインデックス。 このパラメーターが-1 の場合は、サブ項目の列に関連はありません。
 
 ### <a name="return-value"></a>戻り値
@@ -2774,16 +2774,16 @@ int InsertItem(
 *lpszItem*<br/>
 項目がコールバック項目である場合、項目のラベル、または保持するようにするを含む文字列のアドレス。 コールバック アイテムについては、次を参照してください。 [CListCtrl::GetCallbackMask](#getcallbackmask)します。
 
-*あり*<br/>
+*nImage*<br/>
 項目のイメージ、または番号の場合は、項目は、コールバック項目のインデックス。 コールバック アイテムについては、次を参照してください。 [CListCtrl::GetCallbackMask](#getcallbackmask)します。
 
 *いる*<br/>
 *いる*パラメーターは、どの項目を指定します。 パラメーターとして渡される属性は有効です。 いずれかまたはマスクの値の詳細が記載[LVITEM 構造体](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)Windows SDK に含まれています。 有効な値は、ビットごとの OR 演算子と組み合わせることができます。
 
-*状態*<br/>
+*nState*<br/>
 項目の状態、状態の画像、およびオーバーレイ画像を示します。 Windows SDK のトピックを参照して[LVITEM 構造](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)詳細については、[リスト ビュー項目の状態](/windows/desktop/Controls/list-view-item-states)有効なフラグの一覧についてはします。
 
-*取得*<br/>
+*nStateMask*<br/>
 状態のメンバーのビットを取得または変更はことを示します。 参照してください[LVITEM 構造](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)詳細については、Windows SDK に含まれています。
 
 *lParam*<br/>
@@ -2897,7 +2897,7 @@ UINT MapIDToIndex(UINT id) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*ID*|[in]項目の一意の ID。|
+|*id*|[in]項目の一意の ID。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -3040,10 +3040,10 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>パラメーター
 
-*n 最初*<br/>
+*nFirst*<br/>
 再描画する最初の項目のインデックス。
 
-*n 最後*<br/>
+*nLast*<br/>
 再描画する最後の項目のインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -3327,7 +3327,7 @@ BOOL SetColumnWidth(
 
 成功した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-## <a name="setextendedstyle"></a>  かざして
+## <a name="setextendedstyle"></a>  CListCtrl::SetExtendedStyle
 
 リスト ビュー コントロールの現在の拡張スタイルを設定します。
 
@@ -3409,7 +3409,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>パラメーター
 
-*ハイブリッド接続*<br/>
+*hc*<br/>
 ホットのカーソルを表すために使用するカーソル リソースへのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -3646,7 +3646,7 @@ BOOL SetItem(
 *nItem*<br/>
 属性を設定するアイテムのインデックス。
 
-*ラベル*<br/>
+*nSubItem*<br/>
 属性を持つを設定するのにはサブ項目のインデックス。
 
 *いる*<br/>
@@ -3655,13 +3655,13 @@ BOOL SetItem(
 *lpszItem*<br/>
 項目のラベルを指定する null で終わる文字列のアドレス。
 
-*あり*<br/>
+*nImage*<br/>
 イメージ リスト内の項目のイメージのインデックス。
 
-*状態*<br/>
+*nState*<br/>
 (「解説」を参照してください) を変更する状態の値を指定します。
 
-*取得*<br/>
+*nStateMask*<br/>
 どの状態が (「解説」を参照してください) を変更するかを指定します。
 
 *lParam*<br/>
@@ -3786,7 +3786,7 @@ BOOL SetItemData(int nItem, DWORD_PTR dwData);
 *nItem*<br/>
 データが設定されるリスト項目のインデックス。
 
-*指定*<br/>
+*dwData*<br/>
 項目に関連する 32 ビット値。
 
 ### <a name="return-value"></a>戻り値
@@ -3893,7 +3893,7 @@ BOOL SetItemState(
 *pItem*<br/>
 アドレス、 [LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema) Windows SDK」の説明に従って、構造体します。 構造体の`stateMask`メンバーは、どの状態を変更し、構造体のビットを指定します`state`メンバーには、これらのビットの新しい値が含まれています。 その他のメンバーは無視されます。
 
-*状態*<br/>
+*nState*<br/>
 状態ビットの新しい値。 使用可能な値の一覧は、次を参照してください。 [CListCtrl::GetNextItem](#getnextitem)と[LVITEM](/windows/desktop/api/commctrl/ns-commctrl-taglvitema)状態のメンバー。
 
 *いる*<br/>
@@ -3927,7 +3927,7 @@ BOOL SetItemText(
 *nItem*<br/>
 テキストを設定するアイテムのインデックス。
 
-*ラベル*<br/>
+*nSubItem*<br/>
 項目のラベルを設定するサブ項目、または 0 のインデックス。
 
 *lpszText*<br/>
@@ -4223,7 +4223,7 @@ BOOL SortItems(
 
 並べ替え操作では、2 つのリスト項目の相対順序を決定する必要があるたびに、比較関数を呼び出します。 比較関数は、クラスの静的メンバーまたは任意のクラスのメンバーではないスタンドアロン関数のいずれかである必要があります。
 
-*指定*<br/>
+*dwData*<br/>
 [in]比較関数に渡されるアプリケーション定義の値。
 
 ### <a name="return-value"></a>戻り値
@@ -4284,7 +4284,7 @@ BOOL SortItemsEx(
 |パラメーター|説明|
 |---------------|-----------------|
 |*pfnCompare*|[in]アプリケーション定義の比較関数のアドレス。<br /><br /> 並べ替え操作では、2 つのリスト項目の相対順序を決定する必要があるたびに、比較関数を呼び出します。 比較関数は、クラスの静的メンバーまたは任意のクラスのメンバーではないスタンドアロン関数のいずれかである必要があります。|
-|*指定*|[in]アプリケーション定義の値は、比較関数に渡されます。|
+|*dwData*|[in]アプリケーション定義の値は、比較関数に渡されます。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -4426,4 +4426,3 @@ BOOL Update(int nItem);
 [CWnd クラス](cwnd-class.md)<br/>
 [階層図](../hierarchy-chart.md)<br/>
 [CImageList クラス](cimagelist-class.md)
-

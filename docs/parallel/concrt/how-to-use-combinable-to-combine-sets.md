@@ -1,18 +1,18 @@
 ---
-title: '方法: combinable を使用して集合を結合する'
+title: '方法: 集合を結合する combinable を使用して'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - combinable class, example
 - combining sets with combinable [Concurrency Runtime]
 ms.assetid: 66ffe8e3-6bbb-4e9f-b790-b612922a68a7
-ms.openlocfilehash: c4d245688dd000ea61b538c4f3957246b9852ec5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf8a5bee65ea0ba1718c1d4d436b6af3e0b95961
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571809"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57296099"
 ---
-# <a name="how-to-use-combinable-to-combine-sets"></a>方法: combinable を使用して集合を結合する
+# <a name="how-to-use-combinable-to-combine-sets"></a>方法: 集合を結合する combinable を使用して
 
 このトピックでは、使用する方法を示します、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)素数の集合を計算するクラス。
 
@@ -36,11 +36,10 @@ parallel time: 78 ms
 
 コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`parallel-combine-primes.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
 
-**cl.exe/EHsc 並列の結合-います**
+**cl.exe /EHsc parallel-combine-primes.cpp**
 
 ## <a name="see-also"></a>関連項目
 
 [並列コンテナーと並列オブジェクト](../../parallel/concrt/parallel-containers-and-objects.md)<br/>
 [combinable クラス](../../parallel/concrt/reference/combinable-class.md)<br/>
 [combinable::combine_each メソッド](reference/combinable-class.md#combine_each)
-

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - message classes [MFC], finding
 - message-map macros
 ms.assetid: bf59fbc8-b222-42d3-b5d3-0a79aa3cb923
-ms.openlocfilehash: ab21369cecfa977a8397e7e2a7e68394e86e6927
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d9b9a50062334822f34047b8e22e67541ccaa952
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533472"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57305147"
 ---
 # <a name="where-to-find-message-maps"></a>メッセージ マップの所在
 
@@ -32,4 +32,3 @@ ms.locfileid: "50533472"
 ## <a name="see-also"></a>関連項目
 
 [フレームワークのメッセージ マップ検索方法](../mfc/how-the-framework-searches-message-maps.md)
-

@@ -1,5 +1,5 @@
 ---
-title: コンカレンシー ランタイムに関するベスト プラクティス
+title: 同時実行ランタイムに関するベスト プラクティス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - best practices [Concurrency Runtime]
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - practices to avoid [Concurrency Runtime]
 - Concurrency Runtime, best practices
 ms.assetid: 7231d4be-d1e3-401d-8b66-94fd51b587c9
-ms.openlocfilehash: 3c68c095587c937aa1af81193839b71b0213023d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21bca441a29e6e152cb912139db1b9f56b988edd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491288"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299856"
 ---
-# <a name="concurrency-runtime-best-practices"></a>コンカレンシー ランタイムに関するベスト プラクティス
+# <a name="concurrency-runtime-best-practices"></a>同時実行ランタイムに関するベスト プラクティス
 
 ここでは、コンカレンシー ランタイムの効率的な使用に役立つベスト プラクティスについて説明します。 これらのベスト プラクティスを適用する、[並列パターン ライブラリ](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)、 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)、および[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
 
@@ -45,4 +45,3 @@ C++ のコンカレンシー フレームワークである、コンカレンシ
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 タスク スケジューラを使用してアプリケーションのパフォーマンスを調整する方法について説明します。
-

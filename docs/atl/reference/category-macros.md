@@ -25,12 +25,12 @@ f1_keywords:
 - atlenc/ATL::UUEncode
 - atlenc/ATL::UUEncodeGetRequiredLength
 ms.assetid: 223578cb-6180-4787-a8d8-ba3787a5d3ee
-ms.openlocfilehash: 0be22a8f7152d7933d4d0ab970fae834200c6d8a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ee6ab07ee72155acae552da933167b56af72a17
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50609730"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263846"
 ---
 # <a name="category-macros"></a>カテゴリに関するマクロ
 
@@ -41,7 +41,7 @@ ms.locfileid: "50609730"
 |[BEGIN_CATEGORY_MAP](#begin_category_map)|カテゴリのマップの先頭をマークします。|
 |[END_CATEGORY_MAP](#end_category_map)|カテゴリのマップの最後をマークします。|
 |[IMPLEMENTED_CATEGORY](#implemented_category)|COM オブジェクトによって実装されているカテゴリを示します。|
-|[要求します。](#required_category)|COM オブジェクトによって、コンテナーに必要なカテゴリを示します。|
+|[REQUIRED_CATEGORY](#required_category)|COM オブジェクトによって、コンテナーに必要なカテゴリを示します。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -126,7 +126,7 @@ IMPLEMENTED_CATEGORY(catID)
 
 [!code-cpp[NVC_ATL_Windowing#100](../../atl/codesnippet/cpp/category-macros_1.h)]
 
-##  <a name="required_category"></a>  要求します。
+##  <a name="required_category"></a>  REQUIRED_CATEGORY
 
 要求するマクロをコンポーネントの追加[カテゴリ マップ](#begin_category_map)で識別されるカテゴリを要求するよう登録するかを指定する、 *catID*パラメーター。
 

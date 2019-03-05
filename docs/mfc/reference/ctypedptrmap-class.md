@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 4c6d20279792788c1013df8540080b2715ade1f2
-ms.sourcegitcommit: 53f75afaf3c0b3ed481c5503357ed2b7b87aac6d
+ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53657384"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266057"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap クラス
 
@@ -144,7 +144,7 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 
 このインライン関数`BASE_CLASS` **:: 参照**します。
 
-##  <a name="operator_at"></a>  CTypedPtrMap::operator
+##  <a name="operator_at"></a>  CTypedPtrMap::operator [ ]
 
 この演算子は、代入ステートメント (左辺値) の左側でのみ使用できます。
 

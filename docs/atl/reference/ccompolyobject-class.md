@@ -17,12 +17,12 @@ helpviewer_keywords:
 - aggregation [C++], ATL objects
 - CComPolyObject class
 ms.assetid: eaf67c18-e855-48ca-9b15-f1df3106121b
-ms.openlocfilehash: 9f84c022ac1dee34b6dca2931abb349eefb7d690
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a8dbbc06d35d2606cc76e89cc555ba7f8577daa9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495889"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277933"
 ---
 # <a name="ccompolyobject-class"></a>CComPolyObject クラス
 
@@ -48,7 +48,7 @@ class CComPolyObject : public IUnknown,
 |名前|説明|
 |----------|-----------------|
 |[CComPolyObject::CComPolyObject](#ccompolyobject)|コンストラクターです。|
-|[CComPolyObject:: ~ CComPolyObject](#dtor)|デストラクターです。|
+|[CComPolyObject::~CComPolyObject](#dtor)|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -126,7 +126,7 @@ CComPolyObject(void* pv);
 
 モジュールのロック カウントをデストラクター デクリメントします。
 
-##  <a name="dtor"></a>  CComPolyObject:: ~ CComPolyObject
+##  <a name="dtor"></a>  CComPolyObject::~CComPolyObject
 
 デストラクターです。
 

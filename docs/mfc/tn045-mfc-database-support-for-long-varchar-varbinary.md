@@ -1,5 +1,5 @@
 ---
-title: 'Long Varchar、Varbinary TN045: MFC データベース サポート'
+title: TN045:Long Varchar、Varbinary の MFC データベース サポート
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.data
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - Varbinary data type
 - Varchar data type
 ms.assetid: cf572c35-5275-45b5-83df-5f0e36114f40
-ms.openlocfilehash: 286ef403ec4bd51b035945f3ca268b59fee4d9d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d356f094759775f709838de149769b1671fdf9ba
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567039"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260115"
 ---
-# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>テクニカル ノート 45: MFC/データベースの Long Varchar/Varbinary 型のサポート
+# <a name="tn045-mfcdatabase-support-for-long-varcharvarbinary"></a>TN045:MFC/データベースの Long のサポート
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -101,7 +101,7 @@ ClassWizard はバインド、 **SQL_LONGVARCHAR**または**SQL_LONGVARBINARY**
 
 更新するときに、`CLongBinary`フィールドでは、データベース クラスを使用して、ODBC の**DATA_AT_EXEC**メカニズム (ODBC のドキュメントを参照して`SQLSetPos`の rgbValue 引数)。 フレームワークが指すのではなく、insert または update ステートメントを準備するときに、 `HGLOBAL` 、データを含む、*アドレス*の`CLongBinary`として設定されて、*値*列の代わりに、長さのインジケーター設定および**SQL_DATA_AT_EXEC**します。 後で、update ステートメントが、データ ソースに送信される`SQLExecDirect`戻ります**SQL_NEED_DATA**します。 これは、アラートは、フレームワークの実際のアドレスにこの列のパラメーターの値が、`CLongBinary`します。 Framework 呼び出し`SQLGetData`1 回、小さなバッファーをデータの実際の長さを返すことを指定してください。 場合は、ドライバーは、バイナリ ラージ オブジェクト (BLOB) の実際の長さを返します、MFC には、BLOB の取得に必要な多くの領域が再割り当ています。 場合は、データ ソースを返します。 **SQL_NO_TOTAL**、BLOB のサイズを特定できないことを示す、MFC は小さなブロックを作成されます。 既定の初期サイズは 64 K、および後続のブロック サイズ 2 倍になります例: 2 つ目は 128 K になります、3 つ目が 256 K、という具合です。 初期サイズは構成できます。
 
-## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>バインドされません。 取得/データの送信 SQLGetData と ODBC から直接
+## <a name="not-binding-retrievingsending-data-directly-from-odbc-with-sqlgetdata"></a>バインドされません。SQLGetData と ODBC から直接取得する送信データ
 
 このメソッドを使用する完全にデータベースのクラスをバイパス長い形式のデータ列を処理します。
 
@@ -122,4 +122,3 @@ ClassWizard はバインド、 **SQL_LONGVARCHAR**または**SQL_LONGVARBINARY**
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

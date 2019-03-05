@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CD2DTextFormat [MFC], ReCreate
 - CD2DTextFormat [MFC], m_pTextFormat
 ms.assetid: db194cec-9dae-4644-ab84-7c43b7164117
-ms.openlocfilehash: 092ffff91113b42cd106fe7079b06b9482400c63
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9d796ac39ba29e6d286926f4975f8f6d2054e7ac
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557158"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297893"
 ---
 # <a name="cd2dtextformat-class"></a>CD2DTextFormat クラス
 
@@ -48,7 +48,7 @@ class CD2DTextFormat : public CD2DResource;
 |名前|説明|
 |----------|-----------------|
 |[CD2DTextFormat::CD2DTextFormat](#cd2dtextformat)|CD2DTextFormat オブジェクトを構築します。|
-|[CD2DTextFormat:: ~ CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|デストラクターです。 D2D オブジェクトのテキスト書式設定が破棄されるときに呼び出されます。|
+|[CD2DTextFormat::~CD2DTextFormat](#cd2dtextformat__~cd2dtextformat)|デストラクターです。 D2D オブジェクトのテキスト書式設定が破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -66,7 +66,7 @@ class CD2DTextFormat : public CD2DResource;
 
 |名前|説明|
 |----------|-----------------|
-|[CD2DTextFormat::operator IDWriteTextFormat *](#operator_idwritetextformat_star)|返します IDWriteTextFormat インターフェイス|
+|[CD2DTextFormat::operator IDWriteTextFormat*](#operator_idwritetextformat_star)|返します IDWriteTextFormat インターフェイス|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -86,7 +86,7 @@ class CD2DTextFormat : public CD2DResource;
 
 **ヘッダー:** afxrendertarget.h
 
-##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat:: ~ CD2DTextFormat
+##  <a name="_dtorcd2dtextformat"></a>  CD2DTextFormat::~CD2DTextFormat
 
 デストラクターです。 D2D オブジェクトのテキスト書式設定が破棄されるときに呼び出されます。
 
@@ -216,7 +216,7 @@ IDWriteTextFormat へのポインター。
 IDWriteTextFormat* m_pTextFormat;
 ```
 
-##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat *
+##  <a name="operator_idwritetextformat_star"></a>  CD2DTextFormat::operator IDWriteTextFormat*
 
 返します IDWriteTextFormat インターフェイス
 

@@ -1,19 +1,19 @@
 ---
-title: 'ドラッグ アンド ドロップ: ドロップ ターゲットの実装'
+title: ドラッグ アンド ドロップします。ドロップ ターゲットの実装
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE drag and drop [MFC], implementing drop targets
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-ms.openlocfilehash: 55c8bbe9484a71ee95d43609b29a055b4177914b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: da04fa7fa84e7e5014d574583c9c95992db10f88
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599876"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281949"
 ---
-# <a name="drag-and-drop-implementing-a-drop-target"></a>ドラッグ アンド ドロップ: ドロップ ターゲットの実装
+# <a name="drag-and-drop-implementing-a-drop-target"></a>ドラッグ アンド ドロップします。ドロップ ターゲットの実装
 
 この記事では、ドロップ先のアプリケーションを作成する方法について説明します。 ドロップ ソースを実装するよりも少し多い作業を受け取るドロップ ターゲットの実装が、それでも比較的簡単です。 これらの手法は、非 OLE アプリケーションにも適用されます。
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 3752e8b58560e522aecc3689e2a5c3be2649b1e1
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 2e4a9b585ed653927c87eaf82dfae8ce8f982dfc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694167"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290704"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl クラス
 
@@ -80,13 +80,13 @@ A[特性クラス](../../atl/understanding-window-traits.md)ウィンドウの�
 
 |||
 |-|-|
-|[コンテナー内](#m_pfnsuperwindowproc)|ウィンドウ クラスの元のウィンドウ プロシージャをポイントします。|
+|[m_pfnSuperWindowProc](#m_pfnsuperwindowproc)|ウィンドウ クラスの元のウィンドウ プロシージャをポイントします。|
 
 ## <a name="remarks"></a>Remarks
 
 使用することができます`CWindowImpl`既存のウィンドウのウィンドウまたはサブクラスを作成します。 `CWindowImpl`ウィンドウ プロシージャは、適切なハンドラーにメッセージをメッセージ マップを使用します。
 
-`CWindowImpl::Create` 管理されているウィンドウ クラスの情報に基づいてウィンドウを作成します[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)します。 `CWindowImpl` 含まれています、 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロ、つまり`CWndClassInfo`新しいウィンドウ クラスを登録します。 既存のウィンドウ クラスをスーパークラスしたい場合からクラスを派生`CWindowImpl`を含めると、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロ。 この場合、`CWndClassInfo` は、既存のクラスに基づくウィンドウ クラスを登録しますが、`CWindowImpl::WindowProc` を使用します。 例えば:
+`CWindowImpl::Create` 管理されているウィンドウ クラスの情報に基づいてウィンドウを作成します[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)します。 `CWindowImpl` 含まれています、 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロ、つまり`CWndClassInfo`新しいウィンドウ クラスを登録します。 既存のウィンドウ クラスをスーパークラスしたい場合からクラスを派生`CWindowImpl`を含めると、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロ。 この場合、`CWndClassInfo` は、既存のクラスに基づくウィンドウ クラスを登録しますが、`CWindowImpl::WindowProc` を使用します。 例:
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]
 
@@ -104,7 +104,7 @@ A[特性クラス](../../atl/understanding-window-traits.md)ウィンドウの�
 
 `CWindowImpl` 派生した`CWindowImplBaseT`から派生した`CWindowImplRoot`から派生した`TBase`と[CMessageMap](../../atl/reference/cmessagemap-class.md)します。
 
-|詳細情報:|解決方法については、|
+|詳細情報:|解決方法|
 |--------------------------------|---------|
 |コントロールの作成|[ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)|
 |ATL でのウィンドウの使用|[ATL ウィンドウ クラス](../../atl/atl-window-classes.md)|
@@ -377,6 +377,6 @@ static LRESULT CALLBACK WindowProc(
 
 ## <a name="see-also"></a>関連項目
 
-[送るに](message-map-macros-atl.md#begin_msg_map)<br/>
+[BEGIN_MSG_MAP](message-map-macros-atl.md#begin_msg_map)<br/>
 [CComControl クラス](../../atl/reference/ccomcontrol-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)

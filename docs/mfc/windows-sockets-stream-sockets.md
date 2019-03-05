@@ -1,19 +1,19 @@
 ---
-title: 'Windows ソケット : ストリーム ソケット'
+title: Windows ソケット:Stream ソケット
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Windows Sockets [MFC], stream sockets
 - sockets [MFC], stream sockets
 - stream sockets [MFC]
 ms.assetid: 31faaa34-a995-493f-a30b-b8115293d619
-ms.openlocfilehash: 298428bd5e81d11eb62907dfbac39acda24524f0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91f06c4a36e76638708edf085987e51418913fd6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560226"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271295"
 ---
-# <a name="windows-sockets-stream-sockets"></a>Windows ソケット : ストリーム ソケット
+# <a name="windows-sockets-stream-sockets"></a>Windows ソケット:Stream ソケット
 
 この記事では、ストリーム ソケットの場合、使用できる 2 つの Windows ソケット型のいずれかについて説明します。 (その他の型は、[データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md))。
 
@@ -43,5 +43,4 @@ Stream ソケットは、データの到着することが保証する必要が�
 ## <a name="see-also"></a>関連項目
 
 [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)<br/>
-[Windows ソケット: 予備知識](../mfc/windows-sockets-background.md)
-
+[Windows ソケット:バック グラウンド](../mfc/windows-sockets-background.md)

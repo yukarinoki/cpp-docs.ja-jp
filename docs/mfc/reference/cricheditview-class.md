@@ -100,12 +100,12 @@ helpviewer_keywords:
 - CRichEditView [MFC], m_nBulletIndent
 - CRichEditView [MFC], m_nWordWrap
 ms.assetid: bd576b10-4cc0-4050-8f76-e1a0548411e4
-ms.openlocfilehash: 8cfaef2c8b064cb9faa8c0f6bf65a8868eed7cc7
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 9cedcfbfb662d7d4d635a02b82ea45828c54b958
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178741"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259517"
 ---
 # <a name="cricheditview-class"></a>CRichEditView クラス
 
@@ -289,7 +289,7 @@ BOOL FindText(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索する文字列が含まれています。
 
 *置き換えた*<br/>
@@ -327,7 +327,7 @@ BOOL FindTextSimple(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索する文字列が含まれています。
 
 *置き換えた*<br/>
@@ -431,7 +431,7 @@ virtual HMENU GetContextMenu(
 *seltyp*<br/>
 選択の種類。 選択型の値は、「解説」で説明します。
 
-*持っていないとき*<br/>
+*lpoleobj*<br/>
 ポインター、`OLEOBJECT`選択範囲には、1 つまたは複数の OLE 項目が含まれている場合は、最初に選択した OLE オブジェクトを指定する構造体。 選択範囲に、項目が含まれていない場合*持っていないとき*は NULL です。 `OLEOBJECT` OLE オブジェクト v テーブルへのポインターを保持する構造体。
 
 *lpchrg*<br/>
@@ -649,7 +649,7 @@ void InsertFileAsObject(LPCTSTR lpszFileName);
 
 ### <a name="parameters"></a>パラメーター
 
-*場合*<br/>
+*lpszFileName*<br/>
 挿入するファイルの名前を表す文字列です。
 
 ##  <a name="insertitem"></a>  CRichEditView::InsertItem
@@ -783,7 +783,7 @@ virtual void OnFindNext(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索する文字列。
 
 *bNext*<br/>
@@ -894,10 +894,10 @@ virtual void OnReplaceAll(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 置換するテキスト。
 
-*見つかる*<br/>
+*lpszReplace*<br/>
 置換テキスト。
 
 *置き換えた*<br/>
@@ -929,7 +929,7 @@ virtual void OnReplaceSel(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 置換するテキスト。
 
 *bNext*<br/>
@@ -941,7 +941,7 @@ virtual void OnReplaceSel(
 *bWord*<br/>
 検索に単語全体を選択する必要がありますかかどうかを示します。
 
-*見つかる*<br/>
+*lpszReplace*<br/>
 置換テキスト。
 
 ### <a name="remarks"></a>Remarks
@@ -958,7 +958,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 テキストは見つかりませんでした。
 
 ### <a name="remarks"></a>Remarks
@@ -984,7 +984,7 @@ void OnUpdateCharEffect(
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 ポインターを[CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクト。
 
 *dwMask*<br/>
@@ -1015,7 +1015,7 @@ void OnUpdateParaAlign(
 
 ### <a name="parameters"></a>パラメーター
 
-*対応付けられました。*<br/>
+*pCmdUI*<br/>
 ポインターを[CCmdUI](../../mfc/reference/ccmdui-class.md)オブジェクト。
 
 *wAlign*<br/>
@@ -1253,7 +1253,7 @@ void TextNotFound(LPCTSTR lpszFind);
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 見つからなかったテキスト文字列が含まれています。
 
 ### <a name="remarks"></a>Remarks

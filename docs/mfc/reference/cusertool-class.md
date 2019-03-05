@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CUserTool [MFC], m_strInitialDirectory
 - CUserTool [MFC], m_strLabel
 ms.assetid: 7c287d3e-d012-488d-b4e1-aa0f83f294bb
-ms.openlocfilehash: 6c439ace92a407c8de3a200dedd61428b9bdbc28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca9035ecfcde0c2e82628c5509a16557a487b8cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437372"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290457"
 ---
 # <a name="cusertool-class"></a>CUserTool クラス
 
@@ -57,7 +57,7 @@ class CUserTool : public CObject
 |[CUserTool::DrawToolIcon](#drawtoolicon)|指定した四角形でユーザーの [ツール] アイコンを描画します。|
 |[CUserTool::GetCommand](#getcommand)|ユーザー ツールに関連付けられているコマンドのテキストを含む文字列を返します。|
 |[CUserTool::GetCommandId](#getcommandid)|ユーザー ツールのメニュー項目のコマンド ID を返します。|
-|[Cusertool:](#invoke)|ユーザー ツールに関連付けられているコマンドを実行します。|
+|[CUserTool::Invoke](#invoke)|ユーザー ツールに関連付けられているコマンドを実行します。|
 |[CUserTool::Serialize](#serialize)|アーカイブに対して、このオブジェクトの読み取りまたは書き込みを行います。 ( [CObject::Serialize](../../mfc/reference/cobject-class.md#serialize)をオーバーライドします)。|
 |[CUserTool::SetCommand](#setcommand)|ユーザー ツールに関連付けられているコマンドを設定します。|
 |[CUserTool::SetToolIcon](#settoolicon)|このツールに関連付けられているアプリケーションからユーザー ツールのアイコンを読み込みます。|
@@ -150,7 +150,7 @@ UINT GetCommandId() const;
 
 このユーザー ツールのコマンド ID。
 
-##  <a name="invoke"></a>  Cusertool:
+##  <a name="invoke"></a>  CUserTool::Invoke
 
 ユーザー ツールに関連付けられているコマンドを実行します。
 

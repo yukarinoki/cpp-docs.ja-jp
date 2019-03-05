@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatchEx interface
 ms.assetid: 2c25e079-6128-4278-bc72-b2c6195ba7ef
-ms.openlocfilehash: 5b4afabe2c12dff048bc6a6fb904a82b3cea4d01
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae91921ecd5f53f4551e46e1d03cf027ce3e1f3b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539439"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57292405"
 ---
 # <a name="iaxwinambientdispatchex-interface"></a>IAxWinAmbientDispatchEx インターフェイス
 
@@ -38,7 +38,7 @@ MIDL_INTERFACE("B2D0778B - AC99 - 4c58 - A5C8 - E7724E5316B5") IAxWinAmbientDisp
 
 ## <a name="remarks"></a>Remarks
 
-ATL アプリケーションの ATL と ActiveX コントロール、特にアンビエント プロパティを持つ ActiveX コントロールのホストに静的にリンクされている、このインターフェイスがあります。 このアサーションの生成はこのインターフェイスは含まれません:「を忘れました:term に LIBID を渡す」
+ATL アプリケーションの ATL と ActiveX コントロール、特にアンビエント プロパティを持つ ActiveX コントロールのホストに静的にリンクされている、このインターフェイスがあります。 このインターフェイスを含まない、このアサーションが生成されます。「を忘れました:term に LIBID を渡す」
 
 このインターフェイスは、オブジェクトのホスト、ATL の ActiveX コントロールによって公開されます。 派生した[IAxWinAmbientDispatch](../../atl/reference/iaxwinambientdispatch-interface.md)、`IAxWinAmbientDispatchEx`を独自のいずれかで、ATL によって提供されるアンビエント プロパティのインターフェイスを補うことができるメソッドを追加します。
 

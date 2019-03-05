@@ -1,5 +1,5 @@
 ---
-title: 'チュートリアル : C++ AMP アプリケーションのデバッグ'
+title: 'チュートリアル: C++ AMP アプリケーションのデバッグ'
 ms.date: 11/19/2018
 helpviewer_keywords:
 - debugging, C++ Accelerated Massive Parallelism
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - C++ Accelerated Massive Parallelism, debugging
 - debugging, C++ AMP
 ms.assetid: 40e92ecc-f6ba-411c-960c-b3047b854fb5
-ms.openlocfilehash: 610cf317982204715d55d12ece510cb477543f4d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 5312ba7354c28286cafb092711d66d56a920581a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176693"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286914"
 ---
-# <a name="walkthrough-debugging-a-c-amp-application"></a>チュートリアル : C++ AMP アプリケーションのデバッグ
+# <a name="walkthrough-debugging-a-c-amp-application"></a>チュートリアル: C++ AMP アプリケーションのデバッグ
 
 このトピックでは、グラフィックス処理装置 (GPU) を活用するために C++ Accelerated Massive Parallelism (C++ AMP) を使用するアプリケーションをデバッグする方法を示します。 整数の大きな配列を合計する並列削減プログラムを使用します。 このチュートリアルでは、次の作業について説明します。
 
@@ -36,7 +36,7 @@ ms.locfileid: "52176693"
 
 - 読み取り[C++ AMP の概要](../../parallel/amp/cpp-amp-overview.md)します。
 
-- その行を確認の数字をテキスト エディターで表示されます。 詳細については、次を参照してください。[方法: エディターで行番号を表示](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)します。
+- その行を確認の数字をテキスト エディターで表示されます。 詳細については、「[方法 :エディターで行番号を表示](/visualstudio/ide/reference/how-to-display-line-numbers-in-the-editor)します。
 
 - ソフトウェア エミュレーターでデバッグをサポートするには、Windows 8 または Windows Server 2012 を実行していることを確認します。
 
@@ -220,7 +220,7 @@ ms.locfileid: "52176693"
 
 2. **プロパティ ページ**ダイアログ ボックスで、**構成プロパティ**、選択**デバッグ**します。
 
-3. **起動するデバッガー**一覧で、**ローカル Windows デバッガー**します。
+3. **[起動するデバッガー]** の一覧で、**[ローカル Windows デバッガー]** を選択します。
 
 4. **デバッガーの種類**一覧で、いることを確認**自動**が選択されています。
 
@@ -335,7 +335,7 @@ ms.locfileid: "52176693"
 
 ## <a name="freezing-and-thawing-gpu-threads"></a>GPU スレッドの凍結と凍結解除
 
-固定することができます (中断) し、いずれかから (再開) GPU スレッドの凍結解除、 **GPU スレッド**ウィンドウまたは**並列ウォッチ**ウィンドウ。 凍結して同じ方法で CPU スレッドを凍結解除については、次を参照してください。[方法: [スレッド] ウィンドウを使用して、](/visualstudio/debugger/how-to-use-the-threads-window)します。
+固定することができます (中断) し、いずれかから (再開) GPU スレッドの凍結解除、 **GPU スレッド**ウィンドウまたは**並列ウォッチ**ウィンドウ。 凍結して同じ方法で CPU スレッドを凍結解除詳しくは、次を参照してください。[方法。[スレッド] ウィンドウを使用して、](/visualstudio/debugger/how-to-use-the-threads-window)します。
 
 ### <a name="to-freeze-and-thaw-gpu-threads"></a>凍結し、GPU スレッドを凍結解除
 
@@ -387,6 +387,6 @@ ms.locfileid: "52176693"
 
 [C++ AMP の概要](../../parallel/amp/cpp-amp-overview.md)<br/>
 [GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)<br/>
-[方法: GPU スレッド ウィンドウを使用する](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
-[方法: 並列ウォッチ ウィンドウを使用する](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
+[方法: [GPU スレッド] ウィンドウを使用する](/visualstudio/debugger/how-to-use-the-gpu-threads-window)<br/>
+[方法: [並列ウォッチ] ウィンドウを使用する](/visualstudio/debugger/how-to-use-the-parallel-watch-window)<br/>
 [同時実行ビジュアライザーで C++ AMP コードの分析](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/03/09/analyzing-c-amp-code-with-the-concurrency-visualizer/)

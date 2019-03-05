@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Asynchronous Agents Library, practices to avoid
 - practices to avoid, Asynchronous Agents Library
 ms.assetid: 85f52354-41eb-4b0d-98c5-f7344ee8a8cf
-ms.openlocfilehash: 70c979be0d37817cf199af0b6a3cbf114fced265
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61393957a63895a9ecbdaaae8d83a5fbd710de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494584"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266420"
 ---
 # <a name="best-practices-in-the-asynchronous-agents-library"></a>非同期エージェント ライブラリに関するベスト プラクティス
 
@@ -38,11 +38,12 @@ ms.locfileid: "50494584"
 
 エージェント ライブラリは、非同期メッセージ引き渡し方法を使用して分離コンポーネントを接続できるようにすることで、共有状態に代わる手段を提供します。 非同期エージェントは、他のコンポーネントから内部状態を分離する場合に最も効果的です。 状態を分離することによって、通常、複数のコンポーネントが共有データに作用することがなくなります。 状態分離により共有メモリの競合が軽減されるため、アプリケーションのスケーラビリティが高まります。 また、コンポーネントが共有データへのアクセスを同期する必要がなくなるため、デッドロックや競合状態が発生しにくくなります。
 
-通常、エージェントで状態を分離するには、エージェント クラスの `private` セクションまたは `protected` セクションにデータ メンバーを保持し、メッセージ バッファーを使用して状態の変化を通知します。 次の例は、`basic_agent`から派生したクラス[concurrency::agent](../../parallel/concrt/reference/agent-class.md)します。 `basic_agent` クラスは、2 つのメッセージ バッファーを使用して外部コンポーネントと通信します。 2 つのメッセージ バッファーにはそれぞれ受信メッセージと送信メッセージが保持されます。
+通常、エージェントで状態を分離するには、エージェント クラスの `private` セクションまたは `protected` セクションにデータ メンバーを保持し、メッセージ バッファーを使用して状態の変化を通知します。 次の例は、`basic_agent`から派生したクラス[concurrency::agent](../../parallel/concrt/reference/agent-class.md)します。 
+  `basic_agent` クラスは、2 つのメッセージ バッファーを使用して外部コンポーネントと通信します。 2 つのメッセージ バッファーにはそれぞれ受信メッセージと送信メッセージが保持されます。
 
 [!code-cpp[concrt-simple-agent#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_1.cpp)]
 
-定義し、エージェントを使用する方法についての完全な例は、次を参照してください。[チュートリアル: エージェント ベースのアプリケーションを作成する](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)と[チュートリアル: データフロー エージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)です。
+定義し、エージェントを使用する方法についての完全な例は、次を参照してください。[チュートリアル。エージェント ベースのアプリケーションを作成する](../../parallel/concrt/walkthrough-creating-an-agent-based-application.md)と[チュートリアル。データフロー エージェントの作成](../../parallel/concrt/walkthrough-creating-a-dataflow-agent.md)です。
 
 [[トップ](#top)]
 
@@ -54,11 +55,12 @@ ms.locfileid: "50494584"
 
 [!code-cpp[concrt-message-throttling#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_2.cpp)]
 
-`semaphore` オブジェクトでは、パイプラインで同時に処理するメッセージ数を 2 までに制限しています。
+
+  `semaphore` オブジェクトでは、パイプラインで同時に処理するメッセージ数を 2 までに制限しています。
 
 この例では、プロデューサーからコンシューマーに送信されるメッセージは比較的少量です。 そのため、メモリ不足の状態は発生しません。 ただし、データ パイプラインに含まれるメッセージの数が比較的多い場合、この機構は便利です。
 
-この例で使用されるセマフォ クラスを作成する方法の詳細については、次を参照してください。[方法: コンテキスト クラスを使用して協調セマフォを実装する](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)します。
+この例で使用されるセマフォ クラスを作成する方法の詳細については、次を参照してください。[方法。コンテキスト クラスを使用して協調セマフォを実装する](../../parallel/concrt/how-to-use-the-context-class-to-implement-a-cooperative-semaphore.md)します。
 
 [[トップ](#top)]
 
@@ -66,7 +68,7 @@ ms.locfileid: "50494584"
 
 エージェント ライブラリが最も役立つのは、データ パイプラインで実行される処理の粒度が非常に粗い場合です。 たとえば、1 つのアプリケーション コンポーネントがファイルまたはネットワーク接続からデータを読み取り、状況に応じてそのデータを別のコンポーネントに送信する場合があります。 エージェント ライブラリを使用してメッセージを伝達するプロトコルにより、メッセージ パッシング機構が用意されているタスク parallel コンストラクトよりもオーバーヘッドが大きく、[並列パターン ライブラリ](../../parallel/concrt/parallel-patterns-library-ppl.md)(PPL)。 したがって、データ パイプラインで実行される処理の時間が十分長く、このオーバーヘッドを相殺できることを確認してください。
 
-データ パイプラインはそのタスクの粒度が粗い場合に最も有効ですが、データ パイプラインの各ステージでは PPL コンストラクト (タスク グループや並列アルゴリズムなど) を使用してより粒度の細かい処理を実行できます。 各処理ステージできめ細かな並列処理を使用する粒度の粗いデータ ネットワークの例は、次を参照してください。[チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)です。
+データ パイプラインはそのタスクの粒度が粗い場合に最も有効ですが、データ パイプラインの各ステージでは PPL コンストラクト (タスク グループや並列アルゴリズムなど) を使用してより粒度の細かい処理を実行できます。 各処理ステージできめ細かな並列処理を使用する粒度の粗いデータ ネットワークの例は、次を参照してください。[チュートリアル。イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)です。
 
 [[トップ](#top)]
 
@@ -97,7 +99,8 @@ took 47ms.
 
 この問題を解決することができますメカニズムを使用する、たとえば、 [std::shared_ptr](../../standard-library/shared-ptr-class.md)、により、複数のコンポーネントが所有するへのポインター。 リソースを所有する最後の `shared_ptr` オブジェクトが破棄されると、そのリソースも解放されます。
 
-次の例では、`shared_ptr` を使用して複数のメッセージ バッファー間でポインター値を共有する方法を示します。 例では、接続、 [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)オブジェクトを 3 つ[concurrency::call](../../parallel/concrt/reference/call-class.md)オブジェクト。 `overwrite_buffer` クラスは、メッセージを各ターゲットに提供します。 データ ネットワークの終端にはデータの所有者が複数存在するため、この例では `shared_ptr` を使用して各 `call` オブジェクトでメッセージの所有権を共有できるようにしています。
+次の例では、`shared_ptr` を使用して複数のメッセージ バッファー間でポインター値を共有する方法を示します。 例では、接続、 [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)オブジェクトを 3 つ[concurrency::call](../../parallel/concrt/reference/call-class.md)オブジェクト。 
+  `overwrite_buffer` クラスは、メッセージを各ターゲットに提供します。 データ ネットワークの終端にはデータの所有者が複数存在するため、この例では `shared_ptr` を使用して各 `call` オブジェクトでメッセージの所有権を共有できるようにしています。
 
 [!code-cpp[concrt-message-sharing#1](../../parallel/concrt/codesnippet/cpp/best-practices-in-the-asynchronous-agents-library_4.cpp)]
 
@@ -123,4 +126,3 @@ Destroying resource 64...
 [チュートリアル: イメージ処理ネットワークの作成](../../parallel/concrt/walkthrough-creating-an-image-processing-network.md)<br/>
 [並列パターン ライブラリに関するベスト プラクティス](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md)<br/>
 [コンカレンシー ランタイムに関する全般的なベスト プラクティス](../../parallel/concrt/general-best-practices-in-the-concurrency-runtime.md)
-

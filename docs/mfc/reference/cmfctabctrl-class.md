@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8388a79bf7c85f3d603bd4ef234947e872534cba
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505122"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57281682"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -127,7 +127,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCTabCtrl::CMFCTabCtrl`|既定のコンストラクター|
+|`CMFCTabCtrl::CMFCTabCtrl`|既定のコンストラクターです。|
 |`CMFCTabCtrl::~CMFCTabCtrl`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -137,7 +137,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|現在のタブ コントロールの指定したタブを表示し、そのタブにフォーカスを設定します。|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
 |[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|フレームワークがタブ コントロールの変更のユーザー インターフェイス要素のときに、すべてのタブ コントロール ウィンドウのクライアント領域のサイズを変更するかどうかを指定します。|
-|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|指定したタブ領域のサイズを縮小します。 ( `CMFCBaseTabCtrl::CalcRectEdit`をオーバーライドします)。|
+|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|指定したタブ領域のサイズを縮小します。 (`CMFCBaseTabCtrl::CalcRectEdit` をオーバーライドします)。|
 |[CMFCTabCtrl::Create](#create)|タブ コントロールを作成しにアタッチします、`CMFCTabCtrl`オブジェクト。|
 |`CMFCTabCtrl::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
 |[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|表示と [閉じる] ボタンを非表示 ( **X**) アクティブなタブにします。|
@@ -873,8 +873,8 @@ virtual DROPEFFECT OnDragEnter(
 *pDataObject*<br/>
 [in]ユーザーがドラッグ データを含むデータ オブジェクトへのポインター。
 
-*ドロップ*<br/>
-[in]修飾子キーの状態が含まれています。 このパラメーターは、次の値のビットごとの組み合わせ (OR): MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。 詳細については、次を参照してください。、**メッセージ パラメーター**の[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
+*dwKeyState*<br/>
+[in]修飾子キーの状態が含まれています。 このパラメーターは、次の値のビットごとの組み合わせ (OR) です。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。 詳細については、次を参照してください。、**メッセージ パラメーター**の[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
 
 *ポイント*<br/>
 [in]クライアント座標でのカーソルの現在の場所が含まれています。
@@ -905,7 +905,7 @@ virtual DROPEFFECT OnDragOver(
 *pDataObject*<br/>
 [in]ポインターを[COleDataObject](../../mfc/reference/coledataobject-class.md)ドロップ ターゲット上にドラッグされているオブジェクト。
 
-*ドロップ*<br/>
+*dwKeyState*<br/>
 [in]修飾子キーの状態は MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON のビットごとの組み合わせ (OR) です。 詳細については、「メッセージ パラメーター」を参照してください[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
 
 *ポイント*<br/>

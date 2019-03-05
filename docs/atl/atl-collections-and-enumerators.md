@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 4949e8cff59a40b25c2015bf776d0844d29116a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 690fc023b72b2606efc190aceb7c266a35a4ebb4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617285"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283049"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL のコレクションと列挙子
 
@@ -46,4 +46,3 @@ Active Template Library を使用してプログラミングする方法に関�
 ## <a name="see-also"></a>関連項目
 
 [概念](../atl/active-template-library-atl-concepts.md)
-

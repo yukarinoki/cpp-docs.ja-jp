@@ -1,5 +1,5 @@
 ---
-title: '例外処理 : 例外の内容の調査'
+title: 例外:例外の内容の調査
 ms.date: 11/04/2016
 helpviewer_keywords:
 - exception handling [MFC], MFC
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - try-catch exception handling [MFC], exception contents
 - throwing exceptions [MFC], exception contents
 ms.assetid: dfda4782-b969-4f60-b867-cc204ea7f33a
-ms.openlocfilehash: 4355a575f29741d0c7b9f1e12e40ca9d977219b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6f9bca6f6b7ca9d104cb492c760ab89f7163afd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259387"
 ---
-# <a name="exceptions-examining-exception-contents"></a>例外処理 : 例外の内容の調査
+# <a name="exceptions-examining-exception-contents"></a>例外:例外の内容の調査
 
 ただし、**キャッチ**ブロックの引数は、ほぼすべてのデータ型であることができます、MFC 関数がクラスから派生した型の例外をスロー`CException`します。 MFC 関数によってスローされる例外をキャッチし、記述する、**キャッチ**ブロックの引数がポインターを`CException`オブジェクト (から派生したオブジェクトまたは`CException`など`CMemoryException`)。 例外の正確な型、に応じて例外の原因を特定の情報を収集する例外オブジェクトのデータ メンバーを調べることができます。
 
@@ -26,9 +26,8 @@ ms.locfileid: "50630070"
 
 [!code-cpp[NVC_MFCExceptions#13](../mfc/codesnippet/cpp/exceptions-examining-exception-contents_1.cpp)]
 
-詳細については、次を参照してください。[例外: 例外処理でのオブジェクトの解放](../mfc/exceptions-freeing-objects-in-exceptions.md)と[例外: 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+詳細については、次を参照してください。[例外。例外オブジェクトの解放](../mfc/exceptions-freeing-objects-in-exceptions.md)と[例外。キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [例外処理](../mfc/exception-handling-in-mfc.md)
-

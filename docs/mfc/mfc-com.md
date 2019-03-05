@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Active technology [MFC]
 - COM [MFC], MFC support
 ms.assetid: 7646bdcb-3a06-4ed5-9386-9b00f3979dcb
-ms.openlocfilehash: a3da9e437dc9ca20aa2a02977b1c8653d68930f5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67c7ea3e93b3158abc552c552c450c31c109be80
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645160"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257827"
 ---
 # <a name="mfc-com"></a>MFC COM
 
@@ -32,7 +32,7 @@ Active テクノロジ (など、ActiveX コントロール、Active ドキュ�
 
    - [インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)
 
-   - [概要: インターネット](../mfc/mfc-internet-programming-basics.md)
+   - [概要:インターネット](../mfc/mfc-internet-programming-basics.md)
 
    - [インターネットで使用する既存の ActiveX コントロールのアップグレードします。](../mfc/upgrading-an-existing-activex-control.md)
 
@@ -61,4 +61,3 @@ Active テクノロジ (など、ActiveX コントロール、Active ドキュ�
 ## <a name="see-also"></a>関連項目
 
 [概念](../mfc/mfc-concepts.md)
-

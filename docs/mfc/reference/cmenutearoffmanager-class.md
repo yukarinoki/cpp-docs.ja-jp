@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMenuTearOffManager [MFC], SetInUse
 - CMenuTearOffManager [MFC], SetupTearOffMenus
 ms.assetid: ab7ca272-ce42-4678-95f7-6ad75038f5a0
-ms.openlocfilehash: 60e89967d139a3f5bc7b96cc1823b31b98a57fb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c6bdbb18c2d1b40423457b4cf07d0a747138b99b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558848"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266199"
 ---
 # <a name="cmenutearoffmanager-class"></a>CMenuTearOffManager クラス
 
@@ -96,7 +96,7 @@ void Build(
 
 [in]*uiTearOffBarID*<br/>
 
-[in]*strText*<br/>
+[in] *strText*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -202,7 +202,7 @@ void SetInUse(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*uiCmdId*<br/>
+[in] *uiCmdId*<br/>
 
 [in]*bUse*<br/>
 

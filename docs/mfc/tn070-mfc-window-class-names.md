@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 70: MFC のウィンドウ クラス名'
+title: TN070:MFC のウィンドウ クラス名
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.classes
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - window class names [MFC]
 - TN070 [MFC]
 ms.assetid: 90617912-dd58-4a7c-9082-ced71736d7cd
-ms.openlocfilehash: 609cfade60b1b7b51fb2fd5597c4d491d3eb861c
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 8b06f7b3656284de18632185877fdbe382343f95
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51692666"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260573"
 ---
-# <a name="tn070-mfc-window-class-names"></a>テクニカル ノート 70: MFC のウィンドウ クラス名
+# <a name="tn070-mfc-window-class-names"></a>TN070:MFC のウィンドウ クラス名
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -46,5 +46,4 @@ Afx:%x:%x:%x:%x:%x
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)<br/>
-[テクニカル ノート 20: ID 名および番号に関する規約](../mfc/tn020-id-naming-and-numbering-conventions.md)
-
+[TN020:ID の名前付けおよび番号に関する規約](../mfc/tn020-id-naming-and-numbering-conventions.md)

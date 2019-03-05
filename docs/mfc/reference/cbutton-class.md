@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CButton [MFC], SetState
 - CButton [MFC], SetTextMargin
 ms.assetid: cdc76d5b-31da-43c5-bc43-fde4cb39de5b
-ms.openlocfilehash: 26dcf50cc3dc48fec5d6e4957ffd1ef340ad1dbf
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a02d995594f5e079359151167ac970a3d1ab37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178644"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57260141"
 ---
 # <a name="cbutton-class"></a>CButton クラス
 
@@ -153,7 +153,7 @@ class CButton : public CWnd
 
 各メッセージ マップ エントリは、次の形式をとります。
 
-**ON\_**_通知_ **(** _id_、 _memberFxn_ **)**
+**ON\_**_Notification_ **(** _id_, _memberFxn_ **)**
 
 場所*id*通知を送信するコントロールの子ウィンドウ ID を指定および*memberFxn*通知を処理するために記述した親メンバー関数の名前を指定します。
 
@@ -430,7 +430,7 @@ BOOL GetNote(
 
 最初のオーバー ロードで、 [CString](../../atl-mfc-shared/using-cstring.md)を現在のコマンド リンク コントロールに関連付けられたメモのテキストを含むオブジェクト。
 
-または
+- または -
 
 2 番目のオーバー ロードでは、このメソッドが成功した場合は TRUE します。それ以外の場合、FALSE です。
 

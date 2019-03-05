@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CDaoRecordset [MFC], m_strFilter
 - CDaoRecordset [MFC], m_strSort
 ms.assetid: 2322067f-1027-4662-a5d7-aa2fc7488630
-ms.openlocfilehash: 6b3e3fac575d6a1308a9f61b3bf827d76785e94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96118645aa656e97fcb93a0fd223045208ab03a3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639327"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273895"
 ---
 # <a name="cdaorecordset-class"></a>CDaoRecordset クラス
 
@@ -250,7 +250,7 @@ class CDaoRecordset : public CObject
 |[CDaoRecordset::MoveLast](#movelast)|現在のレコードをレコード セットの最後のレコードに位置付けます。|
 |[CDaoRecordset::MoveNext](#movenext)|現在のレコードをレコード セットの次のレコードに位置付けます。|
 |[CDaoRecordset::MovePrev](#moveprev)|現在のレコードをレコード セットの前のレコードに位置付けます。|
-|[Cdaorecordset::open](#open)|テーブル、ダイナセット、またはスナップショットから新しいレコード セットを作成します。|
+|[CDaoRecordset::Open](#open)|テーブル、ダイナセット、またはスナップショットから新しいレコード セットを作成します。|
 |[CDaoRecordset::Requery](#requery)|選択したレコードを更新するには、もう一度、レコード セットのクエリを実行します。|
 |[CDaoRecordset::Seek](#seek)|インデックス付きのテーブル型のレコード セット オブジェクトを現在のインデックスと、そのレコードを現在のレコードの指定した条件を満たすレコードを検索します。|
 |[CDaoRecordset::SetAbsolutePosition](#setabsoluteposition)|レコード セット オブジェクトの現在のレコードのレコード数を設定します。|
@@ -678,7 +678,7 @@ virtual BOOL Find(
 - AFX_DAO_LAST では、一致する文字列の最後の場所を検索します。
 
 *lpszFilter*<br/>
-文字列式 (など、**場所**語を除く SQL ステートメントの句**場所**) レコードを検索するために使用します。 例えば:
+文字列式 (など、**場所**語を除く SQL ステートメントの句**場所**) レコードを検索するために使用します。 例:
 
 [!code-cpp[NVC_MFCDatabase#3](../../mfc/codesnippet/cpp/cdaorecordset-class_3.cpp)]
 
@@ -1130,9 +1130,9 @@ void GetFieldInfo(
 
 - `AFX_DAO_PRIMARY_INFO` (既定値)名前、種類、サイズ、属性
 
-- `AFX_DAO_SECONDARY_INFO` プライマリについては、plus: 必要に応じての序数位置 0 長、照合順序では、外部名、ソース フィールド、ソース テーブルを許可します。
+- `AFX_DAO_SECONDARY_INFO` プライマリの情報と。必要に応じて、序数の位置、長さ 0 は、順序、外部名、ソース フィールド、ソース テーブルの照合を許可します。
 
-- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と: 既定値、検証規則、検証テキスト
+- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と。既定の値、検証規則、検証テキスト
 
 *lpszName*<br/>
 フィールドの名前。
@@ -1237,9 +1237,9 @@ void GetIndexInfo(
 
 - `AFX_DAO_PRIMARY_INFO` (既定値)名前、フィールドについては、フィールド
 
-- `AFX_DAO_SECONDARY_INFO` プライマリについては、plus: プライマリ、Unique、クラスター化された、必要に応じて、IgnoreNulls 外部
+- `AFX_DAO_SECONDARY_INFO` プライマリの情報と。プライマリで一意で、クラスター化 IgnoreNulls、必要に応じて、外部
 
-- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と: 個別のカウント
+- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と。個別のカウント
 
 *lpszName*<br/>
 名前で検索する場合、インデックス オブジェクトの名前へのポインター。
@@ -1501,7 +1501,7 @@ BOOL IsBOF() const;
 ||MoveFirst、MoveLast|MovePrev、<br /><br /> < 0 を移動します。|0 を移動します。|MoveNext、<br /><br /> > 0 を移動します。|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
 |`IsBOF`= 0 以外の場合、<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 0 以外の場合|Allowed|Allowed|例外|例外|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|例外|例外|
 |どちらも 0 以外の場合|例外|例外|例外|例外|
 |どちらも 0|Allowed|Allowed|Allowed|Allowed|
 
@@ -1513,8 +1513,8 @@ BOOL IsBOF() const;
 |------|-----------|-----------|
 |`MoveFirst`, `MoveLast`|0 以外の場合|0 以外の場合|
 |`Move` 0|変更なし|変更なし|
-|`MovePrev`、 `Move` < 0|0 以外の場合|変更なし|
-|`MoveNext`、 `Move` > 0|変更なし|0 以外の場合|
+|`MovePrev`, `Move` < 0|0 以外の場合|変更なし|
+|`MoveNext`, `Move` > 0|変更なし|0 以外の場合|
 
 関連情報については、トピックを参照してください。"BOF、EOF プロパティ"DAO のヘルプ。
 
@@ -1574,7 +1574,7 @@ BOOL IsEOF() const;
 ||MoveFirst、MoveLast|MovePrev、<br /><br /> < 0 を移動します。|0 を移動します。|MoveNext、<br /><br /> > 0 を移動します。|
 |------|-------------------------|-----------------------------|------------|-----------------------------|
 |`IsBOF`= 0 以外の場合、<br /><br /> `IsEOF`=0|Allowed|例外|例外|Allowed|
-|`IsBOF`=0,<br /><br /> `IsEOF`= 0 以外の場合|Allowed|Allowed|例外|例外|
+|`IsBOF`=0,<br /><br /> `IsEOF`=nonzero|Allowed|Allowed|例外|例外|
 |どちらも 0 以外の場合|例外|例外|例外|例外|
 |どちらも 0|Allowed|Allowed|Allowed|Allowed|
 
@@ -1586,8 +1586,8 @@ BOOL IsEOF() const;
 |------|-----------|-----------|
 |`MoveFirst`, `MoveLast`|0 以外の場合|0 以外の場合|
 |`Move` 0|変更なし|変更なし|
-|`MovePrev`、 `Move` < 0|0 以外の場合|変更なし|
-|`MoveNext`、 `Move` > 0|変更なし|0 以外の場合|
+|`MovePrev`, `Move` < 0|0 以外の場合|変更なし|
+|`MoveNext`, `Move` > 0|変更なし|0 以外の場合|
 
 関連情報については、トピックを参照してください。"BOF、EOF プロパティ"DAO のヘルプ。
 
@@ -1908,7 +1908,7 @@ void MovePrev();
 
 関連情報については、「メソッドの移動」トピックを参照してください。"MoveFirst、MoveLast、MoveNext、MovePrevious メソッド"と DAO のヘルプ。
 
-##  <a name="open"></a>  Cdaorecordset::open
+##  <a name="open"></a>  CDaoRecordset::Open
 
 レコード セットのレコードを取得するには、このメンバー関数を呼び出す必要があります。
 
@@ -2008,7 +2008,8 @@ virtual void Open(
 
 |パラメーター `lpszSQL` の値。|レコードの選択基準|例|
 |--------------------------------------|----------------------------------------|-------------|
-|NULL|`GetDefaultSQL` の返す文字列。||
+|NULL|
+  `GetDefaultSQL` の返す文字列。||
 |1 つまたは複数のテーブル定義やクエリ定義名のコンマ区切りの一覧。|表されるすべての列、`DoFieldExchange`します。|`"Customer"`|
 |**選択**列リスト**FROM**テーブル リスト|指定されたテーブルまたはクエリ定義から指定された列です。|`"SELECT CustId, CustName`<br /><br /> `FROM Customer"`|
 
@@ -2307,7 +2308,7 @@ void SetFieldNull(
 *現在価値*<br/>
 レコード セットのフィールド データ メンバーのアドレスが含まれています。 NULL の場合、レコード セット内のすべてのフィールド データ メンバーのフラグが設定されます。 (C++ の NULL は Null の場合と同じデータベース用語では、「値を持たない」を意味する)。
 
-*特別*<br/>
+*bNull*<br/>
 以外の値 (Null) がないものとしてフラグを設定する場合は、フィールド データ メンバー。 フィールド データ メンバーの非 Null としてフラグを設定する場合は 0 それ以外の場合。
 
 ### <a name="remarks"></a>Remarks
@@ -2331,7 +2332,7 @@ NULL を使用して、関数の最初の引数は、関数にのみ適用され
 
 設定時のみが`outputColumn`フィールドを NULL です。**param**フィールドが影響を受けません。
 
-##  <a name="setfieldvalue"></a>  たび
+##  <a name="setfieldvalue"></a>  CDaoRecordset::SetFieldValue
 
 序数の位置または文字列の値を変更することで、フィールドの値を設定するには、このメンバー関数を呼び出します。
 

@@ -1,18 +1,18 @@
 ---
-title: '方法: 遅延後に完了するタスクを作成する'
+title: '方法: 遅延後に完了するタスクを作成します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - task_completion_event class, example
 - create a task that completes after a delay, example [C++]
 ms.assetid: 3fc0a194-3fdb-4eba-8b8a-b890981a985d
-ms.openlocfilehash: 89564a00dbfde078ef98cd53110853e30e33ad6b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3292043d7900d5dc2bfba0afa5fdc237853a5be0
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616338"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272260"
 ---
-# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>方法: 遅延後に完了するタスクを作成する
+# <a name="how-to-create-a-task-that-completes-after-a-delay"></a>方法: 遅延後に完了するタスクを作成します。
 
 この例は、使用する方法を示します、 [concurrency::task](../../parallel/concrt/reference/task-class.md)、 [concurrency::cancellation_token_source](../../parallel/concrt/reference/cancellation-token-source-class.md)、 [concurrency::cancellation_token](../../parallel/concrt/reference/cancellation-token-class.md)、 [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)、 [concurrency::timer](../../parallel/concrt/reference/timer-class.md)、および[concurrency::call](../../parallel/concrt/reference/call-class.md)遅延後に完了するタスクを作成するためのクラス。 このメソッドを使用すると、場合によってはデータをポーリング、タイムアウトを導入、あらかじめ決められた期間、ユーザー入力の処理の遅延、具合をループをビルドします。
 
@@ -45,7 +45,7 @@ ms.locfileid: "50616338"
 
 コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`task-delay.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
 
-**cl.exe/EHsc タスク-delay.cpp**
+**cl.exe /EHsc task-delay.cpp**
 
 ## <a name="see-also"></a>関連項目
 
@@ -58,4 +58,3 @@ ms.locfileid: "50616338"
 [call クラス](../../parallel/concrt/reference/call-class.md)<br/>
 [非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)<br/>
 [PPL における取り消し処理](cancellation-in-the-ppl.md)
-

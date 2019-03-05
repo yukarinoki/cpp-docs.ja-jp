@@ -13,12 +13,12 @@ f1_keywords:
 - AMPRT/Concurrency::completion_future::wait_for
 - AMPRT/Concurrency::completion_future::wait_until
 ms.assetid: 1303c62e-546d-4b02-a578-251ed3fc0b6b
-ms.openlocfilehash: d121477cf63236ee40df826a63dd7c7c9880d142
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 663122c2d8cd430e921773e75dfd7975e4a41516
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535292"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57272920"
 ---
 # <a name="completionfuture-class"></a>completion_future クラス
 
@@ -37,7 +37,8 @@ class completion_future;
 |名前|説明|
 |----------|-----------------|
 |[completion_future コンス トラクター](#ctor)|`completion_future` クラスの新しいインスタンスを初期化します。|
-|[~ completion_future デストラクター](#dtor)|`completion_future` オブジェクトを破棄します。|
+|[~ completion_future デストラクター](#dtor)|
+  `completion_future` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -55,7 +56,8 @@ class completion_future;
 
 |名前|説明|
 |----------|-----------------|
-|[operator std::shared_future\<void>](#operator_shared_future)|`completion_future` オブジェクトを `std::shared_future` オブジェクトに暗黙的に変換します。|
+|[operator std::shared_future\<void>](#operator_shared_future)|
+  `completion_future` オブジェクトを `std::shared_future` オブジェクトに暗黙的に変換します。|
 |[operator=](#operator_eq)|指定された `completion_future` オブジェクトの内容をこのオブジェクトにコピーします。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -109,7 +111,8 @@ void get() const;
 
 ## <a name="operator_shared_future"></a> 演算子 std::shared_future<void>
 
-`completion_future` オブジェクトを `std::shared_future` オブジェクトに暗黙的に変換します。
+
+  `completion_future` オブジェクトを `std::shared_future` オブジェクトに暗黙的に変換します。
 
 ### <a name="syntax"></a>構文
 
@@ -262,7 +265,8 @@ std::future_status::future_status wait_until(
 このタイム ポイントが測定されたクロック。
 
 *_Duration*<br/>
-`_Clock` のエポックの開始からの期間、その後で関数がタイムアウトします。
+
+  `_Clock` のエポックの開始からの期間、その後で関数がタイムアウトします。
 
 *_Abs_time*<br/>
 その後で関数がタイムアウトする時点。
@@ -279,7 +283,8 @@ std::future_status::future_status wait_until(
 
 ## <a name="dtor"></a> ~completion_future
 
-`completion_future` オブジェクトを破棄します。
+
+  `completion_future` オブジェクトを破棄します。
 
 ### <a name="syntax"></a>構文
 

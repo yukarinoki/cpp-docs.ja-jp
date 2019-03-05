@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CFtpConnection [MFC], Rename
 - CFtpConnection [MFC], SetCurrentDirectory
 ms.assetid: 5e3a0501-8893-49cf-a3d5-0628d8d6b936
-ms.openlocfilehash: 71e5c8629a1aa1c489cc51224f9d008c4cdd3397
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12ef4de16279c5c2033a95df5928a6dfb7a2a652
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504248"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57295124"
 ---
 # <a name="cftpconnection-class"></a>CFtpConnection クラス
 
@@ -127,7 +127,7 @@ CFtpConnection(
 *pstrServer*<br/>
 FTP サーバーの名前を含む文字列へのポインター。
 
-*独自*<br/>
+*dwContext*<br/>
 操作のコンテキストの識別子。 *独自*によって返される操作の状態情報を識別する[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)します。 既定値を 1 に設定します。ただし、操作の特定のコンテキスト ID を明示的に割り当てることができます。 オブジェクトとその動作はコンテキスト ID に関連付けられる
 
 *pstrUserName*<br/>
@@ -143,7 +143,7 @@ FTP サーバーの名前を含む文字列へのポインター。
 |NULL 以外の文字列が NULL|ERROR|ERROR||
 |NULL 以外の文字列|NULL 以外の文字列|*pstrUserName*|*pstrPassword*|
 
-*ポート*<br/>
+*nPort*<br/>
 サーバーで使用する TCP/IP ポートを識別する番号。
 
 *bPassive*<br/>
@@ -180,7 +180,7 @@ FTP サーバーからの応答が予期されているかどうかを判断し�
 *dwFlags*<br/>
 この関数を制御するフラグが含まれている値。 完全な一覧についてを参照してください。 [FTPCommand](/windows/desktop/api/wininet/nf-wininet-ftpcommanda)します。
 
-*独自*<br/>
+*dwContext*<br/>
 コールバックでアプリケーションのコンテキストを識別するために使用されるアプリケーション定義の値が含まれている値へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -339,7 +339,7 @@ FTP サーバーから取得するファイルの名前を含む null で終わ�
 *dwFlags*<br/>
 転送が発生する条件を指定します。 このパラメーターには、いずれかを指定できます、 *dwFlags*で説明されている値[FtpGetFile](/windows/desktop/api/wininet/nf-wininet-ftpgetfilea) Windows SDK に含まれています。
 
-*独自*<br/>
+*dwContext*<br/>
 ファイルを取得するためのコンテキストの識別子です。 参照してください**解説**の詳細については*独自*します。
 
 ### <a name="return-value"></a>戻り値
@@ -354,7 +354,7 @@ FTP サーバーから取得するファイルの名前を含む null で終わ�
 
 両方*pstrRemoteFile*と*pstrLocalFile*現在のディレクトリに対して相対的か部分的に修飾ファイル名または完全修飾します。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `GetFile` 使用されるように、適切な文字にディレクトリ名の区切り記号を変換します。
 
-上書き、*独自*の既定値は、独自の値にコンテキスト id を設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CFtpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+上書き、*独自*の既定値は、独自の値にコンテキスト id を設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CFtpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ##  <a name="openfile"></a>  CFtpConnection::OpenFile
 
@@ -383,7 +383,7 @@ CInternetFile* OpenFile(
 
 - FTP_TRANSFER_TYPE_BINARY ファイルは、(タイプ I) FTP's イメージ転送メソッドを使用してデータを転送します。 変更せずに、これとまったく同じデータを転送するファイルが存在します。 これは、既定の転送方法です。
 
-*独自*<br/>
+*dwContext*<br/>
 ファイルを開くためのコンテキストの識別子です。 参照してください**解説**の詳細については*独自*します。
 
 ### <a name="return-value"></a>戻り値
@@ -404,7 +404,7 @@ CInternetFile* OpenFile(
 
 *PstrFileName*パラメーターは、いずれか、部分的に修飾ファイル名、現在のディレクトリに相対パスまたは完全修飾を指定できます。 円記号 (\\) またはフォワード スラッシュ (/) は、いずれかの名前のディレクトリの区切り記号として使用できます。 `OpenFile` 適切な文字にディレクトリ名の区切り記号を使用する前に変換します。
 
-上書き、*独自*の既定値は、独自の値にコンテキスト id を設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CFtpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+上書き、*独自*の既定値は、独自の値にコンテキスト id を設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CFtpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ##  <a name="putfile"></a>  CFtpConnection::PutFile
 
@@ -429,7 +429,7 @@ FTP サーバー上に作成するファイルの名前を含む文字列への�
 *dwFlags*<br/>
 ファイルの転送が発生する条件を指定します。 説明されている FTP_TRANSFER_ * 定数のいずれか[OpenFile](#openfile)します。
 
-*独自*<br/>
+*dwContext*<br/>
 ファイルを配置するためのコンテキストの識別子です。 参照してください**解説**の詳細については*独自*します。
 
 ### <a name="return-value"></a>戻り値
@@ -440,7 +440,8 @@ FTP サーバー上に作成するファイルの名前を含む文字列への�
 
 `PutFile` すべての FTP サーバー上のファイルを格納することに関連付けられている操作を処理する高度なルーチン。 のみ、データを送信するか、ファイルの転送の詳細にコントロールを必要とするアプリケーションを使用する必要があります[OpenFile](#openfile)と[CInternetFile::Write](../../mfc/reference/cinternetfile-class.md#write)します。
 
-`dwContext` の既定値をオーバーライドして、コンテキスト識別子を独自の値に設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CFtpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+
+  `dwContext` の既定値をオーバーライドして、コンテキスト識別子を独自の値に設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CFtpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ##  <a name="remove"></a>  CFtpConnection::Remove
 

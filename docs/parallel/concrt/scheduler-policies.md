@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - scheduler policies
 ms.assetid: 58fb68bd-4a57-40a8-807b-6edb6f083cd9
-ms.openlocfilehash: df045f7df9d0640b96ae1227c65c65aa7e432350
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2acfc199e7ad9edf3965dc8ccb4103eb615a66b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668742"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57298135"
 ---
 # <a name="scheduler-policies"></a>スケジューラ ポリシー
 
@@ -49,11 +49,10 @@ ms.locfileid: "50668742"
 
 ## <a name="example"></a>例
 
-スケジューラの動作を制御する特定のスケジューラ ポリシーを使用する例を検証するを参照してください[する方法: 特定のスケジューラ ポリシーの指定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)と[する方法: エージェントを使用して特定のスケジューラ ポリシーを作成します](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)。
+スケジューラの動作を制御する特定のスケジューラ ポリシーを使用する例を検証するを参照してください。[方法。特定のスケジューラ ポリシーを指定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)と[方法。特定のスケジューラ ポリシーを使用するエージェントを作成する](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)<br/>
 [方法: 特定のスケジューラ ポリシーを指定する](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)<br/>
 [方法: 特定のスケジューラ ポリシーを使用するエージェントを作成する](../../parallel/concrt/how-to-create-agents-that-use-specific-scheduler-policies.md)
-

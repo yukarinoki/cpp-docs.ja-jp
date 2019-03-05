@@ -7,12 +7,12 @@ helpviewer_keywords:
 - parsing, URLs
 - URLs, parsing
 ms.assetid: 46c6384f-e4a6-4dbd-9196-219c19040ec5
-ms.openlocfilehash: 144ca5cddb70dd04bf25d790c493d15d75b8163a
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 0831d94f1a6f0293d3605a5e2e9ebde0564baf24
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850135"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293473"
 ---
 # <a name="internet-url-parsing-globals-and-helpers"></a>インターネット URL 解析用グローバル関数とヘルパー
 
@@ -304,4 +304,3 @@ WININET で定義されているインターネット サービスの種類の�
 [マクロとグローバル](mfc-macros-and-globals.md)<br/>
 [CInternetException クラス](cinternetexception-class.md)<br/>
 [AfxParseURL](internet-url-parsing-globals.md#afxparseurl)
-

@@ -1,19 +1,19 @@
 ---
-title: '方法: マップ操作と縮小操作を並列実行する'
+title: '方法: マップを実行し、操作を並列の低減'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parallel_transform function, example
 - parallel map and reduce, example
 - parallel_reduce function, example
 ms.assetid: 9d19fac0-4ab6-4380-a375-3b18eeb87720
-ms.openlocfilehash: b73e46e63fc1b320a84322bf2b0efd7adf244ccb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ba3ffb5cdae7dcc6f108f005fab33f9a1fee6a6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651854"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258659"
 ---
-# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>方法: マップ操作と縮小操作を並列実行する
+# <a name="how-to-perform-map-and-reduce-operations-in-parallel"></a>方法: マップを実行し、操作を並列の低減
 
 この例は、使用する方法を示します、 [concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)と[concurrency::parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)アルゴリズムと[concurrency::concurrent_unordered_map](../../parallel/concrt/reference/concurrent-unordered-map-class.md)クラス ファイル内の単語の出現回数をカウントします。
 

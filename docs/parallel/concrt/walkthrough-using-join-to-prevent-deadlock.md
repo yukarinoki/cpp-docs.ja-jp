@@ -7,12 +7,12 @@ helpviewer_keywords:
 - non-greedy joins, example
 - join class, example
 ms.assetid: d791f697-bb93-463e-84bd-5df1651b7446
-ms.openlocfilehash: b62f4007a79faaff479e4e8ff998a8b48e4d5dd1
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 2f9e0f50866ed0635fbaa4b700dbf522f09458d9
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175915"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57303054"
 ---
 # <a name="walkthrough-using-join-to-prevent-deadlock"></a>チュートリアル: join を使用したデッドロックの防止
 
@@ -58,11 +58,18 @@ ms.locfileid: "52175915"
 
 次の例は、"食事する哲学者の問題" を考慮していない実装を示しています。 `philosopher`から派生したクラス[concurrency::agent](../../parallel/concrt/reference/agent-class.md)、各哲学者は独立して機能を有効にします。 例は、一連の共有を使用して[concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)オブジェクトに、それぞれ`philosopher`本の箸への排他アクセスのオブジェクトします。
 
-この実装を図に関連付けて説明すると、`philosopher` クラスは 1 人の哲学者を表します。 `int` 変数は、それぞれの箸を表します。 `critical_section` オブジェクトは、箸が置かれる箸置きとして機能します。 `run` メソッドは、哲学者の生命をシミュレートしています。 `think` メソッドは、考える行為をシミュレートしており、`eat` メソッドは、食事する行為をシミュレートしています。
+この実装を図に関連付けて説明すると、`philosopher` クラスは 1 人の哲学者を表します。 
+  `int` 変数は、それぞれの箸を表します。 
+  `critical_section` オブジェクトは、箸が置かれる箸置きとして機能します。 
+  `run` メソッドは、哲学者の生命をシミュレートしています。 
+  `think` メソッドは、考える行為をシミュレートしており、`eat` メソッドは、食事する行為をシミュレートしています。
 
-`philosopher` オブジェクトは、`critical_section` メソッドを呼び出す前に、両方の `eat` オブジェクトをロックして、箸置きから箸が取られたことをシミュレートします。 `eat` の呼び出しの後、`philosopher` オブジェクトは、`critical_section` オブジェクトをロック解除状態に再設定することで、箸を箸置きに戻します。
 
-`pickup_chopsticks` メソッドは、どこでデッドロックが発生する可能性があるかを示します。 すべての `philosopher` オブジェクトがいずれかのロックにアクセスした場合、どの `philosopher` オブジェクトも続行できません。これは、そのアクセスしたロックが別の `philosopher` オブジェクトにより制御されているためです。
+  `philosopher` オブジェクトは、`critical_section` メソッドを呼び出す前に、両方の `eat` オブジェクトをロックして、箸置きから箸が取られたことをシミュレートします。 
+  `eat` の呼び出しの後、`philosopher` オブジェクトは、`critical_section` オブジェクトをロック解除状態に再設定することで、箸を箸置きに戻します。
+
+
+  `pickup_chopsticks` メソッドは、どこでデッドロックが発生する可能性があるかを示します。 すべての `philosopher` オブジェクトがいずれかのロックにアクセスした場合、どの `philosopher` オブジェクトも続行できません。これは、そのアクセスしたロックが別の `philosopher` オブジェクトにより制御されているためです。
 
 ## <a name="example"></a>例
 
@@ -84,7 +91,8 @@ ms.locfileid: "52175915"
 
 このセクションでは、メッセージ バッファーおよびメッセージ パッシング関数を使用して、デッドロックを発生させないようにする方法について説明します。
 
-関連付ける前に、この例を`philosopher`クラス置き換える`critical_section`オブジェクトを使用して、 [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)オブジェクトと`join`オブジェクト。 `join` オブジェクトは、哲学者に箸を与える決定者として機能します。
+関連付ける前に、この例を`philosopher`クラス置き換える`critical_section`オブジェクトを使用して、 [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)オブジェクトと`join`オブジェクト。 
+  `join` オブジェクトは、哲学者に箸を与える決定者として機能します。
 
 この例では、`unbounded_buffer` クラスを使用しています。これは、ターゲットが `unbounded_buffer` オブジェクトからメッセージを受け取ったときに、そのメッセージはメッセージ キューから削除されるためです。 これにより、メッセージを保持する `unbounded_buffer` オブジェクトは、箸が使用できることを示すことができます。 メッセージを保持しない `unbounded_buffer` オブジェクトは、箸が使用されていることを示します。
 
@@ -98,27 +106,33 @@ ms.locfileid: "52175915"
 
 [!code-cpp[concrt-philosophers-deadlock#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_2.cpp)]
 
-1. `_left` クラスの `_right` データ メンバーおよび `philosopher` データ メンバーの型を `unbounded_buffer` に変更します。
+1. 
+  `_left` クラスの `_right` データ メンバーおよび `philosopher` データ メンバーの型を `unbounded_buffer` に変更します。
 
 [!code-cpp[concrt-philosophers-join#2](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_3.cpp)]
 
-1. `philosopher` コンストラクターを変更して、パラメーターとして `unbounded_buffer` オブジェクトを受け取るようにします。
+1. 
+  `philosopher` コンストラクターを変更して、パラメーターとして `unbounded_buffer` オブジェクトを受け取るようにします。
 
 [!code-cpp[concrt-philosophers-join#3](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_4.cpp)]
 
-1. `pickup_chopsticks` メソッドを変更して、最短一致の `join` オブジェクトを使用して両方の箸のメッセージ バッファーからメッセージを受け取るようにします。
+1. 
+  `pickup_chopsticks` メソッドを変更して、最短一致の `join` オブジェクトを使用して両方の箸のメッセージ バッファーからメッセージを受け取るようにします。
 
 [!code-cpp[concrt-philosophers-join#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_5.cpp)]
 
-1. `putdown_chopsticks` メソッドを変更して、両方の箸のメッセージ バッファーにメッセージを送信することで、箸へのアクセス権を放棄するようにします。
+1. 
+  `putdown_chopsticks` メソッドを変更して、両方の箸のメッセージ バッファーにメッセージを送信することで、箸へのアクセス権を放棄するようにします。
 
 [!code-cpp[concrt-philosophers-join#5](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_6.cpp)]
 
-1. `run` メソッドを変更して、`pickup_chopsticks` メソッドの結果を保持し、それらの結果を `putdown_chopsticks` メソッドに渡すようにします。
+1. 
+  `run` メソッドを変更して、`pickup_chopsticks` メソッドの結果を保持し、それらの結果を `putdown_chopsticks` メソッドに渡すようにします。
 
 [!code-cpp[concrt-philosophers-join#6](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_7.cpp)]
 
-1. `chopsticks` 関数の `wmain` 変数の宣言を変更して、それぞれが 1 つのメッセージを保持する `unbounded_buffer` オブジェクトの配列にします。
+1. 
+  `chopsticks` 関数の `wmain` 変数の宣言を変更して、それぞれが 1 つのメッセージを保持する `unbounded_buffer` オブジェクトの配列にします。
 
 [!code-cpp[concrt-philosophers-join#7](../../parallel/concrt/codesnippet/cpp/walkthrough-using-join-to-prevent-deadlock_8.cpp)]
 

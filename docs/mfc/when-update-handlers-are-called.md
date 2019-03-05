@@ -16,12 +16,12 @@ helpviewer_keywords:
 - command routing [MFC], update handlers
 - update handlers, calling
 ms.assetid: 7359f6b1-4669-477d-bd99-690affed08d9
-ms.openlocfilehash: 036476ecc7a0528692e6fd3e3d69a2efeef6fd4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4a52c147d1abf02b7c5e89abf868f87a07ab32cc
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454848"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277587"
 ---
 # <a name="when-update-handlers-are-called"></a>更新ハンドラーが呼び出されるタイミング
 
@@ -37,5 +37,4 @@ ms.locfileid: "50454848"
 
 ## <a name="see-also"></a>関連項目
 
-[ユーザー インターフェイス オブジェクトの更新方法](../mfc/how-to-update-user-interface-objects.md)
-
+[方法: ユーザー インターフェイス オブジェクトを更新します。](../mfc/how-to-update-user-interface-objects.md)

@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CSpinButtonCtrl [MFC], SetPos
 - CSpinButtonCtrl [MFC], SetRange
 ms.assetid: 509bfd76-1c5a-4af6-973f-e133c0b87734
-ms.openlocfilehash: 8d77175b271d144983aecd1168eb0d66eb46d6ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3c973d92550469804a5389b84f53005e4f2c154f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526412"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290431"
 ---
 # <a name="cspinbuttonctrl-class"></a>CSpinButtonCtrl クラス
 
@@ -72,7 +72,7 @@ class CSpinButtonCtrl : public CWnd
 |[CSpinButtonCtrl::SetBase](#setbase)|スピン ボタン コントロールの基本クラスを設定します。|
 |[CSpinButtonCtrl::SetBuddy](#setbuddy)|スピン ボタン コントロールの連動ウィンドウを設定します。|
 |[CSpinButtonCtrl::SetPos](#setpos)|コントロールの現在の位置を設定します。|
-|[上限値と下限](#setrange)|スピン ボタン コントロールの上限と下限 (範囲) を設定します。|
+|[CSpinButtonCtrl::SetRange](#setrange)|スピン ボタン コントロールの上限と下限 (範囲) を設定します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -371,7 +371,7 @@ int SetPos32(int nPos);
 
 `SetPos32` 32 ビットの位置を設定します。
 
-##  <a name="setrange"></a>  上限値と下限
+##  <a name="setrange"></a>  CSpinButtonCtrl::SetRange
 
 スピン ボタン コントロールの上限と下限 (範囲) を設定します。
 

@@ -1,18 +1,18 @@
 ---
-title: '方法: 例外処理を使用して並列ループを中断する'
+title: '方法: 並列ループから処理を中断する例外を使用して、'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - search algorithm, writing [Concurrency Runtime]
 - writing a search algorithm [Concurrency Runtime]
 ms.assetid: 16d7278c-2d10-4014-9f58-f1899e719ff9
-ms.openlocfilehash: a9557f2fc809647215dbb5fd928f5c638af6ed62
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 19d732d98f24172471d96cd5e2962b2a99ab0203
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532887"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262312"
 ---
-# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>方法: 例外処理を使用して並列ループを中断する
+# <a name="how-to-use-exception-handling-to-break-from-a-parallel-loop"></a>方法: 並列ループから処理を中断する例外を使用して、
 
 このトピックでは、基本的なツリー構造の検索アルゴリズムを記述する方法を示します。
 
@@ -66,7 +66,7 @@ Did not find node with value 17522.
 
 コード例をコピーし、Visual Studio プロジェクトに貼り付けるか、という名前のファイルに貼り付ける`task-tree-search.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
 
-**cl.exe/EHsc タスク-ツリー-search.cpp**
+**cl.exe /EHsc task-tree-search.cpp**
 
 ## <a name="see-also"></a>関連項目
 
@@ -77,4 +77,3 @@ Did not find node with value 17522.
 [task_group クラス](reference/task-group-class.md)<br/>
 [structured_task_group クラス](../../parallel/concrt/reference/structured-task-group-class.md)<br/>
 [parallel_for_each 関数](reference/concurrency-namespace-functions.md#parallel_for_each)
-

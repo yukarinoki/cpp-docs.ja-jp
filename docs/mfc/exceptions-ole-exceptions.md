@@ -1,5 +1,5 @@
 ---
-title: '例外処理 : OLE の例外'
+title: 例外:OLE の例外
 ms.date: 11/04/2016
 helpviewer_keywords:
 - OLE, exceptions
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - exception handling [MFC], OLE
 - OLE exceptions [MFC], classes for handling
 ms.assetid: 2f8e0161-b94f-48bb-a5a2-6f644b192527
-ms.openlocfilehash: 2732f571d305fda2b739be02661ab9558f8bc653
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e404005a88398ec909e3043cfa55c7e8fbe2f594
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57297906"
 ---
-# <a name="exceptions-ole-exceptions"></a>例外処理 : OLE の例外
+# <a name="exceptions-ole-exceptions"></a>例外:OLE の例外
 
 手法と OLE の例外を処理するための機能は、その他の例外を処理するためのものと同じです。 例外処理の詳細については、記事を参照してください。 [C++ 例外処理](../cpp/cpp-exception-handling.md)します。
 
@@ -39,9 +39,8 @@ ms.locfileid: "50515418"
 
 `COleDispatchException` 詳しくは、Microsoft Visual Basic などの製品と使用できるように説明します。 メッセージ ボックスまたは他の通知では、口頭でのエラーの説明を使用できます。例外の原因となった状況に対応するユーザーを支援するヘルプ情報を使用できます。
 
-2 つのグローバル関数が 2 つの OLE 例外クラスに対応しています: [AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception)と[AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception)します。 それらを使用して、それぞれ一般的な OLE の例外と OLE ディスパッチの例外をスローします。
+2 つのグローバル関数は、2 つの OLE 例外クラスに対応します。[AfxThrowOleException](../mfc/reference/exception-processing.md#afxthrowoleexception)と[AfxThrowOleDispatchException](../mfc/reference/exception-processing.md#afxthrowoledispatchexception)します。 それらを使用して、それぞれ一般的な OLE の例外と OLE ディスパッチの例外をスローします。
 
 ## <a name="see-also"></a>関連項目
 
 [例外処理](../mfc/exception-handling-in-mfc.md)
-

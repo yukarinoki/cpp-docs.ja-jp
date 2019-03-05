@@ -10,16 +10,16 @@ helpviewer_keywords:
 - collection classes [MFC], helper functions
 - helper functions collection class [MFC]
 ms.assetid: bc3a2368-9edd-4748-9e6a-13cba79517ca
-ms.openlocfilehash: 639c4f7952abcf18c29aa3cb0d9fee45b50430af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3992e6c0cf25925e01858016e4bac93d5552fe8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50567467"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266147"
 ---
 # <a name="collection-class-helpers"></a>コレクション クラスのヘルパー
 
-コレクション クラス`CMap`、 `CList`、および`CArray`を比較する、コピー、および要素をシリアル化するためにグローバル テンプレートのヘルパー関数を使用します。 基づくクラスの実装の一部として`CMap`、 `CList`、および`CArray`、必要に応じて、これらの関数は、マップ、リスト、または配列に格納されたデータの種類に合うようにオーバーライドする必要があります。 などのヘルパー関数を上書きする方法について`SerializeElements`、記事をご覧ください[コレクション: タイプ セーフなコレクションを作成する方法](../../mfc/how-to-make-a-type-safe-collection.md)します。 なお`ConstructElements`と`DestructElements`非推奨とされました。
+コレクション クラス`CMap`、 `CList`、および`CArray`を比較する、コピー、および要素をシリアル化するためにグローバル テンプレートのヘルパー関数を使用します。 基づくクラスの実装の一部として`CMap`、 `CList`、および`CArray`、必要に応じて、これらの関数は、マップ、リスト、または配列に格納されたデータの種類に合うようにオーバーライドする必要があります。 などのヘルパー関数を上書きする方法について`SerializeElements`、記事をご覧ください[コレクション。タイプ セーフなコレクションを作成する方法](../../mfc/how-to-make-a-type-safe-collection.md)します。 なお`ConstructElements`と`DestructElements`非推奨とされました。
 
 Microsoft Foundation Class ライブラリは、コレクション クラスをカスタマイズするために afxtempl.h で次のグローバル関数を提供します。
 
@@ -53,7 +53,7 @@ CompareElements(
 *pElement1*<br/>
 比較する最初の要素へのポインター。
 
-*中*<br/>
+*ARG_TYPE*<br/>
 比較する 2 番目の要素の型。
 
 *pElement2*<br/>
@@ -105,7 +105,7 @@ void AFXAPI CopyElements(
 
 既定の実装は、単純な代入演算子を使用して ( **=** ) コピー操作を実行します。 コピーされた型が、オーバー ロードされた演算子を持たない場合 =、既定の実装は、ビットごとのコピーを実行します。
 
-これと他のヘルパー関数を実装する方法の詳細については、この記事を参照してください。[コレクション: タイプ セーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)します。
+これと他のヘルパー関数を実装する方法の詳細については、この記事を参照してください。[コレクション。タイプ セーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -216,11 +216,11 @@ void AFXAPI SerializeElements(CArchive& ar, TYPE* pElements, INT_PTR nCount);
 
 既定の実装は、ビットごとの読み取りまたは書き込み。
 
-これと他のヘルパー関数を実装する方法の詳細については、この記事を参照してください。[コレクション: タイプ セーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)します。
+これと他のヘルパー関数を実装する方法の詳細については、この記事を参照してください。[コレクション。タイプ セーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)します。
 
 ### <a name="example"></a>例
 
-記事の例を参照してください。[コレクション: タイプ セーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)します。
+記事の例を参照してください。[コレクション。タイプ セーフなコレクションを作成する方法](../how-to-make-a-type-safe-collection.md)します。
 
 ### <a name="requirements"></a>必要条件
 

@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - tiled_index class
 ms.assetid: 0ce2ae26-f1bb-4436-b473-a9e1b619bb38
-ms.openlocfilehash: 11faec19160ccc6028bdb294f37a51d7fe26dc15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cea1ac1d500a9cf3bcbdc1f5dde33a0002cbd363
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619831"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57257905"
 ---
 # <a name="tiledindex-class"></a>tiled_index クラス
 
@@ -85,12 +85,15 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 |||
 |[グローバル定数](#tiled_index__global)|ストア、[インデックス](index-class.md)グリッド オブジェクトのグローバル インデックスを表すランク 1、2、または 3 のオブジェクト。|
 |[ローカル定数](#tiled_index__local)|ストア、`index`の現在のタイルで、相対パスを表すランク 1、2、または 3 のインデックスのオブジェクトを[tiled_extent](tiled-extent-class.md)オブジェクト。|
-|[rank 定数](#tiled_index__rank)|`tiled_index` オブジェクトのランクを格納します。|
-|[tile 定数](#tiled_index__tile)|`index` オブジェクトの現在のタイルの座標を表すランク 1、2、または 3 の `tiled_extent` オブジェクトを格納します。|
+|[rank 定数](#tiled_index__rank)|
+  `tiled_index` オブジェクトのランクを格納します。|
+|[tile 定数](#tiled_index__tile)|
+  `index` オブジェクトの現在のタイルの座標を表すランク 1、2、または 3 の `tiled_extent` オブジェクトを格納します。|
 |[tile_dim0 定数](#tiled_index__tile_dim0)|最上位の次元の長さを格納します。|
 |[tile_dim1 定数](#tiled_index__tile_dim1)|最上位の次の次元の長さを格納します。|
 |[tile_dim2 定数](#tiled_index__tile_dim2)|最下位の次元の長さを格納します。|
-|[tile_origin 定数](#tiled_index__tile_origin)|`index` オブジェクトの現在のタイルの原点のグローバル座標を表すランク 1、2、または 3 の `tiled_extent` オブジェクトを格納します。|
+|[tile_origin 定数](#tiled_index__tile_origin)|
+  `index` オブジェクトの現在のタイルの原点のグローバル座標を表すランク 1、2、または 3 の `tiled_extent` オブジェクトを格納します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -108,7 +111,7 @@ class tiled_index<_Dim0, 0, 0> : public _Tiled_index_base<1>;
 
 **ヘッダー:** amp.h
 
-**名前空間:** Concurrency
+**名前空間:** コンカレンシー
 
 ## <a name="tiled_index__ctor"></a>  tiled_index コンス トラクター
 
@@ -133,7 +136,7 @@ tiled_index(
 *_Global*<br/>
 グローバル[インデックス](index-class.md)の構築された`tiled_index`します。
 
-*(_L)*<br/>
+*_Local*<br/>
 ローカル[インデックス](index-class.md)の構築されました。 `tiled_index`
 
 *_Tile*<br/>
@@ -153,7 +156,8 @@ tiled_index(
 |||
 |-|-|
 |名前|説明|
-|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|グローバル座標のタイルのインデックスおよびローカル座標のタイルの相対位置から `tile_index` クラスの新しいインスタンスを初期化します。 `_Global` パラメーターおよび `_Tile_origin` パラメーターが計算されます。|
+|`tiled_index(const index<rank>& _Global, const index<rank>& _Local, const index<rank>& _Tile, const index<rank>& _Tile_origin, const tile_barrier& _Barrier restrict(amp,cpu);`|グローバル座標のタイルのインデックスおよびローカル座標のタイルの相対位置から `tile_index` クラスの新しいインスタンスを初期化します。 
+  `_Global` パラメーターおよび `_Tile_origin` パラメーターが計算されます。|
 |`tiled_index(    const tiled_index& _Other) restrict(amp,cpu);`|指定した `tile_index` オブジェクトをコピーして、`tiled_index` クラスの新しいインスタンスを初期化します。|
 
 ## <a name="tiled_index__get_tile_extent"></a>  get_tile_extent
@@ -170,7 +174,7 @@ extent<rank> get_tile_extent()restrict(amp,cpu);
 
 `extent`オブジェクトの値を持つ、`tiled_index`テンプレート引数`_Dim0`、 `_Dim1`、および`_Dim2`します。
 
-## <a name="tiled_index__barrier"></a>  バリア
+## <a name="tiled_index__barrier"></a>  barrier
 
 ストア、 [tile_barrier](tile-barrier-class.md)スレッドの現在のタイルのバリアを表すオブジェクト。
 
@@ -190,7 +194,7 @@ const tile_barrier barrier;
 const index<rank> global;
 ```
 
-## <a name="tiled_index__local"></a>  地元の
+## <a name="tiled_index__local"></a>  local
 
 ストア、[インデックス](index-class.md)の現在のタイルで、相対パスを表すランク 1、2、または 3 のインデックスのオブジェクトを[tiled_extent](tiled-extent-class.md)オブジェクト。
 
@@ -200,9 +204,10 @@ const index<rank> global;
 const index<rank> local;
 ```
 
-## <a name="tiled_index__rank"></a>  ランク
+## <a name="tiled_index__rank"></a>  rank
 
-`tiled_index` オブジェクトのランクを格納します。
+
+  `tiled_index` オブジェクトのランクを格納します。
 
 ## <a name="syntax"></a>構文
 
@@ -210,7 +215,7 @@ const index<rank> local;
 static const int rank = _Rank;
 ```
 
-## <a name="tiled_index__tile"></a>  タイル
+## <a name="tiled_index__tile"></a>  tile
 
 ストア、[インデックス](index-class.md)ランク 1、2、または 3 の現在のタイルの座標を表すオブジェクトを[tiled_extent](tiled-extent-class.md)オブジェクト。
 

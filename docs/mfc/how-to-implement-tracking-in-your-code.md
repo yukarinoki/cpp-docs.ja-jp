@@ -1,17 +1,17 @@
 ---
-title: コードでのトラッカーの実装方法
+title: '方法: コードでのトラッカーを実装します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: 0a6a8313c02566c4d1cde82b288b42e150651b02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af8e1b72bde268a15012515065853daa617936e4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428689"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283983"
 ---
-# <a name="how-to-implement-tracking-in-your-code"></a>コードでのトラッカーの実装方法
+# <a name="how-to-implement-tracking-in-your-code"></a>方法: コードでのトラッカーを実装します。
 
 OLE 項目を追跡するには、項目をクリックするか、ドキュメントのビューの更新などのアイテムに関連する特定のイベントを処理する必要があります。 すべてのケースでは、一時的なを宣言するための十分な[CRectTracker](../mfc/reference/crecttracker-class.md)オブジェクトし、このオブジェクトを使用して、項目を操作します。
 
@@ -55,5 +55,4 @@ OLE 項目の状態をチェックし、適切なスタイルを設定する手�
 
 ## <a name="see-also"></a>関連項目
 
-[トラッカー: OLE アプリケーションでのトラッカーの実装](../mfc/trackers-implementing-trackers-in-your-ole-application.md)
-
+[トラッカー:OLE アプリケーションでのトラッカーの実装](../mfc/trackers-implementing-trackers-in-your-ole-application.md)

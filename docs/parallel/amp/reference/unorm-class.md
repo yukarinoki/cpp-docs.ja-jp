@@ -6,12 +6,12 @@ f1_keywords:
 - AMP_SHORT_VECTORS/unorm
 - AMP_SHORT_VECTORS/Concurrency::graphics::unorm Constructor
 ms.assetid: bc30bd20-6452-4d5f-9158-3b11c4c16ed2
-ms.openlocfilehash: b485d5efbfbcedbb1e11a3e212465340f0413ee4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 059cd3a388d67e540a91146f2a287c375fb02bd1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491560"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300805"
 ---
 # <a name="unorm-class"></a>unorm クラス
 
@@ -29,7 +29,7 @@ class unorm;
 
 |名前|説明|
 |----------|-----------------|
-|[unorm コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクター 0.0f を初期化します。|
+|[unorm コンス トラクター](#ctor)|オーバーロードされます。 既定のコンストラクターです。 0.0f を初期化します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -37,9 +37,9 @@ class unorm;
 |----------|-----------------|
 |unorm::operator--||
 |unorm::operator float|変換演算子。 Unorm 数値に変換する浮動小数点値。|
-|unorm::operator * =||
+|unorm::operator*=||
 |unorm::operator/=||
-|unorm::operator +||
+|unorm::operator++||
 |unorm::operator+=||
 |unorm::operator=||
 |unorm::operator-=||
@@ -52,11 +52,11 @@ class unorm;
 
 **ヘッダー:** amp_short_vectors.h
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency::graphics
 
 ##  <a name="ctor"></a> unorm
 
-既定のコンストラクター 0.0f を初期化します。
+既定のコンストラクターです。 0.0f を初期化します。
 
 ```
 unorm(
@@ -90,7 +90,7 @@ inline explicit unorm(
 
 ### <a name="parameters"></a>パラメーター
 
-*(_V).*<br/>
+*_V*<br/>
 初期化するために使用される値。
 
 *_Other*<br/>

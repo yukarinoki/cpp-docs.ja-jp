@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 f1_keywords:
 - vc.appwiz.mfc.exe.compdoc
 ms.assetid: 42e1af83-12c4-438d-92eb-13835afdb148
-ms.openlocfilehash: 97443d4846141f4402e18bb19893fcac9b4f46da
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: b2ff4f312132b690223f124fd8790d0e2c172b7f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524054"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57289677"
 ---
 # <a name="compound-document-support-mfc-application-wizard"></a>[複合ドキュメント サポート] (MFC アプリケーション ウィザード)
 
@@ -21,9 +21,9 @@ MFC アプリケーション ウィザードのこのページで、どのよう
 
   アプリケーションがコンテナーのサポート、サーバーのサポート、またはその両方を提供するかどうかを判断します。 この領域の詳細についてを参照してください。
 
-  - [コンテナー: コンテナーの実装](../../mfc/containers-implementing-a-container.md)
+  - [コンテナー:コンテナーの実装](../../mfc/containers-implementing-a-container.md)
 
-  - [サーバー: サーバーの実装](../../mfc/servers-implementing-a-server.md)
+  - [サーバー:サーバーの実装](../../mfc/servers-implementing-a-server.md)
 
   |オプション|説明|
   |------------|-----------------|
@@ -46,4 +46,3 @@ MFC アプリケーション ウィザードのこのページで、どのよう
 ## <a name="see-also"></a>関連項目
 
 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)
-

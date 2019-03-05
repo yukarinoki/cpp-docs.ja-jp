@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: ad9f945a91a96c40afe614240a847a028ba5b5d9
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178617"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280317"
 ---
 # <a name="clistbox-class"></a>CListBox クラス
 
@@ -139,7 +139,7 @@ class CListBox : public CWnd
 |[CListBox::DeleteString](#deletestring)|リスト ボックスから文字列を削除します。|
 |[CListBox::Dir](#dir)|リスト ボックスに、ファイル名、ドライブ、またはその両方、現在のディレクトリからを追加します。|
 |[CListBox::DrawItem](#drawitem)|ビジュアルな部分のオーナー描画リスト ボックスが変更されたときにフレームワークによって呼び出されます。|
-|[Clistbox::findstring](#findstring)|リスト ボックス内の文字列を検索します。|
+|[CListBox::FindString](#findstring)|リスト ボックス内の文字列を検索します。|
 |[CListBox::FindStringExact](#findstringexact)|指定した文字列と一致する最初のボックスの一覧で文字列を検索します。|
 |[CListBox::GetAnchorIndex](#getanchorindex)|リスト ボックスの現在のアンカー項目の 0 から始まるインデックスを取得します。|
 |[CListBox::GetCaretIndex](#getcaretindex)|複数選択のリスト ボックスにフォーカス四角形を持つ項目のインデックスを調べます。|
@@ -162,7 +162,7 @@ class CListBox : public CWnd
 |[CListBox::InsertString](#insertstring)|リスト ボックス内の特定位置に文字列を挿入します。|
 |[CListBox::ItemFromPoint](#itemfrompoint)|ポイントに最も近いリスト ボックス項目のインデックスを返します。|
 |[CListBox::MeasureItem](#measureitem)|リスト ボックスのサイズを決定する、オーナー描画リスト ボックスが作成されるときに、フレームワークによって呼び出されます。|
-|[中](#resetcontent)|リスト ボックスからすべてのエントリをクリアします。|
+|[CListBox::ResetContent](#resetcontent)|リスト ボックスからすべてのエントリをクリアします。|
 |[CListBox::SelectString](#selectstring)|検索し、単一選択のリスト ボックスで文字列を選択します。|
 |[CListBox::SelItemRange](#selitemrange)|選択または複数選択のリスト ボックス内の文字列の範囲の選択を解除します。|
 |[CListBox::SetAnchorIndex](#setanchorindex)|拡張選択を開始する複数選択のリスト ボックスで、アンカーを設定します。|
@@ -525,7 +525,7 @@ Long ポインター、 [DRAWITEMSTRUCT](/windows/desktop/api/winuser/ns-winuser
 
 [!code-cpp[NVC_MFC_CListBox#9](../../mfc/codesnippet/cpp/clistbox-class_9.cpp)]
 
-##  <a name="findstring"></a>  Clistbox::findstring
+##  <a name="findstring"></a>  CListBox::FindString
 
 ボックスの一覧で選択を変更することがなく、指定したプレフィックスを含むリスト ボックス内の最初の文字列を検索します。
 
@@ -570,7 +570,7 @@ int FindStringExact(
 *nIndexStart*<br/>
 最初の項目を検索する前にある項目の 0 から始まるインデックスを指定します。 指定された項目に、リスト ボックスの上部から続行、検索では、リスト ボックスの下部に達すると、 *nIndexStart*します。 場合*nIndexStart* -1 で、最初からリスト ボックス全体が検索されます。
 
-*中から*<br/>
+*lpszFind*<br/>
 検索する null で終わる文字列へのポインター。 この文字列は、拡張子を含む、完全なファイル名を含めることができます。 検索は大文字小文字が区別はないため、文字列は、任意の大文字と小文字を含めることができます。
 
 ### <a name="return-value"></a>戻り値
@@ -1082,7 +1082,7 @@ Long ポインター、 [MEASUREITEMSTRUCT](/windows/desktop/api/winuser/ns-winu
 
 [!code-cpp[NVC_MFC_CListBox#25](../../mfc/codesnippet/cpp/clistbox-class_25.cpp)]
 
-##  <a name="resetcontent"></a>  中
+##  <a name="resetcontent"></a>  CListBox::ResetContent
 
 リスト ボックスからすべての項目を削除します。
 

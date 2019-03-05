@@ -6,12 +6,12 @@ helpviewer_keywords:
 - property sheets, modeless
 - Create method [MFC], property sheets
 ms.assetid: eafd8a92-cc67-4a69-a5fb-742c920d1ae8
-ms.openlocfilehash: 9012700ef145079cf01ee1eac1cee58449ab5b79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39285927b67091f5b8762dab56009712d806d259
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50524901"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302261"
 ---
 # <a name="creating-a-modeless-property-sheet"></a>モードレス プロパティ シートの作成
 
@@ -32,4 +32,3 @@ ms.locfileid: "50524901"
 [プロパティ シート](../mfc/property-sheets-mfc.md)<br/>
 [データの交換](../mfc/exchanging-data.md)<br/>
 [ダイアログ ボックスの有効期間](../mfc/life-cycle-of-a-dialog-box.md)
-

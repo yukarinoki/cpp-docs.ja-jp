@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], QueryCommand
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
-ms.openlocfilehash: d12ee07c9e36f52fc176066be0e91ce1a7307858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: af6d866298309f5ddb8eb21a5caeb3d1526b166a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659070"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57276287"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem クラス
 
@@ -58,7 +58,7 @@ class COleDocObjectItem : public COleClientItem
 |[COleDocObjectItem::GetActiveView](#getactiveview)|ドキュメントのアクティブなビューを取得します。|
 |[COleDocObjectItem::GetPageCount](#getpagecount)|コンテナー アプリケーションのドキュメントのページ数を取得します。|
 |[COleDocObjectItem::OnPreparePrinting](#onprepareprinting)|印刷用のコンテナー アプリケーションのドキュメントを準備します。|
-|[前述](#onprint)|コンテナー アプリケーションのドキュメントを印刷します。|
+|[COleDocObjectItem::OnPrint](#onprint)|コンテナー アプリケーションのドキュメントを印刷します。|
 |[COleDocObjectItem::QueryCommand](#querycommand)|ユーザー インターフェイスのイベントによって生成された 1 つ以上のコマンドの状態を調べるためにクエリを実行します。|
 |[COleDocObjectItem::Release](#release)|OLE リンク アイテムへの接続を解放し、開いていた場合に終了します。 クライアントの項目を破棄しません。|
 
@@ -107,7 +107,7 @@ COleDocObjectItem(COleDocument* pContainerDoc = NULL);
 *pContainerDoc*<br/>
 ポインター、 `COleDocument` active ドキュメント コンテナーとして機能するオブジェクト。 このパラメーターは、IMPLEMENT_SERIALIZE を有効にする NULL である必要があります。 通常、OLE アイテムは NULL でないドキュメント ポインターを使用して構築されます。
 
-##  <a name="dodefaultprinting"></a>  :Dodefaultprinting
+##  <a name="dodefaultprinting"></a>  COleDocObjectItem::DoDefaultPrinting
 
 既定の設定を使用してドキュメントに、フレームワークによって呼び出されます。
 
@@ -230,7 +230,7 @@ static BOOL OnPreparePrinting(
 
 正常終了した場合は 0 以外を返します。それ以外の場合は 0 を返します。
 
-##  <a name="onprint"></a>  前述
+##  <a name="onprint"></a>  COleDocObjectItem::OnPrint
 
 このメンバー関数は、ドキュメントを印刷するためにフレームワークによって呼び出されます。
 

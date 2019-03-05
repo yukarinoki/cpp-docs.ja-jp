@@ -7,12 +7,12 @@ helpviewer_keywords:
 - structures
 - structures, MFC
 ms.assetid: 2168fcc6-e800-4814-aabf-0bca86ff790d
-ms.openlocfilehash: 7e531937fc61898a6d2d432f74cb5608ea94fbc9
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: d91daeded9933abd73612a6a66a19a159bf36006
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893471"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277825"
 ---
 # <a name="structures-used-by-mfc"></a>MFC が使用する構造体
 
@@ -49,4 +49,3 @@ ms.locfileid: "54893471"
 ## <a name="see-also"></a>関連項目
 
 [構造体、スタイル、コールバック関数とメッセージ マップ](../../mfc/reference/structures-styles-callbacks-and-message-maps.md)
-

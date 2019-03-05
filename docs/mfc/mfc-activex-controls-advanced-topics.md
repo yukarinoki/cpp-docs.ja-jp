@@ -1,5 +1,5 @@
 ---
-title: 'MFC ActiveX コントロール : 高度なトピック'
+title: MFC ActiveX コントロール:詳細トピック
 ms.date: 09/12/2018
 helpviewer_keywords:
 - MFC ActiveX controls [MFC], error codes
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], parameterized property
 - ThrowError method [MFC]
 ms.assetid: e9e34abb-8e2d-461e-bb9c-a1aec5dcecbd
-ms.openlocfilehash: 607fd1c0ee5ae35f46ef26584f7f8e3ac2f1c32f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: df71e2e59763644bd4aefb5d3e3afa46f82f538a
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50645589"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277327"
 ---
-# <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX コントロール : 高度なトピック
+# <a name="mfc-activex-controls-advanced-topics"></a>MFC ActiveX コントロール:詳細トピック
 
-この記事では、ActiveX コントロールの開発に関連する高度なトピックについて説明します。 次の設定があります。
+この記事では、ActiveX コントロールの開発に関連する高度なトピックについて説明します。 不足している機能には次が含まれます。
 
 - [ActiveX コントロールにおけるデータベース クラスの使用](#_core_using_database_classes_in_activex_controls)
 
@@ -150,7 +150,7 @@ MFC データベース クラスの一般的な概要については、次を参
 |CTL_E_SEARCHTEXTNOTFOUND|検索文字列が見つかりませんでした|
 |CTL_E_REPLACEMENTSTOOLONG|置換後の文字列が長すぎます|
 
-必要に応じて、標準のコードのいずれかによってカバーされていない状態のカスタム エラー コードを定義するのに CUSTOM_CTL_SCODE マクロを使用します。 このマクロのパラメーターは、1000 までの整数をすることは 32767 です。 例えば:
+必要に応じて、標準のコードのいずれかによってカバーされていない状態のカスタム エラー コードを定義するのに CUSTOM_CTL_SCODE マクロを使用します。 このマクロのパラメーターは、1000 までの整数をすることは 32767 です。 例:
 
 [!code-cpp[NVC_MFC_AxUI#37](../mfc/codesnippet/cpp/mfc-activex-controls-advanced-topics_4.cpp)]
 
@@ -183,4 +183,3 @@ ActiveX コントロールのキーボード インターフェイスの処理�
 ## <a name="see-also"></a>関連項目
 
 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)
-

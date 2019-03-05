@@ -20,12 +20,12 @@ f1_keywords:
 helpviewer_keywords:
 - CThreadPool class
 ms.assetid: 06683718-01b9-413c-9481-2dc1734ec70f
-ms.openlocfilehash: b1cf1dfc623edbb2b6e71aa6476a2fe0cccbc20b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7d363de0d787ecc5015093005b39a379acd82e71
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677189"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262702"
 ---
 # <a name="cthreadpool-class"></a>CThreadPool クラス
 
@@ -53,7 +53,7 @@ class CThreadPool : public IThreadPoolConfig
 |名前|説明|
 |----------|-----------------|
 |[CThreadPool::CThreadPool](#cthreadpool)|スレッド プールのコンス トラクター。|
-|[CThreadPool:: ~ CThreadPool](#dtor)|スレッド プールのデストラクターです。|
+|[CThreadPool::~CThreadPool](#dtor)|スレッド プールのデストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -124,7 +124,7 @@ CThreadPool() throw();
 
 ATLS_DEFAULT_THREADPOOLSHUTDOWNTIMEOUT タイムアウトの値を初期化します。 既定の時間は、36 秒です。 Atlutil.h する前に、必要に応じて、このシンボルには、独自の正の整数値を定義できます。
 
-##  <a name="dtor"></a>  CThreadPool:: ~ CThreadPool
+##  <a name="dtor"></a>  CThreadPool::~CThreadPool
 
 スレッド プールのデストラクターです。
 
@@ -254,7 +254,7 @@ BOOL QueueRequest(Worker::RequestType request) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*要求*<br/>
+*request*<br/>
 キューに入れられる要求です。
 
 ### <a name="return-value"></a>戻り値

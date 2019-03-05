@@ -1,20 +1,21 @@
 ---
-title: '方法: combinable を使用してパフォーマンスを向上させる'
+title: '方法: パフォーマンスを向上させる combinable を使用して'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - combinable class, example
 - improving parallel performance with combinable [Concurrency Runtime]
 ms.assetid: fa730580-1c94-4b2d-8aec-57c91dc0497e
-ms.openlocfilehash: 5d68335046b08aa41028be11d833b334c1dc0055
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c8f4c40be84b2204e5b5632fe6d3d5a5d22b8719
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455265"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258126"
 ---
-# <a name="how-to-use-combinable-to-improve-performance"></a>方法: combinable を使用してパフォーマンスを向上させる
+# <a name="how-to-use-combinable-to-improve-performance"></a>方法: パフォーマンスを向上させる combinable を使用して
 
-この例は、使用する方法を示します、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラス内の数値の合計を計算する、 [std::array](../../standard-library/array-class-stl.md)素数であるオブジェクト。 `combinable` クラスは、共有状態を解消することでパフォーマンスを向上します。
+この例は、使用する方法を示します、 [concurrency::combinable](../../parallel/concrt/reference/combinable-class.md)クラス内の数値の合計を計算する、 [std::array](../../standard-library/array-class-stl.md)素数であるオブジェクト。 
+  `combinable` クラスは、共有状態を解消することでパフォーマンスを向上します。
 
 > [!TIP]
 >  場合によっては、並行してマップ ([concurrency::parallel_transform](reference/concurrency-namespace-functions.md#parallel_transform)) を削減し、([同時実行:: parallel_reduce](reference/concurrency-namespace-functions.md#parallel_reduce)) 経由でパフォーマンスの向上を実現できる`combinable`します。 使用にマップし、この例と同じ結果を生成するために操作を減らすため、例を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
@@ -33,7 +34,8 @@ ms.locfileid: "50455265"
 
 ## <a name="example"></a>例
 
-`combinable` オブジェクトを使用して、前の例のパフォーマンスを向上する例を次に示します。 この例では、同期オブジェクトが不要となっています。`combinable` オブジェクトを使用することにより、各スレッドがタスクを独立して実行できるため、効率が改善されます。
+
+  `combinable` オブジェクトを使用して、前の例のパフォーマンスを向上する例を次に示します。 この例では、同期オブジェクトが不要となっています。`combinable` オブジェクトを使用することにより、各スレッドがタスクを独立して実行できるため、効率が改善されます。
 
 通常、`combinable` オブジェクトは次の手順で使用します。 最初に、処理を並列で実行して、詳細な計算結果を生成します。 次に、この計算結果を結合 (換算) して最終結果を生成します。 この例では、 [concurrency::combinable::local](reference/combinable-class.md#local)ローカルの合計への参照を取得します。 使用して、 [concurrency::combinable::combine](reference/combinable-class.md#combine)メソッドをおよび[:plus](../../standard-library/plus-struct.md)ローカルの計算を最終結果を結合するオブジェクト。
 
@@ -59,7 +61,7 @@ parallel time: 1638 ms
 
 コードをコンパイルするにコピーし、Visual Studio プロジェクトに貼り付けるかという名前のファイルに貼り付ける`parallel-sum-of-primes.cpp`Visual Studio コマンド プロンプト ウィンドウで、次のコマンドを実行します。
 
-**cl.exe/EHsc 並列の合計-の-います**
+**cl.exe /EHsc parallel-sum-of-primes.cpp**
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 

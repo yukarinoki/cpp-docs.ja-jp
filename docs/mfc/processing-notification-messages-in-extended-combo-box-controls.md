@@ -5,12 +5,12 @@ helpviewer_keywords:
 - extended combo boxes [MFC], notifications
 - notifications [MFC], extended combo box controls
 ms.assetid: 4e442758-d054-4746-bb1a-6ff84accb127
-ms.openlocfilehash: 6a007af9bf92868049edba99943e080d509a40da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1890267f26ef43fd1dbf8fdea28f02e3d882d475
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430995"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57280746"
 ---
 # <a name="processing-notification-messages-in-extended-combo-box-controls"></a>拡張コンボ ボックス コントロールでの通知メッセージの処理
 
@@ -36,4 +36,3 @@ ms.locfileid: "50430995"
 
 [CComboBoxEx の使い方](../mfc/using-ccomboboxex.md)<br/>
 [コントロール](../mfc/controls-mfc.md)
-

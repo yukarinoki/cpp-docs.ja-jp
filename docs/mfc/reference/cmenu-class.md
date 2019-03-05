@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: 2834de457ce9e2a71537e706f0fdf84463b16a8d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178924"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293863"
 ---
 # <a name="cmenu-class"></a>CMenu クラス
 
@@ -119,7 +119,7 @@ class CMenu : public CObject
 |[CMenu::CheckMenuRadioItem](#checkmenuradioitem)|メニュー項目の横にあるラジオ ボタンを配置し、グループ内の他のメニュー項目のすべてのラジオ ボタンを削除します。|
 |[CMenu::CreateMenu](#createmenu)|空のメニューを作成し、それにアタッチします、`CMenu`オブジェクト。|
 |[CMenu::CreatePopupMenu](#createpopupmenu)|空のポップアップ メニューを作成しにアタッチします、`CMenu`オブジェクト。|
-|[なる](#deletemenu)|メニューから、指定した項目を削除します。 メニュー項目に関連付けられたポップアップ メニューがある場合は、ポップアップ メニューへのハンドルを破棄し、使用されるメモリを解放します。|
+|[CMenu::DeleteMenu](#deletemenu)|メニューから、指定した項目を削除します。 メニュー項目に関連付けられたポップアップ メニューがある場合は、ポップアップ メニューへのハンドルを破棄し、使用されるメモリを解放します。|
 |[CMenu::DeleteTempMap](#deletetempmap)|一時的な削除`CMenu`によって作成されたオブジェクト、`FromHandle`メンバー関数。|
 |[メニューを破棄](#destroymenu)|アタッチされているメニューの破棄、`CMenu`オブジェクトし、メニューが占有されているメモリを解放します。|
 |[CMenu::Detach](#detach)|Windows メニュー ハンドルをデタッチする`CMenu`オブジェクトおよびハンドルを返します。|
@@ -348,7 +348,7 @@ BOOL CheckMenuRadioItem(
 
 ### <a name="parameters"></a>パラメーター
 
-*のど*<br/>
+*nIDFirst*<br/>
 指定します (ID またはの値に応じて、オフセットとして*nFlags*) ラジオ ボタン グループの最初のメニュー項目。
 
 *nIDLast*<br/>
@@ -397,7 +397,7 @@ CMenu();
 
 - [LoadMenuIndirect](#loadmenuindirect)
 
-- [添付](#attach)
+- [Attach](#attach)
 
 ##  <a name="createmenu"></a>  CMenu::CreateMenu
 
@@ -447,7 +447,7 @@ BOOL CreatePopupMenu();
 
   例をご覧ください[CMenu::CreateMenu](#createmenu)します。
 
-##  <a name="deletemenu"></a>  なる
+##  <a name="deletemenu"></a>  CMenu::DeleteMenu
 
 メニューから項目を削除します。
 
@@ -459,7 +459,7 @@ BOOL DeleteMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*照合を n 続行*<br/>
+*nPosition*<br/>
 によって決定される、削除するにはメニュー アイテムを指定します*nFlags*します。
 
 *nFlags*<br/>
@@ -500,7 +500,7 @@ static void PASCAL DeleteTempMap();
 
 [!code-cpp[NVC_MFCWindowing#23](../../mfc/reference/codesnippet/cpp/cmenu-class_3.cpp)]
 
-##  <a name="destroymenu"></a>  メニューを破棄
+##  <a name="destroymenu"></a>  CMenu::DestroyMenu
 
 メニューと使用されていたすべての Windows リソースを破棄します。
 
@@ -929,7 +929,7 @@ BOOL InsertMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*照合を n 続行*<br/>
+*nPosition*<br/>
 その前に、新しいメニュー項目が挿入されるメニュー項目を指定します。 *NFlags*の解釈にパラメーターを使用できる*照合を n 続行*次の方法で。
 
 |nFlags|照合を n 続行の解釈|
@@ -1118,7 +1118,7 @@ BOOL ModifyMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*照合を n 続行*<br/>
+*nPosition*<br/>
 変更するメニュー項目を指定します。 *NFlags*の解釈にパラメーターを使用できる*照合を n 続行*次の方法で。
 
 |nFlags|照合を n 続行の解釈|
@@ -1222,7 +1222,7 @@ BOOL RemoveMenu(
 
 ### <a name="parameters"></a>パラメーター
 
-*照合を n 続行*<br/>
+*nPosition*<br/>
 削除するメニュー項目を指定します。 *NFlags*の解釈にパラメーターを使用できる*照合を n 続行*次の方法で。
 
 |nFlags|照合を n 続行の解釈|
@@ -1337,7 +1337,7 @@ BOOL SetMenuItemBitmaps(
 
 ### <a name="parameters"></a>パラメーター
 
-*照合を n 続行*<br/>
+*nPosition*<br/>
 変更するメニュー項目を指定します。 *NFlags*の解釈にパラメーターを使用できる*照合を n 続行*次の方法で。
 
 |nFlags|照合を n 続行の解釈|

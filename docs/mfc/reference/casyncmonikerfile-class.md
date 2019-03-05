@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CAsyncMonikerFile [MFC], OnStartBinding
 - CAsyncMonikerFile [MFC], OnStopBinding
 ms.assetid: 17378b66-a49a-4b67-88e3-7756ad26a2fc
-ms.openlocfilehash: 107f791505bc41b8dbf9c0374c5e3821abbc0fe3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 48d7c3b5dd1b43c7a1639c6d5c56979b422d7017
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669067"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262624"
 ---
 # <a name="casyncmonikerfile-class"></a>CAsyncMonikerFile クラス
 
@@ -87,9 +87,9 @@ class CAsyncMonikerFile : public CMonikerFile
 
 インターネット アプリケーションで非同期モニカーと ActiveX コントロールを使用する方法の詳細については、次の記事を参照してください。
 
-- [最初のステップ: インターネット非同期モニカー](../../mfc/asynchronous-monikers-on-the-internet.md)
+- [インターネット最初のステップ:非同期モニカー](../../mfc/asynchronous-monikers-on-the-internet.md)
 
-- [インターネット最初のステップ: ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)
+- [インターネット最初のステップ:ActiveX コントロール](../../mfc/activex-controls-on-the-internet.md)
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -218,7 +218,7 @@ virtual LONG GetPriority() const;
 
 ### <a name="return-value"></a>戻り値
 
-優先順位が非同期転送が実行されます。 標準スレッドの優先順位フラグのいずれか: THREAD_PRIORITY_ABOVE_NORMAL、THREAD_PRIORITY_BELOW_NORMAL、THREAD_PRIORITY_HIGHEST、THREAD_PRIORITY_IDLE、THREAD_PRIORITY_LOWEST、THREAD_PRIORITY_NORMAL、および THREAD_PRIORITY_TIME_CRITICAL します。 Windows 関数を参照してください。 [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)のこれらの値の説明。
+優先順位が非同期転送が実行されます。 標準スレッドの優先順位フラグのいずれか:THREAD_PRIORITY_ABOVE_NORMAL、THREAD_PRIORITY_BELOW_NORMAL、THREAD_PRIORITY_HIGHEST、THREAD_PRIORITY_IDLE、THREAD_PRIORITY_LOWEST、THREAD_PRIORITY_NORMAL、および THREAD_PRIORITY_TIME_CRITICAL します。 Windows 関数を参照してください。 [SetThreadPriority](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-setthreadpriority)のこれらの値の説明。
 
 ### <a name="remarks"></a>Remarks
 
@@ -234,7 +234,7 @@ virtual void OnDataAvailable(DWORD dwSize, DWORD bscfFlag);
 
 ### <a name="parameters"></a>パラメーター
 
-*ない dwSize*<br/>
+*dwSize*<br/>
 バインディングの当初から使用可能なデータのバイト単位で累積時間。 データの量が、操作に関連するではないこと、または特定の量が利用できないことを示す、0 にすることができます。
 
 *bscfFlag*<br/>
@@ -414,7 +414,7 @@ virtual BOOL Open(
 
 この呼び出しは、バインディング プロセスを開始します。
 
-URL またはファイルの名前を使用することができます、 *lpszURL*パラメーター。 例えば:
+URL またはファイルの名前を使用することができます、 *lpszURL*パラメーター。 例:
 
 [!code-cpp[NVC_MFCWinInet#6](../../mfc/codesnippet/cpp/casyncmonikerfile-class_2.cpp)]
 

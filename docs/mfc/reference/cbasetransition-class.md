@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: b4c15be574700730e847bce06aaa4a6f82aed4b0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539127"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57258373"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition クラス
 
@@ -74,7 +74,7 @@ class CBaseTransition : public CObject;
 |名前|説明|
 |----------|-----------------|
 |[CBaseTransition::CBaseTransition](#cbasetransition)|切り替え効果の基本オブジェクトを構築します。|
-|[CBaseTransition:: ~ CBaseTransition](#cbasetransition__~cbasetransition)|デストラクターです。 移行のオブジェクトが破棄されるときに呼び出されます。|
+|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|デストラクターです。 移行のオブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -90,7 +90,7 @@ class CBaseTransition : public CObject;
 |[CBaseTransition::GetTransition](#gettransition)|オーバーロードされます。 基になる COM 遷移オブジェクトへのポインターを返します。|
 |[CBaseTransition::GetType](#gettype)|型を返しますに移行します。|
 |[CBaseTransition::IsAdded](#isadded)|遷移がストーリー ボードに追加されたかどうかを指示します。|
-|[:Setkeyframes](#setkeyframes)|移行するためのキーフレームを設定します。|
+|[CBaseTransition::SetKeyframes](#setkeyframes)|移行するためのキーフレームを設定します。|
 |[CBaseTransition::SetRelatedVariable](#setrelatedvariable)|アニメーション変数と遷移の間の関係を確立します。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
@@ -370,7 +370,7 @@ ATL::CComPtr<IUIAnimationTransition> m_transition;
 TRANSITION_TYPE m_type;
 ```
 
-##  <a name="setkeyframes"></a>  :Setkeyframes
+##  <a name="setkeyframes"></a>  CBaseTransition::SetKeyframes
 
 移行するためのキーフレームを設定します。
 

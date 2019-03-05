@@ -1,5 +1,5 @@
 ---
-title: 'クリップボード : OLE クリップボード機構の使用方法'
+title: クリップボード:OLE クリップボード機構の使用方法
 ms.date: 11/04/2016
 helpviewer_keywords:
 - applications [OLE], Clipboard
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - OLE Clipboard, formats
 - formats [MFC], Clipboard for OLE
 ms.assetid: 229cc610-5bb1-435e-bd20-2c8b9964d1af
-ms.openlocfilehash: 3dadd2ae6774c684fe751e02fb3a80570accd30a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8ef93b306c0968adf2c23c841c792d2f7af5de3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661449"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262253"
 ---
-# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>クリップボード : OLE クリップボード機構の使用方法
+# <a name="clipboard-using-the-ole-clipboard-mechanism"></a>クリップボード:OLE クリップボード機構の使用方法
 
 OLE は、クリップボードを使用してデータを転送するための標準形式といくつかの特定の OLE 形式を使用します。
 
@@ -46,4 +46,3 @@ Windows では、さまざまなクリップボードを使用してデータを
 ## <a name="see-also"></a>関連項目
 
 [クリップボード](../mfc/clipboard.md)
-

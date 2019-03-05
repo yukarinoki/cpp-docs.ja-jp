@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 9e2df5117f6cbb96c69f54fe9e21f85b45218d6d
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178981"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302502"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 
@@ -220,7 +220,7 @@ class CToolBarCtrl : public CWnd
 |[CToolBarCtrl::CheckButton](#checkbutton)|チェックまたはツール バー コントロールで指定したボタンをクリアします。|
 |[CToolBarCtrl::CommandToIndex](#commandtoindex)|指定されたコマンド id に関連付けられているボタンの 0 から始まるインデックスを取得します。|
 |[CToolBarCtrl::Create](#create)|ツール バー コントロールを作成しにアタッチします、`CToolBarCtrl`オブジェクト。|
-|[するに](#createex)|指定した Windows の拡張スタイルを使用してツール バー コントロールを作成しにアタッチします、`CToolBarCtrl`オブジェクト。|
+|[CToolBarCtrl::CreateEx](#createex)|指定した Windows の拡張スタイルを使用してツール バー コントロールを作成しにアタッチします、`CToolBarCtrl`オブジェクト。|
 |[CToolBarCtrl::Customize](#customize)|ツールバーのカスタマイズ ダイアログ ボックスが表示されます。|
 |[CToolBarCtrl::DeleteButton](#deletebutton)|ツール バー コントロールからボタンを削除します。|
 |[CToolBarCtrl::EnableButton](#enablebutton)|有効またはツール バー コントロールの指定したボタンを無効にします。|
@@ -659,7 +659,7 @@ virtual BOOL Create(
 
 ツール バー コントロールは、ツールバー、ウィンドウの位置とサイズを自動的に設定します。 高さは、ツールバーのボタンの高さに基づきます。 幅では、親ウィンドウのクライアント領域の幅と同じです。 CCS_TOP と CCS_BOTTOM スタイルでは、上部または下部にあるクライアント領域のツールバーが配置されているかどうかを決定します。 既定では、CCS_TOP スタイルが、ツールバーにあります。
 
-##  <a name="createex"></a>  するに
+##  <a name="createex"></a>  CToolBarCtrl::CreateEx
 
 コントロール (子ウィンドウ) を作成しに関連付けます、`CToolBarCtrl`オブジェクト。
 
@@ -1266,7 +1266,7 @@ int GetString(
 
 ### <a name="parameters"></a>パラメーター
 
-*文字列*<br/>
+*nString*<br/>
 文字列のインデックス。
 
 *lpstrString*<br/>
@@ -2326,7 +2326,7 @@ BOOL SetState(
 *nID*<br/>
 ボタンのコマンド id。
 
-*状態*<br/>
+*nState*<br/>
 状態フラグ。 ボタンの状態に指定された値の組み合わせができる[CToolBarCtrl::AddButtons](#addbuttons)します。
 
 ### <a name="return-value"></a>戻り値

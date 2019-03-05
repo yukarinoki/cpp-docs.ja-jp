@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - IUMSThreadProxy structure
 ms.assetid: 61c69b7e-5c37-4048-bcb4-e75c536afd86
-ms.openlocfilehash: 9a0fca40f353f64799c4df9001952cb668cd0678
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 258f249aa178b73da2080cca888409dc07f63dbb
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657130"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263036"
 ---
 # <a name="iumsthreadproxy-structure"></a>IUMSThreadProxy 構造体
 
@@ -36,7 +36,7 @@ struct IUMSThreadProxy : public IThreadProxy;
 |名前|説明|
 |----------|-----------------|
 |[IUMSThreadProxy::EnterCriticalRegion](#entercriticalregion)|重要な領域を入力するために呼び出されます。 クリティカル領域内で、スケジューラは、リージョンの中に発生する非同期のブロック操作を確認しません。 これは、スケジューラがページ フォールトやスレッドの中断、カーネルの非同期プロシージャ コール (Apc) など、UMS スレッドの再入力しないはことを意味します。|
-|[Iumsthreadproxy::enterhypercriticalregion](#enterhypercriticalregion)|ハイパー クリティカル領域を入力するために呼び出されます。 Hyper クリティカル領域内で、スケジューラは、リージョンの中に発生するブロッキング操作を確認しません。 これは、スケジューラが関数呼び出し、ブロック、ページ フォールト、スレッドの中断、カーネルの非同期プロシージャ コール (Apc) となど、UMS スレッドのロック獲得の試行をブロックするため再入力するはないことを意味します。|
+|[IUMSThreadProxy::EnterHyperCriticalRegion](#enterhypercriticalregion)|ハイパー クリティカル領域を入力するために呼び出されます。 Hyper クリティカル領域内で、スケジューラは、リージョンの中に発生するブロッキング操作を確認しません。 これは、スケジューラが関数呼び出し、ブロック、ページ フォールト、スレッドの中断、カーネルの非同期プロシージャ コール (Apc) となど、UMS スレッドのロック獲得の試行をブロックするため再入力するはないことを意味します。|
 |[IUMSThreadProxy::ExitCriticalRegion](#exitcriticalregion)|重要な領域を終了するために呼び出されます。|
 |[IUMSThreadProxy::ExitHyperCriticalRegion](#exithypercriticalregion)|ハイパー クリティカル領域を終了するために呼び出されます。|
 |[IUMSThreadProxy::GetCriticalRegionType](#getcriticalregiontype)|内のスレッド プロキシは、クリティカル領域の種類を返します。 クリティカル領域とし、ハイパー クリティカル領域では、コードを入力した場合、ハイパー クリティカル領域はクリティカル領域は、のスーパー セットであるため`InsideHyperCriticalRegion`が返されます。|

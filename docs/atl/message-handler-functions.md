@@ -14,12 +14,12 @@ helpviewer_keywords:
 - NOTIFY_HANDLER macro, message handler functions
 - ATL, message handlers
 ms.assetid: 2007a8c5-0143-42f1-91ab-809f235f9d50
-ms.openlocfilehash: 75fe032be1a32b0eacbc5914c41ad8ef1200a029
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 3baafb6ffaaf4bc974d4a5de2fcbaed9fdebf454
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694674"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283164"
 ---
 # <a name="message-handler-functions"></a>メッセージ ハンドラー関数
 
@@ -36,4 +36,3 @@ ATL には、次の 3 つの種類のメッセージ ハンドラー関数が用
 [ウィンドウの実装](../atl/implementing-a-window.md)<br/>
 [メッセージ マップ](../atl/message-maps-atl.md)<br/>
 [WM_NOTIFY](/windows/desktop/controls/wm-notify)
-

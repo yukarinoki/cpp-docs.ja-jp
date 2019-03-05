@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: c8c8971e467b2b8063bb5bb5d8e953fc48bcc42e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666103"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283606"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl クラス
 
@@ -705,7 +705,7 @@ void SetThumbLength(int nLength);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*されて*|[in]ピクセル単位で、スライダーの長さ。|
+|*nLength*|[in]ピクセル単位で、スライダーの長さ。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -771,7 +771,7 @@ int SetTipSide(int nLocation);
 
 ### <a name="parameters"></a>パラメーター
 
-*%n 場所*<br/>
+*nLocation*<br/>
 ツール ヒント コントロールを表示する位置を表す値。 使用可能な値の一覧は、Win32 メッセージを参照してください。 [TBM_SETTIPSIDE](/windows/desktop/Controls/tbm-settipside)」の説明に従って、Windows SDK。
 
 ### <a name="return-value"></a>戻り値

@@ -2,12 +2,12 @@
 title: OpenMP C および C++ アプリケーション プログラミング インターフェイス
 ms.date: 11/04/2016
 ms.assetid: efec8865-a755-452f-838f-ddbfecab44d4
-ms.openlocfilehash: 749d4a0a4fcbeed1f8cb61108c5b4d13dcdc3047
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c389029b6e9d2690899e086a59c6e023288e4b4d
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481693"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57290210"
 ---
 # <a name="openmp-c-and-c-application-program-interface"></a>OpenMP C および C++ アプリケーション プログラミング インターフェイス
 

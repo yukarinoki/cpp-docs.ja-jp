@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CPropertySheet [MFC], SetWizardMode
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
-ms.openlocfilehash: 8ea466abe153bd31ef15c41b277b57f90cd2b50b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c5fd3a682aa649091712a09a9131081c06d29ca6
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450935"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300623"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet クラス
 
@@ -81,7 +81,7 @@ class CPropertySheet : public CWnd
 
 |名前|説明|
 |----------|-----------------|
-|[が](#addpage)|プロパティ シートにページを追加します。|
+|[CPropertySheet::AddPage](#addpage)|プロパティ シートにページを追加します。|
 |[まず、](#construct)|`CPropertySheet` オブジェクトを構築します。|
 |[CPropertySheet::Create](#create)|モードレス プロパティ シートを表示します。|
 |[する](#domodal)|モーダル プロパティ シートを表示します。|
@@ -94,7 +94,7 @@ class CPropertySheet : public CWnd
 |[CPropertySheet::GetPageIndex](#getpageindex)|プロパティ シートの指定したページのインデックスを取得します。|
 |[CPropertySheet::GetTabControl](#gettabcontrol)|タブ コントロールへのポインターを取得します。|
 |[CPropertySheet::MapDialogRect](#mapdialogrect)|四角形の単位 ダイアログ ボックスを画面の単位に変換します。|
-|[Cpropertysheet::oninitdialog](#oninitdialog)|プロパティ シートの初期化処理の強化をオーバーライドします。|
+|[CPropertySheet::OnInitDialog](#oninitdialog)|プロパティ シートの初期化処理の強化をオーバーライドします。|
 |[CPropertySheet::PressButton](#pressbutton)|プロパティ シートの指定したボタンの選択をシミュレートします。|
 |[CPropertySheet::RemovePage](#removepage)|プロパティ シートからページを削除します。|
 |[CPropertySheet::SetActivePage](#setactivepage)|アクティブ ページ オブジェクトをプログラムで設定します。|
@@ -117,7 +117,7 @@ class CPropertySheet : public CWnd
 
 プロパティ シート オブジェクトに自動的にこれらの新しいイメージを表示するへの呼び出しでビットマップとパレットのイメージの有効な値を渡す[まず、](#construct)または[呼び出します](#cpropertysheet).
 
-でも`CPropertySheet`から派生していない[CDialog](../../mfc/reference/cdialog-class.md)、管理、`CPropertySheet`管理などのオブジェクトが、`CDialog`オブジェクト。 たとえば、プロパティ シートの作成には 2 つの部分の構築が必要です: コンス トラクターを呼び出します[DoModal](#domodal)モーダル プロパティ シートまたは[作成](#create)モードレス プロパティ シート。 `CPropertySheet` コンス トラクターの 2 つの種類があります:[まず、](#construct)と[呼び出します](#cpropertysheet)します。
+でも`CPropertySheet`から派生していない[CDialog](../../mfc/reference/cdialog-class.md)、管理、`CPropertySheet`管理などのオブジェクトが、`CDialog`オブジェクト。 たとえば、プロパティ シートの作成には 2 つの部分の構築が必要です: コンス トラクターを呼び出します[DoModal](#domodal)モーダル プロパティ シートまたは[作成](#create)モードレス プロパティ シート。 `CPropertySheet` コンス トラクターの 2 種類があります。[まず、](#construct)と[呼び出します](#cpropertysheet)します。
 
 構築する際に、`CPropertySheet`オブジェクトに、いくつか[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)が発生する初回例外が発生することができます。 これは、結果、シートを作成する前に、プロパティ シートのスタイルを変更しようとしました。 システムからです。 この例外を回避するために、作成するときに、次のスタイルを設定することを確認、 `CPropertySheet`:
 
@@ -161,7 +161,7 @@ class CPropertySheet : public CWnd
 
 **ヘッダー:** afxdlgs.h
 
-##  <a name="addpage"></a>  が
+##  <a name="addpage"></a>  CPropertySheet::AddPage
 
 プロパティ シートで指定した右端のタブ ページを追加します。
 
@@ -190,7 +190,7 @@ void AddPage(CPropertyPage* pPage);
 
 [!code-cpp[NVC_MFCDocView#129](../../mfc/codesnippet/cpp/cpropertysheet-class_1.cpp)]
 
-##  <a name="construct"></a>  まず、
+##  <a name="construct"></a>  CPropertySheet::Construct
 
 `CPropertySheet` オブジェクトを構築します。
 
@@ -259,7 +259,7 @@ void Construct(
 
 [!code-cpp[NVC_MFCDocView#130](../../mfc/codesnippet/cpp/cpropertysheet-class_2.cpp)]
 
-##  <a name="cpropertysheet"></a>  呼び出します
+##  <a name="cpropertysheet"></a>  CPropertySheet::CPropertySheet
 
 `CPropertySheet` オブジェクトを構築します。
 
@@ -371,7 +371,7 @@ virtual BOOL Create(CWnd* pParentWnd = NULL,
 
 [!code-cpp[NVC_MFCDocView#133](../../mfc/codesnippet/cpp/cpropertysheet-class_5.cpp)]
 
-##  <a name="domodal"></a>  する
+##  <a name="domodal"></a>  CPropertySheet::DoModal
 
 モーダル プロパティ シートを表示します。
 
@@ -510,7 +510,7 @@ CPropertyPage* GetPage(int nPage) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 0 から始まる、目的のページのインデックス。 0 と 1 つの包括的に、プロパティ シートのページ数よりも小さいの間である必要があります。
 
 ### <a name="return-value"></a>戻り値
@@ -617,7 +617,7 @@ void MapDialogRect(LPRECT lpRect) const;
 
 `MapDialogRect`メンバー関数は、ダイアログ ボックスの単位*lpRect*で画面の単位 (ピクセル単位) ダイアログ ボックスを作成したり、ボックス内のコントロールの位置四角形を使用できるようにします。
 
-##  <a name="oninitdialog"></a>  Cpropertysheet::oninitdialog
+##  <a name="oninitdialog"></a>  CPropertySheet::OnInitDialog
 
 プロパティ シートの初期化処理を強化するよりも優先されます。
 
@@ -648,7 +648,7 @@ void PressButton(int nButton);
 ### <a name="parameters"></a>パラメーター
 
 *n ボタン*<br/>
-n ボタン: ボタンが押されるを識別します。 このパラメーターには、次の値のいずれかを指定できます。
+n ボタン:ボタンが押されるを識別します。 このパラメーターには、次の値のいずれかを指定できます。
 
 - PSBTN_BACK では、[戻る] ボタンを選択します。
 
@@ -688,7 +688,7 @@ void RemovePage(int nPage);
 *pPage*<br/>
 プロパティ シートから削除するページへのポインター。 Nll は指定できません。
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 削除するページのインデックス。 0 と 1 つの包括的に、プロパティ シートのページ数よりも小さいの間である必要があります。
 
 ### <a name="remarks"></a>Remarks
@@ -706,7 +706,7 @@ BOOL SetActivePage(CPropertyPage* pPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 設定するページのインデックス。 0 と 1 つの包括的に、プロパティ シートのページ数よりも小さいかでなければなりません。
 
 *pPage*<br/>

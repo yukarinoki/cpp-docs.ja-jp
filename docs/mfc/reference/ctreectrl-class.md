@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: cc98a2e24fbb3eaff94e4c941986080d0bdbd7ef
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477949"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57271399"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -398,7 +398,7 @@ CImageList* CreateDragImage(HTREEITEM hItem);
 
 アプリケーションでは、項目がドラッグされているときに、イメージを表示するのにイメージ リストの関数を使用します。
 
-`CImageList`オブジェクトが永続的であり、作業完了後に削除する必要があります。 例えば:
+`CImageList`オブジェクトが永続的であり、作業完了後に削除する必要があります。 例:
 
 [!code-cpp[NVC_MFC_CTreeCtrl#2](../../mfc/reference/codesnippet/cpp/ctreectrl-class_2.cpp)]
 
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *hItem*<br/>
 イメージが取得するアイテムのハンドル。
 
-*あり*<br/>
+*nImage*<br/>
 ツリー ビュー コントロールのイメージ リスト内の項目のイメージのインデックスを受け取る整数。
 
 *nSelectedImage*<br/>
@@ -956,7 +956,7 @@ UINT GetItemState(
 *hItem*<br/>
 状態を取得するアイテムのハンドル。
 
-*取得*<br/>
+*nStateMask*<br/>
 1 つまたは複数の状態を取得するかを示すマスク。 指定できる値の詳細については*取得*の説明を参照してください、`state`と`stateMask`のメンバー、 [TVITEM](/windows/desktop/api/commctrl/ns-commctrl-tagtvitema) Windows SDK の構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1427,16 +1427,16 @@ HTREEITEM InsertItem(
 *lpszItem*<br/>
 項目のテキストを含む文字列のアドレス。
 
-*あり*<br/>
+*nImage*<br/>
 ツリー ビュー コントロールのイメージ リスト内の項目のイメージのインデックス。
 
 *nSelectedImage*<br/>
 ツリー ビュー コントロールのイメージ リスト内の項目の選択したイメージのインデックス。
 
-*状態*<br/>
+*nState*<br/>
 項目の状態の値を指定します。 「ツリー ビュー コントロール項目の状態で適切な状態の一覧については、Windows SDK。
 
-*取得*<br/>
+*nStateMask*<br/>
 どの状態に設定するのを指定します。 参照してください、 `TVITEM` Windows SDK の構造体。
 
 *lParam*<br/>
@@ -1925,16 +1925,16 @@ BOOL SetItem(
 *lpszItem*<br/>
 項目のテキストを含む文字列のアドレス。
 
-*あり*<br/>
+*nImage*<br/>
 ツリー ビュー コントロールのイメージ リスト内の項目のイメージのインデックス。 参照してください、`iImage`のメンバー、`TVITEM`構造体。
 
 *nSelectedImage*<br/>
 ツリー ビュー コントロールのイメージ リスト内の項目の選択したイメージのインデックス。 参照してください、`iSelectedImage`のメンバー、`TVITEM`構造体。
 
-*状態*<br/>
+*nState*<br/>
 項目の状態の値を指定します。 参照してください、`State`のメンバー、`TVITEM`構造体。
 
-*取得*<br/>
+*nStateMask*<br/>
 どの状態に設定するのを指定します。 参照してください、`stateMask`のメンバー、`TVITEM`構造体。
 
 *lParam*<br/>
@@ -1969,7 +1969,7 @@ BOOL SetItemData(
 *hItem*<br/>
 データを取得するアイテムのハンドル。
 
-*指定*<br/>
+*dwData*<br/>
 指定された項目に関連付けられている 32 ビット アプリケーションに固有値*hItem*します。
 
 ### <a name="return-value"></a>戻り値
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *hItem*<br/>
 イメージが設定されるアイテムのハンドル。
 
-*あり*<br/>
+*nImage*<br/>
 ツリー ビュー コントロールのイメージ リスト内の項目のイメージのインデックス。
 
 *nSelectedImage*<br/>
@@ -2092,10 +2092,10 @@ BOOL SetItemState(
 *hItem*<br/>
 状態を設定するアイテムのハンドル。
 
-*状態*<br/>
+*nState*<br/>
 項目の新しい状態を指定します。
 
-*取得*<br/>
+*nStateMask*<br/>
 どの状態が変更するかを指定します。
 
 ### <a name="return-value"></a>戻り値

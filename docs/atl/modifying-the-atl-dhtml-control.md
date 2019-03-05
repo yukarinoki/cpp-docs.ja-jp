@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DHTML controls
 - DHTML controls, modifying
 ms.assetid: c053f35f-8629-4600-9595-721f5956777a
-ms.openlocfilehash: 2a16ad50911185c27906eee27902cee9971932c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6c8976c013d0114a3115d3b0bc38fa4bc6acb5b7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493679"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275689"
 ---
 # <a name="modifying-the-atl-dhtml-control"></a>ATL DHTML コントロールの変更
 
@@ -49,7 +49,7 @@ ATL コントロール ウィザードは、ビルドして、コントロール
 
    HTML、特に、外部の Windows ディスパッチ メソッドの呼び出しを確認します。 HTML の呼び出し、プロジェクトの`OnClick`メソッドとパラメーターは、コントロールの本体を示します (`theBody`) と色を割り当てる ("`red`")。 メソッドの呼び出しに続くテキストは、ボタンに表示されるラベルです。
 
-1. もう 1 つ追加`OnClick`メソッド、色の変更のみです。 例えば:
+1. もう 1 つ追加`OnClick`メソッド、色の変更のみです。 例:
 
     ```html
     <br>
@@ -59,7 +59,7 @@ ATL コントロール ウィザードは、ビルドして、コントロール
 
    このメソッドでは、ラベルのボタンを作成します。**更新**、ユーザーがコントロールを、元の白い背景に返されるクリックできます。
 
-1. 呼び出しを追加、`HelloHTML`メソッドを作成します。 例えば:
+1. 呼び出しを追加、`HelloHTML`メソッドを作成します。 例:
 
     ```html
     <br>

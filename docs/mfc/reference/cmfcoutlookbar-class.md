@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: fd865d888a4ebe4504f19282d3c98ce8d7514e2c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622626"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304081"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar クラス
 
@@ -61,7 +61,7 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 |名前|説明|
 |----------|-----------------|
-|`CMFCOutlookBar::CMFCOutlookBar`|既定のコンストラクター|
+|`CMFCOutlookBar::CMFCOutlookBar`|既定のコンストラクターです。|
 |`CMFCOutlookBar::~CMFCOutlookBar`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -89,13 +89,14 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Remarks
 
-Outlook バーの例は、次を参照してください。、 [OutlookDemo サンプル: MFC OutlookDemo アプリケーション](../../visual-cpp-samples.md)します。
+Outlook バーの例は、次を参照してください。、 [OutlookDemo サンプル。MFC OutlookDemo アプリケーション](../../visual-cpp-samples.md)します。
 
 ## <a name="implementing-the-outlook-bar"></a>Outlook バーを実装します。
 
 アプリケーションで、`CMFCOutlookBar` コントロールを使用するには、次の手順に従います。
 
-1. `CMFCOutlookBar` オブジェクトをメイン フレーム ウィンドウ クラスに埋め込みます。
+1. 
+  `CMFCOutlookBar` オブジェクトをメイン フレーム ウィンドウ クラスに埋め込みます。
 
     ```cpp
     class CMainFrame : public CMDIFrameWnd
@@ -458,7 +459,7 @@ virtual void OnAfterAnimation(int nPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [in]アクティブになっているタブ ページの 0 から始まるインデックス。
 
 ### <a name="remarks"></a>Remarks
@@ -475,7 +476,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [in]アクティブ設定しようとしているタブ ページの 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値

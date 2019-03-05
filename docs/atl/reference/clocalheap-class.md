@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - CLocalHeap class
 ms.assetid: 1ffa87a5-5fc8-4f8d-8809-58e87e963bd2
-ms.openlocfilehash: 7f4fa6b6035b9f0dda35a8e989192505ccf126d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 53288bea8a50f62437eab4dd81d5d816abf78f44
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515467"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283086"
 ---
 # <a name="clocalheap-class"></a>CLocalHeap クラス
 
@@ -37,10 +37,10 @@ class CLocalHeap : public IAtlMemMgr
 
 |名前|説明|
 |----------|-----------------|
-|[Clocalheap::allocate](#allocate)|メモリ ブロックを割り当てるには、このメソッドを呼び出します。|
-|[Clocalheap::free](#free)|このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。|
+|[CLocalHeap::Allocate](#allocate)|メモリ ブロックを割り当てるには、このメソッドを呼び出します。|
+|[CLocalHeap::Free](#free)|このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。|
 |[CLocalHeap::GetSize](#getsize)|このメモリ マネージャーによって割り当てられたメモリ ブロックの割り当てサイズを取得するには、このメソッドを呼び出します。|
-|[Clocalheap::reallocate](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|
+|[CLocalHeap::Reallocate](#reallocate)|このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -63,7 +63,7 @@ class CLocalHeap : public IAtlMemMgr
 
 **ヘッダー:** atlmem.h
 
-##  <a name="allocate"></a>  Clocalheap::allocate
+##  <a name="allocate"></a>  CLocalHeap::Allocate
 
 メモリ ブロックを割り当てるには、このメソッドを呼び出します。
 
@@ -86,7 +86,7 @@ virtual __declspec(allocator) void* Allocate(size_t nBytes) throw();
 
 使用して実装[LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc) LMEM_FIXED のフラグ パラメーターを使用します。
 
-##  <a name="free"></a>  Clocalheap::free
+##  <a name="free"></a>  CLocalHeap::Free
 
 このメモリ マネージャーによって割り当てられたメモリ ブロックを解放するには、このメソッドを呼び出します。
 
@@ -124,7 +124,7 @@ virtual size_t GetSize(void* p) throw();
 
 使用して実装[LocalSize](/windows/desktop/api/winbase/nf-winbase-localsize)します。
 
-##  <a name="reallocate"></a>  Clocalheap::reallocate
+##  <a name="reallocate"></a>  CLocalHeap::Reallocate
 
 このメソッドを呼び出し、このメモリ マネージャーによって割り当てられたメモリの再割り当てを行います。
 

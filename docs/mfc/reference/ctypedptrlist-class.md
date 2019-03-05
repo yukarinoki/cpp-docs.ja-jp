@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CTypedPtrList [MFC], RemoveTail
 - CTypedPtrList [MFC], SetAt
 ms.assetid: c273096e-1756-4340-864b-4a08b674a65e
-ms.openlocfilehash: 485550fbd4d3fc483303cd6ba73d74e29cc7a006
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 756ef5043468f614c6ab3ac64598d62b29b2dc41
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555881"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57286024"
 ---
 # <a name="ctypedptrlist-class"></a>CTypedPtrList クラス
 
@@ -79,7 +79,8 @@ class CTypedPtrList : public BASE_CLASS
 
 派生したリスト`CObList`ができるはから派生したものですが、シリアル化できる`CPtrList`ことはできません。
 
-`CTypedPtrList` オブジェクトが削除されたとき、またはその要素が削除されたときは、ポインターだけが削除されます。ポインターが参照するエンティティは削除されません。
+
+  `CTypedPtrList` オブジェクトが削除されたとき、またはその要素が削除されたときは、ポインターだけが削除されます。ポインターが参照するエンティティは削除されません。
 
 使用しての詳細については`CTypedPtrList`、記事を参照して[コレクション](../../mfc/collections.md)と[クラスのテンプレートに基づく](../../mfc/template-based-classes.md)します。
 
@@ -179,7 +180,7 @@ TYPE GetAt(POSITION position) const;
 *TYPE*<br/>
 リストに格納されている要素の種類を指定するテンプレート パラメーター。
 
-*位置*<br/>
+*position*<br/>
 以前、によって返される位置値`GetHeadPosition`または`Find`メンバー関数の呼び出し。
 
 ### <a name="return-value"></a>戻り値

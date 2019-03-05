@@ -1,23 +1,23 @@
 ---
-title: 並列診断ツール (コンカレンシー ランタイム)
+title: 並列診断ツール (同時実行ランタイム)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - Parallel Diagnostic Tools [Concurrency Runtime]
 ms.assetid: b1a3f1d2-f5df-4f29-852e-906b3d8341fc
-ms.openlocfilehash: a9d6823a5f82e3d52f82f568d3e3c00b68236fef
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2af1898312a4f448d618fcfc4e43ea93f5f0bc76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329216"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57302781"
 ---
-# <a name="parallel-diagnostic-tools-concurrency-runtime"></a>並列診断ツール (コンカレンシー ランタイム)
+# <a name="parallel-diagnostic-tools-concurrency-runtime"></a>並列診断ツール (同時実行ランタイム)
 
 Visual Studio は、マルチ スレッド アプリケーションのデバッグおよびプロファイリングを広範にサポートします。
 
 ## <a name="debugging"></a>デバッグ
 
-Visual Studio デバッガーに、**並列スタック**ウィンドウで、**並列タスク**ウィンドウ、および**並列ウォッチ**ウィンドウ。 詳細については、次を参照してください。[チュートリアル: 並行アプリケーションのデバッグ](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)と[方法: 並列ウォッチ ウィンドウを使用して、](/visualstudio/debugger/how-to-use-the-parallel-watch-window)します。
+Visual Studio デバッガーに、**並列スタック**ウィンドウで、**並列タスク**ウィンドウ、および**並列ウォッチ**ウィンドウ。 詳細については、「[チュートリアル:並列アプリケーションのデバッグ](/visualstudio/debugger/walkthrough-debugging-a-parallel-application)と[方法。並列ウォッチ ウィンドウを使用して、](/visualstudio/debugger/how-to-use-the-parallel-watch-window)します。
 
 ## <a name="profiling"></a>プロファイル
 
@@ -66,4 +66,3 @@ Visual Studio デバッガーに、**並列スタック**ウィンドウで、**
 ## <a name="see-also"></a>関連項目
 
 [コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)
-

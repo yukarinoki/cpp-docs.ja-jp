@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [OLE], about OLE
 - OLE component object model (COM)
 ms.assetid: 5193479d-1239-4697-aea4-e82f92c707ab
-ms.openlocfilehash: 992715c545f90176ab750890c4be3e05dfe950d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 09d80e7c45875ad2e6ed8b599d4e01d2110d562f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520485"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267226"
 ---
 # <a name="ole-in-mfc"></a>MFC の OLE
 
@@ -79,4 +79,3 @@ OLE MFC なしの使用について説明します。
 ## <a name="see-also"></a>関連項目
 
 [概念](../mfc/mfc-concepts.md)
-

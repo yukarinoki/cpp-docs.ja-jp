@@ -3,12 +3,12 @@ title: コントロールの追加 (ATL チュートリアル、パート 2)
 ms.custom: get-started-article
 ms.date: 09/26/2018
 ms.assetid: c9575a75-1064-41f1-9697-7aada560c669
-ms.openlocfilehash: b59d8f05e151e1d543f6aa6bb2b62ae0f59dc36a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 45841c33ad30ff427f9b792a779d135b4f6e7eca
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428653"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283229"
 ---
 # <a name="adding-a-control-atl-tutorial-part-2"></a>コントロールの追加 (ATL チュートリアル、パート 2)
 
@@ -35,7 +35,7 @@ ms.locfileid: "50428653"
 |フィールド|目次|
 |-----------|--------------|
 |**短い名前**|コントロール用に入力した名前。|
-|**クラス**|コントロールを実装するために作成された C++ クラス名。|
+|**Class**|コントロールを実装するために作成された C++ クラス名。|
 |**.h ファイル**|C++ クラスの定義を格納するために作成されたファイル。|
 |**.cpp ファイル**|C++ クラスの実装を格納するために作成されたファイル。|
 |**コクラス**|このコントロールのコンポーネント クラスの名前。|
@@ -84,7 +84,8 @@ ms.locfileid: "50428653"
 |ファイル|説明|
 |----------|-----------------|
 |PolyCtl.h|C++ クラス `CPolyCtl` のほとんどの実装が格納されています。|
-|PolyCtl.cpp|`CPolyCtl` の残りの部分が格納されています。|
+|PolyCtl.cpp|
+  `CPolyCtl` の残りの部分が格納されています。|
 |PolyCtl.rgs|コントロールの登録に使用するレジストリ スクリプトが格納されたテキスト ファイル。|
 |PolyCtl.htm|新しく作成されたコントロールへの参照が含まれた Web ページ。|
 

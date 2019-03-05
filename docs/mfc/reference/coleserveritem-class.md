@@ -74,12 +74,12 @@ helpviewer_keywords:
 - COleServerItem [MFC], OnShow
 - COleServerItem [MFC], m_sizeExtent
 ms.assetid: 80256df6-3888-4256-944b-787d4b2e6b0d
-ms.openlocfilehash: e0d48d37d8262c4e82a8532333bbd12f193087b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f774a8db1121dd293db8e58f7cd92aaabaeabada
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604124"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57270554"
 ---
 # <a name="coleserveritem-class"></a>COleServerItem クラス
 
@@ -105,7 +105,7 @@ class COleServerItem : public CDocItem
 |----------|-----------------|
 |[COleServerItem::AddOtherClipboardData](#addotherclipboarddata)|プレゼンテーションおよび変換形式の配置を`COleDataSource`オブジェクト。|
 |[COleServerItem::CopyToClipboard](#copytoclipboard)|項目をクリップボードにコピーします。|
-|[判定できます。](#dodragdrop)|ドラッグ アンド ドロップ操作を実行します。|
+|[COleServerItem::DoDragDrop](#dodragdrop)|ドラッグ アンド ドロップ操作を実行します。|
 |[COleServerItem::GetClipboardData](#getclipboarddata)|データ転送 (クリップボードやドラッグ アンド ドロップ) で使用するためには、データ ソースを取得します。|
 |[COleServerItem::GetDocument](#getdocument)|項目を含むサーバーのドキュメントを返します。|
 |[COleServerItem::GetEmbedSourceData](#getembedsourcedata)|OLE 項目の CF_EMBEDSOURCE データを取得します。|
@@ -116,7 +116,7 @@ class COleServerItem : public CDocItem
 |[COleServerItem::IsLinkedItem](#islinkeditem)|項目がリンクされている OLE 項目を表すかどうかを示します。|
 |[COleServerItem::NotifyChanged](#notifychanged)|自動リンクの更新では、すべてのコンテナーを更新します。|
 |[COleServerItem::OnDoVerb](#ondoverb)|動詞を実行すると呼ばれます。|
-|[:Ondraw](#ondraw)|コンテナー アイテムの描画を要求するときに呼び出されます必要な実装です。|
+|[COleServerItem::OnDraw](#ondraw)|コンテナー アイテムの描画を要求するときに呼び出されます必要な実装です。|
 |[COleServerItem::OnDrawEx](#ondrawex)|特殊な項目の描画に呼び出されます。|
 |[COleServerItem::OnGetClipboardData](#ongetclipboarddata)|クリップボードにコピーされるデータを取得するためにフレームワークによって呼び出されます。|
 |[COleServerItem::OnGetExtent](#ongetextent)|OLE 項目のサイズを取得するためにフレームワークによって呼び出されます。|
@@ -136,7 +136,7 @@ class COleServerItem : public CDocItem
 
 |名前|説明|
 |----------|-----------------|
-|[は](#getdatasource)|変換形式の格納に使用するオブジェクトを取得します。|
+|[COleServerItem::GetDataSource](#getdatasource)|変換形式の格納に使用するオブジェクトを取得します。|
 |[COleServerItem::OnHide](#onhide)|OLE 項目を非表示にするためにフレームワークによって呼び出されます。|
 |[COleServerItem::OnOpen](#onopen)|OLE 項目を最上位レベルのウィンドウに表示するためにフレームワークによって呼び出されます。|
 |[COleServerItem::OnShow](#onshow)|コンテナーの要求、アイテムを表示するときに呼び出されます。|
@@ -155,7 +155,7 @@ class COleServerItem : public CDocItem
 
 使用する`COleServerItem`、そこから派生クラスを作成および実装、 [OnDraw](#ondraw)と[Serialize](../../mfc/reference/cobject-class.md#serialize)メンバー関数。 `OnDraw`関数は、コンテナー アプリケーションは、複合ドキュメントを開いたときに表示することができます、項目のメタファイル表現を提供します。 `Serialize`関数の`CObject`埋め込みアイテム サーバーとコンテナーのアプリケーション間で転送されるようにする、項目のネイティブな表現を提供します。 [OnGetExtent](#ongetextent)自然なアイテムのサイズのコンテナーを有効にすると、コンテナーに項目のサイズを提供します。
 
-サーバーとの関連トピックに関する詳細については、記事を参照してください。[サーバー: サーバーを実装する](../../mfc/servers-implementing-a-server.md)と"を作成するコンテナー/サーバー アプリケーションを"記事[コンテナー: 高度な機能](../../mfc/containers-advanced-features.md)します。
+サーバーとの関連トピックに関する詳細については、記事を参照してください。[サーバー。サーバーを実装する](../../mfc/servers-implementing-a-server.md)と「を作成するコンテナー/サーバー アプリケーションを」記事[コンテナー。機能の高度な](../../mfc/containers-advanced-features.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -223,7 +223,7 @@ void CopyToClipboard(BOOL bIncludeLink = FALSE);
 
 関数を使用して、 [OnGetClipboardData](#ongetclipboarddata)メンバー関数を作成する、 [COleDataSource](../../mfc/reference/coledatasource-class.md)サポートされている形式の OLE 項目のデータを含むオブジェクト。 関数を配置し、`COleDataSource`を使用してクリップボード上のオブジェクト、 [COleDataSource::SetClipboard](../../mfc/reference/coledatasource-class.md#setclipboard)関数。 `COleDataSource`オブジェクトにはサポートするすべての変換形式のデータと同様に、CF_METAFILEPICT 形式で、項目のネイティブ データとその表現が含まれます。 実装している必要があります[Serialize](../../mfc/reference/cobject-class.md#serialize)と[OnDraw](#ondraw)させるには、このメンバー関数。
 
-##  <a name="dodragdrop"></a>  判定できます。
+##  <a name="dodragdrop"></a>  COleServerItem::DoDragDrop
 
 呼び出す、`DoDragDrop`ドラッグ アンド ドロップ操作を実行するメンバー関数。
 
@@ -303,7 +303,7 @@ TRUE の場合、リンク データをクリップボードにコピーする�
 
 形式を配置する場合は、この関数をオーバーライドする`COleDataSource`オブジェクトによって提供されるこれらの形式の前後に`CopyToClipboard`。
 
-##  <a name="getdatasource"></a>  は
+##  <a name="getdatasource"></a>  COleServerItem::GetDataSource
 
 取得するには、この関数を呼び出し、 [COleDataSource](../../mfc/reference/coledatasource-class.md)サーバー アプリケーションがサポートする変換形式の格納に使用されるオブジェクト。
 
@@ -527,7 +527,7 @@ virtual void OnDoVerb(LONG iVerb);
 
 詳細については、次を参照してください。 [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK に含まれています。
 
-##  <a name="ondraw"></a>  :Ondraw
+##  <a name="ondraw"></a>  COleServerItem::OnDraw
 
 OLE 項目をメタファイルに表示するためにフレームワークによって呼び出されます。
 

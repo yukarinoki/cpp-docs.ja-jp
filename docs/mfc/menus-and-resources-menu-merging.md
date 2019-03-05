@@ -1,5 +1,5 @@
 ---
-title: 'メニューとリソース : メニューの結合'
+title: メニューとリソース:メニューのマージ
 ms.date: 11/04/2016
 helpviewer_keywords:
 - status bars [MFC], OLE document applications
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - merging toolbar and status bar [MFC]
 - menus [MFC], OLE document applications
 ms.assetid: 80b6bb17-d830-4122-83f0-651fc112d4d1
-ms.openlocfilehash: 30663afae0bfd30b42f99daf95cb8ff35979ee50
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e00464e59de5e20627fd2423c101c23629d7c4d2
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50438442"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300350"
 ---
-# <a name="menus-and-resources-menu-merging"></a>メニューとリソース : メニューの結合
+# <a name="menus-and-resources-menu-merging"></a>メニューとリソース:メニューのマージ
 
 この記事では、ビジュアル編集を処理し、インプレース アクティブ化正しく OLE ドキュメント アプリケーションに必要な手順を説明します。 インプレース アクティブ化は、(コンポーネント) のアプリケーション コンテナーとサーバーの両方にとっての課題をもたらします。 ユーザーは、(コンテナー ドキュメントのコンテキスト) 内のフレーム ウィンドウに残りますが実際に別のアプリケーション (サーバー) を実行します。 これには、コンテナーとサーバー アプリケーションのリソース間の調整が必要です。
 
@@ -105,7 +105,7 @@ END
 
 サーバー アプリケーションは、新しいツールバーを作成し、別のファイルにそのビットマップを格納する必要があります。 アプリケーション ウィザードで生成されたアプリケーションでは、このビットマップは itoolbar ファイルに格納します。BMP です。 新しいツールバーでは、サーバーの項目を通常のツールバーと同じ項目が含まれますが、ファイルとウィンドウのメニュー項目を表すアイコンを削除する必要がありますとがインプレースでアクティブになると、コンテナー アプリケーションのツールバーが置き換えられます。
 
-このツールバーが読み込まれて、 `COleIPFrameWnd`-派生クラスで、アプリケーション ウィザードによって作成します。 ステータス バーは、コンテナーのアプリケーションによって処理されます。 埋め込み先フレーム ウィンドウの実装の詳細については、次を参照してください。[サーバー: サーバーを実装する](../mfc/servers-implementing-a-server.md)します。
+このツールバーが読み込まれて、 `COleIPFrameWnd`-派生クラスで、アプリケーション ウィザードによって作成します。 ステータス バーは、コンテナーのアプリケーションによって処理されます。 埋め込み先フレーム ウィンドウの実装の詳細については、次を参照してください。[サーバー。サーバーを実装する](../mfc/servers-implementing-a-server.md)します。
 
 ## <a name="see-also"></a>関連項目
 
@@ -113,4 +113,3 @@ END
 [アクティベーション](../mfc/activation-cpp.md)<br/>
 [サーバー](../mfc/servers.md)<br/>
 [コンテナー](../mfc/containers.md)
-

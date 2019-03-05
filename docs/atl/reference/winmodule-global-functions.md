@@ -5,12 +5,12 @@ f1_keywords:
 - atlbase/ATL::AtlWinModuleAddCreateWndData
 - atlbase/ATL::AtlWinModuleExtractCreateWndData
 ms.assetid: 8ce45a5b-26a7-491f-9096-c09ceca5f2c2
-ms.openlocfilehash: 7c46f4da53bcf1e8a64cc6baad9ca748d1edb310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0e7450ea2a42c0b35dc5a6d1b77dfb0f2acb9520
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578322"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57265088"
 ---
 # <a name="winmodule-global-functions"></a>Winmodule に関するグローバル関数
 
@@ -21,7 +21,8 @@ ms.locfileid: "50578322"
 
 |||
 |-|-|
-|[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|`_AtlCreateWndData` 構造体を初期化して追加します。|
+|[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|
+  `_AtlCreateWndData` 構造体を初期化して追加します。|
 |[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|既存の `_AtlCreateWndData` 構造体を抽出します。|
 
 ## <a name="requirements"></a>必要条件
@@ -30,7 +31,8 @@ ms.locfileid: "50578322"
 
 ##  <a name="atlwinmoduleaddcreatewnddata"></a>  AtlWinModuleAddCreateWndData
 
-`_AtlCreateWndData` 構造体を初期化して追加します。
+
+  `_AtlCreateWndData` 構造体を初期化して追加します。
 
 ```
 ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(

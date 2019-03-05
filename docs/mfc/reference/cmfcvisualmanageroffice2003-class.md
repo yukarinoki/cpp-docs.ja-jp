@@ -92,12 +92,12 @@ f1_keywords:
 helpviewer_keywords:
 - CMFCVisualManagerOffice2003 Class [MFC]
 ms.assetid: 115482cd-e349-450a-8dc4-c6023d092aab
-ms.openlocfilehash: 1b811de23b4a049bd462ddbb3f9b96e80ae25be0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c3b0a031db8ff843bb43f7dfa69f046d6ae99a96
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50558810"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273271"
 ---
 # <a name="cmfcvisualmanageroffice2003-class"></a>CMFCVisualManagerOffice2003 クラス
 
@@ -586,7 +586,7 @@ virtual BOOL GetToolTipInfo(
 *params*<br/>
 [out]参照を[CMFCToolTipInfo クラス](../../mfc/reference/cmfctooltipinfo-class.md)オブジェクトがこのメソッドがヒント情報を返します。
 
-*%n タイプ*<br/>
+*nType*<br/>
 [in]ツール ヒントについては、返される情報を入力します。
 
 ### <a name="return-value"></a>戻り値
@@ -891,8 +891,8 @@ virtual void OnDrawCheckBoxEx(
 *rect*<br/>
 [in]チェック ボックスをオンの外接する四角形。
 
-*状態*<br/>
-[in]チェック ボックスをオンの状態: オフの場合は 0、1 オンにした場合、2 混合オンにした場合。
+*nState*<br/>
+[in]チェック ボックスをオンの状態。チェックを行わない場合は 0、1 をオンにした場合、2 混合オンにした場合。
 
 *bHighlighted*<br/>
 [in]TRUE の場合、チェック ボックスが強調表示されている、またはしない場合は FALSE。
@@ -1048,8 +1048,8 @@ virtual void OnDrawHeaderCtrlBorder(
 *rect*<br/>
 [in]ヘッダー コントロールの境界を指定する四角形。
 
-[in]*bIsPressed*<br/>
-[in]*bIsHighlighted*<br/>
+[in] *bIsPressed*<br/>
+[in] *bIsHighlighted*<br/>
 ヘッダー コントロールが押されたかどうかを示すブール値パラメーター。
 
 ### <a name="remarks"></a>Remarks
@@ -1710,8 +1710,8 @@ virtual void OnDrawStatusBarProgress(
 [in]進行状況バーが初期の色。 値は、いずれかの色グラデーションの開始または終了の進行状況バーの色です。
 
 [in]*clrProgressBarDest*<br/>
-[in]*clrProgressText*<br/>
-[in]*bProgressText*<br/>
+[in] *clrProgressText*<br/>
+[in] *bProgressText*<br/>
 
 ### <a name="remarks"></a>Remarks
 

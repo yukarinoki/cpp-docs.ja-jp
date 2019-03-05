@@ -1,5 +1,5 @@
 ---
-title: MFC 同期クラスを使用する方法をマルチ スレッド。
+title: マルチ スレッド。MFC 同期クラスを使用する方法
 ms.date: 08/27/2018
 helpviewer_keywords:
 - MFC [C++], multithreading
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - multithreading [C++], synchronization classes
 - threading [C++], thread-safe class design
 ms.assetid: f266d4c6-0454-4bda-9758-26157ef74cc5
-ms.openlocfilehash: 0f8304c3b45f87dadc2317de95a0b30b54baffa0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6115d942abc61fbfc9d60ca1ccf97d4b423ff7c1
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604166"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304653"
 ---
-# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>MFC 同期クラスを使用する方法をマルチ スレッド。
+# <a name="multithreading-how-to-use-the-mfc-synchronization-classes"></a>マルチ スレッド。MFC 同期クラスを使用する方法
 
 リソースにアクセスする複数のスレッドの同期は、マルチスレッド アプリケーションを書くときに共通の問題です。 複数のスレッドから同じデータに同時にアクセスすると、予測できない結果になることがあります。 たとえば、あるスレッドで構造体の内容を更新しているときに、別のスレッドが同じ構造体の内容を読み取るということが考えられます。 この場合、後者のスレッドが実際に読み取った内容が、古いデータになるか更新後のデータになるかはわかりません。古いデータと更新データが混在することも考えられます。 MFC (Microsoft Foundation Class) の同期クラスと同期アクセス クラスを使うと、この問題を解決できます。 このトピックでは、これらのクラスを使用して、一般的なマルチスレッド アプリケーションでスレッド セーフなクラスを作成する方法を説明します。
 
@@ -38,7 +38,8 @@ ms.locfileid: "50604166"
 
 このようにスレッド セーフなクラスをデザインすると、非スレッド セーフなクラスと同じように、マルチスレッド アプリケーションで簡単に使用できるだけでなく、安全性も保証されます。 同期オブジェクトと同期アクセス オブジェクトをリソースのクラスにカプセル化すると、同期コードを使わずに、スレッドを安全に使用できます。
 
-次のコード例では、共有リソース クラスで宣言されたデータ メンバー `m_CritSection` (`CCriticalSection` 型) と `CSingleLock` オブジェクトを使って、この方法を示します。 `CWinThread` から派生する共有リソースの同期は、`CSingleLock` オブジェクトのアドレスを使って `m_CritSection` オブジェクトを作成することによって行います。 まず、リソースのロックを行い、ロックを取得すると、共有オブジェクト側の作業は完了です。 作業が完了すると、`Unlock` 呼び出しによってリソースのロックが解除されます。
+次のコード例では、共有リソース クラスで宣言されたデータ メンバー `m_CritSection` (`CCriticalSection` 型) と `CSingleLock` オブジェクトを使って、この方法を示します。 
+  `CWinThread` から派生する共有リソースの同期は、`m_CritSection` オブジェクトのアドレスを使って `CSingleLock` オブジェクトを作成することによって行います。 まず、リソースのロックを行い、ロックを取得すると、共有オブジェクト側の作業は完了です。 作業が完了すると、`Unlock` 呼び出しによってリソースのロックが解除されます。
 
 ```
 CSingleLock singleLock(&m_CritSection);
@@ -54,7 +55,7 @@ singleLock.Unlock();
 
 この手法の欠点は、同期オブジェクトを追加しない場合と比べて、クラスの動作が少し遅くなることです。 また、同期オブジェクトを複数のスレッドで削除した場合は、マージが成功するとは限りません。 このような場合は、同期オブジェクトを別個に管理します。
 
-さまざまな状況で使用する同期クラスを決定する方法の詳細については、次を参照してください。[マルチ スレッド: 同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートの詳細については、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)します。
+さまざまな状況で使用する同期クラスを決定する方法の詳細については、次を参照してください。[マルチ スレッド。同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートの詳細については、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)します。
 
 ## <a name="see-also"></a>関連項目
 

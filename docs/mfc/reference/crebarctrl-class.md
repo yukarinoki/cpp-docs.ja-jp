@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: 072fcec4944088ab087a6a39c7d8b916c3bc80e2
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177031"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57304556"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl クラス
 
@@ -776,7 +776,7 @@ BOOL MoveBand(
 *uFrom*<br/>
 移動するバンドの 0 から始まるインデックス。
 
-*不在*<br/>
+*uTo*<br/>
 バンドの新しい位置の 0 から始まるインデックス。 このパラメーターの値は、バンドから 1 を引いた数より大きいしない場合があります。 バンドの数を取得するには、呼び出す[GetBandCount](#getbandcount)します。
 
 ### <a name="return-value"></a>戻り値
@@ -958,7 +958,7 @@ DWORD SetExtendedStyle(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwMask*|[in]どのフラグを指定するフラグのビットごとの組み合わせ (OR)、 *dwStyleEx*パラメーターを適用します。 次の値の 1 つ以上を使用します。<br /><br /> RBS_EX_SPLITTER: 既定で表示、スプリッター下部にある横モードで、右側に縦モードでします。<br /><br /> RBS_EX_TRANSPARENT: 転送、 [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージを親ウィンドウ。|
+|*dwMask*|[in]どのフラグを指定するフラグのビットごとの組み合わせ (OR)、 *dwStyleEx*パラメーターを適用します。 次の値の 1 つ以上を使用します。<br /><br /> RBS_EX_SPLITTER:既定で表示、スプリッター下部にある横モードで、右側に縦モードでします。<br /><br /> RBS_EX_TRANSPARENT:転送、 [WM_ERASEBKGND](/windows/desktop/winmsg/wm-erasebkgnd)メッセージを親ウィンドウ。|
 |*dwStyleEx*|[in]適用するスタイルを指定するフラグのビットごとの組み合わせ (OR)。 スタイルを設定するで使用されている同じフラグを指定、 *dwMask*パラメーター。 スタイルをリセットするには、バイナリのゼロを指定します。|
 
 ### <a name="return-value"></a>戻り値
@@ -1137,4 +1137,3 @@ BOOL SizeToRect(CRect& rect);
 
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
-

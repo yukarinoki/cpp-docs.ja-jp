@@ -118,12 +118,12 @@ helpviewer_keywords:
 - CWinAppEx [MFC], StoreWindowPlacement
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
-ms.openlocfilehash: 57c18ff00cd9e3a1d3156d8214ac78b49ca00c1f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544418"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57288832"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx クラス
 
@@ -222,7 +222,7 @@ MFC フレームワークによって提供される機能の多くによって�
 
 - アプリケーションのメイン クラスを派生`CWinAppEx`します。
 
-組み込む`CWinAppEx`をアプリケーションには、アプリケーション マネージャーのいずれかを初期化できます。 アプリケーション マネージャーを使用する前に、適切な初期化メソッドを呼び出すことで初期化する必要があります。 特定のマネージャーへのポインターを取得するには、関連付けられている get メソッドを呼び出します。 `CWinAppEx`クラスは、次のアプリケーション マネージャーを管理します[CMouseManager クラス](../../mfc/reference/cmousemanager-class.md)、 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)、 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)、 。[CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)、および[CMenuTearOffManager クラス](../../mfc/reference/cmenutearoffmanager-class.md)します。
+組み込む`CWinAppEx`をアプリケーションには、アプリケーション マネージャーのいずれかを初期化できます。 アプリケーション マネージャーを使用する前に、適切な初期化メソッドを呼び出すことで初期化する必要があります。 特定のマネージャーへのポインターを取得するには、関連付けられている get メソッドを呼び出します。 `CWinAppEx`クラスは、次のアプリケーション マネージャーを管理します。[CMouseManager クラス](../../mfc/reference/cmousemanager-class.md)、 [CContextMenuManager クラス](../../mfc/reference/ccontextmenumanager-class.md)、 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)、 [CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)、および[CMenuTearOffManager クラス](../../mfc/reference/cmenutearoffmanager-class.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -478,7 +478,7 @@ int GetInt(
 *lpszEntry*<br/>
 [in]レジストリ エントリの名前を含む文字列。
 
-*見つからなかった*<br/>
+*nDefault*<br/>
 [in]指定されたレジストリ エントリが存在しないかどうかはメソッドによって返される既定値。
 
 ### <a name="return-value"></a>戻り値
@@ -643,7 +643,7 @@ int GetSectionInt(
 *lpszEntry*<br/>
 [in]読み取る値を含む文字列。
 
-*見つからなかった*<br/>
+*nDefault*<br/>
 [in]指定した値が存在しないかどうかに返す既定値。
 
 ### <a name="return-value"></a>戻り値
@@ -1031,7 +1031,7 @@ virtual void OnAppContextHelp(
 *pWndControl*<br/>
 [in]ユーザーがコンテキスト ヘルプを呼び出したウィンドウ オブジェクトへのポインター。
 
-*dwHelpIDArray*<br/>
+*dwHelpIDArray[]*<br/>
 [in]予約済みの値。
 
 ### <a name="remarks"></a>Remarks
@@ -1327,7 +1327,7 @@ BOOL WriteInt(
 *lpszEntry*<br/>
 [in]レジストリ キーの名前を含む文字列。
 
-*値*<br/>
+*nValue*<br/>
 [in]格納するデータ。
 
 ### <a name="return-value"></a>戻り値
@@ -1421,7 +1421,7 @@ BOOL WriteSectionInt(
 *lpszEntry*<br/>
 [in]設定する値を含む文字列。
 
-*値*<br/>
+*nValue*<br/>
 [in]レジストリに書き込むデータ。
 
 ### <a name="return-value"></a>戻り値

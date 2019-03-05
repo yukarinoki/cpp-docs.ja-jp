@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: 85af8504fffa980d495cef59729ff5fcb145e318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486589"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57301832"
 ---
 # <a name="registry-and-typelib-global-functions"></a>レジストリとタイプ ライブラリに関するグローバル関数
 
@@ -38,7 +38,7 @@ ms.locfileid: "50486589"
 |[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|プレビュー ハンドラーを登録するためのヘルパー。|
 |[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| プレビュー ハンドラーの登録を解除するヘルパー。 |
 |[AtlRegisterTypeLib](#atlregistertypelib)|この関数は、タイプ ライブラリを登録するために呼び出されます。|
-|[この代替](#atlunregistertypelib)|この関数は、タイプ ライブラリの登録を解除するには|
+|[AtlUnRegisterTypeLib](#atlunregistertypelib)|この関数は、タイプ ライブラリの登録を解除するには|
 |[AfxRegOpenKey](#afxregopenkey)|指定されたレジストリ キーを開きます。|
 |[AfxRegOpenKeyEx](#afxregopenkeyex)|指定されたレジストリ キーを開きます。|
 |[AtlLoadTypeLib](#atlloadtypelib)|この関数は、タイプ ライブラリを読み込むために呼び出されます。|
@@ -317,7 +317,7 @@ ATLINLINE ATLAPI AtlSetPerUserRegistration(bool bEnable);
 
 **ヘッダー:** atlbase.h
 
-##  <a name="atlunregistertypelib"></a>  この代替
+##  <a name="atlunregistertypelib"></a>  AtlUnRegisterTypeLib
 
 この関数は、タイプ ライブラリの登録を解除するために呼び出されます。
 

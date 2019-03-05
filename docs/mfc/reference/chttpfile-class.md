@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CHttpFile [MFC], SendRequest
 - CHttpFile [MFC], SendRequestEx
 ms.assetid: 399e7c68-bbce-4374-8c55-206e9c7baac6
-ms.openlocfilehash: 3ee92a6cb627cee701b9b98a8a32666a0877f62c
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 3c701f933d622adc5f3d8b1eb2371406e5b45e6f
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893653"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57283736"
 ---
 # <a name="chttpfile-class"></a>CHttpFile クラス
 
@@ -204,7 +204,8 @@ BOOL EndRequest(
 初期化されたへのポインター[記述](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa)操作に使用される入力バッファーをについて説明します。
 
 *dwContext*<br/>
-`CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。
+
+  `CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -488,7 +489,8 @@ BOOL SendRequestEx(
 操作を記述するフラグ。 適切なフラグの一覧は、次を参照してください。 [HttpSendRequestEx](/windows/desktop/api/wininet/nf-wininet-httpsendrequestexa) Windows SDK に含まれています。
 
 *dwContext*<br/>
-`CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。
+
+  `CHttpFile` 操作のコンテキスト識別子。 このパラメーターの詳細については、「解説」を参照してください。
 
 *lpBuffIn*<br/>
 初期化されたへのポインター[記述](/windows/desktop/api/wininet/ns-wininet-_internet_buffersa)操作に使用される入力バッファーをについて説明します。

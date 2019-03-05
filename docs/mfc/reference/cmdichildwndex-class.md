@@ -112,12 +112,12 @@ helpviewer_keywords:
 - CMDIChildWndEx [MFC], UnregisterTaskbarTab
 - CMDIChildWndEx [MFC], UpdateTaskbarTabIcon
 ms.assetid: d39fec06-0bd6-4271-917d-35aae3b24d8e
-ms.openlocfilehash: 9b92c9689749dca1ab4eebcade1c4f7e71d25a76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 625104ecddd9e14ac77aa05ac54cb578c4d62f85
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50541545"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57293424"
 ---
 # <a name="cmdichildwndex-class"></a>CMDIChildWndEx クラス
 
@@ -180,7 +180,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::OnTaskbarTabThumbnailActivate](#ontaskbartabthumbnailactivate)|タスク バーのタブのサムネイルは WM_ACTIVATE メッセージを処理するときに、フレームワークによって呼び出されます。|
 |[CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate](#ontaskbartabthumbnailmouseactivate)|タスク バーのタブのサムネイルが WM_MOUSEACTIVATE メッセージを処理するときに、フレームワークによって呼び出されます。|
 |[CMDIChildWndEx::OnTaskbarTabThumbnailStretch](#ontaskbartabthumbnailstretch)|MDI 子フォームの Windows 7 タスク バー タブの縮小表示プレビューのビットマップを拡大する必要があるときに、フレームワークによって呼び出されます。|
-|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|フレームのタイトルを更新するためにフレームワークによって呼び出されます。 ( `CMDIChildWnd::OnUpdateFrameTitle`をオーバーライドします)。|
+|[CMDIChildWndEx::OnUpdateFrameTitle](#onupdateframetitle)|フレームのタイトルを更新するためにフレームワークによって呼び出されます。 (`CMDIChildWnd::OnUpdateFrameTitle` をオーバーライドします)。|
 |[CMDIChildWndEx::PaneFromPoint](#panefrompoint)|指定したポイントを含むペインを返します。|
 |`CMDIChildWndEx::PreTranslateMessage`|[TranslateMessage](../../mfc/reference/cwinapp-class.md) および [DispatchMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage) の各 Windows 関数にディスパッチされる前に、ウィンドウ メッセージを変換するためにクラス [CWinApp](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) で使用されます。 ( [CWnd::PreTranslateMessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)をオーバーライドします)。|
 |[CMDIChildWndEx::RecalcLayout](#recalclayout)|ウィンドウのレイアウトを再計算します。|
@@ -189,7 +189,7 @@ class CMDIChildWndEx : public CMDIChildWnd
 |[CMDIChildWndEx::SetRelatedTabGroup](#setrelatedtabgroup)||
 |[CMDIChildWndEx::SetTaskbarTabActive](#settaskbartabactive)|対応する Windows 7 タスク バーのタブがアクティブにします。|
 |[CMDIChildWndEx::SetTaskbarTabOrder](#settaskbartaborder)|Windows 7 タスク バーのタブで指定されたウィンドウの前に MDI 子フォームを挿入します。|
-|[CMDIChildWndEx::SetTaskbarTabProperties](#settaskbartabproperties)|Windows 7 のタスクバー タブのプロパティを設定します。|
+|[CMDIChildWndEx::SetTaskbarTabProperties](#settaskbartabproperties)|Windows 7 のタスク バー タブのプロパティを設定します。|
 |[CMDIChildWndEx::SetTaskbarThumbnailClipRect](#settaskbarthumbnailcliprect)|ウィンドウのクライアント領域の一部を選択するクリッピング四角形を設定するためにフレームワークによって内部的に呼び出されます。|
 |[CMDIChildWndEx::ShowPane](#showpane)||
 |[CMDIChildWndEx::UnregisterTaskbarTab](#unregistertaskbartab)|Windows 7 タスク バーのタブからは、MDI 子フォームを削除します。|
@@ -201,7 +201,7 @@ MDI アプリケーションでドッキングの拡張機能を利用するア�
 
 ## <a name="example"></a>例
 
-次の例では、派生クラスから`CMDIChildWndEx`します。 このコード スニペットに由来、 [VisualStudioDemo サンプル: Visual Studio アプリケーションを MFC](../../visual-cpp-samples.md)します。
+次の例では、派生クラスから`CMDIChildWndEx`します。 このコード スニペットに由来します[VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#3](../../mfc/codesnippet/cpp/cmdichildwndex-class_1.h)]
 
@@ -313,7 +313,7 @@ void DockPane(
 *pBar*<br/>
 [in]ペインへのポインター。
 
-*辺*<br/>
+*nDockBarID*<br/>
 [in]ペインの ID。
 
 *lpRect*<br/>
@@ -431,7 +431,7 @@ virtual LPCTSTR GetDocumentName(CObject** pObj);
 
 ### <a name="example"></a>例
 
-`GetDocumentName` メソッドの使用例を次に示します。 このコード スニペットに由来、 [VisualStudioDemo サンプル: Visual Studio アプリケーションを MFC](../../visual-cpp-samples.md)します。
+`GetDocumentName` メソッドの使用例を次に示します。 このコード スニペットに由来します[VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#17](../../mfc/codesnippet/cpp/cmdichildwndex-class_2.cpp)]
 
@@ -602,7 +602,7 @@ virtual BOOL IsReadOnly();
 
 ### <a name="example"></a>例
 
-次の例は、オーバーライド、`IsReadOnly`メソッド。 このコード スニペットに由来、 [VisualStudioDemo サンプル: Visual Studio アプリケーションを MFC](../../visual-cpp-samples.md)します。
+次の例は、オーバーライド、`IsReadOnly`メソッド。 このコード スニペットに由来します[VisualStudioDemo サンプル。Visual Studio の MFC アプリケーション](../../visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#2](../../mfc/codesnippet/cpp/cmdichildwndex-class_3.cpp)]
 
@@ -698,7 +698,7 @@ CBasePane* PaneFromPoint(
 *pRTCBarType*<br/>
 [in]NULL 以外の場合、メソッドは、指定した型のウィンドウだけを検索します。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [in]指定した時点で、ウィンドウが見つかった場合、このパラメーターには、指定したポイントに最も近いいたペインの横にはが含まれています。 詳細については、「解説」を参照してください。
 
 ### <a name="return-value"></a>戻り値
@@ -839,7 +839,7 @@ virtual BOOL SetTaskbarThumbnailClipRect(CRect rect);
 
 ##  <a name="settaskbartabproperties"></a>  CMDIChildWndEx::SetTaskbarTabProperties
 
-Windows 7 のタスクバー タブのプロパティを設定します。
+Windows 7 のタスク バー タブのプロパティを設定します。
 
 ```
 void SetTaskbarTabProperties(DWORD dwFlags);
@@ -920,7 +920,7 @@ virtual BOOL OnTaskbarTabThumbnailStretch(
 
 ### <a name="remarks"></a>Remarks
 
-要件: afxmdichildwndex.h
+Requirement : afxmdichildwndex.h
 
 ##  <a name="ontaskbartabthumbnailmouseactivate"></a>  CMDIChildWndEx::OnTaskbarTabThumbnailMouseActivate
 
@@ -961,7 +961,7 @@ virtual void OnTaskbarTabThumbnailActivate(
 
 ### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*nState*<br/>
 指定するかどうか、`CWnd`がアクティブまたは非アクティブ化します。
 
 *pWndOther*<br/>
@@ -999,7 +999,7 @@ virtual HBITMAP OnGetIconicThumbnail(
 *nWidth*<br/>
 必要なビットマップの幅を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 必要なビットマップの高さを指定します。
 
 ### <a name="remarks"></a>Remarks

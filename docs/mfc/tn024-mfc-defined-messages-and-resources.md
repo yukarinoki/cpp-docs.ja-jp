@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 24: MFC で定義されているメッセージおよびリソース'
+title: TN024:MFC で定義されているメッセージおよびリソース
 ms.date: 11/04/2016
 f1_keywords:
 - vc.mfc.messages
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - messages [MFC], MFC
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
-ms.openlocfilehash: 26f6effbafd8136661f0b1dc9a6b22138a23e547
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639635"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57278133"
 ---
-# <a name="tn024-mfc-defined-messages-and-resources"></a>テクニカル ノート 24: MFC で定義されているメッセージおよびリソース
+# <a name="tn024-mfc-defined-messages-and-resources"></a>TN024:MFC で定義されているメッセージおよびリソース
 
 > [!NOTE]
 >  次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -162,7 +162,7 @@ MFC のプライベートなリソースの種類は範囲 0xF0 ですでは、0
 
 ## <a name="mfc-private-resource-formats"></a>MFC のプライベート リソースの形式
 
-現時点では、MFC が 2 つのプライベート リソース形式を定義します。 RT_TOOLBAR とリソース形します。
+現時点では、MFC では、2 つのプライベート リソース形式を定義します。RT_TOOLBAR リソース形.
 
 ## <a name="rttoolbar-resource-format"></a>RT_TOOLBAR リソースの形式
 
@@ -197,10 +197,9 @@ Visual C とこのリソース形リソースは、リソースの情報を使�
 SendDlgItemMessage(<Control ID>, <Message #>, 0, &<Data>);
 ```
 
-これは、任意の Windows メッセージおよびデータ コンテンツを許可する、非常に一般的な形式です。 Windows メッセージの限定されたサブセットのみをサポート、Visual C リソース エディターと MFC: CB_ADDSTRING (データはテキスト文字列) コンボ ボックスの一覧の初期選択します。
+これは、任意の Windows メッセージおよびデータ コンテンツを許可する、非常に一般的な形式です。 Visual C リソース エディターと MFC は、Windows メッセージの限定されたサブセットしかサポートします。(データはテキスト文字列) コンボ ボックスの一覧の初期選択 CB_ADDSTRING します。
 
 ## <a name="see-also"></a>関連項目
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

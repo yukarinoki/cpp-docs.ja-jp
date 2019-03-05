@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CFtpFileFind [MFC], FindNextFile
 - CFtpFileFind [MFC], GetFileURL
 ms.assetid: 9667cf01-657f-4b11-b9db-f11e5a7b4e4c
-ms.openlocfilehash: 72d1eb147f8d7387a04f25cc008cc4d4638ba691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5da739cac1ab852ce64526b24ee2b4f66d40d570
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50548227"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57284828"
 ---
 # <a name="cftpfilefind-class"></a>CFtpFileFind クラス
 
@@ -88,12 +88,12 @@ explicit CFtpFileFind(
 *pConnection*<br/>
 `CFtpConnection` オブジェクトへのポインター。 FTP 接続を取得するには、呼び出す[CInternetSession::GetFtpConnection](../../mfc/reference/cinternetsession-class.md#getftpconnection)します。
 
-*独自*<br/>
+*dwContext*<br/>
 コンテキスト識別子を`CFtpFileFind`オブジェクト。 参照してください**解説**このパラメーターの詳細についてはします。
 
 ### <a name="remarks"></a>Remarks
 
-既定値*独自*に MFC によって送信される、`CFtpFileFind`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CFtpFileFind`オブジェクト。 コンテキスト識別子を独自の値に設定する既定をオーバーライドすることができます。 コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事をご覧ください[インターネットの最初の手順: WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+既定値*独自*に MFC によって送信される、`CFtpFileFind`オブジェクトから、 [CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクトの作成、`CFtpFileFind`オブジェクト。 コンテキスト識別子を独自の値に設定する既定をオーバーライドすることができます。 コンテキスト識別子が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別されるオブジェクトの状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 ### <a name="example"></a>例
 

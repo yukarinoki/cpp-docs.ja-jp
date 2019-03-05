@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: ae3daff2582b9e58cc325304fac449423fb673a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621430"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259543"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl クラス
 
@@ -120,7 +120,7 @@ class CTabCtrl : public CWnd
 |[CTabCtrl::GetToolTips](#gettooltips)|タブ コントロールに関連付けられたツール ヒント コントロールのハンドルを取得します。|
 |[CTabCtrl::HighlightItem](#highlightitem)|タブ項目の強調表示状態を設定します。|
 |[CTabCtrl::HitTest](#hittest)|どのタブがある場合、指定した画面位置を決定します。|
-|[として](#insertitem)|タブ コントロールの新しいタブを挿入します。|
+|[CTabCtrl::InsertItem](#insertitem)|タブ コントロールの新しいタブを挿入します。|
 |[CTabCtrl::RemoveImage](#removeimage)|タブ コントロールのイメージ リストからイメージを削除します。|
 |[CTabCtrl::SetCurFocus](#setcurfocus)|タブ コントロール内の指定したタブにフォーカスを設定します。|
 |[CTabCtrl::SetCurSel](#setcursel)|タブ コントロールでタブを選択します。|
@@ -599,7 +599,7 @@ int HitTest(TCHITTESTINFO* pHitTestInfo) const;
 
 指定した位置にタブがない場合は、タブ、または 1 の 0 から始まるインデックスを返します。
 
-##  <a name="insertitem"></a>  として
+##  <a name="insertitem"></a>  CTabCtrl::InsertItem
 
 既存のタブ コントロールで新しいタブを挿入します。
 
@@ -645,7 +645,7 @@ LONG InsertItem(
 *lpszItem*<br/>
 タブのテキストを含む null で終わる文字列のアドレス。
 
-*あり*<br/>
+*nImage*<br/>
 イメージ リストから挿入するイメージの 0 から始まるインデックス。
 
 *いる*<br/>
@@ -688,7 +688,7 @@ void RemoveImage(int nImage);
 
 ### <a name="parameters"></a>パラメーター
 
-*あり*<br/>
+*nImage*<br/>
 削除するイメージの 0 から始まるインデックス。
 
 ### <a name="remarks"></a>Remarks

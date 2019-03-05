@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CObject class [MFC], CArchive objects
 - CObjects [MFC]
 ms.assetid: a829b6dd-bc31-47e0-8108-fbb946722db9
-ms.openlocfilehash: 370e8202d1bd1cda04edbdbd12bd936bdf5ef7b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 591ce7032aa3d70b1e5a020cd9173ed4c9d0fa9b
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50493692"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57299943"
 ---
 # <a name="storing-and-loading-cobjects-via-an-archive"></a>アーカイブを通じた CObject の格納と読み込み
 
@@ -40,5 +40,4 @@ ms.locfileid: "50493692"
 
 ## <a name="see-also"></a>関連項目
 
-[シリアル化: オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)
-
+[シリアル化:オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)

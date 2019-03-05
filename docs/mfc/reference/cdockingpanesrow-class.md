@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CDockingPanesRow [MFC], ShowPane
 - CDockingPanesRow [MFC], UpdateVisibleState
 ms.assetid: e7a17832-0ebb-4bce-b799-cec9b60f76fe
-ms.openlocfilehash: a2d9c7894327a66c24fae3890856dbb95a6d10e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5720fa2ff8e85092b246002b7961ce3830ee7e3
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450129"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277990"
 ---
 # <a name="cdockingpanesrow-class"></a>CDockingPanesRow クラス
 
@@ -115,7 +115,7 @@ class CDockingPanesRow : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|`CDockingPanesRow::CDockingPanesRow`|既定のコンストラクター|
+|`CDockingPanesRow::CDockingPanesRow`|既定のコンストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -170,7 +170,8 @@ class CDockingPanesRow : public CObject
 
 ## <a name="example"></a>例
 
-`CMFCAutoHideBar` オブジェクトから `CDockingPanesRow` オブジェクトを取得する方法を次の例に示します。
+
+  `CMFCAutoHideBar` オブジェクトから `CDockingPanesRow` オブジェクトを取得する方法を次の例に示します。
 
 [!code-cpp[NVC_MFC_RibbonApp#26](../../mfc/reference/codesnippet/cpp/cdockingpanesrow-class_1.cpp)]
 
@@ -256,7 +257,7 @@ virtual CSize CalcFixedLayout(
 
 [in]*bStretch*<br/>
 
-[in]*bHorz*<br/>
+[in] *bHorz*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -273,11 +274,11 @@ CDockingPanesRow(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*pParentDockBar*<br/>
+[in] *pParentDockBar*<br/>
 
 [in]*nOffset*<br/>
 
-[in]*パラメーター nHeight*<br/>
+[in] *nHeight*<br/>
 
 ### <a name="remarks"></a>Remarks
 
@@ -317,7 +318,7 @@ void FixupVirtualRects(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bMoveBackToVirtualRect*<br/>
+[in] *bMoveBackToVirtualRect*<br/>
 
 [in]*pBarToExclude*<br/>
 
@@ -331,7 +332,7 @@ virtual int GetAvailableLength(BOOL bUseVirtualRect = FALSE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bUseVirtualRect*<br/>
+[in] *bUseVirtualRect*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -415,7 +416,7 @@ int GetMaxPaneSize(BOOL bSkipHiddenBars = TRUE) const;
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*bSkipHiddenBars*<br/>
+[in] *bSkipHiddenBars*<br/>
 
 ### <a name="return-value"></a>戻り値
 
@@ -593,7 +594,7 @@ void MovePane(
 
 [in]*bSwapControlBars*<br/>
 
-[in]*hdwp*<br/>
+[in] *hdwp*<br/>
 
 [in]*rectTarget*<br/>
 
@@ -667,7 +668,7 @@ virtual void RepositionPanes(
 
 ### <a name="parameters"></a>パラメーター
 
-[in]*rectNewParentBarArea*<br/>
+[in] *rectNewParentBarArea*<br/>
 
 [in]*nSide*<br/>
 
@@ -729,7 +730,7 @@ void SetExtra(
 
 [in]*nExtraSpace*<br/>
 
-[in]*rowExtraAlign*<br/>
+[in] *rowExtraAlign*<br/>
 
 ### <a name="remarks"></a>Remarks
 

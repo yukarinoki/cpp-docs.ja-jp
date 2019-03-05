@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CComSingleThreadModel class
 - single-threaded applications, ATL
 ms.assetid: e5dc30c7-405a-4ba4-8ae9-51937243fce8
-ms.openlocfilehash: 2b0e19c94c16de936758ed4e547d731aed40cb26
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57219ca79dfa46437a8b13d889bb5f0c5a5d6f37
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565361"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57262052"
 ---
 # <a name="ccomsinglethreadmodel-class"></a>CComSingleThreadModel クラス
 
@@ -54,7 +54,7 @@ class CComSingleThreadModel
 
 通常、使用して`CComSingleThreadModel`2 つのいずれかで**typedef**名か[CComObjectThreadModel](atl-typedefs.md#ccomobjectthreadmodel)または[CComGlobalsThreadModel](atl-typedefs.md#ccomglobalsthreadmodel)します。 各によって参照されるクラス**typedef**次の表に示すように使用すると、スレッド処理モデルによって異なります。
 
-|Typedef|シングル スレッド モデル|アパートメント スレッド モデル|フリー スレッド モデル|
+|typedef|シングル スレッド モデル|アパートメント スレッド モデル|フリー スレッド モデル|
 |-------------|----------------------------|-------------------------------|--------------------------|
 |`CComObjectThreadModel`|S|S|M|
 |`CComGlobalsThreadModel`|S|M|M|

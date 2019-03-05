@@ -24,12 +24,12 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Register
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
-ms.openlocfilehash: f4294bbbf9563b55f2047f297eac1a33ca55141f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 127245385ebd89e51a1cc77d1efaa16729d73fe7
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50502896"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57300124"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget クラス
 
@@ -114,8 +114,8 @@ virtual DROPEFFECT OnDragEnter(
 *pDataObject*<br/>
 ドロップ可能なデータを含むデータ オブジェクトへのポインター。
 
-*ドロップ*<br/>
-修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
+*dwKeyState*<br/>
+修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
 
 *ポイント*<br/>
 クライアント座標でのカーソルの現在の場所が含まれています。
@@ -179,8 +179,8 @@ virtual DROPEFFECT OnDragOver(
 *pDataObject*<br/>
 削除するデータを含むデータ オブジェクトへのポインター。
 
-*ドロップ*<br/>
-修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
+*dwKeyState*<br/>
+修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
 
 *ポイント*<br/>
 クライアント座標でのカーソルの現在の場所が含まれています。
@@ -225,8 +225,8 @@ virtual DROPEFFECT OnDragScroll(
 *我が物*<br/>
 カーソルが上に現在のウィンドウへのポインター。
 
-*ドロップ*<br/>
-修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせ: MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
+*dwKeyState*<br/>
+修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
 
 *ポイント*<br/>
 画面を基準 (ピクセル単位)、カーソルの位置が含まれています。
@@ -317,7 +317,7 @@ virtual DROPEFFECT OnDropEx(
 *dropDefault*<br/>
 現在のキーの状態に基づいて既定のドロップ操作に対して、ユーザーが選択した結果。 せずになります。 ドロップ効果は、「解説」で説明します。
 
-*ドロップダウン リスト*<br/>
+*dropList*<br/>
 ドロップ ソースがサポートしているドロップ効果の一覧。 ビットごとの OR を使用して、ドロップ効果の値を結合することができます (**&#124;**) 操作。 ドロップ効果は、「解説」で説明します。
 
 *ポイント*<br/>
