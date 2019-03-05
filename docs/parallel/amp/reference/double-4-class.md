@@ -268,12 +268,12 @@ f1_keywords:
 - amp_short_vectors/Concurrency::graphics::double_4::bag
 - amp_short_vectors/Concurrency::graphics::double_4::zwy
 ms.assetid: a81c1595-24c6-4b3f-9574-d5942275e5e8
-ms.openlocfilehash: 3de59c57c1303fec06e5926f445cdbbb21e13c55
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 14e85a2c9ff21ed451cc6141ab7940f9c614c662
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631752"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275403"
 ---
 # <a name="double4-class"></a>double_4 クラス
 
@@ -600,7 +600,7 @@ class double_4;
 
 **ヘッダー:** amp_short_vectors.h
 
-**Namespace:** concurrency::graphics
+**名前空間:** Concurrency::graphics
 
 ##  <a name="ctor"></a> double_4
 
@@ -660,7 +660,7 @@ explicit inline double_4(
 *_V3*<br/>
 3 要素を初期化する値。
 
-*(_V).*<br/>
+*_V*<br/>
 初期化の値。
 
 *_Other*<br/>

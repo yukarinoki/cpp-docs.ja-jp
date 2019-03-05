@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: e853a770dd1f98b1e7f06afd814962f3b3805ceb
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53177876"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269852"
 ---
 # <a name="ceditview-class"></a>CEditView クラス
 
@@ -77,7 +77,7 @@ class CEditView : public CCtrlView
 |[CEditView::LockBuffer](#lockbuffer)|バッファーをロックします。|
 |[CEditView::PrintInsideRect](#printinsiderect)|指定した四角形内のテキストをレンダリングします。|
 |[CEditView::SerializeRaw](#serializeraw)|シリアル化、`CEditView`未加工のテキストとしてディスクにオブジェクト。|
-|[なかったとき](#setprinterfont)|新しいプリンター フォントを設定します。|
+|[CEditView::SetPrinterFont](#setprinterfont)|新しいプリンター フォントを設定します。|
 |[CEditView::SetTabStops](#settabstops)|タブの画面表示と印刷の両方の位置を設定します。|
 |[CEditView::UnlockBuffer](#unlockbuffer)|バッファーのロックを解除します。|
 
@@ -183,7 +183,7 @@ BOOL FindText(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索するテキスト。
 
 *bNext*<br/>
@@ -293,7 +293,7 @@ virtual void OnFindNext(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索するテキスト。
 
 *bNext*<br/>
@@ -321,10 +321,10 @@ virtual void OnReplaceAll(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索するテキスト。
 
-*見つかる*<br/>
+*lpszReplace*<br/>
 検索テキストを置換するテキスト。
 
 *置き換えた*<br/>
@@ -352,7 +352,7 @@ virtual void OnReplaceSel(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索するテキスト。
 
 *bNext*<br/>
@@ -361,7 +361,7 @@ virtual void OnReplaceSel(
 *置き換えた*<br/>
 検索は大文字小文字を区別するかどうかを指定します。 TRUE の場合、検索は大文字小文字が区別されます。 FALSE の場合は、検索は大文字小文字が区別されません。
 
-*見つかる*<br/>
+*lpszReplace*<br/>
 見つかったテキストを置換するテキスト。
 
 ### <a name="remarks"></a>Remarks
@@ -380,7 +380,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索するテキスト。
 
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect
@@ -436,7 +436,7 @@ void SerializeRaw(CArchive& ar);
 
 `SerializeRaw` 異なる`CEditView`の内部実装の`Serialize`を読み取ってオブジェクトの説明のデータの先頭テキストのみを書き込みます。
 
-##  <a name="setprinterfont"></a>  なかったとき
+##  <a name="setprinterfont"></a>  CEditView::SetPrinterFont
 
 呼び出す`SetPrinterFont`プリンター フォントを指定しているフォントに設定する*pFont*します。
 

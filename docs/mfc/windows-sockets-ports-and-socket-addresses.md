@@ -1,5 +1,5 @@
 ---
-title: 'Windows ソケット : ポートとソケット アドレス'
+title: Windows ソケット:ポートとソケット アドレス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ports [MFC], definition
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - sockets [MFC], addresses
 - sockets [MFC], ports
 ms.assetid: e050261a-9285-4f31-a1c5-6c8033af5b4a
-ms.openlocfilehash: d132001cb792877e3d476508a6a5bb456dfb5987
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c33ec1376c1898272cf80e8d77c5cc273e16f9de
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631362"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57277778"
 ---
-# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows ソケット : ポートとソケット アドレス
+# <a name="windows-sockets-ports-and-socket-addresses"></a>Windows ソケット:ポートとソケット アドレス
 
 この記事では、用語"port"および"address"として Windows ソケットの使用について説明します。
 
@@ -40,17 +40,16 @@ ms.locfileid: "50631362"
 
 詳細については次を参照してください:
 
-- [Windows ソケット: CAsyncSocket クラスの使い方](../mfc/windows-sockets-using-class-casyncsocket.md)
+- [Windows ソケット:Casyncsocket クラス](../mfc/windows-sockets-using-class-casyncsocket.md)
 
-- [Windows ソケット: アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
+- [Windows ソケット:アーカイブ付きソケットの使用](../mfc/windows-sockets-using-sockets-with-archives.md)
 
-- [Windows ソケット: アーカイブ付きソケットの動作](../mfc/windows-sockets-how-sockets-with-archives-work.md)
+- [Windows ソケット:アーカイブ付きソケットのしくみ](../mfc/windows-sockets-how-sockets-with-archives-work.md)
 
-- [Windows ソケット: ストリーム ソケット](../mfc/windows-sockets-stream-sockets.md)
+- [Windows ソケット:Stream ソケット](../mfc/windows-sockets-stream-sockets.md)
 
-- [Windows ソケット: データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
+- [Windows ソケット:データグラム ソケット](../mfc/windows-sockets-datagram-sockets.md)
 
 ## <a name="see-also"></a>関連項目
 
 [MFC における Windows ソケット](../mfc/windows-sockets-in-mfc.md)
-

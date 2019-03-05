@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - IScheduler structure
 ms.assetid: 471de85a-2b1a-4b6d-ab81-2eff2737161e
-ms.openlocfilehash: dd280884ab106bcf878b06c94e2ea3d0d99be2e8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 54db5d664a48f95a952eb1b409839d8ac3421e30
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50603217"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57274077"
 ---
 # <a name="ischeduler-structure"></a>IScheduler 構造体
 
@@ -40,7 +40,7 @@ struct IScheduler;
 |[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|使用するための一連の仮想プロセッサ ルートのスケジューラを提供します。 各`IVirtualProcessorRoot`インターフェイスは、スケジューラのための作業を実行できる 1 つのスレッドを実行する権限を表します。|
 |[IScheduler::GetId](#getid)|スケジューラの一意識別子を返します。|
 |[IScheduler::GetPolicy](#getpolicy)|スケジューラのポリシーのコピーを返します。 スケジューラ ポリシーの詳細については、次を参照してください。 [SchedulerPolicy](schedulerpolicy-class.md)します。|
-|[Ischeduler::notifyresourcesexternallybusy](#notifyresourcesexternallybusy)|この配列内の仮想プロセッサ ルートのセットによって表されるハードウェア スレッドをスケジューラに通知`ppVirtualProcessorRoots`他のスケジューラによって使用されているようになりました。|
+|[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|この配列内の仮想プロセッサ ルートのセットによって表されるハードウェア スレッドをスケジューラに通知`ppVirtualProcessorRoots`他のスケジューラによって使用されているようになりました。|
 |[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|この配列内の仮想プロセッサ ルートのセットによって表されるハードウェア スレッドをスケジューラに通知`ppVirtualProcessorRoots`他のスケジューラによって使用されていません。|
 |[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|このスケジューラに以前割り当てられた仮想プロセッサ ルートの削除を開始します。|
 |[IScheduler::Statistics](#statistics)|タスクの到着から完了率、およびスケジューラのキューの長さの変更に関連する情報を提供します。|

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data storage [MFC], CArchive class
 - CArchive class [MFC], constructor
 ms.assetid: aefa28ce-b55c-40dc-9e42-5f038030985d
-ms.openlocfilehash: a97223602e9994647a8af16cc68de5394494c1ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 80e3e73840bce53691c3f5fdafb62c60bdb8f832
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659928"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57273804"
 ---
 # <a name="two-ways-to-create-a-carchive-object"></a>CArchive オブジェクトを作成する 2 つの方法
 
@@ -60,7 +60,7 @@ ms.locfileid: "50659928"
 
    2 番目の引数、`CArchive`コンス トラクターは、ファイルの格納またはデータの読み込みのアーカイブを使用するかどうかを指定する列挙値。 `Serialize`オブジェクトの関数が呼び出すことによってこの状態をチェック、`IsStoring`アーカイブ オブジェクトの関数。
 
-格納するかからのデータの読み込みが完了したら、`CArchive`オブジェクトを閉じます。 ただし、 `CArchive` (と`CFile`) アーカイブ (およびファイル) のオブジェクトが自動的に閉じ、エラーからの復旧に簡単には、明示的にそのためことをお勧めします。 エラー処理の詳細については、記事を参照してください。[例外。 例外のキャッチと削除](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
+格納するかからのデータの読み込みが完了したら、`CArchive`オブジェクトを閉じます。 ただし、 `CArchive` (と`CFile`) アーカイブ (およびファイル) のオブジェクトが自動的に閉じ、エラーからの復旧に簡単には、明示的にそのためことをお勧めします。 エラー処理の詳細については、記事を参照してください。[例外。キャッチと削除例外](../mfc/exceptions-catching-and-deleting-exceptions.md)します。
 
 #### <a name="to-close-the-carchive-object"></a>CArchive オブジェクトを閉じる
 
@@ -70,5 +70,4 @@ ms.locfileid: "50659928"
 
 ## <a name="see-also"></a>関連項目
 
-[シリアル化: オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)
-
+[シリアル化:オブジェクトのシリアル化](../mfc/serialization-serializing-an-object.md)

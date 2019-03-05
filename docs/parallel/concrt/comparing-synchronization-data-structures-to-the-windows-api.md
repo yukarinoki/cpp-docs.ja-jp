@@ -5,12 +5,12 @@ helpviewer_keywords:
 - synchronization data structures, compared to Windows API
 - event class, example
 ms.assetid: 8b0b1a3a-ef80-408c-91fa-93e6af920b4e
-ms.openlocfilehash: acbf5edb0f3284195052cfb3f4447f0b2ba7fe66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4fa0d3fbf3457bfafab731275584d206206161dd
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554519"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57275975"
 ---
 # <a name="comparing-synchronization-data-structures-to-the-windows-api"></a>同期データ構造と Windows API の比較
 
@@ -28,11 +28,11 @@ ms.locfileid: "50554519"
 
 |機能|`reader_writer_lock`|SRW ロック|
 |-------------|--------------------------|--------------|
-|再入不可能|はい|はい|
+|再入不可能|[はい]|[はい]|
 |リーダーをライターに昇格 (アップグレード サポート)|いいえ|いいえ|
 |ライターをリーダーに降格 (ダウングレード サポート)|いいえ|いいえ|
-|書き込み優先ロック|はい|いいえ|
-|ライターへの FIFO アクセス|はい|いいえ|
+|書き込み優先ロック|[はい]|いいえ|
+|ライターへの FIFO アクセス|[はい]|いいえ|
 
 SRW ロックの詳細については、次を参照してください。[スリム リーダー/ライター (SRW) ロック](https://msdn.microsoft.com/library/windows/desktop/aa904937)プラットフォーム SDK に含まれています。
 
@@ -44,7 +44,8 @@ SRW ロックの詳細については、次を参照してください。[スリ
 
 ### <a name="description"></a>説明
 
-`event` クラスと Windows イベントの相違点をより詳しく理解するために、次の例について考えてみましょう。 この例により、スケジューラは最大で 2 つの同時タスクを作成した後、`event` クラスと Windows 手動リセット イベントを使用する 2 つの類似した関数を呼び出すことができます。 各関数は、まず共有イベントがシグナル状態になるのを待機する複数のタスクを作成します。 次に、実行中のタスクに制御を渡し、イベントに通知します。 その後、各関数はシグナル状態イベントを待機します。
+
+  `event` クラスと Windows イベントの相違点をより詳しく理解するために、次の例について考えてみましょう。 この例により、スケジューラは最大で 2 つの同時タスクを作成した後、`event` クラスと Windows 手動リセット イベントを使用する 2 つの類似した関数を呼び出すことができます。 各関数は、まず共有イベントがシグナル状態になるのを待機する複数のタスクを作成します。 次に、実行中のタスクに制御を渡し、イベントに通知します。 その後、各関数はシグナル状態イベントを待機します。
 
 ### <a name="code"></a>コード
 
@@ -81,7 +82,8 @@ Windows event:
     Context 13: received the event.
 ```
 
-`event` クラスは協調して動作するため、イベントがシグナル状態になるのを待機している場合、スケジューラは処理リソースを別のコンテキストに再割り当てすることができます。 したがって、`event` クラスを使用するバージョンで、より多くの作業が実行されます。 Windows イベントを使用するバージョンでは、待機中の各タスクは次のタスクが開始される前にシグナル状態になる必要があります。
+
+  `event` クラスは協調して動作するため、イベントがシグナル状態になるのを待機している場合、スケジューラは処理リソースを別のコンテキストに再割り当てすることができます。 したがって、`event` クラスを使用するバージョンで、より多くの作業が実行されます。 Windows イベントを使用するバージョンでは、待機中の各タスクは次のタスクが開始される前にシグナル状態になる必要があります。
 
 タスクの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 

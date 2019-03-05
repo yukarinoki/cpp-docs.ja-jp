@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: 16e97b994ad30fdd4c255dac45e8b56fd04f663a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583314"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57259205"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback クラス
 
@@ -169,7 +169,7 @@ static HRESULT Download(
 [in]読み取られるデータを受信する関数へのポインター。 関数型のオブジェクトのクラスのメンバーである`T`します。 参照してください[このポインターは](#startasyncdownload)構文と例。
 
 *bstrURL*<br/>
-[in]データの取得元の URL。 有効な URL またはファイル名を指定できます。 Nll は指定できません。 例えば:
+[in]データの取得元の URL。 有効な URL またはファイル名を指定できます。 Nll は指定できません。 例:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 
@@ -357,9 +357,9 @@ STDMETHOD(
 ### <a name="parameters"></a>パラメーター
 
 *grfBSCF*<br/>
-[in]BSCF 列挙値。 次のいずれかまたは: BSCF_FIRSTDATANOTIFICATION、BSCF_INTERMEDIARYDATANOTIFICATION、または知らせるします。
+[in]BSCF 列挙値。 1 つ、または、次の詳細:BSCF_FIRSTDATANOTIFICATION、BSCF_INTERMEDIARYDATANOTIFICATION、または知らせるします。
 
-*ない dwSize*<br/>
+*dwSize*<br/>
 [in]バインディングの当初から使用可能なデータのバイト単位で累積時間。 データの量に関連がないこと、または特定の量が利用できないことを示す、0 にすることができます。
 
 *pformatetc*<br/>
@@ -501,7 +501,7 @@ HRESULT StartAsyncDownload(
 [in]読み取られるデータを受信する関数へのポインター。 関数型のオブジェクトのクラスのメンバーである`T`します。 参照してください**解説**構文と例。
 
 *bstrURL*<br/>
-[in]データの取得元の URL。 有効な URL またはファイル名を指定できます。 Nll は指定できません。 例えば:
+[in]データの取得元の URL。 有効な URL またはファイル名を指定できます。 Nll は指定できません。 例:
 
 `CComBSTR mybstr =_T("http://somesite/data.htm")`
 

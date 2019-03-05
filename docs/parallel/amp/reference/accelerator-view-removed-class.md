@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - AMPRT/Concurrency::accelerator_view_removed:accelerator_view_removed Class
 ms.assetid: 262446de-311c-454e-a5ed-e2aaced0d88a
-ms.openlocfilehash: c51d05b098c395a498bc67d14061185c5d84ebb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9b803b205ea925ed8cc07e36342a1646d576d7d4
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462700"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57263755"
 ---
 # <a name="acceleratorviewremoved-class"></a>accelerator_view_removed クラス
 
@@ -52,7 +52,7 @@ class accelerator_view_removed : public runtime_exception;
 
 **ヘッダー:** amprt.h
 
-**名前空間:** Concurrency
+**名前空間:** コンカレンシー
 
 ## <a name="ctor"></a> accelerator_view_removed
 
@@ -71,7 +71,7 @@ explicit accelerator_view_removed(
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明。
 
 *_View_removed_reason*<br/>

@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 20: ID 名および番号に関する規約'
+title: TN020:ID の名前付けおよび番号に関する規約
 ms.date: 11/04/2016
 f1_keywords:
 - vc.id
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - resource identifiers, naming and numbering
 - resource identifiers
 ms.assetid: aecbd2cf-68b3-47f6-ae21-b1f507917245
-ms.openlocfilehash: 9e575ee99b78b8efa75096cac4559eb9aea7fd21
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: f1cd44ed448cc4c0fc60d490a613f0ad91071376
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518672"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57267395"
 ---
-# <a name="tn020-id-naming-and-numbering-conventions"></a>テクニカル ノート 20: ID 名および番号に関する規約
+# <a name="tn020-id-naming-and-numbering-conventions"></a>TN020:ID の名前付けおよび番号に関する規約
 
 ここでは、MFC 2.0 で使うリソース、コマンド、文字列、コントロール、子ウィンドウに対する ID 名と ID 番号の規約について説明します。
 
@@ -107,4 +107,3 @@ MFC コマンド アーキテクチャを次のコマンドを ON_COMMAND コマ
 
 [番号順テクニカル ノート](../mfc/technical-notes-by-number.md)<br/>
 [カテゴリ別テクニカル ノート](../mfc/technical-notes-by-category.md)
-

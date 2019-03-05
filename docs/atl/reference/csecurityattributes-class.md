@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSecurityAttributes class
 ms.assetid: a094880c-52e1-4a28-97ff-752d5869908e
-ms.openlocfilehash: 0b39109bd97e2bb83b7a51fdd6e626b63c4c8798
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef0756ee1dd0aa7d82caf218aa2c417df0c2778c
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604986"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57269255"
 ---
 # <a name="csecurityattributes-class"></a>CSecurityAttributes クラス
 
@@ -41,7 +41,7 @@ class CSecurityAttributes : public SECURITY_ATTRIBUTES
 
 |名前|説明|
 |----------|-----------------|
-|[Csecurityattributes::set](#set)|属性を設定するには、このメソッドを呼び出して、`CSecurityAttributes`オブジェクト。|
+|[CSecurityAttributes::Set](#set)|属性を設定するには、このメソッドを呼び出して、`CSecurityAttributes`オブジェクト。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -76,7 +76,7 @@ explicit CSecurityAttributes(const CSecurityDesc& rSecurityDescriptor, bool bInh
 *bInheritsHandle*<br/>
 新しいプロセスの作成時に、返されたハンドルを継承するかどうかを指定します。 このメンバーが true の場合、新しいプロセスは、返されたハンドルを継承します。
 
-##  <a name="set"></a>  Csecurityattributes::set
+##  <a name="set"></a>  CSecurityAttributes::Set
 
 属性を設定するには、このメソッドを呼び出して、`CSecurityAttributes`オブジェクト。
 

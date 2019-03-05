@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: 56c694283c5143174b0ce7370d98a244c056bc1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496019"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57261350"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl クラス
 
@@ -111,8 +111,8 @@ class CHeaderCtrl : public CWnd
 |[CHeaderCtrl::GetOrderArray](#getorderarray)|ヘッダー コントロールの項目の左から右の順序を取得します。|
 |[CHeaderCtrl::GetOverflowRect](#getoverflowrect)|現在のヘッダー コントロールのオーバーフロー ボタンの外接する四角形を取得します。|
 |[CHeaderCtrl::HitTest](#hittest)|どのヘッダー項目がある場合、指定したポイントにあるかを決定します。|
-|[として](#insertitem)|ヘッダー コントロールには、新しい項目を挿入します。|
-|[配置](#layout)|指定した四角形内のヘッダー コントロールの位置とサイズを取得します。|
+|[CHeaderCtrl::InsertItem](#insertitem)|ヘッダー コントロールには、新しい項目を挿入します。|
+|[CHeaderCtrl::Layout](#layout)|指定した四角形内のヘッダー コントロールの位置とサイズを取得します。|
 |[CHeaderCtrl::OrderToIndex](#ordertoindex)|ヘッダー コントロール内での順序に基づいて、item のインデックス値を取得します。|
 |[CHeaderCtrl::SetBitmapMargin](#setbitmapmargin)|ヘッダー コントロールのビットマップの余白の幅を設定します。|
 |[CHeaderCtrl::SetFilterChangeTimeout](#setfilterchangetimeout)|フィルター属性が、変更時の転記までのタイムアウト間隔を設定、`HDN_FILTERCHANGE`通知します。|
@@ -691,7 +691,7 @@ int HitTest(LPHDHITTESTINFO* phdhti);
 
 [!code-cpp[NVC_MFC_CHeaderCtrl_s4#1](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_16.cpp)]
 
-##  <a name="insertitem"></a>  として
+##  <a name="insertitem"></a>  CHeaderCtrl::InsertItem
 
 指定したインデックス位置にあるヘッダー コントロールには、新しい項目を挿入します。
 
@@ -717,7 +717,7 @@ int InsertItem(
 
 [!code-cpp[NVC_MFC_CHeaderCtrl#12](../../mfc/reference/codesnippet/cpp/cheaderctrl-class_17.cpp)]
 
-##  <a name="layout"></a>  配置
+##  <a name="layout"></a>  CHeaderCtrl::Layout
 
 指定した四角形内のヘッダー コントロールの位置とサイズを取得します。
 

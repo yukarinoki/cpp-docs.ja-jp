@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - invalid_oversubscribe_operation class
 ms.assetid: 0a9c5f08-d5e6-4ad0-90a9-517472b3ac28
-ms.openlocfilehash: 9e25095f70266e772d69f9b644f7def968157912
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 200743d41c1c45f2a957dba0716dd7aa07e3de76
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572147"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57266680"
 ---
 # <a name="invalidoversubscribeoperation-class"></a>invalid_oversubscribe_operation クラス
 
@@ -31,7 +31,8 @@ class invalid_oversubscribe_operation : public std::exception;
 
 |名前|説明|
 |----------|-----------------|
-|[invalid_oversubscribe_operation](#ctor)|オーバーロードされます。 `invalid_oversubscribe_operation` オブジェクトを構築します。|
+|[invalid_oversubscribe_operation](#ctor)|オーバーロードされます。 
+  `invalid_oversubscribe_operation` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -47,7 +48,8 @@ class invalid_oversubscribe_operation : public std::exception;
 
 ##  <a name="ctor"></a> invalid_oversubscribe_operation
 
-`invalid_oversubscribe_operation` オブジェクトを構築します。
+
+  `invalid_oversubscribe_operation` オブジェクトを構築します。
 
 ```
 explicit _CRTIMP invalid_oversubscribe_operation(_In_z_ const char* _Message) throw();
@@ -57,7 +59,7 @@ invalid_oversubscribe_operation() throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*メッセージ (_m)*<br/>
+*_Message*<br/>
 エラーの説明メッセージ。
 
 ## <a name="see-also"></a>関連項目

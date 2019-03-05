@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CDataExchange [MFC], m_bSaveAndValidate
 - CDataExchange [MFC], m_pDlgWnd
 ms.assetid: 84ed6113-325d-493e-a75d-223f03a992b8
-ms.openlocfilehash: 7d0a804294fa5da619bdab4184adf3e28c420506
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 630bc41ee20aa7cf6f62cd320b15b8dca0d3fedf
+ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509293"
+ms.lasthandoff: 03/04/2019
+ms.locfileid: "57268396"
 ---
 # <a name="cdataexchange-class"></a>CDataExchange クラス
 
@@ -159,7 +159,7 @@ HWND PrepareCtrl(int nIDC);
 
 ### <a name="parameters"></a>パラメーター
 
-*各*<br/>
+*nIDC*<br/>
 DDX DDV 用に準備するコントロールの ID。
 
 ### <a name="return-value"></a>戻り値
@@ -186,7 +186,7 @@ HWND PrepareEditCtrl(int nIDC);
 
 ### <a name="parameters"></a>パラメーター
 
-*各*<br/>
+*nIDC*<br/>
 DDX または DDV を準備するエディット コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
@@ -213,7 +213,7 @@ COleControlSite* PrepareOleCtrl(int nIDC);
 
 ### <a name="parameters"></a>パラメーター
 
-*各*<br/>
+*nIDC*<br/>
 DDX または DDV を準備する OLE コントロールの ID。
 
 ### <a name="return-value"></a>戻り値
@@ -234,4 +234,3 @@ DDX ルーチンおよび DDV ルーチンを記述の詳細については、�
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWnd::DoDataExchange](../../mfc/reference/cwnd-class.md#dodataexchange)<br/>
 [CWnd::UpdateData](../../mfc/reference/cwnd-class.md#updatedata)
-
