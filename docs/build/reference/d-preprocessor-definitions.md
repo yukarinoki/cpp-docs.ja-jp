@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -D compiler option [C++]
 - D compiler option [C++]
 ms.assetid: b53fdda7-8da1-474f-8811-ba7cdcc66dba
-ms.openlocfilehash: 21836d2842427581cc5019a42c563a78356d1ec2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 089f34f6daa606ed2869852a04ee76c6bda8fe25
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620507"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424679"
 ---
 # <a name="d-preprocessor-definitions"></a>/D (プリプロセッサの定義)
 
@@ -46,7 +46,7 @@ ms.locfileid: "50620507"
 
 次のコマンドを実行すると、TEST.c からすべての `__far` キーワードが削除されます。
 
-**CL/D__far テストを = です。C**
+**CL /D__far=  TEST.C**
 
 **CL**環境変数は、等号 (=) を含む文字列に設定することはできません。 使用する **/D**と共に、 **CL**環境変数を指定してください、等号 (=) ではなくシャープ記号。
 
@@ -54,7 +54,7 @@ ms.locfileid: "50620507"
 SET CL=/DTEST#0
 ```
 
-コマンド プロンプトでプリプロセッサ シンボルを定義する場合は、コンパイラ解析規則とシェル解析規則の両方を考慮してください。 たとえば、プログラムでパーセント記号のプリプロセッサ シンボル (%) を定義するには、コマンド プロンプトでパーセント記号 2 文字 (%%) を指定します。パーセント記号を 1 文字だけ指定すると、解析エラーが発生します。
+コマンド プロンプトでプリプロセッサ シンボルを定義する場合は、コンパイラ解析規則とシェル解析規則の両方を考慮してください。 たとえば、パーセント記号のプリプロセッサ シンボル (%) を定義するにはプログラムでは、パーセント記号 2 文字 (%) を指定しますコマンド プロンプト。1 つだけを指定する場合は、解析エラーが生成されます。
 
 ```
 CL /DTEST=%% TEST.C

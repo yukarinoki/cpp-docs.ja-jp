@@ -10,12 +10,12 @@ helpviewer_keywords:
 - GZ compiler option [C++]
 - debug builds, catch release-build errors
 ms.assetid: b3efeeff-d5e3-4057-91c9-f6fc73d0270c
-ms.openlocfilehash: 86d9b2cb7da3c21ce46331d9f817911b65c4ba2d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35475b87b8f59fbb0fb24e62690f8fc24c7cb4e9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50562895"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423470"
 ---
 # <a name="gz-enable-stack-frame-run-time-error-checking"></a>/GZ (スタック フレームのランタイム エラー チェックの有効化)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50562895"
 
 **/GZ**は Visual Studio 2005; 非推奨を使用して、 [/RTC (ランタイム エラー チェック)](../../build/reference/rtc-run-time-error-checks.md)代わりにします。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

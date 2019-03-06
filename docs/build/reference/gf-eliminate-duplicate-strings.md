@@ -14,12 +14,12 @@ helpviewer_keywords:
 - GF compiler option [C++]
 - strings [C++], pooling
 ms.assetid: bb7b5d1c-8e1f-453b-9298-8fcebf37d16c
-ms.openlocfilehash: 7504c12584d931b0f39062f393765ad8124fc0dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c85379cf1a514cafcd2f840673fc9c7b2d415ba4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561554"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425667"
 ---
 # <a name="gf-eliminate-duplicate-strings"></a>/GF (同一文字列の削除)
 
@@ -52,7 +52,7 @@ char *t = "This is a character buffer";
 
 **/GF**ときは、 [/O1](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または **/O2**使用されます。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

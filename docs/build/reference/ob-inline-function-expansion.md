@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: a53069c44e72d0d873ccb0b600c48480527d111f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6406b604ab74d29d8bc6c9bc0920fd0cf0bd055b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582665"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426148"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (関数のインライン展開)
 
@@ -48,7 +48,8 @@ ms.locfileid: "50582665"
 マークされた関数ののみ拡張できます[インライン](../../cpp/inline-functions-cpp.md)、 `__inline`、または`__forceinline`、またはクラス宣言で定義されている C++ メンバー関数。
 
 **2**<br/>
-既定値。 `inline`、`__inline`、または `__forceinline` としてマークされた関数の展開、およびコンパイラが選択するその他すべての関数が許可されます。
+既定値。 
+  `inline`、`__inline`、または `__forceinline` としてマークされた関数の展開、およびコンパイラが選択するその他すべての関数が許可されます。
 
 **/Ob2**ときは、 [/O1、/O2 (サイズの最小化、速度の最大化)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最もの速度の最適化)](../../build/reference/ox-full-optimization.md)使用されます。
 

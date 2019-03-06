@@ -9,12 +9,12 @@ helpviewer_keywords:
 - preprocessor output, copy to stdout
 - preprocessor output
 ms.assetid: ddbb1725-d950-4978-ab2f-30a5cd7b778c
-ms.openlocfilehash: 892203d300c07711d06cff602128ec6e9ceb351c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0a0d692cd7eaf59aa0c53ecf4436b4c507439a3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504574"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425485"
 ---
 # <a name="e-preprocess-to-stdout"></a>/E (プリプロセス出力の標準出力へのコピー)
 
@@ -60,7 +60,7 @@ cl -E test.cpp > test2.cpp
 
 `int main` test2.cpp で正しくされません`intmain`します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

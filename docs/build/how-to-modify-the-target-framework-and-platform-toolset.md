@@ -1,5 +1,5 @@
 ---
-title: '方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する'
+title: '方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更します。'
 ms.custom: conceptual
 ms.date: 11/04/2016
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: modify target framework and platform toolset'
 ms.assetid: 031b1d54-e6e1-4da7-9868-3e75a87d9ffe
-ms.openlocfilehash: 7759cf13e95fab97ee5a7b77e22c690a69fde41a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12f4f67eee59137042ef36f6709e921287d5528e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523112"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424775"
 ---
-# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更する
+# <a name="how-to-modify-the-target-framework-and-platform-toolset"></a>方法: ターゲット フレームワークおよびプラットフォームのツールセットを変更します。
 
 異なるバージョンの .NET Framework を対象として、別のプラットフォーム ツールセットを使用する Visual C プロジェクトの設定を変更することができます。 既定では、プロジェクト システムは、プロジェクトの作成に使用する Visual Studio のバージョンに対応する .NET Framework のバージョンおよびツールセットのバージョンを使用します。 プロジェクトのプロパティを変更することで、対象のプラットフォーム ツールセットを変更できます。 プロジェクト (.vcxproj) ファイルを変更すると、ターゲット フレームワークを変更できます。 それぞれの対象をコンパイルするために個別のコード ベースを保守する必要はありません。
 

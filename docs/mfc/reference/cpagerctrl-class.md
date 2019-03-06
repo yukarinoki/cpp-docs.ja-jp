@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CPagerCtrl [MFC], SetChild
 - CPagerCtrl [MFC], SetScrollPos
 ms.assetid: 65ac58dd-4f5e-4b7e-b15c-e0d435a7e884
-ms.openlocfilehash: c782d5761323129eccf7ee129d877128c400d93a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 648bc17f0f130b831aa619b90ed13ba6be35b4d4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270723"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417594"
 ---
 # <a name="cpagerctrl-class"></a>CPagerCtrl クラス
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 |パラメーター|説明|
 |---------------|-----------------|
 |*dwStyle*|[in]ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)をコントロールに適用できます。|
-|*rect*|[in]参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)クライアント座標で、コントロールのサイズと位置を含む構造体。|
+|*rect*|[in]参照を[RECT](/previous-versions/dd162897\(v=vs.85\))クライアント座標で、コントロールのサイズと位置を含む構造体。|
 |*pParentWnd*|[in]ポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。 このパラメーターは、NULL にすることはできません。|
 |*nID*|[in]コントロールの ID。|
 
@@ -186,7 +186,7 @@ virtual BOOL CreateEx(
 |---------------|-----------------|
 |*dwExStyle*|[in]コントロールに適用する拡張スタイルのビットごとの組み合わせ。 詳細については、次を参照してください。、 *dwExStyle*のパラメーター、 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)関数。|
 |*dwStyle*|[in]ビットごとの組み合わせ (OR)[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)をコントロールに適用できます。|
-|*rect*|[in]参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)クライアント座標で、コントロールのサイズと位置を含む構造体。|
+|*rect*|[in]参照を[RECT](/previous-versions/dd162897\(v=vs.85\))クライアント座標で、コントロールのサイズと位置を含む構造体。|
 |*pParentWnd*|[in]ポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。 このパラメーターは、NULL にすることはできません。|
 |*nID*|[in]コントロールの ID。|
 

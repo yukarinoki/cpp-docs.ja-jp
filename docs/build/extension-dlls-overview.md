@@ -1,5 +1,5 @@
 ---
-title: '拡張 DLL : 概要'
+title: 拡張 Dll:概要
 ms.date: 11/04/2016
 helpviewer_keywords:
 - AFXDLL library
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 1967370f587b0b78c4e68ebff14804b20f158bd0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498203"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425056"
 ---
-# <a name="mfc-extension-dlls-overview"></a>MFC 拡張 Dll: 概要
+# <a name="mfc-extension-dlls-overview"></a>MFC 拡張 Dll:概要
 
 MFC 拡張 DLL は、通常は既存の Microsoft Foundation Class ライブラリ クラスから派生した再利用可能なクラスを実装する DLL です。 MFC 拡張 Dll は、MFC (MFC の共有バージョンとも呼ばれます) のダイナミック リンク ライブラリのバージョンを使用して構築されます。 のみ MFC の実行可能ファイル (アプリケーションまたはレギュラー MFC Dll) は MFC の共有バージョンを使用して作成するには、MFC 拡張 DLL を使用できます。 MFC 拡張 DLL では、MFC から新しいカスタム クラスを派生でき、この拡張バージョンの MFC DLL を呼び出すアプリケーションを提供できます。
 
@@ -35,7 +35,7 @@ AFXDLL という用語は、Visual C のドキュメントでは使用されな�
 
 - [レギュラー MFC DLL でのデータベース、OLE、およびソケット MFC 拡張 DLL の使用](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [非 MFC DLL: 概要](../build/non-mfc-dlls-overview.md)
+- [非 MFC DLL:概要](../build/non-mfc-dlls-overview.md)
 
 - [MFC と静的にリンクされるレギュラー MFC の Dll](../build/regular-dlls-statically-linked-to-mfc.md)
 

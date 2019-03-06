@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], SetStep
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
-ms.openlocfilehash: a6d5d3becfd1c1ee4a032c74eb116ede82c42bc4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 131bee5f9eae1e6e2be4d48941d148edbde68262
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260271"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418764"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
 
@@ -149,7 +149,7 @@ virtual BOOL Create(
 - PBS_SMOOTH 表示段階、smooth、進行状況バー コントロールに入力します。 このフラグを設定しないブロックのコントロールを生成します。
 
 *rect*<br/>
-進行状況バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定した座標がのクライアント領域を基準とは、コントロールは、子ウィンドウにある必要があります、ため、 *pParentWnd*します。
+進行状況バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。 指定した座標がのクライアント領域を基準とは、コントロールは、子ウィンドウにある必要があります、ため、 *pParentWnd*します。
 
 *pParentWnd*<br/>
 通常、進行状況バー コントロールの親ウィンドウを指定します、`CDialog`します。 NULL は指定できません。
@@ -191,7 +191,7 @@ virtual BOOL CreateEx(
 進行状況バー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルの任意の組み合わせを適用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) Windows SDK に含まれています。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。

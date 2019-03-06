@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 43ffbe76092b9675be1610e58c65c0034955634f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d8aadca14f52432e3fccb168c213ae566b1baae2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50479044"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421439"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7、/Zi、/ZI (デバッグ情報の形式)
 
@@ -77,7 +77,7 @@ PDB ファイルの名前、コンパイラ*プロジェクト*.pdb。 プロジ
 > [!NOTE]
 > **/ZI**オプションは、x86 および x64 プロセッサを対象とするコンパイラで使用できるのみ、このコンパイラ オプションは ARM プロセッサを対象とするコンパイラで使用できません。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 
@@ -93,4 +93,3 @@ PDB ファイルの名前、コンパイラ*プロジェクト*.pdb。 プロジ
 
 [コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
-

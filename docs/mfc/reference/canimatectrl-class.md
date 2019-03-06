@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CAnimateCtrl [MFC], Seek
 - CAnimateCtrl [MFC], Stop
 ms.assetid: 5e8eb1bd-96b7-47b8-8de2-6bcbb3cc299b
-ms.openlocfilehash: 8c8a6d3e83534cd5670e43a9009b8919a2e57f92
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 867bec619dc633b7b1fbf9785e14132ba8c493ba
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281374"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417191"
 ---
 # <a name="canimatectrl-class"></a>CAnimateCtrl クラス
 
@@ -206,7 +206,7 @@ virtual BOOL CreateEx(
 アニメーション コントロールのスタイルを指定します。 ウィンドウの任意の組み合わせを適用し、で説明されているアニメーション コントロールのスタイル[アニメーション コントロールのスタイル](/windows/desktop/Controls/animation-control-styles)Windows SDK に含まれています。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。

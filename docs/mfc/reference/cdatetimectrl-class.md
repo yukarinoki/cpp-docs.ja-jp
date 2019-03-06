@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: bf8ced746b70f64b83733152d845aa0291f07310
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302509"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422495"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl クラス
 
@@ -158,7 +158,7 @@ virtual BOOL Create(
 日付コントロールのスタイルの組み合わせを指定します。 参照してください[日付と時刻の選択コントロールのスタイル](/windows/desktop/Controls/date-and-time-picker-control-styles)日付と時刻の選択コントロール スタイルの詳細については、Windows SDK に含まれています。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)日付と時刻の選択コントロールのサイズと位置である構造体。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))日付と時刻の選択コントロールのサイズと位置である構造体。
 
 *pParentWnd*<br/>
 ポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、日付と時刻の選択コントロールの親ウィンドウです。 NULL は指定できません。

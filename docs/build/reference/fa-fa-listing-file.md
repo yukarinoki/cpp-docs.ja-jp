@@ -16,12 +16,12 @@ helpviewer_keywords:
 - listing file type
 - assembly-only listing
 ms.assetid: c7507d0e-c69d-44f9-b8e2-d2c398697402
-ms.openlocfilehash: 6bb5e18c5a174c9e48b253031daad195e6132375
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 610c94646b82783a49ca6de6bc443e99a3c137bc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507303"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420909"
 ---
 # <a name="fa-fa-listing-file"></a>/FA、/Fa (リスティング ファイル)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50507303"
 
 ## <a name="syntax"></a>構文
 
-> **/FA**[**c**\][**s**\]**[u]** **/Fa**_パス名_
+> **/FA**[**c**\][**s**\]**[u]** **/Fa**_pathname_
 
 ## <a name="remarks"></a>Remarks
 
@@ -64,13 +64,13 @@ none<br/>
 *filename.extension*<br/>
 という名前の一覧ファイル*filename.extension*は、現在のディレクトリに配置されます。 1 つのソース コード ファイルをコンパイルするときにのみ有効です。
 
-*ディレクトリ*__\\__<br/>
+*directory*__\\__<br/>
 1 つ*source_file*.asm ファイルが作成され、指定した配置*ディレクトリ*コンパイル時にソース コード ファイルごとにします。 必要なバック スラッシュに注意してください。 現在のディスク上のパスのみが許可されます。
 
-*ディレクトリ*__\\__*ファイル名*<br/>
+*directory*__\\__*filename*<br/>
 という名前の一覧ファイル*filename*.asm の配置で指定した*ディレクトリ*。 1 つのソース コード ファイルをコンパイルするときにのみ有効です。
 
-*ディレクトリ*__\\__*filename.extension*<br/>
+*directory*__\\__*filename.extension*<br/>
 という名前の一覧ファイル*filename.extension*に配置されますが、指定した*ディレクトリ*します。 1 つのソース コード ファイルをコンパイルするときにのみ有効です。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法

@@ -6,20 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - C3099
 ms.assetid: b3dded0f-76c9-42c1-991b-532eb8619661
-ms.openlocfilehash: e9a76fa2e0dc5602a88324cfd2fef85457ad7e99
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: beaa34bb9bed4824383cdad32c6bfd0aea19f6b7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512113"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418578"
 ---
 # <a name="compiler-error-c3099"></a>コンパイラ エラー C3099
 
 'keyword': マネージド属性には [System::AttributeUsageAttribute] を使用してください。WinRT 属性には [Windows::Foundation::Metadata::AttributeUsageAttribute] を使用してください。
 
-使用<xref:System.AttributeUsageAttribute>を宣言する **/clr**属性。 `Windows::Foundation::Metadata::AttributeUsageAttribute` を使用して、Windows ランタイム属性を宣言します。
+使用<xref:System.AttributeUsageAttribute>を宣言する **/clr**属性。 
+  `Windows::Foundation::Metadata::AttributeUsageAttribute` を使用して、Windows ランタイム属性を宣言します。
 
-/CLR 属性の詳細については、次を参照してください。[ユーザー定義の属性](../../windows/user-defined-attributes-cpp-component-extensions.md)します。 Windows ランタイムでサポートされている属性は、次を参照してください[Windows.Foundation.Metadata 名前空間。](https://msdn.microsoft.com/library/windows/apps/windows.foundation.metadata.aspx)
+/CLR 属性の詳細については、次を参照してください。[ユーザー定義の属性](../../windows/user-defined-attributes-cpp-component-extensions.md)します。 Windows ランタイムでサポートされている属性は、次を参照してください[Windows.Foundation.Metadata 名前空間。](/uwp/api/windows.foundation.metadata)
 
 ## <a name="example"></a>例
 

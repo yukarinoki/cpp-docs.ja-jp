@@ -1,19 +1,19 @@
 ---
-title: '方法: MSBuild プロジェクトでビルド イベントを使用する'
+title: '方法: MSBuild プロジェクトでビルド イベントを使用します。'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.usebuildevents
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: 60e26b5cab77bb56f0574a91ad69a7df4d73fa1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570275"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417601"
 ---
-# <a name="how-to-use-build-events-in-msbuild-projects"></a>方法: MSBuild プロジェクトでビルド イベントを使用する
+# <a name="how-to-use-build-events-in-msbuild-projects"></a>方法: MSBuild プロジェクトでビルド イベントを使用します。
 
 ビルド イベントは、ビルド プロセスで特定のステージで MSBuild を実行するコマンドです。 *ビルド前*イベントは、ビルドの開始前に発生します、*リンク前*、リンクの手順を開始する前にイベントが発生した、 *post-build*イベントは、ビルドの後に発生します。正常に終了します。 ビルド イベントは、関連付けられているビルド手順が発生した場合にのみ発生します。 たとえば、リンクの手順が実行されていない場合に、このリンク前イベントは発生しません。
 
@@ -39,7 +39,7 @@ Command 要素で、項目定義グループで表される 3 つのビルド �
 
 ## <a name="example"></a>例
 
-作成した myproject.vcxproj ファイルのプロジェクト要素の内部で次の例を追加できる[チュートリアル: Visual C プロジェクトを作成するを使用して MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)します。 A*ビルド前*main.cpp のコピーは、イベントは*リンク前*main.obj; のコピーおよびイベントにより*post-build* myproject.exe のイベントのコピーします。 プロジェクトをビルドするには、リリース構成を使用して、ビルド イベントが実行されます。 デバッグ構成を使用して、プロジェクトのビルドとビルド イベントは実行されません。
+作成した myproject.vcxproj ファイルのプロジェクト要素の内部で次の例を追加できる[チュートリアル。MSBuild を使用して、Visual C プロジェクトを作成する](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)します。 A*ビルド前*main.cpp のコピーは、イベントは*リンク前*main.obj; のコピーおよびイベントにより*post-build* myproject.exe のイベントのコピーします。 プロジェクトをビルドするには、リリース構成を使用して、ビルド イベントが実行されます。 デバッグ構成を使用して、プロジェクトのビルドとビルド イベントは実行されません。
 
 ```
 <ItemDefinitionGroup>

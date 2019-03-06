@@ -220,12 +220,12 @@ helpviewer_keywords:
 - CHtmlEditCtrlBase [MFC], Unlink
 - CHtmlEditCtrlBase [MFC], UnorderList
 ms.assetid: e0cc74b4-8320-4570-b673-16c03d2ae266
-ms.openlocfilehash: ebc296c66ee818e5c72207e0ca7b436f386fb68d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 09d4c4f1fde563d82fa007a96723f078eb31dc1b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293941"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423236"
 ---
 # <a name="chtmleditctrlbase-class"></a>CHtmlEditCtrlBase クラス
 
@@ -418,9 +418,9 @@ HRESULT AddToGlyphTable(
 
 ### <a name="remarks"></a>Remarks
 
-パラメーターの詳細についてを参照してください「テーブルの文字列形式のグリフ」[を使用して編集グリフ](https://msdn.microsoft.com/library/aa969614.aspx)します。
+パラメーターの詳細についてを参照してください「テーブルの文字列形式のグリフ」[を使用して編集グリフ](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa969614\(v=vs.85\))します。
 
-このメソッドは、送信、 [IDM_ADDTOGLYPHTABLE コマンド ID](https://msdn.microsoft.com/library/aa769891.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_ADDTOGLYPHTABLE コマンド ID](/previous-versions/aa769891\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="bold"></a>  CHtmlEditCtrlBase::Bold
 
@@ -436,7 +436,7 @@ HRESULT Bold() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_BOLD コマンド ID](https://msdn.microsoft.com/library/aa769861.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_BOLD コマンド ID](/previous-versions/aa769861\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="button"></a>  CHtmlEditCtrlBase::Button
 
@@ -457,7 +457,7 @@ HRESULT Button(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_BUTTON コマンド ID](https://msdn.microsoft.com/library/aa769966.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_BUTTON コマンド ID](/previous-versions/aa769966\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="checkbox"></a>  CHtmlEditCtrlBase::CheckBox
 
@@ -478,7 +478,7 @@ HRESULT CheckBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_CHECKBOX コマンド ID](https://msdn.microsoft.com/library/aa769972.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_CHECKBOX コマンド ID](/previous-versions/aa769972\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="clearselection"></a>  CHtmlEditCtrlBase::ClearSelection
 
@@ -494,7 +494,7 @@ HRESULT ClearSelection() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_CLEARSELECTION コマンド ID](https://msdn.microsoft.com/library/aa770038.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_CLEARSELECTION コマンド ID](/previous-versions/aa770038\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="copy"></a>  CHtmlEditCtrlBase::Copy
 
@@ -510,7 +510,7 @@ HRESULT Copy() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_COPY コマンド ID](https://msdn.microsoft.com/library/aa769872.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_COPY コマンド ID](/previous-versions/aa769872\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="cut"></a>  CHtmlEditCtrlBase::Cut
 
@@ -526,7 +526,7 @@ HRESULT Cut() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_CUT コマンド ID](https://msdn.microsoft.com/library/aa769875.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_CUT コマンド ID](/previous-versions/aa769875\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="delete"></a>  CHtmlEditCtrlBase::Delete
 
@@ -542,7 +542,7 @@ HRESULT Delete() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_DELETE コマンド ID](https://msdn.microsoft.com/library/aa769876.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_DELETE コマンド ID](/previous-versions/aa769876\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="dropdownbox"></a>  CHtmlEditCtrlBase::DropDownBox
 
@@ -563,7 +563,7 @@ HRESULT DropDownBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_DROPDOWNBOX コマンド ID](https://msdn.microsoft.com/library/aa769984.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_DROPDOWNBOX コマンド ID](/previous-versions/aa769984\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="emptyglyphtable"></a>  CHtmlEditCtrlBase::EmptyGlyphTable
 
@@ -579,7 +579,7 @@ HRESULT EmptyGlyphTable() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_EMPTYGLYPHTABLE コマンド ID](https://msdn.microsoft.com/library/aa769907.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_EMPTYGLYPHTABLE コマンド ID](/previous-versions/aa769907\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="execcommand"></a>  CHtmlEditCtrlBase::ExecCommand
 
@@ -603,7 +603,7 @@ HRESULT ExecCommand(
 ### <a name="parameters"></a>パラメーター
 
 *cmdID*<br/>
-実行するコマンド ID。 一覧については、次を参照してください。 [MSHTML コマンド識別子](https://msdn.microsoft.com/library/aa741315.aspx)します。
+実行するコマンド ID。 一覧については、次を参照してください。 [MSHTML コマンド識別子](/previous-versions/aa741315\(v=vs.85\))します。
 
 *cmdExecOpt*<br/>
 取得した値、[する](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt)列挙体は、オブジェクトがコマンドを実行する方法について説明します。
@@ -639,7 +639,7 @@ HRESULT Font() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_FONT コマンド ID](https://msdn.microsoft.com/library/aa769913.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_FONT コマンド ID](/previous-versions/aa769913\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="getabsoluteposition"></a>  CHtmlEditCtrlBase::GetAbsolutePosition
 
@@ -660,7 +660,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_ABSOLUTE_POSITION コマンド ID](https://msdn.microsoft.com/library/aa769889.aspx)します。
+詳細については、次を参照してください。 [IDM_ABSOLUTE_POSITION コマンド ID](/previous-versions/aa769889\(v=vs.85\))します。
 
 ##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor
 
@@ -681,7 +681,7 @@ HRESULT GetBackColor(int& nColor) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_BACKCOLOR コマンド ID](https://msdn.microsoft.com/library/aa769858.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_BACKCOLOR コマンド ID](/previous-versions/aa769858\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="getblockformat"></a>  CHtmlEditCtrlBase::GetBlockFormat
 
@@ -702,7 +702,7 @@ HRESULT GetBlockFormat(CString& strFormat) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_BLOCKFMT コマンド ID](https://msdn.microsoft.com/library/aa769883.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_BLOCKFMT コマンド ID](/previous-versions/aa769883\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="getblockformatnames"></a>  CHtmlEditCtrlBase::GetBlockFormatNames
 
@@ -723,7 +723,7 @@ HRESULT GetBlockFormatNames(CStringArray& sa) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_GETBLOCKFMTS コマンド ID](https://msdn.microsoft.com/library/aa769884.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_GETBLOCKFMTS コマンド ID](/previous-versions/aa769884\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="getbookmark"></a>  CHtmlEditCtrlBase::GetBookMark
 
@@ -744,7 +744,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_BOOKMARK コマンド ID](https://msdn.microsoft.com/library/aa769873.aspx)します。
+詳細については、次を参照してください。 [IDM_BOOKMARK コマンド ID](/previous-versions/aa769873\(v=vs.85\))します。
 
 ##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument
 
@@ -852,7 +852,7 @@ HRESULT GetFontFace(CString& strFace) const;
 
 現在の選択範囲が複数のフォントを使用している場合*strFace*空の文字列になります。
 
-このメソッドは、送信、 [IDM_FONTNAME コマンド ID](https://msdn.microsoft.com/library/aa769880.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_FONTNAME コマンド ID](/previous-versions/aa769880\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="getfontsize"></a>  CHtmlEditCtrlBase::GetFontSize
 
@@ -873,7 +873,7 @@ HTML のフォント サイズ (1 ~ 7) を返します。 選択範囲には、�
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_FONTSIZE コマンド ID](https://msdn.microsoft.com/library/aa769881.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_FONTSIZE コマンド ID](/previous-versions/aa769881\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="getforecolor"></a>  CHtmlEditCtrlBase::GetForeColor
 
@@ -894,7 +894,7 @@ HRESULT GetForeColor(int& nColor);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_FORECOLOR コマンド ID](https://msdn.microsoft.com/library/aa769882.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_FORECOLOR コマンド ID](/previous-versions/aa769882\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="getframezone"></a>  CHtmlEditCtrlBase::GetFrameZone
 
@@ -915,7 +915,7 @@ HRESULT GetFrameZone(short& nZone) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_GETFRAMEZONE コマンド ID](https://msdn.microsoft.com/library/aa769916.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_GETFRAMEZONE コマンド ID](/previous-versions/aa769916\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="getisdirty"></a>  CHtmlEditCtrlBase::GetIsDirty
 
@@ -948,7 +948,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWALIGNEDSITETAGS コマンド ID](https://msdn.microsoft.com/library/aa769947.aspx)します。
+詳細については、次を参照してください。 [IDM_SHOWALIGNEDSITETAGS コマンド ID](/previous-versions/aa769947\(v=vs.85\))します。
 
 ##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags
 
@@ -969,7 +969,7 @@ WebBrowser が文書内のすべてのタグの場所を表示するグリフを
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWALLTAGS コマンド ID](https://msdn.microsoft.com/library/aa769948.aspx)します。
+詳細については、次を参照してください。 [IDM_SHOWALLTAGS コマンド ID](/previous-versions/aa769948\(v=vs.85\))します。
 
 ##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags
 
@@ -990,7 +990,7 @@ TRUE の場合、WebBrowser 表示領域のタグのグリフ FALSE そうでな
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWAREATAGS コマンド ID](https://msdn.microsoft.com/library/aa769949.aspx)します。
+詳細については、次を参照してください。 [IDM_SHOWAREATAGS コマンド ID](/previous-versions/aa769949\(v=vs.85\))します。
 
 ##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags
 
@@ -1011,7 +1011,7 @@ WebBrowser グリフが表示されます、br タグ FALSE されない場合�
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWWBRTAGS コマンド ID](https://msdn.microsoft.com/library/aa769956.aspx)します。
+詳細については、次を参照してください。 [IDM_SHOWWBRTAGS コマンド ID](/previous-versions/aa769956\(v=vs.85\))します。
 
 ##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags
 
@@ -1032,7 +1032,7 @@ TRUE の場合、WebBrowser 表示のコメントのタグのグリフ FALSE 開
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWCOMMENTTAGS コマンド ID](https://msdn.microsoft.com/library/aa769950.aspx)します。
+詳細については、次を参照してください。 [IDM_SHOWCOMMENTTAGS コマンド ID](/previous-versions/aa769950\(v=vs.85\))します。
 
 ##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags
 
@@ -1053,7 +1053,7 @@ TRUE の場合、web ブラウザー Microsoft Internet Explorer 4.0、そうで
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWMISCTAGS コマンド ID](https://msdn.microsoft.com/library/aa769952.aspx)します。
+詳細については、次を参照してください。 [IDM_SHOWMISCTAGS コマンド ID](/previous-versions/aa769952\(v=vs.85\))します。
 
 ##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags
 
@@ -1074,7 +1074,7 @@ WebBrowser が表示される場合、すべてのスクリプト タグのグ�
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWSCRIPTTAGS コマンド ID](https://msdn.microsoft.com/library/aa769953.aspx)します。
+詳細については、次を参照してください。 [IDM_SHOWSCRIPTTAGS コマンド ID](/previous-versions/aa769953\(v=vs.85\))します。
 
 ##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags
 
@@ -1095,7 +1095,7 @@ WebBrowser グリフを表示、すべてのタグのスタイルでは、false 
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWSTYLETAGS コマンド ID](https://msdn.microsoft.com/library/aa769954.aspx)します。
+詳細については、次を参照してください。 [IDM_SHOWSTYLETAGS コマンド ID](/previous-versions/aa769954\(v=vs.85\))します。
 
 ##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags
 
@@ -1116,7 +1116,7 @@ WebBrowser が表示される場合、すべての不明なタグのグリフを
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWUNKNOWNTAGS コマンド ID](https://msdn.microsoft.com/library/aa769955.aspx)します。
+詳細については、次を参照してください。 [IDM_SHOWUNKNOWNTAGS コマンド ID](/previous-versions/aa769955\(v=vs.85\))します。
 
 ##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine
 
@@ -1137,7 +1137,7 @@ HRESULT HorizontalLine(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_HORIZONTALLINE コマンド ID](https://msdn.microsoft.com/library/aa769968.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_HORIZONTALLINE コマンド ID](/previous-versions/aa769968\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="hyperlink"></a>  CHtmlEditCtrlBase::HyperLink
 
@@ -1158,7 +1158,7 @@ HRESULT HyperLink(LPCTSTR szUrl = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_HYPERLINK コマンド ID](https://msdn.microsoft.com/library/aa769874.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_HYPERLINK コマンド ID](/previous-versions/aa769874\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="ie50paste"></a>  CHtmlEditCtrlBase::IE50Paste
 
@@ -1179,7 +1179,7 @@ HRESULT IE50Paste(LPCTSTR szData) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_IE50_PASTE コマンド ID](https://msdn.microsoft.com/library/aa769922.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_IE50_PASTE コマンド ID](/previous-versions/aa769922\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="iframe"></a>  CHtmlEditCtrlBase::Iframe
 
@@ -1200,7 +1200,7 @@ HRESULT Iframe(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_IFRAME コマンド ID](https://msdn.microsoft.com/library/aa769969.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_IFRAME コマンド ID](/previous-versions/aa769969\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="image"></a>  CHtmlEditCtrlBase::Image
 
@@ -1221,7 +1221,7 @@ HRESULT Image(LPCTSTR szUrl = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_IMAGE コマンド ID](https://msdn.microsoft.com/library/aa769970.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_IMAGE コマンド ID](/previous-versions/aa769970\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="indent"></a>  CHtmlEditCtrlBase::Indent
 
@@ -1237,7 +1237,7 @@ HRESULT Indent() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_INDENT コマンド ID](https://msdn.microsoft.com/library/aa769963.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_INDENT コマンド ID](/previous-versions/aa769963\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="insfieldset"></a>  CHtmlEditCtrlBase::InsFieldSet
 
@@ -1258,7 +1258,7 @@ HRESULT InsFieldSet(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_INSFIELDSET コマンド ID](https://msdn.microsoft.com/library/aa769967.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_INSFIELDSET コマンド ID](/previous-versions/aa769967\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="insinputbutton"></a>  CHtmlEditCtrlBase::InsInputButton
 
@@ -1279,7 +1279,7 @@ HRESULT InsInputButton(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_INSINPUTBUTTON コマンド ID](https://msdn.microsoft.com/library/aa769971.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_INSINPUTBUTTON コマンド ID](/previous-versions/aa769971\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="insinputhidden"></a>  CHtmlEditCtrlBase::InsInputHidden
 
@@ -1300,7 +1300,7 @@ HRESULT InsInputHidden(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_INSINPUTHIDDEN コマンド ID](https://msdn.microsoft.com/library/aa769974.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_INSINPUTHIDDEN コマンド ID](/previous-versions/aa769974\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="insinputimage"></a>  CHtmlEditCtrlBase::InsInputImage
 
@@ -1321,7 +1321,7 @@ HRESULT InsInputImage(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_INSINPUTIMAGE コマンド ID](https://msdn.microsoft.com/library/aa769975.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_INSINPUTIMAGE コマンド ID](/previous-versions/aa769975\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="insinputpassword"></a>  CHtmlEditCtrlBase::InsInputPassword
 
@@ -1342,7 +1342,7 @@ HRESULT InsInputPassword(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_INSINPUTPASSWORD コマンド ID](https://msdn.microsoft.com/library/aa769976.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_INSINPUTPASSWORD コマンド ID](/previous-versions/aa769976\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="insinputreset"></a>  CHtmlEditCtrlBase::InsInputReset
 
@@ -1363,7 +1363,7 @@ HRESULT InsInputReset(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_INSINPUTRESET コマンド ID](https://msdn.microsoft.com/library/aa769978.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_INSINPUTRESET コマンド ID](/previous-versions/aa769978\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="insinputsubmit"></a>  CHtmlEditCtrlBase::InsInputSubmit
 
@@ -1384,7 +1384,7 @@ HRESULT InsInputSubmit(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_INSINPUTSUBMIT コマンド ID](https://msdn.microsoft.com/library/aa769979.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_INSINPUTSUBMIT コマンド ID](/previous-versions/aa769979\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="insinputupload"></a>  CHtmlEditCtrlBase::InsInputUpload
 
@@ -1405,7 +1405,7 @@ HRESULT InsInputUpload(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_INSINPUTUPLOAD コマンド ID](https://msdn.microsoft.com/library/aa769973.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_INSINPUTUPLOAD コマンド ID](/previous-versions/aa769973\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="is1delement"></a>  CHtmlEditCtrlBase::Is1DElement
 
@@ -1426,7 +1426,7 @@ HRESULT Is1DElement(bool& bValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_1D_ELEMENT コマンド ID](https://msdn.microsoft.com/library/aa769885.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_1D_ELEMENT コマンド ID](/previous-versions/aa769885\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="is2delement"></a>  CHtmlEditCtrlBase::Is2DElement
 
@@ -1447,7 +1447,7 @@ HRESULT Is2DElement(bool& bValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_2D_ELEMENT コマンド ID](https://msdn.microsoft.com/library/aa769886.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_2D_ELEMENT コマンド ID](/previous-versions/aa769886\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="italic"></a>  CHtmlEditCtrlBase::Italic
 
@@ -1463,7 +1463,7 @@ HRESULT Italic() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_ITALIC コマンド ID](https://msdn.microsoft.com/library/aa769988.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_ITALIC コマンド ID](/previous-versions/aa769988\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="justifycenter"></a>  CHtmlEditCtrlBase::JustifyCenter
 
@@ -1479,7 +1479,7 @@ HRESULT JustifyCenter() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_JUSTIFYCENTER コマンド ID](https://msdn.microsoft.com/library/aa769989.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_JUSTIFYCENTER コマンド ID](/previous-versions/aa769989\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="justifyleft"></a>  CHtmlEditCtrlBase::JustifyLeft
 
@@ -1495,7 +1495,7 @@ HRESULT JustifyLeft() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_JUSTIFYLEFT コマンド ID](https://msdn.microsoft.com/library/aa770011.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_JUSTIFYLEFT コマンド ID](/previous-versions/aa770011\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="justifyright"></a>  CHtmlEditCtrlBase::JustifyRight
 
@@ -1511,7 +1511,7 @@ HRESULT JustifyRight() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_JUSTIFYRIGHT コマンド ID](https://msdn.microsoft.com/library/aa770013.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_JUSTIFYRIGHT コマンド ID](/previous-versions/aa770013\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="listbox"></a>  CHtmlEditCtrlBase::ListBox
 
@@ -1532,7 +1532,7 @@ HRESULT ListBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_LISTBOX コマンド ID](https://msdn.microsoft.com/library/aa769985.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_LISTBOX コマンド ID](/previous-versions/aa769985\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="marquee"></a>  CHtmlEditCtrlBase::Marquee
 
@@ -1553,7 +1553,7 @@ HRESULT Marquee(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_MARQUEE コマンド ID](https://msdn.microsoft.com/library/aa769981.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_MARQUEE コマンド ID](/previous-versions/aa769981\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="newdocument"></a>  CHtmlEditCtrlBase::NewDocument
 
@@ -1586,7 +1586,7 @@ HRESULT OrderList(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_ORDERLIST コマンド ID](https://msdn.microsoft.com/library/aa769982.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_ORDERLIST コマンド ID](/previous-versions/aa769982\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="outdent"></a>  CHtmlEditCtrlBase::Outdent
 
@@ -1602,7 +1602,7 @@ HRESULT Outdent() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_OUTDENT コマンド ID](https://msdn.microsoft.com/library/aa770015.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_OUTDENT コマンド ID](/previous-versions/aa770015\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="paragraph"></a>  CHtmlEditCtrlBase::Paragraph
 
@@ -1623,7 +1623,7 @@ HRESULT Paragraph(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_PARAGRAPH コマンド ID](https://msdn.microsoft.com/library/aa769983.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_PARAGRAPH コマンド ID](/previous-versions/aa769983\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="paste"></a>  CHtmlEditCtrlBase::Paste
 
@@ -1639,7 +1639,7 @@ HRESULT Paste() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_PASTE コマンド ID](https://msdn.microsoft.com/library/aa770017.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_PASTE コマンド ID](/previous-versions/aa770017\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="printdocument"></a>  CHtmlEditCtrlBase::PrintDocument
 
@@ -1665,7 +1665,7 @@ TRUE の場合、[印刷] ダイアログを示しています。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_PRINT コマンド ID](https://msdn.microsoft.com/library/aa769937.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_PRINT コマンド ID](/previous-versions/aa769937\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="printpreview"></a>  CHtmlEditCtrlBase::PrintPreview
 
@@ -1687,7 +1687,7 @@ HRESULT PrintPreview(LPCTSTR szPrintTemplate) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_PRINTPREVIEW コマンド ID](https://msdn.microsoft.com/library/aa769938.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_PRINTPREVIEW コマンド ID](/previous-versions/aa769938\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="querystatus"></a>  CHtmlEditCtrlBase::QueryStatus
 
@@ -1725,7 +1725,7 @@ HRESULT RadioButton(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_RADIOBUTTON コマンド ID](https://msdn.microsoft.com/library/aa769977.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_RADIOBUTTON コマンド ID](/previous-versions/aa769977\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="refreshdocument"></a>  CHtmlEditCtrlBase::RefreshDocument
 
@@ -1741,7 +1741,7 @@ HRESULT RefreshDocument() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_REFRESH コマンド ID](https://msdn.microsoft.com/library/aa770020.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_REFRESH コマンド ID](/previous-versions/aa770020\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="removeformat"></a>  CHtmlEditCtrlBase::RemoveFormat
 
@@ -1757,7 +1757,7 @@ HRESULT RemoveFormat() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_REMOVEFORMAT コマンド ID](https://msdn.microsoft.com/library/aa770021.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_REMOVEFORMAT コマンド ID](/previous-versions/aa770021\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="saveas"></a>  CHtmlEditCtrlBase::SaveAs
 
@@ -1778,7 +1778,7 @@ Web ページの保存先となるパスとファイル名。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_SAVEAS コマンド ID](https://msdn.microsoft.com/library/aa770024.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_SAVEAS コマンド ID](/previous-versions/aa770024\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="selectall"></a>  CHtmlEditCtrlBase::SelectAll
 
@@ -1794,7 +1794,7 @@ HRESULT SelectAll() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_SELECTALL コマンド ID](https://msdn.microsoft.com/library/aa770025.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_SELECTALL コマンド ID](/previous-versions/aa770025\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="set2dposition"></a>  CHtmlEditCtrlBase::Set2DPosition
 
@@ -1815,7 +1815,7 @@ TRUE の場合、絶対に配置されている要素をドラッグして移動
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_2D_POSITION コマンド ID](https://msdn.microsoft.com/library/aa769887.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_2D_POSITION コマンド ID](/previous-versions/aa769887\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setabsoluteposition"></a>  CHtmlEditCtrlBase::SetAbsolutePosition
 
@@ -1836,7 +1836,7 @@ TRUE の場合、要素の位置プロパティは"absolute";FALSE の場合は�
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_ABSOLUTE_POSITION コマンド ID](https://msdn.microsoft.com/library/aa769889.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_ABSOLUTE_POSITION コマンド ID](/previous-versions/aa769889\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setatomicselection"></a>  CHtmlEditCtrlBase::SetAtomicSelection
 
@@ -1857,7 +1857,7 @@ TRUE の場合、ATOMICSELECTION 属性を TRUE に設定を持つ任意の要�
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_ATOMICSELECTION コマンド ID](https://msdn.microsoft.com/library/aa769892.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_ATOMICSELECTION コマンド ID](/previous-versions/aa769892\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setautourldetectmode"></a>  CHtmlEditCtrlBase::SetAutoURLDetectMode
 
@@ -1878,7 +1878,7 @@ TRUE の場合、URL の自動検出が有効にします。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_AUTOURLDETECT_MODE コマンド ID](https://msdn.microsoft.com/library/aa769893.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_AUTOURLDETECT_MODE コマンド ID](/previous-versions/aa769893\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setbackcolor"></a>  CHtmlEditCtrlBase::SetBackColor
 
@@ -1892,10 +1892,10 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 ### <a name="parameters"></a>パラメーター
 
 *nColor*<br/>
-色。 参照してください*pvaIn*で[IDM_BACKCOLOR コマンド ID](https://msdn.microsoft.com/library/aa769858.aspx)します。
+色。 参照してください*pvaIn*で[IDM_BACKCOLOR コマンド ID](/previous-versions/aa769858\(v=vs.85\))します。
 
 *szColor*<br/>
-色。 参照してください*pvaIn*で[IDM_BACKCOLOR コマンド ID](https://msdn.microsoft.com/library/aa769858.aspx)します。
+色。 参照してください*pvaIn*で[IDM_BACKCOLOR コマンド ID](/previous-versions/aa769858\(v=vs.85\))します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1903,7 +1903,7 @@ HRESULT SetBackColor(LPCTSTR szColor) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_BACKCOLOR_ コマンド ID](https://msdn.microsoft.com/library/aa769858.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_BACKCOLOR_ コマンド ID](/previous-versions/aa769858\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setblockformat"></a>  CHtmlEditCtrlBase::SetBlockFormat
 
@@ -1924,7 +1924,7 @@ HRESULT SetBlockFormat(LPCTSTR szFormat) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_BLOCKFMT_command ID](https://msdn.microsoft.com/library/aa769883.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_BLOCKFMT_command ID](/previous-versions/aa769883\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setbookmark"></a>  CHtmlEditCtrlBase::SetBookMark
 
@@ -1945,7 +1945,7 @@ HRESULT SetBookMark(LPCTSTR szAnchorName) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_BOOKMARK コマンド ID](https://msdn.microsoft.com/library/aa769873.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_BOOKMARK コマンド ID](/previous-versions/aa769873\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setcsseditinglevel"></a>  CHtmlEditCtrlBase::SetCSSEditingLevel
 
@@ -1966,7 +1966,7 @@ CSS のレベルです。 CSS サポートしたくない場合は、0 を渡し
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_CSSEDITING_LEVEL コマンド ID](https://msdn.microsoft.com/library/aa769903.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_CSSEDITING_LEVEL コマンド ID](/previous-versions/aa769903\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setdefaultcomposesettings"></a>  CHtmlEditCtrlBase::SetDefaultComposeSettings
 
@@ -2012,7 +2012,7 @@ HRESULT SetDefaultComposeSettings(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_COMPOSESETTINGS コマンド ID](https://msdn.microsoft.com/library/aa769901.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_COMPOSESETTINGS コマンド ID](/previous-versions/aa769901\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setdesignmode"></a>  CHtmlEditCtrlBase::SetDesignMode
 
@@ -2050,7 +2050,7 @@ TRUE の場合、無効にハッチ境界とサイトの選択可能な要素の
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM_DISABLE_EDITFOCUS_UI コマンド ID](https://msdn.microsoft.com/library/aa769905.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM_DISABLE_EDITFOCUS_UI コマンド ID](/previous-versions/aa769905\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setdocumenthtml"></a>  CHtmlEditCtrlBase::SetDocumentHTML
 
@@ -2088,7 +2088,7 @@ HRESULT SetFontFace(LPCTSTR szFace) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM FONTNAME コマンド ID](https://msdn.microsoft.com/library/aa769880.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM FONTNAME コマンド ID](/previous-versions/aa769880\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setfontsize"></a>  CHtmlEditCtrlBase::SetFontSize
 
@@ -2109,7 +2109,7 @@ HTML のフォント サイズ (1 ~ 7)。 値 0 は、フォント サイズを 
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM FONTSIZE コマンド ID](https://msdn.microsoft.com/library/aa769881.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM FONTSIZE コマンド ID](/previous-versions/aa769881\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setforecolor"></a>  CHtmlEditCtrlBase::SetForeColor
 
@@ -2134,7 +2134,7 @@ HRESULT SetForeColor(int nColor) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM FORECOLOR コマンド ID](https://msdn.microsoft.com/library/aa769882.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM FORECOLOR コマンド ID](/previous-versions/aa769882\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setie5pastemode"></a>  CHtmlEditCtrlBase::SetIE5PasteMode
 
@@ -2155,7 +2155,7 @@ HRESULT SetIE5PasteMode(bool bNewValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM IE50_PASTE_MODE コマンド ID](https://msdn.microsoft.com/library/aa769923.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM IE50_PASTE_MODE コマンド ID](/previous-versions/aa769923\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setliveresize"></a>  CHtmlEditCtrlBase::SetLiveResize
 
@@ -2176,7 +2176,7 @@ TRUE の場合、webbrowser をサイズ変更または移動操作中に継続�
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM LIVERESIZE コマンド ID](https://msdn.microsoft.com/library/aa769928.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM LIVERESIZE コマンド ID](/previous-versions/aa769928\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setmultiselect"></a>  CHtmlEditCtrlBase::SetMultiSelect
 
@@ -2197,7 +2197,7 @@ TRUE の場合、ユーザーが shift キーまたは CTRL キーを押した�
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM MULTIPLESELECTION コマンド ID](https://msdn.microsoft.com/library/aa769929.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM MULTIPLESELECTION コマンド ID](/previous-versions/aa769929\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setoverridecursor"></a>  CHtmlEditCtrlBase::SetOverrideCursor
 
@@ -2218,7 +2218,7 @@ TRUE の場合、WebBrowser にマウス ポインターは変更されません
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM OVERRIDE_CURSOR コマンド ID](https://msdn.microsoft.com/library/aa769932.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM OVERRIDE_CURSOR コマンド ID](/previous-versions/aa769932\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setoverwritemode"></a>  CHtmlEditCtrlBase::SetOverwriteMode
 
@@ -2239,7 +2239,7 @@ TRUE の場合、テキスト入力モードが上書きされます。FALSE の
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、[コマンド ID の IDM 上書き](https://msdn.microsoft.com/library/aa770016.aspx)WebBrowser コントロールにします。
+このメソッドは、送信、[コマンド ID の IDM 上書き](/previous-versions/aa770016\(v=vs.85\))WebBrowser コントロールにします。
 
 ##  <a name="setrespectvisindesign"></a>  CHtmlEditCtrlBase::SetRespectVisInDesign
 
@@ -2260,7 +2260,7 @@ TRUE の場合、デザイン モードとブラウズ モードの両方で"hid
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM RESPECTVISIBILITY_INDESIGN コマンド ID](https://msdn.microsoft.com/library/aa770023.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM RESPECTVISIBILITY_INDESIGN コマンド ID](/previous-versions/aa770023\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setshowalignedsitetags"></a>  CHtmlEditCtrlBase::SetShowAlignedSiteTags
 
@@ -2281,7 +2281,7 @@ TRUE の場合、すべての要素を持つグリフが表示されます、`st
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM SHOWALIGNEDSITETAGS コマンド ID](https://msdn.microsoft.com/library/aa769947.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM SHOWALIGNEDSITETAGS コマンド ID](/previous-versions/aa769947\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setshowalltags"></a>  CHtmlEditCtrlBase::SetShowAllTags
 
@@ -2302,7 +2302,7 @@ TRUE の場合は、ドキュメント内のすべてのタグの場所を表示
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM SHOWALLTAGS コマンド ID](https://msdn.microsoft.com/library/aa769948.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM SHOWALLTAGS コマンド ID](/previous-versions/aa769948\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setshowareatags"></a>  CHtmlEditCtrlBase::SetShowAreaTags
 
@@ -2323,7 +2323,7 @@ TRUE の場合は、領域のすべてのタグのグリフを表示します。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM SHOWAREATAGS コマンド ID](https://msdn.microsoft.com/library/aa769949.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM SHOWAREATAGS コマンド ID](/previous-versions/aa769949\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setshowbrtags"></a>  CHtmlEditCtrlBase::SetShowBRTags
 
@@ -2344,7 +2344,7 @@ TRUE の場合、すべての改行タグ グリフが表示されます。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM SHOWWBRTAGS コマンド ID](https://msdn.microsoft.com/library/aa769956.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM SHOWWBRTAGS コマンド ID](/previous-versions/aa769956\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setshowcommenttags"></a>  CHtmlEditCtrlBase::SetShowCommentTags
 
@@ -2365,7 +2365,7 @@ TRUE の場合、すべてのコメント タグ グリフを表示します。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM SHOWCOMMENTTAGS コマンド ID](https://msdn.microsoft.com/library/aa769950.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM SHOWCOMMENTTAGS コマンド ID](/previous-versions/aa769950\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setshowmisctags"></a>  CHtmlEditCtrlBase::SetShowMiscTags
 
@@ -2386,7 +2386,7 @@ TRUE の場合は、Microsoft Internet Explorer 4.0 で表示されているす�
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM SHOWMISCTAGS コマンド ID](https://msdn.microsoft.com/library/aa769952.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM SHOWMISCTAGS コマンド ID](/previous-versions/aa769952\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setshowscripttags"></a>  CHtmlEditCtrlBase::SetShowScriptTags
 
@@ -2407,7 +2407,7 @@ TRUE の場合、すべてのスクリプト タグのグリフを表示しま�
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM SHOWSCRIPTTAGS コマンド ID](https://msdn.microsoft.com/library/aa769953.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM SHOWSCRIPTTAGS コマンド ID](/previous-versions/aa769953\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setshowstyletags"></a>  CHtmlEditCtrlBase::SetShowStyleTags
 
@@ -2428,7 +2428,7 @@ TRUE の場合、すべてのタグをスタイルのグリフを表示します
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM SHOWSTYLETAGS コマンド ID](https://msdn.microsoft.com/library/aa769954.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM SHOWSTYLETAGS コマンド ID](/previous-versions/aa769954\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="setshowunknowntags"></a>  CHtmlEditCtrlBase::SetShowUnknownTags
 
@@ -2449,7 +2449,7 @@ TRUE の場合は、すべての不明なタグのグリフを表示します。
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM SHOWUNKNOWNTAGS コマンド ID](https://msdn.microsoft.com/library/aa769955.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM SHOWUNKNOWNTAGS コマンド ID](/previous-versions/aa769955\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="textarea"></a>  CHtmlEditCtrlBase::TextArea
 
@@ -2470,7 +2470,7 @@ HRESULT TextArea(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM TEXTAREA コマンド ID](https://msdn.microsoft.com/library/aa769986.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM TEXTAREA コマンド ID](/previous-versions/aa769986\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="textbox"></a>  CHtmlEditCtrlBase::TextBox
 
@@ -2491,7 +2491,7 @@ HRESULT TextBox(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM TEXTBOX コマンド ID](https://msdn.microsoft.com/library/aa769980.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM TEXTBOX コマンド ID](/previous-versions/aa769980\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="unbookmark"></a>  CHtmlEditCtrlBase::UnBookmark
 
@@ -2507,7 +2507,7 @@ HRESULT UnBookmark() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、[コマンド ID の IDM UNBOOKMARK](https://msdn.microsoft.com/library/aa770034.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、[コマンド ID の IDM UNBOOKMARK](/previous-versions/aa770034\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="underline"></a>  CHtmlEditCtrlBase::Underline
 
@@ -2523,7 +2523,7 @@ HRESULT Underline() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、[コマンド ID の IDM に下線を引く](https://msdn.microsoft.com/library/aa770035.aspx)WebBrowser コントロールにします。
+このメソッドは、送信、[コマンド ID の IDM に下線を引く](/previous-versions/aa770035\(v=vs.85\))WebBrowser コントロールにします。
 
 ##  <a name="unlink"></a>  CHtmlEditCtrlBase::Unlink
 
@@ -2539,7 +2539,7 @@ HRESULT Unlink() const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM のリンクを解除コマンド ID](https://msdn.microsoft.com/library/aa770037.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM のリンクを解除コマンド ID](/previous-versions/aa770037\(v=vs.85\)) WebBrowser コントロールにします。
 
 ##  <a name="unorderlist"></a>  CHtmlEditCtrlBase::UnorderList
 
@@ -2560,7 +2560,7 @@ HRESULT UnorderList(LPCTSTR szId = NULL) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、送信、 [IDM UNORDERLIST コマンド ID](https://msdn.microsoft.com/library/aa769987.aspx) WebBrowser コントロールにします。
+このメソッドは、送信、 [IDM UNORDERLIST コマンド ID](/previous-versions/aa769987\(v=vs.85\)) WebBrowser コントロールにします。
 
 ## <a name="see-also"></a>関連項目
 

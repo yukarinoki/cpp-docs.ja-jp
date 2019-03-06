@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 9bc31cc9cff12146e6f5fe227e0e191d1c555063
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271399"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418933"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -315,7 +315,7 @@ virtual BOOL Create(
 ツリー ビュー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルを適用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)の任意の組み合わせと[ツリー ビュー コントロールのスタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK で説明されているとします。
 
 *rect*<br/>
-ツリー ビュー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+ツリー ビュー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 *pParentWnd*<br/>
 ツリー ビュー コントロールの親ウィンドウを通常を指定します、`CDialog`します。 NULL は指定できません。
@@ -361,7 +361,7 @@ virtual BOOL CreateEx(
 ツリー ビュー コントロールのスタイルを指定します。 説明されているウィンドウのスタイルを適用[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa)の任意の組み合わせと[ツリー ビュー コントロールのスタイル](/windows/desktop/Controls/tree-view-control-window-styles)Windows SDK で説明されているとします。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -887,7 +887,7 @@ BOOL GetItemPartRect(
 |---------------|-----------------|
 |*hItem*|[in]ツリー ビュー コントロールの項目へのハンドルします。|
 |*nPart*|[in]パーツの識別子です。 TVGIPR_BUTTON に設定する必要があります。|
-|*lpRect*|[out]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定された一部の四角形の座標がその構造体にこのメソッドが成功した場合は、 *hItem*と*nPart*します。|
+|*lpRect*|[out]ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。 指定された一部の四角形の座標がその構造体にこのメソッドが成功した場合は、 *hItem*と*nPart*します。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -928,7 +928,7 @@ BOOL GetItemRect(
 ツリー ビュー コントロールのアイテムのハンドル。
 
 *lpRect*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形を受け取る。 座標は、ツリー ビュー コントロールの左上隅に対して相対的です。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))外接する四角形を受け取る。 座標は、ツリー ビュー コントロールの左上隅に対して相対的です。
 
 *bTextOnly*<br/>
 このパラメーターが 0 以外の場合、外接する四角形には、項目のテキストのみが含まれています。 それ以外の場合、ツリー ビュー コントロールのアイテムが占有する行全体が含まれます。

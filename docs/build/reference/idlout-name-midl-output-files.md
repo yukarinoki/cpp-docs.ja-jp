@@ -13,12 +13,12 @@ helpviewer_keywords:
 - -IDLOUT linker option
 - IDLOUT linker option
 ms.assetid: 10d00a6a-85b4-4de1-8732-e422c6931509
-ms.openlocfilehash: b21e8eb266de9a0baa0512a82acb0ae8a9f650a5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 91c1a3642f157390e5a0d5c7e2f36d7adf3ca118
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500426"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417633"
 ---
 # <a name="idlout-name-midl-output-files"></a>/IDLOUT (MIDL 出力ファイルの指定)
 
@@ -44,9 +44,9 @@ MIDL コンパイラによって作成された .idl ファイルの名前を指
 
 - *ファイル名*.tlb
 
-- *ファイル名*_p.c
+- *filename*_p.c
 
-- *ファイル名*_i.c
+- *filename*_i.c
 
 - *ファイル名*.h
 

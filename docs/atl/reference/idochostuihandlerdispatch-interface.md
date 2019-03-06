@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - IDocHostUIHandlerDispatch interface
 ms.assetid: 6963a301-601a-4ac3-8bef-f7b252ea2fc6
-ms.openlocfilehash: 0652801d7ad80ba53716299e3919f5b432de855a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6ce3532e99dc1d0ff0151285766aa5d78c2b9e9d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293148"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421883"
 ---
 # <a name="idochostuihandlerdispatch-interface"></a>IDocHostUIHandlerDispatch インターフェイス
 
@@ -36,21 +36,21 @@ interface IDocHostUIHandlerDispatch : IDispatch
 
 |||
 |-|-|
-|[EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)|MSHTML の実装から呼び出されます[IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless)します。 MSHTML モーダル UI を表示するときとも呼ばれます。|
-|[FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)|MSHTML のデータ オブジェクトを置換するホストを許可する MSHTML によってホストで呼び出されます。|
-|[GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)|別の方法を指定するホストを許可する、ドロップ先として使用されている場合、MSHTML によって呼び出されます[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)します。|
-|[GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)|ホストの IDispatch インターフェイスを取得する MSHTML によって呼び出されます。|
-|[GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)|MSHTML ホストの UI 機能を取得します。|
-|[GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)|MSHTML がユーザー設定を格納するレジストリ キーを返します。|
-|[HideUI](https://msdn.microsoft.com/library/aa753259.aspx)|MSHTML がメニューやツールバーを削除するときに呼び出されます。|
-|[OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)|MSHTML の実装から呼び出されます[::ondocwindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)します。|
-|[OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)|MSHTML の実装から呼び出されます[ioleinplaceactiveobject::onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)します。|
-|[ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)|MSHTML の実装から呼び出されます[ioleinplaceactiveobject:](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)します。|
-|[ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)|コンテキスト メニューを表示する MSHTML から呼び出されます。|
-|[ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)|MSHTML メニューおよびツールバーを置換するホストを使用します。|
-|[TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)|MSHTML によって呼び出されるときに[ioleinplaceactiveobject::translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator)または[iolecontrolsite:](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator)が呼び出されます。|
-|[TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)|ホストに読み込まれる URL を変更することを許可する MSHTML によって呼び出されます。|
-|[Updateui という](https://msdn.microsoft.com/library/aa753268.aspx)|コマンドの状態が変化したことをホストに通知します。|
+|[EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))|MSHTML の実装から呼び出されます[IOleInPlaceActiveObject::EnableModeless](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-enablemodeless)します。 MSHTML モーダル UI を表示するときとも呼ばれます。|
+|[FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))|MSHTML のデータ オブジェクトを置換するホストを許可する MSHTML によってホストで呼び出されます。|
+|[GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))|別の方法を指定するホストを許可する、ドロップ先として使用されている場合、MSHTML によって呼び出されます[IDropTarget](/windows/desktop/api/oleidl/nn-oleidl-idroptarget)します。|
+|[GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))|ホストの IDispatch インターフェイスを取得する MSHTML によって呼び出されます。|
+|[GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))|MSHTML ホストの UI 機能を取得します。|
+|[GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))|MSHTML がユーザー設定を格納するレジストリ キーを返します。|
+|[HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))|MSHTML がメニューやツールバーを削除するときに呼び出されます。|
+|[OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))|MSHTML の実装から呼び出されます[::ondocwindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-ondocwindowactivate)します。|
+|[OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))|MSHTML の実装から呼び出されます[ioleinplaceactiveobject::onframewindowactivate](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-onframewindowactivate)します。|
+|[ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))|MSHTML の実装から呼び出されます[ioleinplaceactiveobject:](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-resizeborder)します。|
+|[ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))|コンテキスト メニューを表示する MSHTML から呼び出されます。|
+|[ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))|MSHTML メニューおよびツールバーを置換するホストを使用します。|
+|[TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))|MSHTML によって呼び出されるときに[ioleinplaceactiveobject::translateaccelerator](/windows/desktop/api/oleidl/nf-oleidl-ioleinplaceactiveobject-translateaccelerator)または[iolecontrolsite:](/windows/desktop/api/ocidl/nf-ocidl-iolecontrolsite-translateaccelerator)が呼び出されます。|
+|[TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))|ホストに読み込まれる URL を変更することを許可する MSHTML によって呼び出されます。|
+|[Updateui という](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))|コマンドの状態が変化したことをホストに通知します。|
 
 ## <a name="remarks"></a>Remarks
 

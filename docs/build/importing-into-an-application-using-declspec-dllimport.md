@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: 925cd588c1851c6fb135fffbb83e9cfd680bea28
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef01c2905dea215a1a52333ae5611ec58c5f5af4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610473"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419219"
 ---
 # <a name="importing-into-an-application-using-declspecdllimport"></a>__declspec(dllimport) を使ったアプリケーションへのインポート
 
@@ -30,7 +30,7 @@ DllImport void func();
 
 使用して **_declspec**は関数の宣言で省略可能ですが、このキーワードを使用する場合、コンパイラがより効率的なコードを生成します。 ただし、使用する必要があります **_declspec**のインポートの実行可能ファイル、DLL のパブリック データ シンボルとオブジェクトにアクセスします。 DLL を使う場合は、引き続きインポート ライブラリとリンクする必要があることに注意してください。
 
-DLL とクライアント アプリケーションには、同じヘッダー ファイルを使うことができます。 こうする場合は、DLL のビルドとクライアント アプリケーションのビルドの区別を示すために、専用のプリプロセッサ シンボルを使います。 例えば:
+DLL とクライアント アプリケーションには、同じヘッダー ファイルを使うことができます。 こうする場合は、DLL のビルドとクライアント アプリケーションのビルドの区別を示すために、専用のプリプロセッサ シンボルを使います。 例:
 
 ```
 #ifdef _EXPORTING

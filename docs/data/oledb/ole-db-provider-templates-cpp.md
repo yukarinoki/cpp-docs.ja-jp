@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], about OLE DB provider templates
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
-ms.openlocfilehash: e4b0523234e5e62b76762b07bb74b21a97c6713b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: c88e03f509da3c97c270e308dc6dd44e3b44aeb7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556596"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413785"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB プロバイダー テンプレート (C++)
 
@@ -70,5 +70,5 @@ OLE DB テンプレートでサポートされているプロバイダーの最�
 ## <a name="see-also"></a>関連項目
 
 [データ アクセス](../data-access-in-cpp.md)<br/>
-[OLE DB SDK のドキュメント](https://docs.microsoft.com/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
+[OLE DB SDK のドキュメント](/previous-versions/windows/desktop/ms722784(v=vs.85))<br/>
 [OLE DB プログラマーズ リファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>

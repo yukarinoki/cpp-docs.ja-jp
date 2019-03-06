@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CStatusBarCtrl [MFC], SetText
 - CStatusBarCtrl [MFC], SetTipText
 ms.assetid: 8504ad38-7b91-4746-aede-ac98886eb47b
-ms.openlocfilehash: 5a5adc5ae6b1981d7f8260d684a33d8bd7918e40
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8db2be9b14f9d60f2103ce0b63b772962b079bbe
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57272842"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426135"
 ---
 # <a name="cstatusbarctrl-class"></a>CStatusBarCtrl クラス
 
@@ -132,7 +132,7 @@ virtual BOOL Create(
 ステータス バー コントロールのスタイルを指定します。 ステータス バーのコントロールのスタイルで表示されている任意の組み合わせを適用[一般的なコントロールのスタイル](/windows/desktop/Controls/common-control-styles)Windows SDK に含まれています。 このパラメーターは、WS_CHILD スタイルを含める必要があります。 WS_VISIBLE スタイルする必要があります。
 
 *rect*<br/>
-ステータス バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+ステータス バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 *pParentWnd*<br/>
 ステータス バー コントロールの親ウィンドウを通常を指定します、`CDialog`します。 NULL は指定できません。
@@ -178,7 +178,7 @@ virtual BOOL CreateEx(
 ステータス バー コントロールのスタイルを指定します。 ステータス バーのコントロールのスタイルで表示されている任意の組み合わせを適用[一般的なコントロールのスタイル](/windows/desktop/Controls/common-control-styles)Windows SDK に含まれています。 このパラメーターは、WS_CHILD スタイルを含める必要があります。 WS_VISIBLE スタイルする必要があります。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -344,7 +344,7 @@ BOOL GetRect(
 外接する四角形が取得される一部の 0 から始まるインデックス。
 
 *lpRect*<br/>
-アドレスを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形を受け取る。
+アドレスを[RECT](/previous-versions/dd162897\(v=vs.85\))外接する四角形を受け取る。
 
 ### <a name="return-value"></a>戻り値
 

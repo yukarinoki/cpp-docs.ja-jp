@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 8d50962bf66e07d6238be4a1a973c9d9ff06a556
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613773"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426525"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Visual C++ 6.0 以降の DLL 遅延読み込みヘルパー関数の変更点
 
-コンピューターに複数のバージョンの Visual C があるか、独自のヘルパー関数を定義する場合を受ける可能性がありますには、DLL に加えられた変更が遅延読み込みヘルパー関数。 例えば:
+コンピューターに複数のバージョンの Visual C があるか、独自のヘルパー関数を定義する場合を受ける可能性がありますには、DLL に加えられた変更が遅延読み込みヘルパー関数。 例:
 
 - **_ _delayloadhelper**が **_ _delayloadhelper2**
 
@@ -47,7 +47,7 @@ ms.locfileid: "50613773"
 
 - ヘルパー関数の名前を変更 **_ _delayloadhelper2**します。
 
-- 遅延記述子 (delayimp.h で ImgDelayDescr) でポインターは、絶対アドレス (VAs) から相対アドレス (Rva) 32 ビットおよび 64 ビットの両方のプログラムに正常に動作に変更されましたが、ために、これらをポインターに変換する必要があります。 新しい関数が導入されています: PFromRva、delayhlp.cpp で見つかりました。 それぞれの記述子フィールドのこの関数を使用すると、それらをいずれかの 32 ビットまたは 64 ビット ポインターに変換します。 既定の遅延読み込みヘルパー関数は、例として使用する適切なテンプレートです。
+- 遅延記述子 (delayimp.h で ImgDelayDescr) でポインターは、絶対アドレス (VAs) から相対アドレス (Rva) 32 ビットおよび 64 ビットの両方のプログラムに正常に動作に変更されましたが、ために、これらをポインターに変換する必要があります。 新しい関数が導入されています。PFromRva、delayhlp.cpp で見つかりました。 それぞれの記述子フィールドのこの関数を使用すると、それらをいずれかの 32 ビットまたは 64 ビット ポインターに変換します。 既定の遅延読み込みヘルパー関数は、例として使用する適切なテンプレートです。
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>遅延読み込み DLL のすべてのインポートを読み込む
 

@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 9d7d2623608d7dab27de78567582c7043468e98f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50444019"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426447"
 ---
 # <a name="reflection-ccli"></a>リフレクション (C++/CLI)
 
@@ -31,16 +31,17 @@ ms.locfileid: "50444019"
 
 指定されたアセンブリ名が厳密な名前に注意してください (を参照してください[の作成と using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies))、アセンブリのバージョン、カルチャ、および署名情報が含まれます。 また、基底クラスの名前に加えて、データ型が定義されている名前空間の名前も取得できることに注目してください。
 
-リフレクションの機能にアクセスする最も一般的な方法は、<xref:System.Object.GetType%2A> メソッドを使用することです。 このメソッドがによって提供される[system::object](https://msdn.microsoft.com/library/system.object.aspx)からガベージ コレクションのすべてのクラスが派生します。
+リフレクションの機能にアクセスする最も一般的な方法は、<xref:System.Object.GetType%2A> メソッドを使用することです。 このメソッドがによって提供される<xref:System.Object?displayProperty=nameWithType>からガベージ コレクションのすべてのクラスが派生します。
 
 > [!NOTE]
 > Visual C コンパイラで構築された .exe のリフレクションは、.exe に組み込まれている場合にのみ使用できます、 **/clr: 純粋な**または **/clr:safe**コンパイラ オプション。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは、Visual Studio 2015 で非推奨と Visual Studio 2017 では使用できません。 参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細についてはします。
 
-詳細については、次を参照してください[System.Reflection Namespace。](https://msdn.microsoft.com/library/system.reflection.aspx)
+詳細については、「<xref:System.Reflection>」を参照してください。
 
-## <a name="example-gettype"></a>例: GetType
+## <a name="example-gettype"></a>例:GetType
 
-`GetType` メソッドは、オブジェクトが基になっている場合は型を表す <xref:System.Type> クラス オブジェクトへのポインターを返します。 (、**型**オブジェクトには、インスタンス固有の情報が含まれていない)。このメソッドで取得できる項目には、型の完全名があります。完全名は、次のように表示できます。
+
+  `GetType` メソッドは、オブジェクトが基になっている場合は型を表す <xref:System.Type> クラス オブジェクトへのポインターを返します。 (、**型**オブジェクトには、インスタンス固有の情報が含まれていない)。このメソッドで取得できる項目には、型の完全名があります。完全名は、次のように表示できます。
 
 型名には、型が定義されている完全なスコープ (名前空間も含む) が含まれています。また、.NET 構文でスコープ解決演算子としてドット (.) が付けられている点にも注意してください。
 
@@ -114,9 +115,10 @@ there are 3 options in enum 'Options'
 value of 'o' is Option2
 ```
 
-## <a name="example-gettype-members-and-properties"></a>例: GetType メンバーとプロパティ
+## <a name="example-gettype-members-and-properties"></a>例:GetType メンバーとプロパティ
 
-`GetType` オブジェクトは、型を調べるために使用できる多くのメンバーとプロパティをサポートします。 次のコードは、この情報の一部を取得して表示します。
+
+  `GetType` オブジェクトは、型を調べるために使用できる多くのメンバーとプロパティをサポートします。 次のコードは、この情報の一部を取得して表示します。
 
 ```cpp
 // vcpp_reflection_4.cpp
@@ -177,9 +179,9 @@ public:
 
 ## <a name="example-inspection-of-assemblies"></a>アセンブリの例: 検査
 
-このコードを vcpp_reflection_6.dll という DLL にコンパイルすると、リフレクションを使用してアセンブリの内容を確認できます。 これは、静的リフレクション API 関数を使用して[assembly::load](https://msdn.microsoft.com/library/system.reflection.assembly.load.aspx)アセンブリを読み込みます。 この関数のアドレスを返します、**アセンブリ**モジュールと内の型について、クエリを実行できるオブジェクト。
+このコードを vcpp_reflection_6.dll という DLL にコンパイルすると、リフレクションを使用してアセンブリの内容を確認できます。 これは、静的リフレクション API 関数 xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType を使用してアセンブリを読み込む必要があります。 この関数のアドレスを返します、**アセンブリ**モジュールと内の型について、クエリを実行できるオブジェクト。
 
-リフレクション システムが、アセンブリの配列を正常に読み込まれたら**型**でオブジェクトを取得、 [:gettypes](https://msdn.microsoft.com/library/system.reflection.assembly.gettypes.aspx)関数。 各配列要素には、異なる型の情報が含まれています。ただし、この例で定義されているクラスは 1 つだけです。 ループを使用して各**型**型のメンバーを使用してこの配列をクエリ、 **:getmembers**関数。 この関数の配列を返します**MethodInfo**オブジェクト、メンバー関数は、データ メンバー、または型のプロパティに関する情報を格納している各オブジェクト。
+リフレクション システムが、アセンブリの配列を正常に読み込まれたら**型**でオブジェクトを取得、<xref:System.Reflection.Assembly.GetTypes%2A?displayProperty=nameWithType>関数。 各配列要素には、異なる型の情報が含まれています。ただし、この例で定義されているクラスは 1 つだけです。 ループを使用して各**型**型のメンバーを使用してこの配列をクエリ、 **:getmembers**関数。 この関数の配列を返します**MethodInfo**オブジェクト、メンバー関数は、データ メンバー、または型のプロパティに関する情報を格納している各オブジェクト。
 
 定義されているメソッドの一覧が、関数には明示的に含まれているメモ**TestClass**関数が暗黙的に継承し、 **system::object**クラス。 Visual C++ 構文ではなく .NET で記述されている部分では、プロパティは get 関数と set 関数でアクセスする基底のデータ メンバーとして表示されます。 get 関数と set 関数は、通常のメソッドとしてこのリストに表示されています。 リフレクションは、Visual C++ コンパイラではなく、共通言語ランタイムを通じてサポートされています。
 
@@ -232,7 +234,7 @@ int main() {
 }
 ```
 
-## <a name="implement"></a> 方法: リフレクションを使用してプラグイン コンポーネント アーキテクチャの実装
+## <a name="implement"></a>方法: リフレクションを使用してプラグイン コンポーネント アーキテクチャを実装します。
 
 次のコード例では、単純な「プラグイン」アーキテクチャを実装するためにリフレクションを使用を示します。 最初のリストは、アプリケーションと、2 番目のプラグインです。 アプリケーションは、コマンドライン引数として指定されたプラグイン DLL 内のフォーム ベースのクラスを使用して自身を設定する複数のドキュメント形式です。
 
@@ -340,7 +342,7 @@ protected:
 };
 ```
 
-## <a name="enumerate"></a> 方法: リフレクションを使用してアセンブリ内のデータ型を列挙
+## <a name="enumerate"></a>方法: リフレクションを使用してアセンブリ内のデータ型を列挙します。
 
 次の例では、パブリック型とメンバーを使用しての列挙体<xref:System.Reflection>します。
 

@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル: 作成し、使用して、独自のダイナミック リンク ライブラリ (C++)'
+title: 'チュートリアル: 作成して、独自のダイナミック リンク ライブラリ (C++)'
 ms.custom: conceptual
 ms.date: 09/24/2018
 helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c09fa369cd4e0b726d809fa709518574d4fdbc6e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330542"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416450"
 ---
-# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>チュートリアル: 作成し、使用して、独自のダイナミック リンク ライブラリ (C++)
+# <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>チュートリアル: 作成して、独自のダイナミック リンク ライブラリ (C++)
 
 このステップ バイ ステップ チュートリアルでは、Visual Studio IDE を使用して、C++ で記述された独自ダイナミック リンク ライブラリ (DLL) を作成し、別の C++ アプリからそれを使用する方法を示します。 Dll は、最も役に立つの種類の Windows コンポーネントのいずれかです。 お客様のアプリのサイズを縮小して、サービスし、アプリを拡張しやすく、コードとリソースを共有する方法としてそれらを使用できます。 このチュートリアルでは、いくつかの数値演算関数を実装する DLL を作成し、DLL から関数を使用するコンソール アプリを作成します。 過程で、いくつかのプログラミング手法と Windows Dll で使用される規則の概要を取得します。
 

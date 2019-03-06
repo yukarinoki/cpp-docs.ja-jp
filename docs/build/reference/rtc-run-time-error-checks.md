@@ -25,12 +25,12 @@ helpviewer_keywords:
 - RTCc compiler option
 - -RTCc compiler option [C++]
 ms.assetid: 9702c558-412c-4004-acd5-80761f589368
-ms.openlocfilehash: 77dc97ee07499b7df37a115dafafddd71acb7bb1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ac70904332f5f05463b317f02a2ab8d3bfc7bb3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50655002"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424614"
 ---
 # <a name="rtc-run-time-error-checks"></a>/RTC (ランタイム エラー チェック)
 
@@ -53,7 +53,7 @@ ms.locfileid: "50655002"
 **c**<br/>
 レポートの値は、小さいデータ型とデータが失われる結果に割り当てられます。 たとえば、値型の場合`short 0x101`型の変数に割り当てられている`char`します。
 
-このオプションを切り捨てを予定して、たとえば、最初の 8 ビットの場合の状況を報告する、`int`として返されます、`char`します。 **/RTC** `c` 、実行時エラーが発生の結果として、実行時エラーを回避するために必要な情報をマスクすることができます、情報が代入の結果として失われた場合は、 **/RTC** `c`. 例えば:
+このオプションを切り捨てを予定して、たとえば、最初の 8 ビットの場合の状況を報告する、`int`として返されます、`char`します。 **/RTC** `c` 、実行時エラーが発生の結果として、実行時エラーを回避するために必要な情報をマスクすることができます、情報が代入の結果として失われた場合は、 **/RTC** `c`. 例:
 
 ```
 #include <crtdbg.h>
@@ -95,7 +95,7 @@ c = a;  // No run-time error with /RTCu
 
 ## <a name="remarks"></a>Remarks
 
-実行時エラー チェックは、実行中のコードで問題を検出する方法です。詳細については、次を参照してください。[方法: ネイティブのランタイム チェックを使用して](/visualstudio/debugger/how-to-use-native-run-time-checks)します。
+実行時エラー チェックは、実行中のコードで問題を検出する方法です。詳細については、次を参照してください。[方法。ネイティブ ランタイム チェックを使用して、](/visualstudio/debugger/how-to-use-native-run-time-checks)します。
 
 いずれかを使用してコマンドラインでプログラムをコンパイルする場合、 **/RTC**コンパイラ オプション、すべてのプラグマ[最適化](../../preprocessor/optimize.md)手順については、コードでは失敗します。 実行時エラー チェックが有効で (最適化) リリース ビルドではないためにです。
 
@@ -111,14 +111,15 @@ c = a;  // No run-time error with /RTCu
 
 1. をクリックして、**コード生成**プロパティ ページ。
 
-1. 次のプロパティの一方または両方の変更:**基本ランタイム チェック**または**小さい型チェック**します。
+1. 次のプロパティの一方または両方を変更します。**基本ランタイム チェック**または**チェックを小さい型**します。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
-- <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> プロパティおよび <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A> プロパティを参照してください。
+- 
+  <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.BasicRuntimeChecks%2A> プロパティおよび <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.SmallerTypeCheck%2A> プロパティを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
 [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[方法 : ネイティブ ランタイム チェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)
+[方法: ネイティブ ランタイム チェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)

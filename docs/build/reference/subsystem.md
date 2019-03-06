@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: ec771efcd8fffd1aa1825f2c500404dc0b2a4965
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638738"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415137"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -57,13 +57,15 @@ Windows のグラフィカル環境で実行するアプリケーション。 �
 **WINDOWS CE**<br/>
 WINDOWSCE サブシステムは、アプリケーションが Windows CE カーネルのバージョンがあるデバイスで実行するように設計されたことを示します。 カーネルのバージョンには、PocketPC、Windows Mobile、Windows Phone 7、Windows CE V1.0-6.0R3、および Windows Embedded Compact 7 があります。
 
-`major` および `minor` 値 (省略可能) で、指定したサブシステムの必要最低バージョンを指定します。
+
+  `major` および `minor` 値 (省略可能) で、指定したサブシステムの必要最低バージョンを指定します。
 
 - バージョン番号の整数部 (小数点の左側) は、`major` で指定します。
 
 - バージョン番号の小数部 (小数点の右側) は、`minor` で指定します。
 
-- `major` と `minor` で指定できる値は、0 ～ 65,535 の範囲です。
+- 
+  `major` と `minor` で指定できる値は、0 ～ 65,535 の範囲です。
 
 選択したサブシステムに応じて、プログラムの既定の開始アドレスも変わります。 詳細については、次を参照してください。 [/ENTRY (エントリ ポイント シンボル)](../../build/reference/entry-entry-point-symbol.md)、リンカーの/ENTRY:*関数*オプション。
 

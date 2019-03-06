@@ -1,5 +1,5 @@
 ---
-title: 'MFC アプリケーションのローカライズされたリソース: サテライト DLL'
+title: MFC アプリケーションのローカライズされたリソース:サテライト Dll
 ms.date: 11/04/2016
 helpviewer_keywords:
 - multiple language support [C++]
@@ -12,14 +12,14 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: e9f9b751da6339cbe8f352bdb7eee4b7af2c359b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d479599acceac29f0f2ee54857c663c81a919acf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658004"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420402"
 ---
-# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC アプリケーションのローカライズされたリソース: サテライト DLL
+# <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC アプリケーションのローカライズされたリソース:サテライト Dll
 
 MFC version 7.0 以降では、サテライト Dll の複数の言語にローカライズされるアプリケーションの作成に役立つ機能の強化されたサポートを提供します。 サテライト DLL は、[リソース専用 DLL](../build/creating-a-resource-only-dll.md)特定の言語のローカライズされたアプリケーションのリソースを格納しています。 アプリケーションの実行開始時に MFC には、環境に最も適したローカライズされたリソースが自動的に読み込まれます。 たとえば、2 つのサテライト Dll は、ドイツ語の翻訳を格納している他のリソースのフランス語の翻訳を格納している 1 つの英語リソースをアプリケーションがある可能性があります。 英語の言語がシステム、アプリケーションを実行すると、英語のリソースが使用されます。 フランス語のリソースを使用して、フランス語のシステムで実行される場合ドイツ語のシステムで実行される場合は、ドイツ語のリソースを使用します。
 
@@ -54,4 +54,4 @@ MFC がサテライト Dll を見つけられない場合は、アプリケー�
 ## <a name="see-also"></a>関連項目
 
 [Visual C++ の DLL](../build/dlls-in-visual-cpp.md)<br/>
-[テクニカル ノート 57: MFC コンポーネントのローカライズ](../mfc/tn057-localization-of-mfc-components.md)
+[TN057:MFC コンポーネントのローカライズ](../mfc/tn057-localization-of-mfc-components.md)

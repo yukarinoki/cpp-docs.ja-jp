@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /openmp compiler option [C++]
 - -openmp compiler option [C++]
 ms.assetid: 9082b175-18d3-4378-86a7-c0eb95664e13
-ms.openlocfilehash: 03992a0e8eef3ba9b2683ecb87809b53cb551636
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bea51c7af41df666fd441555daa0d8d8387377ac
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518067"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414136"
 ---
 # <a name="openmp-enable-openmp-20-support"></a>/openmp (OpenMP 2.0 サポートの有効化)
 
@@ -43,7 +43,7 @@ ms.locfileid: "50518067"
 
 Microsoft で作成はないことをお勧め **/openmp**部分的には、アプリケーションを使用して、呼び出し元を信頼された<xref:System.Security.AllowPartiallyTrustedCallersAttribute>、または任意の CLR コード アクセス セキュリティ属性。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

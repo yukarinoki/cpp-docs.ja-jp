@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: ba30efd76e94749dd261f3528535d674b5e155e9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a5aede89e2b37655b67144a9882f1de9b7a4bf8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621911"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414799"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (既定のライブラリ名の省略)
 
@@ -40,7 +40,7 @@ ms.locfileid: "50621911"
 
 詳しくは、「[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)」をご覧ください。
 
-コンパイルするときに **/Zl**、`_VC_NODEFAULTLIB`が定義されています。  例えば:
+コンパイルするときに **/Zl**、`_VC_NODEFAULTLIB`が定義されています。  例:
 
 ```
 // vc_nodefaultlib.cpp

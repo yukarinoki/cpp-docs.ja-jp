@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CIPAddressCtrl [MFC], SetFieldFocus
 - CIPAddressCtrl [MFC], SetFieldRange
 ms.assetid: 9764d2f4-cb14-4ba8-b799-7f57a55a47c6
-ms.openlocfilehash: e569829c100a581e24b5ce05df2f90ac7088024b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5abcf838308d8965f3c55dc7d85dbac974825394
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266295"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426395"
 ---
 # <a name="cipaddressctrl-class"></a>CIPAddressCtrl クラス
 
@@ -122,7 +122,7 @@ virtual BOOL Create(
 IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールが子ウィンドウにある必要がありますので、WS_CHILD スタイルを含める必要があります。 参照してください[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) windows スタイルの一覧については、Windows SDK に含まれています。
 
 *rect*<br/>
-IP アドレス コントロールのサイズと位置への参照。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+IP アドレス コントロールのサイズと位置への参照。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 *pParentWnd*<br/>
 IP アドレス コントロールの親ウィンドウへのポインター。 NULL は指定できません。
@@ -166,7 +166,7 @@ virtual BOOL CreateEx(
 IP アドレス コントロールのスタイル。 ウィンドウ スタイルの組み合わせを適用します。 コントロールが子ウィンドウにある必要がありますので、WS_CHILD スタイルを含める必要があります。 参照してください[CreateWindow](/windows/desktop/api/winuser/nf-winuser-createwindowa) windows スタイルの一覧については、Windows SDK に含まれています。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。

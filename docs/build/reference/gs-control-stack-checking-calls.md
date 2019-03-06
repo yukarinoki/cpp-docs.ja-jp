@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -GS compiler option [C++]
 - stack checking calls
 ms.assetid: 40daed7c-f942-4085-b872-01e12b37729e
-ms.openlocfilehash: 52e203380045c3e23b04950cb241176f10321c2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49433cd0c84b05248bacf1e930dd5ec78bc3cd1b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646470"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418829"
 ---
 # <a name="gs-control-stack-checking-calls"></a>/Gs (スタック チェック呼び出しの制御)
 
@@ -25,7 +25,7 @@ ms.locfileid: "50646470"
 
 ## <a name="syntax"></a>構文
 
-> **/Gs**[*サイズ*]
+> **/Gs**[*size*]
 
 ## <a name="arguments"></a>引数
 

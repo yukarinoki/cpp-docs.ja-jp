@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], base address
 - /REBASE editbin option [C++]
 ms.assetid: 3f89d874-af5c-485b-974b-fd205f6e1a4b
-ms.openlocfilehash: de8b648c6bca02c71a9cfedd92bfbe7e6ca56b70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0b581dfc116e25228a9aa9133c4de027e194799
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463649"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422040"
 ---
 # <a name="rebase"></a>/REBASE
 

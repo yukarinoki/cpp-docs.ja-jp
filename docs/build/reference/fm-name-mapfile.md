@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Fm compiler option [C++]
 - /Fm compiler option [C++]
 ms.assetid: 8154448a-93a7-4546-8e4c-5c44d0aff45d
-ms.openlocfilehash: 49a3d20aee54b06bae2670be139d748fd2aaca6d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f6290d3dfa4aaadfc9247fd8453d378851328a1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469853"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418734"
 ---
 # <a name="fm-name-mapfile"></a>/Fm (マップ ファイルの名前の指定)
 
@@ -37,7 +37,7 @@ ms.locfileid: "50469853"
 
 マップ ファイル内のグローバル シンボルでは、コンパイラは変数名に、先頭にアンダー スコアを追加するため、通常は 1 つまたは複数の先頭のアンダー スコアがあります。 マップ ファイルに表示される多くのグローバル シンボルは、コンパイラと標準ライブラリによって内部的に使用されます。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

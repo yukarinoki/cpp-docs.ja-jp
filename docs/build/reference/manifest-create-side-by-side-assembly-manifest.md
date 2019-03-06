@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFEST linker option
 - MANIFEST linker option
 ms.assetid: 98c52e1e-712c-4f49-b149-4d0a3501b600
-ms.openlocfilehash: 226deb9e8f7273e122e1b9074d2afca8970fc366
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 685d98d166a94f2c17feae7bfafbd64b77786e8d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50508058"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418777"
 ---
 # <a name="manifest-create-side-by-side-assembly-manifest"></a>/MANIFEST (side-by-side アセンブリ マニフェストを作成する)
 
@@ -27,7 +27,8 @@ ms.locfileid: "50508058"
 
 既定値は、"/MANIFEST" です。
 
-/MANIFEST:EMBED オプションは、リンカーが RT_MANIFEST 型のリソースとしてイメージにマニフェスト ファイルを埋め込む必要があることを指定します。 省略可能な `ID` パラメーターは、マニフェストで使用するリソース ID です。 実行可能ファイルの場合は値 1 を使用します。 DLL の場合は値 2 を使用して、プライベート依存関係を指定できるようにします。 `ID` パラメーターを指定しない場合、/DLL オプションが設定されている場合の既定値は 2、それ以外の場合の既定値は 1 になります。
+/MANIFEST:EMBED オプションは、リンカーが RT_MANIFEST 型のリソースとしてイメージにマニフェスト ファイルを埋め込む必要があることを指定します。 省略可能な `ID` パラメーターは、マニフェストで使用するリソース ID です。 実行可能ファイルの場合は値 1 を使用します。 DLL の場合は値 2 を使用して、プライベート依存関係を指定できるようにします。 
+  `ID` パラメーターを指定しない場合、/DLL オプションが設定されている場合の既定値は 2、それ以外の場合の既定値は 1 になります。
 
 Visual Studio 2008 以降では、実行可能ファイルのマニフェストのファイルには、ユーザー アカウント制御 (UAC) 情報を指定するセクションが含まれます。 /MANIFEST を指定するが、いずれも指定する場合[/MANIFESTUAC](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md)も[/DLL](../../build/reference/dll-build-a-dll.md)、UAC レベルのセットが既定の UAC フラグメント*asInvoker*マニフェストに挿入されます。 UAC レベルの詳細については、次を参照してください。 [/MANIFESTUAC (UAC 情報をマニフェスト)](../../build/reference/manifestuac-embeds-uac-information-in-manifest.md)します。
 

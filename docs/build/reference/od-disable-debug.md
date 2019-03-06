@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Od compiler option [C++]
 - disable (debug) compiler option [C++]
 ms.assetid: b1ac31b7-e086-4eeb-be5e-488f7513f5f5
-ms.openlocfilehash: b7cbf8de06e698e67e370eb399da5bb00b262895
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 386113c7926085aa7e82e23768556372014a8cc8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595797"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426252"
 ---
 # <a name="od-disable-debug"></a>/Od (無効 (デバッグ))
 
@@ -31,7 +31,7 @@ ms.locfileid: "50595797"
 
 ## <a name="remarks"></a>Remarks
 
-このオプションは、既定値です。 **/Od**コードの移動を抑制しますが、デバッグ プロセスを簡略化されます。 デバッグ用のコンパイラ オプションの詳細については、次を参照してください。 [/Z7、/Zi、/ZI (デバッグ情報の形式)](../../build/reference/z7-zi-zi-debug-information-format.md)します。
+これは既定のオプションです。 **/Od**コードの移動を抑制しますが、デバッグ プロセスを簡略化されます。 デバッグ用のコンパイラ オプションの詳細については、次を参照してください。 [/Z7、/Zi、/ZI (デバッグ情報の形式)](../../build/reference/z7-zi-zi-debug-information-format.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 

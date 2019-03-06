@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 9807d45f12b5336ebbb80ea9718af77cf8d38188
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303671"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413928"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl クラス
 
@@ -227,10 +227,10 @@ virtual BOOL Create(
 月間予定表のコントロールに適用された Windows スタイルの組み合わせを指定します。 参照してください[月間予定表コントロールのスタイル](/windows/desktop/Controls/month-calendar-control-styles)スタイルの詳細については、Windows SDK に含まれています。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 月間予定表コントロールのサイズと位置が含まれています。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。 月間予定表コントロールのサイズと位置が含まれています。
 
 *pt*<br/>
-参照を[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)月間予定表コントロールの場所を識別する構造体。
+参照を[ポイント](/previous-versions/dd162805\(v=vs.85\))月間予定表コントロールの場所を識別する構造体。
 
 *pParentWnd*<br/>
 ポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、月間予定表コントロールの親ウィンドウです。 NULL は指定できません。
@@ -523,7 +523,7 @@ BOOL GetMinReqRect(RECT* pRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *pRect*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受信する構造体。 このパラメーターは、有効なアドレスである必要があります、NULL にすることはできません。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))外接する四角形の情報を受信する構造体。 このパラメーターは、有効なアドレスである必要があります、NULL にすることはできません。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1290,11 +1290,11 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*lpRect*|[in]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)カレンダーの必要な数を含む四角形を定義する構造体。|
+|*lpRect*|[in]ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))カレンダーの必要な数を含む四角形を定義する構造体。|
 
 ### <a name="return-value"></a>戻り値
 
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)によってサイズが小さい四角形、四角形を定義する構造が定義されている、 *lpRect*パラメーター。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))によってサイズが小さい四角形、四角形を定義する構造が定義されている、 *lpRect*パラメーター。
 
 ### <a name="remarks"></a>Remarks
 

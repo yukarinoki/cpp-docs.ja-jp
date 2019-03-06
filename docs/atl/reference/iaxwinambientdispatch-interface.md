@@ -35,12 +35,12 @@ f1_keywords:
 helpviewer_keywords:
 - IAxWinAmbientDispatch interface
 ms.assetid: 55ba6f7b-7a3c-4792-ae47-c8a84b683ca9
-ms.openlocfilehash: 9b9557a76d133d81a07320f1a64482d17c955ef2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85a8f1d41c6c54f94b500807a1e4ca504206f56a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301594"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425654"
 ---
 # <a name="iaxwinambientdispatch-interface"></a>IAxWinAmbientDispatch インターフェイス
 
@@ -94,7 +94,7 @@ interface IAxWinAmbientDispatch : IDispatch
 
 このインターフェイスは、オブジェクトのホスト、ATL の ActiveX コントロールによって公開されます。 ホストされるコントロールに使用可能なアンビエント プロパティを設定するか、コンテナーの動作の他の側面を指定するこのインターフェイスでメソッドを呼び出します。 によって提供されるプロパティを補足する`IAxWinAmbientDispatch`を使用して、 [IAxWinAmbientDispatchEx](../../atl/reference/iaxwinambientdispatchex-interface.md)します。
 
-[AXHost](https://msdn.microsoft.com/library/system.windows.forms.axhost.aspx)をに関する型情報を読み込んでみます`IAxWinAmbientDispatch`と`IAxWinAmbientDispatchEx`コードを含むタイプ ライブラリから。
+<xref:System.Windows.Forms.AxHost> に関する型情報を読み込んでみます`IAxWinAmbientDispatch`と`IAxWinAmbientDispatchEx`コードを含むタイプ ライブラリから。
 
 ATL90.dll にリンクしている場合**AXHost**は DLL にタイプ ライブラリから型情報を読み込みます。
 

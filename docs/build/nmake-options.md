@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - NMAKE program, options
 ms.assetid: 00ba1aec-ef27-44cf-8d82-c5c095e45bae
-ms.openlocfilehash: 84130afea6cc73c480b46f065d6d85e365101b38
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca7b94935f385971b8d9bff53ece3b86f2885b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455342"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417074"
 ---
 # <a name="nmake-options"></a>NMAKE のオプション
 
@@ -22,8 +22,8 @@ NMAKE のオプションは、次の表で説明します。 オプションで�
 |/C|NMAKE の致命的でないエラーまたは警告、タイムスタンプ、および NMAKE の著作権メッセージを含むの既定の出力を抑制します。 /K. で発行される警告を抑制します。|
 |/D|それぞれのタイムスタンプを表示では、ターゲットと依存してメッセージ ターゲットが存在しない場合に評価されます。 メイクファイルのデバッグの/P に便利です。 使用 **!CMDSWITCHES**を設定またはメイクファイルの一部の/D をクリアします。|
 |/E|メイクファイルのマクロ定義をオーバーライドする環境変数をによりします。|
-|/ERRORREPORT [NONE&AMP;#124;プロンプト&AMP;#124;キュー&AMP;#124;送信]|Nmake.exe を実行時に失敗した場合、これらの内部エラーに関する情報を Microsoft に送信する/ERRORREPORT を使用することができます。<br /><br /> /ERRORREPORT の詳細については、次を参照してください。 [/errorReport (内部コンパイラ エラーを報告する)](../build/reference/errorreport-report-internal-compiler-errors.md)します。|
-|/F*ファイル名*|指定します*filename*メイクファイルとして。 スペースまたはタブの前に記述できます*filename*します。 メイクファイルごとに 1 回/F を指定します。 標準入力からのメイクファイルを指定するには、ダッシュ (-) を指定*filename*、f6 キーまたは CTRL + Z のいずれかでキーボード入力を終了するとします。|
+|/ERRORREPORT[NONE &#124; PROMPT &#124; QUEUE &#124; SEND ]|Nmake.exe を実行時に失敗した場合、これらの内部エラーに関する情報を Microsoft に送信する/ERRORREPORT を使用することができます。<br /><br /> /ERRORREPORT の詳細については、次を参照してください。 [/errorReport (内部コンパイラ エラーを報告する)](../build/reference/errorreport-report-internal-compiler-errors.md)します。|
+|/F *filename*|指定します*filename*メイクファイルとして。 スペースまたはタブの前に記述できます*filename*します。 メイクファイルごとに 1 回/F を指定します。 標準入力からのメイクファイルを指定するには、ダッシュ (-) を指定*filename*、f6 キーまたは CTRL + Z のいずれかでキーボード入力を終了するとします。|
 |/G|含まれるメイクファイルを表示します。ディレクティブが含まれます。  参照してください[メイクファイルのプリプロセス ディレクティブ](../build/makefile-preprocessing-directives.md)詳細についてはします。|
 |/HELP、/でしょうか。|NMAKE のコマンドライン構文の簡単な概要が表示されます。|
 |/I|すべてのコマンドからの終了コードは無視されます。 を設定またはメイクファイルの一部の/I をオフにするには使用 **!CMDSWITCHES**します。 メイクファイルの一部の終了コードを無視するには、ダッシュ (-) のコマンド修飾子を使用してまたは[します。無視](../build/dot-directives.md)します。 両方を指定した場合は、/K をオーバーライドします。|
@@ -36,7 +36,7 @@ NMAKE のオプションは、次の表で説明します。 オプションで�
 |/S|実行されたコマンドの表示を抑制します。 メイクファイルの一部の表示を抑制するのには、使用、 **\@** コマンド修飾子または[します。サイレント](../build/dot-directives.md)します。 を設定またはメイクファイルの一部の/S をオフにするには使用 **!CMDSWITCHES**します。|
 |/T|コマンドラインのターゲット (または最初のメイクファイル ターゲット) のタイムスタンプを更新し、プリプロセス コマンドを実行しますが、ビルドは実行されません。|
 |/U|/N と一緒に使用する必要があります。 バッチ ファイルとして/N 出力を使用できるように、インライン (nmake の) ファイルをダンプします。|
-|/X*ファイル名*|NMAKE エラー出力を送信します*filename*標準エラーの代わりにします。 スペースまたはタブの前に記述できます*filename*します。 エラー出力を標準出力を送信するには、ダッシュ (-) を指定*filename*します。 標準エラー コマンドからの出力には影響しません。|
+|/X *filename*|NMAKE エラー出力を送信します*filename*標準エラーの代わりにします。 スペースまたはタブの前に記述できます*filename*します。 エラー出力を標準出力を送信するには、ダッシュ (-) を指定*filename*します。 標準エラー コマンドからの出力には影響しません。|
 |/Y|バッチモード推論規則を無効にします。 このオプションがオンの場合は、すべてバッチモード推論規則が正規の推論規則として扱われます。|
 
 ## <a name="see-also"></a>関連項目

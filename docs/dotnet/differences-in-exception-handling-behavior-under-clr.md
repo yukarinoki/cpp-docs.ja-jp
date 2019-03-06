@@ -5,12 +5,12 @@ helpviewer_keywords:
 - EXCEPTION_CONTINUE_EXECUTION macro
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
-ms.openlocfilehash: 4898ff7893ec327495e757f2ffa0eb37ae051875
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fea928fc293ef916d560e51ecb27aee452b6a4c3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551334"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414630"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR における例外処理動作の相違点
 
@@ -97,7 +97,7 @@ We should execute this handler if compiled to native
 
 ##  <a name="vccondisassociatedrethrows"></a> 分離再スロー
 
-**/clr**は catch ハンドラーが (関連付けを解除 rethrow と呼ばれます) の外部で例外を再スローをサポートしていません。 この種類の例外が扱われるとして標準の C++ 再スローします。 アクティブなマネージ例外がある場合に、分離の再スローが発生した場合は、例外が C++ 例外としてラップされ、再スローされます。 この種類の例外は、型の例外としてのみキャッチできます[System::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx)します。
+**/clr**は catch ハンドラーが (関連付けを解除 rethrow と呼ばれます) の外部で例外を再スローをサポートしていません。 この種類の例外が扱われるとして標準の C++ 再スローします。 アクティブなマネージ例外がある場合に、分離の再スローが発生した場合は、例外が C++ 例外としてラップされ、再スローされます。 この種類の例外は、型の例外としてのみキャッチできます<xref:System.Runtime.InteropServices.SEHException>します。
 
 次の例では、マネージ例外として、C++ 例外を再スローを示しています。
 

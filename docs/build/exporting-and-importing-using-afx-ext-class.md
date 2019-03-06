@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], importing classes
 - exporting DLLs [C++], AFX_EXT_CLASS macro
 ms.assetid: 6b72cb2b-e92e-4ecd-bcab-c335e1d1cfde
-ms.openlocfilehash: 521fa0e0f786111e4e273685d2db6f6d011c72c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1451b452c5e2dc62e83e5b8f473248fa7c231877
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482577"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421195"
 ---
 # <a name="exporting-and-importing-using-afxextclass"></a>AFX_EXT_CLASS を使ったエクスポート/インポート
 
@@ -52,7 +52,7 @@ class AFX_EXT_CLASS CMyClass : public CDocument
 
 場合によってクラスの個々 のメンバーをエクスポートする可能性があります。 エクスポートする場合など、 `CDialog`-派生クラスでコンス トラクターをエクスポートする必要がありますのみ、`DoModal`を呼び出します。 使用することができます`AFX_EXT_CLASS`で個々 のメンバーをエクスポートする必要があります。
 
-例えば:
+例:
 
 ```cpp
 class CExampleDialog : public CDialog
@@ -81,7 +81,7 @@ public: \
 
 静的で始まる行`AFX_DATA`クラスの内部静的オブジェクトを宣言しています。 でこのクラスを正しくエクスポートして、クライアントの実行可能ファイルの実行時情報にアクセスするには、この静的オブジェクトをエクスポートする必要があります。 静的オブジェクトは、修飾子で宣言されているため`AFX_DATA`、のみを定義する必要があります`AFX_DATA`する`__declspec(dllexport)`、DLL のビルド時として定義し、`__declspec(dllimport)`クライアント実行可能ファイルを作成するときにします。 `AFX_EXT_CLASS`は既に定義されて、この方法でだけを再定義する`AFX_DATA`と同じである`AFX_EXT_CLASS`クラス定義をします。
 
-例えば:
+例:
 
 ```cpp
 #undef  AFX_DATA

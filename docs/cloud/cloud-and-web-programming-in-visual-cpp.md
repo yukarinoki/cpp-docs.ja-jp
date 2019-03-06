@@ -2,12 +2,12 @@
 title: Visual C++ でのクラウドおよび Web プログラミング
 ms.date: 11/04/2016
 ms.assetid: b63611f1-9723-44d0-ba7f-c3ebef341313
-ms.openlocfilehash: 197d3d344d4be809c81f52f30e2462d35ebefbbe
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: ec5999a90701c427a3b7166803ee79a4a5cd19b2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519634"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414487"
 ---
 # <a name="cloud-and-web-programming-in-visual-c"></a>Visual C++ でのクラウドおよび Web プログラミング
 
@@ -17,7 +17,7 @@ C++ では、Web とクラウドに接続するためのいくつかの方法が
 
 - [Microsoft Azure Mobile Services](http://www.windowsazure.com/develop/mobile/)
 
-  Windows Azure モバイル サービスに接続するユニバーサル Windows プラットフォーム (UWP) アプリまたは Windows デスクトップ アプリで使用できるネイティブ Api を提供します。 Web サイトの例のほとんどは C# を使用していますが、C++ も使用できます。 詳しくは、「 [クイック スタート: C++ を使ったモバイル サービスの追加](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)」をご覧ください。
+  Windows Azure モバイル サービスに接続するユニバーサル Windows プラットフォーム (UWP) アプリまたは Windows デスクトップ アプリで使用できるネイティブ Api を提供します。 Web サイトの例のほとんどは C# を使用していますが、C++ も使用できます。 詳細については、「[クイック スタート:C++ を使用してモバイル サービスの追加](https://msdn.microsoft.com/library/windows/apps/dn263181.aspx)します。
 
 - [C++ 用 Microsoft Azure Storage クライアント ライブラリ](https://blogs.msdn.microsoft.com/windowsazurestorage/2015/04/29/microsoft-azure-storage-client-library-for-c-v1-0-0-general-availability/)
 
@@ -44,13 +44,13 @@ C++ では、Web とクラウドに接続するためのいくつかの方法が
 
   Windows デスクトップ (7 以降)、Windows Server (2012 以降)、ユニバーサル Windows プラットフォーム、Linux、OSX、Android、および iOS をサポートしています。
 
-- [Windows::Web::Http::HttpClient](https://msdn.microsoft.com/library/windows/apps/windows.web.http.httpclient.aspx)
+- [Windows::Web::Http::HttpClient](/uwp/api/windows.web.http.httpclient)
 
   System.Web 名前空間にある同じ名前の .NET Framework クラスでモデル化された Windows ランタイムの HTTP クライアント クラスです。 `HttpClient` は、HTTP 経由の非同期アップロードとダウンロード、およびパイプラインにカスタム HTTP ハンドラーを挿入するためのパイプライン フィルターを完全にサポートします。 Windows SDK には、メーター付きネットワークや OAuth 認証用のサンプル フィルターが含まれています。 ユニバーサル Windows プラットフォームのみを対象とするアプリをお勧めを使用すること、`Windows::Web:HttpClient`クラス。
 
 - [IXMLHTTPRequest2 インターフェイス](/windows/desktop/api/msxml6/nn-msxml6-ixmlhttprequest2)
 
-  問題の GET、PUT、およびその他の HTTP コマンドを HTTP 経由でインターネットに接続する Windows デスクトップ アプリまたは Windows ランタイム アプリで使用することができます、ネイティブな COM インターフェイスを提供します。 詳細については、次を参照してください。[チュートリアル: を使用してタスクの接続および XML HTTP 要求](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)します。
+  問題の GET、PUT、およびその他の HTTP コマンドを HTTP 経由でインターネットに接続する Windows デスクトップ アプリまたは Windows ランタイム アプリで使用することができます、ネイティブな COM インターフェイスを提供します。 詳細については、「[チュートリアル:タスクおよび XML HTTP 要求を使用して接続](../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)します。
 
 - [Windows インターネット (WinInet)](/windows/desktop/WinInet/portal)
 

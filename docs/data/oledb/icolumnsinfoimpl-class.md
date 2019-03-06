@@ -27,16 +27,16 @@ helpviewer_keywords:
 - GetColumnInfo method
 - MapColumnIDs method
 ms.assetid: ba74c1c5-2eda-4452-8b57-84919fa0d066
-ms.openlocfilehash: 67052bdc5d49673146c036167c027d1efd882495
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 802c105e7795cdce604e72983f4fda549abcd5fb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556505"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418270"
 ---
 # <a name="icolumnsinfoimpl-class"></a>IColumnsInfoImpl クラス
 
-実装を提供、 [IColumnsInfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms724541(v=vs.85))インターフェイス。
+実装を提供、 [IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -69,7 +69,7 @@ class ATL_NO_VTABLE IColumnsInfoImpl :
 
 行セットとコマンドの必須のインターフェイスです。 プロバイダーの動作を変更する`IColumnsInfo`実装では、プロバイダーの列マップを変更する必要があります。
 
-## <a name="getcolumninfo"></a> Icolumnsinfoimpl::getcolumninfo
+## <a name="getcolumninfo"></a> IColumnsInfoImpl::GetColumnInfo
 
 ほとんどのコンシューマーが必要な列のメタデータを返します。
 
@@ -83,9 +83,9 @@ STDMETHOD (GetColumnInfo)(DBORDINAL* pcColumns,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[icolumnsinfo::getcolumninfo](https://docs.microsoft.com/previous-versions/windows/desktop/ms722704(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="mapcolumnids"></a> Icolumnsinfoimpl::mapcolumnids
+## <a name="mapcolumnids"></a> IColumnsInfoImpl::MapColumnIDs
 
 指定した列の Id によって識別される行セット内の列の序数の配列を返します。
 
@@ -99,7 +99,7 @@ STDMETHOD (MapColumnIDs)(DBORDINAL cColumnIDs,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[IColumnsInfo::MapColumnIDs](https://docs.microsoft.com/previous-versions/windows/desktop/ms714200(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[IColumnsInfo::MapColumnIDs](/previous-versions/windows/desktop/ms714200(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

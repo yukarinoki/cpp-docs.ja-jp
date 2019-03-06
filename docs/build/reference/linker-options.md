@@ -9,12 +9,12 @@ helpviewer_keywords:
 - libraries [C++], linking to COFF
 - LINK tool [C++], linker options
 ms.assetid: c1d51b8a-bd23-416d-81e4-900e02b2c129
-ms.openlocfilehash: 22ac88ede7cc015efd12f1a996ffdf361b43f041
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 63cfa784242af1f737c116629a29be5ad77af31d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510114"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415202"
 ---
 # <a name="linker-options"></a>リンカー オプション
 

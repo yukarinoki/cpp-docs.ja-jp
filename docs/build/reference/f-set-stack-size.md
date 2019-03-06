@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /F compiler option [C++]
 - stack, setting size
 ms.assetid: 17320b6f-8305-445b-9ec2-75833f4b29e0
-ms.openlocfilehash: 69d26a4e4634ea60457d75bc97d2266036d11e10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31d694c176afd3c79cde172248bfcd93d1346b54
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525529"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414448"
 ---
 # <a name="f-set-stack-size"></a>/F (スタック サイズの設定)
 
@@ -23,11 +23,11 @@ ms.locfileid: "50525529"
 
 ## <a name="syntax"></a>構文
 
-> **/F** *数*
+> **/F** *number*
 
 ## <a name="arguments"></a>引数
 
-*数*<br/>
+*number*<br/>
 スタック サイズ (バイト単位)。
 
 ## <a name="remarks"></a>Remarks
@@ -42,7 +42,7 @@ ms.locfileid: "50525529"
 
 - .Exe ファイルを EDITBIN を使用します。 詳細については、次を参照してください。 [EDITBIN リファレンス](../../build/reference/editbin-reference.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - 64-bit programming [C++], configuring projects
 - project configurations [C++]
 ms.assetid: 2b9ae001-df36-4750-83b2-982145d632ad
-ms.openlocfilehash: c0c734648b084c3f58577cb56984e3ea003a6a8e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 17255a5671880063f030ed0087c1fa839c5a14ef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523938"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421376"
 ---
 # <a name="how-to-configure-visual-c-projects-to-target-64-bit-x64-platforms"></a>方法: Visual C プロジェクトを 64 ビット、x64 を構成プラットフォーム
 
@@ -47,9 +47,9 @@ Visual Studio IDE でプロジェクト構成を使用すると、プラット�
 
   - **[出力の登録]** はオフにされます。 詳細については、「 [Linker Property Pages](../ide/linker-property-pages.md)」を参照してください。
 
-  - **[ターゲット環境]** は **/env x64**に設定されます。 詳細については、「 [MIDL Property Pages: General](../ide/midl-property-pages-general.md)」を参照してください。
+  - **[ターゲット環境]** は **/env x64**に設定されます。 詳細については、次を参照してください。 [MIDL プロパティ ページ。一般的な](../ide/midl-property-pages-general.md)します。
 
-  - **[パラメーターの確認]** はクリアされ、既定値にリセットされます。 詳細については、「 [MIDL Property Pages: Advanced](../ide/midl-property-pages-advanced.md)」を参照してください。
+  - **[パラメーターの確認]** はクリアされ、既定値にリセットされます。 詳細については、次を参照してください。 [MIDL プロパティ ページ。高度な](../ide/midl-property-pages-advanced.md)します。
 
   - **[デバッグ情報の形式]** が Win32 プロジェクト構成で **/ZI** に設定された場合、64 ビットのプロジェクト構成では **/Zi** に設定されます。 詳細については、「[/Z7、/Zi、/ZI (デバッグ情報の形式)](../build/reference/z7-zi-zi-debug-information-format.md)」を参照してください。
 

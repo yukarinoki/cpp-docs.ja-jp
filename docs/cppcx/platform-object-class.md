@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 00f2b57bdf63f9f8bcfd9e544bebab2805ff7f65
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 8267d42e67ddf703b4a3a681509b92978e7de8bb
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850092"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422785"
 ---
 # <a name="platformobject-class"></a>Platform::Object クラス
 
@@ -116,7 +116,7 @@ A [platform::type](../cppcx/platform-type-class.md)オブジェクトのラン�
 
 静的な[type::gettypecode](../cppcx/platform-type-class.md#gettypecode)を取得するために使用できる、 [platform::typecode 列挙](../cppcx/platform-typecode-enumeration.md)現在の型を表す値です。 これは主に、組み込み型に使用できます。 以外の ref クラスの型コード[platform::string](../cppcx/platform-string-class.md)オブジェクト (1) です。
 
-[::Interop::typename](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.interop.typename.aspx)クラスは、Windows コンポーネントとアプリ間で型情報を渡すことの言語に依存しない方法として Windows Api で使用されます。 T[platform::type Class](../cppcx/platform-type-class.md)間の変換演算子を持つ`Type`と`TypeName`します。
+[::Interop::typename](/uwp/api/windows.ui.xaml.interop.typename)クラスは、Windows コンポーネントとアプリ間で型情報を渡すことの言語に依存しない方法として Windows Api で使用されます。 T[platform::type Class](../cppcx/platform-type-class.md)間の変換演算子を持つ`Type`と`TypeName`します。
 
 使用して、 [typeid](../windows/typeid-cpp-component-extensions.md)演算子を返す、 `Platform::Type` XAML ページ間を移動するときなど、クラス名のオブジェクト。
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 0dc1769924880d8cb1b5dc173dd614e87584cac9
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750393"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412849"
 ---
 # <a name="i-additional-include-directories"></a>/I (追加のインクルード ディレクトリ)
 
@@ -27,11 +27,11 @@ ms.locfileid: "50750393"
 
 ## <a name="syntax"></a>構文
 
-> **/I***ディレクトリ*
+> **/I**[ ]*directory*
 
 ### <a name="arguments"></a>引数
 
-*ディレクトリ*<br/>
+*directory*<br/>
 ディレクトリの一覧に追加するディレクトリは、インクルード ファイルを検索します。
 
 ## <a name="remarks"></a>Remarks
@@ -62,7 +62,7 @@ ms.locfileid: "50750393"
 
 ## <a name="example"></a>例
 
-次の順序で MAIN.c によって要求されたインクルード ファイルを探し、次のコマンド: 最初に、二重引用符を使用して、指定した場合のローカル ファイルが検索されます。 次に、検索は、\INCLUDE ディレクトリから、\MY\INCLUDE ディレクトリを継続し、最後に、ディレクトリに、INCLUDE 環境変数に割り当てられています。
+次のコマンドは、次の順序で MAIN.c によって要求されたインクルード ファイルを探します。まず、二重引用符を使用して、指定した場合は、ローカル ファイルが検索されます。 次に、検索は、\INCLUDE ディレクトリから、\MY\INCLUDE ディレクトリを継続し、最後に、ディレクトリに、INCLUDE 環境変数に割り当てられています。
 
 ```
 CL /I \INCLUDE /I\MY\INCLUDE MAIN.C

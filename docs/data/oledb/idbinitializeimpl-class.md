@@ -39,16 +39,16 @@ helpviewer_keywords:
 - m_dwStatus
 - m_pCUtlPropInfo
 ms.assetid: e4182f81-0443-44f5-a0d3-e7e075d6f883
-ms.openlocfilehash: 4d9499262d0b4167d7c3941113f49bfa23e0467b
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 18145f3dc9545f79b08d9d92cacdafad0520c992
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556765"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418743"
 ---
 # <a name="idbinitializeimpl-class"></a>IDBInitializeImpl クラス
 
-実装を提供、 [IDBInitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms713706(v=vs.85))インターフェイス。
+実装を提供、 [IDBInitialize](/previous-versions/windows/desktop/ms713706(v=vs.85))インターフェイス。
 
 ## <a name="syntax"></a>構文
 
@@ -92,7 +92,7 @@ class ATL_NO_VTABLE IDBInitializeImpl : public IDBInitialize
 
 データ ソース オブジェクトと列挙子の省略可能なインターフェイスの必須のインターフェイスです。
 
-## <a name="idbinitializeimpl"></a> Idbinitializeimpl::idbinitializeimpl
+## <a name="idbinitializeimpl"></a> IDBInitializeImpl::IDBInitializeImpl
 
 コンストラクターです。
 
@@ -106,7 +106,7 @@ IDBInitializeImpl();
 
 すべてのデータ メンバーを初期化します。
 
-## <a name="initialize"></a> Idbinitializeimpl::initialize
+## <a name="initialize"></a> IDBInitializeImpl::Initialize
 
 そのプロパティのサポートを準備して、データ ソース オブジェクトを初期化します。
 
@@ -118,9 +118,9 @@ STDMETHOD(Initialize)(void);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[idbinitialize::initialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms718026(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[idbinitialize::initialize](/previous-versions/windows/desktop/ms718026(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="uninitialize"></a> Idbinitializeimpl::uninitialize
+## <a name="uninitialize"></a> IDBInitializeImpl::Uninitialize
 
 データの場所はソース プロパティのサポートなどの内部リソースを解放して初期化されていない状態でのオブジェクトです。
 
@@ -132,9 +132,9 @@ STDMETHOD(Uninitialize)(void);
 
 ### <a name="remarks"></a>Remarks
 
-参照してください[:uninitialize](https://docs.microsoft.com/previous-versions/windows/desktop/ms719648(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[:uninitialize](/previous-versions/windows/desktop/ms719648(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-## <a name="dwstatus"></a> Idbinitializeimpl::m_dwstatus
+## <a name="dwstatus"></a> IDBInitializeImpl::m_dwStatus
 
 データ ソースのフラグ。
 
@@ -162,7 +162,7 @@ enum DATASOURCE_FLAGS {
 |`DSF_PERSIST_DIRTY`|(変更されている) 場合は、データ ソース オブジェクトに永続化が必要な場合に設定します。|
 |`DSF_INITIALIZED`|データ ソースが初期化されている場合に設定します。|
 
-## <a name="pcutlpropinfo"></a> Idbinitializeimpl::m_pcutlpropinfo
+## <a name="pcutlpropinfo"></a> IDBInitializeImpl::m_pCUtlPropInfo
 
 DB のプロパティ情報の実装オブジェクトへのポインター。
 

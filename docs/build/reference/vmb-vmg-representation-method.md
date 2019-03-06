@@ -13,12 +13,12 @@ helpviewer_keywords:
 - representation method compiler options [C++]
 - /vmg compiler option [C++]
 ms.assetid: ecdb391c-7dab-40b1-916b-673d10889fd4
-ms.openlocfilehash: 30d15105b9fe502e89f77b19e530d6cc762975a8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bb355635181c3db53e1171aaf18cd665e6504ae
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505496"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426356"
 ---
 # <a name="vmb-vmg-representation-method"></a>/vmb、/vmg (処理形式)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50505496"
 
 使用することも[pointers_to_members](../../preprocessor/pointers-to-members.md)または[継承キーワード](../../cpp/inheritance-keywords.md)をコードにポインター表現を指定します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

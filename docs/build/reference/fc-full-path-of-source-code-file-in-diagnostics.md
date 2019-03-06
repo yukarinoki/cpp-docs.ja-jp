@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /FC compiler option [C++]
 - -FC compiler option [C++]
 ms.assetid: 1f11414e-cb42-421b-be68-9d369aab036b
-ms.openlocfilehash: 3629ec35f0be5ebfd384b949acb2910dcbea3318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96809f09efd068b80f04a70d4356c1ceaf5f113c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624914"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422482"
 ---
 # <a name="fc-full-path-of-source-code-file-in-diagnostics"></a>/FC (診断時のソース コード ファイルの完全パス)
 
@@ -36,11 +36,11 @@ int main( ) {
 
 せず **/FC**、診断用のテキストはこの診断用のテキストのようになります。
 
-- compiler_option_FC.cpp(5): エラー C2143: 構文エラー: 不足している ';' は、前に '}'
+- compiler_option_FC.cpp(5) : error C2143: syntax error : missing ';' before '}'
 
 **/FC**、診断用のテキストはこの診断用のテキストのようになります。
 
-- c:\test\compiler_option_fc.cpp(5): エラー C2143: 構文エラー: 不足している ';' は、前に '}'
+- c:\test\compiler_option_fc.cpp(5) : error C2143: syntax error : missing ';' before '}'
 
 **/FC**を使用する場合は、ファイル名の完全なパスを表示する場合にも必要です、 &#95;&#95;ファイル&#95;&#95;マクロ。 参照してください[定義済みマクロ](../../preprocessor/predefined-macros.md)の詳細については&#95;&#95;ファイル&#95;&#95;します。
 

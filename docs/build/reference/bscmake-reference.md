@@ -10,12 +10,12 @@ helpviewer_keywords:
 - bsc files, building
 - BSCMAKE
 ms.assetid: b97ad994-1355-4809-98db-6abc12c6fb13
-ms.openlocfilehash: 1f321d51d1b880ea634c835567767c528aca041b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1dd89047b8fa6a415e7e19dd69ca3f499887299f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509475"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416253"
 ---
 # <a name="bscmake-reference"></a>BSCMAKE リファレンス
 
@@ -33,7 +33,7 @@ Microsoft Browse Information Maintenance Utility (BSCMAKE.EXE) は、コンパ�
 
 ここでは、次のトピックについて説明します。
 
-- [ブラウザー情報ファイルのビルド : 概要](../../build/reference/building-browse-information-files-overview.md)
+- [ブラウザー情報ファイルのビルド: 概要](../../build/reference/building-browse-information-files-overview.md)
 
 - [.Bsc ファイルのビルド](../../build/reference/building-a-dot-bsc-file.md)
 
@@ -47,4 +47,4 @@ Microsoft Browse Information Maintenance Utility (BSCMAKE.EXE) は、コンパ�
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)
+[C と C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)

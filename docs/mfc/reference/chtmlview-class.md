@@ -194,12 +194,12 @@ helpviewer_keywords:
 - CHtmlView [MFC], SetWidth
 - CHtmlView [MFC], Stop
 ms.assetid: 904976af-73de-4aba-84ac-cfae8e2be09a
-ms.openlocfilehash: 69a04b49cf82c2b30ece3a32f76fbb2bc9a65f01
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251a1f9f6773363955ac374aa8714bc616137a31
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295995"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425004"
 ---
 # <a name="chtmlview-class"></a>CHtmlView クラス
 
@@ -390,7 +390,7 @@ Windows クラスの名前を示す文字の null で終わる文字列を指し
 ウィンドウのスタイル属性を指定します。 既定では、WS_VISIBLE と WS_CHILD Windows スタイルが設定されます。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置とサイズを指定する構造体。 *RectDefault*値により、Windows を新しいウィンドウの位置とサイズを指定します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))ウィンドウの位置とサイズを指定する構造体。 *RectDefault*値により、Windows を新しいウィンドウの位置とサイズを指定します。
 
 *pParentWnd*<br/>
 コントロールの親ウィンドウへのポインター。
@@ -1045,7 +1045,7 @@ void Navigate(
 呼び出し元が割り当てたに移動する URL を含む文字列または表示するファイルの完全パス。
 
 *dwFlags*<br/>
-履歴の一覧にリソースを追加するかどうか、読み取りや、キャッシュから作成するかどうかと、新しいウィンドウで、リソースを表示するかどうかを指定する変数のフラグ。 変数で定義される値の組み合わせとすることができます、[変数には](https://msdn.microsoft.com/library/aa768360.aspx)列挙体。
+履歴の一覧にリソースを追加するかどうか、読み取りや、キャッシュから作成するかどうかと、新しいウィンドウで、リソースを表示するかどうかを指定する変数のフラグ。 変数で定義される値の組み合わせとすることができます、[変数には](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))列挙体。
 
 *lpszTargetFrameName*<br/>
 リソースを表示するフレームの名前を含む文字列へのポインター。
@@ -1095,7 +1095,7 @@ void Navigate2(
 ポインター、 [ITEMIDLIST](/windows/desktop/api/shtypes/ns-shtypes-_itemidlist)構造体。
 
 *dwFlags*<br/>
-履歴の一覧にリソースを追加するかどうか、読み取りや、キャッシュから作成するかどうかと、新しいウィンドウで、リソースを表示するかどうかを指定する変数のフラグ。 変数で定義される値の組み合わせとすることができます、[変数には](https://msdn.microsoft.com/library/aa768360.aspx)列挙体。
+履歴の一覧にリソースを追加するかどうか、読み取りや、キャッシュから作成するかどうかと、新しいウィンドウで、リソースを表示するかどうかを指定する変数のフラグ。 変数で定義される値の組み合わせとすることができます、[変数には](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))列挙体。
 
 *lpszTargetFrameName*<br/>
 リソースを表示するフレームの名前を含む文字列へのポインター。
@@ -1215,7 +1215,7 @@ virtual HRESULT OnDocWindowActivate(BOOL fActivate);
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnDocWindowActivate`に対応するため、 `OnDocWindowActivate` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnDocWindowActivate`に対応するため、 `OnDocWindowActivate` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="ondownloadbegin"></a>  CHtmlView::OnDownloadBegin
 
@@ -1256,7 +1256,7 @@ virtual HRESULT OnEnableModeless(BOOL fEnable);
 
 ### <a name="remarks"></a>Remarks
 
-有効またはコンテナーが作成されたり、モーダル ダイアログ ボックスが破棄されると、モードレス ダイアログ ボックスを無効にします。 オーバーライド`OnEnableModeless`に対応するため、 `EnableModeless` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)詳細については、Windows SDK に含まれています。
+有効またはコンテナーが作成されたり、モーダル ダイアログ ボックスが破棄されると、モードレス ダイアログ ボックスを無効にします。 オーバーライド`OnEnableModeless`に対応するため、 `EnableModeless` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="onfilterdataobject"></a>  CHtmlView::OnFilterDataObject
 
@@ -1282,7 +1282,7 @@ virtual HRESULT OnFilterDataObject(
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnFilterDataObject`に対応するため、 `FilterDataObject` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnFilterDataObject`に対応するため、 `FilterDataObject` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="onframewindowactivate"></a>  CHtmlView::OnFrameWindowActivate
 
@@ -1303,7 +1303,7 @@ virtual HRESULT OnFrameWindowActivate(BOOL fActivate);
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnFrameWindowActivate`に対応するため、 `OnFrameWindowActivate` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnFrameWindowActivate`に対応するため、 `OnFrameWindowActivate` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="onfullscreen"></a>  CHtmlView::OnFullScreen
 
@@ -1338,11 +1338,11 @@ virtual HRESULT OnGetDropTarget(
 
 ### <a name="return-value"></a>戻り値
 
-参照してください[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)リターン コードの一覧については、Windows SDK に含まれています。
+参照してください[IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))リターン コードの一覧については、Windows SDK に含まれています。
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnGetDropTarget`に対応するため、 `GetDropTarget` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnGetDropTarget`に対応するため、 `GetDropTarget` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="ongetexternal"></a>  CHtmlView::OnGetExternal
 
@@ -1363,7 +1363,7 @@ virtual HRESULT OnGetExternal(LPDISPATCH* lppDispatch);
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnGetExternal`に対応するため、 `GetExternal` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnGetExternal`に対応するため、 `GetExternal` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="ongethostinfo"></a>  CHtmlView::OnGetHostInfo
 
@@ -1376,7 +1376,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>パラメーター
 
 *pInfo*<br/>
-アドレスを[受け取る](https://msdn.microsoft.com/library/aa770044.aspx)ホストの UI 機能を受け取る。
+アドレスを[受け取る](/previous-versions/aa770044\(v=vs.85\))ホストの UI 機能を受け取る。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1384,7 +1384,7 @@ virtual HRESULT OnGetHostInfo(DOCHOSTUIINFO* pInfo);
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnGetHostInfo`に対応するため、 `GetHostInfo` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnGetHostInfo`に対応するため、 `GetHostInfo` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="ongetoptionkeypath"></a>  CHtmlView::OnGetOptionKeyPath
 
@@ -1410,7 +1410,7 @@ virtual HRESULT OnGetOptionKeyPath(
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnGetOptionKeyPath`に対応するため、 `GetOptionKeyPath` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnGetOptionKeyPath`に対応するため、 `GetOptionKeyPath` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="onhideui"></a>  CHtmlView::OnHideUI
 
@@ -1426,7 +1426,7 @@ virtual HRESULT OnHideUI();
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnHideUI`に対応するため、 `HideUI` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnHideUI`に対応するため、 `HideUI` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="onmenubar"></a>  CHtmlView::OnMenuBar
 
@@ -1585,7 +1585,7 @@ virtual HRESULT OnResizeBorder(
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnResizeBorder`に対応するため、 `ResizeBorder` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnResizeBorder`に対応するため、 `ResizeBorder` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="onshowcontextmenu"></a>  CHtmlView::OnShowContextMenu
 
@@ -1615,11 +1615,11 @@ virtual HRESULT OnShowContextMenu(
 
 ### <a name="return-value"></a>戻り値
 
-参照してください[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)値の一覧については、Windows SDK に含まれています。
+参照してください[IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))値の一覧については、Windows SDK に含まれています。
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnShowContextMenu`に対応するため、 `ShowContextMenu` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnShowContextMenu`に対応するため、 `ShowContextMenu` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="onshowui"></a>  CHtmlView::OnShowUI
 
@@ -1653,11 +1653,11 @@ virtual HRESULT OnShowUI(
 
 ### <a name="return-value"></a>戻り値
 
-参照してください[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)値の一覧については、Windows SDK に含まれています。
+参照してください[IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))値の一覧については、Windows SDK に含まれています。
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnShowUI`に対応するため、 `ShowUI` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnShowUI`に対応するため、 `ShowUI` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="onstatusbar"></a>  CHtmlView::OnStatusBar
 
@@ -1756,7 +1756,7 @@ virtual HRESULT OnTranslateAccelerator(
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnTranslateAccelerator`に対応するため、 `TranslateAccelerator` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnTranslateAccelerator`に対応するため、 `TranslateAccelerator` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="ontranslateurl"></a>  CHtmlView::OnTranslateUrl
 
@@ -1786,7 +1786,7 @@ Internet Explorer または MSHTML を変換する URL を表すによって提�
 
 ### <a name="remarks"></a>Remarks
 
-オーバーライド`OnTranslateUrl`に対応するため、 `TranslateUrl` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)詳細については、Windows SDK に含まれています。
+オーバーライド`OnTranslateUrl`に対応するため、 `TranslateUrl` Microsoft の Web ブラウザー コントロールからの通知。 参照してください[IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))詳細については、Windows SDK に含まれています。
 
 ##  <a name="onupdateui"></a>  CHtmlView::OnUpdateUI
 
@@ -2236,4 +2236,4 @@ Internet Explorer と WebBrowser に適用されます。
 [MFC サンプル MFCIE](../../visual-cpp-samples.md)<br/>
 [CFormView クラス](../../mfc/reference/cformview-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[IWebBrowser2](https://msdn.microsoft.com/library/aa752127.aspx)
+[IWebBrowser2](/windows/desktop/api/exdisp/nn-exdisp-iwebbrowser2)

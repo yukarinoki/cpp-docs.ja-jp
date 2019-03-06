@@ -9,12 +9,12 @@ helpviewer_keywords:
 - LIBPATH environment variable
 - environment variables, CL compiler
 ms.assetid: 2606585b-a681-42ee-986e-1c9a2da32108
-ms.openlocfilehash: 4c9643e977c707f7e7fd99ccc48d0475e2dc7837
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 47d6966cdc821cee4bd9ffd61b36c0c79143b6c2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535774"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412459"
 ---
 # <a name="cl-environment-variables"></a>環境変数 CL
 
@@ -28,7 +28,7 @@ CL ツールでは、次の環境変数を使用します。
 
 CL を設定するか、 \_CL\_次の構文を使用して環境変数。
 
-> CL の設定 = [*オプション*].[*ファイル*]...][/link*リンク-opt* ...]設定\_CL\_= [*オプション*].[*ファイル*]...][/link*リンク-opt* ...]
+> SET CL=[ [*option*] ... [*file*] ...] [/link *link-opt* ...] SET \_CL\_=[ [*option*] ... [*file*] ...] [/link *link-opt* ...]
 
 詳細については、CL の引数に対してと\_CL\_ 、環境変数を参照してください[コンパイラのコマンドライン構文](../../build/reference/compiler-command-line-syntax.md)します。
 
@@ -42,19 +42,19 @@ CL を設定するか、 \_CL\_次の構文を使用して環境変数。
 
 CL 環境変数を設定する例を次に示します。
 
-> CL =/Zp2/Ox/I\INCLUDE\MYINCLS \LIB\BINMODE を設定します。OBJ
+> SET CL=/Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ
 
 この環境変数設定されている場合、入力した場合`CL INPUT.C`コマンドラインで、これは有効なコマンド。
 
-> CL/Zp2/Ox/I\INCLUDE\MYINCLS \LIB\BINMODE します。OBJ 入力します。C
+> CL /Zp2 /Ox /I\INCLUDE\MYINCLS \LIB\BINMODE.OBJ INPUT.C
 
 次の例では、単純な CL コマンドを実行すると、FILE1.c および FILE2.c の各ソース ファイルがコンパイルされ、FILE1.obj、FILE2.obj、および FILE3.obj の各オブジェクト ファイルがリンクされます。
 
-> セット CL FILE1 を = です。C FILE2 します。C セット\_CL\_FILE3 を = です。OBJ CL
+> SET CL=FILE1.C FILE2.C SET \_CL\_=FILE3.OBJ CL
 
 これは、次のコマンド ラインと同じ効果を持ちます。
 
-> CL FILE1 します。C FILE2 します。C FILE3 します。OBJ
+> CL FILE1.C FILE2.C FILE3.OBJ
 
 ## <a name="see-also"></a>関連項目
 

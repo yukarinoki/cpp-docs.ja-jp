@@ -12,18 +12,19 @@ helpviewer_keywords:
 - 64-bit compiler [C++], porting 32-bit code
 - Win64 [C++]
 ms.assetid: d17fb838-7513-4e2d-8b27-a1666f17ad76
-ms.openlocfilehash: 1eb5a7f8d708d16241f1637269f31563378f084d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c74766c86048f6dd7358d16b8d5d1f2b493450c1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50468771"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414422"
 ---
 # <a name="common-visual-c-64-bit-migration-issues"></a>Visual C++ の 64 ビットへの移行に関する一般的な問題
 
 Visual C++ を使用して、64 ビット Windows オペレーティング システムで実行するアプリケーションを作成する場合は、以下の点を考慮する必要があります。
 
-- `int` と `long` は、64 ビット Windows オペレーティング システム上で 32 ビット値です。 64 ビット プラットフォーム用にコンパイルする必要があるプログラムでは、ポインターを 32 ビット変数に割り当てないように注意してください。 ポインターは、64 ビットのプラットフォームでは 64 ビットなので、ポインターを 32 ビット変数に割り当てると、ポインター値を切り捨てることになります。
+- 
+  `int` と `long` は、64 ビット Windows オペレーティング システム上で 32 ビット値です。 64 ビット プラットフォーム用にコンパイルする必要があるプログラムでは、ポインターを 32 ビット変数に割り当てないように注意してください。 ポインターは、64 ビットのプラットフォームでは 64 ビットなので、ポインターを 32 ビット変数に割り当てると、ポインター値を切り捨てることになります。
 
 - `size_t`、 `time_t`、および`ptrdiff_t`は 64 ビット Windows オペレーティング システムで 64 ビット値です。
 
