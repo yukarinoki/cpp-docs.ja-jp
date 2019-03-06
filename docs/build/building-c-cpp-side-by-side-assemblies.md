@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: b904dd3e9c10470151bdb8e01435aaf6359179b8
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 6875c4178a405f887166b0606af329614d27907f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693663"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413876"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>C/C++ side-by-side アセンブリのビルド
 
@@ -27,7 +27,7 @@ Visual C アプリケーションでは、アプリケーションのさまざ�
 > [!NOTE]
 > アセンブリに 1 つの DLL が含まれている場合は、id が 1 に、この DLL にリソースとしてアセンブリ マニフェストを埋め込むし、プライベート アセンブリ、DLL と同じ名前を指定することをお勧めします。 たとえば、DLL の名前が mylibrary.dll の場合は、名前属性の値はで使用される、 \<assemblyIdentity > mylibrary、マニフェストの要素があります。 場合によって、ライブラリに .dll 以外の拡張子がある場合 (たとえば、.ocx ライブラリを作成、MFC ActiveX コントロール プロジェクト)、外部アセンブリ マニフェストを作成できます。 この場合、アセンブリとそのマニフェストの名前 (たとえば、MyAssembly、MyAssembly.manifest、および mylibrary.ocx) DLL の名前とは異なる必要があります。 ただし、拡張子.dll を付けがあり、このアセンブリの将来のメンテナンス コストを削減するリソースとしてマニフェストを埋め込むには、このようなライブラリの名前を変更することはお勧めもします。 オペレーティング システムでプライベート アセンブリを検索する方法の詳細については、次を参照してください。 [Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence)します。
 
-この変更は、対応する Dll の展開を許可することがあります、[プライベート アセンブリ](/windows/desktop/Msi/private-assemblies)アプリケーション ローカル フォルダーまたはとして、[アセンブリを共有](/windows/desktop/Msi/shared-assemblies)WinSxS アセンブリ キャッシュにします。 この新しいアセンブリの正しい実行時の動作を実現するために従う必要はいくつかの手順記述されて[サイド バイ サイド アセンブリを作成するためのガイドライン](/windows/desktop/SbsCs/guidelines-for-creating-side-by-side-assemblies)します。 アセンブリが正しく作成した後は、いずれかを共有またはプライベート アセンブリとしてに依存しているアプリケーションと共にデプロイできます。 共有アセンブリとサイド バイ サイド アセンブリをインストールするときにガイドラインが記載されているいずれかに従ってことがあります[Windows XP でのサイド バイ サイドでの共有用の Win32 アセンブリのインストール](/windows/desktop/Msi/installing-win32-assemblies-for-side-by-side-sharing-on-windows-xp)使用または[マージ モジュール](/windows/desktop/msi/merge-modules)。 プライベート アセンブリとサイド バイ サイド アセンブリをインストールするときに可能性がありますだけコピーする、対応する DLL、リソース、およびアセンブリ マニフェストのインストール プロセスの一環として、対象のコンピューター上のアプリケーション ローカル フォルダーにこのアセンブリができること実行時に、ローダーによって検出された (を参照してください[Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence))。 別の方法は、使用する[Windows インストーラー](/windows/desktop/Msi/windows-installer-portal)しで説明されているガイドラインに従う[Windows XP 上のアプリケーションの秘密を使用するための Win32 アセンブリのインストール](/windows/desktop/Msi/installing-win32-assemblies-for-the-private-use-of-an-application-on-windows-xp)します。
+この変更は、対応する Dll の展開を許可することがあります、[プライベート アセンブリ](/windows/desktop/Msi/private-assemblies)アプリケーション ローカル フォルダーまたはとして、[アセンブリを共有](/windows/desktop/Msi/shared-assemblies)WinSxS アセンブリ キャッシュにします。 この新しいアセンブリの正しい実行時の動作を実現するために従う必要はいくつかの手順記述されて[サイド バイ サイド アセンブリを作成するためのガイドライン](/windows/desktop/SbsCs/guidelines-for-creating-side-by-side-assemblies)します。 アセンブリが正しく作成した後は、いずれかを共有またはプライベート アセンブリとしてに依存しているアプリケーションと共にデプロイできます。 共有アセンブリとサイド バイ サイド アセンブリをインストールするときにガイドラインが記載されているいずれかに従ってことがあります[Windows XP でのサイド バイ サイドでの共有用の Win32 アセンブリのインストール](/windows/desktop/Msi/installing-win32-assemblies-for-side-by-side-sharing-on-windows-xp)使用または[マージ モジュール](/windows/desktop/msi/merge-modules). プライベート アセンブリとサイド バイ サイド アセンブリをインストールするときに可能性がありますだけコピーする、対応する DLL、リソース、およびアセンブリ マニフェストのインストール プロセスの一環として、対象のコンピューター上のアプリケーション ローカル フォルダーにこのアセンブリができること実行時に、ローダーによって検出された (を参照してください[Assembly Searching Sequence](/windows/desktop/SbsCs/assembly-searching-sequence))。 別の方法は、使用する[Windows インストーラー](/windows/desktop/Msi/windows-installer-portal)しで説明されているガイドラインに従う[Windows XP 上のアプリケーションの秘密を使用するための Win32 アセンブリのインストール](/windows/desktop/Msi/installing-win32-assemblies-for-the-private-use-of-an-application-on-windows-xp)します。
 
 ## <a name="see-also"></a>関連項目
 

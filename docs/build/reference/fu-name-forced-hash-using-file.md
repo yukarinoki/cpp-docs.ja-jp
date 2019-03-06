@@ -10,12 +10,12 @@ helpviewer_keywords:
 - FU compiler option [C++]
 - /FU compiler option [C++]
 ms.assetid: 698f8603-457f-435a-baff-5ac9243d6ca1
-ms.openlocfilehash: ecd9290336cfd6efd183bdd701f1d447b7ddaf2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a035be2080d9fe407799122f804668e0fc3ce76
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492093"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413161"
 ---
 # <a name="fu-name-forced-using-file"></a>/FU (強制 #using ファイルの名前の指定)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50492093"
 
 ## <a name="syntax"></a>構文
 
-> **/FU** *ファイル*
+> **/FU** *file*
 
 ## <a name="arguments"></a>引数
 
@@ -38,7 +38,7 @@ C + を使用している場合/cli CLI を使用するメタデータを参照�
 
 アセンブリまたは共通言語ランタイム (CLR) のモジュールを作成する方法については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。 C + で構築する方法については/cli CX を参照してください[アプリとライブラリのビルド](../../cppcx/building-apps-and-libraries-c-cx.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

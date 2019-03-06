@@ -5,12 +5,12 @@ f1_keywords:
 - /guard
 - VC.Project.VCCLCompilerTool.ControlFlowGuard
 ms.assetid: be495323-f59f-4cf3-a6b6-8ee69e6a19dd
-ms.openlocfilehash: 8b15318ab7ae4233d6cf02a505ffe901bbe1d689
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1d79f4b20499d964d407af61fa498b4579b6794d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516074"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424081"
 ---
 # <a name="guard-enable-control-flow-guard"></a>/guard (制御フロー ガードを有効にする)
 
@@ -26,7 +26,7 @@ ms.locfileid: "50516074"
 
 **/guard:cf** オプションにより、コンパイラがコンパイル時に間接的な呼び出しのターゲットに関する制御フローを分析し、実行時に、ターゲットを確認するコードを挿入します。 既定では、 **/guard:cf** は無効になっており、明示的に有効にする必要があります。 このオプションを明示的に無効にするには、 **/guard:cf-** を使用します。
 
-**Visual Studio 2017 以降**: このオプションは追加のガード**スイッチ**を生成するステートメントのテーブルを移動します。
+**Visual Studio 2017 以降**:このオプションは追加のガード**スイッチ**を生成するステートメントがテーブルを移動します。
 
 **/guard:cf** 制御フローガード (CFG) オプションが指定されている場合、コンパイラとリンカーがランタイム セキュリティ チェックを追加で挿入して、コードを侵害する試みを検出します。 コンパイルとリンク中に、コードのすべての間接的な呼び出しが分析され、コードを正常に実行したときに到達可能なすべての場所が検索されます。 この情報は、バイナリのヘッダーの追加の構造に格納されます。 また、コンパイラは、コード内の間接的な各呼び出しの前に、ターゲットが検証済みの場所のいずれかにあることを確認するチェックを挿入します。 CFG 対応オペレーティング システム上の実行時にチェックに失敗した場合、オペレーティング システムはプログラムを閉じます。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - dimensions
 - CSize class
 ms.assetid: fb2cf85a-0bc1-46f8-892b-309c108b52ae
-ms.openlocfilehash: 9bbd23fe793946dc0f081f4d19b9f6e26fcfda82
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: 36da88a49e7d0e648d44b0798e108a60abb935d9
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178370"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415150"
 ---
 # <a name="csize-class"></a>CSize クラス
 
@@ -45,7 +45,7 @@ class CSize : public tagSIZE
 |[CSize::operator +](#operator_add)|2 つのサイズを追加します。|
 |[CSize::operator + =](#operator_add_eq)|サイズを追加します`CSize`します。|
 |[CSize::operator =](#operator_-_eq)|サイズを減算`CSize`します。|
-|[CSize::operator = =](#operator_eq_eq)|等しいかどうかを確認します`CSize`とサイズ。|
+|[CSize::operator ==](#operator_eq_eq)|等しいかどうかを確認します`CSize`とサイズ。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -92,7 +92,7 @@ CSize( DWORD dwSize) throw();
 *initPt*<br/>
 [ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または`CPoint`オブジェクトの初期化に使用される`CSize`します。
 
-*ない dwSize*<br/>
+*dwSize*<br/>
 DWORD が初期化に使用される`CSize`します。 下位ワードは、`cx`メンバーと、上位の単語は、`cy`メンバー。
 
 ### <a name="remarks"></a>Remarks
@@ -103,7 +103,7 @@ DWORD が初期化に使用される`CSize`します。 下位ワードは、`cx
 
 [!code-cpp[NVC_ATLMFC_Utilities#97](../../atl-mfc-shared/codesnippet/cpp/csize-class_1.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CSize::operator = =
+##  <a name="operator_eq_eq"></a>  CSize::operator ==
 
 2 つのサイズに等しいかどうかを確認します。
 
@@ -173,23 +173,23 @@ CRect operator+(const RECT* lpRect) const throw();
 
 次の各演算子の説明を参照してください。
 
-- **演算子 + (** *サイズ* **)**
+- **operator +(** *size* **)**
 
   この操作では、2 つ追加します`CSize`値。
 
-- **演算子 + (** *ポイント* **)**
+- **operator +(** *point* **)**
 
-  この操作のオフセット (移動)、[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)(または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) この値`CSize`値。 `cx`と`cy`this のメンバー`CSize`に値を追加、`x`と`y`のデータ メンバー、`POINT`値。 バージョンと似ています[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
+  この操作のオフセット (移動)、[ポイント](/previous-versions/dd162805\(v=vs.85\))(または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)) この値`CSize`値。 `cx`と`cy`this のメンバー`CSize`に値を追加、`x`と`y`のデータ メンバー、`POINT`値。 バージョンと似ています[CPoint::operator +](../../atl-mfc-shared/reference/cpoint-class.md#operator_add)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
 
-- **演算子 + (** *lpRect* **)**
+- **operator +(** *lpRect* **)**
 
-   この操作のオフセット (移動)、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) (または[CRect](../../atl-mfc-shared/reference/crect-class.md)) この値`CSize`値。 `cx`と`cy`this のメンバー`CSize`に値を追加、 `left`、 `top`、 `right`、および`bottom`のデータ メンバー、`RECT`値。 バージョンと似ています[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
+   この操作のオフセット (移動)、 [RECT](/previous-versions/dd162897\(v=vs.85\)) (または[CRect](../../atl-mfc-shared/reference/crect-class.md)) この値`CSize`値。 `cx`と`cy`this のメンバー`CSize`に値を追加、 `left`、 `top`、 `right`、および`bottom`のデータ メンバー、`RECT`値。 バージョンと似ています[CRect::operator +](../../atl-mfc-shared/reference/crect-class.md#operator_add)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
 
 ### <a name="example"></a>例
 
 [!code-cpp[NVC_ATLMFC_Utilities#102](../../atl-mfc-shared/codesnippet/cpp/csize-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CSize::operator-
+##  <a name="operator_-"></a>  CSize::operator -
 
 この最初の 3 つの演算子が減算`CSize`値パラメーターの値にします。
 
@@ -210,13 +210,13 @@ CSize operator-() const throw();
 
 - **演算子-(** *ポイント* **)**
 
-  この操作のオフセット (移動)、[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)これの加法逆元によって値`CSize`値。 `cx`と`cy`この`CSize`から値が減算されて、`x`と`y`のデータ メンバー、`POINT`値。 バージョンと似ています[CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
+  この操作のオフセット (移動)、[ポイント](/previous-versions/dd162805\(v=vs.85\))または[CPoint](../../atl-mfc-shared/reference/cpoint-class.md)これの加法逆元によって値`CSize`値。 `cx`と`cy`この`CSize`から値が減算されて、`x`と`y`のデータ メンバー、`POINT`値。 バージョンと似ています[CPoint::operator -](../../atl-mfc-shared/reference/cpoint-class.md#operator_-)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
 
-- **演算子-(** *lpRect* **)**
+- **operator -(** *lpRect* **)**
 
-  この操作のオフセット (移動)、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)または[CRect](../../atl-mfc-shared/reference/crect-class.md)これの加法逆元によって値`CSize`値。 `cx`と`cy`this のメンバー`CSize`から値が減算されて、 `left`、 `top`、 `right`、および`bottom`のデータ メンバー、`RECT`値。 バージョンと似ています[CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
+  この操作のオフセット (移動)、 [RECT](/previous-versions/dd162897\(v=vs.85\))または[CRect](../../atl-mfc-shared/reference/crect-class.md)これの加法逆元によって値`CSize`値。 `cx`と`cy`this のメンバー`CSize`から値が減算されて、 `left`、 `top`、 `right`、および`bottom`のデータ メンバー、`RECT`値。 バージョンと似ています[CRect::operator -](../../atl-mfc-shared/reference/crect-class.md#operator_-)を受け取る、[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)パラメーター。
 
-- **演算子-)**
+- **operator -()**
 
   この操作はこれの加法逆元を返します`CSize`値。
 

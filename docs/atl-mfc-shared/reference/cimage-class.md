@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: 0042fffb0eaa383909edd6647bcdb4375341d8dd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a62919ebd6b2aba54aa8003743b0006571cdedf4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605856"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57419671"
 ---
 # <a name="cimage-class"></a>CImage クラス
 
@@ -258,7 +258,7 @@ Y 座標、先の四角形の左上隅の論理単位です。
 アルファ ブレンドのソースとコピー先ビットマップ、グローバルのアルファ値全体の元のビットマップと元のビットマップの書式情報に適用する関数。 ソースと宛先の blend 関数は、ビットマップに制限されています。
 
 *pointDest*<br/>
-参照を[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)論理単位で、先の四角形の左上隅を識別する構造体。
+参照を[ポイント](/previous-versions/dd162805\(v=vs.85\))論理単位で、先の四角形の左上隅を識別する構造体。
 
 *nDestWidth*<br/>
 論理ユニットは、先の四角形の幅。
@@ -279,7 +279,7 @@ Y 座標、先の四角形の左上隅の論理単位です。
 論理ユニットは、元の四角形の高さ。
 
 *rectDest*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))構造体、変換先を識別します。
 
 *rectSrc*<br/>
 参照を`RECT`構造体、ソースを特定します。
@@ -368,7 +368,7 @@ HDC 先。
 実行するラスター操作。 ラスター オペレーション コードは、変換先を形成するソース、変換先、およびパターンのビット (現在選択されているブラシによって定義される) とを組み合わせる方法を定義します。 参照してください[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt)他ラスター オペレーション コードとその説明の一覧については、Windows sdk。
 
 *pointDest*<br/>
-A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)先の四角形の左上隅を示す構造体。
+A[ポイント](/previous-versions/dd162805\(v=vs.85\))先の四角形の左上隅を示す構造体。
 
 *nDestWidth*<br/>
 論理ユニットは、先の四角形の幅。
@@ -383,7 +383,7 @@ A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)先�
 元の四角形の左上隅の論理 y 座標。
 
 *rectDest*<br/>
-A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)先の四角形を示す構造体。
+A [RECT](/previous-versions/dd162897\(v=vs.85\))先の四角形を示す構造体。
 
 *pointSrc*<br/>
 A`POINT`ソース四角形の左上隅を示す構造体。
@@ -429,7 +429,7 @@ BOOL Create(
 *nWidth*<br/>
 幅、 `CImage` (ピクセル単位) のビットマップ。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 高さ、 `CImage` (ピクセル単位) のビットマップ。 場合*パラメーター nHeight*が正、ビットマップはボトムアップ DIB と原点は左下隅。 場合*パラメーター nHeight*が負の場合、ビットマップは、上から下へ DIB と、原点は左上隅。
 
 *nBPP*<br/>
@@ -466,7 +466,7 @@ BOOL CreateEx(
 *nWidth*<br/>
 幅、 `CImage` (ピクセル単位) のビットマップ。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 高さ、 `CImage` (ピクセル単位) のビットマップ。 場合*パラメーター nHeight*が正、ビットマップはボトムアップ DIB と原点は左下隅。 場合*パラメーター nHeight*が負の場合、ビットマップは、上から下へ DIB と、原点は左上隅。
 
 *nBPP*<br/>
@@ -595,13 +595,13 @@ Y 座標、元の四角形の左上隅の論理単位で。
 論理ユニットは、元の四角形の高さ。
 
 *rectDest*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))構造体、変換先を識別します。
 
 *rectSrc*<br/>
 参照を`RECT`構造体、ソースを特定します。
 
 *pointDest*<br/>
-参照を[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)論理単位で、先の四角形の左上隅を識別する構造体。
+参照を[ポイント](/previous-versions/dd162805\(v=vs.85\))論理単位で、先の四角形の左上隅を識別する構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -715,7 +715,7 @@ static HRESULT GetExporterFilterString(
 *pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例えば:
+例:
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -765,7 +765,7 @@ Mfc の結果の書式指定文字列を渡すことができます[CFileDialog]
 
 ファイルの description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;... .file 説明*n*&#124;\*.ext *n*&#124;&#124;
 
-場所 '&#124;' で指定された区切り記号文字`chSeparator`します。 例えば:
+場所 '&#124;' で指定された区切り記号文字`chSeparator`します。 例:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
@@ -810,7 +810,7 @@ static HRESULT GetImporterFilterString(
 *pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例えば:
+例:
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -856,7 +856,7 @@ Mfc の結果の書式指定文字列を渡すことができます[CFileDialog]
 
 ファイルの description0&#124;\*.ext0&#124;filedescription1&#124;\*.ext1&#124;... .file 説明*n*&#124;\*.ext *n*&#124;&#124;
 
-場所 '&#124;' で指定された区切り記号*chSeparator*します。 例えば:
+場所 '&#124;' で指定された区切り記号*chSeparator*します。 例:
 
 `"Bitmap format|*.bmp|JPEG format|*.jpg|GIF format|*.gif|PNG format|*.png||"`
 
@@ -1259,10 +1259,10 @@ Y 座標、元の四角形の左上隅の論理単位で。
 モノクロのビットマップの左上隅の y 座標。
 
 *rectSrc*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ソース四角形の座標を指定する構造体。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))ソース四角形の座標を指定する構造体。
 
 *pointMask*<br/>
-A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)マスク ビットマップの左上隅を示す構造体。
+A[ポイント](/previous-versions/dd162805\(v=vs.85\))マスク ビットマップの左上隅を示す構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1519,7 +1519,7 @@ Y 座標、先の四角形の左上隅の論理単位です。
 実行するラスター操作。 ラスター オペレーション コードは、変換先を形成するソース、変換先、およびパターンのビット (現在選択されているブラシによって定義される) とを組み合わせる方法を定義します。 参照してください[BitBlt](/windows/desktop/api/wingdi/nf-wingdi-bitblt)他ラスター オペレーション コードとその説明の一覧については、Windows sdk。
 
 *rectDest*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))構造体、変換先を識別します。
 
 *xSrc*<br/>
 X 座標、元の四角形の左上隅の論理単位で。
@@ -1602,7 +1602,7 @@ Y 座標、先の四角形の左上隅の論理単位です。
 透明色として処理するソース ビットマップの色。 既定では、CLR_INVALID は、現在のイメージの透明色として設定されている色を使用することを指定します。
 
 *rectDest*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体、変換先を識別します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))構造体、変換先を識別します。
 
 *xSrc*<br/>
 X 座標、元の四角形の左上隅の論理単位で。

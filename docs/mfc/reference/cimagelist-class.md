@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CImageList [MFC], Write
 - CImageList [MFC], m_hImageList
 ms.assetid: b6d1a704-1c82-4548-8a8f-77972adc98a5
-ms.openlocfilehash: 3e8c524a95730282d0e35e5f791ebf229725e282
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2fc92858f84826e2b953fcbc9de020741e97b007
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298920"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57416008"
 ---
 # <a name="cimagelist-class"></a>CImageList クラス
 
@@ -692,13 +692,13 @@ BOOL DrawIndirect(
 描画するイメージの 0 から始まるインデックス。
 
 *pt*<br/>
-A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)イメージを描画する x 座標と y 座標を含む構造体。
+A[ポイント](/previous-versions/dd162805\(v=vs.85\))イメージを描画する x 座標と y 座標を含む構造体。
 
 *sz*<br/>
 A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造体を描画するイメージのサイズを示します。
 
 *ptOrigin*<br/>
-A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)イメージ自体に関して描画操作の左上隅を指定する x 座標と y 座標を含む構造体。 左側の x 座標と y 座標の上にある画像のピクセルは描画されません。
+A[ポイント](/previous-versions/dd162805\(v=vs.85\))イメージ自体に関して描画操作の左上隅を指定する x 座標と y 座標を含む構造体。 左側の x 座標と y 座標の上にある画像のピクセルは描画されません。
 
 *fStyle*<br/>
 描画スタイルと、必要に応じて、オーバーレイのイメージを指定するフラグ。 オーバーレイ画像では、「解説」を参照してください。 MFC の既定の実装に、イメージ リストの背景色を使用してイメージを描画します。 しますの背景色は、透過的にマスクを使用して、イメージが描画されます。
@@ -875,7 +875,7 @@ static CImageList* PASCAL GetDragImage(
 ### <a name="parameters"></a>パラメーター
 
 *lpPoint*<br/>
-アドレスを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)受け取る現在位置にドラッグします。
+アドレスを[ポイント](/previous-versions/dd162805\(v=vs.85\))受け取る現在位置にドラッグします。
 
 *lpPointHotSpot*<br/>
 アドレスを`POINT`ドラッグ位置を基準としてドラッグ イメージのオフセットを受け取る。

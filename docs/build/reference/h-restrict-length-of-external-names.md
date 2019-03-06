@@ -10,12 +10,12 @@ helpviewer_keywords:
 - external names
 - -H compiler option [C++]
 ms.assetid: de701dd3-ed04-4c88-8195-960d2520ec2e
-ms.openlocfilehash: 194f8d2c87eb6aa307f417ff022e7975edf2ccc9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bb7821587d6c0bbe06eb6baa02227955582eb76d
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50489831"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420415"
 ---
 # <a name="h-restrict-length-of-external-names"></a>/H (外部名の長さの制限)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50489831"
 
 ## <a name="arguments"></a>引数
 
-*数*<br/>
+*number*<br/>
 プログラムで許可される外部名の最大長を指定します。
 
 ## <a name="remarks"></a>Remarks
@@ -72,7 +72,7 @@ void func2(void) {}
 
 **/H**オプションが Visual Studio 2005 以降非推奨です。 最大長の上限が引き上げられましたと **/H**は不要です。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

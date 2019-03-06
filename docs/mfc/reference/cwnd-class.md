@@ -818,12 +818,12 @@ helpviewer_keywords:
 - CWnd [MFC], WindowProc
 - CWnd [MFC], m_hWnd
 ms.assetid: 49a832ee-bc34-4126-88b3-bc1d9974f6c4
-ms.openlocfilehash: 7427d8b50dadd9694112ad27c2892ee228a93864
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 493fe04f34f615d9113196e3db8bc744f420d4a2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276547"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426265"
 ---
 # <a name="cwnd-class"></a>CWnd クラス
 
@@ -858,7 +858,7 @@ class CWnd : public CCmdTarget
 |[CWnd::BeginModalState](#beginmodalstate)|フレーム ウィンドウをモーダルにします。|
 |[CWnd::BeginPaint](#beginpaint)|描画用の `CWnd` を準備します。|
 |[CWnd::BindDefaultProperty](#binddefaultproperty)|タイプ ライブラリに示されているように、呼び出し元オブジェクトの既定の単純バインド プロパティを、データ ソース コントロールに関連付けられているカーソルにバインドします。|
-|[Cwnd::bindproperty](#bindproperty)|データ バインディング コントロールのカーソル バインド プロパティをデータ ソース コントロールにバインドし、そのリレーションシップを MFC バインド マネージャーに登録します。|
+|[CWnd::BindProperty](#bindproperty)|データ バインディング コントロールのカーソル バインド プロパティをデータ ソース コントロールにバインドし、そのリレーションシップを MFC バインド マネージャーに登録します。|
 |[CWnd::BringWindowToTop](#bringwindowtotop)|
   `CWnd` を重なったウィンドウのスタックの最上位に移動します。|
 |[CWnd::CalcWindowRect](#calcwindowrect)|クライアントの四角形からウィンドウ四角形を計算するために呼び出されます。|
@@ -2739,10 +2739,10 @@ BOOL DrawAnimatedRects(
 アニメーションの種類を指定します。 指定した位置からウィンドウのタイトル バーがアニメーション化する IDANI_CAPTION を指定する場合*lprcFrom*で指定した位置に*lprcTo*します。 効果は、最小限にするか、ウィンドウを最大化に似ています。
 
 *lprcFrom*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)アイコンまたは最小化されたウィンドウのサイズと場所を指定する構造体。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))アイコンまたは最小化されたウィンドウのサイズと場所を指定する構造体。
 
 *lprcTo*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)復元されたウィンドウのサイズと場所を指定する構造体
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))復元されたウィンドウのサイズと場所を指定する構造体
 
 ### <a name="return-value"></a>戻り値
 

@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: c6edd8cdd089e24011df41db09f3c1bb5d6465f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a41f2012b4ee5441bcb9aa7d99cd0d0e97b6acc7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481459"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423704"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
@@ -83,7 +83,7 @@ ref class Map sealed;
 |[Map::First](#first)|マップ内の最初の要素を指定する反復子を返します。|
 |[Map::GetView](#getview)|現在のマップの読み取り専用ビュー ( [Platform::Collections::MapView Class](../cppcx/platform-collections-mapview-class.md)) を返します。|
 |[Map::HasKey](#haskey)|指定したキーが現在のマップに格納されているかどうかを判定します。|
-|[Map::insert](#insert)|指定したキー/値ペアを現在のマップ オブジェクトに追加します。|
+|[Map::Insert](#insert)|指定したキー/値ペアを現在のマップ オブジェクトに追加します。|
 |[Map::Lookup](#lookup)|現在のマップ オブジェクト内の指定されたキーの位置の要素を取得します。|
 |[Map::Remove](#remove)|指定したキー/値ペアを現在のマップ オブジェクトから削除します。|
 |[Map::size](#size)|現在のマップ オブジェクト内の要素数を返します。|
@@ -93,7 +93,7 @@ ref class Map sealed;
 |||
 |-|-|
 |名前|説明|
-|[Map::mapchanged](#mapchanged-event.md) `event`|マップが変更されたときに発生します。|
+|[Map::MapChanged](#mapchanged-event.md) `event`|マップが変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -182,7 +182,7 @@ virtual bool Insert(K key, V value);
 *key*<br/>
 キー/値ペアのキー部分。 型*キー* typename が*K*します。
 
-*値*<br/>
+*value*<br/>
 キー/値ペアの値部分。 型*値*typename が*V*します。
 
 ### <a name="return-value"></a>戻り値
@@ -246,7 +246,7 @@ Map(
 *last*<br/>
 現在のマップを初期化するために使用される要素の範囲の後の最初の要素の入力反復子。
 
-## <a name="mapchanged"></a>  Map::mapchanged イベント
+## <a name="mapchanged"></a>  Map::MapChanged Event
 
 項目がマップに挿入されたときまたはマップから削除されたときに発生します。
 
@@ -258,7 +258,7 @@ event Windows::Foundation::Collections::MapChangedEventHandler<K,V>^ MapChanged;
 
 ### <a name="property-valuereturn-value"></a>プロパティ値/戻り値
 
-A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)発生した変更の種類と、イベントを発生させたオブジェクトに関する情報を格納します。 参照してください[IMapChangedEventArgs\<K >](https://msdn.microsoft.com/library/windows/apps/br226034.aspx)と[CollectionChange 列挙](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx)します。
+A [MapChangedEventHandler\<K, V >](/uwp/api/windows.foundation.collections.mapchangedeventhandler)発生した変更の種類と、イベントを発生させたオブジェクトに関する情報を格納します。 参照してください[IMapChangedEventArgs\<K >](/uwp/api/Windows.Foundation.Collections.IMapChangedEventArgs_K_)と[CollectionChange 列挙](/uwp/api/windows.foundation.collections.collectionchange)します。
 
 ## <a name="net-framework-equivalent"></a>同等の .NET Framework 関数
 
@@ -281,7 +281,7 @@ virtual void Remove(K key);
 
 ## <a name="size"></a>  Map::size メソッド
 
-数を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](https://msdn.microsoft.com/library/windows/apps/br226031.aspx)マップ内の要素。
+数を返します[Windows::Foundation::Collections::IKeyValuePair\<K, V >](/uwp/api/Windows.Foundation.Collections.IKeyValuePair_K_V_)マップ内の要素。
 
 ### <a name="syntax"></a>構文
 

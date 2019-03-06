@@ -1,15 +1,15 @@
 ---
-title: 'チュートリアル: コマンド ラインでの C++/CX プログラムのコンパイル'
+title: 'チュートリアル: コンパイルする c++/cli コマンドラインで/CX プログラム'
 ms.date: 09/24/2018
 ms.assetid: 626f5544-69ed-4736-83a9-f11389b371b2
-ms.openlocfilehash: 6acfa707ac64a647e838fd1dbcd5564c79faa1a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7f6716b379a11f88adb5c75643e325a9b2856eac
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50515142"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413798"
 ---
-# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>チュートリアル: コマンド ラインでの C++/CX プログラムのコンパイル
+# <a name="walkthrough-compiling-a-ccx-program-on-the-command-line"></a>チュートリアル: コンパイルする c++/cli コマンドラインで/CX プログラム
 
 Windows ランタイムをターゲットにする Visual C++ プログラムを作成して、コマンド ライン上に構築できます。 Visual C++ は Visual C++ コンポーネント拡張 (C++/CX) をサポートしており、Windows ランタイム プログラミング モデルをターゲットにするための追加のタイプとオペレーターがあります。 C + を使用する/cli CX ユニバーサル Windows プラットフォーム (UWP)、Windows Phone 8.1、および Windows デスクトップ向けアプリをビルドします。 詳細については、次を参照してください。 [A ツアーの C+/cli CX](https://msdn.microsoft.com/magazine/dn166929.aspx)と[Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)します。
 

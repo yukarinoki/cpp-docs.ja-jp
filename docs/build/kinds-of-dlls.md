@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], types
 - DLLs [C++], MFC
 ms.assetid: f6a30db9-6138-4b2c-90cc-a17855e499a6
-ms.openlocfilehash: daf042f742a9c4b7757813fc73eeb4b6d1a87413
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb63814161fb72121a34d2857b6fada3866e505a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441120"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424809"
 ---
 # <a name="kinds-of-dlls"></a>DLL の種類
 
@@ -31,13 +31,13 @@ MFC DLL ウィザードでは、スタティック リンク ライブラリで�
 
 ### <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [非 MFC DLL: 概要](../build/non-mfc-dlls-overview.md)
+- [非 MFC DLL:概要](../build/non-mfc-dlls-overview.md)
 
 - [MFC と静的にリンクされるレギュラー MFC の Dll](../build/regular-dlls-statically-linked-to-mfc.md)
 
 - [MFC と動的にリンクされるレギュラー MFC の Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC 拡張 DLL: 概要](../build/extension-dlls-overview.md)
+- [MFC 拡張 DLL:概要](../build/extension-dlls-overview.md)
 
 - [使用する DLL の決定](#_core_which_kind_of_dll_to_use)
 
@@ -55,17 +55,17 @@ DLL は MFC の実行可能ファイルでのみ使用される、いずれか�
 
 MFC と動的にリンクされる DLL では、DLL と共に MFC DLL を再配布することもあります。 このアーキテクチャでは、使用ディスク領域が抑制され、メモリの使用も最小化されるため、複数の実行可能ファイル間でクラス ライブラリを共有する場合に特に便利です。
 
-バージョン 4.0 までは、Visual C++ は MFC を使う DLL として、USRDLL と AFXDLL の 2 種類しかサポートしていませんでした。 MFC と静的にリンクされるレギュラー MFC の Dll には、USRDLL と同じ特性があります。 MFC 拡張 DLL は、これまでの AFXDLL と同じ性質を持っています。
+前のバージョン 4.0 では、Visual C には、MFC を使用する Dll の 2 つの種類のみサポートされています。として、Usrdll と Afxdll します。 MFC と静的にリンクされるレギュラー MFC の Dll には、USRDLL と同じ特性があります。 MFC 拡張 DLL は、これまでの AFXDLL と同じ性質を持っています。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [非 MFC DLL: 概要](../build/non-mfc-dlls-overview.md)
+- [非 MFC DLL:概要](../build/non-mfc-dlls-overview.md)
 
 - [MFC と静的にリンクされるレギュラー MFC の Dll](../build/regular-dlls-statically-linked-to-mfc.md)
 
 - [MFC と動的にリンクされるレギュラー MFC の Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)
 
-- [MFC 拡張 DLL: 概要](../build/extension-dlls-overview.md)
+- [MFC 拡張 DLL:概要](../build/extension-dlls-overview.md)
 
 ## <a name="see-also"></a>関連項目
 

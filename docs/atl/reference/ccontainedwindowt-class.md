@@ -22,12 +22,12 @@ helpviewer_keywords:
 - contained windows
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
-ms.openlocfilehash: 7fd9a941210407edc3424454b3375040717a05a2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 660c6c047bb700e531fd941ac8ed19d638866070
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261662"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421572"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT クラス
 
@@ -90,7 +90,9 @@ class CContainedWindowT : public TBase
 
 `CContainedWindowT` 既存のウィンドウ クラスをスーパークラス化して、新しいウィンドウを作成することができます。 `Create`メソッドは、まず既存のクラスに基づきますが、使用するウィンドウ クラスを登録`CContainedWindowT::WindowProc`します。 `Create` この新しいウィンドウ クラスに基づくウィンドウが作成されます。 各インスタンス`CContainedWindowT`スーパークラス別のウィンドウ クラスのことができます。
 
-`CContainedWindowT` は、ウィンドウのサブクラス化もサポートします。 `SubclassWindow` メソッドは、既存のウィンドウを `CContainedWindowT` オブジェクトにアタッチし、ウィンドウ プロシージャを `CContainedWindowT::WindowProc` に変更します。 `CContainedWindowT` の各インスタンスは、別のウィンドウをサブクラス化できます。
+`CContainedWindowT` は、ウィンドウのサブクラス化もサポートします。 
+  `SubclassWindow` メソッドは、既存のウィンドウを `CContainedWindowT` オブジェクトにアタッチし、ウィンドウ プロシージャを `CContainedWindowT::WindowProc` に変更します。 
+  `CContainedWindowT` の各インスタンスは、別のウィンドウをサブクラス化できます。
 
 > [!NOTE]
 >  指定されたいずれかの`CContainedWindowT`オブジェクト、いずれかを呼び出す`Create`または`SubclassWindow`します。 同じオブジェクトで両方のメソッドを呼び出しませんする必要があります。
@@ -214,7 +216,7 @@ HWND Create(
 [in]親またはオーナー ウィンドウのハンドル。
 
 *rect*<br/>
-[in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置を指定する構造体。 `RECT`ポインターまたは参照によって渡すことができます。
+[in]A [RECT](/previous-versions/dd162897\(v=vs.85\))ウィンドウの位置を指定する構造体。 `RECT`ポインターまたは参照によって渡すことができます。
 
 *szWindowName*<br/>
 [in]ウィンドウの名前を指定します。 既定値は、NULL です。

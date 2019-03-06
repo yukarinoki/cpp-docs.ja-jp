@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: e01ee0b7af68127f3a78b4cfda1d110f6187fa74
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b0dba0fec21b3c0ab03555ae90497f212ab6315
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528113"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422209"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (_ftol を呼び出さない)
 
@@ -30,7 +30,8 @@ ms.locfileid: "50528113"
 > [!NOTE]
 >  **/Qifist**でのみ使用 x86 を対象とするコンパイラこのコンパイラ オプションでは使用できません x64 を対象とするコンパイラや arm に対応します。
 
-`_ftol` 関数では、浮動小数点型から整数型への変換に加えて、浮動小数点制御ワードのビット 10 と 11 を設定して、FPU (Floating-Point Unit) の丸めモードをゼロ (切り捨て) にします。 したがって、浮動小数点型から整数型への変換は、ANSI C 規格どおりに行われ、小数部分を破棄することが保証されます。 使用する場合 **/QIfist**、この保証が適用されなくなった。 丸めモードは、Intel 社のリファレンス マニュアルに示されたとおり、次の 4 とおりのうちのいずれかになります。
+
+  `_ftol` 関数では、浮動小数点型から整数型への変換に加えて、浮動小数点制御ワードのビット 10 と 11 を設定して、FPU (Floating-Point Unit) の丸めモードをゼロ (切り捨て) にします。 したがって、浮動小数点型から整数型への変換は、ANSI C 規格どおりに行われ、小数部分を破棄することが保証されます。 使用する場合 **/QIfist**、この保証が適用されなくなった。 丸めモードは、Intel 社のリファレンス マニュアルに示されたとおり、次の 4 とおりのうちのいずれかになります。
 
 - 一番近い値に丸める (中間の場合は偶数)。
 

@@ -3,12 +3,12 @@ title: 列挙型クラス (C +/cli および C++/cli CX)
 ms.date: 10/12/2018
 ms.topic: reference
 ms.assetid: 8010fa8c-bad6-45b4-8214-b4db64d7ffe1
-ms.openlocfilehash: 5bc850831e961a500ae71ce90e3ca39b3aabd159
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aee3d4f44c18074ca536ff028565bbbd0e37d04c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50592518"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417425"
 ---
 # <a name="enum-class--ccli-and-ccx"></a>列挙型クラス (C +/cli および C++/cli CX)
 
@@ -55,9 +55,9 @@ accessenum structenumeration-identifier[:underlying-type] { enumerator-list } [v
 
 ### <a name="remarks"></a>Remarks
 
-使用例を含む詳細については、「 [列挙型](https://msdn.microsoft.com/%20library/windows/apps/hh755820.aspx)」をご覧ください。
+使用例を含む詳細については、「 [列挙型](../cppcx/enums-c-cx.md)」をご覧ください。
 
-列挙子の値を定義する定数式が *underlying-type*で表すことができない場合、コンパイラはエラー メッセージを生成します。  ただし、基になる型に対して値が不適切であるというエラーは生成されません。 例えば:
+列挙子の値を定義する定数式が *underlying-type*で表すことができない場合、コンパイラはエラー メッセージを生成します。  ただし、基になる型に対して値が不適切であるというエラーは生成されません。 例:
 
 - *underlying-type* が数値であり、列挙子がその型の最大値を指定する場合は、次に暗黙的に定義されている列挙型の値は表すことができません。
 
@@ -221,4 +221,4 @@ convert to int: 1
 
 ## <a name="see-also"></a>関連項目
 
-[Component Extensions for .NET と UWP](../windows/component-extensions-for-runtime-platforms.md)
+[.NET および UWP でのコンポーネント拡張](../windows/component-extensions-for-runtime-platforms.md)

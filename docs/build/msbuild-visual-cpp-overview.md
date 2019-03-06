@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MSBuild overview
 ms.assetid: dd258f6f-ab51-48d9-b274-f7ba911d05ca
-ms.openlocfilehash: 0eac756824b3da6352c60ec69e9d6e679732522c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 072bc15cc931c2fd50cf8a2a1ff0c9145da8b7be
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484800"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414695"
 ---
 # <a name="msbuild-visual-c-overview"></a>MSBuild (Visual C++) の概要
 
@@ -27,13 +27,13 @@ MSBuild に関する次のドキュメントを参照してください。
 
 - [コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)コマンドライン引数と msbuild.exe で使用できるオプションについて説明します。
 
-- [タスクのリファレンス](/visualstudio/msbuild/msbuild-task-reference)について説明する MSBuild タスク。 これらのタスクでは、Visual C に固有に特に注意してください: [BscMake タスク](/visualstudio/msbuild/bscmake-task)、 [CL タスク](/visualstudio/msbuild/cl-task)、 [CPPClean タスク](/visualstudio/msbuild/cppclean-task)、 [LIB タスク](/visualstudio/msbuild/lib-task)、 [タスク リンク](/visualstudio/msbuild/link-task)、 [MIDL タスク](/visualstudio/msbuild/midl-task)、 [MT タスク](/visualstudio/msbuild/mt-task)、 [RC タスク](/visualstudio/msbuild/rc-task)、 [SetEnv タスク](/visualstudio/msbuild/setenv-task)、 [VCMessage タスク](/visualstudio/msbuild/vcmessage-task)、 [XDCMake タスク](/visualstudio/msbuild/xdcmake-task)、 [XSD タスク](/visualstudio/msbuild/xsd-task)します。
+- [タスクのリファレンス](/visualstudio/msbuild/msbuild-task-reference)について説明する MSBuild タスク。 これらのタスクでは、Visual C に固有に特に注意してください。[BscMake タスク](/visualstudio/msbuild/bscmake-task)、 [CL タスク](/visualstudio/msbuild/cl-task)、 [CPPClean タスク](/visualstudio/msbuild/cppclean-task)、 [LIB タスク](/visualstudio/msbuild/lib-task)、[タスク リンク](/visualstudio/msbuild/link-task)、 [MIDL タスク](/visualstudio/msbuild/midl-task)、 [MT タスク](/visualstudio/msbuild/mt-task)、 [RC タスク](/visualstudio/msbuild/rc-task)、 [SetEnv タスク](/visualstudio/msbuild/setenv-task)、 [VCMessage タスク](/visualstudio/msbuild/vcmessage-task)、 [XDCMake タスク](/visualstudio/msbuild/xdcmake-task)、 [XSD タスク](/visualstudio/msbuild/xsd-task)します。
 
 ## <a name="msbuild-on-the-command-line"></a>コマンド ラインでの MSBuild
 
 次のステートメント、 [MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)msbuild.exe ツールには、暗黙的または明示的なことを示しています*project_file*引数 (Visual c プロジェクトの .vcxproj ファイル)。0 個以上のコマンドライン*オプション*引数。
 
-> **msbuild.exe** [ *project_file* ] [*オプション*]
+> **msbuild.exe** [ *project_file* ] [ *options* ]
 
 使用して、 **/target** (または **/t**) と **/property** (または **/p**) 特定のプロパティとターゲットをオーバーライドするコマンド ライン オプションプロジェクト ファイルで指定します。
 
@@ -65,8 +65,8 @@ IDE でプロジェクト プロパティを設定し、プロジェクトを保
 
 |ディレクトリ|説明|
 |---------------|-----------------|
-|*ドライブ*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*ドライブ*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86) \v4.0\\*バージョン*\ |ターゲットによって使用される主要なターゲット ファイル (.targets) およびプロパティ ファイル (.props) があります。 既定では、$(VCTargetsPath) マクロはこのディレクトリを参照します。|
-|*ドライブ*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*edition*\Common7\IDE\VC\VCTargets\プラットフォーム\\*プラットフォーム*\ <br /><br />*ドライブ*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*バージョン*\Platforms\\*プラットフォーム*\ |親ディレクトリ内のターゲットおよびプロパティをオーバーライドする、プラットフォーム固有のターゲット ファイルおよびプロパティ ファイルがあります。 このディレクトリには、このディレクトリ内のターゲットによって使用されるタスクを定義する DLL も含まれています。<br /><br /> *プラットフォーム*ARM、Win32、または x64 を表すプレース ホルダーのサブディレクトリ。|
+|*ドライブ*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*edition*\Common7\IDE\VC\VCTargets\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp (x86)\v4.0\\*version*\ |ターゲットによって使用される主要なターゲット ファイル (.targets) およびプロパティ ファイル (.props) があります。 既定では、$(VCTargetsPath) マクロはこのディレクトリを参照します。|
+|*ドライブ*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*edition*\Common7\IDE\VC\VCTargets\プラットフォーム\\*プラットフォーム*\ <br /><br />*drive*:\Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*version*\Platforms\\*platform*\ |親ディレクトリ内のターゲットおよびプロパティをオーバーライドする、プラットフォーム固有のターゲット ファイルおよびプロパティ ファイルがあります。 このディレクトリには、このディレクトリ内のターゲットによって使用されるタスクを定義する DLL も含まれています。<br /><br /> *プラットフォーム*ARM、Win32、または x64 を表すプレース ホルダーのサブディレクトリ。|
 |*ドライブ*: \Program Files *(x86)* \Microsoft Visual Studio\\*年*\\*edition*\Common7\IDE\VC\VCTargets\プラットフォーム\\*プラットフォーム*\PlatformToolsets\\*ツールセット*\ <br /><br />*ドライブ*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\\*バージョン*\Platforms\\*プラットフォーム*\PlatformToolsets\\*ツールセット*\ <br /><br />*ドライブ*: \Program Files *(x86)* \MSBuild\Microsoft.Cpp\v4.0\Platforms\\*プラットフォーム*\PlatformToolsets\\*ツールセット*\ |指定したを使用して Visual C アプリケーションを生成するビルドを有効にするディレクトリを含む*ツールセット*します。<br /><br /> *年*と*edition*プレース ホルダーは、Visual Studio 2017 と以降のエディションで使用されます。 *バージョン*プレース ホルダーは、Visual Studio 2012 用 V110、V120 for Visual Studio 2013、または Visual Studio 2015 は V140 です。 *プラットフォーム*ARM、Win32、または x64 を表すプレース ホルダーのサブディレクトリ。 *ツールセット*v120_xp ツールセットを使用して、Visual Studio 2013、v110_wp80 に Windows XP 用にビルドする Visual Studio 2015 ツールセットを使用して Windows アプリを構築するための v140 など、ツールセット サブディレクトリを表すプレース ホルダーVisual Studio 2012 のツールセットを使用して Windows Phone 8.0 アプリをビルドします。<br /><br />Visual C 2008 または Visual C 2010 のいずれかのアプリケーションを生成するビルドを有効にするディレクトリを含むパスが含まれていない、*バージョン*、および*プラットフォーム*を表すプレース ホルダーItanium、Win32、または x64 のサブディレクトリ。 *ツールセット*v90 または v100 ツールセット サブディレクトリを表すプレース ホルダーです。|
 
 ### <a name="support-files"></a>サポート ファイル
@@ -85,7 +85,8 @@ IDE でプロジェクト プロパティを設定し、プロジェクトを保
 
 ### <a name="platformtoolset-property"></a>PlatformToolset プロパティ
 
-`PlatformToolset` プロパティは、ビルドでどの Visual C++ ツールセットを使用するか決定します。 既定では、現在のツールセットが使用されます。 このプロパティが設定されている場合、プロパティの値は、特定のプラットフォーム プロジェクトをビルドするために必要なプロパティとターゲット ファイルを含むディレクトリのパスを形成するリテラル文字列と連結します。 そのプラットフォーム ツールセットのバージョンを使用して作成するプラットフォーム ツールセットをインストールする必要があります。
+
+  `PlatformToolset` プロパティは、ビルドでどの Visual C++ ツールセットを使用するか決定します。 既定では、現在のツールセットが使用されます。 このプロパティが設定されている場合、プロパティの値は、特定のプラットフォーム プロジェクトをビルドするために必要なプロパティとターゲット ファイルを含むディレクトリのパスを形成するリテラル文字列と連結します。 そのプラットフォーム ツールセットのバージョンを使用して作成するプラットフォーム ツールセットをインストールする必要があります。
 
 たとえば、設定、`PlatformToolset`プロパティを`v140`Visual C 2015 ツールとライブラリを使用して、アプリケーションを構築します。
 
@@ -93,7 +94,8 @@ IDE でプロジェクト プロパティを設定し、プロジェクトを保
 
 ### <a name="preferredtoolarchitecture-property"></a>PreferredToolArchitecture プロパティ
 
-`PreferredToolArchitecture` プロパティは、ビルドで使用されているコンパイラとツールが 32 ビットか 64 ビットかを判定します。 このプロパティは、出力プラットフォームのアーキテクチャおよび構成には影響しません。 既定では、MSBuild は、x86 を使用してバージョンのコンパイラおよびツールがこのプロパティが設定されていない場合。
+
+  `PreferredToolArchitecture` プロパティは、ビルドで使用されているコンパイラとツールが 32 ビットか 64 ビットかを判定します。 このプロパティは、出力プラットフォームのアーキテクチャおよび構成には影響しません。 既定では、MSBuild は、x86 を使用してバージョンのコンパイラおよびツールがこのプロパティが設定されていない場合。
 
 たとえば、設定、`PreferredToolArchitecture`プロパティを`x64`64 ビットのコンパイラおよびツールを使用して、アプリケーションを構築します。
 
@@ -116,7 +118,7 @@ Visual C++ のサポート ファイル内には、ターゲットが数多く�
 |BscMake|Microsoft Browse Information Maintenance Utility ツール (bscmake.exe) を実行します。|
 |ビルド|プロジェクトをビルドします。<br /><br /> プロジェクトの既定のターゲットです。|
 |ClCompile|Visual C++ コンパイラ ツール (cl.exe) を実行します。|
-|クリーン|一時ビルド ファイルおよび中間ビルド ファイルを削除します。|
+|Clean|一時ビルド ファイルおよび中間ビルド ファイルを削除します。|
 |Lib|Microsoft 32-Bit Library Manager ツール (lib.exe) を実行します。|
 |リンク|Visual C++ リンカー ツール (link.exe) を実行します。|
 |ManifestResourceCompile|マニフェストからリソースの一覧を抽出し、Microsoft Windows リソース コンパイラ ツール (rc.exe) を実行します。|

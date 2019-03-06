@@ -11,12 +11,12 @@ helpviewer_keywords:
 - XML documentation, comments in source files
 - -doc compiler option [C++]
 ms.assetid: b54f7e2c-f28f-4f46-9ed6-0db09be2cc63
-ms.openlocfilehash: 39b614b1ab21a654a35e30b0d3acffa15d244fb0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94d10718ac47c984f8254d2c7b7f32fc6189fee3
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530040"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415397"
 ---
 # <a name="doc-process-documentation-comments-cc"></a>/doc (ドキュメント コメントの処理) (C/C++)
 
@@ -24,7 +24,7 @@ ms.locfileid: "50530040"
 
 ## <a name="syntax"></a>構文
 
-> **/doc**[*名前*]
+> **/doc**[*name*]
 
 ## <a name="arguments"></a>引数
 
@@ -39,7 +39,7 @@ ms.locfileid: "50530040"
 
 IntelliSense を備えた、生成された .xml ファイルを使用するには、.xml ファイルをサポートし、.xml ファイルを配置するアセンブリと同じアセンブリと同じディレクトリ内のファイル名を確認します。 アセンブリは、Visual Studio プロジェクトで参照されて、.xml ファイルはあります。 詳細については、次を参照してください。[を使用して IntelliSense](/visualstudio/ide/using-intellisense)と[XML コード コメント](/visualstudio/ide/supplying-xml-code-comments)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

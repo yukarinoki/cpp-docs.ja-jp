@@ -27,12 +27,12 @@ helpviewer_keywords:
 - CStreamRowset class, constructor
 - Close method
 ms.assetid: a106e953-a38a-464e-8ea5-28963d9e4811
-ms.openlocfilehash: 69844a9048601060a425f7bcf52bc2cf30381227
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 44fb2dab939a0180df2faa1b8b889048619f4c02
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556475"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412966"
 ---
 # <a name="cstreamrowset-class"></a>CStreamRowset クラス
 
@@ -61,7 +61,7 @@ class CStreamRowset
 |||
 |-|-|
 |[CStreamRowset](#cstreamrowset)|コンストラクターです。 インスタンスを作成し、初期化、`CStreamRowset`オブジェクト。|
-|[閉じる](#close)|リリース、 [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85))クラスのインターフェイス ポインター。|
+|[閉じる](#close)|リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85))クラスのインターフェイス ポインター。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -73,7 +73,7 @@ class CStreamRowset
 
 [!code-cpp[NVC_OLEDB_Consumer#12](../../data/oledb/codesnippet/cpp/cstreamrowset-class_2.cpp)]
 
-`ICommand::Execute` 返します、`ISequentialStream`ポインターに格納されている`m_spStream`します。 使用して、`Read`の XML 形式 (Unicode 文字列) のデータを取得します。 例えば:
+`ICommand::Execute` 返します、`ISequentialStream`ポインターに格納されている`m_spStream`します。 使用して、`Read`の XML 形式 (Unicode 文字列) のデータを取得します。 例:
 
 [!code-cpp[NVC_OLEDB_Consumer#13](../../data/oledb/codesnippet/cpp/cstreamrowset-class_3.cpp)]
 
@@ -82,7 +82,7 @@ SQL Server 2000 では、XML 書式設定でを実行し、すべての列と 1 
 > [!NOTE]
 >  この機能は、SQL Server 2000 でのみ動作します。
 
-## <a name="cstreamrowset"></a> Cstreamrowset::cstreamrowset
+## <a name="cstreamrowset"></a> CStreamRowset::CStreamRowset
 
 インスタンスを作成し、初期化、`CStreamRowset`オブジェクト。
 
@@ -92,9 +92,9 @@ SQL Server 2000 では、XML 書式設定でを実行し、すべての列と 1 
 CStreamRowset();
 ```
 
-## <a name="close"></a> Cstreamrowset::close
+## <a name="close"></a> CStreamRowset::Close
 
-リリース、 [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85))クラスのインターフェイス ポインター。
+リリース、 [ISequentialStream](/previous-versions/windows/desktop/ms718035(v=vs.85))クラスのインターフェイス ポインター。
 
 ### <a name="syntax"></a>構文
 

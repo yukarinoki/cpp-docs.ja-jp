@@ -98,12 +98,12 @@ helpviewer_keywords:
 - CReBarCtrl [MFC], ShowBand
 - CReBarCtrl [MFC], SizeToRect
 ms.assetid: 154570d7-e48c-425d-8c7e-c64542bcb4cc
-ms.openlocfilehash: f1e9c6e4505c67b881d479817ec8b45e4ae5dc8b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db72dbab14db69f14d7c3d813562ec661df4b424
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304556"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417659"
 ---
 # <a name="crebarctrl-class"></a>CReBarCtrl クラス
 
@@ -255,7 +255,7 @@ virtual BOOL Create(
 Rebar コントロールのスタイルがコントロールに適用の組み合わせを指定します。 参照してください[Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)でサポートされているスタイルの一覧については、Windows SDK。
 
 *rect*<br/>
-参照を[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) rebar コントロールのサイズと位置である構造体。
+参照を[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\)) rebar コントロールのサイズと位置である構造体。
 
 *pParentWnd*<br/>
 ポインターを[CWnd](../../mfc/reference/cwnd-class.md) rebar コントロールの親ウィンドウであるオブジェクト。 NULL は指定できません。
@@ -303,7 +303,7 @@ virtual BOOL CreateEx(
 Rebar コントロールのスタイルがコントロールに適用の組み合わせを指定します。 サポートされているスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)Windows SDK に含まれています。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -389,7 +389,7 @@ void GetBandBorders(
 境界線を取得するのバンドの 0 から始まるインデックス。
 
 *中華人民共和国*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)バンド境界線が受け取る構造体。 Rebar コントロールに RBS_BANDBORDERS スタイルがある場合は、この構造体の各メンバーによって境界を構成する、バンドの対応する側のピクセルの数が表示されます。 Rebar コントロールが RBS_BANDBORDERS スタイルを持たない場合は左側のこの構造体のメンバーのみが有効な情報を受け取ります。 Rebar コントロールのスタイルの説明は、次を参照してください。 [Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)Windows SDK に含まれています。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))バンド境界線が受け取る構造体。 Rebar コントロールに RBS_BANDBORDERS スタイルがある場合は、この構造体の各メンバーによって境界を構成する、バンドの対応する側のピクセルの数が表示されます。 Rebar コントロールが RBS_BANDBORDERS スタイルを持たない場合は左側のこの構造体のメンバーのみが有効な情報を受け取ります。 Rebar コントロールのスタイルの説明は、次を参照してください。 [Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)Windows SDK に含まれています。
 
 ##  <a name="getbandcount"></a>  CReBarCtrl::GetBandCount
 
@@ -584,7 +584,7 @@ BOOL GetRect(
 Rebar コントロールのバンドの 0 から始まるインデックス。
 
 *中華人民共和国*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897) rebar バンドの境界を受信する構造体。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\)) rebar バンドの境界を受信する構造体。
 
 ### <a name="return-value"></a>戻り値
 

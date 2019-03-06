@@ -29,12 +29,12 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 669f1fc3ef151ee76ab6b057798f33f5b3cc1287
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50464910"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415410"
 ---
 # <a name="bscmake-options"></a>BSCMAKE オプション
 
@@ -42,7 +42,7 @@ ms.locfileid: "50464910"
 
 のみ **/NOLOGO**と **/o**は、Visual Studio 開発環境内から使用できます。  参照してください[Visual C プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)については、プロジェクトのプロパティ ページにアクセスします。
 
-**/Ei (** *filename*.**)**<br/>
+**/Ei (** *filename*...**)**<br/>
 指定したインクルード ファイルの内容をブラウザー情報ファイルから除外します。 複数のファイルを指定する場合は、スペースで名前を区切り、名前のリストをかっこで囲みます。 かっこが 1 つだけを指定する場合は必要ない*filename*します。 使用 **/Ei**と共に、 **/Es**で除外されないファイルを除外するオプション **/Es**します。
 
 **/El**<br/>
@@ -57,7 +57,7 @@ ms.locfileid: "50464910"
 **/Es**<br/>
 絶対パスで指定されたインクルード ファイル、または INCLUDE 環境変数内の絶対パスで検索できるインクルード ファイルを、すべてブラウザー情報ファイルから除外します。 通常、こういったインクルード ファイルは、ブラウザー情報ファイルでは必要としない情報が数多く格納されているシステム インクルード ファイルです。このオプションでは、パスなしで指定されたファイル、相対パスで指定されたファイル、または INCLUDE の相対パスで見つかるファイルは除外されません。 使用することができます、 **/Ei**オプションと共に **/Es**ファイルを除外する **/Es**は除外されません。 ファイルの一部のみを除外するかどうかを **/Es** 、除外を使用して、 **/Ei**の代わりに **/Es**および除外するファイルを一覧表示します。
 
-**/errorreport:**[**none** &#124; **プロンプト** &#124; **キュー** &#124; **送信**]<br/>
+**/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 bscmake.exe の内部エラーについての情報を Microsoft に送信できます。
 
 詳細については **/errorreport**を参照してください[/errorReport (内部コンパイラ エラーを報告する)](../../build/reference/errorreport-report-internal-compiler-errors.md)します。
@@ -74,7 +74,7 @@ BSCMAKE コマンド ライン構文の簡単な説明を表示します。
 **/NOLOGO**<br/>
 BSCMAKE の著作権メッセージが表示されなくなります。
 
-**/o** *ファイル名*<br/>
+**/o** *filename*<br/>
 ブラウザー情報ファイルの名前を指定します。 既定では、ブラウザー情報ファイルの名前は最初の .sbr ファイルの基本名と拡張子 .bsc で構成されます。
 
 **/S (** *filename*.**)**<br/>

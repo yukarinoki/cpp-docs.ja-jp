@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -SUBSYSTEM linker option
 - subsystem specifications
 ms.assetid: d7b133cf-cf22-4da8-ab46-6552702c0b9b
-ms.openlocfilehash: 3d808f86a9ea3b34da0dccae18ecc000ca364f0a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0b6a8a841cefcd519cbeeae9f3355d72e1bbf286
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50518392"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417009"
 ---
 # <a name="subsystem-specify-subsystem"></a>/SUBSYSTEM (サブシステムの指定)
 
@@ -79,7 +79,8 @@ Windows NT 上の POSIX サブシステムで実行するアプリケーショ�
 
 1. 選択、**システム**プロパティ ページ。
 
-1. `SubSystem` プロパティを変更します。
+1. 
+  `SubSystem` プロパティを変更します。
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 

@@ -232,6 +232,7 @@
 ## [コンパイラ エラー C2128](compiler-error-c2128.md)
 ## [コンパイラ エラー C2129](compiler-error-c2129.md)
 ## [コンパイラ エラー C2130](compiler-error-c2130.md)
+## [コンパイラ エラー C2131](compiler-error-c2131.md)
 ## [コンパイラ エラー C2132](compiler-error-c2132.md)
 ## [コンパイラ エラー C2133](compiler-error-c2133.md)
 ## [コンパイラ エラー C2134](compiler-error-c2134.md)

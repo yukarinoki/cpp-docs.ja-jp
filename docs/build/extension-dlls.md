@@ -15,12 +15,12 @@ helpviewer_keywords:
 - extension DLLs [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: f69ac3d4-e474-4b1c-87a1-6738843a135c
-ms.openlocfilehash: 2d9b23871cedd93c4145c79d2c22240b9ae2e775
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28954ff1c77b7dcc530392fce095ed9df5c29cbf
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429241"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414565"
 ---
 # <a name="mfc-extension-dlls"></a>MFC 拡張 Dll
 
@@ -46,7 +46,8 @@ MFC の拡張 DLL で MFC の共有バージョンを使う方法は、アプリ
 
 - 拡張 DLL には `CWinApp` 派生オブジェクトがありません。 したがって、クライアント アプリケーションの `CWinApp` 派生オブジェクトを使用する必要があります。 クライアント アプリケーションには、メイン メッセージ ポンプ、アイドル ループなどが備わっています。
 
-- MFC の拡張 DLL は、`AfxInitExtensionModule` 関数内の `DllMain` を呼び出します。 この関数の戻り値をチェックする必要があります。 `AfxInitExtensionModule` から 0 が返されると、`DllMain` 関数から 0 が返されます。
+- MFC の拡張 DLL は、`AfxInitExtensionModule` 関数内の `DllMain` を呼び出します。 この関数の戻り値をチェックする必要があります。 
+  `AfxInitExtensionModule` から 0 が返されると、`DllMain` 関数から 0 が返されます。
 
 - 作成、 **CDynLinkLibrary** MFC 拡張 DLL をエクスポートする必要がある場合は、初期化中にオブジェクト`CRuntimeClass`オブジェクトやアプリケーションにリソース。
 

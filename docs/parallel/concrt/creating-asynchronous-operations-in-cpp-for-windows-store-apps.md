@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows 8.x apps, creating C++ async operations
 - Creating C++ async operations
 ms.assetid: a57cecf4-394a-4391-a957-1d52ed2e5494
-ms.openlocfilehash: 0284970d57cf4cde65b4fb77338423cb81d5d54b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8815861e525a2824bb1bc7a7d0e40f96b053c6a4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302274"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426785"
 ---
 # <a name="creating-asynchronous-operations-in-c-for-uwp-apps"></a>C++ における UWP アプリ用の非同期操作の作成
 
@@ -51,7 +51,7 @@ Windows ランタイムは、特殊なオペレーティング システム環�
 
 Windows ランタイムを使用すると、さまざまなプログラミング言語の優れた機能を使用し、1 つのアプリに統合できます。 たとえば、JavaScript で UI を作成し、C ++ のコンポーネントで計算量が非常に多い演算を行うことができます。 計算量が非常に多い演算をバックグラウンドで行うことができるのは、UI の応答性を保つための重要な要素です。 `task`クラスは C++ に固有で、(C++ 以外の言語で記述する場合があります) が他のコンポーネントに非同期操作を通信するために、Windows ランタイム インターフェイスを使用する必要があります。 Windows ランタイムには、非同期操作を表すために使用できる 4 つのインターフェイスが用意されています。
 
-[Windows::Foundation::IAsyncAction](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncaction.aspx)<br/>
+[Windows::Foundation::IAsyncAction](/uwp/api/windows.foundation.iasyncaction)<br/>
 非同期アクションを表します。
 
 [Windows::Foundation::IAsyncActionWithProgress\<TProgress>](https://msdn.microsoft.com/library/windows/apps/br206581.aspx)<br/>
@@ -92,7 +92,7 @@ Windows ランタイムを使用すると、さまざまなプログラミング
 
 ##  <a name="example-component"></a> 例:C++ Windows ランタイム コンポーネントを作成してから使用するには.C#
 
-コンピューティング集中型の操作を実行するには、UI と C++ Windows ランタイム コンポーネントを定義する XAML と c# を使用するアプリを検討してください。 この例では、C++ コンポーネントは特定の範囲での素数を計算します。 4 つの Windows ランタイムの非同期タスク インターフェイス間の違いを示すためには、まず、Visual Studio で、作成、**空のソリューション**とします`Primes`します。 次に、ソリューションに **[Windows ランタイム コンポーネント]** プロジェクトを追加し、名前を `PrimesLibrary`とします。 生成された C++ ヘッダー ファイル (この例では Class1.h の名前を Primes.h に変更しています) に次のコードを追加します。 `public` の各メソッドは 4 つの非同期インターフェイスの 1 つを定義します。 値を返すメソッドを返す、 [:ivector\<int >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)オブジェクト。 進行状況を報告するメソッドは、全体の作業のうち完了した割合を定義する `double` の値を生成します。
+コンピューティング集中型の操作を実行するには、UI と C++ Windows ランタイム コンポーネントを定義する XAML と c# を使用するアプリを検討してください。 この例では、C++ コンポーネントは特定の範囲での素数を計算します。 4 つの Windows ランタイムの非同期タスク インターフェイス間の違いを示すためには、まず、Visual Studio で、作成、**空のソリューション**とします`Primes`します。 次に、ソリューションに **[Windows ランタイム コンポーネント]** プロジェクトを追加し、名前を `PrimesLibrary`とします。 生成された C++ ヘッダー ファイル (この例では Class1.h の名前を Primes.h に変更しています) に次のコードを追加します。 `public` の各メソッドは 4 つの非同期インターフェイスの 1 つを定義します。 値を返すメソッドを返す、 [:ivector\<int >](/uwp/api/Windows.Foundation.Collections.IVector_T_)オブジェクト。 進行状況を報告するメソッドは、全体の作業のうち完了した割合を定義する `double` の値を生成します。
 
 [!code-cpp[concrt-windowsstore-primes#1](../../parallel/concrt/codesnippet/cpp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_2.h)]
 
@@ -117,7 +117,7 @@ MainPage.xaml で、次のコードを `MainPage` クラスに追加します。
 
 これらのメソッドは `async` と `await` のキーワードを使用して、非同期操作が完了した後で UI を更新します。 UWP アプリで非同期コードについては、次を参照してください。[スレッド処理と非同期プログラミング](/windows/uwp/threading-async)します。
 
-`getPrimesCancellation` および `cancelGetPrimes` メソッドは連携して、ユーザーが操作の取り消しをできるようにします。 ユーザーが選択したときに、**キャンセル** ボタン、`cancelGetPrimes`メソッド呼び出し[IAsyncOperationWithProgress\<TResult, TProgress >:: キャンセル](https://msdn.microsoft.com/library/windows/apps/windows.foundation.iasyncinfo.cancel.aspx)操作をキャンセルします。 基になる非同期操作を管理する同時実行ランタイムでは、キャンセルが完了したことを通信するために、Windows ランタイムによってキャッチされた例外の内部型をスローします。 取り消しモデルの詳細については、次を参照してください。[キャンセル](../../parallel/concrt/cancellation-in-the-ppl.md)します。
+`getPrimesCancellation` および `cancelGetPrimes` メソッドは連携して、ユーザーが操作の取り消しをできるようにします。 ユーザーが選択したときに、**キャンセル** ボタン、`cancelGetPrimes`メソッド呼び出し[IAsyncOperationWithProgress\<TResult, TProgress >:: キャンセル](/uwp/api/windows.foundation.iasyncinfo.cancel)操作をキャンセルします。 基になる非同期操作を管理する同時実行ランタイムでは、キャンセルが完了したことを通信するために、Windows ランタイムによってキャッチされた例外の内部型をスローします。 取り消しモデルの詳細については、次を参照してください。[キャンセル](../../parallel/concrt/cancellation-in-the-ppl.md)します。
 
 > [!IMPORTANT]
 >  操作がキャンセルされましたが、Windows ランタイムを正しくレポートする PPL を有効にするには、この種類の内部例外をキャッチしないでください。 これは、すべての例外 (`catch (...)`) をキャッチしないことを意味します。 すべてをキャッチする必要がある場合、例外は、Windows ランタイムがキャンセル操作を完了できるようにする例外を再スローします。

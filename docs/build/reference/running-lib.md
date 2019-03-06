@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 73a259faa57d74fbe535bfa329dfc2a39cb6bbad
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656977"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413330"
 ---
 # <a name="running-lib"></a>LIB の実行
 
@@ -62,7 +62,7 @@ LIB を実行するコマンドを入力`lib`オプションとタスクのフ�
 
 LIB のすべてのモードに、次のオプションが適用されます。
 
-> **/ERRORREPORT** [**NONE** &AMP;#124; **プロンプト** &AMP;#124; **キュー** &AMP;#124; **送信**]
+> **/ERRORREPORT** [**NONE** &#124; **PROMPT** &#124; **QUEUE** &#124; **SEND**]
 
 使用することができます lib.exe は、実行時に失敗した場合、 **/ERRORREPORT**これらの内部エラーに関する情報を Microsoft に送信します。
 
@@ -88,7 +88,7 @@ LIB 著作権メッセージとバージョン番号の表示を中止し、コ�
 
 追加される .obj ファイルの名前を含め、セッションの進行状況の詳細を表示します。 情報は標準出力に送信され、ファイルにリダイレクトすることもできます。
 
-> **/WX****[: NO]**
+> **/WX****[:NO]**
 
 警告をエラーとして扱います。 参照してください[/WX (リンカー警告として扱うエラー)](../../build/reference/wx-treat-linker-warnings-as-errors.md)詳細についてはします。
 

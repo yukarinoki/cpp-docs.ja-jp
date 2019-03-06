@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -JMC compiler option [C++]
 - User code, debugging
 - JMC compiler option [C++]
-ms.openlocfilehash: a81292b590d96ef93446f9bb59af305c7eda2ef9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d1950ff4a973ddbd23ff902ba4afb0d45dacb0e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50516858"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417763"
 ---
 # <a name="jmc-just-my-code-debugging"></a>/JMC (マイ コードのみのデバッグ)
 
@@ -34,7 +34,7 @@ Visual Studio[マイ コードのみ](/visualstudio/debugger/just-my-code)設定
 
 詳細については、次を参照してください[マイ コードのみを C++](/visualstudio/debugger/just-my-code#BKMK_C___Just_My_Code)で[Visual Studio での マイ コードのみを使用してユーザー コードのみをデバッグするかどうかを指定](/visualstudio/debugger/just-my-code)、および Visual c Team Blog post[発表 C++ マイ コードのみ。Visual Studio でのステップ実行](https://blogs.msdn.microsoft.com/vcblog/2018/06/29/announcing-jmc-stepping-in-visual-studio/)します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
 

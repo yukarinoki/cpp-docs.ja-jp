@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SAFESEH linker option
 - SAFESEH linker option
 ms.assetid: 7722ff99-b833-4c65-a855-aaca902ffcb7
-ms.openlocfilehash: 85c59d99a17c4e13750f5e51fd85d348346ff922
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee0d01ef43cae4128180e0c32c8dc6d00d4c2400
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450220"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425693"
 ---
 # <a name="safeseh-image-has-safe-exception-handlers"></a>/SAFESEH (安全な例外ハンドラーがあるイメージ)
 
@@ -35,7 +35,7 @@ ms.locfileid: "50450220"
 
 既存のバイナリを、安全な例外ハンドラーがある、または例外ハンドラーがないものとしてマークすることはできません。安全な例外処理の情報は、ビルド時に追加する必要があります。
 
-リンカーが安全な例外ハンドラーのテーブルを生成できるかどうかは、C ランタイム ライブラリを使用しているアプリケーションによって決まります。 リンクしている場合[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)を安全な例外ハンドラーのテーブルに読み込み構成構造体 (loadcfg.c CRT ソース ファイルで見つかるなど) を指定する必要がある Visual C に対して定義されているすべてのエントリを格納しています。 例えば:
+リンカーが安全な例外ハンドラーのテーブルを生成できるかどうかは、C ランタイム ライブラリを使用しているアプリケーションによって決まります。 リンクしている場合[/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)を安全な例外ハンドラーのテーブルに読み込み構成構造体 (loadcfg.c CRT ソース ファイルで見つかるなど) を指定する必要がある Visual C に対して定義されているすべてのエントリを格納しています。 例:
 
 ```
 #include <windows.h>

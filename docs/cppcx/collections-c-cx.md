@@ -2,12 +2,12 @@
 title: コレクション (C++/CX)
 ms.date: 11/19/2018
 ms.assetid: 914da30b-aac5-4cd7-9da3-a5ac08cdd72c
-ms.openlocfilehash: d256e333ddf31bdb637680b70718af85e753a21d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 155f14a2948215afb918e15c345cfa83f630db9e
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176394"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423522"
 ---
 # <a name="collections-ccx"></a>コレクション (C++/CX)
 
@@ -23,7 +23,7 @@ Windows ランタイムは、コレクションと関連する型、および C 
 
 - [Platform::Collections::VectorView クラス](../cppcx/platform-collections-vectorview-class.md) と[Platform::Collections::MapView クラス](../cppcx/platform-collections-mapview-class.md) は `Vector` と `Map`の読み取り専用のバージョンです。
 
-- 反復子は [Platform::Collections 名前空間](../cppcx/platform-collections-namespace.md)で定義されます。 これらの反復子は、STL 反復子の要件を満たし、任意の [Windows::Foundation::Collections](../standard-library/algorithm-functions.md#find)インターフェイス型や  [Platform::Collections](../standard-library/algorithm-functions.md#count_if)具象型で [std::find](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.aspx) 、 [std::count_if](../cppcx/platform-collections-namespace.md) などの STL アルゴリズムを使えるようにします。 たとえば、c# で作成され、STL アルゴリズムを適用する Windows ランタイム コンポーネントのコレクションを反復処理することができますこれを意味します。
+- 反復子は [Platform::Collections 名前空間](../cppcx/platform-collections-namespace.md)で定義されます。 これらの反復子は、STL 反復子の要件を満たし、任意の [Windows::Foundation::Collections](../standard-library/algorithm-functions.md#find)インターフェイス型や  [Platform::Collections](../standard-library/algorithm-functions.md#count_if)具象型で [std::find](/uwp/api/windows.foundation.collections) 、 [std::count_if](../cppcx/platform-collections-namespace.md) などの STL アルゴリズムを使えるようにします。 たとえば、c# で作成され、STL アルゴリズムを適用する Windows ランタイム コンポーネントのコレクションを反復処理することができますこれを意味します。
 
    > [!IMPORTANT]
    > プロキシ反復子 `VectorIterator` と `VectorViewIterator` は、プロキシ オブジェクト `VectoryProxy<T>` と `ArrowProxy<T>` を利用して、STL コンテナーでの使用を有効にします。 詳細については、この記事で後述する「VectorProxy 要素」を参照してください。
@@ -34,7 +34,7 @@ Windows ランタイムは、コレクションと関連する型、および C 
 
 ## <a name="vector-usage"></a>ベクターの使用
 
-クラス、シーケンス コンテナーを別の Windows ランタイム コンポーネントに渡すときに使用[:foundation:: IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)パラメーターまたは戻り値の型として、[プラットフォーム。Collections::Vector\<T >](../cppcx/platform-collections-vector-class.md)具象実装として。 パブリックの戻り値またはパラメーターで `Vector` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーは、 `Vector` を `IVector`に変更することで解決できます。
+クラス、シーケンス コンテナーを別の Windows ランタイム コンポーネントに渡すときに使用[:foundation:。IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)パラメーターまたは戻り値の型として、 [platform::collections:\<T >](../cppcx/platform-collections-vector-class.md)具象実装として。 パブリックの戻り値またはパラメーターで `Vector` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 このエラーは、 `Vector` を `IVector`に変更することで解決できます。
 
 > [!IMPORTANT]
 > 独自のプログラム内のシーケンスを渡している場合は、 `Vector` か `std::vector` のどちらかを使用します。それらの方が `IVector`より効率的であるためです。 ABI を介してコンテナーを渡す場合にのみ、 `IVector` を使用します。
@@ -53,11 +53,11 @@ Windows ランタイムは、コレクションと関連する型、および C 
 
 ## <a name="value-types-in-vector"></a>ベクターにおける値の型
 
-[Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) に格納される要素は、暗黙的にまたは指定したカスタム [std::equal_to](../standard-library/equal-to-struct.md) 比較子を使用するかして、等値比較をサポートする必要があります。 すべての参照型とすべてのスカラー型は、暗黙的に等値比較をサポートしています。 [Windows::Foundation::DateTime](https://msdn.microsoft.com/library/windows/apps/windows.foundation.datetime.aspx)などの非スカラー値型の場合や、カスタム比較 ( `objA->UniqueID == objB->UniqueID`など) の場合、カスタム関数オブジェクトを提供する必要があります。
+[Platform::Collections::Vector](../cppcx/platform-collections-vector-class.md) に格納される要素は、暗黙的にまたは指定したカスタム [std::equal_to](../standard-library/equal-to-struct.md) 比較子を使用するかして、等値比較をサポートする必要があります。 すべての参照型とすべてのスカラー型は、暗黙的に等値比較をサポートしています。 [Windows::Foundation::DateTime](/uwp/api/windows.foundation.datetime)などの非スカラー値型の場合や、カスタム比較 ( `objA->UniqueID == objB->UniqueID`など) の場合、カスタム関数オブジェクトを提供する必要があります。
 
 ## <a name="vectorproxy-elements"></a>VectorProxy 要素
 
-[Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)と[Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)の使用を有効にする`range for`ループとなどのアルゴリズム[std::sort](../standard-library/algorithm-functions.md#sort) で[IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)コンテナー。 ただし、C++ ポインターの逆参照を使って `IVector` 要素にアクセスすることはできません。これらの要素には、 [GetAt](https://msdn.microsoft.com/library/windows/apps/br206634.aspx) メソッドと [SetAt](https://msdn.microsoft.com/library/windows/apps/br206642.aspx) メソッドを使ってアクセスすることしかできません。 そのため、これらの反復子を使用して、プロキシ クラス`Platform::Details::VectorProxy<T>`と`Platform::Details::ArrowProxy<T>`を介して個々 の要素へのアクセスを提供する__\*__、 __->__、および__\[]__ 演算子は、標準ライブラリで必要とします。 厳密には、 `IVector<Person^> vec`が指定されている場合、 `*begin(vec)` の型は `VectorProxy<Person^>`になります。 ただし、プロキシ オブジェクトは、ほとんどの場合、コードに対して透過的です。 これらのプロキシ オブジェクトは反復子によって内部でのみ使用されるため文書化されませんが、その機構の動作がわかっていると便利です。
+[Platform::Collections::VectorIterator](../cppcx/platform-collections-vectoriterator-class.md)と[Platform::Collections::VectorViewIterator](../cppcx/platform-collections-vectorviewiterator-class.md)の使用を有効にする`range for`ループとなどのアルゴリズム[std::sort](../standard-library/algorithm-functions.md#sort) で[IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)コンテナー。 ただし、C++ ポインターの逆参照を使って `IVector` 要素にアクセスすることはできません。これらの要素には、 [GetAt](/uwp/api/windows.foundation.collections.ivector-1.getat) メソッドと [SetAt](/uwp/api/windows.foundation.collections.ivector-1.setat) メソッドを使ってアクセスすることしかできません。 そのため、これらの反復子を使用して、プロキシ クラス`Platform::Details::VectorProxy<T>`と`Platform::Details::ArrowProxy<T>`を介して個々 の要素へのアクセスを提供する__\*__、 __->__、および__\[]__ 演算子は、標準ライブラリで必要とします。 厳密には、 `IVector<Person^> vec`が指定されている場合、 `*begin(vec)` の型は `VectorProxy<Person^>`になります。 ただし、プロキシ オブジェクトは、ほとんどの場合、コードに対して透過的です。 これらのプロキシ オブジェクトは反復子によって内部でのみ使用されるため文書化されませんが、その機構の動作がわかっていると便利です。
 
 `range for` コンテナーに対して `IVector` ループを使用する場合は、 `auto&&` を使用して反復子変数が `VectorProxy` 要素に正しくバインドされるようにします。 `auto` または `auto&`を使用すると、コンパイラ警告 C4239 が発生し、警告テキストに `VectoryProxy` が示されます。
 
@@ -131,17 +131,17 @@ STL の  `const` ランダム アクセス反復子の要件を満たす STL 反
 
 |Iterators|関数|
 |---------------|---------------|
-|[Platform::Collections::VectorIterator\<T >](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (内部に格納[:foundation:: IVector\<T >](https://msdn.microsoft.com/library/windows/apps/br206631.aspx)と int です)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections:: IVector\<T>](https://msdn.microsoft.com/library/windows/apps/br206631.aspx))|
-|[Platform::Collections::VectorViewIterator\<T >](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (内部に格納[IVectorView\<T >](https://msdn.microsoft.com/library/windows/apps/br226058.aspx)^ と int です)。|[開始](../cppcx/begin-function.md)/ [エンド](../cppcx/end-function.md)([IVectorView\<T >](https://msdn.microsoft.com/library/windows/apps/br226058.aspx)^)|
-|[Platform::Collections::InputIterator\<T >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](https://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ および T)|[開始](../cppcx/begin-function.md)/ [エンド](../cppcx/end-function.md)([IIterable\<T >](https://msdn.microsoft.com/library/windows/apps/br226024.aspx))|
-|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](https://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ および T)|[開始](../cppcx/begin-function.md)/ [エンド](../cppcx/end-function.md)([IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)します。|
-|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](https://msdn.microsoft.com/library/windows/apps/br226026.aspx)^ および T)|[開始](../cppcx/begin-function.md)/ [エンド](../cppcx/end-function.md)([Windows:: Foundation::Collections::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_))|
+|[Platform::Collections::VectorIterator\<T>](../cppcx/platform-collections-vectoriterator-class.md)<br /><br /> (内部に格納[:foundation:。IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_)と int です)。|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md)([Windows::Foundation::Collections::IVector\<T >](/uwp/api/Windows.Foundation.Collections.IVector_T_))|
+|[Platform::Collections::VectorViewIterator\<T>](../cppcx/platform-collections-vectorviewiterator-class.md)<br /><br /> (内部に格納[IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^ と int です)。|[開始](../cppcx/begin-function.md)/ [エンド](../cppcx/end-function.md)([IVectorView\<T >](/uwp/api/Windows.Foundation.Collections.IVectorView_T_)^)|
+|[Platform::Collections::InputIterator\<T>](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ および T)|[開始](../cppcx/begin-function.md)/ [エンド](../cppcx/end-function.md)([IIterable\<T >](/uwp/api/Windows.Foundation.Collections.IIterable_T_))|
+|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ および T)|[開始](../cppcx/begin-function.md)/ [エンド](../cppcx/end-function.md)([IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)します。|
+|[Platform::Collections::InputIterator < IKeyValuePair\<K, V > ^ >](../cppcx/platform-collections-inputiterator-class.md)<br /><br /> (内部に格納[IIterator\<T >](/uwp/api/Windows.Foundation.Collections.IIterator_T_)^ および T)|[begin](../cppcx/begin-function.md)/ [end](../cppcx/end-function.md) ([Windows::Foundation::Collections::IMapView]/uwp/api/Windows.Foundation.Collections.IMapView_K_V_))|
 
 ### <a name="collection-change-events"></a>コレクション変更イベント
 
 `Vector` と `Map` は、XAML コレクションでのデータ バインドをサポートしていますが、これは、コレクション オブジェクトが変更またはリセットされたとき、またはコレクションのいずれかの要素が挿入、削除、または変更されたときに発生するイベントを実装することで実現されています。 データ バインドをサポートする独自の型を作成できます。ただし、 `Map` と `Vector` から継承することはできません。これらの型はシールされているためです。
 
-[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) デリゲートと [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) デリゲートは、コレクション変更イベントのイベント ハンドラーのシグネチャを指定します。 [Windows::Foundation::Collections::CollectionChange](https://msdn.microsoft.com/library/windows/apps/windows.foundation.collections.collectionchange.aspx) パブリック列挙型クラス、 `Platform::Collection::Details::MapChangedEventArgs` 、 `Platform::Collections::Details::VectorChangedEventArgs` ref クラスは、イベントの原因を特定するためにイベント引数を格納します。 `*EventArgs`で型が定義されている、`Details`名前空間を作成または使用するときに明示的に使用する必要がないため`Map`または`Vector`します。
+[Windows::Foundation::Collections::VectorChangedEventHandler](/uwp/api/windows.foundation.collections.vectorchangedeventhandler) デリゲートと [Windows::Foundation::Collections::MapChangedEventHandler](/uwp/api/windows.foundation.collections.mapchangedeventhandler) デリゲートは、コレクション変更イベントのイベント ハンドラーのシグネチャを指定します。 [Windows::Foundation::Collections::CollectionChange](/uwp/api/windows.foundation.collections.collectionchange) パブリック列挙型クラス、 `Platform::Collection::Details::MapChangedEventArgs` 、 `Platform::Collections::Details::VectorChangedEventArgs` ref クラスは、イベントの原因を特定するためにイベント引数を格納します。 `*EventArgs`で型が定義されている、`Details`名前空間を作成または使用するときに明示的に使用する必要がないため`Map`または`Vector`します。
 
 ## <a name="see-also"></a>関連項目
 

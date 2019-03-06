@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], compiling without linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: eae47ef7-09eb-40c9-b318-7c714cd452fc
-ms.openlocfilehash: e071209bd09fea17082379bf3f2486866b52c548
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e65801fcddef739f3fabe88b2b940602fde965a
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447204"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412732"
 ---
 # <a name="cl-invokes-the-linker"></a>リンカーを呼び出す CL
 
@@ -26,13 +26,13 @@ ms.locfileid: "50447204"
 |/c|リンクなしでコンパイルします。|
 |/E、/EP/P|コンパイルとリンクを使用せずに前処理します。|
 |/Zg|関数プロトタイプを生成します。|
-|/Zs|構文を確認します。|
+|/Zs|構文の確認|
 
 リンクの詳細については、次を参照してください。[リンカー オプション](../../build/reference/linker-options.md)します。
 
 ## <a name="example"></a>例
 
-次の 3 つの C ソース ファイルをコンパイルすることを前提としています: MAIN.c、MOD1.c、および MOD2.c します。 各ファイルには、別のファイルで定義されている関数の呼び出しが含まれます。
+次の 3 つの C ソース ファイルをコンパイルするいると仮定します。MAIN.c、MOD1.c、および MOD2.c です。 各ファイルには、別のファイルで定義されている関数の呼び出しが含まれます。
 
 - 関数を呼び出す MAIN.c `func1` MOD1.c と関数で`func2`MOD2.c で。
 

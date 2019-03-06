@@ -2,12 +2,12 @@
 title: Array と WriteOnlyArray (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: ef7cc5f9-cae6-4636-8220-f789e5b6aea4
-ms.openlocfilehash: b957e7d34486aced4796a029ebfdfa710dc71fcc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 44dc57d834272a1d78b0825ac5208d3b251aef6b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530196"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420701"
 ---
 # <a name="array-and-writeonlyarray-ccx"></a>Array と WriteOnlyArray (C++/CX)
 
@@ -79,13 +79,13 @@ Windows ランタイムの型システムは、ジャグ配列の概念をサポ
 
 データが ABI を介して [Platform::Array](../cppcx/platform-array-class.md)に渡されており、最終的にはそのデータを C スタイル配列で処理して効率性を追求するシナリオでは、 [Platform::ArrayReference](../cppcx/platform-arrayreference-class.md) を使用して、不要なコピー操作を回避できます。 [を受け取るパラメーターに引数として](../cppcx/platform-arrayreference-class.md) Platform::ArrayReference `Platform::Array`が渡されると、 `ArrayReference` は、そのデータを指定された C スタイル配列に直接格納します。 `ArrayReference` にソース データへのロック オンがないため、呼び出しが完了する前に別のスレッドでそのデータが変更されるかまたは削除された場合、結果は不確定になることに注意してください。
 
-次のコード スニペットは、 [DataReader](https://msdn.microsoft.com/library/windows/apps/windows.storage.streams.datareader.aspx) 操作の結果を `Platform::Array` にコピーする方法 (通常のパターン) と、 `ArrayReference` を代わりに使用してデータを C スタイル配列に直接コピーする方法を示します。
+次のコード スニペットは、 [DataReader](/uwp/api/Windows.Storage.Streams.DataReader) 操作の結果を `Platform::Array` にコピーする方法 (通常のパターン) と、 `ArrayReference` を代わりに使用してデータを C スタイル配列に直接コピーする方法を示します。
 
 [!code-cpp[cx_arrays#07](../cppcx/codesnippet/CPP/js-array/class1.h#07)]
 
 ## <a name="avoid-exposing-an-array-as-a-property"></a>配列をプロパティとして公開することを回避する方法
 
-一般に、ref クラスで `Platform::Array` 型をプロパティとして公開することは避ける必要があります。これは、クライアント コードが単一要素にアクセスしようとしている場合でも、配列全体が返されるためです。 パブリック ref クラスでシーケンス コンテナーをプロパティとして公開する必要があるときは、 [Windows::Foundation::IVector](https://msdn.microsoft.com/library/windows/apps/br206631.aspx) の方が適切です。 プライベートまたは内部 API (メタデータに発行されません) では、 [std::vector](../standard-library/vector-class.md)などの標準 C++ コンテナーの使用を検討してください。
+一般に、ref クラスで `Platform::Array` 型をプロパティとして公開することは避ける必要があります。これは、クライアント コードが単一要素にアクセスしようとしている場合でも、配列全体が返されるためです。 パブリック ref クラスでシーケンス コンテナーをプロパティとして公開する必要があるときは、 [Windows::Foundation::IVector](/uwp/api/Windows.Foundation.Collections.IVector_T_) の方が適切です。 プライベートまたは内部 API (メタデータに発行されません) では、 [std::vector](../standard-library/vector-class.md)などの標準 C++ コンテナーの使用を検討してください。
 
 ## <a name="see-also"></a>関連項目
 

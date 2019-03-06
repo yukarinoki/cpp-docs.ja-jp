@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 9cf01f16fe21d0c5bea34bf168c6ea6bff04c195
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5b3e34987b5d6b63ee302ba53e456c448ac3c3d2
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263612"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413954"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog クラス
 
@@ -582,7 +582,7 @@ STDMETHOD(EnableModeless)(BOOL fEnable);
 ### <a name="parameters"></a>パラメーター
 
 *fEnable*<br/>
-参照してください*fEnable*で[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx) Windows SDK に含まれています。
+参照してください*fEnable*で[IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\)) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -590,7 +590,7 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::EnableModeless](https://msdn.microsoft.com/library/aa753253.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::EnableModeless](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753253\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="filterdataobject"></a>  CDHtmlDialog::FilterDataObject
 
@@ -605,7 +605,7 @@ STDMETHOD(FilterDataObject)(
 ### <a name="parameters"></a>パラメーター
 
 *pDO*<br/>
-参照してください*pDO*で[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx) Windows SDK に含まれています。
+参照してください*pDO*で[IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\)) Windows SDK に含まれています。
 
 *ppDORet*<br/>
 参照してください*ppDORet*で`IDocHostUIHandler::FilterDataObject`Windows SDK に含まれています。
@@ -616,7 +616,7 @@ S_FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::FilterDataObject](https://msdn.microsoft.com/library/aa753254.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::FilterDataObject](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753254\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="getcontroldispatch"></a>  CDHtmlDialog::GetControlDispatch
 
@@ -695,7 +695,7 @@ A [CString](../../atl-mfc-shared/reference/cstringt-class.md)を取得する URL
 
 ##  <a name="getdhtmldocument"></a>  CDHtmlDialog::GetDHtmlDocument
 
-取得、 [IHTMLDocument2](https://msdn.microsoft.com/library/aa752574.aspx)現在読み込まれている HTML ドキュメントのインターフェイス。
+取得、 [IHTMLDocument2](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa752574\(v=vs.85\))現在読み込まれている HTML ドキュメントのインターフェイス。
 
 ```
 HRESULT GetDHtmlDocument(IHTMLDocument2 **pphtmlDoc);
@@ -722,7 +722,7 @@ STDMETHOD(GetDropTarget)(
 ### <a name="parameters"></a>パラメーター
 
 *pDropTarget*<br/>
-参照してください*pDropTarget*で[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx) Windows SDK に含まれています。
+参照してください*pDropTarget*で[IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\)) Windows SDK に含まれています。
 
 *ppDropTarget*<br/>
 参照してください*ppDropTarget*で`IDocHostUIHandler::GetDropTarget`Windows SDK に含まれています。
@@ -733,7 +733,7 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::GetDropTarget](https://msdn.microsoft.com/library/aa753255.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::GetDropTarget](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753255\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="getelement"></a>  CDHtmlDialog::GetElement
 
@@ -896,7 +896,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 ### <a name="parameters"></a>パラメーター
 
 *ppDispatch*<br/>
-参照してください*ppDispatch*で[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx) Windows SDK に含まれています。
+参照してください*ppDispatch*で[IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\)) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -904,7 +904,7 @@ STDMETHOD(GetExternal)(IDispatch** ppDispatch);
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::GetExternal](https://msdn.microsoft.com/library/aa753256.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::GetExternal](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753256\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="gethostinfo"></a>  CDHtmlDialog::GetHostInfo
 
@@ -917,7 +917,7 @@ STDMETHOD(GetHostInfo)(DOCHOSTUIINFO* pInfo);
 ### <a name="parameters"></a>パラメーター
 
 *pInfo*<br/>
-参照してください*pInfo*で[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx) Windows SDK に含まれています。
+参照してください*pInfo*で[IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\)) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -925,7 +925,7 @@ S_OK を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::GetHostInfo](https://msdn.microsoft.com/library/aa753257.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::GetHostInfo](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753257\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="getoptionkeypath"></a>  CDHtmlDialog::GetOptionKeyPath
 
@@ -940,7 +940,7 @@ STDMETHOD(GetOptionKeyPath)(
 ### <a name="parameters"></a>パラメーター
 
 *pchKey*<br/>
-参照してください*pchKey*で[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx) Windows SDK に含まれています。
+参照してください*pchKey*で[IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\)) Windows SDK に含まれています。
 
 *dw*<br/>
 参照してください*dw*で`IDocHostUIHandler::GetOptionKeyPath`Windows SDK にします。
@@ -951,7 +951,7 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::GetOptionKeyPath](https://msdn.microsoft.com/library/aa753258.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::GetOptionKeyPath](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753258\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="hideui"></a>  CDHtmlDialog::HideUI
 
@@ -967,7 +967,7 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::HideUI](https://msdn.microsoft.com/library/aa753259.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::HideUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753259\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="isexternaldispatchsafe"></a>  CDHtmlDialog::IsExternalDispatchSafe
 
@@ -1082,7 +1082,7 @@ void Navigate(
 対象とする URL を含む文字列へのポインター。
 
 *dwFlags*<br/>
-履歴の一覧にリソースを追加するかどうか、キャッシュからキャッシュに読み取り/書き込みをするかどうかと、新しいウィンドウで、リソースを表示するかどうかを指定する変数のフラグ。 変数で定義される値の組み合わせとすることができます、[変数には](https://msdn.microsoft.com/library/aa768360.aspx)列挙体。
+履歴の一覧にリソースを追加するかどうか、キャッシュからキャッシュに読み取り/書き込みをするかどうかと、新しいウィンドウで、リソースを表示するかどうかを指定する変数のフラグ。 変数で定義される値の組み合わせとすることができます、[変数には](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa768360\(v=vs.85\))列挙体。
 
 *lpszTargetFrameName*<br/>
 リソースを表示するフレームの名前を含む文字列へのポインター。
@@ -1143,7 +1143,7 @@ STDMETHOD(OnDocWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>パラメーター
 
 *fActivate*<br/>
-参照してください*fActivate*で[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx) Windows SDK に含まれています。
+参照してください*fActivate*で[IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\)) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1151,7 +1151,7 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::OnDocWindowActivate](https://msdn.microsoft.com/library/aa753261.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::OnDocWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753261\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="onframewindowactivate"></a>  CDHtmlDialog::OnFrameWindowActivate
 
@@ -1164,7 +1164,7 @@ STDMETHOD(OnFrameWindowActivate)(BOOL fActivate);
 ### <a name="parameters"></a>パラメーター
 
 *fActivate*<br/>
-参照してください*fActivate*で[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx) Windows SDK に含まれています。
+参照してください*fActivate*で[IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\)) Windows SDK に含まれています。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1172,7 +1172,7 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::OnFrameWindowActivate](https://msdn.microsoft.com/library/aa753262.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::OnFrameWindowActivate](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753262\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="oninitdialog"></a>  CDHtmlDialog::OnInitDialog
 
@@ -1226,7 +1226,7 @@ STDMETHOD(ResizeBorder)(
 ### <a name="parameters"></a>パラメーター
 
 *prcBorder*<br/>
-参照してください*prcBorder*で[IDocHostUIHandler::ResizeBorder](https://msdn.microsoft.com/library/aa753263.aspx) Windows SDK に含まれています。
+参照してください*prcBorder*で[IDocHostUIHandler::ResizeBorder](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753263\(v=vs.85\)) Windows SDK に含まれています。
 
 *pUIWindow*<br/>
 参照してください*pUIWindow*で`IDocHostUIHandler::ResizeBorder`Windows SDK に含まれています。
@@ -1374,7 +1374,7 @@ void SetHostFlags(DWORD dwFlags);
 ### <a name="parameters"></a>パラメーター
 
 *dwFlags*<br/>
-使用可能な値は、次を参照してください。 [DOCHOSTUIFLAG](https://msdn.microsoft.com/library/aa753277.aspx) Windows SDK に含まれています。
+使用可能な値は、次を参照してください。 [DOCHOSTUIFLAG](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753277\(v=vs.85\)) Windows SDK に含まれています。
 
 ##  <a name="showcontextmenu"></a>  CDHtmlDialog::ShowContextMenu
 
@@ -1391,7 +1391,7 @@ STDMETHOD(ShowContextMenu)(
 ### <a name="parameters"></a>パラメーター
 
 *dwID*<br/>
-参照してください*dwID*で[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx) Windows SDK に含まれています。
+参照してください*dwID*で[IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\)) Windows SDK に含まれています。
 
 *ppt*<br/>
 参照してください*ppt*で`IDocHostUIHandler::ShowContextMenu`Windows SDK にします。
@@ -1408,7 +1408,7 @@ S_FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::ShowContextMenu](https://msdn.microsoft.com/library/aa753264.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::ShowContextMenu](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753264\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="showui"></a>  CDHtmlDialog::ShowUI
 
@@ -1426,7 +1426,7 @@ STDMETHOD(ShowUI)(
 ### <a name="parameters"></a>パラメーター
 
 *dwID*<br/>
-参照してください*dwID*で[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx) Windows SDK に含まれています。
+参照してください*dwID*で[IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\)) Windows SDK に含まれています。
 
 *pActiveObject*<br/>
 参照してください*d pActiveObject*で`IDocHostUIHandler::ShowUI`Windows SDK に含まれています。
@@ -1446,7 +1446,7 @@ S_FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::ShowUI](https://msdn.microsoft.com/library/aa753265.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::ShowUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753265\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="translateaccelerator"></a>  CDHtmlDialog::TranslateAccelerator
 
@@ -1462,7 +1462,7 @@ STDMETHOD(TranslateAccelerator)(
 ### <a name="parameters"></a>パラメーター
 
 *lpMsg*<br/>
-参照してください*lpMsg*で[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx) Windows SDK に含まれています。
+参照してください*lpMsg*で[IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\)) Windows SDK に含まれています。
 
 *pguidCmdGroup*<br/>
 参照してください*pguidCmdGroup*で`IDocHostUIHandler::TranslateAccelerator`Windows SDK に含まれています。
@@ -1476,7 +1476,7 @@ S_FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::TranslateAccelerator](https://msdn.microsoft.com/library/aa753266.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::TranslateAccelerator](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753266\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="translateurl"></a>  CDHtmlDialog::TranslateUrl
 
@@ -1492,7 +1492,7 @@ STDMETHOD(TranslateUrl)(
 ### <a name="parameters"></a>パラメーター
 
 *dwTranslate*<br/>
-参照してください*dwTranslate*で[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx) Windows SDK に含まれています。
+参照してください*dwTranslate*で[IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\)) Windows SDK に含まれています。
 
 *pchURLIn*<br/>
 参照してください*pchURLIn*で`IDocHostUIHandler::TranslateUrl`Windows SDK に含まれています。
@@ -1506,7 +1506,7 @@ S_FALSE を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::TranslateUrl](https://msdn.microsoft.com/library/aa753267.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::TranslateUrl](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753267\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ##  <a name="updateui"></a>  CDHtmlDialog::UpdateUI
 
@@ -1522,7 +1522,7 @@ E_NOTIMPL を返します。
 
 ### <a name="remarks"></a>Remarks
 
-このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::UpdateUI](https://msdn.microsoft.com/library/aa753268.aspx)」の説明に従って、Windows SDK。
+このメンバー関数は CDHtmlDialog の実装の[IDocHostUIHandler::UpdateUI](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa753268\(v=vs.85\))」の説明に従って、Windows SDK。
 
 ## <a name="see-also"></a>関連項目
 

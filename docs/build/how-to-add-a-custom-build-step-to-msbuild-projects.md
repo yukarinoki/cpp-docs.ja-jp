@@ -1,19 +1,19 @@
 ---
-title: '方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する'
+title: '方法: MSBuild プロジェクトへのカスタム ビルド ステップを追加します。'
 ms.date: 11/04/2016
 f1_keywords:
 - msbuild.cpp.howto.addcustombuildstep
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 7b169bfc6668fc284b45554d08d68880967a7de1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57b7636c58a245bfea3a71dfb6aa7ee853329f19
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50610978"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413226"
 ---
-# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する
+# <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>方法: MSBuild プロジェクトへのカスタム ビルド ステップを追加します。
 
 カスタム ビルド ステップは、ビルドでのユーザー定義の手順です。 その他のように動作するカスタム ビルド ステップ*コマンド ツール*など、標準的なコンパイルまたはリンクのツールの手順の手順。
 
@@ -27,7 +27,7 @@ ms.locfileid: "50610978"
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>カスタム ビルド ステップによって実行される対象を定義するには
 
-1. プロジェクト ファイルには、プロパティ グループを追加します。 次の例に示すように、このプロパティ グループで、コマンド、その入力と出力、およびメッセージを指定します。 この例で作成した main.cpp ファイルから .cab ファイルを作成します[チュートリアル: Visual C プロジェクトを作成するを使用して MSBuild](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)します。
+1. プロジェクト ファイルには、プロパティ グループを追加します。 次の例に示すように、このプロパティ グループで、コマンド、その入力と出力、およびメッセージを指定します。 この例で作成した main.cpp ファイルから .cab ファイルを作成します[チュートリアル。MSBuild を使用して、Visual C プロジェクトを作成する](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)します。
 
     ```
     <ItemDefinitionGroup>

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - throwing exceptions, managed exceptions
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
-ms.openlocfilehash: 45244ace414fc073956684088ac43eb9b92f1e5b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b4eb74fe3e485f12ac7f43b0a8a56800ef0535e7
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588241"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57423847"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>マネージド例外の使用についての基本概念
 
@@ -29,7 +29,7 @@ ms.locfileid: "50588241"
 
 ## <a name="remarks"></a>Remarks
 
-コンパイルする場合、 **/clr**オプション、標準と CLR の例外を処理できる[C++ 例外処理](../cpp/cpp-exception-handling.md)と[例外処理を構造化](../cpp/structured-exception-handling-c-cpp.md)(SEH)。 CLR の例外は、マネージ型によってスローされる例外です。 [System::exception](https://msdn.microsoft.com/library/system.exception.aspx)クラスは、CLR の例外を処理するための多くの便利なメソッドを提供し、ユーザー定義の例外クラスの基底クラスとしてお勧めします。
+コンパイルする場合、 **/clr**オプション、標準と CLR の例外を処理できる<xref:System.Exception>クラスは、CLR の例外を処理するための多くの便利なメソッドを提供し、ユーザー定義の例外の基底クラスとしてはお勧めしますクラス。
 
 インターフェイスから派生した例外の種類のキャッチはサポートされていません **/clr**します。 また、共通言語ランタイムは許可されていません。 スタック オーバーフローの例外をキャッチするにはスタック オーバーフロー例外は、プロセスを終了します。
 
@@ -140,7 +140,7 @@ In 'catch(MyStruct^ catchException)'
 
 ### <a name="catching-unmanaged-types"></a>アンマネージ型をキャッチします。
 
-非管理対象のオブジェクトの種類がスローされたときに、型の例外でラップ[System::Runtime.InteropServices::SEHException](https://msdn.microsoft.com/library/system.runtime.interopservices.sehexception.aspx)します。 適切な検索するときに**キャッチ**句では、2 つの可能性があります。
+非管理対象のオブジェクトの種類がスローされたときに、型の例外でラップ<xref:System.Runtime.InteropServices.SEHException>します。 適切な検索するときに**キャッチ**句では、2 つの可能性があります。
 
 - ネイティブ C++ の型が発生した場合、例外がラップ解除され、検出された型と比較します。 この比較により、通常の方法でキャッチするネイティブ C++ の型。
 

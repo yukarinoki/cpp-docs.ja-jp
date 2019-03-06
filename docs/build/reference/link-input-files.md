@@ -14,18 +14,18 @@ helpviewer_keywords:
 - import libraries [C++], linker files
 - command input to linker files [C++]
 ms.assetid: bb26fcc5-509a-4620-bc3e-b6c6e603a412
-ms.openlocfilehash: a5aaf162a16b6989ac1abbcb6a574af1c31b543a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9fb2e6b8ee0f8ddc1512c605373671ae1c93c0b8
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50550554"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413252"
 ---
 # <a name="link-input-files"></a>LINK の入力ファイル
 
 リンカーは、オブジェクト、インポートと標準ライブラリ、リソース、モジュールの定義、およびコマンドの入力が含まれているファイルに指定します。 リンクは、ファイルの内容に関する判断を行うファイルの拡張機能を使用しません。 代わりに、リンクは、各入力ファイルがファイルの種類を判断するを調べます。
 
-コマンドラインでのオブジェクト ファイルは、コマンドラインで表示される順序で処理されます。 ライブラリは、次の注意点がありますも、コマンドラインの順序で検索されます: ときライブラリからのオブジェクト ファイルでは検索ライブラリで最初に、され、コマンドラインから次のライブラリの未解決のシンボルを[/DEFAULTLIB (既定のライブラリの指定)](../../build/reference/defaultlib-specify-default-library.md)ディレクティブ、およびコマンドラインの先頭にすべてのライブラリにします。
+コマンドラインでのオブジェクト ファイルは、コマンドラインで表示される順序で処理されます。 ライブラリは、次の注意点がありますも、コマンドラインの順序で検索されます。シンボルは未解決のときライブラリからのオブジェクト ファイルで検索のライブラリで最初に、され、コマンドラインから次のライブラリと[/DEFAULTLIB (既定のライブラリの指定)](../../build/reference/defaultlib-specify-default-library.md)ディレクティブ、し、コマンドラインの先頭のすべてのライブラリを
 
 > [!NOTE]
 >  リンクでは、応答ファイルおよびファイルの順序でのコメントの始まりとしてセミコロン (またはその他の任意の文字) を不要になった受け取ります。 セミコロンは、モジュール定義ファイル (.def) 内のコメントの始まりとしてのみ認識されます。

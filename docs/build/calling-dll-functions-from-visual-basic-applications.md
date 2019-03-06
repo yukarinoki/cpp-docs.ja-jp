@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 504bb2fbb6dcdf624f7e6b380cd895e20580824b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 88705b2a33e3eb82043d93c534477fce96849502
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521217"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417604"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>DLL 関数の Visual Basic アプリケーションからの呼び出し方
 
@@ -39,7 +39,8 @@ C の呼び出し規則 (`__cdecl`) による装飾では、名前は `_func` �
 
 - エクスポートされる関数が C の呼び出し規則を使わない場合 (`__stdcall` など) は、装飾名がエクスポートされます。
 
-スタックがクリアされた場所をオーバーライドする方法はないので、`__stdcall` を使う必要があります。 `__stdcall` を使って装飾を外すには、.def ファイルの EXPORTS セクションにエイリアスを使って、その名前を指定する必要があります。 関数宣言の例を次に示します。
+スタックがクリアされた場所をオーバーライドする方法はないので、`__stdcall` を使う必要があります。 
+  `__stdcall` を使って装飾を外すには、.def ファイルの EXPORTS セクションにエイリアスを使って、その名前を指定する必要があります。 関数宣言の例を次に示します。
 
 ```C
 int  __stdcall MyFunc (int a, double b);

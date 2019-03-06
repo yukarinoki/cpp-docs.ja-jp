@@ -153,12 +153,12 @@ f1_keywords:
 helpviewer_keywords:
 - CWindow class
 ms.assetid: fefa00c8-f053-4bcf-87bc-dc84f5386683
-ms.openlocfilehash: b27d6bb01b9e94ebe38be5455ffcc870806ac33b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2767770e354c81e5a34a0d6e9105a27ecb361ddc
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298348"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425069"
 ---
 # <a name="cwindow-class"></a>CWindow クラス
 
@@ -537,7 +537,7 @@ BOOL ClientToScreen(LPRECT lpRect) const throw();
 
 参照してください[ClientToScreen](/windows/desktop/api/winuser/nf-winuser-clienttoscreen) Windows SDK にします。
 
-このメソッドの 2 番目のバージョンでは、座標を変換することができる、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+このメソッドの 2 番目のバージョンでは、座標を変換することができる、 [RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 ##  <a name="create"></a>  CWindow::Create
 
@@ -1790,7 +1790,7 @@ int MapWindowPoints(
 
 参照してください[MapWindowPoints](/windows/desktop/api/winuser/nf-winuser-mapwindowpoints) Windows SDK にします。
 
-このメソッドの 2 番目のバージョンでは、座標を変換することができる、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+このメソッドの 2 番目のバージョンでは、座標を変換することができる、 [RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 ##  <a name="messagebox"></a>  CWindow::MessageBox
 
@@ -1924,7 +1924,7 @@ BOOL MoveWindow(
 
 最上位レベルのウィンドウのオブジェクト x と y のパラメーターは、画面の左上隅に対して相対的です。 子ウィンドウ オブジェクトの親ウィンドウのクライアント領域の左上隅に対して相対的になります。
 
-このメソッドの 2 番目のバージョンを使用して、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの新しい位置、幅、および高さを決定する構造体。
+このメソッドの 2 番目のバージョンを使用して、 [RECT](/previous-versions/dd162897\(v=vs.85\))ウィンドウの新しい位置、幅、および高さを決定する構造体。
 
 ##  <a name="nextdlgctrl"></a>  CWindow::NextDlgCtrl
 
@@ -2135,7 +2135,7 @@ BOOL ScreenToClient(LPRECT lpRect) const throw();
 
 参照してください[ScreenToClient](/windows/desktop/api/winuser/nf-winuser-screentoclient) Windows SDK にします。
 
-このメソッドの 2 番目のバージョンでは、座標を変換することができる、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+このメソッドの 2 番目のバージョンでは、座標を変換することができる、 [RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 ##  <a name="scrollwindow"></a>  CWindow::ScrollWindow
 
@@ -2606,7 +2606,7 @@ BOOL SetWindowPos(
 
 参照してください[SetWindowPos](/windows/desktop/api/winuser/nf-winuser-setwindowpos) Windows SDK にします。
 
-このメソッドの 2 番目のバージョンを使用して、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体をウィンドウの新しい位置、幅、および高さを設定します。
+このメソッドの 2 番目のバージョンを使用して、 [RECT](/previous-versions/dd162897\(v=vs.85\))構造体をウィンドウの新しい位置、幅、および高さを設定します。
 
 ##  <a name="setwindowrgn"></a>  CWindow::SetWindowRgn
 

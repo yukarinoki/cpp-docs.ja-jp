@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: 850c16420606452414cbe284c5f9f25031859c93
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304523"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425095"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 
@@ -428,7 +428,7 @@ class CListCtrl : public CWnd
 
 簡単な概要を次に、`CListCtrl`クラス。 詳細な概念については、次を参照してください。[使い方](../../mfc/using-clistctrl.md)と[コントロール](../../mfc/controls-mfc.md)します。
 
-## <a name="views"></a>ビュー
+## <a name="views"></a>Views
 
 リスト ビュー コントロールは、"views"という 4 つの異なる方法でその内容を表示できます。
 
@@ -619,7 +619,7 @@ virtual BOOL Create(
 リスト コントロールのスタイルを指定します。 リスト コントロール スタイルの任意の組み合わせをコントロールに適用されます。 参照してください[リスト ビュー ウィンドウ スタイル](/windows/desktop/Controls/list-view-window-styles)これらのスタイルの完全な一覧については、Windows SDK に含まれています。 拡張を使用してコントロールに固有のスタイル セット[SetExtendedStyle](#setextendedstyle)します。
 
 *rect*<br/>
-リスト コントロールのサイズと位置を指定します。 いずれかのことができます、`CRect`オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+リスト コントロールのサイズと位置を指定します。 いずれかのことができます、`CRect`オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 *pParentWnd*<br/>
 リスト コントロールの親ウィンドウを通常を指定します、`CDialog`します。 NULL は指定できません。
@@ -667,7 +667,7 @@ virtual BOOL CreateEx(
 リスト コントロールのスタイルを指定します。 リスト コントロール スタイルの任意の組み合わせをコントロールに適用されます。 これらのスタイルの完全な一覧を参照してください。[リスト ビュー ウィンドウ スタイル](/windows/desktop/Controls/list-view-window-styles)Windows SDK に含まれています。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -701,7 +701,7 @@ CImageList* CreateDragImage(
 イメージ リストを持つドラッグが作成される項目のインデックス。
 
 *lpPoint*<br/>
-アドレスを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)ビューで、イメージの左上隅の初期の場所を受信する構造体を調整します。
+アドレスを[ポイント](/previous-versions/dd162805\(v=vs.85\))ビューで、イメージの左上隅の初期の場所を受信する構造体を調整します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1442,7 +1442,7 @@ BOOL GetGroupRect(
 |パラメーター|説明|
 |---------------|-----------------|
 |*iGroupId*|[in]グループを指定します。|
-|*lpRect*|[入力、出力]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 指定されているグループの四角形の座標がその構造体にこのメソッドが成功した場合は、 *iGroupId*します。|
+|*lpRect*|[入力、出力]ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。 指定されているグループの四角形の座標がその構造体にこのメソッドが成功した場合は、 *iGroupId*します。|
 |*iCoords*|[in]取得する四角形の座標を指定します。 これらの値のいずれかを使用します。<br /><br /> -LVGGR_GROUP - 展開されたグループ全体の座標を (既定値)。<br />-LVGGR_HEADER - のみヘッダー (折りたたまれたグループ) の座標。<br />-LVGGR_SUBSETLINK - のサブセットのリンク (サブセットのマークアップ) のみを調整します。|
 
 ### <a name="return-value"></a>戻り値
@@ -1451,7 +1451,7 @@ BOOL GetGroupRect(
 
 ### <a name="remarks"></a>Remarks
 
-呼び出し元を割り当て、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)によって示される構造体、 *pRect*パラメーター。
+呼び出し元を割り当て、 [RECT](/previous-versions/dd162897\(v=vs.85\))によって示される構造体、 *pRect*パラメーター。
 
 このメソッドは、送信、 [LVM_GETGROUPRECT](/windows/desktop/Controls/lvm-getgrouprect)メッセージは、Windows SDK で説明します。
 
@@ -1790,7 +1790,7 @@ BOOL GetItemIndexRect(
 |*pItemIndex*|[in]ポインター、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)サブ項目の親項目の構造体。<br /><br /> 呼び出し元がのメンバーを設定したり、[記述](https://msdn.microsoft.com/library/windows/desktop/bb774762)構造体。 このパラメーターは、NULL にすることはできません。|
 |*iColumn*|[in]コントロール内の列の 0 から始まるインデックス。|
 |*rectType*|[in]外接する四角形を取得するリスト ビューのサブ項目の部分です。 次のいずれかの値を指定します。<br /><br /> LVIR_BOUNDS - アイコンとラベルを含む全体のサブ項目の外接する四角形を返します。<br /><br /> LVIR_ICON は、アイコンまたは小さいアイコンのサブ項目の外接する四角形を返します。<br /><br /> LVIR_LABEL - は、サブ項目のテキストの外接する四角形を返します。|
-|*pRect*|[out]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)サブ項目の外接する四角形に関する情報を受け取る構造体。<br /><br /> 呼び出し元を割り当て、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。 このパラメーターは、NULL にすることはできません。|
+|*pRect*|[out]ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))サブ項目の外接する四角形に関する情報を受け取る構造体。<br /><br /> 呼び出し元を割り当て、 [RECT](/previous-versions/dd162897\(v=vs.85\))構造体。 このパラメーターは、NULL にすることはできません。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -1844,7 +1844,7 @@ BOOL GetItemPosition(
 位置を取得する項目のインデックス。
 
 *lpPoint*<br/>
-アドレスを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)ビューでアイテムの左上隅の位置を受け取る構造体を調整します。
+アドレスを[ポイント](/previous-versions/dd162805\(v=vs.85\))ビューでアイテムの左上隅の位置を受け取る構造体を調整します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1883,7 +1883,7 @@ BOOL GetItemRect(
 位置を取得する項目のインデックス。
 
 *lpRect*<br/>
-アドレスを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形を受け取る。
+アドレスを[RECT](/previous-versions/dd162897\(v=vs.85\))外接する四角形を受け取る。
 
 *nCode*<br/>
 外接する四角形を取得する対象のリスト ビュー項目の部分です。 これらの値のいずれかを指定できます。
@@ -2220,7 +2220,7 @@ BOOL GetOrigin(LPPOINT lpPoint) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpPoint*<br/>
-アドレスを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)ビューの基準を受け取る。
+アドレスを[ポイント](/previous-versions/dd162805\(v=vs.85\))ビューの基準を受け取る。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2531,7 +2531,7 @@ BOOL GetViewRect(LPRECT lpRect) const;
 ### <a name="parameters"></a>パラメーター
 
 *lpRect*<br/>
-アドレスを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+アドレスを[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -2834,7 +2834,7 @@ int InsertMarkHitTest(
 ### <a name="parameters"></a>パラメーター
 
 *pPoint*<br/>
-ポインターを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)リスト コントロールのクライアント領域を基準と、ヒット テストを含む構造体を調整します。
+ポインターを[ポイント](/previous-versions/dd162805\(v=vs.85\))リスト コントロールのクライアント領域を基準と、ヒット テストを含む構造体を調整します。
 
 *lvim*<br/>
 ポインター、 [LVINSERTMARK](/windows/desktop/api/commctrl/ns-commctrl-lvinsertmark)パラメーターで定義されている座標に最も近い挿入ポイントを指定する構造体。
@@ -2897,7 +2897,7 @@ UINT MapIDToIndex(UINT id) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*id*|[in]項目の一意の ID。|
+|*ID*|[in]項目の一意の ID。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -3854,7 +3854,7 @@ BOOL SetItemPosition(
 位置が設定される項目のインデックス。
 
 *pt*<br/>
-A[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)アイテムの左上隅のビューで、新しい位置を指定する構造体の座標します。
+A[ポイント](/previous-versions/dd162805\(v=vs.85\))アイテムの左上隅のビューで、新しい位置を指定する構造体の座標します。
 
 ### <a name="return-value"></a>戻り値
 

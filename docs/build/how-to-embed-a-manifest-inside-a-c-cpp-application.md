@@ -1,19 +1,19 @@
 ---
-title: '方法 : マニフェストを C/C++ アプリケーションに埋め込む'
+title: '方法: マニフェストを C/C++ アプリケーション内に埋め込む'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - manifests [C++]
 - embedding manifests
 - makefiles, updating to embed manifest
 ms.assetid: ec0bac69-2fdc-466c-ab0d-710a22974e5d
-ms.openlocfilehash: c3557d22f51207687c6c0adde80b4cd5b3293afd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1bff23c91b465d697cc52a2b893ece5be3764b1
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624866"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57412901"
 ---
-# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>方法 : マニフェストを C/C++ アプリケーションに埋め込む
+# <a name="how-to-embed-a-manifest-inside-a-cc-application"></a>方法: マニフェストを C/C++ アプリケーション内に埋め込む
 
 C/C++ アプリケーション (またはライブラリ) にほとんどのシナリオで適切な実行時の動作が保証されるため、最終的なバイナリ内に埋め込まれたマニフェストがあることをお勧めします。 既定では、Visual Studio がソース ファイルからプロジェクトをビルドするときに、マニフェストを埋め込むしよう参照してください[Visual Studio でのマニフェスト生成](../build/manifest-generation-in-visual-studio.md)詳細についてはします。 ただしアプリケーションを作成するには、nmake を使用して、既存のメイクファイルにいくつかの変更は必要な。 このセクションでは、自動的に最終的なバイナリ内のマニフェストを埋め込むには既存のメイクファイルを変更する方法を示します。
 
@@ -23,11 +23,11 @@ C/C++ アプリケーション (またはライブラリ) にほとんどのシ�
 
 - インクリメンタル ビルドを実行しない場合は、ビルド後の手順として、次のようなコマンドラインを使用してマニフェストを直接埋め込むことができます。
 
-   **mt.exe のマニフェスト MyApp.exe.manifest-outputresource:MyApp.exe;1**
+   **mt.exe -manifest MyApp.exe.manifest -outputresource:MyApp.exe;1**
 
    または
 
-   **mt.exe のマニフェスト MyLibrary.dll.manifest-outputresource:MyLibrary.dll;2**
+   **mt.exe -manifest MyLibrary.dll.manifest -outputresource:MyLibrary.dll;2**
 
    (1 exe、DLL では 2 です。)
 

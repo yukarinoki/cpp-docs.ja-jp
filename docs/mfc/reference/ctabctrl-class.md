@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CTabCtrl [MFC], SetPadding
 - CTabCtrl [MFC], SetToolTips
 ms.assetid: 42e4aff6-46ae-4b2c-beaa-d1dce8d82138
-ms.openlocfilehash: 62d42995a3d1b4a61dbd3ff38c48d9b300177798
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ccf35c7a036a69487d5138baf8c017f9c5995bef
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259543"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57425017"
 ---
 # <a name="ctabctrl-class"></a>CTabCtrl クラス
 
@@ -170,7 +170,7 @@ void AdjustRect(BOOL bLarger,   LPRECT lpRect);
 実行する操作を示します。 このパラメーターが TRUE の場合*lpRect*表示の四角形を指定し、対応するウィンドウの四角形を受信します。 このパラメーターが FALSE の場合*lpRect*ウィンドウ四角形を指定し、対応する表示する四角形を受信します。
 
 *lpRect*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)を指定した四角形を指定し、計算される四角形を受け取る構造体。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))を指定した四角形を指定し、計算される四角形を受け取る構造体。
 
 ### <a name="example"></a>例
 
@@ -194,7 +194,7 @@ virtual BOOL Create(
 タブ コントロールのスタイルを指定します。 任意の組み合わせを適用[タブ コントロールのスタイル](/windows/desktop/Controls/tab-control-styles)Windows SDK で説明します。 参照してください**解説**に対して一連のコントロールに適用することもできます。 ウィンドウ スタイル。
 
 *rect*<br/>
-タブ コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+タブ コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 *pParentWnd*<br/>
 タブ コントロールの親ウィンドウを通常を指定します、`CDialog`します。 NULL は指定できません。
@@ -250,7 +250,7 @@ virtual BOOL CreateEx(
 タブ コントロールのスタイルを指定します。 任意の組み合わせを適用[タブ コントロールのスタイル](/windows/desktop/Controls/tab-control-styles)Windows SDK で説明します。 参照してください**解説**で[作成](#create)に対して一連のコントロールに適用することもできます。 ウィンドウ スタイル。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -485,7 +485,7 @@ BOOL GetItemRect(int nItem,   LPRECT lpRect) const;
 タブ アイテムの 0 から始まるインデックス。
 
 *lpRect*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)  タブの外接する四角形を受け取る。これらの座標は、ビューポートの現在のマッピング モードを使用します。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))  タブの外接する四角形を受け取る。これらの座標は、ビューポートの現在のマッピング モードを使用します。
 
 ### <a name="return-value"></a>戻り値
 

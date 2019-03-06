@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - makefiles, comments
 ms.assetid: 76fd9e3d-5966-47f4-a091-c9e80b232b49
-ms.openlocfilehash: 91fb9001378973c86ffaaf7fd841e3c679444ef9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 08720e2f7db1e32f8762126f4e090cf50b61dbc5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625850"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426689"
 ---
 # <a name="comments-in-a-makefile"></a>メイクファイルのコメント
 
-シャープ記号付きのコメントの前 (#)。 NMAKE では、次の改行文字にシャープ記号からのテキストは無視されます。 次に例を示します。
+シャープ記号付きのコメントの前 (#)。 NMAKE では、次の改行文字にシャープ記号からのテキストは無視されます。 次に例を示します。 
 
 ```
 # Comment on line by itself

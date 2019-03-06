@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 550391d51560ff0beca8252ffb6193dd1e4d89b3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50632389"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57413174"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>MFC と動的にリンクされるレギュラー MFC Dll
 
@@ -33,7 +33,7 @@ MFC と動的にリンクされている MFC DLL の場合は、通常は、次�
 
 - 静的にリンクされるレギュラー MFC DLL とは異なりこの種類の DLL が MFC DLL (共有 MFC DLL とも呼ばれます) に動的にリンクします。
 
-- この種類の DLL にリンクされている MFC のインポート ライブラリは、MFC 拡張 Dll または MFC DLL を使用してアプリケーションに使用されるものと同じ: MFCxx (D) .lib します。
+- この種類の DLL にリンクされている MFC のインポート ライブラリは、MFC 拡張 Dll または MFC DLL を使用してアプリケーションに使用される 1 つと同じです。(D) MFCxx .lib します。
 
 MFC と動的にリンクされている MFC DLL の場合は、通常は、次の要件があります。
 
