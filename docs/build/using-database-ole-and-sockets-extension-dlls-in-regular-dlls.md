@@ -6,18 +6,18 @@ helpviewer_keywords:
 - DLLs [C++], extension
 - DLLs [C++], regular
 ms.assetid: 9f1d14a7-9e2a-4760-b3b6-db014fcdb7ff
-ms.openlocfilehash: 74945f712fed68548e3853d231a586ec0c70d84b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2d4cc4f3b82bd3082ba3b4eac635ea91c19691f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50587526"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57421208"
 ---
 # <a name="using-database-ole-and-sockets-mfc-extension-dlls-in-regular-mfc-dlls"></a>レギュラー MFC Dll でのデータベース、OLE、およびソケット MFC 拡張 Dll の使用
 
 MFC 拡張 DLL と有線接続しない場合は、MFC 拡張 DLL からレギュラー MFC DLL を使用する場合、 **CDynLinkLibrary**オブジェクトのチェーン レギュラー MFC DLL の一連の関連する問題の 1 つ以上を実行する場合があります。 MFC データベース、OLE、およびソケットのデバッグ バージョンをサポートするため、Dll が MFC 拡張 Dll として実装されている、明示的に使用、独自の MFC 拡張 Dll のいずれかのしないいなくても、機能をこれらの MFC を使用する場合と同様の問題が発生する可能性があります。 いくつかの現象は次のとおりです。
 
-- クラスの型のオブジェクトを逆シリアル化しようとして定義されている場合、MFC 拡張 DLL、メッセージ"警告: アーカイブから CYourClass を読み込むことができません。 クラス定義されていません。" シリアル化が失敗のトレースのデバッグ ウィンドウとオブジェクトに表示されます。
+- クラスの型のオブジェクトを逆シリアル化しようとして定義されている場合、MFC 拡張 DLL、メッセージ"警告。アーカイブから CYourClass を読み込むことができません。 クラス定義されていません。" シリアル化が失敗のトレースのデバッグ ウィンドウとオブジェクトに表示されます。
 
 - 無効なクラスを示す例外がスローする可能性があります。
 

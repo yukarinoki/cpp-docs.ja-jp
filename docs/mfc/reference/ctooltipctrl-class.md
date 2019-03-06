@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CToolTipCtrl [MFC], Update
 - CToolTipCtrl [MFC], UpdateTipText
 ms.assetid: 8973f70c-b73a-46c7-908d-758f364b9a97
-ms.openlocfilehash: 7750b7335b99bbfaa02c1f310c70bb868ef56573
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6055926e05f8a7f9fbecec113e859d08e6b6e636
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300961"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420844"
 ---
 # <a name="ctooltipctrl-class"></a>CToolTipCtrl Class
 
@@ -210,7 +210,7 @@ BOOL AddTool(
 ツールのテキストを含む文字列リソースの ID。
 
 *lpRectTool*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ツールの座標を含む構造体の外接する四角形。 識別されるウィンドウのクライアント領域の左上隅に対する相対座標は、*我が物*します。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))ツールの座標を含む構造体の外接する四角形。 識別されるウィンドウのクライアント領域の左上隅に対する相対座標は、*我が物*します。
 
 *nIDTool*<br/>
 ツールの ID。
@@ -248,7 +248,7 @@ BOOL AdjustRect(
 ### <a name="parameters"></a>パラメーター
 
 *lprc*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ツール ヒント ウィンドウの四角形またはテキストの表示の四角形を保持する構造体。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))ツール ヒント ウィンドウの四角形またはテキストの表示の四角形を保持する構造体。
 
 *き*<br/>
 TRUE の場合、 *lprc* 、テキスト表示の四角形を指定するために使用され、対応するウィンドウの四角形を受け取ります。 FALSE の場合、 *lprc*ウィンドウの四角形を指定するために使用され、対応するテキストの表示の四角形を受け取ります。
@@ -453,7 +453,7 @@ void GetMargin(LPRECT lprc) const;
 ### <a name="parameters"></a>パラメーター
 
 *lprc*<br/>
-アドレスを`RECT`余白の情報を受け取る構造体。 メンバー、 [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体は、外接する四角形を定義しないでください。 このメッセージのためには構造体のメンバーはように解釈されます。
+アドレスを`RECT`余白の情報を受け取る構造体。 メンバー、 [RECT](/previous-versions/dd162897\(v=vs.85\))構造体は、外接する四角形を定義しないでください。 このメッセージのためには構造体のメンバーはように解釈されます。
 
 |メンバー|表現|
 |------------|--------------------|
@@ -867,7 +867,7 @@ void SetToolRect(
 ツールの ID。
 
 *lpRect*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体の新しい外接する四角形を指定します。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))構造体の新しい外接する四角形を指定します。
 
 ##  <a name="setwindowtheme"></a>  CToolTipCtrl::SetWindowTheme
 
