@@ -35,12 +35,12 @@ helpviewer_keywords:
 - m_dwRef
 - m_iRowset
 ms.assetid: 06d9621d-60cc-4508-8b0c-528d1b1a809b
-ms.openlocfilehash: dba86b310dcd9b89026d95732f9ca542e6995146
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: b7284ace73d80eff6337e1d71cafef26094455f0
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556635"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414026"
 ---
 # <a name="csimplerow-class"></a>CSimpleRow クラス
 
@@ -78,7 +78,7 @@ class CSimpleRow
 
 行ハンドルは、論理的に結果の行の一意のタグです。 `IRowsetImpl` 新たに作成`CSimpleRow`で要求されたすべての行の[irowsetimpl::getnextrows](../../data/oledb/irowsetimpl-getnextrows.md)します。 `CSimpleRow` 既定のテンプレート引数にも、行ハンドルの独自の実装に置き換えることが`IRowsetImpl`します。 このクラスを置換する唯一の要件は、型の 1 つのパラメーターを受け取るコンス トラクターを提供する置換クラスを用意する**長い**します。
 
-## <a name="addrefrow"></a> Csimplerow::addrefrow
+## <a name="addrefrow"></a> CSimpleRow::AddRefRow
 
 既存の行ハンドルをスレッド セーフ方式で参照カウントを追加します。
 
@@ -88,7 +88,7 @@ class CSimpleRow
 DWORD AddRefRow();
 ```
 
-## <a name="compare"></a> Csimplerow::compare
+## <a name="compare"></a> CSimpleRow::Compare
 
 同じ行インスタンスを参照しているかを確認する 2 つの行を比較します。
 
@@ -105,9 +105,9 @@ HRESULT Compare(CSimpleRow* pRow);
 
 ### <a name="return-value"></a>戻り値
 
-HRESULT 値、通常は S_OK を示すは、2 つの行は、同じ行インスタンスまたは 2 つの行を示す S_FALSE は異なります。 参照してください[IRowsetIdentity::IsSameRow](https://docs.microsoft.com/previous-versions/windows/desktop/ms719629(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*の他の戻り値。
+HRESULT 値、通常は S_OK を示すは、2 つの行は、同じ行インスタンスまたは 2 つの行を示す S_FALSE は異なります。 参照してください[IRowsetIdentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*の他の戻り値。
 
-## <a name="csimplerow"></a> Csimplerow::csimplerow
+## <a name="csimplerow"></a> CSimpleRow::CSimpleRow
 
 コンストラクターです。
 
@@ -126,7 +126,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 
 セット[m_iRowset](../../data/oledb/csimplerow-m-irowset.md)に*iRowsetCur*します。
 
-## <a name="releaserow"></a> Csimplerow::releaserow
+## <a name="releaserow"></a> CSimpleRow::ReleaseRow
 
 スレッド セーフ方式で行を解放します。
 
@@ -136,7 +136,7 @@ CSimpleRow(DBCOUNTITEM iRowsetCur);
 DWORD ReleaseRow();
 ```
 
-## <a name="dwref"></a> Csimplerow::m_dwref
+## <a name="dwref"></a> CSimpleRow::m_dwRef
 
 既存の行ハンドルの参照カウント。
 
@@ -146,7 +146,7 @@ DWORD ReleaseRow();
 DWORD m_dwRef;
 ```
 
-## <a name="irowset"></a> Csimplerow::m_irowset
+## <a name="irowset"></a> CSimpleRow::m_iRowset
 
 カーソルを表す行セットのインデックスです。
 

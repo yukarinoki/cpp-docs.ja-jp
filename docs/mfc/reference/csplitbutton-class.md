@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CSplitButton [MFC], SetDropDownMenu
 - CSplitButton [MFC], OnDropDown
 ms.assetid: 6844d0a9-6408-4e44-9b5f-57628ed8bad6
-ms.openlocfilehash: b73e27097a64722afd6bad5b9bc2157655bd9aad
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 70bba379f33be2d4df05f6b96eac14bf248cf356
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274506"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414648"
 ---
 # <a name="csplitbutton-class"></a>CSplitButton クラス
 
@@ -97,7 +97,7 @@ virtual BOOL Create(
 |パラメーター|説明|
 |---------------|-----------------|
 |*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。|
-|*rect*|[in]参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)コントロールのサイズと位置を含む構造体。|
+|*rect*|[in]参照を[RECT](/previous-versions/dd162897\(v=vs.85\))コントロールのサイズと位置を含む構造体。|
 |*pParentWnd*|[in]Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|
 |*nID*|[in]コントロールの ID。|
 
@@ -145,7 +145,7 @@ afx_msg void OnDropDown(
 |パラメーター|説明|
 |---------------|-----------------|
 |*pNMHDR*|[in]ポインター、 [NMHDR](/windows/desktop/api/richedit/ns-richedit-_nmhdr)に関する情報を格納する構造体、 [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知します。|
-|*pResult*|[out]\(使用されません。 値は返されません)。値を返す、 [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知します。|
+|*pResult*|[out](使用されません。 値は返されません)。値を返す、 [BCN_DROPDOWN](/windows/desktop/Controls/bcn-dropdown)通知します。|
 
 ### <a name="remarks"></a>Remarks
 

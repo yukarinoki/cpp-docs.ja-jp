@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EDITBIN program
 - COFF files, editing
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
-ms.openlocfilehash: c2c0ee66ed1811755edc33b24737e057554fd01f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 39fdcfd3221599f20617092118e5cef5267e3d2b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542906"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57418790"
 ---
 # <a name="editbin-reference"></a>EDITBIN リファレンス
 
@@ -31,4 +31,4 @@ EDITBIN がで生成されたファイルで使用できる、 [/GL](../../build
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)
+[C と C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)

@@ -5,12 +5,12 @@ f1_keywords:
 - /kernel
 - /kernel-
 ms.assetid: 6d7fdff0-c3d1-4b78-9367-4da588ce8b05
-ms.openlocfilehash: 0df133922af90a91d5c1ae1ad3caebe11d854b8f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33a0f4019d8ad278f5850c499ee552ee72279455
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509658"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414756"
 ---
 # <a name="kernel-create-kernel-mode-binary"></a>/kernel (カーネル モード バイナリの作成)
 
@@ -32,7 +32,8 @@ Windows カーネルで実行できるバイナリを作成します。
 
 ## <a name="remarks"></a>Remarks
 
-`#pragma` には、このオプションを制御するための相当するものはありません。
+
+  `#pragma` には、このオプションを制御するための相当するものはありません。
 
 指定する、 **/kernel**オプションは、コンパイラとリンカーの言語機能はカーネル モードで許容されるかを判別し、ランタイムが不安定になるに一意を回避するための十分な表現力があることを確認するにはカーネル モード C++ です。 これは、カーネル モードで中断を伴う C++ 言語の機能の使用を禁止することで、警告は、潜在的な混乱が無効にすることはできませんが、C++ 言語の機能を提供することで実現されます。
 
@@ -79,8 +80,8 @@ class NONPAGESECTION MyNonPagedClass
 
    ||**/kernel** obj|**/kernel-** obj、MASM obj、または cvtresed|混在 **/kernel**と **/kernel-** obj|
    |-|----------------------|-----------------------------------------------|-------------------------------------------------|
-   |**リンク/kernel**|はい|はい|警告 LNK4257 ○ します。|
-   |**リンク**|はい|[はい]|はい|
+   |**リンク/kernel**|[はい]|[はい]|警告 LNK4257 ○ します。|
+   |**リンク**|[はい]|はい|[はい]|
 
    **LNK4257/KERNEL; でコンパイルされないオブジェクトのリンクイメージは動作しない可能性があります。**
 

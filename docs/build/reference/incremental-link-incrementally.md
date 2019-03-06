@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 0ef6e8c7fed2c58e8fc2949a84483015bbc9d6bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 60cec41173afc9955bddf9df0bd6796b5df6285c
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50642027"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57414084"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (インクリメンタル リンクを行う)
 

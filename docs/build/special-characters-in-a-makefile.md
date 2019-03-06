@@ -7,12 +7,12 @@ helpviewer_keywords:
 - special characters, in NMAKE macros
 - macros, special characters
 ms.assetid: 92c34ab5-ca6b-4fc0-bcf4-3172eaeda9f0
-ms.openlocfilehash: 18fa83fcfd0c70ac4e8b9bf5be08ac1922998ecb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2703adbbdba392b1a317e2656c6f3dba30a36b6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443731"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420758"
 ---
 # <a name="special-characters-in-a-makefile"></a>メイクファイルの特殊文字
 
@@ -24,7 +24,7 @@ NMAKE の特殊文字をリテラル文字として使用するには、その�
 
 マクロ、円記号 (\\) の後に改行文字がスペースで置き換えられます。
 
-コマンドでは、パーセント記号 (%) は、ファイル指定子が。 コマンドでは文字どおり % を表すためを 1 つの代わりに 2 つのパーセント記号 (%) を指定します。 その他の状況で (nmake の) 解釈単一の % をそのまま使いますが、常に double 型の値を解釈 %% として単一の % です。 そのため、リテラルを表す %%、3 つのパーセント記号をいずれかを指定 %%%c、または 4 つのパーセント記号、%%%c。
+コマンドで、パーセント記号 (%)ファイル指定子です。 コマンドでは文字どおり % を表す、2 つのパーセント記号 (%) を指定します1 つ代わりにです。 その他の状況で (nmake の) 解釈単一の % をそのまま使いますが、常に double 型の値を解釈 %% として単一の % です。 そのため、リテラルを表す %%、3 つのパーセント記号をいずれかを指定 %%%c、または 4 つのパーセント記号、%%%c。
 
 ドル記号 ($) をコマンドにリテラル文字として使用するには、2 つのドル記号 ($$) を指定します。 このメソッドは、他の状況でも使用できます、^ $ 動作します。
 

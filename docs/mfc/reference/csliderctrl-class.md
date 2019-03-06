@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetTipSide
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
-ms.openlocfilehash: 3fcdddd27437f57ba800a602873d9bb3ae26e82f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0179d69726f49f2df02979264da4966b35178434
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283606"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57422001"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl クラス
 
@@ -209,7 +209,7 @@ virtual BOOL Create(
 スライダー コントロールのスタイルを指定します。 任意の組み合わせを適用[スライダー コントロールのスタイル](/windows/desktop/Controls/trackbar-control-styles)コントロールに、Windows SDK で説明します。
 
 *rect*<br/>
-スライダー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+スライダー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 *pParentWnd*<br/>
 通常、スライダー コントロールの親ウィンドウを指定します、`CDialog`します。 NULL は指定できません。
@@ -251,7 +251,7 @@ virtual BOOL CreateEx(
 スライダー コントロールのスタイルを指定します。 任意の組み合わせを適用[スライダー コントロールのスタイル](/windows/desktop/Controls/trackbar-control-styles)コントロールに、Windows SDK で説明します。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。

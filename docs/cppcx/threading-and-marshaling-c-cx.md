@@ -8,12 +8,12 @@ helpviewer_keywords:
 - agility, C++/CX
 - C++/CX, threading issues
 ms.assetid: 83e9ca1d-5107-4194-ae6f-e01bd928c614
-ms.openlocfilehash: faf541a0705de3e0e3d1b795d1abbdc2e9707974
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ddf59e8df82b1ec98f4e1fabe9917027bdf0c75b
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582638"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426759"
 ---
 # <a name="threading-and-marshaling-ccx"></a>スレッドとマーシャリング (C++/CX)
 
@@ -61,7 +61,7 @@ ref class MyOptions
 
 > `Warning 1 warning C4451: 'Platform::Agile<T>::_object' : Usage of ref class 'Windows::Security::Credentials::UI::CredentialPickerOptions' inside this context can lead to invalid marshaling of object across contexts. Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead`
 
-マーシャリング動作が「標準」のオブジェクトへの参照を (メンバー スコープまたはグローバル スコープで) 追加する場合、コンパイラは、`Platform::Agile<T>` で型をラップするように勧める警告を発行します。`Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead``Agile<T>` を使用すると、他のすべてのアジャイル クラスと同じようにクラスを使用できます。 次のような状況では、`Platform::Agile<T>` を使用します。
+参照を追加すると、メンバー スコープまたはグローバル スコープ: オブジェクトが"Standard"のマーシャ リング動作をする場合は、コンパイラの問題で型をラップするように勧める警告`Platform::Agile<T>`:`Consider using 'Platform::Agile<Windows::Security::Credentials::UI::CredentialPickerOptions>' instead` 使用する場合`Agile<T>`、その他のアジャイル クラスとは異なり、クラスを使用できます。 次のような状況では、 `Platform::Agile<T>` を使用します。
 
 - 非アジャイル変数は、グローバル スコープで宣言されます。
 
@@ -124,5 +124,5 @@ public ref class MySTAClass
 
 ## <a name="see-also"></a>関連項目
 
-[ThreadingModel](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.threadingmodel.aspx)<br/>
-[MarshallingBehavior](https://msdn.microsoft.com/library/windows/apps/xaml/windows.foundation.metadata.marshalingbehaviorattribute.aspx)
+[ThreadingModel](/uwp/api/Windows.Foundation.Metadata.ThreadingModel)<br/>
+[MarshallingBehavior](/uwp/api/windows.foundation.metadata.marshalingbehaviorattribute)

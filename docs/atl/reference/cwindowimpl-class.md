@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 2e4a9b585ed653927c87eaf82dfae8ce8f982dfc
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 96807debc7a3af5eca5d7a0c17a7728431733325
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290704"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417932"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl クラス
 
@@ -42,7 +42,8 @@ class ATL_NO_VTABLE CWindowImpl : public CWindowImplBaseT<TBase, TWinTraits>
 #### <a name="parameters"></a>パラメーター
 
 *T*<br/>
-`CWindowImpl` から派生した新しいクラス。
+
+  `CWindowImpl` から派生した新しいクラス。
 
 *TBase*<br/>
 クラスの基底クラス。 基本クラスは、既定では、 [CWindow](../../atl/reference/cwindow-class.md)します。
@@ -91,9 +92,12 @@ A[特性クラス](../../atl/understanding-window-traits.md)ウィンドウの�
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]
 
 > [!NOTE]
->  `CWndClassInfo` は、1 つのウィンドウ クラスの情報のみを管理するため、`CWindowImpl` のインスタンスによって作成された各ウィンドウは、同じウィンドウ クラスに基づきます。
+>  
+  `CWndClassInfo` は、1 つのウィンドウ クラスの情報のみを管理するため、`CWindowImpl` のインスタンスによって作成された各ウィンドウは、同じウィンドウ クラスに基づきます。
 
-`CWindowImpl` は、ウィンドウのサブクラス化もサポートします。 `SubclassWindow` メソッドは、既存のウィンドウを `CWindowImpl` オブジェクトにアタッチし、ウィンドウ プロシージャを `CWindowImpl::WindowProc` に変更します。 `CWindowImpl` の各インスタンスは、別のウィンドウをサブクラス化できます。
+`CWindowImpl` は、ウィンドウのサブクラス化もサポートします。 
+  `SubclassWindow` メソッドは、既存のウィンドウを `CWindowImpl` オブジェクトにアタッチし、ウィンドウ プロシージャを `CWindowImpl::WindowProc` に変更します。 
+  `CWindowImpl` の各インスタンスは、別のウィンドウをサブクラス化できます。
 
 > [!NOTE]
 >  指定されたいずれかの`CWindowImpl`オブジェクト、いずれかを呼び出す`Create`または`SubclassWindow`します。 同じオブジェクトで両方のメソッドを呼び出さないでください。
@@ -147,7 +151,7 @@ HWND Create(
 [in]親またはオーナー ウィンドウのハンドル。
 
 *rect*<br/>
-[in]A [RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ウィンドウの位置を指定する構造体。 `RECT`ポインターまたは参照によって渡すことができます。
+[in]A [RECT](/previous-versions/dd162897\(v=vs.85\))ウィンドウの位置を指定する構造体。 `RECT`ポインターまたは参照によって渡すことができます。
 
 *szWindowName*<br/>
 [in]ウィンドウの名前を指定します。 既定値は、NULL です。
@@ -369,7 +373,8 @@ static LRESULT CALLBACK WindowProc(
 
 - ウィンドウをサブクラス化されたなかった場合は、解除処理を実行します。
 
-- `m_hWnd` を消去します。
+- 
+  `m_hWnd` を消去します。
 
 - 呼び出し[OnFinalMessage](#onfinalmessage)ウィンドウが破棄される前にします。
 

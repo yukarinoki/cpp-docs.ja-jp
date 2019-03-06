@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 61cbcbd2a64e8648c6467ebbc0d86d6f89953442
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302502"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57424484"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 
@@ -627,7 +627,7 @@ virtual BOOL Create(
 ツールバー コントロールのスタイルを指定します。 ツールバーには、WS_CHILD スタイルが常に必要です。 」の説明に従って、toolbar のスタイルとウィンドウ スタイルの任意の組み合わせを指定するさらに、**解説**します。
 
 *rect*<br/>
-必要に応じて、ツール バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+必要に応じて、ツール バー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 *pParentWnd*<br/>
 ツールバー コントロールの親ウィンドウを指定します。 NULL は指定できません。
@@ -681,7 +681,7 @@ virtual BOOL CreateEx(
 ツールバー コントロールのスタイルを指定します。 ツールバーには、WS_CHILD スタイルが常に必要です。 」の説明に従って、toolbar のスタイルとウィンドウ スタイルの任意の組み合わせを指定するさらに、**解説**の[作成](#create)です。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -1085,7 +1085,7 @@ BOOL GetItemRect(
 情報を取得する対象のボタンの 0 から始まるインデックス。
 
 *lpRect*<br/>
-アドレスを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)を外接する四角形の座標を受け取るオブジェクト。
+アドレスを[RECT](/previous-versions/dd162897\(v=vs.85\))構造または[CRect](../../atl-mfc-shared/reference/crect-class.md)を外接する四角形の座標を受け取るオブジェクト。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1202,7 +1202,7 @@ BOOL GetRect(
 ボタンの識別子です。
 
 *lpRect*<br/>
-ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。
+ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))外接する四角形の情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1325,7 +1325,7 @@ int HitTest(LPPOINT ppt) const;
 ### <a name="parameters"></a>パラメーター
 
 *ppt*<br/>
-ポインターを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)でヒット テストの x 座標を含む構造体、`x`メンバーと、y 座標のヒット テストで、`y`メンバー。 座標は、ツールバーのクライアント領域を基準とは。
+ポインターを[ポイント](/previous-versions/dd162805\(v=vs.85\))でヒット テストの x 座標を含む構造体、`x`メンバーと、y 座標のヒット テストで、`y`メンバー。 座標は、ツールバーのクライアント領域を基準とは。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1428,7 +1428,7 @@ BOOL InsertMarkHitTest(
 ### <a name="parameters"></a>パラメーター
 
 *ppt*<br/>
-ポインターを[ポイント](https://msdn.microsoft.com/library/windows/desktop/dd162805)ツールバーのクライアント領域を基準と、ヒット テストを含む構造体を調整します。
+ポインターを[ポイント](/previous-versions/dd162805\(v=vs.85\))ツールバーのクライアント領域を基準と、ヒット テストを含む構造体を調整します。
 
 *ptbim*<br/>
 ポインターを[受け取る](/windows/desktop/api/commctrl/ns-commctrl-tbinsertmark)挿入マークの情報を受け取る構造体。
@@ -2295,7 +2295,7 @@ void SetRows(
 要求された行の数に、ツールバーのサイズを変更できない場合、複数の行または少数の行を使用するかどうかを通知します。
 
 *lpRect*<br/>
-指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)ツールバーの新しい外接する四角形を受信する構造体。
+指す、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))ツールバーの新しい外接する四角形を受信する構造体。
 
 ### <a name="remarks"></a>Remarks
 

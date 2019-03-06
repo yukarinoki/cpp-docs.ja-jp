@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CHeaderCtrl [MFC], SetItem
 - CHeaderCtrl [MFC], SetOrderArray
 ms.assetid: b847ac90-5fae-4a87-88e0-ca45f77b8b3b
-ms.openlocfilehash: a683c877b67f4eae1a7411f5916987c9789b6817
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 51cdfb481892ba5057d4ca26ff4d6e51665557e5
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57261350"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57415618"
 ---
 # <a name="cheaderctrl-class"></a>CHeaderCtrl クラス
 
@@ -231,7 +231,7 @@ virtual BOOL Create(
 ヘッダー コントロールのスタイルを指定します。 ヘッダー コントロールのスタイルの説明は、次を参照してください。[ヘッダー コントロールのスタイル](/windows/desktop/Controls/header-control-styles)Windows SDK に含まれています。
 
 *rect*<br/>
-ヘッダー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)構造体。
+ヘッダー コントロールのサイズと位置を指定します。 いずれかのことができます、 [CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは[RECT](/previous-versions/dd162897\(v=vs.85\))構造体。
 
 *pParentWnd*<br/>
 通常、ヘッダー コントロールの親ウィンドウを指定します、`CDialog`します。 NULL は指定できません。
@@ -301,7 +301,7 @@ virtual BOOL CreateEx(
 ヘッダー コントロールのスタイル。 ヘッダー コントロールのスタイルの説明は、次を参照してください。[ヘッダー コントロールのスタイル](/windows/desktop/Controls/header-control-styles)Windows SDK に含まれています。 参照してください[作成](#create)追加スタイルの一覧についてはします。
 
 *rect*<br/>
-参照を[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
+参照を[RECT](/previous-versions/dd162897\(v=vs.85\))のクライアント座標で、作成するには、ウィンドウの位置とサイズを記述する構造体*pParentWnd*します。
 
 *pParentWnd*<br/>
 コントロールの親であるウィンドウへのポインター。
@@ -543,7 +543,7 @@ BOOL GetItemDropDownRect(
 |パラメーター|説明|
 |---------------|-----------------|
 |*iItem*|[in]スタイルがヘッダー項目の 0 から始まるインデックス。 詳細については、次を参照してください。、`fmt`のメンバー、 [HDITEM](/windows/desktop/api/commctrl/ns-commctrl-_hd_itema)構造体。|
-|*lpRect*|[out]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。|
+|*lpRect*|[out]ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))外接する四角形の情報を受け取る構造体。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -581,7 +581,7 @@ BOOL GetItemRect(
 ヘッダー コントロールの項目の 0 から始まるインデックス。
 
 *lpRect*<br/>
-アドレスへのポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。
+アドレスへのポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))外接する四角形の情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
 
@@ -633,7 +633,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*lpRect*|[out]ポインターを[RECT](https://msdn.microsoft.com/library/windows/desktop/dd162897)外接する四角形の情報を受け取る構造体。|
+|*lpRect*|[out]ポインターを[RECT](/previous-versions/dd162897\(v=vs.85\))外接する四角形の情報を受け取る構造体。|
 
 ### <a name="return-value"></a>戻り値
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: 38f2e08139566ce6c70755cd367edf93677ef9af
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2d34c54491bb4b85311be3ba1ebdaed87437246
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614410"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57420688"
 ---
 # <a name="mutual-imports"></a>相互インポート
 
@@ -83,7 +83,7 @@ A.dll をビルドするときに構築されて`/D A_IMPL`B.dll をビルドす
 
 クラス全体をエクスポートしていない場合は、MFC マクロによって作成されたために必要なデータ項目が正常にエクスポートすることを確認する必要があります。 再定義できます`AFX_DATA`特定クラスのマクロにします。 これはクラス全体をエクスポートしない場合はいつ実行する必要があります。
 
-例えば:
+例:
 
 ```
 /* A.H */

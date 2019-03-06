@@ -7,18 +7,18 @@ helpviewer_keywords:
 - exporting functions [C++], C++ functions in C executables
 - functions [C++], exporting
 ms.assetid: 80b9e982-f52d-4312-a891-f73cc69f3c2b
-ms.openlocfilehash: eaa742fc2738ef4aeeb54bb8fd2b0da923ac57de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 86d771f8dcb9ee1ef137b7766f249a1dda7257db
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667429"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57426486"
 ---
 # <a name="exporting-c-functions-for-use-in-c-language-executables"></a>C 言語の実行形式で使う C++ 関数のエクスポート
 
 C++ で記述された DLL 内の関数に C 言語のモジュールからアクセスするには、C++ リンケージではなく C リンケージを使って関数を宣言する必要があります。 特に指定しない限り、C++ コンパイラは C++ のタイプ セーフな名前付け規約 (名前の装飾) と C++ の呼び出し規則を使います。C++ の規約を使うと、C からの呼び出しが難しくなります。
 
-C リンケージを指定するには、指定`extern "C"`関数の宣言にします。 例えば:
+C リンケージを指定するには、指定`extern "C"`関数の宣言にします。 例:
 
 ```
 extern "C" __declspec( dllexport ) int MyFunc(long parm1);
