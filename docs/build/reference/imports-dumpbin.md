@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /IMPORTS dumpbin option
 - -IMPORTS dumpbin option
 ms.assetid: 6a296216-2b1b-40f8-8736-cd4553a22456
-ms.openlocfilehash: 9367457a8e7f6be1f372244f8288a994eb777071
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 94009670329887a0b8a35e7b8b36996a84c7faa6
+ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613786"
+ms.lasthandoff: 03/05/2019
+ms.locfileid: "57417503"
 ---
 # <a name="imports-dumpbin"></a>/IMPORTS (DUMPBIN)
 
@@ -23,7 +23,7 @@ ms.locfileid: "50613786"
 
 このオプションは、Dll の一覧を表示します (どちらも静的にリンクされていると[遅延読み込み](../../build/reference/linker-support-for-delay-loaded-dlls.md)) からこれらの各 Dll を実行可能ファイルまたは DLL を個別にインポートされるすべてインポートします。
 
-省略可能な`file`仕様では、のみ、その DLL のインポートが表示されることを指定できます。 例えば:
+省略可能な`file`仕様では、のみ、その DLL のインポートが表示されることを指定できます。 例:
 
 ```
 dumpbin /IMPORTS:msvcrt.dll
