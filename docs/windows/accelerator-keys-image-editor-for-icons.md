@@ -8,19 +8,19 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 604f97edc8e4e49bad477d76e0e46334b8cf726b
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336539"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563122"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>アクセラレータ キー (アイコン用イメージ エディターを C++)
 
-既定では、キーにバインドされているイメージ エディターのコマンドをアクセラレータ キーを以下に示します。 アクセラレータ キーを変更するには、次のようにクリックします。**オプション**上、**ツール**] メニューの [選び、**キーボード**下、**環境**フォルダー。 詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)」をご覧ください。
+既定では、キーにバインドされているイメージ エディターのコマンドをアクセラレータ キーを以下に示します。 アクセラレータ キーを変更するには、メニューに移動**ツール** > **オプション**選択**キーボード**下、**環境**フォルダー。 詳細については、「[Visual Studio でのキーボード ショートカットの識別とカスタマイズ](/visualstudio/ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio)」をご覧ください。
 
 > [!NOTE]
-> 使用している設定またはエディションによっては、ダイアログ ボックスで使用可能なオプションや、メニュー コマンドの名前や位置がヘルプに記載されている内容と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。
+> 使用している設定またはエディションによっては、ダイアログ ボックスで使用可能なオプションや、メニュー コマンドの名前や位置がヘルプに記載されている内容と異なる場合があります。 設定を変更するには、メニューに移動**ツール** > **インポートおよびエクスポート設定**します。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。
 
 |コマンド|キー|説明|
 |-------------|----------|-----------------|
@@ -68,4 +68,8 @@ ms.locfileid: "56336539"
 
 ## <a name="see-also"></a>関連項目
 
-[アイコン用イメージ エディター](../windows/image-editor-for-icons.md)
+[アイコン用イメージ エディター](../windows/image-editor-for-icons.md)<br/>
+[方法: アイコンまたはその他の画像を作成する](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[方法: 画像を編集する](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[方法: 描画ツールを使用する](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[方法: 色を調整する](../windows/working-with-color-image-editor-for-icons.md)<br/>
