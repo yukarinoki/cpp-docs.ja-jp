@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: d040c09b36c2b46036744c8a263802da48cd8e60
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210797"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563304"
 ---
 # <a name="string-editor-c"></a>文字列エディター (C++)
 
@@ -56,7 +56,7 @@ ms.locfileid: "57210797"
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>文字列テーブル内の文字列リソースを検索するには
 
-1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
 
 1. メニューに移動して**編集** > **検索し、置換**選択**検索**します。
 
@@ -77,9 +77,9 @@ ms.locfileid: "57210797"
 
 **文字列エディター**は既に使用されている ID を使用しないようにします。 ID を既に使用して、選択した場合、**文字列エディター**は通知し、たとえば一般的な一意の ID を割り当てる`IDS_STRING58113`します。
 
-ストリング テーブルのエントリを追加するには。
+#### <a name="to-add-a-string-table-entry"></a>ストリング テーブルのエントリを追加するには
 
-1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
 
 1. 文字列テーブル内で右クリックし、**新しい文字列**します。
 
@@ -92,7 +92,7 @@ ms.locfileid: "57210797"
    > [!NOTE]
    > Null 文字列は、Windows の文字列テーブルに許可されていません。 よう求めるメッセージが表示されます、null 文字列である文字列テーブルにエントリを作成する場合**このテーブルのエントリの文字列を入力してください**します。
 
-文字列テーブルのエントリを削除します。
+#### <a name="to-delete-a-string-table-entry"></a>文字列テーブルのエントリを削除するには
 
 削除し、次のいずれかを実行するエントリを選択します。
 
@@ -110,7 +110,7 @@ ms.locfileid: "57210797"
 
 1. ターゲットにカーソルを置き**文字列エディター**ウィンドウ。
 
-1. 文字列を移動する .rc ファイルを右クリックし、選択**貼り付け**します。
+1. *.Rc*文字列の移動を右クリックして選択するファイル**貼り付け**します。
 
 > [!NOTE]
 > 場合、 **ID**または**値**既存の文字列の移動の競合の**ID**または**値**変換先のファイル、そのいずれかの**ID**または**値**の移動先の文字列を変更します。
@@ -122,9 +122,9 @@ ms.locfileid: "57210797"
 > [!NOTE]
 >  文字列のプロパティを編集することも、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。
 
-文字列または識別子を変更するには
+#### <a name="to-change-a-string-or-its-identifier"></a>文字列または識別子を変更するには
 
-1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
 
 1. ダブルクリックして編集する文字列を選択、 **ID**、**値**、または**キャプション**列、しすることができます。
 
@@ -134,9 +134,9 @@ ms.locfileid: "57210797"
 
    - 入力時に編集、**キャプション**列。
 
-複数の文字列リソースの caption プロパティを変更するには。
+#### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>複数の文字列リソースの caption プロパティを変更するには
 
-1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
 
 1. 押しながら変更する文字列を選択、 **Ctrl**キーの 1 つを選択するとします。
 
@@ -146,7 +146,7 @@ ms.locfileid: "57210797"
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>文字列リソースへの書式設定や特殊文字を追加するには
 
-1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](../windows/resource-view-window.md)します。
+1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
 
 1. 変更する文字列を選択します。
 

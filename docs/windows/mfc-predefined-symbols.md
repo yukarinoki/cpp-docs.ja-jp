@@ -9,12 +9,12 @@ helpviewer_keywords:
 - databases [C++], MFC programming model
 - Windows programming MFC symbols [C++]
 ms.assetid: c1e689c4-45d7-40a3-8ee9-f47676cc3bbb
-ms.openlocfilehash: 329d56f4a8e0e9992cb78987c559f74c7349f681
-ms.sourcegitcommit: f127b08f114b8d6cab6b684febcb6f2ae0e055ba
+ms.openlocfilehash: c60c75275ca565b332c33848d27c134deb90a5c6
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56954953"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563208"
 ---
 # <a name="mfc-predefined-symbols"></a>MFC の定義済みシンボル
 
@@ -236,7 +236,7 @@ ms.locfileid: "56954953"
 
 これらのシンボルは、MFC のサポート ファイルの一部でも、標準の Windows アプリケーションの関数とアクションをサポートします。 これらのシンボルは、メニューで使用されます。
 
-メニューを使用するときに、**メニュー エディター**、これらのシンボルが表示されます、**プロパティ ウィンドウ**一般的なメニュー コマンドに関連付けられています。 たとえば、アプリケーションがある場合、**ファイル**メニューで、**終了**コマンド、コマンドは ID_APP_EXIT シンボルに関連付けられますことで、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)。
+メニューを使用するときに、**メニュー エディター**、これらのシンボルが表示されます、**プロパティ**一般的なメニュー コマンドに関連付けられているウィンドウ。 たとえば、アプリケーションがある場合、**ファイル**メニューで、**終了**コマンド、コマンドは ID_APP_EXIT シンボルに関連付けられますことで、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)。
 
 ||||
 |-|-|-|

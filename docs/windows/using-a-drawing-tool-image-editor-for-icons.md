@@ -16,25 +16,23 @@ helpviewer_keywords:
 - graphics [C++], custom brushes
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
-ms.openlocfilehash: 135509626e20044b0d4ec8e63d8916f4c537388e
-ms.sourcegitcommit: 24592ba0a38c7c996ffd3d55fe1024231a59ccc2
+ms.openlocfilehash: bde951a2915bf980e09d94c16edc1a9b462c662e
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56336554"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57563330"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>方法: 描画ツールを使用して、
 
-**イメージ**エディターの手描きツールと同じ方法ですべての作業のツールを消去: ツールを選択して、必要に応じて、[前景色と背景色を選択します。](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)とサイズおよび図形オプション。 イメージにポインターを移動し、クリックしてまたはドラッグした描画、消去します。
+**イメージ エディター**フリーハンドでの描画と消去のツールがすべて同じ方法で機能します。 ツールを選択して、必要に応じて、[前景色と背景色を選択します。](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)とサイズおよび図形オプション。 イメージにポインターを移動し、クリックしてまたはドラッグした描画、消去します。
 
 ## <a name="drawing-tools"></a>描画ツール
 
-選択すると、**消しゴム**ツール、**ブラシ**ツール、または**エアブラシ**ツール オプション セレクターがそのツールのオプションが表示されます。
+いずれかの描画ツールを選択することができます、**イメージ エディター**ツールバーまたは**イメージ**メニュー。 選択すると、**消しゴム**ツール、**ブラシ**ツール、または**エアブラシ**ツール オプション セレクターがそのツールのオプションが表示されます。
 
 > [!TIP]
-> 使用する代わりに、**消しゴム**ツール、かもしれません描画ツールのいずれかの背景色で描画する方が便利です。
-
-いずれかの描画ツールを選択することができます、**イメージ エディター**ツールバーまたは**イメージ**メニュー。
+>  上のボタンの上にカーソルを置くと、ツール ヒントが表示されます、[イメージ エディターのツールバー](../windows/toolbar-image-editor-for-icons.md)します。 これらのヒントを使用すると、ここで説明する特定のボタンを識別できます。
 
 ### <a name="to-select-and-use-a-drawing-tool-from-the-image-editor-toolbar"></a>選択して、イメージ エディターのツールバーから描画ツールを使用するには
 
@@ -42,14 +40,14 @@ ms.locfileid: "56336554"
 
    - **消しゴム**ツール、マウスの左ボタンを押すと現在の背景色とイメージを描画します。
 
+      > [!TIP]
+      > 使用する代わりに、**消しゴム**ツール、かもしれません描画ツールのいずれかの背景色で描画する方が便利です。
+
    - **鉛筆**ツールが 1 つのピクセルの固定幅でフリーハンドを描画します。
 
-   - **オプション セレクターは、ブラシ ツールの形状とサイズを決定します。** します。
+   - **ブラシ**ツールにはさまざまな形態とサイズ。
 
    - **エアブラシ**ツールは、ブラシの中心の色ピクセルをランダムに分散させます。
-
-        > [!TIP]
-        >  上のボタンの上にカーソルを置くと、ツール ヒントが表示されます、[イメージ エディターのツールバー](../windows/toolbar-image-editor-for-icons.md)します。 これらのヒントを使用すると、ここで説明する特定のボタンを識別できます。
 
 1. 必要に応じて、色とブラシを選択します。
 
@@ -63,19 +61,19 @@ ms.locfileid: "56336554"
 
 ### <a name="to-select-and-use-a-drawing-tool-from-the-image-menu"></a>選択し、[イメージ] メニューから描画ツールを使用するには
 
-1. 選択、**イメージ**メニュー選択し、**ツール**コマンド。
+1. メニューに移動して**イメージ** > **ツール**します。
 
 1. カスケード型のサブメニューを使用するツールを選択します。
 
 ## <a name="lines-or-closed-figures"></a>線または閉じた図形
 
-線を描画用イメージ エディターのツールし、同じ方法で作業できるすべての閉じた図形。 1 つのポイントにカーソルを配置し、別にドラッグします。 線、これらのポイントは、エンドポイントが。 閉じた図形は、これらのポイントは、図を囲む四角形の反対側の角です。
+**イメージ エディター**と同じ方法で作業できる線と閉じた図形を描画するためのツール: 1 つのポイントにカーソルを配置し、別にドラッグします。 線、これらのポイントは、エンドポイントが。 閉じた図形は、これらのポイントは、図を囲む四角形の反対側の角です。
 
 現在のブラシの選択によって決定幅で線が描画され、枠付きの図形が幅の現在の選択範囲によって決まります幅で描画されます。 マウスの右ボタンを押した場合、行およびとフレームの両方でいっぱいになったすべての図形が現在の前景の色をマウスの左ボタンを押した場合のまたは現在の背景色でを描画します。
 
 ### <a name="to-draw-a-line"></a>線を描画するには
 
-1. [イメージ エディターのツールバー](../windows/toolbar-image-editor-for-icons.md) (または、**イメージ**] メニューの [**ツール**コマンド)、選択、**行**ツール。
+1. 使用して、[イメージ エディターのツールバー](../windows/toolbar-image-editor-for-icons.md)  メニューに移動または**イメージ**> **ツール**を選択し、**行**ツール。
 
 1. 必要に応じて、色とブラシを選択します。
 
@@ -89,7 +87,7 @@ ms.locfileid: "56336554"
 
 ### <a name="to-draw-a-closed-figure"></a>閉じた図を描画するには
 
-1. **イメージ エディター**ツールバー (または、**イメージ**] メニューの [**ツール**コマンド) を選択、**図形**ツール。
+1. 使用して、**イメージ エディター**ツールバーまたはメニューに移動して**イメージ** > **ツール**を選択し、**図形**ツール。
 
    **図形**ツールは、各ボタンに記載のとおりに図形を作成します。
 
@@ -101,13 +99,13 @@ ms.locfileid: "56336554"
 
 ## <a name="custom-brushes"></a>カスタム ブラシ
 
-カスタム ブラシは四角形の部分を取得しのいずれかのように使用するイメージの**イメージ**エディターの既製のブラシ。 選択範囲に対して実行できるすべての操作、カスタム ブラシも実行できます。
+カスタム ブラシは四角形の部分を取得しのいずれかのように使用するイメージの**イメージ エディター**の既製のブラシ。 選択範囲に対して実行できるすべての操作、カスタム ブラシも実行できます。
 
 ### <a name="to-create-a-custom-brush-from-a-portion-of-an-image"></a>イメージの一部からカスタム ブラシを作成するには
 
-1. [イメージの一部を選択します。](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)ブラシに使用します。
+1. ブラシに使用するイメージの一部を選択します。
 
-1. 保持、 **Shift**キーを選択範囲の選択、画像をドラッグします。 または、**イメージ**] メニューの [選択**ブラシとして使用して選択**します。
+1. 保持、 **Shift**キー、選択範囲の選択し、イメージをドラッグまたはメニューに移動**イメージ** > **ブラシとして使用して選択**します。
 
    選択内容では、画像の選択範囲の色を分散するカスタム ブラシになります。 ドラッグするパスに沿った選択範囲のコピーが残されます。 緩やかに変化をドラッグする、複数のコピーを作成します。
 
@@ -120,9 +118,9 @@ ms.locfileid: "56336554"
 
 ### <a name="to-draw-custom-brush-shapes-in-the-background-color"></a>背景色でカスタム ブラシの形状を描画するには
 
-1. [非透過または透過の背景を選択して](../windows/choosing-a-transparent-or-opaque-background-image-editor-for-icons.md)します。
+1. 非透過または透過の背景を選択します。
 
-1. [背景色を設定](../windows/selecting-foreground-or-background-colors-image-editor-for-icons.md)を描画する色にします。
+1. 背景色を描画する色に設定します。
 
 1. 描画する位置にカスタム ブラシ。
 
@@ -142,7 +140,8 @@ ms.locfileid: "56336554"
 
 ## <a name="see-also"></a>関連項目
 
-[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
-[グラフィカル リソースの編集](../windows/editing-graphical-resources-image-editor-for-icons.md)<br/>
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)<br/>
-[色の調整](../windows/working-with-color-image-editor-for-icons.md)
+[方法: アイコンまたはその他の画像を作成する](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[方法: 画像を編集する](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[方法: 色を調整する](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
