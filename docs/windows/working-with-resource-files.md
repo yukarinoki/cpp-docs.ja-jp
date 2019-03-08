@@ -6,19 +6,19 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 71a76da9f4eadfdca0d69873b821f4ea8eb8fc05
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 8edc860db453c4ee9e0dd3fdacb18bbde662accb
+ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676423"
+ms.lasthandoff: 03/07/2019
+ms.locfileid: "57562966"
 ---
 # <a name="working-with-resource-files"></a>リソース ファイルの操作
 
 > [!WARNING]
 > このセクションは、C++ で記述された Windows デスクトップ アプリケーションに適用されます。
 >
-> C++ で記述されたユニバーサル Windows プラットフォーム アプリでのリソースについては、次を参照してください[アプリ リソースの定義](/windows/uwp/app-resources/)、c++ のリソースを追加する方法または/cli CLI (マネージ) プロジェクトでは、を参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で。*.NET Framework 開発者ガイド*します。
+> C++ で記述されたユニバーサル Windows プラットフォーム アプリでのリソースについては、次を参照してください[アプリ リソースの定義](/windows/uwp/app-resources/)、c++ のリソースを追加する方法または/cli CLI (マネージ) プロジェクトでは、を参照してください[Resources in Desktop Apps](/dotnet/framework/resources/index)で.NET Framework 開発者ガイド。
 
 リソースなどのさまざまな要素で構成できます。
 
@@ -28,6 +28,9 @@ ms.locfileid: "56676423"
 - メニューおよびダイアログ ボックスのリソース。
 
 新しいリソースをプロジェクトに追加し、適切なリソース エディターを使用してそれらのリソースを変更できます。 ほとんどの Visual C++ ウィザードでは、プロジェクトの .rc ファイルが自動的に生成されます。
+
+> [!NOTE]
+> **リソース エディター**と**リソース ビュー** Express エディションでは使用できません。
 
 マネージ プロジェクトにリソース ファイルを手動で追加するには、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 この記事には、リソースへのアクセス、静的なリソースを表示およびリソース文字列をプロパティに割り当てる方法が含まれています。
 
