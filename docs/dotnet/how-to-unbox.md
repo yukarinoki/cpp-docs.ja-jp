@@ -1,17 +1,17 @@
 ---
-title: '方法: ボックス化を解除する'
+title: '方法: ボックス化解除します。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - unboxing
 ms.assetid: 75794696-9275-47bf-9a7d-5abe6585ab91
-ms.openlocfilehash: b2919ecce254a81d6a140fc7906d28646b50ab8e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ae80497a24b090bc5866b3cfb22748b20adda223
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618531"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747944"
 ---
-# <a name="how-to-unbox"></a>方法: ボックス化を解除する
+# <a name="how-to-unbox"></a>方法: ボックス化解除します。
 
 ボックス化解除し、値を変更する方法を示します。
 

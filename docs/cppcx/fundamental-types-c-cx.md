@@ -2,12 +2,12 @@
 title: 基本的な型 (C++/CX)
 ms.date: 01/22/2017
 ms.assetid: c9f82907-25f2-440b-91d6-afb8dbd46ea6
-ms.openlocfilehash: a6c068d58f0d7c173bff34726873b7a0f4f1d74c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2bd5be01b868fd3086c2064edfd4ca343db425be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529130"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752364"
 ---
 # <a name="fundamental-types-ccx"></a>基本的な型 (C++/CX)
 
@@ -34,7 +34,7 @@ ms.locfileid: "50529130"
 |uint16|16 ビット符号なし整数。|unsigned short|0 ～ 65,535|
 |int32|32 ビット符号付き整数。|int|-2,147, 483,648 ~ 2,147, 483,647|
 |uint32|32 ビット符号なし整数。|unsigned int|0 ～ 4,294,967,295|
-|int64|64 ビット符号付き整数。|long long - または - _ _int64|-9,223,372,036,854、9,223,372,036,854,775,807 を通じて 775,808|
+|int64|64 ビット符号付き整数。|long long  -or- __int64|-9,223,372,036,854、9,223,372,036,854,775,807 を通じて 775,808|
 |uint64|64 ビット符号なし整数。|unsigned long long  -or- unsigned __int64|0 ～ 18,446,744,073,709,551,615|
 |float32|32 ビットの IEEE 754 浮動小数点数。|float|3.4E +/- 38 (7 桁)|
 |float64|64 ビットの IEEE 754 浮動小数点数。|double|1.7E +/- 308 (15 桁)|

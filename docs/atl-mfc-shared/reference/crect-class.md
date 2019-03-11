@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: 5e9d4b5c28adceb52078c13dbf18170e7a2b19e5
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178754"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739429"
 ---
 # <a name="crect-class"></a>CRect クラス
 
@@ -91,19 +91,19 @@ class CRect : public tagRECT
 
 |名前|説明|
 |----------|-----------------|
-|[CRect::operator-](#operator_-)|指定したオフセットを減算`CRect`を縮小または`CRect`し、その結果を返します`CRect`します。|
+|[CRect::operator -](#operator_-)|指定したオフセットを減算`CRect`を縮小または`CRect`し、その結果を返します`CRect`します。|
 |[CRect::operator LPCRECT](#operator_lpcrect)|`CRect` を `LPCRECT` に変換します。|
 |[CRect::operator LPRECT](#operator_lprect)|`CRect` を `LPRECT` に変換します。|
 |[CRect::operator! =](#operator_neq)|決定かどうか`CRect`四角形と等しくないです。|
 |[CRect::operator &amp;](#operator_amp)|交差部分を作成します。`CRect`と四角形を、その結果を返します`CRect`します。|
 |[CRect::operator &amp;=](#operator_amp_eq)|セット`CRect`の交差部分に等しい`CRect`と四角形。|
-|[CRect::operator&#124;](#operator_or)|和集合を作成します。`CRect`と四角形を、その結果を返します`CRect`します。|
+|[CRect::operator &#124;](#operator_or)|和集合を作成します。`CRect`と四角形を、その結果を返します`CRect`します。|
 |[CRect::operator &#124;=](#operator_or_eq)|セット`CRect`の共用体に等しい`CRect`と四角形。|
 |[CRect::operator +](#operator_add)|指定したオフセットを追加します。`CRect`拡張または`CRect`し、その結果を返します`CRect`します。|
 |[CRect::operator + =](#operator_add_eq)|指定したオフセットを追加します。`CRect`拡張または`CRect`します。|
 |[CRect::operator =](#operator_eq)|コピーする四角形の寸法`CRect`します。|
-|[CRect::operator =](#operator_-_eq)|指定したオフセットを減算`CRect`を縮小または`CRect`します。|
-|[CRect::operator = =](#operator_eq_eq)|決定かどうか`CRect`が四角形と等しい。|
+|[CRect::operator -=](#operator_-_eq)|指定したオフセットを減算`CRect`を縮小または`CRect`します。|
+|[CRect::operator ==](#operator_eq_eq)|決定かどうか`CRect`が四角形と等しい。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -312,7 +312,7 @@ CRect(POINT topLeft, POINT bottomRight) throw();
 *size*<br/>
 左上隅から構築される四角形の右下隅までの距離を指定します。
 
-*左上端*<br/>
+*topLeft*<br/>
 左上の位置を示す`CRect`します。
 
 *bottomRight*<br/>
@@ -845,7 +845,7 @@ void operator=(const RECT& srcRect) throw();
    ASSERT(rect2 == CRect(0, 0, 127, 168));
 ```
 
-##  <a name="operator_eq_eq"></a>  CRect::operator = =
+##  <a name="operator_eq_eq"></a>  CRect::operator ==
 
 決定かどうか`rect`と等しい`CRect`左および右下隅の座標を比較することで。
 
@@ -925,7 +925,7 @@ test.bottom = 25;
 ASSERT(rect3 != test);
 ```
 
-##  <a name="operator_add_eq"></a>  CRect::operator + =
+##  <a name="operator_add_eq"></a>  CRect::operator +=
 
 最初の 2 つのオーバー ロードは、移動`CRect`指定されたオフセット。
 
@@ -963,7 +963,7 @@ A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize
    ASSERT(rect1 == rect2);
 ```
 
-##  <a name="operator_-_eq"></a>  CRect::operator =
+##  <a name="operator_-_eq"></a>  CRect::operator -=
 
 最初の 2 つのオーバー ロードは、移動`CRect`指定されたオフセット。
 
@@ -1099,7 +1099,7 @@ A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize
    ASSERT(rectResult == rect2);
 ```
 
-##  <a name="operator_-"></a>  CRect::operator-
+##  <a name="operator_-"></a>  CRect::operator -
 
 最初の 2 つのオーバー ロードを返す、`CRect`オブジェクトと等しい`CRect`によって指定されたオフセット転置。
 
@@ -1178,7 +1178,7 @@ A`CRect`の積集合である`CRect`と*rect2*します。
    ASSERT(rectResult == rect3);
 ```
 
-##  <a name="operator_or"></a>  CRect::operator&#124;
+##  <a name="operator_or"></a>  CRect::operator &#124;
 
 返します、`CRect`の和集合である`CRect`と*rect2*します。
 
@@ -1504,4 +1504,3 @@ int Width() const throw();
 [CPoint クラス](cpoint-class.md)<br/>
 [CSize クラス](csize-class.md)<br/>
 [RECT](/windows/desktop/api/windef/ns-windef-tagrect)
-

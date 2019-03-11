@@ -1,5 +1,5 @@
 ---
-title: '経過時間: オートメーション クラス'
+title: 経過時間:オートメーション クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - adding dates
@@ -11,14 +11,14 @@ helpviewer_keywords:
 - intervals, date and time
 - calculations, date and time
 ms.assetid: 26b34b37-c10e-4b91-82c3-1dc5ffb5361f
-ms.openlocfilehash: fbd01a4e7268456af342293d77ef74d372d2e639
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6a77d57a88166354fcb222c0da09690426108e9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583912"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750050"
 ---
-# <a name="elapsed-time-automation-classes"></a>経過時間: オートメーション クラス
+# <a name="elapsed-time-automation-classes"></a>経過時間:オートメーション クラス
 
 この手順は、2 つの差を計算する方法を示しています。`CTime`オブジェクトを取得、`CTimeSpan`結果。
 
@@ -38,4 +38,4 @@ ms.locfileid: "50583912"
 
 ## <a name="see-also"></a>関連項目
 
-[日付と時刻: オートメーション サポート](../atl-mfc-shared/date-and-time-automation-support.md)
+[日付と時刻:オートメーションのサポート](../atl-mfc-shared/date-and-time-automation-support.md)

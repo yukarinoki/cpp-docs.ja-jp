@@ -1,19 +1,19 @@
 ---
-title: '方法: インターフェイス静的コンストラクターを定義する (C++/CLI)'
+title: '方法: インターフェイス静的コンス トラクターの定義 (C +/cli CLI)'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - constructors [C++]
 - static constructors, interface
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
-ms.openlocfilehash: 0617454e0957dccc7e28a5172a40273b5d93bede
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dc1ef81bdefa5ed5d6418325bb250b7954d87268
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566388"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748612"
 ---
-# <a name="how-to-define-an-interface-static-constructor-ccli"></a>方法: インターフェイス静的コンストラクターを定義する (C++/CLI)
+# <a name="how-to-define-an-interface-static-constructor-ccli"></a>方法: インターフェイス静的コンス トラクターの定義 (C +/cli CLI)
 
 インターフェイス静的コンス トラクター、静的データ メンバーを初期化するために使用することができます。  静的コンス トラクターは、最大で 1 回呼び出されが初めての静的なインターフェイス メンバーにアクセスする前に呼び出されます。
 

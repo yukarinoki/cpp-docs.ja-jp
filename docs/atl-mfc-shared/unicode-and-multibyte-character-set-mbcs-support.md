@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Unicode [C++], string objects
 - strings [C++], Unicode
 - strings [C++], character set support
-ms.openlocfilehash: 8a7f79f9a75c2be4ee855d89b47b6b8e59a67d15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 59e8759ffbe61b80c74d8b5aba5bc50886d6b23d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50596652"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743908"
 ---
 # <a name="unicode-and-multibyte-character-set-mbcs-support"></a>Unicode とマルチバイト文字セット (MBCS: Multibyte Character Set) のサポート
 

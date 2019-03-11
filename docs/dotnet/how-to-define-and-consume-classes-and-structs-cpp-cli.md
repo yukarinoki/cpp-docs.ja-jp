@@ -1,18 +1,18 @@
 ---
-title: '方法: クラスと構造体を定義および使用する (C++/CLI)'
+title: '方法: クラスと構造体定義および使用 (C +/cli CLI)'
 ms.date: 09/12/2018
 helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 028e8622c034920e993444458c52536d2e3ec6de
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436160"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751831"
 ---
-# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>方法: クラスと構造体を定義および使用する (C++/CLI)
+# <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>方法: クラスと構造体定義および使用 (C +/cli CLI)
 
 この記事では、ユーザー定義の参照型と c++ の値の型定義および使用する方法を示しています。/cli CLI。
 
@@ -455,7 +455,7 @@ int main() {
 
 静的コンストラクターは、CLR によってのみ呼び出されることが想定されているため、プライベート メンバー関数として定義します。
 
-静的コンス トラクターの詳細については、次を参照してください。[方法: インターフェイス静的コンス トラクターの定義 (C +/cli CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)します。
+静的コンス トラクターの詳細については、次を参照してください。[方法。インターフェイス静的コンス トラクターの定義 (C +/cli CLI)](../dotnet/how-to-define-an-interface-static-constructor-cpp-cli.md)します。
 
 ```cpp
 // compile with: /clr
@@ -495,7 +495,8 @@ in static constructor
 
 Visual C++ を使用して型を定義する場合、参照型の `this` ポインターは "ハンドル" 型です。 値型の `this` ポインターは "内部ポインター" 型です。
 
-`this` ポインターのセマンティクスが異なることで、既定のインデクサーが呼び出されるときに予期しない動作が発生する場合があります。 次の例は、参照型と値型の両方で既定のインデクサーに適切にアクセスする方法を示しています。
+
+  `this` ポインターのセマンティクスが異なることで、既定のインデクサーが呼び出されるときに予期しない動作が発生する場合があります。 次の例は、参照型と値型の両方で既定のインデクサーに適切にアクセスする方法を示しています。
 
 詳細については、次のトピックを参照してください。
 
@@ -734,7 +735,8 @@ Visual C++ マネージド クラスのデストラクターの動作は、C++ �
 
 CLR ガベージ コレクターは、不要になった未使用マネージド オブジェクトを削除し、そのメモリを解放します。 ただし、型によって使用されているリソースの解放方法を、ガベージ コレクターが把握していないことがあります。 これらのリソースは、アンマネージ リソース (ネイティブ ファイル ハンドルなど) と呼ばれます。 アンマネージ リソースはすべて、ファイナライザーで解放することをお勧めします。 ガベージ コレクターでは、マネージド リソースが非確定的に解放されるため、ファイナライザーでマネージド リソースを参照するのは安全ではありません。ガベージ コレクターは、そのマネージド リソースを既にクリーンアップしている可能性があるためです。
 
-Visual C++ ファイナライザーは、<xref:System.Object.Finalize%2A> メソッドと同じではありません  (CLR ドキュメントでは、ファイナライザーと <xref:System.Object.Finalize%2A> メソッドが同じ意味で使用されます)。 <xref:System.Object.Finalize%2A> メソッドはガベージ コレクターによって呼び出され、これにより、クラス継承チェーンの各ファイナライザーが開始されます。 Visual C++ デストラクターとは異なり、派生クラスのファイナライザーの呼び出しにより、コンパイラがすべての基底クラスのファイナライザーを開始することはありません。
+Visual C++ ファイナライザーは、<xref:System.Object.Finalize%2A> メソッドと同じではありません  (CLR ドキュメントでは、ファイナライザーと <xref:System.Object.Finalize%2A> メソッドが同じ意味で使用されます)。 
+  <xref:System.Object.Finalize%2A> メソッドはガベージ コレクターによって呼び出され、これにより、クラス継承チェーンの各ファイナライザーが開始されます。 Visual C++ デストラクターとは異なり、派生クラスのファイナライザーの呼び出しにより、コンパイラがすべての基底クラスのファイナライザーを開始することはありません。
 
 Visual C++ コンパイラではリソースの確定的な解放がサポートされるため、<xref:System.IDisposable.Dispose%2A> メソッドまたは <xref:System.Object.Finalize%2A> メソッドは実装しようとしないでください。 ただし、これらのメソッドに慣れている方を対象に、ここでは、Visual C++ ファイナライザーとそのファイナライザーを呼び出すデストラクターが、どのように <xref:System.IDisposable.Dispose%2A> パターンに割り当てられるかを示します。
 
@@ -803,7 +805,8 @@ Visual C で記述されコンパイルを使用しているコードを **/clr*
 
 クライアントによって使用されている型が他の言語で記述された場合、デストラクターは次のように呼び出されます。
 
-- <xref:System.IDisposable.Dispose%2A> への呼び出しで。
+- 
+  <xref:System.IDisposable.Dispose%2A> への呼び出しで。
 
 - 型の `Dispose(void)` への呼び出しで。
 
@@ -832,7 +835,8 @@ int main() {
 
 型にファイナライザーがある場合は、`Finalize(void)` をオーバーライドする <xref:System.Object.Finalize%2A> メソッドがコンパイラによって生成されます。
 
-型にデストラクターまたはファイナライザーのいずれかがある場合は、デザイン パターンに従って `Dispose(bool)` メソッドが生成されます  (詳しくは、次を参照してください。 [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern))。 `Dispose(bool)` を Visual C++ で明示的に作成したり呼び出したりすることはできません。
+型にデストラクターまたはファイナライザーのいずれかがある場合は、デザイン パターンに従って `Dispose(bool)` メソッドが生成されます  (詳しくは、次を参照してください。 [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern))。 
+  `Dispose(bool)` を Visual C++ で明示的に作成したり呼び出したりすることはできません。
 
 デザイン パターンに準拠する基底クラスが型にある場合、すべての基底クラスのデストラクターは、派生クラスのデストラクターが呼び出されるときに呼び出されます  (型が Visual C++ で記述されている場合は、このパターンが型で実装されることがコンパイラによって保証されます)。つまり、C++ 標準で指定されているように、参照クラスのデストラクターが基底クラスとメンバーに連結され、最初に、クラスのデストラクターが実行されます。次に、メンバーのデストラクターが、そのデストラクターが構築された順とは逆の順序で実行され、最後に、基底クラスのデストラクターが、そのデストラクターが構築された順とは逆の順序で実行されます。
 

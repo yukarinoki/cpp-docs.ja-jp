@@ -1,5 +1,5 @@
 ---
-title: 方法:-clr に移行
+title: '方法: -Clr に移行します。'
 ms.custom: get-started-article
 ms.date: 09/18/2018
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: d293b6c3795b9abe57da0c6bcb92dd3f1de810ee
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50454445"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749114"
 ---
-# <a name="how-to-migrate-to-clr"></a>方法: /clr に移行する
+# <a name="how-to-migrate-to-clr"></a>方法: /Clr:pure に移行します。
 
 このトピックでは、ネイティブ コードをコンパイルするときに発生する問題を説明 **/clr** (を参照してください[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)詳細については)。 **/clr**ネイティブの C++ コードを呼び出し、その他のネイティブ C++ コードだけでなく、.NET アセンブリから呼び出すことができます。 参照してください[混在 (ネイティブおよびマネージ) アセンブリ](../dotnet/mixed-native-and-managed-assemblies.md)と[ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)を使用してコンパイルの利点の詳細についての **/clr**します。
 
@@ -25,7 +25,7 @@ ms.locfileid: "50454445"
 
 Visual Studio がライブラリ プロジェクトをコンパイルするときに、既知の問題を含む **/clr**:
 
-- コードが実行時に型を照会できます[で](../mfc/reference/cruntimeclass-structure.md#fromname)します。 ただし、MSIL .dll 内の型がある場合 (でコンパイルされた **/clr**)、呼び出し`FromName`(は表示されませんこの問題コードがある後に FromName 呼び出しが発生した場合、マネージ .dll で静的コンス トラクターが実行前に発生した場合に失敗する可能性があります実行されるマネージ .dll で)。 この問題を回避するには、マネージド静的コンストラクターを強制的に構築します。それには、マネージド .dll で関数を定義してエクスポートし、その関数をネイティブ MFC アプリケーションから呼び出します。 例えば:
+- コードが実行時に型を照会できます[で](../mfc/reference/cruntimeclass-structure.md#fromname)します。 ただし、MSIL .dll 内の型がある場合 (でコンパイルされた **/clr**)、呼び出し`FromName`(は表示されませんこの問題コードがある後に FromName 呼び出しが発生した場合、マネージ .dll で静的コンス トラクターが実行前に発生した場合に失敗する可能性があります実行されるマネージ .dll で)。 この問題を回避するには、マネージド静的コンストラクターを強制的に構築します。それには、マネージド .dll で関数を定義してエクスポートし、その関数をネイティブ MFC アプリケーションから呼び出します。 例:
 
     ```
     // MFC extension DLL Header file:
@@ -148,7 +148,8 @@ MSIL に対して生成されたネイティブの C++ メソッドが (仮想�
 
 ### <a name="program-crashes-on-shutdown"></a>シャットダウン時のプログラムの衝突
 
-場合によっては、マネージド コードが実行を終了する前に CLR がシャットダウンすることがあります。 `std::set_terminate` と `SIGTERM` を使用すると、この問題が発生します。 参照してください[signal 定数](../c-runtime-library/signal-constants.md)と[set_terminate](../c-runtime-library/abnormal-termination.md)詳細についてはします。
+場合によっては、マネージド コードが実行を終了する前に CLR がシャットダウンすることがあります。 
+  `std::set_terminate` と `SIGTERM` を使用すると、この問題が発生します。 参照してください[signal 定数](../c-runtime-library/signal-constants.md)と[set_terminate](../c-runtime-library/abnormal-termination.md)詳細についてはします。
 
 ## <a name="using-new-visual-c-features"></a>Visual C++ の新機能の使用
 

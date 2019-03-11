@@ -12,12 +12,12 @@ helpviewer_keywords:
 - TCHAR.H data types, mapping
 - mappings [C++], TCHAR.H
 ms.assetid: 01e1bb74-5a01-4093-8720-68b6c1fdda80
-ms.openlocfilehash: 59df523cc553881186921a878d131a109ae3cf27
-ms.sourcegitcommit: fe1e21df175cd004d21c6e4659082efceb649a8b
+ms.openlocfilehash: 7197b5cdf551020f4bd964558b5b332b7022ffe6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978297"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750521"
 ---
 # <a name="generic-text-mappings-in-tcharh"></a>Tchar.h における汎用テキスト マッピング
 
@@ -51,7 +51,7 @@ Tchar.h を使用すると、1 バイト、マルチバイト文字のセット 
 |--------------------------------------|----------------------------------------|------------------------|---------------------------|
 |`_TCHAR`|**char**|**char**|**wchar_t**|
 |`_TINT`|**int**|**unsigned int**|`wint_t`|
-|`_TSCHAR`|**符号付き文字**|**符号付き文字**|**wchar_t**|
+|`_TSCHAR`|**signed char**|**signed char**|**wchar_t**|
 |`_TUCHAR`|**unsigned char**|**unsigned char**|**wchar_t**|
 |`_TXCHAR`|**char**|**unsigned char**|**wchar_t**|
 |`_T` または `_TEXT`|影響なし (プリプロセッサによって削除される)|影響なし (プリプロセッサによって削除される)|`L` (次の文字または文字列を対応する Unicode に変換)|
@@ -68,14 +68,16 @@ _TCHAR *RetVal, *szString;
 RetVal = _tcsrev(szString);
 ```
 
-`_MBCS` が定義されていると、プリプロセッサによって次のコードに変換されます。
+
+  `_MBCS` が定義されていると、プリプロセッサによって次のコードに変換されます。
 
 ```cpp
 char *RetVal, *szString;
 RetVal = _mbsrev(szString);
 ```
 
-`_UNICODE` が定義されていると、プリプロセッサによって次のコードに変換されます。
+
+  `_UNICODE` が定義されていると、プリプロセッサによって次のコードに変換されます。
 
 ```cpp
 wchar_t *RetVal, *szString;

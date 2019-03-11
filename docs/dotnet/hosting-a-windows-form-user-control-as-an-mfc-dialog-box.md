@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Forms [C++], hosting as MFC Dialog
 - hosting Windows Forms control [C++]
 ms.assetid: 0434a9d7-8b14-48e6-ad69-9ba9a684677a
-ms.openlocfilehash: f6b7b7b3d1cb5ed9f3cd2b3655b45aaac8d8d195
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 4c4ee8c8b4570b598ba20b3bd5e1cf4c706ee885
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524925"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740782"
 ---
 # <a name="hosting-a-windows-form-user-control-as-an-mfc-dialog-box"></a>MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールのホスト
 
@@ -43,7 +43,8 @@ Windows フォームと MFC を示すサンプル アプリケーションの場
 
 1. stdafx.h の既存の `#include <afxwinforms.h>` ステートメントの最後に `#include` を追加します。
 
-1. `CDialog` をサブクラスとして持つ新しいクラスを追加します。
+1. 
+  `CDialog` をサブクラスとして持つ新しいクラスを追加します。
 
    プロジェクト名を右クリックし、`CDialog` をサブクラスとして持つ (CHostForWinForm という名前の) MFC クラスを追加します。 ダイアログ ボックスのリソースを使用する必要はありません、ために、リソース ID を削除することができます (選択**リソース ビュー**、展開、**ダイアログ**フォルダーおよび delete`IDD_HOSTFORWINFORM`リソース。  次に、コード内のこの ID への参照を削除します。
 

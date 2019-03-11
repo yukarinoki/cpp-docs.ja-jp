@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 6816a7ffbc09d0e01659dd56282e238fdbfc4a27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462306"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742469"
 ---
 # <a name="security-best-practices-for-c"></a>C++ のセキュリティ推奨事項
 
@@ -48,7 +48,9 @@ C ランタイム ライブラリ (CRT) が強化され、セキュリティ上�
 
 [SafeInt ライブラリ](../windows/safeint-library.md)整数オーバーフローおよびアプリケーションは、算術演算を実行するときに発生する可能性を悪用可能なその他のエラーを防止できます。 `SafeInt`ライブラリが含まれています、 [SafeInt クラス](../windows/safeint-class.md)、 [SafeIntException クラス](../windows/safeintexception-class.md)、および複数[SafeInt 関数](../windows/safeint-functions.md)します。
 
-`SafeInt` クラスを使用することで、整数オーバーフローおよびゼロ除算による攻撃を防止できます。 型が異なる値の比較を処理するために使用できます。 2 つのエラー処理ポリシーを提供します。 `SafeInt` クラスの既定のポリシーは、`SafeIntException` クラス例外をスローして、数値演算を完了できない理由を報告することです。 `SafeInt` クラスの 2 番目のポリシーは、プログラムの実行を停止することです。 カスタム ポリシーも定義できます。
+
+  `SafeInt` クラスを使用することで、整数オーバーフローおよびゼロ除算による攻撃を防止できます。 型が異なる値の比較を処理するために使用できます。 2 つのエラー処理ポリシーを提供します。 
+  `SafeInt` クラスの既定のポリシーは、`SafeIntException` クラス例外をスローして、数値演算を完了できない理由を報告することです。 `SafeInt` クラスの 2 番目のポリシーは、プログラムの実行を停止することです。 カスタム ポリシーも定義できます。
 
 各 `SafeInt` 関数は、対応する 1 つの数値演算で、攻撃に利用される可能性のあるエラーが発生しないようにします。 種類の異なる 2 つのパラメーターを使用できます。これらを同じ型に変換する必要はありません。 複数の数値演算を保護するには、`SafeInt` クラスを使用します。
 

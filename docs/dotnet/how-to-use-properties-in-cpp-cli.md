@@ -1,18 +1,18 @@
 ---
-title: '方法: C++/CLI でプロパティを使用する'
+title: '方法: プロパティを使用して、c++/cli CLI'
 ms.date: 07/21/2017
 helpviewer_keywords:
 - simple properties
 - properties [C++], simple
 ms.assetid: f5d82547-e214-4f05-9e1b-ddb6d0dc5e4c
-ms.openlocfilehash: 546c729245fb0c941f07e9222b71670278c44fde
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29bf419ca19ce1bbe45e36adb08d7f4e5629f5a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50617491"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739281"
 ---
-# <a name="how-to-use-properties-in-ccli"></a>方法: C++/CLI でプロパティを使用する
+# <a name="how-to-use-properties-in-ccli"></a>方法: プロパティを使用して、c++/cli CLI
 
 この記事では、c++ のプロパティを使用する方法を示しています。/cli CLI。
 
@@ -88,7 +88,7 @@ int main() {
 
 使用する場合は、既定のインデックス付きプロパティがデータ構造は、クラス名を参照するだけでアクセスできるユーザー定義のインデックス付きプロパティを使用する場合は、データ構造にアクセスするプロパティ名を指定する必要があります。
 
-C# で記述されたインデクサーを使用する方法については、次を参照してください。[方法: c# インデクサーを使用 (C +/cli CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)します。
+記述されたインデクサーを使用する方法についてはC#を参照してください[方法。使用、C#インデクサー (C +/cli CLI)](../dotnet/how-to-consume-a-csharp-indexer-cpp-cli.md)します。
 
 このコード サンプルでは、既定値とユーザー定義のインデックス付きプロパティを使用する方法を示します。
 

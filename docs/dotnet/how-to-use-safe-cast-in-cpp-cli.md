@@ -1,17 +1,17 @@
 ---
-title: '方法: C++/CLI で safe_cast を使用する'
+title: '方法: Safe_cast を使用して、c++/cli CLI'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - safe_cast keyword [C++], upcasting
 ms.assetid: 0fbc87d8-ecdf-4cd5-81f4-0d8cc18e2aff
-ms.openlocfilehash: 30aee0407e41533d34a860f3cedceb0be5b7b881
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1fd1b2d698af44ab841aeb6e205b750beb30ae0d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657003"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739351"
 ---
-# <a name="how-to-use-safecast-in-ccli"></a>方法: C++/CLI で safe_cast を使用する
+# <a name="how-to-use-safecast-in-ccli"></a>方法: Safe_cast を使用して、c++/cli CLI
 
 この記事では、C + で safe_cast を使用する方法を示しています。/cli CLI アプリケーション。 C + で safe_cast について/cli CX を参照してください[safe_cast](../windows/safe-cast-cpp-component-extensions.md)します。
 

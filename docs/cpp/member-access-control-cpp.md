@@ -6,12 +6,12 @@ helpviewer_keywords:
 - member access [C++]
 - member-access control [C++]
 ms.assetid: 2d596bca-56ad-4277-94e1-ce3db45fa14a
-ms.openlocfilehash: 546b23b939078c723084bdfc659ff4fd3216b479
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 367ee5183498453b9ce647c8e91ad1194f90fbd2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176226"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740277"
 ---
 # <a name="member-access-control-c"></a>メンバー アクセス コントロール (C++)
 
@@ -112,9 +112,11 @@ int main()
 }
 ```
 
-`DerivedClass1` では、メンバー関数 `PublicFunc` はパブリック メンバーであり、`ProtectedFunc` がパブリック基底クラスであるため、`BaseClass` はプロテクト メンバーになります。 `PrivateFunc` は `BaseClass` に対してプライベートであるため、派生クラスからはアクセスできません。
 
-`DerivedClass2` では、`PublicFunc` がプライベート基底クラスであるため、`ProtectedFunc` 関数と `BaseClass` 関数は、プライベート メンバーと見なされます。 ここでも、`PrivateFunc` は `BaseClass` に対してプライベートであるため、派生クラスからはアクセスできません。
+  `DerivedClass1` では、メンバー関数 `PublicFunc` はパブリック メンバーであり、`ProtectedFunc` がパブリック基底クラスであるため、`BaseClass` はプロテクト メンバーになります。 `PrivateFunc` は `BaseClass` に対してプライベートであるため、派生クラスからはアクセスできません。
+
+
+  `DerivedClass2` では、`PublicFunc` がプライベート基底クラスであるため、`ProtectedFunc` 関数と `BaseClass` 関数は、プライベート メンバーと見なされます。 ここでも、`PrivateFunc` は `BaseClass` に対してプライベートであるため、派生クラスからはアクセスできません。
 
 基底クラスにアクセス指定子を使用しなくても、派生クラスを宣言できます。 このような場合は、派生はプライベートと見なされます、派生クラスの宣言で使用する場合、**クラス**キーワード。 派生は派生クラスの宣言で使用する場合は、パブリックと見なされます、**構造体**キーワード。 コード例を次に示します。
 
@@ -187,7 +189,8 @@ int Derived2::ShowCount()
 }
 ```
 
-このコードでは、アクセス制御により、`Derived2` へのポインターから `Base` へのポインターへの変換が禁止されます。 **この**ポインターは暗黙的に型`Derived2 *`します。 選択する、`CountOf`関数、**この**型に変換する必要があります`Base *`します。 `Base` は `Derived2` に対するプライベート間接基底クラスであるため、このような変換は許可されません。 プライベート基底クラス型への変換は、直接の派生クラスへのポインターにのみ使用できます。 したがって、型 `Derived1 *` のポインターは型 `Base *` に変換できます。
+このコードでは、アクセス制御により、`Derived2` へのポインターから `Base` へのポインターへの変換が禁止されます。 **この**ポインターは暗黙的に型`Derived2 *`します。 選択する、`CountOf`関数、**この**型に変換する必要があります`Base *`します。 
+  `Base` は `Derived2` に対するプライベート間接基底クラスであるため、このような変換は許可されません。 プライベート基底クラス型への変換は、直接の派生クラスへのポインターにのみ使用できます。 したがって、型 `Derived1 *` のポインターは型 `Base *` に変換できます。
 
 ポインター、参照、またはオブジェクトを使用して選択することなく `CountOf` 関数を明示的に呼び出すことは、変換を意味しないことに注意してください。 したがって、呼び出しは許可されます。
 
@@ -237,7 +240,8 @@ int main()
 ![継承グラフのパスに沿ったアクセス](../cpp/media/vc38v91.gif "継承グラフのパスに沿ったアクセス") <br/>
 継承グラフのパスに沿ったアクセス
 
-図では、クラス `VBase` で宣言される名前は、必ずクラス `RightPath` 経由でアクセスされます。 `RightPath` が `VBase` をプライベート基底クラスとして宣言するのに対し、`LeftPath` は `VBase` をパブリック基底クラスとして宣言するため、右のパスの方がアクセスが簡単です。
+図では、クラス `VBase` で宣言される名前は、必ずクラス `RightPath` 経由でアクセスされます。 
+  `RightPath` が `VBase` をプライベート基底クラスとして宣言するのに対し、`LeftPath` は `VBase` をパブリック基底クラスとして宣言するため、右のパスの方がアクセスが簡単です。
 
 ## <a name="see-also"></a>関連項目
 
