@@ -28,12 +28,12 @@ helpviewer_keywords:
 - data [C++], formatting
 - regular expressions [C++], validating data formatting
 ms.assetid: 838bab49-0dbc-4089-a604-ef146269ef5a
-ms.openlocfilehash: ace05ffc0c9b0357e40f7a2520921c672014b9ff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24a278e4d5b208c5d8e3b95b9f5a0bd0306dbab3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50604335"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741898"
 ---
 # <a name="regular-expressions-ccli"></a>正規表現 (C++/CLI)
 
@@ -43,7 +43,8 @@ ms.locfileid: "50604335"
 
 ## <a name="parse_regex"></a> 正規表現を使用して文字列を解析します。
 
-<xref:System.Text.RegularExpressions.Regex> 名前空間の <xref:System.Text.RegularExpressions?displayProperty=fullName> クラスを使用して単純な文字列を解析する方法を次のコード例に示します。 複数のワード デリニエイタの型を含む文字列が構成されます。 次に、<xref:System.Text.RegularExpressions.Regex> クラスを <xref:System.Text.RegularExpressions.Match> クラスと共に使用して文字列が解析されます。 さらに、センテンス内の各単語を個別に表示します。
+
+  <xref:System.Text.RegularExpressions.Regex> 名前空間の <xref:System.Text.RegularExpressions?displayProperty=fullName> クラスを使用して単純な文字列を解析する方法を次のコード例に示します。 複数のワード デリニエイタの型を含む文字列が構成されます。 次に、<xref:System.Text.RegularExpressions.Regex> クラスを <xref:System.Text.RegularExpressions.Match> クラスと共に使用して文字列が解析されます。 さらに、センテンス内の各単語を個別に表示します。
 
 ### <a name="example"></a>例
 
@@ -81,7 +82,8 @@ int main( )
 
 ## <a name="parse_split"></a> Split メソッドを使用して文字列を解析します。
 
-<xref:System.String.Split%2A?displayProperty=fullName> メソッドを使用して、文字列から各単語を抽出する方法を次のコード例に示します。 デリニエイタ リストを指定して <xref:System.String.Split%2A> を呼び出すと、複数の型のワード デリニエイタを含む文字列が構成され、解析されます。 さらに、センテンス内の各単語を個別に表示します。
+
+  <xref:System.String.Split%2A?displayProperty=fullName> メソッドを使用して、文字列から各単語を抽出する方法を次のコード例に示します。 デリニエイタ リストを指定して <xref:System.String.Split%2A> を呼び出すと、複数の型のワード デリニエイタを含む文字列が構成され、解析されます。 さらに、センテンス内の各単語を個別に表示します。
 
 ### <a name="example"></a>例
 

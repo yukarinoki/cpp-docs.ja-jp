@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
-ms.openlocfilehash: 4c297f033b78e1b7f9283f5becb9db974bb2b9ff
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51522858"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742983"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference クラス
 
@@ -47,11 +47,11 @@ class ArrayReference
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **ヘッダー:** vccorlib.h
 
@@ -96,13 +96,14 @@ ArrayReference& operator=(ArrayReference&& otherArg);
 
 ### <a name="return-value"></a>戻り値
 
-`ArrayReference` 型のオブジェクトへの参照。
+
+  `ArrayReference` 型のオブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
 `Platform::ArrayReference` は、ref クラスではなく、標準 C++ クラス テンプレートです。
 
-## <a name="operator-call"></a>  Arrayreference::operator() 演算子
+## <a name="operator-call"></a>  ArrayReference::operator() Operator
 
 現在の変換[platform::arrayreference](../cppcx/platform-arrayreference-class.md)にオブジェクトを[platform::array](../cppcx/platform-array-class.md)クラス。
 

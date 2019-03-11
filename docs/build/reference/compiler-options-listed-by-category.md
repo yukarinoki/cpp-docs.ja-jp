@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 63b621bf99a1aeada10706badfe19cde417d7233
-ms.sourcegitcommit: e540706f4e2675e7f597cfc5b4f8dde648b007bb
+ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676501"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746970"
 ---
 # <a name="compiler-options-listed-by-category"></a>コンパイラ オプションのカテゴリ別一覧
 
@@ -118,9 +118,9 @@ ms.locfileid: "56676501"
 |[/vms](vmm-vms-vmv-general-purpose-representation.md)|単一継承を宣言します。|
 |[/vmv](vmm-vms-vmv-general-purpose-representation.md)|仮想継承を宣言します。|
 |[/Z7](z7-zi-zi-debug-information-format.md)|C 7.0 互換のデバッグ情報を生成します。|
-|[/Za](za-ze-disable-language-extensions.md)|言語拡張機能を無効にします。|
+|[/Za](za-ze-disable-language-extensions.md)|C89 言語拡張機能を無効にします。|
 |[/Zc](zc-conformance.md)|[/Ze](za-ze-disable-language-extensions.md)の標準動作を指定します。|
-|[/Ze](za-ze-disable-language-extensions.md)|非推奨。 言語拡張機能を有効にします。|
+|[/Ze](za-ze-disable-language-extensions.md)|非推奨。 C89 言語拡張機能を有効にします。|
 |[/Zf](zf.md)|並行ビルドで生成時に PDB を向上します。|
 |[/ZI](z7-zi-zi-debug-information-format.md)|エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。 (x86 のみ)|
 |[/Zi](z7-zi-zi-debug-information-format.md)|詳細なデバッグ情報を生成します。|

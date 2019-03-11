@@ -1,19 +1,19 @@
 ---
-title: '方法: ダイアログ ボックスにユーザー コントロールおよびホストを作成する'
+title: '方法: ダイアログ ボックスで、ユーザー コントロールとホストを作成します。'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC [C++], hosting a Windows Forms Control
 - Windows Forms [C++], MFC support
 ms.assetid: 03a53032-2f03-4fa2-b567-031615a26011
-ms.openlocfilehash: ccb7219b9c7b3a64da61a77097b147424a92a701
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bdf7e2f4961a16e6538c7bbcc690ef44ba87fcaf
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649996"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751493"
 ---
-# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>方法: ダイアログ ボックスにユーザー コントロールおよびホストを作成する
+# <a name="how-to-create-the-user-control-and-host-in-a-dialog-box"></a>方法: ダイアログ ボックスで、ユーザー コントロールとホストを作成します。
 
 この記事の手順では、ダイアログ ベースを作成することを想定しています ([CDialog クラス](../mfc/reference/cdialog-class.md))、Microsoft Foundation Classes (MFC) プロジェクトもにサポートを追加する Windows フォーム コントロールの既存の MFC ダイアログ ボックス。
 
@@ -27,7 +27,8 @@ ms.locfileid: "50649996"
 
    既定では、.NET コントロールの名前は `UserControl1` です。
 
-1. `UserControl1` に子コントロールを追加します。
+1. 
+  `UserControl1` に子コントロールを追加します。
 
    **ツールボックス**、オープン、**すべての Windows フォーム**一覧。 ドラッグ、**ボタン**への制御、`UserControl1`デザイン サーフェイス。
 

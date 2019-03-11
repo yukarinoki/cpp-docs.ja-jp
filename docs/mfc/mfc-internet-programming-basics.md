@@ -16,12 +16,12 @@ helpviewer_keywords:
 - Internet content [MFC]
 - WinInet classes [MFC]
 ms.assetid: 6df2dfd0-6e3f-4587-9d01-2a32f00f8a6f
-ms.openlocfilehash: 37fe5486d6d41ad182779a3a15b0aca3af51d04b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 814e63272058200850424e9d5355637111527e1c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288442"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750286"
 ---
 # <a name="mfc-internet-programming-basics"></a>MFC インターネット プログラミングの基礎
 
@@ -79,5 +79,3 @@ MFC は、インターネット プログラミングをサポートするクラ
 ##  <a name="_core_more_internet_help"></a> 詳細についてはインターネット
 
 Windows SDK の OLE セクションには、OLE プログラミングに関する追加情報が含まれています。 この情報は、MFC クラスではなく、直接、WinInet の Win32 関数の使用方法の詳細を説明します。 インターネット テクノロジに関する概要情報も含まれています。
-
-## <a name="see-also"></a>関連項目

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::OutOfBoundsException
 ms.assetid: 96f8bf75-1207-4049-964b-7771822cadf3
-ms.openlocfilehash: f3bc2e45cdb205a70128f976674ef7794a02eabf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f5165c0394726e0f6606f5261ba6306d8408948
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544490"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747217"
 ---
 # <a name="platformoutofboundsexception-class"></a>Platform::OutOfBoundsException クラス
 
@@ -31,11 +31,11 @@ public ref class OutOfBoundsException : COMException,    IException,    IPrintab
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **メタデータ:** platform.winmd
 

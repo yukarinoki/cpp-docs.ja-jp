@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: fe3b5e3a887e4a440c3570750c569ec6c71ea611
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595962"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746918"
 ---
 # <a name="managed-types-ccli"></a>マネージド型 (C++/CLI)
 
@@ -125,7 +125,7 @@ S.i = 11
 
 ただし、する別のメンバーを追加する場合`struct S`nested_value_types.cpp で (たとえば、 `double d;`) と、クライアントを再コンパイルしなくても、コンポーネントを再コンパイル、ハンドルされない例外になります (型の<xref:System.IO.FileLoadException?displayProperty=fullName>)。
 
-## <a name="test_equality"></a> 方法: 等価性をテスト
+## <a name="test_equality"></a>方法: 等しいかどうかをテストします。
 
 次の例では、c++ マネージ拡張を使用して等しいかどうかのテストはハンドルの参照先に基づいています。
 
@@ -150,7 +150,7 @@ IL_0012:  call       bool [mscorlib]System.String::op_Equality(string,
                                                                string)
 ```
 
-## <a name="diagnose_fix"></a> 方法: 診断し、アセンブリの互換性の問題を修正
+## <a name="diagnose_fix"></a>方法: 診断し、アセンブリの互換性の問題を修正
 
 このトピックでは、コンパイル時に参照されるアセンブリのバージョンは、実行時に参照されるアセンブリのバージョンと一致しないときに生じると、問題を回避する方法。
 

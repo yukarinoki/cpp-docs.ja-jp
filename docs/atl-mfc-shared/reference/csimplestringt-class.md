@@ -36,12 +36,12 @@ helpviewer_keywords:
 - strings [C++], ATL class
 - CSimpleStringT class
 ms.assetid: 15814fcb-5b8f-4425-a97e-3b61fc9b48d8
-ms.openlocfilehash: 93cb3ae0b2f358f64f0d6de26899d1b08f275b7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ec28ed5b2f5428cabcf7570c7ac53904e9a64f0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579284"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748230"
 ---
 # <a name="csimplestringt-class"></a>CSimpleStringT クラス
 
@@ -147,7 +147,7 @@ void Append(PCXSTR pszSrc);
 *pszSrc*<br/>
 追加する文字を含む文字列へのポインター。
 
-*されて*<br/>
+*nLength*<br/>
 追加する文字数。
 
 ### <a name="remarks"></a>Remarks
@@ -281,7 +281,7 @@ explicit CSimpleStringT(IAtlStringMgr* pStringMgr) throw();
 *pszSrc*<br/>
 これにコピーされる null で終わる文字列`CSimpleStringT`オブジェクト。
 
-*されて*<br/>
+*nLength*<br/>
 文字数のカウント`pch`します。
 
 *pStringMgr*<br/>
@@ -322,7 +322,7 @@ void Empty() throw();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[文字列: CString の例外の後処理](../cstring-exception-cleanup.md)します。
+詳細については、次を参照してください。[文字列。CString の例外の後処理](../cstring-exception-cleanup.md)します。
 
 ### <a name="example"></a>例
 
@@ -495,7 +495,7 @@ PXSTR GetBufferSetLength(int nLength);
 
 #### <a name="parameters"></a>パラメーター
 
-*されて*<br/>
+*nLength*<br/>
 正確なサイズ、`CSimpleStringT`文字内で文字バッファー。
 
 ### <a name="return-value"></a>戻り値
@@ -740,7 +740,7 @@ XCHAR operator[](int iChar) const;
 > [!NOTE]
 >  添字を使用することができます (**[]**) 内の文字の値を取得する演算子、 `CSimpleStringT`、内の文字の値を変更するのには使用できませんが、 `CSimpleStringT`。
 
-##  <a name="operator_add_eq"></a>  CSimpleStringT::operator + =
+##  <a name="operator_add_eq"></a>  CSimpleStringT::operator +=
 
 既存の文字列の末尾に新しい文字列または文字を結合します。
 
@@ -901,7 +901,7 @@ void Preallocate( int nLength);
 
 #### <a name="parameters"></a>パラメーター
 
-*されて*<br/>
+*nLength*<br/>
 正確なサイズ、`CSimpleStringT`文字内で文字バッファー。
 
 ### <a name="remarks"></a>Remarks
@@ -1067,7 +1067,7 @@ void SetString(PCXSTR pszSrc);
 *pszSrc*<br/>
 Null で終わる文字列へのポインター。
 
-*されて*<br/>
+*nLength*<br/>
 文字数のカウント*pszSrc*します。
 
 ### <a name="remarks"></a>Remarks
@@ -1105,7 +1105,7 @@ ATL_NOINLINE static int StringLength(PCXSTR psz) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*2 つ*<br/>
+*psz*<br/>
 Null で終わる文字列へのポインター。
 
 ### <a name="return-value"></a>戻り値

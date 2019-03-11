@@ -1,19 +1,19 @@
 ---
-title: '方法: gcnew を使用して値型を作成し、暗黙的なボックス化を使用する'
+title: '方法: Gcnew 値型を作成し、使用して暗黙的なボックス化を使用してください。'
 ms.date: 11/04/2016
 helpviewer_keywords:
 - gcnew keyword [C++], creating value types
 - boxing, implicit
 - value types, creating
 ms.assetid: ceb48841-d6bd-47be-a167-57f44c961603
-ms.openlocfilehash: 1c20237e8ad08cedd163bd026cddc93855e8bf52
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4b7d0560d8a80d0c09e7f8d0fce83748ec1f2f28
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50620546"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739271"
 ---
-# <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>方法: gcnew を使用して値型を作成し、暗黙的なボックス化を使用する
+# <a name="how-to-use-gcnew-to-create-value-types-and-use-implicit-boxing"></a>方法: Gcnew 値型を作成し、使用して暗黙的なボックス化を使用してください。
 
 使用して[gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)値の型が管理され、ガベージ コレクション ヒープに配置することができます、ボックス化された値の型を作成します。
 

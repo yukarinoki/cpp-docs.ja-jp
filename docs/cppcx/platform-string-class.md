@@ -1,4 +1,4 @@
-﻿---
+---
 title: Platform::String クラス
 ms.date: 12/30/2016
 ms.topic: reference
@@ -19,12 +19,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::String
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
-ms.openlocfilehash: ef9838fa8a6a34eac1d2d3531ff93fb124c81d4b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607039"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746189"
 ---
 # <a name="platformstring-class"></a>Platform::String クラス
 
@@ -92,13 +92,13 @@ String クラスは、 [Platform::Object Class](../cppcx/platform-object-class.m
 |[String::operator! = 演算子](#operator-inequality)|指定された 2 つの String オブジェクトの値が異なるかどうかを示します。|
 |[String::operator < 演算子](#operator-less-than)|1 つの String オブジェクトの値が、2 番目の String オブジェクトの値より小さいかどうかを示します。|
 
-### <a name="requirements"></a>要件
+### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **ヘッダー** vccorlib.h (既定でインクルードされる)
 
@@ -166,7 +166,9 @@ String^ Concat( String^ str1, String^ str2);
 
 `str1` と `str2` を連結した値を持つ新しい String^ オブジェクト。
 
-`str1` が `null` で、`str2` がそうでない場合は、`str1` が返されます。 `str2` が `null` で、`str1` がそうでない場合は、`str2` が返されます。 `str1` と `str2` の両方が `null` の場合は、空の文字列 (L"") が返されます。
+
+  `str1` が `null` で、`str2` がそうでない場合は、`str1` が返されます。 
+  `str2` が `null` で、`str1` がそうでない場合は、`str2` が返されます。 `str1` と `str2` の両方が `null` の場合は、空の文字列 (L"") が返されます。
 
 ## <a name="data"></a>  String::data メソッド
 
@@ -482,7 +484,7 @@ String(char16* s, unsigned int n);
 String^ s = L"Hello!";
 ```
 
-## <a name="tostring"></a> String::tostring
+## <a name="tostring"></a> String::ToString
 
 返します、`String`オブジェクトの値は、現在の文字列と同じです。
 
