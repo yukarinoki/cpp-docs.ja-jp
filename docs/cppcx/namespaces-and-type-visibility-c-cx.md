@@ -2,12 +2,12 @@
 title: 名前空間と型の参照範囲 (C++/CX)
 ms.date: 12/30/2016
 ms.assetid: cbc01a3a-3b69-4ded-9c42-ecbf0fd0a00e
-ms.openlocfilehash: 02a73f84314d4406c5fb8e9b8635a307c30e4c3d
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 54bac3492991d0bd849f7476cc87a1336108bd52
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693895"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739297"
 ---
 # <a name="namespaces-and-type-visibility-ccx-"></a>名前空間と型の参照範囲 (C++/CX)
 
@@ -33,8 +33,8 @@ Windows ランタイム型名前空間: 標準 C++ 型とは異なり、プラ�
 |修飾子|説明|メタデータに出力されるか。|
 |private|既定のアクセシビリティ。 標準 C++ の場合と同じ意味です。|いいえ|
 |protected|標準 C++ の場合と同じ意味であり、アプリまたはコンポーネント内およびメタデータ内では両方。|はい|
-|public|標準 C++ の場合と同じ意味です。|はい|
-|`public protected` または `protected public`|メタデータでは保護されたアクセシビリティ、アプリまたはコンポーネント内ではパブリック。|はい|
+|public|標準 C++ の場合と同じ意味です。|[はい]|
+|`public protected` または `protected public`|メタデータでは保護されたアクセシビリティ、アプリまたはコンポーネント内ではパブリック。|[はい]|
 |`protected private` または `private protected`|メタデータでは非可視。アプリまたはコンポーネント内では保護されたアクセシビリティ。||
 |`internal` または `private public`|メンバーは、アプリまたはコンポーネント内ではパブリックですが、メタデータでは非可視です。|いいえ|
 
@@ -48,7 +48,7 @@ C++/cli CX は、Windows ランタイムの型システムのプロジェクシ�
 
 |||
 |-|-|
-|**名前空間**|**説明**|
+|**Namespace**|**説明**|
 |default|組み込みの数値型と char16 型を格納します。 これらの型はすべての名前空間のスコープ内にあり、 `using` ステートメントは必要ではありません。|
 |プラットフォーム|などの Windows ランタイム型に対応する主にパブリックの型を含む`Array<T>`、 `String`、 `Guid`、および`Boolean`します。 また、 `Platform::Agile<T>` および `Platform::Box<T>`などの、特殊なヘルパー型も含まれます。|
 |Platform::Collections|Windows ランタイム コレクションのインターフェイスを実装する具象コレクション クラスを含む`IVector`、`IMap`など。 これらの型は、platform.winmd ではなく、ヘッダー ファイル、collection.h で定義されます。|

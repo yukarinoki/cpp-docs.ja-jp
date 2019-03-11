@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IAtlStringMgr class, using
 ms.assetid: eac5d13e-cbb4-4e82-b01e-f5f2dbcb962a
-ms.openlocfilehash: 4e3ffcdcd034fea81734aaeb87e4c33d81647f66
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c30c08217a09f600f8801bec9f50c4341e983a6b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537815"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752351"
 ---
 # <a name="implementation-of-a-custom-string-manager-basic-method"></a>カスタム文字列マネージャーの実装 (基本方法)
 
@@ -19,11 +19,11 @@ ms.locfileid: "50537815"
 
 - [CWin32Heap](../atl/reference/cwin32heap-class.md)を使用して Win32 ヒープを処理するラップ[HeapAlloc](/windows/desktop/api/heapapi/nf-heapapi-heapalloc)、[選択肢](/windows/desktop/api/heapapi/nf-heapapi-heapfree)、および[HeapRealloc](/windows/desktop/api/heapapi/nf-heapapi-heaprealloc)
 
-- [CLocalHeap](../atl/reference/clocalheap-class.md) Win32 Api をラップします[LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)、 [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree)、および[LocalRealloc。](/windows/desktop/api/winbase/nf-winbase-localrealloc)
+- [CLocalHeap](../atl/reference/clocalheap-class.md) Win32 Api をラップします。[LocalAlloc](/windows/desktop/api/winbase/nf-winbase-localalloc)、 [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree)、および[LocalRealloc](/windows/desktop/api/winbase/nf-winbase-localrealloc)
 
-- [CGlobalHeap](../atl/reference/cglobalheap-class.md) Win32 Api をラップします。 [GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)、 [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)、および[GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc)します。
+- [CGlobalHeap](../atl/reference/cglobalheap-class.md) Win32 Api をラップします。[GlobalAlloc](/windows/desktop/api/winbase/nf-winbase-globalalloc)、 [GlobalFree](/windows/desktop/api/winbase/nf-winbase-globalfree)、および[GlobalRealloc](/windows/desktop/api/winbase/nf-winbase-globalrealloc)します。
 
-- [CComHeap](../atl/reference/ccomheap-class.md) COM タスク アロケーターの Api をラップします[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)、 [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)、および[CoTaskMemRealloc。](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
+- [CComHeap](../atl/reference/ccomheap-class.md) COM タスク アロケーターの Api をラップします。[CoTaskMemAlloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemalloc)、 [CoTaskMemFree](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemfree)、および[CoTaskMemRealloc](/windows/desktop/api/combaseapi/nf-combaseapi-cotaskmemrealloc)
 
 最も役に立つ、クラスは、文字列のメモリ管理するために`CWin32Heap`のため、複数の独立したヒープを作成することができます。 たとえば、文字列だけに独立したヒープを使用する場合は、次のような操作をする可能性があります。
 
@@ -36,4 +36,3 @@ ms.locfileid: "50537815"
 ## <a name="see-also"></a>関連項目
 
 [CStringT によるメモリ管理](../atl-mfc-shared/memory-management-with-cstringt.md)
-

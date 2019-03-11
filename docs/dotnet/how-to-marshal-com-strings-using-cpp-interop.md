@@ -1,5 +1,5 @@
 ---
-title: '方法: C++ Interop を使用して COM 文字列をマーシャリングする'
+title: '方法: C++ Interop を使用して COM 文字列をマーシャ リング'
 ms.custom: get-started-article
 ms.date: 11/04/2016
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: 664c9ed973e2dff4467d13742390da8a944eb87a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559121"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751519"
 ---
-# <a name="how-to-marshal-com-strings-using-c-interop"></a>方法: C++ Interop を使用して COM 文字列をマーシャリングする
+# <a name="how-to-marshal-com-strings-using-c-interop"></a>方法: C++ Interop を使用して COM 文字列をマーシャ リング
 
 このトピックでは、BSTR (COM プログラミングで推奨される基本的な文字列形式) をする方法を示しますマネージからアンマネージ関数では、その逆に渡されます。 他の文字列型との相互運用を次のトピックを参照してください。
 

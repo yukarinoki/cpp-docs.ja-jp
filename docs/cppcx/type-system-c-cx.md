@@ -2,12 +2,12 @@
 title: 型システム (C++/CX)
 ms.date: 02/03/2017
 ms.assetid: b67bee8a-b526-4872-969e-ef22724e88fe
-ms.openlocfilehash: 9c8e09dded3743d5928fd1a4db797c6e647ec465
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fbc7a178621624e396c80509703ce1b5b4c19162
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445984"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745955"
 ---
 # <a name="type-system-ccx"></a>型システム (C++/CX)
 
@@ -17,15 +17,15 @@ Windows ランタイムのアーキテクチャを使用すると、使用する
 
 C++/CX 言語プロジェクションと内部動作の詳しい説明については、次のブログ記事を参照してください。
 
-1. [C + +/CX Part 0 of \[n\]: 概要](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
+1. [C + +/CX Part 0 of \[n\]:概要](https://blogs.msdn.microsoft.com/vcblog/2012/08/29/ccx-part-0-of-n-an-introduction)
 
-1. [C + +/CX Part 1 of \[n\]: 単純なクラス](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
+1. [C + +/CX Part 1 of \[n\]:単純なクラス](https://blogs.msdn.microsoft.com/vcblog/2012/09/05/ccx-part-1-of-n-a-simple-class)
 
-1. [C + +/CX Part 2 of \[n\]: ハット記号が型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
+1. [C + +/CX Part 2 of \[n\]:ハット記号が型](https://blogs.msdn.microsoft.com/vcblog/2012/09/17/ccx-part-2-of-n-types-that-wear-hats)
 
-1. [C + +/CX Part 3 of \[n\]: 作成中](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
+1. [C + +/CX Part 3 of \[n\]:工事中](https://blogs.msdn.microsoft.com/vcblog/2012/10/05/ccx-part-3-of-n-under-construction/)
 
-1. [C + +/CX Part 4 of \[n\]: 静的メンバー関数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
+1. [C + +/CX Part 4 of \[n\]:静的メンバー関数](https://blogs.msdn.microsoft.com/vcblog/2012/10/19/ccx-part-4-of-n-static-member-functions)
 
 ## <a name="windows-metadata-winmd-files"></a>Windows メタデータ (.winmd) ファイル
 

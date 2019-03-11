@@ -6,24 +6,26 @@ helpviewer_keywords:
 - CString objects, reference counting
 - CString class (Visual C++)
 ms.assetid: ed018aaf-8b10-46f9-828c-f9c092dc7609
-ms.openlocfilehash: d6ebc63fdcfa8294bf81aee0ce4df0c2f83af6f2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a84ae21b60d87971cb2f7b758dd369b4078607e6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430291"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740298"
 ---
 # <a name="using-cstring"></a>CString の使用
 
 このセクションのトピックでは、`CString` を使用したプログラミング方法について説明します。 に関するリファレンス ドキュメント、`CString`クラス、ドキュメントを参照して[CStringT](../atl-mfc-shared/reference/cstringt-class.md)します。
 
-`CString` を使用するには、`atlstr.h` ヘッダーをインクルードします。
+
+  `CString` を使用するには、`atlstr.h` ヘッダーをインクルードします。
 
 `CString`、 `CStringA`、および`CStringW`クラスと呼ばれるクラス テンプレートの特殊化は、 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)サポートする、文字データの種類に基づきます。
 
 A`CStringW`オブジェクトが含まれています、 **wchar_t**を入力し、Unicode 文字列がサポートされます。 A`CStringA`オブジェクトが含まれています、 **char**型、およびサポートするシングル バイト文字とマルチバイト (MBCS) 文字列。 A`CString`オブジェクトがサポートするか、 **char**型または`wchar_t`MBCS シンボルまたは UNICODE 記号はコンパイル時に定義されているかどうかに応じて、種類。
 
-`CString` オブジェクトは、`CStringData` オブジェクトの文字データを保持します。 `CString` NULL で終わる C スタイルの文字列を受け入れます。 `CString` 文字列の追跡のパフォーマンスを向上させることが、長さも LPCWSTR への変換をサポートするために格納されている文字データに NULL 文字を保持します。 `CString` C スタイルの文字列をエクスポートする場合、null 終端文字が含まれます。 その他の場所に NULL を挿入できる、 `CString`、予期しない結果が生じる。
+
+  `CString` オブジェクトは、`CStringData` オブジェクトの文字データを保持します。 `CString` NULL で終わる C スタイルの文字列を受け入れます。 `CString` 文字列の追跡のパフォーマンスを向上させることが、長さも LPCWSTR への変換をサポートするために格納されている文字データに NULL 文字を保持します。 `CString` C スタイルの文字列をエクスポートする場合、null 終端文字が含まれます。 その他の場所に NULL を挿入できる、 `CString`、予期しない結果が生じる。
 
 文字列クラス `CAtlString`、`CAtlStringA`、および `CAtlStringW` は、CRT サポートがある場合もない場合も、MFC ライブラリにリンクせずに使用できます。
 
@@ -48,10 +50,12 @@ int main() {
 C リテラル文字列からのオブジェクトの作成、`CString` 内の個々の文字へのアクセス、2 つのオブジェクトの連結、`CString` オブジェクトの比較など、`CString` の基本操作について説明します。
 
 [文字列データ管理](../atl-mfc-shared/string-data-management.md)<br/>
-`CString` での Unicode と MBCS の使用について説明します。
+
+  `CString` での Unicode と MBCS の使用について説明します。
 
 [CString セマンティクス](../atl-mfc-shared/cstring-semantics.md)<br/>
-`CString` オブジェクトの使用方法について説明します。
+
+  `CString` オブジェクトの使用方法について説明します。
 
 [C スタイルの文字列に関連する CString の操作方法](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
 C スタイルの null で終わる文字列のように `CString` オブジェクトの内容を操作する方法について説明します。
@@ -71,10 +75,12 @@ MFC で Unicode と MBCS をサポートできるようにする方法につい�
 ## <a name="reference"></a>参照
 
 [CStringT](../atl-mfc-shared/reference/cstringt-class.md)<br/>
-`CStringT` クラスに関するリファレンス情報を提供します。
+
+  `CStringT` クラスに関するリファレンス情報を提供します。
 
 [CSimpleStringT クラス](../atl-mfc-shared/reference/csimplestringt-class.md)<br/>
-`CSimpleStringT` クラスに関するリファレンス情報を提供します。
+
+  `CSimpleStringT` クラスに関するリファレンス情報を提供します。
 
 ## <a name="related-sections"></a>関連項目
 
@@ -82,4 +88,3 @@ MFC で Unicode と MBCS をサポートできるようにする方法につい�
 文字列データを管理する複数の方法について説明したトピックへのリンクが含まれています。
 
 [文字列 (ATL と MFC)](../atl-mfc-shared/strings-atl-mfc.md)
-

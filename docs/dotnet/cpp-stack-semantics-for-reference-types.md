@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - reference types, C++ stack semantics for
 ms.assetid: 319a1304-f4a4-4079-8b84-01cec847d531
-ms.openlocfilehash: b2d2d5991f7b52727b366214b8ca9ed4d8e14956
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba17a56c5274295c44cdc5aa651380d1e6c83d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607861"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740924"
 ---
 # <a name="c-stack-semantics-for-reference-types"></a>参照型の C++ スタック セマンティクス
 
@@ -27,7 +27,7 @@ Visual C 2005 では、前に、参照型のインスタンスのみ作成でし
 
 コンパイラでは、参照型の既定の代入演算子は生成されません。 代入演算子を使用すると、スタック セマンティクスを使用してオブジェクトを作成し、スタック セマンティクスを使用して作成された既存のオブジェクトで初期化できます。 参照型の代入演算子は、次の形式の署名:`void operator=( R% ){}`します。
 
-型のデストラクターが重要なリソースを解放し、参照型のスタック セマンティクスを使用して場合、は、デストラクターを明示的に呼び出す必要はありません (呼び出したり`delete`)。 参照型のデストラクターの詳細については、次を参照してください。[する方法のデストラクターおよびファイナライザー: クラスと構造体定義および使用 (C +/cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+型のデストラクターが重要なリソースを解放し、参照型のスタック セマンティクスを使用して場合、は、デストラクターを明示的に呼び出す必要はありません (呼び出したり`delete`)。 参照型のデストラクターの詳細については、次を参照してください。[する方法のデストラクターおよびファイナライザー。クラスと構造体定義および使用 (C +/cli CLI)](../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
 
 コンパイラが生成した代入演算子には、次の項目を追加します。 通常の標準 C++ 規則に従います。
 
