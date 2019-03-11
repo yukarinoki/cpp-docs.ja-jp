@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
-ms.openlocfilehash: 8aa0b47c1de520693f43794df3ee10fea131c963
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0c09e0c29aacbf655652446caf90ab21d92103e8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50652622"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748208"
 ---
 # <a name="friend-assemblies-c"></a>フレンド アセンブリ (C++)
 
@@ -157,13 +157,13 @@ public:
 
 コンポーネントがその公開キーを指定する必要がありますに注意してください。 次のコマンド キーのペアを作成し、公開キーを取得するコマンド プロンプトで、順番に実行することをお勧めします。
 
-**sn-d friend_assemblies.snk**
+**sn -d friend_assemblies.snk**
 
-**sn-k friend_assemblies.snk**
+**sn -k friend_assemblies.snk**
 
-**sn-i friend_assemblies.snk friend_assemblies.snk**
+**sn -i friend_assemblies.snk friend_assemblies.snk**
 
-**sn pc friend_assemblies.snk key.publickey**
+**sn -pc friend_assemblies.snk key.publickey**
 
 **sn-tp key.publickey**
 
