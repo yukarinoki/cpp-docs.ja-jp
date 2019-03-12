@@ -28,12 +28,12 @@ helpviewer_keywords:
 - gets function
 - standard input, reading from
 ms.assetid: 1ec2dd4b-f801-48ea-97c2-892590f16024
-ms.openlocfilehash: 523a295e088fe692eb9abd8dcca6b3919d432c4e
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: bd5f4e885c0291be963320610942415fc7b61172
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55702740"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738526"
 ---
 # <a name="gets-getws"></a>gets、_getws
 
@@ -73,7 +73,7 @@ wchar_t *_getws(
 
 正常に終了した場合はその引数を返します。 エラーが発生した場合またはファイルの終端に達した場合は、**NULL** ポインターを返します。 どちらが発生したかを確認するには、 [ferror](../c-runtime-library/reference/ferror.md) または [feof](../c-runtime-library/reference/feof.md) を使用します。 `buffer` が **NULL** の場合は、「[パラメーターの検証](../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、これらの関数は **NULL** を返し、errno を `EINVAL`に設定します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `gets` 関数は、`stdin` 標準入力ストリームから行を読み取り、`buffer` に格納します。 行は、最初の改行文字 ('\n') までのすべての文字 (改行文字を含む) で構成されます。 `gets` は、行を返す前に、改行文字を null 文字 ('\0') に置き換えます。 これとは対照的に、 `fgets` 関数は改行文字を保持します。 ワイド文字を扱う場合は、`_getws` ではなく `gets`を使用します。引数にはワイド文字列を指定します。また戻り値もワイド文字列です。
 
@@ -122,7 +122,7 @@ int main( void )
 Hello there!The line entered was: Hello there!
 ```
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 [ストリーム入出力](../c-runtime-library/stream-i-o.md)<br/>
 [fgets、fgetws](../c-runtime-library/reference/fgets-fgetws.md)<br/>

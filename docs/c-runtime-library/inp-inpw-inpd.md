@@ -29,12 +29,12 @@ helpviewer_keywords:
 - I/O [CRT], port
 - _inpw function
 ms.assetid: 5d9c2e38-fc85-4294-86d5-7282cc02d1b3
-ms.openlocfilehash: 56587455b1b5246be361afc131786d85dbc9a1a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0915b7a98b10137b37025eb59161bc98c27ae7b3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469859"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748347"
 ---
 # <a name="inp-inpw-inpd"></a>_inp、_inpw、_inpd
 
@@ -69,13 +69,13 @@ I/O ポート番号。
 
 これらの関数は、 `port`から読み込んだバイト、ワード、またはダブルワードを返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_inp`、 `_inpw`、 `_inpd` の各関数は、指定された入力ポートからそれぞれバイト、ワード、ダブルワードを 1 つ読み込みます。 ポート番号として、0 - 65,535 の unsigned short 型整数を入力できます。
 
 これらの関数は I/O ポートから直接読み込まれるため、ユーザー コードで使用できません。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -89,7 +89,7 @@ I/O ポート番号。
 
 [C ランタイム ライブラリ](../c-runtime-library/crt-library-features.md)のすべてのバージョン。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンソール入出力とポート入出力](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_outp、_outpw、_outpd](../c-runtime-library/outp-outpw-outpd.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - strings [C++], memory management
 - CStringT class, memory management
 ms.assetid: 88b8342d-19b5-48c4-9cf6-e4c44cece21e
-ms.openlocfilehash: f45aac11f0c42aecf8c72cf6f7d1630d50b780f3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 189d15df17ac28528ebbcc41879871e3426f48fb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598020"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748633"
 ---
 # <a name="memory-management-with-cstringt"></a>CStringT によるメモリ管理
 
@@ -31,9 +31,8 @@ ms.locfileid: "50598020"
 
 - [カスタム文字列マネージャーの実装 (詳細方法)](../atl-mfc-shared/implementation-of-a-custom-string-manager-advanced-method.md)
 
-- [CFixedStringT: 例のカスタム文字列マネージャー](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
+- [CFixedStringT:カスタム文字列マネージャーの例](../atl-mfc-shared/cfixedstringt-example-of-a-custom-string-manager.md)
 
 ## <a name="see-also"></a>関連項目
 
 [CustomString サンプル](../visual-cpp-samples.md)
-

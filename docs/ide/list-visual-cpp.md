@@ -8,12 +8,12 @@ helpviewer_keywords:
 - list C++ XML tag
 - <list> C++ XML tag
 ms.assetid: c792a10b-0451-422c-9aa0-604116e69d64
-ms.openlocfilehash: 08751e5fcdf246dd5ad285fc0cda5114d99cce15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 015647cd381ba4dc0c099b322e3c5870246c9fc2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50646668"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751337"
 ---
 # <a name="ltlistgt-visual-c"></a>&lt;list&gt; (Visual C++)
 
@@ -42,7 +42,7 @@ ms.locfileid: "50646668"
 *description*<br/>
 行頭文字または番号付きリストの項目、または `term` の定義です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 リスト内の各項目は、\<item> ブロックで指定されます。 定義リストを作成する場合は、`term` と `description` の両方を指定する必要があります。 ただし、テーブル、箇条書きリスト、または番号付きリストの場合は、`description` のエントリを指定するだけで済みます。
 
@@ -69,6 +69,6 @@ ms.locfileid: "50646668"
 class MyClass {};
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

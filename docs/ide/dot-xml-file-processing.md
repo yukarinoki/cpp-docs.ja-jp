@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, processing XML file
 ms.assetid: e70fdeae-80ac-4872-ab24-771c5635cfbf
-ms.openlocfilehash: bc9aa57ffd68630d0a4209f8f8611882f8f36fc3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 75b58b7ce2b5c96e853c99f0827ee4de605a6f3d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524171"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748477"
 ---
 # <a name="xml-file-processing"></a>.Xml ファイルの処理
 
@@ -27,7 +27,7 @@ ms.locfileid: "51524171"
   |---------------|-----------------|
   | N | namespace<br /><br /> ドキュメント コメントを名前空間に追加することはできません。名前空間への cref 参照は可能です。 |
   | T | 型: クラス、インターフェイス、構造体、列挙、デリゲート |
-  | D | typedef |
+  | D | Typedef |
   | F | フィールド |
   | P | プロパティ (インデクサーまたはその他のインデックス付きプロパティを含む) |
   | M | メソッド (コンストラクター、演算子などの特殊なメソッドを含む) |
@@ -178,6 +178,6 @@ namespace N {
 }
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

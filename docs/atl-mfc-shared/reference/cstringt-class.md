@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: bd8fefd3424ab5ec422adb352972ba846e45139d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525497"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750872"
 ---
 # <a name="cstringt-class"></a>CStringT クラス
 
@@ -170,7 +170,7 @@ String クラスの文字型。 次のいずれかの値を指定します。
 |[CStringT::Replace](#replace)|置換には、他の文字と文字が示されます。|
 |[CStringT::ReverseFind](#reversefind)|文字列内の文字を検索します。末尾から開始します。|
 |[CStringT::Right](#right)|文字列の右側の部分を抽出します。|
-|[名称](#setsysstring)|既存の BSTR オブジェクトからデータを設定、`CStringT`オブジェクト。|
+|[CStringT::SetSysString](#setsysstring)|既存の BSTR オブジェクトからデータを設定、`CStringT`オブジェクト。|
 |[CStringT::SpanExcluding](#spanexcluding)|識別される文字のセットに含まれていない最初の文字で始まる、文字列から文字を抽出`pszCharSet`します。|
 |[CStringT::SpanIncluding](#spanincluding)|セット内の文字のみを含む部分文字列を抽出します。|
 |[CStringT::Tokenize](#tokenize)|抽出は、対象の文字列でトークンを指定します。|
@@ -182,10 +182,10 @@ String クラスの文字型。 次のいずれかの値を指定します。
 
 |||
 |-|-|
-|[演算子 =](#operator_eq)|新しい値を割り当てます、`CStringT`オブジェクト。|
+|[operator=](#operator_eq)|新しい値を割り当てます、`CStringT`オブジェクト。|
 |[CStringT::operator +](#operator_add)|2 つの文字列または文字と文字列を連結します。|
 |[CStringT::operator + =](#operator_add_eq)|既存の文字列の末尾に新しい文字列を連結します。|
-|[CStringT::operator = =](#operator_eq_eq)|2 つの文字列が論理的に等しいかどうかを決定します。|
+|[CStringT::operator ==](#operator_eq_eq)|2 つの文字列が論理的に等しいかどうかを決定します。|
 |[CStringT::operator! =](#operator_neq)|2 つの文字列が論理的に等しいかどうかを決定します。|
 |[CStringT::operator &lt;](#operator_lt)|演算子の左側にある文字列がより小さいかどうかを判断右側にある文字列。|
 |[CStringT::operator &gt;](#operator_gt)|演算子の左側にある文字列が右側にある文字列より大きいかどうかを決定します。|
@@ -356,7 +356,7 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*<br/>
+*psz*<br/>
 その他の文字列の比較に使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -377,7 +377,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*<br/>
+*psz*<br/>
 その他の文字列の比較に使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -402,7 +402,7 @@ int Compare(PCXSTR psz) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*<br/>
+*psz*<br/>
 その他の文字列の比較に使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -431,7 +431,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*2 つ*<br/>
+*psz*<br/>
 その他の文字列の比較に使用します。
 
 ### <a name="return-value"></a>戻り値
@@ -528,7 +528,7 @@ CStringT(const YCHAR* pch, int nLength, IAtlStringMgr* pStringMgr) :
 *pch*<br/>
 長さの文字の配列へのポインター*されて*null で終了していません。
 
-*されて*<br/>
+*nLength*<br/>
 文字数のカウント*pch*します。
 
 *ch*<br/>
@@ -558,7 +558,7 @@ TCHAR (の ANSI および Unicode 文字列)。
 *bMFCDLL*<br/>
 プロジェクトが MFC DLL (TRUE) であるかどうかどうかを指定するブール値 (FALSE)。
 
-*[Systemstring]*<br/>
+*SystemString*<br/>
 必要があります`System::String`、し、プロジェクトは/clr でコンパイルする必要があります。
 
 *pString*<br/>
@@ -568,11 +568,11 @@ TCHAR (の ANSI および Unicode 文字列)。
 
 コンス トラクターは、入力データを新しい割り当て済み記憶域にコピー、ため、注意する必要がメモリ不足例外が発生する可能性があります。 変換関数として機能するようにこれらのコンス トラクターのいくつかに注意してください。 これにより、たとえば、LPTSTR に置き換えてください場所、`CStringT`オブジェクトが必要です。
 
-- `CStringT`( `LPCSTR` `lpsz` ): Unicode を構築します`CStringT`ANSI 文字列から。 このコンス トラクターは次の例で示すように文字列リソースの読み込みに使用することもできます。
+- `CStringT`( `LPCSTR` `lpsz` ):Unicode を構築します`CStringT`ANSI 文字列から。 このコンス トラクターは次の例で示すように文字列リソースの読み込みに使用することもできます。
 
-- `CStringT(` `LPCWSTR` `lpsz` ): 作成、 `CStringT` Unicode 文字列。
+- `CStringT(` `LPCWSTR` `lpsz` ):構築、 `CStringT` Unicode 文字列。
 
-- `CStringT`( `const unsigned char*` `psz` ): 作成することができます、`CStringT`へのポインターから**unsigned char**します。
+- `CStringT`( `const unsigned char*` `psz` ):構築することができます、`CStringT`へのポインターから**unsigned char**します。
 
 > [!NOTE]
 >  ANSI および Unicode 文字列の間で文字列の暗黙的な変換をオフに _CSTRING_DISABLE_NARROW_WIDE_CONVERSION マクロを定義します。 マクロは、変換をサポートするコンス トラクターをコンパイルから除外します。
@@ -590,7 +590,8 @@ TCHAR (の ANSI および Unicode 文字列)。
 
 ##  <a name="_dtorcstringt"></a>  CStringT:: ~ CStringT
 
-`CStringT` オブジェクトを破棄します。
+
+  `CStringT` オブジェクトを破棄します。
 
 ```
 ~CStringT() throw();
@@ -598,7 +599,8 @@ TCHAR (の ANSI および Unicode 文字列)。
 
 ### <a name="remarks"></a>Remarks
 
-`CStringT` オブジェクトを破棄します。
+
+  `CStringT` オブジェクトを破棄します。
 
 ##  <a name="delete"></a>  CStringT::Delete
 
@@ -849,7 +851,7 @@ int Insert(int iIndex, XCHAR ch);
 *iIndex*<br/>
 その前に、挿入が行われます文字のインデックス。
 
-*2 つ*<br/>
+*psz*<br/>
 挿入する部分文字列へのポインター。
 
 *ch*<br/>
@@ -1069,7 +1071,7 @@ A`CStringT`文字列または文字で連結します。
 
 [!code-cpp[NVC_ATLMFC_Utilities#140](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_24.cpp)]
 
-##  <a name="operator_add_eq"></a>  CStringT::operator + =
+##  <a name="operator_add_eq"></a>  CStringT::operator +=
 
 文字列の末尾に文字を連結します。
 
@@ -1125,7 +1127,7 @@ A`CStringT`をこの文字列に連結します。
 
 [!code-cpp[NVC_ATLMFC_Utilities#141](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_25.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CStringT::operator = =
+##  <a name="operator_eq_eq"></a>  CStringT::operator ==
 
 2 つの文字列が論理的に等しいかどうかを判断します。
 
@@ -1486,7 +1488,7 @@ CStringT Right(int nCount) const;
 
 [!code-cpp[NVC_ATLMFC_Utilities#131](../../atl-mfc-shared/codesnippet/cpp/cstringt-class_35.cpp)]
 
-##  <a name="setsysstring"></a>  名称
+##  <a name="setsysstring"></a>  CStringT::SetSysString
 
 指す BSTR を再割り当て*pbstr*の内容をコピー、 `CStringT` NULL 文字を含む、オブジェクト。
 
@@ -1733,4 +1735,3 @@ CStringT& TrimRight();
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [ATL/MFC 共有クラス](../../atl-mfc-shared/atl-mfc-shared-classes.md)<br/>
 [CSimpleStringT クラス](../../atl-mfc-shared/reference/csimplestringt-class.md)
-

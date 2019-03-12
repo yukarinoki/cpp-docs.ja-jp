@@ -53,12 +53,12 @@ helpviewer_keywords:
 - _exec function
 - _texecvpe function
 ms.assetid: a261df93-206a-4fdc-b8ac-66aa7db83bc6
-ms.openlocfilehash: 4974571764c22b26e84e93c68d679afc8a1cea73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72300f754015e54daf14863ca2ae677bde8f7d1a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573369"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746202"
 ---
 # <a name="exec-wexec-functions"></a>_exec、_wexec 系関数
 
@@ -80,7 +80,7 @@ ms.locfileid: "50573369"
 |`p`|`PATH` 環境変数を使用して、実行するファイルを検索します。|
 |`v`|コマンド ライン引数へのポインター配列 `argv` が `_exec` に渡されます。 通常は、新しいプロセスに渡すパラメーターの個数に変動がある場合に使用します。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 各 `_exec` 関数は、新しいプロセスを読み込んで実行します。 `_exec` 系関数はすべて、同じオペレーティング システム関数 ([CreateProcess](/windows/desktop/api/processthreadsapi/nf-processthreadsapi-createprocessa)) を使います。 `_exec` 系関数は、現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 `_wexec` 系関数は、`_exec` 系関数のワイド文字バージョンです。 `_wexec` 系関数の処理内容は `_exec` 系関数とほぼ同様ですが、マルチバイト文字列は処理しません。
 
@@ -229,11 +229,11 @@ int main( int ac, char* av[] )
 }
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ヘッダー:** process.h
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プロセス制御と環境制御](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>

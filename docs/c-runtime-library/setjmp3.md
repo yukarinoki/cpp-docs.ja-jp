@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _setjmp3 function
 - setjmp3 function
 ms.assetid: 6129c2f3-8bac-4fdb-a827-44e1eebba500
-ms.openlocfilehash: 4509738f8e0128e2f9277e744a5965f557f65439
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c89acf1de88b831d70a0f438cdf14148a48632
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564009"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741808"
 ---
 # <a name="setjmp3"></a>_setjmp3
 
@@ -55,13 +55,13 @@ int _setjmp3(
 
 常に 0 を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 この関数は C++ プログラムでは使用しないでください。 これは、C++ をサポートしない組み込み関数です。 `setjmp` の使用方法の詳細については、「[setjmp/longjmp の使用](../cpp/using-setjmp-longjmp.md)」をご覧ください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [setjmp](../c-runtime-library/reference/setjmp.md)

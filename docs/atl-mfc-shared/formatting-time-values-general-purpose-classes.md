@@ -1,5 +1,5 @@
 ---
-title: '時刻値の書式設定: 汎用クラス'
+title: 時刻の値を書式設定。汎用クラス
 ms.date: 11/04/2016
 helpviewer_keywords:
 - dates, calculating intervals
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - time [C++], formatting
 - formatting [C++], time
 ms.assetid: 7fcfee24-f874-4a4d-95b3-adc19a0f2df0
-ms.openlocfilehash: 48290adbc3e0e7f3cbe9a5a8e0569a5b61833e8c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bab93638d81e8e4e5d6f7ce71bf6a3180fa7f7e5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50478664"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739185"
 ---
-# <a name="formatting-time-values-general-purpose-classes"></a>時刻値の書式設定: 汎用クラス
+# <a name="formatting-time-values-general-purpose-classes"></a>時刻の値を書式設定。汎用クラス
 
 次の手順では、時間の値の書式設定する方法を示します。
 
@@ -31,4 +31,3 @@ ms.locfileid: "50478664"
 - [SYSTEMTIME の操作](../atl-mfc-shared/date-and-time-systemtime-support.md)
 
 - [日付と時刻のオートメーションのサポート](../atl-mfc-shared/date-and-time-automation-support.md)
-

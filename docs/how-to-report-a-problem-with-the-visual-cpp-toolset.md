@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 7758905f6db537260ec9e8b6e516bfa409e97ad2
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809738"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740249"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Visual C++ ツールセットまたはドキュメントの問題を報告する方法
 
@@ -398,4 +398,3 @@ C++ コンパイラ、リンカー、およびその他のツールやライブ�
 Microsoft では、GitHub の問題を使用して、報告されているドキュメントの問題を追跡しています。 現在 GitHub の問題は、コンテンツ ページから直接作成できます。これでは、ライターや製品チームとさまざまな方法で問題に関して直接やり取りできます。 ドキュメントに問題がある場合、コード サンプルが不適切な場合、説明が不明瞭な場合、重要な欠落がある場合、または単に記述間違いがある場合、簡単にご連絡いただけます。 ページの一番下までスクロールし、**[Sign in to give documentation feedback]** \(サインインしてドキュメントのフィードバックを送信する\) を選択します。 GitHub アカウントをお持ちでない場合は作成する必要がありますが、作成すれば、すべてのドキュメントに関する問題やそれらの状態を参照できます。また、お客様が報告してくださった問題が変更された場合、通知を受け取ることができます。 詳細については、「[A New Feedback System Is Coming to docs.microsoft.com](/teamblog/a-new-feedback-system-is-coming-to-docs)」(docs.microsoft.com に導入される新しいフィードバック システム) を参照してください。
 
 ドキュメントのフィードバック ボタンを使用して、ドキュメントの問題を GitHub で作成すると、Microsoft で問題がどこにあるか知ることができるよう、問題を作成したページに関するいくつかの情報が自動的に記入されます。 この情報は編集しないでください。 問題の箇所の詳細のみを添付し、必要に応じて、修正方法の提案をお知らせください。 [Microsoft のドキュメントはオープン ソースなので](https://github.com/MicrosoftDocs/cpp-docs/)、お客様で修正プログラムを作成してご提案いただくことも可能です。 弊社のドキュメントにご協力いただく方法の詳細については、GitHub の「[Contributing guide](https://github.com/MicrosoftDocs/cpp-docs/blob/master/CONTRIBUTING.md)」 (寄稿ガイド) を参照してください。
-

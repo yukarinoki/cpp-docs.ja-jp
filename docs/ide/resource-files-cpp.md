@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++]
 - file types [C++], resource files
 ms.assetid: 338a4a0f-0c62-4ef1-a34f-5d86262d93a4
-ms.openlocfilehash: f9ead50c1c8761968ebad65f6a5289cfeea8fdaf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e19ad88a52467cd7ad2d5fa17dd964fd1bb38429
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623003"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747048"
 ---
 # <a name="resource-files-c"></a>リソース ファイル (C++)
 
@@ -30,6 +30,6 @@ ms.locfileid: "50623003"
 |Toolbar.bmp|*Projname*\res|リソース ファイル (Visual Studio)|ツール バーまたはパレットでアプリケーションまたはコントロールを表すビットマップ ファイル。 このビットマップは、プロジェクトのリソース ファイルに含まれます。 最初のツール バーとステータス バーは **CMainFrame** クラスで構築されます。|
 |ribbon.mfcribbon-ms|*Projname*\res|リソース ファイル (Visual Studio)|リボンのボタン、コントロール、属性を定義する XML コードを含むリソース ファイル。 詳細については、「 [Ribbon Designer (MFC)](../mfc/ribbon-designer-mfc.md)」を参照してください。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual C++ プロジェクトに対して作成されるファイルの種類](../ide/file-types-created-for-visual-cpp-projects.md)

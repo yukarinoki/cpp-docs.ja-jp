@@ -12,12 +12,12 @@ helpviewer_keywords:
 - _pgmptr function
 - pgmptr function
 ms.assetid: 4d44b515-0eff-4136-8bc4-684195f218f5
-ms.openlocfilehash: c59134afc3b4d0f6360984c67dede28c27010bae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6991dfe90e58352b26d7c914e1601a68674b8a5b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597534"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749868"
 ---
 # <a name="pgmptr-wpgmptr"></a>_pgmptr、_wpgmptr
 
@@ -30,7 +30,7 @@ extern char *_pgmptr;
 extern wchar_t *_wpgmptr;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 コマンド インタープリター (Cmd.exe) からプログラムを実行すると、`_pgmptr` は実行可能ファイルの完全なパスに自動的に初期化されます。 たとえば、Hello.exe が C:\BIN にあり、C:\BIN がパス内にある場合は、次のように、実行時に `_pgmptr` が C:\BIN\Hello.exe に設定されます。
 
@@ -48,7 +48,7 @@ C> hello
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_tpgmptr`|`_pgmptr`|`_pgmptr`|`_wpgmptr`|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |変数|必須ヘッダー|
 |--------------|---------------------|
@@ -75,6 +75,6 @@ int main( void )
 
 `%Fs` を `%S`に、`main` を `wmain` に変更することで、`_wpgmptr` を使用できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [グローバル変数](../c-runtime-library/global-variables.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MBCS data type
 - _MBCS data type
 ms.assetid: 48f471e7-9d2b-4a39-b841-16a0e15c0a18
-ms.openlocfilehash: 487a73fae9380683e06e863f133e5e470635e0da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2c5031f0f1114bb7706dd8816729f661b78144d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432683"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743924"
 ---
 # <a name="using-tcharh-data-types-with-mbcs"></a>TCHAR.H データ型の _MBCS 定義下での使用
 
@@ -66,7 +66,7 @@ ms.locfileid: "50432683"
 
 **Microsoft 固有の仕様はここまで**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [国際化](../c-runtime-library/internationalization.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

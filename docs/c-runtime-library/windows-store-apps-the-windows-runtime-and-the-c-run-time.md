@@ -2,12 +2,12 @@
 title: UWP アプリ、Windows ランタイム、および C ランタイム
 ms.date: 02/02/2019
 ms.assetid: 356d6d8d-76ee-4181-9ad0-6f24b2fede38
-ms.openlocfilehash: ae57390dc916116b8d799b9f937ff882abaef970
-ms.sourcegitcommit: 63c072f5e941989636f5a2b13800b68bb7129931
+ms.openlocfilehash: 932b5388f2d1bf87f0d77ae1330fa3e613c9dca7
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55763893"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738671"
 ---
 # <a name="uwp-apps-the-windows-runtime-and-the-c-run-time"></a>UWP アプリ、Windows ランタイム、および C ランタイム
 
@@ -39,7 +39,7 @@ Windows ランタイムは次の CRT 機能をサポートしていません。
 
 UWP アプリで使用できない CRT 関数と使用できる代替関数の詳細な一覧については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [互換性](../c-runtime-library/compatibility.md)<br/>
 [Windows ランタイムのサポートされていない CRT 関数](../c-runtime-library/windows-runtime-unsupported-crt-functions.md)<br/>

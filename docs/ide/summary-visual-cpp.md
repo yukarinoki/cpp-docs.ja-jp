@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <summary> C++ XML tag
 - summary C++ XML tag
 ms.assetid: cdeeefbb-1339-45d6-9002-10042a9a2726
-ms.openlocfilehash: 08d03d19355b89fa3c59ce5bede514d3ffa9b55b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 32d939dc51e3e476e503f96995355fc78fb21ed0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509100"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744845"
 ---
 # <a name="ltsummarygt-visual-c"></a>&lt;summary&gt; (Visual C++)
 
@@ -30,7 +30,7 @@ ms.locfileid: "50509100"
 *description*<br/>
 オブジェクトの概要。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 \<summary> タグのテキストは、IntelliSense の型に関する唯一のソースで、[オブジェクト ブラウザー](/visualstudio/ide/viewing-the-structure-of-code)とコード コメント Web レポートにも表示されます。
 
@@ -57,6 +57,6 @@ public:
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

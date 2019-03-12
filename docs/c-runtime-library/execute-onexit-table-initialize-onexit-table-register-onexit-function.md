@@ -20,12 +20,12 @@ helpviewer_keywords:
 - _initialize_onexit_table function
 - _register_onexit_function function
 ms.assetid: ad9e4149-d4ad-4fdf-aaaf-cf786fcb4473
-ms.openlocfilehash: 1c9b0872f2a472b7fbb5bd83c9b0a0d9f21a6ab6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0090d5d1504f4320c122ae1e811e0af88cccdd2e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536724"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741629"
 ---
 # <a name="executeonexittable-initializeonexittable-registeronexitfunction"></a>_execute_onexit_table、_initialize_onexit_table、_register_onexit_function
 
@@ -60,7 +60,7 @@ int _execute_onexit_table(
 
 正常に終了した場合は、0 を返します。 それ以外の場合は、負の値を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これらの関数は、C ランタイムをサポートするために使用されるインフラストラクチャ実装の詳細であり、ご使用のコードから直接呼び出してはなりません。 C ランタイムでは、*onexit 関数テーブル*を使用して、`atexit`、`at_quick_exit`、および `_onexit` の呼び出しによって登録される関数のシーケンスを表現します。 onexit 関数テーブルのデータ構造は、C ランタイムの不透明な実装の詳細であり、データ メンバーの順番と意味は変わる場合があります。 それらを外部コードによって確認してはなりません。
 
@@ -70,7 +70,7 @@ int _execute_onexit_table(
 
 `_execute_onexit_table` 関数は、onexit 関数テーブル内のすべての関数を実行し、テーブルをクリアして、制御を返します。 `_execute_onexit_table` の呼び出しの後、このテーブルは無効な状態になります。再度使用するには `_initialize_onexit_table` を呼び出して事前に再初期化しておく必要があります。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -78,7 +78,7 @@ int _execute_onexit_table(
 
 `_initialize_onexit_table`、`_register_onexit_function`、`_execute_onexit_table` の各関数は、Microsoft 固有の関数です。 互換性の詳細については、「 [互換性](../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [atexit](../c-runtime-library/reference/atexit.md)<br/>
 [exit、_Exit、_exit](../c-runtime-library/reference/exit-exit-exit.md)<br/>

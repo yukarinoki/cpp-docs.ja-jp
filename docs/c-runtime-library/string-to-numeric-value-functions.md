@@ -16,12 +16,12 @@ helpviewer_keywords:
 - parsing, numeric strings
 - string conversion, to numeric values
 ms.assetid: 11cbd9ce-033b-4914-bf66-029070e7e385
-ms.openlocfilehash: d3e53c665378efdd63a373027f4edd6b7fb90ad3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f24b75c2fdb3aa0d84b16874d2d01f1cb96d4b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544574"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743888"
 ---
 # <a name="string-to-numeric-value-functions"></a>文字列を数値に変換する関数
 
@@ -35,7 +35,7 @@ ms.locfileid: "50544574"
 
 - [_strtoui64、_wcstoui64、_strtoui64_l、_wcstoui64_l](../c-runtime-library/reference/strtoui64-wcstoui64-strtoui64-l-wcstoui64-l.md)
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 **strtod** ファミリの各関数は、NULL 終了文字列を数値に変換します。 利用できる関数を次の表に示します。
 
@@ -88,7 +88,7 @@ ms.locfileid: "50544574"
 
 `wcstod`、`wcstol`、`wcstoul`、`_wcstoi64`、`_wcstoui64` はそれぞれ、`strtod`、`strtol`、`strtoul`、`_strtoi64`、`_strtoui64` のワイド文字バージョンです。これらのワイド文字関数の変換終了引数へのポインターはワイド文字です。 ワイド文字関数は、それが 1 バイト文字の場合と同様に動作します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [データ変換](../c-runtime-library/data-conversion.md)<br/>
 [ロケール](../c-runtime-library/locale.md)<br/>

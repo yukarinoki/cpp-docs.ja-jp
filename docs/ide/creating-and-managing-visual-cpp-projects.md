@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: 2c3722fe9da764a578c255e50120fa2770555665
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e511ef597e64a3782ce7a3ce650db065e9299cdd
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553180"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744326"
 ---
 # <a name="creating-and-managing-msbuild-based-visual-c-projects"></a>MSBuild ベースの Visual C++ プロジェクトの作成と管理
 
@@ -53,7 +53,7 @@ Visual C++ で利用できる MSBuild ベースのプロジェクトの種類に
 [コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)<br>
 機能を追加するために、クラス、メソッド、変数などの要素をプロジェクトに追加する方法について説明します。
 
-[方法 : ビルドのプロジェクト出力ファイルを編成する](../ide/how-to-organize-project-output-files-for-builds.md)<br>
+[方法: ビルドのプロジェクト出力ファイルを編成する](../ide/how-to-organize-project-output-files-for-builds.md)<br>
 プロジェクトの出力ファイルを管理する方法について説明します。
 
 ## <a name="related-sections"></a>関連項目
@@ -61,6 +61,6 @@ Visual C++ で利用できる MSBuild ベースのプロジェクトの種類に
 [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)<br>
 コマンド ラインまたは Visual Studio の統合開発環境からプログラムをビルドする方法について説明するトピックへのリンクがあります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual Studio SDK](https://msdn.microsoft.com/vstudio/extend)

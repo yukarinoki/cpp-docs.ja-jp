@@ -6,12 +6,12 @@ helpviewer_keywords:
 - deploying applications [C++], examples
 - examples [C++], deployment
 ms.assetid: a2904fea-2703-48dc-881b-5bfc1f11b67f
-ms.openlocfilehash: 2ad60966ca97d2c997856801c0a97c3d187538a0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4e31046a8ec7067d9a173e7d3970b5e6eaf5848e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653910"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740349"
 ---
 # <a name="deployment-examples"></a>配置例
 
@@ -27,7 +27,7 @@ ms.locfileid: "50653910"
 
 [デバッグ バージョンのアプリケーションを実行するテスト用コンピューターの準備](../ide/preparing-a-test-machine-to-run-a-debug-executable.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[チュートリアル : ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)<br>
+[チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)<br>
 [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)

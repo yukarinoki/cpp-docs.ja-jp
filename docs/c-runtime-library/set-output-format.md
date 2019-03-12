@@ -22,12 +22,12 @@ helpviewer_keywords:
 - _set_output_format function
 - set_output_format function
 ms.assetid: 1cb48df8-44b4-4400-bd27-287831d6b3ff
-ms.openlocfilehash: 3c4e4de7dc7161c033f07cfb02ef90ad5db559c0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 173c1bbae3009ffb4ee10b7b32ec7751f47c56c8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492158"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749231"
 ---
 # <a name="setoutputformat"></a>_set_output_format
 
@@ -53,7 +53,7 @@ unsigned int _set_output_format(
 
 以前の出力形式。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_set_output_format` は、[printf_s](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md) などの書式付き I/O 関数の出力を構成する場合に使用します。 現時点では、この関数で変更できる書式設定規則は、浮動小数点数の出力の指数部に表示される桁数のみです。
 
@@ -61,7 +61,7 @@ unsigned int _set_output_format(
 
 2 桁の指数部を有効にするには、次の例に示されているとおり、パラメーター `_TWO_DIGIT_EXPONENT`を指定してこの関数を呼び出します。 2 桁の指数部を無効にするには、引数 0 を指定してこの関数を呼び出します。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -119,7 +119,7 @@ int main()
 1.211E-005  2.306E-112
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [printf_s、_printf_s_l、wprintf_s、_wprintf_s_l](../c-runtime-library/reference/printf-s-printf-s-l-wprintf-s-wprintf-s-l.md)<br/>
 [_get_output_format](../c-runtime-library/get-output-format.md)

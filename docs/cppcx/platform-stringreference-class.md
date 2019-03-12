@@ -9,12 +9,12 @@ f1_keywords:
 - VCCORLIB/Platform::StringReference::GetHSTRING
 - VCCORLIB/Platform::StringReference::GetString
 ms.assetid: 2d09c7ec-0f16-458e-83ed-7225a1b9221e
-ms.openlocfilehash: 09b15a1530661ce537c9d2aab333a1a17fa52ff9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b6ab42dc630ce7e0014534064e8f1ce6da00857
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498385"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750924"
 ---
 # <a name="platformstringreference-class"></a>Platform::StringReference クラス
 
@@ -50,15 +50,15 @@ class StringReference
 |名前|説明|
 |----------|-----------------|
 |[StringReference::operator=](#operator-assign)|`StringReference` を新しい `StringReference` インスタンスに割り当てます。|
-|[Stringreference::operator()](#operator-call)|`StringReference` を `Platform::String^`に変換します。|
+|[StringReference::operator()](#operator-call)|`StringReference` を `Platform::String^`に変換します。|
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **ヘッダー:** vccorlib.h
 
@@ -78,7 +78,8 @@ char16 UNICODE テキスト文字の配列。
 
 ## <a name="gethstring"></a>  Stringreference::gethstring メソッド
 
-`__abi_HSTRING` として文字列の内容を返します。
+
+  `__abi_HSTRING` として文字列の内容を返します。
 
 ### <a name="syntax"></a>構文
 
@@ -144,13 +145,14 @@ StringReference& operator=(const ::default::char16* __strArg);
 
 ### <a name="return-value"></a>戻り値
 
-`StringReference` 型のオブジェクトへの参照。
+
+  `StringReference` 型のオブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
 `StringReference`は標準の C++ クラスと ref クラスではなくに表示されない、**オブジェクト ブラウザー**します。
 
-## <a name="operator-call"></a>  Stringreference::operator() 演算子
+## <a name="operator-call"></a>  StringReference::operator()  Operator
 
 `StringReference` オブジェクトを `Platform::String^` オブジェクトに変換します。
 
@@ -163,7 +165,8 @@ __declspec(no_release_return) __declspec(no_refcount)
 
 ### <a name="return-value"></a>戻り値
 
-`Platform::String` 型のオブジェクトへのハンドル。
+
+  `Platform::String` 型のオブジェクトへのハンドル。
 
 ## <a name="ctor"></a>  StringReference::StringReference コンストラクター
 
@@ -187,7 +190,8 @@ StringReference(const ::default::char16* __strArg, size_t __lenArg);
 新しいインスタンスを初期化するために使用される char16 値の配列へのポインター。
 
 *__lenArg*<br/>
-`__strArg` にある要素の数。
+
+  `__strArg` にある要素の数。
 
 ### <a name="remarks"></a>Remarks
 

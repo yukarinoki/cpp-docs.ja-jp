@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: 4f6ab15f80ac448b4e7383e2db92f22262c20d08
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178070"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740391"
 ---
 # <a name="cpoint-class"></a>CPoint クラス
 
@@ -51,7 +51,7 @@ class CPoint : public tagPOINT
 |[CPoint::operator +](#operator_add)|合計を返して、`CPoint`とサイズ、またはポイント、または`CRect`サイズでオフセットします。|
 |[CPoint::operator + =](#operator_add_eq)|オフセット`CPoint`サイズまたはポイントを追加します。|
 |[CPoint::operator =](#operator_-_eq)|オフセット`CPoint`サイズまたはポイントを差し引くことで。|
-|[CPoint::operator = =](#operator_eq_eq)|2 つのポイント間で等しいかどうかを確認します。|
+|[CPoint::operator ==](#operator_eq_eq)|2 つのポイント間で等しいかどうかを確認します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -90,10 +90,12 @@ CPoint(LPARAM dwPoint) throw();
 ### <a name="parameters"></a>パラメーター
 
 *initX*<br/>
-`x` の `CPoint` メンバーの値を指定します。
+
+  `x` の `CPoint` メンバーの値を指定します。
 
 *initY*<br/>
-`y` の `CPoint` メンバーの値を指定します。
+
+  `y` の `CPoint` メンバーの値を指定します。
 
 *initPt*<br/>
 [ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または`CPoint`初期化するために使用される値を指定する`CPoint`します。
@@ -147,10 +149,10 @@ void Offset(SIZE size) throw();
 
 ### <a name="parameters"></a>パラメーター
 
-*x オフセット*<br/>
+*xOffset*<br/>
 オフセットする量を指定します、`x`のメンバー、`CPoint`します。
 
-*y オフセット*<br/>
+*yOffset*<br/>
 オフセットする量を指定します、`y`のメンバー、`CPoint`します。
 
 *ポイント*<br/>
@@ -163,7 +165,7 @@ void Offset(SIZE size) throw();
 
 [!code-cpp[NVC_ATLMFC_Utilities#28](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_1.cpp)]
 
-##  <a name="operator_eq_eq"></a>  CPoint::operator = =
+##  <a name="operator_eq_eq"></a>  CPoint::operator ==
 
 2 つのポイント間で等しいかどうかを確認します。
 
@@ -298,7 +300,7 @@ A`CPoint`サイズでのオフセットを`CPoint`段階では、オフセット
 
 [!code-cpp[NVC_ATLMFC_Utilities#33](../../atl-mfc-shared/codesnippet/cpp/cpoint-class_6.cpp)]
 
-##  <a name="operator_-"></a>  CPoint::operator-
+##  <a name="operator_-"></a>  CPoint::operator -
 
 減算する最初の 2 つのオーバー ロードのいずれかを使用して、`CPoint`または`CSize`オブジェクトから`CPoint`します。
 
@@ -347,4 +349,3 @@ A `CSize` 2 つのポイント間の違いは、`CPoint`オフセット、サイ
 [POINT 構造体](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect クラス](../../atl-mfc-shared/reference/crect-class.md)<br/>
 [CSize クラス](../../atl-mfc-shared/reference/csize-class.md)
-

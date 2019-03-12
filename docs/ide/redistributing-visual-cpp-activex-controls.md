@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [C++], redistributing
 - controls [C++], distributing
 ms.assetid: eefbb7e4-d28c-4c35-98bf-d9540cfaae83
-ms.openlocfilehash: 6c1f75665d43d927e21a1fd7d365e1bde46c57a2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb4ef7b58f5ef596ac6484761ab891ceb8bb85ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50551399"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744642"
 ---
 # <a name="redistributing-visual-c-activex-controls"></a>Visual C++ ActiveX コントロールの再配布
 
@@ -39,6 +39,6 @@ Visual C++ 6.0 には、アプリケーションで使用できてその後再�
 
 一部の再配布可能 ActiveX コントロールでは、依存関係がさらに増えます。 Visual C++ 6.0 プロダクト CD の OS\システム フォルダーにある .ocx ファイルごとに .dep ファイルもあります。 再配布する .ocx ファイルごとに、それに対応する .dep ファイルで 1 つまたは複数の USES エントリを探してください。 ファイルが一覧表示されている場合、ファイルがターゲット コンピューターにあることを確認する必要があります。 .ocx ファイルを直接サポートする DLL はすべて登録する必要があります。 (Regsvr32.exe を正常に実行するには、コントロールによって静的に読み込まれるすべての DLL がターゲット コンピューターに含まれている必要があります。)さらに、依存関係として一覧表示されている DLL に Visual C++ 6.0 CD の OS/システム フォルダーの .dep ファイルも含まれている場合、その .dep ファイルでも USES エントリを探す必要があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)

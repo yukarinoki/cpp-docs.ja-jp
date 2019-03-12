@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_collate_cp_func
 ms.assetid: 46ccc084-7ac9-4e5d-9138-e12cb5845615
-ms.openlocfilehash: 37254177ab57212dd57e476716d1dc07d59d7239
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fac8b7ba2e9568dd53509e5cccbb96a6b2f1df8d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50521243"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738887"
 ---
 # <a name="lccollatecpfunc"></a>___lc_collate_cp_func
 
@@ -38,19 +38,19 @@ UINT ___lc_codepage_func(void);
 
 スレッドの現在の照合順序コード ページ。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `___lc_collate_cp_func` は、CRT データのスレッド ローカル ストレージから現在の照合順序コード ページを取得するために、他の CRT 関数によって使用される内部 CRT 関数です。 この情報は、[_get_current_locale](../c-runtime-library/reference/get-current-locale.md) 関数を使用して取得することもできます。
 
 内部 CRT 関数は実装固有であり、各リリースでの変更の対象です。 コード内では使用しないことをお勧めします。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`___lc_collate_cp_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

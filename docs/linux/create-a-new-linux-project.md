@@ -2,12 +2,12 @@
 title: Visual Studio で新しい C++ Linux プロジェクトを作成する
 ms.date: 09/12/2018
 ms.assetid: 5d7c1d67-bc31-4f96-8622-2b4cf91372fd
-ms.openlocfilehash: 394fc5727035dd5a65b67ebf26a925fd3484582e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd5ab1d2bc1077f366082bf8767f8f690173ac8b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623029"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745167"
 ---
 # <a name="create-a-new-linux-project"></a>新しい Linux プロジェクトを作成する
 
@@ -28,4 +28,3 @@ Visual Studio で新しい Linux プロジェクトを作成するには、次�
    | **C++ コンソール アプリケーション (Linux)** | あらゆる Linux コンピューターを対象とするプロジェクト。コンソールにテキストを出力するようにサンプル コードが記述されています。
    | **空のプロジェクト (Linux)**       | あらゆる Linux コンピューターを対象とするプロジェクト。サンプル コードは記述されていません。
    | **メイクファイル プロジェクト (Linux)**    | 標準のメイクファイル ビルド システムを使用して構築する Linux コンピューターを対象とするプロジェクト。
-

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - _except_handler3 function
 - except_handler3 function
 ms.assetid: b0c64898-0ae5-48b7-9724-80135a0813e2
-ms.openlocfilehash: 144bf25495d803a4db42ab45fcb0b101b09fe7cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0dfe007d7b444401accbf547674f96f7f7d54ac1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50613864"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741318"
 ---
 # <a name="excepthandler3"></a>_except_handler3
 
@@ -59,10 +59,10 @@ int _except_handler3(
 
 例外を破棄する必要がある場合は、`DISPOSITION_DISMISS` を返します。 カプセル化する例外ハンドラーにレベルを上げて例外を渡す必要がある場合は、`DISPOSITION_CONTINUE_SEARCH` を返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 適切な例外ハンドラーが見つかった場合、このメソッドはそのハンドラーに例外を渡します。 この状況では、このメソッドはそれを呼び出したコードには戻らず、戻り値は無関係です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)

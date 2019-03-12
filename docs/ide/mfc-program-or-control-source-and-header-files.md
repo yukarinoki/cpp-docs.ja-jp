@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], MFC source and header
 ms.assetid: f61419a8-bf69-4bbb-8f7c-1734be5e6db6
-ms.openlocfilehash: c60c00772005efc0402cdeba9d710548c6412b15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c49a17802e0c7c43cae58153a6df6c4f70f69980
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639154"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743845"
 ---
 # <a name="mfc-program-or-control-source-and-header-files"></a>MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル
 
@@ -32,7 +32,7 @@ Visual Studio で MFC プロジェクトを作成する場合、作成するプ�
 |Mainfrm.cpp、Mainfrm.h|[CFrameWnd](../mfc/reference/cframewnd-class.md) (SDI アプリケーションの場合) または [CMDIFrameWnd](../mfc/reference/cmdiframewnd-class.md) (MDI アプリケーションの場合) から **CMainFrame** クラスを派生します。 アプリケーション ウィザードの **[アプリケーション オプション]** ページ (ステップ 4/6) で対応するオプションが選択されている場合、**CMainFrame** クラスはツール バーのボタンとステータス バーの作成を処理します。 **CMainFrame** の使い方については、「[アプリケーション ウィザードで作成されるフレーム ウィンドウ クラス](../mfc/frame-window-classes-created-by-the-application-wizard.md)」をご覧ください。|
 |Childfrm.cpp、Childfrm.h|[CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md) から **CChildFrame** クラスを派生します。 **CChildFrame** クラスは MDI ドキュメント フレーム ウィンドウに使われます。 MDI オプションを選択すると、これらのファイルが常に作成されます。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual C++ プロジェクトに対して作成されるファイルの種類](../ide/file-types-created-for-visual-cpp-projects.md)<br>
 [ATL プログラムまたはコントロールのソース ファイルとヘッダー ファイル](../ide/atl-program-or-control-source-and-header-files.md)<br>

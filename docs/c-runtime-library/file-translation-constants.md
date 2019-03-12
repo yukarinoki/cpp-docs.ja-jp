@@ -11,12 +11,12 @@ helpviewer_keywords:
 - constants [C++], file translation mode
 - file translation [C++]
 ms.assetid: 49b13bf3-442e-4d19-878b-bd1029fa666a
-ms.openlocfilehash: d98a74c820023ac8684f54413c0e81c58eba7b0b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef9b986753de05c45b3071e55f9b163fa5a6a7da
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443291"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743323"
 ---
 # <a name="file-translation-constants"></a>ファイル変換定数
 
@@ -26,7 +26,7 @@ ms.locfileid: "50443291"
 #include <stdio.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これらの定数は、変換モードを指定します (**"b"** または **"t"**)。 このモードは、アクセスの種類 (**"r"**、**"w"**、**"a"**、**"r+"**、**"w+"**、**"a+"**) を指定する文字列に含まれます。
 
@@ -45,7 +45,7 @@ ms.locfileid: "50443291"
 
 **t** または **b** を *mode* に指定しない場合、変換モードは既定のモード変数 [_fmode](../c-runtime-library/fmode.md) によって定義されます。 テキスト モードとバイナリ モードの使用の詳細については、「[テキスト モードとバイナリ モードのファイル入出力](../c-runtime-library/text-and-binary-mode-file-i-o.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_fdopen、_wfdopen](../c-runtime-library/reference/fdopen-wfdopen.md)<br/>
 [fopen、_wfopen](../c-runtime-library/reference/fopen-wfopen.md)<br/>

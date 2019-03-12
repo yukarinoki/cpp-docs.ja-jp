@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <exception> C++ XML tag
 - exception C++ XML tag
 ms.assetid: 24451e79-9b89-4b77-98fb-702c6516b818
-ms.openlocfilehash: b54a406fe0c0734a9df82f1fd4e92110198cbe98
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f30ae7e36c0540c98eecf2c9f73fbd23df230663
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529762"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748191"
 ---
 # <a name="ltexceptiongt-visual-c"></a>&lt;exception&gt; (Visual C++)
 
@@ -37,7 +37,7 @@ ms.locfileid: "50529762"
 *description*<br/>
 説明です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
 
@@ -67,6 +67,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

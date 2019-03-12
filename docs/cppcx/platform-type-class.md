@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 8df41f8845bad0847e8835c1c6c3a1019d2621d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73338e5b4c723c7f66dbecaea5add3b197f3493d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517066"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744035"
 ---
 # <a name="platformtype-class"></a>Platform::Type クラス
 
@@ -53,11 +53,11 @@ public ref class Platform::Type :
 
 ### <a name="requirements"></a>必要条件
 
-**クライアントがサポートされている最小:** Windows 8
+**最小値には、クライアントがサポートされています。** Windows 8
 
-**サポートされているサーバーの最小値:** Windows Server 2012
+**最小値には、サーバーがサポートされています。** Windows Server 2012
 
-**名前空間:** Platform
+**名前空間:** プラットフォーム
 
 **メタデータ:** platform.winmd
 
@@ -104,7 +104,8 @@ Platform::TypeCode 列挙値のいずれか。
 
 ### <a name="remarks"></a>Remarks
 
-`typeid` プロパティが GetTypeCode() メンバー メソッドに相当します。
+
+  `typeid` プロパティが GetTypeCode() メンバー メソッドに相当します。
 
 ## <a name="tostring"></a> Type::ToString メソッド
 

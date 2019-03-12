@@ -25,12 +25,12 @@ helpviewer_keywords:
 - CTime class
 - shared classes, CTime
 ms.assetid: 0a299544-485b-48dc-9d3c-fdc30f57d612
-ms.openlocfilehash: a73baab3e43467b76c1b4e3592314a4323d22ffb
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: df86d35e52ea386d2750a4af7357e66a8d08f79f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893978"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744710"
 ---
 # <a name="ctime-class"></a>CTime クラス
 
@@ -77,7 +77,7 @@ class CTime
 |-|-|
 |[演算子 + -](#operator_add_-)|これらの演算子は加算および減算`CTimeSpan`と`CTime`オブジェクト。|
 |[operator +=, -=](#operator_add_eq_-_eq)|これらの演算子は加算および減算、`CTimeSpan`オブジェクトとの間この`CTime`オブジェクト。|
-|[演算子 =](#operator_eq)|代入演算子です。|
+|[operator=](#operator_eq)|代入演算子です。|
 |[演算子 = =、< など。](#ctime_comparison_operators)|比較演算子。|
 
 ## <a name="remarks"></a>Remarks
