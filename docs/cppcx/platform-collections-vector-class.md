@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - Vector Class (C++/Cx)
 ms.assetid: aee8c076-9700-47c3-99b6-799fd3edb0ca
-ms.openlocfilehash: fb03f7a00dfabe9d082ca761552af99e552d3190
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5466f1d1c8987724aa0768cd8915e06b62b031ad
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499870"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747126"
 ---
 # <a name="platformcollectionsvector-class"></a>Platform::Collections::Vector クラス
 
@@ -83,8 +83,8 @@ Vector オブジェクトに含まれている要素の型。
 |[Vector::GetAt](#getat)|指定されたインデックスで識別される現在のベクターの要素を取得します。|
 |[Vector::getmany](#getmany)|指定されたインデックスを開始位置として、現在の Vector から項目のシーケンスを取得します。|
 |[Vector::getview](#getview)|ベクターの読み取り専用ビュー、つまり [Platform::Collections::VectorView](../cppcx/platform-collections-vectorview-class.md)を返します。|
-|[Vector::indexof](#indexof)|現在のベクター内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。|
-|[Vector::insertat](#insertat)|指定されたインデックスによって識別される要素の後の現在のベクターに、指定された項目を挿入します。|
+|[Vector::IndexOf](#indexof)|現在のベクター内で指定された項目を検索し、見つかった場合は項目のインデックスを返します。|
+|[Vector::InsertAt](#insertat)|指定されたインデックスによって識別される要素の後の現在のベクターに、指定された項目を挿入します。|
 |[Vector::ReplaceAll](#replaceall)|現在のベクターの要素を削除し、指定された配列の要素を挿入します。|
 |[Vector::RemoveAt](#removeat)|現在のベクターから指定されたインデックスで識別される要素を削除します。|
 |[Vector::RemoveAtEnd](#removeatend)|現在の Vector の末尾から要素を削除します。|
@@ -226,7 +226,7 @@ virtual bool IndexOf(T value, unsigned int* index);
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 検索する項目。
 
 *index*<br/>
@@ -375,7 +375,7 @@ A [std::initializer_list](../standard-library/initializer-list-class.md)型の�
 *size*<br/>
 ベクターの要素数。
 
-*値*<br/>
+*value*<br/>
 現在のベクターの各要素を初期化するために使用される値。
 
 *v*<br/>
