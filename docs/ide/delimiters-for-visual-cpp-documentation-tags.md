@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - XML documentation, delimiters
 ms.assetid: debfbdd9-63fa-4c58-a18e-a4d203d241d7
-ms.openlocfilehash: 709c17138032a98ec2f8ff978d9b8364241989b1
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: ea53d6c78b1159d6053dbe8565cb724ad4d7b704
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326486"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751002"
 ---
 # <a name="delimiters-for-visual-c-documentation-tags"></a>Visual C++ ドキュメント タグの区切り記号
 
@@ -68,6 +68,6 @@ XML ドキュメント タグでは、次の種類の区切り記号を使用で
     */
     ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

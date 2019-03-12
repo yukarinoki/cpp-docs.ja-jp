@@ -2,12 +2,12 @@
 title: ドキュメント コメントとして推奨されるタグ (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 6548e798-5235-4a38-9482-bdc7b88f40a9
-ms.openlocfilehash: 251baedbf37901a58b34b66b7a10bbdcf5d66557
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 154cb36ca121fee8731ac4e71506f562abb79988
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564191"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744799"
 ---
 # <a name="recommended-tags-for-documentation-comments-visual-c"></a>ドキュメント コメントとして推奨されるタグ (Visual C++)
 
@@ -35,6 +35,6 @@ Visual C++ コンパイラは、コードのドキュメント コメントを�
 
 現行リリースの Visual C++ コンパイラでは、他の Visual Studio コンパイラでサポートされているタグ、`<paramref>` がサポートされていません。 Visual C++ では、将来のリリースで `<paramref>` がサポートされる可能性があります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - xdcmake program
 ms.assetid: 14e65747-d000-4343-854b-8393bf01cbac
-ms.openlocfilehash: 85c7ef351e6e91bfd51a7f1e87ecec4186986505
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: adbb06b5100850aac0cfd191a530d5c98b380738
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50450272"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740447"
 ---
 # <a name="xdcmake-reference"></a>XDCMake リファレンス
 
@@ -47,12 +47,12 @@ xdcmake.exe への入力として使用されている .xdc ファイルのフ�
 |/nologo|著作権メッセージを表示しません。|
 |/out:*filename*|.xml ファイルの名前を指定できます。  既定では、.xml ファイルの名前は xdcmake.exe によって処理される最初の .xdc ファイルのファイル名になります。|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 Visual Studio は、プロジェクトのビルド時、xdcmake.exe を自動的に呼び出します。 コマンド ラインで xdcmake.exe を呼び出すこともできます。
 
 ドキュメントのコメントをソース コード ファイルに追加する詳細については、[ドキュメント コメントとして推奨されるタグ](../ide/recommended-tags-for-documentation-comments-visual-cpp.md)に関するページを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

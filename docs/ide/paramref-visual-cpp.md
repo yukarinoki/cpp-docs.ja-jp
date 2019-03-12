@@ -8,12 +8,12 @@ helpviewer_keywords:
 - paramref C++ XML tag
 - <paramref> C++ XML tag
 ms.assetid: c5730dc2-7159-421f-b2d5-bb971e307122
-ms.openlocfilehash: 32ed64bc4d76e75dc7de47f8f3bd3c7ab5823cdc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7c1b8a79761e10209e26e1dee8a8751746c2f38c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586306"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744656"
 ---
 # <a name="ltparamrefgt-visual-c"></a>&lt;paramref&gt; (Visual C++)
 
@@ -30,7 +30,7 @@ ms.locfileid: "50586306"
 *name*<br/>
 参照されるパラメーターの名前です。  名前は、一重引用符または二重引用符で囲みます。  コンパイラは、`name` が見つからない場合に警告を発行します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
 
@@ -49,6 +49,6 @@ public ref class MyClass {
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

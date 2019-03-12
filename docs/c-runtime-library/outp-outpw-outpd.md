@@ -33,12 +33,12 @@ helpviewer_keywords:
 - _outpw function
 - _outp function
 ms.assetid: c200fe22-41f6-46fd-b0be-ebb805b35181
-ms.openlocfilehash: cb3e0c9fefd62b1af3c7dd6dda01278206d1bf49
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a507f4115a48372706590eb61f9e3e77a0e3548
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50595521"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752065"
 ---
 # <a name="outp-outpw-outpd"></a>_outp、_outpw、_outpd
 
@@ -79,13 +79,13 @@ unsigned long dataword
 
 関数は、出力データを返します。 エラーの戻り値はありません。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_outp`、 `_outpw`、 `_outpd` の各関数は、指定された出力ポートへそれぞれバイト、ワード、ダブルワードを 1 つ書き込みます。 *port* 引数は、0 - 65,535 の任意の符号なし整数です。 *databyte* は、0 - 255 の任意の整数です。*dataword* は、整数、符号なし短整数、および符号なし長整数の範囲の任意の値です。
 
 これらの関数は I/O ポートへ直接書き込まれるため、ユーザー コードで使用できません。 これらのオペレーティング システムでの I/O ポートの使用方法については、MSDN で「Serial Communications in Win32 (Win32 のシリアル通信)」を検索してください。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -99,7 +99,7 @@ unsigned long dataword
 
 [C ランタイム ライブラリ](../c-runtime-library/crt-library-features.md)のすべてのバージョン。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンソール入出力とポート入出力](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_inp、_inpw、_inpd](../c-runtime-library/inp-inpw-inpd.md)

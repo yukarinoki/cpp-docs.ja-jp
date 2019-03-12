@@ -21,12 +21,12 @@ helpviewer_keywords:
 - heaps, adding memory
 - heapadd function
 ms.assetid: 4d691fe2-2763-49f4-afb1-62738b7cd3ff
-ms.openlocfilehash: ea124e5f4e8a412e7347211b4968b24429270736
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8cfd2a5a112a7a5b578f7b6dfcdcc3998596bc86
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496578"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738509"
 ---
 # <a name="heapadd"></a>_heapadd
 
@@ -58,11 +58,11 @@ int _heapadd(
 
 このリターン コードとその他のリターン コードの詳細については、「 [_doserrno、errno、_sys_errlist、および _sys_nerr](../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」を参照してください。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 Visual C++ のバージョン 4.0 以降では、新しいデバッグ機能をサポートするために、基になるヒープ構造が C ランタイム ライブラリに移動しました。 その結果、 `_heapadd` は、Win32 API に基づいているすべてのプラットフォームでサポートされなくなりました。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|オプション ヘッダー|
 |-------------|---------------------|---------------------|
@@ -70,7 +70,7 @@ Visual C++ のバージョン 4.0 以降では、新しいデバッグ機能を�
 
 互換性の詳細については、「C ランタイム ライブラリ」の「 [互換性](../c-runtime-library/compatibility.md) 」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [メモリ割り当て](../c-runtime-library/memory-allocation.md)<br/>
 [free](../c-runtime-library/reference/free.md)<br/>

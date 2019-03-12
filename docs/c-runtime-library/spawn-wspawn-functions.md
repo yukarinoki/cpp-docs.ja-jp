@@ -45,12 +45,12 @@ helpviewer_keywords:
 - tspawnlpe function
 - _tspawnle function
 ms.assetid: bb47c703-5216-4e09-8023-8cf25bbf2cf9
-ms.openlocfilehash: caaa3fb40a75292bd32e14ddec33b504e0c1296b
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 044aaee376be02d0d3734ea8982a8c4db47f7d39
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693715"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748048"
 ---
 # <a name="spawn-wspawn-functions"></a>_spawn 系関数と _wspawn 系関数
 
@@ -72,7 +72,7 @@ ms.locfileid: "51693715"
 | `p`  | `PATH` 環境変数を使用して、実行するファイルを検索します。  |
 | `v`  | コマンド ライン引数へのポインター配列 `argv` が `_spawn` 関数に渡されます。 このサフィックスは、通常は、新しいプロセスに渡すパラメーターの個数が可変の場合に使用します。  |
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_spawn` 関数はそれぞれ新しいプロセスを作成して実行します。 それらの関数は、現在使用中のマルチバイト コード ページに従ってマルチバイト文字シーケンスを認識し、マルチバイト文字列の引数を適切な方法で自動的に処理します。 `_wspawn` 関数は、`_spawn` 関数のワイド文字バージョンで、マルチバイト文字の文字列を処理しません。 それ以外の点では、`_wspawn` 関数は対応する `_spawn` 関数と同じように動作します。
 
@@ -226,7 +226,7 @@ child process output
 from SPAWN!
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プロセス制御と環境制御](../c-runtime-library/process-and-environment-control.md)<br/>
 [abort](../c-runtime-library/reference/abort.md)<br/>

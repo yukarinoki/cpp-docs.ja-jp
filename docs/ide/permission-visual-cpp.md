@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <permission> C++ XML tag
 - permission C++ XML tag
 ms.assetid: 537ee2bc-95bd-48e4-9ce6-3420c3da87f4
-ms.openlocfilehash: 5cbcfd6bee97c3ca937ddfac363cd70276ee4d1e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ecf027600b23a640d1dc0cd68b75ffa5eb1b3659
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50529117"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744611"
 ---
 # <a name="ltpermissiongt-visual-c"></a>&lt;permission&gt; (Visual C++)
 
@@ -37,7 +37,7 @@ ms.locfileid: "50529117"
 *description*<br/>
 メンバーへのアクセスの説明です。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 コンパイル時に [/doc](../build/reference/doc-process-documentation-comments-c-cpp.md) を指定して、ドキュメント コメントをファイルに出力します。
 
@@ -57,6 +57,6 @@ public ref class TestClass {
 };
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

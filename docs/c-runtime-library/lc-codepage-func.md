@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - ___lc_codepage_func
 ms.assetid: 6a663bd0-5a63-4a2f-9507-872ec1582aae
-ms.openlocfilehash: 3a6bcb9688116fc72b4c33b13fff73db3dff6c15
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: aebd978839cc59c94c01e9c24432b69add72c4dc
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573263"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751342"
 ---
 # <a name="lccodepagefunc"></a>___lc_codepage_func
 
@@ -39,7 +39,7 @@ UINT ___lc_codepage_func(void);
 
 スレッドの現在のコード ページ。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `___lc_codepage_func` は、CRT データのスレッド ローカル ストレージから現在のコード ページを取得するために、他の CRT 関数によって使用される内部 CRT 関数です。 この情報は、[_get_current_locale](../c-runtime-library/reference/get-current-locale.md) 関数を使用して取得することもできます。
 
@@ -47,13 +47,13 @@ UINT ___lc_codepage_func(void);
 
 内部 CRT 関数は実装固有であり、各リリースでの変更の対象です。 コード内では使用しないことをお勧めします。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
 |`___lc_codepage_func`|crt\src\setlocal.h|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_get_current_locale](../c-runtime-library/reference/get-current-locale.md)<br/>
 [setlocale、_wsetlocale](../c-runtime-library/reference/setlocale-wsetlocale.md)<br/>

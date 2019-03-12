@@ -27,19 +27,19 @@ helpviewer_keywords:
 - cgetws function
 - cgets function
 ms.assetid: 4d5e134a-58c3-4f62-befd-5d235b0212f4
-ms.openlocfilehash: 1ebb0979e432d7f68d94a01932674fdc30f85972
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea4d7be7631f22eecbea7c6727295c17d86dba06
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434269"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750338"
 ---
 # <a name="cgets-cgetws"></a>_cgets、_cgetws
 
 コンソールから文字列を取得します。 これらの関数のセキュリティを強化したバージョンを使用できます。「 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)」を参照してください。
 
 > [!IMPORTANT]
->  これらは古い関数です。 Visual Studio 2015 以降、これらは CRT で使用できません。 これらの関数のセキュリティを強化したバージョン _cgets_s および _cgetws_s は、引き続き使用できます。 これらの代替関数の詳細については、「 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)」を参照してください。
+>  これらは古い関数です。 Visual Studio 2015 以降では、CRT で使用できません。 これらの関数のセキュリティを強化したバージョン _cgets_s および _cgetws_s は、引き続き使用できます。 これらの代替関数の詳細については、「 [_cgets_s, _cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md)」を参照してください。
 
 > [!IMPORTANT]
 >  この API は、Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、「[ユニバーサル Windows プラットフォーム アプリでサポートされていない CRT 関数](../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)」を参照してください。
@@ -72,7 +72,7 @@ wchar_t *_cgetws(
 
 `_cgets` と `_cgetws` は文字列の先頭である `buffer[2]`へのポインターを返します。 `buffer` が **NULL** の場合は、「[パラメーターの検証](../c-runtime-library/parameter-validation.md)」で説明されているように、これらの関数は無効なパラメーター ハンドラーを呼び出します。 実行の継続が許可された場合、これらは **NULL** を返し、`errno` を `EINVAL` に設定します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これらの関数は、コンソールから文字列を読み込み、 `buffer`が指す位置に文字列とその長さを格納します。 `buffer` パラメーターは文字配列へのポインターである必要があります。 配列の最初の要素 ( `buffer[0]`) には、読み取る文字列の最大長 (文字数) を格納します。 配列は、文字列、終端の null 文字 ('\0')、およびその他の 2 バイト分を格納するのに十分な要素を持つ必要があります。 関数は、文字をキャリッジ リターンとラインフィード (CR-LF) の組み合わせが現れるか、指定した文字数を読み取るまで文字を読み取ります。 文字列は `buffer[2]`を先頭として格納されます。 関数が CR-LF を読み取ると、null 文字 ('\0') を格納します。 次に、関数は 2 番目の配列要素である `buffer[1]`に文字列の実際の長さを格納します。
 
@@ -86,7 +86,7 @@ C++ では、これらの関数にテンプレートのオーバーロードが�
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |`_cgetts`|`_cgets`|`_cgets`|`_cgetws`|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必須ヘッダー|
 |-------------|---------------------|
@@ -139,7 +139,7 @@ Line Length = 16
 Text = A line of input.
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [コンソール入出力とポート入出力](../c-runtime-library/console-and-port-i-o.md)<br/>
 [_getch、_getwch](../c-runtime-library/reference/getch-getwch.md)

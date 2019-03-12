@@ -10,12 +10,12 @@ helpviewer_keywords:
 - porting to Win32 [C++]
 - Win32 applications [C++], migrating from UNIX
 ms.assetid: 3837e4fe-3f96-4f24-b2a1-7be94718a881
-ms.openlocfilehash: 70cbff207931ada378a89b978acf13fadb3a8744
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 1cf5660d1ad2f0fdde02837eeffb642c4a74e5ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694089"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744504"
 ---
 # <a name="porting-from-unix-to-win32"></a>UNIX から Win32 への移植
 
@@ -77,7 +77,7 @@ Windows と UNIX のグラフィカルなモデルは、大きく異なります
 
 UNIX プログラマが確認するもう 1 つのオプション は、Windows の POSIX サブシステムです。 ただし、これは Windows NT の作成時に標準化された唯一の POSIX バージョンである POSIX 1003.1 のみサポートします。 それ以降は、ほとんどのアプリケーションは Win32 に変換されたので、このサブシステムを拡張する要求がほとんどありませんでした。 1003.1 システムは全機能を備えたアプリケーションに対しては、多くの機能 (1003.2 にあるもの、ネットワークのサポートなど) が含まれていないため、機能が制限されます。 Windows POSIX サブシステムで動作する、全機能を備えたアプリケーションは、メモリ マップ ファイル、ネットワーク、グラフィックなど、Win32 アプリケーションで利用できる Windows の機能にアクセスしません。 VI、LS、および GREP などのアプリケーションが、Windows POSIX サブシステムの主な対象です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual C++ 移植とアップグレードのガイド](visual-cpp-change-history-2003-2015.md)<br/>
 [UNIX](../c-runtime-library/unix.md)<br/>

@@ -9,12 +9,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.VerboseOutput
 - VC.Project.VCManifestTool.AssemblyIdentity
 ms.assetid: b99368a5-6819-482c-a06e-f2409290cfd1
-ms.openlocfilehash: 5706a67ac3f6be7a916d6f4f0ee8ccfafdfb9475
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9bd2f0bb67e06fbf462ea6a7779de07b2cc54592
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565218"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745116"
 ---
 # <a name="general-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>[全般] ([&lt;プロジェクト名&gt; プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])
 
@@ -40,7 +40,7 @@ ms.locfileid: "50565218"
 
    `Microsoft.Windows.Common-Controls, processorArchitecture=x86, version=6.0.0.0, type=win32, publicKeyToken=6595b64144ccf1df`
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>
 [[マニフェスト ツール] プロパティ ページ](../ide/manifest-tool-property-pages.md)<br>

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - redistributing OLE DB templates
 - OLE DB templates, redistributing
 ms.assetid: 9a696b22-2345-43ec-826b-be7cb8cfd676
-ms.openlocfilehash: 183363f7e69fc6d14ce3f9e681992e774b198928
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6db81064db5e83ed4ba58fd5d800215dd93eb6c9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50517105"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745045"
 ---
 # <a name="redistributing-an-atl-application"></a>ATL アプリケーションの再配布
 
@@ -24,7 +24,8 @@ ATL 実行可能アプリケーションを再配布する場合は、次のコ�
 filename /regserver
 ```
 
-`filename` は実行可能ファイルの名前です。
+
+  `filename` は実行可能ファイルの名前です。
 
 Visual Studio 2010 では、MinDependency または MinSize 構成用に ATL プロジェクトをビルドできます。 MinDependency 構成は、**[全般]** プロパティ ページの **[ATL の使用]** プロパティを **[ATL に静的にリンク]** に設定し、**[コード生成]** プロパティ ページ ([C/C++] フォルダー) の **[ランタイム タイブラリ]** プロパティを **[マルチスレッド (/MT)]** に設定した場合です。
 
@@ -40,8 +41,9 @@ ATL 実行可能アプリケーションを再配布する場合は、次のコ�
 filename /regserver
 ```
 
-`filename` は実行可能ファイルの名前です。
 
-## <a name="see-also"></a>参照
+  `filename` は実行可能ファイルの名前です。
+
+## <a name="see-also"></a>関連項目
 
 [Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)

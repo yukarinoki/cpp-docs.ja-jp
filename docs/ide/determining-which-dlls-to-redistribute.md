@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application deployment [C++], DLL redistribution
 - deploying applications [C++], DLL redistribution
 ms.assetid: f7a2cb42-fb48-42ab-abd2-b35e2fd5601a
-ms.openlocfilehash: fdca832810312d2f36697da8fbaac539c5ce951c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ee81fb1560133b2777a33e80d32c0e2e55c01bf4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452599"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749088"
 ---
 # <a name="determining-which-dlls-to-redistribute"></a>再配布する DLL の決定
 
@@ -59,7 +59,7 @@ Visual Studio に含まれているすべてのファイルを再配布するこ
 
 システム Dll はオペレーティング システムの一部であるため、通常は再配布する必要はありません。 ただし、Microsoft オペレーティング システムの複数のバージョンでアプリケーションを実行する場合など、これが該当しない可能性もあります。 この場合、使用許諾契約書を必ずお読みください。 また、Windows Update や Service Pack を通じて、または Microsoft が提供する再頒布可能パッケージを使用して、システム DLL のアップグレードを試みてください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [配置方法の選択](../ide/choosing-a-deployment-method.md)
 

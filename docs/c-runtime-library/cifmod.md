@@ -20,12 +20,12 @@ helpviewer_keywords:
 - CIfmod intrinsic
 - _CIfmod intrinsic
 ms.assetid: 7c050653-7ec6-4810-b3a7-7a0057ea65ed
-ms.openlocfilehash: e0e6b2f846de77d27b1826e1f24cd364c0d76a64
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.openlocfilehash: b3f667c24a4b02a23d045a5061b41ac4acc4095b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703078"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746839"
 ---
 # <a name="cifmod"></a>_CIfmod
 
@@ -37,7 +37,7 @@ ms.locfileid: "55703078"
 void __cdecl _CIfmod();
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 このバージョンの `fmod` 関数には、コンパイラで認識される特殊な呼び出し規則があります。 コピーの生成を防ぎ、レジスタ割り当てが容易になるため、実行時間が短縮されます。
 
@@ -47,7 +47,7 @@ void __cdecl _CIfmod();
 
 **プラットフォーム:** x86
 
-## <a name="see-also"></a>「
+## <a name="see-also"></a>関連項目
 
 [関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [fmod、fmodf](../c-runtime-library/reference/fmod-fmodf.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - applications [C++], projects
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
-ms.openlocfilehash: 456fdb5ec2025b3085332eced3a0c7f33e117918
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7a81d73100ef52b61f834f7bffe4467bd296c079
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50658017"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744544"
 ---
 # <a name="visual-c-project-types"></a>Visual C++ プロジェクトの種類
 
@@ -92,6 +92,6 @@ C++ でのユニバーサル Windows アプリの概要については、「[ユ
 
 プロジェクト テンプレートによって生成されたファイルの多くには TODO コメントが含まれています。このコメントは、独自のソース コードを作成できる場所を特定するのに役立ちます。 コードを追加する方法について詳しくは、「[コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)」および「[リソース ファイルの操作](../windows/working-with-resource-files.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../ide/creating-desktop-projects-by-using-application-wizards.md)

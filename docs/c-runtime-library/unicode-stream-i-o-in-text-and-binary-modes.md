@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Unicode, stream I/O routines
 - Unicode stream I/O
 ms.assetid: 68be0c3e-a9e6-4fd5-b34a-1b5207f0e7d6
-ms.openlocfilehash: e54f29292ae9e202cf27c354374132dda267aff8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c16d2f74856bb42dfd6ffc4e1af7306f6edd97fb
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50469778"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746007"
 ---
 # <a name="unicode-stream-io-in-text-and-binary-modes"></a>テキスト モードとバイナリ モードの Unicode ストリーム入出力
 
@@ -26,7 +26,7 @@ Unicode ストリームの入出力ルーチン (**fwprintf**、**fwscanf**、**
 
 ただし、Unicode ストリーム入出力関数をバイナリ モードで実行すると、ファイルが Unicode であると想定されるため、入出力時に CR-LF 変換も文字変換も行われません。 Unicode テキスト ファイルで wcin オブジェクトを正しく使用するための命令 _setmode( _fileno( stdin ), _O_BINARY ) を使用してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>
 [入出力](../c-runtime-library/input-and-output.md)<br/>

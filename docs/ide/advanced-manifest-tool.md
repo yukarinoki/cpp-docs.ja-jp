@@ -8,12 +8,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.ValidateSignature
 - VC.Project.VCManifestTool.KeyContainer
 ms.assetid: 3d587366-05ea-4956-a978-313069660735
-ms.openlocfilehash: 10da66c690106255d34c82b066f3450c5cc8a37a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 183b4613362acde9f48c98ee00a76b1fb8a2c4d3
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50530560"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742280"
 ---
 # <a name="advanced-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>[詳細] ([&lt;プロジェクト名&gt; プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])
 
@@ -31,7 +31,7 @@ ms.locfileid: "50530560"
 
    `<file>` 要素で参照されるファイルの検索パスを指定します。 このオプションでは、/hashupdate オプションも使用します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [\<file> 要素](/visualstudio/deployment/file-element-clickonce-application)<br>
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br>

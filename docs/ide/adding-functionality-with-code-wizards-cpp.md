@@ -10,12 +10,12 @@ helpviewer_keywords:
 - projects [C++], adding functionality
 - class wizards [C++]
 ms.assetid: 6afb7ef9-7056-423d-b244-91bb4236d1d7
-ms.openlocfilehash: d96b02317f88abd426ceaca4a239e59b2c88b585
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 028434d7404cc02121e9fd961d6566c28f458a0c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629867"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739803"
 ---
 # <a name="adding-functionality-with-code-wizards-c"></a>コード ウィザードを使用した機能の追加 (C++)
 
@@ -69,7 +69,7 @@ Visual C++ コード ウィザードには、次の 3 つの場所からアク�
    |ソリューション エクスプローラー|ソリューション エクスプローラーから使用できるコード ウィザードは、項目を右クリックしたときのカーソル フォーカスの場所によって異なります。 **[追加]** オプションが項目を右クリックしたときに表示されない場合は、カーソルを開発ツリー内の 1 つ上のレベルに移動して、もう一度試してください。 コード ウィザードでは、カーソルのある場所に関係なく、常に開発ツリーの適切な場所に追加のコードを配置します。 ソリューション エクスプローラーから使用できるコード ウィザードは次のとおりです。<br /><br />- クラスの追加 (新しいコード ウィザードを含む、**[クラスの追加]** ダイアログ ボックスを開きます)。<br />- リソースの追加 (新規、インポート、またはカスタム)。<br />- Web 参照の追加。|
    |クラス ビュー|クラス ビューから使用できるコード ウィザードは、項目を右クリックしたときのカーソル フォーカスの場所によって異なります。 **[追加]** オプションが項目を右クリックしたときに表示されない場合は、カーソルをクラス ツリー内の 1 つ上のレベルに移動して、もう一度試してください。 コード ウィザードでは、カーソルのある場所に関係なく、常に開発ツリーの適切な場所に追加のコードを配置します。 クラス ビューから使用できるコード ウィザードは次のとおりです。<br /><br />- [メンバー関数の追加](../ide/adding-a-member-function-visual-cpp.md)<br />- [メンバー変数の追加](../ide/adding-a-member-variable-visual-cpp.md)<br />- [クラスの追加](../ide/adding-a-class-visual-cpp.md)<br />- [インターフェイスの実装](../ide/implement-interface-wizard.md) (コントロール クラスからのみ)<br />- [Add Connection Point (接続ポイントの追加)](../ide/implement-connection-point-wizard.md) (ATL クラスのみ)<br />- [メソッドの追加](../ide/add-method-wizard.md) (インターフェイスからのみ)<br />- [プロパティの追加](../ide/names-add-property-wizard.md) (インターフェイスからのみ)<br />- [イベントの追加](../ide/add-event-wizard.md) (コントロール クラスからのみ)<br /><br />[クラスの追加] を選択すると、**[クラスの追加]** ダイアログ ボックスが開きます。ここでは、すべての新しいクラスの追加コード ウィザードにアクセスできます。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [仮想関数のオーバーライド](../ide/overriding-a-virtual-function-visual-cpp.md)<br>
 [クラス各部へのジャンプ](../ide/navigating-the-class-structure-visual-cpp.md)<br>

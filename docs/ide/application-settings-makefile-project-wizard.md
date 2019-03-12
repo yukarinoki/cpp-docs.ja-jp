@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - Makefile Project Wizard, application settings
 ms.assetid: e0cbce59-5984-4f68-8a1d-f7fb2007c9b4
-ms.openlocfilehash: a57b3343064494c16b140e4bd4a9127350e022ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b34ca8b36390f6a18935a2da5c2a7924a737f711
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540037"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752403"
 ---
 # <a name="application-settings-makefile-project-wizard"></a>[アプリケーションの設定] (メイクファイル アプリケーション ウィザード)
 
@@ -33,7 +33,7 @@ ms.locfileid: "50540037"
 
    ユーザーが **[ビルド]** メニューから **[リビルド]** を選択したときに実行するコマンド ラインを指定します。 プロジェクトのプロパティ ページの **Nmake** ページの **[すべてリビルド コマンド ライン]** フィールドに表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [メイクファイル アプリケーション ウィザード](../ide/makefile-project-wizard.md)<br>
 [メイクファイル プロジェクトの作成](../ide/creating-a-makefile-project.md)<br>

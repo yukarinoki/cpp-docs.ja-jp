@@ -20,12 +20,12 @@ helpviewer_keywords:
 - lock function
 - _lock function
 ms.assetid: 29f77c37-30de-4b3d-91b6-030216e645a6
-ms.openlocfilehash: c2e57af90bb9b7c6a4ba0e9efdd1dc1dc0bdb985
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d29488c6dec15fb58eef24f50c1bfafefb8e85c6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50606896"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741147"
 ---
 # <a name="lock"></a>_lock
 
@@ -47,15 +47,15 @@ void __cdecl _lock
 *locknum*<br/>
 [in] 取得するロックの識別子。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 ロックが既に取得されている場合は、このメソッドによってあらためてロックが取得され、内部 C ランタイム (CRT) エラーが発生します。 メソッドでロックを取得できない場合は、致命的なエラーで終了し、エラー コードが `_RT_LOCK`に設定されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 **ソース:** mlock.c
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [関数リファレンス (アルファベット順)](../c-runtime-library/reference/crt-alphabetical-function-reference.md)<br/>
 [_unlock](../c-runtime-library/unlock.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - include C++ XML tag
 - <include> C++ XML tag
 ms.assetid: 392a3e61-0371-4617-8362-446650876ce3
-ms.openlocfilehash: 0d03ee6e327eb95e63cec16f3886d616c909c3df
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f0484d4158cf222ba4aae2aadf5e5352c8fc794f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451975"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740799"
 ---
 # <a name="ltincludegt-visual-c"></a>&lt;include&gt; (Visual C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50451975"
 *ID*<br/>
 コメントの前に配置するタグの ID。  名前は、一重引用符または二重引用符で囲みます。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 \<include> タグは XML XPath 構文を使用します。 \<include> の使用をカスタマイズする方法については、XPath に関するドキュメントを参照してください。
 
@@ -110,6 +110,6 @@ The summary for this other type.
 </doc>
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [XML に関するドキュメント](../ide/xml-documentation-visual-cpp.md)

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - tcmdln global variable
 - acmdln global variable
 ms.assetid: 4fc0a6a0-3f93-420a-a19f-5276061ba539
-ms.openlocfilehash: 519cfb305d0092907ff8f10d2b66429a260a5fe2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f4cacb512cb9b5bb6ea22f4dc4014ac2a2eeebe6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50668053"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747022"
 ---
 # <a name="acmdln-tcmdln-wcmdln"></a>_acmdln, _tcmdln, _wcmdln
 
@@ -45,10 +45,10 @@ wchar_t * _wcmdln;
    #define _tcmdln _acmdln
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 これらの CRT 内部変数には、完全なコマンド ラインが格納されます。 これらは CRT のエクスポートされたシンボルで公開されていますが、コードでの使用が目的ではありません。 `_acmdln` には、データは文字列として格納されます。 `_wcmdln` には、データはワイド文字列として格納されます。 `_tcmdln` は、どちらが適切かに応じて `_acmdln` または`_wcmdln` として定義できます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [グローバル変数](../c-runtime-library/global-variables.md)

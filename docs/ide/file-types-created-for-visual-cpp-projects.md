@@ -14,12 +14,12 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: 78ba4afd8a7fad87f09c2a403d25d3c6d52cc0c6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 30a1b57a12d5a238c80f9bb8f0a069385911a8e1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573473"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746905"
 ---
 # <a name="file-types-created-for-visual-c-projects"></a>Visual C++ プロジェクトに対して作成されるファイルの種類
 
@@ -91,7 +91,7 @@ Visual Studio に関連するその他のファイルの詳細については、
 
 プロジェクトに項目を追加すると、その項目をビルドできるかどうかにかかわらず、プロジェクトのすべての構成にその項目が追加されます。 たとえば、MyProject というプロジェクトに項目を追加すると、プロジェクトのデバッグ構成とリリース構成の両方にその項目が追加されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual C++ プロジェクトの作成と管理](../ide/creating-and-managing-visual-cpp-projects.md)<br>
 [Visual C++ プロジェクトの種類](../ide/visual-cpp-project-types.md)<br>

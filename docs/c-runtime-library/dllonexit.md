@@ -18,12 +18,12 @@ f1_keywords:
 helpviewer_keywords:
 - __dllonexit
 ms.assetid: 708f2ceb-f95c-46b0-a58d-d68b3fa36f12
-ms.openlocfilehash: 70e69952e350f96179298e2d64ec6ddf7b9167bc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6c077ac010c0b5d94ba21ba823441ea6ac932b9
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625421"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739378"
 ---
 # <a name="dllonexit"></a>__dllonexit
 
@@ -53,7 +53,7 @@ _onexit_t __dllonexit(   _onexit_t func,
 
 成功した場合、ユーザーの関数へのポインター。 失敗した場合、**NULL** ポインター。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `__dllonexit` 関数は [_onexit](../c-runtime-library/reference/onexit-onexit-m.md) 関数に似ていますが、_onexit 関数で使われるグローバル変数をこのルーチンでは参照できない点が異なります。 グローバル変数の代わりに、この関数は `pbegin` および `pend` パラメーターを使います。
 
@@ -61,12 +61,12 @@ MSVCRT.LIB とリンクされた DLL の `_onexit` および `atexit` 関数は�
 
 `_PVFV` 型は、`typedef void (__cdecl *_PVFV)(void)` と定義されます。
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |ルーチンによって返される値|必要なファイル|
 |-------------|-------------------|
 |__dllonexit|onexit.c|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [_onexit、_onexit_m](../c-runtime-library/reference/onexit-onexit-m.md)

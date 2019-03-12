@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TRUNCATE constant
 - _TRUNCATE constant
 ms.assetid: ad093dbf-1aa5-4bd2-9268-efc68afd8434
-ms.openlocfilehash: 69dc495083bc7fffd925e42163473c64452cb402
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5a341f1828bad9f5562c10036779245ac88c79e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544262"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743203"
 ---
 # <a name="truncate"></a>_TRUNCATE
 
@@ -25,7 +25,7 @@ ms.locfileid: "50544262"
 #include <stdlib.h>
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_TRUNCATE` が `count` パラメーターとして次の関数に渡されると、切り捨て動作が有効になります。
 
@@ -86,6 +86,6 @@ truncation occurred!
 '1234'
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [グローバル定数](../c-runtime-library/global-constants.md)

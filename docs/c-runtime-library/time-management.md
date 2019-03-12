@@ -9,12 +9,12 @@ helpviewer_keywords:
 - date functions
 - time functions
 ms.assetid: 93599220-c011-45d5-978f-12182abfdd2f
-ms.openlocfilehash: 67b993325c7f9c649d1509ce2c1ecf09a2404bc8
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b763361d2cdd732025e492a25ac63fc01f06c2b8
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328930"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739744"
 ---
 # <a name="time-management"></a>時間管理
 
@@ -49,6 +49,6 @@ ms.locfileid: "51328930"
 > [!NOTE]
 > Visual C++ 2005 より前のバージョンの Visual C++ と Microsoft C/C++ では、**time_t** は **long** **int** (32 ビット) であったため、2038 年 1 月 19 日 3 時 14 分 07 秒 (UTC) を超えた日付には使用できませんでした。 現在、既定で **time_t** は **__time64_t** と同じです。ただし、**_USE_32BIT_TIME_T** を定義すると、**time_t** は **__time32_t** に変更され、多くの時刻関数は強制的に 32 ビットの **time_t** を取得するバージョンを呼び出すことになります。 詳細については、「[基本データ型](../c-runtime-library/standard-types.md)」のほか、それぞれの時刻関数に関するドキュメントのコメントを参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

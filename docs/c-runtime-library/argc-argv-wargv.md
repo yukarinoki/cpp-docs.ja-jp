@@ -17,12 +17,12 @@ helpviewer_keywords:
 - __wargv
 - __argc
 ms.assetid: 17001b0a-04ad-4762-b3a6-c54847f02d7c
-ms.openlocfilehash: de0c4783b30764350eea35007583c1481ab01024
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f428d81215193361a409473a411eb5c4d91fa997
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575319"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743300"
 ---
 # <a name="argc-argv-wargv"></a>__argc、__argv、__wargv
 
@@ -36,7 +36,7 @@ extern char ** __argv;
 extern wchar_t ** __wargv;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `main` 関数を使用するプログラムでは、`__argc` および `__argv` は、プログラムの起動に使用されるコマンド ラインを使用してプログラムの起動時に初期化されます。 コマンド ラインは解析されて個々の引数になり、ワイルドカードは展開されます。 引数の数は `__argc` に代入され、引数の文字列はヒープ上に割り当てられ、引数の配列へのポインターは `__argv` に代入されます。 ワイド文字および `wmain` 関数を使用するようにコンパイルされたプログラムでは、ワイド文字列として引数は解析されワイルドカードは展開されて、引数の文字列の配列へのポインターは `__wargv` に代入されます。
 
@@ -48,7 +48,7 @@ extern wchar_t ** __wargv;
 |---------------------|---------------------------|-----------------------|
 |`__targv`|`__argv`|`__wargv`|
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 |グローバル変数|必須ヘッダー|
 |---------------------|---------------------|
@@ -56,8 +56,8 @@ extern wchar_t ** __wargv;
 
 `__argc`、`__argv`、および `__wargv` は Microsoft 拡張機能です。 互換性の詳細については、「 [互換性](../c-runtime-library/compatibility.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [グローバル変数](../c-runtime-library/global-variables.md)<br/>
-[main: プログラムの起動](../cpp/main-program-startup.md)<br/>
+[main:プログラムの起動](../cpp/main-program-startup.md)<br/>
 [main に代わる wmain の使用](../cpp/using-wmain-instead-of-main.md)

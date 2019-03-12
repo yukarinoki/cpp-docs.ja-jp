@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MBCS [C++], locale code page
 ms.assetid: da9150de-70ea-4d2f-90e6-ddb9202dd80b
-ms.openlocfilehash: 79d053029edcb357f791dade1ec20f562dce3c16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 68a0fdf0bdb573b40d347e05a7449affda55d8e5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614993"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57738831"
 ---
 # <a name="interpretation-of-multibyte-character-sequences"></a>マルチバイト文字のシーケンスの解釈
 
@@ -30,7 +30,7 @@ Microsoft ランタイム ライブラリにあるほとんどのマルチバイ
 |[mbrtoc16、mbrtoc32](../c-runtime-library/reference/mbrtoc16-mbrtoc323.md)|マルチバイト文字を同等の UTF-16 または UTF-32 文字に変換する|
 |[c16rtomb、c32rtomb](../c-runtime-library/reference/c16rtomb-c32rtomb1.md)|UTF-16 または UTF-32 文字を同等のマルチバイト文字に変換する|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [国際化](../c-runtime-library/internationalization.md)<br/>
 [カテゴリ別ユニバーサル C ランタイム ルーチン](../c-runtime-library/run-time-routines-by-category.md)<br/>

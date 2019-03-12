@@ -10,12 +10,12 @@ f1_keywords:
 - VC.Project.VCManifestTool.OutputResourceManifest
 - VC.Project.VCManifestTool.GenerateCatalogFiles
 ms.assetid: a8bb20f6-7ace-45ca-bab0-b4f4a5caf170
-ms.openlocfilehash: 8aa007e41cdabe0bf548f1184b801c1f81655596
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7b9af50e6dca2dafa4dabd356a868405dfacc958
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624702"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741183"
 ---
 # <a name="input-and-output-manifest-tool-configuration-properties-ltprojectnamegt-property-pages-dialog-box"></a>[入力と出力] ([&lt;プロジェクト名&gt; プロパティ ページ] ダイアログ ボックス - [構成プロパティ] - [マニフェスト ツール])
 
@@ -29,7 +29,7 @@ ms.locfileid: "50624702"
 **/manifest** オプションを使用して、マニフェスト ツールで処理またはマージされる追加のマニフェスト ファイルの完全パスを指定します。 完全パスはセミコロンで区切ります。
 
 **入力リソース マニフェスト**<br/>
-**/inputresource** オプションを使用して、マニフェスト ツールに入力される RT_MANIFEST 型のリソースの完全パスを指定します。 パスの後には、特定のリソース ID を続けることができます。 例:
+**/inputresource** オプションを使用して、マニフェスト ツールに入力される RT_MANIFEST 型のリソースの完全パスを指定します。 パスの後には、特定のリソース ID を続けることができます。 次に例を示します。
 
 `dll_with_manifest.dll;#1`
 
@@ -61,7 +61,7 @@ ms.locfileid: "50624702"
 **DPI 認識の有効化**<br/>
 アプリケーションが DPI 対応かどうかを指定します。 既定では、この設定は MFC プロジェクトの場合は **[はい]**、それ以外の場合は **[いいえ]** に指定されています。これは、MFC プロジェクトのみが DPI 認識でビルドされるためです。 別の DPI 設定を扱うコードを追加すると、この設定をオーバーライドして **[はい]** にすることができます。 DPI 対応ではないのに DPI 対応として設定すると、アプリケーションが不明瞭にまたは小さく見えることがあります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ClickOnce Application Manifest](/visualstudio/deployment/clickonce-application-manifest)<br/>
 [[マニフェスト ツール] プロパティ ページ](../ide/manifest-tool-property-pages.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - file types [C++], ATL source and headers
 ms.assetid: cb65372f-4880-4007-b582-a52eaa568fd1
-ms.openlocfilehash: dc2fc7a81d2d32e6bc89e1c10b8fe090650db2ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a99c3c23a79c37e90d9a041f051cfeaaff13ae2
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630582"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745019"
 ---
 # <a name="atl-program-or-control-source-and-header-files"></a>ATL プログラムまたはコントロールのソース ファイルとヘッダー ファイル
 
@@ -25,7 +25,7 @@ Visual Studio で ATL プロジェクトを作成する場合、作成するプ�
 |StdAfx.cpp|StdAfx.h および Atlimpl.cpp ファイルが含まれています。|
 |StdAfx.h|ATL ヘッダー ファイルを含みます。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual C++ プロジェクトに対して作成されるファイルの種類](../ide/file-types-created-for-visual-cpp-projects.md)<br>
 [MFC プログラムまたはコントロールのソース ファイルとヘッダー ファイル](../ide/mfc-program-or-control-source-and-header-files.md)<br>

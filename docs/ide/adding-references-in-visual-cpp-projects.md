@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: c50a726b0e5b6e175bd7256ab5a5d93d6b172601
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d227490944232e04c533b06a08f04a378d0239e0
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50583798"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741796"
 ---
 # <a name="adding-references-in-visual-c-projects"></a>Visual C++ プロジェクトへの参照の追加
 
@@ -140,7 +140,7 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
    参照アセンブリのバージョンが表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プロパティ ページ](../ide/property-pages-visual-cpp.md)<br>
 [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)
