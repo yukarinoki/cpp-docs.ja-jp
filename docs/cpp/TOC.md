@@ -54,7 +54,7 @@
 ### [プログラムとリンケージ](program-and-linkage-cpp.md)
 #### [extern](using-extern-to-specify-linkage.md)
 ### [起動と終了](startup-and-termination-cpp.md)
-#### [main: プログラムの起動](main-program-startup.md)
+#### [main:プログラムの起動](main-program-startup.md)
 ##### [main に代わる wmain の使用](using-wmain-instead-of-main.md)
 ##### [引数定義](argument-definitions.md)
 ##### [ワイルドカードの展開](wildcard-expansion.md)
@@ -416,4 +416,3 @@
 ## [Microsoft 拡張機能](microsoft-extensions.md)
 ## [非標準動作](nonstandard-behavior.md)
 ### [コンパイラの制限](compiler-limits.md)
-
