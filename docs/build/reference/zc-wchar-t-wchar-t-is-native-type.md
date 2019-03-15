@@ -12,16 +12,17 @@ helpviewer_keywords:
 - Conformance compiler options
 - Zc compiler options [C++]
 ms.assetid: b0de5a84-da72-4e5a-9a4e-541099f939e0
-ms.openlocfilehash: 13d25a73a0c70789e8b860607e9f222e69ae6d36
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b2563ba0ae2a07bc9f9d81128745ed4b9651fb6c
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537931"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57815178"
 ---
 # <a name="zcwchart-wchart-is-native-type"></a>/Zc:wchar_t (wchar_t をネイティブ型として認識)
 
-`wchar_t` を、C++ 標準に従って組み込み型として解析します。
+
+  `wchar_t` を、C++ 標準に従って組み込み型として解析します。
 
 ## <a name="syntax"></a>構文
 
@@ -31,7 +32,8 @@ ms.locfileid: "50537931"
 
 場合 **/Zc:wchar_t** 、`wchar_t`は C++ としてコンパイルされたコードで組み込みの整数型のキーワードです。 場合 **/Zc:wchar_t-** (マイナス記号) で指定された、またはコードで C としてコンパイルされた、`wchar_t`組み込み型ではありません。 代わりに、`wchar_t`として定義されている場合は、`typedef`の`unsigned short`標準ヘッダー stddef.h でします。 (Microsoft による実装を定義、stddef.h に含まれているもう 1 つのヘッダーとその他の標準ヘッダー。)
 
-お勧めしません **/Zc:wchar_t-** C++ 標準である必要がありますので`wchar_t`組み込み型を指定します。 `typedef` バージョンを使用すると、移植性の問題が発生することがあります。 Visual C の以前のバージョンからアップグレードし、コンパイラ エラーが発生したかどうかは[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)コードが暗黙的に変換しようとしているため、`wchar_t`に`unsigned short`、代わりに、エラーを修正するコードを変更することをお勧めします。設定の **/Zc:wchar_t-** します。
+お勧めしません **/Zc:wchar_t-** C++ 標準である必要がありますので`wchar_t`組み込み型を指定します。 
+  `typedef` バージョンを使用すると、移植性の問題が発生することがあります。 Visual C の以前のバージョンからアップグレードし、コンパイラ エラーが発生したかどうかは[C2664](../../error-messages/compiler-errors-2/compiler-error-c2664.md)コードが暗黙的に変換しようとしているため、`wchar_t`に`unsigned short`、代わりに、エラーを修正するコードを変更することをお勧めします。設定の **/Zc:wchar_t-** します。
 
 **/Zc:wchar_t**オプションは C++ のコンパイルでは既定で、C のコンパイルでは無視されます。 [/Permissive -](permissive-standards-conformance.md)オプションには影響しません **/Zc:wchar_t**します。
 
@@ -47,7 +49,7 @@ Microsoft では、`wchar_t` が 2 バイトの符号なしの値として実装
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **言語**ページ。
 
@@ -59,4 +61,4 @@ Microsoft では、`wchar_t` が 2 バイトの符号なしの値として実装
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (準拠)](zc-conformance.md)<br/>

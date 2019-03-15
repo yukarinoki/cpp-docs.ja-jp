@@ -6,12 +6,12 @@ helpviewer_keywords:
 - DLLs [C++], frequently asked questions
 - FAQs [C++], DLLs
 ms.assetid: 09dd068e-fc33-414e-82f7-289c70680256
-ms.openlocfilehash: 17acde51d3fa9a7fabf14de748fd60b126b8b8f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 33a0c9dd1abbfb9375ce1aef53fd152a521ac97d
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418842"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57821938"
 ---
 # <a name="dll-frequently-asked-questions"></a>DLL に関してよく寄せられる質問
 
@@ -59,9 +59,9 @@ USRDLL という用語は、Visual C のドキュメントでは使用されな�
 
 DLL が MFC では、標準に変更することに静的にリンクされるレギュラー MFC DLL の場合、MFC と動的にリンクされている MFC DLL は、ファイル サイズを減らします。
 
-DLL のエクスポートされた関数の数が多い場合は、.def ファイルを使用して関数をエクスポートする (を使用してではなく**方式**) .def ファイルを使用して[NONAME 属性](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)各関数をエクスポートします。 NONAME 属性は、序数値のみと、ファイル サイズが縮小 DLL のエクスポート テーブルに格納される関数名ではなくです。
+DLL のエクスポートされた関数の数が多い場合は、.def ファイルを使用して関数をエクスポートする (を使用してではなく**方式**) .def ファイルを使用して[NONAME 属性](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)各関数をエクスポートします。 NONAME 属性は、序数値のみと、ファイル サイズが縮小 DLL のエクスポート テーブルに格納される関数名ではなくです。
 
-アプリケーションの読み込み時に、アプリケーションに暗黙的にリンクされている Dll が読み込まれます。 読み込むときに、パフォーマンスを向上するには、DLL を異なる Dll に分割することをお試しください。 1 つの DLL の読み込み後すぐに呼び出し元アプリケーションに必要なすべての関数を配置し、呼び出し元のアプリケーションをその DLL を暗黙的にリンクします。 別の DLL を呼び出し元のアプリケーションが直ちに必要はなく、他の関数を追加しがアプリケーションに明示的にリンクする DLL です。 詳細については、次を参照してください。[リンクを使用する方法を決定](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)します。
+アプリケーションの読み込み時に、アプリケーションに暗黙的にリンクされている Dll が読み込まれます。 読み込むときに、パフォーマンスを向上するには、DLL を異なる Dll に分割することをお試しください。 1 つの DLL の読み込み後すぐに呼び出し元アプリケーションに必要なすべての関数を配置し、呼び出し元のアプリケーションをその DLL を暗黙的にリンクします。 別の DLL を呼び出し元のアプリケーションが直ちに必要はなく、他の関数を追加しがアプリケーションに明示的にリンクする DLL です。 詳細については、次を参照してください。 [DLL と実行可能ファイルをリンク](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)します。
 
 ## <a name="memory_leak"></a> ある&#39;s レギュラー MFC DLL が自分のコードでのメモリ リークが問題ないようです。 メモリ リークを検出する方法はありますか
 
@@ -69,4 +69,4 @@ DLL のエクスポートされた関数の数が多い場合は、.def ファ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ の DLL](dlls-in-visual-cpp.md)

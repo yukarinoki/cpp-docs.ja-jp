@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
-ms.openlocfilehash: 6bdcf97c921dc45939ab9ddf18f1d624c2fd83b8
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850299"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57808392"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 
@@ -95,7 +95,8 @@ CWinThread* AfxBeginThread(
 *dwCreateFlags*<br/>
 スレッドの作成を制御する追加のフラグを指定します。 このフラグは、2 つの値の 1 つを含めることができます。
 
-- CREATE_SUSPENDED 中断カウントが 1 つのスレッドを開始します。 メンバー データの初期化に使用する場合は、CREATE_SUSPENDED を使用して、`CWinThread`などオブジェクト[m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete)またはスレッドが実行を開始する前に、派生クラスのメンバー。 初期化が完了すると使用[cwinthread::resumethread](../../mfc/reference/cwinthread-class.md#resumethread)を実行しているスレッドを開始します。 `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
+- CREATE_SUSPENDED 中断カウントが 1 つのスレッドを開始します。 メンバー データの初期化に使用する場合は、CREATE_SUSPENDED を使用して、`CWinThread`などオブジェクト[m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete)またはスレッドが実行を開始する前に、派生クラスのメンバー。 初期化が完了すると使用[cwinthread::resumethread](../../mfc/reference/cwinthread-class.md#resumethread)を実行しているスレッドを開始します。 
+  `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
 
 - **0**作成後すぐにスレッドを開始します。
 
@@ -108,7 +109,8 @@ CWinThread* AfxBeginThread(
 
 ### <a name="remarks"></a>Remarks
 
-`AfxBeginThread` の最初のフォームはワーカー スレッドを作成します。 2 番目のフォームは、ユーザー インターフェイス スレッドまたはワーカー スレッドとして機能可能なスレッドを作成します。
+
+  `AfxBeginThread` の最初のフォームはワーカー スレッドを作成します。 2 番目のフォームは、ユーザー インターフェイス スレッドまたはワーカー スレッドとして機能可能なスレッドを作成します。
 
 `AfxBeginThread` 新たに作成`CWinThread`オブジェクトを呼び出し、 [CreateThread](../../mfc/reference/cwinthread-class.md#createthread)関数のスレッドの実行を開始して、スレッドへのポインターを返します。 なんらかの原因でスレッド生成に失敗すると、スレッド生成処理全体をチェックし、すべてのオブジェクトを確実に解放します。 スレッドを終了するには、呼び出す[AfxEndThread](#afxendthread)からスレッドまたはワーカー スレッドの制御関数からの戻り値内で。
 
@@ -323,7 +325,8 @@ CWnd* AFXAPI AfxGetMainWnd();
 
 この関数は単に返します、コンテナー内の場所で有効になっているオブジェクトが存在しないか、アプリケーションが OLE サーバーではない、 *m_pMainWnd*アプリケーション オブジェクト。
 
-`AfxGetMainWnd` をアプリケーションのプライマリ スレッドから呼び出した場合は、上記の規則に従ってアプリケーションのメイン ウィンドウを返します。 アプリケーションのセカンダリ スレッドからこの関数を呼び出した場合は、関数は呼び出しを行ったスレッドに関連付けられているメイン ウィンドウを返します。
+
+  `AfxGetMainWnd` をアプリケーションのプライマリ スレッドから呼び出した場合は、上記の規則に従ってアプリケーションのメイン ウィンドウを返します。 アプリケーションのセカンダリ スレッドからこの関数を呼び出した場合は、関数は呼び出しを行ったスレッドに関連付けられているメイン ウィンドウを返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -711,7 +714,7 @@ void AFXAPI AfxSetPerUserRegistration(BOOL bEnable);
 
 Windows Vista では、通常使用されるレジストリにアクセスするアプリケーションの前に、 **HKEY_CLASSES_ROOT**ノード。 ただし、Windows Vista またはそれ以降のオペレーティング システムでは、HKCR への書き込みに管理者特権モードでアプリケーションを実行する必要があります。
 
-このメソッドは、読み取りし、書き込みを HKCU、HKCR からレジストリ アクセスをリダイレクトすることにより、管理者特権モードで実行することがなく、レジストリにアプリケーションを使用します。 詳細については、「 [Linker Property Pages](../../ide/linker-property-pages.md)」を参照してください。
+このメソッドは、読み取りし、書き込みを HKCU、HKCR からレジストリ アクセスをリダイレクトすることにより、管理者特権モードで実行することがなく、レジストリにアプリケーションを使用します。 詳細については、「 [Linker Property Pages](../../build/reference/linker-property-pages.md)」を参照してください。
 
 フレームワークが HKCR へのアクセスをリダイレクトするレジストリのリダイレクトを有効にした場合**する**します。 MFC と ATL のフレームワークは、リダイレクトの影響を受けます。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - executable files [C++], linking to DLLs
 - loading DLLs [C++]
 ms.assetid: 7592e276-dd6e-4a74-90c8-e1ee35598ea3
-ms.openlocfilehash: 998ec23d2d0f16069783529aebafc8b91bb15834
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fc7a676059af17e7a42189c7c15ca157a081e08a
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418810"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818363"
 ---
 # <a name="link-an-executable-to-a-dll"></a>DLL と実行形式のリンク
 
@@ -30,7 +30,7 @@ ms.locfileid: "57418810"
 
 <a name="determining-which-linking-method-to-use"></a>
 
-## <a name="determine-which-linking-method-to-use"></a>リンク方式の使い分け
+## <a name="link-an-executable-to-a-dll"></a>DLL と実行形式のリンク
 
 暗黙的なリンクまたは明示的なリンクを使用するかどうかは、アーキテクチャの決定、アプリケーションに対して行う必要があります。 各メソッドに長所と短所があります。
 
@@ -70,13 +70,13 @@ ms.locfileid: "57418810"
 
 <a name="linking-implicitly"></a>
 
-## <a name="how-to-link-implicitly-to-a-dll"></a>DLL と暗黙的にリンクする方法
+## <a name="link-an-executable-to-a-dll"></a>DLL と実行形式のリンク
 
 暗黙的なリンクすることで、DLL を使用するには、クライアント実行可能ファイルは、DLL のプロバイダーからこれらのファイルを取得する必要があります。
 
 - 1 つまたは複数ヘッダー ファイル (.h ファイル)、エクスポートされたデータ、関数、および DLL の C++ クラスの宣言が含まれています。 クラス、関数、および DLL によってエクスポートされたデータすべて設定されなければなりません`__declspec(dllimport)`ヘッダー ファイル。 詳細については、次を参照してください。 [dllexport、dllimport](../cpp/dllexport-dllimport.md)します。
 
-- 実行可能ファイルにリンクするインポート ライブラリ。 リンカーは、DLL のビルド時に、インポート ライブラリを作成します。 詳細については、次を参照してください。[します。LIB ファイル](../build/reference/dot-lib-files-as-linker-input.md)します。
+- 実行可能ファイルにリンクするインポート ライブラリ。 リンカーは、DLL のビルド時に、インポート ライブラリを作成します。 詳細については、次を参照してください。[します。LIB ファイル](reference/dot-lib-files-as-linker-input.md)します。
 
 - 実際の DLL ファイル。
 
@@ -139,10 +139,10 @@ HRESULT LoadAndCallSomeFunction(DWORD dwParam1, UINT * puParam2)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [インポート ライブラリとエクスポート ファイル](../build/reference/working-with-import-libraries-and-export-files.md)
+- [インポート ライブラリとエクスポート ファイル](reference/working-with-import-libraries-and-export-files.md)
 
 - [ダイナミック リンク ライブラリの検索順序](/windows/desktop/Dlls/dynamic-link-library-search-order)
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ の DLL](dlls-in-visual-cpp.md)
