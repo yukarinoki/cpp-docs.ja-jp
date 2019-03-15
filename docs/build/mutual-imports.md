@@ -14,12 +14,12 @@ helpviewer_keywords:
 - extension DLLs [C++], mutual imports
 - exporting DLLs [C++], mutual imports
 ms.assetid: 2cc29537-92ee-4d92-af39-8b8b3afd808f
-ms.openlocfilehash: c2d34c54491bb4b85311be3ba1ebdaed87437246
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f01e69138a6ca1744645a1c2fa8525b7088e260d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420688"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814554"
 ---
 # <a name="mutual-imports"></a>相互インポート
 
@@ -41,7 +41,7 @@ ms.locfileid: "57420688"
 
 次の図は、相互にインポートする 2 つの Dll や DLL1 DLL2 ソリューションを示します。 手順 1 では、DLL1 で/DEF オプションを設定すると、LIB を実行します。 手順 1 では、DLL1.lib、インポート ライブラリ、および DLL1.exp が生成されます。手順 2 では、インポート ライブラリは DLL2 生成 DLL2 のシンボルのインポート ライブラリをビルドに使用されます。 手順 3 では、入力として DLL1.exp と DLL2.lib を使用して DLL1 を構築します。 LIB DLL2 のインポート ライブラリをビルドに使用しなかったためには、DLL2 の .exp ファイルが必要ないことに注意してください。
 
-![相互インポートを使用して 2 つの Dll をリンクする](../build/media/vc37yj1.gif "相互インポートを使用して 2 つの Dll をリンクするには")<br/>
+![相互インポートを使用して 2 つの Dll をリンクする](media/vc37yj1.gif "相互インポートを使用して 2 つの Dll をリンクするには")<br/>
 相互インポートを使った 2 つの DLL のリンク
 
 ## <a name="limitations-of-afxext"></a>_AFXEXT の制限事項
@@ -109,24 +109,24 @@ class CExampleA : public CObject
 
 ### <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [DLL からのエクスポートします。](../build/exporting-from-a-dll.md)
+- [DLL からのエクスポートします。](exporting-from-a-dll.md)
 
-- [使用して、DLL からエクスポートします。DEF ファイル](../build/exporting-from-a-dll-using-def-files.md)
+- [使用して、DLL からエクスポートします。DEF ファイル](exporting-from-a-dll-using-def-files.md)
 
-- [関数を使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [関数を使った DLL からエクスポートします。](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [AFX_EXT_CLASS を使ったエクスポート/インポート](../build/exporting-and-importing-using-afx-ext-class.md)
+- [AFX_EXT_CLASS を使ったエクスポート/インポート](exporting-and-importing-using-afx-ext-class.md)
 
-- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [エクスポート方式の使用](../build/determining-which-exporting-method-to-use.md)
+- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [使用してアプリケーションをインポートします。](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [使用してアプリケーションをインポートします。](importing-into-an-application-using-declspec-dllimport.md)
 
 ### <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [LIB のユーティリティと/DEF オプション](../build/reference/lib-reference.md)
+- [LIB のユーティリティと/DEF オプション](reference/lib-reference.md)
 
 ## <a name="see-also"></a>関連項目
 
-[インポートとエクスポート](../build/importing-and-exporting.md)
+[インポートとエクスポート](importing-and-exporting.md)

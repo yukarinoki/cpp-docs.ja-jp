@@ -1,16 +1,16 @@
 ---
-title: '方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用'
+title: '方法: Windows 10 を使用して、Windows デスクトップ アプリケーションで SDK'
 ms.custom: get-started-article
 ms.date: 07/12/2018
 ms.assetid: eed6421e-9355-44a6-9582-3f1d453a6d44
-ms.openlocfilehash: ed860a229866991b01266093058b71cc2ae84986
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 25ef3674a7ab741f20a07d6e65d1b5524fb88d5f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50669119"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809926"
 ---
-# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用
+# <a name="how-to-use-the-windows-10-sdk-in-a-windows-desktop-application"></a>方法: Windows 10 を使用して、Windows デスクトップ アプリケーションで SDK
 
 Visual Studio 2017 でクラシック Windows デスクトップ プロジェクトを作成するときは、C++ デスクトップ ワークロードがインストールまたは最後に更新されたときにインストールされた Windows 10 SDK のバージョンでビルドする既定で設定には。 このバージョンの Windows SDK は、Windows 7 以降のバージョンと互換性が。 参照してください[Windows ヘッダーを使用して](/windows/desktop/WinProg/using-the-windows-headers)詳細については、特定のバージョンの Windows を対象とします。
 
@@ -38,7 +38,7 @@ Visual Studio 2015 と Windows 10 SDK 以降、CRT ライブラリは、1 つ (u
 
    `Retargeting End: 1 completed, 0 failed, 0 skipped`
 
-4. プロジェクト プロパティを開いて **[構成プロパティ]、[全般]** セクションで、 **[Windows Target Platform Version] (Windows ターゲット プラットフォームのバージョン)** の値を確認します。 ここで値を変更することは、この手順を実行するのと同じ効果があります。 「 [General Property Page (Project)](../ide/general-property-page-project.md)」を参照してください。
+4. プロジェクト プロパティを開いて **[構成プロパティ]、[全般]** セクションで、 **[Windows Target Platform Version] (Windows ターゲット プラットフォームのバージョン)** の値を確認します。 ここで値を変更することは、この手順を実行するのと同じ効果があります。 「 [General Property Page (Project)](../build/reference/general-property-page-project.md)」を参照してください。
 
    ![ターゲット プラットフォーム バージョン](../windows/media/retargetingwindowssdk3.PNG "RetargetingWindowsSDK3")
 

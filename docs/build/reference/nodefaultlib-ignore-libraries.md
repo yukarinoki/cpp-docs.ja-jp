@@ -13,12 +13,12 @@ helpviewer_keywords:
 - /NODEFAULTLIB linker option
 - ignore libraries linker option
 ms.assetid: 7270b673-6711-468e-97a7-c2925ac2be6e
-ms.openlocfilehash: d2bac6f62f7b1a692e5fc40fcf6dea1e10a50927
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cacc1ef312065da5d6e62ddba1040e87fae9d709
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424355"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807456"
 ---
 # <a name="nodefaultlib-ignore-libraries"></a>/NODEFAULTLIB (ライブラリを無視する)
 
@@ -35,19 +35,19 @@ ms.locfileid: "57424355"
 
 /NODEFAULTLIB オプションは、外部参照を解決するときに検索するライブラリの一覧から 1 つまたは複数の既定のライブラリを削除するリンカーに指示します。
 
-既定のライブラリへの参照を含まない .obj ファイルを作成するには、使用[/Zl (既定ライブラリ名の省略)](../../build/reference/zl-omit-default-library-name.md)します。
+既定のライブラリへの参照を含まない .obj ファイルを作成するには、使用[/Zl (既定ライブラリ名の省略)](zl-omit-default-library-name.md)します。
 
 既定では、/NODEFAULTLIB は外部参照を解決するときに検索するライブラリの一覧から既定ライブラリをすべて削除します。 省略可能な*ライブラリ*パラメーターでは、外部参照を解決するときに検索するライブラリの一覧から指定したライブラリまたはライブラリを削除することができます。 /NODEFAULTLIB オプションを除外する各ライブラリの 1 つを指定します。
 
 リンカーを明示的に指定し、ライブラリが/DEFAULTLIB オプションで指定された既定のライブラリで、既定のライブラリが .obj ファイル内でしを最初に検索して、外部定義への参照を解決します。
 
-/NODEFAULTLIB:*ライブラリ*よりも優先されます[/DEFAULTLIB:](../../build/reference/defaultlib-specify-default-library.md)*ライブラリ*ときに、同じ*ライブラリ*両方で名前を指定します。
+/NODEFAULTLIB:*ライブラリ*よりも優先されます[/DEFAULTLIB:](defaultlib-specify-default-library.md)*ライブラリ*ときに、同じ*ライブラリ*両方で名前を指定します。
 
-/NODEFAULTLIB を使用する場合など、C ランタイム ライブラリなしプログラムをビルドする必要に応じても使用する[/ENTRY](../../build/reference/entry-entry-point-symbol.md)をプログラムでエントリ ポイント (関数) を指定します。 詳しくは、「[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)」をご覧ください。
+/NODEFAULTLIB を使用する場合など、C ランタイム ライブラリなしプログラムをビルドする必要に応じても使用する[/ENTRY](entry-entry-point-symbol.md)をプログラムでエントリ ポイント (関数) を指定します。 詳しくは、「[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)」をご覧ください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -61,5 +61,5 @@ ms.locfileid: "57424355"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

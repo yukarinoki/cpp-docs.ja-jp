@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -fp compiler option [C++]
 - /fp compiler option [C++]
 ms.assetid: 10469d6b-e68b-4268-8075-d073f4f5d57e
-ms.openlocfilehash: c571bf104fd7e8f6a287c3dd35c444d904b4b7e8
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 616efc0980c6ddadfee078dbe7a382372c5636ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54894095"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818168"
 ---
 # <a name="fp-specify-floating-point-behavior"></a>/fp (浮動小数点の動作を指定してください)
 
@@ -51,7 +51,7 @@ ms.locfileid: "54894095"
 
 #### <a name="fast"></a>高速します。
 
-**/Fp:fast**オプションの順序を変更、結合、または速度と領域の浮動小数点コードを最適化するために浮動小数点演算を簡略化にコンパイラを使用できます。 コンパイラは、代入ステートメントで丸め処理を省略することもできます、丸めない、または関数呼び出し。 操作の順序を変更、場合でも、このような変換が著しく異なる丸め動作になる結合規則および分配法を使用して、代数変換を実行します。 その他によって生成されたものと、この強化された最適化のため一部浮動小数点演算の結果が異なる場合があります **/fp**オプション。 特殊な値 (NaN、+ infinity、無限大、-0.0) は反映されませんまたは IEEE 754 標準に従って厳密に動作します。 浮動小数点の短縮形を生成することが **/fp:fast**します。 コンパイラは基になるアーキテクチャは、で、まだバインドされて **/fp:fast**、およびその他の最適化を使用して利用可能な場合があります、 [/arch](../../build/reference/arch-minimum-cpu-architecture.md)オプション。
+**/Fp:fast**オプションの順序を変更、結合、または速度と領域の浮動小数点コードを最適化するために浮動小数点演算を簡略化にコンパイラを使用できます。 コンパイラは、代入ステートメントで丸め処理を省略することもできます、丸めない、または関数呼び出し。 操作の順序を変更、場合でも、このような変換が著しく異なる丸め動作になる結合規則および分配法を使用して、代数変換を実行します。 その他によって生成されたものと、この強化された最適化のため一部浮動小数点演算の結果が異なる場合があります **/fp**オプション。 特殊な値 (NaN、+ infinity、無限大、-0.0) は反映されませんまたは IEEE 754 標準に従って厳密に動作します。 浮動小数点の短縮形を生成することが **/fp:fast**します。 コンパイラは基になるアーキテクチャは、で、まだバインドされて **/fp:fast**、およびその他の最適化を使用して利用可能な場合があります、 [/arch](arch-minimum-cpu-architecture.md)オプション。
 
 **/Fp:fast**コンパイラは、既定の浮動小数点環境で実行するコードを生成し、浮動小数点環境がアクセスされていないかどうか、または実行時に変更ことを前提としています。 つまり、こと、コードはいない浮動小数点例外をマスク解除、読み取りまたは書き込み浮動小数点ステータス レジスタ、または丸めモードを変更すると仮定します。
 
@@ -67,7 +67,7 @@ ms.locfileid: "54894095"
 
 複数 **/fp**同じコンパイラのコマンドラインでオプションを指定できます。 いずれかのみ **/fp: 厳密な**、 **/fp:fast**、および **/fp: 正確な**一度にオプションを有効にすることができます。 これらのオプションの 1 つ以上がコマンドラインで指定されている場合は、以降のオプションが優先され、コンパイラ警告が生成されます。 **/Fp: 厳密な**と **/fp: 除く**オプションと互換性がない **/clr**します。
 
-[/Za](../../build/reference/za-ze-disable-language-extensions.md) (ANSI 互換性) オプションと互換性がない **/fp**します。
+[/Za](za-ze-disable-language-extensions.md) (ANSI 互換性) オプションと互換性がない **/fp**します。
 
 ### <a name="using-pragmas-to-control-floating-point-behavior"></a>浮動小数点の動作を制御するプラグマを使用します。
 
@@ -75,9 +75,9 @@ ms.locfileid: "54894095"
 
 ||float_control(precise)|float_control(except)|fenv_access|fp_contract|
 |-|-|-|-|-|
-|**/fp:fast**|オフ|オフ|オフ|日付|
-|**/fp:precise**|日付|オフ|オフ|日付|
-|**/fp:strict**|日付|日付|日付|オフ|
+|**/fp:fast**|オフ|オフ|オフ|on|
+|**/fp:precise**|on|オフ|オフ|on|
+|**/fp:strict**|on|on|on|オフ|
 
 ### <a name="the-default-floating-point-environment"></a>既定の浮動小数点環境
 
@@ -256,7 +256,7 @@ float casting(float a, float b)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コード生成**プロパティ ページ。
 
@@ -268,6 +268,6 @@ float casting(float a, float b)
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](compiler-options.md)<br/>
-[コンパイラ オプションの設定](setting-compiler-options.md)<br/>
-[Microsoft Visual C 浮動小数点の最適化](floating-point-optimization.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC 浮動小数点の最適化](floating-point-optimization.md)<br/>

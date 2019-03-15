@@ -4,7 +4,7 @@
 # [新しい Linux プロジェクトを作成する](create-a-new-linux-project.md)
 # [リモートの Linux コンピューターに接続する](connect-to-your-remote-linux-computer.md)
 # [Linux プロジェクトの配置、実行、デバッグ](deploy-run-and-debug-your-linux-project.md)
-# [チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する](../ide/get-started-linux-cmake.md)
+# [チュートリアル: Visual Studio で C++ クロスプラットフォーム プロジェクトを作成する](../build/get-started-linux-cmake.md)
 # [Linux プロジェクト プロパティ ページの参照](prop-pages-linux.md)
 ## [全般プロパティ (Linux)](prop-pages/general-linux.md)
 ## [デバッグ プロパティ (Linux)](prop-pages/debugging-linux.md)

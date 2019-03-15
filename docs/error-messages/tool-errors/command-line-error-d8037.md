@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - D8037
 ms.assetid: acddaaa0-bd84-426f-a37b-8f680b379c9d
-ms.openlocfilehash: e1c43b2ee7bf065207fb858117a9a78384b3974e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ebca6a21e6e19e0eca144c61e5c529bc6b2d03c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657172"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820755"
 ---
 # <a name="command-line-error-d8037"></a>コマンド ライン エラー D8037
 
@@ -22,4 +22,4 @@ ms.locfileid: "50657172"
 ## <a name="see-also"></a>関連項目
 
 [コマンド ライン エラー D8000 から D9999](../../error-messages/tool-errors/command-line-errors-d8000-through-d9999.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)
+[MSVC コンパイラ オプション](../../build/reference/compiler-options.md)

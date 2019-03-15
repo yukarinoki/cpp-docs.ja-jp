@@ -12,12 +12,12 @@ helpviewer_keywords:
 - functions [C++], importing
 - functions [C++], exporting
 ms.assetid: 89f488f8-b078-40fe-afd7-80bd7840057b
-ms.openlocfilehash: fb117ce6c6088b9fdca57f7d4fd7d0193e1813c2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed523d84228124d4a8d99e443c0c744f362f1c56
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425550"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822042"
 ---
 # <a name="importing-and-exporting-inline-functions"></a>インライン関数のインポートとエクスポート
 
@@ -30,20 +30,20 @@ ms.locfileid: "57425550"
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [DLL からのエクスポートします。](../build/exporting-from-a-dll.md)
+- [DLL からのエクスポートします。](exporting-from-a-dll.md)
 
-- [使用して、DLL からエクスポートします。DEF ファイル](../build/exporting-from-a-dll-using-def-files.md)
+- [使用して、DLL からエクスポートします。DEF ファイル](exporting-from-a-dll-using-def-files.md)
 
-- [関数を使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [関数を使った DLL からエクスポートします。](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [AFX_EXT_CLASS を使ったエクスポート/インポート](../build/exporting-and-importing-using-afx-ext-class.md)
+- [AFX_EXT_CLASS を使ったエクスポート/インポート](exporting-and-importing-using-afx-ext-class.md)
 
-- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [エクスポート方式の使用](../build/determining-which-exporting-method-to-use.md)
+- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [使用してアプリケーションをインポートします。](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [使用してアプリケーションをインポートします。](importing-into-an-application-using-declspec-dllimport.md)
 
 ## <a name="see-also"></a>関連項目
 
-[インポートとエクスポート](../build/importing-and-exporting.md)
+[インポートとエクスポート](importing-and-exporting.md)

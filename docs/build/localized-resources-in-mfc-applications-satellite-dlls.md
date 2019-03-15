@@ -12,16 +12,16 @@ helpviewer_keywords:
 - resource-only DLLs [C++], MFC applications
 - satellite DLLs [C++]
 ms.assetid: 3a1100ae-a9c8-47b5-adbd-cbedef5992ef
-ms.openlocfilehash: d479599acceac29f0f2ee54857c663c81a919acf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c593d0bae6fc23cfd765116c44b07caa2a6d8ccf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420402"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821327"
 ---
 # <a name="localized-resources-in-mfc-applications-satellite-dlls"></a>MFC アプリケーションのローカライズされたリソース:サテライト Dll
 
-MFC version 7.0 以降では、サテライト Dll の複数の言語にローカライズされるアプリケーションの作成に役立つ機能の強化されたサポートを提供します。 サテライト DLL は、[リソース専用 DLL](../build/creating-a-resource-only-dll.md)特定の言語のローカライズされたアプリケーションのリソースを格納しています。 アプリケーションの実行開始時に MFC には、環境に最も適したローカライズされたリソースが自動的に読み込まれます。 たとえば、2 つのサテライト Dll は、ドイツ語の翻訳を格納している他のリソースのフランス語の翻訳を格納している 1 つの英語リソースをアプリケーションがある可能性があります。 英語の言語がシステム、アプリケーションを実行すると、英語のリソースが使用されます。 フランス語のリソースを使用して、フランス語のシステムで実行される場合ドイツ語のシステムで実行される場合は、ドイツ語のリソースを使用します。
+MFC version 7.0 以降では、サテライト Dll の複数の言語にローカライズされるアプリケーションの作成に役立つ機能の強化されたサポートを提供します。 サテライト DLL は、[リソース専用 DLL](creating-a-resource-only-dll.md)特定の言語のローカライズされたアプリケーションのリソースを格納しています。 アプリケーションの実行開始時に MFC には、環境に最も適したローカライズされたリソースが自動的に読み込まれます。 たとえば、2 つのサテライト Dll は、ドイツ語の翻訳を格納している他のリソースのフランス語の翻訳を格納している 1 つの英語リソースをアプリケーションがある可能性があります。 英語の言語がシステム、アプリケーションを実行すると、英語のリソースが使用されます。 フランス語のリソースを使用して、フランス語のシステムで実行される場合ドイツ語のシステムで実行される場合は、ドイツ語のリソースを使用します。
 
 サテライト DLL を読み込むように MFC しよう、MFC アプリケーションでローカライズされたリソースをサポートするためにリソースを含む、特定の言語にローカライズされました。 サテライト Dll の名前は*ApplicationNameXXX*.dll、場所*ApplicationName*の .exe または .dll、MFC を使用して名前を指定し、 *XXX*言語に対する 3 文字コードは、リソース (たとえば、'日本語' または 'DEU')。
 
@@ -53,5 +53,5 @@ MFC がサテライト Dll を見つけられない場合は、アプリケー�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)<br/>
+[Visual C++ の DLL](dlls-in-visual-cpp.md)<br/>
 [TN057:MFC コンポーネントのローカライズ](../mfc/tn057-localization-of-mfc-components.md)

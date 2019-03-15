@@ -7,12 +7,12 @@ helpviewer_keywords:
 - attributes [C++/CLI], frequently asked questions
 - FAQs (frequently asked questions), attributed programming [C++]
 ms.assetid: a1b8349f-7f51-43c4-95ea-4edb6e5f243f
-ms.openlocfilehash: b273ad71c3c6eaed69fc715401219200f26f87eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89c37b2fe81a414bdd02d73e3c3dfd5205a03831
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50434984"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815880"
 ---
 # <a name="attribute-programming-faq"></a>属性プログラミングの FAQ
 
@@ -122,7 +122,7 @@ class CMyClass
 
 ##  <a name="vcconattributeprogrammmingfaqanchor6"></a> 属性付きプロジェクトに .idl ファイルを使用する方法は?
 
-.Idl ファイルを属性付き ATL プロジェクトで使用するがあります。 この場合、使用すると、 [importidl](importidl.md)属性、.idl ファイルと .h ファイルのコンパイル (を参照してください、 [MIDL プロパティ ページ](../../ide/midl-property-pages.md)プロジェクトの**プロパティ ページ** ダイアログ ボックス)、および.h ファイルをプロジェクトに追加します。
+.Idl ファイルを属性付き ATL プロジェクトで使用するがあります。 この場合、使用すると、 [importidl](importidl.md)属性、.idl ファイルと .h ファイルのコンパイル (を参照してください、 [MIDL プロパティ ページ](../../build/reference/midl-property-pages.md)プロジェクトの**プロパティ ページ** ダイアログ ボックス)、および.h ファイルをプロジェクトに追加します。
 
 ##  <a name="vcconattributeprogrammmingfaqanchor7"></a> 属性によって挿入されるコードを変更できますか。
 

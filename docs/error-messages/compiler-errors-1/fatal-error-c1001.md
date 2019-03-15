@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: ee0796260ac17613568912f0de235e9a1fd0702e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7130ed0568de387c99b8296dc4e10d92baec337
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50513894"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821366"
 ---
 # <a name="fatal-error-c1001"></a>致命的なエラー C1001
 
@@ -19,7 +19,7 @@ ms.locfileid: "50513894"
 
 コンパイラは、解析中に特定の式と最適化オプション、または問題の組み合わせにより多くの場合、構成用の正しいコードを生成できません。 コンパイラ ファイルが一覧表示に utc または C2 パス セグメントがある場合は、おそらく最適化エラー。 ファイルが cxxfe または c1xx のパス セグメントまたは msc1.cpp が場合、は、おそらくパーサー エラーです。 Cl.exe の場合は、という名前のファイルはありませんその他の情報です。
 
-多くの場合、1 つまたは複数の最適化オプションを削除することによって最適化の問題を修正できます。 どのオプションがあるエラーを確認するには、エラー メッセージは表示されなくなるまで時および再コンパイル オプションを 1 つを削除します。 オプションの責任に最もよく[/Og (グローバルの最適化)](../../build/reference/og-global-optimizations.md)と[/Oi (組み込み関数の生成)](../../build/reference/oi-generate-intrinsic-functions.md)します。 なる最適化オプションを決めたら、関数を使用してエラーが発生した無効ことができます、[最適化](../../preprocessor/optimize.md)プラグマ、続行、モジュールの残りのオプションを使用するとします。 最適化オプションの詳細については、次を参照してください。[最適化のベスト プラクティス](../../build/reference/optimization-best-practices.md)します。
+多くの場合、1 つまたは複数の最適化オプションを削除することによって最適化の問題を修正できます。 どのオプションがあるエラーを確認するには、エラー メッセージは表示されなくなるまで時および再コンパイル オプションを 1 つを削除します。 オプションの責任に最もよく[/Og (グローバルの最適化)](../../build/reference/og-global-optimizations.md)と[/Oi (組み込み関数の生成)](../../build/reference/oi-generate-intrinsic-functions.md)します。 なる最適化オプションを決めたら、関数を使用してエラーが発生した無効ことができます、[最適化](../../preprocessor/optimize.md)プラグマ、続行、モジュールの残りのオプションを使用するとします。 最適化オプションの詳細については、次を参照してください。[最適化のベスト プラクティス](../../build/optimization-best-practices.md)します。
 
 最適化が、エラーの場合は、エラーが報告された行または数行のコードをその前後の書き直しをお試しください。 方法は、コンパイラは前処理した後は、コードを表示、使用することができます、 [/P (ファイルへのプリプロセス)](../../build/reference/p-preprocess-to-a-file.md)オプション。
 

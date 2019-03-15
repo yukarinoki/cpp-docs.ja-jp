@@ -4,12 +4,12 @@ ms.date: 11/12/2018
 helpviewer_keywords:
 - compiler options, C++
 ms.assetid: c4750dcf-dba0-4229-99b6-45cdecc11729
-ms.openlocfilehash: 128b477a2c4252c841990e2a2462029abe5a3bbb
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d3ebfbc3661ba648c2fdb73c697db42735faf422
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746970"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816335"
 ---
 # <a name="compiler-options-listed-by-category"></a>コンパイラ オプションのカテゴリ別一覧
 
@@ -218,5 +218,5 @@ ms.locfileid: "57746970"
 ## <a name="see-also"></a>関連項目
 
 [C/C++ ビルドのリファレンス](c-cpp-building-reference.md)<br/>
-[コンパイラ オプション](compiler-options.md)<br/>
-[コンパイラ オプションの設定](setting-compiler-options.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>

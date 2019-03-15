@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -EH compiler option [C++]
 - /EH compiler option [C++]
 ms.assetid: 754b916f-d206-4472-b55a-b6f1b0f2cb4d
-ms.openlocfilehash: e8707ac716a010ea1d3dc0fa51740e76a5822462
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 9f5eed60ecb51abc1d8fbd3c38773bbf782b23a5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329301"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808262"
 ---
 # <a name="eh-exception-handling-model"></a>/EH (例外処理モデル)
 
@@ -25,7 +25,7 @@ ms.locfileid: "51329301"
 
 ## <a name="syntax"></a>構文
 
-> **/EH**{**s**|**、**} **[c]** **[r]** [**-**]
+> **/EH**{**s**|**a**}**[c]****[r]**[**-**]
 
 ## <a name="arguments"></a>引数
 
@@ -43,11 +43,11 @@ ms.locfileid: "51329301"
 
 ## <a name="remarks"></a>Remarks
 
-**/EHa** コンパイラ オプションは、ネイティブ C++ `catch(...)` 句で非同期構造化例外処理 (SEH) をサポートするために使用されます。 指定せずに SEH を実装する **/EHa**、使用することが、 **_ _try**、 **_ _except**、および **_ _finally**構文。 Windows および Visual C++ は SEH をサポートしていますが、ISO 標準の C++ 例外処理 (**/EHs** または **/EHsc**) の方がコードの移植性と柔軟性に優れているため、こちらの例外処理を使用することを強くお勧めします。 ただし、既存のコードで、または特定の種類のプログラムの — など、共通言語ランタイムをサポートするためにコンパイルされたコードで ([/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md))-SEH を使用する必要があります。 詳細については、「 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)」を参照してください。
+ **/EHa** コンパイラ オプションは、ネイティブ C++ `catch(...)` 句で非同期構造化例外処理 (SEH) をサポートするために使用されます。 指定せずに SEH を実装する **/EHa**、使用することが、 **_ _try**、 **_ _except**、および **_ _finally**構文。 Windows および Visual C++ は SEH をサポートしていますが、ISO 標準の C++ 例外処理 (**/EHs** または **/EHsc**) の方がコードの移植性と柔軟性に優れているため、こちらの例外処理を使用することを強くお勧めします。 ただし、既存のコードで、または特定の種類のプログラムの — など、共通言語ランタイムをサポートするためにコンパイルされたコードで ([/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md))-SEH を使用する必要があります。 詳細については、「 [Structured Exception Handling (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)」を参照してください。
 
-**/EHa** を指定し、 `catch(...)` を使用してすべての例外を処理しようとするのは危険です。 非同期例外のほとんどが回復不能で、致命的であると見なされます。 こうした例外をキャッチして操作を続行すると、プロセスが破損し、検出して修正するのが難しいバグが発生する可能性があります。
+ **/EHa** を指定し、 `catch(...)` を使用してすべての例外を処理しようとするのは危険です。 非同期例外のほとんどが回復不能で、致命的であると見なされます。 こうした例外をキャッチして操作を続行すると、プロセスが破損し、検出して修正するのが難しいバグが発生する可能性があります。
 
-**/EHs** または **/EHsc**を使用すると、 `catch(...)` 句では非同期構造化例外がキャッチされません。 アクセス違反およびマネージド <xref:System.Exception?displayProperty=fullName> 例外がキャッチされず、非同期例外が処理される場合も含め、非同期例外が生成されたときに、スコープ内のオブジェクトが破棄されることはありません。
+ **/EHs** または **/EHsc**を使用すると、 `catch(...)` 句では非同期構造化例外がキャッチされません。 アクセス違反およびマネージド <xref:System.Exception?displayProperty=fullName> 例外がキャッチされず、非同期例外が処理される場合も含め、非同期例外が生成されたときに、スコープ内のオブジェクトが破棄されることはありません。
 
 使用する場合 **/EHa**、イメージが大きい場合があり、コンパイラが最適化しないために、適切に機能しない実行可能性があります、**お試しください**ブロックを積極的にします。 また、コンパイラが C++ 例外をスローする可能性のあるコードを確認しない場合でも、すべてのローカル オブジェクトのデストラクターを自動的に呼び出す例外フィルターが除去されません。 これにより、非同期例外および C++ 例外のセーフ スタック アンワインドが可能になります。 使用すると **/EHs**、コンパイラは、例外できますでのみ発生することを想定しています、**スロー**ステートメントまたは関数呼び出し。 これにより、アンワインド可能オブジェクトの有効期間を管理するコードを削除できるため、コード サイズをかなり小さくできます。
 
@@ -94,11 +94,11 @@ int main() {
 
 **/EHr**コンパイラ オプションを持つすべての関数でのランタイム終了チェックを有効にする**noexcept**属性。 既定では、コンパイラがバックエンドで関数が *スローしない* 関数のみを呼び出すと判断した場合に、ランタイム チェックが最適化され、除去されます。 スローしない関数とは、属性で例外がスローされないことが指定された関数を指します。 マークされた関数が含まれます**noexcept**、 `throw()`、`__declspec(nothrow)`と、 **/EHc**が指定されている**extern"C"** 関数。 スローしない関数には、コンパイラの検査でスローしないと判断された関数も含まれます。 **/EHr-** を使用して明示的に既定に設定することができます。
 
-ただし、スローしない属性は、関数からどの例外もスローされないことを保証するわけではありません。 動作とは異なり、 **noexcept**関数の場合、Visual C コンパイラは、使用して宣言された関数によってスローされる例外`throw()`、 `__declspec(nothrow)`、または**extern"C"** として定義されていません。動作です。 この 3 つの宣言属性を使用する関数は、例外のランタイム終了チェックを強制しません。 使用することができます、 **/EHr**エスケープする未処理の例外のランタイム チェックを生成するコンパイラを強制することで未定義の動作がこれを識別するためのオプション、 **noexcept**関数。
+ただし、スローしない属性は、関数からどの例外もスローされないことを保証するわけではありません。 動作とは異なり、 **noexcept**関数、MSVC コンパイラは、使用して宣言された関数によってスローされる例外`throw()`、 `__declspec(nothrow)`、または**extern"C"** 未定義の動作として。 この 3 つの宣言属性を使用する関数は、例外のランタイム終了チェックを強制しません。 使用することができます、 **/EHr**エスケープする未処理の例外のランタイム チェックを生成するコンパイラを強制することで未定義の動作がこれを識別するためのオプション、 **noexcept**関数。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択**構成プロパティ** > **C/C++** > **コード生成**します。
 
@@ -112,8 +112,8 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
 [エラーと例外処理](../../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
 [例外の仕様 (スロー)](../../cpp/exception-specifications-throw-cpp.md)<br/>
 [構造化例外処理 (C/C++)](../../cpp/structured-exception-handling-c-cpp.md)
