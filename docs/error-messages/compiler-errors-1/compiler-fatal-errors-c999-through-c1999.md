@@ -160,14 +160,13 @@ helpviewer_keywords:
 - C1852
 - C1901
 - C1903
-- C1904
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: edf2227bd0a542ce9ca5e8a6a3f908347bd816e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1159a635f0c7a61e591b4d96c4e55bd2baf44782
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677332"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814450"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>コンパイラ エラー (致命的なエラー) C999 から C1999
 
@@ -224,7 +223,7 @@ ms.locfileid: "50677332"
 |致命的なエラー C1063|コンパイラの制限: コンパイラ スタックのオーバー フローが発生しました。|
 |[致命的なエラー C1064](../../error-messages/compiler-errors-1/fatal-error-c1064.md)|コンパイラの制限: コンパイラが、識別子の名前用の内部バッファーよりも長い識別子を読み取りました。|
 |[致命的なエラー C1065](../../error-messages/compiler-errors-1/fatal-error-c1065.md)|コンパイラの制限: タグが足りません。|
-|[致命的なエラー C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|コンパイラの制限: 型のレコード サイズの制限である 64K を超えました|
+|[致命的なエラー C1067](../../error-messages/compiler-errors-1/fatal-error-c1067.md)|コンパイラの制限:型のレコード サイズ 64 K の制限を超えました|
 |致命的なエラー C1068|ファイル '*file*' を開くことができません。|
 |致命的なエラー C1069|コンパイラのコマンド ラインを読み取れません|
 |致命的なエラー C1070|ファイル '*file*' 中で #if と #endif が対応していません。|
@@ -234,7 +233,7 @@ ms.locfileid: "50677332"
 |[致命的なエラー C1075](../../error-messages/compiler-errors-1/fatal-error-c1075.md)|左側の *token* に対応するものがファイルの最後まで検出されませんでした。|
 |[致命的なエラー C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md)|コンパイラの制限: 内部ヒープの上限に達しました。上限を変更するには /Zm オプションを使用してください。|
 |致命的なエラー C1077|コンパイラの制限: *number* を超えるコマンド ライン オプションは使用できません。|
-|[致命的なエラー C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|コンパイラの制限: PCH ファイル サイズの制限を超えています。|
+|[致命的なエラー C1079](../../error-messages/compiler-errors-1/fatal-error-c1079.md)|コンパイラの制限:PCH ファイル サイズの上限を超えています|
 |[致命的なエラー C1080](../../error-messages/compiler-errors-1/fatal-error-c1080.md)|コンパイラの制限: コマンド ライン オプションが制限の *number* 文字を超えています。|
 |[致命的なエラー C1081](../../error-messages/compiler-errors-1/fatal-error-c1081.md)|'*file*': ファイル名が長すぎます。|
 |致命的なエラー C1082|*type* ファイルを閉じることができません: '*file*': *message*|
@@ -265,7 +264,7 @@ ms.locfileid: "50677332"
 |致命的なエラー C1111|テンプレート パラメーターやジェネリック パラメーターが多すぎます。|
 |致命的なエラー C1112|コンパイラの制限: `'number`' マクロの引数が多すぎます。制限は *number* です。|
 |[致命的なエラー C1113](../../error-messages/compiler-errors-1/fatal-error-c1113.md)|#using が '*file*' で失敗しました。|
-|致命的なエラー C1114|'*file*': WinRT はマネージド アセンブリの #using をサポートしていません。|
+|致命的なエラー C1114|'*ファイル*'。WinRT はサポートしていません # マネージ アセンブリの using|
 |[致命的なエラー C1120](../../error-messages/compiler-errors-1/fatal-error-c1120.md)|'*function*' の GetProcAddress の呼び出しに失敗しました。|
 |[致命的なエラー C1121](../../error-messages/compiler-errors-1/fatal-error-c1121.md)|CryptoAPI への呼び出しに失敗しました|
 |[致命的なエラー C1126](../../error-messages/compiler-errors-1/fatal-error-c1126.md)|自動メモリ割り当てが *size*を超えました。|

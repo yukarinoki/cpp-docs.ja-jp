@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - extension DLLs [C++], about MFC extension DLLs
 ms.assetid: eb5e10b7-d615-4bc7-908d-e3e99b7b1d5f
-ms.openlocfilehash: 0ad5c82d72a3cd9b4801274aefd40d96afdbcdd1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab9b980cbb3e89eebee945e90c54f23d6717a1a4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425056"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816478"
 ---
 # <a name="mfc-extension-dlls-overview"></a>MFC 拡張 Dll:概要
 
@@ -27,22 +27,22 @@ AFXDLL という用語は、Visual C のドキュメントでは使用されな�
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [MFC 拡張 DLL を初期化します。](../build/run-time-library-behavior.md#initializing-extension-dlls)
+- [MFC 拡張 DLL を初期化します。](run-time-library-behavior.md#initializing-extension-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [MFC 拡張 DLL](../build/extension-dlls.md)
+- [MFC 拡張 DLL](extension-dlls.md)
 
-- [レギュラー MFC DLL でのデータベース、OLE、およびソケット MFC 拡張 DLL の使用](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [レギュラー MFC DLL でのデータベース、OLE、およびソケット MFC 拡張 DLL の使用](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
-- [非 MFC DLL:概要](../build/non-mfc-dlls-overview.md)
+- [非 MFC DLL:概要](non-mfc-dlls-overview.md)
 
-- [MFC と静的にリンクされるレギュラー MFC の Dll](../build/regular-dlls-statically-linked-to-mfc.md)
+- [MFC と静的にリンクされるレギュラー MFC の Dll](regular-dlls-statically-linked-to-mfc.md)
 
-- [MFC と動的にリンクされるレギュラー MFC の Dll](../build/regular-dlls-dynamically-linked-to-mfc.md)
+- [MFC と動的にリンクされるレギュラー MFC の Dll](regular-dlls-dynamically-linked-to-mfc.md)
 
 - [MFC DLL を作成します。](../mfc/reference/mfc-dll-wizard.md)
 
 ## <a name="see-also"></a>関連項目
 
-[DLL の種類](../build/kinds-of-dlls.md)
+[DLL の種類](kinds-of-dlls.md)

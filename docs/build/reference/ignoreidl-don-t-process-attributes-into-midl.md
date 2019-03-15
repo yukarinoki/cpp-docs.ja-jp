@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -IGNOREIDL linker option
 - /IGNOREIDL linker option
 ms.assetid: 29514098-6a1c-4317-af2f-1dc268972780
-ms.openlocfilehash: 1a78f99f61bbeff9c5d617fce374925d0541aafd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 210778adecd87ffdd5f2702c10106f12bd5a1b79
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423158"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820430"
 ---
 # <a name="ignoreidl-don39t-process-attributes-into-midl"></a>/IGNOREIDL (Don&#39;t プロセスの属性を MIDL に挿入)
 
@@ -28,7 +28,7 @@ ms.locfileid: "57423158"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -42,9 +42,9 @@ ms.locfileid: "57423158"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)<br/>
-[/IDLOUT (MIDL 出力ファイルの指定)](../../build/reference/idlout-name-midl-output-files.md)<br/>
-[/TLBOUT (.TLB ファイル名の指定)](../../build/reference/tlbout-name-dot-tlb-file.md)<br/>
-[/MIDL (MIDL コマンド ライン オプションの指定)](../../build/reference/midl-specify-midl-command-line-options.md)<br/>
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)<br/>
+[/IDLOUT (MIDL 出力ファイルの指定)](idlout-name-midl-output-files.md)<br/>
+[/TLBOUT (.TLB ファイル名の指定)](tlbout-name-dot-tlb-file.md)<br/>
+[/MIDL (MIDL コマンド ライン オプションの指定)](midl-specify-midl-command-line-options.md)<br/>
 [属性付きプログラムの作成](../../windows/building-an-attributed-program.md)

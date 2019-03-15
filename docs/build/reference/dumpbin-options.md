@@ -6,68 +6,68 @@ f1_keywords:
 helpviewer_keywords:
 - DUMPBIN program, options
 ms.assetid: 563b696e-7599-4480-94b9-014776289ec8
-ms.openlocfilehash: 2a836af74260c213289f3300500bf7e4de521d5a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 655087236e3e4644c6215da2adccd9755c767b77
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420090"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816025"
 ---
 # <a name="dumpbin-options"></a>DUMPBIN オプション
 
-オプションは、ダッシュ (-) またはフォワード スラッシュ (/) の後に、オプションの名前のいずれかである、オプション指定子で構成されます。 オプション名の省略形は使用できません。 引数を取るオプションの場合は、: (コロン) の後ろに引数を指定します。 1 つのオプションの指定には、スペースやタブは挿入できません。 複数のオプションを指定する場合は、各オプションを 1 つ以上のスペースまたはタブで区切ります。 オプション名、およびその引数として指定するキーワードやファイル名では、大文字と小文字は区別されません。 大半のオプションはバイナリ ファイルにも適用できますが、特定の種類のファイルにしか指定できないオプションもあります。 特に指定されていない限り、DUMPBIN は標準出力に情報を出力します。 使用して、 [/out](../../build/reference/out-dumpbin.md)ファイルに出力を送信するオプション。
+オプションは、ダッシュ (-) またはフォワード スラッシュ (/) の後に、オプションの名前のいずれかである、オプション指定子で構成されます。 オプション名の省略形は使用できません。 引数を取るオプションの場合は、: (コロン) の後ろに引数を指定します。 1 つのオプションの指定には、スペースやタブは挿入できません。 複数のオプションを指定する場合は、各オプションを 1 つ以上のスペースまたはタブで区切ります。 オプション名、およびその引数として指定するキーワードやファイル名では、大文字と小文字は区別されません。 大半のオプションはバイナリ ファイルにも適用できますが、特定の種類のファイルにしか指定できないオプションもあります。 特に指定されていない限り、DUMPBIN は標準出力に情報を出力します。 使用して、 [/out](out-dumpbin.md)ファイルに出力を送信するオプション。
 
 DUMPBIN には、次のオプションがあります。
 
-- [/ALL](../../build/reference/all.md)
+- [/ALL](all.md)
 
-- [/ARCHIVEMEMBERS](../../build/reference/archivemembers.md)
+- [/ARCHIVEMEMBERS](archivemembers.md)
 
-- [/CLRHEADER](../../build/reference/clrheader.md)
+- [/CLRHEADER](clrheader.md)
 
-- [/DEPENDENTS](../../build/reference/dependents.md)
+- [/DEPENDENTS](dependents.md)
 
-- [/DIRECTIVES](../../build/reference/directives.md)
+- [/DIRECTIVES](directives.md)
 
-- [/DISASM](../../build/reference/disasm.md)
+- [/DISASM](disasm.md)
 
-- [/ERRORREPORT (dumpbin.exe)](../../build/reference/errorreport-dumpbin-exe.md)
+- [/ERRORREPORT (dumpbin.exe)](errorreport-dumpbin-exe.md)
 
-- [/EXPORTS](../../build/reference/dash-exports.md)
+- [/EXPORTS](dash-exports.md)
 
-- [/FPO](../../build/reference/fpo.md)
+- [/FPO](fpo.md)
 
-- [/HEADERS](../../build/reference/headers.md)
+- [/HEADERS](headers.md)
 
-- [/IMPORTS](../../build/reference/imports-dumpbin.md)
+- [/IMPORTS](imports-dumpbin.md)
 
-- [/LINENUMBERS](../../build/reference/linenumbers.md)
+- [/LINENUMBERS](linenumbers.md)
 
-- [/LINKERMEMBER](../../build/reference/linkermember.md)
+- [/LINKERMEMBER](linkermember.md)
 
-- [/LOADCONFIG](../../build/reference/loadconfig.md)
+- [/LOADCONFIG](loadconfig.md)
 
-- [/OUT](../../build/reference/out-dumpbin.md)
+- [/OUT](out-dumpbin.md)
 
-- [/PDATA](../../build/reference/pdata.md)
+- [/PDATA](pdata.md)
 
-- [/PDBPATH](../../build/reference/pdbpath.md)
+- [/PDBPATH](pdbpath.md)
 
-- [/RANGE](../../build/reference/range.md)
+- [/RANGE](range.md)
 
-- [/RAWDATA](../../build/reference/rawdata.md)
+- [/RAWDATA](rawdata.md)
 
-- [/RELOCATIONS](../../build/reference/relocations.md)
+- [/RELOCATIONS](relocations.md)
 
-- [/SECTION](../../build/reference/section-dumpbin.md)
+- [/SECTION](section-dumpbin.md)
 
-- [/SUMMARY](../../build/reference/summary.md)
+- [/SUMMARY](summary.md)
 
-- [/SYMBOLS](../../build/reference/symbols.md)
+- [/SYMBOLS](symbols.md)
 
-- [/TLS](../../build/reference/tls.md)
+- [/TLS](tls.md)
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)<br/>
-[DUMPBIN リファレンス](../../build/reference/dumpbin-reference.md)
+[追加の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
+[DUMPBIN リファレンス](dumpbin-reference.md)

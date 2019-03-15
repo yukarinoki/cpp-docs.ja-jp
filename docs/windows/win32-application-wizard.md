@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 Application Wizard
 - Win32 Project Wizard
 ms.assetid: 5d7b3a5e-8461-479a-969a-67b7883725b9
-ms.openlocfilehash: 1b89ae1c91536956924090f4a5eafa883053ed7e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 639834c8d723b65b894e6d216cbeb3b7f4dc37ec
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50526158"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822692"
 ---
 # <a name="win32-application-wizard"></a>Win32 アプリケーション ウィザード
 
@@ -20,11 +20,11 @@ Visual C++ の Win32 アプリケーション ウィザードを使用すると�
 
 |アプリケーションの種類|コンソール アプリケーション|実行可能 (Windows) アプリケーション|ダイナミック リンク ライブラリ|スタティック ライブラリ|
 |---------------------|-------------------------|----------------------------------------|---------------------------|--------------------|
-|**空のプロジェクト**|はい|[はい]|[はい]|いいえ|
+|**空のプロジェクト**|[はい]|はい|はい|いいえ|
 |**シンボルのエクスポート**|いいえ|×|はい|いいえ|
 |**プリコンパイル済みヘッダー**|いいえ|×|×|はい|
-|**ATL サポート**|はい|×|×|いいえ|
-|**MFC サポート**|はい|×|×|はい|
+|**ATL サポート**|[はい]|×|×|いいえ|
+|**MFC サポート**|[はい]|×|×|はい|
 
 ## <a name="overview"></a>概要
 
@@ -47,9 +47,9 @@ Windows デスクトップ アプリケーションを作成したら、 [汎用
 > [!NOTE]
 > ATL クラスは追加できません。また、MFC クラスを追加できるのは、MFC をサポートするタイプの Windows デスクトップ アプリケーションだけです。上の表を参照してください。
 
-ウィザードでプロジェクト用に作成されるファイルは、 **ソリューション エクスプローラー**で表示できます。 ウィザードは、プロジェクトの作成、ファイルの詳細については、プロジェクトで生成されたファイルを参照してください。`ReadMe.txt`します。 ファイルの種類の詳細については、「 [Visual C++ プロジェクトに対して作成されるファイルの種類](../ide/file-types-created-for-visual-cpp-projects.md)」を参照してください。
+ウィザードでプロジェクト用に作成されるファイルは、 **ソリューション エクスプローラー**で表示できます。 ウィザードは、プロジェクトの作成、ファイルの詳細については、プロジェクトで生成されたファイルを参照してください。`ReadMe.txt`します。 ファイルの種類の詳細については、「 [Visual C++ プロジェクトに対して作成されるファイルの種類](../build/reference/file-types-created-for-visual-cpp-projects.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
 [空の Windows デスクトップ アプリケーションの作成](../windows/creating-an-empty-windows-desktop-application.md)<br/>
-[Visual C++ プロジェクトの種類](../ide/visual-cpp-project-types.md)
+[Visual C++ プロジェクトの種類](../build/reference/visual-cpp-project-types.md)

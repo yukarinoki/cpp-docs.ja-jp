@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -QIfist compiler option [C++]
 - /QIfist compiler option [C++]
 ms.assetid: 1afd32a5-f658-4b66-85f4-e0ce4cb955bd
-ms.openlocfilehash: 0b0dba0fec21b3c0ab03555ae90497f212ab6315
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7af88c91793688d23cf35177ae7a5250b04832a8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422209"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816595"
 ---
 # <a name="qifist-suppress-ftol"></a>/QIfist (_ftol を呼び出さない)
 
@@ -43,16 +43,16 @@ ms.locfileid: "57422209"
 
 使用することができます、 [_control87、_controlfp、 \__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md) C ランタイム関数、FPU の丸め動作を変更します。 FPU の既定の丸めモードでは、一番近い値に丸められます。 使用して **/QIfist**リスクが伴いますが、アプリケーションのパフォーマンスを向上させることができます。 ビルドされたコードを使用する前に、丸めモードと小文字を区別する、コードの部分を徹底的にテストする必要があります **/QIfist**実稼働環境でします。
 
-[/arch (x86)](../../build/reference/arch-x86.md)と **/QIfist**同じコンパイル単位で使用することはできません。
+[/arch (x86)](arch-x86.md)と **/QIfist**同じコンパイル単位で使用することはできません。
 
 > [!NOTE]
 >  **/Qifist**が有効で既定ではビットの丸め処理も浮動小数点から浮動小数点に影響するため指していない丸め処理を行う (これが発生したすべての計算後) ため、C スタイル (ゼロ) の方向に丸め処理のフラグを設定すると、浮動小数点計算が異なる可能性があります。 **/Qifist**浮動小数点数の小数部の切り捨てについて予想される動作にコードが依存している場合は使用する必要があります。 不明な場合は使用しないで **/QIfist**します。
 
-**/QIfist**オプションは Visual Studio 2005 以降で非推奨とされます。 浮動小数点型から整数型への変換処理の速度が飛躍的に向上しました。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](../../build/reference/compiler-options-listed-by-category.md)します。
+**/QIfist**オプションは Visual Studio 2005 以降で非推奨とされます。 浮動小数点型から整数型への変換処理の速度が飛躍的に向上しました。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -66,6 +66,6 @@ ms.locfileid: "57422209"
 
 ## <a name="see-also"></a>関連項目
 
-[/Q オプション (低水準の操作)](../../build/reference/q-options-low-level-operations.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[/Q オプション (低水準の操作)](q-options-low-level-operations.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

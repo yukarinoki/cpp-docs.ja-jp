@@ -1,16 +1,16 @@
 ---
 title: ARM64 例外処理
 ms.date: 11/19/2018
-ms.openlocfilehash: a4d4adcc365c1e9caf7faa0e225fabe133d0a6eb
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 921029704e4bf5adabfbe0a82387dadc911b9036
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176680"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816153"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外処理
 
-ARM64 の Windows では、同じ構造化例外処理は非同期のハードウェアで生成される例外と同期のソフトウェアで生成される例外メカニズムを使用します。 言語固有の例外ハンドラーは、言語ヘルパー関数を使用することで、Windows 構造化例外処理に付加して構築します。 このドキュメントでは、ARM64、および Microsoft ARM アセンブラーおよび Visual C コンパイラによって生成されるコードで使用する言語ヘルパーでの Windows での例外処理について説明します。
+ARM64 の Windows では、同じ構造化例外処理は非同期のハードウェアで生成される例外と同期のソフトウェアで生成される例外メカニズムを使用します。 言語固有の例外ハンドラーは、言語ヘルパー関数を使用することで、Windows 構造化例外処理に付加して構築します。 このドキュメントでは、ARM64、および Microsoft ARM アセンブラーおよび MSVC コンパイラによって生成されるコードで使用する言語ヘルパーでの Windows での例外処理について説明します。
 
 ## <a name="goals-and-motivation"></a>目標と動機
 
@@ -44,7 +44,7 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
 
 1. エピローグに条件付きのコードはありません。
 
-1. フレーム ポインター レジスタの専用: れるため、元の sp をいつでも復旧可能性がありますが、関数全体で変更を加えずに登録する sp は、プロローグで別のレジスタ (r29) に保存する場合。
+1. 専用のフレーム ポインター レジスタ。Sp が別のレジスタ (r29) を登録すると、プロローグ内に保存されている場合は、元の sp をいつでも回復可能性がありますように、関数全体で変更されません。
 
 1. Sp が別のレジスタに保存しない限り、プロローグおよびエピローグ内でスタック ポインターのすべての操作が厳密に発生します。
 
@@ -52,11 +52,11 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
 
 ## <a name="arm64-stack-frame-layout"></a>ARM64 スタック フレームのレイアウト
 
-![スタック フレームのレイアウト](../build/media/arm64-exception-handling-stack-frame.png "スタック フレームのレイアウト")
+![スタック フレームのレイアウト](media/arm64-exception-handling-stack-frame.png "スタック フレームのレイアウト")
 
 フレーム チェーン関数では、最適化に関する考慮事項によって、ローカル変数領域内の任意の位置にある、fp と lr のペアを保存できます。 目標は、フレーム ポインター (r29) またはスタック ポインター (sp) に基づいて 1 つの単一の命令で到達可能なローカル変数の数を最大化します。 ただしの`alloca`関数チェーンを接続する必要があり、r29 はスタックの一番下を指す必要があります。 優れたレジスタのペアのアドレス指定-モードのカバレッジを許可するのには、不揮発性は aave 領域は、ローカル領域のスタックの一番上に配置されますを登録します。 ここでは、最も効率的なプロローグ シーケンスのいくつかを示す例です。 わかりやすくするため、キャッシュの局所性の向上のためには、呼び出し先保存済みレジスタを格納するすべての標準のプロローグでの順序は、「を増大」順序では。 `#framesz` 以下は、(alloca の領域を除く) スタック全体のサイズを表します。 `#localsz` `#outsz`ローカル領域のサイズを表す (など、保存するための領域、 \<r29、lr > ペア) とそれぞれのパラメーターのサイズを送信します。
 
-1. チェーン、#localsz \<512 を =
+1. Chained, #localsz \<= 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -70,7 +70,7 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
         sub    sp, #outsz               // (optional for #outsz != 0)
     ```
 
-1. #Localsz > 512 を連結します。
+1. Chained, #localsz > 512
 
     ```asm
         stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
@@ -131,7 +131,7 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
 
    すべてのローカル変数は、SP のベース \<r29 > 前のフレームを指します。
 
-1. チェーン、#framesz \<512、#outsz を = = 0
+1. Chained, #framesz \<= 512, #outsz = 0
 
     ```asm
         stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
@@ -187,7 +187,7 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
 
 ARM64 用には、各 .pdata レコードは、長さは 8 バイトです。 その 1 秒後に、最初の単語で関数の 32 ビットの RVA を開始各レコードの場所の一般的な形式には、いずれかの可変長 .xdata ブロックへのポインターまたは標準関数アンワインド シーケンスを記述するパックされたワードが含まれています。
 
-![.pdata レコードのレイアウト](../build/media/arm64-exception-handling-pdata-record.png ".pdata レコードのレイアウト")
+![.pdata レコードのレイアウト](media/arm64-exception-handling-pdata-record.png ".pdata レコードのレイアウト")
 
 フィールドは次のとおりです。
 
@@ -203,7 +203,7 @@ ARM64 用には、各 .pdata レコードは、長さは 8 バイトです。 �
 
 パックされたアンワインド形式では関数のアンワインドの記述に十分でない場合、可変長の .xdata レコードを作成する必要があります。 このレコードのアドレスは、.pdata レコードの第 2 ワードに格納されています。 .Xdata の形式は、単語のパックされた可変長セットを示します。
 
-![.xdata レコード レイアウト](../build/media/arm64-exception-handling-xdata-record.png ".xdata レコードのレイアウト")
+![.xdata レコード レイアウト](media/arm64-exception-handling-xdata-record.png ".xdata レコードのレイアウト")
 
 このデータは、4 つのセクションに分かれています。
 
@@ -311,12 +311,12 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |`arithmetic(eor)`|    11100111' 010zxxxx: cookie reg(z) で eor lr (0 = x28、1 = sp)。eor lr、lr、reg(z) |
 |`arithmetic(rol)`|    11100111' 0110xxxx: cookie reg (x28); と lr のシミュレートされた rolxip0 neg x28; を =ror lr、xip0 |
 |`arithmetic(ror)`|    11100111' 100zxxxx: cookie reg(z) で ror lr (0 = x28、1 = sp)。ror lr、lr、reg(z) |
-| |            11100111: xxxz---: 予約済み-- |
+| |            11100111: xxxz----: ---- reserved |
 | |              11101xxx: asm ルーチンの生成のみカスタム スタック場合次に予約されています |
-| |              11101001: MSFT_OP_TRAP_FRAME のカスタム スタック |
-| |              11101010: MSFT_OP_MACHINE_FRAME のカスタム スタック |
-| |              11101011: MSFT_OP_CONTEXT のカスタム スタック |
-| |              1111xxxx: 予約済み |
+| |              11101001:カスタム MSFT_OP_TRAP_FRAME スタック |
+| |              11101010:カスタム MSFT_OP_MACHINE_FRAME スタック |
+| |              11101011:カスタム MSFT_OP_CONTEXT スタック |
+| |              1111xxxx: reserved |
 
 複数のバイトをカバーする大きな値を含む手順については、最上位ビットが最初に格納されます。 上記のアンワインド コードは、アンワインド コードのバイト単位の合計サイズを把握することは単純に、コードの最初のバイトを探して、されるように設計されています。 プロローグ/エピローグに指示する命令を正確に各アンワインド コードがマップされている、プロローグまたはエピローグのサイズを計算する実行する必要があるすべてを決定する参照テーブルまたは同様のデバイスを使用して、最後に、シーケンスの先頭から説明しますが、どのくらいの期間 corオペコードの応答は次のとおりです。
 
@@ -334,7 +334,7 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 パックの .pdata レコードの形式のアンワインドこのようなデータが表示されます。
 
-![.pdata レコードでパックされたアンワインド データ](../build/media/arm64-exception-handling-packed-unwind-data.png ".pdata レコードでパックされたアンワインド データ")
+![.pdata レコードでパックされたアンワインド データ](media/arm64-exception-handling-packed-unwind-data.png ".pdata レコードでパックされたアンワインド データ")
 
 フィールドは次のとおりです。
 
@@ -357,29 +357,29 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 上記のセクションでは 1、パラメーター領域の送信) (なし、2、3 および 4 のカテゴリに分類される標準プロローグは、パックされたアンワインド形式で表現できます。  エピローグとよく似ていますフォームでは、以下の正規関数を除く**H** 、影響を与えません、`set_fp`命令を省略すると、およびエピローグ内の手順として各ステップの手順の順序が逆になっています。 パックされた xdata のアルゴリズムでは、次の表に記載された手順に従います。
 
-手順 0: は、各領域のサイズの事前計算を実行します。
+手順 0:各領域のサイズの事前計算を実行します。
 
 手順 1: Int 呼び出し先保存済みレジスタを保存します。
 
-手順 2: この手順は、前半のセクションでは 4 種類に固有です。 lr が Int の範囲の最後に保存されます。
+手順 2: この手順では、前半のセクションでは 4 種類に固有です。 lr が Int の範囲の最後に保存されます。
 
 手順 3: FP 呼び出し先保存済みレジスタを保存します。
 
-手順 4: ホームのパラメータ エリアの入力引数を保存します。
+手順 4: ホームのパラメータ エリアには、入力引数を保存します。
 
 手順 5: ローカルの領域を含む、残りのスタックを割り当てる\<r29、lr > のペアとパラメーターの領域を送信します。 5a は、正規の種類を 1 に対応します。 5b と 5 c は正規の種類 2 です。 5 d 5 e 3 の両方の種類とは 4」と入力します。
 
 ステップ番号|フラグの値|手順の数|オペコード|アンワインド コード
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regI** < = 10|RegI/2 + **RegI** %2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
 2|**CR**01 = = *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
 3|0 < **RegF** < = 7|(RegF + 1)/2 +<br/>(RegF + 1) %2)。|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
 4|**H** 1 = =|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** 11 を = = (& a) (& a) #locsz<br/> < = 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** 11 を = = (&AMP; A) (&AMP; A)<br/>512 < #locsz < 4088 を =|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-c.|**CR** 11 を = = (& a) (& a) #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5 d|(**CR** 00 = = \| \| **CR**01 = =) (&AMP; A) (&AMP; A)<br/>#locsz < 4088 を =|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
+5a|**CR** 11 を = = (& a) (& a) #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** 11 を = = (&AMP; A) (&AMP; A)<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+c.|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5 d|(**CR** 00 = = \| \| **CR**01 = =) (&AMP; A) (&AMP; A)<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
 5e|(**CR** 00 = = \| \| **CR**01 = =) (&AMP; A) (&AMP; A)<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* 場合**CR** 01 = = と**RegI**奇数、手順 2. と手順 1. で最後の save_rep が 1 つ save_regp にマージされます。
@@ -531,7 +531,7 @@ c.|**CR** 11 を = = (& a) (& a) #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp
 
 ## <a name="examples"></a>使用例
 
-### <a name="example-1-frame-chained-compact-form"></a>例 1: フレーム チェーン compact-フォーム
+### <a name="example-1-frame-chained-compact-form"></a>例 1: フレーム チェーン、compact フォーム
 
 ```asm
 |Foo|     PROC
@@ -549,7 +549,7 @@ c.|**CR** 11 を = = (& a) (& a) #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp
     ;Flags[SingleProEpi] functionLength[492] RegF[0] RegI[1] H[0] frameChainReturn[Chained] frameSize[2080]
 ```
 
-### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>例 2: フレーム チェーンされている、完全な形式でミラー プロローグとエピローグ
+### <a name="example-2-frame-chained-full-form-with-mirror-prolog--epilog"></a>例 2:フレーム チェーン、ミラー プロローグとエピローグの完全な形式
 
 ```asm
 |Bar|     PROC
@@ -583,7 +583,7 @@ c.|**CR** 11 を = = (& a) (& a) #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp
 
 EpilogStart インデックス [0] は、プロローグのアンワインド コードの同じシーケンスを指すことに注意してください。
 
-### <a name="example-3-variadic-unchained-function"></a>例 3: 可変個引数チェーン関数
+### <a name="example-3-variadic-unchained-function"></a>例 3:チェーンの可変個引数関数
 
 ```asm
 |Delegate| PROC
@@ -622,9 +622,9 @@ EpilogStart インデックス [0] は、プロローグのアンワインド �
     ;end
 ```
 
-注: EpilogStart インデックス [4] は、プロローグ アンワインド コード (部分的に再利用アンワインド配列) の中間を指します。
+メモ:EpilogStart インデックス [4] は、プロローグ アンワインド コード (部分的に再利用アンワインド配列) の中間を指します。
 
 ## <a name="see-also"></a>関連項目
 
 [ARM64 ABI 規則の概要](arm64-windows-abi-conventions.md)<br/>
-[ARM 例外処理](../build/arm-exception-handling.md)
+[ARM 例外処理](arm-exception-handling.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /FORCE linker option
 - -FORCE linker option
 ms.assetid: b1e9a218-a5eb-4e60-a4a4-65b4be15e5da
-ms.openlocfilehash: fb5b5b586a9c428d20a7e931a312c8903eb6e8e2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: af7962a4b3b5805e7e0c4d59752254c8ade17f7b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424471"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814307"
 ---
 # <a name="force-force-file-output"></a>/FORCE (ターゲットを強制的に出力)
 
@@ -41,7 +41,7 @@ ms.locfileid: "57424471"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -55,5 +55,5 @@ ms.locfileid: "57424471"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

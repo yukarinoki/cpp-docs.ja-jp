@@ -29,24 +29,24 @@ helpviewer_keywords:
 - /Es BSCMAKE option
 - Ei BSCMAKE option
 ms.assetid: fa2f1e06-c684-41cf-80dd-6a554835ebd2
-ms.openlocfilehash: 7727f433ae68f26075645b35ff5edad43159ec67
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bf4c3648079dff16481dbdd56b9a70093fd22d8d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415410"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812058"
 ---
 # <a name="bscmake-options"></a>BSCMAKE オプション
 
 ここでは、BSCMAKE を制御するためのオプションを説明します。 一部のオプションでは、特定の情報を除外するか、または含めることによってブラウザー情報ファイルの内容を制御できます。 除外オプションを使用すると、BSCMAKE の処理が速くなるだけでなく、.bsc ファイルのサイズが小さくなります。 オプション名は大文字小文字が区別されます (を除く **/help**と **/NOLOGO**)。
 
-のみ **/NOLOGO**と **/o**は、Visual Studio 開発環境内から使用できます。  参照してください[Visual C プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)については、プロジェクトのプロパティ ページにアクセスします。
+のみ **/NOLOGO**と **/o**は、Visual Studio 開発環境内から使用できます。  参照してください[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)については、プロジェクトのプロパティ ページにアクセスします。
 
 **/Ei (** *filename*...**)**<br/>
 指定したインクルード ファイルの内容をブラウザー情報ファイルから除外します。 複数のファイルを指定する場合は、スペースで名前を区切り、名前のリストをかっこで囲みます。 かっこが 1 つだけを指定する場合は必要ない*filename*します。 使用 **/Ei**と共に、 **/Es**で除外されないファイルを除外するオプション **/Es**します。
 
 **/El**<br/>
-ローカル シンボルを除外します。 既定では、ローカル シンボルは含まれます。 ローカル シンボルの詳細については、次を参照してください。 [.sbr ファイルの作成](../../build/reference/creating-an-dot-sbr-file.md)です。
+ローカル シンボルを除外します。 既定では、ローカル シンボルは含まれます。 ローカル シンボルの詳細については、次を参照してください。 [.sbr ファイルの作成](creating-an-dot-sbr-file.md)です。
 
 **/Em**<br/>
 マクロの本体のシンボルを除外します。 使用 **/Em**ブラウザー情報ファイルにマクロ名のみを含めます。 既定では、マクロ名とマクロの展開の結果の両方が含められます。
@@ -60,7 +60,7 @@ ms.locfileid: "57415410"
 **/errorreport:**[**none** &#124; **prompt** &#124; **queue** &#124; **send**]<br/>
 bscmake.exe の内部エラーについての情報を Microsoft に送信できます。
 
-詳細については **/errorreport**を参照してください[/errorReport (内部コンパイラ エラーを報告する)](../../build/reference/errorreport-report-internal-compiler-errors.md)します。
+詳細については **/errorreport**を参照してください[/errorReport (内部コンパイラ エラーを報告する)](errorreport-report-internal-compiler-errors.md)します。
 
 **/HELP**<br/>
 BSCMAKE コマンド ライン構文の簡単な説明を表示します。
@@ -69,7 +69,7 @@ BSCMAKE コマンド ライン構文の簡単な説明を表示します。
 未参照シンボルを含めます。 既定では、定義されているが、参照はされていないシンボルは記録されません。 .sbr ファイルがパックされている場合、このオプションはその入力ファイルには効果がありません。なぜなら、コンパイラによって未参照シンボルが既に削除されているためです。
 
 **/n**<br/>
-ノンインクリメンタル ビルドを強制的に実行します。 使用 **/n** .bsc ファイルが存在するかどうか、ブラウザー情報ファイルの完全なビルドを強制して、.sbr ファイルが切り詰められていることを防ぐためにします。 参照してください[BSCMAKE による .bsc ファイルのビルド方法](../../build/reference/how-bscmake-builds-a-dot-bsc-file.md)します。
+ノンインクリメンタル ビルドを強制的に実行します。 使用 **/n** .bsc ファイルが存在するかどうか、ブラウザー情報ファイルの完全なビルドを強制して、.sbr ファイルが切り詰められていることを防ぐためにします。 参照してください[BSCMAKE による .bsc ファイルのビルド方法](how-bscmake-builds-a-dot-bsc-file.md)します。
 
 **/NOLOGO**<br/>
 BSCMAKE の著作権メッセージが表示されなくなります。
@@ -94,4 +94,4 @@ BSCMAKE /n /S toolbox.h /o main.bsc file1.sbr file2.sbr file3.sbr
 
 ## <a name="see-also"></a>関連項目
 
-[BSCMAKE リファレンス](../../build/reference/bscmake-reference.md)
+[BSCMAKE リファレンス](bscmake-reference.md)

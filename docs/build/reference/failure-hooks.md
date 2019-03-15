@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, failure hooks
 ms.assetid: 12bb303b-ffe6-4471-bffe-9ef4f8bb2d30
-ms.openlocfilehash: 2cd691ed4514ac4073f90691ed731670fbd22477
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fc22ae77d729868adbf8c37d40e450e35a8e866
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417945"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811993"
 ---
 # <a name="failure-hooks"></a>エラー フック
 
-エラー フックと同じ方法で有効になっている、[通知フック](../../build/reference/notification-hooks.md)します。 (HINSTANCE または FARPROC) を行うフックの日常的なニーズを処理するために適切な値を返すまたは 0 に、例外をスローする必要があります。
+エラー フックと同じ方法で有効になっている、[通知フック](notification-hooks.md)します。 (HINSTANCE または FARPROC) を行うフックの日常的なニーズを処理するために適切な値を返すまたは 0 に、例外をスローする必要があります。
 
 ユーザー定義関数を参照するポインター変数は次のとおりです。
 
@@ -39,4 +39,4 @@ PfnDliHook   __pfnDliFailureHook2;
 
 ## <a name="see-also"></a>関連項目
 
-[エラー処理と通知](../../build/reference/error-handling-and-notification.md)
+[エラー処理と通知](error-handling-and-notification.md)

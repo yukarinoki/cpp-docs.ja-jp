@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /STACK linker option
 - stack, setting size
 ms.assetid: 73283660-e4bd-47cc-b5ca-04c5d739034c
-ms.openlocfilehash: 34d764f88b1dccb60c7d9a006be119e3800ac2d9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 27de554e1933b2753f641be358461c8d7ff4fffa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412771"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813800"
 ---
 # <a name="stack-stack-allocations"></a>/STACK (スタック割り当て)
 
@@ -37,11 +37,11 @@ ms.locfileid: "57412771"
 
 引数 `reserve` と引数 `commit` の値は、10 進表記か C 言語表記で指定します。
 
-スタックのサイズを設定するもう 1 つの方法は、 [STACKSIZE](../../build/reference/stacksize.md)モジュール定義 (.def) ファイル内のステートメント。 **STACKSIZE**オーバーライド スタック割り当て (/stack) オプションの両方が指定されている場合。 スタック サイズを変更するには、.exe ファイルを使用してビルドした後、 [EDITBIN](../../build/reference/editbin-reference.md)ツール。
+スタックのサイズを設定するもう 1 つの方法は、 [STACKSIZE](stacksize.md)モジュール定義 (.def) ファイル内のステートメント。 **STACKSIZE**オーバーライド スタック割り当て (/stack) オプションの両方が指定されている場合。 スタック サイズを変更するには、.exe ファイルを使用してビルドした後、 [EDITBIN](editbin-reference.md)ツール。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**リンカー**フォルダー。
 
@@ -60,5 +60,5 @@ ms.locfileid: "57412771"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

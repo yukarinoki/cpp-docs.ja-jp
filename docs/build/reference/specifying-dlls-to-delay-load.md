@@ -7,16 +7,16 @@ helpviewer_keywords:
 - delayed loading of DLLs, specifying
 - /DELAYLOAD linker option
 ms.assetid: 94cbecfe-7a42-40d1-a618-9f2786bac0d8
-ms.openlocfilehash: b1ca214d8c840d9e993d5a89823b63868a664bec
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2b6737abd76c03186881e83bbd2bf286be6ffe2f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424887"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813228"
 ---
 # <a name="specifying-dlls-to-delay-load"></a>遅延読み込みする DLL の指定
 
-遅延読み込みする Dll を指定できます、 [/delayload](../../build/reference/delayload-delay-load-import.md):`dllname`リンカー オプション。 独自のバージョンのヘルパー関数を使う計画がない場合は、プログラムを delayimp.lib (デスクトップ アプリケーションの場合) または dloadhelper.lib (ストア アプリの場合) とリンクする必要もあります。
+遅延読み込みする Dll を指定できます、 [/delayload](delayload-delay-load-import.md):`dllname`リンカー オプション。 独自のバージョンのヘルパー関数を使う計画がない場合は、プログラムを delayimp.lib (デスクトップ アプリケーションの場合) または dloadhelper.lib (ストア アプリの場合) とリンクする必要もあります。
 
 DLL の遅延読み込みの簡単な例を以下に示します。
 
@@ -37,4 +37,4 @@ DEBUG バージョンのプロジェクトをビルドします。 デバッガ�
 
 ## <a name="see-also"></a>関連項目
 
-[リンカーによる DLL の遅延読み込み](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: fb77230d5cc27c1fba1f7df1404150fada36d43a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416450"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813969"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>チュートリアル: 作成して、独自のダイナミック リンク ライブラリ (C++)
 
@@ -29,11 +29,11 @@ ms.locfileid: "57416450"
 
 - 完成したアプリを実行します。
 
-などの静的リンク ライブラリ、DLL_エクスポート_変数、関数、およびリソース名、およびアプリで_インポート_これらの変数、関数、およびリソースを使用するこれらの名前。 静的にリンクされたライブラリとは異なりは、Windows は、読み込み時に、またはリンク時に接続することではなく、実行時に DLL のエクスポートに、アプリ内のインポートを接続します。 Windows では、これらの接続を作成する標準の C++ コンパイル モデルに含まれていない追加の情報が必要です。 Visual C コンパイラでは、この余分な情報を提供するために C に一部の Microsoft 固有拡張機能を実装します。 これらの拡張機能を説明します。
+などの静的リンク ライブラリ、DLL_エクスポート_変数、関数、およびリソース名、およびアプリで_インポート_これらの変数、関数、およびリソースを使用するこれらの名前。 静的にリンクされたライブラリとは異なりは、Windows は、読み込み時に、またはリンク時に接続することではなく、実行時に DLL のエクスポートに、アプリ内のインポートを接続します。 Windows では、これらの接続を作成する標準の C++ コンパイル モデルに含まれていない追加の情報が必要です。 MSVC コンパイラは、この余分な情報を提供するために C に一部の Microsoft 固有拡張機能を実装します。 これらの拡張機能を説明します。
 
 このチュートリアルは、2 つの Visual Studio ソリューションを作成します。DLL をビルドして、クライアント アプリを構築します。 DLL は、プラットフォームとの呼び出しとリンク規則に一致する限り、その他の言語を使用してビルドされたアプリから呼び出せるように C 呼び出し規則を使用します。 クライアント アプリは_暗黙的リンク_Windows が DLL 読み込み時に、アプリをリンクします。 このリンクには、アプリの静的にリンクされたライブラリで、関数と同じように DLL が指定した関数を呼び出すことができます。
 
-このチュートリアルには、いくつかの一般的な状況がについて説明します。 他のプログラミング言語での C++ Dll の使用は表示されません。 リソース専用 DLL を作成する方法は表示されません。 負荷時ではなく、実行時に Dll を読み込む明示的リンクの使用も表示されません。 確実に、これらすべての作業を行う Visual C を使用することができます。 Dll に関する詳細情報へのリンクを参照してください。 [Visual c の Dll](../build/dlls-in-visual-cpp.md)します。 暗黙的なリンクと明示的なリンクの詳細については、次を参照してください。[をリンクする方法の決定使用](../build/linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)します。 C 言語のリンケージ規則を使用する言語のプログラミングを使用する C++ Dll を作成する方法の詳細については、次を参照してください。 [C 言語の実行可能ファイルで使用するための C++ 関数のエクスポート](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)します。 .NET 言語で使用するための Dll を作成する方法については、次を参照してください。 [Visual Basic アプリケーションから DLL 関数を呼び出す](../build/calling-dll-functions-from-visual-basic-applications.md)します。
+このチュートリアルには、いくつかの一般的な状況がについて説明します。 他のプログラミング言語での C++ Dll の使用は表示されません。 リソース専用 DLL を作成する方法は表示されません。 負荷時ではなく、実行時に Dll を読み込む明示的リンクの使用も表示されません。 確実に、これらすべての作業を行う Visual C を使用することができます。 Dll に関する詳細情報へのリンクを参照してください。 [Visual c の Dll](dlls-in-visual-cpp.md)します。 暗黙的なリンクと明示的なリンクの詳細については、次を参照してください。[をリンクする方法の決定使用](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)します。 C 言語のリンケージ規則を使用する言語のプログラミングを使用する C++ Dll を作成する方法の詳細については、次を参照してください。 [C 言語の実行可能ファイルで使用するための C++ 関数のエクスポート](exporting-cpp-functions-for-use-in-c-language-executables.md)します。 .NET 言語で使用するための Dll を作成する方法については、次を参照してください。 [Visual Basic アプリケーションから DLL 関数を呼び出す](calling-dll-functions-from-visual-basic-applications.md)します。
 
 このチュートリアルは、Visual Studio 2017 を使用しますが、コードおよび説明の大半は以前のバージョンに適用します。 新しいプロジェクトをビルドする手順は、Visual Studio 2017 バージョン 15.3 以降を変更します。 このチュートリアルでは、新しいと、古いバージョンのプロジェクトを作成する方法について説明します。 Visual Studio のバージョンに一致する手順を検索します。
 
@@ -400,7 +400,4 @@ DLL とクライアント アプリケーションを作成するので、実験
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)<br/>
-[デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
-[チュートリアル: プログラムの配置 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
-[DLL 関数の Visual Basic アプリケーションからの呼び出し方](../build/calling-dll-functions-from-visual-basic-applications.md)
+[DLL 関数の Visual Basic アプリケーションからの呼び出し方](calling-dll-functions-from-visual-basic-applications.md)

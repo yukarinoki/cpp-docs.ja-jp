@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: da68f71d2a3830cdd86870d8ef072c3fb04933db
-ms.sourcegitcommit: 45835842604602a011813d0cd70abc5df91b89ed
+ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50750406"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821390"
 ---
 # <a name="include-directive-cc"></a>#include ディレクティブ (C/C++)
 
@@ -49,7 +49,7 @@ ms.locfileid: "50750406"
 
 インクルード ファイルが入れ子になっている場合、コマンド ラインでコンパイルすると、ディレクトリの検索は親ファイルのディレクトリから始まり、親の親ファイルのディレクトリへと続きます。 したがって、検索は現在処理中のソースが含まれるディレクトリに対して相対的に開始されます。 検索がで指定されているディレクトリに移動、ファイルが見つからない場合、 [/I (追加のインクルード ディレクトリ)](../build/reference/i-additional-include-directories.md)コンパイラ オプション。 最後に、INCLUDE 環境変数で指定したディレクトリが検索されます。
 
-Visual Studio 開発環境からは、INCLUDE 環境変数は無視されます。 インクルード ファイルを検索するディレクトリを設定する方法については、これは、LIB 環境変数にも適用されます: を参照してください[vc++ Directories Property Page](../ide/vcpp-directories-property-page.md)します。
+Visual Studio 開発環境からは、INCLUDE 環境変数は無視されます。 インクルード ファイルを検索するディレクトリを設定する方法については、これは、LIB 環境変数にも適用されます: を参照してください[vc++ Directories Property Page](../build/reference/vcpp-directories-property-page.md)します。
 
 次の例では、山かっこ形式を使用したファイルのインクルードを示します。
 

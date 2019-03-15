@@ -14,12 +14,12 @@ helpviewer_keywords:
 - Tc compiler option [C++]
 - /Tp compiler option [C++]
 - -Tp compiler option [C++]
-ms.openlocfilehash: e435b48359a708408ff8659e53c9e7c4f7e80261
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f7ee51c858c9f90440cf0c2b21799ef7473cf6da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619116"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57813865"
 ---
 # <a name="tc-tp-tc-tp-specify-source-file-type"></a>/Tc、/Tp、/TC、/TP (ソース ファイル タイプの指定)
 
@@ -31,7 +31,7 @@ ms.locfileid: "50619116"
 
 > **/Tc** _filename_
 >  **/Tp** _filename_
->  **/TC** 
+>  **/TC**
 >  **/TP**
 
 ## <a name="arguments"></a>引数
@@ -43,11 +43,11 @@ C または C++ ソース ファイル。
 
 既定では、 **CL** .c ファイル拡張子を持つファイルは C ソース ファイルと .cpp または .cxx 拡張子のファイルは、C++ ソース ファイルのことを前提としています。
 
-ときにいずれか、 **TC**または**Tc**オプションを指定すると、仕様、 [/Zc:wchar_t (wchar_t をネイティブ型)](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)オプションは無視されます。
+ときにいずれか、 **TC**または**Tc**オプションを指定すると、仕様、 [/Zc:wchar_t (wchar_t をネイティブ型)](zc-wchar-t-wchar-t-is-native-type.md)オプションは無視されます。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **詳細**プロパティ ページ。
 
@@ -61,7 +61,7 @@ C または C++ ソース ファイル。
 
 CL コマンド行では、MAIN.c、TEST.prg と COLLATE.prg がすべての C ソース ファイルを指定します。 CL will not recognize PRINT.prg.
 
-> CL MAIN です。C/TcTEST.PRG/TcCOLLATE.PRG 印刷します。PRG
+> CL MAIN.C /TcTEST.PRG /TcCOLLATE.PRG PRINT.PRG
 
 CL コマンド行では、TEST1.c、TEST2.cxx、TEST3.huh、および TEST4.o は、C++ ファイルとしてコンパイルし、TEST5.z は C ファイルとしてコンパイルされたことを指定します。
 
@@ -69,5 +69,5 @@ CL コマンド行では、TEST1.c、TEST2.cxx、TEST3.huh、および TEST4.o �
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

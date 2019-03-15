@@ -10,12 +10,12 @@ helpviewer_keywords:
 - export directives [C++]
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
-ms.openlocfilehash: 48592fd6162ee354d82e73228e8b144ef0f354ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420585"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810238"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>__declspec(dllexport) を使った DLL からのエクスポート
 
@@ -27,7 +27,7 @@ ms.locfileid: "57420585"
 
 序数、NONAME、PRIVATE など、多くのエクスポート ディレクティブは、.def ファイル内にしか作成されないので、これらの属性を .def ファイルを使用せずに指定することはできません。 ただしを使用して**方式**に加えて、.def ファイルはしないビルド エラーが発生します。
 
-関数をエクスポートする、**方式**キーワードはキーワードが指定されている場合、呼び出し規約キーワードの左側に表示する必要があります。 例:
+関数をエクスポートする、**方式**キーワードはキーワードが指定されている場合、呼び出し規約キーワードの左側に表示する必要があります。 例えば:
 
 ```
 __declspec(dllexport) void __cdecl Function1(void);
@@ -49,7 +49,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 #define DllExport   __declspec( dllexport )
 ```
 
-**方式**ストア機能の DLL のエクスポート テーブル内の名前。 テーブルのサイズを最適化する場合を参照してください。[関数ではなく序数値の名前を DLL からエクスポート](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)します。
+**方式**ストア機能の DLL のエクスポート テーブル内の名前。 テーブルのサイズを最適化する場合を参照してください。[関数ではなく序数値の名前を DLL からエクスポート](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)します。
 
 > [!NOTE]
 >  Win16 から Win32 への DLL ソース コードを移植するときの各インスタンスを置き換える **_ _export**で**方式**します。
@@ -58,28 +58,28 @@ class __declspec(dllexport) CExampleExport : public CObject
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [.Def ファイルを使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-def-files.md)
+- [.Def ファイルを使った DLL からエクスポートします。](exporting-from-a-dll-using-def-files.md)
 
-- [AFX_EXT_CLASS を使ったエクスポート/インポート](../build/exporting-and-importing-using-afx-ext-class.md)
+- [AFX_EXT_CLASS を使ったエクスポート/インポート](exporting-and-importing-using-afx-ext-class.md)
 
-- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [エクスポート方式の使用](../build/determining-which-exporting-method-to-use.md)
+- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [使用してアプリケーションをインポートします。](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [使用してアプリケーションをインポートします。](importing-into-an-application-using-declspec-dllimport.md)
 
-- [DLL を初期化します。](../build/run-time-library-behavior.md#initializing-a-dll)
+- [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
 - [_ _Declspec キーワード](../cpp/declspec.md)
 
-- [インポートとエクスポートのインライン関数](../build/importing-and-exporting-inline-functions.md)
+- [インポートとエクスポートのインライン関数](importing-and-exporting-inline-functions.md)
 
-- [相互インポート](../build/mutual-imports.md)
+- [相互インポート](mutual-imports.md)
 
 ## <a name="see-also"></a>関連項目
 
-[DLL からのエクスポート](../build/exporting-from-a-dll.md)
+[DLL からのエクスポート](exporting-from-a-dll.md)

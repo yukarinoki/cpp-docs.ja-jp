@@ -6,12 +6,12 @@ helpviewer_keywords:
 - name decoration [C++]
 - names [C++], decorated
 ms.assetid: a4e9ae8e-b239-4454-b401-4102793cb344
-ms.openlocfilehash: d9d3db9a3db1943581e5fd603ba85777cb49b863
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3fae232e6ca886195315002f4e65063d8a23ddc8
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423314"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815425"
 ---
 # <a name="decorated-names"></a>装飾名
 
@@ -67,7 +67,7 @@ C の関数の装飾形式は、次の表に示すように、その宣言で使
 
 #### <a name="to-use-a-listing-to-view-decorated-names"></a>リスティング ファイルを使用して装飾名を確認するには
 
-1. データ、オブジェクト、または関数の定義またはでプロトタイプを含むソース ファイルをコンパイルすることで、一覧を生成、[リスティング ファイルの種類](../../build/reference/fa-fa-listing-file.md)アセンブリ コードとソース コードに設定するコンパイラ オプション (**/FAs**)。
+1. データ、オブジェクト、または関数の定義またはでプロトタイプを含むソース ファイルをコンパイルすることで、一覧を生成、[リスティング ファイルの種類](fa-fa-listing-file.md)アセンブリ コードとソース コードに設定するコンパイラ オプション (**/FAs**)。
 
    たとえば、入力`cl /c /FAs example.cpp`リスティング ファイルを生成する開発者コマンド プロンプトで example.asm します。
 
@@ -94,5 +94,5 @@ is :- "private: void __thiscall a::func1(int)"
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)<br/>
+[追加の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
 [extern を使用したリンケージの指定](../../cpp/using-extern-to-specify-linkage.md)

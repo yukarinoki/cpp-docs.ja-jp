@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
-ms.openlocfilehash: b12548bafa9a0c580c5976cd7c4c54d8726e5ace
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435676"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814138"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -28,7 +28,7 @@ EXPORTS
 
 エクスポートの構文は、*定義*は。
 
-> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_序数_ \[ **NONAME**] \[ \[**プライベート**] |\[**データ**]
+> *entryname*\[__=__*internal_name*|*other_module.exported_name*] \[**\@**_ordinal_ \[**NONAME**] ] \[ \[**PRIVATE**] | \[**DATA**] ]
 
 *entryname*にエクスポートする関数または変数の名前です。 これは必須です。 DLL の名前からエクスポートする名前が異なる場合、エクスポートの名前、DLL を使用して指定*internal_name*します。 たとえば、DLL で関数 `func1` をエクスポートし、呼び出し元がそれを `func2` として使用する場合は、次のように指定します。
 
@@ -51,9 +51,9 @@ EXPORTS
    func2=other_module.#42
 ```
 
-装飾名を使用する必要がありますか、Visual C コンパイラでは、C++ の関数に名前の装飾を使用しているため、 *internal_name*を使用して、エクスポートされた関数を定義または`extern "C"`ソース コードにします。 コンパイラを使用する C 関数を装飾も、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約をアンダー スコア (\_) のプレフィックスとサフィックスで構成される、アット マーク (\@) (10 進数) のバイト数の後に、引数リスト。
+装飾名を使用する必要がありますか、MSVC コンパイラは、C++ の関数の名前の装飾を使用するため*internal_name*を使用して、エクスポートされた関数を定義または`extern "C"`ソース コードにします。 コンパイラを使用する C 関数を装飾も、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約をアンダー スコア (\_) のプレフィックスとサフィックスで構成される、アット マーク (\@) (10 進数) のバイト数の後に、引数リスト。
 
-コンパイラによって生成された装飾名を検索するには、使用、 [DUMPBIN](../../build/reference/dumpbin-reference.md)ツールまたはリンカー [/map](../../build/reference/map-generate-mapfile.md)オプション。 装飾名はコンパイラ固有です。 装飾名を .DEF ファイルにエクスポートする場合、DLL にリンクする実行可能ファイルも同じバージョンのコンパイラを使用してビルドする必要があります。 これにより、呼び出し元の装飾名は .DEF ファイルのエクスポート名と一致します。
+コンパイラによって生成された装飾名を検索するには、使用、 [DUMPBIN](dumpbin-reference.md)ツールまたはリンカー [/map](map-generate-mapfile.md)オプション。 装飾名はコンパイラ固有です。 装飾名を .DEF ファイルにエクスポートする場合、DLL にリンクする実行可能ファイルも同じバージョンのコンパイラを使用してビルドする必要があります。 これにより、呼び出し元の装飾名は .DEF ファイルのエクスポート名と一致します。
 
 使用することができます\@*序数*数値、および関数名ではなくが DLL のエクスポート テーブルに移動を指定します。 多くの Windows DLL で、レガシ コードをサポートするために序数がエクスポートされます。 DLL のサイズを最小限に抑えるのに役立つため、16 ビットの Windows コードでは序数を使用することが一般的でした。 レガシ サポートのために DLL のクライアントで必要な場合を除き、関数を序数でエクスポートすることはお勧めしません。 .LIB ファイルには序数と関数のマッピングが含まれているため、DLL を使用するプロジェクトでは通常と同様に関数名を使用できます。
 
@@ -74,7 +74,7 @@ EXPORTS
 
 1. .DEF ファイルでの `EXPORTS` ステートメント
 
-1. [/Export](../../build/reference/export-exports-a-function.md) LINK コマンド内の指定
+1. [/Export](export-exports-a-function.md) LINK コマンド内の指定
 
 1. A[コメント](../../preprocessor/comment-c-cpp.md)形式のソース コードにディレクティブ`#pragma comment(linker, "/export: definition ")`します。 次の例は、関数宣言の前に、の #pragma comment ディレクティブ、`PlainFuncName`非装飾の名前と`_PlainFuncName@4`関数の装飾の名前を指定します。
 
@@ -102,4 +102,4 @@ EXPORTS
 
 ## <a name="see-also"></a>関連項目
 
-[モジュール定義ステートメントに関する規則](../../build/reference/rules-for-module-definition-statements.md)
+[モジュール定義ステートメントに関する規則](rules-for-module-definition-statements.md)

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - browse information files (.bsc)
 - browse information files (.bsc), creating
 ms.assetid: b5c12832-51f6-4953-8044-4264dd0fb242
-ms.openlocfilehash: 02f2107469e2fbbc4ea3591e1211e600d16fb9e9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4f12bd25ca3ab718a845dbb04aba3169cc6d4b19
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413018"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820620"
 ---
 # <a name="building-browse-information-files-overview"></a>ブラウザー情報ファイルのビルド。概要
 
@@ -20,18 +20,18 @@ ms.locfileid: "57413018"
 
 .Sbr ファイルと .bsc ファイルを生成する、時間がかかるため、Visual C は、既定でオフこれらの関数にします。 を現在の情報を参照する場合は、参照オプションをオンにして、プロジェクトをもう一度ビルドする必要があります。
 
-使用[/FR](../../build/reference/fr-fr-create-dot-sbr-file.md)または[/Fr](../../build/reference/fr-fr-create-dot-sbr-file.md) .sbr ファイルを作成するようにコンパイラに指示します。 .Bsc ファイルを作成するを呼び出すことができます[BSCMAKE](../../build/reference/bscmake-command-line.md)コマンドラインから。 BSCMAKE コマンドラインから使用するブラウザー情報ファイルの操作をより正確に制御します。 参照してください[BSCMAKE リファレンス](../../build/reference/bscmake-reference.md)詳細についてはします。
+使用[/FR](fr-fr-create-dot-sbr-file.md)または[/Fr](fr-fr-create-dot-sbr-file.md) .sbr ファイルを作成するようにコンパイラに指示します。 .Bsc ファイルを作成するを呼び出すことができます[BSCMAKE](bscmake-command-line.md)コマンドラインから。 BSCMAKE コマンドラインから使用するブラウザー情報ファイルの操作をより正確に制御します。 参照してください[BSCMAKE リファレンス](bscmake-reference.md)詳細についてはします。
 
 > [!TIP]
 >  .Bsc ファイルの生成がオフのままには、.sbr ファイルの生成を有効にすることができます。 これにより、高速のビルドは .bsc ファイルの生成をオンにし、プロジェクトをビルドして、新しい .bsc ファイルをすばやく作成することもできます。
 
 時間、メモリ、および .bsc ファイルのサイズを小さくして .bsc ファイルのビルドに必要なディスク領域を減らすことができます。
 
-参照してください[[全般] プロパティ ページ (プロジェクト)](../../ide/general-property-page-project.md)については、開発環境でのブラウザー ファイルを作成する方法。
+参照してください[[全般] プロパティ ページ (プロジェクト)](general-property-page-project.md)については、開発環境でのブラウザー ファイルを作成する方法。
 
 ### <a name="to-create-a-smaller-bsc-file"></a>サイズの小さい .bsc ファイルを作成するには
 
-1. 使用[BSCMAKE コマンド ライン オプション](../../build/reference/bscmake-options.md)ブラウザー情報ファイルから情報を除外します。
+1. 使用[BSCMAKE コマンド ライン オプション](bscmake-options.md)ブラウザー情報ファイルから情報を除外します。
 
 1. コンパイルまたはアセンブルすると、.sbr ファイルの 1 つまたは複数のローカルのシンボルを除外します。
 
@@ -45,5 +45,5 @@ ms.locfileid: "57413018"
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)<br/>
-[BSCMAKE リファレンス](../../build/reference/bscmake-reference.md)
+[追加の MSVC ビルド ツール](c-cpp-build-tools.md)<br/>
+[BSCMAKE リファレンス](bscmake-reference.md)

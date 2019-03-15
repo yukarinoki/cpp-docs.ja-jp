@@ -13,12 +13,12 @@ helpviewer_keywords:
 - J compiler option [C++]
 - default char type is unsigned
 ms.assetid: 50973667-6638-491e-9c41-bff73acae19f
-ms.openlocfilehash: 931253b0a50e8b8f96a385400b2afbb1894c9d47
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ed296d339949814dbd796bb5d8e23a406be71c69
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417698"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814164"
 ---
 # <a name="j-default-char-type-is-unsigned"></a>/J (既定の char 型の unsigned への変更)
 
@@ -55,6 +55,6 @@ ANSI C および C++ での特定の実装が必要ありません、`char`型�
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
+[C++ コンパイラを設定し、Visual Studio でのプロパティのビルド](../working-with-project-properties.md)

@@ -30,7 +30,6 @@ f1_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -99,7 +98,6 @@ helpviewer_keywords:
 - C4455
 - C4456
 - C4457
-- C4458
 - C4459
 - C4472
 - C4474
@@ -140,12 +138,12 @@ helpviewer_keywords:
 - C4594
 - C4595
 ms.assetid: b07850a5-ae89-48ea-bf9a-f0e30939f9b9
-ms.openlocfilehash: 14195271fa0e5e399b801fd36803db4731e690f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 990560e2c05f66a010382f736735c19c17d4dc28
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50491300"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816621"
 ---
 # <a name="compiler-warnings-c4400-through-c4599"></a>コンパイラの警告 C4400 C4599 経由
 
@@ -174,7 +172,7 @@ ms.locfileid: "50491300"
 |コンパイラの警告 C4413|'classname::member': 参照メンバーがコンス トラクターの終了後は維持されませんを一時的に初期化されます|
 |[コンパイラの警告 (レベル 3) C4414](../../error-messages/compiler-warnings/compiler-warning-level-3-c4414.md)|'*関数*': 関数へのジャンプを短いが近くに変換|
 |コンパイラの警告 (レベル 1) C4415|duplicate __declspec(code_seg('*name*'))|
-|コンパイラの警告 (レベル 1) C4416|__declspec(code_seg(...) に空の文字列が含まれています無視されます。|
+|コンパイラの警告 (レベル 1) C4416|__declspec(code_seg(...)) contains empty string: ignored|
 |コンパイラの警告 (レベル 1) C4417|明示的なテンプレート インスタンス化は __declspec(code_seg(...) を含めることはできません無視されます。|
 |コンパイラの警告 (レベル 1) C4418|__declspec(code_seg(...) 列挙型では無視されます。|
 |コンパイラの警告 (レベル 3) C4419|'*シンボル*'プライベート ref クラスに適用する場合の影響を与えません'*クラス*'。|
@@ -186,10 +184,10 @@ ms.locfileid: "50491300"
 |コンパイラの警告 (レベル 1) C4426|#pragma optimize() が原因で最適化フラグがヘッダーを含めた後に変更があります。|
 |コンパイラの警告 (レベル 1) C4427|'*演算子*': 定数除算、未定義の動作でオーバーフロー|
 |[コンパイラの警告 (レベル 4) C4429](../../error-messages/compiler-warnings/compiler-warning-level-4-c4429.md)|考えられる不完全または形式の正しくないユニバーサル文字名|
-|[コンパイラの警告 (エラー) C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|型指定子がありません - int と仮定しました。 注: C++ は int を既定値をサポートしていません|
-|[コンパイラの警告 (レベル 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|型指定子がありません - int と仮定しました。 メモ: C は、現在 int を既定値としてサポートしていません|
+|[コンパイラの警告 (エラー) C4430](../../error-messages/compiler-warnings/compiler-warning-c4430.md)|型指定子がありません - int と仮定しました。 メモ:C++ は int を既定値をサポートしていません|
+|[コンパイラの警告 (レベル 4) C4431](../../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md)|型指定子がありません - int と仮定しました。 メモ:C は、int を既定値をサポートしていません|
 |[コンパイラの警告 (レベル 4) C4434](../../error-messages/compiler-warnings/compiler-warning-level-4-c4434.md)|静的コンス トラクターはプライベート アクセシビリティをいる必要があります。プライベート アクセスに変更します。|
-|[コンパイラの警告 (レベル 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*':/vd2 下のオブジェクトのレイアウトは仮想ベースにより変更されます'*base_class*'|
+|[コンパイラの警告 (レベル 4) C4435](../../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md)|'*derived_class*'。仮想基本により/vd2 下のオブジェクトのレイアウトが変更されます '*base_class*'|
 |[コンパイラの警告 (レベル 1) C4436](../../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)|動的\_仮想ベースからキャスト '*base_class*'to'*derived_class*' コンス トラクターまたはデストラクターで部分的に構築されたオブジェクトが失敗します。|
 |[コンパイラの警告 (レベル 4) C4437](../../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md)|動的\_仮想ベースからキャスト '*base_class*'to'*derived_class*' 一部のコンテキストで失敗する可能性があります|
 |コンパイラの警告 C4438|'*関数*':/await で安全に呼び出すことはできません:/await:clrcompat モード。 場合 '*関数*' CLR ヘッドが破損の可能性がある CLR への呼び出し|
@@ -203,11 +201,11 @@ ms.locfileid: "50491300"
 |コンパイラの警告 (レベル 1) C4446|'*型*': メンバーをマップすることはできません'*name1*' に、この型を型名の競合が原因です。 変更されましたが、メソッド '*name2*'|
 |コンパイラの警告 (レベル 1) C4447|'main' シグネチャがないスレッド モデルが見つかりません。 使用を検討して ' int main (platform::array\<platform::string ^ > ^ args)' です。|
 |コンパイラの警告 C4448|'*型*1' がメタデータで指定された既定のインターフェイス。 ピッキング: '*type2*'、実行時に失敗する可能性があります。|
-|コンパイラの警告 C4449|'*型*' アンシールド型は '[WebHostHidden]' とマークする必要があります|
-|コンパイラの警告 C4450|'*type1*'としてマーク '[WebHostHidden]' から派生するため、'*type2*'|
-|コンパイラの警告 (レベル 4) c4451 を発行|'classname1::member': ref クラス 'classname2::member' このコンテキスト内での使用法がコンテキスト間でオブジェクトの無効なマーシャ リングする可能性|
+|コンパイラの警告 C4449|'*type*' an unsealed type should be marked as '[WebHostHidden]'|
+|コンパイラの警告 C4450|'*type1*' should be marked as '[WebHostHidden]' because it derives from '*type2*'|
+|コンパイラの警告 (レベル 4) c4451 を発行|' classname1::member':コンテキスト間でオブジェクトの無効なマーシャ リングする ref クラス 'classname2::member' このコンテキスト内での使用可能性があります。|
 |コンパイラの警告 (レベル 1) C4452|'*識別子*': パブリック型がグローバル スコープですることはできません。 これは、出力の .winmd ファイルの名前の子である名前空間に存在する必要があります。|
-|コンパイラの警告 (レベル 1) C4453|'*型*': '[WebHostHidden]' 型は、パブリック型でない発行サーフェスで使用されませんする必要があります '[WebHostHidden]'|
+|コンパイラの警告 (レベル 1) C4453|'*型*'。パブリック型の発行サーフェスで、'[WebHostHidden]' 型を使用しない必要があります '[WebHostHidden]'|
 |コンパイラの警告 (レベル 1) C4454|'*関数*' は、[defaultoverload] を指定することがなく入力パラメーター数よりも多いでオーバー ロードします。 ピッキング '*宣言*' として既定のオーバー ロード|
 |コンパイラの警告 (レベル 1) C4455|' operator*演算子*': アンダー スコアで始まらないリテラル サフィックス識別子は予約されています|
 |[コンパイラの警告 (レベル 4) C4456](compiler-warning-level-4-c4456.md)|宣言 '*識別子*' 前のローカル宣言を隠します|
@@ -242,7 +240,7 @@ ms.locfileid: "50491300"
 |コンパイラの警告 (レベル 1) C4491|'*名前*': 無効な IDL バージョン形式があります|
 |コンパイラの警告 (レベル 1、エラー) C4492|'*function1*': 一致する基本 ref クラス メソッド'*function2*'、'override' がマークされていないが、|
 |コンパイラの警告 (レベル 3 では、エラー) C4493|削除式のデストラクターとして効果はありません '*型*' が 'public' アクセシビリティ|
-|コンパイラの警告 (レベル 1) C4494|'*関数*': ポインターまたは参照できませんが、関数型を返すため、__declspec(allocator) は無視されます|
+|コンパイラの警告 (レベル 1) C4494|'*関数*'。ポインターまたは参照できませんが、関数型を返すため、__declspec(allocator) は無視されます。|
 |コンパイラの警告 C4495|標準の拡張機能を使用して '_ _super': 明示的な基本クラス名で置き換えます|
 |コンパイラの警告 C4496|'for each' 標準の拡張機能の使用: ranged-for ステートメントに置き換えます|
 |コンパイラの警告 C4497|'シールド' を使用する標準の拡張機能: 'final' で置き換えます|
@@ -306,7 +304,7 @@ ms.locfileid: "50491300"
 |コンパイラの警告 (レベル 3) C4569|'*関数*': 明示的なオーバーライドのシグネチャに一致するメンバーがありません|
 |[コンパイラの警告 (レベル 3) C4570](../../error-messages/compiler-warnings/compiler-warning-level-3-c4570.md)|'*型*': 抽象ですが、抽象関数として明示的に宣言されていません|
 |[コンパイラの警告 (レベル 4) C4571](../../error-messages/compiler-warnings/compiler-warning-level-4-c4571.md)|情報: catch (...) セマンティクスが Visual C 7.1; から変更構造化例外 (SEH) はキャッチされません。|
-|[コンパイラの警告 (レベル 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|[ParamArray] 属性は/clr で非推奨、'…' を使用して、代わりに|
+|[コンパイラの警告 (レベル 1) C4572](../../error-messages/compiler-warnings/compiler-warning-level-1-c4572.md)|[...] [ParamArray] 属性は/clr を使用して非推奨します。その代わりに|
 |コンパイラの警告 (レベル 1) C4573|使用量 '*ラムダ関数*' が 'this' をキャプチャするコンパイラが必要です、現在の既定のキャプチャ モードが許可していません。|
 |コンパイラの警告 (レベル 4) C4574|'*識別子*'は' 0': '#if identifier' を使用するつもりでしたか?|
 |コンパイラの警告 (レベル 1) C4575|'_ _vectorcall' と互換性のない、'/clr' オプション: '_ _stdcall' に変換します。|
@@ -318,8 +316,8 @@ ms.locfileid: "50491300"
 |コンパイラの警告 (レベル 4) C4582|'*型*': コンス トラクターが暗黙的に呼び出されません|
 |コンパイラの警告 (レベル 4) C4583|'*型*': デストラクターは暗黙的に呼び出されません|
 |[コンパイラの警告 (レベル 1) C4584](../../error-messages/compiler-warnings/compiler-warning-level-1-c4584.md)|'*class1*': 基底クラス'*class2*'は、基本クラスでは既に'*class3*'|
-|コンパイラの警告 (レベル 1、エラー) C4585|'*クラス*': A WinRT 'public ref class' 封印する必要がありますか、または既存の派生には、クラスが封印されていません。|
-|コンパイラの警告 (レベル 1、エラー) C4586|'*型*': 'Windows' と呼ばれる最上位レベルの名前空間では、パブリック型を宣言できません|
+|コンパイラの警告 (レベル 1、エラー) C4585|'*クラス*'。WinRT 'public ref クラス' 封印する必要がありますか、または既存の封印されていないクラスから派生|
+|コンパイラの警告 (レベル 1、エラー) C4586|'*型*'。パブリック型は 'Windows' と呼ばれる最上位レベルの名前空間で宣言することはできません。|
 |コンパイラの警告 (レベル 1) C4587|'*anonymous_structure*': 動作変更: コンス トラクターが不要になった暗黙的に呼び出されます|
 |コンパイラの警告 (レベル 1) C4588|'*anonymous_structure*': 動作変更: デストラクターは呼び出されなく|
 |コンパイラの警告 (レベル 1) C4591|'constexpr' 呼び出し深さ制限*数*を超えています (//constexpr:depth\<番号 >)|

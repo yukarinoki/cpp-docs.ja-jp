@@ -31,14 +31,13 @@ f1_keywords:
 - C4380
 - C4387
 - C4388
-- C4396
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 02340234fc504773a29b3d83ae606cd1eb4e09f1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50455995"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810511"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>コンパイラの警告 s C4200 C4399 Through
 
@@ -104,7 +103,7 @@ ms.locfileid: "50455995"
 |[コンパイラの警告 (レベル 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'*識別子*': 'const' 自動データがコンパイラによって生成された既定のコンス トラクターで初期化された生成結果の信頼性|
 |[コンパイラの警告 (レベル 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'*関数*': _declspec がマークされている; 関数をインポートするときに、ネイティブの呼び出し規約を指定する必要があります。|
 |[コンパイラの警告 (レベル 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'*関数*': 一貫性のない dll リンケージ|
-|コンパイラの警告 (レベル 1) C4274|#ident は無視されます。#pragma comment (exestr, 'string') のドキュメントを参照してください。|
+|コンパイラの警告 (レベル 1) C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[コンパイラの警告 (レベル 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|dll インターフェイスでない '*した*' '*identifier1*'dll インターフェイスのベースとして使用される'*した*' '*identifier2*'|
 |[コンパイラの警告 (レベル 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'*関数*': プロトタイプがありません。 パラメーターがないと仮定します。|
 |コンパイラの警告 (レベル 1) C4277|インポートされたアイテム '*classname*::*メンバー*' データ メンバーおよび関数メンバーの両方として存在するデータ メンバーが無視されます|
@@ -175,7 +174,7 @@ ms.locfileid: "50455995"
 |[コンパイラの警告 (レベル 2) C4356](../../error-messages/compiler-warnings/compiler-warning-level-2-c4356.md)|'*メンバー*': 静的データ メンバーは派生クラスを使って初期化できません|
 |[コンパイラの警告 (レベル 3) C4357](../../error-messages/compiler-warnings/compiler-warning-level-3-c4357.md)|デリゲートに対する仮引数リストで param 配列引数が見つかった '*委任*'を生成するときに無視されます'*関数*'|
 |[コンパイラの警告 (レベル 1) C4358](../../error-messages/compiler-warnings/compiler-warning-level-1-c4358.md)|'*演算子*': 複合デリゲートの戻り値の型は 'void' ではありません戻り値が定義されていません。|
-|[コンパイラの警告 (レベル 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*型*': アラインメント指定子が実際のアラインメントより小さい ('*配置*')、無視されます。|
+|[コンパイラの警告 (レベル 3) C4359](../../error-messages/compiler-warnings/compiler-warning-level-3-c4359.md)|'*型*'。アラインメント指定子が実際のアラインメントより小さい ('*配置*')、無視されます。|
 |コンパイラの警告 (レベル 2) C4362|'*型*': 8 バイトより大きいアラインメントは CLR でサポートされていません|
 |[コンパイラの警告 (レベル 1) C4364](../../error-messages/compiler-warnings/compiler-warning-level-1-c4364.md)|# アセンブリ using '*アセンブリ*'時に表示される以前'*場所*' ('*line_number*') なしとして\_フレンド属性; として\_フレンドされません適用|
 |[コンパイラの警告 (レベル 4) C4365](../../error-messages/compiler-warnings/compiler-warning-level-4-c4365.md)|'*式*': から変換'*type1*'to'*type2*'、signed/unsigned が一致しません|
@@ -192,7 +191,7 @@ ms.locfileid: "50455995"
 |[コンパイラの警告 (レベル 1) C4377](../../error-messages/compiler-warnings/compiler-warning-level-1-c4377.md)|ネイティブ型は既定ではプライベート-d1PrivateNativeTypes が非推奨とされます|
 |[コンパイラの警告 (レベル 1) C4378](../../error-messages/compiler-warnings/compiler-warning-level-1-c4378.md)|初期化子を実行する関数ポインターを取得する必要があります。System::ModuleHandle::ResolveMethodHandle を検討してください。|
 |[コンパイラの警告 (レベル 1) C4379](../../error-messages/compiler-warnings/compiler-warning-level-1-c4379.md)|バージョン '*version_number*' の共通言語ランタイムでサポートされていないこのコンパイラ。 このバージョンを使用して予期しない結果が発生する可能性があります。|
-|コンパイラの警告 (レベル 1、エラー) C4380|'*クラス*': 既定のコンス トラクターは非推奨にできません|
+|コンパイラの警告 (レベル 1、エラー) C4380|'*クラス*'。既定のコンス トラクターは非推奨にできません。|
 |[コンパイラの警告 (レベル 1) C4381](../../error-messages/compiler-warnings/compiler-warning-level-1-c4381.md)|'*function1*': インターフェイス メソッドは、非パブリック メソッドでは実装されません'*function2*'|
 |[コンパイラの警告 (レベル 1) C4382](../../error-messages/compiler-warnings/compiler-warning-level-1-c4382.md)|スロー '*型*': _ _clrcall デストラクターまたはコピー コンス トラクターを持つ型のみを/clr でキャッチできます純粋なモジュール。|
 |[コンパイラの警告 (レベル 1) C4383](../../error-messages/compiler-warnings/compiler-warning-level-1-c4383.md)|'*instance_dereference_operator*': ユーザー定義時に、ハンドルの逆参照の意味を変更できます'*instance_dereference_operator*' 演算子が存在する、静的と演算子です。オペランドに対して明示的に指定する関数|

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ActiveX controls [MFC], creating
 - ActiveX controls [MFC], creating
 ms.assetid: 8bd5a93c-d04d-414e-bb28-163fdc1c0dd5
-ms.openlocfilehash: 031c8596e568f01cdecd7139d959a77923c341eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b2dc48e2568e180820f8bca008c66878af4b575e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294955"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818545"
 ---
 # <a name="creating-an-mfc-activex-control"></a>MFC ActiveX コントロールの作成
 
@@ -25,7 +25,7 @@ MFC ActiveX コントロールを作成する最も簡単な方法が使用す�
 
 ### <a name="to-create-an-mfc-activex-control-using-the-mfc-activex-control-wizard"></a>MFC ActiveX コントロール ウィザードを使用して MFC ActiveX コントロールを作成するには
 
-1. ヘルプ トピックの「[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)」の手順に従います。
+1. ヘルプ トピックの指示に従って[C++ コンソール アプリ プロジェクトを作成](../../get-started/tutorial-console-cpp.md)です。
 
 1. **新しいプロジェクト**ダイアログ ボックスで、 **MFC ActiveX コントロール**MFC ActiveX コントロール ウィザードを開く [テンプレート] ペインでアイコン。
 
@@ -36,11 +36,12 @@ MFC ActiveX コントロールを作成する最も簡単な方法が使用す�
 
 1. クリックして**完了**ウィザードを終了し、開発環境で新しいプロジェクトを開きます。
 
-作成されたファイルを表示するには、プロジェクトを作成した後**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)します。
+作成されたファイルを表示するには、プロジェクトを作成した後**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)します。
 
 追加するコード ウィザードを使用するには、プロジェクトを作成した後[関数](../../ide/add-member-function-wizard.md)、[変数](../../ide/add-member-variable-wizard.md)、[イベント](../../ide/add-event-wizard.md)、[プロパティ](../../ide/names-add-property-wizard.md)と[メソッド](../../ide/add-method-wizard.md)します。 ActiveX コントロールのカスタマイズの詳細については、次を参照してください。 [MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[プロパティ ページ](../../ide/property-pages-visual-cpp.md)
+[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)
+

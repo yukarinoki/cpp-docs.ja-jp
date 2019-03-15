@@ -9,12 +9,12 @@ helpviewer_keywords:
 - projects [MFC], creating
 - DLLs [MFC], creating
 ms.assetid: 05540b93-4781-4a90-aadf-55158313f5b2
-ms.openlocfilehash: 21173582f68b1d50fefbe22250546fcce63730b4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6ddc32ac3a2de5993e6755df0cd9fc7d3546094e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278835"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814151"
 ---
 # <a name="creating-an-mfc-dll-project"></a>MFC DLL プロジェクトの作成
 
@@ -25,7 +25,7 @@ MFC DLL とは、複数のアプリケーションで同時に利用できる関
 
 ### <a name="to-create-an-mfc-dll-project-using-the-mfc-dll-wizard"></a>MFC DLL ウィザードを使用して MFC DLL プロジェクトを作成するには
 
-1. ヘルプ トピックの「[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)」の手順に従います。
+1. ヘルプ トピックの指示に従って[C++ コンソール アプリ プロジェクトを作成](../../get-started/tutorial-console-cpp.md)です。
 
 **注**で、**新しいプロジェクト**ダイアログ ボックスで、 `MFC DLL` MFC DLL ウィザードを開く [テンプレート] ペインでアイコン。
 
@@ -36,10 +36,11 @@ MFC DLL とは、複数のアプリケーションで同時に利用できる関
 
 1. をクリックして**完了**をで新しいプロジェクトを開き、ウィザードを閉じて**ソリューション エクスプ ローラー**します。
 
-作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)します。
+作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [Visual C++ プロジェクトの種類](/visualstudio/debugger/debugging-preparation-visual-cpp-project-types)<br/>
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[プロパティ ページ](../../ide/property-pages-visual-cpp.md)
+[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)
+

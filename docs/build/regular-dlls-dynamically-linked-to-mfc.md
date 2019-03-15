@@ -8,12 +8,12 @@ helpviewer_keywords:
 - shared DLL versions [C++]
 - dynamically linked DLLs [C++]
 ms.assetid: b4f7ab92-8723-42a5-890e-214f4e29dcd0
-ms.openlocfilehash: 548fbde379937ab4d915f08a43a8b865e071d688
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3bfed5f75dab4c501708950fdb99f53c40ec142c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413174"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821301"
 ---
 # <a name="regular-mfc-dlls-dynamically-linked-to-mfc"></a>MFC と動的にリンクされるレギュラー MFC Dll
 
@@ -83,18 +83,18 @@ AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [レギュラー MFC Dll を初期化します。](../build/run-time-library-behavior.md#initializing-regular-dlls)
+- [レギュラー MFC Dll を初期化します。](run-time-library-behavior.md#initializing-regular-dlls)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [MFC を動的にリンクされているレギュラー MFC DLL のモジュール状態](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
+- [MFC を動的にリンクされているレギュラー MFC DLL のモジュール状態](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)
 
 - [MFC モジュールの状態データを管理します。](../mfc/managing-the-state-data-of-mfc-modules.md)
 
-- [レギュラー MFC DLL でのデータベース、OLE、およびソケット MFC 拡張 DLL の使用](../build/using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
+- [レギュラー MFC DLL でのデータベース、OLE、およびソケット MFC 拡張 DLL の使用](using-database-ole-and-sockets-extension-dlls-in-regular-dlls.md)
 
 - [DLL の一部としての MFC の使用](../mfc/tn011-using-mfc-as-part-of-a-dll.md)
 
 ## <a name="see-also"></a>関連項目
 
-[DLL の種類](../build/kinds-of-dlls.md)
+[DLL の種類](kinds-of-dlls.md)

@@ -1,13 +1,13 @@
 ---
-title: Microsoft Visual c 浮動小数点の最適化
+title: MSVC 浮動小数点の最適化
 ms.date: 03/09/2018
 ms.topic: conceptual
-ms.openlocfilehash: 6e297cebb4982b293e86885815436c4120d903cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78c5c310f2f348b5cfa5a92feb65e265d28560d9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504300"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814372"
 ---
 # <a name="microsoft-visual-c-floating-point-optimization"></a>Microsoft Visual C 浮動小数点の最適化
 
@@ -36,11 +36,11 @@ float KahanSum( const float A[], int n )
 
 単純な C++ コンパイラは、浮動小数点演算の実数値の算術演算と同じ代数的な規則に従うことを想定しています可能性があります。 このようなコンパイラが、誤ってという結論を下す
 
-> C = T - 合計 - Y = = > (合計 + Y) の合計 - Y > 0 = =
+> C = T - sum - Y ==> (sum+Y)-sum-Y ==> 0;
 
 つまり、C の知覚価値が定数 0 では常にします。 この定数値が後続の式に反映し、ループの本体が単純な合計に減少します。 正確には、
 
-> Y [i] - C の = = = > Y = [i]<br/>T = 合計 + Y = = > T = 合計 + [i]<br/>合計 = T = = > 合計 = 合計 + [i]
+> Y = A[i] - C ==> Y = A[i]<br/>T = sum + Y ==> T = sum + A[i]<br/>sum = T ==> sum = sum + A[i]
 
 したがって、単純なコンパイラの論理の変換に、`KahanSum`関数になります。
 
@@ -187,7 +187,7 @@ a = (float)z;
 
 Fp を明示的に要求する: precise モードを使用して、コマンド ライン コンパイラを使用して、 [/fp: 正確な](fp-specify-floating-point-behavior.md)スイッチします。
 
-> cl/fp: 正確な source.cpp
+> cl /fp:precise source.cpp
 
 これは、ように fp を使用するコンパイラに指示: source.cpp ファイルのコードを生成するときに、正確なセマンティクスです。 Fp: 正確なモデルを使用して、関数ごとに呼び出すこともできます、 [float_control コンパイラのプラグマ](#the-float-control-pragma)します。
 
@@ -361,7 +361,7 @@ double a, b;
 a = b*tmp0;
 ```
 
-これは、オプティマイザーはコンパイル時にその x に判断できるための安全な変換/4.0 のすべての浮動小数点値 x、無限大および NaN を含む x*(1/4.0) = =。 乗算と除算演算を置き換えることで、コンパイラがいくつかのサイクルを節約できます: 特に、除算を直接実装はありませんが、コンパイラが逆数近似の組み合わせを生成して、積和演算を必要とする FPUs で手順です。 コンパイラは fp の下で、このような最適化を実行できます。 正確な置換乗算生成、正確な場合にのみ同じ結果になります、除算として。 コンパイラは fp の下の単純な変換も実行できます。 正確な結果が同じです。 次の設定があります。
+これは、オプティマイザーはコンパイル時にその x に判断できるための安全な変換/4.0 のすべての浮動小数点値 x、無限大および NaN を含む x*(1/4.0) = =。 乗算と除算演算を置き換えることで、コンパイラがいくつかのサイクルを節約できます: 特に、除算を直接実装はありませんが、コンパイラが逆数近似の組み合わせを生成して、積和演算を必要とする FPUs で手順です。 コンパイラは fp の下で、このような最適化を実行できます。 正確な置換乗算生成、正確な場合にのみ同じ結果になります、除算として。 コンパイラは fp の下の単純な変換も実行できます。 正確な結果が同じです。 不足している機能には次が含まれます。
 
 |フォーム|説明
 |-|-|
@@ -590,7 +590,7 @@ FPU 環境のアクセス、浮動小数点例外が存在する場合は、セ�
 
 要約すると、fp: 正確なモードでは、コンパイラは最終的な結果が改ざんされていないことを条件に浮動小数点式の評価の順序を変更して、結果は、依存関係にある、FPU 環境または浮動小数点例外ではありません。
 
-### <a name="fpu-environment-access-under-fpprecise"></a>FPU 環境のアクセス fp: 正確な
+### <a name="fpu-environment-access-under-fpprecise"></a>FPU environment access under fp:precise
 
 ときに、fp: precise モードが有効な場合、コンパイラは、プログラムのアクセスまたは FPU 環境の変更はありません。 前述のように、この前提により、コンパイラの順序を変更または移動 fp の下の効率を向上させるために浮動小数点演算に: 正確です。
 
@@ -825,7 +825,7 @@ float dotProduct( float x[], float y[],int n )
 
 Fp: 厳密な浮動小数点モードが有効な場合を使用して、 [/fp: 厳密な](fp-specify-floating-point-behavior.md)次のようにコマンド ライン コンパイラ スイッチ。
 
-> cl/fp: 厳密な source.cpp
+> cl /fp:strict source.cpp
 
 この例のようにコンパイラ fp の使用を: source.cpp ファイルのコードを生成するときに、厳密な型指定します。 Fp: 厳格なモデルを使用して、関数ごとに呼び出すこともできます、`float_control`コンパイラのプラグマ。
 
@@ -952,11 +952,11 @@ d = t + c;           // won't be contracted because of rounding of a*b
 ||||||
 |-|-|-|-|-|
 ||float_control(precise)|float_control(except)|fp_contract|fenv_access|
-|/fp: strict|日付|日付|オフ|日付|
-|/fp: 厳密な/fp: 以外の|日付|オフ|オフ|日付|
-|/fp: 正確な|日付|オフ|日付|オフ|
-|/fp:/fp:precise: 以外|日付|日付|日付|オフ|
-|/fp:fast|オフ|オフ|日付|オフ|
+|/fp:strict|on|on|オフ|on|
+|/fp:strict /fp:except-|on|オフ|オフ|on|
+|/fp: 正確な|on|オフ|on|オフ|
+|/fp:precise /fp:except|on|on|on|オフ|
+|/fp:fast|オフ|オフ|on|オフ|
 
 たとえば、次を明示的に有効/fp:fast セマンティクスです。
 
@@ -1064,7 +1064,7 @@ void se_fe_trans_func( unsigned int u, EXCEPTION_POINTERS* pExp )
 _set_se_translator(se_fe_trans_func);
 ```
 
-このマッピングが初期化されると、浮動小数点例外は C++ 例外処理のように動作します。 例えば:
+このマッピングが初期化されると、浮動小数点例外は C++ 例外処理のように動作します。 例:
 
 ```cpp
 try
@@ -1082,10 +1082,10 @@ catch(float_exception)
 }
 ```
 
-## <a name="references"></a>参照
+## <a name="references"></a>関連項目
 
 [浮動小数点演算について把握する必要がありますすべてのコンピューター科学](http://pages.cs.wisc.edu/~david/courses/cs552/S12/handouts/goldberg-floating-point.pdf)David されるとおり、します。
 
 ## <a name="see-also"></a>関連項目
 
-[コードの最適化](optimizing-your-code.md)<br/>
+[コードの最適化](../optimizing-your-code.md)<br/>

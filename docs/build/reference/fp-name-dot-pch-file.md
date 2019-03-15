@@ -15,12 +15,12 @@ helpviewer_keywords:
 - precompiled header files, naming
 - /Fp compiler option [C++]
 ms.assetid: 0fcd9cbd-e09f-44d3-9715-b41efb5d0be2
-ms.openlocfilehash: 8384aa1ee27fee0bc42e023b78b948d9acd384e8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 95506e17dff47e51cb7a3d83b629880f63422d26
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414097"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820391"
 ---
 # <a name="fp-name-pch-file"></a>/Fp (.pch ファイルの名前の指定)
 
@@ -32,7 +32,7 @@ ms.locfileid: "57414097"
 
 ## <a name="remarks"></a>Remarks
 
-このオプションを使用[/Yc (プリコンパイル済みヘッダー ファイルの作成)](../../build/reference/yc-create-precompiled-header-file.md)または[/Yu (プリコンパイル済みヘッダー ファイルの使用)](../../build/reference/yu-use-precompiled-header-file.md)プリコンパイル済みヘッダーの既定のパス名を使用する代わりにパス名を指定します。 使用することも **/Fp**で **/Yc**とは異なるプリコンパイル済みヘッダー ファイルの使用を指定する、 **/Yc**<em>filename</em>引数とソース ファイルのベース名にします。
+このオプションを使用[/Yc (プリコンパイル済みヘッダー ファイルの作成)](yc-create-precompiled-header-file.md)または[/Yu (プリコンパイル済みヘッダー ファイルの使用)](yu-use-precompiled-header-file.md)プリコンパイル済みヘッダーの既定のパス名を使用する代わりにパス名を指定します。 使用することも **/Fp**で **/Yc**とは異なるプリコンパイル済みヘッダー ファイルの使用を指定する、 **/Yc**<em>filename</em>引数とソース ファイルのベース名にします。
 
 パス名の一部として拡張機能を指定しない場合、拡張子を .pch と見なされます。 ファイル名のないディレクトリを指定する場合は、既定のファイル名、VC*x*0. pch 場所*x*使用中の Visual C のメジャー バージョンします。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57414097"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -70,7 +70,7 @@ CL /YuMYAPP.H /FpMYPCH.PCH PROG.CPP
 
 ## <a name="see-also"></a>関連項目
 
-[出力ファイル (/F) オプション](../../build/reference/output-file-f-options.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[パス名の指定](../../build/reference/specifying-the-pathname.md)
+[出力ファイル (/F) オプション](output-file-f-options.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
+[パス名の指定](specifying-the-pathname.md)

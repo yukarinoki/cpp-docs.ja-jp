@@ -8,16 +8,16 @@ helpviewer_keywords:
 - -SECTION linker option
 - section attributes
 - /SECTION linker option
-ms.openlocfilehash: d86dca297940da4978fe42270f444acc5f11fd82
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8fb73043c9c185adee0859bb81098eab022430c2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543699"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816556"
 ---
 # <a name="section-specify-section-attributes"></a>/SECTION (セクション属性の指定)
 
-> **/SECTION:**_名前_、**[!]**{**DEKPRSW**}] [**、ALIGN =**_数_]
+> **/SECTION:**_name_,**[!]**{**DEKPRSW**}][**,ALIGN=**_number_]
 
 ## <a name="remarks"></a>Remarks
 
@@ -66,20 +66,20 @@ A*セクション*ポータブル実行可能 (PE) ファイルがコードま�
 |E|実行|セクションが実行可能ファイル|
 |R|読み取り|データの読み取り操作します。|
 |W|Write|データの書き込み操作します。|
-|S|共有|イメージを読み込むすべてのプロセス間でセクションを共有します|
+|S|Shared|イメージを読み込むすべてのプロセス間でセクションを共有します|
 |D|破棄できます。|破棄可能セクションをマークします。|
 |K|キャッシュ可能|セクションをキャッシュ不可としてマークします。|
 |P|ページング可能|セクションをページング不可としてマークします。|
 
-K および P は、それらに対応するセクションのフラグが負の値の意味で使用されるということ、通常します。 かどうか 1 つ .text セクションで使用して指定する、 **/SECTION:.text, K**オプションで実行すると、セクション フラグに違いはありません、 [DUMPBIN](../../build/reference/dumpbin-options.md)で、 [/HEADERS](../../build/reference/headers.md)オプション。セクションが暗黙的に既にキャッシュされました。 既定値を削除する指定 **/SECTION:.text、!K**代わりにします。 DUMPBIN には、「キャッシュされません」などのセクションの特性が表示されます。
+K および P は、それらに対応するセクションのフラグが負の値の意味で使用されるということ、通常します。 かどうか 1 つ .text セクションで使用して指定する、 **/SECTION:.text, K**オプションで実行すると、セクション フラグに違いはありません、 [DUMPBIN](dumpbin-options.md)で、 [/HEADERS](headers.md)オプション。セクションが暗黙的に既にキャッシュされました。 既定値を削除する指定 **/SECTION:.text、!K**代わりにします。 DUMPBIN には、「キャッシュされません」などのセクションの特性が表示されます。
 
 電子メール、R、または W の設定を持たない PE ファイルのセクションでは、おそらく無効です。
 
-**ALIGN =**_数_引数では、特定のセクションのアラインメント値を指定することができます。 _数_引数をバイト単位で、2 の累乗である必要があります。 参照してください[/align](../../build/reference/align-section-alignment.md)詳細についてはします。
+**ALIGN =**_数_引数では、特定のセクションのアラインメント値を指定することができます。 _数_引数をバイト単位で、2 の累乗である必要があります。 参照してください[/align](align-section-alignment.md)詳細についてはします。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -91,5 +91,5 @@ K および P は、それらに対応するセクションのフラグが負の
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

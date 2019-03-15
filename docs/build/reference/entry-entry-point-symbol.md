@@ -10,12 +10,12 @@ helpviewer_keywords:
 - /ENTRY linker option
 - ENTRY linker option
 ms.assetid: 26c62ba2-4f52-4882-a7bd-7046a0abf445
-ms.openlocfilehash: 5ebc18d6d895928b1deec392cbb0bd91f48a96ed
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 0f3604ef75ce10928463c088e423615886555eda
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425706"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807859"
 ---
 # <a name="entry-entry-point-symbol"></a>/ENTRY (エントリ ポイント シンボル)
 
@@ -42,17 +42,17 @@ ms.locfileid: "57425706"
 |**WinMainCRTStartup** (または**wWinMainCRTStartup**)|/SUBSYSTEM を使用するアプリケーション:**WINDOWS**; 呼び出し`WinMain`(または`wWinMain`) を使用して定義されている必要があります `__stdcall`|
 |**_DllMainCRTStartup**|DLL。呼び出し`DllMain`する必要がありますを使用する定義が存在する場合 `__stdcall`|
 
-場合、 [/DLL](../../build/reference/dll-build-a-dll.md)または[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)をリンカーがかどうかに応じてサブシステムとエントリ ポイントを選択して、オプションが指定されていない`main`または`WinMain`が定義されています。
+場合、 [/DLL](dll-build-a-dll.md)または[/SUBSYSTEM](subsystem-specify-subsystem.md)をリンカーがかどうかに応じてサブシステムとエントリ ポイントを選択して、オプションが指定されていない`main`または`WinMain`が定義されています。
 
 関数は、 `main`、 `WinMain`、および`DllMain`ユーザー定義のエントリ ポイントの 3 つの形式します。
 
 管理対象イメージを作成するには、/ENTRY に指定された関数での署名が必要 (LPVOID *var1*、DWORD *var2*、LPVOID *var3*)。
 
-独自に定義する方法については`DllMain`、エントリ ポイントを参照してください[Dll と Visual C ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)します。
+独自に定義する方法については`DllMain`、エントリ ポイントを参照してください[Dll と Visual C ランタイム ライブラリの動作](../run-time-library-behavior.md)します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -66,5 +66,5 @@ ms.locfileid: "57425706"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

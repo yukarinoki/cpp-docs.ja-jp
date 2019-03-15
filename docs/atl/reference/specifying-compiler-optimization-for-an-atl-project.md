@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ATL projects, compiler optimization
 - ATL_NO_VTABLE macro
 ms.assetid: 7f379318-66d5-43dd-a53d-530758d3a228
-ms.openlocfilehash: 6e6fe09aaa0726a39aae8b85cb6581c5d0cd24e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5b6620b73713886301e4efc29754cf407d9576f4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280018"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812344"
 ---
 # <a name="specifying-compiler-optimization-for-an-atl-project"></a>ATL プロジェクトのコンパイラ最適化を指定します。
 
@@ -54,8 +54,7 @@ stdafx.h に、その他のすべての ATL の前にヘッダー ファイル�
 ## <a name="see-also"></a>関連項目
 
 [ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++ プロジェクトの種類](../../ide/visual-cpp-project-types.md)<br/>
-[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Visual C++ プロジェクトの種類](../../build/reference/visual-cpp-project-types.md)<br/>
 [ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [novtable](../../cpp/novtable.md)<br/>

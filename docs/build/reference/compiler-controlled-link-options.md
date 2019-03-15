@@ -10,12 +10,12 @@ helpviewer_keywords:
 - cl.exe compiler [C++], features that affect linking
 - cl.exe compiler [C++], controlling linker
 ms.assetid: e4c03896-c99c-4599-8502-e0f4bebe69d0
-ms.openlocfilehash: 3fed75b18ead80b8367eb1254793d632629efeff
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bc7a6cc596f138daa373042abca51642c24cf737
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426707"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822328"
 ---
 # <a name="compiler-controlled-link-options"></a>Compiler-Controlled LINK Options
 
@@ -40,9 +40,9 @@ CL コンパイラは、/c オプションを指定しない限り、リンク�
 |/Zi または/Z7|/DEBUG のパス|
 |/Zl|.Obj ファイルから既定のライブラリ名を省略します。|
 
-詳細については、「[コンパイラ オプション](../../build/reference/compiler-options.md)」を参照してください。
+詳細については、次を参照してください。 [MSVC コンパイラ オプション](compiler-options.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

@@ -2,16 +2,16 @@
 title: Windows XP 用プログラムの構成
 ms.date: 02/02/2018
 ms.assetid: 1e4487b3-d815-4123-878b-5718b22f0fd5
-ms.openlocfilehash: 73fc66c358f2bfa390177557da2f114f225cec1a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 989a4e2c7e91c05498902bf1c5cb9d838ee47c3b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582742"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814294"
 ---
 # <a name="configuring-programs-for-windows-xp"></a>Windows XP 用プログラムの構成
 
-Visual Studio では、複数のプラットフォーム ツールセットをサポートするために、オペレーティング システムと、既定のツールセットでサポートされていないランタイム ライブラリを対象ことができます。 たとえば、プラットフォーム ツールセットを切り替えることで c++ 11、c++ 14、および Visual Studio での Visual C コンパイラでサポートされている c++ 17 の言語の機能強化が Windows XP および Windows Server 2003 を対象とするアプリを作成するのにに使用します。 バイナリ互換性のあるレガシ コードを維持するためにも以前のプラットフォーム ツールセットを使用し、Visual Studio IDE の最新の機能も利用できます。
+Visual Studio では、複数のプラットフォーム ツールセットをサポートするために、オペレーティング システムと、既定のツールセットでサポートされていないランタイム ライブラリを対象ことができます。 たとえば、プラットフォーム ツールセットを切り替えることで c++ 11、c++ 14、および c++ 17 の言語拡張機能が Visual Studio での MSVC コンパイラでサポートされているが Windows XP および Windows Server 2003 を対象とするアプリを作成するのにに使用します。 バイナリ互換性のあるレガシ コードを維持するためにも以前のプラットフォーム ツールセットを使用し、Visual Studio IDE の最新の機能も利用できます。
 
 ## <a name="install-the-windows-xp-platform-toolset"></a>Windows XP プラットフォーム ツールセットをインストールします。
 
@@ -35,10 +35,10 @@ Windows XP プラットフォーム ツールセット、C ランタイム ラ�
 
 |ライブラリ|Windows デスクトップ アプリを対象とする既定のプラットフォーム ツールセット|既定のプラットフォーム ツールセットの対象とするストア アプリ|Windows XP、Windows Server 2003 を対象とする Windows XP プラットフォーム ツールセット|
 |---|---|---|---|
-|CRT|X|X|x|
-|C++ 標準ライブラリ|x|X|X|
-|[ATL]|X|X|X|
-|ConCRT/PPL|X|X|X|
+|CRT|X|x|x|
+|C++ 標準ライブラリ|x|x|X|
+|[ATL]|X|x|X|
+|ConCRT/PPL|X|x|X|
 |MFC|X||X|
 |C++ AMP|X|x||
 

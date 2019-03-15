@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32, console applications
 - console applications, Win32
 ms.assetid: aedfb6b3-ca1f-4e8e-8439-1b680810ee47
-ms.openlocfilehash: b66117f64445c47cc37c25c6713815bd7daa0950
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3644878e0562f535489a64a8c490c8c755054ff6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538841"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820768"
 ---
 # <a name="creating-a-console-application"></a>コンソール アプリケーションの作成
 
@@ -20,7 +20,7 @@ Win32 コンソール アプリケーションを作成する最も簡単な方�
 
 ### <a name="to-create-a-win32-console-application"></a>Win32 コンソール アプリケーションを作成するには
 
-1. ヘルプ トピックの「[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../ide/creating-desktop-projects-by-using-application-wizards.md)」の手順に従います。
+1. ヘルプ トピックの指示に従って[C++ コンソール アプリ プロジェクトを作成](../get-started/tutorial-console-cpp.md)です。
 
 2. **新しいプロジェクト**ダイアログ ボックスで、 **Win32 コンソール プロジェクト**で、**テンプレート**ウィンドウ、ウィザードを開きます。
 
@@ -35,4 +35,4 @@ Win32 コンソール アプリケーションを作成する最も簡単な方�
 
 [コンソール プロジェクト](/visualstudio/debugger/debugging-preparation-console-projects)<br/>
 [コード ウィザードを使用した機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[プロパティ ページ](../ide/property-pages-visual-cpp.md)
+[プロパティ ページ](../build/reference/property-pages-visual-cpp.md)

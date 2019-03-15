@@ -4,18 +4,18 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - error handling, and notification
 ms.assetid: b621cf60-d869-451a-b05e-dc86d78addaa
-ms.openlocfilehash: 7aae4d68b272a6c12233f283d4b263648062b7c1
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 29fe46e15712609ec0c4f268749aaefed103117e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418946"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812942"
 ---
 # <a name="error-handling-and-notification"></a>エラー処理と通知
 
 エラー処理と通知の詳細については、次を参照してください。[ヘルパー関数について](understanding-the-helper-function.md)します。
 
-用のフック関数の詳細については、次を参照してください。[構造体と定数定義](../../build/reference/structure-and-constant-definitions.md)します。
+用のフック関数の詳細については、次を参照してください。[構造体と定数定義](structure-and-constant-definitions.md)します。
 
 プログラムでは、Dll の遅延読み込みを使用する場合、プログラムの実行中に発生する障害が発生した未処理の例外から確実エラーを処理にする必要があります。 エラー処理は、2 つの部分で構成されます。
 
@@ -27,12 +27,12 @@ ms.locfileid: "57418946"
 
 次のトピックでは、エラー処理と通知について説明します。
 
-- [通知フック](../../build/reference/notification-hooks.md)
+- [通知フック](notification-hooks.md)
 
-- [エラー フック](../../build/reference/failure-hooks.md)
+- [エラー フック](failure-hooks.md)
 
-- [例外](../../build/reference/exceptions-c-cpp.md)
+- [例外](exceptions-c-cpp.md)
 
 ## <a name="see-also"></a>関連項目
 
-[リンカーによる DLL の遅延読み込み](../../build/reference/linker-support-for-delay-loaded-dlls.md)
+[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)

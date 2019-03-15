@@ -10,12 +10,12 @@ helpviewer_keywords:
 - __stdcall keyword [C++]
 - DLL functions [C++], calling
 ms.assetid: 282f7fbf-a0f2-4b9f-b277-1982710be56c
-ms.openlocfilehash: 88705b2a33e3eb82043d93c534477fce96849502
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1e4f1a538da2394c6cead6ea011faf126b022a3f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417604"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814970"
 ---
 # <a name="calling-dll-functions-from-visual-basic-applications"></a>DLL 関数の Visual Basic アプリケーションからの呼び出し方
 
@@ -33,7 +33,7 @@ int __stdcall func (int a, double b)
 
 C の呼び出し規則 (`__cdecl`) による装飾では、名前は `_func` となります。
 
-装飾名を取得する[/map](../build/reference/map-generate-mapfile.md)します。 使用**方式**は次の処理します。
+装飾名を取得する[/map](reference/map-generate-mapfile.md)します。 使用**方式**は次の処理します。
 
 - C 呼び出し規則と関数をエクスポートするかどうか (`__cdecl`)、先頭にアンダー スコアを除去 ( **\_** ) 名前がエクスポートされます。
 
@@ -59,18 +59,18 @@ Visual Basic で書かれたプログラムから DLL を呼び出す場合は�
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [DLL からのエクスポート](../build/exporting-from-a-dll.md)
+- [DLL からのエクスポート](exporting-from-a-dll.md)
 
-- [使用して、DLL からエクスポートしています。DEF ファイル](../build/exporting-from-a-dll-using-def-files.md)
+- [使用して、DLL からエクスポートしています。DEF ファイル](exporting-from-a-dll-using-def-files.md)
 
-- [関数を使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [関数を使った DLL からエクスポートします。](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [エクスポート方式の使い分け](../build/determining-which-exporting-method-to-use.md)
+- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [装飾名](../build/reference/decorated-names.md)
+- [装飾名](reference/decorated-names.md)
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ の DLL](dlls-in-visual-cpp.md)

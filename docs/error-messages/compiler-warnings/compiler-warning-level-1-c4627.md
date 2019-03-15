@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4627
 ms.assetid: 8840f3e6-b496-423a-8635-eb55d5f854a2
-ms.openlocfilehash: e833141020de1aef51a1ea3823dea86b024e077d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef00d6691195fa5fb925448dce9513d1ecb08b6d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50542390"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809952"
 ---
 # <a name="compiler-warning-level-1-c4627"></a>コンパイラの警告 (レベル 1) C4627
 
@@ -36,4 +36,4 @@ int main()
 
 ## <a name="see-also"></a>関連項目
 
-[プリコンパイル済みヘッダー ファイルの作成](../../build/reference/creating-precompiled-header-files.md)
+[プリコンパイル済みヘッダー ファイルの作成](../../build/creating-precompiled-header-files.md)

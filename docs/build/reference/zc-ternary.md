@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /Zc:ternary
 - Zc:ternary
 - -Zc:ternary
-ms.openlocfilehash: 2bc9e924656b9e1cb914255780adc4ae50220275
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cb9a4f8468a9cb57af711cdca36ee343e5092493
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618193"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816491"
 ---
 # <a name="zcternary-enforce-conditional-operator-rules"></a>/Zc:ternary (条件演算子ルールの適用)
 
@@ -151,7 +151,7 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
@@ -159,4 +159,4 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](../../build/reference/zc-conformance.md)
+[/Zc (準拠)](zc-conformance.md)

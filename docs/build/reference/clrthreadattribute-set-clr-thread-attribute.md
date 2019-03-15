@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /CLRTHREADATTRIBUTE linker option
 - -CLRTHREADATTRIBUTE linker option
 ms.assetid: 4907e9ef-5031-446c-aecf-0a0b32fae1e8
-ms.openlocfilehash: f1a637f74cf1da608149779821a25340d35f8739
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ad07c84a5c470cd5fa1ac10ff6d2baed5c35c025
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417152"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57806780"
 ---
 # <a name="clrthreadattribute-set-clr-thread-attribute"></a>/CLRTHREADATTRIBUTE (CLR スレッド属性の設定)
 
@@ -41,7 +41,7 @@ STAThreadAttribute 属性をプログラムのエントリ ポイントに適用
 
 使用する場合は、(main または wmain の例では、)、既定のエントリ ポイント指定スレッド処理モデルを/CLRTHREADATTRIBUTE を使用するかまたは配置することで、スレッド処理属性 (STAThreadAttribute または MTAThreadAttribute) を既定のエントリ関数。
 
-既定以外のエントリ ポイントを使用する場合は、/CLRTHREADATTRIBUTE を使用するか、スレッドを配置することで、既定以外のエントリ関数で属性し、既定以外のエントリ ポイントを指定し、スレッド処理モデルを指定[/ENTRY](../../build/reference/entry-entry-point-symbol.md).
+既定以外のエントリ ポイントを使用する場合は、/CLRTHREADATTRIBUTE を使用するか、スレッドを配置することで、既定以外のエントリ関数で属性し、既定以外のエントリ ポイントを指定し、スレッド処理モデルを指定[/ENTRY](entry-entry-point-symbol.md).
 
 ソース コードで指定されたスレッド処理モデルは、/CLRTHREADATTRIBUTE で指定されたスレッド モデルと一致しません、リンカーは/CLRTHREADATTRIBUTE を無視し、ソース コードで指定されたスレッド処理モデルを適用します。
 
@@ -49,7 +49,7 @@ CLR プログラムは、シングル スレッドを使用する COM オブジ�
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[構成プロパティ]** ノードを展開します。
 
@@ -65,5 +65,5 @@ CLR プログラムは、シングル スレッドを使用する COM オブジ�
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

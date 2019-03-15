@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -HEADERS dumpbin option
 - /HEADERS dumpbin option
 ms.assetid: 24d9a770-d44e-48b6-b744-143e4fff7748
-ms.openlocfilehash: 934bda775cdae506e1a0b9a2fb40d3a22ef01934
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9a80044b96a0e0d73e0e25435a292a786de81531
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423626"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57817934"
 ---
 # <a name="headers"></a>/HEADERS
 
@@ -25,8 +25,8 @@ ms.locfileid: "57423626"
 
 このオプションは、ファイル ヘッダーと各セクションのヘッダーを出力します。 このオプションをライブラリに対して指定すると、各メンバー オブジェクトのヘッダーが出力されます。
 
-のみ、 **/HEADERS** DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。
+のみ、 **/HEADERS** DUMPBIN オプションがで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。
 
 ## <a name="see-also"></a>関連項目
 
-[DUMPBIN オプション](../../build/reference/dumpbin-options.md)
+[DUMPBIN オプション](dumpbin-options.md)

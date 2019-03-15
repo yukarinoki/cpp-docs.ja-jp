@@ -2,12 +2,12 @@
 title: C++ でプログラミングする Windows の概要
 ms.date: 11/15/2018
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: b33236df6e4c7f679ff1dd9f9f8bc409c86e011a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 6338b390b11c58f3ebac2af1bb568ea3c3470cd1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51693863"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810446"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -21,7 +21,7 @@ C++ コンソール アプリケーションでは、コンソール ウィン�
 
 用語*ネイティブのデスクトップ クライアント アプリケーション*を元の Windows の Win32 Api を使用して、オペレーティング システムにアクセスするための C または C++ ウィンドウを持つアプリケーションを参照します。 これらの Api は c 言語でほとんどの場合使用してオペレーティング システムのイベントを処理する C スタイルのメッセージ ループに対して直接プログラミングするかを選択する必要があるこの種のアプリケーションを作成するときに*Microsoft Foundation Classes* (MFC) Win32 をラップする C++ ライブラリ方法では、ある程度のオブジェクト指向です。 どちらのアプローチは、「最新」と比較して、ユニバーサル Windows プラットフォーム (下記参照) が、どちらも完全にサポートされているがあり、何百万もの世界中で現在実行しているコードの行があると見なされます。
 
-従来の Windows C プログラミングを開始するを参照してください。 [Win32 と C++ の概要](/windows/desktop/LearnWin32/learn-to-program-for-windows)します。 Win32 のいくつか理解できるように後の詳細について簡単になります[MFC Desktop Applications](/mfc/mfc-desktop-applications)します。 高度なグラフィックスを使用する従来の C++ デスクトップ アプリケーションの例は、次を参照してください。 [Hilo: Windows の C++ アプリケーションの開発](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)します。
+従来の Windows C プログラミングを開始するを参照してください。 [Win32 と C++ の概要](/windows/desktop/LearnWin32/learn-to-program-for-windows)します。 Win32 のいくつか理解できるように後の詳細について簡単になります[MFC Desktop Applications](/mfc/mfc-desktop-applications)します。 高度なグラフィックスを使用する従来の C++ デスクトップ アプリケーションの例は、次を参照してください[Hilo:。Windows 対応 C++ アプリケーションの開発](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)します。
 
 ### <a name="c-or-net"></a>C++ または .NET でしょうか。 
 
@@ -73,13 +73,13 @@ Visual Studio には、C ランタイム ライブラリ (CRT)、C++ 標準ラ�
 
 Microsoft ライブラリは次のとおりです。
 
-- Microsoft Foundation Classes (MFC): ボタン、リスト ボックス、ツリー ビュー、および他のコントロールを使用した豊富なユーザー インターフェイスを持つ従来の Windows プログラム (特にエンタープライズ アプリケーション) を作成するためのオブジェクト指向フレームワーク。 詳細については、「 [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)」を参照してください。
+- Microsoft Foundation Classes (MFC):従来の Windows プログラムを作成するためのオブジェクト指向のフレームワーク、特にエンタープライズ アプリケーション-高度なユーザー インターフェイスは、その機能のボタン、リスト ボックス、ツリー ビュー、およびその他のコントロールがあります。 詳細については、「 [MFC Desktop Applications](../mfc/mfc-desktop-applications.md)」を参照してください。
 
-- Active Template Library (ATL): COM コンポーネントを作成するための強力なヘルパー ライブラリ。 詳細については、「 [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)」を参照してください。
+- Active Template Library (ATL):COM コンポーネントを作成するための強力なヘルパー ライブラリ。 詳細については、「 [ATL COM Desktop Components](../atl/atl-com-desktop-components.md)」を参照してください。
 
-- C++ AMP (C++ Accelerated Massive Parallelism): GPU で一般的な計算作業のパフォーマンス向上を可能にするライブラリ。 詳細については、「 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)」を参照してください。
+- C++ AMP (C++ Accelerated Massive Parallelism)。GPU 上でパフォーマンスの高い一般的な計算作業をできるようにするライブラリ。 詳細については、「 [C++ AMP (C++ Accelerated Massive Parallelism)](../parallel/amp/cpp-amp-cpp-accelerated-massive-parallelism.md)」を参照してください。
 
-- コンカレンシー ランタイム: マルチコア デバイスおよびメニーコア デバイス用の並列プログラミングおよび非同期プログラミング作業を簡略化するために役立つライブラリ。 詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
+- 同時実行ランタイム:マルチコアおよびメニーコア デバイス用の並列および非同期プログラミングの作業を簡素化するライブラリ。 詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
 
 Windows プログラミングの多くのシナリオでは、Windows SDK も必要になります。これには、Windows オペレーティング システム コンポーネントへのアクセスを可能にするためのヘッダー ファイルが含まれています。 既定では、Visual Studio は、C++ デスクトップ ワークロードでは、ユニバーサル Windows アプリの開発のコンポーネントとして Windows SDK をインストールします。 UWP アプリを開発するには、Windows 10 バージョンの Windows SDK 必要があります。 詳しくは、次を参照してください。 [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)します。 (Windows の以前のバージョンの Windows Sdk の詳細については、次を参照してください。、 [Windows SDK アーカイブ](https://developer.microsoft.com/windows/downloads/sdk-archive))。
 
@@ -89,7 +89,7 @@ Xbox や Azure など、他のプラットフォームには、インストー�
 
 ## <a name="development-tools"></a>開発ツール
 
-Visual Studio には、ネイティブ コード用の強力なデバッガー、スタティック分析ツール、グラフィックス デバッグ ツール、フル装備のコード エディター、単体テストのサポート、その他多数のツールおよびユーティリティが含まれています。 詳細については、次を参照してください。 [Visual Studio を使用した開発を開始する](/visualstudio/ide/get-started-developing-with-visual-studio)、および[IDE と開発ツール](../ide/ide-and-tools-for-visual-cpp-development.md)します。
+Visual Studio には、ネイティブ コード用の強力なデバッガー、スタティック分析ツール、グラフィックス デバッグ ツール、フル装備のコード エディター、単体テストのサポート、その他多数のツールおよびユーティリティが含まれています。 詳細については、次を参照してください。 [Visual Studio を使用した開発を開始する](/visualstudio/ide/get-started-developing-with-visual-studio)、および[Visual Studio で C++ の概要開発](../overview-of-cpp-development.md)します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 |Title|説明|

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 85439598ae4c3e0f9ef923f21e701e0399aefa70
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50619298"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820794"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive -(標準への準拠)
 
@@ -29,21 +29,21 @@ ms.locfileid: "50619298"
 
 Visual Studio 2017 以降、このオプションはサポートされています。
 
-使用することができます、 **/permissive -** コンパイラ オプションは、標準準拠コンパイラの動作を指定します。 このオプションは、制限の緩やかな動作を無効にし、設定、 [/Zc](../../build/reference/zc-conformance.md)厳密に準拠コンパイラ オプション。 IDE では、このオプションも IntelliSense エンジン下線非準拠コードになります。
+使用することができます、 **/permissive -** コンパイラ オプションは、標準準拠コンパイラの動作を指定します。 このオプションは、制限の緩やかな動作を無効にし、設定、 [/Zc](zc-conformance.md)厳密に準拠コンパイラ オプション。 IDE では、このオプションも IntelliSense エンジン下線非準拠コードになります。
 
 既定で、 **/permissive -** Visual Studio 2017 バージョン 15.5 以降で作成された新しいプロジェクトのオプションを設定します。 既定では以前のバージョンに設定されていません。 前にいくつかの一般的なバグを含む、オプションの設定、コンパイラ診断のエラーが発生またはコードの非標準の言語で構築したときに警告が検出された、ときに、c++ 11 コード。
 
 **/Permissive -** オプションは、ほぼすべてのソフトウェア開発キット (SDK) や Windows Driver Kit (WDK)、Windows Fall Creators SDK (10.0.16299.0) 以降など、最新の Windows キットからヘッダー ファイルとの互換性。 以前のバージョンの SDK をコンパイルできない可能性があります **/permissive -** 各種のソース コードへの準拠の理由。 コンパイラと別のリリースのタイムライン上の Sdk の出荷の残りの問題があるためです。 特定のヘッダー ファイルの問題を参照してください。 [Windows ヘッダー問題](#windows-header-issues)以下。
 
-**/Permissive -** オプション セット、 [/Zc:strictStrings](../../build/reference/zc-conformance.md)と[/Zc:rvalueCast](../../build/reference/zc-conformance.md)準拠した動作するためのオプション。 非準拠の動作を既定使用されます。 特定渡すことができます **/Zc**後オプション **/permissive -** でこの動作をオーバーライドするためのコマンドライン。
+**/Permissive -** オプション セット、 [/Zc:strictStrings](zc-conformance.md)と[/Zc:rvalueCast](zc-conformance.md)準拠した動作するためのオプション。 非準拠の動作を既定使用されます。 特定渡すことができます **/Zc**後オプション **/permissive -** でこの動作をオーバーライドするためのコマンドライン。
 
-Visual Studio 2017 バージョン 15.3 では、コンパイラの最初のバージョンでは、 **/permissive -** オプション セット、 [/Zc:ternary](../../build/reference/zc-ternary.md)オプション。 コンパイラでは、2 フェーズの名前検索の要件の詳細も実装します。 ときに、 **/permissive -** オプションが設定されている、コンパイラは、テンプレートで使用される依存と非依存の名前を識別する、関数とクラス テンプレート定義を解析します。 このリリースでは、名前の依存関係の分析だけが実行されます。
+Visual Studio 2017 バージョン 15.3 では、コンパイラの最初のバージョンでは、 **/permissive -** オプション セット、 [/Zc:ternary](zc-ternary.md)オプション。 コンパイラでは、2 フェーズの名前検索の要件の詳細も実装します。 ときに、 **/permissive -** オプションが設定されている、コンパイラは、テンプレートで使用される依存と非依存の名前を識別する、関数とクラス テンプレート定義を解析します。 このリリースでは、名前の依存関係の分析だけが実行されます。
 
 環境固有の拡張機能と、標準の実装に依存しますまま言語領域は受けません **/permissive -** します。 たとえば、Microsoft 固有`__declspec`、呼び出し規約、および構造化例外処理キーワード、および特定のコンパイラのプラグマ ディレクティブまたは属性はフラグが設定されないでコンパイラ **/permissive -** モード。
 
-**/Permissive -** オプション サポートを使用して、準拠コンパイラの現在のバージョンでどの言語コンストラクトが非準拠を確認します。 オプションは、コードが特定のバージョンの C++ 標準に準拠しているかどうかを決定できません。 最新のドラフト標準のすべての実装済みのコンパイラ サポートを有効にするには使用、 [/std:latest](../../build/reference/std-specify-language-standard-version.md)オプション。 コンパイラのサポートを現在実装されている c++ 17 標準に制限する、 [/std:c + + 17](../../build/reference/std-specify-language-standard-version.md)オプション。 C++ 14 標準をより厳密に一致するように、コンパイラのサポートを制限するには、 [/std:c + + + 14](../../build/reference/std-specify-language-standard-version.md)オプションは、既定値です。
+**/Permissive -** オプション サポートを使用して、準拠コンパイラの現在のバージョンでどの言語コンストラクトが非準拠を確認します。 オプションは、コードが特定のバージョンの C++ 標準に準拠しているかどうかを決定できません。 最新のドラフト標準のすべての実装済みのコンパイラ サポートを有効にするには使用、 [/std:latest](std-specify-language-standard-version.md)オプション。 コンパイラのサポートを現在実装されている c++ 17 標準に制限する、 [/std:c + + 17](std-specify-language-standard-version.md)オプション。 C++ 14 標準をより厳密に一致するように、コンパイラのサポートを制限するには、 [/std:c + + + 14](std-specify-language-standard-version.md)オプションは、既定値です。
 
-すべての c++ 11、c++ 14、または c++ 17 標準に準拠しないコードが Visual Studio 2017 で Visual C コンパイラによってサポートされています。 Visual Studio のバージョンに応じて、 **/permissive -** オプションは、2 フェーズの名前参照の一部の側面に関する、一時的に非定数の参照をバインド、直接の初期化としてコピー init を扱うこと、許可の問題を検出しない可能性があります複数ユーザー定義の変換では、初期化、または別のトークンの論理演算子は、およびその他の適合性のサポートされていない領域。 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。 取得を最大限に活用する **/permissive -**、Visual Studio の最新バージョンに更新します。
+すべての c++ 11、c++ 14、または c++ 17 標準に準拠しないコードが Visual Studio 2017 での MSVC コンパイラによってサポートされています。 Visual Studio のバージョンに応じて、 **/permissive -** オプションは、2 フェーズの名前参照の一部の側面に関する、一時的に非定数の参照をバインド、直接の初期化としてコピー init を扱うこと、許可の問題を検出しない可能性があります複数ユーザー定義の変換では、初期化、または別のトークンの論理演算子は、およびその他の適合性のサポートされていない領域。 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。 取得を最大限に活用する **/permissive -**、Visual Studio の最新バージョンに更新します。
 
 ### <a name="how-to-fix-your-code"></a>コードを修正する方法
 
@@ -425,7 +425,7 @@ Windows April 2018 Update SDK (10.0.17134.0)、Windows Fall Creators Update SDK 
    typedef enum UICCDATASTOREACCESSMODE UICCDATASTOREACCESSMODE; // C4471
    ```
 
-   スコープを持たない列挙型の事前宣言は、Microsoft 拡張です。 この問題に対処せず cellularapi_oem.h を含むファイルをコンパイル、 **/permissive -** オプション、またはを使用して、 [/wd](../../build/reference/compiler-option-warning-level.md)警告 C4471 をミュートするオプション。
+   スコープを持たない列挙型の事前宣言は、Microsoft 拡張です。 この問題に対処せず cellularapi_oem.h を含むファイルをコンパイル、 **/permissive -** オプション、またはを使用して、 [/wd](compiler-option-warning-level.md)警告 C4471 をミュートするオプション。
 
 - Um/omscript.h を発行します。
 
@@ -464,5 +464,5 @@ Visual Studio 2017 バージョン 15.5 より前に、のバージョンでは�
 
 ## <a name="see-also"></a>関連項目
 
-- [コンパイラ オプション](../../build/reference/compiler-options.md)
-- [コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+- [MSVC コンパイラ オプション](compiler-options.md)
+- [MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
