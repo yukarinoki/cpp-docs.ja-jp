@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /errorReport compiler option [C++]
 - -errorReport compiler option [C++]
 ms.assetid: 819828f8-b0a5-412c-9c57-bf822f17e667
-ms.openlocfilehash: 70df0f99ccac91ef8b7651faf3c93bb2971fb904
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 52909cb42180bf8b778d73fd709be05faf3f5714
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414552"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811239"
 ---
 # <a name="errorreport-report-internal-compiler-errors"></a>/errorReport (内部コンパイラ エラーの報告)
 
@@ -49,7 +49,7 @@ ms.locfileid: "57414552"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -63,5 +63,5 @@ ms.locfileid: "57414552"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

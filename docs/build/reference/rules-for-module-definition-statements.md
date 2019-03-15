@@ -7,12 +7,12 @@ helpviewer_keywords:
 - module definition files, statement syntax
 - module definition files
 ms.assetid: f65cd3a7-65d7-4d06-939f-a8b1ecd50f2d
-ms.openlocfilehash: 6d6528b81777711e52153e19a656619a2895b0d6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6269ad2d5bf3952e485f2ca5e5d1f411c5f1e0c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424757"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821275"
 ---
 # <a name="rules-for-module-definition-statements"></a>モジュール定義ステートメントに関する規則
 
@@ -34,8 +34,8 @@ ms.locfileid: "57424757"
 
 - 数値の引数が 10 進数で指定されたか、16 進数です。
 
-- 文字列引数と一致する場合、[予約語](../../build/reference/reserved-words.md)、これは、二重引用符 (") で囲む必要があります。
+- 文字列引数と一致する場合、[予約語](reserved-words.md)、これは、二重引用符 (") で囲む必要があります。
 
 ## <a name="see-also"></a>関連項目
 
-[モジュール定義 (.def) ファイル](../../build/reference/module-definition-dot-def-files.md)
+[モジュール定義 (.def) ファイル](module-definition-dot-def-files.md)
