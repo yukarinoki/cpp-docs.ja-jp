@@ -6,12 +6,12 @@ helpviewer_keywords:
 - helper functions, calling conventions
 - helper functions, return types
 ms.assetid: 0ffa4558-6005-4803-be95-7a8ec8837660
-ms.openlocfilehash: 15631b305246cbfd7dcd8081cb1ee488bf225fec
-ms.sourcegitcommit: eb2b34a24e6edafb727e87b138499fa8945f981e
+ms.openlocfilehash: a85825eb49b1f8faab7862e902b226c1c1fb6d58
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56264804"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812968"
 ---
 # <a name="calling-conventions-parameters-and-return-type"></a>呼び出し規則、パラメーター、および戻り値の型
 
@@ -29,7 +29,7 @@ FARPROC WINAPI __delayLoadHelper2(
 *pidd*<br/>
 A`const`へのポインター、`ImgDelayDescr`インポートに関連するさまざまなデータ、バインドについては、タイムスタンプ、および記述子コンテンツに関する情報を提供する属性のセットのオフセットを格納しています。 現時点では、1 つだけの属性は`dlattrRva`記述子のアドレスの相対仮想アドレスであることを示します。 詳細については、内の宣言を参照してください。 *delayimp.h*します。
 
-定義については、`PCImgDelayDescr`構造体は、「[構造体と定数定義](../../build/reference/structure-and-constant-definitions.md)します。
+定義については、`PCImgDelayDescr`構造体は、「[構造体と定数定義](structure-and-constant-definitions.md)します。
 
 *ppfnIATEntry*<br/>
 遅延読み込みインポート アドレス テーブル (IAT) インポートされた関数のアドレスで更新したスロットへのポインター。 ヘルパー ルーチンは、この場所に返されるのと同じ値を格納する必要があります。
@@ -138,4 +138,4 @@ const PfnDliHook __pfnDliNotifyHook2 = delayHook;
 
 ## <a name="see-also"></a>関連項目
 
-[ヘルパー関数について](../../build/reference/understanding-the-helper-function.md)
+[ヘルパー関数について](understanding-the-helper-function.md)

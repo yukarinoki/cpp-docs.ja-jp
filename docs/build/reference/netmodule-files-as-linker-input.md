@@ -7,38 +7,38 @@ helpviewer_keywords:
 - .netmodules
 - modules, Visual C++
 ms.assetid: a4bcbe8a-4255-451d-853b-f88cfd82f4e1
-ms.openlocfilehash: 050736e5536a1e38b73524f31491b3a01dc99193
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fcba363cff567c69ac0fbd0a541953dfe2c8e910
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50443578"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818103"
 ---
 # <a name="netmodule-files-as-linker-input"></a>リンカー入力としての .netmodule ファイル
 
 link.exe では、入力として MSIL .obj と .netmodule を今すぐ受け取ります。 リンカーによって生成された出力ファイルは、アセンブリまたは .netmodule をリンカーに入力した .netmodule または .obj のいずれかで実行時に依存せずします。
 
-.netmodule は、Visual C コンパイラによって作成された[/LN (MSIL モジュールの作成)](../../build/reference/ln-create-msil-module.md)またはのリンカーによって[/NOASSEMBLY (MSIL モジュールの作成)](../../build/reference/noassembly-create-a-msil-module.md)します。 .obj は常に、Visual C のコンパイル時に作成されます。 その他の Visual Studio コンパイラを使用して、 **/target:module**コンパイラ オプション。
+.netmodule は、MSVC コンパイラによって作成された[/LN (MSIL モジュールの作成)](ln-create-msil-module.md)またはのリンカーによって[/NOASSEMBLY (MSIL モジュールの作成)](noassembly-create-a-msil-module.md)します。 .obj は常に、Visual C のコンパイル時に作成されます。 その他の Visual Studio コンパイラを使用して、 **/target:module**コンパイラ オプション。
 
 必要がありますリンカーに渡す .obj ファイルを .netmodule を作成した Visual C コンパイラから。 に、.netmodule を渡すことはサポートされなく、 **/clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-コマンドラインからリンカーを呼び出す方法については、次を参照してください[リンカーのコマンドライン構文](../../build/reference/linker-command-line-syntax.md)、[コマンドラインでビルドの c/c++ コード](../../build/building-on-the-command-line.md)、および[パスと環境変数の設定。コマンド ライン ビルド](../../build/setting-the-path-and-environment-variables-for-command-line-builds.md)します。
+コマンドラインからリンカーを呼び出す方法については、次を参照してください[リンカーのコマンドライン構文](linking.md)、[コマンドラインから MSVC ツールセットを使用して](../building-on-the-command-line.md)、および[パスと環境変数の設定。コマンド ライン ビルドの](../setting-the-path-and-environment-variables-for-command-line-builds.md)します。
 
-Visual C コンパイラでコンパイルされたリンカーに .netmodule または .dll ファイルを渡す **/clr**リンカー エラーが発生することができます。 詳細については、次を参照してください。 [.netmodule 入力ファイルの形式を選択する](../../build/reference/choosing-the-format-of-netmodule-input-files.md)します。
+MSVC コンパイラをしてコンパイルされたリンカーに .netmodule または .dll ファイルを渡す **/clr**リンカー エラーが発生することができます。 詳細については、次を参照してください。 [.netmodule 入力ファイルの形式を選択する](choosing-the-format-of-netmodule-input-files.md)します。
 
 リンカーは、ネイティブの .obj ファイルだけでコンパイルされた MSIL .obj ファイルを受け入れる **/clr**します。 同じビルドで混合の .obj を渡すと、生成される出力ファイルの検証可能性は、既定では、最低レベルの入力モジュールの検証可能性と等しくなります。
 
 現在 2 つ以上のアセンブリで構成されるアプリケーションがある、1 つのアセンブリに含まれるよう、アプリケーションをたい場合は、、アセンブリを再コンパイルを .obj または 1 つのアセンブリを生成するために .netmodule をリンクする必要があります。
 
-使用してエントリ ポイントを指定する必要があります[/ENTRY (エントリ ポイント シンボル)](../../build/reference/entry-entry-point-symbol.md)実行可能イメージを作成するときにします。
+使用してエントリ ポイントを指定する必要があります[/ENTRY (エントリ ポイント シンボル)](entry-entry-point-symbol.md)実行可能イメージを作成するときにします。
 
-MSIL .netmodule、または .obj ファイルを使用してリンクする場合を使用して、 [/LTCG (リンク時コード生成)](../../build/reference/ltcg-link-time-code-generation.md)、それ以外の場合、リンカーには、MSIL .obj または .netmodule が検出されると、再起動されます/LTCG をリンクします。
+MSIL .netmodule、または .obj ファイルを使用してリンクする場合を使用して、 [/LTCG (リンク時コード生成)](ltcg-link-time-code-generation.md)、それ以外の場合、リンカーには、MSIL .obj または .netmodule が検出されると、再起動されます/LTCG をリンクします。
 
 MSIL .netmodule、または .obj ファイルは、cl.exe に渡すこともできます。
 
-入力の MSIL .obj または .netmodule ファイルには、リソースを埋め込むことはできませんができます。 リソースは、出力ファイル (モジュールまたはアセンブリ) に組み込まれています[/ASSEMBLYRESOURCE (マネージ リソースの埋め込み)](../../build/reference/assemblyresource-embed-a-managed-resource.md)リンカー オプション、または、 **/resource**他の Visual Studio コンパイラでコンパイラ オプション。
+入力の MSIL .obj または .netmodule ファイルには、リソースを埋め込むことはできませんができます。 リソースは、出力ファイル (モジュールまたはアセンブリ) に組み込まれています[/ASSEMBLYRESOURCE (マネージ リソースの埋め込み)](assemblyresource-embed-a-managed-resource.md)リンカー オプション、または、 **/resource**他の Visual Studio コンパイラでコンパイラ オプション。
 
-指定しない場合、MSIL は、次のリンクを実行するときに[/LTCG (リンク時コード生成)](../../build/reference/ltcg-link-time-code-generation.md)リンクを再起動することを通知する情報メッセージが表示されます。 このメッセージに、MSIL リンクのリンカーのパフォーマンスを向上しますが、無視できるを明示的に指定 **/LTCG**します。
+指定しない場合、MSIL は、次のリンクを実行するときに[/LTCG (リンク時コード生成)](ltcg-link-time-code-generation.md)リンクを再起動することを通知する情報メッセージが表示されます。 このメッセージに、MSIL リンクのリンカーのパフォーマンスを向上しますが、無視できるを明示的に指定 **/LTCG**します。
 
 ## <a name="example"></a>例
 
@@ -98,5 +98,5 @@ caught non System exception in C++ source code file
 
 ## <a name="see-also"></a>関連項目
 
-- [LINK の入力ファイル](../../build/reference/link-input-files.md)
-- [リンカー オプション](../../build/reference/linker-options.md)
+- [LINK の入力ファイル](link-input-files.md)
+- [MSVC リンカー オプション](linker-options.md)

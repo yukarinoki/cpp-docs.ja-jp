@@ -19,16 +19,16 @@ helpviewer_keywords:
 - Single Inheritance compiler option
 - -vmv compiler option [C++]
 ms.assetid: 0fcd7ae0-3031-4c62-a2a8-e154c8685dae
-ms.openlocfilehash: 3c11572880a0b58a1ba82f2e794c9dbfbd521c44
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7a46cecdbf96ad891ce218df4769a60590e562a9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425212"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810043"
 ---
 # <a name="vmm-vms-vmv-general-purpose-representation"></a>/vmm、/vms、/vmv (通常の最適化)
 
-ときに使用される[/vmb、/vmg () を処理形式](../../build/reference/vmb-vmg-representation-method.md)として選択されて、[表現メソッド](../../build/reference/vmb-vmg-representation-method.md)します。 これらのオプションは、not まだ検出クラス定義の継承モデルを示します。
+ときに使用される[/vmb、/vmg () を処理形式](vmb-vmg-representation-method.md)として選択されて、[表現メソッド](vmb-vmg-representation-method.md)します。 これらのオプションは、not まだ検出クラス定義の継承モデルを示します。
 
 ## <a name="syntax"></a>構文
 
@@ -52,7 +52,7 @@ ms.locfileid: "57425212"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -66,6 +66,6 @@ ms.locfileid: "57425212"
 
 ## <a name="see-also"></a>関連項目
 
-[/vmb、/vmg (処理形式)](../../build/reference/vmb-vmg-representation-method.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[/vmb、/vmg (処理形式)](vmb-vmg-representation-method.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

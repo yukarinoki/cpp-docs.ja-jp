@@ -18,12 +18,12 @@ helpviewer_keywords:
 - Disable Language Extensions compiler option
 - Ze compiler option [C++]
 ms.assetid: 65e49258-7161-4289-a176-7c5c0656b1a2
-ms.openlocfilehash: 71718aed7853e7d09b15734bad6a350f9a19fd5e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1db1dbdba4829ccf939cdc4f07ccfefe2474a35d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422833"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812305"
 ---
 # <a name="za-ze-disable-language-extensions"></a>/Za、/Ze (言語拡張機能の無効化)
 
@@ -51,7 +51,7 @@ Visual C の準拠の問題の詳細については、次を参照してくだ�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. ナビゲーション ウィンドウで、**構成プロパティ** > **C/C++** > **言語**します。
 
@@ -64,7 +64,6 @@ Visual C の準拠の問題の詳細については、次を参照してくだ�
 ## <a name="see-also"></a>関連項目
 
 [コンパイラ オプション](compiler-options.md)<br/>
-[コンパイラ オプションの設定](setting-compiler-options.md)<br/>
 [/Zc (準拠)](zc-conformance.md)<br/>
 [/permissive- (標準への準拠)](permissive-standards-conformance.md)<br/>
 [/std (言語の標準バージョンの指定)](std-specify-language-standard-version.md)<br/>

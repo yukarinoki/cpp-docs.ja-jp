@@ -6,12 +6,12 @@ helpviewer_keywords:
 - .def files [C++], exporting from DLLs
 - exporting DLLs [C++], DEF files
 ms.assetid: 9d31eda2-184e-47de-a2ee-a93ebd603f8e
-ms.openlocfilehash: bed47c2c69b154c6bab996299eaeb4173c8298f3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 35f55ea525bd03c5b0b1b1750d25c1223bc608fc
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416554"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816998"
 ---
 # <a name="exporting-from-a-dll-using-def-files"></a>DEF ファイルを使った DLL からのエクスポート
 
@@ -21,7 +21,7 @@ DEF ファイルを最小限に抑えるには、次のモジュール定義ス�
 
 - ファイルの先頭には、必ず LIBRARY 文を記述します。 このステートメントでは、DLL に属するものとして DEF ファイルを識別します。 LIBRARY 文の引数には、DLL の名前を指定します。 リンカーは、この名前を DLL のインポート ライブラリに配置します。
 
-- EXPORTS 文には、DLL のエクスポート関数の名前と、オプションで序数値を指定します。 序数値を関数に割り当てるには、アット マーク (@) と数字の後に関数名を記述します。 序数値の場合は、1 から N の範囲で指定する必要があります。N は DLL のエクスポート関数の数字です。 関数を序数でエクスポートする場合は、「[関数名ではなく序数による DLL のエクスポート](../build/exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)」もいます。
+- EXPORTS 文には、DLL のエクスポート関数の名前と、オプションで序数値を指定します。 序数値を関数に割り当てるには、アット マーク (@) と数字の後に関数名を記述します。 序数値の場合は、1 から N の範囲で指定する必要があります。N は DLL のエクスポート関数の数字です。 関数を序数でエクスポートする場合は、「[関数名ではなく序数による DLL のエクスポート](exporting-functions-from-a-dll-by-ordinal-rather-than-by-name.md)」もいます。
 
 たとえば、バイナリ検索ツリーを実装するコードを含む DLL は、以下のようになります。
 
@@ -56,32 +56,32 @@ MFC 自体が DEF ファイルを使用して mfcx0.dll の関数とクラスを
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [関数を使った DLL からエクスポートします。](../build/exporting-from-a-dll-using-declspec-dllexport.md)
+- [関数を使った DLL からエクスポートします。](exporting-from-a-dll-using-declspec-dllexport.md)
 
-- [AFX_EXT_CLASS を使ったエクスポート/インポート](../build/exporting-and-importing-using-afx-ext-class.md)
+- [AFX_EXT_CLASS を使ったエクスポート/インポート](exporting-and-importing-using-afx-ext-class.md)
 
-- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](../build/exporting-cpp-functions-for-use-in-c-language-executables.md)
+- [C 言語の実行可能ファイルで使用するための C++ 関数をエクスポートします。](exporting-cpp-functions-for-use-in-c-language-executables.md)
 
-- [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](../build/exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
+- [C または C++ 言語の実行可能ファイルで使用するための C 関数をエクスポートします。](exporting-c-functions-for-use-in-c-or-cpp-language-executables.md)
 
-- [エクスポート方式の使用](../build/determining-which-exporting-method-to-use.md)
+- [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [使用してアプリケーションをインポートします。](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [使用してアプリケーションをインポートします。](importing-into-an-application-using-declspec-dllimport.md)
 
-- [DLL を初期化します。](../build/run-time-library-behavior.md#initializing-a-dll)
+- [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [.def ファイル](../build/reference/module-definition-dot-def-files.md)
+- [.def ファイル](reference/module-definition-dot-def-files.md)
 
-- [モジュール定義ステートメントに関する規則](../build/reference/rules-for-module-definition-statements.md)
+- [モジュール定義ステートメントに関する規則](reference/rules-for-module-definition-statements.md)
 
-- [装飾名](../build/reference/decorated-names.md)
+- [装飾名](reference/decorated-names.md)
 
-- [インポートとエクスポートのインライン関数](../build/importing-and-exporting-inline-functions.md)
+- [インポートとエクスポートのインライン関数](importing-and-exporting-inline-functions.md)
 
-- [相互インポート](../build/mutual-imports.md)
+- [相互インポート](mutual-imports.md)
 
 ## <a name="see-also"></a>関連項目
 
-[DLL からのエクスポート](../build/exporting-from-a-dll.md)
+[DLL からのエクスポート](exporting-from-a-dll.md)

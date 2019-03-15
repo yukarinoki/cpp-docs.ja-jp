@@ -2,16 +2,16 @@
 title: ARM 例外処理
 ms.date: 07/11/2018
 ms.assetid: fe0e615f-c033-4ad5-97f4-ff96af45b201
-ms.openlocfilehash: f6df8afd453f7e71d1ecc2ebb188c079a3aad02a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: cbbec3f40df2765fa76399ce667ae30f4533b018
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694349"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814541"
 ---
 # <a name="arm-exception-handling"></a>ARM 例外処理
 
-ARM 版 Windows は、ハードウェアで生成される非同期例外とソフトウェアで生成される同期例外に対して、同じ構造化例外処理メカニズムを使用します。 言語固有の例外ハンドラーは、言語ヘルパー関数を使用することで、Windows 構造化例外処理に付加して構築します。 このドキュメントでは、ARM、および Microsoft ARM アセンブラーおよび Visual C コンパイラによって生成されるコードで使用する言語ヘルパーでの Windows での例外処理について説明します。
+ARM 版 Windows は、ハードウェアで生成される非同期例外とソフトウェアで生成される同期例外に対して、同じ構造化例外処理メカニズムを使用します。 言語固有の例外ハンドラーは、言語ヘルパー関数を使用することで、Windows 構造化例外処理に付加して構築します。 このドキュメントでは、ARM、および Microsoft ARM アセンブラーおよび MSVC コンパイラによって生成されるコードで使用する言語ヘルパーでの Windows での例外処理について説明します。
 
 ## <a name="arm-exception-handling"></a>ARM 例外処理
 
@@ -121,7 +121,7 @@ ARM のすべての .pdata レコードは、8 バイトの長さです。 一�
 
 |C|L|R|PF|プッシュされる整数レジスタ|プッシュされる VFP レジスタ|
 |-------|-------|-------|--------|------------------------------|--------------------------|
-|0|0|0|0|r4 r*N*|none|
+|0|0|0|0|r4-r*N*|none|
 |0|0|0|1|r*S*-r*N*|none|
 |0|0|1|0|none|d8 d*E*|
 |0|0|1|1|r*S*-r3|d8 d*E*|
@@ -129,12 +129,12 @@ ARM のすべての .pdata レコードは、8 バイトの長さです。 一�
 |0|1|0|1|r*S*-r*N*、LR|none|
 |0|1|1|0|LR|d8 d*E*|
 |0|1|1|1|r*S*-r3、LR|d8 d*E*|
-|1|0|0|0|r4 r*N*、r11|none|
-|1|0|0|1|r*S*-r*N*、r11|none|
+|1|0|0|0|r4-r*N*, r11|none|
+|1|0|0|1|r*S*-r*N*, r11|none|
 |1|0|1|0|r11|d8 d*E*|
 |1|0|1|1|r*S*-r3、r11|d8 d*E*|
-|1|1|0|0|r4 r*N*r11、LR|none|
-|1|1|0|1|r*S*-r*N*r11、LR|none|
+|1|1|0|0|r4-r*N*, r11, LR|none|
+|1|1|0|1|r*S*-r*N*, r11, LR|none|
 |1|1|1|0|r11, LR|d8 d*E*|
 |1|1|1|1|r*S*-r3、r11、LR|d8 d*E*|
 
@@ -444,7 +444,7 @@ Epilogue:
 
    - *スタック調整*= 0、スタック調整がないことを示します。
 
-### <a name="example-2-nested-function-with-local-allocation"></a>例 2: ネストされた関数、ローカル割り当てあり
+### <a name="example-2-nested-function-with-local-allocation"></a>例 2:ローカル割り当てで入れ子になった関数
 
 ```asm
 Prologue:
@@ -479,7 +479,7 @@ Epilogue:
 
    - *スタック調整*= 3 (0x0C/4 =)
 
-### <a name="example-3-nested-variadic-function"></a>例 3: ネストされた可変個引数関数
+### <a name="example-3-nested-variadic-function"></a>例 3:入れ子になったの可変個引数関数
 
 ```asm
 Prologue:
@@ -514,7 +514,7 @@ Epilogue:
 
    - *スタック調整*= 0、スタック調整がないことを示します。
 
-### <a name="example-4-function-with-multiple-epilogues"></a>例 4: 複数のエピローグを持つ関数
+### <a name="example-4-function-with-multiple-epilogues"></a>例 4:複数のエピローグを持つ関数
 
 ```asm
 Prologue:
@@ -576,7 +576,7 @@ Epilogues:
 
    - アンワインド コード 2 = 0xFF: end
 
-### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>例 5: 動的スタックと内部のエピローグを持つ関数
+### <a name="example-5-function-with-dynamic-stack-and-inner-epilogue"></a>例 5:動的スタックと内部のエピローグを持つ関数
 
 ```asm
 Prologue:
@@ -626,7 +626,7 @@ Epilogue:
 
    - *コード ワード*= 0x01、アンワインド コードの 1 つの 32 ビット ワードを示す
 
-- ワード 1: オフセット 0xC6 (= 0x18C/2) のエピローグ スコープ、アンワインド コード インデックスを 0x00 で開始、条件は 0x0E (常時)
+- ワード 1:アンワインド コード インデックスを 0x00、および条件は 0x0E (常時) を使用した開始オフセット 0xC6 (= 0x18c/2)、エピローグ スコープ
 
 - ワード 2 で始まるアンワインド コード: (プロローグとエピローグ共通)
 
@@ -638,7 +638,7 @@ Epilogue:
 
    - アンワインド コード 3 = 0xFD: end、エピローグの 16 ビット 命令としてカウント。
 
-### <a name="example-6-function-with-exception-handler"></a>例 6: 例外ハンドラーを持つ関数
+### <a name="example-6-function-with-exception-handler"></a>例 6:例外ハンドラーを持つ関数
 
 ```asm
 Prologue:
@@ -698,7 +698,7 @@ Epilogue:
 
 - ワード 4 およびそれ以降は、インライン化された例外データです。
 
-### <a name="example-7-funclet"></a>例 7: funclet
+### <a name="example-7-funclet"></a>例 7:Funclet
 
 ```asm
 Function:
@@ -739,5 +739,5 @@ Function:
 
 ## <a name="see-also"></a>関連項目
 
-[ARM ABI 規則の概要](../build/overview-of-arm-abi-conventions.md)<br/>
-[Visual C++ の ARM への移行に関する一般的な問題](../build/common-visual-cpp-arm-migration-issues.md)
+[ARM ABI 規則の概要](overview-of-arm-abi-conventions.md)<br/>
+[Visual C++ の ARM への移行に関する一般的な問題](common-visual-cpp-arm-migration-issues.md)

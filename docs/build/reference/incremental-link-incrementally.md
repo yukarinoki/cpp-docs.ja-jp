@@ -12,12 +12,12 @@ helpviewer_keywords:
 - LINK tool [C++], options for full linking
 - incremental linking
 ms.assetid: 135656ff-94fa-4ad4-a613-22e1a2a5d16b
-ms.openlocfilehash: 60cec41173afc9955bddf9df0bd6796b5df6285c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 189affe57694a8369e9cf7ac98815cc5888b69aa
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414084"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816140"
 ---
 # <a name="incremental-link-incrementally"></a>/INCREMENTAL (インクリメンタル リンクを行う)
 
@@ -54,7 +54,7 @@ ms.locfileid: "57414084"
 
 - /ORDER オプションを指定する。
 
-/INCREMENTAL が暗黙的に指定すると[/debug](../../build/reference/debug-generate-debug-info.md)を指定します。
+/INCREMENTAL が暗黙的に指定すると[/debug](debug-generate-debug-info.md)を指定します。
 
 以下の場合もフル リンクが行われます。
 
@@ -72,7 +72,7 @@ ms.locfileid: "57414084"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**リンカー**フォルダー。
 
@@ -86,5 +86,5 @@ ms.locfileid: "57414084"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)
