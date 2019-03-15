@@ -16,12 +16,12 @@ helpviewer_keywords:
 - ismbc routines
 - _ismbc routines
 ms.assetid: b8995391-7857-4ac3-9a1e-de946eb4464d
-ms.openlocfilehash: 97094c6773ee6b67655dacc557335ed222fed311
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: dd187be93b5df0160686fe765f65c25e14800b75
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326733"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57748685"
 ---
 # <a name="ismbc-routines"></a>_ismbc 系ルーチン
 
@@ -33,7 +33,7 @@ ms.locfileid: "51326733"
 |[_ismbcgraph、_ismbcgraph_l、_ismbcprint、_ismbcprint_l、_ismbcpunct、_ismbcpunct_l、_ismbcblank、_ismbcblank_l、_ismbcspace、_ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|[_ismbclegal、_ismbclegal_l、_ismbcsymbol、_ismbcsymbol_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|
 |[_ismbchira、_ismbchira_l、_ismbckata、_ismbckata_l](../c-runtime-library/reference/ismbchira-ismbchira-l-ismbckata-ismbckata-l.md)|[_ismbclower、_ismbclower_l、_ismbcupper、 _ismbcupper_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 各 **_ismbc** ルーチンのテスト結果は、有効なマルチバイト コード ページによって異なります。 マルチバイトのコード ページには、1 バイトの英字があります。 既定では、マルチバイト コード ページは、プログラムの開始時にオペレーティング システムから取得したシステム既定の ANSI コード ページに設定されます。 [_getmbcp](../c-runtime-library/reference/getmbcp.md)、または [_setmbcp](../c-runtime-library/reference/setmbcp.md) によって、使用中のマルチバイト コード ページをそれぞれ照会または変更できます。
 
@@ -41,13 +41,13 @@ ms.locfileid: "51326733"
 
 |ルーチンによって返される値|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|[_ismbcalnum、_ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|英数字|`c` が ASCII の英字の 1 バイト表現である場合に限り、0 以外の値を返します。`_ismbcdigit` と `_ismbcalpha` の例を参照してください。|
-|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|alphabetic|`c` が ASCII の英字 (`_ismbcupper` と `_ismbclower` の例を参照) またはカタカナ (0xA6<=`c`<=0xDF) の 1 バイト表現である場合に限り、0 以外の値を返します。|
+|[_ismbcalnum、_ismbcalnum_l](../c-runtime-library/reference/ismbcalnum-functions.md)|英数字|`c` が ASCII の英字の 1 バイト表現である場合に限り、0 以外の値を返します。「`_ismbcdigit`」および「`_ismbcalpha`」の例を参照してください。|
+|[_ismbcalpha, _ismbcalpha_l](../c-runtime-library/reference/ismbcalnum-functions.md)|alphabetic|`c` が ASCII の英字の 1 バイト表現である場合に限り、0 以外の値を返します。「`_ismbcupper`」および「`_ismbclower`」の例、またはカタカナ文字「0xA6<=`c`<=0xDF」の例を参照してください。|
 |[_ismbcdigit、_ismbcdigit_l](../c-runtime-library/reference/ismbcalnum-functions.md)|数字|`c` が ASCII 数字 (0x30<=`c`<=0x39) の 1 バイト表現である場合に限り、0 以外の値を返します。|
 |[_ismbcgraph、_ismbcgraph_l](../c-runtime-library/reference/ismbcgraph-functions.md)|グラフィック|`c` が空白 ( ) を除く ASCII またはカタカナの印刷可能な文字の 1 バイト表現である場合に限り、0 以外の値を返します。 「`_ismbcdigit`」、「`_ismbcalpha`」、および「`_ismbcpunct`」の例を参照してください。|
 |[_ismbclegal、_ismbclegal_l](../c-runtime-library/reference/ismbclegal-ismbclegal-l-ismbcsymbol-ismbcsymbol-l.md)|有効なマルチバイト文字|`c` の最初のバイトが 0x81 - 0x9F または 0xE0 - 0xFC の範囲内にあり、2 番目のバイトが 0x40 - 0x7E または 0x80 - FC の範囲内にある場合にのみ、0 以外の値を返します。|
 |[_ismbclower、_ismbclower_l](../c-runtime-library/reference/ismbclower-ismbclower-l-ismbcupper-ismbcupper-l.md)|小文字の英字|`c` が ASCII 小文字の英字 (0x61<=`c`<=0x7A) の 1 バイト表現である場合に限り、0 以外の値を返します。|
-|[_ismbcprint、_ismbcprint_l](../c-runtime-library/reference/ismbcgraph-functions.md)|印刷可能|`c` が空白 ( ) を含む ASCII またはカタカナの印刷可能な文字のバイト表現である場合に限り、0 以外の値を返します。`_ismbcspace`、`_ismbcdigit`、`_ismbcalpha` と `_ismbcpunct` の例を参照してください。|
+|[_ismbcprint、_ismbcprint_l](../c-runtime-library/reference/ismbcgraph-functions.md)|印刷可能|`c` が空白 ( ) を含む ASCII またはカタカナの印刷可能な文字の 1 バイト表現である場合に限り、0 以外の値を返します。「`_ismbcspace`」、「`_ismbcdigit`」、「`_ismbcalpha`」、および「`_ismbcpunct`」の例を参照してください。|
 |[_ismbcpunct、_ismbcpunct_l](../c-runtime-library/reference/ismbcgraph-functions.md)|区切り記号|`c` が ASCII またはカタカナの区切り記号の 1 バイト表現である場合に限り、0 以外の値を返します。|
 |[_ismbcblank、_ismbcblank_l](../c-runtime-library/reference/ismbcgraph-functions.md)|空白または水平タブ|`c` が空白文字または水平タブ文字のバイト表現である場合 (`c`=0x20 または `c`=0x09) に限り、0 以外の値を返します。|
 |[_ismbcspace、_ismbcspace_l](../c-runtime-library/reference/ismbcgraph-functions.md)|Whitespace|`c` が空白文字の場合 (`c`=0x20 または 0x09<=`c`<=0x0D)、0 以外の値を返します。|
@@ -70,7 +70,7 @@ ms.locfileid: "51326733"
 
 **コード ページ 932 固有情報終了**
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [文字分類](../c-runtime-library/character-classification.md)<br/>
 [is、isw 系ルーチン](../c-runtime-library/is-isw-routines.md)<br/>

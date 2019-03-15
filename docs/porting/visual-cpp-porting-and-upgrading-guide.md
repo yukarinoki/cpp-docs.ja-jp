@@ -2,12 +2,12 @@
 title: Visual C++  移植とアップグレードのガイド
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 39b0e716ae6dbc1210130908b27cfa1d06f86ec6
-ms.sourcegitcommit: c40469825b6101baac87d43e5f4aed6df6b078f5
+ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51556869"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57752429"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++  移植とアップグレードのガイド
 
@@ -81,11 +81,11 @@ Visual Studio のビルド システムを使用していない場合は、MSBui
 |[2003 から 2015 の Visual C++ の履歴の変更](visual-cpp-change-history-2003-2015.md)|コードの変更が必要となる可能性のある、Visual Studio 2003 から 2015 における Visual C++ ライブラリおよびビルド ツールのすべての変更の一覧。|
 |[2003 ～ 2015 年の Visual C++ の新機能](visual-cpp-what-s-new-2003-through-2015.md)|Visual Studio 2003 から Visual Studio 2015 の Visual C++ の "新機能" に関するすべての情報。|
 |[サード パーティ ライブラリの移植](porting-third-party-libraries.md)|**vcpkg** コマンド ライン ツールを使用して、古いオープンソース ライブラリを新しい Visual C++ ツールセットでコンパイルされたバージョンに移植する方法。|
-|[移植およびアップグレード: 例とケース スタディ](porting-and-upgrading-examples-and-case-studies.md)|このセクションでは、いくつかのサンプルとアプリケーションを移植してアップグレードし、エクスペリエンスと結果について説明しました。 これらを読むと、移植およびプロセスのアップグレードに関係する含意がわかります。 プロセス全体を通して、アップグレードに関するヒントとテクニックについて説明し、特定のエラーを修正する方法を示します。|
+|[移植とアップグレード: 例とケース スタディ](porting-and-upgrading-examples-and-case-studies.md)|このセクションでは、いくつかのサンプルとアプリケーションを移植してアップグレードし、エクスペリエンスと結果について説明しました。 これらを読むと、移植およびプロセスのアップグレードに関係する含意がわかります。 プロセス全体を通して、アップグレードに関するヒントとテクニックについて説明し、特定のエラーを修正する方法を示します。|
 |[ユニバーサル Windows プラットフォームへの移植](porting-to-the-universal-windows-platform-cpp.md)|コードを Windows 10 に移植する方法を説明します。|
 |[Visual C++ の紹介 (UNIX ユーザー向け)](introduction-to-visual-cpp-for-unix-users.md)|Visual C++ を初めて使用し、生産性を向上したい UNIX ユーザー向けの情報を提供します。|
 |[UNIX から Win32 への移植](porting-from-unix-to-win32.md)|UNIX アプリケーションを Windows に移行するためのオプションについて説明します。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual C++](../visual-cpp-in-visual-studio.md)

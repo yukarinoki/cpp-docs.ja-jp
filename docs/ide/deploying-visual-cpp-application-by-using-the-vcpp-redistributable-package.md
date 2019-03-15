@@ -4,12 +4,12 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - walkthrough, deploying a Visual C++ application by using the redistributable package
 ms.assetid: e59becbf-b8c6-4c8e-bab3-b69cc1ed3e5e
-ms.openlocfilehash: 6de94ac300c5d50be67ede24cfcc3d03bc966fed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ccf6b74096894c2e48258e6e0a60b807c7c6c5b4
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436429"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743798"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-the-visual-c-redistributable-package"></a>チュートリアル: Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置
 
@@ -25,7 +25,7 @@ ms.locfileid: "50436429"
 
 ### <a name="to-use-the-visual-c-redistributable-package-to-deploy-an-application"></a>Visual C++ 再頒布可能パッケージを使用してアプリケーションを配置するには
 
-1.  「[チュートリアル: セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)」の手順に従って、MFC ++ アプリケーションを作成してビルドします。
+1.  「[チュートリアル: セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置](walkthrough-deploying-a-visual-cpp-application-by-using-a-setup-project.md)」の手順に従って、MFC アプリケーションを作成してビルドします。
 
 1. ファイルを作成して setup.bat という名前を付け、それに次のコマンドを追加します。 `MyMFCApplication` を自分のプロジェクトの名前に変更します。
 
@@ -85,6 +85,6 @@ ms.locfileid: "50436429"
       > [!IMPORTANT]
       > どのバージョンのランタイムがインストールされているかを判断するため、インストーラーによってレジストリ キー \HKLM\SOFTWARE\Microsoft\VisualStudio\\\<バージョン>\VC\Runtimes\\<platform> がチェックされます。 インストーラーがインストールしようとしているバージョンよりも現在インストールされているバージョンが新しい場合、インストーラーは古いバージョンをインストールせずに成功を返し、追加のエントリをコントロール パネルのインストールされているプログラム ページに残したままにします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [配置例](deployment-examples.md)<br/>

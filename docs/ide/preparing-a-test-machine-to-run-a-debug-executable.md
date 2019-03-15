@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - debug executable, preparing a test machine to run
 ms.assetid: f0400989-cc2e-4dce-9788-6bdbe91c6f5a
-ms.openlocfilehash: 95633a9b6b04be7e551934744868e10f60d51fb4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9ae5e0007105cfda233f808bf52d2d81068524be
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50509106"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744862"
 ---
 # <a name="preparing-a-test-machine-to-run-a-debug-executable"></a>デバッグ バージョンのアプリケーションを実行するテスト用コンピューターの準備
 
@@ -31,7 +31,7 @@ Visual C++ でビルドしたデバッグ バージョンのアプリケーシ�
 
 Visual C++ DLL をインストールした後、ネットワーク共有でリモート デバッガーを実行できます。 リモート デバッグの詳細については、「[リモート デバッグ](/visualstudio/debugger/remote-debugging.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual C++ での配置](../ide/deployment-in-visual-cpp.md)<br>
 [Windows インストーラーのコマンド ライン オプション](/windows/desktop/Msi/command-line-options)<br>

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - project debugging [C++]
 - debugging projects
 ms.assetid: a5cade77-ba51-4b03-a7a0-6897e3cd6a59
-ms.openlocfilehash: 85753e4842ab2377aa64384bb75e0c2dafd3f858
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4cd0f81ccf768938d585c206d5f50b20f6a0ae19
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581949"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741349"
 ---
 # <a name="walkthrough-debugging-a-project-c"></a>チュートリアル: プロジェクトのデバッグ (C++)
 
@@ -25,7 +25,8 @@ ms.locfileid: "50581949"
 
 ### <a name="to-fix-a-program-that-has-a-bug"></a>バグがあるプログラムを修正するには
 
-1. `Cardgame` オブジェクトが破棄されるとどうなるかを確認するには、`Cardgame` クラスのデストラクターを見ます。
+1. 
+  `Cardgame` オブジェクトが破棄されるとどうなるかを確認するには、`Cardgame` クラスのデストラクターを見ます。
 
    メニュー バーで **[表示]** > **[クラス ビュー]** の順に選択します。
 
@@ -47,16 +48,17 @@ ms.locfileid: "50581949"
 
 1. プログラムを実行するには、メニュー バーで **[デバッグ]** > **[ステップ オーバー]** の順に選択するか、**F10** キーを押します。
 
-   `Cardgame` コンストラクターが実行されるたびに `totalParticipants` の値が増加します。 `PlayGames` 関数が返されると、`Cardgame` インスタンスがスコープ外に出て削除される (デストラクターが呼び出される) ため、`totalParticipants` が減少します。 `return` ステートメントが実行される直前に、`totalParticipants` は 0 になります。
+   `Cardgame` コンストラクターが実行されるたびに `totalParticipants` の値が増加します。 `PlayGames` 関数が返されると、`Cardgame` インスタンスがスコープ外に出て削除される (デストラクターが呼び出される) ため、`totalParticipants` が減少します。 
+  `return` ステートメントが実行される直前に、`totalParticipants` は 0 になります。
 
 1. プログラムが終了するまで続行するか、またはメニュー バーの **[デバッグ]** > **[実行]** を選択するか **F5** キーを選択して続行します。
 
 ## <a name="next-steps"></a>次の手順
 
-**前へ:** [チュートリアル: プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
-**次へ:** [チュートリアル: プログラムの配置 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
+**前へ:**[チュートリアル:プロジェクトのテスト (C++)](../ide/walkthrough-testing-a-project-cpp.md)<br/>
+**次へ:**[チュートリアル:プログラムの配置 (C++)](../ide/walkthrough-deploying-your-program-cpp.md)<br/>
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)<br/>

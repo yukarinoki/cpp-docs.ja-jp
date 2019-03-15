@@ -2,12 +2,12 @@
 title: '移植のガイド: COM Spy'
 ms.date: 11/04/2016
 ms.assetid: 24aa0d52-4014-4acb-8052-f4e2e4bbc3bb
-ms.openlocfilehash: 67dbcc815404c26535763239eddb176fcecf03f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ca81b240a102195109c0ad6ef05bfaed10306704
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441788"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751688"
 ---
 # <a name="porting-guide-com-spy"></a>移植のガイド: COM Spy
 
@@ -164,8 +164,8 @@ private void button1_Click(object sender, EventArgs e)
 
 これは問題なく実行できました。COM Spy が起動して実行され、`Dog` コンポーネントを監視するよう構成されると、アクティビティを示す大量のデータが表示されます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[移植とアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [次の例: Spy++](../porting/porting-guide-spy-increment.md)<br/>
 [前の例: MFC Scribble](../porting/porting-guide-mfc-scribble.md)

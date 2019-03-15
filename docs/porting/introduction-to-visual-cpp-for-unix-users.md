@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: e930702862149de4dae65aab2f880f35850e0687
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50597549"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57747009"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ の紹介 (UNIX ユーザー向け)
 
@@ -37,7 +37,7 @@ Visual Studio デバッガー、IntelliSense のコード参照とステート�
 
 ## <a name="importing-your-existing-code"></a>既存のコードをインポートする
 
-C++ コンパイラを使用すれば、メイクファイルでコンパイルするように設定した (メイクファイルを使わないことも可能) 既存のコードをビルドし、Visual Studio プロジェクトに配置できます。 詳細については、「[方法 : 既存のコードから C++ プロジェクトを作成する](../ide/how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。
+C++ コンパイラを使用すれば、メイクファイルでコンパイルするように設定した (メイクファイルを使わないことも可能) 既存のコードをビルドし、Visual Studio プロジェクトに配置できます。 詳細については、「[方法 :既存のコードから C++ プロジェクトを作成する](../ide/how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。
 
 ## <a name="creating-a-new-project"></a>新規プロジェクトの作成
 
@@ -51,7 +51,8 @@ C++ コンパイラを使用すれば、メイクファイルでコンパイル�
 
 Microsoft Visual C++ コンパイラは、Windows オペレーティング システムのプログラミングをサポートする目的で、標準 C++ プログラミング言語にいくつかの拡張機能を実装します。 これらの拡張機能は、ストレージ クラス属性、関数の呼び出し規約、ベース アドレス指定などを指定するために使用されます。 サポートされているすべての C++ の拡張機能の完全な一覧については、「[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)」を参照してください。
 
-`/Za` コンパイラ オプションを使用して、C++ へのすべての Microsoft 固有の拡張機能を無効にすることができます。 複数のプラットフォームで実行するコードを記述する場合、このオプションが推奨されます。 `/Za` コンパイラ オプションの詳細については、「[/Za、/Ze (言語拡張機能の無効化)](../build/reference/za-ze-disable-language-extensions.md)」を参照してください。 C++ コンパイラの準拠の詳細については、「[Visual C++ 言語への準拠](../visual-cpp-language-conformance.md)」および「[非標準動作](../cpp/nonstandard-behavior.md)」を参照してください。
+
+  `/Za` コンパイラ オプションを使用して、C++ へのすべての Microsoft 固有の拡張機能を無効にすることができます。 複数のプラットフォームで実行するコードを記述する場合、このオプションが推奨されます。 `/Za` コンパイラ オプションの詳細については、「[/Za、/Ze (言語拡張機能の無効化)](../build/reference/za-ze-disable-language-extensions.md)」を参照してください。 C++ コンパイラの準拠の詳細については、「[Visual C++ 言語への準拠](../visual-cpp-language-conformance.md)」および「[非標準動作](../cpp/nonstandard-behavior.md)」を参照してください。
 
 ## <a name="precompiled-headers"></a>プリコンパイル済みヘッダー
 
@@ -63,6 +64,6 @@ Microsoft C および C++ コンパイラは、インライン コードを含�
 
 詳細については、「[UNIX から Win32 への移植](../porting/porting-from-unix-to-win32.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)
