@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - input files, LIB
 ms.assetid: e1236f0d-cd90-446b-b900-f311f456085c
-ms.openlocfilehash: fb0095bd9e8699fbc9a1a144833d12d2cf4a1f83
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 648871464dbc99972b8ca40579046347727e81cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423093"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808132"
 ---
 # <a name="lib-input-files"></a>LIB の入力ファイル
 
@@ -28,4 +28,4 @@ LIB で想定されている入力ファイルは、次の表に示すように�
 
 ## <a name="see-also"></a>関連項目
 
-[LIB の概要](../../build/reference/overview-of-lib.md)
+[LIB の概要](overview-of-lib.md)

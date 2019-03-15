@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nologo compiler option [C++]
 - banners, suppressing startup
 ms.assetid: 75930d8b-b11c-4db8-99e5-b52f97da0693
-ms.openlocfilehash: 7e157caa2c05f4e6283a19b993e415cf36ceb9fe
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1e48989a8e433296856ae58560823e601e36008f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419635"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812266"
 ---
 # <a name="nologo-suppress-startup-banner-cc"></a>/nologo (著作権情報の非表示) (C/C++)
 
@@ -31,7 +31,7 @@ ms.locfileid: "57419635"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -45,5 +45,5 @@ ms.locfileid: "57419635"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

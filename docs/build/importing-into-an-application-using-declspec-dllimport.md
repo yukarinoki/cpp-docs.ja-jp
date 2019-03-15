@@ -8,14 +8,14 @@ helpviewer_keywords:
 - __declspec(dllimport) keyword [C++]
 - importing DLLs [C++], __declspec(dllimport)
 ms.assetid: edb4da4e-f83a-44cf-a668-9239d49dbe42
-ms.openlocfilehash: ef01c2905dea215a1a52333ae5611ec58c5f5af4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 30e0f6517f2d749962c5cf49dddb1662c9ccf129
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419219"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810225"
 ---
-# <a name="importing-into-an-application-using-declspecdllimport"></a>__declspec(dllimport) を使ったアプリケーションへのインポート
+# <a name="import-into-an-application-using-declspecdllimport"></a>__declspec(dllimport) を使ったアプリケーションへのインポート
 
 あるプログラムが DLL によって定義されたパブリック シンボルを使うことを、シンボルをインポートすると言います。 ヘッダー ファイルを作成するときの Dll を使用して、使用すると、ビルドするアプリケーションを使用して、 **_declspec**パブリック シンボルの宣言。 キーワード **_declspec**や .def ファイルをエクスポートするかどうかの動作、**方式**キーワード。
 
@@ -45,14 +45,14 @@ class CLASS_DECLSPEC CExampleA : public CObject
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [DLL を初期化します。](../build/run-time-library-behavior.md#initializing-a-dll)
+- [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
 
 ## <a name="what-do-you-want-to-know-more-about"></a>さらに詳しくは次のトピックをクリックしてください
 
-- [インポートとエクスポートのインライン関数](../build/importing-and-exporting-inline-functions.md)
+- [インポートとエクスポートのインライン関数](importing-and-exporting-inline-functions.md)
 
-- [相互インポート](../build/mutual-imports.md)
+- [相互インポート](mutual-imports.md)
 
 ## <a name="see-also"></a>関連項目
 
-[アプリケーションへのインポート](../build/importing-into-an-application.md)
+[アプリケーションへのインポート](importing-into-an-application.md)

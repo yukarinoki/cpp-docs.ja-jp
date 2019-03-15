@@ -11,12 +11,12 @@ helpviewer_keywords:
 - MFC DLLs [MFC]
 - DLLs [MFC], creating
 ms.assetid: 4e936031-7e39-4f40-a295-42a09c5ff264
-ms.openlocfilehash: f0fbc0b943865e4c6b4145618689a267224045bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c8edfd26fc6abdcef1cbb2cfa93d88f9a37cde
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57299285"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822705"
 ---
 # <a name="mfc-dll-wizard"></a>MFC DLL ウィザード
 
@@ -40,9 +40,9 @@ MFC DLL ウィザードを使用して MFC DLL プロジェクトを作成する
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ プロジェクトの作成と管理](../../ide/creating-and-managing-visual-cpp-projects.md)<br/>
-[プロパティ ページ](../../ide/property-pages-visual-cpp.md)<br/>
-[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)<br/>
+[Visual C++ プロジェクトの作成と管理](../../build/creating-and-managing-visual-cpp-projects.md)<br/>
+[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)<br/>
+[セットのコンパイラとビルド プロパティ](../../build/working-with-project-properties.md)<br/>
 [MFC クラス](../../mfc/reference/adding-an-mfc-class.md)<br/>
 [メンバー関数の追加](../../ide/adding-a-member-function-visual-cpp.md)<br/>
 [インターフェイスの実装](../../ide/implementing-an-interface-visual-cpp.md)<br/>

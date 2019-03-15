@@ -13,12 +13,12 @@ helpviewer_keywords:
 - X compiler option
 - Ignore Standard Include Paths compiler option
 ms.assetid: 16bdf2cc-c8dc-46e4-bdcc-f3caeba5e1ef
-ms.openlocfilehash: 615a53a7ad29527187072c3131f551a76bd18969
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: dba7e49880307002a3dee983264e93666adfef17
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421372"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818402"
 ---
 # <a name="x-ignore-standard-include-paths"></a>/X (標準インクルード パスの無視)
 
@@ -32,11 +32,11 @@ ms.locfileid: "57421372"
 
 ## <a name="remarks"></a>Remarks
 
-このオプションを使用することができます、 [/I (追加インクルード ディレクトリ)](../../build/reference/i-additional-include-directories.md) (**/I**`directory`) オプション。
+このオプションを使用することができます、 [/I (追加インクルード ディレクトリ)](i-additional-include-directories.md) (**/I**`directory`) オプション。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -58,5 +58,5 @@ CL /X /I \ALT\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
