@@ -1,15 +1,15 @@
 ---
-title: '方法: ユニバーサル Windows アプリで既存の C++ コードを使用する'
+title: '方法: ユニバーサル Windows プラットフォーム アプリで既存の C++ コードを使用する'
 ms.date: 08/21/2018
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
-ms.openlocfilehash: 55fb1f3fa89f192c83effb755966158394d2fbcf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1a4633b74591e16f22def44ff5875557f2909043
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50528714"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745515"
 ---
-# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>方法: ユニバーサル Windows アプリで既存の C++ コードを使用する
+# <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>方法: ユニバーサル Windows プラットフォーム アプリで既存の C++ コードを使用する
 
 UWP 環境でデスクトップ プログラムを実行できるようにする最も簡単な方法は、おそらく、デスクトップ ブリッジ テクノロジを使うことです。 このテクノロジに含まれる Desktop App Converter は、既存のアプリケーションを UWP アプリとしてパッケージ化し、コードの変更は必要ありません。 詳細については、[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)に関するページをご覧ください。
 
@@ -153,7 +153,7 @@ UWP のプロジェクトで既存の C++ コードを使える方法は、い�
 
 5. プリコンパイル済みヘッダー ファイル名が正しいことを確認します。 **Precompiled Headers** セクションで、**プリコンパイル済みヘッダー ファイル**を pch.h から stdafx.h に変更します。 これを行わないと、次のエラーが表示されます。
 
-   > エラー C2857: /Ycpch.h コマンド ライン オプションで指定された '#include' ステートメントは、ソース ファイルに含まれていません
+   > エラー C2857: /Ycpch.h コマンド ライン オプションで指定した ' #include ' ステートメントがソース ファイル内に見つかりませんでした
 
    問題は、ユニバーサル Windows プロジェクトでプリコンパイル済みヘッダー ファイルに対して別の名前付け規則が使用されていることです。
 
@@ -229,6 +229,6 @@ UWP アプリからスタティック ライブラリのネイティブ API を�
 
 9. UWP アプリ プロジェクトからコンポーネントへの参照を追加してコンポーネントをテストし、作成したパブリック API を呼び出すコードを追加します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [ユニバーサル Windows プラットフォームへの移植](../porting/porting-to-the-universal-windows-platform-cpp.md)
