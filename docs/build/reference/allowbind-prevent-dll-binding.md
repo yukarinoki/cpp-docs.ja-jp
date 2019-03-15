@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -ALLOWBIND linker option
 - DLLs [C++], preventing binding
 ms.assetid: 30e37e24-12e4-407e-988a-39d357403598
-ms.openlocfilehash: 6b6582049dfaac47f1989a5bdf79bfac418ae4e5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd9976e434441d2480386ee6fa3d0315fd8d2ef5
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416476"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57818844"
 ---
 # <a name="allowbind-prevent-dll-binding"></a>/ALLOWBIND (DLL をバインドしない)
 
@@ -29,11 +29,11 @@ ms.locfileid: "57416476"
 
 /ALLOWBIND:NO は DLL のヘッダーにビットを設定して、イメージをバインドできないことを Bind.exe に示します。 DLL がデジタル署名されている場合はバインドしないほうがよいでしょう (バインドによって署名が無効になる)。
 
-/ALLOWBIND 機能の既存の DLL を編集することができます、 [/ALLOWBIND](../../build/reference/allowbind.md) EDITBIN ユーティリティのオプション。
+/ALLOWBIND 機能の既存の DLL を編集することができます、 [/ALLOWBIND](allowbind.md) EDITBIN ユーティリティのオプション。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 展開**構成プロパティ**、**リンカー**、選び**コマンド ライン**します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "57416476"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)<br/>
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)<br/>
 [BindImage 関数](/windows/desktop/api/imagehlp/nf-imagehlp-bindimage)<br/>
 [BindImageEx 関数](/windows/desktop/api/imagehlp/nf-imagehlp-bindimageex)

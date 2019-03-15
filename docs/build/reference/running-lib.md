@@ -26,12 +26,12 @@ helpviewer_keywords:
 - semicolon, command files
 - / command files
 ms.assetid: d54f5c81-7147-4b2c-a8db-68ce6eb1eabd
-ms.openlocfilehash: 8fdfeb16d41f51262cbd3a3814699a7b8dbc5fe4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e95427b571cd14ad39a7ba4f368b90e806f13862
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413330"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57820365"
 ---
 # <a name="running-lib"></a>LIB の実行
 
@@ -66,7 +66,7 @@ LIB のすべてのモードに、次のオプションが適用されます。
 
 使用することができます lib.exe は、実行時に失敗した場合、 **/ERRORREPORT**これらの内部エラーに関する情報を Microsoft に送信します。
 
-詳細については **/ERRORREPORT**を参照してください[/errorReport (内部コンパイラ エラーを報告する)](../../build/reference/errorreport-report-internal-compiler-errors.md)します。
+詳細については **/ERRORREPORT**を参照してください[/errorReport (内部コンパイラ エラーを報告する)](errorreport-report-internal-compiler-errors.md)します。
 
 > **/LTCG**
 
@@ -90,10 +90,10 @@ LIB 著作権メッセージとバージョン番号の表示を中止し、コ�
 
 > **/WX****[:NO]**
 
-警告をエラーとして扱います。 参照してください[/WX (リンカー警告として扱うエラー)](../../build/reference/wx-treat-linker-warnings-as-errors.md)詳細についてはします。
+警告をエラーとして扱います。 参照してください[/WX (リンカー警告として扱うエラー)](wx-treat-linker-warnings-as-errors.md)詳細についてはします。
 
 その他のオプションは、LIB の特定のモードにのみ適用されます。 これらのオプションについては、各モードの説明を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
-[LIB リファレンス](../../build/reference/lib-reference.md)
+[LIB リファレンス](lib-reference.md)

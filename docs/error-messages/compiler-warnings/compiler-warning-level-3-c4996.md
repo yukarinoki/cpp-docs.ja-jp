@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4996
 ms.assetid: 926c7cc2-921d-43ed-ae75-634f560dd317
-ms.openlocfilehash: cbb93bdba5853ed47bc3326d47bbb3c65ad7ce41
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef1bc46b64ccbe1374fd795a9b5d56e091b47f48
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472177"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57816426"
 ---
 # <a name="compiler-warning-level-3-c4996"></a>コンパイラの警告 (レベル 3) C4996
 
@@ -45,7 +45,7 @@ C4996 は、コンパイラは、関数または変数としてマークされ�
 
 Visual Studio IDE でプロジェクト全体の警告をオフにするには。
 
-- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、次を参照してください。[プロパティ ページ](../../ide/property-pages-visual-cpp.md)します。
+- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、次を参照してください。[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)します。
 - 選択、**構成プロパティ**、 **C/C++**、**詳細**ページ。
 - 編集、**特定の警告を無効にする**プロパティを追加する`4996`します。 選択**OK**変更を適用します。
 
@@ -53,7 +53,7 @@ Visual Studio IDE でプロジェクト全体の警告をオフにするには�
 
 Visual Studio では、プリプロセッサ マクロを定義します。
 
-- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、次を参照してください。[プロパティ ページ](../../ide/property-pages-visual-cpp.md)します。
+- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、次を参照してください。[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)します。
 - 展開**構成プロパティ > [C/C++] > プリプロセッサ**します。
 - **プリプロセッサの定義**プロパティ、マクロ名を追加します。 **[OK]** を選んで保存し、プロジェクトをリビルドします。
 
@@ -81,7 +81,7 @@ Microsoft には、いくつかの CRT と C++ 標準ライブラリの関数と
 
 この問題を解決するをお勧め関数または変数を使用する*safe_version*代わりにします。 バッファーの上書きのことはできませんまたは移植性のためのコードを変更することはできません overread して、コードで発生することを確認した場合は、警告をオフにできます。
 
-CRT のこれらの関数の警告をオフにするには、次のように定義します。  **\_CRT\_SECURE\_いいえ\_警告**します。 非推奨のグローバル変数に関する警告をオフにするには、次のように定義します。  **\_CRT\_SECURE\_いいえ\_警告\_GLOBALS**します。 これらの非推奨の関数とグローバル変数の詳細については、次を参照してください。 [CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)と[安全なライブラリ: C++ 標準ライブラリ](../../standard-library/safe-libraries-cpp-standard-library.md)します。
+CRT のこれらの関数の警告をオフにするには、次のように定義します。  **\_CRT\_SECURE\_いいえ\_警告**します。 非推奨のグローバル変数に関する警告をオフにするには、次のように定義します。  **\_CRT\_SECURE\_いいえ\_警告\_GLOBALS**します。 これらの非推奨の関数とグローバル変数の詳細については、次を参照してください。 [CRT のセキュリティ機能](../../c-runtime-library/security-features-in-the-crt.md)と[安全なライブラリ。C++ 標準ライブラリ](../../standard-library/safe-libraries-cpp-standard-library.md)します。
 
 ### <a name="unsafe-standard-library-functions"></a>安全でない標準ライブラリ関数
 
@@ -279,7 +279,7 @@ int main() {
 }
 ```
 
-## <a name="example-user-defined-deprecated-function"></a>例: ユーザー定義の非推奨機能
+## <a name="example-user-defined-deprecated-function"></a>例:ユーザー定義の非推奨の関数
 
 独自のコードで非推奨の属性を使用すると、不要になった特定の関数の使用を推奨するときに呼び出し元に警告します。 この例では、関数を使用している行と、非推奨の関数が宣言されている行の C4996 が生成されます。
 

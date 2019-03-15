@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: add a custom build step'
 ms.assetid: a20a0c47-4df4-4754-a1f0-a94a99958916
-ms.openlocfilehash: 57b7636c58a245bfea3a71dfb6aa7ee853329f19
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 4c64c6875d82000d6a0ac880b103b5e220015cb3
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413226"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57814008"
 ---
 # <a name="how-to-add-a-custom-build-step-to-msbuild-projects"></a>方法: MSBuild プロジェクトへのカスタム ビルド ステップを追加します。
 
@@ -27,7 +27,7 @@ ms.locfileid: "57413226"
 
 ### <a name="to-define-what-is-executed-by-the-custom-build-step"></a>カスタム ビルド ステップによって実行される対象を定義するには
 
-1. プロジェクト ファイルには、プロパティ グループを追加します。 次の例に示すように、このプロパティ グループで、コマンド、その入力と出力、およびメッセージを指定します。 この例で作成した main.cpp ファイルから .cab ファイルを作成します[チュートリアル。MSBuild を使用して、Visual C プロジェクトを作成する](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)します。
+1. プロジェクト ファイルには、プロパティ グループを追加します。 次の例に示すように、このプロパティ グループで、コマンド、その入力と出力、およびメッセージを指定します。 この例で作成した main.cpp ファイルから .cab ファイルを作成します[チュートリアル。MSBuild を使用して、Visual C プロジェクトを作成する](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)します。
 
     ```
     <ItemDefinitionGroup>
@@ -52,6 +52,6 @@ ms.locfileid: "57413226"
 
 ## <a name="see-also"></a>関連項目
 
-[チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
-[方法: MSBuild プロジェクトでビルド イベントを使用する](../build/how-to-use-build-events-in-msbuild-projects.md)<br/>
-[方法: MSBuild プロジェクトにカスタム ビルド ツールを追加する](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+[チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)<br/>
+[方法: MSBuild プロジェクトでビルド イベントを使用する](how-to-use-build-events-in-msbuild-projects.md)<br/>
+[方法: MSBuild プロジェクトにカスタム ビルド ツールを追加する](how-to-add-custom-build-tools-to-msbuild-projects.md)

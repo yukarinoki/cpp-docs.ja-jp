@@ -1,19 +1,19 @@
 ---
-title: 'チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成'
+title: 'チュートリアル: MSBuild を使用して、Visual C プロジェクトを作成するには'
 ms.date: 09/24/2018
 f1_keywords:
 - msbuild.cpp.walkthrough.createproject
 helpviewer_keywords:
 - 'msbuild (c++), walkthrough: create a project'
 ms.assetid: 52350d1c-c373-4868-923c-5e8be6f67adb
-ms.openlocfilehash: c5ccacb5e68c4f950d4ffa731fbc83decc4f10fc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c7b038ede8c03f7016c5e9f81a9db785c49da448
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677216"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57813917"
 ---
-# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成
+# <a name="walkthrough-using-msbuild-to-create-a-visual-c-project"></a>チュートリアル: MSBuild を使用して、Visual C プロジェクトを作成するには
 
 このチュートリアルでは、MSBuild を使用して、コマンド プロンプトでの Visual C プロジェクトをビルドする方法を示します。 C++ ソース ファイルと Visual C のコンソール アプリケーションの XML ベースのプロジェクト ファイルを作成する方法について説明します。 プロジェクトをビルドした後は、ビルド プロセスをカスタマイズする方法を学習します。
 
@@ -217,13 +217,15 @@ A*ビルド ターゲット*はビルド中に実行できる定義済みまた�
 
 ### <a name="using-msbuild-with-build-properties"></a>MSBuild とビルド プロパティの併用
 
-プロパティ コマンド ライン オプション (`/p`) によって、プロジェクト ビルド ファイルのプロパティをオーバーライドできます。 `myproject` サンプル プロジェクトでは、`Configuration` プロパティによってリリース用またはデバッグ用のビルド構成が指定されます。 また、ビルド済みアプリケーションを実行するためのオペレーティング システムが、`Platform` プロパティで指定されます。
+プロパティ コマンド ライン オプション (`/p`) によって、プロジェクト ビルド ファイルのプロパティをオーバーライドできます。 
+  `myproject` サンプル プロジェクトでは、`Configuration` プロパティによってリリース用またはデバッグ用のビルド構成が指定されます。 また、ビルド済みアプリケーションを実行するためのオペレーティング システムが、`Platform` プロパティで指定されます。
 
 コマンド プロンプトで次のコマンドを入力して、32 ビット Windows で実行される予定の `myproject` アプリケーションのデバッグ ビルドを作成します。
 
 `msbuild myproject.vcxproj /p:configuration=debug /p:platform=win32`
 
-`myproject` サンプル プロジェクトが、64 ビット Windows の構成と、別の `myplatform` という名前のカスタム オペレーティング システムの構成も定義していると想定します。
+
+  `myproject` サンプル プロジェクトが、64 ビット Windows の構成と、別の `myplatform` という名前のカスタム オペレーティング システムの構成も定義していると想定します。
 
 コマンド プロンプトで次のコマンドを入力して、64 ビット Windows で実行するリリース ビルドを作成します。
 
@@ -265,8 +267,8 @@ A*ビルド ターゲット*はビルド中に実行できる定義済みまた�
 
 MSBuild では、ビルド プロセスをカスタマイズするさまざまな方法を提供します。 次のトピックでは、MSBuild プロジェクトにカスタム ビルド ステップ、ツール、およびイベントを追加する方法を示します。
 
-- [方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する](../build/how-to-add-a-custom-build-step-to-msbuild-projects.md)
+- [方法: MSBuild プロジェクトにカスタム ビルド ステップを追加する](how-to-add-a-custom-build-step-to-msbuild-projects.md)
 
-- [方法: MSBuild プロジェクトにカスタム ビルド ツールを追加する](../build/how-to-add-custom-build-tools-to-msbuild-projects.md)
+- [方法: MSBuild プロジェクトにカスタム ビルド ツールを追加する](how-to-add-custom-build-tools-to-msbuild-projects.md)
 
-- [方法: MSBuild プロジェクトでビルド イベントを使用する](../build/how-to-use-build-events-in-msbuild-projects.md)
+- [方法: MSBuild プロジェクトでビルド イベントを使用する](how-to-use-build-events-in-msbuild-projects.md)

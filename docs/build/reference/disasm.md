@@ -7,12 +7,12 @@ helpviewer_keywords:
 - -DISASM dumpbin option
 - DISASM dumpbin option
 - /DISASM dumpbin option
-ms.openlocfilehash: 77f6f05029ec4480afb2180eab0bb57838d643a6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 10e8187e896b3922438a8cf2dafa0aec4c91f904
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50462947"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57822536"
 ---
 # <a name="disasm"></a>/DISASM
 
@@ -36,8 +36,8 @@ DUMPBIN 出力内のコード セクションの逆アセンブリを出力し�
 
 **/DISASM**ネイティブで管理されていないイメージでのみ使用する必要があります。 マネージ コード用の同等のツールは[ILDASM](/dotnet/framework/tools/ildasm-exe-il-disassembler)します。
 
-のみ、 [/HEADERS](../../build/reference/headers.md) DUMPBIN オプションがによって生成されたファイルで使用できる、 [/GL (プログラム全体の最適化)](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。
+のみ、 [/HEADERS](headers.md) DUMPBIN オプションがによって生成されたファイルで使用できる、 [/GL (プログラム全体の最適化)](gl-whole-program-optimization.md)コンパイラ オプション。
 
 ## <a name="see-also"></a>関連項目
 
-[DUMPBIN オプション](../../build/reference/dumpbin-options.md)
+[DUMPBIN オプション](dumpbin-options.md)

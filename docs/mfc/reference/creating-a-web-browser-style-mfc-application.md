@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Web browsers
 - Web applications [MFC], creating
 ms.assetid: 257f8c03-33c3-428c-832e-0b70aff6168d
-ms.openlocfilehash: 207a6e162da6bc14e27c575ac163b160ab8e1ac1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 12df36188bd858f73ff4834236a19583023e5f93
+ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265594"
+ms.lasthandoff: 03/15/2019
+ms.locfileid: "57809874"
 ---
 # <a name="creating-a-web-browser-style-mfc-application"></a>Web ブラウザー形式の MFC アプリケーションの作成
 
@@ -71,6 +71,7 @@ void CWebView::OnInitialUpdate()
 
 [MFC サンプル MFCIE](https://github.com/Microsoft/VCSamples)<br/>
 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)<br/>
-[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)<br/>
-[プロパティ ページ](../../ide/property-pages-visual-cpp.md)<br/>
-[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)
+[セットのコンパイラとビルド プロパティ](../../build/working-with-project-properties.md)<br/>
+[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)<br/>
+[セットのコンパイラとビルド プロパティ](../../build/working-with-project-properties.md)
+
