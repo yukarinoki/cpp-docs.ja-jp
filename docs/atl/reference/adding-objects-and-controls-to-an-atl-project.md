@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C++], adding to ATL projects
 - ATL Control Wizard
 ms.assetid: c0adcbd0-07fe-4c55-a8fd-8c2c65ecdaad
-ms.openlocfilehash: b442db405ed04c4ebf697089adf3529cd590753a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 94478f01655ff68b6b8067771eb3fdab42d1af01
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57325998"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807573"
 ---
 # <a name="adding-objects-and-controls-to-an-atl-project"></a>ATL プロジェクトへのオブジェクトやコントロールの追加
 
@@ -47,8 +47,7 @@ ATL または MFC ベースのプロジェクトにオブジェクトまたは�
 ## <a name="see-also"></a>関連項目
 
 [ATL プロジェクト ウィザード](../../atl/reference/atl-project-wizard.md)<br/>
-[Visual C++ プロジェクトの種類](../../ide/visual-cpp-project-types.md)<br/>
-[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)<br/>
+[Visual C++ プロジェクトの種類](../../build/reference/visual-cpp-project-types.md)<br/>
 [ATL COM オブジェクトの基礎](../../atl/fundamentals-of-atl-com-objects.md)<br/>
 [ATL および C ランタイム コードによるプログラミング](../../atl/programming-with-atl-and-c-run-time-code.md)<br/>
 [ATL プロジェクトの既定の構成](../../atl/reference/default-atl-project-configurations.md)

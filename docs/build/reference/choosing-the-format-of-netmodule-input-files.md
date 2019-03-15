@@ -2,16 +2,16 @@
 title: .netmodule 入力ファイルの形式の選択
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
-ms.openlocfilehash: ed492e47c09c05fc8ce2af3e19822cc5dde47b63
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420051"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807327"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>.netmodule 入力ファイルの形式の選択
 
-MSIL の .obj ファイル (でコンパイルされた[/clr](../../build/reference/clr-common-language-runtime-compilation.md)) .netmodule ファイルとしても使用できます。  .obj ファイルには、メタデータとネイティブのシンボルが含まれます。  .netmodule には、メタデータにはのみが含まれます。
+MSIL の .obj ファイル (でコンパイルされた[/clr](clr-common-language-runtime-compilation.md)) .netmodule ファイルとしても使用できます。  .obj ファイルには、メタデータとネイティブのシンボルが含まれます。  .netmodule には、メタデータにはのみが含まれます。
 
 できます/addmodule コンパイラ オプションを使用して、MSIL の .obj ファイルをその他の Visual Studio コンパイラに渡す (が .obj ファイルは、生成されたアセンブリの一部になるし、アセンブリに付属する必要がありますに注意してください)。  たとえば、Visual c# および Visual Basic には、/addmodule コンパイラ オプションがあります。
 
@@ -22,11 +22,11 @@ MSIL の .obj ファイル (でコンパイルされた[/clr](../../build/refere
 
 その他の Visual Studio コンパイラは、モジュールからのマネージ型のみを使用できます。
 
-次を使用すると、Visual C リンカーへのモジュールの入力としての .netmodule または .obj ファイルを使用するのに必要があるかどうかを決定します。
+MSVC リンカーへのモジュールの入力としての .netmodule または .obj ファイルを使用するのに必要があるかどうか判断するのにには、次を使用します。
 
 - Visual C 以外の Visual Studio コンパイラを構築している場合、.netmodule を生成およびリンカーへの入力として、.netmodule を使用します。
 
-- モジュールとモジュールがライブラリ以外のものをビルドに使用されるかどうかに生成するために、Visual C コンパイラを使用する場合は、モジュール、リンカー入力として、コンパイラによって生成された .obj ファイルを使用してください。入力としての .netmodule ファイルを使わないでください。
+- MSVC コンパイラを使用してモジュールを生成し、ライブラリ以外のものをビルドするモジュールを使用する場合は、モジュール、リンカー入力として、コンパイラによって生成された .obj ファイルを使用している場合入力としての .netmodule ファイルを使わないでください。
 
 - ネイティブ、マネージ ライブラリをビルドするモジュールを使用する場合は、リンカーへのモジュールの入力としての .obj ファイルを使用し、.lib ライブラリ ファイルを生成します。
 
@@ -36,4 +36,4 @@ MSIL の .obj ファイル (でコンパイルされた[/clr](../../build/refere
 
 ## <a name="see-also"></a>関連項目
 
-[.netmodule ファイル (リンカー入力)](../../build/reference/netmodule-files-as-linker-input.md)
+[.netmodule ファイル (リンカー入力)](netmodule-files-as-linker-input.md)

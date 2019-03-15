@@ -8,12 +8,12 @@ helpviewer_keywords:
 - DLLs [C++], exporting from
 - __declspec(dllimport) keyword [C++]
 ms.assetid: 7c44c2aa-2117-4cec-9615-a65bfd3f8f7b
-ms.openlocfilehash: 1aaf18003f831ca94ecd90dafb472ecb894b8a60
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 882010cd28c291e9f49ca0f7dd9d646c70130184
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424796"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815828"
 ---
 # <a name="importing-and-exporting"></a>インポートとエクスポート
 
@@ -27,7 +27,7 @@ ms.locfileid: "57424796"
 
 モジュール定義ファイル (.def) は、テキスト ファイルです。DLL のさまざまな属性を記述する 1 つ以上のモジュール文が含まれています。 使用しない場合 **_declspec**または**方式**DLL の関数をエクスポートする DLL に .def ファイルが必要です。
 
-.Def ファイルを使用する[アプリケーションにインポート](../build/importing-using-def-files.md)または[DLL からエクスポート](../build/exporting-from-a-dll-using-def-files.md)します。
+.Def ファイルを使用する[アプリケーションにインポート](importing-using-def-files.md)または[DLL からエクスポート](exporting-from-a-dll-using-def-files.md)します。
 
 ## <a name="using-declspec"></a>_ _Declspec を使用します。
 
@@ -41,10 +41,10 @@ C++ での visual **_declspec**と**方式**を置き換える、 **_ _export**�
 
 ## <a name="what-do-you-want-to-do"></a>実行する操作
 
-- [アプリケーションへのインポート](../build/importing-into-an-application-using-declspec-dllimport.md)
+- [アプリケーションへのインポート](importing-into-an-application-using-declspec-dllimport.md)
 
-- [DLL からのエクスポートします。](../build/exporting-from-a-dll.md)
+- [DLL からのエクスポートします。](exporting-from-a-dll.md)
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の DLL](../build/dlls-in-visual-cpp.md)
+[Visual C++ の DLL](dlls-in-visual-cpp.md)

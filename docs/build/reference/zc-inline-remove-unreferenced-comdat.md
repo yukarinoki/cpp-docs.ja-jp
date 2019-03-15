@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Zc compiler options (C++)
 - /Zc:inline
 ms.assetid: a4c94224-1d73-4bea-a9d5-4fa73dc924df
-ms.openlocfilehash: 6855773c6ec807a7488fa5604ddee7fd43983135
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 06bdb3300aae88c6c4c8f7e66af658f47548ac5a
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50441237"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820521"
 ---
 # <a name="zcinline-remove-unreferenced-comdat"></a>/Zc:inline (参照されない COMDAT の除去)
 
@@ -27,7 +27,7 @@ COMDAT であるか内部リンケージのみを持つ、参照されていな�
 
 ## <a name="remarks"></a>Remarks
 
-ときに **/Zc:inline**を指定すると、コンパイラは参照されない COMDAT 関数またはデータ、または関数または内部リンケージのみを持つデータ用のシンボル情報を生成しません。 この最適化はリリース ビルドでは、リンカーによって実行される作業の一部を簡略化またはリンカー オプション[/OPT:REF](../../build/reference/opt-optimizations.md)を指定します。 コンパイラによってこの最適化が実行されると、.obj ファイルのサイズを大幅に縮小し、リンカーの速度を向上させることができます。 最適化が無効にした場合、このコンパイラ オプションが有効にしない ([/Od](../../build/reference/od-disable-debug.md)) または[/GL (Whole Program Optimization)](../../build/reference/gl-whole-program-optimization.md)を指定します。
+ときに **/Zc:inline**を指定すると、コンパイラは参照されない COMDAT 関数またはデータ、または関数または内部リンケージのみを持つデータ用のシンボル情報を生成しません。 この最適化はリリース ビルドでは、リンカーによって実行される作業の一部を簡略化またはリンカー オプション[/OPT:REF](opt-optimizations.md)を指定します。 コンパイラによってこの最適化が実行されると、.obj ファイルのサイズを大幅に縮小し、リンカーの速度を向上させることができます。 最適化が無効にした場合、このコンパイラ オプションが有効にしない ([/Od](od-disable-debug.md)) または[/GL (Whole Program Optimization)](gl-whole-program-optimization.md)を指定します。
 
 既定では、このオプションはオフ (**/Zc:inline-**)。 [/Permissive -](permissive-standards-conformance.md)オプションが有効にしない **/Zc:inline**します。
 
@@ -121,9 +121,9 @@ void main() {
 
 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **言語**プロパティ ページ。
 
@@ -131,4 +131,4 @@ Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandar
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (準拠)](zc-conformance.md)<br/>

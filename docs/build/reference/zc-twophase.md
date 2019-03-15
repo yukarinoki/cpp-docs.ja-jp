@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: d5a53db5a5c0ae9c4cfec76e57f628499c8955c4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ebd577bc25a2789e3a6b328a4c9cd2e1596d04da
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648761"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57821404"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(2 フェーズの名前参照を無効にする)
 
@@ -134,7 +134,7 @@ NS::func(NS::S)
 
 Visual Studio 2017 バージョン 15.3 では、以前のバージョンでいつ **/Zc:twoPhase-** を指定すると、コンパイラがなく、このコードを使用できます、`template`キーワードとの引数を持つ関数テンプレートへの呼び出しと解釈します。`a || b`非常に限定された方法でテンプレートを解析するため、します。 上記のコードは、最初のフェーズでまったく解析されません。 2 番目のフェーズは、ことを識別するための十分なコンテキスト`T::Foo`変数ではなく、テンプレートは、コンパイラがキーワードの使用を強制しないようにします。
 
-この動作は、キーワードを排除することによっても表示されます`typename`関数テンプレート本体、初期化子、既定の引数、および noexcept 引数名の前にします。 例えば:
+この動作は、キーワードを排除することによっても表示されます`typename`関数テンプレート本体、初期化子、既定の引数、および noexcept 引数名の前にします。 例:
 
 ```cpp
 template<typename T>
@@ -162,7 +162,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
@@ -170,4 +170,4 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (準拠)](zc-conformance.md)<br/>

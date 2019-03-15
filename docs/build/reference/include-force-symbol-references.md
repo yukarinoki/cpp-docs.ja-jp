@@ -12,12 +12,12 @@ helpviewer_keywords:
 - symbols, add to symbol table
 - -INCLUDE linker option
 ms.assetid: 4a039677-360a-480f-bd0b-448e239b449c
-ms.openlocfilehash: 389bd16829c2466b02cb879c8bc8d43c9efa6fb4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 1f7a443e32ed20550e3017c7e6ce70f4adf5137d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421221"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810979"
 ---
 # <a name="include-force-symbol-references"></a>/INCLUDE (シンボルの明示的な参照)
 
@@ -38,11 +38,11 @@ ms.locfileid: "57421221"
 
 リンカーを解決`symbol`プログラムにシンボルの定義を含むオブジェクトを追加します。 この機能は、それ以外の場合、プログラムにはリンクいないライブラリ オブジェクトを含む場合に便利です。
 
-このオプションでシンボルを指定することによって、そのシンボルの削除よりも優先されます[/OPT:REF](../../build/reference/opt-optimizations.md)します。
+このオプションでシンボルを指定することによって、そのシンボルの削除よりも優先されます[/OPT:REF](opt-optimizations.md)します。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -56,5 +56,5 @@ ms.locfileid: "57421221"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

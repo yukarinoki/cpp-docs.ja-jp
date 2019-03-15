@@ -13,16 +13,16 @@ helpviewer_keywords:
 - common subexpression elimination
 - Og compiler option [C++]
 ms.assetid: d10630cc-b9cf-4e97-bde3-8d7ee79e9435
-ms.openlocfilehash: e8032d7dbd771ca1527c6515a779b0f532a2c658
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5e45273b6b609f1bf78504a519c1fb98e2147f76
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420870"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818532"
 ---
 # <a name="og-global-optimizations"></a>/Og (グローバルの最適化)
 
-非推奨。 ローカルとグローバルの最適化を提供して自動レジスタ割り当て、および最適化をループします。 いずれかを使用することをお勧めします。 [/O1 (サイズを最小限に抑える)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/O2 (速度)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)代わりにします。
+非推奨。 ローカルとグローバルの最適化を提供して自動レジスタ割り当て、および最適化をループします。 いずれかを使用することをお勧めします。 [/O1 (サイズを最小限に抑える)](o1-o2-minimize-size-maximize-speed.md)または[/O2 (速度)](o1-o2-minimize-size-maximize-speed.md)代わりにします。
 
 ## <a name="syntax"></a>構文
 
@@ -30,7 +30,7 @@ ms.locfileid: "57420870"
 
 ## <a name="remarks"></a>Remarks
 
-**/Og**は非推奨とされます。 これらの最適化は既定では一般的に有効になりました。 最適化の詳細については、次を参照してください。 [/O1、/O2 (サイズの最小化、速度の最大化)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最もの速度の最適化)](../../build/reference/ox-full-optimization.md)します。
+**/Og**は非推奨とされます。 これらの最適化は既定では一般的に有効になりました。 最適化の詳細については、次を参照してください。 [/O1、/O2 (サイズの最小化、速度の最大化)](o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最もの速度の最適化)](ox-full-optimization.md)します。
 
 次の最適化は **/Og**:
 
@@ -76,11 +76,11 @@ ms.locfileid: "57420870"
    > [!NOTE]
    > 有効にまたはを使用して、関数ごとにグローバルな最適化を無効にすることができます、`optimize`プラグマと組み合わせて、`g`オプション。
 
-関連情報については、次を参照してください。 [/Oi (組み込み関数の生成)](../../build/reference/oi-generate-intrinsic-functions.md)と[/Ox (有効にする最もの速度の最適化)](../../build/reference/ox-full-optimization.md)します。
+関連情報については、次を参照してください。 [/Oi (組み込み関数の生成)](oi-generate-intrinsic-functions.md)と[/Ox (有効にする最もの速度の最適化)](ox-full-optimization.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -94,8 +94,4 @@ ms.locfileid: "57420870"
 
 ## <a name="see-also"></a>関連項目
 
-[/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)
-
-[コンパイラ オプション](../../build/reference/compiler-options.md)
-
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

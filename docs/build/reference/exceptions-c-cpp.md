@@ -12,12 +12,12 @@ helpviewer_keywords:
 - ERROR_SEVERITY_ERROR exception
 - ERROR_MOD_NOT_FOUND exception
 ms.assetid: c03be05d-1c39-4f35-84cf-00c9af3bae9a
-ms.openlocfilehash: 9c86d99b365994870b991967b6cab6e6ee5c5088
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f80b99943b103dcf90c05d59df3169e0e05d79f4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422989"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811668"
 ---
 # <a name="exceptions-cc"></a>例外 (C/C++)
 
@@ -41,8 +41,8 @@ ms.locfileid: "57422989"
 
 さらに、不適切なビットを grAttrs フィールドに設定されている場合、例外が試行がスローされます。 この例外を消して、致命的です。
 
-参照してください[構造体と定数定義](../../build/reference/structure-and-constant-definitions.md)詳細についてはします。
+参照してください[構造体と定数定義](structure-and-constant-definitions.md)詳細についてはします。
 
 ## <a name="see-also"></a>関連項目
 
-[エラー処理と通知](../../build/reference/error-handling-and-notification.md)
+[エラー処理と通知](error-handling-and-notification.md)

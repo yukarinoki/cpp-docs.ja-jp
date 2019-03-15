@@ -9,12 +9,12 @@ helpviewer_keywords:
 - COFF files
 - OBJ files as linker input
 - .obj files as linker input
-ms.openlocfilehash: 17a8ea51c41fb2c17d8feb223253cf9eed722675
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c55c3181c2ddfabddce882a473e56d952a7e5d81
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616152"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816400"
 ---
 # <a name="obj-files-as-linker-input"></a>リンカー入力としての .obj ファイル
 
@@ -26,15 +26,15 @@ Microsoft では、一般的なオブジェクト ファイル形式の完全な
 
 ## <a name="unicode-support"></a>Unicode のサポート
 
-Visual Studio 2005 以降では、Microsoft Visual C コンパイラは、ISO/IEC C および C++ 標準で定義されている識別子の Unicode 文字をサポートします。 以前のバージョンのコンパイラでは、識別子で ASCII 文字のみがサポートされています。 関数、クラス、および静的変数の名前で Unicode をサポートするために、コンパイラとリンカーは、COFF シンボル .obj ファイル内の Unicode utf-8 エンコードを使用して。 Utf-8 エンコーディングは、Visual Studio の以前のバージョンで使用される ASCII エンコーディングと互換性のある上方は。
+Visual Studio 2005 以降では、Microsoft の MSVC コンパイラは、ISO/IEC C および C++ 標準で定義されている識別子に Unicode 文字をサポートします。 以前のバージョンのコンパイラでは、識別子で ASCII 文字のみがサポートされています。 関数、クラス、および静的変数の名前で Unicode をサポートするために、コンパイラとリンカーは、COFF シンボル .obj ファイル内の Unicode utf-8 エンコードを使用して。 Utf-8 エンコーディングは、Visual Studio の以前のバージョンで使用される ASCII エンコーディングと互換性のある上方は。
 
-コンパイラとリンカーの詳細については、次を参照してください。[コンパイラおよびリンカーで Unicode のサポート](../../build/reference/unicode-support-in-the-compiler-and-linker.md)します。 Unicode 規格の詳細については、次を参照してください。、 [Unicode](http://www.unicode.org/)組織。
+コンパイラとリンカーの詳細については、次を参照してください。[コンパイラおよびリンカーで Unicode のサポート](unicode-support-in-the-compiler-and-linker.md)します。 Unicode 規格の詳細については、次を参照してください。、 [Unicode](http://www.unicode.org/)組織。
 
 ## <a name="see-also"></a>関連項目
 
-[LINK の入力ファイル](../../build/reference/link-input-files.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)<br/>
+[LINK の入力ファイル](link-input-files.md)<br/>
+[MSVC リンカー オプション](linker-options.md)<br/>
 [Unicode のサポート](../../text/support-for-unicode.md)<br/>
-[コンパイラおよびリンカーでの Unicode のサポート](../../build/reference/unicode-support-in-the-compiler-and-linker.md)<br/>
+[コンパイラおよびリンカーでの Unicode のサポート](unicode-support-in-the-compiler-and-linker.md)<br/>
 [Unicode 標準](http://www.unicode.org/)<br/>
 [PE 形式](/windows/desktop/Debug/pe-format)

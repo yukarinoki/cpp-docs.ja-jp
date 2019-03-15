@@ -8,12 +8,12 @@ helpviewer_keywords:
 - dllimport attribute [C++], DEF files
 - DLLs [C++], DEF files
 ms.assetid: aefdbf50-f603-488a-b0d7-ed737bae311d
-ms.openlocfilehash: f6e553a85e6c17a3ea914365ad29ad5136e50629
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 13a6a375d6200f73dd9845d057d1954c2b65485c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424779"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815334"
 ---
 # <a name="importing-using-def-files"></a>DEF ファイルを使ったインポート
 
@@ -59,8 +59,8 @@ if (ulDataInDll == 0L)   /*sample code fragment*/
 
 余分なレベルの間接参照を使用することを忘れてしまった場合は、変数へのインポート アドレス テーブルのポインターを可能性のあるアクセスだったためよりリスクの高いは定数を使用して、変数自体ではありません。 インポート アドレス テーブルは、現在行われるため読み取り専用のコンパイラとリンカーで、この種の問題はアクセス違反としてマニフェスト多くの場合、ことができます。
 
-現在の Visual C リンカーは、このケースに対応する .def ファイル内の定数が見つかる場合に警告を発行します。 定数を使用する唯一の理由がのかどうか、ヘッダー ファイルが一覧表示されませんいくつかのオブジェクト ファイルを再コンパイルすることはできません **_declspec**プロトタイプ。
+現在、MSVC リンカーは、このケースに対応する .def ファイル内の定数が見つかる場合に警告を発行します。 定数を使用する唯一の理由がのかどうか、ヘッダー ファイルが一覧表示されませんいくつかのオブジェクト ファイルを再コンパイルすることはできません **_declspec**プロトタイプ。
 
 ## <a name="see-also"></a>関連項目
 
-[アプリケーションへのインポート](../build/importing-into-an-application.md)
+[アプリケーションへのインポート](importing-into-an-application.md)

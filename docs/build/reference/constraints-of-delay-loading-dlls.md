@@ -6,12 +6,12 @@ helpviewer_keywords:
 - delayed loading of DLLs, constraints
 - DLLs [C++], constraints
 ms.assetid: 0097ff65-550f-4a4e-8ac3-39bf6404f926
-ms.openlocfilehash: 0be2c9e0681018bb61f433f77df8fdd77ba741a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: e37890fcd757a52ddeff0ccd79289bbc0c35e042
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57420493"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816582"
 ---
 # <a name="constraints-of-delay-loading-dlls"></a>DLL の遅延読み込みの制約
 
@@ -21,7 +21,7 @@ ms.locfileid: "57420493"
 
 - 遅延読み込み Kernel32.dll はサポートされません。 この DLL は、遅延読み込みヘルパー ルーチンが遅延読み込みを実行するのに必要です。
 
-- [バインド](../../build/reference/binding-imports.md)エントリの転送されるポイントはサポートされません。
+- [バインド](binding-imports.md)エントリの転送されるポイントはサポートされません。
 
 - 遅延読み込み DLL のエントリ ポイントでプロセスごとに初期化が起こる場合、DLL の遅延読み込みでプロセスの動作が同じにならない可能性があります。 それ以外の場合は、静的 TLS (スレッド ローカル ストレージ) を使用して宣言を含める[_declspec](../../cpp/thread.md)を使用して、DLL が読み込まれるときに処理されません`LoadLibrary`します。 
   `TlsAlloc`、`TlsFree`、`TlsGetValue`、および `TlsSetValue` を使用した動的 TLS は、静的または遅延読み込み DLL で引き続き利用可能です。
@@ -34,7 +34,7 @@ ms.locfileid: "57420493"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカーによる DLL の遅延読み込み](../../build/reference/linker-support-for-delay-loaded-dlls.md)<br/>
+[リンカーによる DLL の遅延読み込み](linker-support-for-delay-loaded-dlls.md)<br/>
 [LoadLibrary 関数](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibrarya)<br/>
 [GetModuleHandle 関数](/windows/desktop/api/libloaderapi/nf-libloaderapi-getmodulehandlea)<br/>
 [GetProcAddress 関数](/windows/desktop/api/libloaderapi/nf-libloaderapi-getprocaddress)<br/>

@@ -7,16 +7,16 @@ helpviewer_keywords:
 - __delayLoadHelper2 function
 - helper functions, what's changed
 ms.assetid: 99f0be69-105d-49ba-8dd5-3be7939c0c72
-ms.openlocfilehash: 25c59d37b753c80014b566fd925363cae71798be
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cd6e842fd6d35e05f2d5a9f906713f0d85d3b80d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426525"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808002"
 ---
 # <a name="changes-in-the-dll-delayed-loading-helper-function-since-visual-c-60"></a>Visual C++ 6.0 以降の DLL 遅延読み込みヘルパー関数の変更点
 
-コンピューターに複数のバージョンの Visual C があるか、独自のヘルパー関数を定義する場合を受ける可能性がありますには、DLL に加えられた変更が遅延読み込みヘルパー関数。 例:
+コンピューターに複数のバージョンの Visual C があるか、独自のヘルパー関数を定義する場合を受ける可能性がありますには、DLL に加えられた変更が遅延読み込みヘルパー関数。 例えば:
 
 - **_ _delayloadhelper**が **_ _delayloadhelper2**
 
@@ -33,7 +33,7 @@ ms.locfileid: "57426525"
 
 コンピューターに複数のバージョンの Visual C をした場合、リンカーは、delayimp.lib と一致することを確認します。 いずれかを報告リンカー エラーが発生した不一致がある場合は`___delayLoadHelper2@8`または`___delayLoadHelper@8`未解決の外部シンボルとして。 前者を古い delayimp.lib では、新しいリンカーを意味し、後者の場合、古いリンカーを新しい delayimp.lib を意味します。
 
-未解決のリンカー エラーが発生する場合は、実行[dumpbin/linkermember](../../build/reference/linkermember.md): 1 にするヘルパー関数が代わりに定義されているヘルパー関数を含める必要のある delayimp.lib にします。 ヘルパー関数は、オブジェクト ファイルで定義することも可能性があります。実行[dumpbin/symbols](../../build/reference/symbols.md)を探して`delayLoadHelper(2)`します。
+未解決のリンカー エラーが発生する場合は、実行[dumpbin/linkermember](linkermember.md): 1 にするヘルパー関数が代わりに定義されているヘルパー関数を含める必要のある delayimp.lib にします。 ヘルパー関数は、オブジェクト ファイルで定義することも可能性があります。実行[dumpbin/symbols](symbols.md)を探して`delayLoadHelper(2)`します。
 
 わかっている場合、Visual C 6.0 リンカーが、あります。
 
@@ -51,7 +51,7 @@ ms.locfileid: "57426525"
 
 ## <a name="load-all-imports-for-a-delay-loaded-dll"></a>遅延読み込み DLL のすべてのインポートを読み込む
 
-リンカーは、遅延読み込みをするように指定した DLL からのすべてのインポートを読み込むことができます。 参照してください[すべてのインポートを「読み込み](../../build/reference/loading-all-imports-for-a-delay-loaded-dll.md)詳細についてはします。
+リンカーは、遅延読み込みをするように指定した DLL からのすべてのインポートを読み込むことができます。 参照してください[すべてのインポートを「読み込み](loading-all-imports-for-a-delay-loaded-dll.md)詳細についてはします。
 
 ## <a name="see-also"></a>関連項目
 

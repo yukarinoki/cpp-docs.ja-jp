@@ -1,6 +1,6 @@
 ---
-title: Visual C++ の DLL
-ms.date: 11/04/2016
+title: Visual Studio で C/C++ Dll を作成します。
+ms.date: 12/10/2018
 helpviewer_keywords:
 - executable files [C++]
 - dynamic linking [C++]
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - DLLs [C++]
 - DLLs [C++], about DLLs
 ms.assetid: 5216bca4-51e2-466b-b221-0e3e776056f0
-ms.openlocfilehash: be653be42b1905f1edbcf8d50f7aef2b343c2691
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5bd30c84ba202c3f772ad4451368efde10285e6c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667195"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815815"
 ---
-# <a name="dlls-in-visual-c"></a>Visual C++ の DLL
+# <a name="create-cc-dlls-in-visual-studio"></a>Visual Studio で C/C++ Dll を作成します。
 
 Windows では、ダイナミック リンク ライブラリ (DLL) はある種の関数とリソースの共有ライブラリとして機能する実行可能ファイルです。 関数を呼び出すか、別のファイルに格納されているリソースを使用する実行可能ファイルを使用するオペレーティング システムの機能は、動的リンクします。 これらの関数とリソースはコンパイルできるだけでなく、これらを使用する実行可能ファイルとは別に配置することができます。 DLL がないスタンドアロン実行可能ファイルです。これを呼び出すアプリケーションのコンテキストで実行されます。 オペレーティング システムは、アプリケーションが読み込まれるときに、アプリケーションのメモリ領域の DLL を読み込むことができます (*暗黙的リンク*)、または実行時にオンデマンドで (*明示的リンク*)。 また、DLL は、実行可能ファイル間で関数とリソースを共有しやすくします。 メモリ内の DLL の内容には、同時に複数のアプリケーションがアクセスできます。
 
@@ -61,61 +61,61 @@ Dll を使用する潜在的なデメリットは、アプリケーションが�
 
 次のトピックでは、Visual c dll のプログラミン方法に関する詳細を説明します。
 
-[チュートリアル: ダイナミック リンク ライブラリの作成と使用 (C++)](../build/walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
+[チュートリアル: ダイナミック リンク ライブラリの作成と使用 (C++)](walkthrough-creating-and-using-a-dynamic-link-library-cpp.md)<br/>
 Visual Studio を使用して DLL を作成および使用する方法について説明します。
 
-[DLL の種類](../build/kinds-of-dlls.md)<br/>
+[DLL の種類](kinds-of-dlls.md)<br/>
 ビルドできる各種 DLL に関する情報を提供します。
 
-[DLL のよく寄せられる質問](../build/dll-frequently-asked-questions.md)<br/>
+[DLL のよく寄せられる質問](dll-frequently-asked-questions.md)<br/>
 DLL に関してよく寄せられる質問への回答を示します。
 
-[実行可能ファイルと DLL のリンク](../build/linking-an-executable-to-a-dll.md)<br/>
+[実行可能ファイルと DLL のリンク](linking-an-executable-to-a-dll.md)<br/>
 DLL との明示的なリンクと暗黙的なリンクについて説明します。
 
-[DLL を初期化します。](../build/run-time-library-behavior.md#initializing-a-dll)<br/>
+[DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)<br/>
 DLL の読み込み時に実行する必要があります DLL の初期化コードをについて説明します。
 
-[DLL と Visual C++ ランタイム ライブラリの動作](../build/run-time-library-behavior.md)<br/>
+[DLL と Visual C++ ランタイム ライブラリの動作](run-time-library-behavior.md)<br/>
 ランタイム ライブラリで DLL の起動処理をどのように実行するかについて説明します。
 
-[LoadLibrary と AfxLoadLibrary](../build/loadlibrary-and-afxloadlibrary.md)<br/>
+[LoadLibrary と AfxLoadLibrary](loadlibrary-and-afxloadlibrary.md)<br/>
 使用について説明**LoadLibrary**と`AfxLoadLibrary`実行時に DLL を明示的にリンクします。
 
-[GetProcAddress](../build/getprocaddress.md)<br/>
+[GetProcAddress](getprocaddress.md)<br/>
 使用について説明**GetProcAddress** DLL でエクスポートされた関数のアドレスを取得します。
 
-[FreeLibrary と AfxFreeLibrary](../build/freelibrary-and-afxfreelibrary.md)<br/>
+[FreeLibrary と AfxFreeLibrary](freelibrary-and-afxfreelibrary.md)<br/>
 使用について説明**FreeLibrary**と`AfxFreeLibrary`DLL モジュールが不要になった場合。
 
 [ダイナミック リンク ライブラリの検索順序](/windows/desktop/Dlls/dynamic-link-library-search-order)<br/>
 Windows オペレーティング システムがシステム上の DLL を検索するために使用する検索パスについて説明します。
 
-[MFC と動的にリンクされるレギュラー MFC DLL のモジュール状態](../build/module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
+[MFC と動的にリンクされるレギュラー MFC DLL のモジュール状態](module-states-of-a-regular-dll-dynamically-linked-to-mfc.md)<br/>
 MFC と動的にリンクされている MFC DLL の通常のモジュールの状態について説明します。
 
-[MFC 拡張 DLL](../build/extension-dlls-overview.md)<br/>
+[MFC 拡張 DLL](extension-dlls-overview.md)<br/>
 既存の MFC ライブラリ クラスから派生した再利用可能なクラスを主に実装する DLL について説明します。
 
-[リソースのみの DLL の作成](../build/creating-a-resource-only-dll.md)<br/>
+[リソースのみの DLL の作成](creating-a-resource-only-dll.md)<br/>
 アイコン、ビットマップ、文字列、ダイアログ ボックスなどのリソースだけを含む、リソースのみの DLL について説明します。
 
-[MFC アプリケーションのローカライズされたリソース: サテライト DLL](../build/localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
+[MFC アプリケーションのローカライズされたリソース:サテライト DLL](localized-resources-in-mfc-applications-satellite-dlls.md)<br/>
 混合言語にローカライズされるアプリケーションの作成に役立つ、サテライト DLL のサポートを強化します。
 
-[インポートとエクスポート](../build/importing-and-exporting.md)<br/>
+[インポートとエクスポート](importing-and-exporting.md)<br/>
 アプリケーションへのパブリック シンボルのインポート、または DLL からの関数のエクスポートについて説明します。
 
-[Active テクノロジと DLL](../build/active-technology-and-dlls.md)<br/>
+[Active テクノロジと DLL](active-technology-and-dlls.md)<br/>
 オブジェクト サーバーを DLL 内部に実装できます。
 
-[DLL でのオートメーション](../build/automation-in-a-dll.md)<br/>
+[DLL でのオートメーション](automation-in-a-dll.md)<br/>
 MFC DLL ウィザードの [オートメーション] オプションについて説明します。
 
 [MFC DLL の名前付け規則](../mfc/mfc-library-versions.md#mfc-static-library-naming-conventions)<br/>
 MFC に含まれる DLL やライブラリに適用される一定の名前付け規則について説明します。
 
-[Visual Basic アプリケーションから DLL 関数を呼び出す](../build/calling-dll-functions-from-visual-basic-applications.md)<br/>
+[Visual Basic アプリケーションから DLL 関数を呼び出す](calling-dll-functions-from-visual-basic-applications.md)<br/>
 Visual Basic アプリケーションから DLL 関数を呼び出す方法について説明します。
 
 ## <a name="related-sections"></a>関連項目

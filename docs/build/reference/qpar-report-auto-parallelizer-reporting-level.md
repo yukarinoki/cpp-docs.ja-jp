@@ -2,12 +2,12 @@
 title: /Qpar-report (自動並行化レポート作成レベル)
 ms.date: 11/04/2016
 ms.assetid: 562673b9-02da-4bf8-bb64-70bc25ef4651
-ms.openlocfilehash: 4ab14f890d888664b2847f3e3d4b193d7c77da1a
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 25732900fa201258331dcb8eee96af9ba97a6def
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57419908"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818389"
 ---
 # <a name="qpar-report-auto-parallelizer-reporting-level"></a>/Qpar-report (自動並行化レポート作成レベル)
 
@@ -44,7 +44,7 @@ ms.locfileid: "57419908"
 
 ## <a name="see-also"></a>関連項目
 
-[/Q オプション (低水準の操作)](../../build/reference/q-options-low-level-operations.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
+[/Q オプション (低水準の操作)](q-options-low-level-operations.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
 [ネイティブ コードでの並列プログラミング](https://blogs.msdn.microsoft.com/nativeconcurrency/2012/04/12/auto-vectorizer-in-visual-studio-2012-overview/)

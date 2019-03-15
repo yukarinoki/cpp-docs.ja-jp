@@ -1,7 +1,8 @@
 ---
-title: コマンドラインで C/C++ コードをビルドします。
+title: コマンドラインの Visual Studio から MSVC ツールセットを使用してください。
+description: Visual Studio IDE の外部でコマンドラインから、Microsoft C コンパイラ ツール チェーン (MSVC) を使用します。
 ms.custom: conceptual
-ms.date: 06/21/2018
+ms.date: 12/10/2018
 helpviewer_keywords:
 - command-line builds [C++]
 - compiling source code [C++], command line
@@ -9,28 +10,30 @@ helpviewer_keywords:
 - command line [C++], building from
 - command line [C++], compilers
 ms.assetid: 7ca9daed-a003-4162-842d-908f79058365
-ms.openlocfilehash: bc5080ff14cf8629c98077bf1e3e39e4b824b48b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 21d1c9063a1d6dd154de8d2caca913ea3fd0ce37
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50452040"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812123"
 ---
-# <a name="build-cc-code-on-the-command-line"></a>コマンドラインで C/C++ コードをビルドします。
+# <a name="use-the-msvc-toolset-from-the-command-line"></a>コマンドラインから MSVC ツールセットを使用してください。
 
-Visual Studio に含まれているツールを使用して、コマンドラインでの C および C++ のアプリケーションを構築できます。
+Visual Studio に含まれているツールを使用して、コマンドラインでの C および C++ のアプリケーションを構築できます。 スタンドアロン パッケージとしてコンパイラ ツールセットをダウンロードすることもできます。 [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)します。
 
-## <a name="how-to-get-the-command-line-tools"></a>コマンド ライン ツールを取得する方法
+## <a name="how-to-use-the-command-line-tools"></a>コマンド ライン ツールを使用する方法
 
 Visual Studio インストーラーで C++ のワークロードのいずれかを選択すると、Visual Studio がインストールされます*プラットフォーム ツールセット*します。 プラットフォーム ツールセットには、C と C++ コンパイラ、リンカー、アセンブラー、およびその他のビルド ツールだけでなく、一致するライブラリを含む特定の Visual Studio バージョンをすべての C および C++ ツールがあります。 これらすべてのツールを使用するには、コマンドラインでと、Visual Studio IDE で内部的に使用されることもできます。 個別の x86 でホストされているし、x64 でホストされているコンパイラおよび x86、x64、ARM 用にコードを構築するためのツールと ARM64 ターゲットがあります。 特定のホストとターゲットのビルド アーキテクチャ用のツールの各セットは、独自のディレクトリに格納されます。
 
-正常に機能するには、ツールはいくつかの特定の環境変数を設定する必要があります。 これらは、パスに追加して、設定に使用されますファイル、ライブラリ ファイル、および SDK の場所が含まれます。 インストーラーによりカスタマイズされた、簡単にこれらの環境変数を設定する*コマンド ファイル*インストール時にバッチ ファイル、または。 特定のホストとターゲットのビルドのアーキテクチャ、Windows SDK のバージョン、ターゲット プラットフォーム、およびプラットフォーム ツールセットを設定するコマンド プロンプト ウィンドウで、これらのコマンド ファイルのいずれかを行うことができます。 便宜上、インストーラーも作成します。 ショートカットで、[スタート] メニュー (または Windows のスタート ページ 8.x) すべての必要な環境変数が設定され、すぐに使用するために、これらのコマンド ファイルを使用して、開発者コマンド プロンプト ウィンドウを起動します。
+インストールされているコンパイラ ツールセットは、コンピューターのプロセッサとのインストール時に選択したオプションによって異なります。 少なくとも 32 ビット x86 ネイティブ コードのビルドし、64 ビット x64 ネイティブ コードのビルド ツールを通過する 32 ビット x86 でホストされたツールがインストールされます。 64 ビット Windows の場合は、64 ビット ネイティブ コードをビルドして、32 ビット ネイティブ コードのビルド ツールをクロス 64 ビット x64 でホストされたツールもインストールされます。 省略可能な C++ ユニバーサル Windows プラットフォーム ツールをインストールするように選択すると、ARM コードをビルドする 32 ビットおよび 64 ビットのネイティブ ツールはインストールされます。 その他のワークロードには、その他のツールをインストールできます。
 
-必要な環境変数に、ビルドのアーキテクチャを選択し、製品の更新プログラムやアップグレードによって変更される可能性が、インストールに固有です。 そのため、インストールされているコマンド プロンプト ショートカットまたはコマンド ファイルのいずれかを自分で Windows の環境変数を設定する代わりに使用することを強くお勧めします。 詳細については、次を参照してください。[コマンド ライン ビルドのパスと環境変数を設定する](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)します。
+## <a name="environment-variables-and-developer-command-prompts"></a>環境変数と開発者コマンド プロンプト
 
-コマンド ライン ツールセットやコマンド ファイルは、インストールされているコマンド プロンプトのショートカットは、コンピューターのプロセッサとのインストール時に選択したオプションによって異なります。 少なくとも 32 ビット x86 ネイティブ コードのビルドし、64 ビット x64 ネイティブ コードのビルド ツールを通過する 32 ビット x86 でホストされたツールがインストールされます。 64 ビット Windows の場合は、64 ビット ネイティブ コードをビルドして、32 ビット ネイティブ コードのビルド ツールをクロス 64 ビット x64 でホストされたツールもインストールされます。 省略可能な C++ ユニバーサル Windows プラットフォーム ツールをインストールするように選択すると、ARM コードをビルドする 32 ビットおよび 64 ビットのネイティブ ツールはインストールされます。 その他のワークロードには、その他のツールをインストールできます。
+正常に機能するには、ツールはいくつかの特定の環境変数を設定する必要があります。 これらは、パスに追加して、設定に使用されますファイル、ライブラリ ファイル、および SDK の場所が含まれます。 インストーラーによりカスタマイズされた、簡単にこれらの環境変数を設定する*コマンド ファイル*インストール時にバッチ ファイル、または。 特定のホストとターゲットのビルドのアーキテクチャ、Windows SDK のバージョン、ターゲット プラットフォーム、およびプラットフォーム ツールセットを設定するコマンド プロンプト ウィンドウで、これらのコマンド ファイルのいずれかを行うことができます。 便宜上、インストーラーは、すべての必要な環境変数が設定して使用できるように、これらのコマンド ファイルを使用して、開発者コマンド プロンプト ウィンドウを起動する、[スタート] メニューのショートカットも作成します。
 
-## <a name="developer-command-prompt-shortcuts"></a>開発者コマンド プロンプト ショートカット
+必要な環境変数に、ビルドのアーキテクチャを選択し、製品の更新プログラムやアップグレードによって変更される可能性が、インストールに固有です。 そのため、インストールされているコマンド プロンプト ショートカットまたはコマンド ファイルのいずれかを自分で Windows の環境変数を設定する代わりに使用することを強くお勧めします。 詳細については、次を参照してください。[コマンド ライン ビルドのパスと環境変数を設定する](setting-the-path-and-environment-variables-for-command-line-builds.md)します。
+
+## <a name="developer_command_prompt_shortcuts"></a> 開発者コマンド プロンプト ショートカット
 
 コマンド プロンプトのショートカットは、[スタート] メニューで、バージョン固有の Visual Studio フォルダーにインストールされます。 基本のコマンド プロンプトのショートカットとサポートされるビルドのアーキテクチャの一覧を次に示します。
 
@@ -44,8 +47,7 @@ Visual Studio インストーラーで C++ のワークロードのいずれか�
 
 インストールした場合、 [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721) (これも含む、Visual Studio 2015 Update 3 のコンパイラ ツールセット) で、アーキテクチャ固有のネイティブまたはクロス ツールの開発者コマンド プロンプトのインストール オプション、および一般的ないない**開発者コマンド プロンプト**ショートカット。
 
-<a name="developer_command_prompt"></a>
-### <a name="to-open-a-developer-command-prompt-window"></a>開発者コマンド プロンプト ウィンドウを開く
+## <a name="developer_command_prompt"></a> 開発者コマンド プロンプト ウィンドウを開く
 
 1. デスクトップで開き、Windows**開始**メニューのおよび下へスクロールを検索してなど、Visual Studio のバージョンのフォルダーを開く**Visual Studio 2017**します。 いくつか以前のバージョンの Visual Studio で、ショートカットはというサブフォルダーに、 **Visual Studio Tools**します。
 
@@ -53,7 +55,7 @@ Visual Studio インストーラーで C++ のワークロードのいずれか�
 
 開発者コマンド プロンプト ウィンドウを開き、さらに高速の方法は、入力する*開発者コマンド プロンプト*デスクトップ検索ボックスで、目的の結果を選択します。
 
-## <a name="developer-command-files-and-locations"></a>開発者コマンド ファイルと場所
+## <a name="developer_command_file_locations"></a> 開発者コマンド ファイルの場所
 
 既存のコマンド プロンプト ウィンドウで、アーキテクチャのビルド環境を設定する場合は、必要な環境を設定するインストーラーによって作成されたコマンド ファイル (バッチ ファイル) のいずれかを使用できます。 推奨するだけで新しいコマンド プロンプト ウィンドウでは、これを行うし、お勧めしませんが、同じコマンド ウィンドウで後に環境を切り替えます。 これらのファイルの場所は、インストールすると、Visual Studio のバージョンおよび場所と名前付けの選択肢のインストール中に行われたによって異なります。 Visual Studio 2017 では、64 ビット コンピューター上の一般的なインストール場所は \Program Files (x86) \Microsoft Visual Studio\2017 で\\*edition*ここで、 *edition*コミュニティがあります。Professional、Enterprise、build Tools、または別の名前を指定します。 For Visual Studio 2015 では、一般的なインストール場所は、\Program Files (x86) \Microsoft Visual Studio 14.0 にします。
 
@@ -132,20 +134,20 @@ Visual Studio インストール ディレクトリを反映するようにパ�
 
 コマンドラインで C/C++ プロジェクトを作成するには、Visual Studio は、これらのコマンド ライン ツールを提供します。
 
-[CL](../build/reference/compiling-a-c-cpp-program.md)<br/>
+[CL](reference/compiling-a-c-cpp-program.md)<br/>
 コンパイラ (cl.exe) は、ソース コード ファイルをアプリ、ライブラリ、および DLL にコンパイルおよびリンクするために使用します。
 
-[リンク](../build/reference/linking.md)<br/>
+[リンク](reference/linking.md)<br/>
 リンカー (link.exe) は、コンパイルされたオブジェクト ファイルおよびライブラリをアプリおよび DLL にリンクするために使用します。
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-MSBuild (msbuild.exe) を使用すると、Visual C プロジェクトと Visual Studio ソリューションを構築できます。 これは、実行中に、**ビルド**プロジェクトまたは**ソリューションのビルド**Visual Studio IDE にコマンド。
+[MSBuild](msbuild-visual-cpp.md)<br/>
+MSBuild (msbuild.exe) とプロジェクト ファイル (.vcxproj) を使用して、ビルドを構成し、ツールセットを直接呼び出すことができません。 これは、実行中に、**ビルド**プロジェクトまたは**ソリューションのビルド**Visual Studio IDE にコマンド。 コマンドラインから MSBuild を実行して、高度なシナリオには、一般にしないでください。
 
 [DEVENV](/visualstudio/ide/reference/devenv-command-line-switches)<br/>
-コマンド ライン スイッチを組み合わせて使用 DEVENV (devenv.exe) — など **/build**または **/clean**: を実行する特定のビルド コマンド、Visual Studio IDE を表示せずします。
+コマンド ライン スイッチを組み合わせて使用 DEVENV (devenv.exe) — など **/build**または **/clean**: を実行する特定のビルド コマンド、Visual Studio IDE を表示せずします。 一般にこれは、推奨される Visual Studio で MSBuild の複雑さを処理させることができますので、直接、MSBuild を使用する場合より。
 
-[(NMAKE の)](../build/nmake-reference.md)<br/>
-NMAKE (nmake.exe) を使用すると、従来のメイクファイルを使用して Visual C プロジェクトをビルドするタスクを自動化できます。
+[(NMAKE の)](reference/nmake-reference.md)<br/>
+Windows で NMAKE (nmake.exe) を使用すると、従来のメイクファイルに基づく C++ プロジェクトを作成します。
 
 コマンドラインでビルドするときに F1 コマンドはインスタント ヘルプの使用可能なされません。 代わりに、警告、エラー、およびメッセージに関する情報を取得する検索エンジンを使用するか、オフライン ヘルプ ファイルを使用することができます。 検索を使用する[docs.microsoft.com](https://docs.microsoft.com/cpp/)ページの上部にある検索ボックスに検索文字列を入力します。
 
@@ -153,41 +155,41 @@ NMAKE (nmake.exe) を使用すると、従来のメイクファイルを使用�
 
 ドキュメントのこのセクションの記事では、コマンド ラインでアプリをビルドする方法を示し、64 ビット ツールセットを使用して x86、x64、および ARM プラットフォームを対象とするように、コマンド ライン ビルド環境をカスタマイズする方法について説明し、コマンド ライン ビルド ツール MSBuild および NMAKE を使用する方法を示します。
 
-[チュートリアル: コマンド ラインでのネイティブ C++ プログラムのコンパイル](../build/walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
+[チュートリアル: コマンド ラインでのネイティブ C++ プログラムのコンパイル](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)<br/>
 コマンド ラインで単純な C++ プログラムを作成およびコンパイルする方法を示す例があります。
 
-[チュートリアル: コマンドラインでの C プログラムをコンパイルします。](../build/walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
+[チュートリアル: コマンド ラインでの C プログラムのコンパイル](walkthrough-compile-a-c-program-on-the-command-line.md)<br/>
 C プログラミング言語で書かれたプログラムをコンパイルする方法について説明します。
 
-[チュートリアル: コマンド ラインでの C++/CLI プログラムのコンパイル](../build/walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
+[チュートリアル: コマンド ラインでの C++/CLI プログラムのコンパイル](walkthrough-compiling-a-cpp-cli-program-on-the-command-line.md)<br/>
 .NET Framework を使用する C++/CLI プログラムを作成およびコンパイルする方法について説明します。
 
-[チュートリアル: コマンド ラインでの C++/CX プログラムのコンパイル](../build/walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
+[チュートリアル: コマンド ラインでの C++/CX プログラムのコンパイル](walkthrough-compiling-a-cpp-cx-program-on-the-command-line.md)<br/>
 Windows ランタイムを使用する C++/CX プログラムを作成およびコンパイルする方法について説明します。
 
-[コマンド ライン ビルドのパスと環境変数の設定](../build/setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
+[コマンド ライン ビルドのパスと環境変数の設定](setting-the-path-and-environment-variables-for-command-line-builds.md)<br/>
 必要な環境変数ターゲット x86、x64、コマンド ライン ビルドの設定し、プラットフォームを 32 ビットまたは 64 ビット ツールセットを使用して ARM を持つコマンド プロンプト ウィンドウを起動する方法について説明します。
 
-[NMAKE リファレンス](../build/nmake-reference.md)<br/>
+[NMAKE リファレンス](reference/nmake-reference.md)<br/>
 NMAKE.EXE (Microsoft Program Maintenance Utility) について説明する記事へのリンクがあります。
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-MSBuild.EXE の使用方法について説明する記事へのリンクがあります。
+[コマンド ライン - C++ での MSBuild](msbuild-visual-cpp.md)<br/>
+コマンドラインから msbuild.exe を使用する方法について説明する記事へのリンクを提供します。
 
 ## <a name="related-sections"></a>関連項目
 
-[/MD、/MT、/LD (ランタイム ライブラリの使用)](../build/reference/md-mt-ld-use-run-time-library.md)<br/>
+[/MD、/MT、/LD (ランタイム ライブラリの使用)](reference/md-mt-ld-use-run-time-library.md)<br/>
 デバッグ バージョンまたはリリース バージョンのランタイム ライブラリを使用するための、コンパイラ オプションの使用方法について説明します。
 
-[C/C++ コンパイラ オプション](../build/reference/compiler-options.md)<br/>
+[C/C++ コンパイラ オプション](reference/compiler-options.md)<br/>
 C と C++ のコンパイラ オプションおよび CL.exe に関する記事へのリンクがあります。
 
-[リンカー オプション](../build/reference/linker-options.md)<br/>
+[MSVC リンカー オプション](reference/linker-options.md)<br/>
 リンカー オプションおよび LINK.exe に関する記事へのリンクがあります。
 
-[C/C++ のビルド ツール](../build/reference/c-cpp-build-tools.md)<br/>
+[追加の MSVC ビルド ツール](reference/c-cpp-build-tools.md)<br/>
 Visual Studio に含まれているツールをビルドする C と C++ へのリンクを提供します。
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)
+[プロジェクトおよびビルド システム](projects-and-build-systems-cpp.md)

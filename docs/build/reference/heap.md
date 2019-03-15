@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -HEAP editbin option
 - /HEAP editbin option
 ms.assetid: 6ce759b5-75b7-44ff-a5fd-3a83a0ba9a48
-ms.openlocfilehash: 24470c00afce54bab0a15dd08e03cef6dfee63fc
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: fcf557b467ba5bd04352ba2f2702659a1eb2948d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415254"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810355"
 ---
 # <a name="heap"></a>/HEAP
 
@@ -28,7 +28,7 @@ reserve[,commit]
 
 ## <a name="remarks"></a>Remarks
 
-`reserve`引数は、仮想メモリの合計の初期ヒープ割り当てを指定します。 既定では、ヒープ サイズは、1 MB です。 [EDITBIN リファレンス](../../build/reference/editbin-reference.md)指定した値は 4 バイトの倍数に丸めます。
+`reserve`引数は、仮想メモリの合計の初期ヒープ割り当てを指定します。 既定では、ヒープ サイズは、1 MB です。 [EDITBIN リファレンス](editbin-reference.md)指定した値は 4 バイトの倍数に丸めます。
 
 省略可能な`commit`引数は、オペレーティング システムによって解釈されるは。 Windows オペレーティング システムで割り当てるには、物理メモリの初期量と、ヒープを展開する必要がありますを割り当てるための追加のメモリの量を指定します。 仮想メモリがコミットされると、ページング ファイル内にメモリ空間が予約されます。 高度な`commit`値は、アプリは、ヒープ領域を増やす必要がありますが、メモリの量とアプリのスタートアップ時間が増加しているときに多くの場合、メモリの少ない割り当てにシステムを使用します。 `commit`値に等しいまたはそれよりも小さくなければなりません、`reserve`値。
 
@@ -36,4 +36,4 @@ reserve[,commit]
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)
+[EDITBIN オプション](editbin-options.md)

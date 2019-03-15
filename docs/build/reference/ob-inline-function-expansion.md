@@ -24,12 +24,12 @@ helpviewer_keywords:
 - Ob0 compiler option [C++]
 - inline expansion, compiler option
 ms.assetid: f134e6df-e939-4980-a01d-47425dbc562a
-ms.openlocfilehash: 6406b604ab74d29d8bc6c9bc0920fd0cf0bd055b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6bf16e5725916e81e64d80c0a1f96bf502c8826c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426148"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807500"
 ---
 # <a name="ob-inline-function-expansion"></a>/Ob (関数のインライン展開)
 
@@ -51,7 +51,7 @@ ms.locfileid: "57426148"
 既定値。 
   `inline`、`__inline`、または `__forceinline` としてマークされた関数の展開、およびコンパイラが選択するその他すべての関数が許可されます。
 
-**/Ob2**ときは、 [/O1、/O2 (サイズの最小化、速度の最大化)](../../build/reference/o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最もの速度の最適化)](../../build/reference/ox-full-optimization.md)使用されます。
+**/Ob2**ときは、 [/O1、/O2 (サイズの最小化、速度の最大化)](o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最もの速度の最適化)](ox-full-optimization.md)使用されます。
 
 このオプションを使用して最適化を有効にする必要があります **/O1**、 **/O2**、 **/Ox**、または **/Og**します。
 
@@ -62,11 +62,11 @@ ms.locfileid: "57426148"
 使用することができます、 `#pragma` [auto_inline](../../preprocessor/auto-inline.md)関数をインライン展開の候補として考慮の対象から除外するディレクティブ。 また、 `#pragma` [組み込み](../../preprocessor/intrinsic.md)ディレクティブ。
 
 > [!NOTE]
-> プロファイリングのテスト実行から収集される情報にはそれ以外の場合に効果を指定する場合の最適化よりも優先されます **/Ob**、 **/Os**、または **/Ot**します。 詳細については、次を参照してください。[ガイド付き最適化の](../../build/reference/profile-guided-optimizations.md)します。
+> プロファイリングのテスト実行から収集される情報にはそれ以外の場合に効果を指定する場合の最適化よりも優先されます **/Ob**、 **/Os**、または **/Ot**します。 詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 展開**構成プロパティ**、 **C/C++**、選択と**最適化**します。
 
@@ -78,6 +78,6 @@ ms.locfileid: "57426148"
 
 ## <a name="see-also"></a>関連項目
 
-[/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[/O オプション (コードの最適化)](o-options-optimize-code.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

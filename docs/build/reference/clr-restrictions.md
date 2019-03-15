@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: 205345a4261f5db8eb80b3bda6e5ea55544a33d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50639347"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816101"
 ---
 # <a name="clr-restrictions"></a>/clr の制約
 
@@ -17,7 +17,7 @@ ms.locfileid: "50639347"
 
 - 構造化例外ハンドラーでは、使用に関する制限事項`_alloca`でコンパイルするときに **/clr**します。 詳細については、次を参照してください。 [_alloca](../../c-runtime-library/reference/alloca.md)します。
 
-- 実行時エラー チェックの使用に無効な **/clr**します。 詳細については、「[How to: Use Native Run-Time Checks (方法: ネイティブ ランタイム チェックを使用する)](/visualstudio/debugger/how-to-use-native-run-time-checks)」をご覧ください。
+- 実行時エラー チェックの使用に無効な **/clr**します。 詳細については、「[方法 :ネイティブ ランタイム チェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)」を参照してください。
 
 - ときに **/clr**はのみに C++ の標準構文を使用するプログラムをコンパイルするために使用、インライン アセンブリの使用に次のガイドラインが適用されます。
 
@@ -37,36 +37,36 @@ ms.locfileid: "50639347"
 
 - 次のコンパイラ オプションはサポートされていません **/clr**:
 
-  - **/EHsc**と **/EHs** (**/clr**意味 **/EHa** (を参照してください[/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md))
+  - **/EHsc**と **/EHs** (**/clr**意味 **/EHa** (を参照してください[/EH (例外処理モデル)](eh-exception-handling-model.md))
 
-  - **/fp: 厳密な**と **/fp: 除く**(を参照してください[/fp (浮動小数点の動作の指定)](../../build/reference/fp-specify-floating-point-behavior.md))
+  - **/fp: 厳密な**と **/fp: 除く**(を参照してください[/fp (浮動小数点の動作の指定)](fp-specify-floating-point-behavior.md))
 
-  - [/Zd](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/Zd](z7-zi-zi-debug-information-format.md)
 
-  - [/Gm](../../build/reference/gm-enable-minimal-rebuild.md)
+  - [/Gm](gm-enable-minimal-rebuild.md)
 
-  - [/MT](../../build/reference/md-mt-ld-use-run-time-library.md)
+  - [/MT](md-mt-ld-use-run-time-library.md)
 
-  - [/RTC](../../build/reference/rtc-run-time-error-checks.md)
+  - [/RTC](rtc-run-time-error-checks.md)
 
-  - [/ZI](../../build/reference/z7-zi-zi-debug-information-format.md)
+  - [/ZI](z7-zi-zi-debug-information-format.md)
 
-- 組み合わせ、`_STATIC_CPPLIB`プリプロセッサの定義 (`/D_STATIC_CPPLIB`) および **/clr**コンパイラ オプションはサポートされていません。 これは、定義は、静的なマルチ スレッド C++ 標準ライブラリ、サポートされていないとリンクするアプリケーションになるためです。 詳細については、次を参照してください。、 [/MD、/MT、/LD (ランタイム ライブラリの使用)](../../build/reference/md-mt-ld-use-run-time-library.md)トピック。
+- 組み合わせ、`_STATIC_CPPLIB`プリプロセッサの定義 (`/D_STATIC_CPPLIB`) および **/clr**コンパイラ オプションはサポートされていません。 これは、定義は、静的なマルチ スレッド C++ 標準ライブラリ、サポートされていないとリンクするアプリケーションになるためです。 詳細については、次を参照してください。、 [/MD、/MT、/LD (ランタイム ライブラリの使用)](md-mt-ld-use-run-time-library.md)トピック。
 
-- 使用する場合 **/Zi**で **/clr**パフォーマンスに影響があります。 詳細については、次を参照してください。 [/Zi](../../build/reference/z7-zi-zi-debug-information-format.md)します。
+- 使用する場合 **/Zi**で **/clr**パフォーマンスに影響があります。 詳細については、次を参照してください。 [/Zi](z7-zi-zi-debug-information-format.md)します。
 
-- 指定しないルーチンを出力する .NET Framework にワイド文字を渡す[/Zc:wchar_t](../../build/reference/zc-wchar-t-wchar-t-is-native-type.md)に文字をキャストしていない場合、または`__wchar_t`として表示される出力になります、`unsigned short int`します。 例えば:
+- 指定しないルーチンを出力する .NET Framework にワイド文字を渡す[/Zc:wchar_t](zc-wchar-t-wchar-t-is-native-type.md)に文字をキャストしていない場合、または`__wchar_t`として表示される出力になります、`unsigned short int`します。 例:
 
     ```cpp
     Console::WriteLine(L' ')              // Will output 32.
     Console::WriteLine((__wchar_t)L' ')   // Will output a space.
     ```
 
-- [/GS](../../build/reference/gs-buffer-security-check.md)でコンパイルする場合は無視されます **/clr**関数がある場合を除き、 `#pragma` [アンマネージ](../../preprocessor/managed-unmanaged.md)場合、コンパイラは生成場合は、関数は、ネイティブにコンパイルする必要があります、または警告 C4793 で、既定ではオフです。
+- [/GS](gs-buffer-security-check.md)でコンパイルする場合は無視されます **/clr**関数がある場合を除き、 `#pragma` [アンマネージ](../../preprocessor/managed-unmanaged.md)場合、コンパイラは生成場合は、関数は、ネイティブにコンパイルする必要があります、または警告 C4793 で、既定ではオフです。
 
-- 参照してください[/ENTRY](../../build/reference/entry-entry-point-symbol.md)のマネージ アプリケーションの関数署名要件。
+- 参照してください[/ENTRY](entry-entry-point-symbol.md)のマネージ アプリケーションの関数署名要件。
 
-- コンパイルされたアプリケーション **/openmp**と **/clr** 1 つの appdomain のプロセスでのみ実行できます。  参照してください[/openmp (OpenMP 2.0 サポートの有効化)](../../build/reference/openmp-enable-openmp-2-0-support.md)詳細についてはします。
+- コンパイルされたアプリケーション **/openmp**と **/clr** 1 つの appdomain のプロセスでのみ実行できます。  参照してください[/openmp (OpenMP 2.0 サポートの有効化)](openmp-enable-openmp-2-0-support.md)詳細についてはします。
 
 - ネイティブ関数としては、可変個の引数 (vararg) を受け取る関数が生成されます。 可変個引数の位置に任意のマネージ データ型は、ネイティブ型にマーシャ リングされます。 なお<xref:System.String?displayProperty=fullName>型は、実際にはワイド文字の文字列が、それらが 1 バイト文字の文字列をマーシャ リングします。 したがって、printf 関数指定子が %S (wchar_t *) の場合にマーシャ リング %s 文字列に代わりにします。
 
@@ -88,4 +88,4 @@ ms.locfileid: "50639347"
 
 ## <a name="see-also"></a>関連項目
 
-- [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)
+- [/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)

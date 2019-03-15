@@ -2,12 +2,12 @@
 title: Visual C++ の ARM への移行に関する一般的な問題
 ms.date: 11/04/2016
 ms.assetid: 0f4c434e-0679-4331-ba0a-cc15dd435a46
-ms.openlocfilehash: 6aea623bc9f096265decbe91ccdc5d5f1f6ecef1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a39e1d5e26a62cafa093067bb42f33178a1af6af
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50618514"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816257"
 ---
 # <a name="common-visual-c-arm-migration-issues"></a>Visual C++ の ARM への移行に関する一般的な問題
 
@@ -92,7 +92,7 @@ Handle::acquire(operator->(memory_handle), operator*(p));
 
 ### <a name="volatile-keyword-default-behavior"></a>volatile キーワードの既定の動作
 
-MSVC コンパイラ サポートの 2 つの異なる解釈、`volatile`記憶域の修飾子をコンパイラ スイッチを使用して指定することができます。 [/Volatile:ms](../build/reference/volatile-volatile-keyword-interpretation.md)スイッチは、それらのアーキテクチャの強力なメモリ モデルであるため、x86 と x64 用の従来のケースが済みとしての厳密な順序は保証揮発性のセマンティクスを拡張する Microsoft を選択します。 [/Volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)スイッチは、厳密な C++ 標準揮発性のセマンティクスを厳密な順序は保証されないを選択します。
+MSVC コンパイラ サポートの 2 つの異なる解釈、`volatile`記憶域の修飾子をコンパイラ スイッチを使用して指定することができます。 [/Volatile:ms](reference/volatile-volatile-keyword-interpretation.md)スイッチは、それらのアーキテクチャの強力なメモリ モデルであるため、x86 と x64 用の従来のケースが済みとしての厳密な順序は保証揮発性のセマンティクスを拡張する Microsoft を選択します。 [/Volatile:iso](reference/volatile-volatile-keyword-interpretation.md)スイッチは、厳密な C++ 標準揮発性のセマンティクスを厳密な順序は保証されないを選択します。
 
 既定値は、ARM アーキテクチャに **/volatile:iso** ARM プロセッサがあるメモリ モデルでは、順序付けられた十分ではないため、および ARM のソフトウェアは、従来の拡張のセマンティクスに頼る必要があるないため **/volatile:ms**がない、通常とはソフトウェアとのインターフェイス。 ただし、場合によって不便または拡張のセマンティクスを使用して、ARM プログラムをコンパイルする必須です。 たとえば、ISO C のセマンティクスを使用するプログラムを移植するコストがかかりすぎる可能性があるまたはドライバー ソフトウェアが正常に機能する従来のセマンティクスに準拠する必要があります。 このような場合は、使用することができます、 **/volatile:ms**スイッチただし、ARM のターゲットに従来の揮発性のセマンティクスを再作成するコンパイラする必要がありますメモリ バリアを挿入ごとの読み取りまたは書き込みの周りを`volatile`変数が強制するには。厳密な順序では、パフォーマンスに悪影響を及ぼすことができます。
 
@@ -100,4 +100,4 @@ MSVC コンパイラ サポートの 2 つの異なる解釈、`volatile`記憶�
 
 ## <a name="see-also"></a>関連項目
 
-[ARM プロセッサ用の Visual C ++ の構成する](../build/configuring-programs-for-arm-processors-visual-cpp.md)
+[ARM プロセッサ用の Visual C ++ の構成する](configuring-programs-for-arm-processors-visual-cpp.md)

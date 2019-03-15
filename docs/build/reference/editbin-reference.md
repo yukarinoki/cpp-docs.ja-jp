@@ -9,12 +9,12 @@ helpviewer_keywords:
 - EDITBIN program
 - COFF files, editing
 ms.assetid: efdda03b-3dfc-4d31-90e6-caf5b3977914
-ms.openlocfilehash: 39fdcfd3221599f20617092118e5cef5267e3d2b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 45c2967a55e85ae31bb77bb2e8d50415eafbea46
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418790"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807912"
 ---
 # <a name="editbin-reference"></a>EDITBIN リファレンス
 
@@ -23,12 +23,12 @@ Microsoft COFF バイナリ ファイル エディター (EDITBIN します。EX
 > [!NOTE]
 >  このツールは、Visual Studio コマンド プロンプトからのみ開始できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。
 
-EDITBIN がで生成されたファイルで使用できる、 [/GL](../../build/reference/gl-whole-program-optimization.md)コンパイラ オプション。 /GL で生成されたバイナリ ファイルの変更は、再コンパイルとリンクで実現する必要があります。
+EDITBIN がで生成されたファイルで使用できる、 [/GL](gl-whole-program-optimization.md)コンパイラ オプション。 /GL で生成されたバイナリ ファイルの変更は、再コンパイルとリンクで実現する必要があります。
 
-- [EDITBIN コマンドライン](../../build/reference/editbin-command-line.md)
+- [EDITBIN コマンドライン](editbin-command-line.md)
 
-- [EDITBIN オプション](../../build/reference/editbin-options.md)
+- [EDITBIN オプション](editbin-options.md)
 
 ## <a name="see-also"></a>関連項目
 
-[C と C++ のビルド ツール](../../build/reference/c-cpp-build-tools.md)
+[追加の MSVC ビルド ツール](c-cpp-build-tools.md)

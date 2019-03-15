@@ -2,16 +2,16 @@
 title: /arch (x86)
 ms.date: 11/04/2016
 ms.assetid: 9dd5a75d-06e4-4674-aade-33228486078d
-ms.openlocfilehash: e2aba6dc18db621710b5293f9f970fa5f453b8a9
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a429824a7c22aa9aba460481394785d31b92a5ef
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421808"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812253"
 ---
 # <a name="arch-x86"></a>/arch (x86)
 
-x86 でコード生成のアーキテクチャを指定します。 参照してください[/arch (x64)](../../build/reference/arch-x64.md)と[/arch (ARM)](../../build/reference/arch-arm.md)します。
+x86 でコード生成のアーキテクチャを指定します。 参照してください[/arch (x64)](arch-x64.md)と[/arch (ARM)](arch-arm.md)します。
 
 ## <a name="syntax"></a>構文
 
@@ -48,9 +48,9 @@ SSE 命令および SSE2 命令は、さまざまな Intel プロセッサおよ
 
 指定する必要がありますが、x86 コンパイラ生成では、既定で SSE2 命令を使用するがコード、 **/arch:IA32** x86 の SSE 命令と SSE2 命令の生成を無効にするプロセッサ。
 
-**/arch**だけでネイティブ関数の生成のコードに影響します。 使用すると[/clr](../../build/reference/clr-common-language-runtime-compilation.md)をコンパイルする **/arch**マネージ関数のコード生成に影響を与えません。
+**/arch**だけでネイティブ関数の生成のコードに影響します。 使用すると[/clr](clr-common-language-runtime-compilation.md)をコンパイルする **/arch**マネージ関数のコード生成に影響を与えません。
 
-**/arch**と[/QIfist](../../build/reference/qifist-suppress-ftol.md)同じコンパイル単位では使用できません。 特に、ユーザーが `_controlfp` を使用して FP 制御ワードを変更しない場合、ランタイム スタートアップ コードでは x87 FPU 制御ワードの精度制御フィールドが 53 ビットに設定されます。 そのため、式内のすべての浮動小数点演算と倍精度浮動小数点演算は、53 ビットの有効桁と 15 ビットの指数部を使用します。 ただし、すべての SSE 単精度浮動小数点演算では、24 ビットの有効桁と 8 ビットの指数部が使用され、SSE2 倍精度浮動小数点演算では、53 ビットの有効桁と 11 ビットの指数部が使用されます。 詳細については、「[_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)」を参照してください。 これらの差異は、ユーザーの代入が各部分式の後に行われる場合ではなく、単一の式ツリー内で発生する可能性があります。 次に例を示します。
+**/arch**と[/QIfist](qifist-suppress-ftol.md)同じコンパイル単位では使用できません。 特に、ユーザーが `_controlfp` を使用して FP 制御ワードを変更しない場合、ランタイム スタートアップ コードでは x87 FPU 制御ワードの精度制御フィールドが 53 ビットに設定されます。 そのため、式内のすべての浮動小数点演算と倍精度浮動小数点演算は、53 ビットの有効桁と 15 ビットの指数部を使用します。 ただし、すべての SSE 単精度浮動小数点演算では、24 ビットの有効桁と 8 ビットの指数部が使用され、SSE2 倍精度浮動小数点演算では、53 ビットの有効桁と 11 ビットの指数部が使用されます。 詳細については、「[_control87、_controlfp、\__control87_2](../../c-runtime-library/reference/control87-controlfp-control87-2.md)」を参照してください。 これらの差異は、ユーザーの代入が各部分式の後に行われる場合ではなく、単一の式ツリー内で発生する可能性があります。 次に例を示します。
 
 ```cpp
 r = f1 * f2 + d;  // Different results are possible on SSE/SSE2.
@@ -66,7 +66,7 @@ r = t + d;     // This should produce the same overall result
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>AVX、AVX2、IA32、SSE、または SSE2 のこのコンパイラ オプションを Visual Studio で設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ**、 **C/C++** フォルダー。
 
@@ -80,6 +80,6 @@ r = t + d;     // This should produce the same overall result
 
 ## <a name="see-also"></a>関連項目
 
-[/arch (最小限の CPU アーキテクチャ)](../../build/reference/arch-minimum-cpu-architecture.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[/arch (最小限の CPU アーキテクチャ)](arch-minimum-cpu-architecture.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

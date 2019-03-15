@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '@ linker option'
 - response files, C/C++ linker
 ms.assetid: 5530014f-17d0-4f6b-a6b0-a6ba34f34cfd
-ms.openlocfilehash: 32c100a5b7388c71081c46200ec8aea047ccf0d4
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e595857a6089c59aa6638ed51acacae3a0eb5e9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412472"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816504"
 ---
 # <a name="-specify-a-linker-response-file"></a>@ (リンカー応答ファイルの指定)
 
@@ -32,7 +32,7 @@ ms.locfileid: "57412472"
 
 ## <a name="remarks"></a>Remarks
 
-参照してください[@ (コンパイラ応答ファイルを指定してください)](../../build/reference/at-specify-a-compiler-response-file.md)詳細についてはします。
+参照してください[@ (コンパイラ応答ファイルを指定してください)](at-specify-a-compiler-response-file.md)詳細についてはします。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
@@ -44,5 +44,5 @@ ms.locfileid: "57412472"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

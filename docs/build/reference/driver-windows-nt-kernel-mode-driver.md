@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DRIVER linker option
 - /DRIVER linker option
 ms.assetid: aeee8e28-5d97-40f5-ba16-9f370fe8a1b8
-ms.openlocfilehash: 596566c357dd78d656e5e564a9b0f9097d20637e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ab7253d7e386bf385bcb3a586c5e0e1c1e860694
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423912"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811681"
 ---
 # <a name="driver-windows-nt-kernel-mode-driver"></a>/DRIVER (Windows NT カーネル モード ドライバー)
 
@@ -33,13 +33,13 @@ ms.locfileid: "57423912"
 
 場合 **/DRIVER**を指定します。
 
-- **/FIXED:NO**が有効になっています。 詳細については、「[/FIXED (固定ベース アドレス)](../../build/reference/fixed-fixed-base-address.md)」を参照してください。
+- **/FIXED:NO**が有効になっています。 詳細については、「[/FIXED (固定ベース アドレス)](fixed-fixed-base-address.md)」を参照してください。
 
-- 出力ファイルの拡張機能は、.sys に設定されます。 使用 **/out**既定のファイル名と拡張子を変更します。 詳細については、「[/OUT (出力ファイル名)](../../build/reference/out-output-file-name.md)」を参照してください。
+- 出力ファイルの拡張機能は、.sys に設定されます。 使用 **/out**既定のファイル名と拡張子を変更します。 詳細については、「[/OUT (出力ファイル名)](out-output-file-name.md)」を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -53,5 +53,5 @@ ms.locfileid: "57423912"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

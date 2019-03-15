@@ -12,12 +12,12 @@ helpviewer_keywords:
 - -Oi compiler option [C++]
 - generate intrinsic functions compiler option [C++]
 ms.assetid: fa4a3bf6-0ed8-481b-91c0-add7636132b4
-ms.openlocfilehash: 1dc7f5f183e7dffb65c31ebb9bc47b30776b81e3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f3afedade6f99129c21069e5117daa4ceb616cc2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422118"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57811889"
 ---
 # <a name="oi-generate-intrinsic-functions"></a>/Oi (組み込み関数の生成)
 
@@ -41,7 +41,7 @@ ms.locfileid: "57422118"
 
 浮動小数点の組み込み関数がなく入力値に対して、特別なチェックを実行しそのため、入力の範囲の制限で作業、さまざまな例外処理と同じ名前のライブラリ ルーチンより境界条件。 本物の組み込み形式を使用して、IEEE 例外処理の損失とのことを意味`_matherr`と`errno`機能です。 後者の ansi 規格適合性が失われることを意味します。 ただし、組み込み形式は、浮動小数点を多用するプログラムをかなり高速化でき、準拠の問題が実用的価値のほとんどは、多くのプログラムにします。
 
-使用することができます、 [Za](../../build/reference/za-ze-disable-language-extensions.md)コンパイラ オプションを true 組み込み浮動小数点オプションの生成をオーバーライドします。 浮動小数点関数はライブラリ ルーチンとして生成されます。これらのライブラリ ルーチンでは、引数はプログラム スタックにプッシュされずに、数値演算コプロセッサに直接渡されます。
+使用することができます、 [Za](za-ze-disable-language-extensions.md)コンパイラ オプションを true 組み込み浮動小数点オプションの生成をオーバーライドします。 浮動小数点関数はライブラリ ルーチンとして生成されます。これらのライブラリ ルーチンでは、引数はプログラム スタックにプッシュされずに、数値演算コプロセッサに直接渡されます。
 
 **END x86 固有**
 
@@ -49,7 +49,7 @@ ms.locfileid: "57422118"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -63,7 +63,7 @@ ms.locfileid: "57422118"
 
 ## <a name="see-also"></a>関連項目
 
-[/O オプション (コードの最適化)](../../build/reference/o-options-optimize-code.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
+[/O オプション (コードの最適化)](o-options-optimize-code.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
 [コンパイラの組み込み](../../intrinsics/compiler-intrinsics.md)

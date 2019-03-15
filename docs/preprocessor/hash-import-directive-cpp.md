@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 8029adfd5b4f27e097df693c85ee0d711a13dc4e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612369"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822627"
 ---
 # <a name="import-directive-c"></a>#import ディレクティブ (C++)
 
@@ -49,7 +49,7 @@ ms.locfileid: "50612369"
 
    64 ビット オペレーティング システム上でクロス コンパイラによりコンパイルを実行した場合、コンパイラは 32 ビット レジストリ ハイブのみ読み取り可能になることに注意してください。 ネイティブ 64 ビット コンパイラを使用して、64 ビットのタイプ ライブラリをビルドおよび登録した方がよい場合があります。
 
-- タイプ ライブラリのライブラリ ID。 キーワード、 **libid:**、各ライブラリ ID の前に記述できます 例えば:
+- タイプ ライブラリのライブラリ ID。 キーワード、 **libid:**、各ライブラリ ID の前に記述できます 例:
 
     ```cpp
     #import "libid:12341234-1234-1234-1234-123412341234" version("4.0") lcid("9")
@@ -72,7 +72,7 @@ ms.locfileid: "50612369"
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
 ```
 
-\-または、
+\- または -
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace raw_interfaces_only
@@ -91,7 +91,7 @@ ms.locfileid: "50612369"
 
 ##  <a name="_predir_the_23import_directive_specifyingthelocalizationidandversionnumber"></a> ローカリゼーション ID とバージョン番号を指定します。
 
-progid を指定するときに、progid のローカリゼーション ID とバージョン番号も指定できます。 例えば:
+progid を指定するときに、progid のローカリゼーション ID とバージョン番号も指定できます。 例:
 
 ```cpp
 #import "progid:my.prog.id" lcid("0") version("4.0)
@@ -121,16 +121,16 @@ Byref パラメーターを使用するディスパッチ インターフェイ�
 
 - ときに **#import**が処理するには、コンパイラはまず、ヘッダーが存在し、最新の状態は、かどうか。 最新のヘッダーが存在する場合、再作成は不要です。
 
-**#Import**ディレクティブも最小リビルドに参加し、プリコンパイル済みヘッダー ファイルに配置することができます。 参照してください[プリコンパイル済みヘッダー ファイルの作成](../build/reference/creating-precompiled-header-files.md)詳細についてはします。
+**#Import**ディレクティブも最小リビルドに参加し、プリコンパイル済みヘッダー ファイルに配置することができます。 参照してください[プリコンパイル済みヘッダー ファイルの作成](../build/creating-precompiled-header-files.md)詳細についてはします。
 
 ###  <a name="_predir_the_primary_type_library_header_file"></a> プライマリ タイプ ライブラリ ヘッダー ファイル
 プライマリ タイプ ライブラリのヘッダー ファイルは、7 つのセクションで構成されます。
 
-- 見出しの定型句: コメント、COMDEF.H の `#include` ステートメント (ヘッダーで使用される標準マクロを定義)、およびその他のセットアップ情報で構成されます。
+- 見出しの定型句。コメントから成る`#include`COMDEF のステートメント。(これは、ヘッダーで使用される標準マクロを定義します) H、およびその他の他のセットアップ情報。
 
-- 前方参照と typedef: `struct IMyInterface` や typedef のような構造体の宣言で構成されます。
+- 前方参照と typedef:構造体の宣言などで構成されます`struct IMyInterface`と typedef。
 
-- スマート ポインター宣言: テンプレート クラスは、`_com_ptr_t`インターフェイス ポインターをカプセル化しを呼び出す必要がなくなりますスマート ポインターの実装は、 `AddRef`、 `Release`、`QueryInterface`関数。 また、新しい COM オブジェクトの作成時に `CoCreateInstance` 呼び出しを隠します。 このセクションでは、マクロのステートメントを使用して`_COM_SMARTPTR_TYPEDEF`のテンプレート特殊化である COM インターフェイスの typedef を確立するために、 [_com_ptr_t](../cpp/com-ptr-t-class.md)テンプレート クラス。 たとえば、インターフェイス`IMyInterface`、します。TLH ファイルが含まれます。
+- スマート ポインター宣言:テンプレート クラスは、`_com_ptr_t`インターフェイス ポインターをカプセル化しを呼び出す必要がなくなりますスマート ポインターの実装は、 `AddRef`、 `Release`、`QueryInterface`関数。 また、新しい COM オブジェクトの作成時に `CoCreateInstance` 呼び出しを隠します。 このセクションでは、マクロのステートメントを使用して`_COM_SMARTPTR_TYPEDEF`のテンプレート特殊化である COM インターフェイスの typedef を確立するために、 [_com_ptr_t](../cpp/com-ptr-t-class.md)テンプレート クラス。 たとえば、インターフェイス`IMyInterface`、します。TLH ファイルが含まれます。
 
     ```TLH
     _COM_SMARTPTR_TYPEDEF(IMyInterface, __uuidof(IMyInterface));
@@ -142,15 +142,16 @@ Byref パラメーターを使用するディスパッチ インターフェイ�
     typedef _com_ptr_t<_com_IIID<IMyInterface, __uuidof(IMyInterface)> > IMyInterfacePtr;
     ```
 
-   `IMyInterfacePtr` 型は、未加工のインターフェイス ポインター `IMyInterface*` の代わりに使用できます。 その結果、さまざまなを呼び出す必要はありません`IUnknown`メンバー関数
+   
+  `IMyInterfacePtr` 型は、未加工のインターフェイス ポインター `IMyInterface*` の代わりに使用できます。 その結果、さまざまなを呼び出す必要はありません`IUnknown`メンバー関数
 
-- Typeinfo 宣言: クラス定義とその他のアイテムによって返される個々 の typeinfo 項目を公開するは、主に`ITypeLib:GetTypeInfo`します。 このセクションでは、型ライブラリの各 typeinfo は、`TYPEKIND` 情報に応じてヘッダーに反映されます。
+- Typeinfo 宣言:クラス定義とその他のアイテムによって返される個々 の typeinfo 項目を公開するは、主に`ITypeLib:GetTypeInfo`します。 このセクションでは、型ライブラリの各 typeinfo は、`TYPEKIND` 情報に応じてヘッダーに反映されます。
 
-- 旧形式の GUID 定義 (省略可能): 名前付き GUID 定数の初期化が含まれます。 これらは、フォーム名`CLSID_CoClass`と`IID_Interface`、MIDL コンパイラによって生成されたものと似ています。
+- 旧式の GUID の定義 (オプション):名前付き GUID 定数の初期化が含まれています。 これらは、フォーム名`CLSID_CoClass`と`IID_Interface`、MIDL コンパイラによって生成されたものと似ています。
 
 - セカンダリ タイプ ライブラリ ヘッダーの `#include` ステートメント。
 
-- フッターの定型: 現在 `#pragma pack(pop)` が含まれます。
+- フッターの定型:現在は`#pragma pack(pop)`します。
 
 見出し定型句およびフッターの定型コード」セクションを除く、すべてのセクションは、名前空間内で指定された名前で囲まれた、`library`元の IDL ファイル内のステートメント。 名前空間名による明示的な修飾、または次のステートメントを含めることによって、タイプ ライブラリ ヘッダーの名前を使用できます。
 

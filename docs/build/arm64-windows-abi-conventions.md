@@ -1,12 +1,12 @@
 ---
 title: ARM64 ABI 規則の概要
 ms.date: 07/11/2018
-ms.openlocfilehash: c5c928dcb77729f5b79433d3be1b552664a0d211
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50599785"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816543"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 規則の概要
 
@@ -95,7 +95,7 @@ Bits|説明|Volatile?|ロール
 25|DN|非揮発性|既定の NaN モード制御
 24|FZ|非 volatile|Flush-to-zero モード制御
 23-22|RMode|非 volatile|丸めモード制御
-15,12 8|IDE/IXE など|非揮発性|例外トラップ イネーブル ビット。常に 0 であること
+15,12-8|IDE/IXE など|非揮発性|例外トラップ イネーブル ビット。常に 0 であること
 
 ## <a name="system-registers"></a>システムのレジスタ
 
@@ -171,7 +171,7 @@ IEEE 浮動小数点例外のサポートは、AArch64 システムでは省略�
 
 1. 引数は、調整された NSAA でメモリにコピーされます。 NSAA が引数のサイズだけインクリメントされます。 引数が割り当てられましたようになりました。
 
-### <a name="addendum-variadic-functions"></a>補遺: 可変個引数関数
+### <a name="addendum-variadic-functions"></a>補遺:可変個引数関数
 
 可変個の引数を受け取る関数の処理は異なりますよりも、上記とは、次のように。
 
@@ -203,7 +203,7 @@ Windows での既定のカーネル モード スタックは、6 つのペー�
 
 ## <a name="stack-walking"></a>スタック ウォーク
 
-フレーム ポインターが有効になっている Windows 内のコードがコンパイルされる ([/Oy-](../build/reference/oy-frame-pointer-omission.md)) 高速スタック ウォークを有効にします。 この結果は x29 (fp) は、{fp、lr} には、チェーン内で次のリンクを一般的に指しているスタックと戻り値のアドレスでは、前のフレームへのポインターを示すペア。 サード パーティのコードはフレーム ポインターを強化されたプロファイリングおよびトレースするためにも有効にすることをお勧めします。
+フレーム ポインターが有効になっている Windows 内のコードがコンパイルされる ([/Oy-](reference/oy-frame-pointer-omission.md)) 高速スタック ウォークを有効にします。 この結果は x29 (fp) は、{fp、lr} には、チェーン内で次のリンクを一般的に指しているスタックと戻り値のアドレスでは、前のフレームへのポインターを示すペア。 サード パーティのコードはフレーム ポインターを強化されたプロファイリングおよびトレースするためにも有効にすることをお勧めします。
 
 ## <a name="exception-unwinding"></a>例外アンワインド
 
@@ -221,5 +221,5 @@ ARM EABI では、アンワインド コードを活用して例外アンワイ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の ARM への移行に関する一般的な問題](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[ARM64 例外処理](../build/arm64-exception-handling.md)
+[Visual C++ の ARM への移行に関する一般的な問題](common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM64 例外処理](arm64-exception-handling.md)

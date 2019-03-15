@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
-ms.openlocfilehash: 4a37542bd69926572e44322c406862117560affe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175770"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820742"
 ---
 # <a name="c-attributes-for-com-and-net"></a>COM および .NET C++ 属性
 
@@ -49,7 +49,7 @@ class CMyReceiver
 
 ## <a name="basic-mechanics-of-attributes"></a>属性の基本的なしくみ
 
-プロジェクトに属性を挿入する次の 3 つの方法はあります。 最初に挿入できますに手動でソース コード。 次に、プロジェクトでオブジェクトのプロパティ グリッドを使用してそれらを挿入できます。 最後に、さまざまなウィザードを使用してそれらを挿入できます。 使用しての詳細については、**プロパティ**ウィンドウとさまざまなウィザードを参照してください。 [Visual c プロジェクトの管理の作成と](../../ide/creating-and-managing-visual-cpp-projects.md)します。
+プロジェクトに属性を挿入する次の 3 つの方法はあります。 最初に挿入できますに手動でソース コード。 次に、プロジェクトでオブジェクトのプロパティ グリッドを使用してそれらを挿入できます。 最後に、さまざまなウィザードを使用してそれらを挿入できます。 使用しての詳細については、**プロパティ**ウィンドウとさまざまなウィザードを参照してください。 [Visual c プロジェクトの管理の作成と](../../build/creating-and-managing-visual-cpp-projects.md)します。
 
 としてする前に、プロジェクトをビルドするとき、コンパイラ解析各 C++ ソース ファイルのオブジェクト ファイルを生成します。 ただし、コンパイラが属性を検出する場合は解析し、構文を検査します。 コンパイラに動的を呼び出してコードを挿入またはコンパイル時にその他の変更、属性プロバイダー。 プロバイダーの実装は、属性の型によって異なります。 たとえば、ATL 関連の属性は、Atlprov.dll によって実装されます。
 

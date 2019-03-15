@@ -2,12 +2,12 @@
 title: ARM ABI 規則の概要
 ms.date: 07/11/2018
 ms.assetid: 23f4ae8c-3148-4657-8c47-e933a9f387de
-ms.openlocfilehash: d25cba2800348ca1ae45c5bb59163816a4eefa02
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 17f2598912879d0eb54fd189e1fae541ba2f874f
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50436024"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810459"
 ---
 # <a name="overview-of-arm32-abi-conventions"></a>ARM32 ABI 規則の概要
 
@@ -23,7 +23,7 @@ Advanced SIMD 拡張 (NEON) もハードウェアでサポートされている�
 
 ## <a name="endianness"></a>エンディアン
 
-ARM 上の Windows は、リトル エンディアン モードで実行されます。 Visual C++ コンパイラと Windows ランタイムは、両方とも、常にリトル エンディアン データを想定しています。 ARM 命令セット アーキテクチャ (ISA) の SETEND 命令では、ユーザー モードのコードでも現在のエンディアンを変更できますが、アプリケーションにとって危険なため推奨されていません。 ビッグ エンディアン モードで例外が発生した場合の動作は予測不可能であり、ユーザー モードでのアプリケーション エラーまたはカーネル モードでのバグチェックが発生する可能性があります。
+ARM 上の Windows は、リトル エンディアン モードで実行されます。 MSVC コンパイラと Windows ランタイムの両方は、常にリトル エンディアン データを期待します。 ARM 命令セット アーキテクチャ (ISA) の SETEND 命令では、ユーザー モードのコードでも現在のエンディアンを変更できますが、アプリケーションにとって危険なため推奨されていません。 ビッグ エンディアン モードで例外が発生した場合の動作は予測不可能であり、ユーザー モードでのアプリケーション エラーまたはカーネル モードでのバグチェックが発生する可能性があります。
 
 ## <a name="alignment"></a>アラインメント
 
@@ -137,7 +137,7 @@ Windows では、VFPv3-D32 コプロセッサをサポートする ARM バリア
 
 非可変個引数関数の場合、ARM ABI 上の Windows は、パラメーターの引き渡しについて ARM の規則に従います (VFP および Advanced SIMD 拡張など)。 これらの規則に従って、 [ARM アーキテクチャのプロシージャ呼び出し標準](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0042c/IHI0042C_aapcs.pdf)VFP 拡張と統合します。 既定では、最初の 4 個の整数引数と最大 8 個の浮動小数点またはベクター引数をレジスタに渡すことができます。追加の引数はスタック上に渡されます。 引数は、次のプロシージャを使用してレジスタまたはスタックに割り当てられます。
 
-### <a name="stage-a-initialization"></a>ステージ a: 初期化
+### <a name="stage-a-initialization"></a>ステージ a:初期化
 
 初期化は、引数の処理が始まる前に 1 回のみ行われます。
 
@@ -149,7 +149,7 @@ Windows では、VFPv3-D32 コプロセッサをサポートする ARM バリア
 
 1. メモリに結果を返す関数が呼び出されると、結果のアドレスが r0 に配置され、NCRN が r1 に設定されます。
 
-### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>ステージ b: 前のパディングと引数の拡張機能
+### <a name="stage-b-pre-padding-and-extension-of-arguments"></a>ステージ b:事前のパディングと引数の拡張機能
 
 リストの各引数には、次のリストで最初に一致する規則が適用されます。
 
@@ -159,7 +159,7 @@ Windows では、VFPv3-D32 コプロセッサをサポートする ARM バリア
 
 1. 引数が複合型の場合、サイズが最も近い 4 の倍数に丸められます。
 
-### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>引数はレジスタおよびスタックへの割り当てをステージ c:
+### <a name="stage-c-assignment-of-arguments-to-registers-and-stack"></a>ステージ c:レジスタおよびスタックへの引数の割り当て
 
 リストの各引数には、引数が割り当てられるまで次の規則が順番に適用されます。
 
@@ -205,13 +205,13 @@ Windows の既定のカーネル モード スタックは 3 ページ (12 KB) �
 
 ## <a name="stack-walking"></a>スタック ウォーク
 
-Windows のコードをコンパイルが有効になっているフレーム ポインター ([/Oy (フレーム ポインターの省略)](../build/reference/oy-frame-pointer-omission.md)) ファスト スタック ウォーキングを有効にします。 一般的に、r11 レジスタは、チェーンの次のリンクである {r11, lr} ペアを示します。このペアは、スタック上の前のフレームへのポインターを指定し、アドレスを返します。 プロファイリングおよびトレースを向上させるために、コードでフレーム ポインターを有効にすることをお勧めします。
+Windows のコードをコンパイルが有効になっているフレーム ポインター ([/Oy (フレーム ポインターの省略)](reference/oy-frame-pointer-omission.md)) ファスト スタック ウォーキングを有効にします。 一般的に、r11 レジスタは、チェーンの次のリンクである {r11, lr} ペアを示します。このペアは、スタック上の前のフレームへのポインターを指定し、アドレスを返します。 プロファイリングおよびトレースを向上させるために、コードでフレーム ポインターを有効にすることをお勧めします。
 
 ## <a name="exception-unwinding"></a>例外アンワインド
 
 例外処理中のスタック アンワインドは、アンワインド コードを使用することで可能になります。 アンワインド コードは、実行可能イメージの .xdata セクションに格納されているバイト シーケンスです。 このコードには、関数プロローグおよびエピローグ コードの操作が抽象的に示されています。このため、呼び出し元のスタック フレームへのアンワインドの準備段階で関数のプロローグの効果を元に戻すことができます。
 
-ARM EABI では、アンワインド コードを使用する例外アンワインド モデルが指定されています。 ただし、Windows のアンワインドでは、プロセッサが関数のプロローグまたはエピローグの中間に存在するケースを取り扱う必要があるため、この仕様は不十分です。 ARM 例外データおよびアンワインドの詳細については、Windows は、次を参照してください。 [ARM 例外処理](../build/arm-exception-handling.md)します。
+ARM EABI では、アンワインド コードを使用する例外アンワインド モデルが指定されています。 ただし、Windows のアンワインドでは、プロセッサが関数のプロローグまたはエピローグの中間に存在するケースを取り扱う必要があるため、この仕様は不十分です。 ARM 例外データおよびアンワインドの詳細については、Windows は、次を参照してください。 [ARM 例外処理](arm-exception-handling.md)します。
 
 生成されたコードが例外処理に関与できるように、`RtlAddFunctionTable` の呼び出しで指定された動的な関数テーブルおよび関連する関数を使用して、動的に生成されたコードを記述することをお勧めします。
 
@@ -223,5 +223,5 @@ Windows を実行中の ARM プロセッサは、サイクル カウンターを
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ の ARM への移行に関する一般的な問題](../build/common-visual-cpp-arm-migration-issues.md)<br/>
-[ARM 例外処理](../build/arm-exception-handling.md)
+[Visual C++ の ARM への移行に関する一般的な問題](common-visual-cpp-arm-migration-issues.md)<br/>
+[ARM 例外処理](arm-exception-handling.md)
