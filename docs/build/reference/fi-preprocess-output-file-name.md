@@ -9,16 +9,16 @@ helpviewer_keywords:
 - /Fi compiler option (C++)
 - preprocessing output files, file name
 ms.assetid: 6d0ba983-a8b7-41ec-84f5-b4688ef8efee
-ms.openlocfilehash: 02d2a27f0a3d6b6aee6c2cd6f7161c9de718446d
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 990c48a72c3f6017d893ddf9b46bcbb737bfb634
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414027"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820196"
 ---
 # <a name="fi-preprocess-output-file-name"></a>/Fi (出力ファイル名のプリプロセス)
 
-出力ファイルの名前を指定します、 [/P (ファイルへのプリプロセス)](../../build/reference/p-preprocess-to-a-file.md)コンパイラ オプションは、前処理済みの出力を書き込みます。
+出力ファイルの名前を指定します、 [/P (ファイルへのプリプロセス)](p-preprocess-to-a-file.md)コンパイラ オプションは、前処理済みの出力を書き込みます。
 
 ## <a name="syntax"></a>構文
 
@@ -48,6 +48,6 @@ CL /P /FiMYPROCESS.I PROGRAM.CPP
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[/P (ファイルの前処理)](../../build/reference/p-preprocess-to-a-file.md)<br/>
-[パス名の指定](../../build/reference/specifying-the-pathname.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[/P (ファイルの前処理)](p-preprocess-to-a-file.md)<br/>
+[パス名の指定](specifying-the-pathname.md)

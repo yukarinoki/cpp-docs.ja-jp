@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zl compiler option [C++]
 - default libraries, omitting names
 ms.assetid: b27d39d0-44d6-498c-84ae-27c1326fee59
-ms.openlocfilehash: 8a5aede89e2b37655b67144a9882f1de9b7a4bf8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cb8083d874abe17add1d27096ebce143d03a04cf
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414799"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809588"
 ---
 # <a name="zl-omit-default-library-name"></a>/Zl (既定のライブラリ名の省略)
 
@@ -30,13 +30,13 @@ ms.locfileid: "57414799"
 
 ## <a name="remarks"></a>Remarks
 
-既定のライブラリの詳細については、次を参照してください。[ランタイム ライブラリの使用](../../build/reference/md-mt-ld-use-run-time-library.md)します。
+既定のライブラリの詳細については、次を参照してください。[ランタイム ライブラリの使用](md-mt-ld-use-run-time-library.md)します。
 
 使用することができます **/Zl**ライブラリに格納する .obj ファイルをコンパイルします。 少量の単一の .obj ファイルの領域のみを保存するライブラリ名を省略すると、保存領域の合計が大きなオブジェクトの多くのモジュールを含むライブラリ。
 
 このオプションは、高度なオプションです。 このオプションを設定すると、リンク時のエラーをアプリケーションがこのサポートに依存する場合にその結果、アプリケーションで必要とされる特定の C ランタイム ライブラリのサポートが削除されます。 このオプションを使用する場合は、その他の何らかの方法で必要なコンポーネントを提供する必要があります。
 
-使用[/NODEFAULTLIB (ライブラリの無視)](../../build/reference/nodefaultlib-ignore-libraries.md)します。 ライブラリの無視するようにリンカーに指示するには、すべての .obj ファイルで参照します。
+使用[/NODEFAULTLIB (ライブラリの無視)](nodefaultlib-ignore-libraries.md)します。 ライブラリの無視するようにリンカーに指示するには、すべての .obj ファイルで参照します。
 
 詳しくは、「[CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)」をご覧ください。
 
@@ -56,7 +56,7 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -70,5 +70,5 @@ void Test() {
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

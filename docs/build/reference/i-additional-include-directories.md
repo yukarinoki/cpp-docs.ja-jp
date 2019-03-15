@@ -14,12 +14,12 @@ helpviewer_keywords:
 - set include directories
 - include directories, compiler option [C++]
 ms.assetid: 3e9add2a-5ed8-4d15-ad79-5b411e313a49
-ms.openlocfilehash: 72f871b99602c63e3edaea719faf5de6d4451515
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 6ec8b15e77fec5214013c484e617904ed29e8197
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57412849"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57807638"
 ---
 # <a name="i-additional-include-directories"></a>/I (追加のインクルード ディレクトリ)
 
@@ -38,7 +38,7 @@ ms.locfileid: "57412849"
 
 1 つ以上のディレクトリを追加するには、このオプションを複数回使用します。 指定したインクルード ファイルが見つかるまでにのみ、ディレクトリが検索されます。
 
-このオプションを使用することができます、([/X (標準インクルード パスの無視)](../../build/reference/x-ignore-standard-include-paths.md)) オプション。
+このオプションを使用することができます、([/X (標準インクルード パスの無視)](x-ignore-standard-include-paths.md)) オプション。
 
 コンパイラは、次の順序でディレクトリを検索します。
 
@@ -50,7 +50,7 @@ ms.locfileid: "57412849"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **全般**プロパティ ページ。
 
@@ -70,5 +70,5 @@ CL /I \INCLUDE /I\MY\INCLUDE MAIN.C
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

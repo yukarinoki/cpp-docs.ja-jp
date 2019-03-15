@@ -7,19 +7,19 @@ helpviewer_keywords:
 - MFC Application Wizard
 - executable files, creating
 ms.assetid: 227ac090-921d-4b2f-be0a-66a5f4cab0d4
-ms.openlocfilehash: 3cdaba750060290fa25007d4097b6782d6f20fbf
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 808e8364764dd826ee82e445627ba21b06946ed6
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258633"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822666"
 ---
 # <a name="mfc-application-wizard"></a>MFC アプリケーション ウィザード
 
 MFC アプリケーション ウィザードでは、コンパイル時に Windows 実行可能アプリケーション (.exe) の基本機能が実装されるアプリケーションが生成されます。 MFC の初期アプリケーションには、C++ ソース (.cpp) ファイル、リソース (.rc) ファイル、ヘッダー (.h) ファイル、およびプロジェクト (.vcxproj) ファイルが含まれます。 これらの初期ファイルで生成されるコードは、MFC に基づいています。
 
 > [!NOTE]
->  選択したオプションに応じて、ウィザードがこの他のファイルをプロジェクトに作成します。 例では、選択した場合の**状況依存のヘルプ**上、[高度な機能](../../mfc/reference/advanced-features-mfc-application-wizard.md) ページで、ウィザードは、プロジェクトのヘルプ ファイルをコンパイルするために必要なファイルを作成します。 ウィザードで作成されるファイルの詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)、およびプロジェクトの Readme.txt ファイルを参照してください。
+>  選択したオプションに応じて、ウィザードがこの他のファイルをプロジェクトに作成します。 例では、選択した場合の**状況依存のヘルプ**上、[高度な機能](../../mfc/reference/advanced-features-mfc-application-wizard.md) ページで、ウィザードは、プロジェクトのヘルプ ファイルをコンパイルするために必要なファイルを作成します。 ウィザードで作成されるファイルの詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)、およびプロジェクトの Readme.txt ファイルを参照してください。
 
 ## <a name="overview"></a>概要
 

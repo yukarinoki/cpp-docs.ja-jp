@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MANIFESTDEPENDENCY linker option
 - -MANIFESTDEPENDENCY linker option
 ms.assetid: e4b68313-33a2-4c3e-908e-ac2b9f7d6a73
-ms.openlocfilehash: debff86b506545862ce4054bf4e210cdb8a29185
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 676059b8d398fd108d8f8fc163c85a3da3c657b4
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418400"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812227"
 ---
 # <a name="manifestdependency-specify-manifest-dependencies"></a>/MANIFESTDEPENDENCY (マニフェストの依存関係を指定する)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57418400"
 
 /MANIFESTDEPENDENCY を使用してでは、属性を指定できます、\<依存関係 > マニフェスト ファイルのセクション。
 
-参照してください[/MANIFEST (アセンブリ マニフェストを作成して並列)](../../build/reference/manifest-create-side-by-side-assembly-manifest.md)についてはマニフェスト ファイルを作成する方法。
+参照してください[/MANIFEST (アセンブリ マニフェストを作成して並列)](manifest-create-side-by-side-assembly-manifest.md)についてはマニフェスト ファイルを作成する方法。
 
 詳細については、\<依存関係 > セクションのマニフェスト ファイルを参照してください。[発行者構成ファイル](/windows/desktop/SbsCs/publisher-configuration-files)します。
 
@@ -61,7 +61,7 @@ ms.locfileid: "57418400"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **マニフェスト ファイル**プロパティ ページ。
 
@@ -73,5 +73,5 @@ ms.locfileid: "57418400"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

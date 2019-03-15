@@ -10,12 +10,12 @@ helpviewer_keywords:
 - linker [C++], DEPENDENTLOADFLAG
 - DEPENDENTLOADFLAG linker option
 - /DEPENDENTLOADFLAG linker option
-ms.openlocfilehash: 0bdf2542d641f751f40757079eb576f2c97540dc
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 94998e06f23a7e70524221d3cb75166b5d3f2c44
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326161"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815971"
 ---
 # <a name="dependentloadflag-set-default-dependent-load-flags"></a>/DEPENDENTLOADFLAG (既定依存読み込みフラグを設定します)
 
@@ -42,7 +42,7 @@ ms.locfileid: "51326161"
 
 ### <a name="to-set-the-dependentloadflag-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で DEPENDENTLOADFLAG リンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -54,9 +54,9 @@ ms.locfileid: "51326161"
 
 ## <a name="see-also"></a>関連項目
 
-- [リンカー オプションの設定](setting-linker-options.md)
-- [リンカー オプション](linker-options.md)
-- [DLL と暗黙的にリンクする方法](../linking-an-executable-to-a-dll.md#linking-implicitly)
-- [リンク方式の使用](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
+- [MSVC リンカーの参照](linking.md)
+- [MSVC リンカー オプション](linker-options.md)
+- [実行可能ファイルと DLL のリンク](../linking-an-executable-to-a-dll.md#linking-implicitly)
+- [実行可能ファイルと DLL のリンク](../linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)
 - [LoadLibraryEx](/windows/desktop/api/libloaderapi/nf-libloaderapi-loadlibraryexa)
 - [ダイナミック リンク ライブラリの検索順序](/windows/desktop/Dlls/dynamic-link-library-search-order)

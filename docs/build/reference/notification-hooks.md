@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delayed loading of DLLs, notification hooks
 ms.assetid: e9c291ed-2f2d-4319-a171-09800625256f
-ms.openlocfilehash: 1e4dc6331e2a957c0268e686fff7dbb3f7eb0b24
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 884d8e8479b7cad28d99e19adfac4d05dbeec5f5
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426551"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818311"
 ---
 # <a name="notification-hooks"></a>通知フック
 
@@ -77,8 +77,8 @@ ExternC
 PfnDliHook   __pfnDliFailureHook2;
 ```
 
-通知を渡す、 **DelayLoadInfo**通知値と共にフック関数への構造体。 このデータは、遅延読み込みヘルパー ルーチンが使用するものと同じです。 通知の値で定義されている値のいずれかになります[構造体と定数定義](../../build/reference/structure-and-constant-definitions.md)します。
+通知を渡す、 **DelayLoadInfo**通知値と共にフック関数への構造体。 このデータは、遅延読み込みヘルパー ルーチンが使用するものと同じです。 通知の値で定義されている値のいずれかになります[構造体と定数定義](structure-and-constant-definitions.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[エラー処理と通知](../../build/reference/error-handling-and-notification.md)
+[エラー処理と通知](error-handling-and-notification.md)

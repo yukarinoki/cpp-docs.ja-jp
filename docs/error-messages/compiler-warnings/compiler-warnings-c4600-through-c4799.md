@@ -57,14 +57,13 @@ f1_keywords:
 - C4767
 - C4770
 - C4792
-- C4794
 ms.assetid: 22bd4392-f3be-445c-9f23-6126aebac901
-ms.openlocfilehash: 02b679e3cfb91b09db381b014ba2f3d3d0e5b02a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4acc36fcf7508bdcfcc1bd936110df4c32c47ae2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50553155"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810082"
 ---
 # <a name="compiler-warnings-c4600-through-c4799"></a>コンパイラの警告 C4600 C4799 から
 
@@ -77,7 +76,7 @@ ms.locfileid: "50553155"
 |警告|メッセージ|
 |-------------|-------------|
 |[コンパイラの警告 (レベル 1) C4600](../../error-messages/compiler-warnings/compiler-warning-level-1-c4600.md)|#pragma 'macro name': 無効な空でない文字列が必要です|
-|コンパイラの警告 (レベル 1) C4602|#pragma pop_macro: 'macro name' この識別子の前の #pragma push_macro がありません|
+|コンパイラの警告 (レベル 1) C4602|#pragma pop_macro: 'macro name' no previous #pragma push_macro for this identifier|
 |コンパイラの警告 (レベル 1) C4603|'*識別子*': マクロが定義されていないか、プリコンパイル済みヘッダーを使用している定義とは異なります|
 |コンパイラの警告 (レベル 1) C4604|'*型*': ネイティブとマネージの境界を越えて引数を値渡しには、有効なコピー コンス トラクターが必要です。 それ以外の場合、実行時の動作は定義されていません|
 |コンパイラの警告 (レベル 1) C4605|'/D*マクロ*' 現在のコマンドラインで指定しますが、プリコンパイル済みヘッダーを構築したときに指定されませんでした|
@@ -102,7 +101,7 @@ ms.locfileid: "50553155"
 |[コンパイラの警告 (レベル 1) C4627](../../error-messages/compiler-warnings/compiler-warning-level-1-c4627.md)|'\<識別子 >': プリコンパイル済みヘッダーの使用を検索するときにスキップ|
 |[コンパイラの警告 (レベル 1) C4628](../../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md)|digraphs は -Ze でサポートされていません。 文字のシーケンス 'digraph' は '%s' の代替トークンとして解釈されません。|
 |コンパイラの警告 (レベル 4) C4629|digraph が使用されました。文字のシーケンス 'digraph' はトークン 'char' として解釈されます。(これが意図でない場合は、2 文字の間にスペースを挿入してください)|
-|[コンパイラの警告 (レベル 1) C4630](../../error-messages/compiler-warnings/compiler-warning-level-1-c4630.md)|'symbol': 'extern' ストレージ クラス指定子のメンバーの定義が無効です|
+|[コンパイラの警告 (レベル 1) C4630](../../error-messages/compiler-warnings/compiler-warning-level-1-c4630.md)|'symbol': 'extern' storage-class specifier illegal on member definition|
 |コンパイラの警告 (レベル 2) C4631|MSXML または XPath は使用できません。XML ドキュメント コメントは処理されません。 理由|
 |[コンパイラの警告 (レベル 1) C4632](../../error-messages/compiler-warnings/compiler-warning-level-1-c4632.md)|XML ドキュメント コメント: ファイルのアクセスが拒否されました: 理由|
 |[コンパイラの警告 (レベル 3) C4633](../../error-messages/compiler-warnings/compiler-warning-level-3-c4633.md)|XML ドキュメント コメント ターゲット: エラー: 理由|
@@ -142,22 +141,22 @@ ms.locfileid: "50553155"
 |コンパイラの警告 (レベル 4) C4676|' % $s ': デストラクターにアクセスできません|
 |[コンパイラの警告 (レベル 1) C4677](../../error-messages/compiler-warnings/compiler-warning-level-1-c4677.md)|'function': 公開されたメンバーのシグネチャにはアセンブリ プライベート型 'private_type' が含まれています|
 |コンパイラの警告 (レベル 1) C4678|基底クラス 'base_type' のアクセス可能性が 'derived_type' よりも小さい|
-|[コンパイラの警告 (レベル 1) C4679](../../error-messages/compiler-warnings/compiler-warning-level-1-c4679.md)|'member': メンバーをインポートできませんでした|
+|[コンパイラの警告 (レベル 1) C4679](../../error-messages/compiler-warnings/compiler-warning-level-1-c4679.md)|'member': could not import member|
 |[コンパイラの警告 (レベル 4) C4680](../../error-messages/compiler-warnings/compiler-warning-level-4-c4680.md)|'class': コクラスは既定のインターフェイスを指定していません|
 |コンパイラの警告 (レベル 4) C4681|'class': コクラスは、イベント ソースである既定のインターフェイスを指定していません|
 |コンパイラの警告 (レベル 4) C4682|'parameter': 方向性のあるパラメーター属性がいません指定すると、[in]|
 |[コンパイラの警告 (レベル 1) C4683](../../error-messages/compiler-warnings/compiler-warning-level-1-c4683.md)|'function': イベント ソースが 'out' のパラメーターです。複数のイベント ハンドラーをフックするときに注意|
-|[コンパイラの警告 (レベル 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|'attribute': 警告!! 属性が原因で、無効なコードの生成: 慎重に使用|
+|[コンパイラの警告 (レベル 1) C4684](../../error-messages/compiler-warnings/compiler-warning-level-1-c4684.md)|' attribute':警告!! 属性が原因で、無効なコードの生成: 慎重に使用|
 |コンパイラの警告 (レベル 1) C4685|テンプレート パラメーターの解析中に '> >' が必要ですが、'>>' が見つかりました。|
 |[コンパイラの警告 (レベル 3) C4686](../../error-messages/compiler-warnings/compiler-warning-level-3-c4686.md)|'user-defined type': 動作と UDT の戻り値の呼び出し規則に変更がある可能性があります。|
 |[コンパイラの警告 (エラー) C4687](../../error-messages/compiler-warnings/compiler-warning-c4687.md)|'class': シールドされた抽象クラスはインターフェイス 'interface' を実装できません|
 |[コンパイラの警告 (レベル 1) C4688](../../error-messages/compiler-warnings/compiler-warning-level-1-c4688.md)|'constraint': 制約リストはアセンブリ プライベート型 'type' を含んでいます|
-|コンパイラの警告 (レベル 1) C4689|'%c': #pragma detect_mismatch; 内の文字がサポートされていません#pragma は無視されました|
+|コンパイラの警告 (レベル 1) C4689|'%c': unsupported character in #pragma detect_mismatch; #pragma ignored|
 |[コンパイラの警告 (レベル 4) C4690](../../error-messages/compiler-warnings/compiler-warning-level-4-c4690.md)|\[ emitidl (pop)]: ポップがプッシュ|
 |[コンパイラの警告 (レベル 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)|'type': 参照されていないアセンブリ 'file' を代わりに使用される現在の翻訳単位で定義された型で参照される型が必要です|
 |[コンパイラの警告 (レベル 1) C4692](../../error-messages/compiler-warnings/compiler-warning-level-1-c4692.md)|'関数': 公開されたメンバーのシグネチャはアセンブリ プライベート ネイティブ型 'native_type' を含んでいます|
 |[コンパイラの警告 (レベル 1、エラー) C4693](../../error-messages/compiler-warnings/compiler-warning-c4693.md)|'class': シールドされた抽象クラスが任意のインスタンス メンバー 'インスタンス メンバー' ことはできません|
-|[コンパイラの警告 (レベル 1、エラー) C4694](../../error-messages/compiler-warnings/compiler-warning-c4694.md)|'class': シールドされた抽象クラスは基底クラス 'base_class' を含めることはできません|
+|[コンパイラの警告 (レベル 1、エラー) C4694](../../error-messages/compiler-warnings/compiler-warning-c4694.md)|'class': a sealed abstract class cannot have a base-class 'base_class'|
 |コンパイラの警告 (レベル 1) C4695|#pragma execution_character_set: '文字セット' はサポートされている引数ではありません現在は 'utf-8' がサポートされています|
 |コンパイラの警告 (レベル 1) C4696|/ZBvalue1 オプションは範囲です。'value2' と仮定した場合|
 |[コンパイラの警告 (レベル 1 およびレベル 4) C4700](../../error-messages/compiler-warnings/compiler-warning-level-1-and-level-4-c4700.md)|初期化されていないローカル変数 'name' の使用|
@@ -194,7 +193,7 @@ ms.locfileid: "50553155"
 |[コンパイラの警告 (レベル 1) C4743](../../error-messages/compiler-warnings/compiler-warning-level-1-c4743.md)|'type' が 'file1' および 'file2' で別のサイズ: 数とバイト数です。|
 |[コンパイラの警告 (レベル 1) C4744](../../error-messages/compiler-warnings/compiler-warning-level-1-c4744.md)|'var' が 'file1' および 'file2' に別の種類: 'type1' および 'type2'|
 |[コンパイラの警告 C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)|揮発性アクセス '*式*' は/volatile:\<iso&#124;ms > 設定; _iso_volatile_load/store 組み込み関数を使用を検討してください|
-|[コンパイラの警告 (レベル 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|呼び出すマネージ 'entrypoint': マネージ コードは DLL エントリ ポイントおよび DLL エントリ ポイントから到達した呼び出しを含むローダー ロック下で実行できません|
+|[コンパイラの警告 (レベル 1) C4747](../../error-messages/compiler-warnings/compiler-warning-level-1-c4747.md)|呼び出し元が管理されている ' entrypoint':DLL エントリ ポイントおよび DLL エントリ ポイントから到達した呼び出しを含むローダー ロック下で、マネージ コードを実行しない可能性があります。|
 |コンパイラの警告 (レベル 4) C4749|条件付きでサポートされています: 非標準レイアウト型に適用される offsetof '*型*'|
 |コンパイラの警告 (レベル 1) C4750|'identifier': ループにインライン展開されている _alloca() を含む関数です|
 |コンパイラの警告 (レベル 4) C4751|intel (r) ストリーミング SIMD 拡張命令はインライン ASM 内にあるに/arch:AVX は適用されません。|

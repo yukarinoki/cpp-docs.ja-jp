@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 02e678f98773f9ae7bb4f611210329a7a1116f17
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749114"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816033"
 ---
 # <a name="how-to-migrate-to-clr"></a>方法: /Clr:pure に移行します。
 
@@ -25,7 +25,7 @@ ms.locfileid: "57749114"
 
 Visual Studio がライブラリ プロジェクトをコンパイルするときに、既知の問題を含む **/clr**:
 
-- コードが実行時に型を照会できます[で](../mfc/reference/cruntimeclass-structure.md#fromname)します。 ただし、MSIL .dll 内の型がある場合 (でコンパイルされた **/clr**)、呼び出し`FromName`(は表示されませんこの問題コードがある後に FromName 呼び出しが発生した場合、マネージ .dll で静的コンス トラクターが実行前に発生した場合に失敗する可能性があります実行されるマネージ .dll で)。 この問題を回避するには、マネージド静的コンストラクターを強制的に構築します。それには、マネージド .dll で関数を定義してエクスポートし、その関数をネイティブ MFC アプリケーションから呼び出します。 例:
+- コードが実行時に型を照会できます[で](../mfc/reference/cruntimeclass-structure.md#fromname)します。 ただし、MSIL .dll 内の型がある場合 (でコンパイルされた **/clr**)、呼び出し`FromName`(は表示されませんこの問題コードがある後に FromName 呼び出しが発生した場合、マネージ .dll で静的コンス トラクターが実行前に発生した場合に失敗する可能性があります実行されるマネージ .dll で)。 この問題を回避するには、マネージド静的コンストラクターを強制的に構築します。それには、マネージド .dll で関数を定義してエクスポートし、その関数をネイティブ MFC アプリケーションから呼び出します。 例えば:
 
     ```
     // MFC extension DLL Header file:
@@ -98,7 +98,7 @@ COMObj2->Method(args);  // C++ equivalent
 **/clr**開発環境で次の手順で選択できる[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。 既に説明したように、この手順によって競合するプロジェクト設定は自動的に無効になります。
 
 > [!NOTE]
->  マネージ ライブラリまたは web サービス プロジェクトを Visual C 2003 からアップグレードする場合、 **/Zl**に追加されたコンパイラ オプションは、**コマンドライン**プロパティ ページ。 これによって LNK2001 が発生します。 削除 **/Zl**から、**コマンドライン**解決するのには、プロパティ ページ。 参照してください[/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)と[プロジェクト プロパティの操作](../ide/working-with-project-properties.md)詳細についてはします。 または、msvcrt.lib および msvcmrt.lib をリンカーに追加**追加の依存関係**プロパティ。
+>  マネージ ライブラリまたは web サービス プロジェクトを Visual C 2003 からアップグレードする場合、 **/Zl**に追加されたコンパイラ オプションは、**コマンドライン**プロパティ ページ。 これによって LNK2001 が発生します。 削除 **/Zl**から、**コマンドライン**解決するのには、プロパティ ページ。 参照してください[/Zl (Omit Default Library Name)](../build/reference/zl-omit-default-library-name.md)と[コンパイラを設定し、ビルド プロパティ](../build/working-with-project-properties.md)詳細についてはします。 または、msvcrt.lib および msvcmrt.lib をリンカーに追加**追加の依存関係**プロパティ。
 
 メイクファイルでビルドされたプロジェクトでは、互換性のないコンパイラ オプションを後に手動で無効する必要があります **/clr**が追加されます。 参照してください/[/clr の制約](../build/reference/clr-restrictions.md)と互換性のないコンパイラ オプションについて **/clr**します。
 

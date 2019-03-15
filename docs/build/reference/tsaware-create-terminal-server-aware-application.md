@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -TSAWARE linker option
 - TSAWARE linker option
 ms.assetid: fe1c1846-de5b-4839-b562-93fbfe36cd29
-ms.openlocfilehash: fe31763c5da21a724f0c9242e6eb8429a2379ecd
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f6ed6184f8ae4b3a0f9db3c1f962a2918a185138
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421495"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816946"
 ---
 # <a name="tsaware-create-terminal-server-aware-application"></a>/TSAWARE (ターミナル サーバーに対応したアプリケーションの作成)
 
@@ -34,15 +34,15 @@ ms.locfileid: "57421495"
 
 /TSAWARE を使用すると、アプリケーションがまだ INI ファイルを使用して、ファイルは、システムのすべてのユーザーによって共有されます。 許容される場合は、まだ/TSAWARE; を使用してアプリケーションをリンクできます。それ以外の場合は、/TSAWARE:NO を使用する必要があります。
 
-このオプションは、Windows アプリケーションとコンソール アプリケーションの既定で有効です。 参照してください[/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)と[/VERSION](../../build/reference/version-version-information.md)について。
+このオプションは、Windows アプリケーションとコンソール アプリケーションの既定で有効です。 参照してください[/SUBSYSTEM](subsystem-specify-subsystem.md)と[/VERSION](version-version-information.md)について。
 
 /TSAWARE は、ドライバー、Vxd の Dll に対して無効です。
 
-アプリケーションの/TSAWARE、DUMPBIN は関連付け[/HEADERS](../../build/reference/headers.md)それに対応する情報が表示されます。
+アプリケーションの/TSAWARE、DUMPBIN は関連付け[/HEADERS](headers.md)それに対応する情報が表示されます。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual c プロジェクトのプロパティの設定](../../ide/working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. をクリックして、**リンカー**フォルダー。
 
@@ -56,7 +56,7 @@ ms.locfileid: "57421495"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)<br/>
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)<br/>
 [ユーザー固有の情報を格納します。](/windows/desktop/TermServ/storing-user-specific-information)<br/>
 [ターミナル サービス環境でレガシ アプリケーション](https://msdn.microsoft.com/library/aa382957.aspx)

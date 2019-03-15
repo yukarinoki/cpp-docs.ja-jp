@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - MFC Application Wizard, advanced features
 ms.assetid: 8a6681c5-6576-4b12-841a-6862beee76fa
-ms.openlocfilehash: 5643e1e9f4f558163c1c2a3b65070f90afdc7dba
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 44d85e7614f6a82af2e58f03a6d65d5d7740ab9b
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278224"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816439"
 ---
 # <a name="advanced-features-mfc-application-wizard"></a>[高度な機能]\ (MFC アプリケーション ウィザード)
 
@@ -21,7 +21,7 @@ ms.locfileid: "57278224"
 
    F1 とヘルプ メニューを使用して、またはをクリックして利用できる状況依存のヘルプのヘルプ ファイルのセットを生成、**ヘルプ** ダイアログ ボックスのボタン。 ヘルプ サポートにはヘルプ コンパイラが必要です。 ヘルプ コンパイラがない場合は、セットアップを再実行することによってインストールできます。
 
-   参照してください[HTML ヘルプ。プログラムの状況依存のヘルプ](../../mfc/html-help-context-sensitive-help-for-your-programs.md)と[ヘルプ ファイル (HTML ヘルプ)](../../ide/help-files-html-help.md)詳細についてはします。
+   参照してください[HTML ヘルプ。プログラムの状況依存のヘルプ](../../mfc/html-help-context-sensitive-help-for-your-programs.md)と[ヘルプ ファイル (HTML ヘルプ)](../../build/reference/help-files-html-help.md)詳細についてはします。
 
 - **印刷と印刷プレビュー**
 

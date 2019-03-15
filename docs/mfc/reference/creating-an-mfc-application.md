@@ -6,12 +6,12 @@ helpviewer_keywords:
 - MFC, creating applications
 - MFC applications
 ms.assetid: b8b8aa08-9c49-404c-8078-b42079ac18f0
-ms.openlocfilehash: 30fac6579d05eed276b60918b2417cd96044359a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 251275fd866ce7c9d697787c35c6207ef77862db
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292628"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818597"
 ---
 # <a name="creating-an-mfc-application"></a>MFC アプリケーションの作成
 
@@ -36,7 +36,7 @@ MFC アプリケーション ウィザードでは、これらのアプリケー
 
 ### <a name="to-create-an-mfc-application-using-the-mfc-application-wizard"></a>MFC アプリケーション ウィザードを使用して MFC アプリケーションを作成するには
 
-1. ヘルプ トピックの「[アプリケーション ウィザードを使用したデスクトップ プロジェクトの作成](../../ide/creating-desktop-projects-by-using-application-wizards.md)」の手順に従います。
+1. ヘルプ トピックの指示に従って[C++ コンソール アプリ プロジェクトを作成](../../get-started/tutorial-console-cpp.md)です。
 
 1. **新しいプロジェクト**ダイアログ ボックスで、 **MFC アプリケーション**テンプレート ペイン、ウィザードを開きます。
 
@@ -47,9 +47,10 @@ MFC アプリケーション ウィザードでは、これらのアプリケー
 
 1. クリックして**完了**ウィザードを終了し、開発環境で新しいプロジェクトを開きます。
 
-作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../ide/file-types-created-for-visual-cpp-projects.md)します。
+作成されたファイルを表示するには、プロジェクトが作成されると、**ソリューション エクスプ ローラー**します。 ウィザードでプロジェクト用に作成されるファイルの詳細については、プロジェクトが生成する ReadMe.txt ファイルを参照してください。 ファイルの種類についての詳細については、次を参照してください。 [Visual c プロジェクトに対して作成されるファイルの種類](../../build/reference/file-types-created-for-visual-cpp-projects.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [コード ウィザードを使用した機能の追加](../../ide/adding-functionality-with-code-wizards-cpp.md)<br/>
-[プロパティ ページ](../../ide/property-pages-visual-cpp.md)
+[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)
+

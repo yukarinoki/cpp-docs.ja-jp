@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -SUBSYSTEM editbin option
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
-ms.openlocfilehash: 5fda93951918357de5441022f1cc6ea81a522ef6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415137"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820495"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -67,10 +67,10 @@ WINDOWSCE サブシステムは、アプリケーションが Windows CE カー�
 - 
   `major` と `minor` で指定できる値は、0 ～ 65,535 の範囲です。
 
-選択したサブシステムに応じて、プログラムの既定の開始アドレスも変わります。 詳細については、次を参照してください。 [/ENTRY (エントリ ポイント シンボル)](../../build/reference/entry-entry-point-symbol.md)、リンカーの/ENTRY:*関数*オプション。
+選択したサブシステムに応じて、プログラムの既定の開始アドレスも変わります。 詳細については、次を参照してください。 [/ENTRY (エントリ ポイント シンボル)](entry-entry-point-symbol.md)、リンカーの/ENTRY:*関数*オプション。
 
-詳細については、各サブシステムのメジャーおよびマイナー バージョン番号の最小値と既定値を含む、次を参照してください。、 [/SUBSYSTEM](../../build/reference/subsystem-specify-subsystem.md)リンカー オプション。
+詳細については、各サブシステムのメジャーおよびマイナー バージョン番号の最小値と既定値を含む、次を参照してください。、 [/SUBSYSTEM](subsystem-specify-subsystem.md)リンカー オプション。
 
 ## <a name="see-also"></a>関連項目
 
-[EDITBIN オプション](../../build/reference/editbin-options.md)
+[EDITBIN オプション](editbin-options.md)

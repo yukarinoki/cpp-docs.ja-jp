@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
-ms.openlocfilehash: dba197be71fc77af6d95c2ec62053928ac1627cc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631661"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57808106"
 ---
 # <a name="linker-tools-error-lnk2001"></a>リンカ ツール エラー LNK2001
 
@@ -47,9 +47,9 @@ ms.locfileid: "50631661"
 
 ATL プロジェクトのリリース バージョンをビルドすると、CRT のスタートアップ コードが必要であるメッセージの生成時に、このエラーが発生することができます。 この問題を解決で、次のいずれかの操作を実行するには
 
-- 削除`_ATL_MIN_CRT`CRT スタートアップ コードが含まれるようにプリプロセッサの一覧から定義します。 参照してください[[全般] プロパティ ページ (プロジェクト)](../../ide/general-property-page-project.md)詳細についてはします。
+- 削除`_ATL_MIN_CRT`CRT スタートアップ コードが含まれるようにプリプロセッサの一覧から定義します。 参照してください[[全般] プロパティ ページ (プロジェクト)](../../build/reference/general-property-page-project.md)詳細についてはします。
 
-- 可能であれば、CRT のスタートアップ コードを必要とする CRT 関数の呼び出しを削除します。 代わりに、対応する win32 関数を使用します。 たとえば、使用して`lstrcmp`の代わりに`strcmp`します。 CRT のスタートアップ コードが必要な既知の関数では、文字列および浮動小数点関数の一部を示します。
+- 可能であれば、CRT のスタートアップ コードを必要とする CRT 関数の呼び出しを削除します。 代わりに、対応する win32 関数を使用します。 たとえば、`strcmp` の代わりに `lstrcmp` を使用します。 CRT のスタートアップ コードが必要な既知の関数では、文字列および浮動小数点関数の一部を示します。
 
 ### <a name="compilation-and-link-issues"></a>コンパイルとリンクの問題
 

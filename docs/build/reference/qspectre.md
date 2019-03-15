@@ -5,12 +5,12 @@ f1_keywords:
 - /Qspectre
 helpviewer_keywords:
 - /Qspectre
-ms.openlocfilehash: af04a905fdb3b509a90249c6d55a28ccdaa39318
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 42adff6564dc1c2ef47abffe9f9e6e630279ea7d
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507316"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57812461"
 ---
 # <a name="qspectre"></a>/Qspectre
 
@@ -28,7 +28,7 @@ Spectre バリアント 1 セキュリティの脆弱性を軽減するための
 
 最初のリリースで、 **/Qspectre**最適化されたコードをオプションでのみ機能します。 Visual Studio 2017 バージョン 15.7 以降で、 **/Qspectre**オプションがすべての最適化レベルでサポートされています。
 
-Microsoft Visual C ライブラリでは、Spectre の軽減策のバージョンで入手できます。 Visual Studio 2017 の Spectre 軽減ライブラリは、Visual Studio インストーラーでダウンロードできます。 内にある、**個々 のコンポーネント**タブ**コンパイラ、ビルド ツール、およびランタイム**、"Spectre 用ライブラリ"を名前であるとします。 DLL と軽減策を有効になっているスタティック ランタイム ライブラリの両方が Visual C ランタイムのサブセットの使用可能な: VC + + のスタートアップ コード、vcruntime140、msvcp140、concrt140、および vcamp140 します。 Dll はアプリケーションのローカル展開だけです。Visual C 2017 ランタイム ライブラリ Redistributable の内容が変更されていません。 MFC と ATL で見つかった Spectre 軽減ライブラリをインストールすることも、**個々 のコンポーネント**タブ**Sdk、ライブラリ、およびフレームワーク**します。
+Microsoft Visual C ライブラリでは、Spectre の軽減策のバージョンで入手できます。 Visual Studio 2017 の Spectre 軽減ライブラリは、Visual Studio インストーラーでダウンロードできます。 内にある、**個々 のコンポーネント**タブ**コンパイラ、ビルド ツール、およびランタイム**、"Spectre 用ライブラリ"を名前であるとします。 DLL と軽減策を有効になっているスタティック ランタイム ライブラリの両方には、利用できる Visual C ランタイムのサブセットです。VC + + のスタートアップ コード、vcruntime140、msvcp140、concrt140、および vcamp140 します。 Dll はアプリケーションのローカル展開だけです。Visual C 2017 ランタイム ライブラリ Redistributable の内容が変更されていません。 MFC と ATL で見つかった Spectre 軽減ライブラリをインストールすることも、**個々 のコンポーネント**タブ**Sdk、ライブラリ、およびフレームワーク**します。
 
 ### <a name="applicability"></a>適用性
 
@@ -36,7 +36,7 @@ Microsoft Visual C ライブラリでは、Spectre の軽減策のバージョ�
 
 ### <a name="availability"></a>可用性
 
-**/Qspectre**オプションは Visual Studio 2017 バージョン 15.5.5 では、2018 年 1 月 23 日以降に行われたすべての更新を Microsoft Visual C コンパイラ (MSVC) で使用できます。 Visual Studio インストーラーを使用して、個々 のコンポーネントとして、Spectre 軽減ライブラリをインストールして、コンパイラを更新します。 **/Qspectre**オプションも Visual Studio 2015 Update 3 で修正プログラムを利用します。 詳細については、次を参照してください。 [KB 4338871](https://support.microsoft.com/help/4338871)します。
+**/Qspectre**オプションは Visual Studio 2017 バージョン 15.5.5 では、2018 年 1 月 23 日以降に行われたすべての更新を Microsoft の MSVC コンパイラ (MSVC) で使用できます。 Visual Studio インストーラーを使用して、個々 のコンポーネントとして、Spectre 軽減ライブラリをインストールして、コンパイラを更新します。 **/Qspectre**オプションも Visual Studio 2015 Update 3 で修正プログラムを利用します。 詳細については、次を参照してください。 [KB 4338871](https://support.microsoft.com/help/4338871)します。
 
 15.5 とすべてのプレビューの Visual Studio 2017 バージョン 15.6 では、文書化されていないオプションでは、Visual Studio 2017 バージョンのすべてのバージョン **/d2guardspecload**、つまりと同等の初期動作 **/Qspectre**. 使用することができます **/d2guardspecload**これらのバージョンのコンパイラでは、コードに同じの軽減策を適用します。 使用するようにビルドを更新してください。 **/Qspectre** ; オプションをサポートするためのコンパイラで、 **/Qspectre**オプションは新しい軽減策を以降のバージョンのコンパイラでサポートも可能性があります。
 
@@ -58,7 +58,7 @@ Microsoft Visual C ライブラリでは、Spectre の軽減策のバージョ�
 - 用の visual C ATL \[(x86 または x64) |ARM |ARM64] Spectre の軽減策
 - 用の visual C MFC \[x86 または x64 |ARM |ARM64] Spectre の軽減策
 
-使用して、コードをビルドする場合 **/Qspectre**おり、これらのライブラリがないビルド システム レポートをインストールします。**警告 msb 8038: Spectre の軽減策が有効になっているが、Spectre 軽減ライブラリが見つかりません**します。 場合は、MFC または ATL コードのビルドに失敗して、リンカーなどのエラーのレポート**致命的なエラー LNK1104: ファイル 'oldnames.lib' を開くことができません**、これらの不足しているライブラリが原因になる可能性があります。
+使用して、コードをビルドする場合 **/Qspectre**おり、これらのライブラリがないビルド システム レポートをインストールします。**警告 msb 8038。Spectre の軽減策が有効になっているが、Spectre 軽減ライブラリが見つかりません**します。 場合は、MFC または ATL コードのビルドに失敗して、リンカーなどのエラーのレポート**致命的なエラー LNK1104: ファイル 'oldnames.lib' を開くことができません**、これらの不足しているライブラリが原因になる可能性があります。
 
 ### <a name="additional-information"></a>追加情報
 
@@ -66,7 +66,7 @@ Microsoft Visual C ライブラリでは、Spectre の軽減策のバージョ�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
@@ -78,6 +78,6 @@ Microsoft Visual C ライブラリでは、Spectre の軽減策のバージョ�
 
 ## <a name="see-also"></a>関連項目
 
-[/Q オプション (低水準の操作)](../../build/reference/q-options-low-level-operations.md)<br/>
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)
+[/Q オプション (低水準の操作)](q-options-low-level-operations.md)<br/>
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)

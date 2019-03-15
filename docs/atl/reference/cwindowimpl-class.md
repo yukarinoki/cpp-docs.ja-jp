@@ -5,25 +5,25 @@ f1_keywords:
 - CWindowImpl
 - ATLWIN/ATL::CWindowImpl
 - ATLWIN/ATL::CWindowImpl::Create
-- ATLWIN/ATL::DefWindowProc
-- ATLWIN/ATL::GetCurrentMessage
-- ATLWIN/ATL::GetWindowProc
-- ATLWIN/ATL::OnFinalMessage
-- ATLWIN/ATL::SubclassWindow
-- ATLWIN/ATL::UnsubclassWindow
-- ATLWIN/ATL::GetWndClassInfo
-- ATLWIN/ATL::WindowProc
-- ATLWIN/ATL::m_pfnSuperWindowProc
+- ATLWIN/ATL::CWindowImpl::DefWindowProc
+- ATLWIN/ATL::CWindowImpl::GetCurrentMessage
+- ATLWIN/ATL::CWindowImpl::GetWindowProc
+- ATLWIN/ATL::CWindowImpl::OnFinalMessage
+- ATLWIN/ATL::CWindowImpl::SubclassWindow
+- ATLWIN/ATL::CWindowImpl::UnsubclassWindow
+- ATLWIN/ATL::CWindowImpl::GetWndClassInfo
+- ATLWIN/ATL::CWindowImpl::WindowProc
+- ATLWIN/ATL::CWindowImpl::m_pfnSuperWindowProc
 helpviewer_keywords:
 - CWindowImpl class
 - subclassing windows, ATL
 ms.assetid: 02eefd45-a0a6-4d1b-99f6-dbf627e2cc2f
-ms.openlocfilehash: 96807debc7a3af5eca5d7a0c17a7728431733325
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: f835f2869af20a1cb22595837c317eb165ef5fe9
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417932"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57820352"
 ---
 # <a name="cwindowimpl-class"></a>CWindowImpl クラス
 
@@ -87,7 +87,7 @@ A[特性クラス](../../atl/understanding-window-traits.md)ウィンドウの�
 
 使用することができます`CWindowImpl`既存のウィンドウのウィンドウまたはサブクラスを作成します。 `CWindowImpl`ウィンドウ プロシージャは、適切なハンドラーにメッセージをメッセージ マップを使用します。
 
-`CWindowImpl::Create` 管理されているウィンドウ クラスの情報に基づいてウィンドウを作成します[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)します。 `CWindowImpl` 含まれています、 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロ、つまり`CWndClassInfo`新しいウィンドウ クラスを登録します。 既存のウィンドウ クラスをスーパークラスしたい場合からクラスを派生`CWindowImpl`を含めると、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロ。 この場合、`CWndClassInfo` は、既存のクラスに基づくウィンドウ クラスを登録しますが、`CWindowImpl::WindowProc` を使用します。 例:
+`CWindowImpl::Create` 管理されているウィンドウ クラスの情報に基づいてウィンドウを作成します[CWndClassInfo](../../atl/reference/cwndclassinfo-class.md)します。 `CWindowImpl` 含まれています、 [DECLARE_WND_CLASS](window-class-macros.md#declare_wnd_class)マクロ、つまり`CWndClassInfo`新しいウィンドウ クラスを登録します。 既存のウィンドウ クラスをスーパークラスしたい場合からクラスを派生`CWindowImpl`を含めると、 [DECLARE_WND_SUPERCLASS](window-class-macros.md#declare_wnd_superclass)マクロ。 この場合、`CWndClassInfo` は、既存のクラスに基づくウィンドウ クラスを登録しますが、`CWindowImpl::WindowProc` を使用します。 例えば:
 
 [!code-cpp[NVC_ATL_Windowing#43](../../atl/codesnippet/cpp/cwindowimpl-class_1.h)]
 

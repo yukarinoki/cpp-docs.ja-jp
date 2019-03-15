@@ -9,16 +9,16 @@ helpviewer_keywords:
 - ERRORREPORT linker option
 - -ERRORREPORT linker option
 ms.assetid: f5fab595-a2f1-4eb0-ab5c-1c0fbd3d8c28
-ms.openlocfilehash: 97d36e9db342e5873fc76a156b879e03af880dbf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 26cc157cb7247a3a2ea7c10b415df1160540c9ad
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447246"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57818025"
 ---
 # <a name="errorreport-report-internal-linker-errors"></a>/ERRORREPORT (内部リンカー エラーの報告)
 
-> **/errorreport:**[ **none** | **プロンプト** | **キュー** | **送信**]
+> **/errorreport:**[ **none** | **prompt** | **queue** | **send** ]
 
 ## <a name="arguments"></a>引数
 
@@ -40,9 +40,9 @@ ms.locfileid: "50447246"
 
 オプション **/errorreport:send** Windows エラー報告サービスの設定を有効になっている場合は、Microsoft にエラー情報を自動的に送信します。
 
-### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには
+### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 開く、**構成プロパティ** > **リンカー** > **詳細**プロパティ ページ。
 
@@ -54,6 +54,6 @@ ms.locfileid: "50447246"
 
 ## <a name="see-also"></a>関連項目
 
-[/errorReport (内部コンパイラ エラーの報告)](../../build/reference/errorreport-report-internal-compiler-errors.md)<br/>
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[/errorReport (内部コンパイラ エラーの報告)](errorreport-report-internal-compiler-errors.md)<br/>
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

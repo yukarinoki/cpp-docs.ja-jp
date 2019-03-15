@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 48eb1e2369e54d855bd19bb1d26ad057c903b9d0
-ms.sourcegitcommit: 7cd712176e5bc341b9d8f899d41ad49f02f85e5f
+ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/19/2019
-ms.locfileid: "56418693"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57809848"
 ---
 # <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/CETCOMPAT (制御フローの強制テクノロジ互換)
 
@@ -36,7 +36,7 @@ ms.locfileid: "56418693"
 
 ### <a name="to-set-the-cetcompat-linker-option-in-visual-studio"></a>Visual Studio で/CETCOMPAT リンカー オプションを設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、「[プロジェクト プロパティの操作](../working-with-project-properties.md)」を参照してください。
 
 1. 選択、**構成プロパティ** > **リンカー** > **コマンドライン**プロパティ ページ。
 
@@ -48,5 +48,4 @@ ms.locfileid: "56418693"
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[リンカー オプション](linker-options.md)

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCLinkerTool.GenerateWindowsMetadataFile
 ms.assetid: 062b41b3-14d6-432c-a361-fdb66e918931
-ms.openlocfilehash: 5532046f4284100c60bb82c12b4d47c721fc275e
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5d24d1d1aad8442f549dcb1aa4bd6414070c282c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413083"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815984"
 ---
 # <a name="winmdfile-specify-winmd-file"></a>/WINMDFILE (winmd ファイルの指定)
 
-によって生成される Windows ランタイム メタデータ (.winmd) 出力ファイルのファイル名を指定します、 [/WINMD](../../build/reference/winmd-generate-windows-metadata.md)リンカー オプション。
+によって生成される Windows ランタイム メタデータ (.winmd) 出力ファイルのファイル名を指定します、 [/WINMD](winmd-generate-windows-metadata.md)リンカー オプション。
 
 ```
 /WINMDFILE:filename
@@ -25,7 +25,7 @@ ms.locfileid: "57413083"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**リンカー**フォルダー。
 
@@ -35,6 +35,6 @@ ms.locfileid: "57413083"
 
 ## <a name="see-also"></a>関連項目
 
-[/WINMD (Windows メタデータの生成)](../../build/reference/winmd-generate-windows-metadata.md)<br/>
-[リンカー オプションの設定](../../build/reference/setting-linker-options.md)<br/>
-[リンカー オプション](../../build/reference/linker-options.md)
+[/WINMD (Windows メタデータの生成)](winmd-generate-windows-metadata.md)<br/>
+[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカー オプション](linker-options.md)

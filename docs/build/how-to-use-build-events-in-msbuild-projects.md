@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - 'msbuild (c++), howto: use build events in projects'
 ms.assetid: 2a58dc9d-3d50-4e49-97c1-86c5a05ce218
-ms.openlocfilehash: ea9ff51066c09e1e4a783b622248d9774a023172
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 7678b975558b245fb730bff35fb156bf21d7f895
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57417601"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57814120"
 ---
 # <a name="how-to-use-build-events-in-msbuild-projects"></a>方法: MSBuild プロジェクトでビルド イベントを使用します。
 
@@ -39,7 +39,7 @@ Command 要素で、項目定義グループで表される 3 つのビルド �
 
 ## <a name="example"></a>例
 
-作成した myproject.vcxproj ファイルのプロジェクト要素の内部で次の例を追加できる[チュートリアル。MSBuild を使用して、Visual C プロジェクトを作成する](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)します。 A*ビルド前*main.cpp のコピーは、イベントは*リンク前*main.obj; のコピーおよびイベントにより*post-build* myproject.exe のイベントのコピーします。 プロジェクトをビルドするには、リリース構成を使用して、ビルド イベントが実行されます。 デバッグ構成を使用して、プロジェクトのビルドとビルド イベントは実行されません。
+作成した myproject.vcxproj ファイルのプロジェクト要素の内部で次の例を追加できる[チュートリアル。MSBuild を使用して、Visual C プロジェクトを作成する](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)します。 A*ビルド前*main.cpp のコピーは、イベントは*リンク前*main.obj; のコピーおよびイベントにより*post-build* myproject.exe のイベントのコピーします。 プロジェクトをビルドするには、リリース構成を使用して、ビルド イベントが実行されます。 デバッグ構成を使用して、プロジェクトのビルドとビルド イベントは実行されません。
 
 ```
 <ItemDefinitionGroup>
@@ -72,5 +72,5 @@ Command 要素で、項目定義グループで表される 3 つのビルド �
 
 ## <a name="see-also"></a>関連項目
 
-[MSBuild (Visual C++)](../build/msbuild-visual-cpp.md)<br/>
-[チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成](../build/walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)
+[コマンド ライン - C++ での MSBuild](msbuild-visual-cpp.md)<br/>
+[チュートリアル: MSBuild を使用した Visual C++ プロジェクトの作成](walkthrough-using-msbuild-to-create-a-visual-cpp-project.md)

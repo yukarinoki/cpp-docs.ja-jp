@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /Zc compiler options (C++)
 - Zc compiler options (C++)
 ms.assetid: 5f5bc102-44c3-4688-bbe1-080594dcee5c
-ms.openlocfilehash: 03bbe3d9da0530d4fe3c540d46d1a597fbe9dd2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ea977020286d720ed3a6b1b13bf8ff8f5c85e5b2
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549306"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57822562"
 ---
 # <a name="zcauto-deduce-variable-type"></a>/Zc:auto (変数の型の推測)
 
@@ -32,7 +32,7 @@ C++ 基準は、`auto` キーワードの元の意味と改定された意味を
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>このコンパイラ オプションを Visual Studio で使用するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
@@ -40,5 +40,5 @@ C++ 基準は、`auto` キーワードの元の意味と改定された意味を
 
 ## <a name="see-also"></a>関連項目
 
-[/Zc (準拠)](../../build/reference/zc-conformance.md)<br/>
+[/Zc (準拠)](zc-conformance.md)<br/>
 [auto キーワード](../../cpp/auto-keyword.md)

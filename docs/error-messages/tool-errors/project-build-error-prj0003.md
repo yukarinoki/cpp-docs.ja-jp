@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - PRJ0003
 ms.assetid: fc5a84bb-c6d3-41d6-8dd6-475455820778
-ms.openlocfilehash: 9a116f41efc791ed90fbac8065bc339172c9ea9d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6530045870573921cf626ceeec4c1dca10cdbfb
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572388"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57816179"
 ---
 # <a name="project-build-error-prj0003"></a>プロジェクト ビルド エラー PRJ0003
 
@@ -27,7 +27,7 @@ ms.locfileid: "50572388"
 
 - セキュリティ特権が不十分です。 セキュリティのための十分な特権があることを確認します。
 
-- 指定された実行可能ファイルのパス**vc++ ディレクトリ**実行しようとしているツールのパスを含めないでください。 詳しくは、次を参照してください[プロジェクトのプロパティの使用。](../../ide/working-with-project-properties.md)
+- 指定された実行可能ファイルのパス**vc++ ディレクトリ**実行しようとしているツールのパスを含めないでください。 詳しくは、次を参照してください[コンパイラを設定し、ビルド プロパティ。](../../build/working-with-project-properties.md)
 
 - メイクファイル プロジェクトでは、どちらかで実行するコマンドがない**ビルド コマンドライン**または**リビルド コマンドライン**します。
 
