@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MFC, redistributing
 - redistributing MFC library
 ms.assetid: 72714ce1-385e-4c1c-afa5-96b03e873866
-ms.openlocfilehash: 891a11e02b60bf5337b02956e9562b2f4b45a6e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e7352306627722ff2921c2a46cb49b6318f10b6
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659941"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57746957"
 ---
 # <a name="redistributing-the-mfc-library"></a>MFC ライブラリの再配布
 
@@ -25,7 +25,7 @@ ms.locfileid: "50659941"
 
 アプリケーションを MFC に静的にリンクした場合 (つまり、**[プロパティ ページ]** ダイアログ ボックスの **[全般]** タブの **[スタティック ライブラリで MFC を使用する]** を指定した場合)、MFC DLL を再配布する必要はありません。 静的リンクはアプリケーションのテストや内部での配置を行う場合でも該当しますが、MFC の再配布にはそれを使用しないことをお勧めします。 Visual C++ ライブラリを配置するための推奨される方法の詳細については、「[配置方法の選択](../ide/choosing-a-deployment-method.md)」を参照してください。
 
-アプリケーションで WebBrowser コントロールを実装した MFC クラス ([CHtmlView クラス](../mfc/reference/chtmlview-class.md)や [CHtmlEditView クラス](../mfc/reference/chtmleditview-class.md)など) を使用する場合は、ターゲット コンピューターのコモン コントロール ファイルが最新になるように、Microsoft Internet Explorer の最新バージョンをインストールすることもお勧めします。 (少なくとも、Internet Explorer 4.0 以降が必要です)。Internet Explorer コンポーネントの最小インストールの方法については、マイクロソフト サポート オンラインの 「Article 185375: How To Create a Single EXE Install of Internet Explorer (記事 185375: Internet Explorer のインストール ファイルである単一の exe ファイルの作成方法)」を参照してください。
+アプリケーションで WebBrowser コントロールを実装した MFC クラス ([CHtmlView クラス](../mfc/reference/chtmlview-class.md)や [CHtmlEditView クラス](../mfc/reference/chtmleditview-class.md)など) を使用する場合は、ターゲット コンピューターのコモン コントロール ファイルが最新になるように、Microsoft Internet Explorer の最新バージョンをインストールすることもお勧めします。 (少なくとも、Internet Explorer 4.0 以降が必要です)。Internet Explorer コンポーネントの最小インストールの方法については、マイクロソフト サポート オンラインの「Article 185375: How To Create a Single EXE Install of Internet Explorer」 (記事 185375: Internet Explorer のインストール ファイルである単一の exe ファイルの作成方法) を参照してください。
 
 アプリケーションで MFC データベース クラス ([CRecordset クラス](../mfc/reference/crecordset-class.md)や [CRecordView クラス](../mfc/reference/crecordview-class.md)など) を使用する場合は、必要な ODBC および ODBC ドライバーを再配布する必要があります。
 
@@ -45,6 +45,6 @@ MFC アプリケーションのローカライズ方法の詳細については�
 
 MFC のローカライズ用 DLL を再配布するには、MFC DLL をアプリケーションのローカル フォルダーに配置します。 Visual C++ ライブラリを再配布する方法の詳細については、「[Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual C++ ファイルの再配布](../ide/redistributing-visual-cpp-files.md)

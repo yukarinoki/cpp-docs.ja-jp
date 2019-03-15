@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - scanf function, width specification
 ms.assetid: 94b4e8fe-c4a2-4799-8b6c-a2cf28ffb09c
-ms.openlocfilehash: e4608d46664dad3e04d37a82368cc6e7173106f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1431002a7e7d0054ac20c05c76b05cabc96177c5
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445163"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57743264"
 ---
 # <a name="scanf-width-specification"></a>scanf 関数の文字幅指定
 
@@ -79,7 +79,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 ## <a name="reading-undelimited-strings"></a>区切られていない文字列の読取り
 
-空白で区切られていない文字列を読み取るには、角かっこ内の文字セット (**[ ]**) を **s** (文字列) 型の文字に代用できます。 角かっこ内の文字のセットは、制御文字列と呼ばれます。 対応する入力フィールドは、制御文字に表示されない最初の文字まで読み取られます。 セット内の最初の文字がカレット (**^**) の場合、効果は逆になり、入力フィールドは文字セットの残りの部分に表示される最初の文字までが読み取られます。
+空白で区切られていない文字列を読み取るには、角かっこ内の文字セット (**[ ]**) を **s** (文字列) 型の文字に代用できます。 角かっこ内の文字のセットは、制御文字列と呼ばれます。 対応する入力フィールドは、制御文字に表示されない最初の文字まで読み取られます。 セット内の最初の文字がキャレット (**^**) の場合、効果は逆になり、入力フィールドは文字セットの残りの部分に表示される最初の文字までが読み取られます。
 
 **%[a-z]** と **%[z-a]** は **%[abcde...z]** と同等のものと解釈されます。 これは一般的に使われる `scanf` 関数の拡張機能ですが、ANSI 標準では必要とされません。
 
@@ -101,7 +101,7 @@ wscanf_s(L"%hC", &x, 2);    // Read a single-byte character
 
 理由に関係なく、`scanf` 関数が入力フィールドの読み取りを停止すると、次の入力フィールドは、最初の未読文字から始まるとみなされます。 競合する文字がある場合は、それは未読とみなされ、次の入力フィールドの最初の文字、または入力ストリームのそのあとの読み取り操作の最初の文字になります。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [scanf、_scanf_l、wscanf、_wscanf_l](../c-runtime-library/reference/scanf-scanf-l-wscanf-wscanf-l.md)<br/>
 [scanf_s、_scanf_s_l、wscanf_s、_wscanf_s_l](../c-runtime-library/reference/scanf-s-scanf-s-l-wscanf-s-wscanf-s-l.md)<br/>

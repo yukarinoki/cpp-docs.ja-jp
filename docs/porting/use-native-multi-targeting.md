@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: a4bb059b13f2001c6691e8d051106aa5e11eccbd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 57f7450537f7609cbc66f8adf0bc868631e15f3a
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50429151"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740817"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Visual Studio でネイティブ マルチターゲットを利用し、古いプロジェクトを作成する
 
@@ -52,7 +52,7 @@ Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビル�
 
 アップグレードが完了したときに、ログ レポートにいずれかのプロジェクトのエラーまたは警告がある場合は、それらを慎重に確認します。 **VCBuild** から **MSBuild** への変換には、問題が発生する可能性があります。 レポートに表示されるすべてのアクション項目を理解して実装したことを確認してください。 アップグレード ログのレポートおよび **VCBuild** を **MSBuild** に変換するときに発生する可能性のある問題の詳細については、「[C++ Native Multi-Targeting](https://blogs.msdn.microsoft.com/vcblog/2009/12/08/c-native-multi-targeting/)」 (C++ Native Multi-Targeting) ブログの投稿を参照してください。
 
-プロジェクトのアップグレードが完了し、ログ ファイルに記載されたすべての問題を解決したら、ソリューションの実際のターゲットが最新のツールセットになります。 最後の手順として、Visual Studio 2008 のツールセットを使用するようにソリューション内の各プロジェクトのプロパティを変更します。 現在のバージョンの Visual Studio ソリューションでソリューションを読み込んだ状態で、プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。**[ソリューション エクスプローラー]** でプロジェクトを右クリックし、**[プロパティ]** を選択します。 **[プロパティ ページ]** ダイアログ ボックスで、 **[構成]** ドロップダウン リストの値を **[すべての構成]** に変更します。 **[構成プロパティ]** で **[全般]** を選択し、 **[プラットフォーム ツールセット]** を **Visual Studio 2008 (v90)** に変更します。
+プロジェクトのアップグレードが完了し、ログ ファイルに記載されたすべての問題を解決したら、ソリューションの実際のターゲットが最新のツールセットになります。 最後の手順として、Visual Studio 2008 のツールセットを使用するようにソリューション内の各プロジェクトのプロパティを変更します。 現在のバージョンの Visual Studio ソリューションでソリューションを読み込んだ状態で、ソリューションのプロジェクトごとに、プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。**[ソリューション エクスプローラー]** でプロジェクトを右クリックし、**[プロパティ]** を選択します。 **[プロパティ ページ]** ダイアログ ボックスで、 **[構成]** ドロップダウン リストの値を **[すべての構成]** に変更します。 **[構成プロパティ]** で **[全般]** を選択し、 **[プラットフォーム ツールセット]** を **Visual Studio 2008 (v90)** に変更します。
 
 この変更後、現在のバージョンの Visual Studio でソリューションをビルドするときに、Visual Studio 2008 のコンパイラとライブラリが使用されます。
 
@@ -64,7 +64,7 @@ Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビル�
 
 これらの製品がインストールされているときに、**[プロパティ ページ]** ダイアログ ボックスの **[プラットフォーム ツールセット]** プロパティ ドロップダウンの一覧が自動的に更新され、使用できるツールセットが表示されます。 最新バージョンの Visual Studio を使用して、古いバージョンのツールセットのプロジェクトをビルドすることができます。それらを変換またはアップグレードする必要はありません。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual Studio 2017 の C++ 準拠の強化](../cpp-conformance-improvements-2017.md)

@@ -6,16 +6,16 @@ helpviewer_keywords:
 - application deployment [C++], ClickOnce
 - ClickOnce deployment [C++], C++ applications
 ms.assetid: 9988c546-0936-452c-932f-9c76daa42157
-ms.openlocfilehash: 29395e5d7e4ba9e2c582d9e5c081a4f667dcaafa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1460f13226291e76d297b628d3542a1e147900f
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467811"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57742158"
 ---
 # <a name="clickonce-deployment-for-visual-c-applications"></a>Visual C++ アプリケーションの ClickOnce 配置
 
-Visual Studio には、2 とおりの Windows アプリケーションの配置方法があります。ClickOnce 配置を使用する方法と [Windows インストーラー](/windows/desktop/Msi/windows-installer-portal)配置を使用する方法です。
+Visual Studio では、Windows アプリケーションを配置するための 2 つのテクノロジを提供しています。ClickOnce による配置または [Windows インストーラーによる配置](/windows/desktop/Msi/windows-installer-portal)です。
 
 ## <a name="clickonce-deployment-in-c"></a>C++ の ClickOnce 配置
 
@@ -36,9 +36,9 @@ ClickOnce を使用して Visual C++ アプリケーションを配置するに�
 
 さらに、アプリケーションが必須コンポーネントを配置するために、ブートストラップ (必須コンポーネント インストーラー) をビルドする必要があることもあります。ブートストラップの詳細については、「[ブートストラップ パッケージの作成](/visualstudio/deployment/creating-bootstrapper-packages)」を参照してください。
 
-テクノロジの詳細については、「[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。 ClickOnce 配置の詳細な例については、「[チュートリアル : ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)」を参照してください。
+テクノロジの詳細については、「[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。 ClickOnce 配置の詳細な例については、「[Walkthrough:Manually Deploying a ClickOnce Application](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)」(チュートリアル: ClickOnce アプリケーションを手動で配置する) を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Mage.exe (マニフェストの生成および編集ツール)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool)<br>
 [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)<br>

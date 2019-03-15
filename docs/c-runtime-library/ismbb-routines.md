@@ -17,12 +17,12 @@ helpviewer_keywords:
 - ismbb routines
 - _ismbb routines
 ms.assetid: d63c232e-3fe4-4844-aafd-2133846ece4b
-ms.openlocfilehash: 6e1dd62f45eed4ec1d8e89a746d01ca1984022ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70604ce71d74bd73a3fea1b99beaf93f052e344
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481407"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57750508"
 ---
 # <a name="ismbb-routines"></a>_ismbb 系ルーチン
 
@@ -37,7 +37,7 @@ ms.locfileid: "50481407"
 |[_ismbbkalnum、_ismbbkalnum_l](../c-runtime-library/reference/ismbbkalnum-ismbbkalnum-l.md)|[_ismbbpunct、_ismbbpunct_l](../c-runtime-library/reference/ismbbpunct-ismbbpunct-l.md)|
 |[_ismbbkana、_ismbbkana_l](../c-runtime-library/reference/ismbbkana-ismbbkana-l.md)|[_ismbbtrail、_ismbbtrail_l](../c-runtime-library/reference/ismbbtrail-ismbbtrail-l.md)|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 `_ismbb` ファミリのすべてのルーチンは、特定の条件に対して整数値 `c` をテストします。 テスト結果は、有効なマルチバイト コード ページによって異なります。 既定では、マルチバイト コード ページは、プログラムの開始時にオペレーティング システムから取得した ANSI コード ページに設定されます。 [_getmbcp](../c-runtime-library/reference/getmbcp.md) を使って使用中のマルチバイト コード ページを照会し、または [_setmbcp](../c-runtime-library/reference/setmbcp.md) を使って変更できます。
 
@@ -76,7 +76,7 @@ ms.locfileid: "50481407"
 
 `_ismbb` ルーチンは、関数とマクロの両方として実装されます。 実装の選び方については、「[関数またはマクロの選択に関する推奨事項](../c-runtime-library/recommendations-for-choosing-between-functions-and-macros.md)」をご覧ください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [バイト分類](../c-runtime-library/byte-classification.md)<br/>
 [is、isw 系ルーチン](../c-runtime-library/is-isw-routines.md)<br/>

@@ -4,12 +4,12 @@ ms.date: 09/17/2018
 helpviewer_keywords:
 - deployment for Visual C++
 ms.assetid: 66735cda-8fe3-4211-a19a-2cf717a12a3f
-ms.openlocfilehash: 3dc607ea082e31ba73f34ce1ca8acd3ebc78292a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2d83d45f1369e250b24708edd17f4004e030a17
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50565595"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57749127"
 ---
 # <a name="walkthrough-deploying-a-visual-c-application-by-using-a-setup-project"></a>チュートリアル: セットアップ プロジェクトを使用した Visual C++ アプリケーションの配置
 
@@ -58,6 +58,6 @@ ms.locfileid: "50565595"
 
 1. ソリューション フォルダーで、配置プロジェクトからビルドされた setup.exe プログラムを見つけます。 このファイル (および .msi ファイル) をコピーして、アプリケーションとその必要なライブラリ ファイルを別のコンピューターにインストールできます。 Visual C ++ ライブラリがない 2 台目のコンピューターで、セットアップ プログラムを実行します。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [配置例](deployment-examples.md)<br/>

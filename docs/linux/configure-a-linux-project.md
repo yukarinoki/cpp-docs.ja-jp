@@ -1,17 +1,17 @@
 ---
 title: Visual Studio で C++ Linux プロジェクトを構成する
-ms.date: 09/18/2018
+ms.date: 11/12/2018
 ms.assetid: 4d7c6adf-54b9-4b23-bd23-5de0c825b768
-ms.openlocfilehash: fd87b3d60e6625fb86ad1b494fd878b9b5ca031b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0d0825a3aca8ca03759d7f7b42db90ce9700c10b
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50622496"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57745188"
 ---
 # <a name="configure-a-linux-project"></a>Linux プロジェクトの構成
 
-このトピックでは、Visual Studio で C++ Linux プロジェクトを構成する方法について説明します。 Visual Studio の CMake Linux プロジェクトに関する詳細については、「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」を参照してください。
+このトピックでは、Visual Studio で Linux プロジェクト テンプレートに基づいた C++ Linux プロジェクトを構成する方法について説明します。 Visual Studio の CMake Linux プロジェクトに関する詳細については、「[Linux CMake プロジェクトを構成する](cmake-linux-project.md)」を参照してください。
 
 ## <a name="general-settings"></a>全般設定
 
@@ -87,10 +87,10 @@ apt install zip
 
 ![リモート ヘッダー IntelliSense](media/remote-header-intellisense.png)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)<br/>
-[C++ 全般プロパティ (Linux C++)](../linux/prop-pages/general-linux.md)<br/>
-[VC++ ディレクトリ (Linux C++)](../linux/prop-pages/directories-linux.md)<br/>
-[ソースのプロジェクト プロパティのコピー (Linux C++)](../linux/prop-pages/copy-sources-project.md)<br/>
-[ビルド イベント プロパティ (Linux C++)](../linux/prop-pages/build-events-linux.md)
+[C++ 全般プロパティ (Linux C++)](prop-pages/general-linux.md)<br/>
+[VC++ ディレクトリ (Linux C++)](prop-pages/directories-linux.md)<br/>
+[ソースのプロジェクト プロパティのコピー (Linux C++)](prop-pages/copy-sources-project.md)<br/>
+[ビルド イベント プロパティ (Linux C++)](prop-pages/build-events-linux.md)

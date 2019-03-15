@@ -2,12 +2,12 @@
 title: '移植のガイド: Spy++'
 ms.date: 11/19/2018
 ms.assetid: e558f759-3017-48a7-95a9-b5b779d5e51d
-ms.openlocfilehash: 5bd69853b13d58ff79910eafcc601b0507d5a9ad
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: b28de2396ba94578a8d06038a1191be42dce49ea
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52177005"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751375"
 ---
 # <a name="porting-guide-spy"></a>移植のガイド: Spy++
 
@@ -292,7 +292,7 @@ afx_msg UINT OnNcHitTest(CPoint point);
 afx_msg LRESULT OnNcHitTest(CPoint point);
 ```
 
-この関数はおよそ 10 回使用され、すべて CWnd から派生した異なるクラスに存在するため、カーソルがエディターの関数上にあり、**[シンボルの検索]** ツール ウィンドウからこれらを探して移動する場合は、**[定義へ移動]** (キーボード: **F12**) と **[宣言へ移動]** (キーボード: **Ctrl**+**F12**) を使用すると便利です。 **[定義へ移動]** は通常、この 2 つの中ではより便利です。 **[宣言へ移動]** は、フレンド クラスの宣言や前方参照など、定義しているクラス宣言以外の宣言を検索します。
+この関数はおよそ 10 回使用され、すべて CWnd から派生した異なるクラスに存在するため、**[定義へ移動]** (キーボード: **F12**) と **[宣言へ移動]** (キーボード: **Ctrl**+**F12**) を使用すると、カーソルがエディターの関数上にあり、**[シンボルの検索]** ツール ウィンドウからこれらを探して移動する場合に便利です。 **[定義へ移動]** は通常、この 2 つの中ではより便利です。 **[宣言へ移動]** は、フレンド クラスの宣言や前方参照など、定義しているクラス宣言以外の宣言を検索します。
 
 ##  <a name="mfc_changes"></a> 手順 9. MFC の変更
 
@@ -671,7 +671,7 @@ int CPerfTextDataBase::NumStrings(LPCTSTR mszStrings) const
 
 元の Visual C++ 6.0 のコードから最新のコンパイラに Spy++ を移植するのに、コーディングが約 20 時間かかり、およそ 1 週間必要でした。 私たちは、Visual Studio 6.0 から Visual Studio 2015 まで、8 つの製品リリースを通じて直接アップグレードしました。 これは、現時点で、プロジェクトの大小にかかわらずすべてのアップグレードで推奨される方法です。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
-[前のケース スタディ: COM Spy](../porting/porting-guide-com-spy.md)
+[移植とアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[前のケース スタディ:COM Spy](../porting/porting-guide-com-spy.md)

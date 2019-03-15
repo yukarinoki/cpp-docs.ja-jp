@@ -11,12 +11,12 @@ helpviewer_keywords:
 - depends.exe
 - libraries [C++], application deployment issues
 ms.assetid: 62a44c95-c389-4c5f-82fd-07d7ef09dbf9
-ms.openlocfilehash: 8ed340bed62d3b2cfcf32e0b98f032c9146b6bb9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed510e0d289349b1d7a0129a1c586b0bf1715b7e
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629269"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751480"
 ---
 # <a name="understanding-the-dependencies-of-a-visual-c-application"></a>Visual C++ アプリケーションの依存関係の理解
 
@@ -32,6 +32,6 @@ depends.exe を使用する場合は、DLL が、他の DLL や特定の DLL バ
 
 アプリケーションが依存する DLL がわかったら、アプリケーションを別のコンピューターに配置するときに共に再頒布する必要がある DLL を判断できます。 ほとんどの場合、システム DLL を再配布する必要はありませんが、Visual C++ ライブラリの DLL の再配布が必要である可能性があります。 詳細については、「[再配布する DLL の決定](../ide/determining-which-dlls-to-redistribute.md)」を参照してください。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)

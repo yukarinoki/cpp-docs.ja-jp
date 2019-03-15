@@ -6,12 +6,12 @@ helpviewer_keywords:
 - testing projects
 - projects [C++], testing
 ms.assetid: 88cdd377-c5c8-4201-889d-32f5653ebead
-ms.openlocfilehash: a604d8ef0b44db04d9a6da8fdc959d08384f1bf3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e93236f9bd08741bb757e43309cd59281f828da1
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437311"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57744608"
 ---
 # <a name="walkthrough-testing-a-project-c"></a>チュートリアル: プロジェクトのテスト (C++)
 
@@ -41,7 +41,8 @@ ms.locfileid: "50437311"
 
    プログラムがブレークポイントの行に到達すると、実行が一時的に停止されます。プログラムが中断モードであるためです。 コード行の左側の黄色の矢印は、次に実行される行を示します。
 
-1. `Cardgame::totalParticipants` 変数の値を調べるには、ポインターを `Cardgame` に移動し、ヒント ウィンドウの左側にある展開コントロールに移動します。 変数の名前 "`totalParticipants`" とその値 "**12**" が表示されます。
+1. 
+  `Cardgame::totalParticipants` 変数の値を調べるには、ポインターを `Cardgame` に移動し、ヒント ウィンドウの左側にある展開コントロールに移動します。 変数の名前 "`totalParticipants`" とその値 "**12**" が表示されます。
 
    `Cardgame::totalParticipants` 変数のショートカット メニューを開き、**[ウォッチ式の追加]** を選択して、その変数を **[ウォッチ 1]** ウィンドウに表示します。 変数を強調表示して **[ウォッチ 1]** ウィンドウにドラッグしてもかまいません。
 
@@ -57,10 +58,10 @@ ms.locfileid: "50437311"
 
 ## <a name="next-steps"></a>次の手順
 
-**前へ:** [チュートリアル: プロジェクトの構築 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
-**次へ:** [チュートリアル: プロジェクトのデバッグ (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**前へ:**[チュートリアル:プロジェクトの構築 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**次へ:**[チュートリアル:プロジェクトのデバッグ (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)<br/>

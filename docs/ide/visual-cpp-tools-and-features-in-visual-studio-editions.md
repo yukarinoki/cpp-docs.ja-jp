@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 7f40e59ae3e5e883827a212a16d1dd19822dc136
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50463753"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57751896"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>さまざまな Visual Studio エディションの Visual C++ ツールおよび機能
 
@@ -106,7 +106,7 @@ Visual Studio で使用できる Visual C++ の機能を次の表に示します
 |マネージド デバッグ||x|x|x|
 |GPU 使用率|x||x|x|
 |メモリ使用量|x||x|x|
-|リモート デバッグ|x|x|x|x|
+|Remote Debugging|x|x|x|x|
 |SQL デバッグ|||x|x|
 |スタティック コード分析|制限|制限|x|x|
 
@@ -172,7 +172,7 @@ Visual Studio で使用できる Visual C++ の機能を次の表に示します
 |コード マップと依存関係グラフ|||読み取り専用|x|
 |コード マップ デバッグ||||x|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)<br/>
 [Visual Studio の新機能](/visualstudio/ide/whats-new-in-visual-studio)<br/>

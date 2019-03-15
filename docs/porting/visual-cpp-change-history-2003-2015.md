@@ -4,12 +4,12 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: b1070a330e40c0bf73f3713783b3f126d0848cbc
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: dcae15ade3bd155e16149cc56981f79abb245e16
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525523"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57740375"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
@@ -139,13 +139,13 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
    以前のバージョンでは、無限大および NaNs は、MSVC 固有の sentinel 文字列のセットを使用して書式設定されていました。
 
-  - 無限大: 1.#INF
+  - 無限大:1.#INF
 
-  - 簡易な NaN: 1.#QNAN
+  - クワイエット型 NaN:1.#QNAN
 
-  - シグナリング NaN: 1.#SNAN
+  - シグナル型 NaN:1.#SNAN
 
-  - 無限大 NaN: 1.#IND
+  - 不定値 NaN:1.#IND
 
   これらにはすべて、プレフィックスとして符号が付けられていた可能性があります。また、書式設定はフィールドの幅と精度に応じて若干異なる可能性があります (まれな例として、`printf("%.2f\n", INFINITY)` は 1.#J と出力されます。これは、#INF が 2 桁の精度に "丸められる" ためです)。 C99 で、無限大と NaNs の書式設定の方法に関して新たな要件が導入されました。 現在、MSVC の実装は、これらの要件に準拠しています。 新しい文字列は、次のとおりです。
 
@@ -384,7 +384,8 @@ Visual Studio の新しいバージョンにアップグレードすると、以
 
 - **launch::any ポリシーと launch::sync ポリシー**
 
-   非標準の `launch::any` と `launch::sync` のポリシーが削除されました。 代わりに、`launch::any` に対して、`launch:async | launch:deferred` を使用します。 `launch::sync` では、`launch::deferred` を使用します。 「[launch 列挙型](../standard-library/future-enums.md#launch)」を参照してください。
+   非標準の `launch::any` と `launch::sync` のポリシーが削除されました。 代わりに、`launch::any` に対して、`launch:async | launch:deferred` を使用します。 
+  `launch::sync` では、`launch::deferred` を使用します。 「[launch 列挙型](../standard-library/future-enums.md#launch)」を参照してください。
 
 ####  <a name="BK_MFC"></a> MFC と ATL
 
@@ -1047,7 +1048,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **オーバーロード関数のあいまいな呼び出し**
 
-   次のコードに対しては、C266: "'N::bind': オーバーロード関数の呼び出しを解決することができません" が発生するようになりました。
+   次のコードに対しては、C266 が発生するようになりました。'N::bind': オーバーロード関数のあいまいな呼び出し
 
     ```cpp
     template<typename R, typename T, typename T1, typename A1>
@@ -1190,7 +1191,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **MFC の例外はコピーできないため値によってキャッチできない**
 
-   MFC アプリケーションの次のコードに対しては、エラー C2316: "'D' がデストラクターとしてキャッチできない、またはコピー コンストラクターがアクセスできないか削除されています" が発生するようになりました。
+   MFC アプリケーションの次のコードでエラー C2316:"'D': デストラクターとしてキャッチできない、またはコピー コンストラクターがアクセスできないか削除されています" が発生するようになりました。
 
     ```cpp
     struct B {
@@ -1336,7 +1337,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **非静的データ メンバーの初期化 (NSDMI) での無効なコピー初期化の修正**
 
-   次のコードに対しては、エラー C2664: "'S1::S1(S1 &&)': 引数 1 を 'bool' から 'const S1 &' へ変換できません" が発生するようになりました。
+   次のコードに対しては、エラー C2664:"'S1::S1(S1 &&)': 引数 1 を 'bool' から 'const S1 &' へ変換できません" が発生するようになりました。
 
     ```cpp
     struct S1 {
@@ -1358,7 +1359,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **decltype ステートメント内のコンストラクターへのアクセス**
 
-   次のコードに対しては、C2248: 'S::S': "クラス 'S' で宣言されているプライベート メンバーにアクセスできません" が発生するようになりました。
+   次のコードに対しては、C2248:"'S::S': "クラス 'S' で宣言されているプライベート メンバーにアクセスできません" が発生するようになりました。
 
     ```cpp
     class S {
@@ -1480,7 +1481,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 - **派生コンストラクターの本体内の保護された既定コンストラクターは呼び出すことができない**
 
-   次のコードに対しては、エラー C2248: "'S1::S1': クラス 'S1' で宣言されている保護されているメンバーにアクセスできません" が発生するようになりました。
+   次のコードに対しては、エラー C2248:"'S1::S1': クラス 'S1' で宣言されている保護されたメンバーにアクセスできません" が発生するようになりました。
 
     ```cpp
     struct S1 {
@@ -2884,7 +2885,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-   以前のリリースでは最適化の対象となったコードの場所を探すには、該当するリリースのコンパイラと `/W3` のコンパイラ オプションを併用し、警告 4370 をオンにします。 例:
+   以前のリリースでは最適化の対象となったコードの場所を探すには、該当するリリースのコンパイラと `/W3` のコンパイラ オプションを併用し、警告 4370 をオンにします。 次に例を示します。
 
     ```cpp
     #pragma warning(default:4370)
@@ -2899,7 +2900,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-   Visual Studio 2013 以前のバージョンでは、このコードで "C4370: 'S2': パッキングの改善のために、前バージョンのコンパイラからクラスのレイアウトが変更されました" というメッセージが出力されます。
+   Visual Studio 2013 より前では、このコードでメッセージ "警告 C4370:'S2': パッキングの改善のために、前バージョンのコンパイラからクラスのレイアウトが変更されました" が出力されます。
 
    x86 コンパイラでは、すべてのバージョンのコンパイラで同じ標準以下のレイアウト問題があります。 たとえば、次のコードが x86 でコンパイルされた場合を考えます。
 
@@ -2911,7 +2912,8 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-   `sizeof(S)` の結果は 24 です。 しかし、これは先ほど説明した x64 の代替手段を使用すると 16 に減らせます。
+   
+  `sizeof(S)` の結果は 24 です。 しかし、これは先ほど説明した x64 の代替手段を使用すると 16 に減らせます。
 
     ```cpp
     struct dummy {
@@ -2929,9 +2931,11 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
 Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装された _ITERATOR_DEBUG_LEVEL の不一致を検出し、RuntimeLibrary の不一致も検出します。 これらは、コンパイラ オプション `/MT` (静的なリリース)、`/MTd` (静的なデバッグ)、`/MD` (動的なリリース)、および `/MDd` (動的なデバッグ) が混在する場合に発生します。
 
-- コードが、以前のリリースのシミュレートされたエイリアスのテンプレートを検出した場合、変更する必要があります。 たとえば、`allocator_traits<A>::rebind_alloc<U>::other` の代わりに、`allocator_traits<A>::rebind_alloc<U>` と指定する必要があります。 `ratio_add<R1, R2>::type` は必要でなくなり、`ratio_add<R1, R2>` を使うことが勧められていますが、前者でもコンパイルは可能です。これは、`ratio<N, D>` を使用して圧縮するには、typedef "型" が必要であるためです (既に圧縮されている場合も同じ型を使用します)。
+- コードが、以前のリリースのシミュレートされたエイリアスのテンプレートを検出した場合、変更する必要があります。 たとえば、`allocator_traits<A>::rebind_alloc<U>::other` の代わりに、`allocator_traits<A>::rebind_alloc<U>` と指定する必要があります。 
+  `ratio_add<R1, R2>::type` は必要でなくなり、`ratio_add<R1, R2>` を使うことが勧められていますが、前者でもコンパイルは可能です。これは、`ratio<N, D>` を使用して圧縮するには、typedef "型" が必要であるためです (既に圧縮されている場合も同じ型を使用します)。
 
-- `#include <algorithm>` または `std::min()`を呼び出すときに、`std::max()` を使用する必要があります。
+- 
+  `#include <algorithm>` または `std::min()`を呼び出すときに、`std::max()` を使用する必要があります。
 
 - 既存のコードが、以前のリリースのシミュレートされたスコープを指定された列挙型、つまり名前空間の中でラップされている、スコープを指定されていない従来の列挙型を使用している場合は、そのコードを変更する必要があります。 たとえば、型 `std::future_status::future_status` を参照していた場合は、`std::future_status` を指定する必要があります。 ただし、ほとんどのコードは影響を受けません。たとえば、`std::future_status::ready` は引き続きコンパイルされます。
 
@@ -2963,9 +2967,10 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="mfc-and-atl"></a>MFC と ATL
 
-- **Visual Studio 2013 のみ**: Unicode が非常に一般的になり、MBCS の使用が大幅に減少しているため、MFC MBCS ライブラリは Visual Studio に含まれていません。 この変更により、新しいコントロールとメッセージの多くは Unicode 専用になったため、MFC は Windows SDK 自体により緊密に整合するようになりました。 ただし、MFC の MBCS ライブラリを引き続き使用する必要がある場合は、MSDN ダウンロード センター ([Visual Studio 2013 のマルチバイト MFC ライブラリ](https://www.microsoft.com/download/details.aspx?id=40770)) からダウンロードできます。 Visual C++ 再頒布可能パッケージにも、引き続きこのライブラリが含まれています。  (注: MBCS DLL は Visual Studio 2015 以降の C++ セットアップ コンポーネントに含まれています。)
+- **Visual Studio 2013 のみ**:Unicode が非常に一般的になり、MBCS の使用が大幅に減少しているため、MFC MBCS ライブラリは Visual Studio に含まれていません。 この変更により、新しいコントロールとメッセージの多くは Unicode 専用になったため、MFC は Windows SDK 自体により緊密に整合するようになりました。 ただし、MFC の MBCS ライブラリを引き続き使用する必要がある場合は、MSDN ダウンロード センター ([Visual Studio 2013 のマルチバイト MFC ライブラリ](https://www.microsoft.com/download/details.aspx?id=40770)) からダウンロードできます。 Visual C++ 再頒布可能パッケージにも、引き続きこのライブラリが含まれています。  (メモ: MBCS DLL は Visual Studio 2015 以降の C++ セットアップ コンポーネントに含まれています。)
 
-- MFC リボンのアクセシビリティが変更されました。  1 レベルのアーキテクチャではなく、階層的なアーキテクチャが用意されました。 `CRibbonBar::EnableSingleLevelAccessibilityMode()` を呼び出して、引き続き古い動作を使用することもできます。
+- MFC リボンのアクセシビリティが変更されました。  1 レベルのアーキテクチャではなく、階層的なアーキテクチャが用意されました。 
+  `CRibbonBar::EnableSingleLevelAccessibilityMode()` を呼び出して、引き続き古い動作を使用することもできます。
 
 - `CDatabase::GetConnect` メソッドは削除されました。 セキュリティを改善するために、接続文字列は暗号化された状態で格納され、必要な場合にのみ復号化されるようになりました。プレーンテキストとして返すことはできません。  この文字列を取得するには、`CDatabase::Dump` メソッドを使用します。
 
@@ -3043,7 +3048,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - C++98/03 標準と C++11 標準間の互換性に影響する変更に伴い、明示的なテンプレート引数を使用して (`make_pair<int, int>(x, y)` のように) `make_pair()` を呼び出しても、一般的に Visual Studio 2012 の Visual C++ ではコンパイルされなくなりました。 この問題を解決するには、`make_pair(x, y)` のように明示的なテンプレート引数を指定せずに常に `make_pair() ` を呼び出す必要があります。 明示的なテンプレート引数を指定すると、この関数の目的を達成できません。 結果の型を正確に制御する必要がある場合は、`pair<short, short>(int1, int2)` のように `make_pair` ではなく `pair` を使用します。
 
-- C++98/03 標準と C++11 標準間には、互換性に影響する変更がもう 1 つあります。A が暗黙的に B に変換可能で、B が暗黙的に C に変換可能でも、A が暗黙的に C に変換可能ではない場合、C++98/03 と Visual C++ 2010 は `pair<A, X>` を (暗黙的または明示的に) `pair<C, X>` に変換できます  (その他の型である X はここで取り上げませんが、ペアの最初の型に固有ではありません)。Visual Studio 2012 の C++11 と C++ コンパイラは、A が暗黙的に C に変換可能であると検出するため、オーバーロードの解決法からペアの変換が削除されます。 これは、多くのシナリオでは、よい結果になる変更です。 たとえば、この変更で、`func(const pair<int, int>&)` と `func(const pair<string, string>&)` のオーバーロードと、`pair<const char *, const char *>` を指定した `func()` の呼び出しはコンパイルされるようになります。 ただし、積極的なペアの変換に依存するコードの場合、これは互換性に影響する変更です。 通常、このようなコードを修正するには、変換の一部を明示的に実行します。たとえば、`make_pair(static_cast<B>(a), x)` を `pair<C, X>` を受け取る関数に渡します。
+- C++98/03 標準と C++11 標準間には、破壊的変更がもう 1 つあります。A が暗黙的に B に変換可能で、B が暗黙的に C に変換可能でも、A が暗黙的に C に変換可能ではない場合、C++98/03 と Visual C++ 2010 は `pair<A, X>` を (暗黙的または明示的に) `pair<C, X>` に変換できます  (その他の型である X はここで取り上げませんが、ペアの最初の型に固有ではありません)。Visual Studio 2012 の C++11 と C++ コンパイラは、A が暗黙的に C に変換可能であると検出するため、オーバーロードの解決法からペアの変換が削除されます。 これは、多くのシナリオでは、よい結果になる変更です。 たとえば、この変更で、`func(const pair<int, int>&)` と `func(const pair<string, string>&)` のオーバーロードと、`pair<const char *, const char *>` を指定した `func()` の呼び出しはコンパイルされるようになります。 ただし、積極的なペアの変換に依存するコードの場合、これは互換性に影響する変更です。 通常、このようなコードを修正するには、変換の一部を明示的に実行します。たとえば、`make_pair(static_cast<B>(a), x)` を `pair<C, X>` を受け取る関数に渡します。
 
 - Visual C++ 2010 は、プロセッサのメカニズムでオーバーロードと特殊化を排除することで、引数の上限が 10 個の可変個引数テンプレート (たとえば、`make_shared<T>(arg1, arg2, argN)`) をシミュレートしていました。 Visual Studio 2012 では、引数の上限は 5 個まで減ったので、多くのユーザーは、コンパイル時間とコンパイラのメモリ使用量が改善されました。 ただし、プロジェクト全体で _VARIADIC_MAX を 10 と明示的に定義することで、以前の上限を設定できます。
 
@@ -3091,7 +3096,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - `CFolderPickerDialog` コンストラクターにパラメーターが追加されました  (これは既定のパラメーターなので、ソースの重大な変更ではありません)。
 
-- `CFileStatus` 構造体のサイズは変更されました。`m_attribute` のメンバーは、(`GetFileAttributes` から返される値に合わせて) BYTE から DWORD に変更されました。
+- `CFileStatus` 構造体のサイズが変更されました。`m_attribute` のメンバーは、(`GetFileAttributes` から返される値に合わせて) BYTE から DWORD に変更されました。
 
 - Unicode ビルドの場合、`CRichEditCtrl` と `CRichEditView` は、RICHEDIT_CLASS (RichEdit 3.0 コントロール) ではなく MSFTEDIT_CLASS (RichEdit 4.1 コントロール) を使用します。
 
@@ -3405,21 +3410,21 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="mfc"></a>MFC
 
-- `CTime` クラス: `CTime` クラスは西暦 1900 年 1 月 1 日以降の日付を使用できるようになりました  (以前は西暦 1970 年 1 月 1 日以降でした)。
+- `CTime` クラス:`CTime` クラスは西暦 1900 年 1 月 1 日以降の日付を使用できるようになりました  (以前は西暦 1970 年 1 月 1 日以降でした)。
 
-- MFC ダイアログのコントロールのタブ オーダー: タブ オーダーに MFC ActiveX コントロールが挿入されている場合、MFC ダイアログに含まれる複数のコントロールは正しいタブ オーダーになりません。 今回の変更で、この問題は解決します。
+- MFC ダイアログのコントロールのタブ オーダー:タブ オーダーに MFC ActiveX コントロールが挿入されている場合、MFC ダイアログに含まれる複数のコントロールは正しいタブ オーダーになりません。 今回の変更で、この問題は解決します。
 
    たとえば、ActiveX コントロールといくつかの編集コントロールがある MFC ダイアログ アプリケーションを作成します。 ActiveX コントロールを編集コントロールのタブ オーダーの中間に配置します。 アプリケーションを起動し、タブ オーダーが ActiveX コントロールの後である編集コントロールをクリックし、Tab キーを押します。今回の変更前は、フォーカスはタブ オーダーの次の編集コントロールではなく、ActiveX コントロールの次の編集コントロールに移動していました。
 
-- `CFileDialog` クラス: `CFileDialog` クラスのカスタム テンプレートは Windows Vista に自動的に移植できません。 使用することはできますが、Windows Vista スタイルのダイアログの機能や外観を追加することはできません。
+- `CFileDialog` クラス:`CFileDialog` クラスのカスタム テンプレートは Windows Vista に自動的に移植できません。 使用することはできますが、Windows Vista スタイルのダイアログの機能や外観を追加することはできません。
 
-- `CWnd` クラスと `CFrameWnd` クラス: `CWnd::GetMenuBarInfo` メソッドは削除されました。
+- `CWnd` クラスと `CFrameWnd` クラス:`CWnd::GetMenuBarInfo` メソッドは削除されました。
 
    `CFrameWnd::GetMenuBarInfo` メソッドは仮想メソッドではなくなりました。 詳細については、Windows SDK の **GetMenuBarInfo 関数**を参照してください。
 
-- MFC ISAPI のサポート: MFC は、Internet Server Application Programming Interface (ISAPI) を使用したアプリケーションのビルドをサポートしなくなりました。 ISAPI アプリケーションをビルドするには、ISAPI 拡張機能を直接呼び出してください。
+- MFC ISAPI のサポート:MFC は、Internet Server Application Programming Interface (ISAPI) を使用したアプリケーションのビルドをサポートしなくなりました。 ISAPI アプリケーションをビルドするには、ISAPI 拡張機能を直接呼び出してください。
 
-- 非推奨になった ANSI API: ANSI バージョンの一部の MFC メソッドは非推奨になりました。 今後のアプリケーションでは、これらのメソッドの Unicode バージョンを使用してください。 詳細については、「**Windows Vista コモン コントロールの作成要件**」を参照してください。
+- 非推奨になった ANSI API:ANSI バージョンの一部の MFC メソッドは非推奨になりました。 今後のアプリケーションでは、これらのメソッドの Unicode バージョンを使用してください。 詳細については、「**Windows Vista コモン コントロールの作成要件**」を参照してください。
 
 ## <a name="visual-c-2005-breaking-changes"></a>Visual C++ 2005 の互換性に影響する変更
 
@@ -3471,7 +3476,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - `valarray::resize()` を呼び出すと、`valarray` の内容は失われ、既定値で置き換えられます。 `resize()` メソッドは、ベクターのように動的に増加するのではなく、`valarray` を再初期化するためのものです。
 
-- デバッグ反復子: デバッグ バージョンの C ランタイム ライブラリを使用してビルドし、反復子を正しく使用していないアプリケーションは、実行時にアサートが表示されるようになることがあります。 これらのアサートを無効にするには、_HAS_ITERATOR_DEBUGGING (Visual Studio 2010 以降は [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) に置き換えられます) を 0 に定義する必要があります。 詳細については、「[Debug Iterator Support](../standard-library/debug-iterator-support.md)」(反復子のデバッグのサポート) を参照してください。
+- デバッグ反復子:デバッグ バージョンの C ランタイム ライブラリを使用してビルドし、反復子を正しく使用していないアプリケーションは、実行時にアサートが表示されるようになることがあります。 これらのアサートを無効にするには、_HAS_ITERATOR_DEBUGGING (Visual Studio 2010 以降は [_ITERATOR_DEBUG_LEVEL](../standard-library/iterator-debug-level.md) に置き換えられます) を 0 に定義する必要があります。 詳細については、「[Debug Iterator Support](../standard-library/debug-iterator-support.md)」(反復子のデバッグのサポート) を参照してください。
 
 ## <a name="visual-c-net-2003-breaking-changes"></a>Visual C++ .NET 2003 の互換性に影響する変更
 
@@ -3523,6 +3528,6 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - コンパイラは到達不能なコードをレポートするようになりました (C4702)。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Visual Studio における Visual C++ の新機能](../what-s-new-for-visual-cpp-in-visual-studio.md)

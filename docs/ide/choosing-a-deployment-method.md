@@ -12,19 +12,19 @@ helpviewer_keywords:
 - static linking [C++]
 - libraries [C++], application deployment issues
 ms.assetid: fd8eb956-f4a0-4ffb-b401-328c73e66986
-ms.openlocfilehash: eb9b0784dc5a31accc086314e64758b5bd91033f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e755ad44d088dca77f012569cd3783079cd23f86
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50607650"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57739714"
 ---
 # <a name="choosing-a-deployment-method"></a>配置方法の選択
 
 Visual C++ アプリケーションを単体で使用できない場合や、コピー コマンドを使用して配置できない場合は、Windows インストーラーを使用して配置することをお勧めします。 Windows インストーラーでは、インストール、修復、およびアンインストールのほか、アプリケーション ファイル、依存関係、およびレジストリ エントリの分割不可能な更新もサポートされています。
 
 > [!NOTE]
->  Visual C++ ネイティブ アプリケーションの [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) 配置は Visual Studio でも可能ですが、追加の手順が必要になります。 詳細については、「 [ClickOnce Deployment for Visual C++ Applications](../ide/clickonce-deployment-for-visual-cpp-applications.md)」を参照してください。
+>  Visual C++ ネイティブ アプリケーションの [ClickOnce](/visualstudio/deployment/clickonce-security-and-deployment) 配置は Visual Studio でも可能ですが、追加の手順が必要になります。 詳細については、「 [Visual C++ アプリケーションの ClickOnce 配置](../ide/clickonce-deployment-for-visual-cpp-applications.md)」を参照してください。
 
 ## <a name="visual-c-libraries-are-shared-dlls"></a>Visual C++ ライブラリの共有 DLL
 
@@ -34,7 +34,7 @@ Visual Studio インストーラーでは、Visual C++ ライブラリが %windi
 
 ご利用の配置に、再頒布用にライセンスされた任意のバージョンの Visual C++ ライブラリを再頒布できます。 配置する方法は 3 つあります。
 
-- 再頒布可能パッケージを使用した集中配置。Visual C++ ライブラリが共有 DLL として %windir%\system32\\ にインストールされます  (このフォルダーにインストールするには管理者権限が必要です)。アプリケーションをターゲット コンピューターにインストールする前に、再頒布可能パッケージを実行するスクリプトまたはセットアップ プログラムを作成できます。 再頒布可能パッケージは、x86 プラットフォーム、x64 プラットフォーム、および ARM プラットフォーム (VCRedist_x86.exe、VCRedist_x64.exe、または VCRedist_arm.exe) で使用できます。 Visual Studio では、これらのパッケージは %ProgramFiles(x86)%\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\ に含まれています。 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/p/?linkid=132793)からダウンロードすることもできます  (ダウンロード センターの検索ボックスを使用して、ご利用のアプリケーションと一致する "Visual C++ 再頒布可能パッケージ *Visual Studio バージョンと更新プログラム*" を検索します。 たとえば、Visual Studio 2015 更新プログラム 3 を使用してアプリケーションをビルドした場合は、"Visual C++ 再頒布可能パッケージ 2015 更新プログラム 3" を検索します)。再頒布可能パッケージの使用方法については、「[チュートリアル: Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)」を参照してください。
+- 再頒布可能パッケージを使用した集中配置。Visual C++ ライブラリが共有 DLL として %windir%\system32\\ にインストールされます  (このフォルダーにインストールするには管理者権限が必要です)。アプリケーションをターゲット コンピューターにインストールする前に、再頒布可能パッケージを実行するスクリプトまたはセットアップ プログラムを作成できます。 再頒布可能パッケージは、x86 プラットフォーム、x64 プラットフォーム、および ARM プラットフォーム (VCRedist_x86.exe、VCRedist_x64.exe、または VCRedist_arm.exe) で使用できます。 Visual Studio では、これらのパッケージは %ProgramFiles(x86)%\Microsoft Visual Studio `version`\VC\Redist\\`locale ID`\\ に含まれています。 [Microsoft ダウンロード センター](http://go.microsoft.com/fwlink/p/?linkid=132793)からダウンロードすることもできます  (ダウンロード センターの検索ボックスを使用して、ご利用のアプリケーションと一致する "Visual C++ 再頒布可能パッケージ *Visual Studio バージョンと更新プログラム*" を検索します。 たとえば、Visual Studio 2015 更新プログラム 3 を使用してアプリケーションをビルドした場合は、"Visual C++ 再頒布可能パッケージ 2015 更新プログラム 3" を検索します)。再頒布パッケージを使用する方法については、「[チュートリアル:Visual C++ 再頒布可能パッケージを使用した Visual C++ アプリケーションの配置](../ide/deploying-visual-cpp-application-by-using-the-vcpp-redistributable-package.md)」を参照してください。
 
 - マージ モジュールを使用した集中配置。各マージ モジュールによって特定の Visual C++ ライブラリが共有 DLL として %windir%\system32\\ にインストールされます  (このフォルダーにインストールするには管理者権限が必要です)。マージ モジュールは、アプリケーションの .msi インストーラー ファイルの一部になります。 Visual C++ の再頒布可能なマージ モジュールは、Visual Studio の \Program Files (x86)\Common Files\Merge Modules\\ に含まれています。 詳細については、「[マージ モジュールを使用した再配布](../ide/redistributing-components-by-using-merge-modules.md)」を参照してください。
 
@@ -48,7 +48,7 @@ Visual C++ ライブラリの配置が不適切だと、そのライブラリに
 
 Visual C++ ライブラリを再配布する場合、静的リンクは使用しないことをお勧めします。 アプリケーションのパフォーマンスが静的リンクによって大きく向上することはほぼありませんが、サービスのコストは、ほとんどの場合、高くなります。 たとえば、セキュリティの強化によって更新されるライブラリに静的にリンクしているアプリケーションについて考えます。このアプリケーションは、再コンパイルして再配置しなければ、セキュリティ強化のメリットを得ることはできません。 代わりに、アプリケーションをライブラリに動的にリンクさせて、配置される場所でライブラリを更新できるようにすることをお勧めします。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)<br>
 [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)<br>
