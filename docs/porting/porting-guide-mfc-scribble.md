@@ -2,12 +2,12 @@
 title: '移植のガイド: MFC Scribble'
 ms.date: 11/19/2018
 ms.assetid: 8ddb517d-89ba-41a1-ab0d-4d2c6d9047e8
-ms.openlocfilehash: 353dc8fb42b73ec7e0ee748ef9fefd030c073703
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: 436dd27d8c2669e21ddc8a9e453f369cdd14f70c
+ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175653"
+ms.lasthandoff: 03/11/2019
+ms.locfileid: "57741298"
 ---
 # <a name="porting-guide-mfc-scribble"></a>移植のガイド: MFC Scribble
 
@@ -85,7 +85,7 @@ Visual Studio 2017 に移行したので、C++ の新機能を活用するため
 
 Scribble は小規模で単純な Windows デスクトップ アプリケーションであり、変換は難しくありません。 多くの小規模で単純なアプリケーションは、新しいバージョンに簡単に変換できます。  コードの行数が多く、エンジニアリングの最新の標準になっていない可能性がある古いレガシー コードや、複数のプロジェクトとライブラリ、カスタム ビルド アプリを持つ複雑なアプリケーションや、複雑なスクリプトを作成して自動化されていビルドでは、アップグレードにもう少し時間がかかります。 [次の例](../porting/porting-guide-com-spy.md)の COM Spy と呼ばれる ATL/COM アプリケーションに進みます。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
-[移植およびアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
+[移植とアップグレード: 例とケース スタディ](../porting/porting-and-upgrading-examples-and-case-studies.md)<br/>
 [次の例: COM Spy](../porting/porting-guide-com-spy.md)
