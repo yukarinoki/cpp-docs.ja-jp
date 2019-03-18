@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - /validate-charset compiler option
 ms.assetid: 50360fd0-4d32-4a4f-95d0-53d38c12ad4c
-ms.openlocfilehash: ca7724922fa579087cf4c6c1790819dc539112a5
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 30c818bcb64c2f2ee57c05a4870e7d30afe98cfe
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423938"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810069"
 ---
 # <a name="validate-charset-validate-for-compatible-characters"></a>/validate-charset (互換性のある文字の検証)
 
@@ -34,7 +34,7 @@ Visual Studio では、として、ソース文字セットと、実行文字セ
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクト プロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 展開、**構成プロパティ**、 **C/C++**、**コマンドライン**フォルダー。
 
@@ -44,8 +44,8 @@ Visual Studio では、として、ソース文字セットと、実行文字セ
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ オプション](../../build/reference/compiler-options.md)<br/>
-[コンパイラ オプションの設定](../../build/reference/setting-compiler-options.md)<br/>
-[/execution-charset (実行文字セット)](../../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/source-charset (ソース文字セットの設定)](../../build/reference/source-charset-set-source-character-set.md)<br/>
-[/utf-8 (ソースと実行可能ファイルの文字セットを UTF-8 に設定する)](../../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[MSVC コンパイラ オプション](compiler-options.md)<br/>
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
+[/execution-charset (実行文字セット)](execution-charset-set-execution-character-set.md)<br/>
+[/source-charset (ソース文字セットの設定)](source-charset-set-source-character-set.md)<br/>
+[/utf-8 (ソースと実行可能ファイルの文字セットを UTF-8 に設定する)](utf-8-set-source-and-executable-character-sets-to-utf-8.md)
