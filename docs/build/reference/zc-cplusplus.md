@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - -Zc:__cplusplus compiler option (C++)
 - __cplusplus macro (C++)
-ms.openlocfilehash: 8e73d93ae0618a04bdcc8476fadb6cc2aab595b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89545f541f32374a47dce7f87958e61873c1b47c
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50623991"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57810095"
 ---
 # <a name="zccplusplus-enable-updated-cplusplus-macro"></a>/Zc: _ _cplusplus (更新された _ _cplusplus マクロを有効にする)
 
@@ -19,19 +19,19 @@ ms.locfileid: "50623991"
 
 ## <a name="syntax"></a>構文
 
-> **/Zc: _ _cplusplus**[**-**]
+> **/Zc:__cplusplus**[**-**]
 
 ## <a name="remarks"></a>Remarks
 
-**\_ \_Cplusplus**プリプロセッサ マクロはサポートされているレポートを C++ 標準の特定のバージョン。 多数の既存のコードの"199711 L"に一致するこのマクロの値に依存するため、コンパイラは変わりませんマクロの値を明示的にオプトインを使用していない限り、 **/zc: _ _cplusplus**コンパイラ オプション。 **/Zc: _ _cplusplus**オプションは、以降では、Visual Studio 2017 バージョン 15.7 では、利用可能とは既定で無効です。 以前のバージョンの Visual Studio で、既定では、場合、または **/Zc:__cplusplus-** が指定されて、Visual Studio は、"199711 L"の値を返します、  **\_ \_cplusplus**プリプロセッサ マクロです。 [/Permissive -](permissive-standards-conformance.md)オプションが有効にしない **/zc: _ _cplusplus**します。
+ **\_ \_Cplusplus**プリプロセッサ マクロはサポートされているレポートを C++ 標準の特定のバージョン。 多数の既存のコードの"199711 L"に一致するこのマクロの値に依存するため、コンパイラは変わりませんマクロの値を明示的にオプトインを使用していない限り、 **/zc: _ _cplusplus**コンパイラ オプション。 **/Zc: _ _cplusplus**オプションは、以降では、Visual Studio 2017 バージョン 15.7 では、利用可能とは既定で無効です。 以前のバージョンの Visual Studio で、既定では、場合、または **/Zc:__cplusplus-** が指定されて、Visual Studio は、"199711 L"の値を返します、  **\_ \_cplusplus**プリプロセッサ マクロです。 [/Permissive -](permissive-standards-conformance.md)オプションが有効にしない **/zc: _ _cplusplus**します。
 
 ときに、 **/zc: _ _cplusplus**オプションを有効にすると、によって報告される値、  **\_ \_cplusplus**マクロによって異なります、 [/std](std-specify-language-standard-version.md)バージョン スイッチ設定です。 次の表では、マクロの値を示します。
 
-|/Zc: _ _cplusplus スイッチ|/std:c++ スイッチ|_ _cplusplus 値|
+|/Zc: _ _cplusplus スイッチ|/std:c++ スイッチ|__cplusplus value|
 |-|-|-|
-Zc:__cplusplus|/std:c + + 14 (既定値)|201402 L
-Zc:__cplusplus|/std:c + + 17|201703 L
-Zc:__cplusplus|/std:c + + 最新|201704 L
+Zc:__cplusplus|/std:c + + 14 (既定値)|201402L
+Zc:__cplusplus|/std:c + + 17|201703L
+Zc:__cplusplus|/std:c + + 最新|201704L
 Zc:__cplusplus-(無効)|任意の値|199711 L
 指定されていません|任意の値|199711 L
 
@@ -41,7 +41,7 @@ Zc:__cplusplus-(無効)|任意の値|199711 L
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>このコンパイラ オプションを Visual Studio で使用するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、「[プロジェクトのプロパティの操作](../../ide/working-with-project-properties.md)」を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 
