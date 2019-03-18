@@ -5,21 +5,22 @@ helpviewer_keywords:
 - warnings, compiler
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
-ms.openlocfilehash: 48c18ce5af758e1329f149bc49969dad733af88f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e189ead864fe2be6e0ccb3bc76a58f2441740076
+ms.sourcegitcommit: a901c4acbfc80ca10663d37c09921f04c5b6dd17
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651374"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58142555"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラの警告
-コンパイラには、ほとんどの開発者は、それらを表示したくありませんので、既定でオフになっている警告が含まれます。 場合によっては、古いコードは、一般的なイディオムにあるまたは言語から、Microsoft 拡張機能の利用、スタイル上の選択肢を表現します。 それ以外の場合でプログラマは予期されない、または未定義の動作につながる可能性がありますが、誤った仮定で動作を行う多くの場合、領域を示します。 これらの警告の一部は、ライブラリのヘッダーで非常にノイズの多い可能性があります。 C ランタイム ライブラリと C++ 標準ライブラリは、警告レベルでのみ警告を発するありません[/W4](../build/reference/compiler-option-warning-level.md)します。
+
+コンパイラは、ほとんどの開発者はありませんに役に立つために、既定でオフになっている警告をサポートします。 場合によっては、以前のコードで共通の表現方法やスタイルの選択に関する、警告します。 他の警告は、言語の Microsoft 拡張機能の使用方法についてはします。 それ以外の場合でプログラマは予期されない、または未定義の動作につながる可能性がありますが、誤った仮定で動作を行う多くの場合、領域を示します。 有効な場合は、ライブラリ ヘッダー何度も一部これらの警告の表示可能性があります。 C ランタイム ライブラリと C++ 標準ライブラリは、警告レベルでのみ警告を発するありません[/W4](../build/reference/compiler-option-warning-level.md)します。
 
 ## <a name="enable-warnings-that-are-off-by-default"></a>既定で無効になっている警告を有効にします。
 
 無効になっている通常既定では、次のオプションのいずれかを使用して警告を有効にできます。
 
-- **#pragma 警告 (既定:** *warning_number* **)**
+- **#pragma warning(default :** *warning_number* **)**
 
    指定の警告 (*warning_number*) が既定のレベルで有効になっています。 警告に関するドキュメントには、既定のレベルの警告が記載されています。
 
@@ -33,7 +34,7 @@ ms.locfileid: "50651374"
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
-   これにより、警告*nnnn*レベル*L*します。
+   このオプションにより、警告*nnnn*レベル*L*します。
 
 ## <a name="warnings-that-are-off-by-default"></a>既定で無効になっている警告
 
@@ -43,7 +44,8 @@ ms.locfileid: "50651374"
 |-|-|
 |[C4061](../error-messages/compiler-warnings/compiler-warning-level-4-c4061.md) (レベル 4)|列挙子 '*識別子*列挙型のスイッチ' で'*列挙*' case ラベルによって明示的に処理されません。|
 |[C4062](../error-messages/compiler-warnings/compiler-warning-level-4-c4062.md) (レベル 4)|列挙子 '*識別子*列挙型のスイッチ' で'*列挙*' はハンドルされません|
-|C4191 (レベル 3)|'*演算子*': 安全でない変換から'*type_of_expression*'to'*type_required*'|
+| [C4165](../error-messages/compiler-warnings/compiler-warning-level-1-c4165.md) (レベル 1) | 'HRESULT' は 'bool'; に変換されます。本当にこれが望ましいこと? |
+| [C4191](../error-messages/compiler-warnings/compiler-warning-level-3-c4191.md) (レベル 3)|'*演算子*': 安全でない変換から'*type_of_expression*'to'*type_required*'|
 |[C4242](../error-messages/compiler-warnings/compiler-warning-level-4-c4242.md) (レベル 4)|'*識別子*': から変換'*type1*'to'*type2*'、データ損失の可能性|
 |[C4254](../error-messages/compiler-warnings/compiler-warning-level-4-c4254.md) (レベル 4)|'*演算子*': から変換'*type1*'to'*type2*'、データ損失の可能性|
 |[C4255](../error-messages/compiler-warnings/compiler-warning-level-4-c4255.md) (レベル 4)|'*関数*': 関数プロトタイプがありません: '()' を '(void)' に変換します。|
@@ -64,7 +66,7 @@ ms.locfileid: "50651374"
 |C4388 (レベル 4)|signed と unsigned の数値を比較しようとしました。|
 |[C4412](../error-messages/compiler-warnings/compiler-warning-level-2-c4412.md) (レベル 2)|'*関数*': 関数のシグネチャには、型が含まれています'*型*';。C++ のオブジェクトは純粋なコードの間で渡すため安全でないと混合またはネイティブ|
 |C4426 (レベル 1)|#pragma optimize() が原因で最適化フラグがヘッダーを含めた後に変更があります<sup>14.1</sup>|
-|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (レベル 4)|'*class1*':/vd2 下のオブジェクトのレイアウトは仮想ベースにより変更されます'*class2*'|
+|[C4435](../error-messages/compiler-warnings/compiler-warning-level-4-c4435.md) (レベル 4)|'*class1*'。仮想基本により/vd2 下のオブジェクトのレイアウトが変更されます '*class2*'|
 |[C4437](../error-messages/compiler-warnings/compiler-warning-level-4-c4437.md) (レベル 4)|仮想基本から dynamic_cast '*class1*'to'*class2*' 一部のコンテキストで失敗する可能性があります|
 |C4444 (レベル 3)|トップ レベルの '__unaligned' がこのコンテキストで実装されていません。|
 |[C4464](../error-messages/compiler-warnings/c4464.md) (レベル 4)|相対インクルード パスを含む '… '|
@@ -97,6 +99,7 @@ ms.locfileid: "50651374"
 |[C4626](../error-messages/compiler-warnings/compiler-warning-level-4-c4626.md) (レベル 4)|'derived class': 基底クラスの代入演算子にアクセスできないため、代入演算子は生成できませんでした。|
 |[C4628](../error-messages/compiler-warnings/compiler-warning-level-1-c4628.md) (レベル 1)|digraphs は -Ze でサポートされていません。 文字のシーケンス '*digraph*'の代替トークンとして解釈されない'*char*'|
 |[C4640](../error-messages/compiler-warnings/compiler-warning-level-3-c4640.md) (レベル 3)|'*インスタンス*': ローカル スタティック オブジェクトの構築がスレッド セーフではありません|
+| C4643 (レベル 4) | 前方宣言 '*識別子*' 名前空間 std は C++ 標準で許可されていません。 <sup>15.8</sup> |
 |C4647 (レベル 3)|動作変更: _ _is_pod (*型*) 別の値が、以前のバージョン|
 |C4654 (レベル 4)|プリコンパイル済みヘッダーの前に配置されたコードは、行が無視されます。 コードをプリコンパイル済みヘッダーに追加します。 <sup>14.1</sup>|
 |[C4668](../error-messages/compiler-warnings/compiler-warning-level-4-c4668.md) (レベル 4)|'*シンボル*'は '0' に置き換える、プリプロセッサ マクロとして定義されていない'*ディレクティブ*'|
@@ -112,7 +115,9 @@ ms.locfileid: "50651374"
 |C4774 (レベル 4)|'*文字列*': 書式指定文字列の引数で想定される*数*リテラル文字列はありません|
 |C4777 (レベル 4)|'*関数*': 書式文字列'*文字列*'型の引数が必要です'*type1*'、可変個引数が、*数*型が '*type2*'|
 |C4786 (レベル 3)|'*シンボル*': オブジェクト名は切り詰められました'*数*' 文字にデバッグ情報で|
+| [C4800](../error-messages/compiler-warnings/compiler-warning-level-3-c4800.md) (レベル 4) | 暗黙的な変換 '*型*' bool にします。 可能な情報の損失<sup>16.0</sup> |
 |[C4820](../error-messages/compiler-warnings/compiler-warning-level-4-c4820.md) (レベル 4)|'*バイト*"構築後に追加されたバイトのパディング"*member_name*'|
+| [C4822](../error-messages/compiler-warnings/compiler-warning-level-1-c4822.md) (レベル 1) | '*メンバー*': ローカル クラス メンバー関数には、本文はありません。 |
 |C4826 (レベル 2)|変換 '*type1*'to'*type2*' は符号拡張します。 これにより、予期しない実行時の動作が発生する可能性があります。|
 |C4837 (レベル 4)|検出されたトライグラフ: '??*文字*'置き換え'*文字*'|
 |C4841 (レベル 4)|非標準の拡張機能が使用: 複合メンバー指定子が offsetof で使用されます。|
@@ -150,6 +155,10 @@ ms.locfileid: "50651374"
 <sup>15.3</sup>この警告は Visual Studio 2017 バージョン 15.3 以降を使用します。<br/>
 <sup>15.5</sup>この警告は Visual Studio 2017 バージョン 15.5 以降使用できます。<br/>
 <sup>15.7</sup>この警告は Visual Studio 2017 バージョン 15.7 以降使用できます。<br/>
+<sup>15.8</sup>この警告は Visual Studio 2017 バージョン 15.8 以降使用できます。<br/>
+::: moniker range=">= vs-2019"
+<sup>16.0</sup>この警告は Visual Studio 2019 RTM 以降を使用します。<br/>
+::: moniker-end
 <sup>Perm</sup>しない限り、この警告はオフ、 [/permissive -](../build/reference/permissive-standards-conformance.md)コンパイラ オプションを設定します。<br/>
 
 ## <a name="warnings-off-by-default-in-earlier-versions"></a>以前のバージョンで既定でオフの警告
@@ -167,7 +176,7 @@ ms.locfileid: "50651374"
 
 |||
 |-|-|
-|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (レベル 4)|型指定子がありません - int と仮定しました。 メモ: C は、現在 int を既定値としてサポートしていません|
+|[C4431](../error-messages/compiler-warnings/compiler-warning-level-4-c4431.md) (レベル 4)|型指定子がありません - int と仮定しました。 メモ:C は、int を既定値をサポートしていません|
 
 ## <a name="see-also"></a>関連項目
 
