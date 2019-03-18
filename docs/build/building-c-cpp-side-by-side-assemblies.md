@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - side-by-side applications [C++]
 ms.assetid: 7fa20b16-3737-4f76-a0b5-1dacea19a1e8
-ms.openlocfilehash: 6875c4178a405f887166b0606af329614d27907f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 037fde58366ea4548ce3c7ff56c38cfc1a58aa17
+ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413876"
+ms.lasthandoff: 03/14/2019
+ms.locfileid: "57815191"
 ---
 # <a name="building-cc-side-by-side-assemblies"></a>C/C++ side-by-side アセンブリのビルド
 
@@ -31,6 +31,5 @@ Visual C アプリケーションでは、アプリケーションのさまざ�
 
 ## <a name="see-also"></a>関連項目
 
-[配置例](../ide/deployment-examples.md)<br/>
-[C/C++ 分離アプリケーションのビルド](../build/building-c-cpp-isolated-applications.md)<br/>
-[C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
+[C/C++ 分離アプリケーションのビルド](building-c-cpp-isolated-applications.md)<br/>
+[C/C++ 分離アプリケーションおよび side-by-side アセンブリのビルド](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)
