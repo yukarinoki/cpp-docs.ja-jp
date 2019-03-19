@@ -4,12 +4,12 @@ ms.date: 09/01/2017
 helpviewer_keywords:
 - UNIX [C++]
 ms.assetid: 36108b31-e7fa-49a8-a1f7-7077fcbec873
-ms.openlocfilehash: 6522461cf1f08eee9187a8f739cb21fe01e755f5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0cffdc2be00b4af9badbbbc80bcfef48b3f76e19
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57747009"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57818376"
 ---
 # <a name="introduction-to-visual-c-for-unix-users"></a>Visual C++ の紹介 (UNIX ユーザー向け)
 
@@ -37,7 +37,7 @@ Visual Studio デバッガー、IntelliSense のコード参照とステート�
 
 ## <a name="importing-your-existing-code"></a>既存のコードをインポートする
 
-C++ コンパイラを使用すれば、メイクファイルでコンパイルするように設定した (メイクファイルを使わないことも可能) 既存のコードをビルドし、Visual Studio プロジェクトに配置できます。 詳細については、「[方法 :既存のコードから C++ プロジェクトを作成する](../ide/how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。
+C++ コンパイラを使用すれば、メイクファイルでコンパイルするように設定した (メイクファイルを使わないことも可能) 既存のコードをビルドし、Visual Studio プロジェクトに配置できます。 詳細については、「[方法 :既存のコードから C++ プロジェクトを作成する](../build/how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。
 
 ## <a name="creating-a-new-project"></a>新規プロジェクトの作成
 
@@ -58,7 +58,7 @@ Microsoft Visual C++ コンパイラは、Windows オペレーティング シ�
 
 Microsoft C および C++ コンパイラは、インライン コードを含む、C または C++ コードをプリコンパイルするためのオプションを提供します。 このパフォーマンス機能を使用して、安定したコードの本体をコンパイルし、ファイル内のコードのコンパイル済みの状態を格納します。さらに、後続のコンパイル中に、プリコンパイルされたコードと開発中のコードを結合できます。 安定したコードは再コンパイルする必要がないので、後続のコンパイルが高速化します。
 
-既定では、プリコンパイル済みのすべてのコードは、ファイル stdafx.h と stdafx.cpp で指定されます。 **[プリコンパイル済みヘッダー]** オプションをオフにしない限り、**[新しいプロジェクト]** ウィザードは自動的にこれらのファイルを作成します。 プリコンパイルされたヘッダーの詳細については、「[プリコンパイル済みヘッダー ファイルの作成](../build/reference/creating-precompiled-header-files.md)」を参照してください。
+既定では、プリコンパイル済みのすべてのコードは、ファイル stdafx.h と stdafx.cpp で指定されます。 **[プリコンパイル済みヘッダー]** オプションをオフにしない限り、**[新しいプロジェクト]** ウィザードは自動的にこれらのファイルを作成します。 プリコンパイルされたヘッダーの詳細については、「[プリコンパイル済みヘッダー ファイルの作成](../build/creating-precompiled-header-files.md)」を参照してください。
 
 ## <a name="related-sections"></a>関連項目
 
@@ -66,4 +66,4 @@ Microsoft C および C++ コンパイラは、インライン コードを含�
 
 ## <a name="see-also"></a>関連項目
 
-[C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)
+[プロジェクトおよびビルド システム](../build/projects-and-build-systems-cpp.md)

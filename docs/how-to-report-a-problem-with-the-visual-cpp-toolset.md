@@ -4,12 +4,12 @@ ms.date: 06/21/2018
 ms.technology: cpp-ide
 author: corob-msft
 ms.author: corob
-ms.openlocfilehash: 4b64f79ea5a9566d2ad28216fbc5e736b622fe00
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 50b1005c7734b62941cbda087161d5ec41a0d026
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740249"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57808041"
 ---
 # <a name="how-to-report-a-problem-with-the-visual-c-toolset-or-documentation"></a>Visual C++ ツールセットまたはドキュメントの問題を報告する方法
 
@@ -43,7 +43,7 @@ Microsoft のコンピューターで同じツールセットに対して再現�
 
 #### <a name="to-report-the-full-version-of-the-compiler-youre-using"></a>使っているコンパイラの完全バージョンを報告するには
 
-1. プロジェクトをビルドするために使用した Visual Studio のバージョンと構成アーキテクチャに一致する**開発者コマンド プロンプト**を開きます。 たとえば、x64 ターゲットに対して、x64 で Visual Studio 2017 を使用してビルドする場合は、**VS 2017 用の x64 Native Tools コマンド プロンプト**を選びます。 詳細については、[開発者コマンド プロンプトのショートカット](build/building-on-the-command-line.md#developer-command-prompt-shortcuts)に関するトピックを参照してください。
+1. プロジェクトをビルドするために使用した Visual Studio のバージョンと構成アーキテクチャに一致する**開発者コマンド プロンプト**を開きます。 たとえば、x64 ターゲットに対して、x64 で Visual Studio 2017 を使用してビルドする場合は、**VS 2017 用の x64 Native Tools コマンド プロンプト**を選びます。 詳細については、[開発者コマンド プロンプトのショートカット](build/building-on-the-command-line.md#developer_command_prompt_shortcuts)に関するトピックを参照してください。
 
 1. 開発者コマンド プロンプト コンソール ウィンドウで、コマンド **cl /Bv** を入力します。
 
