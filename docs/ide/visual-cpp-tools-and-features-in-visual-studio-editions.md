@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Visual C++, versions
 - editions [C++]
 ms.assetid: 3d88607b-9cc4-490a-8d4c-31ee7610a26f
-ms.openlocfilehash: 3d3c6e25594eb3bb01ad3fc995a24cdc723d5726
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 3e5b173741700ed6cccf95b479eb5693a62ed02e
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751896"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57810485"
 ---
 # <a name="visual-c-tools-and-features-in-visual-studio-editions"></a>さまざまな Visual Studio エディションの Visual C++ ツールおよび機能
 
@@ -176,5 +176,5 @@ Visual Studio で使用できる Visual C++ の機能を次の表に示します
 
 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)<br/>
 [Visual Studio の新機能](/visualstudio/ide/whats-new-in-visual-studio)<br/>
-[Visual C++ プロジェクトの種類](../ide/visual-cpp-project-types.md)<br/>
+[Visual C++ プロジェクトの種類](../build/reference/visual-cpp-project-types.md)<br/>
 [SQL Server Data Tools](https://msdn.microsoft.com/library/hh272686)<br/>
