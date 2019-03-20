@@ -5,12 +5,12 @@ ms.technology: cpp-ide
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 062052faf85b342629506a41c39b99a1b59502b9
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b75a1903b3e0767f8aa009134a2b37a7d1a8e0d0
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809790"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57810472"
 ---
 # <a name="whats-new-for-visual-c-in-visual-studio-2017"></a>Visual Studio 2017 における Visual C++ の新機能
 
@@ -315,7 +315,7 @@ C++ では、Ctrl を押しながら **[定義へ移動]** をクリックでき
 
 ## <a name="non-msbuild-projects-with-open-folder"></a>非 MSBuild プロジェクトと [フォルダーを開く]
 
-Visual Studio 2017 で導入された **[フォルダーを開く]** 機能を使うと、ソリューションまたはプロジェクトを作成することなく、ソース コードを含むフォルダーでコーディング、ビルド、デバッグを行うことができます。 これにより、プロジェクトが MSBuild ベースではない場合でも、Visual Studio を簡単に使い始めることができます。 **[フォルダーを開く]** では、Visual Studio で MSBuild プロジェクトに対して既に提供されている、強力なコード理解、編集、ビルド、デバッグの機能にアクセスできます。 詳細については、「[Open Folder projects in Visual C++ (Visual C++ の [フォルダーを開く] プロジェクト)](ide/non-msbuild-projects.md)」をご覧ください。
+Visual Studio 2017 で導入された **[フォルダーを開く]** 機能を使うと、ソリューションまたはプロジェクトを作成することなく、ソース コードを含むフォルダーでコーディング、ビルド、デバッグを行うことができます。 これにより、プロジェクトが MSBuild ベースではない場合でも、Visual Studio を簡単に使い始めることができます。 **[フォルダーを開く]** では、Visual Studio で MSBuild プロジェクトに対して既に提供されている、強力なコード理解、編集、ビルド、デバッグの機能にアクセスできます。 詳細については、「[Open Folder projects for C++](build/open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) をご覧ください。
 
 - [フォルダーを開く] のエクスペリエンスが改善されました。 以下の json ファイルを使って、エクスペリエンスをカスタマイズできます。
   - CppProperties.json: IntelliSense および参照エクスペリエンスをカスタマイズします。
@@ -330,7 +330,7 @@ Visual Studio 2017 で導入された **[フォルダーを開く]** 機能を�
 
 ## <a name="cmake-support-via-open-folder"></a>[フォルダーを開く] での CMake のサポート
 
-Visual Studio 2017 では、MSBuild プロジェクト ファイル (.vcxproj) を変換しなくても、CMake プロジェクトを使用できるようになりました。 詳細については、「[CMake projects in Visual C++ (Visual C++ の CMake プロジェクト)](ide/cmake-tools-for-visual-cpp.md)」をご覧ください。 **[フォルダーを開く]** で CMake プロジェクトを開くと、C++ の編集、ビルド、およびデバッグ用の環境が自動的に構成されます。
+Visual Studio 2017 では、MSBuild プロジェクト ファイル (.vcxproj) を変換しなくても、CMake プロジェクトを使用できるようになりました。 詳細については、「[CMake projects in Visual C++ (Visual C++ の CMake プロジェクト)](build/cmake-projects-in-visual-studio.md)」をご覧ください。 **[フォルダーを開く]** で CMake プロジェクトを開くと、C++ の編集、ビルド、およびデバッグ用の環境が自動的に構成されます。
 
 - C++ の IntelliSense は、ルート フォルダーに CppProperties.json ファイルを作成しなくても動作します。 これに加えて、CMake に用意された構成と CppProperties.json ファイルをユーザーが簡単に切り替えることができるように新しいドロップダウンが追加されました。
 
@@ -342,7 +342,7 @@ Visual Studio 2017 では、MSBuild プロジェクト ファイル (.vcxproj) �
 
 **Visual Studio 2017 バージョン 15.5**:既存の CMake キャッシュをインポートするためのサポートが追加されました。
 
-**Visual Studio 2017 バージョン 15.7**:CMake 3.11、CMake プロジェクトでのコード分析、ソリューション エクスプローラーのターゲット ビュー、キャッシュ生成用のオプション、および単一ファイルのコンパイルのためのサポートが追加されました。 詳細については、「[CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)」 (Visual Studio での CMake のサポート) および「[Visual C++ で CMake プロジェクト](ide/cmake-tools-for-visual-cpp.md)」をご覧ください。
+**Visual Studio 2017 バージョン 15.7**:CMake 3.11、CMake プロジェクトでのコード分析、ソリューション エクスプローラーのターゲット ビュー、キャッシュ生成用のオプション、および単一ファイルのコンパイルのためのサポートが追加されました。 詳細については、「[CMake support in Visual Studio](https://blogs.msdn.microsoft.com/vcblog/2018/04/09/cmake-support-in-visual-studio-targets-view-single-file-compilation-and-cache-generation-settings/)」 (Visual Studio での CMake のサポート) および「[Visual C++ で CMake プロジェクト](build/cmake-projects-in-visual-studio.md)」をご覧ください。
 
 ## <a name="windows-desktop-development-with-c"></a>C++ による Windows デスクトップ開発
 

@@ -3,15 +3,15 @@ title: vcpkg-- Windows、Linux、および MacOS 用の C++ パッケージ マ�
 description: vcpkg はコマンド ライン パッケージ マネージャーであり、Windows でのオープン ソースの C++ ライブラリの取得およびインストール作業を大幅に簡素化できます。
 author: mikeblome
 ms.author: mblome
-ms.date: 02/22/2019
+ms.date: 03/18/2019
 ms.technology: cpp-ide
 ms.assetid: f50d459a-e18f-4b4e-814b-913e444cedd6
-ms.openlocfilehash: dc07086f271c9789629b335b58758b88e8e3d4e8
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 2ca1b88f492d96f8a08d296cab7f35f3b72409c9
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809712"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "58172882"
 ---
 # <a name="vcpkg-a-c-package-manager-for-windows-linux-and-macos"></a>vcpkg: Windows、Linux、および MacOS 用の C++ パッケージ マネージャー
 
@@ -19,7 +19,7 @@ vcpkg はコマンドライン パッケージ マネージャーであり、Win
 
 ## <a name="simple-yet-flexible"></a>簡単かつ柔軟
 
-単一のコマンドで、ソースをダウンロードして、ライブラリをビルドすることができます。 vcpkg はそれ自体がオープン ソース プロジェクトであり、GitHub で入手できます。 プライベート クローン (複数可) を好みに合わせてカスタマイズできます。 たとえば、さまざまなライブラリを指定したり、パブリック カタログにあるものとは異なるバージョンのライブラリを指定したりすることができます。 vcpkg の複数のクローンを単一のコンピューターで使用できます。各クローンはライブラリおよび (または) コンパイル スイッチなどのカスタム セットを生成します。各クローンは自己完結型のコピー可能な環境であり、独自の階層でのみ動作する vcpkg.exe の独自のコピーが含まれます。 vcpkg はどの環境変数にも追加されず、Windows レジストリや Visual Studio との依存関係はありません。
+単一のコマンドで、ソースをダウンロードして、ライブラリをビルドすることができます。 vcpkg はそれ自体がオープン ソース プロジェクトであり、GitHub で入手できます。 プライベート クローン (複数可) を好みに合わせてカスタマイズできます。 たとえば、さまざまなライブラリを指定したり、パブリック カタログにあるものとは異なるバージョンのライブラリを指定したりすることができます。 vcpkg の複数のクローンを単一のコンピューターで使用できます。各クローンはライブラリおよび (または) コンパイル スイッチなどのカスタム セットを生成します。各クローンは自己完結型の環境であり、独自の階層でのみ動作する vcpkg.exe の独自のコピーが含まれます。 vcpkg はどの環境変数にも追加されず、Windows レジストリや Visual Studio との依存関係はありません。
 
 ## <a name="sources-not-binaries"></a>バイナリではなくソース
 

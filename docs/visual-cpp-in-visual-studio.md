@@ -1,5 +1,5 @@
 ---
-title: Visual Studio の Visual C++
+title: Visual Studio での C++
 description: Visual C++ とは、Microsoft C++ のコンパイラ、コード エディターおよび Visual Studio IDE の関連ツールの名称です。 Visual C++ を使用すると、Windows、Linux、Android および iOS 用のプログラムを開発できます。
 ms.date: 09/26/2018
 ms.technology: cpp-ide
@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 0dd7cc2aebb9ff0f95d11c839a104b94b3d37db6
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: 475f9394d9a12d05c95bc73ec451fbfe6fc4b052
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809649"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57814411"
 ---
 # <a name="visual-c-in-visual-studio"></a>Visual Studio の Visual C++
 
@@ -71,11 +71,14 @@ C++ について学び始める。
 
 ## <a name="c-development-tools"></a>C++ 開発ツール
 
-[IDE と開発ツール](ide/ide-and-tools-for-visual-cpp-development.md)。<br/>
+[Visual Studio での C++ 開発の概要](overview-of-cpp-development.md)<br/>
 Visual Studio IDE を使用し、プロジェクトの作成、コードの編集、ライブラリへのリンク、コンパイル、デバッグ、単体テストの作成、静的分析の実行、配置などを行う方法。
 
-[コンパイラおよびビルド ツール](build/building-c-cpp-programs.md)<br/>
-Microsoft C++ コンパイラとリンカーのオプション、エラー メッセージ、コマンドラインの例、さまざまなプラットフォームの構成、ビルド リファレンス トピック。
+[プロジェクトおよびビルド システム](build/projects-and-build-systems-cpp.md)<br/>
+MSVC のコンパイラ オプションとリンカー オプションを使用し、Visual Studio C++ プロジェクト、CMake プロジェクト、その他のプロジェクトを作成し、構成する方法。
+
+[C++ コードの作成とリファクタリング](ide/writing-and-refactoring-code-cpp.md)<br/>
+C++ エディターの生産性機能を使用し、コードのリファクタリング、移動、作成を行う方法。
 
 [ネイティブ コードのデバッグ](/visualstudio/debugger/debugging-native-code)<br/>
 C++ プロジェクトで Visual Studio デバッガーを使用する。

@@ -3,12 +3,12 @@ title: Visual Studio で Linux CMake プロジェクトを構成する
 description: Visual Studio で Linux CMake プロジェクトを構成する方法
 ms.date: 11/01/2018
 ms.assetid: f8707b32-f90d-494d-ae0b-1d44425fdc25
-ms.openlocfilehash: f2186c14fbe2eb1273fceb4a378b359564eae327
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 22de2f7a7b5374f781a032f5152610d7a97feb16
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750599"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57815867"
 ---
 # <a name="configure-a-linux-cmake-project"></a>Linux CMake プロジェクトを構成する
 
@@ -22,7 +22,7 @@ Visual Studio では CMakeLists.txt ファイルまたは元の CMake キャッ�
 
 Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Microsoft から提供されている CMake バリアントについては、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) から最新のビルド済みバイナリをダウンロードします。
 
-このトピックでは、[CMake Tools for Visual Studio](../ide/cmake-tools-for-visual-cpp.md) に関するページを読んでいることを前提としています。 
+このトピックでは、[CMake Tools for Visual Studio](../build/cmake-projects-in-visual-studio.md) に関するページを読んでいることを前提としています。 
 
 > [!NOTE]
 > Visual Studio で CMake を利用するには、CMake 3.8 で導入されたサーバー モードに対応する必要があります。 Microsoft から提供されている CMake 変数の場合は、[https://github.com/Microsoft/CMake/releases](https://github.com/Microsoft/CMake/releases) から最新のビルド済みバイナリをダウンロードします。 Visual Studio 2019 では、ビルド済みバイナリを自動的に配置させることが可能です (「[ビルド済み CMake バイナリをダウンロードする](#download-prebuilt-cmake-binaries)」を参照)。
@@ -67,11 +67,11 @@ Linux ターゲットを指定すると、ソースが Linux マシンにコピ�
 
 リモート システムでコードをデバッグするには、ブレークポイントを設定し、プロジェクト設定の隣にあるツール バー メニューのスタートアップ項目として CMake ターゲットを選び、ツール バーの **[&#x23f5; 実行]** を選択するか、F5 キーを押します。
 
-プログラムのコマンド ライン引数をカスタマイズするには、**ソリューション エクスプローラー**で実行可能ファイルを右クリックし、**[デバッグ設定と起動設定]** を選びます。 これにより、プログラムに関する情報を含んだ launch.vs.json 構成ファイルが開かれるか、作成されます。 追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、「[Visual C++ での "フォルダーを開く" プロジェクト](../ide/non-msbuild-projects.md)」および [CMake デバッグ セッションの構成](../ide/configure-cmake-debugging-sessions.md)に関するページを参照してください。
+プログラムのコマンド ライン引数をカスタマイズするには、**ソリューション エクスプローラー**で実行可能ファイルを右クリックし、**[デバッグ設定と起動設定]** を選びます。 これにより、プログラムに関する情報を含んだ launch.vs.json 構成ファイルが開かれるか、作成されます。 追加の引数を指定するには、`args` JSON 配列に引数を追加します。 詳細については、「[Open Folder projects for C++](../build/open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) と [CMake デバッグ セッションの構成](../build/configure-cmake-debugging-sessions.md)に関するページを参照してください。
 
 ## <a name="configure-cmake-settings-for-linux"></a>Linux の CMake 設定を構成する
 
-CMake Linux プロジェクト内の CMakeSettings.json ファイルで、[CMake 設定のカスタマイズ](../ide/customize-cmake-settings.md)に関するページで一覧表示されているすべてのプロパティに加え、リモートの Linux コンピューター上のビルド設定を制御する追加のプロパティを指定できます。 既定の CMake 設定を変更するには、メイン メニューで **[CMake]、[CMake の設定の変更]、[CMakeLists.txt]** の順に選ぶか、**[ソリューション エクスプローラー]** の CMakeSettings.txt を右クリックし、**[CMake の設定の変更]** を選びます。 Visual Studio によって、ルート プロジェクト フォルダー内に新しい `CMakeSettings.json` ファイルが作成されます。 **CMake 設定**エディター使用してファイルを開いたり、ファイルを直接変更したりできます。 
+CMake Linux プロジェクト内の CMakeSettings.json ファイルで、[CMake 設定のカスタマイズ](../build/customize-cmake-settings.md)に関するページで一覧表示されているすべてのプロパティに加え、リモートの Linux コンピューター上のビルド設定を制御する追加のプロパティを指定できます。 既定の CMake 設定を変更するには、メイン メニューで **[CMake]、[CMake の設定の変更]、[CMakeLists.txt]** の順に選ぶか、**[ソリューション エクスプローラー]** の CMakeSettings.txt を右クリックし、**[CMake の設定の変更]** を選びます。 Visual Studio によって、ルート プロジェクト フォルダー内に新しい `CMakeSettings.json` ファイルが作成されます。 **CMake 設定**エディター使用してファイルを開いたり、ファイルを直接変更したりできます。 
 
 次のサンプルでは、前のコード サンプルに基づく、Linux デバッグの既定の構成を確認できます。
 
@@ -138,10 +138,10 @@ Linux distro には古いバージョンの CMake が含まれている場合が
 
 ## <a name="see-also"></a>関連項目
 
-[プロジェクトのプロパティの操作](../ide/working-with-project-properties.md)<br/>
-[Visual C++ 用の CMake ツール](../ide/cmake-tools-for-visual-cpp.md)<br/>
+[プロジェクトのプロパティの操作](../build/working-with-project-properties.md)<br/>
+[Visual Studio の CMake プロジェクト](../build/cmake-projects-in-visual-studio.md)<br/>
 [リモートの Linux コンピューターに接続する](connect-to-your-remote-linux-computer.md)<br/>
-[CMake 設定をカスタマイズする](../ide/customize-cmake-settings.md)<br/>
-[CMake デバッグ セッションを構成する](../ide/configure-cmake-debugging-sessions.md)<br/>
+[CMake 設定をカスタマイズする](../build/customize-cmake-settings.md)<br/>
+[CMake デバッグ セッションを構成する](../build/configure-cmake-debugging-sessions.md)<br/>
 [Linux プロジェクトの配置、実行、デバッグ](deploy-run-and-debug-your-linux-project.md)<br/>
-[CMake 定義済み構成リファレンス](../ide/cmake-predefined-configuration-reference.md)<br/>
+[CMake 定義済み構成リファレンス](../build/cmake-predefined-configuration-reference.md)<br/>
