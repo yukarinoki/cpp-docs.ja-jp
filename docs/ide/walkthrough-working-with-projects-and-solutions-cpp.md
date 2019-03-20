@@ -7,12 +7,12 @@ helpviewer_keywords:
 - projects [C++]
 - solutions [C++], about solutions
 ms.assetid: 93a3f290-e294-46e3-876e-e3084d9ae833
-ms.openlocfilehash: 968e4981a28d646b75335ee380635fd8f8e863e3
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9408938b670d8130305f2e1c1258fc6fcb9875bb
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519232"
+ms.lasthandoff: 03/18/2019
+ms.locfileid: "57820066"
 ---
 # <a name="walkthrough-working-with-projects-and-solutions-c"></a>チュートリアル: プロジェクトとソリューションの使用 (C++)
 
@@ -22,7 +22,7 @@ Visual Studio では、作業内容はプロジェクトとソリューション
 
 ## <a name="before-you-start"></a>開始する前に
 
-このチュートリアルを完了するには、Visual Studio 2017 バージョン 15.3 以降が必要です。 コピーが必要な場合は、「[Install C++ support in Visual Studio](../build/vscpp-step-0-installation.md)」 (Visual Studio での C++ のインストール サポート) という簡潔なガイドがあります。 まだ行っていない場合は、"Hello, World" チュートリアルでインストールした後に、次の手順に従って、Visual C++ が正しくインストールされ、すべてが機能していることを確認します。
+このチュートリアルを完了するには、Visual Studio 2017 バージョン 15.3 以降が必要です。 コピーが必要な場合、以下の簡易ガイドを参照してください。[Visual Studio に C++ サポートをインストールします](../build/vscpp-step-0-installation.md)。 まだ行っていない場合は、"Hello, World" チュートリアルでインストールした後に、次の手順に従って、Visual C++ が正しくインストールされ、すべてが機能していることを確認します。
 
 C++ 言語の基本を理解していて、コンパイラ、リンカー、およびデバッガーの用途を知っている場合に役立ちます。 また、チュートリアルでは、Windows とメニュー、ダイアログの使用方法に精通していることを前提としています。
 
@@ -83,11 +83,13 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
       このコンストラクターを、"*players*" という名前の型 `int` の 1 個のパラメーターを受け取るように変更します。
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]--> `Cardgame(int players);`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#101](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_2.h)]-->
+      `Cardgame(int players);`
 
    - 既定のデストラクターの後に、*GetParticipants* という名前の `static int` メンバー関数のインライン宣言を追加します。これは、パラメーターを受け取らず `totalParticipants` の値を返します。
 
-      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]--> `static int GetParticipants() { return totalParticipants; }`
+      <!--[!code-cpp[NVC_Walkthrough_Working_With_Projects#102](../ide/codesnippet/CPP/walkthrough-working-with-projects-and-solutions-cpp_3.h)]-->
+      `static int GetParticipants() { return totalParticipants; }`
 
    変更後、Cardgame.h ファイルは次のコードのようになります。
 
@@ -215,10 +217,10 @@ C++ 言語の基本を理解していて、コンパイラ、リンカー、お�
 
 ## <a name="next-steps"></a>次の手順
 
-**前へ:** [C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
-**次へ:** [チュートリアル: プロジェクトの構築 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
+**前へ:**[C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)<br/>
+**次へ:**[チュートリアル:プロジェクトの構築 (C++)](../ide/walkthrough-building-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>関連項目
 
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[C/C++ プログラムのビルド](../build/building-c-cpp-programs.md)<br/>
+[プロジェクトおよびビルド システム](../build/projects-and-build-systems-cpp.md)<br/>
