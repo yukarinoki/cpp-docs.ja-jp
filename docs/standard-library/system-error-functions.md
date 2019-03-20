@@ -1,6 +1,6 @@
 ---
 title: '&lt;system_error&gt; 関数'
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 f1_keywords:
 - system_error/std::generic_category
 - system_error/std::make_error_code
@@ -12,26 +12,26 @@ helpviewer_keywords:
 - std::make_error_code
 - std::make_error_condition
 - std::system_category
-ms.openlocfilehash: 24890830456e3c1026b02960aa650a43da3b6067
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 78be83af678b553babbf1cde3d96c1507940b611
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50554388"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172908"
 ---
 # <a name="ltsystemerrorgt-functions"></a>&lt;system_error&gt; 関数
 
 ||||
 |-|-|-|
 |[generic_category](#generic_category)|[make_error_code](#make_error_code)|[make_error_condition](#make_error_condition)|
-|[system_category](#system_category)|
+|[system_category](#system_category)|||
 
-## <a name="generic_category"></a>  generic_category
+## <a name="generic_category"></a> generic_category
 
 一般的なエラーのカテゴリを表します。
 
 ```cpp
-extern const error_category& generic_category();
+const error_category& generic_category() noexcept;
 ```
 
 ### <a name="remarks"></a>Remarks
@@ -43,14 +43,13 @@ extern const error_category& generic_category();
 エラー コード オブジェクトを作成します。
 
 ```cpp
-error_code make_error_code(generic_errno _Errno);
+error_code make_error_code(std::errc error) noexcept;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*_Errno*|エラー コード オブジェクトに格納する列挙値。|
+*エラー*\
+`std::errc`エラー コード オブジェクトに格納する列挙値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -63,14 +62,13 @@ error_code make_error_code(generic_errno _Errno);
 エラー条件オブジェクトを作成します。
 
 ```cpp
-error_condition make_error_condition(generic_errno _Errno);
+error_condition make_error_condition(std::errc error) noexcept;
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-|パラメーター|説明|
-|---------------|-----------------|
-|*_Errno*|エラー条件オブジェクトに格納する列挙値。|
+*エラー*\
+`std::errc`エラー コード オブジェクトに格納する列挙値。
 
 ### <a name="return-value"></a>戻り値
 
@@ -83,7 +81,7 @@ error_condition make_error_condition(generic_errno _Errno);
 低レベル システム オーバーフローによって発生したエラーのカテゴリを表します。
 
 ```cpp
-extern const error_category& system_category();
+const error_category& system_category() noexcept;
 ```
 
 ### <a name="remarks"></a>Remarks
@@ -92,4 +90,4 @@ extern const error_category& system_category();
 
 ## <a name="see-also"></a>関連項目
 
-[<system_error>](../standard-library/system-error.md)<br/>
+[\<system_error>](../standard-library/system-error.md)<br/>

@@ -1,18 +1,18 @@
 ---
 title: C++ 標準ライブラリの関数オブジェクト
-ms.date: 11/04/2016
+ms.date: 03/15/2019
 helpviewer_keywords:
 - functors
 - C++ Standard Library, functors
 - C++ Standard Library, function objects
 - function objects
 ms.assetid: 85f8a735-2c7b-4f10-9c4d-95c666ec4192
-ms.openlocfilehash: 7af56f52b59b03dfed9e1233473239274a0dcbd8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 310d846285612ad94ec9d66672fcb996557b07e2
+ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50437120"
+ms.lasthandoff: 03/19/2019
+ms.locfileid: "58172960"
 ---
 # <a name="function-objects-in-the-c-standard-library"></a>C++ 標準ライブラリの関数オブジェクト
 
@@ -33,9 +33,17 @@ public:
         return a < b;
     }
 };
+
+int main()
+{
+    Functor f;
+    int a = 5;
+    int b = 7;
+    int ans = f(a, b);
+}
 ```
 
-`main` 関数の最後の行は関数オブジェクトを呼び出す方法を示しています。 これは関数呼び出しに見えますが、実際には Functor 型の operator() を呼び出しています。 関数オブジェクト呼び出しと関数の呼び出しが類似しているため、関数オブジェクトという用語が生じました。
+`main` 関数の最後の行は関数オブジェクトを呼び出す方法を示しています。 この呼び出しは、関数の場合がの実際に呼び出し元の operator() は Functor 型への呼び出しのようになります。 関数オブジェクト呼び出しと関数の呼び出しが類似しているため、関数オブジェクトという用語が生じました。
 
 ## <a name="function-objects-and-containers"></a>関数オブジェクトとコンテナー
 
@@ -48,7 +56,7 @@ template <class Key,
 class set
 ```
 
-2 番目のテンプレート引数は、関数オブジェクト `less`です。 この関数オブジェクトを返します**true**以下は、最初のパラメーターが渡された場合、2 番目のパラメーターよりも渡されます。 一部のコンテナーはその要素を並べ替えるため、コンテナーには 2 つの要素を比較する方法が必要です。関数オブジェクトを使えば、これが可能になります。 関数オブジェクトを作成し、それをコンテナーのテンプレート リストに指定すると、独自の並べ替え条件を定義できます。
+2 番目のテンプレート引数は、関数オブジェクト `less`です。 この関数オブジェクトを返します**true**最初のパラメーターが小さい場合、2 番目のパラメーターよりもします。 一部のコンテナーは、その要素を並べ替えるために、コンテナーには、2 つの要素を比較する方法が必要があります。 比較は、関数オブジェクトを使用して行われます。 関数オブジェクトを作成し、それをコンテナーのテンプレート リストに指定すると、独自の並べ替え条件を定義できます。
 
 ## <a name="function-objects-and-algorithms"></a>関数オブジェクトとアルゴリズム
 
