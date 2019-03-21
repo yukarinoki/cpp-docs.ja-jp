@@ -14,12 +14,12 @@ f1_keywords:
 helpviewer_keywords:
 - task class
 ms.assetid: cdc3a8c0-5cbe-45a0-b5d5-e9f81d94df1a
-ms.openlocfilehash: c1dc146f03b4ed5c0d9d82736959df3097f41199
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 99676ac0fff9584cd8453562f8918f6cadd66666
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289300"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278538"
 ---
 # <a name="task-class-concurrency-runtime"></a>task クラス (コンカレンシー ランタイム)
 
@@ -112,7 +112,7 @@ void get() const;
 タスクが取り消された場合に呼び出し`get`がスローされます、 [task_canceled](task-canceled-class.md)例外。 タスクで別の例外が発生したり、継続元タスクからこのタスクに例外が反映された場合、`get` の呼び出しは、その例外をスローします。
 
 > [!IMPORTANT]
->  ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出さないでください[::wait](#wait)または`get`(`wait`呼び出し`get`) では、STA で実行されるコード それ以外の場合、ランタイム[concurrency::invalid_operation](invalid-operation-class.md)これらのメソッドは、現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。 ただし、結果は直ちに使用できるため、タスク ベースの継続で継続元タスクの結果を受け取るために `get` メソッドを呼び出すことができます。
+>  ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出さないでください[::wait](#wait)または`get`(`wait`呼び出し`get`) で、ユーザー インターフェイス スレッドで実行されるコード。 それ以外の場合、ランタイム[concurrency::invalid_operation](invalid-operation-class.md)これらのメソッドは、現在のスレッドをブロックし、アプリが応答しなくなる可能性があるためです。 ただし、結果は直ちに使用できるため、タスク ベースの継続で継続元タスクの結果を受け取るために `get` メソッドを呼び出すことができます。
 
 ##  <a name="is_apartment_aware"></a> is_apartment_aware
 
@@ -349,7 +349,7 @@ task_status wait() const;
 ### <a name="remarks"></a>Remarks
 
 > [!IMPORTANT]
->  ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出さないでください`wait`STA で実行されるコードで そうしないと、このメソッドが現在のスレッドをブロックして、アプリケーションが応答しなくなる場合があるため、ランタイムは [concurrency::invalid_operation](invalid-operation-class.md) をスローします。 ただし、タスク ベースの継続で継続元タスクの結果を受け取るために [concurrency::task::get](#get) のメソッドを呼び出すことができます。
+>  ユニバーサル Windows プラットフォーム (UWP) アプリで呼び出さないでください`wait`ユーザー インターフェイス スレッドで実行されるコードでします。 そうしないと、このメソッドが現在のスレッドをブロックして、アプリケーションが応答しなくなる場合があるため、ランタイムは [concurrency::invalid_operation](invalid-operation-class.md) をスローします。 ただし、タスク ベースの継続で継続元タスクの結果を受け取るために [concurrency::task::get](#get) のメソッドを呼び出すことができます。
 
 ## <a name="see-also"></a>関連項目
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - /FI compiler option [C++]
 - preprocess header file compiler option [C++]
 ms.assetid: 07e79577-8152-4df9-a64c-aae08c603397
-ms.openlocfilehash: 2e85706a0266696b83fe1a1a6cdc45ba3399fc21
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e047ecc5266a898f2c6dc24be3c204f8ddf94386
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809224"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278373"
 ---
 # <a name="fi-name-forced-include-file"></a>/FI (強制インクルード ファイルの名前の指定)
 
@@ -41,7 +41,7 @@ ms.locfileid: "57809224"
 
 1. をクリックして、**詳細**プロパティ ページ。
 
-1. 変更、 **Force が含まれています**プロパティ。
+1. 変更、**強制インクルード ファイルの**プロパティ。
 
 ### <a name="to-set-this-compiler-option-programmatically"></a>このコンパイラ オプションをコードから設定するには
 
@@ -51,5 +51,5 @@ ms.locfileid: "57809224"
 
 [出力ファイル (/F) オプション](output-file-f-options.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
 [パス名の指定](specifying-the-pathname.md)

@@ -4,12 +4,12 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 67bf20248933b28e9c7c0d87c598c0449d6bed0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b055a1e3ca1d43cc0a1633401c1a08a3d54c1a31
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827188"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278451"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio の CMake プロジェクト
 
@@ -80,7 +80,7 @@ Visual Studio は `CMakeSettings.json` という名前のファイルを使用�
 
 CMake プロジェクトをビルドするには、次の選択肢があります。
 
-1. **[デバッグ]** ドロップダウンでターゲットを選び、**F5** キーを押すか、**[実行]** (緑色の三角形) ボタンをクリックします。 Visual Studio ソリューションと同じように、プロジェクトは最初に自動的にビルドされます。
+1. [全般] のツールバーでは、検索、**構成**ドロップダウンです。 既定では、"Linux Debug"または"x64 Debug"を示すことが可能性があります。 必要な構成とキーを押して選択**F5**、 をクリックしてまたは、**実行**(緑の三角形)、ツールバーのボタンをクリックします。 Visual Studio ソリューションと同じように、プロジェクトは最初に自動的にビルドされます。
 
 1. CMakeLists.txt を右クリックして、コンテキスト メニューから **[ビルド]** を選びます。 フォルダー構造内に複数のターゲットがある場合は、すべてをビルドするか、特定の 1 つのターゲットだけをビルドするかを選べます。
 

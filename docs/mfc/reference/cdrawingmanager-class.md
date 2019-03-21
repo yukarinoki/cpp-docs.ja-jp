@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: a729c8d32c851c4401a0af7dd7323912a476530f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293447"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278535"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager クラス
 
@@ -617,7 +617,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](http://go.microsoft.com/fwlink/p/?linkid=119126)します。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
 
 このメソッドと`CDrawingManager::HLStoRGB_TWO`メソッドは、同じ操作を実行しますの異なる値が必要です、 *H*パラメーター。 このメソッドで*H*円に占める割合です。 `CDrawingManager::HLStoRGB_TWO`メソッド、 *H*は 0 ~ 360 両方を表現する赤の間の角度の値。 たとえば、 `HLStoRGB_ONE`、値は 0.25 の*H*と 90 の値と等価`HLStoRGB_TWO`します。
 
@@ -649,7 +649,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](http://go.microsoft.com/fwlink/p/?linkid=119126)します。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
 
 このメソッドと[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)メソッドは、同じ操作を実行しますの異なる値が必要です、 *H*パラメーター。 このメソッドで*H*は 0 ~ 360 両方を表現する赤の間の角度の値。 [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)メソッド、 *H*円に占める割合です。 たとえば、 `HLStoRGB_ONE`、値は 0.25 の*H*と 90 の値と等価`HLStoRGB_TWO`します。
 
@@ -679,7 +679,7 @@ static COLORREF __stdcall HSVtoRGB(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](http://go.microsoft.com/fwlink/p/?linkid=119126)します。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
 
 ##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
 
@@ -864,7 +864,7 @@ static void __stdcall RGBtoHSL(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](http://go.microsoft.com/fwlink/p/?linkid=119126)します。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
 
 返された値*H*は 0 ~ 1 が 0 と 1 の両方を表します赤の比率として表されます。 戻り値を*S*と*L* 0 から 1 までの数値します。
 
@@ -896,7 +896,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](http://go.microsoft.com/fwlink/p/?linkid=119126)します。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
 
 返された値*H* 0 ~ 360 の数値は、0 から 360 の両方が red 示すためです。 戻り値は、 *S*と*V* 0 から 1 までの数値します。
 
