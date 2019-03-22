@@ -2,13 +2,8 @@
 layout: LandingPage
 title: C++ ドキュメントによる Linux 開発
 description: Linux で実行されているアプリケーションを作成し、デバッグする。
-ms.openlocfilehash: 78615df211381ec419b4fb46cac7a0ce8057c78e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50461487"
 ---
+
 # <a name="linux-development-with-c-documentation"></a>C++ ドキュメントによる Linux 開発
 
 Visual Studio 2017 を使用して、Linux で実行されているアプリケーションを作成し、デバッグします。
@@ -56,7 +51,7 @@ Visual Studio 2017 を使用して、Linux で実行されているアプリケ�
 
 ---
 
-<h2>参照</h2>
+<h2>関連項目</h2>
 
 <ul class="panelContent cardsW">
     <li>
@@ -65,7 +60,7 @@ Visual Studio 2017 を使用して、Linux で実行されているアプリケ�
                 <div class="card">
                     <div class="cardText">
                         <h3><a href="/cpp/visual-cpp-in-visual-studio">Visual C++</a></h3>
-                        <p><a href="/cpp/ide/ide-and-tools-for-visual-cpp-development">IDE と Visual C++ 開発用ツール</a></p>
+                        <p><a href="/cpp/overview-of-cpp-development">IDE と Visual C++ 開発用ツール</a></p>
                     </div>
                 </div>
             </div>
