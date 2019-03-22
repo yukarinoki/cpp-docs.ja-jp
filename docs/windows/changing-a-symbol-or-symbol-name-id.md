@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: 0de53b102cf06d8b4541f54f961f84408664caed
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562797"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328845"
 ---
 # <a name="how-to-manage-symbols"></a>方法: シンボルを管理します。
 
@@ -85,7 +85,7 @@ ms.locfileid: "57562797"
 
 ### <a name="to-change-a-symbol-name-id"></a>シンボル名 (ID) を変更するには
 
-1. [リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)リソースを選択します。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)リソースを選択します。
 
 1. **プロパティ**ウィンドウで、新しいシンボル名を入力するか既存のシンボルの一覧から選択、 **ID**ボックス。
 
@@ -129,7 +129,7 @@ ms.locfileid: "57562797"
 
 ### <a name="to-change-a-symbol-value"></a>シンボル値を変更するには
 
-1. [リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)リソースを選択します。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)リソースを選択します。
 
 1. **プロパティ**ウィンドウで、型、シンボル名の後に等号 (=)、整数の**ID**ボックスで、たとえば。
 
@@ -165,7 +165,7 @@ ms.locfileid: "57562797"
 
 読み取り専用のシンボル定義を使用する状況の 1 つに、複数のプロジェクト間でシンボル ファイルを共有する場合があります。
 
-インクルードされるシンボル ファイルは、単純な整数の代わりに式を使用してシンボル値を定義するシンボル定義を含む既存のリソースがあるときに使用することもできます。 例:
+インクルードされるシンボル ファイルは、単純な整数の代わりに式を使用してシンボル値を定義するシンボル定義を含む既存のリソースがあるときに使用することもできます。 例えば:
 
 ```cpp
 #define   IDC_CONTROL1 2100
@@ -185,7 +185,7 @@ ms.locfileid: "57562797"
 
 ### <a name="to-include-shared-read-only-symbols-in-your-resource-file"></a>共有 (読み取り専用) シンボルをリソース ファイルに含めるには
 
-1. [リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)を右クリックし、 *.rc*ファイルおよび選択[リソースが含まれています](../windows/resource-includes-dialog-box.md)します。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)を右クリックし、 *.rc*ファイルおよび選択[リソースが含まれています](../windows/resource-includes-dialog-box.md)します。
 
 1. **読み取り専用シンボル ディレクティブ**ボックスで使用して、`#include`コンパイラ ディレクティブをファイルの読み取り専用のシンボルを格納する場所を指定します。
 
@@ -204,7 +204,7 @@ ms.locfileid: "57562797"
 
 ### <a name="to-change-the-name-of-the-resource-symbol-header-file"></a>リソースのシンボル用のヘッダー ファイルの名前を変更するには
 
-1. [リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)を右クリックし、 *.rc*ファイル[リソース ファイルのインクルード](../windows/resource-includes-dialog-box.md)します。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)を右クリックし、 *.rc*ファイル[リソース ファイルのインクルード](../windows/resource-includes-dialog-box.md)します。
 
 1. **シンボル ヘッダー ファイル**ボックスに、インクルード ファイルの新しい名前を入力します。
 

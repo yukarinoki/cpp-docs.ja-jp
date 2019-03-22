@@ -3,12 +3,12 @@ title: '方法: Winmdidl.exe と midlrt.exe を使用して、windows メタデ�
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
-ms.openlocfilehash: b81f6901e60f27ada27f14d7dbc7c10fa3faec34
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54336562"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328715"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>方法: Winmdidl.exe と midlrt.exe を使用して、windows メタデータから .h ファイルを作成するには
 
@@ -18,7 +18,7 @@ winmdidl.exe と midlrt.exe によって、ネイティブ C++ コードと Wind
 
 - Windows ランタイム テンプレート ライブラリ (WRL) を使用して作成された C ++ アプリケーションが、カスタム Windows ランタイム コンポーネントを使用できるようにする、カスタム IDL ファイルとヘッダー ファイルの作成。
 
-- Windows ランタイム コンポーネントでのユーザー定義のイベントの種類用のプロキシおよびスタブ ファイルの生成。 詳細については、次を参照してください。[カスタム イベントおよび Windows ランタイム コンポーネントのイベント アクセサー](/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)します。
+- Windows ランタイム コンポーネントでのユーザー定義のイベントの種類用のプロキシおよびスタブ ファイルの生成。 詳細については、次を参照してください。[カスタム イベントおよび Windows ランタイム コンポーネントのイベント アクセサー](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)します。
 
 これらのツールは、カスタム .winmd ファイルを解析する場合にのみ必要です。 Windows オペレーティング システムのコンポーネント用の .idl および .h ファイルは、既に生成されます。 既定では、Windows 8.1 で内にある \Program Files (x86) \Windows Kits\8.1\Include\winrt\\します。
 
@@ -75,4 +75,4 @@ winmdidl の著作権メッセージとバージョン番号のコンソール�
 
 winmdidl 操作からの出力ファイルは入力ファイルと同じ名前ですが、ファイル名拡張子が .idl です。
 
-WRL からアクセスされる Windows ランタイム コンポーネントを開発している場合は、.idl および .h ファイルが各ビルドで生成されるように、winmdidl.exe と midlrt.exe をビルド後のステップとして実行するように指定できます。 例については、次を参照してください。 [Windows ランタイム コンポーネントのイベントの発生](/uwp/winrt-components/raising-events-in-windows-runtime-components)します。
+WRL からアクセスされる Windows ランタイム コンポーネントを開発している場合は、.idl および .h ファイルが各ビルドで生成されるように、winmdidl.exe と midlrt.exe をビルド後のステップとして実行するように指定できます。 例については、次を参照してください。 [Windows ランタイム コンポーネントのイベントの発生](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components)します。

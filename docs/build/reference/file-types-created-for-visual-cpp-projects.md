@@ -14,18 +14,18 @@ helpviewer_keywords:
 - .def files
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
-ms.openlocfilehash: c05dd9da5dd17b0e06ace750d34f2c5abcf94380
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ef8127b829b60d84af72874292c33ae1c7c4636
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827528"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327582"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Visual Studio の C++ プロジェクトに対して作成されるファイルの種類
 
 このトピックでは、従来のデスクトップ アプリケーションの Visual Studio プロジェクトに関連付けられているファイルのすべての種類について説明します。 実際にプロジェクトにインクルードされるファイルは、プロジェクトの種類、およびウィザードで選択したオプションによって異なります。
 
-- [プロジェクト ファイルとソリューション ファイル]()
+- [プロジェクト ファイルとソリューション ファイル](project-and-solution-files.md)
 
 - [CLR プロジェクト](files-created-for-clr-projects.md)
 
@@ -78,8 +78,8 @@ Visual Studio プロジェクトを作成するときに、新しいソリュー
 |.vap|Project|Visual Studio Analyzer プロジェクト ファイル。|
 |.vbg|ソリューション|互換性のあるプロジェクト グループ ファイル。|
 |.vbp、.vip、.vbproj|プロジェクト|Visual Basic プロジェクト ファイル。|
-|.vcxitems|Project|複数の C++ プロジェクト間でコード ファイルを共有するための共有アイテム プロジェクト。 詳細については、「 [プロジェクト ファイルとメイクファイル]() 」を参照してください。|
-|.vcxproj|Project|Visual Studio プロジェクト ファイル。 詳細については、「 [プロジェクト ファイルとメイクファイル]() 」を参照してください。|
+|.vcxitems|Project|複数の C++ プロジェクト間でコード ファイルを共有するための共有アイテム プロジェクト。 参照してください[プロジェクトとソリューション ファイル](project-and-solution-files.md)詳細についてはします。|
+|.vcxproj|Project|Visual Studio プロジェクト ファイル。 参照してください[プロジェクトとソリューション ファイル](project-and-solution-files.md)詳細についてはします。|
 |.vcxproj.filters|Project|filters ファイルは、ソリューション エクスプローラーを使用してプロジェクトにファイルを追加するときに、ファイル名拡張子に基づいてソリューション エクスプローラーのツリー ビューでファイルを追加する場所を定義します。|
 |.vdproj|Project|Visual Studio 配置プロジェクト ファイル。|
 |.vmx|Project|マクロ プロジェクト ファイル。|

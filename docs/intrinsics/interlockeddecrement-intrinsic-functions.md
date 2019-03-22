@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: d180ed8d416483d1be5e2bbd52f1a8752996f3f9
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: e2816d99991fcd051c5bbfbe6f4be6a43db2ef2e
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627487"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328559"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement の組み込み関数
 
 **Microsoft 固有の仕様**
 
-Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedDecrement](/windows/desktop/api/winbase/nf-winbase-interlockeddecrement)関数。
+Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedDecrement](/windows/desktop/api/winnt/nf-winnt-interlockeddecrement)関数。
 
 ## <a name="syntax"></a>構文
 
@@ -118,13 +118,17 @@ __int64 _InterlockedDecrement64_nf(
 
 ## <a name="remarks"></a>Remarks
 
-`_InterlockedDecrement` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
-`_InterlockedDecrement` 関数は 32 ビット整数値で動作しますが、`_InterlockedDecrement16` は 16 ビット整数値および `_InterlockedDecrement64` は 64 ビット整数値で動作します。
+  `_InterlockedDecrement` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
-`lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
+  `_InterlockedDecrement` 関数は 32 ビット整数値で動作しますが、`_InterlockedDecrement16` は 16 ビット整数値および `_InterlockedDecrement64` は 64 ビット整数値で動作します。
+
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 
+  `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
+
+
+  `lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 

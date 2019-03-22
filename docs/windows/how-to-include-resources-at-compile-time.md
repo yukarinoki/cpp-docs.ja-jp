@@ -23,12 +23,12 @@ helpviewer_keywords:
 - symbols [C++], finding
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
-ms.openlocfilehash: 74c70db5c04a6b56ec7bb2630c8d829151ec4225
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: cd2f05b4944e26d8a96b3f96e4e39fda0ad8ee48
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562836"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328390"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>方法: リソースは、コンパイル時 (C++)
 
@@ -48,7 +48,7 @@ ms.locfileid: "57562836"
 
 追加できますリソースその他のファイルをプロジェクトにコンパイル時にそれらを一覧表示して、**コンパイル時ディレクティブ**ボックスに、**リソースが含まれています** ダイアログ ボックス。 使用して、**リソースが含まれています**プロジェクト環境の通常の作業配置プロジェクトの .rc ファイル内のすべてのリソースを格納するを変更する ダイアログ ボックス[シンボル](../windows/symbols-resource-identifiers.md)で`Resource.h`します。
 
-最初に、開く、**リソースが含まれています** ダイアログ ボックスで、.rc ファイルを右クリックして[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)を選択します**リソースが含まれています**と次のプロパティ。
+最初に、開く、**リソースが含まれています** ダイアログ ボックスで、.rc ファイルを右クリックして[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)を選択します**リソースが含まれています**と次のプロパティ。
 
 | プロパティ | 説明 |
 |---|---|
@@ -65,7 +65,7 @@ ms.locfileid: "57562836"
 
 1. 一意のファイル名を持つリソース スクリプト ファイルにリソースを配置します。 使用しない*projectname.rc*、これは、メイン リソース スクリプト ファイルを使用しているファイルの名前です。
 
-1. 右クリックし、 *.rc*ファイル[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)選択**リソースが含まれています**します。
+1. 右クリックし、 *.rc*ファイル[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)選択**リソースが含まれています**します。
 
 1. **コンパイル時ディレクティブ**ボックスで、追加、 [#include](../preprocessor/hash-include-directive-c-cpp.md)開発環境で、メイン リソース ファイルで新しいリソース ファイルをインクルードします。
 

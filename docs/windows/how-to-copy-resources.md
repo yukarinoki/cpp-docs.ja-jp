@@ -30,12 +30,12 @@ helpviewer_keywords:
 - cursors [C++], importing and exporting
 - images [C++], exporting
 ms.assetid: 65f523e8-017f-4fc6-82d1-083c56d9131f
-ms.openlocfilehash: 28127ea89fdba1b70988ced1d6004c0f914c66e2
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 9867fdf260750d47421e699cdd0d7a58b02ce947
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563044"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328624"
 ---
 # <a name="how-to-manage-resources-c"></a>方法: リソース (C++) の管理します。
 
@@ -52,7 +52,7 @@ ms.locfileid: "57563044"
 
 ### <a name="to-copy-resources"></a>リソースをコピーするには
 
-1. スタンドアロン両方のリソース ファイルを開きます (を参照してください方法[リソース スクリプト ファイルを開く](/how-to-create-a-resource-script-file#use-resource-script-files))。 たとえば、開く*Source1.rc*と*Source2.rc*します。
+1. 2 つのリソース ファイルをスタンドアロンで開きます。 (を参照してください[リソース スクリプト ファイルを使用して、](how-to-create-a-resource-script-file.md#use-resource-script-files))。 たとえば、開く*Source1.rc*と*Source2.rc*します。
 
 1. 内で最初の .rc ファイルのいずれか。
 
@@ -88,7 +88,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-copy-an-existing-resource-and-change-its-language-or-condition"></a>既存のリソースをコピーして、そのリソースの言語または条件を変更するには
 
-*.Rc*ファイルまたは、[リソース ビュー](../windows/resource-view-window.md)ウィンドウで、コピーするリソースを右クリックして**コピーの挿入**します。 次のように設定します。
+*.Rc*ファイルまたは、[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)ウィンドウで、コピーするリソースを右クリックして**コピーの挿入**します。 次のように設定します。
 
 - **言語**ボックスの一覧で、言語を選択します。
 
@@ -107,7 +107,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-import-a-resource-into-the-resource-script-file"></a>リソース スクリプト ファイルにリソースをインポートするには
 
-1. [リソース ビュー](../windows/resource-view-window.md)リソースを追加し、選択するリソース スクリプト (.rc) ファイルのノードを右クリックして**インポート**します。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)リソースを追加し、選択するリソース スクリプト (.rc) ファイルのノードを右クリックして**インポート**します。
 
 1. 検索し、ビットマップ (.bmp)、アイコン (.ico)、カーソル (.cur)、html ファイル (.htm)、またはインポートするには、その他のファイルのファイル名を選択します。
 
@@ -118,7 +118,7 @@ IDD_AboutBox (Finnish - XX33)
 
 ### <a name="to-export-a-resource-for-use-outside-of-visual-c"></a>Visual C の外部で使用するためのリソースをエクスポートするには
 
-1. [リソース ビュー](../windows/resource-view-window.md)、エクスポートを選択するリソースを右クリックして**エクスポート**します。 現在のファイル名をそのまま使用したり、新しい名前を入力することができます。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)、エクスポートを選択するリソースを右クリックして**エクスポート**します。 現在のファイル名をそのまま使用したり、新しい名前を入力することができます。
 
 1. ファイルを保存し、選択するフォルダーに移動します**エクスポート**します。
 

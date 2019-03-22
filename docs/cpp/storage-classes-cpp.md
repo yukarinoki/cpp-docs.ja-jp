@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - storage classes [C++], basic concepts
 ms.assetid: f10e1c56-6249-4eb6-b08f-09ab1eef1992
-ms.openlocfilehash: 31f9ba4e16fa1216db4fb66c7b7faeca333f2c43
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e50e5da5ea24d59131f123bb0c772897f9a30218
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520318"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329027"
 ---
 # <a name="storage-classes-c"></a>ストレージ クラス (C++)
 
@@ -24,7 +24,7 @@ A*ストレージ クラス*C++ のコンテキストでの変数宣言は、オ
 
 1. [変更可能な](../cpp/mutable-data-members-cpp.md)キーワードが、ストレージ クラス指定子として見なされます。 ただし、クラス定義のメンバー一覧でのみ使用できます。
 
-1. **Visual C 2010 以降:** 、**自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**登録**キーワードは C++ 言語から削除されます。
+1. **Visual C 2010 以降:****自動**キーワードは C++ ストレージ クラス指定子では不要になったと**登録**キーワードは非推奨とされます。 **Visual Studio 2017 バージョン 15.7 以降:** (で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**登録**キーワードは C++ 言語から削除されます。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class
@@ -167,7 +167,7 @@ C++11 以降では、静的ローカル変数の初期化はスレッド セー�
 
 宣言**const**で変数を**extern**ストレージ クラスが外部リンケージを持つ変数を強制します。 初期化、 **extern const**変数が定義する翻訳単位で許可されています。 定義している翻訳単位以外の翻訳単位の初期化は未定義の結果になります。 詳細については、次を参照してください[extern リンケージの指定を使用した。](../cpp/using-extern-to-specify-linkage.md)
 
-[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)コンパイラ オプションは、適用するコンパイラ[外部リンケージ]()を使用して宣言された変数に`extern constexpr`します。 以前のバージョンの Visual Studio で、既定の場合、または **/Zc:externConstexpr-** を指定すると、Visual Studio に内部リンケージを適用する**constexpr**変数場合でも、 **extern**キーワードを使用します。 **/Zc: externconstexpr**オプションは、Visual Studio 2017 Update 15.6 以降を使用します。 既定で無効であるとします。 促す/permissive-オプションには、/zc: externconstexpr が有効にしません。
+[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)コンパイラ オプションは、適用するコンパイラ[外部リンケージ](../c-language/external-linkage.md)を使用して宣言された変数に`extern constexpr`します。 以前のバージョンの Visual Studio で、既定の場合、または **/Zc:externConstexpr-** を指定すると、Visual Studio に内部リンケージを適用する**constexpr**変数場合でも、 **extern**キーワードを使用します。 **/Zc: externconstexpr**オプションは、Visual Studio 2017 Update 15.6 以降を使用します。 既定で無効であるとします。 促す/permissive-オプションには、/zc: externconstexpr が有効にしません。
 
 次のコードは 2 つ**extern**宣言、 `DefinedElsewhere` (これは別の翻訳単位で定義された名前を参照) と`DefinedHere`(これは外側のスコープで定義された名前を参照)。
 
@@ -186,7 +186,8 @@ int main() {
 
 ## <a name="thread_local"></a> thread_local (c++ 11)
 
-`thread_local` 指定子で宣言された変数は、それが作成されたスレッドでのみアクセスできます。 変数は、スレッドが作成されるときに作成され、スレッドが破棄されるときに破棄されます。 各スレッドには、それ自体の変数のコピーがあります。 Windows で`thread_local`は機能的には、Microsoft 固有[_ _declspec (thread)](../cpp/thread.md)属性。
+
+  `thread_local` 指定子で宣言された変数は、それが作成されたスレッドでのみアクセスできます。 変数は、スレッドが作成されるときに作成され、スレッドが破棄されるときに破棄されます。 各スレッドには、それ自体の変数のコピーがあります。 Windows で`thread_local`は機能的には、Microsoft 固有[_ _declspec (thread)](../cpp/thread.md)属性。
 
 ```cpp
 thread_local float f = 42.0; // Global namespace. Not implicitly static.
@@ -213,15 +214,17 @@ void DoSomething()
 
 - 適用できる`thread_local`のみにデータの宣言と定義されます。`thread_local`関数宣言または定義では使用できません。
 
-- `thread_local` は、静的ストレージ存続期間のあるデータ項目にのみ指定できます。 これには、グローバルなデータ オブジェクトが含まれます (どちらも**静的**と**extern**)、ローカルな静的オブジェクト、およびクラスの静的データ メンバー。 任意のローカル変数が宣言されている`thread_local`は他のストレージ クラスが提供されていない場合は、暗黙的に静的つまり、ブロック スコープで`thread_local`と等価`thread_local static`します。
+- 
+  `thread_local` は、静的ストレージ存続期間のあるデータ項目にのみ指定できます。 これには、グローバルなデータ オブジェクトが含まれます (どちらも**静的**と**extern**)、ローカルな静的オブジェクト、およびクラスの静的データ メンバー。 任意のローカル変数が宣言されている`thread_local`は他のストレージ クラスが提供されていない場合は、暗黙的に静的つまり、ブロック スコープで`thread_local`と等価`thread_local static`します。
 
 - 宣言と定義が同じファイルと別々のファイルのどちらで発生する場合でも、スレッド ローカル オブジェクトの宣言と定義には `thread_local` を使用する必要があります。
 
-Windows で`thread_local`は機能的に等価[_declspec](../cpp/thread.md)する点を除いて **_declspec**型定義に適用できるし、C コードでは無効です。 `thread_local` は C++ 標準の一部であり、移植性がより高いため、できるだけ常にこれを使用してください。
+Windows で`thread_local`は機能的に等価[_declspec](../cpp/thread.md)する点を除いて **_declspec**型定義に適用できるし、C コードでは無効です。 
+  `thread_local` は C++ 標準の一部であり、移植性がより高いため、できるだけ常にこれを使用してください。
 
 ##  <a name="register"></a>  register
 
-**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)):**登録**キーワードがサポートされているストレージ クラスではなくなりました。 キーワードは、将来使用するための標準でまだ予約されています。
+**Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。**登録**キーワードがサポートされているストレージ クラスではなくなりました。 キーワードは、将来使用するための標準でまだ予約されています。
 
 ```cpp
    register int val; // warning C5033: 'register' is no longer a supported storage class

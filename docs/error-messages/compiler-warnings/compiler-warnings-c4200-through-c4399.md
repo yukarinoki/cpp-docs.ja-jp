@@ -3,7 +3,6 @@ title: コンパイラの警告 s C4200 C4399 Through
 ms.date: 11/17/2017
 f1_keywords:
 - C4203
-- C4274
 - C4277
 - C4279
 - C4298
@@ -12,7 +11,6 @@ f1_keywords:
 - C4303
 - C4314
 - C4315
-- C4316
 - C4317
 - C4318
 - C4321
@@ -22,22 +20,20 @@ f1_keywords:
 - C4328
 - C4330
 - C4338
-- C4343
 - C4352
 - C4362
 - C4367
 - C4370
-- C4373
 - C4380
 - C4387
 - C4388
 ms.assetid: 170248db-7bf2-4823-92d9-437b04c1290d
-ms.openlocfilehash: 9cca32973ead1d7d88e37c4745491c8d5f181e0b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d79c9c12664f9920f03490b8cb53ec671d3d78a3
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810511"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328266"
 ---
 # <a name="compiler-warnings-c4200-through-c4399"></a>コンパイラの警告 s C4200 C4399 Through
 
@@ -103,7 +99,7 @@ ms.locfileid: "57810511"
 |[コンパイラの警告 (レベル 1) C4269](../../error-messages/compiler-warnings/compiler-warning-level-1-c4269.md)|'*識別子*': 'const' 自動データがコンパイラによって生成された既定のコンス トラクターで初期化された生成結果の信頼性|
 |[コンパイラの警告 (レベル 1) C4272](../../error-messages/compiler-warnings/compiler-warning-level-1-c4272.md)|'*関数*': _declspec がマークされている; 関数をインポートするときに、ネイティブの呼び出し規約を指定する必要があります。|
 |[コンパイラの警告 (レベル 1) C4273](../../error-messages/compiler-warnings/compiler-warning-level-1-c4273.md)|'*関数*': 一貫性のない dll リンケージ|
-|コンパイラの警告 (レベル 1) C4274|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
+|[コンパイラの警告 (レベル 1) C4274](compiler-warning-level-1-c4274.md)|#ident ignored; see documentation for #pragma comment(exestr, 'string')|
 |[コンパイラの警告 (レベル 2) C4275](../../error-messages/compiler-warnings/compiler-warning-level-2-c4275.md)|dll インターフェイスでない '*した*' '*identifier1*'dll インターフェイスのベースとして使用される'*した*' '*identifier2*'|
 |[コンパイラの警告 (レベル 1) C4276](../../error-messages/compiler-warnings/compiler-warning-level-1-c4276.md)|'*関数*': プロトタイプがありません。 パラメーターがないと仮定します。|
 |コンパイラの警告 (レベル 1) C4277|インポートされたアイテム '*classname*::*メンバー*' データ メンバーおよび関数メンバーの両方として存在するデータ メンバーが無視されます|
@@ -140,7 +136,7 @@ ms.locfileid: "57810511"
 |[コンパイラの警告 (レベル 1) C4313](../../error-messages/compiler-warnings/compiler-warning-level-1-c4313.md)|'*関数*':'*format_specifier*'形式の文字列と競合する引数'*argument_number*'type' の*型*'|
 |コンパイラの警告 C4314|プラグマ パラメーターに '32' または '64' にします。|
 |コンパイラの警告 (レベル 4) C4315|'*classname*': メンバー 'this' ポインター'*メンバー*'を配置しないことがあります'*配置*' コンス トラクターによって期待どおりに|
-|コンパイラの警告 (レベル 3) C4316|'*識別子*': ヒープで割り当てられたオブジェクトがアラインされていない'*配置*'|
+|[コンパイラの警告 (レベル 3) C4316](compiler-warning-level-3-c4316.md)|'*識別子*': ヒープで割り当てられたオブジェクトがアラインされていない'*配置*'|
 |コンパイラの警告 (レベル 1) C4317|'*printf_family*': 書式指定文字列の引数が不足しています|
 |コンパイラの警告 C4318|memset に対する長さとして定数ゼロを渡す|
 |[コンパイラの警告 (レベル 1) C4319](../../error-messages/compiler-warnings/compiler-warning-level-1-c4319.md)|'*演算子*': ゼロ拡張'*type1*'to'*type2*' より大きいサイズの|
@@ -163,7 +159,7 @@ ms.locfileid: "57810511"
 |[コンパイラの警告 (レベル 4) C4339](../../error-messages/compiler-warnings/compiler-warning-level-4-c4339.md)|'*型*': 未定義の型がで検出されるを使用して、' WinRT&#124;CLR' メタデータ - この型の使用可能性がありますする、ランタイム例外|
 |[コンパイラの警告 (レベル 1) C4340](../../error-messages/compiler-warnings/compiler-warning-level-1-c4340.md)|'*値*': 値が負の値に正の値のラップ|
 |[コンパイラの警告 (レベル 1) C4342](../../error-messages/compiler-warnings/compiler-warning-level-1-c4342.md)|動作変更: '*関数*' 呼び出されると、メンバー演算子が以前のバージョンで呼び出されましたが、|
-|コンパイラの警告 (レベル 4) C4343|#pragma optimize("g",off) は /Og オプションをオーバーライドします|
+|[コンパイラの警告 (レベル 4) C4343](compiler-warning-level-4-c4343.md)|#pragma optimize("g",off) は /Og オプションをオーバーライドします|
 |[コンパイラの警告 (レベル 1) C4344](../../error-messages/compiler-warnings/compiler-warning-level-1-c4344.md)|動作変更: への呼び出しで明示的なテンプレート引数を使用して '*関数*'|
 |[コンパイラの警告 (レベル 1) C4346](../../error-messages/compiler-warnings/compiler-warning-level-1-c4346.md)|'*名前*': 依存名が型ではありません|
 |[コンパイラの警告 (レベル 1) C4348](../../error-messages/compiler-warnings/compiler-warning-level-1-c4348.md)|'*型*': 既定のパラメーターの再定義: パラメーター'*parameter_number*'|
@@ -184,7 +180,7 @@ ms.locfileid: "57810511"
 |[コンパイラの警告 (レベル 1) C4369](../../error-messages/compiler-warnings/compiler-warning-level-1-c4369.md)|'*列挙子*': 列挙子の値'*値*'として表すことができない'*型*'、値は'*new_value*'|
 |C4370 コンパイラ|'*classname*': パッキングの改善のため、コンパイラの以前のバージョンからのクラスのレイアウトが変更されました|
 |[コンパイラの警告 (レベル 3) C4371](../../error-messages/compiler-warnings/c4371.md)|'*classname*': クラスのレイアウトは、メンバーのパッキングの改善のため、コンパイラの以前のバージョンから変更された可能性があります'*メンバー*'|
-|コンパイラの警告 (レベル 3) C4373|'*derived_class*::*関数*': 仮想関数のオーバーライド*base_class*::*関数*'、コンパイラの以前のバージョンconst/volatile 修飾子によってのみと一致しません。 パラメーターの場合はオーバーライドしませんでした。|
+|[コンパイラの警告 (レベル 3) C4373](compiler-warning-level-3-c4373.md)|'*derived_class*::*関数*': 仮想関数のオーバーライド*base_class*::*関数*'、コンパイラの以前のバージョンconst/volatile 修飾子によってのみと一致しません。 パラメーターの場合はオーバーライドしませんでした。|
 |[コンパイラの警告 (レベル 1) C4374](../../error-messages/compiler-warnings/compiler-warning-level-1-c4374.md)|'*function1*': インターフェイス メソッドは、非仮想メソッドでは実装されません'*function2*'|
 |[コンパイラの警告 (レベル 1) C4375](../../error-messages/compiler-warnings/compiler-warning-level-1-c4375.md)|非パブリック メソッド '*method2*'オーバーライドしない'*method2*'|
 |[コンパイラの警告 (レベル 1) C4376](../../error-messages/compiler-warnings/compiler-warning-level-1-c4376.md)|アクセス指定子 '*old_specifier*:' はサポートされなく: を使用してください'*new_specifier*:' 代わりに|
@@ -205,7 +201,7 @@ ms.locfileid: "57810511"
 |[コンパイラの警告 (レベル 1) C4393](../../error-messages/compiler-warnings/compiler-warning-level-1-c4393.md)|'*変数*': const も何も起こりません'*リテラル*' データ メンバーは無視されます|
 |[コンパイラの警告 C4394](../../error-messages/compiler-warnings/compiler-warning-c4394.md)|'*関数*': appdomain ごとのシンボルを __declspec('dllexport') とマークしない必要があります|
 |[コンパイラの警告 (レベル 1) C4395](../../error-messages/compiler-warnings/compiler-warning-level-1-c4395.md)|'*関数*': initonly データ メンバーのコピーで、メンバー関数が呼び出される'*メンバー*'|
-|コンパイラの警告 (レベル 2) C4396|'*関数*': フレンド宣言が関数テンプレートの特殊化を参照するときに、インライン指定子を使用できません|
+|[コンパイラの警告 (レベル 2) C4396](compiler-warning-level-2-c4396.md)|'*関数*': フレンド宣言が関数テンプレートの特殊化を参照するときに、インライン指定子を使用できません|
 |[コンパイラの警告 (レベル 1) C4397](../../error-messages/compiler-warnings/compiler-warning-level-1-c4397.md)|DefaultCharSetAttribute は無視されます。|
 |[コンパイラの警告 (レベル 3) C4398](../../error-messages/compiler-warnings/compiler-warning-level-3-c4398.md)|'*変数*': プロセスごとのグローバル オブジェクトは複数の appdomain と共に動作しない可能性があります、__declspec(appdomain) を使用してみてください。|
 |[コンパイラの警告 (レベル 1) C4399](../../error-messages/compiler-warnings/compiler-warning-level-1-c4399.md)|'*シンボル*': __declspec('dllimport')/clr でコンパイルされたときに、プロセスごとのシンボルをマークしない必要があります: 純粋な|

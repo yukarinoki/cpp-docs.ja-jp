@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedExchange intrinsic
 - _InterlockedExchange8_nf
 ms.assetid: be2f232a-6301-462a-a92b-fcdeb8b0f209
-ms.openlocfilehash: ecf69b1e910dab9824131f26d8db1eb5615d6e18
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: bccf9f46a886a622c493485818601044afff232d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627177"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328520"
 ---
 # <a name="interlockedexchange-intrinsic-functions"></a>_InterlockedExchange の組み込み関数
 
@@ -152,11 +152,12 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="return-value"></a>戻り値
 
-`Target` が指す初期値を返します。
+
+  `Target` が指す初期値を返します。
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|ヘッダー|
+|組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
 |`_InterlockedExchange`, `_InterlockedExchange8`, `_InterlockedExchange16`, `_InterlockedExchange64`|x86、ARM、x64|\<intrin.h>|
 |`_InterlockedExchange_acq`, `_InterlockedExchange_nf`, `_InterlockedExchange_rel`, `_InterlockedExchange8_acq`, `_InterlockedExchange8_nf`, `_InterlockedExchange8_rel`, `_InterlockedExchange16_acq`, `_InterlockedExchange16_nf`, `_InterlockedExchange16_rel`, `_InterlockedExchange64_acq`, `_InterlockedExchange64_nf`, `_InterlockedExchange64_rel`,|ARM|\<intrin.h>|
@@ -164,13 +165,16 @@ __int64 _InterlockedExchange64_rel(
 
 ## <a name="remarks"></a>Remarks
 
-`_InterlockedExchange` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedExchange](/windows/desktop/api/winbase/nf-winbase-interlockedexchange)関数。
+`_InterlockedExchange` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedExchange](/windows/desktop/api/winnt/nf-winnt-interlockedexchange)関数。
 
-`_InterlockedExchange` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
-`_InterlockedExchange` 関数は 32 ビット整数値で動作しますが、`_InterlockedExchange8` は 8 ビット整数値、`_InterlockedExchange16` は 16 ビット整数値、および `_InterlockedExchange64` は 64 ビット整数値で動作します。
+  `_InterlockedExchange` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
+
+  `_InterlockedExchange` 関数は 32 ビット整数値で動作しますが、`_InterlockedExchange8` は 8 ビット整数値、`_InterlockedExchange16` は 16 ビット整数値、および `_InterlockedExchange64` は 64 ビット整数値で動作します。
+
+ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 
+  `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
 Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォームでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 HLE をサポートしていないプラットフォームでこれらの組み込みが呼び出された場合、ヒントは無視されます。
 

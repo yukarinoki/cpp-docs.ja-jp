@@ -7,12 +7,12 @@ helpviewer_keywords:
 - mixed-mode applications, intermediate language
 - projects [C++], converting to intermediate language
 ms.assetid: 855f9e3c-4f09-4bfe-8eab-a45f68292be9
-ms.openlocfilehash: 46a12e6204113b00c209696bbdfd1093232d7521
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93eff646fb582e25ad70549afc714c5321e56079
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559677"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328585"
 ---
 # <a name="converting-projects-from-mixed-mode-to-pure-intermediate-language"></a>混在モードから純粋な中間言語へのプロジェクトの変換
 
@@ -56,7 +56,7 @@ ms.locfileid: "50559677"
       // #include <tchar.h>
       ```
 
-   6. Form1.cpp での Windows フォーム アプリケーションをコメント アウト用、 `#include` windows.h を参照するステートメント。 例えば:
+   6. Form1.cpp での Windows フォーム アプリケーションをコメント アウト用、 `#include` windows.h を参照するステートメント。 例:
 
       ```cpp
       // #include <windows.h>
@@ -80,7 +80,7 @@ ms.locfileid: "50559677"
    |[Boolean](/dotnet/api/system.boolean)|ブール値を表します。|
    |[Byte](/dotnet/api/system.byte)|8 ビット符号なし整数を表します。|
    |[Char](/dotnet/api/system.char)|Unicode 文字を表します。|
-   |[DateTime](/dotnet/api/system.datetime.datetime.aspx)|通常、日付や時刻として表現される瞬間を表します。|
+   |[DateTime](/dotnet/api/system.datetime)|通常、日付や時刻として表現される瞬間を表します。|
    |[Decimal](/dotnet/api/system.decimal)|10 進数を表します。|
    |[Double](/dotnet/api/system.double)|倍精度浮動小数点数を表します。|
    |[Guid](/dotnet/api/system.guid)|グローバル一意識別子 (GUID) を表します。|
@@ -88,8 +88,8 @@ ms.locfileid: "50559677"
    |[Int32](/dotnet/api/system.int32)|32 ビット符号付き整数を表します。|
    |[Int64](/dotnet/api/system.int64)|64 ビット符号付き整数を表します。|
    |[IntPtr](/dotnet/api/system.intptr)|ポインターまたはハンドルを表すときに使用されるプラットフォーム固有の型。|
-   |[SByte](/dotnet/api/system.byte.aspx)|8 ビット符号付き整数を表します。|
-   |[Single](/dotnet/api/system.single.aspx)|単精度浮動小数点数を表します。|
+   |[SByte](/dotnet/api/system.byte)|8 ビット符号付き整数を表します。|
+   |[Single](/dotnet/api/system.single)|単精度浮動小数点数を表します。|
    |[TimeSpan](/dotnet/api/system.timespan)|時間間隔を表します。|
    |[UInt16](/dotnet/api/system.uint16)|16 ビット符号なし整数を表します。|
    |[UInt32](/dotnet/api/system.uint32)|32 ビット符号なし整数を表します。|

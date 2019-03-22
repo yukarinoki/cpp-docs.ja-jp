@@ -32,12 +32,12 @@ helpviewer_keywords:
 - strings [C++], formatting
 - strings [C++], special characters
 ms.assetid: f71ab8de-3068-4e29-8e28-5a33d18dd416
-ms.openlocfilehash: bea53c33ef723cf8c98d0c542d24389e730c092a
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 6c855986d98f265f876f2acdd085eea46e057c93
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563304"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328897"
 ---
 # <a name="string-editor-c"></a>文字列エディター (C++)
 
@@ -56,7 +56,7 @@ ms.locfileid: "57563304"
 
 ### <a name="to-find-a-string-resource-in-the-string-table"></a>文字列テーブル内の文字列リソースを検索するには
 
-1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
+1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)します。
 
 1. メニューに移動して**編集** > **検索し、置換**選択**検索**します。
 
@@ -79,7 +79,7 @@ ms.locfileid: "57563304"
 
 #### <a name="to-add-a-string-table-entry"></a>ストリング テーブルのエントリを追加するには
 
-1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
+1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)します。
 
 1. 文字列テーブル内で右クリックし、**新しい文字列**します。
 
@@ -124,7 +124,7 @@ ms.locfileid: "57563304"
 
 #### <a name="to-change-a-string-or-its-identifier"></a>文字列または識別子を変更するには
 
-1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
+1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)します。
 
 1. ダブルクリックして編集する文字列を選択、 **ID**、**値**、または**キャプション**列、しすることができます。
 
@@ -136,7 +136,7 @@ ms.locfileid: "57563304"
 
 #### <a name="to-change-the-caption-property-of-multiple-string-resources"></a>複数の文字列リソースの caption プロパティを変更するには
 
-1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
+1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)します。
 
 1. 押しながら変更する文字列を選択、 **Ctrl**キーの 1 つを選択するとします。
 
@@ -146,7 +146,7 @@ ms.locfileid: "57563304"
 
 ### <a name="to-add-formatting-or-special-characters-to-a-string-resource"></a>文字列リソースへの書式設定や特殊文字を追加するには
 
-1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
+1. アイコンをダブルクリックして、文字列テーブルを開く[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)します。
 
 1. 変更する文字列を選択します。
 
@@ -159,7 +159,7 @@ ms.locfileid: "57563304"
    | タブ | \\t |
    | 円記号 (\\) | \\\\ |
    | ASCII 文字 | \\ddd (8 進表記) |
-   | 警告 (ベル) | \\a |
+   | 警告 (ベル) | \\A |
 
    > [!NOTE]
    > **文字列エディター** ASCI のエスケープ文字の完全なセットをサポートしていません。 上記のリストにのみ使用できます。

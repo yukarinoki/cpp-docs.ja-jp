@@ -32,12 +32,12 @@ helpviewer_keywords:
 - SetData method
 - FlushData method
 ms.assetid: 1e9fee15-ed9e-4387-af8f-215569beca6c
-ms.openlocfilehash: 299cebd93a3d54ab747f5c58b22dbbf215a02e4c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 452bd28e3ea061ecc30ef802290242e4cb830792
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426655"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328598"
 ---
 # <a name="irowsetchangeimpl-class"></a>IRowsetChangeImpl クラス
 
@@ -90,7 +90,7 @@ class ATL_NO_VTABLE IRowsetChangeImpl : public BaseInterface
 
 |||
 |-|-|
-|[FlushData](#flushdata)|プロバイダーによって、そのストアにデータをコミットする上書きします。|
+|[FlushData](#flushdata)|データをそのストアにコミットするためのプロバイダーでオーバーライドします。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -124,7 +124,7 @@ STDMETHOD (DeleteRows )(HCHAPTER /* hReserved */,
 
 #### <a name="parameters"></a>パラメーター
 
-参照してください[irowsetchange::deleterows](/previous-versions/windows/desktop/ms724362(v=vs.85)(v%3dvs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+参照してください[irowsetchange::deleterows](/previous-versions/windows/desktop/ms724362(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="insertrow"></a> IRowsetChangeImpl::InsertRow
 
@@ -161,7 +161,7 @@ STDMETHOD (SetData )(HROW hRow,
 
 ## <a name="flushdata"></a> IRowsetChangeImpl::FlushData
 
-プロバイダーによって、そのストアにデータをコミットする上書きします。
+データをそのストアにコミットするためのプロバイダーでオーバーライドします。
 
 ### <a name="syntax"></a>構文
 

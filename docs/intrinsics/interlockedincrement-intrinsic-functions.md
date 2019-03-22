@@ -44,18 +44,18 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 3054a9eab21f6f7ec149f7f1c23c3c40fca3b9e1
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 91e9c6dac1b6f13997bb7e4f2727a743a9177083
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626934"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328611"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement の組み込み関数
 
 **Microsoft 固有の仕様**
 
-Win32 Windows SDK のコンパイラ組み込みサポートを提供[InterlockedIncrement](/windows/desktop/api/winbase/nf-winbase-interlockedincrement)関数。
+Win32 Windows SDK のコンパイラ組み込みサポートを提供[InterlockedIncrement](/windows/desktop/api/winnt/nf-winnt-interlockedincrement)関数。
 
 ## <a name="syntax"></a>構文
 
@@ -116,13 +116,17 @@ __int64 _InterlockedIncrement64_nf(
 
 ## <a name="remarks"></a>Remarks
 
-`_InterlockedIncrement` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
-`_InterlockedIncrement` 関数は 32 ビット整数値で動作しますが、`_InterlockedIncrement16` は 16 ビット整数値および `_InterlockedIncrement64` は 64 ビット整数値で動作します。
+  `_InterlockedIncrement` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
-`lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
+  `_InterlockedIncrement` 関数は 32 ビット整数値で動作しますが、`_InterlockedIncrement16` は 16 ビット整数値および `_InterlockedIncrement64` は 64 ビット整数値で動作します。
+
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 
+  `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
+
+
+  `lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
 
 Win32 関数は `Wdm.h` または `Ntddk.h` で宣言されています。
 

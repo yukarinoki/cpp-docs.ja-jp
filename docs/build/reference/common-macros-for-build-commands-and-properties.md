@@ -1,6 +1,6 @@
 ---
-title: ビルドのコマンドとプロパティの共通マクロ
-ms.date: 05/29/2018
+title: MSBuild コマンドとプロパティの共通マクロ
+ms.date: 03/20/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.GenerateXMLDocumentationFiles
 - VC.Project.VCCLCompilerTool.XMLDocumentationFileName
@@ -90,26 +90,29 @@ helpviewer_keywords:
 - builds [C++], macros
 - $(FrameworkDir) macro
 - $(PlatformName) macro
+- $(PlatformShortName) macro
 - SolutionPath macro $(SolutionPath)
 ms.assetid: 239bd708-2ea9-4687-b264-043f1febf98b
-ms.openlocfilehash: 669114691bc89c1e8136e07a949be57cda3d71b9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 46fdd5e356ded96388a154ff459ef4cc3c02267f
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826648"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58327679"
 ---
-# <a name="common-macros-for-build-commands-and-properties"></a>ビルドのコマンドとプロパティの共通マクロ
+# <a name="common-macros-for-msbuild-commands-and-properties"></a>MSBuild コマンドとプロパティの共通マクロ
 
-インストール オプションによっては、Visual Studio で何百ものマクロが使用できるようになります。 これらは、既定で設定されている MSBuild プロパティ、.props または .targets ファイル内の MSBuild プロパティ、またはお使いのプロジェクトの設定内にある MSBuild プロパティに対応しています。 次のマクロは、プロジェクトの **[プロパティ ページ]** ダイアログ ボックス内の、文字列を入力できるどの場所にも使用できます。 これらのマクロの大文字と小文字は区別されません。
+に応じて、インストール オプションでは、Visual Studio 利用できる何百ものマクロのする (MSBuild に基づく) Visual Studio プロジェクトにします。 これらは、既定で設定されている MSBuild プロパティ、.props または .targets ファイル内の MSBuild プロパティ、またはお使いのプロジェクトの設定内にある MSBuild プロパティに対応しています。 次のマクロは、プロジェクトの **[プロパティ ページ]** ダイアログ ボックス内の、文字列を入力できるどの場所にも使用できます。 これらのマクロの大文字と小文字は区別されません。
 
 ## <a name="view-the-current-properties-and-macros"></a>現在のプロパティとマクロを表示する
 
-現在使用可能なマクロを表示するには、**[プロパティ ページ]** ダイアログ ボックスの任意のプロパティ ページで、プロパティ行の末尾にあるドロップダウン矢印をクリックします。 **[編集]** が使用可能な場合は、それを選択し、編集ダイアログ ボックスで **[マクロ]** ボタンをクリックします。 Visual Studio に表示されているプロパティとマクロの現在のセットが、それぞれの現在の値と共に表示されます。 詳細については、次を参照してください。、 **Specifying User-Defined 値**の[C++ プロジェクト プロパティ ページ リファレンス](property-pages-visual-cpp.md)します。
+現在使用可能なマクロでは、すべてを表示する、**プロパティ ページ**ダイアログで、 **vc++ ディレクトリ**プロパティの行の末尾にあるドロップダウン矢印をクリックします。 をクリックして**編集**し、編集ダイアログ ボックスの 、**マクロ**ボタンをクリックします。 Visual Studio に表示されているプロパティとマクロの現在のセットが、それぞれの現在の値と共に表示されます。 詳細については、次を参照してください。、 **Specifying User-Defined 値**の[C++ プロジェクト プロパティ ページ リファレンス](property-pages-visual-cpp.md)します。
+
+![VC + + マクロ ボタン](../media/vcppdir_libdir_macros.png "マクロ メニュー")
 
 ## <a name="list-of-common-macros"></a>一般的なマクロの一覧
 
-次の表では、使用可能なマクロの一般的に使用されるサブセットについて説明します。 この一覧は完全なものではありません。 MSBuild プロパティ定義がどのように作成され、.props、.targets、および .vcxproj ファイル内でマクロとして使用されるかについて詳しくは、「[MSBuild プロパティ](/visualstudio/msbuild/msbuild-properties)」を参照してください。
+このテーブルには、一般的に使用される使用可能なマクロ; のサブセットがについて説明しますこの一覧にないより多くがあります。 移動して、**マクロ**プロパティとその現在の値、プロジェクト内のすべてを表示するダイアログ。 MSBuild プロパティ定義がどのように作成され、.props、.targets、および .vcxproj ファイル内でマクロとして使用されるかについて詳しくは、「[MSBuild プロパティ](/visualstudio/msbuild/msbuild-properties)」を参照してください。
 
 |マクロ|説明|
 |-----------|-----------------|
@@ -122,6 +125,7 @@ ms.locfileid: "57826648"
 |**$(IntDir)**|中間ファイルに指定されたディレクトリへのパスです。 これが相対パスの場合、中間ファイルはこのパスを通じてプロジェクト ディレクトリに追加されます。 このパスの末尾にはスラッシュが必要です。 これは **Intermediate Directory** プロパティの値に解決されます。 **$(OutDir)** を使用して、このプロパティを定義しないでください。|
 |**$(OutDir)**|出力ファイルのディレクトリへのパスです。 これが相対パスの場合、出力ファイルはこのパスを通じてプロジェクト ディレクトリに追加されます。 このパスの末尾にはスラッシュが必要です。 これは **Output Directory** プロパティの値に解決されます。 **$(IntDir)** を使用して、このプロパティを定義しないでください。|
 |**$(Platform)**|現在のプロジェクト プラットフォームの名前 (例: "Win32") です。|
+|**$(PlatformShortName)**|たとえば、"x86"または"x64"、現在のアーキテクチャの短い名前。|
 |**$(ProjectDir)**|プロジェクトのディレクトリ (ドライブ + パスで定義) です。最後に円記号 (\\) が含まれます。|
 |**$(ProjectExt)**|プロジェクトのファイル拡張子。 ファイル拡張子の前にピリオド '.' が付きます。|
 |**$(ProjectFileName)**|プロジェクトのファイル名 (基本名 + ファイル拡張子で定義) です。|
@@ -162,6 +166,6 @@ C++ のビルド システムは、Visual Studio 2008 と Visual Studio 2010 の
 
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio プロジェクトの C++](../creating-and-managing-visual-cpp-projects.md)
+- [Visual Studio プロジェクト - C++](../creating-and-managing-visual-cpp-projects.md)
 - [Visual C++ 移植とアップグレードのガイド](../../porting/visual-cpp-porting-and-upgrading-guide.md)
 - [アップグレード時の潜在的な問題の概要](../../porting/overview-of-potential-upgrade-issues-visual-cpp.md)
