@@ -43,12 +43,12 @@ helpviewer_keywords:
 - RichEdit 1.0 control
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
-ms.openlocfilehash: f27e325a8d766fbaf95037db669e0829671cb104
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 217bde10ea1b7f6457d141c3006c8c8fb2efaadf
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562914"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328507"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>方法: 追加、編集、または削除コントロール (C++)
 
@@ -124,7 +124,7 @@ ms.locfileid: "57562914"
 ### <a name="to-define-a-member-variable-for-a-non-button-dialog-box-control"></a>ボタン以外のダイアログ ボックス コントロールのメンバー変数を定義するには
 
 > [!NOTE]
-> このプロセスは、MFC プロジェクト内のダイアログ コントロールにのみ適用されます。 ATL プロジェクトで使用する必要があります、**新しい Windows メッセージおよびイベント ハンドラー**  ダイアログ ボックス。 詳細については、次を参照してください[メッセージの種類は、ユーザー インターフェイス オブジェクトに関連付けられた](../mfc/reference/message-types-associated-with-user-interface-objects.md)、[メッセージ ハンドラーの編集](../mfc/reference/editing-a-message-handler.md)、および[リフレクションメッセージ用のメッセージハンドラーを定義する](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md).
+> このプロセスは、MFC プロジェクト内のダイアログ コントロールにのみ適用されます。 ATL プロジェクトで使用する必要があります、**新しい Windows メッセージおよびイベント ハンドラー**  ダイアログ ボックス。 詳細については、次を参照してください[メッセージの種類は、ユーザー インターフェイス オブジェクトに関連付けられた](../mfc/reference/message-types-associated-with-user-interface-objects.md)、[メッセージ ハンドラーの編集](../mfc/reference/editing-a-message-handler.md)、および[リフレクションメッセージ用のメッセージハンドラーを定義する](../mfc/reference/defining-a-message-handler-for-a-reflected-message.md)。
 
 1. [ダイアログ エディター](../windows/dialog-editor.md)コントロールを選択します。
 
@@ -153,7 +153,7 @@ ms.locfileid: "57562914"
 
 1. Windows アプリケーション (コンソール アプリケーションではなく) を作成するためにアプリケーション設定を変更する、Win32 プロジェクトを作成します。
 
-1. [リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)をダブルクリックして、 *.rc*ファイル。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)をダブルクリックして、 *.rc*ファイル。
 
 1. ダイアログ オプションで、をダブルクリック、**について**ボックス。
 
