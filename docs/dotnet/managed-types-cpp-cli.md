@@ -17,12 +17,12 @@ helpviewer_keywords:
 - exceptions, diagnosing odd behavior
 - compatibility, between assemblies
 ms.assetid: 679b8ed3-d966-4a0c-b627-2a3f3ec96b74
-ms.openlocfilehash: c61f3fdd434a1b746c024b1a98d1d71f04df7e5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b91918d526d83d4cf47436d02b7c67038576bafb
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746918"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356180"
 ---
 # <a name="managed-types-ccli"></a>マネージド型 (C++/CLI)
 
@@ -46,19 +46,21 @@ int main(int, char*[], char*[]) {}
 
 |C++ のビジュアルの種類|.NET Framework 型|
 |-----------------------|-------------------------|
-|**bool**|**System.Boolean**|
-|**char を署名**(を参照してください[/J](../build/reference/j-default-char-type-is-unsigned.md)詳細)|**System.SByte**|
-|**unsigned char**|**System.Byte**|
-|**wchar_t**|**System.Char**|
-|**二重**と**long double**|**System.Double**|
-|**float**|**System.Single**|
-|**int**、 **int を署名**、**長い**、および**時間の長い署名**|**System.Int32**|
-|**符号なし int**と**unsigned long**|**System.UInt32**|
-|**_ _int64**と **_ _int64 の署名**|**System.Int64**|
-|**unsigned __int64**|**System.UInt64**|
-|**短い**と**つまり署名**|**System.Int16**|
-|**unsigned short**|**System.UInt16**|
-|**void**|**System.Void**|
+|**void**|<xref:System.Void?displayProperty=nameWithType>|
+|**bool**|<xref:System.Boolean?displayProperty=nameWithType>|
+|**signed char** |<xref:System.SByte?displayProperty=nameWithType>|
+|**unsigned char**|<xref:System.Byte?displayProperty=nameWithType>|
+|**wchar_t**|<xref:System.Char?displayProperty=nameWithType>|
+|**短い**と**つまり署名**|<xref:System.Int16?displayProperty=nameWithType>|
+|**unsigned short**|<xref:System.UInt16?displayProperty=nameWithType>|
+|**int**、 **int を署名**、**長い**、および**時間の長い署名**|<xref:System.Int32?displayProperty=nameWithType>|
+|**符号なし int**と**unsigned long**|<xref:System.UInt32?displayProperty=nameWithType>|
+|**_ _int64**と **_ _int64 の署名**|<xref:System.Int64?displayProperty=nameWithType>|
+|**unsigned __int64**|<xref:System.UInt64?displayProperty=nameWithType>|
+|**float**|<xref:System.Single?displayProperty=nameWithType>|
+|**二重**と**long double**|<xref:System.Double?displayProperty=nameWithType>|
+
+既定の符号付きまたは符号なしにするコンパイラ オプションの詳細については**char**を参照してください[/J (既定の char 型は符号付き)](../build/reference/j-default-char-type-is-unsigned.md)します。
 
 ## <a name="version_issues"></a> ネイティブ型に入れ子になった値の型のバージョンの問題
 

@@ -1,21 +1,21 @@
 ---
-title: /CETCOMPAT (制御フローの強制テクノロジ互換)
+title: /CETCOMPAT (CET シャドウ スタック互換)
 ms.date: 02/19/2019
 f1_keywords:
 - /CETCOMPAT
 helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
-ms.openlocfilehash: 1a01dd45667f64dbcbe11acaf1180835bd0d6e31
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809848"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356016"
 ---
-# <a name="cetcompat-control-flow-enforcement-technology-compatible"></a>/CETCOMPAT (制御フローの強制テクノロジ互換)
+# <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (CET シャドウ スタック互換)
 
-制御フローの適用テクノロジ (CET) と互換性のある実行可能ファイルの画像をマークするかどうかを指定します。
+制御フローの適用テクノロジ (CET) シャドウ スタックに互換性がある実行可能イメージをマークするかどうかを指定します。
 
 ## <a name="syntax"></a>構文
 
@@ -24,13 +24,13 @@ ms.locfileid: "57809848"
 ## <a name="arguments"></a>引数
 
 **違います**<br/>
-実行可能ファイル マークしないで中央ヨーロッパ標準時との互換性を指定します。
+実行可能ファイル マークしないで CET シャドウ スタックとの互換性を指定します。
 
 ## <a name="remarks"></a>Remarks
 
-制御フローの適用テクノロジ (CET) は、特定の種類のマルウェアによる攻撃を防御する機能を提供するコンピューターのプロセッサ機能です。 詳細については、次を参照してください。 [Intel 制御フローの適用テクノロジ プレビュー](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)します。
+制御フローの適用テクノロジ (CET) シャドウ スタックは、戻り指向プログラミング (ROP) に対する防御機能ベースのマルウェアの攻撃を提供するコンピューターのプロセッサ機能です。 詳細については、次を参照してください。 [Intel 制御フローの適用テクノロジ プレビュー](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)します。
 
-**/CETCOMPAT**リンカー オプション、リンカーは中央ヨーロッパ標準時と互換性のあるとしてバイナリをマークします。 **/CETCOMPAT:NO**として CET と互換性のないバイナリをマークします。 両方のオプションをコマンドラインで指定する場合は、指定された最後の 1 つが使用されます。 このスイッチは、現在 x86 および x64 アーキテクチャに適用できるのみです。
+**/CETCOMPAT**リンカー オプションとして CET シャドウ スタックと互換性のあるバイナリをマークするリンカーに指示します。 **/CETCOMPAT:NO**として CET シャドウ スタックと互換性のないバイナリをマークします。 両方のオプションをコマンドラインで指定する場合は、指定された最後の 1 つが使用されます。 このスイッチは、現在 x86 および x64 アーキテクチャに適用できるのみです。
 
 **/CETCOMPAT**オプションは、以降、Visual Studio 2019 の Preview 3 のツールセットで使用できます。
 
