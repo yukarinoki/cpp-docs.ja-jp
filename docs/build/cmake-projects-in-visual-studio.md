@@ -4,12 +4,12 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: b055a1e3ca1d43cc0a1633401c1a08a3d54c1a31
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278451"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356142"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio の CMake プロジェクト
 
@@ -17,7 +17,7 @@ CMake は、複数のプラットフォームで動作するビルド プロセ�
 
 Visual Studio 2015 では、Visual Studio のユーザーは [CMake ジェネレーター](https://cmake.org/cmake/help/latest/manual/cmake-generators.7.html)を使って MSBuild プロジェクト ファイルを生成し、IDE はそのファイルを IntelliSense、参照、およびコンパイルに使っていました。
 
-Visual Studio 2017 では、[クロスプラット フォーム CMake プロジェクト](../linux/cmake-linux-project.md)など、CMake の豊富なサポートが導入されています。 **CMake の Visual C++ ツール** コンポーネントでは、**フォルダーを開く**機能を使用して、IntelliSense および参照の目的で、IDE が CMake プロジェクト ファイル (CMakeLists.txt など) を直接使用できるようにします。 Ninja と Visual Studio ジェネレーターはどちらもサポートされています。 Visual Studio ジェネレーターを使用した場合は、一時プロジェクト ファイルが生成されて msbuild.exe に渡されますが、IntelliSense または参照のために読み込まれることはありません。 既存の CMake キャッシュをインポートできます。Visual Studio はカスタマイズされた変数を自動的に抽出し、事前設定済みの `CMakeSettings.json` ファイルを作成します。 
+Visual Studio 2017 では、[クロスプラット フォーム CMake プロジェクト](../linux/cmake-linux-project.md)など、CMake の豊富なサポートが導入されています。 **CMake の Visual C++ ツール** コンポーネントでは、**フォルダーを開く**機能を使用して、IntelliSense および参照の目的で、IDE が CMake プロジェクト ファイル (CMakeLists.txt など) を直接使用できるようにします。 Ninja と Visual Studio ジェネレーターはどちらもサポートされています。 Visual Studio ジェネレーターを使用した場合は、一時プロジェクト ファイルが生成されて msbuild.exe に渡されますが、IntelliSense または参照のために読み込まれることはありません。 既存の CMake キャッシュ; をインポートすることができます。Visual Studio は自動的にカスタマイズされた変数を抽出し、あらかじめ設定されている作成**CMakeSettings.json**ファイル。 
 
 ## <a name="installation"></a>インストール
 
@@ -47,18 +47,18 @@ Visual Studio 2017 では、[クロスプラット フォーム CMake プロジ�
 
 ![CMake ターゲット ビュー ボタン](media/cmake-targets-view.png)
 
-Visual Studio は `CMakeSettings.json` という名前のファイルを使用して、環境変数または Cmake.exe のコマンド ライン オプションを格納します。 `CMakeSettings.json` を使用すると、複数の CMake ビルド構成を定義して格納し、IDE 内でそれらを簡単に切り替えることもできます。 
+Visual Studio がという名前のファイルを使用して**CMakeSettings.json**環境変数または Cmake.exe のコマンド ライン オプションを格納します。 **CMakeSettings.json**こともできますを定義し、複数の CMake を格納する構成をビルドし、簡単に切り替える IDE でします。 
 
-それ以外の場合は、CMake プロジェクトと同じように `CMakeLists.txt` を使用してソース ファイルを指定し、ライブラリを見つけ、コンパイラとリンカーのオプションを設定し、その他のビルド システムの関連情報を指定します。
+それ以外の場合、使用、 **CMakeLists.txt**するはソース ファイルを指定する、ライブラリを見つけ、コンパイラとリンカーのオプションを設定およびその他のビルド システムを指定する任意の CMake プロジェクトに関連する情報と同様です。
 
-デバッグ時に実行可能ファイルに引数を渡す必要がある場合は、`launch.vs.json` と呼ばれる別のファイルを使用することができます。 一部のシナリオでは、Visual Studio でこれらのファイルが自動的に生成され、それを手動で編集することができます。 自分でファイルを作成することもできます。
+デバッグ時に実行可能ファイルに引数を渡す必要がある場合と呼ばれる別のファイルを使用することができます**launch.vs.json**します。 一部のシナリオでは、Visual Studio でこれらのファイルが自動的に生成され、それを手動で編集することができます。 自分でファイルを作成することもできます。
 
 > [!NOTE]
-> 他の種類の "フォルダーを開く" プロジェクトには、`CppProperties.json` と `tasks.vs.json` の 2 つの JSON ファイルが使用されます。 これらはいずれも CMake プロジェクトには関連していません。
+> その他の種類のフォルダーを開くプロジェクトでは、追加の 2 つの JSON ファイルが使用されます。**CppProperties.json**と**tasks.vs.json**します。 これらはいずれも CMake プロジェクトには関連していません。
 
 ## <a name="import-an-existing-cache"></a>既存のキャッシュをインポートする
 
-ユーザーが既存の CMakeCache.txt ファイルをインポートすると、Visual Studio はカスタマイズされた変数を自動的に抽出し、それを基にして事前設定済みの [ `CMakeSettings.json`](#cmake_settings) ファイルを作成します。 元のキャッシュには、どのような変更も加えられておらず、コマンド ラインから、またはキャッシュの生成に使われた任意のツールや IDE で、使用することができます。 新しい `CMakeSettings.json` ファイルは、プロジェクトのルートの CMakeLists.txt と共に配置されます。 Visual Studio は、設定ファイルに基づいて新しいキャッシュを生成します。 キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログでオーバーライドできます。
+Visual Studio が自動的にカスタマイズされた変数を抽出し、あらかじめ設定されている作成 CMakeCache.txt の既存のファイルをインポートするときに[ **CMakeSettings.json** ](#cmake_settings)ファイルがそれらに基づきます。 元のキャッシュには、どのような変更も加えられておらず、コマンド ラインから、またはキャッシュの生成に使われた任意のツールや IDE で、使用することができます。 新しい**CMakeSettings.json**と共にプロジェクトのルート CMakeLists.txt ファイルが配置されます。 Visual Studio は、設定ファイルに基づいて新しいキャッシュを生成します。 キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログでオーバーライドできます。
 
 キャッシュ内のすべてのものがインポートされるわけではありません。  ジェネレーターや、コンパイラの場所などのプロパティは、IDE で問題なく機能することがわかっている既定値に置き換えられます。
 
@@ -88,7 +88,7 @@ CMake プロジェクトをビルドするには、次の選択肢がありま�
 
 ![CMake のビルド メニュー コマンド](media/cmake-build-menu.png "CMake のビルド コマンド メニュー")
 
-`CMakeSettings.json` ファイルを使用すると、CMakeLists.txt ファイルを変更しなくても、ビルド構成、環境変数、コマンド ライン引数、およびその他の設定をカスタマイズすることができます。 詳細については、「[Customize CMake settings](customize-cmake-settings.md)」 (CMake 設定のカスタマイズ) を参照してください。
+使用して、CMakeLists.txt ファイルを変更することがなく、ビルド構成、環境変数、コマンドライン引数、およびその他の設定をカスタマイズすることができます、 **CMakeSettings.json**ファイル。 詳細については、「[Customize CMake settings](customize-cmake-settings.md)」 (CMake 設定のカスタマイズ) を参照してください。
 
 想像したとおり、ビルド結果が**出力ウィンドウ**と**エラー一覧**に表示されます。
 
@@ -104,7 +104,7 @@ CMake プロジェクトをデバッグするには、対象の構成を選ん�
 
 **[実行]** または **F5** コマンドを選ぶと、前回のビルドの後で何かが変更されている場合は、最初にプロジェクトがビルドされます。
 
-`launch.vs.json` ファイルでプロパティを設定することで、CMake デバッグ セッションをカスタマイズすることができます。 詳細については、[CMake デバッグ セッションの構成](configure-cmake-debugging-sessions.md)に関するページを参照してください。
+プロパティを設定してデバッグ セッションの CMake をカスタマイズすることができます、 **launch.vs.json**ファイル。 詳細については、[CMake デバッグ セッションの構成](configure-cmake-debugging-sessions.md)に関するページを参照してください。
 
 
 ## <a name="editing-cmakeliststxt-files"></a>CMakeLists.txt ファイルの編集
@@ -120,13 +120,13 @@ CMakeLists.txt ファイルを編集するには、**ソリューション エ�
 
 ## <a name="cmake-configure-step"></a>CMake の構成ステップ
 
-`CMakeSettings.json` ファイルまたは CMakeLists.txt ファイルが大幅に変更されると、Visual Studio は CMake の構成ステップを自動的に再実行します。 構成ステップがエラーなしで完了すると、収集された情報が、C++ の IntelliSense サービスと言語サービス、およびビルドとデバッグの操作で使用できるようになります。
+大幅な変更が行われたときに、 **CMakeSettings.json** CMakeLists.txt ファイルは、Visual Studio に自動的に再実行、CMake またはステップを構成します。 構成ステップがエラーなしで完了すると、収集された情報が、C++ の IntelliSense サービスと言語サービス、およびビルドとデバッグの操作で使用できるようになります。
 
 複数の CMake プロジェクトが同じ CMake 構成名 (x86-Debug など) を使っている場合、その構成を選ぶと、すべてのプロジェクトが構成されて (それぞれのビルド ルート フォルダーに) ビルドされます。 その CMake 構成に参加しているすべての CMake プロジェクトから、ターゲットをデバッグすることができます。
 
    ![CMake の [ビルドのみ] メニュー項目](media/cmake-build-only.png "CMake の [ビルドのみ] メニュー項目")
 
-ビルドおよびデバッグ セッションをワークスペース内のプロジェクトのサブセットに制限するには、`CMakeSettings.json` ファイルに一意名を使って新しい構成を作成し、それらのプロジェクトのみに適用します。 その構成を選ぶと、IntelliSense およびビルドとデバッグのコマンドは、指定されているプロジェクトに対してのみ有効になります。
+ビルドを制限して、ワークスペース内のプロジェクトのサブセットにセッションのデバッグをする一意の名前で新しい構成を作成、 **CMakeSettings.json**ファイルし、それらのプロジェクトのみに適用します。 その構成を選ぶと、IntelliSense およびビルドとデバッグのコマンドは、指定されているプロジェクトに対してのみ有効になります。
 
 ## <a name="troubleshooting-cmake-cache-errors"></a>CMake キャッシュ エラーのトラブルシューティング
 

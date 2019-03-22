@@ -1,12 +1,12 @@
 ---
 title: ARM64 ABI 規則の概要
-ms.date: 07/11/2018
-ms.openlocfilehash: 537f8cf5bb8db61854bea7f4624e3dd3176c6a59
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.date: 03/22/2019
+ms.openlocfilehash: 5dddc26285606b771a3939be19dff5b9ad53f3c7
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816543"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356193"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 規則の概要
 
@@ -191,7 +191,7 @@ X0 では、整数値が返されます。 必要に応じて s0、d0/v0 では�
 
 次の ARM によって定め ABI、スタックは、特定でアライン 16 バイトを維持する必要があります。 AArch64 には、SP 相対読み込みまたは格納は、SP に 16 バイトではないときにエラーが揃えスタック配置を生成するハードウェアの機能が含まれています。 Windows は、常に有効になっているこの機能を実行します。
 
-関数 4 k またはスタックの価値が複数の割り当てをする必要があります前の最後のページが順番に接して、コードを確認しないことができます"leap 経由で"Windows を使用して、スタックを展開するガード ページのことを確認します。 通常これは、`__chkstk`ヘルパーで、スタック割り当ての合計で 16 x8 で割った値を渡すカスタム呼び出し規約。
+関数 4 k またはスタックの価値が複数の割り当てをする必要があります前の最後のページが順番に接して、コードを確認しないことができます"leap 経由で"Windows を使用して、スタックを展開するガード ページのことを確認します。 通常これは、`__chkstk`ヘルパーで、スタックの総割り当て x15 で 16 で割った値を渡すカスタム呼び出し規約。
 
 ## <a name="red-zone"></a>赤のゾーン
 

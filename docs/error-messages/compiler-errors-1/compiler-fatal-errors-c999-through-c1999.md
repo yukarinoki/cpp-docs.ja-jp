@@ -52,12 +52,12 @@ helpviewer_keywords:
 - C1505
 - C1901
 ms.assetid: 6c8df109-7594-48ed-987a-97d9fe2b04af
-ms.openlocfilehash: 6809ef1640c324e247bd20c83d4622fe27987ae6
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 17c456f6ab248964cbd19cd9695da290254ccf1b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328247"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356219"
 ---
 # <a name="compiler-fatal-errors-c999-through-c1999"></a>コンパイラ エラー (致命的なエラー) C999 から C1999
 
@@ -70,7 +70,7 @@ ms.locfileid: "58328247"
 |Error|メッセージ|
 |-----------|-------------|
 |[致命的なエラー C999](../../error-messages/compiler-errors-1/fatal-error-c999.md)|不明なメッセージ: 詳細については、Visual C++ ヘルプ メニューのサポート情報コマンドを選択してください。またはサポート情報ヘルプ ファイルを参照してください。|
-|[致命的なエラー C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|コンパイラで内部エラーが発生しました。<br /><br /> (コンパイラ ファイル '*file*'、行 *number*)<br /><br /> この問題を回避するには、上記の場所付近のプログラムを単純化するか変更してください。 詳細については、Visual C++ ヘルプ メニューのサポート情報コマンドを選択してください。またはサポート情報ヘルプ ファイルを参照してください。|
+|[致命的なエラー C1001](../../error-messages/compiler-errors-1/fatal-error-c1001.md)|コンパイラで内部エラーが発生しました。<br /> (コンパイラ ファイル '*file*'、行 *number*)<br /> この問題を回避するには、上記の場所付近のプログラムを単純化するか変更してください。 詳細については、Visual C++ ヘルプ メニューのサポート情報コマンドを選択してください。またはサポート情報ヘルプ ファイルを参照してください。|
 |[致命的なエラー C1002](../../error-messages/compiler-errors-1/fatal-error-c1002.md)|パス 2 の実行中に、ヒープ領域を使い果たしました。|
 |[致命的なエラー C1003](../../error-messages/compiler-errors-1/fatal-error-c1003.md)|プログラム内のエラーが *number*個を超えました。コンパイルは中断されます。|
 |[致命的なエラー C1004](../../error-messages/compiler-errors-1/fatal-error-c1004.md)|予期せぬ EOF が検出されました。|
@@ -78,7 +78,7 @@ ms.locfileid: "58328247"
 |[致命的なエラー C1007](../../error-messages/compiler-errors-1/fatal-error-c1007.md)|'*string*' (オプション '*option*' 中) は認識できません。|
 |[致命的なエラー C1008](../../error-messages/compiler-errors-1/fatal-error-c1008.md)|入力ファイルが指定されていません。|
 |[致命的なエラー C1009](../../error-messages/compiler-errors-1/fatal-error-c1009.md)|コンパイラの制限: マクロの入れ子のレベルが深すぎます。|
-|[致命的なエラー C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。 追加を忘れました ' #include <*ファイル*>'、ソースにでしょうか。|
+|[致命的なエラー C1010](../../error-messages/compiler-errors-1/fatal-error-c1010.md)|プリコンパイル ヘッダーを検索中に不明な EOF が見つかりました。 追加を忘れました ' #include \<*ファイル*>'、ソースにでしょうか。|
 |[致命的なエラー C1012](fatal-error-c1012.md)|かっこが一致していません。'*character*' がありません。|
 |[致命的なエラー C1013](fatal-error-c1013.md)|コンパイラの制限: 始めかっこが多すぎます。|
 |[致命的なエラー C1014](fatal-error-c1014.md)|インクルード ファイルが多すぎます: 深さ = *number*|

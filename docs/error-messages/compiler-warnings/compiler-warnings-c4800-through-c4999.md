@@ -153,12 +153,12 @@ helpviewer_keywords:
 - C5105
 - C5106
 - C5107
-ms.openlocfilehash: 101181e72aaf30ca8bc1d0e4191649fcc4155a64
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 46bb439b490295b7f3279f06421d3fd6b8d6ba8b
+ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328344"
+ms.lasthandoff: 03/22/2019
+ms.locfileid: "58356258"
 ---
 # <a name="compiler-warnings-c4800-through-c5999"></a>コンパイラの警告 C4800 C5999 経由
 
@@ -169,7 +169,7 @@ ms.locfileid: "58328344"
 ## <a name="warning-messages"></a>警告メッセージ
 
 |警告|メッセージ|
-|-------------|-------------|
+|-------------|------------|
 |[コンパイラの警告 (レベル 4) C4800](compiler-warning-level-3-c4800.md)| 暗黙的な変換 '*型*' bool にします。 可能な情報の損失 |
 |[コンパイラの警告 (レベル 1) C4803](compiler-warning-level-1-c4803.md)|'*メソッド*': raise メソッドが、イベントと異なるストレージ クラス'*イベント*'|
 |[コンパイラの警告 (レベル 1) C4804](compiler-warning-level-1-c4804.md)|'*操作*': 操作では、' bool' 型の安全でない使用|
