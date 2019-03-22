@@ -23,12 +23,12 @@ helpviewer_keywords:
 - GetFileVersionInfo
 - version information
 ms.assetid: 772e6f19-f765-4cec-9521-0ad3eeb99f9b
-ms.openlocfilehash: 8382371acfd423f8c6864e816b0357e3ef11718e
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 7cfb2b5426a65298c01c61541020a0f30b673f9c
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210979"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328819"
 ---
 # <a name="version-information-editor-c"></a>バージョン情報エディター (C++)
 
@@ -60,7 +60,7 @@ ms.locfileid: "57210979"
 
 ### <a name="to-add-version-information-for-another-language-new-version-info-block"></a>(新しいバージョン情報ブロック) の別の言語のバージョン情報を追加するには
 
-1. [[リソース ビュー]](../windows/resource-view-window.md)でバージョン情報リソースをダブルクリックして開きます。
+1. [[リソース ビュー]](how-to-create-a-resource-script-file.md#create-resources)でバージョン情報リソースをダブルクリックして開きます。
 
 1. バージョン情報テーブル内で右クリックし、**バージョン情報ブロックの新しい**します。
 
@@ -70,7 +70,7 @@ ms.locfileid: "57210979"
 
 ### <a name="to-delete-a-version-information-block"></a>バージョン情報ブロックを削除するには
 
-1. [[リソース ビュー]](../windows/resource-view-window.md)でバージョン情報リソースのアイコンをダブルクリックして開きます。
+1. [[リソース ビュー]](how-to-create-a-resource-script-file.md#create-resources)でバージョン情報リソースのアイコンをダブルクリックして開きます。
 
 1. 削除するブロック ヘッダーを右クリックして**バージョン情報ブロックの削除**します。
 

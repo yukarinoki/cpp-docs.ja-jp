@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CDatabase [MFC], SetQueryTimeout
 - CDatabase [MFC], m_hdbc
 ms.assetid: bd0de70a-e3c3-4441-bcaa-bbf434426ca8
-ms.openlocfilehash: 0e523b2a145254cd9b7adf2b066605a679349f6c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebc36d82af9bfe12ab30a86214e58610b5eaab95
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273449"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58329001"
 ---
 # <a name="cdatabase-class"></a>CDatabase クラス
 
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Remarks
 
-MFC ODBC クラスは、非同期処理を不要になった使用に注意してください。非同期操作を実行する ODBC API 関数を直接に呼び出す必要があります[SQLSetConnectOption](/previous-versions/windows/desktop/ms713564)します。 詳細については、次を参照してください。[非同期実行](/previous-versions/windows/desktop/ms713563)Windows SDK に含まれています。
+MFC ODBC クラスは、非同期処理を不要になった使用に注意してください。非同期操作を実行する ODBC API 関数を直接に呼び出す必要があります[SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function)します。 詳細については、次を参照してください。[非同期実行](/sql/odbc/reference/develop-app/asynchronous-execution)します。
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 
@@ -327,9 +327,11 @@ DWORD GetBookmarkPersistence() const;
 
 ### <a name="remarks"></a>Remarks
 
-たとえば、`CRecordset::GetBookmark` を呼び出してから `CRecordset::Requery` を呼び出した場合、`GetBookmark` から取得されたブックマークは有効ではなくなっている場合があります。 `GetBookmarkPersistence` を呼び出してから `CRecordset::SetBookmark` を呼び出す必要があります。
+たとえば、`CRecordset::GetBookmark` を呼び出してから `CRecordset::Requery` を呼び出した場合、`GetBookmark` から取得されたブックマークは有効ではなくなっている場合があります。 
+  `GetBookmarkPersistence` を呼び出してから `CRecordset::SetBookmark` を呼び出す必要があります。
 
-`GetBookmarkPersistence` の戻り値として組み合わせることができるビットマスク値の一覧を次の表に示します。
+
+  `GetBookmarkPersistence` の戻り値として組み合わせることができるビットマスク値の一覧を次の表に示します。
 
 |ビットマスク値|ブックマークの永続性|
 |-------------------|--------------------------|

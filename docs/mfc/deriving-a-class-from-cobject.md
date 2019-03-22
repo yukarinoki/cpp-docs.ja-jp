@@ -13,12 +13,12 @@ helpviewer_keywords:
 - CObject class [MFC], deriving serializable classes
 - CObject class [MFC], deriving from
 ms.assetid: 5ea4ea41-08b5-4bd8-b247-c5de8c152a27
-ms.openlocfilehash: e2c759dfd308beed0f04b8d8c2868abeeb1cfb45
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 26fdab5165ca098c5d7813ebf44983c261094449
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301247"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328442"
 ---
 # <a name="deriving-a-class-from-cobject"></a>CObject からのクラスの派生
 
@@ -59,7 +59,7 @@ ms.locfileid: "57301247"
 
    [!code-cpp[NVC_MFCCObjectSample#1](../mfc/codesnippet/cpp/deriving-a-class-from-cobject_1.h)]
 
-通常、ただし、場合の一部をオーバーライドする`CObject`の新しいクラスの詳細を処理するメンバー関数。 オーバーライドする可能性があります通常など、`Dump`関数の`CObject`クラスの内容をデバッグ出力を提供します。 オーバーライドする方法の詳細について`Dump`、記事をご覧ください[診断。オブジェクトの内容をダンプ](/previous-versions/visualstudio/visual-studio-2010/sc15kz85)します。 オーバーライドすることも、`AssertValid`関数の`CObject`クラス オブジェクトのデータ メンバーの一貫性を検証するカスタマイズされたテストを提供します。 オーバーライドする方法の説明の`AssertValid`を参照してください[MFC ASSERT_VALID と cobject::assertvalid](/previous-versions/visualstudio/visual-studio-2010/38z04tfa)します。
+通常、ただし、場合の一部をオーバーライドする`CObject`の新しいクラスの詳細を処理するメンバー関数。 オーバーライドする可能性があります通常など、`Dump`関数の`CObject`クラスの内容をデバッグ出力を提供します。 オーバーライドする方法の詳細について`Dump`、記事をご覧ください[オブジェクト ダンプのカスタマイズ](/previous-versions/visualstudio/visual-studio-2010/sc15kz85(v=vs.100))します。 オーバーライドすることも、`AssertValid`関数の`CObject`クラス オブジェクトのデータ メンバーの一貫性を検証するカスタマイズされたテストを提供します。 オーバーライドする方法の説明の`AssertValid`を参照してください[MFC ASSERT_VALID と cobject::assertvalid](reference/diagnostic-services.md#assert_valid)します。
 
 この記事[機能のレベルを指定する](../mfc/specifying-levels-of-functionality.md)ランタイム クラス情報、動的オブジェクトの作成、およびシリアル化など、機能の他のレベルを指定する方法について説明します。
 

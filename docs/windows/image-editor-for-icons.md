@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 73fd4a8996bcfbaaf6fdd4018e524b66913d11cd
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563083"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328429"
 ---
 # <a name="image-editor-for-icons-c"></a>(C++) のアイコン用イメージ エディター
 
@@ -60,7 +60,7 @@ ms.locfileid: "57563083"
 
 使用することも、**イメージ エディター**と[バイナリ エディター](binary-editor.md)マネージ プロジェクトのリソース ファイルを使用します。 編集の対象となるマネージド リソースは、リンク リソースである必要があります。 Visual Studio のリソース エディターでは、埋め込みリソースの編集をサポートされていません。
 
-新しいグラフィカルのリソースを作成するだけでなくすることができます[既存イメージをインポート](/windows/how-to-copy-resources#import-and-export-resources)を編集するため、プロジェクトに追加しています。 開いて編集するためのプロジェクトの一部ではないイメージ[スタンドアロン画像編集](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)します。
+新しいグラフィカルのリソースを作成するだけでなくすることができます[既存イメージをインポート](../windows/how-to-copy-resources.md#import-and-export-resources)を編集するため、プロジェクトに追加しています。 開いて編集するためのプロジェクトの一部ではないイメージ[スタンドアロン画像編集](../windows/editing-an-image-outside-of-a-project-image-editor-for-icons.md)します。
 
 については、**イメージ エディター**を参照してください方法[アイコンやその他のイメージの作成](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)、 [、イメージ編集](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)、[描画ツールを使用して](../windows/using-a-drawing-tool-image-editor-for-icons.md)、 [色の調整](../windows/working-with-color-image-editor-for-icons.md)、および[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)します。
 
@@ -151,7 +151,7 @@ ms.locfileid: "57563083"
 
 Windows アプリケーションのアイコンにテキストを追加し、テキストのフォントを操作する方法の例を次に示します。
 
-1. C++ Windows フォーム アプリケーションを作成します。 詳細については、次を参照してください。 [Windows アプリケーション プロジェクトを作成する](/previous-versions/visualstudio/visual-studio-2010/42wc9kk5)します。 *App.ico*ファイルは、既定では、プロジェクトに追加されます。
+1. C++ Windows フォーム アプリケーションを作成します。 詳細については、「[方法: Windows フォーム アプリケーションを作成](/previous-versions/visualstudio/visual-studio-2008/s69bf10x(v%3dvs.90))です。 *App.ico*ファイルは、既定では、プロジェクトに追加されます。
 
 1. **ソリューション エクスプ ローラー**、ファイルをダブルクリックして*app.ico*します。 **イメージ エディター**が開きます。
 

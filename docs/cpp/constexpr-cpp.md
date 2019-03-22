@@ -4,34 +4,32 @@ ms.date: 04/06/2018
 f1_keywords:
 - constexpr_cpp
 ms.assetid: c6458ccb-51c6-4a16-aa61-f69e6f4e04f7
-ms.openlocfilehash: afe883bf74ae2d6115dc7bdcd92d09616dde0ae6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3ab3b75589864c95cb345be57db39c028a02f8db
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50605739"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328676"
 ---
 # <a name="constexpr-c"></a>constexpr (C++)
 
-キーワード**constexpr** c++ 11 で導入され、c++ 14 で改良されました。 意味*定数式*します。 ような**const**値を変更しようとしているすべてのコードと、コンパイラ エラーが発生するためには、変数に適用することができます。 異なり**const**、 **constexpr**関数に適用することもでき、クラスのコンス トラクター。 **constexpr**ことを示します値、または戻り値は、定数、可能であれば、コンパイル時に計算されます。
+キーワード**constexpr** c++ 11 で導入され、c++ 14 で改良されました。 意味*定数式*します。 ような**const**、任意のコードは、値を変更しようとすると、コンパイラ エラーが発生するようにには、変数に適用することができます。 異なり**const**、 **constexpr**関数に適用することもでき、クラスのコンス トラクター。 **constexpr**ことを示します値、または戻り値は、定数、可能であれば、コンパイル時に計算されます。
 
 A **constexpr** const の整数がテンプレート引数や配列の宣言など、必要な整数値を使用できます。 値は、実行時ではなくコンパイル時に計算することができます、ときに実行速度が向上しより少ないメモリを使用して、プログラムに役立ちます。
 
-定数式に含まれる型に制限することが標準の c++ 14 コンピューティングのコンパイル時定数の複雑さと、コンパイル時の潜在的な影響を制限するため必要[リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)します。
+標準の c++ 14 の複雑さ、コンパイル時定数演算とコンパイル時の潜在的な影響を制限するにはある定数式で型が必要です[リテラル型](trivial-standard-layout-and-pod-types.md#literal_types)します。
 
 ## <a name="syntax"></a>構文
 
-```
-constexpr  literal-type  identifier = constant-expression;
-constexpr  literal-type  identifier { constant-expression };
-constexpr literal-type identifier(params );
-constexpr ctor (params);
-```
+> **constexpr** *リテラル型**識別子* ** = ** *定数式* **;**
+>  **constexpr** *リテラル型**識別子* **{** *定数式* **}** **;**
+>  **constexpr** *リテラル型**識別子* **(** *params***)** **;**
+>  **constexpr** *ctor* **(** *params* **)** **;**
 
 ## <a name="parameters"></a>パラメーター
 
 *params*<br/>
-リテラル型である必要がありますし、それ自体をする必要があります、1 つまたは複数のパラメーターには、定数式があります。
+1 つまたは複数のパラメーター、リテラル型である必要があり、自体をする必要がありますのでは、定数式にします。
 
 ## <a name="return-value"></a>戻り値
 
@@ -39,7 +37,7 @@ Constexpr 変数または関数が返す必要があります、[リテラル型
 
 ## <a name="constexpr-variables"></a>constexpr 変数
 
-const 変数と constexpr 変数の主な違いとして、const 変数の初期化は実行時まで遅延できるのに対し、constexpr 変数はコンパイル時に初期化する必要があります。  すべての constexpr 変数は、const です。
+Const 変数と constexpr 変数の主な違いは、const 変数の初期化を実行時まで延期できます。 Constexpr 変数は、コンパイル時に初期化する必要があります。  すべての constexpr 変数は、const です。
 
 - 変数を宣言することができます**constexpr**、リテラルの型と初期化されます。 コンス トラクターによって初期化が実行される場合、コンス トラクターとして宣言する必要があります**constexpr**します。
 
@@ -58,7 +56,7 @@ constexpr int k = j + 1; //Error! j not a constant expression
 
 ## <a name="constexpr_functions"></a> constexpr 関数
 
-A **constexpr**関数は、1 つの要求コードを実行されたときにコンパイル時の戻り値を計算することができます。  ときに、引数が**constexpr**値、および使用側コードを初期化する例については、コンパイル時に、戻り値が必要です、 **constexpr**変数を非型テンプレート引数を指定または、コンパイル時定数を生成します。 以外で呼び出されたときに**constexpr**引数で正規関数のように実行時に値を生成、その値がコンパイル時に必要な場合は、または。  (この 2 重の動作と記述する手間が省けます**constexpr**と非-**constexpr**同じ関数のバージョン)。
+A **constexpr**関数は、いずれかのコードを必要な場合、コンパイル時に戻り値を計算することができます。 コードを実行が必要です、戻り値、コンパイル時に、初期化するために、 **constexpr**変数または非型テンプレート引数を指定します。 ときに、引数が**constexpr**値、 **constexpr**関数がコンパイル時定数が生成されます。 以外で呼び出されたときに**constexpr**引数、またはその値がコンパイル時に必要な場合は、正規関数のように実行時に値を生成します。 (この 2 重の動作と記述する手間が省けます**constexpr**と非-**constexpr**同じ関数のバージョン)。
 
 A **constexpr**関数またはコンス トラクターは暗黙的に**インライン**します。
 
@@ -68,7 +66,7 @@ Constexpr 関数に次の規則が適用されます。
 
 - A **constexpr**関数が再帰的なをすることができます。
 
-- できません[仮想](../cpp/virtual-cpp.md)します。 場合は、外側のクラスがある仮想基底クラス コンス トラクターは constexpr として定義できません。
+- できません[仮想](../cpp/virtual-cpp.md)します。 場合は、外側のクラスがある仮想基底クラス、コンス トラクターは constexpr として定義できません。
 
 - 本体は `= default` または `= delete` として定義できます。
 
@@ -96,15 +94,15 @@ constexpr float exp(float x, int n)
 ```
 
 > [!TIP]
-> 注: Visual Studio デバッガーで、ビルドをデバッグする非最適化をデバッグするを区別するかどうかを**constexpr**関数は、内部にブレークポイントを設定することによってコンパイル時に評価されるは。 ブレークポイントにヒットすると、実行時に関数が呼び出されます。  ヒットしなければ、コンパイル時に関数が呼び出されます。
+> Visual Studio デバッガーでデバッグ最適化されていないデバッグ ビルドをした区別するかどうかを**constexpr**関数は、内部にブレークポイントを設定することによってコンパイル時に評価されるは。 ブレークポイントにヒットすると、実行時に関数が呼び出されます。  ヒットしなければ、コンパイル時に関数が呼び出されます。
 
 ## <a name="extern-constexpr"></a>extern constexpr
 
-[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)コンパイラ オプションは、適用するコンパイラ[外部リンケージ]()を使用して宣言された変数に**extern constexpr**します。 以前のバージョンの Visual Studio で、既定の場合、または **/Zc:externConstexpr-** を指定すると、Visual Studio に内部リンケージを適用する**constexpr**変数場合でも、 **extern**キーワードを使用します。 **/Zc: externconstexpr**オプションは、Visual Studio 2017 Update 15.6 以降を使用します。 既定で無効であるとします。 促す/permissive-オプションには、/zc: externconstexpr が有効にしません。
+[/Zc: externconstexpr](../build/reference/zc-externconstexpr.md)コンパイラ オプションは、適用するコンパイラ[外部リンケージ](../c-language/external-linkage.md)を使用して宣言された変数に**extern constexpr**します。 以前のバージョンの Visual Studio で、既定の場合、または **/Zc:externConstexpr-** を指定すると、Visual Studio に内部リンケージを適用する**constexpr**変数場合でも、 **extern**キーワードを使用します。 **/Zc: externconstexpr**オプションは、Visual Studio 2017 Update 15.6 以降を使用します。 既定で無効であるとします。 促す/permissive-オプションには、/zc: externconstexpr が有効にしません。
 
 ## <a name="example"></a>例
 
-次の例は**constexpr**変数、関数、およびユーザー定義の型。 なお、main() の最後のステートメントで、 **constexpr**値がコンパイル時に既知である必要はないために、メンバー関数 GetValue() は実行時の呼び出し。
+次の例は**constexpr**変数、関数、およびユーザー定義の型。 Main() の最後のステートメントで、 **constexpr**値がコンパイル時に既知である必要があるために、メンバー関数 GetValue() は実行時の呼び出し。
 
 ```cpp
 #include <iostream>
@@ -127,7 +125,7 @@ constexpr float exp2(const float& x, const int& n)
         exp2(x * x, (n - 1) / 2) * x;
 };
 
-// Compile time computation of array length
+// Compile-time computation of array length
 template<typename T, int N>
 constexpr int length(const T(&ary)[N])
 {
@@ -155,11 +153,11 @@ private:
 
 int main()
 {
-    //foo is const:
+    // foo is const:
     constexpr Foo foo(5);
     // foo = Foo(6); //Error!
 
-    //Compile time:
+    // Compile time:
     constexpr float x = exp(5, 3);
     constexpr float y { exp(2, 5) };
     constexpr int val = foo.GetValue();
@@ -167,7 +165,7 @@ int main()
     const int nums[] { 1, 2, 3, 4 };
     const int nums2[length(nums) * 2] { 1, 2, 3, 4, 5, 6, 7, 8 };
 
-    //Run time:
+    // Run time:
     cout << "The value of foo is " << foo.GetValue() << endl;
 
 }

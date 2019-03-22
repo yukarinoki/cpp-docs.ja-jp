@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 58d6fa5026395b4be6663ab253cf9ffdfea01788
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2de051b099da5f179a7634cddfb359d85f4b1f83
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50505041"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328793"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -38,16 +38,16 @@ ms.locfileid: "50505041"
 - DBPARAMIO_NOTPARAM アクセサーにパラメーターがありません。 設定`eParamIO`行では、この値にアクセサー ユーザーに通知するパラメーターは無視されます。
 
 *dbtype*<br/>
-(省略可能)OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251)列エントリにします。
+(省略可能)OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251(v=vs.85))列エントリにします。
 
 *precision*<br/>
-(省略可能)列のエントリに使用する有効桁数です。 詳細については、説明を参照してください`bPrecision`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845)
+(省略可能)列のエントリに使用する有効桁数です。 詳細については、説明を参照してください`bPrecision`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *スケール*<br/>
-(省略可能)列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845)
+(省略可能)列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *status*<br/>
-(省略可能)この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617)で、 *OLE DB プログラマーズ リファレンス*します。
+(省略可能)この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 *length*<br/>
 (省略可能)メンバー変数 (バイト単位)、列のサイズを保持するために使用します。

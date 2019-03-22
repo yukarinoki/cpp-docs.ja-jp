@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MFC ODBC Consumer Wizard
 - wizards [MFC]
 ms.assetid: f64a890b-a252-4887-88a1-782a7cd4ff3d
-ms.openlocfilehash: 75d62eb5ce3d24322d7af5030fb8d723ffa8fedb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b6009a1e6b6100eabaa2ed05404217c0d2906be0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259933"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328650"
 ---
 # <a name="mfc-odbc-consumer-wizard"></a>MFC ODBC コンシューマー ウィザード
 
@@ -25,13 +25,13 @@ ms.locfileid: "57259933"
 
 - **Data Source**
 
-  **データソース**ボタンを指定された ODBC ドライバーを使用して、指定されたデータ ソースを設定することができます。 データ ソース ファイル (DSN) の詳細については、次を参照してください。[ファイル データ ソース](/previous-versions/windows/desktop/ms715401)ODBC SDK に含まれています。
+  **データソース**ボタンを指定された ODBC ドライバーを使用して、指定されたデータ ソースを設定することができます。 データ ソース ファイル (DSN) の詳細については、次を参照してください。[ファイル データ ソース](/sql/odbc/reference/file-data-sources)ODBC SDK に含まれています。
 
   **データ ソースの選択**ダイアログ ボックスが 2 つのタブには。
 
   - **ファイル データ ソース** タブ。
 
-     **検索**ボックスは、データ ソースとして使用するファイルを選択するディレクトリを指定します。 既定では \Program Files\Common 場合です。 既存のファイル データ ソース (.dsn ファイル) は、メイン リスト ボックスに表示されます。 データのソースを使用して事前設定するか、**ファイル DSN**  タブで、 [ODBC データ ソース アドミニストレーター](/previous-versions/windows/desktop/ms714024)、またはこのダイアログ ボックスを使用して新規作成します。
+     **検索**ボックスは、データ ソースとして使用するファイルを選択するディレクトリを指定します。 既定では \Program Files\Common 場合です。 既存のファイル データ ソース (.dsn ファイル) は、メイン リスト ボックスに表示されます。 データのソースを使用して事前設定するか、**ファイル DSN**  タブで、 [ODBC データ ソース アドミニストレーター](/sql/odbc/admin/odbc-data-source-administrator)、またはこのダイアログ ボックスを使用して新規作成します。
 
      このダイアログ ボックスから新しいファイル データ ソースを作成するには、クリックして`New`; DSN 名を指定する、**データ ソースの新規作成** ダイアログ ボックスが表示されます。 **データ ソースの新規作成** ダイアログ ボックスで適切なドライバーを選択し、をクリックして`Next`; クリックして**参照**、(があるためにすべてのファイル を選択するデータ ソースとして使用するファイルの名前を選択します非 DSN ファイルの表示、.xls ファイルなど)。をクリックして`Next`、 をクリックし、**完了**します。 (非 DSN ファイルを選択すると、表示されます"ODBC Microsoft Excel Setup、"DSN にファイルを変換するなどのドライバー固有のダイアログ ボックス。)
 
@@ -40,13 +40,13 @@ ms.locfileid: "57259933"
 
      **DSN 名**ボックスでは、ファイルのデータ ソースの名前を指定することができます。 DSN 名を Excel ファイルを .xls または .mdb のファイルへのアクセスなど、適切なファイル拡張子で終わることを確認する必要があります。
 
-     Dsn の詳細については、次を参照してください。[ファイル データ ソース](/previous-versions/windows/desktop/ms715401)ODBC SDK に含まれています。
+     Dsn の詳細については、次を参照してください。[ファイル データ ソース](/sql/odbc/reference/file-data-sources)ODBC SDK に含まれています。
 
   - **データ ソースのマシン** タブ。
 
-     このタブには、システムおよびユーザー データ ソースが一覧表示されます。 ユーザー データ ソースでは、このコンピューター上のユーザーに固有です。 システム データ ソースは、このコンピューターまたはシステム全体のサービス上ですべてのユーザーが使用できます。 参照してください[データ ソースのマシン](/previous-versions/windows/desktop/ms710952)ODBC sdk
+     このタブには、システムおよびユーザー データ ソースが一覧表示されます。 ユーザー データ ソースでは、このコンピューター上のユーザーに固有です。 システム データ ソースは、このコンピューターまたはシステム全体のサービス上ですべてのユーザーが使用できます。 参照してください[データ ソースのマシン](/sql/odbc/reference/machine-data-sources)ODBC sdk
 
-     ODBC データ ソースの詳細については、次を参照してください。[データソース](/previous-versions/windows/desktop/ms711688)ODBC SDK に含まれています。
+     ODBC データ ソースの詳細については、次を参照してください。[データソース](/sql/odbc/reference/data-sources)ODBC SDK に含まれています。
 
   をクリックして**OK**を完了します。 **データベース オブジェクトの選択** ダイアログ ボックスが表示されます。 このダイアログ ボックスからには、テーブルを選択またはコンシューマーが使用することを表示します。 コントロール キーを押しながら項目をクリックすると、複数のビューおよびテーブルを選択できますに注意してください。 をクリックして**OK**を完了します。
 

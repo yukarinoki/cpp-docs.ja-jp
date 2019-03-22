@@ -4,12 +4,12 @@ ms.date: 04/03/2017
 helpviewer_keywords:
 - module macros in MFC
 ms.assetid: 303f4161-cb5e-4099-81ad-acdb11aa60fb
-ms.openlocfilehash: 1d0cbd1f702a1d26dd2eaafd88efcfd61f52ff78
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 863350067c39fbc9cdb3d9d3a6c4448348d977de
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850217"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328767"
 ---
 # <a name="macros-and-functions-for-managing-dlls"></a>マクロと Dll を管理するための関数
 
@@ -21,9 +21,9 @@ ms.locfileid: "55850217"
 |[AfxNetInitModule](#afxnetinitmodule)|MFC と動的にリンクされるレギュラー MFC DLL からの MFC ソケットをサポートを提供します。|
 |[AfxGetAmbientActCtx](#afxgetambientactctx)|各モジュールの状態フラグの現在の状態を取得します。|
 |[AfxGetStaticModuleState](#afxgetstaticmodulestate)|初期化の前に、またはクリーンアップ後に前のモジュールの状態を復元するモジュールの状態を設定します。|
-|[AfxInitExtensionModule]()#afxinitextensionmodule|DLL を初期化します。|
+|[AfxInitExtensionModule](#afxinitextensionmodule)|DLL を初期化します。|
 |[AfxSetAmbientActCtx](#afxsetambientactctx)|MFC の WinSxS 動作に影響するモジュールの状態フラグを設定します。|
-|[AfxTermExtensionModule]()#afxtermextensionmodule)|で MFC をクリーンアップ MFC 拡張 DLL の各プロセスは、DLL からデタッチされるとき。|
+|[AfxTermExtensionModule](#afxtermextensionmodule)|で MFC をクリーンアップ MFC 拡張 DLL の各プロセスは、DLL からデタッチされるとき。|
 
 ## <a name="afx_ext_class"></a>  AFX_EXT_CLASS
 

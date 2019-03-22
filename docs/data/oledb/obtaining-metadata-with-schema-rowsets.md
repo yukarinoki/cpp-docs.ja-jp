@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: 64502c19b55d42ab0ed7f6c2b8b1cf503e7795c8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 9e61507a187f7625e7e90e2a0e3a1ce404573e29
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422673"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328871"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>スキーマ行セットを使用したメタデータの取得
 
@@ -52,7 +52,7 @@ CRestrictions<CAccessor<CColumnsInfo>
 
 [CRestrictions](../../data/oledb/crestrictions-class.md)クラスは制約がサポートを提供します。 スキーマ行セットのインスタンスを作成した後で呼び出す[crestrictions::open](../../data/oledb/crestrictions-open.md)します。 このメソッドは、指定された制約に基づいて結果セットを返します。
 
-制限を指定するを参照してください[付録 b:スキーマ行セット](/previous-versions/windows/desktop/ms712921(v=vs.85))し使用している行セットを検索します。 たとえば、`CColumns`に対応する、 [COLUMNS 行セット](/previous-versions/windows/desktop/ms723052(v=vs.85)\(v%3dvs.85\)); そのトピックでは、COLUMNS 行セットの制限列。TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. 制約を指定するときは、この順序に従う必要があります。
+制限を指定するを参照してください[付録 b:スキーマ行セット](/previous-versions/windows/desktop/ms712921(v=vs.85))し使用している行セットを検索します。 たとえば、`CColumns`に対応する、 [COLUMNS 行セット](/previous-versions/windows/desktop/ms723052(v=vs.85)); そのトピックでは、COLUMNS 行セットの制限列。TABLE_CATALOG, TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME. 制約を指定するときは、この順序に従う必要があります。
 
 そのため、たとえば、テーブル名で制限する場合は、TABLE_NAME が 3 番目の制限列と 呼び出し`Open`、次の例に示すように、3 番目の制限パラメーターとして必要なテーブル名を指定します。
 

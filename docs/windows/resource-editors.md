@@ -21,12 +21,12 @@ helpviewer_keywords:
 - properties [C++], resources
 - resources [C++], properties
 ms.assetid: e20a29ec-d6fb-4ead-98f3-431a0e23aaaf
-ms.openlocfilehash: 461322076e2de4e2cd89c6d39592989aecc75361
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: a0b5e3905daf72307702dbe4f05c2871cf768ac0
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563018"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328806"
 ---
 # <a name="resource-editors-c"></a>リソース エディター (C++)
 
@@ -63,13 +63,13 @@ ms.locfileid: "57563018"
 > [!NOTE]
 > 使用してリソースのプロパティを変更できる、**プロパティ**ウィンドウ。
 
-- リソースのプロパティを編集する[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)、編集するリソースを右クリックして**プロパティ**します。  次に、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)リソースのプロパティを変更します。
+- リソースのプロパティを編集する[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)、編集するリソースを右クリックして**プロパティ**します。  次に、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)リソースのプロパティを変更します。
 
 - リソースのプロパティに加えられた変更を元に戻すには、リソース フォーカスを確認します**リソース ビュー**選択**を元に戻す**から、**編集**メニュー。
 
 ### <a name="win32-resources"></a>Win32 リソース
 
-Win32 リソースにアクセスすることができます、[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)ウィンドウ。
+Win32 リソースにアクセスすることができます、[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)ウィンドウ。
 
 #### <a name="to-view-a-win32-resource-in-a-resource-editor"></a>リソース エディターで、Win32 リソースを表示するには
 
@@ -113,7 +113,7 @@ Win32 リソースにアクセスすることができます、[リソース ビ
 
 ### <a name="to-preview-resources"></a>リソースをプレビューするには
 
-1. [リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)または、リソースを選択して、ドキュメント ウィンドウ**IDD_ABOUTBOX**します。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)または、リソースを選択して、ドキュメント ウィンドウ**IDD_ABOUTBOX**します。
 
 1. [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)を選択、**プロパティ ページ**ボタンをクリックします。
 

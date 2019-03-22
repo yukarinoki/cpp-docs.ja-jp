@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 92eac69e6802a824c4b6e107d2ff3393e931a542
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563057"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328494"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>方法: アイコンまたはその他のイメージを作成します。
 
@@ -167,7 +167,7 @@ ms.locfileid: "57563057"
 
 #### <a name="to-create-a-new-icon-or-cursor"></a>新しいアイコンやカーソルを作成するには
 
-1. [リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)を右クリックし、 *.rc*ファイルを選択し、**リソースの挿入**します。 既存のイメージ リソースが既にある場合、 *.rc*ファイルを右クリックしてなど、カーソル、**カーソル**フォルダーと選択**挿入カーソル**します。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)を右クリックし、 *.rc*ファイルを選択し、**リソースの挿入**します。 既存のイメージ リソースが既にある場合、 *.rc*ファイルを右クリックしてなど、カーソル、**カーソル**フォルダーと選択**挿入カーソル**します。
 
 1. [リソースの挿入 ダイアログ ボックス](../windows/add-resource-dialog-box.md)を選択します**アイコン**または**カーソル**選択**新規**します。 アイコンには、この操作は、32 × 32、16 色のアイコンのアイコン リソースを作成します。 カーソルの場合は 32 × 32、モノクロの (2 色) イメージが作成されます。
 
@@ -228,7 +228,7 @@ ms.locfileid: "57563057"
 
 #### <a name="to-create-a-256-color-icon-or-cursor"></a>256 色のアイコンまたはカーソルを作成するには
 
-1. [リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)を右クリックし、 *.rc*ファイルを選択し、**リソースの挿入**します。 既存のイメージ リソースが既にある場合、 *.rc*ファイルを右クリックしてなど、カーソル、**カーソル**フォルダーと選択**挿入カーソル**します。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)を右クリックし、 *.rc*ファイルを選択し、**リソースの挿入**します。 既存のイメージ リソースが既にある場合、 *.rc*ファイルを右クリックしてなど、カーソル、**カーソル**フォルダーと選択**挿入カーソル**します。
 
 1. [リソースの挿入 ダイアログ ボックス](../windows/add-resource-dialog-box.md)を選択します**アイコン**または**カーソル**選択**新規**します。
 
@@ -295,7 +295,7 @@ Gif 形式や JPEG イメージを開くことができます、**イメージ �
 
 ### <a name="to-add-a-new-image-resource-to-an-unmanaged-c-project"></a>アンマネージの C++ プロジェクトに新しいイメージ リソースを追加するには
 
-1. [リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)を右クリックし、 *.rc*ファイルを選択し、**リソースの挿入**します。 既存のイメージ リソースが既にある場合、 *.rc*ファイルなど、カーソルを単に右クリック、**カーソル**フォルダーと選択**挿入カーソル**します。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)を右クリックし、 *.rc*ファイルを選択し、**リソースの挿入**します。 既存のイメージ リソースが既にある場合、 *.rc*ファイルなど、カーソルを単に右クリック、**カーソル**フォルダーと選択**挿入カーソル**します。
 
 1. [リソースの挿入 ダイアログ ボックス](../windows/add-resource-dialog-box.md)、作成するには、イメージ リソースの種類を選択します (**ビットマップ**など) を選択し、**新規**。
 

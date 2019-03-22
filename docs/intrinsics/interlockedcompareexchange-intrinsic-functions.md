@@ -48,12 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 545bbeec545b37324ff9c15512b27073f5ffc1c7
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 840a7e63bb9b98cfb46ea36e30b3439168688c87
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627300"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328313"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange の組み込み関数
 
@@ -193,7 +193,7 @@ __int64 _InterlockedCompareExchange64_rel(
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|ヘッダー|
+|組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86、ARM、x64|\<intrin.h>|
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
@@ -202,15 +202,19 @@ __int64 _InterlockedCompareExchange64_rel(
 
 ## <a name="remarks"></a>Remarks
 
-`_InterlockedCompareExchange` は、`Destination` 値と `Comparand` 値のアトミックな比較を実行します。 `Destination` 値が `Comparand` 値と等しい場合、`Exchange` 値は `Destination` で指定されたアドレスに格納されます。 それ以外の場合は演算が実行されません。
+`_InterlockedCompareExchange` は、`Destination` 値と `Comparand` 値のアトミックな比較を実行します。 
+  `Destination` 値が `Comparand` 値と等しい場合、`Exchange` 値は `Destination` で指定されたアドレスに格納されます。 それ以外の場合は演算が実行されません。
 
-`_InterlockedCompareExchange` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedCompareExchange](/windows/desktop/api/winbase/nf-winbase-interlockedcompareexchange)関数。
+`_InterlockedCompareExchange` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange)関数。
 
-`_InterlockedCompareExchange` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
-`_InterlockedCompareExchange` 関数は long 型の整数値で動作しますが、`_InterlockedCompareExchange8` は 8 ビット整数値、`_InterlockedCompareExchange16` は short 型の整数値、および `_InterlockedCompareExchange64` は 64 ビット整数値で動作します。
+  `_InterlockedCompareExchange` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
+
+  `_InterlockedCompareExchange` 関数は long 型の整数値で動作しますが、`_InterlockedCompareExchange8` は 8 ビット整数値、`_InterlockedCompareExchange16` は short 型の整数値、および `_InterlockedCompareExchange64` は 64 ビット整数値で動作します。
+
+ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 
+  `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
 
 組み込みに `_np` ("プリフェッチなし") サフィックスが付いていると、コンパイラによってプリフェッチ操作が挿入される可能性がなくなります。
 

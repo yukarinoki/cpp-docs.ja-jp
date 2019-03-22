@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: f57c09d549a4ceb92db21c06499b4f6e71fc6a52
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562941"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328403"
 ---
 # <a name="accelerator-editor-c"></a>アクセラレータ エディター (C++)
 
@@ -116,7 +116,7 @@ ms.locfileid: "57562941"
 
 ### <a name="to-edit-in-an-accelerator-table"></a>アクセラレータ テーブルで編集するには
 
-1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
+1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)します。
 
 1. テーブルでエントリを選択し、インプレース編集をアクティブ化を選択します。
 
@@ -132,7 +132,7 @@ ms.locfileid: "57562941"
 
 ### <a name="to-find-an-entry-in-an-open-accelerator-table"></a>開いているアクセラレータ テーブルでエントリを検索するには
 
-1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
+1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)します。
 
 1. 列の内容をアルファベット順に並べ替える列見出しを選択します。 たとえば、 **ID**アクセラレータ テーブル内のすべての Id をアルファベット順に表示します。
 
@@ -140,7 +140,7 @@ ms.locfileid: "57562941"
 
 ### <a name="to-add-an-entry-to-an-accelerator-table"></a>アクセラレータ テーブルにエントリを追加するには
 
-1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
+1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)します。
 
 1. アクセラレータ テーブル内で右クリックし、**新しいアクセラレータ**、またはテーブルの下部にある空の行エントリを選択します。
 
@@ -155,7 +155,7 @@ ms.locfileid: "57562941"
 
 ### <a name="to-delete-an-entry-from-an-accelerator-table"></a>アクセラレータ テーブルのエントリを削除するには
 
-1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
+1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)します。
 
 1. 削除、または押したするエントリを選択、 **Ctrl**または**Shift**複数のエントリを選択することを選択するのにはキー。
 
@@ -177,7 +177,7 @@ ms.locfileid: "57562941"
 
 ### <a name="to-change-the-properties-of-multiple-accelerator-keys"></a>複数のアクセラレータ キーのプロパティを変更するには
 
-1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)します。
+1. アイコンをダブルクリックして、アクセラレータ テーブルを開く[リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)します。
 
 1. 押しながら変更するアクセラレータ キーの選択、 **Ctrl**キーの 1 つを選択するとします。
 

@@ -21,12 +21,12 @@ helpviewer_keywords:
 - data resources [C++]
 - resources [C++], creating
 ms.assetid: 2483c48b-1252-4dbc-826b-82e6c1a0e9cb
-ms.openlocfilehash: df693e87bc9a370409eb43155d3f976a9f00cdac
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 0adcefe2af9d17a1c42f64f25636e220f53706fc
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562862"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328754"
 ---
 # <a name="binary-editor-c"></a>バイナリ エディター (C++)
 
@@ -53,7 +53,7 @@ ms.locfileid: "57562862"
 
 ### <a name="to-open-a-windows-desktop-resource-for-binary-editing"></a>バイナリ編集用に Windows デスクトップ リソースを開くには
 
-1. [リソース ビュー](/windows/how-to-create-a-resource-script-file#create-resources)で、編集の対象となる特定のリソース ファイルを選択します。
+1. [リソース ビュー](how-to-create-a-resource-script-file.md#create-resources)で、編集の対象となる特定のリソース ファイルを選択します。
 
 1. リソースを右クリックして**バイナリ データを開く**します。
 

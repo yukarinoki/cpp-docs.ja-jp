@@ -2,12 +2,12 @@
 title: Visual C++ の言語リファレンス (C++/CX)
 ms.date: 09/15/2017
 ms.assetid: 3f6abf92-4e5e-4ed8-8e11-f9252380d30a
-ms.openlocfilehash: 319374447ba08dbf18fba91e4c24c0874d3b6ce2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: ce0272499b653b9077a891e39e9b29797e7e051d
+ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422963"
+ms.lasthandoff: 03/21/2019
+ms.locfileid: "58328416"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ の言語リファレンス (C++/CX)
 
@@ -24,7 +24,7 @@ C + を使用して/cli CX を作成できます。
 
 - JavaScript ベースの Windows アプリで使用できる C++ Windows ランタイム コンポーネントです。 詳細については、「 [Creating Windows Runtime Components in C++](/windows/uwp/winrt-components/creating-windows-runtime-components-in-cpp)」を参照してください。
 
-- Windows DirectX ゲームやグラフィックス処理の多いアプリ。 詳細については、次を参照してください。 [UWP の簡単なゲームを DirectX を使った作成](/windows/uwp/gaming/tutorial--create-your-first-metro-style-directx-game)です。
+- Windows DirectX ゲームやグラフィックス処理の多いアプリ。 詳細については、次を参照してください。 [UWP の簡単なゲームを DirectX を使った作成](/windows/uwp/gaming/tutorial--create-your-first-uwp-directx-game)です。
 
 ## <a name="related-articles"></a>関連記事
 
@@ -32,7 +32,7 @@ C + を使用して/cli CX を作成できます。
 |-|-|
 |[クイック リファレンス](../cppcx/quick-reference-c-cx.md)|テーブルのキーワードと演算子の C + + CX します。|
 |[型システム](../cppcx/type-system-c-cx.md)|説明する基本的な C +/cli CX 型と、プログラミング構成要素と C + を利用する方法/cli/CX を使用して、Windows ランタイム型を作成します。|
-|[アプリの構築とライブラリ](../cppcx/building-apps-and-libraries-c-cx.md)|IDE を使用してアプリケーションをビルドし、スタティック ライブラリおよび DLL にリンクする方法について説明します。|
+|[アプリの構築とライブラリ](../cppcx/building-apps-and-libraries-c-cx.md)|IDE を使用してアプリを作成し、スタティック ライブラリと Dll にリンクする方法について説明します。|
 |[その他の言語との相互運用](../cppcx/interoperating-with-other-languages-c-cx.md)|について説明しますどの C + を使用して作成されたコンポーネント/cli CX を使用する、JavaScript で記述されたコンポーネントを管理している言語、または Windows ランタイム C++ テンプレート ライブラリです。|
 |[スレッドとマーシャ リング](../cppcx/threading-and-marshaling-c-cx.md)|作成するコンポーネントのスレッドとマーシャリングの動作を指定する方法について説明します。|
 |[名前空間参照](../cppcx/namespaces-reference-c-cx.md)|既定の名前空間、Platform 名前空間、Platform::Collections、および関連する名前空間の参照ドキュメント。|
