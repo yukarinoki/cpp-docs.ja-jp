@@ -94,12 +94,12 @@ helpviewer_keywords:
 - CEdit [MFC], ShowBalloonTip
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
-ms.openlocfilehash: 6af054ea27233de2cc3b551bbec69c0ab3b4be9e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1ca69382591dc7d3afe9b5871dfdebd64aedce4
+ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289963"
+ms.lasthandoff: 03/25/2019
+ms.locfileid: "58417002"
 ---
 # <a name="cedit-class"></a>CEdit Class
 
@@ -570,11 +570,11 @@ UINT GetLimitText() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のテキストの制限、(バイト単位) でこの`CEdit`オブジェクト。
+現在のテキストの制限、Tchar でこの`CEdit`オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-テキストの上限は、テキスト編集コントロールが受け入れることができるバイト数の最大量です。
+テキストの上限は、エディット コントロールが受け入れることができる、Tchar 内のテキストの最大量です。
 
 > [!NOTE]
 >  このメンバー関数は、Windows 95 と Windows NT 4.0 以降を使用できます。
@@ -606,14 +606,14 @@ int GetLine(
 コントロールの編集から複数行を取得する行番号を指定します。 行番号は 0 から始まります。値 0 は、最初の行を指定します。 単一行のエディット コントロールでは、このパラメーターは無視されます。
 
 *lpszBuffer*<br/>
-行のコピーを受け取るバッファーへのポインター。 バッファーの最初の単語は、バッファーにコピーする文字の最大数を指定する必要があります。
+行のコピーを受け取るバッファーへのポインター。 バッファーの最初の単語は、バッファーにコピーする Tchar の最大数を指定する必要があります。
 
 *nMaxLength*<br/>
-バッファーにコピーするバイトの最大数を指定します。 `GetLine` 最初の単語でこの値を配置*lpszBuffer* Windows への呼び出しを行う前にします。
+バッファーにコピーする TCHAR 文字の最大数を指定します。 `GetLine` 最初の単語でこの値を配置*lpszBuffer* Windows への呼び出しを行う前にします。
 
 ### <a name="return-value"></a>戻り値
 
-実際にコピーされたバイト数。 行番号が指定された場合、戻り値は 0 *nIndex*がエディット コントロールで行の数より大きい。
+実際にコピーされた文字数。 行番号が指定された場合、戻り値は 0 *nIndex*がエディット コントロールで行の数より大きい。
 
 ### <a name="remarks"></a>Remarks
 
@@ -800,7 +800,7 @@ void LimitText(int nChars = 0);
 ### <a name="parameters"></a>パラメーター
 
 *文字数*<br/>
-ユーザーが入力できるテキストの長さ (バイト) を指定します。 このパラメーターが 0 の場合は、テキストの長さが UINT_MAX バイトに設定されます。 これが既定の動作です。
+(Tchar) で、ユーザーが入力できるテキストの長さを指定します。 このパラメーターが 0 の場合は、テキストの長さが UINT_MAX バイトに設定されます。 これが既定の動作です。
 
 ### <a name="remarks"></a>Remarks
 
