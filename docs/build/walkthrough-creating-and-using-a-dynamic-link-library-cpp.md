@@ -6,12 +6,12 @@ helpviewer_keywords:
 - libraries [C++], DLLs
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
-ms.openlocfilehash: c1f59c704e96ade82295f4ae88265f549987e981
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 44a2f1da6a02444c79247178c34281e39731f0f3
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813969"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476930"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>チュートリアル: 作成して、独自のダイナミック リンク ライブラリ (C++)
 
@@ -296,9 +296,11 @@ DLL を使用するかどうか、所有またはサード パーティ製の DL
 
 1. 上部のペインをダブルクリックして、**追加のインクルード ディレクトリ**エディット コントロールを有効にする ダイアログ ボックス。
 
-1. エディット コントロールでの場所へのパスを指定します、 **MathLibrary.h**ヘッダー ファイル。 この場合、相対パスを使用できます。
+1. エディット コントロールでの場所へのパスを指定します、 **MathLibrary.h**ヘッダー ファイル。 この場合、DLL プロジェクトに .h ファイルが含まれているフォルダーに、クライアント プロジェクトで .cpp ファイルを含むフォルダーから相対パスを使用できます。 クライアント プロジェクトで DLL ソリューションと同じフォルダー内の個別のソリューションでは、相対パスは次のようになります。
 
    `..\..\MathLibrary\MathLibrary`
+
+   DLL とクライアント プロジェクトは、同じソリューションでは、または、ソリューションは、別のフォルダーは、しする必要がありますの相対パスを適宜調整します。
 
    ![ヘッダーの場所を追加のインクルード ディレクトリのプロパティに追加](media/mathclient-additional-include-directories.png "ヘッダーの場所を追加のインクルード ディレクトリのプロパティに追加")
 

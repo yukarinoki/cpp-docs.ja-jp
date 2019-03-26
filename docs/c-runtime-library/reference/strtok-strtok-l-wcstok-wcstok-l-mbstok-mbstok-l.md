@@ -1,6 +1,6 @@
 ---
 title: strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
-ms.date: 11/04/2016
+ms.date: 03/25/2019
 apiname:
 - _mbstok_l
 - _mbstok
@@ -45,12 +45,12 @@ helpviewer_keywords:
 - _tcstok_l function
 - strtok_l function
 ms.assetid: 904cb734-f0d7-4d77-ba81-4791ddf461ae
-ms.openlocfilehash: bb791c7049379f62b99804fa8f1cf3a57fe0b749
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.openlocfilehash: 22dd01a0b2558c83ca1e25875a2ace7dd4ee15c0
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416963"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476917"
 ---
 # <a name="strtok-strtokl-wcstok-wcstokl-mbstok-mbstokl"></a>strtok、_strtok_l、wcstok、_wcstok_l、_mbstok、_mbstok_l
 
@@ -81,11 +81,11 @@ wchar_t *wcstok_l(
    _locale_t locale
 );
 unsigned char *_mbstok(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit
 );
 unsigned char *_mbstok_l(
-   unsigned char*strToken,
+   unsigned char *strToken,
    const unsigned char *strDelimit,
    _locale_t locale
 );
@@ -104,7 +104,7 @@ unsigned char *_mbstok_l(
 
 ## <a name="return-value"></a>戻り値
 
-ある次のトークンへのポインターを返します*strToken*します。 返される**NULL**以上トークンが検出されたときにします。 各呼び出しを変更します*strToken*によって返されたトークンの後に発生する最初の区切り記号の null 文字の置換します。
+ある次のトークンへのポインターを返します*strToken*します。 関数が返す**NULL**以上トークンが検出されたときにします。 各呼び出しを変更します*strToken*によって返されたトークンの後に発生する最初の区切り記号の null 文字の置換します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -115,7 +115,9 @@ unsigned char *_mbstok_l(
 
 最初の呼び出しで**strtok**、関数は、先行する区切り記号をスキップしの最初のトークンへのポインターを返します*strToken*トークンを null 文字で終了します。 以上のトークンの残りの部分から分割*strToken* 、一連の呼び出しの**strtok**します。 呼び出しごとに**strtok**変更*strToken*後に null 文字を挿入することで、**トークン**その呼び出しによって返されます。 次のトークンを読み取る*strToken*、呼び出す**strtok**で、 **NULL**値、 *strToken*引数。 **NULL** *strToken*引数により**strtok**修正では、次のトークンを検索する*strToken*します。 *StrDelimit*引数は、区切り記号のセットが異なる場合がありますように、次の 1 つの呼び出しから任意の値に使用できます。
 
-出力値は、ロケールの **LC_CTYPE** カテゴリの設定に影響されます。詳細については、「[setlocale](setlocale-wsetlocale.md)」を参照してください。 **_l** サフィックスが付いていないこれらの関数のバージョンでは、このロケールに依存する動作に現在のロケールを使用します。**_l** サフィックスが付いているバージョンは、渡されたロケール パラメーターを代わりに使用する点を除いて同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
+出力値の設定に影響は、 **LC_CTYPE**ロケールのカテゴリの設定。 詳細については、「[setlocale](setlocale-wsetlocale.md)」をご覧ください。
+
+この関数のバージョン、 **_l**サフィックスは、このロケールに依存する動作の現在のロケールを使用します。 バージョンで、 **_l**代わりに渡されたロケール パラメーターを使用する点を除いて、サフィックスは同じです。 詳細については、「 [Locale](../../c-runtime-library/locale.md)」を参照してください。
 
 > [!NOTE]
 > 各関数は、文字列をトークンに解析する際にスレッド ローカルの静的変数を使用します。 したがって、複数のスレッドが望ましくない影響を受けずに同時にこれらの関数を呼び出すことができます。 ただし、1 つのスレッド内でこれらの関数のいずれかの呼び出しをインターリーブすると、データの破損や正確でない結果が生成される可能性が非常に高くなります。 さまざまな文字列を解析する際、1 つの文字列の解析を完了してから、次の解析を開始します。 また、別の関数が呼び出されているループから、これらの関数の 1 つを呼び出す場合の危険性にも注意してください。 他の関数が最終的にこれらの関数の 1 つを使用した場合、インターリーブされた呼び出しのシーケンスにより、データの破損を招くことがあります。
