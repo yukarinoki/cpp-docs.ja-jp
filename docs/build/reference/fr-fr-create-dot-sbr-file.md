@@ -13,12 +13,12 @@ helpviewer_keywords:
 - FR compiler option [C++]
 - symbolic browser information
 ms.assetid: 3fd8f88b-3924-4feb-9393-287036a28896
-ms.openlocfilehash: a75a9d143012dee7946591d708921d6734b2acda
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73642baba77a62cac531ae7b2842ec9953b338ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811876"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508703"
 ---
 # <a name="fr-fr-create-sbr-file"></a>/FR、/Fr (.sbr ファイルの作成)
 
@@ -32,6 +32,9 @@ ms.locfileid: "57811876"
 ```
 
 ## <a name="remarks"></a>Remarks
+
+> [!WARNING]
+> BSCMAKE は、現在も Visual Studio と共にインストールされていますが、IDE では使用されなくなりました。 Visual Studio 2008 以降、ブラウザーとシンボルの情報は、ソリューション フォルダー内の SQL Server の .sdf ファイルに自動的に格納されます。
 
 ビルド処理中、Microsoft Browse Information File Maintenance Utility (BSCMAKE) はこれらのファイルを使って BSC ファイルを作成します。このファイルは、ブラウザー情報を表示するために使います。
 
@@ -62,5 +65,5 @@ ms.locfileid: "57811876"
 
 [出力ファイル (/F) オプション](output-file-f-options.md)<br/>
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
 [パス名の指定](specifying-the-pathname.md)
