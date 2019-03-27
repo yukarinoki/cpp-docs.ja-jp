@@ -1,17 +1,17 @@
 ---
 title: コンパイラ エラー C2059
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 f1_keywords:
 - C2059
 helpviewer_keywords:
 - C2059
 ms.assetid: 2be4eb39-3f37-4b32-8e8d-75835e07c78a
-ms.openlocfilehash: dec5f7a9eb91603b129cfb589352b6ee2579e553
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 2fb2aa86a1fd8f8e0710d787682fdd44abd941ec
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51521792"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508833"
 ---
 # <a name="compiler-error-c2059"></a>コンパイラ エラー C2059
 
@@ -33,7 +33,18 @@ ms.locfileid: "51521792"
 
 シンボルの直後にエラー メッセージが発生したかどうか、`typedef`変数、変数がソース コードで定義されていることを確認します。
 
-シンボルと評価された場合、何も発生する可能性が C2059 してしまう場合 **/D** `symbol` **=** をコンパイルするために使用します。
+プリプロセッサ シンボル名は識別子として再利用、C2059 が発生します。 次の例では、コンパイラは`DIGITS.ONE`数 1 が有効でない列挙型の要素名として。
+
+```cpp
+#define ONE 1
+
+enum class DIGITS {
+    ZERO,
+    ONE // error C2059
+};
+```
+
+シンボルと評価された場合、何も発生する可能性が C2059 してしまうとき **/D**_シンボル_**=** をコンパイルするために使用します。
 
 ```
 // C2059a.cpp

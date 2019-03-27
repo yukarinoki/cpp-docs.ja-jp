@@ -1,6 +1,6 @@
 ---
 title: vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
-ms.date: 11/04/2016
+ms.date: 03/26/2019
 apiname:
 - _vswprintf_s_l
 - vsprintf_s
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - formatted text [C++]
 - _vswprintf_s_l function
 ms.assetid: 60e90518-57f0-4f1b-b732-f62a69702833
-ms.openlocfilehash: 055b2279be923712528463cb23ab3fd6b52897d7
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 469a823d0f033a2f140d78a65cb0e69a3ef16d5c
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211031"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508796"
 ---
 # <a name="vsprintfs-vsprintfsl-vswprintfs-vswprintfsl"></a>vsprintf_s、_vsprintf_s_l、vswprintf_s、_vswprintf_s_l
 
@@ -109,7 +109,7 @@ int vswprintf_s(
 
 ## <a name="return-value"></a>戻り値
 
-**vsprintf_s**と**vswprintf_s**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。 場合*バッファー*または*形式*カウントが 0 の場合は null ポインターの場合、または書式指定文字列に無効な書式指定文字が含まれている場合、無効なパラメーター ハンドラーが呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
+**vsprintf_s**と**vswprintf_s**出力エラーが発生した場合に、終端の null 文字または負の値をしないなど、書き込まれる文字数を返します。 場合*バッファー*または*形式*場合 null ポインターの場合は、 *numberOfElements*ゼロ、または書式指定文字列に無効な書式設定が含まれているかどうかは文字、無効なパラメーター ハンドラー呼び出される」の説明に従って[パラメーターの検証](../../c-runtime-library/parameter-validation.md)です。 実行の継続が許可された場合、関数は-1 を返し設定と**errno**に**EINVAL**します。
 
 エラー コードの詳細については、「[_doserrno、errno、_sys_errlist、_sys_nerr](../../c-runtime-library/errno-doserrno-sys-errlist-and-sys-nerr.md)」をご覧ください。
 
