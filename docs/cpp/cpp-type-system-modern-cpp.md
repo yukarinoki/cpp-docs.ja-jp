@@ -3,12 +3,12 @@ title: C++ 型システム (Modern C++)
 ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 553c0ed6-77c4-43e9-87b1-c903eec53e80
-ms.openlocfilehash: ea4d8da9af10df2fb930daaad8374d70b6704d28
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 4dfbf408654ccc92c92d6855c15238cb07c01b58
+ms.sourcegitcommit: 6e4dd21759caaed262a7255735cf8d6e8fb9f4d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220674"
+ms.lasthandoff: 03/26/2019
+ms.locfileid: "58476904"
 ---
 # <a name="c-type-system-modern-c"></a>C++ 型システム (Modern C++)
 
@@ -70,7 +70,7 @@ int maxValue;                // Not recommended! maxValue contains
 |bool|1 バイト|true または false になる値を表します。|
 |char|1 バイト|以前の C スタイル文字列内の ASCII 文字や、UNICODE に変換する必要がない std::string オブジェクトの ASCII 文字に使用します。|
 |wchar_t|2 バイト|UNICODE 形式でエンコードできるワイド文字を表します (Windows では UTF-16。他のオペレーティング システムでは異なる場合があります)。 これは、型 `std::wstring` の文字列で使用される文字型です。|
-|符号なし&nbsp;char|1 バイト|C++ には、組み込みの `byte` 型はありません。  バイト値を表すには unsigned char を使用します。|
+|unsigned&nbsp;char|1 バイト|C++ には、組み込みの `byte` 型はありません。  バイト値を表すには unsigned char を使用します。|
 |unsigned int|4 バイト|ビット フラグの既定のオプション。|
 |long long|8 バイト|非常に大きな整数値を表します。|
 
@@ -102,9 +102,7 @@ A **const**型は、非定数のバージョンの異なるなど**const int**�
 
 - コンパイラには、ユーザー定義型に関する組み込みの情報はありません。 コンパイル プロセス中に、定義を見つけたときに、型の学習します。
 
-- クラス メンバーまたは非メンバー関数として適切な演算子を定義することで (オーバーロードを通じて)、型で実行可能な操作と他の方に変換する方法を指定します。 詳細については、次を参照してください。[関数のオーバー ロード](function-overloading.md)します。
-
-- 静的に型指定する必要はありません (オブジェクトの型が変化することはないという規則)。 メカニズムを通じて*継承*と*ポリモーフィズム*クラス (クラスのオブジェクトのインスタンスと呼ばれます) のユーザー定義型として宣言された変数でよりも実行時に別の種類がありますコンパイル時にします。 詳細については、「[継承](../cpp/inheritance-cpp.md)」を参照してください。
+- クラス メンバーまたは非メンバー関数として適切な演算子を定義することで (オーバーロードを通じて)、型で実行可能な操作と他の方に変換する方法を指定します。 詳細については、次を参照してください[関数のオーバー ロード。](function-overloading.md)
 
 ## <a name="pointer-types"></a>ポインター型
 
