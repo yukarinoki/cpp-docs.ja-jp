@@ -1,6 +1,6 @@
 ---
 title: valarray クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::valarray
 - valarray/std::valarray::value_type
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - std::valarray [C++], sum
 - std::valarray [C++], swap
 ms.assetid: 19b862f9-5d09-4003-8844-6ddd02c1a3a7
-ms.openlocfilehash: f38d431248c524a65b4a7a7126ba73b767a64173
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: efb186753de0e04bd01f9cc6e81c487084b88ac2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525315"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565741"
 ---
 # <a name="valarray-class"></a>valarray クラス
 
@@ -88,7 +88,7 @@ ms.locfileid: "51525315"
 |-|-|
 |[operator!](#op_not)|`valarray` 内の各要素の論理 `NOT` 値を取得する、単項演算子。|
 |[operator%=](#op_mod_eq)|指定された `valarray` または要素型の値で配列の要素を要素ごとに除算した剰余を取得します。|
-|[operator&=](#op_amp_eq)|配列内の要素のビットごとの `AND` を、指定された `valarray` 内の対応する要素か要素型の値と共に取得します。|
+|[operator&=](#op_and_eq)|配列内の要素のビットごとの `AND` を、指定された `valarray` 内の対応する要素か要素型の値と共に取得します。|
 |[operator>>=](#op_gt_gt_eq)|`valarray` オペランドの各要素のビットを、指定された位置数だけ右にシフトさせるか、2 番目の `valarray` で指定された要素ごとの量だけ右にシフトさせます。|
 |[operator<<=](#op_lt_lt_eq)|`valarray` オペランドの各要素のビットを、指定された位置数だけ左にシフトさせるか、2 番目の `valarray` で指定された要素ごとの量だけ左にシフトさせます。|
 |[operator*=](#op_star_eq)|指定された `valarray` の要素か要素型の値を、要素ごとにオペランド `valarray` に対して乗算します。|
@@ -271,7 +271,7 @@ void free();
 
 ### <a name="remarks"></a>Remarks
 
-この非標準の関数は、空の valarray を割り当てることと同じです。 例えば:
+この非標準の関数は、空の valarray を割り当てることと同じです。 例:
 
 ```cpp
 valarray<T> v;
@@ -508,7 +508,7 @@ valarray: ( 0 -3 4 -7 1 -3 ).
 */
 ```
 
-## <a name="and_eq"></a>  valarray::operator&amp;=
+## <a name="op_and_eq"></a>  valarray::operator&amp;=
 
 配列内の要素と、指定された valarray の対応する要素か要素型の値のどちらか一方とのビット演算 **AND** を取得します。
 
@@ -906,7 +906,7 @@ valarray: ( 2 0 4 2 6 4 8 6 ).
 */
 ```
 
-## <a name="valarray__operator-"></a>  valarray::operator-
+## <a name="operator-"></a>  valarray::operator-
 
 valarray 内の各要素に負符号を適用する単項演算子。
 
@@ -958,7 +958,7 @@ valarray: ( 0 0 2 -2 4 -4 6 -6 8 -8 ).
 */
 ```
 
-## <a name="valarray__operator-_eq"></a>  valarray::operator-=
+## <a name="operator-_eq"></a>  valarray::operator-=
 
 指定された valarray の要素か要素型の値を、要素ごとにオペランド valarray から減算します。
 
@@ -1276,7 +1276,7 @@ valarray<Type>& operator|=(const Type& right);
 
 ### <a name="remarks"></a>Remarks
 
-排他的論理 OR (**XOR** という) には次のセマンティクスがあります。要素 *e*1 と *e*2 がある場合、どちらか一方の要素だけが true であるなら、*e*1 **XOR** *e*2 は **true** です。両方の要素が false または両方の要素が true の場合は **false** です。
+専用の論理またはとも呼ば**XOR**、次のセマンティクスがあります。要素が指定*e*1 と*e*2、 *e*1 **XOR** *e*2 は**true**場合要素の 1 つだけが true であります。**false**両方の要素が false の場合、または両方の要素に該当する場合。
 
 ### <a name="example"></a>例
 

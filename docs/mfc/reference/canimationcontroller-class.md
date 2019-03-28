@@ -1,6 +1,6 @@
 ---
 title: CAnimationController クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CAnimationController
 - AFXANIMATIONCONTROLLER/CAnimationController
@@ -103,12 +103,12 @@ helpviewer_keywords:
 - CAnimationController [MFC], m_pTransitionFactory
 - CAnimationController [MFC], m_pTransitionLibrary
 ms.assetid: ed294c98-695e-40a6-b940-33ef1d40aa6b
-ms.openlocfilehash: 114b6bffdc63ecadc951965f8f199b229f0f7672
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a3a533b876b9ca245c0553c4c24a815ef3cabca1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270281"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565962"
 ---
 # <a name="canimationcontroller-class"></a>CAnimationController クラス
 
@@ -127,7 +127,7 @@ class CAnimationController : public CObject;
 |名前|説明|
 |----------|-----------------|
 |[CAnimationController::CAnimationController](#canimationcontroller)|アニメーション コント ローラーを構築します。|
-|[CAnimationController::~CAnimationController](#canimationcontroller__~canimationcontroller)|デストラクターです。 アニメーション コント ローラーのオブジェクトが破棄されるときに呼び出されます。|
+|[CAnimationController::~CAnimationController](#_dtorcanimationcontroller)|デストラクターです。 アニメーション コント ローラーのオブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -140,7 +140,7 @@ class CAnimationController : public CObject;
 |[CAnimationController::CreateKeyframe](#createkeyframe)|オーバーロードされます。 遷移に依存するキーフレームを作成し、指定したグループに追加します。|
 |[CAnimationController::EnableAnimationManagerEvent](#enableanimationmanagerevent)|アニメーション マネージャーの状態が変化したときに呼び出すハンドラーを解放または設定します。|
 |[CAnimationController::EnableAnimationTimerEventHandler](#enableanimationtimereventhandler)|リリースのタイミング イベントのハンドラーと更新のタイミングのハンドラーを設定または取得します。|
-|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|呼び出すかどうか、スケジュールされたストーリー ボードが取り消されました、という結論に達しました、トリミングしたりできる圧縮を決定する優先度比較ハンドラーを解放または設定します。|
+|[CAnimationController::EnablePriorityComparisonHandler](#enableprioritycomparisonhandler)|呼び出すかどうかスケジュールされたストーリー ボードはキャンセル、という結論に達しました、トリミングしたりできる圧縮を決定する優先度比較ハンドラーを解放または設定します。|
 |[CAnimationController::EnableStoryboardEventHandler](#enablestoryboardeventhandler)|ストーリー ボードの状態と更新プログラムのイベントのハンドラーを解放または設定します。|
 |[CAnimationController::FindAnimationGroup](#findanimationgroup)|オーバーロードされます。 そのストーリー ボード アニメーションのグループを検索します。|
 |[CAnimationController::FindAnimationObject](#findanimationobject)|指定したアニメーション変数を含むアニメーション オブジェクトを検索します。|
@@ -402,7 +402,7 @@ virtual BOOL EnableAnimationTimerEventHandler(
 
 ##  <a name="enableprioritycomparisonhandler"></a>  CAnimationController::EnablePriorityComparisonHandler
 
-呼び出すかどうか、スケジュールされたストーリー ボードが取り消されました、という結論に達しました、トリミングしたりできる圧縮を決定する優先度比較ハンドラーを解放または設定します。
+呼び出すかどうかスケジュールされたストーリー ボードはキャンセル、という結論に達しました、トリミングしたりできる圧縮を決定する優先度比較ハンドラーを解放または設定します。
 
 ```
 virtual BOOL EnablePriorityComparisonHandler(DWORD dwHandlerType);

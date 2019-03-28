@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::VectorViewIterator クラス
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorViewIterator::VectorViewIterator
 helpviewer_keywords:
 - VectorViewIterator Class
 ms.assetid: be3aa1ae-e6ba-4a06-8d6b-86d8128026f7
-ms.openlocfilehash: 4d4a591c6febdf6e34757251c4de5d01a9e2fa87
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 0de4ffb8e72c21490f07ae164aa23ffcd524c2b8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743742"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565663"
 ---
 # <a name="platformcollectionsvectorviewiterator-class"></a>Platform::Collections::VectorViewIterator クラス
 
@@ -61,7 +61,7 @@ VectorViewIterator テンプレート クラスの型名。
 |[Vectorviewiterator::operator\[\]](#operator-at)|現在の VectorViewIterator から指定数だけ転置された要素への参照を取得します。|
 |[VectorViewIterator::operator+ 演算子](#operator-plus)|指定された VectorViewIterator から指定された転置にある要素を参照する VectorViewIterator を返します。|
 |[VectorViewIterator::operator++ 演算子](#operator-increment)|現在の VectorViewIterator をインクリメントします。|
-|[VectorViewIterator::operator+= 演算子](#operator-plus-assign)|指定された転置数だけ現在の VectorViewIterator をインクリメントします。|
+|[VectorViewIterator::operator+= 演算子](#operator-plus-equals)|指定された転置数だけ現在の VectorViewIterator をインクリメントします。|
 |[VectorViewIterator::operator< 演算子](#operator-less-than)|現在の VectorViewIterator が、指定された VectorViewIterator より小さいかどうかを示します。|
 |[Vectorviewiterator::operator\<= 演算子](#operator-less-than-or-equals)|現在の VectorViewIterator が、指定された VectorViewIterator 以下であるかどうかを示します。|
 |[VectorViewIterator::operator-= 演算子](#operator-minus-assign)|現在の VectorViewIterator を、指定されたディスプレイスメントだけデクリメントします。|

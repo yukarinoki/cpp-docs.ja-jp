@@ -1,6 +1,6 @@
 ---
 title: COleDateTimeSpan クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTimeSpan
 - ATLCOMTIME/ATL::COleDateTimeSpan
@@ -26,12 +26,12 @@ helpviewer_keywords:
 - Date data type, MFC encapsulation of
 - COleDateTimeSpan class
 ms.assetid: 7441526d-a30a-4019-8fb3-3fee6f897cbe
-ms.openlocfilehash: feef238be96d9a04c2c41e6955efec8b23cf6a89
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b68a984488f37326f3b0c1249a5f17a3eb76548b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748490"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565650"
 ---
 # <a name="coledatetimespan-class"></a>COleDateTimeSpan クラス
 
@@ -745,7 +745,7 @@ enum DateTimeSpanStatus{
 - `COleDateTimeSpan::null` 示しますこの`COleDateTimeSpan`オブジェクトが null の場合は、このオブジェクトの値が指定されていないこと。 (これは"使用しない場合の値、"C++ の NULL ではなくデータベースという意味で"null")。
 
    > [!CAUTION]
-   > この関数は、高度なプログラミングに適しています。 この関数では、このオブジェクトのデータは変更されません。 状態を設定に使用されるほとんどの場合、 **null**または**無効な**します。 なお、代入演算子 ([演算子 =](#eq)) と[SetDateTimeSpan](#setdatetimespan)ソース値に基づいて、オブジェクトの状態を設定しないでください。
+   > この関数は、高度なプログラミングに適しています。 この関数では、このオブジェクトのデータは変更されません。 状態を設定に使用されるほとんどの場合、 **null**または**無効な**します。 なお、代入演算子 ([演算子 =](#operator_eq)) と[SetDateTimeSpan](#setdatetimespan)ソース値に基づいて、オブジェクトの状態を設定しないでください。
 
 ### <a name="example"></a>例
 

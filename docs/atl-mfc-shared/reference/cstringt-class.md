@@ -1,6 +1,6 @@
 ---
 title: CStringT クラス
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CStringT
 - ATLSTR/ATL::CStringT
@@ -80,12 +80,12 @@ helpviewer_keywords:
 - shared classes, CStringT
 - CStringT class
 ms.assetid: 7cacc59c-425f-40f1-8f5b-6db921318ec9
-ms.openlocfilehash: 9566830de4d3af8f34e8efa5e5ef468acae1fba5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 327ffc40a9b7e41004bc5aac7ecc320076de537f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750872"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565819"
 ---
 # <a name="cstringt-class"></a>CStringT クラス
 
@@ -182,7 +182,7 @@ String クラスの文字型。 次のいずれかの値を指定します。
 
 |||
 |-|-|
-|[operator=](#operator_eq)|新しい値を割り当てます、`CStringT`オブジェクト。|
+|[CStringT::operator =](#operator_eq)|新しい値を割り当てます、`CStringT`オブジェクト。|
 |[CStringT::operator +](#operator_add)|2 つの文字列または文字と文字列を連結します。|
 |[CStringT::operator + =](#operator_add_eq)|既存の文字列の末尾に新しい文字列を連結します。|
 |[CStringT::operator ==](#operator_eq_eq)|2 つの文字列が論理的に等しいかどうかを決定します。|
@@ -590,8 +590,7 @@ TCHAR (の ANSI および Unicode 文字列)。
 
 ##  <a name="_dtorcstringt"></a>  CStringT:: ~ CStringT
 
-
-  `CStringT` オブジェクトを破棄します。
+`CStringT` オブジェクトを破棄します。
 
 ```
 ~CStringT() throw();
@@ -599,8 +598,7 @@ TCHAR (の ANSI および Unicode 文字列)。
 
 ### <a name="remarks"></a>Remarks
 
-
-  `CStringT` オブジェクトを破棄します。
+`CStringT` オブジェクトを破棄します。
 
 ##  <a name="delete"></a>  CStringT::Delete
 
@@ -1025,6 +1023,56 @@ void OemToAnsi();
 ### <a name="example"></a>例
 
 例をご覧ください[CStringT::AnsiToOem](#ansitooem)します。
+
+##  <a name="operator_eq"></a>  CStringT::operator =
+
+文字列には、新しい値を割り当てます。
+
+```
+CStringT& operator=(const CStringT& strSrc);
+
+template<bool bMFCDLL>
+CStringT& operator=(const CSimpleStringT<BaseType, bMFCDLL>& str);
+
+CStringT& operator=(PCXSTR pszSrc);
+CStringT& operator=(PCYSTR pszSrc);
+CStringT& operator=(const unsigned char* pszSrc);
+CStringT& operator=(XCHAR ch);
+CStringT& operator=(YCHAR ch);
+CStringT& operator=(const VARIANT& var);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*strSrc*<br/>
+A`CStringT`この文字列に割り当てる。
+
+*str*<br/>
+`CThisSimpleString` オブジェクトへの参照。
+
+*bMFCDLL*<br/>
+プロジェクトが MFC DLL であるかどうかどうか指定するブール値。
+
+*BaseType*<br/>
+文字列の基本型。
+
+*var*<br/>
+この文字列に割り当てるバリアント オブジェクト。
+
+*ch*<br/>
+文字列に割り当てるの ANSI または Unicode 文字。
+
+*pszSrc*<br/>
+割り当てられている元の文字列へのポインター。
+
+### <a name="remarks"></a>Remarks
+
+代入演算子を受け入れる別`CStringT`オブジェクト、文字のポインター、または 1 つの文字。 注意すべきそのメモリを新しい記憶域を割り当てられるために、この演算子を使用するたびに、例外が発生することができます。
+
+について`CThisSimpleString`の「解説」を参照してください。 [CStringT::CStringT](#cstringt)します。
+
+> [!NOTE]
+> 作成することはできますが`CStringT`に対して推奨が含まれているインスタンスには、null 文字が埋め込まれている。 メソッドと演算子を呼び出すことで`CStringT`埋め込まれた null 文字が含まれているオブジェクトは、意図しない結果を生成できます。
 
 ##  <a name="operator_add"></a>  CStringT::operator +
 

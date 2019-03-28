@@ -1,6 +1,6 @@
 ---
 title: CSid クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CSid
 - ATLSECURITY/ATL::CSid
@@ -21,12 +21,12 @@ f1_keywords:
 helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
-ms.openlocfilehash: 02b7cbb9e66e1e8297699503fc510247efed1629
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4c8d05fd193254f2431bbec7692ff25420c1bf05
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301897"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565871"
 ---
 # <a name="csid-class"></a>CSid クラス
 
@@ -86,8 +86,8 @@ class CSid
 |-|-|
 |[operator ==](#operator_eq_eq)|2 つのセキュリティ記述子オブジェクトの等価性をテストします。|
 |[operator !=](#operator_neq)|非等値の 2 つのセキュリティ記述子オブジェクトをテストします。|
-|[演算子 \<](#operator_lt_)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
-|[operator >](#operator_gt_)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
+|[演算子 \<](#operator_lt)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
+|[operator >](#operator_gt)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
 |[演算子 \<=](#operator_lt__eq)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
 |[operator >=](#operator_gt__eq)|2 つのセキュリティ記述子オブジェクトの相対値を比較します。|
 
@@ -119,7 +119,7 @@ LPCTSTR AccountName() const throw(...);
 
 このメソッドが、指定した名前を検索しようとしています。 `SID` (セキュリティ識別子)。 完全な詳細については、次を参照してください。 [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)します。
 
-アカウント名がない場合、`SID`がある`AccountName`空の文字列を返します。 これは、ネットワークのタイムアウトが原因でこのメソッドが名前を見つける場合に発生します。 ログオンなどに対応するアカウント名を含むセキュリティ識別子の場合にも発生`SID`ログオン セッションを識別します。
+アカウント名がない場合、`SID`がある`AccountName`空の文字列を返します。 これは、ネットワークのタイムアウトが原因でこのメソッドが名前を見つける場合に発生します。 発生の対応するアカウント名のない、セキュリティ識別子など、`SID`サインイン セッションを識別します。
 
 ##  <a name="csid"></a>  CSid::CSid
 
@@ -210,7 +210,7 @@ LPCTSTR Domain() const throw(...);
 
 このメソッドが、指定した名前を検索しようとしています。 `SID` (セキュリティ識別子)。 完全な詳細については、次を参照してください。 [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)します。
 
-アカウント名がない場合、`SID`がある`Domain`空の文字列としてドメインを返します。 これは、ネットワークのタイムアウトが原因でこのメソッドが名前を見つける場合に発生します。 ログオンなどに対応するアカウント名を含むセキュリティ識別子の場合にも発生`SID`ログオン セッションを識別します。
+アカウント名がない場合、`SID`がある`Domain`空の文字列としてドメインを返します。 これは、ネットワークのタイムアウトが原因でこのメソッドが名前を見つける場合に発生します。 発生の対応するアカウント名のない、セキュリティ識別子など、`SID`サインイン セッションを識別します。
 
 ##  <a name="equalprefix"></a>  CSid::EqualPrefix
 

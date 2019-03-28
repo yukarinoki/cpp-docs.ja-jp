@@ -1,6 +1,6 @@
 ---
 title: CPathT クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CPathT
 - ATLPATH/ATL::CPathT
@@ -49,19 +49,19 @@ f1_keywords:
 helpviewer_keywords:
 - CPathT class
 ms.assetid: eba4137d-1fd2-4b44-a2e1-0944db64df3c
-ms.openlocfilehash: 36d8710bd7bb055d8629dec57ec4d8c3602c8f79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 109f9baefd0e6775db05eeba8cb78542bf60a9ac
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273024"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565793"
 ---
 # <a name="cpatht-class"></a>CPathT クラス
 
 このクラスは、パスを表します。
 
 > [!IMPORTANT]
->  このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
+> このクラスとそのメンバーは、Windows ランタイムで実行するアプリケーションでは使用できません。
 
 ## <a name="syntax"></a>構文
 
@@ -139,7 +139,7 @@ ATL と MFC の文字列クラスのパスを使用する (を参照してくだ
 |----------|-----------------|
 |[CPathT::operator const 文字列型 (& a)](#operator_const_stringtype_amp)|この演算子は、オブジェクトを文字列として扱うことができます。|
 |[CPathT::operator CPathT::PCXSTR](#operator_cpatht__pcxstr)|この演算子は、オブジェクトを文字列として扱うことができます。|
-|[CPathT::operator 文字列型 (& a)](#operator_stringtype)|この演算子は、オブジェクトを文字列として扱うことができます。|
+|[CPathT::operator 文字列型 (& a)](#operator_stringtype_amp)|この演算子は、オブジェクトを文字列として扱うことができます。|
 |[CPathT::operator + =](#operator_add_eq)|この演算子は、パスに文字列を追加します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
@@ -653,7 +653,7 @@ CPathT<StringType>& operator+=(PCXSTR pszMore);
 この演算子は、オブジェクトを文字列として扱うことができます。
 
 ```
-operatorconst StringType&() const throw();
+operator const StringType&() const throw();
 ```
 
 ### <a name="return-value"></a>戻り値
@@ -665,19 +665,19 @@ operatorconst StringType&() const throw();
 この演算子は、オブジェクトを文字列として扱うことができます。
 
 ```
-operatorPCXSTR() const throw();
+operator PCXSTR() const throw();
 ```
 
 ### <a name="return-value"></a>戻り値
 
 このオブジェクトによって管理されている現在のパスを表す文字列を返します。
 
-##  <a name="operator_stringtype__amp"></a>  CPathT::operator 文字列型 &amp;
+##  <a name="operator_stringtype_amp"></a>  CPathT::operator 文字列型 &amp;
 
 この演算子は、オブジェクトを文字列として扱うことができます。
 
 ```
-operatorStringType&() throw();
+operator StringType&() throw();
 ```
 
 ### <a name="return-value"></a>戻り値

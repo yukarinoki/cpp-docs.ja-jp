@@ -1,16 +1,16 @@
 ---
-title: 共有または resuse Visual Studio プロジェクトの設定 - C++
-ms.date: 11/28/2018
+title: 共有または Visual Studio プロジェクトの設定 - C++ を再利用
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], reusable
-ms.openlocfilehash: 50e3795a4708a3c15ed25ee7ff6565470ef6989a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b49c125e0341a2de68bbcd992dd8f9afaa99233d
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827941"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565127"
 ---
-# <a name="share-or-resuse-visual-studio-project-settings"></a>共有または resuse Visual Studio プロジェクトの設定
+# <a name="share-or-reuse-visual-studio-project-settings"></a>共有または Visual Studio プロジェクトの設定を再利用
 
 複数のプロジェクトで他のユーザーと共有したり、再利用する設定のカスタム グループを作成するには使用**プロパティ マネージャー**を作成する、*プロパティ シート*(.props ファイル) の種類ごとの設定を保存するには再利用したり、他のユーザーと共有することができるようにするためのプロジェクトです。 プロパティを使用して"global"設定を作成するには、その他の方法よりもエラーが発生しやすいシートははるかに少ない。 
 

@@ -1,25 +1,27 @@
 ---
 title: CDocObjectServerItem クラス
-ms.date: 09/12/2018
+ms.date: 03/27/2019
 f1_keywords:
 - CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::CDocObjectServerItem
 - AFXDOCOB/CDocObjectServerItem::GetDocument
+- AFXDOCOB/CDocObjectServerItem::OnDoVerb
 - AFXDOCOB/CDocObjectServerItem::OnHide
 - AFXDOCOB/CDocObjectServerItem::OnShow
 helpviewer_keywords:
 - CDocObjectServerItem [MFC], CDocObjectServerItem
 - CDocObjectServerItem [MFC], GetDocument
+- CDocObjectServerItem [MFC], OnDoVerb
 - CDocObjectServerItem [MFC], OnHide
 - CDocObjectServerItem [MFC], OnShow
 ms.assetid: 530f7156-50c8-4806-9328-602c9133f622
-ms.openlocfilehash: f11c202e85453897f6ebf04d8dc165d2b733a406
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 66ff2326cd3d08b3f6c8399d7e948d6aab5074c3
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275272"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565624"
 ---
 # <a name="cdocobjectserveritem-class"></a>CDocObjectServerItem クラス
 
@@ -49,7 +51,7 @@ class CDocObjectServerItem : public COleServerItem
 
 |名前|説明|
 |----------|-----------------|
-|[CDocObjectServerItem::OnDoVerb](#ondoverb)|フレームワーク DocObject 項目を非表示しようとする場合は、例外をスローします。|
+|[CDocObjectServerItem::OnDoVerb](#ondoverb)|動詞を実行すると呼ばれます。|
 |[CDocObjectServerItem::OnHide](#onhide)|フレームワーク DocObject 項目を非表示しようとする場合は、例外をスローします。|
 |[CDocObjectServerItem::OnShow](#onshow)|DocObject アイテムの埋め込みを行うために、フレームワークによって呼び出されるアクティブな。 項目がない場合、DocObject、呼び出します[COleServerItem::OnShow](../../mfc/reference/coleserveritem-class.md#onshow)します。|
 
@@ -108,6 +110,23 @@ COleServerDoc* GetDocument() const;
 ### <a name="remarks"></a>Remarks
 
 これにより、サーバーのドキュメントへの引数として渡したへのアクセス、 [CDocObjectServerItem](#cdocobjectserveritem)コンス トラクター。
+
+##  <a name="ondoverb"></a>  CDocObjectServerItem::OnDoVerb
+
+指定した動詞を実行するためにフレームワークによって呼び出されます。
+
+```
+virtual void OnDoVerb(LONG iVerb);
+```
+
+### <a name="parameters"></a>パラメーター
+
+*iVerb*<br/>
+実行する動詞を指定します。 使用可能な値は、次を参照してください。 [IOleObject::DoVerb](/windows/desktop/api/oleidl/nf-oleidl-ioleobject-doverb) Windows SDK に含まれています。
+
+### <a name="remarks"></a>Remarks
+
+既定の実装、 [OnShow](#onshow)メンバー関数の場合、項目が DocObject、OLEIVERB_INPLACEACTIVATE またはでを指定します。 既定の実装を呼び出して、項目がない場合、DocObject または異なる動詞を指定する、 [COleServerItem::OnDoVerb](../../mfc/reference/coleserveritem-class.md#ondoverb)します。
 
 ##  <a name="onhide"></a>  CDocObjectServerItem::OnHide
 

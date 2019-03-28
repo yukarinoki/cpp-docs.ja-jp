@@ -1,6 +1,6 @@
 ---
 title: Platform::Collections::Map クラス
-ms.date: 01/18/2018
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::Map::Map
@@ -15,12 +15,12 @@ f1_keywords:
 helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
-ms.openlocfilehash: cbe0b5e422c05cee46bff85e816ecc726c667749
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745178"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565283"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
@@ -93,7 +93,7 @@ ref class Map sealed;
 |||
 |-|-|
 |名前|説明|
-|[Map::MapChanged](#mapchanged-event.md) `event`|マップが変更されたときに発生します。|
+|[Map::mapchanged](#mapchanged)イベント|マップが変更されたときに発生します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -238,7 +238,7 @@ Map(
 並べ替えキーとして 2 つの要素値を比較してマップ内の相対順序を決定できる関数オブジェクトを提供する型。
 
 *m*<br/>
-参照または[Lvalues と Rvalues](../cpp/lvalues-and-rvalues-visual-cpp.md)を`map Class`現在のマップを初期化するために使用されます。
+参照または[rvalue](../cpp/lvalues-and-rvalues-visual-cpp.md)を`map Class`現在のマップを初期化するために使用されます。
 
 *first*<br/>
 現在のマップを初期化するために使用される要素の範囲内の最初の要素の入力反復子。

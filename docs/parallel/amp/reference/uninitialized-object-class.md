@@ -1,6 +1,6 @@
 ---
 title: uninitialized_object クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - uninitialized_object
 - AMPRT/uninitialized_object
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - uninitialized_object class
 ms.assetid: 6ae3c4e8-64a6-4511-a158-03be197b63af
-ms.openlocfilehash: 1c431364aee0f1d1e75059abdb023ae52cf92155
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 05c24672531d50fa9bc31587e6c6733fdff21f29
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279333"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565542"
 ---
 # <a name="uninitializedobject-class"></a>uninitialized_object クラス
 
@@ -31,7 +31,7 @@ class uninitialized_object : public runtime_exception;
 
 |名前|説明|
 |----------|-----------------|
-|[uninitialized_object コンス トラクター](#ctor)|`uninitialized_object` クラスの新しいインスタンスを初期化します。|
+|[uninitialized_object コンス トラクター](#uninitialized_object)|`uninitialized_object` クラスの新しいインスタンスを初期化します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -46,17 +46,18 @@ class uninitialized_object : public runtime_exception;
 **ヘッダー:** amprt.h
 
 **名前空間:** コンカレンシー
-## <a name="uninitialized_object__ctor"></a> unsupported_feature
 
-unsupported_feature 例外の新しいインスタンスを構築します。
+## <a name="uninitializedobject"></a>uninitialized_object
+
+`uninitialized_object` 例外の新しいインスタンスを構築します。
 
 ### <a name="syntax"></a>構文
 
 ```
-explicit unsupported_feature(
+explicit uninitialized_object(
     const char * _Message ) throw();
 
-unsupported_feature() throw();
+uninitialized_object() throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -66,7 +67,7 @@ unsupported_feature() throw();
 
 ### <a name="return-value"></a>戻り値
 
-`unsupported_feature` オブジェクト。
+`uninitialized_object`例外オブジェクト。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,6 +1,6 @@
 ---
 title: duration クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2016
 f1_keywords:
 - chrono/std::chrono::duration
 - chrono/std::chrono::duration::duration
@@ -11,12 +11,12 @@ f1_keywords:
 ms.assetid: 06b863b3-65be-4ded-a72e-6e1eb1531077
 helpviewer_keywords:
 - std::chrono [C++], duration
-ms.openlocfilehash: 2b710de6275933b5dc05814664caef92cf251da4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49c68b1650ced36ebcf949ae2594508480e15136
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568892"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565572"
 ---
 # <a name="duration-class"></a>duration クラス
 
@@ -159,7 +159,7 @@ static constexpr duration min();
 
 実際には、`duration(duration_values<rep>::min())` を返します。
 
-## <a name="duration__operator-"></a>  duration::operator-
+## <a name="operator-"></a>  duration::operator-
 
 無効にされたティック カウントと共に、`duration` オブジェクトのコピーを返します。
 
@@ -167,7 +167,7 @@ static constexpr duration min();
 constexpr duration operator-() const;
 ```
 
-## <a name="duration__operator--"></a>  duration::operator--
+## <a name="operator--"></a>  duration::operator--
 
 格納されたティック カウントをデクリメントします。
 
@@ -277,7 +277,7 @@ duration& operator+=(const duration& Dur);
 
 加算が実行された後の `duration` オブジェクト。
 
-## <a name="duration__operator-_eq"></a>  duration::operator-=
+## <a name="operator-_eq"></a>  duration::operator-=
 
 指定した `duration` オブジェクトのティック カウントを、格納されたティック カウントから減算します。
 

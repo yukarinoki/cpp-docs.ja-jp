@@ -1,6 +1,6 @@
 ---
 title: basic_ostream クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ostream/std::basic_ostream
 - ostream/std::basic_ostream::flush
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - std::basic_ostream [C++], tellp
 - std::basic_ostream [C++], write
 ms.assetid: 5baadc65-b662-4fab-8c9f-94457c58cda1
-ms.openlocfilehash: dce4911bd4b7abe6c73551d6a0b178d9b2700dbb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 64a32513e9dc151e64fccdb0ef678a75588f0a41
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50543638"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565728"
 ---
 # <a name="basicostream-class"></a>basic_ostream クラス
 
@@ -48,7 +48,7 @@ class basic_ostream : virtual public basic_ios<Elem, Tr>
 
 ## <a name="remarks"></a>Remarks
 
-[operator<<](#op_lt_lt) をオーバーロードするメンバー関数のほとんどは、書式が設定されている出力関数です。 これらは以下のパターンに従います。
+[operator<<](#basic_ostream_operator_lt_lt) をオーバーロードするメンバー関数のほとんどは、書式が設定されている出力関数です。 これらは以下のパターンに従います。
 
 ```cpp
 iostate state = goodbit;
@@ -122,7 +122,7 @@ basic_istream\< **Elem**, **Tr**> クラスのオブジェクトは、[basic_ios
 |[put](#put)|ストリームに 1 文字渡します。|
 |[seekp](#seekp)|出力ストリーム内の位置をリセットします。|
 |[sentry](#sentry)|この入れ子になったクラスは、宣言によって書式設定された出力関数と書式設定されていない出力関数を構成するオブジェクトを記述します。|
-|[swap](#op_eq)|`basic_ostream` オブジェクトの値を、指定した `basic_ostream` オブジェクトの値と交換します。|
+|[swap](#swap)|`basic_ostream` オブジェクトの値を、指定した `basic_ostream` オブジェクトの値と交換します。|
 |[tellp](#tellp)|出力ストリーム内の位置を報告します。|
 |[write](#write)|ストリームに文字を渡します。|
 
@@ -130,7 +130,7 @@ basic_istream\< **Elem**, **Tr**> クラスのオブジェクトは、[basic_ios
 
 |演算子|説明|
 |-|-|
-|[operator=](#basic_ostream_operator_eq)|指定された `basic_ostream` オブジェクト パラメーターの値をこのオブジェクトに代入します。|
+|[operator=](#op_eq)|指定された `basic_ostream` オブジェクト パラメーターの値をこのオブジェクトに代入します。|
 |[operator<<](#basic_ostream_operator_lt_lt)|ストリームに書き込みます。|
 
 ## <a name="requirements"></a>必要条件
@@ -470,7 +470,7 @@ int main()
 
 この入れ子になったクラスは、宣言によって書式設定された出力関数と書式設定されていない出力関数を構成するオブジェクトを記述します。
 
-クラスの sentry {パブリック: 明示的な sentry (basic_ostream\<Elem, Tr > & _Ostr); const; 演算子 bool() ~ sentry();};
+class sentry { public: explicit sentry(basic_ostream\<Elem, Tr>& _Ostr); operator bool() const; ~sentry(); };
 
 ### <a name="remarks"></a>Remarks
 

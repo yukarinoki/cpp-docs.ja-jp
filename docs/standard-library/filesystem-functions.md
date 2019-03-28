@@ -1,6 +1,6 @@
 ---
 title: '&lt;filesystem&gt; 関数'
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - FILESYSTEM/std::experimental::filesystem::absolute
 - FILESYSTEM/std::experimental::filesystem::canonical
@@ -84,12 +84,12 @@ helpviewer_keywords:
 - std::experimental::filesystem::system_complete
 - std::experimental::filesystem::temp_directory_path
 - std::experimental::filesystem::u8path
-ms.openlocfilehash: 49a5b59234d92d2587abceff80382e477f66e762
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 11a1857052dd7c242993e8a19afe26aae3c97c06
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333309"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565691"
 ---
 # <a name="ltfilesystemgt-functions"></a>&lt;filesystem&gt; 関数
 
@@ -236,7 +236,7 @@ bool copy_file(const path& from, const path& to, copy_options opts, error_code& 
 
 関数が返す**true**コピーが成功すると、それ以外の場合とが行われた場合**false**します。
 
-## <a name="copy_symlink "></a>  copy_symlink
+## <a name="copy_symlink"></a>  copy_symlink
 
 ```cpp
 void copy_symlink(const path& from, const path& to);
@@ -266,7 +266,7 @@ bool create_directory(const path& pval, const path& attr, error_code& ec) noexce
 
 関数は、ディレクトリを作成します。 *pval*に応じて。 のみ true を返します、ディレクトリを実際に作成かどうか*pval*、既存のファイルからのアクセス許可をコピーする場合*attr*、またはを使用して`perms::all`、オーバー ロードの*attr*パラメーター。
 
-## <a name="create_directory_symlink "></a>  create_directory_symlink
+## <a name="create_directory_symlink"></a>  create_directory_symlink
 
 ```cpp
 void create_directory_symlink(const path& to, const path& link);
@@ -284,7 +284,7 @@ void create_hard_link(const path& to, const path& link, error_code& ec) noexcept
 
 関数は、ディレクトリまたはファイルへのハード リンクとしてリンクを作成します。*に*します。
 
-## <a name="create_symlink "></a>  create_symlink
+## <a name="create_symlink"></a>  create_symlink
 
 ```cpp
 void create_symlink(const path& to,  const path& link);
@@ -379,7 +379,7 @@ bool is_character_file(const path& pval, error_code& ec) noexcept;
 
 最初の関数は `stat.type() == file_type::character` を返します。 関数を返します。 残りの`is_character_file(status(pval))`します。
 
-## <a name="is_directory "></a>  is_directory
+## <a name="is_directory"></a>  is_directory
 
 ```cpp
 bool is_directory(file_status stat) noexcept;
@@ -419,7 +419,7 @@ bool is_other(const path& pval, error_code& ec) noexcept;
 
 最初の関数は `stat.type() == file_type::other` を返します。 関数を返します。 残りの`is_other(status(pval))`します。
 
-## <a name="s_regular_file"></a>  is_regular_file
+## <a name="is_regular_file"></a>  is_regular_file
 
 ```cpp
 bool is_regular_file(file_status stat) noexcept;

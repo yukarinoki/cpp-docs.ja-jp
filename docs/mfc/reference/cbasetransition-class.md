@@ -1,6 +1,6 @@
 ---
 title: CBaseTransition クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CBaseTransition
 - AFXANIMATIONCONTROLLER/CBaseTransition
@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CBaseTransition [MFC], m_transition
 - CBaseTransition [MFC], m_type
 ms.assetid: dfe84007-bbc5-43b7-b5b8-fae9145573bf
-ms.openlocfilehash: 1f9bc3708974511506741a35c11676df2b0be592
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 37bf536403d0edfc16b098929a4758a6c6958cf1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258373"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565910"
 ---
 # <a name="cbasetransition-class"></a>CBaseTransition クラス
 
@@ -73,8 +73,8 @@ class CBaseTransition : public CObject;
 
 |名前|説明|
 |----------|-----------------|
-|[CBaseTransition::CBaseTransition](#cbasetransition)|切り替え効果の基本オブジェクトを構築します。|
-|[CBaseTransition::~CBaseTransition](#cbasetransition__~cbasetransition)|デストラクターです。 移行のオブジェクトが破棄されるときに呼び出されます。|
+|[CBaseTransition::CBaseTransition](#cbasetransition)|基本遷移オブジェクトを構築します。|
+|[CBaseTransition::~CBaseTransition](#_dtorcbasetransition)|デストラクターです。 移行のオブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -170,7 +170,7 @@ BOOL AddToStoryboardAtKeyframes(IUIAnimationStoryboard* pStoryboard);
 
 ##  <a name="cbasetransition"></a>  CBaseTransition::CBaseTransition
 
-切り替え効果の基本オブジェクトを構築します。
+基本遷移オブジェクトを構築します。
 
 ```
 CBaseTransition();
@@ -320,7 +320,7 @@ BOOL IsAdded();
 
 ### <a name="remarks"></a>Remarks
 
-このフラグは、最上位レベルのコードは、ストーリー ボードへの遷移を追加すると、内部的に設定されます。
+このフラグは、最上位のコードは、ストーリー ボードへの遷移を追加すると、内部的に設定されます。
 
 ##  <a name="m_badded"></a>  CBaseTransition::m_bAdded
 

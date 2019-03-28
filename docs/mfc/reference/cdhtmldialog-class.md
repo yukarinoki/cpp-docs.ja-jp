@@ -1,6 +1,6 @@
 ---
 title: CDHtmlDialog クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDHtmlDialog
 - AFXDHTML/CDHtmlDialog
@@ -116,12 +116,12 @@ helpviewer_keywords:
 - CDHtmlDialog [MFC], m_strCurrentUrl
 - CDHtmlDialog [MFC], m_szHtmlResID
 ms.assetid: 3f941c85-87e1-4f0f-9cc5-ffee8498b312
-ms.openlocfilehash: 5b3e34987b5d6b63ee302ba53e456c448ac3c3d2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bda980c26f9791e1d4f03026f7e118e69a4ab881
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413954"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565806"
 ---
 # <a name="cdhtmldialog-class"></a>CDHtmlDialog クラス
 
@@ -140,7 +140,7 @@ class CDHtmlDialog : public CDialog, public CDHtmlEventSink
 |名前|説明|
 |----------|-----------------|
 |[CDHtmlDialog::CDHtmlDialog](#cdhtmldialog)|CDHtmlDialog オブジェクトを構築します。|
-|[CDHtmlDialog::~CDHtmlDialog](#cdhtmldialog__~cdhtmldialog)|CDHtmlDialog オブジェクトを破棄します。|
+|[CDHtmlDialog::~CDHtmlDialog](#_dtorcdhtmldialog)|CDHtmlDialog オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -352,7 +352,7 @@ virtual BOOL CreateControlSite(
 void DDX_DHtml_AxControl(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT& var);
 
 void DDX_DHtml_AxControl(
@@ -370,7 +370,7 @@ void DDX_DHtml_AxControl(
 *szId*<br/>
 ActiveX コントロールの HTML ソース内のオブジェクト タグの ID パラメーターの値。
 
-*dispid*<br/>
+*dispId*<br/>
 データを交換するプロパティのディスパッチ ID。
 
 *szPropName*<br/>
@@ -417,43 +417,43 @@ HTML コントロールの ID パラメーターに指定した値。
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     CString& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     short& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     int& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     long& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     DWORD& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     float& value);
 
 void DDX_DHtml_ElementText(
     CDataExchange* pDX,
     LPCTSTR szId,
-    DISPID dispid,
+    DISPID dispId,
     double& value);
 ```
 
@@ -465,7 +465,7 @@ void DDX_DHtml_ElementText(
 *szId*<br/>
 HTML コントロールの ID パラメーターに指定した値。
 
-*dispid*<br/>
+*dispId*<br/>
 データを交換する HTML 要素のディスパッチ ID。
 
 *value*<br/>
@@ -510,7 +510,7 @@ void DDX_DHtml_SelectIndex(
 ポインターを[CDataExchange](../../mfc/reference/cdataexchange-class.md)オブジェクト。
 
 *szId*<br/>
-HTML コントロールの id パラメーターに指定した値。
+HTML コントロールの指定した値`id`パラメーター。
 
 *value*<br/>
 交換する値。
@@ -651,11 +651,11 @@ VARIANT GetControlProperty(
 
 VARIANT GetControlProperty(
     LPCTSTR szId,
-    DISPID dispid);
+    DISPID dispId);
 
 VARIANT GetControlProperty(
     IDispatch* pdispControl,
-    DISPID dispid);
+    DISPID dispId);
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -669,7 +669,7 @@ ActiveX コントロールの HTML ID。
 *pdispControl*<br/>
 `IDispatch` ActiveX コントロールのポインター。
 
-*dispid*<br/>
+*dispId*<br/>
 プロパティのディスパッチ ID。
 
 ### <a name="return-value"></a>戻り値
@@ -802,7 +802,7 @@ template <class Q> HRESULT GetElementInterface(
 
 HRESULT GetElementInterface(
     LPCTSTR szElementId,
-    REFIID riid,
+    REFIID refiid,
     void** ppvObj);
 ```
 
@@ -814,7 +814,7 @@ HTML 要素の ID。
 *ppvObj*<br/>
 アドレスのポインター、要素が見つからない場合に、要求されたインターフェイス ポインターが格納されると、クエリは成功します。
 
-*riid*<br/>
+*refiid*<br/>
 要求されたインターフェイスの ID (IID) のインターフェイスです。
 
 ### <a name="return-value"></a>戻り値
@@ -827,12 +827,12 @@ HTML 要素の ID。
 
 ##  <a name="getelementproperty"></a>  CDHtmlDialog::GetElementProperty
 
-によって識別されたプロパティの値を取得*dispid*で識別される HTML 要素から*szElementId*します。
+によって識別されたプロパティの値を取得*dispId*で識別される HTML 要素から*szElementId*します。
 
 ```
 VARIANT GetElementProperty(
     LPCTSTR szElementId,
-    DISPID dispid);
+    DISPID dispId);
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -840,7 +840,7 @@ VARIANT GetElementProperty(
 *szElementId*<br/>
 HTML 要素の ID。
 
-*dispid*<br/>
+*dispId*<br/>
 プロパティのディスパッチ ID。
 
 ### <a name="return-value"></a>戻り値
@@ -1245,12 +1245,12 @@ ActiveX コントロールのプロパティを新しい値に設定します。
 ```
 void SetControlProperty(
     LPCTSTR szElementId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 
 void SetControlProperty(
     IDispatch* pdispControl,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 
 void SetControlProperty(
@@ -1264,7 +1264,7 @@ void SetControlProperty(
 *szElementId*<br/>
 ActiveX コントロールの HTML ID。
 
-*dispid*<br/>
+*dispId*<br/>
 設定するプロパティのディスパッチ ID。
 
 *pVar*<br/>
@@ -1296,8 +1296,7 @@ void SetElementHtml(
 HTML 要素の ID。
 
 *bstrText*<br/>
-
-  `innerHTML` プロパティの新しい値。
+`innerHTML` プロパティの新しい値。
 
 *punkElem*<br/>
 `IUnknown` HTML 要素のポインター。
@@ -1309,7 +1308,7 @@ HTML 要素のプロパティを設定します。
 ```
 void SetElementProperty(
     LPCTSTR szElementId,
-    DISPID dispid,
+    DISPID dispId,
     VARIANT* pVar);
 ```
 
@@ -1318,7 +1317,7 @@ void SetElementProperty(
 *szElementId*<br/>
 HTML 要素の ID。
 
-*dispid*<br/>
+*dispId*<br/>
 設定するプロパティのディスパッチ ID。
 
 *pVar*<br/>
@@ -1344,8 +1343,7 @@ void SetElementText(
 HTML 要素の ID。
 
 *bstrText*<br/>
-
-  `innerText` プロパティの新しい値。
+`innerText` プロパティの新しい値。
 
 *punkElem*<br/>
 `IUnknown` HTML 要素のポインター。

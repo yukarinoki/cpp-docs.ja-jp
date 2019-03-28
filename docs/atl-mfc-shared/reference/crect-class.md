@@ -34,12 +34,12 @@ helpviewer_keywords:
 - LPRECT operator
 - RECT structure
 ms.assetid: dee4e752-15d6-4db4-b68f-1ad65b2ed6ca
-ms.openlocfilehash: fadb430d570e516d915d520f06e4c247b131c3db
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6e87d77eec526cbfcfe5c1e6e78b0287226f0613
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739429"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565698"
 ---
 # <a name="crect-class"></a>CRect クラス
 
@@ -950,7 +950,7 @@ A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize
 
 パラメーターの*x*と*y* (または`cx`と`cy`) に値を追加`CRect`します。
 
-3 番目のオーバー ロードは、拡張`CRect`の各メンバーのパラメーターで指定された単位数。
+3 番目のオーバー ロードは、拡張`CRect`によって各メンバーのパラメーターで指定されたユニットの数。
 
 ### <a name="example"></a>例
 
@@ -988,7 +988,7 @@ A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize
 
 パラメーターの*x*と*y* (または`cx`と`cy`) から値を減算する`CRect`します。
 
-3 番目のオーバー ロードを縮小します`CRect`の各メンバーのパラメーターで指定された単位数。 このオーバー ロードの機能に注意してください[DeflateRect](#deflaterect)します。
+3 番目のオーバー ロードを縮小します`CRect`によって各メンバーのパラメーターで指定されたユニットの数。 このオーバー ロードの機能に注意してください[DeflateRect](#deflaterect)します。
 
 ### <a name="example"></a>例
 
@@ -1085,7 +1085,7 @@ A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または[CSize
 
 パラメーターの*x*と*y* (または`cx`と`cy`) パラメーターに追加されます`CRect`の位置します。
 
-新しい 3 つ目のオーバー ロードを返します`CRect`と等しい`CRect`膨らませると各メンバーのパラメーターで指定された単位の数。
+新しい 3 つ目のオーバー ロードを返します`CRect`と等しい`CRect`膨らませると各メンバーのパラメーターで指定されたユニットの数。
 
 ### <a name="example"></a>例
 
@@ -1128,7 +1128,7 @@ A[サイズ](/windows/desktop/api/windef/ns-windef-tagsize)構造または`CSize
 
 パラメーターの*x*と*y* (または`cx`と`cy`) パラメーターが減算`CRect`の位置します。
 
-新しい 3 つ目のオーバー ロードを返します`CRect`と等しい`CRect`倍率の各メンバーのパラメーターで指定された単位数。 このオーバー ロードの機能に注意してください[DeflateRect](#deflaterect)ではなく、 [SubtractRect](#subtractrect)します。
+新しい 3 つ目のオーバー ロードを返します`CRect`と等しい`CRect`倍率によって、パラメーターの各メンバーに指定されたユニットの数。 このオーバー ロードの機能に注意してください[DeflateRect](#deflaterect)ではなく、 [SubtractRect](#subtractrect)します。
 
 ### <a name="example"></a>例
 

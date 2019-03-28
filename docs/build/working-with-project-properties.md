@@ -1,19 +1,19 @@
 ---
 title: C++ コンパイラを設定し、Visual Studio でのプロパティのビルド
 description: C++ コンパイラとリンカーのオプションとその他のビルド設定を変更するのにには、Visual Studio IDE を使用します。
-ms.date: 12/10/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - project properties [C++], modifying
 - properties [C++]
 - Visual C++ projects, properties
 - projects [C++], properties
 ms.assetid: 9b0d6f8b-7d4e-4e61-aa75-7d14944816cd
-ms.openlocfilehash: 55adb6dc91919bda9c2827a89e5de536667085c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: ab5456bfc8a1b8305813f4ee4a4399091de15aee
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827888"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564915"
 ---
 # <a name="set-compiler-and-build-properties"></a>セットのコンパイラとビルド プロパティ
 
@@ -65,23 +65,21 @@ MSBuild では、特定の文字列値に含まれているディレクトリと
 
 ![プロジェクトのプロパティ ページ](media/project_property_pages_vc.png "Project_Property_Pages_VC")
 
-プロパティ エディターを使って、すべての使用可能なマクロの値を見ることができます。 マクロについては、後の「[プロパティ ページのマクロ](#bkmkPropertiesVersusMacros)」で説明します。
+プロパティ エディターを使って、すべての使用可能なマクロの値を見ることができます。
 
 ### <a name="predefined-macros"></a>定義済みマクロ
 
 *グローバル マクロ*<br/>
-プロジェクト構成のすべての項目に適用されます。 
-  `$(name)` の構文を持ちます。 Visual Studio インストールのルート ディレクトリを格納するグローバル マクロの例は `$(VCInstallDir)` です。 グローバル マクロは、MSBuild の `PropertyGroup` に対応します。
+プロジェクト構成のすべての項目に適用されます。 `$(name)` の構文を持ちます。 Visual Studio インストールのルート ディレクトリを格納するグローバル マクロの例は `$(VCInstallDir)` です。 グローバル マクロは、MSBuild の `PropertyGroup` に対応します。
 
 *項目マクロ*<br/>
-
-  `%(name)` の構文を持ちます。 ファイルの場合、項目マクロはそのファイルのみに適用されます。たとえば、`%(AdditionalIncludeDirectories)` を使用して、特定のファイルだけに適用するインクルード ディレクトリを指定します。 この種類の項目マクロは、MSBuild の `ItemGroup` のメタデータに対応します。 プロジェクト構成のコンテキストで使用される場合、項目マクロは、特定の種類のすべてのファイルに適用されます。 たとえば、C/C++ の **[プリプロセッサの定義]** 構成プロパティは、プロジェクトのすべての .cpp ファイルに適用する `%(PreprocessorDefinitions)` 項目マクロを使用できます。 この種類の項目マクロは、MSBuild の `ItemDefinitionGroup` のメタデータに対応します。 詳細については、「[項目定義](/visualstudio/msbuild/item-definitions)」を参照してください。
+`%(name)` の構文を持ちます。 ファイルの場合、項目マクロはそのファイルのみに適用されます。たとえば、`%(AdditionalIncludeDirectories)` を使用して、特定のファイルだけに適用するインクルード ディレクトリを指定します。 この種類の項目マクロは、MSBuild の `ItemGroup` のメタデータに対応します。 プロジェクト構成のコンテキストで使用される場合、項目マクロは、特定の種類のすべてのファイルに適用されます。 たとえば、C/C++ の **[プリプロセッサの定義]** 構成プロパティは、プロジェクトのすべての .cpp ファイルに適用する `%(PreprocessorDefinitions)` 項目マクロを使用できます。 この種類の項目マクロは、MSBuild の `ItemDefinitionGroup` のメタデータに対応します。 詳細については、「[項目定義](/visualstudio/msbuild/item-definitions)」を参照してください。
 
 ### <a name="user-defined-macros"></a>ユーザー定義マクロ
 
 プロジェクトのビルドで変数として使う "*ユーザー定義マクロ*" を作成できます。 たとえば、ユーザー定義のマクロを作成して、カスタム ビルド ステップまたはカスタム ビルド ツールに値を渡すことができます。 ユーザー定義マクロは、名前と値のペアです。 プロジェクト ファイル内では、**$(**<em>name</em>**)** という表記を使って、その値にアクセスします。
 
-ユーザー定義マクロは、プロパティ シートに格納されます。 プロジェクトにプロパティ シートが含まれない場合は、下の手順に従って 1 つを作成[Visual Studio の C++ プロジェクトの設定を共有または resuse](#bkmkPropertySheets)します。
+ユーザー定義マクロは、プロパティ シートに格納されます。 プロジェクトにプロパティ シートが含まれない場合は、下の手順に従って 1 つを作成[Visual Studio プロジェクトの設定を共有または再利用](create-reusable-property-configurations.md)します。
 
 #### <a name="to-create-a-user-defined-macro"></a>ユーザー定義マクロを作成するには
 
@@ -130,17 +128,17 @@ MSVC コンパイラ (cl.exe) は、LIB、LIBPATH、PATH、および INCLUDE 具
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[共有または resuse Visual Studio プロジェクトの設定](create-reusable-property-configurations.md)<br/>
+[Visual Studio プロジェクトの設定を共有または再利用する](create-reusable-property-configurations.md)<br/>
 共有できるカスタムのビルド設定または再利用の .props ファイルを作成する方法。
 
 [プロジェクト プロパティの継承](project-property-inheritance.md)<br/>
 .Props、.targets、.vcxproj ファイルおよびビルド プロセスの環境変数の評価の順序について説明します。
 
-[プロジェクト ファイルを変更することがなくプロパティとターゲットを変更します。](modify-project-properties-without-changing-project-file.md)<br/>
+[プロジェクト ファイルを変更しないでプロパティとターゲットを変更する](modify-project-properties-without-changing-project-file.md)<br/>
 プロジェクト ファイルを変更することがなく、一時的なビルド設定を作成する方法。 
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio プロジェクトの C++](creating-and-managing-visual-cpp-projects.md)<br/>
+[Visual Studio プロジェクト - C++](creating-and-managing-visual-cpp-projects.md)<br/>
 [.vcxproj と .props のファイル構造](reference/vcxproj-file-structure.md)<br/>
 [プロパティ ページの XML ファイル](reference/property-page-xml-files.md)<br/>

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CObArray [MFC], SetAtGrow
 - CObArray [MFC], SetSize
 ms.assetid: 2ba2c194-2c6c-40ff-9db4-e9dbe57e1f57
-ms.openlocfilehash: c21f89215e08523188eb32490d7b1d5506299fb5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9b2888c82ad9522925ffbd53923d3988863f56ca
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259452"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565361"
 ---
 # <a name="cwordarray-class"></a>CWordArray クラス
 
@@ -292,7 +292,7 @@ void RemoveCommandRangeUIHandler(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、メッセージ ハンドラーを指定されたコマンド Id にマップのグループを削除します。 *cmdIDMin*と*cmdIDMax*、コマンド ソース オブジェクトからです。
+このメソッドは、メッセージ ハンドラーを指定したコマンド Id にマップのグループを削除します。 *cmdIDMin*と*cmdIDMax*、コマンド ソース オブジェクトからです。
 
 ##  <a name="removecommandrangeuihandler"></a>  ICommandSource::RemoveCommandRangeUIHandler
 
@@ -314,7 +314,7 @@ void RemoveCommandRangeUIHandler(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、によって指定されたコマンド Id にマップされている、ユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除します。 *cmdIDMin*と*cmdIDMax*、コマンド ソース オブジェクトからです。
+このメソッドで指定されたコマンド Id にマップされている、ユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除します。 *cmdIDMin*と*cmdIDMax*、コマンド ソース オブジェクトからです。
 
 ##  <a name="removecommanduihandler"></a>  ICommandSource::RemoveCommandUIHandler
 

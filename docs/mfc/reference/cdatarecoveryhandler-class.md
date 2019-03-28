@@ -1,6 +1,6 @@
 ---
 title: CDataRecoveryHandler クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CDataRecoveryHandler
 - AFXDATARECOVERY/CDataRecoveryHandler
@@ -62,12 +62,12 @@ helpviewer_keywords:
 - CDataRecoveryHandler [MFC], SetShutdownByRestartManager
 - CDataRecoveryHandler [MFC], UpdateDocumentInfo
 ms.assetid: 7794802c-e583-4eba-90b9-2fed1a161f9c
-ms.openlocfilehash: 88cc4a433c774dc7767efaaa62edc71ce8b904d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5c5836a11dbf9e05db5b56e0bc5c062dd1617b2f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273037"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565858"
 ---
 # <a name="cdatarecoveryhandler-class"></a>CDataRecoveryHandler クラス
 
@@ -168,7 +168,7 @@ TRUE の場合、`CDataRecoveryHandler`保存されているすべてのドキ�
 
 このメソッドは、ドキュメントを保存する必要がありますがない場合に TRUE を返します。 取得する場合、すべてのドキュメントを保存せず TRUE を返します、`CWinApp`または`CDocManager`のアプリケーションにエラーが生成されます。
 
-このメソッドを使用して、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 設定する必要があります`m_dwRestartManagerSupportFlags`します。 参照してください[m_dwRestartManagerSupportFlags](#m_dwrestartmanagersupportflags)詳細についてはします。
+このメソッドを使用して、AFX_RESTART_MANAGER_AUTOSAVE_AT_RESTART または AFX_RESTART_MANAGER_AUTOSAVE_AT_INTERVAL 設定する必要があります`m_dwRestartManagerSupportFlags`します。 詳細については、「[方法 :再起動マネージャーのサポートを追加する](../../mfc/how-to-add-restart-manager-support.md)」をご覧ください。
 
 ##  <a name="autosavedocumentinfo"></a>  CDataRecoveryHandler::AutosaveDocumentInfo
 

@@ -1,6 +1,6 @@
 ---
 title: COleDateTime クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - COleDateTime
 - ATLCOMTIME/ATL::COleDateTime
@@ -34,12 +34,12 @@ helpviewer_keywords:
 - dates, handling in MFC
 - time, handling in MFC
 ms.assetid: e718f294-16ec-4649-88b6-a4dbae5178fb
-ms.openlocfilehash: 6644e4e10916068a91e48611338d79bbb9d0d75b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 46b5f15a2f6048745a12b8c3a8c8a63404f71aa2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740516"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565936"
 ---
 # <a name="coledatetime-class"></a>COleDateTime クラス
 
@@ -108,7 +108,7 @@ class COleDateTime
 
 `DATE`型が浮動小数点値として実装されます。 日は、1899 年 12 月 30 日の午前 0 時に測定されます。 次の表は、一部の日付と関連付けられた値を示します。
 
-|日付|[値]|
+|Date|[値]|
 |----------|-----------|
 |1899 年 12 月 29 日、午前 0 時|-1.0|
 |1899 年 12 月 29 日、午前 6 時|-1.25|
@@ -117,7 +117,7 @@ class COleDateTime
 |1900 年 1 月 1 日、午前 6 時|2.25|
 
 > [!CAUTION]
-> 上記の表にことはできますが、1899 年 12 月 30 日の午前 0 時前に日付の値が負の値になる時刻の値はありませんに注意してください。 たとえば、午前 6 時では、日を表す整数が (1899 年 12 月 30 日) の後に正または負の値 (前に、1899 年 12 月 30 日) であっても小数部の値 0.25 で表される常にします。 つまり、単純な浮動ポイントの比較が並べ替えが誤って、 `COleDateTime` 12/29/1899 として 6時 00分 AM を表す**後**1 よりも、同じ日に 7時 00分 AM を表します。
+> 上記の表に、1899 年 12 月 30 日の午前 0 時前に 1 日の値が負の値になりますが、時刻の値はありません。 たとえば、午前 6 時では、日を表す整数が (1899 年 12 月 30 日) の後に正または負の値 (前に、1899 年 12 月 30 日) であっても小数部の値 0.25 で表される常にします。 つまり、単純な浮動ポイントの比較が並べ替えが誤って、 `COleDateTime` 12/29/1899 として 6時 00分 AM を表す**後**1 よりも、同じ日に 7時 00分 AM を表します。
 
 `COleDateTime`クラスは、100、年 1 月 1 日 12 月 31 日から日付から 9999 を処理します。 `COleDateTime`クラスは、構成のグレゴリオ暦カレンダーを使用して、ユリウス暦はサポートされません。 `COleDateTime` 夏時間を無視します。 (を参照してください[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md))。
 
@@ -195,7 +195,7 @@ COleDateTime(int nYear,
 
 COleDateTime(WORD wDosDate,
     WORD wDosTime) throw();
-COleDateTime(const DBTIMESTAMP& dbts) throw();
+COleDateTime(const DBTIMESTAMP& timeStamp) throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -216,7 +216,7 @@ A`time_t`または`__time64_t`値を日付/時刻値に変換し、新しいコ�
 A`SYSTEMTIME`構造体の日付/時刻値に変換して、新しいコピーを`COleDateTime`オブジェクト。
 
 *filetimeSrc*<br/>
-A`FILETIME`構造体の日付/時刻値に変換して、新しいコピーを`COleDateTime`オブジェクト。 なお`FILETIME`世界協定時刻 (UTC) を使用して、現地時刻を構造に渡す場合、結果は不正確になります。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。
+A`FILETIME`構造体の日付/時刻値に変換して、新しいコピーを`COleDateTime`オブジェクト。 A`FILETIME`世界協定時刻 (UTC) を使用するため、ローカル時刻を構造に渡す場合、結果は不正確になります。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。
 
 *nYear*、 *nMonth*、 *%n%n*、*時間*、 *nMin*、 *nSec*<br/>
 新しいにコピーされる日付と時刻の値を示す`COleDateTime`オブジェクト。
@@ -224,7 +224,7 @@ A`FILETIME`構造体の日付/時刻値に変換して、新しいコピーを`C
 *wDosDate*、 *wDosTime*<br/>
 日付と時刻の値を日付/時刻値に変換して、新しいコピーを MS-DOS`COleDateTime`オブジェクト。
 
-*dbts*<br/>
+*タイムスタンプ*<br/>
 参照を[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)現在の現地時刻を含む構造体。
 
 ### <a name="remarks"></a>Remarks
@@ -256,7 +256,7 @@ A`FILETIME`構造体の日付/時刻値に変換して、新しいコピーを`C
 
 - `COleDateTime(` *systimeSrc* **)** を構築、`COleDateTime`オブジェクトから、`SYSTEMTIME`値。
 
-- `COleDateTime(` `filetimeSrc` **)** を構築、`COleDateTime`オブジェクトから、`FILETIME`値。 . なお`FILETIME`世界協定時刻 (UTC) を使用して、現地時刻を構造に渡す場合、結果は不正確になります。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。
+- `COleDateTime(` `filetimeSrc` **)** を構築、`COleDateTime`オブジェクトから、`FILETIME`値。 . A`FILETIME`世界協定時刻 (UTC) を使用するため、ローカル時刻を構造に渡す場合、結果は不正確になります。 詳細については、次を参照してください。[ファイル時間](/windows/desktop/SysInfo/file-times)Windows SDK に含まれています。
 
 - `COleDateTime(` `nYear`、 `nMonth`、 `nDay`、 `nHour`、 `nMin`、 `nSec` **)** を構築、`COleDateTime`オブジェクトから指定した数値。
 
@@ -300,7 +300,7 @@ CString Format(UINT nFormatID) const;
 変換に使用するロケール ID を示します。 言語識別子の詳細については、次を参照してください。[言語識別子](/windows/desktop/Intl/language-identifiers)します。
 
 *lpszFormat*<br/>
-ような文字列を書式設定、`printf`文字列の書式設定します。 各パーセントで前に、コードの書式設定 ( `%`) 署名は、対応する置き換え`COleDateTime`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 実行時の関数を参照してください。 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)詳細についてはします。 値との書式設定コードの意味`Format`は。
+ような文字列を書式設定、`printf`文字列の書式設定します。 各パーセントで前に、コードの書式設定 ( `%`) 署名は、対応する置き換え`COleDateTime`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 詳細については、実行時の関数を参照してください。 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)します。 値との書式設定コードの意味`Format`は。
 
 - `%H` 現在の日の時間
 
@@ -341,12 +341,12 @@ A`CString`書式設定された日付/時刻値を格納します。
 時刻を取得するには、このメソッドを呼び出す、`COleDateTime`オブジェクトとして、`DBTIMESTAMP`データ構造体。
 
 ```
-bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
+bool GetAsDBTIMESTAMP(DBTIMESTAMP& timeStamp) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*dbts*<br/>
+*タイムスタンプ*<br/>
 参照を[DBTimeStamp](https://msdn.microsoft.com/library/system.data.oledb.oledbtype)構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -355,7 +355,7 @@ bool GetAsDBTIMESTAMP(DBTIMESTAMP& dbts) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-参照先の結果として得られる時刻を格納*dbts*構造体。 `DBTIMESTAMP`この関数によって初期化されたデータ構造体は必要があります。 その`fraction`メンバーは 0 に設定します。
+参照先の結果として得られる時刻を格納*タイムスタンプ*構造体。 `DBTIMESTAMP`この関数によって初期化されたデータ構造体は必要があります。 その`fraction`メンバーは 0 に設定します。
 
 ### <a name="example"></a>例
 
@@ -382,19 +382,19 @@ bool GetAsSystemTime(SYSTEMTIME& sysTime) const throw();
 
 `GetAsSystemTime` 参照先の結果として得られる時刻を格納*sysTime*オブジェクト。 `SYSTEMTIME`この関数によって初期化されたデータ構造体は必要があります。 その`wMilliseconds`メンバーは 0 に設定します。
 
-参照してください[GetStatus](#getstatus)の詳細については、状態情報が保持されているため、`COleDateTime`オブジェクト。
+状態情報の詳細についてに保持されているため、`COleDateTime`オブジェクトを参照してください[GetStatus](#getstatus)します。
 
 ##  <a name="getasudate"></a>  COleDateTime::GetAsUDATE
 
 時刻を取得するには、このメソッドを呼び出す、`COleDateTime`オブジェクトとして、`UDATE`データ構造体。
 
 ```
-bool GetAsUDATE(UDATE& udate) const throw();
+bool GetAsUDATE(UDATE& uDate) const throw();
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*udate*<br/>
+*uDate*<br/>
 参照を`UDATE`から変換された日付/時刻値を受け取る、`COleDateTime`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -684,7 +684,7 @@ DateTimeStatus GetStatus() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-この状態を返します`COleDateTime`値。 呼び出す場合`GetStatus`上、`COleDateTime`オブジェクトは、既定値は、構築が返されます無効です。 呼び出す場合`GetStatus`上、`COleDateTime`は null に設定するコンス トラクターで初期化されたオブジェクト`GetStatus`は null を返します。 参照してください**解説**詳細についてはします。
+この状態を返します`COleDateTime`値。 呼び出す場合`GetStatus`上、`COleDateTime`オブジェクトは、既定値は、構築が返されます無効です。 呼び出す場合`GetStatus`上、`COleDateTime`は null に設定するコンス トラクターで初期化されたオブジェクト`GetStatus`は null を返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -803,7 +803,7 @@ DateTimeStatus m_status;
 
 ### <a name="remarks"></a>Remarks
 
-このデータ メンバーの型は、列挙型`DateTimeStatus`、内で定義されている、`COleDateTime`クラス。 参照してください[は、「](#getstatus)詳細についてはします。
+このデータ メンバーの型は、列挙型`DateTimeStatus`、内で定義されている、`COleDateTime`クラス。 詳細については、次を参照してください。[は、「](#getstatus)します。
 
 > [!CAUTION]
 >  このデータ メンバーは、高度なプログラミングに適しています。 インライン メンバー関数を使用する必要があります[GetStatus](#getstatus)と[SetStatus](#setstatus)します。 参照してください`SetStatus`の他の注意に関するこのデータ メンバーを明示的に設定します。
@@ -819,7 +819,7 @@ COleDateTime& operator=(const time_t& timeSrc) throw();
 COleDateTime& operator=(const __time64_t& timeSrc) throw();
 COleDateTime& operator=(const SYSTEMTIME& systimeSrc) throw();
 COleDateTime& operator=(const FILETIME& filetimeSrc) throw();
-COleDateTime& operator=(const UDATE& udate) throw();
+COleDateTime& operator=(const UDATE& uDate) throw();
 ```
 
 ### <a name="remarks"></a>Remarks
@@ -836,9 +836,9 @@ COleDateTime& operator=(const UDATE& udate) throw();
 
 - **operator = (** *systimeSrc* **)** 、 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。
 
-- **operator = (** `udate` **)** 、`UDATE`値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。 A`UDATE`構造体は、「開」の日付を表します。 関数を参照してください。 [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)の詳細。
+- **operator = (** `uDate` **)** 、`UDATE`値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。失敗した場合は、設定されているかどうかが無効です。 A`UDATE`構造体は、「開」の日付を表します。 詳細については、関数を参照してください。 [VarDateFromUdate](/windows/desktop/api/oleauto/nf-oleauto-vardatefromudate)します。
 
-- **operator = (** `filetimeSrc` **)** 、 [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。それ以外の場合に設定されている無効にします。 `FILETIME` 世界協定時刻 (UTC) を使用するは、ため、UTC 時刻を構造に渡す場合、結果は UTC 時刻を現地時刻に変換され、バリアントの時刻として格納されます。 この動作は、Visual C 6.0 および Visual C .NET 2003 SP2 のように同じです。 参照してください[ファイル回](/windows/desktop/SysInfo/file-times)詳細については、Windows sdk。
+- **operator = (** `filetimeSrc` **)** 、 [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)値が変換され、これにコピー`COleDateTime`オブジェクト。 変換が成功した場合は、このオブジェクトの状態が設定無効です。それ以外の場合に設定されている無効にします。 `FILETIME` 世界協定時刻 (UTC) を使用するは、ため、UTC 時刻を構造に渡す場合、結果は UTC 時刻を現地時刻に変換され、バリアントの時刻として格納されます。 この動作は、Visual C 6.0 および Visual C .NET 2003 SP2 のように同じです。 詳細については、次を参照してください。[ファイル時間](/windows/desktop/SysInfo/file-times)Windows SDK に含まれています。
 
 詳細については、次を参照してください。、[バリアント](/windows/desktop/api/oaidl/ns-oaidl-tagvariant)Windows SDK 内のエントリ。
 
@@ -968,7 +968,7 @@ bool ParseDateTime(
 
 `"1/25/1996 8:30:00"  // always specify the full year, even in a 'short date' format`
 
-文字列の形式は日付/時刻値に変換できるかどうかのロケール ID にも影響に注意してください。
+ロケール ID は、文字列の形式は日付/時刻値に変換できるかどうかにも影響します。
 
 VAR_DATEVALUEONLY の場合は、時間の値は 0、または午前 0 時にかかる時間を設定します。 VAR_TIMEVALUEONLY の場合は、日付の値が日付 0、つまり 30 1899 年 12 月に設定されます。
 
@@ -1100,7 +1100,7 @@ int SetDateTime(
 
 |*nYear*|*nMonth*|*%n%n*|[値]|
 |-------------|--------------|------------|-----------|
-|1995|4|16|1995 年 4 月 15日|
+|1995|4|15|1995 年 4 月 15日|
 |1789|7|14|1789 の 17 年 7 月|
 |1925|2|30|無効|
 |10000|1|1|無効|
@@ -1149,7 +1149,7 @@ void SetStatus(DateTimeStatus status) throw();
 *状態*パラメーターの値によって定義されます、`DateTimeStatus`列挙型内で定義されている、`COleDateTime`クラス。 参照してください[は、「](#getstatus)詳細についてはします。
 
 > [!CAUTION]
->  この関数は、高度なプログラミングに適しています。 この関数では、このオブジェクトのデータは変更されません。 状態を設定に使用されるほとんどの場合、 **null**または**無効な**します。 なお、代入演算子 ([演算子 =](#eq)) と[SetDateTime](#setdatetime)ソース値に基づいて、オブジェクトの状態を設定しないでください。
+>  この関数は、高度なプログラミングに適しています。 この関数では、このオブジェクトのデータは変更されません。 状態を設定に使用されるほとんどの場合、 **null**または**無効な**します。 代入演算子 ([演算子 =](#operator_eq)) と[SetDateTime](#setdatetime)ソース値に基づいて、オブジェクトの状態を設定しないでください。
 
 ### <a name="example"></a>例
 

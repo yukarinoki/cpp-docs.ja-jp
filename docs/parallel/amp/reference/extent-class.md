@@ -1,6 +1,6 @@
 ---
 title: extent クラス (C++ AMP)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - extent
 - AMP/extent
@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - extent structure
 ms.assetid: edb5de3d-3935-4dbb-8365-4cc6c4fb0269
-ms.openlocfilehash: 2236b1a1b72f307dae1efa0cfe197e222820c460
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46af59708ef3f0d91883c52502bce4d09676ca77
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270190"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565832"
 ---
 # <a name="extent-class-c-amp"></a>extent クラス (C++ AMP)
 
@@ -33,8 +33,7 @@ class extent;
 ### <a name="parameters"></a>パラメーター
 
 *_Rank*<br/>
-
-  `extent` オブジェクトのランク。
+`extent` オブジェクトのランク。
 
 ## <a name="requirements"></a>必要条件
 
@@ -63,17 +62,13 @@ class extent;
 |名前|説明|
 |----------|-----------------|
 |[operator-](#operator_min)|対応する `extent` 要素から `index` 要素を減算することによって作成された新しい `extent` オブジェクトを返します。|
-|[operator--](#operator_min_min)|
-  `extent` オブジェクトの各要素をデクリメントします。|
+|[operator--](#operator_min_min)|`extent` オブジェクトの各要素をデクリメントします。|
 |[operator%=](#operator_mod_eq)|その要素がある数で除算された場合、`extent` オブジェクトの各要素の剰余を計算します。|
-|[operator*=](#operator_star_eq)|
-  `extent` オブジェクトの各要素をある数で乗算します。|
-|[operator/=](#operator_min_eq)|
-  `extent` オブジェクトの各要素をある数で除算します。|
+|[operator*=](#operator_star_eq)|`extent` オブジェクトの各要素をある数で乗算します。|
+|[operator/=](#operator_min_eq)|`extent` オブジェクトの各要素をある数で除算します。|
 |[extent::operator\[\]](#operator_at)|指定したインデックス位置にある要素を返します。|
 |[operator+](#operator_add)|対応する `extent` 要素および `index` 要素を追加することによって作成された新しい `extent` オブジェクトを返します。|
-|[operator++](#operator_add_add)|
-  `extent` オブジェクトの各要素をインクリメントします。|
+|[operator++](#operator_add_add)|`extent` オブジェクトの各要素をインクリメントします。|
 |[operator+=](#operator_add_eq)|指定した数を `extent` オブジェクトの各要素に加算します。|
 |[operator=](#operator_eq)|別の `extent` オブジェクトの内容をこのオブジェクトにコピーします。|
 |[operator-=](#operator_min_eq)|指定した数を `extent` オブジェクトの各要素から減算します。|
@@ -82,8 +77,7 @@ class extent;
 
 |名前|説明|
 |----------|-----------------|
-|[rank 定数](#rank)|
-  `extent` オブジェクトのランクを取得します。|
+|[rank 定数](#rank_constant)|`extent` オブジェクトのランクを取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -147,8 +141,7 @@ explicit extent(const int _Array[_Rank])restrict(amp,cpu);
 
 パラメーターなしのコンストラクターが、3 のランクを持つ `extent` オブジェクトを初期化します。
 
-
-  `extent` オブジェクトを構築するために配列が使用された場合、その配列の長さは `extent` オブジェクトのランクと一致する必要があります。
+`extent` オブジェクトを構築するために配列が使用された場合、その配列の長さは `extent` オブジェクトのランクと一致する必要があります。
 
 ##  <a name="operator_mod_eq"></a> operator%=
 
