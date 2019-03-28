@@ -2,12 +2,12 @@
 title: ユニバーサル Windows プラットフォームへの移植 (C++)
 ms.date: 11/04/2016
 ms.assetid: f662d2e4-8940-418d-8109-cb76cb8f8569
-ms.openlocfilehash: 06543ce27fe4fed839a6f6b885259e8cc1b180c6
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6bda600abfea04e1158f6ff993e04e5076e4c24b
+ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518542"
+ms.lasthandoff: 03/20/2019
+ms.locfileid: "58278464"
 ---
 # <a name="porting-to-the-universal-windows-platform-c"></a>ユニバーサル Windows プラットフォームへの移植 (C++)
 
@@ -21,7 +21,7 @@ Windows デベロッパー センターのドキュメントには、ユニバ�
 
 - [UWP への Windows 8.1 ランタイム コンポーネントの移植](#BK_81Component)
 
-UWP アプリケーションから従来のデスクトップ Win32 DLL を呼び出したい場合は、それも可能です。 このような手順を使用して、既存の従来 Windows デスクトップ C++ のアプリケーション用に、あるいはクロス プラットフォームの標準 C++ コード用に、UWP ユーザー インターフェイス層を作成することができます。 「[方法: ユニバーサル Windows アプリで既存の C++ コードを使用する](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md)」を参照してください。
+UWP アプリケーションから従来のデスクトップ Win32 DLL を呼び出したい場合は、それも可能です。 このような手順を使用して、既存の従来 Windows デスクトップ C++ のアプリケーション用に、あるいはクロス プラットフォームの標準 C++ コード用に、UWP ユーザー インターフェイス層を作成することができます。 「[方法:ユニバーサル Windows プラットフォーム アプリで既存の C++ コードを使用する](../porting/how-to-use-existing-cpp-code-in-a-universal-windows-platform-app.md).
 
 ## <a name="BK_81StoreApp"></a> UWP への Windows 8.1 ストア アプリの移植
 
@@ -74,7 +74,7 @@ DLL、または Windows 8.1 ストア アプリで既に動作している Windo
 
 ### <a name="to-port-a-windows-81-runtime-component-to-the-uwp"></a>UWP への Windows 8.1 ランタイム コンポーネントの移植
 
-1. Visual Studio 2017 の **[新しいプロジェクト]** ダイアログ ボックスで、**Windows ユニバーサル** ノードを見つけます。 このノードが表示されない場合は、最初に [Windows 10 用のツール](http://go.microsoft.com/fwlink/p/?LinkID=617903) をインストールします。 **Windows ランタイム コンポーネント** のテンプレートを選択し、コンポーネントの名前を入力し、 **[OK]** ボタンをクリックします。 コンポーネントの名前は名前空間の名前として使用されるので、古いプロジェクトの名前空間と同じ名前を使用することもできます。 この場合は、古いプロジェクトとは別のフォルダーにプロジェクトを作成することが必要です。 別の名前を選択した場合は、生成されたコード ファイルの名前空間名を更新できます。
+1. Visual Studio 2017 の **[新しいプロジェクト]** ダイアログ ボックスで、**Windows ユニバーサル** ノードを見つけます。 このノードが表示されない場合は、最初に [Windows 10 SDK](https://developer.microsoft.com/windows/downloads/windows-10-sdk) をインストールします。 **Windows ランタイム コンポーネント** のテンプレートを選択し、コンポーネントの名前を入力し、 **[OK]** ボタンをクリックします。 コンポーネントの名前は名前空間の名前として使用されるので、古いプロジェクトの名前空間と同じ名前を使用することもできます。 この場合は、古いプロジェクトとは別のフォルダーにプロジェクトを作成することが必要です。 別の名前を選択した場合は、生成されたコード ファイルの名前空間名を更新できます。
 
 1. プロジェクトを閉じます。
 
