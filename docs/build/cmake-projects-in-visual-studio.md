@@ -1,15 +1,15 @@
 ---
 title: Visual Studio の CMake プロジェクト
-ms.date: 03/05/2019
+ms.date: 03/27/2019
 helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
-ms.openlocfilehash: 84511c0712fffcacc1f90d4bde808620e0a0ab0f
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 479179d94a0534f5f0c790fea18e281053b686e2
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356142"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565296"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio の CMake プロジェクト
 
@@ -58,7 +58,7 @@ Visual Studio がという名前のファイルを使用して**CMakeSettings.js
 
 ## <a name="import-an-existing-cache"></a>既存のキャッシュをインポートする
 
-Visual Studio が自動的にカスタマイズされた変数を抽出し、あらかじめ設定されている作成 CMakeCache.txt の既存のファイルをインポートするときに[ **CMakeSettings.json** ](#cmake_settings)ファイルがそれらに基づきます。 元のキャッシュには、どのような変更も加えられておらず、コマンド ラインから、またはキャッシュの生成に使われた任意のツールや IDE で、使用することができます。 新しい**CMakeSettings.json**と共にプロジェクトのルート CMakeLists.txt ファイルが配置されます。 Visual Studio は、設定ファイルに基づいて新しいキャッシュを生成します。 キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログでオーバーライドできます。
+ユーザーが既存の CMakeCache.txt ファイルをインポートすると、Visual Studio はカスタマイズされた変数を自動的に抽出し、それを基にして事前設定済みの **CMakeSettings.json** ファイルを作成します。 元のキャッシュには、どのような変更も加えられておらず、コマンド ラインから、またはキャッシュの生成に使われた任意のツールや IDE で、使用することができます。 新しい**CMakeSettings.json**と共にプロジェクトのルート CMakeLists.txt ファイルが配置されます。 Visual Studio は、設定ファイルに基づいて新しいキャッシュを生成します。 キャッシュの自動生成は、**[ツール] > [オプション] > [CMake] > [全般]** ダイアログでオーバーライドできます。
 
 キャッシュ内のすべてのものがインポートされるわけではありません。  ジェネレーターや、コンパイラの場所などのプロパティは、IDE で問題なく機能することがわかっている既定値に置き換えられます。
 
@@ -132,7 +132,7 @@ CMakeLists.txt ファイルを編集するには、**ソリューション エ�
 
 問題を診断するために CMake キャッシュの状態に関する詳しい情報が必要な場合は、**CMake** のメイン メニューまたは**ソリューション エクスプローラー**で **CMakeLists.txt** のコンテキスト メニューを開き、次のコマンドのいずれかを実行します。
 
-- **[キャッシュの表示]** は、ビルド ルート フォルダーの CMakeCache.txt ファイルをエディターで開きます (ここで CMakeCache.txt に対して編集した内容はすべて、キャッシュをクリーンアップするとワイプされます。 キャッシュがクリーンアップされた後も残るように変更する方法については、前の「[CMake の設定とカスタム構成](#cmake_settings)」をご覧ください)。
+- **[キャッシュの表示]** は、ビルド ルート フォルダーの CMakeCache.txt ファイルをエディターで開きます (ここで CMakeCache.txt に対して編集した内容はすべて、キャッシュをクリーンアップするとワイプされます。 キャッシュのクリーンアップ後に永続化を変更するには、次を参照してください[CMake のカスタマイズ設定](customize-cmake-settings.md)。)。
 
 - **[キャッシュ フォルダーを開く]** は、エクスプローラー ウィンドウでビルド ルート フォルダーを開きます。
 

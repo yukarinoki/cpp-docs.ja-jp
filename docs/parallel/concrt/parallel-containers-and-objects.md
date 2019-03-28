@@ -1,17 +1,17 @@
 ---
 title: 並列コンテナーと並列オブジェクト
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 helpviewer_keywords:
 - parallel objects
 - parallel containers
 - concurrent containers
 ms.assetid: 90ab715c-29cd-48eb-8e76-528619aab466
-ms.openlocfilehash: b406bc194735a2796f03f1e9d6cf0cf2ae2e6f86
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: bcf3ead9fe945ecb2246fdb28b7f67cd51b1238b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51333294"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565949"
 ---
 # <a name="parallel-containers-and-objects"></a>並列コンテナーと並列オブジェクト
 
@@ -27,13 +27,13 @@ A*同時実行オブジェクト*コンポーネント間で同時に共有さ�
 
 同時実行コンテナー:
 
-- [concurrent_vector クラス](#ctor)
+- [concurrent_vector クラス](#vector)
 
-   - [Concurrent_vector 間の相違点とベクター](#ctor)
+   - [Concurrent_vector 間の相違点とベクター](#vector-differences)
 
-   - [同時実行セーフな操作](#ctor)
+   - [同時実行セーフな操作](#vector-safety)
 
-   - [例外安全性](#ctor)
+   - [例外安全性](#vector-exceptions)
 
 - [concurrent_queue クラス](#queue)
 
@@ -189,7 +189,7 @@ A`concurrent_queue`反復子が順方向のみに要素を走査します。 次
 
 [!code-cpp[concrt-unordered-map-structure#1](../../parallel/concrt/codesnippet/cpp/parallel-containers-and-objects_2.cpp)]
 
-使用する例については`concurrent_unordered_map`マップを実行し、並列操作の低減を参照してください。[方法: 実行のマップと削減の操作を並列](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)します。
+使用する例については`concurrent_unordered_map`マップを実行し、並列操作の低減を参照してください。[方法。マップを実行し、縮小操作を並列](../../parallel/concrt/how-to-perform-map-and-reduce-operations-in-parallel.md)します。
 
 ###  <a name="map-differences"></a> Concurrent_unordered_map 違いと unordered_map
 

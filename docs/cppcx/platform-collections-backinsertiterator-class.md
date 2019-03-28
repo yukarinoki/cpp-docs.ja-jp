@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::BackInsertIterator クラス
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::BackInsertIterator::BackInsertIterator
 helpviewer_keywords:
 - BackInsertIterator Class
 ms.assetid: aecee1ff-100d-4129-b84b-1966f0923dbf
-ms.openlocfilehash: 7478555b19bbe5c984fcbe531d2d8be1a0b865a9
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 02aee3101156b28dbd59ccd51c071e6774ca1e7a
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739529"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564724"
 ---
 # <a name="platformcollectionsbackinsertiterator-class"></a>Platform::Collections::BackInsertIterator クラス
 
@@ -81,8 +81,7 @@ IVector\<T > オブジェクト。
 
 ### <a name="remarks"></a>Remarks
 
-
-  `BackInsertIterator` は、`v` パラメーターで指定されたオブジェクトの最後の要素の後に要素を挿入します。
+`BackInsertIterator` は、`v` パラメーターで指定されたオブジェクトの最後の要素の後に要素を挿入します。
 
 ## <a name="operator-assign"></a>  Backinsertiterator::operator = 演算子
 
@@ -142,7 +141,7 @@ BackInsertIterator operator++(int);
 
 仕様では、最初の構文は現在の BackInsertIterator に前置インクリメント演算を行い、2 つ目の構文は現在の BackInsertIterator に後置インクリメント演算を行います。 2 つ目の構文の `int` 型は、実際の整数オペランドではなく後置インクリメント演算を示します。
 
-ただし、この演算子は実際には BackInsertIterator を変更しません。 代わりに、この演算子は変更されていない現在の反復子への参照を返します。 これと同じ動作[演算子 *](#dereference-operator)します。
+ただし、この演算子は実際には BackInsertIterator を変更しません。 代わりに、この演算子は変更されていない現在の反復子への参照を返します。 これと同じ動作[演算子 *](#operator-dereference)します。
 
 ## <a name="see-also"></a>関連項目
 

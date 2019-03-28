@@ -1,6 +1,6 @@
 ---
 title: レジストリとタイプ ライブラリに関するグローバル関数
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - atlbase/ATL::AtlGetPerUserRegistration
 - afxpriv/ATL::AfxRegCreateKey
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - RegistryDataExchange function, global functions
 ms.assetid: d58b8a4e-975c-4417-8b34-d3c847f679b3
-ms.openlocfilehash: f94dd1770ff194e47e2e38cc3a9b5cf0cbaebe58
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c5fdaceb47b6cd09dd9d66f26af1337a8dc6bbae
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301832"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58566014"
 ---
 # <a name="registry-and-typelib-global-functions"></a>レジストリとタイプ ライブラリに関するグローバル関数
 
@@ -33,8 +33,8 @@ ms.locfileid: "57301832"
 
 |||
 |-|-|
-|[AfxRegCreateKey](#afxrefcreatekey)|指定されたレジストリ キーを作成します。|
-|[AfxRegDeleteKey](#afxrefdeletekey)|指定されたレジストリ キーを削除します。|
+|[AfxRegCreateKey](#afxregcreatekey)|指定されたレジストリ キーを作成します。|
+|[AfxRegDeleteKey](#afxregdeletekey)|指定されたレジストリ キーを削除します。|
 |[AfxRegisterPreviewHandler](#afxregisterpreviewhandler)|プレビュー ハンドラーを登録するためのヘルパー。|
 |[AfxUnregisterPreviewHandler](#afxunregisterpreviewhandler)| プレビュー ハンドラーの登録を解除するヘルパー。 |
 |[AtlRegisterTypeLib](#atlregistertypelib)|この関数は、タイプ ライブラリを登録するために呼び出されます。|
@@ -343,7 +343,7 @@ ATLAPI AtlUnRegisterTypeLib(
 
 ### <a name="remarks"></a>Remarks
 
-このヘルパー関数が利用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)と[AtlComModuleUnregisterServer](#atlcommoduleunregisterserver)します。
+このヘルパー関数が利用[CAtlComModule::UnRegisterTypeLib](../../atl/reference/catlcommodule-class.md#unregistertypelib)と[AtlComModuleUnregisterServer](server-registration-global-functions.md#atlcommoduleunregisterserver)します。
 
 ### <a name="requirements"></a>必要条件
 

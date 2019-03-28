@@ -1,6 +1,6 @@
 ---
 title: メッセージ マップ マクロ (MFC)
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - AFXWIN/DECLARE_MESSAGE_MAP
 - AFXWIN/BEGIN_MESSAGE_MAP
@@ -28,12 +28,12 @@ helpviewer_keywords:
 - ranges, message map
 - message map ranges
 ms.assetid: 531b15ce-32b5-4ca0-a849-bb519616c731
-ms.openlocfilehash: 09c023f6dcbf1fd33a0caac17af75f449d80c509
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: b1cc721ed994ae1c6704011199ac635ee462ded8
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55850273"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565539"
 ---
 # <a name="message-map-macros-mfc"></a>メッセージ マップ マクロ (MFC)
 
@@ -45,7 +45,7 @@ ms.locfileid: "55850273"
 |-|-|
 |[DECLARE_MESSAGE_MAP](#declare_message_map)|メッセージ マップがクラスで関数 (クラス宣言で使用する必要があります) にメッセージをマップに使用されることを宣言します。|
 |[BEGIN_MESSAGE_MAP](#begin_message_map)|メッセージ マップ (クラスの実装で使用する必要があります) の定義を開始します。|
-|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_interface_map)|1 つのテンプレート引数を格納しているクラス型のメッセージ マップの定義を開始します。 |
+|[BEGIN_TEMPLATE_MESSAGE_MAP](#begin_template_message_map)|1 つのテンプレート引数を格納しているクラス型のメッセージ マップの定義を開始します。 |
 |[END_MESSAGE_MAP](#end_message_map)|メッセージ マップ (クラスの実装で使用する必要があります) の定義を終了します。|
 
 ### <a name="message-mapping-macros"></a>メッセージ マップ マクロ
@@ -67,7 +67,7 @@ ms.locfileid: "55850273"
 |||
 |-|-|
 |[ON_COMMAND_RANGE](#on_command_range)|マクロに最初の 2 つのパラメーターで指定されたコマンド Id の範囲を処理する関数を示します。|
-|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|どの更新ハンドラーが最初の 2 つの pa で指定されたコマンド Id の範囲を処理することを示します] rameters マクロにします。|
+|[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|どの更新ハンドラーがマクロに最初の 2 つのパラメーターで指定されたコマンド Id の範囲を処理することを示します。|
 |[ON_CONTROL_RANGE](#on_control_range)|コントロールのマクロに 2 番目と 3 番目のパラメーターで指定された Id の範囲からの通知を処理する関数を示します。 最初のパラメーターは、コントロールの通知メッセージ、BN_CLICKED などです。|
 
 メッセージ マップ、メッセージ マップの宣言と定義用のマクロとメッセージ マップ マクロの詳細については、次を参照してください。[メッセージ マップ](../../mfc/reference/message-maps-mfc.md)と[メッセージの処理とのマッピング」](../../mfc/message-handling-and-mapping.md)します。 メッセージ マップの範囲の詳細については、次を参照してください。[メッセージ マップの範囲内のハンドラー](../../mfc/handlers-for-message-map-ranges.md)します。
@@ -108,7 +108,7 @@ END_MESSAGE_MAP()
 
 **ヘッダー:** afxwin.h
 
-##  <a name="begin_template_message_map"></a>BEGIN_TEMPLATE_MESSAGE_MAP
+## <a name="begintemplatemessagemap"></a>BEGIN_TEMPLATE_MESSAGE_MAP
 
 1 つのテンプレート引数を格納しているクラス型のメッセージ マップの定義を開始します。
 
@@ -199,12 +199,12 @@ END_MESSAGE_MAP( )
 ### <a name="syntax"></a>構文
 
 ```
-ON_COMMAND( id, memberFxn )
+ON_COMMAND( commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*commandId*<br/>
 コマンド ID。
 
 *memberFxn*<br/>
@@ -216,7 +216,7 @@ ON_COMMAND( id, memberFxn )
 
 ON_COMMAND が、メンバー関数を呼び出して、コマンド ターゲット オブジェクトは、指定の ID を持つ Windows WM_COMMAND メッセージを受信したときに`memberFxn`メッセージを処理します。
 
-ON_COMMAND を使用して、1 つのコマンドをメンバー関数にマップします。 使用[ON_COMMAND_RANGE](#on_command_range)コマンド id の範囲を 1 つのメンバー関数にマップします。 1 つだけのメッセージ マップ エントリは、指定したコマンド id と一致できます。つまり、1 つ以上のハンドラーにコマンドを割り当てることはできません。 詳細と例については、次を参照してください。[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)します。
+ON_COMMAND を使用して、1 つのコマンドをメンバー関数にマップします。 使用[ON_COMMAND_RANGE](#on_command_range)コマンド Id の範囲を 1 つのメンバー関数にマップします。 1 つだけのメッセージ マップ エントリが指定されたコマンド ID と一致できます。 つまり、1 つ以上のハンドラーにコマンドを割り当てることはできません。 詳細と例については、次を参照してください。[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)します。
 
 ### <a name="example"></a>例
 
@@ -237,12 +237,12 @@ END_MESSAGE_MAP()
 ### <a name="syntax"></a>構文
 
 ```
-ON_COMMAND_EX(id, memberFxn);
+ON_COMMAND_EX(commandId, memberFxn);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*commandId*<br/>
 コマンド ID。
 
 *memberFxn*<br/>
@@ -265,7 +265,7 @@ ON_COMMAND_EX(id, memberFxn);
 ### <a name="syntax"></a>構文
 
 ```
-ON_CONTROL( wNotifyCode, id, memberFxn )
+ON_CONTROL( wNotifyCode, commandId, memberFxn )
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -273,7 +273,7 @@ ON_CONTROL( wNotifyCode, id, memberFxn )
 *wNotifyCode*<br/>
 コントロールの通知コード。
 
-*ID*<br/>
+*commandId*<br/>
 コマンド ID。
 
 *memberFxn*<br/>
@@ -356,7 +356,7 @@ LRESULT CMyWnd2::OnMyMessage(WPARAM wParam, LPARAM lParam)
 ### <a name="syntax"></a>構文
 
 ```
-ON_OLECMD( pguid, olecmdid, id )
+ON_OLECMD( pguid, olecmdid, commandId )
 ```
 
 ### <a name="parameters"></a>パラメーター
@@ -367,7 +367,7 @@ ON_OLECMD( pguid, olecmdid, id )
 *olecmdid*<br/>
 OLE コマンドの識別子。
 
-*ID*<br/>
+*commandId*<br/>
 メニュー ID、ツールバー ID、ボタン ID、またはその他の ID のリソースまたはオブジェクトのコマンドを実行します。
 
 ### <a name="remarks"></a>Remarks
@@ -575,12 +575,12 @@ ON_THREAD_MESSAGE( message, memberFxn )
 ### <a name="syntax"></a>構文
 
 ```
-ON_UPDATE_COMMAND_UI( id, memberFxn )
+ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*ID*<br/>
+*messageId*<br/>
 メッセージ ID。
 
 *memberFxn*<br/>

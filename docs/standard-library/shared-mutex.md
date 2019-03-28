@@ -1,6 +1,6 @@
 ---
 title: '&lt;shared_mutex&gt;'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - <shared_mutex>
 - shared_mutex/std::swap
@@ -45,12 +45,12 @@ f1_keywords:
 - shared_mutex/std::shared_timed_mutex::try_lock_shared_until
 - shared_mutex/std::shared_timed_mutex::unlock_shared
 ms.assetid: 0b37a97d-ee5d-4050-b29f-09db9f76beb3
-ms.openlocfilehash: 9823b01048eece557a4d29904f223841b626bc9a
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 97d77399357030feaa90228a1b0cdeb80d48034c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751818"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565387"
 ---
 # <a name="ltsharedmutex"></a>&lt;shared_mutex>
 
@@ -60,13 +60,13 @@ ms.locfileid: "57751818"
 
 |クラス|説明|
 |-------------|-----------------|
-|[shared_mutex クラス](../standard-library/shared-mutex.md#class_shared_mutex)|1 つのエージェントによって排他的にロックされるか、または複数のエージェントで非排他的に共有される共有 mutex 型。|
-|[shared_timed_mutex クラス](../standard-library/shared-mutex.md#class_shared_timed_mutex)|1 つのエージェントによって排他的にロックされるか、または複数のエージェントで非排他的に共有される共有 timed mutex 型。|
-|[shared_lock クラス](../standard-library/shared-mutex.md#class_shared_lock)|時間指定のロック操作と複数のエージェントによる非排他的な共有をサポートするために共有ミューテックスをラップするテンプレート クラス。|
+|[shared_mutex クラス](#class_shared_mutex)|1 つのエージェントによって排他的にロックされるか、または複数のエージェントで非排他的に共有される共有 mutex 型。|
+|[shared_timed_mutex クラス](#class_shared_timed_mutex)|1 つのエージェントによって排他的にロックされるか、または複数のエージェントで非排他的に共有される共有 timed mutex 型。|
+|[shared_lock クラス](#class_shared_lock)|時間指定のロック操作と複数のエージェントによる非排他的な共有をサポートするために共有ミューテックスをラップするテンプレート クラス。|
 
 |関数|説明|
 |---------------|-----------------|
-|[swap](../standard-library/shared-mutex.md#function_swap)|関数のパラメーターによって参照される共有ミューテックス オブジェクトの内容を交換します。|
+|[swap](#function_swap)|関数のパラメーターによって参照される共有ミューテックス オブジェクトの内容を交換します。|
 
 ## <a name="syntax"></a>構文
 
@@ -167,7 +167,7 @@ public:
    };
 ```
 
-###  <a name="&lt;shared"></a> shared_lock クラス
+###  <a name="class_shared_lock"></a> shared_lock クラス
 
 テンプレート クラス `shared_lock` は、スコープ内の共有ミューテックス オブジェクトの共有所有権を制御します。 テンプレート パラメーターは、共有 mutex 型である必要があります。
 

@@ -1,6 +1,6 @@
 ---
 title: task_handle クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - task_handle
 - PPL/concurrency::task_handle
@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - task_handle class
 ms.assetid: 74a34b15-708b-4231-a509-947874292b13
-ms.openlocfilehash: 4193c2d1e08c1b5a43dc728edd24efd19be87268
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8528bc212603484be9325ed967e9475e4faa1348
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298088"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565101"
 ---
 # <a name="taskhandle-class"></a>task_handle クラス
 
@@ -39,14 +39,14 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 |名前|説明|
 |----------|-----------------|
-|[task_handle](#ctor)|新しい `task_handle` オブジェクトを構築します。 タスクの作業は、コンス トラクターにパラメーターとして指定された関数を呼び出すことによって実行されます。|
+|[task_handle](#task_handle)|新しい `task_handle` オブジェクトを構築します。 タスクの作業は、コンス トラクターにパラメーターとして指定された関数を呼び出すことによって実行されます。|
 |[~ task_handle デストラクター](#dtor)|`task_handle` オブジェクトを破棄します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[operator()](#task_handle__operator_call)|タスク ハンドルの作業を実行するために、ランタイムが呼び出す関数呼び出し演算子。|
+|[演算子 ()](#task_handle__operator_call)|タスク ハンドルの作業を実行するために、ランタイムが呼び出す関数呼び出し演算子。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -76,7 +76,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 void operator()() const;
 ```
 
-##  <a name="task_handle__ctor"></a> task_handle
+## <a name="taskhandle"></a>task_handle
 
 新しい `task_handle` オブジェクトを構築します。 タスクの作業は、コンス トラクターにパラメーターとして指定された関数を呼び出すことによって実行されます。
 

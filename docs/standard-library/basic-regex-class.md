@@ -1,17 +1,17 @@
 ---
 title: basic_regex クラス
-ms.date: 09/10/2018
+ms.date: 03/27/2019
 f1_keywords:
 - regex/std::basic_regex
 helpviewer_keywords:
 - basic_regex class
 ms.assetid: 8a18c6b4-f22a-4cfd-bc16-b4267867ebc3
-ms.openlocfilehash: 0799bbcbfb7cdbc1ee1755cf387de2aee46db027
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e3a38dc186a52c8431442d58bb10e56837396b07
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633406"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565452"
 ---
 # <a name="basicregex-class"></a>basic_regex クラス
 
@@ -64,8 +64,8 @@ class basic_regex
 |パブリック static const flag_type 基本|regex_constants::basic|
 |パブリック static const flag_type 拡張|regex_constants::extended|
 |パブリックの静的 const flag_type awk|regex_constants::awk|
-|パブリックの静的 const flag_type grep|regex_constants::grep|
-|パブリックの静的 const flag_type egrep|regex_constants::egrep|
+|public static const flag_type grep|regex_constants::grep|
+|public static const flag_type egrep|regex_constants::egrep|
 |プライベート RXtraits 特徴||
 
 ### <a name="constructors"></a>コンストラクター
@@ -88,7 +88,7 @@ class basic_regex
 |-|-|
 |[assign](#assign)|値を正規表現オブジェクトに代入します。|
 |[flags](#flags)|構文のオプション フラグを返します。|
-|[get_loc](#get_loc)|格納されているロケール オブジェクトを返します。|
+|[getloc](#getloc)|格納されているロケール オブジェクトを返します。|
 |[imbue](#imbue)|格納されているロケール オブジェクトを変更します。|
 |[mark_count](#mark_count)|一致した部分式の数を返します。|
 |[swap](#swap)|2 つの正規表現オブジェクトを交換します。|
@@ -248,7 +248,7 @@ basic_regex& assign(
 *flags*<br/>
 コピー中に追加する構文オプション フラグ。
 
-*len/TD >*<br/>
+*len/TD>*<br/>
 コピーするシーケンスの長さ。
 
 *str*<br/>
@@ -322,7 +322,7 @@ explicit basic_regex(
 *flags*<br/>
 コピー中に追加する構文オプション フラグ。
 
-*len/TD >*<br/>
+*len/TD>*<br/>
 コピーするシーケンスの長さ。
 
 *str*<br/>
@@ -391,7 +391,7 @@ locale_type imbue(locale_type loc);
 
 ### <a name="parameters"></a>パラメーター
 
-*Loc*<br/>
+*loc*<br/>
 格納するロケール オブジェクト。
 
 ### <a name="remarks"></a>Remarks
