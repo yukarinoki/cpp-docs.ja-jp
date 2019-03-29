@@ -1,18 +1,18 @@
 ---
 title: C++ 準拠の強化
-ms.date: 10/31/2018
+ms.date: 03/26/2019
 ms.technology: cpp-language
 ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 855322f09c9c8f5292c6e299f946c3cec5d9949a
-ms.sourcegitcommit: fbc05d8581913bca6eff664e5ecfcda8e471b8b1
+ms.openlocfilehash: b2c014534ce24b9796510195d6ae5a922fb484d8
+ms.sourcegitcommit: 06fc71a46e3c4f6202a1c0bc604aa40611f50d36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56809751"
+ms.lasthandoff: 03/27/2019
+ms.locfileid: "58508872"
 ---
-# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159update159"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#update_159) での C++ 準拠の改善
+# <a name="c-conformance-improvements-in-visual-studio-2017-versions-150-153improvements153-155improvements155-156improvements156-157improvements157-158update158-159improvements159"></a>Visual Studio 2017 バージョン 15.0、[15.3](#improvements_153)、[15.5](#improvements_155)、[15.6](#improvements_156)、[15.7](#improvements_157)、[15.8](#update_158)、[15.9](#improvements_159) での C++ 準拠の改善
 
 Microsoft Visual C++ コンパイラは、汎用の constexpr および集計用の NSDMI をサポートし、C++ 14 標準で追加されたすべての機能に対応するようになりました。 コンパイラには、C++11 標準および C++98 標準の一部の機能がないことに注意してください。 コンパイラの現在の状態については、「[Visual C++ Language Conformance (Visual C++ 言語への準拠)](visual-cpp-language-conformance.md)」の表を参照してください。
 
@@ -335,6 +335,45 @@ void bar(A<0> *p)
 ### <a name="c17-constexpr-for-chartraits-partial"></a>C++17: char_traits の constexpr (部分的)
 
 [P0426R1](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/p0426r1.html): `std::string_view` を定数式で使用できるようにするために、`std::traits_type` のメンバー関数である `length`、`compare`、`find` に変更します  (Visual Studio 2017 バージョン 15.6 では、Clang/LLVM のみがサポートされました。 バージョン 15.7 Preview 2 では、ClXX についてもサポートはほぼ完全です。)
+
+## <a name="improvements_159"></a> Visual Studio 2017 バージョン 15.9 での機能強化
+
+### <a name="left-to-right-evaluation-order-for-operators-----and-"></a>演算子 ->*、[]、>>、<< での左から右の評価順序
+
+C++ 17 以降、演算子 ->*、[]、>>、\<\< のオペランドは必ず左から右の順序で評価されます。 コンパイラでこの順序を保証できないケースが 2 つあります。
+- オペランド式の 1 つが値渡しされるオブジェクトであるか、値渡しされるオブジェクトを含んでいる場合、または
+- **/clr** を使ってコンパイルされ、かつオペランドの 1 つがオブジェクトのフィールドか配列要素である場合。
+
+コンパイラで左から右の評価を保証できない場合、警告 [C4866](https://docs.microsoft.com/cpp/error-messages/compiler-warnings/c4866?view=vs-2017) が生成されます。 これらの演算子に対する左から右の順序の要件は C++ 17 で導入されたため、この警告が生成されるのは **/std:c++17** 以降を指定した場合のみです。
+
+この警告を解決するには、まず左から右にオペランドを評価することが必要かどうかを検討します (オペランドの評価によって順序に依存した副作用が生成される場合など)。 多くの場合、オペランドが評価される順序により目に見える影響が生じることはありません。 必ず左から右の順序で評価する必要がある場合は、代わりに定数参照でオペランドを渡すことができるかどうかを検討します。 この変更により、次のコード サンプルにおける警告がなくなります。
+
+```cpp
+// C4866.cpp
+// compile with: /w14866 /std:c++17
+
+class HasCopyConstructor
+{
+public:
+    int x;
+
+    HasCopyConstructor(int x) : x(x) {}
+    HasCopyConstructor(const HasCopyConstructor& h) : x(h.x) { }
+};
+
+int operator>>(HasCopyConstructor a, HasCopyConstructor b) { return a.x >> b.x; }
+
+// This version of operator>> does not trigger the warning:
+// int operator>>(const HasCopyConstructor& a, const HasCopyConstructor& b) { return a.x >> b.x; }
+
+int main()
+{
+    HasCopyConstructor a{ 1 };
+    HasCopyConstructor b{ 2 };
+
+    a>>b;        // C4866 for call to operator>>
+};
+```
 
 ## <a name="bug-fixes-in-visual-studio-versions-150-153update153-155update155-157update157-158update158-and-159update159"></a>Visual Studio バージョン 15.0、[15.3](#update_153)、[15.5](#update_155)、[15.7](#update_157)、[15.8](#update_158)、および [15.9](#update_159) でのバグ修正
 
