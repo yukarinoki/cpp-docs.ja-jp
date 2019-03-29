@@ -1,6 +1,6 @@
 ---
 title: '#インポート ディレクティブ (C++)'
-ms.date: 10/18/2018
+ms.date: 03/27/2019
 f1_keywords:
 - '#import'
 helpviewer_keywords:
@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: a7dc30d3e5869e9b0f534a4769d4517a0514c144
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57822627"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58564958"
 ---
 # <a name="import-directive-c"></a>#import ディレクティブ (C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "57822627"
 
 - .olb、.tlb、.dll ファイルなど、タイプ ライブラリを含むファイルの名前。 キーワード、**ファイル:**、各ファイル名の前に記述できます。
 
-- タイプ ライブラリのコントロールの progid。 キーワード、 **progid:**、各 progid 名前に記述できます。 例えば:
+- タイプ ライブラリのコントロールの progid。 キーワード、 **progid:**、各 progid 名前に記述できます。 例:
 
     ```cpp
     #import "progid:my.prog.id.1.5"
@@ -66,7 +66,7 @@ ms.locfileid: "57822627"
 - によって認識できるその他のファイル形式、 **LoadTypeLib** API。
 
 *属性*<br/>
-1 つまたは複数[#import 属性](#_predir_the_23import_directive_import_attributes)します。 複数の属性を指定するときは、空白またはコンマで区切ります。 例えば:
+1 つまたは複数[#import 属性](#_predir_the_23import_directive_import_attributes)します。 複数の属性を指定するときは、空白またはコンマで区切ります。 例:
 
 ```cpp
 #import "..\drawctl\drawctl.tlb" no_namespace, raw_interfaces_only
@@ -142,8 +142,7 @@ Byref パラメーターを使用するディスパッチ インターフェイ�
     typedef _com_ptr_t<_com_IIID<IMyInterface, __uuidof(IMyInterface)> > IMyInterfacePtr;
     ```
 
-   
-  `IMyInterfacePtr` 型は、未加工のインターフェイス ポインター `IMyInterface*` の代わりに使用できます。 その結果、さまざまなを呼び出す必要はありません`IUnknown`メンバー関数
+   `IMyInterfacePtr` 型は、未加工のインターフェイス ポインター `IMyInterface*` の代わりに使用できます。 その結果、さまざまなを呼び出す必要はありません`IUnknown`メンバー関数
 
 - Typeinfo 宣言:クラス定義とその他のアイテムによって返される個々 の typeinfo 項目を公開するは、主に`ITypeLib:GetTypeInfo`します。 このセクションでは、型ライブラリの各 typeinfo は、`TYPEKIND` 情報に応じてヘッダーに反映されます。
 
@@ -161,7 +160,7 @@ using namespace MyLib;
 
 直後に、 **#import**ソース コード内のステートメント。
 
-使用して、名前空間を抑制することができます、 [no_namespace](#_predir_no_namespace)の属性、 **#import**ディレクティブ。 ただし、名前空間を抑制すると、名前の競合が発生する場合があります。 名前空間を変更することも、 [rename_namespace](#_predir_rename_namespace)属性。
+使用して、名前空間を抑制することができます、 [no_namespace](no-namespace.md)) の属性、 **#import**ディレクティブ。 ただし、名前空間を抑制すると、名前の競合が発生する場合があります。 名前空間を変更することも、 [rename_namespace](rename-namespace.md)属性。
 
 コンパイラは、現在処理しているタイプ ライブラリに必要で依存関係のあるタイプ ライブラリへの完全なパスを提供します。 パスは、処理されたタイプ ライブラリごとにコンパイラが生成するタイプ ライブラリ ヘッダー (.TLH) に、コメントの形式で記述されます。
 
@@ -181,7 +180,7 @@ using namespace MyLib;
 
 ## <a name="_predir_the_23import_directive_import_attributes"></a> #import の属性
 
-**#import**必要に応じて、1 つまたは複数の属性を含めることができます。 これらの属性は、コンパイラにタイプ ライブラリ ヘッダーの内容を変更するように指示します。 円記号 (**\\**) を 1 つの追加の行を含めるシンボルを使用することができます **#import**ステートメント。 例えば:
+**#import**必要に応じて、1 つまたは複数の属性を含めることができます。 これらの属性は、コンパイラにタイプ ライブラリ ヘッダーの内容を変更するように指示します。 円記号 (**\\**) を 1 つの追加の行を含めるシンボルを使用することができます **#import**ステートメント。 例:
 
 ```cpp
 #import "test.lib" no_namespace \

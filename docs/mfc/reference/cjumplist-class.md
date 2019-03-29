@@ -1,6 +1,6 @@
 ---
 title: CJumpList クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CJumpList
 - AFXADV/CJumpList
@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CJumpList [MFC], InitializeList
 - CJumpList [MFC], SetAppID
 ms.assetid: d364d27e-f512-4b12-9872-c2a17c78ab1f
-ms.openlocfilehash: b72ea6f3715be1e4a11d457dbdeaba7a622ef8b6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9296912c97b1efb5f7cbd1ed9f769d0222d5f85c
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259075"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565309"
 ---
 # <a name="cjumplist-class"></a>CJumpList クラス
 
@@ -60,7 +60,7 @@ class CJumpList;
 |名前|説明|
 |----------|-----------------|
 |[CJumpList::CJumpList](#cjumplist)|`CJumpList` オブジェクトを構築します。|
-|[CJumpList:: ~ CJumpList](#cjumplist__~cjumplist)|`CJumpList` オブジェクトを破棄します。|
+|[CJumpList:: ~ CJumpList](#_dtorcjumplist)|`CJumpList` オブジェクトを破棄します。|
 
 |名前|説明|
 |----------|-----------------|
@@ -188,7 +188,7 @@ BOOL AddTask(IShellLink* pShellLink);
 タスクのターゲット パスを指定します。
 
 *strCommandLineArgs*<br/>
-StrTargetExecutablePath で指定された実行可能ファイルのコマンドライン引数を指定します。
+指定された実行可能ファイルのコマンドライン引数を指定*strTargetExecutablePath*します。
 
 *strTitle*<br/>
 ターゲット リストに表示されるタスクの名前。

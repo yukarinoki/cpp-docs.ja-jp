@@ -1,6 +1,6 @@
 ---
 title: ICommandSource インターフェイス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - ICommandSource
 - AFXWINFORMS/ICommandSource
@@ -17,12 +17,12 @@ f1_keywords:
 helpviewer_keywords:
 - ICommandSource interface [MFC]
 ms.assetid: a4b1f698-c09f-4ba8-9b13-0e74a0a4967e
-ms.openlocfilehash: 21c4f4544a6ccf2342580bc5859739fc1f50d0c2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: eed7abbbb40c532ad596f683b6ed2c98a0cadf9b
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296021"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565611"
 ---
 # <a name="icommandsource-interface"></a>ICommandSource インターフェイス
 
@@ -179,7 +179,7 @@ void RemoveCommandHandler(unsigned int cmdID);
 
 このメソッドは、コマンド ソース オブジェクトから cmdID に割り当てられたコマンド ハンドラーを削除します。
 
-## <a name="removecommandrangecommandhandler"></a> ICommandSource::RemoveCommandRangeHandler
+## <a name="removecommandrangehandler"></a> ICommandSource::RemoveCommandRangeHandler
 
 コマンド ソース オブジェクトから、コマンド ハンドラーのグループを削除します。
 ```
@@ -196,7 +196,7 @@ void RemoveCommandRangeUIHandler(
 コマンドの ID 範囲の終了インデックス。
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、コマンド ソース オブジェクトから cmdIDMin および cmdIDMax で指定されたコマンド Id に割り当て、メッセージ ハンドラーのグループを削除します。
+このメソッドは、メッセージ ハンドラーを cmdIDMin およびコマンド ソース オブジェクトからの cmdIDMax で指定したコマンド Id にマップのグループを削除します。
 
 ## <a name="removecommandrangeuihandler"></a> ICommandSource::RemoveCommandRangeUIHandler
 
@@ -215,7 +215,7 @@ void RemoveCommandRangeUIHandler(
 コマンドの ID 範囲の終了インデックス。
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、コマンド ソース オブジェクトから cmdIDMin および cmdIDMax で指定されたコマンド Id に割り当て、ユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除します。
+このメソッドは、cmdIDMin およびコマンド ソース オブジェクトからの cmdIDMax で指定したコマンド Id にマップされている、ユーザー インターフェイス コマンド メッセージ ハンドラーのグループを削除します。
 
 ## <a name="removecommanduihandler"></a> ICommandSource::RemoveCommandUIHandler
 

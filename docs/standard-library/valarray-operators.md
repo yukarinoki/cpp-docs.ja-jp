@@ -1,6 +1,6 @@
 ---
 title: '&lt;valarray&gt; 演算子'
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - valarray/std::operator!=
 - valarray/std::operator%
@@ -30,12 +30,12 @@ helpviewer_keywords:
 - std::operator&lt; (valarray)
 - std::operator&lt;&lt; (valarray)
 - std::operator&lt;= (valarray), std::operator== (valarray)
-ms.openlocfilehash: daaddf6de79411aea58b79feb0fbfd0f8ff56f5c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 6de4b4ad75f9240fb86ff5e363f4a7d9062925d9
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332609"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565923"
 ---
 # <a name="ltvalarraygt-operators"></a>&lt;valarray&gt; 演算子
 
@@ -268,7 +268,7 @@ operator&(
 
 ビットごとの演算は、ビットを操作にのみ使用できます**char**と**int**データ型とバリアントできません**float**、**二重**、 **longdouble**、 **void**、 **bool**またはその他より複雑なデータ型。
 
-ビット演算 `AND` は論理 `AND` と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 [operator&&](../standard-library/valarray-operators.md#amp) は要素レベルで適用され、すべての非ゼロ値を true と見なし、結果はブール値から成る valarray になります。 それに対して、ビットごとの **ANDoperator&** は、ビットごとの演算の結果に応じて、0 でも 1 でもない値を含む valarray になる場合があります。
+ビット演算 `AND` は論理 `AND` と同じ真理値表を持ちますが、個々のビットのレベルでデータ型に適用されます。 [operator&&](#op_amp_amp) は要素レベルで適用され、すべての非ゼロ値を true と見なし、結果はブール値から成る valarray になります。 ビット演算`AND`[演算子 (& a)](#op_amp)、これに対し、0 または 1 のビットごとの演算の結果に応じて、以外の値を含む valarray になることができます。
 
 ### <a name="example"></a>例
 
@@ -356,7 +356,7 @@ Valarray の要素は、ブール型のの論理要素ごとの組み合わせ`A
 
 ### <a name="remarks"></a>Remarks
 
-論理`ANDoperator&&`適用は要素レベルでのブール値を含む valarray とが true で、結果として、すべての非ゼロ値をカウントします。 ビットごとのバージョンの`AND`、[演算子 &、](../standard-library/valarray-operators.md#op_amp)、これに対し、0 または 1 のビットごとの演算の結果に応じて、以外の値を含む valarray になることができます。
+論理`ANDoperator&&`適用は要素レベルでのブール値を含む valarray とが true で、結果として、すべての非ゼロ値をカウントします。 ビットごとのバージョンの`AND`、[演算子 &、](#op_amp)、これに対し、0 または 1 のビットごとの演算の結果に応じて、以外の値を含む valarray になることができます。
 
 ### <a name="example"></a>例
 
@@ -1430,7 +1430,7 @@ operator^(
 
 ビットごとの演算は、ビットを操作にのみ使用できます**char**と**int**データ型とバリアントできません**float**、**二重**、 **long double**、 **void**、 **bool**またはその他より複雑なデータ型。
 
-ビットごとの排他的 `OR`( **XOR**) は次の意味を持ちます: ビット *b*1 と *b*2 に対して、*b*1 **XOR** *b*2 は、片方のビットだけが true の場合は **true**、両方のビットが false または両方のビットが true の場合は **false** です。
+ビットごとの排他的`OR`( **XOR**) 次のセマンティクスがあります。ビット*b*1 と*b*2、 *b*1 **XOR** *b*2 は**true**場合ビットを 1 つが true であります。**false**両方のビットが false の場合、または両方のビットが true の場合。
 
 ### <a name="example"></a>例
 
