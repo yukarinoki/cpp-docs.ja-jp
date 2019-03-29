@@ -1,6 +1,6 @@
 ---
 title: runtime_exception クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - runtime_exception
 - AMPRT/runtime_exception
@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - runtime_exception class
 ms.assetid: 8fe3ce2c-3d4c-4b9c-95e8-e592f37adefd
-ms.openlocfilehash: 5260d2f1d2e5a6a6498d501599037a90bc7bc9a0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 024ede0f05dfd646bcebe7acd2cfb86b5c54f6d1
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289664"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565494"
 ---
 # <a name="runtimeexception-class"></a>runtime_exception クラス
 
@@ -33,14 +33,13 @@ class runtime_exception : public std::exception;
 |名前|説明|
 |----------|-----------------|
 |[runtime_exception コンス トラクター](#ctor)|`runtime_exception` クラスの新しいインスタンスを初期化します。|
-|[~ runtime_exception デストラクター](#dtor)|
-  `runtime_exception` オブジェクトを破棄します。|
+|[~ runtime_exception デストラクター](#dtor)|`runtime_exception` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[get_error_code](#runtime_exception__get_error_code)|例外の原因となったエラー コードを返します。|
+|[get_error_code](#get_error_code)|例外の原因となったエラー コードを返します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -60,7 +59,7 @@ class runtime_exception : public std::exception;
 
 **名前空間:** コンカレンシー
 
-## <a name="runtime_exception__ctor"></a>  runtime_exception コンス トラクター
+## <a name="ctor"></a>  runtime_exception コンス トラクター
 
 クラスの新しいインスタンスを初期化します。
 
@@ -103,7 +102,7 @@ runtime_exception(
 virtual ~runtime_exception() throw();
 ```
 
-## <a name="runtime_exception__get_error_code"></a>  get_error_code
+## <a name="geterrorcode"></a>get_error_code
 
 例外の原因となったエラー コードを返します。
 
@@ -117,7 +116,7 @@ HRESULT get_error_code() const throw();
 
 この例外の原因になったエラーの HRESULT。
 
-## <a name="runtime_exception__operator_eq"></a>  operator=
+## <a name="operator_eq"></a>  operator=
   指定された `runtime_exception` オブジェクトの内容をこのオブジェクトにコピーします。
 
 ### <a name="syntax"></a>構文

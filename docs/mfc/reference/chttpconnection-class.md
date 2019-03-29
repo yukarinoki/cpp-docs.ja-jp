@@ -1,6 +1,6 @@
 ---
 title: CHttpConnection クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CHttpConnection
 - AFXINET/CHttpConnection
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CHttpConnection [MFC], CHttpConnection
 - CHttpConnection [MFC], OpenRequest
 ms.assetid: a402b662-c445-4988-800d-c8278551babe
-ms.openlocfilehash: f7a91454b9a8619cda155f33391e5d02ae7653b5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1941af1e16a897235dd90db509d6ed29c2d9a875
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273609"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565257"
 ---
 # <a name="chttpconnection-class"></a>CHttpConnection クラス
 
@@ -47,7 +47,7 @@ HTTP では、MFC WinInet クラスによって実装される 3 つのインタ
 
 クラスは、`CHttpConnection`コンス トラクターと 1 つのメンバー関数を含む[OpenRequest](#openrequest)、HTTP プロトコルを使って、サーバーへの接続を管理します。
 
-HTTP サーバーを通信するのインスタンスを作成する必要がありますまず[CInternetSession](../../mfc/reference/cinternetsession-class.md)、し、作成、 [CHttpConnection](#_mfc_chttpconnection)オブジェクト。 作成することはありません、`CHttpConnection`オブジェクトに直接; 呼び出しではなく、[代わりに](../../mfc/reference/cinternetsession-class.md#gethttpconnection)、作成し、`CHttpConnection`オブジェクトし、ポインターを返します。
+HTTP サーバーを通信するのインスタンスを作成する必要がありますまず[CInternetSession](../../mfc/reference/cinternetsession-class.md)、し、作成、 [CHttpConnection](#chttpconnection)オブジェクト。 作成することはありません、`CHttpConnection`オブジェクトに直接; 呼び出しではなく、[代わりに](../../mfc/reference/cinternetsession-class.md#gethttpconnection)、作成し、`CHttpConnection`オブジェクトし、ポインターを返します。
 
 方法の詳細については、`CHttpConnection`クラスでは、その他の MFC インターネット機能は、記事をご覧ください。[インターネットが WinInet を使用したプログラミング](../../mfc/win32-internet-extensions-wininet.md)します。 他の 2 つを使用してサーバーへの接続の詳細については、インターネット プロトコル、gopher、FTP サポートされている、クラスを参照してください。 [CGopherConnection](../../mfc/reference/cgopherconnection-class.md)と[CFtpConnection](../../mfc/reference/cftpconnection-class.md)します。
 
@@ -104,22 +104,22 @@ CHttpConnection(
 サーバー名を含む文字列へのポインター。
 
 *dwContext*<br/>
-コンテキスト識別子を`CInternetConnection`オブジェクト。 参照してください**解説**の詳細については*独自*します。
+コンテキスト識別子を`CInternetConnection`オブジェクト。 詳細については*独自*を参照してください、**解説**セクション。
 
 *nPort*<br/>
 この接続のインターネットのポートを識別する番号。
 
 *pstrUserName*<br/>
-ログインするユーザーの名前を指定する null で終わる文字列へのポインター。 NULL の場合、既定値は匿名です。
+サインインするユーザーの名前を指定する null で終わる文字列へのポインター。 NULL の場合、既定値は匿名です。
 
 *pstrPassword*<br/>
-ログインに使用するパスワードを指定する null で終わる文字列へのポインター。 両方*pstrPassword*と*pstrUserName*匿名の既定のパスワードはユーザーの電子メール名が NULL の場合。 場合*pstrPassword*が NULL (または空の文字列) が、 *pstrUserName*が NULL でない空白のパスワードを使用します。 次の表の 4 種類の設定の動作は、 *pstrUserName*と*pstrPassword*:
+サインインに使用するパスワードを指定する null で終わる文字列へのポインター。 両方*pstrPassword*と*pstrUserName*匿名の既定のパスワードはユーザーの電子メール名が NULL の場合。 場合*pstrPassword*が NULL または空の文字列が*pstrUserName*が NULL でない空白のパスワードを使用します。 次の表の 4 種類の設定の動作は、 *pstrUserName*と*pstrPassword*:
 
 |*pstrUserName*|*pstrPassword*|FTP サーバーに送信されるユーザー名|FTP サーバーに送信されたパスワード|
 |--------------------|--------------------|---------------------------------|---------------------------------|
 |NULL または""|NULL または""|「匿名」|ユーザーの電子メール名|
 |NULL 以外の文字列|NULL または""|*pstrUserName*|" "|
-|NULL 以外の文字列が NULL|ERROR|ERROR||
+|NULL |NULL 以外の文字列|ERROR|ERROR|
 |NULL 以外の文字列|NULL 以外の文字列|*pstrUserName*|*pstrPassword*|
 
 *dwFlags*<br/>
@@ -159,14 +159,13 @@ CHttpFile* OpenRequest(
 要求で使用する動詞を含む文字列へのポインター。 NULL の場合は、"GET"が使用されます。
 
 *pstrObjectName*<br/>
-指定した動詞のターゲット オブジェクトを含む文字列へのポインター。 これは一般的に、ファイル名、実行可能モジュール、または検索指定子です。
+指定した動詞のターゲット オブジェクトを含む文字列へのポインター。 この文字列は、一般に、ファイル名、実行可能モジュール、または検索指定子。
 
 *pstrReferer*<br/>
-元のドキュメントのアドレス (URL) を指定する文字列へのポインター、要求内の URL ( *pstrObjectName*) が取得されました。 NULL の場合、HTTP ヘッダーを指定しません。
+元のドキュメントのアドレス (URL) を指定する文字列へのポインター、要求内の URL (*pstrObjectName*) が取得されました。 NULL の場合、HTTP ヘッダーを指定しません。
 
 *dwContext*<br/>
-
-  `OpenRequest` 操作のコンテキスト識別子。 に関する詳細については、「解説」を参照してください*独自*します。
+`OpenRequest` 操作のコンテキスト識別子。 詳細については*独自*、「解説」を参照してください。
 
 *ppstrAcceptTypes*<br/>
 クライアントが受け入れるコンテンツ タイプを示す文字列への null で終わる配列へのポインター。 場合*ppstrAcceptTypes*が null の場合、クライアントでは型のドキュメントのみを受け入れる、サーバーは解釈"テキスト/*"(つまり、テキスト ドキュメントのみとしない画像または他のバイナリ ファイル)。 コンテンツ タイプは CGI 変数 CONTENT_TYPE と同等です。HTTP POST や PUT など情報が添付されるクエリのデータの形式を識別します。
@@ -201,13 +200,12 @@ HTTP 要求の種類に関連付けられた番号。 次のいずれかの値�
 |インターネット フラグ|説明|
 |-------------------|-----------------|
 |INTERNET_FLAG_RELOAD|要求されたファイル、オブジェクト、またはディレクトリ リストをキャッシュからではなく元のサーバーからダウンロードします。|
-|INTERNET_FLAG_DONT_CACHE|返されたエンティティをキャッシュに追加しません。|
-|INTERNET_FLAG_MAKE_PERSISTENT|返されたエンティティを永続エンティティとしてキャッシュに追加します。 つまり、標準的なキャッシュのクリーンアップ、整合性チェック、またはガベージ コレクションでは、キャッシュからこの項目を削除することはできません。|
-|INTERNET_FLAG_SECURE|安全なトランザクション セマンティクスを使用します。 これは、SSL/PCT を使用するように変換され、HTTP 要求でのみ意味があります。|
-|INTERNET_FLAG_NO_AUTO_REDIRECT|HTTP でのみ使用、リダイレクトする必要がありますいない処理されるように指定自動的で[chttpfile::sendrequest](../../mfc/reference/chttpfile-class.md#sendrequest)します。|
+|INTERNET_FLAG_DONT_CACHE|キャッシュに返されるエンティティを追加しません。|
+|INTERNET_FLAG_MAKE_PERSISTENT|返されたエンティティを永続エンティティとしてキャッシュに追加します。 つまり、標準的なキャッシュのクリーンアップ、整合性チェック、またはガベージ コレクションは、この項目キャッシュから削除できません。|
+|INTERNET_FLAG_SECURE|安全なトランザクション セマンティクスを使用します。 SSL/PCT を使用して変換し、HTTP 要求でのみ意味が、|
+|INTERNET_FLAG_NO_AUTO_REDIRECT|HTTP でのみ使用、リダイレクトは自動的に処理されるように指定[chttpfile::sendrequest](../../mfc/reference/chttpfile-class.md#sendrequest)します。|
 
-
-  `dwContext` の既定値をオーバーライドして、コンテキスト識別子を独自の値に設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CHttpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
+`dwContext` の既定値をオーバーライドして、コンテキスト識別子を独自の値に設定します。 コンテキスト識別子にこの特定の操作に関連付けられて、`CHttpConnection`によって作成されたオブジェクトの[CInternetSession](../../mfc/reference/cinternetsession-class.md)オブジェクト。 値が返される[対応](../../mfc/reference/cinternetsession-class.md#onstatuscallback)が識別される操作の状態を提供します。 記事をご覧ください[インターネットの最初の手順。WinInet](../../mfc/wininet-basics.md)コンテキスト識別子の詳細についてはします。
 
 この関数では例外がスローされる場合があります。
 

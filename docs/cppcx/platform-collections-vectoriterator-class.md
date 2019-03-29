@@ -1,18 +1,18 @@
 ---
 title: Platform::Collections::VectorIterator クラス
-ms.date: 12/30/2016
+ms.date: 03/27/2019
 ms.topic: reference
 f1_keywords:
 - COLLECTION/Platform::Collections::VectorIterator::VectorIterator
 helpviewer_keywords:
 - VectorIterator Class
 ms.assetid: d531cb42-27e0-48a6-bf5e-c265891a18ff
-ms.openlocfilehash: 448ce9e9c6c937d5f95640dca8fa2d2ed20bb4b8
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 55f4e7f1d9367779d131796fdf29e6098eb6aa0f
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743223"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565773"
 ---
 # <a name="platformcollectionsvectoriterator-class"></a>Platform::Collections::VectorIterator クラス
 
@@ -64,11 +64,11 @@ VectorIterator テンプレート クラスの型名。
 |[VectorIterator::operator+= 演算子](#operator-plus-assign)|指定されたディスプレイスメントだけ現在の VectorIterator をインクリメントします。|
 |[VectorIterator::operator< 演算子](#operator-less-than)|現在の VectorIterator が、指定された VectorIterator より小さいかどうかを示します。|
 |[Vectoriterator::operator\<= 演算子](#operator-less-than-or-equals)|現在の VectorIterator が、指定された VectorIterator 以下かどうかを示します。|
-|[VectorIterator::operator-= 演算子](#operator-subtract-assign)|指定されたディスプレイスメントだけ現在の VectorIterator をデクリメントします。|
+|[VectorIterator::operator-= 演算子](#operator-minus-equals)|指定されたディスプレイスメントだけ現在の VectorIterator をデクリメントします。|
 |[VectorIterator::operator== 演算子](#operator-equality)|現在の VectorIterator が、指定された VectorIterator と等しいかどうかを示します。|
 |[VectorIterator::operator> 演算子](#operator-greater-than)|現在の VectorIterator が、指定された VectorIterator より大きいかどうかを示します。|
 |[VectorIterator::operator-> 演算子](#operator-arrow)|現在の VectorIterator により参照される要素のアドレスを取得します。|
-|[VectorIterator::operator>= 演算子](#operator-greater-than-or-equal)|現在の VectorIterator が、指定された VectorIterator 以上であるかどうかを示します。|
+|[VectorIterator::operator>= 演算子](#operator-greater-than-or-equals)|現在の VectorIterator が、指定された VectorIterator 以上であるかどうかを示します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
