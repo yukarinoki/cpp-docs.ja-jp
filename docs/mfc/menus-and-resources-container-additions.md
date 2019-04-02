@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CONTAIN tutorial [MFC]
 - Links menu item [MFC]
 ms.assetid: 425448be-8ca0-412e-909a-a3a9ce845288
-ms.openlocfilehash: ad3431f78d3637bcdfdb0266c8abdb43047ca28d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b1a74fef743592d3d052226dac926fc7ddc58578
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279339"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770344"
 ---
 # <a name="menus-and-resources-container-additions"></a>メニューとリソース:コンテナーの変更点
 
@@ -29,7 +29,7 @@ ms.locfileid: "57279339"
 
 コンテナーのアプリケーションで 2 つの種類の変更が必要になる: OLE ビジュアル編集し、インプレース アクティブ化に使用される新しいリソースの追加をサポートするために既存のリソースに変更します。 コンテナー アプリケーションを作成するアプリケーション ウィザードを使用する場合は、これらの手順は、実行されますが、いくつかカスタマイズする必要があります。
 
-アプリケーション ウィザードを使用しない場合 OCLIENT を確認したい場合があります。RC では、リソース スクリプトの OCLIENT サンプル アプリケーションのこれらの変更を実装する方法を確認します。 MFC OLE サンプルを参照して[OCLIENT](../visual-cpp-samples.md)します。
+アプリケーション ウィザードを使用しない場合 OCLIENT を確認したい場合があります。RC では、リソース スクリプトの OCLIENT サンプル アプリケーションのこれらの変更を実装する方法を確認します。 MFC OLE サンプルを参照して[OCLIENT](../overview/visual-cpp-samples.md)します。
 
 この記事で説明したトピックは次のとおりです。
 
@@ -62,7 +62,7 @@ ms.locfileid: "57279339"
 |--------|---------|----------|
 |ID_CANCEL_EDIT_CNTR|VK_ESCAPE|**VIRTKEY**|
 
-2 番目の変更では、インプレース アクティブ化用に作成された新しいメニュー リソースに対応する新しいアクセラレータ テーブルを作成します。 このテーブルには、上記の VK_ESCAPE エントリに加えてファイルとウィンドウのメニューのエントリがあります。 次の例は、MFC のサンプルでは、インプレース アクティブ化用に作成されたアクセラレータ テーブル[コンテナー](../visual-cpp-samples.md):
+2 番目の変更では、インプレース アクティブ化用に作成された新しいメニュー リソースに対応する新しいアクセラレータ テーブルを作成します。 このテーブルには、上記の VK_ESCAPE エントリに加えてファイルとウィンドウのメニューのエントリがあります。 次の例は、MFC のサンプルでは、インプレース アクティブ化用に作成されたアクセラレータ テーブル[コンテナー](../overview/visual-cpp-samples.md):
 
 |ID|キー|型|
 |--------|---------|----------|

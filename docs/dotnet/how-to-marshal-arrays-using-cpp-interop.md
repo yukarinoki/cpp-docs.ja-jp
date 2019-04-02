@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C++ Interop, arrays
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
-ms.openlocfilehash: 0b27fd65b7d42bff2a009b14c39d9547d8a4a919
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740000"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776896"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>方法: 配列をマーシャ リングを使用して C++ 相互運用
 
@@ -24,7 +24,7 @@ ms.locfileid: "57740000"
 
 ## <a name="example"></a>例
 
-次の例では、マネージ配列をアンマネージ関数に渡す方法を示します。 管理対象の関数を使用して[pin_ptr (C +/cli CLI)](../windows/pin-ptr-cpp-cli.md)アンマネージ関数を呼び出す前に、配列のガベージ コレクションを非表示にします。 GC ヒープにピン留めされたポインターを使用して、アンマネージ関数を提供する、配列のコピーを作成するオーバーヘッドを回避できます。 アンマネージ関数は GC ヒープ メモリへのアクセス、配列の内容を変更および変更ことを示すために、マネージ関数でコントロールを再開するときに反映されます。
+次の例では、マネージ配列をアンマネージ関数に渡す方法を示します。 管理対象の関数を使用して[pin_ptr (C +/cli CLI)](../extensions/pin-ptr-cpp-cli.md)アンマネージ関数を呼び出す前に、配列のガベージ コレクションを非表示にします。 GC ヒープにピン留めされたポインターを使用して、アンマネージ関数を提供する、配列のコピーを作成するオーバーヘッドを回避できます。 アンマネージ関数は GC ヒープ メモリへのアクセス、配列の内容を変更および変更ことを示すために、マネージ関数でコントロールを再開するときに反映されます。
 
 ```
 // PassArray1.cpp

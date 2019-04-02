@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3133
 ms.assetid: 4a709405-b67b-4061-8a2a-19fa5fb34a2a
-ms.openlocfilehash: 54683f97000bb1467d2cd93376ee8db77fd0685c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 0a0c30203f886934a19fde35e51602b57cc1b14d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532692"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781719"
 ---
 # <a name="compiler-error-c3133"></a>コンパイラ エラー C3133
 
@@ -19,7 +19,7 @@ C++ varargs に属性を適用することはできません。
 
 属性が正しく適用されませんでした。 属性を適用して、変数の引数を表す省略記号にことはできません。
 
-詳細については、「 [User-Defined Attributes](../../windows/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [User-Defined Attributes](../../extensions/user-defined-attributes-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="example"></a>例
 

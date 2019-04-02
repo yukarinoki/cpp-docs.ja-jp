@@ -52,12 +52,12 @@ helpviewer_keywords:
 - CView [MFC], OnPrint
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
-ms.openlocfilehash: fe9b282fd248f8dd03a6a7f078c03866d1b14b2d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305017"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775310"
 ---
 # <a name="cview-class"></a>CView クラス
 
@@ -351,7 +351,7 @@ DROPEFFECT からの値の列挙型で、ユーザーがこの位置にあるオ
 
 - 行った MK_ALT は、ドロップされたオブジェクトと削除は元のオブジェクトのコピーを作成します。 ビューは、このデータ オブジェクトを受け入れることができるは通常、既定のドロップ効果になります。
 
-詳細については、MFC Advanced Concepts サンプルを参照してください。 [OCLIENT](../../visual-cpp-samples.md)します。
+詳細については、MFC Advanced Concepts サンプルを参照してください。 [OCLIENT](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -405,7 +405,7 @@ DROPEFFECT からの値の列挙型で、ユーザーがこの位置にあるオ
 
 - 行った MK_ALT は、ドロップされたオブジェクトと削除は元のオブジェクトのコピーを作成します。 ビューは、データ オブジェクトを受け入れることができるは通常、既定のドロップ効果になります。
 
-詳細については、MFC Advanced Concepts サンプルを参照してください。 [OCLIENT](../../visual-cpp-samples.md)します。
+詳細については、MFC Advanced Concepts サンプルを参照してください。 [OCLIENT](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -445,7 +445,7 @@ DROPEFFECT からの値の列挙型で、ユーザーがこの位置にあるオ
 
 - DROPEFFECT_SCROLL を使用して、ドラッグのスクロール操作が実行されるときに、または対象のビューで発生していることを示します。
 
-詳細については、MFC Advanced Concepts サンプルを参照してください。 [OCLIENT](../../visual-cpp-samples.md)します。
+詳細については、MFC Advanced Concepts サンプルを参照してください。 [OCLIENT](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -871,7 +871,7 @@ virtual void OnUpdate(
 
 ## <a name="see-also"></a>関連項目
 
-[MFC のサンプルは](../../visual-cpp-samples.md)<br/>
+[MFC のサンプルは](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>

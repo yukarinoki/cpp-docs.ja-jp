@@ -344,12 +344,12 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetMenuShadowDepth
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
-ms.openlocfilehash: 594e727a091cbb7b2999e540ae8da7ddec2a7a14
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7b4d6a31e69e75af240e0e58cbfbb7d2d24291aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294331"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775167"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager クラス
 
@@ -587,7 +587,7 @@ void CMFCSkinsApp::SetSkin (int iIndex)
 
 ## <a name="example"></a>例
 
-次の例は、の既定値を取得する方法を示します、`CMFCVisualManager`オブジェクト。 このコード スニペットの一部、[タスク ウィンドウのサンプル](../../visual-cpp-samples.md)します。
+次の例は、の既定値を取得する方法を示します、`CMFCVisualManager`オブジェクト。 このコード スニペットの一部、[タスク ウィンドウのサンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_TasksPane#1](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_1.h)]
 
@@ -4331,7 +4331,7 @@ virtual void OnFillBarBackground(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`OnFillBarBackground`で、`CMFCVisualManager`クラス。 このコード スニペットの一部、 [Outlook デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`OnFillBarBackground`で、`CMFCVisualManager`クラス。 このコード スニペットの一部、 [Outlook デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_OutlookDemo#4](../../mfc/reference/codesnippet/cpp/cmfcvisualmanager-class_2.cpp)]
 

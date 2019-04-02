@@ -2,12 +2,12 @@
 title: デスクトップ アプリケーション (Visual C)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 80b85afc52819a742c85512e8e6031b9b2e26e9a
-ms.sourcegitcommit: b032daf81cb5fdb1f5a988277ee30201441c4945
+ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51694570"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771920"
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップ アプリケーション (Visual C)
 
@@ -43,17 +43,17 @@ C ランタイム (CRT) と標準ライブラリのクラスと関数、COM オ�
 |[空の Win32 アプリケーションへのファイルの追加](adding-files-to-an-empty-win32-applications.md)|空のプロジェクトにファイルを追加する方法。|
 |[リソース ファイルの操作](working-with-resource-files.md)|デスクトップ アプリケーションをイメージ、アイコン、文字列テーブル、およびその他のリソースを追加する方法。|
 |[DirectX (C++) を使用してゲームを作成するためのリソース](resources-for-creating-a-game-using-directx.md)|C++ でのゲームを作成するためのコンテンツへのリンク。|
-|[チュートリアル: を作成して、スタティック ライブラリを使用](walkthrough-creating-and-using-a-static-library-cpp.md)|.Lib バイナリ ファイルを作成する方法。|
+|[チュートリアル: 作成して、スタティック ライブラリを使用](walkthrough-creating-and-using-a-static-library-cpp.md)|.Lib バイナリ ファイルを作成する方法。|
 |[方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows 10 SDK を使用してビルドするプロジェクトの設定手順が示されています。|
 
 ## <a name="related-articles"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[Windows 開発](/windows/desktop/index)|Windows API と COM に関する情報が含まれています (一部の Windows API とサードパーティ製 DLL は、COM オブジェクトとして実装されています)。|
-|[Hilo: Windows 7 対応 C++ アプリケーションの開発](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|手荷物の受け取り場所に基づくユーザー インターフェイスを作成するために、Windows Animation と Direct2D を使用するリッチ クライアントの Windows デスクトップ アプリケーションを作成する方法について説明します。  このチュートリアルは Windows 7 以降に更新されていませんが、Win32 プログラミングに完全な概要についても提供されます。|
+|[Hilo:Windows 7 対応 C++ アプリケーションの開発](https://msdn.microsoft.com/library/windows/desktop/ff708696.aspx)|手荷物の受け取り場所に基づくユーザー インターフェイスを作成するために、Windows Animation と Direct2D を使用するリッチ クライアントの Windows デスクトップ アプリケーションを作成する方法について説明します。  このチュートリアルは Windows 7 以降に更新されていませんが、Win32 プログラミングに完全な概要についても提供されます。|
 |[C++ でプログラミングする Windows の概要](overview-of-windows-programming-in-cpp.md)|C++ でプログラミングする Windows デスクトップの主な機能をについて説明します。|
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)

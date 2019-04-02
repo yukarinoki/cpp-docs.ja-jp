@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorMenuButton [MFC], OnDraw
 - CMFCColorMenuButton [MFC], OnDrawOnCustomizeList
 ms.assetid: 42685704-e994-4f7b-9553-62283c27b754
-ms.openlocfilehash: 64d61cc9464ef0877baad33a8685cee1482f240d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5fccfbca9fe8c31070f3eb9f208c09cb3722b9b9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301338"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780224"
 ---
 # <a name="cmfccolormenubutton-class"></a>CMFCColorMenuButton クラス
 
@@ -105,7 +105,7 @@ class CMFCColorMenuButton : public CMFCToolBarMenuButton
 
 ## <a name="example"></a>例
 
-次の例では、作成して、さまざまなメソッドを使用してカラー メニュー ボタンを構成する方法、`CMFCColorMenuButton`クラス。 例を`CPalette`オブジェクトが最初に作成しのオブジェクトを構築するために使用し、`CMFCColorMenuButton`クラス。 `CMFCColorMenuButton`オブジェクトが、自動と他のボタンを有効にして、色と列の数を設定し、構成されています。 このコードは、 [Word パッド サンプル](../../visual-cpp-samples.md)します。
+次の例では、作成して、さまざまなメソッドを使用してカラー メニュー ボタンを構成する方法、`CMFCColorMenuButton`クラス。 例を`CPalette`オブジェクトが最初に作成しのオブジェクトを構築するために使用し、`CMFCColorMenuButton`クラス。 `CMFCColorMenuButton`オブジェクトが、自動と他のボタンを有効にして、色と列の数を設定し、構成されています。 このコードは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_WordPad#5](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_WordPad#6](../../mfc/reference/codesnippet/cpp/cmfccolormenubutton-class_2.cpp)]

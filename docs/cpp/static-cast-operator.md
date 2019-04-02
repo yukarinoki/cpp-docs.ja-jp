@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
-ms.openlocfilehash: 8e39fe7eb0fb9b77a82b305fa2f8186ad4e855a1
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: dca6d5297379e6ddc1c70dba80f35f2f55672e49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50601709"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776922"
 ---
 # <a name="staticcast-operator"></a>static_cast 演算子
 
@@ -51,7 +51,7 @@ void f(B* pb, D* pd) {
 
 対照的に[dynamic_cast](../cpp/dynamic-cast-operator.md)で実行時のチェックは行われません、 **static_cast**への変換`pb`します。 `pb` によってポイントされるオブジェクトは、型 `D` のオブジェクトではない場合があります。その場合は、`*pd2` を使用すると、深刻な結果が発生する可能性があります。 たとえば、`D` クラスではなく、`B` クラスのメンバーである関数を呼び出すと、アクセス違反が発生する可能性があります。
 
-**Dynamic_cast**と**static_cast**演算子は、クラス階層全体にポインターを移動します。 ただし、 **static_cast** cast ステートメントで提供される情報に排他的に依存しはそのため安全できません。 例えば:
+**Dynamic_cast**と**static_cast**演算子は、クラス階層全体にポインターを移動します。 ただし、 **static_cast** cast ステートメントで提供される情報に排他的に依存しはそのため安全できません。 例:
 
 ```cpp
 // static_cast_Operator_2.cpp
@@ -76,7 +76,7 @@ void f(B* pb) {
 
 この動作は、クラス型以外の型にも適用されます。 たとえば、 **static_cast**から int に変換するために使用できる、 **char**します。 ただし、その結果、 **char**全体を保持するために十分なビットがない可能性があります**int**値。 ここでも、これは左ことを確認するプログラマからの結果、 **static_cast**変換が安全です。
 
-**Static_cast**演算子が標準変換とユーザー定義の変換を含む、暗黙の変換を実行することもできます。 例えば:
+**Static_cast**演算子が標準変換とユーザー定義の変換を含む、暗黙の変換を実行することもできます。 例:
 
 ```cpp
 // static_cast_Operator_3.cpp
@@ -103,7 +103,7 @@ void f() {
 
 **Static_cast**演算子はキャストできません、 **const**、**揮発性**、または **_ _unaligned**属性。 参照してください[const_cast 演算子](../cpp/const-cast-operator.md)については、これらの属性を削除します。
 
-次のように再配置を行うガベージ コレクターの使用の先頭で unchecked キャストを実行する危険性のため**static_cast**限定すべきパフォーマンス クリティカルなコードで正しく機能することを確認します。 使用する場合**static_cast**リリース モードで置き換える[safe_cast](../windows/safe-cast-cpp-component-extensions.md)デバッグ ビルドで成功を確実にします。
+**C +/CLI CLI:** 次のように再配置を行うガベージ コレクターの使用の先頭で unchecked キャストを実行する危険性のため**static_cast**限定すべきパフォーマンス クリティカルなコードで正しく機能することを確認します。 使用する場合**static_cast**リリース モードで置き換える[safe_cast](../extensions/safe-cast-cpp-component-extensions.md)デバッグ ビルドで成功を確実にします。
 
 ## <a name="see-also"></a>関連項目
 

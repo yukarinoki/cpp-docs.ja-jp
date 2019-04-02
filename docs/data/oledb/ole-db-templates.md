@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - OLE DB templates
 ms.assetid: 73918f6f-1fd7-4fa2-a0ff-7f9d792fce7e
-ms.openlocfilehash: 518697a35a51c75b76efd22ed55980c778f1f6c9
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 9f0f917de7eeb2ace6800368d10958cec7d36e6a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523781"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770383"
 ---
 # <a name="ole-db-templates"></a>OLE DB テンプレート
 
@@ -33,7 +33,7 @@ OLE DB は、および OLE db Universal Data Access について説明します�
 [OLE DB プログラマーズ リファレンス](/sql/connect/oledb/ole-db/oledb-driver-for-sql-server-programming)<br/>
 OLE DB では、Windows SDK のドキュメントへのリンクを提供します。
 
-[OLE DB テンプレート サンプル](../../visual-cpp-samples.md)<br/>
+[OLE DB テンプレート サンプル](../../overview/visual-cpp-samples.md)<br/>
 プロジェクトで OLE DB を使用する方法について説明する OLE DB テンプレート サンプルへのリンクを提供します。
 
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>

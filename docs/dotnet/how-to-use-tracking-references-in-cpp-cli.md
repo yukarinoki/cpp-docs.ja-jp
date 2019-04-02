@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
-ms.openlocfilehash: cf4d528fe23ee6959b770bfce859d24d2f3403cf
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746241"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777052"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>方法: C で追跡参照を使用して、/cli CLI
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-そのアドレスの取得の追跡参照を返します。 次の例を示しています、 [interior_ptr (C +/cli CLI)](../windows/interior-ptr-cpp-cli.md)、変更と追跡参照を使用してデータにアクセスする方法を説明します。
+そのアドレスの取得の追跡参照を返します。 次の例を示しています、 [interior_ptr (C +/cli CLI)](../extensions/interior-ptr-cpp-cli.md)、変更と追跡参照を使用してデータにアクセスする方法を説明します。
 
 ```cpp
 // tracking_reference_data.cpp
@@ -343,4 +343,4 @@ T &
 
 ## <a name="see-also"></a>関連項目
 
-[参照演算子の追跡](../windows/tracking-reference-operator-cpp-component-extensions.md)
+[参照演算子の追跡](../extensions/tracking-reference-operator-cpp-component-extensions.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3299
 ms.assetid: 7cabdf01-bceb-404f-9401-cdd9c7fc1641
-ms.openlocfilehash: 4ad48ea0bc09e098a41cb9aa969a08e9ead48f73
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 314b75a9d0ab8cde2886a7466fa0f95b5bbdd8f1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50484832"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778053"
 ---
 # <a name="compiler-error-c3299"></a>コンパイラ エラー C3299
 
@@ -21,7 +21,7 @@ ms.locfileid: "50484832"
 
 オーバーライドするジェネリック関数の制約句が継承されます。
 
-詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)します。
+詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

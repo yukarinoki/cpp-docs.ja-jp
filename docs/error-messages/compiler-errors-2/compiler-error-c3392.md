@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
-ms.openlocfilehash: 34097de7d50e260ee82a8891cee988b1533debdd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556573"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779535"
 ---
 # <a name="compiler-error-c3392"></a>コンパイラ エラー C3392
 
 'type_arg' : ジェネリック パラメーター 'param' (ジェネリック 'generic_type') の型引数が無効です。パブリックのパラメーターのないコンストラクターを含んでいなければなりません
 
-ジェネリック型のインスタンス化が正しく行われませんでした。 型定義を確認してください。 詳細については、次を参照してください。[ジェネリック](../../windows/generics-cpp-component-extensions.md)します。
+ジェネリック型のインスタンス化が正しく行われませんでした。 型定義を確認してください。 詳細については、次を参照してください。[ジェネリック](../../extensions/generics-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 

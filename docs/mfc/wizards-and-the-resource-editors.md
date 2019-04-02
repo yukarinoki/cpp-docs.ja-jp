@@ -12,12 +12,12 @@ helpviewer_keywords:
 - MFC, wizards
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
-ms.openlocfilehash: 5316899b7eb8828847af6d7db95edf3d8ba3822a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57265523"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773828"
 ---
 # <a name="wizards-and-the-resource-editors"></a>ウィザードおよびリソース エディター
 
@@ -46,7 +46,7 @@ MFC フレームワークでは、ドキュメント、ビュー、フレーム 
 
 Visual C を使用して、[リソース エディター](../windows/resource-editors.md)を作成し、メニューのダイアログ ボックス、カスタム コントロール、アクセラレータ キー、ビットマップ、アイコン、カーソル、文字列、およびバージョンのリソースを編集します。 Visual C バージョン 4.0 の時点で、ツール バー エディター ツールバーの作成をより簡単です。
 
-さらに多くするために、Microsoft Foundation Class ライブラリには、一般的なという名前のファイルが用意されています。RES 共通からコピーすることができます「クリップアート」リソースが含まれます。RES と独自のリソース ファイルに貼り付けます。 一般的です。RES には、ツールバーのボタン、一般的なカーソル、アイコン、および詳細が含まれています。 使用して、変更、および、アプリケーションでこれらのリソースを再配布することができます。 共通の詳細についてはします。RES」を参照してください、 [Clipart サンプル](../visual-cpp-samples.md)します。
+さらに多くするために、Microsoft Foundation Class ライブラリには、一般的なという名前のファイルが用意されています。RES 共通からコピーすることができます「クリップアート」リソースが含まれます。RES と独自のリソース ファイルに貼り付けます。 一般的です。RES には、ツールバーのボタン、一般的なカーソル、アイコン、および詳細が含まれています。 使用して、変更、および、アプリケーションでこれらのリソースを再配布することができます。 共通の詳細についてはします。RES」を参照してください、 [Clipart サンプル](../overview/visual-cpp-samples.md)します。
 
 MFC アプリケーション ウィザード、Visual C のウィザード、リソース エディター、および MFC フレームワークが、多くの作業を行うし、コードがはるかに簡単に管理します。 アプリケーション固有のコードの大部分は、ドキュメントとビュー クラスでです。
 
