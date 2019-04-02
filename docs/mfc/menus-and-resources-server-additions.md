@@ -17,18 +17,18 @@ helpviewer_keywords:
 - server applications [MFC], OLE menus and resources
 - OLE initialization failure [MFC]
 ms.assetid: 56ce9e8d-8f41-4db8-8dee-e8b0702d057c
-ms.openlocfilehash: 0cf5b495ca1e3f6e7b0ae434c09e014a29eadb00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 85c7b6059a868e93c6c6a7ebbd7b08dac3233612
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281953"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767204"
 ---
 # <a name="menus-and-resources-server-additions"></a>メニューとリソース:サーバーの変更点
 
 この記事では、メニューとビジュアル編集サーバー (コンポーネント) アプリケーションでは、その他のリソースをする必要がある変更について説明します。 3 つのモードのいずれかで開始することができるため、サーバー アプリケーションは、メニュー構造とその他のリソースに多くの追加が必要です。 埋め込まれた、または場所にスタンドアロンです。 」の説明に従って、[メニューとリソース (OLE)](../mfc/menus-and-resources-ole.md)に関する記事で、メニューの 4 つのセットの最大値があります。 ミニサーバーに 3 つのみが使用中に、MDI フル サーバー アプリケーションは、4 つすべてが使用されます。 アプリケーション ウィザード メニューのレイアウトをサーバーの種類に必要な作成されます。 いくつかカスタマイズ必要があります。
 
-アプリケーション ウィザードを使用しない場合 HIERSVR を確認したい場合があります。RC では、MFC のサンプル アプリケーションについては、リソース スクリプト[HIERSVR](../visual-cpp-samples.md)、これらの変更を実装する方法を確認します。
+アプリケーション ウィザードを使用しない場合 HIERSVR を確認したい場合があります。RC では、MFC のサンプル アプリケーションについては、リソース スクリプト[HIERSVR](../overview/visual-cpp-samples.md)、これらの変更を実装する方法を確認します。
 
 この記事で説明したトピックは次のとおりです。
 
@@ -56,7 +56,7 @@ OLE ビジュアル編集をサポートするために追加されたメニュ�
 
 2 番目のテーブルは、ほぼビューのアクセラレータ テーブルの正確なコピーです。 説明したメニューで行われた変更を書き換えて[Server メニュー Additions](#_core_server_menu_additions)。
 
-これらのアクセラレータ テーブルの変更など、hiersvr IDR_MAINFRAME で IDR_HIERSVRTYPE_SRVR_IP と IDR_HIERSVRTYPE_SRVR_EMB アクセラレータ テーブルを比較します。MFC OLE サンプルに含まれる RC ファイル[HIERSVR](../visual-cpp-samples.md)します。 ファイルおよびウィンドウのアクセラレータは、インプレース テーブルから不足していると、それらの正確なコピーは、埋め込みテーブル。
+これらのアクセラレータ テーブルの変更など、hiersvr IDR_MAINFRAME で IDR_HIERSVRTYPE_SRVR_IP と IDR_HIERSVRTYPE_SRVR_EMB アクセラレータ テーブルを比較します。MFC OLE サンプルに含まれる RC ファイル[HIERSVR](../overview/visual-cpp-samples.md)します。 ファイルおよびウィンドウのアクセラレータは、インプレース テーブルから不足していると、それらの正確なコピーは、埋め込みテーブル。
 
 ##  <a name="_core_string_table_additions_for_server_applications"></a> サーバー アプリケーションの文字列テーブルの変更点
 
