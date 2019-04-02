@@ -80,12 +80,12 @@ helpviewer_keywords:
 - CMFCButton [MFC], m_nAlignStyle
 - CMFCButton [MFC], m_nFlatStyle
 ms.assetid: 4b32f57c-7a53-4734-afb9-d47e3359f62e
-ms.openlocfilehash: 804c3219356d36f6a0a733937c5e354822a4be83
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0659e5335e1ebc495280a4e0cb5c0167f3b45e1d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269813"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768218"
 ---
 # <a name="cmfcbutton-class"></a>CMFCButton クラス
 
@@ -180,7 +180,7 @@ class CMFCButton : public CButton
 
 ## <a name="example"></a>例
 
-次の例は、さまざまなメソッドを使用して、ボタンのプロパティを構成する方法を示します、`CMFCButton`クラス。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例は、さまざまなメソッドを使用して、ボタンのプロパティを構成する方法を示します、`CMFCButton`クラス。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -542,7 +542,7 @@ FlatStyle  m_nFlatStyle;
 
 ### <a name="example"></a>例
 
-次の例の値を設定する方法を示します、`m_nFlatStyle`でメンバー変数、`CMFCButton`クラス。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例の値を設定する方法を示します、`m_nFlatStyle`でメンバー変数、`CMFCButton`クラス。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#29](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_5.cpp)]
@@ -867,7 +867,7 @@ void SetImage(
 
 ### <a name="example"></a>例
 
-次の例では、さまざまなバージョンを使用する方法、`SetImage`メソッドで、`CMFCButton`クラス。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例では、さまざまなバージョンを使用する方法、`SetImage`メソッドで、`CMFCButton`クラス。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#31](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_2.cpp)]
@@ -891,7 +891,7 @@ void SetMouseCursor(HCURSOR hcursor);
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`SetMouseCursor`メソッドで、`CMFCButton`クラス。 内のコード例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`SetMouseCursor`メソッドで、`CMFCButton`クラス。 内のコード例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#28](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#30](../../mfc/reference/codesnippet/cpp/cmfcbutton-class_6.cpp)]

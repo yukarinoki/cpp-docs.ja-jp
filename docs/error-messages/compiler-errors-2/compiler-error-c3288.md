@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3288
 ms.assetid: ed08a540-9751-46e1-9cbe-c51d6a49ffab
-ms.openlocfilehash: 30a88d1047f8395fc8e3042cf2a1da88e6e5c2d3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d076dabe0df91cefb90be5ec9e90f371331a51f1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608417"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771008"
 ---
 # <a name="compiler-error-c3288"></a>コンパイラ エラー C3288
 
 'type': 無効なハンドル型の逆参照
 
-ハンドル型の無効なを逆参照が検出されました。 ハンドル型を逆参照し、参照に割り当てることができます。 詳細については、次を参照してください。[参照演算子の追跡](../../windows/tracking-reference-operator-cpp-component-extensions.md)します。
+ハンドル型の無効なを逆参照が検出されました。 ハンドル型を逆参照し、参照に割り当てることができます。 詳細については、次を参照してください。[参照演算子の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 

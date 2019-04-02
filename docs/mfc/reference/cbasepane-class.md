@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CBasePane [MFC], UndockPane
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
-ms.openlocfilehash: 30a5eff8b18df8372c23b5f400c90ff85bdad0eb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259816"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774478"
 ---
 # <a name="cbasepane-class"></a>CBasePane クラス
 
@@ -342,7 +342,7 @@ MFC で使用できる拡張のドッキング機能をサポートするウィ�
 
 ## <a name="example"></a>例
 
-`CBasePane` クラスのさまざまなメソッドの使用方法を次の例に示します。 例からウィンドウを取得する方法を示します、`CFrameWndEx`クラスとドッキングのモード、ウィンドウの配置、およびウィンドウのスタイルを設定する方法。 コードは、 [Word パッド サンプル](../../visual-cpp-samples.md)します。
+`CBasePane` クラスのさまざまなメソッドの使用方法を次の例に示します。 例からウィンドウを取得する方法を示します、`CFrameWndEx`クラスとドッキングのモード、ウィンドウの配置、およびウィンドウのスタイルを設定する方法。 コードは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_WordPad#2](../../mfc/reference/codesnippet/cpp/cbasepane-class_1.cpp)]
 

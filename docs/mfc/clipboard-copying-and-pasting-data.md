@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Clipboard, copying data to
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
-ms.openlocfilehash: da589743e98b2ac020e006aedb0ccc0415998f17
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270736"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776103"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>クリップボード:コピーと貼り付けデータ
 
@@ -32,7 +32,7 @@ ms.locfileid: "57270736"
 
 1. 場合は、ユーザーがコピー操作ではなく切り取り操作を選択してアプリケーションから、選択したデータを削除します。
 
-このシーケンスの例を参照してください、`OnEditCut`と`OnEditCopy`関数で、MFC OLE サンプル プログラム[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md)します。 手順 1 は既に完了しているために、これらのサンプルが、現在選択されているデータへのポインターを保持することに注意してください。
+このシーケンスの例を参照してください、`OnEditCut`と`OnEditCopy`関数で、MFC OLE サンプル プログラム[OCLIENT](../overview/visual-cpp-samples.md)と[HIERSVR](../overview/visual-cpp-samples.md)します。 手順 1 は既に完了しているために、これらのサンプルが、現在選択されているデータへのポインターを保持することに注意してください。
 
 ##  <a name="_core_pasting_data"></a> データの貼り付け
 
@@ -50,7 +50,7 @@ ms.locfileid: "57270736"
 
 1. 形式の貼り付けを実行します。
 
-この動作の例では、実装を参照してください、 `OnEditPaste` MFC OLE サンプル プログラムで定義されているビュー クラスのメンバー関数[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md)します。
+この動作の例では、実装を参照してください、 `OnEditPaste` MFC OLE サンプル プログラムで定義されているビュー クラスのメンバー関数[OCLIENT](../overview/visual-cpp-samples.md)と[HIERSVR](../overview/visual-cpp-samples.md)します。
 
 > [!TIP]
 >  貼り付け操作を独自の関数を分離することの主な利点は、ドラッグ アンド ドロップ操作中に、アプリケーションでデータが削除されるときに、同じコードで貼り付けを使用できることです。 OCLIENT および HIERSVR のように、`OnDrop`関数を呼び出すことも`DoPasteItem`、貼り付けの操作を実装するために記述されたコードを再利用します。

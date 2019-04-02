@@ -3,12 +3,12 @@ title: MFC の概念
 ms.date: 1/09/2018
 f1_keywords:
 - Concepts
-ms.openlocfilehash: 58ab83fc195e199a63c53586983d26103950569b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d021350125acda52bb4ecf3919282cb7bbe52b1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50633378"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766509"
 ---
 # <a name="mfc-concepts"></a>MFC の概念
 
@@ -66,5 +66,5 @@ Windows ソケットの MFC 実装について説明します。
 [MFC のリファレンス](../mfc/mfc-desktop-applications.md)<br/>
 MFC ライブラリのリファレンスが用意されています。このライブラリ内のクラスのセットは、Windows API に対して作成されたアプリケーションのフレームワークであるアプリケーション フレームワークを構成します。
 
-[MFC のサンプル](../visual-cpp-samples.md)<br/>
+[MFC のサンプル](../overview/visual-cpp-samples.md)<br/>
 デスクトップ アプリケーション、DLL、データベース アプリケーション、コントロール、Web アプリケーションなどでの MFC の使い方を示すサンプルへのリンクが用意されています。

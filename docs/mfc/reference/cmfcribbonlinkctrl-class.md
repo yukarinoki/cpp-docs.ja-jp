@@ -32,12 +32,12 @@ helpviewer_keywords:
 - CMFCRibbonLinkCtrl [MFC], OpenLink
 - CMFCRibbonLinkCtrl [MFC], SetLink
 ms.assetid: 77ae1941-e0ab-4a9d-911e-1752d34c079b
-ms.openlocfilehash: 9f47e5a3a25120370bd618ac3a89de76761fa61a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc13cf29fd9fed9f91221f00d4b605b3d9c3506f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287792"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772398"
 ---
 # <a name="cmfcribbonlinkctrl-class"></a>CMFCRibbonLinkCtrl クラス
 
@@ -56,8 +56,7 @@ class CMFCRibbonLinkCtrl : public CMFCRibbonButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl](#cmfcribbonlinkctrl)|
-  `CMFCRibbonLinkCtrl` オブジェクトを構築して初期化します。|
+|[CMFCRibbonLinkCtrl::CMFCRibbonLinkCtrl](#cmfcribbonlinkctrl)|`CMFCRibbonLinkCtrl` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -114,7 +113,7 @@ CMFCRibbonLinkCtrl(
 
 ### <a name="example"></a>例
 
-次の例では、コンス トラクターを使用する方法、`CMFCRibbonLinkCtrl`クラス。 このコード スニペットの一部、[リボン ガジェット サンプル](../../visual-cpp-samples.md)します。
+次の例では、コンス トラクターを使用する方法、`CMFCRibbonLinkCtrl`クラス。 このコード スニペットの一部、[リボン ガジェット サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_RibbonGadgets#1](../../mfc/reference/codesnippet/cpp/cmfcribbonlinkctrl-class_1.cpp)]
 

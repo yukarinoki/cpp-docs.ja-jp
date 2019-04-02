@@ -232,12 +232,12 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnProcessKey
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
-ms.openlocfilehash: 4fe7c84981d116d5915013cb466c3e91119f20e1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289976"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773074"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement クラス
 
@@ -394,7 +394,7 @@ class CMFCRibbonBaseElement : public CObject
 
 ## <a name="example"></a>例
 
-`CMFCRibbonBaseElement` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、取得する方法を示しています、`CMFCRibbonBaseElement`オブジェクトから、`CMFCRibbonStatusBar`クラス、セットのリボン要素の説明、テキストの設定を keytip を設定してリボン要素のツールヒントのテキストを設定します。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。
+`CMFCRibbonBaseElement` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、取得する方法を示しています、`CMFCRibbonBaseElement`オブジェクトから、`CMFCRibbonStatusBar`クラス、セットのリボン要素の説明、テキストの設定を keytip を設定してリボン要素のツールヒントのテキストを設定します。 このコード スニペットは、「 [クライアント サンプルの描画](../../overview/visual-cpp-samples.md)」の一部です。
 
 [!code-cpp[NVC_MFC_DrawClient#8](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_1.cpp)]
 [!code-cpp[NVC_MFC_DrawClient#9](../../mfc/reference/codesnippet/cpp/cmfcribbonbaseelement-class_2.cpp)]

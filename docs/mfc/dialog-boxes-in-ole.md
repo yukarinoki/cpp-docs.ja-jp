@@ -10,12 +10,12 @@ helpviewer_keywords:
 - dialog boxes [MFC], OLE
 - Insert object
 ms.assetid: 73c41eb8-738a-4d02-9212-d3395bb09a3a
-ms.openlocfilehash: 1081a831cc2b9fc0ab22e2c80a4f657466534d86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fa3d87e2cc17e297c3e6387920c6d527d8ddbe39
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270892"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767653"
 ---
 # <a name="dialog-boxes-in-ole"></a>OLE のダイアログ ボックス
 
@@ -31,7 +31,7 @@ OLE が有効なアプリケーションを実行中に操作を実行するた�
 このダイアログ ボックスは、ユーザーがリンクまたは埋め込み項目を表すために表示するアイコンを選択できます。 ユーザーの編集 メニューからアイコンの変更 を選択または貼り付けまたは変換 ダイアログ ボックスで、アイコンの変更 ボタンを選択したときに、このダイアログ ボックスを表示します。 ユーザーがオブジェクトの挿入 ダイアログ ボックスが開きますアイコンで表示を選択したときに、それを表示します。 使用して、 [COleChangeIconDialog](../mfc/reference/colechangeicondialog-class.md)クラスがこのダイアログ ボックスを表示します。
 
 *変換*<br/>
-このダイアログ ボックスは、埋め込みまたはリンクされた項目の種類を変更できます。 たとえば、メタファイルを複合ドキュメントに埋め込むことはして後で別のアプリケーションを使用して、埋め込みのメタファイルを変更する場合、[変換] ダイアログ ボックスを使用できます。 クリックしてこのダイアログ ボックスが表示される通常*項目の種類*オブジェクトの 編集 メニューとし、カスケード メニューの変換 をクリックします。 使用して、 [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)クラスがこのダイアログ ボックスを表示します。 MFC OLE サンプルの実行例については、 [OCLIENT](../visual-cpp-samples.md)します。
+このダイアログ ボックスは、埋め込みまたはリンクされた項目の種類を変更できます。 たとえば、メタファイルを複合ドキュメントに埋め込むことはして後で別のアプリケーションを使用して、埋め込みのメタファイルを変更する場合、[変換] ダイアログ ボックスを使用できます。 クリックしてこのダイアログ ボックスが表示される通常*項目の種類*オブジェクトの 編集 メニューとし、カスケード メニューの変換 をクリックします。 使用して、 [COleConvertDialog](../mfc/reference/coleconvertdialog-class.md)クラスがこのダイアログ ボックスを表示します。 MFC OLE サンプルの実行例については、 [OCLIENT](../overview/visual-cpp-samples.md)します。
 
 *編集リンクまたはリンクを更新します。*<br/>
 リンクの編集 ダイアログ ボックスは、リンク オブジェクトのソースに関する情報を変更できます。 更新プログラムのリンク ダイアログ ボックスでは ダイアログ ボックスで現在のすべてのリンクされた項目のソースを検証し、必要に応じて、リンクの編集 ダイアログ ボックスが表示されます。 ユーザーが 編集 メニューからのリンクは、リンクの編集 ダイアログ ボックスを表示します。 複合ドキュメントを初めて開いたときに、更新プログラムのリンク ダイアログ ボックスは、通常は表示されます。 いずれかを使用して、 [COleLinksDialog](../mfc/reference/colelinksdialog-class.md)または[COleUpdateDialog](../mfc/reference/coleupdatedialog-class.md)クラス、ダイアログ ボックスによって表示します。

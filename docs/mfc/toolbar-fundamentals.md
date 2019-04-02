@@ -20,12 +20,12 @@ helpviewer_keywords:
 - frame window classes [MFC], toolbar embedded in
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
-ms.openlocfilehash: 39e790e5152dd07ab40901140ecdd8f8791a446e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258399"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775492"
 ---
 # <a name="toolbar-fundamentals"></a>ツール バーに関する基本事項
 
@@ -62,7 +62,7 @@ ms.locfileid: "57258399"
 1. ドッキング、フローティング、およびツール ヒントを有効にする関数を呼び出します。 詳細については、これらの呼び出しは、この記事を参照してください。[ドッキングとフローティング ツールバー](../mfc/docking-and-floating-toolbars.md)します。
 
 > [!NOTE]
->  MFC 標準サンプル[DOCKTOOL](../visual-cpp-samples.md)新旧両方の MFC ツールバーの図が含まれています。 使用するツールバー`COldToolbar`に手順 2. で呼び出しを必要と`LoadBitmap`(なく`LoadToolBar`) および`SetButtons`します。 新しいツールバーへの呼び出しを必要と`LoadToolBar`します。
+>  MFC 標準サンプル[DOCKTOOL](../overview/visual-cpp-samples.md)新旧両方の MFC ツールバーの図が含まれています。 使用するツールバー`COldToolbar`に手順 2. で呼び出しを必要と`LoadBitmap`(なく`LoadToolBar`) および`SetButtons`します。 新しいツールバーへの呼び出しを必要と`LoadToolBar`します。
 
 ドッキング、フローティング、およびツール ヒントの呼び出しは省略可能です。 これらの行を削除する`OnCreate`したい場合。 結果は、固定、フローティングやできませんし、ツール ヒントを表示できませんに残っているツールバーです。
 

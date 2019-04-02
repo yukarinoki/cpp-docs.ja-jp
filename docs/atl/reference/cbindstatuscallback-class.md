@@ -29,12 +29,12 @@ helpviewer_keywords:
 - data transfer [C++], asynchronous
 - CBindStatusCallback class
 ms.assetid: 0f5da276-6031-4418-b2a9-a4750ef29e77
-ms.openlocfilehash: e8c8d3f170803a792ca2ea8c7a37a18fd2cebd48
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6e5e55a23ee678bbedf76f608bc4fdf562cc1822
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259205"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773126"
 ---
 # <a name="cbindstatuscallback-class"></a>CBindStatusCallback クラス
 
@@ -101,7 +101,7 @@ class ATL_NO_VTABLE CBindStatusCallback : public CComObjectRootEx <T ::_ThreadMo
 
 `CBindStatusCallback` クラスは、`IBindStatusCallback` インターフェイスを実装します。 `IBindStatusCallback` 非同期データ転送をから通知を受信できるように、アプリケーションで実装する必要があります。 システムによって提供される非同期モニカーを使用して`IBindStatusCallback`非同期データに関する情報を送受信する方法と、オブジェクトの間を転送します。
 
-通常、`CBindStatusCallback`オブジェクトが特定のバインド操作に関連付けられています。 たとえば、[非同期](../../visual-cpp-samples.md)サンプルでは、URL プロパティを設定するときに作成、`CBindStatusCallback`オブジェクトへの呼び出しで`Download`:
+通常、`CBindStatusCallback`オブジェクトが特定のバインド操作に関連付けられています。 たとえば、[非同期](../../overview/visual-cpp-samples.md)サンプルでは、URL プロパティを設定するときに作成、`CBindStatusCallback`オブジェクトへの呼び出しで`Download`:
 
 [!code-cpp[NVC_ATL_Windowing#86](../../atl/codesnippet/cpp/cbindstatuscallback-class_1.h)]
 
@@ -528,7 +528,7 @@ void Function_Name(
     DWORD dwSize);
 ```
 
-次の例 (から取得した、 [ASYNC](../../visual-cpp-samples.md)サンプル)、関数は、`OnData`テキスト ボックスに、受信したデータを書き込みます。
+次の例 (から取得した、 [ASYNC](../../overview/visual-cpp-samples.md)サンプル)、関数は、`OnData`テキスト ボックスに、受信したデータを書き込みます。
 
 ### <a name="example"></a>例
 

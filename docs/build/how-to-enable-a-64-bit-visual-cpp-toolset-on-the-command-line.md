@@ -12,19 +12,19 @@ helpviewer_keywords:
 - IPF, command-line compiler
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
-ms.openlocfilehash: b30b831522016ce61f138f7e0521c42ff44e04d9
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809770"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769278"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>方法: 64 ビットを有効にする、コマンドラインで MSVC ツールセットが x64 にホストされています。
 
 Visual Studio には、C++ コンパイラ、リンカー、およびその他のプラットフォームに固有のバージョンの 32 ビット、64 ビット、または ARM ベースの Windows オペレーティング システムで実行できるアプリの作成に使用できるツールが含まれています。 省略可能なその他の Visual Studio ワークロードでは、iOS、Android、Linux などの他のプラットフォームを対象とする C++ ツールを使用できます。 既定ビルド アーキテクチャでは、32 ビット、x86 でホストされているツールを使用して、32 ビットの x86 ネイティブ Windows コードをビルドします。 ただし、64 ビットのコンピューターがある可能性があります。 プロセッサと 64 ビットのコードを使用可能なメモリ領域の利点は、x86、x64、または ARM プロセッサ用のコードをビルドするときに、64 ビット、x64 でホストされているツールセットを使用して実行できます。
 
 > [!NOTE]
-> 各 Visual Studio のエディションに含まれている特定のツールについては、次を参照してください。 [Visual c Tools と Visual Studio エディションで機能](../ide/visual-cpp-tools-and-features-in-visual-studio-editions.md)します。
+> 各 Visual Studio のエディションに含まれている特定のツールについては、次を参照してください。 [Visual c Tools と Visual Studio エディションで機能](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md)します。
 >
 > Visual Studio IDE を使用して、64 ビット アプリケーションを作成する方法については、次を参照してください。[方法。Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)」(方法: Visual C++ プロジェクトを 64 ビット、x64 プラットフォーム用に設定する) を参照してください。
 

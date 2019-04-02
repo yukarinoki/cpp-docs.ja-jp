@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applications [OLE], OLE container
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
-ms.openlocfilehash: 0ab91316c9ee07296fbc46f9f17b3c46c71ee96f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271425"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767887"
 ---
 # <a name="containers-implementing-a-container"></a>コンテナー:コンテナーの実装
 
@@ -36,7 +36,7 @@ ms.locfileid: "57271425"
 
 1. 実装を`OnSize`OLE に通知するメッセージ ハンドラーが含まれているそのビューのサイズの変更を反映するように、四角形を変更する必要がある埋め込みアイテム。
 
-これらの機能の実装が次の 1 つのアプリケーションと大幅に異なりますので、アプリケーション ウィザードは、基本的な実装のみを提供します。 これらの関数を適切に機能するアプリケーションの取得をカスタマイズする必要があります可能性があります。 これの例は、次を参照してください。、[コンテナー](../visual-cpp-samples.md)サンプル。
+これらの機能の実装が次の 1 つのアプリケーションと大幅に異なりますので、アプリケーション ウィザードは、基本的な実装のみを提供します。 これらの関数を適切に機能するアプリケーションの取得をカスタマイズする必要があります可能性があります。 これの例は、次を参照してください。、[コンテナー](../overview/visual-cpp-samples.md)サンプル。
 
 #### <a name="to-handle-embedded-and-linked-items"></a>埋め込みおよびリンクされた項目を処理するには
 
@@ -44,7 +44,7 @@ ms.locfileid: "57271425"
 
 1. オーバーライド`OnChange`、 `OnChangeItemPosition`、および`OnGetItemPosition`します。 これらの関数は、サイズ変更、配置、および埋め込みおよびリンクされた項目の変更を処理します。
 
-アプリケーション ウィザードでは、クラスを派生させ、されますが、オーバーライドする必要があります`OnChange`し、手順 2. で、前の手順とその他の関数が一覧表示します。 スケルトンの実装は、これらの関数は、次の 1 つのアプリケーションから異なる方法で実装されるため、ほとんどのアプリケーションでカスタマイズする必要があります。 この例については、MFC のサンプルを参照してください。 [DRAWCLI](../visual-cpp-samples.md)と[コンテナー](../visual-cpp-samples.md)します。
+アプリケーション ウィザードでは、クラスを派生させ、されますが、オーバーライドする必要があります`OnChange`し、手順 2. で、前の手順とその他の関数が一覧表示します。 スケルトンの実装は、これらの関数は、次の 1 つのアプリケーションから異なる方法で実装されるため、ほとんどのアプリケーションでカスタマイズする必要があります。 この例については、MFC のサンプルを参照してください。 [DRAWCLI](../overview/visual-cpp-samples.md)と[コンテナー](../overview/visual-cpp-samples.md)します。
 
 項目の数は、OLE をサポートするために、コンテナー アプリケーションのメニュー構造に追加する必要があります。 これらの詳細については、次を参照してください。[メニューとリソース。コンテナーの変更点](../mfc/menus-and-resources-container-additions.md)します。
 

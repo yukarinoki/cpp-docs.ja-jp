@@ -10,12 +10,12 @@ helpviewer_keywords:
 - LocaleID ambient property [MFC]
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
-ms.openlocfilehash: 4e9ef9a2f79bda5d41c01984f063622b3b73fb51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13c8ff545763017b01685e012ab2d497eaf7084a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268214"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767549"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX コントロール:ActiveX コントロールのローカライズ
 
@@ -28,7 +28,7 @@ ms.locfileid: "57268214"
 
 一般に、ActiveX コントロール常に基に、ロケール LocaleID アンビエント プロパティ。 これには、次の 3 つの方法があります。
 
-- LocaleID アンビエント プロパティの現在の値に基づいて、オンデマンドで常に、リソースを読み込みます。 MFC ActiveX コントロールをサンプル[LOCALIZE](../visual-cpp-samples.md)この戦略を使用します。
+- LocaleID アンビエント プロパティの現在の値に基づいて、オンデマンドで常に、リソースを読み込みます。 MFC ActiveX コントロールをサンプル[LOCALIZE](../overview/visual-cpp-samples.md)この戦略を使用します。
 
 - LocaleID アンビエント プロパティに基づいて、最初のコントロールがインスタンス化時にリソースを読み込むし、他のすべてのインスタンスにこれらのリソースを使用します。 この記事では、この方法について説明します。
 
@@ -40,7 +40,7 @@ ms.locfileid: "57268214"
     > [!NOTE]
     >  これは、コントロールの機能しますが、ランタイム DLL に動的に更新されません、独自のリソース LocaleID アンビエント プロパティが変更されたとき。 さらに、ActiveX コントロール用の Dll は実行時では、スレッドのロケールを使用して、そのリソースのロケールを決定します。
 
-この記事の残りの部分では、2 つのローカライズ方法について説明します。 第 1 の戦略[コントロールのプログラミング インターフェイスをローカライズ](#_core_localizing_your_control.92.s_programmability_interface)(プロパティ、メソッド、およびイベントの名前)。 2 番目の方法[コントロールのユーザー インターフェイスをローカライズ](#_core_localizing_the_control.92.s_user_interface)コンテナーの LocaleID アンビエント プロパティを使用します。 コントロールのローカリゼーションのデモについては、MFC ActiveX コントロールのサンプルを参照してください。 [LOCALIZE](../visual-cpp-samples.md)します。
+この記事の残りの部分では、2 つのローカライズ方法について説明します。 第 1 の戦略[コントロールのプログラミング インターフェイスをローカライズ](#_core_localizing_your_control.92.s_programmability_interface)(プロパティ、メソッド、およびイベントの名前)。 2 番目の方法[コントロールのユーザー インターフェイスをローカライズ](#_core_localizing_the_control.92.s_user_interface)コンテナーの LocaleID アンビエント プロパティを使用します。 コントロールのローカリゼーションのデモについては、MFC ActiveX コントロールのサンプルを参照してください。 [LOCALIZE](../overview/visual-cpp-samples.md)します。
 
 ##  <a name="_core_localizing_your_control.92.s_programmability_interface"></a> コントロールのプログラミング インターフェイスのローカライズ
 
@@ -88,7 +88,7 @@ SAMPLEFR のプロパティ名を変更します。フランス語としを使�
 
 [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-専門的なローカライズを提供する、switch ステートメントの各ケースで、サブ言語 ID を確認することに注意してください。 この関数の例については、次を参照してください。、`GetResourceHandle`関数では、MFC ActiveX コントロール サンプル[LOCALIZE](../visual-cpp-samples.md)します。
+専門的なローカライズを提供する、switch ステートメントの各ケースで、サブ言語 ID を確認することに注意してください。 この関数の例については、次を参照してください。、`GetResourceHandle`関数では、MFC ActiveX コントロール サンプル[LOCALIZE](../overview/visual-cpp-samples.md)します。
 
 呼び出すことができます、コントロール最初の読み込み時にそれ自体をコンテナーに、 [COleControl::AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid)ロケール ID を取得するには コントロールは、返されたロケール ID の値を渡すことができますし、`GetLocalizedResourceHandle`関数で、適切なリソースのライブラリを読み込みます。 コントロールが存在する場合、結果のハンドルを渡す必要がありますに[AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):
 

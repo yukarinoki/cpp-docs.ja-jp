@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3671
 ms.assetid: d684e4ae-87e2-4424-80bb-6f346652c831
-ms.openlocfilehash: 4b99578ed40b4ff70f3606840198b7062083ca83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4534b11f3aedf638f69337fb6a7af778e086bb4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50667045"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778989"
 ---
 # <a name="compiler-error-c3671"></a>コンパイラ エラー C3671
 
-'function_1': 関数は 'function_2' をオーバーライドしません
+'function_1' : function does not override 'function_2'
 
-明示的なオーバーライド構文を使用する場合、コンパイラは、関数がオーバーライドされていない場合、エラーを生成します。  参照してください[明示的なオーバーライド](../../windows/explicit-overrides-cpp-component-extensions.md)詳細についてはします。
+明示的なオーバーライド構文を使用する場合、コンパイラは、関数がオーバーライドされていない場合、エラーを生成します。  参照してください[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)詳細についてはします。
 
 ## <a name="example"></a>例
 

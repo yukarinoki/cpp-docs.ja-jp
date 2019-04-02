@@ -66,12 +66,12 @@ helpviewer_keywords:
 - CMFCCaptionBar [MFC], m_clrBarBorder
 - CMFCCaptionBar [MFC], m_clrBarText
 ms.assetid: acb54d5f-14ff-4c96-aeb3-7717cf566d9a
-ms.openlocfilehash: 1a18e235c9f5875a977f740c26b917a3567a678d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c6385cb6bd3eec3ce5fefe0475d771c774777820
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264990"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781875"
 ---
 # <a name="cmfccaptionbar-class"></a>CMFCCaptionBar クラス
 
@@ -148,7 +148,7 @@ class CMFCCaptionBar : public CPane
 
 ## <a name="example"></a>例
 
-`CMFCCaptionBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 キャプション バー コントロールを作成、キャプション バーの 3D 境界線を設定、キャプション バーの要素の端とキャプション バー コントロールの端の間隔をピクセル単位で距離を設定、キャプション バーのボタンを設定する方法を示します、、ボタンのツールヒントを設定、キャプション バーのテキスト ラベルを設定、ビットマップ イメージのキャプション バーの設定、およびキャプション バーにイメージのツールヒントを設定します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCCaptionBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 キャプション バー コントロールを作成、キャプション バーの 3D 境界線を設定、キャプション バーの要素の端とキャプション バー コントロールの端の間隔をピクセル単位で距離を設定、キャプション バーのボタンを設定する方法を示します、、ボタンのツールヒントを設定、キャプション バーのテキスト ラベルを設定、ビットマップ イメージのキャプション バーの設定、およびキャプション バーにイメージのツールヒントを設定します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#1](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_1.h)]
 [!code-cpp[NVC_MFC_MSOffice2007Demo#2](../../mfc/reference/codesnippet/cpp/cmfccaptionbar-class_2.cpp)]

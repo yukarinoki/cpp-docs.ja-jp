@@ -2,16 +2,16 @@
 title: DHTML 編集コマンド マップ
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
-ms.openlocfilehash: 1f84a56876f1108e9b02d44f6ef0dec50f065c57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278263"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776155"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編集コマンド マップ
 
-DHTML 編集コマンド マップに次のマクロを使用できる[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-クラスを派生します。 使用の例は、次を参照してください。 [HTMLEdit サンプル](../../visual-cpp-samples.md)します。
+DHTML 編集コマンド マップに次のマクロを使用できる[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-クラスを派生します。 使用の例は、次を参照してください。 [HTMLEdit サンプル](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="dhtml-editing-command-map-macros"></a>DHTML 編集コマンド マップ マクロ
 
@@ -46,7 +46,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="example"></a>例
 
-参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
+参照してください[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -89,7 +89,7 @@ END_DHTMLEDITING_CMDMAP()
 
 ### <a name="example"></a>例
 
-参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
+参照してください[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -113,7 +113,7 @@ ID_EDIT_COPY) などのコマンド ID。
 
 ### <a name="example"></a>例
 
-参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
+参照してください[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -140,7 +140,7 @@ ID_EDIT_COPY) などのコマンド ID。
 
 ### <a name="example"></a>例
 
-参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
+参照してください[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -167,7 +167,7 @@ ID_EDIT_COPY) などのコマンド ID。
 
 ### <a name="example"></a>例
 
-参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
+参照してください[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -197,7 +197,7 @@ ID_EDIT_COPY) などのコマンド ID。
 
 ### <a name="example"></a>例
 
-参照してください[HTMLEdit サンプル](../../visual-cpp-samples.md)します。
+参照してください[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="requirements"></a>必要条件
 

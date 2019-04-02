@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCColorPickerCtrl [MFC], SetType
 - CMFCColorPickerCtrl [MFC], DrawCursor
 ms.assetid: b9bbd03c-beb0-4b55-9765-9985fd05e5dc
-ms.openlocfilehash: 048430c78dfed4158f6fb84eacc07972b79d8a51
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1977717ee590acb63655ba21bfa5eb6bfe7c9bd8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276014"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772359"
 ---
 # <a name="cmfccolorpickerctrl-class"></a>CMFCColorPickerCtrl クラス
 
@@ -111,7 +111,7 @@ class CMFCColorPickerCtrl : public CButton
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CMFCColorPickerCtrl`オブジェクトでさまざまなメソッドを使用して、`CMFCColorPickerCtrl`クラス。 例では、その色、色合い、明るさ、および彩度を設定する方法と、選択コントロールの種類を設定する方法を示します。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例は、構成する方法を示します、`CMFCColorPickerCtrl`オブジェクトでさまざまなメソッドを使用して、`CMFCColorPickerCtrl`クラス。 例では、その色、色合い、明るさ、および彩度を設定する方法と、選択コントロールの種類を設定する方法を示します。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#4](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#5](../../mfc/reference/codesnippet/cpp/cmfccolorpickerctrl-class_2.cpp)]

@@ -57,12 +57,12 @@ helpviewer_keywords:
 - OpenWithPromptFileName method
 - OpenWithServiceComponents method
 ms.assetid: 99bf862c-9d5c-4117-9501-aa0e2672085c
-ms.openlocfilehash: ed2c0b11dfdc6882352c87166b74b2fab327fcd3
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: cb92c19dd839fc09ed803e170a2762e4ac7cd494
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418608"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770807"
 ---
 # <a name="cdatasource-class"></a>CDataSource クラス
 
@@ -98,7 +98,7 @@ class CDataSource
 
 1 つまたは複数のデータベース セッションは、1 つの接続を作成できます。 これらのセッションがによって表される`CSession`します。 呼び出す必要があります[cdatasource::open](../../data/oledb/cdatasource-open.md)とのセッションを作成する前に、接続を開く`CSession::Open`します。
 
-使用する方法の例については`CDataSource`を参照してください、 [CatDB](../../visual-cpp-samples.md)サンプル。
+使用する方法の例については`CDataSource`を参照してください、 [CatDB](../../overview/visual-cpp-samples.md)サンプル。
 
 ## <a name="close"></a> CDataSource::Close
 

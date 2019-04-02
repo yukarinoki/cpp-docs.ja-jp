@@ -6,12 +6,12 @@ helpviewer_keywords:
 - operators [C++], casting
 - casting operators [C++]
 ms.assetid: 16240348-26bc-4f77-8eab-57253f00ce52
-ms.openlocfilehash: 4d6c8a0dc448e08ae2f344faeeb27756cdd27eff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e2ac8e9079b1d30dca077363bbb6cef35960902e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50549748"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768953"
 ---
 # <a name="casting-operators"></a>キャスト演算子
 
@@ -25,7 +25,7 @@ C++ 言語には、固有のキャスト演算子がいくつかあります。 
 
 - [reinterpret_cast](../cpp/reinterpret-cast-operator.md)ビットの単純な再解釈に使用します。
 
-- [safe_cast](../windows/safe-cast-cpp-component-extensions.md)検証可能な MSIL を生成するために使用します。
+- [safe_cast](../extensions/safe-cast-cpp-component-extensions.md) C + で使用される/cli 検証可能な MSIL を生成するために CLI。
 
 使用**const_cast**と**reinterpret_cast**これらの演算子は、古いスタイルのキャストと同じ危険性を提示するので、最後の手段として。 それでも、これらは、以前のスタイルのキャストを完全に置き換えるために必要です。
 

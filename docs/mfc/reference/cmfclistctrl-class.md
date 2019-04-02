@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCListCtrl [MFC], SetSortColumn
 - CMFCListCtrl [MFC], Sort
 ms.assetid: 50d16aee-138c-4f34-8690-cb75d544ef2e
-ms.openlocfilehash: c2434671ecdca4e68f3a83c21f1916b42928ffcd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cd1bb7787f8797984bdce5f9a5b3080d69ea5f2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294233"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767939"
 ---
 # <a name="cmfclistctrl-class"></a>CMFCListCtrl クラス
 
@@ -69,7 +69,7 @@ class CMFCListCtrl : public CListCtrl
 
 ## <a name="example"></a>例
 
-`CMFCListCtrl` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、リスト コントロールを作成、列を挿入する、項目を挿入、アイテムのテキストを設定およびリスト コントロールのフォントを設定する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCListCtrl` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、リスト コントロールを作成、列を挿入する、項目を挿入、アイテムのテキストを設定およびリスト コントロールのフォントを設定する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#25](../../mfc/codesnippet/cpp/cmfclistctrl-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#26](../../mfc/codesnippet/cpp/cmfclistctrl-class_2.cpp)]

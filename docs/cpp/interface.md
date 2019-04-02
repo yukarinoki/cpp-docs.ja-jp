@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
-ms.openlocfilehash: 33a3d45f65ab5adf798a2b0f6b11191e6f6a0213
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1ec3a1d2cddbf8dbbb248a7366d5d56dd95ad074
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573543"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768316"
 ---
 # <a name="interface"></a>__interface
 
@@ -19,7 +19,7 @@ ms.locfileid: "50573543"
 
 Visual C++ インターフェイスは次のように定義できます。
 
-- 0 個以上の基底インターフェイスから継承できます。
+- 0 個以上の基本インターフェイスから継承できます。
 
 - 基底クラスから継承することはできません。
 
@@ -50,7 +50,7 @@ __interface IMyInterface {
 };
 ```
 
-マネージ インターフェイスについては、次を参照してください。[インターフェイス クラス](../windows/interface-class-cpp-component-extensions.md)します。
+マネージ インターフェイスについては、次を参照してください。[インターフェイス クラス](../extensions/interface-class-cpp-component-extensions.md)します。
 
 `CommitX` 関数と `get_X` 関数が純粋仮想関数であることを明示的に示す必要がないことに注意してください。 最初の関数の同等の宣言は次のとおりです。
 

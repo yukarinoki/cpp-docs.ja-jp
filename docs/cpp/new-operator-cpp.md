@@ -4,19 +4,19 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
-ms.openlocfilehash: 83800f823ffd14fd61a9735b09b12d2f07f6d0a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50477988"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768069"
 ---
 # <a name="new-operator-c"></a>new 演算子 (C++)
 
 オブジェクトまたはオブジェクトの配列にメモリを割り当てます*型名*フリー ストアから、オブジェクトに適切に型指定されたゼロ以外のポインターを返します。
 
 > [!NOTE]
->  Microsoft C Component Extensions のサポートを提供する、**新しい**キーワードによる vtable スロット エントリを追加します。 詳細については、次を参照してください[new (新規スロット vtable の)。](../windows/new-new-slot-in-vtable-cpp-component-extensions.md)
+>  Microsoft C Component Extensions のサポートを提供する、**新しい**キーワードによる vtable スロット エントリを追加します。 詳細については、次を参照してください[new (新規スロット vtable の)。](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)
 
 ## <a name="syntax"></a>構文
 
@@ -29,7 +29,7 @@ ms.locfileid: "50477988"
 
 失敗した場合、**新しい**は 0 を返しますまたは例外をスローします。 を参照してください[新しい演算子と delete 演算子](../cpp/new-and-delete-operators.md)詳細についてはします。 この既定の動作を変更するには、カスタム例外処理ルーチンを記述し、呼び出すことによって、 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md)ランタイム ライブラリ関数を引数として関数名。
 
-マネージ ヒープのオブジェクトを作成する方法については、次を参照してください。 [gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)します。
+マネージ ヒープのオブジェクトを作成する方法については、次を参照してください。 [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)します。
 
 ときに**新しい**は C++ クラス オブジェクトのメモリを割り当てに使用されるに、メモリが割り当てられた後、オブジェクトのコンス トラクターは呼び出されます。
 
@@ -117,7 +117,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-配置の新しいフォームを使用する場合、**新しい**オペレーターは、割り当て、コンパイラのサイズだけでなく、引数を持つフォームの配置形式をサポートしていません、**削除**演算子場合、コンス トラクターは、例外をスローします。 例えば:
+配置の新しいフォームを使用する場合、**新しい**オペレーターは、割り当て、コンパイラのサイズだけでなく、引数を持つフォームの配置形式をサポートしていません、**削除**演算子場合、コンス トラクターは、例外をスローします。 例:
 
 ```cpp
 // expre_new_Operator2.cpp
@@ -193,7 +193,7 @@ int main()
 
 ## <a name="lifetime-of-objects-allocated-with-new"></a>new で割り当てたオブジェクトの有効期間
 
-オブジェクトが割り当てられた、**新しい**演算子は定義されているスコープが終了したときに破棄されません。 **新しい**演算子が割り当てたオブジェクトへのポインターを返します、プログラムでこれらのオブジェクトにアクセスする適切なスコープを持つポインターを定義する必要があります。 例えば:
+オブジェクトが割り当てられた、**新しい**演算子は定義されているスコープが終了したときに破棄されません。 **新しい**演算子が割り当てたオブジェクトへのポインターを返します、プログラムでこれらのオブジェクトにアクセスする適切なスコープを持つポインターを定義する必要があります。 例:
 
 ```cpp
 // expre_Lifetime_of_Objects_Allocated_with_new.cpp

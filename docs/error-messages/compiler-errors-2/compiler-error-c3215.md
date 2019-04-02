@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3215
 ms.assetid: d0d16007-8885-42e0-b086-2d3a61f348c5
-ms.openlocfilehash: b9a6d9cd57572f65b24656fa527725c9c605143d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 24f17d2990c9258168a6d37fef101c21f62cb08d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628268"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768654"
 ---
 # <a name="compiler-error-c3215"></a>コンパイラ エラー C3215
 
@@ -19,7 +19,7 @@ ms.locfileid: "50628268"
 
 制約が複数回指定されました。
 
-ジェネリックの詳細については、「 [Generics](../../windows/generics-cpp-component-extensions.md)」を参照してください。
+ジェネリックの詳細については、「 [Generics](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
 次の例では C3215 が生成されます。
 

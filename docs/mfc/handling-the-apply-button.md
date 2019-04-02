@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Apply button in property sheet
 - property sheets, Apply button
 ms.assetid: 7e977015-59b8-406f-b545-aad0bfd8d55b
-ms.openlocfilehash: eb438351d273c872def8c98a67b7010cec0b4d76
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 30ee549a334a684deeb4a845f2fc49ee8bbe11db
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279446"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770838"
 ---
 # <a name="handling-the-apply-button"></a>[適用] ボタンの処理
 
@@ -30,7 +30,7 @@ ms.locfileid: "57279446"
 
 [適用] ボタンの効果を実装するには、プロパティ シートはプロパティ ページで、現在の設定を適用する、アプリケーションでも、所有者、またはその他の外部オブジェクトに伝える必要があります。 同時に、プロパティ シートは、呼び出すことによって、[適用] ボタンを無効する必要があります`CPropertyPage::SetModified( FALSE )`の外部のオブジェクトには、その変更を適用するすべてのページ。
 
-このプロセスの例は、MFC 標準サンプルを参照してください。 [PROPDLG](../visual-cpp-samples.md)します。
+このプロセスの例は、MFC 標準サンプルを参照してください。 [PROPDLG](../overview/visual-cpp-samples.md)します。
 
 ## <a name="see-also"></a>関連項目
 

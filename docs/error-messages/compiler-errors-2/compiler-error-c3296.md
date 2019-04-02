@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3296
 ms.assetid: fc4c9dcd-16cf-4eee-a1ac-c43e7c29e443
-ms.openlocfilehash: 2e9787b063a5a37af8d0e0fdd04492a743792646
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c0a162590ac2a72dda17b2ecfc96899e94cde24c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588111"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767042"
 ---
 # <a name="compiler-error-c3296"></a>コンパイラ エラー C3296
 
@@ -19,7 +19,7 @@ ms.locfileid: "50588111"
 
 コンパイラは同じ名前の 1 つ以上のプロパティを見つけました。 1 つの型の各プロパティには、一意の名前が必要です。
 
-詳細については、「 [property](../../windows/property-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [property](../../extensions/property-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="example"></a>例
 

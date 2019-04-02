@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
-ms.openlocfilehash: c5ee72e557c62e3db2eeb5dac4811133719183f6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57746312"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770692"
 ---
 # <a name="for-each-in"></a>for each、in
 
@@ -35,7 +35,7 @@ ms.locfileid: "57746312"
 `identifier` の型。
 
 *identifier*<br/>
-コレクション要素を表す繰り返し変数。  ときに`identifier`は、[参照演算子の追跡](../windows/tracking-reference-operator-cpp-component-extensions.md)要素を変更することができます。
+コレクション要素を表す繰り返し変数。  ときに`identifier`は、[参照演算子の追跡](../extensions/tracking-reference-operator-cpp-component-extensions.md)要素を変更することができます。
 
 *expression*<br/>
 配列式またはコレクション。 コレクション要素は、コンパイラが `identifier` 型に変換できるようにする必要があります。
@@ -49,7 +49,7 @@ ms.locfileid: "57746312"
 
 *ステートメント*配列またはコレクションの各要素に対して実行されます。 コレクション内の全要素に対する繰り返しが完了すると、制御は、`for each` ブロックに続くステートメントに移動します。
 
-`for each` `in`は[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。
+`for each` `in`は[状況依存のキーワード](../extensions/context-sensitive-keywords-cpp-component-extensions.md)します。
 
 詳細情報
 
@@ -159,4 +159,4 @@ Testing
 
 ## <a name="see-also"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+[ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)

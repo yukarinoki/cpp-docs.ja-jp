@@ -4,18 +4,18 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 20920a5f1a1cdf2a4e10263a7b1de3010f24f9c0
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9be4db9e0f7c50054dc6e6ca498b1c9d49715a8d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58329040"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775414"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
 この記事では、Visual Studio 2003 から Visual Studio 2015 の互換性に影響する変更についてすべて説明します。この記事の「新しい動作」や「現在」という語は、Visual Studio 2015 以降を指します。 「従来の動作」や「以前」という語は、Visual Studio 2013 以前のリリースを指します。
 
-Visual Studio 2017 の詳細については、「[What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)」(Visual Studio 2017 の Visual C++ の新機能)、「[Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md)」(Visual Studio 2017 の C++ 準拠の強化) を参照してください。
+Visual Studio 2017 の詳細については、「[What's new for Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)」(Visual Studio 2017 の Visual C++ の新機能)、「[Conformance Improvements in Visual C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)」(Visual Studio 2017 の C++ 準拠の強化) を参照してください。
 
 > [!NOTE]
 > Visual Studio 2015 と Visual Studio 2017 では、バイナリに関して重大な変更はありません。
@@ -2964,8 +2964,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - **Visual Studio 2013 のみ**:Unicode が非常に一般的になり、MBCS の使用が大幅に減少しているため、MFC MBCS ライブラリは Visual Studio に含まれていません。 この変更により、新しいコントロールとメッセージの多くは Unicode 専用になったため、MFC は Windows SDK 自体により緊密に整合するようになりました。 ただし、MFC の MBCS ライブラリを引き続き使用する必要がある場合は、MSDN ダウンロード センター ([Visual Studio 2013 のマルチバイト MFC ライブラリ](https://www.microsoft.com/download/details.aspx?id=40770)) からダウンロードできます。 Visual C++ 再頒布可能パッケージにも、引き続きこのライブラリが含まれています。  (メモ: MBCS DLL は Visual Studio 2015 以降の C++ セットアップ コンポーネントに含まれています。)
 
-- MFC リボンのアクセシビリティが変更されました。  1 レベルのアーキテクチャではなく、階層的なアーキテクチャが用意されました。 
-  `CRibbonBar::EnableSingleLevelAccessibilityMode()` を呼び出して、引き続き古い動作を使用することもできます。
+- MFC リボンのアクセシビリティが変更されました。  1 レベルのアーキテクチャではなく、階層的なアーキテクチャが用意されました。 `CRibbonBar::EnableSingleLevelAccessibilityMode()` を呼び出して、引き続き古い動作を使用することもできます。
 
 - `CDatabase::GetConnect` メソッドは削除されました。 セキュリティを改善するために、接続文字列は暗号化された状態で格納され、必要な場合にのみ復号化されるようになりました。プレーンテキストとして返すことはできません。  この文字列を取得するには、`CDatabase::Dump` メソッドを使用します。
 
@@ -3525,4 +3524,4 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio における Visual C++ の新機能](../what-s-new-for-visual-cpp-in-visual-studio.md)
+[Visual Studio における Visual C++ の新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)

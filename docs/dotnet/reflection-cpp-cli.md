@@ -18,12 +18,12 @@ helpviewer_keywords:
 - data types [C++], enumerating
 - public members [C++]
 ms.assetid: 46b6ff4a-e441-4022-8892-78e69422f230
-ms.openlocfilehash: 769ba87f64a8096ac8c7f14cc091119345177b3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: a17910e0288b81723aa837ba9204bb40713d5d49
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57426447"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770809"
 ---
 # <a name="reflection-ccli"></a>リフレクション (C++/CLI)
 
@@ -40,8 +40,7 @@ ms.locfileid: "57426447"
 
 ## <a name="example-gettype"></a>例:GetType
 
-
-  `GetType` メソッドは、オブジェクトが基になっている場合は型を表す <xref:System.Type> クラス オブジェクトへのポインターを返します。 (、**型**オブジェクトには、インスタンス固有の情報が含まれていない)。このメソッドで取得できる項目には、型の完全名があります。完全名は、次のように表示できます。
+`GetType` メソッドは、オブジェクトが基になっている場合は型を表す <xref:System.Type> クラス オブジェクトへのポインターを返します。 (、**型**オブジェクトには、インスタンス固有の情報が含まれていない)。このメソッドで取得できる項目には、型の完全名があります。完全名は、次のように表示できます。
 
 型名には、型が定義されている完全なスコープ (名前空間も含む) が含まれています。また、.NET 構文でスコープ解決演算子としてドット (.) が付けられている点にも注意してください。
 
@@ -80,7 +79,7 @@ type of i = 'System.Int32'
 
 ## <a name="example-typeid"></a>例: typeid
 
-同様、`GetType`メソッド、 [typeid](../windows/typeid-cpp-component-extensions.md)演算子へのポインターを返します、**型**オブジェクト、このコードは型名を示すため**System.Int32**します。 型名を表示することは、リフレクションの最も基本的な機能ですが、より便利であると思われるのが、列挙型の有効な値を調査または探索できる点です。 これを行う静的**enum::getnames**関数は、テキスト形式での列挙値を含む各文字列の配列で返します。  次の例の値の列挙値を表す文字列の配列を取得する、**オプション**(CLR) 列挙され、ループに表示されます。
+同様、`GetType`メソッド、 [typeid](../extensions/typeid-cpp-component-extensions.md)演算子へのポインターを返します、**型**オブジェクト、このコードは型名を示すため**System.Int32**します。 型名を表示することは、リフレクションの最も基本的な機能ですが、より便利であると思われるのが、列挙型の有効な値を調査または探索できる点です。 これを行う静的**enum::getnames**関数は、テキスト形式での列挙値を含む各文字列の配列で返します。  次の例の値の列挙値を表す文字列の配列を取得する、**オプション**(CLR) 列挙され、ループに表示されます。
 
 4 番目のオプションを追加する場合、**オプション**列挙型では、このコードには、列挙体が別のアセンブリで定義されている場合でも、再コンパイルなしの新しいオプションが報告されます。
 
@@ -117,8 +116,7 @@ value of 'o' is Option2
 
 ## <a name="example-gettype-members-and-properties"></a>例:GetType メンバーとプロパティ
 
-
-  `GetType` オブジェクトは、型を調べるために使用できる多くのメンバーとプロパティをサポートします。 次のコードは、この情報の一部を取得して表示します。
+`GetType` オブジェクトは、型を調べるために使用できる多くのメンバーとプロパティをサポートします。 次のコードは、この情報の一部を取得して表示します。
 
 ```cpp
 // vcpp_reflection_4.cpp

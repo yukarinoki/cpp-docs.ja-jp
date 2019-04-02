@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CMFCReBar [MFC], OnUpdateCmdUI
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
-ms.openlocfilehash: b221abf772df06541ecde247a9db9401c0ed3c3a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7776bf504d502feee8ef51949b8adc8e44f94c8e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278016"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772294"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar クラス
 
@@ -71,7 +71,7 @@ Rebar オブジェクトは、ツールバーのオブジェクトと同様に�
 
 ## <a name="example"></a>例
 
-`CMFCReBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、rebar コントロールを作成し、バンドを追加する方法を示します。 バンドが内部ツールバーとして機能します。 このコード スニペットの一部、 [Rebar のテスト サンプル](../../visual-cpp-samples.md)します。
+`CMFCReBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、rebar コントロールを作成し、バンドを追加する方法を示します。 バンドが内部ツールバーとして機能します。 このコード スニペットの一部、 [Rebar のテスト サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_RebarTest#1](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_1.h)]
 [!code-cpp[NVC_MFC_RebarTest#2](../../mfc/reference/codesnippet/cpp/cmfcrebar-class_2.cpp)]

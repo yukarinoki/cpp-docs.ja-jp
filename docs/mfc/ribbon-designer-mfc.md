@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Ribbon Designer (MFC)
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
-ms.openlocfilehash: 0972cdfbb80129b0c87c96fa7daf6768d18aa0c4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288781"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769486"
 ---
 # <a name="ribbon-designer-mfc"></a>リボン デザイナー (MFC)
 
@@ -107,7 +107,7 @@ MFC アプリケーションでリボン リソースを使用するには、呼
 
 - **パネル:** 関連するコントロールのグループを表示するリボン バーの領域。 すべてのリボン カテゴリには、1 つ以上のリボン パネルが含まれます。
 
-- **リボン要素:** ボタンとコンボ ボックスなどのパネルで制御します。 リボン上をホストできるさまざまなコントロールを表示する、次を参照してください。 [RibbonGadgets サンプル。ガジェット アプリケーションのリボン](../visual-cpp-samples.md)します。
+- **リボン要素:** ボタンとコンボ ボックスなどのパネルで制御します。 リボン上をホストできるさまざまなコントロールを表示する、次を参照してください。 [RibbonGadgets サンプル。ガジェット アプリケーションのリボン](../overview/visual-cpp-samples.md)します。
 
 ## <a name="see-also"></a>関連項目
 

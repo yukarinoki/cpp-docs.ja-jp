@@ -8,12 +8,12 @@ helpviewer_keywords:
 - language reference, Visual C++
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
-ms.openlocfilehash: 4d184e70e6a7284d07e706ce8b8c247c96442750
-ms.sourcegitcommit: cce52b2232b94ce8fd8135155b86e2d38a4e4562
+ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54031266"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774036"
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
 
@@ -97,8 +97,8 @@ Visual C++ コンパイラの非標準動作に関する情報。
 
 ## <a name="related-sections"></a>関連項目
 
-[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)<br/>
-共通言語ランタイムを対象とするための Visual C++ の使用に関するリファレンス資料。
+[ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)<br/>
+.NET をターゲットに Visual C の使用に関するリファレンス資料。
 
 [C/C++ ビルドのリファレンス](../build/reference/c-cpp-building-reference.md)<br/>
 コンパイラ オプション、リンカー オプション、およびその他のビルド ツール。

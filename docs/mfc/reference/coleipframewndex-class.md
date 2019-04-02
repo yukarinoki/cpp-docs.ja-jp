@@ -94,12 +94,12 @@ helpviewer_keywords:
 - COleIPFrameWndEx [MFC], WinHelpA
 - COleIPFrameWndEx [MFC], InitUserToobars
 ms.assetid: ebff1560-a1eb-4854-af00-95d4a192bd55
-ms.openlocfilehash: 8ebf63e6cf31f3852434926c3559774e7b4b46d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ce0e3a8ecf4774bc0d259c0304b1e88532336bd1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285348"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771150"
 ---
 # <a name="coleipframewndex-class"></a>COleIPFrameWndEx クラス
 
@@ -139,11 +139,11 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 |[COleIPFrameWndEx::InsertPane](#insertpane)||
 |[COleIPFrameWndEx::IsMenuBarAvailable](#ismenubaravailable)|メニュー バーのオブジェクトへのポインターが `NULL`ではないかどうかを判断します。|
 |[COleIPFrameWndEx::IsPointNearDockSite](#ispointneardocksite)||
-|[COleIPFrameWndEx::LoadFrame](#loadframe)|(`COleIPFrameWnd::LoadFrame` をオーバーライドします)。|
+|[COleIPFrameWndEx::LoadFrame](#loadframe)|( `COleIPFrameWnd::LoadFrame`をオーバーライドします)。|
 |[COleIPFrameWndEx::OnCloseDockingPane](#onclosedockingpane)||
 |[COleIPFrameWndEx::OnCloseMiniFrame](#oncloseminiframe)||
 |[COleIPFrameWndEx::OnClosePopupMenu](#onclosepopupmenu)|アクティブなポップアップ メニューが WM_DESTROY メッセージを処理するときに、フレームワークによって呼び出されます。|
-|[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|(`CFrameWnd::OnCmdMsg` をオーバーライドします)。|
+|[COleIPFrameWndEx::OnCmdMsg](#oncmdmsg)|( `CFrameWnd::OnCmdMsg`をオーバーライドします)。|
 |[COleIPFrameWndEx::OnDrawMenuImage](#ondrawmenuimage)|メニュー項目に関連付けられているイメージが描画されるときに、フレームワークによって呼び出されます。|
 |[COleIPFrameWndEx::OnDrawMenuLogo](#ondrawmenulogo)|[CMFCPopupMenu](../../mfc/reference/cmfcpopupmenu-class.md)オブジェクトが WM_PAINT メッセージを処理するときに、フレームワークによって呼び出されます。|
 |[COleIPFrameWndEx::OnMenuButtonToolHitTest](#onmenubuttontoolhittest)|[CMFCToolBarButton](../../mfc/reference/cmfctoolbarbutton-class.md)オブジェクトが WM_NCHITTEST Microsoft を処理するときに、フレームワークによって呼び出されます。|
@@ -154,8 +154,8 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 |[COleIPFrameWndEx::OnShowPopupMenu](#onshowpopupmenu)|ポップアップ メニューがアクティブにされるときにフレームワークによって呼び出されます。|
 |[COleIPFrameWndEx::OnTearOffMenu](#ontearoffmenu)|ティアオフ バーのあるメニューがアクティブ化されるときにフレームワークによって呼び出されます。|
 |[COleIPFrameWndEx::PaneFromPoint](#panefrompoint)||
-|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|(`COleIPFrameWnd::PreTranslateMessage` をオーバーライドします)。|
-|[COleIPFrameWndEx::RecalcLayout](#recalclayout)|(`COleIPFrameWnd::RecalcLayout` をオーバーライドします)。|
+|[COleIPFrameWndEx::PreTranslateMessage](#pretranslatemessage)|( `COleIPFrameWnd::PreTranslateMessage`をオーバーライドします)。|
+|[COleIPFrameWndEx::RecalcLayout](#recalclayout)|( `COleIPFrameWnd::RecalcLayout`をオーバーライドします)。|
 |[COleIPFrameWndEx::RemovePaneFromDockManager](#removepanefromdockmanager)||
 |[COleIPFrameWndEx::SetDockState](#setdockstate)|フレーム ウィンドウに属しているウィンドウに、指定のドッキング状態を適用します。|
 |[COleIPFrameWndEx::SetupToolbarMenu](#setuptoolbarmenu)|ダミーの項目を検索して、指定されたユーザー定義の項目で置き換えることで、ツールバーのオブジェクトを変更します。|
@@ -170,7 +170,7 @@ class COleIPFrameWndEx : public COleIPFrameWnd
 
 ## <a name="example"></a>例
 
-次の例は、 `COleIPFrameWndEx` クラスのインスタンスをサブクラス化して、メソッドをオーバーライドする方法を示しています。 `OnDestory` メソッド、 `RepositionFrame` メソッド、 `RecalcLayout` メソッド、および `CalcWindowRect` メソッドをオーバーライドする方法を例に示します。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。
+次の例は、 `COleIPFrameWndEx` クラスのインスタンスをサブクラス化して、メソッドをオーバーライドする方法を示しています。 `OnDestory` メソッド、 `RepositionFrame` メソッド、 `RecalcLayout` メソッド、および `CalcWindowRect` メソッドをオーバーライドする方法を例に示します。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_WordPad#1](../../mfc/reference/codesnippet/cpp/coleipframewndex-class_1.cpp)]
 

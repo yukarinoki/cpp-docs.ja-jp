@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C1001
 ms.assetid: 5736cdb3-22c8-4fad-aa85-d5e0d2b232f4
-ms.openlocfilehash: a7130ed0568de387c99b8296dc4e10d92baec337
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: beb382b9c6ccf80d01f5a0262832e7fb7e1ea0a4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821366"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770929"
 ---
 # <a name="fatal-error-c1001"></a>致命的なエラー C1001
 
@@ -23,4 +23,4 @@ ms.locfileid: "57821366"
 
 最適化が、エラーの場合は、エラーが報告された行または数行のコードをその前後の書き直しをお試しください。 方法は、コンパイラは前処理した後は、コードを表示、使用することができます、 [/P (ファイルへのプリプロセス)](../../build/reference/p-preprocess-to-a-file.md)オプション。
 
-エラーの原因を特定する方法と、内部コンパイラ エラーを Microsoft に報告する方法の詳細については、次を参照してください。 [Visual c ツールセットで問題を報告する方法](../../how-to-report-a-problem-with-the-visual-cpp-toolset.md)します。
+エラーの原因を特定する方法と、内部コンパイラ エラーを Microsoft に報告する方法の詳細については、次を参照してください。 [Visual c ツールセットで問題を報告する方法](../../overview/how-to-report-a-problem-with-the-visual-cpp-toolset.md)します。

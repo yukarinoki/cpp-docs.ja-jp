@@ -2,19 +2,19 @@
 title: Visual C++ 2003 ～ 2015 の新機能
 ms.date: 11/04/2016
 ms.assetid: c4afde6f-3d75-40bf-986f-be57e3818e26
-ms.openlocfilehash: fdd1d2c2183d06defe413340b8aef05c5bd61750
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e2a785871d85ce742bee7b78586756cced38986e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749153"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768686"
 ---
 # <a name="visual-c-what39s-new-2003-through-2015"></a>Visual C++ 2003 ～ 2015 の新機能
 
 このページは、Visual Studio 2003 から 2015 までのすべてのバージョンの Visual C++ の "新機能" をまとめたものです。 この情報は、以前のバージョンの Visual C++ からアップグレードする場合に有用な情報として提供されます。
 
 > [!NOTE]
-> Visual Studio 2017 の詳細については、「[What's new for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)」(Visual Studio 2017 の Visual C++ の新機能)、「[Conformance Improvements in Visual C++ in Visual Studio 2017](../cpp-conformance-improvements-2017.md)」(Visual Studio 2017 の C++ 準拠の強化) を参照してください。
+> Visual Studio 2017 の詳細については、「[What's new for Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)」(Visual Studio 2017 の Visual C++ の新機能)、「[Conformance Improvements in Visual C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)」(Visual Studio 2017 の C++ 準拠の強化) を参照してください。
 
 ## <a name="whats-new-for-c-in-visual-studio-2015"></a>Visual Studio 2015 の C++ の新機能
 
@@ -1570,8 +1570,7 @@ C++11 の明示的な変換演算子、初期化子リスト、スコープ指�
 - 自動ベクター化は、より多くの C++ のパターンを認識および最適化し、コードをいっそう高速に実行できるようになりました。
 - ARM プラットフォームと Atom マイクロアーキテクチャ コードの品質が向上しました。
 - 呼び出し規約 __vectorcall が追加されました。 ベクター レジスタを使用するための呼び出し規約 __vectorcall を使用して、ベクター型の引数を渡します。
-- 新しいリンカー オプション。 
-  `/Gw` (コンパイラ) と `/Gy` (アセンブラー) スイッチにより、より効率的なバイナリを生成するためのリンカー最適化が有効になります。
+- 新しいリンカー オプション。 `/Gw` (コンパイラ) と `/Gy` (アセンブラー) スイッチにより、より効率的なバイナリを生成するためのリンカー最適化が有効になります。
 - C++ AMP の共有メモリのサポート。これにより、CPU と GPU との間でのデータ コピーが減少するか、不要になります。
 
 ### <a name="profile-guided-optimization-pgo-enhancements"></a>ガイド付き最適化のプロファイル (Profile Guided Optimization、PGO) が次のように強化されました

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - POINT structure
 - CPoint class
 ms.assetid: a6d4db93-35cc-444d-9221-c3e160f6edaa
-ms.openlocfilehash: cab7aef6fab025174dedb0bf75ee43c49ead0d88
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 85e469e1f52a22917580ce8616aaba5ff57d08ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57740391"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768030"
 ---
 # <a name="cpoint-class"></a>CPoint クラス
 
@@ -90,12 +90,10 @@ CPoint(LPARAM dwPoint) throw();
 ### <a name="parameters"></a>パラメーター
 
 *initX*<br/>
-
-  `x` の `CPoint` メンバーの値を指定します。
+`x` の `CPoint` メンバーの値を指定します。
 
 *initY*<br/>
-
-  `y` の `CPoint` メンバーの値を指定します。
+`y` の `CPoint` メンバーの値を指定します。
 
 *initPt*<br/>
 [ポイント](/windows/desktop/api/windef/ns-windef-tagpoint)構造または`CPoint`初期化するために使用される値を指定する`CPoint`します。
@@ -344,7 +342,7 @@ A `CSize` 2 つのポイント間の違いは、`CPoint`オフセット、サイ
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル MDI](../../visual-cpp-samples.md)<br/>
+[MFC サンプル MDI](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [POINT 構造体](/windows/desktop/api/windef/ns-windef-tagpoint)<br/>
 [CRect クラス](../../atl-mfc-shared/reference/crect-class.md)<br/>

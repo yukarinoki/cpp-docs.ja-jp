@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
-ms.openlocfilehash: d9ebea5c955dcf89308654feec9866d4fdc924cd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50501362"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774608"
 ---
 # <a name="compiler-error-c2664"></a>コンパイラ エラー C2664
 
@@ -31,7 +31,7 @@ C2664 を解決するには、
 
 クラスがそのベース クラスのいずれかにメンバーを隠ぺいした場合も、C2664 が生成されます。
 
-詳細については、次を参照してください。[方法: system::string を wchar_t * または char に変換\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)します。
+詳細については、「[方法 :System::string を wchar_t * または char に変換\*](../../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)します。
 
 ## <a name="example"></a>例
 
@@ -189,7 +189,7 @@ int main( ) {
 
 ## <a name="example"></a>例
 
-関数呼び出しが満たされるように、列挙型変数はその基になる型に変換されません。 詳細については、次を参照してください。[列挙型クラス](../../windows/enum-class-cpp-component-extensions.md)します。 次の例では、C2664 を生成し、その修正方法を示しています。
+関数呼び出しが満たされるように、列挙型変数はその基になる型に変換されません。 詳細については、次を参照してください。[列挙型クラス](../../extensions/enum-class-cpp-component-extensions.md)します。 次の例では、C2664 を生成し、その修正方法を示しています。
 
 ```
 // C2664f.cpp

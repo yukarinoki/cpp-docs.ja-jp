@@ -9,12 +9,12 @@ helpviewer_keywords:
 - registering custom Clipboard data formats
 - custom Clipboard data formats
 ms.assetid: aea58159-65ed-4385-aeaa-3d9d5281903b
-ms.openlocfilehash: 16e949973ff621b1e4e36475d95763ac47b4a00d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 182abe71ccc9552c113ebb114b4351178e48b096
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280219"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766848"
 ---
 # <a name="clipboard-adding-other-formats"></a>クリップボード:その他のデータ形式の追加
 
@@ -36,7 +36,7 @@ ms.locfileid: "57280219"
 
 1. 標準の形式を呼び出すことによって追加`COleDataSource::CacheGlobalData`は、各標準形式をサポートします。
 
-MFC OLE サンプル プログラムでこの手法が使用される[HIERSVR](../visual-cpp-samples.md) (確認、`OnGetClipboardData`のメンバー関数、**よう**クラス)。 このサンプルでは、唯一の違いは、HIERSVR が他の標準形式をサポートしていないため、そのステップ 3 は実装されていません。
+MFC OLE サンプル プログラムでこの手法が使用される[HIERSVR](../overview/visual-cpp-samples.md) (確認、`OnGetClipboardData`のメンバー関数、**よう**クラス)。 このサンプルでは、唯一の違いは、HIERSVR が他の標準形式をサポートしていないため、そのステップ 3 は実装されていません。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 

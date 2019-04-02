@@ -12,12 +12,12 @@ f1_keywords:
 helpviewer_keywords:
 - Object class
 ms.assetid: 709e84a8-0bff-471b-bc14-63e424080b5a
-ms.openlocfilehash: 8e2304ca2c4a6e974262fdb1b449a64b5871a474
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 77313f8c4dcc87fa9de852afe2d60e614f8fc3a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57749881"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781017"
 ---
 # <a name="platformobject-class"></a>Platform::Object クラス
 
@@ -118,7 +118,7 @@ A [platform::type](../cppcx/platform-type-class.md)オブジェクトのラン�
 
 [::Interop::typename](/uwp/api/windows.ui.xaml.interop.typename)クラスは、Windows コンポーネントとアプリ間で型情報を渡すことの言語に依存しない方法として Windows Api で使用されます。 T[platform::type Class](../cppcx/platform-type-class.md)間の変換演算子を持つ`Type`と`TypeName`します。
 
-使用して、 [typeid](../windows/typeid-cpp-component-extensions.md)演算子を返す、 `Platform::Type` XAML ページ間を移動するときなど、クラス名のオブジェクト。
+使用して、 [typeid](../extensions/typeid-cpp-component-extensions.md)演算子を返す、 `Platform::Type` XAML ページ間を移動するときなど、クラス名のオブジェクト。
 
 ```
 rootFrame->Navigate(TypeName(MainPage::typeid), e->Arguments);

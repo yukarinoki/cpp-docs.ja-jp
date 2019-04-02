@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
-ms.openlocfilehash: 0252c4b64690f6a2fb0fd97b97841fe45fcce244
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751454"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774738"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>方法: 定義および c++ の列挙型を使用する/cli CLI
 
@@ -92,7 +92,7 @@ a and day2 are the same
 列挙操作の結果のチェックを静的または動的なコンパイラがしません操作は、列挙型の有効な列挙子の範囲にない値があります。
 
 > [!NOTE]
->  C++ 11 に c++ のマネージ列挙型クラスよりも大幅に異なるアンマネージ コードで列挙型のクラス型が導入されています/cli CLI。 具体的には、c++ 11 enum クラス型はサポートしていませんマネージ列挙型クラスの型として同じ演算子 c++/cli CLI、および C++/cli CLI のソース コードする必要がありますマネージ列挙型では、アクセシビリティ指定子クラスを宣言するアンマネージ (C++ と区別できるようにするには11) 列挙型クラスの宣言。 C++ enum クラスの詳細については/cli CLI、C +/cli/CX、および c++ 11 を参照してください。[列挙型クラス](../windows/enum-class-cpp-component-extensions.md)します。
+>  C++ 11 に c++ のマネージ列挙型クラスよりも大幅に異なるアンマネージ コードで列挙型のクラス型が導入されています/cli CLI。 具体的には、c++ 11 enum クラス型はサポートしていませんマネージ列挙型クラスの型として同じ演算子 c++/cli CLI、および C++/cli CLI のソース コードする必要がありますマネージ列挙型では、アクセシビリティ指定子クラスを宣言するアンマネージ (C++ と区別できるようにするには11) 列挙型クラスの宣言。 C++ enum クラスの詳細については/cli CLI、C +/cli/CX、および c++ 11 を参照してください。[列挙型クラス](../extensions/enum-class-cpp-component-extensions.md)します。
 
 ```
 // mcppv2_enum_5.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>関連項目
 
-[列挙型クラス](../windows/enum-class-cpp-component-extensions.md)
+[列挙型クラス](../extensions/enum-class-cpp-component-extensions.md)

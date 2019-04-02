@@ -9,12 +9,12 @@ helpviewer_keywords:
 - '[] operator'
 - subscript operator [C++], syntax
 ms.assetid: 69c31494-52da-4dd0-8bbe-6ccbfd50f197
-ms.openlocfilehash: 5921b89c7637f1a4d1171c8835bb1b5300b718fb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d55c18d2c9faa1a704bea129f2551937e76133c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572914"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767926"
 ---
 # <a name="subscript-operator-"></a>添字演算子
 
@@ -28,7 +28,7 @@ postfix-expression [ expression ]
 
 (どの 1 次式もかまいません)、添字演算子が続く後置式 **[ ]** 配列のインデックスを指定します。
 
-マネージ配列については、次を参照してください。[配列](../windows/arrays-cpp-component-extensions.md)します。
+C++ のマネージ配列について/cli CLI を参照してください[配列](../extensions/arrays-cpp-component-extensions.md)します。
 
 によって表される値は、通常、*後置式*配列識別子などのポインター値と*式*(列挙型を含む)、整数値です。 ただし、構文上必要なのは、一方の式がポインター型で、もう一方が整数型であることです。 整数値可能性がありますので、*後置式*位置とポインター値が角かっこ内にある可能性があります、*式*または添字の位置。 次のコードがあるとします。
 
@@ -42,7 +42,7 @@ cout << 2[nArray] << endl;            // prints "2"
 
 `*((e2) + (e1))`
 
-式によって見つかったアドレスが*e2*アドレスからのバイト*e1*します。 配列内の次のオブジェクトを生成するアドレスのスケールではなく、 *e2*します。 例えば:
+式によって見つかったアドレスが*e2*アドレスからのバイト*e1*します。 配列内の次のオブジェクトを生成するアドレスのスケールではなく、 *e2*します。 例:
 
 ```cpp
 double aDbl[2];
@@ -52,7 +52,7 @@ double aDbl[2];
 
 添字式には、次のように複数の添字がある場合があります。
 
-*expression1* **[** *expression2* **] [** *expression3* **]** .
+*expression1* **[** *expression2* **] [** *expression3* **]** ...
 
 添字式は、左から右へ関連付けられます。 左端の添字式、*expression1* **[** *expression2* **]** が最初に評価されます。 *expression1* と *expression2* を加算した結果として得られるアドレスからポインター式が形成され、次にこのポインター式に *expression3* が加算されて新しいポインター式が形成されます。このようにして、最後の添字式が加算されるまで処理が行われます。 間接演算子 (<strong>\*</strong>) 最終的なポインター値が配列型に対応しない限り、最後の添字式が評価された後に適用します。
 

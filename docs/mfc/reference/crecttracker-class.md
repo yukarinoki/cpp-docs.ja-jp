@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CRectTracker [MFC], m_rect
 - CRectTracker [MFC], m_sizeMin
 ms.assetid: 99caa7f2-3c0d-4a42-bbee-e5d1d342d4ee
-ms.openlocfilehash: 1834c378246835314002cdf05fe9a294b609c4e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9c54cdfecfa6c4ff0eef7e16003ab2097553953d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259582"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775687"
 ---
 # <a name="crecttracker-class"></a>CRectTracker クラス
 
@@ -481,8 +481,8 @@ TRUE の場合、x 軸または y 軸に沿った四角形を反転します。�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC のサンプルの追跡ツール](../../visual-cpp-samples.md)<br/>
-[MFC サンプル DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MFC のサンプルの追跡ツール](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [COleResizeBar クラス](../../mfc/reference/coleresizebar-class.md)<br/>
 [CRect クラス](../../atl-mfc-shared/reference/crect-class.md)

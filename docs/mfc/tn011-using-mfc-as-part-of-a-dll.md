@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DLLs [MFC], linking
 - MFC DLLs [MFC], linking regular MFC DLLs to MFC
 ms.assetid: 76753e9c-59dc-40f6-b6a7-f6bb9a7c4190
-ms.openlocfilehash: 63e97c3b9260465259d76cf6996d1d389f65ee41
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7e9fda44e2af4ec32bae6299fbcc0eda17984f9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326453"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769733"
 ---
 # <a name="tn011-using-mfc-as-part-of-a-dll"></a>TN011:DLL の構成要素としての MFC
 
@@ -57,7 +57,7 @@ MFC では、シンボルに静的にリンクされるレギュラー MFC Dll �
 
 アプリケーションと DLL の間のインターフェイス (Api) を明示的にエクスポートする必要があります。 、低帯域幅を、インターフェイスを定義して、C インターフェイスだけを使うことをお勧めします。 直接的な C インターフェイスより複雑な C++ クラスよりも管理が容易です。
 
-C および C++ の両方のファイルを含めることができる別のヘッダーには、独自の Api を配置します。 MFC Advanced Concepts サンプルでは、ヘッダー ScreenCap.h を参照してください。[は](../visual-cpp-samples.md)例についてはします。 関数をエクスポートするには、それらを入力、`EXPORTS`モジュール定義ファイルのセクション (します。DEF)、または含める`__declspec(dllexport)`関数の定義にします。 使用`__declspec(dllimport)`クライアント実行可能ファイルにこれらの関数をインポートします。
+C および C++ の両方のファイルを含めることができる別のヘッダーには、独自の Api を配置します。 MFC Advanced Concepts サンプルでは、ヘッダー ScreenCap.h を参照してください。[は](../overview/visual-cpp-samples.md)例についてはします。 関数をエクスポートするには、それらを入力、`EXPORTS`モジュール定義ファイルのセクション (します。DEF)、または含める`__declspec(dllexport)`関数の定義にします。 使用`__declspec(dllimport)`クライアント実行可能ファイルにこれらの関数をインポートします。
 
 AFX_MANAGE_STATE マクロは、MFC と動的にリンクされるレギュラー MFC Dll でエクスポートされたすべての関数の先頭に追加する必要があります。 このマクロは、DLL のモジュールの現在の状態を設定します。 このマクロを使用するには、DLL からエクスポートされた関数の先頭に次のコード行を追加します。
 

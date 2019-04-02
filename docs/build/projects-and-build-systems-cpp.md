@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 0c4a74ce69f5c52eb6fc107ea477e5715e86ecd2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826581"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775427"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C と C++ プロジェクトおよび Visual Studio でのビルド システム
 
@@ -74,10 +74,12 @@ Visual Studio プロジェクトに C++ のさまざまなオプションを次�
 
 [リリース ビルド](release-builds.md)エンドユーザーへの展開を作成および最適化されたリリースをトラブルシューティングする方法を構築します。
 
-[コマンドラインから MSVC ツールセットを使用してください。](building-on-the-command-line.md)<br/>
+[コマンド ラインから MSVC ツールセットを使用する](building-on-the-command-line.md)<br/>
 C と C++ コンパイラを使用し、Visual Studio IDE を使用するのではなく、コマンドラインから直接ツールを構築する方法について説明します。
 
 [Visual Studio で Dll をビルド](dlls-in-visual-cpp.md)作成、デバッグ、および Visual Studio で C/C++ Dll (共有ライブラリ) をデプロイする方法。
+
+[チュートリアル: スタティック ライブラリの作成と](walkthrough-creating-and-using-a-static-library-cpp.md).lib バイナリ ファイルを作成する方法。
 
 [C/C++ 分離アプリケーションとサイド バイ サイド アセンブリをビルド](building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)分離アプリケーションとサイド バイ サイド アセンブリの概念に基づく、Windows デスクトップ アプリケーションのデプロイ モデルについて説明します。
 

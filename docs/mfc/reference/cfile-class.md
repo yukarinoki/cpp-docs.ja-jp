@@ -60,12 +60,12 @@ helpviewer_keywords:
 - CFile [MFC], m_hFile
 - CFile [MFC], m_pTM
 ms.assetid: b2eb5757-d499-4e67-b044-dd7d1abaa0f8
-ms.openlocfilehash: f287b04b32b7bc45342ac7248fbe986a3dcf959e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: db499ffa5f1d82b6e3622287f86132930a929102
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289870"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768552"
 ---
 # <a name="cfile-class"></a>CFile クラス
 
@@ -176,8 +176,7 @@ virtual void Abort();
 
 ##  <a name="cfile"></a>  ほか
 
-
-  `CFile` オブジェクトを構築して初期化します。
+`CFile` オブジェクトを構築して初期化します。
 
 ```
 CFile();
@@ -197,12 +196,10 @@ CAtlTransactionManager* pTM);
 ### <a name="parameters"></a>パラメーター
 
 *hFile*<br/>
-
-  `CFile` オブジェクトにアタッチするためのファイル ハンドル。
+`CFile` オブジェクトにアタッチするためのファイル ハンドル。
 
 *lpszFileName*<br/>
-
-  `CFile` オブジェクトにアタッチするための相対パスまたは完全パス。
+`CFile` オブジェクトにアタッチするための相対パスまたは完全パス。
 
 *nOpenFlags*<br/>
 指定されたファイルのファイル アクセス オプションのビットごとの組み合わせ (OR)。 使用できるオプションについては、「解説」を参照してください。
@@ -216,7 +213,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 次のファイル アクセス モード オプションから 1 つのみ選択します。 既定のファイル アクセス モードは `CFile::modeRead` であり、これは読み取り専用です。
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
 |`CFile::modeRead`|読み取りアクセスのみを要求します。|
 |`CFile::modeWrite`|書き込みアクセスのみを要求します。|
@@ -224,7 +221,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 次の文字モード オプションのいずれかを選択します。
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
 |`CFile::typeBinary`|バイナリ モードを設定します (派生クラスのみで使用されます)。|
 |`CFile::typeText`|復帰と改行のペア (派生クラスのみで使用) の特別な処理を含むテキスト モードを設定します。|
@@ -232,7 +229,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 次のファイル共有モード オプションから 1 つのみ選択します。 既定のファイル共有モードは `CFile::shareExclusive` であり、これは排他的です。
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
 |`CFile::shareDenyNone`|共有の制限はありません。|
 |`CFile::shareDenyRead`|他のすべての読み取りアクセスを拒否します。|
@@ -241,14 +238,14 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 次のファイル作成モード オプションから最初のオプションまたは両方を選択します。 既定の作成モードは `CFile::modeNoTruncate` であり、これは既存を開くです。
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
 |`CFile::modeCreate`|ファイルが存在しない場合は、新しいファイルを作成します。 ファイルが既に存在する場合は上書きし、最初に長さが 0 に設定します。|
 |`CFile::modeNoTruncate`|ファイルが存在しない場合は新しいファイルを作成します。ファイルが既に存在する場合は、そのファイルが `CFile` オブジェクトにアタッチされます。|
 
 説明に従って次のファイル キャッシュ オプションを選択します。 既定では、オプションとしては選択できない汎用のキャッシュ スキームが使用されます。
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
 |`CFile::osNoBuffer`|ファイルの中間キャッシュは使用されません。 このオプションを選択すると、次の 2 つのオプションは取り消されます。|
 |`CFile::osRandomAccess`|ファイル キャッシュはランダム アクセスに対して最適化されます。 このオプションと順次スキャン オプションを一緒に使用しないでください。|
@@ -257,7 +254,7 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 ファイル ハンドルが継承されないようにするために、次のセキュリティ オプションを選択します。 既定では、新しい子プロセスはファイル ハンドルを使用できます。
 
-|値|説明|
+|[値]|説明|
 |-----------|-----------------|
 |`CFile::modeNoInherit`|子プロセスがファイル ハンドルを使用できないようにします。|
 
@@ -267,13 +264,11 @@ CAtlTransactionManager オブジェクトへのポインター。
 
 2 つのパラメーターを持つコンストラクターでは、メンバーは初期化され、指定されたファイルを開くことが試行されます。 このコンストラクターによって、指定されたファイルが正常に開かれると、ファイルは `CFile` オブジェクトにアタッチされます。それ以外の場合は、このコンストラクターによって `CInvalidArgException` オブジェクトへのポインターがスローされます。 例外を処理する方法の詳細については、次を参照してください。[例外](../../mfc/exception-handling-in-mfc.md)します。
 
-
-  `CFile` オブジェクトによって、指定されたファイルが正常に開かれた場合、このファイルは `CFile` オブジェクトが破棄されたときに自動的に閉じられます。それ以外の場合は、`CFile` オブジェクトにアタッチされなくなった後でファイルを明示的に閉じる必要があります。
+`CFile` オブジェクトによって、指定されたファイルが正常に開かれた場合、このファイルは `CFile` オブジェクトが破棄されたときに自動的に閉じられます。それ以外の場合は、`CFile` オブジェクトにアタッチされなくなった後でファイルを明示的に閉じる必要があります。
 
 ### <a name="example"></a>例
 
-
-  `CFile` の使用例を次のコードに示します。
+`CFile` の使用例を次のコードに示します。
 
 [!code-cpp[NVC_MFCFiles#4](../../atl-mfc-shared/reference/codesnippet/cpp/cfile-class_2.cpp)]
 
@@ -923,7 +918,7 @@ virtual void Write(
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル DRAWCLI](../../visual-cpp-samples.md)<br/>
+[MFC サンプル DRAWCLI](../../overview/visual-cpp-samples.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CStdioFile クラス](../../mfc/reference/cstdiofile-class.md)<br/>

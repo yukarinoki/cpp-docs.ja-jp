@@ -10,12 +10,12 @@ helpviewer_keywords:
 - migration [C++], /clr compiler option
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
-ms.openlocfilehash: 8c4827891799d2c76a344e4c6da8f3d96333826e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816033"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781316"
 ---
 # <a name="how-to-migrate-to-clr"></a>方法: /Clr:pure に移行します。
 
@@ -25,7 +25,7 @@ ms.locfileid: "57816033"
 
 Visual Studio がライブラリ プロジェクトをコンパイルするときに、既知の問題を含む **/clr**:
 
-- コードが実行時に型を照会できます[で](../mfc/reference/cruntimeclass-structure.md#fromname)します。 ただし、MSIL .dll 内の型がある場合 (でコンパイルされた **/clr**)、呼び出し`FromName`(は表示されませんこの問題コードがある後に FromName 呼び出しが発生した場合、マネージ .dll で静的コンス トラクターが実行前に発生した場合に失敗する可能性があります実行されるマネージ .dll で)。 この問題を回避するには、マネージド静的コンストラクターを強制的に構築します。それには、マネージド .dll で関数を定義してエクスポートし、その関数をネイティブ MFC アプリケーションから呼び出します。 例えば:
+- コードが実行時に型を照会できます[で](../mfc/reference/cruntimeclass-structure.md#fromname)します。 ただし、MSIL .dll 内の型がある場合 (でコンパイルされた **/clr**)、呼び出し`FromName`(は表示されませんこの問題コードがある後に FromName 呼び出しが発生した場合、マネージ .dll で静的コンス トラクターが実行前に発生した場合に失敗する可能性があります実行されるマネージ .dll で)。 この問題を回避するには、マネージド静的コンストラクターを強制的に構築します。それには、マネージド .dll で関数を定義してエクスポートし、その関数をネイティブ MFC アプリケーションから呼び出します。 例:
 
     ```
     // MFC extension DLL Header file:
@@ -148,12 +148,11 @@ MSIL に対して生成されたネイティブの C++ メソッドが (仮想�
 
 ### <a name="program-crashes-on-shutdown"></a>シャットダウン時のプログラムの衝突
 
-場合によっては、マネージド コードが実行を終了する前に CLR がシャットダウンすることがあります。 
-  `std::set_terminate` と `SIGTERM` を使用すると、この問題が発生します。 参照してください[signal 定数](../c-runtime-library/signal-constants.md)と[set_terminate](../c-runtime-library/abnormal-termination.md)詳細についてはします。
+場合によっては、マネージド コードが実行を終了する前に CLR がシャットダウンすることがあります。 `std::set_terminate` と `SIGTERM` を使用すると、この問題が発生します。 参照してください[signal 定数](../c-runtime-library/signal-constants.md)と[set_terminate](../c-runtime-library/abnormal-termination.md)詳細についてはします。
 
 ## <a name="using-new-visual-c-features"></a>Visual C++ の新機能の使用
 
-アプリケーションのコンパイル、リンク、および実行をした後でコンパイルされたモジュールで .NET 機能の使用を開始できます **/clr**します。 詳細については、「[Component Extensions for Runtime Platforms](../windows/component-extensions-for-runtime-platforms.md)」を参照してください。
+アプリケーションのコンパイル、リンク、および実行をした後でコンパイルされたモジュールで .NET 機能の使用を開始できます **/clr**します。 詳細については、「[Component Extensions for Runtime Platforms](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
 C++ のマネージド拡張を使用していた場合は、新しい構文を使用してコードを変換できます。 C++ マネージ拡張を変換する方法の詳細については、次を参照してください。 [C +/cli 移行ガイド](../dotnet/cpp-cli-migration-primer.md)します。
 
@@ -163,7 +162,7 @@ Visual C++ での .NET プログラミングの詳細については、以下の
 
 - [ネイティブと .NET の相互運用性](../dotnet/native-and-dotnet-interoperability.md)
 
-- [ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)
+- [ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)
 
 ## <a name="see-also"></a>関連項目
 

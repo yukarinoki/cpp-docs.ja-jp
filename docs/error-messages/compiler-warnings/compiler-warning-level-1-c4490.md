@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C4490
 ms.assetid: f9b03ecf-41a1-4f4d-a74c-2c1e88234ccc
-ms.openlocfilehash: 89ee97a4efde6f2f9c57daf0ae769e5e12341913
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf51994c210bd751e0d29bec169dfc4366784486
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624342"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779184"
 ---
 # <a name="compiler-warning-level-1-c4490"></a>コンパイラの警告 (レベル 1) C4490
 
@@ -19,7 +19,7 @@ ms.locfileid: "50624342"
 
 オーバーライド指定子が正しく使用されていません。 たとえば、インターフェイスの関数をオーバーライドしていない、実装します。
 
-詳細については、次を参照してください。[オーバーライド指定子を](../../windows/override-specifiers-cpp-component-extensions.md)します。
+詳細については、次を参照してください。[オーバーライド指定子を](../../extensions/override-specifiers-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 

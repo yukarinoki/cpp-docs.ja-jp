@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CRichEditDoc [MFC], GetView
 - CRichEditDoc [MFC], m_bRTF
 ms.assetid: c936ec18-d516-49d4-b7fb-c9aa0229eddc
-ms.openlocfilehash: 4c2021128dcc06a76cf3b68c0ec49b72a5860046
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4cc3af7649d30a153b67cd8269e595c11018833f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295137"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769792"
 ---
 # <a name="cricheditdoc-class"></a>CRichEditDoc クラス
 
@@ -55,7 +55,7 @@ class CRichEditDoc : public COleServerDoc
 
 この Windows コモン コントロール (つまり、 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)および関連クラス) は以降 Windows 95/98 および Windows NT 3.51 の下で実行中のプログラムにのみ使用できます。
 
-リッチ エディット ドキュメントを使用して MFC アプリケーションでの例は、次を参照してください。、[ワードパッド](../../visual-cpp-samples.md)サンプル アプリケーション。
+リッチ エディット ドキュメントを使用して MFC アプリケーションでの例は、次を参照してください。、[ワードパッド](../../overview/visual-cpp-samples.md)サンプル アプリケーション。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -146,7 +146,7 @@ BOOL m_bRTF;
 
 ## <a name="see-also"></a>関連項目
 
-[ワードパッドの MFC サンプル](../../visual-cpp-samples.md)<br/>
+[ワードパッドの MFC サンプル](../../overview/visual-cpp-samples.md)<br/>
 [COleServerDoc クラス](../../mfc/reference/coleserverdoc-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditView クラス](../../mfc/reference/cricheditview-class.md)<br/>

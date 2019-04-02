@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapBits
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
-ms.openlocfilehash: 97d4561da12492c158673c4cc79c2baefd973c75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296729"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769902"
 ---
 # <a name="cbitmap-class"></a>CBitmap クラス
 
@@ -521,6 +521,6 @@ GDI はこれらの値を返すにアプリケーションを呼び出す以外�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル MDI](../../visual-cpp-samples.md)<br/>
+[MFC サンプル MDI](../../overview/visual-cpp-samples.md)<br/>
 [CGdiObject クラス](../../mfc/reference/cgdiobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)
