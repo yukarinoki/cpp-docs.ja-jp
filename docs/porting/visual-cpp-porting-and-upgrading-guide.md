@@ -2,12 +2,12 @@
 title: Visual C++  移植とアップグレードのガイド
 ms.date: 09/18/2018
 ms.assetid: f5fbcc3d-aa72-41a6-ad9a-a706af2166fb
-ms.openlocfilehash: 1b3f7142b5240d8b4a94040d5cda7d033e50e39d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: d1ee00ab1e869e37a5bf19809df964f1e4085819
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752429"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767679"
 ---
 # <a name="visual-c-porting-and-upgrading-guide"></a>Visual C++  移植とアップグレードのガイド
 
@@ -76,8 +76,8 @@ Visual Studio のビルド システムを使用していない場合は、MSBui
 |Title|説明|
 |-----------|-----------------|
 |[旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)|以前のバージョンの Visual C++ で作成されたプロジェクトを使用する方法について説明します。|
-|[Visual Studio 2017 RC での C++ コンパイラの新機能](../what-s-new-for-visual-cpp-in-visual-studio.md)|Visual Studio 2015 から Visual Studio 2017 における IDE およびツールの変更|
-|[Visual Studio 2017 の C++ 準拠の強化](../cpp-conformance-improvements-2017.md)|Visual Studio 2015 から Visual Studio 2017 における標準の準拠の強化|
+|[Visual Studio 2017 RC での C++ コンパイラの新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)|Visual Studio 2015 から Visual Studio 2017 における IDE およびツールの変更|
+|[Visual Studio 2017 の C++ 準拠の強化](../overview/cpp-conformance-improvements-2017.md)|Visual Studio 2015 から Visual Studio 2017 における標準の準拠の強化|
 |[2003 から 2015 の Visual C++ の履歴の変更](visual-cpp-change-history-2003-2015.md)|コードの変更が必要となる可能性のある、Visual Studio 2003 から 2015 における Visual C++ ライブラリおよびビルド ツールのすべての変更の一覧。|
 |[2003 ～ 2015 年の Visual C++ の新機能](visual-cpp-what-s-new-2003-through-2015.md)|Visual Studio 2003 から Visual Studio 2015 の Visual C++ の "新機能" に関するすべての情報。|
 |[サード パーティ ライブラリの移植](porting-third-party-libraries.md)|**vcpkg** コマンド ライン ツールを使用して、古いオープンソース ライブラリを新しい Visual C++ ツールセットでコンパイルされたバージョンに移植する方法。|
@@ -88,4 +88,4 @@ Visual Studio のビルド システムを使用していない場合は、MSBui
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++](../visual-cpp-in-visual-studio.md)
+[Visual C++](../overview/visual-cpp-in-visual-studio.md)
