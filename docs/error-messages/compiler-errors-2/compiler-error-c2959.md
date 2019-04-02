@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2959
 ms.assetid: d66bb2a8-70c3-4209-a358-b0c47f111a50
-ms.openlocfilehash: c45466fdf8d0c4bec67779943a5868299f05cf79
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3465c3275783a625c172b711e9c41789b6f36713
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50535734"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770228"
 ---
 # <a name="compiler-error-c2959"></a>コンパイラ エラー C2959
 
 テンプレートのメンバーはジェネリック クラスまたは関数ではない可能性があります。
 
-詳細については、次を参照してください。 [Windows ランタイムおよびマネージ テンプレート](../../windows/windows-runtime-and-managed-templates-cpp-component-extensions.md)と[ジェネリック](../../windows/generics-cpp-component-extensions.md)します。
+詳細については、次を参照してください。 [Windows ランタイムおよびマネージ テンプレート](../../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md)と[ジェネリック](../../extensions/generics-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 

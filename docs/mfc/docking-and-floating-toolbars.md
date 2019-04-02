@@ -21,12 +21,12 @@ helpviewer_keywords:
 - toolbars [MFC], wrapping
 - floating palettes
 ms.assetid: b7f9f9d4-f629-47d2-a3c4-2b33fa6b51e4
-ms.openlocfilehash: 93d1e067777b1c6f4430fe9cc44ae531559b6962
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 01450dca56ad662c8db0a35f89749c4a288109b3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294672"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768135"
 ---
 # <a name="docking-and-floating-toolbars"></a>ツール バーのドッキングとフローティング
 
@@ -50,7 +50,7 @@ Microsoft Foundation Class ライブラリには、ドッキング可能なツ�
 
 - [固定形式のツールバーの折り返しの場所を設定](#_core_setting_wrap_positions_for_a_fixed_style_toolbar)
 
-MFC 標準サンプルを参照してください。 [DOCKTOOL](../visual-cpp-samples.md)例についてはします。
+MFC 標準サンプルを参照してください。 [DOCKTOOL](../overview/visual-cpp-samples.md)例についてはします。
 
 ##  <a name="_core_enabling_docking_in_a_frame_window"></a> フレーム ウィンドウのドッキング可能にします。
 
@@ -104,7 +104,7 @@ Visual C バージョン 4.0 の時点ですることが可能になりますフ
 
 [!code-cpp[NVC_MFCDocViewSDI#10](../mfc/codesnippet/cpp/docking-and-floating-toolbars_1.cpp)]
 
-MFC 標準サンプル[DOCKTOOL](../visual-cpp-samples.md)クラスのメンバー関数を使用する方法を示します[CControlBar](../mfc/reference/ccontrolbar-class.md)と[CToolBar](../mfc/reference/ctoolbar-class.md)ツールバーの動的レイアウトを管理します。 EDITBAR ファイルを参照してください。CPP DOCKTOOL でします。
+MFC 標準サンプル[DOCKTOOL](../overview/visual-cpp-samples.md)クラスのメンバー関数を使用する方法を示します[CControlBar](../mfc/reference/ccontrolbar-class.md)と[CToolBar](../mfc/reference/ctoolbar-class.md)ツールバーの動的レイアウトを管理します。 EDITBAR ファイルを参照してください。CPP DOCKTOOL でします。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 

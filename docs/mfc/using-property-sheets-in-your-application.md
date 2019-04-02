@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Create method [MFC], property sheets
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
-ms.openlocfilehash: 76acbfa9625fe6cb9a575244b0ed6954eeaaf3f2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4fd68f57db082ab0b0da0e8248e0be239c63c99a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301689"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773217"
 ---
 # <a name="using-property-sheets-in-your-application"></a>アプリケーションでのプロパティ シートの使用
 
@@ -58,7 +58,7 @@ ms.locfileid: "57301689"
 
 1. プロパティ ページとプロパティ シートの所有者間でデータを交換します。 これは、情報の記事で説明[データの交換](../mfc/exchanging-data.md)します。
 
-プロパティ シートを使用する方法の例は、MFC 標準サンプルを参照してください。 [PROPDLG](../visual-cpp-samples.md)します。
+プロパティ シートを使用する方法の例は、MFC 標準サンプルを参照してください。 [PROPDLG](../overview/visual-cpp-samples.md)します。
 
 ## <a name="see-also"></a>関連項目
 

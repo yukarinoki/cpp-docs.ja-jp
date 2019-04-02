@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CCmdUI [MFC], m_pOther
 - CCmdUI [MFC], m_pSubMenu
 ms.assetid: 04eaaaf5-f510-48ab-b425-94665ba24766
-ms.openlocfilehash: 12d9ead736a84d89b04f7b68ed76da8ccea22d0c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1d44638779f9b5caf052106ac172110d309b69f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302873"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770890"
 ---
 # <a name="ccmdui-class"></a>CCmdUI クラス
 
@@ -77,7 +77,7 @@ class CCmdUI
 
 次の表に、効果`CCmdUI`'s、さまざまなコマンドのユーザー インターフェイスのアイテムがあるメンバー関数。
 
-|ユーザー インターフェイス項目|[有効化]|SetCheck|SetRadio|SetText|
+|ユーザー インターフェイス項目|有効化|SetCheck|SetRadio|SetText|
 |--------------------------|------------|--------------|--------------|-------------|
 |メニュー項目|有効または無効にします。|オンまたはオフに|ドットを使用したチェックします。|項目テキストの設定|
 |ツール バー ボタン|有効または無効にします。|選択、未選択、または中間|`SetCheck` と同じ|(適用なし)|
@@ -231,6 +231,6 @@ virtual void SetText(LPCTSTR lpszText);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル MDI](../../visual-cpp-samples.md)<br/>
+[MFC サンプル MDI](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CCmdTarget クラス](../../mfc/reference/ccmdtarget-class.md)

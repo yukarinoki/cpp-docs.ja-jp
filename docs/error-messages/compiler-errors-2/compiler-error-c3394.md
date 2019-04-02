@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3394
 ms.assetid: 4e025d79-27ba-43c8-b0d9-839ecef98126
-ms.openlocfilehash: 4eba2c9f34f1cfcaf97733f914520043ee1124bf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 826084d375c69ca289a858a29a12ae16874c1fbd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50557404"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781459"
 ---
 # <a name="compiler-error-c3394"></a>コンパイラ エラー C3394
 
 制約句の構文エラー: 'identifier' が見つかりましたが、型を指定しなければなりません
 
-制約の形式が間違っています。  詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)します。
+制約の形式が間違っています。  詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

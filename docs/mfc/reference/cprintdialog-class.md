@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CPrintDialog [MFC], PrintSelection
 - CPrintDialog [MFC], m_pd
 ms.assetid: 5bdb2424-adf8-433d-a97c-df11a83bc4e4
-ms.openlocfilehash: b6fd633a39f7038be45a8776c9b4673138cc34b5
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 2a856c8067394e33976ba8ccdaa34be81ee11091
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274948"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771046"
 ---
 # <a name="cprintdialog-class"></a>CPrintDialog クラス
 
@@ -508,7 +508,7 @@ BOOL PrintSelection() const;
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル DIBLOOK](../../visual-cpp-samples.md)<br/>
+[MFC サンプル DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CCommonDialog クラス](../../mfc/reference/ccommondialog-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CPrintInfo 構造体](../../mfc/reference/cprintinfo-structure.md)

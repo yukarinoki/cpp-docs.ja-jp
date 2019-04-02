@@ -14,12 +14,12 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], Unregister
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
-ms.openlocfilehash: bcc79f781be3a0292398e4f211ea55f5403b6b8f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302885"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781212"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer クラス
 
@@ -171,7 +171,7 @@ OLE_APPTYPE の列挙体は、列挙子の値。H. 次の値のいずれかの�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル HIERSVR](../../visual-cpp-samples.md)<br/>
+[MFC サンプル HIERSVR](../../overview/visual-cpp-samples.md)<br/>
 [COleObjectFactory クラス](../../mfc/reference/coleobjectfactory-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [COleServerDoc クラス](../../mfc/reference/coleserverdoc-class.md)<br/>

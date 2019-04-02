@@ -4,12 +4,12 @@ ms.date: 11/17/2017
 f1_keywords:
 - c.errors
 ms.assetid: 78019050-9a30-4b61-8250-a5702e0e2393
-ms.openlocfilehash: 74494a92d9ac8d84da64af7a896f3c32913afc40
-ms.sourcegitcommit: 975098222db3e8b297607cecaa1f504570a11799
+ms.openlocfilehash: b1a4aa5114965451791f44d88eb9e5ca61ff9c57
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53178260"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766887"
 ---
 # <a name="c-runtime-errors-r6002-through-r6035"></a>C ランタイム エラー R6002 ～ R6035
 
@@ -17,7 +17,7 @@ ms.locfileid: "53178260"
 
 Microsoft のパブリック フォーラムで、他のサポートについてのエラーと警告のあります。 エラーまたは警告の数を検索することができます、[開発者コミュニティ](https://developercommunity.visualstudio.com)サイト。 [Visual C 全般](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=vcgeneral)フォーラムではその他のフォーラムで議論されていない Visual C についての質問。 エラーと警告検索およびで質問する可能性がありますも[Stack Overflow](http://stackoverflow.com/)解決策を検索します。
 
-追加のヘルプおよびコミュニティ リソースへのリンクを参照してください。 [Visual c ヘルプおよびコミュニティ](../../visual-cpp-help-and-community.md)します。
+追加のヘルプおよびコミュニティ リソースへのリンクを参照してください。 [Visual c ヘルプおよびコミュニティ](../../overview/visual-cpp-help-and-community.md)します。
 
 ## <a name="c-runtime-errors"></a>C ランタイム エラー
 

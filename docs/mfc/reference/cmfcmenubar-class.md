@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CMFCMenuBar [MFC], SetRecentlyUsedMenus
 - CMFCMenuBar [MFC], SetShowAllCommands
 ms.assetid: 8a3ce4c7-b012-4dc0-b4f8-53c10b4b86b8
-ms.openlocfilehash: e4b1a7eba31ef28578c515c437978bc59cbd08f1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87844e843057bb295c904b5f1b3d7dd03fa4d797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267369"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775895"
 ---
 # <a name="cmfcmenubar-class"></a>CMFCMenuBar クラス
 
@@ -191,7 +191,7 @@ class CMFCMenuBar : public CMFCToolbar
 
 ## <a name="example"></a>例
 
-`CMFCMenuBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、ウィンドウのスタイルを設定、[カスタマイズ] ボタンを有効にする、ヘルプのボックスを有効にする、ポップアップ メニューの影を有効にするおよびメニュー バーを更新する方法を示します。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCMenuBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 この例では、ウィンドウのスタイルを設定、[カスタマイズ] ボタンを有効にする、ヘルプのボックスを有効にする、ポップアップ メニューの影を有効にするおよびメニュー バーを更新する方法を示します。 このコード スニペットの一部、 [IE デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#3](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_2.cpp)]
@@ -395,7 +395,7 @@ virtual BOOL CreateEx(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`CreateEx`のメソッド、`CMFCMenuBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`CreateEx`のメソッド、`CMFCMenuBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#1](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#2](../../mfc/reference/codesnippet/cpp/cmfcmenubar-class_3.cpp)]

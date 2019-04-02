@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], SetKeys
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
-ms.openlocfilehash: 438fc753e91092502c84acfc491ec64c15133023
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305056"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773204"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel クラス
 
@@ -139,8 +139,7 @@ class CMFCRibbonPanel : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|
-  `CMFCRibbonPanel` オブジェクトを構築して初期化します。|
+|[CMFCRibbonPanel::CMFCRibbonPanel](#cmfcribbonpanel)|`CMFCRibbonPanel` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -208,7 +207,7 @@ class CMFCRibbonPanel : public CObject
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CMFCRibbonPanel`オブジェクトでさまざまなメソッドを使用して、`CMFCRibbonPanel`クラス。 この例では、リボン パネルを表示するキーボード ショートカットを設定し、列で、パネル内の要素を垂直方向に配置して、列の位置合わせを有効にする方法を示します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例は、構成する方法を示します、`CMFCRibbonPanel`オブジェクトでさまざまなメソッドを使用して、`CMFCRibbonPanel`クラス。 この例では、リボン パネルを表示するキーボード ショートカットを設定し、列で、パネル内の要素を垂直方向に配置して、列の位置合わせを有効にする方法を示します。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#10](../../mfc/reference/codesnippet/cpp/cmfcribbonpanel-class_1.cpp)]
 

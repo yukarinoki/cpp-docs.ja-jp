@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 65: OLE オートメーション サーバー用デュアル インターフェイス サポート'
+title: TN065:OLE オートメーション サーバー用デュアル インターフェイス サポート
 ms.date: 06/28/2018
 f1_keywords:
 - vc.ole
@@ -9,19 +9,19 @@ helpviewer_keywords:
 - ACDUAL sample [MFC]
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
-ms.openlocfilehash: 5a04c2712182fe9c9ed3fd9e5fe4548404f96a5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575215"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776675"
 ---
-# <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>テクニカル ノート 65: OLE オートメーション サーバー用デュアル インターフェイス サポート
+# <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065:OLE オートメーション サーバー用デュアル インターフェイス サポート
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
 
-このノートでは、OLE オートメーションを MFC ベースのサーバー アプリケーションにデュアル インターフェイス サポートを追加する方法について説明します。 [ACDUAL](../visual-cpp-samples.md)サンプルは、デュアル インターフェイス サポートとコード例では、この注は ACDUAL から取得されます。 DECLARE_DUAL_ERRORINFO、DUAL_ERRORINFO_PART、テクニカルなど、この注で説明されているマクロ ACDUAL サンプルの一部でありで説明することができます。H.
+このノートでは、OLE オートメーションを MFC ベースのサーバー アプリケーションにデュアル インターフェイス サポートを追加する方法について説明します。 [ACDUAL](../overview/visual-cpp-samples.md)サンプルは、デュアル インターフェイス サポートとコード例では、この注は ACDUAL から取得されます。 DECLARE_DUAL_ERRORINFO、DUAL_ERRORINFO_PART、テクニカルなど、この注で説明されているマクロ ACDUAL サンプルの一部でありで説明することができます。H.
 
 ## <a name="dual-interfaces"></a>デュアル インターフェイス
 
@@ -43,7 +43,7 @@ OLE オートメーションでは、実装するために使用できますが�
 
 最初に、オブジェクトのデュアル インターフェイスを定義するサーバーの ODL ファイルを変更します。 デュアル インターフェイスを定義するには、代わりに、インターフェイス ステートメントを使用する必要があります、 `DISPINTERFACE` Visual C ウィザードで生成するステートメント。 既存の削除ではなく`DISPINTERFACE`ステートメントでは、新しいインターフェイス ステートメントを追加します。 保持することで、`DISPINTERFACE`フォーム、ClassWizard を使用して、オブジェクトにプロパティとメソッドを追加する続行できますが、インターフェイス ステートメントには、同等のプロパティとメソッドを追加する必要があります。
 
-デュアル インターフェイス、インターフェイス ステートメントが必要、 *OLEAUTOMATION*と*デュアル*属性、およびインターフェイスから派生する必要があります`IDispatch`します。 使用することができます、 [GUIDGEN](../visual-cpp-samples.md)を作成するためのサンプルを**IID**デュアル インターフェイスの。
+デュアル インターフェイス、インターフェイス ステートメントが必要、 *OLEAUTOMATION*と*デュアル*属性、およびインターフェイスから派生する必要があります`IDispatch`します。 使用することができます、 [GUIDGEN](../overview/visual-cpp-samples.md)を作成するためのサンプルを**IID**デュアル インターフェイスの。
 
 ```IDL
 [ uuid(0BDD0E81-0DD7-11cf-BBA8-444553540000), // IID_IDualAClick
@@ -55,14 +55,14 @@ interface IDualAClick : IDispatch
     };
 ```
 
-インターフェイス ステートメントである場合は、メソッドおよびプロパティのエントリの追加を開始します。 デュアル インターフェイスのメソッドとプロパティのアクセサー関数、デュアル インターフェイス内で返されるように、パラメーター リストを再配置する必要があります、 **HRESULT** 属性を持つパラメーターとして、戻り値を渡すと`[retval,out]`. プロパティが必要な読み書きの両方を追加するに注意してください (`propget`) と書き込み (`propput`) 同じ id を持つ関数にアクセスします。例えば:
+インターフェイス ステートメントである場合は、メソッドおよびプロパティのエントリの追加を開始します。 デュアル インターフェイスのメソッドとプロパティのアクセサー関数、デュアル インターフェイス内で返されるように、パラメーター リストを再配置する必要があります、 **HRESULT** 属性を持つパラメーターとして、戻り値を渡すと`[retval,out]`. プロパティが必要な読み書きの両方を追加するに注意してください (`propget`) と書き込み (`propput`) 同じ id を持つ関数にアクセスします。例:
 
 ```IDL
 [propput, id(1)] HRESULT text([in] BSTR newText);
 [propget, id(1)] HRESULT text([out, retval] BSTR* retval);
 ```
 
-メソッドとプロパティを定義した後、coclass ステートメントで、インターフェイス ステートメントへの参照を追加する必要があります。 例えば:
+メソッドとプロパティを定義した後、coclass ステートメントで、インターフェイス ステートメントへの参照を追加する必要があります。 例:
 
 ```IDL
 [ uuid(4B115281-32F0-11cf-AC85-444553540000) ]
@@ -75,7 +75,7 @@ coclass Document
 
 ODL ファイルを更新すると、MFC のインターフェイス マップ機構を使用して、オブジェクト クラスにデュアル インターフェイスの実装クラスを定義し、MFC ので、対応するエントリが作成`QueryInterface`メカニズム。 1 つのエントリを作成する必要があります、 `INTERFACE_PART` ODL のインターフェイスのステートメント内の各エントリとディスパッチ インターフェイスのエントリをブロックします。 各 ODL エントリ、 *propput*属性には、という名前の関数が必要があります`put_propertyname`します。 各エントリを*propget*属性には、という名前の関数が必要があります`get_propertyname`します。
 
-デュアル インターフェイスの実装クラスを定義するには、追加、`DUAL_INTERFACE_PART`オブジェクト クラスの定義をブロックします。 例えば:
+デュアル インターフェイスの実装クラスを定義するには、追加、`DUAL_INTERFACE_PART`オブジェクト クラスの定義をブロックします。 例:
 
 ```cpp
 BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
@@ -102,7 +102,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
 END_INTERFACE_MAP()
 ```
 
-次に、インターフェイスの実装を入力する必要があります。 ほとんどの場合、ことができますに委任する既存の MFC`IDispatch`実装します。 例えば:
+次に、インターフェイスの実装を入力する必要があります。 ほとんどの場合、ことができますに委任する既存の MFC`IDispatch`実装します。 例:
 
 ```cpp
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()
@@ -179,7 +179,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }
 ```
 
-オブジェクトのメソッドおよびプロパティのアクセサー関数の実装を入力する必要があります。 メソッドとプロパティ関数は、ClassWizard を使って生成されたメソッドに一般的に委任できます。 ただし、変数に直接アクセスするプロパティを設定する場合は、変数に値を取得/格納するコードを記述する必要があります。 例えば:
+オブジェクトのメソッドおよびプロパティのアクセサー関数の実装を入力する必要があります。 メソッドとプロパティ関数は、ClassWizard を使って生成されたメソッドに一般的に委任できます。 ただし、変数に直接アクセスするプロパティを設定する場合は、変数に値を取得/格納するコードを記述する必要があります。 例:
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
@@ -203,7 +203,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::get_text(BSTR* retval)
 
 ## <a name="passing-dual-interface-pointers"></a>デュアル インターフェイス ポインターを渡す
 
-呼び出す必要がある場合に特に簡単です。 デュアル インターフェイス ポインターを渡していない`CCmdTarget::FromIDispatch`します。 `FromIDispatch` MFC のでのみ機能`IDispatch`ポインター。 これを回避する 1 つの方法は、元のクエリに`IDispatch`ポインター セットは、MFC でし、必要な関数にそのポインターを渡します。 例えば:
+呼び出す必要がある場合に特に簡単です。 デュアル インターフェイス ポインターを渡していない`CCmdTarget::FromIDispatch`します。 `FromIDispatch` MFC のでのみ機能`IDispatch`ポインター。 これを回避する 1 つの方法は、元のクエリに`IDispatch`ポインター セットは、MFC でし、必要な関数にそのポインターを渡します。 例:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
@@ -218,7 +218,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_Position(
 }
 ```
 
-デュアル インターフェイス メソッドを遡って、ポインターを渡す前に、MFC から変換する必要があります`IDispatch`にデュアル インターフェイス ポインターへのポインター。 例えば:
+デュアル インターフェイス メソッドを遡って、ポインターを渡す前に、MFC から変換する必要があります`IDispatch`にデュアル インターフェイス ポインターへのポインター。 例:
 
 ```
 STDMETHODIMP CAutoClickDoc::XDualAClick::get_Position(
@@ -310,7 +310,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)
 }
 ```
 
-`CATCH_ALL_DUAL` 例外が発生したときに、適切なエラー コードを返す処理されます。 `CATCH_ALL_DUAL` OLE オートメーション エラー処理の情報を使用して MFC 例外に変換、`ICreateErrorInfo`インターフェイス。 (たとえば`CATCH_ALL_DUAL`マクロは、MFCDUAL ファイル。H、 [ACDUAL](../visual-cpp-samples.md)サンプル。 例外を処理するために呼び出す関数`DualHandleException`、MFCDUAL ファイルにします。CPP。)`CATCH_ALL_DUAL`発生した例外の種類に基づいて返されるエラー コードを決定します。
+`CATCH_ALL_DUAL` 例外が発生したときに、適切なエラー コードを返す処理されます。 `CATCH_ALL_DUAL` OLE オートメーション エラー処理の情報を使用して MFC 例外に変換、`ICreateErrorInfo`インターフェイス。 (たとえば`CATCH_ALL_DUAL`マクロは、MFCDUAL ファイル。H、 [ACDUAL](../overview/visual-cpp-samples.md)サンプル。 例外を処理するために呼び出す関数`DualHandleException`、MFCDUAL ファイルにします。CPP。)`CATCH_ALL_DUAL`発生した例外の種類に基づいて返されるエラー コードを決定します。
 
 - [COleDispatchException](../mfc/reference/coledispatchexception-class.md) - この場合、`HRESULT`は次のコードを使用して作成します。
 
@@ -332,7 +332,7 @@ OLE オートメーションのエラー ハンドラーを使用しても実装
 
 最後に、サポートするために定義されているクラスを実装`ISupportErrorInfo`します。
 
-(、 [ACDUAL](../visual-cpp-samples.md)サンプルには、これら 3 つの手順を実行する 3 つのマクロが含まれています`DECLARE_DUAL_ERRORINFO`、 `DUAL_ERRORINFO_PART`、および`IMPLEMENT_DUAL_ERRORINFO`ですべて含まれています。H.)
+(、 [ACDUAL](../overview/visual-cpp-samples.md)サンプルには、これら 3 つの手順を実行する 3 つのマクロが含まれています`DECLARE_DUAL_ERRORINFO`、 `DUAL_ERRORINFO_PART`、および`IMPLEMENT_DUAL_ERRORINFO`ですべて含まれています。H.)
 
 次の例では、サポートするために定義されているクラスを実装する`ISupportErrorInfo`します。 `CAutoClickDoc` オートメーション クラスの名前を指定し、`IID_IDualAClick`は、 **IID** OLE オートメーション エラー オブジェクトを通じて報告されたエラーのソースであるインターフェイスの。
 

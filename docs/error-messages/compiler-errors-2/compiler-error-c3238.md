@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3238
 ms.assetid: 19942497-b3c5-4df0-9144-142ced92468b
-ms.openlocfilehash: d81fd0fb3612a8c22fa6365aa7fc6dddb89cf120
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d70bb6dac7cb43701b57f3821872e02ab31426dc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50481160"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775628"
 ---
 # <a name="compiler-error-c3238"></a>コンパイラ エラー C3238
 
@@ -19,7 +19,7 @@ ms.locfileid: "50481160"
 
 クライアント アプリケーションで定義された型は、参照されているアセンブリでも、型の転送構文によって定義されています。 アプリケーションのスコープで、両方の型を定義することはできません。
 
-参照してください[Type Forwarding (C +/cli CLI)](../../windows/type-forwarding-cpp-cli.md)詳細についてはします。
+参照してください[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)詳細についてはします。
 
 ## <a name="example"></a>例
 

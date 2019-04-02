@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [C++]
 - security [C++], best practices
 ms.assetid: 86acaccf-cdb4-4517-bd58-553618e3ec42
-ms.openlocfilehash: 81a15f7a34ebe6c4c101932074c63cb1c7f7fd26
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bc449d0bbf222391868dc7586e0245fd6e8cd2ac
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742469"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769863"
 ---
 # <a name="security-best-practices-for-c"></a>C++ のセキュリティ推奨事項
 
@@ -42,25 +42,23 @@ Visual C++ コンパイラおよびリンカーには、次のセキュリティ
 
 ## <a name="security-enhanced-crt"></a>セキュリティが拡張された CRT
 
-C ランタイム ライブラリ (CRT) が強化され、セキュリティ上のリスクをもたらす関数 (チェックが適用されない文字列コピー関数 `strcpy` など) の安全なバージョンが導入されました。 このようなセキュリティが万全ではない以前の関数は推奨されないため、これらの関数を使用すると、コンパイル時に警告が表示されます。 コンパイル時に警告が表示されないようにするのではなく、これらの CRT 関数の安全なバージョンを使用することをお勧めします。 詳細については、「 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)」を参照してください。
+C ランタイム ライブラリ (CRT) が強化され、セキュリティ上のリスクをもたらす関数 (チェックが適用されない文字列コピー関数 `strcpy` など) の安全なバージョンが導入されました。 このようなセキュリティが万全ではない以前の関数は非推奨とされるため、これらの関数を使用すると、コンパイル時に警告が表示されます。 コンパイル時に警告が表示されないようにするのではなく、これらの CRT 関数の安全なバージョンを使用することをお勧めします。 詳細については、「 [Security Features in the CRT](../c-runtime-library/security-features-in-the-crt.md)」を参照してください。
 
 ## <a name="safeint-library"></a>SafeInt ライブラリ
 
-[SafeInt ライブラリ](../windows/safeint-library.md)整数オーバーフローおよびアプリケーションは、算術演算を実行するときに発生する可能性を悪用可能なその他のエラーを防止できます。 `SafeInt`ライブラリが含まれています、 [SafeInt クラス](../windows/safeint-class.md)、 [SafeIntException クラス](../windows/safeintexception-class.md)、および複数[SafeInt 関数](../windows/safeint-functions.md)します。
+[SafeInt ライブラリ](../safeint/safeint-library.md)整数オーバーフローおよびアプリケーションは、算術演算を実行するときに発生する可能性を悪用可能なその他のエラーを防止できます。 `SafeInt`ライブラリが含まれています、 [SafeInt クラス](../safeint/safeint-class.md)、 [SafeIntException クラス](../safeint/safeintexception-class.md)、および複数[SafeInt 関数](../safeint/safeint-functions.md)します。
 
-
-  `SafeInt` クラスを使用することで、整数オーバーフローおよびゼロ除算による攻撃を防止できます。 型が異なる値の比較を処理するために使用できます。 2 つのエラー処理ポリシーを提供します。 
-  `SafeInt` クラスの既定のポリシーは、`SafeIntException` クラス例外をスローして、数値演算を完了できない理由を報告することです。 `SafeInt` クラスの 2 番目のポリシーは、プログラムの実行を停止することです。 カスタム ポリシーも定義できます。
+`SafeInt` クラスを使用することで、整数オーバーフローおよびゼロ除算による攻撃を防止できます。 型が異なる値の比較を処理するために使用できます。 2 つのエラー処理ポリシーを提供します。 `SafeInt` クラスの既定のポリシーは、`SafeIntException` クラス例外をスローして、数値演算を完了できない理由を報告することです。 `SafeInt` クラスの 2 番目のポリシーは、プログラムの実行を停止することです。 カスタム ポリシーも定義できます。
 
 各 `SafeInt` 関数は、対応する 1 つの数値演算で、攻撃に利用される可能性のあるエラーが発生しないようにします。 種類の異なる 2 つのパラメーターを使用できます。これらを同じ型に変換する必要はありません。 複数の数値演算を保護するには、`SafeInt` クラスを使用します。
 
-## <a name="checked-iterators"></a>チェックを行う反復子
+## <a name="checked-iterators"></a>Checked Iterators
 
 チェックを行う反復子は、コンテナー境界を強制します。 既定では、チェックを行う反復子が境界の外側にあると、例外が生成され、プログラムの実行が終了します。 Checked 反復子がプリプロセッサに割り当てられている値に依存する他のレベルの応答の定義などを提供します **\_SECURE\_SCL\_スロー**と **\_反復子\_デバッグ\_レベル**します。 たとえば、 **\_反復子\_デバッグ\_LEVEL = 2**、チェックされている反復子を提供が可能なを使用してデバッグ モードで包括的な正確性を確認しますアサートします。 詳細については、次を参照してください。 [Checked Iterators](../standard-library/checked-iterators.md)と[\_反復子\_デバッグ\_レベル](../standard-library/iterator-debug-level.md)します。
 
 ## <a name="code-analysis-for-managed-code"></a>マネージド コードのコード分析
 
-マネージ コードのコード分析は FxCop とも呼ばれ、.NET Framework デザイン ガイドラインに準拠するためにアセンブリをチェックします。 FxCop は各アセンブリ内のコードとメタデータを解析して、次の点に不備がないかどうかを検証します。
+マネージド コードのコード分析は FxCop とも呼ばれ、.NET Framework デザイン ガイドラインに準拠するためにアセンブリをチェックします。 FxCop は各アセンブリ内のコードとメタデータを解析して、次の点に不備がないかどうかを検証します。
 
 - ライブラリ デザイン
 

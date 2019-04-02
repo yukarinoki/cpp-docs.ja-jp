@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCToolBarButton [MFC], m_nStyle
 - CMFCToolBarButton [MFC], m_strText
 ms.assetid: 8a6ecffb-86b0-4f5c-8211-a9146b463efd
-ms.openlocfilehash: 94d7ba14e01b2965a0fe788162726d1019e847de
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0a3af2b13eeb2775671ee89019b1562010acc059
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275234"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776389"
 ---
 # <a name="cmfctoolbarbutton-class"></a>CMFCToolBarButton クラス
 
@@ -183,8 +183,7 @@ class CMFCToolBarButton : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|
-  `CMFCToolBarButton` オブジェクトを構築して初期化します。|
+|[CMFCToolBarButton::CMFCToolBarButton](#cmfctoolbarbutton)|`CMFCToolBarButton` オブジェクトを構築して初期化します。|
 |`CMFCToolBarButton::~CMFCToolBarButton`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -288,7 +287,7 @@ A`CMFCToolbarButton`オブジェクトが、ツールバー上に存在するコ
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CMFCToolBarButton`オブジェクトでさまざまなメソッドを使用して、`CMFCToolBarButton`クラス。 有効に、マウスとキーボード入力、ボタンのイメージのインデックスを設定、ボタンの外接する四角形の設定ボタンを表示する方法を示します。 このコード スニペットの一部、[タブ コントロール サンプル](../../visual-cpp-samples.md)します。
+次の例は、構成する方法を示します、`CMFCToolBarButton`オブジェクトでさまざまなメソッドを使用して、`CMFCToolBarButton`クラス。 有効に、マウスとキーボード入力、ボタンのイメージのインデックスを設定、ボタンの外接する四角形の設定ボタンを表示する方法を示します。 このコード スニペットの一部、[タブ コントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_TabControl#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_TabControl#2](../../mfc/reference/codesnippet/cpp/cmfctoolbarbutton-class_2.cpp)]
@@ -366,8 +365,7 @@ virtual BOOL CanBeStretched() const;
 
 ##  <a name="cmfctoolbarbutton"></a>  CMFCToolBarButton::CMFCToolBarButton
 
-
-  `CMFCToolBarButton` オブジェクトを構築して初期化します。
+`CMFCToolBarButton` オブジェクトを構築して初期化します。
 
 ```
 CMFCToolBarButton(

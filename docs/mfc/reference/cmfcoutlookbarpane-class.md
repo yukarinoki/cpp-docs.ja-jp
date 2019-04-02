@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], EnableContextMenuItems
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
-ms.openlocfilehash: 9f1fd2435222b33d0dfb188d2a51442c2f6aa82a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b23aa9e30c130cea8c84290b62cc19794376d4c1
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288884"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773438"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane クラス
 
@@ -78,12 +78,12 @@ class CMFCOutlookBarPane : public CMFCToolBar
 |[CMFCOutlookBarPane::ClearAll](#clearall)|Outlook バー ペイン内のイメージで使用されるリソースを解放します。|
 |[CMFCOutlookBarPane::Create](#create)|Outlook バー ペインを作成します。|
 |`CMFCOutlookBarPane::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
-|`CMFCOutlookBarPane::Dock`|Outlook バー ペインをドッキングするためにフレームワークによって呼び出されます。 (`CPane::Dock` をオーバーライドします)。|
+|`CMFCOutlookBarPane::Dock`|Outlook バー ペインをドッキングするためにフレームワークによって呼び出されます。 ( `CPane::Dock`をオーバーライドします)。|
 |[CMFCOutlookBarPane::EnablePageScrollMode](#enablepagescrollmode)|ページで、またはボタンをクリックして、Outlook バー ペインのスクロール バーの矢印がボタンのリストを進めるかどうかを指定します。|
 |[CMFCOutlookBarPane::GetRegularColor](#getregularcolor)|Outlook バー ペインの正規表現 (選択されていない) のテキストの色を返します。|
 |`CMFCOutlookBarPane::GetThisClass`|ポインターを取得する、framework によって使用される、 [CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)このクラス型に関連付けられているオブジェクト。|
 |[CMFCOutlookBarPane::IsBackgroundTexture](#isbackgroundtexture)|Outlook バー ペインの読み込まれた背景イメージがあるかどうかを判断します。|
-|`CMFCOutlookBarPane::IsChangeState`|浮動ペインをドッキングできるかどうかを判断します。 (`CPane::IsChangeState` をオーバーライドします)。|
+|`CMFCOutlookBarPane::IsChangeState`|浮動ペインをドッキングできるかどうかを判断します。 ( `CPane::IsChangeState`をオーバーライドします)。|
 |[CMFCOutlookBarPane::IsDrawShadedHighlight](#isdrawshadedhighlight)|ボタンが強調表示され、背景画像が表示されるときにボタンの境界線が影付きかどうかを判断します。|
 |`CMFCOutlookBarPane::OnBeforeFloat`|ペインが float 型に、フレームワークによって呼び出されます。 (上書き[CPane::OnBeforeFloat](../../mfc/reference/cpane-class.md#onbeforefloat))。|
 |[CMFCOutlookBarPane::RemoveButton](#removebutton)|指定したコマンド ID を持つボタンを削除します。|
@@ -94,7 +94,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 |[CMFCOutlookBarPane::SetExtraSpace](#setextraspace)|Outlook バー ペインのボタンの周囲に使用するパディングのピクセルの数を設定します。|
 |[CMFCOutlookBarPane::SetTextColor](#settextcolor)|Outlook バー ペインには、正規表現と強調表示されたテキストの色を設定します。|
 |[CMFCOutlookBarPane::SetTransparentColor](#settransparentcolor)|Outlook バー ペインの透明色を設定します。|
-|`CMFCOutlookBarPane::SmartUpdate`|Outlook バーを更新するには、内部的に使用します。 (`CMFCToolBar::SmartUpdate` をオーバーライドします)。|
+|`CMFCOutlookBarPane::SmartUpdate`|Outlook バーを更新するには、内部的に使用します。 ( `CMFCToolBar::SmartUpdate`をオーバーライドします)。|
 
 ### <a name="protected-methods"></a>プロテクト メソッド
 
@@ -111,7 +111,7 @@ Outlook バーの例は、OutlookDemo サンプル プロジェクトを参照�
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドの使用方法、`CMFCOutlookBarPane`クラス。 この例では、Outlook バー ペインを作成、ページのスクロール モードを有効にする、ドッキング、有効にする、および Outlook バーの背景色を設定する方法を示します。 このコード スニペットの一部、 [Outlook マルチ ビュー サンプル](../../visual-cpp-samples.md)します。
+次の例では、さまざまなメソッドの使用方法、`CMFCOutlookBarPane`クラス。 この例では、Outlook バー ペインを作成、ページのスクロール モードを有効にする、ドッキング、有効にする、および Outlook バーの背景色を設定する方法を示します。 このコード スニペットの一部、 [Outlook マルチ ビュー サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#4](../../mfc/reference/codesnippet/cpp/cmfcoutlookbarpane-class_2.cpp)]

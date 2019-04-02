@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: ebd577bc25a2789e3a6b328a4c9cd2e1596d04da
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: b9e94f131448cb9be6c31962ecd19607ceb1b708
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821404"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776038"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(2 フェーズの名前参照を無効にする)
 
@@ -124,7 +124,7 @@ NS::func(NS::S)
 
 ### <a name="update-your-code-for-two-phase-conformance"></a>2 フェーズに準拠するため、コードを更新します。
 
-以前のバージョンのコンパイラには、キーワードは不要`template`と`typename`C++ 標準でに、すべての場所。 コンパイラが参照の最初のフェーズ中に依存する名前を解析する必要がある方法を明確に区別する、いくつかの位置にこれらのキーワードが必要です。 例えば:
+以前のバージョンのコンパイラには、キーワードは不要`template`と`typename`C++ 標準でに、すべての場所。 コンパイラが参照の最初のフェーズ中に依存する名前を解析する必要がある方法を明確に区別する、いくつかの位置にこれらのキーワードが必要です。 例:
 
 `T::Foo<a || b>(c);`
 
@@ -158,7 +158,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 **/Zc:twoPhase-** 以前のコンパイラでコンパイラのみが必要です、 `template` 2 行目にキーワード。 既定では、および準拠モードでは、コンパイラもが必要になりました、`template`キーワードがあることを示す 4 行`T::X<T>`はテンプレートです。 このキーワードが不足しているコードを確認し、標準に準拠しているコードを作成することを指定します。
 
-準拠の問題の詳細については、次を参照してください。 [Visual Studio での C++ 準拠の強化](../../cpp-conformance-improvements-2017.md)と[非標準動作](../../cpp/nonstandard-behavior.md)します。
+準拠の問題の詳細については、次を参照してください。 [Visual Studio での C++ 準拠の強化](../../overview/cpp-conformance-improvements-2017.md)と[非標準動作](../../cpp/nonstandard-behavior.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 

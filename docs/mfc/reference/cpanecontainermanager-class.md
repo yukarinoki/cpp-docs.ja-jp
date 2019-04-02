@@ -106,12 +106,12 @@ helpviewer_keywords:
 - CPaneContainerManager [MFC], SetResizeMode
 - CPaneContainerManager [MFC], StoreRecentDockSiteInfo
 ms.assetid: 3d974c15-a62f-4648-bb5b-cc31ab7950af
-ms.openlocfilehash: 7e0c55981b895540d490e2e38f43eb68abf48e32
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 887b771ee76034256c77aa3d038da96696eca6ed
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294656"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774595"
 ---
 # <a name="cpanecontainermanager-class"></a>CPaneContainerManager クラス
 
@@ -189,7 +189,7 @@ class CPaneContainerManager : public CObject
 
 ## <a name="example"></a>例
 
-次の例への参照を取得する方法を示します、`CPaneContainerManager`オブジェクト。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../visual-cpp-samples.md)します。
+次の例への参照を取得する方法を示します、`CPaneContainerManager`オブジェクト。 このコード スニペットの一部、[ウィンドウのサイズを設定サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_SetPaneSize#5](../../mfc/reference/codesnippet/cpp/cpanecontainermanager-class_1.cpp)]
 

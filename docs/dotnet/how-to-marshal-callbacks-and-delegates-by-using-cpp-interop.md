@@ -10,12 +10,12 @@ helpviewer_keywords:
 - marshaling [C++], callbacks and delegates
 - callbacks [C++], marshaling
 ms.assetid: 2313e9eb-5df9-4367-be0f-14b4712d8d2d
-ms.openlocfilehash: d3814ffbcd23168a9727b1b1d73e2c825639a9c5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: f8088bf90162fd2177599c252b0eee6332d61289
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739221"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766938"
 ---
 # <a name="how-to-marshal-callbacks-and-delegates-by-using-c-interop"></a>方法: C++ Interop を使用してコールバックおよびデリゲートをマーシャ リングします。
 
@@ -27,7 +27,7 @@ ms.locfileid: "57739221"
 
 次の例では、マネージ デリゲートをトリガーするアンマネージ API を構成する方法を示します。 マネージ デリゲートを作成し、相互運用機能のいずれかの<xref:System.Runtime.InteropServices.Marshal.GetFunctionPointerForDelegate%2A>デリゲートの基になるエントリ ポイントを取得するために使用します。 このアドレスはマネージ関数として実装されていることを認識していなくても呼び出すアンマネージ関数に渡されます。
 
-注意可能であれば、必ずしもそうとは限りません、ピン留めするには、デリゲートを使用して[pin_ptr (C +/cli CLI)](../windows/pin-ptr-cpp-cli.md)から再配置したり、ガベージ コレクターによって破棄されるようにします。 ピン留めは、必要に応じて、コレクションをできないようにも再配置を防ぎますを以上に保護を提供しますが、途中のガベージ コレクションからの保護を必要とします。
+注意可能であれば、必ずしもそうとは限りません、ピン留めするには、デリゲートを使用して[pin_ptr (C +/cli CLI)](../extensions/pin-ptr-cpp-cli.md)から再配置したり、ガベージ コレクターによって破棄されるようにします。 ピン留めは、必要に応じて、コレクションをできないようにも再配置を防ぎますを以上に保護を提供しますが、途中のガベージ コレクションからの保護を必要とします。
 
 デリゲートはガベージ コレクションによって再配置されている場合に影響しません、管理されている基本コールバックのため<xref:System.Runtime.InteropServices.GCHandle.Alloc%2A>デリゲートの再配置を許可するが、破棄を防止、デリゲートへの参照を追加するために使用します。 Pin_ptr ではなく GCHandle を使用すると、マネージ ヒープの断片化の可能性が減少します。
 

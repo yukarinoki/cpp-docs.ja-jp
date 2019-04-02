@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWndInfo [MFC], m_strText
 - CMFCDesktopAlertWndInfo [MFC], m_strURL
 ms.assetid: 5c9bb84e-6c96-4748-8e74-6951b6ae8e84
-ms.openlocfilehash: 3c40424a1aba81a7048ba89781fe6c4324f86ccd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a4b3d8769b3d267c0bd3f81269dd3b8ab3cf3184
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301637"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768290"
 ---
 # <a name="cmfcdesktopalertwndinfo-class"></a>CMFCDesktopAlertWndInfo クラス
 
@@ -68,7 +68,7 @@ class CMFCDesktopAlertWndInfo
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメンバーを使用する方法、`CMFCDesktopAlertWndInfo`クラス。 この例では、デスクトップ通知ウィンドウ、デスクトップの通知ウィンドウに表示されているリンクおよびデスクトップ通知ウィンドウ上のリンクに関連付けられているコマンド ID に表示されるテキスト、アイコンが表示されたらにハンドルを設定する方法を示します。 この例は、[デスクトップ アラート デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、さまざまなメンバーを使用する方法、`CMFCDesktopAlertWndInfo`クラス。 この例では、デスクトップ通知ウィンドウ、デスクトップの通知ウィンドウに表示されているリンクおよびデスクトップ通知ウィンドウ上のリンクに関連付けられているコマンド ID に表示されるテキスト、アイコンが表示されたらにハンドルを設定する方法を示します。 この例は、[デスクトップ アラート デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#3](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwndinfo-class_1.cpp)]
 

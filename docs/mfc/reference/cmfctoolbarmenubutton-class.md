@@ -92,12 +92,12 @@ helpviewer_keywords:
 - CMFCToolBarMenuButton [MFC], DrawDocumentIcon
 - CMFCToolBarMenuButton [MFC], m_bAlwaysCallOwnerDraw
 ms.assetid: cfa50176-7e4b-4527-9904-86a1b48fc1bc
-ms.openlocfilehash: 775d977fa1c995c42cc85660b1c9d13aea40a01e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7733969a0218dacf481ac82c764911c61ecabbbf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281525"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769153"
 ---
 # <a name="cmfctoolbarmenubutton-class"></a>CMFCToolBarMenuButton クラス
 
@@ -183,7 +183,7 @@ A`CMFCToolBarMenuButton`メニューのサブメニューのあるメニュー�
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CMFCToolBarMenuButton`オブジェクト。 コードは、パレットのモードで、ドロップダウン メニューを指定し、ユーザーがメニュー バーからメニュー ボタンをドラッグしたときに作成されるティアオフ バーの ID を指定する方法を示しています。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。
+次の例は、構成する方法を示します、`CMFCToolBarMenuButton`オブジェクト。 コードは、パレットのモードで、ドロップダウン メニューを指定し、ユーザーがメニュー バーからメニュー ボタンをドラッグしたときに作成されるティアオフ バーの ID を指定する方法を示しています。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_WordPad#10](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_1.cpp)]
 
@@ -241,7 +241,7 @@ CMFCToolBarMenuButton(
 
 ### <a name="example"></a>例
 
-次の例のオブジェクトを構築する方法、`CMFCToolBarMenuButton`クラス。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。
+次の例のオブジェクトを構築する方法、`CMFCToolBarMenuButton`クラス。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_WordPad#9](../../mfc/reference/codesnippet/cpp/cmfctoolbarmenubutton-class_2.cpp)]
 

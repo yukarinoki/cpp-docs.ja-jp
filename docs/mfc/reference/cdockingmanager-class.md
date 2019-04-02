@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeDockingBarDock
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
-ms.openlocfilehash: 268a46e1bdecc1ea468c152fd0ed480873c36591
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260388"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771319"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager クラス
 
@@ -292,7 +292,7 @@ class CDockingManager : public CObject
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CDockingManager`を構成するクラス、`CDockingManager`オブジェクト。 例では、すべてのドッキング ペインのキャプションにポップアップ メニューを開くための追加 ボタンを表示する方法と、オブジェクトのドッキングのモードを設定する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、さまざまなメソッドを使用する方法、`CDockingManager`を構成するクラス、`CDockingManager`オブジェクト。 例では、すべてのドッキング ペインのキャプションにポップアップ メニューを開くための追加 ボタンを表示する方法と、オブジェクトのドッキングのモードを設定する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#24](../../mfc/codesnippet/cpp/cdockingmanager-class_1.cpp)]
 

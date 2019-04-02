@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, managed code
 - managed code [C++]
 ms.assetid: 339f89df-a5d2-4040-831a-ddbe25b5dce4
-ms.openlocfilehash: a65ccdb4d2f031a70ba03719b58fb439407cdfc8
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d0a006c6928bf42c3e6f4adfbc3d1fdde7ff7c87
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827118"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773048"
 ---
 # <a name="walkthrough-compile-a-ccli-program-that-targets-the-clr-in-visual-studio"></a>チュートリアル: コンパイルするには c++/cli プログラムを Visual Studio で CLR を対象とします。
 
@@ -51,13 +51,13 @@ C + を使用して/cli 言語拡張 .NET クラスを使用し、Visual Studio 
 
 1. Visual Studio で新しく作成されたタブをクリックして、有効な Visual C++ プログラムを入力するか、サンプル プログラムのいずれかをコピーして貼り付けます。
 
-   たとえば、使用することができます、[方法。テキスト ファイルを書き込む (C +/cli CLI)](how-to-write-a-text-file-cpp-cli.md)サンプル プログラム (で、**ファイル処理と I/O**プログラミング ガイドのノード)。
+   たとえば、[テキスト ファイルを作成する方法 (C++/CLI)](how-to-write-a-text-file-cpp-cli.md)のサンプル プログラム (プログラミング ガイドの「**ファイル処理と I/O**」ノード内) を使用できます。
 
    サンプル プログラムを使用する場合は、.NET オブジェクトを作成するときに、`new` の代わりに `gcnew`キーワードを使用することと、`gcnew` がポインター (`*`) ではなくハンドル (`^`) を返すことに注意してください。
 
    `StreamWriter^ sw = gcnew StreamWriter(fileName);`
 
-   新しい Visual C++ 構文の詳細については、「[ランタイム プラットフォームのコンポーネントの拡張機能](../windows/component-extensions-for-runtime-platforms.md)」を参照してください。
+   新しい Visual C++ 構文の詳細については、「[ランタイム プラットフォームのコンポーネントの拡張機能](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
 1. **[ビルド]** メニューの **[ソリューションのビルド]** をクリックします。
 

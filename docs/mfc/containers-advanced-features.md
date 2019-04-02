@@ -12,12 +12,12 @@ helpviewer_keywords:
 - server/container applications [MFC]
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
-ms.openlocfilehash: 9d83ba601766f4b6fb84576571239a250169abb1
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 350431975a4335fc06e436237b7e0d3388faab64
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278705"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769564"
 ---
 # <a name="containers-advanced-features"></a>コンテナー:高度な機能
 
@@ -39,7 +39,7 @@ ms.locfileid: "57278705"
 
 - オーバーライド`COleClientItem::CanActivate`場で編集できる、サーバー自体を使用中は、配置内の項目を編集しないようにします。
 
-   たとえば、MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md)コンテナー/サーバー アプリケーションで作成されたアイテムが埋め込まれています。 OCLIENT アプリケーションを開くし、一括編集コンテナー/サーバー アプリケーションで作成された項目。 アプリケーションのアイテムの編集中に決定した MFC OLE サンプルで作成したアイテムを埋め込む[HIERSVR](../visual-cpp-samples.md)します。 これを行うには、インプレース アクティブ化を使用することはできません。 完全には、この項目をアクティブ化する HIERSVR を開く必要があります。 Microsoft Foundation Class ライブラリがこの OLE 機能をサポートしていないためにオーバーライド`COleClientItem::CanActivate`すると、このような状況を確認し、アプリケーションで可能な実行時エラーを防ぐことができます。
+   たとえば、MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)コンテナー/サーバー アプリケーションで作成されたアイテムが埋め込まれています。 OCLIENT アプリケーションを開くし、一括編集コンテナー/サーバー アプリケーションで作成された項目。 アプリケーションのアイテムの編集中に決定した MFC OLE サンプルで作成したアイテムを埋め込む[HIERSVR](../overview/visual-cpp-samples.md)します。 これを行うには、インプレース アクティブ化を使用することはできません。 完全には、この項目をアクティブ化する HIERSVR を開く必要があります。 Microsoft Foundation Class ライブラリがこの OLE 機能をサポートしていないためにオーバーライド`COleClientItem::CanActivate`すると、このような状況を確認し、アプリケーションで可能な実行時エラーを防ぐことができます。
 
 新しいアプリケーションを作成し、コンテナー/サーバー アプリケーションとして機能する場合は、アプリケーション ウィザードでこのサポート OLE オプション ダイアログ ボックスのオプションが自動的に作成されることを選択します。 詳細については、この記事を参照してください。[概要。ActiveX コントロール コンテナーの作成](../mfc/reference/creating-an-mfc-activex-control-container.md)です。 MFC のサンプルについては、MFC のサンプルを参照してください。
 
@@ -65,12 +65,11 @@ ms.locfileid: "57278705"
 
    - 呼び出す、 `COleTemplateServer::RegisterAll` OLE システム クラスのすべてのオブジェクトに登録します。
 
-   - 
-  `COleTemplateServer::UpdateRegistry` を呼び出す。 唯一のパラメーターを`UpdateRegistry`べき*OAT_CONTAINER* 「/埋め込みの」スイッチを使用して、アプリケーションが起動しない場合。 これは、埋め込みオブジェクトへのリンクをサポートできるコンテナーとしてアプリケーションを登録します。
+   - `COleTemplateServer::UpdateRegistry` を呼び出す。 唯一のパラメーターを`UpdateRegistry`べき*OAT_CONTAINER* 「/埋め込みの」スイッチを使用して、アプリケーションが起動しない場合。 これは、埋め込みオブジェクトへのリンクをサポートできるコンテナーとしてアプリケーションを登録します。
 
          If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.
 
-MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md)この機能を実装します。 これを行う方法の例は、次を参照してください。、`InitInstance`で機能、 *OCLIENT します。CPP*このサンプル アプリケーションのファイル。
+MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)この機能を実装します。 これを行う方法の例は、次を参照してください。、`InitInstance`で機能、 *OCLIENT します。CPP*このサンプル アプリケーションのファイル。
 
 ## <a name="see-also"></a>関連項目
 

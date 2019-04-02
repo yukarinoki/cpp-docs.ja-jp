@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE drag and drop [MFC], drop target
 - drag and drop [MFC], drop target
 ms.assetid: 0689f1ec-5326-4008-b226-4b373c881358
-ms.openlocfilehash: da04fa7fa84e7e5014d574583c9c95992db10f88
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 46501193569d7f3098e23c67c68c76ce20a82ea3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281949"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766678"
 ---
 # <a name="drag-and-drop-implementing-a-drop-target"></a>ドラッグ アンド ドロップします。ドロップ ターゲットの実装
 
@@ -33,7 +33,7 @@ ms.locfileid: "57281949"
     |`OnDrop`|指定したウィンドウにドロップされたデータを処理します。|
     |`OnScrollBy`|スクロールが必要な場合、ターゲット ウィンドウでの特殊な動作はします。|
 
-MAINVIEW を参照してください。MFC OLE サンプルの一部を CPP ファイル[OCLIENT](../visual-cpp-samples.md)これらの関数の動作の例についてはします。
+MAINVIEW を参照してください。MFC OLE サンプルの一部を CPP ファイル[OCLIENT](../overview/visual-cpp-samples.md)これらの関数の動作の例についてはします。
 
 詳細については次を参照してください:
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drag and drop [MFC], about OLE drag and drop
 - OLE drag and drop [MFC]
 ms.assetid: a4595350-ca06-4400-88a1-f0175c76b77b
-ms.openlocfilehash: 277f82874426a008f598c052966ad81f46c45732
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 98bd58745e56a62bf5700e9b5fe4963a7b584953
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305043"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766808"
 ---
 # <a name="drag-and-drop-ole"></a>ドラッグ アンド ドロップ (OLE)
 
@@ -26,7 +26,7 @@ OLE ドラッグ アンド ドロップを使用する場合は、プロセス�
 
 OLE ドラッグ アンド ドロップを使用して、データ転送できます 1 つの場所から別のドキュメント間で、またはアプリケーション間で、ドキュメント内の別に。 コンテナーまたはサーバー アプリケーションでは、いずれかで実装することし、任意のアプリケーションは、ドロップ ソース、ドロップ先、またはその両方を指定できます。 アプリケーションに実装されているドロップ ソースとドロップ先の両方のサポートがある場合は、子ウィンドウ間または 1 つのウィンドウ内でドラッグ アンド ドロップが有効にします。 この機能は、アプリケーションがより簡単を使用します。
 
-OLE のドラッグ アンド ドロップ機能を使用する場合は、「[ドラッグ アンド ドロップします。カスタマイズ](../mfc/drag-and-drop-customizing.md)します。 その記事で説明した手法を使用すると、によって、非 OLE アプリケーションのソースを削除します。 この記事[ドラッグ アンド ドロップします。ドロップ ターゲットの実装](../mfc/drag-and-drop-implementing-a-drop-target.md)OLE と非 OLE アプリケーションの両方のドロップ ターゲットのサポートを実装する方法について説明します。 MFC OLE サンプルを確認する便利なことも[OCLIENT](../visual-cpp-samples.md)と[HIERSVR](../visual-cpp-samples.md)します。
+OLE のドラッグ アンド ドロップ機能を使用する場合は、「[ドラッグ アンド ドロップします。カスタマイズ](../mfc/drag-and-drop-customizing.md)します。 その記事で説明した手法を使用すると、によって、非 OLE アプリケーションのソースを削除します。 この記事[ドラッグ アンド ドロップします。ドロップ ターゲットの実装](../mfc/drag-and-drop-implementing-a-drop-target.md)OLE と非 OLE アプリケーションの両方のドロップ ターゲットのサポートを実装する方法について説明します。 MFC OLE サンプルを確認する便利なことも[OCLIENT](../overview/visual-cpp-samples.md)と[HIERSVR](../overview/visual-cpp-samples.md)します。
 
 まだ読んでいない場合、[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)ファミリの記事は、可能性があるようになりました。 これらの記事では、データ転送、およびアプリケーションで実装する方法の基礎について説明します。
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3670
 ms.assetid: d0fa9c6e-8f90-48c7-9066-31b4fa5942eb
-ms.openlocfilehash: d3acfd9d4d09c53fac0b2c5a2462c56dfd54e6d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a9fe72501152891d3f82567f09922dda9a9b711a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598550"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775479"
 ---
 # <a name="compiler-error-c3670"></a>コンパイラ エラー C3670
 
 'override': アクセスできない基底クラス メソッド 'method' をオーバーライドすることはできません
 
-オーバーライドでは、アクセス レベルでは、派生型で使用可能な関数でのみ実行できます。 詳細については、次を参照してください。[明示的なオーバーライド](../../windows/explicit-overrides-cpp-component-extensions.md)します。
+オーバーライドでは、アクセス レベルでは、派生型で使用可能な関数でのみ実行できます。 詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
 
 次の例では、C3670 が生成されます。
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2750
 ms.assetid: 30450034-feb5-448c-9655-b8c5f3639695
-ms.openlocfilehash: 943220fae035da8d6fc861d2abae435051381e1c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 34d19e8e9f51c90c48ec0d429f98bb82e3d829d4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50453743"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778911"
 ---
 # <a name="compiler-error-c2750"></a>コンパイラ エラー C2750
 
 'type': 'new' は参照型で使用できません代わりに 'gcnew'
 
-ガベージ コレクション ヒープに配置するインスタンスが発生した場合、CLR の型のインスタンスの作成に使用する必要があります[gcnew](../../windows/ref-new-gcnew-cpp-component-extensions.md)します。
+ガベージ コレクション ヒープに配置するインスタンスが発生した場合、CLR の型のインスタンスの作成に使用する必要があります[gcnew](../../extensions/ref-new-gcnew-cpp-component-extensions.md)します。
 
 次の例では、C2750 が生成されます。
 

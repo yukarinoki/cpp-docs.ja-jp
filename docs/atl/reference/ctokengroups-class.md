@@ -16,12 +16,12 @@ f1_keywords:
 helpviewer_keywords:
 - CTokenGroups class
 ms.assetid: 2ab08076-4b08-4487-bc70-ec6dee304190
-ms.openlocfilehash: 842ceab1630fc7bc08b5c27dc769a25d029886f3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 934d746dafafb39c2ffc3477c59c95914d270196
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274519"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772830"
 ---
 # <a name="ctokengroups-class"></a>CTokenGroups クラス
 
@@ -273,7 +273,7 @@ operator const TOKEN_GROUPS *() const throw(...);
 
 ## <a name="see-also"></a>関連項目
 
-[セキュリティのサンプル](../../visual-cpp-samples.md)<br/>
+[セキュリティのサンプル](../../overview/visual-cpp-samples.md)<br/>
 [CSid クラス](../../atl/reference/csid-class.md)<br/>
 [クラスの概要](../../atl/atl-class-overview.md)<br/>
 [セキュリティに関するグローバル関数](../../atl/reference/security-global-functions.md)

@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnDrawSplitter
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
-ms.openlocfilehash: 42913ddea7818636dce8d630ed2d79d13c19ce81
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302105"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781446"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd クラス
 
@@ -175,9 +175,9 @@ A`CSplitterWnd`オブジェクトが親に埋め込まれた通常[CFrameWnd](..
 
 動的分割ウィンドウを作成する方法の詳細についてを参照してください。
 
-- MFC サンプル[Scribble](../../visual-cpp-samples.md)
+- MFC サンプル[Scribble](../../overview/visual-cpp-samples.md)
 
-- MFC サンプル[VIEWEX](../../visual-cpp-samples.md)します。
+- MFC サンプル[VIEWEX](../../overview/visual-cpp-samples.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -1036,7 +1036,7 @@ virtual void OnDraw(CDC* pDC);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル VIEWEX](../../visual-cpp-samples.md)<br/>
+[MFC サンプル VIEWEX](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CView クラス](../../mfc/reference/cview-class.md)<br/>

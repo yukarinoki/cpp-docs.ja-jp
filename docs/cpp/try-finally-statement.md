@@ -20,12 +20,12 @@ helpviewer_keywords:
 - __leave keyword [C++], try-finally statement
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
-ms.openlocfilehash: d05e1d113f4fc661cb6e2e2905fbd8c9dcdd7e2d
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175922"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778339"
 ---
 # <a name="try-finally-statement"></a>try-finally ステートメント
 
@@ -33,7 +33,7 @@ ms.locfileid: "52175922"
 
 次の構文について説明します、 **、try-finally**ステートメント。
 
-> **\_\_お試しください**<br/>
+> **\_\_お試しください。**<br/>
 > {<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;保護されたコード<br/>
 > }<br/>
@@ -49,7 +49,7 @@ ms.locfileid: "52175922"
 
 **、Try-finally**ステートメントは C および C++ 言語への Microsoft 拡張コードのブロックの実行が中断されたときにクリーンアップ コードの実行を保証するためにターゲット アプリケーションの機能です。 クリーンアップは、メモリを解放する、ファイルを閉じる、ファイル ハンドルを解放するなどのタスクで構成されます。 **、Try-finally**ステートメントは、チェックが行われる場所を引き起こす可能性のあるエラーの途中の複数の場所のルーチンは、ルーチンから返すに特に便利です。
 
-関連する情報とコード サンプルでは、次を参照してください。[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)します。 詳細については、構造化例外処理を一般には、次を参照してください。[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)します。 マネージ アプリケーションでの例外処理の詳細については、次を参照してください。 [/clr での例外処理](../windows/exception-handling-cpp-component-extensions.md)します。
+関連する情報とコード サンプルでは、次を参照してください。[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)します。 詳細については、構造化例外処理を一般には、次を参照してください。[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)します。 C + を使用してマネージ アプリケーションでの例外処理の詳細については/cli CLI を参照してください[/clr での例外処理](../extensions/exception-handling-cpp-component-extensions.md)します。
 
 > [!NOTE]
 > 構造化例外処理では、C と C++ のソース ファイルの両方で Win32 を使用します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理は、任意の型の例外を処理できるという点で、より柔軟です。 C++ プログラムは、お勧め、C++ 例外処理機構を使用すること ([try、catch、および throw](../cpp/try-throw-and-catch-statements-cpp.md)ステートメント)。
@@ -66,7 +66,7 @@ ms.locfileid: "52175922"
 
 例外が発生した場合、 **_ _try**ブロック、例外のハンドラーを見つける必要があります、オペレーティング システムまたはプログラムは失敗します。 ハンドラーが見つかった場合、すべて **_ _finally**ブロックが実行され、ハンドラーの実行が再開します。
 
-たとえば、次の図に示すように、一連の関数呼び出しで、関数 A を関数 D にリンクするとします。 各関数には、1 つの終了ハンドラーがあります。 関数 D で例外が発生し、A で処理されると、スタックがアンワインドされるときに、終了ハンドラーは D、C、B の順に呼び出されます。
+たとえば、次の図に示すように、一連の関数呼び出しで、関数 A を関数 D にリンクするとします。 各関数には、1 つの終了ハンドラーがあります。 例外が関数 D で発生した、A で処理される場合は、スタックがアンワインドされる終了ハンドラーがこの順序で呼び出されます。D、C、B.
 
 ![終了の順序&#45;ハンドラーの実行](../cpp/media/vc38cx1.gif "終了の順序&#45;ハンドラーの実行") <br/>
 終了順序 - ハンドラーの実行

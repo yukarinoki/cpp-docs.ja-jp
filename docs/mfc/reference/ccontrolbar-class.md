@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CControlBar [MFC], m_bAutoDelete
 - CControlBar [MFC], m_pInPlaceOwner
 ms.assetid: 4d668c55-9b42-4838-97ac-cf2b3000b82c
-ms.openlocfilehash: 9ac9ad66a076202113f0c59dafae243b6951ee4c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 41e40b3da7b4a294fe396a9d93f7c6a93593ff95
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291627"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773243"
 ---
 # <a name="ccontrolbar-class"></a>CControlBar Class
 
@@ -101,11 +101,9 @@ class CControlBar : public CWnd
 
 通常、コントロール バーは、フレーム ウィンドウの左側または右側にアラインされるウィンドウです。 いずれかの Windows メッセージに応答を生成する windows には、HWND ベースのコントロールや windows でないし、アプリケーション コードまたはフレームワーク コードによって管理されている非 HWND ベースの項目が子項目に含めることができます。 リスト ボックスやエディット コントロール、HWND ベースのコントロールの例ステータス バー ペインやビットマップ ボタンは、HWND ベースのコントロールの例を示します。
 
-通常、コントロール バーのウィンドウは親フレーム ウィンドウの子ウィンドウであり、通常はクライアント ビューまたはフレーム ウィンドウの MDI クライアントの兄弟です。 
-  `CControlBar` オブジェクトは、親ウィンドウのクライアント領域の四角形に関する情報を使用して、それ自体を配置します。 次に、親ウィンドウのクライアント領域においてどの程度の未割り当て領域が残っているかについて、親ウィンドウに通知します。
+通常、コントロール バーのウィンドウは親フレーム ウィンドウの子ウィンドウであり、通常はクライアント ビューまたはフレーム ウィンドウの MDI クライアントの兄弟です。 `CControlBar` オブジェクトは、親ウィンドウのクライアント領域の四角形に関する情報を使用して、それ自体を配置します。 次に、親ウィンドウのクライアント領域においてどの程度の未割り当て領域が残っているかについて、親ウィンドウに通知します。
 
-
-  `CControlBar` の詳細については、次を参照してください。
+`CControlBar` の詳細については、次を参照してください。
 
 - [コントロール バー](../../mfc/control-bars.md)
 
@@ -545,7 +543,7 @@ void SetInPlaceOwner(CWnd* pWnd);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CTRLBARS](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar クラス](../../mfc/reference/ctoolbar-class.md)<br/>

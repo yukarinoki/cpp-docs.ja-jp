@@ -17,12 +17,12 @@ helpviewer_keywords:
 - toolbars [MFC]
 - toolbars [MFC], implementing MFC toolbars
 ms.assetid: af3319ad-c430-4f90-8361-e6a2c06fd084
-ms.openlocfilehash: ce3b373bab67ba49a1f7aa41f2a9456ae7199028
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 55c43c47b93cd21d86293706fc7c3eb5145c39fd
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267811"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773178"
 ---
 # <a name="mfc-toolbar-implementation"></a>MFC ツール バーの実装
 
@@ -84,12 +84,11 @@ MFC ツール バーには "ツール ヒント" を表示させることもで�
 > [!TIP]
 >  以前の形式の `CToolBar` を実装するために多大な労力を費やしてきた場合は、そのまま以前の形式のツール バーを使用できます。 記事をご覧ください[を使用して、古いツールバー](../mfc/using-your-old-toolbars.md)します。
 
-また、MFC 標準サンプルを参照してください[DOCKTOOL](../visual-cpp-samples.md)します。
+また、MFC 標準サンプルを参照してください[DOCKTOOL](../overview/visual-cpp-samples.md)します。
 
 ##  <a name="_core_the_toolbar_bitmap"></a> ツールバーのビットマップ
 
-
-  `CToolBar` オブジェクトは、いったん生成された後は、各ボタンのイメージを含む 1 つのビットマップを読み込んでツール バー イメージを作成します。 アプリケーション ウィザードでは、カスタマイズ可能な標準ツールバーのビットマップを作成、Visual C で[ツール バー エディター](../windows/toolbar-editor.md)します。
+`CToolBar` オブジェクトは、いったん生成された後は、各ボタンのイメージを含む 1 つのビットマップを読み込んでツール バー イメージを作成します。 アプリケーション ウィザードでは、カスタマイズ可能な標準ツールバーのビットマップを作成、Visual C で[ツール バー エディター](../windows/toolbar-editor.md)します。
 
 ### <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 

@@ -48,12 +48,12 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTime
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
-ms.openlocfilehash: c93d8a2a18518cad8b6fb7fe014828011f78a653
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: dfe1d3dc058371dd13cc335968b9c3a89e057da2
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280993"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776051"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl クラス
 
@@ -172,7 +172,7 @@ CMFCToolBarDateTimeCtrl(
 
 ### <a name="example"></a>例
 
-次の例のオブジェクトを構築する方法、`CMFCToolBarDateTimeCtrl`クラス。 このコード スニペットの一部、[ツールバー日時指定サンプル](../../visual-cpp-samples.md)します。
+次の例のオブジェクトを構築する方法、`CMFCToolBarDateTimeCtrl`クラス。 このコード スニペットの一部、[ツールバー日時指定サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_ToolbarDateTimePicker#1](../../mfc/reference/codesnippet/cpp/cmfctoolbardatetimectrl-class_1.cpp)]
 

@@ -152,12 +152,12 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], StreamOut
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
-ms.openlocfilehash: 634aa4adbe4e7084266be43ef932074373835c10
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414292"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779275"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl クラス
 
@@ -269,7 +269,7 @@ class CRichEditCtrl : public CWnd
 
 - [CRichEditCtrl の使い方](../../mfc/using-cricheditctrl.md)
 
-リッチ エディット コントロールを使用して MFC アプリケーションでの例は、次を参照してください。、[ワードパッド](../../visual-cpp-samples.md)サンプル アプリケーション。
+リッチ エディット コントロールを使用して MFC アプリケーションでの例は、次を参照してください。、[ワードパッド](../../overview/visual-cpp-samples.md)サンプル アプリケーション。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -2198,7 +2198,7 @@ BOOL Undo();
 
 ## <a name="see-also"></a>関連項目
 
-[ワードパッドの MFC サンプル](../../visual-cpp-samples.md)<br/>
+[ワードパッドの MFC サンプル](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CEdit クラス](../../mfc/reference/cedit-class.md)<br/>

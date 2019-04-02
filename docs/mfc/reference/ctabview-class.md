@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CTabView [MFC], IsScrollBar
 - CTabView [MFC], OnActivateView
 ms.assetid: 8e6ecd9d-d28d-432b-8ec8-0446f0204d52
-ms.openlocfilehash: 5ac62d04c38dbddda90d2f33a9c14c9c131fcd9c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 56640edbd0d2e74a1cc00dad5441350ad3d35725
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326596"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772094"
 ---
 # <a name="ctabview-class"></a>CTabView クラス
 
@@ -65,7 +65,7 @@ class CTabbedView : public CView
 
 たとえば、さまざまな方法で表すことができるドキュメントがあります: スプレッドシート、グラフ、編集可能なフォーム、およびなどとして。 挿入に、必要に応じて、データを描画する個々 のビューを作成できます、 `CTabView`-オブジェクトを派生し、コードを追加せずにタブ付きもらいます。
 
-[TabbedView サンプル:タブ付きビューのアプリケーションの MFC](../../visual-cpp-samples.md)の使用法を示します`CTabView`します。
+[TabbedView サンプル:タブ付きビューのアプリケーションの MFC](../../overview/visual-cpp-samples.md)の使用法を示します`CTabView`します。
 
 ## <a name="example"></a>例
 

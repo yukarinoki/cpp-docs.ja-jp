@@ -6,12 +6,12 @@ helpviewer_keywords:
 - notifications [MFC], socket
 - sockets [MFC], notifications
 ms.assetid: 87d5bf70-6e77-49a9-9a64-aaadee2ad018
-ms.openlocfilehash: c08305b8aeeca00eaf41e4f1c24b51a46a8c4254
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: df7bfe8a95221682d0f7f4ebb123bd15b79144d5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289911"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774335"
 ---
 # <a name="windows-sockets-socket-notifications"></a>Windows ソケット:ソケット通知
 
@@ -43,7 +43,7 @@ MFC が通知される時に、ソケットの動作をカスタマイズでき�
 > [!NOTE]
 >  `CSocket`、`OnConnect`通知関数を呼び出すことはありません。 接続は、呼び出す`Connect`、(正常にまたはエラー)、接続が完了したときに返されます。 MFC 実装の詳細は、接続の通知を処理する方法。
 
-詳細については、通知の各関数は、クラスの下にある関数を参照してください。`CAsyncSocket`で、 *MFC リファレンス*します。 ソース コードと MFC のサンプルについては、「 [MFC サンプル](../visual-cpp-samples.md)します。
+詳細については、通知の各関数は、クラスの下にある関数を参照してください。`CAsyncSocket`で、 *MFC リファレンス*します。 ソース コードと MFC のサンプルについては、「 [MFC サンプル](../overview/visual-cpp-samples.md)します。
 
 詳細については次を参照してください:
 

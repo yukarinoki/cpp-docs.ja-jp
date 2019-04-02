@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3154
 ms.assetid: 78005c74-eaaf-4ac2-88ae-6c25d01a302a
-ms.openlocfilehash: d14b921afa3888f1a9497f19bfeaa013b147b086
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9f7af4e19fab5f5a0539e9fc3bf9dbeffb5c6fbf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430551"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781381"
 ---
 # <a name="compiler-error-c3154"></a>コンパイラ エラー C3154
 
@@ -19,7 +19,7 @@ ms.locfileid: "50430551"
 
 可変個引数関数は正しく宣言されませんでした。
 
-詳細については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+詳細については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 ## <a name="example"></a>例
 

@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], SetDefaultCommand
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
-ms.openlocfilehash: b33e50328fd3c8997774515f248780edda6bcc75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 5027b43e1519d9f8cc2880cc4de005d5137bbb67
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57275494"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769005"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton クラス
 
@@ -81,7 +81,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 |[CMFCDropDownToolbarButton::IsDropDown](#isdropdown)|ドロップダウン ツール バーが現在開いているかどうかを判断します。|
 |[CMFCDropDownToolbarButton::IsExtraSize](#isextrasize)|拡張された境界で、ボタンを表示できるかどうかを判断します。 (上書き[CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize))。|
 |[CMFCDropDownToolbarButton::OnCalculateSize](#oncalculatesize)|指定したデバイス コンテキストおよびドッキング状態のボタンのサイズを計算するためにフレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnCalculateSize](../../mfc/reference/cmfctoolbarbutton-class.md#oncalculatesize))。|
-|`CMFCDropDownToolbarButton::OnCancelMode`|処理するためにフレームワークによって呼び出されます、 [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)メッセージ。 (`CMCToolBarButton::OnCancelMode` をオーバーライドします)。|
+|`CMFCDropDownToolbarButton::OnCancelMode`|処理するためにフレームワークによって呼び出されます、 [WM_CANCELMODE](/windows/desktop/winmsg/wm-cancelmode)メッセージ。 ( `CMCToolBarButton::OnCancelMode`をオーバーライドします)。|
 |[CMFCDropDownToolbarButton::OnChangeParentWnd](#onchangeparentwnd)|新しいツールバーにボタンが挿入されたときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnChangeParentWnd](../../mfc/reference/cmfctoolbarbutton-class.md#onchangeparentwnd))。|
 |[CMFCDropDownToolbarButton::OnClick](#onclick)|ユーザーがマウス ボタンをクリックすると、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnClick](../../mfc/reference/cmfctoolbarbutton-class.md#onclick))。|
 |[CMFCDropDownToolbarButton::OnClickUp](#onclickup)|ユーザーがマウス ボタンを離したときに、フレームワークによって呼び出されます。 (上書き[CMFCToolBarButton::OnClickUp](../../mfc/reference/cmfctoolbarbutton-class.md#onclickup))。|
@@ -163,7 +163,7 @@ CMFCDropDownToolbarButton(
 
 ### <a name="example"></a>例
 
-次の例のオブジェクトを構築する方法、`CMFCDropDownToolbarButton`クラス。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例のオブジェクトを構築する方法、`CMFCDropDownToolbarButton`クラス。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#31](../../mfc/codesnippet/cpp/cmfcdropdowntoolbarbutton-class_1.cpp)]
 

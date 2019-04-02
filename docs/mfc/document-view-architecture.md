@@ -12,12 +12,12 @@ helpviewer_keywords:
 - documents [MFC], MFC document/view model
 - document objects [MFC], document/view architecture
 ms.assetid: 6127768a-553f-462a-b01b-a5ee6068c81e
-ms.openlocfilehash: ec933d29474695c1b94b72e712d68a9b3a08bd4e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d1b1f80f44fdc66a3174ea75c15e139f98a4520b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326583"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775544"
 ---
 # <a name="documentview-architecture"></a>ドキュメント/ビュー アーキテクチャ
 
@@ -80,7 +80,7 @@ MFC のドキュメント/ビュー アーキテクチャでは、複数のビ�
 
 - [ドキュメントとビューを用いないデータベース クラスの使用](../data/mfc-using-database-classes-without-documents-and-views.md)
 
-- [サンプル](../visual-cpp-samples.md)
+- [サンプル](../overview/visual-cpp-samples.md)
 
 ## <a name="see-also"></a>関連項目
 

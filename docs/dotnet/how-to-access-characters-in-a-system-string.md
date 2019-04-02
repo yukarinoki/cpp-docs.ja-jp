@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [C++], strings
 - strings [C++], accessing characters
 ms.assetid: cfc89756-aef3-4988-907e-fb236dcb7087
-ms.openlocfilehash: 68444b337710515ccf8ecb98157d144493978ecd
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 6b9e30a18ab1d2b8463ccccae0b265bc20904020
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738450"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775973"
 ---
 # <a name="how-to-access-characters-in-a-systemstring"></a>方法: System::string の文字をアクセス
 
@@ -22,7 +22,7 @@ ms.locfileid: "57738450"
 
 `PtrToStringChars` 返します、 <xref:System.Char>、内部ポインターである (とも呼ばれる、 `byref`)。 そのため、ガベージ コレクションの対象になります。 ネイティブ関数に渡すしようとしている場合を除き、このポインターをピン留めする必要はありません。
 
-次のコードについて考えてみましょう。  ピン留めは必要ありませんので`ppchar`、内部ポインターであり、ガベージ コレクターは、文字列の指すを移動する場合は更新も`ppchar`します。 なし、 [pin_ptr (C +/cli CLI)](../windows/pin-ptr-cpp-cli.md)コードを実行およびが潜在的なパフォーマンスの影響によるものをピン留めします。
+次のコードについて考えてみましょう。  ピン留めは必要ありませんので`ppchar`、内部ポインターであり、ガベージ コレクターは、文字列の指すを移動する場合は更新も`ppchar`します。 なし、 [pin_ptr (C +/cli CLI)](../extensions/pin-ptr-cpp-cli.md)コードを実行およびが潜在的なパフォーマンスの影響によるものをピン留めします。
 
 渡した場合`ppchar`、ネイティブ関数にする必要があります固定ポインター。 ガベージ コレクターがアンマネージ スタック フレーム上のポインターを更新することができません。
 

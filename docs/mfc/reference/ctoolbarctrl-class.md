@@ -182,12 +182,12 @@ helpviewer_keywords:
 - CToolBarCtrl [MFC], SetToolTips
 - CToolBarCtrl [MFC], SetWindowTheme
 ms.assetid: 8f2f8ad2-05d7-4975-8715-3f2eed795248
-ms.openlocfilehash: 97854a554be729b75d50f09b0627ffc94b1b093f
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 92f5adcea50e660ecfad131313247e118312e609
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57424484"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781264"
 ---
 # <a name="ctoolbarctrl-class"></a>CToolBarCtrl クラス
 
@@ -2386,8 +2386,8 @@ HRESULT SetWindowTheme(LPCWSTR pszSubAppName);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CMNCTRL1](../../visual-cpp-samples.md)<br/>
-[MFC サンプル MFCIE](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル MFCIE](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CToolBar クラス](../../mfc/reference/ctoolbar-class.md)

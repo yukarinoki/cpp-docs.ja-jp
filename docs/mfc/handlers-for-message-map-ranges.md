@@ -22,12 +22,12 @@ helpviewer_keywords:
 - handler functions [MFC], declaring
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
-ms.openlocfilehash: b587064625178c520338e4253e812e8f84275257
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266368"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773997"
 ---
 # <a name="handlers-for-message-map-ranges"></a>範囲内のメッセージのハンドラー
 
@@ -95,7 +95,7 @@ ms.locfileid: "57266368"
 
 ##  <a name="_core_example_for_a_range_of_command_ids"></a> 範囲のコマンド Id の例
 
-1 つの例は、MFC サンプル ズーム コマンドのようなコマンドの処理範囲を使用して場合[HIERSVR](../visual-cpp-samples.md)します。 このコマンドは、ビュー、25% と、通常のサイズの 300% の間のスケールを拡大します。 HIERSVR のビュー クラスでは、次のようなメッセージ マップ エントリに拡大/縮小コマンドを処理するために、範囲を使用します。
+1 つの例は、MFC サンプル ズーム コマンドのようなコマンドの処理範囲を使用して場合[HIERSVR](../overview/visual-cpp-samples.md)します。 このコマンドは、ビュー、25% と、通常のサイズの 300% の間のスケールを拡大します。 HIERSVR のビュー クラスでは、次のようなメッセージ マップ エントリに拡大/縮小コマンドを処理するために、範囲を使用します。
 
 [!code-cpp[NVC_MFCMessageHandling#8](../mfc/codesnippet/cpp/handlers-for-message-map-ranges_3.cpp)]
 

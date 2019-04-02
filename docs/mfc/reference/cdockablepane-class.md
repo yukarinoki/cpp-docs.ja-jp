@@ -132,12 +132,12 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_bHideInAutoHideMode
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
-ms.openlocfilehash: c78634c93bda94940b2834a61d276f63522e4aeb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271910"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769694"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
 
@@ -155,8 +155,7 @@ class CDockablePane : public CPane
 
 |名前|説明|
 |----------|-----------------|
-|[CDockablePane::CDockablePane](#cdockablepane)|
-  `CDockablePane` オブジェクトを構築して初期化します。|
+|[CDockablePane::CDockablePane](#cdockablepane)|`CDockablePane` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -291,7 +290,7 @@ class CDockablePane : public CPane
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CDockablePane`オブジェクトでさまざまなメソッドを使用して、`CDockablePane`クラス。 例では、自動的に隠すのドッキング可能ペインのすべての機能を有効にする、キャプションまたはグリッパーを有効にする、自動非表示モードを有効にする、ウィンドウを表示および自動非表示モードになっているウィンドウをアニメーション化する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例は、構成する方法を示します、`CDockablePane`オブジェクトでさまざまなメソッドを使用して、`CDockablePane`クラス。 例では、自動的に隠すのドッキング可能ペインのすべての機能を有効にする、キャプションまたはグリッパーを有効にする、自動非表示モードを有効にする、ウィンドウを表示および自動非表示モードになっているウィンドウをアニメーション化する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#27](../../mfc/codesnippet/cpp/cdockablepane-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#28](../../mfc/codesnippet/cpp/cdockablepane-class_2.cpp)]

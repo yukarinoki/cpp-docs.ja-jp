@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CMFCToolBarFontSizeComboBox [MFC], RebuildFontSizes
 - CMFCToolBarFontSizeComboBox [MFC], SetTwipSize
 ms.assetid: 72e0c44c-6a0e-4194-a71f-ab64e3afb9b5
-ms.openlocfilehash: a1dd85ed7bf80f5307bf0bd07ef5ef74875c8562
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43832f6c9b02c43fbe4a05cbea3add8783150113
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258945"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767666"
 ---
 # <a name="cmfctoolbarfontsizecombobox-class"></a>CMFCToolBarFontSizeComboBox クラス
 
@@ -57,7 +57,7 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CMFCToolBarFontSizeComboBox`を構成するクラス、`CMFCToolBarFontSizeComboBox`オブジェクト。 この例では、テキスト ボックスからを twip 単位で、フォント サイズを取得し、特定のフォントのすべての有効なサイズとフォント サイズ コンボ ボックスに入力し、フォント サイズを twip 単位で指定する方法を示します。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。
+次の例では、さまざまなメソッドを使用する方法、`CMFCToolBarFontSizeComboBox`を構成するクラス、`CMFCToolBarFontSizeComboBox`オブジェクト。 この例では、テキスト ボックスからを twip 単位で、フォント サイズを取得し、特定のフォントのすべての有効なサイズとフォント サイズ コンボ ボックスに入力し、フォント サイズを twip 単位で指定する方法を示します。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_WordPad#8](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontsizecombobox-class_1.cpp)]
 

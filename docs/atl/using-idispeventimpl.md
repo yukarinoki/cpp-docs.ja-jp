@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - IDispEventImpl class, using
 ms.assetid: 82d53b61-9d0d-45c5-aff9-2fafa468a9ca
-ms.openlocfilehash: 59f8e7d095f3d514ab41b28dc37f5d3c707bbd08
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: c532164788d359c7834759de01407d49c19463ca
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820300"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769330"
 ---
 # <a name="using-idispeventimpl"></a>IDispEventImpl の使用
 
@@ -29,7 +29,7 @@ ms.locfileid: "57820300"
 
 次の例を処理する方法を示しています、`DocumentChange`によって Word のイベントが発生した**アプリケーション**オブジェクト。 このイベントは、メソッドとしてで定義されている、`ApplicationEvents`ディスパッチ インターフェイス。
 
-例は、[コード](../visual-cpp-samples.md)します。
+例は、[コード](../overview/visual-cpp-samples.md)します。
 
 ```cpp
 [ uuid(000209F7-0000-0000-C000-000000000046), hidden ]
@@ -58,4 +58,4 @@ NotSoSimple.h に次のコードが表示されます。 関連するコード�
 ## <a name="see-also"></a>関連項目
 
 [イベント処理](../atl/event-handling-and-atl.md)<br/>
-[コード](../visual-cpp-samples.md)
+[コード](../overview/visual-cpp-samples.md)

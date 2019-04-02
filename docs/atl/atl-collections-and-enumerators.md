@@ -7,12 +7,12 @@ helpviewer_keywords:
 - enumerators, ATL classes
 - collection interfaces
 ms.assetid: b2d37119-3ab2-4e0a-b65b-f377f07e4098
-ms.openlocfilehash: 690fc023b72b2606efc190aceb7c266a35a4ebb4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: ebf7be8b2c80a714a27567ce0334475519a69454
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283049"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58768017"
 ---
 # <a name="atl-collections-and-enumerators"></a>ATL のコレクションと列挙子
 
@@ -40,7 +40,7 @@ C++ 標準ライブラリに基づくコレクションの実装を説明する�
 [ATL](../atl/active-template-library-atl-concepts.md)<br/>
 Active Template Library を使用してプログラミングする方法に関する概念説明のトピックへのリンクを提供します。
 
-[ATLCollections サンプル](../visual-cpp-samples.md)<br/>
+[ATLCollections サンプル](../overview/visual-cpp-samples.md)<br/>
 使用方法を示すサンプル`ICollectionOnSTLImpl`と`CComEnumOnSTL`、およびカスタム コピー ポリシー クラスの実装。
 
 ## <a name="see-also"></a>関連項目

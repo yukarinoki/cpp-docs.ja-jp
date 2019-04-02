@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CMFCToolBarFontComboBox [MFC], GetFontDesc
 - CMFCToolBarFontComboBox [MFC], SetFont
 ms.assetid: 25f8e08c-aadd-4cb5-9581-a99d49d444b1
-ms.openlocfilehash: 4ab4eece67406b1c5a52669beafc9bfd8acd32e6
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 89767a3ed6880703c3c754700ea5669c0cc183e5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283723"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779197"
 ---
 # <a name="cmfctoolbarfontcombobox-class"></a>CMFCToolBarFontComboBox クラス
 
@@ -55,8 +55,7 @@ class CMFCToolBarFontComboBox : public CMFCToolBarComboBoxButton
 
 1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。
 
-1. 
-  `CMFCToolBarFontComboBox` オブジェクトを構築します。
+1. `CMFCToolBarFontComboBox` オブジェクトを構築します。
 
 1. AFX_WM_RESETTOOLBAR メッセージを処理するメッセージ ハンドラーで元のボタンをクリックします。 新しいコンボ ボックス ボタンを使用して置き換える[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)します。
 
@@ -143,7 +142,7 @@ TRUETYPE_FONTTYPE
 
 ### <a name="example"></a>例
 
-次の例は、構築する方法を示します、`CMFCToolBarFontComboBox`オブジェクト。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。
+次の例は、構築する方法を示します、`CMFCToolBarFontComboBox`オブジェクト。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_WordPad#7](../../mfc/reference/codesnippet/cpp/cmfctoolbarfontcombobox-class_1.cpp)]
 

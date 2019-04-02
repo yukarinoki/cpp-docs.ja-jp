@@ -54,12 +54,12 @@ helpviewer_keywords:
 - CImage class
 - transparent color
 ms.assetid: 52861e3d-bf7e-481f-a240-90e88f76c490
-ms.openlocfilehash: c954955ad52197316da0952dc6dd415a91782444
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 14a4691e0c1f25a8f9e8b2b652c6e582f51c954a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57739436"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775947"
 ---
 # <a name="cimage-class"></a>CImage クラス
 
@@ -810,7 +810,7 @@ static HRESULT GetImporterFilterString(
 *pszAllFilesDescription*<br/>
 このパラメーターが NULL でない場合、フィルター文字列は、一覧の先頭に 1 つの追加フィルターがあります。 このフィルターの現在の値になります*pszAllFilesDescription*説明の一覧で、その他のエクスポーターでサポートされている任意の拡張機能のファイルを受け取るとします。
 
-例えば:
+例:
 
 ```cpp
 //First filter in the list will be titled "All Image Files", and
@@ -1658,8 +1658,8 @@ BOOL TransparentBlt(CImage* pSrcImage, CImage* pDstImage,
 
 ## <a name="see-also"></a>関連項目
 
-[MMXSwarm サンプル](../../visual-cpp-samples.md)<br/>
-[SimpleImage サンプル](../../visual-cpp-samples.md)<br/>
+[MMXSwarm サンプル](../../overview/visual-cpp-samples.md)<br/>
+[SimpleImage サンプル](../../overview/visual-cpp-samples.md)<br/>
 [デバイスに依存しないビットマップ](/windows/desktop/gdi/device-independent-bitmaps)<br/>
 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibsection)<br/>
 [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)<br/>

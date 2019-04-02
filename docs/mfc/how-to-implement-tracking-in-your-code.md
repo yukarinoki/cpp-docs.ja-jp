@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
-ms.openlocfilehash: af8e1b72bde268a15012515065853daa617936e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0f037480e83b8ca1ba12af56904afe25a33e4d6c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283983"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774465"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>方法: コードでのトラッカーを実装します。
 
@@ -27,7 +27,7 @@ OLE 項目を追跡するには、項目をクリックするか、ドキュメ�
 |網掛け境界線|現在の実行中の項目が|
 |() の陰影パターン オーバーレイ項目|項目のサーバーが開く|
 
-OLE 項目の状態をチェックし、適切なスタイルを設定する手順を使用して簡単にこの初期化を処理することができます。 `SetupTracker` Oclient にある関数の追跡ツールの初期化を示します。 この関数のパラメーターは、トラッカーのアドレス*pTracker*トラッカーに関連付けられているクライアント アイテムへのポインターです*pItem*; と四角形を指すポインター *pTrueRect*. この関数のより完全な例は、MFC OLE サンプルを参照してください。 [OCLIENT](../visual-cpp-samples.md)します。
+OLE 項目の状態をチェックし、適切なスタイルを設定する手順を使用して簡単にこの初期化を処理することができます。 `SetupTracker` Oclient にある関数の追跡ツールの初期化を示します。 この関数のパラメーターは、トラッカーのアドレス*pTracker*トラッカーに関連付けられているクライアント アイテムへのポインターです*pItem*; と四角形を指すポインター *pTrueRect*. この関数のより完全な例は、MFC OLE サンプルを参照してください。 [OCLIENT](../overview/visual-cpp-samples.md)します。
 
 **SetupTracker**のコード例は、1 つの関数を表示します。 関数の行は、関数の機能の説明が混在して。
 
@@ -45,11 +45,11 @@ OLE 項目の状態をチェックし、適切なスタイルを設定する手�
 
 [!code-cpp[NVC_MFCOClient#4](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_4.cpp)]
 
-トラッカー必要があるたびに、この関数を呼び出すことができます。 たとえばからこの関数を呼び出す、`OnDraw`ビュー クラスの関数。 これにより、ビューが再描画されるたびに、トラッカーの外観が更新されます。 完全な例を参照してください、`CMainView::OnDraw`の MFC OLE サンプル関数[OCLIENT](../visual-cpp-samples.md)します。
+トラッカー必要があるたびに、この関数を呼び出すことができます。 たとえばからこの関数を呼び出す、`OnDraw`ビュー クラスの関数。 これにより、ビューが再描画されるたびに、トラッカーの外観が更新されます。 完全な例を参照してください、`CMainView::OnDraw`の MFC OLE サンプル関数[OCLIENT](../overview/visual-cpp-samples.md)します。
 
-アプリケーションでは、サイズ変更、移動、またはヒットが検出されなどの追跡ツールのコードを必要とするイベントが発生します。 これらのアクションでは、通常の試行が選択またはアイテムを移動行わことを示します。 このような場合は、取得が何を決定する必要があります。 サイズ変更ハンドルまたはその一部の間の境界線のサイズ変更ハンドル。 `OnLButtonDown`メッセージ ハンドラーは、項目に関係するマウスの位置をテストすることをお勧めします。 呼び出す`CRectTracker::HitTest`します。 テストが以外の値を返す場合`CRectTracker::hitOutside`、項目がサイズを変更または移動します。 そのためへの呼び出しをする必要があります、`Track`メンバー関数。 参照してください、`CMainView::OnLButtonDown`関数は、MFC OLE サンプルである[OCLIENT](../visual-cpp-samples.md)完全な例です。
+アプリケーションでは、サイズ変更、移動、またはヒットが検出されなどの追跡ツールのコードを必要とするイベントが発生します。 これらのアクションでは、通常の試行が選択またはアイテムを移動行わことを示します。 このような場合は、取得が何を決定する必要があります。 サイズ変更ハンドルまたはその一部の間の境界線のサイズ変更ハンドル。 `OnLButtonDown`メッセージ ハンドラーは、項目に関係するマウスの位置をテストすることをお勧めします。 呼び出す`CRectTracker::HitTest`します。 テストが以外の値を返す場合`CRectTracker::hitOutside`、項目がサイズを変更または移動します。 そのためへの呼び出しをする必要があります、`Track`メンバー関数。 参照してください、`CMainView::OnLButtonDown`関数は、MFC OLE サンプルである[OCLIENT](../overview/visual-cpp-samples.md)完全な例です。
 
-`CRectTracker`クラスには、操作が行わスレッドで、移動、サイズ変更、またはドラッグするかどうかを示すために使用するいくつかの異なるカーソル図形が用意されています。 このイベントを処理するために、マウスの下に現在の項目が選択されているかどうかを確認します。 呼び出しを行う場合は、 `CRectTracker::SetCursor`、または既定のハンドラーを呼び出します。 次の例は、MFC OLE サンプル[OCLIENT](../visual-cpp-samples.md):
+`CRectTracker`クラスには、操作が行わスレッドで、移動、サイズ変更、またはドラッグするかどうかを示すために使用するいくつかの異なるカーソル図形が用意されています。 このイベントを処理するために、マウスの下に現在の項目が選択されているかどうかを確認します。 呼び出しを行う場合は、 `CRectTracker::SetCursor`、または既定のハンドラーを呼び出します。 次の例は、MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md):
 
 [!code-cpp[NVC_MFCOClient#5](../mfc/codesnippet/cpp/how-to-implement-tracking-in-your-code_5.cpp)]
 

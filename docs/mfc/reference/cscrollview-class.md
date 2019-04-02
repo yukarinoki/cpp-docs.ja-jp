@@ -28,12 +28,12 @@ helpviewer_keywords:
 - CScrollView [MFC], SetScaleToFitSize
 - CScrollView [MFC], SetScrollSizes
 ms.assetid: 4ba16dac-1acb-4be0-bb55-5fb695b6948d
-ms.openlocfilehash: ea95de2bceab290f94bb7c0e7bbc94a90048ee13
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d60082092bd42fbe220eee08953ad5fda0ff0a85
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259257"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774154"
 ---
 # <a name="cscrollview-class"></a>CScrollView クラス
 
@@ -82,7 +82,7 @@ Standard から派生したクラスで自分でスクロールを処理でき�
 
 マウス ホイールを自分でメッセージ マップをオーバーライドしてスクロールを処理できる[OnMouseWheel](../../mfc/reference/cwnd-class.md#onmousewheel)と[OnRegisteredMouseWheel](../../mfc/reference/cwnd-class.md#onregisteredmousewheel)メンバー関数。 `CScrollView`、これらのメンバー関数の推奨される動作をサポートする[WM_MOUSEWHEEL](/windows/desktop/inputdev/wm-mousewheel)ホイールの回転メッセージ。
 
-自動スクロールを活用するからビュー クラスを派生`CScrollView`の代わりにから`CView`します。 ビューが初めて作成すると、呼び出し、ドキュメントのサイズに基づいて、スクロール可能なビューのサイズを計算する場合、`SetScrollSizes`メンバー関数は、いずれかのオーバーライドから[:oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)または[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)します。 (ドキュメントのサイズを照会する独自のコードを記述する必要があります。 例については、次を参照してください、 [Scribble サンプル](../../visual-cpp-samples.md)。)。
+自動スクロールを活用するからビュー クラスを派生`CScrollView`の代わりにから`CView`します。 ビューが初めて作成すると、呼び出し、ドキュメントのサイズに基づいて、スクロール可能なビューのサイズを計算する場合、`SetScrollSizes`メンバー関数は、いずれかのオーバーライドから[:oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)または[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)します。 (ドキュメントのサイズを照会する独自のコードを記述する必要があります。 例については、次を参照してください、 [Scribble サンプル](../../overview/visual-cpp-samples.md)。)。
 
 呼び出し、`SetScrollSizes`メンバー関数、ビューのマッピング モードでは、スクロール ビュー、および水平方向および垂直方向のスクロール量の合計サイズを設定します。 すべてのサイズでは、論理単位です。 ビューの論理サイズは通常、ドキュメントに格納されたデータから計算されます。 ただし、場合によっては、固定サイズを指定したい場合があります。 両方の方法の例については、次を参照してください。 [CScrollView::SetScrollSizes](#setscrollsizes)します。
 
@@ -376,7 +376,7 @@ void SetScrollSizes(
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル DIBLOOK](../../visual-cpp-samples.md)<br/>
+[MFC サンプル DIBLOOK](../../overview/visual-cpp-samples.md)<br/>
 [CView クラス](../../mfc/reference/cview-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CView クラス](../../mfc/reference/cview-class.md)<br/>

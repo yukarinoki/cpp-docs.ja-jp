@@ -7,18 +7,18 @@ helpviewer_keywords:
 - TN014
 - custom controls [MFC]
 ms.assetid: 1917a498-f643-457c-b570-9a0af7dbf7bb
-ms.openlocfilehash: d529b235daa1c6aa889b69e8d6bb2f02a58436bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c68b60f065e69213b3ab32c887bc7af129a70fef
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297490"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772125"
 ---
 # <a name="tn014-custom-controls"></a>TN014:カスタム コントロール
 
 ここでは、カスタムおよび自己描画コントロール MFC サポートについて説明します。 動的なサブクラス化について説明しの間のリレーションシップについて説明します[CWnd](../mfc/reference/cwnd-class.md)オブジェクトと`HWND`秒。
 
-CTRLTEST MFC サンプル アプリケーションは、多くのカスタム コントロールを使用する方法を示しています。 MFC 標準サンプルのソース コードを参照してください。 [CTRLTEST](../visual-cpp-samples.md)とオンライン ヘルプ。
+CTRLTEST MFC サンプル アプリケーションは、多くのカスタム コントロールを使用する方法を示しています。 MFC 標準サンプルのソース コードを参照してください。 [CTRLTEST](../overview/visual-cpp-samples.md)とオンライン ヘルプ。
 
 ## <a name="owner-draw-controlsmenus"></a>オーナー描画コントロールまたはメニュー
 
@@ -104,7 +104,7 @@ OWNERDRAWVARIABLE スタイルに切り替え、NOINTEGRALHEIGHT スタイル �
 
 ## <a name="examples-of-self-drawing-controls-and-menus"></a>自己コントロールやメニューを描画の例
 
-MFC 標準サンプル[CTRLTEST](../visual-cpp-samples.md)自己描画メニューと自己描画リスト ボックスのサンプルを提供します。
+MFC 標準サンプル[CTRLTEST](../overview/visual-cpp-samples.md)自己描画メニューと自己描画リスト ボックスのサンプルを提供します。
 
 自己描画ボタンの最も一般的な例は、ビットマップ ボタンです。 ビットマップのボタンは、各状態用に 1 つ、2 つ、または 3 つのビットマップ イメージを表示するボタンです。 この例は MFC クラスで提供される[CBitmapButton](../mfc/reference/cbitmapbutton-class.md)します。
 
@@ -130,7 +130,7 @@ MFC 標準サンプル[CTRLTEST](../visual-cpp-samples.md)自己描画メニュ�
 
 2 つのルーチンのアタッチ、`CWnd`を既存のオブジェクト`HWND`します。 `SubclassWindow` `HWND`直接します。 `SubclassDlgItem` ヘルパー関数は、コントロールの ID と親ウィンドウです。 `SubclassDlgItem` ダイアログ テンプレートから作成されたダイアログ コントロールに C++ オブジェクトをアタッチされています。
 
-参照してください、 [CTRLTEST](../visual-cpp-samples.md)を使用する場合の例をいくつかの例を`SubclassWindow`と`SubclassDlgItem`します。
+参照してください、 [CTRLTEST](../overview/visual-cpp-samples.md)を使用する場合の例をいくつかの例を`SubclassWindow`と`SubclassDlgItem`します。
 
 ## <a name="see-also"></a>関連項目
 

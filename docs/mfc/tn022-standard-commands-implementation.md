@@ -59,12 +59,12 @@ helpviewer_keywords:
 - ID_FILE_NEW command [MFC]
 - ID_INDICATOR_NUM command
 ms.assetid: a7883b46-23f7-4870-ac3a-804aed9258b5
-ms.openlocfilehash: 4c066521ba2b5be9ac24a8abaece42e57b8ad85f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 8d568760cc75a4c1f2ddb6dd88108cc830783194
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279362"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775832"
 ---
 # <a name="tn022-standard-commands-implementation"></a>TN022:標準コマンドの実装
 
@@ -221,7 +221,7 @@ MFC の標準的なコマンドは、範囲 0 xefff に 0xE000 に収まりま�
 
    現在このコマンドの標準の実装ではありません。 ごとにこれを実装する必要があります`CView`-クラスを派生します。
 
-   このコマンドを実装する場合は、このコマンド ID を使用してお勧めします。 MFC のチュートリアルのサンプルを参照して[SCRIBBLE](../visual-cpp-samples.md)実装例についてはします。
+   このコマンドを実装する場合は、このコマンド ID を使用してお勧めします。 MFC のチュートリアルのサンプルを参照して[SCRIBBLE](../overview/visual-cpp-samples.md)実装例についてはします。
 
 - ID_EDIT_COPY は、現在の選択範囲をクリップボードにコピーします。
 
@@ -438,7 +438,7 @@ MFC の標準的なコマンドは、範囲 0 xefff に 0xE000 に収まりま�
 
    すべての OLE クライアント アプリケーションでは、このコマンドを実装する必要があります。 AppWizard、OLE のオプションでは、スケルトンの実装を作成`OnInsertObject`ビュー クラスを完了する必要があります。
 
-   MFC OLE サンプルを参照して[OCLIENT](../visual-cpp-samples.md)このコマンドの完全な実装の例です。
+   MFC OLE サンプルを参照して[OCLIENT](../overview/visual-cpp-samples.md)このコマンドの完全な実装の例です。
 
 - ID_OLE_EDIT_LINKS 編集 OLE リンク
 

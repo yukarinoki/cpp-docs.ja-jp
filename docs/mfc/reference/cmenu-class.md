@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CMenu [MFC], TrackPopupMenuEx
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
-ms.openlocfilehash: bdc5f2ebf20949f63b3892ee8e8c6eedf05e2838
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293863"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770851"
 ---
 # <a name="cmenu-class"></a>CMenu クラス
 
@@ -561,7 +561,7 @@ virtual void DrawItem(LPDRAWITEMSTRUCT lpDrawItemStruct);
 
 ### <a name="example"></a>例
 
-次のコードは、MFC [CTRLTEST](../../visual-cpp-samples.md)サンプル。
+次のコードは、MFC [CTRLTEST](../../overview/visual-cpp-samples.md)サンプル。
 
 [!code-cpp[NVC_MFCWindowing#24](../../mfc/reference/codesnippet/cpp/cmenu-class_4.cpp)]
 
@@ -1094,7 +1094,7 @@ virtual void MeasureItem(LPMEASUREITEMSTRUCT lpMeasureItemStruct);
 
 ### <a name="example"></a>例
 
-次のコードは、MFC [CTRLTEST](../../visual-cpp-samples.md)サンプル。
+次のコードは、MFC [CTRLTEST](../../overview/visual-cpp-samples.md)サンプル。
 
 [!code-cpp[NVC_MFCWindowing#31](../../mfc/reference/codesnippet/cpp/cmenu-class_11.cpp)]
 
@@ -1484,8 +1484,8 @@ TPM_RETURNCMD を指定しない場合、 *fuFlags*パラメーター、戻り�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CTRLTEST](../../visual-cpp-samples.md)<br/>
-[MFC サンプル DYNAMENU](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル DYNAMENU](../../overview/visual-cpp-samples.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)

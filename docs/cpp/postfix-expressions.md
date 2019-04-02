@@ -6,12 +6,12 @@ helpviewer_keywords:
 - postfix expressions
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
-ms.openlocfilehash: 6230cc161d7b7fc011d4f3082cc7b9452e136280
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332440"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779262"
 ---
 # <a name="postfix-expressions"></a>後置式
 
@@ -23,7 +23,7 @@ ms.locfileid: "51332440"
 |-------------------|-----------------------|
 |[添字演算子](../cpp/subscript-operator.md)|**[ ]**|
 |[関数呼び出し演算子](../cpp/function-call-operator-parens.md)|**( )**|
-|[明示的な型変換演算子](../cpp/explicit-type-conversion-operator-parens.md)|*型名* **)**|
+|[明示的な型変換演算子](../cpp/explicit-type-conversion-operator-parens.md)|*type-name* **( )**|
 |[メンバー アクセス演算子](../cpp/member-access-operators-dot-and.md)|**.** または **->**|
 |[後置インクリメント演算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**++**|
 |[後置デクリメント演算子](../cpp/postfix-increment-and-decrement-operators-increment-and-decrement.md)|**--**|
@@ -65,7 +65,7 @@ simple-type-name ( expression-list )
 
 - すべての実際の引数 (呼び出し元で指定されている) が評価されます。 これらの引数が評価される順序は決まっていませんが、すべての引数が評価され、関数に入る前にすべての副作用が完了します。
 
-- それぞれの仮引数は、式リストの対応する実引数で初期化されます (仮引数は、関数ヘッダーで宣言され、関数の本体で使用される引数です)。変換は、初期化の場合と同じように行われます。標準変換とユーザー定義変換は、実引数を正しい型に変換する際に行われます。 実行された初期化を次のコードによって概念的に説明します。
+- それぞれの仮引数は、式リストの対応する実引数で初期化されます  (仮引数は、関数ヘッダーで宣言され、関数の本体で使用される引数です)。変換は、初期化の場合と同じように行われます。標準変換とユーザー定義変換は、実引数を正しい型に変換する際に行われます。 実行された初期化を次のコードによって概念的に説明します。
 
     ```cpp
     void Func( int i ); // Function prototype
@@ -149,7 +149,7 @@ double& func2( double& d, const char *c ) {
 
 省略記号を使用する場合、省略記号は引数リストの最後に宣言する必要があります。 可変個の引数を渡す方法についての詳細については、の説明を参照してください。 [va_arg、va_start、および va_list](../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)で、*ランタイム ライブラリ リファレンス*します。
 
-CLR プログラミングの既定の引数については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md).
+CLR プログラミングの既定の引数については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
 既定の引数では、関数呼び出しで引数を指定しない場合に、自動的に使用される引数の値を指定できます。 次のコード片では、既定の引数がどのように機能するかを示します。 既定の引数を指定する方法の制限の詳細については、次を参照してください。[既定の引数](../cpp/default-arguments.md)します。
 

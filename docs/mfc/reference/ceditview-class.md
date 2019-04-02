@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CEditView [MFC], OnTextNotFound
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
-ms.openlocfilehash: a2ce38dcd8879378f7d0e4ea3f074e461c51db75
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269852"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781238"
 ---
 # <a name="ceditview-class"></a>CEditView クラス
 
@@ -492,7 +492,7 @@ void UnlockBuffer() const;
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル SUPERPAD](../../visual-cpp-samples.md)<br/>
+[MFC サンプル SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView クラス](../../mfc/reference/cctrlview-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CEdit クラス](../../mfc/reference/cedit-class.md)<br/>

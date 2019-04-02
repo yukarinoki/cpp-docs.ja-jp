@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - auto keyword [C++]
 ms.assetid: e9d495d7-601c-4547-b897-998389a311f4
-ms.openlocfilehash: f4d17069ed4e06a85b80d2027433ff87be6d1521
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 3d77a17d490f8d7680f095367c309ce0e4f366b7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518568"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776337"
 ---
 # <a name="auto-c"></a>自動 (C++)
 
@@ -36,11 +36,11 @@ auto declarator initializer;
 
 - **保全性:** 式の型が変更された場合、関数の戻り値の型が変更されたときにこれが含まれています — 問題なく動作します。
 
-- **パフォーマンス:** があるない変換が保証されます。
+- **パフォーマンス:** ある変換が保証されません。
 
 - **使いやすさ:** 型名のスペルの難しさや入力ミスを気にする必要はありません。
 
-- **効率:** より効率的なコーディングができます。
+- **効率性:** コーディングをより効率的なことはできます。
 
 変換の場合、たくないを使用する**自動**:
 
@@ -52,7 +52,7 @@ auto declarator initializer;
 
 初期化式は、代入 (等号構文)、直接の初期化 (関数形式の構文)、[演算子 new](new-operator-cpp.md)式、または初期化式を指定できます、 *範囲の宣言の*でパラメーターを[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)ステートメント。 詳細については、次を参照してください。[初期化子](../cpp/initializers.md)およびこのドキュメントの後半のコード例にします。
 
-**自動**キーワードは、型のプレース ホルダーが自体がない型。 そのため、**自動**キーワードを演算子やキャストでなど、使用することはできません[sizeof](../cpp/sizeof-operator.md)と[typeid](../windows/typeid-cpp-component-extensions.md)します。
+**自動**キーワードは、型のプレース ホルダーが自体がない型。 そのため、**自動**キーワードを演算子やキャストでなど、使用することはできません[sizeof](../cpp/sizeof-operator.md)と (c++/cli CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)します。
 
 ## <a name="usefulness"></a>実用性
 
@@ -133,7 +133,7 @@ int main()
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|シンボルは初期化前に使用することはできません。 実際には、変数はその変数自体を初期化するために使用できないことを意味します。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|宣言された型にキャストすることはできません、**自動**キーワード。|
 |[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|宣言されている宣言子リスト内のすべてのシンボル、**自動**キーワードは、同じ型に解決する必要があります。 詳細については、次を参照してください。[宣言と定義](declarations-and-definitions-cpp.md)します。|
-|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)と[typeid](../windows/typeid-cpp-component-extensions.md)演算子で宣言されたシンボルに適用することはできません、**自動**キーワード。|
+|[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)と[typeid](../extensions/typeid-cpp-component-extensions.md)演算子で宣言されたシンボルに適用することはできません、**自動**キーワード。|
 
 ## <a name="examples"></a>使用例
 
@@ -225,7 +225,7 @@ int main()
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [/Zc:auto (変数の型の推測)](../build/reference/zc-auto-deduce-variable-type.md)<br/>
 [sizeof 演算子](../cpp/sizeof-operator.md)<br/>
-[typeid](../windows/typeid-cpp-component-extensions.md)<br/>
+[typeid](../extensions/typeid-cpp-component-extensions.md)<br/>
 [operator new](new-operator-cpp.md)<br/>
 [宣言と定義](declarations-and-definitions-cpp.md)<br/>
 [ラムダ式の例](../cpp/examples-of-lambda-expressions.md)<br/>

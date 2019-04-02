@@ -311,12 +311,12 @@ helpviewer_keywords:
 - CMFCToolBar [MFC], m_bDontScaleImages
 - CMFCToolBar [MFC], m_dblLargeImageRatio
 ms.assetid: e7679c01-fb94-44c0-98c6-3af955292fb5
-ms.openlocfilehash: 1f92afa4f40a5a37f32e1bc86418056c8591625f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 523e89859a6726bdff1dd27975077263abe481c4
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283138"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775635"
 ---
 # <a name="cmfctoolbar-class"></a>CMFCToolBar クラス
 
@@ -461,7 +461,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 |[CMFCToolBar::ResetAllImages](#resetallimages)|アプリケーション内のすべてのツール バー イメージのコレクションをクリアします。|
 |[CMFCToolBar::RestoreOriginalState](#restoreoriginalstate)|ツール バーを元の状態に戻します。|
 |[CMFCToolBar::SaveState](#savestate)|Windows レジストリで、ツールバーの状態情報を保存します。 (上書き[CPane::SaveState](../../mfc/reference/cpane-class.md#savestate))。|
-|`CMFCToolBar::Serialize`|(`CBasePane::Serialize` をオーバーライドします)。|
+|`CMFCToolBar::Serialize`|( `CBasePane::Serialize`をオーバーライドします)。|
 |[CMFCToolBar::SetBasicCommands](#setbasiccommands)|ユーザーがメニューを開いたときに常に表示されるコマンドの一覧を設定します。|
 |[CMFCToolBar::SetButtonInfo](#setbuttoninfo)|コマンド ID、スタイル、およびツール バー ボタンのイメージ ID を設定します。|
 |[CMFCToolBar::SetButtonStyle](#setbuttonstyle)|指定したインデックス位置にあるツールバーのボタンのスタイルを設定します。|
@@ -525,7 +525,7 @@ class CMFCToolBar : public CMFCBaseToolBar
 
 ## <a name="example"></a>例
 
-`CMFCToolBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、ツール バーのウィンドウのラベルのテキストを設定、罫線を設定、ウィンドウのスタイルを設定および有効にする方法を示しています、**の追加と削除 ボタン**ツールバーの右端に表示されるボタン。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCToolBar` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、ツール バーのウィンドウのラベルのテキストを設定、罫線を設定、ウィンドウのスタイルを設定および有効にする方法を示しています、**の追加と削除 ボタン**ツールバーの右端に表示されるボタン。 このコード スニペットの一部、 [IE デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#8](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_2.cpp)]
@@ -1031,7 +1031,7 @@ virtual BOOL CreateEx(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`CreateEx`のメソッド、`CMFCToolBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`CreateEx`のメソッド、`CMFCToolBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -1799,7 +1799,7 @@ virtual void GetItemRect(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`GetItemRect`のメソッド、`CMFCToolBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`GetItemRect`のメソッド、`CMFCToolBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#9](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_4.cpp)]
@@ -2737,7 +2737,7 @@ virtual BOOL LoadToolBar(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`LoadToolBar`メソッドで、`CMFCToolBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`LoadToolBar`メソッドで、`CMFCToolBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#7](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_3.cpp)]
@@ -3079,7 +3079,7 @@ int ReplaceButton(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`ReplaceButton`メソッドで、`CMFCToolBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`ReplaceButton`メソッドで、`CMFCToolBar`クラス。 このコード スニペットの一部、 [IE デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#6](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_1.h)]
 [!code-cpp[NVC_MFC_IEDemo#10](../../mfc/reference/codesnippet/cpp/cmfctoolbar-class_5.cpp)]

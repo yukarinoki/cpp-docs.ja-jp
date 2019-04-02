@@ -72,12 +72,12 @@ helpviewer_keywords:
 - CMFCStatusBar [MFC], SetTipText
 - CMFCStatusBar [MFC], OnDrawPane
 ms.assetid: f2960d1d-f4ed-41e8-bd99-0382b2f8d88e
-ms.openlocfilehash: 94876dcf6549842a5fedbd96a93ef2cc760225ce
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 87f75769e2f400a7721a8c9089d6c5596c31a4e3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326752"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775960"
 ---
 # <a name="cmfcstatusbar-class"></a>CMFCStatusBar クラス
 
@@ -138,26 +138,26 @@ class CMFCStatusBar : public CPane
 
 ## <a name="remarks"></a>Remarks
 
-次の図は、図から、ステータス バーの[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)アプリケーション。
+次の図は、図から、ステータス バーの[ステータス バーのデモ サンプル](../../overview/visual-cpp-samples.md)アプリケーション。
 
 ![CMFCStatusBar の例](../../mfc/reference/media/cmfcstatusbar.png "CMFCStatusBar の例")
 
 ## <a name="example"></a>例
 
-次の例では、アプリケーションがさまざまなメソッドを呼び出すに使用するローカル変数、`CMFCStatusBar`クラス。 これらの変数は、StatusBarDemoView.h で宣言されます。 MainFrm.h でメイン フレームが宣言されているドキュメントが StatusBarDemoDoc.h で宣言されている、StatusBarDemoView.h でビューが宣言されています。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、アプリケーションがさまざまなメソッドを呼び出すに使用するローカル変数、`CMFCStatusBar`クラス。 これらの変数は、StatusBarDemoView.h で宣言されます。 MainFrm.h でメイン フレームが宣言されているドキュメントが StatusBarDemoDoc.h で宣言されている、StatusBarDemoView.h でビューが宣言されています。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#9](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_1.h)]
 
 ## <a name="example"></a>例
 
-次の例への参照を取得する方法を示します`CMFCStatusBar`オブジェクトを導入することで、 `GetStatusBar` MainFrm.h しからこのメソッドを呼び出すメソッド、 `GetStatusBar` StatusBarDemoView.h メソッド。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)します。
+次の例への参照を取得する方法を示します`CMFCStatusBar`オブジェクトを導入することで、 `GetStatusBar` MainFrm.h しからこのメソッドを呼び出すメソッド、 `GetStatusBar` StatusBarDemoView.h メソッド。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#7](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_2.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#8](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_3.h)]
 
 ## <a name="example"></a>例
 
-次の例でさまざまなメソッドを呼び出す方法、 `CMFCStatusBar` StatusBarDemoView.cpp 内のクラス。 定数は、MainFrm.h で宣言されます。 例では、アイコンの設定、ステータス バー ペインのツールヒントのテキストを設定する、指定したウィンドウに進行状況バーを表示、アニメーションを指定したウィンドウに割り当て、テキストと、ステータス バー ペインの幅を設定し、処理中の現在の進行状況インジケーターを設定する方法を示しています。ステータス バー ペインの ess バー。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)します。
+次の例でさまざまなメソッドを呼び出す方法、 `CMFCStatusBar` StatusBarDemoView.cpp 内のクラス。 定数は、MainFrm.h で宣言されます。 例では、アイコンの設定、ステータス バー ペインのツールヒントのテキストを設定する、指定したウィンドウに進行状況バーを表示、アニメーションを指定したウィンドウに割り当て、テキストと、ステータス バー ペインの幅を設定し、処理中の現在の進行状況インジケーターを設定する方法を示しています。ステータス バー ペインの ess バー。 このコード スニペットの一部、[ステータス バーのデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#6](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_4.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#1](../../mfc/reference/codesnippet/cpp/cmfcstatusbar-class_5.cpp)]
