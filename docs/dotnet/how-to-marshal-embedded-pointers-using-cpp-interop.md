@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pointers [C++], marshaling
 - data marshaling [C++], embedded pointers
 ms.assetid: 05fb8858-97f2-47aa-86b2-2c0ad713bdb2
-ms.openlocfilehash: 89194dabb4b124aa7cbd4d1d34a74de491fba66f
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: c6d622060aaf700b6ea1a3bfe797ab3190eee797
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57738477"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780237"
 ---
 # <a name="how-to-marshal-embedded-pointers-using-c-interop"></a>方法: C++ Interop を使用して埋め込みポインターをマーシャ リングします。
 
@@ -23,7 +23,7 @@ ms.locfileid: "57738477"
 
 ## <a name="example"></a>例
 
-次の例では、マネージ関数からポインターを含む構造体を受け取るアンマネージ関数を呼び出す方法を示します。 マネージ関数は、構造体のインスタンスを作成し、新しいキーワードを使用して埋め込みポインターを初期化します (の代わりに、 [ref new、gcnew](../windows/ref-new-gcnew-cpp-component-extensions.md)キーワード)。 ネイティブ ヒープにメモリを割り当ててこのため、ガベージ コレクションを抑制する配列を固定する必要はありません。 ただし、メモリ リークを回避するために、メモリを明示的に削除する必要があります。
+次の例では、マネージ関数からポインターを含む構造体を受け取るアンマネージ関数を呼び出す方法を示します。 マネージ関数は、構造体のインスタンスを作成し、新しいキーワードを使用して埋め込みポインターを初期化します (の代わりに、 [ref new、gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)キーワード)。 ネイティブ ヒープにメモリを割り当ててこのため、ガベージ コレクションを抑制する配列を固定する必要はありません。 ただし、メモリ リークを回避するために、メモリを明示的に削除する必要があります。
 
 ```
 // marshal_embedded_pointer.cpp

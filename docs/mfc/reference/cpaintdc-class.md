@@ -12,12 +12,12 @@ helpviewer_keywords:
 - CPaintDC [MFC], m_ps
 - CPaintDC [MFC], m_hWnd
 ms.assetid: 7e245baa-bf9b-403e-a637-7218adf28fab
-ms.openlocfilehash: 5dbe08eae911433c256d3f8dd1f60dea2db9478c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: df1db8a3e65d35f247df7d070119c66b02208815
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274428"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772060"
 ---
 # <a name="cpaintdc-class"></a>CPaintDC クラス
 
@@ -128,6 +128,6 @@ PAINTSTRUCT m_ps;
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル MDI](../../visual-cpp-samples.md)<br/>
+[MFC サンプル MDI](../../overview/visual-cpp-samples.md)<br/>
 [CDC クラス](../../mfc/reference/cdc-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)

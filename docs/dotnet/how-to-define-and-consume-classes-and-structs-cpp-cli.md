@@ -5,12 +5,12 @@ helpviewer_keywords:
 - structs [C++]
 - classes [C++], instantiating
 ms.assetid: 1c03cb0d-1459-4b5e-af65-97d6b3094fd7
-ms.openlocfilehash: 2c43234ca05c661d8f3d920b1129256a7550a5e2
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 090259a4ad6b46eccf66dca6c99b4eb532b7ae5c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751831"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774920"
 ---
 # <a name="how-to-define-and-consume-classes-and-structs-ccli"></a>方法: クラスと構造体定義および使用 (C +/cli CLI)
 
@@ -97,7 +97,7 @@ int main() {
 
 *暗黙的な抽象クラス*インスタンス化することはできません。 クラスの基本型がインターフェイスで、そのクラスによって一部のインターフェイスのメンバー関数が実装されていない場合、そのクラスは暗黙的な抽象クラスです。
 
-インターフェイスから派生したクラスからオブジェクトを構築できない場合は、それが暗黙的な抽象クラスであることが原因の可能性があります。 抽象クラスの詳細については、次を参照してください。[抽象](../windows/abstract-cpp-component-extensions.md)します。
+インターフェイスから派生したクラスからオブジェクトを構築できない場合は、それが暗黙的な抽象クラスであることが原因の可能性があります。 抽象クラスの詳細については、次を参照してください。[抽象](../extensions/abstract-cpp-component-extensions.md)します。
 
 次のコード例は、`MyClass` が実装されていないため、`MyClass::func2` クラスをインスタンス化できないことを示しています。 例をコンパイルできるようにするには、`MyClass::func2` のコメントを解除します。
 
@@ -229,7 +229,7 @@ in Public_Class
 |public|アセンブリの内部と外部の両方でメンバーにアクセスできます。  参照してください[パブリック](../cpp/public-cpp.md)詳細についてはします。|
 |private|アセンブリの内部と外部の両方でメンバーにアクセスできません。  参照してください[プライベート](../cpp/private-cpp.md)詳細についてはします。|
 |protected|アセンブリの内部と外部の両方で、派生型のメンバーにのみアクセスできます。  参照してください[保護](../cpp/protected-cpp.md)詳細についてはします。|
-|internal|メンバーは、アセンブリ内でパブリック、プライベート アセンブリの外側です。  `internal` は状況依存のキーワードです。  詳細については、次を参照してください。[状況依存のキーワード](../windows/context-sensitive-keywords-cpp-component-extensions.md)します。|
+|internal|メンバーは、アセンブリ内でパブリック、プライベート アセンブリの外側です。  `internal` は状況依存のキーワードです。  詳細については、次を参照してください。[状況依存のキーワード](../extensions/context-sensitive-keywords-cpp-component-extensions.md)します。|
 |パブリックの保護の - または - は保護されたパブリック|メンバーはアセンブリ内ではパブリックですが、アセンブリ外では保護されています。|
 |秘密の保護の - または - は保護されたプライベート|メンバーはアセンブリ内では保護されていますが、アセンブリ外ではプライベートです。|
 
@@ -495,14 +495,13 @@ in static constructor
 
 Visual C++ を使用して型を定義する場合、参照型の `this` ポインターは "ハンドル" 型です。 値型の `this` ポインターは "内部ポインター" 型です。
 
-
-  `this` ポインターのセマンティクスが異なることで、既定のインデクサーが呼び出されるときに予期しない動作が発生する場合があります。 次の例は、参照型と値型の両方で既定のインデクサーに適切にアクセスする方法を示しています。
+`this` ポインターのセマンティクスが異なることで、既定のインデクサーが呼び出されるときに予期しない動作が発生する場合があります。 次の例は、参照型と値型の両方で既定のインデクサーに適切にアクセスする方法を示しています。
 
 詳細については、次のトピックを参照してください。
 
-- [オブジェクト演算子 (^) へのハンドルします。](../windows/handle-to-object-operator-hat-cpp-component-extensions.md)
+- [オブジェクト演算子 (^) へのハンドルします。](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)
 
-- [interior_ptr (C++/CLI)](../windows/interior-ptr-cpp-cli.md)
+- [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)
 
 ```cpp
 // compile with: /clr
@@ -735,8 +734,7 @@ Visual C++ マネージド クラスのデストラクターの動作は、C++ �
 
 CLR ガベージ コレクターは、不要になった未使用マネージド オブジェクトを削除し、そのメモリを解放します。 ただし、型によって使用されているリソースの解放方法を、ガベージ コレクターが把握していないことがあります。 これらのリソースは、アンマネージ リソース (ネイティブ ファイル ハンドルなど) と呼ばれます。 アンマネージ リソースはすべて、ファイナライザーで解放することをお勧めします。 ガベージ コレクターでは、マネージド リソースが非確定的に解放されるため、ファイナライザーでマネージド リソースを参照するのは安全ではありません。ガベージ コレクターは、そのマネージド リソースを既にクリーンアップしている可能性があるためです。
 
-Visual C++ ファイナライザーは、<xref:System.Object.Finalize%2A> メソッドと同じではありません  (CLR ドキュメントでは、ファイナライザーと <xref:System.Object.Finalize%2A> メソッドが同じ意味で使用されます)。 
-  <xref:System.Object.Finalize%2A> メソッドはガベージ コレクターによって呼び出され、これにより、クラス継承チェーンの各ファイナライザーが開始されます。 Visual C++ デストラクターとは異なり、派生クラスのファイナライザーの呼び出しにより、コンパイラがすべての基底クラスのファイナライザーを開始することはありません。
+Visual C++ ファイナライザーは、<xref:System.Object.Finalize%2A> メソッドと同じではありません  (CLR ドキュメントでは、ファイナライザーと <xref:System.Object.Finalize%2A> メソッドが同じ意味で使用されます)。 <xref:System.Object.Finalize%2A> メソッドはガベージ コレクターによって呼び出され、これにより、クラス継承チェーンの各ファイナライザーが開始されます。 Visual C++ デストラクターとは異なり、派生クラスのファイナライザーの呼び出しにより、コンパイラがすべての基底クラスのファイナライザーを開始することはありません。
 
 Visual C++ コンパイラではリソースの確定的な解放がサポートされるため、<xref:System.IDisposable.Dispose%2A> メソッドまたは <xref:System.Object.Finalize%2A> メソッドは実装しようとしないでください。 ただし、これらのメソッドに慣れている方を対象に、ここでは、Visual C++ ファイナライザーとそのファイナライザーを呼び出すデストラクターが、どのように <xref:System.IDisposable.Dispose%2A> パターンに割り当てられるかを示します。
 
@@ -799,14 +797,13 @@ Visual C で記述されコンパイルを使用しているコードを **/clr*
 
 - オブジェクトが、デストラクターが実行されているオブジェクトのメンバーである。
 
-- 呼び出す、[削除](../cpp/delete-operator-cpp.md)ハンドル演算子 ([オブジェクト演算子 (^) へのハンドル](../windows/handle-to-object-operator-hat-cpp-component-extensions.md))。
+- 呼び出す、[削除](../cpp/delete-operator-cpp.md)ハンドル演算子 ([オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md))。
 
 - 明示的にデストラクターを呼び出す。
 
 クライアントによって使用されている型が他の言語で記述された場合、デストラクターは次のように呼び出されます。
 
-- 
-  <xref:System.IDisposable.Dispose%2A> への呼び出しで。
+- <xref:System.IDisposable.Dispose%2A> への呼び出しで。
 
 - 型の `Dispose(void)` への呼び出しで。
 
@@ -835,8 +832,7 @@ int main() {
 
 型にファイナライザーがある場合は、`Finalize(void)` をオーバーライドする <xref:System.Object.Finalize%2A> メソッドがコンパイラによって生成されます。
 
-型にデストラクターまたはファイナライザーのいずれかがある場合は、デザイン パターンに従って `Dispose(bool)` メソッドが生成されます  (詳しくは、次を参照してください。 [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern))。 
-  `Dispose(bool)` を Visual C++ で明示的に作成したり呼び出したりすることはできません。
+型にデストラクターまたはファイナライザーのいずれかがある場合は、デザイン パターンに従って `Dispose(bool)` メソッドが生成されます  (詳しくは、次を参照してください。 [Dispose パターン](/dotnet/standard/design-guidelines/dispose-pattern))。 `Dispose(bool)` を Visual C++ で明示的に作成したり呼び出したりすることはできません。
 
 デザイン パターンに準拠する基底クラスが型にある場合、すべての基底クラスのデストラクターは、派生クラスのデストラクターが呼び出されるときに呼び出されます  (型が Visual C++ で記述されている場合は、このパターンが型で実装されることがコンパイラによって保証されます)。つまり、C++ 標準で指定されているように、参照クラスのデストラクターが基底クラスとメンバーに連結され、最初に、クラスのデストラクターが実行されます。次に、メンバーのデストラクターが、そのデストラクターが構築された順とは逆の順序で実行され、最後に、基底クラスのデストラクターが、そのデストラクターが構築された順とは逆の順序で実行されます。
 
@@ -848,7 +844,7 @@ int main() {
 
 ファイナライザーによってマネージド型のネイティブ ポインターが削除された場合は、ネイティブ ポインターへの参照、またはネイティブ ポインターを介した参照の収集が途中で終了していないことを確認する必要があります。<xref:System.GC.KeepAlive%2A> を使用する代わりに、マネージド型でデストラクターを呼び出してください。
 
-コンパイル時に、型にファイナライザーまたはデストラクターがあるかどうかを検出できます。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../windows/compiler-support-for-type-traits-cpp-component-extensions.md)します。
+コンパイル時に、型にファイナライザーまたはデストラクターがあるかどうかを検出できます。 詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)します。
 
 次の例は 2 つの型を示しています。1 つにはアンマネージド リソースが、もう 1 つには確定的に解放されたマネージド リソースが含まれます。
 
@@ -918,5 +914,5 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)<br/>
-[クラスと構造体](../windows/classes-and-structs-cpp-component-extensions.md)
+[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)<br/>
+[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)

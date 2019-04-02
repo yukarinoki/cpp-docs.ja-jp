@@ -26,12 +26,12 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], PrintKeyMap
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
-ms.openlocfilehash: 94c6968d2f534ed0b6d247420e67910ecf906b05
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 65aa5ab0f24999ee23a97f383577b69584825502
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294604"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774790"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog クラス
 
@@ -116,7 +116,7 @@ CMFCKeyMapDialog(
 
 ### <a name="example"></a>例
 
-次の例のオブジェクトを構築する方法、`CMFCKeyMapDialog`クラス。 この例は、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例のオブジェクトを構築する方法、`CMFCKeyMapDialog`クラス。 この例は、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#21](../../mfc/codesnippet/cpp/cmfckeymapdialog-class_1.cpp)]
 

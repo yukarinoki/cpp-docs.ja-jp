@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCDesktopAlertWnd [MFC], SetSmallCaption
 - CMFCDesktopAlertWnd [MFC], SetTransparency
 ms.assetid: 73a2dd7b-ea84-4ae2-9830-7cf6e8dd2425
-ms.openlocfilehash: 6b7d72b048d9f44233f96a3af859315ea20e9747
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3ff74f5025d888077b51f8191f043237597dfdbe
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57291640"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776974"
 ---
 # <a name="cmfcdesktopalertwnd-class"></a>CMFCDesktopAlertWnd Class
 
@@ -100,8 +100,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 カスタム ダイアログ ボックスをポップアップ ウィンドウに表示するには、次の手順に従います。
 
-1. 
-  `CMFCDesktopAlertDialog` の派生クラスを作成します。
+1. `CMFCDesktopAlertDialog` の派生クラスを作成します。
 
 1. リソースに子ダイアログ ボックスのテンプレートを作成します。
 
@@ -121,7 +120,7 @@ class CMFCDesktopAlertWnd : public CWnd
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法を示しています、`CMFCDesktopAlertWnd`を構成するクラス、`CMFCDesktopAlertWnd`オブジェクト。 この例では、アニメーションの種類の設定、ポップアップ ウィンドウの透明度を設定、通知ウィンドウが小さいキャプションを表示することを指定、および通知ウィンドウを自動的に終了する前に経過した時間を設定する方法を示します。 例では、作成し、デスクトップの通知ウィンドウを初期化する方法も示します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、さまざまなメソッドを使用する方法を示しています、`CMFCDesktopAlertWnd`を構成するクラス、`CMFCDesktopAlertWnd`オブジェクト。 この例では、アニメーションの種類の設定、ポップアップ ウィンドウの透明度を設定、通知ウィンドウが小さいキャプションを表示することを指定、および通知ウィンドウを自動的に終了する前に経過した時間を設定する方法を示します。 例では、作成し、デスクトップの通知ウィンドウを初期化する方法も示します。 このコード スニペットの一部、[デスクトップ アラート デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_DesktopAlertDemo#1](../../mfc/reference/codesnippet/cpp/cmfcdesktopalertwnd-class_1.cpp)]
 

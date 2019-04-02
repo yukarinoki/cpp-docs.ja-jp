@@ -9,12 +9,12 @@ helpviewer_keywords:
 - zooming and in-place activation
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
-ms.openlocfilehash: e2f6c6acfefaae877790fd2cc0926bc2474c79b8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283762"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775284"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040:MFC/OLE 埋め込み先サイズ変更とズーム
 
@@ -40,7 +40,7 @@ ms.locfileid: "57283762"
 
 現在のズームの倍率を呼び出すことによって決まりますできます`COleServerDoc::GetZoomFactor`します。 ドキュメントがアクティブでないときにこの関数を呼び出すが常に 100% ズーム要素 (または 1 対 1 の比率) で発生します。 呼び出すと、インプレース アクティブは、100% 以外のものを返す可能性があります。
 
-ズームを正しくの例については、MFC OLE サンプルを参照してください。 [HIERSVR](../visual-cpp-samples.md)します。 ズーム イン HIERSVR では、テキストを表示し、テキスト、一般はスケールインされません (ヒント、表記規則、設計の幅および高さのすべての問題を複雑になります)、直線的で複雑になります。 それでも、HIERSVR はズームを正しく実装するための適切な参照と MFC のチュートリアルは[SCRIBBLE](../visual-cpp-samples.md) (手順 7)。
+ズームを正しくの例については、MFC OLE サンプルを参照してください。 [HIERSVR](../overview/visual-cpp-samples.md)します。 ズーム イン HIERSVR では、テキストを表示し、テキスト、一般はスケールインされません (ヒント、表記規則、設計の幅および高さのすべての問題を複雑になります)、直線的で複雑になります。 それでも、HIERSVR はズームを正しく実装するための適切な参照と MFC のチュートリアルは[SCRIBBLE](../overview/visual-cpp-samples.md) (手順 7)。
 
 `COleServerDoc::GetZoomFactor` さまざまなコンテナーから、またはの実装から別のメトリックに基づく倍率を決定、`COleServerItem`と`COleServerDoc`クラス。 つまり、現在のズームの倍率は次の式によって決定されます。
 

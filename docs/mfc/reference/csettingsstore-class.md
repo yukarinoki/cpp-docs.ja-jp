@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Read
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
-ms.openlocfilehash: 1de26ceedfd29f276693be512bd41f169fb44b94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 1e1373da86c1c3fea3b1ddd6ff17f0fac4f76980
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274545"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58770396"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
 
@@ -65,7 +65,7 @@ class CSettingsStore : public CObject
 
 ## <a name="example"></a>例
 
-次の例では、開く、読み取りのメソッドを使用する方法、`CSettingsStore`クラス。 このコード スニペットの一部、[ツール ヒントのデモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、開く、読み取りのメソッドを使用する方法、`CSettingsStore`クラス。 このコード スニペットの一部、[ツール ヒントのデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_ToolTipDemo#1](../../mfc/reference/codesnippet/cpp/csettingsstore-class_1.cpp)]
 

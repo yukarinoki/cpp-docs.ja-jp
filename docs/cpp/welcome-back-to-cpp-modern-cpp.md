@@ -3,12 +3,12 @@ title: C++ へようこそ (Modern C++)
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
-ms.openlocfilehash: 08563f6a67ec7105da688d566d71d8ea15cb8cec
-ms.sourcegitcommit: 360b55e89e5954f494e52b1cf989fbaceda06f1c
+ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54334626"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771787"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ へようこそ (Modern C++)
 
@@ -132,4 +132,4 @@ void f()
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [ラムダ式](../cpp/lambda-expressions-in-cpp.md)<br/>
 [.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
-[Visual C++ 言語への準拠](../visual-cpp-language-conformance.md)
+[Visual C++ 言語への準拠](../overview/visual-cpp-language-conformance.md)

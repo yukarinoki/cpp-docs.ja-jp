@@ -36,12 +36,12 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneStyle
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
-ms.openlocfilehash: cb52f1138ba7ff01c6fbf2f7ec13d5f39e9422d8
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413395"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777338"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar クラス
 
@@ -506,8 +506,8 @@ TRUE の場合、テキストを設定した後、ウィンドウが無効にし
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CTRLBARS](../../visual-cpp-samples.md)<br/>
-[MFC サンプル DLGCBR32](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
 [CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CStatusBarCtrl クラス](../../mfc/reference/cstatusbarctrl-class.md)<br/>

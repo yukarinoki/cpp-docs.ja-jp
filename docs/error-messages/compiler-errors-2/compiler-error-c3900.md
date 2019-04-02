@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3900
 ms.assetid: a94cc561-8fa8-4344-9e01-e81ff462fae5
-ms.openlocfilehash: d031b55407d108b4f8be362156911bfae688326a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35df94ccfcd7942f9057cb37ceee349c09b80607
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512360"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777416"
 ---
 # <a name="compiler-error-c3900"></a>コンパイラ エラー C3900
 
 'member': 現在のスコープで許可されていません
 
-プロパティ ブロックは、関数の宣言とインライン関数定義だけに含めることができます。 プロパティ ブロックでは、関数以外のメンバーは許可されません。 Typedef、演算子、またはフレンド関数は許可されません。 詳細については、「 [property](../../windows/property-cpp-component-extensions.md)」を参照してください。
+プロパティ ブロックは、関数の宣言とインライン関数定義だけに含めることができます。 プロパティ ブロックでは、関数以外のメンバーは許可されません。 Typedef、演算子、またはフレンド関数は許可されません。 詳細については、「 [property](../../extensions/property-cpp-component-extensions.md)」を参照してください。
 
 イベントの定義には、アクセス方法と関数のみを含めることができます。
 

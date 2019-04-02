@@ -2,12 +2,12 @@
 title: MFC と ATL
 ms.date: 01/24/2018
 ms.assetid: 31b1a3a8-4154-4c4a-af10-fafc23ecdc5c
-ms.openlocfilehash: 620d514e1bc1bad6c33eab16577639c4053cdf10
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c2cfb77f0e3885e0b315ddfe38bf942ec157375a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486360"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780250"
 ---
 # <a name="mfc-and-atl"></a>MFC と ATL
 
@@ -21,10 +21,10 @@ MFC と ATL が下のオプションのサブコンポーネントは Visual Stu
 
 ## <a name="related-articles"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[MFC デスクトップ アプリケーション](../mfc/mfc-desktop-applications.md)|Microsoft Foundation Classes は Win32 上のオブジェクト指向のシン ラッパーを提供し、C++ の GUI アプリケーションの迅速な開発を可能にします。|
 |[ATL COM デスクトップ コンポーネント](../atl/atl-com-desktop-components.md)|ATL は、クラス テンプレートおよびその他の使用のためのコンストラクトを提供し、C++ の COM オブジェクトの作成が簡単にします。|
 |[ATL/MFC 共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)|MFC および ATL で共有される [CStringT Class](../atl-mfc-shared/reference/cstringt-class.md) およびその他のクラスのためのリファレンス。|
 |[リソース ファイルの操作](../windows/working-with-resource-files.md)|リソース エディターを使用して、文字列、画像、ダイアログ ボックスなどの UI リソースを編集できます。|
-|[Visual C++](../visual-cpp-in-visual-studio.md)|MSDN ライブラリのすべての C++ コンテンツの親トピック。|
+|[Visual C++](../overview/visual-cpp-in-visual-studio.md)|MSDN ライブラリのすべての C++ コンテンツの親トピック。|

@@ -64,12 +64,12 @@ helpviewer_keywords:
 - CMFCToolBarComboBoxButton [MFC], SetDropDownHeight
 - CMFCToolBarComboBoxButton [MFC], SetFlatMode
 ms.assetid: 32fa39f7-8e4e-4f0a-a31d-7b540d969a6c
-ms.openlocfilehash: fae70e44657023b7a7b93f72599bef4ba6faf307
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e3c124103aa95d9db5095e438a6b21d46c7cb35d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303171"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772073"
 ---
 # <a name="cmfctoolbarcomboboxbutton-class"></a>CMFCToolBarComboBoxButton クラス
 
@@ -128,8 +128,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 1. 親ツール バー リソースでボタンのダミー リソース ID を予約します。
 
-2. 
-  `CMFCToolBarComboBoxButton` オブジェクトを構築します。
+2. `CMFCToolBarComboBoxButton` オブジェクトを構築します。
 
 3. AFX_WM_RESETTOOLBAR メッセージを処理するメッセージ ハンドラーで、ダミー ボタンを置き換える新しいコンボ ボックス ボタンを使用して[CMFCToolBar::ReplaceButton](../../mfc/reference/cmfctoolbar-class.md#replacebutton)します。
 
@@ -137,7 +136,7 @@ class CMFCToolBarComboBoxButton : public CMFCToolBarButton
 
 ## <a name="example"></a>例
 
-`CMFCToolBarComboBoxButton` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、編集とコンボ ボックスを有効にする、アプリケーションでボックスのボタンのコンボの垂直位置を設定、にドロップしたときに、リスト ボックスの高さを設定、アプリケーションでのフラット スタイルのコンボ ボックス ボタンの外観を設定する方法を示しています。、エディット ボックス、コンボ ボックス ボタンでテキストを設定します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCToolBarComboBoxButton` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、編集とコンボ ボックスを有効にする、アプリケーションでボックスのボタンのコンボの垂直位置を設定、にドロップしたときに、リスト ボックスの高さを設定、アプリケーションでのフラット スタイルのコンボ ボックス ボタンの外観を設定する方法を示しています。、エディット ボックス、コンボ ボックス ボタンでテキストを設定します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#36](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_1.cpp)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#37](../../mfc/codesnippet/cpp/cmfctoolbarcomboboxbutton-class_2.cpp)]

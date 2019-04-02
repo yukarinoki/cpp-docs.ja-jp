@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMDIChildWnd [MFC], MDIRestore
 - CMDIChildWnd [MFC], SetHandles
 ms.assetid: 6d07f5d4-9a3e-4723-9fa5-e65bb669fdd5
-ms.openlocfilehash: efcf5057481345c001cc48224f53c666623d0780
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 13f027e68184a4869e88883ff8b8d3b123b94e3e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304991"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58774585"
 ---
 # <a name="cmdichildwnd-class"></a>CMDIChildWnd クラス
 
@@ -287,9 +287,9 @@ MDI 子ウィンドウのオブジェクトによって使用されるリソー�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル MDI](../../visual-cpp-samples.md)<br/>
-[MFC のサンプルは](../../visual-cpp-samples.md)<br/>
-[MFC サンプル SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC サンプル MDI](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプルは](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>

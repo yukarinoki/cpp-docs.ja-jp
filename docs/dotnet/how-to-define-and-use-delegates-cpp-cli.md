@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - delegates
 ms.assetid: 1cdf3420-89c1-47c0-b796-aa984020e0f8
-ms.openlocfilehash: 4f6b13d2adf9acb17d97876ae2fe5b693f682a5b
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: bcbf5bf978da5b6c13dd131e7a19975381bd97a5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57748711"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771312"
 ---
 # <a name="how-to-define-and-use-delegates-ccli"></a>方法: 定義してデリゲートを使用 (C +/cli CLI)
 
@@ -504,4 +504,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[delegate (C++ コンポーネント拡張)](../windows/delegate-cpp-component-extensions.md)
+[delegate (C++ コンポーネント拡張)](../extensions/delegate-cpp-component-extensions.md)

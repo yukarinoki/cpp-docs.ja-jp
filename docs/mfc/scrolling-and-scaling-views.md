@@ -8,18 +8,18 @@ helpviewer_keywords:
 - scroll bars [MFC], messages
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
-ms.openlocfilehash: 2baa89f233eb6df93cde3adbde35ba1e6d35c093
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283710"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777582"
 ---
 # <a name="scrolling-and-scaling-views"></a>ビューのスクロールと拡大/縮小
 
 MFC では、それらを表示するフレーム ウィンドウのサイズが自動的に拡大縮小されるビューまでスクロールし、ビューをサポートしています。 クラス`CScrollView`ビューの両方の種類をサポートしています。
 
-スクロールとスケーリングの詳細については、クラスを参照してください。 [CScrollView](../mfc/reference/cscrollview-class.md)で、 *MFC リファレンス*します。 スクロールの例では、次を参照してください。、 [Scribble サンプル](../visual-cpp-samples.md)します。
+スクロールとスケーリングの詳細については、クラスを参照してください。 [CScrollView](../mfc/reference/cscrollview-class.md)で、 *MFC リファレンス*します。 スクロールの例では、次を参照してください。、 [Scribble サンプル](../overview/visual-cpp-samples.md)します。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 

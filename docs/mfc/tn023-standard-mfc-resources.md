@@ -8,12 +8,12 @@ helpviewer_keywords:
 - TN023
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
-ms.openlocfilehash: b4edc00f77152b8d677f3113e0ed6386569b0988
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277678"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780315"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023:MFC の標準リソース
 
@@ -23,7 +23,7 @@ ms.locfileid: "57277678"
 
 MFC には、アプリケーションで使用できる定義済みのリソースの 2 つのカテゴリが用意されています: クリップアート リソースと標準的なフレームワーク リソース。
 
-クリップアート リソースは追加のリソースに、フレームワークは依存しませんが、アプリケーションのユーザー インターフェイスに追加する場合があります。 MFC 標準サンプルでは、次のクリップアート リソースが含まれている[CLIPART](../visual-cpp-samples.md):
+クリップアート リソースは追加のリソースに、フレームワークは依存しませんが、アプリケーションのユーザー インターフェイスに追加する場合があります。 MFC 標準サンプルでは、次のクリップアート リソースが含まれている[CLIPART](../overview/visual-cpp-samples.md):
 
 - Common.rc:1 つのファイルのリソースが含まれています。
 

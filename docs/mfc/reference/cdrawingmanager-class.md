@@ -56,12 +56,12 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SetPixel
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
-ms.openlocfilehash: f14b21c97e5a36d5107e7db526e4153446ae2a01
-ms.sourcegitcommit: 90817d9d78fbaed8ffacde63f3add334842e596f
+ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58278535"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781693"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager クラス
 
@@ -389,7 +389,7 @@ BOOL DrawShadow(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`DrawShadow`のメソッド、`CDrawingManager`クラス。 このコード スニペットの一部、[プロパティ シートのデモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`DrawShadow`のメソッド、`CDrawingManager`クラス。 このコード スニペットの一部、[プロパティ シートのデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_PropSheetDemo#1](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_1.cpp)]
 
@@ -473,7 +473,7 @@ void FillGradient(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`FillGradient`のメソッド、`CDrawingManager`クラス。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`FillGradient`のメソッド、`CDrawingManager`クラス。 このコード スニペットの一部、 [MS Office 2007 のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#12](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_2.cpp)]
 
@@ -509,7 +509,7 @@ void FillGradient2 (
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`FillGradient2`のメソッド、`CDrawingManager`クラス。 このコード スニペットの一部、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`FillGradient2`のメソッド、`CDrawingManager`クラス。 このコード スニペットの一部、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#37](../../mfc/reference/codesnippet/cpp/cdrawingmanager-class_3.cpp)]
 
