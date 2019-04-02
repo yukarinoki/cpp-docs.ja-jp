@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
-ms.openlocfilehash: 920f06bd2197315b11f239827de76eba9591bad5
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742667"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777676"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>方法: C++ Interop を使用して Unicode 文字列をマーシャ リング
 
@@ -30,7 +30,7 @@ ms.locfileid: "57742667"
 
 ## <a name="example"></a>例
 
-Unicode 文字列をマネージからアンマネージ関数に渡す、(Vcclr.h で宣言) PtrToStringChars 関数を使用するマネージ文字列が格納されているメモリにアクセスします。 このアドレスはネイティブ関数に渡される、ために、メモリを固定することが重要です[pin_ptr (C +/cli CLI)](../windows/pin-ptr-cpp-cli.md)を文字列データの再配置されることを防ぐためにガベージ コレクション サイクルを実行中に、アンマネージ関数を実行します。
+Unicode 文字列をマネージからアンマネージ関数に渡す、(Vcclr.h で宣言) PtrToStringChars 関数を使用するマネージ文字列が格納されているメモリにアクセスします。 このアドレスはネイティブ関数に渡される、ために、メモリを固定することが重要です[pin_ptr (C +/cli CLI)](../extensions/pin-ptr-cpp-cli.md)を文字列データの再配置されることを防ぐためにガベージ コレクション サイクルを実行中に、アンマネージ関数を実行します。
 
 ```
 // MarshalUnicode1.cpp

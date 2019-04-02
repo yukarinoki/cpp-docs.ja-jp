@@ -7,12 +7,12 @@ helpviewer_keywords:
 - resource files, multiple
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
-ms.openlocfilehash: 7d97e4536c2a43e7e224e9056aa39df5480daeca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279920"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58772765"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:Visual C での複数のリソース ファイルとヘッダー ファイルの使用
 
@@ -177,7 +177,7 @@ Visual C++ およびリソース コンパイラは、1 つの .RC ファイル�
 
 - テキスト エディターを使用して、人間が認識できる形式のリソースを維持することを希望する場合は、Visual C++ で編集する .RC ファイルとは別の .RC ファイルを用意し、その中で維持する必要があります。
 
-- ユーザー定義のリソースを、別の特殊なデータ エディターで解釈できるバイナリまたはテキスト形式で保持する必要がある場合は、別の .RC ファイルでそのリソースを維持する必要があります。その結果、Visual C++ が形式を 16 進データに変更することはありません。 します。MFC Advanced Concepts サンプル内の WAV (サウンド) ファイル リソース[SPEAKN](../visual-cpp-samples.md)例があります。
+- ユーザー定義のリソースを、別の特殊なデータ エディターで解釈できるバイナリまたはテキスト形式で保持する必要がある場合は、別の .RC ファイルでそのリソースを維持する必要があります。その結果、Visual C++ が形式を 16 進データに変更することはありません。 します。MFC Advanced Concepts サンプル内の WAV (サウンド) ファイル リソース[SPEAKN](../overview/visual-cpp-samples.md)例があります。
 
 [インクルード ファイルの設定] ダイアログ ボックス内の [コンパイル時に追加するファイル] で、SECOND.RC の #include を指定できます。
 

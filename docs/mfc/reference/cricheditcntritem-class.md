@@ -10,12 +10,12 @@ helpviewer_keywords:
 - CRichEditCntrItem [MFC], CRichEditCntrItem
 - CRichEditCntrItem [MFC], SyncToRichEditObject
 ms.assetid: 6c0b4efe-0fb8-4621-b5e1-fdcb8ec48c3b
-ms.openlocfilehash: 0f71607147b353c5071830bdce481f1e5e5d4717
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 674937df9b4ecef0d159a47a45a716d1175ad5d9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268487"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773841"
 ---
 # <a name="cricheditcntritem-class"></a>CRichEditCntrItem クラス
 
@@ -49,7 +49,7 @@ class CRichEditCntrItem : public COleClientItem
 
 この Windows コモン コントロール (つまり、 [CRichEditCtrl](../../mfc/reference/cricheditctrl-class.md)および関連クラス) は以降 Windows 95/98 および Windows NT 3.51 の下で実行中のプログラムにのみ使用できます。
 
-MFC アプリケーションの豊富な編集コンテナーの項目を使用しての例は、次を参照してください。、[ワードパッド](../../visual-cpp-samples.md)サンプル アプリケーション。
+MFC アプリケーションの豊富な編集コンテナーの項目を使用しての例は、次を参照してください。、[ワードパッド](../../overview/visual-cpp-samples.md)サンプル アプリケーション。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -110,7 +110,7 @@ void SyncToRichEditObject(REOBJECT& reo);
 
 ## <a name="see-also"></a>関連項目
 
-[ワードパッドの MFC サンプル](../../visual-cpp-samples.md)<br/>
+[ワードパッドの MFC サンプル](../../overview/visual-cpp-samples.md)<br/>
 [COleClientItem クラス](../../mfc/reference/coleclientitem-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CRichEditDoc クラス](../../mfc/reference/cricheditdoc-class.md)<br/>

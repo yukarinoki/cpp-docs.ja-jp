@@ -4,18 +4,18 @@ ms.date: 11/19/2018
 helpviewer_keywords:
 - property pages, implementing
 ms.assetid: c30b67fe-ce08-4249-ae29-f3060fa8d61e
-ms.openlocfilehash: a86393954cdebec59bd2c6a50cd5e547ef06acb7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9aaf75916196f33904a51289d0a49725e042aa9e
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57267239"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777039"
 ---
 # <a name="example-implementing-a-property-page"></a>例:プロパティ ページの実装
 
 この例は、プロパティ ページのプロパティを表示します (および変更することができます) を作成する方法を示しています、[ドキュメント クラス](../mfc/document-classes.md)インターフェイス。
 
-この例がに基づいて、[例](../visual-cpp-samples.md)します。
+この例がに基づいて、[例](../overview/visual-cpp-samples.md)します。
 
 この例を完了するには、ことができます。
 
@@ -43,7 +43,7 @@ ms.locfileid: "57267239"
 
 |アイテム|[値]|
 |----------|-----------|
-|タイトル|TextDocument|
+|Title|TextDocument|
 |ドキュメント文字列|VCUE TextDocument プロパティ|
 |Helpfile|*\<空白 >*|
 
@@ -164,4 +164,4 @@ End Module
 ## <a name="see-also"></a>関連項目
 
 [プロパティ ページ](../atl/atl-com-property-pages.md)<br/>
-[例](../visual-cpp-samples.md)
+[例](../overview/visual-cpp-samples.md)

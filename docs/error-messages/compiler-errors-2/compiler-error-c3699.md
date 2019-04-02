@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3699
 ms.assetid: 47c29afc-ab8b-4238-adfe-788dd6e00b3b
-ms.openlocfilehash: e413e4a08ce22ef109179ff0f98baf32ebba41c2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 93058d34ca9a17ab175a55a7bc7b953d369e65c5
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525845"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776740"
 ---
 # <a name="compiler-error-c3699"></a>コンパイラ エラー C3699
 
@@ -36,7 +36,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-Trivial プロパティには、参照型を含めることはできません。 詳細については、「 [property](../../windows/property-cpp-component-extensions.md) 」を参照してください。 次の例では、C3699 が生成されます。
+Trivial プロパティには、参照型を含めることはできません。 詳細については、「 [property](../../extensions/property-cpp-component-extensions.md) 」を参照してください。 次の例では、C3699 が生成されます。
 
 ```
 // C3699_b.cpp

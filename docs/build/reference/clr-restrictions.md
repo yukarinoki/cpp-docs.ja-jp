@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
-ms.openlocfilehash: e2205740aea5a2e557b8d93c3c60045435c4b71d
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816101"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777819"
 ---
 # <a name="clr-restrictions"></a>/clr の制約
 
@@ -29,7 +29,7 @@ ms.locfileid: "57816101"
 
 - [Naked](../../cpp/naked-cpp.md) [_ _declspec](../../cpp/declspec.md)修飾子は/clr で無視されます。
 
-- 変換関数を設定[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)は、アンマネージ コードでキャッチのみに影響します。 参照してください[例外処理](../../windows/exception-handling-cpp-component-extensions.md)詳細についてはします。
+- 変換関数を設定[_set_se_translator](../../c-runtime-library/reference/set-se-translator.md)は、アンマネージ コードでキャッチのみに影響します。 参照してください[例外処理](../../extensions/exception-handling-cpp-component-extensions.md)詳細についてはします。
 
 - 関数ポインターの比較が下で許可されていない **/clr**します。
 

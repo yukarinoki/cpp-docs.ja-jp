@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2674
 ms.assetid: 7cbd70d8-d992-44d7-a5cb-dd8cf9c759d2
-ms.openlocfilehash: eb56651967f8fdc33b7c76b29883b25295d752d0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f29371f2987eaae1aa7a56c9f4eb56c332fdf31c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456811"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779639"
 ---
 # <a name="compiler-error-c2674"></a>コンパイラ エラー C2674
 
 このコンテキストでは、ジェネリック宣言は許可されません。
 
-ジェネリック型の宣言が正しくありません。 詳細については、「[ジェネリック](../../windows/generics-cpp-component-extensions.md)」を参照してください。
+ジェネリック型の宣言が正しくありません。 詳細については、「[ジェネリック](../../extensions/generics-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -8,16 +8,16 @@ f1_keywords:
 helpviewer_keywords:
 - Platform::Type Class
 ms.assetid: d6b03f1e-b240-49b9-a08e-53a460030475
-ms.openlocfilehash: 73338e5b4c723c7f66dbecaea5add3b197f3493d
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 456dbff652c8f1b800308ff757930b425616a83f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57744035"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781745"
 ---
 # <a name="platformtype-class"></a>Platform::Type クラス
 
-型に関するランタイム情報 (文字列名と型コード) を含みます。 呼び出すことによって取得[object::gettype](../cppcx/platform-object-class.md#gettype)任意のオブジェクトでまたはを使用して、 [typeid](../windows/typeid-cpp-component-extensions.md)演算子はクラスまたは構造体の名前にします。
+型に関するランタイム情報 (文字列名と型コード) を含みます。 呼び出すことによって取得[object::gettype](../cppcx/platform-object-class.md#gettype)任意のオブジェクトでまたはを使用して、 [typeid](../extensions/typeid-cpp-component-extensions.md)演算子はクラスまたは構造体の名前にします。
 
 ## <a name="syntax"></a>構文
 
@@ -104,8 +104,7 @@ Platform::TypeCode 列挙値のいずれか。
 
 ### <a name="remarks"></a>Remarks
 
-
-  `typeid` プロパティが GetTypeCode() メンバー メソッドに相当します。
+`typeid` プロパティが GetTypeCode() メンバー メソッドに相当します。
 
 ## <a name="tostring"></a> Type::ToString メソッド
 

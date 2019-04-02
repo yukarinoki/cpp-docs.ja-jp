@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler)
 - MASM (Microsoft Macro Assembler), documentation overview
 ms.assetid: 1446d55f-e2e7-4fd1-a9b8-b15cf7d4e47c
-ms.openlocfilehash: 2da1d4ec24d29d5db0c12bdc856f8d031aa4ff54
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b74eef1799dd5f9fae8f2a6aceeb79a115ce837
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534694"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777871"
 ---
 # <a name="microsoft-macro-assembler-reference"></a>Microsoft Macro Assembler リファレンス
 
@@ -43,7 +43,7 @@ X64 用の出力ファイルを作成する方法に関する情報。
 
 ## <a name="related-sections"></a>関連項目
 
-[Visual C++](../../visual-cpp-in-visual-studio.md)<br/>
+[Visual C++](../../overview/visual-cpp-in-visual-studio.md)<br/>
 Visual Studio および Visual C ドキュメントのさまざまな領域へのリンクを提供します。
 
 ## <a name="see-also"></a>関連項目

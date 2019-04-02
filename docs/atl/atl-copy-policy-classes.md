@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _Copy class
 - _CopyInterface class
 ms.assetid: 06704b68-d318-4c5d-a65b-71457fe9d00d
-ms.openlocfilehash: 24d81506f1518f980576899a4a104bbfdc0a1438
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 73bec31b4ae140797c85a06ee7c5023c9e0c4446
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296346"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776961"
 ---
 # <a name="atl-copy-policy-classes"></a>ATL コピー ポリシー クラス
 
@@ -62,7 +62,7 @@ ATL には、2 つのコピー ポリシー クラスの形式で、`_Copy`と`_
 
 ## <a name="custom-implementations"></a>カスタムの実装
 
-通常、異機種混在環境 (つまり、データ型間の変換) をコピーするための独自コピー ポリシー クラスを定義する必要があります。 カスタム コピー ポリシー クラスの例については、見て VCUE_Copy.h VCUE_CopyString.h 内のファイル、 [ATLCollections](../visual-cpp-samples.md)サンプル。 これらのファイルには、2 つのテンプレートのコピー ポリシー クラスが含まれて`GenericCopy`と`MapCopy`、数多くの特殊化の`GenericCopy`のさまざまなデータ型。
+通常、異機種混在環境 (つまり、データ型間の変換) をコピーするための独自コピー ポリシー クラスを定義する必要があります。 カスタム コピー ポリシー クラスの例については、見て VCUE_Copy.h VCUE_CopyString.h 内のファイル、 [ATLCollections](../overview/visual-cpp-samples.md)サンプル。 これらのファイルには、2 つのテンプレートのコピー ポリシー クラスが含まれて`GenericCopy`と`MapCopy`、数多くの特殊化の`GenericCopy`のさまざまなデータ型。
 
 ### <a name="genericcopy"></a>GenericCopy
 
@@ -81,4 +81,4 @@ VCUE_Copy.h には、このクラスの次の特殊化も含まれています: 
 ## <a name="see-also"></a>関連項目
 
 [C++ 標準ライブラリに基づくコレクションの実装](../atl/implementing-an-stl-based-collection.md)<br/>
-[ATLCollections サンプル](../visual-cpp-samples.md)
+[ATLCollections サンプル](../overview/visual-cpp-samples.md)

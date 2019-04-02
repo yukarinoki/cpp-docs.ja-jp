@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - typeid operator
 ms.assetid: 8871cee6-d6b9-4301-a5cb-bf3dc9798d61
-ms.openlocfilehash: dfbf5275391e2820c94d2827c9b2c3eb252365c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b1185f48df4a941eb2a5d81bfa67d07cdf4387d0
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50571926"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780887"
 ---
 # <a name="typeid-operator"></a>typeid 演算子
 
@@ -26,7 +26,7 @@ typeid(expression)
 
 結果**typeid**は、`const type_info&`します。 値がへの参照を`type_info`いずれかを表すオブジェクト、*タイプ id*または種類の*式*の形式に応じて、 **typeid**使用されます。 参照してください[type_info クラス](../cpp/type-info-class.md)詳細についてはします。
 
-**Typeid**演算子は、マネージ型 (抽象宣言子またはインスタンス) では機能しませんを参照してください[typeid](../windows/typeid-cpp-component-extensions.md)取得について、<xref:System.Type>指定の型。
+**Typeid**演算子は、マネージ型 (抽象宣言子またはインスタンス) では機能しませんを参照してください[typeid](../extensions/typeid-cpp-component-extensions.md)取得について、<xref:System.Type>指定の型。
 
 **Typeid**演算子は、ポリモーフィックなクラス型の左辺値に適用すると、実行時チェックによって提供される静的情報オブジェクトの実際の型を特定できません。 そのようなケースを次に示します。
 
@@ -34,9 +34,9 @@ typeid(expression)
 
 - 逆参照、ポインター \*
 
-- 添字付きのポインター ([ ]) (一般に、ポリモーフィックな型へのポインターで添字を使用すると、安全ではないことに注意してください)。
+- 添字付きのポインター ([ ])  (一般に、ポリモーフィックな型へのポインターで添字を使用すると、安全ではないことに注意してください)。
 
-場合、*式*まだその基底クラスから派生した型のオブジェクトが実際には、基本クラスの型を指す、`type_info`派生クラスは、結果を参照します。 *式*ポリモーフィックな型 (仮想関数を持つクラス) をポイントする必要があります。 結果は、それ以外の場合、`type_info`で参照される静的クラスの*式*します。 さらに、ポインターが指し示すオブジェクトが使用されるように、ポインターを逆参照する必要があります。 ポインターを逆参照になります、`type_info`どのような it ではないが指すポインター。 例えば:
+場合、*式*まだその基底クラスから派生した型のオブジェクトが実際には、基本クラスの型を指す、`type_info`派生クラスは、結果を参照します。 *式*ポリモーフィックな型 (仮想関数を持つクラス) をポイントする必要があります。 結果は、それ以外の場合、`type_info`で参照される静的クラスの*式*します。 さらに、ポインターが指し示すオブジェクトが使用されるように、ポインターを逆参照する必要があります。 ポインターを逆参照になります、`type_info`どのような it ではないが指すポインター。 例:
 
 ```cpp
 // expre_typeid_Operator.cpp

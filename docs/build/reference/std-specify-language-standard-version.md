@@ -6,12 +6,12 @@ f1_keywords:
 - -std
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
-ms.openlocfilehash: d66a9ed445e28de2341aa2a07f249c10cba83da4
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812006"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58779743"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (言語標準バージョンの指定)
 
@@ -37,11 +37,11 @@ ms.locfileid: "57812006"
 
 - [u8 文字リテラル](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4267.html)
 
-**/std:c + + + 14**オプションを指定した場合に有効な C++ 14 と C++ 17 の機能についてはノートを参照してください。 [Visual C 言語への準拠](../../visual-cpp-language-conformance.md)
+**/std:c + + + 14**オプションを指定した場合に有効な C++ 14 と C++ 17 の機能についてはノートを参照してください。 [Visual C 言語への準拠](../../overview/visual-cpp-language-conformance.md)
 
 **/Std:c + + 17**オプションは、C++ 17 機能 MSVC コンパイラによって実装されたの完全なセットを使用できます。 このオプションによって、C++17 より後のバージョンの C++ 標準のワーキング ドラフトおよび不具合の更新で変更または更新されたコンパイラと標準ライブラリの機能が無効になります。
 
-**/Std:c + + 最新**オプションは、post を使用できます。-c++ 17 コンパイラとライブラリで現在実装されている言語とライブラリの機能です。 C++ 20 ワーキング ドラフトおよび不具合の更新から C++ 標準の c++ 17 とドラフト標準の実験用の提案に含まれていない機能が含まれます。 サポートされている言語とライブラリの機能の一覧は、次を参照してください。 [Visual c の新](../../what-s-new-for-visual-cpp-in-visual-studio.md)します。 **/Std:c + + 最新**オプションが守られている機能を有効にしない、 **]、[実験用**スイッチしますが、有効にする必要があります。
+**/Std:c + + 最新**オプションは、post を使用できます。-c++ 17 コンパイラとライブラリで現在実装されている言語とライブラリの機能です。 C++ 20 ワーキング ドラフトおよび不具合の更新から C++ 標準の c++ 17 とドラフト標準の実験用の提案に含まれていない機能が含まれます。 サポートされている言語とライブラリの機能の一覧は、次を参照してください。 [Visual c の新](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md)します。 **/Std:c + + 最新**オプションが守られている機能を有効にしない、 **]、[実験用**スイッチしますが、有効にする必要があります。
 
 > [!IMPORTANT]
 > 有効になっているコンパイラとライブラリの機能 **/std:c + + 最新**として提供されます-をサポートしていないとします。 これらが重大な変更や削除の通知もなし適用されます。 として、標準の次のバージョンで表示される言語機能のプレビューのものが、標準は進行中の作業です。 使用して、 **/std:c + + 17**最新の ISO C 標準で機能を使用します。
@@ -51,7 +51,7 @@ C++ のコンパイル時に影響する **/Std** オプションは [\_MSVC\_LA
 **/Std:c + + + 14** と **/std:c + + latent**  オプションは、Visual C++ 2015 Update 3 以降で使用可能です。 **/Std:c + + 17** オプションは、Visual C++ 2017 バージョン 15.3 以降で使用できます。 上述したようにいくつかのC++17の標準的な機能は **/std:c + + + 14** オプションで使用可能ですが、 **/std:c + + 17** オプションでその他のすべてのC++17の機能が使用可能になります。
 
 > [!NOTE]
-> MSVC コンパイラ バージョンまたは更新プログラム レベルに応じて特定の C++ 14 または c++ 17 機能は完全に実装できませんまたは完全に準拠するを指定すると、 **/std:c + + 14**または **/std:c + + 17**オプション。 例えば、Visual C++ 2017 RTM コンパイラは `constexpr`、SFINAE 式、2-phase name lookupについて、c++ 14 の準拠が不完全です。 Visual C++ のリリース バージョンでの C++ 言語準拠の概要については、[Visual c 言語への準拠](../../visual-cpp-language-conformance.md)を参照してください。
+> MSVC コンパイラ バージョンまたは更新プログラム レベルに応じて特定の C++ 14 または c++ 17 機能は完全に実装できませんまたは完全に準拠するを指定すると、 **/std:c + + 14**または **/std:c + + 17**オプション。 例えば、Visual C++ 2017 RTM コンパイラは `constexpr`、SFINAE 式、2-phase name lookupについて、c++ 14 の準拠が不完全です。 Visual C++ のリリース バージョンでの C++ 言語準拠の概要については、[Visual c 言語への準拠](../../overview/visual-cpp-language-conformance.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
@@ -64,4 +64,4 @@ C++ のコンパイル時に影響する **/Std** オプションは [\_MSVC\_LA
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

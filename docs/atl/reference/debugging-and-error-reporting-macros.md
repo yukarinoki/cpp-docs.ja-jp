@@ -11,12 +11,12 @@ f1_keywords:
 helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
-ms.openlocfilehash: 24ab589ae19bd2027e2527ebefbf48dbf24e399d
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565037"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775050"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>デバッグとエラー報告のマクロ
 
@@ -220,7 +220,7 @@ ATLTRACE2(
 
 ### <a name="remarks"></a>Remarks
 
-ATLTRACE2 の短い形式は、デバッガーの出力ウィンドウに文字列を書き込みます。 ATLTRACE2 の 2 番目の形式も、デバッガーの出力ウィンドウに出力を書き込みますが、ATL/MFC トレース ツールの設定に従います (を参照してください[ATLTraceTool サンプル](../../visual-cpp-samples.md))。 たとえば、設定した場合*レベル*4 および ATL/MFC トレース ツールをレベル 0 の場合は、メッセージをしないに表示されます。 *レベル*0、1、2、3、または 4 にすることができます。 0 の場合、既定では、最も重大な問題だけを報告します。
+ATLTRACE2 の短い形式は、デバッガーの出力ウィンドウに文字列を書き込みます。 ATLTRACE2 の 2 番目の形式も、デバッガーの出力ウィンドウに出力を書き込みますが、ATL/MFC トレース ツールの設定に従います (を参照してください[ATLTraceTool サンプル](../../overview/visual-cpp-samples.md))。 たとえば、設定した場合*レベル*4 および ATL/MFC トレース ツールをレベル 0 の場合は、メッセージをしないに表示されます。 *レベル*0、1、2、3、または 4 にすることができます。 0 の場合、既定では、最も重大な問題だけを報告します。
 
 *カテゴリ*パラメーターに設定するトレース フラグが一覧表示されます。 これらのフラグは、レポート方法の種類に対応します。 次の表は、使用できる有効なトレース フラグを一覧表示、*カテゴリ*パラメーター。
 

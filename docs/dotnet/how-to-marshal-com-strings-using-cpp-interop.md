@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data marshaling [C++], strings
 - COM [C++], marshaling strings
 ms.assetid: 06590759-bf99-4e34-a3a9-4527ea592cc2
-ms.openlocfilehash: baf3a2e6720cd2f72606cf5089e0409df602fee6
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: e86cf0b3e57eda9a0f4fa5fe2337d0c42de5669f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751519"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780874"
 ---
 # <a name="how-to-marshal-com-strings-using-c-interop"></a>方法: C++ Interop を使用して COM 文字列をマーシャ リング
 
@@ -28,7 +28,7 @@ ms.locfileid: "57751519"
 
 ## <a name="example"></a>例
 
-次の例では、BSTR (COM プログラミングで使用される文字列形式) を渡す方法を示しますマネージ、アンマネージ関数にします。 呼び出し元関数の使用を管理する<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>.NET System.String の内容の BSTR 表現のアドレスを取得します。 使用して、このポインターがピン留め[pin_ptr (C +/cli CLI)](../windows/pin-ptr-cpp-cli.md)アンマネージ関数の実行中に、物理アドレスがガベージ コレクション サイクル中に変更しないことを確認します。 ガベージ コレクターは移動されるまでメモリから、 [pin_ptr (C +/cli CLI)](../windows/pin-ptr-cpp-cli.md)がスコープ外になります。
+次の例では、BSTR (COM プログラミングで使用される文字列形式) を渡す方法を示しますマネージ、アンマネージ関数にします。 呼び出し元関数の使用を管理する<xref:System.Runtime.InteropServices.Marshal.StringToBSTR%2A>.NET System.String の内容の BSTR 表現のアドレスを取得します。 使用して、このポインターがピン留め[pin_ptr (C +/cli CLI)](../extensions/pin-ptr-cpp-cli.md)アンマネージ関数の実行中に、物理アドレスがガベージ コレクション サイクル中に変更しないことを確認します。 ガベージ コレクターは移動されるまでメモリから、 [pin_ptr (C +/cli CLI)](../extensions/pin-ptr-cpp-cli.md)がスコープ外になります。
 
 ```
 // MarshalBSTR1.cpp

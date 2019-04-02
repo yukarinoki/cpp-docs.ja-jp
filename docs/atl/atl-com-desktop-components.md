@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ATL, reference
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
-ms.openlocfilehash: 65b8631560ec1b768521d917256c32c75c531fab
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50644185"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780432"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM デスクトップ コンポーネント
 
@@ -47,7 +47,7 @@ Active Template Library (ATL) を使用してプログラミングする方法�
 [ATL チュートリアル](../atl/active-template-library-atl-tutorial.md)<br/>
 コントロールの作成について説明し、プロセスで、ATL の基本事項をいくつかを示します。
 
-[ATL のサンプル](../visual-cpp-samples.md)<br/>
+[ATL のサンプル](../overview/visual-cpp-samples.md)<br/>
 ATL を使用して、COM オブジェクトを記述する方法を示すサンプル コード。
 
 [OLE DB テンプレート](../data/oledb/ole-db-templates.md)<br/>

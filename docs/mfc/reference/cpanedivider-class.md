@@ -84,12 +84,12 @@ helpviewer_keywords:
 - CPaneDivider [MFC], m_nDefaultWidth
 - CPaneDivider [MFC], m_pSliderRTC
 ms.assetid: 8e828a5d-232f-4127-b8e3-7fa45a7a476e
-ms.openlocfilehash: 7fc1215fb1b286423d6c50337bf5d94cac3298e2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43cba977d50e161c58d3e240e1282049a415c88d
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273631"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773854"
 ---
 # <a name="cpanedivider-class"></a>CPaneDivider クラス
 
@@ -176,8 +176,7 @@ class CPaneDivider : public CBasePane
 
 ## <a name="example"></a>例
 
-
-  `CWorkspaceBar` オブジェクトから `CPaneDivider` オブジェクトを取得する方法を次の例に示します。 このコード スニペットの一部、 [MDI タブのデモ サンプル](../../visual-cpp-samples.md)します。
+`CWorkspaceBar` オブジェクトから `CPaneDivider` オブジェクトを取得する方法を次の例に示します。 このコード スニペットの一部、 [MDI タブのデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MDITabsDemo#5](../../mfc/reference/codesnippet/cpp/cpanedivider-class_1.cpp)]
 

@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - override specifiers in native compilation, overriding
 ms.assetid: d0551836-9ac7-41eb-a6e9-a4b3ef60767d
-ms.openlocfilehash: 2c9238eab1627b0494c4073c88032c488fdfb828
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: db74ef226242ec8f4f70f2769fbc8ba102a808c8
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57752386"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58777182"
 ---
 # <a name="how-to-declare-override-specifiers-in-native-compilations-ccli"></a>方法: ネイティブ コンパイルでオーバーライド指定子を宣言 (C +/cli CLI)
 
-[封印された](../windows/sealed-cpp-component-extensions.md)、[抽象](../windows/abstract-cpp-component-extensions.md)、および[オーバーライド](../windows/override-cpp-component-extensions.md)は使用しないでコンパイルで使用可能な **/ZW**または[/clr](../build/reference/clr-common-language-runtime-compilation.md)します。
+[封印された](../extensions/sealed-cpp-component-extensions.md)、[抽象](../extensions/abstract-cpp-component-extensions.md)、および[オーバーライド](../extensions/override-cpp-component-extensions.md)は使用しないでコンパイルで使用可能な **/ZW**または[/clr](../build/reference/clr-common-language-runtime-compilation.md)します。
 
 > [!NOTE]
 >  ISO c 11 標準言語が、[オーバーライド](../cpp/override-specifier.md)識別子と[最終的な](../cpp/final-specifier.md)識別子、およびその両方が Visual Studio の使用でサポートされている`final`の代わりに`sealed`するものではコードで(ネイティブのみ) としてコンパイルします。
@@ -88,4 +88,4 @@ int main() {
 
 ## <a name="see-also"></a>関連項目
 
-[オーバーライド指定子](../windows/override-specifiers-cpp-component-extensions.md)
+[オーバーライド指定子](../extensions/override-specifiers-cpp-component-extensions.md)

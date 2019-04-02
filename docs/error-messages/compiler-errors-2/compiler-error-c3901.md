@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3901
 ms.assetid: 19af4141-39ad-4c16-a68f-3ae76f648186
-ms.openlocfilehash: 0c5b561f0e650ace69e09d33942f2036b9ee91ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 31fbb1e89a0619b4dc8b3f6c86f7f6bc748b80d6
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677267"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780120"
 ---
 # <a name="compiler-error-c3901"></a>コンパイラ エラー C3901
 
-'accessor_function': 戻り値の型 'type' があります。
+'accessor_function': must have return type 'type'
 
-少なくとも 1 つの get メソッドの戻り値の型は、プロパティの型と一致する必要があります。 詳細については、「 [property](../../windows/property-cpp-component-extensions.md)」を参照してください。
+少なくとも 1 つの get メソッドの戻り値の型は、プロパティの型と一致する必要があります。 詳細については、「 [property](../../extensions/property-cpp-component-extensions.md)」を参照してください。
 
 次の例では、C3901 が生成されます。
 

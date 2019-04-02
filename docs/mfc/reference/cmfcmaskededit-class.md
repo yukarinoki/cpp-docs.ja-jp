@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCMaskedEdit [MFC], SetWindowText
 - CMFCMaskedEdit [MFC], IsMaskedChar
 ms.assetid: 13b1a645-2d5d-4c37-8599-16d5003f23a5
-ms.openlocfilehash: 88a9c49b55dca9d98976924127efff67c479a96a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c1dcf89811fa5225283cb5bec120d3bd2fdfb003
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57276971"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58773789"
 ---
 # <a name="cmfcmaskededit-class"></a>CMFCMaskedEdit クラス
 
@@ -88,7 +88,7 @@ class CMFCMaskedEdit : public CEdit
 
 ## <a name="example"></a>例
 
-次の例では、マスク (電話番号など) を使用して設定する方法、`EnableMask`マスク エディット コントロールのマスクを作成する方法、 `SetValidChars` 、ユーザーが入力できる、有効な文字の文字列を指定する方法`SetWindowText`マスクのプロンプトを表示する方法は、コントロールを編集します。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例では、マスク (電話番号など) を使用して設定する方法、`EnableMask`マスク エディット コントロールのマスクを作成する方法、 `SetValidChars` 、ユーザーが入力できる、有効な文字の文字列を指定する方法`SetWindowText`マスクのプロンプトを表示する方法は、コントロールを編集します。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#11](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#12](../../mfc/reference/codesnippet/cpp/cmfcmaskededit-class_2.cpp)]
@@ -173,7 +173,7 @@ void EnableMask(
 |マスク文字|定義|
 |--------------------|----------------|
 |D|数字です。|
-|日|数字またはスペース。|
+|d|数字またはスペース。|
 |+|プラス記号 ('+ ')、マイナス ('-')、または領域です。|
 |C|アルファベット文字。|
 |c|アルファベット文字またはスペース。|

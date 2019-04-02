@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Add References Dialog Box (C++)
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
-ms.openlocfilehash: 8daba00432d7f14c8517da3ed4dc506cfd80865a
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: eb4d970527ba919af10eadab7c907f5108767b9b
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827191"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58780471"
 ---
 # <a name="consuming-libraries-and-components"></a>ライブラリとコンポーネントを利用します。
 
@@ -20,7 +20,7 @@ ms.locfileid: "57827191"
 
 ## <a name="consuming-libraries-downloaded-via-vcpkg"></a>Vcpkg を使用してダウンロードされたライブラリの使用
 
-使用してダウンロードしたライブラリを使用する、 **vcpkg**パッケージ マネージャーでは、以下の手順を無視することができます。 「[vcpkg: Windows、Linux、MacOS 用の C++ パッケージ マネージャー](../vcpkg.md#integrate-with-visual-studio-windows)詳細についてはします。
+使用してダウンロードしたライブラリを使用する、 **vcpkg**パッケージ マネージャーでは、以下の手順を無視することができます。 「[vcpkg: Windows、Linux、MacOS 用の C++ パッケージ マネージャー](vcpkg.md#integrate-with-visual-studio-windows)詳細についてはします。
 
 ## <a name="consuming-static-libraries"></a>静的ライブラリの使用
 
@@ -167,4 +167,4 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 ## <a name="see-also"></a>関連項目
 
 [C++ プロジェクト プロパティ ページの参照](reference/property-pages-visual-cpp.md)<br>
-[C++ コンパイラを設定し、Visual Studio でのプロパティのビルド](working-with-project-properties.md)
+[Visual Studio で C++ コンパイラとビルド プロパティを設定する](working-with-project-properties.md)
