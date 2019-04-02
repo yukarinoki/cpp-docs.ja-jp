@@ -6,12 +6,12 @@ helpviewer_keywords:
 - troubleshooting isolated applications
 - troubleshooting Visual C++
 ms.assetid: 3257257a-1f0b-4ede-8564-9277a7113a35
-ms.openlocfilehash: d23662d6dd6d2f241c48e0c83f2fa5ed9532c3f7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 32896939ddc7fd0b841e1b6904124b06c9bc51c9
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807950"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58766060"
 ---
 # <a name="troubleshooting-cc-isolated-applications-and-side-by-side-assemblies"></a>C/C++ 分離アプリケーションおよび side-by-side アセンブリのトラブルシューティング
 
@@ -31,7 +31,7 @@ side-by-side アセンブリに対する依存関係を指定するマニフェ�
 
 Visual Studio がインストールされていないコンピューターにアプリケーションが配置されていて、上記と似たエラー メッセージでアプリケーションがクラッシュした場合は、次の点を確認してください。
 
-1. 記載されている手順に従います[Visual C アプリケーションの依存関係の理解](../ide/understanding-the-dependencies-of-a-visual-cpp-application.md)します。 Dependency Walker では、アプリケーションまたは DLL のほとんどの依存関係を表示できます。 表示されていない DLL がある場合は、アプリケーションを実行するコンピューターにその DLL をインストールしてください。
+1. 記載されている手順に従います[Visual C アプリケーションの依存関係の理解](../windows/understanding-the-dependencies-of-a-visual-cpp-application.md)します。 Dependency Walker では、アプリケーションまたは DLL のほとんどの依存関係を表示できます。 表示されていない DLL がある場合は、アプリケーションを実行するコンピューターにその DLL をインストールしてください。
 
 1. オペレーティング システム ローダーは、アプリケーション マニフェストを使用してアプリケーションが依存するアセンブリを読み込みます。 マニフェストは、リソースとしてバイナリに埋め込むことも、個別のファイルとしてアプリケーション フォルダーにインストールすることもできます。 マニフェストをバイナリに埋め込むかどうかを確認するには、Visual Studio でバイナリを開き、リソースの一覧で RT_MANIFEST を探します。 埋め込みマニフェストが見つからない場合は、< binary_name > のような名前のファイルをアプリケーション フォルダーで検索します。\<拡張機能 > .manifest です。
 
