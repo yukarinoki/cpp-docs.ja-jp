@@ -150,12 +150,12 @@ helpviewer_keywords:
 - CMFCPropertyGridCtrl [MFC], OnSelectCombo
 - CMFCPropertyGridCtrl [MFC], ValidateItemData
 ms.assetid: 95877cae-2311-4a2a-9031-0c8c3cf0a5f9
-ms.openlocfilehash: f194879cf4a1388fc156fa4e92f4f9bea5056191
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 93ace0388981f429ac4a422947fbdaae8cdb8f24
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57296008"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58781979"
 ---
 # <a name="cmfcpropertygridctrl-class"></a>CMFCPropertyGridCtrl クラス
 
@@ -297,7 +297,7 @@ class CMFCPropertyGridCtrl : public CWnd
 
 ## <a name="example"></a>例
 
-次の例は、さまざまなメソッドを使用して、プロパティ グリッド コントロール オブジェクトを構成する方法を示します、`CMFCPropertyGridCtrl`クラス。 この例では、ヘッダー コントロールを有効にする、説明の領域を有効にして、プロパティ グリッド コントロールの外観を設定する方法を示します。 これにより、コントロールを並べ替えますコントロールのアルファベット モードが、プロパティ名が含まれているすべてのプロパティを設定する方法と、プロパティ グリッド コントロールのさまざまな要素のカスタム カラーを設定する方法も示しています。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例は、さまざまなメソッドを使用して、プロパティ グリッド コントロール オブジェクトを構成する方法を示します、`CMFCPropertyGridCtrl`クラス。 この例では、ヘッダー コントロールを有効にする、説明の領域を有効にして、プロパティ グリッド コントロールの外観を設定する方法を示します。 これにより、コントロールを並べ替えますコントロールのアルファベット モードが、プロパティ名が含まれているすべてのプロパティを設定する方法と、プロパティ グリッド コントロールのさまざまな要素のカスタム カラーを設定する方法も示しています。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#14](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#16](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_2.cpp)]
@@ -480,7 +480,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`Create`メソッド`CMFCPropertyGridCtrl`クラス。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`Create`メソッド`CMFCPropertyGridCtrl`クラス。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#15](../../mfc/reference/codesnippet/cpp/cmfcpropertygridctrl-class_6.cpp)]
 

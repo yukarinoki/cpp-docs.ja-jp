@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CObList [MFC], RemoveTail
 - CObList [MFC], SetAt
 ms.assetid: 310a7edb-263c-4bd2-ac43-0bfbfddc5a33
-ms.openlocfilehash: f31adc77f50191191ffbc4f7eac89cc8c9caf439
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 08e481f010be688fb0b9c219caa1954c9960846f
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263235"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58767276"
 ---
 # <a name="cstringlist-class"></a>CStringList クラス
 
@@ -77,7 +77,7 @@ class CStringList : public CObject
 
 `CString& CStringList::GetHead() const;`
 
-および
+と、呼び出し
 
 `POSITION AddHead( CObject* <newElement> );`
 
@@ -139,6 +139,6 @@ class CStringList : public CObject
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの収集](../../visual-cpp-samples.md)<br/>
+[MFC サンプルの収集](../../overview/visual-cpp-samples.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)

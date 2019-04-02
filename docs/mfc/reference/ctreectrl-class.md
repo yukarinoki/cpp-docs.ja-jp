@@ -162,12 +162,12 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildren
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
-ms.openlocfilehash: 92666e10d82d96b76ad43b652ed90e0e41b8f853
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57418933"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58782005"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
 
@@ -2341,7 +2341,7 @@ BOOL SortChildrenCB(LPTVSORTCB pSort);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CImageList クラス](../../mfc/reference/cimagelist-class.md)

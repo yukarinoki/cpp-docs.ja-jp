@@ -74,12 +74,12 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], SetPropList
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
-ms.openlocfilehash: f1f7610fc315da65145798058fdcf9752e7873d0
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283255"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58771408"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar クラス
 
@@ -202,7 +202,7 @@ class CMFCColorBar : public CMFCPopupMenuBar
 
 ## <a name="example"></a>例
 
-次の例は、さまざまなメソッドを使用してカラー バーを構成する方法を示します、`CMFCColorBar`クラス。 メソッドで、水平および垂直方向の余白を設定、その他のボタンを有効にする、カラー バー コントロールのウィンドウを作成、および現在選択されている色を設定します。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例は、さまざまなメソッドを使用してカラー バーを構成する方法を示します、`CMFCColorBar`クラス。 メソッドで、水平および垂直方向の余白を設定、その他のボタンを有効にする、カラー バー コントロールのウィンドウを作成、および現在選択されている色を設定します。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#1](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#2](../../mfc/reference/codesnippet/cpp/cmfccolorbar-class_2.cpp)]

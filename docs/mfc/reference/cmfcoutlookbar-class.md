@@ -38,12 +38,12 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetButtonsFont
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
-ms.openlocfilehash: be11bcd4cdbcd8448cc54f688d7dab9b61f49a57
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304081"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775258"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar クラス
 
@@ -89,14 +89,13 @@ class CMFCOutlookBar : public CBaseTabbedPane
 
 ## <a name="remarks"></a>Remarks
 
-Outlook バーの例は、次を参照してください。、 [OutlookDemo サンプル。MFC OutlookDemo アプリケーション](../../visual-cpp-samples.md)します。
+Outlook バーの例は、次を参照してください。、 [OutlookDemo サンプル。MFC OutlookDemo アプリケーション](../../overview/visual-cpp-samples.md)します。
 
 ## <a name="implementing-the-outlook-bar"></a>Outlook バーを実装します。
 
 アプリケーションで、`CMFCOutlookBar` コントロールを使用するには、次の手順に従います。
 
-1. 
-  `CMFCOutlookBar` オブジェクトをメイン フレーム ウィンドウ クラスに埋め込みます。
+1. `CMFCOutlookBar` オブジェクトをメイン フレーム ウィンドウ クラスに埋め込みます。
 
     ```cpp
     class CMainFrame : public CMDIFrameWnd
@@ -295,7 +294,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`Create`のメソッド、`CMFCOutlookBar`クラス。 このコード スニペットの一部、 [Outlook マルチ ビュー サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`Create`のメソッド、`CMFCOutlookBar`クラス。 このコード スニペットの一部、 [Outlook マルチ ビュー サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_OutlookMultiViews#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_1.h)]
 [!code-cpp[NVC_MFC_OutlookMultiViews#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbar-class_2.cpp)]
