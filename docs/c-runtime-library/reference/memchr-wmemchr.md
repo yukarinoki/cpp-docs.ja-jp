@@ -1,6 +1,6 @@
 ---
 title: memchr、wmemchr
-ms.date: 11/04/2016
+ms.date: 03/31/2019
 apiname:
 - wmemchr
 - memchr
@@ -24,12 +24,12 @@ helpviewer_keywords:
 - memchr function
 - wmemchr function
 ms.assetid: 5a348581-28f1-4256-8434-687245f7fc9f
-ms.openlocfilehash: cbd8b80ed42a6532fb7161fab7217a772a2cb777
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: 00a1f0d12047cc388b56074a657ffd739e986827
+ms.sourcegitcommit: 489c0b998f2360317701f7a4a97b2b8ad96052d7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57209900"
+ms.lasthandoff: 04/02/2019
+ms.locfileid: "58866917"
 ---
 # <a name="memchr-wmemchr"></a>memchr、wmemchr
 
@@ -72,7 +72,7 @@ const wchar_t *wmemchr(
 
 ### <a name="parameters"></a>パラメーター
 
-*バッファー*<br/>
+*buffer*<br/>
 バッファーへのポインター。
 
 *c*<br/>
@@ -87,9 +87,9 @@ const wchar_t *wmemchr(
 
 ## <a name="remarks"></a>Remarks
 
-`memchr` `wmemchr`最初に見つかった検索*c*最初の*カウント*バイトの*バッファー*します。 見つけたときに停止する*c*ときに、最初のチェックがまたは*カウント*バイト。
+`memchr` `wmemchr`最初に見つかった検索*c*最初*数*の文字*バッファー*。 見つけたときに停止する*c*ときに、最初のチェックがまたは*カウント*文字。
 
-C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ _CRT_CONST_CORRECT_OVERLOADS が定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const**両方 C++ オーバー ロードについても、C++ の動作は、シンボル _CONST_RETURN を定義します。
+C では、これらの関数の実行、 **const**最初の引数のポインター。 C++ では、2 つのオーバーロードを使用できます。 ポインターを受け取るオーバー ロード**const**へのポインターを返します**const**; へのポインターを受け取る非バージョン**const**へのポインターを返す非**定数**. マクロ\_CRT\_CONST\_修正\_オーバー ロードが定義されている場合は、両方の**const**と非-**const**これらの関数のバージョンを利用できます。 必要な以外の場合**const** C++ では、両方の C++ オーバー ロードの動作のシンボルを定義する\_CONST\_を返します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -135,7 +135,7 @@ int main( void )
 }
 ```
 
-### <a name="output"></a>出力
+### <a name="output"></a>Output
 
 ```Output
 String to be searched:
