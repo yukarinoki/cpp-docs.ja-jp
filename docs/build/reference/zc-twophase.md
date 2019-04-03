@@ -9,12 +9,12 @@ helpviewer_keywords:
 - twoPhase
 - disable two-phase name lookup
 - /Zc:twoPhase
-ms.openlocfilehash: b9e94f131448cb9be6c31962ecd19607ceb1b708
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 5f990181fd1e606cf9d7dd33242752bed33aa456
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58776038"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898753"
 ---
 # <a name="zctwophase--disable-two-phase-name-lookup"></a>/Zc:twoPhase-(2 フェーズの名前参照を無効にする)
 
@@ -158,7 +158,7 @@ typename T::template X<T>::TYPE func(typename T::TYPE)
 
 **/Zc:twoPhase-** 以前のコンパイラでコンパイラのみが必要です、 `template` 2 行目にキーワード。 既定では、および準拠モードでは、コンパイラもが必要になりました、`template`キーワードがあることを示す 4 行`T::X<T>`はテンプレートです。 このキーワードが不足しているコードを確認し、標準に準拠しているコードを作成することを指定します。
 
-準拠の問題の詳細については、次を参照してください。 [Visual Studio での C++ 準拠の強化](../../overview/cpp-conformance-improvements-2017.md)と[非標準動作](../../cpp/nonstandard-behavior.md)します。
+準拠の問題の詳細については、次を参照してください。 [Visual Studio での C++ 準拠の強化](../../overview/cpp-conformance-improvements.md)と[非標準動作](../../cpp/nonstandard-behavior.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
