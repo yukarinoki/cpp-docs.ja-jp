@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: bcf2372f039ccec4b46bf51fb4da9f4175289f14
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58807713"
+---
 Visual Studio コンパイラおよびビルド ツールは、さまざまな種類のエラーと警告を報告できます。 エラーまたは警告が見つかると後、ビルド ツールがコードの意図を推測しようし、続けるには、同時に多くの問題を報告できるようにします。 ツールによるこの仮定が誤っていると、それ以降のエラーや警告がプロジェクトに適用されない場合があります。 プロジェクト内の問題を解決するときは、必ず、報告された最初のエラーまたは警告から開始し、多くの場合はリビルドしてください。 1 つの修正と、多くの後続のエラーは表示されなくなりました。
 
 Visual Studio での特定の診断メッセージのヘルプを表示するでを選択、**出力**ウィンドウとキーを押して、 **F1**キーが存在する場合は、そのエラーは、ドキュメント ページを開きます。 上記の検索ツールを使用して、特定のエラーまたは警告に関する記事を検索したり、エラーと警告ツールおよびナビゲーション ウィンドウの種類別の一覧を参照できます。
@@ -7,4 +15,4 @@ Visual Studio での特定の診断メッセージのヘルプを表示するで
 
 Microsoft のパブリック フォーラムで、他のサポートについてのエラーと警告のあります。 エラーまたは警告の数を検索することができます、[開発者コミュニティ](https://developercommunity.visualstudio.com/spaces/8/index.html)サイト。 エラーと警告検索およびで質問する可能性がありますも[Stack Overflow](http://stackoverflow.com/)解決策を検索します。
 
-追加のヘルプおよびコミュニティ リソースへのリンクを参照してください。 [Visual c ヘルプおよびコミュニティ](../../visual-cpp-help-and-community.md)します。
+追加のヘルプおよびコミュニティ リソースへのリンクを参照してください。 [Visual c ヘルプおよびコミュニティ](../../overview/visual-cpp-help-and-community.md)します。
