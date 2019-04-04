@@ -37,7 +37,7 @@ MSIL .dll、.exe、.netmodule、または .obj。例えば以下のようにし�
 `#using <MyComponent.dll>`
 
 *as_friend*<br/>
-すべての型にことを指定します。*ファイル*はアクセスできます。 詳細については、次を参照してください。[フレンド アセンブリ (C++)](../dotnet/friend-assemblies-cpp.md)します。
+すべての型にことを指定します。*ファイル*はアクセスできます。 詳細については、[フレンド アセンブリ (C++)](../dotnet/friend-assemblies-cpp.md)を参照してください。
 
 ## <a name="remarks"></a>Remarks
 
