@@ -17,7 +17,7 @@ ms.locfileid: "57273395"
 
 効率の向上およびオブジェクトのエラーのサポートを設計するには、ATL シンプル オブジェクト ウィザードのこのページを使用します。
 
-ATL プロジェクトや ATL COM クラスの詳細については、次を参照してください。 [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)します。
+ATL プロジェクトや ATL COM クラスの詳細については、[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)を参照してください。
 
 - **スレッド モデル**
 

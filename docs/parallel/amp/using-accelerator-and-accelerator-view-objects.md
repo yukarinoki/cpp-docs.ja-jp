@@ -172,11 +172,11 @@ bool pick_accelerator()
 
 3 つの特別なアクセラレータのデバイス パスは `accelerator` クラスのプロパティとして使用できます。
 
-- [accelerator::direct3d_ref データ メンバー](reference/accelerator-class.md#direct3d_ref):このシングル スレッド アクセラレータは、一般的なグラフィックス カードをエミュレートするために、CPU 上でソフトウェアを使用します。 これはデバッグのために既定で使用されますが、ハードウェア アクセラレータよりも遅いため、稼働中には役に立ちません。 また、DirectX SDK と Windows SDK でのみ使用が可能で、顧客のコンピューターにインストールされることはないと思われます。 詳細については、次を参照してください。 [GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)します。
+- [accelerator::direct3d_ref データ メンバー](reference/accelerator-class.md#direct3d_ref):このシングル スレッド アクセラレータは、一般的なグラフィックス カードをエミュレートするために、CPU 上でソフトウェアを使用します。 これはデバッグのために既定で使用されますが、ハードウェア アクセラレータよりも遅いため、稼働中には役に立ちません。 また、DirectX SDK と Windows SDK でのみ使用が可能で、顧客のコンピューターにインストールされることはないと思われます。 詳細については、[GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)を参照してください。
 
 - [accelerator::direct3d_warp データ メンバー](reference/accelerator-class.md#direct3d_warp):このアクセラレータは、ストリーミング SIMD 拡張命令 (SSE) を使用するマルチコア Cpu で C++ AMP コードを実行するためのフォールバック ソリューションを提供します。
 
-- [accelerator::cpu_accelerator データ メンバー](reference/accelerator-class.md#cpu_accelerator):ステージング配列を設定するため、このアクセラレータを使用することができます。 これは C++ AMP コードを実行できません。 詳細については、次を参照してください。、 [C++ AMP のステージング配列](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)ネイティブ コードのブログでの並行プログラミングに投稿します。
+- [accelerator::cpu_accelerator データ メンバー](reference/accelerator-class.md#cpu_accelerator):ステージング配列を設定するため、このアクセラレータを使用することができます。 これは C++ AMP コードを実行できません。 詳細については、、 [C++ AMP のステージング配列](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/11/09/staging-arrays-in-c-amp/)ネイティブ コードのブログでの並行プログラミングに投稿を参照してください。
 
 ## <a name="interoperability"></a>相互運用性
 

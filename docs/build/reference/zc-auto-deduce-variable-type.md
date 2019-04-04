@@ -28,11 +28,11 @@ ms.locfileid: "57822562"
 
 C++ 基準は、`auto` キーワードの元の意味と改定された意味を定義します。 Visual C 2010 では、前に、キーワードは、自動ストレージ クラスの変数を宣言します。つまり、変数を持つローカルな有効期間。 Visual C 2010 以降では、キーワードは宣言の初期化式から変数の型を推論します。 使用して、 **/Zc:auto [-]** の元のまたは改訂後の意味を使用するようにコンパイラに指示するコンパイラ オプション、`auto`キーワード。 **/Zc:auto**オプションが既定でオンです。 [/Permissive -](permissive-standards-conformance.md)オプションは既定の設定を変更してされません **/Zc:auto**します。
 
-場合、コンパイラは、適切な診断メッセージを発行の使用、`auto`キーワードが現在を満たしていない **/Zc:auto**コンパイラ オプション。 詳細については、次を参照してください。 [auto キーワード](../../cpp/auto-keyword.md)します。 Visual C の準拠の問題の詳細については、次を参照してください。[非標準動作](../../cpp/nonstandard-behavior.md)します。
+場合、コンパイラは、適切な診断メッセージを発行の使用、`auto`キーワードが現在を満たしていない **/Zc:auto**コンパイラ オプション。 詳細については、[auto キーワード](../../cpp/auto-keyword.md)を参照してください。 Visual C の準拠の問題の詳細については、[非標準動作](../../cpp/nonstandard-behavior.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-visual-studio"></a>このコンパイラ オプションを Visual Studio で使用するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 

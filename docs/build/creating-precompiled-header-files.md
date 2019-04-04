@@ -221,7 +221,7 @@ NMAKE
 NMAKE DEBUG=0
 ```
 
-メイクファイルの詳細については、次を参照してください。 [NMAKE リファレンス](reference/nmake-reference.md)します。 参照してください[MSVC コンパイラ オプション](reference/compiler-options.md)と[MSVC リンカー オプション](reference/linker-options.md)します。
+メイクファイルの詳細については、[NMAKE リファレンス](reference/nmake-reference.md)を参照してください。 参照してください[MSVC コンパイラ オプション](reference/compiler-options.md)と[MSVC リンカー オプション](reference/linker-options.md)します。
 
 ## <a name="example-code-for-pch"></a>PCH のサンプル コード
 

@@ -30,11 +30,11 @@ PDB ファイルに追加する Natvis ファイル。 Natvis ファイルの PD
 
 /NATVIS オプションには、Natvis ファイルで定義されているデバッガーの視覚化が埋め込まれる*filename* LINK によって生成される PDB ファイルにします。 これにより、デバッガーは .natvis ファイルとは無関係に視覚エフェクトを表示できます。 1 つ以上の Natvis ファイルを生成される PDB ファイルに埋め込むには、複数の/NATVIS オプションを使用できます。
 
-使用して PDB ファイルが作成されていない場合、リンクが/NATVIS を無視する[/debug](debug-generate-debug-info.md)オプション。 .Natvis ファイルの作成と使用については、次を参照してください。 [Visual Studio デバッガーでネイティブ オブジェクトのカスタム ビューの作成](/visualstudio/debugger/create-custom-views-of-native-objects)です。
+使用して PDB ファイルが作成されていない場合、リンクが/NATVIS を無視する[/debug](debug-generate-debug-info.md)オプション。 .Natvis ファイルの作成と使用については、[Visual Studio デバッガーでネイティブ オブジェクトのカスタム ビューの作成](/visualstudio/debugger/create-custom-views-of-native-objects)を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**コマンドライン**プロパティ ページで、**リンカー**フォルダー。
 

@@ -582,7 +582,7 @@ static int PASCAL GetLastError();
 
 特定のメンバー関数は、エラーが発生したことを示すとき`GetLastError`適切なエラー コードの取得を呼び出す必要があります。 該当するエラー コードの一覧については、個々 のメンバー関数の説明を参照してください。
 
-エラー コードの詳細については、次を参照してください。 [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)します。
+エラー コードの詳細については、[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)を参照してください。
 
 ##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName
 

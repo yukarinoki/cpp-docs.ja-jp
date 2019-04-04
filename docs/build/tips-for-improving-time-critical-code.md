@@ -147,7 +147,7 @@ Microsoft Foundation Classes (MFC) は、コードの作成を大幅に簡略化
 
 また、スレッドは通信問題を引き起こす場合があります。 メッセージのリストまたは共有メモリの割り当てと使用によって、スレッド間の通信リンクを管理する必要があります。 通信リンクの管理には、競合状態やデッドロック問題を回避するために、通常は同期が必要です。 この複雑さのせいで、バグやパフォーマンスの問題が簡単に生じ得ます。
 
-詳細については、次を参照してください。[アイドル ループ プロセシング](../mfc/idle-loop-processing.md)と[マルチ スレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)します。
+詳細については、[アイドル ループ プロセシング](../mfc/idle-loop-processing.md)と[マルチ スレッド](../parallel/multithreading-support-for-older-code-visual-cpp.md)を参照してください。
 
 ##  <a name="_core_small_working_set"></a> 小さな作業セット
 

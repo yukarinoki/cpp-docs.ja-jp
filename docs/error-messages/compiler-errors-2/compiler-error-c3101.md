@@ -19,7 +19,7 @@ ms.locfileid: "58779236"
 
 名前付き属性引数を初期化するときに、値は、コンパイル時間定数である必要があります。
 
-属性の詳細については、次を参照してください。[ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)します。
+属性の詳細については、[ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

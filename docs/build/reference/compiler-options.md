@@ -20,7 +20,7 @@ ms.locfileid: "57816517"
 cl.exe は、Microsoft Visual C (MSVC) C と C++ コンパイラとリンカーを制御するツールです。 cl.exe は、Microsoft Visual Studio for Windows をサポートするオペレーティング システムでのみ実行できます。
 
 > [!NOTE]
-> このツールは、Visual Studio 開発者コマンド プロンプトからのみ起動できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。 詳細については、次を参照してください。[コマンドラインから MSVC ツールセットを使用して](../building-on-the-command-line.md)します。
+> このツールは、Visual Studio 開発者コマンド プロンプトからのみ起動できます。 システム コマンド プロンプトやエクスプローラーからは開始できません。 詳細については、[コマンドラインから MSVC ツールセットを使用して](../building-on-the-command-line.md)を参照してください。
 
 コンパイラは、COFF (Common Object File Format) 形式のオブジェクト (.obj) ファイルを生成します。 リンカーは、実行可能 (.exe) ファイルまたはダイナミック リンク ライブラリ (DLL: Dynamic-Link Library) を生成します。
 

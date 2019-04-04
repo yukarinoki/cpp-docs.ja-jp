@@ -72,7 +72,7 @@ class CA2CAEX
 
 - CA2CA
 
-これらのテキスト変換マクロの詳細については、次を参照してください。 [ATL と MFC 文字列変換マクロ](string-conversion-macros.md)します。
+これらのテキスト変換マクロの詳細については、[ATL と MFC 文字列変換マクロ](string-conversion-macros.md)を参照してください。
 
 ## <a name="example"></a>例
 

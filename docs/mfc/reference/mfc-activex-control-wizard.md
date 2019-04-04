@@ -22,7 +22,7 @@ ms.locfileid: "57822679"
 ActiveX コントロールは、特定の種類の[オートメーション サーバー](../../mfc/automation-servers.md);、再利用可能なコンポーネントです。 ActiveX コントロールをホストするアプリケーションは、[オートメーション クライアント](../../mfc/automation-clients.md)を制御するのです。 場合は、目的が、このような再利用可能なコンポーネントを作成するには、コントロールを作成するこのウィザードを使用します。 参照してください[MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)詳細についてはします。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](../activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](../activex-controls.md)を参照してください。
 
 オートメーション サーバー MFC を使用するアプリケーションを作成する代わりに、 [MFC アプリケーション ウィザード](../../mfc/reference/mfc-application-wizard.md)します。
 
@@ -30,7 +30,7 @@ ActiveX コントロールは、特定の種類の[オートメーション サ�
 
 ActiveX コントロールは、複雑なユーザー インターフェイスを持つことができます。 カプセル化されたフォームのような一部のコントロールがあります: 1 つのコントロールの多くを格納しているフィールド、それぞれ独自の権限で Windows のコントロール。 など、MFC ActiveX コントロールとして実装される自動パーツ オブジェクトをユーザーが読み取りし、部品番号、パーツ名、およびその他の情報を編集フォームのようなユーザー インターフェイスを提供する可能性があります。 参照してください[MFC ActiveX コントロール](../../mfc/mfc-activex-controls.md)詳細についてはします。
 
-ActiveX オブジェクトのコンテナーを作成する必要がある場合は、次を参照してください。 [ActiveX コントロール コンテナーの作成](../../mfc/reference/creating-an-mfc-activex-control-container.md)です。
+ActiveX オブジェクトのコンテナーを作成する必要がある場合は、[ActiveX コントロール コンテナーの作成](../../mfc/reference/creating-an-mfc-activex-control-container.md)を参照してください。
 
 MFC のスターター プログラムには、C++ ソース (.cpp) ファイル、リソース (.rc) ファイル、およびプロジェクト (.vcxproj) ファイルが含まれています。 これらのスターター ファイルで生成されたコードは、MFC に基づいています。
 

@@ -81,7 +81,7 @@ CMFCWindowsManagerDialog(
 
 ### <a name="remarks"></a>Remarks
 
-ビジュアル マネージャーの詳細については、次を参照してください。[ビジュアル マネージャー](../../mfc/visualization-manager.md)します。
+ビジュアル マネージャーの詳細については、[ビジュアル マネージャー](../../mfc/visualization-manager.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -27,7 +27,7 @@ ms.locfileid: "57304913"
 
 1. 使用して、[メンバー変数の追加ウィザード](../ide/adding-a-member-variable-visual-cpp.md)型のメンバー変数を追加する[CTabCtrl](../mfc/reference/ctabctrl-class.md)コントロール プロパティにします。 このメンバーを使用するには、呼び出しと`CTabCtrl`メンバー関数。
 
-1. 処理する必要がある任意のタブ コントロール通知のメッセージのダイアログ クラスのハンドラー関数にマップします。 詳細については、次を参照してください。[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)します。
+1. 処理する必要がある任意のタブ コントロール通知のメッセージのダイアログ クラスのハンドラー関数にマップします。 詳細については、[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)を参照してください。
 
 1. [OnInitDialog](../mfc/reference/cdialog-class.md#oninitdialog)のスタイルを設定、`CTabCtrl`します。
 

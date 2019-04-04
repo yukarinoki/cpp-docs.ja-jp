@@ -165,7 +165,7 @@ OLE_APPTYPE の列挙体は、列挙子の値。H. 次の値のいずれかの�
 
 場合、`regFileTypeId`部分文字列が空または呼び出し`GetDocString`何らかの他の理由でこの関数が失敗したが失敗し、レジストリ、ファイルの情報が入力されていません。
 
-引数の情報は、 *rglpszRegister*と*rglpszOverwrite*を呼び出すことによって、レジストリに書き込まれる[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)します。 2 つの引数が NULL の場合、登録は、既定の情報は、ほとんどのアプリケーションに適しています。 これらの引数の情報の構造については、次を参照してください。`AfxOleRegisterServerClass`します。
+引数の情報は、 *rglpszRegister*と*rglpszOverwrite*を呼び出すことによって、レジストリに書き込まれる[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)します。 2 つの引数が NULL の場合、登録は、既定の情報は、ほとんどのアプリケーションに適しています。 これらの引数の情報の構造については、`AfxOleRegisterServerClass`を参照してください。
 
 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。
 

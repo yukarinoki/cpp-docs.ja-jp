@@ -22,7 +22,7 @@ NMAKE のオプションは、次の表で説明します。 オプションで�
 |/C|NMAKE の致命的でないエラーまたは警告、タイムスタンプ、および NMAKE の著作権メッセージを含むの既定の出力を抑制します。 /K. で発行される警告を抑制します。|
 |/D|それぞれのタイムスタンプを表示では、ターゲットと依存してメッセージ ターゲットが存在しない場合に評価されます。 メイクファイルのデバッグの/P に便利です。 使用 **!CMDSWITCHES**を設定またはメイクファイルの一部の/D をクリアします。|
 |/E|メイクファイルのマクロ定義をオーバーライドする環境変数をによりします。|
-|/ERRORREPORT[NONE &#124; PROMPT &#124; QUEUE &#124; SEND ]|Nmake.exe を実行時に失敗した場合、これらの内部エラーに関する情報を Microsoft に送信する/ERRORREPORT を使用することができます。<br /><br /> /ERRORREPORT の詳細については、次を参照してください。 [/errorReport (内部コンパイラ エラーを報告する)](errorreport-report-internal-compiler-errors.md)します。|
+|/ERRORREPORT[NONE &#124; PROMPT &#124; QUEUE &#124; SEND ]|Nmake.exe を実行時に失敗した場合、これらの内部エラーに関する情報を Microsoft に送信する/ERRORREPORT を使用することができます。<br /><br /> /ERRORREPORT の詳細については、[/errorReport (内部コンパイラ エラーを報告する)](errorreport-report-internal-compiler-errors.md)を参照してください。|
 |/F *filename*|指定します*filename*メイクファイルとして。 スペースまたはタブの前に記述できます*filename*します。 メイクファイルごとに 1 回/F を指定します。 標準入力からのメイクファイルを指定するには、ダッシュ (-) を指定*filename*、f6 キーまたは CTRL + Z のいずれかでキーボード入力を終了するとします。|
 |/G|含まれるメイクファイルを表示します。ディレクティブが含まれます。  参照してください[メイクファイルのプリプロセス ディレクティブ](makefile-preprocessing-directives.md)詳細についてはします。|
 |/HELP、/でしょうか。|NMAKE のコマンドライン構文の簡単な概要が表示されます。|

@@ -46,7 +46,7 @@ LRESULT CommandHandler(
 
 ## <a name="remarks"></a>Remarks
 
-このメッセージ ハンドラーを使用して、メッセージ マップの例は、次を参照してください。 [COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)します。
+このメッセージ ハンドラーを使用して、メッセージ マップの例は、[COMMAND_HANDLER](reference/message-map-macros-atl.md#command_handler)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

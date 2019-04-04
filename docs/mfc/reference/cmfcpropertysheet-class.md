@@ -160,7 +160,7 @@ void AddPage(CPropertyPage* pPage);
 
 このメソッドは、プロパティ シートの一番右のタブとして、指定したプロパティ ページを追加します。 そのため、このメソッドを使用して、左から右の順序でページを追加します。
 
-Microsoft Outlook のスタイルがプロパティ シートにある場合、フレームワークは、プロパティ シートの左側にあるナビゲーション ボタンの一覧を表示します。 このメソッドは、プロパティ ページを追加、リストに対応するボタンを追加します。 プロパティ ページを表示するには、その対応するボタンをクリックします。 プロパティ シートのスタイルの詳細については、次を参照してください。 [:setlook](#setlook)します。
+Microsoft Outlook のスタイルがプロパティ シートにある場合、フレームワークは、プロパティ シートの左側にあるナビゲーション ボタンの一覧を表示します。 このメソッドは、プロパティ ページを追加、リストに対応するボタンを追加します。 プロパティ ページを表示するには、その対応するボタンをクリックします。 プロパティ シートのスタイルの詳細については、[:setlook](#setlook)を参照してください。
 
 ##  <a name="addpagetotree"></a>  CMFCPropertySheet::AddPageToTree
 
@@ -487,7 +487,7 @@ void SetIconsList(HIMAGELIST hIcons);
 
 プロパティ シートは、Microsoft Outlook のスタイルでは、フレームワークは、プロパティ シートの左側にある Outlook ウィンドウのコントロールと呼ばれる、ナビゲーション ボタンの一覧を表示します。 このメソッドを使用すると、Outlook のウィンドウ コントロールで使用されるイメージのリストを設定できます。
 
-このメソッドをサポートする方法の詳細については、次を参照してください。 [CImageList::Create](../../mfc/reference/cimagelist-class.md#create)と[CImageList::Add](../../mfc/reference/cimagelist-class.md#add)します。 プロパティ シートのスタイルを設定する方法の詳細については、次を参照してください。 [:setlook](#setlook)します。
+このメソッドをサポートする方法の詳細については、[CImageList::Create](../../mfc/reference/cimagelist-class.md#create)と[CImageList::Add](../../mfc/reference/cimagelist-class.md#add)を参照してください。 プロパティ シートのスタイルを設定する方法の詳細については、[:setlook](#setlook)を参照してください。
 
 ##  <a name="setlook"></a>  CMFCPropertySheet::SetLook
 

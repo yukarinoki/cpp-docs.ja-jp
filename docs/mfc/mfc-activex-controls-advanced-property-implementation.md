@@ -18,7 +18,7 @@ ms.locfileid: "57266966"
 この記事では、ActiveX コントロールのプロパティを高度な実装に関連するトピックについて説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
 
 - [読み取り専用であり、書き込み専用のプロパティ](#_core_read2donly_and_write2donly_properties)
 

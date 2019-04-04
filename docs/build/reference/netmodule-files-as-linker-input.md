@@ -24,7 +24,7 @@ link.exe では、入力として MSIL .obj と .netmodule を今すぐ受け取
 
 コマンドラインからリンカーを呼び出す方法については、次を参照してください[リンカーのコマンドライン構文](linking.md)、[コマンドラインから MSVC ツールセットを使用して](../building-on-the-command-line.md)、および[パスと環境変数の設定。コマンド ライン ビルドの](../setting-the-path-and-environment-variables-for-command-line-builds.md)します。
 
-MSVC コンパイラをしてコンパイルされたリンカーに .netmodule または .dll ファイルを渡す **/clr**リンカー エラーが発生することができます。 詳細については、次を参照してください。 [.netmodule 入力ファイルの形式を選択する](choosing-the-format-of-netmodule-input-files.md)します。
+MSVC コンパイラをしてコンパイルされたリンカーに .netmodule または .dll ファイルを渡す **/clr**リンカー エラーが発生することができます。 詳細については、[.netmodule 入力ファイルの形式を選択する](choosing-the-format-of-netmodule-input-files.md)を参照してください。
 
 リンカーは、ネイティブの .obj ファイルだけでコンパイルされた MSIL .obj ファイルを受け入れる **/clr**します。 同じビルドで混合の .obj を渡すと、生成される出力ファイルの検証可能性は、既定では、最低レベルの入力モジュールの検証可能性と等しくなります。
 

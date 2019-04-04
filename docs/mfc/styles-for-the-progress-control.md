@@ -40,7 +40,7 @@ PBS_SMOOTH と PBS_VERTICAL スタイル。
 
 ![進行状況バーがスタイル、スムーズおよび垂直方向](../mfc/media/vc4ruw2.gif "バーのスタイル、スムーズおよび垂直方向の進行状況")
 
-詳細については、次を参照してください。[ウィンドウ スタイル](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc)で、 *MFC リファレンス*します。
+詳細については、[ウィンドウ スタイル](../mfc/reference/styles-used-by-mfc.md#frame-window-styles-mfc)で、 *MFC リファレンス*を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

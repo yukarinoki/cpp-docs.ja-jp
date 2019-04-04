@@ -22,7 +22,7 @@ ms.locfileid: "57284178"
 バイトニック ソートの例に示しますが、*ソーティング ネットワーク*入力シーケンスのすべての組み合わせを並べ替えますが、この例は、シーケンスの長さが 2 の累乗を並べ替えます。
 
 > [!NOTE]
->  この例では、例を示す目的で、並列並べ替えルーチンを使用します。 PPL では、組み込みの並べ替えアルゴリズムを使用することもできます: [:parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)、 [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)、および[concurrency::parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)します。 詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+>  この例では、例を示す目的で、並列並べ替えルーチンを使用します。 PPL では、組み込みの並べ替えアルゴリズムを使用することもできます: [:parallel_sort](reference/concurrency-namespace-functions.md#parallel_sort)、 [concurrency::parallel_buffered_sort](reference/concurrency-namespace-functions.md#parallel_buffered_sort)、および[concurrency::parallel_radixsort](reference/concurrency-namespace-functions.md#parallel_radixsort)します。 詳細については、[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)を参照してください。
 
 ##  <a name="top"></a> セクション
 
@@ -34,8 +34,7 @@ ms.locfileid: "57284178"
 
 ##  <a name="serial"></a> バイトニック ソートを逐次的に実行します。
 
-次の例は、逐次的なバイトニック ソート アルゴリズムを示しています。 
-  `bitonic_sort` 関数は、シーケンスを 2 つのパーティションに分割し、一方のパーティションは昇順に、もう一方のパーティションは降順に並べ替えた後、その結果をマージします。 この関数は、自分自身を 2 回再帰的に呼び出して、それぞれのパーティションを並べ替えます。
+次の例は、逐次的なバイトニック ソート アルゴリズムを示しています。 `bitonic_sort` 関数は、シーケンスを 2 つのパーティションに分割し、一方のパーティションは昇順に、もう一方のパーティションは降順に並べ替えた後、その結果をマージします。 この関数は、自分自身を 2 回再帰的に呼び出して、それぞれのパーティションを並べ替えます。
 
 [!code-cpp[concrt-parallel-bitonic-sort#1](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_1.cpp)]
 
@@ -53,13 +52,11 @@ ms.locfileid: "57284178"
 
 [!code-cpp[concrt-parallel-bitonic-sort#10](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_2.cpp)]
 
-1. 
-  `using` 名前空間の `concurrency` ディレクティブを追加します。
+1. `using` 名前空間の `concurrency` ディレクティブを追加します。
 
 [!code-cpp[concrt-parallel-bitonic-sort#11](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_3.cpp)]
 
-1. 
-  `parallel_bitonic_mege` という新しい関数を作成します。この関数は、十分な処理量がある場合に、`parallel_invoke` アルゴリズムを使用してシーケンスを並列にマージします。 それ以外の場合は、`bitonic_merge` を呼び出してシーケンスを逐次的にマージします。
+1. `parallel_bitonic_mege` という新しい関数を作成します。この関数は、十分な処理量がある場合に、`parallel_invoke` アルゴリズムを使用してシーケンスを並列にマージします。 それ以外の場合は、`bitonic_merge` を呼び出してシーケンスを逐次的にマージします。
 
 [!code-cpp[concrt-parallel-bitonic-sort#2](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_4.cpp)]
 
@@ -71,8 +68,7 @@ ms.locfileid: "57284178"
 
 [!code-cpp[concrt-parallel-bitonic-sort#4](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_6.cpp)]
 
-
-  `parallel_invoke` アルゴリズムは、オーバーヘッドを低減するために、一連のタスクの最後のタスクを呼び出し元のコンテキストで実行します。 たとえば、`parallel_bitonic_sort` 関数では、1 つ目のタスクは別のコンテキストで実行され、2 つ目のタスクは呼び出し元のコンテキストで実行されます。
+`parallel_invoke` アルゴリズムは、オーバーヘッドを低減するために、一連のタスクの最後のタスクを呼び出し元のコンテキストで実行します。 たとえば、`parallel_bitonic_sort` 関数では、1 つ目のタスクは別のコンテキストで実行され、2 つ目のタスクは呼び出し元のコンテキストで実行されます。
 
 [!code-cpp[concrt-parallel-bitonic-sort#5](../../parallel/concrt/codesnippet/cpp/how-to-use-parallel-invoke-to-write-a-parallel-sort-routine_7.cpp)]
 
@@ -97,8 +93,7 @@ parallel time: 1248
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
-この例では、`parallel_invoke`アルゴリズムの代わりに、 [concurrency::task_group](reference/task-group-class.md)クラスの各タスク グループの有効期間が関数を超える拡張しないためです。 
-  `parallel_invoke` オブジェクトと比べて実行に伴うオーバーヘッドが低く、よりパフォーマンスに優れたコードを記述できるため、できる限り `task group` の使用をお勧めします。
+この例では、`parallel_invoke`アルゴリズムの代わりに、 [concurrency::task_group](reference/task-group-class.md)クラスの各タスク グループの有効期間が関数を超える拡張しないためです。 `parallel_invoke` オブジェクトと比べて実行に伴うオーバーヘッドが低く、よりパフォーマンスに優れたコードを記述できるため、できる限り `task group` の使用をお勧めします。
 
 アルゴリズムにもよりますが、並列化によってパフォーマンスの向上が見込めるのは、十分な処理量が存在する場合に限られます。 たとえば、`parallel_bitonic_merge` 関数では、シーケンスに含まれる要素数が 500 未満の場合、逐次実行版の `bitonic_merge` を呼び出すようにしています。 また、処理量に基づいて全体的な並べ替え方法を計画することもできます。 たとえば、次の例に示すように、配列に含まれる項目が 500 未満の場合、逐次実行版のクイック ソート アルゴリズムを使用した方が効率的であることがあります。
 

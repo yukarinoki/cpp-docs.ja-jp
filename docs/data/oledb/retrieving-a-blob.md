@@ -15,7 +15,7 @@ ms.locfileid: "57423249"
 ---
 # <a name="retrieving-a-blob"></a>BLOB の取得
 
-さまざまな方法でバイナリ ラージ オブジェクト (BLOB) を取得することができます。 使用することができます`DBTYPE_BYTES`バイトのシーケンスとして BLOB を取得またはのようなインターフェイスを使用する`ISequentialStream`します。 詳細については、次を参照してください。 [BLOB と OLE オブジェクト](/previous-versions/windows/desktop/ms711511(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**します。
+さまざまな方法でバイナリ ラージ オブジェクト (BLOB) を取得することができます。 使用することができます`DBTYPE_BYTES`バイトのシーケンスとして BLOB を取得またはのようなインターフェイスを使用する`ISequentialStream`します。 詳細については、[BLOB と OLE オブジェクト](/previous-versions/windows/desktop/ms711511(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**を参照してください。
 
 次のコードを使用して BLOB を取得する方法を示しています。`ISequentialStream`します。 マクロ[BLOB_ENTRY](../../data/oledb/blob-entry.md)インターフェイス、インターフェイスを使用するフラグを指定することができます。 コードを呼び出して、テーブルを開いた後`Read`で繰り返し`ISequentialStream`BLOB からバイトを読み取ります。 コードでは、`Release`呼び出す前に、インターフェイス ポインターを破棄する`MoveNext`を次のレコードを取得します。
 
@@ -51,7 +51,7 @@ while (categories.MoveNext() == S_OK)
 }
 ```
 
-BLOB データを処理するマクロの詳細については、次を参照してください。**列マップ マクロ**で[マクロおよび OLE DB コンシューマー テンプレート用のグローバル関数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)します。
+BLOB データを処理するマクロの詳細については、**列マップ マクロ**で[マクロおよび OLE DB コンシューマー テンプレート用のグローバル関数](../../data/oledb/macros-and-global-functions-for-ole-db-consumer-templates.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

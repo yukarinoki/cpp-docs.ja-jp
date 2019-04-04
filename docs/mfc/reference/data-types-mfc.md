@@ -35,7 +35,7 @@ ms.locfileid: "57284802"
 
 このトピックでは、Microsoft Foundation Class ライブラリで最もよく使用されるデータ型を使用します。 ほとんどのデータ型は、他のユーザーは MFC 固有プラットフォーム ソフトウェア開発キット (SDK) のと同じです。
 
-Windows SDK と MFC の両方で使用されるデータ型については、次を参照してください。[データ型の Windows](/windows/desktop/WinProg/windows-data-types)します。
+Windows SDK と MFC の両方で使用されるデータ型については、[データ型の Windows](/windows/desktop/WinProg/windows-data-types)を参照してください。
 
 Microsoft Foundation Class ライブラリに固有のデータ型を以下に示します。
 

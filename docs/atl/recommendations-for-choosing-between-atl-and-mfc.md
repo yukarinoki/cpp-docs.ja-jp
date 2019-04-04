@@ -26,7 +26,7 @@ MFC では、完全なアプリケーション、ActiveX コントロール、�
 
 ## <a name="using-atl-in-an-mfc-project"></a>MFC プロジェクトで ATL を使用します。
 
-ウィザードを実行して既存の MFC プロジェクトで ATL を使用するためのサポートを追加することができます。 詳細については、次を参照してください。 [MFC プロジェクトへの ATL サポートの追加](../mfc/reference/adding-atl-support-to-your-mfc-project.md)します。
+ウィザードを実行して既存の MFC プロジェクトで ATL を使用するためのサポートを追加することができます。 詳細については、[MFC プロジェクトへの ATL サポートの追加](../mfc/reference/adding-atl-support-to-your-mfc-project.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

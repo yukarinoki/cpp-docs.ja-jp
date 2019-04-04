@@ -27,7 +27,7 @@ ms.locfileid: "57281045"
 
 ラバー バンド処理中にトラッカーの元に戻すことの向きを許可する場合を呼び出す必要があります[CRectTracker::TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) 3 番目のパラメーターを設定して**TRUE**します。 向きを元に戻すことを許可することが原因場合がありますに注意してください。[裏返し](../mfc/reference/crecttracker-class.md#m_rect)反転になります。 これへの呼び出しによって修正できる[CRect::NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect)します。
 
-詳細については、次を参照してください。[コンテナー クライアント アイテム](../mfc/containers-client-items.md)と[をカスタマイズするドラッグ アンド ドロップ](../mfc/drag-and-drop-customizing.md)します。
+詳細については、[コンテナー クライアント アイテム](../mfc/containers-client-items.md)と[をカスタマイズするドラッグ アンド ドロップ](../mfc/drag-and-drop-customizing.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

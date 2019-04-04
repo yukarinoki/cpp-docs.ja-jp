@@ -96,14 +96,12 @@ false>>;
 
 |名前|説明|
 |----------|-----------------|
-|[at](#at)|オーバーロードされます。 
-  `concurrent_unordered_map` 内の指定されたキー値を持つ要素を検索します。 このメソッドはコンカレンシー セーフです。|
+|[at](#at)|オーバーロードされます。 `concurrent_unordered_map` 内の指定されたキー値を持つ要素を検索します。 このメソッドはコンカレンシー セーフです。|
 |[hash_function](#hash_function)|格納されているハッシュ関数オブジェクトを取得します。|
 |[insert](#insert)|オーバーロードされます。 要素を `concurrent_unordered_map` オブジェクトに追加します。|
 |[key_eq](#key_eq)|格納された等価比較関数のオブジェクトを取得します。|
 |[swap](#swap)|2 つの `concurrent_unordered_map` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。|
-|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 
-  `concurrent_unordered_map` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
+|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 `concurrent_unordered_map` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -132,8 +130,7 @@ false>>;
 
 ##  <a name="at"></a> で
 
-
-  `concurrent_unordered_map` 内の指定されたキー値を持つ要素を検索します。 このメソッドはコンカレンシー セーフです。
+`concurrent_unordered_map` 内の指定されたキー値を持つ要素を検索します。 このメソッドはコンカレンシー セーフです。
 
 ```
 mapped_type& at(const key_type& KVal);

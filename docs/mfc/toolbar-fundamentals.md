@@ -74,7 +74,7 @@ ms.locfileid: "58775492"
 
 新しい[CToolBar](../mfc/reference/ctoolbar-class.md)メンバー関数は、 **RT_TOOLBAR**リソース。 [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar)の場所を受け取るようになりました[LoadBitmap](../mfc/reference/ctoolbar-class.md#loadbitmap)ツールバー ボタンのイメージのビットマップの読み込みと[SetButtons](../mfc/reference/ctoolbar-class.md#setbuttons)ボタンのスタイルを設定し、ビットマップ イメージにボタンを接続します。
 
-ツール バー エディターの使用に関する詳細については、次を参照してください。[ツール バー エディター](../windows/toolbar-editor.md)します。
+ツール バー エディターの使用に関する詳細については、[ツール バー エディター](../windows/toolbar-editor.md)を参照してください。
 
 ##  <a name="_core_multiple_toolbars"></a> 複数のツールバー
 

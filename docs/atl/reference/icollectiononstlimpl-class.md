@@ -79,7 +79,7 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-互換性のある
 
 - 項目の追加、 [m_coll](#m_coll)コレクションを設定するメンバー。
 
-詳細と例については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。
+詳細と例については、[ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

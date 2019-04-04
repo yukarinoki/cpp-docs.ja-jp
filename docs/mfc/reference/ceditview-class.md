@@ -112,7 +112,7 @@ class CEditView : public CCtrlView
 
 クラスの既定の実装`CEditView`次のコマンドを処理します。ID_EDIT_SELECT_ALL、ID_EDIT_FIND、ID_EDIT_REPLACE、ID_EDIT_REPEAT、および ID_FILE_PRINT します。
 
-既定の文字制限`CEditView`は (1024 \* 1024-1 = 1048575)。 これは、基になるエディット コントロールの EM_LIMITTEXT 関数を呼び出すことによって変更できます。 ただし、制限は、オペレーティング システムによって異なりますの種類の編集コントロール (1 つまたは複数行)。 これらの制限に関する詳細については、次を参照してください。 [EM_LIMITTEXT](/windows/desktop/Controls/em-limittext)します。
+既定の文字制限`CEditView`は (1024 \* 1024-1 = 1048575)。 これは、基になるエディット コントロールの EM_LIMITTEXT 関数を呼び出すことによって変更できます。 ただし、制限は、オペレーティング システムによって異なりますの種類の編集コントロール (1 つまたは複数行)。 これらの制限に関する詳細については、[EM_LIMITTEXT](/windows/desktop/Controls/em-limittext)を参照してください。
 
 コントロールでは、この制限を変更する、`OnCreate()`関数を`CEditView`クラスし、次のコード行を挿入します。
 

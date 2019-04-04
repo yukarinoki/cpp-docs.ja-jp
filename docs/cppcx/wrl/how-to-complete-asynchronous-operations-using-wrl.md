@@ -19,14 +19,14 @@ ms.locfileid: "58785414"
 コンポーネントのインスタンスを作成し、プロパティ値を取得する基本的な例は、次を参照してください。[方法。アクティブ化し、Windows ランタイム コンポーネントを使用して、](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)します。
 
 > [!TIP]
-> これらの例では、コールバックを定義するためにラムダ式を使用します。 関数オブジェクト (ファンクター)、関数ポインターを使用することもできます。 または[std::function](../../standard-library/function-class.md)オブジェクト。 C++ のラムダ式の詳細については、次を参照してください。[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)します。
+> これらの例では、コールバックを定義するためにラムダ式を使用します。 関数オブジェクト (ファンクター)、関数ポインターを使用することもできます。 または[std::function](../../standard-library/function-class.md)オブジェクト。 C++ のラムダ式の詳細については、[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)を参照してください。
 
 ## <a name="example-working-with-a-timer"></a>例:タイマーを使用した作業
 
 以下の手順では、非同期タイマーを開始し、そのタイマーが期限切れになるのを待機します。 完全な例を次に示します。
 
 > [!WARNING]
-> 通常は、ユニバーサル Windows プラットフォーム (UWP) アプリで Windows ランタイム C++ テンプレート ライブラリを使用して、この例は、図のコンソール アプリを使用します。 などの関数`wprintf_s`UWP アプリからは使用できません。 型および UWP アプリで使用できる関数の詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)と[Win32 および COM UWP アプリの](/uwp/win32-and-com/win32-and-com-for-uwp-apps)します。
+> 通常は、ユニバーサル Windows プラットフォーム (UWP) アプリで Windows ランタイム C++ テンプレート ライブラリを使用して、この例は、図のコンソール アプリを使用します。 などの関数`wprintf_s`UWP アプリからは使用できません。 型および UWP アプリで使用できる関数の詳細については、[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)と[Win32 および COM UWP アプリの](/uwp/win32-and-com/win32-and-com-for-uwp-apps)を参照してください。
 
 1. 含まれます (`#include`) 必須の Windows ランタイム、Windows ランタイム C++ テンプレート ライブラリ、または C++ 標準ライブラリ ヘッダー。
 

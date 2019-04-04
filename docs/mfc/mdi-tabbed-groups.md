@@ -58,7 +58,7 @@ MDI タブ付きグループの機能は、次のとおりです。
 
 - ユーザーがタブをクリックしてまたは別の MDI タブ付きグループにドラッグしたときにショートカット メニューを表示するには、オーバーライド`CMDIFrameWndEx::OnShowMDITabContextMenu`で、 `CMDIFrameWndEx`-クラスを派生します。 このメソッドを実装していない場合でも、アプリケーションでは、ショートカット メニューは表示されません。
 
-- アプリケーションで MDI タブ付きグループのレイアウトを保存する`CMDIFrameWndEx::SaveMDIState`します。 タブ付きグループのプロファイルを以前に保存した MDI を読み込むには、`CMDIFrameWndEx::LoadMDIState`します。 読み込みまたは MDI アプリケーションで開かれたドキュメントの一覧を保存するこれらのメソッドを呼び出すこともできます。 保存と読み込みの状態の MDI の詳細については、次を参照してください。 [CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate)します。
+- アプリケーションで MDI タブ付きグループのレイアウトを保存する`CMDIFrameWndEx::SaveMDIState`します。 タブ付きグループのプロファイルを以前に保存した MDI を読み込むには、`CMDIFrameWndEx::LoadMDIState`します。 読み込みまたは MDI アプリケーションで開かれたドキュメントの一覧を保存するこれらのメソッドを呼び出すこともできます。 保存と読み込みの状態の MDI の詳細については、[CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

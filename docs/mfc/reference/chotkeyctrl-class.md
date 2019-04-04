@@ -313,7 +313,7 @@ void SetRules(
 - HKCOMB_SCA SHIFT + CTRL + ALT
 
 *と*<br/>
-ユーザーが、無効な組み合わせを入力するときに使用するキーの組み合わせを指定するフラグの配列。 修飾フラグの詳細については、次を参照してください。 [GetHotKey](#gethotkey)します。
+ユーザーが、無効な組み合わせを入力するときに使用するキーの組み合わせを指定するフラグの配列。 修飾フラグの詳細については、[GetHotKey](#gethotkey)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

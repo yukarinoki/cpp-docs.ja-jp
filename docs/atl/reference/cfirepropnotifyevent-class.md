@@ -46,7 +46,7 @@ class CFirePropNotifyEvent
 
 場合は、制御を実装するクラスから派生`IPropertyNotifySink`、`CFirePropNotifyEvent`メソッドを呼び出すときに呼び出す`FireOnRequestEdit`または`FireOnChanged`します。 コントロール クラスを派生していない場合`IPropertyNotifySink`、これらの関数の呼び出しが S_OK を返します。
 
-コントロールの作成の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。
+コントロールの作成の詳細については、、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -43,13 +43,13 @@ Microsoft では、`wchar_t` が 2 バイトの符号なしの値として実装
 
 ときに **/Zc:wchar_t**が指定されている **\_WCHAR\_T\_定義**と**\_ネイティブ\_WCHAR\_T\_定義**シンボルが定義されます。 詳細については、「 [Predefined Macros](../../preprocessor/predefined-macros.md)」を参照してください。
 
-に、コードがコンパイラ COM グローバル関数を使用する場合 **/Zc:wchar_t**は既定では、お勧め comsupp.lib への明示的な参照を変更するようになりました (のいずれかから、[コメント プラグマ](../../preprocessor/comment-c-cpp.md)か、または、コマンド ライン) comsuppw.lib または comsuppwd.lib のいずれかにします。 (指定してコンパイルする必要がある場合 **/Zc:wchar_t-** comsupp.lib を使用します)。comdef.h のヘッダー ファイルを含めると、適切なライブラリが自動的に指定されます。 コンパイラ COM サポートについては、次を参照してください。[コンパイラ COM サポート](../../cpp/compiler-com-support.md)します。
+に、コードがコンパイラ COM グローバル関数を使用する場合 **/Zc:wchar_t**は既定では、お勧め comsupp.lib への明示的な参照を変更するようになりました (のいずれかから、[コメント プラグマ](../../preprocessor/comment-c-cpp.md)か、または、コマンド ライン) comsuppw.lib または comsuppwd.lib のいずれかにします。 (指定してコンパイルする必要がある場合 **/Zc:wchar_t-** comsupp.lib を使用します)。comdef.h のヘッダー ファイルを含めると、適切なライブラリが自動的に指定されます。 コンパイラ COM サポートについては、[コンパイラ COM サポート](../../cpp/compiler-com-support.md)を参照してください。
 
-`wchar_t` C コードをコンパイルするときに、組み込み型がサポートされていません。 Visual C の準拠の問題の詳細については、次を参照してください。[非標準動作](../../cpp/nonstandard-behavior.md)します。
+`wchar_t` C コードをコンパイルするときに、組み込み型がサポートされていません。 Visual C の準拠の問題の詳細については、[非標準動作](../../cpp/nonstandard-behavior.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**構成プロパティ** > **C/C++** > **言語**ページ。
 

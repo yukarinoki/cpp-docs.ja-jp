@@ -34,7 +34,7 @@ Windows Vista のみをサポートし、後で、その他の中にいくつか
 
 Visual Studio 統合開発環境 (IDE) でアプリケーションをビルドする場合は、指定、 **Unicode 文字セットを**のオプション、**文字セット**プロパティ、**全般**プロジェクトのプロパティのノード。
 
-Windows コモン コントロール バージョン 6.1 以降、ANSI バージョンのいくつかの MFC メソッドを推奨されていませんが。 詳細については、次を参照してください。[非推奨の ANSI Api](../mfc/deprecated-ansi-apis.md)します。
+Windows コモン コントロール バージョン 6.1 以降、ANSI バージョンのいくつかの MFC メソッドを推奨されていませんが。 詳細については、[非推奨の ANSI Api](../mfc/deprecated-ansi-apis.md)を参照してください。
 
 ## <a name="migration-requirements"></a>移行の要件
 

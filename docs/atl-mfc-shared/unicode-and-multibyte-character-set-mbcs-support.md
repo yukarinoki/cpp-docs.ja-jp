@@ -89,7 +89,7 @@ DBCS では、文字列の中に任意の ANSI の 1 バイト文字と 2 バイ
 > [!NOTE]
 > _UNICODE、_MBCS のシンボルは、相互に排他的です。
 
-すべてのランタイム文字列処理ルーチンの汎用テキスト関数マッピングは、後ほど[C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)します。 一覧については、次を参照してください。[国際化](../c-runtime-library/internationalization.md)します。
+すべてのランタイム文字列処理ルーチンの汎用テキスト関数マッピングは、後ほど[C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)します。 一覧については、[国際化](../c-runtime-library/internationalization.md)を参照してください。
 
 同様に、`CString`メソッドは、汎用的なデータ型マッピングを使用して実装されます。 TCHAR を使用する MFC MBCS および Unicode の両方を有効にするには、 **char**または`wchar_t`の LPTSTR **char** <strong>\*</strong>または`wchar_t*`、およびのLPCTSTR**const char** <strong>\*</strong>または`const wchar_t*`します。 これによって、MBCS または Unicode への正しいマッピングが確保されます。
 

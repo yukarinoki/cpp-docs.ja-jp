@@ -304,7 +304,7 @@ DWORD m_dwMsgMapID;
 
 宣言された既定のメッセージ マップ[送るに](message-map-macros-atl.md#begin_msg_map)、常に 0 で識別されます。 宣言された、代替メッセージ マップ[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)、によって識別される`msgMapID`します。
 
-`m_dwMsgMapID` コンス トラクターで初期化が、呼び出すことによって変更できます[SwitchMessageMap](#switchmessagemap)します。 例については、次を参照してください。、 [CContainedWindowT 概要](../../atl/reference/ccontainedwindowt-class.md)します。
+`m_dwMsgMapID` コンス トラクターで初期化が、呼び出すことによって変更できます[SwitchMessageMap](#switchmessagemap)します。 例については、、 [CContainedWindowT 概要](../../atl/reference/ccontainedwindowt-class.md)を参照してください。
 
 ##  <a name="m_lpszclassname"></a>  CContainedWindowT::m_lpszClassName
 

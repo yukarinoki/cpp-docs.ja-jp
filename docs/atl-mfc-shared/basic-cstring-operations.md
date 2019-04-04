@@ -53,7 +53,7 @@ C スタイルのリテラル文字列を割り当てることができます、
    内容を`CString`1 つのときに、オブジェクトがコピーされる`CString`オブジェクトは別に割り当てられます。 そのため、2 つの文字列では、文字列を構成する実際の文字への参照は共有されません。 使用する方法の詳細についての`CString`を値としてオブジェクトを参照してください[CString セマンティクス](../atl-mfc-shared/cstring-semantics.md)します。
 
    > [!NOTE]
-   > Unicode または ANSI 用にコンパイルできるように、アプリケーションを作成するには、_T マクロを使用して、リテラル文字列を記述します。 詳細については、次を参照してください。 [Unicode およびマルチバイト文字セット (MBCS) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)します。
+   > Unicode または ANSI 用にコンパイルできるように、アプリケーションを作成するには、_T マクロを使用して、リテラル文字列を記述します。 詳細については、[Unicode およびマルチバイト文字セット (MBCS) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)を参照してください。
 
 ##  <a name="_core_accessing_individual_characters_in_a_cstring"></a> CString の個々 の文字へのアクセス
 

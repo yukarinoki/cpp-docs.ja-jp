@@ -31,11 +31,11 @@ ms.locfileid: "57807443"
 
 ## <a name="remarks"></a>Remarks
 
-/DEF オプションは、モジュール定義ファイル (.def) をリンカーに渡します。 1 つだけの .def ファイルは、リンクを指定できます。 詳細については、.def ファイルは、次を参照してください。[モジュール定義ファイル](module-definition-dot-def-files.md)します。
+/DEF オプションは、モジュール定義ファイル (.def) をリンカーに渡します。 1 つだけの .def ファイルは、リンクを指定できます。 詳細については、.def ファイルは、[モジュール定義ファイル](module-definition-dot-def-files.md)を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. をクリックして、**リンカー**フォルダー。
 

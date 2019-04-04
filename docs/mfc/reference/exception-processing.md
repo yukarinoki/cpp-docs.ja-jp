@@ -315,7 +315,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ### <a name="parameters"></a>パラメーター
 
 *cause*<br/>
-例外の原因を示す整数を指定します。 使用可能な値については、次を参照してください。 [CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)します。
+例外の原因を示す整数を指定します。 使用可能な値については、[CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)を参照してください。
 
 *lpszArchiveName*<br/>
 名前を含む文字列の指す、 `CArchive` (該当する場合)、例外の原因となったオブジェクト。
@@ -338,7 +338,7 @@ void AfxThrowFileException(
 ### <a name="parameters"></a>パラメーター
 
 *cause*<br/>
-例外の原因を示す整数を指定します。 使用可能な値については、次を参照してください。[については、「](../../mfc/reference/cfileexception-class.md#m_cause)します。
+例外の原因を示す整数を指定します。 使用可能な値については、[については、「](../../mfc/reference/cfileexception-class.md#m_cause)を参照してください。
 
 *lOsError*<br/>
 オペレーティング システムのエラー番号が含まれています (ある場合)、例外の原因を示します。 エラー コードの一覧については、オペレーティング システムのマニュアルを参照してください。
@@ -515,7 +515,7 @@ void AFXAPI AfxThrowDaoException(
 DAO の拡張エラー コードを表す整数値、することができます、値の 1 つ下に表示されます[CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)します。
 
 *scode*<br/>
-DAO、SCODE 型から OLE エラー コード。 詳しくは、次を参照してください。 [CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode)します。
+DAO、SCODE 型から OLE エラー コード。 詳しくは、[CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

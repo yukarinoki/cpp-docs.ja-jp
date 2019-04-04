@@ -35,11 +35,11 @@ ms.locfileid: "57818454"
 
 実行可能ファイルの分離を無効にする、Windows ローダーは、アプリケーション マニフェストを新しく作成されたプロセスを検索する試行しません。 新しいプロセスがない既定のアクティベーション コンテキスト内で実行可能ファイルまたは名前の実行可能ファイルと同じディレクトリに配置マニフェストがある場合でも<em>実行可能ファイル名</em>**. exe.manifest**します。
 
-詳細については、次を参照してください。 [Manifest Files Reference](/windows/desktop/SbsCs/manifest-files-reference)します。
+詳細については、[Manifest Files Reference](/windows/desktop/SbsCs/manifest-files-reference)を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**構成プロパティ** > **リンカー** > **マニフェスト ファイル**プロパティ ページ。
 

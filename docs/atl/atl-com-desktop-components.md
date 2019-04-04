@@ -14,7 +14,7 @@ ms.locfileid: "58780432"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM デスクトップ コンポーネント
 
-ATL リファレンスで、Active Template Library (ATL)、一連のコンポーネント オブジェクト モデル (COM) オブジェクトのプログラミングを簡略化するテンプレート ベースの C++ クラスについて説明します。 COM は、バイナリの仕様を作成および Windows 上のソフトウェア コンポーネントを使用するためです。 完全に活用するために ATL、COM に精通する作業は強くお勧めします。 COM の詳細については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/component-object-model--com--portal)します。
+ATL リファレンスで、Active Template Library (ATL)、一連のコンポーネント オブジェクト モデル (COM) オブジェクトのプログラミングを簡略化するテンプレート ベースの C++ クラスについて説明します。 COM は、バイナリの仕様を作成および Windows 上のソフトウェア コンポーネントを使用するためです。 完全に活用するために ATL、COM に精通する作業は強くお勧めします。 COM の詳細については、[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/component-object-model--com--portal)を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

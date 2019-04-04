@@ -75,13 +75,13 @@ C ランタイム ライブラリと指定してコンパイルしたときに�
 
 リンカーの特定の呼び出しに渡されるすべてのモジュールを同じランタイム ライブラリ コンパイラ オプションでコンパイルする必要があります (**/MD**、 **/MT**、 **/LD**)。
 
-ランタイム ライブラリのデバッグ バージョンを使用する方法の詳細については、次を参照してください。 [C ランタイム ライブラリ リファレンス](../../c-runtime-library/c-run-time-library-reference.md)します。
+ランタイム ライブラリのデバッグ バージョンを使用する方法の詳細については、[C ランタイム ライブラリ リファレンス](../../c-runtime-library/c-run-time-library-reference.md)を参照してください。
 
-詳細については、Dll は、次を参照してください。 [Visual c の Dll](../dlls-in-visual-cpp.md)します。
+詳細については、Dll は、[Visual c の Dll](../dlls-in-visual-cpp.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 展開、 **C/C++** フォルダー。
 

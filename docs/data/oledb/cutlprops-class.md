@@ -75,7 +75,7 @@ class ATL_NO_VTABLE CUtlProps : public CUtlPropsBase
 
 `CUtlProps` 内部的にプロパティを設定するため、2 つのメンバーが含まれています。[GetPropValue](../../data/oledb/cutlprops-getpropvalue.md)と[SetPropValue](../../data/oledb/cutlprops-setpropvalue.md)します。
 
-プロパティ セットのマップで使用されるマクロの詳細については、次を参照してください。 [BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)と[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)します。
+プロパティ セットのマップで使用されるマクロの詳細については、[BEGIN_PROPSET_MAP](../../data/oledb/begin-propset-map.md)と[END_PROPSET_MAP](../../data/oledb/end-propset-map.md)を参照してください。
 
 ## <a name="getpropvalue"></a> CUtlProps::GetPropValue
 

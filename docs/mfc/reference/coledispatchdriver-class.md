@@ -258,7 +258,7 @@ void AFX_CDECL InvokeHelper(
 呼び出されるメソッドまたはプロパティを識別します。
 
 *wflags が*<br/>
-呼び出しのコンテキストを記述するフラグ`IDispatch::Invoke`します。 . 使用可能な値の一覧は、次を参照してください。、 *wFlags*パラメーター [idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK にします。
+呼び出しのコンテキストを記述するフラグ`IDispatch::Invoke`します。 . 使用可能な値の一覧は、、 *wFlags*パラメーター [idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK にを参照してください。
 
 *vtRet*<br/>
 戻り値の型を指定します。 使用可能な値については、「解説」を参照してください。

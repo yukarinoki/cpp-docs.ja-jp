@@ -155,7 +155,7 @@ void AddFormat(
 
 詳細については、次を参照してください。、 [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed)列挙型、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK の構造体。
 
-詳細については、次を参照してください。、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙します。
+詳細については、、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙を参照してください。
 
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry
 
@@ -235,7 +235,7 @@ COlePasteSpecialDialog(
 
 この関数は、`COlePasteSpecialDialog`オブジェクト。 ダイアログ ボックスを表示するには[DoModal](#domodal)関数。
 
-詳細については、次を参照してください。、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙します。
+詳細については、、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙を参照してください。
 
 ##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem
 

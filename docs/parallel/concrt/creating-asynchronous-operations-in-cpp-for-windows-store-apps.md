@@ -115,9 +115,9 @@ MainPage.xaml で、次のコードを `MainPage` クラスに追加します。
 
 [!code-cs[concrt-windowsstore-primes#4](../../parallel/concrt/codesnippet/csharp/creating-asynchronous-operations-in-cpp-for-windows-store-apps_5.cs)]
 
-これらのメソッドは `async` と `await` のキーワードを使用して、非同期操作が完了した後で UI を更新します。 UWP アプリで非同期コードについては、次を参照してください。[スレッド処理と非同期プログラミング](/windows/uwp/threading-async)します。
+これらのメソッドは `async` と `await` のキーワードを使用して、非同期操作が完了した後で UI を更新します。 UWP アプリで非同期コードについては、[スレッド処理と非同期プログラミング](/windows/uwp/threading-async)を参照してください。
 
-`getPrimesCancellation` および `cancelGetPrimes` メソッドは連携して、ユーザーが操作の取り消しをできるようにします。 ユーザーが選択したときに、**キャンセル** ボタン、`cancelGetPrimes`メソッド呼び出し[IAsyncOperationWithProgress\<TResult, TProgress >:: キャンセル](/uwp/api/windows.foundation.iasyncinfo.cancel)操作をキャンセルします。 基になる非同期操作を管理する同時実行ランタイムでは、キャンセルが完了したことを通信するために、Windows ランタイムによってキャッチされた例外の内部型をスローします。 取り消しモデルの詳細については、次を参照してください。[キャンセル](../../parallel/concrt/cancellation-in-the-ppl.md)します。
+`getPrimesCancellation` および `cancelGetPrimes` メソッドは連携して、ユーザーが操作の取り消しをできるようにします。 ユーザーが選択したときに、**キャンセル** ボタン、`cancelGetPrimes`メソッド呼び出し[IAsyncOperationWithProgress\<TResult, TProgress >:: キャンセル](/uwp/api/windows.foundation.iasyncinfo.cancel)操作をキャンセルします。 基になる非同期操作を管理する同時実行ランタイムでは、キャンセルが完了したことを通信するために、Windows ランタイムによってキャッチされた例外の内部型をスローします。 取り消しモデルの詳細については、[キャンセル](../../parallel/concrt/cancellation-in-the-ppl.md)を参照してください。
 
 > [!IMPORTANT]
 >  操作がキャンセルされましたが、Windows ランタイムを正しくレポートする PPL を有効にするには、この種類の内部例外をキャッチしないでください。 これは、すべての例外 (`catch (...)`) をキャッチしないことを意味します。 すべてをキャッチする必要がある場合、例外は、Windows ランタイムがキャンセル操作を完了できるようにする例外を再スローします。

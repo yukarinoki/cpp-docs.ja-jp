@@ -23,7 +23,7 @@ ms.locfileid: "57304627"
 ライセンス サポート、ActiveX コントロールのオプション機能できますが、使用、またはコントロールを配布できるユーザーを制御します。 (ライセンスの問題の詳細については、ライセンスの問題を参照してください[既存の ActiveX コントロールのアップグレード](../mfc/upgrading-an-existing-activex-control.md)。)。
 
 > [!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
 
 この記事では、次のトピックについて説明します。
 
@@ -57,7 +57,7 @@ ActiveX コントロールのライセンスのサポートを提供する、 [C
 
 ##  <a name="_core_creating_a_licensed_control"></a> ライセンス付きコントロールを作成します。
 
-ActiveX コントロール ウィザードを使用して制御フレームワークを作成する場合は、ライセンス サポートに簡単です。 コントロールは実行時のライセンスである必要がありますを指定すると、ActiveX コントロール ウィザードは、ライセンスをサポートするために、コントロール クラスにコードを追加します。 ライセンス認証のキーおよびライセンス ファイルを使用する関数のコードで構成されます。 これらの関数は、コントロールのライセンスをカスタマイズすることも変更できます。 ライセンスのカスタマイズの詳細については、次を参照してください。[ライセンス ActiveX コントロールのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)この記事で後述します。
+ActiveX コントロール ウィザードを使用して制御フレームワークを作成する場合は、ライセンス サポートに簡単です。 コントロールは実行時のライセンスである必要がありますを指定すると、ActiveX コントロール ウィザードは、ライセンスをサポートするために、コントロール クラスにコードを追加します。 ライセンス認証のキーおよびライセンス ファイルを使用する関数のコードで構成されます。 これらの関数は、コントロールのライセンスをカスタマイズすることも変更できます。 ライセンスのカスタマイズの詳細については、[ライセンス ActiveX コントロールのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)この記事で後述を参照してください。
 
 #### <a name="to-add-support-for-licensing-with-the-activex-control-wizard-when-you-create-your-control-project"></a>コントロール プロジェクトを作成するときに、ActiveX コントロール ウィザードを使用してライセンスのサポートを追加するには
 
@@ -84,7 +84,7 @@ ActiveX コントロール ウィザードを使用して ActiveX コントロ�
 
 - [VerifyLicenseKey](../mfc/reference/coleobjectfactory-class.md#verifylicensekey)
 
-   埋め込みのキーと、コントロールの一意のキーは、同じであることを確認します。 これにより、使用するためのコントロールのインスタンスを作成するコンテナーです。 この関数`IClassFactory2::CreateInstanceLic`ライセンス キーのカスタマイズされた検証を提供するオーバーライドできます。 既定の実装では、文字列比較を実行します。 詳細については、次を参照してください。[ライセンス ActiveX コントロールのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)、この記事で後述します。
+   埋め込みのキーと、コントロールの一意のキーは、同じであることを確認します。 これにより、使用するためのコントロールのインスタンスを作成するコンテナーです。 この関数`IClassFactory2::CreateInstanceLic`ライセンス キーのカスタマイズされた検証を提供するオーバーライドできます。 既定の実装では、文字列比較を実行します。 詳細については、[ライセンス ActiveX コントロールのカスタマイズ](#_core_customizing_the_licensing_of_an_activex_control)、この記事で後述を参照してください。
 
 ###  <a name="_core_header_file_modifications"></a> ヘッダー ファイルの変更
 
@@ -118,7 +118,7 @@ ActiveX コントロール ウィザード、コントロール クラスの定�
 コードを追加することも、`VerifyLicenseKey`作成を制御するユーザーに通知が失敗したためにカスタマイズしたメソッドを提供する関数。 たとえば、`VerifyLicenseKey`コントロールが初期化に失敗したことを示すメッセージを表示することがメンバー関数のボックスとその理由です。
 
 > [!NOTE]
->  ActiveX コントロールのライセンス認証をカスタマイズする別の方法は、呼び出す代わりに、特定のレジストリ キーの登録情報データベースを確認することです。`AfxVerifyLicFile`します。 既定の実装の例は、次を参照してください。、[実装ファイルの変更](#_core_implementation_file_modifications)この記事の「します。
+>  ActiveX コントロールのライセンス認証をカスタマイズする別の方法は、呼び出す代わりに、特定のレジストリ キーの登録情報データベースを確認することです。`AfxVerifyLicFile`します。 既定の実装の例は、、[実装ファイルの変更](#_core_implementation_file_modifications)この記事の「を参照してください。
 
 ライセンスの問題の詳細については、ライセンスの問題を参照してください。[既存の ActiveX コントロールのアップグレード](../mfc/upgrading-an-existing-activex-control.md)します。
 

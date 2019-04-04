@@ -30,7 +30,7 @@ ms.locfileid: "57809588"
 
 ## <a name="remarks"></a>Remarks
 
-既定のライブラリの詳細については、次を参照してください。[ランタイム ライブラリの使用](md-mt-ld-use-run-time-library.md)します。
+既定のライブラリの詳細については、[ランタイム ライブラリの使用](md-mt-ld-use-run-time-library.md)を参照してください。
 
 使用することができます **/Zl**ライブラリに格納する .obj ファイルをコンパイルします。 少量の単一の .obj ファイルの領域のみを保存するライブラリ名を省略すると、保存領域の合計が大きなオブジェクトの多くのモジュールを含むライブラリ。
 
@@ -56,7 +56,7 @@ void Test() {
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 

@@ -17,7 +17,7 @@ ms.locfileid: "58781459"
 
 制約句の構文エラー: 'identifier' が見つかりましたが、型を指定しなければなりません
 
-制約の形式が間違っています。  詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)します。
+制約の形式が間違っています。  詳細については、[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

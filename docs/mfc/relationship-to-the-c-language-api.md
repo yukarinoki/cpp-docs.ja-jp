@@ -24,7 +24,7 @@ Windows の他のクラス ライブラリとは別に、Microsoft Foundation Cl
 ネイティブ Windows 関数の呼び出しを行う必要がある場合があります、ために、C 言語の Windows API のドキュメントへのアクセスが必要です。 このドキュメントは、Microsoft Visual C に含まれています。
 
 > [!NOTE]
->  MFC ライブラリのフレームワークの動作方法の概要については、次を参照してください。 [Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)します。
+>  MFC ライブラリのフレームワークの動作方法の概要については、[Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

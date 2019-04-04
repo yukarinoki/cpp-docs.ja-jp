@@ -504,7 +504,7 @@ virtual HBRUSH OnCtlColor(
 
 このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)) それぞれグローバル テキストと背景の色を指定されたデバイス コンテキストのテキストと背景色を設定します。
 
-アプリケーションに使用できるグローバル オプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)します。
+アプリケーションに使用できるグローバル オプションの詳細については、[AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)を参照してください。
 
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBarEditBoxButton::OnGlobalFontsChanged
 
@@ -518,7 +518,7 @@ virtual void OnGlobalFontsChanged();
 
 このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) のグローバルのフォントのコントロールのフォントを変更することで。
 
-アプリケーションに使用できるグローバル オプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)します。
+アプリケーションに使用できるグローバル オプションの詳細については、[AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)を参照してください。
 
 ##  <a name="onmove"></a>  CMFCToolBarEditBoxButton::OnMove
 

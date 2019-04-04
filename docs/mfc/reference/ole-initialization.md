@@ -37,7 +37,7 @@ void AfxEnableControlContainer( );
 
 ### <a name="remarks"></a>Remarks
 
-(ActiveX コントロールと呼ばれるようになりました) OLE コントロールの詳細については、次を参照してください。 [ActiveX コントロールのトピック](../mfc-activex-controls.md)します。
+(ActiveX コントロールと呼ばれるようになりました) OLE コントロールの詳細については、[ActiveX コントロールのトピック](../mfc-activex-controls.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -59,7 +59,7 @@ BOOL AFXAPI AfxOleInit();
 
 MFC アプリケーションに対する OLE サポートを初期化するには、この関数を呼び出します。 この関数を呼び出すと、次のアクションが発生します。
 
-- 呼び出し元のアプリケーションの現在のアパートメントで COM ライブラリを初期化します。 詳細については、次を参照してください。 [OleInitialize](/windows/desktop/api/ole2/nf-ole2-oleinitialize)します。
+- 呼び出し元のアプリケーションの現在のアパートメントで COM ライブラリを初期化します。 詳細については、[OleInitialize](/windows/desktop/api/ole2/nf-ole2-oleinitialize)を参照してください。
 
 - メッセージ フィルター オブジェクトを作成を実装する、 [IMessageFilter](/windows/desktop/api/objidl/nn-objidl-imessagefilter)インターフェイス。 このメッセージ フィルターへの呼び出しでアクセスできる[AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)します。
 

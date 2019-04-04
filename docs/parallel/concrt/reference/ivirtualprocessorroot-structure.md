@@ -84,7 +84,7 @@ Resource Manager は、実行コンテキストのインターフェイスに関
 
 `invalid_operation` 場合にスローされる引数`pContext`この仮想プロセッサ ルートがディスパッチされた最も最近実行コンテキストを表していません。
 
-仮想プロセッサ ルートをアクティブ化は、基になるハードウェア スレッドのサブスクリプション レベルを 1 つずつ増加します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)します。
+仮想プロセッサ ルートをアクティブ化は、基になるハードウェア スレッドのサブスクリプション レベルを 1 つずつ増加します。 サブスクリプション レベルの詳細については、[iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)を参照してください。
 
 ##  <a name="deactivate"></a>  Ivirtualprocessorroot::deactivate メソッド
 
@@ -115,7 +115,7 @@ virtual bool Deactivate(_Inout_ IExecutionContext* pContext) = 0;
 
 `invalid_operation` 仮想プロセッサ ルートがアクティブ化されていない場合にスローされるか、引数`pContext`この仮想プロセッサ ルートがディスパッチされた最も最近実行コンテキストを表していません。
 
-仮想プロセッサ ルートを非アクティブ化の動作では、1 つで、基になるハードウェア スレッドのサブスクリプション レベルが低くなります。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)します。
+仮想プロセッサ ルートを非アクティブ化の動作では、1 つで、基になるハードウェア スレッドのサブスクリプション レベルが低くなります。 サブスクリプション レベルの詳細については、[iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)を参照してください。
 
 ##  <a name="ensurealltasksvisible"></a>  Ivirtualprocessorroot::ensurealltasksvisible メソッド
 

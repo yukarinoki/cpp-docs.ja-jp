@@ -40,7 +40,7 @@ class AgileEventSource :
 
 ## <a name="remarks"></a>Remarks
 
-Windows ランタイム コンポーネントの大半は、アジャイル コンポーネントです。 詳細については、次を参照してください。[スレッドとマーシャ リング (C + + CX)](../../cppcx/threading-and-marshaling-c-cx.md)します。
+Windows ランタイム コンポーネントの大半は、アジャイル コンポーネントです。 詳細については、[スレッドとマーシャ リング (C + + CX)](../../cppcx/threading-and-marshaling-c-cx.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

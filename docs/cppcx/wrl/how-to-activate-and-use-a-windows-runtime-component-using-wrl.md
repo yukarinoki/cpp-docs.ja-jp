@@ -26,7 +26,7 @@ Windows ランタイム C++ テンプレート ライブラリを Windows ラン
 使用して、次の手順、`Windows::Foundation::IUriRuntimeClass`アクティベーション ファクトリを Windows ランタイム コンポーネントの作成し、そのコンポーネントのインスタンスを作成、プロパティの値を取得する方法を示すインターフェイスです。 また、Windows ランタイムを初期化する方法を示します。 完全な例を次に示します。
 
 > [!IMPORTANT]
-> 通常は、ユニバーサル Windows プラットフォーム (UWP) アプリで Windows ランタイム C++ テンプレート ライブラリを使用して、この例は、図のコンソール アプリを使用します。 などの関数`wprintf_s`UWP アプリからは使用できません。 型および UWP アプリで使用できる関数の詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)と[Win32 および COM UWP アプリの](/uwp/win32-and-com/win32-and-com-for-uwp-apps)します。
+> 通常は、ユニバーサル Windows プラットフォーム (UWP) アプリで Windows ランタイム C++ テンプレート ライブラリを使用して、この例は、図のコンソール アプリを使用します。 などの関数`wprintf_s`UWP アプリからは使用できません。 型および UWP アプリで使用できる関数の詳細については、[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)と[Win32 および COM UWP アプリの](/uwp/win32-and-com/win32-and-com-for-uwp-apps)を参照してください。
 
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>Windows ランタイム コンポーネントをアクティブ化して使用するには
 

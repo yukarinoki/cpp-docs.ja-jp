@@ -17,8 +17,7 @@ ms.locfileid: "57741713"
 ---
 # <a name="how-to-convert-char--string-to-systembyte-array"></a>方法: 文字変換\*system::byte 配列に文字列
 
-
-  `char *` 文字列を <xref:System.Byte> 配列に変換する最も効率的な方法は、<xref:System.Runtime.InteropServices.Marshal> クラスを使用することです。
+`char *` 文字列を <xref:System.Byte> 配列に変換する最も効率的な方法は、<xref:System.Runtime.InteropServices.Marshal> クラスを使用することです。
 
 ## <a name="example"></a>例
 

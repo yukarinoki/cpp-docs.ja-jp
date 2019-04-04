@@ -19,7 +19,7 @@ ms.locfileid: "58777117"
 
 仮想でないメンバーに明示的なオーバーライドの実行が試行されました。
 
-詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
+詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3650 が生成されます。
 

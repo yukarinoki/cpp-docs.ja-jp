@@ -182,7 +182,7 @@ class ATL_NO_VTABLE CStockPropImpl :
 
 `CStockPropImpl` 提供**配置**と**取得**ストックの各プロパティのメソッド。 これらのメソッドは、各プロパティに関連付けられたデータ メンバーを取得または設定して、通知し、任意のプロパティが変更されたときに、コンテナーと同期に必要なコードを提供します。
 
-Visual C では、そのウィザードを使用するストック プロパティのサポートを提供します。 ストック プロパティをコントロールに追加する方法の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。
+Visual C では、そのウィザードを使用するストック プロパティのサポートを提供します。 ストック プロパティをコントロールに追加する方法の詳細については、、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)を参照してください。
 
 旧バージョンと互換性のため、`CStockPropImpl`も公開`get_Window`と`put_Window`メソッドを呼び出すだけで`get_HWND`と`put_HWND`、それぞれします。 既定の実装`put_HWND`HWND は読み取り専用プロパティである必要がありますので、E_FAIL を返します。
 

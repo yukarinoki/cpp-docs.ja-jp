@@ -30,7 +30,7 @@ ms.locfileid: "57826364"
 
 アクセスする方法については、**全般**プロパティ ページ、**構成プロパティ**ノードを参照してください[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
-Windows 以外のプロジェクトでは、次を参照してください。 [Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)します。
+Windows 以外のプロジェクトでは、[Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -27,7 +27,7 @@ ms.locfileid: "57815945"
 **/Qvec-report:2**<br/>
 For ループがベクター化して、for ループがベクター化されていない、理由コードと共にを情報メッセージを出力します。
 
-理由コードとメッセージについては、次を参照してください。[ベクター化と並行化メッセージ](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)します。
+理由コードとメッセージについては、[ベクター化と並行化メッセージ](../../error-messages/tool-errors/vectorizer-and-parallelizer-messages.md)を参照してください。
 
 ### <a name="to-set-the-qvec-report-compiler-option-in-visual-studio"></a>Visual Studio で/Qvec-report コンパイラ オプションを設定するには
 

@@ -50,9 +50,7 @@ char myString[256];
 strcpy(myString, (LPCTSTR)aCString);
 ```
 
-
-  `CString` メソッド (`SetAt` など) を使用して、文字列オブジェクトの個々の文字を変更できます。 ただし、LPCTSTR ポインターは一時的でありに変更された場合に無効になります`CString`します。 
-  `CString` がスコープから外れ、自動的に削除されることもあります。 新しい LPCTSTR ポインターを取得することをお勧め、`CString`たびにオブジェクトのいずれかを使用します。
+`CString` メソッド (`SetAt` など) を使用して、文字列オブジェクトの個々の文字を変更できます。 ただし、LPCTSTR ポインターは一時的でありに変更された場合に無効になります`CString`します。 `CString` がスコープから外れ、自動的に削除されることもあります。 新しい LPCTSTR ポインターを取得することをお勧め、`CString`たびにオブジェクトのいずれかを使用します。
 
 場合によっては、直接変更するために `CString` データのコピーが必要になる場合があります。 より安全な関数 `strcpy_s` (または Unicode/MBCS との移植性がある `_tcscpy_s`) を使用して、`CString` オブジェクトを別のバッファーにコピーします。 次の例に示すように、ここで文字を安全に変更できます。
 
@@ -63,11 +61,9 @@ strcpy(myString, (LPCTSTR)aCString);
 
 ##  <a name="_core_working_with_standard_run.2d.time_library_string_functions"></a> 標準のランタイム ライブラリ文字列関数の使用
 
+`CString` などの標準 C ランタイム ライブラリ文字列関数 (または Unicode/MBCS との移植性がある `strcmp`) を使用して検討対象の文字列操作を実行するために、`_tcscmp` メソッドを検索できる必要があります。
 
-  `CString` などの標準 C ランタイム ライブラリ文字列関数 (または Unicode/MBCS との移植性がある `strcmp`) を使用して検討対象の文字列操作を実行するために、`_tcscmp` メソッドを検索できる必要があります。
-
-C ランタイム文字列関数を使用する場合は、_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string で説明する手法を使用できます。 
-  `CString` オブジェクトを同等の C スタイルの文字列バッファーにコピーし、そのバッファーに対して操作を実行してから、結果の C スタイルの文字列を `CString` オブジェクトに割り当てることができます。
+C ランタイム文字列関数を使用する場合は、_core_using_cstring_as_a_c.2d.style_null.2d.terminated_string で説明する手法を使用できます。 `CString` オブジェクトを同等の C スタイルの文字列バッファーにコピーし、そのバッファーに対して操作を実行してから、結果の C スタイルの文字列を `CString` オブジェクトに割り当てることができます。
 
 ##  <a name="_core_modifying_cstring_contents_directly"></a> CString の内容を直接変更
 
@@ -83,8 +79,7 @@ C ランタイム文字列関数を使用する場合は、_core_using_cstring_a
 
 1. `GetBuffer` によって返されたポインターを使用して、`CString` オブジェクトに直接文字を書き込みます。
 
-1. `ReleaseBuffer` オブジェクトの `CString` を呼び出して、文字列の長さなどのすべての内部的な `CString` 状態情報を更新します。 
-  `CString` オブジェクトの内容を直接変更した後、先に `ReleaseBuffer` を呼び出してから、その他の `CString` メンバー関数を呼び出す必要があります。
+1. `ReleaseBuffer` オブジェクトの `CString` を呼び出して、文字列の長さなどのすべての内部的な `CString` 状態情報を更新します。 `CString` オブジェクトの内容を直接変更した後、先に `ReleaseBuffer` を呼び出してから、その他の `CString` メンバー関数を呼び出す必要があります。
 
 ##  <a name="_core_using_cstring_objects_with_variable_argument_functions"></a> 可変個引数関数での CString オブジェクトの使用
 

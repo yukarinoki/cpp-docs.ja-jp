@@ -91,7 +91,7 @@ COM の列挙子インターフェイス。 参照してください[IEnumString
 
 ただし、(たとえば、1 つだけでなく、列挙子インターフェイスのインターフェイスを公開している) カスタム列挙子を提供する必要がある場合は、このクラスから派生することができます。 このような状況で可能性をオーバーライドする必要がありますが、 [CComEnumImpl::Clone](#clone)独自の実装を提供するメソッド。
 
-詳細については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。
+詳細については、[ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

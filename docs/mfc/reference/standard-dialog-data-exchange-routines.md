@@ -563,7 +563,7 @@ void AFXAPI DDX_Slider(
 
 ときに`DDX_Slider`を呼び出すと、*値*コントロールのスクロール ボックスの現在の位置に設定されている値が、exchange の方向に応じて、位置を送受信します。
 
-DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 スライダー コントロールの概要については、次を参照してください。[を使用して CSliderCtrl](../../mfc/using-csliderctrl.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 スライダー コントロールの概要については、[を使用して CSliderCtrl](../../mfc/using-csliderctrl.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 

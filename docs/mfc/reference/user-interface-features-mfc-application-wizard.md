@@ -59,7 +59,7 @@ ms.locfileid: "57266068"
 
 - **ダイアログのタイトル**
 
-   [CDialog クラス](../../mfc/reference/cdialog-class.md)-ベースのアプリケーションにのみ、このタイトルは、ダイアログ ボックスのタイトル バーに表示されます。 このフィールドを編集する必要がありますまず選択、**ダイアログ ベース**オプションで **アプリケーションの種類**します。 詳細については、次を参照してください。[アプリケーションの種類、MFC アプリケーション ウィザード](../../mfc/reference/application-type-mfc-application-wizard.md)します。
+   [CDialog クラス](../../mfc/reference/cdialog-class.md)-ベースのアプリケーションにのみ、このタイトルは、ダイアログ ボックスのタイトル バーに表示されます。 このフィールドを編集する必要がありますまず選択、**ダイアログ ベース**オプションで **アプリケーションの種類**します。 詳細については、[アプリケーションの種類、MFC アプリケーション ウィザード](../../mfc/reference/application-type-mfc-application-wizard.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -22,7 +22,7 @@ ms.locfileid: "57750351"
 
 [CTime](../atl-mfc-shared/reference/ctime-class.md)クラスには、Win32 からシステムとファイルの時間を受け入れるコンス トラクター。 このような目的に `CTime` オブジェクトを使用する場合は、この記事の説明に従って初期化を適宜変更する必要があります。
 
-SYSTEMTIME 構造体については、次を参照してください。 [SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)します。 FILETIME 構造体については、次を参照してください。 [FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)します。
+SYSTEMTIME 構造体については、[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)を参照してください。 FILETIME 構造体については、[FILETIME](/windows/desktop/api/minwinbase/ns-minwinbase-filetime)を参照してください。
 
 MFC では今でも MS-DOS スタイルの時間の引数を受け取る `CTime` コンストラクターが提供されていますが、MFC バージョン 3.0 からは、`CTime` クラスで、Win32 の `SYSTEMTIME` 構造体を受け取るコンストラクターと、Win32 の `FILETIME` 構造体を受け取る別のコンストラクターもサポートされています。
 

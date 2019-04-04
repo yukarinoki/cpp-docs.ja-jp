@@ -380,7 +380,7 @@ CFrameWnd* GetDockingFrame() const;
 
 ### <a name="remarks"></a>Remarks
 
-ドッキング可能なコントロール バーの詳細については、次を参照してください。 [CControlBar::EnableDocking](#enabledocking)と[CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)します。
+ドッキング可能なコントロール バーの詳細については、[CControlBar::EnableDocking](#enabledocking)と[CFrameWnd::DockControlBar](../../mfc/reference/cframewnd-class.md#dockcontrolbar)を参照してください。
 
 ##  <a name="isfloating"></a>  CControlBar::IsFloating
 

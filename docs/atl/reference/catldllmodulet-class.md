@@ -61,7 +61,7 @@ class ATL_NO_VTABLE CAtlDllModuleT : public CAtlModuleT<T>
 
 `CAtlDllModuleT` ダイナミック リンク ライブラリ (DLL) 用のモジュールを表し、すべての DLL プロジェクトで使用される関数を提供します。 この特殊化[CAtlModuleT](../../atl/reference/catlmodulet-class.md)クラスには、登録のサポートが含まれています。
 
-ATL でモジュールの詳細については、次を参照してください。 [ATL モジュール クラス](../../atl/atl-module-classes.md)します。
+ATL でモジュールの詳細については、[ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

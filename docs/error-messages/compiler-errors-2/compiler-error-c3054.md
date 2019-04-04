@@ -17,7 +17,7 @@ ms.locfileid: "58772996"
 
 '#pragma omp parallel' は、ジェネリック クラスまたはジェネリック関数では現在サポートされていません
 
-詳細については、次を参照してください。[ジェネリック](../../extensions/generics-cpp-component-extensions.md)と[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)します。
+詳細については、[ジェネリック](../../extensions/generics-cpp-component-extensions.md)と[OpenMP](../../parallel/openmp/openmp-in-visual-cpp.md)を参照してください。
 
 ## <a name="example"></a>例
 

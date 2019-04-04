@@ -918,7 +918,7 @@ CMFCRibbonPanel* HighlightPanel(
 
 ### <a name="remarks"></a>Remarks
 
-リボン パネルを強調表示の詳細については、次を参照してください。 [CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight)します。
+リボン パネルを強調表示の詳細については、[CMFCRibbonPanel::Highlight](../../mfc/reference/cmfcribbonpanel-class.md#highlight)を参照してください。
 
 ##  <a name="hittest"></a>  CMFCRibbonCategory::HitTest
 

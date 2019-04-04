@@ -279,7 +279,7 @@ A`CMFCToolbarButton`オブジェクトが、ツールバー上に存在するコ
 
 通常、ツールバーのボタンをカスタマイズできます。 ユーザーことができます、1 つのツールバーからボタンをドラッグとコピー、貼り付け、削除、およびテキストのラベルや画像を編集します。 ユーザーがツールバーをカスタマイズすることを防ぐためには、2 つの方法のいずれかで、ツールバーをロックできます。 設定するか、`bLocked`フラグを呼び出す場合に TRUE を[CMFCToolBar::LoadToolBar](../../mfc/reference/cmfctoolbar-class.md#loadtoolbar)を使用して保護されているコマンドのグローバル リストに個々 のボタンのコマンド ID を追加したり、 [CMFCToolBarButton:。SetProtectedCommands](#setprotectedcommands)メソッド。
 
-`CMFCToolBarButton` オブジェクトでは、アプリケーションのツールバーのイメージのグローバル コレクション内のイメージを表示します。 親ツールバーで、これらのコレクションが保持[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)します。 詳細については、次を参照してください。 [CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)します。
+`CMFCToolBarButton` オブジェクトでは、アプリケーションのツールバーのイメージのグローバル コレクション内のイメージを表示します。 親ツールバーで、これらのコレクションが保持[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)します。 詳細については、[CMFCToolBarImages クラス](../../mfc/reference/cmfctoolbarimages-class.md)を参照してください。
 
 ユーザーには、ツール バー ボタンがクリックすると、その親ツールバーはマウス メッセージの処理し、ボタンに、適切なアクションを通信します。 ボタンが有効なコマンド ID の場合、親ツールバーは、親のフレームに WM_COMMAND メッセージを送信します。
 
@@ -341,7 +341,7 @@ virtual BOOL CanBeStored() const;
 
 フレームワークでは、このメソッドを使用して、ボタンをドラッグ アンド ドロップ操作に参加できるかどうかを判断します。
 
-既定の実装では、TRUE を返します。 ボタンをドラッグ アンド ドロップ操作の一部として格納できない場合は、このメソッドをオーバーライドします。 ドラッグ アンド ドロップ操作の詳細については、次を参照してください。[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)します。
+既定の実装では、TRUE を返します。 ボタンをドラッグ アンド ドロップ操作の一部として格納できない場合は、このメソッドをオーバーライドします。 ドラッグ アンド ドロップ操作の詳細については、[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)を参照してください。
 
 ##  <a name="canbestretched"></a>  CMFCToolBarButton::CanBeStretched
 
@@ -361,7 +361,7 @@ virtual BOOL CanBeStretched() const;
 
 このメソッドの既定の実装では、FALSE を返します。 コンボ ボックスやスライダーなどの可変幅の制御について TRUE を返すには、このメソッドをオーバーライドします。
 
-カスタマイズ モードの詳細については、次を参照してください。 [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)します。
+カスタマイズ モードの詳細については、[CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)を参照してください。
 
 ##  <a name="cmfctoolbarbutton"></a>  CMFCToolBarButton::CMFCToolBarButton
 
@@ -512,7 +512,7 @@ static CLIPFORMAT __stdcall GetClipboardFormat();
 
 アプリケーション間で発生するドラッグ アンド ドロップ操作を許可するのには、呼び出し、 [CMFCToolBarButton::SetClipboardFormatName](#setclipboardformatname)メソッド。
 
-MFC でのクリップボードの詳細については、次を参照してください。[クリップボード](../../mfc/clipboard.md)します。
+MFC でのクリップボードの詳細については、[クリップボード](../../mfc/clipboard.md)を参照してください。
 
 ##  <a name="gethwnd"></a>  CMFCToolBarButton::GetHwnd
 
@@ -544,7 +544,7 @@ int GetImage() const;
 
 ### <a name="remarks"></a>Remarks
 
-ボタンにユーザー定義のイメージがある場合 (場合に、 *bUserButton* TRUE がコンス トラクターで)、返されるインデックスは、イメージのユーザー定義のコレクションにイメージを指定します (を参照してください[CMFCToolBar::GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). インデックスがそれ以外の場合、リソース ファイルから読み込まれたイメージのコレクション内のイメージを指定 (を参照してください[CMFCToolBar::GetImages](../../mfc/reference/cmfctoolbar-class.md#getimages))。 リソース ファイルの詳細については、次を参照してください。 [Working with Resource Files](../../windows/working-with-resource-files.md)します。
+ボタンにユーザー定義のイメージがある場合 (場合に、 *bUserButton* TRUE がコンス トラクターで)、返されるインデックスは、イメージのユーザー定義のコレクションにイメージを指定します (を参照してください[CMFCToolBar::GetUserImages](../../mfc/reference/cmfctoolbar-class.md#getuserimages)). インデックスがそれ以外の場合、リソース ファイルから読み込まれたイメージのコレクション内のイメージを指定 (を参照してください[CMFCToolBar::GetImages](../../mfc/reference/cmfctoolbar-class.md#getimages))。 リソース ファイルの詳細については、[Working with Resource Files](../../windows/working-with-resource-files.md)を参照してください。
 
 ##  <a name="getinvalidaterect"></a>  CMFCToolBarButton::GetInvalidateRect
 
@@ -702,7 +702,7 @@ virtual BOOL IsEditable() const;
 
 フレームワークは、ユーザーがドラッグ アンド ドロップを使用して、ツール バー ボタンをカスタマイズしたり、編集操作かどうかを判断するには、このメソッドを呼び出します。
 
-標準のコマンドをコマンド ID が、ボタンの場合、既定の実装が FALSE を返します (を呼び出すことで判断することができます、`IsStandardCommand`関数) の一覧で、ID は、コマンドには、コマンドが保護されている場合またはします。 保護されているコマンドの詳細については、次を参照してください。 [CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands)と[CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands)します。
+標準のコマンドをコマンド ID が、ボタンの場合、既定の実装が FALSE を返します (を呼び出すことで判断することができます、`IsStandardCommand`関数) の一覧で、ID は、コマンドには、コマンドが保護されている場合またはします。 保護されているコマンドの詳細については、[CMFCToolBarButton::GetProtectedCommands](#getprotectedcommands)と[CMFCToolBarButton::SetProtectedCommands](#setprotectedcommands)を参照してください。
 
 その動作をカスタマイズするには、このメソッドをオーバーライドします。
 
@@ -1229,7 +1229,7 @@ virtual HBRUSH OnCtlColor(
 
 親ツールバーは、Windows コントロールを含むツール バー ボタンの WM_CTLCOLOR メッセージを処理するときに、フレームワークはこのメソッドを呼び出します。 ツール バー ボタンがウィンドウなしの場合、フレームワークはこのメソッドを呼び出しません。
 
-フレームワークは、カスタマイズ モードに、ツールバーのフレームワークがあり、ツール バー ボタンがロックされているときに、このメソッドを呼び出します。 カスタマイズ モードの詳細については、次を参照してください。 [CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)します。 ツール バー ボタンのロックの詳細については、次を参照してください。 [CMFCToolBarButton::IsLocked](#islocked)します。
+フレームワークは、カスタマイズ モードに、ツールバーのフレームワークがあり、ツール バー ボタンがロックされているときに、このメソッドを呼び出します。 カスタマイズ モードの詳細については、[CMFCToolBar::SetCustomizeMode](../../mfc/reference/cmfctoolbar-class.md#setcustomizemode)を参照してください。 ツール バー ボタンのロックの詳細については、[CMFCToolBarButton::IsLocked](#islocked)を参照してください。
 
 既定の実装では、何も実行し、NULL が返されます。
 
@@ -1519,11 +1519,11 @@ virtual BOOL PrepareDrag(COleDataSource& srcItem);
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、指定した状態を格納する、ツール バー ボタンを準備するには、このメソッドを呼び出して`COleDataSource`オブジェクト。 このメソッド自体を共有ファイルにシリアル化して、そのファイルを渡すことによって、状態を格納する、 [COleDataSource::CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata)メソッド。 ツール バー ボタンのシリアル化の詳細については、次を参照してください。 [CMFCToolBarButton::Serialize](#serialize)します。
+フレームワークは、指定した状態を格納する、ツール バー ボタンを準備するには、このメソッドを呼び出して`COleDataSource`オブジェクト。 このメソッド自体を共有ファイルにシリアル化して、そのファイルを渡すことによって、状態を格納する、 [COleDataSource::CacheGlobalData](../../mfc/reference/coledatasource-class.md#cacheglobaldata)メソッド。 ツール バー ボタンのシリアル化の詳細については、[CMFCToolBarButton::Serialize](#serialize)を参照してください。
 
 このメソッドは何も実行し、ボタンに格納できない場合は TRUE を返します (、 [CMFCToolBarButton::CanBeStored](#canbestored)メソッドは FALSE を返します)。 オブジェクトのシリアル化中に例外が発生した場合は FALSE を返します。
 
-OLE ドラッグ アンド ドロップ操作の詳細については、次を参照してください。[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)します。
+OLE ドラッグ アンド ドロップ操作の詳細については、[ドラッグ アンド ドロップ (OLE)](../../mfc/drag-and-drop-ole.md)を参照してください。
 
 ##  <a name="rect"></a>  CMFCToolBarButton::Rect
 
@@ -1547,7 +1547,7 @@ virtual void ResetImageToDefault();
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドその親ツールバーからを使用して既定のイメージを取得する、 [CMFCToolBar::GetDefaultImage](../../mfc/reference/cmfctoolbar-class.md#getdefaultimage)メソッド。 関連付けられている既定のイメージ、ボタンがない場合は、このメソッドを使用して、文字列リソースに応じてボタンのテキスト ラベルを設定、 [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring)メソッド。 文字列リソースの詳細については、次を参照してください。 [Working with Resource Files](../../windows/working-with-resource-files.md)します。
+このメソッドその親ツールバーからを使用して既定のイメージを取得する、 [CMFCToolBar::GetDefaultImage](../../mfc/reference/cmfctoolbar-class.md#getdefaultimage)メソッド。 関連付けられている既定のイメージ、ボタンがない場合は、このメソッドを使用して、文字列リソースに応じてボタンのテキスト ラベルを設定、 [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring)メソッド。 文字列リソースの詳細については、[Working with Resource Files](../../windows/working-with-resource-files.md)を参照してください。
 
 ボタンのユーザー定義のイメージの場合、このメソッドは何もはしません。
 
@@ -1582,7 +1582,7 @@ virtual void Serialize(CArchive& ar);
 
 このメソッドは、クリップボードまたはドラッグ アンド ドロップ操作などのデータ転送プロセスをサポートします。 読み取るか、または、提供された ID、テキスト ラベル、およびイメージの ID などのボタンのプロパティに書き込みます`CArchive`オブジェクト。
 
-シリアル化の例については、次を参照してください。[シリアル化します。オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
+シリアル化の例については、[シリアル化を参照してください。オブジェクトのシリアル化](../../mfc/serialization-serializing-an-object.md)します。
 
 ##  <a name="setaccdata"></a>  CMFCToolBarButton::SetACCData
 

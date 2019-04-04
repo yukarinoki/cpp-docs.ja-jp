@@ -57,7 +57,7 @@ OLE DB テンプレートでサポートされているプロバイダーの最�
 プロバイダーは、複雑さと機能が大幅に異なります。 読み取り専用プロバイダー、および更新可能なプロバイダーのプロバイダーに分類すると便利です。
 
 - Visual C 6.0 には、読み取り専用プロバイダーのみがサポートされています。 [OLE DB プロバイダーを作成する](../../data/oledb/creating-an-ole-db-provider.md)読み取り専用プロバイダーを作成する方法について説明します。
-- Visual C は、更新可能なプロバイダーは、更新をサポートしています (書き込む) データ ストア。 更新可能なプロバイダーについては、次を参照してください。[更新可能なプロバイダーを作成する](../../data/oledb/creating-an-updatable-provider.md)、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)サンプルは、更新可能なプロバイダーの例を示します。
+- Visual C は、更新可能なプロバイダーは、更新をサポートしています (書き込む) データ ストア。 更新可能なプロバイダーについては、[更新可能なプロバイダーを作成する](../../data/oledb/creating-an-updatable-provider.md)、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)サンプルは、更新可能なプロバイダーの例を示を参照してください。
 
 詳細については次を参照してください:
 

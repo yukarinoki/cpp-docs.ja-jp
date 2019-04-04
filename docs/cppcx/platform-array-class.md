@@ -55,7 +55,7 @@ Platform::array からすべてのメソッドを継承する[platform::writeonl
 
 Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> を戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
 
-Platform::array を使用するタイミングと方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
+Platform::array を使用するタイミングと方法の詳細については、[Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)を参照してください。
 
 Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> を戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
 
@@ -89,7 +89,7 @@ Array(T* data, unsigned int size);
 
 ### <a name="remarks"></a>Remarks
 
-Platform::array のインスタンスを作成する方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
+Platform::array のインスタンスを作成する方法の詳細については、[Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)を参照してください。
 
 ## <a name="get"></a>  Array::get メソッド
 

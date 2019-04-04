@@ -58,7 +58,7 @@ class CMFCAcceleratorKeyAssignCtrl : public CEdit
 
 このクラスは、ショートカット キー (アクセラレータ キーとも呼ばれます) をサポートすることで、`CEdit` クラスの機能を拡張します。 `CMFCAcceleratorKeyAssignCtrl`クラスの関数として、 [CEdit クラス](../../mfc/reference/cedit-class.md)とのシステム ボタンを認識できます。
 
-このクラスは、物理的なショートカット キーの組み合わせを文字列値にマップします。 たとえば、キーの組み合わせ Alt + B が文字列 "Alt + B" にマップされている場合、 ユーザーが `CMFCAcceleratorKeyAssignCtrl` オブジェクト内でこのキーの組み合わせを押すと、"Alt + B" が表示されます。 ショートカット キーと文字列の形式の間のマッピングの詳細については、次を参照してください。 [CMFCAcceleratorKey クラス](../../mfc/reference/cmfcacceleratorkey-class.md)します。
+このクラスは、物理的なショートカット キーの組み合わせを文字列値にマップします。 たとえば、キーの組み合わせ Alt + B が文字列 "Alt + B" にマップされている場合、 ユーザーが `CMFCAcceleratorKeyAssignCtrl` オブジェクト内でこのキーの組み合わせを押すと、"Alt + B" が表示されます。 ショートカット キーと文字列の形式の間のマッピングの詳細については、[CMFCAcceleratorKey クラス](../../mfc/reference/cmfcacceleratorkey-class.md)を参照してください。
 
 ## <a name="example"></a>例
 
