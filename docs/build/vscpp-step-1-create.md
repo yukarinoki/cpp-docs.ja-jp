@@ -1,29 +1,49 @@
 ---
-title: C++ コンソール アプリ プロジェクトを作成します。
-description: Visual C で Hello World コンソール アプリを作成します。
+title: C++ コンソール アプリ プロジェクトを作成する
+description: Visual C++ で Hello World コンソール アプリを作成する
 ms.custom: mvc
-ms.date: 12/12/2017
+ms.date: 04/02/2019
 ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
-ms.openlocfilehash: 3bbbd40534e3e429d68dbb6205134c57db40c851
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57817726"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898779"
 ---
-# <a name="create-a-c-console-app-project"></a>C++ コンソール アプリ プロジェクトを作成します。
+# <a name="create-a-c-console-app-project"></a>C++ コンソール アプリ プロジェクトを作成する
 
 C++ プログラマのためのスタート地点は通常、「Hello, world!」 コマンドラインで実行されるアプリケーションです。 これは、このステップの Visual Studio で作成することができます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- コンピューターに C ++ によるデスクトップ開発のワークロードを備えた Visual Studio をインストールして実行します。 これがまだインストールされていない場合を参照してください。 [Visual Studio 2017 での C++ のインストール サポート](vscpp-step-0-installation.md)します。
+- コンピューターにインストールされ実行されている C++ ワークロードなデスクトップ開発の Visual Studio を持っていること。 まだインストールされていない場合は [Visual Studio での C++ のインストール サポート](vscpp-step-0-installation.md)
 
-## <a name="create-your-app-project"></a>アプリ プロジェクトを作成します。
+## <a name="create-your-app-project"></a>アプリのプロジェクトを作成する
 
-Visual Studio では、"*プロジェクト*" を使用してアプリのコードを整理し、"*ソリューション*" を使用してプロジェクトを整理します。 プロジェクトでは、すべてのオプション、構成、および、アプリを構築するための規則が含まれていて、プロジェクトのすべてのファイルと、外部のファイル間のリレーションシップを管理します。 アプリを作成するには、最初に、作成します新しいプロジェクトとソリューションです。
+Visual Studio では、"*プロジェクト*" を使用してアプリのコードを整理し、"*ソリューション*" を使用してプロジェクトを整理します。 プロジェクトには、アプリのビルドに使用されるすべてのオプション、構成、および規則が含まれており、すべてのプロジェクトのファイルと外部ファイル間の関係が管理されます。 アプリを作成するには、まず、新しいプロジェクトとソリューションを作成します。
+
+::: moniker range=">=vs-2019"
+
+1. Visual Studio で開く、**ファイル**メニュー選択**新規** > **プロジェクト**を開く、**新しいプロジェクトを作成**ダイアログ。 選択、**コンソール アプリ**テンプレートを選び、 **[次へ]** します。
+
+   ![新しいプロジェクトを作成](media/vs2019-choose-console-app.png "作成する新しいプロジェクト ダイアログを開きます")
+
+1. **新しいプロジェクトを構成する**ダイアログ ボックスで、入力*HelloWorld*で、**プロジェクト名**編集ボックス。 選択**作成**プロジェクトを作成します。
+
+   ![新しいプロジェクトを作成して名前](media/vs2019-configure-new-project-hello-world.png "名と新しいプロジェクトの作成")
+
+   Visual Studio では、追加し、ソース コードを編集するための準備が新しいプロジェクトを作成します。 既定では、"Hello World"アプリでソース コードで、コンソール アプリケーション テンプレートを塗りつぶします。
+
+   ![IDE での hello World プロジェクト](media/vs2019-hello-world-code.png "IDE での Hello World プロジェクト")
+
+   コードが、エディター内で次のようになっていれば、準備はできているので次の手順に進んでください。アプリのビルドに取り掛かります。
+
+::: moniker-end
+
+::: moniker range="<=vs-2017"
 
 1. Visual Studio 内で、**ファイル**メニューを開き、**新規作成 > プロジェクト**を選ぶと、**新しいプロジェクト**ダイアログが開きます。
 
@@ -35,7 +55,7 @@ Visual Studio では、"*プロジェクト*" を使用してアプリのコー�
 
 Visual Studioで新しい空のプロジェクトを作成し、作成するアプリの種類と、ソース コード ファイルの追加に特化する準備をします。 次にそれを行います。
 
-[問題が発生しました](#create-your-app-project-issues)
+[問題が発生しました。](#create-your-app-project-issues)
 
 ## <a name="make-your-project-a-console-app"></a>コンソール アプリ プロジェクトを作成します。
 
@@ -49,7 +69,7 @@ Visual Studio では、Windows およびその他のプラットフォーム用�
 
 Visual Studio は、プロジェクトをビルドして、コンソール ウィンドウで実行するように認識します。 次に、ソースコード ファイルを追加し、アプリのコードを入力します。
 
-[問題が発生しました](#make-your-project-a-console-app-issues)
+[問題が発生しました。](#make-your-project-a-console-app-issues)
 
 ## <a name="add-a-source-code-file"></a>ソース コード ファイルを追加します。
 
@@ -61,7 +81,7 @@ Visual Studio は、プロジェクトをビルドして、コンソール ウ�
 
 Visual studio が、新しい空のソース コード ファイルを作成します。そして、エディター ウィンドウ内でそのファイルが開かれます。ソースコードを入力する準備はできています。
 
-[問題が発生しました](#add-a-source-code-file-issues)
+[問題が発生しました。](#add-a-source-code-file-issues)
 
 ## <a name="add-code-to-the-source-file"></a>ソース ファイルにコードを追加します。
 
@@ -83,12 +103,16 @@ Visual studio が、新しい空のソース コード ファイルを作成し�
 
 コードが、エディター内で次のようになっていれば、準備はできているので次の手順に進んでください。アプリのビルドに取り掛かります。
 
-[問題が発生しました](#add-a-source-code-file-issues)
+[問題が発生しました。](#add-a-source-code-file-issues)
+
+::: moniker-end
 
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [C++ プロジェクトのビルドおよび実行](vscpp-step-2-build.md)
+> [ビルドして C++ プロジェクトの実行](vscpp-step-2-build.md)
+
+::: moniker range="<=vs-2017"
 
 ## <a name="troubleshooting-guide"></a>トラブルシューティング ガイド
 
@@ -108,7 +132,7 @@ Visual studio が、新しい空のソース コード ファイルを作成し�
 
 ドロップダウン コントロールがない、**サブシステム**プロパティがプロパティを選択するまで、ボックスを編集します。 これを選択するには、ポインターを使用してまたは順番にダイアログのコントロールまで Tab キーを押すことができます**サブシステム**が強調表示されます。 ドロップダウン コントロールを選択するかを開くには、Alt + Down キーを押します。
 
-[戻る](#make-your-project-a-console-app)
+[戻ってください](#make-your-project-a-console-app)
 
 ### <a name="add-a-source-code-file-issues"></a>ソースコード ファイルの問題を追加
 
@@ -125,5 +149,7 @@ Visual studio が、新しい空のソース コード ファイルを作成し�
 ソースコード エディターで何かの下に赤い波線が表示される場合には、スペル、句読点、および大文字小文字がコードの例示と合致していることを確認してください。 大文字小文字の区別は、C++ コードでは重要です。
 
 [戻る](#add-code-to-the-source-file)
+
+::: moniker-end
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

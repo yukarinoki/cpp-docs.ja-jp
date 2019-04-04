@@ -15,7 +15,7 @@ ms.locfileid: "57274164"
 ---
 # <a name="asynchronous-message-blocks"></a>非同期メッセージ ブロック
 
-エージェント ライブラリには、アプリケーション コンポーネント間でメッセージをスレッド セーフに伝達できるメッセージ ブロックの型がいくつか用意されています。 これらのメッセージ ブロックの型でよく使用される、さまざまなメッセージ パッシング ルーチンなど[concurrency::send](reference/concurrency-namespace-functions.md#send)、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)、 [concurrency::receive](reference/concurrency-namespace-functions.md#receive)、[concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive)します。 詳細については、メッセージ パッシング ルーチン エージェント ライブラリによって定義されている、次を参照してください。[メッセージを渡す関数](../../parallel/concrt/message-passing-functions.md)します。
+エージェント ライブラリには、アプリケーション コンポーネント間でメッセージをスレッド セーフに伝達できるメッセージ ブロックの型がいくつか用意されています。 これらのメッセージ ブロックの型でよく使用される、さまざまなメッセージ パッシング ルーチンなど[concurrency::send](reference/concurrency-namespace-functions.md#send)、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)、 [concurrency::receive](reference/concurrency-namespace-functions.md#receive)、[concurrency::try_receive](reference/concurrency-namespace-functions.md#try_receive)します。 詳細については、メッセージ パッシング ルーチン エージェント ライブラリによって定義されている、[メッセージを渡す関数](../../parallel/concrt/message-passing-functions.md)を参照してください。
 
 ##  <a name="top"></a> セクション
 
@@ -63,7 +63,7 @@ ms.locfileid: "57274164"
 
 エージェント ライブラリを使用すると、メッセージ ブロックによってメッセージを非同期的に渡すことも、同期的に渡すこともできます。 
   `send` 関数などを使用してメッセージを同期的にメッセージ ブロックに渡すと、ターゲット ブロックがそのメッセージを受け入れるか拒否するまで、ランタイムは現在のコンテキストをブロックします。 
-  `asend` 関数などを使用してメッセージを非同期的にメッセージ ブロックに渡すと、ランタイムはそのメッセージをターゲットに提供します。ターゲットがそのメッセージを受け入れると、ランタイムはメッセージを受信側に伝達する非同期タスクをスケジュールします。 ランタイムは、軽量タスクを使用して、メッセージを協調的に伝達します。 軽量タスクの詳細については、次を参照してください。[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
+  `asend` 関数などを使用してメッセージを非同期的にメッセージ ブロックに渡すと、ランタイムはそのメッセージをターゲットに提供します。ターゲットがそのメッセージを受け入れると、ランタイムはメッセージを受信側に伝達する非同期タスクをスケジュールします。 ランタイムは、軽量タスクを使用して、メッセージを協調的に伝達します。 軽量タスクの詳細については、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。
 
 アプリケーションでは、ソースとターゲットを接続することでメッセージング ネットワークを形成します。 通常、ネットワークをリンクし、`send` または `asend` を呼び出してデータをネットワークに渡します。 ソース メッセージ ブロックをターゲットに接続するには、呼び出し、 [concurrency::ISource::link_target](reference/isource-class.md#link_target)メソッド。 呼び出しターゲットからソース ブロックを切断するには、 [concurrency::ISource::unlink_target](reference/isource-class.md#unlink_target)メソッド。 ソース ブロックからすべてのターゲットを切断するには、呼び出し、 [concurrency::ISource::unlink_targets](reference/isource-class.md#unlink_targets)メソッド。 定義済みのメッセージ ブロックの型のいずれかがスコープから外れるか、破棄されると、自動的にすべてのターゲット ブロックから接続解除されます。 メッセージ ブロックの型の中には、書き込み先として使用できるターゲットの最大数が制限されているものもあります。 次のセクションでは、定義済みのメッセージ ブロックの型に適用される制限事項について説明します。
 
@@ -222,7 +222,7 @@ ms.locfileid: "57274164"
   `transformer` オブジェクトがメッセージを受信したときに処理を実行していると、そのメッセージはキューに追加されます。 各 `transformer` オブジェクトでは、キューに配置されたメッセージを受信した順序で処理します。
 
 
-  `transformer` クラスでは、メッセージを 1 つのターゲットに送信します。 設定した場合、`_PTarget`パラメーターにコンス トラクターで`NULL`、後で呼び出すことによって、ターゲットを指定できます、 [concurrency::link_target](reference/source-block-class.md#link_target)メソッド。
+  `transformer` クラスでは、メッセージを 1 つのターゲットに送信します。 設定した場合、 `_PTarget` パラメーターにコンス トラクターで `NULL` 、後で呼び出すことによって、ターゲットを指定できます、 [concurrency::link_target](reference/source-block-class.md#link_target) メソッド。
 
 エージェント ライブラリに用意されている他のすべての非同期メッセージ ブロックの型とは異なり、`transformer` クラスでは異なる入力と出力の種類を操作できます。 データをある型から別の型に変換するこの機能により、`transformer` クラスは多くの同時実行ネットワークで重要なコンポーネントとなっています。 また、`transformer` オブジェクトの処理関数により詳細な並列機能を追加できます。
 
@@ -316,7 +316,7 @@ fib35 = 9227465fib37 = 24157817half_of_fib42 = 1.33957e+008
   `timer` クラスは、メッセージの送信を遅延させる必要がある場合や、定期的にメッセージを送信する場合に便利です。
 
 
-  `timer` クラスでは、メッセージを 1 つのターゲットにのみ送信します。 設定した場合、`_PTarget`パラメーターにコンス トラクターで`NULL`、後で呼び出すことによって、ターゲットを指定できます、 [concurrency::ISource::link_target](reference/source-block-class.md#link_target)メソッド。
+  `timer` クラスでは、メッセージを 1 つのターゲットにのみ送信します。 設定した場合、 `_PTarget` パラメーターにコンス トラクターで `NULL` 、後で呼び出すことによって、ターゲットを指定できます、 [concurrency::ISource::link_target](reference/source-block-class.md#link_target) メソッド。
 
 
   `timer` オブジェクトには、繰り返しと非繰り返しがあります。 繰り返しタイマーを作成するには、渡す**true**の`_Repeating`パラメーターは、コンス トラクターを呼び出す場合。 それ以外の場合、渡す**false**の`_Repeating`非繰り返しタイマーを作成するパラメーター。 タイマーが繰り返しの場合、一定の間隔で同じメッセージをターゲットに送信します。
