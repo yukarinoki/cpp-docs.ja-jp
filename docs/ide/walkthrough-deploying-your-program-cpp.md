@@ -9,24 +9,24 @@ helpviewer_keywords:
 - projects [C++], deploying programs
 - application deployment [C++], walkthroughs
 ms.assetid: 79e6cc4e-dced-419d-aaf7-d62d1367603f
-ms.openlocfilehash: 051ef3aa8c691a2191d25183ef96f17b557a47c1
-ms.sourcegitcommit: 9e85c2e029d06b4c1c69837437468718b4d54908
+ms.openlocfilehash: aa0e1cd6ec7c27b8d3ccc1e327f3cb8da526d4f7
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57820209"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58769265"
 ---
 # <a name="walkthrough-deploying-your-program-c"></a>チュートリアル: プログラムの配置 (C++)
 
-ここまでの関連チュートリアル (「[C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照) を完了することで、アプリケーションの作成が完了しました。最後の手順は、他のユーザーが自分のコンピューターにプログラムをインストールできるようにインストーラーを作成することです。 インストーラーを作成するには、新しいプロジェクトを既存のソリューションに追加します。 この新しいプロジェクトの出力は、別のコンピューターにアプリをインストールする setup.exe ファイルです。
+ここまでの関連チュートリアルを完了することで、アプリケーションの作成が完了しました。最後の手順は、他のユーザーが自分のコンピューターにプログラムをインストールできるようにインストーラーを作成することです。 インストーラーを作成するには、新しいプロジェクトを既存のソリューションに追加します。 この新しいプロジェクトの出力は、別のコンピューターにアプリをインストールする setup.exe ファイルです。
 
-このチュートリアルでは、Windows インストーラーを使用してアプリケーションを配置する方法を示します。 アプリケーションの配置には ClickOnce を使用することもできます。 詳細については、「 [Visual C++ アプリケーションの ClickOnce 配置](../ide/clickonce-deployment-for-visual-cpp-applications.md)」を参照してください。 一般的な配置の詳細については、「[アプリケーション、サービス、およびコンポーネントの配置](/visualstudio/deployment/deploying-applications-services-and-components)」をご覧ください。
+このチュートリアルでは、Windows インストーラーを使用してアプリケーションを配置する方法を示します。 アプリケーションの配置には ClickOnce を使用することもできます。 詳細については、「 [Visual C++ アプリケーションの ClickOnce 配置](../windows/clickonce-deployment-for-visual-cpp-applications.md)」を参照してください。 一般的な配置の詳細については、「[アプリケーション、サービス、およびコンポーネントの配置](/visualstudio/deployment/deploying-applications-services-and-components)」をご覧ください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
 - このチュートリアルは、C++ 言語の基本を理解していることを前提としています。
 
-- また、これまでの関連チュートリアル (「[C++ デスクトップ開発のための Visual Studio IDE の使用](../ide/using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照) を完了していることも必要です。
+- また、これまでの関連チュートリアル (「[C++ デスクトップ開発のための Visual Studio IDE の使用](using-the-visual-studio-ide-for-cpp-desktop-development.md)」を参照) を完了していることも必要です。
 
 - このチュートリアルは Visual Studio の Express Edition では完了できません。
 
@@ -72,10 +72,10 @@ ms.locfileid: "57820209"
 
 ## <a name="next-steps"></a>次の手順
 
-**前へ:**[チュートリアル:プロジェクトのデバッグ (C++)](../ide/walkthrough-debugging-a-project-cpp.md)<br/>
+**前へ:**[チュートリアル:プロジェクトのデバッグ (C++)](walkthrough-debugging-a-project-cpp.md)<br/>
 
 ## <a name="see-also"></a>関連項目
 
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
 [プロジェクトおよびビルド システム](../build/projects-and-build-systems-cpp.md)<br/>
-[デスクトップ アプリケーションの配置](../ide/deploying-native-desktop-applications-visual-cpp.md)<br/>
+[デスクトップ アプリケーションの配置](../windows/deploying-native-desktop-applications-visual-cpp.md)<br/>

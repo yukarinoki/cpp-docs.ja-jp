@@ -1,6 +1,6 @@
 ---
 title: Conversions from Unsigned Integral Types (符号なし整数型からの変換)
-ms.date: 01/29/2018
+ms.date: 03/27/2019
 helpviewer_keywords:
 - integers, converting
 - type casts, involving integers
@@ -8,16 +8,16 @@ helpviewer_keywords:
 - type conversion [C++], signed and unsigned integers
 - integral conversions, from unsigned
 ms.assetid: 60fb7e10-bff9-4a13-8a48-e19f25a36a02
-ms.openlocfilehash: d7653c545601d10b159f10a8a3c8f60f9128f944
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3f6136a721f84332451184baa648ebc7c909d5d7
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579688"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565023"
 ---
 # <a name="conversions-from-unsigned-integral-types"></a>Conversions from Unsigned Integral Types (符号なし整数型からの変換)
 
-符号なし整数は、上位ビットを切り捨てることによって短い符号なしまたは符号付き整数に変換されます。または、ゼロ拡張によって長い符号なしまたは符号付き整数に変換されます (「[符号なし整数型からの変換](#_clang_table_4..3)」表をご覧ください)。
+符号なし整数は、上位ビットを切り捨てることによって、より短い符号なしまたは符号付き整数に変換されます。または、ゼロ拡張によって、より長い符号なしまたは符号付き整数に変換されます。 詳細については、「[符号なし整数型のテーブルからの変換](#conversions-from-unsigned-integral-types-table)」をご覧ください。
 
 整数型の値がサイズの小さい符号付き整数に下位変換されるか、符号なし整数が対応する符号付き整数に変換される場合、新しい型で表すことができるときには、値は変更されません。 ただし、次の例のように、符号ビットが設定される場合は、表される値が変更されます。
 
@@ -35,7 +35,7 @@ printf_s( "%hd\n", j );   // Prints -3
 
 次の表は、符号なし整数型からの変換をまとめたものです。
 
-## <a name="conversions-from-unsigned-integral-types"></a>符号なし整数型からの変換
+## <a name="conversions-from-unsigned-integral-types-table"></a>符号なし整数型のテーブルからの変換
 
 |From|終了|メソッド|
 |----------|--------|------------|

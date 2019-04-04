@@ -2,12 +2,12 @@
 title: アップグレード時の潜在的な問題の概要 (Visual C++)
 ms.date: 11/04/2016
 ms.assetid: 2c99a8cb-098f-4a9d-bf2c-b80fd06ace43
-ms.openlocfilehash: e4a1f4ecb6492bf74fca46df6f096ca79c71da18
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 16918a70d4ce56a7415c3a807485e72c085d1194
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50504261"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58775043"
 ---
 # <a name="overview-of-potential-upgrade-issues-visual-c"></a>アップグレード時の潜在的な問題の概要 (Visual C++)
 
@@ -63,7 +63,7 @@ CRT については、mixing-and-matching はサポートされていません�
 <PlatformToolset Condition="'$(VisualStudioVersion)'=='15.0'">v141</PlatformToolset>
 ```
 
-### <a name="lnk2019-unresolved-external"></a>LNK2019: 未解決の外部シンボル
+### <a name="lnk2019-unresolved-external"></a>LNK2019:未解決の外部
 
 未解決のシンボルの場合、プロジェクト設定の修正が必要なことがあります。
 
@@ -111,7 +111,7 @@ Microsoft Visual C++ コンパイラは、長年にわたり、C++ 標準への�
 
 アップグレード時によく発生するコンパイラ エラーの例として、非 const 引数が const パラメーターに渡された場合に発生するエラーが挙げられます。 コンパイラの以前のバージョンでは、これに対して常にエラー フラグが付けられるわけではありませんでした。 詳細については、「[コンパイラのより厳密な変換](porting-guide-spy-increment.md#stricter_conversions)」を参照してください。
 
-特定の適合性強化の詳細については、[Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md) (Visual C++ 2003 ～ 2015 での互換性に影響する変更点) および「[C++ conformance improvements in Visual Studio 2017](../cpp-conformance-improvements-2017.md)」 (Visual Studio 2017 での C++ 適合性強化) を参照してください。
+特定の適合性強化の詳細については、[Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md) (Visual C++ 2003 ～ 2015 での互換性に影響する変更点) および「[C++ conformance improvements in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)」 (Visual Studio 2017 での C++ 適合性強化) を参照してください。
 
 ## <a name="errors-involving-stdinth-integral-types"></a>\<stdint.h> 整数型に関連するエラー
 
@@ -127,7 +127,7 @@ Microsoft Visual C++ コンパイラは、長年にわたり、C++ 標準への�
 
 C ランタイムには、長年にわたり、多くの変更が加えられてきました。 セキュリティで保護された関数のバージョンが多数追加された一方で、削除された関数もありました。 また、この記事で前述したように、Microsoft のRT 実装は、Visual Studio 2015 で新しいバイナリと関連する .lib ファイルにリファクタリングされました。
 
-エラーが CRT 関数に関係している場合は、追加情報がないかどうか、「[Visual C++ 2003 ～ 2015 の変更履歴](visual-cpp-change-history-2003-2015.md)」または「[C++ conformance improvements in Visual Studio 2017](../cpp-conformance-improvements-2017.md)」 (Visual Studio 2017 での C++ 準拠の改善) を検索してください。 エラーが LNK2019 (未解決の外部シンボル) である場合は、関数が削除されていないことを確認してください。 関数がまだ存在し、呼び出し元のコードも正しい場合は、プロジェクトで `/NODEFAULTLIB` が使用されているかどうかを確認します。 それが使用されている場合は、プロジェクトで新しい Universal (UCRT) ライブラリを使用するように、ライブラリのリストを更新する必要があります。 ライブラリと依存関係の詳細については、上記セクションを参照してください。
+エラーが CRT 関数に関係している場合は、追加情報がないかどうか、「[Visual C++ 2003 ～ 2015 の変更履歴](visual-cpp-change-history-2003-2015.md)」または「[C++ conformance improvements in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)」 (Visual Studio 2017 での C++ 準拠の改善) を検索してください。 エラーが LNK2019 (未解決の外部シンボル) である場合は、関数が削除されていないことを確認してください。 関数がまだ存在し、呼び出し元のコードも正しい場合は、プロジェクトで `/NODEFAULTLIB` が使用されているかどうかを確認します。 それが使用されている場合は、プロジェクトで新しい Universal (UCRT) ライブラリを使用するように、ライブラリのリストを更新する必要があります。 ライブラリと依存関係の詳細については、上記セクションを参照してください。
 
 エラーが `printf` または `scanf` 関数に関係している場合は、いずれの関数も stdio.h なしで非公開に定義されているのではないか確認してください。 そのように定義されている場合は、プライベート定義を削除するか、または legacy\_stdio\_definitions.lib へのリンクを削除します。 これを設定するには、**[プロパティ ページ]** ダイアログの **[追加の依存ファイル]** プロパティで **[構成プロパティ]** > **[リンカー]** > **[入力]** の順に選択します。 Windows SDK 8.1 以前のバージョンとリンクする場合は、legacy\_stdio\_definitions.lib を追加します。
 
@@ -161,11 +161,11 @@ Windows API を直接または間接的に使用するプログラムをアッ�
 
 ## <a name="atl--mfc"></a>ATL/MFC
 
-ATL および MFC は比較的安定した API ですが、変更が行われる場合があります。 詳細については、「[Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md)」 (Visual C++ 2003 ～ 2015 での互換性に影響する変更点)、「[What's New for Visual C++ in Visual Studio 2017](../what-s-new-for-visual-cpp-in-visual-studio.md)」 (Visual Studio 2017 での Visual C++ の新機能)、「[C++ conformance improvements in Visual Studio 2017](../cpp-conformance-improvements-2017.md)」 (Visual Studio 2017 での C++ 適合性強化) を参照してください。
+ATL および MFC は比較的安定した API ですが、変更が行われる場合があります。 詳細については、「[Visual C++ change history 2003 - 2015](visual-cpp-change-history-2003-2015.md)」 (Visual C++ 2003 ～ 2015 での互換性に影響する変更点)、「[What's New for Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)」 (Visual Studio 2017 での Visual C++ の新機能)、「[C++ conformance improvements in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)」 (Visual Studio 2017 での C++ 適合性強化) を参照してください。
 
 ### <a name="lnk-2005-dllmain12-already-defined-in-msvcrtdlib"></a>MSVCRTD.lib で定義済みの LNK 2005 _DllMain@12
 
-このエラーは MFC アプリケーションで発生することがあります。 CRT ライブラリと MFC ライブラリの間での順序付けの問題を示します。 最初に MFC をリンクして、new および delete 演算子が提供されるようにする必要があります。 エラーを修復するには、`/NODEFAULTLIB` スイッチを使用して、既定のライブラリ MSVCRTD.lib と mfcs140d.lib を無視します。 次に、これらの lib を追加の依存関係として追加します。
+このエラーは MFC アプリケーションで発生することがあります。 CRT ライブラリと MFC ライブラリの間での順序付けの問題を示します。 最初に MFC をリンクして、new および delete 演算子が提供されるようにする必要があります。 エラーを修復するには、`/NODEFAULTLIB` スイッチを使用して、次の既定のライブラリを無視します:MSVCRTD.lib と mfcs140d.lib。 次に、これらの lib を追加の依存関係として追加します。
 
 ## <a name="32-vs-64-bit"></a>32 ビットと 64 ビット
 
@@ -182,4 +182,4 @@ Unicode が標準化される前、多くのプログラムでは、ASCII 文字
 ## <a name="see-also"></a>関連項目
 
 [旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Visual Studio 2017 の C++ 準拠の強化](../cpp-conformance-improvements-2017.md)
+[Visual Studio 2017 の C++ 準拠の強化](../overview/cpp-conformance-improvements-2017.md)
