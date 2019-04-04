@@ -11,7 +11,7 @@ ms.locfileid: "50493705"
 ---
 # <a name="operators-masm"></a>演算子 (MASM)
 
-Microsoft のマクロ アセンブラーの言語で演算子の詳細については、次を参照してください。[演算子リファレンス](../../assembler/masm/operators-reference.md)します。
+Microsoft のマクロ アセンブラーの言語で演算子の詳細については、[演算子リファレンス](../../assembler/masm/operators-reference.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -21,7 +21,7 @@ ms.locfileid: "50498216"
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 
-C4242 の詳細については、次を参照してください。[一般的なコンパイラ エラー](/windows/desktop/WinProg64/common-compiler-errors)します。
+C4242 の詳細については、[一般的なコンパイラ エラー](/windows/desktop/WinProg64/common-compiler-errors)を参照してください。
 
 次の例では、C4242 が生成されます。
 

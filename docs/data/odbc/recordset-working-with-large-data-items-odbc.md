@@ -20,7 +20,7 @@ ms.locfileid: "50460373"
 このトピックでは、MFC ODBC クラスと MFC DAO クラスの両方に適用されます。
 
 > [!NOTE]
->  MFC DAO クラスを使用している場合は、クラスを使用して、大量のデータ項目を管理[CByteArray](../../mfc/reference/cbytearray-class.md)クラスではなく[CLongBinary](../../mfc/reference/clongbinary-class.md)します。 MFC ODBC クラスにバルク行フェッチを使用している場合は、使用`CLongBinary`なく`CByteArray`します。 バルク行フェッチの詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  MFC DAO クラスを使用している場合は、クラスを使用して、大量のデータ項目を管理[CByteArray](../../mfc/reference/cbytearray-class.md)クラスではなく[CLongBinary](../../mfc/reference/clongbinary-class.md)します。 MFC ODBC クラスにバルク行フェッチを使用している場合は、使用`CLongBinary`なく`CByteArray`します。 バルク行フェッチの詳細については、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
 
 たとえば、データベースは、ビットマップ (従業員の写真、マップ、製品や OLE オブジェクトの画像) などのデータの大部分を格納できるとします。 この種のデータは、ために、バイナリ ラージ オブジェクト (または BLOB) と呼ばれるに多くの場合。
 
