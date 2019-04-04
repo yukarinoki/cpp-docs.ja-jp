@@ -38,7 +38,7 @@ Microsoft 拡張 `volatile` セマンティクスを選択すると、ISO 標準
 
 ## <a name="remarks"></a>Remarks
 
-使用することを強くお勧め **/volatile:iso**明示的な同期プリミティブやスレッド間で共有されているメモリを扱うときのコンパイラ組み込みと共にします。 詳細については、次を参照してください。[揮発性](../../cpp/volatile-cpp.md)します。
+使用することを強くお勧め **/volatile:iso**明示的な同期プリミティブやスレッド間で共有されているメモリを扱うときのコンパイラ組み込みと共にします。 詳細については、[揮発性](../../cpp/volatile-cpp.md)を参照してください。
 
 既存のコードを移植したり、プロジェクトの途中でこのオプションを変更した場合は、警告を有効にする時間が立つ可能性[C4746](../../error-messages/compiler-warnings/compiler-warning-c4746.md)セマンティクスの違いによって影響を受けるコードの場所を識別します。
 
@@ -47,7 +47,7 @@ Microsoft 拡張 `volatile` セマンティクスを選択すると、ISO 標準
 
 ### <a name="to-set-the-volatile-compiler-option-in-visual-studio"></a>/volatile コンパイラ オプションを Visual Studio で設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 

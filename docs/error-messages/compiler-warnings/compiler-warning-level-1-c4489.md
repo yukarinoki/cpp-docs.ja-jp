@@ -19,7 +19,7 @@ ms.locfileid: "58768238"
 
 指定子のキーワードが、インターフェイス メソッドで正しく使用されていません。
 
-詳細については、次を参照してください。[オーバーライド指定子を](../../extensions/override-specifiers-cpp-component-extensions.md)します。
+詳細については、[オーバーライド指定子を](../../extensions/override-specifiers-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

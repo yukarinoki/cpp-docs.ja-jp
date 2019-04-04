@@ -65,7 +65,7 @@ parallel time: 1638 ms
 
 ## <a name="robust-programming"></a>信頼性の高いプログラミング
 
-マップ オブジェクトと同じ結果を生成する操作を減らすためを使用する例は、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+マップ オブジェクトと同じ結果を生成する操作を減らすためを使用する例は、[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -224,7 +224,7 @@ Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォ
 
 ## <a name="example"></a>例
 
-次の例では、単純な低レベルのスレッド同期に `_InterlockedCompareExchange` を使用しています。 マルチスレッド プログラミングの基本であるこの方法には制限がありますが、インタロックされた組み込みの代表的な使用例を示すために紹介します。 最適な結果を得るには Windows API を使用してください。 マルチ スレッド プログラミングの詳細については、次を参照してください。[マルチ スレッド Win32 プログラムの作成](../parallel/writing-a-multithreaded-win32-program.md)です。
+次の例では、単純な低レベルのスレッド同期に `_InterlockedCompareExchange` を使用しています。 マルチスレッド プログラミングの基本であるこの方法には制限がありますが、インタロックされた組み込みの代表的な使用例を示すために紹介します。 最適な結果を得るには Windows API を使用してください。 マルチ スレッド プログラミングの詳細については、[マルチ スレッド Win32 プログラムの作成](../parallel/writing-a-multithreaded-win32-program.md)を参照してください。
 
 ```
 // intrinExample.cpp

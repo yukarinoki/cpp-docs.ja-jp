@@ -13,7 +13,7 @@ ms.locfileid: "50663954"
 ---
 # <a name="examples-of-lambda-expressions"></a>ラムダ式の例
 
-この記事では、プログラムでラムダ式を使用する方法を示します。 ラムダ式の概要については、次を参照してください。[ラムダ式](../cpp/lambda-expressions-in-cpp.md)します。 ラムダ式の構造の詳細については、次を参照してください。[ラムダ式の構文](../cpp/lambda-expression-syntax.md)します。
+この記事では、プログラムでラムダ式を使用する方法を示します。 ラムダ式の概要については、[ラムダ式](../cpp/lambda-expressions-in-cpp.md)を参照してください。 ラムダ式の構造の詳細については、[ラムダ式の構文](../cpp/lambda-expression-syntax.md)を参照してください。
 
 ##  <a name="declaringLambdaExpressions"></a> ラムダ式の宣言
 
@@ -55,7 +55,7 @@ int main()
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[自動](../cpp/auto-cpp.md)、 [function クラス](../standard-library/function-class.md)、および[関数を呼び出す](../cpp/function-call-cpp.md)します。
+詳細については、[自動](../cpp/auto-cpp.md)、 [function クラス](../standard-library/function-class.md)、および[関数を呼び出す](../cpp/function-call-cpp.md)を参照してください。
 
 ラムダ式は関数の本体で最も頻繁に宣言されますが、変数を初期化できる場所ならどこでも宣言できます。
 
@@ -175,7 +175,7 @@ The first even number in the list is 42.
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、`find_if`関数を参照してください[find_if](../standard-library/algorithm-functions.md#find_if)します。 一般的なアルゴリズムを実行する C++ 標準ライブラリ関数の詳細については、次を参照してください。 [\<アルゴリズム >](../standard-library/algorithm.md)します。
+詳細については、`find_if`関数を参照してください[find_if](../standard-library/algorithm-functions.md#find_if)します。 一般的なアルゴリズムを実行する C++ 標準ライブラリ関数の詳細については、[\<アルゴリズム >](../standard-library/algorithm.md)を参照してください。
 
 [[この記事の内容](#top)]
 
@@ -419,7 +419,7 @@ After negate_all():
 
 ### <a name="remarks"></a>Remarks
 
-C++ テンプレートの詳細については、次を参照してください。[テンプレート](../cpp/templates-cpp.md)します。
+C++ テンプレートの詳細については、[テンプレート](../cpp/templates-cpp.md)を参照してください。
 
 [[この記事の内容](#top)]
 
@@ -475,7 +475,7 @@ Caught 'invalid vector<T> subscript'.
 
 ### <a name="remarks"></a>Remarks
 
-例外処理の詳細については、次を参照してください。[例外処理](../cpp/exception-handling-in-visual-cpp.md)します。
+例外処理の詳細については、[例外処理](../cpp/exception-handling-in-visual-cpp.md)を参照してください。
 
 [[この記事の内容](#top)]
 
@@ -512,7 +512,7 @@ Hello!
 
 ### <a name="remarks"></a>Remarks
 
-ラムダ式を STL/CLR ライブラリで使用することもできます。 詳細については、次を参照してください。 [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)します。
+ラムダ式を STL/CLR ライブラリで使用することもできます。 詳細については、[STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)を参照してください。
 
 > [!IMPORTANT]
 >  ラムダは、これらの共通言語ランタイム (CLR) によって管理されるエンティティでサポートされていません: **ref クラス**、 **ref 構造体**、**値クラス**、および**値構造体**.

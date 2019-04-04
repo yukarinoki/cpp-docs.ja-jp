@@ -260,7 +260,7 @@ UINT GetCheckStyle();
 
 ### <a name="remarks"></a>Remarks
 
-利用可能な方法については、次を参照してください。[有効なスタイル](#setcheckstyle)します。
+利用可能な方法については、[有効なスタイル](#setcheckstyle)を参照してください。
 
 ##  <a name="isenabled"></a>  CCheckListBox::IsEnabled
 
@@ -348,7 +348,7 @@ void SetCheck(
 |-----------|-----------------|
 |BST_CHECKED|指定されたチェック ボックスを選択します。|
 |設定されています。|指定されたチェック ボックスをオフにします。|
-|BST_INDETERMINATE|不確定なを指定のチェック ボックスの状態を設定します。<br /><br /> この状態は、チェック ボックスのスタイルが BS_AUTO3STATE または BS_3STATE 場合にのみ使用します。 詳細については、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。|
+|BST_INDETERMINATE|不確定なを指定のチェック ボックスの状態を設定します。<br /><br /> この状態は、チェック ボックスのスタイルが BS_AUTO3STATE または BS_3STATE 場合にのみ使用します。 詳細については、[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)を参照してください。|
 
 ##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle
 
@@ -375,7 +375,7 @@ void SetCheckStyle(UINT nStyle);
 
 - BS_3STATE
 
-これらのスタイルについては、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。
+これらのスタイルについては、[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

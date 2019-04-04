@@ -13,7 +13,7 @@ ms.locfileid: "58476865"
 ---
 # <a name="lambda-expression-syntax"></a>ラムダ式の構文
 
-この記事では、ラムダ式の構文と構造体要素を説明します。 ラムダ式については、次を参照してください。[ラムダ式](../cpp/lambda-expressions-in-cpp.md)します。
+この記事では、ラムダ式の構文と構造体要素を説明します。 ラムダ式については、[ラムダ式](../cpp/lambda-expressions-in-cpp.md)を参照してください。
 
 ## <a name="function-objects-vs-lambdas"></a>関数オブジェクトとラムダ
 

@@ -17,7 +17,7 @@ ms.locfileid: "50474439"
 
 'operator': 列挙型には使用できません
 
-演算子は CLR 列挙体ではサポートされていません。  詳細については、次を参照してください。[方法: 定義および c++ の列挙型を使用する/cli CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)します。
+演算子は CLR 列挙体ではサポートされていません。  詳細については、[方法: 定義および c++ の列挙型を使用する/cli CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

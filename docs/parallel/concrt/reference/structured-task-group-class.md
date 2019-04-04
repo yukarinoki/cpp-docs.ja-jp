@@ -61,7 +61,7 @@ class structured_task_group;
 
 - 一般的なとは異なり`task_group`クラス内のすべての状態、`structured_task_group`クラスは元に戻せません。 グループにタスクをキューに登録し、その完了を待機した後、同じグループをもう一度使用することはできません。
 
-詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -83,7 +83,7 @@ void cancel();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)します。
+詳細については、[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)を参照してください。
 
 ##  <a name="is_canceling"></a> is_canceling
 
@@ -99,7 +99,7 @@ bool is_canceling();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)します。
+詳細については、[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)を参照してください。
 
 ##  <a name="run"></a> 実行
 

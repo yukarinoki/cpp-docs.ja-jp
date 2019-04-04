@@ -76,7 +76,7 @@ int maxValue;                // Not recommended! maxValue contains
 
 ## <a name="the-void-type"></a>void 型
 
-**Void**型は、特殊な型; 型の変数を宣言することはできません**void**、型の変数を宣言することができますが、 __void \*__  (へのポインター**void**)、生 (型指定されていない) メモリを割り当てるときに必要な場合があります。 ただしへのポインター **void**はタイプ セーフではないと、一般にその使用は、最新の C++ で使用しないでください。 関数の宣言で、 **void**の一般的で適切な使用をこれは戻り値は、関数が値を返さないことを意味**void**します。 0 個のパラメーターを宣言する C 言語のために必要な関数の中に**void**パラメーター リストで`fou(void)`、この実習は最新の C++ で非推奨と宣言されなければなりません`fou()`します。 詳細については、次を参照してください。[型変換とタイプ セーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)します。
+**Void**型は、特殊な型; 型の変数を宣言することはできません**void**、型の変数を宣言することができますが、 __void \*__  (へのポインター**void**)、生 (型指定されていない) メモリを割り当てるときに必要な場合があります。 ただしへのポインター **void**はタイプ セーフではないと、一般にその使用は、最新の C++ で使用しないでください。 関数の宣言で、 **void**の一般的で適切な使用をこれは戻り値は、関数が値を返さないことを意味**void**します。 0 個のパラメーターを宣言する C 言語のために必要な関数の中に**void**パラメーター リストで`fou(void)`、この実習は最新の C++ で非推奨と宣言されなければなりません`fou()`します。 詳細については、[型変換とタイプ セーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)を参照してください。
 
 ## <a name="const-type-qualifier"></a>const 型修飾子
 
@@ -88,9 +88,9 @@ const double PI = 3.1415;
 PI = .75 //Error. Cannot modify const variable.
 ```
 
-**Const**修飾子は関数と変数の宣言で広く使用されて、「const の正確性」は、C++ の重要な概念と使用する場合は、基本的に; **const**を確実に、コンパイル時に、ある値が誤って変更されません。 詳細については、次を参照してください。 [const](../cpp/const-cpp.md)します。
+**Const**修飾子は関数と変数の宣言で広く使用されて、「const の正確性」は、C++ の重要な概念と使用する場合は、基本的に; **const**を確実に、コンパイル時に、ある値が誤って変更されません。 詳細については、[const](../cpp/const-cpp.md)を参照してください。
 
-A **const**型は、非定数のバージョンの異なるなど**const int**から別個の型は、 **int**します。C++ を使用する**const_cast**演算子を削除する必要がありますと特殊な状況に*const 性*変数から。 詳細については、次を参照してください。[型変換とタイプ セーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)します。
+A **const**型は、非定数のバージョンの異なるなど**const int**から別個の型は、 **int**します。C++ を使用する**const_cast**演算子を削除する必要がありますと特殊な状況に*const 性*変数から。 詳細については、[型変換とタイプ セーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)を参照してください。
 
 ## <a name="string-types"></a>文字列型
 
@@ -147,15 +147,15 @@ void someFunction() {
   // for the unique_ptr, freeing the resource.
 ```
 
-スマート ポインターの詳細については、次を参照してください。[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)します。
+スマート ポインターの詳細については、[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)を参照してください。
 
-ポインター変換の詳細については、次を参照してください。[型変換とタイプ セーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)します。
+ポインター変換の詳細については、[型変換とタイプ セーフ](../cpp/type-conversions-and-type-safety-modern-cpp.md)を参照してください。
 
 ポインターの詳細については一般に、表示[ポインター](../cpp/pointers-cpp.md)します。
 
 ## <a name="windows-data-types"></a>Windows のデータ型
 
-C および C++ 向けの従来の Win32 プログラミングでは、ほとんどの関数は Windows 固有の typedef マクロと #define マクロ (`windef.h` で定義) を使用して、パラメーターと戻り値の型を指定します。 これらの Windows データ型は、C と C++ の組み込み型に付けられた特殊な名前 (エイリアス) ではほとんどの場合です。 これらの typedef とプリプロセッサ定義の一覧は、次を参照してください。[データ型の Windows](/windows/desktop/WinProg/windows-data-types)します。 HRESULT や LCID など、typedef には便利で内容がわかりやすいものがあります。 INT など、他の typedef には特別な意味がなく、C++ の基本型のエイリアスにすぎません。 他の Windows のデータ型には、C プログラミングおよび 16 ビット プロセッサの時代から残っている名前がありますが、最新のハードウェアやオペレーティング システムでは目的も意味もありません。 またとして一覧表示、Windows ランタイム ライブラリに関連付けられている特殊なデータ型がある[Windows ランタイムの基本データ型](/windows/desktop/WinRT/base-data-types)します。 最新の C++ では、値の解釈方法について Windows の型が追加の意味を伝えるのでない限り、一般的なガイドラインとして C++ の基本型が推奨されます。
+C および C++ 向けの従来の Win32 プログラミングでは、ほとんどの関数は Windows 固有の typedef マクロと #define マクロ (`windef.h` で定義) を使用して、パラメーターと戻り値の型を指定します。 これらの Windows データ型は、C と C++ の組み込み型に付けられた特殊な名前 (エイリアス) ではほとんどの場合です。 これらの typedef とプリプロセッサ定義の一覧は、[データ型の Windows](/windows/desktop/WinProg/windows-data-types)を参照してください。 HRESULT や LCID など、typedef には便利で内容がわかりやすいものがあります。 INT など、他の typedef には特別な意味がなく、C++ の基本型のエイリアスにすぎません。 他の Windows のデータ型には、C プログラミングおよび 16 ビット プロセッサの時代から残っている名前がありますが、最新のハードウェアやオペレーティング システムでは目的も意味もありません。 またとして一覧表示、Windows ランタイム ライブラリに関連付けられている特殊なデータ型がある[Windows ランタイムの基本データ型](/windows/desktop/WinRT/base-data-types)します。 最新の C++ では、値の解釈方法について Windows の型が追加の意味を伝えるのでない限り、一般的なガイドラインとして C++ の基本型が推奨されます。
 
 ## <a name="more-information"></a>説明
 

@@ -79,7 +79,7 @@ ms.locfileid: "50660006"
 
    - 可変個引数
 
-関数の制限事項の詳細については、次を参照してください。 [(amp) の制限を制限する](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)します。
+関数の制限事項の詳細については、[(amp) の制限を制限する](https://blogs.msdn.microsoft.com/nativeconcurrency/2011/12/19/restrictamp-restrictions-part-0-of-n-introduction/)を参照してください。
 
 ## <a name="example"></a>例
 

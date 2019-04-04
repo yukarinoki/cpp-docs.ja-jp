@@ -19,7 +19,7 @@ aWinRT またはマネージ イベント宣言は WinRT またはマネージ�
 
 Windows ランタイム イベントまたはマネージド イベントがネイティブ型内で宣言されました。 このエラーを修正するには、Windows ランタイム型またはマネージド型内でイベントを宣言します。
 
-詳細については、次を参照してください。[イベント](../../extensions/event-cpp-component-extensions.md)します。
+詳細については、[イベント](../../extensions/event-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3909 を生成し、その修正方法を示しています。
 

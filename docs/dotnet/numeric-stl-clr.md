@@ -66,7 +66,7 @@ template<class _InIt, class _Ty, class _Fn2> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ数値関数と同様に動作`accumulate`します。 詳細については、次を参照してください。[蓄積](../standard-library/numeric-functions.md#accumulate)します。
+この関数が C++ 標準ライブラリ数値関数と同様に動作`accumulate`します。 詳細については、[蓄積](../standard-library/numeric-functions.md#accumulate)を参照してください。
 
 ## <a name="adjacent_difference"></a> adjacent_difference (STL/CLR)
 
@@ -85,7 +85,7 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ数値関数と同様に動作`adjacent_difference`します。 詳細については、次を参照してください。 [adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)します。
+この関数が C++ 標準ライブラリ数値関数と同様に動作`adjacent_difference`します。 詳細については、[adjacent_difference](../standard-library/numeric-functions.md#adjacent_difference)を参照してください。
 
 ## <a name="inner_product"></a> inner_product (STL/CLR)
 
@@ -105,7 +105,7 @@ template<class _InIt1, class _InIt2, class _Ty, class _Fn21,
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ数値関数と同様に動作`inner_product`します。 詳細については、次を参照してください。 [inner_product](../standard-library/numeric-functions.md#inner_product)します。
+この関数が C++ 標準ライブラリ数値関数と同様に動作`inner_product`します。 詳細については、[inner_product](../standard-library/numeric-functions.md#inner_product)を参照してください。
 
 ## <a name="partial_sum"></a> partial_sum (STL/CLR)
 
@@ -123,4 +123,4 @@ template<class _InIt, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ数値関数と同様に動作`partial_sum`します。 詳細については、次を参照してください。 [partial_sum](../standard-library/numeric-functions.md#partial_sum)します。
+この関数が C++ 標準ライブラリ数値関数と同様に動作`partial_sum`します。 詳細については、[partial_sum](../standard-library/numeric-functions.md#partial_sum)を参照してください。

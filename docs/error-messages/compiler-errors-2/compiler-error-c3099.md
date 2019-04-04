@@ -19,7 +19,7 @@ ms.locfileid: "58771488"
 
 使用<xref:System.AttributeUsageAttribute>を宣言する **/clr**属性。 `Windows::Foundation::Metadata::AttributeUsageAttribute` を使用して、Windows ランタイム属性を宣言します。
 
-/CLR 属性の詳細については、次を参照してください。[ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)します。 Windows ランタイムでサポートされている属性は、次を参照してください[Windows.Foundation.Metadata 名前空間。](/uwp/api/windows.foundation.metadata)
+/CLR 属性の詳細については、[ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)を参照してください。 Windows ランタイムでサポートされている属性は、次を参照してください[Windows.Foundation.Metadata 名前空間。](/uwp/api/windows.foundation.metadata)
 
 ## <a name="example"></a>例
 

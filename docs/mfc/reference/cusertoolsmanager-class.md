@@ -178,7 +178,7 @@ CUserToolsManager(
 
 ### <a name="remarks"></a>Remarks
 
-このコンス トラクターを呼び出さないでください。 代わりに、 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)を有効にするユーザーのツール、および呼び出し[CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager)へのポインターを取得する、`CUserToolsManager`します。 詳細については、次を参照してください。[ユーザー定義のツール](../../mfc/user-defined-tools.md)します。
+このコンス トラクターを呼び出さないでください。 代わりに、 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)を有効にするユーザーのツール、および呼び出し[CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager)へのポインターを取得する、`CUserToolsManager`します。 詳細については、[ユーザー定義のツール](../../mfc/user-defined-tools.md)を参照してください。
 
 ##  <a name="findtool"></a>  CUserToolsManager::FindTool
 

@@ -28,7 +28,7 @@ ms.locfileid: "57821484"
 |/Zg|関数プロトタイプを生成します。|
 |/Zs|構文の確認|
 
-リンクの詳細については、次を参照してください。 [MSVC リンカー オプション](linker-options.md)します。
+リンクの詳細については、[MSVC リンカー オプション](linker-options.md)を参照してください。
 
 ## <a name="example"></a>例
 
@@ -46,7 +46,7 @@ ms.locfileid: "57821484"
 CL MAIN.c MOD1.C MOD2.C MYGRAPH.lib
 ```
 
-まず、CL は C ソース ファイルをコンパイルし、MAIN.obj、MOD1.obj、および MOD2.obj オブジェクト ファイルを作成します。コンパイラは、標準ライブラリの名前を各 .obj ファイルに配置します。 詳細については、次を参照してください。[ランタイム ライブラリの使用](md-mt-ld-use-run-time-library.md)します。
+まず、CL は C ソース ファイルをコンパイルし、MAIN.obj、MOD1.obj、および MOD2.obj オブジェクト ファイルを作成します。コンパイラは、標準ライブラリの名前を各 .obj ファイルに配置します。 詳細については、[ランタイム ライブラリの使用](md-mt-ld-use-run-time-library.md)を参照してください。
 
 CL は、名前、MYGRAPH.lib と共に、.obj ファイルの名前をリンカーに渡します。 リンカーは、次のように外部参照を解決します。
 

@@ -1091,7 +1091,7 @@ BOOL Draw(
 ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは`RECT`(論理単位で、デバイス コンテキストから判別) で OLE 項目を描画するための外接する四角形を定義する構造体。
 
 *nDrawAspect*<br/>
-OLE の部分を表す項目は、表示方法を指定します。 場合*nDrawAspect* -1 で、最後の側面を使用して設定[外観](#setdrawaspect)使用されます。 このフラグに指定できる値の詳細については、次を参照してください。[外観](#setdrawaspect)します。
+OLE の部分を表す項目は、表示方法を指定します。 場合*nDrawAspect* -1 で、最後の側面を使用して設定[外観](#setdrawaspect)使用されます。 このフラグに指定できる値の詳細については、[外観](#setdrawaspect)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1135,7 +1135,7 @@ BOOL GetCachedExtent(
 ポインターを`SIZE`構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)サイズ情報を受け取るオブジェクト。
 
 *nDrawAspect*<br/>
-境界を取得する OLE アイテムの外観を指定します。 使用可能な値は、次を参照してください。[外観](#setdrawaspect)します。
+境界を取得する OLE アイテムの外観を指定します。 使用可能な値は、[外観](#setdrawaspect)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1246,7 +1246,7 @@ BOOL GetExtent(
 ポインターを`SIZE`構造または`CSize`サイズ情報を受け取るオブジェクト。
 
 *nDrawAspect*<br/>
-境界を取得する OLE アイテムの外観を指定します。 使用可能な値は、次を参照してください。[外観](#setdrawaspect)します。
+境界を取得する OLE アイテムの外観を指定します。 使用可能な値は、[外観](#setdrawaspect)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1564,7 +1564,7 @@ virtual void OnChange(
 - OLE_CHANGED_STATE、OLE アイテムは、別の 1 つの状態から変更されました。
 
 *dwParam*<br/>
-場合*nCode*でまたは OLE_CLOSED は、このパラメーターは使用されません。 場合*nCode* OLE_CHANGED は、このパラメーターが変更された OLE 項目の外観を指定します。 使用可能な値は、次を参照してください。、*について*パラメーターの[値](#draw)します。 場合*nCode* OLE_CHANGED_STATE は、このパラメーターは、`COleClientItem::ItemState`列挙値と、入力されている状態について説明します。 次の値のいずれかのことができます: `emptyState`、 `loadedState`、 `openState`、 `activeState`、または`activeUIState`します。
+場合*nCode*でまたは OLE_CLOSED は、このパラメーターは使用されません。 場合*nCode* OLE_CHANGED は、このパラメーターが変更された OLE 項目の外観を指定します。 使用可能な値は、、*について*パラメーターの[値](#draw)を参照してください。 場合*nCode* OLE_CHANGED_STATE は、このパラメーターは、`COleClientItem::ItemState`列挙値と、入力されている状態について説明します。 次の値のいずれかのことができます: `emptyState`、 `loadedState`、 `openState`、 `activeState`、または`activeUIState`します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1949,7 +1949,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="parameters"></a>パラメーター
 
 *dwCloseOption*<br/>
-読み込み済み状態に戻ったときにどのような状況で OLE 項目が保存されたを指定するフラグ。 使用可能な値の一覧は、次を参照してください。 [COleClientItem::Close](#close)します。
+読み込み済み状態に戻ったときにどのような状況で OLE 項目が保存されたを指定するフラグ。 使用可能な値の一覧は、[COleClientItem::Close](#close)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2028,7 +2028,7 @@ void SetExtent(
 A [CSize](../../atl-mfc-shared/reference/csize-class.md)サイズ情報を含むオブジェクト。
 
 *nDrawAspect*<br/>
-境界を設定する OLE アイテムの外観を指定します。 使用可能な値は、次を参照してください。[外観](#setdrawaspect)します。
+境界を設定する OLE アイテムの外観を指定します。 使用可能な値は、[外観](#setdrawaspect)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

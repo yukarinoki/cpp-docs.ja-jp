@@ -105,7 +105,7 @@ class Account *Checking = new class Account( Account );
 > [!NOTE]
 > この例のように、識別子名を再使用するのは適切なプログラミング方法ではありません。
 
-クラス オブジェクトの宣言と初期化については、次を参照してください。[クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)します。 使用方法について、**新しい**と**削除**フリー ストア演算子を参照してください[新しい演算子と delete 演算子](new-and-delete-operators.md)します。
+クラス オブジェクトの宣言と初期化については、[クラス、構造、および共用体](../cpp/classes-and-structs-cpp.md)を参照してください。 使用方法について、**新しい**と**削除**フリー ストア演算子を参照してください[新しい演算子と delete 演算子](new-and-delete-operators.md)します。
 
 ## <a name="hiding-names-with-global-scope"></a>グローバル スコープの名前の隠ぺい
 

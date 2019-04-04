@@ -105,7 +105,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 
 ## <a name="remarks"></a>Remarks
 
-Outlook バーを実装する方法については、次を参照してください。 [CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)します。
+Outlook バーを実装する方法については、[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)を参照してください。
 
 Outlook バーの例は、OutlookDemo サンプル プロジェクトを参照してください。
 
@@ -258,7 +258,7 @@ virtual BOOL Create(
 [in]Outlook バー ペインのコントロールの親ウィンドウを指定します。 NULL は指定できません。
 
 *dwStyle*<br/>
-[in]ウィンドウ スタイル。  ウィンドウ スタイルの一覧は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
+[in]ウィンドウ スタイル。  ウィンドウ スタイルの一覧は、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。
 
 *uiID*<br/>
 [in]コントロールの id。 有効にするのには一意である必要がありますのコントロールの状態を保存しています。

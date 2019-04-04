@@ -28,7 +28,7 @@ ATL クラス[CComBSTR](../atl/reference/ccombstr-class.md) BSTR データ型ラ
 
 ##  <a name="programmingwithccombstr_conversionissues"></a> 変換の問題
 
-いくつか`CComBSTR`メソッドが Unicode に ANSI 文字列引数を自動的に変換されます、メソッドは常に Unicode 形式の文字列を返します。 出力文字列を ANSI に変換する、するには、ATL 変換クラスを使用します。 ATL 変換クラスの詳細については、次を参照してください。 [ATL と MFC 文字列変換マクロ](reference/string-conversion-macros.md)します。
+いくつか`CComBSTR`メソッドが Unicode に ANSI 文字列引数を自動的に変換されます、メソッドは常に Unicode 形式の文字列を返します。 出力文字列を ANSI に変換する、するには、ATL 変換クラスを使用します。 ATL 変換クラスの詳細については、[ATL と MFC 文字列変換マクロ](reference/string-conversion-macros.md)を参照してください。
 
 ### <a name="example"></a>例
 

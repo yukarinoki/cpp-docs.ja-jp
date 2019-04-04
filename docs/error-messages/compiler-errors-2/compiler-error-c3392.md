@@ -17,7 +17,7 @@ ms.locfileid: "58779535"
 
 'type_arg' : ジェネリック パラメーター 'param' (ジェネリック 'generic_type') の型引数が無効です。パブリックのパラメーターのないコンストラクターを含んでいなければなりません
 
-ジェネリック型のインスタンス化が正しく行われませんでした。 型定義を確認してください。 詳細については、次を参照してください。[ジェネリック](../../extensions/generics-cpp-component-extensions.md)します。
+ジェネリック型のインスタンス化が正しく行われませんでした。 型定義を確認してください。 詳細については、[ジェネリック](../../extensions/generics-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

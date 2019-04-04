@@ -32,7 +32,7 @@ ms.locfileid: "57826691"
 
 メイクファイルで使用できるその他の機能は[ワイルドカード](wildcards-and-nmake.md)、[長いファイル名](long-filenames-in-a-makefile.md)、[コメント](comments-in-a-makefile.md)、および[特殊文字](special-characters-in-a-makefile.md)します。
 
-サンプルについては、次を参照してください。[サンプル メイクファイル](sample-makefile.md)します。
+サンプルについては、[サンプル メイクファイル](sample-makefile.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

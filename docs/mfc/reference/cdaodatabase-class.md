@@ -556,7 +556,7 @@ short GetQueryDefCount();
 
 ### <a name="remarks"></a>Remarks
 
-`GetQueryDefCount` QueryDefs コレクション内のすべてのクエリ定義をループ処理する必要がある場合に便利です。 コレクション内の指定されたクエリに関する情報を取得するには、次を参照してください。 [GetQueryDefInfo](#getquerydefinfo)します。
+`GetQueryDefCount` QueryDefs コレクション内のすべてのクエリ定義をループ処理する必要がある場合に便利です。 コレクション内の指定されたクエリに関する情報を取得するには、[GetQueryDefInfo](#getquerydefinfo)を参照してください。
 
 ##  <a name="getquerydefinfo"></a>  CDaoDatabase::GetQueryDefInfo
 
@@ -652,7 +652,7 @@ short GetRelationCount();
 
 ### <a name="remarks"></a>Remarks
 
-`GetRelationCount` データベースの関係のコレクションで定義されているすべての関係をループ処理する必要がある場合に便利です。 コレクション内の特定の関係に関する情報を取得するには、次を参照してください。 [GetRelationInfo](#getrelationinfo)します。
+`GetRelationCount` データベースの関係のコレクションで定義されているすべての関係をループ処理する必要がある場合に便利です。 コレクション内の特定の関係に関する情報を取得するには、[GetRelationInfo](#getrelationinfo)を参照してください。
 
 リレーションシップの概念を説明するために、Suppliers テーブルと一対多のリレーションシップがあります製品のテーブルを検討してください。 このリレーションシップでは、1 つの仕入先は 1 つ以上の製品を指定できます。 その他の関係は、一対一および多対多です。
 
@@ -713,7 +713,7 @@ short GetTableDefCount();
 
 ### <a name="remarks"></a>Remarks
 
-`GetTableDefCount` データベースのテーブル定義のコレクション内のすべてのテーブルをループ処理する必要がある場合に便利です。 コレクション内の特定のテーブルに関する情報を取得するには、次を参照してください。[プライマリ](#gettabledefinfo)します。
+`GetTableDefCount` データベースのテーブル定義のコレクション内のすべてのテーブルをループ処理する必要がある場合に便利です。 コレクション内の特定のテーブルに関する情報を取得するには、[プライマリ](#gettabledefinfo)を参照してください。
 
 ##  <a name="gettabledefinfo"></a>  CDaoDatabase::GetTableDefInfo
 

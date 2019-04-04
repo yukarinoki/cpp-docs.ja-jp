@@ -83,7 +83,7 @@ copyin(var)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-詳細については、次を参照してください。 [2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)します。
+詳細については、[2.7.2.7 copyin](../../../parallel/openmp/2-7-2-7-copyin.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -106,7 +106,7 @@ copyprivate(var)
 
 `copyprivate` 適用されます、[単一](openmp-directives.md#single)ディレクティブ。
 
-詳細については、次を参照してください。 [2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)します。
+詳細については、[2.7.2.8 copyprivate](../../../parallel/openmp/2-7-2-8-copyprivate.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -192,7 +192,7 @@ default(shared | none)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-詳細については、次を参照してください。 [2.7.2.5 既定](../../../parallel/openmp/2-7-2-5-default.md)します。
+詳細については、[2.7.2.5 既定](../../../parallel/openmp/2-7-2-5-default.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -220,7 +220,7 @@ Parallel コンストラクトの前に存在するので、変数の値は、�
 - [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
-詳細については、次を参照してください。 [2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md)します。
+詳細については、[2.7.2.2 firstprivate](../../../parallel/openmp/2-7-2-2-firstprivate.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -247,7 +247,7 @@ if(expression)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-詳細については、次を参照してください。 [2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)します。
+詳細については、[2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -305,7 +305,7 @@ lastprivate(var)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-詳細については、次を参照してください。 [2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)します。
+詳細については、[2.7.2.3 lastprivate](../../../parallel/openmp/2-7-2-3-lastprivate.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -327,7 +327,7 @@ nowait
 - [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
-詳細については、次を参照してください。 [2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)、 [2.4.2 sections のコンストラクト](../../../parallel/openmp/2-4-2-sections-construct.md)、および[2.4.3 の 1 つ構築](../../../parallel/openmp/2-4-3-single-construct.md)します。
+詳細については、[2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)、 [2.4.2 sections のコンストラクト](../../../parallel/openmp/2-4-2-sections-construct.md)、および[2.4.3 の 1 つ構築](../../../parallel/openmp/2-4-3-single-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -399,7 +399,7 @@ num_threads(num)
 - [for](openmp-directives.md#for-openmp)
 - [sections](openmp-directives.md#sections-openmp)
 
-詳細については、次を参照してください。 [2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)します。
+詳細については、[2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -417,7 +417,7 @@ ordered
 
 `ordered` 適用されます、[の](openmp-directives.md#for-openmp)ディレクティブ。
 
-詳細については、次を参照してください。 [2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)します。
+詳細については、[2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -445,7 +445,7 @@ private(var)
 - [sections](openmp-directives.md#sections-openmp)
 - [single](openmp-directives.md#single)
 
-詳細については、次を参照してください。 [2.7.2.1 プライベート](../../../parallel/openmp/2-7-2-1-private.md)します。
+詳細については、[2.7.2.1 プライベート](../../../parallel/openmp/2-7-2-1-private.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -649,7 +649,7 @@ reduction(operation:var)
 - [parallel](openmp-directives.md#parallel)
 - [sections](openmp-directives.md#sections-openmp)
 
-詳細については、次を参照してください。 [2.7.2.6 削減](../../../parallel/openmp/2-7-2-6-reduction.md)します。
+詳細については、[2.7.2.6 削減](../../../parallel/openmp/2-7-2-6-reduction.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -787,7 +787,7 @@ schedule(type[,size])
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)します。
+詳細については、[2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -926,7 +926,7 @@ shared(var)
 - [parallel](openmp-directives.md#parallel)
 - [sections](openmp-directives.md#sections-openmp)
 
-詳細については、次を参照してください。[共有 2.7.2.4](../../../parallel/openmp/2-7-2-4-shared.md)します。
+詳細については、[共有 2.7.2.4](../../../parallel/openmp/2-7-2-4-shared.md)を参照してください。
 
 ### <a name="example"></a>例
 

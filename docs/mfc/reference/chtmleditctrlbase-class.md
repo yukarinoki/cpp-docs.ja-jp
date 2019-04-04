@@ -603,7 +603,7 @@ HRESULT ExecCommand(
 ### <a name="parameters"></a>パラメーター
 
 *cmdID*<br/>
-実行するコマンド ID。 一覧については、次を参照してください。 [MSHTML コマンド識別子](/previous-versions/aa741315\(v=vs.85\))します。
+実行するコマンド ID。 一覧については、[MSHTML コマンド識別子](/previous-versions/aa741315\(v=vs.85\))を参照してください。
 
 *cmdExecOpt*<br/>
 取得した値、[する](/windows/desktop/api/docobj/ne-docobj-olecmdexecopt)列挙体は、オブジェクトがコマンドを実行する方法について説明します。
@@ -660,7 +660,7 @@ HRESULT GetAbsolutePosition(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_ABSOLUTE_POSITION コマンド ID](/previous-versions/aa769889\(v=vs.85\))します。
+詳細については、[IDM_ABSOLUTE_POSITION コマンド ID](/previous-versions/aa769889\(v=vs.85\))を参照してください。
 
 ##  <a name="getbackcolor"></a>  CHtmlEditCtrlBase::GetBackColor
 
@@ -744,7 +744,7 @@ HRESULT GetBookMark(CString& strAnchor) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_BOOKMARK コマンド ID](/previous-versions/aa769873\(v=vs.85\))します。
+詳細については、[IDM_BOOKMARK コマンド ID](/previous-versions/aa769873\(v=vs.85\))を参照してください。
 
 ##  <a name="getdocument"></a>  CHtmlEditCtrlBase::GetDocument
 
@@ -948,7 +948,7 @@ HRESULT GetShowAlignedSiteTags(bool& bCurValue) const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWALIGNEDSITETAGS コマンド ID](/previous-versions/aa769947\(v=vs.85\))します。
+詳細については、[IDM_SHOWALIGNEDSITETAGS コマンド ID](/previous-versions/aa769947\(v=vs.85\))を参照してください。
 
 ##  <a name="getshowalltags"></a>  CHtmlEditCtrlBase::GetShowAllTags
 
@@ -969,7 +969,7 @@ WebBrowser が文書内のすべてのタグの場所を表示するグリフを
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWALLTAGS コマンド ID](/previous-versions/aa769948\(v=vs.85\))します。
+詳細については、[IDM_SHOWALLTAGS コマンド ID](/previous-versions/aa769948\(v=vs.85\))を参照してください。
 
 ##  <a name="getshowareatags"></a>  CHtmlEditCtrlBase::GetShowAreaTags
 
@@ -990,7 +990,7 @@ TRUE の場合、WebBrowser 表示領域のタグのグリフ FALSE そうでな
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWAREATAGS コマンド ID](/previous-versions/aa769949\(v=vs.85\))します。
+詳細については、[IDM_SHOWAREATAGS コマンド ID](/previous-versions/aa769949\(v=vs.85\))を参照してください。
 
 ##  <a name="getshowbrtags"></a>  CHtmlEditCtrlBase::GetShowBRTags
 
@@ -1011,7 +1011,7 @@ WebBrowser グリフが表示されます、br タグ FALSE されない場合�
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWWBRTAGS コマンド ID](/previous-versions/aa769956\(v=vs.85\))します。
+詳細については、[IDM_SHOWWBRTAGS コマンド ID](/previous-versions/aa769956\(v=vs.85\))を参照してください。
 
 ##  <a name="getshowcommenttags"></a>  CHtmlEditCtrlBase::GetShowCommentTags
 
@@ -1032,7 +1032,7 @@ TRUE の場合、WebBrowser 表示のコメントのタグのグリフ FALSE 開
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWCOMMENTTAGS コマンド ID](/previous-versions/aa769950\(v=vs.85\))します。
+詳細については、[IDM_SHOWCOMMENTTAGS コマンド ID](/previous-versions/aa769950\(v=vs.85\))を参照してください。
 
 ##  <a name="getshowmisctags"></a>  CHtmlEditCtrlBase::GetShowMiscTags
 
@@ -1053,7 +1053,7 @@ TRUE の場合、web ブラウザー Microsoft Internet Explorer 4.0、そうで
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWMISCTAGS コマンド ID](/previous-versions/aa769952\(v=vs.85\))します。
+詳細については、[IDM_SHOWMISCTAGS コマンド ID](/previous-versions/aa769952\(v=vs.85\))を参照してください。
 
 ##  <a name="getshowscripttags"></a>  CHtmlEditCtrlBase::GetShowScriptTags
 
@@ -1074,7 +1074,7 @@ WebBrowser が表示される場合、すべてのスクリプト タグのグ�
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWSCRIPTTAGS コマンド ID](/previous-versions/aa769953\(v=vs.85\))します。
+詳細については、[IDM_SHOWSCRIPTTAGS コマンド ID](/previous-versions/aa769953\(v=vs.85\))を参照してください。
 
 ##  <a name="getshowstyletags"></a>  CHtmlEditCtrlBase::GetShowStyleTags
 
@@ -1095,7 +1095,7 @@ WebBrowser グリフを表示、すべてのタグのスタイルでは、false 
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWSTYLETAGS コマンド ID](/previous-versions/aa769954\(v=vs.85\))します。
+詳細については、[IDM_SHOWSTYLETAGS コマンド ID](/previous-versions/aa769954\(v=vs.85\))を参照してください。
 
 ##  <a name="getshowunknowntags"></a>  CHtmlEditCtrlBase::GetShowUnknownTags
 
@@ -1116,7 +1116,7 @@ WebBrowser が表示される場合、すべての不明なタグのグリフを
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDM_SHOWUNKNOWNTAGS コマンド ID](/previous-versions/aa769955\(v=vs.85\))します。
+詳細については、[IDM_SHOWUNKNOWNTAGS コマンド ID](/previous-versions/aa769955\(v=vs.85\))を参照してください。
 
 ##  <a name="horizontalline"></a>  CHtmlEditCtrlBase::HorizontalLine
 

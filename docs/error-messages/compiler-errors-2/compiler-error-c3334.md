@@ -19,4 +19,4 @@ ms.locfileid: "50549774"
 
 `#import` ステートメント内のライブラリ ファイルが破損しているので、コンパイラで使用できません。  破損の原因として、モジュールの正しくない生成、ディスクの破損、またはバイナリ ファイルになんらかの編集または変更が加えられたことが考えられます。
 
-詳細については、次を参照してください。 [#import ディレクティブ](../../preprocessor/hash-import-directive-cpp.md)します。
+詳細については、[#import ディレクティブ](../../preprocessor/hash-import-directive-cpp.md)を参照してください。

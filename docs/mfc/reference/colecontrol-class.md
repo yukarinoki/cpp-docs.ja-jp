@@ -1969,7 +1969,7 @@ BSTR GetText();
 コントロールのテキスト文字列または文字列が存在しない場合は、長さ 0 の文字列の現在の値。
 
 > [!NOTE]
->  BSTR データ型の詳細については、次を参照してください。[データ型](../../mfc/reference/data-types-mfc.md)マクロとグローバルのセクションでします。
+>  BSTR データ型の詳細については、[データ型](../../mfc/reference/data-types-mfc.md)マクロとグローバルのセクションでを参照してください。
 
 ### <a name="remarks"></a>Remarks
 

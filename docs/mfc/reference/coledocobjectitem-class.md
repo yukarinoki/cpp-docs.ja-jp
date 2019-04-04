@@ -270,7 +270,7 @@ HRESULT QueryCommand(
 照会するコマンドの識別子です。
 
 *pdwStatus*<br/>
-クエリの結果として返されるフラグへのポインター。 使用可能な値の一覧は、次を参照してください。 [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)します。
+クエリの結果として返されるフラグへのポインター。 使用可能な値の一覧は、[OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)を参照してください。
 
 *pCmdText*<br/>
 ポインター、 [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext)を 1 つのコマンドの名前と状態情報を返す対象の構造体。 呼び出し元がこの情報を必要としないことを示す NULL を指定できます。
@@ -297,7 +297,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="parameters"></a>パラメーター
 
 *dwCloseOption*<br/>
-読み込み済み状態に戻ったときにどのような状況で OLE 項目が保存されたを指定するフラグ。 使用可能な値の一覧は、次を参照してください。 [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close)します。
+読み込み済み状態に戻ったときにどのような状況で OLE 項目が保存されたを指定するフラグ。 使用可能な値の一覧は、[COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

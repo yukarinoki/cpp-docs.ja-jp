@@ -48,7 +48,7 @@ ms.locfileid: "50466340"
 
 - [通知の受信](../../data/oledb/receiving-notifications.md)
 
-作成して、OLE DB コンシューマーの実装の例は、次を参照してください。[単純なコンシューマーを作成する](../../data/oledb/creating-an-ole-db-consumer.md)します。
+作成して、OLE DB コンシューマーの実装の例は、[単純なコンシューマーを作成する](../../data/oledb/creating-an-ole-db-consumer.md)を参照してください。
 
 次の例では、OLE DB コンシューマー テンプレートを使用する方法の例を検索することもできます。
 

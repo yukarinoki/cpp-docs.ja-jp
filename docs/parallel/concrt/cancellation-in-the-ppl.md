@@ -64,7 +64,7 @@ PPL は、細かく分類されたタスクおよび計算を管理するため�
 [!code-cpp[concrt-task-tree#1](../../parallel/concrt/codesnippet/cpp/cancellation-in-the-ppl_1.cpp)]
 
 使用することも、 [concurrency::task_group](reference/task-group-class.md)同様の処理ツリーを作成するクラス。 [Concurrency::task](../../parallel/concrt/reference/task-class.md)クラスには、処理ツリーの概念もサポートしています。 ただし、`task` ツリーは依存ツリーです。 
-  `task` ツリーでは、将来の処理は現在の処理の後に完了します。 タスク グループ ツリーでは、内部処理は外部処理の前に完了します。 タスクとタスク グループの違いの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+  `task` ツリーでは、将来の処理は現在の処理の後に完了します。 タスク グループ ツリーでは、内部処理は外部処理の前に完了します。 タスクとタスク グループの違いの詳細については、[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
 
 [[トップ](#top)]
 

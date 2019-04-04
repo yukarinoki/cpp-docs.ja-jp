@@ -30,7 +30,7 @@ ms.locfileid: "57818532"
 
 ## <a name="remarks"></a>Remarks
 
-**/Og**は非推奨とされます。 これらの最適化は既定では一般的に有効になりました。 最適化の詳細については、次を参照してください。 [/O1、/O2 (サイズの最小化、速度の最大化)](o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最もの速度の最適化)](ox-full-optimization.md)します。
+**/Og**は非推奨とされます。 これらの最適化は既定では一般的に有効になりました。 最適化の詳細については、[/O1、/O2 (サイズの最小化、速度の最大化)](o1-o2-minimize-size-maximize-speed.md)または[/Ox (有効にする最もの速度の最適化)](ox-full-optimization.md)を参照してください。
 
 次の最適化は **/Og**:
 
@@ -76,11 +76,11 @@ ms.locfileid: "57818532"
    > [!NOTE]
    > 有効にまたはを使用して、関数ごとにグローバルな最適化を無効にすることができます、`optimize`プラグマと組み合わせて、`g`オプション。
 
-関連情報については、次を参照してください。 [/Oi (組み込み関数の生成)](oi-generate-intrinsic-functions.md)と[/Ox (有効にする最もの速度の最適化)](ox-full-optimization.md)します。
+関連情報については、[/Oi (組み込み関数の生成)](oi-generate-intrinsic-functions.md)と[/Ox (有効にする最もの速度の最適化)](ox-full-optimization.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 

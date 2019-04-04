@@ -102,7 +102,7 @@ ActiveX コントロールは、以前は OLE コントロールと呼ばれて�
 
 - [サンプル](../mfc/common-control-sample-list.md)
 
-Windows SDK の Windows コモン コントロールについては、次を参照してください。[コモン コントロール](/windows/desktop/Controls/common-controls-intro)します。
+Windows SDK の Windows コモン コントロールについては、[コモン コントロール](/windows/desktop/Controls/common-controls-intro)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

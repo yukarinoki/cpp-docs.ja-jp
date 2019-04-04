@@ -17,7 +17,7 @@ ms.locfileid: "58767133"
 
 制約句の構文エラー: 'identifier' は型ではありません
 
-制約に渡された識別子は、型である必要があるのに型ではありません。  詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)します。
+制約に渡された識別子は、型である必要があるのに型ではありません。  詳細については、[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

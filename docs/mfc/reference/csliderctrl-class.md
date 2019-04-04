@@ -759,7 +759,7 @@ void SetTicFreq(int nFreq);
 
 たとえば、頻度が 2 に設定されている場合は、スライダーの範囲内の他のすべての増分用に目盛りマークが表示されます。 頻度が 1 の既定の設定 (つまり、範囲内のすべての増分に関連付けられている目盛り)。
 
-この関数を使用して、TBS_AUTOTICKS スタイル コントロールを作成する必要があります。 詳細については、次を参照してください。 [CSliderCtrl::Create](#create)します。
+この関数を使用して、TBS_AUTOTICKS スタイル コントロールを作成する必要があります。 詳細については、[CSliderCtrl::Create](#create)を参照してください。
 
 ##  <a name="settipside"></a>  CSliderCtrl::SetTipSide
 

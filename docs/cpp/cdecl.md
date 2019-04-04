@@ -30,7 +30,7 @@ ms.locfileid: "50550216"
 |大文字と小文字の変換規約|大文字小文字は変換されません。|
 
 > [!NOTE]
->  関連情報については、次を参照してください。[装飾名](../build/reference/decorated-names.md)します。
+>  関連情報については、[装飾名](../build/reference/decorated-names.md)を参照してください。
 
 場所、 **_ _cdecl**変数または関数名の前に修飾子。 C の名前と呼び出し規則は、既定値であるためだけの時間使用する必要あります **_ _cdecl** x86 コードは、指定したときに、 `/Gv` (vectorcall)、 `/Gz` (stdcall)、または`/Gr`(fastcall)コンパイラ オプション。 [/Gd](../build/reference/gd-gr-gv-gz-calling-convention.md)コンパイラ オプションの強制、 **_ _cdecl**呼び出し規約。
 

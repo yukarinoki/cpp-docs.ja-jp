@@ -27,7 +27,7 @@ ms.locfileid: "50559693"
 ### <a name="parameters"></a>パラメーター
 
 *com_interface_entry*<br/>
-エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、次を参照してください。 [COM_INTERFACE_ENTRY マクロ](../../atl/reference/com-interface-entry-macros.md)します。
+エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、[COM_INTERFACE_ENTRY マクロ](../../atl/reference/com-interface-entry-macros.md)を参照してください。
 
 ## <a name="remarks"></a>Remarks
 

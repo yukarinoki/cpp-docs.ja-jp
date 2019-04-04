@@ -257,7 +257,7 @@ virtual ULONGLONG Seek(
 
 ファイルが開かれたときに、ファイル ポインターがオフセット 0 で、ファイルの先頭に配置されます。
 
-この実装の`Seek`ランタイム ライブラリ (CRT) 関数に基づく`fseek`します。 使用法にいくつかの制限があります`Seek`テキスト モードで開かれたストリームにします。 詳細については、次を参照してください。 [fseek、_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)します。
+この実装の`Seek`ランタイム ライブラリ (CRT) 関数に基づく`fseek`します。 使用法にいくつかの制限があります`Seek`テキスト モードで開かれたストリームにします。 詳細については、[fseek、_fseeki64](../../c-runtime-library/reference/fseek-fseeki64.md)を参照してください。
 
 ### <a name="example"></a>例
 

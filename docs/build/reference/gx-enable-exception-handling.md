@@ -30,15 +30,15 @@ ms.locfileid: "57815464"
 
 ## <a name="remarks"></a>Remarks
 
-**/GX**は非推奨とされます。 相当するものを使用して、 [/EHsc](eh-exception-handling-model.md)オプションを使用します。 非推奨のコンパイラ オプションの一覧は、次を参照してください。、**非推奨とされた削除済みのコンパイラ オプション**セクション[Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
+**/GX**は非推奨とされます。 相当するものを使用して、 [/EHsc](eh-exception-handling-model.md)オプションを使用します。 非推奨のコンパイラ オプションの一覧は、、**非推奨とされた削除済みのコンパイラ オプション**セクション[Compiler Options Listed by Category](compiler-options-listed-by-category.md)を参照してください。
 
 既定では、 **/EHsc**と等価の **/GX**、Visual Studio 開発環境を使用してコンパイルする場合は適用されます。 コマンド ライン ツールを使用すると例外処理を指定しません。 これは、相当の**では/GX-** します。
 
-詳細については、次を参照してください。 [C++ 例外処理](../../cpp/cpp-exception-handling.md)します。
+詳細については、[C++ 例外処理](../../cpp/cpp-exception-handling.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. ナビゲーション ウィンドウで、**構成プロパティ**、 **C/C++**、**コマンドライン**します。
 

@@ -51,9 +51,9 @@ MFC フレームワークは、Windows の熟練プログラマの成果を基�
 
 [動的レイアウト](../mfc/dynamic-layout.md)
 
-MFC のリファレンス ドキュメントの概要については、次を参照してください。 [Microsoft Foundation Class ライブラリ](../mfc/mfc-desktop-applications.md)します。
+MFC のリファレンス ドキュメントの概要については、[Microsoft Foundation Class ライブラリ](../mfc/mfc-desktop-applications.md)を参照してください。
 
-ATL については、次を参照してください。[アクティブ テンプレート ライブラリのリファレンス](../atl/atl-class-overview.md)します。
+ATL については、[アクティブ テンプレート ライブラリのリファレンス](../atl/atl-class-overview.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

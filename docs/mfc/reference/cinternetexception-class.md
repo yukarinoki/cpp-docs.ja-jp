@@ -103,7 +103,7 @@ DWORD m_dwError;
 
 このエラーの値には、システムが可能性があります WINERROR で見つかった、エラー コード。H、または WININET エラー値。H.
 
-Win32 エラー コードの一覧は、次を参照してください。[エラーコード](/windows/desktop/Debug/system-error-codes)します。 インターネットに固有のエラー メッセージの一覧を参照してください。 両方のトピックでは、Windows SDK にします。
+Win32 エラー コードの一覧は、[エラーコード](/windows/desktop/Debug/system-error-codes)を参照してください。 インターネットに固有のエラー メッセージの一覧を参照してください。 両方のトピックでは、Windows SDK にします。
 
 ## <a name="see-also"></a>関連項目
 

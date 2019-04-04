@@ -19,7 +19,7 @@ ms.locfileid: "58767965"
 
 コンパイル時に最新の管理対象の構文については、コンパイラによって明示的な検出されたがサポートされなくなった以前のバージョンの構文をオーバーライドします。
 
-詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
+詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

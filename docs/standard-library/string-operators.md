@@ -115,7 +115,7 @@ basic_string<CharType, Traits, Allocator>&& operator+(
 
 ### <a name="remarks"></a>Remarks
 
-関数はそれぞれ `operator+` をオーバーロードして、テンプレート クラス [basic_string クラス](../standard-library/basic-string-class.md)の 2 つのオブジェクトを連結します。 すべては実質的に戻り`basic_string< CharType, Traits, Allocator>(Left).append(right)`します。 詳細については、次を参照してください。[追加](../standard-library/basic-string-class.md#append)します。
+関数はそれぞれ `operator+` をオーバーロードして、テンプレート クラス [basic_string クラス](../standard-library/basic-string-class.md)の 2 つのオブジェクトを連結します。 すべては実質的に戻り`basic_string< CharType, Traits, Allocator>(Left).append(right)`します。 詳細については、[追加](../standard-library/basic-string-class.md#append)を参照してください。
 
 ### <a name="example"></a>例
 

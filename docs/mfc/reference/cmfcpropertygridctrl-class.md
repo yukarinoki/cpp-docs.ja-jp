@@ -400,7 +400,7 @@ virtual void CloseColorPopup();
 
 ### <a name="remarks"></a>Remarks
 
-色の選択 ダイアログ ボックスの詳細については、次を参照してください。 [CMFCPropertyGridColorProperty クラス](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)します。
+色の選択 ダイアログ ボックスの詳細については、[CMFCPropertyGridColorProperty クラス](../../mfc/reference/cmfcpropertygridcolorproperty-class.md)を参照してください。
 
 ##  <a name="cmfcpropertygridctrl"></a>  CMFCPropertyGridCtrl::CMFCPropertyGridCtrl
 

@@ -21,7 +21,7 @@ ms.locfileid: "57268643"
 
 取得でき、"既定の文字の書式設定、"これは、その後に挿入された文字に適用される書式設定できます。 たとえば、アプリケーションは、既定の文字を太字に書式を設定し、ユーザーが文字を入力し場合、その文字が太字にします。 既定の文字書式設定を使用して、 [GetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#getdefaultcharformat)と[SetDefaultCharFormat](../mfc/reference/cricheditctrl-class.md#setdefaultcharformat)メンバー関数。
 
-"Protected"文字の属性には、テキストの外観は変わりません。 リッチ エディット コントロールがその親ウィンドウを送信する場合は、ユーザーが保護されたテキストを変更しようとすると、 **EN_PROTECTED**通知メッセージを許可するか、変更を禁止する親ウィンドウ。 この通知メッセージを受信する必要があります有効にするを使用して、 [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask)メンバー関数。 詳細については、イベント マスクは、次を参照してください。[リッチ エディット コントロールからの通知](../mfc/notifications-from-a-rich-edit-control.md)、このトピックで後述します。
+"Protected"文字の属性には、テキストの外観は変わりません。 リッチ エディット コントロールがその親ウィンドウを送信する場合は、ユーザーが保護されたテキストを変更しようとすると、 **EN_PROTECTED**通知メッセージを許可するか、変更を禁止する親ウィンドウ。 この通知メッセージを受信する必要があります有効にするを使用して、 [SetEventMask](../mfc/reference/cricheditctrl-class.md#seteventmask)メンバー関数。 詳細については、イベント マスクは、[リッチ エディット コントロールからの通知](../mfc/notifications-from-a-rich-edit-control.md)、このトピックで後述を参照してください。
 
 前景の色は文字の属性が、背景色はリッチ エディット コントロールのプロパティです。 背景色を設定するには、使用、 [SetBackgroundColor](../mfc/reference/cricheditctrl-class.md#setbackgroundcolor)メンバー関数。
 

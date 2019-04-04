@@ -65,7 +65,7 @@ A`CDaoFieldExchange`コンテキスト情報に必要な dao レコード フィ
 
 - `CDaoFieldExchange::param` パラメーターのデータ メンバーにします。
 
-[IsValidOperation](#isvalidoperation)メンバー関数は、独自のカスタム DFX ルーチンの用意されています。 使用する[SetFieldType](#setfieldtype)で頻繁に、 [CDaoRecordset::DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)関数。 詳細については、DFX のグローバル関数は、次を参照してください。[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)します。 独自のデータ型用カスタム DFX ルーチンを記述する方法の詳細については、次を参照してください。[テクニカル ノート 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)します。
+[IsValidOperation](#isvalidoperation)メンバー関数は、独自のカスタム DFX ルーチンの用意されています。 使用する[SetFieldType](#setfieldtype)で頻繁に、 [CDaoRecordset::DoFieldExchange](../../mfc/reference/cdaorecordset-class.md#dofieldexchange)関数。 詳細については、DFX のグローバル関数は、[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)を参照してください。 独自のデータ型用カスタム DFX ルーチンを記述する方法の詳細については、[テクニカル ノート 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -91,7 +91,7 @@ BOOL IsValidOperation();
 
 DFX メカニズムによって実行された操作の一部は、可能なフィールドの種類のいずれかにのみ適用されます。 DFX 関数を既存のモデルに従います。
 
-カスタム DFX ルーチンを記述する方法の詳細については、次を参照してください。[テクニカル ノート 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)します。
+カスタム DFX ルーチンを記述する方法の詳細については、[テクニカル ノート 53](../../mfc/tn053-custom-dfx-routines-for-dao-database-classes.md)を参照してください。
 
 ##  <a name="m_noperation"></a>  CDaoFieldExchange::m_nOperation
 

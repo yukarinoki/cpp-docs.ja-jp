@@ -487,7 +487,7 @@ DWORD SetBitmapBits(
 によって示されるバイト数を指定*lpBits*します。
 
 *lpBits*<br/>
-コピーされるピクセル値を格納するバイト配列を指す、`CBitmap`オブジェクト。 そのイメージを正常にレンダリングできるビットマップは、値を CBitmap インスタンスの作成時に指定された高さ、幅と色の深度値に準拠するための書式設定。 詳細については、次を参照してください。 [CBitmap::CreateBitmap](#createbitmap)します。
+コピーされるピクセル値を格納するバイト配列を指す、`CBitmap`オブジェクト。 そのイメージを正常にレンダリングできるビットマップは、値を CBitmap インスタンスの作成時に指定された高さ、幅と色の深度値に準拠するための書式設定。 詳細については、[CBitmap::CreateBitmap](#createbitmap)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 

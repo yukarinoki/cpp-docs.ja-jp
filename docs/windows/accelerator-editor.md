@@ -49,7 +49,7 @@ ms.locfileid: "58328403"
 > [!TIP]
 > 使用する場合、**アクセラレータ エディター**、右クリックすると、頻繁にコマンドのショートカット メニューを表示します。 使用できるコマンドは、ポインターの位置によって異なります。
 
-[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code) を使用して、コードにアクセス キーのコマンドをフックできます。 定義済みのアクセラレータ キーの一覧は、次を参照してください。[アクセラレータ キー](../windows/predefined-accelerator-keys.md)します。
+[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code) を使用して、コードにアクセス キーのコマンドをフックできます。 定義済みのアクセラレータ キーの一覧は、[アクセラレータ キー](../windows/predefined-accelerator-keys.md)を参照してください。
 
 > [!NOTE]
 > Windows には、空のアクセラレータ テーブルを作成することを指定できません。 エントリがないアクセラレータ テーブルを作成すると、テーブルを保存する際に自動的に削除されます。

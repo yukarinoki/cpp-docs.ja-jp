@@ -21,4 +21,4 @@ ms.locfileid: "50552257"
 
 返す前に EMMS 命令 ivec.h、コードが正しく使用しないことを使用して実行時に、C4799 を取得可能性があります。 これらのヘッダーに対する警告を false になります。 オフ ivec.h で _SILENCE_IVEC_C4799 を定義することで、これらに可能性があります。 ただし、この型の正しい警告コンパイラこの保持されることもあります。
 
-関連情報については、次を参照してください。 [Intel の MMX の命令セット](../../assembler/inline/intel-s-mmx-instruction-set.md)します。
+関連情報については、[Intel の MMX の命令セット](../../assembler/inline/intel-s-mmx-instruction-set.md)を参照してください。

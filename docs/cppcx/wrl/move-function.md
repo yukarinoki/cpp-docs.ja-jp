@@ -43,7 +43,7 @@ inline typename RemoveReference<T>::Type&& Move(
 
 指定した引数を 1 つの場所から移動します。
 
-詳細については、次を参照してください。、**移動セマンティクス**の[右辺値参照宣言子: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)します。
+詳細については、、**移動セマンティクス**の[右辺値参照宣言子: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

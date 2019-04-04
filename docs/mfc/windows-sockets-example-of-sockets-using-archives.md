@@ -21,7 +21,7 @@ ms.locfileid: "57295260"
 
 [!code-cpp[NVC_MFCSimpleSocket#1](../mfc/codesnippet/cpp/windows-sockets-example-of-sockets-using-archives_1.cpp)]
 
-この例に関する最も重要な点は、その構造が似て、MFC の`Serialize`関数。 `PacketSerialize`メンバー関数から成る、**場合**ステートメントを**他**句。 2 つ、関数が受け取った[CArchive](../mfc/reference/carchive-class.md)パラメーターとして参照: *arData*と*arAck*。 場合、 *arData* (送信) を格納するためにアーカイブ オブジェクトが設定されて、**場合**分岐が実行されます。 場合*arData*設定されている (受信) を読み込むため、この関数では、を受け取ります。**他**分岐します。 MFC におけるシリアル化の詳細については、次を参照してください。[シリアル化](../mfc/how-to-make-a-type-safe-collection.md)します。
+この例に関する最も重要な点は、その構造が似て、MFC の`Serialize`関数。 `PacketSerialize`メンバー関数から成る、**場合**ステートメントを**他**句。 2 つ、関数が受け取った[CArchive](../mfc/reference/carchive-class.md)パラメーターとして参照: *arData*と*arAck*。 場合、 *arData* (送信) を格納するためにアーカイブ オブジェクトが設定されて、**場合**分岐が実行されます。 場合*arData*設定されている (受信) を読み込むため、この関数では、を受け取ります。**他**分岐します。 MFC におけるシリアル化の詳細については、[シリアル化](../mfc/how-to-make-a-type-safe-collection.md)を参照してください。
 
 > [!NOTE]
 >  *ArAck*アーカイブ オブジェクトの反対と見なされます*arData*します。 場合*arData*を送信するは*arAck*を受け取ると、その逆は true です。

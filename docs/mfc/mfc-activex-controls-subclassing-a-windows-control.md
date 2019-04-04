@@ -28,7 +28,7 @@ ms.locfileid: "58773256"
 この記事では、ActiveX コントロールを作成する一般的な Windows コントロールをサブクラス化するプロセスについて説明します。 既存の Windows をサブクラス化コントロールは ActiveX コントロールを開発する簡単な方法を示します。 新しいコントロールは、Windows のサブクラス化されたコントロールの描画、マウスのクリックに応答してなどの機能があります。 MFC ActiveX コントロールをサンプル[ボタン](../overview/visual-cpp-samples.md)Windows コントロールをサブクラス化の例を示します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
 
 Windows コントロールをサブクラス化するには、次のタスクを行います。
 
@@ -51,7 +51,7 @@ Windows コントロールをサブクラス化するには、次のタスクを
 
 [!code-cpp[NVC_MFC_AxSub#2](../mfc/codesnippet/cpp/mfc-activex-controls-subclassing-a-windows-control_2.cpp)]
 
-この例で、Windows が button コントロール、通知がで指定された`PreCreateWindow`します。 ただし、標準の Windows コントロールをサブクラス化できます。 標準の Windows コントロールの詳細については、次を参照してください。[コントロール](../mfc/controls-mfc.md)します。
+この例で、Windows が button コントロール、通知がで指定された`PreCreateWindow`します。 ただし、標準の Windows コントロールをサブクラス化できます。 標準の Windows コントロールの詳細については、[コントロール](../mfc/controls-mfc.md)を参照してください。
 
 Windows コントロールをサブクラス化する特定のウィンドウ スタイル (ws _) またはコントロールのウィンドウの作成に使用する拡張ウィンドウ スタイル (WS_EX) フラグを指定したい場合があります。 これらのパラメーターの値を設定することができます、`PreCreateWindow`メンバー関数を変更して、 `cs.style` 、`cs.dwExStyle`フィールドを構造体します。 これらのフィールドに対する変更を使用して行う必要があります、**または**クラスによって設定されている既定のフラグを保持するために、操作`COleControl`します。 たとえば、ボタン コントロールをサブクラス化して、コントロール、チェック ボックスとして表示するコントロールは場合、この次のコード行の実装に挿入`CSampleCtrl::PreCreateWindow`、return ステートメントの前に、。
 

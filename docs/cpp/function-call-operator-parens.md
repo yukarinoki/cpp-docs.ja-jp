@@ -174,7 +174,7 @@ int main() {
 }
 ```
 
-関数は再帰的に呼び出すことができます。 関数の宣言に関する詳細については、次を参照してください。[関数](functions-cpp.md)します。 関連資料は[プログラムとリンケージ](../cpp/program-and-linkage-cpp.md)します。
+関数は再帰的に呼び出すことができます。 関数の宣言に関する詳細については、[関数](functions-cpp.md)を参照してください。 関連資料は[プログラムとリンケージ](../cpp/program-and-linkage-cpp.md)します。
 
 ## <a name="see-also"></a>関連項目
 

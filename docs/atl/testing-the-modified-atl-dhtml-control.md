@@ -39,7 +39,7 @@ UI の一部ではないメソッドをテストできます。
 
 1. **メソッドの呼び出し** ダイアログ ボックスで、選択**閉じる**します。
 
-さまざまな要素と ATL DHTML コントロールを構成するファイルの詳細については、次を参照してください。 [DHTML コントロール プロジェクトの要素の識別](../atl/identifying-the-elements-of-the-dhtml-control-project.md)します。
+さまざまな要素と ATL DHTML コントロールを構成するファイルの詳細については、[DHTML コントロール プロジェクトの要素の識別](../atl/identifying-the-elements-of-the-dhtml-control-project.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -19,7 +19,7 @@ ms.locfileid: "50643600"
 
 A`#using`ディレクティブが指定したメタデータ ファイルは、繰り返されましたが、`as_friend`修飾子は、最初に見つかったでは使用されませんでした。 コンパイラは、2 つ目を無視`as_friend`します。
 
-詳細については、次を参照してください。[フレンド アセンブリ (C++)](../../dotnet/friend-assemblies-cpp.md)します。
+詳細については、[フレンド アセンブリ (C++)](../../dotnet/friend-assemblies-cpp.md)を参照してください。
 
 ## <a name="example"></a>例
 

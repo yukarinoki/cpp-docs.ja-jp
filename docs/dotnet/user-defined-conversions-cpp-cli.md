@@ -21,7 +21,7 @@ ms.locfileid: "58772424"
 
 ネイティブ クラスに参照または値の型を変換するネイティブ クラスのコンス トラクターを使用できます。
 
-変換の詳細については、次を参照してください。[ボックス化](../extensions/boxing-cpp-component-extensions.md)と[標準変換](../cpp/standard-conversions.md)します。
+変換の詳細については、[ボックス化](../extensions/boxing-cpp-component-extensions.md)と[標準変換](../cpp/standard-conversions.md)を参照してください。
 
 ```
 // mcpp_User_Defined_Conversions.cpp

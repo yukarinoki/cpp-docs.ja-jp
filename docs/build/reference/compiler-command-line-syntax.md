@@ -32,7 +32,7 @@ CL [option...] file... [option | file]... [lib...] [@command-file] [/link link-o
 
 コマンドラインでの文字数が 1024、オペレーティング システムで指定された制限を超えない限り、任意の数のオプション、ファイル名、およびライブラリの名前を指定できます。
 
-Cl.exe の戻り値については、次を参照してください。 [cl.exe の戻り値](return-value-of-cl-exe.md)します。
+Cl.exe の戻り値については、[cl.exe の戻り値](return-value-of-cl-exe.md)を参照してください。
 
 > [!NOTE]
 >  1024 文字の場合は、コマンド ライン入力制限は、Windows の将来のリリースでは同じままには保証されません。

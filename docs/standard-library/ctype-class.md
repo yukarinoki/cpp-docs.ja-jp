@@ -65,7 +65,7 @@ class ctype : public ctype_base;
 
 C++ 標準ライブラリは、このテンプレート クラスの 2 つの明示的な特殊化を定義します。
 
-- `ctype<char>`、明示的な特殊化の違いは別々 に説明します。 詳細については、次を参照してください。 [ctype&lt;char&gt;クラス](../standard-library/ctype-char-class.md)します。
+- `ctype<char>`、明示的な特殊化の違いは別々 に説明します。 詳細については、[ctype&lt;char&gt;クラス](../standard-library/ctype-char-class.md)を参照してください。
 
 - `ctype<wchar_t>`、要素のワイド文字として扱います。
 

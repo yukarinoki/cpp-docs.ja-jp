@@ -61,9 +61,9 @@ SQL の多くのバージョンが存在する、各開発で特定の DBMS に�
 
 クラス内のユーザーが指定したステートメントが認識されない`CRecordset::Open`テーブル名として解釈されます。
 
-フレームワークでの SQL ステートメントの作成方法の詳細については、次を参照してください。[レコード セット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)と[SQL: の SQL ステートメント (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
+フレームワークでの SQL ステートメントの作成方法の詳細については、[レコード セット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)と[SQL: の SQL ステートメント (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)を参照してください。
 
-SQL データベースでは、C および C++ で使用されるもののようなデータ型を使用します。 これらの類似点の詳細については、次を参照してください。 [SQL: SQL と C++ のデータ型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)します。
+SQL データベースでは、C および C++ で使用されるもののようなデータ型を使用します。 これらの類似点の詳細については、[SQL: SQL と C++ のデータ型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)を参照してください。
 
 サポートされている SQL ステートメント、データ型、SQL コアの文法、および SQL に関する推奨されるパブリケーションの読み取りリストの一覧を含む、SQL の詳細についてを見つけることができます、 *ODBC SDK* *プログラマー リファレンス* MSDN ライブラリ CD に収録されています。
 

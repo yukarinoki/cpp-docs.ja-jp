@@ -19,7 +19,7 @@ ms.locfileid: "58781407"
 
 使用して定義されている型`value`は既定では、シール クラスは、その基本のすべてのメソッドを実装しない限り、抽象とします。 シールされた抽象クラスは基底クラスにもできます。 また、インスタンス化できます。
 
-詳細については、次を参照してください。[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)します。
+詳細については、[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

@@ -19,7 +19,7 @@ ms.locfileid: "58775232"
 
 コンパイラは、暗黙的なボックス化をサポートするために、各マネージ クラスの変換演算子を定義します。 この演算子は再定義することはできません。
 
-詳細については、次を参照してください。[暗黙的なボックス化](../../extensions/boxing-cpp-component-extensions.md)します。
+詳細については、[暗黙的なボックス化](../../extensions/boxing-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3638 が生成されます。
 

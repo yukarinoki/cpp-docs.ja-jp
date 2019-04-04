@@ -53,7 +53,7 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 列の情報は、このクラスによって作成および管理のバッファーに格納されます。 使用してバッファーからデータを取得[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)を使用して、バッファーに格納または[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)します。
 
-動的アクセサー クラスの使用例とについては、次を参照してください。[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)します。
+動的アクセサー クラスの使用例とについては、[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)を参照してください。
 
 ## <a name="getstring"></a> Cdynamicstringaccessor::getstring
 

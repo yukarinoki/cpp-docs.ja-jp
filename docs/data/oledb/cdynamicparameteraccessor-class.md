@@ -313,7 +313,7 @@ DBSTATUS* GetParamStatus(DBORDINAL nParam) const throw();
 [in]パラメーターの数 (1 からのオフセット)。 パラメーターの 0 は、戻り値については予約されています。 パラメーターの数は、SQL またはストアド プロシージャの呼び出し内での順序に基づくパラメーターのインデックスです。 参照してください[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)例についてはします。
 
 *pStatus*<br/>
-[out]指定したパラメーターの DBSTATUS 状態を格納する変数へのポインター。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
+[out]指定したパラメーターの DBSTATUS 状態を格納する変数へのポインター。 DBSTATUS 値については、[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -425,7 +425,7 @@ bool SetParam(TCHAR* pParamName,
 [in]バッファーに書き込まれるデータを含むメモリへのポインター。
 
 *status*<br/>
-[in]DBSTATUS 列の状態。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
+[in]DBSTATUS 列の状態。 DBSTATUS 値については、[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -473,7 +473,7 @@ bool SetParamStatus(DBORDINAL nParam,
 [in]パラメーターの数 (1 からのオフセット)。 パラメーターの 0 は、戻り値については予約されています。 パラメーターの数は、SQL またはストアド プロシージャの呼び出し内での順序に基づくパラメーターのインデックスです。 参照してください[SetParam](../../data/oledb/cdynamicparameteraccessor-setparam.md)例についてはします。
 
 *status*<br/>
-[in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
+[in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -502,7 +502,7 @@ bool SetParamString(DBORDINAL nParam,
 [in]ANSI へのポインター (**CHAR**) または Unicode (**WCHAR**)、指定されたパラメーターのデータの文字列します。 Oledb.h DBSTATUS を参照してください。
 
 *status*<br/>
-[in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索します。
+[in]指定したパラメーターの DBSTATUS 状態です。 DBSTATUS 値については、[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*、または DBSTATUS oledb.h で検索を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

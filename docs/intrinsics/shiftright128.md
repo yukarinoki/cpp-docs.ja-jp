@@ -58,7 +58,7 @@ unsigned __int64 __shiftright128(
 
 ## <a name="example"></a>例
 
-例については、次を参照してください。 [_ _shiftleft128](../intrinsics/shiftleft128.md)します。
+例については、[_ _shiftleft128](../intrinsics/shiftleft128.md)を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 

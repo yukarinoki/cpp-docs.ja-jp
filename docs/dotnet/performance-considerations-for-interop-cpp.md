@@ -51,7 +51,7 @@ Visual Basic や c# などの .NET 言語は、ネイティブ コンポーネ�
 
 したがって、C++ 相互運用機能には、データのマーシャ リングし、明示的に指定する必要がありますが、利点は、プログラマが、データの性質に応じて、適切な新機能とが使用されるようにする方法を決定することが必要です。 さらに、P/invoke データのマーシャ リングの動作は、ある程度カスタマイズで変更できます、C++ Interop できますデータ マーシャ リングの呼び出しによってごとにカスタマイズします。 これは、P/invoke でことはできません。
 
-C++ 相互運用機能の詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
+C++ 相互運用機能の詳細については、[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

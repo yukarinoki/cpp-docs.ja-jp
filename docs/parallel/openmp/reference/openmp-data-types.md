@@ -40,7 +40,7 @@ OpenMP の標準の Visual C の実装には、次のデータ型が含まれて
 - [omp_unset_lock](openmp-functions.md#omp-unset-lock)
 - [omp_test_lock](openmp-functions.md#omp-test-lock)
 
-詳細については、次を参照してください。 [3.2 ロック関数](../../../parallel/openmp/3-2-lock-functions.md)します。
+詳細については、[3.2 ロック関数](../../../parallel/openmp/3-2-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -58,7 +58,7 @@ OpenMP の標準の Visual C の実装には、次のデータ型が含まれて
 - [omp_unset_nest_lock](openmp-functions.md#omp-unset-nest-lock)
 - [omp_test_nest_lock](openmp-functions.md#omp-test-nest-lock)
 
-詳細については、次を参照してください。 [3.2 ロック関数](../../../parallel/openmp/3-2-lock-functions.md)します。
+詳細については、[3.2 ロック関数](../../../parallel/openmp/3-2-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 

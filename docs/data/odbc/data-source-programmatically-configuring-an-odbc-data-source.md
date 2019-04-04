@@ -41,7 +41,7 @@ SQLConfigDataSource(NULL,ODBC_ADD_DSN, "Excel Files (*.xls)",
 
 このデータ ソースは、実際はフォルダー (C:\EXCELDIR) です。このフォルダーは存在している必要があります。 Excel ドライバーは、フォルダーをそのデータ ソースとして使用し、ファイルを各テーブル (.xls ファイルごとに 1 テーブル) として使用するからです。
 
-テーブルの作成の詳細については、次を参照してください。[データ ソース: プログラムにおける ODBC データ ソース テーブルの作成](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)です。
+テーブルの作成の詳細については、[データ ソース: プログラムにおける ODBC データ ソース テーブルの作成](../../data/odbc/data-source-programmatically-creating-a-table-in-an-odbc-data-source.md)を参照してください。
 
 次の情報に渡される必要があるパラメーターの説明、 `::SQLConfigDataSource` ODBC API 関数。 使用する`::SQLConfigDataSource`、Odbcinst.h ヘッダー ファイルをインクルードし、Odbcinst.lib インポート ライブラリを使用する必要があります。 また、実行時には、パスに Odbccp32.dll (16 ビットの場合は Odbcinst.dll) を指定する必要があります。
 

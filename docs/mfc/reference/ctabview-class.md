@@ -231,7 +231,7 @@ TRUE の場合は、指定されたビューがアクティブにされた、fal
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab)します。
+詳細については、[CMFCTabCtrl::SetActiveTab](../../mfc/reference/cmfctabctrl-class.md#setactivetab)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

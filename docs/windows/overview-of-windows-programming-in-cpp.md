@@ -15,7 +15,7 @@ ms.locfileid: "58772905"
 
 ## <a name="command-line-console-applications"></a>コマンドライン (コンソール) アプリケーション
 
-C++ コンソール アプリケーションでは、コンソール ウィンドウでコマンドラインから実行し、テキスト出力のみを表示できます。 詳細については、次を参照してください。[コンソール アプリケーション](console-applications-in-visual-cpp.md)します。
+C++ コンソール アプリケーションでは、コンソール ウィンドウでコマンドラインから実行し、テキスト出力のみを表示できます。 詳細については、[コンソール アプリケーション](console-applications-in-visual-cpp.md)を参照してください。
  
 ## <a name="native-desktop-client-applications"></a>ネイティブのデスクトップ クライアント アプリケーション
 
@@ -33,15 +33,15 @@ C++ コンソール アプリケーションでは、コンソール ウィン�
 - DirectX へのアクセスします。
 - 標準 C ライブラリの使用率が高い
 
-ユーザー インターフェイスを作成することができますC#C + を使用して/cli CLI ネイティブの C++ ライブラリを使用するアプリケーションを有効にします。 詳細については、次を参照してください。 [C + での .NET プログラミング/cli CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)します。
+ユーザー インターフェイスを作成することができますC#C + を使用して/cli CLI ネイティブの C++ ライブラリを使用するアプリケーションを有効にします。 詳細については、[C + での .NET プログラミング/cli CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)を参照してください。
 
 ## <a name="com-components"></a>COM コンポーネント
 
-[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/the-component-object-model)は、プログラムが相互に通信するさまざまな言語で記述された仕様です。 多くの Windows コンポーネントが COM オブジェクトとして実装され、オブジェクトの作成の標準の COM 規則に従うには、検出とオブジェクトの破棄がインターフェイスです。  C++ デスクトップ アプリケーションから COM オブジェクトを使用しては比較的簡単ですが、独自の COM オブジェクトの書き込みより高度な。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)マクロおよび COM 開発を簡略化するヘルパー関数を提供します。 詳細については、次を参照してください。 [ATL COM デスクトップ コンポーネント](../atl/atl-com-desktop-components.md)します。
+[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/the-component-object-model)は、プログラムが相互に通信するさまざまな言語で記述された仕様です。 多くの Windows コンポーネントが COM オブジェクトとして実装され、オブジェクトの作成の標準の COM 規則に従うには、検出とオブジェクトの破棄がインターフェイスです。  C++ デスクトップ アプリケーションから COM オブジェクトを使用しては比較的簡単ですが、独自の COM オブジェクトの書き込みより高度な。 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)マクロおよび COM 開発を簡略化するヘルパー関数を提供します。 詳細については、[ATL COM デスクトップ コンポーネント](../atl/atl-com-desktop-components.md)を参照してください。
 
 ## <a name="windows-universal-apps"></a>Windows ユニバーサル アプリ
 
-ユニバーサル Windows プラットフォーム (UWP) は、最新の Windows API です。 UWP アプリあらゆる Windows 10 デバイスで実行するには、XAML を使用して、ユーザー インターフェイスおよびが完全にタッチ対応します。 UWP の詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム (UWP) アプリとは何ですか?](/windows/uwp/get-started/whats-a-uwp)と[Windows ユニバーサル アプリに関するガイド](/windows/uwp/get-started/universal-application-platform-guide)します。
+ユニバーサル Windows プラットフォーム (UWP) は、最新の Windows API です。 UWP アプリあらゆる Windows 10 デバイスで実行するには、XAML を使用して、ユーザー インターフェイスおよびが完全にタッチ対応します。 UWP の詳細については、[ユニバーサル Windows プラットフォーム (UWP) アプリとは何ですか?](/windows/uwp/get-started/whats-a-uwp)と[Windows ユニバーサル アプリに関するガイド](/windows/uwp/get-started/universal-application-platform-guide)を参照してください。
 
 元の C++ UWP のサポートを行いました (1) C + + CX、言語の構文の拡張機能は、C++ または (2)、Windows ランタイム ライブラリ (WRL) 標準の C++ と COM に基づいています 両方 C + + CX および WRL はサポートされています。 新しいプロジェクトの勧め[C +/cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)と C++ の標準に基づいて完全高速なパフォーマンスを提供します。 
 
@@ -53,7 +53,7 @@ Visual Studio 2017 バージョン 15.4 以降では、既存のデスクトッ�
 
 ## <a name="games"></a>ゲーム
 
-DirectX ゲームは、PC または Xbox で実行できます。 詳細については、次を参照してください。 [DirectX のグラフィックスとゲーム](/windows/desktop/directx)します。
+DirectX ゲームは、PC または Xbox で実行できます。 詳細については、[DirectX のグラフィックスとゲーム](/windows/desktop/directx)を参照してください。
 
 ## <a name="sql-server-database-clients"></a>SQL Server データベースのクライアント
 
@@ -61,11 +61,11 @@ DirectX ゲームは、PC または Xbox で実行できます。 詳細につ�
 
 ## <a name="windows-device-drivers"></a>Windows デバイス ドライバー
 
-ドライバーは、ハードウェア デバイスからのデータをアプリケーションにアクセスできるようにする低レベルのコンポーネントとその他のオペレーティング システムのコンポーネントです。 詳細については、次を参照してください。 [Windows Driver Kit (WDK)](/windows-hardware/drivers/index)します。
+ドライバーは、ハードウェア デバイスからのデータをアプリケーションにアクセスできるようにする低レベルのコンポーネントとその他のオペレーティング システムのコンポーネントです。 詳細については、[Windows Driver Kit (WDK)](/windows-hardware/drivers/index)を参照してください。
 
 ## <a name="windows-services"></a>Windows サービス
 
-Windows*サービス*はほとんどまたはまったくないユーザーの操作でバック グラウンドで実行できるプログラムです。 呼ばれるこれらの UNIX*デーモン*します。 詳細については、次を参照してください。[サービス](/windows/desktop/services/services)します。
+Windows*サービス*はほとんどまたはまったくないユーザーの操作でバック グラウンドで実行できるプログラムです。 呼ばれるこれらの UNIX*デーモン*します。 詳細については、[サービス](/windows/desktop/services/services)を参照してください。
 
 ## <a name="sdks-libraries-and-header-files"></a>Sdk、ライブラリ、およびヘッダー ファイル
 
@@ -83,7 +83,7 @@ Microsoft ライブラリは次のとおりです。
 
 - 同時実行ランタイム:マルチコアおよびメニーコア デバイス用の並列および非同期プログラミングの作業を簡素化するライブラリ。 詳細については、「[コンカレンシー ランタイム](../parallel/concrt/concurrency-runtime.md)」を参照してください。
 
-Windows プログラミングの多くのシナリオでは、Windows SDK も必要になります。これには、Windows オペレーティング システム コンポーネントへのアクセスを可能にするためのヘッダー ファイルが含まれています。 既定では、Visual Studio は、C++ デスクトップ ワークロードでは、ユニバーサル Windows アプリの開発のコンポーネントとして Windows SDK をインストールします。 UWP アプリを開発するには、Windows 10 バージョンの Windows SDK 必要があります。 詳しくは、次を参照してください。 [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)します。 (Windows の以前のバージョンの Windows Sdk の詳細については、次を参照してください。、 [Windows SDK アーカイブ](https://developer.microsoft.com/windows/downloads/sdk-archive))。
+Windows プログラミングの多くのシナリオでは、Windows SDK も必要になります。これには、Windows オペレーティング システム コンポーネントへのアクセスを可能にするためのヘッダー ファイルが含まれています。 既定では、Visual Studio は、C++ デスクトップ ワークロードでは、ユニバーサル Windows アプリの開発のコンポーネントとして Windows SDK をインストールします。 UWP アプリを開発するには、Windows 10 バージョンの Windows SDK 必要があります。 詳しくは、[Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)を参照してください。 (Windows の以前のバージョンの Windows Sdk の詳細については、次を参照してください。、 [Windows SDK アーカイブ](https://developer.microsoft.com/windows/downloads/sdk-archive))。
 
 **プログラム ファイル (x86) \Windows キット**がインストールされている Windows SDK のすべてのバージョンの既定の場所。
 
@@ -91,7 +91,7 @@ Xbox や Azure など、他のプラットフォームには、インストー�
 
 ## <a name="development-tools"></a>開発ツール
 
-Visual Studio には、ネイティブ コード用の強力なデバッガー、スタティック分析ツール、グラフィックス デバッグ ツール、フル装備のコード エディター、単体テストのサポート、その他多数のツールおよびユーティリティが含まれています。 詳細については、次を参照してください。 [Visual Studio を使用した開発を開始する](/visualstudio/ide/get-started-developing-with-visual-studio)、および[Visual Studio で C++ の概要開発](../overview/overview-of-cpp-development.md)します。
+Visual Studio には、ネイティブ コード用の強力なデバッガー、スタティック分析ツール、グラフィックス デバッグ ツール、フル装備のコード エディター、単体テストのサポート、その他多数のツールおよびユーティリティが含まれています。 詳細については、[Visual Studio を使用した開発を開始する](/visualstudio/ide/get-started-developing-with-visual-studio)、および[Visual Studio で C++ の概要開発](../overview/overview-of-cpp-development.md)を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 |Title|説明|

@@ -36,7 +36,7 @@ C++ ステートメントは、オブジェクトをどのような順序でど�
 
    - [宣言ステートメント](declarations-and-definitions-cpp.md)します。 宣言は、プログラムに名前を導入します。
 
-例外処理ステートメントについては、次を参照してください。[例外処理](../cpp/exception-handling-in-visual-cpp.md)します。
+例外処理ステートメントについては、[例外処理](../cpp/exception-handling-in-visual-cpp.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

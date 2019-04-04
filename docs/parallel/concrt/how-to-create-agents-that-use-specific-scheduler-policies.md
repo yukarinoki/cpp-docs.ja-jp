@@ -20,7 +20,7 @@ ms.locfileid: "57257372"
 
 カスタム スケジューラ ポリシーを非同期メッセージ ブロックと共に使用する基本的な例を参照してください。[方法。特定のスケジューラ ポリシーを指定](../../parallel/concrt/how-to-specify-specific-scheduler-policies.md)します。
 
-このトピックでは、エージェント、メッセージ ブロック、メッセージ パッシング関数などの非同期エージェント ライブラリの機能を使用して、処理を行います。 Asynchronous Agents Library の詳細については、次を参照してください。 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)します。
+このトピックでは、エージェント、メッセージ ブロック、メッセージ パッシング関数などの非同期エージェント ライブラリの機能を使用して、処理を行います。 Asynchronous Agents Library の詳細については、[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)を参照してください。
 
 ## <a name="example"></a>例
 

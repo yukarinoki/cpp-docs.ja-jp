@@ -17,7 +17,7 @@ ms.locfileid: "58767562"
 
 'type1': 'type2'、値の型はインターフェイス クラスからのみ継承できますから継承できません。
 
-値型では、基本クラスを継承できません。  詳細については、次を参照してください。[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)します。
+値型では、基本クラスを継承できません。  詳細については、[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

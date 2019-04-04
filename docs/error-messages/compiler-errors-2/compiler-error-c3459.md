@@ -19,7 +19,7 @@ ms.locfileid: "50438017"
 
 クラス インデクサー プロパティに適用されるように設計された属性が正しく使用されていません。
 
-詳細については、次を参照してください。[方法: プロパティを使用して c++/cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)します。
+詳細については、[方法: プロパティを使用して c++/cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

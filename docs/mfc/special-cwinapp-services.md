@@ -53,7 +53,7 @@ MFC アプリケーション ウィザードは既定では、により、ユー
 
 アプリの GDI + を初期化するかどうか (呼び出して[GdiplusStartup](/windows/desktop/api/gdiplusinit/nf-gdiplusinit-gdiplusstartup)で、 [InitInstance](../mfc/reference/cwinapp-class.md#initinstance)関数)、GDI + のバック グラウンド スレッドを抑制する必要があります。
 
-設定してこれを行う、`SuppressBackgroundThread`のメンバー、 [GdiplusStartupInput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput)構造体を**TRUE**します。 ときに、スレッドがバック グラウンド GDI + の抑制、`NotificationHook`と`NotificationUnhook`呼び出しが行われる直前に入力し、アプリケーションのメッセージ ループを終了します。 これらの呼び出しの詳細については、次を参照してください。 [GdiplusStartupOutput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput)します。 そのため、適してを呼び出す`GdiplusStartup`フックの通知関数は仮想関数のオーバーライドでは[使わ](../mfc/reference/cwinapp-class.md#run)以下に示すように。
+設定してこれを行う、`SuppressBackgroundThread`のメンバー、 [GdiplusStartupInput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupinput)構造体を**TRUE**します。 ときに、スレッドがバック グラウンド GDI + の抑制、`NotificationHook`と`NotificationUnhook`呼び出しが行われる直前に入力し、アプリケーションのメッセージ ループを終了します。 これらの呼び出しの詳細については、[GdiplusStartupOutput](/windows/desktop/api/gdiplusinit/ns-gdiplusinit-gdiplusstartupoutput)を参照してください。 そのため、適してを呼び出す`GdiplusStartup`フックの通知関数は仮想関数のオーバーライドでは[使わ](../mfc/reference/cwinapp-class.md#run)以下に示すように。
 
 [!code-cpp[NVC_MFCDocView#6](../mfc/codesnippet/cpp/special-cwinapp-services_1.cpp)]
 

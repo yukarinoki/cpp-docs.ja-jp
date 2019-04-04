@@ -284,7 +284,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](/previous-versions/windows/desktop/ms709602(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、[irowsetscroll::getrowsatratio](/previous-versions/windows/desktop/ms709602(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ## <a name="releaserows"></a> CBulkRowset::ReleaseRows
 

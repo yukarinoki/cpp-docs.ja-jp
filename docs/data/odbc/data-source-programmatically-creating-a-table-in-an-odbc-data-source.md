@@ -18,7 +18,7 @@ ms.locfileid: "50661657"
 
 このトピックでは、データのテーブルを作成する方法を説明しますを使用して、ソース、`ExecuteSQL`クラスのメンバー関数`CDatabase`、関数を含む文字列を渡して、 **CREATE TABLE** SQL ステートメント。
 
-MFC での ODBC データ ソースの詳細については、次を参照してください。[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)します。 トピック[データ ソース: プログラムにおける ODBC データ ソースの設定](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)データ ソースの作成について説明します。
+MFC での ODBC データ ソースの詳細については、[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)を参照してください。 トピック[データ ソース: プログラムにおける ODBC データ ソースの設定](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)データ ソースの作成について説明します。
 
 確立されているデータ ソースの場合を使用してテーブルを簡単に作成することができます、`ExecuteSQL`メンバー関数および**CREATE TABLE** SQL ステートメント。 ある場合など、`CDatabase`と呼ばれるオブジェクト`myDB`テーブルを作成する次の MFC コードを使用できます。
 

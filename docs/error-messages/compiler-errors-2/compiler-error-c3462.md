@@ -19,7 +19,7 @@ ms.locfileid: "58781368"
 
 TypeForwardedTo 属性は、参照されたメタデータ内の型に適用する必要があります。
 
-詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
+詳細については、[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

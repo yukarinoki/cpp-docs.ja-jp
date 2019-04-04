@@ -12,7 +12,7 @@ ms.locfileid: "50484540"
 ---
 # <a name="ml-warnings"></a>ML の警告
 
-ML の警告の詳細については、次を参照してください。 [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)します。
+ML の警告の詳細については、[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

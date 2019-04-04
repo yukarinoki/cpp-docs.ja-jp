@@ -194,7 +194,7 @@ ms.locfileid: "50669028"
     }
     ```
 
-ブックマークの詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。 ブックマークの例を示しますも[行セットの更新](../../data/oledb/updating-rowsets.md)します。
+ブックマークの詳細については、[ブックマークを使って](../../data/oledb/using-bookmarks.md)を参照してください。 ブックマークの例を示しますも[行セットの更新](../../data/oledb/updating-rowsets.md)します。
 
 ## <a name="see-also"></a>関連項目
 

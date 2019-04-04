@@ -21,7 +21,7 @@ MFC ODBC データベース クラスが通常行う自分でメンバー関数�
 > [!NOTE]
 >  ODBC データ ソースには、ここで説明するように、MFC ODBC クラス経由でアクセスできます。また、MFC DAO (Data Access Object) クラス経由でもアクセスできます。
 
-データベース クラスには、ODBC の機能がカプセル化が ODBC API 関数の 1 対 1 のマッピングは提供されません。 データベース クラスでは、高いレベルの抽象化、Microsoft Access および Microsoft Visual Basic でのデータ アクセス オブジェクトの検出後にモデル化を提供します。 詳細については、次を参照してください。 [ODBC と MFC](../../data/odbc/odbc-and-mfc.md)します。
+データベース クラスには、ODBC の機能がカプセル化が ODBC API 関数の 1 対 1 のマッピングは提供されません。 データベース クラスでは、高いレベルの抽象化、Microsoft Access および Microsoft Visual Basic でのデータ アクセス オブジェクトの検出後にモデル化を提供します。 詳細については、[ODBC と MFC](../../data/odbc/odbc-and-mfc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

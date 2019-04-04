@@ -40,7 +40,7 @@ class SRWLock;
 
 ## <a name="remarks"></a>Remarks
 
-スリム リーダー/ライター ロックは、オブジェクトやリソースをスレッド間でのアクセスを同期に使用されます。 詳細については、次を参照してください。[同期関数](/windows/desktop/Sync/synchronization-functions)します。
+スリム リーダー/ライター ロックは、オブジェクトやリソースをスレッド間でのアクセスを同期に使用されます。 詳細については、[同期関数](/windows/desktop/Sync/synchronization-functions)を参照してください。
 
 ## <a name="members"></a>メンバー
 

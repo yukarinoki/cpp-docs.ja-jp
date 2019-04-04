@@ -49,7 +49,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)そのポインターを�
 
 [!code-cpp[stl_smart_pointers#213](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_4.cpp)]
 
-例については、次を参照してください。 [make_unique](../standard-library/memory-functions.md#make_unique)します。
+例については、[make_unique](../standard-library/memory-functions.md#make_unique)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

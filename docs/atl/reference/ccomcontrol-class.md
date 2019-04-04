@@ -71,7 +71,7 @@ class ATL_NO_VTABLE CComControl : public CComControlBase,
 
 `CComControl` 便利なコントロールのヘルパー関数と ATL のコントロールの重要なデータ メンバーのセットです。 標準のコントロールまたは ATL コントロール ウィザードを使用して、DHTML コントロールを作成するときにウィザードが自動的にからクラスを派生`CComControl`します。 `CComControl` メソッドのほとんどを派生[CComControlBase](../../atl/reference/ccomcontrolbase-class.md)します。
 
-コントロールの作成の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。 ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)です。
+コントロールの作成の詳細については、、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)を参照してください。 ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)です。
 
 例については`CComControl`メソッドと、データ メンバーを参照してください、[円](../../overview/visual-cpp-samples.md)サンプル。
 

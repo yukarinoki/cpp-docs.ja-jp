@@ -22,4 +22,4 @@ ms.locfileid: "50643652"
 
 このエラーは、can0026 と同じものと同じです。
 
-詳細については、次を参照してください。 [Format Specifiers in C++](/visualstudio/debugger/format-specifiers-in-cpp)します。
+詳細については、[Format Specifiers in C++](/visualstudio/debugger/format-specifiers-in-cpp)を参照してください。

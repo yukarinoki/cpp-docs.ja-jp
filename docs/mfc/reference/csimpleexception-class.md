@@ -55,7 +55,7 @@ class AFX_NOVTABLE CSimpleException : public CException
 
 `CSimpleException`抽象基本クラスでは、宣言することはできません、`CSimpleException`オブジェクトに直接します。 代わりに、前の表にあるなどの派生オブジェクトを宣言する必要があります。 派生クラスを宣言している場合は、モデルとして前のクラスを使用します。
 
-詳細については、次を参照してください。、 [CException クラス](../../mfc/reference/cexception-class.md)トピックと[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)します。
+詳細については、、 [CException クラス](../../mfc/reference/cexception-class.md)トピックと[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -115,7 +115,7 @@ NULL ターミネータを含めた、バッファーが保持できる文字の
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)します。
+詳細については、[CException::GetErrorMessage](../../mfc/reference/cfileexception-class.md#geterrormessage)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

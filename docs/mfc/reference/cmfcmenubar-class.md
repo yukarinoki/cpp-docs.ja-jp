@@ -348,7 +348,7 @@ virtual BOOL Create(
 
 構築した後、`CMFCMenuBar`オブジェクトを呼び出す必要があります`Create`します。 このメソッドを作成、`CMFCMenuBar`を制御し、それを`CMFCMenuBar`オブジェクト。
 
-ツール バー スタイルの詳細については、次を参照してください。 [CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle)します。
+ツール バー スタイルの詳細については、[CBasePane::SetPaneStyle](../../mfc/reference/cbasepane-class.md#setpanestyle)を参照してください。
 
 ##  <a name="createex"></a>  CMFCMenuBar::CreateEx
 
@@ -391,7 +391,7 @@ virtual BOOL CreateEx(
 
 代わりに、この関数を使用する必要があります[CMFCMenuBar::Create](#create)に加えて、ツールバーのスタイルのスタイルを指定する場合。 頻繁に使用されるいくつか追加スタイル バーオブジェクト、CBRS_TOP です。
 
-追加スタイルのリストは、次を参照してください。[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)、[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)、および[共通のウィンドウ スタイル](/windows/desktop/winmsg/window-styles)します。
+追加スタイルのリストは、[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)、[コモン コントロール スタイル](/windows/desktop/Controls/common-control-styles)、および[共通のウィンドウ スタイル](/windows/desktop/winmsg/window-styles)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -746,7 +746,7 @@ static BOOL IsShowAllCommands();
 
 ### <a name="remarks"></a>Remarks
 
-A`CMFCMenuBar`オブジェクトは、すべてのコマンドを表示するか、コマンドのサブセットのみを表示するように構成できます。 この機能の詳細については、次を参照してください。 [CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)します。
+A`CMFCMenuBar`オブジェクトは、すべてのコマンドを表示するか、コマンドのサブセットのみを表示するように構成できます。 この機能の詳細については、[CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)を参照してください。
 
 `IsShowAllCommands` 教えてくれるのこの機能を構成する方法、`CMFCMenuBar`オブジェクト。 メニュー コマンドが示すように、制御するメソッドを使用して、 [CMFCMenuBar::SetShowAllCommands](#setshowallcommands)と[CMFCMenuBar::SetRecentlyUsedMenus](#setrecentlyusedmenus)します。
 
@@ -946,7 +946,7 @@ virtual BOOL SaveState (
 
 ### <a name="remarks"></a>Remarks
 
-通常、アプリケーションは呼び出しません`SaveState`します。 フレームワークは、ワークスペースは、シリアル化する場合、このメソッドを呼び出します。 詳細については、次を参照してください。 [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)します。
+通常、アプリケーションは呼び出しません`SaveState`します。 フレームワークは、ワークスペースは、シリアル化する場合、このメソッドを呼び出します。 詳細については、[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)を参照してください。
 
 保存された情報には、メニュー項目には、ドッキング状態では、メニュー バーの位置が含まれます。
 
@@ -1080,7 +1080,7 @@ static void SetShowAllCommands(BOOL bShowAllCommands = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-メニューがメニュー コマンドのすべてが表示されない場合、ほとんど使用されるコマンドは非表示になります。 メニュー コマンドを表示する方法の詳細については、次を参照してください。 [CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)します。
+メニューがメニュー コマンドのすべてが表示されない場合、ほとんど使用されるコマンドは非表示になります。 メニュー コマンドを表示する方法の詳細については、[CMFCMenuBar クラス](../../mfc/reference/cmfcmenubar-class.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

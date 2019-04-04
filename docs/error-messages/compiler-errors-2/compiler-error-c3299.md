@@ -21,7 +21,7 @@ ms.locfileid: "58778053"
 
 オーバーライドするジェネリック関数の制約句が継承されます。
 
-詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)します。
+詳細については、[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

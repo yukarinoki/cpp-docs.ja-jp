@@ -55,7 +55,7 @@ int main() {
 
 C2676 は、参照型の `this` ポインターでポインター演算を試行した場合にも発生することがあります。
 
-`this` ポインターは、参照型の型ハンドルのポインターです。 詳細については、次を参照してください。[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)します。
+`this` ポインターは、参照型の型ハンドルのポインターです。 詳細については、[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)を参照してください。
 
 次の例では、C2676 が生成されます。
 

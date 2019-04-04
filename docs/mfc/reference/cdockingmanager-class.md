@@ -272,7 +272,7 @@ class CDockingManager : public CObject
 
 ドッキング マネージャー オブジェクトのすべてのリストとドッキングのレイアウトに含まれるすべてのペインのリストを保持する[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)メイン フレーム ウィンドウに属している windows。
 
-`CDockingManager`クラスは、ウィンドウの検索に使用できる一部のサービスを実装または`CPaneFrameWnd`ウィンドウ。 通常は呼び出すことはありませんこれらのサービス直接メイン フレーム ウィンドウのオブジェクトにラップされるためです。 詳細については、次を参照してください。 [CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)します。
+`CDockingManager`クラスは、ウィンドウの検索に使用できる一部のサービスを実装または`CPaneFrameWnd`ウィンドウ。 通常は呼び出すことはありませんこれらのサービス直接メイン フレーム ウィンドウのオブジェクトにラップされるためです。 詳細については、[CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)を参照してください。
 
 ## <a name="customization-tips"></a>カスタマイズのヒント
 
@@ -939,7 +939,7 @@ DWORD GetEnabledAutoHideAlignment() const;
 
 ### <a name="return-value"></a>戻り値
 
-Cbrs_align _ フラグ、または自動的に隠すウィンドウが有効になっていない場合は 0 のビットごとの組み合わせ。 詳細については、次を参照してください。 [CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking)します。
+Cbrs_align _ フラグ、または自動的に隠すウィンドウが有効になっていない場合は 0 のビットごとの組み合わせ。 詳細については、[CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1035,7 +1035,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
 
 ### <a name="return-value"></a>戻り値
 
-このクラスは、現在、ドッキング マネージャーのスマート ドッキングのパラメーターが含まれています。 詳細については、次を参照してください。 [CSmartDockingInfo クラス](../../mfc/reference/csmartdockinginfo-class.md)します。
+このクラスは、現在、ドッキング マネージャーのスマート ドッキングのパラメーターが含まれています。 詳細については、[CSmartDockingInfo クラス](../../mfc/reference/csmartdockinginfo-class.md)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1256,7 +1256,7 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 
 ### <a name="remarks"></a>Remarks
 
-既定では、各ドッキング ペインは、このドッキングのモードを使用します。 このフィールドに設定できる値の詳細については、次を参照してください。 [cbasepane::getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)します。
+既定では、各ドッキング ペインは、このドッキングのモードを使用します。 このフィールドに設定できる値の詳細については、[cbasepane::getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)を参照してください。
 
 ##  <a name="m_ndocksensitivity"></a>  CDockingManager::m_nDockSensitivity
 

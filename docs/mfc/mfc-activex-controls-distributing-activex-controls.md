@@ -43,7 +43,7 @@ ms.locfileid: "57300123"
 - [コントロールの登録](#_core_registering_controls)
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
 
 ##  <a name="_core_ansi_or_unicode_control_versions"></a> ANSI または Unicode コントロールのバージョン
 

@@ -75,19 +75,19 @@ ms.locfileid: "51331270"
                                        // for some drivers
     ```
 
-   フィルター文字列の引用符を正しく使用する方法の詳細については、次を参照してください。[レコード セット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)します。
+   フィルター文字列の引用符を正しく使用する方法の詳細については、[レコード セット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)を参照してください。
 
    パラメーター値が異なる新しい学生 id、レコード セットを再実行するたびにです。
 
    > [!TIP]
    > パラメーターを使用することは、単にフィルターよりも効率的です。 データベースのパラメーター化されたレコード セットでは、SQL を処理する必要があります**選択**ステートメントを 1 回のみです。 パラメーターを指定せず、フィルター選択されたレコード セットの**選択**ステートメントを処理する必要があるたび`Requery`フィルター値を新しい値。
 
-フィルターの詳細については、次を参照してください。[レコード セット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)します。
+フィルターの詳細については、[レコード セット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)を参照してください。
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> レコード セット クラスをパラメーター化
 
 > [!NOTE]
-> このセクションから派生したオブジェクトに適用されます`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチ、パラメーターの実装を使用している場合は、同様のプロセスです。 詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+> このセクションから派生したオブジェクトに適用されます`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチ、パラメーターの実装を使用している場合は、同様のプロセスです。 詳細については、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
 
 レコード セット クラスを作成する前に、必要なパラメーターは、データ型は、レコード セットでの使用方法を決定します。
 
@@ -114,7 +114,7 @@ ms.locfileid: "51331270"
 
    ウィザードで生成されたフィールドのデータ メンバーの後に、パラメーターのデータ メンバーを追加します。 形式では、各ユーザー定義のパラメーター名に"Param"という単語を追加します。
 
-1. 変更、 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) .cpp ファイル内のメンバー関数の定義。 クラスに追加する各パラメーターのデータ メンバーに対して RFX 関数の呼び出しを追加します。 RFX 関数の記述方法の詳細については、次を参照してください。[レコード フィールド エクス チェンジ: RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)します。 1 回の呼び出しでパラメーターの rfx 関数の呼び出しの前に。
+1. 変更、 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) .cpp ファイル内のメンバー関数の定義。 クラスに追加する各パラメーターのデータ メンバーに対して RFX 関数の呼び出しを追加します。 RFX 関数の記述方法の詳細については、[レコード フィールド エクス チェンジ: RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)を参照してください。 1 回の呼び出しでパラメーターの rfx 関数の呼び出しの前に。
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -123,7 +123,7 @@ ms.locfileid: "51331270"
 
 1. レコード セット クラスのコンス トラクターで、パラメーターのカウントをインクリメント`m_nParams`します。
 
-   詳しくは、次を参照してください。[レコード フィールド エクス チェンジ: ウィザード コードの使用](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)します。
+   詳しくは、[レコード フィールド エクス チェンジ: ウィザード コードの使用](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)を参照してください。
 
 1. このクラスのレコード セット オブジェクトを作成するコードを記述する場合、配置、"?"適切な各場所で、SQL ステートメントの文字列パラメーターが置き換えられます (疑問符) 記号です。
 

@@ -88,4 +88,4 @@ inline static void Unlock(
 
 `Type`として修飾子が定義されている`typedef CRITICAL_SECTION* Type;`します。
 
-詳細については、次を参照してください。**により関数**で、**同期関数**Windows API のドキュメントの「します。
+詳細については、**により関数**で、**同期関数**Windows API のドキュメントの「を参照してください。

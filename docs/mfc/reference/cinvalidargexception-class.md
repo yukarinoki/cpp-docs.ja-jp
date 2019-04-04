@@ -37,7 +37,7 @@ class CInvalidArgException : public CSimpleException
 
 A`CInvalidArgException`オブジェクトは無効な引数の例外条件を表します。
 
-例外処理の詳細については、次を参照してください。、 [CException クラス](../../mfc/reference/cexception-class.md)トピックと[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)します。
+例外処理の詳細については、、 [CException クラス](../../mfc/reference/cexception-class.md)トピックと[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

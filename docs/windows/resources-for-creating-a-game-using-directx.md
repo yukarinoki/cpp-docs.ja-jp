@@ -19,9 +19,9 @@ ms.locfileid: "51692597"
 
 ## <a name="resources"></a>リソース
 
-Visual C は、Visual Studio のすべてのエディションに含まれているが、既定でインストールされていません。 Visual Studio と C++ 開発ツールをインストールする方法については、次を参照してください。 [Visual Studio で C++ のインストール サポート](../build/vscpp-step-0-installation.md)します。
+Visual C は、Visual Studio のすべてのエディションに含まれているが、既定でインストールされていません。 Visual Studio と C++ 開発ツールをインストールする方法については、[Visual Studio で C++ のインストール サポート](../build/vscpp-step-0-installation.md)を参照してください。
 
-Windows 8.1 以降、Windows SDK には、DirectX SDK が含まれます。 他にダウンロードは必要ありません。 詳細については、次を参照してください。 [DirectX SDK はどこですか?](https://msdn.microsoft.com/library/windows/desktop/ee663275.aspx)します。
+Windows 8.1 以降、Windows SDK には、DirectX SDK が含まれます。 他にダウンロードは必要ありません。 詳細については、[DirectX SDK はどこですか?](https://msdn.microsoft.com/library/windows/desktop/ee663275.aspx)を参照してください。
 
 Windows 7、Windows Vista、または Windows XP の DirectX アプリを作成することができますをダウンロードするスタンドアロン[DirectX SDK](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)します。
 

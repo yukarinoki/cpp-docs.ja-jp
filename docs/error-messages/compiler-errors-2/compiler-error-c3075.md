@@ -19,7 +19,7 @@ ms.locfileid: "50591634"
 
 値型に参照型のインスタンスを含めることはできません。
 
-詳細については、次を参照してください。[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。
+詳細については、[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)を参照してください。
 
 ## <a name="example"></a>例
 

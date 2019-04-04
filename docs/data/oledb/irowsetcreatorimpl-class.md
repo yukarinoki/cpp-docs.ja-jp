@@ -61,7 +61,7 @@ class ATL_NO_VTABLE IRowsetCreatorImpl
 
 ## <a name="setsite"></a> Irowsetcreatorimpl::setsite
 
-行セット オブジェクトを含むサイトを設定します。 詳細については、次を参照してください。 [IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)します。
+行セット オブジェクトを含むサイトを設定します。 詳細については、[IObjectWithSite::SetSite](/windows/desktop/api/ocidl/nf-ocidl-iobjectwithsite-setsite)を参照してください。
 
 ### <a name="syntax"></a>構文
 

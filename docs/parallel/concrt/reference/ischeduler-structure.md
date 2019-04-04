@@ -39,7 +39,7 @@ struct IScheduler;
 |----------|-----------------|
 |[IScheduler::AddVirtualProcessors](#addvirtualprocessors)|使用するための一連の仮想プロセッサ ルートのスケジューラを提供します。 各`IVirtualProcessorRoot`インターフェイスは、スケジューラのための作業を実行できる 1 つのスレッドを実行する権限を表します。|
 |[IScheduler::GetId](#getid)|スケジューラの一意識別子を返します。|
-|[IScheduler::GetPolicy](#getpolicy)|スケジューラのポリシーのコピーを返します。 スケジューラ ポリシーの詳細については、次を参照してください。 [SchedulerPolicy](schedulerpolicy-class.md)します。|
+|[IScheduler::GetPolicy](#getpolicy)|スケジューラのポリシーのコピーを返します。 スケジューラ ポリシーの詳細については、[SchedulerPolicy](schedulerpolicy-class.md)を参照してください。|
 |[IScheduler::NotifyResourcesExternallyBusy](#notifyresourcesexternallybusy)|この配列内の仮想プロセッサ ルートのセットによって表されるハードウェア スレッドをスケジューラに通知`ppVirtualProcessorRoots`他のスケジューラによって使用されているようになりました。|
 |[IScheduler::NotifyResourcesExternallyIdle](#notifyresourcesexternallyidle)|この配列内の仮想プロセッサ ルートのセットによって表されるハードウェア スレッドをスケジューラに通知`ppVirtualProcessorRoots`他のスケジューラによって使用されていません。|
 |[IScheduler::RemoveVirtualProcessors](#removevirtualprocessors)|このスケジューラに以前割り当てられた仮想プロセッサ ルートの削除を開始します。|
@@ -101,7 +101,7 @@ virtual unsigned int GetId() const = 0;
 
 ##  <a name="getpolicy"></a>  Ischeduler::getpolicy メソッド
 
-スケジューラのポリシーのコピーを返します。 スケジューラ ポリシーの詳細については、次を参照してください。 [SchedulerPolicy](schedulerpolicy-class.md)します。
+スケジューラのポリシーのコピーを返します。 スケジューラ ポリシーの詳細については、[SchedulerPolicy](schedulerpolicy-class.md)を参照してください。
 
 ```
 virtual SchedulerPolicy GetPolicy() const = 0;
@@ -135,7 +135,7 @@ virtual void NotifyResourcesExternallyBusy(
 
 ハードウェア スレッドのサブスクリプション レベルでは、サブスクライブしているスレッドの数で表され、そのハードウェア スレッドに関連付けられた仮想プロセッサ ルートをアクティブ化します。 特定のスケジューラの観点からは、ハードウェア スレッドの外部のサブスクリプション レベルは、その他のスケジューラが関与するサブスクリプションの部分です。 ハードウェア スレッドの外部のサブスクリプション レベルが正の値にゼロから離れるときに、スケジューラにリソースが外部でビジー状態である通知が送信されます。
 
-ポリシーを持つスケジューラにこのメソッドを使用して通知を送信のみ場所の値、`MinConcurrency`ポリシー キーがの値と等しい、`MaxConcurrency`ポリシー キー。 スケジューラ ポリシーの詳細については、次を参照してください。 [SchedulerPolicy](schedulerpolicy-class.md)します。
+ポリシーを持つスケジューラにこのメソッドを使用して通知を送信のみ場所の値、`MinConcurrency`ポリシー キーがの値と等しい、`MaxConcurrency`ポリシー キー。 スケジューラ ポリシーの詳細については、[SchedulerPolicy](schedulerpolicy-class.md)を参照してください。
 
 通知を修飾するスケジューラのセットを取得初期通知が作成されるときにだけに割り当てられているリソースがビジー状態かアイドル状態が外部でかどうかを示すことです。
 
@@ -163,7 +163,7 @@ virtual void NotifyResourcesExternallyIdle(
 
 ハードウェア スレッドのサブスクリプション レベルでは、サブスクライブしているスレッドの数で表され、そのハードウェア スレッドに関連付けられた仮想プロセッサ ルートをアクティブ化します。 特定のスケジューラの観点からは、ハードウェア スレッドの外部のサブスクリプション レベルは、その他のスケジューラが関与するサブスクリプションの部分です。 ハードウェア スレッドの外部のサブスクリプション レベルに前の正の値からゼロになった場合に、スケジューラにリソースが外部でビジー状態である通知が送信されます。
 
-ポリシーを持つスケジューラにこのメソッドを使用して通知を送信のみ場所の値、`MinConcurrency`ポリシー キーがの値と等しい、`MaxConcurrency`ポリシー キー。 スケジューラ ポリシーの詳細については、次を参照してください。 [SchedulerPolicy](schedulerpolicy-class.md)します。
+ポリシーを持つスケジューラにこのメソッドを使用して通知を送信のみ場所の値、`MinConcurrency`ポリシー キーがの値と等しい、`MaxConcurrency`ポリシー キー。 スケジューラ ポリシーの詳細については、[SchedulerPolicy](schedulerpolicy-class.md)を参照してください。
 
 通知を修飾するスケジューラのセットを取得初期通知が作成されるときにだけに割り当てられているリソースがビジー状態かアイドル状態が外部でかどうかを示すことです。
 
@@ -219,7 +219,7 @@ virtual void Statistics(
 
 タスクの到着としてなどに関するフィードバックを使用して、スケジューラとリソース マネージャーに登録された他のスケジューラ間でリソースのバランスをとる方法を決定する Resource Manager の場合は、このメソッドを実装する必要があります。 統計情報を収集しないように選択する場合は、ポリシーのキーを設定できます`DynamicProgressFeedback`値`DynamicProgressFeedbackDisabled`マネージャーが、スケジューラでは、このメソッドを呼び出しませんスケジューラのポリシー、およびリソースにします。
 
-統計情報がない場合は、Resource Manager は、リソース割り当てと移行に関する意思決定に、ハードウェア スレッドのサブスクリプション レベルを使用します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)します。
+統計情報がない場合は、Resource Manager は、リソース割り当てと移行に関する意思決定に、ハードウェア スレッドのサブスクリプション レベルを使用します。 サブスクリプション レベルの詳細については、[iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

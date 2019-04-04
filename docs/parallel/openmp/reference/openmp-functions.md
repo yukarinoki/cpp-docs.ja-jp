@@ -105,7 +105,7 @@ void omp_destroy_lock(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.2.2 omp_destroy_lock 関数と omp_destroy_nest_lock 関数](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)します。
+詳細については、[3.2.2 omp_destroy_lock 関数と omp_destroy_nest_lock 関数](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -128,7 +128,7 @@ void omp_destroy_nest_lock(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.2.2 omp_destroy_lock 関数と omp_destroy_nest_lock 関数](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)します。
+詳細については、[3.2.2 omp_destroy_lock 関数と omp_destroy_nest_lock 関数](../../../parallel/openmp/3-2-2-omp-destroy-lock-and-omp-destroy-nest-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -150,7 +150,7 @@ int omp_get_dynamic();
 
 スレッドの動的な調整を指定した[omp_set_dynamic](#omp-set-dynamic)と[OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)します。
 
-詳細については、次を参照してください。 [3.1.7 omp_set_dynamic 関数](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)します。
+詳細については、[3.1.7 omp_set_dynamic 関数](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -166,7 +166,7 @@ int omp_get_max_threads( )
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.1.3 omp_get_max_threads 関数](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)します。
+詳細については、[3.1.3 omp_get_max_threads 関数](../../../parallel/openmp/3-1-3-omp-get-max-threads-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -222,7 +222,7 @@ int omp_get_nested( );
 
 入れ子になった並列処理を指定した[omp_set_nested](#omp-set-nested)と[OMP_NESTED](openmp-environment-variables.md#omp-nested)します。
 
-詳細については、次を参照してください。 [3.1.10 omp_get_nested 関数](../../../parallel/openmp/3-1-10-omp-get-nested-function.md)します。
+詳細については、[3.1.10 omp_get_nested 関数](../../../parallel/openmp/3-1-10-omp-get-nested-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -238,7 +238,7 @@ int omp_get_num_procs();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.1.5 omp_get_num_procs 関数](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)します。
+詳細については、[3.1.5 omp_get_num_procs 関数](../../../parallel/openmp/3-1-5-omp-get-num-procs-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -275,7 +275,7 @@ int omp_get_num_threads( );
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.1.2 omp_get_num_threads 関数](../../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)します。
+詳細については、[3.1.2 omp_get_num_threads 関数](../../../parallel/openmp/3-1-2-omp-get-num-threads-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -325,7 +325,7 @@ int omp_get_thread_num( );
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.1.4 omp_get_thread_num 関数](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)します。
+詳細については、[3.1.4 omp_get_thread_num 関数](../../../parallel/openmp/3-1-4-omp-get-thread-num-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -341,7 +341,7 @@ double omp_get_wtick( );
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.3.2 omp_get_wtick 関数](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md)します。
+詳細については、[3.3.2 omp_get_wtick 関数](../../../parallel/openmp/3-3-2-omp-get-wtick-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -363,7 +363,7 @@ double omp_get_wtime( );
 
 そのポイントは、今後の比較ができるようにするプログラムの実行中に一貫性のある残ります。
 
-詳細については、次を参照してください。 [3.3.1 omp_get_wtime 関数](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md)します。
+詳細については、[3.3.1 omp_get_wtime 関数](../../../parallel/openmp/3-3-1-omp-get-wtime-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -406,7 +406,7 @@ int omp_in_parallel( );
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.1.6 omp_in_parallel 関数](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md)します。
+詳細については、[3.1.6 omp_in_parallel 関数](../../../parallel/openmp/3-1-6-omp-in-parallel-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -451,7 +451,7 @@ void omp_init_lock(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)します。
+詳細については、[3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -545,7 +545,7 @@ void omp_init_nest_lock(
 
 入れ子の最初の数には 0 です。
 
-詳細については、次を参照してください。 [3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)します。
+詳細については、[3.2.1 omp_init_lock 関数と omp_init_nest_lock 関数](../../../parallel/openmp/3-2-1-omp-init-lock-and-omp-init-nest-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -634,7 +634,7 @@ void omp_set_dynamic(
 
 設定`omp_set_dynamic`の設定を上書き、 [OMP_DYNAMIC](openmp-environment-variables.md#omp-dynamic)環境変数。
 
-詳細については、次を参照してください。 [3.1.7 omp_set_dynamic 関数](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)します。
+詳細については、[3.1.7 omp_set_dynamic 関数](../../../parallel/openmp/3-1-7-omp-set-dynamic-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -679,7 +679,7 @@ void omp_set_lock(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)します。
+詳細については、[3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)を参照してください。
 
 ### <a name="examples"></a>使用例
 
@@ -702,7 +702,7 @@ void omp_set_nest_lock(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)します。
+詳細については、[3.2.3 omp_set_lock 関数と omp_set_nest_lock 関数](../../../parallel/openmp/3-2-3-omp-set-lock-and-omp-set-nest-lock-functions.md)を参照してください。
 
 ### <a name="examples"></a>使用例
 
@@ -733,7 +733,7 @@ void omp_set_nested(
 
 使用[omp_get_nested](#omp-get-nested)の現在の設定を表示する`omp_set_nested`します。
 
-詳細については、次を参照してください。 [3.1.9 omp_set_nested 関数](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)します。
+詳細については、[3.1.9 omp_set_nested 関数](../../../parallel/openmp/3-1-9-omp-set-nested-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -778,7 +778,7 @@ void omp_set_num_threads(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.1.1 omp_set_num_threads 関数](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)します。
+詳細については、[3.1.1 omp_set_num_threads 関数](../../../parallel/openmp/3-1-1-omp-set-num-threads-function.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -801,7 +801,7 @@ int omp_test_lock(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.2.5 omp_test_lock 関数と omp_test_nest_lock 関数](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)します。
+詳細については、[3.2.5 omp_test_lock 関数と omp_test_nest_lock 関数](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -874,7 +874,7 @@ int omp_test_nest_lock(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.2.5 omp_test_lock 関数と omp_test_nest_lock 関数](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)します。
+詳細については、[3.2.5 omp_test_lock 関数と omp_test_nest_lock 関数](../../../parallel/openmp/3-2-5-omp-test-lock-and-omp-test-nest-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -965,7 +965,7 @@ void omp_unset_lock(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)します。
+詳細については、[3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -988,7 +988,7 @@ void omp_unset_nest_lock(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)します。
+詳細については、[3.2.4 omp_unset_lock 関数と omp_unset_nest_lock 関数](../../../parallel/openmp/3-2-4-omp-unset-lock-and-omp-unset-nest-lock-functions.md)を参照してください。
 
 ### <a name="example"></a>例
 

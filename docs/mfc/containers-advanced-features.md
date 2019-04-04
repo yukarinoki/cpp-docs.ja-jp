@@ -69,7 +69,7 @@ ms.locfileid: "58769564"
 
          If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.
 
-MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)この機能を実装します。 これを行う方法の例は、次を参照してください。、`InitInstance`で機能、 *OCLIENT します。CPP*このサンプル アプリケーションのファイル。
+MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)この機能を実装します。 これを行う方法の例は、、`InitInstance`で機能、 *OCLIENT を参照してください。CPP*このサンプル アプリケーションのファイル。
 
 ## <a name="see-also"></a>関連項目
 

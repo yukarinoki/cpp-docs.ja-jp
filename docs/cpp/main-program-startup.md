@@ -57,7 +57,7 @@ int wmain(int argc, wchar_t *argv[], wchar_t *envp[]);
 
 **Microsoft 固有の仕様はここまで**
 
-`argc` と `argv` の型は、言語によって定義されています。 名前 `argc`、`argv`、および`envp` は従来のものですが、コンパイラにとって必須ではありません。 詳細と例では、次を参照してください。[引数定義](../cpp/argument-definitions.md)します。
+`argc` と `argv` の型は、言語によって定義されています。 名前 `argc`、`argv`、および`envp` は従来のものですが、コンパイラにとって必須ではありません。 詳細と例では、[引数定義](../cpp/argument-definitions.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

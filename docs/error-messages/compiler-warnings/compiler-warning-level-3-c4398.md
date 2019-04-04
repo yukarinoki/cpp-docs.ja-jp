@@ -23,7 +23,7 @@ ms.locfileid: "50578465"
 
 この警告を解決するには、変数を明示的にマークすることによって`__declspec(appdomain)`します。 Visual Studio 2017 の前に Visual Studio のバージョンでは、この警告を解決でコンパイルする **/clr: 純粋な**、appdomain ごとのグローバル変数は既定では、これです。 **/Clr: 純粋な**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-詳細については、次を参照してください。 [appdomain](../../cpp/appdomain.md)と[アプリケーション ドメインと Visual c](../../dotnet/application-domains-and-visual-cpp.md)します。
+詳細については、[appdomain](../../cpp/appdomain.md)と[アプリケーション ドメインと Visual c](../../dotnet/application-domains-and-visual-cpp.md)を参照してください。
 
 ## <a name="example"></a>例
 

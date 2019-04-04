@@ -114,7 +114,7 @@ bool asend(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)します。
+詳細については、[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)を参照してください。
 
 ##  <a name="cancel_current_task"></a>  cancel_current_task
 
@@ -423,7 +423,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)します。
+詳細については、[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)を参照してください。
 
 ##  <a name="make_choice"></a>  make_choice
 
@@ -774,7 +774,7 @@ void parallel_for(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)します。
+詳細については、[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)を参照してください。
 
 ##  <a name="parallel_for_each"></a>  parallel_for_each
 
@@ -822,7 +822,7 @@ void parallel_for_each(
 
 ランダムをサポートしない反復子アクセスのみ[auto_partitioner](auto-partitioner-class.md)はサポートされています。
 
-詳細については、次を参照してください。[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)します。
+詳細については、[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)を参照してください。
 
 ##  <a name="parallel_invoke"></a>  parallel_invoke
 
@@ -1021,7 +1021,7 @@ void parallel_invoke(
 
 1 つまたは複数のパラメーターとしてこの関数に渡される関数オブジェクトは、例外をスローする場合、ランタイムは、選択した場合のような例外が 1 つを選択し、呼び出しから伝達されること`parallel_invoke`します。
 
-詳細については、次を参照してください。[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)します。
+詳細については、[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)を参照してください。
 
 ##  <a name="parallel_radixsort"></a>  parallel_radixsort
 
@@ -1350,7 +1350,7 @@ first2,
 
 引数を受け取るオーバー ロード`_Binary_op`最初の入力の範囲と 2 番目の入力の範囲から 1 つの要素から 1 つの要素のバイナリ ファンクタを適用することで、2 つの入力範囲を出力範囲に変換します。 `_Binary_op` シグネチャを持つ関数呼び出し演算子をサポートする必要があります`operator()(T, U)`場所`T`、`U`は 2 つの入力反復子の値の型。
 
-詳細については、次を参照してください。[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)します。
+詳細については、[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)を参照してください。
 
 ##  <a name="receive"></a>  receive
 
@@ -1402,7 +1402,7 @@ T receive(
 
 場合、パラメーター`_Timeout`定数以外の値を持つ`COOPERATIVE_TIMEOUT_INFINITE`、例外[operation_timed_out](operation-timed-out-class.md)が、一定の時間には、メッセージを受信する前に有効期限が切れる場合にスローされます。 使用する必要があります長さ 0 のタイムアウトを設定する場合、 [try_receive](concurrency-namespace-functions.md)関数を呼び出すのではなく`receive`のタイムアウトで`0`(ゼロ) より効率的でありのタイムアウト例外をスローしません。
 
-詳細については、次を参照してください。[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)します。
+詳細については、[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)を参照してください。
 
 ##  <a name="run_with_cancellation_token"></a>  run_with_cancellation_token
 
@@ -1459,7 +1459,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)します。
+詳細については、[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)を参照してください。
 
 ##  <a name="set_ambient_scheduler"></a>  set_ambient_scheduler
 
@@ -1650,7 +1650,7 @@ A`bool`にペイロードが格納されたかどうかを示すを値`_value`�
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)します。
+詳細については、[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)を参照してください。
 
 ##  <a name="wait"></a>  wait
 
@@ -1707,7 +1707,7 @@ auto when_all(
 
 取り消されたタスクのいずれか、または例外をスローは早い段階で取り消された状態で、返されたタスクは完了し、例外が発生しました、1 つは場合がスローされますを呼び出す場合、 [task::get](task-class.md#get)または`task::wait`タスクにします。
 
-詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
 
 ##  <a name="when_any"></a>  when_any
 
@@ -1758,7 +1758,7 @@ auto when_any(
 
 `when_any` は、その結果、`task` を生成する、非ブロッキング関数です。 異なり[task::wait](task-class.md#wait)ASTA (アプリケーション STA) スレッドでの UWP アプリでこの関数を呼び出しても安全になります。
 
-詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

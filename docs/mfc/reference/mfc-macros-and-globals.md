@@ -24,7 +24,7 @@ ms.locfileid: "57268188"
 
 Microsoft Foundation Class ライブラリは、2 つの主要なセクションに分類できます。(MFC クラスと (2) マクロとグローバル 1)。 クラスのメンバーではない関数や変数は、グローバル関数またはグローバル変数です。
 
-MFC ライブラリと ATL (Active Template Library) は文字列変換マクロを共有します。 詳細については、次を参照してください。[文字列変換マクロ](../../atl/reference/string-conversion-macros.md)、ATL のドキュメントにします。
+MFC ライブラリと ATL (Active Template Library) は文字列変換マクロを共有します。 詳細については、[文字列変換マクロ](../../atl/reference/string-conversion-macros.md)、ATL のドキュメントにを参照してください。
 
 MFC のマクロ、グローバル関数、およびグローバル変数には、次の機能が用意されています。
 

@@ -22,7 +22,7 @@ ms.locfileid: "57303899"
 プロパティ ページを使用すると、ActiveX コントロールのユーザーを表示および ActiveX コントロールのプロパティを変更します。 これらのプロパティは、表示およびコントロールのプロパティを編集するため、カスタマイズされたグラフィカル インターフェイスを提供する 1 つまたは複数のプロパティ ページを含む、コントロールのプロパティのダイアログ ボックスを呼び出すことによってアクセスされます。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
 
 2 つの方法では、ActiveX コントロールのプロパティ ページが表示されます。
 
@@ -49,7 +49,7 @@ ActiveX コントロールのプロパティ ページの使用に関する詳�
 
 - [MFC ActiveX コントロール:ストック プロパティ ページを使用します。](../mfc/mfc-activex-controls-using-stock-property-pages.md)
 
-ActiveX コントロール以外の MFC アプリケーションでプロパティ シートの使用方法の詳細については、次を参照してください。[プロパティ シート](../mfc/property-sheets-mfc.md)します。
+ActiveX コントロール以外の MFC アプリケーションでプロパティ シートの使用方法の詳細については、[プロパティ シート](../mfc/property-sheets-mfc.md)を参照してください。
 
 ##  <a name="_core_implementing_the_default_property_page"></a> 既定のプロパティ ページを実装します。
 

@@ -49,7 +49,7 @@ ms.locfileid: "50473828"
 
 テンプレート関数がインスタンス化されるとき、テンプレートの定義時のプラグマの状態により、マネージドかアンマネージドかが決まります。
 
-詳細については、次を参照してください。[混在アセンブリの初期化](../dotnet/initialization-of-mixed-assemblies.md)します。
+詳細については、[混在アセンブリの初期化](../dotnet/initialization-of-mixed-assemblies.md)を参照してください。
 
 ## <a name="example"></a>例
 

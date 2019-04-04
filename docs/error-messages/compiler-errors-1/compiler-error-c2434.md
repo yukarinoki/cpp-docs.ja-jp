@@ -21,7 +21,7 @@ ms.locfileid: "50587591"
 
 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-プロセスごとの変数を動的に初期化することはできません **/clr: 純粋な**します。 詳細については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[プロセス](../../cpp/process.md)します。
+プロセスごとの変数を動的に初期化することはできません **/clr: 純粋な**します。 詳細については、[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[プロセス](../../cpp/process.md)を参照してください。
 
 ## <a name="example"></a>例
 

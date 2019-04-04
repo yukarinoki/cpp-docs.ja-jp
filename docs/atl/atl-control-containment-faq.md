@@ -19,7 +19,7 @@ ms.locfileid: "57296567"
 
 ## <a name="which-atl-classes-facilitate-activex-control-containment"></a>ATL クラスは、ActiveX コントロール サポートを容易にしますか。
 
-ATL のコントロール ホスト コードで、ATL クラスを使用する必要がありません。単に作成することができます、 **"AtlAxWin80**ウィンドウと必要な場合、コントロール ホスト API を使用 (詳細については、次を参照してください。 **ATL コントロール ホスト API とは**します。 ただし、次のクラス包含機能を使いやすきます。
+ATL のコントロール ホスト コードで、ATL クラスを使用する必要がありません。単に作成することができます、 **"AtlAxWin80**ウィンドウと必要な場合、コントロール ホスト API を使用 (詳細については、**ATL コントロール ホスト API とは**を参照してください。 ただし、次のクラス包含機能を使いやすきます。
 
 |クラス|説明|
 |-----------|-----------------|
@@ -52,7 +52,7 @@ ATL のコントロール ホスト API は、ActiveX コントロール コン�
 最初の 7 つの関数を呼び出す[AtlAxWinInit](reference/composite-control-global-functions.md#atlaxwininit)暗黙的にします。
 
 > [!NOTE]
->  コントロール ホスト API では、ActiveX コントロール サポートの ATL のサポートの基礎を形成します。 ただし、活用または ATL のラッパー クラスを最大限に活用する場合、これらの関数を直接呼び出す必要はほとんどありませんが、通常は。 詳細については、次を参照してください。[する ATL クラスを容易に ActiveX コントロール コンテインメント](which-atl-classes-facilitate-activex-control-containment-q.md)します。
+>  コントロール ホスト API では、ActiveX コントロール サポートの ATL のサポートの基礎を形成します。 ただし、活用または ATL のラッパー クラスを最大限に活用する場合、これらの関数を直接呼び出す必要はほとんどありませんが、通常は。 詳細については、[する ATL クラスを容易に ActiveX コントロール コンテインメント](which-atl-classes-facilitate-activex-control-containment-q.md)を参照してください。
 
 ## <a name="what-is-atlaxwin100"></a>AtlAxWin100 とは何ですか。
 

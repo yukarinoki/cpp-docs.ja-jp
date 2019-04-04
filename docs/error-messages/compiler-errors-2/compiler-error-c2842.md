@@ -21,7 +21,7 @@ ms.locfileid: "51325569"
 
 独自に定義することができます**演算子 new**または**delete 演算子**ネイティブ ヒープにメモリの割り当てを管理します。 ただし、これらの演算子はマネージド ヒープでのみ割り当てられるため、参照クラスでは定義できません。
 
-詳細については、次を参照してください。[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)します。
+詳細については、[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

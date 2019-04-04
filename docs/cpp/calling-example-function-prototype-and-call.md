@@ -37,7 +37,7 @@ void    MyFunc( char c, short s, int i, double f )
 MyFunc ('x', 12, 8192, 2.7183);
 ```
 
-詳細については、次を参照してください。[呼び出し結果の例](../cpp/results-of-calling-example.md)します。
+詳細については、[呼び出し結果の例](../cpp/results-of-calling-example.md)を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 

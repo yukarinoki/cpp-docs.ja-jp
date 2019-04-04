@@ -104,7 +104,7 @@ class CPagerCtrl : public CWnd
 
 など、アプリケーションのすべての項目を表示するのに十分な幅がツールバーにある場合は、ページャー コントロールにツールバーを割り当てることができ、ユーザーは、ツールバーを左またはすべての項目へのアクセス権をスクロールできます。 Microsoft Internet Explorer バージョン 4.0 (commctrl.dll バージョン 4.71) には、ページャー コントロールが導入されています。
 
-`CPagerCtrl`から派生したクラスは、 [CWnd](../../mfc/reference/cwnd-class.md)クラス。 ページャー コントロールの例と詳細については、次を参照してください。[ページャー コントロール](/windows/desktop/Controls/pager-controls)します。
+`CPagerCtrl`から派生したクラスは、 [CWnd](../../mfc/reference/cwnd-class.md)クラス。 ページャー コントロールの例と詳細については、[ページャー コントロール](/windows/desktop/Controls/pager-controls)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -276,7 +276,7 @@ int GetButtonSize() const;
 
 このメソッドは、送信、 [PGM_GETBUTTONSIZE](/windows/desktop/Controls/pgm-getbuttonsize)メッセージは、Windows SDK で説明します。
 
-ボタンのサイズが、ページャー ボタンの幅を決定します、ページャー コントロールがスタイルの PGS_HORZ し、ボタンのサイズがページャー ボタンの高さを決定します、ページャー コントロールが PGS_VERT スタイル。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。
+ボタンのサイズが、ページャー ボタンの幅を決定します、ページャー コントロールがスタイルの PGS_HORZ し、ボタンのサイズがページャー ボタンの高さを決定します、ページャー コントロールが PGS_VERT スタイル。 詳細については、[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)を参照してください。
 
 ##  <a name="getbuttonstate"></a>  CPagerCtrl::GetButtonState
 
@@ -290,7 +290,7 @@ DWORD GetButtonState(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -352,7 +352,7 @@ BOOL IsButtonDepressed(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -374,7 +374,7 @@ BOOL IsButtonGrayed(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -396,7 +396,7 @@ BOOL IsButtonHot(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -418,7 +418,7 @@ BOOL IsButtonInvisible(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -448,7 +448,7 @@ BOOL IsButtonNormal(int iButton) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。|
+|*iButton*|[in]ボタンの状態を取得することを示します。 ページャー コントロールのスタイルが PGS_HORZ の場合は、右側のボタンの左ボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 ページャー コントロールのスタイルが PGS_VERT の場合は、下のボタンの上部にボタンと PGB_BOTTOMORRIGHT PGB_TOPORLEFT を指定します。 詳細については、[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -560,7 +560,7 @@ int SetButtonSize(int iButtonSize);
 
 このメソッドは、送信、 [PGM_SETBUTTONSIZE](/windows/desktop/Controls/pgm-setpos)メッセージは、Windows SDK で説明します。
 
-ボタンのサイズが、ページャー ボタンの幅を決定します、ページャー コントロールがスタイルの PGS_HORZ し、ボタンのサイズがページャー ボタンの高さを決定します、ページャー コントロールが PGS_VERT スタイル。 既定のボタンのサイズは、スクロール バーの幅の 4 分の 3 つと、ボタンの最小サイズは 12 ピクセルです。 詳細については、次を参照してください。[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)します。
+ボタンのサイズが、ページャー ボタンの幅を決定します、ページャー コントロールがスタイルの PGS_HORZ し、ボタンのサイズがページャー ボタンの高さを決定します、ページャー コントロールが PGS_VERT スタイル。 既定のボタンのサイズは、スクロール バーの幅の 4 分の 3 つと、ボタンの最小サイズは 12 ピクセルです。 詳細については、[ページャー コントロールのスタイル](/windows/desktop/Controls/pager-control-styles)を参照してください。
 
 ### <a name="example"></a>例
 

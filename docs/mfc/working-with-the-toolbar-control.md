@@ -55,7 +55,7 @@ ms.locfileid: "57260505"
 
 - [コントロール バー](../mfc/control-bars.md)
 
-Windows コモン コントロールの使い方の詳細については、次を参照してください。[コモン コントロール](/windows/desktop/Controls/common-controls-intro)します。
+Windows コモン コントロールの使い方の詳細については、[コモン コントロール](/windows/desktop/Controls/common-controls-intro)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -85,7 +85,7 @@ CMFCPropertyGridFontProperty(
 [in]フォントの属性を指定するフォントの論理構造体。
 
 *dwFontDialogFlags*<br/>
-[in]プロパティ値のドロップダウン ボタンをクリックすると表示される [フォント] ダイアログ ボックスに適用されるスタイル。 既定値は、CF_EFFECTS と CF_SCREENFONTS のビットごとの組み合わせ (OR です)。 詳細については、次を参照してください。、*フラグ*のパラメーター、 [CHOOSEFONT 構造](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)します。
+[in]プロパティ値のドロップダウン ボタンをクリックすると表示される [フォント] ダイアログ ボックスに適用されるスタイル。 既定値は、CF_EFFECTS と CF_SCREENFONTS のビットごとの組み合わせ (OR です)。 詳細については、、*フラグ*のパラメーター、 [CHOOSEFONT 構造](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)を参照してください。
 
 *lpszDescr*<br/>
 [in]フォントのプロパティの説明。 既定値は、NULL です。

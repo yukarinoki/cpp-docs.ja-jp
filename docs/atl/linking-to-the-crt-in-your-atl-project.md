@@ -29,7 +29,7 @@ CRT に静的にリンクする場合は CRT からのコードは、実行可�
 
 ## <a name="optimization-options"></a>最適化オプション
 
-/OPT:NOWIN98 リンカー オプションを使用してさらに低下 10 k は、既定の ATL コントロール譲歩読み込み Windows 98 システム上の時間が増加します。 リンク オプションの詳細については、次を参照してください。 [/OPT (最適化)](../build/reference/opt-optimizations.md)します。
+/OPT:NOWIN98 リンカー オプションを使用してさらに低下 10 k は、既定の ATL コントロール譲歩読み込み Windows 98 システム上の時間が増加します。 リンク オプションの詳細については、[/OPT (最適化)](../build/reference/opt-optimizations.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

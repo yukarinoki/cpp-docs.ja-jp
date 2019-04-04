@@ -20,7 +20,7 @@ ms.locfileid: "57287935"
 ---
 # <a name="setting-the-mode-of-a-cstatusbarctrl-object"></a>CStatusBarCtrl オブジェクトのモードの設定
 
-2 つのモードを`CStatusBarCtrl`オブジェクト: シンプルで標準。 ほとんどの場合、ステータス バー コントロールはテキストとアイコンではおそらくまたはアイコンと共に、1 つまたは複数の部分になります。 これは標準モードと呼ばれます。 このモードの詳細については、次を参照してください。[の CStatusBarCtrl オブジェクトの初期化](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)します。
+2 つのモードを`CStatusBarCtrl`オブジェクト: シンプルで標準。 ほとんどの場合、ステータス バー コントロールはテキストとアイコンではおそらくまたはアイコンと共に、1 つまたは複数の部分になります。 これは標準モードと呼ばれます。 このモードの詳細については、[の CStatusBarCtrl オブジェクトの初期化](../mfc/initializing-the-parts-of-a-cstatusbarctrl-object.md)を参照してください。
 
 ただし、だけする必要がある 1 行のテキストを表示する場合があります。 この場合は、単純なモードは、ニーズのための十分なは。 モードを変更する、`CStatusBarCtrl`シンプル オブジェクト、呼び出しを行う、 [SetSimple](../mfc/reference/cstatusbarctrl-class.md#setsimple)メンバー関数。 ステータス バー コントロールは、単純なモードでは後で呼び出すことによって、テキストを設定、`SetText`メンバー関数を値として 255、 *nPane*パラメーター。
 

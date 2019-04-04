@@ -28,7 +28,7 @@ Visual C++ を使用して、64 ビット Windows オペレーティング シ�
 
 - `size_t`、 `time_t`、および`ptrdiff_t`は 64 ビット Windows オペレーティング システムで 64 ビット値です。
 
-- `time_t` は、Visual C++ 2005 以前の Visual C++ バージョンの 32 ビット Windows オペレーティング システムでは 32 ビット値です。 現在は、`time_t` は既定で 64 ビット整数です。 詳細については、次を参照してください。[時間管理](../c-runtime-library/time-management.md)します。
+- `time_t` は、Visual C++ 2005 以前の Visual C++ バージョンの 32 ビット Windows オペレーティング システムでは 32 ビット値です。 現在は、`time_t` は既定で 64 ビット整数です。 詳細については、[時間管理](../c-runtime-library/time-management.md)を参照してください。
 
    コード内で `int` 値を使用する場所について、およびその値を `size_t` または `time_t` のどちらの値として処理するかについて考慮する必要があります。 32 ビットよりも大きくなると、`int` ストレージに返されるときにデータが切り捨てられます。
 

@@ -47,7 +47,7 @@ class task_group;
 
 異なり、大きく制限された`structured_task_group`クラス、`task_group`クラスより一般的な構成要素。 任意で説明されている制限のない[structured_task_group](structured-task-group-class.md)します。 `task_group` オブジェクトをスレッド間で使用される安全かつ自由形式の方法で使用される可能性があります。 欠点、`task_group`コンス トラクターは、実行がされていないことだけでなく`structured_task_group`の少量の作業を実行するタスクを作成します。
 
-詳細については、次を参照してください。[タスクの並列化](../task-parallelism-concurrency-runtime.md)します。
+詳細については、[タスクの並列化](../task-parallelism-concurrency-runtime.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -69,7 +69,7 @@ void cancel();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[キャンセル](../cancellation-in-the-ppl.md)します。
+詳細については、[キャンセル](../cancellation-in-the-ppl.md)を参照してください。
 
 ##  <a name="is_canceling"></a> is_canceling
 
@@ -85,7 +85,7 @@ bool is_canceling();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[キャンセル](../cancellation-in-the-ppl.md)します。
+詳細については、[キャンセル](../cancellation-in-the-ppl.md)を参照してください。
 
 ##  <a name="run"></a> 実行
 
@@ -178,7 +178,7 @@ task_group_status run_and_wait(
 
 ### <a name="return-value"></a>戻り値
 
-待機が満たされたかどうかを示す値、またはタスク グループは、明示的な取り消し操作をまたはいずれかのタスクからスローされる例外のためキャンセルされました。 詳細については、次を参照してください。 [task_group_status](concurrency-namespace-enums.md#task_group_status)します。
+待機が満たされたかどうかを示す値、またはタスク グループは、明示的な取り消し操作をまたはいずれかのタスクからスローされる例外のためキャンセルされました。 詳細については、[task_group_status](concurrency-namespace-enums.md#task_group_status)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -233,7 +233,7 @@ task_group_status wait();
 
 ### <a name="return-value"></a>戻り値
 
-待機が満たされたかどうかを示す値、またはタスク グループは、明示的な取り消し操作をまたはいずれかのタスクからスローされる例外のためキャンセルされました。 詳細については、次を参照してください。 [task_group_status](concurrency-namespace-enums.md#task_group_status)します。
+待機が満たされたかどうかを示す値、またはタスク グループは、明示的な取り消し操作をまたはいずれかのタスクからスローされる例外のためキャンセルされました。 詳細については、[task_group_status](concurrency-namespace-enums.md#task_group_status)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

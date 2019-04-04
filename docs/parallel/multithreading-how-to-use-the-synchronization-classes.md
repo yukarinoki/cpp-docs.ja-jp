@@ -55,7 +55,7 @@ singleLock.Unlock();
 
 この手法の欠点は、同期オブジェクトを追加しない場合と比べて、クラスの動作が少し遅くなることです。 また、同期オブジェクトを複数のスレッドで削除した場合は、マージが成功するとは限りません。 このような場合は、同期オブジェクトを別個に管理します。
 
-さまざまな状況で使用する同期クラスを決定する方法の詳細については、次を参照してください。[マルチ スレッド。同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートの詳細については、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)します。
+さまざまな状況で使用する同期クラスを決定する方法の詳細については、次を参照してください。[マルチ スレッド。同期クラスを使用するときに](multithreading-when-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートの詳細については、[C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

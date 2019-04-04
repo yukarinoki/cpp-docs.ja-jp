@@ -11,7 +11,7 @@ ms.locfileid: "50512844"
 ---
 # <a name="run-time-operators"></a>ランタイム演算子
 
-Microsoft のマクロ アセンブラーの言語でランタイム演算子の詳細については、次を参照してください。[演算子リファレンス](../../assembler/masm/operators-reference.md)します。
+Microsoft のマクロ アセンブラーの言語でランタイム演算子の詳細については、[演算子リファレンス](../../assembler/masm/operators-reference.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

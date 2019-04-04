@@ -65,7 +65,7 @@ MFC アプリケーションに表示される .NET Framework ユーザー コ�
 
 `CWinFormsDialog` MFC ダイアログ クラス用のラッパーです ( [CDialog](../../mfc/reference/cdialog-class.md))、Windows フォーム ユーザー コントロールをホストします。 これにより、モーダルまたはモードレスの MFC ダイアログ ボックス上の .NET Framework コントロールの表示ができます。
 
-Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)と[MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールをホストしている](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)します。
+Windows フォームの使用に関する詳細については、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)と[MFC ダイアログ ボックスとしての Windows フォーム ユーザー コントロールをホストしている](../../dotnet/hosting-a-windows-form-user-control-as-an-mfc-dialog-box.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -82,7 +82,7 @@ CWinFormsDialog(UINT nIDTemplate = IDD);
 ### <a name="parameters"></a>パラメーター
 
 *nIDTemplate*<br/>
-ダイアログ ボックスのテンプレート リソースの ID が含まれています。 ダイアログ エディターを使用して、ダイアログ テンプレートを作成し、アプリケーションのリソース スクリプト ファイルに格納します。 ダイアログ テンプレートの詳細については、次を参照してください。 [CDialog クラス](../../mfc/reference/cdialog-class.md)します。
+ダイアログ ボックスのテンプレート リソースの ID が含まれています。 ダイアログ エディターを使用して、ダイアログ テンプレートを作成し、アプリケーションのリソース スクリプト ファイルに格納します。 ダイアログ テンプレートの詳細については、[CDialog クラス](../../mfc/reference/cdialog-class.md)を参照してください。
 
 ##  <a name="getcontrol"></a>  CWinFormsDialog::GetControl
 
@@ -124,7 +124,7 @@ virtual BOOL OnInitDialog();
 
 MFC ダイアログ ボックスが作成されたとき (を使用して、[作成](../../mfc/reference/cdialog-class.md#create)、 [CreateIndirect](../../mfc/reference/cdialog-class.md#createindirect)、または[DoModal](../../mfc/reference/cdialog-class.md#domodal)から継承されたメソッド[CDialog](../../mfc/reference/cdialog-class.md))、wm _ で始まるINITDIALOG メッセージが送信され、このメソッドが呼び出されます。 ダイアログ ボックス上の Windows フォーム コントロールのインスタンスを作成し、ユーザー コントロールのサイズに対応するダイアログ ボックスのサイズを調整します。 MFC ダイアログ ボックスで新しいコントロールをホストします。
 
-ダイアログ ボックスの初期化時に、特別な処理を実行する必要がある場合は、このメンバー関数をオーバーライドします。 このメソッドの使用に関する詳細については、次を参照してください。 [CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)します。
+ダイアログ ボックスの初期化時に、特別な処理を実行する必要がある場合は、このメンバー関数をオーバーライドします。 このメソッドの使用に関する詳細については、[CDialog::OnInitDialog](../../mfc/reference/cdialog-class.md#oninitdialog)を参照してください。
 
 ##  <a name="operator_-_gt"></a>  CWinFormsDialog::operator -&gt;
 
@@ -138,7 +138,7 @@ inline TManagedControl^  operator->() const throw();
 
 この演算子は、置換する便利な構文を提供します。`GetControl`式で。
 
-Windows フォームを使用する方法の詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
+Windows フォームを使用する方法の詳細については、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)を参照してください。
 
 ##  <a name="operator-tmanagedcontrol-hat"></a>  CWinFormsDialog::operator TManagedControl^
 

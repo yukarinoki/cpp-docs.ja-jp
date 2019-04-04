@@ -34,7 +34,7 @@ ms.locfileid: "50532796"
 現在のプロセスを中止し、エラー コードを返します。
 
 > [!NOTE]
-> テスト シナリオまたはデバッグ シナリオでは、を除き、Microsoft Store アプリまたはユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。
+> テスト シナリオまたはデバッグ シナリオでは、を除き、Microsoft Store アプリまたはユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、[UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)を参照してください。
 
 ## <a name="syntax"></a>構文
 

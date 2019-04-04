@@ -40,7 +40,7 @@ int main() {
 
 コンパイルするときに **/GX**、 **/EHc**、 **/EHsc**、または **/EHac**になり、extern C 関数を使用して、コードは到達できないため、extern Cしたがって、catch ブロックで到達可能なはないの関数はスローしないと見なされます。  この警告が無効であるため、関数はスローできる場合、使用してコンパイル **/EHa**または **/EHs**によってスローされる例外。
 
-詳細については、次を参照してください。 [/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)詳細についてはします。
+詳細については、[/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)詳細についてはを参照してください。
 
 次の例では、C4702 が生成されます。
 

@@ -181,7 +181,7 @@ class CDynamicAccessor : public CAccessorBase
 
 列情報が作成され、このクラスで管理されるバッファーに格納されます。 使用してバッファーからデータを取得[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)します。
 
-動的アクセサー クラスの使用例とについては、次を参照してください。[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)します。
+動的アクセサー クラスの使用例とについては、[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)を参照してください。
 
 ## <a name="addbindentry"></a> CDynamicAccessor::AddBindEntry
 

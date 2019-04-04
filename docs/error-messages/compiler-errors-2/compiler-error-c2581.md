@@ -17,7 +17,7 @@ ms.locfileid: "50565244"
 
 'type': 静的な ' operator =' 関数は無効です
 
-割り当て (`=`) 演算子が正しくとして宣言されて`static`します。 代入演算子にすることはできません`static`します。 詳細については、次を参照してください。[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)します。
+割り当て (`=`) 演算子が正しくとして宣言されて`static`します。 代入演算子にすることはできません`static`します。 詳細については、[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

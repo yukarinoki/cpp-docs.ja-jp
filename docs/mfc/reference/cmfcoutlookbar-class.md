@@ -274,7 +274,7 @@ virtual BOOL Create(
 [in]コントロールの ID を指定します その他のコントロール、アプリケーションで使用される Id とは異なる名前にする必要があります。
 
 *dwStyle*<br/>
-[in]目的のコントロール バーのスタイルを指定します。 使用可能な値は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
+[in]目的のコントロール バーのスタイルを指定します。 使用可能な値は、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。
 
 *dwControlBarStyle*<br/>
 [in]特殊なライブラリで定義されたスタイルを指定します。
@@ -377,7 +377,7 @@ virtual BOOL FloatTab(
 [in]Float 型に、タブの 0 から始まるインデックス。
 
 *dockMethod*<br/>
-[in]使用して、ペインをフローティングするメソッドを指定します。  詳細については、次を参照してください。 [cbasetabbedpane::floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)します。
+[in]使用して、ペインをフローティングするメソッドを指定します。  詳細については、[cbasetabbedpane::floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)を参照してください。
 
 *bHide*<br/>
 [in]フローティングする前に、ウィンドウを非表示にする場合は TRUEそれ以外の場合、FALSE です。 このメソッドの基底クラスのバージョンとは異なりこのパラメーターに既定値はありません。
@@ -463,7 +463,7 @@ virtual void OnAfterAnimation(int nPage);
 
 ### <a name="remarks"></a>Remarks
 
-アクティブなタブの設定の視覚効果は、アニメーションを有効にするかどうかによって異なります。 詳細については、次を参照してください。 [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation)します。
+アクティブなタブの設定の視覚効果は、アニメーションを有効にするかどうかによって異なります。 詳細については、[CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation)を参照してください。
 
 ##  <a name="onbeforeanimation"></a>  CMFCOutlookBar::OnBeforeAnimation
 

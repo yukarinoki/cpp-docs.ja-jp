@@ -22,7 +22,7 @@ Microsoft Foundation Class ライブラリでは、Windows API 呼び出しの�
 
 同様に、データベース クラスからも保護では多くの作業をしなくて[SQL](../../data/odbc/sql.md)、する場合は SQL を直接使用することができます。 レコード セット オブジェクトをカスタマイズするには、カスタムの SQL ステートメント (または既定のステートメントの一部を設定) を渡すことによって、レコード セットを開くとします。 使用して直接 SQL 呼び出しを行うことができます、 [ExecuteSQL](../../mfc/reference/cdatabase-class.md#executesql)クラスのメンバー関数[CDatabase](../../mfc/reference/cdatabase-class.md)します。
 
-詳細については、次を参照してください。 [ODBC: を呼び出す ODBC API 関数直接](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)と[SQL: を行う直接 SQL 呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)します。
+詳細については、[ODBC: を呼び出す ODBC API 関数直接](../../data/odbc/odbc-calling-odbc-api-functions-directly.md)と[SQL: を行う直接 SQL 呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

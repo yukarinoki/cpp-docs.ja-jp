@@ -252,7 +252,7 @@ basic_ostream オブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
-\<Ostream > ヘッダーでは、いくつかのグローバル挿入演算子も定義します。 詳細については、次を参照してください。[演算子 <<](../standard-library/ostream-operators.md#op_lt_lt)します。
+\<Ostream > ヘッダーでは、いくつかのグローバル挿入演算子も定義します。 詳細については、[演算子 <<](../standard-library/ostream-operators.md#op_lt_lt)を参照してください。
 
 最初のメンバー関数により、式形式の`ostr << endl`呼び出し[endl](../standard-library/ostream-functions.md#endl)**(ostr)**、し、返します**\*この**します。 2 番目と 3 番目の関数は、[hex](../standard-library/ios-functions.md#hex) などの他のマニピュレーターが同じように動作することを保証します。 残りの関数はすべて書式付き出力関数です。
 

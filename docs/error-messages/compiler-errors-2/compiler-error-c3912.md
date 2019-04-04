@@ -19,7 +19,7 @@ ms.locfileid: "58773399"
 
 イベントは、宣言されましたが、適切な型ではありませんでした。
 
-詳細については、次を参照してください。[イベント](../../extensions/event-cpp-component-extensions.md)します。
+詳細については、[イベント](../../extensions/event-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3912 が生成されます。
 

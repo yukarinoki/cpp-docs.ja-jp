@@ -64,7 +64,7 @@ class critical_section;
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[同期データ構造](../../../parallel/concrt/synchronization-data-structures.md)します。
+詳細については、[同期データ構造](../../../parallel/concrt/synchronization-data-structures.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

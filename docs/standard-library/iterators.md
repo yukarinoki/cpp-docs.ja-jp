@@ -84,7 +84,7 @@ for (auto num : vec)
 C++ 標準ライブラリのコンテナーとアルゴリズムで反復子がどのように使用されるかを知るには、各反復子カテゴリの約束ごとと制限事項を理解することが必要です。
 
 > [!NOTE]
-> range-for ループを使用することにより、反復子の明示的な使用を避けることができます。 詳細については、次を参照してください。[範囲ベースの for ステートメント](../cpp/range-based-for-statement-cpp.md)します。
+> range-for ループを使用することにより、反復子の明示的な使用を避けることができます。 詳細については、[範囲ベースの for ステートメント](../cpp/range-based-for-statement-cpp.md)を参照してください。
 
 Visual C には、コンテナーの境界を上書きしないことを確認するには、checked 反復子とデバッグ反復子が用意されています。 詳細については、「[チェックを行う反復子](../standard-library/checked-iterators.md)」および「[デバッグ反復子のサポート](../standard-library/debug-iterator-support.md)」をご覧ください。
 

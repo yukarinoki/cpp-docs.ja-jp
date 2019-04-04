@@ -76,7 +76,7 @@ ms.locfileid: "57291389"
 
    1. 使用[CCommandManager::GetCmdImage](reference/internal-classes.md)で`ID_EDIT_FIND`イメージ インデックスを取得します。
 
-   1. 使用可能なコンボ ボックス スタイルの一覧は、次を参照してください。[コンボ ボックス スタイル](../mfc/reference/styles-used-by-mfc.md#combo-box-styles)します。
+   1. 使用可能なコンボ ボックス スタイルの一覧は、[コンボ ボックス スタイル](../mfc/reference/styles-used-by-mfc.md#combo-box-styles)を参照してください。
 
 1. 
   `CFindComboButton` クラスで、`CMFCToolbarComboBoxButton::CreateCombo` メソッドをオーバーライドします。 ここで、`CFindComboButton` オブジェクトを作成し、オブジェクトへのポインターを返す必要があります。

@@ -17,7 +17,7 @@ ms.locfileid: "58773581"
 
 'override_function': 基底クラス メソッド 'base_class_function' をオーバーライドすることはできません
 
-正しくない形式のオーバーライドが検出されました。 たとえば、基底クラスの関数が`virtual`します。 詳細については、次を参照してください。[オーバーライド](../../extensions/override-cpp-component-extensions.md)します。
+正しくない形式のオーバーライドが検出されました。 たとえば、基底クラスの関数が`virtual`します。 詳細については、[オーバーライド](../../extensions/override-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

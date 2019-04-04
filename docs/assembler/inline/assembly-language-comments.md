@@ -24,7 +24,7 @@ ms.locfileid: "50578643"
 __asm mov ax, offset buff ; Load address of buff
 ```
 
-C マクロを 1 論理行に展開するためは、マクロのアセンブリ言語のコメントを使用しないでください。 (を参照してください[_ _asm ブロックの C マクロとして定義](../../assembler/inline/defining-asm-blocks-as-c-macros.md))。`__asm`ブロックすることもできます C スタイルのコメントを含めることが。 詳細については、次を参照してください。[を使用して C または C++ _ _asm ブロックで](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)します。
+C マクロを 1 論理行に展開するためは、マクロのアセンブリ言語のコメントを使用しないでください。 (を参照してください[_ _asm ブロックの C マクロとして定義](../../assembler/inline/defining-asm-blocks-as-c-macros.md))。`__asm`ブロックすることもできます C スタイルのコメントを含めることが。 詳細については、[を使用して C または C++ _ _asm ブロックで](../../assembler/inline/using-c-or-cpp-in-asm-blocks.md)を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 

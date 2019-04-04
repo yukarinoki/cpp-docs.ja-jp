@@ -125,7 +125,7 @@ BOOL AttachClipboard();
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
->  この関数を呼び出すことでは、このデータ オブジェクトが解放されるまでに、クリップボードをロックします。 データ オブジェクトのデストラクターで解放、`COleDataObject`します。 詳細については、次を参照してください。 [OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipboard)と[CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) Win32 ドキュメントにします。
+>  この関数を呼び出すことでは、このデータ オブジェクトが解放されるまでに、クリップボードをロックします。 データ オブジェクトのデストラクターで解放、`COleDataObject`します。 詳細については、[OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipboard)と[CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) Win32 ドキュメントにを参照してください。
 
 ##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats
 

@@ -20,7 +20,7 @@ C ランタイム ライブラリと C++ 標準ライブラリの両方、プロ
 
 ## <a name="remarks"></a>Remarks
 
-使用してマルチ スレッド アプリケーションを作成すると、C ランタイム ライブラリ、`_beginthread`と`_beginthreadex`関数。 このトピックでは、これらの関数を使用して作成されたマルチ スレッド アプリケーションのみを説明します。 詳細については、次を参照してください。 [_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)します。
+使用してマルチ スレッド アプリケーションを作成すると、C ランタイム ライブラリ、`_beginthread`と`_beginthreadex`関数。 このトピックでは、これらの関数を使用して作成されたマルチ スレッド アプリケーションのみを説明します。 詳細については、[_beginthread、_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md)を参照してください。
 
 C ランタイム ライブラリを使用してロケールを変更するには、使用、 [setlocale](../preprocessor/setlocale.md)関数。 以前のバージョンの Visual C では、この関数は常に、アプリケーション全体のロケールを変更していました。 これは、スレッドごとに、ロケールを設定するようになりました。 これを使用して、 [_configthreadlocale](../c-runtime-library/reference/configthreadlocale.md)関数。 指定する[setlocale](../preprocessor/setlocale.md)のみ呼び出し、現在のスレッドのロケールを変更する必要があります`_configthreadlocale(_ENABLE_PER_THREAD_LOCALE)`そのスレッドでします。 逆に、呼び出す`_configthreadlocale(_DISABLE_PER_THREAD_LOCALE)`と、そのスレッドでは、グローバル ロケールを使用してすべての呼び出しに[setlocale](../preprocessor/setlocale.md)ことで、スレッドはスレッドごとのロケールを明示的に有効にしていないすべてのスレッドのロケールを変更します。
 

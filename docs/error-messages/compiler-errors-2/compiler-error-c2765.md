@@ -17,7 +17,7 @@ ms.locfileid: "50491638"
 
 'function': 関数テンプレートの明示的な特殊化は、既定の引数を持つことはできません
 
-既定の引数は関数テンプレートの明示的な特殊化では許可されません。 詳細については、次を参照してください。[関数テンプレートの明示的な特殊化](../../cpp/explicit-specialization-of-function-templates.md)します。
+既定の引数は関数テンプレートの明示的な特殊化では許可されません。 詳細については、[関数テンプレートの明示的な特殊化](../../cpp/explicit-specialization-of-function-templates.md)を参照してください。
 
 次の例では、C2765 が生成されます。
 

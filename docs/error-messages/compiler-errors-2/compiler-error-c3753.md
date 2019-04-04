@@ -19,7 +19,7 @@ ms.locfileid: "58771104"
 
 ジェネリック パラメーター リストは、マネージ クラス、構造体、または関数でのみ表示できます。
 
-詳細については、次を参照してください。[ジェネリック](../../extensions/generics-cpp-component-extensions.md)と[プロパティ](../../extensions/property-cpp-component-extensions.md)します。
+詳細については、[ジェネリック](../../extensions/generics-cpp-component-extensions.md)と[プロパティ](../../extensions/property-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

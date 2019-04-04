@@ -17,6 +17,6 @@ ms.locfileid: "50602177"
 
 アクセシビリティが 'protected private' であるデストラクターは、'sealed' として宣言されたクラスのメンバーになることはできません
 
-`sealed` として宣言された Windows ランタイム クラスは、protected private デストラクターを持つことはできません。 sealed 型では、パブリック仮想デストラクターとプライベート非仮想デストラクターだけが許可されています。 詳細については、次を参照してください。 [Ref クラスと構造体](../../cppcx/ref-classes-and-structs-c-cx.md)します。
+`sealed` として宣言された Windows ランタイム クラスは、protected private デストラクターを持つことはできません。 sealed 型では、パブリック仮想デストラクターとプライベート非仮想デストラクターだけが許可されています。 詳細については、[Ref クラスと構造体](../../cppcx/ref-classes-and-structs-c-cx.md)を参照してください。
 
 このエラーを解決するには、デストラクターのアクセシビリティを変更します。

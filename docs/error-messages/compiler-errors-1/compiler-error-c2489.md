@@ -17,7 +17,7 @@ ms.locfileid: "50652765"
 
 'identifier': 'naked' 関数では関数スコープで許可されません auto またはレジスタ変数の初期化
 
-詳細については、次を参照してください。 [naked](../../cpp/naked-cpp.md)します。
+詳細については、[naked](../../cpp/naked-cpp.md)を参照してください。
 
 次の例では、C2489 が生成されます。
 

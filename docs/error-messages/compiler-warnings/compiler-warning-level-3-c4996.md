@@ -45,7 +45,7 @@ C4996 は、コンパイラは、関数または変数としてマークされ�
 
 Visual Studio IDE でプロジェクト全体の警告をオフにするには。
 
-- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、次を参照してください。[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)します。
+- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)を参照してください。
 - 選択、**構成プロパティ**、 **C/C++**、**詳細**ページ。
 - 編集、**特定の警告を無効にする**プロパティを追加する`4996`します。 選択**OK**変更を適用します。
 
@@ -53,7 +53,7 @@ Visual Studio IDE でプロジェクト全体の警告をオフにするには�
 
 Visual Studio では、プリプロセッサ マクロを定義します。
 
-- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、次を参照してください。[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)します。
+- 開く、**プロパティ ページ**プロジェクトのダイアログ。 プロパティ ページ ダイアログを使用する方法については、[プロパティ ページ](../../build/reference/property-pages-visual-cpp.md)を参照してください。
 - 展開**構成プロパティ > [C/C++] > プリプロセッサ**します。
 - **プリプロセッサの定義**プロパティ、マクロ名を追加します。 **[OK]** を選んで保存し、プロジェクトをリビルドします。
 
@@ -242,7 +242,7 @@ C4996 は、セキュリティ上の理由から非推奨とされた MFC また
 
 この問題を解決するには、強くお勧めの更新された関数を代わりに使用するコードを変更します。
 
-これらの警告を抑制する方法については、次を参照してください。 [_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings)します。
+これらの警告を抑制する方法については、[_AFX_SECURE_NO_WARNINGS](../../mfc/reference/diagnostic-services.md#afx_secure_no_warnings)を参照してください。
 
 ### <a name="obsolete-crt-functions-and-variables"></a>廃止された CRT 関数と変数
 

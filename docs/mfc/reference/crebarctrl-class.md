@@ -203,7 +203,7 @@ Rebar コントロールでは、指定した背景ビットマップを子ウ�
 
 - さまざまな標準のウィンドウ スタイルだけでなく、コントロールのスタイル。 これらのスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)Windows SDK に含まれています。
 
-詳細については、次を参照してください。[を使用して CReBarCtrl](../../mfc/using-crebarctrl.md)します。
+詳細については、[を使用して CReBarCtrl](../../mfc/using-crebarctrl.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

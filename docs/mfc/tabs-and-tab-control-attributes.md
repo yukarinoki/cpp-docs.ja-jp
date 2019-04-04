@@ -25,7 +25,7 @@ ms.locfileid: "57304796"
 
 [!code-cpp[NVC_MFCControlLadenDialog#32](../mfc/codesnippet/cpp/tabs-and-tab-control-attributes_1.cpp)]
 
-タブの属性の詳細については、次を参照してください。[タブおよびタブ属性](/windows/desktop/Controls/tab-controls)Windows SDK に含まれています。 タブ コントロールにタブを追加する方法の詳細については、次を参照してください。[タブ コントロールを追加するタブ](../mfc/adding-tabs-to-a-tab-control.md)このトピックで後述します。
+タブの属性の詳細については、次を参照してください。[タブおよびタブ属性](/windows/desktop/Controls/tab-controls)Windows SDK に含まれています。 タブ コントロールにタブを追加する方法の詳細については、[タブ コントロールを追加するタブ](../mfc/adding-tabs-to-a-tab-control.md)このトピックで後述を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

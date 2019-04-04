@@ -60,7 +60,7 @@ protected:
 
 テンプレート クラスは、二項関数オブジェクトのコピーを格納する*binary_fn*で`op`のコピーと*左*で`value`します。 そのメンバー関数`operator()`返すよう`op( value, right )`します。
 
-場合*binary_fn*型のオブジェクトは、`Operation`と`c`が定数の場合、`bind1st( binary_fn, c )`より便利な相当するは`binder1st<Operation>( binary_fn, c )`します。 詳細については、次を参照してください。 [bind1st](../standard-library/functional-functions.md#bind1st)します。
+場合*binary_fn*型のオブジェクトは、`Operation`と`c`が定数の場合、`bind1st( binary_fn, c )`より便利な相当するは`binder1st<Operation>( binary_fn, c )`します。 詳細については、[bind1st](../standard-library/functional-functions.md#bind1st)を参照してください。
 
 ## <a name="example"></a>例
 

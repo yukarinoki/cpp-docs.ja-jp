@@ -27,7 +27,7 @@ ms.locfileid: "50476506"
 
 既定では、 **fp_contract**は**で**します。 これは、ように可能であれば、浮動小数点の省略形の手順を使用してコンパイラに指示します。 設定**fp_contract**に**オフ**個々 の浮動小数点命令を維持します。
 
-浮動小数点の動作の詳細については、次を参照してください。 [/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)します。
+浮動小数点の動作の詳細については、[/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)を参照してください。
 
 その他の浮動小数点プラグマには以下があります。
 

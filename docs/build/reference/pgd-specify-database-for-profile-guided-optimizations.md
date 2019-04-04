@@ -33,11 +33,11 @@ ms.locfileid: "57812201"
 
 非推奨を使用する場合 **/LTCG:PGOPTIMIZE**オプションを使用して、 **/PGD**オプションを使用して、最適化されたイメージを作成する .pgd ファイルの名前を指定します。 *Filename*引数に一致する必要があります、 *filename*に対して指定された **/LTCG:PGINSTRUMENT**。
 
-詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。
+詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**構成プロパティ** > **リンカー** > **最適化**プロパティ ページ。
 

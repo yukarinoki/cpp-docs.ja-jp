@@ -140,7 +140,7 @@ Sql コードは、ODBC によって定義されます。 AFX プレフィック
 
 フレームワークは、エラー文字列を解釈し、そのコンポーネントには、`m_strStateNativeOrigin`場合`m_strStateNativeOrigin`情報が含まれています、1 つ以上のエラー、エラーが改行で区切られました。 フレームワークは、英数字のエラー テキストを`m_strError`します。
 
-この文字列を構成するために使用するコードの詳細については、次を参照してください。、 [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85))で機能、 *ODBC プログラマ リファレンス*します。
+この文字列を構成するために使用するコードの詳細については、、 [SQLError](/previous-versions/windows/desktop/ms716312(v=vs.85))で機能、 *ODBC プログラマ リファレンス*を参照してください。
 
 ### <a name="example"></a>例
 

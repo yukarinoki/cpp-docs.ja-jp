@@ -46,7 +46,7 @@ Platform.winmd、Windows.Foundation.winmd、および他の既定の Windows メ
 
 Incremental linker を使用して、.obj ファイルに含まれる Windows メタデータをサポートしていないため、 **/ZW**オプション、 [/Gm (簡易リビルドの有効)](gm-enable-minimal-rebuild.md)オプションと互換性がない **/ZW**.
 
-詳細については、次を参照してください。 [Visual c 言語リファレンス](../../cppcx/visual-c-language-reference-c-cx.md)します。
+詳細については、[Visual c 言語リファレンス](../../cppcx/visual-c-language-reference-c-cx.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

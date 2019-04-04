@@ -23,4 +23,4 @@ C1211 は、コンパイラが現在のリリースであり、共通言語ラ�
 
 C1211 を解決するには、使用しているコンパイラに同梱されている共通言語ランタイムをインストールします。
 
-詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
+詳細については、[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)を参照してください。

@@ -57,7 +57,7 @@ complex(
 
 テンプレート クラスの詳細については`complex`、そのメンバーを参照してくださいと[complex クラス](../standard-library/complex-class.md)します。
 
-**Microsoft 固有の仕様**: **long double**と**二重**型は、同じの表現が、別の型。 詳細については、次を参照してください。[基本的な型](../cpp/fundamental-types-cpp.md)します。
+**Microsoft 固有の仕様**: **long double**と**二重**型は、同じの表現が、別の型。 詳細については、[基本的な型](../cpp/fundamental-types-cpp.md)を参照してください。
 
 ## <a name="example"></a>例
 

@@ -96,7 +96,7 @@ virtual BOOL Create(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。|
+|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)を参照してください。|
 |*rect*|[in]参照を[RECT](/previous-versions/dd162897\(v=vs.85\))コントロールのサイズと位置を含む構造体。|
 |*pParentWnd*|[in]Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|
 |*nID*|[in]コントロールの ID。|
@@ -151,7 +151,7 @@ afx_msg void OnDropDown(
 
 BCN_DROPDOWN 通知が送信され、ユーザーは、分割ボタン コントロールにドロップダウン矢印をクリックすると、メッセージを`OnDropDown`メソッド ハンドル。 ただし、`CSplitButton`オブジェクトは、分割ボタン コントロールを含むコントロールに BCN_DROPDOWN 通知を転送しません。 その結果、格納しているコントロールは、通知への応答でカスタム アクションをサポートできません。
 
-格納しているコントロールをサポートするカスタム アクションを実装するには、使用、 [CButton](../../mfc/reference/cbutton-class.md)の代わりに BS_SPLITBUTTON スタイルを持つオブジェクトを`CSplitButton`オブジェクト。 BCN_DROPDOWN 通知のハンドラーを実装し、`CButton`オブジェクト。 詳細については、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。
+格納しているコントロールをサポートするカスタム アクションを実装するには、使用、 [CButton](../../mfc/reference/cbutton-class.md)の代わりに BS_SPLITBUTTON スタイルを持つオブジェクトを`CSplitButton`オブジェクト。 BCN_DROPDOWN 通知のハンドラーを実装し、`CButton`オブジェクト。 詳細については、[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)を参照してください。
 
 使用して、分割ボタン コントロール自体でサポートするカスタム アクションを実装する[メッセージ リフレクション](../../mfc/tn062-message-reflection-for-windows-controls.md)します。 クラスを派生、`CSplitButton`クラスし、名前を付け、CMySplitButton など。 BCN_DROPDOWN 通知を処理するアプリケーションに、次のメッセージ マップを追加します。
 

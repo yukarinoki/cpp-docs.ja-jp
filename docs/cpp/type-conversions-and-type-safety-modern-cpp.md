@@ -20,7 +20,7 @@ C ++.のプログラムを作成するときは、そのプログラムがタイ
 
 ## <a name="implicit-type-conversions"></a>暗黙的な型変換
 
-コンパイラが組み込みを使用して、式には、別の組み込み型のオペランドが含まれているし、明示的なキャストが存在しない、*標準変換*型が一致するように、オペランドの 1 つを変換します。 コンパイラはいずれかが成功するまで、適切に定義された一連の変換を試みます。 選択した変換が上位変換である場合は、コンパイラは警告を発行しません。 変換が縮小変換である場合は、コンパイラは、データ損失の可能性に関する警告を発行します。 実際のデータ損失が発生するかどうかは、関与する実際の値に依存しますが、この警告をエラーとして扱うことをお勧めします。 ユーザー定義型が関与している場合は、コンパイラは、ユーザーがクラス定義の中で指定した変換を使用しようとします。 受け入れ可能な変換が見つからない場合は、コンパイラはエラーを発行し、プログラムをコンパイルしません。 標準変換を制御するルールの詳細については、次を参照してください。[標準変換](../cpp/standard-conversions.md)します。 ユーザー定義の変換の詳細については、次を参照してください。[ユーザー定義の変換 (C +/cli CLI)](../dotnet/user-defined-conversions-cpp-cli.md)します。
+コンパイラが組み込みを使用して、式には、別の組み込み型のオペランドが含まれているし、明示的なキャストが存在しない、*標準変換*型が一致するように、オペランドの 1 つを変換します。 コンパイラはいずれかが成功するまで、適切に定義された一連の変換を試みます。 選択した変換が上位変換である場合は、コンパイラは警告を発行しません。 変換が縮小変換である場合は、コンパイラは、データ損失の可能性に関する警告を発行します。 実際のデータ損失が発生するかどうかは、関与する実際の値に依存しますが、この警告をエラーとして扱うことをお勧めします。 ユーザー定義型が関与している場合は、コンパイラは、ユーザーがクラス定義の中で指定した変換を使用しようとします。 受け入れ可能な変換が見つからない場合は、コンパイラはエラーを発行し、プログラムをコンパイルしません。 標準変換を制御するルールの詳細については、[標準変換](../cpp/standard-conversions.md)を参照してください。 ユーザー定義の変換の詳細については、[ユーザー定義の変換 (C +/cli CLI)](../dotnet/user-defined-conversions-cpp-cli.md)を参照してください。
 
 ### <a name="widening-conversions-promotion"></a>拡大変換 (上位変換)
 
@@ -117,7 +117,7 @@ int(x); // old-style cast, functional syntax
     Derived* d2 = static_cast<Derived*>(b);
     ```
 
-   詳細については、次を参照してください。 [static_cast](../cpp/static-cast-operator.md)します。
+   詳細については、[static_cast](../cpp/static-cast-operator.md)を参照してください。
 
 - **dynamic_cast**のポインターから派生する基本のポインターのキャストの安全なランタイム チェックします。 A **dynamic_cast**よりも安全です、 **static_cast**ダウン キャストが、実行時のチェックで一部のオーバーヘッドが発生します。
 
@@ -142,7 +142,7 @@ int(x); // old-style cast, functional syntax
     //Output: d3 is null;
     ```
 
-   詳細については、次を参照してください。 [dynamic_cast](../cpp/dynamic-cast-operator.md)します。
+   詳細については、[dynamic_cast](../cpp/dynamic-cast-operator.md)を参照してください。
 
 - **const_cast**にキャストして、 **const**の変数、または非変換性 -**const**変数を**const**します。 キャストして**const**-させずに、この演算子を使用して、単にエラーを起こしやすい C スタイルの点を除いて、キャストが使用されている**const キャスト**が誤ってキャストを実行する可能性が低下します。 キャストする必要がある場合があります、 **const**-させずに、たとえば、渡す変数の**const**受け取る以外の関数を変数**const**パラメーター。 その方法を次の例に示します。
 
@@ -155,7 +155,7 @@ int(x); // old-style cast, functional syntax
     }
     ```
 
-   詳細については、次を参照してください。 [const_cast](../cpp/const-cast-operator.md)します。
+   詳細については、[const_cast](../cpp/const-cast-operator.md)を参照してください。
 
 - **reinterpret_cast**間のキャスト関連のない型などの**ポインター**に**int**します。
 
@@ -174,7 +174,7 @@ int(x); // old-style cast, functional syntax
                                        // However, it is not 64-bit safe.
     ```
 
-   詳細については、次を参照してください。 [reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md)します。
+   詳細については、[reinterpret_cast Operator](../cpp/reinterpret-cast-operator.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

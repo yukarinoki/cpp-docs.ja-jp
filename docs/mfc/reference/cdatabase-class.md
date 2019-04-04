@@ -144,7 +144,7 @@ BOOL BeginTrans();
 トランザクションでは、1 つまたは複数の呼び出しの`AddNew`、 `Edit`、 `Delete`、および`Update`のメンバー関数は、`CRecordset`オブジェクト。 トランザクションを開始する前に、`CDatabase`オブジェクトする必要があります既にに接続されているデータ ソースを呼び出してその`OpenEx`または`Open`メンバー関数。 トランザクションを終了するには、呼び出し[CommitTrans](#committrans)データ ソースへのすべての変更を受け入れる (およびそれらを実行) を呼び出したり[ロールバック](#rollback)全体のトランザクションを中止します。 呼び出す`BeginTrans`した後、トランザクションに関連するすべてのレコード セットを開くし、として、実際の更新操作。
 
 > [!CAUTION]
->  ODBC ドライバーによって呼び出す前にレコード セットを開く`BeginTrans`を呼び出すときに問題が発生する可能性があります`Rollback`します。 使用する特定のドライバーを確認する必要があります。 たとえば、Microsoft ODBC デスクトップ Driver パック 3.0 に含まれる Microsoft Access ドライバーを使用する場合、開いているカーソルのある任意のデータベースのトランザクションを開始する必要がありますいない Jet データベース エンジンの要件の考慮する必要があります。 MFC データベース クラスで、開いているカーソルは開いていることを意味`CRecordset`オブジェクト。 詳細については、次を参照してください。[テクニカル ノート 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)します。
+>  ODBC ドライバーによって呼び出す前にレコード セットを開く`BeginTrans`を呼び出すときに問題が発生する可能性があります`Rollback`します。 使用する特定のドライバーを確認する必要があります。 たとえば、Microsoft ODBC デスクトップ Driver パック 3.0 に含まれる Microsoft Access ドライバーを使用する場合、開いているカーソルのある任意のデータベースのトランザクションを開始する必要がありますいない Jet データベース エンジンの要件の考慮する必要があります。 MFC データベース クラスで、開いているカーソルは開いていることを意味`CRecordset`オブジェクト。 詳細については、[テクニカル ノート 68](../../mfc/tn068-performing-transactions-with-the-microsoft-access-7-odbc-driver.md)を参照してください。
 
 `BeginTrans` 要求された同時実行とデータ ソースの機能に応じて、サーバー上のデータ レコードをロックも可能性があります。 データのロックについては、記事を参照してください。[レコード セット。レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)します。
 
@@ -192,7 +192,7 @@ void Cancel();
 
 ### <a name="remarks"></a>Remarks
 
-MFC ODBC クラスは、非同期処理を不要になった使用に注意してください。非同期操作を実行する ODBC API 関数を直接に呼び出す必要があります[SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function)します。 詳細については、次を参照してください。[非同期実行](/sql/odbc/reference/develop-app/asynchronous-execution)します。
+MFC ODBC クラスは、非同期処理を不要になった使用に注意してください。非同期操作を実行する ODBC API 関数を直接に呼び出す必要があります[SQLSetConnectOption](/sql/odbc/reference/syntax/sqlsetconnectoption-function)します。 詳細については、[非同期実行](/sql/odbc/reference/develop-app/asynchronous-execution)を参照してください。
 
 ##  <a name="cantransact"></a>  CDatabase::CanTransact
 

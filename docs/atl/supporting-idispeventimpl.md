@@ -46,7 +46,7 @@ ms.locfileid: "57812331"
 
 ## <a name="declaring-the-idispeventimpl-interfaces"></a>IDispEventImpl インターフェイスの宣言
 
-ディスパッチ インターフェイスごとのタイプ ライブラリをインポートしたら、これで個別に宣言する必要があります。`IDispEventImpl`各外部ディスパッチ インターフェイスのインターフェイス。 追加することで、クラスの宣言を変更、`IDispEventImpl`インターフェイス外部オブジェクトごとに宣言します。 パラメーターの詳細については、次を参照してください。 [IDispEventImpl](../atl/reference/idispeventimpl-class.md)します。
+ディスパッチ インターフェイスごとのタイプ ライブラリをインポートしたら、これで個別に宣言する必要があります。`IDispEventImpl`各外部ディスパッチ インターフェイスのインターフェイス。 追加することで、クラスの宣言を変更、`IDispEventImpl`インターフェイス外部オブジェクトごとに宣言します。 パラメーターの詳細については、[IDispEventImpl](../atl/reference/idispeventimpl-class.md)を参照してください。
 
 次のコードの 2 つのコネクション ポイント シンクを宣言する、`DCalendarEvents`クラスによって実装される COM オブジェクトのインターフェイス、 `CMyCompositCtrl2`:
 

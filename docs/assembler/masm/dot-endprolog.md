@@ -25,7 +25,7 @@ ms.locfileid: "50489883"
 
 プロローグの宣言のいずれかの間の領域の外部で使用するとエラーが[PROC](../../assembler/masm/proc.md)フレームとします。ENDPROLOG します。
 
-詳細については、次を参照してください。 [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
+詳細については、[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

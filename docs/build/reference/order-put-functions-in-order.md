@@ -38,7 +38,7 @@ COMDAT 関数のリンクの順序を指定するテキスト ファイルです
 
 オブジェクト ファイルにソース コードをコンパイルするときと呼ばれる独自のセクションの各関数にコンパイラに通知することができます、 *COMDAT*を使用して、 [/Gy (関数レベルのリンクを有効にする)](gy-enable-function-level-linking.md)コンパイラオプション。 **/Order**リンカー オプション、リンカーは、指定した順序で実行可能イメージに Comdat を配置します。
 
-COMDAT の順序を指定するには、作成、*応答ファイル*、リンカーによって配置される順序で行ごとに 1 つには、名前で各 COMDAT を一覧表示するテキスト ファイル。 としてこのファイルの名前を渡す、 *filename*のパラメーター、 **/order**オプション。 C++ 関数の場合、COMDAT の名前は、関数名の装飾形式です。 C# 関数では、非装飾名を使用して、 `main`、として宣言されている C++ 関数と`extern "C"`します。 関数名と装飾名は大文字小文字を区別します。 装飾名の詳細については、次を参照してください。[装飾名](decorated-names.md)します。
+COMDAT の順序を指定するには、作成、*応答ファイル*、リンカーによって配置される順序で行ごとに 1 つには、名前で各 COMDAT を一覧表示するテキスト ファイル。 としてこのファイルの名前を渡す、 *filename*のパラメーター、 **/order**オプション。 C++ 関数の場合、COMDAT の名前は、関数名の装飾形式です。 C# 関数では、非装飾名を使用して、 `main`、として宣言されている C++ 関数と`extern "C"`します。 関数名と装飾名は大文字小文字を区別します。 装飾名の詳細については、[装飾名](decorated-names.md)を参照してください。
 
 Comdat の装飾名を検索するには、使用、 [DUMPBIN](dumpbin-reference.md)ツールの[/symbols](symbols.md)オブジェクト ファイルのオプション。 リンカーは、アンダー スコアを自動的に付加 (**\_**) 関数に疑問符 () で始まる名前を応答で名ファイル (**でしょうか**) またはアット マーク ( **\@。**). たとえば、ソース ファイルでは、example.cpp、関数が含まれます`int cpp_func(int)`、`extern "C" int c_func(int)`と`int main(void)`のコマンドは、`DUMPBIN /SYMBOLS example.obj`これらの装飾名が表示されます。
 
@@ -61,7 +61,7 @@ Comdat の装飾名を検索するには、使用、 [DUMPBIN](dumpbin-reference
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**構成プロパティ** > **リンカー** > **最適化**プロパティ ページ。
 

@@ -27,7 +27,7 @@ ms.locfileid: "57298894"
 
 [!code-cpp[NVC_MFCFiles#3](../atl-mfc-shared/reference/codesnippet/cpp/accessing-file-status_1.cpp)]
 
-関連情報については、次を参照してください。[シリアル化](../mfc/serialization-in-mfc.md)します。
+関連情報については、[シリアル化](../mfc/serialization-in-mfc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

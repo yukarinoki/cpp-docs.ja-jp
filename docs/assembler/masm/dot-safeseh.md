@@ -27,7 +27,7 @@ ms.locfileid: "51328358"
 
 *識別子*の ID をローカルで定義されている必要があります[PROC](../../assembler/masm/proc.md)または[EXTRN](../../assembler/masm/extrn.md)プロシージャ A[ラベル](../../assembler/masm/label-masm.md)は許可されていません。 します。SAFESEH ディレクティブに必要な[/safeseh](../../assembler/masm/ml-and-ml64-command-line-reference.md) ml.exe コマンド ライン オプション。
 
-構造化例外ハンドラーの詳細については、次を参照してください。 [/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)します。
+構造化例外ハンドラーの詳細については、[/SAFESEH](../../build/reference/safeseh-image-has-safe-exception-handlers.md)を参照してください。
 
 など安全な例外ハンドラーを登録する (次のように) 新しい MASM ファイルを作成、/safeseh でアセンブリおよびリンク オブジェクトに追加します。
 

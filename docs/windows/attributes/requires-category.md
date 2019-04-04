@@ -31,7 +31,7 @@ ms.locfileid: "50429845"
 
 ## <a name="remarks"></a>Remarks
 
-**Requires_category** C++ 属性がターゲット クラスに必須コンポーネントのカテゴリを指定します。 詳細については、次を参照してください。[要求する](../../atl/reference/category-macros.md#required_category)します。
+**Requires_category** C++ 属性がターゲット クラスに必須コンポーネントのカテゴリを指定します。 詳細については、[要求する](../../atl/reference/category-macros.md#required_category)を参照してください。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。
 

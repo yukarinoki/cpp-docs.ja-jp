@@ -28,7 +28,7 @@ C++ プロジェクトを作成するには選択して**ファイル&#124;新�
 
    ![プロジェクト テンプレート](../overview/media/vs2017-new-project.png "Visual Studio 2017 の [新しいプロジェクト] ダイアログ")
 
-Visual Studio に含まれているすべての既定プロジェクト テンプレートの詳細については、次を参照してください。 [Visual Studio で C++ プロジェクト テンプレート](reference/visual-cpp-project-types.md)します。 独自のプロジェクト テンプレートを作成することができます。 詳細については、「[方法 :プロジェクト テンプレートを作成](/visualstudio/ide/how-to-create-project-templates)です。
+Visual Studio に含まれているすべての既定プロジェクト テンプレートの詳細については、[Visual Studio で C++ プロジェクト テンプレート](reference/visual-cpp-project-types.md)を参照してください。 独自のプロジェクト テンプレートを作成することができます。 詳細については、「[方法 :プロジェクト テンプレートを作成](/visualstudio/ide/how-to-create-project-templates)です。
 
 表示されますが、プロジェクトを作成した後、[ソリューション エクスプ ローラー](/visualstudio/ide/solutions-and-projects-in-visual-studio)ウィンドウ。
 
@@ -46,7 +46,7 @@ Visual Studio に含まれているすべての既定プロジェクト テン�
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>コンパイラ オプションとその他のビルド プロパティを設定します。
 
-プロジェクトを右クリックし、プロジェクトのビルド設定を構成する**ソリューション エクスプ ローラー**選択**プロパティ**します。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)します。
+プロジェクトを右クリックし、プロジェクトのビルド設定を構成する**ソリューション エクスプ ローラー**選択**プロパティ**します。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)を参照してください。
 
 ## <a name="compile-and-run"></a>コンパイルし、実行
 

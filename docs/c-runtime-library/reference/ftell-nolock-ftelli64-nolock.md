@@ -58,7 +58,7 @@ __int64 _ftelli64_nolock(
 
 ## <a name="return-value"></a>戻り値
 
-同じ**ftell**と **_ftelli64**します。 詳細については、次を参照してください。 [ftell、_ftelli64](ftell-ftelli64.md)します。
+同じ**ftell**と **_ftelli64**します。 詳細については、[ftell、_ftelli64](ftell-ftelli64.md)を参照してください。
 
 ## <a name="remarks"></a>Remarks
 

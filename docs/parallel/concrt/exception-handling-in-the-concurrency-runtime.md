@@ -51,7 +51,7 @@ ms.locfileid: "57272634"
 
 ##  <a name="tasks"></a> タスクおよび継続
 
-このセクションでは、によってスローされる例外をランタイムが処理する方法について説明します[concurrency::task](../../parallel/concrt/reference/task-class.md)オブジェクトおよびその継続します。 タスクおよび継続モデルの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+このセクションでは、によってスローされる例外をランタイムが処理する方法について説明します[concurrency::task](../../parallel/concrt/reference/task-class.md)オブジェクトおよびその継続します。 タスクおよび継続モデルの詳細については、[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
 
 渡す処理関数の本体で例外をスローするときに、`task`オブジェクト、ランタイムはその例外を保存し、呼び出すコンテキストにマーシャ リング[::task_canceled](reference/task-class.md#get)または[同時実行。task::wait](reference/task-class.md#wait)します。 ドキュメント[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)について説明します値ベースの継続が要約すると、値ベースの継続とタスク ベースの型のパラメーターを受け取る`T`とタスク ベースの継続は、型のパラメーターを受け取る`task<T>`. スローするタスクに 1 つ以上の値ベースの継続がある場合、それらの継続を実行するスケジュールは設定されません。 この動作を次の例に示します。
 
@@ -72,7 +72,7 @@ ms.locfileid: "57272634"
 >  使用することができます、 [::task_completion_event::set_exception](../../parallel/concrt/reference/task-completion-event-class.md)タスクの完了イベントと例外を関連付けるメソッド。 ドキュメント[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)について説明します、 [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)クラスがさらに詳しく説明します。
 
 [concurrency::task_canceled](../../parallel/concrt/reference/task-canceled-class.md)に関連する重要なランタイム例外の種類は、`task`します。 
-  `task_canceled` が呼び出され、そのタスクが取り消された場合、ランライムは `task::get` をスローします (逆に、`task::wait`返します[task_status](reference/concurrency-namespace-enums.md#task_group_status)スローしません)。タスク ベースの継続から、この例外をキャッチして処理できます。または、`task::get` を呼び出すと、この例外をキャッチして処理できます。 タスクのキャンセルの詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
+  `task_canceled` が呼び出され、そのタスクが取り消された場合、ランライムは `task::get` をスローします (逆に、`task::wait`返します[task_status](reference/concurrency-namespace-enums.md#task_group_status)スローしません)。タスク ベースの継続から、この例外をキャッチして処理できます。または、`task::get` を呼び出すと、この例外をキャッチして処理できます。 タスクのキャンセルの詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
 
 > [!CAUTION]
 >  コードから `task_canceled` をスローしないでください。 呼び出す[concurrency::cancel_current_task](reference/concurrency-namespace-functions.md#cancel_current_task)代わりにします。
@@ -90,7 +90,7 @@ ms.locfileid: "57272634"
 > [!CAUTION]
 >  例外が依存タスクに及ぼす影響を十分に理解しておいてください。 例外処理タスクまたは並列アルゴリズムを使用する方法について推奨されるプラクティスについては、次を参照してください、[理解する方法のキャンセル機能と例外は、オブジェクトの破棄を影響を与える処理](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)、並列でのベスト プラクティス」セクション。パターン ライブラリのトピックです。
 
-タスク グループの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。 並列アルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+タスク グループの詳細については、[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。 並列アルゴリズムの詳細については、[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)を参照してください。
 
 渡す処理関数の本体で例外をスローするときに、 [concurrency::task_group](reference/task-group-class.md)または[concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)オブジェクト、ランタイムはその例外を保存し、マーシャ リング呼び出すコンテキストに[::task_group::wait](reference/task-group-class.md#wait)、 [concurrency::structured_task_group::wait](reference/structured-task-group-class.md#wait)、 [concurrency::task_group::run_and_wait](reference/task-group-class.md#run_and_wait)、または[::structured_task_group::run_and_wait](reference/structured-task-group-class.md#run_and_wait)します。 また、ランタイムは、タスク グループ内のすべてのアクティブ タスク (子タスク グループ内のタスクも含む) を中止すると共に、開始されていないすべてのタスクを破棄します。
 
@@ -148,13 +148,13 @@ The operation timed out.
 
 ##  <a name="cancellation"></a> キャンセル
 
-すべての例外がエラーの存在を示すわけではありません。 たとえば、検索アルゴリズムは結果を検出したときに、例外処理を使用して、関連付けられているタスクを中止することがあります。 コードで取り消しの機構を使用する方法の詳細については、次を参照してください。 [PPL における取り消し処理](../../parallel/concrt/cancellation-in-the-ppl.md)します。
+すべての例外がエラーの存在を示すわけではありません。 たとえば、検索アルゴリズムは結果を検出したときに、例外処理を使用して、関連付けられているタスクを中止することがあります。 コードで取り消しの機構を使用する方法の詳細については、[PPL における取り消し処理](../../parallel/concrt/cancellation-in-the-ppl.md)を参照してください。
 
 [[トップ](#top)]
 
 ##  <a name="lwts"></a> 軽量タスク
 
-軽量タスクから直接スケジュールしたタスク、 [concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)オブジェクト。 軽量タスクは、通常のタスクよりもオーバーヘッドが小さくなります。 ただし、ランタイムは軽量タスクによってスローされた例外をキャッチしません。 代わりに、ハンドルされない例外のハンドラーが例外をキャッチし、既定ではプロセスを終了します。 したがって、アプリケーションで適切なエラー処理機構を使用する必要があります。 軽量タスクの詳細については、次を参照してください。[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
+軽量タスクから直接スケジュールしたタスク、 [concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)オブジェクト。 軽量タスクは、通常のタスクよりもオーバーヘッドが小さくなります。 ただし、ランタイムは軽量タスクによってスローされた例外をキャッチしません。 代わりに、ハンドルされない例外のハンドラーが例外をキャッチし、既定ではプロセスを終了します。 したがって、アプリケーションで適切なエラー処理機構を使用する必要があります。 軽量タスクの詳細については、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。
 
 [[トップ](#top)]
 
@@ -182,9 +182,9 @@ the status of the agent is: done
 
 `try` - `catch`外部ブロックが存在する、`while`ループ、エージェントの終了が最初のエラーが発生したときに処理します。 場合、 `try` - `catch`ブロックが内、`while`ループ、エラーが発生した後、エージェントを引き続きとします。
 
-この例では例外がメッセージ バッファーに格納されるため、別のコンポーネントが実行中のエージェントのエラーを監視できます。 この例では、 [concurrency::single_assignment](../../parallel/concrt/reference/single-assignment-class.md)エラーを格納するオブジェクト。 エージェントが複数の例外を処理する場合、`single_assignment` クラスは渡された最初のメッセージだけを保存します。 最後の例外だけを保存するには、使用、 [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)クラス。 すべての例外を保存するには、使用、 [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)クラス。 これらのメッセージ ブロックの詳細については、次を参照してください。[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)します。
+この例では例外がメッセージ バッファーに格納されるため、別のコンポーネントが実行中のエージェントのエラーを監視できます。 この例では、 [concurrency::single_assignment](../../parallel/concrt/reference/single-assignment-class.md)エラーを格納するオブジェクト。 エージェントが複数の例外を処理する場合、`single_assignment` クラスは渡された最初のメッセージだけを保存します。 最後の例外だけを保存するには、使用、 [concurrency::overwrite_buffer](../../parallel/concrt/reference/overwrite-buffer-class.md)クラス。 すべての例外を保存するには、使用、 [concurrency::unbounded_buffer](reference/unbounded-buffer-class.md)クラス。 これらのメッセージ ブロックの詳細については、[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
 
-非同期エージェントの詳細については、次を参照してください。[非同期エージェント](../../parallel/concrt/asynchronous-agents.md)します。
+非同期エージェントの詳細については、[非同期エージェント](../../parallel/concrt/asynchronous-agents.md)を参照してください。
 
 [[トップ](#top)]
 

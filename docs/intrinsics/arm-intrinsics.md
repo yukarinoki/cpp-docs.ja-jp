@@ -1940,7 +1940,7 @@ ms.locfileid: "51525510"
 ---
 # <a name="arm-intrinsics"></a>ARM 組み込み
 
-Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み込みが使用できるようになります。 ARM の詳細については、次を参照してください。、 [ARM アーキテクチャ リファレンス マニュアル](http://go.microsoft.com/fwlink/p/?LinkId=522049)と[ARM アセンブラー ツール ガイド](http://go.microsoft.com/fwlink/p/?LinkId=246102)、ARM Infocenter web サイトにします。
+Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み込みが使用できるようになります。 ARM の詳細については、、 [ARM アーキテクチャ リファレンス マニュアル](http://go.microsoft.com/fwlink/p/?LinkId=522049)と[ARM アセンブラー ツール ガイド](http://go.microsoft.com/fwlink/p/?LinkId=246102)、ARM Infocenter web サイトにを参照してください。
 
 ##  <a name="top"></a> NEON
 
@@ -2065,19 +2065,19 @@ Visual C++ コンパイラと ARM コンパイラの主な違いは、Visual C++
 |_arm_sdiv|SDIV|int _arm_sdiv(int _Rn, int _Rm)|
 |_arm_udiv|UDIV|unsigned int _arm_udiv(unsigned int _Rn, unsigned int _Rm)|
 |__cps|CPS|void __cps(unsigned int _Ops, unsigned int _Flags, unsigned int _Mode)|
-|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、次を参照してください。[メモリ バリアの制限](#BarrierRestrictions)します。|
-|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、次を参照してください。[メモリ バリアの制限](#BarrierRestrictions)します。|
-|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、次を参照してください。[メモリ バリアの制限](#BarrierRestrictions)します。|
+|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、[メモリ バリアの制限](#BarrierRestrictions)を参照してください。|
+|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、[メモリ バリアの制限](#BarrierRestrictions)を参照してください。|
+|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、[メモリ バリアの制限](#BarrierRestrictions)を参照してください。|
 |__emit||void __emit(unsigned \__int32 opcode)<br /><br /> コンパイラから出力される命令ストリームに、指定された命令を挿入します。<br /><br /> `opcode` の値は、コンパイル時に既知の定数式である必要があります。 命令語のサイズは 16 ビットであり、`opcode` の最上位 16 ビットは無視されます。<br /><br /> コンパイラは `opcode` の内容を解釈しようとせず、挿入された命令を実行する前の CPU またはメモリの状態は保証されません。<br /><br /> コンパイラは、挿入された命令を実行した後に CPU とメモリの状態が変更されていないことを前提としています。 したがって、状態を変更する命令は、コンパイラにより生成される通常のコードに好ましくない影響を与えることがあります。<br /><br /> このため、`emit` を使用するのは、コンパイラが正常に処理できない CPU の状態 (コプロセッサの状態など) に影響を与える命令を挿入する場合か、次を使用して宣言されている関数を実装する場合のみとします。`declspec(naked)`|
 |__hvc|HVC|unsigned int __hvc(unsigned int, ...)|
-|__iso_volatile_load16||__int16 \__iso_volatile_load16(const volatile \__int16 \*)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|
-|__iso_volatile_load32||__int32 \__iso_volatile_load32(const volatile \__int32 \*)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|
-|__iso_volatile_load64||__int64 \__iso_volatile_load64(const volatile \__int64 \*)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|
-|__iso_volatile_load8||__int8 \__iso_volatile_load8(const volatile \__int8 \*)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|
-|__iso_volatile_store16||void __iso_volatile_store16(volatile \__int16 \*、\__int16)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|
-|__iso_volatile_store32||void __iso_volatile_store32(volatile \__int32 \*、 \__int32)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|
-|__iso_volatile_store64||void __iso_volatile_store64(volatile \__int64 \*、 \__int64)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|
-|__iso_volatile_store8||void __iso_volatile_store8(volatile \__int8 \*、 \__int8)<br /><br /> 詳細については、次を参照してください。 [__iso_volatile_load/store](#IsoVolatileLoadStore) します。|
+|__iso_volatile_load16||__int16 \__iso_volatile_load16(const volatile \__int16 \*)<br /><br /> 詳細については、[__iso_volatile_load/store](#IsoVolatileLoadStore) を参照してください。|
+|__iso_volatile_load32||__int32 \__iso_volatile_load32(const volatile \__int32 \*)<br /><br /> 詳細については、[__iso_volatile_load/store](#IsoVolatileLoadStore) を参照してください。|
+|__iso_volatile_load64||__int64 \__iso_volatile_load64(const volatile \__int64 \*)<br /><br /> 詳細については、[__iso_volatile_load/store](#IsoVolatileLoadStore) を参照してください。|
+|__iso_volatile_load8||__int8 \__iso_volatile_load8(const volatile \__int8 \*)<br /><br /> 詳細については、[__iso_volatile_load/store](#IsoVolatileLoadStore) を参照してください。|
+|__iso_volatile_store16||void __iso_volatile_store16(volatile \__int16 \*、\__int16)<br /><br /> 詳細については、[__iso_volatile_load/store](#IsoVolatileLoadStore) を参照してください。|
+|__iso_volatile_store32||void __iso_volatile_store32(volatile \__int32 \*、 \__int32)<br /><br /> 詳細については、[__iso_volatile_load/store](#IsoVolatileLoadStore) を参照してください。|
+|__iso_volatile_store64||void __iso_volatile_store64(volatile \__int64 \*、 \__int64)<br /><br /> 詳細については、[__iso_volatile_load/store](#IsoVolatileLoadStore) を参照してください。|
+|__iso_volatile_store8||void __iso_volatile_store8(volatile \__int8 \*、 \__int8)<br /><br /> 詳細については、[__iso_volatile_load/store](#IsoVolatileLoadStore) を参照してください。|
 |__ldrexd|LDREXD|__int64 \__ldrexd(const volatile \__int64 \*)|
 |__prefetch|PLD|void __cdecl \__prefetch(const void \*)<br /><br /> 指定したアドレス、またはその付近のアドレスのメモリに間もなくアクセスする可能性があるという `PLD` メモリ ヒントをシステムに提供します。 システムによっては、実行時のパフォーマンスを向上させるために、そのメモリへのアクセス パターンを最適化する場合があります。 ただし、C++ 言語側からすると、この関数には目に見える効果がなく、何も実行しないことがあります。|
 |__rdpmccntr64||符号なし __int64 \__rdpmccntr64(void)|
@@ -2104,12 +2104,12 @@ Visual C++ コンパイラと ARM コンパイラの主な違いは、Visual C++
 |_DSubSatInt|QDSUB|int _DSubSatInt(int, int)|
 |_isunordered||int _isunordered(double, double)|
 |_isunorderedf||int _isunorderedf(float, float)|
-|_MoveFromCoprocessor|MRC|unsigned int _MoveFromCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveFromCoprocessor、_MoveFromCoprocessor2](#MoveFromCo)します。|
-|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveFromCoprocessor、_MoveFromCoprocessor2](#MoveFromCo)します。|
-|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveFromCoprocessor64](#MoveFromCo64)します。|
-|_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)します。|
-|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)します。|
-|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64 (unsigned \__ _int64、unsigned int、unsigned int、unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveToCoprocessor64](#MoveToCo64)します。|
+|_MoveFromCoprocessor|MRC|unsigned int _MoveFromCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveFromCoprocessor、_MoveFromCoprocessor2](#MoveFromCo)を参照してください。|
+|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveFromCoprocessor、_MoveFromCoprocessor2](#MoveFromCo)を参照してください。|
+|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveFromCoprocessor64](#MoveFromCo64)を参照してください。|
+|_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)を参照してください。|
+|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)を参照してください。|
+|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64 (unsigned \__ _int64、unsigned int、unsigned int、unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveToCoprocessor64](#MoveToCo64)を参照してください。|
 |_MulHigh||long _MulHigh(long, long)|
 |_MulUnsignedHigh||unsigned long _MulUnsignedHigh(unsigned long, unsigned long)|
 |_ReadBankedReg|MRS|int _ReadBankedReg(int _Reg)|

@@ -17,4 +17,4 @@ ms.locfileid: "50627891"
 
 'function' は、管理対象としてコンパイルすることはできません: '理由';アンマネージド #pragma を使用します。
 
-詳細については、次を参照してください。[コンパイラの警告 (レベル 1 および 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)します。
+詳細については、[コンパイラの警告 (レベル 1 および 3) C4793](../../error-messages/compiler-warnings/compiler-warning-level-1-and-3-c4793.md)を参照してください。

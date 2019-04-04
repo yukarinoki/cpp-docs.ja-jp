@@ -31,7 +31,7 @@ ms.locfileid: "50472671"
 
 ## <a name="remarks"></a>Remarks
 
-このコンパイラ ディレクティブは、Visual Studio 2015 Update 2 以降廃止されています。 使用することをお勧め、`/execution-charset:utf-8`または`/utf-8`コンパイラ オプションを使用してと共に、`u8`拡張文字が含まれているナロー文字と文字列リテラルでのプレフィックス。 詳細については、`u8`プレフィックスを参照してください[String and Character Literals](../cpp/string-and-character-literals-cpp.md)します。 コンパイラ オプションの詳細については、次を参照してください。 [(実行文字セット)/execution-charset](../build/reference/execution-charset-set-execution-character-set.md)と[/utf-8 (ソースの設定と実行可能ファイルの文字セットを utf-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)します。
+このコンパイラ ディレクティブは、Visual Studio 2015 Update 2 以降廃止されています。 使用することをお勧め、`/execution-charset:utf-8`または`/utf-8`コンパイラ オプションを使用してと共に、`u8`拡張文字が含まれているナロー文字と文字列リテラルでのプレフィックス。 詳細については、`u8`プレフィックスを参照してください[String and Character Literals](../cpp/string-and-character-literals-cpp.md)します。 コンパイラ オプションの詳細については、[(実行文字セット)/execution-charset](../build/reference/execution-charset-set-execution-character-set.md)と[/utf-8 (ソースの設定と実行可能ファイルの文字セットを utf-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)を参照してください。
 
 `#pragma execution_character_set("utf-8")`ディレクティブを指定すると、実行可能ファイル、ナロー文字と、ソース コード内のナロー文字列リテラルを utf-8 としてエンコードします。 この出力エンコードは、使用されるソース ファイルのエンコーディング関係ありません。
 

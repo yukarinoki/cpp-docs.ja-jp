@@ -574,7 +574,7 @@ virtual DROPEFFECT OnDropEx(
 
 - DROPEFFECT_SCROLL を使用して、ドラッグのスクロール操作が実行されるときに、またはターゲットで発生していることを示します。
 
-既定のメニュー コマンドの設定の詳細については、次を参照してください。 [SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem) Windows sdk と[CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu)このボリュームにします。
+既定のメニュー コマンドの設定の詳細については、[SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem) Windows sdk と[CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu)このボリュームにを参照してください。
 
 ##  <a name="onendprinting"></a>  CView::OnEndPrinting
 
@@ -761,7 +761,7 @@ virtual void OnPrint(
 
 [!code-cpp[NVC_MFCDocView#186](../../mfc/codesnippet/cpp/cview-class_4.cpp)]
 
-別の例では、次を参照してください。 [CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect)します。
+別の例では、[CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect)を参照してください。
 
 ##  <a name="onscroll"></a>  CView::OnScroll
 

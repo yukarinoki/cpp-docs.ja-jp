@@ -101,7 +101,7 @@ CMFCPropertyGridFileProperty(
 
 ### <a name="remarks"></a>Remarks
 
-使用可能なフラグの一覧については、次を参照してください。 [OPENFILENAME 構造体](/windows/desktop/api/commdlg/ns-commdlg-tagofna)します。
+使用可能なフラグの一覧については、[OPENFILENAME 構造体](/windows/desktop/api/commdlg/ns-commdlg-tagofna)を参照してください。
 
 ### <a name="example"></a>例
 

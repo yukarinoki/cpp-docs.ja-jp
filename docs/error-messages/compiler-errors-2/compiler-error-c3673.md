@@ -17,7 +17,7 @@ ms.locfileid: "50585485"
 
 'type': クラスには、コピー コンス トラクターがありません。
 
-CLR 参照型のオブジェクトをコピーするには、ユーザー定義のコンス トラクターが必要です。 詳細については、次を参照してください。[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。
+CLR 参照型のオブジェクトをコピーするには、ユーザー定義のコンス トラクターが必要です。 詳細については、[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)を参照してください。
 
 ## <a name="example"></a>例
 

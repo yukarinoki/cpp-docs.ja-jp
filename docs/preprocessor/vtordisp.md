@@ -39,7 +39,7 @@ vtordisp 構築/破棄ディスプレイスメント隠しメンバーの追加�
 内部コンパイラ スタックから先頭レコードを削除し、vtordisp 設定をその削除したレコードの値に戻します。
 
 *n*<br/>
-vtordisp 設定の新しい値を指定します。 指定できる値は 0、1 または 2 に対応する、 `/vd0`、 `/vd1`、および`/vd2`コンパイラ オプション。 詳細については、次を参照してください。 [/vd (ディスプレイスメント)](../build/reference/vd-disable-construction-displacements.md)します。
+vtordisp 設定の新しい値を指定します。 指定できる値は 0、1 または 2 に対応する、 `/vd0`、 `/vd1`、および`/vd2`コンパイラ オプション。 詳細については、[/vd (ディスプレイスメント)](../build/reference/vd-disable-construction-displacements.md)を参照してください。
 
 *on*<br/>
 これは、`#pragma vtordisp(1)` に相当します。
@@ -55,7 +55,7 @@ vtordisp 設定の新しい値を指定します。 指定できる値は 0、1 
 
 1 を指定するまたは*で*を既定で有効隠し**vtordisp**メンバーの依存関係が必要です。
 
-2 では、非表示を指定する**vtordisp**仮想関数を持つすべての仮想基底クラスのメンバー。  `vtordisp(2)` 適切なパフォーマンスを確保する必要があります**dynamic_cast**部分的に構築されたオブジェクト。 詳細については、次を参照してください。[コンパイラの警告 (レベル 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)します。
+2 では、非表示を指定する**vtordisp**仮想関数を持つすべての仮想基底クラスのメンバー。  `vtordisp(2)` 適切なパフォーマンスを確保する必要があります**dynamic_cast**部分的に構築されたオブジェクト。 詳細については、[コンパイラの警告 (レベル 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)を参照してください。
 
 引数のない `#pragma vtordisp()` は、vtordisp 設定を初期設定に戻します。
 

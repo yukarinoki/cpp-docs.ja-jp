@@ -158,7 +158,7 @@ COM オブジェクトを呼び出すことで MFC の実装に委任できま�
 
 [CAsyncMonikerFile::Open](#open)呼び出し`CreateBindStatusCallback`します。
 
-非同期モニカーと非同期のバインドの詳細については、次を参照してください。、 [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\))インターフェイスと[非同期バインド方法およびストレージ作業](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)します。 集計の詳細については、次を参照してください。[集計](/windows/desktop/com/aggregation)します。 3 つすべてのトピックは、Windows SDK には。
+非同期モニカーと非同期のバインドの詳細については、、 [IBindStatusCallback](/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms775060\(v=vs.85\))インターフェイスと[非同期バインド方法およびストレージ作業](/windows/desktop/Stg/how-asynchronous-binding-and-storage-work)を参照してください。 集計の詳細については、[集計](/windows/desktop/com/aggregation)を参照してください。 3 つすべてのトピックは、Windows SDK には。
 
 ##  <a name="getbindinfo"></a>  CAsyncMonikerFile::GetBindInfo
 

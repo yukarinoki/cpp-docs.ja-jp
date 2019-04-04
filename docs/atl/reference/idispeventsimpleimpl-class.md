@@ -85,7 +85,7 @@ class ATL_NO_VTABLE IDispEventSimpleImpl : public _IDispEventLocator<nID, pdiid>
 
 ActiveX イベント シンクのみサポートの戻り値の HRESULT 型または void、イベント ハンドラー メソッドからの CE ATL の実装その他の戻り値はサポートされていませんし、その動作は未定義です。
 
-詳細については、次を参照してください。 [IDispEventImpl のサポート](../../atl/supporting-idispeventimpl.md)します。
+詳細については、[IDispEventImpl のサポート](../../atl/supporting-idispeventimpl.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

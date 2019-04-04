@@ -27,7 +27,7 @@ C++ Accelerated Massive Parallelism (C++ AMP) は、独立したグラフィッ�
 
 - DirectX 11 機能レベル 11.0 以降のハードウェア
 
-- ソフトウェア エミュレーターでデバッグは、Windows 8 または Windows Server 2012 が必要です。 ハードウェアでデバッグするには、使用するグラフィックス カードのドライバーをインストールする必要があります。 詳細については、次を参照してください。 [GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)します。
+- ソフトウェア エミュレーターでデバッグは、Windows 8 または Windows Server 2012 が必要です。 ハードウェアでデバッグするには、使用するグラフィックス カードのドライバーをインストールする必要があります。 詳細については、[GPU コードのデバッグ](/visualstudio/debugger/debugging-gpu-code)を参照してください。
 
 - メモ:AMP は現在 ARM64 でサポートされていません。
 

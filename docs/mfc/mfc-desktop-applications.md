@@ -31,7 +31,7 @@ Microsoft Foundation Class (MFC) ライブラリは、Win32 お呼びCOM API の
 > [!IMPORTANT]
 >  MFC クラスとそのメンバーは、Windows ランタイム環境で実行するアプリケーションでは使用できません。
 >
->  マルチバイト文字エンコード (MBCS) の MFC ライブラリ (DLL) は、Visual Studio に含まれなくなりましたが、Visual Studio アドオンとして使用できます。 詳細については、次を参照してください。 [MFC MBCS DLL アドオン](mfc-mbcs-dll-add-on.md)します。
+>  マルチバイト文字エンコード (MBCS) の MFC ライブラリ (DLL) は、Visual Studio に含まれなくなりましたが、Visual Studio アドオンとして使用できます。 詳細については、[MFC MBCS DLL アドオン](mfc-mbcs-dll-add-on.md)を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

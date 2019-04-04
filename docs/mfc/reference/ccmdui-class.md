@@ -85,7 +85,7 @@ class CCmdUI
 |通常のボタン `CDialogBar`|有効または無効にします。|オンまたはチェック ボックスをオフに|`SetCheck` と同じ|ボタン テキストの設定|
 |通常の制御 `CDialogBar`|有効または無効にします。|(適用なし)|(適用なし)|ウィンドウのテキストを設定します。|
 
-このクラスの使用方法の詳細は、次を参照してください。[ユーザー インターフェイス オブジェクトを更新する方法](../../mfc/how-to-update-user-interface-objects.md)します。
+このクラスの使用方法の詳細は、[ユーザー インターフェイス オブジェクトを更新する方法](../../mfc/how-to-update-user-interface-objects.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -105,7 +105,7 @@ void ContinueRouting();
 
 ### <a name="remarks"></a>Remarks
 
-これは、高度なメンバー関数は FALSE を返す ON_COMMAND_EX ハンドラーと組み合わせて使用する必要があります。 詳細については、次を参照してください。[テクニカル ノート 6](../../mfc/tn006-message-maps.md)します。
+これは、高度なメンバー関数は FALSE を返す ON_COMMAND_EX ハンドラーと組み合わせて使用する必要があります。 詳細については、[テクニカル ノート 6](../../mfc/tn006-message-maps.md)を参照してください。
 
 ##  <a name="enable"></a>  CCmdUI::Enable
 
@@ -164,7 +164,7 @@ CMenu* m_pSubMenu;
 
 ### <a name="remarks"></a>Remarks
 
-項目がメニューではない場合は NULL です。 場合、サブメニューは、ポップアップ*サブメニュー*ポップアップ メニューの最初の項目の ID が含まれています。 詳細については、次を参照してください。[テクニカル ノート 21](../../mfc/tn021-command-and-message-routing.md)します。
+項目がメニューではない場合は NULL です。 場合、サブメニューは、ポップアップ*サブメニュー*ポップアップ メニューの最初の項目の ID が含まれています。 詳細については、[テクニカル ノート 21](../../mfc/tn021-command-and-message-routing.md)を参照してください。
 
 ##  <a name="m_pother"></a>  CCmdUI::m_pOther
 

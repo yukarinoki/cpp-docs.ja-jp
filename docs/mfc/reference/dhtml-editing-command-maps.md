@@ -11,7 +11,7 @@ ms.locfileid: "58776155"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編集コマンド マップ
 
-DHTML 編集コマンド マップに次のマクロを使用できる[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-クラスを派生します。 使用の例は、次を参照してください。 [HTMLEdit サンプル](../../overview/visual-cpp-samples.md)します。
+DHTML 編集コマンド マップに次のマクロを使用できる[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-クラスを派生します。 使用の例は、[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)を参照してください。
 
 ### <a name="dhtml-editing-command-map-macros"></a>DHTML 編集コマンド マップ マクロ
 

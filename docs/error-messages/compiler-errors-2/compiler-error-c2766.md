@@ -17,7 +17,7 @@ ms.locfileid: "50446490"
 
 明示的な特殊化です。'specialization' は既に定義されています
 
-重複する明示的な特殊化は許可されません。 詳細については、次を参照してください。[関数テンプレートの明示的な特殊化](../../cpp/explicit-specialization-of-function-templates.md)します。
+重複する明示的な特殊化は許可されません。 詳細については、[関数テンプレートの明示的な特殊化](../../cpp/explicit-specialization-of-function-templates.md)を参照してください。
 
 次の例では、C2766 が生成されます。
 

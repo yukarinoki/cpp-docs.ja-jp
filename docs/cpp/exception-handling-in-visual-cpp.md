@@ -31,9 +31,9 @@ Visual C++ は、3 種類の例外処理をサポートしています。
 
    MFC はバージョン 3.0 以降、C++ 例外を使用していますが、フォームの C++ 例外に似た古い例外処理マクロを引き続きサポートします。 これらのマクロは新しいプログラミングで推奨されませんが、下位互換性のために引き続きサポートされます。 既にマクロを使用しているプログラムでは、自由に C++ の例外も使用できます。 プリプロセス時に、Visual C++ Version 2.0 時点では、マクロは C++ 言語の Visual C++ の実装で定義されている例外処理キーワードに評価されます。 C++ 例外処理の使用を開始するときは、既存の例外処理マクロをそのまま維持できます。
 
-使用して、 [/EH](../build/reference/eh-exception-handling-model.md) ; プロジェクトで使用する例外処理の種類を指定するコンパイラ オプションC++ 例外処理では、既定値です。 エラー処理機構を併用しないでください。たとえば、構造化例外処理で C++ 例外を使用しないでください。 C++ 例外処理を使用すると、コードの移植性が高くなり、すべての種類の例外を処理できるようになります。 構造化例外処理の欠点の詳細については、次を参照してください。[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)します。 MFC マクロと C++ の例外についてのアドバイスを参照してください。[例外。MFC マクロと C++ 例外を使用して](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)します。
+使用して、 [/EH](../build/reference/eh-exception-handling-model.md) ; プロジェクトで使用する例外処理の種類を指定するコンパイラ オプションC++ 例外処理では、既定値です。 エラー処理機構を併用しないでください。たとえば、構造化例外処理で C++ 例外を使用しないでください。 C++ 例外処理を使用すると、コードの移植性が高くなり、すべての種類の例外を処理できるようになります。 構造化例外処理の欠点の詳細については、[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)を参照してください。 MFC マクロと C++ の例外についてのアドバイスを参照してください。[例外。MFC マクロと C++ 例外を使用して](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)します。
 
-CLR アプリケーションで例外を処理する方法の詳細については、次を参照してください。[例外処理 (C +/cli および C++/cli CX)](../extensions/exception-handling-cpp-component-extensions.md)します。
+CLR アプリケーションで例外を処理する方法の詳細については、[例外処理 (C +/cli および C++/cli CX)](../extensions/exception-handling-cpp-component-extensions.md)を参照してください。
 
 X64 の例外処理については、プロセッサを参照してください[x64 例外処理](../build/exception-handling-x64.md)します。
 

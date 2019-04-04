@@ -175,7 +175,7 @@ int main() {
 }
 ```
 
-グローバルな静的オブジェクトの初期化の詳細については、次を参照してください。[追加の起動に関する考慮事項](../cpp/additional-startup-considerations.md)します。
+グローバルな静的オブジェクトの初期化の詳細については、[追加の起動に関する考慮事項](../cpp/additional-startup-considerations.md)を参照してください。
 
 ### <a name="value-initialization"></a>値の初期化
 

@@ -26,7 +26,7 @@ ms.locfileid: "57809523"
 
 ## <a name="remarks"></a>Remarks
 
-**/Await**コンパイラ オプションにより、C++ コルーチンとキーワードのコンパイラ サポート**co_await**、 **co_yield**、および**co_return**. このオプションの既定値はオフです。 Visual Studio でのコルーチンのサポートについては、次を参照してください。、 [Visual Studio チームのブログ](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/)します。 コルーチンの標準提案書の詳細については、次を参照してください。 [N4628 ワーキング ドラフト、コルーチンの C++ 拡張機能の技術仕様](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf)します。
+**/Await**コンパイラ オプションにより、C++ コルーチンとキーワードのコンパイラ サポート**co_await**、 **co_yield**、および**co_return**. このオプションの既定値はオフです。 Visual Studio でのコルーチンのサポートについては、、 [Visual Studio チームのブログ](https://blogs.msdn.microsoft.com/vcblog/category/coroutine/)を参照してください。 コルーチンの標準提案書の詳細については、[N4628 ワーキング ドラフト、コルーチンの C++ 拡張機能の技術仕様](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2016/n4628.pdf)を参照してください。
 
 **/Await**オプションは、Visual Studio 2015 以降を使用できます。
 

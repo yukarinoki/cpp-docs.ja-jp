@@ -19,7 +19,7 @@ ms.locfileid: "50580870"
 
 [/Clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)のコンパイル時に、コンパイラでは、参照型のコピー コンス トラクターは生成されません。 いずれかで **/clr**のコンパイル時にコピーする型のインスタンスが予想される場合、参照型の独自のコピー コンス トラクターを定義する必要があります。
 
-詳細については、次を参照してください。[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。
+詳細については、[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)を参照してください。
 
 ## <a name="example"></a>例
 

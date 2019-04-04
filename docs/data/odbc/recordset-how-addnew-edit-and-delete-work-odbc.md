@@ -39,7 +39,7 @@ ms.locfileid: "51331972"
 - [削除するレコードのしくみ](#_core_deleting_a_record)
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
 
 読み取りをする可能性がありますの補足として[レコード フィールド エクス チェンジ: RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)、更新操作での RFX の対応するロールの説明。
 
@@ -155,7 +155,7 @@ ODBC ドライバーがサポートしている場合、 `::SQLSetPos` MFC ODBC 
    > [!NOTE]
    > レコードを削除すると、新しいレコードのデータをエディット バッファーを補充する別のレコードをスクロールする必要があります。 呼び出すとエラーが`Delete`もう一度呼び出すまたは`Edit`します。
 
-更新操作で使用される SQL ステートメントの詳細については、次を参照してください。 [SQL](../../data/odbc/sql.md)します。
+更新操作で使用される SQL ステートメントの詳細については、[SQL](../../data/odbc/sql.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

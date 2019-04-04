@@ -1868,7 +1868,7 @@ CMFCToolBarImages* GetLockedColdImages();
 
 ロックされているイメージは、ユーザーがツールバーをカスタマイズすることはできません、framework が使用する標準のツール バー ボタンのイメージのバージョンです。 コールド イメージは、ユーザーがツール バー ボタンと対話していないときに使用されるイメージです。
 
-このメソッドは、ツールバーはロックされていない場合に NULL を返します。 このメソッドは、ツールバーはロックされていない場合も、アサーション エラーとデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、次を参照してください。 [CMFCToolBar::IsLocked](#islocked)します。
+このメソッドは、ツールバーはロックされていない場合に NULL を返します。 このメソッドは、ツールバーはロックされていない場合も、アサーション エラーとデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、[CMFCToolBar::IsLocked](#islocked)を参照してください。
 
 呼び出す、 [CMFCToolBar::LoadBitmapEx](#loadbitmapex)ロックのコールド イメージを読み込みます。
 
@@ -1888,7 +1888,7 @@ CMFCToolBarImages* GetLockedDisabledImages();
 
 ロックされているイメージは、ユーザーがツールバーをカスタマイズすることはできません、framework が使用する標準のツール バー ボタンのイメージのバージョンです。 無効なイメージとは、ボタンに TBBS_DISABLED スタイルが設定されているときにフレームワークが使用するイメージです。
 
-このメソッドは、ツールバーはロックされていない場合に NULL を返します。 このメソッドは、ツールバーはロックされていない場合も、アサーション エラーとデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、次を参照してください。 [CMFCToolBar::IsLocked](#islocked)します。
+このメソッドは、ツールバーはロックされていない場合に NULL を返します。 このメソッドは、ツールバーはロックされていない場合も、アサーション エラーとデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、[CMFCToolBar::IsLocked](#islocked)を参照してください。
 
 呼び出す、 [CMFCToolBar::LoadBitmapEx](#loadbitmapex)を読み込む、ロックされているメソッドには、イメージが無効になっています。
 
@@ -1908,7 +1908,7 @@ CMFCToolBarImages* GetLockedImages();
 
 ロックされているイメージは、ユーザーがツールバーをカスタマイズすることはできません、framework が使用する標準のツール バー ボタンのイメージのバージョンです。
 
-このメソッドは、ツールバーはロックされていない場合に NULL を返します。 このメソッドは、ツールバーはロックされていない場合も、アサーション エラーとデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、次を参照してください。 [CMFCToolBar::IsLocked](#islocked)します。
+このメソッドは、ツールバーはロックされていない場合に NULL を返します。 このメソッドは、ツールバーはロックされていない場合も、アサーション エラーとデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、[CMFCToolBar::IsLocked](#islocked)を参照してください。
 
 ##  <a name="getlockedimagesize"></a>  CMFCToolBar::GetLockedImageSize
 
@@ -1926,7 +1926,7 @@ A`CSize`ロックされたツール バー イメージまたは空のサイズ�
 
 ロックされているイメージは、ユーザーがツールバーをカスタマイズすることはできません、framework が使用する標準のツール バー ボタンのイメージのバージョンです。
 
-このメソッドが戻る、`CSize`ツールバーはロックされていない場合は、ゼロ幅と高さがゼロで構造体します。 このメソッドは、ツールバーはロックされていない場合も、アサーション エラーとデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、次を参照してください。 [CMFCToolBar::IsLocked](#islocked)します。
+このメソッドが戻る、`CSize`ツールバーはロックされていない場合は、ゼロ幅と高さがゼロで構造体します。 このメソッドは、ツールバーはロックされていない場合も、アサーション エラーとデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、[CMFCToolBar::IsLocked](#islocked)を参照してください。
 
 呼び出す、 [CMFCToolBar::SetLockedSizes](#setlockedsizes)ロックされているイメージのサイズを指定します。
 
@@ -1946,7 +1946,7 @@ CMFCToolBarImages* GetLockedMenuImages();
 
 ロックされているイメージは、ユーザーがツールバーをカスタマイズすることはできません、framework が使用する標準のツール バー メニュー イメージのバージョンです。
 
-このメソッドは、ツールバーはロックされていない場合に NULL を返します。 このメソッドは、ツールバーはロックされていない場合も、アサーション エラーとデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、次を参照してください。 [CMFCToolBar::IsLocked](#islocked)します。
+このメソッドは、ツールバーはロックされていない場合に NULL を返します。 このメソッドは、ツールバーはロックされていない場合も、アサーション エラーとデバッグ ビルドで生成します。 ロックされたツールバーの詳細については、[CMFCToolBar::IsLocked](#islocked)を参照してください。
 
 呼び出す、 [CMFCToolBar::LoadBitmapEx](#loadbitmapex)ロックのメニュー画像を読み込みます。
 
@@ -2509,7 +2509,7 @@ TRUE の場合は、ツールバーはロックされています。それ以外
 
 このメソッドは、ユーザーがツール バー ボタンの位置を変更するなどのカスタマイズ タスクを実行できない場合に TRUE を返します。
 
-ロックされたツールバーは、別のイメージ リストを使用します。 これらのイメージ リストの詳細については、次を参照してください。 [CMFCToolBar::LoadBitmapEx](#loadbitmapex)します。
+ロックされたツールバーは、別のイメージ リストを使用します。 これらのイメージ リストの詳細については、[CMFCToolBar::LoadBitmapEx](#loadbitmapex)を参照してください。
 
 ##  <a name="isonerowwithsibling"></a>  CMFCToolBar::IsOneRowWithSibling
 
@@ -2687,7 +2687,7 @@ virtual BOOL LoadState(
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークでは、アプリケーションの初期化プロセスの一部としてこのメソッドを呼び出します。 詳細については、次を参照してください。 [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)します。
+フレームワークでは、アプリケーションの初期化プロセスの一部としてこのメソッドを呼び出します。 詳細については、[CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)を参照してください。
 
 ##  <a name="loadtoolbar"></a>  CMFCToolBar::LoadToolBar
 
@@ -3184,7 +3184,7 @@ virtual BOOL SaveState(
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、アプリケーションの状態をレジストリに保存するときに、このメソッドを呼び出します。 詳細については、次を参照してください。 [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)します。
+フレームワークは、アプリケーションの状態をレジストリに保存するときに、このメソッドを呼び出します。 詳細については、[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)を参照してください。
 
 ##  <a name="setbasiccommands"></a>  CMFCToolBar::SetBasicCommands
 
@@ -3345,9 +3345,9 @@ static BOOL SetCommandUsageOptions(
 
 ### <a name="remarks"></a>Remarks
 
-基本的な方法と、最近使用したメニュー項目を決定するフレームワークが使用されるアルゴリズムをカスタマイズするには、このメソッドを呼び出します。 基本的なコマンドの詳細については、次を参照してください。 [CMFCToolBar::AddBasicCommand](#addbasiccommand)します。
+基本的な方法と、最近使用したメニュー項目を決定するフレームワークが使用されるアルゴリズムをカスタマイズするには、このメソッドを呼び出します。 基本的なコマンドの詳細については、[CMFCToolBar::AddBasicCommand](#addbasiccommand)を参照してください。
 
-このクラスを使用して、`CMFCCmdUsageCount`コマンドの使用率カウントを追跡するクラス。 このクラスの詳細については、次を参照してください。 [CMFCCmdUsageCount クラス](../../mfc/reference/cmfccmdusagecount-class.md)します。
+このクラスを使用して、`CMFCCmdUsageCount`コマンドの使用率カウントを追跡するクラス。 このクラスの詳細については、[CMFCCmdUsageCount クラス](../../mfc/reference/cmfccmdusagecount-class.md)を参照してください。
 
 ##  <a name="setcustomizemode"></a>  CMFCToolBar::SetCustomizeMode
 
@@ -3464,7 +3464,7 @@ static void SetHotTextColor(COLORREF clrText);
 
 ### <a name="remarks"></a>Remarks
 
-ホット トラッキング ツール バー ボタンの詳細については、次を参照してください。 [CMFCToolBar::GetHotBorder](#gethotborder)と[CMFCToolBar::SetHotBorder](#sethotborder)します。
+ホット トラッキング ツール バー ボタンの詳細については、[CMFCToolBar::GetHotBorder](#gethotborder)と[CMFCToolBar::SetHotBorder](#sethotborder)を参照してください。
 
 ##  <a name="setignoresettext"></a>  CMFCToolBar::SetIgnoreSetText
 

@@ -474,7 +474,7 @@ BOOL CreateRectRgn(
 
 [!code-cpp[NVC_MFCDocView#147](../../mfc/codesnippet/cpp/crgn-class_4.cpp)]
 
-たとえば、次を参照してください。 [CRgn::CombineRgn](#combinergn)します。
+たとえば、[CRgn::CombineRgn](#combinergn)を参照してください。
 
 ##  <a name="createrectrgnindirect"></a>  CRgn::CreateRectRgnIndirect
 

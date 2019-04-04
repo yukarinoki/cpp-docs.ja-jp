@@ -220,7 +220,7 @@ class CTaskDialog : public CObject
 |`m_nProgressPos`|進行状況バーの現在の位置。  この値の有効値の範囲は `m_nProgressRangeMin` ～ `m_nProgressRangeMax` です。|
 |`m_nProgressRangeMax`|進行状況バーの最大値。|
 |`m_nProgressRangeMin`|進行状況バーの最小値。|
-|`m_nProgressState`|進行状況バーの状態。 詳細については、次を参照してください。 [CTaskDialog::SetProgressBarState](#setprogressbarstate)します。|
+|`m_nProgressState`|進行状況バーの状態。 詳細については、[CTaskDialog::SetProgressBarState](#setprogressbarstate)を参照してください。|
 |`m_nRadioId`|選択したラジオ ボタン コントロールの ID。|
 |`m_nWidth`|幅、 `CTaskDialog` (ピクセル単位)。|
 |`m_strCollapse`|文字列、`CTaskDialog`展開された情報が非表示の場合、展開 ボックスの右側に表示されます。|
@@ -238,7 +238,7 @@ class CTaskDialog : public CObject
 
 `CTaskDialog`は Unicode ライブラリを使用してアプリケーションをビルドするときにのみ使用できます。
 
-`CTaskDialog` 2 つの異なるコンス トラクターがあります。 1 つのコンス トラクターでは、2 つのコマンド ボタンと最大 6 つの標準ボタン コントロールを指定することができます。 さらにコマンド ボタンを追加するには、作成した後、`CTaskDialog`します。 2 番目のコンス トラクターは、コマンド ボタンをサポートしていませんが、無制限の数の標準ボタン コントロールを追加することができます。 コンス トラクターの詳細については、次を参照してください。 [CTaskDialog::CTaskDialog](#ctaskdialog)します。
+`CTaskDialog` 2 つの異なるコンス トラクターがあります。 1 つのコンス トラクターでは、2 つのコマンド ボタンと最大 6 つの標準ボタン コントロールを指定することができます。 さらにコマンド ボタンを追加するには、作成した後、`CTaskDialog`します。 2 番目のコンス トラクターは、コマンド ボタンをサポートしていませんが、無制限の数の標準ボタン コントロールを追加することができます。 コンス トラクターの詳細については、[CTaskDialog::CTaskDialog](#ctaskdialog)を参照してください。
 
 次の図は、サンプル`CTaskDialog`を一部のコントロールの場所を示します。
 

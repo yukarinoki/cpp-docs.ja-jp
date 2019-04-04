@@ -42,7 +42,7 @@ MFC で開発したアプリケーションは、メイン メッセージ ル�
 > [!NOTE]
 >  `Run`、 `OnIdle`、およびその他の特定のメンバー関数は、クラスのメンバーであるようになりました`CWinThread`クラスのではなく`CWinApp`します。 `CWinApp` は、`CWinThread` から派生しています。
 
-アイドル処理の詳細については、次を参照してください。 [OnIdle](../mfc/reference/cwinthread-class.md#onidle)で、 *MFC リファレンス*します。
+アイドル処理の詳細については、[OnIdle](../mfc/reference/cwinthread-class.md#onidle)で、 *MFC リファレンス*を参照してください。
 
 ##  <a name="_core_peekmessage_elsewhere_in_your_application"></a> PeekMessage、アプリケーションで別の場所
 

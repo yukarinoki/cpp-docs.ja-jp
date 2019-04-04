@@ -35,7 +35,7 @@ Visual C++ コンパイラおよびリンカーには、次のセキュリティ
 [/NXCOMPAT](../build/reference/nxcompat.md)、 [/NXCOMPAT (データ実行防止と互換性のある)](../build/reference/nxcompat-compatible-with-data-execution-prevention.md)これらコンパイラとリンカーのオプションは、データ実行防止 (DEP) との互換性を有効にします。 DEP は、CPU で非コード ページが実行されないようにします。
 
 [/analyze (コード分析)](../build/reference/analyze-code-analysis.md)<br/>
-このコンパイラ オプションを使用すると、潜在的なセキュリティ上の問題 (バッファー オーバーラン、非初期化メモリ、null ポインターの逆参照、メモリ リークなど) を報告するコード解析がアクティブになります。 このオプションの既定値はオフです。 詳細については、次を参照してください。 [Code Analysis for C と C++ の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)します。
+このコンパイラ オプションを使用すると、潜在的なセキュリティ上の問題 (バッファー オーバーラン、非初期化メモリ、null ポインターの逆参照、メモリ リークなど) を報告するコード解析がアクティブになります。 このオプションの既定値はオフです。 詳細については、[Code Analysis for C と C++ の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)を参照してください。
 
 [/DYNAMICBASE (ASLR (Address Space Layout Randomization) の使用)](../build/reference/dynamicbase-use-address-space-layout-randomization.md)<br/>
 このリンカー オプションにより、実行開始時にメモリ内の個別の場所で読み込むことができる実行可能イメージをビルドできます。 また、このオプションを使用すると、メモリ内のスタックの位置を予測することが非常に難しくなります。
@@ -54,7 +54,7 @@ C ランタイム ライブラリ (CRT) が強化され、セキュリティ上�
 
 ## <a name="checked-iterators"></a>Checked Iterators
 
-チェックを行う反復子は、コンテナー境界を強制します。 既定では、チェックを行う反復子が境界の外側にあると、例外が生成され、プログラムの実行が終了します。 Checked 反復子がプリプロセッサに割り当てられている値に依存する他のレベルの応答の定義などを提供します **\_SECURE\_SCL\_スロー**と **\_反復子\_デバッグ\_レベル**します。 たとえば、 **\_反復子\_デバッグ\_LEVEL = 2**、チェックされている反復子を提供が可能なを使用してデバッグ モードで包括的な正確性を確認しますアサートします。 詳細については、次を参照してください。 [Checked Iterators](../standard-library/checked-iterators.md)と[\_反復子\_デバッグ\_レベル](../standard-library/iterator-debug-level.md)します。
+チェックを行う反復子は、コンテナー境界を強制します。 既定では、チェックを行う反復子が境界の外側にあると、例外が生成され、プログラムの実行が終了します。 Checked 反復子がプリプロセッサに割り当てられている値に依存する他のレベルの応答の定義などを提供します **\_SECURE\_SCL\_スロー**と **\_反復子\_デバッグ\_レベル**します。 たとえば、 **\_反復子\_デバッグ\_LEVEL = 2**、チェックされている反復子を提供が可能なを使用してデバッグ モードで包括的な正確性を確認しますアサートします。 詳細については、[Checked Iterators](../standard-library/checked-iterators.md)と[\_反復子\_デバッグ\_レベル](../standard-library/iterator-debug-level.md)を参照してください。
 
 ## <a name="code-analysis-for-managed-code"></a>マネージド コードのコード分析
 
@@ -87,11 +87,11 @@ AppVerifier は、次の用途で使用できます。
 
 ## <a name="windows-user-accounts"></a>Windows ユーザー アカウント
 
-Administrators グループに属する Windows ユーザー アカウントを使用すると、開発者とユーザー (機能拡張により) がセキュリティ上の危険にさらされます。 詳細については、次を参照してください。[ユーザー グループのメンバーとして実行されている](running-as-a-member-of-the-users-group.md)と[アプリケーションのどのユーザー アカウント制御 (UAC) に影響を与えます](how-user-account-control-uac-affects-your-application.md)します。
+Administrators グループに属する Windows ユーザー アカウントを使用すると、開発者とユーザー (機能拡張により) がセキュリティ上の危険にさらされます。 詳細については、[ユーザー グループのメンバーとして実行されている](running-as-a-member-of-the-users-group.md)と[アプリケーションのどのユーザー アカウント制御 (UAC) に影響を与えます](how-user-account-control-uac-affects-your-application.md)を参照してください。
 
 ## <a name="guidance-for-speculative-execution-side-channels"></a>予測実行のサイド チャネルのガイダンス
 
-識別し、C++ のソフトウェアの予測実行サイド チャネルのハードウェア脆弱性に対する軽減する方法については、次を参照してください。[予測実行のサイド チャネルの C++ 開発者向けガイダンス](developer-guidance-speculative-execution.md)します。
+識別し、C++ のソフトウェアの予測実行サイド チャネルのハードウェア脆弱性に対する軽減する方法については、[予測実行のサイド チャネルの C++ 開発者向けガイダンス](developer-guidance-speculative-execution.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

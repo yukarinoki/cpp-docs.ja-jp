@@ -66,7 +66,7 @@ int main()
 > [!NOTE]
 > このトピックの例では、演算子がオーバーロードしていないときの、正しい方法使用と正しくない使用方法を説明します。 演算子をオーバーロードすることにより、`j * 4` のような式を左辺値にできます。
 
-条件*左辺値*と*rvalue*オブジェクト参照を参照する場合は、よく使用します。 参照の詳細については、次を参照してください。[左辺値参照宣言子: &](../cpp/lvalue-reference-declarator-amp.md)と[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)します。
+条件*左辺値*と*rvalue*オブジェクト参照を参照する場合は、よく使用します。 参照の詳細については、[左辺値参照宣言子: &](../cpp/lvalue-reference-declarator-amp.md)と[右辺値参照宣言子: & &](../cpp/rvalue-reference-declarator-amp-amp.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -19,7 +19,7 @@ ms.locfileid: "58772658"
 
 非管理対象のクラスは、パラメーターの既定値を持つコンス トラクターを持つことができ、コンパイラはこれを既定のコンス トラクターとして使用されます。 マークされたクラス、`value`キーワードとして使用されませんコンス トラクターを既定値でそのパラメーターの既定のコンス トラクター。
 
-詳細については、次を参照してください。[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)します。
+詳細については、[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)を参照してください。
 
 次の例では、C4534 が生成されます。
 

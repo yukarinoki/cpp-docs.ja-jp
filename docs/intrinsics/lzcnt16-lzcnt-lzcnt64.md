@@ -66,7 +66,7 @@ unsigned __int64 __lzcnt64(
 
 ハードウェアのサポートを決定する、`lzcnt`命令の呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 5 をチェックし、`CPUInfo[2] (ECX)`します。 このビットは、それ以外の場合、命令がサポートされている場合は 1、0 になります。 `lzcnt`命令が搭載されていないハードウェア上でこの組み込み関数を呼び出した場合、その結果は保証されません。
 
-Intel プロセッサをサポートしないで、`lzcnt`として命令が実行される命令のバイト エンコーディング`bsr`(ビット スキャン逆)。 コードの移植性を重視する場合は、使用を検討してください、`_BitScanReverse`組み込み代わりにします。 詳細については、次を参照してください。 [_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)します。
+Intel プロセッサをサポートしないで、`lzcnt`として命令が実行される命令のバイト エンコーディング`bsr`(ビット スキャン逆)。 コードの移植性を重視する場合は、使用を検討してください、`_BitScanReverse`組み込み代わりにします。 詳細については、[_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)を参照してください。
 
 ## <a name="example"></a>例
 

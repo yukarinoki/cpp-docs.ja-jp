@@ -19,7 +19,7 @@ ms.locfileid: "58769083"
 
 型の特徴に無効な引数が渡されました。
 
-詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)します。
+詳細については、[型の特徴のコンパイラ サポート](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

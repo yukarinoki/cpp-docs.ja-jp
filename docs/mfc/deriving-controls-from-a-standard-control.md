@@ -36,7 +36,7 @@ ms.locfileid: "57300376"
 
 1. 上書き、`OnInitDialog`メンバー関数を呼び出すダイアログ クラスで、`SubclassDlgItem`派生コントロールのメンバー関数。
 
-`SubclassDlgItem` 「動的なサブクラス」コントロールは、ダイアログ テンプレートから作成されます。 コントロールが動的にサブクラス化されたときに、独自のアプリケーション内でいくつかのメッセージを処理、残りのメッセージを Windows に渡す Windows にフックします。 詳細については、次を参照してください。、 [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem)クラスのメンバー関数`CWnd`で、 *MFC リファレンス*します。 次の例は、のオーバーライドを作成する方法を示しています`OnInitDialog`を呼び出す`SubclassDlgItem`:。
+`SubclassDlgItem` 「動的なサブクラス」コントロールは、ダイアログ テンプレートから作成されます。 コントロールが動的にサブクラス化されたときに、独自のアプリケーション内でいくつかのメッセージを処理、残りのメッセージを Windows に渡す Windows にフックします。 詳細については、、 [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem)クラスのメンバー関数`CWnd`で、 *MFC リファレンス*を参照してください。 次の例は、のオーバーライドを作成する方法を示しています`OnInitDialog`を呼び出す`SubclassDlgItem`:。
 
 [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]
 

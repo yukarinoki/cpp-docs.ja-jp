@@ -33,4 +33,4 @@ Visual Studio でのネイティブ メモリ プロファイラーは、割り�
 __declspec(allocator) void* myMalloc(size_t size)
 ```
 
-詳細については、次を参照してください。 [Visual Studio でのメモリ使用量の測定](/visualstudio/profiling/memory-usage)と[カスタム ネイティブ ETW ヒープ イベント](/visualstudio/profiling/custom-native-etw-heap-events)します。
+詳細については、[Visual Studio でのメモリ使用量の測定](/visualstudio/profiling/memory-usage)と[カスタム ネイティブ ETW ヒープ イベント](/visualstudio/profiling/custom-native-etw-heap-events)を参照してください。

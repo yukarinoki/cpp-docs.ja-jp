@@ -64,7 +64,7 @@ int fflush(
 
 ディスクへのコミットの機能の制御については、「[ストリーム入出力](../../c-runtime-library/stream-i-o.md)」、「[fopen](fopen-wfopen.md)」、および「[_fdopen](fdopen-wfdopen.md)」を参照してください。
 
-この関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンでは、次を参照してください。 **_fflush_nolock**します。
+この関数は呼び出し元スレッドをロックするため、スレッド セーフです。 ロックしないバージョンでは、**_fflush_nolock**を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

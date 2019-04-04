@@ -106,7 +106,7 @@ CTraits クラスに似ていますが、柔軟性よりも、MFC コレクシ�
 
 ## <a name="comments"></a>コメント
 
-CTraits クラスの一覧は、次を参照してください。[コレクション クラス](../atl/collection-classes.md)します。
+CTraits クラスの一覧は、[コレクション クラス](../atl/collection-classes.md)を参照してください。
 
 次の図は、CTraits クラスのクラス階層を示します。
 

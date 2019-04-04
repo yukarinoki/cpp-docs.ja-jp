@@ -36,7 +36,7 @@ BSCMAKE [options] sbrfiles
 BSCMAKE main.sbr file1.sbr file2.sbr
 ```
 
-関連情報については、次を参照してください。 [BSCMAKE コマンド ファイル](bscmake-command-file-response-file.md)と[BSCMAKE オプション](bscmake-options.md)します。
+関連情報については、[BSCMAKE コマンド ファイル](bscmake-command-file-response-file.md)と[BSCMAKE オプション](bscmake-options.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

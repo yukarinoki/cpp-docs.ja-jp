@@ -17,7 +17,7 @@ ms.locfileid: "51523352"
 
 MFC (Microsoft Foundation Class) ライブラリには、ODBC (Open Database Connectivity) を使用したプログラミング用のクラスが用意されています。 Visual Studio 2015 および SQL Server 2012 の ODBC SQL データ ソースに接続することをお勧めは。
 
-MFC を使用せず、ODBC API の使用に関する詳細については、次を参照してください。、[オープン データベース コネクティビティ (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) MSDN の SDK です。
+MFC を使用せず、ODBC API の使用に関する詳細については、、[オープン データベース コネクティビティ (ODBC)](/sql/odbc/microsoft-open-database-connectivity-odbc) MSDN の SDK を参照してください。
 
 
 ## <a name="in-this-section"></a>このセクションの内容

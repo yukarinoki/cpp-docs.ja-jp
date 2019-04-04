@@ -480,7 +480,7 @@ throw(COleException*);
 
 ソース文字列に数値以外の文字の意味は、ローカルの言語仕様 (ロケール Id) を使用します。
 
-ロケール ID の値の詳細については、次を参照してください。[複数の言語をサポートしている](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages)します。
+ロケール ID の値の詳細については、[複数の言語をサポートしている](/previous-versions/windows/desktop/automat/supporting-multiple-national-languages)を参照してください。
 
 文字列が通貨に変換できた場合の値、この値`COleCurrency`オブジェクトが有効な値をその状態を設定します。
 

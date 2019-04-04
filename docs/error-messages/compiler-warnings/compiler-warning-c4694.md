@@ -19,7 +19,7 @@ ms.locfileid: "58770357"
 
 シールされた抽象クラスは参照型を継承できません。シールされた抽象クラスは、基底クラスの関数を実装することも、それ自体を基底クラスとして使用しすることもできません。
 
-詳細については、次を参照してください。[抽象](../../extensions/abstract-cpp-component-extensions.md)、[シール](../../extensions/sealed-cpp-component-extensions.md)、および[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)します。
+詳細については、[抽象](../../extensions/abstract-cpp-component-extensions.md)、[シール](../../extensions/sealed-cpp-component-extensions.md)、および[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)を参照してください。
 
 この警告は、自動的にエラーになります。 この動作を変更する場合を使用して、 [#pragma warning](../../preprocessor/warning.md)します。
 

@@ -19,7 +19,7 @@ ms.locfileid: "58781394"
 
 デリゲートのインスタンス化が静的メンバー関数向けであるか、またはインスタンス関数へのバインドされていないデリゲートとして存在した可能性があるため、コンパイラはこのエラーを発行しました。
 
-詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)します。
+詳細については、[デリゲート (C++ コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

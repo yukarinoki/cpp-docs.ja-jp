@@ -15,7 +15,7 @@ ms.locfileid: "50550801"
 ---
 # <a name="selecting-and-manipulating-records"></a>レコードの選択と操作
 
-SQL を使用してデータ ソースからレコードを選択すると通常**選択**ステートメントでは、一連のテーブルまたはクエリからのレコードである結果セットを取得します。 データベース クラスでは、レコード セット オブジェクトを使用するを選択し、結果セットにアクセスします。 これはクラスから派生したアプリケーションに固有のクラスのオブジェクト[CRecordset](../../mfc/reference/crecordset-class.md)します。 レコード セット クラスを定義する場合は、それを関連付けるデータ ソース、使用するには、テーブルおよびテーブルの列を指定します。 MFC アプリケーション ウィザードまたは**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 特定のデータ ソースへの接続を持つクラスを作成します。 ウィザードの記述、 [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)クラスのメンバー関数`CRecordset`テーブル名を返します。 ウィザードを使用して、レコード セット クラスを作成する方法の詳細については、次を参照してください。[データベースのサポート、MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)と[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)します。
+SQL を使用してデータ ソースからレコードを選択すると通常**選択**ステートメントでは、一連のテーブルまたはクエリからのレコードである結果セットを取得します。 データベース クラスでは、レコード セット オブジェクトを使用するを選択し、結果セットにアクセスします。 これはクラスから派生したアプリケーションに固有のクラスのオブジェクト[CRecordset](../../mfc/reference/crecordset-class.md)します。 レコード セット クラスを定義する場合は、それを関連付けるデータ ソース、使用するには、テーブルおよびテーブルの列を指定します。 MFC アプリケーション ウィザードまたは**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) 特定のデータ ソースへの接続を持つクラスを作成します。 ウィザードの記述、 [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)クラスのメンバー関数`CRecordset`テーブル名を返します。 ウィザードを使用して、レコード セット クラスを作成する方法の詳細については、[データベースのサポート、MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)と[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)を参照してください。
 
 使用して、 [CRecordset](../../mfc/reference/crecordset-class.md) 、実行時にオブジェクトのことができます。
 
@@ -31,7 +31,7 @@ SQL を使用してデータ ソースからレコードを選択すると通常
 
 - レコード セットのクエリを再実行ができるかどうかをテストし、レコード セットの内容を更新します。
 
-レコード セット オブジェクトの使用が完了したらを閉じるし、それを破棄します。 レコード セットの詳細については、次を参照してください。[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)します。
+レコード セット オブジェクトの使用が完了したらを閉じるし、それを破棄します。 レコード セットの詳細については、[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

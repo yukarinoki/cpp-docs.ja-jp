@@ -19,7 +19,7 @@ ms.locfileid: "50440275"
 
 ネイティブ型をアセンブリ外部から参照できることができますでのネイティブ型のアセンブリへのアクセスのみを指定できます、 **/clr**コンパイルします。
 
-詳細については、次を参照してください。[可視性を入力](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。
+詳細については、[可視性を入力](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)を参照してください。
 
 ## <a name="example"></a>例
 

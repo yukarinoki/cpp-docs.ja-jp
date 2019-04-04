@@ -25,7 +25,7 @@ ms.locfileid: "50551256"
 
 コンパイラが 1 つの変数をするプロセスはそのため、 `const`  **/clr: 純粋な**、すべてのアプリケーション ドメインでのみそれらの読み取りを行う。
 
-詳細については、次を参照してください。[プロセス](../../cpp/process.md)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。
+詳細については、[プロセス](../../cpp/process.md)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)を参照してください。
 
 ## <a name="example"></a>例
 

@@ -27,7 +27,7 @@ ms.locfileid: "57300636"
 
 ## <a name="example"></a>例
 
-次の例では、`is_prime` 関数と `is_carmichael` 関数を使用して、素数とカーマイケル数のセットを計算します。 この例では、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)と[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)それぞれ計算するアルゴリズムを並列で設定します。 並列アルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+次の例では、`is_prime` 関数と `is_carmichael` 関数を使用して、素数とカーマイケル数のセットを計算します。 この例では、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)と[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)それぞれ計算するアルゴリズムを並列で設定します。 並列アルゴリズムの詳細については、[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)を参照してください。
 
 この例では、 [concurrency::concurrent_queue](../../parallel/concrt/reference/concurrent-queue-class.md)は作業キューとしてに後でそのオブジェクトを使用してそのため、カーマイケルのセットを保持するオブジェクトの数値します。 使用して、 [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)この素因数を検出するセットを反復処理には後であるために、素数のセットを保持するオブジェクト。
 
@@ -44,7 +44,7 @@ ms.locfileid: "57300636"
 
 ## <a name="example"></a>例
 
-この例では、カーマイケル数のキュー内の各要素を、`prime_factors_of` 関数を呼び出してその素因数を計算することで処理します。 この作業を並列実行するために、タスク グループを使用します。 タスク グループの詳細については、次を参照してください。[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+この例では、カーマイケル数のキュー内の各要素を、`prime_factors_of` 関数を呼び出してその素因数を計算することで処理します。 この作業を並列実行するために、タスク グループを使用します。 タスク グループの詳細については、[タスクの並列化](../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
 
 この例では、カーマイケル数に 5 つ以上の素因数がある場合、カーマイケル数ごとに素因数を出力します。
 

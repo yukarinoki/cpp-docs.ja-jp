@@ -71,7 +71,7 @@ void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used
 ```
 
-例外の仕様の詳細については、次を参照してください。[例外仕様](../cpp/exception-specifications-throw-cpp.md)します。
+例外の仕様の詳細については、[例外仕様](../cpp/exception-specifications-throw-cpp.md)を参照してください。
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 

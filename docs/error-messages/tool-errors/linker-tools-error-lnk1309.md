@@ -25,6 +25,6 @@ CLR イメージの種類が要求されました **/CLRIMAGETYPE**が 1 つま�
 
 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションおよびサポート ライブラリは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 
-[D] ptrustu .lib を使用して、部分的に信頼された CLR 純粋なアプリケーションをビルドしようとした場合は、LNK1309 も表示されます。 部分的に信頼されたアプリケーションを作成する方法については、次を参照してください。[方法: CRT ライブラリ DLL の依存関係の削除によって部分的に信頼されたアプリケーションを作成する](../../dotnet/create-a-partially-trusted-application.md)します。
+[D] ptrustu .lib を使用して、部分的に信頼された CLR 純粋なアプリケーションをビルドしようとした場合は、LNK1309 も表示されます。 部分的に信頼されたアプリケーションを作成する方法については、[方法: CRT ライブラリ DLL の依存関係の削除によって部分的に信頼されたアプリケーションを作成する](../../dotnet/create-a-partially-trusted-application.md)を参照してください。
 
-詳細については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[/CLRIMAGETYPE (型の CLR イメージの指定)](../../build/reference/clrimagetype-specify-type-of-clr-image.md)します。
+詳細については、[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[/CLRIMAGETYPE (型の CLR イメージの指定)](../../build/reference/clrimagetype-specify-type-of-clr-image.md)を参照してください。

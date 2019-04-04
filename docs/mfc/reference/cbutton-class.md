@@ -772,7 +772,7 @@ BOOL SetDropDownState(BOOL fDropDown);
 
 ### <a name="remarks"></a>Remarks
 
-分割ボタン コントロールは、BS_SPLITBUTTON または BS_DEFSPLITBUTTON のスタイルを備え、ボタンと右側の下矢印で構成されます。 詳細については、次を参照してください。[ボタンのスタイル](/windows/desktop/Controls/button-styles)します。 通常は、ドロップダウン状態は、ユーザーがドロップダウンの矢印をクリックしたときに設定されます。 コントロールのドロップダウン リストの状態をプログラムで設定するのにには、このメソッドを使用します。 ドロップダウン矢印が、状態を示す影を描画します。
+分割ボタン コントロールは、BS_SPLITBUTTON または BS_DEFSPLITBUTTON のスタイルを備え、ボタンと右側の下矢印で構成されます。 詳細については、[ボタンのスタイル](/windows/desktop/Controls/button-styles)を参照してください。 通常は、ドロップダウン状態は、ユーザーがドロップダウンの矢印をクリックしたときに設定されます。 コントロールのドロップダウン リストの状態をプログラムで設定するのにには、このメソッドを使用します。 ドロップダウン矢印が、状態を示す影を描画します。
 
 このメソッドは、送信、 [BCM_SETDROPDOWNSTATE](/windows/desktop/Controls/bcm-setdropdownstate)メッセージは、Windows SDK で説明します。
 

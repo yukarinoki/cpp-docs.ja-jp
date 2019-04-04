@@ -34,13 +34,13 @@ ms.locfileid: "57277327"
 - [実行時に表示されないダイアログ コントロールへのアクセス](#_core_accessing_dialog_controls_that_are_invisible_at_run_time)
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
 
 ##  <a name="_core_using_database_classes_in_activex_controls"></a> ActiveX コントロールにおけるデータベース クラスの使用
 
 ActiveX コントロールのクラスは、クラス ライブラリの一部であるために、同じ手順と MFC データベース クラスを使用する ActiveX コントロールの開発に標準の MFC アプリケーションでデータベース クラスの使用に関する規則を適用できます。
 
-MFC データベース クラスの一般的な概要については、次を参照してください。 [MFC データベース クラス (DAO と ODBC)](../data/mfc-database-classes-odbc-and-dao.md)します。 この記事では MFC ODBC クラスと MFC DAO クラスしの詳細については、いずれかを紹介します。
+MFC データベース クラスの一般的な概要については、[MFC データベース クラス (DAO と ODBC)](../data/mfc-database-classes-odbc-and-dao.md)を参照してください。 この記事では MFC ODBC クラスと MFC DAO クラスしの詳細については、いずれかを紹介します。
 
 > [!NOTE]
 >  Visual C 環境とウィザードは、(DAO クラスが含まれていますし、それらを使用することもできます) が DAO をサポートしています。 使用することをお勧めします。 [OLE DB テンプレート](../data/oledb/ole-db-programming.md)または[ODBC と MFC](../data/odbc/odbc-and-mfc.md)の新しいプロジェクト。 DAO は、既存のアプリケーションを維持するためにのみ使用する必要があります。

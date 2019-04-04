@@ -252,7 +252,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`adjacent_find`します。 詳細については、次を参照してください。 [adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`adjacent_find`します。 詳細については、[adjacent_find](../standard-library/algorithm-functions.md#adjacent_find)を参照してください。
 
 ## <a name="binary_search"></a> binary_search (STL/CLR)
 
@@ -270,7 +270,7 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`binary_search`します。 詳細については、次を参照してください。 [binary_search](../standard-library/algorithm-functions.md#binary_search)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`binary_search`します。 詳細については、[binary_search](../standard-library/algorithm-functions.md#binary_search)を参照してください。
 
 ## <a name="copy"></a> コピー (STL/CLR)
 
@@ -285,7 +285,7 @@ template<class _InIt, class _OutIt> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`copy`します。 詳細については、次を参照してください。[コピー](../standard-library/algorithm-functions.md#copy)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`copy`します。 詳細については、[コピー](../standard-library/algorithm-functions.md#copy)を参照してください。
 
 ## <a name="copy_backward"></a> copy_backward (STL/CLR)
 
@@ -301,7 +301,7 @@ template<class _BidIt1, class _BidIt2> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`copy_backward`します。 詳細については、次を参照してください。 [copy_backward](../standard-library/algorithm-functions.md#copy_backward)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`copy_backward`します。 詳細については、[copy_backward](../standard-library/algorithm-functions.md#copy_backward)を参照してください。
 
 ## <a name="count"></a> カウント (STL/CLR)
 
@@ -317,7 +317,7 @@ template<class _InIt, class _Ty> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`count`します。 詳細については、次を参照してください。[カウント](../standard-library/algorithm-functions.md#count)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`count`します。 詳細については、[カウント](../standard-library/algorithm-functions.md#count)を参照してください。
 
 ## <a name="count_if"></a> count_if (STL/CLR)
 
@@ -333,7 +333,7 @@ template<class _InIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`count_if`します。 詳細については、次を参照してください。 [count_if](../standard-library/algorithm-functions.md#count_if)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`count_if`します。 詳細については、[count_if](../standard-library/algorithm-functions.md#count_if)を参照してください。
 
 ## <a name="equal"></a> 等しい (STL/CLR)
 
@@ -351,7 +351,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`equal`します。 詳細については、次を参照してください。[等しい](../standard-library/algorithm-functions.md#equal)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`equal`します。 詳細については、[等しい](../standard-library/algorithm-functions.md#equal)を参照してください。
 
 ## <a name="equal_range"></a> equal_range (STL/CLR)
 
@@ -370,7 +370,7 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`equal_range`します。 詳細については、次を参照してください。 [equal_range](../standard-library/algorithm-functions.md#equal_range)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`equal_range`します。 詳細については、[equal_range](../standard-library/algorithm-functions.md#equal_range)を参照してください。
 
 ## <a name="fill"></a> 塗りつぶし (STL/CLR)
 
@@ -385,7 +385,7 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`fill`します。 詳細については、次を参照してください。[塗りつぶし](../standard-library/algorithm-functions.md#fill)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`fill`します。 詳細については、[塗りつぶし](../standard-library/algorithm-functions.md#fill)を参照してください。
 
 ## <a name="fill_n"></a> fill_n (STL/CLR)
 
@@ -400,7 +400,7 @@ template<class _OutIt, class _Diff, class _Ty> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`fill_n`します。 詳細については、次を参照してください。 [fill_n](../standard-library/algorithm-functions.md#fill_n)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`fill_n`します。 詳細については、[fill_n](../standard-library/algorithm-functions.md#fill_n)を参照してください。
 
 ## <a name="find"></a> 検索 (STL/CLR)
 
@@ -415,7 +415,7 @@ template<class _InIt, class _Ty> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`find`します。 詳細については、次を参照してください。[検索](../standard-library/algorithm-functions.md#find)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`find`します。 詳細については、[検索](../standard-library/algorithm-functions.md#find)を参照してください。
 
 ## <a name="find_end"></a> find_end (STL/CLR)
 
@@ -434,7 +434,7 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`find_end`します。 詳細については、次を参照してください。 [find_end](../standard-library/algorithm-functions.md#find_end)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`find_end`します。 詳細については、[find_end](../standard-library/algorithm-functions.md#find_end)を参照してください。
 
 ## <a name="find_first_of"></a> find_first_of (STL/CLR)
 
@@ -453,7 +453,7 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`find_first_of`します。 詳細については、次を参照してください。 [find_first_of](../standard-library/algorithm-functions.md#find_first_of)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`find_first_of`します。 詳細については、[find_first_of](../standard-library/algorithm-functions.md#find_first_of)を参照してください。
 
 ## <a name="find_if"></a> find_if (STL/CLR)
 
@@ -468,7 +468,7 @@ template<class _InIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`find_if`します。 詳細については、次を参照してください。 [find_if](../standard-library/algorithm-functions.md#find_if)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`find_if`します。 詳細については、[find_if](../standard-library/algorithm-functions.md#find_if)を参照してください。
 
 ## <a name="for_each"></a> for_each (STL/CLR)
 
@@ -483,7 +483,7 @@ template<class _InIt, class _Fn1> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`for_each`します。 詳細については、次を参照してください。 [for_each](../standard-library/algorithm-functions.md#for_each)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`for_each`します。 詳細については、[for_each](../standard-library/algorithm-functions.md#for_each)を参照してください。
 
 ## <a name="generate"></a> 生成 (STL/CLR)
 
@@ -498,7 +498,7 @@ template<class _FwdIt, class _Fn0> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`generate`します。 詳細については、次を参照してください。[生成](../standard-library/algorithm-functions.md#generate)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`generate`します。 詳細については、[生成](../standard-library/algorithm-functions.md#generate)を参照してください。
 
 ## <a name="generate_n"></a> generate_n (STL/CLR)
 
@@ -513,7 +513,7 @@ template<class _OutIt, class _Diff, class _Fn0> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`generate_n`します。 詳細については、次を参照してください。 [generate_n](../standard-library/algorithm-functions.md#generate_n)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`generate_n`します。 詳細については、[generate_n](../standard-library/algorithm-functions.md#generate_n)を参照してください。
 
 ## <a name="includes"></a> (STL/CLR) が含まれています
 
@@ -532,7 +532,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`includes`します。 詳細については、次を参照してください。[が含まれています](../standard-library/algorithm-functions.md#includes)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`includes`します。 詳細については、[が含まれています](../standard-library/algorithm-functions.md#includes)を参照してください。
 
 ## <a name="inplace_merge"></a> inplace_merge (STL/CLR)
 
@@ -550,7 +550,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`inplace_merge`詳細については、次を参照してください。 [inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`inplace_merge`詳細については、[inplace_merge](../standard-library/algorithm-functions.md#inplace_merge)を参照してください。
 
 ## <a name="iter_swap"></a> iter_swap (STL/CLR)
 
@@ -565,7 +565,7 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`iter_swap`します。 詳細については、次を参照してください。 [iter_swap](../standard-library/algorithm-functions.md#iter_swap)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`iter_swap`します。 詳細については、[iter_swap](../standard-library/algorithm-functions.md#iter_swap)を参照してください。
 
 ## <a name="lexicographical_compare"></a> lexicographical_compare (STL/CLR)
 
@@ -584,7 +584,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`lexicographical_compare`します。 詳細については、次を参照してください。 [lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`lexicographical_compare`します。 詳細については、[lexicographical_compare](../standard-library/algorithm-functions.md#lexicographical_compare)を参照してください。
 
 ## <a name="lower_bound"></a> lower_bound (STL/CLR)
 
@@ -602,7 +602,7 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`lower_bound`します。 詳細については、次を参照してください。 [lower_bound](../standard-library/algorithm-functions.md#lower_bound)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`lower_bound`します。 詳細については、[lower_bound](../standard-library/algorithm-functions.md#lower_bound)を参照してください。
 
 ## <a name="make_heap"></a> make_heap (STL/CLR)
 
@@ -619,7 +619,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`make_heap`します。 詳細については、次を参照してください。 [make_heap](../standard-library/algorithm-functions.md#make_heap)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`make_heap`します。 詳細については、[make_heap](../standard-library/algorithm-functions.md#make_heap)を参照してください。
 
 ## <a name="max"></a> 最大 (STL/CLR)
 
@@ -636,7 +636,7 @@ template<class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`max`します。 詳細については、次を参照してください。 [max](../standard-library/algorithm-functions.md#max)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`max`します。 詳細については、[max](../standard-library/algorithm-functions.md#max)を参照してください。
 
 ## <a name="max_element"></a> max_element (STL/CLR)
 
@@ -653,7 +653,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`max_element`します。 詳細については、次を参照してください。 [max_element](../standard-library/algorithm-functions.md#max_element)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`max_element`します。 詳細については、[max_element](../standard-library/algorithm-functions.md#max_element)を参照してください。
 
 ## <a name="merge"></a> マージ (STL/CLR)
 
@@ -672,7 +672,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`merge`します。 詳細については、次を参照してください。[マージ](../standard-library/algorithm-functions.md#merge)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`merge`します。 詳細については、[マージ](../standard-library/algorithm-functions.md#merge)を参照してください。
 
 ## <a name="min"></a> min (STL/CLR)
 
@@ -689,7 +689,7 @@ template<class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`min`します。 詳細については、次を参照してください。 [min](../standard-library/algorithm-functions.md#min)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`min`します。 詳細については、[min](../standard-library/algorithm-functions.md#min)を参照してください。
 
 ## <a name="min_element"></a> min_element (STL/CLR)
 
@@ -706,7 +706,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`min_element`します。 詳細については、次を参照してください。 [min_element](../standard-library/algorithm-functions.md#min_element)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`min_element`します。 詳細については、[min_element](../standard-library/algorithm-functions.md#min_element)を参照してください。
 
 ## <a name="mismatch"></a> 一致しません (STL/CLR)
 
@@ -726,7 +726,7 @@ template<class _InIt1, class _InIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`mismatch`します。 詳細については、次を参照してください。[不一致](../standard-library/algorithm-functions.md#mismatch)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`mismatch`します。 詳細については、[不一致](../standard-library/algorithm-functions.md#mismatch)を参照してください。
 
 ## <a name="next_permutation"></a> next_permutation (STL/CLR)
 
@@ -743,7 +743,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`next_permutation`します。 詳細については、次を参照してください。 [next_permutation](../standard-library/algorithm-functions.md#next_permutation)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`next_permutation`します。 詳細については、[next_permutation](../standard-library/algorithm-functions.md#next_permutation)を参照してください。
 
 ## <a name="nth_element"></a> nth_element (STL/CLR)
 
@@ -761,7 +761,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`nth_element`します。 詳細については、次を参照してください。 [nth_element](../standard-library/algorithm-functions.md#nth_element)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`nth_element`します。 詳細については、[nth_element](../standard-library/algorithm-functions.md#nth_element)を参照してください。
 
 ## <a name="partial_sort"></a> partial_sort (STL/CLR)
 
@@ -779,7 +779,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`partial_sort`します。 詳細については、次を参照してください。 [partial_sort](../standard-library/algorithm-functions.md#partial_sort)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`partial_sort`します。 詳細については、[partial_sort](../standard-library/algorithm-functions.md#partial_sort)を参照してください。
 
 ## <a name="partial_sort_copy"></a> partial_sort_copy (STL/CLR)
 
@@ -798,7 +798,7 @@ template<class _InIt, class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`partial_sort_copy`します。 詳細については、次を参照してください。 [partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`partial_sort_copy`します。 詳細については、[partial_sort_copy](../standard-library/algorithm-functions.md#partial_sort_copy)を参照してください。
 
 ## <a name="partition"></a> パーティション (STL/CLR)
 
@@ -813,7 +813,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`partition`します。 詳細については、次を参照してください。[パーティション](../standard-library/algorithm-functions.md#partition)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`partition`します。 詳細については、[パーティション](../standard-library/algorithm-functions.md#partition)を参照してください。
 
 ## <a name="pop_heap"></a> pop_heap (STL/CLR)
 
@@ -830,7 +830,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`pop_heap`します。 詳細については、次を参照してください。 [pop_heap](../standard-library/algorithm-functions.md#pop_heap)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`pop_heap`します。 詳細については、[pop_heap](../standard-library/algorithm-functions.md#pop_heap)を参照してください。
 
 ## <a name="prev_permutation"></a> prev_permutation (STL/CLR)
 
@@ -847,7 +847,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`prev_permutation`します。 詳細については、次を参照してください。 [prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`prev_permutation`します。 詳細については、[prev_permutation](../standard-library/algorithm-functions.md#prev_permutation)を参照してください。
 
 ## <a name="push_heap"></a> push_heap (STL/CLR)
 
@@ -864,7 +864,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`push_heap`します。 詳細については、次を参照してください。 [push_heap](../standard-library/algorithm-functions.md#push_heap)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`push_heap`します。 詳細については、[push_heap](../standard-library/algorithm-functions.md#push_heap)を参照してください。
 
 ## <a name="random_shuffle"></a> random_shuffle (STL/CLR)
 
@@ -881,7 +881,7 @@ template<class _RanIt, class _Fn1> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`random_shuffle`します。 詳細については、次を参照してください。 [random_shuffle](../standard-library/algorithm-functions.md#random_shuffle)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`random_shuffle`します。 詳細については、[random_shuffle](../standard-library/algorithm-functions.md#random_shuffle)を参照してください。
 
 ## <a name="remove"></a> 削除 (STL/CLR)
 
@@ -896,7 +896,7 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`remove`します。 詳細については、次を参照してください。[削除](../standard-library/algorithm-functions.md#remove)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`remove`します。 詳細については、[削除](../standard-library/algorithm-functions.md#remove)を参照してください。
 
 ## <a name="remove_copy"></a> remove_copy (STL/CLR)
 
@@ -912,7 +912,7 @@ template<class _InIt, class _OutIt, class _Ty> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`remove_copy`します。 詳細については、次を参照してください。 [remove_copy](../standard-library/algorithm-functions.md#remove_copy)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`remove_copy`します。 詳細については、[remove_copy](../standard-library/algorithm-functions.md#remove_copy)を参照してください。
 
 ## <a name="remove_copy_if"></a> remove_copy_if (STL/CLR)
 
@@ -928,7 +928,7 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`remove_copy_if`します。 詳細については、次を参照してください。 [remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`remove_copy_if`します。 詳細については、[remove_copy_if](../standard-library/algorithm-functions.md#remove_copy_if)を参照してください。
 
 ## <a name="remove_if"></a> remove_if (STL/CLR)
 
@@ -943,7 +943,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`remove_if`します。 詳細については、次を参照してください。 [remove_if](../standard-library/algorithm-functions.md#remove_if)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`remove_if`します。 詳細については、[remove_if](../standard-library/algorithm-functions.md#remove_if)を参照してください。
 
 ## <a name="replace"></a> 置換 (STL/CLR)
 
@@ -959,7 +959,7 @@ template<class _FwdIt, class _Ty> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`replace`します。 詳細については、次を参照してください。[置換](../standard-library/algorithm-functions.md#replace)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`replace`します。 詳細については、[置換](../standard-library/algorithm-functions.md#replace)を参照してください。
 
 ## <a name="replace_copy"></a> replace_copy (STL/CLR)
 
@@ -975,7 +975,7 @@ template<class _InIt, class _OutIt, class _Ty> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`replace_copy`します。 詳細については、次を参照してください。 [replace_copy](../standard-library/algorithm-functions.md#replace_copy)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`replace_copy`します。 詳細については、[replace_copy](../standard-library/algorithm-functions.md#replace_copy)を参照してください。
 
 ## <a name="replace_copy_if"></a> replace_copy_if (STL/CLR)
 
@@ -991,7 +991,7 @@ template<class _InIt, class _OutIt, class _Pr, class _Ty> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`replace_copy_if`します。 詳細については、次を参照してください。 [replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`replace_copy_if`します。 詳細については、[replace_copy_if](../standard-library/algorithm-functions.md#replace_copy_if)を参照してください。
 
 ## <a name="replace_if"></a> replace_if (STL/CLR)
 
@@ -1007,7 +1007,7 @@ template<class _FwdIt, class _Pr, class _Ty> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`replace_if`します。 詳細については、次を参照してください。 [replace_if](../standard-library/algorithm-functions.md#replace_if)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`replace_if`します。 詳細については、[replace_if](../standard-library/algorithm-functions.md#replace_if)を参照してください。
 
 ## <a name="reverse"></a> 逆の順序 (STL/CLR)
 
@@ -1022,7 +1022,7 @@ template<class _BidIt> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`reverse`します。 詳細については、次を参照してください。[リバース](../standard-library/algorithm-functions.md#reverse)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`reverse`します。 詳細については、[リバース](../standard-library/algorithm-functions.md#reverse)を参照してください。
 
 ## <a name="reverse_copy"></a> reverse_copy (STL/CLR)
 
@@ -1037,7 +1037,7 @@ template<class _BidIt, class _OutIt> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`reverse_copy`します。 詳細については、次を参照してください。 [reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`reverse_copy`します。 詳細については、[reverse_copy](../standard-library/algorithm-functions.md#reverse_copy)を参照してください。
 
 ## <a name="rotate"></a> 回転 (STL/CLR)
 
@@ -1052,7 +1052,7 @@ template<class _FwdIt> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`rotate`します。 詳細については、次を参照してください。[回転](../standard-library/algorithm-functions.md#rotate)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`rotate`します。 詳細については、[回転](../standard-library/algorithm-functions.md#rotate)を参照してください。
 
 ## <a name="rotate_copy"></a> rotate_copy (STL/CLR)
 
@@ -1068,7 +1068,7 @@ template<class _FwdIt, class _OutIt> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`rotate_copy`します。 詳細については、次を参照してください。 [rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`rotate_copy`します。 詳細については、[rotate_copy](../standard-library/algorithm-functions.md#rotate_copy)を参照してください。
 
 ## <a name="search_"></a> 検索 (STL/CLR)
 
@@ -1087,7 +1087,7 @@ template<class _FwdIt1, class _FwdIt2, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`search`します。 詳細については、次を参照してください。[検索](../standard-library/algorithm-functions.md#search)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`search`します。 詳細については、[検索](../standard-library/algorithm-functions.md#search)を参照してください。
 
 ## <a name="search_n"></a> search_n (STL/CLR)
 
@@ -1106,7 +1106,7 @@ template<class _FwdIt1, class _Diff2, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`search_n`します。 詳細については、次を参照してください。 [search_n](../standard-library/algorithm-functions.md#search_n)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`search_n`します。 詳細については、[search_n](../standard-library/algorithm-functions.md#search_n)を参照してください。
 
 ## <a name="set_difference"></a> set_difference (STL/CLR)
 
@@ -1125,7 +1125,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`set_difference`します。 詳細については、次を参照してください。 [set_difference](../standard-library/algorithm-functions.md#set_difference)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`set_difference`します。 詳細については、[set_difference](../standard-library/algorithm-functions.md#set_difference)を参照してください。
 
 ## <a name="set_intersection"></a> set_intersection (STL/CLR)
 
@@ -1144,7 +1144,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`set_intersection`します。 詳細については、次を参照してください。 [set_intersection](../standard-library/algorithm-functions.md#set_intersection)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`set_intersection`します。 詳細については、[set_intersection](../standard-library/algorithm-functions.md#set_intersection)を参照してください。
 
 ## <a name="set_symmetric_difference"></a> set_symmetric_difference (STL/CLR)
 
@@ -1163,7 +1163,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`set_symmetric_difference`します。 詳細については、次を参照してください。 [set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`set_symmetric_difference`します。 詳細については、[set_symmetric_difference](../standard-library/algorithm-functions.md#set_symmetric_difference)を参照してください。
 
 ## <a name="set_union"></a> set_union (STL/CLR)
 
@@ -1182,7 +1182,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`set_union`します。 詳細については、次を参照してください。 [set_union](../standard-library/algorithm-functions.md#set_union)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`set_union`します。 詳細については、[set_union](../standard-library/algorithm-functions.md#set_union)を参照してください。
 
 ## <a name="sort"></a> 並べ替え (STL/CLR)
 
@@ -1199,7 +1199,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`sort`します。 詳細については、次を参照してください。[並べ替え](../mfc/reference/cmfclistctrl-class.md#sort)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`sort`します。 詳細については、[並べ替え](../mfc/reference/cmfclistctrl-class.md#sort)を参照してください。
 
 ## <a name="sort_heap"></a> sort_heap (STL/CLR)
 
@@ -1216,7 +1216,7 @@ template<class _RanIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`sort_heap`します。 詳細については、次を参照してください。 [sort_heap](../standard-library/algorithm-functions.md#sort_heap)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`sort_heap`します。 詳細については、[sort_heap](../standard-library/algorithm-functions.md#sort_heap)を参照してください。
 
 ## <a name="stable_partition"></a> stable_partition (STL/CLR)
 
@@ -1231,7 +1231,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`stable_partition`します。 詳細については、次を参照してください。 [stable_partition](../standard-library/algorithm-functions.md#stable_partition)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`stable_partition`します。 詳細については、[stable_partition](../standard-library/algorithm-functions.md#stable_partition)を参照してください。
 
 ## <a name="stable_sort"></a> stable_sort (STL/CLR)
 
@@ -1248,7 +1248,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`stable_sort`します。 詳細については、次を参照してください。 [stable_sort](../standard-library/algorithm-functions.md#stable_sort)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`stable_sort`します。 詳細については、[stable_sort](../standard-library/algorithm-functions.md#stable_sort)を参照してください。
 
 ## <a name="swap"></a> スワップ (STL/CLR)
 
@@ -1263,7 +1263,7 @@ template<class _BidIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`swap`します。 詳細については、次を参照してください。[スワップ](../standard-library/algorithm-functions.md#swap)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`swap`します。 詳細については、[スワップ](../standard-library/algorithm-functions.md#swap)を参照してください。
 
 ## <a name="swap_ranges"></a> swap_ranges (STL/CLR)
 
@@ -1279,7 +1279,7 @@ template<class _FwdIt1, class _FwdIt2> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`swap_ranges`します。 詳細については、次を参照してください。 [swap_ranges](../standard-library/algorithm-functions.md#swap_ranges)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`swap_ranges`します。 詳細については、[swap_ranges](../standard-library/algorithm-functions.md#swap_ranges)を参照してください。
 
 ## <a name="transform"></a> 変換 (STL/CLR)
 
@@ -1298,7 +1298,7 @@ template<class _InIt1, class _InIt2, class _OutIt, class _Fn2> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`transform`します。 詳細については、次を参照してください。[変換](../standard-library/algorithm-functions.md#transform)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`transform`します。 詳細については、[変換](../standard-library/algorithm-functions.md#transform)を参照してください。
 
 ## <a name="unique"></a> 一意 (STL/CLR)
 
@@ -1315,7 +1315,7 @@ template<class _FwdIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`unique`します。 詳細については、次を参照してください。[一意](../standard-library/algorithm-functions.md#unique)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`unique`します。 詳細については、[一意](../standard-library/algorithm-functions.md#unique)を参照してください。
 
 ## <a name="unique_copy"></a> unique_copy (STL/CLR)
 
@@ -1333,7 +1333,7 @@ template<class _InIt, class _OutIt, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`unique_copy`します。 詳細については、次を参照してください。 [unique_copy](../standard-library/algorithm-functions.md#unique_copy)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`unique_copy`します。 詳細については、[unique_copy](../standard-library/algorithm-functions.md#unique_copy)を参照してください。
 
 ## <a name="upper_bound"></a> upper_bound (STL/CLR)
 
@@ -1351,4 +1351,4 @@ template<class _FwdIt, class _Ty, class _Pr> inline
 
 ### <a name="remarks"></a>Remarks
 
-この関数が C++ 標準ライブラリ関数と同様に動作`upper_bound`します。 詳細については、次を参照してください。 [upper_bound](../standard-library/algorithm-functions.md#upper_bound)します。
+この関数が C++ 標準ライブラリ関数と同様に動作`upper_bound`します。 詳細については、[upper_bound](../standard-library/algorithm-functions.md#upper_bound)を参照してください。

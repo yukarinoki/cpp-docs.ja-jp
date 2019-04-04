@@ -45,7 +45,7 @@ ms.locfileid: "58564958"
     #import "progid:my.prog.id.1.5"
     ```
 
-   詳細については、progid は、次を参照してください。[ローカリゼーション ID とバージョン番号を指定する](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber)します。
+   詳細については、progid は、[ローカリゼーション ID とバージョン番号を指定する](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber)を参照してください。
 
    64 ビット オペレーティング システム上でクロス コンパイラによりコンパイルを実行した場合、コンパイラは 32 ビット レジストリ ハイブのみ読み取り可能になることに注意してください。 ネイティブ 64 ビット コンパイラを使用して、64 ビットのタイプ ライブラリをビルドおよび登録した方がよい場合があります。
 
@@ -187,7 +187,7 @@ using namespace MyLib;
    rename("OldName", "NewName")
 ```
 
-詳細については、次を参照してください。 [#import 属性](../preprocessor/hash-import-attributes-cpp.md)します。
+詳細については、[#import 属性](../preprocessor/hash-import-attributes-cpp.md)を参照してください。
 
 **END C 固有の仕様**
 

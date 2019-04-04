@@ -17,7 +17,7 @@ ms.locfileid: "50553544"
 
 インデックス付きプロパティが空のパラメーター リストを含めることはできません。
 
-インデックス付きプロパティの宣言が正しくありません。 詳細については、次を参照してください。[方法: プロパティを使用して c++/cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)します。
+インデックス付きプロパティの宣言が正しくありません。 詳細については、[方法: プロパティを使用して c++/cli CLI](../../dotnet/how-to-use-properties-in-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

@@ -306,7 +306,7 @@ int GetWeight() const;
 
 ### <a name="remarks"></a>Remarks
 
-フォントの太さの詳細については、次を参照してください。 [CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont)します。
+フォントの太さの詳細については、[CFont::CreateFont](../../mfc/reference/cfont-class.md#createfont)を参照してください。
 
 ### <a name="example"></a>例
 

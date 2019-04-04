@@ -154,7 +154,7 @@ MSIL に対して生成されたネイティブの C++ メソッドが (仮想�
 
 アプリケーションのコンパイル、リンク、および実行をした後でコンパイルされたモジュールで .NET 機能の使用を開始できます **/clr**します。 詳細については、「[Component Extensions for Runtime Platforms](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
-C++ のマネージド拡張を使用していた場合は、新しい構文を使用してコードを変換できます。 C++ マネージ拡張を変換する方法の詳細については、次を参照してください。 [C +/cli 移行ガイド](../dotnet/cpp-cli-migration-primer.md)します。
+C++ のマネージド拡張を使用していた場合は、新しい構文を使用してコードを変換できます。 C++ マネージ拡張を変換する方法の詳細については、[C +/cli 移行ガイド](../dotnet/cpp-cli-migration-primer.md)を参照してください。
 
 Visual C++ での .NET プログラミングの詳細については、以下の項目を参照してください。
 

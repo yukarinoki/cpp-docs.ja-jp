@@ -32,7 +32,7 @@ ms.locfileid: "57261077"
 
 - **LVIS_STATEIMAGEMASK**アプリケーションの各項目の現在の状態イメージのイメージ リスト インデックスを格納します。
 
-取得して、このマスクの設定の詳細については、次を参照してください。 [CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask)と[CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask)します。
+取得して、このマスクの設定の詳細については、[CListCtrl::GetCallbackMask](../mfc/reference/clistctrl-class.md#getcallbackmask)と[CListCtrl::SetCallbackMask](../mfc/reference/clistctrl-class.md#setcallbackmask)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

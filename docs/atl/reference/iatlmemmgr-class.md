@@ -79,7 +79,7 @@ void* Allocate(size_t nBytes) throw();
 
 ### <a name="example"></a>例
 
-例については、次を参照してください。、 [IAtlMemMgr 概要](../../atl/reference/iatlmemmgr-class.md)します。
+例については、、 [IAtlMemMgr 概要](../../atl/reference/iatlmemmgr-class.md)を参照してください。
 
 ##  <a name="free"></a>  IAtlMemMgr::Free
 
@@ -100,7 +100,7 @@ void Free(void* p) throw();
 
 ### <a name="example"></a>例
 
-例については、次を参照してください。、 [IAtlMemMgr 概要](../../atl/reference/iatlmemmgr-class.md)します。
+例については、、 [IAtlMemMgr 概要](../../atl/reference/iatlmemmgr-class.md)を参照してください。
 
 ##  <a name="getsize"></a>  IAtlMemMgr::GetSize
 
@@ -121,7 +121,7 @@ size_t GetSize(void* p) throw();
 
 ### <a name="example"></a>例
 
-例については、次を参照してください。、 [IAtlMemMgr 概要](../../atl/reference/iatlmemmgr-class.md)します。
+例については、、 [IAtlMemMgr 概要](../../atl/reference/iatlmemmgr-class.md)を参照してください。
 
 ##  <a name="reallocate"></a>  IAtlMemMgr::Reallocate
 
@@ -151,7 +151,7 @@ void* Reallocate(void* p, size_t nBytes) throw();
 
 ### <a name="example"></a>例
 
-例については、次を参照してください。、 [IAtlMemMgr 概要](../../atl/reference/iatlmemmgr-class.md)します。
+例については、、 [IAtlMemMgr 概要](../../atl/reference/iatlmemmgr-class.md)を参照してください。
 
 ##  <a name="get_allowcontextmenu"></a>  IAxWinAmbientDispatch::get_AllowContextMenu
 

@@ -30,7 +30,7 @@ ms.locfileid: "50476974"
 
 たとえば、プログラムの開始時に、すべての process ごとの変数が初期化され、続いて、すべての appdomain ごとの変数が初期化されます。 そのため、process ごとの変数が初期化されるときには、appdomain ごとの変数の値に依存することはできません。 appdomain ごとの変数と process ごとの変数を混在使用 (代入) することは好ましくありません。
 
-特定のアプリケーション ドメインで関数を呼び出す方法については、次を参照してください。 [call_in_appdomain 関数](../dotnet/call-in-appdomain-function.md)します。
+特定のアプリケーション ドメインで関数を呼び出す方法については、[call_in_appdomain 関数](../dotnet/call-in-appdomain-function.md)を参照してください。
 
 ## <a name="example"></a>例
 
