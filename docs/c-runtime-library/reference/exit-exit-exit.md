@@ -1,4 +1,4 @@
-﻿---
+---
 title: exit、_Exit、_exit
 ms.date: 1/02/2018
 apiname:
@@ -42,7 +42,7 @@ ms.locfileid: "50451754"
 呼び出しプロセスを終了します。 **exit**はクリーンアップ後に、関数が終了されます。**\_exit**と **\_Exit**は直ちに終了します。
 
 > [!NOTE]
-> テスト シナリオまたはデバッグ シナリオを除く、ユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。 Windows 10 アプリについて詳しくは、「 [Windows 10 アプリの使用方法のガイド](https://developer.microsoft.com/windows/apps)」をご覧ください。
+> テスト シナリオまたはデバッグ シナリオを除く、ユニバーサル Windows プラットフォーム (UWP) アプリをシャット ダウンは、このメソッドを使用しないでください。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、[UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)を参照してください。 Windows 10 アプリについて詳しくは、「 [Windows 10 アプリの使用方法のガイド](https://developer.microsoft.com/windows/apps)」をご覧ください。
 
 ## <a name="syntax"></a>構文
 

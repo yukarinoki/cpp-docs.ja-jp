@@ -30,7 +30,7 @@ ms.locfileid: "57821262"
 ## <a name="arguments"></a>引数
 
 **BOOT_APPLICATION**<br/>
-Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、次を参照してください。 [About BCD](/previous-versions/windows/desktop/bcd/about-bcd)します。
+Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、[About BCD](/previous-versions/windows/desktop/bcd/about-bcd)を参照してください。
 
 **コンソール**<br/>
 Win32 文字モード アプリケーションに対して使用します。 オペレーティング システムには、コンソール アプリケーションのコンソールが用意されています。 ネイティブ コードに `main` または `wmain` が定義されている場合、マネージド コードに `int main(array<String ^> ^)` が定義されている場合、または `/clr:safe` を使用してアプリケーションを完全にビルドする場合、CONSOLE が既定の設定になります。
@@ -73,7 +73,7 @@ Windows NT 上の POSIX サブシステムで実行するアプリケーショ�
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. [リンカー] フォルダーを選択します。
 

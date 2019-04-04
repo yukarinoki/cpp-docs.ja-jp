@@ -202,7 +202,7 @@ WS_VISIBLE スタイルを指定すると、Windows はアクティブ化し、�
 
 *DwStyle*パラメーターの任意の組み合わせを指定できます[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
 
-古いスタイル パレットのツールボックス ウィンドウがサポートされていません。 以前のバージョンの Windows では、MFC アプリケーションを実行するときに、"X"の閉じるボタンを設定されていない、以前のスタイルがサポートされていましたが、Visual C .NET でサポートされて不要になった。 新しい WS_EX_TOOLWINDOW スタイルのみがサポートされるようになりました。このスタイルの説明は、次を参照してください。[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)します。
+古いスタイル パレットのツールボックス ウィンドウがサポートされていません。 以前のバージョンの Windows では、MFC アプリケーションを実行するときに、"X"の閉じるボタンを設定されていない、以前のスタイルがサポートされていましたが、Visual C .NET でサポートされて不要になった。 新しい WS_EX_TOOLWINDOW スタイルのみがサポートされるようになりました。このスタイルの説明は、[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

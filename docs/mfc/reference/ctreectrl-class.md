@@ -669,7 +669,7 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のツリー ビュー コントロールのビットごとの組み合わせ (OR) を格納している値での拡張スタイルを使用します。 詳細については、次を参照してください。[ツリー ビュー コントロールの拡張スタイル](/windows/desktop/Controls/tree-view-control-window-extended-styles)します。
+現在のツリー ビュー コントロールのビットごとの組み合わせ (OR) を格納している値での拡張スタイルを使用します。 詳細については、[ツリー ビュー コントロールの拡張スタイル](/windows/desktop/Controls/tree-view-control-window-extended-styles)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -961,7 +961,7 @@ UINT GetItemState(
 
 ### <a name="return-value"></a>戻り値
 
-取得によって指定された値のビットごとの OR を保持する UINT します。 使用可能な値については、次を参照してください。 [CTreeCtrl::GetItem](#getitem)します。 特定の状態の値を検索するには、次の例に示すように、状態の値と戻り値のビットごとの AND 演算を実行します。
+取得によって指定された値のビットごとの OR を保持する UINT します。 使用可能な値については、[CTreeCtrl::GetItem](#getitem)を参照してください。 特定の状態の値を検索するには、次の例に示すように、状態の値と戻り値のビットごとの AND 演算を実行します。
 
 ### <a name="example"></a>例
 
@@ -1104,7 +1104,7 @@ HTREEITEM GetNextItem(
 
 ### <a name="example"></a>例
 
-使用する例については`GetNextItem`、ループ内で、次を参照してください。 [CTreeCtrl::DeleteItem](#deleteitem)します。
+使用する例については`GetNextItem`、ループ内で、[CTreeCtrl::DeleteItem](#deleteitem)を参照してください。
 
 [!code-cpp[NVC_MFC_CTreeCtrl#20](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]
 
@@ -2070,7 +2070,7 @@ BOOL SetItemImage(
 
 項目のイメージ、およびツリー ビュー コントロールのイメージ リスト内で選択したイメージのインデックスを設定するには、この関数を呼び出します。
 
-イメージの詳細については、次を参照してください。 [CImageList](../../mfc/reference/cimagelist-class.md)します。
+イメージの詳細については、[CImageList](../../mfc/reference/cimagelist-class.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -2104,7 +2104,7 @@ BOOL SetItemState(
 
 ### <a name="remarks"></a>Remarks
 
-状態については、次を参照してください。 [CTreeCtrl::GetItem](#getitem)します。
+状態については、[CTreeCtrl::GetItem](#getitem)を参照してください。
 
 ### <a name="example"></a>例
 

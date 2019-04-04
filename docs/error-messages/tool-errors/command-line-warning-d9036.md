@@ -19,7 +19,7 @@ ms.locfileid: "53248534"
 
 ## <a name="remarks"></a>Remarks
 
-警告 D9036 の続き[コマンドラインの警告 D9035](../../error-messages/tool-errors/command-line-warning-d9035.md)します。 1 つのコンパイラ オプションを優先する場合、非推奨のオプションではなく、ここに表示されます。 詳細については、リンクは、次を参照してください。[非推奨と削除されたコンパイラ オプション](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)します。
+警告 D9036 の続き[コマンドラインの警告 D9035](../../error-messages/tool-errors/command-line-warning-d9035.md)します。 1 つのコンパイラ オプションを優先する場合、非推奨のオプションではなく、ここに表示されます。 詳細については、リンクは、[非推奨と削除されたコンパイラ オプション](../../build/reference/compiler-options-listed-by-category.md#deprecated-and-removed-compiler-options)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

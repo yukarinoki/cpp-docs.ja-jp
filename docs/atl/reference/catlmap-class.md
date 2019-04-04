@@ -149,7 +149,7 @@ class CAtlMap
 
 格納される要素の数が少ない場合は、使用を検討して、 [CSimpleMap](../../atl/reference/csimplemap-class.md)クラスの代わりにします。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

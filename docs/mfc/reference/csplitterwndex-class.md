@@ -44,7 +44,7 @@ class CSplitterWndEx : public CSplitterWnd
 
 上書き、`OnDrawSplitter`スプリッター ウィンドウのグラフィック要素の外観をカスタマイズするメソッド。
 
-`CSplitterWndEx`と同時にクラスを使用、 [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder)、 [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)、および[OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground)メソッドビジュアル マネージャーによって実装されます。 アプリケーション内のスプリッター ウィンドウを描画するためには、ビジュアル マネージャーの宣言を置き換える、`CSplitterWnd`クラス、`CSplitterWndEx`クラス。 フレーム ウィンドウのアプリケーションでは、スプリッター ウィンドウのクラスは、mainfrm.h に配置されている CMainFrame クラスで宣言されます。 例については、次を参照してください。、`OutlookDemo`サンプル、サンプル ディレクトリにします。
+`CSplitterWndEx`と同時にクラスを使用、 [OnDrawSplitterBorder](cmfcvisualmanager-class.md#ondrawsplitterborder)、 [OnDrawSplitterBox](cmfcvisualmanager-class.md#ondrawsplitterbox)、および[OnFillSplitterBackground](cmfcvisualmanager-class.md#onfillsplitterbackground)メソッドビジュアル マネージャーによって実装されます。 アプリケーション内のスプリッター ウィンドウを描画するためには、ビジュアル マネージャーの宣言を置き換える、`CSplitterWnd`クラス、`CSplitterWndEx`クラス。 フレーム ウィンドウのアプリケーションでは、スプリッター ウィンドウのクラスは、mainfrm.h に配置されている CMainFrame クラスで宣言されます。 例については、、`OutlookDemo`サンプル、サンプル ディレクトリにを参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

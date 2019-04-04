@@ -32,7 +32,7 @@ ms.locfileid: "57813137"
 
 マニフェストにアセンブリ メタデータがないマネージ プログラムには、モジュールが呼び出されます。 コンパイルする場合[(コンパイル リンクなしの)/c](c-compile-without-linking.md)と **/LN**、指定[/NOASSEMBLY (MSIL モジュールの作成)](noassembly-create-a-msil-module.md)出力ファイルを作成するリンカーのフェーズでします。
 
-アセンブリを構築するためのコンポーネント ベースのアプローチを実行する場合は、モジュールを作成することがあります。  つまり、型を作成し、モジュールにコンパイルできます。  次に、1 つまたは複数のモジュールからアセンブリを生成できます。  モジュールからアセンブリを作成する方法の詳細については、次を参照してください。[リンカー入力としての .netmodule ファイル](netmodule-files-as-linker-input.md)または[Al.exe (アセンブリ リンカー)](/dotnet/framework/tools/al-exe-assembly-linker)します。
+アセンブリを構築するためのコンポーネント ベースのアプローチを実行する場合は、モジュールを作成することがあります。  つまり、型を作成し、モジュールにコンパイルできます。  次に、1 つまたは複数のモジュールからアセンブリを生成できます。  モジュールからアセンブリを作成する方法の詳細については、[リンカー入力としての .netmodule ファイル](netmodule-files-as-linker-input.md)または[Al.exe (アセンブリ リンカー)](/dotnet/framework/tools/al-exe-assembly-linker)を参照してください。
 
 モジュールの既定のファイル拡張子は、.netmodule です。
 

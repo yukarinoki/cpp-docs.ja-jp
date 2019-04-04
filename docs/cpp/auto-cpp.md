@@ -50,7 +50,7 @@ auto declarator initializer;
 
 使用する、**自動**キーワード、変数を宣言する型の代わりに使用して、初期化式を指定します。 さらに、変更、**自動**指定子と宣言子をなどを使用してキーワード**const**、**揮発性**、ポインター (`*`)、参照 (`&`)、および右辺値参照 (`&&`)。 コンパイラは初期化式を評価し、その情報を使用して変数の型を推測します。
 
-初期化式は、代入 (等号構文)、直接の初期化 (関数形式の構文)、[演算子 new](new-operator-cpp.md)式、または初期化式を指定できます、 *範囲の宣言の*でパラメーターを[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)ステートメント。 詳細については、次を参照してください。[初期化子](../cpp/initializers.md)およびこのドキュメントの後半のコード例にします。
+初期化式は、代入 (等号構文)、直接の初期化 (関数形式の構文)、[演算子 new](new-operator-cpp.md)式、または初期化式を指定できます、 *範囲の宣言の*でパラメーターを[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)ステートメント。 詳細については、[初期化子](../cpp/initializers.md)およびこのドキュメントの後半のコード例にを参照してください。
 
 **自動**キーワードは、型のプレース ホルダーが自体がない型。 そのため、**自動**キーワードを演算子やキャストでなど、使用することはできません[sizeof](../cpp/sizeof-operator.md)と (c++/cli CLI) [typeid](../extensions/typeid-cpp-component-extensions.md)します。
 
@@ -58,11 +58,11 @@ auto declarator initializer;
 
 **自動**キーワードは、複雑な型を持つ変数を宣言する簡単な方法です。 たとえば、使用することができます**自動**初期化式がテンプレート、関数へのポインターまたはメンバーへのポインターでは変数を宣言します。
 
-使用することも**自動**を宣言してラムダ式に変数を初期化します。 ラムダ式の型を認識できるのはコンパイラのみであるため、プログラマが変数の型を宣言することはできません。 詳細については、次を参照してください。[ラムダ式の例](../cpp/examples-of-lambda-expressions.md)します。
+使用することも**自動**を宣言してラムダ式に変数を初期化します。 ラムダ式の型を認識できるのはコンパイラのみであるため、プログラマが変数の型を宣言することはできません。 詳細については、[ラムダ式の例](../cpp/examples-of-lambda-expressions.md)を参照してください。
 
 ## <a name="trailing-return-types"></a>後続の戻り値の型
 
-使用することができます**自動**と共に、 **decltype**テンプレート ライブラリを作成する方法についての指定子を入力します。 使用**自動**と**decltype**テンプレート関数の戻り値を宣言する型は、テンプレート引数の型に依存します。 または、使用して**自動**と**decltype**を別の関数の呼び出しをラップし、その他の関数の戻り値の型が何であれを返しますテンプレート関数を宣言します。 詳細については、次を参照してください。 [decltype](../cpp/decltype-cpp.md)します。
+使用することができます**自動**と共に、 **decltype**テンプレート ライブラリを作成する方法についての指定子を入力します。 使用**自動**と**decltype**テンプレート関数の戻り値を宣言する型は、テンプレート引数の型に依存します。 または、使用して**自動**と**decltype**を別の関数の呼び出しをラップし、その他の関数の戻り値の型が何であれを返しますテンプレート関数を宣言します。 詳細については、[decltype](../cpp/decltype-cpp.md)を参照してください。
 
 ## <a name="references-and-cv-qualifiers"></a>参照と cv 修飾子
 
@@ -132,7 +132,7 @@ int main()
 |[C3535](../error-messages/compiler-errors-2/compiler-error-c3535.md)|メソッドまたはテンプレートのパラメーターを宣言することはできません、**自動**キーワード。|
 |[C3536](../error-messages/compiler-errors-2/compiler-error-c3536.md)|シンボルは初期化前に使用することはできません。 実際には、変数はその変数自体を初期化するために使用できないことを意味します。|
 |[C3537](../error-messages/compiler-errors-2/compiler-error-c3537.md)|宣言された型にキャストすることはできません、**自動**キーワード。|
-|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|宣言されている宣言子リスト内のすべてのシンボル、**自動**キーワードは、同じ型に解決する必要があります。 詳細については、次を参照してください。[宣言と定義](declarations-and-definitions-cpp.md)します。|
+|[C3538](../error-messages/compiler-errors-2/compiler-error-c3538.md)|宣言されている宣言子リスト内のすべてのシンボル、**自動**キーワードは、同じ型に解決する必要があります。 詳細については、[宣言と定義](declarations-and-definitions-cpp.md)を参照してください。|
 |[C3540](../error-messages/compiler-errors-2/compiler-error-c3540.md)、 [C3541](../error-messages/compiler-errors-2/compiler-error-c3541.md)|[Sizeof](../cpp/sizeof-operator.md)と[typeid](../extensions/typeid-cpp-component-extensions.md)演算子で宣言されたシンボルに適用することはできません、**自動**キーワード。|
 
 ## <a name="examples"></a>使用例

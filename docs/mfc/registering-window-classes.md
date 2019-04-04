@@ -33,7 +33,7 @@ MFC では、なし、Windows の従来のプログラムでの「ウィンド�
 
 これに対し、ほとんどのウィンドウ クラスの登録アクティビティは、MFC フレームワーク プログラムで自動的に行われます。 MFC を使用している場合は、通常クラス継承の標準の C++ 構文を使用して、既存のライブラリのクラスから C++ ウィンドウ クラスを派生します。 フレームワークは引き続き従来使用「登録クラス」とは、必要なときに登録されているいくつかの標準的なものを提供します。 追加登録クラスを登録するには、呼び出すことによって、 [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)に登録されているクラスを渡す、グローバル関数、`Create`のメンバー関数`CWnd`します。 ここでは、従来の説明に従って Windows の「登録クラス」は、C++ のクラスと混同しないようにします。
 
-詳細については、次を参照してください。[テクニカル ノート 1:](../mfc/tn001-window-class-registration.md)します。
+詳細については、[テクニカル ノート 1:](../mfc/tn001-window-class-registration.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

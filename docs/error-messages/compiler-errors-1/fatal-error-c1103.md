@@ -19,7 +19,7 @@ progid をインポート中の致命的なエラー: 'message'
 
 コンパイラがタイプ ライブラリのインポートで問題を検出しました。  たとえば、progid を持つタイプ ライブラリを指定し、さらに `no_registry`を指定することはできません。
 
-詳細については、次を参照してください。 [#import ディレクティブ](../../preprocessor/hash-import-directive-cpp.md)します。
+詳細については、[#import ディレクティブ](../../preprocessor/hash-import-directive-cpp.md)を参照してください。
 
 次の例では C1103 エラーが生成されます。
 

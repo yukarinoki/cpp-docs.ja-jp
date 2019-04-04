@@ -28,7 +28,7 @@ ms.locfileid: "57278198"
 
 - [例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)
 
-COM の詳細については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/component-object-model--com--portal)します。
+COM の詳細については、[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/component-object-model--com--portal)を参照してください。
 
 ## <a name="managing-the-lifetime-of-the-com-library"></a>COM ライブラリの有効期間の管理
 
@@ -63,7 +63,7 @@ COM の詳細については、次を参照してください。[コンポーネ
 
 [!code-cpp[concrt-parallel-scripts#4](../../parallel/concrt/codesnippet/cpp/walkthrough-using-the-concurrency-runtime-in-a-com-enabled-application_4.cpp)]
 
-同時実行ランタイムでの取り消し処理の詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
+同時実行ランタイムでの取り消し処理の詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
 
 ### <a name="using-com-with-asynchronous-agents"></a>非同期エージェントでの COM の使用
 

@@ -2720,7 +2720,7 @@ DWORD GetCharacterPlacement(
 処理する文字列へのポインター。
 
 *nCount*<br/>
-文字列の長さを指定します。 ANSI バージョンの場合は BYTE カウント、Unicode 関数の場合は WORD カウントです。 詳細については、次を参照してください。 [GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)します。
+文字列の長さを指定します。 ANSI バージョンの場合は BYTE カウント、Unicode 関数の場合は WORD カウントです。 詳細については、[GetCharacterPlacement](/windows/desktop/api/wingdi/nf-wingdi-getcharacterplacementa)を参照してください。
 
 *nMaxExtent*<br/>
 処理する文字列の最大エクステントを論理単位で指定します。 このエクステントを超えて処理された文字列は無視されます。 並べ替えやグリフの配列に必要な演算は、範囲に含まれている文字だけに適用されます。 GCP_MAXEXTENT 値が指定されている場合にのみ、このパラメーターが使用される、 *dwFlags*パラメーター。 入力文字列を処理するときは、エクステントの合計が最大値を超えない限り、各文字と文字のエクステントが出力、エクステント、および他の配列に追加されます。 制限に達すると、処理は停止します。
@@ -3151,7 +3151,7 @@ DWORD GetFontLanguageInfo() const;
 
 ### <a name="return-value"></a>戻り値
 
-戻り値は、現在選択されているフォントの特性を識別します。 使用可能な値の完全な一覧については、次を参照してください。 [GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo)します。
+戻り値は、現在選択されているフォントの特性を識別します。 使用可能な値の完全な一覧については、[GetFontLanguageInfo](/windows/desktop/api/wingdi/nf-wingdi-getfontlanguageinfo)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -3218,7 +3218,7 @@ int GetGraphicsMode() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合に、現在のグラフィックス モードを返します。 このメソッドが返すことができる値については、次を参照してください。[については](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode)します。
+成功した場合に、現在のグラフィックス モードを返します。 このメソッドが返すことができる値については、[については](/windows/desktop/api/wingdi/nf-wingdi-getgraphicsmode)を参照してください。
 
 失敗した場合は 0 を返します。
 
@@ -3278,7 +3278,7 @@ DWORD GetLayout() const;
 
 ### <a name="return-value"></a>戻り値
 
-成功した場合、レイアウトは、現在のデバイス コンテキストのフラグします。 それ以外の場合、GDI_ERROR します。 エラーの詳細については、呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。 レイアウトのフラグの一覧は、次を参照してください。 [CDC::SetLayout](#setlayout)します。
+成功した場合、レイアウトは、現在のデバイス コンテキストのフラグします。 それ以外の場合、GDI_ERROR します。 エラーの詳細については、呼び出す[GetLastError](https://msdn.microsoft.com/library/windows/desktop/ms679360)します。 レイアウトのフラグの一覧は、[CDC::SetLayout](#setlayout)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -4453,7 +4453,7 @@ BOOL ModifyWorldTransform(
 参照、 [XFORM](/windows/desktop/api/wingdi/ns-wingdi-tagxform)構造体の特定のデバイス コンテキストのワールド変換を変更するために使用します。
 
 *i モード*<br/>
-変換データが現在のワールド変換を変更する方法を指定します。 このパラメーターが取る値の一覧では、次を参照してください。 [ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform)します。
+変換データが現在のワールド変換を変更する方法を指定します。 このパラメーターが取る値の一覧では、[ModifyWorldTransform](/windows/desktop/api/wingdi/nf-wingdi-modifyworldtransform)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5722,7 +5722,7 @@ int SetAbortProc(BOOL (CALLBACK* lpfn)(HDC, int));
 ### <a name="parameters"></a>パラメーター
 
 *lpfn*<br/>
-中止の手順に従ってインストールを中止関数へのポインター。 詳細については、コールバック関数は、次を参照してください。 [cdc::setabortproc 用コールバック関数](callback-functions-used-by-mfc.md#setabortproc)します。
+中止の手順に従ってインストールを中止関数へのポインター。 詳細については、コールバック関数は、[cdc::setabortproc 用コールバック関数](callback-functions-used-by-mfc.md#setabortproc)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -5999,7 +5999,7 @@ int SetGraphicsMode(int iMode);
 ### <a name="parameters"></a>パラメーター
 
 *i モード*<br/>
-グラフィック モードを指定します。 このパラメーターが取る値の一覧では、次を参照してください。 [SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode)します。
+グラフィック モードを指定します。 このパラメーターが取る値の一覧では、[SetGraphicsMode](/windows/desktop/api/wingdi/nf-wingdi-setgraphicsmode)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 

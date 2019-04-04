@@ -49,7 +49,7 @@ enum agent_status;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[非同期エージェント](../../../parallel/concrt/asynchronous-agents.md)します。
+詳細については、[非同期エージェント](../../../parallel/concrt/asynchronous-agents.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -152,7 +152,7 @@ enum CriticalRegionType;
 
 ##  <a name="dynamicprogressfeedbacktype"></a>  DynamicProgressFeedbackType 列挙体
 
-`DynamicProgressFeedback` ポリシーによって使用され、スケジューラのリソースのバランスを再調整する際の判断基準として、スケジューラから収集された統計情報に従うか、または `Activate` インターフェイスの `Deactivate` メソッドおよび `IVirtualProcessorRoot` メソッドの呼び出しによってアイドル状態との間で状態が変化する仮想プロセッサのみに基づくかを示します。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md)します。
+`DynamicProgressFeedback` ポリシーによって使用され、スケジューラのリソースのバランスを再調整する際の判断基準として、スケジューラから収集された統計情報に従うか、または `Activate` インターフェイスの `Deactivate` メソッドおよび `IVirtualProcessorRoot` メソッドの呼び出しによってアイドル状態との間で状態が変化する仮想プロセッサのみに基づくかを示します。 使用できるスケジューラ ポリシーの詳細については、[PolicyElementKey](concurrency-namespace-enums.md)を参照してください。
 
 ```
 enum DynamicProgressFeedbackType;
@@ -162,8 +162,8 @@ enum DynamicProgressFeedbackType;
 
 |名前|説明|
 |----------|-----------------|
-|`ProgressFeedbackDisabled`|スケジューラでは、進行状況に関する情報は収集しません。 再調整に基づいて行われます、基になるハードウェア スレッドのサブスクリプション レベルだけにします。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](IExecutionResource-structure.md)します。<br /><br /> この値は、使用するため、ランタイムによって予約されています。|
-|`ProgressFeedbackEnabled`|スケジューラは、進行状況の情報を収集し、リソース マネージャーに渡されます。 リソース マネージャーでは、この統計情報を基になるハードウェア スレッドのサブスクリプション レベルだけでなく、スケジューラに代わってリソースを再調整を利用します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](IExecutionResource-structure.md)します。|
+|`ProgressFeedbackDisabled`|スケジューラでは、進行状況に関する情報は収集しません。 再調整に基づいて行われます、基になるハードウェア スレッドのサブスクリプション レベルだけにします。 サブスクリプション レベルの詳細については、[iexecutionresource::currentsubscriptionlevel](IExecutionResource-structure.md)を参照してください。<br /><br /> この値は、使用するため、ランタイムによって予約されています。|
+|`ProgressFeedbackEnabled`|スケジューラは、進行状況の情報を収集し、リソース マネージャーに渡されます。 リソース マネージャーでは、この統計情報を基になるハードウェア スレッドのサブスクリプション レベルだけでなく、スケジューラに代わってリソースを再調整を利用します。 サブスクリプション レベルの詳細については、[iexecutionresource::currentsubscriptionlevel](IExecutionResource-structure.md)を参照してください。|
 
 ##  <a name="join_type"></a>  join_type 列挙体
 
@@ -207,7 +207,7 @@ enum message_status;
 
 ##  <a name="policyelementkey"></a>  PolicyElementKey 列挙体
 
-ポリシー キーは、スケジューラの動作をさまざまな側面から表します。 各ポリシー要素は、キーと値の組み合わせで表現されます。 スケジューラのスケジューラ ポリシーとその影響に関する詳細については、次を参照してください。[タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
+ポリシー キーは、スケジューラの動作をさまざまな側面から表します。 各ポリシー要素は、キーと値の組み合わせで表現されます。 スケジューラのスケジューラ ポリシーとその影響に関する詳細については、[タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。
 
 ```
 enum PolicyElementKey;
@@ -219,13 +219,13 @@ enum PolicyElementKey;
 |----------|-----------------|
 |`ContextPriority`|スケジューラの各コンテキストのオペレーティング システムのスレッド優先順位。 このキーが値に設定されている場合`INHERIT_THREAD_PRIORITY`スケジューラのコンテキストは、スケジューラを作成したスレッドの優先順位を継承します。<br /><br /> 有効な値:Windows の有効な値のいずれかの`SetThreadPriority`関数、および特殊な値 `INHERIT_THREAD_PRIORITY`<br /><br /> 既定値: `THREAD_PRIORITY_NORMAL`|
 |`ContextStackSize`|キロバイト単位で scheduler では、各コンテキストの予約済みのスタック サイズ。<br /><br /> 有効な値:正の整数<br /><br /> 既定値: `0`、スタック サイズのプロセスの既定値を使用することを示します。|
-|`DynamicProgressFeedback`|スケジューラのリソースをスケジューラから収集された、または基になるハードウェア スレッドのサブスクリプション レベルに基づいてのみの統計情報に従って調整されるかどうかを判断します。 詳細については、次を参照してください。 [DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)します。<br /><br /> 有効な値:メンバー、`DynamicProgressFeedbackType`列挙, か、`ProgressFeedbackEnabled`または `ProgressFeedbackDisabled`<br /><br /> 既定値: `ProgressFeedbackEnabled`|
+|`DynamicProgressFeedback`|スケジューラのリソースをスケジューラから収集された、または基になるハードウェア スレッドのサブスクリプション レベルに基づいてのみの統計情報に従って調整されるかどうかを判断します。 詳細については、[DynamicProgressFeedbackType](#dynamicprogressfeedbacktype)を参照してください。<br /><br /> 有効な値:メンバー、`DynamicProgressFeedbackType`列挙, か、`ProgressFeedbackEnabled`または `ProgressFeedbackDisabled`<br /><br /> 既定値: `ProgressFeedbackEnabled`|
 |`LocalContextCacheSize`|ときに、`SchedulingProtocol`ポリシー キーが値に設定されている`EnhanceScheduleGroupLocality`、仮想プロセッサのローカル キューごとにキャッシュできる実行可能なコンテキストの最大数を指定します。 このようなコンテキストは、後入れ先出し (LIFO) の順序を可能になる原因となった仮想プロセッサ上で通常実行されます。 このポリシーのキーはない場合、`SchedulingProtocol`キーが値に設定されている`EnhanceForwardProgress`します。<br /><br /> 有効な値:負でない整数<br /><br /> 既定値: `8`|
 |`MaxConcurrency`|スケジューラによって必要なレベルの最大同時実行します。 リソース マネージャーは、最初にこのような多数の仮想プロセッサを割り当てるを試みます。 特殊な値[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)必要な同時実行レベルが、マシン上のハードウェア スレッドの数と同じであることを示します。 値が指定されている場合`MinConcurrency`がコンピューター上のハードウェア スレッドの数よりも大きいと`MaxConcurrency`として指定されて`MaxExecutionResources`の値は、`MaxConcurrency`が設定されているものと一致する発生`MinConcurrency`。<br /><br /> 有効な値:正の整数と特殊な値 `MaxExecutionResources`<br /><br /> 既定値: `MaxExecutionResources`|
 |`MaxPolicyElementKey`|最大ポリシー要素のキー。 有効な要素キーではありません。|
 |`MinConcurrency`|リソース マネージャーで、スケジューラに提供する必要があります最小同時実行レベルです。 スケジューラに割り当てられている仮想プロセッサの数は最小値を下回ることはありません。 特殊な値[MaxExecutionResources](concurrency-namespace-constants1.md#maxexecutionresources)最小同時実行レベルが、マシン上のハードウェア スレッドの数と同じであることを示します。 値が指定されている場合`MaxConcurrency`がコンピューター上のハードウェア スレッドの数より小さいと`MinConcurrency`として指定されて`MaxExecutionResources`の値は、`MinConcurrency`設定されているものと一致する値を下げた`MaxConcurrency`します。<br /><br /> 有効な値:負でない整数と特殊な値`MaxExecutionResources`します。 同時実行ランタイム スケジューラ、値の構築に使用されるスケジューラ ポリシーの`0`が無効です。<br /><br /> 既定値: `1`|
-|`SchedulerKind`|実行コンテキストを基になるは、スケジューラを利用するスレッドの種類。 詳細については、次を参照してください。 [SchedulerType](#schedulertype)します。<br /><br /> 有効な値:メンバー、`SchedulerType`列挙型、たとえば、 `ThreadScheduler`<br /><br /> 既定値:`ThreadScheduler`します。 これは、すべてのオペレーティング システム上の Win32 スレッドに変換されます。|
-|`SchedulingProtocol`|スケジューラによって使用されるスケジューリング アルゴリズムについて説明します。 詳細については、次を参照してください。 [SchedulingProtocolType](#schedulingprotocoltype)します。<br /><br /> 有効な値:メンバー、`SchedulingProtocolType`列挙, か、`EnhanceScheduleGroupLocality`または `EnhanceForwardProgress`<br /><br /> 既定値: `EnhanceScheduleGroupLocality`|
+|`SchedulerKind`|実行コンテキストを基になるは、スケジューラを利用するスレッドの種類。 詳細については、[SchedulerType](#schedulertype)を参照してください。<br /><br /> 有効な値:メンバー、`SchedulerType`列挙型、たとえば、 `ThreadScheduler`<br /><br /> 既定値:`ThreadScheduler`します。 これは、すべてのオペレーティング システム上の Win32 スレッドに変換されます。|
+|`SchedulingProtocol`|スケジューラによって使用されるスケジューリング アルゴリズムについて説明します。 詳細については、[SchedulingProtocolType](#schedulingprotocoltype)を参照してください。<br /><br /> 有効な値:メンバー、`SchedulingProtocolType`列挙, か、`EnhanceScheduleGroupLocality`または `EnhanceForwardProgress`<br /><br /> 既定値: `EnhanceScheduleGroupLocality`|
 |`TargetOversubscriptionFactor`|一時的なハードウェア スレッドごとの仮想プロセッサ数。 ターゲットのオーバー サブスクリプション ファクター増やすことができます、リソース マネージャーによってを満たすために、必要に応じて`MaxConcurrency`マシン上のハードウェア スレッドにします。<br /><br /> 有効な値:正の整数<br /><br /> 既定値: `1`|
 |`WinRTInitialization`||
 
@@ -235,7 +235,7 @@ enum PolicyElementKey;
 
 ##  <a name="schedulertype"></a>  SchedulerType 列挙型
 
-基になる実行コンテキスト用にスケジューラが利用するスレッドの種類を示すために、`SchedulerKind` ポリシーにより使用されます。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md)します。
+基になる実行コンテキスト用にスケジューラが利用するスレッドの種類を示すために、`SchedulerKind` ポリシーにより使用されます。 使用できるスケジューラ ポリシーの詳細については、[PolicyElementKey](concurrency-namespace-enums.md)を参照してください。
 
 ```
 enum SchedulerType;
@@ -254,7 +254,7 @@ enum SchedulerType;
 
 ##  <a name="schedulingprotocoltype"></a>  SchedulingProtocolType 列挙体
 
-スケジューラに使用されるスケジューリング アルゴリズムを記述するために、`SchedulingProtocol` ポリシーによって使用されます。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md)します。
+スケジューラに使用されるスケジューリング アルゴリズムを記述するために、`SchedulingProtocol` ポリシーによって使用されます。 使用できるスケジューラ ポリシーの詳細については、[PolicyElementKey](concurrency-namespace-enums.md)を参照してください。
 
 ```
 enum SchedulingProtocolType;
@@ -291,7 +291,7 @@ enum SwitchingProxyState;
 
 型のパラメーター`SwitchingProxyState`メソッドに渡される`IThreadProxy::SwitchTo`に Resource Manager の呼び出しを行っているスレッド プロキシを処理する方法を指示します。
 
-この型の使用方法の詳細については、次を参照してください。 [ithreadproxy::switchto](ithreadproxy-structure.md#switchto)します。
+この型の使用方法の詳細については、[ithreadproxy::switchto](ithreadproxy-structure.md#switchto)を参照してください。
 
 ##  <a name="task_group_status"></a>  task_group_status 列挙型
 
@@ -315,7 +315,7 @@ enum task_group_status;
 
 ##  <a name="winrtinitializationtype"></a>  WinRTInitializationType 列挙型
 
-`WinRTInitialization` ポリシーによって使用され、Windows 8 以上のオペレーティング システムで実行されるアプリケーション用のスケジューラ スレッドで、Windows ランタイムを初期化するかどうか、またどのように初期化するかを表します。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md)します。
+`WinRTInitialization` ポリシーによって使用され、Windows 8 以上のオペレーティング システムで実行されるアプリケーション用のスケジューラ スレッドで、Windows ランタイムを初期化するかどうか、またどのように初期化するかを表します。 使用できるスケジューラ ポリシーの詳細については、[PolicyElementKey](concurrency-namespace-enums.md)を参照してください。
 
 ```
 enum WinRTInitializationType;

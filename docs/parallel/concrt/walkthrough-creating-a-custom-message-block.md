@@ -16,7 +16,7 @@ ms.locfileid: "57272738"
 
 ここでは、受信メッセージを優先順位に従って並べるカスタム メッセージ ブロックの型を作成する方法について説明します。
 
-組み込みのメッセージ ブロックの型には幅広い機能が備わっていますが、独自のメッセージ ブロックの型を作成して、アプリケーションの要件を満たすようにカスタマイズすることもできます。 非同期エージェント ライブラリによって提供される組み込みのメッセージ ブロックの型の説明は、次を参照してください。[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)します。
+組み込みのメッセージ ブロックの型には幅広い機能が備わっていますが、独自のメッセージ ブロックの型を作成して、アプリケーションの要件を満たすようにカスタマイズすることもできます。 非同期エージェント ライブラリによって提供される組み込みのメッセージ ブロックの型の説明は、[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -71,7 +71,7 @@ ms.locfileid: "57272738"
 
 ランタイムは、`propagate_message` メソッドを呼び出して、別のブロックから現在のブロックにメッセージを非同期的に転送します。 
   `send_message` メソッドは、非同期的にではなく同期的にメッセージをターゲット ブロックに送信する点を除いて、`propagate_message` と似ています。 
-  `send_message` の既定の実装では、すべての受信メッセージが拒否されます。 ターゲット ブロックに関連付けられているオプションのフィルター関数をメッセージが通過しない場合、ランタイムはどちらのメソッドも呼び出しません。 メッセージ フィルターの詳細については、次を参照してください。[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)します。
+  `send_message` の既定の実装では、すべての受信メッセージが拒否されます。 ターゲット ブロックに関連付けられているオプションのフィルター関数をメッセージが通過しない場合、ランタイムはどちらのメソッドも呼び出しません。 メッセージ フィルターの詳細については、[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
 
 [[トップ](#top)]
 
@@ -218,7 +218,7 @@ ms.locfileid: "57272738"
    ランタイムが呼び出す場合などの同期送信操作中にこのメソッドを呼び出す、 [concurrency::send](reference/concurrency-namespace-functions.md#send)関数。
 
 
-  `priority_buffer` クラスには、多くのメッセージ ブロックの型に共通のコンストラクター オーバーロードが含まれています。 一部のコンス トラクター オーバー ロード[concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)または[concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクトで、特定のタスク スケジューラで管理するためのメッセージ ブロックを有効にします。 フィルター関数を受け取るコンストラクター オーバーロードもあります。 フィルター関数を使用すると、メッセージ ブロックでのメッセージの受け入れまたは拒否をメッセージ ペイロードに基づいて行うことができます。 メッセージ フィルターの詳細については、次を参照してください。[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)します。 タスク スケジューラに関する詳細については、次を参照してください。[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
+  `priority_buffer` クラスには、多くのメッセージ ブロックの型に共通のコンストラクター オーバーロードが含まれています。 一部のコンス トラクター オーバー ロード[concurrency::scheduler](../../parallel/concrt/reference/scheduler-class.md)または[concurrency::schedulegroup](../../parallel/concrt/reference/schedulegroup-class.md)オブジェクトで、特定のタスク スケジューラで管理するためのメッセージ ブロックを有効にします。 フィルター関数を受け取るコンストラクター オーバーロードもあります。 フィルター関数を使用すると、メッセージ ブロックでのメッセージの受け入れまたは拒否をメッセージ ペイロードに基づいて行うことができます。 メッセージ フィルターの詳細については、[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。 タスク スケジューラに関する詳細については、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。
 
 `priority_buffer`クラスは、優先度でメッセージを注文し、メッセージが受信される順序でこのクラスは、最も役に立つを受信したときのメッセージ、非同期的になどを呼び出すとき、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)関数または他のメッセージ ブロックにメッセージ ブロックを接続するとき。
 

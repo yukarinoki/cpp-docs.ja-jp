@@ -585,7 +585,7 @@ END_SCHEMA_MAP()
 
 #### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IDBSchemaRowsetImpl クラス](../../data/oledb/idbschemarowsetimpl-class.md)します。
+詳細については、[IDBSchemaRowsetImpl クラス](../../data/oledb/idbschemarowsetimpl-class.md)を参照してください。
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 

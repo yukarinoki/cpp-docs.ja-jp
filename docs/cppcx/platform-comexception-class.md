@@ -113,7 +113,7 @@ public:
 
 ### <a name="remarks"></a>Remarks
 
-HRESULT 値を解釈する方法の詳細については、次を参照してください。 [COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)します。
+HRESULT 値を解釈する方法の詳細については、[COM エラー コードの構造](/windows/desktop/com/structure-of-com-error-codes)を参照してください。
 
 ## <a name="message"></a> Comexception::message プロパティ
 

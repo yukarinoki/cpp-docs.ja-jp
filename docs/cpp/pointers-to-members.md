@@ -34,7 +34,7 @@ ms.locfileid: "51326967"
 
 1. 宣言子: 
 
-   - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
+   - オプションの Microsoft 固有の修飾子。 詳細については、[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)を参照してください。
 
    - 指されるメンバーが含まれるクラスの修飾名。
 

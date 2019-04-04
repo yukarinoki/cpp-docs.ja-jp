@@ -23,7 +23,7 @@ ms.locfileid: "58769343"
 
 安全なキャストもあります (ユーザー定義の変換をトリガーする `static_cast` 、 `const_cast`など)。 [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) は、検証可能なコードを生成することが保証されています。
 
-詳細については、次を参照してください。[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
+詳細については、[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)を参照してください。
 
 **/Clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 

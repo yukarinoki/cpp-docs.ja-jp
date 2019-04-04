@@ -38,7 +38,7 @@ ms.locfileid: "57269293"
 > [!NOTE]
 >  MFC バージョン 4.0 の時点で`CEditView`から派生`CCtrlView`します。
 
-これらのクラスを使用して、アプリケーションには、そこから、アプリケーションのビュー クラスを派生します。 関連情報については、次を参照してください。[スケール ビューのスクロールと](../mfc/scrolling-and-scaling-views.md)します。 データベース クラスの詳細については、次を参照してください。[概要。データベース プログラミング](../data/data-access-programming-mfc-atl.md)します。
+これらのクラスを使用して、アプリケーションには、そこから、アプリケーションのビュー クラスを派生します。 関連情報については、[スケール ビューのスクロールと](../mfc/scrolling-and-scaling-views.md)を参照してください。 データベース クラスの詳細については、次を参照してください。[概要。データベース プログラミング](../data/data-access-programming-mfc-atl.md)します。
 
 ## <a name="see-also"></a>関連項目
 

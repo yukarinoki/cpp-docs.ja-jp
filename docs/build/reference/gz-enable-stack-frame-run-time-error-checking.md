@@ -31,11 +31,11 @@ ms.locfileid: "57810498"
 
 **/GZ**のみで使用するよう強制されます ([/Od (無効 (デバッグ))](od-disable-debug.md)) を構築します。
 
-**/GZ**は Visual Studio 2005; 非推奨を使用して、 [/RTC (ランタイム エラー チェック)](rtc-run-time-error-checks.md)代わりにします。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
+**/GZ**は Visual Studio 2005; 非推奨を使用して、 [/RTC (ランタイム エラー チェック)](rtc-run-time-error-checks.md)代わりにします。 非推奨のコンパイラ オプションの一覧は、**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 

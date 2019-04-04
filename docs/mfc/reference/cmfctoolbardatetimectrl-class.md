@@ -212,7 +212,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) をコントロールのコマンド ID に関連付けられている文字列リソースを読み込んでいます。 文字列リソースの詳細については、次を参照してください。 [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring)します。
+このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) をコントロールのコマンド ID に関連付けられている文字列リソースを読み込んでいます。 文字列リソースの詳細については、[CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring)を参照してください。
 
 ##  <a name="getbycmd"></a>  CMFCToolBarDateTimeCtrl::GetByCmd
 
@@ -452,7 +452,7 @@ virtual HBRUSH OnCtlColor(
 
 このメソッドは基底クラスの実装をオーバーライド[CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)テキストを設定およびグローバルのテキストに指定されたデバイス コンテキストの色と背景の色をそれぞれバック グラウンドします。
 
-アプリケーションに使用できるグローバル オプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)します。
+アプリケーションに使用できるグローバル オプションの詳細については、[AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)を参照してください。
 
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged
 
@@ -466,7 +466,7 @@ virtual void OnGlobalFontsChanged();
 
 このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) のグローバルのフォントのコントロールのフォントを変更することで。
 
-アプリケーションに使用できるグローバル オプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)します。
+アプリケーションに使用できるグローバル オプションの詳細については、[AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)を参照してください。
 
 ##  <a name="onmove"></a>  CMFCToolBarDateTimeCtrl::OnMove
 

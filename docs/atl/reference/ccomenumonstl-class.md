@@ -49,7 +49,7 @@ C++ 標準ライブラリ コンテナー クラス。
 
 ## <a name="remarks"></a>Remarks
 
-`CComEnumOnSTL` C++ 標準ライブラリ コレクションに基づいて COM 列挙子オブジェクトを定義します。 このクラスは、単独または組み合わせて使用できます[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)します。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。
+`CComEnumOnSTL` C++ 標準ライブラリ コレクションに基づいて COM 列挙子オブジェクトを定義します。 このクラスは、単独または組み合わせて使用できます[ICollectionOnSTLImpl](../../atl/reference/icollectiononstlimpl-class.md)します。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、[ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)を参照してください。
 
 ## <a name="to-use-this-class-with-icollectiononstlimpl"></a>単独でこのクラスを使用します。
 

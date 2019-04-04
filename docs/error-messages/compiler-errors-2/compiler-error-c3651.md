@@ -19,7 +19,7 @@ ms.locfileid: "58767224"
 
 明示的なオーバーライドが指定されましたが、基本データ型ではない型がオーバーライドされる関数。
 
-詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
+詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3651 が生成されます。
 

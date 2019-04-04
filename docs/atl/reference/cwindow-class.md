@@ -373,7 +373,7 @@ class CWindow
 
 [CDialogImpl](../../atl/reference/cdialogimpl-class.md)モーダルまたはモードレスのダイアログ ボックスを作成することができます。
 
-Windows の詳細については、次を参照してください。 [Windows](/windows/desktop/winmsg/windows)と Windows SDK の後続のトピックです。 ATL でのウィンドウの使用に関する詳細については、記事を参照してください。 [ATL ウィンドウ クラス](../../atl/atl-window-classes.md)します。
+Windows の詳細については、[Windows](/windows/desktop/winmsg/windows)と Windows SDK の後続のトピックを参照してください。 ATL でのウィンドウの使用に関する詳細については、記事を参照してください。 [ATL ウィンドウ クラス](../../atl/atl-window-classes.md)します。
 
 ## <a name="requirements"></a>必要条件
 

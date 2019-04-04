@@ -19,7 +19,7 @@ ms.locfileid: "50667507"
 
 クラスには、2 つの異なるメンバーへのポインター表現が存在します。
 
-詳細については、次を参照してください。[継承キーワード](../../cpp/inheritance-keywords.md)します。
+詳細については、[継承キーワード](../../cpp/inheritance-keywords.md)を参照してください。
 
 ## <a name="example"></a>例
 

@@ -77,7 +77,7 @@ extern "C" __declspec(dllexport) MyExportedFunction( );
 AFX_MANAGE_STATE(AfxGetStaticModuleState( ))
 ```
 
-**AFX_MANAGE_STATE**または MFC 拡張 Dll で MFC を静的にリンクされるレギュラー MFC Dll で、マクロを使用しない必要があります。 詳細については、次を参照してください。 [MFC モジュールの状態データを管理する](../mfc/managing-the-state-data-of-mfc-modules.md)します。
+**AFX_MANAGE_STATE**または MFC 拡張 Dll で MFC を静的にリンクされるレギュラー MFC Dll で、マクロを使用しない必要があります。 詳細については、[MFC モジュールの状態データを管理する](../mfc/managing-the-state-data-of-mfc-modules.md)を参照してください。
 
 作成、ビルド、およびレギュラー MFC DLL を使用する方法の例は、サンプルを参照してください。[は](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/advanced/DllScreenCap)します。 MFC と動的にリンクされるレギュラー MFC Dll の詳細については、サンプルの要約を"変換を動的にリンクを MFC DLL"というセクションを参照してください。
 

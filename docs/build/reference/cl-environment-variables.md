@@ -36,7 +36,7 @@ CL を設定するか、 \_CL\_次の構文を使用して環境変数。
 
 /D オプションを使用して等号 (=) を使用するシンボルを定義することはできません。 等号の代わりにシャープ記号 (#) を使用することができます。 この方法では、CL を使用することができますまたは\_CL\_明示的な値を持つプリプロセッサ定数を定義する環境変数: たとえば、`/DDEBUG#1`を定義する`DEBUG=1`します。
 
-関連情報については、次を参照してください。[環境変数を設定](../setting-the-path-and-environment-variables-for-command-line-builds.md)します。
+関連情報については、[環境変数を設定](../setting-the-path-and-environment-variables-for-command-line-builds.md)を参照してください。
 
 ## <a name="examples"></a>使用例
 

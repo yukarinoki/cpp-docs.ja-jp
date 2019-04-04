@@ -30,7 +30,7 @@ ATL ダイアログ ウィザード実装から派生したダイアログ ボ�
 
 1. **テンプレート**のウィンドウ、[クラスの追加](../../ide/add-class-dialog-box.md)ダイアログ ボックスで、をクリックして**ATL ダイアログ**します。 クリックして**オープン**を表示する、 [ATL ダイアログ ウィザード](../../atl/reference/atl-dialog-wizard.md)します。
 
-詳細については、次を参照してください。 [ ダイアログ ボックスを実装する](../../atl/implementing-a-dialog-box.md)します。
+詳細については、[ ダイアログ ボックスを実装する](../../atl/implementing-a-dialog-box.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -87,10 +87,10 @@ ms.locfileid: "51329475"
 
    した`GetDefaultSQL`で渡すことができる項目のいずれかを返す、 *lpszSQL*パラメーターを`Open`します。 カスタム SQL 文字列を渡さないかどうか*lpszSQL*、フレームワークは、文字列を使用している`GetDefaultSQL`を返します。 少なくとも`GetDefaultSQL`1 つのテーブル名を返す必要があります。 完全な複数のテーブル名を返すことができますが、**選択**ステートメントでは、ODBC**を呼び出す**ステートメントでは、という具合です。 渡すことができますの一覧については*lpszSQL* - かが`GetDefaultSQL`を返すを参照してください[SQL: の SQL ステートメント (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
 
-   2 つ以上のテーブルの結合を実行している場合は、書き換え`GetDefaultSQL`SQL で使用されるテーブルのリストをカスタマイズする**FROM**句。 詳細については、次を参照してください。[レコード セット: 結合 (ODBC) を実行する](../../data/odbc/recordset-performing-a-join-odbc.md)します。
+   2 つ以上のテーブルの結合を実行している場合は、書き換え`GetDefaultSQL`SQL で使用されるテーブルのリストをカスタマイズする**FROM**句。 詳細については、[レコード セット: 結合 (ODBC) を実行する](../../data/odbc/recordset-performing-a-join-odbc.md)を参照してください。
 
 
-- 取得するスキーマについては、データ ソースの実行時に基づくなど、追加のフィールド データ メンバーを手動でバインドします。 フィールド データ メンバーをレコード セット クラスに追加する[RFX](../../data/odbc/record-field-exchange-using-rfx.md)またはバルク RFX 関数の呼び出しに、 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)または[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)メンバー関数、およびクラスのコンス トラクター内のデータ メンバーの初期化。 詳細については、次を参照してください。[レコード セット: データ列を動的にバインド (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)します。
+- 取得するスキーマについては、データ ソースの実行時に基づくなど、追加のフィールド データ メンバーを手動でバインドします。 フィールド データ メンバーをレコード セット クラスに追加する[RFX](../../data/odbc/record-field-exchange-using-rfx.md)またはバルク RFX 関数の呼び出しに、 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)または[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)メンバー関数、およびクラスのコンス トラクター内のデータ メンバーの初期化。 詳細については、[レコード セット: データ列を動的にバインド (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)を参照してください。
 
 - レコード セットのメンバー関数のオーバーライドをなど`OnSetOptions`アプリケーション固有のオプションを設定する、または既定値を上書きします。
 

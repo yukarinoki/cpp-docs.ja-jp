@@ -26,7 +26,7 @@ ms.locfileid: "52175413"
 ![ダイアログ&#45;データ交換およびレコード&#45;フィールド エクス チェンジ](../data/media/vc37xt1.gif "ダイアログ&#45;データ交換およびレコード&#45;フィールド エクス チェンジ")<br/>
 ダイアログ データ エクスチェンジ (DDX) とレコード フィールド エクスチェンジ (RFX)
 
-DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 RFX の詳細については、次を参照してください。[レコード フィールド エクス チェンジ (RFX)](../data/odbc/record-field-exchange-rfx.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 RFX の詳細については、[レコード フィールド エクス チェンジ (RFX)](../data/odbc/record-field-exchange-rfx.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

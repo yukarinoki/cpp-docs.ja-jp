@@ -17,7 +17,7 @@ ms.locfileid: "58772593"
 
 'type_arg': ジェネリック パラメーター 'param' のジェネリック 'generic_type' の無効な型引数は null 非許容値型である必要があります
 
-ジェネリック型のインスタンス化が正しく行われませんでした。 型定義を確認してください。 詳細については、次を参照してください。<xref:System.Nullable>と[ジェネリック](../../extensions/generics-cpp-component-extensions.md)します。
+ジェネリック型のインスタンス化が正しく行われませんでした。 型定義を確認してください。 詳細については、<xref:System.Nullable>と[ジェネリック](../../extensions/generics-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

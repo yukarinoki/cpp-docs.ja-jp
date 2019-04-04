@@ -64,7 +64,7 @@ PROVIDER_COLUMN_MAP マクロは作成を支援する`GetColumnInfo`関数。
 
 `CommandClass` `RowsetClass`は、コマンドと、ユーザー レコードを使用する行セット。
 
-オーバーライドする方法の詳細な例については`GetColumnInfo`ユーザー レコードでは、次を参照してください。[動的に決定する列に返されるコンシューマー](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)します。
+オーバーライドする方法の詳細な例については`GetColumnInfo`ユーザー レコードでは、[動的に決定する列に返されるコンシューマー](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

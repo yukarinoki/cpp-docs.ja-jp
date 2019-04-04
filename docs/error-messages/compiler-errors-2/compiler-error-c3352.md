@@ -19,7 +19,7 @@ ms.locfileid: "58779600"
 
 パラメーターのリストが`function`とデリゲートが一致していません。
 
-詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)します。
+詳細については、[デリゲート (C++ コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3352 が生成されます。
 

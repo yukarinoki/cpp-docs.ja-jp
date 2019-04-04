@@ -42,7 +42,7 @@ ms.locfileid: "57299401"
 
 ## <a name="initializing-the-custom-format-string"></a>カスタム書式指定文字列を初期化しています
 
-呼び出してカスタム文字列を初期化`CDateTimeCtrl::SetFormat`します。 詳細については、次を参照してください。[日付と時刻の選択コントロールでカスタム書式指定文字列を使用して](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)します。 カスタム書式指定文字列を設定する一般的な場所は、`OnInitDialog`含むダイアログ クラスの関数または`OnInitialUpdate`親ビュー クラスの関数。
+呼び出してカスタム文字列を初期化`CDateTimeCtrl::SetFormat`します。 詳細については、[日付と時刻の選択コントロールでカスタム書式指定文字列を使用して](../mfc/using-custom-format-strings-in-a-date-and-time-picker-control.md)を参照してください。 カスタム書式指定文字列を設定する一般的な場所は、`OnInitDialog`含むダイアログ クラスの関数または`OnInitialUpdate`親ビュー クラスの関数。
 
 ## <a name="handling-the-dtnformatquery-notification"></a>DTN_FORMATQUERY 通知の処理
 

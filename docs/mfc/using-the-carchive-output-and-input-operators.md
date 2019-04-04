@@ -53,7 +53,7 @@ ms.locfileid: "57259673"
 |`COleDateTime`|`COleDateTimeSpan`||
 
 > [!NOTE]
->  格納と読み込み`CObject`アーカイブを通じて追加の考慮事項が必要です。 詳細については、次を参照してください。[の保存とアーカイブを通じた Cobject の読み込み](../mfc/storing-and-loading-cobjects-via-an-archive.md)します。
+>  格納と読み込み`CObject`アーカイブを通じて追加の考慮事項が必要です。 詳細については、[の保存とアーカイブを通じた Cobject の読み込み](../mfc/storing-and-loading-cobjects-via-an-archive.md)を参照してください。
 
 **CArchive <\<** と**>>** 演算子が常にへの参照を返す、`CArchive`最初のオペランドとなるオブジェクト。 これによりに、演算子のチェーンに次の図に。
 

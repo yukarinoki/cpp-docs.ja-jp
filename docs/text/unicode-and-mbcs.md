@@ -32,7 +32,7 @@ MFC (Microsoft Foundation Class) ライブラリ、Visual C++ の C ランタイ
 
 - 国際市場向けに作成されたアプリケーションの MBCS プログラミングを簡略化するツールをサポート。
 
-   MBCS をサポートしている Windows オペレーティング システム上で Visual C++ 開発システムを実行すると、システム内の統合ソース コード エディター、デバッガー、コマンド ライン ツールなどを含むすべてが MBCS をサポートします。 詳細については、次を参照してください。 [Visual c における MBCS のサポート](../text/mbcs-support-in-visual-cpp.md)します。
+   MBCS をサポートしている Windows オペレーティング システム上で Visual C++ 開発システムを実行すると、システム内の統合ソース コード エディター、デバッガー、コマンド ライン ツールなどを含むすべてが MBCS をサポートします。 詳細については、[Visual c における MBCS のサポート](../text/mbcs-support-in-visual-cpp.md)を参照してください。
 
 > [!NOTE]
 >  このドキュメントでは、MBCS は、Unicode でサポートされていないすべてのマルチバイト文字を指します。 Visual C++ では、MBCS は常に DBCS を意味します。 2 バイトを超える文字セットはサポートされていません。

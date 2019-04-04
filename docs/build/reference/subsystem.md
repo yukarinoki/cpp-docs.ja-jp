@@ -32,7 +32,7 @@ ms.locfileid: "57820495"
 以下のいずれかのサブシステムを指定できます。
 
 **BOOT_APPLICATION**<br/>
-Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、次を参照してください。 [BCD WMI プロバイダーについて](/previous-versions/windows/desktop/bcd/about-bcd)します。
+Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、[BCD WMI プロバイダーについて](/previous-versions/windows/desktop/bcd/about-bcd)を参照してください。
 
 **コンソール**<br/>
 Windows キャラクター モード アプリケーション。 オペレーティング システムには、コンソール アプリケーションのコンソールが用意されています。

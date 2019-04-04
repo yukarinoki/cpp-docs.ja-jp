@@ -28,7 +28,7 @@ __declspec( safebuffers )
 
 ## <a name="remarks"></a>Remarks
 
-**/GS**コンパイラ オプションによって、コンパイラは、スタック上でセキュリティ チェックを挿入してバッファー オーバーランをテストします。 セキュリティ チェックの対象となるデータ構造体の型が記載されて[/GS (バッファー セキュリティ チェック)](../build/reference/gs-buffer-security-check.md)します。 バッファー オーバーランの検出の詳細については、次を参照してください。 [MSVC のセキュリティ機能](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)します。
+**/GS**コンパイラ オプションによって、コンパイラは、スタック上でセキュリティ チェックを挿入してバッファー オーバーランをテストします。 セキュリティ チェックの対象となるデータ構造体の型が記載されて[/GS (バッファー セキュリティ チェック)](../build/reference/gs-buffer-security-check.md)します。 バッファー オーバーランの検出の詳細については、[MSVC のセキュリティ機能](https://blogs.msdn.microsoft.com/vcblog/2017/06/28/security-features-in-microsoft-visual-c/)を参照してください。
 
 専門家による手動コード レビューまたは外部解析によって、関数がバッファー オーバーランしないと判断される場合もあります。 その場合は、適用することで、関数のセキュリティ チェックを抑制できます、 **__declspec(safebuffers)** 関数の宣言キーワード。
 

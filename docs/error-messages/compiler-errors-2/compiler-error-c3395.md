@@ -17,7 +17,7 @@ ms.locfileid: "50604120"
 
 'function': 方式を伴う関数に適用できません、 \__clrcall 呼び出し規約
 
-`__declspec(dllexport)` [_ _clrcall](../../cpp/clrcall.md)は互換性がありません。  詳細については、次を参照してください。 [dllexport、dllimport](../../cpp/dllexport-dllimport.md)します。
+`__declspec(dllexport)` [_ _clrcall](../../cpp/clrcall.md)は互換性がありません。  詳細については、[dllexport、dllimport](../../cpp/dllexport-dllimport.md)を参照してください。
 
 次の例では、C3395 が生成されます。
 

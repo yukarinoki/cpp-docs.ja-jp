@@ -24,7 +24,7 @@ ms.locfileid: "57276986"
 既存の ActiveX コントロール (以前の OLE コントロール) 変更しなくても、インターネットで使用できます。 ただし、それぞれのパフォーマンスを向上させるためにコントロールを変更することがあります。
 
 > [!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
 
 Web ページ上にコントロールを使用する場合は、追加の考慮事項です。 .Ocx ファイルとすべてのサポート ファイルは、ターゲット コンピューターである必要がありますか、インターネット経由でダウンロードします。 これにより、コードのサイズと時間の重要な考慮事項をダウンロードします。 ダウンロードは、署名された .cab ファイルにパッケージ化することができます。 コントロール、スクリプトの安全性および初期化に対して安全としてマークできます。
 
@@ -46,7 +46,7 @@ Web ページ上にコントロールを使用する場合は、追加の考慮�
 
 ##  <a name="_core_packaging_code_for_downloading"></a> ダウンロード用のコードをパッケージ化
 
-このトピックの詳細については、次を参照してください。 [ActiveX コントロールをパッケージ化](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29)します。
+このトピックの詳細については、[ActiveX コントロールをパッケージ化](https://docs.microsoft.com//previous-versions/windows/internet-explorer/ie-developer/platform-apis/aa751974%28v%3dvs.85%29)を参照してください。
 
 ### <a name="the-codebase-tag"></a>コードベースのタグ
 
@@ -88,7 +88,7 @@ CODEBASE="http://example.microsoft.com/acontrol.cab#version=1,
 
 キャビネット ファイルが指す`CODEBASE`ActiveX コントロールの .ocx ファイルとそのインストールを制御する .inf ファイルに含める必要があります。 キャビネット ファイル、コントロールのファイルの名前を指定することで、.inf ファイルを作成します。 既にこのキャビネット ファイルで、システムに存在する依存 Dll を含めないでください。 たとえば、MFC Dll が別のキャビネット ファイルにパッケージ化され、制御の .inf ファイルで参照します。
 
-CAB ファイルを作成する方法の詳細については、次を参照してください。 [CAB ファイルを作成する](/windows/desktop/devnotes/cabinet-api-functions)します。
+CAB ファイルを作成する方法の詳細については、[CAB ファイルを作成する](/windows/desktop/devnotes/cabinet-api-functions)を参照してください。
 
 ### <a name="the-inf-file"></a>INF ファイル
 

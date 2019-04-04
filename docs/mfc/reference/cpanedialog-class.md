@@ -55,7 +55,7 @@ class CPaneDialog : public CDockablePane
 
 ## <a name="remarks"></a>Remarks
 
-構築、 `CPaneDialog` 2 つのステップ内のオブジェクト。 最初に、コード内のオブジェクトを構築します。 次に、呼び出す[CPaneDialog::Create](#create)します。 有効なリソースのテンプレートの名前またはテンプレートの ID を指定して、親ウィンドウへのポインターを渡す必要があります。 それ以外の場合、作成プロセスは失敗します。 ダイアログ ボックスでは、WS_CHILD と WS_VISIBLE スタイルを指定する必要があります。 WS_CLIPCHILDREN と WS_CLIPSIBLINGS スタイルを指定することをお勧めします。 詳細については、次を参照してください。[ウィンドウ スタイル](styles-used-by-mfc.md#window-styles)します。
+構築、 `CPaneDialog` 2 つのステップ内のオブジェクト。 最初に、コード内のオブジェクトを構築します。 次に、呼び出す[CPaneDialog::Create](#create)します。 有効なリソースのテンプレートの名前またはテンプレートの ID を指定して、親ウィンドウへのポインターを渡す必要があります。 それ以外の場合、作成プロセスは失敗します。 ダイアログ ボックスでは、WS_CHILD と WS_VISIBLE スタイルを指定する必要があります。 WS_CLIPCHILDREN と WS_CLIPSIBLINGS スタイルを指定することをお勧めします。 詳細については、[ウィンドウ スタイル](styles-used-by-mfc.md#window-styles)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

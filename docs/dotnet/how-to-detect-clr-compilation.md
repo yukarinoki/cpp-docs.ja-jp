@@ -17,7 +17,7 @@ ms.locfileid: "57746514"
 
 使用して、`_MANAGED`または`_M_CEE`モジュールをコンパイルしたかどうかに表示するマクロ **/clr**します。 詳細については、「[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)」を参照してください。
 
-マクロの詳細については、次を参照してください。[定義済みマクロ](../preprocessor/predefined-macros.md)します。
+マクロの詳細については、[定義済みマクロ](../preprocessor/predefined-macros.md)を参照してください。
 
 ## <a name="example"></a>例
 

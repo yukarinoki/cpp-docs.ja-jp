@@ -32,9 +32,9 @@ ms.locfileid: "58767302"
 > [!NOTE]
 > **リソース エディター**と**リソース ビュー** Express エディションでは使用できません。
 
-マネージ プロジェクトにリソース ファイルを手動で追加するには、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 この記事には、リソースへのアクセス、静的なリソースを表示およびリソース文字列をプロパティに割り当てる方法が含まれています。
+マネージ プロジェクトにリソース ファイルを手動で追加するには、[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)を参照してください。 この記事には、リソースへのアクセス、静的なリソースを表示およびリソース文字列をプロパティに割り当てる方法が含まれています。
 
-グローバル化を管理対象アプリでリソースをローカライズは、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
+グローバル化を管理対象アプリでリソースをローカライズは、[Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

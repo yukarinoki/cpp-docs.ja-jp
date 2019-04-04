@@ -53,7 +53,7 @@ class COleCmdUI : public CCmdUI
 
 `COleCmdUI` コマンド (という名前、開く、印刷、具合) などのコンテナーのユーザー インターフェイスを受信する DocObject でき DocObject のユーザー インターフェイスで発生するコマンドを受信するためのコンテナーを使用します。 `IDispatch`同じコマンドをディスパッチするされる可能性があります`IOleCommandTarget`クエリし、引数を指定せず、通常は、コマンドの標準セットに依存し、型情報は必要ありませんので、実行する簡単な方法を提供します。 `COleCmdUI` 有効にする、更新、および DocObject ユーザー インターフェイスのコマンドの他のプロパティを設定するために使用します。 コマンドを実行するときに呼び出す[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)します。
 
-DocObjects については、次を参照してください。 [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)と[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)します。
+DocObjects については、[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)と[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

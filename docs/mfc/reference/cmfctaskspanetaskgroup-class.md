@@ -142,7 +142,7 @@ BOOL m_bIsBottom;
 
 ### <a name="remarks"></a>Remarks
 
-1 つのグループは、作業ウィンドウ コントロールの下部に配置できます。 このタスク グループが最後に追加する必要があります。 詳細については、次を参照してください。 [cmfctaskspane::addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)します。
+1 つのグループは、作業ウィンドウ コントロールの下部に配置できます。 このタスク グループが最後に追加する必要があります。 詳細については、[cmfctaskspane::addgroup](../../mfc/reference/cmfctaskspane-class.md#addgroup)を参照してください。
 
 ##  <a name="m_biscollapsed"></a>  CMFCTasksPaneTaskGroup::m_bIsCollapsed
 

@@ -51,7 +51,7 @@ class CMFCToolBarFontSizeComboBox : public CMFCToolBarComboBoxButton
 
 使用することができます、`CMFCToolBarFontSizeComboBox`オブジェクトと共に、 [CMFCToolBarFontComboBox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)フォントとフォント サイズを選択するユーザーを有効にするオブジェクト。
 
-フォント コンボ ボックス ボタンを追加するのと同じように、ツールバーにフォント サイズのコンボ ボックス ボタンを追加できます。 詳細については、次を参照してください。 [CMFCToolBarFontComboBox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)します。
+フォント コンボ ボックス ボタンを追加するのと同じように、ツールバーにフォント サイズのコンボ ボックス ボタンを追加できます。 詳細については、[CMFCToolBarFontComboBox クラス](../../mfc/reference/cmfctoolbarfontcombobox-class.md)を参照してください。
 
 ユーザーが新しいフォントを選択すると、`CMFCToolBarFontComboBox`オブジェクトを使用して、そのフォントのサイズがサポートされているサイズ、フォント コンボ ボックスを入力することができます、 [CMFCToolBarFontSizeComboBox::RebuildFontSizes](#rebuildfontsizes)メソッド。
 

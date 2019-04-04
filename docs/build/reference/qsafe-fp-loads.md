@@ -24,11 +24,11 @@ ms.locfileid: "57819692"
 
 このオプションは、によってオーバーライド[/fp: を除く](fp-specify-floating-point-behavior.md)します。 **/Qsafe_fp_loads**で指定されているコンパイラの動作のサブセットを指定 **/fp: 除く**します。
 
-**/Qsafe_fp_loads**と互換性がない[/clr](clr-common-language-runtime-compilation.md)と[/fp:fast](fp-specify-floating-point-behavior.md)します。 浮動小数点コンパイラ オプションの詳細については、次を参照してください。 [/fp (浮動小数点の動作の指定)](fp-specify-floating-point-behavior.md)します。
+**/Qsafe_fp_loads**と互換性がない[/clr](clr-common-language-runtime-compilation.md)と[/fp:fast](fp-specify-floating-point-behavior.md)します。 浮動小数点コンパイラ オプションの詳細については、[/fp (浮動小数点の動作の指定)](fp-specify-floating-point-behavior.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**構成プロパティ** > **C/C++** > **コマンドライン**プロパティ ページ。
 

@@ -65,7 +65,7 @@ ms.locfileid: "58328429"
 については、**イメージ エディター**を参照してください方法[アイコンやその他のイメージの作成](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)、 [、イメージ編集](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)、[描画ツールを使用して](../windows/using-a-drawing-tool-image-editor-for-icons.md)、 [色の調整](../windows/working-with-color-image-editor-for-icons.md)、および[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)します。
 
 > [!NOTE]
-> 無料でダウンロード、 **Visual Studio Image Library**多くのアニメーション、ビットマップ、およびアプリケーションで使用できるアイコンを格納しています。 ライブラリをダウンロードする方法の詳細については、次を参照してください。、 [Visual Studio Image Library](/visualstudio/designers/the-visual-studio-image-library)します。
+> 無料でダウンロード、 **Visual Studio Image Library**多くのアニメーション、ビットマップ、およびアプリケーションで使用できるアイコンを格納しています。 ライブラリをダウンロードする方法の詳細については、、 [Visual Studio Image Library](/visualstudio/designers/the-visual-studio-image-library)を参照してください。
 
 ## <a name="image-menu"></a>[イメージ] メニュー
 

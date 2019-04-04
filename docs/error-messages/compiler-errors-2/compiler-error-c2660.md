@@ -41,7 +41,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-C2660 エラーは、マネージド型の Dispose メソッドを直接呼び出す場合にも発生することがあります。 詳細については、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。 次の例では、C2660 が生成されます。
+C2660 エラーは、マネージド型の Dispose メソッドを直接呼び出す場合にも発生することがあります。 詳細については、[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)を参照してください。 次の例では、C2660 が生成されます。
 
 ```
 // C2660_a.cpp

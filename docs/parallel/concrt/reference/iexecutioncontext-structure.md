@@ -66,7 +66,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
 ### <a name="parameters"></a>パラメーター
 
 *pDispatchState*<br/>
-この実行コンテキストがディスパッチされる状態へのポインター。 ディスパッチの状態の詳細については、次を参照してください。 [DispatchState](dispatchstate-structure.md)します。
+この実行コンテキストがディスパッチされる状態へのポインター。 ディスパッチの状態の詳細については、[DispatchState](dispatchstate-structure.md)を参照してください。
 
 ##  <a name="getid"></a>  Iexecutioncontext::getid メソッド
 

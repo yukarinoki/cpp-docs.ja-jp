@@ -168,7 +168,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 
 ### <a name="remarks"></a>Remarks
 
-DIB ビットマップを作成する方法の詳細については、次を参照してください。 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap)します。
+DIB ビットマップを作成する方法の詳細については、[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap)を参照してください。
 
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha
 
@@ -585,7 +585,7 @@ BOOL HighlightRect(
 
 ### <a name="remarks"></a>Remarks
 
-場合*nPercentage*は 0 ~ 99、`HighlightRect`アルファ ブレンディング アルゴリズムを使用します。 アルファ ブレンドの詳細については、次を参照してください。[アルファ ブレンドの直線と塗りつぶし](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills)します。 場合*nPercentage* -1 で、このメソッドは、既定の強調表示のレベルを使用します。 場合*nPercentage* 100 は、このメソッドは何も実行し、TRUE を返します。
+場合*nPercentage*は 0 ~ 99、`HighlightRect`アルファ ブレンディング アルゴリズムを使用します。 アルファ ブレンドの詳細については、[アルファ ブレンドの直線と塗りつぶし](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills)を参照してください。 場合*nPercentage* -1 で、このメソッドは、既定の強調表示のレベルを使用します。 場合*nPercentage* 100 は、このメソッドは何も実行し、TRUE を返します。
 
 メソッド パラメーターを使用して*nTolerance*を四角形の領域を強調表示するかどうかを判断します。 四角形は、アプリケーションの背景色の違いを強調表示して*clrTransparent*必要がありますより小さい*nTolerance*各色コンポーネント (赤、緑、および青) にします。
 
@@ -617,7 +617,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、[色](/windows/desktop/uxguide/vis-color)を参照してください。
 
 このメソッドと`CDrawingManager::HLStoRGB_TWO`メソッドは、同じ操作を実行しますの異なる値が必要です、 *H*パラメーター。 このメソッドで*H*円に占める割合です。 `CDrawingManager::HLStoRGB_TWO`メソッド、 *H*は 0 ~ 360 両方を表現する赤の間の角度の値。 たとえば、 `HLStoRGB_ONE`、値は 0.25 の*H*と 90 の値と等価`HLStoRGB_TWO`します。
 
@@ -649,7 +649,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、[色](/windows/desktop/uxguide/vis-color)を参照してください。
 
 このメソッドと[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)メソッドは、同じ操作を実行しますの異なる値が必要です、 *H*パラメーター。 このメソッドで*H*は 0 ~ 360 両方を表現する赤の間の角度の値。 [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)メソッド、 *H*円に占める割合です。 たとえば、 `HLStoRGB_ONE`、値は 0.25 の*H*と 90 の値と等価`HLStoRGB_TWO`します。
 
@@ -679,7 +679,7 @@ static COLORREF __stdcall HSVtoRGB(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、[色](/windows/desktop/uxguide/vis-color)を参照してください。
 
 ##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
 
@@ -864,7 +864,7 @@ static void __stdcall RGBtoHSL(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、[色](/windows/desktop/uxguide/vis-color)を参照してください。
 
 返された値*H*は 0 ~ 1 が 0 と 1 の両方を表します赤の比率として表されます。 戻り値を*S*と*L* 0 から 1 までの数値します。
 
@@ -896,7 +896,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、[色](/windows/desktop/uxguide/vis-color)を参照してください。
 
 返された値*H* 0 ~ 360 の数値は、0 から 360 の両方が red 示すためです。 戻り値は、 *S*と*V* 0 から 1 までの数値します。
 

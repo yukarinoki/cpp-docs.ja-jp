@@ -40,7 +40,7 @@ class HStringReference;
 
 ## <a name="remarks"></a>Remarks
 
-新しい HSTRING のバッキング バッファーの有効期間は、Windows ランタイムで管理されていません。 呼び出し元はソース文字列をスタック フレームに割り当てることで、ヒープ割り当てを回避し、メモリ リークのリスクを排除します。 また、呼び出し元はアタッチ済みの HSTRING の有効期間中にソース文字列が変更されないことを確認する必要があります。 詳細については、次を参照してください。 [WindowsCreateStringReference 関数](/windows/desktop/api/winstring/nf-winstring-windowscreatestringreference)します。
+新しい HSTRING のバッキング バッファーの有効期間は、Windows ランタイムで管理されていません。 呼び出し元はソース文字列をスタック フレームに割り当てることで、ヒープ割り当てを回避し、メモリ リークのリスクを排除します。 また、呼び出し元はアタッチ済みの HSTRING の有効期間中にソース文字列が変更されないことを確認する必要があります。 詳細については、[WindowsCreateStringReference 関数](/windows/desktop/api/winstring/nf-winstring-windowscreatestringreference)を参照してください。
 
 ## <a name="members"></a>メンバー
 

@@ -39,7 +39,7 @@ int main() {
 }
 ```
 
-詳細については、次を参照してください。[通常の算術変換](../../c-language/usual-arithmetic-conversions.md)します。
+詳細については、[通常の算術変換](../../c-language/usual-arithmetic-conversions.md)を参照してください。
 
 ```
 // C4244_level3.cpp

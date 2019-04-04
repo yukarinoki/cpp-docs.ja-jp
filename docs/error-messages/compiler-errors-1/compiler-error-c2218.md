@@ -17,6 +17,6 @@ ms.locfileid: "50468611"
 
 '__vectorcall' と '/arch:IA32' は同時に使用できません
 
-`__vectorcall` の呼び出し規約は、ストリーミング SIMD 拡張命令 2 (SSE2) 以上が搭載された x86 および x64 プロセッサのネイティブ コードでのみサポートされます。 詳細については、次を参照してください。 [_ _vectorcall](../../cpp/vectorcall.md)します。
+`__vectorcall` の呼び出し規約は、ストリーミング SIMD 拡張命令 2 (SSE2) 以上が搭載された x86 および x64 プロセッサのネイティブ コードでのみサポートされます。 詳細については、[_ _vectorcall](../../cpp/vectorcall.md)を参照してください。
 
 このエラーを修正するには、SSE2、AVX、または AVX2 をターゲットにするようにコンパイラ オプションを変更します。 詳細については、「[/arch (x86)](../../build/reference/arch-x86.md)」を参照してください。

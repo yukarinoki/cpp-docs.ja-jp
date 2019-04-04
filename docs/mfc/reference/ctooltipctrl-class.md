@@ -142,7 +142,7 @@ class CToolTipCtrl : public CWnd
 
 `CToolTipCtrl`クラスには、Windows の一般的なツール ヒント コントロールの機能が用意されています。 このコントロール (つまり、`CToolTipCtrl`クラス) は以降 Windows 95/98 および Windows NT 3.51 の下で実行中のプログラムにのみ使用できます。
 
-ツール ヒントを有効にする方法の詳細については、次を参照してください。[いない CFrameWnd から派生した Windows でのツール ヒント](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)します。
+ツール ヒントを有効にする方法の詳細については、[いない CFrameWnd から派生した Windows でのツール ヒント](../../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)を参照してください。
 
 使用しての詳細については`CToolTipCtrl`を参照してください[コントロール](../../mfc/controls-mfc.md)と[を使用して CToolTipCtrl](../../mfc/using-ctooltipctrl.md)します。
 

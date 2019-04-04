@@ -62,11 +62,11 @@ ms.locfileid: "57807500"
 使用することができます、 `#pragma` [auto_inline](../../preprocessor/auto-inline.md)関数をインライン展開の候補として考慮の対象から除外するディレクティブ。 また、 `#pragma` [組み込み](../../preprocessor/intrinsic.md)ディレクティブ。
 
 > [!NOTE]
-> プロファイリングのテスト実行から収集される情報にはそれ以外の場合に効果を指定する場合の最適化よりも優先されます **/Ob**、 **/Os**、または **/Ot**します。 詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。
+> プロファイリングのテスト実行から収集される情報にはそれ以外の場合に効果を指定する場合の最適化よりも優先されます **/Ob**、 **/Os**、または **/Ot**します。 詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 展開**構成プロパティ**、 **C/C++**、選択と**最適化**します。
 

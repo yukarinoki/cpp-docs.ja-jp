@@ -21,7 +21,7 @@ ms.locfileid: "50473659"
 
 アンマネージ型のメンバーにアクセスすると、検証不可能な (peverify.exe) イメージが生成されます。
 
-詳細については、次を参照してください。[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
+詳細については、[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)を参照してください。
 
 **/Clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 

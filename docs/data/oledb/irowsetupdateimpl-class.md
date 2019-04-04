@@ -203,11 +203,11 @@ STDMETHOD (GetPendingRows )(HCHAPTER /* hReserved */,
 *hReserved*<br/>
 [in]対応する、 *hChapter*パラメーター [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85))します。
 
-その他のパラメーターでは、次を参照してください。 [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+その他のパラメーターでは、[IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+詳細については、[IRowsetUpdate::GetPendingRows](/previous-versions/windows/desktop/ms719626(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ## <a name="getrowstatus"></a> Irowsetupdateimpl::getrowstatus
 
@@ -227,7 +227,7 @@ STDMETHOD (GetRowStatus )(HCHAPTER /* hReserved */,
 *hReserved*<br/>
 [in]対応する、 *hChapter*パラメーター [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85))します。
 
-その他のパラメーターでは、次を参照してください。 [IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+その他のパラメーターでは、[IRowsetUpdate::GetRowStatus](/previous-versions/windows/desktop/ms724377(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ## <a name="undo"></a> Irowsetupdateimpl::undo
 
@@ -255,7 +255,7 @@ STDMETHOD (Undo )(HCHAPTER /* hReserved */,
 *prgRowsUndone*<br/>
 [in]対応する、 *prgRows*パラメーター [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85))します。
 
-その他のパラメーターでは、次を参照してください。 [IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+その他のパラメーターでは、[IRowsetUpdate::Undo](/previous-versions/windows/desktop/ms719655(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ## <a name="update"></a> Irowsetupdateimpl::update
 
@@ -277,7 +277,7 @@ STDMETHOD (Update )(HCHAPTER /* hReserved */,
 *hReserved*<br/>
 [in]対応する、 *hChapter*パラメーター [irowsetupdate::update](/previous-versions/windows/desktop/ms719709(v=vs.85))します。
 
-その他のパラメーターでは、次を参照してください。 [irowsetupdate::update](/previous-versions/windows/desktop/ms719709(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+その他のパラメーターでは、[irowsetupdate::update](/previous-versions/windows/desktop/ms719709(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

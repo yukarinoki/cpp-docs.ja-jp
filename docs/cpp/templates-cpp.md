@@ -55,7 +55,7 @@ int minimum(const int& lhs, const int& rhs)
 }
 ```
 
-関数テンプレートで、コンパイラが型の推論を実行する方法のルールは、通常の関数の規則に基づいています。 詳細については、次を参照してください。[オーバー ロード解決の関数テンプレート呼び出し](../cpp/overload-resolution-of-function-template-calls.md)します。
+関数テンプレートで、コンパイラが型の推論を実行する方法のルールは、通常の関数の規則に基づいています。 詳細については、[オーバー ロード解決の関数テンプレート呼び出し](../cpp/overload-resolution-of-function-template-calls.md)を参照してください。
 
 ## <a id="type_parameters"></a> 型パラメーター
 
@@ -219,4 +219,4 @@ MyMap<string, MyClass> classes2; // uses the partial specialization
 
 テンプレートには、それぞれの特殊化された型パラメーターが一意に任意の数の特殊化のことができます。 クラス テンプレートのみを部分的に特殊化することがあります。 テンプレートのすべての完全および部分的な特殊化は、元のテンプレートと同じ名前空間で宣言する必要があります。
 
-詳細については、次を参照してください。[テンプレートの特殊化](../cpp/template-specialization-cpp.md)します。
+詳細については、[テンプレートの特殊化](../cpp/template-specialization-cpp.md)を参照してください。

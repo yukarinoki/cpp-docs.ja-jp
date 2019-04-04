@@ -23,7 +23,7 @@ Visual Studio を使用して、標準の Win32 DLL または Windows ランタ�
 
 1. DLL を使用するプロジェクトのショートカット メニューを開き、 **[プロパティ]** をクリックします。 **[共通プロパティ]** ページで、 **[新しい参照の追加]** をクリックします。
 
-1. Windows ランタイム コンポーネントは、DLL ファイルとメタデータを含む .winmd ファイルで構成されます。 通常、これらのファイルは同じフォルダーにあります。 **[参照の追加]** ダイアログ ボックスの左ペインで、 **[参照]** をクリックし、DLL とその .winmd ファイルの場所に移動します。 詳細については、次を参照してください。[拡張 Sdk](/visualstudio/extensibility/creating-a-software-development-kit#ExtensionSDKs)します。
+1. Windows ランタイム コンポーネントは、DLL ファイルとメタデータを含む .winmd ファイルで構成されます。 通常、これらのファイルは同じフォルダーにあります。 **[参照の追加]** ダイアログ ボックスの左ペインで、 **[参照]** をクリックし、DLL とその .winmd ファイルの場所に移動します。 詳細については、[拡張 Sdk](/visualstudio/extensibility/creating-a-software-development-kit#ExtensionSDKs)を参照してください。
 
 ## <a name="standard-dlls"></a>標準 DLL
 

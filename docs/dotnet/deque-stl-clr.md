@@ -745,7 +745,7 @@ deque(System::Collections::Generic::IEnumerable<Value>^ right);
 
 `deque(deque<Value>% right);`
 
-シーケンスが被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)。 Deque オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*します。 反復子の詳細については、次を参照してください。 [deque::begin (STL/CLR)](#begin)と[deque::end (STL/CLR)](#end)します。
+シーケンスが被制御シーケンスを初期化します [`right.begin()`、 `right.end()`)。 Deque オブジェクトによって制御されるシーケンスのコピーである初期被制御シーケンスを指定するために使用*右*します。 反復子の詳細については、[deque::begin (STL/CLR)](#begin)と[deque::end (STL/CLR)](#end)を参照してください。
 
 コンス トラクター。
 

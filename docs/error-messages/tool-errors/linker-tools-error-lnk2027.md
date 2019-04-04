@@ -27,4 +27,4 @@ LNK2027 を解決するには、次のいずれかの操作を行います。
 
 - モジュールが安全な .netmodule の場合は、リンカーに直接モジュールを渡します。
 
-詳細については、次を参照してください。 [/ASSEMBLYMODULE (MSIL モジュールのアセンブリへの追加)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)と[リンカー入力としての .netmodule ファイル](../../build/reference/netmodule-files-as-linker-input.md)します。
+詳細については、[/ASSEMBLYMODULE (MSIL モジュールのアセンブリへの追加)](../../build/reference/assemblymodule-add-a-msil-module-to-the-assembly.md)と[リンカー入力としての .netmodule ファイル](../../build/reference/netmodule-files-as-linker-input.md)を参照してください。

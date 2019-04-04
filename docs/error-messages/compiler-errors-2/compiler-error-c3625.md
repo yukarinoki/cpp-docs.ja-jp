@@ -17,7 +17,7 @@ ms.locfileid: "58779015"
 
 'native_type': ネイティブ型はマネージド型または WinRT 型の 'type' から派生することはできません
 
-マネージド クラスまたは WinRT クラスからネイティブ クラスを継承できません。 詳細については、次を参照してください。[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)します。
+マネージド クラスまたは WinRT クラスからネイティブ クラスを継承できません。 詳細については、[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

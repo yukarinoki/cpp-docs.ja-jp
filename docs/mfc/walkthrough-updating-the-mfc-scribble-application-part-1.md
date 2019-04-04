@@ -18,7 +18,7 @@ ms.locfileid: "57258763"
 ---
 # <a name="walkthrough-updating-the-mfc-scribble-application-part-1"></a>チュートリアル: MFC Scribble アプリケーション (パート 1) の更新
 
-このチュートリアルでは、リボン ユーザー インターフェイスを使用するために MFC アプリケーションを修正する方法を説明します。 Visual Studio は、Office 2007 リボンと Windows 7 Scenic リボンの両方をサポートしています。 リボンのユーザー インターフェイスの詳細については、次を参照してください。[リボン](/windows/desktop/uxguide/cmd-ribbons)します。
+このチュートリアルでは、リボン ユーザー インターフェイスを使用するために MFC アプリケーションを修正する方法を説明します。 Visual Studio は、Office 2007 リボンと Windows 7 Scenic リボンの両方をサポートしています。 リボンのユーザー インターフェイスの詳細については、[リボン](/windows/desktop/uxguide/cmd-ribbons)を参照してください。
 
 このチュートリアルでは、マウスを使用して線画を描く、従来の Scribble 1.0 MFC サンプルを変更します。 ここでは、リボン バーを表示するよう Scribble サンプルを変更します。 [第 2 部](../mfc/walkthrough-updating-the-mfc-scribble-application-part-2.md)リボン バーにボタンを追加します。
 

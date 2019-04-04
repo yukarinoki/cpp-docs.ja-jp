@@ -11,7 +11,7 @@ ms.locfileid: "50563154"
 ---
 # <a name="name-resolution-for-dependent-types"></a>依存する型の名前解決
 
-使用**typename**の修飾名で指定した修飾名が型を識別するようにコンパイラに指示するテンプレートの定義。 詳細については、次を参照してください。 [typename](../cpp/typename.md)します。
+使用**typename**の修飾名で指定した修飾名が型を識別するようにコンパイラに指示するテンプレートの定義。 詳細については、[typename](../cpp/typename.md)を参照してください。
 
 ```cpp
 // template_name_resolution1.cpp

@@ -33,7 +33,7 @@ ms.locfileid: "57266992"
 
 1. イメージ リストへの呼び出しにコントロールを関連付ける[CComboBoxEx::SetImageList](../mfc/reference/ccomboboxex-class.md#setimagelist)します。
 
-イメージ リスト コントロールに関連付けられていると、個別には次の 3 つの可能な状態の各項目を使用するイメージを指定できます。 詳細については、次を参照してください。 [、個々 の項目のイメージの設定](../mfc/setting-the-images-for-an-individual-item.md)します。
+イメージ リスト コントロールに関連付けられていると、個別には次の 3 つの可能な状態の各項目を使用するイメージを指定できます。 詳細については、[、個々 の項目のイメージの設定](../mfc/setting-the-images-for-an-individual-item.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

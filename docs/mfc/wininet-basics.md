@@ -31,7 +31,7 @@ WinInet を使用して、ダウンロードしてから、アプリケーショ
 
 次のコードの抜粋では、単純なブラウザーを作成、Web ページでは、FTP、ファイルをダウンロードして gopher ファイルを検索する方法を示します。 完全な例としてはないし、例外処理が含まれていません。
 
-WinInet の詳細については、次を参照してください。 [Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)します。
+WinInet の詳細については、[Win32 インターネット拡張機能 (WinInet)](../mfc/win32-internet-extensions-wininet.md)を参照してください。
 
 ##  <a name="_core_create_a_very_simple_browser"></a> 非常にシンプルなブラウザーを作成します。
 

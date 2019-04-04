@@ -19,7 +19,7 @@ ms.locfileid: "58771254"
 
 型のジェネリック クラスの特殊化の転送を使用することはできません。
 
-詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
+詳細については、[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

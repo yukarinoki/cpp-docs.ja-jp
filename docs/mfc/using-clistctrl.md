@@ -22,7 +22,7 @@ ms.locfileid: "57270151"
 関連情報については、次を参照してください。[リスト ビュー コントロールについて](/windows/desktop/Controls/list-view-controls-overview)Windows SDK に含まれています。
 
 > [!NOTE]
->  Windows SDK は、リスト コントロールを「リスト ビュー コントロール」として参照します。 "View"のこの使用法を参照しない MFC ビュー クラスでは、特に`CListView`します。 詳細については、次を参照してください。[リスト コントロールとリスト ビュー](../mfc/list-control-and-list-view.md)します。
+>  Windows SDK は、リスト コントロールを「リスト ビュー コントロール」として参照します。 "View"のこの使用法を参照しない MFC ビュー クラスでは、特に`CListView`します。 詳細については、[リスト コントロールとリスト ビュー](../mfc/list-control-and-list-view.md)を参照してください。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 

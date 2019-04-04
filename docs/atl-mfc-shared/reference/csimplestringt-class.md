@@ -121,7 +121,7 @@ String クラスの文字型。 次のいずれかの値を指定します。
 
 ### <a name="remarks"></a>Remarks
 
-`CSimpleStringT` Visual C でサポートされているさまざまな文字列クラスの基本クラスです。 バッファーの基本的な操作、文字列オブジェクトのメモリ管理のため、最小限のサポートを提供します。 高度な文字列オブジェクトでは、次を参照してください。 [CStringT クラス](../../atl-mfc-shared/reference/cstringt-class.md)します。
+`CSimpleStringT` Visual C でサポートされているさまざまな文字列クラスの基本クラスです。 バッファーの基本的な操作、文字列オブジェクトのメモリ管理のため、最小限のサポートを提供します。 高度な文字列オブジェクトでは、[CStringT クラス](../../atl-mfc-shared/reference/cstringt-class.md)を参照してください。
 
 ### <a name="requirements"></a>要件
 
@@ -576,7 +576,7 @@ IAtlStringMgr* GetManager() const throw();
 
 ### <a name="remarks"></a>Remarks
 
-Manager で使用されるメモリを取得するには、このメソッドを呼び出し、`CSimpleStringT`オブジェクト。 メモリ マネージャーと文字列オブジェクトの詳細については、次を参照してください。[メモリ管理と CStringT](../memory-management-with-cstringt.md)します。
+Manager で使用されるメモリを取得するには、このメソッドを呼び出し、`CSimpleStringT`オブジェクト。 メモリ マネージャーと文字列オブジェクトの詳細については、[メモリ管理と CStringT](../memory-management-with-cstringt.md)を参照してください。
 
 ##  <a name="getstring"></a>  CSimpleStringT::GetString
 
@@ -1040,7 +1040,7 @@ void SetManager(IAtlStringMgr* pStringMgr);
 
 ### <a name="remarks"></a>Remarks
 
-新しいメモリを指定するには、このメソッドで使用されるマネージャーを呼び出し、`CSimpleStringT`オブジェクト。 メモリ マネージャーと文字列オブジェクトの詳細については、次を参照してください。[メモリ管理と CStringT](../memory-management-with-cstringt.md)します。
+新しいメモリを指定するには、このメソッドで使用されるマネージャーを呼び出し、`CSimpleStringT`オブジェクト。 メモリ マネージャーと文字列オブジェクトの詳細については、[メモリ管理と CStringT](../memory-management-with-cstringt.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -1144,7 +1144,7 @@ void Truncate(int nNewLength);
 新しい長さに文字列の内容を切り捨てるには、このメソッドを呼び出します。
 
 > [!NOTE]
->  これには、割り当てられたバッファーの長さは影響しません。 現在のバッファーを増減するには、次を参照してください。 [FreeExtra](#freeextra)と[Preallocate](#preallocate)します。
+>  これには、割り当てられたバッファーの長さは影響しません。 現在のバッファーを増減するには、[FreeExtra](#freeextra)と[Preallocate](#preallocate)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -1173,7 +1173,7 @@ void UnlockBuffer() throw();
 
 文字列の参照カウントを 1 にリセットするには、このメソッドを呼び出します。
 
-`CSimpleStringT`デストラクターが自動的に呼び出します`UnlockBuffer`にデストラクターが呼び出されたときに、バッファーはロックされないことを確認します。 このメソッドの例は、次を参照してください。 [LockBuffer](#lockbuffer)します。
+`CSimpleStringT`デストラクターが自動的に呼び出します`UnlockBuffer`にデストラクターが呼び出されたときに、バッファーはロックされないことを確認します。 このメソッドの例は、[LockBuffer](#lockbuffer)を参照してください。
 
 ##  <a name="dtor"></a>  CSimpleStringT:: ~ CSimpleStringT
 

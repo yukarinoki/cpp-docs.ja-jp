@@ -65,7 +65,7 @@ ms.locfileid: "51331257"
 
 アセンブルし、1 つまたは複数のアセンブリ言語のソース ファイルをリンクします。 コマンド ライン オプションは、大文字小文字を区別します。
 
-Ml64.exe の詳細については、次を参照してください。 [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
+Ml64.exe の詳細については、[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)を参照してください。
 
 ## <a name="syntax"></a>構文
 

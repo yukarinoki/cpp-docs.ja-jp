@@ -17,7 +17,7 @@ ms.locfileid: "50485537"
 
 演算子 'operator': すべてのオペランドは同じ列挙型である必要があります
 
-演算子で列挙子を使用する場合は、両方のオペランドが列挙型でなければなりません。 詳細については、次を参照してください。[方法: 定義および c++ の列挙型を使用する/cli CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)します。
+演算子で列挙子を使用する場合は、両方のオペランドが列挙型でなければなりません。 詳細については、[方法: 定義および c++ の列挙型を使用する/cli CLI](../../dotnet/how-to-define-and-consume-enums-in-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

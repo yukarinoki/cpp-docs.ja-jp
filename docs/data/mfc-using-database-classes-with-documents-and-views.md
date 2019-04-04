@@ -41,7 +41,7 @@ ms.locfileid: "55849746"
 
 アプリケーション ウィザードを使用して、フォーム ベースのアプリケーションを作成するを参照してください。[フォーム ベースの MFC アプリケーションの作成](../mfc/reference/creating-a-forms-based-mfc-application.md)と[データベースのサポート、MFC アプリケーション ウィザード](../mfc/reference/database-support-mfc-application-wizard.md)します。
 
-フォームの詳細については、次を参照してください。[レコード ビュー](../data/record-views-mfc-data-access.md)します。
+フォームの詳細については、[レコード ビュー](../data/record-views-mfc-data-access.md)を参照してください。
 
 ##  <a name="_core_using_recordsets_in_documents_and_views"></a> ドキュメントとビュー内のレコード セットを使用します。
 

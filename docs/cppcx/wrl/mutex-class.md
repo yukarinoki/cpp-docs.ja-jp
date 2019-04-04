@@ -135,4 +135,4 @@ Mutex& operator=(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。、**移動セマンティクス**の[右辺値参照宣言子: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)します。
+詳細については、、**移動セマンティクス**の[右辺値参照宣言子: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)を参照してください。

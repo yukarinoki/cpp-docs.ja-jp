@@ -305,7 +305,7 @@ static void WINAPI ObjectMain(bool bStarting);
 
 値、 *bStarting*パラメーターは、モジュールがされているかどうかを示します初期化または終了します。 既定の実装`ObjectMain`、何も行われませんが、初期化またはクラスに割り当てるリソースをクリーンアップするには、クラスでこの関数をオーバーライドすることができます。 なお`ObjectMain`クラスのすべてのインスタンスが要求される前に呼び出されます。
 
-`ObjectMain` エントリ ポイント関数が実行できる操作の種類が制限されているために、DLL のエントリ ポイントから呼び出されます。 これらの制限の詳細については、次を参照してください。 [Dll と Visual c ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)と[DllMain](/windows/desktop/Dlls/dllmain)します。
+`ObjectMain` エントリ ポイント関数が実行できる操作の種類が制限されているために、DLL のエントリ ポイントから呼び出されます。 これらの制限の詳細については、[Dll と Visual c ランタイム ライブラリの動作](../../build/run-time-library-behavior.md)と[DllMain](/windows/desktop/Dlls/dllmain)を参照してください。
 
 ### <a name="example"></a>例
 

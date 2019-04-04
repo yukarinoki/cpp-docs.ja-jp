@@ -72,7 +72,7 @@ class ATL_NO_VTABLE CAtlModule : public _ATL_MODULE
 
 このクラスによって使用されます[CAtlDllModuleT クラス](../../atl/reference/catldllmodulet-class.md)、 [CAtlExeModuleT クラス](../../atl/reference/catlexemodulet-class.md)、および[CAtlServiceModuleT クラス](../../atl/reference/catlservicemodulet-class.md)DLL アプリケーションでは、EXE アプリケーションでは、サポートを提供してWindows サービスは、それぞれします。
 
-ATL でモジュールの詳細については、次を参照してください。 [ATL モジュール クラス](../../atl/atl-module-classes.md)します。
+ATL でモジュールの詳細については、[ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
 
 このクラスは廃止された置換[CComModule クラス](../../atl/reference/ccommodule-class.md)以前のバージョンの ATL の使用
 
@@ -270,7 +270,7 @@ HRESULT WINAPI UpdateRegistryFromResourceD(
 TRUE の場合は、オブジェクトを登録する必要があります。FALSE それ以外の場合。
 
 *この配列*<br/>
-スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、次を参照してください。 [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)します。 それ以外の場合、NULL 既定値を使用します。
+スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)を参照してください。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -304,7 +304,7 @@ inline HRESULT WINAPI UpdateRegistryFromResourceDHelper(
 オブジェクトを登録するかどうかを示します。
 
 *この配列*<br/>
-スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、次を参照してください。 [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)します。 それ以外の場合、NULL 既定値を使用します。
+スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)を参照してください。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -342,7 +342,7 @@ HRESULT WINAPI UpdateRegistryFromResourceS(
 リソース スクリプトを登録する必要があるかどうかを示します。
 
 *この配列*<br/>
-スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、次を参照してください。 [CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)します。 それ以外の場合、NULL 既定値を使用します。
+スクリプトの置き換え可能パラメーターに関連付けられている値を格納する置換マップへのポインター。 ATL は、% モジュールを自動的に使用します。 追加の置き換え可能パラメーターを使用する、[CAtlModule::AddCommonRGSReplacements](#addcommonrgsreplacements)を参照してください。 それ以外の場合、NULL 既定値を使用します。
 
 ### <a name="return-value"></a>戻り値
 

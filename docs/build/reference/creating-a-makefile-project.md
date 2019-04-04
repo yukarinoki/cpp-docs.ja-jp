@@ -22,7 +22,7 @@ ms.locfileid: "57827588"
 
 - Visual Studio が IntelliSense を使用する .vcxproj ファイルを構成する、既存のメイクファイルを使用する Visual Studio でメイクファイル プロジェクトを作成します。 (ネイティブの MSBuild プロジェクトで与えられる IDE 機能は一部のみ与えられます。)下の「[メイクファイル プロジェクトを作成するには](#create_a_makefile_project)」を参照してください。
 - **[既存コード ファイルからの新しいプロジェクトの作成]** ウィザードを使用し、ソース コードからネイティブ MSBuild プロジェクトを作成します。 元のメイクファイルは、この後は使用されません。 詳細については、「[方法 :既存のコードから C++ プロジェクトを作成](../how-to-create-a-cpp-project-from-existing-code.md)です。
-- **Visual Studio 2017 以降**:使用して、**フォルダーを開く**を編集してとしてメイクファイル プロジェクトのビルドの機能-MSBuild システムを介さず、します。 詳細については、次を参照してください。 [C++ 用のフォルダーを開くプロジェクト](../open-folder-projects-cpp.md)します。
+- **Visual Studio 2017 以降**:使用して、**フォルダーを開く**を編集してとしてメイクファイル プロジェクトのビルドの機能-MSBuild システムを介さず、します。 詳細については、[C++ 用のフォルダーを開くプロジェクト](../open-folder-projects-cpp.md)を参照してください。
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> メイクファイル プロジェクトのテンプレートでメイクファイル プロジェクトを作成するには
 
@@ -58,7 +58,7 @@ Visual Studio 2017 以降では、メイクファイル プロジェクト テ�
 
 IntelliSense は、ときに、特定のプロジェクトの設定またはコンパイラ オプションが正しく設定されていません、メイクファイル プロジェクトで失敗します。 メイクファイル プロジェクトの構成に IntelliSense が想定どおりに機能するようにこれらの手順に従います。
 
-1. **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[構成プロパティ]** ノードを展開します。
 

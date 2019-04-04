@@ -220,7 +220,7 @@ addrinfo* const GetAddrInfoList() const;
 
 ### <a name="return-value"></a>戻り値
 
-1 つまたは複数のリンク リストへのポインター`addrinfo`応答については、ホストを含む構造体。 詳細については、次を参照してください。 [addrinfo 構造](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa)します。
+1 つまたは複数のリンク リストへのポインター`addrinfo`応答については、ホストを含む構造体。 詳細については、[addrinfo 構造](/windows/desktop/api/ws2def/ns-ws2def-addrinfoa)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

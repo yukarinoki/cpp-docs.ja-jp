@@ -23,7 +23,7 @@ ms.locfileid: "57739336"
 ---
 # <a name="msclr-namespace"></a>msclr 名前空間
 
-`msclr`名前空間には、C++ サポート ライブラリのすべてのクラスが含まれています。 これらのクラスの詳細については、次を参照してください。 [C++ サポート ライブラリ](../dotnet/cpp-support-library.md)します。
+`msclr`名前空間には、C++ サポート ライブラリのすべてのクラスが含まれています。 これらのクラスの詳細については、[C++ サポート ライブラリ](../dotnet/cpp-support-library.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

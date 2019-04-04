@@ -137,7 +137,7 @@ OLE コントロールのツールバーまたはパレットを表すために�
 
 ### <a name="remarks"></a>Remarks
 
-これにより、OLE コントロールの対応するコンテナーで使用されるコントロール。 `AfxOleRegisterControlClass` コントロールの名前と、システム上の場所で、レジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、次を参照してください。[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK にします。
+これにより、OLE コントロールの対応するコンテナーで使用されるコントロール。 `AfxOleRegisterControlClass` コントロールの名前と、システム上の場所で、レジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK にを参照してください。
 
 ### <a name="example"></a>例
 
@@ -190,7 +190,7 @@ BOOL AFXAPI AfxOleRegisterPropertyPageClass(
 
 ### <a name="remarks"></a>Remarks
 
-これにより、OLE コントロールの対応するコンテナーで使用されるプロパティ ページができます。 `AfxOleRegisterPropertyPageClass` プロパティ ページの名前と、システム上の場所のレジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、次を参照してください。[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK にします。
+これにより、OLE コントロールの対応するコンテナーで使用されるプロパティ ページができます。 `AfxOleRegisterPropertyPageClass` プロパティ ページの名前と、システム上の場所のレジストリを更新しもレジストリにコントロールをサポートするスレッド処理モデルを設定します。 詳細については、[テクニカル ノート 64](../../mfc/tn064-apartment-model-threading-in-activex-controls.md)、"アパートメント モデルのスレッドで OLE コントロール"は、と[に関するプロセスとスレッド](/windows/desktop/ProcThread/about-processes-and-threads)Windows SDK にを参照してください。
 
 ### <a name="requirements"></a>必要条件
 

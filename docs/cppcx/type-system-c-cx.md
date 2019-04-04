@@ -57,7 +57,7 @@ C++ で記述されたユニバーサル Windows プラットフォーム アプ
 
 Windows API 自体が、名前空間ごとに構成された、十分にファクタリングされたクラス ライブラリとして再開発されました。  すべての Windows ランタイム コンポーネントは、Windows.* 名前空間で宣言されます。
 
-詳細については、次を参照してください。[名前空間と型の可視性](../cppcx/namespaces-and-type-visibility-c-cx.md)します。
+詳細については、[名前空間と型の可視性](../cppcx/namespaces-and-type-visibility-c-cx.md)を参照してください。
 
 ### <a name="fundamental-types"></a>基本的な型
 
@@ -119,7 +119,7 @@ Windows ランタイム クラスが投影される C +/cli CX ref クラスま�
 
 Windows ランタイムでは、各言語が独自の方法で実装するコレクション型のインターフェイスのセットを定義します。 C +/cli CX 実装を提供します、 [platform::collections: クラス](../cppcx/platform-collections-vector-class.md)、 [::map クラス](../cppcx/platform-collections-map-class.md)、および他の関連する具象コレクション型と互換性がある、標準テンプレート ライブラリ (STL) の対応します。
 
-詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)します。
+詳細については、[コレクション](../cppcx/collections-c-cx.md)を参照してください。
 
 ### <a name="template-ref-classes"></a>テンプレート ref クラス
 
@@ -177,7 +177,7 @@ C++/CX は、標準 C++ のキャスト演算子 [static_cast](../cpp/static-cas
 
 パブリック Api を Windows ランタイム システムの種類で使用される同じ属性を使用して非推奨としてマークする方法について説明します。
 
-詳細については、次を参照してください。[型とメンバーを非推奨化](../cppcx/deprecating-types-and-members-c-cx.md)します。
+詳細については、[型とメンバーを非推奨化](../cppcx/deprecating-types-and-members-c-cx.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

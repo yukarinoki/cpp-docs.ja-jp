@@ -20,7 +20,7 @@ ms.locfileid: "57826253"
 
 参照してください[/Yc](reference/yc-create-precompiled-header-file.md)と[/Yu](reference/yu-use-precompiled-header-file.md)します。
 
-プリコンパイル済みヘッダーの詳細については、次を参照してください。[プリコンパイル済みヘッダー ファイル](creating-precompiled-header-files.md)します。
+プリコンパイル済みヘッダーの詳細については、[プリコンパイル済みヘッダー ファイル](creating-precompiled-header-files.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

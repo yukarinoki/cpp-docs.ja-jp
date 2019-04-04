@@ -17,7 +17,7 @@ ms.locfileid: "57748568"
 
 MFC ActiveX コントロールの特別な種類として、Windows フォーム コントロールをホストし、ActiveX インターフェイス、およびプロパティとメソッドを使用して、コントロールと通信、<xref:System.Windows.Forms.Control>クラス。 .NET Framework のプロパティとメソッドを使用するコントロールを操作することをお勧めします。
 
-Windows フォームと MFC を示すサンプル アプリケーションの場合、次を参照してください。 [MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)します。
+Windows フォームと MFC を示すサンプル アプリケーションの場合、[MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)を参照してください。
 
 > [!NOTE]
 >  現在のリリースで、`CDialogBar`オブジェクトは、Windows フォーム コントロールをホストできません。

@@ -1458,7 +1458,7 @@ BOOL TrackPopupMenuEx(
 ### <a name="parameters"></a>パラメーター
 
 *fuFlags*<br/>
-拡張メニューのさまざまな関数を指定します。 すべての値の一覧とその意味では、次を参照してください。[バインド](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)します。
+拡張メニューのさまざまな関数を指定します。 すべての値の一覧とその意味では、[バインド](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)を参照してください。
 
 *x*<br/>
 ポップアップ メニューの画面座標の水平方向の位置を指定します。
@@ -1480,7 +1480,7 @@ TPM_RETURNCMD を指定しない場合、 *fuFlags*パラメーター、戻り�
 
 ### <a name="remarks"></a>Remarks
 
-浮動小数点のポップアップ メニューは、画面に任意の場所に表示できます。 ポップアップ メニューを作成するときのエラー処理の詳細については、次を参照してください。[バインド](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)します。
+浮動小数点のポップアップ メニューは、画面に任意の場所に表示できます。 ポップアップ メニューを作成するときのエラー処理の詳細については、[バインド](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

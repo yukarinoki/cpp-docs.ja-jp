@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in]ダイアログ ボックスを所有するウィンドウを識別します。
 
 *lpDialogProc*<br/>
-[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)します。
+[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、[DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)を参照してください。
 
 *dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in]ダイアログ ボックスを所有するウィンドウを識別します。
 
 *lpDialogProc*<br/>
-[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)します。
+[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、[DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)を参照してください。
 
 *dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。

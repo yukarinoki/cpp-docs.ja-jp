@@ -55,7 +55,7 @@ ms.locfileid: "57268942"
 
 エージェント オブジェクトを作成した後に呼び出し、 [:start](reference/agent-class.md#start)メソッドの実行をスケジュールします。 ランタイム呼び出し、`run`メソッドに設定し、エージェントのスケジュールを設定した後、`agent_runnable`状態。
 
-ランタイムは、非同期エージェントによってスローされる例外を管理しません。 例外処理とエージェントの詳細については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
+ランタイムは、非同期エージェントによってスローされる例外を管理しません。 例外処理とエージェントの詳細については、[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)を参照してください。
 
 ## <a name="example"></a>例
 

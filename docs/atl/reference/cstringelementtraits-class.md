@@ -60,7 +60,7 @@ class CStringElementTraits
 
 このクラスは、コピー、移動、および文字列を比較して、ハッシュ値を作成するための静的関数を提供します。 これらの関数は、文字列ベースのデータを格納するコレクション クラスを使用する場合に便利です。 使用[CStringElementTraitsI](../../atl/reference/cstringelementtraitsi-class.md)小文字の比較が必要な場合。 使用[CStringRefElementTraits](../../atl/reference/cstringrefelementtraits-class.md)文字列オブジェクトの参照として処理する場合。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

@@ -17,7 +17,7 @@ ms.locfileid: "50498771"
 
 DefaultCharSetAttribute は無視されます。
 
-<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> Visual C コンパイラによって無視されます。 DLL の文字セットを指定するには、DllImport の CharSet オプションを使用します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
+<xref:System.Runtime.InteropServices.DefaultCharSetAttribute> Visual C コンパイラによって無視されます。 DLL の文字セットを指定するには、DllImport の CharSet オプションを使用します。 詳細については、[を使用して C++ Interop (暗黙の PInvoke)](../../dotnet/using-cpp-interop-implicit-pinvoke.md)を参照してください。
 
 ## <a name="example"></a>例
 

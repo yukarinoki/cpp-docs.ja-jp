@@ -29,7 +29,7 @@ ms.locfileid: "57807469"
 
 `#pragma omp` 指定するために使用[ディレクティブ](../../parallel/openmp/reference/openmp-directives.md)と[句](../../parallel/openmp/reference/openmp-clauses.md)します。 場合 **/openmp**が指定されていない、コンパイル時に、コンパイラは、OpenMP 句とディレクティブは無視されます。 [OpenMP 関数](../../parallel/openmp/reference/openmp-functions.md)呼び出しがあっても、コンパイラによって処理される **/openmp**が指定されていません。
 
-コンパイルされたアプリケーション **/openmp**と **/clr** 1 つのアプリケーション ドメインのプロセスでのみ実行できます。 複数のアプリケーション ドメインはサポートされません。 つまり、モジュールのコンス トラクター (.cctor) が実行されるを検出し、プロセスをコンパイルした **/openmp**場合、既定以外のランタイム、アプリケーションが読み込まれるとします。 詳細については、次を参照してください。 [appdomain](../../cpp/appdomain.md)、 [/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)、および[混在アセンブリの初期化](../../dotnet/initialization-of-mixed-assemblies.md)します。
+コンパイルされたアプリケーション **/openmp**と **/clr** 1 つのアプリケーション ドメインのプロセスでのみ実行できます。 複数のアプリケーション ドメインはサポートされません。 つまり、モジュールのコンス トラクター (.cctor) が実行されるを検出し、プロセスをコンパイルした **/openmp**場合、既定以外のランタイム、アプリケーションが読み込まれるとします。 詳細については、[appdomain](../../cpp/appdomain.md)、 [/clr (共通言語ランタイムのコンパイル)](clr-common-language-runtime-compilation.md)、および[混在アセンブリの初期化](../../dotnet/initialization-of-mixed-assemblies.md)を参照してください。
 
 コンパイルしたアプリケーションを読み込もうとした場合 **/openmp**と **/clr**を既定以外のアプリケーション ドメインに、<xref:System.TypeInitializationException>デバッガーの外部例外がスローされます、デバッガーで OpenMPWithMultipleAppdomainsException 例外がスローされます。
 
@@ -45,7 +45,7 @@ Microsoft で作成はないことをお勧め **/openmp**部分的には、ア�
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[構成プロパティ]** ノードを展開します。
 

@@ -23,7 +23,7 @@ ms.locfileid: "50531782"
 int __cdecl atexit(void (__cdecl *)());
 ```
 
-詳細については、次を参照してください。 [init_seg](../../preprocessor/init-seg.md)します。
+詳細については、[init_seg](../../preprocessor/init-seg.md)を参照してください。
 
 次の例では、C2357 が生成されます。
 

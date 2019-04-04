@@ -31,7 +31,7 @@ ms.locfileid: "50658849"
 
 Windows で 3.x は親にメッセージを送信することによって変更コンテンツおよび選択した場合、コントロールの背景の描画にコントロールがマウスのクリックなどのイベントの親に通知します。 単純な通知は通知のコード (BN_CLICKED) などの特殊な WM_COMMAND メッセージとして送信されにパックされている ID を制御*wParam*とコントロールのハンドルで*lParam*します。 以降注意*wParam*と*lParam*は完全では、その他のデータを渡す方法はありません — これらのメッセージは、単純な通知のみを指定できます。 たとえば、BN_CLICKED の通知方法はありません、ボタンがクリックされたときにマウス カーソルの場所に関する情報を送信します。
 
-WM_CTLCOLOR、WM_VSCROLL、兄弟、WM_DRAWITEM、ため、WM_COMPAREITEM、WM_DELETEITEM、wm _ で始まるなどの特殊なメッセージのさまざまな Windows 3.x をする必要があります内のコントロールは、追加のデータを含む通知メッセージを送信、時に使用します。CHARTOITEM、WM_VKEYTOITEM、しにします。 これらのメッセージを送信してコントロールに反映できます。 詳細については、次を参照してください。 [TN062: Windows コントロールへのメッセージ リフレクション](../mfc/tn062-message-reflection-for-windows-controls.md)します。
+WM_CTLCOLOR、WM_VSCROLL、兄弟、WM_DRAWITEM、ため、WM_COMPAREITEM、WM_DELETEITEM、wm _ で始まるなどの特殊なメッセージのさまざまな Windows 3.x をする必要があります内のコントロールは、追加のデータを含む通知メッセージを送信、時に使用します。CHARTOITEM、WM_VKEYTOITEM、しにします。 これらのメッセージを送信してコントロールに反映できます。 詳細については、[TN062: Windows コントロールへのメッセージ リフレクション](../mfc/tn062-message-reflection-for-windows-controls.md)を参照してください。
 
 **Win32 での通知メッセージ**
 
@@ -84,7 +84,7 @@ typedef struct tagLV_KEYDOWN {
 
 関数は、`CWnd::OnNotify`通知メッセージを処理します。 既定の実装は、通知ハンドラーを呼び出し、メッセージ マップを確認します。 オーバーライドしない一般に、`OnNotify`します。 代わりに、ハンドラー関数を提供し、そのハンドラーのメッセージ マップ エントリをオーナー ウィンドウのクラスのメッセージ マップに追加します。
 
-ClassWizard プロパティ シートを使用して、ClassWizard ON_NOTIFY メッセージ マップ エントリを作成し、スケルトン ハンドラー関数を提供できます。 ClassWizard を使用して、簡単に確認する詳細については、次を参照してください。[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)します。
+ClassWizard プロパティ シートを使用して、ClassWizard ON_NOTIFY メッセージ マップ エントリを作成し、スケルトン ハンドラー関数を提供できます。 ClassWizard を使用して、簡単に確認する詳細については、[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)を参照してください。
 
 ON_NOTIFY メッセージ マップ マクロでは、次の構文があります。
 

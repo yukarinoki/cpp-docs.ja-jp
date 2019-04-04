@@ -19,7 +19,7 @@ ms.locfileid: "58768810"
 
 イベントが定義されましたが、アクセサーを指定すると、必要なメソッドが含まれていませんでした。
 
-詳細については、次を参照してください。[イベント](../../extensions/event-cpp-component-extensions.md)します。
+詳細については、[イベント](../../extensions/event-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3910 が生成されます。
 

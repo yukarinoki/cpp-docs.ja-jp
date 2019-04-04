@@ -45,7 +45,7 @@ BEGIN_DELEGATE_MAP(  CLASS );
 
 ### <a name="remarks"></a>Remarks
 
-このマクロは、デリゲートのマップを構成するデリゲートのエントリの一覧の先頭をマークします。 このマクロの使用方法の例は、次を参照してください。 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)します。
+このマクロは、デリゲートのマップを構成するデリゲートのエントリの一覧の先頭をマークします。 このマクロの使用方法の例は、[EVENT_DELEGATE_ENTRY](#event_delegate_entry)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -73,7 +73,7 @@ BEGIN_INTERFACE_MAP( theClass, baseClass )
 
 実装するインターフェイスごとに、INTERFACE_PART マクロの呼び出しがあります。 クラスを使用する集約ごとに、1 つの INTERFACE_AGGREGATE マクロ呼び出しがあります。
 
-インターフェイス マップの詳細については、次を参照してください。[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)します。
+インターフェイス マップの詳細については、[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -100,7 +100,7 @@ delegate void CommandHandler(  UINT^ cmdID  );
 
 詳細については、「[方法 :コマンドの追加フォーム コントロールを Windows へのルーティング](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。
 
-Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
+Windows フォームの使用に関する詳細については、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -128,7 +128,7 @@ delegate void CommandUIHandler(  unsigned int cmdID, ICommandUI^ cmdUI);
 
 このデリゲートは、ユーザー インターフェイスの更新コマンド メッセージでコールバック メソッドを登録します。 `CommandUIHandler` ような[CommandHandler](#commandhandler)する点を除いて、このデリゲートは、ユーザー インターフェイス オブジェクトの update コマンドを使用します。 ユーザー インターフェイスの更新コマンド メッセージ ハンドラーのメソッドが一対一マップされた必要があります。
 
-Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
+Windows フォームの使用に関する詳細については、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -146,7 +146,7 @@ END_DELEGATE_MAP();
 
 ### <a name="remarks"></a>Remarks
 
-このマクロは、デリゲートのマップを構成するデリゲートのエントリの一覧の末尾をマークします。 このマクロの使用方法の例は、次を参照してください。 [EVENT_DELEGATE_ENTRY](#event_delegate_entry)します。
+このマクロは、デリゲートのマップを構成するデリゲートのエントリの一覧の末尾をマークします。 このマクロの使用方法の例は、[EVENT_DELEGATE_ENTRY](#event_delegate_entry)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -164,7 +164,7 @@ END_INTERFACE_MAP( )
 
 ### <a name="remarks"></a>Remarks
 
-インターフェイス マップの詳細については、次を参照してください。[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)します。
+インターフェイス マップの詳細については、[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -232,7 +232,7 @@ INTERFACE_PART( theClass, iid, localClass)
 
 示されたクラスのメンバーに IID をマップできます*クラス*と*マクロ*します。
 
-インターフェイス マップの詳細については、次を参照してください。[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)します。
+インターフェイス マップの詳細については、[テクニカル ノート 38](../tn038-mfc-ole-iunknown-implementation.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 

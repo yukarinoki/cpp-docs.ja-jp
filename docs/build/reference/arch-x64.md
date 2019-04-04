@@ -35,7 +35,7 @@ Advanced Vector Extensions 2 命令の使用を有効にします。
 
 ### <a name="to-set-the-archavx-or-archavx2-compiler-option-in-visual-studio"></a>/arch:AVX または /arch:AVX2 コンパイラ オプションを Visual Studio で設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**構成プロパティ**、 **C/C++** フォルダー。
 

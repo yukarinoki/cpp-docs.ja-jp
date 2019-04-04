@@ -48,7 +48,7 @@ COM の列挙子インターフェイス。 参照してください[IEnumString
 
 ## <a name="remarks"></a>Remarks
 
-`CComEnum` 配列に基づいて、COM の列挙子オブジェクトを定義します。 このクラスに似ています[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) C++ 標準ライブラリ コンテナーに基づく列挙子を実装します。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。
+`CComEnum` 配列に基づいて、COM の列挙子オブジェクトを定義します。 このクラスに似ています[CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md) C++ 標準ライブラリ コンテナーに基づく列挙子を実装します。 このクラスを使用するための一般的な手順は次のとおりです。 詳細については、[ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)を参照してください。
 
 ## <a name="to-use-this-class"></a>このクラスを使用します。
 

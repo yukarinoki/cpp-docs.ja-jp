@@ -36,7 +36,7 @@ Active Template Library (ATL) のクラスは、次のように分類できま�
 |[インターフェイス ポインター](../atl/interface-pointers-classes.md)|[Windows のサポート](../atl/windows-support-classes.md)|
 |[IUnknown の実装](../atl/iunknown-implementation-classes.md)|[ユーティリティ](../atl/utility-classes.md)|
 
-ATL プロジェクトで使用できる追加のクラスでは、次を参照してください。[共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)します。
+ATL プロジェクトで使用できる追加のクラスでは、[共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

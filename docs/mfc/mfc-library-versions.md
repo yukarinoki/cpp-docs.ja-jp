@@ -129,15 +129,15 @@ MFC Dll が*バージョン*バイナリの互換性を示す番号。 その他
 
 一致する MFC を含める必要がありますが、アプリケーションまたは MFC 拡張 DLL からかどうか、MFC の共有 DLL バージョンにリンクしている動的に場合、*バージョン*します。DLL または MFC*バージョン*U.DLL、製品を展開するときにします。
 
-アプリケーションで配布できる Visual C Dll の一覧は、次を参照してください。 [Microsoft Visual Studio 2017 および Microsoft Visual Studio 2017 SDK (が含まれていますユーティリティおよび BuildServer ファイルを含む) の再頒布可能コード](http://go.microsoft.com/fwlink/p/?LinkId=823098)します。
+アプリケーションで配布できる Visual C Dll の一覧は、[Microsoft Visual Studio 2017 および Microsoft Visual Studio 2017 SDK (が含まれていますユーティリティおよび BuildServer ファイルを含む) の再頒布可能コード](http://go.microsoft.com/fwlink/p/?LinkId=823098)を参照してください。
 
-MFC の MBCS および Unicode のサポートの詳細については、次を参照してください。 [Unicode およびマルチバイト文字セット (MBCS) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)します。
+MFC の MBCS および Unicode のサポートの詳細については、[Unicode およびマルチバイト文字セット (MBCS) のサポート](../atl-mfc-shared/unicode-and-multibyte-character-set-mbcs-support.md)を参照してください。
 
 ## <a name="dynamic-link-library-support"></a>ダイナミック リンク ライブラリのサポート
 
 MFC と非 MFC の両方の実行可能ファイルで使用できる Dll を作成するのにか、static または shared 動的 MFC ライブラリを使用できます。 これら「レギュラー」または"レギュラー MFC Dll"とも呼ばれますが、MFC 拡張 Dll だけができると区別するため使用 MFC アプリと MFC Dll。 MFC のスタティック ライブラリを使用してビルドされた DLL とも呼ばれます、USRDLL の古い参照は、MFC DLL プロジェクト プリプロセッサ シンボルを定義するため、  **\_USRDLL**します。 共有 Dll を MFC を使用する DLL とも呼ばれますを AFXDLL の古い参照は、プリプロセッサ シンボルを定義するので、  **\_AFXDLL**します。
 
-MFC のスタティック ライブラリをリンクする DLL プロジェクトを作成するときに、DLL は、MFC Dll を共有することがなく展開できます。 DLL プロジェクトが MFC のインポート ライブラリにリンクするときに*バージョン*します。LIB または MFC*バージョン*U.LIB、一致するデプロイする必要があります MFC DLL の MFC の共有*バージョン*します。DLL または MFC*バージョン*DLL と共に U.DLL します。 詳細については、次を参照してください。 [Dll](../build/dlls-in-visual-cpp.md)します。
+MFC のスタティック ライブラリをリンクする DLL プロジェクトを作成するときに、DLL は、MFC Dll を共有することがなく展開できます。 DLL プロジェクトが MFC のインポート ライブラリにリンクするときに*バージョン*します。LIB または MFC*バージョン*U.LIB、一致するデプロイする必要があります MFC DLL の MFC の共有*バージョン*します。DLL または MFC*バージョン*DLL と共に U.DLL します。 詳細については、[Dll](../build/dlls-in-visual-cpp.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

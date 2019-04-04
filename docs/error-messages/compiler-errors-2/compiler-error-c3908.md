@@ -19,7 +19,7 @@ ms.locfileid: "58766756"
 
 プロパティ アクセサー メソッド (get または set) は、プロパティ自体に指定されたアクセスより緩いアクセスを持つことはできません。  同様に、イベント アクセサー メソッドの。
 
-詳細については、次を参照してください。[プロパティ](../../extensions/property-cpp-component-extensions.md)と[イベント](../../extensions/event-cpp-component-extensions.md)します。
+詳細については、[プロパティ](../../extensions/property-cpp-component-extensions.md)と[イベント](../../extensions/event-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3908 が生成されます。
 

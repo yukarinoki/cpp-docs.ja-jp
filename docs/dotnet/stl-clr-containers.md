@@ -21,7 +21,7 @@ ms.locfileid: "58774543"
 
 ## <a name="requirements-for-container-elements"></a>コンテナー要素の要件
 
-STL/CLR コンテナーに挿入されたすべての要素は、特定のガイドラインに従う必要があります。 詳細については、次を参照してください。 [STL/CLR コンテナー要素の要件](../dotnet/requirements-for-stl-clr-container-elements.md)します。
+STL/CLR コンテナーに挿入されたすべての要素は、特定のガイドラインに従う必要があります。 詳細については、[STL/CLR コンテナー要素の要件](../dotnet/requirements-for-stl-clr-container-elements.md)を参照してください。
 
 ## <a name="valid-container-elements"></a>有効なコンテナー要素
 
@@ -37,7 +37,7 @@ STL/CLR コンテナーには、2 種類の要素のいずれかを保持でき�
 
 ### <a name="handles-to-reference-types"></a>参照型へのハンドル
 
-参照型を識別するハンドルを STL/CLR コンテナーに挿入できます。 CLR を対象とする C++ でのハンドルは、ネイティブ C++ でのポインターに似ています。 詳細については、次を参照してください。[オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)します。
+参照型を識別するハンドルを STL/CLR コンテナーに挿入できます。 CLR を対象とする C++ でのハンドルは、ネイティブ C++ でのポインターに似ています。 詳細については、[オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)を参照してください。
 
 #### <a name="example"></a>例
 

@@ -13,7 +13,7 @@ ms.locfileid: "55703117"
 ---
 # <a name="ucrt-alphabetical-function-reference"></a>UCRT のアルファベット順の関数リファレンス
 
-ルーチンがユニバーサル C ランタイム (UCRT、だけで多くの場合、CRT) ライブラリのリファレンス ドキュメントがアルファベット順に配置されています。 機能に基づいた CRT ルーチンを検索するには、次を参照してください。[カテゴリ別ユニバーサル C ランタイム ルーチン](../../c-runtime-library/run-time-routines-by-category.md)します。
+ルーチンがユニバーサル C ランタイム (UCRT、だけで多くの場合、CRT) ライブラリのリファレンス ドキュメントがアルファベット順に配置されています。 機能に基づいた CRT ルーチンを検索するには、[カテゴリ別ユニバーサル C ランタイム ルーチン](../../c-runtime-library/run-time-routines-by-category.md)を参照してください。
 
 ## <a name="a"></a>A
 

@@ -246,7 +246,7 @@ class CComboBox : public CWnd
 
 埋め込む場合、`CComboBox`別のウィンドウ内のオブジェクトがオブジェクトを破棄する必要はありません。 作成する場合、`CComboBox`スタック上のオブジェクトは自動的に破棄します。 作成する場合、`CComboBox`を使用して、ヒープ上のオブジェクト、**新しい**関数を呼び出す必要があります**削除**を Windows のコンボ ボックスが破棄されるときに破棄するオブジェクト。
 
-**注**コンボ ボックスの編集、リスト ボックス コントロールからクラスを派生サブクラスにある WM_KEYDOWN および WM_CHAR メッセージを処理する場合は、`CEdit`と`CListBox`、派生クラスにそれらのメッセージのハンドラーを追加します。 詳細については、次を参照してください。 [CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)します。
+**注**コンボ ボックスの編集、リスト ボックス コントロールからクラスを派生サブクラスにある WM_KEYDOWN および WM_CHAR メッセージを処理する場合は、`CEdit`と`CListBox`、派生クラスにそれらのメッセージのハンドラーを追加します。 詳細については、[CWnd::SubclassWindow](../../mfc/reference/cwnd-class.md#subclasswindow)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

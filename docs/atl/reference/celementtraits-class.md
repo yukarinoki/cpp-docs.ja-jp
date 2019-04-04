@@ -36,7 +36,7 @@ class CElementTraits : public CDefaultElementTraits<T>
 
 単純なデータ型の場合は、既定の実装で十分ですが、関数およびメソッドをユーザーが指定した実装でオーバーライドする必要がありますより複雑なオブジェクトを格納するコレクション クラスを使用する場合。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

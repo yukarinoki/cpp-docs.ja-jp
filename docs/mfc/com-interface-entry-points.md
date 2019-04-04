@@ -24,7 +24,7 @@ COM インターフェイスのメンバー関数は、使用、`METHOD_PROLOGUE
 
 [!code-cpp[NVC_MFCConnectionPoints#5](../mfc/codesnippet/cpp/com-interface-entry-points_1.cpp)]
 
-詳細については、次を参照してください。[テクニカル ノート 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) MFC/OLE で`IUnknown`実装します。
+詳細については、[テクニカル ノート 38](../mfc/tn038-mfc-ole-iunknown-implementation.md) MFC/OLE で`IUnknown`実装を参照してください。
 
 `METHOD_PROLOGUE`としてマクロが定義されます。
 

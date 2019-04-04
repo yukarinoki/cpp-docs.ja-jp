@@ -83,13 +83,13 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 >  MFC は何も自体パラメーターを使用して、具体的には、テキストの置換実行されません。 代わりに、MFC ODBC に伝えます。 パラメーターを取得する場所ODBC では、データを取得し、必要なパラメーター化を実行します。
 
 > [!NOTE]
->  パラメーターの順序が重要です。 これに関する情報とパラメーターの詳細については、次を参照してください。[レコード セット: レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。
+>  パラメーターの順序が重要です。 これに関する情報とパラメーターの詳細については、[レコード セット: レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)を参照してください。
 
 ##  <a name="_core_using_m_nfields_and_m_nparams"></a> M_nFields と m_nParams を使用してください。
 
 初期化ウィザードが、クラスのコンス トラクターを書き込むときに、 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)の数を指定するデータ メンバー[フィールド データ メンバーの](#_core_field_data_members)クラス。 追加する場合[パラメーター](#_core_parameter_data_members) 、クラスの初期化を追加する必要がありますも、 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)データ メンバーは、パラメーターのデータ メンバーの数を指定します。 フレームワークでは、これらの値を使用して、データ メンバーを使用します。
 
-詳細と例については、次を参照してください。[レコード フィールド エクス チェンジ: RFX の使い方](../../data/odbc/record-field-exchange-using-rfx.md)します。
+詳細と例については、[レコード フィールド エクス チェンジ: RFX の使い方](../../data/odbc/record-field-exchange-using-rfx.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

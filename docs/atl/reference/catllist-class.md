@@ -117,7 +117,7 @@ class CAtlList
 
 ほとんどの`CAtlList`メソッドを使用する位置の値を使用します。 この値は、実際のメモリ位置、要素が格納されているとする必要がありますいない計算または予測を直接参照するメソッドによって使用されます。 アクセスする必要がある場合、 *n*番目の要素、メソッドの一覧で[CAtlList::FindIndex](#findindex)は指定されたインデックスの対応する位置の値を返します。 メソッド[CAtlList::GetNext](#getnext)と[CAtlList::GetPrev](#getprev)リスト内のオブジェクトを反復処理するために使用できます。
 
-ATL で使用可能なコレクション クラスの詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+ATL で使用可能なコレクション クラスの詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

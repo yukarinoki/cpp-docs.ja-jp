@@ -38,7 +38,7 @@ Workspace オブジェクトの一意名します。 このプロパティの値
 Workspace オブジェクトの所有者を表す値。 関連情報については、「UserName プロパティ」DAO ヘルプのトピックを参照してください。
 
 *m_bIsolateODBCTrans*<br/>
-同じ ODBC データベースが関係する複数のトランザクションが分離されたかどうかを示す値。 詳細については、次を参照してください。 [CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans)します。 関連情報については、「IsolateODBCTrans プロパティ」DAO ヘルプのトピックを参照してください。
+同じ ODBC データベースが関係する複数のトランザクションが分離されたかどうかを示す値。 詳細については、[CDaoWorkspace::SetIsolateODBCTrans](../../mfc/reference/cdaoworkspace-class.md#setisolateodbctrans)を参照してください。 関連情報については、「IsolateODBCTrans プロパティ」DAO ヘルプのトピックを参照してください。
 
 ## <a name="remarks"></a>Remarks
 

@@ -207,7 +207,7 @@ virtual BOOL CreateEx(
 
 - ステータス バーには、ツール ヒントがサポートされています。
 
-これらのスタイルについて詳しくは、次を参照してください。 [CStatusBarCtrl の設定](../../mfc/settings-for-the-cstatusbarctrl.md)します。
+これらのスタイルについて詳しくは、[CStatusBarCtrl の設定](../../mfc/settings-for-the-cstatusbarctrl.md)を参照してください。
 
 *dwStyle*<br/>
 ステータス バーのスタイル。 既定では、フレーム ウィンドウの下部に表示されるステータス バーを作成することを指定します。 ステータス バーに表示されているコントロールのスタイルの任意の組み合わせを適用[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create)します。 ただし、このパラメーターは、WS_CHILD と WS_VISIBLE スタイルを常に含める必要があります。
@@ -336,7 +336,7 @@ UINT GetPaneStyle(int nIndex) const;
 
 ウィンドウのスタイルは、ペインの表示方法を決定します。
 
-ステータス バーで使用可能なスタイルの一覧は、次を参照してください。[作成](#create)です。
+ステータス バーで使用可能なスタイルの一覧は、[作成](#create)を参照してください。
 
 ##  <a name="getpanetext"></a>  CStatusBar::GetPaneText
 
@@ -464,7 +464,7 @@ void SetPaneStyle(
 
 ウィンドウのスタイルは、ペインの表示方法を決定します。
 
-ステータス バーで使用可能なスタイルの一覧は、次を参照してください。 [SetPaneInfo](#setpaneinfo)します。
+ステータス バーで使用可能なスタイルの一覧は、[SetPaneInfo](#setpaneinfo)を参照してください。
 
 ##  <a name="setpanetext"></a>  CStatusBar::SetPaneText
 

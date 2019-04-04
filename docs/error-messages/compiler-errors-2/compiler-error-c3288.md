@@ -17,7 +17,7 @@ ms.locfileid: "58771008"
 
 'type': 無効なハンドル型の逆参照
 
-ハンドル型の無効なを逆参照が検出されました。 ハンドル型を逆参照し、参照に割り当てることができます。 詳細については、次を参照してください。[参照演算子の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)します。
+ハンドル型の無効なを逆参照が検出されました。 ハンドル型を逆参照し、参照に割り当てることができます。 詳細については、[参照演算子の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

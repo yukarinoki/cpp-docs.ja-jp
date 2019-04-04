@@ -48,7 +48,7 @@ class CAutoPtrArray : public CAtlArray<
 
 このクラスは、コンス トラクターを提供し、メソッドからの派生[CAtlArray](../../atl/reference/catlarray-class.md)と[CAutoPtrElementTraits](../../atl/reference/cautoptrelementtraits-class.md)スマート ポインターを格納するコレクション クラスのオブジェクトの作成を支援します。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

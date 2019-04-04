@@ -21,7 +21,7 @@ ms.locfileid: "50628216"
 
 ## <a name="example"></a>例
 
-C2108 が正しくない使用する場合に発生、`this`型の既定のインデクサーにアクセスする値型のポインター。 詳細については、次を参照してください。[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)します。
+C2108 が正しくない使用する場合に発生、`this`型の既定のインデクサーにアクセスする値型のポインター。 詳細については、[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)を参照してください。
 
 次の例では、C2108 が生成されます。
 

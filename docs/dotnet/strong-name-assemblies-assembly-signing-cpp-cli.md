@@ -44,7 +44,7 @@ Sn.exe を明示的に呼び出すことによってアセンブリに署名す�
 
 - [/KEYCONTAINER (アセンブリに署名するためのキー コンテナーの指定)](../build/reference/keycontainer-specify-a-key-container-to-sign-an-assembly.md)
 
-厳密なアセンブリの詳細については、次を参照してください。[の作成と using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)します。
+厳密なアセンブリの詳細については、[の作成と using strong-named Assemblies](/dotnet/framework/app-domains/create-and-use-strong-named-assemblies)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

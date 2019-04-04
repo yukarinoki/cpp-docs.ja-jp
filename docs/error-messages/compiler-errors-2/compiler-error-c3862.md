@@ -23,7 +23,7 @@ ms.locfileid: "50446242"
 
 使用してコンパイル **/clr: 純粋な**または **/clr:safe** MSIL のみイメージなしのネイティブ (アンマネージ) コードを持つイメージが生成されます。  そのため、使用することはできません、`unmanaged`のプラグマを **/clr: 純粋な**または **/clr:safe**コンパイルします。
 
-詳細については、次を参照してください。 [/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)します。
+詳細については、[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)と[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)を参照してください。
 
 ## <a name="example"></a>例
 

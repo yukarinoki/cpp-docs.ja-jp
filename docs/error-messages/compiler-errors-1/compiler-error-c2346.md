@@ -19,7 +19,7 @@ ms.locfileid: "50527362"
 
 コンパイラは、MSIL に関数をコンパイルできませんでした。
 
-詳細については、次を参照してください。[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)します。
+詳細については、[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)と[/clr (共通言語ランタイムのコンパイル)](../../build/reference/clr-common-language-runtime-compilation.md)を参照してください。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 

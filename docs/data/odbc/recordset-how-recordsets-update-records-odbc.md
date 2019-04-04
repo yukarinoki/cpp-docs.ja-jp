@@ -25,7 +25,7 @@ ms.locfileid: "50510007"
 >  SQL、`CRecordset`オブジェクトをベース レコード セットの更新に影響を与えることができます。 たとえば、SQL には、結合が含まれている場合、 **GROUP BY**を FALSE に句では、MFC の設定の更新。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
 
 このトピックでは、次の内容について説明します。
 
@@ -51,7 +51,7 @@ ms.locfileid: "50510007"
 |レコード セットの追加、編集、およびレコードを削除するメンバー関数を呼び出します。|レコード セット オブジェクトとデータ ソース間でデータを交換するためのメカニズムを管理します。|
 |必要に応じて、更新プロセスを制御するのにトランザクションを使用します。|提供`CDatabase`トランザクションをサポートするメンバー関数。|
 
-トランザクションの詳細については、次を参照してください。[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
+トランザクションの詳細については、[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)を参照してください。
 
 ##  <a name="_core_the_edit_buffer"></a> エディット バッファー
 
@@ -68,7 +68,7 @@ ms.locfileid: "50510007"
 
 ##  <a name="_core_dynasets_and_snapshots"></a> ダイナセットを使う場合とスナップショット
 
-[ダイナセットを使う場合](../../data/odbc/dynaset.md)レコードをスクロールすると、レコードの内容を更新します。 [スナップショット](../../data/odbc/snapshot.md)を呼び出さない限り、レコードの内容が更新されないため、レコードの静的な表現を[Requery](../../mfc/reference/crecordset-class.md#requery)します。 ダイナセットを使う場合のすべての機能を使用するには、ODBC API のサポートの適切なレベルに準拠している ODBC ドライバーで作業する必要があります。 詳細については、次を参照してください。 [ODBC](../../data/odbc/odbc-basics.md)と[ダイナセット](../../data/odbc/dynaset.md)します。
+[ダイナセットを使う場合](../../data/odbc/dynaset.md)レコードをスクロールすると、レコードの内容を更新します。 [スナップショット](../../data/odbc/snapshot.md)を呼び出さない限り、レコードの内容が更新されないため、レコードの静的な表現を[Requery](../../mfc/reference/crecordset-class.md#requery)します。 ダイナセットを使う場合のすべての機能を使用するには、ODBC API のサポートの適切なレベルに準拠している ODBC ドライバーで作業する必要があります。 詳細については、[ODBC](../../data/odbc/odbc-basics.md)と[ダイナセット](../../data/odbc/dynaset.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

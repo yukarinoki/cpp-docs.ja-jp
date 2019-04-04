@@ -97,9 +97,9 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 
 - 関数のこのセクションでは、フィールド マップと呼ばれます。
 
-- 呼び出し`CFieldExchange::SetFieldType`を使用して、`pFX`ポインター。 この呼び出しは、すべての RFX 関数の末尾に呼び出しを指定します`DoFieldExchange`または次回の呼び出し`SetFieldType`は出力列です。 詳細については、次を参照してください。[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)します。
+- 呼び出し`CFieldExchange::SetFieldType`を使用して、`pFX`ポインター。 この呼び出しは、すべての RFX 関数の末尾に呼び出しを指定します`DoFieldExchange`または次回の呼び出し`SetFieldType`は出力列です。 詳細については、[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)を参照してください。
 
-- いくつかの呼び出し、`RFX_Text`グローバル関数、フィールド データ メンバーごとに 1 つ (は他のすべて`CString`の例では、変数)。 これらの呼び出しでは、データ ソースに列名とフィールドのデータ メンバー間のリレーションシップを指定します。 RFX 関数は、実際のデータ転送を行います。 クラス ライブラリでは、RFX 関数の一般的なすべてのデータ型を提供します。 RFX 関数の詳細については、次を参照してください。[レコード フィールド エクス チェンジ: RFX 関数を使用して](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)します。
+- いくつかの呼び出し、`RFX_Text`グローバル関数、フィールド データ メンバーごとに 1 つ (は他のすべて`CString`の例では、変数)。 これらの呼び出しでは、データ ソースに列名とフィールドのデータ メンバー間のリレーションシップを指定します。 RFX 関数は、実際のデータ転送を行います。 クラス ライブラリでは、RFX 関数の一般的なすべてのデータ型を提供します。 RFX 関数の詳細については、[レコード フィールド エクス チェンジ: RFX 関数を使用して](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)を参照してください。
 
     > [!NOTE]
     >  結果セットの列の順序では、RFX 関数の呼び出しの順序が一致する必要があります`DoFieldExchange`します。

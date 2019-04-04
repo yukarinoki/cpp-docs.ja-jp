@@ -21,7 +21,7 @@ ms.locfileid: "50643028"
 
 ## <a name="example"></a>例
 
-値型の `this` ポインターを不正に使用して型の既定のインデクサーにアクセスすると、C2107 エラーが発生します。 詳細については、次を参照してください。[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)します。
+値型の `this` ポインターを不正に使用して型の既定のインデクサーにアクセスすると、C2107 エラーが発生します。 詳細については、[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)を参照してください。
 
 次の例では、c2107 エラーが生成されます。
 

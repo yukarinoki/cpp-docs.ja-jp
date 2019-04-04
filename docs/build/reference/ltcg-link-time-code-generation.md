@@ -44,17 +44,17 @@ ms.locfileid: "57810316"
 (省略可能)リンク時コード生成を無効にします。 この動作は場合と同じ **/LTCG**がコマンドラインで指定されていません。
 
 **:PGINSTRUMENT**<br/>
-(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と[/GENPROFILE または/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)プロファイル ガイド付き最適化のためにインストルメントされたビルドを生成します。 インストルメント化された実行から収集されるデータは、最適化されたイメージの作成に使用されます。 詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。 このオプションの短い形式は **/LTCG:PGI**します。
+(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と[/GENPROFILE または/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)プロファイル ガイド付き最適化のためにインストルメントされたビルドを生成します。 インストルメント化された実行から収集されるデータは、最適化されたイメージの作成に使用されます。 詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)を参照してください。 このオプションの短い形式は **/LTCG:PGI**します。
 
 **:PGOPTIMIZE**<br/>
-(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と[/USEPROFILE](useprofile.md)最適化されたイメージを作成します。 詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。 このオプションの短い形式は **/LTCG:PGO**します。
+(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と[/USEPROFILE](useprofile.md)最適化されたイメージを作成します。 詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)を参照してください。 このオプションの短い形式は **/LTCG:PGO**します。
 
 **:PGUPDATE**<br/>
-(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と **/USEPROFILE**最適化されたイメージを再構築します。 詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。 このオプションの短い形式は **/LTCG:PGU**します。
+(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と **/USEPROFILE**最適化されたイメージを再構築します。 詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)を参照してください。 このオプションの短い形式は **/LTCG:PGU**します。
 
 ## <a name="remarks"></a>Remarks
 
-**/LTCG**オプション、コンパイラを呼び出すし、プログラム全体の最適化を実行するようにリンカーに指示します。 または、ガイド付きプロファイルの最適化を実行することもできます。 詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。
+**/LTCG**オプション、コンパイラを呼び出すし、プログラム全体の最適化を実行するようにリンカーに指示します。 または、ガイド付きプロファイルの最適化を実行することもできます。 詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)を参照してください。
 
 次の例外の PGO の組み合わせにリンカー オプションを追加することはできません **/LTCG**と **/USEPROFILE**の以前の PGO の初期化の組み合わせで指定されたいない **/LTCG**と **/GENPROFILE**オプション。
 

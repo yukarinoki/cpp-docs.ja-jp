@@ -41,7 +41,7 @@ ms.locfileid: "57268825"
 |**TBN_DROPDOWN**|ユーザーが使用しているボタンをクリックしたことを示します、 **TBSTYLE_DROPDOWN**スタイル。|
 |**TBN_GETOBJECT**|ユーザーがポインターを使用しているボタンの上に移動することを示します、 **TBSTYLE_DROPPABLE**スタイル。|
 
-ハンドラー関数の例とツール ヒントを有効にする方法の詳細については、次を参照してください。[ツール ヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)します。
+ハンドラー関数の例とツール ヒントを有効にする方法の詳細については、[ツール ヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

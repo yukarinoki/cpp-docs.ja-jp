@@ -70,7 +70,7 @@ ms.locfileid: "58565539"
 |[ON_UPDATE_COMMAND_UI_RANGE](#on_update_command_ui_range)|どの更新ハンドラーがマクロに最初の 2 つのパラメーターで指定されたコマンド Id の範囲を処理することを示します。|
 |[ON_CONTROL_RANGE](#on_control_range)|コントロールのマクロに 2 番目と 3 番目のパラメーターで指定された Id の範囲からの通知を処理する関数を示します。 最初のパラメーターは、コントロールの通知メッセージ、BN_CLICKED などです。|
 
-メッセージ マップ、メッセージ マップの宣言と定義用のマクロとメッセージ マップ マクロの詳細については、次を参照してください。[メッセージ マップ](../../mfc/reference/message-maps-mfc.md)と[メッセージの処理とのマッピング」](../../mfc/message-handling-and-mapping.md)します。 メッセージ マップの範囲の詳細については、次を参照してください。[メッセージ マップの範囲内のハンドラー](../../mfc/handlers-for-message-map-ranges.md)します。
+メッセージ マップ、メッセージ マップの宣言と定義用のマクロとメッセージ マップ マクロの詳細については、[メッセージ マップ](../../mfc/reference/message-maps-mfc.md)と[メッセージの処理とのマッピング」](../../mfc/message-handling-and-mapping.md)を参照してください。 メッセージ マップの範囲の詳細については、[メッセージ マップの範囲内のハンドラー](../../mfc/handlers-for-message-map-ranges.md)を参照してください。
 
 ## <a name="begin_message_map"></a> BEGIN_MESSAGE_MAP
 
@@ -158,7 +158,7 @@ DECLARE_MESSAGE_MAP( )
 > [!NOTE]
 >  DECLARE_MESSAGE_MAP 後に任意のメンバーを宣言する場合は、新しいアクセスの種類を指定する必要があります (**パブリック**、**プライベート**、または**保護**) にします。
 
-メッセージ マップおよび DECLARE_MESSAGE_MAP マクロの詳細については、次を参照してください。[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)します。
+メッセージ マップおよび DECLARE_MESSAGE_MAP マクロの詳細については、[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -186,7 +186,7 @@ END_MESSAGE_MAP( )
 
 ### <a name="remarks"></a>Remarks
 
-メッセージ マップおよび END_MESSAGE_MAP マクロの詳細については、次を参照してください。[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)します。
+メッセージ マップおよび END_MESSAGE_MAP マクロの詳細については、[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -216,7 +216,7 @@ ON_COMMAND( commandId, memberFxn )
 
 ON_COMMAND が、メンバー関数を呼び出して、コマンド ターゲット オブジェクトは、指定の ID を持つ Windows WM_COMMAND メッセージを受信したときに`memberFxn`メッセージを処理します。
 
-ON_COMMAND を使用して、1 つのコマンドをメンバー関数にマップします。 使用[ON_COMMAND_RANGE](#on_command_range)コマンド Id の範囲を 1 つのメンバー関数にマップします。 1 つだけのメッセージ マップ エントリが指定されたコマンド ID と一致できます。 つまり、1 つ以上のハンドラーにコマンドを割り当てることはできません。 詳細と例については、次を参照してください。[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)します。
+ON_COMMAND を使用して、1 つのコマンドをメンバー関数にマップします。 使用[ON_COMMAND_RANGE](#on_command_range)コマンド Id の範囲を 1 つのメンバー関数にマップします。 1 つだけのメッセージ マップ エントリが指定されたコマンド ID と一致できます。 つまり、1 つ以上のハンドラーにコマンドを割り当てることはできません。 詳細と例については、[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -285,7 +285,7 @@ ON_CONTROL( wNotifyCode, commandId, memberFxn )
 
 メッセージ ハンドラー関数にマップする必要がありますすべてのコントロールの通知メッセージのメッセージ マップに ON_CONTROL マクロ ステートメントは 1 つだけ必要があります。
 
-詳細と例については、次を参照してください。[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)します。
+詳細と例については、[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -313,12 +313,12 @@ ON_MESSAGE( message, memberFxn )
 
 ### <a name="remarks"></a>Remarks
 
-ユーザー定義メッセージは、標準の Windows WM_MESSAGE メッセージではない任意のメッセージです。 メッセージ ID を選択すると、0x7FFF または WM_APP (0x8000) 0xBFFF に範囲の WM_USER (0x0400) 内の値を使用する必要があります。 メッセージ Id の詳細については、次を参照してください。 [WM_APP](/windows/desktop/winmsg/wm-app)します。
+ユーザー定義メッセージは、標準の Windows WM_MESSAGE メッセージではない任意のメッセージです。 メッセージ ID を選択すると、0x7FFF または WM_APP (0x8000) 0xBFFF に範囲の WM_USER (0x0400) 内の値を使用する必要があります。 メッセージ Id の詳細については、[WM_APP](/windows/desktop/winmsg/wm-app)を参照してください。
 
 メッセージ ハンドラー関数にマップする必要がありますすべてのユーザー定義メッセージのメッセージ マップに ON_MESSAGE マクロ ステートメントは 1 つだけ必要があります。
 
 > [!NOTE]
->  ユーザー定義のメッセージだけでなく ON_MESSAGE はあまり一般的な Windows メッセージを処理します。 詳細については、次を参照してください。[メッセージ マップ](../../mfc/tn006-message-maps.md)します。
+>  ユーザー定義のメッセージだけでなく ON_MESSAGE はあまり一般的な Windows メッセージを処理します。 詳細については、[メッセージ マップ](../../mfc/tn006-message-maps.md)を参照してください。
 
 詳細と例については、次を参照してください[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)と[ユーザー定義のハンドラー。](user-defined-handlers.md)
 
@@ -500,7 +500,7 @@ ON_REGISTERED_MESSAGE( nMessageVariable, memberFxn )
 
 このマクロは、登録済みのメッセージを処理する関数を示します。
 
-詳細と例については、次を参照してください。[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)します。
+詳細と例については、[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -590,7 +590,7 @@ ON_UPDATE_COMMAND_UI( messageId, memberFxn )
 
 メッセージ ハンドラー関数にマップする必要がありますすべてのユーザー インターフェイス更新コマンドに対して、メッセージ マップに ON_UPDATE_COMMAND_UI マクロ ステートメントは 1 つだけ必要があります。
 
-詳細と例については、次を参照してください。[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)します。
+詳細と例については、[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -621,7 +621,7 @@ ON_COMMAND_RANGE( id1, id2, memberFxn )
 
 Id の範囲の始まり*id1*で終わります*id2*します。
 
-ON_COMMAND_RANGE を使用して、コマンド Id の範囲を 1 つのメンバー関数にマップします。 使用[ON_COMMAND](#on_command)に 1 つのコマンドをメンバー関数にマップします。 1 つだけのメッセージ マップ エントリが指定されたコマンド ID と一致できます。 つまり、1 つ以上のハンドラーにコマンドを割り当てることはできません。 メッセージの範囲のマッピングの詳細については、次を参照してください。[メッセージ マップの範囲内のハンドラー](../../mfc/handlers-for-message-map-ranges.md)します。
+ON_COMMAND_RANGE を使用して、コマンド Id の範囲を 1 つのメンバー関数にマップします。 使用[ON_COMMAND](#on_command)に 1 つのコマンドをメンバー関数にマップします。 1 つだけのメッセージ マップ エントリが指定されたコマンド ID と一致できます。 つまり、1 つ以上のハンドラーにコマンドを割り当てることはできません。 メッセージの範囲のマッピングの詳細については、[メッセージ マップの範囲内のハンドラー](../../mfc/handlers-for-message-map-ranges.md)を参照してください。
 
 自分でマクロを配置する必要がありますので、メッセージ マップの範囲の自動サポートはありません。
 

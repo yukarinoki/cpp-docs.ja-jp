@@ -45,7 +45,7 @@ struct ATL_DRAWINFO {
 (バイト単位)、構造体のサイズ。
 
 `dwDrawAspect`<br/>
-ターゲットが表示される方法を指定します。 表現には、コンテンツ、アイコン、縮小表示または印刷したドキュメントを含めることができます。 使用可能な値の一覧は、次を参照してください。[型](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)と[DVASPECT2](/windows/desktop/api/ocidl/ne-ocidl-tagdvaspect2)します。
+ターゲットが表示される方法を指定します。 表現には、コンテンツ、アイコン、縮小表示または印刷したドキュメントを含めることができます。 使用可能な値の一覧は、[型](/windows/desktop/api/wtypes/ne-wtypes-tagdvaspect)と[DVASPECT2](/windows/desktop/api/ocidl/ne-ocidl-tagdvaspect2)を参照してください。
 
 `lindex`<br/>
 描画操作の対象となるターゲットの部分です。 その解釈は、値によって、`dwDrawAspect`メンバー。

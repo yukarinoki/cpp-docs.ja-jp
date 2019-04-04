@@ -61,7 +61,7 @@ MFC クラス`CDataPathProperty`と[CCachedDataPathProperty](../mfc/reference/cc
 
 1. このクラスのインスタンスを宣言し、Url を開くために使用します。
 
-ActiveX コントロールにおける非同期的にダウンロード方法の詳細については、次を参照してください。[インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)します。
+ActiveX コントロールにおける非同期的にダウンロード方法の詳細については、[インターネット上の ActiveX コントロール](../mfc/activex-controls-on-the-internet.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

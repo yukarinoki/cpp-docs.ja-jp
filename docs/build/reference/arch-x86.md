@@ -66,7 +66,7 @@ r = t + d;     // This should produce the same overall result
 
 ### <a name="to-set-this-compiler-option-for-avx-avx2-ia32-sse-or-sse2-in-visual-studio"></a>AVX、AVX2、IA32、SSE、または SSE2 のこのコンパイラ オプションを Visual Studio で設定するには
 
-1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. 開く、**プロパティ ページ**プロジェクトのダイアログ ボックス。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**構成プロパティ**、 **C/C++** フォルダー。
 

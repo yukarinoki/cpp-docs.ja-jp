@@ -21,7 +21,7 @@ ms.locfileid: "50436363"
 
 この警告を解決するには、同じ種類の定義を使用するか異なる名前の変数を使用します。
 
-詳細については、次を参照してください。[パック](../../preprocessor/pack.md)と[_ _alignof 演算子](../../cpp/alignof-operator.md)します。
+詳細については、[パック](../../preprocessor/pack.md)と[_ _alignof 演算子](../../cpp/alignof-operator.md)を参照してください。
 
 ## <a name="example"></a>例
 

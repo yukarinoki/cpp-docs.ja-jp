@@ -66,7 +66,7 @@ struct CStringData
 このクラスは、さまざまな種類の情報となどの上位の文字列オブジェクトに関連付けられているデータをカプセル化[CStringT](../../atl-mfc-shared/reference/cstringt-class.md)、 [CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)、または[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)オブジェクト。 ごとの上位の文字列オブジェクトには、それに関連付けられたへのポインターが含まれています。`CStringData`オブジェクト、複数の文字列オブジェクトと同じ文字列のデータ オブジェクトを指すことができます。 この関係は、参照カウントによって表される (`nRefs`) の`CStringData`オブジェクト。
 
 > [!NOTE]
->  特定の場合、文字列型 (など`CFixedString`) は、上位の 1 つ以上の文字列オブジェクトを文字列のデータ オブジェクトを共有していません。 詳細については、これは、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+>  特定の場合、文字列型 (など`CFixedString`) は、上位の 1 つ以上の文字列オブジェクトを文字列のデータ オブジェクトを共有していません。 詳細については、これは、[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
 
 このデータで構成されます。
 
@@ -214,7 +214,7 @@ IAtlStringMgr* pStringMgr;
 
 ### <a name="remarks"></a>Remarks
 
-関連付けられている文字列オブジェクトのメモリ マネージャーが格納されます。 メモリ マネージャーと文字列の詳細については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+関連付けられている文字列オブジェクトのメモリ マネージャーが格納されます。 メモリ マネージャーと文字列の詳細については、[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
 
 ##  <a name="release"></a>  CStringData::Release
 

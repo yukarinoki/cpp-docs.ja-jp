@@ -30,7 +30,7 @@ Microsoft Foundation Class ライブラリ (MFC) でクラス[CFile](../mfc/refe
 
 `CFile`クラスは、汎用のバイナリ ファイルの操作のインターフェイスを提供します。 `CStdioFile`と`CMemFile`クラスから派生した`CFile`と`CSharedFile`から派生したクラス`CMemFile`より専門的なファイル サービスを提供します。
 
-MFC のファイルの処理に代わる方法の詳細については、次を参照してください。[ファイル処理](../c-runtime-library/file-handling.md)で、*ランタイム ライブラリ リファレンス*します。
+MFC のファイルの処理に代わる方法の詳細については、[ファイル処理](../c-runtime-library/file-handling.md)で、*ランタイム ライブラリ リファレンス*を参照してください。
 
 については、派生した`CFile`クラスを参照してください、 [MFC 階層グラフ](../mfc/hierarchy-chart.md)します。
 

@@ -48,7 +48,7 @@ set OMP_DYNAMIC[=TRUE | =FALSE]
 
 OpenMP の標準の Visual C の実装の既定値は`OMP_DYNAMIC=FALSE`します。
 
-詳細については、次を参照してください。 [4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)します。
+詳細については、[4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -78,7 +78,7 @@ set OMP_NESTED[=TRUE | =FALSE]
 
 OpenMP の標準の Visual C の実装の既定値は`OMP_DYNAMIC=FALSE`します。
 
-詳細については、次を参照してください。 [4.4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md)します。
+詳細については、[4.4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -113,7 +113,7 @@ Visual C の実装では 64 まで、並列領域で必要なスレッドの最�
 
 既定値`num`Visual C の OpenMP 標準の実装は、ハイパー スレッド Cpu などの仮想プロセッサの数。
 
-詳細については、次を参照してください。 [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)します。
+詳細については、[4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -154,7 +154,7 @@ set OMP_SCHEDULE[=type[,size]]
 
 OpenMP の標準の Visual C の実装の既定値は`OMP_SCHEDULE=static,0`します。
 
-詳細については、次を参照してください。 [4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md)します。
+詳細については、[4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md)を参照してください。
 
 ### <a name="example"></a>例
 

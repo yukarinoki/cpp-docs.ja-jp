@@ -107,7 +107,7 @@ namespace StlClrClassLibrary {
 
 この例では、例 1 で宣言されたクラスを実装します。 マニフェスト ツールを使用してクライアントがこのクラス ライブラリを使用するためには、 **mt.exe** DLL にマニフェスト ファイルを埋め込む。 詳細については、コードのコメントを参照してください。
 
-マニフェスト ツールとサイド バイ サイド アセンブリの詳細については、次を参照してください。 [c/c++ 分離アプリケーションの構築とサイド バイ サイド アセンブリ](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)します。
+マニフェスト ツールとサイド バイ サイド アセンブリの詳細については、[c/c++ 分離アプリケーションの構築とサイド バイ サイド アセンブリ](../build/building-c-cpp-isolated-applications-and-side-by-side-assemblies.md)を参照してください。
 
 ### <a name="code"></a>コード
 

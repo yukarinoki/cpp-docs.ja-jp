@@ -31,7 +31,7 @@ ms.locfileid: "57808353"
 
 クラスも型のメンバー変数には、ツールバーをサポートする場合は、 [CToolBar](../mfc/reference/ctoolbar-class.md)と[CStatusBar](../mfc/reference/cstatusbar-class.md)と`OnCreate`メッセージ ハンドラー関数を 2 つの初期化[コントロール バー](../mfc/control-bars.md)します。
 
-作成されると、これらのフレーム ウィンドウ クラスが機能しますが、機能強化のため、メンバー変数とメンバー関数を追加する必要があります。 ウィンドウ クラスの他の Windows メッセージを処理することもできます。 詳細については、次を参照してください。 [MFC で作成したウィンドウのスタイルを変更する](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)します。
+作成されると、これらのフレーム ウィンドウ クラスが機能しますが、機能強化のため、メンバー変数とメンバー関数を追加する必要があります。 ウィンドウ クラスの他の Windows メッセージを処理することもできます。 詳細については、[MFC で作成したウィンドウのスタイルを変更する](../mfc/changing-the-styles-of-a-window-created-by-mfc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

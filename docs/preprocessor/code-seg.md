@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-セクションを作成する使わないで名の一覧は、次を参照してください。 [/section](../build/reference/section-specify-section-attributes.md)します。
+セクションを作成する使わないで名の一覧は、[/section](../build/reference/section-specify-section-attributes.md)を参照してください。
 
 初期化されたデータのセクションを指定することもできます ([data_seg](../preprocessor/data-seg.md))、初期化されていないデータ ([bss_seg](../preprocessor/bss-seg.md))、および const 変数 ([const_seg](../preprocessor/const-seg.md))。
 

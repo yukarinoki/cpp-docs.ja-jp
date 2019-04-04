@@ -297,7 +297,7 @@ CString Format(UINT nFormatID) const;
 - VAR_DATEVALUEONLY は、解析中に時刻部分を無視します。
 
 *lcid*<br/>
-変換に使用するロケール ID を示します。 言語識別子の詳細については、次を参照してください。[言語識別子](/windows/desktop/Intl/language-identifiers)します。
+変換に使用するロケール ID を示します。 言語識別子の詳細については、[言語識別子](/windows/desktop/Intl/language-identifiers)を参照してください。
 
 *lpszFormat*<br/>
 ような文字列を書式設定、`printf`文字列の書式設定します。 各パーセントで前に、コードの書式設定 ( `%`) 署名は、対応する置き換え`COleDateTime`コンポーネント。 その他の文字書式指定文字列では、返される文字列をそのままコピーされます。 詳細については、実行時の関数を参照してください。 [strftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)します。 値との書式設定コードの意味`Format`は。
@@ -330,7 +330,7 @@ A`CString`書式設定された日付/時刻値を格納します。
 このフォームはパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式設定と`printf`します。 書式指定文字列は、関数にパラメーターとして渡されます。 書式設定コードの詳細については、次を参照してください。 [strftime、wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)ランタイム ライブラリのリファレンス。
 
 `Format`( *nFormatID*)<br/>
-このフォームはパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式設定と`printf`します。 書式指定文字列は、リソースです。 この文字列リソースの ID は、パラメーターとして渡されます。 書式設定コードの詳細については、次を参照してください。 [strftime、wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)で、*ランタイム ライブラリ リファレンス*します。
+このフォームはパーセント記号 (%) が付いている特殊な書式設定コードを含む書式指定文字列を使用して値を書式設定と`printf`します。 書式指定文字列は、リソースです。 この文字列リソースの ID は、パラメーターとして渡されます。 書式設定コードの詳細については、[strftime、wcsftime](../../c-runtime-library/reference/strftime-wcsftime-strftime-l-wcsftime-l.md)で、*ランタイム ライブラリ リファレンス*を参照してください。
 
 ### <a name="example"></a>例
 
@@ -803,7 +803,7 @@ DateTimeStatus m_status;
 
 ### <a name="remarks"></a>Remarks
 
-このデータ メンバーの型は、列挙型`DateTimeStatus`、内で定義されている、`COleDateTime`クラス。 詳細については、次を参照してください。[は、「](#getstatus)します。
+このデータ メンバーの型は、列挙型`DateTimeStatus`、内で定義されている、`COleDateTime`クラス。 詳細については、[は、「](#getstatus)を参照してください。
 
 > [!CAUTION]
 >  このデータ メンバーは、高度なプログラミングに適しています。 インライン メンバー関数を使用する必要があります[GetStatus](#getstatus)と[SetStatus](#setstatus)します。 参照してください`SetStatus`の他の注意に関するこのデータ メンバーを明示的に設定します。

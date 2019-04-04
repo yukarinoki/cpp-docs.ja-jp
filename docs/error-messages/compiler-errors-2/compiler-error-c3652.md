@@ -17,7 +17,7 @@ ms.locfileid: "58767952"
 
 'override': 明示的にオーバーライドする関数は仮想である必要があります
 
-明示的にオーバーライドする関数は仮想である必要があります。 詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
+明示的にオーバーライドする関数は仮想である必要があります。 詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3652 が生成されます。
 

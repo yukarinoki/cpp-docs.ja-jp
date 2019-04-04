@@ -22,7 +22,7 @@ ms.locfileid: "51331218"
 非同期コードを記述して、非同期操作が完了したときに操作を実行する場合に、タスクを使用します。 たとえば、ファイルから非同期的に読み取り、別のタスクを使用してタスクを使用する可能性があります:、*継続タスク*、このドキュメントの後半で説明する — 使用可能になった後にデータを処理します。 逆に、タスク グループを使用して、並列処理を分解することができます。 たとえば、残存作業を 2 つのパーティションに分割する再帰的なアルゴリズムがあるとします。 タスク グループを使用すると、これらのパーティションを同時に実行して、分割処理の完了を待つことができます。
 
 > [!TIP]
-> 同じルーチンを並列でのコレクションのすべての要素に適用する場合など、並列アルゴリズムの使用[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)、タスクまたはタスク グループ代わりにします。 並列アルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+> 同じルーチンを並列でのコレクションのすべての要素に適用する場合など、並列アルゴリズムの使用[concurrency::parallel_for](reference/concurrency-namespace-functions.md#parallel_for)、タスクまたはタスク グループ代わりにします。 並列アルゴリズムの詳細については、[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)を参照してください。
 
 ## <a name="key-points"></a>主要なポイント
 
@@ -38,9 +38,9 @@ ms.locfileid: "51331218"
 
 - 使用[concurrency::when_all](reference/concurrency-namespace-functions.md#when_all)一連のタスクのすべてのメンバーが完了した後に完了するタスクを作成します。 使用[concurrency::when_any](reference/concurrency-namespace-functions.md#when_any)一連のタスクの 1 つのメンバーが完了した後に完了するタスクを作成します。
 
-- タスクとタスク グループは、並列パターン ライブラリ (PPL) の取り消し機構に参加できます。 詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
+- タスクとタスク グループは、並列パターン ライブラリ (PPL) の取り消し機構に参加できます。 詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
 
-- タスクとタスク グループによってスローされる例外をランタイムが処理する方法については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
+- タスクとタスク グループによってスローされる例外をランタイムが処理する方法については、[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)を参照してください。
 
 ## <a name="in-this-document"></a>目次
 
@@ -88,7 +88,7 @@ ms.locfileid: "51331218"
 
 ##  <a name="task-class"></a> Task クラス
 
-使用することができます、 [concurrency::task](../../parallel/concrt/reference/task-class.md)クラスに依存する操作の一連のタスクを構成します。 このコンポジション モデルの概念ではサポートされて*継続*します。 ときに実行されるコードを継続できるように、前または*継続元*タスクが完了します。 継続元タスクの結果は、1 つ以上の継続タスクへの入力として渡されます。 継続元タスクが完了すると、それを待っているすべての継続タスクが実行のためにスケジュールされます。 各継続タスクは継続元タスクの結果のコピーを受信します。 また、これらの継続タスクが、他の継続の継続元タスクである場合もあり、このようにしてタスクのチェーンが作成されます。 継続を使うと、特定の依存関係を持つ、任意の長さのタスクのチェーンを作成できます。 また、タスクは開始前または実行中に協調的に、取り消しに参加できます。 この取り消しモデルの詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
+使用することができます、 [concurrency::task](../../parallel/concrt/reference/task-class.md)クラスに依存する操作の一連のタスクを構成します。 このコンポジション モデルの概念ではサポートされて*継続*します。 ときに実行されるコードを継続できるように、前または*継続元*タスクが完了します。 継続元タスクの結果は、1 つ以上の継続タスクへの入力として渡されます。 継続元タスクが完了すると、それを待っているすべての継続タスクが実行のためにスケジュールされます。 各継続タスクは継続元タスクの結果のコピーを受信します。 また、これらの継続タスクが、他の継続の継続元タスクである場合もあり、このようにしてタスクのチェーンが作成されます。 継続を使うと、特定の依存関係を持つ、任意の長さのタスクのチェーンを作成できます。 また、タスクは開始前または実行中に協調的に、取り消しに参加できます。 この取り消しモデルの詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
 
 `task` はテンプレート クラスです。 型パラメーター `T` は、タスクで生成される結果の型です。 タスクが値を返さない場合には、この型は `void` となります。 `T` は `const` 修飾子を使用できません。
 
@@ -106,12 +106,12 @@ ms.locfileid: "51331218"
 
 [!code-cpp[concrt-create-task#2](../../parallel/concrt/codesnippet/cpp/task-parallelism-concurrency-runtime_4.cpp)]
 
-タスクの実行時に例外がスローされた場合、ランタイムは、それ以降の `task::get` または `task::wait` の呼び出し、またはタスク ベースの継続への呼び出しで、その例外をマーシャリングします。 タスク例外処理機構の詳細については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
+タスクの実行時に例外がスローされた場合、ランタイムは、それ以降の `task::get` または `task::wait` の呼び出し、またはタスク ベースの継続への呼び出しで、その例外をマーシャリングします。 タスク例外処理機構の詳細については、[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)を参照してください。
 
 使用する例については`task`、 [concurrency::task_completion_event](../../parallel/concrt/reference/task-completion-event-class.md)、キャンセルを参照してください[チュートリアル: を使用してタスクの接続および XML HTTP 要求](../../parallel/concrt/walkthrough-connecting-using-tasks-and-xml-http-requests.md)します。 (`task_completion_event` クラスについてはドキュメントの後の部分で説明されています。)
 
 > [!TIP]
->  UWP アプリでのタスクに固有の詳細については、次を参照してください。 [C++ での非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)と[を作成する非同期操作で C++ UWP アプリの](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)します。
+>  UWP アプリでのタスクに固有の詳細については、[C++ での非同期プログラミング](/windows/uwp/threading-async/asynchronous-programming-in-cpp-universal-windows-platform-apps)と[を作成する非同期操作で C++ UWP アプリの](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)を参照してください。
 
 ##  <a name="continuations"></a> 継続タスク
 
@@ -259,9 +259,9 @@ PPL タスク グループをこれら 2 つのカテゴリに分割する:*非�
 
 `parallel_invoke` は、同時に実行する独立したタスクが複数あり、すべてのタスクが終了するまで待機してから処理を続行する必要がある場合に使用します。 この手法として呼ば*フォークと結合*並列処理します。 `task_group` は、同時に実行する独立したタスクが複数あり、それらのタスクが終了するタイミングがまだ先である場合に使用します。 たとえば、`task_group` オブジェクトにタスクを追加して、それらのタスクが別の関数や別のストレッドで終了するまで待機できます。
 
-タスク グループでは、キャンセル処理の概念がサポートされています。 キャンセル処理を使用すると、操作全体を取り消すことをアクティブなすべてのタスクに通知できます。 また、キャンセル処理により、まだ開始されていないタスクが実行されるのを防止できます。 キャンセルの詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
+タスク グループでは、キャンセル処理の概念がサポートされています。 キャンセル処理を使用すると、操作全体を取り消すことをアクティブなすべてのタスクに通知できます。 また、キャンセル処理により、まだ開始されていないタスクが実行されるのを防止できます。 キャンセルの詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
 
-また、ランタイムでは、例外処理モデルを使用することによって、タスクから例外をスローし、関連するタスク グループが終了するまで待機しているときにその例外を処理できます。 この例外処理モデルの詳細については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
+また、ランタイムでは、例外処理モデルを使用することによって、タスクから例外をスローし、関連するタスク グループが終了するまで待機しているときにその例外を処理できます。 この例外処理モデルの詳細については、[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)を参照してください。
 
 ##  <a name="comparing-groups"></a> Task_group structured_task_group の違いを比較します。
 
@@ -281,7 +281,7 @@ PPL タスク グループをこれら 2 つのカテゴリに分割する:*非�
 
 可変個のタスクがある場合のタスク ハンドルを管理するには、スタック割り当てルーチンをなど使用[_malloca](../../c-runtime-library/reference/malloca.md)または std などのコンテナー クラス::[ベクター](../../standard-library/vector-class.md)します。
 
-`task_group` と `structured_task_group` の両方でキャンセル処理がサポートされています。 キャンセルの詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
+`task_group` と `structured_task_group` の両方でキャンセル処理がサポートされています。 キャンセルの詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
 
 ##  <a name="example"></a> 「例」
 
@@ -303,7 +303,7 @@ Message from task: 42
 
 ##  <a name="robust"></a> 信頼性の高いプログラミング
 
-タスク、タスク グループ、および並列アルゴリズムを使用する場合は、キャンセル処理と例外処理の役割を十分に理解しておいてください。 たとえば、並列処理ツリーでタスクを取り消すと、子タスクも実行されなくなります。 そのため、アプリケーションで重要となる操作 (リソースの解放など) が子タスクのいずれかで実行されるような場合に問題となります。 また、子タスクが例外をスローすると、その例外がオブジェクトのデストラクターを介して反映され、アプリケーションで未定義の動作が発生する可能性があります。 これらのポイントを示す例を参照してください、[理解する方法のキャンセル機能と例外は、オブジェクトの破棄を影響を与える処理](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)並列パターン ライブラリに関するベスト プラクティス」セクション。 キャンセルと PPL での例外処理モデルの詳細については、次を参照してください。[キャンセル](../../parallel/concrt/cancellation-in-the-ppl.md)と[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
+タスク、タスク グループ、および並列アルゴリズムを使用する場合は、キャンセル処理と例外処理の役割を十分に理解しておいてください。 たとえば、並列処理ツリーでタスクを取り消すと、子タスクも実行されなくなります。 そのため、アプリケーションで重要となる操作 (リソースの解放など) が子タスクのいずれかで実行されるような場合に問題となります。 また、子タスクが例外をスローすると、その例外がオブジェクトのデストラクターを介して反映され、アプリケーションで未定義の動作が発生する可能性があります。 これらのポイントを示す例を参照してください、[理解する方法のキャンセル機能と例外は、オブジェクトの破棄を影響を与える処理](../../parallel/concrt/best-practices-in-the-parallel-patterns-library.md#object-destruction)並列パターン ライブラリに関するベスト プラクティス」セクション。 キャンセルと PPL での例外処理モデルの詳細については、[キャンセル](../../parallel/concrt/cancellation-in-the-ppl.md)と[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 

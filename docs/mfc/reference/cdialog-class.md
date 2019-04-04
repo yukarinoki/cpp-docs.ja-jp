@@ -215,7 +215,7 @@ virtual BOOL Create(
 
 `Create`  ダイアログ ボックスが作成された後すぐに、メンバー関数が返されます。
 
-親ウィンドウが作成されると、ダイアログ ボックスを表示する必要がある場合は、ダイアログ ボックスのテンプレートで WS_VISIBLE スタイルを使用します。 それ以外の場合、呼び出す必要がある`ShowWindow`します。 さらにダイアログ ボックスのスタイルと、アプリケーションは、次を参照してください。、 [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK の構造と[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)で、 *MFC リファレンス*します。
+親ウィンドウが作成されると、ダイアログ ボックスを表示する必要がある場合は、ダイアログ ボックスのテンプレートで WS_VISIBLE スタイルを使用します。 それ以外の場合、呼び出す必要がある`ShowWindow`します。 さらにダイアログ ボックスのスタイルと、アプリケーションは、、 [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK の構造と[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)で、 *MFC リファレンス*を参照してください。
 
 使用して、`CWnd::DestroyWindow`関数によって作成されたダイアログ ボックスを破棄する、`Create`関数。
 

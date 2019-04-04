@@ -200,7 +200,7 @@ class ATL_NO_VTABLE CComControlBase
 
 このクラスは、作成および ATL のコントロールを管理するためのメソッドを提供します。 [CComControl クラス](../../atl/reference/ccomcontrol-class.md)から派生した`CComControlBase`します。 ATL コントロール ウィザードを使用して、標準のコントロールまたは DHTML コントロールを作成するときに、ウィザードが自動的にからクラスを派生`CComControlBase`します。
 
-コントロールの作成の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。 ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)です。
+コントロールの作成の詳細については、、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)を参照してください。 ATL プロジェクト ウィザードの詳細については、記事を参照してください。 [ATL プロジェクトの作成](../../atl/reference/creating-an-atl-project.md)です。
 
 ## <a name="requirements"></a>必要条件
 
@@ -801,7 +801,7 @@ void GetZoomInfo(ATL_DRAWINFO& di);
 ### <a name="parameters"></a>パラメーター
 
 *di*<br/>
-倍率の分子と分母を格納する構造体。 詳細については、次を参照してください。 [ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)します。
+倍率の分子と分母を格納する構造体。 詳細については、[ATL_DRAWINFO](../../atl/reference/atl-drawinfo-structure.md)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

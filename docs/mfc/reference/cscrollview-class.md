@@ -84,7 +84,7 @@ Standard から派生したクラスで自分でスクロールを処理でき�
 
 自動スクロールを活用するからビュー クラスを派生`CScrollView`の代わりにから`CView`します。 ビューが初めて作成すると、呼び出し、ドキュメントのサイズに基づいて、スクロール可能なビューのサイズを計算する場合、`SetScrollSizes`メンバー関数は、いずれかのオーバーライドから[:oninitialupdate](../../mfc/reference/cview-class.md#oninitialupdate)または[CView::OnUpdate](../../mfc/reference/cview-class.md#onupdate)します。 (ドキュメントのサイズを照会する独自のコードを記述する必要があります。 例については、次を参照してください、 [Scribble サンプル](../../overview/visual-cpp-samples.md)。)。
 
-呼び出し、`SetScrollSizes`メンバー関数、ビューのマッピング モードでは、スクロール ビュー、および水平方向および垂直方向のスクロール量の合計サイズを設定します。 すべてのサイズでは、論理単位です。 ビューの論理サイズは通常、ドキュメントに格納されたデータから計算されます。 ただし、場合によっては、固定サイズを指定したい場合があります。 両方の方法の例については、次を参照してください。 [CScrollView::SetScrollSizes](#setscrollsizes)します。
+呼び出し、`SetScrollSizes`メンバー関数、ビューのマッピング モードでは、スクロール ビュー、および水平方向および垂直方向のスクロール量の合計サイズを設定します。 すべてのサイズでは、論理単位です。 ビューの論理サイズは通常、ドキュメントに格納されたデータから計算されます。 ただし、場合によっては、固定サイズを指定したい場合があります。 両方の方法の例については、[CScrollView::SetScrollSizes](#setscrollsizes)を参照してください。
 
 論理単位で水平方向および垂直方向のスクロール量を指定します。 既定では、ユーザーがクリックすると、スクロール ボックスの外側のスクロール バー突き出し`CScrollView`「ページ」をスクロールします。 ユーザーがスクロール バーのいずれかの端にあるスクロール バーの矢印をクリックすると`CScrollView`"line"をスクロールします。 既定では、1 ページには、ビューの合計サイズの 1/10 です。線は、1/10 ページ サイズです。 カスタム サイズを渡すことによってこれらの既定値をオーバーライド、`SetScrollSizes`メンバー関数。 たとえば、現在のフォントで水平方向のサイズを合計サイズと行の高さを垂直方向のサイズの幅未満であるに設定する可能性があります。
 
@@ -209,7 +209,7 @@ void GetDeviceScrollSizes(
 ### <a name="parameters"></a>パラメーター
 
 *nMapMode*<br/>
-このビューの現在のマッピング モードを返します。 使用可能な値の一覧は、次を参照してください。`SetScrollSizes`します。
+このビューの現在のマッピング モードを返します。 使用可能な値の一覧は、`SetScrollSizes`を参照してください。
 
 *sizeTotal*<br/>
 デバイス単位でスクロール ビューの現在の合計サイズを返します。
@@ -269,7 +269,7 @@ void ResizeParentToFit(BOOL bShrinkOnly = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-これは、MDI 子フレーム ウィンドウのビューに対してのみ推奨されます。 使用`ResizeParentToFit`で、`OnInitialUpdate`ハンドラー関数、派生の`CScrollView`クラス。 このメンバー関数の例は、次を参照してください。 [CScrollView::SetScrollSizes](#setscrollsizes)します。
+これは、MDI 子フレーム ウィンドウのビューに対してのみ推奨されます。 使用`ResizeParentToFit`で、`OnInitialUpdate`ハンドラー関数、派生の`CScrollView`クラス。 このメンバー関数の例は、[CScrollView::SetScrollSizes](#setscrollsizes)を参照してください。
 
 `ResizeParentToFit` [ビュー] ウィンドウのサイズが設定されていることを想定しています。 かどうか、ビュー ウィンドウのサイズが設定されていない場合に`ResizeParentToFit`が呼び出されると、アサーションが取得されます。 そうでないことを確認するには、呼び出す前に次の呼び出しを行う`ResizeParentToFit`:
 

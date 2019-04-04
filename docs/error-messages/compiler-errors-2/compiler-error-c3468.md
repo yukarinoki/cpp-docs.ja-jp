@@ -21,7 +21,7 @@ ms.locfileid: "58777233"
 
 アセンブリ内の型のみを転送することができます。
 
-詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
+詳細については、[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

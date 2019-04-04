@@ -54,7 +54,7 @@ long _InterlockedAddLargeStatistic(
 
 この組み込みはアトミックため 2 つの個別のロックされている指示として実装されます。 組み込みこれの実行中に別のスレッドで発生するアトミックの 64 ビット読み取りは、読み取られる一貫性のない値になる可能性があります。
 
-この関数は、読み取り/書き込みバリアとして動作します。 詳細については、次を参照してください。 [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)します。
+この関数は、読み取り/書き込みバリアとして動作します。 詳細については、[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 

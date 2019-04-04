@@ -226,7 +226,7 @@ BOOL OpenStream(
 開かれるストリームの名前です。 Nll は指定できません。
 
 *nOpenFlags*<br/>
-ストリームを開くときに使用するアクセス モード。 排他的読み取り/書き込みモードは既定で使用されます。 使用可能なモードの完全な一覧で、次を参照してください。[ほか](../../mfc/reference/cfile-class.md#cfile)します。
+ストリームを開くときに使用するアクセス モード。 排他的読み取り/書き込みモードは既定で使用されます。 使用可能なモードの完全な一覧で、[ほか](../../mfc/reference/cfile-class.md#cfile)を参照してください。
 
 *pError*<br/>
 指す、 [CFileException](../../mfc/reference/cfileexception-class.md)オブジェクトまたは NULL。 ストリームを開こうとしたによって生成される可能性のある例外を監視する場合は、このパラメーターを指定します。

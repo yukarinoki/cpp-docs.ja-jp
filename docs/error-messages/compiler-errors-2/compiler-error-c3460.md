@@ -17,7 +17,7 @@ ms.locfileid: "58775180"
 
 'type': 転送できるのはユーザー定義型のみです
 
-詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
+詳細については、[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

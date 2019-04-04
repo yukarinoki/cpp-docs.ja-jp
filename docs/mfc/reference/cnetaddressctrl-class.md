@@ -126,7 +126,7 @@ virtual BOOL Create(
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ。 詳細については、次を参照してください。[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)します。|
+|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ。 詳細については、[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)を参照してください。|
 |*rect*|[in]参照を[RECT](/previous-versions/dd162897\(v=vs.85\))コントロールのサイズと位置を含む構造体。|
 |*pParentWnd*|[in]Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|
 |*nID*|[in]コントロールの ID。|
@@ -153,7 +153,7 @@ virtual BOOL CreateEx(
 |パラメーター|説明|
 |---------------|-----------------|
 |*dwExStyle*|[in]コントロールに適用する拡張スタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。、 *dwExStyle*のパラメーター、 [CreateWindowEx](/windows/desktop/api/winuser/nf-winuser-createwindowexa)関数。|
-|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、次を参照してください。[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)します。|
+|*dwStyle*|[in]コントロールに適用されるスタイルのビットごとの組み合わせ (OR)。 詳細については、[スタイルの編集](../../mfc/reference/styles-used-by-mfc.md#edit-styles)を参照してください。|
 |*rect*|[in]参照を[RECT](/previous-versions/dd162897\(v=vs.85\))コントロールのサイズと位置を含む構造体。|
 |*pParentWnd*|[in]Null 以外のポインターを[CWnd](../../mfc/reference/cwnd-class.md)オブジェクトは、コントロールの親ウィンドウです。|
 |*nID*|[in]コントロールの ID。|
@@ -215,7 +215,7 @@ DWORD GetAllowType() const;
 
 ### <a name="return-value"></a>戻り値
 
-アドレスの種類を指定するフラグのビットごとの組み合わせ (OR)、ネットワーク アドレス コントロールをサポートできます。 詳細については、次を参照してください。 [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)します。
+アドレスの種類を指定するフラグのビットごとの組み合わせ (OR)、ネットワーク アドレス コントロールをサポートできます。 詳細については、[NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -233,7 +233,7 @@ HRESULT SetAllowType(DWORD dwAddrMask);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*dwAddrMask*|[in]アドレスの種類を指定するフラグのビットごとの組み合わせ (OR)、ネットワーク アドレス コントロールをサポートできます。 詳細については、次を参照してください。 [NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)します。|
+|*dwAddrMask*|[in]アドレスの種類を指定するフラグのビットごとの組み合わせ (OR)、ネットワーク アドレス コントロールをサポートできます。 詳細については、[NET_STRING](https://msdn.microsoft.com/library/windows/desktop/bb762586)を参照してください。|
 
 ### <a name="return-value"></a>戻り値
 

@@ -53,9 +53,9 @@ interface class ICommandUI
 
 方法の詳細については`ICommandUI`コマンド ルーティングのインターフェイスを使用してを参照してください[方法。コマンドの追加フォーム コントロールを Windows へのルーティング](../../dotnet/how-to-add-command-routing-to-the-windows-forms-control.md)します。
 
-Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
+Windows フォームの使用に関する詳細については、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)を参照してください。
 
-MFC でのユーザー インターフェイスのコマンドを管理する方法の詳細については、次を参照してください。 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)します。
+MFC でのユーザー インターフェイスのコマンドを管理する方法の詳細については、[CCmdUI クラス](../../mfc/reference/ccmdui-class.md)を参照してください。
 
 ## <a name="check"></a> ICommandUI::Check
 

@@ -32,7 +32,7 @@ ms.locfileid: "57261870"
 
 サーバーのドキュメントが作成されると、フレームワークは、ドキュメントを自動的に OLE システム Dll に登録します。 これにより、サーバーのドキュメントを識別する Dll です。
 
-詳細については、次を参照してください。 [COleServerItem](../mfc/reference/coleserveritem-class.md)と[COleServerDoc](../mfc/reference/coleserverdoc-class.md)で、*クラス ライブラリ リファレンス*します。
+詳細については、[COleServerItem](../mfc/reference/coleserveritem-class.md)と[COleServerDoc](../mfc/reference/coleserverdoc-class.md)で、*クラス ライブラリ リファレンス*を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

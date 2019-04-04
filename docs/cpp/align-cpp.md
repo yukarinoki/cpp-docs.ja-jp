@@ -16,7 +16,7 @@ ms.locfileid: "53627333"
 ---
 # <a name="align-c"></a>align (C++)
 
-Visual Studio 2015 以降では、c++ 11 標準を使用して、`alignas`コントロールの配置を指定子。 詳細については、次を参照してください。[配置](../cpp/alignment-cpp-declarations.md)します。
+Visual Studio 2015 以降では、c++ 11 標準を使用して、`alignas`コントロールの配置を指定子。 詳細については、[配置](../cpp/alignment-cpp-declarations.md)を参照してください。
 
 **Microsoft 固有の仕様**
 
@@ -32,7 +32,7 @@ Visual Studio 2015 以降では、c++ 11 標準を使用して、`alignas`コン
 
 \# アラインメント値です。 有効なエントリは、1 ～ 8192 (バイト) の 2 の整数乗 (2、4、8、16、32、64 など) です。 `declarator` は、aligned として宣言するデータです。
 
-型の値を返す方法については`size_t`型のアラインメント要件を参照してください[_ _alignof](../cpp/alignof-operator.md)します。 64 ビット プロセッサを対象とするときにアラインされていないポインターを宣言する方法については、次を参照してください。 [_ _unaligned](../cpp/unaligned.md)します。
+型の値を返す方法については`size_t`型のアラインメント要件を参照してください[_ _alignof](../cpp/alignof-operator.md)します。 64 ビット プロセッサを対象とするときにアラインされていないポインターを宣言する方法については、[_ _unaligned](../cpp/unaligned.md)を参照してください。
 
 使用することができます`__declspec(align(#))`を定義するとき、**構造体**、**共用体**、または**クラス**変数を宣言する場合またはします。
 

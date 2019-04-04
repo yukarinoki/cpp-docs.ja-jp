@@ -40,7 +40,7 @@ ms.locfileid: "57827441"
 
 - [プロジェクトの既定値]
 
-Windows 以外のプロジェクトでは、次を参照してください。 [Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)します。
+Windows 以外のプロジェクトでは、[Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)を参照してください。
 
 ## <a name="general"></a>全般
 

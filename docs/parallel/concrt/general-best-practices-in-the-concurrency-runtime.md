@@ -35,7 +35,7 @@ ms.locfileid: "57285608"
 
 ##  <a name="synchronization"></a> 可能であれば、協調的同期コンストラクトを使用して、
 
-コンカレンシー ランタイムには、外部同期オブジェクトを必要としないコンカレンシー セーフのコンストラクトが多数用意されています。 など、 [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)クラスは、同時実行セーフの追加と要素の操作にアクセスします。 ただし、リソースへの排他アクセスを必要とする場合、ランタイムは、 [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)、 [:reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)、および[同時実行: イベント](../../parallel/concrt/reference/event-class.md)クラス。 これらの型は協調的に動作するため、タスク スケジューラは、最初のタスクがデータを待っている間、処理リソースを別のコンテキストに再割り当てすることができます。 可能であれば、協調的に動作しない他の同期機構 (Windows API に用意されている同期機構など) の代わりに、これらの同期型を使用してください。 これらの同期型とコード例の詳細については、次を参照してください。[同期データ構造](../../parallel/concrt/synchronization-data-structures.md)と[Windows API への同期データ構造の比較](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)します。
+コンカレンシー ランタイムには、外部同期オブジェクトを必要としないコンカレンシー セーフのコンストラクトが多数用意されています。 など、 [concurrency::concurrent_vector](../../parallel/concrt/reference/concurrent-vector-class.md)クラスは、同時実行セーフの追加と要素の操作にアクセスします。 ただし、リソースへの排他アクセスを必要とする場合、ランタイムは、 [concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)、 [:reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)、および[同時実行: イベント](../../parallel/concrt/reference/event-class.md)クラス。 これらの型は協調的に動作するため、タスク スケジューラは、最初のタスクがデータを待っている間、処理リソースを別のコンテキストに再割り当てすることができます。 可能であれば、協調的に動作しない他の同期機構 (Windows API に用意されている同期機構など) の代わりに、これらの同期型を使用してください。 これらの同期型とコード例の詳細については、[同期データ構造](../../parallel/concrt/synchronization-data-structures.md)と[Windows API への同期データ構造の比較](../../parallel/concrt/comparing-synchronization-data-structures-to-the-windows-api.md)を参照してください。
 
 [[トップ](#top)]
 
@@ -71,7 +71,7 @@ ms.locfileid: "57285608"
 
   `Context::Yield` メソッドが譲渡するのは、現在のスレッドが属しているスケジューラ上の別のアクティブ スレッド、軽量タスク、または別のオペレーティング システム スレッドのみです。 このメソッドに譲渡しない作業をスケジュール設定で実行する、 [concurrency::task_group](reference/task-group-class.md)または[concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)オブジェクトしますが、まだ開始されていません。
 
-他の方法を使用して、長時間実行されるタスク間の協調を有効にすることもできます。 大きなタスクを小さなサブタスクに分割できます。 また、時間のかかるタスクの中でオーバーサブスクリプションを有効にすることもできます。 オーバーサブスクリプションを使用すると、使用可能なハードウェア スレッドよりも多くのスレッドを作成できます。 オーバーサブスクリプションは、長時間実行されるタスクの中で非常に長い待機時間 (ディスクやネットワーク接続からのデータの読み取りなど) が発生するような場合に特に役立ちます。 軽量タスクおよびオーバー サブスクリプションの詳細については、次を参照してください。[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。
+他の方法を使用して、長時間実行されるタスク間の協調を有効にすることもできます。 大きなタスクを小さなサブタスクに分割できます。 また、時間のかかるタスクの中でオーバーサブスクリプションを有効にすることもできます。 オーバーサブスクリプションを使用すると、使用可能なハードウェア スレッドよりも多くのスレッドを作成できます。 オーバーサブスクリプションは、長時間実行されるタスクの中で非常に長い待機時間 (ディスクやネットワーク接続からのデータの読み取りなど) が発生するような場合に特に役立ちます。 軽量タスクおよびオーバー サブスクリプションの詳細については、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。
 
 [[トップ](#top)]
 
@@ -95,7 +95,7 @@ ms.locfileid: "57285608"
 メモリ管理関数を使用して、 [concurrency::alloc](reference/concurrency-namespace-functions.md#alloc)と[concurrency::free](reference/concurrency-namespace-functions.md#free)、きめ細かいタスク有効期間が比較的短い小さなオブジェクトを頻繁に割り当てることがある場合。 コンカレンシー ランタイムでは、実行中のスレッドごとに別個のメモリ キャッシュが保持されます。 
   `Alloc` 関数と `Free` 関数は、ロックやメモリ バリアを使用することなく、これらのキャッシュからメモリの割り当てと解放を行います。
 
-これらのメモリ管理関数の詳細については、次を参照してください。[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。 これらの関数を使用する例を参照してください[方法。割り当てを使用して、およびメモリのパフォーマンスを向上させるためにテープを空き](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)します。
+これらのメモリ管理関数の詳細については、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。 これらの関数を使用する例を参照してください[方法。割り当てを使用して、およびメモリのパフォーマンスを向上させるためにテープを空き](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)します。
 
 [[トップ](#top)]
 

@@ -64,7 +64,7 @@ property T Value {T get();}
 
 ### <a name="remarks"></a>Remarks
 
-例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。
+例については、[ボックス化](../cppcx/boxing-c-cx.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

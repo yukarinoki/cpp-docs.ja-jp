@@ -24,7 +24,7 @@ ms.locfileid: "57741686"
 
 または
 
-1. 作成して汎用 STL/CLR コンテナーを作成、 [collection_adapter](../dotnet/collection-adapter-stl-clr.md)オブジェクト。 .NET コレクション インターフェイスは、このテンプレート クラスは、引数として受け取ります。 どのインターフェイスがサポートされていることを確認するには、次を参照してください。 [collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)します。
+1. 作成して汎用 STL/CLR コンテナーを作成、 [collection_adapter](../dotnet/collection-adapter-stl-clr.md)オブジェクト。 .NET コレクション インターフェイスは、このテンプレート クラスは、引数として受け取ります。 どのインターフェイスがサポートされていることを確認するには、[collection_adapter (STL/CLR)](../dotnet/collection-adapter-stl-clr.md)を参照してください。
 
 1. コンテナーを .NET コレクションの内容をコピーします。 これを行う、STL/CLR を使用して[アルゴリズム](../dotnet/algorithm-stl-clr.md)、またはによって .NET コレクションを反復処理して、各要素のコピーを STL/CLR コンテナーに挿入します。
 

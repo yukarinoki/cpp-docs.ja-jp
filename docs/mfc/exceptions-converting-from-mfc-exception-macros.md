@@ -109,7 +109,7 @@ MFC 例外マクロを使用して例外処理コードの例を次に示しま�
 
 [!code-cpp[NVC_MFCExceptions#9](../mfc/codesnippet/cpp/exceptions-converting-from-mfc-exception-macros_4.cpp)]
 
-詳細については、次を参照してください。[例外: を使用して MFC マクロと C++ 例外](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)します。
+詳細については、[例外: を使用して MFC マクロと C++ 例外](../mfc/exceptions-using-mfc-macros-and-cpp-exceptions.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

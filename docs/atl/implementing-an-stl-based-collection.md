@@ -75,7 +75,7 @@ ATL には、`ICollectionOnSTLImpl`迅速に、オブジェクトのコレクシ
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-この例では、カスタムを使用することができます`GenericCopy`VCUE_Copy.h とから VCUE_CopyString.h で定義されているクラス、 [ATLCollections](../overview/visual-cpp-samples.md)サンプル。 このクラスは、その他のコードで使用できますが、それ以上の特殊化を定義する必要があります`GenericCopy`独自のコレクションで使用されるデータ型をサポートするためにします。 詳細については、次を参照してください。 [ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)します。
+この例では、カスタムを使用することができます`GenericCopy`VCUE_Copy.h とから VCUE_CopyString.h で定義されているクラス、 [ATLCollections](../overview/visual-cpp-samples.md)サンプル。 このクラスは、その他のコードで使用できますが、それ以上の特殊化を定義する必要があります`GenericCopy`独自のコレクションで使用されるデータ型をサポートするためにします。 詳細については、[ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)を参照してください。
 
 ##  <a name="vcconenumeration_and_collection"></a> 列挙とコレクションの Typedef を作成します。
 

@@ -49,7 +49,7 @@ ms.locfileid: "58778339"
 
 **、Try-finally**ステートメントは C および C++ 言語への Microsoft 拡張コードのブロックの実行が中断されたときにクリーンアップ コードの実行を保証するためにターゲット アプリケーションの機能です。 クリーンアップは、メモリを解放する、ファイルを閉じる、ファイル ハンドルを解放するなどのタスクで構成されます。 **、Try-finally**ステートメントは、チェックが行われる場所を引き起こす可能性のあるエラーの途中の複数の場所のルーチンは、ルーチンから返すに特に便利です。
 
-関連する情報とコード サンプルでは、次を参照してください。[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)します。 詳細については、構造化例外処理を一般には、次を参照してください。[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)します。 C + を使用してマネージ アプリケーションでの例外処理の詳細については/cli CLI を参照してください[/clr での例外処理](../extensions/exception-handling-cpp-component-extensions.md)します。
+関連する情報とコード サンプルでは、[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)を参照してください。 詳細については、構造化例外処理を一般には、[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)を参照してください。 C + を使用してマネージ アプリケーションでの例外処理の詳細については/cli CLI を参照してください[/clr での例外処理](../extensions/exception-handling-cpp-component-extensions.md)します。
 
 > [!NOTE]
 > 構造化例外処理では、C と C++ のソース ファイルの両方で Win32 を使用します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理は、任意の型の例外を処理できるという点で、より柔軟です。 C++ プログラムは、お勧め、C++ 例外処理機構を使用すること ([try、catch、および throw](../cpp/try-throw-and-catch-statements-cpp.md)ステートメント)。

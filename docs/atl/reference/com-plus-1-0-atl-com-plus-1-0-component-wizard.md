@@ -15,7 +15,7 @@ ms.locfileid: "57295977"
 
 ATL COM + 1.0 コンポーネント ウィザードのこのページを使用すると、サポートするのにには、インターフェイスの種類と追加のインターフェイスを指定できます。
 
-ATL プロジェクトや ATL COM クラスの詳細については、次を参照してください。 [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)します。
+ATL プロジェクトや ATL COM クラスの詳細については、[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)を参照してください。
 
 - **Interface**
 

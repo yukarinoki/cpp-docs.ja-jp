@@ -117,7 +117,7 @@ virtual void AssertValid() const;
 
 [!code-cpp[NVC_MFCCObjectSample#7](../../mfc/codesnippet/cpp/cobject-class_1.cpp)]
 
-別の例では、次を参照してください。 [AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects)します。
+別の例では、[AfxDoForAllObjects](diagnostic-services.md#afxdoforallobjects)を参照してください。
 
 ##  <a name="cobject"></a>  CObject::CObject
 
@@ -137,7 +137,7 @@ CObject(const CObject& objectSrc);
 
 既定のバージョンは、派生クラスのコンス トラクターによって自動的に呼び出されます。
 
-クラスがシリアル化可能な場合 (が組み込まれて IMPLEMENT_SERIAL マクロ)、クラス宣言で既定のコンス トラクター (引数なしのコンス トラクター) があります。 既定のコンス トラクターを必要がない場合、private を宣言または「空」のコンス トラクターを保護します。 詳細については、次を参照してください。[を使用して CObject](../../mfc/using-cobject.md)します。
+クラスがシリアル化可能な場合 (が組み込まれて IMPLEMENT_SERIAL マクロ)、クラス宣言で既定のコンス トラクター (引数なしのコンス トラクター) があります。 既定のコンス トラクターを必要がない場合、private を宣言または「空」のコンス トラクターを保護します。 詳細については、[を使用して CObject](../../mfc/using-cobject.md)を参照してください。
 
 標準 C++ 既定クラスのコピー コンス トラクターは、メンバー間でコピーします。 プライベートのプレゼンス`CObject`コピー コンス トラクターで、クラスのコピー コンス トラクターが必要なは利用できない場合、コンパイラ エラー メッセージが保証されます。 クラスには、この機能が必要な場合にそのため、コピー コンス トラクターを提供する必要があります。
 

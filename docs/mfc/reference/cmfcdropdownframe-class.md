@@ -60,7 +60,7 @@ class CMFCDropDownFrame : public CMiniFrameWnd
 
 このクラスは、コードから直接使用するものではありません。
 
-フレームワークでは、このクラスを使用するフレームの動作を提供する、`CMFCDropDownToolbar`と`CMFCDropDownToolbarButton`クラス。 これらのクラスの詳細については、次を参照してください。 [CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)と[CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)します。
+フレームワークでは、このクラスを使用するフレームの動作を提供する、`CMFCDropDownToolbar`と`CMFCDropDownToolbarButton`クラス。 これらのクラスの詳細については、[CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)と[CMFCDropDownToolbarButton クラス](../../mfc/reference/cmfcdropdowntoolbarbutton-class.md)を参照してください。
 
 ## <a name="example"></a>例
 

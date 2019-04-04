@@ -17,7 +17,7 @@ ms.locfileid: "58772671"
 
 デストラクターが明示的にオーバーライドできませんまたは明示的にオーバーライドします。
 
-デストラクターまたはファイナライザーは、明示的にオーバーライドすることはできません。 詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
+デストラクターまたはファイナライザーは、明示的にオーバーライドすることはできません。 詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

@@ -54,7 +54,7 @@ ms.locfileid: "57562992"
 > [!NOTE]
 > 参照してください、**矩形選択**と**不規則選択**ツールには描か[イメージ エディターのツールバー](../windows/toolbar-image-editor-for-icons.md) の各ボタンに関連付けられたツールヒントを表示または**イメージ エディター**ツールバー。
 
-選択範囲からカスタム ブラシを作成することもできます。 詳細については、次を参照してください。[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)です。
+選択範囲からカスタム ブラシを作成することもできます。 詳細については、[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)を参照してください。
 
 ## <a name="how-to"></a>方法
 
@@ -119,7 +119,7 @@ ms.locfileid: "57562992"
 
 1. 新しい場所にある画像の選択範囲を固定するには、選択範囲の境界線の外側を選択します。
 
-選択した場合、描画の詳細については、次を参照してください。[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)です。
+選択した場合、描画の詳細については、[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)を参照してください。
 
 ### <a name="to-flip-an-image"></a>イメージを反転するには
 
@@ -183,7 +183,7 @@ ms.locfileid: "57562992"
 
 #### <a name="to-shrink-or-stretch-part-of-an-image"></a>イメージの一部を拡大または縮小するには
 
-1. サイズを変更するイメージの一部を選択します。 詳細については、次を参照してください。[領域のイメージの選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)します。
+1. サイズを変更するイメージの一部を選択します。 詳細については、[領域のイメージの選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)を参照してください。
 
 1. 選択範囲が適切なサイズになるまでは、サイズ変更ハンドルのいずれかをドラッグします。
 

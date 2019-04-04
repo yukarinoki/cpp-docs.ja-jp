@@ -140,7 +140,7 @@ PIFN pifnDispatchArray[7];
 int ( *pifnDispatchArray[7] )( char * );
 ```
 
-Typedef の詳細については、次を参照してください。[エイリアスと typedef](aliases-and-typedefs-cpp.md)します。
+Typedef の詳細については、[エイリアスと typedef](aliases-and-typedefs-cpp.md)を参照してください。
 
 単一の基本型のポインター、参照、配列は、次のように (コンマで区切って) 1 つの宣言にまとめることができます。
 

@@ -64,7 +64,7 @@ class CMFCDesktopAlertWndInfo
 
 - 呼び出すことによって設定されているリンク[CMFCDesktopAlertWndInfo::m_strURL](#m_strurl)します。 リンクがクリックされたときに実行されるコマンドを設定するには、呼び出す[CMFCDesktopAlertWndInfo::m_nURLCmdID](#m_nurlcmdid)します。
 
-既定のダイアログ ボックスが十分ではない場合は、カスタム ダイアログを作成およびに渡す、 [cmfcdesktopalertwnd::create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)メソッドをこのクラスを使用する代わりにします。 詳細については、次を参照してください。 [CMFCDesktopAlertDialog クラス](../../mfc/reference/cmfcdesktopalertdialog-class.md)します。
+既定のダイアログ ボックスが十分ではない場合は、カスタム ダイアログを作成およびに渡す、 [cmfcdesktopalertwnd::create](../../mfc/reference/cmfcdesktopalertwnd-class.md#create)メソッドをこのクラスを使用する代わりにします。 詳細については、[CMFCDesktopAlertDialog クラス](../../mfc/reference/cmfcdesktopalertdialog-class.md)を参照してください。
 
 ## <a name="example"></a>例
 

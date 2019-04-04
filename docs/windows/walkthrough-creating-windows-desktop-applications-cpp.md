@@ -17,7 +17,7 @@ ms.locfileid: "54893900"
 
 このチュートリアルでは、Visual Studio での従来の Windows デスクトップ アプリケーションを作成する方法を示します。 作成するサンプル アプリケーションでは、Windows API を使用して、「こんにちは, Windows デスクトップ!」を表示 。ウィンドウです。 このチュートリアルで開発したコードは、他の Windows デスクトップ アプリケーションを作成するためのパターンとして使用できます。
 
-Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、および Windows クラシック API) は、Windows アプリケーションを作成するための C 言語ベースのフレームワークです。 1980 年代から存在していますが、数十年の Windows アプリケーションの作成に使用されています。 プログラムを簡単にし、高度なフレームワークは、MFC、ATL、および .NET フレームワークなど、Windows API の上に構築されています。 C++ で記述された UWP およびストア アプリのも、ほとんどの最新コード/cli WinRT が下にある Windows API を使用します。 Windows API の詳細については、次を参照してください。 [Windows API インデックス](/windows/desktop/apiindex/windows-api-list)します。 Windows アプリケーションを作成する方法はたくさんありますが、上記のプロセスが 1 つ目。
+Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、および Windows クラシック API) は、Windows アプリケーションを作成するための C 言語ベースのフレームワークです。 1980 年代から存在していますが、数十年の Windows アプリケーションの作成に使用されています。 プログラムを簡単にし、高度なフレームワークは、MFC、ATL、および .NET フレームワークなど、Windows API の上に構築されています。 C++ で記述された UWP およびストア アプリのも、ほとんどの最新コード/cli WinRT が下にある Windows API を使用します。 Windows API の詳細については、[Windows API インデックス](/windows/desktop/apiindex/windows-api-list)を参照してください。 Windows アプリケーションを作成する方法はたくさんありますが、上記のプロセスが 1 つ目。
 
 > [!IMPORTANT]
 > 説明を簡潔にするため、一部のコード ステートメントは、テキストで省略されます。 [コードをビルドして](#build-the-code)セクションにこのドキュメントの末尾には完全なコードが表示されます。
@@ -26,11 +26,11 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 - Microsoft Windows 7 またはそれ以降のバージョンを実行するコンピューター。 開発のベスト エクスペリエンスを実現するには Windows 10 をお勧めします。
 
-- Visual Studio 2017 のコピー。 ダウンロードして Visual Studio をインストールする方法については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。 インストーラーを実行するときに、以下のことを確認、 **C++ によるデスクトップ開発**ワークロードがチェックされます。 Visual Studio をインストールしたときに、このワークロードをインストールしなかった場合、心配しないでください。 インストーラーをもう一度実行して、今すぐインストールします。
+- Visual Studio 2017 のコピー。 ダウンロードして Visual Studio をインストールする方法については、[Visual Studio のインストール](/visualstudio/install/install-visual-studio)を参照してください。 インストーラーを実行するときに、以下のことを確認、 **C++ によるデスクトップ開発**ワークロードがチェックされます。 Visual Studio をインストールしたときに、このワークロードをインストールしなかった場合、心配しないでください。 インストーラーをもう一度実行して、今すぐインストールします。
 
    ![C++ によるデスクトップ開発](../build/media/desktop-development-with-cpp.png "C++ によるデスクトップ開発")
 
-- Visual Studio IDE の使用の基本を理解します。 前に、Windows デスクトップ アプリを使用した場合保持できます可能性があります。 概要については、次を参照してください。 [Visual Studio IDE 機能ツアー](/visualstudio/ide/visual-studio-ide)します。
+- Visual Studio IDE の使用の基本を理解します。 前に、Windows デスクトップ アプリを使用した場合保持できます可能性があります。 概要については、[Visual Studio IDE 機能ツアー](/visualstudio/ide/visual-studio-ide)を参照してください。
 
 - 十分な作業を進めるには C++ 言語の基礎について理解します。 ご心配なく、あまり複雑な何もしません。
 
@@ -107,10 +107,10 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    );
    ```
 
-   この関数の戻り値とパラメーターについては、次を参照してください。 [WinMain エントリ ポイント](/windows/desktop/api/winbase/nf-winbase-winmain)します。
+   この関数の戻り値とパラメーターについては、[WinMain エントリ ポイント](/windows/desktop/api/winbase/nf-winbase-winmain)を参照してください。
 
    > [!NOTE]
-   > など、すべての余分な単語は`CALLBACK`、または`HINSTANCE`、または`_In_`でしょうか。 Typedef を使用する従来の Windows API と抽象化するには、広範囲にプリプロセッサ マクロの種類とプラットフォーム固有の詳細の一部のコード、呼び出し規則など **_ _declspec**宣言、およびコンパイラのプラグマ。 Visual Studio で IntelliSense を使用することができます[クイック ヒント](/visualstudio/ide/using-intellisense#quick-info)機能をこれらの typedef、マクロ定義内容を参照してください。 関心のある単語の上にマウスを移動または選択し、 **Ctrl**+**K**、 **Ctrl**+**は**用、定義を含む小さなポップアップ ウィンドウ。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 パラメーターと戻り値の型が多くの場合、使用*SAL 注釈*に役立つプログラミング エラーをキャッチします。 詳細については、次を参照してください。 [C と C++ コードの欠陥を削減する SAL 注釈を使って](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)します。
+   > など、すべての余分な単語は`CALLBACK`、または`HINSTANCE`、または`_In_`でしょうか。 Typedef を使用する従来の Windows API と抽象化するには、広範囲にプリプロセッサ マクロの種類とプラットフォーム固有の詳細の一部のコード、呼び出し規則など **_ _declspec**宣言、およびコンパイラのプラグマ。 Visual Studio で IntelliSense を使用することができます[クイック ヒント](/visualstudio/ide/using-intellisense#quick-info)機能をこれらの typedef、マクロ定義内容を参照してください。 関心のある単語の上にマウスを移動または選択し、 **Ctrl**+**K**、 **Ctrl**+**は**用、定義を含む小さなポップアップ ウィンドウ。 詳細については、「[IntelliSense の使用](/visualstudio/ide/using-intellisense)」を参照してください。 パラメーターと戻り値の型が多くの場合、使用*SAL 注釈*に役立つプログラミング エラーをキャッチします。 詳細については、[C と C++ コードの欠陥を削減する SAL 注釈を使って](/visualstudio/code-quality/using-sal-annotations-to-reduce-c-cpp-code-defects)を参照してください。
 
 1. Windows デスクトップ プログラムを必要と&lt;windows.h >。 &lt;tchar.h > を定義、`TCHAR`マクロで、最終的に解決する**wchar_t**場合 UNICODE 記号は、プロジェクトで定義されているが、それ以外の場合に解決される**char**します。  TCHAR 必要があり、だけを使用してない場合は常に有効になっている UNICODE を使用したビルドが、 **wchar_t**直接します。
 
@@ -155,7 +155,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    wcex.hIconSm        = LoadIcon(wcex.hInstance, IDI_APPLICATION);
    ```
 
-   上記の構造体のフィールドの詳細については、次を参照してください。 [WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)します。
+   上記の構造体のフィールドの詳細については、[WNDCLASSEX](/windows/desktop/api/winuser/ns-winuser-tagwndclassexa)を参照してください。
 
 1. 登録、`WNDCLASSEX`で Windows メッセージを送信する方法と、ウィンドウの詳細が認識できるようにします。 [RegisterClassEx](/windows/desktop/api/winuser/nf-winuser-registerclassexa) 関数を使用して、ウィンドウ クラス構造体を引数として渡します。 `_T`マクロを使用しているために使用、`TCHAR`型。
 

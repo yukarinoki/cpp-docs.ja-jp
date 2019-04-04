@@ -48,11 +48,11 @@ ms.locfileid: "57816595"
 > [!NOTE]
 >  **/Qifist**が有効で既定ではビットの丸め処理も浮動小数点から浮動小数点に影響するため指していない丸め処理を行う (これが発生したすべての計算後) ため、C スタイル (ゼロ) の方向に丸め処理のフラグを設定すると、浮動小数点計算が異なる可能性があります。 **/Qifist**浮動小数点数の小数部の切り捨てについて予想される動作にコードが依存している場合は使用する必要があります。 不明な場合は使用しないで **/QIfist**します。
 
-**/QIfist**オプションは Visual Studio 2005 以降で非推奨とされます。 浮動小数点型から整数型への変換処理の速度が飛躍的に向上しました。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
+**/QIfist**オプションは Visual Studio 2005 以降で非推奨とされます。 浮動小数点型から整数型への変換処理の速度が飛躍的に向上しました。 非推奨のコンパイラ オプションの一覧は、**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 

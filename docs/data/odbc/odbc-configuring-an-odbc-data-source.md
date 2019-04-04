@@ -20,7 +20,7 @@ ms.locfileid: "50643080"
 > [!NOTE]
 >  この情報は、ODBC へのアクセスの MFC データ アクセス オブジェクト (DAO) クラスを使用して MFC ODBC クラスを使用するときに適用されます。
 
-ODBC アドミニストレーターには、Microsoft Foundation Classes (MFC) ライブラリのデータベースのサポートが自動的にインストールされます。 Odbc データ ソース アドミニストレーターの詳細については、次を参照してください。 [ODBC アドミニストレーター](../../data/odbc/odbc-administrator.md)とオンラインの ODBC API リファレンスのヘルプ システムです。
+ODBC アドミニストレーターには、Microsoft Foundation Classes (MFC) ライブラリのデータベースのサポートが自動的にインストールされます。 Odbc データ ソース アドミニストレーターの詳細については、[ODBC アドミニストレーター](../../data/odbc/odbc-administrator.md)とオンラインの ODBC API リファレンスのヘルプ システムを参照してください。
 
 MFC データベース アプリケーション用の ODBC セットアップおよび管理プログラムを作成する方法については[テクニカル ノート 48:](../../mfc/tn048-writing-odbc-setup-and-administration-programs.md)します。
 

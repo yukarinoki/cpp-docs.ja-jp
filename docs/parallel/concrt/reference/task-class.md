@@ -81,7 +81,7 @@ class task;
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -267,7 +267,7 @@ task(
 
 :Iasyncinfo インターフェイスまたはそのようなインターフェイスを返すラムダを取るコンス トラクター オーバー ロードでは、Windows ランタイム アプリで使用できるのみです。
 
-詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
 
 ##  <a name="then"></a> そうしたら
 
@@ -331,7 +331,7 @@ __declspec(
 
 オーバー ロード`then`ラムダまたはファンクタを:iasyncinfo インターフェイスを返すは Windows ランタイム アプリで使用できるのみです。
 
-タスクの継続を使用して非同期操作を構成する方法の詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+タスクの継続を使用して非同期操作を構成する方法の詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
 
 ##  <a name="wait"></a> 待機
 

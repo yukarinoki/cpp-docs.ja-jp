@@ -177,7 +177,7 @@ void DumpStatistics() const;
 
 - 現在 (バイト) をプログラムによって使用される合計メモリ
 
-無料のブロックは、ブロックが割り当て解除が遅延場合数`afxMemDF`に設定された`delayFreeMemDF`します。 詳細については、次を参照してください。 [afxMemDF](diagnostic-services.md#afxmemdf)、"MFC マクロとグローバル"セクションでします。
+無料のブロックは、ブロックが割り当て解除が遅延場合数`afxMemDF`に設定された`delayFreeMemDF`します。 詳細については、[afxMemDF](diagnostic-services.md#afxmemdf)、"MFC マクロとグローバル"セクションでを参照してください。
 
 ### <a name="example"></a>例
 

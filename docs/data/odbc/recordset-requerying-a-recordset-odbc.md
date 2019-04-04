@@ -48,7 +48,7 @@ ms.locfileid: "50482749"
 
 また、終了して、元のレコード セットを再起動したことができます。 どちらの場合は、新しいレコード セットは、データ ソースの現在の状態を表します。
 
-例については、次を参照してください。[レコード ビュー: セカンド レコード セットからリスト ボックス](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)します。
+例については、[レコード ビュー: セカンド レコード セットからリスト ボックス](../../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)を参照してください。
 
 > [!TIP]
 >  最適化するために`Requery`、パフォーマンス、レコード セットを変更しないように[フィルター](../../data/odbc/recordset-filtering-records-odbc.md)または[並べ替え](../../data/odbc/recordset-sorting-records-odbc.md)します。 呼び出しの前に、パラメーター値のみを変更する`Requery`します。

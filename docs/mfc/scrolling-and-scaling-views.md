@@ -19,7 +19,7 @@ ms.locfileid: "58777582"
 
 MFC では、それらを表示するフレーム ウィンドウのサイズが自動的に拡大縮小されるビューまでスクロールし、ビューをサポートしています。 クラス`CScrollView`ビューの両方の種類をサポートしています。
 
-スクロールとスケーリングの詳細については、クラスを参照してください。 [CScrollView](../mfc/reference/cscrollview-class.md)で、 *MFC リファレンス*します。 スクロールの例では、次を参照してください。、 [Scribble サンプル](../overview/visual-cpp-samples.md)します。
+スクロールとスケーリングの詳細については、クラスを参照してください。 [CScrollView](../mfc/reference/cscrollview-class.md)で、 *MFC リファレンス*します。 スクロールの例では、、 [Scribble サンプル](../overview/visual-cpp-samples.md)を参照してください。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 

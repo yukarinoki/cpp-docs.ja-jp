@@ -38,11 +38,11 @@ ms.locfileid: "57810004"
 
 /プロファイルにより、プログラム イメージの再配置セクションを生成します。  再配置セクションは、プロファイル データを取得する、プログラム イメージを変換するプロファイラーを使用できます。
 
-**/プロファイル**はのみ Enterprise (チームの開発) バージョンでのみ使用できます。  PREfast の詳細については、次を参照してください。 [Code Analysis for C と C++ の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)します。
+**/プロファイル**はのみ Enterprise (チームの開発) バージョンでのみ使用できます。  PREfast の詳細については、[Code Analysis for C と C++ の概要](/visualstudio/code-quality/code-analysis-for-c-cpp-overview)を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[構成プロパティ]** ノードを展開します。
 

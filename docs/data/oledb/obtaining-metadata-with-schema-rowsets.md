@@ -78,7 +78,7 @@ CRestrictions<CAccessor<CColumnsInfo>
     }
     ```
 
-1. 情報をフェッチするには、スキーマ行セット オブジェクトの適切なデータ メンバーにアクセスします。たとえば、`ColumnSchemaRowset.m_szColumnName` にアクセスします。 このデータ メンバーは、COLUMN_NAME に対応します。 各データ メンバーに対応する OLE DB 列を表示するには、次を参照してください。 [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)します。
+1. 情報をフェッチするには、スキーマ行セット オブジェクトの適切なデータ メンバーにアクセスします。たとえば、`ColumnSchemaRowset.m_szColumnName` にアクセスします。 このデータ メンバーは、COLUMN_NAME に対応します。 各データ メンバーに対応する OLE DB 列を表示するには、[CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)を参照してください。
 
 OLE DB テンプレートのスキーマ行セットの参照の typedef クラスが提供されている (を参照してください[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。
 
@@ -86,7 +86,7 @@ OLE DB テンプレートのスキーマ行セットの参照の typedef クラ�
 
 スキーマ行セット クラスを使用する方法のより複雑な例については、次を参照してください。、 [CatDB](https://github.com/Microsoft/VCSamples)と[DBViewer](https://github.com/Microsoft/VCSamples)サンプル。
 
-スキーマ行セット プロバイダーのサポートについては、次を参照してください。[スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)します。
+スキーマ行セット プロバイダーのサポートについては、[スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -58,7 +58,7 @@ ms.locfileid: "57820573"
 
 - **プロジェクトのスタイル**
 
-  アプリケーションが、標準 MFC、ファイル エクスプ ローラー、Visual Studio、または Office のアーキテクチャおよび表示にするかどうかを示します。 詳細については、次を参照してください。[ファイル エクスプ ローラー スタイルの MFC アプリケーションの作成](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)です。
+  アプリケーションが、標準 MFC、ファイル エクスプ ローラー、Visual Studio、または Office のアーキテクチャおよび表示にするかどうかを示します。 詳細については、[ファイル エクスプ ローラー スタイルの MFC アプリケーションの作成](../../mfc/reference/creating-a-file-explorer-style-mfc-application.md)を参照してください。
 
   |オプション|説明|
   |------------|-----------------|

@@ -19,7 +19,7 @@ ms.locfileid: "58774829"
 
 もう 1 つの単純なイベントでは、単純なイベント (明示的に定義されたアクセサー メソッドなしイベント) をオーバーライドすることはできません。 イベントをオーバーライドするには、アクセサー関数でその動作を定義する必要があります。
 
-詳細については、次を参照してください。[イベント](../../extensions/event-cpp-component-extensions.md)します。
+詳細については、[イベント](../../extensions/event-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

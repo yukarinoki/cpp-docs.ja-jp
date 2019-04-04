@@ -54,7 +54,7 @@ ms.locfileid: "58328507"
 
 使用して、**ダイアログ エディター**、追加できますが、サイズ変更、編集、およびダイアログ ボックスのコントロールを削除します。 をその ID などのコントロールのプロパティを編集することもできるかどうか、最初に表示される実行時にします。
 
-**ダイアログ エディター**タブに表示されます、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)作業するとき、**ダイアログ エディター**します。 カスタマイズすることも、**ツールボックス**ウィンドウを簡単に使用します。 詳細については、次を参照してください。[ツールボックスを使用して](/visualstudio/ide/using-the-toolbox)と[表示または非表示のツールボックス ウィンドウ](showing-or-hiding-the-dialog-editor-toolbar.md)します。
+**ダイアログ エディター**タブに表示されます、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox)作業するとき、**ダイアログ エディター**します。 カスタマイズすることも、**ツールボックス**ウィンドウを簡単に使用します。 詳細については、[ツールボックスを使用して](/visualstudio/ide/using-the-toolbox)と[表示または非表示のツールボックス ウィンドウ](showing-or-hiding-the-dialog-editor-toolbar.md)を参照してください。
 
 > [!TIP]
 > 使用しているときに、**ダイアログ エディター**、多くの場合は、頻繁に使用されるコマンドのショートカット メニューを表示する、マウスの右ボタンを選択できます。
@@ -95,11 +95,11 @@ ms.locfileid: "58328507"
 1. マウスのボタンを離します。 指定したサイズでダイアログ ボックスにコントロールが配置されます。
 
 > [!TIP]
-> コントロールのサイズを変更するには、コントロールの境界線にサイズ変更ハンドルを移動することによって、ダイアログ ボックスの上にドロップするとします。 詳細については、次を参照してください。[個々 のコントロールをサイズ変更](../windows/sizing-individual-controls.md)します。
+> コントロールのサイズを変更するには、コントロールの境界線にサイズ変更ハンドルを移動することによって、ダイアログ ボックスの上にドロップするとします。 詳細については、[個々 のコントロールをサイズ変更](../windows/sizing-individual-controls.md)を参照してください。
 
 ### <a name="to-add-a-custom-control"></a>カスタム コントロールを追加するには
 
-ダイアログ ボックスにカスタム コントロールを追加するには選択して、**カスタム コントロール**アイコン、**ツールボックス**ダイアログ ボックスにドラッグするとします。 追加する、 **Syslink**を制御し、カスタム コントロールを追加、変更、コントロールの**クラス**プロパティを**Syslink**します。 この操作は、プロパティが更新され、表示により、 **Syslink**プロパティを制御します。 MFC ラッパー クラスについては、次を参照してください。 [CLinkCtrl](../mfc/reference/clinkctrl-class.md)します。
+ダイアログ ボックスにカスタム コントロールを追加するには選択して、**カスタム コントロール**アイコン、**ツールボックス**ダイアログ ボックスにドラッグするとします。 追加する、 **Syslink**を制御し、カスタム コントロールを追加、変更、コントロールの**クラス**プロパティを**Syslink**します。 この操作は、プロパティが更新され、表示により、 **Syslink**プロパティを制御します。 MFC ラッパー クラスについては、[CLinkCtrl](../mfc/reference/clinkctrl-class.md)を参照してください。
 
 ## <a name="edit-controls"></a>コントロールを編集します。
 
@@ -113,7 +113,7 @@ ms.locfileid: "58328507"
 1. [プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)コントロールのプロパティを変更します。
 
    > [!NOTE]
-   > 設定すると、**ビットマップ**ボタン、オプション ボタン、またはチェック ボックス コントロールと同じプロパティを**True**BS_BITMAP の実装は、コントロールのスタイル。 詳細については、次を参照してください。[ボタンのスタイル](../mfc/reference/styles-used-by-mfc.md#button-styles)します。 コントロールとビットマップの関連付けの例は、次を参照してください。 [CButton::SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)します。 は、ビットマップは、コントロールに表示されません、**ダイアログ エディター**します。
+   > 設定すると、**ビットマップ**ボタン、オプション ボタン、またはチェック ボックス コントロールと同じプロパティを**True**BS_BITMAP の実装は、コントロールのスタイル。 詳細については、[ボタンのスタイル](../mfc/reference/styles-used-by-mfc.md#button-styles)を参照してください。 コントロールとビットマップの関連付けの例は、[CButton::SetBitmap](../mfc/reference/cbutton-class.md#setbitmap)を参照してください。 は、ビットマップは、コントロールに表示されません、**ダイアログ エディター**します。
 
 ### <a name="to-undo-changes-to-the-properties-of-a-control"></a>コントロールのプロパティの変更を元に戻す
 
@@ -132,7 +132,7 @@ ms.locfileid: "58328507"
 
    [メンバー変数の追加ウィザード](../ide/add-member-variable-wizard.md)が表示されます。
 
-1. 適切な情報を入力、**メンバー変数の追加**ウィザード。 詳細については、次を参照してください。[ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange.md)します。
+1. 適切な情報を入力、**メンバー変数の追加**ウィザード。 詳細については、[ダイアログ データ エクス チェンジ](../mfc/dialog-data-exchange.md)を参照してください。
 
 1. 選択**OK**に戻る、**ダイアログ エディター**します。
 
@@ -177,7 +177,7 @@ ms.locfileid: "58328507"
 
 コモン コントロール ダイアログ ボックスを使用するにを呼び出す必要があります[InitCommonControlsEx](/windows/desktop/api/commctrl/nf-commctrl-initcommoncontrolsex)または`AFXInitCommonControls` ダイアログ ボックスを作成する前にします。
 
-リッチ エディット コントロールを使用して呼び出す必要がある`LoadLibrary`します。 詳細については、次を参照してください。[リッチのエディット コントロールについて](/windows/desktop/Controls/about-rich-edit-controls)Windows sdk と[リッチ エディット コントロールの概要](../mfc/overview-of-the-rich-edit-control.md)します。
+リッチ エディット コントロールを使用して呼び出す必要がある`LoadLibrary`します。 詳細については、[リッチのエディット コントロールについて](/windows/desktop/Controls/about-rich-edit-controls)Windows sdk と[リッチ エディット コントロールの概要](../mfc/overview-of-the-rich-edit-control.md)を参照してください。
 
 > [!NOTE]
 > リッチ エディット コントロールを MFC を使用するには、まず[AfxInitRichEdit2](../mfc/reference/application-information-and-management.md#afxinitrichedit2)リッチ エディット 2.0 コントロール (RICHED20 を読み込めません。DLL)、または呼び出す[AfxInitRichEdit](../mfc/reference/application-information-and-management.md#afxinitrichedit)古い RichEdit 1.0 コントロール (RICHED32 を読み込めません。DLL) です。
@@ -186,7 +186,7 @@ ms.locfileid: "58328507"
 
 ### <a name="activex-controls"></a>ActiveX コントロール
 
-Visual Studio では、ActiveX コントロールをダイアログ ボックスに挿入することができます。 詳細については、次を参照してください。 [MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)と[ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)します。
+Visual Studio では、ActiveX コントロールをダイアログ ボックスに挿入することができます。 詳細については、[MFC ActiveX コントロール](../mfc/mfc-activex-controls.md)と[ActiveX コントロール コンテナー](../mfc/activex-control-containers.md)を参照してください。
 
 **ActiveX コントロールの挿入** ダイアログ ボックスでは、使用中に、ダイアログ ボックスに ActiveX コントロールを挿入することができます、[ダイアログ エディター](../windows/dialog-editor.md)します。 このダイアログ ボックスには、次のプロパティが含まれています。
 

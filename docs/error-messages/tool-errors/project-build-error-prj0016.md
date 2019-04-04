@@ -27,4 +27,4 @@ ms.locfileid: "50616867"
 
 このエラーのもう 1 つの原因は、ポリシーの設定は含まれていません VCSpawn.exe HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Policies\RestrictRun レジストリ キーの下でこのユーザー アカウントに許可されているウィンドウ プログラムとしてです。
 
-詳細については、次を参照してください。[システム ポリシーの設定に準拠する](https://msdn.microsoft.com/library/aa372139)、"許可された Windows アプリケーションだけを実行する"に関するセクションでします。
+詳細については、[システム ポリシーの設定に準拠する](https://msdn.microsoft.com/library/aa372139)、"許可された Windows アプリケーションだけを実行する"に関するセクションでを参照してください。

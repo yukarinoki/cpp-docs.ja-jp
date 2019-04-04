@@ -14,4 +14,4 @@ ms.locfileid: "50560421"
 ---
 # <a name="virtual-specifier"></a>virtual 指定子
 
-[仮想](../cpp/virtual-cpp.md)キーワードは非静的クラス メンバー関数にのみ適用できます。 関数呼び出しのバインドが実行時まで延期されることを示します。 詳細については、次を参照してください。[仮想関数](../cpp/virtual-functions.md)します。
+[仮想](../cpp/virtual-cpp.md)キーワードは非静的クラス メンバー関数にのみ適用できます。 関数呼び出しのバインドが実行時まで延期されることを示します。 詳細については、[仮想関数](../cpp/virtual-functions.md)を参照してください。

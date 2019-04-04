@@ -19,4 +19,4 @@ ms.locfileid: "50566141"
 
 プロジェクトの .idb ファイルが壊れています。 ファイルを削除して再構築します。
 
-リビルドと .idb ファイルの詳細については、次を参照してください。、 [/Gm コンパイラ オプション](../../build/reference/gm-enable-minimal-rebuild.md)します。
+リビルドと .idb ファイルの詳細については、、 [/Gm コンパイラ オプション](../../build/reference/gm-enable-minimal-rebuild.md)を参照してください。

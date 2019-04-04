@@ -517,7 +517,7 @@ void AFXAPI DDX_FieldSlider(
 
 ODBC ベースのクラスを使用する場合は、関数の最初のオーバーライドを使用します。 DAO ベースのクラスでは、2 番目のオーバーライドを使用します。
 
-DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について`CRecordView`と`CDaoRecordView`フィールドを参照してください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。 スライダー コントロールの概要については、次を参照してください。[を使用して CSliderCtrl](../using-csliderctrl.md)します。
+DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../dialog-data-exchange-and-validation.md)」を参照してください。 例との DDX の詳細について`CRecordView`と`CDaoRecordView`フィールドを参照してください[レコード ビュー](../../data/record-views-mfc-data-access.md)します。 スライダー コントロールの概要については、[を使用して CSliderCtrl](../using-csliderctrl.md)を参照してください。
 
 ### <a name="example"></a>例
 

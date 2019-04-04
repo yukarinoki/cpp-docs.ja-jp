@@ -19,7 +19,7 @@ ms.locfileid: "50574024"
 
 このエラーは、オーバーロードされた関数の定義または宣言で、同じ仮パラメーター リストを繰り返し使用した場合に発生します。
 
-Dispose 関数が原因で C2535 が発生した場合は、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)詳細についてはします。
+Dispose 関数が原因で C2535 が発生した場合は、[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)詳細についてはを参照してください。
 
 次の例では、C2535 が生成されます。
 

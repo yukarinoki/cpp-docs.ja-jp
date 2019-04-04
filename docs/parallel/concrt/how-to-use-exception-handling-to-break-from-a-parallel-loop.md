@@ -46,7 +46,7 @@ ms.locfileid: "57262312"
 
 [!code-cpp[concrt-task-tree-search#4](../../parallel/concrt/codesnippet/cpp/how-to-use-exception-handling-to-break-from-a-parallel-loop_4.cpp)]
 
-この例では、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを並列で値を検索します。 このアルゴリズムの詳細については、次を参照してください。[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)します。
+この例では、 [concurrency::parallel_invoke](reference/concurrency-namespace-functions.md#parallel_invoke)アルゴリズムを並列で値を検索します。 このアルゴリズムの詳細については、[並列アルゴリズム](../../parallel/concrt/parallel-algorithms.md)を参照してください。
 
 ## <a name="example"></a>例
 

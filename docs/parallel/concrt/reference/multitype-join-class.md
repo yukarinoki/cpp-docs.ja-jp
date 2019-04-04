@@ -77,7 +77,7 @@ class multitype_join: public ISource<typename _Unwrap<T>::type>;
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。
+詳細については、[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

@@ -117,7 +117,7 @@ LPCTSTR AccountName() const throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドが、指定した名前を検索しようとしています。 `SID` (セキュリティ識別子)。 完全な詳細については、次を参照してください。 [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)します。
+このメソッドが、指定した名前を検索しようとしています。 `SID` (セキュリティ識別子)。 完全な詳細については、[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)を参照してください。
 
 アカウント名がない場合、`SID`がある`AccountName`空の文字列を返します。 これは、ネットワークのタイムアウトが原因でこのメソッドが名前を見つける場合に発生します。 発生の対応するアカウント名のない、セキュリティ識別子など、`SID`サインイン セッションを識別します。
 
@@ -208,7 +208,7 @@ LPCTSTR Domain() const throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドが、指定した名前を検索しようとしています。 `SID` (セキュリティ識別子)。 完全な詳細については、次を参照してください。 [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)します。
+このメソッドが、指定した名前を検索しようとしています。 `SID` (セキュリティ識別子)。 完全な詳細については、[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)を参照してください。
 
 アカウント名がない場合、`SID`がある`Domain`空の文字列としてドメインを返します。 これは、ネットワークのタイムアウトが原因でこのメソッドが名前を見つける場合に発生します。 発生の対応するアカウント名のない、セキュリティ識別子など、`SID`サインイン セッションを識別します。
 

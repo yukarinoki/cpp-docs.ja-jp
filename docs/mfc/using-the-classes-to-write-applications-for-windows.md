@@ -68,7 +68,7 @@ ms.locfileid: "57265302"
 
    さらに、MFC が Unicode を使用するアプリケーションの記述を完全に有効にし、マルチバイト文字セット (MBCS)、具体的には 2 バイト文字セット (DBCS)。
 
-MFC のドキュメントを一般的なガイドは、次を参照してください。 [MFC の一般的なトピック](../mfc/general-mfc-topics.md)します。
+MFC のドキュメントを一般的なガイドは、[MFC の一般的なトピック](../mfc/general-mfc-topics.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

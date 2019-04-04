@@ -28,7 +28,7 @@ ms.locfileid: "57286810"
 ドキュメントのこの部分のトピックでは、コンカレンシー ランタイムのタスク スケジューラの重要な機能について説明します。 タスク スケジューラは、コンカレンシー ランタイムを使用する既存のコードのパフォーマンスを微調整するときに役立ちます。
 
 > [!IMPORTANT]
->  タスク スケジューラは、ユニバーサル Windows プラットフォーム (UWP) アプリからご利用いただけません。 詳細については、次を参照してください。[を作成する非同期操作で C++ UWP アプリの](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)します。
+>  タスク スケジューラは、ユニバーサル Windows プラットフォーム (UWP) アプリからご利用いただけません。 詳細については、[を作成する非同期操作で C++ UWP アプリの](../../parallel/concrt/creating-asynchronous-operations-in-cpp-for-windows-store-apps.md)を参照してください。
 >
 >  Visual Studio 2015 以降では、 [concurrency::task](../../parallel/concrt/reference/task-class.md)クラスおよび ppltasks.h で関連する型は、スケジューラとして Windows ThreadPool を使用します。 このトピックは、ppltasks.h で定義されている型には該当しなくなりました。 parallel_for などの並列アルゴリズムでは引き続き、既定のスケジューラとしてコンカレンシー ランタイムが使用されます。
 

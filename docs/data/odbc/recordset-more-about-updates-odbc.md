@@ -30,7 +30,7 @@ ms.locfileid: "50665297"
 - [詳細については、Update および Delete のメンバー関数は](#_core_more_about_update_and_delete)します。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装した場合、情報の一部は適用されません。 たとえば、呼び出すことはできません、 `AddNew`、 `Edit`、`Delete`と`Update`メンバー関数。 ただし、トランザクションを実行することができます。 バルク行フェッチの詳細については、次を参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装した場合、情報の一部は適用されません。 たとえば、呼び出すことはできません、 `AddNew`、 `Edit`、`Delete`と`Update`メンバー関数。 ただし、トランザクションを実行することができます。 バルク行フェッチの詳細については、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
 
 ##  <a name="_core_how_other_operations_affect_updates"></a> 更新プログラムの他の操作の影響
 
@@ -42,7 +42,7 @@ ms.locfileid: "50665297"
 
 既定では、呼び出し`AddNew`と`Edit`データ ソースを呼び出すとすぐに影響`Update`します。 `Delete` 呼び出しは直ちに有効にします。 ただし、トランザクションを確立し、このような呼び出しのバッチを実行できます。 コミットするまでは、更新プログラムが永続的なされません。 頭を変更する場合をロールバックできますから、そのコミットではなく、トランザクション。
 
-トランザクションの詳細については、次を参照してください。[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
+トランザクションの詳細については、[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)を参照してください。
 
 ###  <a name="_core_how_closing_the_recordset_affects_updates"></a> 更新プログラムの影響、レコード セットを閉じる
 

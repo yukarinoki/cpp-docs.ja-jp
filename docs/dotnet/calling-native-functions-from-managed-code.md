@@ -217,7 +217,7 @@ int main() {
 
 MarshalAs 属性は System::Runtime::InteropServices 名前空間にあります。 この属性は、配列などのほかのデータ型にも使用できます。
 
-このトピックで既に述べたように、マーシャリング ライブラリにより、最適化された新しい方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができます。 詳細については、次を参照してください。 [c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)します。
+このトピックで既に述べたように、マーシャリング ライブラリにより、最適化された新しい方法でネイティブ環境とマネージド環境との間でデータ変換を行うことができます。 詳細については、[c++ Overview of Marshaling](../dotnet/overview-of-marshaling-in-cpp.md)を参照してください。
 
 ## <a name="performance-considerations"></a>パフォーマンスに関する考慮事項
 

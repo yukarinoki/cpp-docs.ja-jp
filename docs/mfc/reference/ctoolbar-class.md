@@ -567,7 +567,7 @@ void SetButtonInfo(
 > [!NOTE]
 >  使用してボタンの状態を設定することも、 *nStyle*パラメーターですただし、ボタンの状態によって制御されるため、 [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)ハンドラーでは、すべての状態を使用して設定する`SetButtonInfo`は失われます。次の中にアイドル プロセス。 参照してください[ユーザー インターフェイス オブジェクトを更新する方法](../../mfc/how-to-update-user-interface-objects.md)と[TN031:コントロール バー](../../mfc/tn031-control-bars.md)詳細についてはします。
 
-ビットマップ イメージやボタンについては、次を参照してください。、 [CToolBar](../../mfc/reference/ctoolbar-class.md)の概要と[CToolBar::LoadBitmap](#loadbitmap)します。
+ビットマップ イメージやボタンについては、、 [CToolBar](../../mfc/reference/ctoolbar-class.md)の概要と[CToolBar::LoadBitmap](#loadbitmap)を参照してください。
 
 ##  <a name="setbuttons"></a>  CToolBar::SetButtons
 

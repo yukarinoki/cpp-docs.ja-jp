@@ -49,7 +49,7 @@ Microsoft C ランタイム ライブラリの初期化のために予約され�
 
 指定したセクション名には、プラグマの後のそのモジュール内で宣言されたグローバル オブジェクトを構築するヘルパー関数へのポインターが格納されます。
 
-セクションを作成するときに使用しない名前の一覧は、次を参照してください。 [/section](../build/reference/section-specify-section-attributes.md)します。
+セクションを作成するときに使用しない名前の一覧は、[/section](../build/reference/section-specify-section-attributes.md)を参照してください。
 
 *func 名前*の代わりに呼び出される関数を指定`atexit`プログラムが終了したとき。 このヘルパー関数も呼び出します[atexit](../c-runtime-library/reference/atexit.md)グローバル オブジェクトのデストラクターへのポインター。 次の形式のプラグマで関数の識別子を指定した場合、
 

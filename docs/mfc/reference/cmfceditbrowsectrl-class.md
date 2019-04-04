@@ -65,7 +65,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|現在の参照機能付きコントロールを再描画します。|
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|[参照] ボタンを描画するためにフレームワークによって呼び出されます。|
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|編集コントロールに、無効なファイル名が入力されたときに、フレームワークによって呼び出されます。|
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。|
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、[cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)を参照してください。|
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|[参照] ボタンのカスタム イメージを設定します。|
 
 ## <a name="remarks"></a>Remarks
@@ -179,7 +179,7 @@ void EnableFileBrowseButton(
 
 参照機能付きコントロールがファイル参照モードのときにユーザーが [参照] ボタンをクリックすると、コントロールに標準的なファイル選択のダイアログ ボックスが表示されます。
 
-使用可能なフラグの一覧については、次を参照してください。 [OPENFILENAME 構造体](/windows/desktop/api/commdlg/ns-commdlg-tagofna)します。
+使用可能なフラグの一覧については、[OPENFILENAME 構造体](/windows/desktop/api/commdlg/ns-commdlg-tagofna)を参照してください。
 
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton
 
@@ -252,7 +252,7 @@ virtual void OnChangeLayout();
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、ブラウズ モードの参照機能付きコントロール変更されるときに、このメソッドを呼び出します。 詳細については、次を参照してください。 [CMFCEditBrowseCtrl::GetMode](#getmode)します。
+フレームワークは、ブラウズ モードの参照機能付きコントロール変更されるときに、このメソッドを呼び出します。 詳細については、[CMFCEditBrowseCtrl::GetMode](#getmode)を参照してください。
 
 ##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton
 

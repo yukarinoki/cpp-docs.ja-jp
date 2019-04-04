@@ -35,11 +35,11 @@ ms.locfileid: "57820619"
 
 使用 **/GR**コンパイラがコード内のオブジェクトの種類を静的に解決できない場合。 通常は必要があります、 **/GR**コードで使用されるオプション[dynamic_cast Operator](../../cpp/dynamic-cast-operator.md)または[typeid](../../cpp/typeid-operator.md)します。 ただし、 **/GR** .rdata セクションでは、のイメージのサイズを大ききます。 コードを使用しない場合**dynamic_cast**または**typeid**、 **/GR-** 小さいイメージを生成する可能性があります。
 
-実行時の型チェックの詳細については、次を参照してください。[実行時型情報](../../cpp/run-time-type-information.md)で、 *C++ 言語リファレンス*します。
+実行時の型チェックの詳細については、[実行時型情報](../../cpp/run-time-type-information.md)で、 *C++ 言語リファレンス*を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 

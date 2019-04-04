@@ -31,7 +31,7 @@ interface class IBox
 
 ### <a name="remarks"></a>Remarks
 
-`IBox<T>` インターフェイスは、「 [値クラスと構造体 (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md)」で説明されているように、主に内部的に使用され、null 許容値型を表します。 インターフェイスは、 `Object^`型のパラメーターを受け取る C++ のメソッドに渡される値の型をボックス化するためにも使用されます。 入力パラメーターは `IBox<SomeValueType>`として明示的に宣言できます。 例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。
+`IBox<T>` インターフェイスは、「 [値クラスと構造体 (C++/CX)](../cppcx/value-classes-and-structs-c-cx.md)」で説明されているように、主に内部的に使用され、null 許容値型を表します。 インターフェイスは、 `Object^`型のパラメーターを受け取る C++ のメソッドに渡される値の型をボックス化するためにも使用されます。 入力パラメーターは `IBox<SomeValueType>`として明示的に宣言できます。 例については、[ボックス化](../cppcx/boxing-c-cx.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -66,7 +66,7 @@ property T Value {T get();}
 
 ### <a name="remarks"></a>Remarks
 
-例については、次を参照してください。[ボックス化](../cppcx/boxing-c-cx.md)します。
+例については、[ボックス化](../cppcx/boxing-c-cx.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

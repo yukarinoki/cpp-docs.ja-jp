@@ -21,7 +21,7 @@ ARM EABI (埋め込みアプリケーション バイナリ インターフェ�
 
 ### <a name="assumptions"></a>外部からの影響
 
-ARM 版 Windows 用の実行可能イメージでは、移植可能な実行可能 (PE) 形式が使用されます。 詳細については、次を参照してください。 [Microsoft PE and COFF 仕様](http://go.microsoft.com/fwlink/p/?linkid=84140)します。 例外処理情報は、イメージの .pdata および .xdata セクションに格納されます。
+ARM 版 Windows 用の実行可能イメージでは、移植可能な実行可能 (PE) 形式が使用されます。 詳細については、[Microsoft PE and COFF 仕様](http://go.microsoft.com/fwlink/p/?linkid=84140)を参照してください。 例外処理情報は、イメージの .pdata および .xdata セクションに格納されます。
 
 例外処理メカニズムでは、ARM 版 Windows の ABI に従うコードについて、次のことを想定しています。
 

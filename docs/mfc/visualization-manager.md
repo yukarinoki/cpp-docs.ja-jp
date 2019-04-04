@@ -30,7 +30,7 @@ MyApp CMFCVisualManagerOffice2003 ビジュアル マネージャーを使用し
 ![CMFCVisualManagerOffice2007 で表示された MyApp](../mfc/media/msoffice2007.png "CMFCVisualManagerOffice2007 で表示された MyApp") <br/>
 MyApp CMFCVisualManagerOffice2007 ビジュアル マネージャーを使用します。
 
-既定では、ビジュアル マネージャーは、いくつかの GUI 要素の描画コードを保持します。 カスタムの UI 要素を提供するには、ビジュアル マネージャーの関連の描画メソッドをオーバーライドする必要があります。 これらのメソッドの一覧で、次を参照してください。 [CMFCVisualManager クラス](../mfc/reference/cmfcvisualmanager-class.md)します。 カスタムの外観を提供するオーバーライドできるメソッドで始まるすべてのメソッド`OnDraw`します。
+既定では、ビジュアル マネージャーは、いくつかの GUI 要素の描画コードを保持します。 カスタムの UI 要素を提供するには、ビジュアル マネージャーの関連の描画メソッドをオーバーライドする必要があります。 これらのメソッドの一覧で、[CMFCVisualManager クラス](../mfc/reference/cmfcvisualmanager-class.md)を参照してください。 カスタムの外観を提供するオーバーライドできるメソッドで始まるすべてのメソッド`OnDraw`します。
 
 アプリケーションがある 1 つだけ`CMFCVisualManager`オブジェクト。 アプリケーションのビジュアル マネージャーへのポインターを取得するには、静的関数を呼び出す[CMFCVisualManager::GetInstance](../mfc/reference/cmfcvisualmanager-class.md#getinstance)します。 すべてのビジュアル マネージャーが継承するので`CMFCVisualManager`、`CMFCVisualManager::GetInstance`メソッドのカスタム ビジュアル マネージャーを作成する場合でも、適切なビジュアル マネージャーにポインターが取得されます。
 

@@ -49,7 +49,7 @@ Rebar オブジェクトは、さまざまな子ウィンドウ、通常は他�
 
 Rebar オブジェクトは、ツールバーのオブジェクトと同様に動作します。 Rebar はバンドのサイズを変更するのに をクリック アンド ドラッグ メカニズムを使用します。 Rebar コントロールのグリップ バー、ビットマップ、テキスト ラベル、および子ウィンドウの任意の組み合わせを 1 つまたは複数のバンドを含めることができます。 ただし、バンドは、1 つ以上の子ウィンドウを含めることはできません。
 
-`CReBar` 使用して、 [crebarctrl の比較](../../mfc/reference/crebarctrl-class.md)その実装を提供するクラス。 を通じて rebar コントロールにアクセスすることができます[GetReBarCtrl](#getrebarctrl)コントロールのカスタマイズのオプションを活用するためにします。 Rebar コントロールの詳細については、次を参照してください。`CReBarCtrl`します。 Rebar コントロールの使用方法の詳細については、次を参照してください。[を使用して CReBarCtrl](../../mfc/using-crebarctrl.md)します。
+`CReBar` 使用して、 [crebarctrl の比較](../../mfc/reference/crebarctrl-class.md)その実装を提供するクラス。 を通じて rebar コントロールにアクセスすることができます[GetReBarCtrl](#getrebarctrl)コントロールのカスタマイズのオプションを活用するためにします。 Rebar コントロールの詳細については、`CReBarCtrl`を参照してください。 Rebar コントロールの使用方法の詳細については、[を使用して CReBarCtrl](../../mfc/using-crebarctrl.md)を参照してください。
 
 > [!CAUTION]
 >  Rebar および rebar コントロールのオブジェクトでは、MFC コントロール バーのドッキングはサポートされません。 場合`CRebar::EnableDocking`が呼び出されると、アプリケーションがアサートされます。

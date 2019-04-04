@@ -35,7 +35,7 @@ ms.locfileid: "50643054"
 プログラムが異常終了した場合に実行するアクションを指定します。
 
 > [!NOTE]
-> 使用しないでください、[中止](abort.md)関数をテストまたはデバッグ シナリオにを除き、Microsoft Store アプリをシャット ダウンします。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、次を参照してください。 [UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)します。
+> 使用しないでください、[中止](abort.md)関数をテストまたはデバッグ シナリオにを除き、Microsoft Store アプリをシャット ダウンします。 ストア アプリを終了するプログラムや UI の方法はに従って許可されていません、 [Microsoft Store ポリシー](/legal/windows/agreements/store-policies)します。 詳細については、[UWP アプリのライフ サイクル](/windows/uwp/launch-resume/app-lifecycle)を参照してください。
 
 ## <a name="syntax"></a>構文
 

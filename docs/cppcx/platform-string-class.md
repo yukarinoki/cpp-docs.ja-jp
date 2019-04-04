@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 72dd04a4-a694-40d3-b899-eaa0b503eab8
 ms.openlocfilehash: ac9ee843f5f11d4a42377b16ec77b266238fc461
 ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/11/2019
 ms.locfileid: "57746189"
 ---
 # <a name="platformstring-class"></a>Platform::String クラス
 
-テキストを表現するために使用される Unicode 文字のシーケンシャル コレクションを表します。 詳細と例については、次を参照してください。[文字列](../cppcx/strings-c-cx.md)します。
+テキストを表現するために使用される Unicode 文字のシーケンシャル コレクションを表します。 詳細と例については、[文字列](../cppcx/strings-c-cx.md)を参照してください。
 
 ## <a name="syntax"></a>構文
 

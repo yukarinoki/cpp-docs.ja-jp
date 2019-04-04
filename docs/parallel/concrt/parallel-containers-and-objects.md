@@ -109,7 +109,7 @@ A*同時実行オブジェクト*コンポーネント間で同時に共有さ�
 |[clear](reference/concurrent-vector-class.md#clear)|[resize](reference/concurrent-vector-class.md#resize)|
 |[operator=](reference/concurrent-vector-class.md#operator_eq)|[shrink_to_fit](reference/concurrent-vector-class.md#shrink_to_fit)|
 
-既存の要素の値を変更する操作は、同時実行セーフではありません。 同期オブジェクトを使用して、 [reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)同時読み取りを同期操作と書き込みが同じデータ要素を操作するオブジェクト。 同期オブジェクトの詳細については、次を参照してください。[同期データ構造](../../parallel/concrt/synchronization-data-structures.md)します。
+既存の要素の値を変更する操作は、同時実行セーフではありません。 同期オブジェクトを使用して、 [reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)同時読み取りを同期操作と書き込みが同じデータ要素を操作するオブジェクト。 同期オブジェクトの詳細については、[同期データ構造](../../parallel/concrt/synchronization-data-structures.md)を参照してください。
 
 使用する既存のコードを変換すると`vector`を使用する`concurrent_vector`、同時実行操作を変更するアプリケーションの動作が発生することができます。 たとえば、次のプログラムを同時に 2 つのタスクを実行する、`concurrent_vector`オブジェクト。 最初のタスクが追加の要素を追加します、`concurrent_vector`オブジェクト。 2 番目のタスクでは、同じオブジェクトのすべての要素の合計を計算します。
 
@@ -195,7 +195,7 @@ A`concurrent_queue`反復子が順方向のみに要素を走査します。 次
 
 `concurrent_unordered_map`クラスによく似ています、`unordered_map`クラス。 次の点は、場所を示しています`concurrent_unordered_map`異なります`unordered_map`:。
 
-- `erase`、 `bucket`、 `bucket_count`、および`bucket_size`メソッドの名前は`unsafe_erase`、 `unsafe_bucket`、 `unsafe_bucket_count`、および`unsafe_bucket_size`、それぞれします。 `unsafe_`名前付け規則は、これらのメソッドは、同時実行セーフではないことを示します。 同時実行の安全性の詳細については、次を参照してください。[同時実行セーフ操作](#map-safety)します。
+- `erase`、 `bucket`、 `bucket_count`、および`bucket_size`メソッドの名前は`unsafe_erase`、 `unsafe_bucket`、 `unsafe_bucket_count`、および`unsafe_bucket_size`、それぞれします。 `unsafe_`名前付け規則は、これらのメソッドは、同時実行セーフではないことを示します。 同時実行の安全性の詳細については、[同時実行セーフ操作](#map-safety)を参照してください。
 
 - 挿入操作は既存のポインターまたは反復子を無効にも、マップに既に存在する項目の順序を変更しないでください。 挿入し、スキャン操作が同時に発生することができます。
 

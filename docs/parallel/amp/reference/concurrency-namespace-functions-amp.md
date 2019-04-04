@@ -588,7 +588,7 @@ tile_barrier オブジェクト
 
 ##  <a name="parallel_for_each"></a>  parallel_for_each 関数 (C++ AMP)
 
-計算ドメインを越えて関数を実行します。 詳細については、次を参照してください。 [C++ AMP の概要](../../../parallel/amp/cpp-amp-overview.md)します。
+計算ドメインを越えて関数を実行します。 詳細については、[C++ AMP の概要](../../../parallel/amp/cpp-amp-overview.md)を参照してください。
 
 ```
 template <int _Rank, typename _Kernel_type>

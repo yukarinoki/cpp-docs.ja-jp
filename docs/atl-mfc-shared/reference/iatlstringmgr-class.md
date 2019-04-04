@@ -47,7 +47,7 @@ __interface IAtlStringMgr
 
 このインターフェイスは、MFC に依存しない文字列クラスで使用されるメモリを管理します。など[CSimpleStringT](../../atl-mfc-shared/reference/csimplestringt-class.md)、 [CStringT](../../atl-mfc-shared/reference/cstringt-class.md)、および[CFixedStringT](../../atl-mfc-shared/reference/cfixedstringt-class.md)します。
 
-カスタムの文字列クラスのカスタム メモリ マネージャーを実装するために、このクラスを使用することもできます。 詳細については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+カスタムの文字列クラスのカスタム メモリ マネージャーを実装するために、このクラスを使用することもできます。 詳細については、[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 
@@ -81,7 +81,7 @@ CStringData* Allocate(int nAllocLength,int nCharSize) throw();
 呼び出す[IAtlStringMgr::Free](#free)または[IAtlStringMgr::ReAllocate](#reallocate)このメソッドによって割り当てられたメモリを解放します。
 
 > [!NOTE]
->  使用例については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+>  使用例については、[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
 
 ##  <a name="clone"></a>  IAtlStringMgr::Clone
 
@@ -102,7 +102,7 @@ IAtlStringMgr* Clone() throw();
 ただし、メモリ マネージャーでの複数のインスタンスで使用されているがサポートされていない場合`CSimpleStringT`、共有可能な文字列のマネージャーへのポインターが返される必要があります。
 
 > [!NOTE]
->  使用例については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+>  使用例については、[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
 
 ##  <a name="free"></a>  IAtlStringMgr::Free
 
@@ -122,7 +122,7 @@ void Free(CStringData* pData) throw();
 割り当てられている指定されたメモリ ブロックを解放[Allocate](#allocate)または[再割り当て](../../atl/reference/iatlmemmgr-class.md#reallocate)します。
 
 > [!NOTE]
->  使用例については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+>  使用例については、[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
 
 ##  <a name="getnilstring"></a>  IAtlStringMgr::GetNilString
 
@@ -144,7 +144,7 @@ CStringData* GetNilString() throw();
 > カスタム文字列マネージャーを実装するときにこの関数が失敗しない必要があります。 インスタンスを埋め込むことでこのことを確認できる`CNilStringData`文字列マネージャーのクラスとそのインスタンスへのポインターを返す。
 
 > [!NOTE]
-> 使用例については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+> 使用例については、[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
 
 ## <a name="reallocate"></a>  IAtlStringMgr::Reallocate
 
@@ -179,7 +179,7 @@ CStringData* Reallocate(
 呼び出す[IAtlStringMgr::Free](#free)このメソッドによって割り当てられたメモリを解放します。
 
 > [!NOTE]
-> 使用例については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+> 使用例については、[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

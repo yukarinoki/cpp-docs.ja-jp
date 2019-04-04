@@ -99,7 +99,7 @@ virtual COleControlContainer* CreateContainer(CWnd* pWnd);
 
 ### <a name="remarks"></a>Remarks
 
-カスタムのサイトを作成する方法の詳細については、次を参照してください。 [COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)します。
+カスタムのサイトを作成する方法の詳細については、[COleControlContainer::AttachControlSite](../../mfc/reference/colecontrolcontainer-class.md#attachcontrolsite)を参照してください。
 
 ##  <a name="createdlgcontrols"></a>  COccManager::CreateDlgControls
 
@@ -365,7 +365,7 @@ static void AFX_CDECL SetDefaultButton(
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
->  コントロールには、OLEMISC_ACTSLIKEBUTTON ステータス ビット セットが必要です。 入りますフラグの詳細については、次を参照してください。、[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK のトピックです。
+>  コントロールには、OLEMISC_ACTSLIKEBUTTON ステータス ビット セットが必要です。 入りますフラグの詳細については、、[入ります](/windows/desktop/api/oleidl/ne-oleidl-tagolemisc)Windows SDK のトピックを参照してください。
 
 ##  <a name="splitdialogtemplate"></a>  COccManager::SplitDialogTemplate
 

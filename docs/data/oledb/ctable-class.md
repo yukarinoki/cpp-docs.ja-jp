@@ -106,7 +106,7 @@ HRESULT Open(const CSession& session,
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+詳細については、[iopenrowset::openrowset](/previous-versions/windows/desktop/ms716724(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -63,7 +63,7 @@ void AddArraysWithLambda() {
 }
 ```
 
-ラムダ式には、1 個のインデックス パラメーターと `restrict(amp)` が含まれている必要があります。 この例で、 [array_view](../../parallel/amp/reference/array-view-class.md) `sum`オブジェクトのランクは 1 には。 したがって、ラムダ ステートメントに対するパラメーターは、[インデックス](../../parallel/amp/reference/index-class.md)をランク 1 を持つオブジェクト。 、実行時に、ラムダ式は 1 回実行の各要素に対して、 [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 詳細については、次を参照してください。[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)します。
+ラムダ式には、1 個のインデックス パラメーターと `restrict(amp)` が含まれている必要があります。 この例で、 [array_view](../../parallel/amp/reference/array-view-class.md) `sum`オブジェクトのランクは 1 には。 したがって、ラムダ ステートメントに対するパラメーターは、[インデックス](../../parallel/amp/reference/index-class.md)をランク 1 を持つオブジェクト。 、実行時に、ラムダ式は 1 回実行の各要素に対して、 [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 詳細については、[ラムダ式の構文](../../cpp/lambda-expression-syntax.md)を参照してください。
 
 ## <a name="function-object"></a>Function オブジェクト
 
@@ -114,7 +114,7 @@ void AddArraysWithFunctionObject() {
 }
 ```
 
-関数オブジェクトには、コンストラクターと、関数呼び出し演算子のオーバーロードが含まれている必要があります。 関数呼び出し演算子には、1 個のインデックス パラメーターが含まれている必要があります。 関数オブジェクトのインスタンスが 2 番目の引数として渡される、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)メソッド。 この例では、次の 3 つ[array_view](../../parallel/amp/reference/array-view-class.md)オブジェクトは、関数オブジェクトのコンス トラクターに渡されます。 [Array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト`sum`1 のランクがあります。 関数呼び出し演算子に対するパラメーターは、そのため、[インデックス](../../parallel/amp/reference/index-class.md)をランク 1 を持つオブジェクト。 、実行時に、関数が実行される 1 回の各要素に対して、 [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 詳細については、次を参照してください。[関数を呼び出す](../../cpp/function-call-cpp.md)と[C++ 標準ライブラリ内の関数オブジェクト](../../standard-library/function-objects-in-the-stl.md)します。
+関数オブジェクトには、コンストラクターと、関数呼び出し演算子のオーバーロードが含まれている必要があります。 関数呼び出し演算子には、1 個のインデックス パラメーターが含まれている必要があります。 関数オブジェクトのインスタンスが 2 番目の引数として渡される、 [parallel_for_each](reference/concurrency-namespace-functions-amp.md#parallel_for_each)メソッド。 この例では、次の 3 つ[array_view](../../parallel/amp/reference/array-view-class.md)オブジェクトは、関数オブジェクトのコンス トラクターに渡されます。 [Array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト`sum`1 のランクがあります。 関数呼び出し演算子に対するパラメーターは、そのため、[インデックス](../../parallel/amp/reference/index-class.md)をランク 1 を持つオブジェクト。 、実行時に、関数が実行される 1 回の各要素に対して、 [array_view](../../parallel/amp/reference/array-view-class.md)オブジェクト。 詳細については、[関数を呼び出す](../../cpp/function-call-cpp.md)と[C++ 標準ライブラリ内の関数オブジェクト](../../standard-library/function-objects-in-the-stl.md)を参照してください。
 
 ## <a name="c-amp-restricted-function"></a>C++ AMP 制限関数
 

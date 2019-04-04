@@ -17,7 +17,7 @@ MFC や ATL プログラムは Visual Studio Community エディションか、�
 
 Visual Studio 2015 では、Visual C++ はオプションのコンポーネントです。また、MFC および ATL コンポーネントは Visual C++ のオプションのサブコンポーネントです。 Visual Studio の初回インストール時に、これらのコンポーネントを選択しなかった場合、MFC プロジェクトや ATL プロジェクトを初めて作成したり、開こうとしたときに、これらのコンポーネントをインストールするよう要求されます。
 
-MFC と ATL が下のオプションのサブコンポーネントは Visual Studio 2017 以降では、 **C++ によるデスクトップ開発**Visual Studio インストーラー プログラムでのワークロード。 せず、MFC、ATL サポートをインストールできますか、MFC と ATL のサポート (MFC は、ATL によって異なります) を結合します。 ワークロードとコンポーネントの詳細については、次を参照してください。 [Visual Studio 2017 のインストール](/visualstudio/install/install-visual-studio)します。
+MFC と ATL が下のオプションのサブコンポーネントは Visual Studio 2017 以降では、 **C++ によるデスクトップ開発**Visual Studio インストーラー プログラムでのワークロード。 せず、MFC、ATL サポートをインストールできますか、MFC と ATL のサポート (MFC は、ATL によって異なります) を結合します。 ワークロードとコンポーネントの詳細については、[Visual Studio 2017 のインストール](/visualstudio/install/install-visual-studio)を参照してください。
 
 ## <a name="related-articles"></a>関連トピック
 

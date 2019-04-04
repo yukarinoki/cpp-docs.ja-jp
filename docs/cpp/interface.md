@@ -50,7 +50,7 @@ __interface IMyInterface {
 };
 ```
 
-マネージ インターフェイスについては、次を参照してください。[インターフェイス クラス](../extensions/interface-class-cpp-component-extensions.md)します。
+マネージ インターフェイスについては、[インターフェイス クラス](../extensions/interface-class-cpp-component-extensions.md)を参照してください。
 
 `CommitX` 関数と `get_X` 関数が純粋仮想関数であることを明示的に示す必要がないことに注意してください。 最初の関数の同等の宣言は次のとおりです。
 

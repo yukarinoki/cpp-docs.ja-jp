@@ -28,7 +28,7 @@ ms.locfileid: "57820157"
 
 ## <a name="remarks"></a>Remarks
 
-**/Yd への取り込み**は非推奨とされます。Visual C では、複数のオブジェクトが 1 つの .pdb ファイルへの書き込みをサポートを使用して **/Zi**代わりにします。 非推奨のコンパイラ オプションの一覧は、次を参照してください。**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)します。
+**/Yd への取り込み**は非推奨とされます。Visual C では、複数のオブジェクトが 1 つの .pdb ファイルへの書き込みをサポートを使用して **/Zi**代わりにします。 非推奨のコンパイラ オプションの一覧は、**非推奨とされた削除済みのコンパイラ オプション**で[Compiler Options Listed by Category](compiler-options-listed-by-category.md)を参照してください。
 
 使用して、デバッグ情報を含むライブラリを配布する必要がない限り、 [/Zi](z7-zi-zi-debug-information-format.md)オプションなく **/Z7**と **/yd への取り込み**します。
 
@@ -44,7 +44,7 @@ ms.locfileid: "57820157"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[C/C++]** フォルダーをクリックします。
 

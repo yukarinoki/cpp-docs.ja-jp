@@ -1416,7 +1416,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="return-value"></a>戻り値
 
-ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)します。
+ポインターはヒット列挙値です。 使用可能な値の一覧については、[WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1433,7 +1433,7 @@ afx_msg void OnNcMouseMove(
 ### <a name="parameters"></a>パラメーター
 
 *nHitTest*<br/>
-[in]ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)します。
+[in]ポインターはヒット列挙値です。 使用可能な値の一覧については、[WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)を参照してください。
 
 *ポイント*<br/>
 [in]画面座標でポインターの位置。
@@ -1506,7 +1506,7 @@ afx_msg LRESULT OnPowerBroadcast(
 ### <a name="parameters"></a>パラメーター
 
 *wp*<br/>
-[in]電源管理イベントです。 使用可能な値の一覧については、次を参照してください。 [WM_POWERBROADCAST メッセージ](/windows/desktop/Power/wm-powerbroadcast)します。
+[in]電源管理イベントです。 使用可能な値の一覧については、[WM_POWERBROADCAST メッセージ](/windows/desktop/Power/wm-powerbroadcast)を参照してください。
 
 *lp*<br/>
 [in]このパラメーターは使用されません。
@@ -2106,10 +2106,10 @@ virtual void WinHelp(
 ### <a name="parameters"></a>パラメーター
 
 *dwData*<br/>
-依存するデータ、 *nCmd*パラメーター。 使用可能な値の一覧については、次を参照してください。 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)します。
+依存するデータ、 *nCmd*パラメーター。 使用可能な値の一覧については、[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)を参照してください。
 
 *nCmd*<br/>
-Help コマンド。 使用可能な値の一覧については、次を参照してください。 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)します。
+Help コマンド。 使用可能な値の一覧については、[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

@@ -15,7 +15,7 @@ ms.locfileid: "58774621"
 
 Active Template Library (ATL) は、小規模で高速のコンポーネント オブジェクト モデル (COM) オブジェクトを作成できるテンプレート ベースの C++ クラスのセットです。 ストックの実装、デュアル インターフェイス、列挙子の COM インターフェイスの標準的な接続ポイント、ティアオフ インターフェイス、および ActiveX コントロールをなど、キーの COM 機能用の特別なサポートしています。
 
-ATL プログラミングの多くを実行する場合は、COM プログラミングを簡略化するように設計された Visual C .NET の新機能である属性の詳細についてはします。 詳細については、次を参照してください。[属性付きプログラミング](../windows/attributed-programming-concepts.md)します。
+ATL プログラミングの多くを実行する場合は、COM プログラミングを簡略化するように設計された Visual C .NET の新機能である属性の詳細についてはします。 詳細については、[属性付きプログラミング](../windows/attributed-programming-concepts.md)を参照してください。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

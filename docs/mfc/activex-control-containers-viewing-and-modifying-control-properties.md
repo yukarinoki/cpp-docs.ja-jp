@@ -31,7 +31,7 @@ ActiveX コントロール コンテナー アプリケーションでは、埋�
 
 1. [メイン] ダイアログ ボックスのテンプレートを開きます。
 
-1. ActiveX コントロールを使用して、挿入、 **ActiveX コントロールの挿入** ダイアログ ボックス。 詳細については、次を参照してください。[表示およびダイアログ ボックスに ActiveX コントロールを追加](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)します。
+1. ActiveX コントロールを使用して、挿入、 **ActiveX コントロールの挿入** ダイアログ ボックス。 詳細については、[表示およびダイアログ ボックスに ActiveX コントロールを追加](../windows/viewing-and-adding-activex-controls-to-a-dialog-box.md)を参照してください。
 
 1. ダイアログ ボックスでは、ActiveX コントロールを選択します。
 

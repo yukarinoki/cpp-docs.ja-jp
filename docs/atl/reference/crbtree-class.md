@@ -112,7 +112,7 @@ class CRBTree
 
 このテンプレート クラスがによって使用されるように設計[CRBMap](../../atl/reference/crbmap-class.md)と[CRBMultiMap](../../atl/reference/crbmultimap-class.md)します。 これらの派生クラスを作成するメソッドの大部分がによって提供される`CRBTree`します。
 
-さまざまなコレクション クラスとその機能とパフォーマンス特性の詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+さまざまなコレクション クラスとその機能とパフォーマンス特性の詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

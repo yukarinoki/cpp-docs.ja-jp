@@ -62,8 +62,7 @@ ms.locfileid: "57290093"
 
 ##  <a name="createagentclass"></a> File_reader クラスの作成
 
-ここでは、`file_reader` クラスの作成方法について説明します。 ランタイムは、各エージェントがそれぞれのコンテキストで処理を実行するようにスケジュールを設定します。 そのため、処理を同期的に実行する一方で、他のコンポーネントとは非同期的に通信するエージェントを作成できます。 
-  `file_reader` クラスでは、指定された入力ファイルからデータを読み取り、そのファイルのデータを指定されたターゲット コンポーネントに送信します。
+ここでは、`file_reader` クラスの作成方法について説明します。 ランタイムは、各エージェントがそれぞれのコンテキストで処理を実行するようにスケジュールを設定します。 そのため、処理を同期的に実行する一方で、他のコンポーネントとは非同期的に通信するエージェントを作成できます。 `file_reader` クラスでは、指定された入力ファイルからデータを読み取り、そのファイルのデータを指定されたターゲット コンポーネントに送信します。
 
 #### <a name="to-create-the-filereader-class"></a>file_reader クラスを作成するには
 
@@ -81,32 +80,25 @@ ms.locfileid: "57290093"
 
 [!code-cpp[concrt-basic-agent#3](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_4.h)]
 
-   
-  `_file_name` メンバーは、エージェントが読み取る対象のファイル名です。 `_target`メンバーは、 [concurrency::itarget](../../parallel/concrt/reference/itarget-class.md)オブジェクト、エージェントが、ファイルの内容を書き込みます。 
-  `_error` メンバーでは、エージェントの有効期間中に発生したエラーを保持します。
+   `_file_name` メンバーは、エージェントが読み取る対象のファイル名です。 `_target`メンバーは、 [concurrency::itarget](../../parallel/concrt/reference/itarget-class.md)オブジェクト、エージェントが、ファイルの内容を書き込みます。 `_error` メンバーでは、エージェントの有効期間中に発生したエラーを保持します。
 
-1. 
-  `file_reader` クラスの `public` セクションに `file_reader` コンストラクターの次のコードを追加します。
+1. `file_reader` クラスの `public` セクションに `file_reader` コンストラクターの次のコードを追加します。
 
 [!code-cpp[concrt-basic-agent#4](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_5.h)]
 
    各コンストラクター オーバーロードによって、`file_reader` データ メンバーが設定されます。 2 番目と 3 番目のコンストラクター オーバーロードによって、アプリケーションでエージェントに対して特定のスケジューラを使用できるようにします。 最初のオーバーロードでは、エージェントに対して既定のスケジューラを使用します。
 
-1. 
-  `get_error` クラスのパブリック セクションに `file_reader` メソッドを追加します。
+1. `get_error` クラスのパブリック セクションに `file_reader` メソッドを追加します。
 
 [!code-cpp[concrt-basic-agent#5](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_6.h)]
 
-   
-  `get_error` メソッドにより、エージェントの有効期間中に発生したエラーを取得します。
+   `get_error` メソッドにより、エージェントの有効期間中に発生したエラーを取得します。
 
 1. 実装、 [concurrency::agent::run](reference/agent-class.md#run)メソッドで、`protected`クラスのセクション。
 
 [!code-cpp[concrt-basic-agent#6](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_7.h)]
 
-
-  `run` メソッドによりファイルを開き、そこからデータを読み取ります。 
-  `run` メソッドでは、例外処理を使用して、ファイルの処理中に発生したエラーをキャプチャします。
+`run` メソッドによりファイルを開き、そこからデータを読み取ります。 `run` メソッドでは、例外処理を使用して、ファイルの処理中に発生したエラーをキャプチャします。
 
    このメソッドは、ファイルからデータを読み取るたびに呼び出す、 [concurrency::asend](reference/concurrency-namespace-functions.md#asend)ターゲット バッファーにデータを送信します。 処理の終了を示す際には、空の文字列をターゲット バッファーに送信します。
 
@@ -148,8 +140,7 @@ file_reader.h の内容全体の例を次に示します。
 
 [!code-cpp[concrt-basic-agent#13](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_14.cpp)]
 
-1. 
-  `call` オブジェクトがすべてのデータを受け取り、終了するまで待機します。
+1. `call` オブジェクトがすべてのデータを受け取り、終了するまで待機します。
 
 [!code-cpp[concrt-basic-agent#14](../../parallel/concrt/codesnippet/cpp/walkthrough-creating-an-agent-based-application_15.cpp)]
 

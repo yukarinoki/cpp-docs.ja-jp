@@ -51,7 +51,7 @@ ms.locfileid: "58779392"
 
 3 つのクラス型は、構造体、クラス、および共用体です。 使用して宣言されている、[構造体](../cpp/struct-cpp.md)、[クラス](../cpp/class-cpp.md)、および[共用体](../cpp/unions.md)キーワード。 次の表は、3 つのクラス型の違いを示しています。
 
-共用体の詳細については、次を参照してください。[共用体](../cpp/unions.md)します。 クラスと c++ 構造体について/cli および C++/cli CX を参照してください[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)します。
+共用体の詳細については、[共用体](../cpp/unions.md)を参照してください。 クラスと c++ 構造体について/cli および C++/cli CX を参照してください[クラスと構造体](../extensions/classes-and-structs-cpp-component-extensions.md)します。
 
 ### <a name="access-control-and-constraints-of-structures-classes-and-unions"></a>構造体、クラス、および共用体のアクセス制御と制約
 

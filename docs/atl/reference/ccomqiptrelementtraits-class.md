@@ -47,7 +47,7 @@ COM インターフェイスを格納するポインターの種類を指定し�
 
 このクラスは、メソッドを派生しのコレクション クラスを作成するときに、便利な typedef を提供します[CComQIPtr](../../atl/reference/ccomqiptr-class.md) COM インターフェイス ポインター オブジェクト。 このクラスは、両方によって使用されて、 [CInterfaceArray](../../atl/reference/cinterfacearray-class.md)と[CInterfaceList](../../atl/reference/cinterfacelist-class.md)クラス。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

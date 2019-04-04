@@ -25,7 +25,7 @@ Visual Studio の Visual C++ の統合開発環境 (IDE: Integrated Development 
 Visual C がこれらの主な例外を除き、2003 C++ 標準に従います。 2 段階名前検索、例外の仕様、およびエクスポートします。 さらに、Visual C では、いくつかの c++ 0 x 機能、たとえば、ラムダ、auto、static_assert、rvalue 参照、および extern テンプレートをサポートしています。
 
 > [!NOTE]
-> 標準への準拠が必要な場合は、`/Za` コンパイラ オプションを使用して、標準に対する Microsoft 拡張機能を無効にします。 詳細については、次を参照してください。 [/Za、/Ze (言語拡張を無効にする)](../build/reference/za-ze-disable-language-extensions.md)します。
+> 標準への準拠が必要な場合は、`/Za` コンパイラ オプションを使用して、標準に対する Microsoft 拡張機能を無効にします。 詳細については、[/Za、/Ze (言語拡張を無効にする)](../build/reference/za-ze-disable-language-extensions.md)を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 

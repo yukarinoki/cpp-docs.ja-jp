@@ -52,7 +52,7 @@ MFC で提供されるマルチ スレッドのクラスが 2 つのカテゴリ
 
 同期アクセス クラスを使用して、さらに簡単かを選択します。 場合は、アプリケーションは、1 つの被制御リソースのみへのアクセスを使用して、`CSingleLock`します。 被制御リソース数のいずれかへのアクセスを必要がある場合を使用して、`CMultiLock`します。 例 1 で`CSingleLock`使用された、特定の時点に各ケースの 1 つだけのリソースが必要なためです。
 
-同期クラスの使用方法については、次を参照してください。[マルチ スレッド。同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートについては、次を参照してください。 [C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)します。
+同期クラスの使用方法については、次を参照してください。[マルチ スレッド。同期クラスの使用方法](multithreading-how-to-use-the-synchronization-classes.md)します。 同期の詳細については、次を参照してください。[同期](/windows/desktop/Sync/synchronization)Windows SDK に含まれています。 MFC でマルチ スレッドのサポートについては、[C++ と MFC を使用するマルチ スレッド](multithreading-with-cpp-and-mfc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

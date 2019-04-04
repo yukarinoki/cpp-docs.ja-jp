@@ -28,7 +28,7 @@ ms.locfileid: "58565218"
 ---
 # <a name="tiledindex-class"></a>tiled_index クラス
 
-インデックスを提供する[tiled_extent](tiled-extent-class.md)オブジェクト。 このクラスには、ローカル タイルの原点およびグローバル原点を基準として要素にアクセスするためのプロパティがあります。 タイル スペースの詳細については、次を参照してください。[を使用してタイル](../../../parallel/amp/using-tiles.md)します。
+インデックスを提供する[tiled_extent](tiled-extent-class.md)オブジェクト。 このクラスには、ローカル タイルの原点およびグローバル原点を基準として要素にアクセスするためのプロパティがあります。 タイル スペースの詳細については、[を使用してタイル](../../../parallel/amp/using-tiles.md)を参照してください。
 
 ## <a name="syntax"></a>構文
 

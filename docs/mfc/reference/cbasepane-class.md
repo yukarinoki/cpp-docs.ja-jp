@@ -390,7 +390,7 @@ void AddPane(CBasePane* pBar);
 
 これは、ドッキング マネージャーにペインを追加する便利なメソッドです。 このメソッドを使用すると、親フレームの種類を分析するコードを記述する必要はありません。
 
-詳細については、次を参照してください。 [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md)と[CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane)します。
+詳細については、[CDockingManager Class](../../mfc/reference/cdockingmanager-class.md)と[CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane)を参照してください。
 
 ##  <a name="adjustdockinglayout"></a>  CBasePane::AdjustDockingLayout
 
@@ -1917,7 +1917,7 @@ virtual HDWP SetWindowPos(
 ### <a name="parameters"></a>パラメーター
 
 *pWndInsertAfter*<br/>
-[in]識別、`CWnd`オブジェクトよりも前にこの`CWnd`Z オーダー内のオブジェクト。 詳細については、次を参照してください。 [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)します。
+[in]識別、`CWnd`オブジェクトよりも前にこの`CWnd`Z オーダー内のオブジェクト。 詳細については、[CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)を参照してください。
 
 *x*<br/>
 [in]ウィンドウの左側の位置を指定します。
@@ -1932,7 +1932,7 @@ virtual HDWP SetWindowPos(
 [in]ウィンドウの高さを指定します。
 
 *nFlags*<br/>
-[in]サイズと位置のオプションを指定します。 詳細については、次を参照してください。 [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)します。
+[in]サイズと位置のオプションを指定します。 詳細については、[CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)を参照してください。
 
 *hdwp*<br/>
 [in]1 つまたは複数のウィンドウのサイズと位置情報を格納する構造体へのハンドルします。

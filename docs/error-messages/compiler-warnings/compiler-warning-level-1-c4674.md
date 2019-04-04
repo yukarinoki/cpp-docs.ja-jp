@@ -17,7 +17,7 @@ ms.locfileid: "50614826"
 
 'method' は宣言された 'static' であり、パラメーターを 1 つだけ持たなければなりません。
 
-変換演算子の署名が正しくありません。 メソッドは、ユーザー定義の変換とは見なされません。 演算子の定義の詳細については、次を参照してください。[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)と[ユーザー定義の変換 (C +/cli CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)します。
+変換演算子の署名が正しくありません。 メソッドは、ユーザー定義の変換とは見なされません。 演算子の定義の詳細については、[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)と[ユーザー定義の変換 (C +/cli CLI)](../../dotnet/user-defined-conversions-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

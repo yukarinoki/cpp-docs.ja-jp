@@ -25,9 +25,9 @@ ms.locfileid: "57809562"
 
 コンパイラは、コード内のループを並列化に自動的に、複数のプロセッサ コア間で計算が分散されます。 ループを並列化するようにすることは、パフォーマンスが向上する並列処理、コンパイラが判断した場合のみです。
 
-`#pragma loop()`ディレクティブは、オプティマイザーで特定のループを並列化に使用できます。 詳細については、次を参照してください。[ループ](../../preprocessor/loop.md)します。
+`#pragma loop()`ディレクティブは、オプティマイザーで特定のループを並列化に使用できます。 詳細については、[ループ](../../preprocessor/loop.md)を参照してください。
 
-自動並行化の出力メッセージを有効にする方法については、次を参照してください。 [/Qpar-report (自動並行化レポート作成レベル)](qpar-report-auto-parallelizer-reporting-level.md)します。
+自動並行化の出力メッセージを有効にする方法については、[/Qpar-report (自動並行化レポート作成レベル)](qpar-report-auto-parallelizer-reporting-level.md)を参照してください。
 
 ### <a name="to-set-the-qpar-compiler-option-in-visual-studio"></a>Visual Studio で/Qpar コンパイラ オプションを設定するには
 

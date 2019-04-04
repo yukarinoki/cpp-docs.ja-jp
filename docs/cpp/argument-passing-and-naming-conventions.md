@@ -33,9 +33,9 @@ x86 プラットフォームでは、すべての引数は渡されたときに 
 > [!NOTE]
 > 構造体、共用体、またはクラスが値渡しで関数から戻される場合は、型のすべての定義が同じである必要があります。そうでないと、実行時にプログラムが失敗することがあります。
 
-独自の関数プロローグおよびエピローグ コードを定義する方法については、次を参照してください。 [Naked 関数の呼び出し](../cpp/naked-function-calls.md)します。
+独自の関数プロローグおよびエピローグ コードを定義する方法については、[Naked 関数の呼び出し](../cpp/naked-function-calls.md)を参照してください。
 
-ターゲットが x64 プラットフォームでは、「コードで呼び出し規則については、既定[x64 呼び出し規則](../build/x64-calling-convention.md)します。 ARM プラットフォームを対象とするコードの呼び出し規約の問題については、次を参照してください。[一般的な Visual c ARM の移行に関する問題](../build/common-visual-cpp-arm-migration-issues.md)します。
+ターゲットが x64 プラットフォームでは、「コードで呼び出し規則については、既定[x64 呼び出し規則](../build/x64-calling-convention.md)します。 ARM プラットフォームを対象とするコードの呼び出し規約の問題については、[一般的な Visual c ARM の移行に関する問題](../build/common-visual-cpp-arm-migration-issues.md)を参照してください。
 
 次の呼び出し規則は Visual C/C++ コンパイラでサポートされます。
 
@@ -48,7 +48,7 @@ x86 プラットフォームでは、すべての引数は渡されたときに 
 |[__thiscall](../cpp/thiscall.md)|Callee|スタックにプッシュされます。**この**ECX に格納されているポインター|
 |[__vectorcall](../cpp/vectorcall.md)|Callee|レジスタに格納されてから、スタックに逆の順序で (右から左に) プッシュされる|
 
-関連情報については、次を参照してください。[廃止された呼び出し規則](../cpp/obsolete-calling-conventions.md)します。
+関連情報については、[廃止された呼び出し規則](../cpp/obsolete-calling-conventions.md)を参照してください。
 
 **Microsoft 固有の仕様はここまで**
 

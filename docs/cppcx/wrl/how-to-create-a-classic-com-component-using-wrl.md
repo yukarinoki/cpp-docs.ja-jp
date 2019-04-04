@@ -12,7 +12,7 @@ ms.locfileid: "58785526"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>方法: WRL を使用した従来の COM コンポーネントを作成します。
 
-Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、ユニバーサル Windows プラットフォーム (UWP) アプリを使用することだけでなく、デスクトップ アプリで使用するための基本的な従来の COM コンポーネントを作成することができます。 Windows ランタイム C++ テンプレート ライブラリの COM コンポーネントの作成、ATL よりも少ないコードを必要があります。 Windows ランタイム C++ テンプレート ライブラリをサポートする COM のサブセットの詳細については、次を参照してください。 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](windows-runtime-cpp-template-library-wrl.md)します。
+Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、ユニバーサル Windows プラットフォーム (UWP) アプリを使用することだけでなく、デスクトップ アプリで使用するための基本的な従来の COM コンポーネントを作成することができます。 Windows ランタイム C++ テンプレート ライブラリの COM コンポーネントの作成、ATL よりも少ないコードを必要があります。 Windows ランタイム C++ テンプレート ライブラリをサポートする COM のサブセットの詳細については、[Windows ランタイム C++ テンプレート ライブラリ (WRL)](windows-runtime-cpp-template-library-wrl.md)を参照してください。
 
 このドキュメントでは、Windows ランタイム C++ テンプレート ライブラリを使用して基本的な COM コンポーネントを作成する方法を示します。 ニーズに最適な配置メカニズムを使用できますが、このドキュメントでは、デスクトップ アプリから COM コンポーネントを登録して使用する基本的な方法についても説明します。
 
@@ -74,7 +74,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
     @="1.0"
     ```
 
-2. RegScript.reg を実行するかをプロジェクトの追加**ビルド後イベント**します。 詳細については、次を参照してください。[ビルド前のビルド後コマンド ライン ダイアログ ボックス](/visualstudio/ide/reference/pre-build-event-post-build-event-command-line-dialog-box)します。
+2. RegScript.reg を実行するかをプロジェクトの追加**ビルド後イベント**します。 詳細については、[ビルド前のビルド後コマンド ライン ダイアログ ボックス](/visualstudio/ide/reference/pre-build-event-post-build-event-command-line-dialog-box)を参照してください。
 
 3. 追加、 **Win32 コンソール アプリケーション**プロジェクトがソリューションにします。 など、プロジェクトの名前`Calculator`します。
 

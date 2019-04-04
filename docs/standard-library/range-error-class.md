@@ -29,7 +29,7 @@ public:
 
 ## <a name="remarks"></a>Remarks
 
-によって返される値[何](../standard-library/exception-class.md)のコピーである`message.data`します。 詳細については、次を参照してください。 [basic_string::data](../standard-library/basic-string-class.md#data)します。
+によって返される値[何](../standard-library/exception-class.md)のコピーである`message.data`します。 詳細については、[basic_string::data](../standard-library/basic-string-class.md#data)を参照してください。
 
 ## <a name="example"></a>例
 

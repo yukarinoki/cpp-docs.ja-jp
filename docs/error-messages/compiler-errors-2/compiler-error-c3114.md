@@ -19,7 +19,7 @@ ms.locfileid: "58773776"
 
 属性クラスのデータ メンバーを引数の名前が有効にするためには、する必要がありますいないマークする必要が`static`、 `const`、または`literal`します。 プロパティがある必要がありますいない場合、プロパティ、`static`とする必要があります get および set アクセサー。
 
-詳細については、次を参照してください。[プロパティ](../../extensions/property-cpp-component-extensions.md)と[ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)します。
+詳細については、[プロパティ](../../extensions/property-cpp-component-extensions.md)と[ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

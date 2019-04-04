@@ -195,7 +195,7 @@ STDMETHOD (GetRowsByBookmark )(HCHAPTER /* hReserved */,
 *hReserved*<br/>
 [in]対応する*hChapter*パラメーターを[:getrowsbybookmark](/previous-versions/windows/desktop/ms725420(v=vs.85))します。
 
-その他のパラメーターでは、次を参照してください。 [:getrowsbybookmark](/previous-versions/windows/desktop/ms725420(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+その他のパラメーターでは、[:getrowsbybookmark](/previous-versions/windows/desktop/ms725420(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -221,7 +221,7 @@ STDMETHOD (Hash )(HCHAPTER /* hReserved */,
 *hReserved*<br/>
 [in]対応する*hChapter*パラメーターを[IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697(v=vs.85))します。
 
-その他のパラメーターでは、次を参照してください。 [IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+その他のパラメーターでは、[IRowsetLocate::Hash](/previous-versions/windows/desktop/ms709697(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ## <a name="rgbookmarks"></a> IRowsetLocateImpl::m_rgBookmarks
 

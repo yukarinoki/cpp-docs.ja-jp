@@ -140,7 +140,7 @@ BOOL PulseEvent();
 
 スレッドが待機しているないか、すぐに解放する`PulseEvent`するイベントの状態を非シグナル状態に設定し、返します。
 
-`PulseEvent` 基になる Win32 を使用して`PulseEvent`関数は、一時的に削除できる待機状態からカーネル モードの非同期プロシージャ呼び出しで。 そのため、`PulseEvent`の信頼性が低いと、新しいアプリケーションでは使用されません。 詳細については、次を参照してください。、 [PulseEvent 関数](/windows/desktop/api/winbase/nf-winbase-pulseevent)します。
+`PulseEvent` 基になる Win32 を使用して`PulseEvent`関数は、一時的に削除できる待機状態からカーネル モードの非同期プロシージャ呼び出しで。 そのため、`PulseEvent`の信頼性が低いと、新しいアプリケーションでは使用されません。 詳細については、、 [PulseEvent 関数](/windows/desktop/api/winbase/nf-winbase-pulseevent)を参照してください。
 
 ##  <a name="resetevent"></a>  CEvent::ResetEvent
 

@@ -30,7 +30,7 @@ ms.locfileid: "50555130"
 
 ## <a name="remarks"></a>Remarks
 
-**Registration_script** C++ 属性で指定されたカスタムの登録スクリプトを実行する*スクリプト*します。 この属性が指定されていない場合は、(コンポーネントを登録するための情報を含む) 標準 .rgs ファイルが使用されます。 .Rgs ファイルの詳細については、次を参照してください。 [、ATL レジストリ コンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)します。
+**Registration_script** C++ 属性で指定されたカスタムの登録スクリプトを実行する*スクリプト*します。 この属性が指定されていない場合は、(コンポーネントを登録するための情報を含む) 標準 .rgs ファイルが使用されます。 .Rgs ファイルの詳細については、[、ATL レジストリ コンポーネント (レジストラー)](../../atl/atl-registry-component-registrar.md)を参照してください。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。
 

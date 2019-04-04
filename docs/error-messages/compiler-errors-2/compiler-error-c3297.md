@@ -19,7 +19,7 @@ ms.locfileid: "58769538"
 
 値クラスがシールされています。 制約が値クラスの場合は、別の制約はそこから派生できません。
 
-詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)します。
+詳細については、[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

@@ -23,7 +23,7 @@ ms.locfileid: "57827811"
 ---
 # <a name="c-project-property-page-reference"></a>C++ プロジェクト プロパティ ページの参照
 
-プロパティ ページを使用することで、Visual Studio プロジェクトの設定を指定できます。 Visual Studio プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開くには、**[プロジェクト]** メニューで **[プロパティ]** を選びます。 プロジェクトのプロパティの詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+プロパティ ページを使用することで、Visual Studio プロジェクトの設定を指定できます。 Visual Studio プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開くには、**[プロジェクト]** メニューで **[プロパティ]** を選びます。 プロジェクトのプロパティの詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 Windows 以外のプロジェクトのプロパティ ページを参照してください。 [Linux c プロパティ ページ リファレンス](../../linux/prop-pages-linux.md)します。
 

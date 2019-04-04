@@ -34,8 +34,7 @@ ms.locfileid: "57813267"
 ### <a name="parameters"></a>パラメーター
 
 *フラグメント*<br/>
-
-  `level` 値および `uiAccess` 値を格納する文字列。 詳細については、このトピックで後述する「解説」を参照してください。
+`level` 値および `uiAccess` 値を格納する文字列。 詳細については、このトピックで後述する「解説」を参照してください。
 
 *_level*<br/>
 いずれかの*asInvoker*、 *highestAvailable*、または*requireAdministrator*します。 既定値は asInvoker です。 詳細については、このトピックで後述する「解説」を参照してください。
@@ -63,7 +62,7 @@ ms.locfileid: "57813267"
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[構成プロパティ]** ノードを展開します。
 
@@ -75,8 +74,7 @@ ms.locfileid: "57813267"
 
 ### <a name="to-set-this-linker-option-programmatically"></a>このリンカーをコードから設定するには
 
-1. 
-  <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>、<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A>、および <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A> を参照してください。
+1. <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.EnableUAC%2A>、<xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACExecutionLevel%2A>、および <xref:Microsoft.VisualStudio.VCProjectEngine.VCLinkerTool.UACUIAccess%2A> を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

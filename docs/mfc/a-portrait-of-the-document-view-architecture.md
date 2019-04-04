@@ -29,7 +29,7 @@ ms.locfileid: "57298868"
 
 ビュー データにアクセスする、ドキュメントのいずれかで、 [GetDocument](../mfc/reference/cview-class.md#getdocument)関数は、ドキュメント、または C++ のクラス ビューを作成して、ポインターを返します`friend`ドキュメント クラスの。 ビューは、このデータへのアクセスを使用して描画したり、それ以外の場合を操作するのに準備ができた場合は、データを取得します。
 
-ビューの例: から[OnDraw](../mfc/reference/cview-class.md#ondraw)ビューで使用するメンバー関数は、`GetDocument`ドキュメント ポインターを取得します。 アクセスにそのポインターを使用して、`CString`ドキュメント内のデータ メンバー。 文字列に、ビュー、`TextOut`関数。 この例のコードを表示するには、次を参照してください。[ビューの描画](../mfc/drawing-in-a-view.md)します。
+ビューの例: から[OnDraw](../mfc/reference/cview-class.md#ondraw)ビューで使用するメンバー関数は、`GetDocument`ドキュメント ポインターを取得します。 アクセスにそのポインターを使用して、`CString`ドキュメント内のデータ メンバー。 文字列に、ビュー、`TextOut`関数。 この例のコードを表示するには、[ビューの描画](../mfc/drawing-in-a-view.md)を参照してください。
 
 ## <a name="user-input-to-the-view"></a>ビューにユーザー入力
 

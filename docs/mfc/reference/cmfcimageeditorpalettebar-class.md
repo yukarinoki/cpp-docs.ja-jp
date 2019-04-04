@@ -41,7 +41,7 @@ class CMFCImageEditorPaletteBar : public CMFCToolBar
 
 このクラスは、コードから直接使用するものではありません。
 
-フレームワークでは、このクラスを使用して、イメージ エディター ダイアログ ボックスでパレット バーを表示します。 イメージ エディターのダイアログ ボックスの詳細については、次を参照してください。 [CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)します。
+フレームワークでは、このクラスを使用して、イメージ エディター ダイアログ ボックスでパレット バーを表示します。 イメージ エディターのダイアログ ボックスの詳細については、[CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

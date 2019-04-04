@@ -48,7 +48,7 @@ class CArchiveException : public CException
 
 `CArchiveException`クラスには、例外の原因を示すパブリック データ メンバーが含まれています。
 
-`CArchiveException` オブジェクトが構築され、内でスローされた[CArchive](../../mfc/reference/carchive-class.md)メンバー関数。 これらのオブジェクトのスコープ内にアクセスすることができます、**キャッチ**式。 原因のコードは、別のオペレーティング システムです。 例外処理の詳細については、次を参照してください。[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)します。
+`CArchiveException` オブジェクトが構築され、内でスローされた[CArchive](../../mfc/reference/carchive-class.md)メンバー関数。 これらのオブジェクトのスコープ内にアクセスすることができます、**キャッチ**式。 原因のコードは、別のオペレーティング システムです。 例外処理の詳細については、[例外処理 (MFC)](../../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

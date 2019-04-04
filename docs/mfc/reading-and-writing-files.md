@@ -36,7 +36,7 @@ C ランタイム ライブラリのファイル処理関数を使用した場�
 [!code-cpp[NVC_MFCFiles#2](../atl-mfc-shared/reference/codesnippet/cpp/reading-and-writing-files_1.cpp)]
 
 > [!NOTE]
->  通常、内の入力/出力操作を実行する必要があります、**お試しください**/**キャッチ**例外処理ブロック。 詳細については、次を参照してください。[例外処理 (MFC)](../mfc/exception-handling-in-mfc.md)します。
+>  通常、内の入力/出力操作を実行する必要があります、**お試しください**/**キャッチ**例外処理ブロック。 詳細については、[例外処理 (MFC)](../mfc/exception-handling-in-mfc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

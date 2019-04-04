@@ -35,11 +35,11 @@ ms.locfileid: "57812422"
 
 既定では、リンカーは、最初に指定された .obj ファイル (.exe または .dll) には、適切な拡張機能のベース名を使用して、ファイル名を形成します。
 
-これは、オプションはマップまたはインポート ライブラリの既定の基本名。 詳細については、次を参照してください。[マップ ファイルの生成](map-generate-mapfile.md)(/map) と[/IMPLIB](implib-name-import-library.md)します。
+これは、オプションはマップまたはインポート ライブラリの既定の基本名。 詳細については、[マップ ファイルの生成](map-generate-mapfile.md)(/map) と[/IMPLIB](implib-name-import-library.md)を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. をクリックして、**リンカー**フォルダー。
 

@@ -18,7 +18,7 @@ ms.locfileid: "58781082"
 任意の生ポインター型に変換可能な `std::nullptr_t` 型の null ポインター定数を指定します。  キーワードを使用できますが、 **nullptr**コードは、型を使用する場合、ヘッダーを含めず`std::nullptr_t`、ヘッダーを含めることで定義する必要がありますし、`<cstddef>`します。
 
 > [!NOTE]
->  **Nullptr**キーワードが c++ も定義されている/cli 用の CLI は、マネージ コード アプリケーションと、ISO 標準の C++ キーワードと互換性がありません。 場合を使用して、コードをコンパイルする場合があります、 [/clr](../build/reference/clr-common-language-runtime-compilation.md)マネージ コードを対象とするコンパイラ オプションを使用し、`__nullptr`で任意の行のコードは、コンパイラはネイティブな C++ 解釈を使用することを保証する必要があります。 詳細については、次を参照してください。 [nullptr](../extensions/nullptr-cpp-component-extensions.md)します。
+>  **Nullptr**キーワードが c++ も定義されている/cli 用の CLI は、マネージ コード アプリケーションと、ISO 標準の C++ キーワードと互換性がありません。 場合を使用して、コードをコンパイルする場合があります、 [/clr](../build/reference/clr-common-language-runtime-compilation.md)マネージ コードを対象とするコンパイラ オプションを使用し、`__nullptr`で任意の行のコードは、コンパイラはネイティブな C++ 解釈を使用することを保証する必要があります。 詳細については、[nullptr](../extensions/nullptr-cpp-component-extensions.md)を参照してください。
 
 ## <a name="remarks"></a>Remarks
 

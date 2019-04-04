@@ -25,7 +25,7 @@ void CSectionForm::OnInitialUpdate()
 }
 ```
 
-レコードセットが開くと、レコードが選択されます。 [:Open](../mfc/reference/crecordset-class.md#open) DDX にデータを移動、レコード セットのフィールド データ メンバーから、対応するコントロールをフォーム ビューで、現在のレコードは、最初のレコードを使用します。 RFX の詳細については、次を参照してください。[レコード フィールド エクス チェンジ (RFX)](../data/odbc/record-field-exchange-rfx.md)します。 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 ドキュメント/ビューの作成手順については、次を参照してください。 [Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)します。
+レコードセットが開くと、レコードが選択されます。 [:Open](../mfc/reference/crecordset-class.md#open) DDX にデータを移動、レコード セットのフィールド データ メンバーから、対応するコントロールをフォーム ビューで、現在のレコードは、最初のレコードを使用します。 RFX の詳細については、[レコード フィールド エクス チェンジ (RFX)](../data/odbc/record-field-exchange-rfx.md)を参照してください。 DDX の詳細については、「 [ダイアログ データ エクスチェンジとダイアログ データ バリデーション](../mfc/dialog-data-exchange-and-validation.md)」を参照してください。 ドキュメント/ビューの作成手順については、[Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)を参照してください。
 
 > [!NOTE]
 >  エンド ユーザーには、レコードセットからレコード ビュー コントロールを更新するための機能を提供する必要があります。 この機能がないと、ユーザーがコントロールの値を無効な値に変更した場合に、現在のレコードを一切操作できなくなる可能性があります。 呼び出すコントロールを更新する、`CWnd`メンバー関数は[UpdateData](../mfc/reference/cwnd-class.md#updatedata) FALSE のパラメーターを持つ。

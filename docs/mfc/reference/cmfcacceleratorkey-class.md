@@ -48,7 +48,7 @@ class CMFCAcceleratorKey : public CObject
 
 アクセラレータ キーは、ショートカット キーとも呼ばれます。 ユーザーが入力するキーボード ショートカットを表示する場合、 [CMFCAcceleratorKeyAssignCtrl クラス](../../mfc/reference/cmfcacceleratorkeyassignctrl-class.md)マップのショートカット キー、Alt + Shift + S など"Alt + Shift + S"などのカスタム テキスト形式にします。 各`CMFCAcceleratorKey`オブジェクトがテキスト形式を単一のショートカット キーをマップします。
 
-ショートカット キーとアクセラレータ テーブルを使用する方法の詳細については、次を参照してください。 [CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)します。
+ショートカット キーとアクセラレータ テーブルを使用する方法の詳細については、[CKeyboardManager クラス](../../mfc/reference/ckeyboardmanager-class.md)を参照してください。
 
 ## <a name="example"></a>例
 

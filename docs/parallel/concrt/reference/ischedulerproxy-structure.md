@@ -118,7 +118,7 @@ virtual IExecutionResource* RequestInitialVirtualProcessors(bool doSubscribeCurr
 
 ### <a name="remarks"></a>Remarks
 
-スケジューラは作業を実行する前に、Resource Manager からの仮想プロセッサ ルートを要求するのにこのメソッドを使用してください。 Resource Manager は、スケジューラのポリシーへのアクセスを使用して[ischeduler::getpolicy](ischeduler-structure.md#getpolicy)ポリシー キーの値を使用して`MinConcurrency`、`MaxConcurrency`と`TargetOversubscriptionFactor`に割り当てるハードウェア スレッドの数を決定する、スケジューラ最初に、すべてのハードウェア スレッドを作成する方法の多くの仮想プロセッサ ルート。 スケジューラの初期の割り当てを判断するスケジューラ ポリシーを使用する方法の詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md)します。
+スケジューラは作業を実行する前に、Resource Manager からの仮想プロセッサ ルートを要求するのにこのメソッドを使用してください。 Resource Manager は、スケジューラのポリシーへのアクセスを使用して[ischeduler::getpolicy](ischeduler-structure.md#getpolicy)ポリシー キーの値を使用して`MinConcurrency`、`MaxConcurrency`と`TargetOversubscriptionFactor`に割り当てるハードウェア スレッドの数を決定する、スケジューラ最初に、すべてのハードウェア スレッドを作成する方法の多くの仮想プロセッサ ルート。 スケジューラの初期の割り当てを判断するスケジューラ ポリシーを使用する方法の詳細については、[PolicyElementKey](concurrency-namespace-enums.md)を参照してください。
 
 Resource Manager は、メソッドを呼び出して、スケジューラにリソースを付与[ischeduler::addvirtualprocessors](ischeduler-structure.md#addvirtualprocessors)仮想プロセッサ ルートの一覧。 メソッドには、このメソッドが戻る前に、スケジューラにコールバックとして呼び出さします。
 
@@ -126,7 +126,7 @@ Resource Manager は、メソッドを呼び出して、スケジューラにリ
 
 ハードウェア スレッドが選択されているかを決定するときに、リソース マネージャーはプロセッサ ノード アフィニティを最適化しようとします。 現在のスレッドのサブスクリプションが要求された場合は、現在のスレッドがこのスケジューラに割り当てられている作業に参加することを示しています。 このような場合は、割り当てられた仮想プロセッサ ルートは、現在のスレッドが可能であれば、実行するプロセッサのノードにあります。
 
-スレッドのサブスクライブは、基になるハードウェア スレッドのサブスクリプション レベルを 1 つずつ増加します。 サブスクリプションが終了したときにいずれかによって、サブスクリプション レベルが減少します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)します。
+スレッドのサブスクライブは、基になるハードウェア スレッドのサブスクリプション レベルを 1 つずつ増加します。 サブスクリプションが終了したときにいずれかによって、サブスクリプション レベルが減少します。 サブスクリプション レベルの詳細については、[iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)を参照してください。
 
 ##  <a name="shutdown"></a>  Ischedulerproxy::shutdown メソッド
 
@@ -162,7 +162,7 @@ virtual IExecutionResource* SubscribeCurrentThread() = 0;
 
 このメソッドを使用して受信した実行リソースは Resource Manager へ返す必要があるを使用して、 [iexecutionresource::remove](iexecutionresource-structure.md#remove)メソッド。 呼び出すスレッド、`Remove`メソッドは以前に呼び出されている同じスレッドである必要があります、`SubscribeCurrentThread`メソッド。
 
-スレッドのサブスクライブは、基になるハードウェア スレッドのサブスクリプション レベルを 1 つずつ増加します。 サブスクリプションが終了したときにいずれかによって、サブスクリプション レベルが減少します。 サブスクリプション レベルの詳細については、次を参照してください。 [iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)します。
+スレッドのサブスクライブは、基になるハードウェア スレッドのサブスクリプション レベルを 1 つずつ増加します。 サブスクリプションが終了したときにいずれかによって、サブスクリプション レベルが減少します。 サブスクリプション レベルの詳細については、[iexecutionresource::currentsubscriptionlevel](iexecutionresource-structure.md#currentsubscriptionlevel)を参照してください。
 
 ##  <a name="unbindcontext"></a>  Ischedulerproxy::unbindcontext メソッド
 

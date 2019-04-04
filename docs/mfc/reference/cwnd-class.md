@@ -1526,7 +1526,7 @@ BOOL AnimateWindow(
 ミリ秒単位で、アニメーションの再生に要する時間を指定します。 通常、アニメーションを再生する 200 ミリ秒をかかります。
 
 *dwFlags*<br/>
-アニメーションの種類を指定します。 使用可能な値の完全な一覧は、次を参照してください。 [AnimateWindow](/windows/desktop/api/winuser/nf-winuser-animatewindow)します。
+アニメーションの種類を指定します。 使用可能な値の完全な一覧は、[AnimateWindow](/windows/desktop/api/winuser/nf-winuser-animatewindow)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1733,7 +1733,7 @@ virtual void CalcWindowRect(
 
 計算されるウィンドウの四角形のサイズでは、メニュー バーの領域は含まれません。
 
-使用制限については、次を参照してください。 [AdjustWindowRectEx](/windows/desktop/api/winuser/nf-winuser-adjustwindowrectex)します。
+使用制限については、[AdjustWindowRectEx](/windows/desktop/api/winuser/nf-winuser-adjustwindowrectex)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -2678,7 +2678,7 @@ virtual void DoDataExchange(CDataExchange* pDX);
 
 `DoDataExchange`オーバーライドされたメンバー関数は、ソース ファイルでマクロ ステートメントを付ける必要があります。
 
-ダイアログ データ エクス チェンジと検証の詳細については、次を参照してください。[フォームでのデータの操作の表示と](../../data/odbc/displaying-and-manipulating-data-in-a-form.md)と[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)です。 変数の追加ウィザードによって生成された DDX_ および DDV_ マクロの説明は、次を参照してください。[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)します。
+ダイアログ データ エクス チェンジと検証の詳細については、[フォームでのデータの操作の表示と](../../data/odbc/displaying-and-manipulating-data-in-a-form.md)と[ダイアログ データ エクス チェンジと検証](../../mfc/dialog-data-exchange-and-validation.md)を参照してください。 変数の追加ウィザードによって生成された DDX_ および DDV_ マクロの説明は、[テクニカル ノート 26](../../mfc/tn026-ddx-and-ddv-routines.md)を参照してください。
 
 ##  <a name="dragacceptfiles"></a>  CWnd::DragAcceptFiles
 
@@ -3085,7 +3085,7 @@ void FilterToolTipMessage(MSG* pMsg);
 
 ほとんどの MFC アプリケーションでこのメソッドは、フレームワークによって呼び出されます[PreTranslateMessage](#pretranslatemessage)と[EnableToolTips](#enabletooltips)、自分で呼び出す必要はありません。
 
-ただし、一部の ActiveX コントロールなど、特定のアプリケーションでこれらのメソッドは、フレームワークによって呼び出されませんが、FilterToolTipMessage を自分で呼び出す必要があります。 詳細については、次を参照してください。[を作成するツール ヒントのメソッド](../../mfc/methods-of-creating-tool-tips.md)します。
+ただし、一部の ActiveX コントロールなど、特定のアプリケーションでこれらのメソッドは、フレームワークによって呼び出されませんが、FilterToolTipMessage を自分で呼び出す必要があります。 詳細については、[を作成するツール ヒントのメソッド](../../mfc/methods-of-creating-tool-tips.md)を参照してください。
 
 ##  <a name="findwindow"></a>  CWnd::FindWindow
 
@@ -3689,7 +3689,7 @@ CWnd* GetAncestor(UINT gaFlags) const;
 ### <a name="parameters"></a>パラメーター
 
 *gaFlags*<br/>
-取得する先祖を指定します。 使用可能な値の一覧は、次を参照してください。 [GetAncestor](/windows/desktop/api/winuser/nf-winuser-getancestor)します。
+取得する先祖を指定します。 使用可能な値の一覧は、[GetAncestor](/windows/desktop/api/winuser/nf-winuser-getancestor)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -3949,7 +3949,7 @@ CWnd* GetDescendantWindow(
 取得するコントロールまたは子ウィンドウの識別子を指定します。
 
 *bOnlyPerm*<br/>
-返されるウィンドウが一時的なできるかどうかを指定します。 TRUE の場合、永続的なウィンドウのみを返します。FALSE の場合、関数は、一時的なウィンドウを返すことができます。 一時的なウィンドウの詳細については、次を参照してください。[テクニカル ノート 3:](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)します。
+返されるウィンドウが一時的なできるかどうかを指定します。 TRUE の場合、永続的なウィンドウのみを返します。FALSE の場合、関数は、一時的なウィンドウを返すことができます。 一時的なウィンドウの詳細については、[テクニカル ノート 3:](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4152,7 +4152,7 @@ DWORD GetExStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウのスタイルを拡張します。 MFC で使用される拡張ウィンドウ スタイルの詳細については、次を参照してください。[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)します。
+ウィンドウのスタイルを拡張します。 MFC で使用される拡張ウィンドウ スタイルの詳細については、[拡張ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#extended-window-styles)を参照してください。
 
 ##  <a name="getfocus"></a>  CWnd::GetFocus
 
@@ -4262,7 +4262,7 @@ BOOL GetLayeredWindowAttributes(
 レイヤード ウィンドウの不透明度を記述するために使用するアルファ値を受け取るバイトへのポインター。 ときに、変数で参照される*pbAlpha*が 0 の場合、ウィンドウが完全に透過的です。 ときに、変数で参照される*pbAlpha* 255 は、ウィンドウは非透過的です。 引数が必要でない場合は、NULL にできます。
 
 *pdwFlags*<br/>
-階層化フラグを受け取る DWORD へのポインター。 引数が必要でない場合は、NULL にできます。 使用可能な値の一覧は、次を参照してください。 [GetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-getlayeredwindowattributes)します。
+階層化フラグを受け取る DWORD へのポインター。 引数が必要でない場合は、NULL にできます。 使用可能な値の一覧は、[GetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-getlayeredwindowattributes)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -4308,7 +4308,7 @@ BOOL GetMenuBarInfo(
 ### <a name="parameters"></a>パラメーター
 
 *idObject*<br/>
-メニュー オブジェクトを指定します。 使用可能な値の一覧は、次を参照してください。 [GetMenuBarInfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo)します。
+メニュー オブジェクトを指定します。 使用可能な値の一覧は、[GetMenuBarInfo](/windows/desktop/api/winuser/nf-winuser-getmenubarinfo)を参照してください。
 
 *idItem*<br/>
 情報を取得する対象の項目を指定します。 このパラメーターが 0 の場合、関数は、メニュー自体に関する情報を取得します。 このパラメーターが 1 の場合、関数は、メニューの最初の項目に関する情報を取得します。
@@ -4647,7 +4647,7 @@ BOOL GetScrollBarInfo(
 ### <a name="parameters"></a>パラメーター
 
 *idObject*<br/>
-メニュー オブジェクトを指定します。 使用可能な値の一覧は、次を参照してください。 [GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo)します。
+メニュー オブジェクトを指定します。 使用可能な値の一覧は、[GetScrollBarInfo](/windows/desktop/api/winuser/nf-winuser-getscrollbarinfo)を参照してください。
 
 *psbi*<br/>
 ポインターを[SCROLLBARINFO](/windows/desktop/api/winuser/ns-winuser-tagscrollbarinfo)情報を受け取る構造体。
@@ -4788,7 +4788,7 @@ DWORD GetStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-ウィンドウのスタイル。 MFC で使用されるウィンドウのスタイルの詳細については、次を参照してください。[ウィンドウ スタイル](styles-used-by-mfc.md#window-styles)します。
+ウィンドウのスタイル。 MFC で使用されるウィンドウのスタイルの詳細については、[ウィンドウ スタイル](styles-used-by-mfc.md#window-styles)を参照してください。
 
 ##  <a name="getsystemmenu"></a>  CWnd::GetSystemMenu
 
@@ -6148,7 +6148,7 @@ afx_msg void OnChangeUIState(
 
 - UI は UIS_CLEAR state 要素 (で指定された*nUIElement*) 非表示にする必要があります。
 
-- UI は UIS_INITIALIZE state 要素 (で指定された*nUIElement*) 最後の入力イベントに基づいて変更する必要があります。 詳細については、次を参照してください。、**解説**の[WM_CHANGEUISTATE](/windows/desktop/menurc/wm-changeuistate)します。
+- UI は UIS_INITIALIZE state 要素 (で指定された*nUIElement*) 最後の入力イベントに基づいて変更する必要があります。 詳細については、、**解説**の[WM_CHANGEUISTATE](/windows/desktop/menurc/wm-changeuistate)を参照してください。
 
 - UI は UIS_SET state 要素 (で指定された*nUIElement*) が表示されます。
 
@@ -7391,7 +7391,7 @@ afx_msg void OnInputLangChange(
 |パラメーター|説明|
 |---------------|-----------------|
 |*nCharSet*|[in]新しいロケールの文字セット。 詳細については、次を参照してください。、 *lfCharSet*のパラメーター、 [LOGFONT](/windows/desktop/api/wingdi/ns-wingdi-taglogfonta)構造体。|
-|*nLocaleId*|[in]入力ロケール識別子です。 詳細については、次を参照してください。[言語識別子の定数と文字列](/windows/desktop/Intl/language-identifier-constants-and-strings)します。|
+|*nLocaleId*|[in]入力ロケール識別子です。 詳細については、[言語識別子の定数と文字列](/windows/desktop/Intl/language-identifier-constants-and-strings)を参照してください。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -7415,7 +7415,7 @@ afx_msg void OnInputLangChangeRequest(
 |パラメーター|説明|
 |---------------|-----------------|
 |*nFlags*|[in]新しいロケールのロケールでは、インストールされている一覧の前または次のロケールの選択または入力ロケールの新しいキーボード レイアウトをシステムの文字セットで使用できることを示すフラグのビットごと (OR) の組み合わせ。<br /><br /> 使用可能な値は INPUTLANGCHANGE_BACKWARD、INPUTLANGCHANGE_FORWARD、および INPUTLANGCHANGE_SYSCHARSET です。|
-|*nLocaleId*|[in]入力ロケール識別子です。 詳細については、次を参照してください。[言語識別子の定数と文字列](/windows/desktop/Intl/language-identifier-constants-and-strings)します。|
+|*nLocaleId*|[in]入力ロケール識別子です。 詳細については、[言語識別子の定数と文字列](/windows/desktop/Intl/language-identifier-constants-and-strings)を参照してください。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -8030,7 +8030,7 @@ afx_msg void OnMouseHover(
 
 このメソッドは受信、 [WM_MOUSEHOVER](/windows/desktop/inputdev/wm-mousehover)通知は、Windows SDK で説明します。
 
-*NFlags*パラメーターは、次の表に記載されている修飾子キーの組み合わせを指定できます。 詳細については、次を参照してください。[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
+*NFlags*パラメーターは、次の表に記載されている修飾子キーの組み合わせを指定できます。 詳細については、[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)を参照してください。
 
 |修飾子キー|説明|
 |------------------|-----------------|
@@ -8827,7 +8827,7 @@ afx_msg void OnPaint();
 
 内部の WM_PAINT メッセージは、Windows で 1 回だけ送信されます。 によってウィンドウにメッセージを送信後は、内部の WM_PAINT、`UpdateWindow`メンバー関数は、これ以上 WM_PAINT メッセージが表示されないが送信または投稿まで、またはウィンドウが無効になるまで、`RedrawWindow`メンバー関数は、RDW_INTERNALPAINT でもう一度呼び出されます。フラグを設定します。
 
-ドキュメント/ビュー アプリケーションのイメージのレンダリング方法の詳細については、次を参照してください。[詳細](../../mfc/reference/cview-class.md#ondraw)します。
+ドキュメント/ビュー アプリケーションのイメージのレンダリング方法の詳細については、[詳細](../../mfc/reference/cview-class.md#ondraw)を参照してください。
 
 使用しての詳細については`WM_Paint`、Windows SDK の次のトピックを参照してください。
 
@@ -10071,7 +10071,7 @@ afx_msg void OnUpdateUIState(
 
 - UI は UIS_CLEAR state 要素 (で指定された*nUIElement*) 非表示にする必要があります。
 
-- UI は UIS_INITIALIZE state 要素 (で指定された*nUIElement*) 最後の入力イベントに基づいて変更する必要があります。 詳細については、次を参照してください。、**解説**の[WM_UPDATEISTATE](/windows/desktop/menurc/wm-updateuistate)します。
+- UI は UIS_INITIALIZE state 要素 (で指定された*nUIElement*) 最後の入力イベントに基づいて変更する必要があります。 詳細については、、**解説**の[WM_UPDATEISTATE](/windows/desktop/menurc/wm-updateuistate)を参照してください。
 
 - UI は UIS_SET state 要素 (で指定された*nUIElement*) が表示されます。
 
@@ -10353,7 +10353,7 @@ virtual BOOL OnWndMsg(
 
 `OnWndMsg` メッセージの種類と呼び出しのいずれかのフレームワークの適切な関数を決定します (たとえば、 [OnCommand](#oncommand) WM_COMMAND の) またはメッセージ マップには、適切なメッセージを検索します。
 
-メッセージ リフレクションについての詳細については、次を参照してください。[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)します。
+メッセージ リフレクションについての詳細については、[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)を参照してください。
 
 ##  <a name="onxbuttondblclk"></a>  CWnd::OnXButtonDblClk
 
@@ -10378,7 +10378,7 @@ afx_msg void OnXButtonDblClk(
 
 このメソッドは受信、 [WM_XBUTTONDBLCLK](/windows/desktop/inputdev/wm-xbuttondblclk)通知は、Windows SDK で説明します。 マウスがキャプチャされていない場合、メッセージは、カーソルの下のウィンドウにポストされます。 それ以外の場合、メッセージは、マウスをキャプチャするウィンドウにポストされます。
 
-*NFlags*パラメーターは、次の表に記載されている修飾子キーの組み合わせを指定できます。 詳細については、次を参照してください。[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
+*NFlags*パラメーターは、次の表に記載されている修飾子キーの組み合わせを指定できます。 詳細については、[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)を参照してください。
 
 |修飾子キー|説明|
 |------------------|-----------------|
@@ -10416,7 +10416,7 @@ afx_msg void OnXButtonDown(
 
 このメソッドは受信、 [WM_XBUTTONDOWN](/windows/desktop/inputdev/wm-xbuttondown)通知は、Windows SDK で説明します。 マウスがキャプチャされていない場合、メッセージは、カーソルの下のウィンドウにポストされます。 それ以外の場合、メッセージは、マウスをキャプチャするウィンドウにポストされます。
 
-*NFlags*パラメーターは、次の表に記載されている修飾子キーの組み合わせを指定できます。 詳細については、次を参照してください。[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
+*NFlags*パラメーターは、次の表に記載されている修飾子キーの組み合わせを指定できます。 詳細については、[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)を参照してください。
 
 |修飾子キー|説明|
 |------------------|-----------------|
@@ -10454,7 +10454,7 @@ afx_msg void OnXButtonUp(
 
 このメソッドは受信、 [WM_XBUTTONUP](/windows/desktop/inputdev/wm-xbuttonup)通知は、Windows SDK で説明します。 マウスがキャプチャされていない場合、メッセージは、カーソルの下のウィンドウにポストされます。 それ以外の場合、メッセージは、マウスをキャプチャするウィンドウにポストされます。
 
-*NFlags*パラメーターは、次の表に記載されている修飾子キーの組み合わせを指定できます。 詳細については、次を参照してください。[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
+*NFlags*パラメーターは、次の表に記載されている修飾子キーの組み合わせを指定できます。 詳細については、[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)を参照してください。
 
 |修飾子キー|説明|
 |------------------|-----------------|
@@ -10628,7 +10628,7 @@ A [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)構造
 
 各クラスから派生した`CWnd`のオーバーライドを独自の機能を追加します。`PreCreateWindow`します。 仕様上、これらの派生の`PreCreateWindow`記載されていません。 各クラスと、スタイルの間の相互依存関係を適切なスタイルを確認するのには、アプリケーションの基本クラスの MFC ソース コードを確認できます。 オーバーライドする場合`PreCreateWindow,`アプリケーションの基本クラスで使用されているスタイルが、MFC のソース コードから収集された情報を使用して必要な機能を提供するかどうかを指定できます。
 
-ウィンドウ スタイルを変更する方法の詳細については、次を参照してください。、 [MFC で作成したウィンドウのスタイルを変更する](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)します。
+ウィンドウ スタイルを変更する方法の詳細については、、 [MFC で作成したウィンドウのスタイルを変更する](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -10755,7 +10755,7 @@ BOOL PrintWindow(
 印刷するようにデバイス コンテキストへのポインター。
 
 *nFlags*<br/>
-描画のオプションを指定します。 使用可能な値の一覧は、次を参照してください。 [PrintWindow](/windows/desktop/api/winuser/nf-winuser-printwindow)します。
+描画のオプションを指定します。 使用可能な値の一覧は、[PrintWindow](/windows/desktop/api/winuser/nf-winuser-printwindow)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -10861,7 +10861,7 @@ BOOL ReflectChildNotify(
 
 メッセージの送信に直接反映[返送](#onwndmsg)または[CCmdTarget::OnCmdMsg](../../mfc/reference/ccmdtarget-class.md#oncmdmsg)します。
 
-メッセージ リフレクションについての詳細については、次を参照してください。[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)します。
+メッセージ リフレクションについての詳細については、[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)を参照してください。
 
 ##  <a name="reflectlastmsg"></a>  CWnd::ReflectLastMsg
 
@@ -10889,7 +10889,7 @@ static BOOL PASCAL ReflectLastMsg(
 
 このメンバー関数を呼び出す[SendChildNotifyLastMsg](#sendchildnotifylastmsg)ウィンドウがで識別される場合*hWndChild* OLE コントロールまたは永続的なマップ内のウィンドウ。
 
-メッセージ リフレクションについての詳細については、次を参照してください。[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)します。
+メッセージ リフレクションについての詳細については、[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)を参照してください。
 
 ##  <a name="releasedc"></a>  CWnd::ReleaseDC
 
@@ -11129,7 +11129,7 @@ BOOL SendChildNotifyLastMsg(LRESULT* pResult = NULL);
 
 `SendChildNotifyLastMsg` これが反映されるメッセージの場合は、現在のメッセージをソースに送信します。
 
-メッセージ リフレクションについての詳細については、次を参照してください。[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)します。
+メッセージ リフレクションについての詳細については、[反映されたメッセージの処理](../../mfc/handling-reflected-messages.md)を参照してください。
 
 ##  <a name="senddlgitemmessage"></a>  CWnd::SendDlgItemMessage
 
@@ -11233,7 +11233,7 @@ void SendMessageToDescendants(
 検索するレベルを指定します。 すべての子を反復検索 TRUE の場合、FALSE の場合のみ直下の子を検索します。
 
 *bOnlyPerm*<br/>
-一時 windows でメッセージを受信するかどうかを指定します。 TRUE の場合、一時 windows がメッセージを受信できます。FALSE の場合、永続的な windows のみにメッセージが表示されます。 一時的なウィンドウの詳細については、次を参照してください。[テクニカル ノート 3:](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)します。
+一時 windows でメッセージを受信するかどうかを指定します。 TRUE の場合、一時 windows がメッセージを受信できます。FALSE の場合、永続的な windows のみにメッセージが表示されます。 一時的なウィンドウの詳細については、[テクニカル ノート 3:](../../mfc/tn003-mapping-of-windows-handles-to-objects.md)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 
@@ -11543,7 +11543,7 @@ BOOL SetLayeredWindowAttributes(
 アルファ値が、レイヤード ウィンドウの不透明度を記述するために使用します。 詳細については、次を参照してください。、`SourceConstantAlpha`のメンバー、 [BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction)構造体。 ときに*bAlpha*が 0 の場合、ウィンドウが完全に透過的です。 ときに*bAlpha* 255 は、ウィンドウは非透過的です。
 
 *dwFlags*<br/>
-実行するアクションを指定します。 このパラメーターには、次の値の 1 つ以上を指定できます。 使用可能な値の一覧は、次を参照してください。 [SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)します。
+実行するアクションを指定します。 このパラメーターには、次の値の 1 つ以上を指定できます。 使用可能な値の一覧は、[SetLayeredWindowAttributes](/windows/desktop/api/winuser/nf-winuser-setlayeredwindowattributes)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 
@@ -12327,7 +12327,7 @@ BOOL UpdateLayeredWindow(
 ポインターを[BLENDFUNCTION](/windows/desktop/api/wingdi/ns-wingdi-_blendfunction)レイヤード ウィンドウの作成時に使用される、透明度の値を指定する構造体。
 
 *dwFlags*<br/>
-実行するアクションを指定します。 このパラメーターには、次の値の 1 つ以上を指定できます。 使用可能な値の一覧は、次を参照してください。 [UpdateLayeredWindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow)します。
+実行するアクションを指定します。 このパラメーターには、次の値の 1 つ以上を指定できます。 使用可能な値の一覧は、[UpdateLayeredWindow](/windows/desktop/api/winuser/nf-winuser-updatelayeredwindow)を参照してください。
 
 ### <a name="return-value"></a>戻り値
 

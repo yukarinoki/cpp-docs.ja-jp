@@ -43,7 +43,7 @@ Visual Studio IDE またはコマンドラインで、C および C++ のコン�
 
 - [リンカーを呼び出す CL](cl-invokes-the-linker.md)
 
-コンパイラのホストとターゲット アーキテクチャを選択する方法については、次を参照してください。 [64 ビット、x64 ターゲットで構成する C++ プロジェクト](../configuring-programs-for-64-bit-visual-cpp.md)します。
+コンパイラのホストとターゲット アーキテクチャを選択する方法については、[64 ビット、x64 ターゲットで構成する C++ プロジェクト](../configuring-programs-for-64-bit-visual-cpp.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -24,7 +24,7 @@ ms.locfileid: "50532562"
 
 発行、**返す**ステートメントから、`main`関数の呼び出しと同じですが、**終了**関数の引数として戻り値。
 
-詳細については、次を参照してください。[終了](../c-runtime-library/reference/exit-exit-exit.md)で、*ランタイム ライブラリ リファレンス*します。
+詳細については、[終了](../c-runtime-library/reference/exit-exit-exit.md)で、*ランタイム ライブラリ リファレンス*を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -58,7 +58,7 @@ class CCtrlView : public CView
 
 ## <a name="remarks"></a>Remarks
 
-クラスは、`CCtrlView`とその派生物、 [CEditView](../../mfc/reference/ceditview-class.md)、 [CListView](../../mfc/reference/clistview-class.md)、 [CTreeView](../../mfc/reference/ctreeview-class.md)、および[CRichEditView](../../mfc/reference/cricheditview-class.md)、調整、Windows 95/98 および Windows NT version 3.51 以降は新しいコモン コントロールをドキュメント/ビュー アーキテクチャ サポート。 ドキュメント/ビュー アーキテクチャの詳細については、次を参照してください。[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)します。
+クラスは、`CCtrlView`とその派生物、 [CEditView](../../mfc/reference/ceditview-class.md)、 [CListView](../../mfc/reference/clistview-class.md)、 [CTreeView](../../mfc/reference/ctreeview-class.md)、および[CRichEditView](../../mfc/reference/cricheditview-class.md)、調整、Windows 95/98 および Windows NT version 3.51 以降は新しいコモン コントロールをドキュメント/ビュー アーキテクチャ サポート。 ドキュメント/ビュー アーキテクチャの詳細については、[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -161,7 +161,7 @@ A [CREATESTRUCT](/windows/desktop/api/winuser/ns-winuser-tagcreatestructa)構造
 
 各クラスから派生した`CCtrlView`のオーバーライドを独自の機能を追加します。`PreCreateWindow`します。 仕様上、これらの派生の`PreCreateWindow`記載されていません。 各クラスと、スタイルの間の相互依存関係を適切なスタイルを確認するのには、アプリケーションの基本クラスの MFC ソース コードを確認できます。 オーバーライドする場合`PreCreateWindow`アプリケーションの基本クラスで使用されているスタイルが、MFC のソース コードから収集された情報を使用して必要な機能を提供するかどうかを指定できます。
 
-ウィンドウ スタイルを変更する方法の詳細については、次を参照してください。、 [MFC で作成したウィンドウのスタイルを変更する](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)します。
+ウィンドウ スタイルを変更する方法の詳細については、、 [MFC で作成したウィンドウのスタイルを変更する](../../mfc/changing-the-styles-of-a-window-created-by-mfc.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

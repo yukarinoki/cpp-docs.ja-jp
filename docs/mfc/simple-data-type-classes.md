@@ -55,7 +55,7 @@ OLE オートメーションの型のラッパー**バリアント**します。
 OLE オートメーションの型のラッパー**通貨**小数点の前に、15 桁、4 桁の数字の後に、固定小数点の数値型。
 
 > [!NOTE]
->  `CRect`、 `CSize`、および`CPoint`は ATL または MFC のいずれかのアプリケーションで使用できます。 さらに、`CStringT`提供、MFC に依存しない`CString`-などのクラス。 共有ユーティリティ クラスの詳細については、次を参照してください。[共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)します。
+>  `CRect`、 `CSize`、および`CPoint`は ATL または MFC のいずれかのアプリケーションで使用できます。 さらに、`CStringT`提供、MFC に依存しない`CString`-などのクラス。 共有ユーティリティ クラスの詳細については、[共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

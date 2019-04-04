@@ -65,7 +65,7 @@ ref class Map sealed;
 
 マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 C++ の具象実装では、 [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows ランタイム インターフェイスのパブリックの間で渡される型。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を変更することで、エラーを修正する[Windows::Foundation::Collections::IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)します。
 
-詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)します。
+詳細については、[コレクション](../cppcx/collections-c-cx.md)を参照してください。
 
 ### <a name="members"></a>メンバー
 

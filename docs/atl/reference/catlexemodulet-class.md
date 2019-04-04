@@ -86,7 +86,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 [CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)データ メンバーは、フラグのかどうか、exe ファイルは、上記で定義したメカニズムを使用する必要がありますを決定するために使用します。 False に設定されている場合、モジュールは、直ちに終了します。
 
-ATL でモジュールの詳細については、次を参照してください。 [ATL モジュール クラス](../../atl/atl-module-classes.md)します。
+ATL でモジュールの詳細については、[ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

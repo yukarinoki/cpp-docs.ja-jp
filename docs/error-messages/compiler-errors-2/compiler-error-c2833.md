@@ -19,7 +19,7 @@ ms.locfileid: "50460542"
 
 単語`operator`続くをオーバーライドする演算子または型に変換する必要があります。
 
-マネージ型で定義できる演算子の一覧は、次を参照してください。[ユーザー定義演算子](../../dotnet/user-defined-operators-cpp-cli.md)します。
+マネージ型で定義できる演算子の一覧は、[ユーザー定義演算子](../../dotnet/user-defined-operators-cpp-cli.md)を参照してください。
 
 次の例では、C2833 が生成されます。
 

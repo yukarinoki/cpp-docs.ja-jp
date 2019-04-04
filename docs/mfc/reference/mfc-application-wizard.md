@@ -27,7 +27,7 @@ MFC アプリケーション ウィザードでは、コンパイル時に Windo
 
 - [[アプリケーションの種類] (MFC アプリケーション ウィザード)](../../mfc/reference/application-type-mfc-application-wizard.md)
 
-   - タブ付きのマルチ ドキュメント インターフェイス (MDI: Multiple Document Interface) をサポートするプロジェクト。 詳細については、次を参照してください。 [SDI と MDI](../../mfc/sdi-and-mdi.md)します。
+   - タブ付きのマルチ ドキュメント インターフェイス (MDI: Multiple Document Interface) をサポートするプロジェクト。 詳細については、[SDI と MDI](../../mfc/sdi-and-mdi.md)を参照してください。
 
    - プロジェクトを使用して、[ドキュメント/ビュー アーキテクチャ](../../mfc/document-view-architecture.md)します。
 
@@ -57,7 +57,7 @@ MFC アプリケーション ウィザードでは、コンパイル時に Windo
 
    - 印刷と印刷プレビューをサポートするプロジェクト
 
-   - ActiveX コントロールをサポートするプロジェクト 詳細については、次を参照してください。 [ActiveX コントロールの作成の操作のシーケンス](../../mfc/sequence-of-operations-for-creating-activex-controls.md)します。
+   - ActiveX コントロールをサポートするプロジェクト 詳細については、[ActiveX コントロールの作成の操作のシーケンス](../../mfc/sequence-of-operations-for-creating-activex-controls.md)を参照してください。
 
    - プロジェクトのサポートを提供しない[Automation](../../mfc/automation.md)、 [MAPI](../../mfc/mapi-support-in-mfc.md)、 [Windows Sockets](../../mfc/windows-sockets-in-mfc.md)、または Active Accessibility します。
 

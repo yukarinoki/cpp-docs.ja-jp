@@ -19,7 +19,7 @@ MFC は、テンプレート クラスを提供します。 [CWinFormsDialog](..
 
 プロセスを`CWinFormsDialog`ユーザー コントロールをホストするために使用が記載されているに似ています。 [MFC ダイアログ ボックスでは、Windows フォーム ユーザー コントロールをホストしている](../dotnet/hosting-a-windows-form-user-control-in-an-mfc-dialog-box.md)します。 ただし、`CWinFormsDialog` は、ユーザー コントロールの初期化およびホストを管理するため、手動でプログラムを作成する必要はありません。
 
-Windows フォームと MFC を示すサンプル アプリケーションの場合、次を参照してください。 [MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)します。
+Windows フォームと MFC を示すサンプル アプリケーションの場合、[MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)を参照してください。
 
 ### <a name="to-create-the-mfc-host-application"></a>MFC ホスト アプリケーションを作成するには
 

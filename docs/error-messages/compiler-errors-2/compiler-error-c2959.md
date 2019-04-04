@@ -17,7 +17,7 @@ ms.locfileid: "58770228"
 
 テンプレートのメンバーはジェネリック クラスまたは関数ではない可能性があります。
 
-詳細については、次を参照してください。 [Windows ランタイムおよびマネージ テンプレート](../../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md)と[ジェネリック](../../extensions/generics-cpp-component-extensions.md)します。
+詳細については、[Windows ランタイムおよびマネージ テンプレート](../../extensions/windows-runtime-and-managed-templates-cpp-component-extensions.md)と[ジェネリック](../../extensions/generics-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

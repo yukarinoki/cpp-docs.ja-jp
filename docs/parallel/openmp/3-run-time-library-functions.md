@@ -184,7 +184,7 @@ int omp_get_dynamic(void);
 
 #### <a name="cross-references"></a>相互参照
 
-- 動的なスレッドの調整については、次を参照してください。 [omp_set_dynamic](#317-omp_set_dynamic-function)します。
+- 動的なスレッドの調整については、[omp_set_dynamic](#317-omp_set_dynamic-function)を参照してください。
 
 ### <a name="319-ompsetnested-function"></a>3.1.9 omp_set_nested 関数
 
@@ -210,7 +210,7 @@ void omp_set_nested(int nested);
 
 ### <a name="3110-ompgetnested-function"></a>3.1.10 omp_get_nested 関数
 
-`omp_get_nested`関数 0 を返します 0 以外の値を使用している場合、入れ子になった並列処理が有効になっている場合は無効になります。 入れ子になった並列処理の詳細については、次を参照してください。 [omp_set_nested](#319-omp_set_nested-function)します。 形式は次のとおりです。
+`omp_get_nested`関数 0 を返します 0 以外の値を使用している場合、入れ子になった並列処理が有効になっている場合は無効になります。 入れ子になった並列処理の詳細については、[omp_set_nested](#319-omp_set_nested-function)を参照してください。 形式は次のとおりです。
 
 ```cpp
 #include <omp.h>

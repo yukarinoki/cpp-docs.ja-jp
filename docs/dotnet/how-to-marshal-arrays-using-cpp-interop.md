@@ -18,7 +18,7 @@ ms.locfileid: "58776896"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>方法: 配列をマーシャ リングを使用して C++ 相互運用
 
-このトピックでは、Visual C の相互運用性の 1 つのファセットを示します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
+このトピックでは、Visual C の相互運用性の 1 つのファセットを示します。 詳細については、[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)を参照してください。
 
 次のコード例、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)#pragma ディレクティブを実装するマネージ コードと同じファイル内の関数をアンマネージが個別のファイルに定義されている場合、これらの関数が同じ方法で相互運用。 アンマネージ関数のみを含むファイルを使用してコンパイルする必要はありません[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。
 

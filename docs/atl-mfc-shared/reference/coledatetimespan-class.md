@@ -401,7 +401,7 @@ enum DateTimeSpanStatus{
 
 - このオブジェクトの状態が明示的に設定を使用して無効に`SetStatus`します。
 
-無効な状態を設定することがありますのある操作の詳細については、次を参照してください。 [COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)と[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)します。
+無効な状態を設定することがありますのある操作の詳細については、[COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)と[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)を参照してください。
 
 境界の詳細については`COleDateTimeSpan`、値は、記事をご覧ください。[日付と時刻。オートメーションのサポート](../../atl-mfc-shared/date-and-time-automation-support.md)します。
 
@@ -598,7 +598,7 @@ enum DateTimeSpanStatus{
 
 - このオブジェクトの状態が明示的に設定を使用して無効に[SetStatus](#setstatus)します。
 
-無効な状態を設定することがありますのある操作の詳細については、次を参照してください。 [COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)と[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)します。
+無効な状態を設定することがありますのある操作の詳細については、[COleDateTimeSpan::operator +、-](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_-)と[COleDateTimeSpan::operator + =、-=](../../atl-mfc-shared/reference/coledatetime-class.md#operator_add_eq_-_eq)を参照してください。
 
 > [!CAUTION]
 >  このデータ メンバーは、高度なプログラミングに適しています。 インライン メンバー関数を使用する必要があります[GetStatus](#getstatus)と[SetStatus](#setstatus)します。 参照してください`SetStatus`の他の注意に関するこのデータ メンバーを明示的に設定します。

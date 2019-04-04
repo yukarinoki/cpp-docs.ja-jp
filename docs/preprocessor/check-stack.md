@@ -30,7 +30,7 @@ ms.locfileid: "50451988"
 
 引数を指定しない場合、スタック プローブが既定に従って処理されます。 このプラグマは、プラグマの後で定義されている最初の関数に対して効果があります。 スタック プローブは、マクロの一部でも、インラインで生成される関数の一部でもありません。
 
-引数を指定しない場合、 **check_stack**プラグマ、スタック チェック コマンドラインで指定された動作を元に戻します。 詳細については、次を参照してください。[コンパイラ リファレンス](../build/reference/compiler-options.md)します。 相互作用、`#pragma check_stack`と[/Gs](../build/reference/gs-control-stack-checking-calls.md)オプションは、次の表にまとめられています。
+引数を指定しない場合、 **check_stack**プラグマ、スタック チェック コマンドラインで指定された動作を元に戻します。 詳細については、[コンパイラ リファレンス](../build/reference/compiler-options.md)を参照してください。 相互作用、`#pragma check_stack`と[/Gs](../build/reference/gs-control-stack-checking-calls.md)オプションは、次の表にまとめられています。
 
 ### <a name="using-the-checkstack-pragma"></a>check_stack プラグマの使用
 

@@ -276,7 +276,7 @@ HBITMAP SetBitmap(HBITMAP hBitmap);
 
 - MFC クラスを提供します。 `CBitmap`、はより呼び出すだけで、Win32 のビットマップ イメージで機能する必要があるときに使用できる`LoadBitmap`します。 `CBitmap`、連携でよく使用されて、GDI オブジェクトの 1 つの種類が含まれています`CStatic`、これは、`CWnd`グラフィック オブジェクトを静的なコントロールとして表示するために使用されるクラスです。
 
-`CImage` ATL と MFC クラス デバイス独立ビットマップ (DIB) を簡単に操作することができます。 詳細については、次を参照してください。 [CImage クラス](../../atl-mfc-shared/reference/cimage-class.md)します。
+`CImage` ATL と MFC クラス デバイス独立ビットマップ (DIB) を簡単に操作することができます。 詳細については、[CImage クラス](../../atl-mfc-shared/reference/cimage-class.md)を参照してください。
 
 - 一般的な使用方法は、提示する`CStatic::SetBitmap`の HBITMAP 演算子によって返される GDI オブジェクトを`CBitmap`または`CImage`オブジェクト。 これを行うコードでは、次の行に似ています。
 

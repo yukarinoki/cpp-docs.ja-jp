@@ -284,7 +284,7 @@ HICON GetIcon(int iPart) const;
 
 このメソッドは、送信、 [SB_GETICON](/windows/desktop/Controls/sb-geticon)メッセージは、Windows SDK で説明します。
 
-ステータス バー コントロールとも呼ばれる部分には、テキスト出力ペインの行で構成されます。 ステータス バーの詳細については、次を参照してください。 [MFC でのステータス バーの実装](../../mfc/status-bar-implementation-in-mfc.md)と[CStatusBarCtrl オブジェクトのモードの設定](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)します。
+ステータス バー コントロールとも呼ばれる部分には、テキスト出力ペインの行で構成されます。 ステータス バーの詳細については、[MFC でのステータス バーの実装](../../mfc/status-bar-implementation-in-mfc.md)と[CStatusBarCtrl オブジェクトのモードの設定](../../mfc/setting-the-mode-of-a-cstatusbarctrl-object.md)を参照してください。
 
 ### <a name="example"></a>例
 

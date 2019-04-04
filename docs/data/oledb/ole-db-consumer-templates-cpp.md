@@ -24,7 +24,7 @@ OLE DB コンシューマー テンプレートは、OLE DB Version 2.6 仕様�
 
 - OLE DB プログラミング用のネイティブの C/C++ データ型。
 
-OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB を知らない場合は、次を参照してください。 [Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)します。
+OLE DB テンプレートを使用するには、C++ テンプレート、COM、および OLE DB インターフェイスに関する知識が必要です。 OLE DB を知らない場合は、[Microsoft OLE DB Driver for SQL Server](/sql/connect/oledb/oledb-driver-for-sql-server)を参照してください。
 
 OLE DB テンプレートは、新しいオブジェクト モデルを追加するのではなく、既存の OLE DB オブジェクト モデルをサポートします。 OLE DB コンシューマー テンプレートの最上位クラスは、OLE DB 仕様で定義されたコンポーネントと同等のものです。 OLE DB コンシューマー テンプレートのデザインには、1 つの行セットに対する複数のアクセサーなどの高度な機能が含まれます。 テンプレートと多重継承を使用することで、ライブラリを小型で柔軟なものにすることができます。
 

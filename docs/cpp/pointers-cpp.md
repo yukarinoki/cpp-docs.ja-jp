@@ -26,7 +26,7 @@ ms.locfileid: "50667871"
 
 1. 宣言指定子:
 
-   - ストレージ クラスの指定子 (省略可能)。 詳細については、次を参照してください。[指定子](../cpp/specifiers.md)します。
+   - ストレージ クラスの指定子 (省略可能)。 詳細については、[指定子](../cpp/specifiers.md)を参照してください。
 
    - 省略可能な**const**または**揮発性**指されるオブジェクトの型に適用するキーワード。
 
@@ -34,7 +34,7 @@ ms.locfileid: "50667871"
 
 1. 宣言子: 
 
-   - オプションの Microsoft 固有の修飾子。 詳細については、次を参照してください。 [Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)します。
+   - オプションの Microsoft 固有の修飾子。 詳細については、[Microsoft 固有の修飾子](../cpp/microsoft-specific-modifiers.md)を参照してください。
 
    - __\*__ 演算子。
 

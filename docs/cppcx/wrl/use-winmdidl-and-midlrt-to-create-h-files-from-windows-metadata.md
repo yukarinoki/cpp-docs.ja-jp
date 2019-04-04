@@ -18,7 +18,7 @@ winmdidl.exe と midlrt.exe によって、ネイティブ C++ コードと Wind
 
 - Windows ランタイム テンプレート ライブラリ (WRL) を使用して作成された C ++ アプリケーションが、カスタム Windows ランタイム コンポーネントを使用できるようにする、カスタム IDL ファイルとヘッダー ファイルの作成。
 
-- Windows ランタイム コンポーネントでのユーザー定義のイベントの種類用のプロキシおよびスタブ ファイルの生成。 詳細については、次を参照してください。[カスタム イベントおよび Windows ランタイム コンポーネントのイベント アクセサー](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)します。
+- Windows ランタイム コンポーネントでのユーザー定義のイベントの種類用のプロキシおよびスタブ ファイルの生成。 詳細については、[カスタム イベントおよび Windows ランタイム コンポーネントのイベント アクセサー](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)を参照してください。
 
 これらのツールは、カスタム .winmd ファイルを解析する場合にのみ必要です。 Windows オペレーティング システムのコンポーネント用の .idl および .h ファイルは、既に生成されます。 既定では、Windows 8.1 で内にある \Program Files (x86) \Windows Kits\8.1\Include\winrt\\します。
 
@@ -75,4 +75,4 @@ winmdidl の著作権メッセージとバージョン番号のコンソール�
 
 winmdidl 操作からの出力ファイルは入力ファイルと同じ名前ですが、ファイル名拡張子が .idl です。
 
-WRL からアクセスされる Windows ランタイム コンポーネントを開発している場合は、.idl および .h ファイルが各ビルドで生成されるように、winmdidl.exe と midlrt.exe をビルド後のステップとして実行するように指定できます。 例については、次を参照してください。 [Windows ランタイム コンポーネントのイベントの発生](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components)します。
+WRL からアクセスされる Windows ランタイム コンポーネントを開発している場合は、.idl および .h ファイルが各ビルドで生成されるように、winmdidl.exe と midlrt.exe をビルド後のステップとして実行するように指定できます。 例については、[Windows ランタイム コンポーネントのイベントの発生](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components)を参照してください。

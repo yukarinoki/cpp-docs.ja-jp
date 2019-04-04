@@ -19,7 +19,7 @@ ms.locfileid: "58769044"
 
 オーバーライド指定子が、ネイティブ型のメンバーで使用されました。これは許可されていません。
 
-詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
+詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

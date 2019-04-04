@@ -200,7 +200,7 @@ const_reference at(size_type _Index) const;
 
 関数のバージョン`at`以外を返す`const`の参照を使用して同時に別のスレッドから要素を書き込むことはできません。 さまざまな同期オブジェクトは、同時読み取りを同期し、同じデータ要素への書き込み操作を使用してください。
 
-メソッドはスロー`out_of_range`場合`_Index`が同時実行のベクターのサイズ以上と`range_error`ベクターの破損部分のインデックスが含まれる場合。 ベクターが維持される方法について詳しくは、次を参照してください。[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)します。
+メソッドはスロー`out_of_range`場合`_Index`が同時実行のベクターのサイズ以上と`range_error`ベクターの破損部分のインデックスが含まれる場合。 ベクターが維持される方法について詳しくは、[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)を参照してください。
 
 ##  <a name="back"></a> 戻る
 

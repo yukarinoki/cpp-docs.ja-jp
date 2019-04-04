@@ -515,7 +515,7 @@ inline BOOL SetFileAttributes(LPCTSTR lpFileName, DWORD dwAttributes);
 ファイルまたはディレクトリの名前。
 
 *dwAttributes*<br/>
-ファイルに設定するファイル属性。 詳細については、次を参照してください。 [SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)します。
+ファイルに設定するファイル属性。 詳細については、[SetFileAttributesTransacted](/windows/desktop/api/winbase/nf-winbase-setfileattributestransacteda)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

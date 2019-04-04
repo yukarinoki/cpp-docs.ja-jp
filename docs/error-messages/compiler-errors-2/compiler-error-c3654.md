@@ -17,7 +17,7 @@ ms.locfileid: "58779496"
 
 'text': 明示的なオーバーライドで構文エラー
 
-予期しない文字列は、明示的なオーバーライドででした。 詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
+予期しない文字列は、明示的なオーバーライドででした。 詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3654 が生成されます。
 

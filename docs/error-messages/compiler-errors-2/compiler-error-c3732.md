@@ -17,7 +17,7 @@ ms.locfileid: "50611355"
 
 'interface': COM イベントを発生させるカスタム インターフェースは IDispatch から継承できません
 
-COM イベントをサポートするインターフェイスを継承できません`IDispatch`します。 詳細については、次を参照してください。 [COM でのイベント処理](../../cpp/event-handling-in-com.md)します。
+COM イベントをサポートするインターフェイスを継承できません`IDispatch`します。 詳細については、[COM でのイベント処理](../../cpp/event-handling-in-com.md)を参照してください。
 
 次のエラー C3732 が生成されます。
 

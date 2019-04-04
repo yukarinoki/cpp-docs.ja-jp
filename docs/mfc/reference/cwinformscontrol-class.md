@@ -64,7 +64,7 @@ MFC アプリケーションに表示される .NET Framework Windows フォー�
 
 `CWinFormsControl`クラスには、Windows フォーム コントロールをホストするための基本的な機能が用意されています。
 
-Windows フォームの使用に関する詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
+Windows フォームの使用に関する詳細については、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)を参照してください。
 
 MFC コードは、ウィンドウ ハンドルをキャッシュする必要があります (通常に格納されている`m_hWnd`)。 一部の Windows フォーム コントロールのプロパティを必要とする、基になる Win32`Window`が破棄され、使用して再作成`DestroyWindow`と`CreateWindow`します。 MFC Windows フォームの実装のハンドル、`Destroy`と`Create`を更新するコントロールのイベント、`m_hWnd`メンバー。
 
@@ -202,7 +202,7 @@ inline TManagedControl^  operator->() const;
 
 この演算子は、置換する便利な構文を提供します。`GetControl`式で。
 
-Windows フォームの詳細については、次を参照してください。 [MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)します。
+Windows フォームの詳細については、[MFC における Windows フォーム ユーザー コントロールを使用して](../../dotnet/using-a-windows-form-user-control-in-mfc.md)を参照してください。
 
 ##  <a name="operator_tmanagedcontrol"></a>  CWinFormsControl::operator TManagedControl^
 

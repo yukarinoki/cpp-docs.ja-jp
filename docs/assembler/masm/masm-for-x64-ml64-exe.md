@@ -15,13 +15,13 @@ ms.locfileid: "50596223"
 ---
 # <a name="masm-for-x64-ml64exe"></a>x64 用 MASM (ml64.exe)
 
-Visual Studio には、x64 を対象のコードを 32 ビットと 64 ビットの両方のホストされているバージョン Microsoft アセンブラー (MASM) にはが含まれています。 これは、x64 を受け入れるアセンブラー ml64.exe をという名前には、アセンブラー言語。 MASM のコマンド ライン ツールは、Visual Studio のインストール時に C++ ワークロードを選択するときにインストールされます。 MASM のツールでは、個別のダウンロードとして使用できません。 ダウンロードして Visual Studio のコピーをインストールする方法の詳細については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。 完全な Visual Studio IDE をインストールせずに、コマンド ライン ツールが欲しい、ダウンロード、 [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)します。
+Visual Studio には、x64 を対象のコードを 32 ビットと 64 ビットの両方のホストされているバージョン Microsoft アセンブラー (MASM) にはが含まれています。 これは、x64 を受け入れるアセンブラー ml64.exe をという名前には、アセンブラー言語。 MASM のコマンド ライン ツールは、Visual Studio のインストール時に C++ ワークロードを選択するときにインストールされます。 MASM のツールでは、個別のダウンロードとして使用できません。 ダウンロードして Visual Studio のコピーをインストールする方法の詳細については、[Visual Studio のインストール](/visualstudio/install/install-visual-studio)を参照してください。 完全な Visual Studio IDE をインストールせずに、コマンド ライン ツールが欲しい、ダウンロード、 [Build Tools for Visual Studio 2017](https://go.microsoft.com/fwlink/p/?linkid=875721)します。
 
-MASM を使用して構築するコマンド ラインでコードを x64 を対象と、x64 用開発者コマンド プロンプトを使用する必要がありますターゲットで、必要なパスとその他の環境変数を設定します。 開発者コマンド プロンプトを起動する方法については、次を参照してください。[コマンドラインでビルドの c/c++ コード](../../build/building-on-the-command-line.md)します。
+MASM を使用して構築するコマンド ラインでコードを x64 を対象と、x64 用開発者コマンド プロンプトを使用する必要がありますターゲットで、必要なパスとその他の環境変数を設定します。 開発者コマンド プロンプトを起動する方法については、[コマンドラインでビルドの c/c++ コード](../../build/building-on-the-command-line.md)を参照してください。
 
-Ml64.exe コマンド ライン オプションについては、次を参照してください。 [ML および ML64 のコマンド ライン リファレンス](../../assembler/masm/ml-and-ml64-command-line-reference.md)します。
+Ml64.exe コマンド ライン オプションについては、[ML および ML64 のコマンド ライン リファレンス](../../assembler/masm/ml-and-ml64-command-line-reference.md)を参照してください。
 
-X64 または ARM をターゲットには、インライン アセンブラーまたは ASM キーワードの使用がサポートされていません。 X86 コードを使用してインライン アセンブラーを移植する x64 または ARM では、c++ コードを変換、コンパイラ組み込み関数を使用したり、アセンブラー言語のソース ファイルを作成します。 Visual C コンパイラでは、例では、特権のあるビット スキャン/テスト、インタロックされたでとして可能なクロスプラット フォーム対応的に近いために、特別な関数の手順を使用することを許可する組み込み関数をサポートします。 使用可能な組み込み関数については、次を参照してください。[コンパイラ組み込み](../../intrinsics/compiler-intrinsics.md)します。
+X64 または ARM をターゲットには、インライン アセンブラーまたは ASM キーワードの使用がサポートされていません。 X86 コードを使用してインライン アセンブラーを移植する x64 または ARM では、c++ コードを変換、コンパイラ組み込み関数を使用したり、アセンブラー言語のソース ファイルを作成します。 Visual C コンパイラでは、例では、特権のあるビット スキャン/テスト、インタロックされたでとして可能なクロスプラット フォーム対応的に近いために、特別な関数の手順を使用することを許可する組み込み関数をサポートします。 使用可能な組み込み関数については、[コンパイラ組み込み](../../intrinsics/compiler-intrinsics.md)を参照してください。
 
 ## <a name="add-an-assembler-language-file-to-a-visual-c-project"></a>アセンブラー言語ファイルを Visual C プロジェクトに追加します。
 

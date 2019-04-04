@@ -22,7 +22,7 @@ ms.locfileid: "50517794"
 
 MFC アプリケーション ウィザードを使用するまたは**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) を組み合わせてビュー クラスとその関連するレコード セット クラスを作成します。
 
-レコード ビューとそのレコード セットは、ドキュメントを閉じるときに破棄されます。 レコード ビューの詳細については、次を参照してください。[レコード ビュー](../../data/record-views-mfc-data-access.md)します。 RFX の詳細については、次を参照してください。[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)します。
+レコード ビューとそのレコード セットは、ドキュメントを閉じるときに破棄されます。 レコード ビューの詳細については、[レコード ビュー](../../data/record-views-mfc-data-access.md)を参照してください。 RFX の詳細については、[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

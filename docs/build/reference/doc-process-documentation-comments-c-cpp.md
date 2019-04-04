@@ -33,15 +33,15 @@ ms.locfileid: "57809796"
 
 ## <a name="remarks"></a>Remarks
 
-.Xdc ファイルは、xdcmake.exe の .xml ファイルに処理されます。 詳細については、次を参照してください。 [XDCMake リファレンス](xdcmake-reference.md)します。
+.Xdc ファイルは、xdcmake.exe の .xml ファイルに処理されます。 詳細については、[XDCMake リファレンス](xdcmake-reference.md)を参照してください。
 
 ソース コード ファイルには、ドキュメントのコメントを追加できます。 詳細については、「 [ドキュメント コメント用の推奨タグ](recommended-tags-for-documentation-comments-visual-cpp.md)」を参照してください。
 
-IntelliSense を備えた、生成された .xml ファイルを使用するには、.xml ファイルをサポートし、.xml ファイルを配置するアセンブリと同じアセンブリと同じディレクトリ内のファイル名を確認します。 アセンブリは、Visual Studio プロジェクトで参照されて、.xml ファイルはあります。 詳細については、次を参照してください。[を使用して IntelliSense](/visualstudio/ide/using-intellisense)と[XML コード コメント](/visualstudio/ide/supplying-xml-code-comments)します。
+IntelliSense を備えた、生成された .xml ファイルを使用するには、.xml ファイルをサポートし、.xml ファイルを配置するアセンブリと同じアセンブリと同じディレクトリ内のファイル名を確認します。 アセンブリは、Visual Studio プロジェクトで参照されて、.xml ファイルはあります。 詳細については、[を使用して IntelliSense](/visualstudio/ide/using-intellisense)と[XML コード コメント](/visualstudio/ide/supplying-xml-code-comments)を参照してください。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. 選択、**構成プロパティ** > **C/C++** > **出力ファイル**プロパティ ページ。
 

@@ -230,7 +230,7 @@ MFC のリリース バージョンでは ASSERT_VALID は何も行いません�
 > [!NOTE]
 >  この関数は、MFC のデバッグ バージョンでのみ使用できます。
 
-詳細と例については、次を参照してください。 [MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)します。
+詳細と例については、[MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -365,7 +365,7 @@ TRACE(DWORD  category,  UINT  level, LPCSTR lpszFormat, ...)
 
 MFC のデバッグ バージョンでは、このマクロは、現在のアプリケーションのデバッガーに、指定した文字列を送信します。 リリース ビルドでは、このマクロは、(コードが生成されないすべての) nothing にコンパイルします。
 
-詳細については、次を参照してください。 [MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)します。
+詳細については、[MFC アプリケーションのデバッグ](/visualstudio/debugger/mfc-debugging-techniques)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 

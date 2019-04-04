@@ -365,7 +365,7 @@ HRESULT Compare(const CBookmarkBase& bookmark1,
 
 このメソッドでは省略可能なインターフェイス`IRowsetLocate`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetLocate`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
 
-コンシューマーでのブックマークの使用方法の詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。
+コンシューマーでのブックマークの使用方法の詳細については、[ブックマークを使って](../../data/oledb/using-bookmarks.md)を参照してください。
 
 ## <a name="crowset"></a> Crowset::crowset
 
@@ -418,7 +418,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 #### <a name="parameters"></a>パラメーター
 
 *op*<br/>
-[in]行の値を比較する際に使用する操作。 値については、次を参照してください。 [:findnextrow](/previous-versions/windows/desktop/ms723091(v=vs.85))します。
+[in]行の値を比較する際に使用する操作。 値については、[:findnextrow](/previous-versions/windows/desktop/ms723091(v=vs.85))を参照してください。
 
 *pData*<br/>
 [in]一致する値へのポインター。
@@ -430,10 +430,10 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 [in]データの値として割り当てられているコンシューマー データ構造体の長さ、(バイト単位)。 詳細については、説明を参照してください。`cbMaxLen`で[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス。*
 
 *bPrecision*<br/>
-[in]データを取得するときに使用される最大有効桁数。 使用されている場合にのみ*wType* DBTYPE_NUMERIC です。 詳細については、次を参照してください。 [DBTYPE_NUMERIC または DBTYPE_DECIMAL を伴う変換](/previous-versions/windows/desktop/ms719714(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+[in]データを取得するときに使用される最大有効桁数。 使用されている場合にのみ*wType* DBTYPE_NUMERIC です。 詳細については、[DBTYPE_NUMERIC または DBTYPE_DECIMAL を伴う変換](/previous-versions/windows/desktop/ms719714(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 *bScale*<br/>
-[in]データの取得時に使用されるスケール。 使用されている場合にのみ*wType* DBTYPE_NUMERIC DBTYPE_DECIMAL か。 詳細については、次を参照してください。 [DBTYPE_NUMERIC または DBTYPE_DECIMAL を伴う変換](/previous-versions/windows/desktop/ms719714(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+[in]データの取得時に使用されるスケール。 使用されている場合にのみ*wType* DBTYPE_NUMERIC DBTYPE_DECIMAL か。 詳細については、[DBTYPE_NUMERIC または DBTYPE_DECIMAL を伴う変換](/previous-versions/windows/desktop/ms719714(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 *bSkipCurrent*<br/>
 [in]検索を開始する位置のブックマークからの行の数。
@@ -449,7 +449,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 
 このメソッドでは省略可能なインターフェイス`IRowsetFind`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetFind`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
 
-コンシューマーでのブックマークの使用方法の詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。
+コンシューマーでのブックマークの使用方法の詳細については、[ブックマークを使って](../../data/oledb/using-bookmarks.md)を参照してください。
 
 ## <a name="getapproximateposition"></a> Crowset::getapproximateposition
 
@@ -482,7 +482,7 @@ HRESULT GetApproximatePosition(const CBookmarkBase* pBookmark,
 
 このメソッドでは省略可能なインターフェイス`IRowsetScroll`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetScroll`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
 
-コンシューマーでのブックマークの使用方法の詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。
+コンシューマーでのブックマークの使用方法の詳細については、[ブックマークを使って](../../data/oledb/using-bookmarks.md)を参照してください。
 
 ## <a name="getdata"></a> Crowset::getdata
 
@@ -534,7 +534,7 @@ HRESULT GetDataHere(int nAccessor,
 
 ### <a name="remarks"></a>Remarks
 
-この関数を使用する方法の例は、次を参照してください。、 [MultiRead サンプル](../../overview/visual-cpp-samples.md)します。
+この関数を使用する方法の例は、、 [MultiRead サンプル](../../overview/visual-cpp-samples.md)を参照してください。
 
 ## <a name="getoriginaldata"></a> CRowset::GetOriginalData
 
@@ -633,7 +633,7 @@ HRESULT IsSameRow(HROW hRow) const throw();
 
 ### <a name="return-value"></a>戻り値
 
-標準の HRESULT です。 S_OK では、行は、同じことを示します。 その他の値では、次を参照してください。 [IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にします。
+標準の HRESULT です。 S_OK では、行は、同じことを示します。 その他の値では、[IRowsetIndentity::IsSameRow](/previous-versions/windows/desktop/ms719629(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK にを参照してください。
 
 ## <a name="movefirst"></a> CRowset::MoveFirst
 
@@ -755,7 +755,7 @@ HRESULT MoveToBookmark(const CBookmarkBase& bookmark,
 
 このメソッドでは省略可能なインターフェイス`IRowsetLocate`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetLocate`を VARIANT_TRUE に設定し`DBPROP_CANFETCHBACKWARDS`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
 
-コンシューマーでのブックマークの使用方法の詳細については、次を参照してください。[ブックマークを使って](../../data/oledb/using-bookmarks.md)します。
+コンシューマーでのブックマークの使用方法の詳細については、[ブックマークを使って](../../data/oledb/using-bookmarks.md)を参照してください。
 
 ## <a name="movetoratio"></a> CRowset::MoveToRatio
 
@@ -789,7 +789,7 @@ HRESULT MoveToRatio(DBCOUNTITEM nNumerator,
 
 `(nNumerator *  RowsetSize ) / nDenominator`
 
-場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、次を参照してください。 [irowsetscroll::getrowsatratio](/previous-versions/windows/desktop/ms709602(v=vs.85))します。
+場所`RowsetSize`行数で指定された行セットのサイズです。 この式の精度は、特定のプロバイダーによって異なります。 詳細については、[irowsetscroll::getrowsatratio](/previous-versions/windows/desktop/ms709602(v=vs.85))を参照してください。
 
 このメソッドでは省略可能なインターフェイス`IRowsetScroll`、する可能性がありますでサポートされていないすべてのプロバイダー場合は、この場合、E_NOINTERFACE を返します。 設定する必要がありますも`DBPROP_IRowsetScroll`を呼び出す前に VARIANT_TRUE に`Open`テーブルまたは行セットを含むコマンド。
 

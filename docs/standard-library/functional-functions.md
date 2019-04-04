@@ -604,7 +604,7 @@ invoke_result_t<Callable, Args...>
 
 - `f(t1, t2, ..., tN)`。上記のいずれのケースにも該当しない場合。
 
-呼び出し可能オブジェクトの結果の型については、次を参照してください。 [invoke_result](invoke-result-class.md)します。 呼び出し可能型の述語は、次を参照してください。 [is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r クラス](is-invocable-classes.md)します。
+呼び出し可能オブジェクトの結果の型については、[invoke_result](invoke-result-class.md)を参照してください。 呼び出し可能型の述語は、[is_invocable、is_invocable_r、is_nothrow_invocable、is_nothrow_invocable_r クラス](is-invocable-classes.md)を参照してください。
 
 ### <a name="example"></a>例
 

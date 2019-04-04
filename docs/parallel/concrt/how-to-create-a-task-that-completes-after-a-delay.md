@@ -33,7 +33,7 @@ ms.locfileid: "57272260"
 
 [!code-cpp[concrt-task-delay#2](../../parallel/concrt/codesnippet/cpp/how-to-create-a-task-that-completes-after-a-delay_2.cpp)]
 
-この手法を使用して遅延後にタスクをキャンセルするときにタスク全体が取り消された後、まだ開始していないタスクは開始されません。 ただし、適切なタイミングで、キャンセルに応答する、実行時間の長いタスクの重要なは。 タスクのキャンセルの詳細については、次を参照してください。 [PPL における取り消し処理](cancellation-in-the-ppl.md)します。
+この手法を使用して遅延後にタスクをキャンセルするときにタスク全体が取り消された後、まだ開始していないタスクは開始されません。 ただし、適切なタイミングで、キャンセルに応答する、実行時間の長いタスクの重要なは。 タスクのキャンセルの詳細については、[PPL における取り消し処理](cancellation-in-the-ppl.md)を参照してください。
 
 ## <a name="example"></a>例
 

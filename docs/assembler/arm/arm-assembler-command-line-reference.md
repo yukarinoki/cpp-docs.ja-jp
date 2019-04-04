@@ -32,7 +32,7 @@ ms.locfileid: "50579239"
 - **-を事前に定義***ディレクティブ*<br/>
    シンボルを事前に備える、SETL、セット、またはディレクティブを指定します。<br/>
    例: **armasm.exe-source.asm の「備える 150 数」事前に定義**<br/>
-   詳細については、次を参照してください。、 [ARM コンパイラ armasm リファレンス ガイド](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)します。
+   詳細については、、 [ARM コンパイラ armasm リファレンス ガイド](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)を参照してください。
 
 - **-nowarn**<br/>
    すべての警告メッセージを無効にします。

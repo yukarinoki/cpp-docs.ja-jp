@@ -50,7 +50,7 @@ class task_handle : public ::Concurrency::details::_UnrealizedChore;
 
 ## <a name="remarks"></a>Remarks
 
-`task_handle` オブジェクトを組み合わせて使用することができます、`structured_task_group`またはより一般的な`task_group`処理の並列タスクを分解するオブジェクト。 詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
+`task_handle` オブジェクトを組み合わせて使用することができます、`structured_task_group`またはより一般的な`task_group`処理の並列タスクを分解するオブジェクト。 詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
 
 注意の作成者、`task_handle`オブジェクトは、作成の有効期間の保守を担当`task_handle`まで、これは、同時実行ランタイムで不要になったオブジェクトします。 通常、これは、`task_handle`オブジェクトをする必要がありますいないまで消滅させるため、`wait`または`run_and_wait`のメソッド、`task_group`または`structured_task_group`これがキューに入れるが呼び出されました。
 

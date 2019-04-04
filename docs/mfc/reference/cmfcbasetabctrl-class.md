@@ -646,7 +646,7 @@ BOOL EnableCustomToolTips(BOOL bEnable = TRUE);
 
 ### <a name="remarks"></a>Remarks
 
-カスタム ヒントが有効な場合、タブ コントロールはメイン フレームに AFX_WM_ON_GET_TAB_TOOLTIP メッセージを送信します。 アプリケーションでカスタム ヒントをサポートする場合は、メイン フレーム ウィンドウはこのメソッドを処理し、カスタム ツールヒント テキストを提供する必要があります。 カスタムのツールヒント テキストを提供する詳細については、次を参照してください。 [CMFCTabToolTipInfo 構造体](../../mfc/reference/cmfctabtooltipinfo-structure.md)します。
+カスタム ヒントが有効な場合、タブ コントロールはメイン フレームに AFX_WM_ON_GET_TAB_TOOLTIP メッセージを送信します。 アプリケーションでカスタム ヒントをサポートする場合は、メイン フレーム ウィンドウはこのメソッドを処理し、カスタム ツールヒント テキストを提供する必要があります。 カスタムのツールヒント テキストを提供する詳細については、[CMFCTabToolTipInfo 構造体](../../mfc/reference/cmfctabtooltipinfo-structure.md)を参照してください。
 
 ##  <a name="enableinplaceedit"></a>  CMFCBaseTabCtrl::EnableInPlaceEdit
 
@@ -1283,7 +1283,7 @@ virtual CWnd* GetTabWnd(int iTab) const;
 
 返されるオブジェクトは、いずれかが呼び出されたときに、アプリケーションが追加される[::addtab](#addtab)または[cmfcbasetabctrl::inserttab](#inserttab)します。
 
-タブ上のオブジェクトにラッパーがある場合は、このメソッドはオブジェクトのラッパーを返します。 ラッパーの詳細については、次を参照してください。 [CMFCBaseTabCtrl::CreateWrapper](#createwrapper)します。 メソッドを使用して、ラッパーを用意しなくても直接オブジェクトへのポインターにアクセスする場合は、 [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)します。
+タブ上のオブジェクトにラッパーがある場合は、このメソッドはオブジェクトのラッパーを返します。 ラッパーの詳細については、[CMFCBaseTabCtrl::CreateWrapper](#createwrapper)を参照してください。 メソッドを使用して、ラッパーを用意しなくても直接オブジェクトへのポインターにアクセスする場合は、 [CMFCBaseTabCtrl::GetTabWndNoWrapper](#gettabwndnowrapper)します。
 
 ##  <a name="gettabwndnowrapper"></a>  CMFCBaseTabCtrl::GetTabWndNoWrapper
 

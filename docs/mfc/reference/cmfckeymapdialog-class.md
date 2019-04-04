@@ -130,7 +130,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-IDOK、IDCANCEL に渡されるなどの符号付き整数の[CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog)メソッド。 メソッドは、さらに、ダイアログ ボックスを閉じます。 詳細については、次を参照してください。 [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal)します。
+IDOK、IDCANCEL に渡されるなどの符号付き整数の[CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog)メソッド。 メソッドは、さらに、ダイアログ ボックスを閉じます。 詳細については、[CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal)を参照してください。
 
 ### <a name="remarks"></a>Remarks
 

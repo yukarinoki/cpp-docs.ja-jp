@@ -96,7 +96,7 @@ class CAcl
 
 オブジェクトには、システム レベルのセキュリティ情報がシステムには、システム管理者によって制御される ACL の形式で、それに関連付けられていることもできます。 システムの ACL は、オブジェクトにアクセスするすべての試行を監査するシステム管理者に許可できます。
 
-詳細については、次を参照してください。、 [ACL](/windows/desktop/SecAuthZ/access-control-lists) Windows SDK で説明します。
+詳細については、、 [ACL](/windows/desktop/SecAuthZ/access-control-lists) Windows SDK で説明を参照してください。
 
 Windows でのアクセス制御モデルの概要については、次を参照してください。[アクセス制御](/windows/desktop/SecAuthZ/access-control)Windows SDK に含まれています。
 

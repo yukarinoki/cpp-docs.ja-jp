@@ -14,7 +14,7 @@ ms.locfileid: "58772739"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR における例外処理動作の相違点
 
-[マネージ例外の使用で基本的な概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)マネージ アプリケーションでの例外処理について説明します。 このトピックでは、例外処理、およびいくつかの制限の標準の動作の相違点は詳しく説明します。 詳細については、次を参照してください。 [_set_se_translator 関数](../c-runtime-library/reference/set-se-translator.md)します。
+[マネージ例外の使用で基本的な概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)マネージ アプリケーションでの例外処理について説明します。 このトピックでは、例外処理、およびいくつかの制限の標準の動作の相違点は詳しく説明します。 詳細については、[_set_se_translator 関数](../c-runtime-library/reference/set-se-translator.md)を参照してください。
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> ジャンプ、Finally ブロック
 
@@ -149,7 +149,7 @@ caught an SEH Exception
 
 ##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> 例外フィルターと EXCEPTION_CONTINUE_EXECUTION
 
-フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`、マネージ アプリケーションでは扱われます、フィルターを返す場合、`EXCEPTION_CONTINUE_SEARCH`します。 これらの定数の詳細については、次を参照してください。[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)します。
+フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`、マネージ アプリケーションでは扱われます、フィルターを返す場合、`EXCEPTION_CONTINUE_SEARCH`します。 これらの定数の詳細については、[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)を参照してください。
 
 次の例では、この違いを示しています。
 

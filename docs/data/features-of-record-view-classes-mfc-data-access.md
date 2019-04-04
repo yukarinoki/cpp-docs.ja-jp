@@ -22,7 +22,7 @@ ms.locfileid: "50461153"
 
 - 更新プログラムは、ユーザーが別のレコードに移動したときに、現在のレコードを変更します。
 
-ナビゲーションの詳細については、次を参照してください。[レコード ビュー: レコード ビュー内のナビゲーションのサポート](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)します。
+ナビゲーションの詳細については、[レコード ビュー: レコード ビュー内のナビゲーションのサポート](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

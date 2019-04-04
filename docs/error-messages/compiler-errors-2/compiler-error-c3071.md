@@ -19,7 +19,7 @@ ms.locfileid: "58775999"
 
 CLR 演算子は、ネイティブ型で使用できません。 この演算子は、ref クラスや ref 構造体 (値型) で使用できますが、System::Int32 のようなネイティブ型の int やエイリアスなどのネイティブ型では使用できません。 これらの型は、ネイティブ変数を参照する方法で C++ コードからボックス化することはできません。したがって、この演算子は使用できません。
 
-詳細については、次を参照してください。[参照演算子の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)します。
+詳細については、[参照演算子の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)を参照してください。
 
 ## <a name="example"></a>例
 

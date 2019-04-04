@@ -74,7 +74,7 @@ Visual C には、次の OpenMP ディレクティブがサポートされてい
 
 `atomic`ディレクティブに OpenMP 句がサポートされていません。
 
-詳細については、次を参照してください。 [2.6.4 atomic 構築](../../../parallel/openmp/2-6-4-atomic-construct.md)します。
+詳細については、[2.6.4 atomic 構築](../../../parallel/openmp/2-6-4-atomic-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -113,7 +113,7 @@ Number of threads: 10
 
 `barrier`ディレクティブに OpenMP 句がサポートされていません。
 
-詳細については、次を参照してください。 [2.6.3 barrier ディレクティブ](../../../parallel/openmp/2-6-3-barrier-directive.md)します。
+詳細については、[2.6.3 barrier ディレクティブ](../../../parallel/openmp/2-6-3-barrier-directive.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -139,7 +139,7 @@ Number of threads: 10
 
 `critical`ディレクティブに OpenMP 句がサポートされていません。
 
-詳細については、次を参照してください。 [2.6.2 の重要な構築](../../../parallel/openmp/2-6-2-critical-construct.md)します。
+詳細については、[2.6.2 の重要な構築](../../../parallel/openmp/2-6-2-critical-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -216,7 +216,7 @@ max = 29358
 
 `flush`ディレクティブに OpenMP 句がサポートされていません。
 
-詳細については、次を参照してください。 [2.6.5 flush ディレクティブ](../../../parallel/openmp/2-6-5-flush-directive.md)します。
+詳細については、[2.6.5 flush ディレクティブ](../../../parallel/openmp/2-6-5-flush-directive.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -306,7 +306,7 @@ A`for`ループします。 ユーザー コードで未定義の動作が発生
 
 場合`parallel`が指定されても、`clauses`句受け入れ可能で、`parallel`または`for`ディレクティブを除く`nowait`。
 
-詳細については、次を参照してください。 [2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)します。
+詳細については、[2.4.1 for のコンストラクト](../../../parallel/openmp/2-4-1-for-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -389,7 +389,7 @@ The sum of 1 through 10 is 55
 
 [単一](#single)ディレクティブを使用して、シングル スレッドでコードのセクションを実行するように指定できます。
 
-詳細については、次を参照してください。 [2.6.1 master コンストラクト](../../../parallel/openmp/2-6-1-master-construct.md)します。
+詳細については、[2.6.1 master コンストラクト](../../../parallel/openmp/2-6-1-master-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -449,7 +449,7 @@ a[4] = 16
 
 `ordered`ディレクティブに OpenMP 句がサポートされていません。
 
-詳細については、次を参照してください。 [2.6.6 ordered コンストラクト](../../../parallel/openmp/2-6-6-ordered-construct.md)します。
+詳細については、[2.6.6 ordered コンストラクト](../../../parallel/openmp/2-6-6-ordered-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -536,7 +536,7 @@ test2() iteration 4
 
 `parallel` 使用することができますも、[セクション](#sections-openmp)と[の](#for-openmp)ディレクティブ。
 
-詳細については、次を参照してください。 [2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)します。
+詳細については、[2.3 parallel コンストラクト](../../../parallel/openmp/2-3-parallel-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -601,7 +601,7 @@ Hello from thread 3
 
 場合`parallel`が指定されても、`clauses`句受け入れ可能で、`parallel`または`sections`ディレクティブを除く`nowait`。
 
-詳細については、次を参照してください。 [2.4.2 sections のコンストラクト](../../../parallel/openmp/2-4-2-sections-construct.md)します。
+詳細については、[2.4.2 sections のコンストラクト](../../../parallel/openmp/2-4-2-sections-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -653,7 +653,7 @@ Hello from thread 0
 
 [マスター](#master)ディレクティブを使用して、コードのセクションをマスター スレッドでのみ実行するように指定できます。
 
-詳細については、次を参照してください。 [2.4.3 の 1 つ構築](../../../parallel/openmp/2-4-3-single-construct.md)します。
+詳細については、[2.4.3 の 1 つ構築](../../../parallel/openmp/2-4-3-single-construct.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -704,7 +704,7 @@ write output
 
 `threadprivate`ディレクティブに OpenMP 句がサポートされていません。
 
-詳細については、次を参照してください。 [2.7.1 threadprivate ディレクティブ](../../../parallel/openmp/2-7-1-threadprivate-directive.md)します。
+詳細については、[2.7.1 threadprivate ディレクティブ](../../../parallel/openmp/2-7-1-threadprivate-directive.md)を参照してください。
 
 `threadprivate`ディレクティブがに基づいて、[スレッド](../../../cpp/thread.md)属性を使用して、 [_ _declspec](../../../cpp/declspec.md)キーワード; に対する制限`__declspec(thread)`に適用`threadprivate`します。
 

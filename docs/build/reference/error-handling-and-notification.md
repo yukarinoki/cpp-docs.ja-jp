@@ -13,9 +13,9 @@ ms.locfileid: "57812942"
 ---
 # <a name="error-handling-and-notification"></a>エラー処理と通知
 
-エラー処理と通知の詳細については、次を参照してください。[ヘルパー関数について](understanding-the-helper-function.md)します。
+エラー処理と通知の詳細については、[ヘルパー関数について](understanding-the-helper-function.md)を参照してください。
 
-用のフック関数の詳細については、次を参照してください。[構造体と定数定義](structure-and-constant-definitions.md)します。
+用のフック関数の詳細については、[構造体と定数定義](structure-and-constant-definitions.md)を参照してください。
 
 プログラムでは、Dll の遅延読み込みを使用する場合、プログラムの実行中に発生する障害が発生した未処理の例外から確実エラーを処理にする必要があります。 エラー処理は、2 つの部分で構成されます。
 

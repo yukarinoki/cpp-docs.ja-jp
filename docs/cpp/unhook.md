@@ -89,7 +89,7 @@ COM イベントを除き、 **_ _hook**と **_ _unhook**イベント レシー�
 
 使用する代わりに **_ _unhook** -= 演算子を使用することです。
 
-新しい構文でマネージ イベントのコーディングについては、次を参照してください。[イベント](../extensions/event-cpp-component-extensions.md)します。
+新しい構文でマネージ イベントのコーディングについては、[イベント](../extensions/event-cpp-component-extensions.md)を参照してください。
 
 > [!NOTE]
 >  テンプレート クラスまたは構造体にイベントを含めることはできません。

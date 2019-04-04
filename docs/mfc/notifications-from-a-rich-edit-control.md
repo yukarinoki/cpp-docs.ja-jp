@@ -24,7 +24,7 @@ ms.locfileid: "57274532"
 
 - EN_MSGFILTER EN_MSGFILTER 通知の処理により、クラスか、リッチ エディット コントロールまたはその親ウィンドウは、すべてのキーボードとマウスをコントロールに入力をフィルター処理できます。 ハンドラーがキーボードまたはマウス メッセージが処理するを防ぐことができます、または指定した変更することによって、メッセージを変更できます[MSGFILTER](/windows/desktop/api/richedit/ns-richedit-_msgfilter)構造体。
 
-- EN_PROTECTED では、ユーザーが保護されたテキストを変更しようとしたときを検出するために EN_PROTECTED 通知メッセージを処理します。 テキストの範囲をマークするは、保護対象として、保護されている文字の効果を設定できます。 詳細については、次を参照してください。[リッチ エディット コントロールで書式設定文字](../mfc/character-formatting-in-rich-edit-controls.md)します。
+- EN_PROTECTED では、ユーザーが保護されたテキストを変更しようとしたときを検出するために EN_PROTECTED 通知メッセージを処理します。 テキストの範囲をマークするは、保護対象として、保護されている文字の効果を設定できます。 詳細については、[リッチ エディット コントロールで書式設定文字](../mfc/character-formatting-in-rich-edit-controls.md)を参照してください。
 
 - EN_DROPFILES 通知メッセージを処理することによって、リッチ エディット コントロール内のファイルを削除するユーザーを有効にする EN_DROPFILES することができます。 指定した[ENDROPFILES](/windows/desktop/api/richedit/ns-richedit-_endropfiles)構造が削除されているファイルに関する情報が含まれています。
 

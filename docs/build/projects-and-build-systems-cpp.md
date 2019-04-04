@@ -42,7 +42,7 @@ MSVC コンパイラ (cl.exe) 直接コマンドラインから呼び出すこ�
 ```cmd
 cl /EHsc hello.cpp
 ```
-C++ プリプロセッサとリンカーが最終出力ファイルを生成するためにここで、コンパイラ (cl.exe) によって自動的に起動に注意してください。  詳細については、次を参照してください。[コマンドライン上に構築](building-on-the-command-line.md)します。
+C++ プリプロセッサとリンカーが最終出力ファイルを生成するためにここで、コンパイラ (cl.exe) によって自動的に起動に注意してください。  詳細については、[コマンドライン上に構築](building-on-the-command-line.md)を参照してください。
 
 ## <a name="build-systems-and-projects"></a>システムとプロジェクトをビルドします。
 
@@ -52,13 +52,13 @@ Visual Studio プロジェクトに C++ のさまざまなオプションを次�
 
 - Visual Studio IDE を使用して Visual Studio プロジェクトを作成し、プロパティ ページを使用して構成します。 Visual Studio プロジェクトでは、Windows 上で実行されるプログラムを生成します。 概要については、次を参照してください。[のコンパイルとビルド](/visualstudio/ide/compiling-and-building-in-visual-studio)、Visual Studio ドキュメント。
 
-- CMakeLists.txt ファイルが含まれるフォルダーを開きます。 CMake のサポートは Visual Studio に統合します。 IDE を使用して、編集、テスト、および任意の方法での CMake ファイルを変更せずにデバッグすることができます。 これにより、さまざまなエディターを使用した、他のユーザーとの CMake の同じプロジェクトで作業することができます。 CMake は、クロス プラットフォーム開発のための推奨されるアプローチです。 詳細については、次を参照してください。 [CMake プロジェクト](cmake-projects-in-visual-studio.md)します。
+- CMakeLists.txt ファイルが含まれるフォルダーを開きます。 CMake のサポートは Visual Studio に統合します。 IDE を使用して、編集、テスト、および任意の方法での CMake ファイルを変更せずにデバッグすることができます。 これにより、さまざまなエディターを使用した、他のユーザーとの CMake の同じプロジェクトで作業することができます。 CMake は、クロス プラットフォーム開発のための推奨されるアプローチです。 詳細については、[CMake プロジェクト](cmake-projects-in-visual-studio.md)を参照してください。
  
-- プロジェクト ファイルを持たないソース ファイルの緩やかなフォルダーを開きます。 Visual Studio は、ファイルをビルドするのにヒューリスティックを使用します。 これは、コンパイルして小さなコンソール アプリケーションを実行する簡単な方法です。 詳細については、次を参照してください。[フォルダーを開くプロジェクト](open-folder-projects-cpp.md)します。
+- プロジェクト ファイルを持たないソース ファイルの緩やかなフォルダーを開きます。 Visual Studio は、ファイルをビルドするのにヒューリスティックを使用します。 これは、コンパイルして小さなコンソール アプリケーションを実行する簡単な方法です。 詳細については、[フォルダーを開くプロジェクト](open-folder-projects-cpp.md)を参照してください。
 
-- メイクファイルでまたはその他のビルド システムの構成ファイルを含むフォルダーを開きます。 JSON ファイルをフォルダーに追加することで、任意のビルド コマンドを起動する Visual Studio を構成することができます。 詳細については、次を参照してください。[フォルダーを開くプロジェクト](open-folder-projects-cpp.md)します。
+- メイクファイルでまたはその他のビルド システムの構成ファイルを含むフォルダーを開きます。 JSON ファイルをフォルダーに追加することで、任意のビルド コマンドを起動する Visual Studio を構成することができます。 詳細については、[フォルダーを開くプロジェクト](open-folder-projects-cpp.md)を参照してください。
  
-- Visual Studio では、Windows のメイクファイルを開きます。 詳細については、次を参照してください。 [NMAKE リファレンス](reference/nmake-reference.md)します。
+- Visual Studio では、Windows のメイクファイルを開きます。 詳細については、[NMAKE リファレンス](reference/nmake-reference.md)を参照してください。
 
 ## <a name="msbuild-from-the-command-line"></a>コマンドラインから MSBuild 
 

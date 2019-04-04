@@ -17,7 +17,7 @@ ms.locfileid: "50591261"
 
 クラス コンストラクターはプライベート アクセシビリティを含んでいなければなりません。プライベート アクセスに変更します
 
-C4434 は、コンパイラが静的コンストラクターのアクセシビリティを変更したことを示します。 静的コンストラクターは共通言語ランタイムからのみ呼び出されるものであるため、専用のアクセシビリティが必要です。 詳細については、次を参照してください。[静的コンス トラクター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Static_constructors)します。
+C4434 は、コンパイラが静的コンストラクターのアクセシビリティを変更したことを示します。 静的コンストラクターは共通言語ランタイムからのみ呼び出されるものであるため、専用のアクセシビリティが必要です。 詳細については、[静的コンス トラクター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Static_constructors)を参照してください。
 
 ## <a name="example"></a>例
 

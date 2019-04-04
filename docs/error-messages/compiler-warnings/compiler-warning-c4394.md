@@ -19,7 +19,7 @@ ms.locfileid: "50548852"
 
 マークされた関数、 [appdomain](../../cpp/appdomain.md) `__declspec`にではなくネイティブ)、MSIL とエクスポート テーブルにコンパイルされ、修飾子 ([エクスポート](../../windows/export.md)`__declspec`修飾子) はマネージ関数のサポートされていません。
 
-public アクセシビリティを持つようにマネージド関数を宣言できます。 詳細については、次を参照してください。[可視性を入力](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)と[メンバーの可視性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility)します。
+public アクセシビリティを持つようにマネージド関数を宣言できます。 詳細については、[可視性を入力](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Type_visibility)と[メンバーの可視性](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Member_visibility)を参照してください。
 
 C4394 は、常にエラーとして表示されます。  この警告をオフにすることができます、`#pragma warning`または **/wd**; を参照してください[警告](../../preprocessor/warning.md)または[/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、//we、/wo、/Wv、/WX (警告レベル)](../../build/reference/compiler-option-warning-level.md)詳細についてはします。
 

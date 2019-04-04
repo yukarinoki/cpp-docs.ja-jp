@@ -18,7 +18,7 @@ ms.locfileid: "57266420"
 
 ここでは、非同期エージェント ライブラリを効果的に使用する方法について説明します。 エージェント ライブラリは、アクター ベースのプログラミング モデルと、粒度の粗いデータ フローおよびパイプライン処理タスクのためのインプロセス メッセージ パッシングを推進します。
 
-エージェント ライブラリの詳細については、次を参照してください。 [Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)します。
+エージェント ライブラリの詳細については、[Asynchronous Agents Library](../../parallel/concrt/asynchronous-agents-library.md)を参照してください。
 
 ##  <a name="top"></a> セクション
 

@@ -134,7 +134,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [itransaction::commit](/previous-versions/windows/desktop/ms713008(v=vs.85))します。
+詳細については、[itransaction::commit](/previous-versions/windows/desktop/ms713008(v=vs.85))を参照してください。
 
 ## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
 
@@ -156,7 +156,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+詳細については、[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ## <a name="open"></a> CSession::Open
 
@@ -212,7 +212,7 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [itransactionlocal::starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
+詳細については、[itransactionlocal::starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -32,7 +32,7 @@ ms.locfileid: "57274456"
 
 1. 初期化を**REBARBANDINFO**構造体に挿入するバンドのために必要な情報。
 
-1. 呼び出す[InsertBand](../mfc/reference/crebarctrl-class.md#insertband)既存の子ウィンドウを挿入する (など`m_wndReToolBar`) 新しい rebar コントロールにします。 既存の rebar コントロール バンドを挿入の詳細については、次を参照してください。 [Rebar コントロールとバンド](../mfc/rebar-controls-and-bands.md)します。
+1. 呼び出す[InsertBand](../mfc/reference/crebarctrl-class.md#insertband)既存の子ウィンドウを挿入する (など`m_wndReToolBar`) 新しい rebar コントロールにします。 既存の rebar コントロール バンドを挿入の詳細については、[Rebar コントロールとバンド](../mfc/rebar-controls-and-bands.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -454,7 +454,7 @@ void SetItemTypes(SHCONTF nTypes);
 
 ### <a name="remarks"></a>Remarks
 
-項目の種類の一覧については、次を参照してください。 [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)します。
+項目の種類の一覧については、[SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

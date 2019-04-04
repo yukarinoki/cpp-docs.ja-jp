@@ -50,7 +50,7 @@ ms.locfileid: "57302339"
 
 - **TBSTYLE_TOOLTIPS**ツールバーにボタンの説明テキストを表示するアプリケーションが使用できるツール ヒント コントロールを作成します。
 
-Toolbar のスタイルと拡張スタイルの完全な一覧については、次を参照してください。[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)と[ツールバー拡張スタイル](/windows/desktop/Controls/toolbar-extended-styles)Windows SDK にします。
+Toolbar のスタイルと拡張スタイルの完全な一覧については、[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)と[ツールバー拡張スタイル](/windows/desktop/Controls/toolbar-extended-styles)Windows SDK にを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

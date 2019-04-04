@@ -49,7 +49,7 @@ ODBC の構成要素は、次のとおりです。
 
 - ODBC データベース ドライバー
 
-   ODBC の関数の呼び出しを処理する DLL です。DBMS ごとにあります。 指定されたドライバーの一覧は、次を参照してください。 [ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)します。
+   ODBC の関数の呼び出しを処理する DLL です。DBMS ごとにあります。 指定されたドライバーの一覧は、[ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)を参照してください。
 
 - [ODBC カーソル ライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)
 

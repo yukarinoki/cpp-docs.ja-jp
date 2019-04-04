@@ -168,7 +168,7 @@ int main() // C4297 expected
 }
 ```
 
-詳細については、次を参照してください。[例外の仕様 (スロー)](../cpp/exception-specifications-throw-cpp.md)します。
+詳細については、[例外の仕様 (スロー)](../cpp/exception-specifications-throw-cpp.md)を参照してください。
 
 ### <a name="return-type"></a>戻り値の型
 
@@ -238,7 +238,7 @@ void fillVector(vector<int>& v)
 }
 ```
 
-詳細については、次を参照してください。[生成](../standard-library/algorithm-functions.md#generate)します。
+詳細については、[生成](../standard-library/algorithm-functions.md#generate)を参照してください。
 
 次のコード例から前の例では、関数を使用して、C++ 標準ライブラリ アルゴリズムを使用するラムダ式の例を追加`generate_n`します。 このラムダ式は `vector` オブジェクトの要素を前の 2 つの要素の合計に代入します。 **変更可能な**キーワードを使用すると、ラムダ式の本体は、外部変数のコピーを変更できるように`x`と`y`ラムダ式が値でキャプチャします。 ラムダ式は元の変数 `x` および `y` を値でキャプチャするため、それらの値はラムダの実行後も `1` のまま残ります。
 
@@ -320,7 +320,7 @@ vector v after 1st call to fillVector(): 1 2 3 4 5 6 7 8 9
 vector v after 2nd call to fillVector(): 10 11 12 13 14 15 16 17 18
 ```
 
-詳細については、次を参照してください。 [generate_n](../standard-library/algorithm-functions.md#generate_n)します。
+詳細については、[generate_n](../standard-library/algorithm-functions.md#generate_n)を参照してください。
 
 ## <a name="constexpr-lambda-expressions"></a>constexpr ラムダ式
 

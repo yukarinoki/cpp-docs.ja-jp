@@ -54,7 +54,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|現在選択されている色を返します。|
 |[CMFCColorDialog::GetPalette](#getpalette)|色のパレットを返します。|
-|`CMFCColorDialog::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 ( `CDialogEx::PreTranslateMessage`をオーバーライドします)。|
+|`CMFCColorDialog::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、[cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)を参照してください。 ( `CDialogEx::PreTranslateMessage`をオーバーライドします)。|
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|パレットは、システム パレットから派生します。|
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|現在の選択した色を設定します。|
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|指定された RGB 値に最も近い色を設定します。|

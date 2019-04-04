@@ -122,7 +122,7 @@ OLE DB コンシューマーは、**db_command** によって作成された [CC
 
 この例では、テーブルから state 列が 'CA' と一致する姓と名を選択するコマンドを定義しています。 **db_command** は、ウィザードで生成される [OpenAll and CloseAll](../../data/oledb/consumer-wizard-generated-methods.md)などの関数および `CRowset` MoveNext [などの](../../data/oledb/crowset-movenext.md)メンバー関数を呼び出すことができる行セットを作成して読み取ります。
 
-このコードでは、pubs データベースに接続する独自の接続文字列を指定する必要があることに注意してください。 開発環境でこれを行う方法については、次を参照してください。[方法: 既存のオブジェクトの参照と、データベースに接続する](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)と[新しい接続を追加](/visualstudio/data-tools/add-new-connections)します。
+このコードでは、pubs データベースに接続する独自の接続文字列を指定する必要があることに注意してください。 開発環境でこれを行う方法については、[方法: 既存のオブジェクトの参照と、データベースに接続する](/sql/ssdt/how-to-connect-to-a-database-and-browse-existing-objects)と[新しい接続を追加](/visualstudio/data-tools/add-new-connections)を参照してください。
 
 ```cpp
 // db_command.h

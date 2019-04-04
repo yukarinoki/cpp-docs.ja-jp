@@ -280,7 +280,7 @@ UINT uiDisabledResID = 0);
 
 ### <a name="remarks"></a>Remarks
 
-ツールバー、ホット イメージ、コールド イメージ、および無効なイメージの詳細については、次を参照してください。 [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)します。
+ツールバー、ホット イメージ、コールド イメージ、および無効なイメージの詳細については、[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)を参照してください。
 
 ##  <a name="cmfcribbonpanel"></a>  CMFCRibbonPanel::CMFCRibbonPanel
 

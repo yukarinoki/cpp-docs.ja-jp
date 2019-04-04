@@ -19,7 +19,7 @@ ms.locfileid: "50565530"
 
 ## <a name="remarks"></a>Remarks
 
-C1189 がによって生成された、`#error`ディレクティブ。 ディレクティブをコード開発者には、エラー メッセージのテキストを指定します。 詳細については、次を参照してください。 [#error ディレクティブ (c/c++)](../../preprocessor/hash-error-directive-c-cpp.md)します。
+C1189 がによって生成された、`#error`ディレクティブ。 ディレクティブをコード開発者には、エラー メッセージのテキストを指定します。 詳細については、[#error ディレクティブ (c/c++)](../../preprocessor/hash-error-directive-c-cpp.md)を参照してください。
 
 ## <a name="example"></a>例
 

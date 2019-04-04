@@ -19,7 +19,7 @@ ms.locfileid: "58767783"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033:テクニカル ノート 33: MFC の DLL バージョン
 
-ここでは、MFCxx.DLL を使用して MFCxxD.DLL (x は MFC のバージョン番号です) は、MFC アプリケーションや MFC 拡張 Dll とダイナミック リンク ライブラリを共有する方法について説明します。 レギュラー MFC Dll の詳細については、次を参照してください。 [MFC DLL の一部として](../mfc/tn011-using-mfc-as-part-of-a-dll.md)します。
+ここでは、MFCxx.DLL を使用して MFCxxD.DLL (x は MFC のバージョン番号です) は、MFC アプリケーションや MFC 拡張 Dll とダイナミック リンク ライブラリを共有する方法について説明します。 レギュラー MFC Dll の詳細については、[MFC DLL の一部として](../mfc/tn011-using-mfc-as-part-of-a-dll.md)を参照してください。
 
 このテクニカル ノートには、Dll の 3 つの側面がについて説明します。 最後の 2 つより高度なユーザーのことです。
 

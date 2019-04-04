@@ -17,7 +17,7 @@ ms.locfileid: "58775479"
 
 'override': アクセスできない基底クラス メソッド 'method' をオーバーライドすることはできません
 
-オーバーライドでは、アクセス レベルでは、派生型で使用可能な関数でのみ実行できます。 詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
+オーバーライドでは、アクセス レベルでは、派生型で使用可能な関数でのみ実行できます。 詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3670 が生成されます。
 

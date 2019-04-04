@@ -57,7 +57,7 @@ class CMFCImagePaintArea : public CButton
 
 このクラスは、コードから直接使用するものではありません。
 
-フレームワークでは、このクラスを使用して、イメージ エディター ダイアログ ボックスで、ピクチャの領域を表示します。 イメージ エディターのダイアログ ボックスの詳細については、次を参照してください。 [CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)します。
+フレームワークでは、このクラスを使用して、イメージ エディター ダイアログ ボックスで、ピクチャの領域を表示します。 イメージ エディターのダイアログ ボックスの詳細については、[CMFCImageEditorDialog クラス](../../mfc/reference/cmfcimageeditordialog-class.md)を参照してください。
 
 ## <a name="example"></a>例
 
@@ -146,7 +146,7 @@ void SetColor(COLORREF color);
 
 ときに、イメージ エディター パレット バーから色を選択またはカラー ピッカー、フレームワークは、現在の描画の色を更新するには、このメソッドを呼び出します。 初期の描画の色は黒 (0 の COLORREF 値)。
 
-描画の色は、IMAGE_EDIT_MODE_COLOR を除くすべての描画モードのイメージ エディターのダイアログ ボックスで使用されます。 描画モードの詳細については、次を参照してください。 [cmfcimagepaintarea::image_edit_mode 列挙体](cmfcimagepaintarea-image-edit-mode-enumeration.md)します。
+描画の色は、IMAGE_EDIT_MODE_COLOR を除くすべての描画モードのイメージ エディターのダイアログ ボックスで使用されます。 描画モードの詳細については、[cmfcimagepaintarea::image_edit_mode 列挙体](cmfcimagepaintarea-image-edit-mode-enumeration.md)を参照してください。
 
 ##  <a name="setmode"></a>  CMFCImagePaintArea::SetMode
 

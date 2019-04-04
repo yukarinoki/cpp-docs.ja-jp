@@ -32,4 +32,4 @@ ms.locfileid: "58774978"
 
 このエラーは、通常、プログラムが実行時のヒープのデータを誤って変更する場合に発生します。 ただし、それも可能性がありますランタイムまたはオペレーティング システムのコードで内部エラー。
 
-この問題を解決するには、コードのヒープ破損のバグを確認します。 詳細と例については、次を参照してください。 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)します。 次に、アプリの展開に関する最新の再頒布可能パッケージを使用していることを確認します。 詳しくは、次を参照してください。 [Deployment in Visual c](../../windows/deployment-in-visual-cpp.md)します。
+この問題を解決するには、コードのヒープ破損のバグを確認します。 詳細と例については、[CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)を参照してください。 次に、アプリの展開に関する最新の再頒布可能パッケージを使用していることを確認します。 詳しくは、[Deployment in Visual c](../../windows/deployment-in-visual-cpp.md)を参照してください。

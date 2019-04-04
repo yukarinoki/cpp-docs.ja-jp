@@ -192,7 +192,7 @@ LONG Create(
 キーのオプション。 既定値は、REG_OPTION_NON_VOLATILE です。 使用可能な値と説明の一覧は、次を参照してください。 [RegCreateKeyEx](/windows/desktop/api/winreg/nf-winreg-regcreatekeyexa) Windows SDK に含まれています。
 
 *samDesired*<br/>
-キーのセキュリティのアクセス。 既定値は KEY_READ &#124; KEY_WRITE します。 使用可能な値と説明の一覧は、次を参照してください。`RegCreateKeyEx`します。
+キーのセキュリティのアクセス。 既定値は KEY_READ &#124; KEY_WRITE します。 使用可能な値と説明の一覧は、`RegCreateKeyEx`を参照してください。
 
 *lpSecAttr*<br/>
 ポインターを[SECURITY_ATTRIBUTES](https://msdn.microsoft.com/library/windows/desktop/aa379560)キーのハンドルを子プロセスが継承できるかどうかを示す構造体。 既定では、このパラメーターが NULL (つまり、ハンドルを継承することはできませんです)。
@@ -374,7 +374,7 @@ LONG GetKeySecurity(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity)します。
+詳細については、[RegGetKeySecurity](/windows/desktop/api/winreg/nf-winreg-reggetkeysecurity)を参照してください。
 
 ##  <a name="m_hkey"></a>  CRegKey::m_hKey
 
@@ -436,7 +436,7 @@ LONG NotifyChangeKeyValue(
 > [!NOTE]
 >  このメソッドでは、指定したキーが削除された場合、呼び出し元は通知されません。
 
-詳細およびサンプル プログラムでは、次を参照してください。 [RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue)します。
+詳細およびサンプル プログラムでは、[RegNotifyChangeKeyValue](/windows/desktop/api/winreg/nf-winreg-regnotifychangekeyvalue)を参照してください。
 
 ##  <a name="open"></a>  CRegKey::Open
 

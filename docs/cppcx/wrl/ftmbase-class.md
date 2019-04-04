@@ -48,7 +48,7 @@ class FtmBase :
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。 [RuntimeClass クラス](runtimeclass-class.md)します。
+詳細については、[RuntimeClass クラス](runtimeclass-class.md)を参照してください。
 
 ## <a name="members"></a>メンバー
 
@@ -107,7 +107,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。、`IGlobalInterfaceTable`でトピック、`COM Interfaces`のサブトピック、 `COM Reference` MSDN ライブラリの「します。
+詳細については、、`IGlobalInterfaceTable`でトピック、`COM Interfaces`のサブトピック、 `COM Reference` MSDN ライブラリの「を参照してください。
 
 ## <a name="disconnectobject"></a>Ftmbase::disconnectobject
 

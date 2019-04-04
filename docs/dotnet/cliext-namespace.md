@@ -19,7 +19,7 @@ ms.locfileid: "57741326"
 ---
 # <a name="cliext-namespace"></a>cliext 名前空間
 
-`cliext`名前空間には、STL/CLR ライブラリのすべての型が含まれています。 これらすべての型、および STL/CLR の種類の詳細へのリンクの一覧は、次を参照してください。 [STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)します。
+`cliext`名前空間には、STL/CLR ライブラリのすべての型が含まれています。 これらすべての型、および STL/CLR の種類の詳細へのリンクの一覧は、[STL/CLR ライブラリ リファレンス](../dotnet/stl-clr-library-reference.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

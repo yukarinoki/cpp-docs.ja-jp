@@ -27,7 +27,7 @@ ms.locfileid: "57820170"
 
 - [/Yu (プリコンパイル済みヘッダー ファイルの使用)](yu-use-precompiled-header-file.md)
 
-プリコンパイル済みヘッダーの使用について詳しくは、次を参照してください。[プリコンパイル済みヘッダー ファイル](../creating-precompiled-header-files.md)します。
+プリコンパイル済みヘッダーの使用について詳しくは、[プリコンパイル済みヘッダー ファイル](../creating-precompiled-header-files.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

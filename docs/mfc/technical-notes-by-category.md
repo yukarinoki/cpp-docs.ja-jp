@@ -13,7 +13,7 @@ ms.locfileid: "57304159"
 ---
 # <a name="technical-notes-by-category"></a>カテゴリ別テクニカル ノート
 
-テクニカル ノートは、次のカテゴリに分類されます。 数値のテクニカル ノートの一覧を表示するには、次を参照してください。[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)します。
+テクニカル ノートは、次のカテゴリに分類されます。 数値のテクニカル ノートの一覧を表示するには、[番号順テクニカル ノート](../mfc/technical-notes-by-number.md)を参照してください。
 
 ### <a name="mfc-and-windows"></a>MFC と Windows
 

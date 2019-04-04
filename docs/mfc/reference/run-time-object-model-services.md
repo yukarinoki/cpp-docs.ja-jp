@@ -123,7 +123,7 @@ RUNTIME_CLASS マクロを使用できますし、説明に従って DECLARE_ �
 
 DECLARE_DYNAMIC がクラス宣言に含まれる場合、クラスの実装で新規クラスを含める必要があります。
 
-DECLARE_DYNAMIC マクロの詳細については、次を参照してください。 [CObject クラスのトピック](../../mfc/using-cobject.md)します。
+DECLARE_DYNAMIC マクロの詳細については、[CObject クラスのトピック](../../mfc/using-cobject.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -154,7 +154,7 @@ DECLARE_DYNCREATE(class_name)
 
 DECLARE_DYNCREATE がクラス宣言に含まれる場合、クラスの実装で IMPLEMENT_DYNCREATE を含める必要があります。
 
-DECLARE_DYNCREATE マクロの詳細については、次を参照してください。 [CObject クラスのトピック](../../mfc/using-cobject.md)します。
+DECLARE_DYNCREATE マクロの詳細については、[CObject クラスのトピック](../../mfc/using-cobject.md)を参照してください。
 
 > [!NOTE]
 >  DECLARE_DYNCREATE マクロには、ヘッダーのすべての機能が含まれています。
@@ -242,7 +242,7 @@ AFX_API マクロを使用して自動的にエクスポートすることがで
 
 [!code-cpp[NVC_MFCCObjectSample#20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]
 
-DECLARE_SERIAL マクロの詳細については、次を参照してください。 [CObject クラスのトピック](../../mfc/using-cobject.md)します。
+DECLARE_SERIAL マクロの詳細については、[CObject クラスのトピック](../../mfc/using-cobject.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -272,7 +272,7 @@ IMPLEMENT_DYNAMIC(class_name, base_class_name)
 
 .Cpp モジュールで IMPLEMENT_DYNAMIC マクロを使用し、1 回だけ、結果のオブジェクト コードをリンクします。
 
-詳細については、次を参照してください。 [CObject クラスのトピック](../../mfc/using-cobject.md)します。
+詳細については、[CObject クラスのトピック](../../mfc/using-cobject.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -302,7 +302,7 @@ IMPLEMENT_DYNCREATE(class_name, base_class_name)
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークでは、この機能を使用して、新しいオブジェクトを動的に作成、たとえば、オブジェクトをシリアル化中にディスクから読み取るときにします。 クラスの実装ファイルには、IMPLEMENT_DYNCREATE マクロを追加します。 詳細については、次を参照してください。 [CObject クラスのトピック](../../mfc/using-cobject.md)します。
+フレームワークでは、この機能を使用して、新しいオブジェクトを動的に作成、たとえば、オブジェクトをシリアル化中にディスクから読み取るときにします。 クラスの実装ファイルには、IMPLEMENT_DYNCREATE マクロを追加します。 詳細については、[CObject クラスのトピック](../../mfc/using-cobject.md)を参照してください。
 
 RUNTIME_CLASS マクロを使用できますし、ヘッダーと IMPLEMENT_DYNCREATE マクロを使用する場合、`CObject::IsKindOf`メンバー関数は、実行時に、オブジェクトのクラスを判別します。
 
@@ -424,7 +424,7 @@ AFX_API マクロを使用して自動的にエクスポートすることがで
 
 [!code-cpp[NVC_MFCCObjectSample#20](../../mfc/codesnippet/cpp/run-time-object-model-services_1.h)]
 
-詳細については、次を参照してください。、 [CObject クラスのトピック](../../mfc/using-cobject.md)します。
+詳細については、、 [CObject クラスのトピック](../../mfc/using-cobject.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -451,7 +451,7 @@ RUNTIME_CLASS(class_name)
 
 Runtime_class へのポインターを[CRuntimeClass](../../mfc/reference/cruntimeclass-structure.md)で指定されたクラスの構造体*class_name*します。 のみ`CObject`-DECLARE_DYNAMIC、ヘッダー、またはストリームに宣言された派生クラスへのポインターを返します、`CRuntimeClass`構造体。
 
-詳細については、次を参照してください。 [CObject クラスのトピック](../../mfc/using-cobject.md)します。
+詳細については、[CObject クラスのトピック](../../mfc/using-cobject.md)を参照してください。
 
 ### <a name="example"></a>例
 

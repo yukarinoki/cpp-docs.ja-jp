@@ -67,4 +67,4 @@ Windows XP プラットフォーム ツールセット、C ランタイム ラ�
 
 - **HLSL の構築**
 
-   既定では、Windows XP ツールセットでは HLSL のソース コード ファイルはコンパイルされません。 HLSL ファイルをコンパイルするには、June 2010 DirectX SDK をダウンロードしてインストールし、プロジェクトの VC ディレクトリに含めるように設定します。 詳細については、次を参照してください。、"DirectX SDK は登録されませんインクルード/ライブラリ パスを Visual Studio 2010"のセクション、 [June 2010 DirectX SDK ダウンロード ページ](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)します。
+   既定では、Windows XP ツールセットでは HLSL のソース コード ファイルはコンパイルされません。 HLSL ファイルをコンパイルするには、June 2010 DirectX SDK をダウンロードしてインストールし、プロジェクトの VC ディレクトリに含めるように設定します。 詳細については、、"DirectX SDK は登録されませんインクルード/ライブラリ パスを Visual Studio 2010"のセクション、 [June 2010 DirectX SDK ダウンロード ページ](http://www.microsoft.com/download/details.aspx?displaylang=en&id=6812)を参照してください。

@@ -23,14 +23,14 @@ ms.locfileid: "57807820"
 
 ## <a name="remarks"></a>Remarks
 
-/MANIFEST は、リンカーが side-by-side マニフェストファイルを作成することを指定します。 マニフェスト ファイルの詳細については、次を参照してください。 [Manifest Files Reference](/windows/desktop/SbsCs/manifest-files-reference)します。
+/MANIFEST は、リンカーが side-by-side マニフェストファイルを作成することを指定します。 マニフェスト ファイルの詳細については、[Manifest Files Reference](/windows/desktop/SbsCs/manifest-files-reference)を参照してください。
 
 既定値は、"/MANIFEST" です。
 
 /MANIFEST:EMBED オプションは、リンカーが RT_MANIFEST 型のリソースとしてイメージにマニフェスト ファイルを埋め込む必要があることを指定します。 省略可能な `ID` パラメーターは、マニフェストで使用するリソース ID です。 実行可能ファイルの場合は値 1 を使用します。 DLL の場合は値 2 を使用して、プライベート依存関係を指定できるようにします。 
   `ID` パラメーターを指定しない場合、/DLL オプションが設定されている場合の既定値は 2、それ以外の場合の既定値は 1 になります。
 
-Visual Studio 2008 以降では、実行可能ファイルのマニフェストのファイルには、ユーザー アカウント制御 (UAC) 情報を指定するセクションが含まれます。 /MANIFEST を指定するが、いずれも指定する場合[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)も[/DLL](dll-build-a-dll.md)、UAC レベルのセットが既定の UAC フラグメント*asInvoker*マニフェストに挿入されます。 UAC レベルの詳細については、次を参照してください。 [/MANIFESTUAC (UAC 情報をマニフェスト)](manifestuac-embeds-uac-information-in-manifest.md)します。
+Visual Studio 2008 以降では、実行可能ファイルのマニフェストのファイルには、ユーザー アカウント制御 (UAC) 情報を指定するセクションが含まれます。 /MANIFEST を指定するが、いずれも指定する場合[/MANIFESTUAC](manifestuac-embeds-uac-information-in-manifest.md)も[/DLL](dll-build-a-dll.md)、UAC レベルのセットが既定の UAC フラグメント*asInvoker*マニフェストに挿入されます。 UAC レベルの詳細については、[/MANIFESTUAC (UAC 情報をマニフェスト)](manifestuac-embeds-uac-information-in-manifest.md)を参照してください。
 
 UAC の既定の動作を変更するには、次のいずれかを行います。
 
@@ -44,7 +44,7 @@ UAC の既定の動作を変更するには、次のいずれかを行います�
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. **[構成プロパティ]** ノードを展開します。
 

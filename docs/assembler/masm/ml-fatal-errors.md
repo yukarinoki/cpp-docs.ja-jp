@@ -12,7 +12,7 @@ ms.locfileid: "50547291"
 ---
 # <a name="ml-fatal-errors"></a>ML の致命的なエラー
 
-ML の致命的なエラーの詳細については、次を参照してください。 [ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)します。
+ML の致命的なエラーの詳細については、[ML エラー メッセージ](../../assembler/masm/ml-error-messages.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

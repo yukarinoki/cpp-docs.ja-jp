@@ -36,7 +36,7 @@ apple_color["Granny Smith"] = "Green";
 
 C スタイルの配列を使用しないでください。 従来の api データにアクセスする必要がありますアクセサー メソッドをなど使用`f(vec.data(), vec.size());`代わりにします。
 
-コンテナーの詳細については、次を参照してください。 [C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)します。
+コンテナーの詳細については、[C++ 標準ライブラリ コンテナー](../standard-library/stl-containers.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -76,7 +76,7 @@ class unbounded_buffer : public propagator_block<multi_link_registry<ITarget<   
 |[send_message](#send_message)|メッセージを同期的に渡す、`ISource`このブロック`unbounded_buffer`メッセージング ブロックします。 によって呼び出されます、`send`メソッドは、ソース ブロックによって呼び出されます。|
 |[supports_anonymous_source](#supports_anonymous_source)|上書き、`supports_anonymous_source`メソッドをこのブロックがリンクされていないソースによって提供されたメッセージを受け入れることを示します。 (上書き[itarget::supports_anonymous_source](itarget-class.md#supports_anonymous_source))。|
 
-詳細については、次を参照してください。[非同期メッセージ ブロック](../asynchronous-message-blocks.md)します。
+詳細については、[非同期メッセージ ブロック](../asynchronous-message-blocks.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

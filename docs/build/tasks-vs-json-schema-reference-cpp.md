@@ -13,5 +13,5 @@ ms.locfileid: "57826448"
 ---
 # <a name="tasksvsjson-c"></a>Tasks.vs.json (C++)
 
-A`tasks.vs.json`ファイルは、任意のタスクの定義からを呼び出すには、フォルダーを開くプロジェクトに追加することができます、**ソリューション エクスプ ローラー**コンテキスト メニュー。 CMake プロジェクトは通常にこのファイルを使用しないすべてのビルド コマンドがで指定されたため、`CMakeLists.txt`します。 CMake 以外のビルド システムでは、これをビルド コマンドを指定し、ビルド スクリプトを呼び出します。 Tasks.vs.json の使用に関する概要については、次を参照してください。[ビルドのカスタマイズと"フォルダーを開く"開発用のタスクのデバッグ](/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio)します。
+A`tasks.vs.json`ファイルは、任意のタスクの定義からを呼び出すには、フォルダーを開くプロジェクトに追加することができます、**ソリューション エクスプ ローラー**コンテキスト メニュー。 CMake プロジェクトは通常にこのファイルを使用しないすべてのビルド コマンドがで指定されたため、`CMakeLists.txt`します。 CMake 以外のビルド システムでは、これをビルド コマンドを指定し、ビルド スクリプトを呼び出します。 Tasks.vs.json の使用に関する概要については、[ビルドのカスタマイズと"フォルダーを開く"開発用のタスクのデバッグ](/visualstudio/ide/customize-build-and-debug-tasks-in-visual-studio)を参照してください。
 

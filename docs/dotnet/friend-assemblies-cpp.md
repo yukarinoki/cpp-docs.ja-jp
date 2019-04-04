@@ -94,7 +94,7 @@ Class1::Test_Public
 
 次のコード例では、コンポーネントを定義しますが、コンポーネントの型にアクセスできるクライアント アセンブリを指定しません。
 
-使用して、コンポーネントがリンクされていることに注意してください。 **/opt: noref**します。 これにより、コンポーネントのメタデータは、必要でない場合にプライベート型が出力されること、`InternalsVisibleTo`属性が存在します。 詳細については、次を参照してください。 [/OPT (最適化)](../build/reference/opt-optimizations.md)します。
+使用して、コンポーネントがリンクされていることに注意してください。 **/opt: noref**します。 これにより、コンポーネントのメタデータは、必要でない場合にプライベート型が出力されること、`InternalsVisibleTo`属性が存在します。 詳細については、[/OPT (最適化)](../build/reference/opt-optimizations.md)を参照してください。
 
 ```cpp
 // friend_assemblies_3.cpp

@@ -143,7 +143,7 @@ Done
 
 - [方法: ネイティブ クラスを C# で使用できるようにラップする](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-相互運用機能のシナリオではデリゲートの使用方法の詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../extensions/delegate-cpp-component-extensions.md)します。
+相互運用機能のシナリオではデリゲートの使用方法の詳細については、[デリゲート (C++ コンポーネント拡張)](../extensions/delegate-cpp-component-extensions.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

@@ -15,9 +15,9 @@ ms.locfileid: "58784822"
 
 UWP ドキュメントのほとんどは、Windows のコンテンツ ツリーに[ユニバーサル Windows プラットフォーム ドキュメント](/windows/uwp/)します。 最初のチュートリアルがありますも同様のリファレンス ドキュメント。 
 
-新しい UWP アプリとコンポーネントは、お勧めしますを使用すること[C +/cli WinRT](/windows/uwp/cpp-and-winrt-apis/)、新しい標準 c++ 17 の言語プロジェクションの Windows ランタイム Api です。 C +/cli WinRT はバージョン 1803 以降から Windows 10 SDK で使用できます。 C +/cli WinRT はヘッダー ファイル、完全に実装されは最新の Windows API にファースト クラスのアクセス提供するために設計されています。 異なり、C + + CX 実装します。 C +/cli WinRT には、非標準の構文または Microsoft 言語拡張機能を使用しないし、高度に最適化された出力を作成する C++ コンパイラを最大限に活用します。 詳細については、次を参照してください。[概要 C +/cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)します。
+新しい UWP アプリとコンポーネントは、お勧めしますを使用すること[C +/cli WinRT](/windows/uwp/cpp-and-winrt-apis/)、新しい標準 c++ 17 の言語プロジェクションの Windows ランタイム Api です。 C +/cli WinRT はバージョン 1803 以降から Windows 10 SDK で使用できます。 C +/cli WinRT はヘッダー ファイル、完全に実装されは最新の Windows API にファースト クラスのアクセス提供するために設計されています。 異なり、C + + CX 実装します。 C +/cli WinRT には、非標準の構文または Microsoft 言語拡張機能を使用しないし、高度に最適化された出力を作成する C++ コンパイラを最大限に活用します。 詳細については、[概要 C +/cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)を参照してください。
 
-Microsoft Store から展開の既存のデスクトップ アプリケーションをパッケージ化する、デスクトップ ブリッジ app converter を使うことができます。 詳細については、次を参照してください。 [Centennial プロジェクトで Visual c のランタイムを使用して](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)と[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)します。
+Microsoft Store から展開の既存のデスクトップ アプリケーションをパッケージ化する、デスクトップ ブリッジ app converter を使うことができます。 詳細については、[Centennial プロジェクトで Visual c のランタイムを使用して](https://blogs.msdn.microsoft.com/vcblog/2016/07/07/using-visual-c-runtime-in-centennial-project)と[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)を参照してください。
 
 ## <a name="uwp-apps-that-use-ccx"></a>C + を使用する UWP アプリ/cli CX
 
@@ -31,7 +31,7 @@ Microsoft Store から展開の既存のデスクトップ アプリケーショ
 
 ## <a name="uwp-apps-that-use-the-windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用する UWP アプリ
 
-Windows ランタイム C++ テンプレート ライブラリでは、例外のない環境で Windows ランタイムを ISO C のコードからアクセスできる低レベルの COM インターフェイスを提供します。 ほとんどの場合、推奨使用すること C +/cli WinRT または C++/cli CX UWP アプリ開発用 Windows ランタイム C++ テンプレート ライブラリの代わりにします。 Windows ランタイム C++ テンプレート ライブラリについては、次を参照してください。 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](wrl/windows-runtime-cpp-template-library-wrl.md)します。
+Windows ランタイム C++ テンプレート ライブラリでは、例外のない環境で Windows ランタイムを ISO C のコードからアクセスできる低レベルの COM インターフェイスを提供します。 ほとんどの場合、推奨使用すること C +/cli WinRT または C++/cli CX UWP アプリ開発用 Windows ランタイム C++ テンプレート ライブラリの代わりにします。 Windows ランタイム C++ テンプレート ライブラリについては、[Windows ランタイム C++ テンプレート ライブラリ (WRL)](wrl/windows-runtime-cpp-template-library-wrl.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

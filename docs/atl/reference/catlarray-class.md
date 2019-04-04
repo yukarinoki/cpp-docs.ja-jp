@@ -97,7 +97,7 @@ ATL クラスの要素の数が少ない配列[CSimpleArray](../../atl/reference
 
 `CAtlArray` mfc の関連性が高い`CArray`クラスをシリアル化をサポートしていないものの、MFC プロジェクトで動作します。
 
-詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
+詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
 
 ## <a name="requirements"></a>必要条件
 

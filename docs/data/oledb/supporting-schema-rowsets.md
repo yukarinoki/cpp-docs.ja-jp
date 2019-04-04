@@ -255,7 +255,7 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 
 `Execute`関数は、テーブルの行セットから、TABLE_NAME、TABLE_TYPE、および説明のフィールドのデータを返します、確認することができます**付録 B** OLE DB 仕様の (先頭からカウント ダウン) を決定3、4、および 6 の序数ができました。 これらの列のそれぞれについて、DBSTATUS_S_OK を返します。 その他のすべての列には、DBSTATUS_S_ISNULL を返します。 コンシューマーが返された値が NULL またはその他のことを認識していないためですが、この状態を返すため重要です。 ここでも、NULL は空のと同じことに注意してください。
 
-OLE DB スキーマ行セットのインターフェイスの詳細については、次を参照してください。、 [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md)インターフェイスで、 **OLE DB プログラマーズ リファレンス**します。
+OLE DB スキーマ行セットのインターフェイスの詳細については、、 [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md)インターフェイスで、 **OLE DB プログラマーズ リファレンス**を参照してください。
 
 コンシューマーの使用方法については`IDBSchemaRowset`メソッドを参照してください[スキーマ行セットのメタデータの取得](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)します。
 

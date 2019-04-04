@@ -17,7 +17,7 @@ ms.locfileid: "50588488"
 ---
 # <a name="record-views--mfc-data-access"></a>レコード ビュー (MFC データ アクセス)
 
-このセクションでは、MFC ODBC クラスにのみ適用されます。 OLE DB レコード ビューについては、次を参照してください。 [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)と[を使用して OLE DB レコード ビュー](../data/oledb/using-ole-db-record-views.md)します。
+このセクションでは、MFC ODBC クラスにのみ適用されます。 OLE DB レコード ビューについては、[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)と[を使用して OLE DB レコード ビュー](../data/oledb/using-ole-db-record-views.md)を参照してください。
 
 クラス ライブラリをフォーム ベースのデータ アクセス アプリケーションをサポートするには、クラスを提供します[CRecordView](../mfc/reference/crecordview-class.md)します。 レコード ビューは、そのコントロールのフィールド データ メンバーに直接マップはフォーム ビュー オブジェクトを[recordset](../data/odbc/recordset-odbc.md)オブジェクト (およびクエリの結果またはデータ ソースのテーブル内の対応する列に間接的に)。 などの基本クラス[CFormView](../mfc/reference/cformview-class.md)、`CRecordView`ダイアログ テンプレート リソースに基づきます。
 

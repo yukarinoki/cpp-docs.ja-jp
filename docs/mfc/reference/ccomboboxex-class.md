@@ -106,7 +106,7 @@ class CComboBoxEx : public CComboBox
 
 Win32 構造内の項目とイメージ、インデント、およびテキスト文字列のインデックスなどの項目の情報が格納されている[受け取る](/windows/desktop/api/commctrl/ns-commctrl-tagcomboboxexitema)」の説明に従って、Windows SDK。 構造体には、コールバック フラグに対応するメンバーも含まれています。
 
-詳細な概念については、次を参照してください。[を使用して CComboBoxEx](../../mfc/using-ccomboboxex.md)します。
+詳細な概念については、[を使用して CComboBoxEx](../../mfc/using-ccomboboxex.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

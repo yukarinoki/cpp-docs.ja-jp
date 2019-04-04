@@ -78,7 +78,7 @@ class CUserTool : public CObject
 
 ## <a name="remarks"></a>Remarks
 
-アプリケーションでユーザー ツールを有効にする方法の詳細については、次を参照してください。 [CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)します。
+アプリケーションでユーザー ツールを有効にする方法の詳細については、[CUserToolsManager クラス](../../mfc/reference/cusertoolsmanager-class.md)を参照してください。
 
 ## <a name="example"></a>例
 

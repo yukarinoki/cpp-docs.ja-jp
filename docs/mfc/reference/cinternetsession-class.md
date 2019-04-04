@@ -143,7 +143,7 @@ CInternetSession(
 
 - INTERNET_OPEN_TYPE_PROXY CERN プロキシ経由で接続します。
 
-さまざまな種類のプロキシに接続する方法については、次を参照してください。[典型的な FTP クライアント アプリケーションでのステップ](../../mfc/steps-in-a-typical-ftp-client-application.md)します。
+さまざまな種類のプロキシに接続する方法については、[典型的な FTP クライアント アプリケーションでのステップ](../../mfc/steps-in-a-typical-ftp-client-application.md)を参照してください。
 
 *pstrProxyName*<br/>
 優先 CERN プロキシの名前場合*は*INTERNET_OPEN_TYPE_PROXY として設定されます。 既定では NULL です。

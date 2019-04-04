@@ -280,7 +280,7 @@ explicit COleControlSite(COleControlContainer* pCtrlCont);
 
 ### <a name="remarks"></a>Remarks
 
-この関数を呼び出して、 [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer)関数。 コンテナーの作成のカスタマイズの詳細については、次を参照してください。 [COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite)します。
+この関数を呼び出して、 [COccManager::CreateContainer](../../mfc/reference/coccmanager-class.md#createcontainer)関数。 コンテナーの作成のカスタマイズの詳細については、[COccManager::CreateSite](../../mfc/reference/coccmanager-class.md#createsite)を参照してください。
 
 ##  <a name="createcontrol"></a>  COleControlSite::CreateControl
 
@@ -586,7 +586,7 @@ virtual DWORD GetStyle() const;
 
 ### <a name="remarks"></a>Remarks
 
-使用可能な値の一覧は、次を参照してください。 [Windows スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。 コントロールのサイトの拡張スタイルを取得する[COleControlSite::GetExStyle](#getexstyle)します。
+使用可能な値の一覧は、[Windows スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。 コントロールのサイトの拡張スタイルを取得する[COleControlSite::GetExStyle](#getexstyle)します。
 
 ##  <a name="getwindowtext"></a>  COleControlSite::GetWindowText
 

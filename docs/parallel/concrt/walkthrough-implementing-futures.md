@@ -90,7 +90,7 @@ average:  4981
 caught exception: error
 ```
 
-同時実行ランタイムで例外処理モデルの詳細については、次を参照してください。[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)します。
+同時実行ランタイムで例外処理モデルの詳細については、[例外処理](../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md)を参照してください。
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 

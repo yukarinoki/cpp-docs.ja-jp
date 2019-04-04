@@ -32,7 +32,7 @@ UI スレッドから作業を削除するには、ブロック操作をオフ�
 
 - [PPL における取り消し処理](cancellation-in-the-ppl.md)
 
-また、このチュートリアルを開始する前に、MFC アプリケーションの開発と GDI + の基本を理解することをお勧めします。 MFC の詳細については、次を参照してください。 [MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)します。 GDI + の詳細については、次を参照してください。 [GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798)します。
+また、このチュートリアルを開始する前に、MFC アプリケーションの開発と GDI + の基本を理解することをお勧めします。 MFC の詳細については、[MFC Desktop Applications](../../mfc/mfc-desktop-applications.md)を参照してください。 GDI + の詳細については、[GDI +](https://msdn.microsoft.com/library/windows/desktop/ms533798)を参照してください。
 
 ##  <a name="top"></a> セクション
 

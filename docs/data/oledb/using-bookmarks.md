@@ -55,7 +55,7 @@ product.MoveNext();
 product.GetBookmark(&bookmark);
 ```
 
-プロバイダーのブックマークのサポートについては、次を参照してください。[プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)します。
+プロバイダーのブックマークのサポートについては、[プロバイダーのブックマーク サポート](../../data/oledb/provider-support-for-bookmarks.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

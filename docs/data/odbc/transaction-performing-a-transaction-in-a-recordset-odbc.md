@@ -22,7 +22,7 @@ ms.locfileid: "50659590"
 
 1. 呼び出す、`CDatabase`オブジェクトの`BeginTrans`メンバー関数。
 
-1. バルク行フェッチを実装しない場合、 `AddNew/Update`、 `Edit/Update`、および`Delete`必要な回数と同じデータベースの 1 つまたは複数のレコード セット オブジェクトのメンバー関数。 詳細については、次を参照してください。[レコード セット: 追加、更新、およびレコードの削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)します。 バルク行フェッチを実装している場合は、データ ソースを更新する、独自の関数を記述する必要があります。
+1. バルク行フェッチを実装しない場合、 `AddNew/Update`、 `Edit/Update`、および`Delete`必要な回数と同じデータベースの 1 つまたは複数のレコード セット オブジェクトのメンバー関数。 詳細については、[レコード セット: 追加、更新、およびレコードの削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)を参照してください。 バルク行フェッチを実装している場合は、データ ソースを更新する、独自の関数を記述する必要があります。
 
 1. 最後に、呼び出し、`CDatabase`オブジェクトの`CommitTrans`メンバー関数。 呼び出す場合、更新プログラムのいずれかでエラーが発生したまたは変更をキャンセルする場合、その`Rollback`メンバー関数。
 

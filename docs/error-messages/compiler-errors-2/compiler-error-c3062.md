@@ -19,7 +19,7 @@ ms.locfileid: "58776376"
 
 列挙体は、基になる型を指定することができます。 ただし、一部の種類には、列挙子ごとに値を代入する必要があります。
 
-列挙型の詳細については、次を参照してください。[列挙型クラス](../../extensions/enum-class-cpp-component-extensions.md)します。
+列挙型の詳細については、[列挙型クラス](../../extensions/enum-class-cpp-component-extensions.md)を参照してください。
 
 次の例では、C3062 が生成されます。
 

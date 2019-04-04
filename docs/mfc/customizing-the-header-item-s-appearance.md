@@ -31,7 +31,7 @@ ms.locfileid: "57268838"
 
    **HDS_HIDDEN**スタイルでは、ヘッダー コントロールがデータ コンテナーとビジュアル コントロールではなくとして使用するものであることを示します。 このスタイルはコントロールが自動的に非表示されませんが、代わりの動作に影響`CHeaderCtrl::Layout`します。 返される値、 *cy*のメンバー、`WINDOWPOS`される構造は 0 をコントロールは、ユーザーに表示できないする必要があります。
 
-これらのプロパティの詳細については、次を参照してください。[項目](/windows/desktop/Controls/header-controls)Windows SDK に含まれています。 ヘッダー コントロールに項目を追加する方法の詳細については、次を参照してください。[ヘッダー コントロールへの項目の追加](../mfc/adding-items-to-the-header-control.md)します。
+これらのプロパティの詳細については、次を参照してください。[項目](/windows/desktop/Controls/header-controls)Windows SDK に含まれています。 ヘッダー コントロールに項目を追加する方法の詳細については、[ヘッダー コントロールへの項目の追加](../mfc/adding-items-to-the-header-control.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

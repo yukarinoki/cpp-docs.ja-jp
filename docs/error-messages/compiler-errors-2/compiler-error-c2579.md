@@ -17,4 +17,4 @@ ms.locfileid: "50512843"
 
 型 'type' (オフセット) を解決できません。 ファイルのことが必要です。
 
-C2579 は C4691 を常に従います。 詳細については、次を参照してください。[コンパイラの警告 (レベル 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)します。
+C2579 は C4691 を常に従います。 詳細については、[コンパイラの警告 (レベル 1) C4691](../../error-messages/compiler-warnings/compiler-warning-level-1-c4691.md)を参照してください。

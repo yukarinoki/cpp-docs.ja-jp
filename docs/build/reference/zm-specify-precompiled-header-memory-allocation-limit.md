@@ -44,7 +44,7 @@ Visual Studio 2015 より前に、のバージョンでは、C コンパイラ�
 
 かどうか、コンパイラはヒープ領域が不足し、出力、 [C1060](../../error-messages/compiler-errors-1/fatal-error-c1060.md)を使用すると、エラー メッセージ、 **/Zm**コンパイラ オプション、過度のメモリを予約した可能性があります。 削除を検討して、 **/Zm**オプション。
 
-コンパイラが出力する場合、 [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) 、付随するエラー メッセージは、 [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)メッセージを指定します、*係数*を使用して再コンパイルするときに使用する引数 **/Zm**コンパイラ オプション。 このメッセージは、プリコンパイル済みヘッダーを使用する場合にのみ重要な`#pragma hdrstop`します。 それ以外の場合は、Windows 仮想メモリ不足の問題とを使用する推奨設定が原因で誤ったエラー、 **/Zm**オプションを無視する必要があります。 代わりを使用する場合は、並列処理の数を減らすことを検討、 **/maxcpucount** msbuild オプション。実行可能ファイルと組み合わせて、 **/MP** CL するオプション。実行可能ファイルです。 詳細については、次を参照してください。[プリコンパイル済みヘッダー (PCH) の問題と推奨事項](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/)します。
+コンパイラが出力する場合、 [C1076](../../error-messages/compiler-errors-1/fatal-error-c1076.md) 、付随するエラー メッセージは、 [C3859](../../error-messages/compiler-errors-2/compiler-error-c3859.md)メッセージを指定します、*係数*を使用して再コンパイルするときに使用する引数 **/Zm**コンパイラ オプション。 このメッセージは、プリコンパイル済みヘッダーを使用する場合にのみ重要な`#pragma hdrstop`します。 それ以外の場合は、Windows 仮想メモリ不足の問題とを使用する推奨設定が原因で誤ったエラー、 **/Zm**オプションを無視する必要があります。 代わりを使用する場合は、並列処理の数を減らすことを検討、 **/maxcpucount** msbuild オプション。実行可能ファイルと組み合わせて、 **/MP** CL するオプション。実行可能ファイルです。 詳細については、[プリコンパイル済みヘッダー (PCH) の問題と推奨事項](https://devblogs.microsoft.com/cppblog/precompiled-header-pch-issues-and-recommendations/)を参照してください。
 
 次の表は、*要素*引数は、既定のプリコンパイル済みヘッダーのバッファーのサイズが 75 MB と仮定した場合にメモリ割り当て制限に影響します。
 
@@ -60,7 +60,7 @@ Visual Studio 2015 より前に、のバージョンでは、C コンパイラ�
 
 ### <a name="to-set-the-zm-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境で /Zm コンパイラ オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. ナビゲーション ウィンドウで選択**構成プロパティ** > **C/C++** > **コマンドライン**します。
 

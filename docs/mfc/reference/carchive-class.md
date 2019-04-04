@@ -296,7 +296,7 @@ BOOL IsBufferEmpty() const;
 
 MFC Windows Sockets クラスを使用したプログラミングをサポートするためにこの関数に渡された`CSocketFile`します。 関連付けられているアーカイブに使用する必要はありません、`CFile`オブジェクト。
 
-使用する理由`IsBufferEmpty`に関連付けられているアーカイブを使用して、`CSocketFile`オブジェクトは、アーカイブのバッファーにが 1 つ以上のメッセージまたはレコードに含まれます。 1 つのメッセージを受信するには、後に使用する必要があります`IsBufferEmpty`バッファーが空になるまでデータの受信を継続するループを制御します。 詳細については、次を参照してください。、[受信](../../mfc/reference/casyncsocket-class.md#receive)クラスのメンバー関数`CAsyncSocket`、使用する方法を示す`IsBufferEmpty`します。
+使用する理由`IsBufferEmpty`に関連付けられているアーカイブを使用して、`CSocketFile`オブジェクトは、アーカイブのバッファーにが 1 つ以上のメッセージまたはレコードに含まれます。 1 つのメッセージを受信するには、後に使用する必要があります`IsBufferEmpty`バッファーが空になるまでデータの受信を継続するループを制御します。 詳細については、、[受信](../../mfc/reference/casyncsocket-class.md#receive)クラスのメンバー関数`CAsyncSocket`、使用する方法を示す`IsBufferEmpty`を参照してください。
 
 詳細については、次を参照してください。 [Windows ソケット。アーカイブ付きソケットの使用](../../mfc/windows-sockets-using-sockets-with-archives.md)します。
 

@@ -480,7 +480,7 @@ bool IsSelfRelative() const throw();
 
 ### <a name="return-value"></a>戻り値
 
-セキュリティ記述子が自己相対形式で連続するメモリ ブロック内のすべてのセキュリティ情報がある場合に true を返します。 セキュリティ記述子には絶対形式の場合は false を返します。 詳細については、次を参照してください。[絶対有効期限と Self-Relative セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)します。
+セキュリティ記述子が自己相対形式で連続するメモリ ブロック内のすべてのセキュリティ情報がある場合に true を返します。 セキュリティ記述子には絶対形式の場合は false を返します。 詳細については、[絶対有効期限と Self-Relative セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)を参照してください。
 
 ##  <a name="makeabsolute"></a>  CSecurityDesc::MakeAbsolute
 
@@ -496,7 +496,7 @@ bool MakeAbsolute() throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-絶対形式のセキュリティ記述子には、情報自体ではなく、含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続するメモリ ブロックの情報が含まれています。 自己相対のセキュリティ記述子で、`SECURITY_DESCRIPTOR`構造体は、情報を常に開始されますが、セキュリティ記述子の他のコンポーネントは任意の順序で構造に従うことができます。 メモリ アドレスを使用する代わりに、自己相対のセキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに格納されているまたは通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、次を参照してください。[絶対有効期限と Self-Relative セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)します。
+絶対形式のセキュリティ記述子には、情報自体ではなく、含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続するメモリ ブロックの情報が含まれています。 自己相対のセキュリティ記述子で、`SECURITY_DESCRIPTOR`構造体は、情報を常に開始されますが、セキュリティ記述子の他のコンポーネントは任意の順序で構造に従うことができます。 メモリ アドレスを使用する代わりに、自己相対のセキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに格納されているまたは通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、[絶対有効期限と Self-Relative セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)を参照してください。
 
 ##  <a name="makeselfrelative"></a>  CSecurityDesc::MakeSelfRelative
 
@@ -512,7 +512,7 @@ bool MakeSelfRelative() throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-絶対形式のセキュリティ記述子には、自体の情報を格納しているのではなく、それに含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続するメモリ ブロックの情報が含まれています。 自己相対のセキュリティ記述子で、`SECURITY_DESCRIPTOR`構造体は、情報を常に開始されますが、セキュリティ記述子の他のコンポーネントは任意の順序で構造に従うことができます。 メモリ アドレスを使用する代わりに、セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに格納されているまたは通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、次を参照してください。[絶対有効期限と Self-Relative セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)します。
+絶対形式のセキュリティ記述子には、自体の情報を格納しているのではなく、それに含まれる情報へのポインターが含まれています。 自己相対形式のセキュリティ記述子には、連続するメモリ ブロックの情報が含まれています。 自己相対のセキュリティ記述子で、`SECURITY_DESCRIPTOR`構造体は、情報を常に開始されますが、セキュリティ記述子の他のコンポーネントは任意の順序で構造に従うことができます。 メモリ アドレスを使用する代わりに、セキュリティ記述子のコンポーネントは、セキュリティ記述子の先頭からのオフセットによって識別されます。 この形式は、セキュリティ記述子をディスクに格納されているまたは通信プロトコルを使用して送信する必要がある場合に便利です。 詳細については、[絶対有効期限と Self-Relative セキュリティ記述子](/windows/desktop/SecAuthZ/absolute-and-self-relative-security-descriptors)を参照してください。
 
 ##  <a name="operator_eq"></a>  CSecurityDesc::operator =
 
@@ -553,7 +553,7 @@ bool SetControl(
 ### <a name="parameters"></a>パラメーター
 
 *ControlBitsOfInterest*<br/>
-設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、次を参照してください。 [SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)します。
+設定する制御ビットを示す SECURITY_DESCRIPTOR_CONTROL マスク。 設定できるフラグの一覧は、[SetSecurityDescriptorControl](/windows/desktop/api/securitybaseapi/nf-securitybaseapi-setsecuritydescriptorcontrol)を参照してください。
 
 *ControlBitsToSet*<br/>
 によって指定される制御ビットの新しい値を示す SECURITY_DESCRIPTOR_CONTROL マスク、 *ControlBitsOfInterest*マスク。 このパラメーターの一覧表示フラグの組み合わせを指定できます、 *ControlBitsOfInterest*パラメーター。

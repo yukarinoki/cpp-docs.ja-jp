@@ -13,7 +13,7 @@ ms.locfileid: "50660331"
 ---
 # <a name="for-statement-c"></a>for ステートメント (C++)
 
-条件が偽 (false) になるまでステートメントを繰り返し実行します。 範囲ベースの for ステートメントについては、次を参照してください。[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)します。
+条件が偽 (false) になるまでステートメントを繰り返し実行します。 範囲ベースの for ステートメントについては、[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)を参照してください。
 
 ## <a name="syntax"></a>構文
 

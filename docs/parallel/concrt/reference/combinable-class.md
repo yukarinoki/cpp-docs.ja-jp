@@ -61,7 +61,7 @@ class combinable;
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、次を参照してください。[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)します。
+詳細については、[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)を参照してください。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

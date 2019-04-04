@@ -111,7 +111,7 @@ ms.locfileid: "57278765"
 
 セクション[一般的なクラス デザインの考え方](../mfc/general-class-design-philosophy.md)MFC ライブラリの設計方法について説明します。
 
-フレームワークの概要については、次を参照してください。 [Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)します。 上記のクラスの一部は、フレームワークの外部で使用できる汎用クラスであり、コレクション、例外、ファイル、文字列などの便利な抽象化を提供します。
+フレームワークの概要については、[Windows のアプリケーションを記述するクラスを使用して](../mfc/using-the-classes-to-write-applications-for-windows.md)を参照してください。 上記のクラスの一部は、フレームワークの外部で使用できる汎用クラスであり、コレクション、例外、ファイル、文字列などの便利な抽象化を提供します。
 
 クラスの継承を表示するには、使用、[クラス階層図](../mfc/hierarchy-chart.md)します。
 

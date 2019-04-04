@@ -131,7 +131,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-C2039 は、マネージド リソースまたはアンマネージド リソースを解放しようとしたときに発生する場合があります。 詳細については、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+C2039 は、マネージド リソースまたはアンマネージド リソースを解放しようとしたときに発生する場合があります。 詳細については、[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)を参照してください。
 
 次の例では、C2039 を生成します。
 

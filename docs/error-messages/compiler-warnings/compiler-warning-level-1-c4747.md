@@ -19,7 +19,7 @@ ms.locfileid: "50462388"
 
 コンパイラは、MSIL にコンパイル (可能性の高い) DLL エントリ ポイントを検出します。  エントリ ポイントが MSIL にコンパイルされた DLL を読み込むと潜在的な問題のため MSIL に DLL エントリ ポイント関数のコンパイルを強くお勧めしています。
 
-詳細については、次を参照してください。[混在アセンブリの初期化](../../dotnet/initialization-of-mixed-assemblies.md)と[リンカー ツール エラー LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md)します。
+詳細については、[混在アセンブリの初期化](../../dotnet/initialization-of-mixed-assemblies.md)と[リンカー ツール エラー LNK1306](../../error-messages/tool-errors/linker-tools-error-lnk1306.md)を参照してください。
 
 ### <a name="to-correct-this-error"></a>このエラーを解決するには
 

@@ -169,7 +169,7 @@ C++ では、これらの関数の使用はテンプレートのオーバーロ�
 
 これらの関数のデバッグ ライブラリのバージョンは、最初にバッファーを 0 xfd を入力します。 この動作を無効にするには、[_CrtSetDebugFillThreshold](crtsetdebugfillthreshold.md).を使用します。
 
-CRT には、null 終端文字を含む、各整数型の最も長い可能な値に変換するために必要なバッファーのサイズを定義して、いくつかの一般的なベースの文字の署名に便利なマクロが含まれています。 詳しくは、次を参照してください。[最大変換数マクロ](itoa-itow.md#maximum-conversion-count-macros)します。
+CRT には、null 終端文字を含む、各整数型の最も長い可能な値に変換するために必要なバッファーのサイズを定義して、いくつかの一般的なベースの文字の署名に便利なマクロが含まれています。 詳しくは、[最大変換数マクロ](itoa-itow.md#maximum-conversion-count-macros)を参照してください。
 
 ### <a name="generic-text-routine-mappings"></a>汎用テキスト ルーチンのマップ
 

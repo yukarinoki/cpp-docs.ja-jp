@@ -20,7 +20,7 @@ ATL プロジェクト ウィザードでは、既定で 2 つのプロジェク
 |解放|MBCS|[DLL]|
 |デバッグ|MBCS|[DLL]|
 
-**文字セット**、 **ATL の使用**すべてに変更することができ、**プロジェクト設定**] ダイアログ ボックス [、**全般**タブ。Configuration Manager を使用して、独自の構成を追加することもできます。 詳細については、次を参照してください。[ビルド構成](/visualstudio/ide/understanding-build-configurations)します。
+**文字セット**、 **ATL の使用**すべてに変更することができ、**プロジェクト設定**] ダイアログ ボックス [、**全般**タブ。Configuration Manager を使用して、独自の構成を追加することもできます。 詳細については、[ビルド構成](/visualstudio/ide/understanding-build-configurations)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

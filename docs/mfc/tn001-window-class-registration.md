@@ -84,7 +84,7 @@ const char* AfxRegisterWndClass(UINT nClassStyle,
     HICON hIcon);
 ```
 
-この関数は、生成された登録済みのウィンドウ クラス名の一時的な文字列を返します。 この関数の詳細については、次を参照してください。 [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)します。
+この関数は、生成された登録済みのウィンドウ クラス名の一時的な文字列を返します。 この関数の詳細については、[AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)を参照してください。
 
 返される文字列は、静的な文字列バッファーへの一時的なポインターです。 次の呼び出しまで有効です`AfxRegisterWndClass`します。 周りには、この文字列を保持する場合は、保存、 [CString](../atl-mfc-shared/using-cstring.md)この例のように、変数。
 

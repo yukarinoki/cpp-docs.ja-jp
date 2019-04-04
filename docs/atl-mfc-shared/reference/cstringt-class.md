@@ -245,7 +245,7 @@ MFC ベースのアプリケーション内で、次の文字列型がありま�
 
 - 代わりに使用することが自由に`CStringT`オブジェクトに対する`PCXSTR`関数の引数。
 
-- カスタムのメモリ管理の文字列バッファー。 詳細については、次を参照してください。[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)します。
+- カスタムのメモリ管理の文字列バッファー。 詳細については、[メモリ管理と CStringT](../../atl-mfc-shared/memory-management-with-cstringt.md)を参照してください。
 
 ## <a name="cstringt-predefined-types"></a>CStringT 組み込み型
 
@@ -292,7 +292,7 @@ BSTR AllocSysString() const;
 
 MFC プログラムで、 [CMemoryException クラス](../../mfc/reference/cmemoryexception-class.md)が不十分なメモリが存在する場合にスローされます。 ATL のプログラムで、 [CAtlException](../../atl/reference/catlexception-class.md)がスローされます。 この関数は通常、Automation で文字列を返すに使用します。
 
-一般的には、この文字列は、COM 関数に渡される場合は、[in] としてパラメーターで文字列を解放する呼び出し元が必要です。 これを使用して行うことができます[SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)」の説明に従って、Windows SDK。 詳細については、次を参照してください。[割り当てと BSTR のメモリの解放](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)します。
+一般的には、この文字列は、COM 関数に渡される場合は、[in] としてパラメーターで文字列を解放する呼び出し元が必要です。 これを使用して行うことができます[SysFreeString](/windows/desktop/api/oleauto/nf-oleauto-sysfreestring)」の説明に従って、Windows SDK。 詳細については、[割り当てと BSTR のメモリの解放](../../atl-mfc-shared/allocating-and-releasing-memory-for-a-bstr.md)を参照してください。
 
 Windows での OLE 割り当て関数の詳細については、次を参照してください。 [SysAllocString](/windows/desktop/api/oleauto/nf-oleauto-sysallocstring) Windows SDK に含まれています。
 
@@ -365,7 +365,7 @@ int Collate(PCXSTR psz) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-汎用テキスト関数`_tcscoll`TCHAR で定義されています。H は、いずれかにマップ`strcoll`、 `wcscoll`、または`_mbscoll`コンパイル時に定義されている文字セットによって異なります。 現在使用中で、各関数はコード ページに従って文字列の大文字小文字の比較を実行します。 詳細については、次を参照してください。 [strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)します。
+汎用テキスト関数`_tcscoll`TCHAR で定義されています。H は、いずれかにマップ`strcoll`、 `wcscoll`、または`_mbscoll`コンパイル時に定義されている文字セットによって異なります。 現在使用中で、各関数はコード ページに従って文字列の大文字小文字の比較を実行します。 詳細については、[strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)を参照してください。
 
 ##  <a name="collatenocase"></a>  CStringT::CollateNoCase
 
@@ -386,7 +386,7 @@ int CollateNoCase(PCXSTR psz) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-汎用テキスト関数`_tcscoll`TCHAR で定義されています。H は、いずれかにマップ`stricoll`、 `wcsicoll`、または`_mbsicoll`コンパイル時に定義されている文字セットによって異なります。 各関数は、現在使用されているコード ページに従って、文字列の大文字と小文字を実行します。 詳細については、次を参照してください。 [strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)します。
+汎用テキスト関数`_tcscoll`TCHAR で定義されています。H は、いずれかにマップ`stricoll`、 `wcsicoll`、または`_mbsicoll`コンパイル時に定義されている文字セットによって異なります。 各関数は、現在使用されているコード ページに従って、文字列の大文字と小文字を実行します。 詳細については、[strcoll、wcscoll、_mbscoll、_strcoll_l、_wcscoll_l、_mbscoll_l](../../c-runtime-library/reference/strcoll-wcscoll-mbscoll-strcoll-l-wcscoll-l-mbscoll-l.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -411,7 +411,7 @@ int Compare(PCXSTR psz) const;
 
 ### <a name="remarks"></a>Remarks
 
-汎用テキスト関数`_tcscmp`TCHAR で定義されています。H は、いずれかにマップ`strcmp`、 `wcscmp`、または`_mbscmp`コンパイル時に定義されている文字セットによって異なります。 各関数は、文字列の大文字小文字の比較を実行し、ロケールの影響を受けません。 詳細については、次を参照してください。 [strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)します。
+汎用テキスト関数`_tcscmp`TCHAR で定義されています。H は、いずれかにマップ`strcmp`、 `wcscmp`、または`_mbscmp`コンパイル時に定義されている文字セットによって異なります。 各関数は、文字列の大文字小文字の比較を実行し、ロケールの影響を受けません。 詳細については、[strcmp、wcscmp、_mbscmp](../../c-runtime-library/reference/strcmp-wcscmp-mbscmp.md)を参照してください。
 
 文字列に埋め込み null 値が含まれている場合の比較のために、文字列と見なされます最初の埋め込まれた null 文字で切り捨てられます。
 
@@ -440,7 +440,7 @@ int CompareNoCase(PCXSTR psz) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-汎用テキスト関数`_tcsicmp`TCHAR で定義されています。H は、いずれかにマップ`_stricmp`、`_wcsicmp`または`_mbsicmp`コンパイル時に定義されている文字セットによって異なります。 各関数は、大文字と小文字の文字列を実行します。 比較は、ロケールがない LC_COLLATE LC_CTYPE 縦横に依存します。 詳細については、次を参照してください。 [_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)します。
+汎用テキスト関数`_tcsicmp`TCHAR で定義されています。H は、いずれかにマップ`_stricmp`、`_wcsicmp`または`_mbsicmp`コンパイル時に定義されている文字セットによって異なります。 各関数は、大文字と小文字の文字列を実行します。 比較は、ロケールがない LC_COLLATE LC_CTYPE 縦横に依存します。 詳細については、[_stricmp、_wcsicmp、_mbsicmp、_stricmp_l、_wcsicmp_l、_mbsicmp_l](../../c-runtime-library/reference/stricmp-wcsicmp-mbsicmp-stricmp-l-wcsicmp-l-mbsicmp-l.md)を参照してください。
 
 ### <a name="example"></a>例
 

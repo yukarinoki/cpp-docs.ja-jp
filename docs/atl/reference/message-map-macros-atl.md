@@ -106,13 +106,13 @@ ALT_MSG_MAP(msgMapID)
 
 ATL では、各メッセージ マップの数を識別します。 (送るにマクロで宣言された) 既定のメッセージ マップは、0 によって識別されます。 代替メッセージ マップがで識別される*msgMapID*します。
 
-メッセージ マップは、ウィンドウに送信されるメッセージの処理に使用されます。 たとえば、 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)コンテナー オブジェクトでメッセージ マップの識別子を指定することができます。 [CContainedWindow::WindowProc](ccontainedwindowt-class.md#windowproc)このメッセージ マップを使用して、適切なハンドラー関数に、または別のメッセージ マップに含まれているウィンドウのメッセージを送信します。 ハンドラー関数を宣言するマクロの一覧は、次を参照してください。[送るに](#begin_msg_map)します。
+メッセージ マップは、ウィンドウに送信されるメッセージの処理に使用されます。 たとえば、 [CContainedWindow](../../atl/reference/ccontainedwindowt-class.md)コンテナー オブジェクトでメッセージ マップの識別子を指定することができます。 [CContainedWindow::WindowProc](ccontainedwindowt-class.md#windowproc)このメッセージ マップを使用して、適切なハンドラー関数に、または別のメッセージ マップに含まれているウィンドウのメッセージを送信します。 ハンドラー関数を宣言するマクロの一覧は、[送るに](#begin_msg_map)を参照してください。
 
 常に、メッセージ マップを開始します。 代替の後続のメッセージ マップを宣言することができます。
 
 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 1 つのインスタンスは常に注意してください。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -201,7 +201,7 @@ BEGIN_MSG_MAP(theClass)
 
 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 1 つのインスタンスは常に注意してください。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -225,12 +225,12 @@ CHAIN_MSG_MAP_ALT(theChainClass, msgMapID)
 
 ### <a name="remarks"></a>Remarks
 
-CHAIN_MSG_MAP_ALT では、基底クラスの代替メッセージ マップへのメッセージを送信します。 この代替メッセージ マップが宣言されている必要があります[ALT_MSG_MAP(msgMapID)](#alt_msg_map)します。 基本クラスの既定のメッセージ マップにメッセージを送信する (で宣言された[送るに](#begin_msg_map))、CHAIN_MSG_MAP を使用します。 例については、次を参照してください。 [CHAIN_MSG_MAP](#chain_msg_map)します。
+CHAIN_MSG_MAP_ALT では、基底クラスの代替メッセージ マップへのメッセージを送信します。 この代替メッセージ マップが宣言されている必要があります[ALT_MSG_MAP(msgMapID)](#alt_msg_map)します。 基本クラスの既定のメッセージ マップにメッセージを送信する (で宣言された[送るに](#begin_msg_map))、CHAIN_MSG_MAP を使用します。 例については、[CHAIN_MSG_MAP](#chain_msg_map)を参照してください。
 
 > [!NOTE]
 >  常に、メッセージ マップを開始します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -254,12 +254,12 @@ CHAIN_MSG_MAP_ALT_MEMBER(theChainMember, msgMapID)
 
 ### <a name="remarks"></a>Remarks
 
-CHAIN_MSG_MAP_ALT_MEMBER は、データ メンバー、別のメッセージ マップにメッセージを送信します。 この代替メッセージ マップが宣言されている必要があります[ALT_MSG_MAP(msgMapID)](#alt_msg_map)します。 データ メンバーの既定のメッセージ マップにメッセージを送信する (で宣言された[送るに](#begin_msg_map))、CHAIN_MSG_MAP_MEMBER を使用します。 例については、次を参照してください。 [CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)します。
+CHAIN_MSG_MAP_ALT_MEMBER は、データ メンバー、別のメッセージ マップにメッセージを送信します。 この代替メッセージ マップが宣言されている必要があります[ALT_MSG_MAP(msgMapID)](#alt_msg_map)します。 データ メンバーの既定のメッセージ マップにメッセージを送信する (で宣言された[送るに](#begin_msg_map))、CHAIN_MSG_MAP_MEMBER を使用します。 例については、[CHAIN_MSG_MAP_MEMBER](#chain_msg_map_member)を参照してください。
 
 > [!NOTE]
 >  常に、メッセージ マップを開始します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -285,7 +285,7 @@ CHAIN_MSG_MAP が基本クラスの既定のメッセージ マップにメッ�
 > [!NOTE]
 >  常に、メッセージ マップを開始します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -323,7 +323,7 @@ CHAIN_MSG_MAP_DYNAMIC(dynaChainID)
 > [!NOTE]
 >  メッセージ マップは常に開始[送るに](#begin_msg_map)します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -349,7 +349,7 @@ CHAIN_MSG_MAP_MEMBER データ メンバーの既定のメッセージ マップ
 > [!NOTE]
 >  常に、メッセージ マップを開始します。 ALT_MSG_MAP を使って代替メッセージ マップを宣言することができます。 [も](#end_msg_map)マクロは、メッセージ マップの終わりをマークします。 すべてのメッセージ マップには、1 つのインスタンスも必要があります。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -423,7 +423,7 @@ COMMAND_HANDLER マクロで指定された任意の関数は、次のように�
 
 使用することができます、COMMAND_HANDLER に加えて[MESSAGE_HANDLER](#message_handler)識別子またはコードに関係なく WM_COMMAND メッセージにマップします。 この場合、`MESSAGE_HANDLER(WM_COMMAND, OnHandlerFunction)`すべて WM_COMMAND メッセージには直接`OnHandlerFunction`します。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -546,7 +546,7 @@ END_MSG_MAP()
 
 1 つのインスタンスは常に注意してください。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -609,7 +609,7 @@ MESSAGE_HANDLER マクロで指定された任意の関数は、次のように�
 
 MESSAGE_HANDLER、に加えて使用できます[COMMAND_HANDLER](#command_handler)と[NOTIFY_HANDLER](#notify_handler)にマップする[WM_COMMAND](/windows/desktop/menurc/wm-command)と[WM_NOTIFY](/windows/desktop/controls/wm-notify)メッセージ、それぞれします。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="example"></a>例
 
@@ -696,7 +696,7 @@ NOTIFY_HANDLER マクロで指定された任意の関数は、次のように�
 
 使用することができます、NOTIFY_HANDLER に加えて[MESSAGE_HANDLER](#message_handler)識別子またはコードに関係なく WM_NOTIFY メッセージにマップします。 この場合、`MESSAGE_HANDLER(WM_NOTIFY, OnHandlerFunction)`すべて WM_NOTIFY メッセージには直接`OnHandlerFunction`します。
 
-ATL でメッセージ マップの使用に関する詳細については、次を参照してください。[メッセージ マップ](../../atl/message-maps-atl.md)します。
+ATL でメッセージ マップの使用に関する詳細については、[メッセージ マップ](../../atl/message-maps-atl.md)を参照してください。
 
 ### <a name="example"></a>例
 

@@ -188,7 +188,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 > [!IMPORTANT]
 > これらの関数は、小さすぎてバッファーの末尾に記述できます。 バッファー オーバーランを回避することを確認します*バッファー*変換された数字および末尾の null 文字と記号の文字を保持するのに十分な大きさです。 これらの関数の誤用重大なセキュリティの問題が原因で、コード。
 
-これらの関数が非推奨の警告を発生するセキュリティ問題については、既定では、その可能性があるのため[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**この関数または変数が安全なない可能性があります。使用を検討して** *safe_function* **代わりにします。非推奨を無効にするには、_CRT_SECURE_NO_WARNINGS を使用します。** 使用するソース コードを変更することをお勧めします。、 *safe_function*警告メッセージをお勧めします。 安全な関数には、指定されたバッファー サイズより多くの文字は書き込みません。 詳細については、次を参照してください。 [_itoa_s、_itow_s 関数](itoa-s-itow-s.md)します。
+これらの関数が非推奨の警告を発生するセキュリティ問題については、既定では、その可能性があるのため[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**この関数または変数が安全なない可能性があります。使用を検討して** *safe_function* **代わりにします。非推奨を無効にするには、_CRT_SECURE_NO_WARNINGS を使用します。** 使用するソース コードを変更することをお勧めします。、 *safe_function*警告メッセージをお勧めします。 安全な関数には、指定されたバッファー サイズより多くの文字は書き込みません。 詳細については、[_itoa_s、_itow_s 関数](itoa-s-itow-s.md)を参照してください。
 
 非推奨の警告なくこれらの関数を使用する定義、 **_CRT_SECURE_NO_WARNINGS** CRT ヘッダーをインクルードする前にプリプロセッサ マクロ。 これを行う開発者コマンド プロンプトでコマンド ラインで追加することで、 **/D_CRT_SECURE_NO_WARNINGS**コンパイラ オプションを**cl**コマンド。 それ以外の場合、ソース ファイルで、マクロを定義します。 プリコンパイル済みヘッダーを使用する場合は、プリコンパイル済みヘッダーの上部にあるマクロを定義します。 通常 stdafx.h ファイルを含めるようにします。 ソース コードでマクロを定義するには、使用、 **#define**ディレクティブがこの例のように、すべての CRT ヘッダーをインクルードする前に。
 
@@ -199,7 +199,7 @@ wchar_t * _ui64tow( unsigned long long value, wchar_t (&buffer)[size],
 
 C++ では、これらの関数はより安全な対応を呼び出すテンプレートのオーバー ロードがあります。 詳細については、「 [Secure Template Overloads](../../c-runtime-library/secure-template-overloads.md)」を参照してください。
 
-Posix 名**itoa**、 **ltoa**、および**ultoa**のエイリアスとして存在、 **_itoa**、 **_ltoa**と **_ultoa**関数。 Posix 名は、ISO c ドライブの実装に固有の関数の名前付け規則に従っていないため、非推奨します。既定では、これらの関数は非推奨の警告を発生[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**このアイテムの POSIX 名が非推奨とされます。代わりに、ISO C および C++ に準拠する名前を使用:** *new_name*します。 これらの関数のより安全なバージョンを使用するソース コードを変更することをお勧めします。 **_itoa_s**、 **_ltoa_s**、または **_ultoa_s**します。 詳細については、次を参照してください。 [_itoa_s、_itow_s 関数](itoa-s-itow-s.md)します。
+Posix 名**itoa**、 **ltoa**、および**ultoa**のエイリアスとして存在、 **_itoa**、 **_ltoa**と **_ultoa**関数。 Posix 名は、ISO c ドライブの実装に固有の関数の名前付け規則に従っていないため、非推奨します。既定では、これらの関数は非推奨の警告を発生[C4996](../../error-messages/compiler-warnings/compiler-warning-level-3-c4996.md):**このアイテムの POSIX 名が非推奨とされます。代わりに、ISO C および C++ に準拠する名前を使用:** *new_name*します。 これらの関数のより安全なバージョンを使用するソース コードを変更することをお勧めします。 **_itoa_s**、 **_ltoa_s**、または **_ultoa_s**します。 詳細については、[_itoa_s、_itow_s 関数](itoa-s-itow-s.md)を参照してください。
 
 ソース コードの移植性のため、コード内の Posix 名を保持することもできます。 非推奨の警告なくこれらの関数を使用するには、両方を定義、 **_CRT_NONSTDC_NO_WARNINGS**と **_CRT_SECURE_NO_WARNINGS** CRT ヘッダーをインクルードする前にプリプロセッサ マクロ。 これを行う開発者コマンド プロンプトでコマンド ラインで追加することで、 **/D_CRT_SECURE_NO_WARNINGS**と **/D_CRT_NONSTDC_NO_WARNINGS**コンパイラ オプションを**cl**コマンド。 それ以外の場合、ソース ファイルで、マクロを定義します。 プリコンパイル済みヘッダーを使用する場合は、定義プリコンパイル済みヘッダーの上部にあるマクロが通常 stdafx.h ファイルを含めるようにします。 ソース コードでマクロを定義するには、使用 **#define**ディレクティブがこの例のように、すべての CRT ヘッダーをインクルードする前に。
 

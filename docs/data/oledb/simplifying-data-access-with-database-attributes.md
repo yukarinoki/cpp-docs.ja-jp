@@ -51,7 +51,7 @@ ms.locfileid: "50534839"
 
 属性付きおよびテンプレートを使ったコードを使用して行セット プロパティを設定する必要があります`CDBPropSet::AddProperty`します。
 
-このトピックで説明する属性については、次を参照してください。 [OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)します。
+このトピックで説明する属性については、[OLE DB コンシューマー属性](../../windows/ole-db-consumer-attributes.md)を参照してください。
 
 > [!NOTE]
 > 次`include`ステートメントは次の例をコンパイルするために必要なもの。

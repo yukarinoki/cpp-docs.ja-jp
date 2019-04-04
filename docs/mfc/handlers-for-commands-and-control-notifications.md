@@ -25,7 +25,7 @@ ms.locfileid: "57296697"
 
 [!code-cpp[NVC_MFCMessageHandling#4](../mfc/codesnippet/cpp/handlers-for-commands-and-control-notifications_1.h)]
 
-として Cut コマンドのコマンド ID は、フレームワークが組み込まれて Cut コマンドは、アプリケーションによくため実装されたため、 **ID_EDIT_CUT**します。 定義済みのすべてのコマンド Id の一覧は、コマ ファイルを参照してください。H. 詳細については、次を参照してください。[標準コマンド](../mfc/standard-commands.md)します。
+として Cut コマンドのコマンド ID は、フレームワークが組み込まれて Cut コマンドは、アプリケーションによくため実装されたため、 **ID_EDIT_CUT**します。 定義済みのすべてのコマンド Id の一覧は、コマ ファイルを参照してください。H. 詳細については、[標準コマンド](../mfc/standard-commands.md)を参照してください。
 
 さらに、規則がのハンドラーを提案、 **BN_CLICKED**名前に「マイ ボタン」というラベルのボタンからの通知メッセージ
 

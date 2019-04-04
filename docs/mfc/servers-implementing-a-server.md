@@ -34,11 +34,11 @@ ms.locfileid: "57267564"
 
 - 派生したフレーム ウィンドウ クラスを定義する`COleIPFrameWnd`します。 詳細については、次を参照してください。[サーバー。フレームの Windows を実装する](../mfc/servers-implementing-in-place-frame-windows.md)します。
 
-- Windows の登録データベースにサーバー アプリケーションのエントリを作成し、OLE システム、サーバーの新しいインスタンスを登録します。 このトピックでは、次を参照してください。[登録](../mfc/registration.md)します。
+- Windows の登録データベースにサーバー アプリケーションのエントリを作成し、OLE システム、サーバーの新しいインスタンスを登録します。 このトピックでは、[登録](../mfc/registration.md)を参照してください。
 
-- 初期化とサーバー アプリケーションを起動します。 このトピックでは、次を参照してください。[登録](../mfc/registration.md)します。
+- 初期化とサーバー アプリケーションを起動します。 このトピックでは、[登録](../mfc/registration.md)を参照してください。
 
-詳細については、次を参照してください。 [COleServerItem](../mfc/reference/coleserveritem-class.md)、 [COleServerDoc](../mfc/reference/coleserverdoc-class.md)、および[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)で、*クラス ライブラリ リファレンス*します。
+詳細については、[COleServerItem](../mfc/reference/coleserveritem-class.md)、 [COleServerDoc](../mfc/reference/coleserverdoc-class.md)、および[COleIPFrameWnd](../mfc/reference/coleipframewnd-class.md)で、*クラス ライブラリ リファレンス*を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

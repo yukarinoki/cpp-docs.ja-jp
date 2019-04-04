@@ -21,7 +21,7 @@ ms.locfileid: "50440405"
 
 1 つ以上の純粋仮想関数を持つクラスまたは構造体をインスタンス化することはできません。 派生クラスのオブジェクトをインスタンス化するには、派生クラスが各純粋仮想関数をオーバーライドする必要があります。
 
-詳細については、次を参照してください。[暗黙的な抽象クラス](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)します。
+詳細については、[暗黙的な抽象クラス](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Implicitly_abstract_classes)を参照してください。
 
 次の例では、C2259 が生成されます。
 

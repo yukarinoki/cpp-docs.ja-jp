@@ -43,8 +43,7 @@ ms.locfileid: "57741898"
 
 ## <a name="parse_regex"></a> 正規表現を使用して文字列を解析します。
 
-
-  <xref:System.Text.RegularExpressions.Regex> 名前空間の <xref:System.Text.RegularExpressions?displayProperty=fullName> クラスを使用して単純な文字列を解析する方法を次のコード例に示します。 複数のワード デリニエイタの型を含む文字列が構成されます。 次に、<xref:System.Text.RegularExpressions.Regex> クラスを <xref:System.Text.RegularExpressions.Match> クラスと共に使用して文字列が解析されます。 さらに、センテンス内の各単語を個別に表示します。
+<xref:System.Text.RegularExpressions.Regex> 名前空間の <xref:System.Text.RegularExpressions?displayProperty=fullName> クラスを使用して単純な文字列を解析する方法を次のコード例に示します。 複数のワード デリニエイタの型を含む文字列が構成されます。 次に、<xref:System.Text.RegularExpressions.Regex> クラスを <xref:System.Text.RegularExpressions.Match> クラスと共に使用して文字列が解析されます。 さらに、センテンス内の各単語を個別に表示します。
 
 ### <a name="example"></a>例
 
@@ -82,8 +81,7 @@ int main( )
 
 ## <a name="parse_split"></a> Split メソッドを使用して文字列を解析します。
 
-
-  <xref:System.String.Split%2A?displayProperty=fullName> メソッドを使用して、文字列から各単語を抽出する方法を次のコード例に示します。 デリニエイタ リストを指定して <xref:System.String.Split%2A> を呼び出すと、複数の型のワード デリニエイタを含む文字列が構成され、解析されます。 さらに、センテンス内の各単語を個別に表示します。
+<xref:System.String.Split%2A?displayProperty=fullName> メソッドを使用して、文字列から各単語を抽出する方法を次のコード例に示します。 デリニエイタ リストを指定して <xref:System.String.Split%2A> を呼び出すと、複数の型のワード デリニエイタを含む文字列が構成され、解析されます。 さらに、センテンス内の各単語を個別に表示します。
 
 ### <a name="example"></a>例
 

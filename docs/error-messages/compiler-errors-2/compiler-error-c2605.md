@@ -17,7 +17,7 @@ ms.locfileid: "50676266"
 
 'name': このメソッドは、マネージド クラスまたは WinRT クラスで予約されています
 
-内部関数用に、いくつかの名前がコンパイラによって予約されています。  詳細については、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
+内部関数用に、いくつかの名前がコンパイラによって予約されています。  詳細については、[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)を参照してください。
 
 ## <a name="example"></a>例
 

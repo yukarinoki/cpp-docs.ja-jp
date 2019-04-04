@@ -16,7 +16,7 @@ ms.locfileid: "57277899"
 ---
 # <a name="ole-db-classes"></a>OLE DB クラス
 
-クラスの現在は、MFC の OLE DB サポート[COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)します。 `COleDBRecordView` 直接接続されているフォーム ビューでのコントロールでのデータベース レコードを表示、 [CRowset](../data/oledb/crowset-class.md)オブジェクト。 OLE DB コンシューマー テンプレートの詳細については、次を参照してください。[一覧の OLE DB コンシューマー テンプレート](../data/oledb/ole-db-consumer-templates-reference.md)します。
+クラスの現在は、MFC の OLE DB サポート[COLEDBRecordView](../mfc/reference/coledbrecordview-class.md)します。 `COleDBRecordView` 直接接続されているフォーム ビューでのコントロールでのデータベース レコードを表示、 [CRowset](../data/oledb/crowset-class.md)オブジェクト。 OLE DB コンシューマー テンプレートの詳細については、[一覧の OLE DB コンシューマー テンプレート](../data/oledb/ole-db-consumer-templates-reference.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

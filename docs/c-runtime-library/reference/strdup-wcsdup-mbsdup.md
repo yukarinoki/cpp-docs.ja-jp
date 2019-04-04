@@ -54,7 +54,7 @@ ms.locfileid: "50461517"
 文字列を複製します。
 
 > [!IMPORTANT]
-> **_mbsdup** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)します。
+> **_mbsdup** Windows ランタイムで実行するアプリケーションでは使用できません。 詳細については、[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)を参照してください。
 
 ## <a name="syntax"></a>構文
 

@@ -124,7 +124,7 @@ class CHeaderCtrl : public CWnd
 
 ## <a name="remarks"></a>Remarks
 
-ヘッダー コントロールは、テキストまたは数値の列のセットの上に配置された通常ウィンドウです。 各列のタイトルが含まれているし、部分に分割できる場合します。 ユーザーは、各列の幅を設定する部分を分割する区切り線をドラッグできます。 ヘッダー コントロールの図解は、次を参照してください。[ヘッダー コントロール](/windows/desktop/Controls/header-controls)します。
+ヘッダー コントロールは、テキストまたは数値の列のセットの上に配置された通常ウィンドウです。 各列のタイトルが含まれているし、部分に分割できる場合します。 ユーザーは、各列の幅を設定する部分を分割する区切り線をドラッグできます。 ヘッダー コントロールの図解は、[ヘッダー コントロール](/windows/desktop/Controls/header-controls)を参照してください。
 
 このコントロール (つまり、`CHeaderCtrl`クラス) は以降 Windows 95/98 および Windows NT 3.51 の下で実行するプログラムにのみ使用できます。
 
@@ -641,7 +641,7 @@ BOOL GetOverflowRect(LPRECT lpRect) const;
 
 ### <a name="remarks"></a>Remarks
 
-ヘッダー コントロールに同時に表示できるほど多くの項目が含まれている場合、コントロールは表示されない項目をスクロールするオーバーフロー ボタンを表示できます。 ヘッダー コントロールには、HDS_OVERFLOW と HDF_SPLITBUTTON スタイル オーバーフロー ボタンを表示する必要があります。 外接する四角形は、オーバーフロー ボタンを囲むし、オーバーフロー ボタンが表示される場合にのみ存在します。 詳細については、次を参照してください。[ヘッダー コントロールのスタイル](/windows/desktop/Controls/header-control-styles)します。
+ヘッダー コントロールに同時に表示できるほど多くの項目が含まれている場合、コントロールは表示されない項目をスクロールするオーバーフロー ボタンを表示できます。 ヘッダー コントロールには、HDS_OVERFLOW と HDF_SPLITBUTTON スタイル オーバーフロー ボタンを表示する必要があります。 外接する四角形は、オーバーフロー ボタンを囲むし、オーバーフロー ボタンが表示される場合にのみ存在します。 詳細については、[ヘッダー コントロールのスタイル](/windows/desktop/Controls/header-control-styles)を参照してください。
 
 このメソッドは、送信、 [HDM_GETOVERFLOWRECT](/windows/desktop/Controls/hdm-getoverflowrect)メッセージは、Windows SDK で説明します。
 

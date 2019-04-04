@@ -30,7 +30,7 @@ Visual Studio 2015 以前のバージョンで、レベル 3 の警告 C4800 に
 ::: moniker-end
 
 ::: moniker range=">= vs-2019"
-この警告は以降では、Visual Studio 2019 既定で無効にします。 使用 __/w__*n*__4800__レベルとして C4800 を有効にする*n*警告、または[/wall](../../build/reference/compiler-option-warning-level.md)すべての警告を有効にします。既定で無効にします。 詳細については、次を参照してください。[コンパイラの警告を、既定でオフ](../../preprocessor/compiler-warnings-that-are-off-by-default.md)します。
+この警告は以降では、Visual Studio 2019 既定で無効にします。 使用 __/w__*n*__4800__レベルとして C4800 を有効にする*n*警告、または[/wall](../../build/reference/compiler-option-warning-level.md)すべての警告を有効にします。既定で無効にします。 詳細については、[コンパイラの警告を、既定でオフ](../../preprocessor/compiler-warnings-that-are-off-by-default.md)を参照してください。
 ::: moniker-end
 
 ## <a name="example"></a>例

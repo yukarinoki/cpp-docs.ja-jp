@@ -20,9 +20,9 @@ Windows フォームは、.NET Framework で Microsoft Windows アプリケー�
 
 ただし、MFC を使い慣れている開発者は、Windows フォームでまだ明示的にサポートされていない種類のアプリケーションを作成することに慣れている場合があります。 Windows フォーム アプリケーションは、MFC ダイアログ アプリケーションとほぼ同等です。 しかし、Windows フォーム アプリケーションには、OLE ドキュメント サーバー/コンテナー、ActiveX ドキュメントなどの他の種類の MFC アプリケーションを直接サポートするインフラストラクチャが用意されていません。また、シングル ドキュメント インターフェイス (SDI)、マルチ ドキュメント インターフェイス (MDI)、およびマルチ トップレベル インターフェイス (MTI) のドキュメント/ビューもサポートしません。 プログラマは、独自のロジックを記述してこれらのアプリケーションを作成できます。
 
-Windows フォーム アプリケーションについての詳細については、次を参照してください。 [Windows フォームの概要](/dotnet/framework/winforms/windows-forms-overview)します。
+Windows フォーム アプリケーションについての詳細については、[Windows フォームの概要](/dotnet/framework/winforms/windows-forms-overview)を参照してください。
 
-Windows フォームと MFC を示すサンプル アプリケーションの場合、次を参照してください。 [MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)します。
+Windows フォームと MFC を示すサンプル アプリケーションの場合、[MFC と Windows フォーム統合](http://www.microsoft.com/downloads/details.aspx?FamilyID=987021bc-e575-4fe3-baa9-15aa50b0f599&displaylang=en)を参照してください。
 
 Windows フォームには、次の MFC ビュー/ドキュメント、およびコマンド ルーティングに相当する機能がありません。
 
@@ -44,7 +44,7 @@ Windows フォームには、次の MFC ビュー/ドキュメント、および
 
 - コマンド
 
-   MFC には、コマンドの概念があります。 メニュー バー、ツール バー、およびコンテキスト メニューのどれを使用しても、[切り取り] や [コピー] などの同じコマンドを呼び出すことができます。 Windows フォームでは、コマンドはメニュー項目などの特定の UI 要素に密接に関連付けられたイベントであるため、すべてのコマンド イベントを明示的にフックする必要があります。 Windows フォームでは、単一のハンドラーで複数のイベントを処理することもできます。 詳細については、次を参照してください。[複数のイベントを Windows フォームの 1 つのイベント ハンドラーを接続する](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms)します。
+   MFC には、コマンドの概念があります。 メニュー バー、ツール バー、およびコンテキスト メニューのどれを使用しても、[切り取り] や [コピー] などの同じコマンドを呼び出すことができます。 Windows フォームでは、コマンドはメニュー項目などの特定の UI 要素に密接に関連付けられたイベントであるため、すべてのコマンド イベントを明示的にフックする必要があります。 Windows フォームでは、単一のハンドラーで複数のイベントを処理することもできます。 詳細については、[複数のイベントを Windows フォームの 1 つのイベント ハンドラーを接続する](/dotnet/framework/winforms/how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms)を参照してください。
 
 - コマンド ルーティング
 

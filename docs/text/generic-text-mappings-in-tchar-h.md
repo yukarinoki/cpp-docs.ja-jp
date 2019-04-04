@@ -66,16 +66,14 @@ _TCHAR *RetVal, *szString;
 RetVal = _tcsrev(szString);
 ```
 
-
-  `_MBCS` が定義されていると、プリプロセッサによって次のコードに変換されます。
+`_MBCS` が定義されていると、プリプロセッサによって次のコードに変換されます。
 
 ```cpp
 char *RetVal, *szString;
 RetVal = _mbsrev(szString);
 ```
 
-
-  `_UNICODE` が定義されていると、プリプロセッサによって次のコードに変換されます。
+`_UNICODE` が定義されていると、プリプロセッサによって次のコードに変換されます。
 
 ```cpp
 wchar_t *RetVal, *szString;

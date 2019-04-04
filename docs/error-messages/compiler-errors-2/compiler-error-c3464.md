@@ -19,7 +19,7 @@ ms.locfileid: "58775297"
 
 型の転送は、入れ子にされた型では動作しません。
 
-詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
+詳細については、[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)を参照してください。
 
 ## <a name="example"></a>例
 

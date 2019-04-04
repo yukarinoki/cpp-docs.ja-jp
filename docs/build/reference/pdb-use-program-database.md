@@ -37,11 +37,11 @@ ms.locfileid: "57821509"
 
 PDB ファイルには、最大 2 GB を指定できます。
 
-詳細については、次を参照してください。[リンカー入力としての .pdb ファイル](dot-pdb-files-as-linker-input.md)します。
+詳細については、[リンカー入力としての .pdb ファイル](dot-pdb-files-as-linker-input.md)を参照してください。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
 
 1. をクリックして、**リンカー**フォルダー。
 

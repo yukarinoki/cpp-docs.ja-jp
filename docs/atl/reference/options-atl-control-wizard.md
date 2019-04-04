@@ -37,11 +37,11 @@ ms.locfileid: "57282982"
 
   - 複合コントロールを含む HTML テスト ページ。
 
-    既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。 シンクのマップを実装します。 詳細については、次を参照してください。 [DHTML コントロールのサポート](../../atl/atl-support-for-dhtml-controls.md)します。
+    既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。 シンクのマップを実装します。 詳細については、[DHTML コントロールのサポート](../../atl/atl-support-for-dhtml-controls.md)を参照してください。
 
 - **DHTML コントロール**:ATL DHTML コントロールでは、HTML を使用して、ユーザー インターフェイスを指定します。 DHTML UI クラスには、COM マップが含まれています。 既定では、このコントロールの設定[CComControlBase::m_bWindowOnly](../../atl/reference/ccomcontrolbase-class.md#m_bwindowonly)ウィンドウ付きコントロールであることを示す true にします。
 
-   詳細については、次を参照してください。 [DHTML コントロール プロジェクトの要素の識別](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)します。
+   詳細については、[DHTML コントロール プロジェクトの要素の識別](../../atl/identifying-the-elements-of-the-dhtml-control-project.md)を参照してください。
 
 ### <a name="minimal-control"></a>最小限の制御
 
@@ -49,7 +49,7 @@ ms.locfileid: "57282982"
 
 ### <a name="aggregation"></a>集約
 
-作成するコントロールの集計のサポートを追加します。 詳細については、次を参照してください。[集計](../../atl/aggregation.md)します。
+作成するコントロールの集計のサポートを追加します。 詳細については、[集計](../../atl/aggregation.md)を参照してください。
 
 - **[はい]**:集計可能なコントロールを作成します。
 

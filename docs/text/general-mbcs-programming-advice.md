@@ -18,7 +18,7 @@ ms.locfileid: "57814359"
 
 次のヒントを使用します。
 
-- 柔軟性を高めるには、実行時マクロをなど使用`_tcschr`と`_tcscpy`可能な場合。 詳細については、次を参照してください。 [tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)します。
+- 柔軟性を高めるには、実行時マクロをなど使用`_tcschr`と`_tcscpy`可能な場合。 詳細については、[tchar.h における汎用テキスト マッピング](../text/generic-text-mappings-in-tchar-h.md)を参照してください。
 
 - C ランタイムを使用して、`_getmbcp`関数が現在のコード ページに関する情報を取得します。
 

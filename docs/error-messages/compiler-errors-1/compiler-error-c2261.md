@@ -21,7 +21,7 @@ ms.locfileid: "50535747"
 
 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> フレンド アセンブリの指定に使用されます。 たとえば、a.dll b.dll をフレンド アセンブリとして指定する場合とで指定する (a.dll): InternalsVisibleTo("b") します。 ランタイムには、b.dll a.dll (プライベート型) を除くのすべてのアクセスが許可されます。
 
-フレンド アセンブリを指定するときに、正しい構文の詳細は、次を参照してください。[フレンド アセンブリ (C++)](../../dotnet/friend-assemblies-cpp.md)します。
+フレンド アセンブリを指定するときに、正しい構文の詳細は、[フレンド アセンブリ (C++)](../../dotnet/friend-assemblies-cpp.md)を参照してください。
 
 ## <a name="example"></a>例
 
