@@ -6,20 +6,20 @@ helpviewer_keywords:
 - intrinsics, alphabetical list
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
-ms.openlocfilehash: 83b254b67cb2a7e09fbf57597996097a7afb5d76
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50654768"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026202"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>組み込み関数のアルファベット順の一覧
 
 次のセクションでは、一部またはすべてのアーキテクチャで使用可能な Microsoft 固有の組み込み関数について説明します。 サポートされているその他の組み込みについては、プロセッサの製造元により、ヘッダー ファイルまたは各社の Web サイトで文書化されています。 参照してください、 [ARM 組み込み](../intrinsics/arm-intrinsics.md)、 [x86 組み込み](../intrinsics/x86-intrinsics-list.md)、および[x64 組み込み](../intrinsics/x64-amd64-intrinsics-list.md)製造元のドキュメントへのリンクについてのセクションでします。 組み込みに実装されている C ランタイム ライブラリ (CRT) 関数がここに記載されていません。これらの関数が記載されて、 [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)します。
 
-[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
+[_ _addfsbyte、 \__addfsword、 \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
-[_ _addgsbyte、 \__addgsword、 \__addgsdword、 \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
+[__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)
 
@@ -61,7 +61,7 @@ ms.locfileid: "50654768"
 
 [_ _incfsbyte、 \__incfsword、 \__incfsdword](../intrinsics/incfsbyte-incfsword-incfsdword.md)
 
-[_ _incgsbyte、 \__incgsword、 \__incgsdword、 \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
+[__incgsbyte, \__incgsword, \__incgsdword, \__incgsqword](../intrinsics/incgsbyte-incgsword-incgsdword-incgsqword.md)
 
 [__indword](../intrinsics/indword.md)
 
@@ -137,7 +137,7 @@ ms.locfileid: "50654768"
 
 [__movsw](../intrinsics/movsw.md)
 
-[mul128](../intrinsics/mul128.md)
+[__mul128](../intrinsics/mul128.md)
 
 [__mulh](../intrinsics/mulh.md)
 
@@ -181,7 +181,7 @@ ms.locfileid: "50654768"
 
 [_ _readfsbyte、 \__readfsdword、 \__readfsqword、 \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
 
-[_ _readgsbyte、 \__readgsdword、 \__readgsqword、 \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
+[__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
 
 [__readmsr](../intrinsics/readmsr.md)
 
@@ -269,10 +269,10 @@ ms.locfileid: "50654768"
 
 [_ _writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
 
-[_ _writegsbyte、 \__writegsdword、 \__writegsqword、 \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
+[__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
 
 [__writemsr](../intrinsics/writemsr.md)
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

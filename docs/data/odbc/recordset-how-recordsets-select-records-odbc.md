@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: レコード選択のしくみ (ODBC)'
+title: レコード セット:レコード セットの選択が (ODBC) を記録する方法
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, selecting records
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - recordsets, constructing SQL statements
 - ODBC recordsets, selecting records
 ms.assetid: 343a6a91-aa4c-4ef7-b21f-2f2bfd0d3787
-ms.openlocfilehash: 7e7bbaad949b5f4456ce4c8aea60099792deb786
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 310481a6ea6637de817bf29d528cbdfe70ae70db
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329475"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041326"
 ---
-# <a name="recordset-how-recordsets-select-records-odbc"></a>レコードセット: レコード選択のしくみ (ODBC)
+# <a name="recordset-how-recordsets-select-records-odbc"></a>レコード セット:レコード セットの選択が (ODBC) を記録する方法
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -40,11 +40,11 @@ ms.locfileid: "51329475"
 |--------------|-------------|
 |使用してレコード セット クラスの宣言、**クラスの追加**ウィザード|選択するテーブルを指定します。<br /><br /> 含める列を指定します。<br /><br /> 参照してください[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)します。|
 |レコード セット クラスの実装を完了します。|など、メンバー関数をオーバーライド`OnSetOptions`アプリケーション固有のオプションを設定するか、既定値を変更する (詳細)。 パラメーター化されたレコード セットの場合は、パラメーター データ メンバーを指定します。|
-|レコード セット オブジェクトを作成する (呼び出す前に`Open`)|検索条件 (場合によっては複合) で使用するための指定、**場所**レコードをフィルター処理する句。 参照してください[レコード セット: レコード (ODBC) のフィルター処理](../../data/odbc/recordset-filtering-records-odbc.md)します。<br /><br /> 使用するための並べ替え順序を指定する**ORDER BY**並べ替え句。 参照してください[レコード セット: レコードの並べ替え (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)します。<br /><br /> クラスに追加するすべてのパラメーターのパラメーターの値を指定します。 参照してください[レコード セット: レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。|
+|レコード セット オブジェクトを作成する (呼び出す前に`Open`)|検索条件 (場合によっては複合) で使用するための指定、**場所**レコードをフィルター処理する句。 参照してください[レコード セット。レコード (ODBC) のフィルター処理](../../data/odbc/recordset-filtering-records-odbc.md)します。<br /><br /> 使用するための並べ替え順序を指定する**ORDER BY**並べ替え句。 参照してください[レコード セット。レコードの並べ替え (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)します。<br /><br /> クラスに追加するすべてのパラメーターのパラメーターの値を指定します。 参照してください[レコード セット。レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。|
 
-|レコード セットのクエリを呼び出すことによって実行`Open`|セットアップ ウィザードで既定の SQL 文字列を置換するカスタム SQL 文字列を指定します。 参照してください[:open](../../mfc/reference/crecordset-class.md#open)で、*クラス ライブラリ リファレンス*と[SQL: レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)|。
+|レコード セットのクエリを呼び出すことによって実行`Open`|セットアップ ウィザードで既定の SQL 文字列を置換するカスタム SQL 文字列を指定します。 参照してください[:open](../../mfc/reference/crecordset-class.md#open)で、*クラス ライブラリ リファレンス*と[SQL:レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)|。
 
-|呼び出す`Requery`データ ソースの最新の値でクエリを再実行する |新しいパラメーター、フィルター、または並べ替えを指定します。 参照してください[レコード セット: レコード セット (ODBC) のクエリを再実行](../../data/odbc/recordset-requerying-a-recordset-odbc.md)|。
+|呼び出す`Requery`データ ソースの最新の値でクエリを再実行する |新しいパラメーター、フィルター、または並べ替えを指定します。 参照してください[レコード セット。クエリの再実行 (Odbc)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)|。
 
 ##  <a name="_core_how_a_recordset_constructs_its_sql_statement"></a> レコード セットが、SQL ステートメントを作成する方法
 
@@ -78,19 +78,19 @@ ms.locfileid: "51329475"
 
 - カスタム SQL 文字列を渡す*lpszSQL*を呼び出すと[オープン](../../mfc/reference/crecordset-class.md#open)のレコード セット。 何かを渡す*lpsqSQL*ものよりも優先、 [GetDefaultSQL](../../mfc/reference/crecordset-class.md#getdefaultsql)メンバー関数を返します。
 
-   詳細については、次を参照してください。 [SQL: の SQL ステートメント (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)、型について説明する SQL ステートメント (または部分的なステートメント) に渡すことができます`Open`とそれには、フレームワーク。
+   詳細については、次を参照してください[SQL:。レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)、種類を説明するの SQL ステートメント (または部分的なステートメント) に渡すことができます`Open`には、フレームワークとします。
 
     > [!NOTE]
     >  指定したカスタムの文字列が"SELECT"または"{CALL"で始まっていない場合、MFC テーブル名が含まれている前提としています。 これは、次の項目にも適用されます。
 
 - ウィザードで生成したレコード セットの文字列を alter`GetDefaultSQL`メンバー関数。 返される内容を変更するのには関数のコードを編集します。 既定では、ウィザードが書き込まれます、`GetDefaultSQL`を 1 つのテーブル名を返す関数。
 
-   した`GetDefaultSQL`で渡すことができる項目のいずれかを返す、 *lpszSQL*パラメーターを`Open`します。 カスタム SQL 文字列を渡さないかどうか*lpszSQL*、フレームワークは、文字列を使用している`GetDefaultSQL`を返します。 少なくとも`GetDefaultSQL`1 つのテーブル名を返す必要があります。 完全な複数のテーブル名を返すことができますが、**選択**ステートメントでは、ODBC**を呼び出す**ステートメントでは、という具合です。 渡すことができますの一覧については*lpszSQL* - かが`GetDefaultSQL`を返すを参照してください[SQL: の SQL ステートメント (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
+   した`GetDefaultSQL`で渡すことができる項目のいずれかを返す、 *lpszSQL*パラメーターを`Open`します。 カスタム SQL 文字列を渡さないかどうか*lpszSQL*、フレームワークは、文字列を使用している`GetDefaultSQL`を返します。 少なくとも`GetDefaultSQL`1 つのテーブル名を返す必要があります。 完全な複数のテーブル名を返すことができますが、**選択**ステートメントでは、ODBC**を呼び出す**ステートメントでは、という具合です。 渡すことができますの一覧については*lpszSQL* — も`GetDefaultSQL`を返すを参照してください[SQL:レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
 
-   2 つ以上のテーブルの結合を実行している場合は、書き換え`GetDefaultSQL`SQL で使用されるテーブルのリストをカスタマイズする**FROM**句。 詳細については、[レコード セット: 結合 (ODBC) を実行する](../../data/odbc/recordset-performing-a-join-odbc.md)を参照してください。
+   2 つ以上のテーブルの結合を実行している場合は、書き換え`GetDefaultSQL`SQL で使用されるテーブルのリストをカスタマイズする**FROM**句。 詳細については、次を参照してください。[レコード セット。結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)します。
 
 
-- 取得するスキーマについては、データ ソースの実行時に基づくなど、追加のフィールド データ メンバーを手動でバインドします。 フィールド データ メンバーをレコード セット クラスに追加する[RFX](../../data/odbc/record-field-exchange-using-rfx.md)またはバルク RFX 関数の呼び出しに、 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)または[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)メンバー関数、およびクラスのコンス トラクター内のデータ メンバーの初期化。 詳細については、[レコード セット: データ列を動的にバインド (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)を参照してください。
+- 取得するスキーマについては、データ ソースの実行時に基づくなど、追加のフィールド データ メンバーを手動でバインドします。 フィールド データ メンバーをレコード セット クラスに追加する[RFX](../../data/odbc/record-field-exchange-using-rfx.md)またはバルク RFX 関数の呼び出しに、 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)または[DoBulkFieldExchange](../../mfc/reference/crecordset-class.md#dobulkfieldexchange)メンバー関数、およびクラスのコンス トラクター内のデータ メンバーの初期化。 詳細については、次を参照してください。[レコード セット。動的に結びつける方法 (ODBC) のデータ列](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)します。
 
 - レコード セットのメンバー関数のオーバーライドをなど`OnSetOptions`アプリケーション固有のオプションを設定する、または既定値を上書きします。
 
@@ -99,7 +99,7 @@ ms.locfileid: "51329475"
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
+[レコード セット:レコード セットの更新が (ODBC) を記録する方法](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)<br/>
 [ODBC の基礎](../../data/odbc/odbc-basics.md)<br/>
 [SQL](../../data/odbc/sql.md)<br/>
-[レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[レコード セット:レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

@@ -33,12 +33,12 @@ helpviewer_keywords:
 - keyboard shortcuts [C++], property changing
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
-ms.openlocfilehash: 4ed283b9be2afdacfbc93c647c7633fb7802e7fd
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328403"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041125"
 ---
 # <a name="accelerator-editor-c"></a>アクセラレータ エディター (C++)
 
@@ -49,7 +49,7 @@ ms.locfileid: "58328403"
 > [!TIP]
 > 使用する場合、**アクセラレータ エディター**、右クリックすると、頻繁にコマンドのショートカット メニューを表示します。 使用できるコマンドは、ポインターの位置によって異なります。
 
-[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code) を使用して、コードにアクセス キーのコマンドをフックできます。 定義済みのアクセラレータ キーの一覧は、[アクセラレータ キー](../windows/predefined-accelerator-keys.md)を参照してください。
+[クラス ビュー](/visualstudio/ide/viewing-the-structure-of-code) を使用して、コードにアクセス キーのコマンドをフックできます。 定義済みのアクセラレータ キーの一覧は、次を参照してください。[アクセラレータ キー](../windows/predefined-accelerator-keys.md)します。
 
 > [!NOTE]
 > Windows には、空のアクセラレータ テーブルを作成することを指定できません。 エントリがないアクセラレータ テーブルを作成すると、テーブルを保存する際に自動的に削除されます。
@@ -71,10 +71,10 @@ ms.locfileid: "58328403"
 
    |[値]|説明|
    |-----------|-----------------|
-   |**None**|ユーザーが押したのみ、**キー**値。<br/><br/>として解釈される ASCII]/[ANSI 値 001 026、経由でこの値は使用が最も効果的に ^ A ~ ^ Z (**Ctrl + A**を通じて**Ctrl + Z**)。|
+   |**なし**|ユーザーが押したのみ、**キー**値。<br/><br/>として解釈される ASCII]/[ANSI 値 001 026、経由でこの値は使用が最も効果的に ^ A ~ ^ Z (**Ctrl + A**を通じて**Ctrl + Z**)。|
    |**Alt**|ユーザーが押す必要があります**Alt**する前に、**キー**値。|
    |**Ctrl**|ユーザーが押す必要があります**Ctrl**する前に、**キー**値、ASCII 型が無効です。|
-   |**Shift**|ユーザーが押す必要があります**Shift**する前に、**キー**値。|
+   |**シフト**|ユーザーが押す必要があります**Shift**する前に、**キー**値。|
    |**Ctrl + Alt**|ユーザーが押す必要があります**Ctrl**と**Alt**する前に、**キー**値、ASCII 型が無効です。|
    |**Ctrl + Shift**|ユーザーが押す必要があります**Ctrl**と**Shift**する前に、**キー**値、ASCII 型が無効です。|
    |**Alt + Shift**|ユーザーが押す必要があります**Alt**と**Shift**する前に、**キー**値、ASCII 型が無効です。|

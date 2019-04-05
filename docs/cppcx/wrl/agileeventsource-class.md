@@ -7,12 +7,12 @@ f1_keywords:
 - event/Microsoft::WRL::InvokeModeOptions
 helpviewer_keywords:
 - AgileEventSource class
-ms.openlocfilehash: a18b4fd7873bcc0895354186dc9b0cc7e6b71bd4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784790"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025867"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource クラス
 
@@ -40,7 +40,7 @@ class AgileEventSource :
 
 ## <a name="remarks"></a>Remarks
 
-Windows ランタイム コンポーネントの大半は、アジャイル コンポーネントです。 詳細については、[スレッドとマーシャ リング (C + + CX)](../../cppcx/threading-and-marshaling-c-cx.md)を参照してください。
+Windows ランタイム コンポーネントの大半は、アジャイル コンポーネントです。 詳細については、次を参照してください。[スレッドとマーシャ リング (C + + CX)](../../cppcx/threading-and-marshaling-c-cx.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

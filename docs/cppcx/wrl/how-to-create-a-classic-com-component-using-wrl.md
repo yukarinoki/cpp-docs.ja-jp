@@ -3,16 +3,16 @@ title: '方法: WRL を使用した従来の COM コンポーネントを作成�
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5efe7690-90d5-4c3c-9e53-11a14cefcb19
-ms.openlocfilehash: e19ff4a331a98e64c39dc2e163459b2696bbdee5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bb38f36cdd481e61d049f82159fdc24c3726f646
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785526"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031843"
 ---
 # <a name="how-to-create-a-classic-com-component-using-wrl"></a>方法: WRL を使用した従来の COM コンポーネントを作成します。
 
-Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、ユニバーサル Windows プラットフォーム (UWP) アプリを使用することだけでなく、デスクトップ アプリで使用するための基本的な従来の COM コンポーネントを作成することができます。 Windows ランタイム C++ テンプレート ライブラリの COM コンポーネントの作成、ATL よりも少ないコードを必要があります。 Windows ランタイム C++ テンプレート ライブラリをサポートする COM のサブセットの詳細については、[Windows ランタイム C++ テンプレート ライブラリ (WRL)](windows-runtime-cpp-template-library-wrl.md)を参照してください。
+Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用して、ユニバーサル Windows プラットフォーム (UWP) アプリを使用することだけでなく、デスクトップ アプリで使用するための基本的な従来の COM コンポーネントを作成することができます。 Windows ランタイム C++ テンプレート ライブラリの COM コンポーネントの作成、ATL よりも少ないコードを必要があります。 Windows ランタイム C++ テンプレート ライブラリをサポートする COM のサブセットの詳細については、次を参照してください。 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](windows-runtime-cpp-template-library-wrl.md)します。
 
 このドキュメントでは、Windows ランタイム C++ テンプレート ライブラリを使用して基本的な COM コンポーネントを作成する方法を示します。 ニーズに最適な配置メカニズムを使用できますが、このドキュメントでは、デスクトップ アプリから COM コンポーネントを登録して使用する基本的な方法についても説明します。
 
@@ -74,7 +74,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
     @="1.0"
     ```
 
-2. RegScript.reg を実行するかをプロジェクトの追加**ビルド後イベント**します。 詳細については、[ビルド前のビルド後コマンド ライン ダイアログ ボックス](/visualstudio/ide/reference/pre-build-event-post-build-event-command-line-dialog-box)を参照してください。
+2. RegScript.reg を実行するかをプロジェクトの追加**ビルド後イベント**します。 詳細については、次を参照してください。[ビルド前のビルド後コマンド ライン ダイアログ ボックス](/visualstudio/ide/reference/pre-build-event-post-build-event-command-line-dialog-box)します。
 
 3. 追加、 **Win32 コンソール アプリケーション**プロジェクトがソリューションにします。 など、プロジェクトの名前`Calculator`します。
 

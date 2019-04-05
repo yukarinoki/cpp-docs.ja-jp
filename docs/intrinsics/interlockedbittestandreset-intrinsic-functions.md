@@ -18,12 +18,12 @@ helpviewer_keywords:
 - _interlockedbittestandreset64 intrinsic
 - _interlockedbittestandreset intrinsic
 ms.assetid: 9bbb1442-f2e9-4dc2-b0da-97f3de3493b9
-ms.openlocfilehash: 5b32dc9eb41285afb653817629148b9f666201e8
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 54ea8b1ccac15eab600c91302969b606c188dc59
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627203"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040651"
 ---
 # <a name="interlockedbittestandreset-intrinsic-functions"></a>_interlockedbittestandreset の組み込み関数
 
@@ -89,7 +89,7 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
 |`_interlockedbittestandreset`|x86、ARM、x64|\<intrin.h>|
-|`_interlockedbittestandreset_acq`、 `_interlockedbittestandreset_nf`、 `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandreset_acq`では、 `_interlockedbittestandreset_nf`では、 `_interlockedbittestandreset_rel`|ARM|\<intrin.h>|
 |`_interlockedbittestandreset_HLEAcquire`, `_interlockedbittestandreset_HLERelease`|x86、x64|\<immintrin.h>|
 |`_interlockedbittestandreset64`|X64|\<intrin.h>|
 |`_interlockedbittestandreset64_HLEAcquire`, `_interlockedbittestandreset64_HLERelease`|X64|\<immintrin.h>|
@@ -98,15 +98,16 @@ unsigned char _interlockedbittestandreset64_HLERelease(
 
 X86 および x64 プロセッサでは、これらの組み込みを使用して、`lock btr`命令では、読み取り、分割不可能な操作で 0 に指定したビットを設定します。
 
-ARM プロセッサでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
+ARM プロセッサでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 
+  `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
 
 Hardware Lock Elision (HLE) 命令をサポートする Intel プロセッサでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 HLE をサポートしていないプロセッサ上でこれらの組み込みが呼び出された場合、ヒントは無視されます。
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

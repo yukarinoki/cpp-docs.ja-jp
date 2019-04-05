@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pragmas, comment
 - comment pragma
 ms.assetid: 20f099ff-6303-49b3-9c03-a94b6aa69b85
-ms.openlocfilehash: ec80e8cf177becdc25bdf49d6dfa9ad9c7794b88
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fb9bfef2ae751529b8424143cde020e78f17ec72
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50612824"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025271"
 ---
 # <a name="comment-cc"></a>comment (C/C++)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50612824"
 
 場所*commentstring*オブジェクト ファイルにします。 リンク時に、この文字列は実行可能ファイルに配置されます。 実行可能ファイルが読み込まれるとき、この文字列はメモリには読み込まれません。ただし、ファイル内の出力可能文字列を検出するプログラムで検出できます。 このコメント レコードの種類の使用方法の 1 つは、実行可能ファイルにバージョン番号や同様の情報を埋め込むことです。
 
-`exestr` の使用は非推奨とされており、将来のリリースで削除されます。リンカーは、このコメント レコードを処理しません。
+`exestr` 非推奨し、今後のリリースで削除される予定リンカーは、このコメント レコードを処理しません。
 
 ### <a name="lib"></a>lib
 

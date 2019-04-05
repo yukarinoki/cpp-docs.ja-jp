@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
-ms.openlocfilehash: 546b4c4b32837b46c48eafbe12e991bb6c1630ed
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50573255"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032103"
 ---
 # <a name="transmitas"></a>transmit_as
 
@@ -25,7 +25,7 @@ ms.locfileid: "50573255"
 
 ### <a name="parameters"></a>パラメーター
 
-*type*<br/>
+*種類*<br/>
 クライアントとサーバー間で送信されるデータ型を指定します。
 
 ## <a name="remarks"></a>Remarks
@@ -70,7 +70,7 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**対象**|**typedef**|
+|**対象**|**Typedef**|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

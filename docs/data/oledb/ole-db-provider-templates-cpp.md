@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], about OLE DB provider templates
 - templates [C++], OLE DB
 ms.assetid: fccff85f-2af8-4500-82bd-6312d28a74b8
-ms.openlocfilehash: c88e03f509da3c97c270e308dc6dd44e3b44aeb7
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 793aa08630ec92f99c33c2a4f3688e78630a6c58
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413785"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027483"
 ---
 # <a name="ole-db-provider-templates-c"></a>OLE DB プロバイダー テンプレート (C++)
 
@@ -57,7 +57,7 @@ OLE DB テンプレートでサポートされているプロバイダーの最�
 プロバイダーは、複雑さと機能が大幅に異なります。 読み取り専用プロバイダー、および更新可能なプロバイダーのプロバイダーに分類すると便利です。
 
 - Visual C 6.0 には、読み取り専用プロバイダーのみがサポートされています。 [OLE DB プロバイダーを作成する](../../data/oledb/creating-an-ole-db-provider.md)読み取り専用プロバイダーを作成する方法について説明します。
-- Visual C は、更新可能なプロバイダーは、更新をサポートしています (書き込む) データ ストア。 更新可能なプロバイダーについては、[更新可能なプロバイダーを作成する](../../data/oledb/creating-an-updatable-provider.md)、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)サンプルは、更新可能なプロバイダーの例を示を参照してください。
+- Visual C は、更新可能なプロバイダーは、更新をサポートしています (書き込む) データ ストア。 更新可能なプロバイダーについては、次を参照してください。[更新可能なプロバイダーを作成する](../../data/oledb/creating-an-updatable-provider.md)、 [UpdatePV](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/ATL/OLEDB/Provider/UPDATEPV)サンプルは、更新可能なプロバイダーの例を示します。
 
 詳細については次を参照してください:
 

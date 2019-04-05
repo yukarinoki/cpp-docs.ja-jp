@@ -9,12 +9,12 @@ helpviewer_keywords:
 - _mm_insert_si64 intrinsic
 - _mm_inserti_si64 intrinsic
 ms.assetid: 897a4b36-8b08-4b00-a18f-7850f5732d7d
-ms.openlocfilehash: 062e7e56de16d8e8a18101dec0a8e9766e02967f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f8c8f2f9b33588513e25b2290772aac464f46808
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631035"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033019"
 ---
 # <a name="mminsertsi64-mminsertisi64"></a>_mm_insert_si64、_mm_inserti_si64
 
@@ -48,7 +48,7 @@ __m128i _mm_inserti_si64(
 *長さ*<br/>
 [in]整数定数を挿入するフィールドの長さを指定します。
 
-*Index*<br/>
+*インデックス*<br/>
 [in]データが挿入されるフィールドの最下位ビットのインデックスを指定する整数の定数。
 
 ## <a name="return-value"></a>戻り値
@@ -118,11 +118,11 @@ result2 = 0xfffffffff3210fff
 result3 = 0xfffffffff3210fff
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
 
 ## <a name="see-also"></a>関連項目
 
 [_mm_extract_si64、_mm_extracti_si64](../intrinsics/mm-extract-si64-mm-extracti-si64.md)<br/>
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

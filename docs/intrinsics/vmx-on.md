@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMXON instruction
 - __vmx_on intrinsic
 ms.assetid: 16804991-6a75-4adf-8ec2-bc95acfa4801
-ms.openlocfilehash: defecf06ffb738b824f3f9b3484a89a4db634ab3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: de903eeeb29e3c194a36ccb4cb038ba89b8ea82f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608893"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028105"
 ---
 # <a name="vmxon"></a>__vmx_on
 
@@ -53,8 +53,8 @@ unsigned char __vmx_on(
 
 **ヘッダー ファイル** \<intrin.h >
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

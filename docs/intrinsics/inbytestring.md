@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rep insb instruction
 - __inbytestring intrinsic
 ms.assetid: fe549556-e7a3-4af3-8ebf-8a7dc3cb233b
-ms.openlocfilehash: 494c57625bc6f93e09817171476267ff5fb27c3e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e515c6452d18ca022707fa2f9e36e2045523ccd5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556781"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038584"
 ---
 # <a name="inbytestring"></a>__inbytestring
 
@@ -36,7 +36,7 @@ void __inbytestring(
 *ポート*<br/>
 [in]読み取るポート。
 
-*Buffer*<br/>
+*バッファー*<br/>
 [out]ここでは、ポートから読み取ったデータを書き込まれます。
 
 *カウント*<br/>
@@ -54,8 +54,8 @@ void __inbytestring(
 
 このルーチンは、組み込みとしてのみ使用できます。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

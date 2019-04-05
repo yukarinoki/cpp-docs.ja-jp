@@ -14,12 +14,12 @@ helpviewer_keywords:
 - ODBC recordsets [C++], documents and views
 - ODBC [C++], forms
 ms.assetid: 83979974-fc63-46ac-b162-e8403a572e2c
-ms.openlocfilehash: f8bb3be7cdc253f53b50898cfc3ee840e70b2d68
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: 78765d17b52889123f13c492699230834decba66
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849746"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026293"
 ---
 # <a name="mfc-using-database-classes-with-documents-and-views"></a>MFC:ドキュメントとビューを用いたデータベース クラス
 
@@ -41,7 +41,7 @@ ms.locfileid: "55849746"
 
 アプリケーション ウィザードを使用して、フォーム ベースのアプリケーションを作成するを参照してください。[フォーム ベースの MFC アプリケーションの作成](../mfc/reference/creating-a-forms-based-mfc-application.md)と[データベースのサポート、MFC アプリケーション ウィザード](../mfc/reference/database-support-mfc-application-wizard.md)します。
 
-フォームの詳細については、[レコード ビュー](../data/record-views-mfc-data-access.md)を参照してください。
+フォームの詳細については、次を参照してください。[レコード ビュー](../data/record-views-mfc-data-access.md)します。
 
 ##  <a name="_core_using_recordsets_in_documents_and_views"></a> ドキュメントとビュー内のレコード セットを使用します。
 

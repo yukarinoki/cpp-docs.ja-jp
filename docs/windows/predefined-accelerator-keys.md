@@ -10,12 +10,12 @@ helpviewer_keywords:
 - menus [C++], shortcut keys
 - keyboard shortcuts [C++], menu association
 ms.assetid: f234c5f2-4ec3-4c9e-834a-b5dd297625b9
-ms.openlocfilehash: 99867f146ca80d8b48c9be9deb59044207b33af1
-ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
+ms.openlocfilehash: bb407538f254df5f187ff91b85a8eaa753a52287
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57210498"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027520"
 ---
 # <a name="accelerator-keys-c"></a>アクセラレータ キー (C++)
 
@@ -79,7 +79,7 @@ Windows アプリケーション プロジェクトの一部として使用で�
 
 ## <a name="accelerator-key-association"></a>アクセラレータ キーの関連付け
 
-メニュー項目とキーボードの組み合わせで同じプログラム コマンドを発行したいと思うことはよくあります。 メニュー項目と、アプリケーションのアクセラレータ テーブル内のエントリには、同じリソース識別子 (ID) を割り当てることでは、このアクションを実行します。 次に、メニュー項目のキャプションを編集して、アクセラレータの名前を表示します。 メニュー項目とアクセラレータ キーの詳細については、[メニュー コマンド](../windows/associating-a-menu-command-with-an-accelerator-key.md)を参照してください。
+メニュー項目とキーボードの組み合わせで同じプログラム コマンドを発行したいと思うことはよくあります。 メニュー項目と、アプリケーションのアクセラレータ テーブル内のエントリには、同じリソース識別子 (ID) を割り当てることでは、このアクションを実行します。 次に、メニュー項目のキャプションを編集して、アクセラレータの名前を表示します。 メニュー項目とアクセラレータ キーの詳細については、次を参照してください。[メニュー コマンド](../windows/associating-a-menu-command-with-an-accelerator-key.md)します。
 
 ## <a name="requirements"></a>必要条件
 

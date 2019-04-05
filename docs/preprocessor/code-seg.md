@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, code_seg
 - code_seg pragma
 ms.assetid: bf4faac1-a511-46a6-8d9e-456851d97d56
-ms.openlocfilehash: 80edcb709073021ccf024aaf14c9a914bd8d8939
-ms.sourcegitcommit: 31a2a9845f5e1d35ab054906d8cdc6582a5220bd
+ms.openlocfilehash: e566fb01bf70b343b75254a10466bdda2bc7ce1b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51597704"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041242"
 ---
 # <a name="codeseg"></a>code_seg
 関数が格納される .obj ファイル内のテキスト セグメントを指定します。
@@ -37,10 +37,10 @@ ms.locfileid: "51597704"
 
 *識別子*により、複数のレコードを 1 つだけでポップできます**pop**コマンド。
 
-"*セグメント名*"<br/>
+"*segment-name*"<br/>
 (省略可能)セグメントの名前。 使用すると**pop**、スタックがポップされ、*セグメント名*アクティブなテキスト セグメント名になります。
 
-"*セグメント クラス*"<br/>
+"*segment-class*"<br/>
 (省略可能)バージョン 2.0 より前のバージョンの C との互換性が無視されます。
 
 ## <a name="remarks"></a>Remarks
@@ -80,7 +80,7 @@ int main() {
 }
 ```
 
-セクションを作成する使わないで名の一覧は、[/section](../build/reference/section-specify-section-attributes.md)を参照してください。
+セクションを作成する使わないで名の一覧は、次を参照してください。 [/section](../build/reference/section-specify-section-attributes.md)します。
 
 初期化されたデータのセクションを指定することもできます ([data_seg](../preprocessor/data-seg.md))、初期化されていないデータ ([bss_seg](../preprocessor/bss-seg.md))、および const 変数 ([const_seg](../preprocessor/const-seg.md))。
 

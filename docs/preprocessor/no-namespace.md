@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_namespace attribute
 ms.assetid: 5d81b741-a558-451b-b493-1f3b18967337
-ms.openlocfilehash: b17bf5fb5f44d5453de29febe001f9e8737102b5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6bd60de02bf0166d5cf0b0cd1bc1de56ceda5bf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50540440"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028718"
 ---
 # <a name="nonamespace"></a>no_namespace
 **C++ 固有の仕様**
@@ -30,7 +30,7 @@ no_namespace
 
 別の名前空間の名前を使用する場合を使用し、 [rename_namespace](../preprocessor/rename-namespace.md)属性の代わりにします。
 
-**END C 固有の仕様**
+**END C++ 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

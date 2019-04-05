@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: レコード更新のしくみ (ODBC)'
+title: レコード セット:レコード セットの更新が (ODBC) を記録する方法
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records, updating
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - updating recordsets
 - recordsets, updating
 ms.assetid: 5ceecc06-7a86-43b1-93db-a54fb1e717c7
-ms.openlocfilehash: 3b9bea1cc8fc0a11773d2392f88fff333eb7084f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bf71f562714e2dacfe75540e1e532219b3eb307f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510007"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034483"
 ---
-# <a name="recordset-how-recordsets-update-records-odbc"></a>レコードセット: レコード更新のしくみ (ODBC)
+# <a name="recordset-how-recordsets-update-records-odbc"></a>レコード セット:レコード セットの更新が (ODBC) を記録する方法
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -25,7 +25,7 @@ ms.locfileid: "50510007"
 >  SQL、`CRecordset`オブジェクトをベース レコード セットの更新に影響を与えることができます。 たとえば、SQL には、結合が含まれている場合、 **GROUP BY**を FALSE に句では、MFC の設定の更新。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 このトピックでは、次の内容について説明します。
 
@@ -33,15 +33,15 @@ ms.locfileid: "50510007"
 
 - [レコード セットをエディット バッファーとして](#_core_the_edit_buffer)と[ダイナセットを使う場合とスナップショットの相違点](#_core_dynasets_and_snapshots)します。
 
-[レコード セット: どの AddNew、Edit、および作業の削除 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)レコード セットの観点からこれらの関数の動作について説明します。
+[レコード セット:どの AddNew、Edit、および作業の削除 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)レコード セットの観点からこれらの関数の動作について説明します。
 
-[レコード セット: 詳細についての更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)レコード セットの更新プログラムのストーリーを完了するには、トランザクションが更新プログラムに与える影響、レコード セットを閉じるか、またはスクロールによる進行中の更新プログラムへの影響し、更新プログラムが他の更新プログラムとやり取りする方法の説明ユーザー。
+[レコード セット:詳細についての更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)レコード セットの更新プログラムのストーリーを完了するには、トランザクションが更新プログラムに与える影響、レコード セットを閉じるか、またはスクロールが進行中の更新プログラムに影響し、更新プログラムが他のユーザーの更新プログラムとやり取りする方法を説明します。
 
 ##  <a name="_core_your_role_in_recordset_updating"></a> レコード セットを更新
 
 次の表では、追加、編集、またはフレームワークの動作をすると、レコードを削除するレコード セットを使用して、ロールを示します。
 
-### <a name="recordset-updating-you-and-the-framework"></a>レコード セットの更新: とフレームワーク
+### <a name="recordset-updating-you-and-the-framework"></a>レコード セットを更新しています。フレームワーク
 
 |プログラマの役割|フレームワークの役割|
 |---------|-------------------|
@@ -51,7 +51,7 @@ ms.locfileid: "50510007"
 |レコード セットの追加、編集、およびレコードを削除するメンバー関数を呼び出します。|レコード セット オブジェクトとデータ ソース間でデータを交換するためのメカニズムを管理します。|
 |必要に応じて、更新プロセスを制御するのにトランザクションを使用します。|提供`CDatabase`トランザクションをサポートするメンバー関数。|
 
-トランザクションの詳細については、[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)を参照してください。
+トランザクションの詳細については、次を参照してください。[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
 
 ##  <a name="_core_the_edit_buffer"></a> エディット バッファー
 
@@ -68,9 +68,9 @@ ms.locfileid: "50510007"
 
 ##  <a name="_core_dynasets_and_snapshots"></a> ダイナセットを使う場合とスナップショット
 
-[ダイナセットを使う場合](../../data/odbc/dynaset.md)レコードをスクロールすると、レコードの内容を更新します。 [スナップショット](../../data/odbc/snapshot.md)を呼び出さない限り、レコードの内容が更新されないため、レコードの静的な表現を[Requery](../../mfc/reference/crecordset-class.md#requery)します。 ダイナセットを使う場合のすべての機能を使用するには、ODBC API のサポートの適切なレベルに準拠している ODBC ドライバーで作業する必要があります。 詳細については、[ODBC](../../data/odbc/odbc-basics.md)と[ダイナセット](../../data/odbc/dynaset.md)を参照してください。
+[ダイナセットを使う場合](../../data/odbc/dynaset.md)レコードをスクロールすると、レコードの内容を更新します。 [スナップショット](../../data/odbc/snapshot.md)を呼び出さない限り、レコードの内容が更新されないため、レコードの静的な表現を[Requery](../../mfc/reference/crecordset-class.md#requery)します。 ダイナセットを使う場合のすべての機能を使用するには、ODBC API のサポートの適切なレベルに準拠している ODBC ドライバーで作業する必要があります。 詳細については、次を参照してください。 [ODBC](../../data/odbc/odbc-basics.md)と[ダイナセット](../../data/odbc/dynaset.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: AddNew、Edit、Delete の動作のしくみ (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)
+[レコード セット:AddNew が編集、および作業 (ODBC) を削除する方法](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_accessor attribute
 ms.assetid: ec407a9f-24d7-4822-96d4-7cc6a0301815
-ms.openlocfilehash: 3ab2e720e5bab834f76b755336b9ad9170d086b4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bfb287261fce4ebf189801c308f57513f2c9f113
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50495260"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038305"
 ---
 # <a name="dbaccessor"></a>db_accessor
 
@@ -37,7 +37,7 @@ ms.locfileid: "50495260"
 
 **db_accessor**行セットを生成し、対応するアクセサー マップにバインドします。 呼び出さない場合**db_accessor**アクセサー 0 が自動的に生成して、すべての列バインドはこのアクセサー ブロックにマップされます。
 
-**db_accessor**グループ データベースの 1 つまたは複数のアクセサーに列のバインド。 複数のアクセサーを使用する必要があるシナリオの詳細については、[行セットでの複数のアクセサーを使用して](../../data/oledb/using-multiple-accessors-on-a-rowset.md)を参照してください。 参照してください「ユーザー レコードのサポートの複数のアクセサー」[ユーザー レコード](../../data/oledb/user-records.md)します。
+**db_accessor**グループ データベースの 1 つまたは複数のアクセサーに列のバインド。 複数のアクセサーを使用する必要があるシナリオの詳細については、次を参照してください。[行セットでの複数のアクセサーを使用して](../../data/oledb/using-multiple-accessors-on-a-rowset.md)します。 参照してください「ユーザー レコードのサポートの複数のアクセサー」[ユーザー レコード](../../data/oledb/user-records.md)します。
 
 コンパイラにクラスの名前は、コンシューマー属性プロバイダーでは、この属性をクラスに適用されます、ときに\_ *YourClassName*、アクセサーで*YourClassName*に付けた名前を指定します、クラス、さらに、コンパイラはというクラスを作成も*YourClassName*から派生した\_ *YourClassName*アクセサー。  クラス ビューでは、両方のクラスが表示されます。
 

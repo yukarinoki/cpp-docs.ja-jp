@@ -9,12 +9,12 @@ helpviewer_keywords:
 - init_seg pragma
 - data segment initializing [C++]
 ms.assetid: 40a5898a-5c85-4aa9-8d73-3d967eb13610
-ms.openlocfilehash: f11ec6d3cee7af2ce785555af9b73d8c0eb58638
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 801496739fd9bd2b8a14e699ca4da9fe79f3a28d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532626"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026632"
 ---
 # <a name="initseg"></a>init_seg
 
@@ -36,20 +36,20 @@ ms.locfileid: "50532626"
 
 オプションを**init_seg**プラグマは。
 
-*compiler*<br/>
+*コンパイラ*<br/>
 Microsoft C ランタイム ライブラリの初期化のために予約されています。 このグループ内のオブジェクトが最初に構築されます。
 
 *lib*<br/>
 サード パーティの開発元のクラス ライブラリの初期化に使用できます。 としてマークされている後にこのグループ内のオブジェクトが構築される*コンパイラ*がその他の要素の前にします。
 
-*user*<br/>
+*ユーザー*<br/>
 ユーザーが使用できます。 このグループ内のオブジェクトが最後に構築されます。
 
 *セクション名*初期化セクションを明示的に指定できるようにします。 ユーザー指定のオブジェクト*セクション名*暗黙的に構築しないによってという名前のセクションでは、アドレスは、ただし、*セクション名*します。
 
 指定したセクション名には、プラグマの後のそのモジュール内で宣言されたグローバル オブジェクトを構築するヘルパー関数へのポインターが格納されます。
 
-セクションを作成するときに使用しない名前の一覧は、[/section](../build/reference/section-specify-section-attributes.md)を参照してください。
+セクションを作成するときに使用しない名前の一覧は、次を参照してください。 [/section](../build/reference/section-specify-section-attributes.md)します。
 
 *func 名前*の代わりに呼び出される関数を指定`atexit`プログラムが終了したとき。 このヘルパー関数も呼び出します[atexit](../c-runtime-library/reference/atexit.md)グローバル オブジェクトのデストラクターへのポインター。 次の形式のプラグマで関数の識別子を指定した場合、
 

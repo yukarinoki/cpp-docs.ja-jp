@@ -11,12 +11,12 @@ helpviewer_keywords:
 - event sources
 - event handling, creating event source
 ms.assetid: 0983e36a-6127-4fbb-8a22-8dfec6564c16
-ms.openlocfilehash: e7a58abc617fcfed69020bdace60758a6bf75337
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 81eba3c032a3556d1c69ad02652455ebc07ab6be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50510566"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035933"
 ---
 # <a name="eventsource"></a>event_source
 
@@ -30,12 +30,12 @@ ms.locfileid: "50510566"
 
 ### <a name="parameters"></a>パラメーター
 
-*type*<br/>
+*種類*<br/>
 次の値のいずれかの列挙です。
 
-- アンマネージ C/C++ コード用の`native` (アンマネージ クラスの既定)。
+- `native` (アンマネージ クラスの既定)。
 
-- COM コード用の`com` 。 使用する必要があります`coclass`とき`type` =`com`します。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。
+- `com` 。 使用する必要があります`coclass`とき`type` =`com`します。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。
 
     ```cpp
     #define _ATL_ATTRIBUTES

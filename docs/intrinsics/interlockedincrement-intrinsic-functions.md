@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedIncrement_acq intrinsic
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
-ms.openlocfilehash: 91e9c6dac1b6f13997bb7e4f2727a743a9177083
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328611"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039359"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement の組み込み関数
 
@@ -111,7 +111,7 @@ __int64 _InterlockedIncrement64_nf(
 
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`、 `_InterlockedIncrement16`、 `_InterlockedIncrement64`|x86、ARM、x64|\<intrin.h>|
+|`_InterlockedIncrement`では、 `_InterlockedIncrement16`では、 `_InterlockedIncrement64`|x86、ARM、x64|\<intrin.h>|
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
 
 ## <a name="remarks"></a>Remarks
@@ -126,7 +126,7 @@ ARM プラットフォームでは、クリティカル セクションの最初
   `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
 
-  `lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、[align](../cpp/align-cpp.md)を参照してください。
+  `lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
 
 Win32 関数は `Wdm.h` または `Ntddk.h` で宣言されています。
 
@@ -136,10 +136,10 @@ Win32 関数は `Wdm.h` または `Ntddk.h` で宣言されています。
 
 使用する方法の例については`_InterlockedIncrement`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

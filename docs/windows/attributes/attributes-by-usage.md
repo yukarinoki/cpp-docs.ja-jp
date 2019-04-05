@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 8be2de10-b1ff-4ca4-a114-75318408593c
-ms.openlocfilehash: 2536309025506ca66d9c4b7cdfbaabf5787945e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: f6567a7866516c09bca03fa9f3d3aa5aa997b6b4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449367"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038071"
 ---
 # <a name="attributes-by-usage"></a>使用法別の属性
 
@@ -37,7 +37,7 @@ ms.locfileid: "50449367"
 
 |属性|説明|
 |---------------|-----------------|
-|[helpstringdll](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
+|[typelib](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
 
 ## <a name="interface-attributes"></a>インターフェイス属性
 
@@ -46,7 +46,7 @@ ms.locfileid: "50449367"
 |属性|説明|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|同期および非同期の両方のバージョンの COM インターフェイスを定義する、MIDL コンパイラに指示する UUID を指定します。|
-|[custom](custom-cpp.md)|独自の属性を定義できます。|
+|[カスタム](custom-cpp.md)|独自の属性を定義できます。|
 |[dispinterface](dispinterface.md)|ディスパッチ インターフェイスとしてインターフェイスを .idl ファイルに配置します。|
 |[dual](dual.md)|.Idl ファイルにデュアル インターフェイスとしてインターフェイスを配置します。|
 |[export](export.md)|.Idl ファイルに配置するデータ構造をによりします。|
@@ -54,7 +54,7 @@ ms.locfileid: "50449367"
 |[helpfile](helpfile.md)|タイプ ライブラリのヘルプ ファイルの名前を設定します。|
 |[helpstring](helpstring.md)|適用先となる要素を記述するために使用される文字列を指定します。|
 |[helpstringcontext](helpstringcontext.md)|.Hlp または .chm ファイルをヘルプ トピックの ID を指定します。|
-|[helpstringdll](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
+|[typelib](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
 |[hidden](hidden.md)|項目が存在しますが、ユーザー指向ブラウザーで表示する必要がありますされませんを示します。|
 |[library_block](library-block.md)|.Idl ファイルのライブラリ ブロック内で構成要素を配置します。|
 |[local](local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして、MIDL コンパイラを使用することができます。 個々 の関数で使用する場合は、スタブが生成されたないローカル プロシージャを指定します。|
@@ -79,6 +79,6 @@ ms.locfileid: "50449367"
 
 ## <a name="see-also"></a>関連項目
 
-[COM および .NET の C++ の属性](cpp-attributes-com-net.md)<br/>
+[COM および .NET C++ 属性](cpp-attributes-com-net.md)<br/>
 [グループ別の属性](attributes-by-group.md)<br/>
 [属性リファレンス (アルファベット順)](attributes-alphabetical-reference.md)

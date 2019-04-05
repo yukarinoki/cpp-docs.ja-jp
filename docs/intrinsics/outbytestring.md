@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __outbytestring intrinsic
 - outsb instruction
 ms.assetid: c9150661-9c18-427f-bae8-710bba6ed78c
-ms.openlocfilehash: c5d99ee230780d1bfdcd104c1fcf3b3bd099fd6e
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 41064dda6a1a0b9ad4c15f98c3f3081f08ef8db6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326923"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032194"
 ---
 # <a name="outbytestring"></a>__outbytestring
 
@@ -36,7 +36,7 @@ void __outbytestring(
 *ポート*<br/>
 [in]データを送信するポート。
 
-*Buffer*<br/>
+*バッファー*<br/>
 [in]指定したポートを送信するデータ。
 
 *カウント*<br/>
@@ -54,8 +54,8 @@ void __outbytestring(
 
 このルーチンは、組み込みとしてのみ使用できます。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

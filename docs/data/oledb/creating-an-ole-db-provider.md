@@ -5,12 +5,12 @@ helpviewer_keywords:
 - OLE DB providers, creating
 - OLE DB provider templates, creating providers
 ms.assetid: f73017c3-c89f-41a6-a306-ea992cf6092c
-ms.openlocfilehash: b6e59dba375e78878d13a6014ce75edf2a21758b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e46e87b0d5d538a0f9fd7e231debfef3fa95210
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611199"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036115"
 ---
 # <a name="creating-an-ole-db-provider"></a>OLE DB プロバイダーの作成
 
@@ -23,20 +23,20 @@ OLE DB プロバイダーを作成する推奨される方法は、ウィザー�
    > [!NOTE]
    > プロジェクトに追加する前に MFC サポートを含める必要があります、 **ATL OLEDB プロバイダー**します。
 
-1. コードを変更、`Execute`メソッド[CCustomRowset(CustomRS.h)](cmyproviderrowset-myproviderrs-h.md)します。 例については、[読み取り文字列に OLE DB プロバイダー](../../data/oledb/reading-strings-into-the-ole-db-provider.md)を参照してください。
+1. コードを変更、`Execute`メソッド[CCustomRowset(CustomRS.h)](cmyproviderrowset-myproviderrs-h.md)します。 例については、次を参照してください。[読み取り文字列に OLE DB プロバイダー](../../data/oledb/reading-strings-into-the-ole-db-provider.md)します。
 
 1. プロパティがマップで編集[CustomDS.h](cmyprovidersource-myproviderds-h.md)、 [CustomSess.h](cmyprovidersession-myprovidersess-h.md)、および[CustomRS.h](cmyproviderrowset-myproviderrs-h.md)します。 ウィザードでは、プロバイダーを実装できるすべてのプロパティが含まれているプロパティのマップを作成します。 プロパティ マップを移動し、削除またはコメント アウト プロパティをプロバイダーがサポートする必要はありません。
 
-1. 更新では、PROVIDER_COLUMN_MAP [CCustomRowset(CustomRS.h)](cmyproviderrowset-myproviderrs-h.md)します。 例については、[を格納する文字列で、OLE DB Provider](../../data/oledb/storing-strings-in-the-ole-db-provider.md)を参照してください。
+1. 更新では、PROVIDER_COLUMN_MAP [CCustomRowset(CustomRS.h)](cmyproviderrowset-myproviderrs-h.md)します。 例については、次を参照してください。[を格納する文字列で、OLE DB Provider](../../data/oledb/storing-strings-in-the-ole-db-provider.md)します。
 
-1. プロバイダーをテストする準備ができたらは、プロバイダーの列挙体で、プロバイダーを検出することによってテストできます。 列挙体でプロバイダーを検索するテスト コードの例については、、 [CATDB](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)と[DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)サンプルまたは例では、[を実装する単純なコンシューマーの](../../data/oledb/implementing-a-simple-consumer.md)を参照してください。
+1. プロバイダーをテストする準備ができたらは、プロバイダーの列挙体で、プロバイダーを検出することによってテストできます。 列挙体でプロバイダーを検索するテスト コードの例については、次を参照してください。、 [CATDB](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)と[DBVIEWER](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)サンプルまたは例では、[を実装する単純なコンシューマーの](../../data/oledb/implementing-a-simple-consumer.md)します。
 
-1. 必要なインターフェイスを追加します。 例については、[単純な読み取り専用プロバイダーの強化](../../data/oledb/enhancing-the-simple-read-only-provider.md)を参照してください。
+1. 必要なインターフェイスを追加します。 例については、次を参照してください。[単純な読み取り専用プロバイダーの強化](../../data/oledb/enhancing-the-simple-read-only-provider.md)します。
 
    > [!NOTE]
    > 既定では、ウィザードは、OLE DB レベル 0 の準拠しているコードを生成します。 アプリケーションが、レベル 0 の準拠を引き続きようにするから取り外さないでくださいウィザードで生成されたインターフェイスのいずれかのコード。
 
 ## <a name="see-also"></a>関連項目
 
-[CatDB サンプル: データ ソースのスキーマのブラウザー](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
-[DBViewer サンプル: データベースのブラウザー](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)
+[CatDB サンプル:データ ソースのスキーマのブラウザー](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/catdb)<br/>
+[DBViewer サンプル:データベースのブラウザー](https://github.com/Microsoft/VCSamples/tree/master/VC2008Samples/ATL/OLEDB/Consumer/dbviewer)

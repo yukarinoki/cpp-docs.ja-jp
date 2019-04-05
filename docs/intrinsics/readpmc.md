@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __readpmc intrinsic
 - rdpmc instruction
 ms.assetid: 14ed45a6-28b6-4635-8437-a597c04b43d4
-ms.openlocfilehash: 059d9344fa329e69666abaca4d73122ab29f8d2a
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 848c880e76d6d431ee56a0bb30a33b276837ce76
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326434"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029344"
 ---
 # <a name="readpmc"></a>__readpmc
 
@@ -31,7 +31,7 @@ unsigned __int64 __readpmc(
 
 #### <a name="parameters"></a>パラメーター
 
-*counter*<br/>
+*カウンター*<br/>
 [in]パフォーマンス カウンターを読み取る。
 
 ## <a name="return-value"></a>戻り値
@@ -50,8 +50,8 @@ unsigned __int64 __readpmc(
 
 この組み込みはカーネル モードでのみ、使用可能なルーチンは組み込みとして使用できるのみです。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

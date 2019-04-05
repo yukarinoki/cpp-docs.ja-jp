@@ -8,12 +8,12 @@ helpviewer_keywords:
 - user records, described
 - rowsets, user record
 ms.assetid: 9c0d2864-2738-4f62-a750-1016d9c3523f
-ms.openlocfilehash: 4a06a378ba7d4084b68c98ab029aec1670be982d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b37835f1a3161edd10f61f9b4e76cfb5f558e07b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50570315"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038524"
 ---
 # <a name="user-record"></a>ユーザー レコード
 
@@ -64,7 +64,7 @@ PROVIDER_COLUMN_MAP マクロは作成を支援する`GetColumnInfo`関数。
 
 `CommandClass` `RowsetClass`は、コマンドと、ユーザー レコードを使用する行セット。
 
-オーバーライドする方法の詳細な例については`GetColumnInfo`ユーザー レコードでは、[動的に決定する列に返されるコンシューマー](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)を参照してください。
+オーバーライドする方法の詳細な例については`GetColumnInfo`ユーザー レコードでは、次を参照してください。[動的に決定する列に返されるコンシューマー](../../data/oledb/dynamically-determining-columns-returned-to-the-consumer.md)します。
 
 ## <a name="see-also"></a>関連項目
 

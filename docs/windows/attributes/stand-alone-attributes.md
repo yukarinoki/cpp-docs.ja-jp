@@ -5,12 +5,12 @@ helpviewer_keywords:
 - standalone attributes
 - attributes [C++/CLI], standalone
 ms.assetid: 0d72e84e-236c-43b3-ac9a-d9b91fcd6794
-ms.openlocfilehash: 1183d2b171a25b3b2d1aef14c19f81be65effc6a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 7dd1f35add3b23dbd81e32a1600481eec79fe7d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50640826"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033059"
 ---
 # <a name="stand-alone-attributes"></a>スタンドアロン属性
 
@@ -21,7 +21,7 @@ ms.locfileid: "50640826"
 |属性|説明|
 |---------------|-----------------|
 |[cpp_quote](cpp-quote.md)|生成されたヘッダー ファイルに、引用符なしの指定した文字列を出力します。|
-|[custom](custom-cpp.md)|独自の属性を定義できます。|
+|[カスタム](custom-cpp.md)|独自の属性を定義できます。|
 |[db_command](db-command.md)|OLE DB コマンドを作成します。|
 |[emitidl](emitidl.md)|後続のすべての IDL 属性が処理され、生成された .idl ファイル内に配置するかどうかを判断します。|
 |[idl_module](idl-module.md)|DLL エントリ ポイントを指定します。|
@@ -32,7 +32,7 @@ ms.locfileid: "50640826"
 |[include](include-cpp.md)|生成された .idl ファイルに含まれる 1 つまたは複数のヘッダー ファイルを指定します。|
 |[includelib](includelib-cpp.md)|生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル。|
 |[library_block](library-block.md)|.Idl ファイルのライブラリ ブロック内で構成要素を配置します。|
-|[module](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
+|[name](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
 |[no_injected_text](no-injected-text.md)|コンパイラがコードの属性を使用した結果として挿入するを防ぎます。|
 |[pragma](pragma.md)|生成された .idl ファイルに、引用符なしの指定した文字列を出力します。|
 

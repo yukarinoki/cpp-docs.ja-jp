@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - inject_statement attribute
 ms.assetid: 07d6f0f4-d9fb-4e18-aa62-f235f142ff5e
-ms.openlocfilehash: cf7d06eddb5ae6d08f57fb82613d97c7dcc36074
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 237ca796028aad7aff55442eb2806fe400330a29
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566713"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034288"
 ---
 # <a name="injectstatement"></a>inject_statement
 
@@ -34,7 +34,7 @@ inject_statement("source_text")
 
 テキストは、ヘッダー ファイルのタイプ ライブラリの内容をラップする名前空間宣言の先頭に配置されます。
 
-**END C 固有の仕様**
+**END C++ 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

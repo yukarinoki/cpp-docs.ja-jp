@@ -20,12 +20,12 @@ helpviewer_keywords:
 - InterlockedExchangePointer_acq intrinsic
 - InterlockedExchangePointer intrinsic
 ms.assetid: 0eaca0b0-d79e-406b-892d-b3b462c50bbb
-ms.openlocfilehash: 021c754436d6abe877e6b7dd372ba235869d8975
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 1f6e66ae4d5524518c3388f5af843cc15f65da50
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627494"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024531"
 ---
 # <a name="interlockedexchangepointer-intrinsic-functions"></a>_InterlockedExchangePointer の組み込み関数
 
@@ -64,7 +64,7 @@ void * _InterlockedExchangePointer_HLERelease(
 
 #### <a name="parameters"></a>パラメーター
 
-*Target*<br/>
+*ターゲット*<br/>
 [入力、出力]交換する値へのポインターへのポインター。 この関数は `Value` に値を設定し、その前の値を返します。
 
 *[値]*<br/>
@@ -79,14 +79,14 @@ void * _InterlockedExchangePointer_HLERelease(
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
 |`_InterlockedExchangePointer`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedExchangePointer_acq`、 `_InterlockedExchangePointer_rel`、 `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
+|`_InterlockedExchangePointer_acq`では、 `_InterlockedExchangePointer_rel`では、 `_InterlockedExchangePointer_nf`|ARM|\<intrin.h>|
 |`_InterlockedExchangePointer_HLEAcquire`, `_InterlockedExchangePointer_HLERelease`|HLE 対応 x64|\<immintrin.h>|
 
 x86 アーキテクチャでは、`_InterlockedExchangePointer` は `_InterlockedExchange` を呼び出すマクロです。
 
 ## <a name="remarks"></a>Remarks
 
-64 ビット システムではパラメーターは 64 ビットであり、64 ビットの境界に合わせて調整する必要があります。そのようにしない場合は、関数が失敗します。 32 ビット システムではパラメーターは 32 ビットであり、32 ビットの境界に合わせて調整する必要があります。 詳細については、[align](../cpp/align-cpp.md)を参照してください。
+64 ビット システムではパラメーターは 64 ビットであり、64 ビットの境界に合わせて調整する必要があります。そのようにしない場合は、関数が失敗します。 32 ビット システムではパラメーターは 32 ビットであり、32 ビットの境界に合わせて調整する必要があります。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
 
 ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
@@ -94,9 +94,9 @@ Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォ
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -143,12 +143,12 @@ helpviewer_keywords:
 - _WINRT_DLL macro
 - __func__ identifier
 ms.assetid: 1cc5f70a-a225-469c-aed0-fe766238e23f
-ms.openlocfilehash: 9ebc23545817de0f249185700454237c66610c13
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.openlocfilehash: 9dcc0922f3715d1e583605a071535f51fa8b2f57
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678355"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032454"
 ---
 # <a name="predefined-macros"></a>定義済みマクロ
 
@@ -302,7 +302,7 @@ Microsoft Visual C には、これらの追加の定義済みマクロがサポ�
    }
    ```
 
-- **&#95;&#95;INTELLISENSE&#95; &#95;**  Visual Studio IDE で IntelliSense コンパイラを中に 1 を渡すように定義されています。 それ以外の場合、定義されていません。 IntelliSense コンパイラが理解するには、またはそれを使用して、ビルドと IntelliSense のコンパイラの間で切り替えるしていないコードを保護するため、このマクロを使用することができます。 詳細については、[IntelliSense パフォーマンスの低下のトラブルシューティングのヒント](https://blogs.msdn.microsoft.com/vcblog/2011/03/29/troubleshooting-tips-for-intellisense-slowness/)を参照してください。
+- **&#95;&#95;INTELLISENSE&#95; &#95;**  Visual Studio IDE で IntelliSense コンパイラを中に 1 を渡すように定義されています。 それ以外の場合、定義されていません。 IntelliSense コンパイラが理解するには、またはそれを使用して、ビルドと IntelliSense のコンパイラの間で切り替えるしていないコードを保護するため、このマクロを使用することができます。 詳細については、次を参照してください。 [IntelliSense パフォーマンスの低下のトラブルシューティングのヒント](https://blogs.msdn.microsoft.com/vcblog/2011/03/29/troubleshooting-tips-for-intellisense-slowness/)します。
 
 - **&#95;ISO&#95;揮発性**場合は 1 として定義されている、 [/volatile:iso](../build/reference/volatile-volatile-keyword-interpretation.md)コンパイラ オプションを設定します。 それ以外の場合、定義されていません。
 
@@ -393,7 +393,7 @@ Microsoft Visual C には、これらの追加の定義済みマクロがサポ�
    #endif
    ```
 
-   詳細については、[Visual c コンパイラ バージョン](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/)Visual c チーム ブログでを参照してください。
+   詳細については、次を参照してください。 [Visual c コンパイラ バージョン](https://blogs.msdn.microsoft.com/vcblog/2016/10/05/visual-c-compiler-version/)Visual c チーム ブログでします。
 
 - **&#95;MSVC&#95;LANG**対象となる、コンパイラは C++ 言語標準を指定する整数リテラルとして定義されています。 場合、マクロは整数リテラル値 201402 L C++ としてコンパイルすると、 [/std:c + + + 14](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションを設定すると、または既定に設定されて 201703 L 場合、 [/std:c + + + 17](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションが設定されているしに設定されている、高い、指定されていないときの値、 [/std:c + + 最新](../build/reference/std-specify-language-standard-version.md)します。 それ以外の場合、マクロは定義されません。 **&#95;MSVC&#95;LANG**マクロと[/std (言語標準バージョンの指定)](../build/reference/std-specify-language-standard-version.md)コンパイラ オプションで、Visual Studio 2015 Update 3 以降を使用できます。
 

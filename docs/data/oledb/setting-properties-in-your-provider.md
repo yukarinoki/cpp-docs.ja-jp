@@ -5,16 +5,16 @@ helpviewer_keywords:
 - OLE DB providers, properties
 - properties [C++], OLE DB provider
 ms.assetid: 26a8b493-7ec4-4686-96d0-9ad5d2bca5ac
-ms.openlocfilehash: 04f6f046451a5347dbd2a911ce9fbd1a67e39bba
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2cbb334ab15912fdcf6980461016976d869f5a84
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57414162"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029461"
 ---
 # <a name="setting-properties-in-your-provider"></a>プロバイダーでのプロパティの設定
 
-対象のプロパティのプロパティ グループとプロパティの ID を検索します。 詳細については、[OLE DB プロパティ](/previous-versions/windows/desktop/ms722734(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**を参照してください。
+対象のプロパティのプロパティ グループとプロパティの ID を検索します。 詳細については、次を参照してください。 [OLE DB プロパティ](/previous-versions/windows/desktop/ms722734(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**します。
 
 ウィザードによって生成される、プロバイダー コードでは、プロパティ グループに対応するプロパティ マップを紹介します。 プロパティ グループの名前は、通常は、オブジェクトの名前に対応します。 コマンドまたは行セットでコマンドや行セットのプロパティが見つかりませんデータ ソースと初期化プロパティは、データ ソース オブジェクトで確認できます。
 

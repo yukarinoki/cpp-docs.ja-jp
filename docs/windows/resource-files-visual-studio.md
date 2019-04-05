@@ -24,12 +24,12 @@ helpviewer_keywords:
 - files [C++], editable types
 - resource editing
 ms.assetid: 4d2b6fcc-07cf-4289-be87-83a60f69533c
-ms.openlocfilehash: 3de2010cca04d007bf61bf8c139cbc69d790e579
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45db6d0139cfa3aa8a2eaa8fe6d18158cb6646ce
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563005"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029398"
 ---
 # <a name="resource-files-c"></a>リソース ファイル (C++)
 
@@ -64,7 +64,7 @@ ms.locfileid: "57563005"
 
 - 開発環境でサポートされていない種類のリソースのインクルード。
 
-リソースの詳細については、方法[リソースの作成](../windows/how-to-create-a-resource-script-file.md)、[リソースの管理](../windows/how-to-copy-resources.md)、および[コンパイル時にリソースを含む](../windows/how-to-include-resources-at-compile-time.md)を参照してください。
+リソースの詳細については、次を参照してください。 方法[リソースの作成](../windows/how-to-create-a-resource-script-file.md)、[リソースの管理](../windows/how-to-copy-resources.md)、および[コンパイル時にリソースを含む](../windows/how-to-include-resources-at-compile-time.md)します。
 
 ## <a name="editable-resources"></a>編集可能なリソース
 
@@ -85,7 +85,7 @@ ms.locfileid: "57563005"
 | ファイル名 | 説明 |
 |---|---|
 | Resource.h | シンボルの定義を含む開発環境で生成されたヘッダー ファイル。<br/><br/>ソース管理には、このファイルを含めます。 |
-| Filename.aps | 高速読み込みに使用される現在のリソース スクリプト ファイルのバイナリ バージョンです。<br /><br /> リソース エディターでは、.rc や resource.h ファイルを直接読み取るはありません。 リソース コンパイラは、リソース エディターで使用される .aps ファイルにそれらをコンパイルします。 これはコンパイル手順のファイルで、シンボル データのみが格納されます。<br/><br/>通常のコンパイル プロセスでは、コンパイル プロセス中にコメントを記述するなどの記号でない情報が破棄されます。<br/><br/>.Aps ファイルは .rc ファイルが同期されるたびに .rc ファイルを再生成します。 たとえば、する**保存**、リソース エディターは、.rc ファイルと resource.h ファイルが上書きされます。 .Rc ファイルで、リソース自体への変更が組み込まれたままですが、常に、コメントは失われますしたら、.rc ファイルが上書きされます。 コメントを保持する方法については、[コンパイル時にリソースを含む](../windows/how-to-include-resources-at-compile-time.md)を参照してください。<br/><br/>通常、ソース管理に .aps ファイルを含めることはできません。 |
+| Filename.aps | 高速読み込みに使用される現在のリソース スクリプト ファイルのバイナリ バージョンです。<br /><br /> リソース エディターでは、.rc や resource.h ファイルを直接読み取るはありません。 リソース コンパイラは、リソース エディターで使用される .aps ファイルにそれらをコンパイルします。 これはコンパイル手順のファイルで、シンボル データのみが格納されます。<br/><br/>通常のコンパイル プロセスでは、コンパイル プロセス中にコメントを記述するなどの記号でない情報が破棄されます。<br/><br/>.Aps ファイルは .rc ファイルが同期されるたびに .rc ファイルを再生成します。 たとえば、する**保存**、リソース エディターは、.rc ファイルと resource.h ファイルが上書きされます。 .Rc ファイルで、リソース自体への変更が組み込まれたままですが、常に、コメントは失われますしたら、.rc ファイルが上書きされます。 コメントを保持する方法については、次を参照してください。[コンパイル時にリソースを含む](../windows/how-to-include-resources-at-compile-time.md)します。<br/><br/>通常、ソース管理に .aps ファイルを含めることはできません。 |
 | .rc | 現在のプロジェクト内のリソース用のスクリプトを格納するリソース スクリプト ファイル。 このファイルは、保存するたびに .aps ファイルで上書きされます。<br/><br/>ソース管理には、このファイルを含めます。 |
 
 ## <a name="manifest-resources"></a>マニフェスト リソース

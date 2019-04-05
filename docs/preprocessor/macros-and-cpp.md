@@ -5,12 +5,12 @@ helpviewer_keywords:
 - macros, C++
 - macros
 ms.assetid: 83a344c1-73c9-4ace-8b93-cccfb62c6133
-ms.openlocfilehash: cd5d1237bc025cceb25cc290509b929b595a215f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4915526d5bb84b33f0595678781257d754aaf2d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50499893"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024917"
 ---
 # <a name="macros-and-c"></a>マクロと C++
 C++ にはいくつかの新機能がありますが、その一部は ANSI C プリプロセッサが提供する機能に代替します。 これらの新機能によって、次のように言語のタイプ セーフと予測可能性が向上します。
@@ -23,7 +23,7 @@ C++ にはいくつかの新機能がありますが、その一部は ANSI C �
 
     - インライン関数では、副作用のある引数の処理が修正されます。 インライン関数は、関数本体を入力する前に、引数として渡された式を評価します。 したがって、副作用のある式が安全でない状態のまま使用される可能性はありません。
 
-インライン関数の詳細については、[inline、_ _inline、 \__forceinline](../cpp/inline-functions-cpp.md)を参照してください。
+インライン関数の詳細については、次を参照してください。 [inline、_ _inline、 \__forceinline](../cpp/inline-functions-cpp.md)します。
 
 下位互換性を維持するため、ANSI C と以前の C++ 仕様にあるすべてのプリプロセッサ機能は Microsoft C++ で保持されています。
 

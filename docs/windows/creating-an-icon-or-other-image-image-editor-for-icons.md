@@ -87,12 +87,12 @@ helpviewer_keywords:
 - graphics [C++], converting formats
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
-ms.openlocfilehash: 4191b1bd495a8908610b6e49c3dff676de2304dc
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328494"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027598"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>方法: アイコンまたはその他のイメージを作成します。
 
@@ -155,8 +155,8 @@ ms.locfileid: "58328494"
 
 |プロパティ|説明|
 |---|---|
-|**Width**|カスタム イメージの幅をピクセル (1 ~ 512 の制限を 2048) で入力する場所を提供します。|
-|**Height**|ピクセル (1 ~ 512 の制限を 2048) でカスタム イメージの高さを入力する場所を提供します。|
+|**幅**|カスタム イメージの幅をピクセル (1 ~ 512 の制限を 2048) で入力する場所を提供します。|
+|**高さ**|ピクセル (1 ~ 512 の制限を 2048) でカスタム イメージの高さを入力する場所を提供します。|
 |**色**|カスタム イメージの色の数を選択する場所を提供します。2、16、または 256 です。|
 
 使用して、**開く&lt;デバイス&gt;イメージ**を C++ プロジェクトでデバイスのイメージを開く ダイアログ ボックス。 現在のリソース (現在のリソースの一部であるイメージ) の既存のデバイスのイメージが一覧表示します。 次のプロパティは次のとおりです。
@@ -209,7 +209,7 @@ ms.locfileid: "58328494"
 
 1. **色**ウィンドウで、セレクターを選択**画面の色**または**反転色**します。
 
-1. 画面描画ツールを使用して、イメージに逆の色を適用します。 描画ツールの詳細については、[描画ツールを使用して](using-a-drawing-tool-image-editor-for-icons.md)を参照してください。
+1. 画面描画ツールを使用して、イメージに逆の色を適用します。 描画ツールの詳細については、次を参照してください。[描画ツールを使用して](using-a-drawing-tool-image-editor-for-icons.md)します。
 
 #### <a name="to-change-the-screen-or-inverse-color"></a>画面または反転色を変更するには
 
@@ -277,7 +277,7 @@ ms.locfileid: "58328494"
 1. **ファイルに名前を付けて** ダイアログ ボックスに、ファイルとファイル形式で目的を示す拡張機能を提供する名前を入力、**ファイル名**ボックス。 たとえば、 *myfile.gif*します。
 
    > [!NOTE]
-   > 構成データベースを作成するか、別のファイル形式として保存するには、プロジェクトの外部のビットマップを開きます。 作成するか、プロジェクト内で開いて、**付けて**コマンドは使用できません。 詳細については、[を表示するリソースで、リソース スクリプト ファイル プロジェクトの外側 (スタンドアロン)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)を参照してください。
+   > 構成データベースを作成するか、別のファイル形式として保存するには、プロジェクトの外部のビットマップを開きます。 作成するか、プロジェクト内で開いて、**付けて**コマンドは使用できません。 詳細については、次を参照してください。[を表示するリソースで、リソース スクリプト ファイル プロジェクトの外側 (スタンドアロン)](../windows/how-to-open-a-resource-script-file-outside-of-a-project-standalone.md)します。
 
 1. **[保存]** を選択します。
 
@@ -311,7 +311,7 @@ Gif 形式や JPEG イメージを開くことができます、**イメージ �
 
 1. **テンプレート**ウィンドウで、プロジェクトに追加するには、リソースの種類を選択します。
 
-   プロジェクトにリソースを追加**ソリューション エクスプ ローラー**され、リソースがで、[イメージ エディター](../windows/image-editor-for-icons.md)します。 使用できるすべてのツールを使用できるようになりました、**イメージ エディター**イメージを変更します。 マネージ プロジェクトにイメージを追加する方法の詳細については、[デザイン時にピクチャの読み込み](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms)を参照してください。
+   プロジェクトにリソースを追加**ソリューション エクスプ ローラー**され、リソースがで、[イメージ エディター](../windows/image-editor-for-icons.md)します。 使用できるすべてのツールを使用できるようになりました、**イメージ エディター**イメージを変更します。 マネージ プロジェクトにイメージを追加する方法の詳細については、次を参照してください。[デザイン時にピクチャの読み込み](/dotnet/framework/winforms/controls/how-to-load-a-picture-using-the-designer-windows-forms)します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -320,9 +320,9 @@ Gif 形式や JPEG イメージを開くことができます、**イメージ �
 ## <a name="see-also"></a>関連項目
 
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)<br/>
-[方法: 画像を編集する](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[方法: 描画ツールを使用する](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[方法: 色を調整する](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[方法: イメージを編集します。](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[方法: 描画ツールを使用して、](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[方法: 色の調整](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--
 [Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>

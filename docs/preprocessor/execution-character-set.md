@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - pragma execution_character_set
 ms.assetid: 32248cbc-7c92-4dca-8442-230c052b53ad
-ms.openlocfilehash: ff6ff550f39dc746bb687d8d3147baa0837a6cff
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: bd31e8e91a1bcbfa6ace9b47fa2b13dd945adb20
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50472671"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039927"
 ---
 # <a name="executioncharacterset"></a>execution_character_set
 
@@ -31,7 +31,7 @@ ms.locfileid: "50472671"
 
 ## <a name="remarks"></a>Remarks
 
-このコンパイラ ディレクティブは、Visual Studio 2015 Update 2 以降廃止されています。 使用することをお勧め、`/execution-charset:utf-8`または`/utf-8`コンパイラ オプションを使用してと共に、`u8`拡張文字が含まれているナロー文字と文字列リテラルでのプレフィックス。 詳細については、`u8`プレフィックスを参照してください[String and Character Literals](../cpp/string-and-character-literals-cpp.md)します。 コンパイラ オプションの詳細については、[(実行文字セット)/execution-charset](../build/reference/execution-charset-set-execution-character-set.md)と[/utf-8 (ソースの設定と実行可能ファイルの文字セットを utf-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)を参照してください。
+このコンパイラ ディレクティブは、Visual Studio 2015 Update 2 以降廃止されています。 使用することをお勧め、`/execution-charset:utf-8`または`/utf-8`コンパイラ オプションを使用してと共に、`u8`拡張文字が含まれているナロー文字と文字列リテラルでのプレフィックス。 詳細については、`u8`プレフィックスを参照してください[String and Character Literals](../cpp/string-and-character-literals-cpp.md)します。 コンパイラ オプションの詳細については、次を参照してください。 [(実行文字セット)/execution-charset](../build/reference/execution-charset-set-execution-character-set.md)と[/utf-8 (ソースの設定と実行可能ファイルの文字セットを utf-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)します。
 
 `#pragma execution_character_set("utf-8")`ディレクティブを指定すると、実行可能ファイル、ナロー文字と、ソース コード内のナロー文字列リテラルを utf-8 としてエンコードします。 この出力エンコードは、使用されるソース ファイルのエンコーディング関係ありません。
 
@@ -43,4 +43,4 @@ ms.locfileid: "50472671"
 
 [プラグマ ディレクティブと\_\_プラグマ キーワード](../preprocessor/pragma-directives-and-the-pragma-keyword.md)<br/>
 [/execution-charset (実行文字セット)](../build/reference/execution-charset-set-execution-character-set.md)<br/>
-[/utf-8 (ソースと実行可能ファイルの文字セットを UTF-8 に設定する)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)
+[/utf-8 (ソースの設定と実行可能ファイルの文字セットを utf-8)](../build/reference/utf-8-set-source-and-executable-character-sets-to-utf-8.md)

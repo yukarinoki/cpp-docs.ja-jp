@@ -13,12 +13,12 @@ helpviewer_keywords:
 - snapshots, ODBC recordsets
 - dynasets
 ms.assetid: 333337c5-575e-4d26-b5f6-47166ad7874d
-ms.openlocfilehash: d16087722752b7bbdabd37410908c7ea2ae18ceb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b201e152d83d3812253aa4803eebe715d726219d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50435257"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034496"
 ---
 # <a name="recordset-odbc"></a>レコードセット (ODBC)
 
@@ -35,7 +35,7 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)オブジェクト デー
 テーブルに基づくレコード セットの例は、"all customers"、Customer テーブルにアクセスします。 クエリの例は、「すべての請求書 Joe Smith」 ストアド プロシージャ (定義済みのクエリとも呼ばれます) に基づいてレコード セットの例は、「すべての未払い」バック エンド データベースでストアド プロシージャを呼び出します。 レコード セットは、同じデータ ソースからテーブルが異なるデータ ソースからテーブルではなく、2 つ以上参加できます。
 
 > [!NOTE]
->  ウィザードを使用してレコード セット クラスを派生させる方法の詳細については、[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)と[データベースのサポート、MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)を参照してください。
+>  ウィザードを使用してレコード セット クラスを派生させる方法の詳細については、次を参照してください。 [MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)と[データベースのサポート、MFC アプリケーション ウィザード](../../mfc/reference/database-support-mfc-application-wizard.md)します。
 
 > [!NOTE]
 >  一部の ODBC ドライバーでは、データベースのビューをサポートします。 この意味でビューとは、SQL で作成されたクエリ`CREATE VIEW`ステートメント。 ウィザードは現在のビューをサポートしてが自分でこのサポートをコーディングすることができます。
@@ -65,64 +65,64 @@ A [CRecordset](../../mfc/reference/crecordset-class.md)オブジェクト デー
 - 指定`CRecordset::readOnly`で、 *dwOptions*パラメーターの`Open`します。
 
     > [!NOTE]
-    >  ダイナセットの ODBC ドライバーの要件については、[ODBC](../../data/odbc/odbc-basics.md)を参照してください。 このバージョンの Visual C に含まれる ODBC ドライバーの一覧については、および追加のドライバーの入手方法については、「 [ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)します。
+    >  ダイナセットの ODBC ドライバーの要件については、次を参照してください。 [ODBC](../../data/odbc/odbc-basics.md)します。 このバージョンの Visual C に含まれる ODBC ドライバーの一覧については、および追加のドライバーの入手方法については、「 [ODBC ドライバーの一覧](../../data/odbc/odbc-driver-list.md)します。
 
 ##  <a name="_core_your_recordsets"></a> レコード セット
 
-派生したクラスの定義通常すべての個別のテーブル、ビュー、またはアクセスするストアド プロシージャの`CRecordset`します。 (例外は、1 つのレコード セットが 2 つ以上のテーブルから列を表しますデータベースが結合です)。レコード セット クラスを派生するときまたは有効にしたレコード フィールド エクス (チェンジ RFX) メカニズム、バルク レコード フィールド エクス チェンジ (Bulk RFX) メカニズムはダイアログ データ エクス (チェンジ DDX) メカニズムに似ています。 バルク RFX データ ソースからのデータは、レコード セットへの転送を簡略化します。RFX はさらに、データ ソースに、レコード セットからデータを転送します。 詳細については、[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)と[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
+派生したクラスの定義通常すべての個別のテーブル、ビュー、またはアクセスするストアド プロシージャの`CRecordset`します。 (例外は、1 つのレコード セットが 2 つ以上のテーブルから列を表しますデータベースが結合です)。レコード セット クラスを派生するときまたは有効にしたレコード フィールド エクス (チェンジ RFX) メカニズム、バルク レコード フィールド エクス チェンジ (Bulk RFX) メカニズムはダイアログ データ エクス (チェンジ DDX) メカニズムに似ています。 バルク RFX データ ソースからのデータは、レコード セットへの転送を簡略化します。RFX はさらに、データ ソースに、レコード セットからデータを転送します。 詳細については、次を参照してください。[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)と[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
-レコード セット オブジェクトでは、選択したすべてのレコードにアクセスできます。 使用して複数の選択したレコードをスクロールする`CRecordset`などのメンバー関数`MoveNext`と`MovePrev`します。 レコード セット オブジェクトには、同時に、選択のレコードでは、現在のレコードの 1 つだけを表します。 現在のレコードのフィールドは、レコード セットの列、またはデータベース クエリから作成されるレコードのテーブルの列に対応するクラスのメンバー変数を宣言することを確認できます。 レコード セットのデータ メンバーについては、[レコード セット: 構造 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)を参照してください。
+レコード セット オブジェクトでは、選択したすべてのレコードにアクセスできます。 使用して複数の選択したレコードをスクロールする`CRecordset`などのメンバー関数`MoveNext`と`MovePrev`します。 レコード セット オブジェクトには、同時に、選択のレコードでは、現在のレコードの 1 つだけを表します。 現在のレコードのフィールドは、レコード セットの列、またはデータベース クエリから作成されるレコードのテーブルの列に対応するクラスのメンバー変数を宣言することを確認できます。 レコード セットのデータ メンバーについては、次を参照してください。[レコード セット。構造 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)します。
 
 次のトピックでは、レコード セット オブジェクトの使用の詳細について説明します。 トピックは、機能のカテゴリとシーケンシャルな読み取りを許可するように参照を自然な順序で表示されます。
 
 ### <a name="topics-about-the-mechanics-of-opening-reading-and-closing-recordsets"></a>開く、読み取り、およびレコード セットの終了のしくみに関するトピック
 
-- [レコードセット: レコードセットの構造 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
+- [レコード セット:構造 (ODBC)](../../data/odbc/recordset-architecture-odbc.md)
 
-- [レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
+- [レコード セット:テーブル (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)
 
-- [レコードセット: レコードセットの生成と破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
+- [レコード セット:作成するレコード セットと破棄 (ODBC)](../../data/odbc/recordset-creating-and-closing-recordsets-odbc.md)
 
-- [レコードセット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
+- [レコード セット:スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)
 
-- [レコードセット: ブックマークと絶対位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
+- [レコード セット:ブックマークと絶対位置 (ODBC)](../../data/odbc/recordset-bookmarks-and-absolute-positions-odbc.md)
 
-- [レコードセット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
+- [レコード セット:レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)
 
-- [レコードセット: レコードの並べ替え (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
+- [レコード セット:レコードの並べ替え (ODBC)](../../data/odbc/recordset-sorting-records-odbc.md)
 
-- [レコードセット: パラメーターを利用したレコードセット (ODBC)](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
+- [レコード セット:レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)
 
 ### <a name="topics-about-the-mechanics-of-modifying-recordsets"></a>レコード セットの変更のしくみに関するトピック
 
-- [レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+- [レコード セット:追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
 
-- [レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+- [レコード セット:レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
 
-- [レコードセット: クエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+- [レコード セット:クエリの再実行 (Odbc)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
 
 ### <a name="topics-about-somewhat-more-advanced-techniques"></a>高度な手法をいくらかに関するトピック
 
-- [レコードセット: 結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+- [レコード セット:結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
 
-- [レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
+- [レコード セット:クラスの宣言、定義済みクエリ (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)
 
-- [レコードセット: データ列を動的に結びつける方法 (ODBC)](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
+- [レコード セット:動的に結びつける方法 (ODBC) のデータ列](../../data/odbc/recordset-dynamically-binding-data-columns-odbc.md)
 
-- [レコードセット: バルク行フェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
+- [レコード セット:方法 (ODBC) 内のレコードをフェッチしています](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)
 
-- [レコードセット: 大量のデータの処理 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+- [レコード セット:大規模なデータ アイテム (ODBC) の操作](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
 
-- [レコードセット: 集計値の計算 (ODBC)](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
+- [レコード セット:合計およびその他の集計の計算 (ODBC) を取得します。](../../data/odbc/recordset-obtaining-sums-and-other-aggregate-results-odbc.md)
 
 ### <a name="topics-about-how-recordsets-work"></a>レコード セットのしくみに関するトピック
 
-- [レコードセット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+- [レコード セット:レコード セットの選択が (ODBC) を記録する方法](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
 
-- [レコードセット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
+- [レコード セット:レコード セットの更新が (ODBC) を記録する方法](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)
 
 ## <a name="see-also"></a>関連項目
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
-[MFC ODBC コンシューマーします。](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[MFC ODBC コンシューマー](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)

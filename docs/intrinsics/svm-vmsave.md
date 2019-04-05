@@ -7,12 +7,12 @@ helpviewer_keywords:
 - VMSAVE instruction
 - __svm_vmsave intrinsic
 ms.assetid: 617a60bd-8514-4ba1-8066-bcf4dd481030
-ms.openlocfilehash: 2ffc68b13d09d15d90670fa135a2cac9d9a1d52f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d683a13f636db9683b4a7c8d075ad6c3c88c2aed
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50556615"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023413"
 ---
 # <a name="svmvmsave"></a>__svm_vmsave
 
@@ -36,7 +36,7 @@ void __svm_vmsave(
 
 ## <a name="remarks"></a>Remarks
 
-`__svm_vmsave` 関数は `VMSAVE` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"24593 のドキュメント番号、リビジョン 3.11 またはそれ以降で、 [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。
+`__svm_vmsave` 関数は `VMSAVE` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2。システムは、プログラミング"文書番号 24593、リビジョン 3.11 またはそれ以降で、 [AMD Corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。
 
 ## <a name="requirements"></a>必要条件
 
@@ -46,10 +46,10 @@ void __svm_vmsave(
 
 **ヘッダー ファイル** \<intrin.h >
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_vmrun](../intrinsics/svm-vmrun.md)<br/>
 [__svm_vmload](../intrinsics/svm-vmload.md)

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Visual C++ projects
 - ATL projects
 ms.assetid: 11003cd8-9046-4630-a189-a32bf3b88047
-ms.openlocfilehash: a3ddafab143224b6e20a3e01d1d643c42bbe19e0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b4772b9bd625a542a18039386fefe42840ab65b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775323"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038039"
 ---
 # <a name="visual-studio-projects---c"></a>Visual Studio プロジェクトの C++
 
@@ -28,7 +28,7 @@ C++ プロジェクトを作成するには選択して**ファイル&#124;新�
 
    ![プロジェクト テンプレート](../overview/media/vs2017-new-project.png "Visual Studio 2017 の [新しいプロジェクト] ダイアログ")
 
-Visual Studio に含まれているすべての既定プロジェクト テンプレートの詳細については、[Visual Studio で C++ プロジェクト テンプレート](reference/visual-cpp-project-types.md)を参照してください。 独自のプロジェクト テンプレートを作成することができます。 詳細については、「[方法 :プロジェクト テンプレートを作成](/visualstudio/ide/how-to-create-project-templates)です。
+Visual Studio に含まれているすべての既定プロジェクト テンプレートの詳細については、次を参照してください。 [Visual Studio で C++ プロジェクト テンプレート](reference/visual-cpp-project-types.md)します。 独自のプロジェクト テンプレートを作成することができます。 詳細については、「[方法 :プロジェクト テンプレートを作成](/visualstudio/ide/how-to-create-project-templates)です。
 
 表示されますが、プロジェクトを作成した後、[ソリューション エクスプ ローラー](/visualstudio/ide/solutions-and-projects-in-visual-studio)ウィンドウ。
 
@@ -46,7 +46,7 @@ Visual Studio に含まれているすべての既定プロジェクト テン�
 
 ## <a name="set-compiler-options-and-other-build-properties"></a>コンパイラ オプションとその他のビルド プロパティを設定します。
 
-プロジェクトを右クリックし、プロジェクトのビルド設定を構成する**ソリューション エクスプ ローラー**選択**プロパティ**します。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)を参照してください。
+プロジェクトを右クリックし、プロジェクトのビルド設定を構成する**ソリューション エクスプ ローラー**選択**プロパティ**します。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](working-with-project-properties.md)します。
 
 ## <a name="compile-and-run"></a>コンパイルし、実行
 
@@ -60,13 +60,13 @@ Visual Studio に含まれているすべての既定プロジェクト テン�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[Visual Studio で C++ コンパイラとビルド プロパティを設定する](working-with-project-properties.md)<br/>
+[C++ コンパイラを設定し、Visual Studio でのプロパティのビルド](working-with-project-properties.md)<br/>
 プロパティ ページとプロパティ シートを使用して、プロジェクトの設定を指定する方法。
 
-[ビルド時にライブラリとコンポーネントを参照する](adding-references-in-visual-cpp-projects.md)<br/>
+[参照ライブラリおよびビルド時にコンポーネント](adding-references-in-visual-cpp-projects.md)<br/>
 プロジェクトにライブラリ、Dll、COM および .NET コンポーネントを含める方法です。
  
-[プロジェクト出力ファイルを編成する](how-to-organize-project-output-files-for-builds.md)<br/>
+[プロジェクト出力ファイルを整理します。](how-to-organize-project-output-files-for-builds.md)<br/>
 ビルド プロセスで作成した実行可能ファイルの場所をカスタマイズする方法。
 
 [カスタム ビルド ステップとビルド イベント](understanding-custom-build-steps-and-build-events.md)<br/>

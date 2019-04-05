@@ -12,12 +12,12 @@ helpviewer_keywords:
 - GetString method
 - SetString method
 ms.assetid: 138dc4de-c7c3-478c-863e-431e48249027
-ms.openlocfilehash: dff36dfb2b898c6a4df65492e2d9386c748f049b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6ba56143beb3411734899839a46ab42992dfa4d8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50534616"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035664"
 ---
 # <a name="cdynamicstringaccessor-class"></a>CDynamicStringAccessor クラス
 
@@ -53,9 +53,9 @@ class CDynamicStringAccessorT : public CDynamicAccessor
 
 列の情報は、このクラスによって作成および管理のバッファーに格納されます。 使用してバッファーからデータを取得[GetString](../../data/oledb/cdynamicstringaccessor-getstring.md)を使用して、バッファーに格納または[SetString](../../data/oledb/cdynamicstringaccessor-setstring.md)します。
 
-動的アクセサー クラスの使用例とについては、[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)を参照してください。
+動的アクセサー クラスの使用例とについては、次を参照してください。[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)します。
 
-## <a name="getstring"></a> Cdynamicstringaccessor::getstring
+## <a name="getstring"></a> CDynamicStringAccessor::GetString
 
 指定された列のデータを文字列として取得します。
 
@@ -85,7 +85,7 @@ BaseType* GetString(const WCHAR* pColumnName) const throw();
 
 2 番目のオーバーライド フォームは、ANSI 文字列として列名を取得します。 3 番目のオーバーライド フォームは、Unicode 文字列として列名を取得します。
 
-## <a name="setstring"></a> Cdynamicstringaccessor::setstring
+## <a name="setstring"></a> CDynamicStringAccessor::SetString
 
 文字列として指定された列のデータを設定します。
 
@@ -110,7 +110,7 @@ HRESULT SetString(const WCHAR* pColumnName,
 *pColumnName*<br/>
 [in]列名を含む文字列へのポインター。
 
-*data*<br/>
+*[データ]*<br/>
 [in]指定された列に書き込まれる文字列のデータへのポインター。
 
 ### <a name="return-value"></a>戻り値

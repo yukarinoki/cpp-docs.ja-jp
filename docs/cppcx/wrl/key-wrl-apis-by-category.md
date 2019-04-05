@@ -3,12 +3,12 @@ title: カテゴリ別の主要な WRL API
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 7367bacf-6b7c-4ecd-a0ce-a662db46fc66
-ms.openlocfilehash: fd4bebf9c823079c3bdb4c4182bf3f30cdf105a7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: f3065323c567c944dab12fc1ebbcbd6bb57127e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785122"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039058"
 ---
 # <a name="key-wrl-apis-by-category"></a>カテゴリ別の主要な WRL API
 
@@ -16,14 +16,14 @@ ms.locfileid: "58785122"
 
 ## <a name="classes"></a>クラス
 
-|Title|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[ActivationFactory クラス](activationfactory-class.md)|1 つ以上のクラスを Windows ランタイムによってアクティブ化できるようにします。|
 |[AsyncBase クラス](asyncbase-class.md)|Windows ランタイムの非同期ステート マシンを実装します。|
 |[ClassFactory クラス](classfactory-class.md)|`IClassFactory` インターフェイスの基本機能を実装します。|
 |[ComPtr クラス](comptr-class.md)|テンプレート パラメーターで指定されたインターフェイスを表す *スマート ポインター* 型を作成します。 ComPtr は、基になるインターフェイス ポインターの参照カウントを自動的に維持し、参照カウントがゼロになるとそのインターフェイスを解放します。|
 |[Event クラス (Windows ランタイム C++ テンプレート ライブラリ)](event-class-wrl.md)|イベントを表します。|
-|[EventSource クラス](eventsource-class.md)|イベントを表します。 `EventSource` メンバー関数は、イベント ハンドラーの追加、削除、および呼び出しを実行します。|
+|[EventSource クラス](eventsource-class.md)|イベントを表します。 `EventSource` メンバー関数は、追加、削除、およびイベント ハンドラーを呼び出します。|
 |[FtmBase クラス](ftmbase-class.md)|フリー スレッド マーシャラー オブジェクトを表します。|
 |[HandleT クラス](handlet-class.md)|オブジェクトへのハンドルを表します。|
 |[HString クラス](hstring-class.md)|HSTRING ハンドルの操作をサポートします。|
@@ -40,7 +40,7 @@ ms.locfileid: "58785122"
 
 ## <a name="structures"></a>構造体
 
-|Title|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[ChainInterfaces 構造体](chaininterfaces-structure.md)|一連のインターフェイス ID に適用できる検証および初期化関数を指定します。|
 |[CloakedIid 構造体](cloakediid-structure.md)|示します、 `RuntimeClass`、`Implements`と`ChainInterfaces`テンプレートの指定したインターフェイスが IID リストにアクセスできないことです。|
@@ -49,7 +49,7 @@ ms.locfileid: "58785122"
 
 ## <a name="functions"></a>関数
 
-|Title|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[ActivateInstance 関数](activateinstance-function.md)|登録し、指定したクラス ID で定義されている指定された型のインスタンスを取得します。|
 |[AsWeak 関数](asweak-function.md)|指定されたインスタンスへの弱い参照を取得します。|
@@ -61,7 +61,7 @@ ms.locfileid: "58785122"
 
 ## <a name="macros"></a>[マクロ]
 
-|Title|説明|
+|タイトル|説明|
 |-----------|-----------------|
 |[ActivatableClass マクロ](activatableclass-macros.md)|指定したクラスのインスタンスを作成できるファクトリを含む内部キャッシュを設定します。|
 |[InspectableClass マクロ](inspectableclass-macro.md)|ランタイム クラス名と信頼レベルを設定します。|

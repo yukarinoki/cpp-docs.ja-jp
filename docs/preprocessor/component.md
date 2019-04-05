@@ -8,12 +8,12 @@ helpviewer_keywords:
 - component pragma
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
-ms.openlocfilehash: af0e4d7267fab92c867431ab70f4d8a0240a79d2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cfb9d2bb9d6ddd2d430c2c031f3c8a51946391b1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666116"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032967"
 ---
 # <a name="component"></a>コンポーネント
 ブラウザー情報または依存関係情報の収集をソース ファイル内から制御します。
@@ -32,7 +32,7 @@ ms.locfileid: "50666116"
 
 情報収集のオン/オフを切り替えます。また特定の名前を指定して情報収集の際に無視できます。
 
-on または off を使用して、このプラグマ以降のブラウザー情報の収集を制御します。 例えば:
+on または off を使用して、このプラグマ以降のブラウザー情報の収集を制御します。 例:
 
 ```
 #pragma component(browser, off)
@@ -43,7 +43,7 @@ on または off を使用して、このプラグマ以降のブラウザー情
 > [!NOTE]
 > このプラグマを使用してブラウザー情報の収集を有効にする[ブラウズ情報を有効にする必要がありますまず](../build/reference/building-browse-information-files-overview.md)します。
 
-`references`またはなしでオプションを使用できる、*名前*引数。 使用して`references`せず*名前*を有効または無効の収集の (ただし、収集するその他の参照情報が続行されます)。 例えば:
+`references`またはなしでオプションを使用できる、*名前*引数。 使用して`references`せず*名前*を有効または無効の収集の (ただし、収集するその他の参照情報が続行されます)。 例:
 
 ```
 #pragma component(browser, off, references)
@@ -51,7 +51,7 @@ on または off を使用して、このプラグマ以降のブラウザー情
 
 このプラグマは、コンパイラによる参照情報の収集を停止します。
 
-使用して`references`で*名前*と`off`への参照を防止*名前*がブラウザー情報ウィンドウに表示されないようにします。 この構文を使用して必要のない名前と型を無視することで、ブラウザー情報ファイルのサイズを縮小できます。 例えば:
+使用して`references`で*名前*と`off`への参照を防止*名前*がブラウザー情報ウィンドウに表示されないようにします。 この構文を使用して必要のない名前と型を無視することで、ブラウザー情報ファイルのサイズを縮小できます。 例:
 
 ```
 #pragma component(browser, off, references, DWORD)

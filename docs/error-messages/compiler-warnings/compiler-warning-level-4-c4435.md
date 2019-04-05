@@ -2,16 +2,16 @@
 title: コンパイラの警告 (レベル 4) C4435
 ms.date: 11/04/2016
 ms.assetid: a04524af-2b71-4ff9-9729-d9d1d1904ed7
-ms.openlocfilehash: 7db1d483f571289c5b890c223ba1e59ba3d1f41e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 43c13c484d6e9accee7c4d2c58b72a4539a75c4c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50572329"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041229"
 ---
 # <a name="compiler-warning-level-4-c4435"></a>コンパイラの警告 (レベル 4) C4435
 
-'class1': /vd2 下のオブジェクトのレイアウトは仮想ベース 'class2' により変更されます。
+'class1' :/Vd2 下のオブジェクトのレイアウトは仮想ベース 'class2' により変更されます。
 
 既定では、この警告はオフに設定されています。 詳細については、「 [既定で無効になっているコンパイラ警告](../../preprocessor/compiler-warnings-that-are-off-by-default.md) 」を参照してください。
 

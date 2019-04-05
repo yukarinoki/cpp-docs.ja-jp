@@ -21,12 +21,12 @@ helpviewer_keywords:
 - elif directive (#elif)
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
-ms.openlocfilehash: 76b8be265145896105490a82946c50bc576e6f9f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50520423"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028092"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else、および #endif ディレクティブ (C/C++)
 
@@ -41,16 +41,16 @@ ms.locfileid: "50520423"
 &nbsp;&nbsp;&nbsp;&nbsp;*if 行のテキスト*
 
 *if 行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if***定数式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef***識別子*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef***識別子*
+&nbsp;&nbsp;&nbsp;&nbsp;**#if**  *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef**  *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef**  *identifier*
 
 *elif パーツ*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 行のテキスト*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif パーツ elif 行のテキスト*
 
 *elif 行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif***定数式*
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif**  *constant-expression*
 
 *他の部分から成る*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*他の行のテキスト*
@@ -65,7 +65,7 @@ ms.locfileid: "50520423"
 
 **#If**、 **#elif**、 **#else**、および **#endif**ディレクティブを他のテキストの部分に入れ子 **#if**ディレクティブ。 入れ子になった **#else**、 **#elif**、または **#endif** 、最も近い先行するディレクティブが属している **#if**ディレクティブ。
 
-すべての条件付きコンパイル ディレクティブなど **#if**と **#ifdef**、終了と一致する必要があります **#endif**ディレクティブは、最後のファイルの前にそれ以外の場合、エラーメッセージが生成されます。 条件付きコンパイル ディレクティブがインクルード ファイルに含まれている場合も同じ条件を満たす必要があります。つまり、インクルード ファイルの終わりに対になる条件付きコンパイル ディレクティブが必要です。
+すべての条件付きコンパイル ディレクティブなど **#if**と **#ifdef**、終了と一致する必要があります **#endif**ディレクティブは、最後のファイルの前にそれ以外の場合、エラーメッセージが生成されます。 条件付きコンパイル ディレクティブが含まれている場合は、インクルード ファイルが同じ条件を満たす必要があります。インクルード ファイルの最後に一致しない条件付きコンパイル ディレクティブがありません。
 
 マクロ置換は、次のコマンドラインの一部内で実行されます、 **#elif**コマンド、マクロの呼び出しで使用できるように、*定数式*します。
 
@@ -97,7 +97,7 @@ ms.locfileid: "50520423"
 
 defined( `identifier` )
 
-defined `identifier`
+定義 `identifier`
 
 この定数式が場合は true (0 以外) と見なされる、*識別子*現在定義されているか。 それ以外の場合、条件が false (0)。 空のテキストとして定義された識別子は、定義されていると見なされます。 **定義**にディレクティブを使用することができます、 **#if**と **#elif**ディレクティブが、これ以外の場所。
 
@@ -174,7 +174,7 @@ class Example
 
 ## <a name="hasinclude"></a>__has_include
 
-**Visual Studio 2017 バージョン 15.3 以降**: ライブラリのヘッダーを含めることができるかどうかを判断します。
+**Visual Studio 2017 バージョン 15.3 およびそれ以降**:ライブラリのヘッダーが含めることができるかどうかを決定します。
 
 ```cpp
 #ifdef __has_include

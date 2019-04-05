@@ -2,12 +2,12 @@
 title: デスクトップ アプリケーション (Visual C)
 ms.date: 11/04/2016
 ms.assetid: a020b534-293c-44e2-aa48-516c43ddeb8f
-ms.openlocfilehash: 090180062139642d8a686e9f1bf063f3e65aee88
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 1242878c6b79616aaadb6a176cd29deeb89a7daf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58771920"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033115"
 ---
 # <a name="desktop-applications-visual-c"></a>デスクトップ アプリケーション (Visual C)
 
@@ -29,22 +29,22 @@ Visual Studio 2017 バージョン 15.4 以降では、既存のデスクトッ�
 
 - MFC アプリケーションが使用する Windows デスクトップ アプリケーション、 [Microsoft Foundation Classes](../mfc/mfc-desktop-applications.md)ユーザー インターフェイスを作成します。 MFC アプリケーションは、COM コンポーネントだけでなく CRT と標準ライブラリの Api も使用できます。 MFC では、ウィンドウ メッセージ ループと Windows Api 経由でシン C++ オブジェクト指向ラッパーを提供します。 MFC アプリケーションの既定のオプションは、特にエンタープライズ型のアプリケーション-多数のユーザー インターフェイス コントロールまたはカスタム ユーザー コントロールがあります。 MFC では、ウィンドウの管理、シリアル化、テキスト操作、印刷、およびリボンなどの最新のユーザー インターフェイス要素の便利なヘルパー クラスを提供します。 MFC で有効にするための Win32 とよく理解します。
 
-- C++/cli CLI アプリケーションまたはコンポーネントを使用して C++ 構文の拡張機能 (C++ 仕様で許可されている) と .NET とネイティブ c++ コードの間の対話を有効にします。  C++/cli CLI アプリケーションでネイティブに実行される部品と部品 .NET 基本クラス ライブラリにアクセス権を持つ .NET Framework で実行されることができます。 C +/cli CLI は、c# または Visual Basic で記述されたコードを操作する必要があるネイティブの C++ コードがある場合に推奨されるオプション。 ユーザー インターフェイスのコードではなく .NET Dll で使用するためのものでは主に。 詳細については、[C + での .NET プログラミング/cli (Visual c)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)を参照してください。
+- C++/cli CLI アプリケーションまたはコンポーネントを使用して C++ 構文の拡張機能 (C++ 仕様で許可されている) と .NET とネイティブ c++ コードの間の対話を有効にします。  C++/cli CLI アプリケーションでネイティブに実行される部品と部品 .NET 基本クラス ライブラリにアクセス権を持つ .NET Framework で実行されることができます。 C +/cli CLI は、c# または Visual Basic で記述されたコードを操作する必要があるネイティブの C++ コードがある場合に推奨されるオプション。 ユーザー インターフェイスのコードではなく .NET Dll で使用するためのものでは主に。 詳細については、次を参照してください。 [C + での .NET プログラミング/cli (Visual c)](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)します。
 
-C ランタイム (CRT) と標準ライブラリのクラスと関数、COM オブジェクト、およびパブリックの Windows の関数は、Windows API と総称されて、C++ では、デスクトップ アプリケーションを使用できます。 C++ での Windows デスクトップ アプリケーションの概要については、[Win32 と C++ の概要](/windows/desktop/LearnWin32/learn-to-program-for-windows)を参照してください。
+C ランタイム (CRT) と標準ライブラリのクラスと関数、COM オブジェクト、およびパブリックの Windows の関数は、Windows API と総称されて、C++ では、デスクトップ アプリケーションを使用できます。 C++ での Windows デスクトップ アプリケーションの概要については、次を参照してください。 [Win32 と C++ の概要](/windows/desktop/LearnWin32/learn-to-program-for-windows)します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
 |Title|説明|
 |-----------|-----------------|
-|[C++ による Windows コンソール アプリケーション](console-applications-in-visual-cpp.md)|コンソール アプリに関する情報が含まれています。 Win32 (または Win64) コンソール アプリケーションには、独自のウィンドウとメッセージ ループはありません。 コンソール ウィンドウで動作し、入出力はコマンド ラインを使用して扱われます。|
-|[チュートリアル: Windows デスクトップ アプリケーション (C++) の作成](walkthrough-creating-windows-desktop-applications-cpp.md)|シンプルな Windows デスクトップ アプリケーションを作成します。|
-|[空の Windows デスクトップ アプリケーションの作成](creating-an-empty-windows-desktop-application.md)|既定のファイルを持たない Windows デスクトップ プロジェクトを作成する方法。|
+|[C++ での Windows コンソール アプリケーション](console-applications-in-visual-cpp.md)|コンソール アプリに関する情報が含まれています。 Win32 (または Win64) コンソール アプリケーションには、独自のウィンドウとメッセージ ループはありません。 コンソール ウィンドウで動作し、入出力はコマンド ラインを使用して扱われます。|
+|[チュートリアル: Windows デスクトップ アプリケーション (C++) を作成します。](walkthrough-creating-windows-desktop-applications-cpp.md)|シンプルな Windows デスクトップ アプリケーションを作成します。|
+|[空の Windows デスクトップ アプリケーションを作成する](creating-an-empty-windows-desktop-application.md)|既定のファイルを持たない Windows デスクトップ プロジェクトを作成する方法。|
 |[空の Win32 アプリケーションへのファイルの追加](adding-files-to-an-empty-win32-applications.md)|空のプロジェクトにファイルを追加する方法。|
 |[リソース ファイルの操作](working-with-resource-files.md)|デスクトップ アプリケーションをイメージ、アイコン、文字列テーブル、およびその他のリソースを追加する方法。|
-|[DirectX (C++) を使用してゲームを作成するためのリソース](resources-for-creating-a-game-using-directx.md)|C++ でのゲームを作成するためのコンテンツへのリンク。|
+|[DirectX を使用するゲームを作成するためのリソース (C++)](resources-for-creating-a-game-using-directx.md)|C++ でのゲームを作成するためのコンテンツへのリンク。|
 |[チュートリアル: 作成して、スタティック ライブラリを使用](walkthrough-creating-and-using-a-static-library-cpp.md)|.Lib バイナリ ファイルを作成する方法。|
-|[方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows 10 SDK を使用してビルドするプロジェクトの設定手順が示されています。|
+|[方法: Windows 10 を使用して、Windows デスクトップ アプリケーションで SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows 10 SDK を使用してビルドするプロジェクトの設定手順が示されています。|
 
 ## <a name="related-articles"></a>関連トピック
 

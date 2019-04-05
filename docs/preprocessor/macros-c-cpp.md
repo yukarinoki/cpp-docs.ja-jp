@@ -6,12 +6,12 @@ helpviewer_keywords:
 - preprocessor, macros
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
-ms.openlocfilehash: eb576fae7a2a895b88aa958c61b3170e58fbb070
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50656301"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032181"
 ---
 # <a name="macros-cc"></a>マクロ (C/C++)
 プリプロセッサ ディレクティブではないすべての行でマクロを展開の前処理 (行がない、 **#** 最初の空白以外の文字として) との一部としてスキップされない一部のディレクティブの部分で、条件付きコンパイルします。 "条件付きコンパイル" ディレクティブは、定数式または識別子をテストすることによってソース ファイルの一部のコンパイルを抑制して、コンパイラに渡されたテキスト ブロックおよびプリプロセス時にソース ファイルから削除されたテキスト ブロックを判断できるようにします。
@@ -30,7 +30,7 @@ ms.locfileid: "50656301"
 
 - [マクロと C++](../preprocessor/macros-and-cpp.md)
 
-- [可変個引数マクロ](../preprocessor/variadic-macros.md)
+- [Variadic マクロ](../preprocessor/variadic-macros.md)
 
 - [定義済みマクロ](../preprocessor/predefined-macros.md)
 

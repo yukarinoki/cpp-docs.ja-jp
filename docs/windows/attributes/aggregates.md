@@ -9,12 +9,12 @@ helpviewer_keywords:
 - aggregate objects [C++], aggregates attribute
 - aggregates [C++]
 ms.assetid: 67a084c9-941f-474b-a029-9c93b38ebe9a
-ms.openlocfilehash: aaf138ab3b0fa69f2a8c201eed631569b33b079f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 12e6af31c2714095cf2ecf51e4f067081789a9e0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486789"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028706"
 ---
 # <a name="aggregates"></a>aggregates
 
@@ -95,6 +95,6 @@ struct CObject : IObject
 [COM 属性](com-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
-[集計](/windows/desktop/com/aggregation)<br/>
-[集約可能](/windows/desktop/Midl/aggregatable)<br/>
+[集約](/windows/desktop/com/aggregation)<br/>
+[Aggregatable](/windows/desktop/Midl/aggregatable)<br/>
 [COM_INTERFACE_ENTRY_AUTOAGGREGATE_BLIND](../../atl/reference/com-interface-entry-macros.md#com_interface_entry_autoaggregate_blind)

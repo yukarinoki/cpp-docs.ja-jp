@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OLE DB provider templates [C++], object interfaces
 - OLE DB [C++], interfaces
 ms.assetid: 929e100c-c08c-4b64-8437-d8d1357226f6
-ms.openlocfilehash: aaa9e90996750b0518999803487fcb39729c76f9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fc8d2f5edf854766dcb5dcc8ed6d57a849b8f2a0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519647"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033191"
 ---
 # <a name="data-source-object-interfaces"></a>データ ソース オブジェクト インターフェイス
 
@@ -22,7 +22,7 @@ ms.locfileid: "50519647"
 
 |Interface|必須?|OLE DB テンプレートによって実装されるでしょうか。|
 |---------------|---------------|--------------------------------------|
-|`IDBCreateSession`|必須|はい|
+|`IDBCreateSession`|必須|[はい]|
 |`IDBInitialize`|必須|はい|
 |`IDBProperties`|必須|はい|
 |[IPersist](/windows/desktop/api/objidl/nn-objidl-ipersist)|必須|はい|

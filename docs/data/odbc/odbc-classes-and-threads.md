@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ODBC, multithreaded applications
 - threading [MFC], ODBC support
 ms.assetid: 16543926-7331-41a6-ba50-72288f2a61b7
-ms.openlocfilehash: 1d470e79ba5a6a73a30743a21da0462a6b89e7da
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2d11cdab632e916f548011462f9738bc267fc730
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608170"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023531"
 ---
 # <a name="odbc-classes-and-threads"></a>ODBC クラスおよびスレッド
 
@@ -24,7 +24,7 @@ ODBC クラスは、マルチ スレッドのサポートでは、いくつか�
 > [!NOTE]
 >  複数のスレッドが同じオブジェクトを操作が必要な場合は、クリティカル セクションなど、適切な同期メカニズムを実装する必要があります。 注意してください、その特定の操作など`Open`、保護されていません。 これらの操作はありませんから呼び出すことが同時に個別のスレッドことを確認しておく必要があります。
 
-マルチ スレッド アプリケーションの作成の詳細については、[マルチ スレッドのトピック](../../parallel/multithreading-support-for-older-code-visual-cpp.md)を参照してください。
+マルチ スレッド アプリケーションの作成の詳細については、次を参照してください。[マルチ スレッドのトピック](../../parallel/multithreading-support-for-older-code-visual-cpp.md)します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: データ列を動的に結びつける方法 (ODBC)'
+title: レコード セット:動的に結びつける方法 (ODBC) のデータ列
 ms.date: 11/19/2018
 helpviewer_keywords:
 - ODBC recordsets [C++], binding columns dynamically
@@ -8,14 +8,14 @@ helpviewer_keywords:
 - data binding [C++], columns in recordsets
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
-ms.openlocfilehash: c2fc870ba08bbec0a886b3d77281f3c697ae09fe
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175666"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035132"
 ---
-# <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコードセット: データ列を動的に結びつける方法 (ODBC)
+# <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコード セット:動的に結びつける方法 (ODBC) のデータ列
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -26,7 +26,7 @@ ms.locfileid: "52175666"
 - [実行時に列を動的にバインドする方法](#_core_how_to_bind_columns_dynamically)します。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合、一般的に説明した手法は推奨されません。 バルク行フェッチの詳細については、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合、一般的に説明した手法は推奨されません。 バルク行フェッチの詳細については、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 ##  <a name="_core_when_you_might_bind_columns_dynamically"></a> 列を動的にバインドがありますと
 
@@ -91,8 +91,8 @@ MFC アプリケーション ウィザード、デザイン時にまたは[MFC O
 
 |||
 |-|-|
-|**現在のテーブル列**| (図にはリスト 1)現在のデータ ソースのテーブルの列の一覧。 この一覧は、レコード セットに現在バインドされている列の一覧に一致があります。|
-|**レコード セット列のバインド**| (図でリスト 2)列の一覧は、レコード セットにバインドします。 これらの列が既にある RFX ステートメント、`DoFieldExchange`関数。|
+|**Current-Table-Columns**| (図にはリスト 1)現在のデータ ソースのテーブルの列の一覧。 この一覧は、レコード セットに現在バインドされている列の一覧に一致があります。|
+|**Bound-Recordset-Columns**| (図でリスト 2)列の一覧は、レコード セットにバインドします。 これらの列が既にある RFX ステートメント、`DoFieldExchange`関数。|
 |**動的に列のバインド-**| (図でリスト 3)レコード セットではなく、テーブルで列の一覧。 これらは動的にバインドする列です。|
 |**動的な列の値**| (図でリスト 4)動的にバインドする列から値の記憶域を含む一覧を取得します。 この一覧の要素は、動的に列のバインドの一対一で対応します。|
 
@@ -126,7 +126,7 @@ MFC アプリケーション ウィザード、デザイン時にまたは[MFC O
 
 1. それぞれの列名に動的にバインドする列の一覧に格納されている (列のバインド-動的に) に対応するデータ値を格納するための (一覧の図は、4) のように動的な列の値の一覧を構築します。
 
-   このリストの要素は、フィールド データ メンバーに新しいレコード セットの役割を果たします。 動的な列がバインドされている記憶域の場所が表示されます。 リストの説明については、[列のリスト](#_core_lists_of_columns)を参照してください。
+   このリストの要素は、フィールド データ メンバーに新しいレコード セットの役割を果たします。 動的な列がバインドされている記憶域の場所が表示されます。 リストの説明については、次を参照してください。[列のリスト](#_core_lists_of_columns)します。
 
 ###  <a name="_core_providing_storage_for_the_new_columns"></a> 新しい列のストレージを提供します。
 
@@ -136,11 +136,11 @@ MFC アプリケーション ウィザード、デザイン時にまたは[MFC O
 
 1. 動的な列の値、列のバインド-動的に、各列のデータの値を格納するには並列をビルドします。
 
-   要素が 1 つの図が動的な列の値 (リスト 4) を表示するなど、:`CString`オブジェクトの現在のレコードの実際の電話番号を格納している:「555-1212」。
+   要素が 1 つの図が動的な列の値 (リスト 4) を表示するなど、:`CString`現在のレコードの実際の電話番号を含むオブジェクト。"555-1212".
 
    動的な列の値の型の要素が最も一般的なケースで`CString`します。 さまざまなデータ型の列を扱うさまざまな種類の要素を含むことのできる一覧が必要です。
 
-上記の手順の結果は 2 つの主なリスト: 動的に列のバインド-動的な列の値の現在のレコードの列の値を格納している列の名前を格納しています。
+上記の手順の結果は、2 つの主なリストです。列のバインド-動的に列と動的な列の値の現在のレコードの列の値を格納しているの名前を格納しています。
 
 > [!TIP]
 > 新しい列がすべて同じデータ型のない場合は、追加の並列何らかの方法で列リストで各要素の型を定義するコンテナーの項目の一覧をする可能性があります。 (リスト、必要に応じての値を使用して、このたいとします。 これらの定数は、AFXDB で定義されます。H.)列のデータ型を表す方法に基づくリストの種類を選択します。
@@ -151,7 +151,7 @@ Rfx 関数の呼び出しで、新しい列に配置することによって発�
 
 ##### <a name="to-dynamically-add-rfx-calls-for-new-columns"></a>新しい列の rfx 関数の呼び出しを動的に追加するには
 
-1. メイン レコード セットの`DoFieldExchange`メンバー関数を新しい列 (動的に列のバインド-) の一覧をループ処理するコードを追加します。 各ループからの動的な列の値から列の結果の値と列のバインド-動的に列名を抽出します。 列のデータ型に適した RFX 関数を呼び出す次の項目を渡します。 リストの説明については、[列のリスト](#_core_lists_of_columns)を参照してください。
+1. メイン レコード セットの`DoFieldExchange`メンバー関数を新しい列 (動的に列のバインド-) の一覧をループ処理するコードを追加します。 各ループからの動的な列の値から列の結果の値と列のバインド-動的に列名を抽出します。 列のデータ型に適した RFX 関数を呼び出す次の項目を渡します。 リストの説明については、次を参照してください。[列のリスト](#_core_lists_of_columns)します。
 
 一般的な場合で、`RFX_Text`関数呼び出しを抽出する`CString`オブジェクトを動的に列のバインドでは、コードの次の行のように、リストから、`CStringList`と呼ばれる`m_listName`動的な列の値であり、 `CStringList`と呼ばれる`m_listValue`:
 
@@ -161,7 +161,7 @@ RFX_Text( pFX,
             m_listValue.GetNext( posValue ));
 ```
 
-RFX 関数の詳細については、[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)で、*クラス ライブラリ リファレンス*を参照してください。
+RFX 関数の詳細については、次を参照してください。[マクロとグローバル](../../mfc/reference/mfc-macros-and-globals.md)で、*クラス ライブラリ リファレンス*します。
 
 > [!TIP]
 > 新しい列が別のデータ型の場合は、ループで switch ステートメントを使用して、各種類の RFX 関数を呼び出します。
@@ -171,4 +171,4 @@ RFX 関数の詳細については、[マクロとグローバル](../../mfc/ref
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: 大量のデータの処理 (ODBC)](../../data/odbc/recordset-working-with-large-data-items-odbc.md)
+[レコード セット:大規模なデータ アイテム (ODBC) の操作](../../data/odbc/recordset-working-with-large-data-items-odbc.md)

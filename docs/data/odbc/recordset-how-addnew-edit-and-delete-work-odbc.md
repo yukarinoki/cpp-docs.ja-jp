@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: AddNew、Edit、Delete の動作のしくみ (ODBC)'
+title: レコード セット:AddNew が編集、および作業 (ODBC) を削除する方法
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -17,14 +17,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: cab43d43-235a-4bed-ac05-67d10e94f34e
-ms.openlocfilehash: 84d4c2f1128f7b73189f69b056eee96619c31ef5
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: e5fc6ad2a1fe00367cd8a0b1c53ac914b95018ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331972"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033210"
 ---
-# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>レコードセット: AddNew、Edit、Delete の動作のしくみ (ODBC)
+# <a name="recordset-how-addnew-edit-and-delete-work-odbc"></a>レコード セット:AddNew が編集、および作業 (ODBC) を削除する方法
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -39,9 +39,9 @@ ms.locfileid: "51331972"
 - [削除するレコードのしくみ](#_core_deleting_a_record)
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
-読み取りをする可能性がありますの補足として[レコード フィールド エクス チェンジ: RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)、更新操作での RFX の対応するロールの説明。
+読み取りをする可能性がありますの補足として[レコード フィールド エクス チェンジ。RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)、更新操作での RFX の対応するロールをについて説明します。
 
 ##  <a name="_core_adding_a_record"></a> レコードを追加します。
 
@@ -118,7 +118,7 @@ ODBC ドライバーがサポートしている場合、 `::SQLSetPos` MFC ODBC 
 
    1. 変更がある場合`Update`SQL を構築します**UPDATE**ステートメント。 示されている列、 **UPDATE**ステートメントが変更されたフィールド データ メンバーに基づきます。
 
-   1. `Update` 変更をコミットします: を実行します、**更新**ステートメント- と、データ ソースでレコードが変更されたがコミットされていない場合は、トランザクションが進行中です (を参照してください[トランザクション: で、レコード セット (ODBC)トランザクションの実行](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)については、トランザクションが、更新プログラムに与える影響)。 ODBC も変更すると、レコードのコピーを保持します。
+   1. `Update` 変更をコミットします: を実行、**更新**ステートメント- と、データ ソースでレコードが変更されたがコミットされていない場合は、トランザクションが進行中です (を参照してください[トランザクション。レコード セット (ODBC) でトランザクションを実行する](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)については、トランザクションが、更新プログラムに与える影響)。 ODBC も変更すると、レコードのコピーを保持します。
 
    1. プロセスとは異なり`AddNew`、`Edit`ストアド レコードは復元されません。 編集済みのレコードは、現在のレコードとしての場所に残ります。
 
@@ -155,10 +155,10 @@ ODBC ドライバーがサポートしている場合、 `::SQLSetPos` MFC ODBC 
    > [!NOTE]
    > レコードを削除すると、新しいレコードのデータをエディット バッファーを補充する別のレコードをスクロールする必要があります。 呼び出すとエラーが`Delete`もう一度呼び出すまたは`Edit`します。
 
-更新操作で使用される SQL ステートメントの詳細については、[SQL](../../data/odbc/sql.md)を参照してください。
+更新操作で使用される SQL ステートメントの詳細については、次を参照してください。 [SQL](../../data/odbc/sql.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: 更新処理の詳細 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
+[レコード セット:詳細については、更新 (ODBC)](../../data/odbc/recordset-more-about-updates-odbc.md)<br/>
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)

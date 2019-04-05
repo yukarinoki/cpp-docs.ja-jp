@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: レコードセットの生成と破棄 (ODBC)'
+title: レコード セット:作成するレコード セットと破棄 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, creating
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - ODBC recordsets, closing
 - ODBC recordsets, opening
 ms.assetid: 8d2aac23-4396-4ce2-8c60-5ecf1b360d3d
-ms.openlocfilehash: d98f7e59e52b86a1b9b1c3ffac5c3e7160e6c36d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5d5dae5bc766c0cfc31b4fb76f7fe104be0dbd74
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581507"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041268"
 ---
-# <a name="recordset-creating-and-closing-recordsets-odbc"></a>レコードセット: レコードセットの生成と破棄 (ODBC)
+# <a name="recordset-creating-and-closing-recordsets-odbc"></a>レコード セット:作成するレコード セットと破棄 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -32,9 +32,9 @@ ms.locfileid: "50581507"
 
 ##  <a name="_core_creating_recordsets_at_run_time"></a> 実行時にレコード セットの作成
 
-レコード セット オブジェクトを作成するには、プログラムで、前に、アプリケーション固有のレコード セット クラスを通常記述します。 この手順の詳細については、[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)を参照してください。
+レコード セット オブジェクトを作成するには、プログラムで、前に、アプリケーション固有のレコード セット クラスを通常記述します。 この手順の詳細については、次を参照してください。 [MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)します。
 
-データ ソースからレコードを選択する必要がある場合は、ダイナセットまたはスナップショットのオブジェクトを開きます。 作成するオブジェクトの型が行う必要がある依存データ、アプリケーションで、どのような ODBC ドライバーをサポートするいるとします。 詳細については、[ダイナセット](../../data/odbc/dynaset.md)と[スナップショット](../../data/odbc/snapshot.md)を参照してください。
+データ ソースからレコードを選択する必要がある場合は、ダイナセットまたはスナップショットのオブジェクトを開きます。 作成するオブジェクトの型が行う必要がある依存データ、アプリケーションで、どのような ODBC ドライバーをサポートするいるとします。 詳細については、次を参照してください。[ダイナセット](../../data/odbc/dynaset.md)と[スナップショット](../../data/odbc/snapshot.md)します。
 
 #### <a name="to-open-a-recordset"></a>レコード セットを開く
 
@@ -42,7 +42,7 @@ ms.locfileid: "50581507"
 
    ヒープまたは関数のスタック フレーム オブジェクトを構築することができます。
 
-1. 必要に応じて既定のレコード セットの動作を変更します。 使用可能なオプションで、[レコード セットのオプションの設定](#_core_setting_recordset_options)を参照してください。
+1. 必要に応じて既定のレコード セットの動作を変更します。 使用可能なオプションで、次を参照してください。[レコード セットのオプションの設定](#_core_setting_recordset_options)します。
 
 1. オブジェクトの[オープン](../../mfc/reference/crecordset-class.md#open)メンバー関数。
 
@@ -71,10 +71,10 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 // Use the snapshot to operate on its records...
 ```
 
-呼び出した後`Open`オブジェクトのメンバー関数とデータ メンバーを使用してレコードを処理します。 場合によっては、クエリを再実行またはデータ ソースで発生した変更を含めるレコード セットを更新する可能性があります。 詳細については、[レコード セット: レコード セット (ODBC) のクエリを再実行](../../data/odbc/recordset-requerying-a-recordset-odbc.md)を参照してください。
+呼び出した後`Open`オブジェクトのメンバー関数とデータ メンバーを使用してレコードを処理します。 場合によっては、クエリを再実行またはデータ ソースで発生した変更を含めるレコード セットを更新する可能性があります。 詳細については、次を参照してください。[レコード セット。クエリの再実行 (Odbc)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)します。
 
 > [!TIP]
->  開発時に使用する接続文字列では、最終的なユーザーが必要な接続文字列は指定できません可能性があります。 この点で、アプリケーションを汎用化する方法については、[データ ソース: 接続 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)を参照してください。
+>  開発時に使用する接続文字列では、最終的なユーザーが必要な接続文字列は指定できません可能性があります。 この点で、アプリケーションを汎用化する方法については、次を参照してください。[データ ソース。接続 (ODBC)](../../data/odbc/data-source-managing-connections-odbc.md)します。
 
 ##  <a name="_core_setting_recordset_options"></a> レコード セットのオプションの設定
 
@@ -110,5 +110,5 @@ if(!rsStudent.Open(CRecordset::snapshot, NULL, CRecordset::readOnly))
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
-[レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)
+[レコード セット:スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)<br/>
+[レコード セット:追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)

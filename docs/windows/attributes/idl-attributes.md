@@ -8,12 +8,12 @@ helpviewer_keywords:
 - IDL files [C++], attributes
 - .idl files [C++]
 ms.assetid: 04c596f4-c97b-4952-8053-316678b1d0b6
-ms.openlocfilehash: 6e88edf114e180a118d0467d5425d16e50d7c216
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a699e327eec056bbb36747840990bb9c7ccc259b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50593493"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039509"
 ---
 # <a name="idl-attributes"></a>IDL 属性
 
@@ -53,7 +53,7 @@ ms.locfileid: "50593493"
 |[helpcontext](helpcontext.md)|ユーザーがヘルプ ファイル内のこの要素についての情報を表示できるようにコンテキスト ID を指定します。|
 |[helpfile](helpfile.md)|タイプ ライブラリのヘルプ ファイルの名前を設定します。|
 |[helpstringcontext](helpstringcontext.md)|.Hlp または .chm ファイルをヘルプ トピックの ID を指定します。|
-|[helpstringdll](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
+|[typelib](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
 |[helpstring](helpstring.md)|適用先となる要素を記述するために使用される文字列を指定します。|
 |[hidden](hidden.md)|項目が存在しますが、ユーザー指向ブラウザーで表示する必要がありますされませんを示します。|
 |[idl_module](idl-module.md)|DLL エントリ ポイントを指定します。|
@@ -65,14 +65,14 @@ ms.locfileid: "50593493"
 |[import](import.md)|メイン .idl ファイルから参照する定義を含む .idl、.odl ファイル、またはヘッダーの別のファイルを指定します。|
 |[include](include-cpp.md)|生成された .idl ファイルに含まれる 1 つまたは複数のヘッダー ファイルを指定します。|
 |[includelib](includelib-cpp.md)|生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル。|
-|[in](in-cpp.md)|呼び出し元のプロシージャから呼び出されたプロシージャに渡されるパラメーターがあることを示します。|
+|[の](in-cpp.md)|呼び出し元のプロシージャから呼び出されたプロシージャに渡されるパラメーターがあることを示します。|
 |[last_is](last-is.md)|転送する最後の配列要素のインデックスを指定します。|
 |[lcid](lcid.md)|ロケール識別子を関数に渡すことができます。|
 |[length_is](length-is.md)|転送する配列要素の数を指定します。|
 |[licensed](licensed.md)|適用するコクラスはライセンスされていることを示しますを使用してインスタンス化する必要があります`IClassFactory2`します。|
 |[local](local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして、MIDL コンパイラを使用することができます。 個々 の関数で使用する場合は、スタブが生成されたないローカル プロシージャを指定します。|
 |[max_is](max-is.md)|有効な配列のインデックスの最大値を指定します。|
-|[module](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
+|[name](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
 |[ms_union](ms-union.md)|カプセル化されていない共用体のネットワーク データ表現の整列を制御します。|
 |[no_injected_text](no-injected-text.md)|コンパイラがコードの属性を使用した結果として挿入するを防ぎます。|
 |[nonbrowsable](nonbrowsable.md)|インターフェイス メンバーをプロパティ ブラウザーに表示されないことを示します。|
@@ -94,11 +94,11 @@ ms.locfileid: "50593493"
 |[range](range-cpp.md)|引数または値を持つが実行時に設定されているフィールドに使用できる値の範囲を指定します。|
 |[readonly](readonly-cpp.md)|変数への代入を禁止します。|
 |[ref](ref-cpp.md)|参照ポインターを識別します。|
-|[requestedit](requestedit.md)|プロパティをサポートしていることを示します、`OnRequestEdit`通知します。|
+|[requestedit](requestedit.md)|`OnRequestEdit` 通知がプロパティでサポートされることを示します。|
 |[restricted](restricted.md)|あるライブラリ、またはモジュール、インターフェイス、またはディスパッチ インターフェイスのメンバーを呼び出せないことを指定します。|
 |[retval](retval.md)|メンバーの戻り値を受け取るパラメーターを指定します。|
 |[size_is](size-is.md)|メモリのサイズがサイズのポインターに割り当てられた、サイズのポインター、および 1 次元または多次元配列へのポインターのサイズを指定します。|
-|[source](source-cpp.md)|クラス、プロパティ、またはメソッドのメンバーがイベントの発生元であることを示します。|
+|[ソース](source-cpp.md)|クラス、プロパティ、またはメソッドのメンバーがイベントの発生元であることを示します。|
 |[string](string-cpp.md)|示します、1 次元**char**、 **wchar_t**、 `byte`、または同等の配列またはそのような配列へのポインターは、文字列として扱う必要があります。|
 |[switch_is](switch-is.md)|式または共用体の判別共用体のメンバーを選択するとして機能する識別子を指定します。|
 |[switch_type](switch-type.md)|共用体の判別式として使用される変数の型を識別します。|

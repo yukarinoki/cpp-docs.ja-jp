@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3163
 ms.assetid: 17dcafa3-f416-4e04-a232-f9569218ba75
-ms.openlocfilehash: b5c689842f59a9cf999de08f10926efce0ade5ec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: eda3910c99f4c8ea96568f2d475c5d6a1e4cdc7c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50490208"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041047"
 ---
 # <a name="compiler-error-c3163"></a>コンパイラ エラー C3163
 
@@ -21,7 +21,7 @@ ms.locfileid: "50490208"
 
 C3163 を解決するのには 1 つの方法では、事前宣言で属性を除外します。 事前宣言で属性が定義の属性よりも小さくする以上で、多くて、それらに。
 
-C3163 エラーの考えられる原因には、Microsoft ソース コード注釈言語 (SAL) が含まれます。 使用してプロジェクトをコンパイルするまで、SAL マクロは展開されません、 **/analyze**フラグ。 /Analyze せず、正常にコンパイルされるプログラムを再コンパイルしようとした場合、C3163 がスロー、/analyze オプション。 SAL については、[SAL 注釈](../../c-runtime-library/sal-annotations.md)を参照してください。
+C3163 エラーの考えられる原因には、Microsoft ソース コード注釈言語 (SAL) が含まれます。 使用してプロジェクトをコンパイルするまで、SAL マクロは展開されません、 **/analyze**フラグ。 /Analyze せず、正常にコンパイルされるプログラムを再コンパイルしようとした場合、C3163 がスロー、/analyze オプション。 SAL については、次を参照してください。 [SAL 注釈](../../c-runtime-library/sal-annotations.md)します。
 
 ## <a name="example"></a>例
 

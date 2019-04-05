@@ -8,12 +8,12 @@ helpviewer_keywords:
 - function pragma
 - pragmas, function
 ms.assetid: cbd1bd60-fabf-4b5a-9c3d-2d9f4b871365
-ms.openlocfilehash: 1c8c250e3ea28d56aec837f5c3353c3bb6515442
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c57ff2053b3c1fd52474c7eb0dd598641632f789
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611459"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027260"
 ---
 # <a name="function-cc"></a>function (C/C++)
 このプラグマの引数リストで指定された関数を呼び出します。
@@ -28,7 +28,7 @@ ms.locfileid: "50611459"
 
 使用する場合、`intrinsic`プラグマ (または/Oi) 使用することができます (組み込み関数は、関数呼び出しとしてではなく、インライン コードとして生成されます) の組み込み関数を生成するコンパイラを指示する、**関数**プラグマを明示的に適用します。関数呼び出し。 コンパイラが function プラグマを検出した後、組み込み関数を含む最初の関数定義に達した時点でそのプラグマが有効になります。 ソース ファイルの末尾に、またはの外観に影響が引き続き、`intrinsic`プラグマと同じ組み込み関数を指定します。 **関数**プラグマは関数の外側でのみ使用できます: グローバル レベル。
 
-組み込み形式を持つ関数の一覧は、[#pragma intrinsic](../preprocessor/intrinsic.md)を参照してください。
+組み込み形式を持つ関数の一覧は、次を参照してください。 [#pragma intrinsic](../preprocessor/intrinsic.md)します。
 
 ## <a name="example"></a>例
 

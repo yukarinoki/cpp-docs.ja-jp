@@ -42,12 +42,12 @@ helpviewer_keywords:
 - Image editor [C++], grid settings
 - grid settings, Image editor
 ms.assetid: 586d2b8b-0348-4883-a85d-1ff0ddbf14dd
-ms.openlocfilehash: 22fe458a72d970bb09687a53232f94b171e14a45
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: dd7da76d3df68fa63c87f64610524accfd4302ef
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328429"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041550"
 ---
 # <a name="image-editor-for-icons-c"></a>(C++) のアイコン用イメージ エディター
 
@@ -65,7 +65,7 @@ ms.locfileid: "58328429"
 については、**イメージ エディター**を参照してください方法[アイコンやその他のイメージの作成](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)、 [、イメージ編集](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)、[描画ツールを使用して](../windows/using-a-drawing-tool-image-editor-for-icons.md)、 [色の調整](../windows/working-with-color-image-editor-for-icons.md)、および[アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)します。
 
 > [!NOTE]
-> 無料でダウンロード、 **Visual Studio Image Library**多くのアニメーション、ビットマップ、およびアプリケーションで使用できるアイコンを格納しています。 ライブラリをダウンロードする方法の詳細については、、 [Visual Studio Image Library](/visualstudio/designers/the-visual-studio-image-library)を参照してください。
+> 無料でダウンロード、 **Visual Studio Image Library**多くのアニメーション、ビットマップ、およびアプリケーションで使用できるアイコンを格納しています。 ライブラリをダウンロードする方法の詳細については、次を参照してください。、 [Visual Studio Image Library](/visualstudio/designers/the-visual-studio-image-library)します。
 
 ## <a name="image-menu"></a>[イメージ] メニュー
 
@@ -74,7 +74,7 @@ ms.locfileid: "58328429"
 |コマンド|説明|
 |---|---|
 |**色の反転**|色を反転させます。|
-|**[左右反転]**|イメージまたは選択領域の上下を反転させます。|
+|**[左右を反転]**|イメージまたは選択領域の上下を反転させます。|
 |**[上下反転]**|イメージまたは選択領域の左右を反転させます。|
 |**90 度回転します。**|イメージまたは選択領域を 90 度回転させます。|
 |**[色] ウィンドウを表示します。**|開く、**色**ウィンドウで、イメージを使用する色を選択します。|
@@ -97,8 +97,8 @@ ms.locfileid: "58328429"
 |---|---|
 |**ピクセル グリッド**|選択した場合、内の各ピクセルを囲むグリッドが表示されます、**イメージ エディター**します。<br/><br/>4 × とより高い解像度にのみ、グリッドが表示されます。|
 |**タイル グリッド**|選択した場合、表示を囲むブロック内のピクセルのグリッド、**イメージ エディター**グリッドの間隔の値で指定しました。|
-|**Width**|各タイルのブロックの幅を指定します。<br/><br/>このプロパティは、一定の間隔で配置された複数のイメージを含むビットマップを描画するときに便利です。|
-|**Height**|各タイルのブロックの高さを指定します。<br/><br/>このプロパティは、一定の間隔で配置された複数のイメージを含むビットマップを描画するときに便利です。|
+|**幅**|各タイルのブロックの幅を指定します。<br/><br/>このプロパティは、一定の間隔で配置された複数のイメージを含むビットマップを描画するときに便利です。|
+|**高さ**|各タイルのブロックの高さを指定します。<br/><br/>このプロパティは、一定の間隔で配置された複数のイメージを含むビットマップを描画するときに便利です。|
 
 ## <a name="toolbar"></a>ツール バー
 
@@ -142,8 +142,8 @@ ms.locfileid: "58328429"
 |プロパティ|説明|
 |---|---|
 |**フォント**|使用可能なフォントが表示されます。|
-|**フォント スタイル**|指定したフォントの使用可能なスタイルの一覧を表示します。|
-|**Size**|指定したフォントの使用可能なポイントのサイズを一覧表示します。|
+|**[スタイル]**|指定したフォントの使用可能なスタイルの一覧を表示します。|
+|**サイズ**|指定したフォントの使用可能なポイントのサイズを一覧表示します。|
 |**サンプル**|指定したフォントの設定でテキストの表示方法のサンプルが表示されます。|
 |**スクリプト**|指定したフォント用の利用可能な言語のスクリプトを一覧表示します。<br/><br/>別の言語のスクリプトを選択すると、文字セットの多言語のドキュメントを作成するために使用可能な言語になります。|
 

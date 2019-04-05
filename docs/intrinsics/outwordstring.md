@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __outwordstring intrinsic
 - outsw instruction
 ms.assetid: b470c7a0-1de9-4370-886a-b2c3a1f842f4
-ms.openlocfilehash: df7ca6ddbb80c21397beb91b8e671f248f2a1d9c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: d7141dd7f9f1f81e905952959e392a23d141f4e4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326291"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030369"
 ---
 # <a name="outwordstring"></a>__outwordstring
 
@@ -36,7 +36,7 @@ void __outwordstring(
 *ポート*<br/>
 [in]データを送信するポート。
 
-*Buffer*<br/>
+*バッファー*<br/>
 [in]指定したポートを送信するデータへのポインター。
 
 *カウント*<br/>
@@ -54,8 +54,8 @@ void __outwordstring(
 
 このルーチンは、組み込みとしてのみ使用できます。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

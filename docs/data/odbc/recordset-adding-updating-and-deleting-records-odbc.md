@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: レコードの追加、更新、削除 (ODBC)'
+title: レコード セット:追加、更新、および削除 (Odbc)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - records [C++], updating
@@ -18,22 +18,22 @@ helpviewer_keywords:
 - ODBC recordsets [C++], editing records
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
-ms.openlocfilehash: a13bffdc79f01c49c290b8b5d4388f06ce777105
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512373"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024609"
 ---
-# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>レコードセット: レコードの追加、更新、削除 (ODBC)
+# <a name="recordset-adding-updating-and-deleting-records-odbc"></a>レコード セット:追加、更新、および削除 (Odbc)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
 > [!NOTE]
->  大量のレコードをより効率的に追加する方法もあります。 詳細については、[レコード セット: レコードを追加する方法 (ODBC)](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)を参照してください。
+>  大量のレコードをより効率的に追加する方法もあります。 詳細については、次を参照してください。[レコード セット。レコードを追加する方法 (ODBC) で](../../data/odbc/recordset-adding-records-in-bulk-odbc.md)します。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 更新できるスナップショットとダイナセットでは、レコードを追加、編集 (更新)、削除できます。 このトピックでは、次の内容について説明します。
 
@@ -45,7 +45,7 @@ ms.locfileid: "50512373"
 
 - [レコードを削除する方法](#_core_deleting_a_record_from_a_recordset)します。
 
-更新プログラムを実行する方法の詳細については、out し、更新プログラムが他のユーザーに表示する方法を参照してください。[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)します。 通常は、レコードを追加、編集、または削除すると、すぐにレコードセットによってデータ ソースが更新されます。 また、一連の更新処理をトランザクションにまとめることもできます。 トランザクションを開始すると、そのトランザクションをコミットするまで、更新処理は終了しません。 したがって、更新をやり直すことができます。 トランザクションについては、[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)を参照してください。
+更新プログラムを実行する方法の詳細については、out し、更新プログラムが他のユーザーに表示する方法を参照してください。[レコード セット。レコード セットの更新プログラムによる (ODBC) の記録](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)します。 通常は、レコードを追加、編集、または削除すると、すぐにレコードセットによってデータ ソースが更新されます。 また、一連の更新処理をトランザクションにまとめることもできます。 トランザクションを開始すると、そのトランザクションをコミットするまで、更新処理は終了しません。 したがって、更新をやり直すことができます。 トランザクションについては、次を参照してください。[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
 
 レコードセットの更新方法と更新設定の関係を次の表に示します。
 
@@ -65,9 +65,9 @@ ms.locfileid: "50512373"
 
 1. レコード セット オブジェクトの[CanUpdate](../../mfc/reference/crecordset-class.md#canupdate)メンバー関数。
 
-   `CanUpdate` は、レコードセットが更新可能なときは 0 以外の値を返します。
+   `CanUpdate` レコード セットは更新可能な場合は、0 以外の値を返します。
 
-既定では、レコード セットは、完全に更新可能な (を実行できます`AddNew`、 `Edit`、および`Delete`操作)。 使用することもできますが、 [appendOnly](../../mfc/reference/crecordset-class.md#open)更新可能なレコード セットを開くにはオプションです。 この方法で開いたレコードセットでは、`AddNew` を使用して新しいレコードを追加することだけができます。 既存のレコードを編集または削除することはできません。 レコード セットが呼び出すことによって追加のためだけに開いているかどうかをテストすることができます、 [CanAppend](../../mfc/reference/crecordset-class.md#canappend)メンバー関数。 レコードセットがすべて更新できる場合、または追加のためだけに開かれている場合は、`CanAppend` が 0 以外の値を返します。
+既定では、レコード セットは、完全に更新可能な (を実行できます`AddNew`、 `Edit`、および`Delete`操作)。 使用することもできますが、 [appendOnly](../../mfc/reference/crecordset-class.md#open)更新可能なレコード セットを開くにはオプションです。 この方法で開いたレコードセットでは、`AddNew` を使用して新しいレコードを追加することだけができます。 既存のレコードを編集または削除することはできません。 レコード セットが呼び出すことによって追加のためだけに開いているかどうかをテストすることができます、 [CanAppend](../../mfc/reference/crecordset-class.md#canappend)メンバー関数。 `CanAppend` レコード セットが更新可能な完全または追加のためだけに開いている場合は、0 以外の値を返します。
 
 次の例では、レコードセット オブジェクト `CanUpdate` に対して `rsStudentSet` を使用しています。
 
@@ -94,7 +94,7 @@ if( !rsStudentSet.CanUpdate( ) )
 
 1. レコード セット オブジェクトの[AddNew](../../mfc/reference/crecordset-class.md#addnew)メンバー関数。
 
-   `AddNew` は、レコードセットをエディット バッファーとして利用できるようにします。 すべてのフィールド データ メンバーが特殊な値が Null に設定し、未変更の印を呼び出すときに、値がデータ ソースに書き込まれます (ダーティ) に変更されただけ[Update](../../mfc/reference/crecordset-class.md#update)します。
+   `AddNew` レコード セットをエディット バッファーとして機能する準備を行います。 すべてのフィールド データ メンバーが特殊な値が Null に設定し、未変更の印を呼び出すときに、値がデータ ソースに書き込まれます (ダーティ) に変更されただけ[Update](../../mfc/reference/crecordset-class.md#update)します。
 
 1. 新しいレコードのフィールド データ メンバーの値を設定します。
 
@@ -102,9 +102,9 @@ if( !rsStudentSet.CanUpdate( ) )
 
 1. レコード セット オブジェクトの`Update`メンバー関数。
 
-   `Update` データ ソースに新しいレコードを書き込むことで、追加を完了します。 呼び出しに失敗した場合に処理する方法について`Update`を参照してください[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)します。
+   `Update` データ ソースに新しいレコードを書き込むことで、追加を完了します。 呼び出しに失敗した場合に処理する方法について`Update`を参照してください[レコード セット。レコード セットの更新プログラムによる (ODBC) の記録](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)します。
 
-追加したレコードをレコード セットに表示されるのとレコード追加のしくみについては、[レコード セット: AddNew 方法、編集、および作業の削除 (ODBC)](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)を参照してください。
+追加したレコードをレコード セットに表示されるのとレコード追加のしくみについては、次を参照してください。[レコード セット。AddNew の編集、および削除 (ODBC) の作業](../../data/odbc/recordset-how-addnew-edit-and-delete-work-odbc.md)します。
 
 次に、新しいレコードを追加する例を示します。
 
@@ -139,7 +139,7 @@ if( !rsStudent.Update( ) )
 
 1. レコード セット オブジェクトの[編集](../../mfc/reference/crecordset-class.md#edit)メンバー関数。
 
-   `Edit` は、レコードセットをエディット バッファーとして利用できるようにします。 すべてのフィールド データ メンバーに未変更の印が付けられます。 呼び出すと、データ ソースに変更されたフィールド データ メンバーの新しい値が書き込まれる[Update](../../mfc/reference/crecordset-class.md#update)します。
+   `Edit` レコード セットをエディット バッファーとして機能する準備を行います。 すべてのフィールド データ メンバーに未変更の印が付けられます。 呼び出すと、データ ソースに変更されたフィールド データ メンバーの新しい値が書き込まれる[Update](../../mfc/reference/crecordset-class.md#update)します。
 
 1. 新しいレコードのフィールド データ メンバーの値を設定します。
 
@@ -147,7 +147,7 @@ if( !rsStudent.Update( ) )
 
 1. レコード セット オブジェクトの`Update`メンバー関数。
 
-   `Update` データ ソースに変更されたレコードを書き込むことで、編集を完了します。 呼び出しに失敗した場合に処理する方法について`Update`を参照してください[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)します。
+   `Update` データ ソースに変更されたレコードを書き込むことで、編集を完了します。 呼び出しに失敗した場合に処理する方法について`Update`を参照してください[レコード セット。レコード セットの更新プログラムによる (ODBC) の記録](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)します。
 
 編集終了後は、編集されたレコードが現在のレコードになります。
 
@@ -197,9 +197,9 @@ rsStudent.Delete( );
 rsStudent.MoveNext( );
 ```
 
-影響の詳細については、 `AddNew`、 `Edit`、および`Delete`メンバー関数を参照してください[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)します。
+影響の詳細については、 `AddNew`、 `Edit`、および`Delete`メンバー関数を参照してください[レコード セット。レコード セットの更新プログラムによる (ODBC) の記録](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[レコード セット:レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

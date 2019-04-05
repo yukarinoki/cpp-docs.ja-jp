@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: def97b2c-b5a6-445f-afeb-308050fd4852
-ms.openlocfilehash: 5417918ee3cf966183e1910fdbc12bd7b8cc046e
-ms.sourcegitcommit: 984fb4814a2dd9bcea5ec88c9528707f17a7cffa
+ms.openlocfilehash: b4f5fb6ed21fb23195af340c8de3ee7c654f7fee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/19/2018
-ms.locfileid: "51949493"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037832"
 ---
 # <a name="data-access-programming-mfcatl"></a>データ アクセス プログラミング (MFC/ATL)
 
@@ -23,13 +23,13 @@ OLE DB は、COM 仕様に基づく低レベルで高パフォーマンスの AP
 
 ## <a name="porting-data-applications"></a>データ アプリケーションの移植
 
-レガシ アプリケーションで OLE DB またはより高レベルの ADO インターフェイスを使用して SQL Server に接続し、リンク サーバーにアクセスしない場合は、近い将来に ODBC に移行することを検討する必要があります。 クロスプラット フォームの移植性または最新の SQL Server の機能が不要な場合は、Microsoft OLE DB Provider for ODBC (MSDASQL) を使用できる可能性があります。  MSDASQL では、OLE DB と ADO (内部的に OLEDB を使用する) に構築されたアプリケーションから、ODBC ドライバーを介してデータ ソースにアクセスできます。 変換レイヤーと MSDASQL データベースのパフォーマンスに影響します。 影響は、アプリケーションの重要なかどうかを判断するテストをする必要があります。 MSDASQL は Windows オペレーティング システムに付属しており、Windows Server 2008 および Windows Vista SP1 が、64 ビット バージョンのテクノロジを含めるための最初の Windows リリースです。
+レガシ アプリケーションで OLE DB またはより高レベルの ADO インターフェイスを使用して SQL Server に接続し、リンク サーバーにアクセスしない場合は、近い将来に ODBC に移行することを検討する必要があります。 クロスプラット フォームの移植性または最新の SQL Server の機能が不要な場合は、Microsoft OLE DB Provider for ODBC (MSDASQL) を使用できる可能性があります。  MSDASQL では、OLE DB と ADO (内部的に OLEDB を使用する) に構築されたアプリケーションから、ODBC ドライバーを介してデータ ソースにアクセスできます。 変換レイヤーと同様に、MSDASQL はデータベースのパフォーマンスに影響する可能性があります。 ご利用のアプリケーションに対する影響が大きいかどうかを判別するためにテストを行う必要があります。 MSDASQL は Windows オペレーティング システムに付属しており、Windows Server 2008 および Windows Vista SP1 が、64 ビット バージョンのテクノロジを含めるための最初の Windows リリースです。
 
 単一の DLL に OLE DB と ODBC ドライバーをパッケージ化する、SQL Native Client コンポーネント (SNAC) は、ODBC アプリケーションでは非推奨とされます。 SQL Server 2012 バージョンの SNAC (SQLNCLI11.DLL) は SQL Server 2016 に付属しています。他の SQL Server コンポーネントがこれに依存しているためです。 ただし、ODBC 経由で SQL Server または Azure SQL Database に接続する新しい C++ アプリケーションでは、[最新の ODBC ドライバー](/sql/connect/odbc/download-odbc-driver-for-sql-server)を使用する必要があります。 詳細については、「[SQL Server Native Client プログラミング](/sql/relational-databases/native-client/sql-server-native-client-programming)」を参照してください。
 
 C++/CLI を使用する場合は、引き続き、通常どおり ADO.NET を使用できます。 詳細については、「[ADO.NET によるデータ アクセス (C++/CLI)](../dotnet/data-access-using-adonet-cpp-cli.md)」と「[Visual Studio でのデータ アクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)」を参照してください。
 
-- また MFC は、ODBC ラッパー クラスだけでなく、Access データベースに接続するためデータ アクセス オブジェクト (DAO) ラッパー クラスを提供します。  ただし、DAO は廃止されています。 CDaoDatabase または CDaoRecordset に基づくすべてのコードをアップグレードする必要があります。
+- ODBC ラッパー クラスに加え、MFC では、Access データベースに接続するための Data Access Objects (DAO) ラッパー クラスも提供されます。  ただし、DAO は廃止されています。 CDaoDatabase または CDaoRecordset に基づくすべてのコードをアップグレードする必要があります。
 
 Microsoft Windows でのデータ アクセス テクノロジの歴史の詳細については、ウィキペディアの「[Microsoft Data Access Components](https://en.wikipedia.org/wiki/Microsoft_Data_Access_Components)」を参照してください。
 

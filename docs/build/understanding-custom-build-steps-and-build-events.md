@@ -11,12 +11,12 @@ helpviewer_keywords:
 - build steps [C++], build events
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
-ms.openlocfilehash: 5bc402ad8999f1864c7e6b1155da3c68862dda97
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827741"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028507"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>カスタム ビルド ステップとビルド イベントについて
 
@@ -24,11 +24,11 @@ Visual C++ 開発環境では、ビルド処理をカスタマイズする基本
 
 - **カスタム ビルド ステップ**
 
-   カスタム ビルド ステップは、プロジェクトに関連付けられたビルド規則です。 カスタム ビルド ステップでは、実行するコマンド ライン、追加の入力または出力ファイル、および表示するメッセージを指定できます。 詳細については、「[方法 :MSBuild プロジェクトへのカスタム ビルド ステップの追加](how-to-add-a-custom-build-step-to-msbuild-projects.md)します。
+   カスタム ビルド ステップは、プロジェクトに関連付けられたビルド規則です。 カスタム ビルド ステップでは、実行するコマンド ライン、追加の入力または出力ファイル、および表示するメッセージを指定できます。 詳細については、「[方法 :MSBuild プロジェクトにカスタム ビルド ステップを追加する](how-to-add-a-custom-build-step-to-msbuild-projects.md)」を参照してください。
 
 - **カスタム ビルド ツール**
 
-   カスタム ビルド ツールは、1 つ以上のファイルに関連付けられているビルド規則です。 カスタム ビルド ステップは、入力ファイルをカスタム ビルド ツールに渡すことができ、その結果、1 つ以上の出力ファイルが生成されます。 たとえば、MFC アプリケーションのヘルプ ファイルは、カスタム ビルド ツールを使用してビルドされます。 詳細については、「[方法 :カスタム ビルド ツール MSBuild プロジェクトを追加する](how-to-add-custom-build-tools-to-msbuild-projects.md)と[ビルド ツールのユーザー設定を指定する](specifying-custom-build-tools.md)します。
+   カスタム ビルド ツールは、1 つ以上のファイルに関連付けられているビルド規則です。 カスタム ビルド ステップは、入力ファイルをカスタム ビルド ツールに渡すことができ、その結果、1 つ以上の出力ファイルが生成されます。 たとえば、MFC アプリケーションのヘルプ ファイルは、カスタム ビルド ツールを使用してビルドされます。 詳細については、「[方法 :MSBuild プロジェクトにカスタム ビルド ツールを追加する](how-to-add-custom-build-tools-to-msbuild-projects.md)」および「[カスタム ビルド ツールの指定](specifying-custom-build-tools.md)」を参照してください。
 
 - **ビルド イベント**
 

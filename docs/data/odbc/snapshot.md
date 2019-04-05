@@ -11,19 +11,19 @@ helpviewer_keywords:
 - cursor library [ODBC], snapshots
 - snapshots
 ms.assetid: b5293a52-0657-43e9-bd71-fe3785b21c7e
-ms.openlocfilehash: 99e1d76f8d65def326b0514f3219cef43f695220
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5999f89156d895ff0c87c892be892c6a614a0132
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512674"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037647"
 ---
 # <a name="snapshot"></a>スナップショット
 
 スナップショットは、スナップショットの作成時に存在していたデータの静的なビューを反映するレコード セットです。 スナップショットを開くすべてのレコードに移動すると、レコードのセットが含まれます、呼び出すことによって、スナップショットを再構築するまでその値を変更しないで`Requery`します。
 
 > [!NOTE]
->  このトピックの内容は、MFC ODBC クラスに該当します。 MFC ODBC クラスではなく、MFC DAO クラスを使用する場合は、[cdaorecordset::open](../../mfc/reference/cdaorecordset-class.md#open)スナップショット タイプのレコード セットの説明についてはを参照してください。
+>  このトピックの内容は、MFC ODBC クラスに該当します。 MFC ODBC クラスではなく、MFC DAO クラスを使用する場合は、次を参照してください。 [cdaorecordset::open](../../mfc/reference/cdaorecordset-class.md#open)スナップショット タイプのレコード セットの説明についてはします。
 
 更新可能または読み取り専用スナップショットを作成するにはデータベース クラスを使用します。 ダイナセットとは異なり、更新可能なスナップショットが、他のユーザーによって行われた値を記録する変更を反映しませんが、更新と、プログラムによる削除は反映します。 呼び出すまでスナップショットに追加されたレコードは、スナップショットに表示されるならない`Requery`します。
 
@@ -37,12 +37,12 @@ ms.locfileid: "50512674"
 スナップショットは、ときに、ODBC カーソル ライブラリが読み込まれた場合にのみ使用可能な`CDatabase`オブジェクトが構築または使用している ODBC ドライバーは、静的カーソルをサポートしています。
 
 > [!NOTE]
->  一部の ODBC ドライバー (静的カーソル) のスナップショットを更新できません可能性があります。 サポートされるカーソルの種類は、ドライバーのドキュメントとサポートされる同時実行の種類を確認します。 更新可能なスナップショットを確実に作成するときにメモリに、カーソル ライブラリを読み込むことを確認、`CDatabase`オブジェクト。 詳細については、[ODBC: ODBC カーソル ライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)を参照してください。
+>  一部の ODBC ドライバー (静的カーソル) のスナップショットを更新できません可能性があります。 サポートされるカーソルの種類は、ドライバーのドキュメントとサポートされる同時実行の種類を確認します。 更新可能なスナップショットを確実に作成するときにメモリに、カーソル ライブラリを読み込むことを確認、`CDatabase`オブジェクト。 詳細については、次を参照してください[ODBC:。ODBC カーソル ライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)します。
 
 > [!NOTE]
 >  2 つの異なるで行う必要がありますスナップショットとダイナセットを使う場合の両方を使用する場合は、`CDatabase`オブジェクト (2 つの接続)。
 
-すべてのレコードのプロパティのスナップショット共有の詳細については、[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)を参照してください。 ODBC と ODBC カーソル ライブラリを含む、スナップショットの詳細については、[ODBC](../../data/odbc/odbc-basics.md)を参照してください。
+すべてのレコードのプロパティのスナップショット共有の詳細については、次を参照してください。[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)します。 ODBC と ODBC カーソル ライブラリを含む、スナップショットの詳細については、次を参照してください。 [ODBC](../../data/odbc/odbc-basics.md)します。
 
 ## <a name="see-also"></a>関連項目
 

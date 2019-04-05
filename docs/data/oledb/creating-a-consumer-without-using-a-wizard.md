@@ -4,12 +4,12 @@ ms.date: 10/12/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: e8241cfe-5faf-48f8-9de3-241203de020b
-ms.openlocfilehash: a4b95674c2c9c6f0a5dae29e68cff44c759e0fa9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 029fe6866df81d366cc3bc15096f638791faa413
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50578608"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030421"
 ---
 # <a name="creating-a-consumer-without-using-a-wizard"></a>ウィザードを使用しないコンシューマーの作成
 
@@ -27,7 +27,7 @@ ms.locfileid: "50578608"
 
 プログラムでは、コンシューマーは、通常、次の一連の操作を実行します。
 
-1. ローカル変数に列をバインドするユーザー レコード クラスを作成します。 この例で`CMyTableNameAccessor`ユーザー レコード クラスは、(を参照してください[ユーザー レコード](../../data/oledb/user-records.md))。 このクラスには、列のマップとパラメーターのマップが含まれています。 列マップで指定したフィールドごとにユーザー レコード クラスのデータ メンバーを宣言します。これらのデータ メンバーのそれぞれについてもに、ステータスのデータ メンバーと長さのデータ メンバーを宣言します。 詳細については、[ウィザードで生成されたアクセサーのフィールド ステータス データ メンバー](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)を参照してください。
+1. ローカル変数に列をバインドするユーザー レコード クラスを作成します。 この例で`CMyTableNameAccessor`ユーザー レコード クラスは、(を参照してください[ユーザー レコード](../../data/oledb/user-records.md))。 このクラスには、列のマップとパラメーターのマップが含まれています。 列マップで指定したフィールドごとにユーザー レコード クラスのデータ メンバーを宣言します。これらのデータ メンバーのそれぞれについてもに、ステータスのデータ メンバーと長さのデータ メンバーを宣言します。 詳細については、次を参照してください。[ウィザードで生成されたアクセサーのフィールド ステータス データ メンバー](../../data/oledb/field-status-data-members-in-wizard-generated-accessors.md)します。
 
     > [!NOTE]
     > 独自のコンシューマーを作成する場合、ステータスや長さ変数より前に、データ変数を引き起こすことがあります。
@@ -56,7 +56,7 @@ ms.locfileid: "50578608"
     hr = rs.Open();            // (Open also executes the command)
     ```
 
-- 必要に応じて、行セット プロパティの設定を使用して`CDBPropSet::AddProperty`へのパラメーターとして渡すと`rs.Open`します。 これを行う方法の例は、`GetRowsetProperties`で[コンシューマー メソッド](../../data/oledb/consumer-wizard-generated-methods.md)を参照してください。
+- 必要に応じて、行セット プロパティの設定を使用して`CDBPropSet::AddProperty`へのパラメーターとして渡すと`rs.Open`します。 これを行う方法の例は、次を参照してください。`GetRowsetProperties`で[コンシューマー メソッド](../../data/oledb/consumer-wizard-generated-methods.md)します。
 
 - データの取得/操作に行セットを使えるようになりました。
 

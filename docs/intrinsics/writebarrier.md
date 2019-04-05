@@ -7,12 +7,12 @@ helpviewer_keywords:
 - WriteBarrier intrinsic
 - _WriteBarrier intrinsic
 ms.assetid: a5ffdad9-0ca1-4eb7-b2f3-0f092c4bf4b5
-ms.openlocfilehash: b1b5ba2d70a8fc64eb47b3c6f3ff157214dcb94d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d2db648c9f41bd4f773f5bf152f31cf990a75c8e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653025"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025771"
 ---
 # <a name="writebarrier"></a>_WriteBarrier
 
@@ -41,11 +41,11 @@ void _WriteBarrier(void);
 
 `_WriteBarrier` 組み込み関数は、呼び出し場所全体にわたってメモリ アクセス操作を削除または順序変更できるコンパイラの最適化を制限します。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
 [_ReadBarrier](../intrinsics/readbarrier.md)<br/>
 [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)<br/>
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

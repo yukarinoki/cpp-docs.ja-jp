@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _rotr8 intrinsic
 - _rotr16 intrinsic
 ms.assetid: dfbd2c82-82b4-427a-ad52-51609027ebff
-ms.openlocfilehash: 218fb14c118cb9208cdfc29176897543f680b593
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 27c3a9d914d04ecdffb7fa74dc3c8f79a442445c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329723"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028744"
 ---
 # <a name="rotr8-rotr16"></a>_rotr8、_rotr16
 
@@ -39,7 +39,7 @@ unsigned short _rotr16(
 *値*<br/>
 [in]回転する値。
 
-*shift*<br/>
+*シフト*<br/>
 [in]回転するビット数。
 
 ## <a name="return-value"></a>戻り値
@@ -99,9 +99,9 @@ Rotating 0x41 right by 7 bits gives 0x82
 Rotating unsigned short 0x12 right by 10 bits gives 0x480
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
 [_rotl8、_rotl16](../intrinsics/rotl8-rotl16.md)<br/>
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

@@ -1931,16 +1931,16 @@ helpviewer_keywords:
 - cl.exe compiler, intrinsics
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
-ms.openlocfilehash: e4c962b7911c97095e22c670dabfaa3d3d4b2709
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51525510"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027632"
 ---
 # <a name="arm-intrinsics"></a>ARM 組み込み
 
-Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み込みが使用できるようになります。 ARM の詳細については、、 [ARM アーキテクチャ リファレンス マニュアル](http://go.microsoft.com/fwlink/p/?LinkId=522049)と[ARM アセンブラー ツール ガイド](http://go.microsoft.com/fwlink/p/?LinkId=246102)、ARM Infocenter web サイトにを参照してください。
+Visual C++ コンパイラでは、ARM アーキテクチャ上で次の組み込みが使用できるようになります。 ARM の詳細については、次を参照してください。、 [ARM アーキテクチャ リファレンス マニュアル](http://go.microsoft.com/fwlink/p/?LinkId=522049)と[ARM アセンブラー ツール ガイド](http://go.microsoft.com/fwlink/p/?LinkId=246102)、ARM Infocenter web サイトにします。
 
 ##  <a name="top"></a> NEON
 
@@ -1954,7 +1954,7 @@ Visual C++ コンパイラと ARM コンパイラの主な違いは、Visual C++
 
 |関数名|命令|関数プロトタイプ|
 |-------------------|-----------------|------------------------|
-|_arm_smlal|SMLAL|_ _int64 _arm_smlal (\__ _int64 _RdHiLo、_Rn の int、int _Rm)|
+|_arm_smlal|SMLAL|__int64 _arm_smlal(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_umlal|UMLAL|unsigned __int64 _arm_umlal(unsigned \__int64 _RdHiLo, unsigned int _Rn, unsigned int _Rm)|
 |_arm_clz|CLZ|unsigned int _arm_clz(unsigned int _Rm)|
 |_arm_qadd|QADD|int _arm_qadd(int _Rm, int _Rn)|
@@ -1965,9 +1965,9 @@ Visual C++ コンパイラと ARM コンパイラの主な違いは、Visual C++
 |_arm_smlabt|SMLABT|int _arm_smlabt(int _Rn, int _Rm, int _Ra)|
 |_arm_smlatb|SMLATB|int _arm_smlatb(int _Rn, int _Rm, int _Ra)|
 |_arm_smlatt|SMLATT|int _arm_smlatt(int _Rn, int _Rm, int _Ra)|
-|_arm_smlalbb|SMLALBB|_ _int64 _arm_smlalbb (\__ _int64 _RdHiLo、_Rn の int、int _Rm)|
-|_arm_smlalbt|SMLALBT|_ _int64 _arm_smlalbt (\__ _int64 _RdHiLo、_Rn の int、int _Rm)|
-|_arm_smlaltb|SMLALTB|_ _int64 _arm_smlaltb (\__ _int64 _RdHiLo、_Rn の int、int _Rm)|
+|_arm_smlalbb|SMLALBB|__int64 _arm_smlalbb(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlalbt|SMLALBT|__int64 _arm_smlalbt(\__int64 _RdHiLo, int _Rn, int _Rm)|
+|_arm_smlaltb|SMLALTB|__int64 _arm_smlaltb(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smlaltt|SMLALTT|__int64 _arm_smlaltt(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smlawb|SMLAWB|int _arm_smlawb(int _Rn, int _Rm, int _Ra)|
 |_arm_smlawt|SMLAWT|int _arm_smlawt(int _Rn, int _Rm, int _Ra)|
@@ -2046,7 +2046,7 @@ Visual C++ コンパイラと ARM コンパイラの主な違いは、Visual C++
 |_arm_smmlsr|SMMLSR|int _arm_smmlsr(int _Rn, int _Rm, int _Ra)|
 |_arm_smmul|SMMUL|int _arm_smmul(int _Rn, int _Rm)|
 |_arm_smmulr|SMMULR|int _arm_smmulr(int _Rn, int _Rm)|
-|_arm_smlald|SMLALD|_ _int64 _arm_smlald (\__ _int64 _RdHiLo、_Rn の int、int _Rm)|
+|_arm_smlald|SMLALD|__int64 _arm_smlald(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smlaldx|SMLALDX|__int64 _arm_smlaldx(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smlsld|SMLSLD|__int64 _arm_smlsld(\__int64 _RdHiLo, int _Rn, int _Rm)|
 |_arm_smlsldx|SMLSLDX|__int64 _arm_smlsldx(\__int64 _RdHiLo, int _Rn, int _Rm)|
@@ -2065,9 +2065,9 @@ Visual C++ コンパイラと ARM コンパイラの主な違いは、Visual C++
 |_arm_sdiv|SDIV|int _arm_sdiv(int _Rn, int _Rm)|
 |_arm_udiv|UDIV|unsigned int _arm_udiv(unsigned int _Rn, unsigned int _Rm)|
 |__cps|CPS|void __cps(unsigned int _Ops, unsigned int _Flags, unsigned int _Mode)|
-|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、[メモリ バリアの制限](#BarrierRestrictions)を参照してください。|
-|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、[メモリ バリアの制限](#BarrierRestrictions)を参照してください。|
-|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、[メモリ バリアの制限](#BarrierRestrictions)を参照してください。|
+|__dmb|DMB|void __dmb(unsigned int `_Type`)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、次を参照してください。[メモリ バリアの制限](#BarrierRestrictions)します。|
+|__dsb|DSB|void __dsb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、次を参照してください。[メモリ バリアの制限](#BarrierRestrictions)します。|
+|__isb|ISB|void __isb(unsigned int _Type)<br /><br /> 命令ストリームにメモリ バリア操作を挿入します。 パラメーター `_Type` で、バリアによって適用される制限の種類を指定します。<br /><br /> 適用できる制限の種類の詳細については、次を参照してください。[メモリ バリアの制限](#BarrierRestrictions)します。|
 |__emit||void __emit(unsigned \__int32 opcode)<br /><br /> コンパイラから出力される命令ストリームに、指定された命令を挿入します。<br /><br /> `opcode` の値は、コンパイル時に既知の定数式である必要があります。 命令語のサイズは 16 ビットであり、`opcode` の最上位 16 ビットは無視されます。<br /><br /> コンパイラは `opcode` の内容を解釈しようとせず、挿入された命令を実行する前の CPU またはメモリの状態は保証されません。<br /><br /> コンパイラは、挿入された命令を実行した後に CPU とメモリの状態が変更されていないことを前提としています。 したがって、状態を変更する命令は、コンパイラにより生成される通常のコードに好ましくない影響を与えることがあります。<br /><br /> このため、`emit` を使用するのは、コンパイラが正常に処理できない CPU の状態 (コプロセッサの状態など) に影響を与える命令を挿入する場合か、次を使用して宣言されている関数を実装する場合のみとします。`declspec(naked)`|
 |__hvc|HVC|unsigned int __hvc(unsigned int, ...)|
 |__iso_volatile_load16||__int16 \__iso_volatile_load16(const volatile \__int16 \*)<br /><br /> 詳細については、[__iso_volatile_load/store](#IsoVolatileLoadStore) を参照してください。|
@@ -2093,9 +2093,9 @@ Visual C++ コンパイラと ARM コンパイラの主な違いは、Visual C++
 |_CopyInt32FromFloat||__int32 _CopyInt32FromFloat(float)|
 |_CopyInt64FromDouble||__int64 _CopyInt64FromDouble(double)|
 |_CountLeadingOnes||unsigned int _CountLeadingOnes(unsigned long)|
-|_CountLeadingOnes64||符号なしの int _CountLeadingOnes64 (unsigned \__ _int64)|
+|_CountLeadingOnes64||unsigned int _CountLeadingOnes64(unsigned \__int64)|
 |_CountLeadingSigns||unsigned int _CountLeadingSigns(long)|
-|_CountLeadingSigns64||符号なし int _CountLeadingSigns64 (\__ _int64)|
+|_CountLeadingSigns64||unsigned int _CountLeadingSigns64(\__int64)|
 |_CountLeadingZeros||unsigned int _CountLeadingZeros(unsigned long)|
 |_CountLeadingZeros64||符号なしの int _CountLeadingZeros64 (unsigned \__ _int64)|
 |_CountOneBits||unsigned int _CountOneBits(unsigned long)|
@@ -2104,12 +2104,12 @@ Visual C++ コンパイラと ARM コンパイラの主な違いは、Visual C++
 |_DSubSatInt|QDSUB|int _DSubSatInt(int, int)|
 |_isunordered||int _isunordered(double, double)|
 |_isunorderedf||int _isunorderedf(float, float)|
-|_MoveFromCoprocessor|MRC|unsigned int _MoveFromCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveFromCoprocessor、_MoveFromCoprocessor2](#MoveFromCo)を参照してください。|
-|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveFromCoprocessor、_MoveFromCoprocessor2](#MoveFromCo)を参照してください。|
-|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveFromCoprocessor64](#MoveFromCo64)を参照してください。|
-|_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)を参照してください。|
-|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)を参照してください。|
-|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64 (unsigned \__ _int64、unsigned int、unsigned int、unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、[_MoveToCoprocessor64](#MoveToCo64)を参照してください。|
+|_MoveFromCoprocessor|MRC|unsigned int _MoveFromCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveFromCoprocessor、_MoveFromCoprocessor2](#MoveFromCo)します。|
+|_MoveFromCoprocessor2|MRC2|unsigned int _MoveFromCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveFromCoprocessor、_MoveFromCoprocessor2](#MoveFromCo)します。|
+|_MoveFromCoprocessor64|MRRC|unsigned __int64 _MoveFromCoprocessor64(unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveFromCoprocessor64](#MoveFromCo64)します。|
+|_MoveToCoprocessor|MCR|void _MoveToCoprocessor(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)します。|
+|_MoveToCoprocessor2|MCR2|void _MoveToCoprocessor2(unsigned int, unsigned int, unsigned int, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveToCoprocessor、_MoveToCoprocessor2](#MoveToCo)します。|
+|_MoveToCoprocessor64|MCRR|void _MoveToCoprocessor64(unsigned \__int64, unsigned int, unsigned int, unsigned int)<br /><br /> コプロセッサのデータ転送命令を使用して、ARM コプロセッサからデータを読み取ります。 詳細については、次を参照してください。 [_MoveToCoprocessor64](#MoveToCo64)します。|
 |_MulHigh||long _MulHigh(long, long)|
 |_MulUnsignedHigh||unsigned long _MulUnsignedHigh(unsigned long, unsigned long)|
 |_ReadBankedReg|MRS|int _ReadBankedReg(int _Reg)|
@@ -2225,7 +2225,7 @@ int _MoveFromCoprocessor2(
 
 この組み込みの 5 つのすべてのパラメーターの値は、コンパイル時に既知の定数式である必要があります。
 
-`_MoveFromCoprocessor` は MRC 命令を使用し、`_MoveFromCoprocessor2` は MRC2 を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
+`_MoveFromCoprocessor` MRC 命令を使用します。`_MoveFromCoprocessor2`は MRC2 を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
 ###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
 
@@ -2250,7 +2250,7 @@ unsigned __int64 _MoveFromCoprocessor64(
 *crm*<br/>
 コプロセッサのレジスタ番号 (範囲は 0 ～ 15)。これは、追加のソースまたはターゲットのオペランドを指定します。
 
-**値を返します**
+**戻り値**
 
 コプロセッサから読み取られる値。
 
@@ -2258,7 +2258,7 @@ unsigned __int64 _MoveFromCoprocessor64(
 
 この組み込みの 3 つのすべてのパラメーターの値は、コンパイル時に既知の定数式である必要があります。
 
-`_MoveFromCoprocessor64` は MRRC 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
+`_MoveFromCoprocessor64` MRRC 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
 ###  <a name="MoveToCo"></a> _MoveToCoprocessor、_MoveToCoprocessor2
 
@@ -2312,7 +2312,7 @@ void _MoveToCoprocessor2(
 
 この組み込みの `coproc`、`opcode1`、`crn`、`crm`、および `opcode2` の各パラメーターの値は、コンパイル時に既知の定数式である必要があります。
 
-`_MoveToCoprocessor` は MCR 命令を使用し、`_MoveToCoprocessor2` は MCR2 を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
+`_MoveToCoprocessor` MCR 命令を使用します。`_MoveToCoprocessor2`は MCR2 を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
 ###  <a name="MoveToCo64"></a> _MoveToCoprocessor64
 
@@ -2346,7 +2346,7 @@ void _MoveFromCoprocessor64(
 
 この組み込みの `coproc`、`opcode1`、および `crm` の各パラメーターの値は、コンパイル時に既知の定数式である必要があります。
 
-`_MoveFromCoprocessor64` は MCRR 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
+`_MoveFromCoprocessor64` MCRR 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
 ##  <a name="I"></a> 他のアーキテクチャの組み込みの ARM サポート
 
@@ -2355,11 +2355,11 @@ void _MoveFromCoprocessor64(
 |[関数名]|関数プロトタイプ|
 |-------------------|------------------------|
 |__assume|void __assume(int)|
-|__code_seg|void _code_seg (const char \*)|
+|__code_seg|void __code_seg(const char \*)|
 |__debugbreak|void __cdecl \__debugbreak(void)|
-|__fastfail|__declspec(noreturn) void \__fastfail (符号なし int)|
-|__nop|void __nop(void)**注:** で ARM プラットフォームでは、ターゲット アーキテクチャで 1 つを実装する場合、この関数で NOP 命令が生成されますプログラムまたは CPU の状態は変更されませんが、代わりの命令は、それ以外の場合、。生成された — たとえば、`MOV r8, r8`します。 これは機能的に等価、 \__nop 組み込みの他のハードウェア アーキテクチャ。 プログラムまたは CPU の状態に影響がない命令は最適化の手法としてターゲット アーキテクチャで無視される場合があるため、命令は必ずしも CPU サイクルを消費しません。 そのため、使用しないでください、 \__nop 組み込みを CPU の動作方法について確信がない限り、コード シーケンスの実行時間を操作します。 代わりに、使用、 \__nop 組み込みを特定の 32 ビット境界アドレスには、次の命令を配置します。|
-|__yield|void __yield(void)**に注意してください:** で ARM プラットフォームでは、この関数は生成 YIELD 命令には、スレッドが実行を一時的に中断されているタスクを実行していることを示します: スピンロックなど-なしプログラムが悪影響を及ぼすをします。 これにより、CPU が実行サイクル中に他のタスクを実行できるようになり、実行サイクルが浪費されなくなります。|
+|__fastfail|__declspec(noreturn) void \__fastfail(unsigned int)|
+|__nop|void __nop(void)**に注意してください。** ARM プラットフォームでは、ターゲット アーキテクチャで NOP 命令が実装されている場合、この関数によって同じ命令が生成されます。実装されていない場合は、プログラムまたは CPU の状態を変更しない、代わりの命令が生成されます (`MOV r8, r8` など)。 これは機能的に等価、 \__nop 組み込みの他のハードウェア アーキテクチャ。 プログラムまたは CPU の状態に影響がない命令は最適化の手法としてターゲット アーキテクチャで無視される場合があるため、命令は必ずしも CPU サイクルを消費しません。 そのため、使用しないでください、 \__nop 組み込みを CPU の動作方法について確信がない限り、コード シーケンスの実行時間を操作します。 代わりに、使用、 \__nop 組み込みを特定の 32 ビット境界アドレスには、次の命令を配置します。|
+|__yield|void __yield(void)**に注意してください。** ARM プラットフォームでは、この関数によって YIELD 命令が生成されます。この命令は、プログラムに悪い影響を与えることなく一時的に実行を中断できるタスク (スピンロックなど) を、スレッドが実行していることを示します。 これにより、CPU が実行サイクル中に他のタスクを実行できるようになり、実行サイクルが浪費されなくなります。|
 |_AddressOfReturnAddress|void \* _AddressOfReturnAddress(void)|
 |_BitScanForward|unsigned char _BitScanForward (unsigned long \* _Index、符号なし long _Mask)|
 |_BitScanReverse|unsigned char _BitScanReverse (unsigned long \* _Index、符号なし long _Mask)|
@@ -2370,8 +2370,8 @@ void _MoveFromCoprocessor64(
 |_byteswap_uint64|unsigned __int64 \__cdecl _byteswap_uint64(unsigned \__int64)|
 |_byteswap_ulong|unsigned long __cdecl _byteswap_ulong(unsigned long)|
 |_byteswap_ushort|unsigned short __cdecl _byteswap_ushort(unsigned short)|
-|_disable|_ _cdecl _disable(void) を void**注:** この関数によって CPSID 命令の生成、ARM プラットフォームで; は、組み込みとして使用できます。|
-|_enable|_ _cdecl _enable(void) を void**注:** この関数によって CPSIE 命令の生成、ARM プラットフォームで; は、組み込みとして使用できます。|
+|_disable|_ _cdecl _disable(void) を void**に注意してください。** ARM プラットフォームでは、この関数によって CPSID 命令が生成されます。これは、組み込みとしてのみ使用できます。|
+|_enable|_ _cdecl _enable(void) を void**に注意してください。** ARM プラットフォームでは、この関数によって CPSIE 命令が生成されます。これは、組み込みとして使用できます。|
 |_lrotl|unsigned long __cdecl _lrotl(unsigned long, int)|
 |_lrotr|unsigned long __cdecl _lrotr(unsigned long, int)|
 |_ReadBarrier|void _ReadBarrier(void)|
@@ -2414,7 +2414,7 @@ void _MoveFromCoprocessor64(
 
 - **部分的な**: 形式をサポートしている`_acq`、および`_nf`フォーム。
 
-- **None**: サポートされていません
+- **None**: サポートなし
 
 ###  <a name="nf_suffix"></a> _nf (フェンスなし) サフィックスします。
 
@@ -2424,7 +2424,7 @@ void _MoveFromCoprocessor64(
 
 |[関数名]|関数プロトタイプ|
 |-------------------|------------------------|
-|_InterlockedAdd|長い _InterlockedAdd (長い _volatile \*, long)|
+|_InterlockedAdd|long _InterlockedAdd(long _volatile \*, long)|
 |_InterlockedAdd64|_ _int64 _InterlockedAdd64 (\__ _int64 volatile \*、 \__ _int64)|
 |_InterlockedAdd64_acq|_ _int64 _InterlockedAdd64_acq (\__ _int64 volatile \*、 \__ _int64)|
 |_InterlockedAdd64_nf|_ _int64 _InterlockedAdd64_nf (\__ _int64 volatile \*、 \__ _int64)|
@@ -2432,7 +2432,7 @@ void _MoveFromCoprocessor64(
 |_InterlockedAdd_acq|長い _InterlockedAdd_acq (long volatile \*, long)|
 |_InterlockedAdd_nf|長い _InterlockedAdd_nf (long volatile \*, long)|
 |_InterlockedAdd_rel|長い _InterlockedAdd_rel (long volatile \*, long)|
-|_InterlockedAnd|long _InterlockedAnd (long volatile \*, long)|
+|_InterlockedAnd|long _InterlockedAnd(long volatile \*, long)|
 |_InterlockedAnd16|short _InterlockedAnd16 (short volatile \*, short)|
 |_InterlockedAnd16_acq|_InterlockedAnd16_acq 短い (short volatile \*, short)|
 |_InterlockedAnd16_nf|_InterlockedAnd16_nf 短い (short volatile \*, short)|
@@ -2454,32 +2454,32 @@ void _MoveFromCoprocessor64(
 |_InterlockedCompareExchange16_nf|短い _InterlockedCompareExchange16_nf (short volatile \*、short、short)|
 |_InterlockedCompareExchange16_rel|短い _InterlockedCompareExchange16_rel (short volatile \*、short、short)|
 |_InterlockedCompareExchange64|_ _int64 _InterlockedCompareExchange64 (\__ _int64 volatile \*、 \__ _int64、 \__ _int64)|
-|_InterlockedCompareExchange64_acq|_ _int64 _InterlockedCompareExchange64_acq (\__ _int64 volatile \*、 \__ _int64、 \__ _int64)|
+|_InterlockedCompareExchange64_acq|__int64 _InterlockedCompareExchange64_acq(\__int64 volatile \*, \__int64, \__int64)|
 |_InterlockedCompareExchange64_nf|_ _int64 _InterlockedCompareExchange64_nf (\__ _int64 volatile \*、 \__ _int64、 \__ _int64)|
 |_InterlockedCompareExchange64_rel|_ _int64 _InterlockedCompareExchange64_rel (\__ _int64 volatile \*、 \__ _int64、 \__ _int64)|
 |_InterlockedCompareExchange8|_InterlockedCompareExchange8 を char (char volatile \*, char, char)|
 |_InterlockedCompareExchange8_acq|_InterlockedCompareExchange8_acq を char (char volatile \*, char, char)|
 |_InterlockedCompareExchange8_nf|_InterlockedCompareExchange8_nf を char (char volatile \*, char, char)|
 |_InterlockedCompareExchange8_rel|_InterlockedCompareExchange8_rel を char (char volatile \*, char, char)|
-|_InterlockedCompareExchangePointer|void \* _InterlockedCompareExchangePointer (void \* volatile \*, void \*, void \*)|
-|_InterlockedCompareExchangePointer_acq|void \* _InterlockedCompareExchangePointer_acq (void \* volatile \*, void \*, void \*)|
+|_InterlockedCompareExchangePointer|void \* _InterlockedCompareExchangePointer(void \* volatile \*, void \*, void \*)|
+|_InterlockedCompareExchangePointer_acq|void \* _InterlockedCompareExchangePointer_acq(void \* volatile \*, void \*, void \*)|
 |_InterlockedCompareExchangePointer_nf|void \* _InterlockedCompareExchangePointer_nf (void \* volatile \*, void \*, void \*)|
 |_InterlockedCompareExchangePointer_rel|void \* _InterlockedCompareExchangePointer_rel (void \* volatile \*, void \*, void \*)|
-|_InterlockedCompareExchange_acq|長い _InterlockedCompareExchange_acq (long volatile \*、long, long)|
+|_InterlockedCompareExchange_acq|long _InterlockedCompareExchange_acq(long volatile \*, long, long)|
 |_InterlockedCompareExchange_nf|長い _InterlockedCompareExchange_nf (long volatile \*、long, long)|
 |_InterlockedCompareExchange_rel|長い _InterlockedCompareExchange_rel (long volatile \*、long, long)|
 |_InterlockedDecrement|長い _ _cdecl _InterlockedDecrement (long volatile \*)|
 |_InterlockedDecrement16|短い _InterlockedDecrement16 (揮発性の短い\*)|
 |_InterlockedDecrement16_acq|短い _InterlockedDecrement16_acq (揮発性の短い\*)|
 |_InterlockedDecrement16_nf|短い _InterlockedDecrement16_nf (揮発性の短い\*)|
-|_InterlockedDecrement16_rel|短い _InterlockedDecrement16_rel (揮発性の短い\*)|
-|_InterlockedDecrement64|_ _int64 _InterlockedDecrement64 (\__ _int64 volatile \*)|
-|_InterlockedDecrement64_acq|_ _int64 _InterlockedDecrement64_acq (\__ _int64 volatile \*)|
-|_InterlockedDecrement64_nf|_ _int64 _InterlockedDecrement64_nf (\__ _int64 volatile \*)|
-|_InterlockedDecrement64_rel|_ _int64 _InterlockedDecrement64_rel (\__ _int64 volatile \*)|
-|_InterlockedDecrement_acq|長い _InterlockedDecrement_acq (long volatile \*)|
+|_InterlockedDecrement16_rel|short _InterlockedDecrement16_rel(short volatile \*)|
+|_InterlockedDecrement64|__int64 _InterlockedDecrement64(\__int64 volatile \*)|
+|_InterlockedDecrement64_acq|__int64 _InterlockedDecrement64_acq(\__int64 volatile \*)|
+|_InterlockedDecrement64_nf|__int64 _InterlockedDecrement64_nf(\__int64 volatile \*)|
+|_InterlockedDecrement64_rel|__int64 _InterlockedDecrement64_rel(\__int64 volatile \*)|
+|_InterlockedDecrement_acq|long _InterlockedDecrement_acq(long volatile \*)|
 |_InterlockedDecrement_nf|長い _InterlockedDecrement_nf (long volatile \*)|
-|_InterlockedDecrement_rel|長い _InterlockedDecrement_rel (long volatile \*)|
+|_InterlockedDecrement_rel|long _InterlockedDecrement_rel(long volatile \*)|
 |_InterlockedExchange|長い _ _cdecl _InterlockedExchange (long volatile \* (_t)、long)|
 |_InterlockedExchange16|短い _InterlockedExchange16 (short volatile \* (_t)、短い)|
 |_InterlockedExchange16_acq|短い _InterlockedExchange16_acq (short volatile \* (_t)、短い)|
@@ -2496,33 +2496,33 @@ void _MoveFromCoprocessor64(
 |_InterlockedExchangeAdd16_nf|_InterlockedExchangeAdd16_nf 短い (short volatile \*, short)|
 |_InterlockedExchangeAdd16_rel|_InterlockedExchangeAdd16_rel 短い (short volatile \*, short)|
 |_InterlockedExchangeAdd64|_ _ int64 _InterlockedExchangeAdd64 (\__ _int64 volatile \*、 \__ _int64)|
-|_InterlockedExchangeAdd64_acq|_ _int64 _InterlockedExchangeAdd64_acq (\__ _int64 volatile \*、 \__ _int64)|
+|_InterlockedExchangeAdd64_acq|__int64 _InterlockedExchangeAdd64_acq(\__int64 volatile \*, \__int64)|
 |_InterlockedExchangeAdd64_nf|_ _int64 _InterlockedExchangeAdd64_nf (\__ _int64 volatile \*、 \__ _int64)|
 |_InterlockedExchangeAdd64_rel|_ _int64 _InterlockedExchangeAdd64_rel (\__ _int64 volatile \*、 \__ _int64)|
 |_InterlockedExchangeAdd8|char _InterlockedExchangeAdd8 (char volatile \*char)|
 |_InterlockedExchangeAdd8_acq|_InterlockedExchangeAdd8_acq を char (char volatile \*char)|
 |_InterlockedExchangeAdd8_nf|_InterlockedExchangeAdd8_nf を char (char volatile \*char)|
 |_InterlockedExchangeAdd8_rel|_InterlockedExchangeAdd8_rel を char (char volatile \*char)|
-|_InterlockedExchangeAdd_acq|長い _InterlockedExchangeAdd_acq (long volatile \*, long)|
+|_InterlockedExchangeAdd_acq|long _InterlockedExchangeAdd_acq(long volatile \*, long)|
 |_InterlockedExchangeAdd_nf|長い _InterlockedExchangeAdd_nf (long volatile \*, long)|
 |_InterlockedExchangeAdd_rel|長い _InterlockedExchangeAdd_rel (long volatile \*, long)|
-|_InterlockedExchangePointer|void \* _InterlockedExchangePointer (void \* volatile \* void (_t) \*)|
-|_InterlockedExchangePointer_acq|void \* _InterlockedExchangePointer_acq (void \* volatile \* void (_t) \*)|
+|_InterlockedExchangePointer|void \* _InterlockedExchangePointer(void \* volatile \* _Target, void \*)|
+|_InterlockedExchangePointer_acq|void \* _InterlockedExchangePointer_acq(void \* volatile \* _Target, void \*)|
 |_InterlockedExchangePointer_nf|void \* _InterlockedExchangePointer_nf (void \* volatile \* void (_t) \*)|
-|_InterlockedExchange_acq|長い _InterlockedExchange_acq (long volatile \* (_t)、long)|
+|_InterlockedExchange_acq|long _InterlockedExchange_acq(long volatile \* _Target, long)|
 |_InterlockedExchange_nf|長い _InterlockedExchange_nf (long volatile \* (_t)、long)|
 |_InterlockedIncrement|長い _ _cdecl _InterlockedIncrement (long volatile \*)|
 |_InterlockedIncrement16|短い _InterlockedIncrement16 (揮発性の短い\*)|
-|_InterlockedIncrement16_acq|短い _InterlockedIncrement16_acq (揮発性の短い\*)|
+|_InterlockedIncrement16_acq|short _InterlockedIncrement16_acq(short volatile \*)|
 |_InterlockedIncrement16_nf|短い _InterlockedIncrement16_nf (揮発性の短い\*)|
-|_InterlockedIncrement16_rel|短い _InterlockedIncrement16_rel (揮発性の短い\*)|
-|_InterlockedIncrement64|_ _int64 _InterlockedIncrement64 (\__ _int64 volatile \*)|
-|_InterlockedIncrement64_acq|_ _int64 _InterlockedIncrement64_acq (\__ _int64 volatile \*)|
-|_InterlockedIncrement64_nf|_ _int64 _InterlockedIncrement64_nf (\__ _int64 volatile \*)|
-|_InterlockedIncrement64_rel|_ _int64 _InterlockedIncrement64_rel (\__ _int64 volatile \*)|
-|_InterlockedIncrement_acq|長い _InterlockedIncrement_acq (long volatile \*)|
+|_InterlockedIncrement16_rel|short _InterlockedIncrement16_rel(short volatile \*)|
+|_InterlockedIncrement64|__int64 _InterlockedIncrement64(\__int64 volatile \*)|
+|_InterlockedIncrement64_acq|__int64 _InterlockedIncrement64_acq(\__int64 volatile \*)|
+|_InterlockedIncrement64_nf|__int64 _InterlockedIncrement64_nf(\__int64 volatile \*)|
+|_InterlockedIncrement64_rel|__int64 _InterlockedIncrement64_rel(\__int64 volatile \*)|
+|_InterlockedIncrement_acq|long _InterlockedIncrement_acq(long volatile \*)|
 |_InterlockedIncrement_nf|長い _InterlockedIncrement_nf (long volatile \*)|
-|_InterlockedIncrement_rel|長い _InterlockedIncrement_rel (long volatile \*)|
+|_InterlockedIncrement_rel|long _InterlockedIncrement_rel(long volatile \*)|
 |_InterlockedOr|long _InterlockedOr (long volatile \*, long)|
 |_InterlockedOr16|short _InterlockedOr16 (short volatile \*, short)|
 |_InterlockedOr16_acq|_InterlockedOr16_acq 短い (short volatile \*, short)|
@@ -2552,9 +2552,9 @@ void _MoveFromCoprocessor64(
 |_InterlockedXor8_acq|_InterlockedXor8_acq を char (char volatile \*char)|
 |_InterlockedXor8_nf|_InterlockedXor8_nf を char (char volatile \*char)|
 |_InterlockedXor8_rel|_InterlockedXor8_rel を char (char volatile \*char)|
-|_InterlockedXor_acq|長い _InterlockedXor_acq (long volatile \*, long)|
+|_InterlockedXor_acq|long _InterlockedXor_acq(long volatile \*, long)|
 |_InterlockedXor_nf|長い _InterlockedXor_nf (long volatile \*, long)|
-|_InterlockedXor_rel|長い _InterlockedXor_rel (long volatile \*, long)|
+|_InterlockedXor_rel|long _InterlockedXor_rel(long volatile \*, long)|
 
 [[NEON](#top)]
 
@@ -2564,11 +2564,11 @@ void _MoveFromCoprocessor64(
 
 |関数名|関数プロトタイプ|
 |-------------------|------------------------|
-|_interlockedbittestandreset|unsigned char _interlockedbittestandreset (long volatile \*, long)|
+|_interlockedbittestandreset|unsigned char _interlockedbittestandreset(long volatile \*, long)|
 |_interlockedbittestandreset_acq|unsigned char _interlockedbittestandreset_acq (long volatile \*, long)|
 |_interlockedbittestandreset_nf|unsigned char _interlockedbittestandreset_nf (long volatile \*, long)|
-|_interlockedbittestandreset_rel|unsigned char _interlockedbittestandreset_rel (long volatile \*, long)|
-|_interlockedbittestandset|unsigned char _interlockedbittestandset (long volatile \*, long)|
+|_interlockedbittestandreset_rel|unsigned char _interlockedbittestandreset_rel(long volatile \*, long)|
+|_interlockedbittestandset|unsigned char _interlockedbittestandset(long volatile \*, long)|
 |_interlockedbittestandset_acq|unsigned char _interlockedbittestandset_acq (long volatile \*, long)|
 |_interlockedbittestandset_nf|unsigned char _interlockedbittestandset_nf (long volatile \*, long)|
 |_interlockedbittestandset_rel|unsigned char _interlockedbittestandset_rel (long volatile \*, long)|
@@ -2577,6 +2577,6 @@ void _MoveFromCoprocessor64(
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [ARM アセンブラー リファレンス](../assembler/arm/arm-assembler-reference.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)

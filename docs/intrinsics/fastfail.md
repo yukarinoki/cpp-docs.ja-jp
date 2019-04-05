@@ -2,12 +2,12 @@
 title: __fastfail
 ms.date: 11/04/2016
 ms.assetid: 9cd32639-e395-4c75-9f3a-ac3ba7f49921
-ms.openlocfilehash: e96d981be5c5186d6cc472cc8f4dffcbf1c2b7bf
-ms.sourcegitcommit: bd637e9c39650cfd530520ea978a22fa4caa0e42
+ms.openlocfilehash: a9f75cbf3c572401ef26fb16ced221eb24d35534
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55849477"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041506"
 ---
 # <a name="fastfail"></a>__fastfail
 
@@ -51,7 +51,7 @@ void __fastfail(unsigned int code);
 
 Windows 8 から、ネイティブのファスト フェール メカニズムのサポートが開始されました。 ファスト フェール命令をネイティブでサポートしていない Windows オペレーティング システムでは、通常、ファスト フェール要求はアクセス違反または `UNEXPECTED_KERNEL_MODE_TRAP` バグチェックとして処理されます。 このような場合もやはりプログラムは終了しますが、必ずしも直ちに終了するわけではありません。
 
-`__fastfail` は、組み込みとしてのみ使用できます。
+`__fastfail` 組み込み関数としてはできるだけです。
 
 ## <a name="requirements"></a>必要条件
 
@@ -61,8 +61,8 @@ Windows 8 から、ネイティブのファスト フェール メカニズム�
 
 **ヘッダー ファイル** \<intrin.h >
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

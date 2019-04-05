@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - C4910
 ms.assetid: 67963560-fbca-4ca7-93db-06beaf7055f0
-ms.openlocfilehash: f0d1df0a383b6646d52fc2babc53ca656d49ace6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49cbbf3369fc4765d93e67e2dca84a4d975560d7
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428198"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027574"
 ---
 # <a name="compiler-warning-level-1-c4910"></a>コンパイラの警告 (レベル 1) C4910
 
-'\<識別子 >': '関数' と 'extern' 明示的なインスタンス化の互換性がありません
+'\<identifier>' : '__declspec(dllexport)' and 'extern' are incompatible on an explicit instantiation
 
 という名前の明示的なテンプレートをインスタンス化*\<識別子 >* 両方で変更されたが、`__declspec(dllexport)`と`extern`キーワード。 ただし、これらのキーワードは、相互に排他的です。 `__declspec(dllexport)` キーワードは、テンプレート クラスのインスタンス化を意味しますが、 `extern` キーワードは、テンプレート クラスを自動的にインスタンス化しないことを意味します。
 

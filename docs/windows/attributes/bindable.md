@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - bindable attribute
 ms.assetid: a2360f92-927b-4af8-98cc-6eca7f4ec954
-ms.openlocfilehash: 08ecd3e242d1e3601f7a5a3ea54c51a679dca97a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 07f446b946d6703c4a8b9ae59ae0edd8172c6879
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50664153"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037238"
 ---
 # <a name="bindable"></a>bindable
 
@@ -29,11 +29,11 @@ ms.locfileid: "50664153"
 
 次の MFC のサンプルでの使用方法を示して**バインド可能な**:
 
-- [コントロールのサンプル: MFC ベースの ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [コントロールのサンプル:MFC ベースの ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [ActiveX コントロールの円のサンプル:](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [円のサンプル:ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
-- [ヒントとヘルプ TESTHELP サンプル: ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
+- [TESTHELP サンプル:ヒントとヘルプの ActiveX コントロール](https://github.com/Microsoft/VCSamples/tree/master/VC2010Samples/MFC/controls)
 
 ## <a name="example"></a>例
 

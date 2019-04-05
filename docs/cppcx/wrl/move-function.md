@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - Move function
 ms.assetid: c9525426-97e8-4d8c-9877-b689d8a0dc67
-ms.openlocfilehash: 1a03216197462090f38d3bc2065fe227f0667919
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8d7c959ecb2d3c06872871ba062d2be603489141
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785317"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031275"
 ---
 # <a name="move-function"></a>Move 関数
 
@@ -43,7 +43,7 @@ inline typename RemoveReference<T>::Type&& Move(
 
 指定した引数を 1 つの場所から移動します。
 
-詳細については、、**移動セマンティクス**の[右辺値参照宣言子: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)を参照してください。
+詳細については、次を参照してください。、**移動セマンティクス**の[右辺値参照宣言子: & &](../../cpp/rvalue-reference-declarator-amp-amp.md)します。
 
 ## <a name="requirements"></a>必要条件
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SQL [C++], ODBC
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
-ms.openlocfilehash: c9ea15520f98a86f8af7c278bfc77463689a4606
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50576819"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037858"
 ---
 # <a name="sql"></a>SQL
 
@@ -50,9 +50,9 @@ SQL の多くのバージョンが存在する、各開発で特定の DBMS に�
 |**SELECT**|対象のテーブルとデータ ソース内の列が使用されることを確認します。|
 |**WHERE**|選択範囲を限定するフィルターを適用します。|
 |**ORDER BY**|レコード セットを並べ替え順序を適用します。|
-|**挿入します。**|レコード セットには、新しいレコードを追加します。|
-|**DELETE**|レコード セットからレコードを削除します。|
-|**更新プログラム**|レコードのフィールドを変更します。|
+|**INSERT**|レコード セットには、新しいレコードを追加します。|
+|**Del**|レコード セットからレコードを削除します。|
+|**UPDATE**|レコードのフィールドを変更します。|
 
 データベース クラスがさらに、ODBC を認識**呼び出す**ステートメントで、一部のデータ ソースの定義済みクエリ (またはストアド プロシージャ) の呼び出しに使用できます。 ODBC データベース ドライバーでは、これらのステートメントを解釈し、各 DBMS 用の適切なコマンドに置換されます。
 
@@ -61,9 +61,9 @@ SQL の多くのバージョンが存在する、各開発で特定の DBMS に�
 
 クラス内のユーザーが指定したステートメントが認識されない`CRecordset::Open`テーブル名として解釈されます。
 
-フレームワークでの SQL ステートメントの作成方法の詳細については、[レコード セット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)と[SQL: の SQL ステートメント (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)を参照してください。
+フレームワークでの SQL ステートメントの作成方法の詳細については、次を参照してください。[レコード セット。レコード選択による (ODBC) の記録](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)と[SQL:レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)します。
 
-SQL データベースでは、C および C++ で使用されるもののようなデータ型を使用します。 これらの類似点の詳細については、[SQL: SQL と C++ のデータ型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)を参照してください。
+SQL データベースでは、C および C++ で使用されるもののようなデータ型を使用します。 これらの類似点の詳細については、次を参照してください[SQL:。SQL と C++ のデータ型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)します。
 
 サポートされている SQL ステートメント、データ型、SQL コアの文法、および SQL に関する推奨されるパブリケーションの読み取りリストの一覧を含む、SQL の詳細についてを見つけることができます、 *ODBC SDK* *プログラマー リファレンス* MSDN ライブラリ CD に収録されています。
 
@@ -77,11 +77,11 @@ SQL データベースでは、C および C++ で使用されるもののよう
 
 SQL データベース クラスの使用方法の詳細については、以下のトピックです。
 
-- [SQL: レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
+- [SQL:レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)
 
-- [SQL: SQL と C++ のデータ型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
+- [SQL:SQL と C++ のデータ型 (ODBC)](../../data/odbc/sql-sql-and-cpp-data-types-odbc.md)
 
-- [SQL: SQL の直接呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+- [SQL:SQL の直接呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - exclude attribute
 ms.assetid: 0883248a-d4bf-420e-9848-807b28fa976e
-ms.openlocfilehash: 1de1376fbe80147bc9fe01ea83bad81912431310
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d6a320089d5954b2cf1d0d96ae1f37656f2ddd58
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50498255"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032389"
 ---
 # <a name="exclude-import"></a>除外 (\#インポート)
 
@@ -37,7 +37,7 @@ exclude("Name1"[, "Name2",...])
 
 タイプ ライブラリは、システム ヘッダーまたはその他のタイプ ライブラリで定義された項目の定義を含むことがあります。 この属性は、任意の数の引数を受け取ることができます。各引数は、除外するトップ レベルのタイプ ライブラリ項目です。
 
-**END C 固有の仕様**
+**END C++ 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

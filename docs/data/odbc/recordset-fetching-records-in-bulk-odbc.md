@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: バルク行フェッチ (ODBC)'
+title: レコード セット:方法 (ODBC) 内のレコードをフェッチしています
 ms.date: 11/04/2016
 helpviewer_keywords:
 - bulk row fetching, implementing
@@ -14,18 +14,18 @@ helpviewer_keywords:
 - rowsets, bulk row fetching
 - RFX (ODBC), bulk row fetching
 ms.assetid: 20d10fe9-c58a-414a-b675-cdf9aa283e4f
-ms.openlocfilehash: 55a89a66b36d12e6341b85d7dfa655b299638fcd
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2fdcbf18fcb0d97ba7b2a39aa9bbbd79e65a4112
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50628203"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027767"
 ---
-# <a name="recordset-fetching-records-in-bulk-odbc"></a>レコードセット: バルク行フェッチ (ODBC)
+# <a name="recordset-fetching-records-in-bulk-odbc"></a>レコード セット:方法 (ODBC) 内のレコードをフェッチしています
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
-クラス`CRecordset`バルク行フェッチ、つまり、複数のレコード取得できることを一度に取得する 1 つのレコードではなく、1 回のフェッチ中に、時に、データ ソースからサポートを提供します。 派生でのみバルク行フェッチを実装する`CRecordset`クラス。 レコード セット オブジェクトにデータ ソースからデータを転送するプロセスは、バルク レコード フィールド エクス チェンジ (Bulk RFX) と呼ばれます。 バルク行フェッチを使用しない場合、 `CRecordset`-データの派生クラスは、レコード フィールド エクス (チェンジ RFX) 経由で転送します。 詳細については、[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)を参照してください。
+クラス`CRecordset`バルク行フェッチ、つまり、複数のレコード取得できることを一度に取得する 1 つのレコードではなく、1 回のフェッチ中に、時に、データ ソースからサポートを提供します。 派生でのみバルク行フェッチを実装する`CRecordset`クラス。 レコード セット オブジェクトにデータ ソースからデータを転送するプロセスは、バルク レコード フィールド エクス チェンジ (Bulk RFX) と呼ばれます。 バルク行フェッチを使用しない場合、 `CRecordset`-データの派生クラスは、レコード フィールド エクス (チェンジ RFX) 経由で転送します。 詳細については、次を参照してください。[レコード フィールド エクス チェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)します。
 
 このトピックでは、次の内容について説明します。
 
@@ -64,7 +64,7 @@ ms.locfileid: "50628203"
 
 - `Move`操作は、行セットによって、レコード セットを再配置されます。 たとえば、100 個のレコードの最初の行セット サイズは 10 を含むレコード セットを開くとします。 `Open` 1 行に配置されている 1 ~ 10 の現在のレコードでの行をフェッチします。 呼び出し`MoveNext`次へ の 次の行ではなく行セットをフェッチします。 11 行目に配置されている行 11 ~ 20 の現在のレコードに、この行セットで構成されます。 なお`MoveNext`と`Move( 1 )`はバルク行フェッチが実装された場合とは異なります。 `Move( 1 )` 現在のレコードから 1 行で始まる行セットをフェッチします。 この例では、呼び出す`Move( 1 )`呼び出した後`Open`行 2 に配置されている現在のレコードに 2 ~ 11、行で構成される行セットをフェッチします。 詳細については、次を参照してください。、[移動](../../mfc/reference/crecordset-class.md#move)メンバー関数。
 
-- レコード フィールド エクス チェンジとは異なり、ウィザードには、バルク レコード フィールド エクス チェンジがサポートされません。 つまり、手動でフィールド データ メンバーを宣言し、手動でオーバーライドする必要があります`DoBulkFieldExchange`バルク RFX 関数の呼び出しを記述しています。 詳細については、[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)で、*クラス ライブラリ リファレンス*を参照してください。
+- レコード フィールド エクス チェンジとは異なり、ウィザードには、バルク レコード フィールド エクス チェンジがサポートされません。 つまり、手動でフィールド データ メンバーを宣言し、手動でオーバーライドする必要があります`DoBulkFieldExchange`バルク RFX 関数の呼び出しを記述しています。 詳細については、次を参照してください。[レコード フィールド エクス チェンジ関数](../../mfc/reference/record-field-exchange-functions.md)で、*クラス ライブラリ リファレンス*します。
 
 ##  <a name="_core_how_to_implement_bulk_record_field_exchange"></a> バルク レコード フィールド エクス チェンジを実装する方法
 
@@ -137,7 +137,7 @@ void MultiRowSet::DoBulkFieldExchange( CFieldExchange* pFX )
 > [!NOTE]
 >  呼び出す必要があります、`Close`メンバー関数は、派生する前に`CRecordset`クラスがスコープ外になります。 これにより、フレームワークによって割り当てられたメモリが解放されます。 常に明示的に呼び出すことをお勧め`Close`バルク行フェッチを実装するかどうかに関係なく、します。
 
-レコード フィールド エクス チェンジ (RFX) の詳細については、[レコード フィールド エクス チェンジ: RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)を参照してください。 詳細については、パラメーターを使用して、[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)と[レコード セット: レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)を参照してください。
+レコード フィールド エクス チェンジ (RFX) の詳細については、次を参照してください。[レコード フィールド エクス チェンジ。RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)します。 詳細については、パラメーターを使用して、次を参照してください。[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)と[レコード セット。レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。
 
 ## <a name="see-also"></a>関連項目
 
