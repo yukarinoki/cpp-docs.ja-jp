@@ -8,12 +8,12 @@ helpviewer_keywords:
 - _InterlockedAddLargeStatistic intrinsic
 - InterlockedAddLargeStatistic intrinsic
 ms.assetid: 2802e74b-bcee-46e4-b562-894908d44409
-ms.openlocfilehash: 88ada0a906b777ab8ac676ddfe0a5166e906999d
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 6f9d599a8d7668c6c8a37846275e8338002589d1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627473"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033415"
 ---
 # <a name="interlockedaddlargestatistic"></a>_InterlockedAddLargeStatistic
 
@@ -54,11 +54,11 @@ long _InterlockedAddLargeStatistic(
 
 この組み込みはアトミックため 2 つの個別のロックされている指示として実装されます。 組み込みこれの実行中に別のスレッドで発生するアトミックの 64 ビット読み取りは、読み取られる一貫性のない値になる可能性があります。
 
-この関数は、読み取り/書き込みバリアとして動作します。 詳細については、[_ReadWriteBarrier](../intrinsics/readwritebarrier.md)を参照してください。
+この関数は、読み取り/書き込みバリアとして動作します。 詳細については、次を参照してください。 [_ReadWriteBarrier](../intrinsics/readwritebarrier.md)します。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
