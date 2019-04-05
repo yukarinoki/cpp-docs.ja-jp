@@ -13,10 +13,10 @@ helpviewer_keywords:
 - Class View tool, managing Windows messages
 ms.assetid: f5dd4d13-9dc1-4a49-b6bf-5b3cb45fa8ba
 ms.openlocfilehash: 41cbb86b4245bd78baecd222b5573ba5e877243a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773828"
 ---
 # <a name="wizards-and-the-resource-editors"></a>ウィザードおよびリソース エディター
@@ -40,7 +40,7 @@ MFC フレームワークでは、ドキュメント、ビュー、フレーム 
 
 プログラミング タスクの大部分は、どのオブジェクトにマップするメッセージを選択して、そのマッピングを実装します。 これを行うには、クラス ビューおよび [プロパティ] ウィンドウを使用します。
 
-[プロパティ] ウィンドウには空のメッセージ ハンドラー メンバー関数が作成され、ソース コード エディターを使用して、ハンドラーの本体を実装します。 作成またはクラス (MFC クラスから派生していない、独自のクラスを含む) とクラス ビューでは、そのメンバーを編集することもできます。 クラス ビューを使用して、プロジェクトにコードを追加するウィザードについての詳細については、[コード ウィザードによる機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)を参照してください。
+[プロパティ] ウィンドウには空のメッセージ ハンドラー メンバー関数が作成され、ソース コード エディターを使用して、ハンドラーの本体を実装します。 作成またはクラス (MFC クラスから派生していない、独自のクラスを含む) とクラス ビューでは、そのメンバーを編集することもできます。 クラス ビューを使用して、プロジェクトにコードを追加するウィザードについての詳細については、次を参照してください。[コード ウィザードによる機能の追加](../ide/adding-functionality-with-code-wizards-cpp.md)します。
 
 ##  <a name="_core_use_the_resource_editors_to_create_and_edit_resources"></a> リソース エディターを使用して作成し、リソースの編集
 

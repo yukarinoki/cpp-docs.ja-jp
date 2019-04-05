@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3352
 ms.assetid: f233bed7-474e-425f-aad2-7801578169d4
 ms.openlocfilehash: 6641f05c8daa5ad505c0bcb8d29a369ad5fd9a9a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779600"
 ---
 # <a name="compiler-error-c3352"></a>コンパイラ エラー C3352
@@ -19,7 +19,7 @@ ms.locfileid: "58779600"
 
 パラメーターのリストが`function`とデリゲートが一致していません。
 
-詳細については、[デリゲート (C++ コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)を参照してください。
+詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../../extensions/delegate-cpp-component-extensions.md)します。
 
 次の例では、C3352 が生成されます。
 

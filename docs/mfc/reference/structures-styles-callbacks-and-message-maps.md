@@ -9,12 +9,12 @@ helpviewer_keywords:
 - message classes [MFC], MFC
 - structures, MFC
 ms.assetid: 27566602-7d84-4089-880c-8e90fb04fa56
-ms.openlocfilehash: ffa57be45ca3b5626d78f495ed5ab5f658b62fb9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a5f0be66cdcb5c4a37d16b1e83cbc40cf023df32
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301923"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780198"
 ---
 # <a name="structures-styles-callbacks-and-message-maps"></a>構造体、スタイル、コールバック関数とメッセージ マップ
 
@@ -39,5 +39,5 @@ MFC ライブラリに表示されているコールバック関数へのリン�
 [クラス ライブラリの概要](../../mfc/class-library-overview.md)<br/>
 MFC ライブラリのクラスをカテゴリ別に一覧表示します。
 
-[MFC のサンプル](../../visual-cpp-samples.md)<br/>
+[MFC のサンプル](../../overview/visual-cpp-samples.md)<br/>
 MFC ライブラリの使用方法を示すサンプルへのリンクを提供します。

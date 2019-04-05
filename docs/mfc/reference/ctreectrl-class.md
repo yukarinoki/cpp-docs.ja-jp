@@ -163,10 +163,10 @@ helpviewer_keywords:
 - CTreeCtrl [MFC], SortChildrenCB
 ms.assetid: 96e20031-6161-4143-8c12-8d1816c66d90
 ms.openlocfilehash: 3819e861b7a5e6ff27fe632a33413b588a5a4835
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58782005"
 ---
 # <a name="ctreectrl-class"></a>CTreeCtrl Class
@@ -669,7 +669,7 @@ DWORD GetExtendedStyle() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のツリー ビュー コントロールのビットごとの組み合わせ (OR) を格納している値での拡張スタイルを使用します。 詳細については、[ツリー ビュー コントロールの拡張スタイル](/windows/desktop/Controls/tree-view-control-window-extended-styles)を参照してください。
+現在のツリー ビュー コントロールのビットごとの組み合わせ (OR) を格納している値での拡張スタイルを使用します。 詳細については、次を参照してください。[ツリー ビュー コントロールの拡張スタイル](/windows/desktop/Controls/tree-view-control-window-extended-styles)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -850,7 +850,7 @@ BOOL GetItemImage(
 *hItem*<br/>
 イメージが取得するアイテムのハンドル。
 
-*nImage*<br/>
+*あり*<br/>
 ツリー ビュー コントロールのイメージ リスト内の項目のイメージのインデックスを受け取る整数。
 
 *nSelectedImage*<br/>
@@ -961,7 +961,7 @@ UINT GetItemState(
 
 ### <a name="return-value"></a>戻り値
 
-取得によって指定された値のビットごとの OR を保持する UINT します。 使用可能な値については、[CTreeCtrl::GetItem](#getitem)を参照してください。 特定の状態の値を検索するには、次の例に示すように、状態の値と戻り値のビットごとの AND 演算を実行します。
+取得によって指定された値のビットごとの OR を保持する UINT します。 使用可能な値については、次を参照してください。 [CTreeCtrl::GetItem](#getitem)します。 特定の状態の値を検索するには、次の例に示すように、状態の値と戻り値のビットごとの AND 演算を実行します。
 
 ### <a name="example"></a>例
 
@@ -1104,7 +1104,7 @@ HTREEITEM GetNextItem(
 
 ### <a name="example"></a>例
 
-使用する例については`GetNextItem`、ループ内で、[CTreeCtrl::DeleteItem](#deleteitem)を参照してください。
+使用する例については`GetNextItem`、ループ内で、次を参照してください。 [CTreeCtrl::DeleteItem](#deleteitem)します。
 
 [!code-cpp[NVC_MFC_CTreeCtrl#20](../../mfc/reference/codesnippet/cpp/ctreectrl-class_23.cpp)]
 
@@ -1427,7 +1427,7 @@ HTREEITEM InsertItem(
 *lpszItem*<br/>
 項目のテキストを含む文字列のアドレス。
 
-*nImage*<br/>
+*あり*<br/>
 ツリー ビュー コントロールのイメージ リスト内の項目のイメージのインデックス。
 
 *nSelectedImage*<br/>
@@ -1925,7 +1925,7 @@ BOOL SetItem(
 *lpszItem*<br/>
 項目のテキストを含む文字列のアドレス。
 
-*nImage*<br/>
+*あり*<br/>
 ツリー ビュー コントロールのイメージ リスト内の項目のイメージのインデックス。 参照してください、`iImage`のメンバー、`TVITEM`構造体。
 
 *nSelectedImage*<br/>
@@ -2054,7 +2054,7 @@ BOOL SetItemImage(
 *hItem*<br/>
 イメージが設定されるアイテムのハンドル。
 
-*nImage*<br/>
+*あり*<br/>
 ツリー ビュー コントロールのイメージ リスト内の項目のイメージのインデックス。
 
 *nSelectedImage*<br/>
@@ -2070,7 +2070,7 @@ BOOL SetItemImage(
 
 項目のイメージ、およびツリー ビュー コントロールのイメージ リスト内で選択したイメージのインデックスを設定するには、この関数を呼び出します。
 
-イメージの詳細については、[CImageList](../../mfc/reference/cimagelist-class.md)を参照してください。
+イメージの詳細については、次を参照してください。 [CImageList](../../mfc/reference/cimagelist-class.md)します。
 
 ### <a name="example"></a>例
 
@@ -2104,7 +2104,7 @@ BOOL SetItemState(
 
 ### <a name="remarks"></a>Remarks
 
-状態については、[CTreeCtrl::GetItem](#getitem)を参照してください。
+状態については、次を参照してください。 [CTreeCtrl::GetItem](#getitem)します。
 
 ### <a name="example"></a>例
 

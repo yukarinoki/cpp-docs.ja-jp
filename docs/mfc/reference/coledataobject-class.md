@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COleDataObject [MFC], Release
 ms.assetid: d1cc84be-2e1c-4bb3-a8a0-565eb08aaa34
 ms.openlocfilehash: 24d79c684226d57839161946255781c3bdd5a043
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779093"
 ---
 # <a name="coledataobject-class"></a>COleDataObject クラス
@@ -125,7 +125,7 @@ BOOL AttachClipboard();
 ### <a name="remarks"></a>Remarks
 
 > [!NOTE]
->  この関数を呼び出すことでは、このデータ オブジェクトが解放されるまでに、クリップボードをロックします。 データ オブジェクトのデストラクターで解放、`COleDataObject`します。 詳細については、[OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipboard)と[CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) Win32 ドキュメントにを参照してください。
+>  この関数を呼び出すことでは、このデータ オブジェクトが解放されるまでに、クリップボードをロックします。 データ オブジェクトのデストラクターで解放、`COleDataObject`します。 詳細については、次を参照してください。 [OpenClipboard](/windows/desktop/api/winuser/nf-winuser-openclipboard)と[CloseClipboard](/windows/desktop/api/winuser/nf-winuser-closeclipboard) Win32 ドキュメントにします。
 
 ##  <a name="beginenumformats"></a>  COleDataObject::BeginEnumFormats
 

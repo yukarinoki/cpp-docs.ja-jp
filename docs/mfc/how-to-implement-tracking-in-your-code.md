@@ -5,17 +5,17 @@ helpviewer_keywords:
 - CRectTracker class [MFC], implementing trackers
 ms.assetid: baaeca2c-5114-485f-bf58-8807db1bc973
 ms.openlocfilehash: 0f037480e83b8ca1ba12af56904afe25a33e4d6c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774465"
 ---
 # <a name="how-to-implement-tracking-in-your-code"></a>方法: コードでのトラッカーを実装します。
 
 OLE 項目を追跡するには、項目をクリックするか、ドキュメントのビューの更新などのアイテムに関連する特定のイベントを処理する必要があります。 すべてのケースでは、一時的なを宣言するための十分な[CRectTracker](../mfc/reference/crecttracker-class.md)オブジェクトし、このオブジェクトを使用して、項目を操作します。
 
-ユーザーが項目を選択するか、メニュー コマンドを使用してオブジェクトを挿入、OLE 項目の状態を示す適切なスタイルを使用してトラッカーを初期化する必要があります。 次の表では、OCLIENT サンプルで使用される規則について説明します。 これらのスタイルの詳細については、`CRectTracker`を参照してください。
+ユーザーが項目を選択するか、メニュー コマンドを使用してオブジェクトを挿入、OLE 項目の状態を示す適切なスタイルを使用してトラッカーを初期化する必要があります。 次の表では、OCLIENT サンプルで使用される規則について説明します。 これらのスタイルの詳細については、次を参照してください。`CRectTracker`します。
 
 ### <a name="container-styles-and-states-of-the-ole-item"></a>コンテナーのスタイルと OLE 項目の状態
 

@@ -23,10 +23,10 @@ helpviewer_keywords:
 - message ranges [MFC], mapping
 ms.assetid: a271478b-5e1c-46f5-9f29-e5be44b27d08
 ms.openlocfilehash: d2bc961486d9bc686e1ca0d5feb0fe01d65f9512
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773997"
 ---
 # <a name="handlers-for-message-map-ranges"></a>範囲内のメッセージのハンドラー
@@ -91,7 +91,7 @@ ms.locfileid: "58773997"
 
 通常 1 つのコマンド ハンドラー関数はパラメーターを受け取らない。 メッセージ マップの範囲のハンドラー関数が追加のパラメーターを必要と更新のハンドラー関数を除く*nID*、型の**UINT**します。 このパラメーターは、最初のパラメーターです。 追加のパラメーターには、ユーザーが実際に選択したコマンドを指定するために必要なコマンドの ID が対応しています。
 
-更新ハンドラー関数のパラメーターの要件の詳細については、[例の Id の範囲コマンド](#_core_example_for_a_range_of_command_ids)を参照してください。
+更新ハンドラー関数のパラメーターの要件の詳細については、次を参照してください。[例の Id の範囲コマンド](#_core_example_for_a_range_of_command_ids)します。
 
 ##  <a name="_core_example_for_a_range_of_command_ids"></a> 範囲のコマンド Id の例
 

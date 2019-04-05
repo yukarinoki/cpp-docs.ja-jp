@@ -79,10 +79,10 @@ helpviewer_keywords:
 - CMFCRibbonGallery [MFC], OnDrawPaletteIcon
 ms.assetid: 9734c9c9-981c-4b3f-8c59-264fd41811b4
 ms.openlocfilehash: 818ce55e44d91520e568308a1a1e8a1fa0c8658d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58780393"
 ---
 # <a name="cmfcribbongallery-class"></a>CMFCRibbonGallery クラス
@@ -102,7 +102,8 @@ class CMFCRibbonGallery : public CMFCRibbonButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|`CMFCRibbonGallery` オブジェクトを構築して初期化します。|
+|[CMFCRibbonGallery::CMFCRibbonGallery](#cmfcribbongallery)|
+  `CMFCRibbonGallery` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -691,7 +692,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 [in]リボン ギャラリーのウィンドウの親ウィンドウ。
 
-*data*<br/>
+*[データ]*<br/>
 [out]A`CAccessibilityData`リボン ギャラリーからのアクセシビリティ データを受け取るオブジェクト。
 
 ### <a name="return-value"></a>戻り値

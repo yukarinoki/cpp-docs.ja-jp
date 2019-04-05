@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773984"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem クラス
@@ -198,7 +198,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::AttachDataObject](#attachdataobject)|OLE オブジェクトのデータにアクセスします。|
 |[COleClientItem::CanCreateFromData](#cancreatefromdata)|コンテナー アプリケーションが、埋め込みオブジェクトを作成できるかどうかを示します。|
 |[COleClientItem::CanCreateLinkFromData](#cancreatelinkfromdata)|コンテナー アプリケーションがリンクされたオブジェクトを作成できるかどうかを示します。|
-|[COleClientItem::CanPaste](#canpaste)|埋め込み可能なまたは静的 OLE アイテムがクリップボードに含まれるかどうかを示します。|
+|[置き換えるには](#canpaste)|埋め込み可能なまたは静的 OLE アイテムがクリップボードに含まれるかどうかを示します。|
 |[置き換えるには](#canpastelink)|OLE 項目をリンク可能がクリップボードに含まれるかどうかを示します。|
 |[COleClientItem::Close](#close)|サーバーへのリンクを閉じますが、OLE 項目を破棄しません。|
 |[COleClientItem::ConvertTo](#convertto)|項目を別の型に変換します。|
@@ -207,7 +207,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::CreateFromClipboard](#createfromclipboard)|クリップボードから埋め込みアイテムを作成します。|
 |[COleClientItem::CreateFromData](#createfromdata)|データ オブジェクトから埋め込みアイテムを作成します。|
 |[COleClientItem::CreateFromFile](#createfromfile)|ファイルから埋め込みアイテムを作成します。|
-|[COleClientItem::CreateLinkFromClipboard](#createlinkfromclipboard)|クリップボードからのリンクされた項目を作成します。|
+|[リンク](#createlinkfromclipboard)|クリップボードからのリンクされた項目を作成します。|
 |[COleClientItem::CreateLinkFromData](#createlinkfromdata)|データ オブジェクトからリンクされた項目を作成します。|
 |[COleClientItem::CreateLinkFromFile](#createlinkfromfile)|ファイルからのリンクされた項目を作成します。|
 |[COleClientItem::CreateNewItem](#createnewitem)|サーバー アプリケーションを起動して新しい埋め込みアイテムを作成します。|
@@ -216,7 +216,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::Deactivate](#deactivate)|アイテムを非アクティブ化します。|
 |[COleClientItem::DeactivateUI](#deactivateui)|コンテナー アプリケーションのユーザー インターフェイスは、元の状態に復元します。|
 |[COleClientItem::Delete](#delete)|削除するか、またはリンクされた項目があった場合、OLE 項目を閉じます。|
-|[COleClientItem::DoDragDrop](#dodragdrop)|ドラッグ アンド ドロップ操作を実行します。|
+|[クラス](#dodragdrop)|ドラッグ アンド ドロップ操作を実行します。|
 |[COleClientItem::DoVerb](#doverb)|指定した動詞を実行します。|
 |[値](#draw)|OLE 項目を描画します。|
 |[COleClientItem::GetActiveView](#getactiveview)|場所に項目がアクティブにビューを取得します。|
@@ -241,7 +241,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::IsRunning](#isrunning)|アイテムのサーバー アプリケーションが実行されている場合は、TRUE を返します。|
 |[COleClientItem::OnActivate](#onactivate)|アイテムがアクティブ化されることを通知するためにフレームワークによって呼び出されます。|
 |[COleClientItem::OnActivateUI](#onactivateui)|アクティブになるし、そのユーザー インターフェイスを表示する必要がありますが、アイテムを通知するためにフレームワークによって呼び出されます。|
-|[COleClientItem::OnChange](#onchange)|サーバーは OLE 項目を変更するときに呼び出されます。 必要な実装です。|
+|[として](#onchange)|サーバーは OLE 項目を変更するときに呼び出されます。 必要な実装です。|
 |[COleClientItem::OnDeactivate](#ondeactivate)|項目が非アクティブ化されたときに、フレームワークによって呼び出されます。|
 |[COleClientItem::OnDeactivateUI](#ondeactivateui)|サーバーがその場所でのユーザー インターフェイスを削除すると、フレームワークによって呼び出されます。|
 |[COleClientItem::OnGetClipboardData](#ongetclipboarddata)|クリップボードにコピーするデータを取得するためにフレームワークによって呼び出されます。|
@@ -996,7 +996,7 @@ DROPEFFECT DoDragDrop(
 
 ### <a name="parameters"></a>パラメーター
 
-*lpItemRect*<br/>
+*示す*<br/>
 クライアント座標 (ピクセル単位) 画面でアイテムの四角形。
 
 *ptOffset*<br/>
@@ -1091,7 +1091,7 @@ BOOL Draw(
 ポインターを[CRect](../../atl-mfc-shared/reference/crect-class.md)オブジェクトまたは`RECT`(論理単位で、デバイス コンテキストから判別) で OLE 項目を描画するための外接する四角形を定義する構造体。
 
 *nDrawAspect*<br/>
-OLE の部分を表す項目は、表示方法を指定します。 場合*nDrawAspect* -1 で、最後の側面を使用して設定[外観](#setdrawaspect)使用されます。 このフラグに指定できる値の詳細については、[外観](#setdrawaspect)を参照してください。
+OLE の部分を表す項目は、表示方法を指定します。 場合*nDrawAspect* -1 で、最後の側面を使用して設定[外観](#setdrawaspect)使用されます。 このフラグに指定できる値の詳細については、次を参照してください。[外観](#setdrawaspect)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1135,7 +1135,7 @@ BOOL GetCachedExtent(
 ポインターを`SIZE`構造または[CSize](../../atl-mfc-shared/reference/csize-class.md)サイズ情報を受け取るオブジェクト。
 
 *nDrawAspect*<br/>
-境界を取得する OLE アイテムの外観を指定します。 使用可能な値は、[外観](#setdrawaspect)を参照してください。
+境界を取得する OLE アイテムの外観を指定します。 使用可能な値は、次を参照してください。[外観](#setdrawaspect)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1246,7 +1246,7 @@ BOOL GetExtent(
 ポインターを`SIZE`構造または`CSize`サイズ情報を受け取るオブジェクト。
 
 *nDrawAspect*<br/>
-境界を取得する OLE アイテムの外観を指定します。 使用可能な値は、[外観](#setdrawaspect)を参照してください。
+境界を取得する OLE アイテムの外観を指定します。 使用可能な値は、次を参照してください。[外観](#setdrawaspect)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1564,7 +1564,7 @@ virtual void OnChange(
 - OLE_CHANGED_STATE、OLE アイテムは、別の 1 つの状態から変更されました。
 
 *dwParam*<br/>
-場合*nCode*でまたは OLE_CLOSED は、このパラメーターは使用されません。 場合*nCode* OLE_CHANGED は、このパラメーターが変更された OLE 項目の外観を指定します。 使用可能な値は、、*について*パラメーターの[値](#draw)を参照してください。 場合*nCode* OLE_CHANGED_STATE は、このパラメーターは、`COleClientItem::ItemState`列挙値と、入力されている状態について説明します。 次の値のいずれかのことができます: `emptyState`、 `loadedState`、 `openState`、 `activeState`、または`activeUIState`します。
+場合*nCode*でまたは OLE_CLOSED は、このパラメーターは使用されません。 場合*nCode* OLE_CHANGED は、このパラメーターが変更された OLE 項目の外観を指定します。 使用可能な値は、次を参照してください。、*について*パラメーターの[値](#draw)します。 場合*nCode* OLE_CHANGED_STATE は、このパラメーターは、`COleClientItem::ItemState`列挙値と、入力されている状態について説明します。 次の値のいずれかのことができます: `emptyState`、 `loadedState`、 `openState`、 `activeState`、または`activeUIState`します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1741,13 +1741,13 @@ virtual BOOL OnGetWindowContext(
 
 ### <a name="parameters"></a>パラメーター
 
-*ppMainFrame*<br/>
+*ときは*<br/>
 メイン フレーム ウィンドウへのポインターへのポインター。
 
-*ppDocFrame*<br/>
+*き*<br/>
 ドキュメント フレーム ウィンドウへのポインターへのポインター。
 
-*lpFrameInfo*<br/>
+*は*<br/>
 ポインター、[受け取る](/windows/desktop/api/oleidl/ns-oleidl-tagoifi)フレーム ウィンドウの情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1949,7 +1949,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="parameters"></a>パラメーター
 
 *dwCloseOption*<br/>
-読み込み済み状態に戻ったときにどのような状況で OLE 項目が保存されたを指定するフラグ。 使用可能な値の一覧は、[COleClientItem::Close](#close)を参照してください。
+読み込み済み状態に戻ったときにどのような状況で OLE 項目が保存されたを指定するフラグ。 使用可能な値の一覧は、次を参照してください。 [COleClientItem::Close](#close)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -2028,7 +2028,7 @@ void SetExtent(
 A [CSize](../../atl-mfc-shared/reference/csize-class.md)サイズ情報を含むオブジェクト。
 
 *nDrawAspect*<br/>
-境界を設定する OLE アイテムの外観を指定します。 使用可能な値は、[外観](#setdrawaspect)を参照してください。
+境界を設定する OLE アイテムの外観を指定します。 使用可能な値は、次を参照してください。[外観](#setdrawaspect)します。
 
 ### <a name="remarks"></a>Remarks
 

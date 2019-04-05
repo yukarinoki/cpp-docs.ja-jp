@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3764
 ms.assetid: af5d254c-8d4a-4dda-aad9-3c5c1257c868
 ms.openlocfilehash: 2570ee9abb148b919242de7786cd6fa91765286f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773581"
 ---
 # <a name="compiler-error-c3764"></a>コンパイラ エラー C3764
 
 'override_function': 基底クラス メソッド 'base_class_function' をオーバーライドすることはできません
 
-正しくない形式のオーバーライドが検出されました。 たとえば、基底クラスの関数が`virtual`します。 詳細については、[オーバーライド](../../extensions/override-cpp-component-extensions.md)を参照してください。
+正しくない形式のオーバーライドが検出されました。 たとえば、基底クラスの関数が`virtual`します。 詳細については、次を参照してください。[オーバーライド](../../extensions/override-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 
