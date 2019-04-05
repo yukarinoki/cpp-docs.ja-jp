@@ -195,8 +195,7 @@ template<typename _Function>
 
 ### <a name="return-value"></a>戻り値
 
-
-  `cancellation_token_registration` メソッドで利用できる `deregister` オブジェクト。その利用目的は、以前に登録されたコールバックの登録を解除し、コールバックが行われないようにすることです。 メソッドがスローされます、 [invalid_operation](invalid-operation-class.md)で呼び出される場合は例外を`cancellation_token`を使用して作成されたオブジェクト、 [cancellation_token::none](#none)メソッド。
+`cancellation_token_registration` メソッドで利用できる `deregister` オブジェクト。その利用目的は、以前に登録されたコールバックの登録を解除し、コールバックが行われないようにすることです。 メソッドがスローされます、 [invalid_operation](invalid-operation-class.md)で呼び出される場合は例外を`cancellation_token`を使用して作成されたオブジェクト、 [cancellation_token::none](#none)メソッド。
 
 ## <a name="see-also"></a>関連項目
 
