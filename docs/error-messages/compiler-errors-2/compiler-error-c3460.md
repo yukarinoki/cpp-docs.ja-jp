@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3460
 ms.assetid: adbf8775-10ca-4654-acdf-58dd765351cd
 ms.openlocfilehash: 9ffbc5102855574aba668a2c501cd08dbaebe5b8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58775180"
 ---
 # <a name="compiler-error-c3460"></a>コンパイラ エラー C3460
 
 'type': 転送できるのはユーザー定義型のみです
 
-詳細については、[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)を参照してください。
+詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

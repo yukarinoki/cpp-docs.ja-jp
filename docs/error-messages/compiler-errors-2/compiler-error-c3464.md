@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3464
 ms.assetid: 0ede05dc-4486-4921-8e8c-78ab5a2e09c5
 ms.openlocfilehash: b21810d6df1fbfaf5ea94d9515487b16d00af548
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58775297"
 ---
 # <a name="compiler-error-c3464"></a>コンパイラ エラー C3464
@@ -19,7 +19,7 @@ ms.locfileid: "58775297"
 
 型の転送は、入れ子にされた型では動作しません。
 
-詳細については、[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)を参照してください。
+詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

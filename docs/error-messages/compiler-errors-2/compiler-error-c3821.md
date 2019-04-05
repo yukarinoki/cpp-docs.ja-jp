@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3821
 ms.assetid: 2b327c7a-5faf-443c-ae82-944fae25b4df
-ms.openlocfilehash: 1cfc762cc7151eb2d55f8bd681bec935aea2acd4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 248431afb25aa4b9480818f76388f6ad56d8e006
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50625967"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778248"
 ---
 # <a name="compiler-error-c3821"></a>コンパイラ エラー C3821
 
@@ -19,7 +19,7 @@ ms.locfileid: "50625967"
 
 インライン アセンブリでの関数または[setjmp](../../c-runtime-library/reference/setjmp.md)値の型またはマネージ クラスを含めることはできません。 このエラーを解決するには、インライン アセンブリを削除し、`setjmp`またはマネージ オブジェクトを削除します。
 
-C3821 は、自動ストレージ vararg 関数で使用しようとする場合にも発生します。  詳細については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../../windows/variable-argument-lists-dot-dot-dot-cpp-cli.md)と[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。
+C3821 は、自動ストレージ vararg 関数で使用しようとする場合にも発生します。  詳細については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md)と[参照型の C++ スタック セマンティクス](../../dotnet/cpp-stack-semantics-for-reference-types.md)します。
 
 ## <a name="example"></a>例
 

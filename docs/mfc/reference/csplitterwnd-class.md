@@ -73,10 +73,10 @@ helpviewer_keywords:
 - CSplitterWnd [MFC], OnInvertTracker
 ms.assetid: fd0de258-6dbe-4552-9e47-a39de0471d51
 ms.openlocfilehash: 065735c13a3e763208142eb6bc989d3a496221f0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781446"
 ---
 # <a name="csplitterwnd-class"></a>CSplitterWnd クラス
@@ -171,7 +171,7 @@ A`CSplitterWnd`オブジェクトが親に埋め込まれた通常[CFrameWnd](..
 
 スプリッター ウィンドウを作成するときに、これらの特殊なスクロール バーを作成します。 たとえば、`CSplitterWnd`を持つ 1 つの行、2 つの列と WS_VSCROLL スタイル、2 つのペインで共有される垂直スクロール バーが表示されます。 ユーザーがスクロール バーを移動すると、WM_VSCROLL メッセージは、両方のウィンドウに送信されます。 ペインには、スクロール バーの位置が設定されている場合は、共有のスクロール バーが設定されます。
 
-分割ウィンドウについては、[テクニカル ノート 29:](../../mfc/tn029-splitter-windows.md)を参照してください。
+分割ウィンドウについては、次を参照してください。[テクニカル ノート 29:](../../mfc/tn029-splitter-windows.md)します。
 
 動的分割ウィンドウを作成する方法の詳細についてを参照してください。
 
@@ -456,7 +456,7 @@ virtual void DeleteRow(int rowDelete);
 
 ### <a name="parameters"></a>パラメーター
 
-*rowDelete*<br/>
+*行を削除します。*<br/>
 削除する行を指定します。
 
 ### <a name="remarks"></a>Remarks

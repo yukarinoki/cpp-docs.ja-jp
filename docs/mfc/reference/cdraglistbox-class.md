@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CDragListBox [MFC], ItemFromPt
 ms.assetid: fee20b42-60ae-4aa9-83f9-5a3d9b96e33b
 ms.openlocfilehash: d8afc5b14f5f52ca7a4d28a3d3c3c5440b7c819f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781589"
 ---
 # <a name="cdraglistbox-class"></a>CDragListBox クラス
@@ -60,11 +60,11 @@ class CDragListBox : public CListBox
 
 この機能を持つリスト ボックスには、任意の方法が最も役に立つことで、一覧内の項目の並べ替えにユーザーができるようにします。 既定では、リスト ボックスは、リスト内の新しい場所に、項目を移動することにします。 ただし、`CDragListBox`に移動する代わりに項目をコピーするオブジェクトをカスタマイズできます。
 
-リスト ボックス コントロールに関連付けられている、`CDragListBox`な LBS_SORT または LBS_MULTIPLESELECT スタイル クラスが必要ありません。 リスト ボックスのスタイルの説明は、[リスト ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)を参照してください。
+リスト ボックス コントロールに関連付けられている、`CDragListBox`な LBS_SORT または LBS_MULTIPLESELECT スタイル クラスが必要ありません。 リスト ボックスのスタイルの説明は、次を参照してください。[リスト ボックス スタイル](../../mfc/reference/styles-used-by-mfc.md#list-box-styles)します。
 
 アプリケーションの既存のダイアログ ボックスでのドラッグ リスト ボックスを使用するダイアログ エディターを使用して、ダイアログ テンプレートをリスト ボックス コントロールを追加し、メンバー変数を割り当てる (カテゴリの`Control`変数型と`CDragListBox`)、リスト ボックスに対応します。ダイアログ テンプレートを制御します。
 
-コントロールをメンバー変数に割り当てる方法に関する詳細については、[ダイアログ コントロールのメンバー変数を定義するためのショートカット](../../windows/defining-member-variables-for-dialog-controls.md)を参照してください。
+コントロールをメンバー変数に割り当てる方法に関する詳細については、次を参照してください。[ダイアログ コントロールのメンバー変数を定義するためのショートカット](../../windows/defining-member-variables-for-dialog-controls.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

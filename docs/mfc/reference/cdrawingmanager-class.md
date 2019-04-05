@@ -57,10 +57,10 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781693"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager クラス
@@ -91,7 +91,7 @@ class CDrawingManager : public CObject
 |[CDrawingManager::DrawRotated](#drawrotated)|ソースで指定した四角形は、90 ° +/-内の DC のコンテンツを回転させます。|
 |[CDrawingManager::DrawEllipse](#drawellipse)|指定された塗りつぶしと境界線の色を使用して楕円を描画します。|
 |[CDrawingManager::DrawGradientRing](#drawgradientring)|リングを描画し、色のグラデーションで塗りつぶします。|
-|[CDrawingManager::DrawLine、CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|線を描画します。|
+|[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|線を描画します。|
 |[CDrawingManager::DrawRect](#drawrect)|指定された塗りつぶしと境界線の色の四角形を描画します。|
 |[CDrawingManager::DrawShadow](#drawshadow)|四角形の領域に影を描画します。|
 |[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|2 つの色グラデーションの四角形の領域を塗りつぶします。|
@@ -159,7 +159,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |パラメーター|説明|
 |*size*|[in]A [CSize](../../atl-mfc-shared/reference/csize-class.md)ビットマップのサイズを示すパラメーターです。|
 |*pBits*|[out]DIB の場所を受信するデータ ポインターへのポインターのビット値。|
-|*bitmap*|元のビットマップを識別するハンドル|
+|*ビットマップ*|元のビットマップを識別するハンドル|
 |*clrTransparent*|元のビットマップの透明色を指定する RGB 値。|
 
 ### <a name="return-value"></a>戻り値
@@ -168,7 +168,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 
 ### <a name="remarks"></a>Remarks
 
-DIB ビットマップを作成する方法の詳細については、[CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap)を参照してください。
+DIB ビットマップを作成する方法の詳細については、次を参照してください。 [CreateDIBSection](/windows/desktop/api/wingdi/nf-wingdi-createdibitmap)します。
 
 ##  <a name="drawalpha"></a>  CDrawingManager::DrawAlpha
 
@@ -585,7 +585,7 @@ BOOL HighlightRect(
 
 ### <a name="remarks"></a>Remarks
 
-場合*nPercentage*は 0 ~ 99、`HighlightRect`アルファ ブレンディング アルゴリズムを使用します。 アルファ ブレンドの詳細については、[アルファ ブレンドの直線と塗りつぶし](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills)を参照してください。 場合*nPercentage* -1 で、このメソッドは、既定の強調表示のレベルを使用します。 場合*nPercentage* 100 は、このメソッドは何も実行し、TRUE を返します。
+場合*nPercentage*は 0 ~ 99、`HighlightRect`アルファ ブレンディング アルゴリズムを使用します。 アルファ ブレンドの詳細については、次を参照してください。[アルファ ブレンドの直線と塗りつぶし](/dotnet/framework/winforms/advanced/alpha-blending-lines-and-fills)します。 場合*nPercentage* -1 で、このメソッドは、既定の強調表示のレベルを使用します。 場合*nPercentage* 100 は、このメソッドは何も実行し、TRUE を返します。
 
 メソッド パラメーターを使用して*nTolerance*を四角形の領域を強調表示するかどうかを判断します。 四角形は、アプリケーションの背景色の違いを強調表示して*clrTransparent*必要がありますより小さい*nTolerance*各色コンポーネント (赤、緑、および青) にします。
 
@@ -617,7 +617,7 @@ static COLORREF __stdcall HLStoRGB_ONE(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、[色](/windows/desktop/uxguide/vis-color)を参照してください。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
 
 このメソッドと`CDrawingManager::HLStoRGB_TWO`メソッドは、同じ操作を実行しますの異なる値が必要です、 *H*パラメーター。 このメソッドで*H*円に占める割合です。 `CDrawingManager::HLStoRGB_TWO`メソッド、 *H*は 0 ~ 360 両方を表現する赤の間の角度の値。 たとえば、 `HLStoRGB_ONE`、値は 0.25 の*H*と 90 の値と等価`HLStoRGB_TWO`します。
 
@@ -649,7 +649,7 @@ static COLORREF __stdcall HLStoRGB_TWO(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、[色](/windows/desktop/uxguide/vis-color)を参照してください。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
 
 このメソッドと[CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)メソッドは、同じ操作を実行しますの異なる値が必要です、 *H*パラメーター。 このメソッドで*H*は 0 ~ 360 両方を表現する赤の間の角度の値。 [CDrawingManager::HLStoRGB_ONE](#hlstorgb_one)メソッド、 *H*円に占める割合です。 たとえば、 `HLStoRGB_ONE`、値は 0.25 の*H*と 90 の値と等価`HLStoRGB_TWO`します。
 
@@ -679,7 +679,7 @@ static COLORREF __stdcall HSVtoRGB(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、[色](/windows/desktop/uxguide/vis-color)を参照してください。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
 
 ##  <a name="huetorgb"></a>  CDrawingManager::HuetoRGB
 
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in]ピクセルの初期の色。
 
-*%*<br/>
+*percent*<br/>
 [in]透明度の割合を表す 0 ~ 100 の数値。 100 の値は、初期の色が完全に透明であることを示します。
 
 *percentR*<br/>
@@ -864,7 +864,7 @@ static void __stdcall RGBtoHSL(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、[色](/windows/desktop/uxguide/vis-color)を参照してください。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
 
 返された値*H*は 0 ~ 1 が 0 と 1 の両方を表します赤の比率として表されます。 戻り値を*S*と*L* 0 から 1 までの数値します。
 
@@ -896,7 +896,7 @@ static void __stdcall RGBtoHSV(
 
 ### <a name="remarks"></a>Remarks
 
-色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、[色](/windows/desktop/uxguide/vis-color)を参照してください。
+色は、HSV (色合い、鮮やかさ、および値)、HSL (色相、彩度、および明るさ) または RGB (赤、緑、および青) として表現できます。 色の異なる表現の詳細については、次を参照してください。[色](/windows/desktop/uxguide/vis-color)します。
 
 返された値*H* 0 ~ 360 の数値は、0 から 360 の両方が red 示すためです。 戻り値は、 *S*と*V* 0 から 1 までの数値します。
 
@@ -927,10 +927,10 @@ static void __stdcall SetAlphaPixel(
 *x*<br/>
 [in]色にピクセルの水平座標。
 
-*y*<br/>
+*Y*<br/>
 [in]色にピクセルの垂直座標。
 
-*%*<br/>
+*percent*<br/>
 [in]透明度の割合。
 
 *iShadowSize*<br/>
@@ -971,7 +971,7 @@ static void __stdcall SetPixel(
 |*cx*|[in]ビットマップの幅の合計。|
 |*cy*|[in]ビットマップの高さの合計。|
 |*x*|[in]変更するビットマップのピクセルの x 座標。|
-|*y*|[in]変更するビットマップのピクセルの y 座標。|
+|*Y*|[in]変更するビットマップのピクセルの y 座標。|
 |*色*|[in]指定された座標で識別されるピクセルの新しい色。|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors

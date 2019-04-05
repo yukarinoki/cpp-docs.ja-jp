@@ -16,17 +16,17 @@ helpviewer_keywords:
 - data sources [MFC], creating
 ms.assetid: ac216d54-3ca5-4ce7-850d-cd1f6a90d4f1
 ms.openlocfilehash: 68ee5fbfec554df8865ca50c265ca2fa2f226a29
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58775245"
 ---
 # <a name="data-objects-and-data-sources-creation-and-destruction"></a>データ オブジェクトとデータ ソース:作成と破棄
 
 この記事で説明したよう[データ オブジェクトとデータ ソース (OLE)](../mfc/data-objects-and-data-sources-ole.md)、データ オブジェクトとデータ ソースは、データ転送の両側を表します。 ここでは、データ転送を正しく実行するために、これらのオブジェクトとソースをいつ作成し、いつ破棄するかについて説明します。
 
-- [データ オブジェクトを作成します。](#_core_creating_data_objects)
+- [データ オブジェクトの作成](#_core_creating_data_objects)
 
 - [データ オブジェクトの破棄](#_core_destroying_data_objects)
 
@@ -40,7 +40,7 @@ ms.locfileid: "58775245"
 
 データ オブジェクトが必要な状況は、一般的に 2 つあります。 1 つ目は、ドラッグ アンド ドロップを使用してアプリケーションにデータをドロップする場合です。 2 つ目は、[編集] メニューの [貼り付け] または [形式を選択して貼り付け] を選択する場合です。
 
-ドラッグ アンド ドロップの場合、データ オブジェクトを作成する必要はありません。 既存のデータ オブジェクトへのポインターが `OnDrop` 関数に渡されます。 このデータ オブジェクトは、ドラッグ アンド ドロップ操作の一環としてフレームワークによって作成され、さらにフレームワークによって破棄されます。 貼り付けが別の方法で行われる場合は、必ずしもこれが当てはまるとは限りません。 詳細については、[データ オブジェクトの破棄](#_core_destroying_data_objects)を参照してください。
+ドラッグ アンド ドロップの場合、データ オブジェクトを作成する必要はありません。 既存のデータ オブジェクトへのポインターが `OnDrop` 関数に渡されます。 このデータ オブジェクトは、ドラッグ アンド ドロップ操作の一環としてフレームワークによって作成され、さらにフレームワークによって破棄されます。 貼り付けが別の方法で行われる場合は、必ずしもこれが当てはまるとは限りません。 詳細については、次を参照してください。[データ オブジェクトの破棄](#_core_destroying_data_objects)します。
 
 アプリケーションで [貼り付け] または [形式を選択して貼り付け] 操作を実行する場合は、`COleDataObject` オブジェクトを作成し、その `AttachClipboard` メンバー関数を呼び出す必要があります。 これにより、データ オブジェクトはクリップボード上のデータと関連付けられます。 その後、貼り付け関数でこのデータ オブジェクトを使用できます。
 
@@ -70,7 +70,7 @@ ms.locfileid: "58775245"
 
 このシナリオは、MFC OLE サンプルで実装され[OCLIENT](../overview/visual-cpp-samples.md)と[HIERSVR](../overview/visual-cpp-samples.md)します。 `GetClipboardData` 関数と `OnGetClipboardData` 関数を除くすべてについて、各アプリケーションの `CView` から派生したクラスのソースを確認してください。 これらの 2 つの関数は、`COleClientItem` または `COleServerItem` から派生したクラスの実装に含まれています。 これらのサンプル プログラムでは、これらの概念を実装する方法の良い例を示しています。
 
-さらに、ドラッグ アンド ドロップ操作の既定の動作を変更する場合にも、`COleDataSource` オブジェクトの作成が必要になることがあります。 詳細については、、[ドラッグ アンド ドロップを参照してください。カスタマイズ](../mfc/drag-and-drop-customizing.md)記事。
+さらに、ドラッグ アンド ドロップ操作の既定の動作を変更する場合にも、`COleDataSource` オブジェクトの作成が必要になることがあります。 詳細については、次を参照してください。、[ドラッグ アンド ドロップします。カスタマイズ](../mfc/drag-and-drop-customizing.md)記事。
 
 ##  <a name="_core_destroying_data_sources"></a> データ ソースの破棄
 
@@ -80,7 +80,7 @@ ms.locfileid: "58775245"
 
 OLE にデータ ソースを渡していない場合は、通常の C++ オブジェクトの場合と同様、データ ソースを破棄します。
 
-詳細については、[ドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)、[クリップボード](../mfc/clipboard.md)、および[を操作するデータ オブジェクトとデータ ソース](../mfc/data-objects-and-data-sources-manipulation.md)を参照してください。
+詳細については、次を参照してください。[ドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)、[クリップボード](../mfc/clipboard.md)、および[を操作するデータ オブジェクトとデータ ソース](../mfc/data-objects-and-data-sources-manipulation.md)します。
 
 ## <a name="see-also"></a>関連項目
 

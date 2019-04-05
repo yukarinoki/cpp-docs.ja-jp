@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C3468
 ms.assetid: cfd320db-2f6e-4e0d-ba02-e79ece87e1e0
 ms.openlocfilehash: e3870fa21e2b4a932937edd49091980406a5ff0d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777233"
 ---
 # <a name="compiler-error-c3468"></a>コンパイラ エラー C3468
@@ -21,7 +21,7 @@ ms.locfileid: "58777233"
 
 アセンブリ内の型のみを転送することができます。
 
-詳細については、[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)を参照してください。
+詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

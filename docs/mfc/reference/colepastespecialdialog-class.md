@@ -29,10 +29,10 @@ helpviewer_keywords:
 - COlePasteSpecialDialog [MFC], m_ps
 ms.assetid: 0e82ef9a-9bbe-457e-8240-42c86a0534f7
 ms.openlocfilehash: 9c31ed6f82f4280206bf233999fac74981636db3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776909"
 ---
 # <a name="colepastespecialdialog-class"></a>COlePasteSpecialDialog クラス
@@ -60,7 +60,7 @@ class COlePasteSpecialDialog : public COleDialog
 |[COlePasteSpecialDialog::AddFormat](#addformat)|アプリケーションで貼り付けできる形式の一覧には、カスタム書式を追加します。|
 |[COlePasteSpecialDialog::AddLinkEntry](#addlinkentry)|サポートされているクリップボード形式の一覧に新しいエントリを追加します。|
 |[COlePasteSpecialDialog::AddStandardFormats](#addstandardformats)|CF_BITMAP、CF_DIB、CF_METAFILEPICT を追加し、必要に応じて CF_LINKSOURCE 形式の一覧にアプリケーションに貼り付けることができます。|
-|[COlePasteSpecialDialog::CreateItem](#createitem)|指定した形式を使用して、コンテナーのドキュメントで、項目を作成します。|
+|[静的オブジェクト](#createitem)|指定した形式を使用して、コンテナーのドキュメントで、項目を作成します。|
 |[COlePasteSpecialDialog::DoModal](#domodal)|貼り付け特別なダイアログ ボックスが表示されます。|
 |[COlePasteSpecialDialog::GetDrawAspect](#getdrawaspect)|かどうかのアイテムをアイコンとして描画するかどうかを指示します。|
 |[COlePasteSpecialDialog::GetIconicMetafile](#geticonicmetafile)|この項目の象徴的な形式に関連付けられているメタファイルを識別するハンドルを取得します。|
@@ -131,7 +131,7 @@ void AddFormat(
 *lpszResult*<br/>
 この形式をダイアログ ボックスで選択した場合、結果を説明する文字列。
 
-*flags*<br/>
+*フラグ*<br/>
 さまざまなリンクと埋め込みこの形式の使用可能なオプションです。 このフラグは、1 つのビットごとの組み合わせや、OLEUIPASTEFLAG で別の値の列挙型。
 
 *cf*<br/>
@@ -155,7 +155,7 @@ void AddFormat(
 
 詳細については、次を参照してください。、 [TYMED](/windows/desktop/api/objidl/ne-objidl-tagtymed)列挙型、および[FORMATETC](/windows/desktop/api/objidl/ns-objidl-tagformatetc) Windows SDK の構造体。
 
-詳細については、、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙を参照してください。
+詳細については、次を参照してください。、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙します。
 
 ##  <a name="addlinkentry"></a>  COlePasteSpecialDialog::AddLinkEntry
 
@@ -235,7 +235,7 @@ COlePasteSpecialDialog(
 
 この関数は、`COlePasteSpecialDialog`オブジェクト。 ダイアログ ボックスを表示するには[DoModal](#domodal)関数。
 
-詳細については、、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙を参照してください。
+詳細については、次を参照してください。、 [OLEUIPASTEFLAG](/windows/desktop/api/oledlg/ne-oledlg-tagoleuipasteflag) Windows SDK の種類を列挙します。
 
 ##  <a name="createitem"></a>  COlePasteSpecialDialog::CreateItem
 

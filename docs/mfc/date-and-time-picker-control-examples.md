@@ -4,16 +4,16 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - DateTimePicker control [MFC]
 ms.assetid: f03c3a22-7725-45eb-8f8e-dddb2d15c3ca
-ms.openlocfilehash: 3e71908cad36c0db46659e0bb4760f5682312a1b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9de28d5407da6e83ed3b7cd77cad3f636538a70f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271022"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780744"
 ---
 # <a name="date-and-time-picker-control-examples"></a>日時指定コントロールの例
 
-[CMNCTRL1](../visual-cpp-samples.md)サンプルでは、さまざまな属性、`CDateTimeCtrl`クラス。 別のページには、さまざまな属性を変更して、コントロールの基本的な機能をテストして、ユーザーが操作できる、日付と時刻の選択コントロールが含まれています。
+[CMNCTRL1](../overview/visual-cpp-samples.md)サンプルでは、さまざまな属性、`CDateTimeCtrl`クラス。 別のページには、さまざまな属性を変更して、コントロールの基本的な機能をテストして、ユーザーが操作できる、日付と時刻の選択コントロールが含まれています。
 
 ## <a name="see-also"></a>関連項目
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 - CTooltipManager [MFC], SetTooltipText
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
-ms.openlocfilehash: 7ca0c657872bb2a3c56c9406a88f8c674cb46938
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260635"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776506"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager クラス
 
@@ -41,7 +41,7 @@ class CTooltipManager : public CObject
 |----------|-----------------|
 |[CTooltipManager::CreateToolTip](#createtooltip)|指定された Windows コントロールの種類のツールヒント コントロールを作成します。|
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|ツールヒント コントロールを削除します。|
-|[:Settooltipparams](#settooltipparams)|指定された Windows コントロールの種類のツールヒント コントロールの外観をカスタマイズします。|
+|[CTooltipManager::SetTooltipParams](#settooltipparams)|指定された Windows コントロールの種類のツールヒント コントロールの外観をカスタマイズします。|
 |[CTooltipManager::SetTooltipText](#settooltiptext)|ツールヒント コントロールのテキストと説明を設定します。|
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||
 
@@ -156,7 +156,7 @@ void SetTooltipParams(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`SetTooltipParams`のメソッド、`CTooltipManager`クラス。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。
+次の例では、使用する方法、`SetTooltipParams`のメソッド、`CTooltipManager`クラス。 このコード スニペットは、「 [クライアント サンプルの描画](../../overview/visual-cpp-samples.md)」の一部です。
 
 [!code-cpp[NVC_MFC_DrawClient#11](../../mfc/reference/codesnippet/cpp/ctooltipmanager-class_1.cpp)]
 

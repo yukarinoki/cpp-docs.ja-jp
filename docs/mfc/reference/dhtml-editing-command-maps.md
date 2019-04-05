@@ -3,15 +3,15 @@ title: DHTML 編集コマンド マップ
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
 ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776155"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編集コマンド マップ
 
-DHTML 編集コマンド マップに次のマクロを使用できる[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-クラスを派生します。 使用の例は、[HTMLEdit サンプル](../../overview/visual-cpp-samples.md)を参照してください。
+DHTML 編集コマンド マップに次のマクロを使用できる[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)-クラスを派生します。 使用の例は、次を参照してください。 [HTMLEdit サンプル](../../overview/visual-cpp-samples.md)します。
 
 ### <a name="dhtml-editing-command-map-macros"></a>DHTML 編集コマンド マップ マクロ
 
@@ -35,7 +35,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>パラメーター
 
-*className*<br/>
+*クラス名*<br/>
 クラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -62,7 +62,7 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>パラメーター
 
-*className*<br/>
+*クラス名*<br/>
 DHTML 編集コマンド マップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)を含めると、 [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)マクロをそのクラス定義内で。
 
 ### <a name="remarks"></a>Remarks

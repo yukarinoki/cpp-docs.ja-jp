@@ -18,12 +18,12 @@ helpviewer_keywords:
 - CMFCFontInfo [MFC], m_strName
 - CMFCFontInfo [MFC], m_strScript
 ms.assetid: f88329b2-d74e-4921-9441-a3bb6536a049
-ms.openlocfilehash: 2377b7f6afdf78a0e8b7c8ac97a36a4920c06bb8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 930aceb4514195f0e844c35d326b52d9cd8d31fa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281188"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781329"
 ---
 # <a name="cmfcfontinfo-class"></a>CMFCFontInfo クラス
 
@@ -65,7 +65,7 @@ class CMFCFontInfo : public CObject
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメンバーを使用する方法、`CMFCFontInfo`クラス。 例では、取得する方法を示します、`CMFCFontInfo`オブジェクトから、 `CMFCRibbonFontComboBox`、およびそのローカル変数にアクセスする方法。 この例は、 [MSOffice 2007 デモのサンプル](../../visual-cpp-samples.md)します。
+次の例では、さまざまなメンバーを使用する方法、`CMFCFontInfo`クラス。 例では、取得する方法を示します、`CMFCFontInfo`オブジェクトから、 `CMFCRibbonFontComboBox`、およびそのローカル変数にアクセスする方法。 この例は、 [MSOffice 2007 デモのサンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_MSOffice2007Demo#6](../../mfc/reference/codesnippet/cpp/cmfcfontinfo-class_1.cpp)]
 

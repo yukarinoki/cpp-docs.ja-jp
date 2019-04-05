@@ -15,12 +15,12 @@ helpviewer_keywords:
 - custom events [MFC]
 - FireEvent method, adding custom events
 ms.assetid: c584d053-1e34-47aa-958e-37d3e9b85892
-ms.openlocfilehash: 626aae04e0b19dc951814e4741cad3729acd3b72
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 48c5ddbc8a3bcf6f74c251820e83cdebcef05bc9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263014"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781004"
 ---
 # <a name="mfc-activex-controls-adding-custom-events"></a>MFC ActiveX コントロール:カスタム イベントの追加
 
@@ -92,7 +92,7 @@ ms.locfileid: "57263014"
 
 1. クラス ビューの実装では、メッセージ ハンドラーのコードにジャンプする新しいハンドラー関数をダブルクリックします (します。ActiveX コントロールの CPP) ファイルです。
 
-次のコード サンプルは、`InCircle`コントロール ウィンドウ内でマウスの左ボタンがクリックされるたびに機能します。 このサンプルは、WM_LBUTTONDOWN ハンドラー関数にあります`OnLButtonDown`で、[円サンプル](../visual-cpp-samples.md)抽象です。
+次のコード サンプルは、`InCircle`コントロール ウィンドウ内でマウスの左ボタンがクリックされるたびに機能します。 このサンプルは、WM_LBUTTONDOWN ハンドラー関数にあります`OnLButtonDown`で、[円サンプル](../overview/visual-cpp-samples.md)抽象です。
 
 [!code-cpp[NVC_MFC_AxUI#10](../mfc/codesnippet/cpp/mfc-activex-controls-adding-custom-events_4.cpp)]
 

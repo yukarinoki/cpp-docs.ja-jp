@@ -75,10 +75,10 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
 ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776636"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl クラス
@@ -705,7 +705,7 @@ void SetThumbLength(int nLength);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*nLength*|[in]ピクセル単位で、スライダーの長さ。|
+|*されて*|[in]ピクセル単位で、スライダーの長さ。|
 
 ### <a name="remarks"></a>Remarks
 
@@ -759,7 +759,7 @@ void SetTicFreq(int nFreq);
 
 たとえば、頻度が 2 に設定されている場合は、スライダーの範囲内の他のすべての増分用に目盛りマークが表示されます。 頻度が 1 の既定の設定 (つまり、範囲内のすべての増分に関連付けられている目盛り)。
 
-この関数を使用して、TBS_AUTOTICKS スタイル コントロールを作成する必要があります。 詳細については、[CSliderCtrl::Create](#create)を参照してください。
+この関数を使用して、TBS_AUTOTICKS スタイル コントロールを作成する必要があります。 詳細については、次を参照してください。 [CSliderCtrl::Create](#create)します。
 
 ##  <a name="settipside"></a>  CSliderCtrl::SetTipSide
 

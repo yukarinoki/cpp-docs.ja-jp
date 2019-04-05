@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2978
 ms.assetid: 5e7bee82-e266-4ccd-ad2e-ee89606ec5bf
-ms.openlocfilehash: 25798e793bec7d09ea1f307ec1e2d9a63b9dbe27
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: cf682bf14246754cca74a43dffc39761ff6125c1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50428107"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780302"
 ---
 # <a name="compiler-error-c2978"></a>コンパイラ エラー C2978
 
 構文エラー: 'keyword1' または 'keyword2' が必要ですが、型 'keyword3' が見つかりました。非型パラメーターはジェネリックではサポートされていません
 
-ジェネリック クラスの宣言が正しくありません。 参照してください[ジェネリック](../../windows/generics-cpp-component-extensions.md)詳細についてはします。
+ジェネリック クラスの宣言が正しくありません。 参照してください[ジェネリック](../../extensions/generics-cpp-component-extensions.md)詳細についてはします。
 
 ## <a name="example"></a>例
 

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - COleDropTarget [MFC], Revoke
 ms.assetid: a58c9a48-6a93-4357-b078-4594df258311
 ms.openlocfilehash: 9a1633ed48c763b986f3421c33589a05f8bba126
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781641"
 ---
 # <a name="coledroptarget-class"></a>COleDropTarget クラス
@@ -114,7 +114,7 @@ virtual DROPEFFECT OnDragEnter(
 *pDataObject*<br/>
 ドロップ可能なデータを含むデータ オブジェクトへのポインター。
 
-*dwKeyState*<br/>
+*ドロップ*<br/>
 修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
 
 *ポイント*<br/>
@@ -179,7 +179,7 @@ virtual DROPEFFECT OnDragOver(
 *pDataObject*<br/>
 削除するデータを含むデータ オブジェクトへのポインター。
 
-*dwKeyState*<br/>
+*ドロップ*<br/>
 修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
 
 *ポイント*<br/>
@@ -225,7 +225,7 @@ virtual DROPEFFECT OnDragScroll(
 *我が物*<br/>
 カーソルが上に現在のウィンドウへのポインター。
 
-*dwKeyState*<br/>
+*ドロップ*<br/>
 修飾子キーの状態が含まれています。 これは、次の任意の数の組み合わせです。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。
 
 *ポイント*<br/>
@@ -317,7 +317,7 @@ virtual DROPEFFECT OnDropEx(
 *dropDefault*<br/>
 現在のキーの状態に基づいて既定のドロップ操作に対して、ユーザーが選択した結果。 せずになります。 ドロップ効果は、「解説」で説明します。
 
-*dropList*<br/>
+*ドロップダウン リスト*<br/>
 ドロップ ソースがサポートしているドロップ効果の一覧。 ビットごとの OR を使用して、ドロップ効果の値を結合することができます (**&#124;**) 操作。 ドロップ効果は、「解説」で説明します。
 
 *ポイント*<br/>

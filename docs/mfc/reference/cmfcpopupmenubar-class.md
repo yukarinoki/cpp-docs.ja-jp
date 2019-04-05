@@ -46,12 +46,12 @@ helpviewer_keywords:
 - CMFCPopupMenuBar [MFC], StartPopupMenuTimer
 - CMFCPopupMenuBar [MFC], m_bDisableSideBarInXPMode
 ms.assetid: 4c93c459-7f70-4240-8c63-280bb811e374
-ms.openlocfilehash: 14f1636917244efe4decc0108579f81fbad2f457
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: acb1e2be7d40e5e0c569fffcc92c57c750be8f91
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300779"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776779"
 ---
 # <a name="cmfcpopupmenubar-class"></a>CMFCPopupMenuBar クラス
 
@@ -101,7 +101,7 @@ class CMFCPopupMenuBar : public CMFCToolBar
 
 ## <a name="example"></a>例
 
-次の例では、初期化する方法、`CMFCPopupMenuBar`オブジェクトから、`CMFCPopupMenu`オブジェクト。 このコード スニペットは、「 [クライアント サンプルの描画](../../visual-cpp-samples.md)」の一部です。
+次の例では、初期化する方法、`CMFCPopupMenuBar`オブジェクトから、`CMFCPopupMenu`オブジェクト。 このコード スニペットは、「 [クライアント サンプルの描画](../../overview/visual-cpp-samples.md)」の一部です。
 
 [!code-cpp[NVC_MFC_DrawClient#7](../../mfc/reference/codesnippet/cpp/cmfcpopupmenubar-class_1.cpp)]
 

@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C3388
 ms.assetid: 34336545-ed13-4d81-ab5f-f869799fe4c2
-ms.openlocfilehash: 1f6e51542cc852543d648f9f94a964ae0cab3b30
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3b56aae115b1a1721f3f8a8688e36b25edc7f33f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50512681"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780029"
 ---
 # <a name="compiler-error-c3388"></a>コンパイラ エラー C3388
 
 'type': 制約として使用できません。解析を続行するために 'ref class' を使用します
 
-ジェネリック型で制約が指定されましたが、正しく指定されませんでした。 参照してください[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../windows/constraints-on-generic-type-parameters-cpp-cli.md)詳細についてはします。
+ジェネリック型で制約が指定されましたが、正しく指定されませんでした。 参照してください[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)詳細についてはします。
 
 ## <a name="example"></a>例
 

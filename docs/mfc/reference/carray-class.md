@@ -42,12 +42,12 @@ helpviewer_keywords:
 - CArray [MFC], SetAtGrow
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
-ms.openlocfilehash: 342eea1d5bcf8adfe9a9ff0e8d915c9155b413ca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266134"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779847"
 ---
 # <a name="carray-class"></a>CArray クラス
 
@@ -88,7 +88,7 @@ class CArray : public CObject
 |[CArray::GetAt](#getat)|指定されたインデックス位置にある値を返します。|
 |[CArray::GetCount](#getcount)|この配列内の要素の数を取得します。|
 |[CArray::GetData](#getdata)|配列内の要素へのアクセスを許可します。 NULL にすることができます。|
-|[CArray::GetSize](#getsize)|この配列内の要素の数を取得します。|
+|[呼び出す](#getsize)|この配列内の要素の数を取得します。|
 |[CArray::GetUpperBound](#getupperbound)|有効な最大のインデックスを返します。|
 |[CArray::InsertAt](#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|
 |[CArray::IsEmpty](#isempty)|配列が空かどうかを判断します。|
@@ -102,7 +102,7 @@ class CArray : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[operator&#91;&#93;](#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
+|[演算子&#91;&#93;](#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -114,8 +114,7 @@ class CArray : public CObject
 C 言語の配列では、アクセスする時間と同様、`CArray`が定数であり、配列のサイズに依存しないインデックス付けされた要素。
 
 > [!TIP]
->  使用して配列を使用する前に[SetSize](#setsize)そのサイズを設定し、メモリを割り当てます。 
-  `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
+>  使用して配列を使用する前に[SetSize](#setsize)そのサイズを設定し、メモリを割り当てます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
 
 配列内の個々 の要素のダンプが必要な場合は、深さを設定する必要があります、 [CDumpContext](../../mfc/reference/cdumpcontext-class.md)を 1 つ以上のオブジェクト。
 
@@ -621,8 +620,7 @@ void SetSize(
 
 新しいサイズが元のサイズより小さい場合は、配列が切り捨てられるし、すべての未使用メモリは解放されます。
 
-この関数を使用すると、配列を使用して開始する前に、配列のサイズを設定できます。 
-  `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
+この関数を使用すると、配列を使用して開始する前に、配列のサイズを設定できます。 `SetSize` を使用しない場合、配列に要素を追加すると、配列の再割り当てとコピーが頻繁に発生します。 頻繁な再割り当てとコピーは非効率であり、メモリが断片化される可能性があります。
 
 *NGrowBy*パラメーターは、配列が増加しているときに内部メモリの割り当てに影響します。 使用には影響せず、配列のサイズによって報告された[GetSize](#getsize)と[です](#getupperbound)します。 既定値を使用する場合、MFC はメモリの断片化を避けるため、ほとんどの場合の効率を最適化するように計算でメモリを割り当てます。
 
@@ -632,7 +630,7 @@ void SetSize(
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの収集](../../visual-cpp-samples.md)<br/>
+[MFC サンプルの収集](../../overview/visual-cpp-samples.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CObArray クラス](../../mfc/reference/cobarray-class.md)<br/>

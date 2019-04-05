@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CUserToolsManager [MFC], SetFilter
 ms.assetid: bdfa37ae-efca-4616-abb5-9d0dcd2d335b
 ms.openlocfilehash: 857e86184e1b7ea399787520e9c4701547185133
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777091"
 ---
 # <a name="cusertoolsmanager-class"></a>CUserToolsManager クラス
@@ -178,7 +178,7 @@ CUserToolsManager(
 
 ### <a name="remarks"></a>Remarks
 
-このコンス トラクターを呼び出さないでください。 代わりに、 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)を有効にするユーザーのツール、および呼び出し[CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager)へのポインターを取得する、`CUserToolsManager`します。 詳細については、[ユーザー定義のツール](../../mfc/user-defined-tools.md)を参照してください。
+このコンス トラクターを呼び出さないでください。 代わりに、 [CWinAppEx::EnableUserTools](../../mfc/reference/cwinappex-class.md#enableusertools)を有効にするユーザーのツール、および呼び出し[CWinAppEx::GetUserToolsManager](../../mfc/reference/cwinappex-class.md#getusertoolsmanager)へのポインターを取得する、`CUserToolsManager`します。 詳細については、次を参照してください。[ユーザー定義のツール](../../mfc/user-defined-tools.md)します。
 
 ##  <a name="findtool"></a>  CUserToolsManager::FindTool
 

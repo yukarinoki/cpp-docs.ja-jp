@@ -7,12 +7,12 @@ helpviewer_keywords:
 - string conversion [C++]
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
-ms.openlocfilehash: d943bb612d9027368bab4832f369db1d5f6165cc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57743906"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778326"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>方法: さまざまな文字列型間の変換します。
 
@@ -24,8 +24,7 @@ ms.locfileid: "57743906"
 
 ### <a name="description"></a>説明
 
-このサンプルでは、`char *` から、上に示したそれ以外の文字列型に変換する方法について説明します。 
-  `char *` 文字列 (C スタイルの文字列とも呼ばれます) では、文字列の末尾を表すために null 文字を使用します。 通常、C スタイルの文字列では 1 文字あたり 1 バイト必要ですが、2 バイト使用することもできます。 次のサンプルでは、`char *` 文字列が Unicode 文字列を変換した結果得られた文字列データであるために、マルチバイト文字列を表している場合があります。 1 バイト文字関数およびマルチバイト文字関数 (`MBCS`) では、`char *` 文字列を操作できます。
+このサンプルでは、`char *` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `char *` 文字列 (C スタイルの文字列とも呼ばれます) では、文字列の末尾を表すために null 文字を使用します。 通常、C スタイルの文字列では 1 文字あたり 1 バイト必要ですが、2 バイト使用することもできます。 次のサンプルでは、`char *` 文字列が Unicode 文字列を変換した結果得られた文字列データであるために、マルチバイト文字列を表している場合があります。 1 バイト文字関数およびマルチバイト文字関数 (`MBCS`) では、`char *` 文字列を操作できます。
 
 ### <a name="code"></a>コード
 
@@ -126,8 +125,7 @@ Hello, World! (System::String)
 
 ### <a name="description"></a>説明
 
-このサンプルでは、`wchar_t *` から、上に示したそれ以外の文字列型に変換する方法について説明します。 
-  `wchar_t *` などの一部の文字列型では、ワイド文字形式が実装されます。 マルチバイト形式とワイド文字形式の間で文字列を変換する場合は、`mbstowcs_s` などの単一の関数呼び出しか、`CStringA` などのクラスのコンストラクター呼び出しを使用できます。
+このサンプルでは、`wchar_t *` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `wchar_t *` などの一部の文字列型では、ワイド文字形式が実装されます。 マルチバイト形式とワイド文字形式の間で文字列を変換する場合は、`mbstowcs_s` などの単一の関数呼び出しか、`CStringA` などのクラスのコンストラクター呼び出しを使用できます。
 
 ### <a name="code"></a>コード
 
@@ -251,8 +249,7 @@ Hello, World! (System::String)
 
 ### <a name="description"></a>説明
 
-このサンプルでは、`_bstr_t` から、上に示したそれ以外の文字列型に変換する方法について説明します。 
-  `_bstr_t` オブジェクトは、ワイド文字 `BSTR` 文字列をカプセル化する方法です。 BSTR 文字列には長さの値があり、文字列の末尾を表すために null 文字が使用されませんが、変換後の文字列型では末尾に null 文字が必要となる場合もあります。
+このサンプルでは、`_bstr_t` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `_bstr_t` オブジェクトは、ワイド文字 `BSTR` 文字列をカプセル化する方法です。 BSTR 文字列には長さの値があり、文字列の末尾を表すために null 文字が使用されませんが、変換後の文字列型では末尾に null 文字が必要となる場合もあります。
 
 ### <a name="code"></a>コード
 
@@ -462,11 +459,9 @@ Hello, World! (System::String)
 
 ### <a name="description"></a>説明
 
-このサンプルでは、`CString` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `CString` は、TCHAR データ型に基づいています。この TCHAR データ型は、シンボル `_UNICODE` が定義されているかどうかに依存します。 
-  `_UNICODE` が定義されていない場合、`TCHAR` は char 型として定義され、`CString` にマルチバイト文字列が格納されます。`_UNICODE` が定義されている場合、`TCHAR` は `wchar_t` 型として定義され、`CString` にワイド文字列が格納されます。
+このサンプルでは、`CString` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `CString` かどうかに依存する TCHAR データ型に基づくが、シンボル`_UNICODE`が定義されています。 `_UNICODE` が定義されていない場合、`TCHAR` は char 型として定義され、`CString` にマルチバイト文字列が格納されます。`_UNICODE` が定義されている場合、`TCHAR` は `wchar_t` 型として定義され、`CString` にワイド文字列が格納されます。
 
-`CStringA` は、`CString` のマルチバイト文字列バージョンであり、`CStringW` はワイド文字列バージョンです。 
-  `CStringA` および `CStringW` のどちらでも、コンパイル方法の決定に `_UNICODE` は使用されません。 このサンプルでは `CStringA` および `CStringW` を使用して、バッファー サイズ割り当てと出力処理のわずかな違いを明確化しています。
+`CStringA` マルチバイト文字列バージョンの`CString`、`CStringW`ワイド文字列バージョンします。 `CStringA` および `CStringW` のどちらでも、コンパイル方法の決定に `_UNICODE` は使用されません。 `CStringA` `CStringW`バッファー サイズの割り当てに若干の違いを明確にして、出力の処理にこの例では使用できます。
 
 ### <a name="code"></a>コード
 
@@ -809,12 +804,12 @@ Hello, World! (basic_string)
 
 [ATL と MFC 文字列変換マクロ](../atl/reference/string-conversion-macros.md)<br/>
 [C スタイルの文字列に関連する CString の操作方法](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[方法: 標準文字列を System::String に変換する](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[方法: System::String を標準文字列に変換する](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[方法: System::string を標準文字列に変換します。](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[方法: System::string を標準文字列に変換します。](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
 [方法: System::string を wchar_t * または char に変換します。\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [CComBSTR を使用したプログラミング](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>
 [wcstombs_s、_wcstombs_s_l](../c-runtime-library/reference/wcstombs-s-wcstombs-s-l.md)<br/>
 [strcpy_s、wcscpy_s、_mbscpy_s](../c-runtime-library/reference/strcpy-s-wcscpy-s-mbscpy-s.md)<br/>
 [strcat_s、wcscat_s、_mbscat_s](../c-runtime-library/reference/strcat-s-wcscat-s-mbscat-s.md)<br/>
-[pin_ptr (C++/CLI)](../windows/pin-ptr-cpp-cli.md)
+[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)

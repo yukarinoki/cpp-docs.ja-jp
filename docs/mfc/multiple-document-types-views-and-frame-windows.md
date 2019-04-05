@@ -15,12 +15,12 @@ helpviewer_keywords:
 - multiple frame windows [MFC]
 - splitter windows [MFC], static
 ms.assetid: c6b9e4e0-7c9c-45f1-a804-aeac39c9a128
-ms.openlocfilehash: e64ea6701c5e3ec594c705e8995b5ba605ab0b79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 154fc67dc35d5e5633c72c27100da9be56c0c68c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301195"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779678"
 ---
 # <a name="multiple-document-types-views-and-frame-windows"></a>複数のドキュメント タイプ、ビュー、フレーム ウィンドウ
 
@@ -28,11 +28,11 @@ ms.locfileid: "57301195"
 
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 
-- [Multiple document types](#_core_multiple_document_types)
+- [複数のドキュメント タイプ](#_core_multiple_document_types)
 
-- [Multiple views](#_core_multiple_views)
+- [複数のビュー](#_core_multiple_views)
 
-- [Multiple frame windows](#_core_multiple_frame_windows)
+- [複数のフレーム ウィンドウ](#_core_multiple_frame_windows)
 
 - [分割ウィンドウ](#_core_splitter_windows)
 
@@ -67,9 +67,9 @@ MFC は、1 つのドキュメントに対して複数のビューを必要と�
 ![複数&#45;ユーザー インターフェイスを表示](../mfc/media/vc37a71.gif "複数&#45;ユーザー インターフェイスを表示") <br/>
 マルチ ビューによるユーザー インターフェイス
 
-「 [分割ウィンドウ](../mfc/reference/csplitterwnd-class.md)」で説明されているように、フレームワークでは、[新規ウィンドウ] コマンドの実装と [CSplitterWnd](#_core_splitter_windows)クラスの提供により、これらのモデルを用意します。 その他のモデルを実装するには、これを開始点として使用できます。 ビュー、フレーム ウィンドウ、分割ウィンドウのさまざまな構成を示すサンプル プログラムについては、「 [MFC サンプル](../visual-cpp-samples.md)」を参照してください。
+「 [分割ウィンドウ](../mfc/reference/csplitterwnd-class.md)」で説明されているように、フレームワークでは、[新規ウィンドウ] コマンドの実装と [CSplitterWnd](#_core_splitter_windows)クラスの提供により、これらのモデルを用意します。 その他のモデルを実装するには、これを開始点として使用できます。 ビュー、フレーム ウィンドウ、分割ウィンドウのさまざまな構成を示すサンプル プログラムについては、「 [MFC サンプル](../overview/visual-cpp-samples.md)」を参照してください。
 
-`UpdateAllViews`の詳細については、 [MFC リファレンス](../mfc/reference/cview-class.md) の *CView* に関するトピックと、 [SCRIBBLE サンプル](../visual-cpp-samples.md)を参照してください。
+`UpdateAllViews`の詳細については、 [MFC リファレンス](../mfc/reference/cview-class.md) の *CView* に関するトピックと、 [SCRIBBLE サンプル](../overview/visual-cpp-samples.md)を参照してください。
 
 ##  <a name="_core_multiple_frame_windows"></a> Multiple Frame Windows
 
@@ -79,11 +79,11 @@ MDI アプリケーション用の [ウィンドウ] メニューの [新規ウ�
 
 分割ウィンドウでは、ウィンドウを 2 つ以上のスクロール可能なペインに分割できます。 ウィンドウ フレームのスクロール バーの横にある分割コントロール ("分割ボックス") を使用すると、ペインの相対的なサイズを調整できます。 各ペインは、同じドキュメントのビューです。 「動的」スプリッターは、マルチ ビューによるユーザー インターフェイスの図の b 部分で示すように、ビューは、同じクラスは。 "静的な" 分割ウィンドウでは、各ビューのクラスが異なっていてもかまいません。 どちらの分割ウィンドウも、 [CSplitterWnd](../mfc/reference/csplitterwnd-class.md)クラスでサポートされています。
 
-動的な分割ウィンドウは、同じクラスの複数のビューで構成され、ウィンドウを複数のペインに分割できるため、各ペインをスクロールすることで、同じドキュメントの別の部分を表示できます。 また、ウィンドウの分割を解除して、追加したビューを削除することもできます。 [SCRIBBLE サンプル](../visual-cpp-samples.md) で追加した分割ウィンドウは 1 つの例です。 このトピックでは、動的分割ウィンドウを作成する方法について説明しています。 マルチ ビューによるユーザー インターフェイスの図の b の一部は、動的分割ウィンドウに表示されます。
+動的な分割ウィンドウは、同じクラスの複数のビューで構成され、ウィンドウを複数のペインに分割できるため、各ペインをスクロールすることで、同じドキュメントの別の部分を表示できます。 また、ウィンドウの分割を解除して、追加したビューを削除することもできます。 [SCRIBBLE サンプル](../overview/visual-cpp-samples.md) で追加した分割ウィンドウは 1 つの例です。 このトピックでは、動的分割ウィンドウを作成する方法について説明しています。 マルチ ビューによるユーザー インターフェイスの図の b の一部は、動的分割ウィンドウに表示されます。
 
 異なるクラスのビューを含む静的分割ウィンドウを作成するには、まず、ウィンドウを目的別のペインに分割します。 たとえば、Visual C++ ビットマップ エディターでは、イメージ ウィンドウに 2 つのペインが横に並んで表示されます。 左ペインには、等倍のビットマップ イメージが表示されます。 右ペインには、同じビットマップの拡大イメージまたは縮小イメージが表示されます。 各ペインは "分割バー" で分けられており、このバーをドラッグすることで、ペインの相対的サイズを変更できます。 マルチ ビューによるユーザー インターフェイスの図の c 部分は、静的分割ウィンドウに表示されます。
 
-詳細については、 [MFC リファレンス](../mfc/reference/csplitterwnd-class.md) の *CSplitterWnd* に関するトピックと、 [MFC サンプル](../visual-cpp-samples.md)を参照してください。
+詳細については、 [MFC リファレンス](../mfc/reference/csplitterwnd-class.md) の *CSplitterWnd* に関するトピックと、 [MFC サンプル](../overview/visual-cpp-samples.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

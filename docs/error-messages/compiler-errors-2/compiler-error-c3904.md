@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3904
 ms.assetid: 08297605-e4f2-4c6c-b637-011f1fd40631
-ms.openlocfilehash: 8c7f4a2861825a35d676328b5e283a5e4087d85b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 4675bf95012c8e6662d7dba281c38ed2d684c448
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50519783"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779873"
 ---
 # <a name="compiler-error-c3904"></a>コンパイラ エラー C3904
 
@@ -23,7 +23,7 @@ ms.locfileid: "50519783"
 
 - パラメーターの数、`set`メソッドは、いずれかを指定する必要があります、プロパティの次元数よりも詳細です。
 
-詳細については、「 [property](../../windows/property-cpp-component-extensions.md)」を参照してください。
+詳細については、「 [property](../../extensions/property-cpp-component-extensions.md)」を参照してください。
 
 ## <a name="example"></a>例
 

@@ -140,12 +140,12 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], PreMultiplyAlpha
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
-ms.openlocfilehash: bbd2a2d301646b4d3897d9fe4990bdfd1e48325b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303345"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776415"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages クラス
 
@@ -252,7 +252,7 @@ class CMFCToolBarImages : public CObject
 
 ## <a name="example"></a>例
 
-次の例は、構成する方法を示します、`CMFCToolBarImages`オブジェクトでさまざまなメソッドを使用して、`CMFCToolBarImages`クラス。 この例では、ツール バー イメージのサイズを設定し、イメージの読み込み、イメージの透明色を設定する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例は、構成する方法を示します、`CMFCToolBarImages`オブジェクトでさまざまなメソッドを使用して、`CMFCToolBarImages`クラス。 この例では、ツール バー イメージのサイズを設定し、イメージの読み込み、イメージの透明色を設定する方法を示します。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#32](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_1.h)]
 [!code-cpp[NVC_MFC_VisualStudioDemo#33](../../mfc/codesnippet/cpp/cmfctoolbarimages-class_2.cpp)]
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in]TRUE の場合、`CMFCToolBarImages`オブジェクトは、新しいイメージの色深度 (1 ピクセルあたりのビット) を使用FALSE の場合、`CMFCToolbarImages`オブジェクトが現在の色深度を保持します。
 
-*imageList*<br/>
+*イメージ リスト*<br/>
 [in]参照を`CMFCToolbarImages`を追加するイメージを含むオブジェクト。
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>パラメーター
 
-*imageList*<br/>
+*イメージ リスト*<br/>
 [in]ツール バー イメージのソースとして使用するイメージ リスト。
 
 ### <a name="return-value"></a>戻り値
@@ -473,7 +473,7 @@ BOOL Draw(
 *x*<br/>
 [in]イメージが描画される四角形の左辺の X 座標。
 
-*y*<br/>
+*Y*<br/>
 [in]イメージが描画される四角形の上辺の Y 座標。
 
 *iImageIndex*<br/>

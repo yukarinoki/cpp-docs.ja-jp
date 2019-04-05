@@ -8,10 +8,10 @@ helpviewer_keywords:
 - splitter windows [MFC], about splitter windows
 ms.assetid: 2c57ce99-2a3c-4eff-9cea-baccb13af075
 ms.openlocfilehash: 6c2f619d9cd619ca598c66ca657faa1b9dccaaa2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781732"
 ---
 # <a name="tn029-splitter-windows"></a>TN029:分割ウィンドウ
@@ -48,7 +48,7 @@ A`CSplitterWnd`ウィンドウの分割の 2 つの異なるスタイルをサ�
 
 分割ウィンドウは、直接または間接的に MFC のサンプル プログラムの多く使用します。 MFC 標準サンプル[VIEWEX](../overview/visual-cpp-samples.md)静的分割ウィンドウ、分割ウィンドウでスプリッターを配置する方法などのいくつかの使用を示しています。
 
-複数ドキュメント インターフェイス (MDI) 子フレーム ウィンドウ クラスを含む分割ウィンドウを新しく作成するのに ClassWizard を使用することもできます。 分割ウィンドウの詳細については、[複数のドキュメント タイプ、ビュー、およびフレーム Windows](../mfc/multiple-document-types-views-and-frame-windows.md)を参照してください。
+複数ドキュメント インターフェイス (MDI) 子フレーム ウィンドウ クラスを含む分割ウィンドウを新しく作成するのに ClassWizard を使用することもできます。 分割ウィンドウの詳細については、次を参照してください。[複数のドキュメント タイプ、ビュー、およびフレーム Windows](../mfc/multiple-document-types-views-and-frame-windows.md)します。
 
 ## <a name="terminology-used-by-implementation"></a>実装で使用される用語集
 

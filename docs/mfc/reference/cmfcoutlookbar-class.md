@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
 ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58775258"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar クラス
@@ -274,7 +274,7 @@ virtual BOOL Create(
 [in]コントロールの ID を指定します その他のコントロール、アプリケーションで使用される Id とは異なる名前にする必要があります。
 
 *dwStyle*<br/>
-[in]目的のコントロール バーのスタイルを指定します。 使用可能な値は、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。
+[in]目的のコントロール バーのスタイルを指定します。 使用可能な値は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
 
 *dwControlBarStyle*<br/>
 [in]特殊なライブラリで定義されたスタイルを指定します。
@@ -377,7 +377,7 @@ virtual BOOL FloatTab(
 [in]Float 型に、タブの 0 から始まるインデックス。
 
 *dockMethod*<br/>
-[in]使用して、ペインをフローティングするメソッドを指定します。  詳細については、[cbasetabbedpane::floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)を参照してください。
+[in]使用して、ペインをフローティングするメソッドを指定します。  詳細については、次を参照してください。 [cbasetabbedpane::floattab](../../mfc/reference/cbasetabbedpane-class.md#floattab)します。
 
 *bHide*<br/>
 [in]フローティングする前に、ウィンドウを非表示にする場合は TRUEそれ以外の場合、FALSE です。 このメソッドの基底クラスのバージョンとは異なりこのパラメーターに既定値はありません。
@@ -458,12 +458,12 @@ virtual void OnAfterAnimation(int nPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*nPage*<br/>
+*n ページ レイアウト*<br/>
 [in]アクティブになっているタブ ページの 0 から始まるインデックス。
 
 ### <a name="remarks"></a>Remarks
 
-アクティブなタブの設定の視覚効果は、アニメーションを有効にするかどうかによって異なります。 詳細については、[CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation)を参照してください。
+アクティブなタブの設定の視覚効果は、アニメーションを有効にするかどうかによって異なります。 詳細については、次を参照してください。 [CMFCOutlookBarTabCtrl::EnableAnimation](../../mfc/reference/cmfcoutlookbartabctrl-class.md#enableanimation)します。
 
 ##  <a name="onbeforeanimation"></a>  CMFCOutlookBar::OnBeforeAnimation
 
@@ -475,7 +475,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*nPage*<br/>
+*n ページ レイアウト*<br/>
 [in]アクティブ設定しようとしているタブ ページの 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -578,5 +578,5 @@ void SetMode2003(BOOL bMode2003=TRUE);
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CBaseTabbedPane クラス](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBarTabCtrl クラス](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 [CMFCOutlookBarPane クラス](../../mfc/reference/cmfcoutlookbarpane-class.md)

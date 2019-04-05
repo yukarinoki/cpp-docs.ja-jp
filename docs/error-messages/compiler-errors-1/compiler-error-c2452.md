@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C2452
 ms.assetid: a4ec7642-6660-4c7a-9866-853d1cc67daf
-ms.openlocfilehash: 9b9f2c41da1eb36aceece7f14ad5c33b38404bb3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3e2d583efa2b634cf49d8588fa398bd81f24c607
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523702"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781108"
 ---
 # <a name="compiler-error-c2452"></a>コンパイラ エラー C2452
 
 'type': safe_cast に対する無効なソースの種類
 
-ソース型は[safe_cast](../../windows/safe-cast-cpp-component-extensions.md)が無効です。  たとえば、すべての型を`safe_cast`操作は CLR 型である必要があります。
+ソース型は[safe_cast](../../extensions/safe-cast-cpp-component-extensions.md)が無効です。  たとえば、すべての型を`safe_cast`操作は CLR 型である必要があります。
 
 次の例では、C2452 が生成されます。
 

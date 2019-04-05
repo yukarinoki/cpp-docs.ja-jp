@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - C4486
 ms.assetid: 2c0c59e3-d025-4d97-8da2-fa27df1402fc
-ms.openlocfilehash: b6e1fc7001908202efc2fb0ef3653153c007eac0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 402d5eefde6c2dfd5693e53c27edb00d1ac2e56c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50456031"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780211"
 ---
 # <a name="compiler-warning-level-1-c4486"></a>コンパイラの警告 (レベル 1) C4486
 
 'function': ref クラスまたは値クラスのプライベート仮想メソッドは、'シールド' マークする必要があります
 
-マークする必要がありますので、マネージ クラスまたは構造体のプライベート仮想メンバー関数はアクセスできないか、またはオーバーライドして、[シール](../../windows/sealed-cpp-component-extensions.md)します。
+マークする必要がありますので、マネージ クラスまたは構造体のプライベート仮想メンバー関数はアクセスできないか、またはオーバーライドして、[シール](../../extensions/sealed-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 
