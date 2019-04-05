@@ -39,9 +39,7 @@ ms.locfileid: "57749374"
 
 ## <a name="enumerate"></a> ディレクトリ内のファイルを列挙します。
 
-ディレクトリ内のファイル リストを取得する方法を次のコード例に示します。 また、サブディレクトリも列挙します。 
-  <xref:System.IO.Directory.GetFiles%2A>
-  <xref:System.IO.Directory.GetFiles%2A> メソッドと <xref:System.IO.Directory.GetDirectories%2A> メソッドを使用して、C:\Windows ディレクトリの内容を表示する方法を次のコード例に示します。
+ディレクトリ内のファイル リストを取得する方法を次のコード例に示します。 また、サブディレクトリも列挙します。 <xref:System.IO.Directory.GetFiles%2A><xref:System.IO.Directory.GetFiles%2A> メソッドと <xref:System.IO.Directory.GetDirectories%2A> メソッドを使用して、C:\Windows ディレクトリの内容を表示する方法を次のコード例に示します。
 
 ### <a name="example"></a>例
 
@@ -177,8 +175,7 @@ int main()
 
 ## <a name="read_text"></a> テキスト ファイルを読み込む
 
-
-  <xref:System.IO.StreamReader> クラスを使用して、テキスト ファイルを一度に 1 行ずつ開いて読み取る方法を次の例に示します。このクラスは、<xref:System.IO?displayProperty=fullName> 名前空間で定義されています。 このクラスのインスタンスを使用してテキスト ファイルを開いてから、<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> メソッドを使用して各行を取得します。
+<xref:System.IO.StreamReader> クラスを使用して、テキスト ファイルを一度に 1 行ずつ開いて読み取る方法を次の例に示します。このクラスは、<xref:System.IO?displayProperty=fullName> 名前空間で定義されています。 このクラスのインスタンスを使用してテキスト ファイルを開いてから、<xref:System.IO.StreamReader.ReadLine%2A?displayProperty=fullName> メソッドを使用して各行を取得します。
 
 このコード例では、テキストが含まれる textfile.txt というファイルを読み取ります。 この種類のファイルについては、次を参照してください。[方法。テキスト ファイルを書き込む (C +/cli CLI)](../dotnet/how-to-write-a-text-file-cpp-cli.md)します。
 
@@ -263,8 +260,7 @@ int main()
 
 ## <a name="write_binary"></a> バイナリ ファイルを書き込む
 
-バイナリ データをファイルに書き込む方法を次のコード例に示します。 
-  <xref:System.IO> 名前空間の 2 つのクラス、<xref:System.IO.FileStream> と <xref:System.IO.BinaryWriter> が使用されます。 <xref:System.IO.FileStream> は実際のファイルを表し、<xref:System.IO.BinaryWriter> はバイナリへのアクセスを可能にするストリームへのインターフェイスを提供します。
+バイナリ データをファイルに書き込む方法を次のコード例に示します。 <xref:System.IO> 名前空間の 2 つのクラス、<xref:System.IO.FileStream> と <xref:System.IO.BinaryWriter> が使用されます。 <xref:System.IO.FileStream> は実際のファイルを表し、<xref:System.IO.BinaryWriter> はバイナリへのアクセスを可能にするストリームへのインターフェイスを提供します。
 
 バイナリ形式の整数を含むファイルを書き込む方法を次のコード例に示します。 内のコードでこのファイルを読み取れる[方法。バイナリ ファイルの読み取り (C +/cli CLI)](../dotnet/how-to-read-a-binary-file-cpp-cli.md)します。
 
@@ -307,8 +303,7 @@ int main()
 
 ## <a name="write_text"></a> テキスト ファイルを書き込む
 
-テキスト ファイルを作成し、<xref:System.IO.StreamWriter> クラスを使用してそのファイルにテキストを書き込む方法を次の例に示します。このクラスは、<xref:System.IO> 名前空間で定義されています。 
-  <xref:System.IO.StreamWriter> コンストラクターは、作成されるファイル名を受け取ります。 ファイルが存在する場合、そのファイルに上書きされます (ただし、2 番目の <xref:System.IO.StringWriter> コンストラクター引数として True を渡す場合は例外です)。
+テキスト ファイルを作成し、<xref:System.IO.StreamWriter> クラスを使用してそのファイルにテキストを書き込む方法を次の例に示します。このクラスは、<xref:System.IO> 名前空間で定義されています。 <xref:System.IO.StreamWriter> コンストラクターは、作成されるファイル名を受け取ります。 ファイルが存在する場合、そのファイルに上書きされます (ただし、2 番目の <xref:System.IO.StringWriter> コンストラクター引数として True を渡す場合は例外です)。
 
 次に、<xref:System.IO.StreamWriter.Write%2A> 関数と <xref:System.IO.TextWriter.WriteLine%2A> 関数を使用してファイルが保存されます。
 

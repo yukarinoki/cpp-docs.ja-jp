@@ -38,25 +38,18 @@ class CComCurrency
 
 |名前|説明|
 |----------|-----------------|
-|[CComCurrency::CComCurrency](#ccomcurrency)|
-  `CComCurrency` オブジェクトのコンストラクター。|
+|[CComCurrency::CComCurrency](#ccomcurrency)|`CComCurrency` オブジェクトのコンストラクター。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
 |名前|説明|
 |----------|-----------------|
-|[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|
-  `m_currency` データ メンバーのアドレスを返します。|
-|[CComCurrency::GetFraction](#getfraction)|
-  `CComCurrency` オブジェクトの小数部を返すには、このメソッドを呼び出します。|
-|[CComCurrency::GetInteger](#getinteger)|
-  `CComCurrency` オブジェクトの整数部を返すには、このメソッドを呼び出します。|
-|[CComCurrency::Round](#round)|
-  `CComCurrency` オブジェクトを最も近い整数値に四捨五入するには、このメソッドを呼び出します。|
-|[CComCurrency::SetFraction](#setfraction)|
-  `CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。|
-|[CComCurrency::SetInteger](#setinteger)|
-  `CComCurrency` オブジェクトの整数部を設定するには、このメソッドを呼び出します。|
+|[CComCurrency::GetCurrencyPtr](#getcurrencyptr)|`m_currency` データ メンバーのアドレスを返します。|
+|[CComCurrency::GetFraction](#getfraction)|`CComCurrency` オブジェクトの小数部を返すには、このメソッドを呼び出します。|
+|[CComCurrency::GetInteger](#getinteger)|`CComCurrency` オブジェクトの整数部を返すには、このメソッドを呼び出します。|
+|[CComCurrency::Round](#round)|`CComCurrency` オブジェクトを最も近い整数値に四捨五入するには、このメソッドを呼び出します。|
+|[CComCurrency::SetFraction](#setfraction)|`CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。|
+|[CComCurrency::SetInteger](#setinteger)|`CComCurrency` オブジェクトの整数部を設定するには、このメソッドを呼び出します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -91,8 +84,7 @@ class CComCurrency
 
 `CComCurrency`ラッパーは、この固定小数点型の算術演算子、代入、および比較の操作を実装します。 固定小数点数の計算中に発生する可能性のある丸め誤差を制御するために、サポートするアプリケーションが選択されています。
 
-
-  `CComCurrency` オブジェクトは、小数点の左側に値を格納する整数部と小数点の右側に値を格納する小数部という 2 つの構成要素を使用した形で、小数点の左側と右側の数値にアクセスできます。 小数部は、-9999 (CY_MIN_FRACTION) から +9999 (CY_MAX_FRACTION) を整数値として内部的に格納されます。 メソッド[ccomcurrency::getfraction](#getfraction)係数 10,000 (CY_SCALE) で拡大された値を返します。
+`CComCurrency` オブジェクトは、小数点の左側に値を格納する整数部と小数点の右側に値を格納する小数部という 2 つの構成要素を使用した形で、小数点の左側と右側の数値にアクセスできます。 小数部は、-9999 (CY_MIN_FRACTION) から +9999 (CY_MAX_FRACTION) を整数値として内部的に格納されます。 メソッド[ccomcurrency::getfraction](#getfraction)係数 10,000 (CY_SCALE) で拡大された値を返します。
 
 整数部と小数部を指定するときに、`CComCurrency`オブジェクト、小数部が 0 ~ 9999 の範囲の数に注意してください。 これは、小数点の後の有効桁数に 2 桁のみを使用して金額を表す米ドルなどの通貨を扱う場合に重要です。 最後の 2 桁が表示されていない場合でも考慮する必要があります。
 
@@ -167,8 +159,7 @@ explicit CComCurrency(LPCSTR szSrc);
 
 ##  <a name="getcurrencyptr"></a>  CComCurrency::GetCurrencyPtr
 
-
-  `m_currency` データ メンバーのアドレスを返します。
+`m_currency` データ メンバーのアドレスを返します。
 
 ```
 CURRENCY* GetCurrencyPtr() throw();
@@ -606,8 +597,7 @@ HRESULT Roundint nDecimals);
 
 ##  <a name="setfraction"></a>  CComCurrency::SetFraction
 
-
-  `CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。
+`CComCurrency` オブジェクトの小数部を設定するには、このメソッドを呼び出します。
 
 ```
 HRESULT SetFraction(SHORT nFraction);
@@ -628,8 +618,7 @@ HRESULT SetFraction(SHORT nFraction);
 
 ##  <a name="setinteger"></a>  CComCurrency::SetInteger
 
-
-  `CComCurrency` オブジェクトの整数部を設定するには、このメソッドを呼び出します。
+`CComCurrency` オブジェクトの整数部を設定するには、このメソッドを呼び出します。
 
 ```
 HRESULT SetInteger(LONGLONG nInteger);
