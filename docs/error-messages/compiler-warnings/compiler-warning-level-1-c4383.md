@@ -7,10 +7,10 @@ helpviewer_keywords:
 - C4383
 ms.assetid: 96c0e52d-874e-4b57-a154-0e49b6a00fae
 ms.openlocfilehash: 2510dda59047632e2a4823f734feeffd0c0a5b02
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58778040"
 ---
 # <a name="compiler-warning-level-1-c4383"></a>コンパイラの警告 (レベル 1) C4383
@@ -19,9 +19,9 @@ ms.locfileid: "58778040"
 
 マネージ型に逆参照演算子のインスタンスのユーザー定義の上書きを追加すると、ハンドルのオブジェクトを返す型の逆参照演算子の機能を無効可能性があります。 検討逆参照演算子の静的なユーザー定義を記述します。
 
-詳細については、[オブジェクト演算子 (^) へのハンドル](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)と[参照演算子の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)を参照してください。
+詳細については、次を参照してください。[オブジェクト演算子 (^) へのハンドル](../../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)と[参照演算子の追跡](../../extensions/tracking-reference-operator-cpp-component-extensions.md)します。
 
-また、インスタンス演算子では、参照されているメタデータを使用して他の言語コンパイラを使用できません。 詳細については、[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)を参照してください。
+また、インスタンス演算子では、参照されているメタデータを使用して他の言語コンパイラを使用できません。 詳細については、次を参照してください。[ユーザー定義演算子 (C +/cli CLI)](../../dotnet/user-defined-operators-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

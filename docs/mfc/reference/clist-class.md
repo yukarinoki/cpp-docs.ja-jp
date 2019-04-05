@@ -50,12 +50,12 @@ helpviewer_keywords:
 - CList [MFC], RemoveTail
 - CList [MFC], SetAt
 ms.assetid: 6f6273c3-c8f6-47f5-ac2a-0a950379ae5d
-ms.openlocfilehash: 722c38de100f2f1ff00e6589573a76bcdd9f3e84
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 383222e4892bccc653f010ce4939bca23f2adc93
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57297386"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780952"
 ---
 # <a name="clist-class"></a>CList クラス
 
@@ -291,7 +291,7 @@ const TYPE& GetAt(POSITION position) const;
 *TYPE*<br/>
 一覧でオブジェクトの種類を指定するテンプレート パラメーター。
 
-*position*<br/>
+*位置*<br/>
 取得する要素のリスト内の位置。
 
 ### <a name="return-value"></a>戻り値
@@ -515,7 +515,7 @@ POSITION InsertAfter(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>パラメーター
 
-*position*<br/>
+*位置*<br/>
 以前、によって返される位置値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出し。
 
 *ARG_TYPE*<br/>
@@ -542,7 +542,7 @@ POSITION InsertBefore(POSITION position, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>パラメーター
 
-*position*<br/>
+*位置*<br/>
 以前、によって返される位置値`GetNext`、 `GetPrev`、または`Find`メンバー関数の呼び出し。
 
 *ARG_TYPE*<br/>
@@ -605,7 +605,7 @@ void RemoveAt(POSITION position);
 
 ### <a name="parameters"></a>パラメーター
 
-*position*<br/>
+*位置*<br/>
 一覧から削除する要素の位置。
 
 ### <a name="remarks"></a>Remarks
@@ -676,7 +676,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*<br/>
+*発注書*<br/>
 設定する要素の位置。
 
 *ARG_TYPE*<br/>
@@ -697,7 +697,7 @@ void SetAt(POSITION pos, ARG_TYPE newElement);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの収集](../../visual-cpp-samples.md)<br/>
+[MFC サンプルの収集](../../overview/visual-cpp-samples.md)<br/>
 [CObject クラス](../../mfc/reference/cobject-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CMap クラス](../../mfc/reference/cmap-class.md)<br/>

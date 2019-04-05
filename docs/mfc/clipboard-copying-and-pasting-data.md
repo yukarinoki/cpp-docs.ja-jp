@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Clipboard, pasting
 ms.assetid: 580e10be-241f-4f9f-94cf-8302edc5beef
 ms.openlocfilehash: cff9094315dc97e2040eb4dbad25d044c7c51a81
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776103"
 ---
 # <a name="clipboard-copying-and-pasting-data"></a>クリップボード:コピーと貼り付けデータ
@@ -63,7 +63,7 @@ ms.locfileid: "58776103"
 
 - [OLE データ オブジェクトとデータ ソースと統一されたデータの転送します。](../mfc/data-objects-and-data-sources-ole.md)
 
-- [OLE ドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)
+- [OLE のドラッグ アンド ドロップ](../mfc/drag-and-drop-ole.md)
 
 - [OLE](../mfc/ole-background.md)
 

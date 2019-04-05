@@ -15,10 +15,10 @@ helpviewer_keywords:
 - COleTemplateServer [MFC], UpdateRegistry
 ms.assetid: 47a2887d-8162-4993-a842-a784177c7f5c
 ms.openlocfilehash: 3abdf1dc2da5ef9a111371b501d5cd8ce208825d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781212"
 ---
 # <a name="coletemplateserver-class"></a>COleTemplateServer クラス
@@ -165,7 +165,7 @@ OLE_APPTYPE の列挙体は、列挙子の値。H. 次の値のいずれかの�
 
 場合、`regFileTypeId`部分文字列が空または呼び出し`GetDocString`何らかの他の理由でこの関数が失敗したが失敗し、レジストリ、ファイルの情報が入力されていません。
 
-引数の情報は、 *rglpszRegister*と*rglpszOverwrite*を呼び出すことによって、レジストリに書き込まれる[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)します。 2 つの引数が NULL の場合、登録は、既定の情報は、ほとんどのアプリケーションに適しています。 これらの引数の情報の構造については、`AfxOleRegisterServerClass`を参照してください。
+引数の情報は、 *rglpszRegister*と*rglpszOverwrite*を呼び出すことによって、レジストリに書き込まれる[AfxOleRegisterServerClass](application-control.md#afxoleregisterserverclass)します。 2 つの引数が NULL の場合、登録は、既定の情報は、ほとんどのアプリケーションに適しています。 これらの引数の情報の構造については、次を参照してください。`AfxOleRegisterServerClass`します。
 
 詳細については、「 [Implementing the IDispatch Interface](/previous-versions/windows/desktop/automat/implementing-the-idispatch-interface)」を参照してください。
 

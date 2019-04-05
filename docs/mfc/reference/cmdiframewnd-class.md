@@ -34,12 +34,12 @@ helpviewer_keywords:
 - CMDIFrameWnd [MFC], MDISetMenu
 - CMDIFrameWnd [MFC], MDITile
 ms.assetid: fa8736e6-511b-4c51-8b4d-eba78378aeb9
-ms.openlocfilehash: d3fc71c3e294b26aea405b8800199cf88120fa08
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 9f5289491a7c14749865cfd163417440bc542aba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282449"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776532"
 ---
 # <a name="cmdiframewnd-class"></a>CMDIFrameWnd クラス
 
@@ -69,7 +69,7 @@ class CMDIFrameWnd : public CFrameWnd
 |[CMDIFrameWnd::MDIActivate](#mdiactivate)|別の MDI 子ウィンドウをアクティブにします。|
 |[CMDIFrameWnd::MDICascade](#mdicascade)|すべての子ウィンドウを重ねて表示を整列します。|
 |[CMDIFrameWnd::MDIGetActive](#mdigetactive)|子が最大化されているかどうかを示すフラグと共に、現在アクティブな MDI 子ウィンドウを取得します。|
-|[CMDIFrameWnd::MDIIconArrange](#mdiiconarrange)|最小化されたドキュメントのすべての子ウィンドウを整列します。|
+|[ある最小化されました。](#mdiiconarrange)|最小化されたドキュメントのすべての子ウィンドウを整列します。|
 |[CMDIFrameWnd::MDIMaximize](#mdimaximize)|MDI 子ウィンドウを最大化します。|
 |[CMDIFrameWnd::MDINext](#mdinext)|現在アクティブな子ウィンドウの背後にすぐに子ウィンドウをアクティブにし、その他のすべての子ウィンドウの背後にある現在アクティブな子ウィンドウを配置します。|
 |[CMDIFrameWnd::MDIPrev](#mdiprev)|前の子ウィンドウをアクティブにし、すぐ後ろに、現在アクティブな子ウィンドウを配置します。|
@@ -459,9 +459,9 @@ void MDITile(int nType);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル MDI](../../visual-cpp-samples.md)<br/>
-[MFC のサンプルは](../../visual-cpp-samples.md)<br/>
-[MFC サンプル SNAPVW](../../visual-cpp-samples.md)<br/>
+[MFC サンプル MDI](../../overview/visual-cpp-samples.md)<br/>
+[MFC のサンプルは](../../overview/visual-cpp-samples.md)<br/>
+[MFC サンプル SNAPVW](../../overview/visual-cpp-samples.md)<br/>
 [CFrameWnd クラス](../../mfc/reference/cframewnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>

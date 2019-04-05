@@ -47,10 +47,10 @@ helpviewer_keywords:
 - CCmdTarget [MFC], RestoreWaitCursor
 ms.assetid: 8883b132-2057-4ce0-a5f2-88979f8f2b13
 ms.openlocfilehash: 9314717fab53b1a89b87d657ec617a4c6bd45b8b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776194"
 ---
 # <a name="ccmdtarget-class"></a>CCmdTarget クラス
@@ -113,7 +113,7 @@ class CCmdTarget : public CObject
 
 `CCmdTarget`
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
 **ヘッダー:** afxwin.h
 
@@ -478,7 +478,7 @@ NULL 以外の場合`OnCmdMsg`塗りつぶす、 *pTarget*と*pmf*のメンバ�
 
 これは、framework コマンドのアーキテクチャの実装のメイン ルーチンです。
 
-実行時に、`OnCmdMsg`他のオブジェクトへのコマンドをディスパッチまたはルート クラスを呼び出すことによって、コマンド自体を処理`CCmdTarget::OnCmdMsg`これは実際のメッセージ マップ検索します。 既定のコマンド ルーティングの詳細については、[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)を参照してください。
+実行時に、`OnCmdMsg`他のオブジェクトへのコマンドをディスパッチまたはルート クラスを呼び出すことによって、コマンド自体を処理`CCmdTarget::OnCmdMsg`これは実際のメッセージ マップ検索します。 既定のコマンド ルーティングの詳細については、次を参照してください。[メッセージの処理とマップ」](../../mfc/message-handling-and-mapping.md)します。
 
 まれに、フレームワークを拡張するには、このメンバー関数を無効にすることがあります標準コマンド ルーティングします。 参照してください[テクニカル ノート 21](../../mfc/tn021-command-and-message-routing.md)コマンド ルーティングのアーキテクチャの詳細についてはします。
 

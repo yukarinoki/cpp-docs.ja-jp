@@ -14,12 +14,12 @@ helpviewer_keywords:
 - CTypedPtrMap [MFC], RemoveKey
 - CTypedPtrMap [MFC], SetAt
 ms.assetid: 9f377385-c6e9-4471-8b40-8fe220c50164
-ms.openlocfilehash: 05689001f8c385191057a8dc824a508189a43f05
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bc164125f867cf3e2f27b74e69b826cbed31ff1d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57266057"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781797"
 ---
 # <a name="ctypedptrmap-class"></a>CTypedPtrMap クラス
 
@@ -40,7 +40,7 @@ class CTypedPtrMap : public BASE_CLASS
 *KEY*<br/>
 マップのキーとして使用されるオブジェクトのクラスです。
 
-*値*<br/>
+*VALUE*<br/>
 マップに格納されるオブジェクトのクラスです。
 
 ## <a name="members"></a>メンバー
@@ -100,10 +100,10 @@ void GetNextAssoc(
 *rKey*<br/>
 取得した要素の返されたキーを指定します。
 
-*値*<br/>
+*VALUE*<br/>
 マップの値の型を指定するテンプレート パラメーター。
 
-*rValue*<br/>
+*右辺値*<br/>
 取得した要素の戻り値を指定します。
 
 ### <a name="remarks"></a>Remarks
@@ -130,10 +130,10 @@ BOOL Lookup(BASE_CLASS ::BASE_ARG_KEY key, VALUE& rValue) const;
 *key*<br/>
 検索する要素のキー。
 
-*値*<br/>
+*VALUE*<br/>
 このマップに格納されている値の型を指定するテンプレート パラメーター。
 
-*rValue*<br/>
+*右辺値*<br/>
 取得した要素の戻り値を指定します。
 
 ### <a name="return-value"></a>戻り値
@@ -154,7 +154,7 @@ VALUE& operator[ ](base_class ::base_arg_key key);
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*VALUE*<br/>
 このマップに格納されている値の型を指定するテンプレート パラメーター。
 
 *BASE_CLASS*<br/>
@@ -216,7 +216,7 @@ NewValue のキーの値を指定します。
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプルの収集](../../visual-cpp-samples.md)<br/>
+[MFC サンプルの収集](../../overview/visual-cpp-samples.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CMapPtrToPtr クラス](../../mfc/reference/cmapptrtoptr-class.md)<br/>
 [CMapPtrToWord クラス](../../mfc/reference/cmapptrtoword-class.md)<br/>

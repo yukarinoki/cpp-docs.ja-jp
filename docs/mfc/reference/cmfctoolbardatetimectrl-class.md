@@ -49,10 +49,10 @@ helpviewer_keywords:
 - CMFCToolBarDateTimeCtrl [MFC], SetTimeAll
 ms.assetid: a3853cb9-8ebc-444f-a1e4-9cf905e24c18
 ms.openlocfilehash: dfe1d3dc058371dd13cc335968b9c3a89e057da2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58776051"
 ---
 # <a name="cmfctoolbardatetimectrl-class"></a>CMFCToolBarDateTimeCtrl クラス
@@ -212,7 +212,7 @@ virtual BOOL ExportToMenuButton(CMFCToolBarMenuButton& menuButton) const;
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) をコントロールのコマンド ID に関連付けられている文字列リソースを読み込んでいます。 文字列リソースの詳細については、[CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring)を参照してください。
+このメソッドは、基本クラスの実装 ( [CMFCToolBarButton::ExportToMenuButton](../../mfc/reference/cmfctoolbarbutton-class.md#exporttomenubutton)) をコントロールのコマンド ID に関連付けられている文字列リソースを読み込んでいます。 文字列リソースの詳細については、次を参照してください。 [CStringT::LoadString](../../atl-mfc-shared/reference/cstringt-class.md#loadstring)します。
 
 ##  <a name="getbycmd"></a>  CMFCToolBarDateTimeCtrl::GetByCmd
 
@@ -441,7 +441,7 @@ virtual HBRUSH OnCtlColor(
 *pDC*<br/>
 [in]ボタンを表示するデバイス コンテキスト。
 
-*nCtlColor*<br/>
+*ため*<br/>
 [in]使用されていません。
 
 ### <a name="return-value"></a>戻り値
@@ -452,7 +452,7 @@ virtual HBRUSH OnCtlColor(
 
 このメソッドは基底クラスの実装をオーバーライド[CMFCToolBarButton::OnCtlColor](../../mfc/reference/cmfctoolbarbutton-class.md#onctlcolor)テキストを設定およびグローバルのテキストに指定されたデバイス コンテキストの色と背景の色をそれぞれバック グラウンドします。
 
-アプリケーションに使用できるグローバル オプションの詳細については、[AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)を参照してください。
+アプリケーションに使用できるグローバル オプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)します。
 
 ##  <a name="onglobalfontschanged"></a>  CMFCToolBarDateTimeCtrl::OnGlobalFontsChanged
 
@@ -466,7 +466,7 @@ virtual void OnGlobalFontsChanged();
 
 このメソッドが基底クラスの実装を拡張 ( [CMFCToolBarButton::OnGlobalFontsChanged](../../mfc/reference/cmfctoolbarbutton-class.md#onglobalfontschanged)) のグローバルのフォントのコントロールのフォントを変更することで。
 
-アプリケーションに使用できるグローバル オプションの詳細については、[AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)を参照してください。
+アプリケーションに使用できるグローバル オプションの詳細については、次を参照してください。 [AFX_GLOBAL_DATA 構造体](../../mfc/reference/afx-global-data-structure.md)します。
 
 ##  <a name="onmove"></a>  CMFCToolBarDateTimeCtrl::OnMove
 

@@ -25,10 +25,10 @@ helpviewer_keywords:
 - COleInsertDialog [MFC], m_io
 ms.assetid: a9ec610b-abde-431e-bd01-c40159a66dbb
 ms.openlocfilehash: 27bf98ea4fe6951624873c1463d50f37558c9234
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781485"
 ---
 # <a name="coleinsertdialog-class"></a>COleInsertDialog クラス
@@ -53,7 +53,7 @@ class COleInsertDialog : public COleDialog
 
 |名前|説明|
 |----------|-----------------|
-|[COleInsertDialog::CreateItem](#createitem)|ダイアログ ボックスで選択した項目を作成します。|
+|[クリック](#createitem)|ダイアログ ボックスで選択した項目を作成します。|
 |[COleInsertDialog::DoModal](#domodal)|OLE の [オブジェクトの挿入] ダイアログ ボックスが表示されます。|
 |[COleInsertDialog::GetClassID](#getclassid)|選択した項目に関連付けられた CLSID を取得します。|
 |[COleInsertDialog::GetDrawAspect](#getdrawaspect)|アイコンとして項目を描画するかどうかを通知します。|

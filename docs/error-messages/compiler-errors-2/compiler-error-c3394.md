@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3394
 ms.assetid: 4e025d79-27ba-43c8-b0d9-839ecef98126
 ms.openlocfilehash: 826084d375c69ca289a858a29a12ae16874c1fbd
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58781459"
 ---
 # <a name="compiler-error-c3394"></a>コンパイラ エラー C3394
 
 制約句の構文エラー: 'identifier' が見つかりましたが、型を指定しなければなりません
 
-制約の形式が間違っています。  詳細については、[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)を参照してください。
+制約の形式が間違っています。  詳細については、次を参照してください。[ジェネリック型パラメーターの制約 (C +/cli CLI)](../../extensions/constraints-on-generic-type-parameters-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

@@ -22,12 +22,12 @@ helpviewer_keywords:
 - CMFCMenuButton [MFC], m_hMenu
 - CMFCMenuButton [MFC], m_nMenuResult
 ms.assetid: 53d3d459-1e5a-47c5-8b7f-2e61f6af5187
-ms.openlocfilehash: bacd8726fd4c833f956f763cca81a88d41d1f167
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: cbdf4005ee1a0249e7ed2b5f1d50621fb951f64f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298205"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777364"
 ---
 # <a name="cmfcmenubutton-class"></a>CMFCMenuButton クラス
 
@@ -51,7 +51,7 @@ class CMFCMenuButton : public CMFCButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|ディスパッチされる前に、ウィンドウ メッセージを変換するためにフレームワークによって呼び出されます。 (`CMFCButton::PreTranslateMessage` をオーバーライドします)。|
+|[CMFCMenuButton::PreTranslateMessage](#pretranslatemessage)|ディスパッチされる前に、ウィンドウ メッセージを変換するためにフレームワークによって呼び出されます。 ( `CMFCButton::PreTranslateMessage`をオーバーライドします)。|
 |[CMFCMenuButton::SizeToContent](#sizetocontent)|そのテキストとイメージのサイズに応じてボタンのサイズを変更します。|
 
 ### <a name="data-members"></a>データ メンバー
@@ -72,7 +72,7 @@ class CMFCMenuButton : public CMFCButton
 
 ## <a name="example"></a>例
 
-次の例では、ボタン メニューのハンドルを設定し、テキストとイメージのサイズに応じてボタンのサイズを変更して、フレームワークによって表示されるポップアップ メニューを設定する方法を示します。 このコード スニペットの一部、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例では、ボタン メニューのハンドルを設定し、テキストとイメージのサイズに応じてボタンのサイズを変更して、フレームワークによって表示されるポップアップ メニューを設定する方法を示します。 このコード スニペットの一部、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#38](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_1.h)]
 [!code-cpp[NVC_MFC_NewControls#39](../../mfc/reference/codesnippet/cpp/cmfcmenubutton-class_2.cpp)]

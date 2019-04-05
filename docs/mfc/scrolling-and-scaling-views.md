@@ -9,17 +9,17 @@ helpviewer_keywords:
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777582"
 ---
 # <a name="scrolling-and-scaling-views"></a>ビューのスクロールと拡大/縮小
 
 MFC では、それらを表示するフレーム ウィンドウのサイズが自動的に拡大縮小されるビューまでスクロールし、ビューをサポートしています。 クラス`CScrollView`ビューの両方の種類をサポートしています。
 
-スクロールとスケーリングの詳細については、クラスを参照してください。 [CScrollView](../mfc/reference/cscrollview-class.md)で、 *MFC リファレンス*します。 スクロールの例では、、 [Scribble サンプル](../overview/visual-cpp-samples.md)を参照してください。
+スクロールとスケーリングの詳細については、クラスを参照してください。 [CScrollView](../mfc/reference/cscrollview-class.md)で、 *MFC リファレンス*します。 スクロールの例では、次を参照してください。、 [Scribble サンプル](../overview/visual-cpp-samples.md)します。
 
 ## <a name="what-do-you-want-to-know-more-about"></a>方法については、するして操作を行います
 
@@ -35,7 +35,7 @@ MFC では、それらを表示するフレーム ウィンドウのサイズが
 
 任意のビューにスクロール バーのメッセージを処理できるその`OnHScroll`と`OnVScroll`メンバー関数。 自分ですべての作業を行って、これらの関数のいずれかの実装スクロール バー メッセージの処理ができるかを使用することができます、`CScrollView`スクロールを処理するクラス。
 
-`CScrollView` では次の処理が行われます。
+`CScrollView` 次を行います。
 
 - ウィンドウと、ビューポートのサイズとマップ モードを管理します。
 

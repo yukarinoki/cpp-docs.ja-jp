@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ribbon application, creating (MFC)
 - creating a ribbon aplication (MFC)
 ms.assetid: e61393e2-1d6b-4594-a7ce-157d3d1b0d9f
-ms.openlocfilehash: a74e8863c32199d1c0309f70bceae867993ce721
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 29991a389a09e1fe3dc0074b80fd9a255458f673
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57271334"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781225"
 ---
 # <a name="walkthrough-creating-a-ribbon-application-by-using-mfc"></a>チュートリアル: MFC によるリボン アプリケーションの作成
 
@@ -87,9 +87,9 @@ ms.locfileid: "57271334"
 
 [方法: アプリケーション ボタンをカスタマイズします。](../mfc/how-to-customize-the-application-button.md)
 
-エンド ツー エンドのサンプルを参照してください。[サンプル (MFC Feature Pack)](../visual-cpp-samples.md)します。
+エンド ツー エンドのサンプルを参照してください。[サンプル (MFC Feature Pack)](../overview/visual-cpp-samples.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [チュートリアル](../mfc/walkthroughs-mfc.md)<br/>
-[サンプル (MFC Feature Pack)](../visual-cpp-samples.md)
+[サンプル (MFC Feature Pack)](../overview/visual-cpp-samples.md)

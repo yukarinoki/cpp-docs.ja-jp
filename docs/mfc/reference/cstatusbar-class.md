@@ -37,10 +37,10 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
 ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58777338"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar クラス
@@ -200,14 +200,14 @@ virtual BOOL CreateEx(
 *pParentWnd*<br/>
 ポインター、 [CWnd](../../mfc/reference/cwnd-class.md)ステータス バーの親である Windows ウィンドウを持つオブジェクト。
 
-*dwCtrlStyle*<br/>
+*ツール バー*<br/>
 埋め込まれたを作成するための追加スタイル[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)オブジェクト。 既定値の指定、サイズ変更グリップとツールヒントなしのステータス バーをサポートします。 ステータス バーのスタイルがサポートされている次のとおりです。
 
 - SBARS_SIZEGRIP、ステータス バー コントロールには、ステータス バーの右端にあるサイズ変更グリップが含まれています。 サイズ変更グリップはサイズ変更境界線; に似ていますユーザーがクリックして親ウィンドウのサイズをドラッグ四角形の領域になります。
 
 - ステータス バーには、ツール ヒントがサポートされています。
 
-これらのスタイルについて詳しくは、[CStatusBarCtrl の設定](../../mfc/settings-for-the-cstatusbarctrl.md)を参照してください。
+これらのスタイルについて詳しくは、次を参照してください。 [CStatusBarCtrl の設定](../../mfc/settings-for-the-cstatusbarctrl.md)します。
 
 *dwStyle*<br/>
 ステータス バーのスタイル。 既定では、フレーム ウィンドウの下部に表示されるステータス バーを作成することを指定します。 ステータス バーに表示されているコントロールのスタイルの任意の組み合わせを適用[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)と[CDialogBar::Create](../../mfc/reference/cdialogbar-class.md#create)します。 ただし、このパラメーターは、WS_CHILD と WS_VISIBLE スタイルを常に含める必要があります。
@@ -336,7 +336,7 @@ UINT GetPaneStyle(int nIndex) const;
 
 ウィンドウのスタイルは、ペインの表示方法を決定します。
 
-ステータス バーで使用可能なスタイルの一覧は、[作成](#create)を参照してください。
+ステータス バーで使用可能なスタイルの一覧は、次を参照してください。[作成](#create)です。
 
 ##  <a name="getpanetext"></a>  CStatusBar::GetPaneText
 
@@ -464,7 +464,7 @@ void SetPaneStyle(
 
 ウィンドウのスタイルは、ペインの表示方法を決定します。
 
-ステータス バーで使用可能なスタイルの一覧は、[SetPaneInfo](#setpaneinfo)を参照してください。
+ステータス バーで使用可能なスタイルの一覧は、次を参照してください。 [SetPaneInfo](#setpaneinfo)します。
 
 ##  <a name="setpanetext"></a>  CStatusBar::SetPaneText
 
@@ -482,10 +482,10 @@ BOOL SetPaneText(
 *nIndex*<br/>
 テキストを設定するペインのインデックス。
 
-*lpszNewText*<br/>
+*されています。*<br/>
 新しいウィンドウのテキストへのポインター。
 
-*bUpdate*<br/>
+*b 更新*<br/>
 TRUE の場合、テキストを設定した後、ウィンドウが無効にします。
 
 ### <a name="return-value"></a>戻り値
@@ -508,7 +508,7 @@ TRUE の場合、テキストを設定した後、ウィンドウが無効にし
 
 [MFC サンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [MFC サンプル DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CStatusBarCtrl クラス](../../mfc/reference/cstatusbarctrl-class.md)<br/>
-[CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)

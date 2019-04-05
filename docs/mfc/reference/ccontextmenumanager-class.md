@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CContextMenuManager [MFC], TrackPopupMenu
 ms.assetid: 1de20640-243c-47e1-85de-1baa4153bc83
 ms.openlocfilehash: c8a51a33c69b09d0ecd61520b5f1c9ff18c290a0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58779795"
 ---
 # <a name="ccontextmenumanager-class"></a>CContextMenuManager クラス
@@ -306,7 +306,7 @@ virtual CMFCPopupMenu* ShowPopupMenu(
 *x*<br/>
 [in]水平方向のショートカット メニューのクライアント座標でのオフセットします。
 
-*y*<br/>
+*Y*<br/>
 [in]ショートカット メニューのクライアント座標の垂直方向のオフセット
 
 *pWndOwner*<br/>
@@ -355,7 +355,7 @@ virtual UINT TrackPopupMenu(
 *x*<br/>
 [in]水平方向のショートカット メニューのクライアント座標でのオフセットします。
 
-*y*<br/>
+*Y*<br/>
 [in]縦方向のショートカット メニューのクライアント座標のオフセットします。
 
 *pWndOwner*<br/>
