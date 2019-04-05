@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - embedded_idl attribute
 ms.assetid: f1c1c2e8-3872-4172-8795-8d1288a20452
-ms.openlocfilehash: 202d5b23a5e2e8e673e3c220b9618cfe6cd4f0d9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c46924d2757d01a934c21a70f23e6556f6a10fd3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50525607"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59034090"
 ---
 # <a name="embeddedidl"></a>embedded_idl
 
@@ -30,9 +30,9 @@ embedded_idl[("param")]
 *param*<br/>
 次の 2 つの値のいずれかを指定します。
 
-- **emitidl**: typelib からインポートされた情報は、属性付きプロジェクト用に生成された IDL に表示されます。  これは既定値であり、`embedded_idl` にパラメーターを指定しない場合に有効になります。
+- **emitidl**:Typelib からインポートされた情報は、属性付きプロジェクト用に生成された IDL に存在するは。  これは既定値であり、`embedded_idl` にパラメーターを指定しない場合に有効になります。
 
-- **no_emitidl**: typelib からインポートされた情報は、属性付きプロジェクト用に生成された IDL に存在できません。
+- **no_emitidl**:Typelib からインポートされた情報は、属性付きプロジェクト用に生成された IDL に存在するにはできません。
 
 ## <a name="example"></a>例
 
@@ -46,7 +46,7 @@ embedded_idl[("param")]
 
 ## <a name="remarks"></a>Remarks
 
-**END C 固有の仕様**
+**END C++ 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

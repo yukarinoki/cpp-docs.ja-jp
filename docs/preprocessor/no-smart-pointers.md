@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - no_smart_pointers attribute
 ms.assetid: d69dd71e-08a8-4446-a3d0-a062dc29cb17
-ms.openlocfilehash: 305c08497a600f602767496cba48d108335fdeb8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ed4950b9e90ef968fcf0c42e4f0a9775c58ea7ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50636983"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030168"
 ---
 # <a name="nosmartpointers"></a>no_smart_pointers
 **C++ 固有の仕様**
@@ -28,7 +28,7 @@ no_smart_pointers
 
 既定では、`#import` を使用すると、タイプ ライブラリのすべてのインターフェイスのスマート ポインター宣言を取得できます。 これらのスマート ポインターは型[_com_ptr_t クラス](../cpp/com-ptr-t-class.md)します。
 
-**END C 固有の仕様**
+**END C++ 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

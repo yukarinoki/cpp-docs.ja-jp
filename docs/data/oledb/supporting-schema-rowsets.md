@@ -7,12 +7,12 @@ helpviewer_keywords:
 - OLE DB providers, schema rowsets
 - OLE DB, schema rowsets
 ms.assetid: 71c5e14b-6e33-4502-a2d9-a1dc6d6e9ba0
-ms.openlocfilehash: f8809754cc79d2a8c3d0f7bd32630ad9cab70a43
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b49d53836179d765a72409d28304d7166dcf51d8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423106"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024622"
 ---
 # <a name="supporting-schema-rowsets"></a>スキーマ行セットのサポート
 
@@ -255,7 +255,7 @@ virtual DBSTATUS GetDBStatus(CSimpleRow* , ATLCOLUMNINFO* pColInfo)
 
 `Execute`関数は、テーブルの行セットから、TABLE_NAME、TABLE_TYPE、および説明のフィールドのデータを返します、確認することができます**付録 B** OLE DB 仕様の (先頭からカウント ダウン) を決定3、4、および 6 の序数ができました。 これらの列のそれぞれについて、DBSTATUS_S_OK を返します。 その他のすべての列には、DBSTATUS_S_ISNULL を返します。 コンシューマーが返された値が NULL またはその他のことを認識していないためですが、この状態を返すため重要です。 ここでも、NULL は空のと同じことに注意してください。
 
-OLE DB スキーマ行セットのインターフェイスの詳細については、、 [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md)インターフェイスで、 **OLE DB プログラマーズ リファレンス**を参照してください。
+OLE DB スキーマ行セットのインターフェイスの詳細については、次を参照してください。、 [IDBSchemaRowset](../../data/oledb/idbschemarowsetimpl-class.md)インターフェイスで、 **OLE DB プログラマーズ リファレンス**します。
 
 コンシューマーの使用方法については`IDBSchemaRowset`メソッドを参照してください[スキーマ行セットのメタデータの取得](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)します。
 

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - _BitScanReverse intrinsic
 - BitScanReverse intrinsic
 ms.assetid: 2520a207-af8b-4aad-9ae7-831abeadf376
-ms.openlocfilehash: f1c33f90fc8e44388068f0588d33effd80fc203c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3639aac38f4c7df82cbbdb23ed9038ac86ba2cc0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50586421"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021971"
 ---
 # <a name="bitscanreverse-bitscanreverse64"></a>_BitScanReverse、_BitScanReverse64
 
@@ -39,7 +39,7 @@ unsigned char _BitScanReverse64(
 
 #### <a name="parameters"></a>パラメーター
 
-*Index*<br/>
+*インデックス*<br/>
 [out]見つかった最初のビット セット (1) のビット位置が読み込まれます。
 
 *マスク*<br/>
@@ -100,8 +100,8 @@ Enter a positive integer as the mask:
 Mask: 12 Index: 3
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

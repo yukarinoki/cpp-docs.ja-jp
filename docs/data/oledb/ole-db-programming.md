@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data access [C++], OLE DB programming
 - OLE DB [C++], about OLE DB
 ms.assetid: 52a80d66-17a9-43a1-9b90-392ae43cea2b
-ms.openlocfilehash: fccf9ee553160d687a6094ccc9b95f4c55f7094f
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: ac74f94b4cdc738237c2994646f7602f7f5118ca
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328546"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031648"
 ---
 # <a name="ole-db-programming"></a>OLE DB プログラミング
 
@@ -23,7 +23,7 @@ Visual C++ には OLE DB のスターター アプリケーションを作成す
 
 また、OLE DB コンシューマー テンプレートを実装するのに属性を使用できます。
 
-|詳細情報|解決方法|
+|詳細情報|参照トピック|
 |-------------------------|---------|
 |OLE DB コンシューマー テンプレートの使用方法 (概念説明のトピック)|[OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)|
 |OLE DB プロバイダー テンプレートの使用方法 (概念説明のトピック)|[OLE DB プロバイダー テンプレート](../../data/oledb/ole-db-provider-templates-cpp.md)|

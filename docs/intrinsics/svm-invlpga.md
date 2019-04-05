@@ -7,12 +7,12 @@ helpviewer_keywords:
 - __svm_invlpga intrinsic
 - INVLPGA instruction
 ms.assetid: aa6578ce-8278-464b-8815-a0fc45330915
-ms.openlocfilehash: 2d356cf7426c558c8ac0312eff02c0cb9de9c859
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5e470fc12ad47aa156c513b293543fa356398d5e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50544301"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031136"
 ---
 # <a name="svminvlpga"></a>__svm_invlpga
 
@@ -35,7 +35,7 @@ void __svm_invlpga(void *Va, int ASID);
 
 ## <a name="remarks"></a>Remarks
 
-`__svm_invlpga` 関数は `INVLPGA` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2: システム プログラミングでは、"ドキュメント番号 24593、3.11、リビジョン、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。
+`__svm_invlpga` 関数は `INVLPGA` マシン語命令と同じです。 この関数は、ホストの仮想マシンのモニターと、ゲスト オペレーティング システムとそのアプリケーションとの対話をサポートします。 詳細については、検索、ドキュメントでは、"AMD64 アーキテクチャ プログラマーズ手動ボリューム 2。文書番号 24593、3.11、リビジョンのシステム プログラミング、"、 [AMD corporation](https://developer.amd.com/resources/developer-guides-manuals/)サイト。
 
 ## <a name="requirements"></a>必要条件
 
@@ -45,8 +45,8 @@ void __svm_invlpga(void *Va, int ASID);
 
 **ヘッダー ファイル** \<intrin.h >
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

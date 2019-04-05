@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - com_interface_entry attribute
 ms.assetid: 10368f81-b99b-4a0f-ba4f-a142e6911a5c
-ms.openlocfilehash: 9d83cae79b257c9ddfc6d9ab910bb5502ae78307
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 65d174679f851613e064568b071cfcbdad8f0f06
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50559693"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030408"
 ---
 # <a name="cominterfaceentry-c"></a>com_interface_entry (C++)
 
@@ -27,7 +27,7 @@ ms.locfileid: "50559693"
 ### <a name="parameters"></a>パラメーター
 
 *com_interface_entry*<br/>
-エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、[COM_INTERFACE_ENTRY マクロ](../../atl/reference/com-interface-entry-macros.md)を参照してください。
+エントリの実際のテキストを含む文字列。 使用可能な値の一覧は、次を参照してください。 [COM_INTERFACE_ENTRY マクロ](../../atl/reference/com-interface-entry-macros.md)します。
 
 ## <a name="remarks"></a>Remarks
 
@@ -103,7 +103,7 @@ BEGIN_COM_MAP(CMyClass)
 END_COM_MAP()
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 

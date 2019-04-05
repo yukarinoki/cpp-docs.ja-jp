@@ -6,27 +6,27 @@ helpviewer_keywords:
 - grammar, preprocessor
 - preprocessor, grammar
 ms.assetid: 6cd33fad-0b08-4592-9be8-7359c43e24e9
-ms.openlocfilehash: 17768b7ec1442f2af1abf76596527d4df69b1534
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 6177cf5fddba549e410842ef3f270edcc13d4782
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614189"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032415"
 ---
 # <a name="preprocessor-grammar"></a>プリプロセッサの文法
 
 *コントロール行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** *識別子**トークン文字列*<sub>選択</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>識別子</em>**(** *識別子*<sub>opt</sub> **、** .**、** *識別子*<sub>opt</sub> **)** *トークン文字列*<sub>選択</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *パス仕様* **"**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *パス仕様* **>**<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#line** *数字シーケンス***"** *filename* **"**<sub>選択</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *識別子*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#error** *トークン文字列*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *トークン文字列*
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** *identifier* *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#define** <em>identifier</em>**(** *identifier*<sub>opt</sub> **,** ... **,** *identifier*<sub>opt</sub> **)** *token-string*<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **"** *path-spec* **"**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#include** **\<** *path-spec* **>**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#line** *digit-sequence*  **"** *filename* **"**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#undef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#error** *token-string*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#pragma** *token-string*
 
 *constant-expression*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**定義 (** *識別子* **)**<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**defined(** *identifier* **)**<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**定義されている***識別子*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;その他の任意の定数式
 
@@ -37,19 +37,19 @@ ms.locfileid: "50614189"
 &nbsp;&nbsp;&nbsp;&nbsp;*if 行**テキスト*
 
 *if 行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#if** *定数式*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *識別子*<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *識別子*
+&nbsp;&nbsp;&nbsp;&nbsp;**#if** *constant-expression*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifdef** *identifier*<br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**#ifndef** *identifier*
 
 *elif パーツ*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif 行**テキスト*<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;*elif パーツ* *elif 行**テキスト*
 
 *elif 行*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *定数式*
+&nbsp;&nbsp;&nbsp;&nbsp;**#elif** *constant-expression*
 
 *他の部分から成る*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*他の行**テキスト*
+&nbsp;&nbsp;&nbsp;&nbsp;*else-line* *text*
 
 *他の行*:<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;**#else**

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - pragmas, check_stack
 - pragmas, check_stack usage table
 ms.assetid: f18e20cc-9abb-48b7-ad62-8d384875b996
-ms.openlocfilehash: 93ded20bde98cc4e7b0fc15fd8332195d38f2543
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 49477a3b39db17047f349e341bd05c04954c964c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50451988"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023379"
 ---
 # <a name="checkstack"></a>check_stack
 場合、スタック プローブをオフにするようにコンパイラに指示`off`(または`-`) が指定されているか場合は、スタック プローブを有効に`on`(または`+`) を指定します。
@@ -30,7 +30,7 @@ ms.locfileid: "50451988"
 
 引数を指定しない場合、スタック プローブが既定に従って処理されます。 このプラグマは、プラグマの後で定義されている最初の関数に対して効果があります。 スタック プローブは、マクロの一部でも、インラインで生成される関数の一部でもありません。
 
-引数を指定しない場合、 **check_stack**プラグマ、スタック チェック コマンドラインで指定された動作を元に戻します。 詳細については、[コンパイラ リファレンス](../build/reference/compiler-options.md)を参照してください。 相互作用、`#pragma check_stack`と[/Gs](../build/reference/gs-control-stack-checking-calls.md)オプションは、次の表にまとめられています。
+引数を指定しない場合、 **check_stack**プラグマ、スタック チェック コマンドラインで指定された動作を元に戻します。 詳細については、次を参照してください。[コンパイラ リファレンス](../build/reference/compiler-options.md)します。 相互作用、`#pragma check_stack`と[/Gs](../build/reference/gs-control-stack-checking-calls.md)オプションは、次の表にまとめられています。
 
 ### <a name="using-the-checkstack-pragma"></a>check_stack プラグマの使用
 

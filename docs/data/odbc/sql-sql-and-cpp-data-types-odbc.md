@@ -1,19 +1,19 @@
 ---
-title: 'SQL: SQL と C++ のデータ型 (ODBC)'
+title: SQL:SQL と C++ のデータ型 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - data types [C++], SQL vs. C++
 - SQL data types [C++]
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
-ms.openlocfilehash: 6767d009ca376d8e8579baf32f2c9af1e282abce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50649502"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024349"
 ---
-# <a name="sql-sql-and-c-data-types-odbc"></a>SQL: SQL と C++ のデータ型 (ODBC)
+# <a name="sql-sql-and-c-data-types-odbc"></a>SQL:SQL と C++ のデータ型 (ODBC)
 
 > [!NOTE]
 >  この情報は、MFC ODBC クラスに適用されます。 MFC DAO クラスを使用する場合は、"比較の Microsoft Jet データベース エンジン SQL と ANSI SQL"DAO ヘルプのトピックを参照してください。
@@ -27,21 +27,21 @@ ms.locfileid: "50649502"
 |**CHAR**|`CString`|
 |**DECIMAL**|`CString` 1|
 |**SMALLINT**|**int**|
-|**REAL**|**float**|
+|**real**|**フローティング**|
 |**INTEGER**|**long**|
-|**FLOAT**|**double**|
-|**DOUBLE**|**double**|
+|**FLOAT**|**二重線**|
+|**DOUBLE**|**二重線**|
 |**NUMERIC**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
 |**BIT**|**BOOL**|
 |**TINYINT**|**BYTE**|
-|**BIGINT**|`CString` 1|
+|**bigint**|`CString` 1|
 |**バイナリ**|`CByteArray`|
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |**DATE**|`CTime`, `CString`|
-|**時間**|`CTime`, `CString`|
+|**TIME**|`CTime`, `CString`|
 |**TIMESTAMP**|`CTime`, `CString`|
 
 1. ANSI **DECIMAL**と**数値**にマップする`CString`ため**SQL_C_CHAR** ODBC の既定の転送種類は、します。
@@ -57,4 +57,4 @@ MFC ODBC データベース クラスと、Microsoft SQL Server ODBC ドライ�
 ## <a name="see-also"></a>関連項目
 
 [SQL](../../data/odbc/sql.md)<br/>
-[SQL: SQL の直接呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL:SQL の直接呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

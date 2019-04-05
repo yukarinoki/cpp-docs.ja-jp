@@ -6,12 +6,12 @@ helpviewer_keywords:
 - OLE DB consumer templates, getting provider metadata
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
-ms.openlocfilehash: 9e61507a187f7625e7e90e2a0e3a1ce404573e29
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 12c3de79626411b76a402a7f5407f40a7b054318
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328871"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026030"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>スキーマ行セットを使用したメタデータの取得
 
@@ -42,7 +42,7 @@ ANSI SQL はデータ ストアのカタログ/スキーマ モデルを定義�
 SELECT * FROM authors WHERE l_name = 'pivo'
 ```
 
-このクエリでは、`l_name` が制約です。 これは、1 つだけ制限; 簡単な例スキーマ行セット クラスでは、いくつかの制限をサポートします。
+`l_name` 制限です。 これは、1 つだけ制限; 簡単な例スキーマ行セット クラスでは、いくつかの制限をサポートします。
 
 [スキーマ行セット typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)他の行セットと同じようにスキーマ行セットをインスタンス化して開くことによってアクセスできるように、すべての OLE DB スキーマ行セットをカプセル化します。 たとえば、typedef クラス[CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)として定義されます。
 
@@ -78,7 +78,7 @@ CRestrictions<CAccessor<CColumnsInfo>
     }
     ```
 
-1. 情報をフェッチするには、スキーマ行セット オブジェクトの適切なデータ メンバーにアクセスします。たとえば、`ColumnSchemaRowset.m_szColumnName` にアクセスします。 このデータ メンバーは、COLUMN_NAME に対応します。 各データ メンバーに対応する OLE DB 列を表示するには、[CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)を参照してください。
+1. 情報をフェッチするには、スキーマ行セット オブジェクトの適切なデータ メンバーにアクセスします。たとえば、`ColumnSchemaRowset.m_szColumnName` にアクセスします。 このデータ メンバーは、COLUMN_NAME に対応します。 各データ メンバーに対応する OLE DB 列を表示するには、次を参照してください。 [CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)します。
 
 OLE DB テンプレートのスキーマ行セットの参照の typedef クラスが提供されている (を参照してください[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md))。
 
@@ -86,7 +86,7 @@ OLE DB テンプレートのスキーマ行セットの参照の typedef クラ�
 
 スキーマ行セット クラスを使用する方法のより複雑な例については、次を参照してください。、 [CatDB](https://github.com/Microsoft/VCSamples)と[DBViewer](https://github.com/Microsoft/VCSamples)サンプル。
 
-スキーマ行セット プロバイダーのサポートについては、[スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)を参照してください。
+スキーマ行セット プロバイダーのサポートについては、次を参照してください。[スキーマ行セットのサポート](../../data/oledb/supporting-schema-rowsets.md)します。
 
 ## <a name="see-also"></a>関連項目
 

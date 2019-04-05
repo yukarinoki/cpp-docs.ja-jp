@@ -48,12 +48,12 @@ helpviewer_keywords:
 - InterlockedCompareExchange64_rel intrinsic
 - _InterlockedCompareExchange64_rel intrinsic
 ms.assetid: c3ad79c0-a523-4930-a3a4-69a65d7d5c81
-ms.openlocfilehash: 840a7e63bb9b98cfb46ea36e30b3439168688c87
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 6c0fabe7cbada87253960faca8e207bb10dd07bd
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328313"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59021470"
 ---
 # <a name="interlockedcompareexchange-intrinsic-functions"></a>_InterlockedCompareExchange の組み込み関数
 
@@ -178,7 +178,7 @@ __int64 _InterlockedCompareExchange64_rel(
 
 #### <a name="parameters"></a>パラメーター
 
-*変換先*<br/>
+*保存先*<br/>
 [入力、出力]宛先値へのポインター。 符号は無視されます。
 
 *Exchange*<br/>
@@ -197,12 +197,12 @@ __int64 _InterlockedCompareExchange64_rel(
 |---------------|------------------|------------|
 |`_InterlockedCompareExchange`, `_InterlockedCompareExchange8`, `_InterlockedCompareExchange16`, `_InterlockedCompareExchange64`|x86、ARM、x64|\<intrin.h>|
 |`_InterlockedCompareExchange_acq`, `_InterlockedCompareExchange_rel`, `_InterlockedCompareExchange8_acq`, `_InterlockedCompareExchange8_nf`, `_InterlockedCompareExchange8_rel`,`_InterlockedCompareExchange16_acq`, `_InterlockedCompareExchange16_nf`, `_InterlockedCompareExchange16_rel`, `_InterlockedCompareExchange64_acq`, `_InterlockedCompareExchange64_nf`, `_InterlockedCompareExchange64_rel`,|ARM|\<intrin.h>|
-|`_InterlockedCompareExchange_np`、 `_InterlockedCompareExchange16_np`、 `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|
+|`_InterlockedCompareExchange_np`では、 `_InterlockedCompareExchange16_np`では、 `_InterlockedCompareExchange64_np`|X64|\<intrin.h>|
 |`_InterlockedCompareExchange_HLEAcquire`, `_InterlockedCompareExchange_HLERelease`, `_InterlockedCompareExchange64_HLEAcquire`, `_InterlockedCompareExchange64_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Remarks
 
-`_InterlockedCompareExchange` は、`Destination` 値と `Comparand` 値のアトミックな比較を実行します。 
+`_InterlockedCompareExchange` アトミックの比較を実行、`Destination`値を`Comparand`値。 
   `Destination` 値が `Comparand` 値と等しい場合、`Exchange` 値は `Destination` で指定されたアドレスに格納されます。 それ以外の場合は演算が実行されません。
 
 `_InterlockedCompareExchange` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [InterlockedCompareExchange](/windows/desktop/api/winnt/nf-winnt-interlockedcompareexchange)関数。
@@ -224,7 +224,7 @@ Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォ
 
 ## <a name="example"></a>例
 
-次の例では、単純な低レベルのスレッド同期に `_InterlockedCompareExchange` を使用しています。 マルチスレッド プログラミングの基本であるこの方法には制限がありますが、インタロックされた組み込みの代表的な使用例を示すために紹介します。 最適な結果を得るには Windows API を使用してください。 マルチ スレッド プログラミングの詳細については、[マルチ スレッド Win32 プログラムの作成](../parallel/writing-a-multithreaded-win32-program.md)を参照してください。
+次の例では、単純な低レベルのスレッド同期に `_InterlockedCompareExchange` を使用しています。 マルチスレッド プログラミングの基本であるこの方法には制限がありますが、インタロックされた組み込みの代表的な使用例を示すために紹介します。 最適な結果を得るには Windows API を使用してください。 マルチ スレッド プログラミングの詳細については、次を参照してください。[マルチ スレッド Win32 プログラムの作成](../parallel/writing-a-multithreaded-win32-program.md)です。
 
 ```
 // intrinExample.cpp
@@ -435,12 +435,12 @@ int main(
 <29
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
 [_InterlockedCompareExchange128](../intrinsics/interlockedcompareexchange128.md)<br/>
 [_InterlockedCompareExchangePointer の組み込み関数](../intrinsics/interlockedcompareexchangepointer-intrinsic-functions.md)<br/>
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

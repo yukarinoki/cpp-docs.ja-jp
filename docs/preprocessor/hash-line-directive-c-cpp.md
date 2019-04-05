@@ -8,12 +8,12 @@ helpviewer_keywords:
 - line directive (#line)
 - '#line directive'
 ms.assetid: 585c1dc4-5184-4f01-98f4-80c1909744d7
-ms.openlocfilehash: e478d287af097081910d192e2ac0fbee6890bfa2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ad0fe1514e89b861bab046652b1768862cc8045b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50614761"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023738"
 ---
 # <a name="line-directive-cc"></a>#line ディレクティブ (C/C++)
 
@@ -29,7 +29,7 @@ ms.locfileid: "50614761"
 
 *数字シーケンス*値は、任意の整数定数を指定できます。 マクロ置換はプリプロセス トークンで実行できますが、結果は正しい構文に評価される必要があります。 *Filename*文字の組み合わせにすることができ、二重引用符で囲む必要があります (**""**)。 場合*filename*は省略すると、前のファイル名は変更されません。
 
-ソース行番号とファイル名を変更するには記述することで、 **#line**ディレクティブ。 トランスレーターは、行番号とファイル名を使用して、定義済みマクロの値を決定する`__FILE__`と`__LINE__`します。 これらのマクロを使用して、説明的なエラー メッセージをプログラム テキストに挿入できます。 これらの定義済みマクロの詳細については、[定義済みマクロ](../preprocessor/predefined-macros.md)を参照してください。
+ソース行番号とファイル名を変更するには記述することで、 **#line**ディレクティブ。 トランスレーターは、行番号とファイル名を使用して、定義済みマクロの値を決定する`__FILE__`と`__LINE__`します。 これらのマクロを使用して、説明的なエラー メッセージをプログラム テキストに挿入できます。 これらの定義済みマクロの詳細については、次を参照してください。[定義済みマクロ](../preprocessor/predefined-macros.md)します。
 
 `__FILE__`マクロは、二重引用符で囲まれたファイル名で構成される文字列に展開されます (**""**)。
 

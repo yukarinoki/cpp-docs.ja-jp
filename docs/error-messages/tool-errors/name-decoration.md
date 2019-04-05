@@ -6,12 +6,12 @@ helpviewer_keywords:
 - names [C++], decorated
 - decorated names, calling conventions
 ms.assetid: 8327a27b-bb4f-49f2-8218-b851b9d2a463
-ms.openlocfilehash: c01e684be62dbb8716f8556680b1c692af1efc45
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b916a73e0b8f86755384914fa85ef8a901e4a64c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50598862"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041524"
 ---
 # <a name="name-decoration"></a>名前の装飾
 
@@ -23,7 +23,7 @@ void CALLTYPE test(void)
 
 次の表は、さまざまな呼び出し規約のリンカー名を示します。
 
-|呼び出し規約|extern"C"または .c ファイル|.cpp、.cxx、または /TP|
+|呼び出し規則|extern"C"または .c ファイル|.cpp、.cxx、または /TP|
 |------------------------|---------------------------|------------------------|
 |C の名前付け規則 (`__cdecl`)|`_test`|`?test@@ZAXXZ`|
 |Fastcall 名前付け規則 (`__fastcall`)|`@test@0`|`?test@@YIXXZ`|
@@ -38,4 +38,4 @@ C++ から C の関数を呼び出すには、extern "C" を使用します。 e
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー ツール エラー LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)
+[リンカ ツール エラー LNK2001](../../error-messages/tool-errors/linker-tools-error-lnk2001.md)

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - raw_dispinterfaces attribute
 ms.assetid: f762864d-29bf-445b-825a-ba7b29a95409
-ms.openlocfilehash: 8a6c335c7afe2cc56613f06abf5c181f05f6bfec
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: ef8ed3992c77df0f1d551e923ddc90c2d1bb9b0b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50585394"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027924"
 ---
 # <a name="rawdispinterfaces"></a>raw_dispinterfaces
 **C++ 固有の仕様**
@@ -28,7 +28,7 @@ raw_dispinterfaces
 
 この属性を指定しない場合、高度なラッパーのみが生成され、エラーの場合は C++ 例外がスローされます。
 
-**END C 固有の仕様**
+**END C++ 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

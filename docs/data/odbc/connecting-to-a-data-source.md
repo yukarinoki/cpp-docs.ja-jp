@@ -10,12 +10,12 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: ef6c8c98-5979-43a8-9fb5-5bb06fc59f36
-ms.openlocfilehash: b7bb0ffe169fd9b4167e6af4b772df23acf02212
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1740a34036798dac69ffc8b486e03bf6439845a5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575527"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024562"
 ---
 # <a name="connecting-to-a-data-source"></a>データ ソースへの接続
 
@@ -31,7 +31,7 @@ ODBC データ ソースは、特定のデータ、データ、およびデー�
 
 - 直接実行[SQL](../../data/odbc/sql.md)ステートメント。
 
-データ ソース接続の操作が完了したら、閉じる、`CDatabase`オブジェクトとそれを破棄するか、新しい接続の再利用します。 データ ソース接続の詳細については、[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)を参照してください。
+データ ソース接続の操作が完了したら、閉じる、`CDatabase`オブジェクトとそれを破棄するか、新しい接続の再利用します。 データ ソース接続の詳細については、次を参照してください。[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)します。
 
 ## <a name="see-also"></a>関連項目
 

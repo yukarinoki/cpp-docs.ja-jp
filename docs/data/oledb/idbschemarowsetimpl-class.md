@@ -36,12 +36,12 @@ helpviewer_keywords:
 - GetRowset method
 - GetSchemas method
 ms.assetid: bd7bf0d7-a1c6-4afa-88e3-cfdbdf560703
-ms.openlocfilehash: 080504dabccd89340d511aa6d3192cf711d3d6bf
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: b764b571aae81f6225028cbe0d052d817d93d183
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57416860"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024362"
 ---
 # <a name="idbschemarowsetimpl-class"></a>IDBSchemaRowsetImpl クラス
 
@@ -111,7 +111,7 @@ HRESULT CheckRestrictions(REFGUID rguidSchema,
 *cRestrictions*<br/>
 [入力] コンシューマーがスキーマ行セットに渡した制限の数。
 
-*rgRestrictions*<br/>
+*で*<br/>
 [入力] 設定する制限値の長さ *cRestrictions* の配列。 詳細については、の説明を参照して、*で*パラメーター [SetRestrictions](../../data/oledb/idbschemarowsetimpl-setrestrictions.md)します。
 
 ### <a name="remarks"></a>Remarks
@@ -148,7 +148,7 @@ HRESULT CreateSchemaRowset(IUnknown *pUnkOuter,
 *cRestrictions*<br/>
 [入力] スキーマ行セットに適用する制限の数。
 
-*rgRestrictions*<br/>
+*で*<br/>
 [入力] 行セットに適用する `cRestrictions`**VARIANT**の配列。
 
 *riid*<br/>
@@ -194,7 +194,7 @@ void SetRestrictions(ULONG cRestrictions,
 *rguidSchema*<br/>
 [入力] 制限をフェッチするスキーマ行セットの GUID の配列。 配列の各要素は、1 つのスキーマ行セットの GUID ( `DBSCHEMA_TABLES`など) を保持します。
 
-*rgRestrictions*<br/>
+*で*<br/>
 [入力] 設定する制限値の長さ *cRestrictions* の配列。 各要素は、GUID によって識別されるスキーマ行セットの制限に対応します。 スキーマ行セットがプロバイダーによってサポートされていない場合、その要素は 0 に設定されます。 それ以外の場合、 **ULONG** 値は、そのスキーマ行セットでサポートされている制限を表すビット マスクを保持します。 特定のスキーマ行セットに対応する制限の詳細については、スキーマ行セット Guid の表を参照してくださいで[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows でSDK があります。
 
 ### <a name="remarks"></a>Remarks
@@ -237,7 +237,7 @@ STDMETHOD (GetRowset)(IUnknown *pUnkOuter,
 *cRestrictions*<br/>
 [入力] 行セットに適用する制限の数。
 
-*rgRestrictions*<br/>
+*で*<br/>
 [入力] 制限を表す `cRestrictions`**VARIANT**の配列。
 
 *riid*<br/>

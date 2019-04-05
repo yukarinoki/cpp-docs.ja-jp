@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data [C++], data access technologies
 - data access [C++], class libraries for databases
 ms.assetid: 95da6237-bbe2-480a-ae50-3a520051ceff
-ms.openlocfilehash: a56c15f76b83620e4f67c188450a6b5d2f68c22f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 142d067b6fbc9e2357ff8fc23fd931a1194477e9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58766041"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041255"
 ---
 # <a name="data-access-in-visual-c"></a>Visual C++ でのデータ アクセス
 
@@ -34,7 +34,7 @@ MFC (Microsoft Foundation Class) ライブラリには、ODBC (Open Database Con
 
 ## <a name="related-topics"></a>関連トピック
 
-[C および C++ を使用して SQL Database に接続します。](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
+[C および C++ を使用して SQL Database に接続する](/azure/sql-database/sql-database-develop-cplusplus-simple)<br/>
 C または C++ アプリケーションから Azure SQL Database に接続します。
 
 [C++ 用 Microsoft Azure Storage クライアント ライブラリ](https://github.com/Azure/azure-storage-cpp)<br/>
@@ -52,7 +52,7 @@ Azure を使用すると、柔軟性、スケーラビリティ、信頼性の�
 [C++ から Blob Storage を使用する方法](https://docs.microsoft.com/azure/storage/storage-c-plus-plus-how-to-use-blobs)<br/>
 Azure BLOB Storage は、非構造化データをオブジェクト/BLOB としてクラウドに格納するサービスです。 Blob Storage は、ドキュメント、メディア ファイル、アプリケーション インストーラーなど、任意の種類のテキストまたはバイナリ データを格納できます。 Blob Storage は、オブジェクト ストレージとも呼ばれます。
 
-[ ODBC プログラマ リファレンス](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
+[ ODBC プログラマーズ リファレンス](https://docs.microsoft.com/sql/odbc/reference/odbc-programmer-s-reference)<br/>
 ODBC インターフェイスは、C プログラミング言語で使用するために設計されています。 ODBC インターフェイスの使用では、3 つの領域に します。SQL ステートメント、ODBC 関数呼び出し、C プログラミングします。
 
 ## <a name="see-also"></a>関連項目

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pragmas, const_seg
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
-ms.openlocfilehash: ce932b068f5751b7cf1ceab969312defd18336f7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648345"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029623"
 ---
 # <a name="constseg"></a>const_seg
 セグメントを指定場所[const](../cpp/const-cpp.md)変数は、.obj ファイルに格納されます。
@@ -37,10 +37,10 @@ ms.locfileid: "50648345"
 
 使用して*識別子*により、複数のレコードを 1 つのポップを**pop**コマンド。
 
-"*セグメント名*"<br/>
+"*segment-name*"<br/>
 (省略可能)セグメントの名前。 使用すると**pop**、スタックがポップされ、*セグメント名*がアクティブなセグメント名になります。
 
-"*セグメント クラス*"<br/>
+"*segment-class*"<br/>
 (省略可能)C++ との互換性をバージョン 2.0 より前に含まれています。 これは無視されます。
 
 ## <a name="remarks"></a>Remarks
@@ -51,7 +51,7 @@ OBJ ファイルを表示できる、 [dumpbin](../build/reference/dumpbin-comma
 
 `const_seg` 内に動的な初期化を必要とするオブジェクトを定義すると、未定義の動作が発生します。
 
-パラメーターなしの `#pragma const_seg` は、セグメントを .rdata にリセットします。
+`#pragma const_seg` パラメーターなしのセグメントを .rdata にリセットします。
 
 ## <a name="example"></a>例
 

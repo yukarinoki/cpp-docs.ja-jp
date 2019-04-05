@@ -7,12 +7,12 @@ helpviewer_keywords:
 - _ReturnAddress intrinsic
 - ReturnAddress intrinsic
 ms.assetid: 7f4a5811-35e6-4f64-ba7c-21203380eeda
-ms.openlocfilehash: 01916a9306faa4159f54225b745fd56c35b5ae16
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e5013b20f9e7ed0349d940d9be61cc1b4afc95d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50641784"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041138"
 ---
 # <a name="returnaddress"></a>_ReturnAddress
 
@@ -20,7 +20,7 @@ ms.locfileid: "50641784"
 
 `_ReturnAddress`組み込みコントロールが呼び出し元に戻った後に実行される呼び出し元の関数の命令のアドレスを提供します。
 
-次のプログラムと、デバッガーでステップをビルドします。 プログラムをステップ実行するから返されるアドレスに注意してください`_ReturnAddress`します。 次の関数から復帰した直後に、場所`_ReturnAddress`が開き、使用、[する方法: [逆アセンブル] ウィンドウを使用して](/visualstudio/debugger/how-to-use-the-disassembly-window)と実行される次の命令のアドレスがから返されたアドレスと一致することに注意してください`_ReturnAddress`.
+次のプログラムと、デバッガーでステップをビルドします。 プログラムをステップ実行するから返されるアドレスに注意してください`_ReturnAddress`します。 その後、関数から取得した直後に、`_ReturnAddress`が開き、使用、[方法。[逆アセンブル] ウィンドウを使用して](/visualstudio/debugger/how-to-use-the-disassembly-window)から返されたアドレスが実行される次の命令のアドレスに一致することに注意してくださいと`_ReturnAddress`します。
 
 インライン展開月などの最適化に影響するリターン アドレス。 たとえば、次のサンプル プログラムをコンパイルした場合[/Ob1](../build/reference/ob-inline-function-expansion.md)、`inline_func`は呼び出し元の関数をインラインになります`main`します。 そのため、呼び出しを`_ReturnAddress`から`inline_func`と`main`それぞれ同じの値が生成されます。
 
@@ -61,10 +61,10 @@ int main(void)
 }
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
 [_AddressOfReturnAddress](../intrinsics/addressofreturnaddress.md)<br/>
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

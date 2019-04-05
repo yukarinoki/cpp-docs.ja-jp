@@ -127,12 +127,12 @@ helpviewer_keywords:
 - SetStatus method
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
-ms.openlocfilehash: a9e862e9df785a0986d9d75759de85c0c1448912
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423457"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040969"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor クラス
 
@@ -181,7 +181,7 @@ class CDynamicAccessor : public CAccessorBase
 
 列情報が作成され、このクラスで管理されるバッファーに格納されます。 使用してバッファーからデータを取得[GetValue](../../data/oledb/cdynamicaccessor-getvalue.md)します。
 
-動的アクセサー クラスの使用例とについては、[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)を参照してください。
+動的アクセサー クラスの使用例とについては、次を参照してください。[動的アクセサーの使用](../../data/oledb/using-dynamic-accessors.md)します。
 
 ## <a name="addbindentry"></a> CDynamicAccessor::AddBindEntry
 
@@ -195,7 +195,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*情報*<br/>
+*info*<br/>
 [in]A`DBCOLUMNINFO`列情報を含む構造体。 「DBCOLUMNINFO 構造体」を参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
@@ -348,7 +348,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 
 #### <a name="parameters"></a>パラメーター
 
-*pRowset*<br/>
+*ため*<br/>
 [in]ポインター、 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))インターフェイス。
 
 *pColumns*<br/>
@@ -403,7 +403,7 @@ bool GetColumnType(DBORDINAL nColumn,
 *nColumn*<br/>
 [in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。
 
-*pType*<br/>
+*p 入力してください。*<br/>
 [out]指定された列のデータ型へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -624,7 +624,7 @@ bool SetLength(const WCHAR* pColumnName,
 *nColumn*<br/>
 [in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。
 
-*nLength*<br/>
+*されて*<br/>
 [in]列のバイト単位の長さ。
 
 *pColumnName*<br/>
@@ -656,7 +656,7 @@ bool SetStatus(const WCHAR* pColumnName,
 *nColumn*<br/>
 [in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。
 
-*status*<br/>
+*状態*<br/>
 [in]列の状態。 参照してください[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
 *pColumnName*<br/>
@@ -697,7 +697,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in]列名を含む文字列へのポインター。
 
-*data*<br/>
+*[データ]*<br/>
 [in]データを含むメモリへのポインター。
 
 *nColumn*<br/>

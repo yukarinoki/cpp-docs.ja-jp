@@ -4,12 +4,12 @@ ms.date: 11/06/2018
 helpviewer_keywords:
 - OLE DB consumers, creating
 ms.assetid: ae32d657-72ea-4db8-9839-75cb5cff68ae
-ms.openlocfilehash: 4346bca99d3744657072a4940776934e3c03e9de
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 060a39a8436ff73900ebfaea7d1c882b9862ee7e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326642"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025138"
 ---
 # <a name="creating-a-simple-consumer"></a>単純なコンシューマーの作成
 
@@ -56,7 +56,7 @@ ms.locfileid: "51326642"
    1. **接続** タブで、サーバー上のサーバー名、ログオン ID、およびデータ ソースとデータベースのパスワードなど、必要な情報を指定します。
 
       > [!NOTE]
-      > セキュリティの問題がある、**パスワードを保存する**の機能、**データ リンク プロパティ** ダイアログ ボックス。 **、サーバーにログオン情報を入力して**は 2 つのラジオ ボタンがあります:**統合セキュリティを使用して Windows NT**と**特定のユーザー名とパスワードを使用して、**。
+      > セキュリティの問題がある、**パスワードを保存する**の機能、**データ リンク プロパティ** ダイアログ ボックス。 **、サーバーにログオン情報を入力して**は 2 つのラジオ ボタンがあります。**統合セキュリティを使用して Windows NT**と**特定のユーザー名とパスワードを使用して、** します。
 
       > [!NOTE]
       > 選択した場合**特定のユーザー名とパスワードを使用して、**、パスワードを保存するオプションがある (を使用して、**パスワードを保存する** チェック ボックス)。 ただし、このオプションは安全ではありません。 選択することをお勧め**統合セキュリティを使用して Windows NT**; このオプションでは、Windows NT を使用して、お客様の本人確認します。

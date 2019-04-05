@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Data property
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
-ms.openlocfilehash: 32c7b121d8c9309d2286158645ee4b6586f1df3b
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: c49913597f51ef231073b89d60ad9718b1113f44
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563369"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041485"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>方法: 定義のアクセスを制御し、値 (C++)
 
@@ -105,7 +105,7 @@ ms.locfileid: "57563369"
 
 1. キーを押して**Enter**値の追加が完了したら。
 
-コンボ ボックスのドロップダウン部分を拡大する方法については、[し、コンボ ボックスのドロップダウン リストのサイズの設定](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)を参照してください。
+コンボ ボックスのドロップダウン部分を拡大する方法については、次を参照してください。[し、コンボ ボックスのドロップダウン リストのサイズの設定](setting-the-size-of-the-combo-box-and-its-drop-down-list.md)します。
 
 > [!NOTE]
 > この手順を使用して、Win32 プロジェクトに値を追加することはできません (、**データ**Win32 プロジェクトのプロパティがグレー)。 Win32 プロジェクトはこの機能を追加するライブラリを持っていないため、プログラムで Win32 プロジェクトを使用してコンボ ボックスに値を追加する必要があります。
@@ -156,5 +156,5 @@ Win32
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ ボックスのコントロールを管理します。](controls-in-dialog-boxes.md)<br/>
-[方法: コントロールを追加、編集、または削除する](adding-editing-or-deleting-controls.md)<br/>
+[方法: 追加、編集、またはコントロールを削除](adding-editing-or-deleting-controls.md)<br/>
 [方法: レイアウト コントロール](arrangement-of-controls-on-dialog-boxes.md)<br/>

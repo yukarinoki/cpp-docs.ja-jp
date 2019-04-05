@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: 結合 (ODBC)'
+title: レコード セット:結合 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - joins [C++], in recordsets
@@ -10,14 +10,14 @@ helpviewer_keywords:
 - ODBC recordsets [C++], joins
 - recordsets [C++], joining tables
 ms.assetid: ca720900-a156-4780-bf01-4293633bea64
-ms.openlocfilehash: 135992e7eebd56c985c24228370695f10ac6da3a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e589f00ec0512794d14accc6bb33c0e7adbd378
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50523939"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035414"
 ---
-# <a name="recordset-performing-a-join-odbc"></a>レコードセット: 結合 (ODBC)
+# <a name="recordset-performing-a-join-odbc"></a>レコード セット:結合 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -38,6 +38,6 @@ ms.locfileid: "50523939"
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
-[レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[レコードセット: クエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)
+[レコード セット:クラスの宣言、定義済みクエリ (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)<br/>
+[レコード セット:テーブル (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[レコード セット:クエリの再実行 (Odbc)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)

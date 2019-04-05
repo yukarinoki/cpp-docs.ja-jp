@@ -5,12 +5,12 @@ helpviewer_keywords:
 - symbols [C++], predefined IDs
 - predefined symbol IDs
 ms.assetid: 91a5d610-1a04-47e8-b8a4-63ad650a90df
-ms.openlocfilehash: 22337e812936a90f8d7c4ead33989e1e0c4d39f0
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 5acaf9d470ce3d1cccad65bc8235cacfd7a56427
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562758"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024544"
 ---
 # <a name="predefined-symbol-ids"></a>定義済みのシンボル ID
 
@@ -36,5 +36,5 @@ Win32、MFC、または ATL
 ## <a name="see-also"></a>関連項目
 
 [リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>
-[方法: シンボルの作成](../windows/creating-new-symbols.md)<br/>
-[方法: シンボルの管理](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>
+[方法: シンボルを作成します。](../windows/creating-new-symbols.md)<br/>
+[方法: シンボルを管理します。](../windows/changing-a-symbol-or-symbol-name-id.md)<br/>

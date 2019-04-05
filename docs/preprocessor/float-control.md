@@ -8,12 +8,12 @@ helpviewer_keywords:
 - float_control pragma
 - pragmas, float_control
 ms.assetid: 4f4ba5cf-3707-413e-927d-5ecdbc0a9a43
-ms.openlocfilehash: 63e27e992778776e186345da07937d1a88844e5d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a7829252cebb726363c67c990a94d08b0d6467a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611017"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59032311"
 ---
 # <a name="floatcontrol"></a>float_control
 
@@ -21,11 +21,11 @@ ms.locfileid: "50611017"
 
 ## <a name="syntax"></a>構文
 
-> **#pragma float_control** [ **(** [*値* **、** *設定***[、プッシュ]** |[**プッシュ** | **pop** ] **)** ]
+> **#pragma float_control** [ **(** [ *value* **,** *setting* **[, push]** | [ **push** | **pop** ] **)** ]
 
 ## <a name="options"></a>オプション
 
-*値*、*設定*[、**プッシュ**]<br/>
+*value*, *setting* [, **push**]<br/>
 浮動小数点の動作を指定します。 *値*できる**正確な**、 **strict**、または**を除く**します。 詳細については、「[/fp (浮動小数点の動作の指定)](../build/reference/fp-specify-floating-point-behavior.md)」を参照してください。 *設定*できます**で**または**オフ**します。
 
 場合*値*は**strict**、両方の設定**strict**と**を除く**で指定された*設定*. **除く**にしか設定できません**で**とき**正確な**または**厳密な**にも設定されている**で**します。

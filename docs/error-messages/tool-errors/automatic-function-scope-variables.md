@@ -7,12 +7,12 @@ helpviewer_keywords:
 - functions [C++], scope
 - scope, declared within functions
 ms.assetid: 6e1a14c2-1fb0-4937-8628-8d963cc35ed4
-ms.openlocfilehash: 8803a1367dca2faf2042e851449eeedb6978b9e3
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: fe326621f421ecbbb0ce09dac91f1a71e8d669aa
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496097"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030314"
 ---
 # <a name="automatic-function-scope-variables"></a>自動変数 (関数スコープ)
 
@@ -55,4 +55,4 @@ void test(void) {
 
 ## <a name="see-also"></a>関連項目
 
-[リンカー ツール エラー LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)
+[リンカ ツール エラー LNK2019](../../error-messages/tool-errors/linker-tools-error-lnk2019.md)

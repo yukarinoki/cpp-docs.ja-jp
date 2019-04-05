@@ -5,12 +5,12 @@ ms.topic: reference
 f1_keywords:
 - event/Microsoft::WRL::Callback
 ms.assetid: afb15d25-3230-44f7-b321-e17c54872943
-ms.openlocfilehash: e5cccd337514df34729fc916900a7b16a15596fc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: d37e6fdd2521f07728305bfbf5441cebb363030a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58784774"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041391"
 ---
 # <a name="callback-function-wrl"></a>コールバック関数 (WRL)
 
@@ -233,7 +233,7 @@ ComPtr<TDelegateInterface> Callback(
 *object*<br/>
 イベントが発生したときにメンバー関数が呼び出されるオブジェクト。
 
-*method*<br/>
+*メソッド*<br/>
 イベントが発生したときに呼び出すメンバー関数。
 
 ## <a name="return-value"></a>戻り値
