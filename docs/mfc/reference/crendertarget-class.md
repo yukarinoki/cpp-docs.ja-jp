@@ -1,6 +1,6 @@
 ---
 title: CRenderTarget クラス
-ms.date: 11/04/2016
+ms.date: 03/27/2019
 f1_keywords:
 - CRenderTarget
 - AFXRENDERTARGET/CRenderTarget
@@ -114,12 +114,12 @@ helpviewer_keywords:
 - CRenderTarget [MFC], m_pRenderTarget
 - CRenderTarget [MFC], m_pTextFormatDefault
 ms.assetid: 30d1607d-68d3-4d14-ac36-fdbd0ef903a1
-ms.openlocfilehash: 112bd4422a1fa6b9b97239228dc586a0555ddc96
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: a14a1fba25c8c38c4bcf441dda566f14dc790f76
+ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57259881"
+ms.lasthandoff: 03/28/2019
+ms.locfileid: "58565763"
 ---
 # <a name="crendertarget-class"></a>CRenderTarget クラス
 
@@ -138,7 +138,7 @@ class CRenderTarget : public CObject;
 |名前|説明|
 |----------|-----------------|
 |[CRenderTarget::CRenderTarget](#crendertarget)|CRenderTarget オブジェクトを構築します。|
-|[CRenderTarget::~CRenderTarget](#crendertarget__~crendertarget)|デストラクターです。 レンダー ターゲットのオブジェクトが破棄されるときに呼び出されます。|
+|[CRenderTarget::~CRenderTarget](#_dtorcrendertarget)|デストラクターです。 レンダー ターゲットのオブジェクトが破棄されるときに呼び出されます。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -502,7 +502,7 @@ void DrawLine(
 
 ```
 void DrawRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush,
     FLOAT fStrokeWidth = 1.0,
     ID2D1StrokeStyle* strokeStyle = NULL);
@@ -510,7 +510,7 @@ void DrawRectangle(
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*<br/>
+*四角形*<br/>
 デバイス非依存ピクセルで、描画する四角形の大きさ
 
 *pBrush*<br/>
@@ -555,7 +555,7 @@ IDWriteTextFormat オブジェクトによって提供される形式の情報�
 ```
 void DrawText(
     const CString& strText,
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pForegroundBrush,
     CD2DTextFormat* textFormat = NULL,
     D2D1_DRAW_TEXT_OPTIONS options = D2D1_DRAW_TEXT_OPTIONS_NONE,
@@ -567,7 +567,7 @@ void DrawText(
 *strText*<br/>
 描画するために Unicode 文字の配列へのポインター。
 
-*rect*<br/>
+*四角形*<br/>
 サイズと、テキストが描画される領域の位置。
 
 *pForegroundBrush*<br/>
@@ -714,13 +714,13 @@ DestinationRectangle で指定されたレンダー ターゲットの領域を�
 
 ```
 void FillRectangle(
-    const CD2DRectF& rect,
+    const CD2DRectF& rectangle,
     CD2DBrush* pBrush);
 ```
 
 ### <a name="parameters"></a>パラメーター
 
-*rect*<br/>
+*四角形*<br/>
 デバイス非依存ピクセルで、描画する四角形のディメンションです。
 
 *pBrush*<br/>
