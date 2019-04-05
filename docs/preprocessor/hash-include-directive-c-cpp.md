@@ -8,12 +8,12 @@ helpviewer_keywords:
 - '#include directive'
 - include directive (#include)
 ms.assetid: 17067dc0-8db1-4f2d-b43e-ec12ecf83238
-ms.openlocfilehash: 67a44574a5a72a7b7addc0ed3d7b51cd3eb5b984
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 7ffccb34d52f8ffa1e6b9cc64a58d3471d02ac92
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57821390"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038982"
 ---
 # <a name="include-directive-cc"></a>#include ディレクティブ (C/C++)
 
@@ -92,7 +92,7 @@ CL MYPROG.C
 
 インクルード ファイルとして指定されている`#include "path-spec"`ディレクトリの検索は親ファイルのディレクトリから始まりし、すべての祖父母ファイルのディレクトリに続きます。 つまり、検索を含むソース ファイルを格納するディレクトリに対する相対開始、 **#include**処理中のディレクティブ。 親の親ファイルが存在せず、見つからなかった場合は、ファイル名が山かっこで囲まれているものとして検索が続行されます。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

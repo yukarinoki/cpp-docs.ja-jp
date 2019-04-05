@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - module attributes
 ms.assetid: 02223b2a-62b5-4262-832f-564b1e11e58e
-ms.openlocfilehash: bafdb65f255ddf33964d22e5ea80a62446c2ad45
-ms.sourcegitcommit: c85c8a1226d8fbbaa29f4691ed719f8e6cc6575c
+ms.openlocfilehash: 5c69e0aa9e3444ec9b43470f8feb4d1f870dc9c8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54893523"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040581"
 ---
 # <a name="module-c"></a>module (C++)
 
@@ -25,7 +25,7 @@ ms.locfileid: "54893523"
 
 ### <a name="parameters"></a>パラメーター
 
-*type*<br/>
+*種類*<br/>
 (省略可能)次のいずれかを指定できます。
 
 - `dll` 結果の DLL がインプロセス COM サーバーとして機能できるようにする関数およびクラスを追加します。 これが既定値です。
@@ -54,7 +54,7 @@ ms.locfileid: "54893523"
 *helpstring*<br/>
 タイプ ライブラリを指定します。
 
-*helpstringdll*<br/>
+*typelib*<br/>
 (省略可能)使用してドキュメントの文字列検索を実行する .dll ファイルの名前を設定します。 詳細については、「 [helpstringdll](/windows/desktop/Midl/helpstringdll) 」を参照してください。
 
 *helpfile*<br/>
@@ -72,8 +72,8 @@ ms.locfileid: "54893523"
 *restricted*<br/>
 (省略可能)ライブラリのメンバーは、任意に呼び出すことはできません。 詳細については、「 [restricted](/windows/desktop/Midl/restricted) 」の MIDL 属性に関する説明を参照してください。
 
-*custom*<br/>
-(省略可能)1 つまたは複数の属性です。これに似ています、[カスタム](custom-cpp.md)属性。 最初のパラメーター*カスタム*属性の GUID です。 例:
+*カスタム*<br/>
+(省略可能)1 つまたは複数の属性です。これに似ています、[カスタム](custom-cpp.md)属性。 最初のパラメーター*カスタム*属性の GUID です。 例えば:
 
 ```
 [module(custom={guid,1}, custom={guid1,2})]
@@ -103,7 +103,7 @@ DLL、実行可能ファイルまたはサービスの登録に使用される .
 
    [CAtlExeModuleT](../../atl/reference/catlexemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)として使用されます。
 
-- `type` = **service**
+- `type` = **サービス**
 
    [CAtlServiceModuleT](../../atl/reference/catlservicemodulet-class.md) は、基本クラスおよび標準の実行可能ファイルのエントリ ポイント [WinMain](/windows/desktop/api/winbase/nf-winbase-winmain)として使用されます。
 
@@ -166,7 +166,7 @@ BOOL WINAPI DllMain(DWORD dwReason, LPVOID lpReserved) {
 [スタンドアロン属性](stand-alone-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
 [usesgetlasterror](usesgetlasterror.md)<br/>
-[ライブラリ](/windows/desktop/Midl/library)<br/>
+[library](/windows/desktop/Midl/library)<br/>
 [helpcontext](helpcontext.md)<br/>
 [helpstring](helpstring.md)<br/>
 [helpfile](helpfile.md)<br/>
