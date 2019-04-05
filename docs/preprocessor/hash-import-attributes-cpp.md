@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - '#import directive, attributes'
 ms.assetid: 2a5085e3-82ee-4f83-892b-0aa6cc13863b
-ms.openlocfilehash: 3cd1b259270ff8c76ac80ec66000f3c8177140fa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 954dfec50db75c0e3d11f0924b0ee398cd211fe1
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50624407"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036141"
 ---
 # <a name="import-attributes-c"></a>#import の属性 (C++)
 使用される属性へのリンク、`#import`ディレクティブ。
@@ -47,7 +47,7 @@ ms.locfileid: "50624407"
 |[rename_search_namespace](../preprocessor/rename-search-namespace.md)|同じ機能を持つ、 [rename_namespace](../preprocessor/rename-namespace.md)属性で #import ディレクティブを使用するタイプ ライブラリの使用、 [auto_search](../preprocessor/auto-search.md)属性。|
 |[tlbid](../preprocessor/tlbid.md)|プライマリ タイプ ライブラリ以外のライブラリの読み込みを許可します。|
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

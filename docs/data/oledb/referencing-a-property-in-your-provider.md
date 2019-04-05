@@ -6,16 +6,16 @@ helpviewer_keywords:
 - references, to properties in providers
 - referencing properties in providers
 ms.assetid: bfbb3851-5eed-467a-a179-4a97a9515525
-ms.openlocfilehash: d8c775af8f887deb7bf49016f9716fa0a76d2439
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: c3e620cd760aa04df7d7d2209ef009a606675276
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415943"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028461"
 ---
 # <a name="referencing-a-property-in-your-provider"></a>プロバイダーでのプロパティの参照
 
-対象のプロパティのプロパティ グループとプロパティの ID を検索します。 詳細については、[OLE DB プロパティ](/previous-versions/windows/desktop/ms722734(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**を参照してください。
+対象のプロパティのプロパティ グループとプロパティの ID を検索します。 詳細については、次を参照してください。 [OLE DB プロパティ](/previous-versions/windows/desktop/ms722734(v=vs.85))で、 **OLE DB プログラマーズ リファレンス**します。
 
 次の例では、行セットからプロパティを取得しようとしていることを前提としています。 セッションまたはコマンドを使用するためのコードは似ていますが、別のインターフェイスを使用します。
 

@@ -3,12 +3,12 @@ title: Visual Studio で CMake デバッグ セッションを構成する
 ms.date: 03/21/2019
 helpviewer_keywords:
 - CMake debugging
-ms.openlocfilehash: 712728247c439c38d5e640118fc153cf89647c80
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.openlocfilehash: 9899f99994935ec419fff400670644b7d78a190a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356167"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035349"
 ---
 # <a name="configure-cmake-debugging-sessions"></a>CMake デバッグ セッションを構成する
 
@@ -42,7 +42,7 @@ CMake メニューからデバッグ セッションを開始することもで�
 
 ## <a name="support-for-cmakesettings-variables"></a>CMakeSettings 変数のサポート
 
- **Launch.vs.json**で宣言されている変数をサポートしている**CMakeSettings.json** (下記参照)、現在選択されている構成に適用されるとします。 `currentDir` という名前のキーもあり、これは起動しているアプリの現在のディレクトリを設定します。
+ **Launch.vs.json**で宣言されている変数をサポートしている**CMakeSettings.json** (下記参照)、現在選択されている構成に適用されるとします。 という名前のキーも`currentDir`、ローカルのプロジェクトを起動したアプリの現在のディレクトリを設定します。
 
 ```json
 {
@@ -59,12 +59,19 @@ CMake メニューからデバッグ セッションを開始することもで�
 ```cmd
 C:\Users\satyan\7f14809a-2626-873e-952e-cdf038211175\
 ```
+
+'Cwd' キーは、プロジェクトのリモート起動のアプリの現在のディレクトリを設定します。 既定値は '${debugInfo.defaultWorkingDirectory}' に評価されます。 
+
+```cmd
+/var/tmp/src/bfc6f7f4-4f0f-8b35-80d7-9198fa973fb9/Linux-Debug
+```
+
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)<br/>
+[Visual Studio で CMake プロジェクト](cmake-projects-in-visual-studio.md)<br/>
 [Linux CMake プロジェクトを構成する](../linux/cmake-linux-project.md)<br/>
 [リモートの Linux コンピューターに接続する](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [CMake のビルド設定をカスタマイズする](customize-cmake-settings.md)<br/>
 [CMake デバッグ セッションを構成する](configure-cmake-debugging-sessions.md)<br/>
-[Linux プロジェクトの配置、実行、デバッグ](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[Linux プロジェクトのデプロイ、実行、デバッグ](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [CMake 定義済み構成リファレンス](cmake-predefined-configuration-reference.md)<br/>

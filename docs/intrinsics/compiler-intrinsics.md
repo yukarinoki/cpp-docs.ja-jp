@@ -7,12 +7,12 @@ helpviewer_keywords:
 - cl.exe compiler, performance
 - cl.exe compiler, intrinsics
 ms.assetid: 48bb9929-7d78-4fd8-a092-ae3c9f971858
-ms.openlocfilehash: f66c6247aba92a1528489dcf689239c9341b7d2b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9a014e870d731d7e7d443c3bfefd66884aa50d5d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50560018"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029279"
 ---
 # <a name="compiler-intrinsics"></a>コンパイラ組み込み
 
@@ -40,7 +40,7 @@ ms.locfileid: "50560018"
 
 - [x64 (amd64) 組み込み一覧](../intrinsics/x64-amd64-intrinsics-list.md)
 
-- [すべてのアーキテクチャで使用可能な組み込みクラス](../intrinsics/intrinsics-available-on-all-architectures.md)
+- [すべてのアーキテクチャで利用可能な組み込み](../intrinsics/intrinsics-available-on-all-architectures.md)
 
 - [組み込み関数のアルファベット順の一覧](../intrinsics/alphabetical-listing-of-intrinsic-functions.md)
 

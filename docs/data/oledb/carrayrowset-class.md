@@ -43,12 +43,12 @@ helpviewer_keywords:
 - operator[], arrays
 - m_nRowsRead
 ms.assetid: 511427e1-73ca-4fd8-9ba1-ae9463557cb6
-ms.openlocfilehash: 0a867f80f3be685b3c45c8645d6441732acf5851
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b257c4e95a99bfbc8042c5935638a70deac0ea7a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51330984"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040239"
 ---
 # <a name="carrayrowset-class"></a>CArrayRowset クラス
 
@@ -93,7 +93,7 @@ class CArrayRowset :
 |-|-|
 |[CArrayRowset::m_nRowsRead](#nrowsread)|既に読み取られた行の数。|
 
-## <a name="carrayrowset"></a> Carrayrowset::carrayrowset
+## <a name="carrayrowset"></a> CArrayRowset::CArrayRowset
 
 新しい `CArrayRowset` オブジェクトを作成します。
 
@@ -118,7 +118,7 @@ CArrayRowset(int nMax = 100000);
 HRESULT Snapshot() throw();
 ```
 
-## <a name="operator"></a> Carrayrowset:
+## <a name="operator"></a> CArrayRowset::operator
 
 行セット内の行にアクセスするためには、配列に似た構文を提供します。
 
@@ -144,7 +144,7 @@ TAccessor & operator[](int nrow);
 
 場合*nRow*行セットの行の数を超える、例外がスローされます。
 
-## <a name="nrowsread"></a> Carrayrowset::m_nrowsread
+## <a name="nrowsread"></a> CArrayRowset::m_nRowsRead
 
 既に読み取られた行セット内の行の数が含まれています。
 

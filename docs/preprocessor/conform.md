@@ -9,12 +9,12 @@ helpviewer_keywords:
 - forScope conform pragma
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
-ms.openlocfilehash: 6589fe23359eecd654b23380747fbd3213c54dce
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50432904"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026579"
 ---
 # <a name="conform"></a>conform
 **C++ 固有の仕様**
@@ -23,7 +23,7 @@ ms.locfileid: "50432904"
 
 ## <a name="syntax"></a>構文
 
-> **#pragma 準拠 (** *名前***[、表示]** [**、** {**で** | **オフ**}][**、** {**プッシュ** | **pop** }] [**、** *識別子*] **)**
+> **#pragma conform(** *name* **[, show]** [**,** { **on** | **off** } ] [ [**,** { **push** | **pop** } ] [**,** *identifier* ] ] **)**
 
 ### <a name="parameters"></a>パラメーター
 

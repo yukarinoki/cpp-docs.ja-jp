@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __shiftright128 intrinsic
 ms.assetid: 5419a6c4-0de1-43fb-b314-4faa5b2d051f
-ms.openlocfilehash: 8c35625efa9ddc4cf5de3900c6e3e37047b2aa10
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: b721abc9be22709fdc221951e2012300d6b96762
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51332154"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59030103"
 ---
 # <a name="shiftright128"></a>__shiftright128
 
@@ -37,7 +37,7 @@ unsigned __int64 __shiftright128(
 *上位*<br/>
 [in]シフトする 128 ビット数の上位 64 ビット。
 
-*Shift*<br/>
+*シフト*<br/>
 [in]シフトするビット数。
 
 ## <a name="return-value"></a>戻り値
@@ -58,11 +58,11 @@ unsigned __int64 __shiftright128(
 
 ## <a name="example"></a>例
 
-例については、[_ _shiftleft128](../intrinsics/shiftleft128.md)を参照してください。
+例については、次を参照してください。 [_ _shiftleft128](../intrinsics/shiftleft128.md)します。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
 [__shiftleft128](../intrinsics/shiftleft128.md)<br/>
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

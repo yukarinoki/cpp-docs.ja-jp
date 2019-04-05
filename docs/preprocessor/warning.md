@@ -10,12 +10,12 @@ helpviewer_keywords:
 - pop warning pragma
 - warning pragma
 ms.assetid: 8e9a0dec-e223-4657-b21d-5417ebe29cc8
-ms.openlocfilehash: 53f79061ded358c9cb895fd7e8e245c46ed99fd5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 1341472af22582635207a2bdff93b4367fd59330
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50631724"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037751"
 ---
 # <a name="warning-pragma"></a>warning プラグマ
 コンパイラの警告メッセージの動作の選択的な変更を有効にします。
@@ -35,10 +35,10 @@ ms.locfileid: "50631724"
 
 |警告指定子|説明|
 |------------------------|-------------|
-|*1、2、3、4*|指定された警告に特定のレベルを適用します。 これは、既定で無効になっている指定された警告も有効にします。|
+|*1, 2, 3, 4*|指定された警告に特定のレベルを適用します。 これは、既定で無効になっている指定された警告も有効にします。|
 |*default*|警告の動作を既定値にリセットします。 これは、既定で無効になっている指定された警告も有効にします。 警告は、既定の文書化されたレベルで生成されます。<br /><br /> 詳細については、「 [Compiler Warnings That Are Off by Default](../preprocessor/compiler-warnings-that-are-off-by-default.md)」を参照してください。|
-|*disable*|指定した警告メッセージを発行しません。|
-|*error*|指定した警告をエラーとして報告します。|
+|*無効にします。*|指定した警告メッセージを発行しません。|
+|*エラー*|指定した警告をエラーとして報告します。|
 |*once*|指定したメッセージを 1 回だけ表示します。|
 |*非表示します。*|プラグマの現在の状態をスタックにプッシュし、次の行に対して指定された警告を無効にします。次に、プラグマの状態がリセットされるように警告スタックをポップします。|
 

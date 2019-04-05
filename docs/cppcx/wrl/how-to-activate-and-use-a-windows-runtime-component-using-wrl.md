@@ -3,12 +3,12 @@ title: '方法: アクティブ化し、WRL を使用した Windows ランタイ
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 54828f02-6af3-45d1-b965-d0104442f8d5
-ms.openlocfilehash: ccc64769ca319e8aba141ce95a00eb876cc051f3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 8c0bed825f76fdf0f2c5cc1fa095e54f08bb8a67
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785047"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037218"
 ---
 # <a name="how-to-activate-and-use-a-windows-runtime-component-using-wrl"></a>方法: アクティブ化し、WRL を使用した Windows ランタイム コンポーネントを使用します。
 
@@ -26,7 +26,7 @@ Windows ランタイム C++ テンプレート ライブラリを Windows ラン
 使用して、次の手順、`Windows::Foundation::IUriRuntimeClass`アクティベーション ファクトリを Windows ランタイム コンポーネントの作成し、そのコンポーネントのインスタンスを作成、プロパティの値を取得する方法を示すインターフェイスです。 また、Windows ランタイムを初期化する方法を示します。 完全な例を次に示します。
 
 > [!IMPORTANT]
-> 通常は、ユニバーサル Windows プラットフォーム (UWP) アプリで Windows ランタイム C++ テンプレート ライブラリを使用して、この例は、図のコンソール アプリを使用します。 などの関数`wprintf_s`UWP アプリからは使用できません。 型および UWP アプリで使用できる関数の詳細については、[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)と[Win32 および COM UWP アプリの](/uwp/win32-and-com/win32-and-com-for-uwp-apps)を参照してください。
+> 通常は、ユニバーサル Windows プラットフォーム (UWP) アプリで Windows ランタイム C++ テンプレート ライブラリを使用して、この例は、図のコンソール アプリを使用します。 などの関数`wprintf_s`UWP アプリからは使用できません。 型および UWP アプリで使用できる関数の詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)と[Win32 および COM UWP アプリの](/uwp/win32-and-com/win32-and-com-for-uwp-apps)します。
 
 #### <a name="to-activate-and-use-a-windows-runtime-component"></a>Windows ランタイム コンポーネントをアクティブ化して使用するには
 

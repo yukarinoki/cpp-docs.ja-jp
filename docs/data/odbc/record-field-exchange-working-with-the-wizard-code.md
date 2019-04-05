@@ -1,5 +1,5 @@
 ---
-title: 'レコード フィールド エクスチェンジ: ウィザード コードの操作'
+title: レコード フィールド エクス チェンジ:ウィザード コードの使用
 ms.date: 11/04/2016
 helpviewer_keywords:
 - DoFieldExchange method, overriding
@@ -15,19 +15,19 @@ helpviewer_keywords:
 - overriding, DoFieldExchange
 - m_nFields data member, initializing
 ms.assetid: f00d882a-ff1b-4a75-9717-98d8762bb237
-ms.openlocfilehash: c0e1a35e5476c9e2e335c6f2863429d89e4fa28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 82f0d946cac3429150250e2df5d1bfd674ec30ee
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492119"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041294"
 ---
-# <a name="record-field-exchange-working-with-the-wizard-code"></a>レコード フィールド エクスチェンジ: ウィザード コードの操作
+# <a name="record-field-exchange-working-with-the-wizard-code"></a>レコード フィールド エクス チェンジ:ウィザード コードの使用
 
 このトピックでは、コードを説明する MFC アプリケーション ウィザードと**クラスの追加**(」の説明に従って[MFC ODBC コンシューマーの追加](../../mfc/reference/adding-an-mfc-odbc-consumer.md)) rfx 関数とそのコードを変更する方法をサポートするために記述します。
 
 > [!NOTE]
->  このトピックの対象から派生したクラス`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチを使用している場合は、バルク レコード フィールド エクス チェンジ (Bulk RFX) が実装されます。 バルク rfx 関数は、rfx 関数に似ています。 相違点を理解するのを参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの対象から派生したクラス`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチを使用している場合は、バルク レコード フィールド エクス チェンジ (Bulk RFX) が実装されます。 バルク rfx 関数は、rfx 関数に似ています。 相違点を理解するのを参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 MFC アプリケーション ウィザードを使用してレコード セット クラスを作成する場合または**クラスの追加**ウィザードでは、テーブル、データ ソースに基づいてして、ウィザードで行った列の選択の RFX に関連する次の要素が書き込まれます。
 
@@ -97,9 +97,9 @@ void CSections::DoFieldExchange(CFieldExchange* pFX)
 
 - 関数のこのセクションでは、フィールド マップと呼ばれます。
 
-- 呼び出し`CFieldExchange::SetFieldType`を使用して、`pFX`ポインター。 この呼び出しは、すべての RFX 関数の末尾に呼び出しを指定します`DoFieldExchange`または次回の呼び出し`SetFieldType`は出力列です。 詳細については、[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)を参照してください。
+- 呼び出し`CFieldExchange::SetFieldType`を使用して、`pFX`ポインター。 この呼び出しは、すべての RFX 関数の末尾に呼び出しを指定します`DoFieldExchange`または次回の呼び出し`SetFieldType`は出力列です。 詳細については、次を参照してください。[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)します。
 
-- いくつかの呼び出し、`RFX_Text`グローバル関数、フィールド データ メンバーごとに 1 つ (は他のすべて`CString`の例では、変数)。 これらの呼び出しでは、データ ソースに列名とフィールドのデータ メンバー間のリレーションシップを指定します。 RFX 関数は、実際のデータ転送を行います。 クラス ライブラリでは、RFX 関数の一般的なすべてのデータ型を提供します。 RFX 関数の詳細については、[レコード フィールド エクス チェンジ: RFX 関数を使用して](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)を参照してください。
+- いくつかの呼び出し、`RFX_Text`グローバル関数、フィールド データ メンバーごとに 1 つ (は他のすべて`CString`の例では、変数)。 これらの呼び出しでは、データ ソースに列名とフィールドのデータ メンバー間のリレーションシップを指定します。 RFX 関数は、実際のデータ転送を行います。 クラス ライブラリでは、RFX 関数の一般的なすべてのデータ型を提供します。 RFX 関数の詳細については、次を参照してください。[レコード フィールド エクス チェンジ。RFX 関数を使用して](../../data/odbc/record-field-exchange-using-the-rfx-functions.md)します。
 
     > [!NOTE]
     >  結果セットの列の順序では、RFX 関数の呼び出しの順序が一致する必要があります`DoFieldExchange`します。

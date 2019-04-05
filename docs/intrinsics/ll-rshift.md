@@ -8,12 +8,12 @@ helpviewer_keywords:
 - __ll_rshift intrinsic
 - ll_rshift intrinsic
 ms.assetid: ef13b732-d122-44a0-add9-f5544a2c4ab2
-ms.openlocfilehash: 9c486921e41732ef7736ca5b62b44a86010dcf83
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e39f8fe797467569077dd24baf49670607915107
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50621873"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041021"
 ---
 # <a name="llrshift"></a>__ll_rshift
 
@@ -78,7 +78,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>出力
+## <a name="output"></a>Output
 
 ```
 ffffffffffffff00
@@ -89,10 +89,10 @@ fffffffffffffff0
 
 **注**場合`_ull_rshift`が使用すると、右にシフトした値の MSB いたでしょう 0 の場合、目的の結果は取得できていない場合は負の値をします。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [__ll_lshift](../intrinsics/ll-lshift.md)<br/>
 [__ull_rshift](../intrinsics/ull-rshift.md)

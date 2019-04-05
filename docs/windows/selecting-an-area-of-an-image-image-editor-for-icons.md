@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Image editor [C++], Properties window
 - Properties window, image editor
 ms.assetid: 8b6ce4ad-eba1-4ece-86ba-cea92c3edff2
-ms.openlocfilehash: 246dee3c7d0c1a5a4f495fddf709833acc2c885e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 849da0d14987a057d39d5f9531e97545b3d4b8cf
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57562992"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033295"
 ---
 # <a name="how-to-edit-an-image"></a>方法: イメージを編集します。
 
@@ -54,7 +54,7 @@ ms.locfileid: "57562992"
 > [!NOTE]
 > 参照してください、**矩形選択**と**不規則選択**ツールには描か[イメージ エディターのツールバー](../windows/toolbar-image-editor-for-icons.md) の各ボタンに関連付けられたツールヒントを表示または**イメージ エディター**ツールバー。
 
-選択範囲からカスタム ブラシを作成することもできます。 詳細については、[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)を参照してください。
+選択範囲からカスタム ブラシを作成することもできます。 詳細については、次を参照してください。[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)です。
 
 ## <a name="how-to"></a>方法
 
@@ -119,7 +119,7 @@ ms.locfileid: "57562992"
 
 1. 新しい場所にある画像の選択範囲を固定するには、選択範囲の境界線の外側を選択します。
 
-選択した場合、描画の詳細については、[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)を参照してください。
+選択した場合、描画の詳細については、次を参照してください。[カスタム ブラシの作成](../windows/creating-a-custom-brush-image-editor-for-icons.md)です。
 
 ### <a name="to-flip-an-image"></a>イメージを反転するには
 
@@ -183,7 +183,7 @@ ms.locfileid: "57562992"
 
 #### <a name="to-shrink-or-stretch-part-of-an-image"></a>イメージの一部を拡大または縮小するには
 
-1. サイズを変更するイメージの一部を選択します。 詳細については、[領域のイメージの選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)を参照してください。
+1. サイズを変更するイメージの一部を選択します。 詳細については、次を参照してください。[領域のイメージの選択](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)します。
 
 1. 選択範囲が適切なサイズになるまでは、サイズ変更ハンドルのいずれかをドラッグします。
 
@@ -209,11 +209,11 @@ ms.locfileid: "57562992"
    |--------------|-----------------|
    |**色**|イメージのカラー スキームを指定します。 選択**モノクロ**、 **16**、または**256**、または**True Color**します。<br/><br/>選択する場合、既に 16 色パレットを使用してイメージを描画した、**モノクロ**イメージで色を黒と白の置換が発生します。 コントラストは常に維持されません。 変換など、赤、緑の隣接する領域は両方を黒にします。|
    |**ファイル名**|イメージ ファイルの名前を指定します。<br/><br/>既定では、Visual Studio には、既定のリソース識別子 (IDB_BITMAP1) して、適切な拡張機能を追加すること ("IDB_") の最初の 4 つの文字を削除して作成された基本ファイル名が割り当てられます。 この例では、イメージのファイル名になります*BITMAP1.bmp*します。 その名前を変更することが*MYBITMAP1.bmp*します。|
-   |**Height**|イメージの高さをピクセル単位で設定します。 既定値には 48 です。<br/><br/>イメージをトリミングまたは既存のイメージの下の空白領域に追加します。|
+   |**高さ**|イメージの高さをピクセル単位で設定します。 既定値には 48 です。<br/><br/>イメージをトリミングまたは既存のイメージの下の空白領域に追加します。|
    |**ID**|リソースの識別子を設定します。<br/><br/>イメージの Microsoft Visual Studio では、既定では、識別子を割り当てます、[次へ] 使用可能な一連の。IDB_BITMAP1、IDB_BITMAP2 など。 類似した名前は、アイコンとカーソルに使用されます。|
-   |**パレット**|色のプロパティを変更します。<br/><br/>色を選択して表示 をダブルクリック、[カスタム カラー セレクター ダイアログ ボックス](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)します。 RGB または HSL 値を適切なテキスト ボックスに入力して、色を定義します。|
+   |**[パレット]**|色のプロパティを変更します。<br/><br/>色を選択して表示 をダブルクリック、[カスタム カラー セレクター ダイアログ ボックス](../windows/custom-color-selector-dialog-box-image-editor-for-icons.md)します。 RGB または HSL 値を適切なテキスト ボックスに入力して、色を定義します。|
    |**SaveCompressed**|イメージが圧縮された形式かどうかを示します。 このプロパティは読み取り専用です。<br/><br/>Visual Studio には、圧縮された形式で画像を保存することはできませんので、Visual Studio で作成された任意のイメージのこのプロパティは**False**します。 このプロパティになります (他のプログラムで作成された) 圧縮されたイメージを開くには、Visual Studio で場合、 **True**します。 Visual Studio を使用して、圧縮されたイメージを保存する場合に圧縮されずにこのプロパティは元に戻す**False**します。|
-   |**Width**|イメージの幅をピクセル単位で設定します。 ビットマップの既定値には 48 です。<br/><br/>イメージをトリミングまたは既存のイメージの右側に空白領域を追加します。|
+   |**幅**|イメージの幅をピクセル単位で設定します。 ビットマップの既定値には 48 です。<br/><br/>イメージをトリミングまたは既存のイメージの右側に空白領域を追加します。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -222,7 +222,7 @@ ms.locfileid: "57562992"
 ## <a name="see-also"></a>関連項目
 
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)<br/>
-[方法: アイコンまたはその他の画像を作成する](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[方法: 描画ツールを使用する](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[方法: 色を調整する](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[方法: アイコンまたはその他のイメージを作成します。](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[方法: 描画ツールを使用して、](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[方法: 色の調整](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

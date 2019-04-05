@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - PRJ0049
 ms.assetid: 8b38afa1-e080-4efd-ae89-776cfd044413
-ms.openlocfilehash: fba3de0be764aa56b56ed22c6a9fde9366295456
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 0252103757df1c5dc95c9691c6da1d3630d29772
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816231"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035560"
 ---
 # <a name="project-build-warning-prj0049"></a>プロジェクト ビルドの警告 PRJ0049
 
@@ -21,7 +21,7 @@ Visual Studio 2008 を使用して作成されたアプリケーションは、�
 
 1. 次のいずれかを選択します。
 
-   - プロジェクトの対象となるフレームワークを変更**プロパティ ページ** ダイアログ ボックスのすべての参照先アセンブリとプロジェクトの最小限の framework バージョン以降できるようにします。 詳細については、[参照の追加](../../build/adding-references-in-visual-cpp-projects.md)を参照してください。
+   - プロジェクトの対象となるフレームワークを変更**プロパティ ページ** ダイアログ ボックスのすべての参照先アセンブリとプロジェクトの最小限の framework バージョン以降できるようにします。 詳細については、次を参照してください。[参照の追加](../../build/adding-references-in-visual-cpp-projects.md)します。
 
    - アセンブリまたは最小限の framework バージョンが、対象のフレームワークよりも後のプロジェクトへの参照を削除します。 これらの項目は、プロジェクトの警告アイコンでマークは**プロパティ ページ**します。
 

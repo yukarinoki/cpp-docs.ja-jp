@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - __readcr3 intrinsic
 ms.assetid: e24392c3-cad7-4788-8f31-94bf2e9e0053
-ms.openlocfilehash: 928be5798c972881015d9af3733b5757afbf64ca
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8b5839d233154b6ddb69d2bbe0b13497c3b66305
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50447919"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031116"
 ---
 # <a name="readcr3"></a>__readcr3
 
@@ -41,8 +41,8 @@ CR3 レジスタの値。
 
 この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

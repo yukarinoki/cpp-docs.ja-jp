@@ -44,12 +44,12 @@ helpviewer_keywords:
 - _InterlockedDecrement64_nf intrinsic
 - InterlockedDecrement_rel intrinsic
 ms.assetid: 5268fce3-86b5-4b2b-b96c-2e531a3fb9b5
-ms.openlocfilehash: e2816d99991fcd051c5bbfbe6f4be6a43db2ef2e
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 525c40f4260d59f370f0580d2cb7d9e8f184ee4c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328559"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035092"
 ---
 # <a name="interlockeddecrement-intrinsic-functions"></a>_InterlockedDecrement の組み込み関数
 
@@ -111,7 +111,7 @@ __int64 _InterlockedDecrement64_nf(
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`_InterlockedDecrement`、 `_InterlockedDecrement16`、 `_InterlockedDecrement64`|x86、ARM、x64|
+|`_InterlockedDecrement`では、 `_InterlockedDecrement16`では、 `_InterlockedDecrement64`|x86、ARM、x64|
 |`_InterlockedDecrement_acq`, `_InterlockedDecrement_rel`, `_InterlockedDecrement_nf`, `_InterlockedDecrement16_acq`, `_InterlockedDecrement16_rel`, `_InterlockedDecrement16_nf`, `_InterlockedDecrement64_acq`, `_InterlockedDecrement64_rel`, `_InterlockedDecrement64_nf`,|ARM|
 
 **ヘッダー ファイル** \<intrin.h >
@@ -128,7 +128,7 @@ ARM プラットフォームでは、クリティカル セクションの最初
   `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
 
-  `lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、[align](../cpp/align-cpp.md)を参照してください。
+  `lpAddend` パラメーターが指す変数は 32 ビットの境界に合わせて調整する必要があります。そのようにしない場合、この関数はマルチプロセッサの x86 システムおよび x 86 システム以外のシステムで失敗します。 詳細については、次を参照してください。 [align](../cpp/align-cpp.md)します。
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
@@ -202,6 +202,6 @@ void __cdecl SimpleThread(void* pParam) {
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

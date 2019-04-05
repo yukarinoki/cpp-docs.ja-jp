@@ -5,12 +5,12 @@ helpviewer_keywords:
 - rowsets, OLE DB object model
 - OLE DB, object model
 ms.assetid: 1a274a25-c310-4430-a1ec-bd2bd8120eff
-ms.openlocfilehash: 83e94a1075392bdf730b98f8f10a9751662ec976
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 303ad4166f0f1126182956fae9c19f513be7cfb3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486802"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039163"
 ---
 # <a name="ole-db-object-model"></a>OLE DB オブジェクト モデル
 
@@ -22,7 +22,7 @@ OLE DB オブジェクト モデルは、次のオブジェクトまたはコン
 
 ## <a name="sessions"></a>セッション
 
-セッションでは、クエリおよびデータを取得するデータ ソースと特定の相互作用を管理します。 各セッションでは、1 つのトランザクションです。 トランザクションは、ACID テストによって定義された分割できない作業単位です。 ACID の定義では、[トランザクション](#vcconoledbcomponents_transactions)を参照してください。
+セッションでは、クエリおよびデータを取得するデータ ソースと特定の相互作用を管理します。 各セッションでは、1 つのトランザクションです。 トランザクションは、ACID テストによって定義された分割できない作業単位です。 ACID の定義では、次を参照してください。[トランザクション](#vcconoledbcomponents_transactions)です。
 
 セッションでは、行セットを開くと、それを作成したデータ ソース オブジェクトを返すなどの重要なタスクを実行します。 セッションでは、メタデータ、またはテーブルの情報) など、データ ソース自体に関する情報を返すこともできます。
 
@@ -40,7 +40,7 @@ OLE DB オブジェクト モデルは、次のオブジェクトまたはコン
 
 ### <a name="schema-rowsets"></a>スキーマ行セット
 
-スキーマでは、データベースに関するメタデータ (構造情報) があります。 スキーマ行セットは、スキーマ情報を持つ行セットです。 DBMS の一部の OLE DB プロバイダーでは、スキーマ行セット オブジェクトをサポートします。 スキーマ行セットの詳細については、[スキーマ行セットのメタデータの取得](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)と[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)を参照してください。
+スキーマでは、データベースに関するメタデータ (構造情報) があります。 スキーマ行セットは、スキーマ情報を持つ行セットです。 DBMS の一部の OLE DB プロバイダーでは、スキーマ行セット オブジェクトをサポートします。 スキーマ行セットの詳細については、次を参照してください。[スキーマ行セットのメタデータの取得](../../data/oledb/obtaining-metadata-with-schema-rowsets.md)と[スキーマ行セット クラスと Typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)します。
 
 ### <a name="view-objects"></a>オブジェクトの表示
 

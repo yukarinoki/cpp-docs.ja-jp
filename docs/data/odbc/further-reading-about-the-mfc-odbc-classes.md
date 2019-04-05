@@ -4,12 +4,12 @@ ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC ODBC classes
 ms.assetid: 155c092b-3577-4cb8-b00e-f1adf4cb2adc
-ms.openlocfilehash: 42f8a066728b1800ce245435584dd5e61f786440
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 96286fc7a60a6ab43190dae6262948ac99ca30d6
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440340"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035190"
 ---
 # <a name="further-reading-about-the-mfc-odbc-classes"></a>MFC ODBC クラスに関する詳細情報
 
@@ -23,11 +23,11 @@ ms.locfileid: "50440340"
 
 - [ダイナセット](../../data/odbc/dynaset.md)
 
-- [例外処理: データベースの例外](../../mfc/exceptions-database-exceptions.md)
+- [例外:データベース例外](../../mfc/exceptions-database-exceptions.md)
 
-- [MFC: ドキュメントとビューを用いたデータベース クラスの使用](../../data/mfc-using-database-classes-with-documents-and-views.md)
+- [MFC:ドキュメントとビューを用いたデータベース クラス](../../data/mfc-using-database-classes-with-documents-and-views.md)
 
-- [MFC: ドキュメントとビューを用いないデータベース クラスの使用](../../data/mfc-using-database-classes-without-documents-and-views.md)
+- [MFC:ドキュメントとビューを用いないデータベース クラスの使用](../../data/mfc-using-database-classes-without-documents-and-views.md)
 
 - [ODBC](../../data/odbc/odbc-basics.md)
 
@@ -39,7 +39,7 @@ ms.locfileid: "50440340"
 
 - [レコード ビュー](../../data/record-views-mfc-data-access.md)
 
-- [シリアル化: シリアル化とデータベースの入力/出力](../../mfc/serialization-serialization-vs-database-input-output.md)
+- [シリアル化:Vs のシリアル化します。データベースの入力/出力](../../mfc/serialization-serialization-vs-database-input-output.md)
 
 - [スナップショット](../../data/odbc/snapshot.md)
 

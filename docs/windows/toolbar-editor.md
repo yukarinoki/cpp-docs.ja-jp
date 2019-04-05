@@ -50,12 +50,12 @@ helpviewer_keywords:
 - buttons [C++], tool tips
 - Toolbar editor [C++], creating tool tips
 ms.assetid: aa9f0adf-60f6-4f79-ab05-bc330f15ec43
-ms.openlocfilehash: 83402159d19f07cf94a0d00ccd79d68549b124e9
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: 9d50561c598f17e251425972590c0663efe6e832
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328858"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038163"
 ---
 # <a name="toolbar-editor-c"></a>ツール バー エディター (C++)
 
@@ -91,9 +91,9 @@ C++ プロジェクトで新しいツールバーを作成するには、ビッ�
 |プロパティ|説明|
 |--------------|-----------------|
 |**ID**|ボタンの ID を定義します。 ドロップダウンの一覧は、一般的な**ID**名。|
-|**Width**|ボタンの幅を設定します。 16 ピクセルをお勧めします。|
-|**Height**|ボタンの高さを設定します。 1 つのボタンの高さは、ツールバーのすべてのボタンの高さを変更します。 15 ピクセルをお勧めします。|
-|**プロンプト**|ステータス バーに表示されるメッセージを定義します。 追加*\n*名を追加し、**ツールヒント**ツールバーのボタンを。 詳細については、[ツールヒントを作成する](../windows/creating-a-tool-tip-for-a-toolbar-button.md)を参照してください。|
+|**幅**|ボタンの幅を設定します。 16 ピクセルをお勧めします。|
+|**高さ**|ボタンの高さを設定します。 1 つのボタンの高さは、ツールバーのすべてのボタンの高さを変更します。 15 ピクセルをお勧めします。|
+|**プロンプト**|ステータス バーに表示されるメッセージを定義します。 追加*\n*名を追加し、**ツールヒント**ツールバーのボタンを。 詳細については、次を参照してください。[ツールヒントを作成する](../windows/creating-a-tool-tip-for-a-toolbar-button.md)します。|
 
 **幅**と**高さ**のすべてのボタンに適用されます。 ツールバーを作成するために使用されるビットマップが 2048 の最大の幅をボタンの幅を設定した場合、 *512*に幅を設定するかどうかは、4 つのボタンである*513*、3 つのボタンのみがあることができます。
 

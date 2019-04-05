@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rdmsr instruction
 - __readmsr intrinsic
 ms.assetid: 7ab1f8e8-72cb-4ce4-817d-3e728a3c9716
-ms.openlocfilehash: 891ca43af4a81b63de39d367ea418e43811f78d0
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 2c866213c452f3b8791bf0fe031a43bb024e91fb
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326408"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59027638"
 ---
 # <a name="readmsr"></a>__readmsr
 
@@ -52,8 +52,8 @@ __int64 __readmsr(
 
 詳細については、AMD のマニュアルを参照してください。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

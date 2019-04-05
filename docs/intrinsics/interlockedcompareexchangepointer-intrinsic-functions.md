@@ -24,12 +24,12 @@ helpviewer_keywords:
 - _InterlockedCompareExchangePointer_nf intrinsic
 - _InterlockedCompareExchangePointer_np intrinsic
 ms.assetid: 97fde59d-2bf9-42aa-a0fe-a5b6befdd44b
-ms.openlocfilehash: b58af33e13609dcb9a51f7d2b3075427f538a2d6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 2db18c73f7765454d29e2dfdbd9408f62c51d32a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50445033"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59024817"
 ---
 # <a name="interlockedcompareexchangepointer-intrinsic-functions"></a>_InterlockedCompareExchangePointer の組み込み関数
 
@@ -79,7 +79,7 @@ long _InterlockedCompareExchangePointer_rel (
 
 #### <a name="parameters"></a>パラメーター
 
-*変換先*<br/>
+*保存先*<br/>
 [入力、出力]宛先値へのポインターへのポインター。 符号は無視されます。
 
 *Exchange*<br/>
@@ -97,12 +97,12 @@ long _InterlockedCompareExchangePointer_rel (
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
 |`_InterlockedCompareExchangePointer`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedCompareExchangePointer_acq`、 `_InterlockedCompareExchangePointer_nf`、 `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
+|`_InterlockedCompareExchangePointer_acq`では、 `_InterlockedCompareExchangePointer_nf`では、 `_InterlockedCompareExchangePointer_rel`|ARM|\<iiintrin.h>|
 |`_InterlockedCompareExchangePointer_HLEAcquire`, `_InterlockedCompareExchangePointer_HLERelease`|x86、x64|\<immintrin.h>|
 
 ## <a name="remarks"></a>Remarks
 
-`_InterlockedCompareExchangePointer` は `Destination` アドレスと `Comparand` アドレスのアトミックな比較を実行します。 `Destination` のアドレスが `Comparand` のアドレスと等しい場合、`Exchange` のアドレスは `Destination` で指定したアドレスに格納されます。 それ以外の場合は演算が実行されません。
+`_InterlockedCompareExchangePointer` アトミックの比較を実行、`Destination`アドレスと、`Comparand`アドレス。 `Destination` のアドレスが `Comparand` のアドレスと等しい場合、`Exchange` のアドレスは `Destination` で指定したアドレスに格納されます。 それ以外の場合は演算が実行されません。
 
 `_InterlockedCompareExchangePointer` Win32 Windows SDK のコンパイラ組み込みサポートを提供します。 [_InterlockedCompareExchangePointer](https://msdn.microsoft.com/library/ff547863.aspx)関数。
 
@@ -116,9 +116,9 @@ Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォ
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)

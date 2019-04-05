@@ -1,5 +1,5 @@
 ---
-title: 'データ ソース : 接続 (ODBC)'
+title: データ ソース:接続 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC data sources [C++], multiuser environments
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - ODBC data sources [C++], connections
 - database connections [C++], MFC ODBC classes
 ms.assetid: c0adbcdd-c000-40c6-b199-09ffdc7b6ef2
-ms.openlocfilehash: 0f10dd1053819cb201385098b0125042ad556a47
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5b646ca0eb86d3addabaad59ca23f56cfe914114
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50568507"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041164"
 ---
-# <a name="data-source-managing-connections-odbc"></a>データ ソース : 接続 (ODBC)
+# <a name="data-source-managing-connections-odbc"></a>データ ソース:接続 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -45,11 +45,11 @@ ms.locfileid: "50568507"
 
 データ ソースとの接続とは、データにアクセスするために DBMS との通信を確立することです。 ODBC ドライバーを通じてデータ ソースと接続すると、データ ソースの位置がローカルでもネットワークでも、自動的に接続されます。
 
-ODBC ドライバーがあるデータ ソースならば、どのデータ ソースにでも接続できます。 アプリケーションのユーザーも、同じ ODBC ドライバーを持つ必要があります。 ODBC ドライバーの再配布の詳細については、[の配布の ODBC コンポーネントの再配布](../../data/odbc/redistributing-odbc-components-to-your-customers.md)を参照してください。
+ODBC ドライバーがあるデータ ソースならば、どのデータ ソースにでも接続できます。 アプリケーションのユーザーも、同じ ODBC ドライバーを持つ必要があります。 ODBC ドライバーの再配布の詳細については、次を参照してください。[の配布の ODBC コンポーネントの再配布](../../data/odbc/redistributing-odbc-components-to-your-customers.md)します。
 
 ##  <a name="_core_configuring_a_data_source"></a> データ ソースを構成します。
 
-データ ソースの設定は、ODBC データ ソース アドミニストレーターを使って行います。 データ ソースの追加や削除も行うことができます。 アプリケーションを作成する際には、ODBC データ ソース アドミニストレーターを使用してデータ ソースを追加するようにアプリケーションのユーザーに指示するか、アプリケーション内で ODBC インストール呼び出しを直接行って ODBC データ ソース アドミニストレーターの機能を組み込むことができます。 詳細については、[ODBC アドミニストレーター](../../data/odbc/odbc-administrator.md)を参照してください。
+データ ソースの設定は、ODBC データ ソース アドミニストレーターを使って行います。 データ ソースの追加や削除も行うことができます。 アプリケーションを作成する際には、ODBC データ ソース アドミニストレーターを使用してデータ ソースを追加するようにアプリケーションのユーザーに指示するか、アプリケーション内で ODBC インストール呼び出しを直接行って ODBC データ ソース アドミニストレーターの機能を組み込むことができます。 詳細については、次を参照してください。 [ODBC アドミニストレーター](../../data/odbc/odbc-administrator.md)します。
 
 データ ソースとして Excel ファイルを使用してが登録されに表示されるように、ファイルを構成する必要があります、**データ ソースの選択** ダイアログ ボックス。
 
@@ -72,7 +72,7 @@ ODBC ドライバーがあるデータ ソースならば、どのデータ ソ�
 
 ##  <a name="_core_working_in_a_multiuser_environment"></a> マルチ ユーザー環境での作業
 
-複数のユーザーが同じデータ ソースにアクセスする場合は、自分がアクセスしているレコードセットのデータが、ほかのユーザーによって変更されてしまうおそれがあります。 同じように、自分が他のユーザーのレコードセットを変更してしまう場合もあります。 詳細については、[レコード セット: レコード更新のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)と[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)を参照してください。
+複数のユーザーが同じデータ ソースにアクセスする場合は、自分がアクセスしているレコードセットのデータが、ほかのユーザーによって変更されてしまうおそれがあります。 同じように、自分が他のユーザーのレコードセットを変更してしまう場合もあります。 詳細については、次を参照してください。[レコード セット。レコード セットの更新プログラムによる (ODBC) の記録](../../data/odbc/recordset-how-recordsets-update-records-odbc.md)と[トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)します。
 
 ##  <a name="_core_generalizing_the_connection_string"></a> 接続文字列を汎用化します。
 
@@ -139,5 +139,5 @@ ODBC ドライバーがあるデータ ソースならば、どのデータ ソ�
 ## <a name="see-also"></a>関連項目
 
 [データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)<br/>
-[データ ソース: データ ソースのスキーマの判定 (ODBC)](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
+[データ ソース:データ ソース (ODBC) のスキーマを決定します。](../../data/odbc/data-source-determining-the-schema-of-the-data-source-odbc.md)<br/>
 [CRecordset クラス](../../mfc/reference/crecordset-class.md)

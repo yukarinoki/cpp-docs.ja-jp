@@ -7,12 +7,12 @@ helpviewer_keywords:
 - nop instruction
 - __nop intrinsic
 ms.assetid: 7a2a938b-87e0-476d-a348-03ea7635b6b9
-ms.openlocfilehash: b0033b0e3a62a16c2856b0e25daeebdb5df0c81f
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 1e76110c1ef0c4b98c295578189eedc99d76eeb9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220388"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038248"
 ---
 # <a name="nop"></a>__nop
 
@@ -34,7 +34,7 @@ void __nop();
 
 **ヘッダー ファイル** \<intrin.h >
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="remarks"></a>Remarks
 
@@ -42,5 +42,5 @@ void __nop();
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [__noop](../intrinsics/noop.md)

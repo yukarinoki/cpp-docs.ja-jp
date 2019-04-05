@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - LNK1181
 ms.assetid: 984b0db6-e331-4284-b2a7-a212fe96c486
-ms.openlocfilehash: 834220e6325e332a07c3865b5ff66e1bbc1b8c69
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 657e78ece2ce4039eb8dc8561abd455c60aaff75
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50657981"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035075"
 ---
 # <a name="linker-tools-error-lnk1181"></a>リンカ ツール エラー LNK1181
 
@@ -27,7 +27,7 @@ ms.locfileid: "50657981"
 
 上記の問題を解決するには、リンカーのコマンドラインで参照されているすべてのファイルは、システムに存在を確認します。  あることを確認、 **/LIBPATH**リンカーの依存ファイルを含む各ディレクトリに対してステートメントです。
 
-詳細については、[リンカー入力としての .lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)を参照してください。
+詳細については、次を参照してください。[リンカー入力としての .lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)します。
 
 LNK1181 のもう 1 つの考えられる原因は、長いファイル名に埋め込まれたスペースが引用符で囲まれていないことです。  その場合は、リンカーだけ最初のスペースでは、最大のファイル名が認識され、ファイル拡張子を想定します .obj。このような状況を解決するには長いファイル名を囲む (パスとファイル名) 引用符で囲んで指定します。
 

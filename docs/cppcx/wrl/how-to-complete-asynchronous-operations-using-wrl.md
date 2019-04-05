@@ -3,12 +3,12 @@ title: '方法: WRL を使用して非同期操作を完了します。'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 02173eae-731b-49bc-b412-f1f69388b99d
-ms.openlocfilehash: 321bb273f661ec16fe85443c449b425ae56b99e3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 09c341e5e3d4f6007d5d5f66b7c06e1f0af5a65c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785414"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040226"
 ---
 # <a name="how-to-complete-asynchronous-operations-using-wrl"></a>方法: WRL を使用して非同期操作を完了します。
 
@@ -19,14 +19,14 @@ ms.locfileid: "58785414"
 コンポーネントのインスタンスを作成し、プロパティ値を取得する基本的な例は、次を参照してください。[方法。アクティブ化し、Windows ランタイム コンポーネントを使用して、](how-to-activate-and-use-a-windows-runtime-component-using-wrl.md)します。
 
 > [!TIP]
-> これらの例では、コールバックを定義するためにラムダ式を使用します。 関数オブジェクト (ファンクター)、関数ポインターを使用することもできます。 または[std::function](../../standard-library/function-class.md)オブジェクト。 C++ のラムダ式の詳細については、[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)を参照してください。
+> これらの例では、コールバックを定義するためにラムダ式を使用します。 関数オブジェクト (ファンクター)、関数ポインターを使用することもできます。 または[std::function](../../standard-library/function-class.md)オブジェクト。 C++ のラムダ式の詳細については、次を参照してください。[ラムダ式](../../cpp/lambda-expressions-in-cpp.md)します。
 
 ## <a name="example-working-with-a-timer"></a>例:タイマーを使用した作業
 
 以下の手順では、非同期タイマーを開始し、そのタイマーが期限切れになるのを待機します。 完全な例を次に示します。
 
 > [!WARNING]
-> 通常は、ユニバーサル Windows プラットフォーム (UWP) アプリで Windows ランタイム C++ テンプレート ライブラリを使用して、この例は、図のコンソール アプリを使用します。 などの関数`wprintf_s`UWP アプリからは使用できません。 型および UWP アプリで使用できる関数の詳細については、[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)と[Win32 および COM UWP アプリの](/uwp/win32-and-com/win32-and-com-for-uwp-apps)を参照してください。
+> 通常は、ユニバーサル Windows プラットフォーム (UWP) アプリで Windows ランタイム C++ テンプレート ライブラリを使用して、この例は、図のコンソール アプリを使用します。 などの関数`wprintf_s`UWP アプリからは使用できません。 型および UWP アプリで使用できる関数の詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム アプリでサポートされない CRT 関数](../../cppcx/crt-functions-not-supported-in-universal-windows-platform-apps.md)と[Win32 および COM UWP アプリの](/uwp/win32-and-com/win32-and-com-for-uwp-apps)します。
 
 1. 含まれます (`#include`) 必須の Windows ランタイム、Windows ランタイム C++ テンプレート ライブラリ、または C++ 標準ライブラリ ヘッダー。
 

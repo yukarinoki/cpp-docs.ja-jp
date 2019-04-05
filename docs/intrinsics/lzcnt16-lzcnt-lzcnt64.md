@@ -14,12 +14,12 @@ helpviewer_keywords:
 - lzcnt64 intrinsic
 - __lzcnt64 intrinsic
 ms.assetid: 412113e7-052e-46e5-8bfa-d5ad72abc10e
-ms.openlocfilehash: 7b1e499eff8c8c7de59dc6f96cb1060ce845e27d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 333d9f2b23fb90388af8395945256956c9222ab9
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51523456"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041339"
 ---
 # <a name="lzcnt16-lzcnt-lzcnt64"></a>__lzcnt16、__lzcnt、__lzcnt64
 
@@ -54,9 +54,9 @@ unsigned __int64 __lzcnt64(
 
 |組み込み|アーキテクチャ|
 |---------------|------------------|
-|`__lzcnt16`|AMD: 高度なビット操作 (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt`|AMD: 高度なビット操作 (ABM)<br /><br /> Intel: Haswell|
-|`__lzcnt64`|AMD:、64 ビット モードでのビット操作 (ABM) が高度な。<br /><br /> Intel: Haswell|
+|`__lzcnt16`|AMD:高度なビット操作 (ABM)<br /><br /> Intel:Haswell|
+|`__lzcnt`|AMD:高度なビット操作 (ABM)<br /><br /> Intel:Haswell|
+|`__lzcnt64`|AMD:高度なビット操作 (ABM) 64 ビット モードでします。<br /><br /> Intel:Haswell|
 
 **ヘッダー ファイル** \<intrin.h >
 
@@ -66,7 +66,7 @@ unsigned __int64 __lzcnt64(
 
 ハードウェアのサポートを決定する、`lzcnt`命令の呼び出し、`__cpuid`で組み込み`InfoType=0x80000001`のビット 5 をチェックし、`CPUInfo[2] (ECX)`します。 このビットは、それ以外の場合、命令がサポートされている場合は 1、0 になります。 `lzcnt`命令が搭載されていないハードウェア上でこの組み込み関数を呼び出した場合、その結果は保証されません。
 
-Intel プロセッサをサポートしないで、`lzcnt`として命令が実行される命令のバイト エンコーディング`bsr`(ビット スキャン逆)。 コードの移植性を重視する場合は、使用を検討してください、`_BitScanReverse`組み込み代わりにします。 詳細については、[_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)を参照してください。
+Intel プロセッサをサポートしないで、`lzcnt`として命令が実行される命令のバイト エンコーディング`bsr`(ビット スキャン逆)。 コードの移植性を重視する場合は、使用を検討してください、`_BitScanReverse`組み込み代わりにします。 詳細については、次を参照してください。 [_BitScanReverse、_BitScanReverse64](../intrinsics/bitscanreverse-bitscanreverse64.md)します。
 
 ## <a name="example"></a>例
 
@@ -105,10 +105,10 @@ __lzcnt(0xffff) = 16
 __lzcnt(0xffffffff) = 0
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 このコンテンツの一部は高度なマイクロ デバイス, inc. Copyright 2007 です。All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

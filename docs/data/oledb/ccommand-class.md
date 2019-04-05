@@ -49,12 +49,12 @@ helpviewer_keywords:
 - SetParameterInfo method
 - Unprepare method
 ms.assetid: 0760bfc5-b9ee-4aee-8e54-31bd78714d3a
-ms.openlocfilehash: 7db2d3d71deecda06e39772541658dfada72ae3b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 406a78ff1958d565fcc74781f6a63d4784f48bfc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415267"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039729"
 ---
 # <a name="ccommand-class"></a>CCommand クラス
 
@@ -81,7 +81,7 @@ class CCommand :
 行セット クラスの型 (など`CArrayRowset`または`CNoRowset`) コマンドで使用します。 既定値は `CRowset` です。
 
 *TMultiple*<br/>
-複数の結果を返すことができる OLE DB コマンドを使用する指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)します。 それ以外の場合、使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)します。 詳細については、[IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85))を参照してください。
+複数の結果を返すことができる OLE DB コマンドを使用する指定[CMultipleResults](../../data/oledb/cmultipleresults-class.md)します。 それ以外の場合、使用[CNoMultipleResults](../../data/oledb/cnomultipleresults-class.md)します。 詳細については、次を参照してください。 [IMultipleResults](/previous-versions/windows/desktop/ms721289(v=vs.85))します。
 
 ## <a name="requirements"></a>必要条件
 
@@ -101,10 +101,10 @@ class CCommand :
 
 |||
 |-|-|
-|[作成します。](#create)|指定したセッションの新しいコマンドを作成し、コマンド テキストを設定します。|
+|[作成](#create)|指定したセッションの新しいコマンドを作成し、コマンド テキストを設定します。|
 |[CreateCommand](#createcommand)|新しいコマンドを作成します。|
 |[GetParameterInfo](#getparameterinfo)|コマンドのパラメーター、その名前とその型の一覧を取得します。|
-|[準備します。](#prepare)|検証し、現在のコマンドを最適化します。|
+|[準備](#prepare)|検証し、現在のコマンドを最適化します。|
 |[ReleaseCommand](#releasecommand)|必要に応じて、パラメーター アクセサーを解放し、コマンドを解放します。|
 |[SetParameterInfo](#setparameterinfo)|各コマンドのパラメーターのネイティブな型を指定します。|
 |[Unprepare](#unprepare)|現在のコマンドの実行プランを破棄します。|
@@ -209,13 +209,13 @@ HRESULT Open(DBPROPSET *pPropSet = NULL,
 
 #### <a name="parameters"></a>パラメーター
 
-*session*<br/>
+*セッション*<br/>
 [in]コマンドを実行するためのセッションです。
 
 *wszCommand*<br/>
 [in]を実行するコマンドは、Unicode 文字列として渡されます。 使用する場合、NULL を指定できます`CAccessor`に渡された値からのコマンドは、取得した場合、 [DEFINE_COMMAND](../../data/oledb/define-command.md)マクロ。 参照してください[icommand::execute](/previous-versions/windows/desktop/ms718095(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
-*szCommand*<br/>
+*で*<br/>
 [in]同じ*wszCommand*する点を除いて、このパラメーターは、ANSI コマンド文字列を取得します。 このメソッドの 4 番目の形式は、NULL 値をとることができます。 詳細については、このトピックの後半の「解説」を参照してください。
 
 *pPropSet*<br/>
@@ -276,17 +276,17 @@ HRESULT CCommandBase::Create(const CSession& session,
 
 #### <a name="parameters"></a>パラメーター
 
-*session*<br/>
+*セッション*<br/>
 [in]コマンドを作成するセッションです。
 
 *wszCommand*<br/>
 [in]コマンド文字列の Unicode テキストへのポインター。
 
-*szCommand*<br/>
+*で*<br/>
 [in]コマンド文字列の ANSI テキストへのポインター。
 
 *guidCommand*<br/>
-[in]コマンド テキストを解析中に、構文と使用するプロバイダーの一般的な規則を指定する GUID。 言語については、[ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
+[in]コマンド テキストを解析中に、構文と使用するプロバイダーの一般的な規則を指定する GUID。 言語については、次を参照してください。 [ICommandText::GetCommandText](/previous-versions/windows/desktop/ms709825(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -308,7 +308,7 @@ HRESULT CCommandBase::CreateCommand(const CSession& session) throw ();
 
 #### <a name="parameters"></a>パラメーター
 
-*session*<br/>
+*セッション*<br/>
 [in]A`CSession`新しいコマンドに関連するオブジェクト。
 
 ### <a name="return-value"></a>戻り値

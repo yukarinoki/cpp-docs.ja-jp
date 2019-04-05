@@ -35,12 +35,12 @@ helpviewer_keywords:
 - calculated symbols
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
-ms.openlocfilehash: f2edafb0b60cfafcf7ad53b8402ffc39a6fc2f7c
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: ebf10ade734d321c5a83644110d3511e4b6c827a
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328845"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033996"
 ---
 # <a name="how-to-manage-symbols"></a>方法: シンボルを管理します。
 
@@ -74,7 +74,7 @@ ms.locfileid: "58328845"
 
 シンボル名には説明的なプレフィックスがあり、対象となるリソースやオブジェクトの種類を示します。 これらの説明的なプレフィックスは、テキストを組み合わせた ID で始まります。 Microsoft Foundation Class (MFC) ライブラリでは、名前付け規則は、次の表に示すようにシンボルを使用します。
 
-|Category|プレフィックス|使用|
+|カテゴリ|プレフィックス|用途|
 |--------------|------------|---------|
 |リソース|IDR _、IDD _、IDC _、IDI_ IDB_|アクセラレータまたはメニュー (および関連付けられているかカスタム リソース) ダイアログ ボックス、カーソル、アイコン、ビットマップ|
 |メニュー項目|ID_|メニュー項目|
@@ -215,5 +215,5 @@ Win32
 ## <a name="see-also"></a>関連項目
 
 [リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>
-[方法: シンボルの作成](../windows/creating-new-symbols.md)<br/>
-[定義済みシンボル ID](../windows/predefined-symbol-ids.md)<br/>
+[方法: シンボルを作成します。](../windows/creating-new-symbols.md)<br/>
+[定義済みのシンボル ID](../windows/predefined-symbol-ids.md)<br/>

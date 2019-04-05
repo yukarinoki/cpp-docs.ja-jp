@@ -40,12 +40,12 @@ helpviewer_keywords:
 - Open method
 - StartTransaction method
 ms.assetid: 83cd798f-b45d-4f11-a23c-29183390450c
-ms.openlocfilehash: c4f6cc19897b66bfe26c6d53ccb87c35dbed82c9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b34a6300473db94621360f1d04fd73ddd7e8bd69
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58777650"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59041459"
 ---
 # <a name="csession-class"></a>CSession クラス
 
@@ -67,9 +67,9 @@ class CSession
 
 |||
 |-|-|
-|[Abort](#abort)|キャンセル (終了) トランザクション。|
+|[[中止]](#abort)|キャンセル (終了) トランザクション。|
 |[閉じる](#close)|セッションを閉じます。|
-|[コミット](#commit)|トランザクションをコミットします。|
+|[確定](#commit)|トランザクションをコミットします。|
 |[GetTransactionInfo](#gettransactioninfo)|トランザクションに関する情報を返します。|
 |[開く](#open)|データ ソース オブジェクトの新しいセッションを開きます。|
 |[StartTransaction](#starttransaction)|このセッション用の新しいトランザクションを開始します。|
@@ -134,7 +134,7 @@ HRESULT Commit(BOOL bRetaining = FALSE,
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[itransaction::commit](/previous-versions/windows/desktop/ms713008(v=vs.85))を参照してください。
+詳細については、次を参照してください。 [itransaction::commit](/previous-versions/windows/desktop/ms713008(v=vs.85))します。
 
 ## <a name="gettransactioninfo"></a> CSession::GetTransactionInfo
 
@@ -156,7 +156,7 @@ HRESULT GetTransactionInfo(XACTTRANSINFO* pInfo) const throw();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
+詳細については、次を参照してください。 [ITransaction::GetTransactionInfo](/previous-versions/windows/desktop/ms714975(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="open"></a> CSession::Open
 
@@ -212,10 +212,10 @@ HRESULT StartTransaction(ISOLEVEL isoLevel = ISOLATIONLEVEL_READCOMMITTED,
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[itransactionlocal::starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
+詳細については、次を参照してください。 [itransactionlocal::starttransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 
-[CatDB](../../overview/visual-cpp-samples.md)<br/>
+[CatDB サンプル : データ ソース スキーマ ブラウザー](../../overview/visual-cpp-samples.md)<br/>
 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-cpp.md)<br/>
 [OLE DB コンシューマー テンプレート リファレンス](../../data/oledb/ole-db-consumer-templates-reference.md)

@@ -1,26 +1,26 @@
 ---
-title: 'レコードセット: レコードを大量に追加する方法 (ODBC)'
+title: レコード セット:方法 (ODBC) でレコードを追加します。
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, adding records
 - recordsets, adding records
 - bulk record additions to recordsets
 ms.assetid: 4685f656-14b9-4f10-a1c5-147b2b89a0b4
-ms.openlocfilehash: 5a6a627054cd2e90420ac66a9e56e570f29d281e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a2c3eab8bb4c0e8db76fceb5a2dafd16a4a07079
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50594663"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038610"
 ---
-# <a name="recordset-adding-records-in-bulk-odbc"></a>レコードセット: レコードを大量に追加する方法 (ODBC)
+# <a name="recordset-adding-records-in-bulk-odbc"></a>レコード セット:方法 (ODBC) でレコードを追加します。
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
 MFC [CRecordset](../../mfc/reference/crecordset-class.md)クラスには、新しい最適化を一括でテーブルに新しいレコードを追加するときに、効率を向上させます。
 
 > [!NOTE]
-> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
+> このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを使用している場合は、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 新しいオプション、 *dwOptions*パラメーターを[:open](../../mfc/reference/crecordset-class.md#open)メンバー関数は、 `optimizeBulkAdd`を呼び出さずに連続して複数のレコードを追加するときにパフォーマンスが向上`Requery`または`Close`します。 1 つ目の前にダーティであるフィールドのみ`Update`呼び出しが後続のダーティとマークされて`AddNew` / `Update`呼び出し。
 
@@ -35,5 +35,5 @@ appendOnly | optimizeBulkAdd
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[レコードセット: レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)
+[レコード セット:追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[レコード セット:レコードのロック (ODBC)](../../data/odbc/recordset-locking-records-odbc.md)

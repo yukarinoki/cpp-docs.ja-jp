@@ -56,12 +56,12 @@ helpviewer_keywords:
 - _InterlockedAnd8 intrinsic
 - _InterlockedAnd_HLEAcquire intrinsic
 ms.assetid: ad271dc3-42cd-47d0-9f65-30d5cfeb66fc
-ms.openlocfilehash: 70e618944ddac3468c0e49443cde116c8496df7c
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: b38a181102247ab203c86ccb6310a72135dccc8b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626769"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59033321"
 ---
 # <a name="interlockedand-intrinsic-functions"></a>_InterlockedAnd の組み込み関数
 
@@ -172,7 +172,7 @@ __int64 _InterlockedAnd64_rel(
 
 #### <a name="parameters"></a>パラメーター
 
-*value*<br/>
+*値*<br/>
 [入力、出力]最初のオペランドの結果によって置き換えられるへのポインター。
 
 *マスク*<br/>
@@ -184,7 +184,7 @@ __int64 _InterlockedAnd64_rel(
 
 ## <a name="requirements"></a>必要条件
 
-|組み込み|アーキテクチャ|ヘッダー|
+|組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
 |`_InterlockedAnd`, `_InterlockedAnd8`, `_InterlockedAnd16`, `_InterlockedAnd64`|x86、ARM、x64|\<intrin.h>|
 |`_InterlockedAnd_acq`, `_InterlockedAnd_nf`, `_InterlockedAnd_rel`, `_InterlockedAnd8_acq`, `_InterlockedAnd8_nf`, `_InterlockedAnd8_rel`, `_InterlockedAnd16_acq`, `_InterlockedAnd16_nf`, `_InterlockedAnd16_rel`, `_InterlockedAnd64_acq`, `_InterlockedAnd64_nf`, `_InterlockedAnd64_rel`|ARM|\<intrin.h>|
@@ -195,7 +195,8 @@ __int64 _InterlockedAnd64_rel(
 
 各関数の名前に含まれる数値は、引数のビット サイズを示しています。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 
+  `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
 組み込みに `_np` ("プリフェッチなし") サフィックスが付いていると、コンパイラによってプリフェッチ操作が挿入される可能性がなくなります。
 
@@ -225,9 +226,9 @@ int main()
 0xff00 0xffff00 0xff00ff00
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

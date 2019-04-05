@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
-ms.openlocfilehash: 74a561b9b70c5aee36781d102835c73dec2c3ac2
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50582460"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029292"
 ---
 # <a name="aggregatable"></a>aggregatable
 
@@ -48,7 +48,7 @@ ms.locfileid: "50582460"
 |---------------------|--------------------|
 |`Never`|[DECLARE_NOT_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_not_aggregatable)|
 |`Allowed`|[DECLARE_POLY_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_poly_aggregatable)|
-|`Always`|[集約](../../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|
+|`Always`|[DECLARE_ONLY_AGGREGATABLE](../../atl/reference/aggregation-and-class-factory-macros.md#declare_only_aggregatable)|
 
 ## <a name="example"></a>例
 
@@ -84,4 +84,4 @@ class CMyClass {};
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
-[集計](/windows/desktop/com/aggregation)
+[集約](/windows/desktop/com/aggregation)

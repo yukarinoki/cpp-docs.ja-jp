@@ -8,12 +8,12 @@ helpviewer_keywords:
 - interfaces, session object
 - interfaces, list of
 ms.assetid: ac01a958-6dde-4bd7-8b63-94459e488335
-ms.openlocfilehash: 7e8a9cd204a07afc2b14c6a1e31e7c970c27cfc2
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 2fb91365fec0709e1bb2a26afa519e6565862681
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423379"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031454"
 ---
 # <a name="session-object-interfaces"></a>セッション オブジェクト インターフェイス
 
@@ -21,17 +21,17 @@ ms.locfileid: "57423379"
 
 |Interface|必須?|OLE DB テンプレートによって実装されるでしょうか。|
 |---------------|---------------|--------------------------------------|
-|[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))|必須|[はい]|
+|[IGetDataSource](/previous-versions/windows/desktop/ms709721(v=vs.85))|必須|はい|
 |[IOpenRowset](/previous-versions/windows/desktop/ms716946(v=vs.85))|必須|[はい]|
-|[ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))|必須|[はい]|
+|[ISessionProperties](/previous-versions/windows/desktop/ms713721(v=vs.85))|必須|はい|
 |[IAlterIndex](/previous-versions/windows/desktop/ms714943(v=vs.85))|Optional|いいえ|
 |[IAlterTable](/previous-versions/windows/desktop/ms719764(v=vs.85))|Optional|いいえ|
 |[IBindResource](/previous-versions/windows/desktop/ms714936(v=vs.85))|Optional|いいえ|
 |[ICreateRow](/previous-versions/windows/desktop/ms716832(v=vs.85))|Optional|いいえ|
 |[IDBCreateCommand](/previous-versions/windows/desktop/ms711625(v=vs.85))|Optional|[はい]|
-|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))|Optional|[はい]|
+|[IDBSchemaRowset](/previous-versions/windows/desktop/ms713686(v=vs.85))|Optional|はい|
 |[IIndexDefinition](/previous-versions/windows/desktop/ms711593(v=vs.85))|Optional|いいえ|
-|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|[はい]|
+|[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|はい|
 |[ITableCreation](/previous-versions/windows/desktop/ms713639(v=vs.85))|Optional|いいえ|
 |[ITableDefinition](/previous-versions/windows/desktop/ms714277(v=vs.85))|Optional|いいえ|
 |[ITableDefinitionWithConstraints](/previous-versions/windows/desktop/ms720947(v=vs.85))|Optional|いいえ|

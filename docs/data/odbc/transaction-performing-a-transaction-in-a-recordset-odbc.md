@@ -1,17 +1,17 @@
 ---
-title: 'トランザクション: レコードセットからのトランザクション実行 (ODBC)'
+title: トランザクション:レコード セット (ODBC) でトランザクションを実行します。
 ms.date: 11/04/2016
 helpviewer_keywords:
 - transactions, updating recordsets
 ms.assetid: cf1d6b48-7fb8-4903-84f7-a1822054534d
-ms.openlocfilehash: df7c28ebfbb68f3e0163368247b90ff69058726d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 9e06d61d3d86233e136b0b3fe78f149a6778649b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50659590"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035242"
 ---
-# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>トランザクション: レコードセットからのトランザクション実行 (ODBC)
+# <a name="transaction-performing-a-transaction-in-a-recordset-odbc"></a>トランザクション:レコード セット (ODBC) でトランザクションを実行します。
 
 このトピックでは、レコード セットのトランザクションを実行する方法について説明します。
 
@@ -22,7 +22,7 @@ ms.locfileid: "50659590"
 
 1. 呼び出す、`CDatabase`オブジェクトの`BeginTrans`メンバー関数。
 
-1. バルク行フェッチを実装しない場合、 `AddNew/Update`、 `Edit/Update`、および`Delete`必要な回数と同じデータベースの 1 つまたは複数のレコード セット オブジェクトのメンバー関数。 詳細については、[レコード セット: 追加、更新、およびレコードの削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)を参照してください。 バルク行フェッチを実装している場合は、データ ソースを更新する、独自の関数を記述する必要があります。
+1. バルク行フェッチを実装しない場合、 `AddNew/Update`、 `Edit/Update`、および`Delete`必要な回数と同じデータベースの 1 つまたは複数のレコード セット オブジェクトのメンバー関数。 詳細については、次を参照してください。[レコード セット。追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)します。 バルク行フェッチを実装している場合は、データ ソースを更新する、独自の関数を記述する必要があります。
 
 1. 最後に、呼び出し、`CDatabase`オブジェクトの`CommitTrans`メンバー関数。 呼び出す場合、更新プログラムのいずれかでエラーが発生したまたは変更をキャンセルする場合、その`Rollback`メンバー関数。
 
@@ -84,6 +84,6 @@ BOOL CEnrollDoc::RemoveStudent( CString strStudentID )
 ## <a name="see-also"></a>関連項目
 
 [トランザクション (ODBC)](../../data/odbc/transaction-odbc.md)<br/>
-[トランザクション: トランザクションが更新処理に与える影響 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
+[トランザクション:トランザクション (ODBC) の更新プログラムに与える影響](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)<br/>
 [CDatabase クラス](../../mfc/reference/cdatabase-class.md)<br/>
 [CRecordset クラス](../../mfc/reference/crecordset-class.md)

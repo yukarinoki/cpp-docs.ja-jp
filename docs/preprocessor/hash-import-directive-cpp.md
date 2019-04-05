@@ -12,12 +12,12 @@ helpviewer_keywords:
 - preprocessor, directives
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
-ms.openlocfilehash: 72fd1d025ab19b7db9521e08655d00936b77581e
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58564958"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59031986"
 ---
 # <a name="import-directive-c"></a>#import ディレクティブ (C++)
 
@@ -45,7 +45,7 @@ ms.locfileid: "58564958"
     #import "progid:my.prog.id.1.5"
     ```
 
-   詳細については、progid は、[ローカリゼーション ID とバージョン番号を指定する](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber)を参照してください。
+   詳細については、progid は、次を参照してください。[ローカリゼーション ID とバージョン番号を指定する](#_predir_the_23import_directive_specifyingthelocalizationidandversionnumber)します。
 
    64 ビット オペレーティング システム上でクロス コンパイラによりコンパイルを実行した場合、コンパイラは 32 ビット レジストリ ハイブのみ読み取り可能になることに注意してください。 ネイティブ 64 ビット コンパイラを使用して、64 ビットのタイプ ライブラリをビルドおよび登録した方がよい場合があります。
 
@@ -148,7 +148,7 @@ Byref パラメーターを使用するディスパッチ インターフェイ�
 
 - 旧式の GUID の定義 (オプション):名前付き GUID 定数の初期化が含まれています。 これらは、フォーム名`CLSID_CoClass`と`IID_Interface`、MIDL コンパイラによって生成されたものと似ています。
 
-- セカンダリ タイプ ライブラリ ヘッダーの `#include` ステートメント。
+- `#include` セカンダリ タイプ ライブラリ ヘッダーのステートメント。
 
 - フッターの定型:現在は`#pragma pack(pop)`します。
 
@@ -187,11 +187,11 @@ using namespace MyLib;
    rename("OldName", "NewName")
 ```
 
-詳細については、[#import 属性](../preprocessor/hash-import-attributes-cpp.md)を参照してください。
+詳細については、次を参照してください。 [#import 属性](../preprocessor/hash-import-attributes-cpp.md)します。
 
-**END C 固有の仕様**
+**END C++ 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
 [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)<br/>
-[コンパイラ COM サポート](../cpp/compiler-com-support.md)
+[コンパイラの COM サポート](../cpp/compiler-com-support.md)

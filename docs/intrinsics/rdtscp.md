@@ -1,4 +1,4 @@
-﻿---
+---
 title: __rdtscp
 ms.date: 11/04/2016
 f1_keywords:
@@ -8,18 +8,18 @@ helpviewer_keywords:
 - __rdtscp intrinsic
 - rdtscp instruction
 ms.assetid: f17d9a9c-88bb-44e0-b69d-d516bc1c93ee
-ms.openlocfilehash: 813f13e20e74890cfcb52ae25234aa348e1d522d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: b28052fbe0a1ab0e1a6f037ce61f43abea5cf771
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496297"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028481"
 ---
 # <a name="rdtscp"></a>__rdtscp
 
 **Microsoft 固有の仕様**
 
- `rdtscp`命令を生成してメモリに`TSC_AUX[31:0]`を書き込み、64 ビットのタイム スタンプ カウンター`(TSC)`を返します。
+`rdtscp`命令を生成してメモリに`TSC_AUX[31:0`を書き込み、64 ビットのタイム スタンプ カウンター`TSC)`を返します。
 
 ## <a name="syntax"></a>構文
 
@@ -78,11 +78,11 @@ printf_s("TSC_AUX was %x\n", ui);
 TSC_AUX was 0
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
 
 ## <a name="see-also"></a>関連項目
 
 [__rdtsc](../intrinsics/rdtsc.md)<br/>
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

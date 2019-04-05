@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: パラメーターを利用したレコードセット (ODBC)'
+title: レコード セット:レコード セット (ODBC) をパラメーター化
 ms.date: 11/04/2016
 helpviewer_keywords:
 - parameterizing recordsets
@@ -7,14 +7,14 @@ helpviewer_keywords:
 - recordsets, parameterizing
 - passing parameters, to queries at runtime
 ms.assetid: 7d1dfeb6-5ee0-45e2-aacc-63bc52a465cd
-ms.openlocfilehash: f58a33a0c43cb0d70d98f3f2ae33f766058b1c23
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: df67256c54cae3e2adb054d653d3e58bb91dd631
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51331270"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026163"
 ---
-# <a name="recordset-parameterizing-a-recordset-odbc"></a>レコードセット: パラメーターを利用したレコードセット (ODBC)
+# <a name="recordset-parameterizing-a-recordset-odbc"></a>レコード セット:レコード セット (ODBC) をパラメーター化
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -46,7 +46,7 @@ ms.locfileid: "51331270"
 
 - 定義済みのクエリを実行時引数を渡します。
 
-   ストアド プロシージャにパラメーターを渡すには、完全なカスタム ODBC を指定する必要があります**呼び出す**ステートメント-パラメーター プレース ホルダーで-を呼び出すと`Open`、レコード セットの既定の SQL ステートメントをオーバーライドします。 詳細については、次を参照してください[:open](../../mfc/reference/crecordset-class.md#open)で、*クラス ライブラリ リファレンス*と[SQL: の SQL ステートメント (ODBC)](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)と[。レコード セット: 定義済みクエリ (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)します。
+   ストアド プロシージャにパラメーターを渡すには、完全なカスタム ODBC を指定する必要があります**呼び出す**ステートメント-パラメーター プレース ホルダーで-を呼び出すと`Open`、レコード セットの既定の SQL ステートメントをオーバーライドします。 詳細については、次を参照してください[:open](../../mfc/reference/crecordset-class.md#open)で、*クラス ライブラリ リファレンス*と[SQL:。レコード セットの SQL ステートメント (ODBC) のカスタマイズ](../../data/odbc/sql-customizing-your-recordsets-sql-statement-odbc.md)と[レコード セット。クラスの定義済みクエリ (ODBC) 宣言](../../data/odbc/recordset-declaring-a-class-for-a-predefined-query-odbc.md)します。
 
 - 別のパラメーター情報をそのつどを効率的に実行します。
 
@@ -75,19 +75,19 @@ ms.locfileid: "51331270"
                                        // for some drivers
     ```
 
-   フィルター文字列の引用符を正しく使用する方法の詳細については、[レコード セット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)を参照してください。
+   フィルター文字列の引用符を正しく使用する方法の詳細については、次を参照してください。[レコード セット。レコード (ODBC) のフィルター処理](../../data/odbc/recordset-filtering-records-odbc.md)します。
 
    パラメーター値が異なる新しい学生 id、レコード セットを再実行するたびにです。
 
    > [!TIP]
    > パラメーターを使用することは、単にフィルターよりも効率的です。 データベースのパラメーター化されたレコード セットでは、SQL を処理する必要があります**選択**ステートメントを 1 回のみです。 パラメーターを指定せず、フィルター選択されたレコード セットの**選択**ステートメントを処理する必要があるたび`Requery`フィルター値を新しい値。
 
-フィルターの詳細については、[レコード セット: レコードのフィルター処理 (ODBC)](../../data/odbc/recordset-filtering-records-odbc.md)を参照してください。
+フィルターの詳細については、次を参照してください。[レコード セット。レコード (ODBC) のフィルター処理](../../data/odbc/recordset-filtering-records-odbc.md)します。
 
 ##  <a name="_core_parameterizing_your_recordset_class"></a> レコード セット クラスをパラメーター化
 
 > [!NOTE]
-> このセクションから派生したオブジェクトに適用されます`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチ、パラメーターの実装を使用している場合は、同様のプロセスです。 詳細については、[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)を参照してください。
+> このセクションから派生したオブジェクトに適用されます`CRecordset`バルク行フェッチは実装されていません。 バルク行フェッチ、パラメーターの実装を使用している場合は、同様のプロセスです。 詳細については、次を参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 レコード セット クラスを作成する前に、必要なパラメーターは、データ型は、レコード セットでの使用方法を決定します。
 
@@ -114,7 +114,7 @@ ms.locfileid: "51331270"
 
    ウィザードで生成されたフィールドのデータ メンバーの後に、パラメーターのデータ メンバーを追加します。 形式では、各ユーザー定義のパラメーター名に"Param"という単語を追加します。
 
-1. 変更、 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) .cpp ファイル内のメンバー関数の定義。 クラスに追加する各パラメーターのデータ メンバーに対して RFX 関数の呼び出しを追加します。 RFX 関数の記述方法の詳細については、[レコード フィールド エクス チェンジ: RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)を参照してください。 1 回の呼び出しでパラメーターの rfx 関数の呼び出しの前に。
+1. 変更、 [DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange) .cpp ファイル内のメンバー関数の定義。 クラスに追加する各パラメーターのデータ メンバーに対して RFX 関数の呼び出しを追加します。 RFX 関数の記述方法の詳細については、次を参照してください。[レコード フィールド エクス チェンジ。RFX のしくみ](../../data/odbc/record-field-exchange-how-rfx-works.md)します。 1 回の呼び出しでパラメーターの rfx 関数の呼び出しの前に。
 
     ```cpp
     pFX->SetFieldType( CFieldExchange::param );
@@ -123,7 +123,7 @@ ms.locfileid: "51331270"
 
 1. レコード セット クラスのコンス トラクターで、パラメーターのカウントをインクリメント`m_nParams`します。
 
-   詳しくは、[レコード フィールド エクス チェンジ: ウィザード コードの使用](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)を参照してください。
+   詳しくは、次を参照してください。[レコード フィールド エクス チェンジ。ウィザード コードの使用](../../data/odbc/record-field-exchange-working-with-the-wizard-code.md)します。
 
 1. このクラスのレコード セット オブジェクトを作成するコードを記述する場合、配置、"?"適切な各場所で、SQL ステートメントの文字列パラメーターが置き換えられます (疑問符) 記号です。
 
@@ -176,5 +176,5 @@ if( !rsStudents.Requery( ) )
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: レコードの追加、更新、削除 (ODBC)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
-[レコードセット: レコード選択のしくみ (ODBC)](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)
+[レコード セット:追加、更新、および削除 (Odbc)](../../data/odbc/recordset-adding-updating-and-deleting-records-odbc.md)<br/>
+[レコード セット:レコード セットの選択が (ODBC) を記録する方法](../../data/odbc/recordset-how-recordsets-select-records-odbc.md)

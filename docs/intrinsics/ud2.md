@@ -7,12 +7,12 @@ helpviewer_keywords:
 - UD2 instruction
 - __ud2 intrinsic
 ms.assetid: 0831cd5a-8b65-402e-bb57-11e1d5d7ffd2
-ms.openlocfilehash: dd876f26349c39e0af0d2e0f100fb4e13efa50f4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a36ab5c25ac9138b2a4d6810cc2a339e534f1695
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50666545"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59029409"
 ---
 # <a name="ud2"></a>__ud2
 
@@ -30,7 +30,7 @@ void __ud2();
 
 プロセッサでは、未定義の命令を実行する場合に無効な opcode 例外が発生します。
 
-`__ud2`関数は、`UD2`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2: 命令セットの参照"で、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
+`__ud2`関数は、`UD2`マシン語命令、およびカーネル モードでのみ使用できます。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2。命令の参照を設定、"で、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
 
 ## <a name="requirements"></a>必要条件
 
@@ -40,7 +40,7 @@ void __ud2();
 
 **ヘッダー ファイル** \<intrin.h >
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="example"></a>例
 
@@ -84,4 +84,4 @@ After __ud2().  Return code = 1.
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)

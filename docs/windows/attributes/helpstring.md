@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - helpstring attribute [C++]
 ms.assetid: 0401e905-a63e-4fad-98d0-d1efea111966
-ms.openlocfilehash: 12707dde61013caa1ed9feb1d0daa74cbb7b9d9a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 623b2c7fb4ce7c3e5de87d21f012d008720fdee2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591374"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59022206"
 ---
 # <a name="helpstring"></a>helpstring
 

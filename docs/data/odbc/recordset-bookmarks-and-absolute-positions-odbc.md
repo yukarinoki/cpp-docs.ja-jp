@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: ブックマークと絶対位置 (ODBC)'
+title: レコード セット:ブックマークと絶対位置 (ODBC)
 ms.date: 11/04/2016
 f1_keywords:
 - SetAbsolutePosition
@@ -21,14 +21,14 @@ helpviewer_keywords:
 - GetBookmark method
 - SetAbsolutePosition method, bookmarks
 ms.assetid: 189788d6-33c1-41c5-9265-97db2a5d43cc
-ms.openlocfilehash: 826c1c0124eb261c97fff8f1e2fa01c8becb073a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: c4a223f01b25b4c321ccfb4f4c03c3c5241381ec
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50500941"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023790"
 ---
-# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>レコードセット: ブックマークと絶対位置 (ODBC)
+# <a name="recordset-bookmarks-and-absolute-positions-odbc"></a>レコード セット:ブックマークと絶対位置 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -73,14 +73,14 @@ rs.SetBookmark( varRecordToReturnTo );
 クラス、ブックマークのほか`CRecordset`序数の位置を指定して現在のレコードを設定することができます。 これには、絶対配置は呼び出されます。
 
 > [!NOTE]
->  絶対配置では、順方向専用のレコード セットで使用できません。 前方スクロール専用レコードの詳細については、[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)を参照してください。
+>  絶対配置では、順方向専用のレコード セットで使用できません。 前方スクロール専用レコードの詳細については、次を参照してください。[レコード セット (ODBC)](../../data/odbc/recordset-odbc.md)します。
 
 絶対位置を使用して現在のレコード ポインターを移動するには、呼び出す[CRecordset::SetAbsolutePosition](../../mfc/reference/crecordset-class.md#setabsoluteposition)します。 値を渡す場合`SetAbsolutePosition`、序数の位置になる、現在のレコードに対応するレコード。
 
 > [!NOTE]
->  レコードの絶対位置は、可能性のある信頼性の高いではありません。 レコード セットからレコードが削除されると、それ以降のレコードの序数位置が変更されます。 ブックマークは、現在のレコードを移動するための推奨される方法です。 詳細については、[MFC ODBC 内のブックマーク](#_core_bookmarks_in_mfc_odbc)を参照してください。
+>  レコードの絶対位置は、可能性のある信頼性の高いではありません。 レコード セットからレコードが削除されると、それ以降のレコードの序数位置が変更されます。 ブックマークは、現在のレコードを移動するための推奨される方法です。 詳細については、次を参照してください。 [MFC ODBC 内のブックマーク](#_core_bookmarks_in_mfc_odbc)します。
 
-レコード セットのナビゲーションの詳細については、[レコード セット: スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)を参照してください。
+レコード セットのナビゲーションの詳細については、次を参照してください。[レコード セット。スクロール (ODBC)](../../data/odbc/recordset-scrolling-odbc.md)します。
 
 ## <a name="see-also"></a>関連項目
 

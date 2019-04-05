@@ -13,16 +13,16 @@ helpviewer_keywords:
 - dialog box controls [C++], custom (user) controls
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
-ms.openlocfilehash: 152113200fd7aa9ee87b749380e370fe4e6ad9ff
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563356"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023699"
 ---
 # <a name="dialog-box-controls-c"></a>ダイアログ ボックス コントロール (C++)
 
-コントロールを使用して、ダイアログ ボックスを追加することができます、**ダイアログ エディター**  タブで、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox) ダイアログ ボックスにドラッグしてコントロールを選択することができます。 既定で、**ツールボックス**ウィンドウ自動非表示に設定されます。 ソリューションの左側の余白のタブとして表示されるときに、**ダイアログ エディター**が開いています。 ただし、ピン留めできます、**ツールボックス**ウィンドウ位置を選択して、**自動的に隠す**ウィンドウの右上隅のボタンをクリックします。 このウィンドウの動作を制御する方法の詳細については、[ウィンドウ管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)を参照してください。
+コントロールを使用して、ダイアログ ボックスを追加することができます、**ダイアログ エディター**  タブで、[ツールボックス ウィンドウ](/visualstudio/ide/reference/toolbox) ダイアログ ボックスにドラッグしてコントロールを選択することができます。 既定で、**ツールボックス**ウィンドウ自動非表示に設定されます。 ソリューションの左側の余白のタブとして表示されるときに、**ダイアログ エディター**が開いています。 ただし、ピン留めできます、**ツールボックス**ウィンドウ位置を選択して、**自動的に隠す**ウィンドウの右上隅のボタンをクリックします。 このウィンドウの動作を制御する方法の詳細については、次を参照してください。[ウィンドウ管理](/visualstudio/ide/customizing-window-layouts-in-visual-studio)します。
 
 ダイアログ ボックスにコントロールを追加、既存のコントロールの位置を変更または 1 つのダイアログ ボックスから、コントロールを移動する最も簡単な方法では、ドラッグ アンド ドロップを使用します。 ダイアログ ボックスに、削除されるまで、コントロールの位置は点線で囲まれます。 ドラッグ アンド ドロップしてダイアログ ボックスにコントロールを追加すると、コントロールには、その種類のコントロールに適切な標準の高さが与えられます。
 
@@ -32,21 +32,21 @@ ms.locfileid: "57563356"
 
 詳細については、**ダイアログ エディター**を参照してください方法[追加、編集、または削除コントロール](adding-editing-or-deleting-controls.md)、[レイアウト コントロール](../windows/arrangement-of-controls-on-dialog-boxes.md)、および[コントロール アクセスの定義と値](../windows/defining-mnemonics-access-keys.md).
 
-コントロールとダイアログ ボックスの詳細については、[コントロール クラス](../mfc/control-classes.md)、[ダイアログ ボックス クラス](../mfc/dialog-box-classes.md)、および[スクロール バー スタイル](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)を参照してください。
+コントロールとダイアログ ボックスの詳細については、次を参照してください。[コントロール クラス](../mfc/control-classes.md)、[ダイアログ ボックス クラス](../mfc/dialog-box-classes.md)、および[スクロール バー スタイル](../mfc/reference/styles-used-by-mfc.md#scroll-bar-styles)します。
 
 使用できる標準のコントロール、**ツールボックス**イベントは、既定値。
 
 |コントロール名|既定のイベント|
 |---|---|
-|[ボタン コントロール](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[Button コントロール](../mfc/reference/cbutton-class.md)|BN_CLICKED|
 |[チェック ボックス コントロール](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[コンボ ボックス コントロール](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[コントロールを編集します。](../mfc/reference/cedit-class.md)|EN_CHANGE|
-|グループ ボックス|(適用なし)|
+|[編集コントロール](../mfc/reference/cedit-class.md)|EN_CHANGE|
+|グループ ボックス|(該当なし)|
 |[リスト ボックス コントロール](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
 |[ラジオ ボタン コントロール](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
-|[スタティック テキスト コントロール](../mfc/reference/cstatic-class.md)|(適用なし)|
-|[画像コントロール](../mfc/reference/cpictureholder-class.md)|(適用なし)|
+|[スタティック テキスト コントロール](../mfc/reference/cstatic-class.md)|(該当なし)|
+|[画像コントロール](../mfc/reference/cpictureholder-class.md)|(該当なし)|
 |[リッチ エディット 2.0 コントロール](../mfc/using-cricheditctrl.md)|EN_CHANGE|
 |[スクロール バー コントロール](../mfc/reference/cscrollbar-class.md)|NM_THEMECHANGED|
 
@@ -57,7 +57,7 @@ ms.locfileid: "57563356"
 
 |コントロール名|既定のイベント|
 |---|---|
-|[スライダー コントロール](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[Slider コントロール](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
 |[スピン コントロール](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[プログレス コントロール](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[ホット キー コントロール](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
@@ -66,7 +66,7 @@ ms.locfileid: "57563356"
 |[タブ コントロール](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
 |[アニメーション コントロール](../mfc/using-an-animation-control.md)|ACN_START|
 |[日時指定コントロール](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[月間予定表コントロールします。](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
+|[月間予定表コントロール](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
 |[IP アドレス コントロール](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
 |[拡張コンボ ボックス コントロール](../mfc/creating-an-extended-combo-box-control.md)||
 |カスタム コントロール|TTN_GETDISPINFO|

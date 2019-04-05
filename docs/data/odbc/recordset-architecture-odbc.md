@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: レコードセットの構造 (ODBC)'
+title: レコード セット:構造 (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - recordsets, data members
@@ -13,14 +13,14 @@ helpviewer_keywords:
 - m_nParams data member
 - m_nFields data member, recordsets
 ms.assetid: 47555ddb-11be-4b9e-9b9a-f2931764d298
-ms.openlocfilehash: fc44f2b4fcae51cef78d6b660f0cc86ee516e5e6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 5904a69f81dd1fbf22171a46040da5d4f5511588
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50651192"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039651"
 ---
-# <a name="recordset-architecture-odbc"></a>レコードセット: レコードセットの構造 (ODBC)
+# <a name="recordset-architecture-odbc"></a>レコード セット:構造 (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
@@ -33,7 +33,7 @@ ms.locfileid: "50651192"
 - [M_nFields と m_nParams データ メンバーを使用します。](#_core_using_m_nfields_and_m_nparams)
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチが実装されている場合は、アーキテクチャは似ています。 相違点を理解するのを参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチが実装されている場合は、アーキテクチャは似ています。 相違点を理解するのを参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 ##  <a name="_core_a_sample_class"></a> サンプル クラス
 
@@ -83,16 +83,16 @@ SELECT CourseID, CourseTitle FROM Course WHERE CourseID = MATH101
 >  MFC は何も自体パラメーターを使用して、具体的には、テキストの置換実行されません。 代わりに、MFC ODBC に伝えます。 パラメーターを取得する場所ODBC では、データを取得し、必要なパラメーター化を実行します。
 
 > [!NOTE]
->  パラメーターの順序が重要です。 これに関する情報とパラメーターの詳細については、[レコード セット: レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)を参照してください。
+>  パラメーターの順序が重要です。 これに関する情報とパラメーターの詳細については、次を参照してください。[レコード セット。レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。
 
 ##  <a name="_core_using_m_nfields_and_m_nparams"></a> M_nFields と m_nParams を使用してください。
 
 初期化ウィザードが、クラスのコンス トラクターを書き込むときに、 [m_nFields](../../mfc/reference/crecordset-class.md#m_nfields)の数を指定するデータ メンバー[フィールド データ メンバーの](#_core_field_data_members)クラス。 追加する場合[パラメーター](#_core_parameter_data_members) 、クラスの初期化を追加する必要がありますも、 [m_nParams](../../mfc/reference/crecordset-class.md#m_nparams)データ メンバーは、パラメーターのデータ メンバーの数を指定します。 フレームワークでは、これらの値を使用して、データ メンバーを使用します。
 
-詳細と例については、[レコード フィールド エクス チェンジ: RFX の使い方](../../data/odbc/record-field-exchange-using-rfx.md)を参照してください。
+詳細と例については、次を参照してください。[レコード フィールド エクス チェンジ。RFX の使い方](../../data/odbc/record-field-exchange-using-rfx.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[レコード セット:テーブル (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)

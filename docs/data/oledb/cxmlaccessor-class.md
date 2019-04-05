@@ -20,12 +20,12 @@ helpviewer_keywords:
 - GetXMLColumnData method
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
-ms.openlocfilehash: 1d57251e48f2496b07a4eb4f94976c7a44b165f9
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51328514"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59036102"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor クラス
 
@@ -62,7 +62,7 @@ class CXMLAccessor : public CDynamicStringAccessorW
 
 [!code-cpp[NVC_OLEDB_Consumer#14](../../data/oledb/codesnippet/cpp/cxmlaccessor-class_1.cpp)]
 
-## <a name="getxmlcolumndata"></a> Cxmlaccessor::getxmlcolumndata
+## <a name="getxmlcolumndata"></a> CXMLAccessor::GetXMLColumnData
 
 列で、XML 形式の文字列データとして、テーブルの列の型情報を取得します。
 
@@ -91,7 +91,7 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 
 `</columninfo>`
 
-## <a name="getxmlrowdata"></a> Cxmlaccessor::getxmlrowdata
+## <a name="getxmlrowdata"></a> CXMLAccessor::GetXMLRowData
 
 行で、XML 形式の文字列データとして、テーブルの内容全体を取得します。
 

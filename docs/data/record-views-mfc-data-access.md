@@ -8,16 +8,16 @@ helpviewer_keywords:
 - record views [C++]
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
-ms.openlocfilehash: 155a7e4de6272f13d12ab2a64cba190a184f62cf
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588488"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040200"
 ---
 # <a name="record-views--mfc-data-access"></a>レコード ビュー (MFC データ アクセス)
 
-このセクションでは、MFC ODBC クラスにのみ適用されます。 OLE DB レコード ビューについては、[COleDBRecordView](../mfc/reference/coledbrecordview-class.md)と[を使用して OLE DB レコード ビュー](../data/oledb/using-ole-db-record-views.md)を参照してください。
+このセクションでは、MFC ODBC クラスにのみ適用されます。 OLE DB レコード ビューについては、次を参照してください。 [COleDBRecordView](../mfc/reference/coledbrecordview-class.md)と[を使用して OLE DB レコード ビュー](../data/oledb/using-ole-db-record-views.md)します。
 
 クラス ライブラリをフォーム ベースのデータ アクセス アプリケーションをサポートするには、クラスを提供します[CRecordView](../mfc/reference/crecordview-class.md)します。 レコード ビューは、そのコントロールのフィールド データ メンバーに直接マップはフォーム ビュー オブジェクトを[recordset](../data/odbc/recordset-odbc.md)オブジェクト (およびクエリの結果またはデータ ソースのテーブル内の対応する列に間接的に)。 などの基本クラス[CFormView](../mfc/reference/cformview-class.md)、`CRecordView`ダイアログ テンプレート リソースに基づきます。
 
@@ -41,11 +41,11 @@ ms.locfileid: "50588488"
 
 - [レコード ビューのデータ交換](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [レコード ビューの操作でのロール](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [レコード ビューを利用するために必要な作業](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
-- [設計と、レコード ビューを作成します。](../data/designing-and-creating-a-record-view-mfc-data-access.md)
+- [レコード ビューのデザインと作成](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
-- [レコード ビューの使用](../data/using-a-record-view-mfc-data-access.md)
+- [レコード ビューの使用法](../data/using-a-record-view-mfc-data-access.md)
 
 ## <a name="see-also"></a>関連項目
 

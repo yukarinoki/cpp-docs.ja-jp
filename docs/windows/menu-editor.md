@@ -39,12 +39,12 @@ helpviewer_keywords:
 - commands [C++], deleting from menus
 - menus [C++], deleting
 ms.assetid: 421fb215-6e12-4ec9-a3af-82d77f87bfa6
-ms.openlocfilehash: 0681cc0a0d93d78633dd5488defaa0e9db55b1c6
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: b5d809fa4e0f608d4c0e6cbdaf8697688c6d3f9c
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563135"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037277"
 ---
 # <a name="menu-editor-c"></a>メニュー エディター (C++)
 
@@ -106,7 +106,7 @@ ms.locfileid: "57563135"
    > [!TIP]
    > ユーザーがメニュー コマンドを選択できるようにするニーモニック キー (ホット キー) を定義することができます。 アンパサンドを入力 (`&`) ニーモニックとして指定する文字の前にします。 この文字を入力することで、ユーザーはメニュー コマンドを選択できます。
 
-1. **プロパティ**ウィンドウで、メニュー コマンドを適用するプロパティを選択します。 詳細については、[メニュー コマンドのプロパティ](../windows/menu-command-properties.md)を参照してください。
+1. **プロパティ**ウィンドウで、メニュー コマンドを適用するプロパティを選択します。 詳細については、次を参照してください。[メニュー コマンドのプロパティ](../windows/menu-command-properties.md)します。
 
 1. **プロンプト**ボックスに、**プロパティ**ウィンドウで、アプリケーションのステータス バーに表示するプロンプト文字列を入力します。
 
@@ -162,7 +162,7 @@ ms.locfileid: "57563135"
 アプリケーション コードがメニュー リソースをロードして使用する必要があるメニュー リソースを作成したら、 [TrackPopupMenu](/windows/desktop/api/winuser/nf-winuser-trackpopupmenu)がメニューを表示します。 外部を選択して、ポップアップ メニューが閉じるか、コマンドが選択すると、その関数を返します。 ユーザーがコマンドを選択した場合は、そのコマンドのメッセージが、ハンドルが渡されたウィンドウに送信されます。
 
 > [!NOTE]
-> Microsoft Foundation Class (MFC) ライブラリのプログラムおよび ATL プログラムを使用して**コード ウィザード**をコードにメニュー コマンドをフックします。 詳細については、[イベントの追加](../ide/adding-an-event-visual-cpp.md)と[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)を参照してください。
+> Microsoft Foundation Class (MFC) ライブラリのプログラムおよび ATL プログラムを使用して**コード ウィザード**をコードにメニュー コマンドをフックします。 詳細については、次を参照してください。[イベントの追加](../ide/adding-an-event-visual-cpp.md)と[関数へのメッセージの割り当て](../mfc/reference/mapping-messages-to-functions.md)します。
 
 - ポップアップ メニューを作成する空のタイトルでメニューを作成しを行わない、*キャプション*します。 新しいメニューにメニュー コマンドを次に、追加は、一時的なキャプションを空白のメニュー タイトルの下の最初のメニュー コマンドに進みます。*ここへ入力*を入力し、*キャプション*およびその他の情報。
 

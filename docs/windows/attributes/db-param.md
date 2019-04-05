@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - db_param attribute
 ms.assetid: a28315f5-4722-459e-92ef-32e83c0b205a
-ms.openlocfilehash: 2de051b099da5f179a7634cddfb359d85f4b1f83
-ms.sourcegitcommit: c1f646c8b72f330fa8cf5ddb0f8f261ba10d16f0
+ms.openlocfilehash: a3cfcf3c7ce3313eaff9a3b35854e1e077fc906f
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58328793"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59038097"
 ---
 # <a name="dbparam"></a>db_param
 
@@ -25,7 +25,7 @@ ms.locfileid: "58328793"
 
 ### <a name="parameters"></a>パラメーター
 
-*序数*<br/>
+*ordinal*<br/>
 データをバインドする行セット内のフィールドに対応する列数 (DBCOLUMNINFO 序数)。
 
 *paramtype*<br/>
@@ -40,16 +40,16 @@ ms.locfileid: "58328793"
 *dbtype*<br/>
 (省略可能)OLE DB[型インジケーター](/previous-versions/windows/desktop/ms711251(v=vs.85))列エントリにします。
 
-*precision*<br/>
+*精度*<br/>
 (省略可能)列のエントリに使用する有効桁数です。 詳細については、説明を参照してください`bPrecision`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
 *スケール*<br/>
 (省略可能)列のエントリに使用する小数点以下桁数。 詳細については、説明を参照してください`bScale`の要素、 [DBBINDING 構造体。](/previous-versions/windows/desktop/ms716845(v=vs.85))
 
-*status*<br/>
-(省略可能)この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*を参照してください。
+*状態*<br/>
+(省略可能)この列の状態を保持するために使用するメンバー変数です。 状態は、列の値がデータ値や NULL など、他のいくつかの値であるかどうかを示します。 使用可能な値は、次を参照してください。[状態](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*します。
 
-*length*<br/>
+*長さ*<br/>
 (省略可能)メンバー変数 (バイト単位)、列のサイズを保持するために使用します。
 
 ## <a name="remarks"></a>Remarks
@@ -102,7 +102,7 @@ struct CSalesbyYear {
 };
 ```
 
-## <a name="requirements"></a>必要条件
+## <a name="requirements"></a>要件
 
 ### <a name="attribute-context"></a>属性コンテキスト
 

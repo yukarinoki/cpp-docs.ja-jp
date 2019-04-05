@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3535
 ms.assetid: 24449c98-f681-484d-a00b-32533dca3a88
-ms.openlocfilehash: 74a114245e350f174c05e5009775545bd42faf5f
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: e80fa62db9795838980c63e113300a554afabef3
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50486646"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59040862"
 ---
 # <a name="compiler-error-c3535"></a>コンパイラ エラー C3535
 
@@ -23,7 +23,7 @@ ms.locfileid: "50486646"
 
 1. 初期化式の型がないことを確認`void`します。
 
-1. 宣言が基本型へのポインターでないことを確認します。 詳細については、[基本的な型](../../cpp/fundamental-types-cpp.md)を参照してください。
+1. 宣言が基本型へのポインターでないことを確認します。 詳細については、次を参照してください。[基本的な型](../../cpp/fundamental-types-cpp.md)します。
 
 1. 宣言型へのポインターの場合、初期化式がポインター型であることを確認します。
 
@@ -71,4 +71,4 @@ auto *p = x;  // C3535
 ## <a name="see-also"></a>関連項目
 
 [auto キーワード](../../cpp/auto-keyword.md)<br/>
-[基本的な型](../../cpp/fundamental-types-cpp.md)
+[基本型](../../cpp/fundamental-types-cpp.md)

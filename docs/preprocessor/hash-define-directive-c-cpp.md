@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '#define directive, syntax'
 - '#define directive'
 ms.assetid: 33cf25c6-b24e-40bf-ab30-9008f0391710
-ms.openlocfilehash: dec555de64a3ebd166bdff5558957f09e1c2755e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 8a0cc7e7836a0c82c72055fe8d9e7497995485d0
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50653753"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59039508"
 ---
 # <a name="define-directive-cc"></a>#define ディレクティブ (C/C++)
 
@@ -23,13 +23,13 @@ ms.locfileid: "50653753"
 
 ## <a name="syntax"></a>構文
 
-`#define` *識別子**トークン文字列*<sub>選択</sub>
+`#define` *identifier* *token-string*<sub>opt</sub>
 
-`#define` *識別子* `(` *識別子*<sub>opt</sub> `,` *.* `,` *識別子*<sub>opt</sub> `)` *トークン文字列*<sub>選択</sub>
+`#define` *identifier* `(` *identifier*<sub>opt</sub>`,` *...* `,` *identifier*<sub>opt</sub>`)` *token-string*<sub>opt</sub>
 
 ## <a name="remarks"></a>Remarks
 
-**#Define**ディレクティブにより、コンパイラに置き換える*トークン文字列*出現するたびに*識別子*ソース ファイルにします。 *識別子*トークンをフォームの場合にのみが置き換えられます。 つまり、*識別子*コメント、または長い識別子の一部として、文字列内に表示される場合は置き換えられません。 詳細については、[トークン](../cpp/tokens-cpp.md)を参照してください。
+**#Define**ディレクティブにより、コンパイラに置き換える*トークン文字列*出現するたびに*識別子*ソース ファイルにします。 *識別子*トークンをフォームの場合にのみが置き換えられます。 つまり、*識別子*コメント、または長い識別子の一部として、文字列内に表示される場合は置き換えられません。 詳細については、次を参照してください。[トークン](../cpp/tokens-cpp.md)します。
 
 *トークン文字列*キーワード、定数、または完全なステートメントなど、トークンの一連の引数で構成されます。 1 つ以上の空白文字で区切る必要があります*トークン文字列*から*識別子*します。 この空白は、置き換えられるテキストの一部とは見なされません。最後のトークンのテキストに続く空白も同様です。
 
@@ -80,7 +80,7 @@ Microsoft C/C++ では、新しい定義が元の定義と構文的に同一の�
 #define multiply( a1, a2 ) ( b1 * b2 )
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 この例では、 **#define**ディレクティブ。
 
@@ -113,7 +113,7 @@ var = 80 + 10 * 20;
 
 マクロおよび定数の定義、 [/D](../build/reference/d-preprocessor-definitions.md)コンパイラ オプションが使用すると同じ効果を **#define**プリプロセス ディレクティブ、ファイルの先頭。 /D オプションを使用して最大 30 個のマクロを定義できます。
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

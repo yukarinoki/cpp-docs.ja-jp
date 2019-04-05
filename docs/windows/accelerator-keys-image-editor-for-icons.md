@@ -8,12 +8,12 @@ helpviewer_keywords:
 - accelerator keys
 - Image editor [C++], accelerator keys
 ms.assetid: add37861-3e17-4a6f-89e8-46df12e74a90
-ms.openlocfilehash: 0b29f435ab91b10e010e956d26fb8d2d116edc6e
-ms.sourcegitcommit: b4645761ce5acf8c2fc7a662334dd5a471ea976d
+ms.openlocfilehash: 45afdf4b3b557b560d7597b1bb4330c36a1fc84d
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57563122"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59025086"
 ---
 # <a name="accelerator-keys-c-image-editor-for-icons"></a>アクセラレータ キー (アイコン用イメージ エディターを C++)
 
@@ -40,7 +40,7 @@ ms.locfileid: "57563122"
 |Image.LineTool|**Ctrl**  +  **L**|選択した形、サイズ、および色で直線を描画します。|
 |Image.MagnificationTool|**Ctrl キーを押し** + **M**|アクティブ化、**拡大**ツールで、イメージの特定のセクションを拡大することができます。|
 |Image.Magnify|**Ctrl**  +  **Shift**  +  **M**|現在の拡大率と 1:1 の間で切り替えます。|
-|Image.NewImageType|**[挿入]**|起動、[新規\<デバイス > イメージの種類 ダイアログ ボックス](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)で別のイメージ タイプのイメージを作成できます。|
+|Image.NewImageType|**挿入**|起動、[新規\<デバイス > イメージの種類 ダイアログ ボックス](../windows/new-device-image-type-dialog-box-image-editor-for-icons.md)で別のイメージ タイプのイメージを作成できます。|
 |Image.NextColor|**Ctrl**  +  **]**<br /><br /> または<br /><br /> **Ctrl キーを押し** + **右向き矢印**|描画の前景色を次のパレット カラーに変更します。|
 |Image.NextRightColor|**Ctrl**  +  **Shift**  +  **]**<br /><br /> または<br /><br /> **Shift キーを押し** + **Ctrl** + **右向き矢印**|描画の背景色を次のパレット カラーに変更します。|
 |Image.OutlinedEllipseTool|**Shift キーを押し** + **Alt** + **P**|塗りつぶされた楕円を外枠付きで描画します。|
@@ -69,7 +69,7 @@ ms.locfileid: "57563122"
 ## <a name="see-also"></a>関連項目
 
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)<br/>
-[方法: アイコンまたはその他の画像を作成する](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[方法: 画像を編集する](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[方法: 描画ツールを使用する](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[方法: 色を調整する](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[方法: アイコンまたはその他のイメージを作成します。](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[方法: イメージを編集します。](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[方法: 描画ツールを使用して、](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[方法: 色の調整](../windows/working-with-color-image-editor-for-icons.md)<br/>

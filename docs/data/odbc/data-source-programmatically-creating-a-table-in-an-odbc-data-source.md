@@ -7,18 +7,18 @@ helpviewer_keywords:
 - ODBC data sources, creating tables in
 - tables [C++], creating programmatically
 ms.assetid: 9ca68fb5-c3df-424a-a75c-e3fb01cc1b18
-ms.openlocfilehash: 139efb7a34baacb2bb6ad424d13f2d337eb12af6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 61d3f3e39362db27d1e3abc00fa3cb9ea82b86e2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50661657"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59028400"
 ---
-# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>データ ソース: プログラムにおける ODBC データ ソースのテーブルの作成
+# <a name="data-source-programmatically-creating-a-table-in-an-odbc-data-source"></a>データ ソース:データ ソース : プログラムにおける ODBC データ ソースのテーブルの作成
 
 このトピックでは、データのテーブルを作成する方法を説明しますを使用して、ソース、`ExecuteSQL`クラスのメンバー関数`CDatabase`、関数を含む文字列を渡して、 **CREATE TABLE** SQL ステートメント。
 
-MFC での ODBC データ ソースの詳細については、[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)を参照してください。 トピック[データ ソース: プログラムにおける ODBC データ ソースの設定](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)データ ソースの作成について説明します。
+MFC での ODBC データ ソースの詳細については、次を参照してください。[データ ソース (ODBC)](../../data/odbc/data-source-odbc.md)します。 トピック[データ ソース。ODBC データ ソースをプログラムで構成](../../data/odbc/data-source-programmatically-configuring-an-odbc-data-source.md)データ ソースの作成について説明します。
 
 確立されているデータ ソースの場合を使用してテーブルを簡単に作成することができます、`ExecuteSQL`メンバー関数および**CREATE TABLE** SQL ステートメント。 ある場合など、`CDatabase`と呼ばれるオブジェクト`myDB`テーブルを作成する次の MFC コードを使用できます。
 

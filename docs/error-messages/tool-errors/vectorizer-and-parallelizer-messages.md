@@ -8,12 +8,12 @@ f1_keywords:
 - C5001
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
-ms.openlocfilehash: 69e174a000edfea7027a04f9cf97bf5a1aeb585e
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518764"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59023907"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>ベクター化と並列化のメッセージ 
 
@@ -21,9 +21,9 @@ Visual C のコンパイラ オプションを使用する[/Qpar-report](../../b
 
 - [情報メッセージ](#BKMK_InformationalMessages)
 
-- [5 xx](#BKMK_ReasonCode50x)
+- [5xx](#BKMK_ReasonCode50x)
 
-- [10 xx 系](#BKMK_ReasonCode100x)
+- [10xx](#BKMK_ReasonCode100x)
 
 - [11xx](#BKMK_ReasonCode110x)
 
@@ -53,7 +53,7 @@ Visual C のコンパイラ オプションを使用する[/Qpar-report](../../b
 
 以降のセクションでは、自動並列化と自動ベクター化について表示される可能性のある理由コードを示します。
 
-###  <a name="BKMK_ReasonCode50x"></a> 5 xx
+###  <a name="BKMK_ReasonCode50x"></a> 5xx
 
 5 つ*xx*理由コードは自動並列化と自動ベクター化の両方に適用されます。
 
