@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C2664
 ms.assetid: 3595d66e-cf87-4fda-a896-c0cd81f95db4
 ms.openlocfilehash: cffd178e1736358333ee27d4572d3531de23f527
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774608"
 ---
 # <a name="compiler-error-c2664"></a>コンパイラ エラー C2664
 
 'function': 引数 n を 'type1' から 'type2' へ変換できません。
 
-このパラメーター変換問題は、クラスのインスタンスが作成され、`explicit` キーワードでマークされたコンストラクターで暗黙的な変換が試みられた場合に生じる可能性があります。 明示的な変換の詳細については、[ユーザー定義型の変換](../../cpp/user-defined-type-conversions-cpp.md)を参照してください。
+このパラメーター変換問題は、クラスのインスタンスが作成され、`explicit` キーワードでマークされたコンストラクターで暗黙的な変換が試みられた場合に生じる可能性があります。 明示的な変換の詳細については、次を参照してください。[ユーザー定義型の変換](../../cpp/user-defined-type-conversions-cpp.md)します。
 
 パラメーターとしてオブジェクトへの参照を指定する関数に一時オブジェクトが渡される場合、その参照は `const` 参照である必要があります。
 
@@ -189,7 +189,7 @@ int main( ) {
 
 ## <a name="example"></a>例
 
-関数呼び出しが満たされるように、列挙型変数はその基になる型に変換されません。 詳細については、[列挙型クラス](../../extensions/enum-class-cpp-component-extensions.md)を参照してください。 次の例では、C2664 を生成し、その修正方法を示しています。
+関数呼び出しが満たされるように、列挙型変数はその基になる型に変換されません。 詳細については、次を参照してください。[列挙型クラス](../../extensions/enum-class-cpp-component-extensions.md)します。 次の例では、C2664 を生成し、その修正方法を示しています。
 
 ```
 // C2664f.cpp

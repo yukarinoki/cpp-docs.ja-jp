@@ -7,10 +7,10 @@ helpviewer_keywords:
 - R6017
 ms.assetid: df3ec5f5-6771-4648-ba06-0e26c6a1cc6a
 ms.openlocfilehash: 45f3b07f540cb72a955b19420130a5a806b750d7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774699"
 ---
 # <a name="c-runtime-error-r6017"></a>C ランタイム エラー R6017
@@ -30,4 +30,4 @@ ms.locfileid: "58774699"
 
 プロセスでは、システム リソースの C ランタイム マルチ スレッドのロックにアクセスしようとしています。 中に予期しないエラーを受け取りました。 このエラーは、通常、プロセスがランタイム ヒープのデータを誤って変更する場合に発生します。 ただし、それも可能性があります、ランタイム ライブラリまたはオペレーティング システムのコードで内部エラー。
 
-この問題を解決するには、コードのヒープ破損のバグを確認します。 詳細と例については、[CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)を参照してください。 次に、アプリの展開に関する最新の再頒布可能パッケージを使用していることを確認します。 詳しくは、[Deployment in Visual c](../../windows/deployment-in-visual-cpp.md)を参照してください。
+この問題を解決するには、コードのヒープ破損のバグを確認します。 詳細と例については、次を参照してください。 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)します。 次に、アプリの展開に関する最新の再頒布可能パッケージを使用していることを確認します。 詳しくは、次を参照してください。 [Deployment in Visual c](../../windows/deployment-in-visual-cpp.md)します。

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - CDialog class [MFC], MFC dialog boxes
 - MFC dialog boxes
 ms.assetid: e4feea1a-8360-4ccb-9b84-507f1ccd9ef3
-ms.openlocfilehash: 9add6f003f0f6cd4ab85980e1e35370770da43aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 32a8f8784459338131d4893f25d8798f8031b68b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282059"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778495"
 ---
 # <a name="dialog-boxes"></a>ダイアログ ボックス
 
@@ -61,7 +61,7 @@ Windows 用のアプリケーションは、ダイアログ ボックスを通�
 
 - [OLE のダイアログ ボックス](../mfc/dialog-boxes-in-ole.md)
 
-- ダイアログ ボックスのユーザー インターフェイスがアプリケーションを作成します。 を参照してください、 [CMNCTRL1](../visual-cpp-samples.md)または[CMNCTRL2](../visual-cpp-samples.md)サンプル プログラム。 アプリケーション ウィザードでは、このオプションも提供します。
+- ダイアログ ボックスのユーザー インターフェイスがアプリケーションを作成します。 を参照してください、 [CMNCTRL1](../overview/visual-cpp-samples.md)または[CMNCTRL2](../overview/visual-cpp-samples.md)サンプル プログラム。 アプリケーション ウィザードでは、このオプションも提供します。
 
 - [サンプル](../mfc/dialog-sample-list.md)
 

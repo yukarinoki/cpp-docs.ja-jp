@@ -121,10 +121,10 @@ helpviewer_keywords:
 - CDocument [MFC], m_lfRichPreviewFont
 ms.assetid: e5a2891d-e1e1-4599-8c7e-afa9b4945446
 ms.openlocfilehash: 2d87ff67000fb5b70c0a5c965638875e6f50b22c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58774184"
 ---
 # <a name="cdocument-class"></a>CDocument クラス
@@ -170,7 +170,7 @@ class CDocument : public CCmdTarget
 |[CDocument::LoadDocumentFromStream](#loaddocumentfromstream)|ストリームからドキュメントのデータを読み込むと呼ばれます。|
 |[CDocument::OnBeforeRichPreviewFontChanged](#onbeforerichpreviewfontchanged)|リッチ プレビューのフォントが変更される前に呼び出されます。|
 |[CDocument::OnChangedViewList](#onchangedviewlist)|ビューが追加またはドキュメントから削除された後に呼び出されます。|
-|[CDocument::OnCloseDocument](#onclosedocument)|文書を閉じると呼ばれます。|
+|[は](#onclosedocument)|文書を閉じると呼ばれます。|
 |[CDocument::OnCreatePreviewFrame](#oncreatepreviewframe)|リッチ プレビュー用プレビュー フレームを作成する必要があるときに、フレームワークによって呼び出されます。|
 |[CDocument::OnDocumentEvent](#ondocumentevent)|ドキュメントのイベントに応答フレームワークによって呼び出されます。|
 |[CDocument::OnDrawThumbnail](#ondrawthumbnail)|サムネイルのコンテンツを描画するために派生クラスでこのメソッドをオーバーライドします。|
@@ -183,7 +183,7 @@ class CDocument : public CCmdTarget
 |[CDocument::OnRichPreviewFontChanged](#onrichpreviewfontchanged)|リッチ プレビューのフォントが変更されたときに呼び出されます。|
 |[CDocument::OnRichPreviewSiteChanged](#onrichpreviewsitechanged)|リッチ プレビュー サイトが変更されたときに呼び出されます。|
 |[CDocument::OnRichPreviewTextColorChanged](#onrichpreviewtextcolorchanged)|リッチ プレビュー テキストの色が変更されたときに呼び出されます。|
-|[CDocument::OnSaveDocument](#onsavedocument)|ドキュメントをディスクに保存すると呼ばれます。|
+|[単一](#onsavedocument)|ドキュメントをディスクに保存すると呼ばれます。|
 |[CDocument::OnUnloadHandler](#onunloadhandler)|プレビュー ハンドラーがアンロードされるときに、フレームワークによって呼び出されます。|
 |[CDocument::PreCloseFrame](#precloseframe)|フレーム ウィンドウを閉じる前に呼び出されます。|
 |[CDocument::ReadNextChunkValue](#readnextchunkvalue)|次のチャンク値を読み取ります。|
@@ -985,7 +985,7 @@ void OnUpdateFileSendMail(CCmdUI* pCmdUI);
 
 ### <a name="parameters"></a>パラメーター
 
-*pCmdUI*<br/>
+*対応付けられました。*<br/>
 ポインター、 [CCmdUI](../../mfc/reference/ccmdui-class.md)判定コマンドに関連付けられているオブジェクト。
 
 ### <a name="remarks"></a>Remarks

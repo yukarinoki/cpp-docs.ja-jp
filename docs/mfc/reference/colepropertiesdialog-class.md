@@ -22,12 +22,12 @@ helpviewer_keywords:
 - COlePropertiesDialog [MFC], m_psh
 - COlePropertiesDialog [MFC], m_vp
 ms.assetid: a54dbc89-1447-4329-bd01-00e98ec9e935
-ms.openlocfilehash: 37197ee20b31564c589099b10e0f8d3f0d1f7e86
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e574f535609ec9401bd76badf11fa7e05cc0c619
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263872"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781862"
 ---
 # <a name="colepropertiesdialog-class"></a>COlePropertiesDialog クラス
 
@@ -134,7 +134,7 @@ COlePropertiesDialog(
 
    このページには、アイテムを表示する、アイコンの変更、およびイメージのスケーリングを変更するためのオプションが含まれています。
 
-- Link
+- リンク
 
    このページには、リンク アイテムの場所を変更して、リンクされた項目を更新するためのオプションが含まれています。 このページで、ユーザーが選択された項目のリンクを中断できます。
 
@@ -261,7 +261,7 @@ virtual BOOL OnApplyScale(
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル円](../../visual-cpp-samples.md)<br/>
+[MFC サンプル円](../../overview/visual-cpp-samples.md)<br/>
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [COleDialog クラス](../../mfc/reference/coledialog-class.md)<br/>

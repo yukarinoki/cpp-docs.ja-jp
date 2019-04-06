@@ -102,12 +102,12 @@ helpviewer_keywords:
 - CListBox [MFC], SetTopIndex
 - CListBox [MFC], VKeyToItem
 ms.assetid: 7ba3c699-c286-4cd9-9066-532c41ec05d1
-ms.openlocfilehash: 17ff89fde3ef893c2cfcd8beeb8482722af60358
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: b448f725bac68c2b67dc44d660c664c075aa86da
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280317"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778768"
 ---
 # <a name="clistbox-class"></a>CListBox クラス
 
@@ -139,7 +139,7 @@ class CListBox : public CWnd
 |[CListBox::DeleteString](#deletestring)|リスト ボックスから文字列を削除します。|
 |[CListBox::Dir](#dir)|リスト ボックスに、ファイル名、ドライブ、またはその両方、現在のディレクトリからを追加します。|
 |[CListBox::DrawItem](#drawitem)|ビジュアルな部分のオーナー描画リスト ボックスが変更されたときにフレームワークによって呼び出されます。|
-|[CListBox::FindString](#findstring)|リスト ボックス内の文字列を検索します。|
+|[Clistbox::findstring](#findstring)|リスト ボックス内の文字列を検索します。|
 |[CListBox::FindStringExact](#findstringexact)|指定した文字列と一致する最初のボックスの一覧で文字列を検索します。|
 |[CListBox::GetAnchorIndex](#getanchorindex)|リスト ボックスの現在のアンカー項目の 0 から始まるインデックスを取得します。|
 |[CListBox::GetCaretIndex](#getcaretindex)|複数選択のリスト ボックスにフォーカス四角形を持つ項目のインデックスを調べます。|
@@ -570,7 +570,7 @@ int FindStringExact(
 *nIndexStart*<br/>
 最初の項目を検索する前にある項目の 0 から始まるインデックスを指定します。 指定された項目に、リスト ボックスの上部から続行、検索では、リスト ボックスの下部に達すると、 *nIndexStart*します。 場合*nIndexStart* -1 で、最初からリスト ボックス全体が検索されます。
 
-*lpszFind*<br/>
+*中から*<br/>
 検索する null で終わる文字列へのポインター。 この文字列は、拡張子を含む、完全なファイル名を含めることができます。 検索は大文字小文字が区別はないため、文字列は、任意の大文字と小文字を含めることができます。
 
 ### <a name="return-value"></a>戻り値
@@ -1538,12 +1538,12 @@ WM_KEYDOWN メッセージを受信すると、リスト ボックスでは、�
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CTRLTEST](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CTRLTEST](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [CButton クラス](../../mfc/reference/cbutton-class.md)<br/>
 [CComboBox クラス](../../mfc/reference/ccombobox-class.md)<br/>
-[CEdit クラス](../../mfc/reference/cedit-class.md)<br/>
+[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
 [CScrollBar クラス](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic クラス](../../mfc/reference/cstatic-class.md)

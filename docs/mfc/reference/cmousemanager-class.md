@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMouseManager [MFC], SetCommandForDblClk
 ms.assetid: a4d05017-4e44-4a40-8b57-4ece0de20481
 ms.openlocfilehash: f92a72e36fecbb39e57cbdf9583047aca0c1ebd5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58773737"
 ---
 # <a name="cmousemanager-class"></a>CMouseManager クラス
@@ -113,7 +113,7 @@ BOOL AddView(
 
 作成してなどビュー Id を保守するプログラマの役目です*iViewId*と*iId*します。
 
-マウスのカスタム動作を提供する方法の詳細については、[キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)を参照してください。
+マウスのカスタム動作を提供する方法の詳細については、次を参照してください。[キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)します。
 
 ### <a name="example"></a>例
 
@@ -218,7 +218,7 @@ BOOL LoadState(LPCTSTR lpszProfileName = NULL);
 
 レジストリから読み込まれた状態の情報には、登録済みのビュー、ビューの識別子、および関連するコマンドが含まれています。 場合、パラメーター *lpszProfileName*が null の場合、この関数の読み込み、`CMouseManager`によって制御される既定のレジストリの場所からデータを[CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)します。
 
-ほとんどの場合、この関数を直接呼び出すにはありません。 ワークスペースの初期化プロセスの一部として呼び出されます。 ワークスペースの初期化プロセスの詳細については、[CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)を参照してください。
+ほとんどの場合、この関数を直接呼び出すにはありません。 ワークスペースの初期化プロセスの一部として呼び出されます。 ワークスペースの初期化プロセスの詳細については、次を参照してください。 [CWinAppEx::LoadState](../../mfc/reference/cwinappex-class.md#loadstate)します。
 
 ##  <a name="savestate"></a>  CMouseManager::SaveState
 
@@ -241,7 +241,7 @@ BOOL SaveState(LPCTSTR lpszProfileName = NULL);
 
 レジストリに書き込まれた状態の情報には、登録されているすべてのビュー、ビューの識別子、および関連するコマンドが含まれています。 場合、パラメーター *lpszProfileName* NULL の場合は、この関数を書き込みます、`CMouseManager`によって制御される既定のレジストリの場所にデータ、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)します。
 
-ほとんどの場合、この関数を直接呼び出すにはありません。 ワークスペースのシリアル化プロセスの一部として呼び出されます。 ワークスペースのシリアル化プロセスの詳細については、[CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)を参照してください。
+ほとんどの場合、この関数を直接呼び出すにはありません。 ワークスペースのシリアル化プロセスの一部として呼び出されます。 ワークスペースのシリアル化プロセスの詳細については、次を参照してください。 [CWinAppEx::SaveState](../../mfc/reference/cwinappex-class.md#savestate)します。
 
 ##  <a name="setcommandfordblclk"></a>  CMouseManager::SetCommandForDblClk
 
@@ -263,7 +263,7 @@ void SetCommandForDblClk(
 
 ### <a name="remarks"></a>Remarks
 
-ビューを使用してカスタム コマンドを関連付けるためにする必要があります最初、ビューを使用して登録[CMouseManager::AddView](#addview)します。 `AddView`メソッドには、入力パラメーターとしてビュー識別子が必要です。 ビューを登録すると呼び出す`CMouseManager::SetCommandForDblClk`を同じビュー識別子入力パラメーターに指定した`AddView`します。 その後、ユーザーが登録されているビューでマウスをダブルクリックしたときに、アプリケーションはコマンドを実行、によって示される*uiCmd します。* カスタムのマウスの動作をサポートするためには、マウスのマネージャーに登録されているビューをカスタマイズする必要があります。 カスタムのマウスの動作の詳細については、[キーボードとマウスのカスタマイズ](../keyboard-and-mouse-customization.md)を参照してください。
+ビューを使用してカスタム コマンドを関連付けるためにする必要があります最初、ビューを使用して登録[CMouseManager::AddView](#addview)します。 `AddView`メソッドには、入力パラメーターとしてビュー識別子が必要です。 ビューを登録すると呼び出す`CMouseManager::SetCommandForDblClk`を同じビュー識別子入力パラメーターに指定した`AddView`します。 その後、ユーザーが登録されているビューでマウスをダブルクリックしたときに、アプリケーションはコマンドを実行、によって示される*uiCmd します。* カスタムのマウスの動作をサポートするためには、マウスのマネージャーに登録されているビューをカスタマイズする必要があります。 カスタムのマウスの動作の詳細については、次を参照してください。[キーボードとマウスのカスタマイズ](../keyboard-and-mouse-customization.md)します。
 
 場合*uiCmd*設定は 0 に指定されたビューは、コマンドに関連付けられて不要になった。
 
