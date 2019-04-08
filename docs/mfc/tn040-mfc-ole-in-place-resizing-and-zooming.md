@@ -10,10 +10,10 @@ helpviewer_keywords:
 - in-place activation, zooming and resizing
 ms.assetid: 4d7859bd-0b2e-4254-be62-2735cecf02c6
 ms.openlocfilehash: c2cb25388184ac969bec7c01d8077a458c03a03a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/05/2019
 ms.locfileid: "58775284"
 ---
 # <a name="tn040-mfcole-in-place-resizing-and-zooming"></a>TN040:MFC/OLE 埋め込み先サイズ変更とズーム
@@ -82,7 +82,7 @@ MFC は、OLE 2 の仕様」の説明に従って完全インプレースでサ�
 
 サーバーは、このネゴシエーション中に起きて (ある程度) を制御できます。 たとえば、スプレッドシートは、セルを表示するまたはより少ないユーザーが項目の編集中に、ウィンドウをサイズ変更時に、インプレース変える必要があります。 ワード プロセッサは、「余白」を変更するため、ウィンドウと同じされていて、新しい余白の折り返しを変える必要があります。 サーバーが自然な範囲を変更することでこれを実装 (から返されたサイズ`COleServerItem::OnGetExtent`)、サイズ変更が完了するとします。 これは、位置四角形とで同じ倍率が大きくまたは小さく表示領域は、同じ量だけを変更するコンテナーのエクステントの両方により、します。 さらに、多少のドキュメントに表示されるによって生成されたメタファイル`OnDraw`します。 この場合、ユーザーに表示する領域だけではなく、項目がサイズ変更時に、ドキュメント自体は変更されます。
 
-カスタムのサイズ変更を実装してによって提供されるユーザー インターフェイスを活用`COleResizeBar`WM_SIZECHILD のメッセージをオーバーライドすることで、`COleIPFrameWnd`クラス。 WM_SIZECHILD の詳細については、[テクニカル ノート 24](../mfc/tn024-mfc-defined-messages-and-resources.md)を参照してください。
+カスタムのサイズ変更を実装してによって提供されるユーザー インターフェイスを活用`COleResizeBar`WM_SIZECHILD のメッセージをオーバーライドすることで、`COleIPFrameWnd`クラス。 WM_SIZECHILD の詳細については、次を参照してください。[テクニカル ノート 24](../mfc/tn024-mfc-defined-messages-and-resources.md)します。
 
 ## <a name="see-also"></a>関連項目
 

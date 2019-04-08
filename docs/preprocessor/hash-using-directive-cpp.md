@@ -47,7 +47,7 @@ MSIL .dll、.exe、.netmodule、または .obj。例えば以下のようにし�
 
 使用する代わりに **#using**は、 [/FU](../build/reference/fu-name-forced-hash-using-file.md)コンパイラ オプション。
 
-渡される .exe アセンブリ **#using**コンパイルする必要があります、Visual Studio の .NET コンパイラ (Visual Basic または Visual c#、たとえば) のいずれかを使用します。  `/clr` でコンパイルされた .exe アセンブリからメタデータをインポートしようとすると、ファイルの読み込み例外が発生します。
+渡される .exe アセンブリ **#using**コンパイルする必要があります、Visual Studio の .NET コンパイラ (Visual Basic または Visual C#、たとえば) のいずれかを使用します。  `/clr` でコンパイルされた .exe アセンブリからメタデータをインポートしようとすると、ファイルの読み込み例外が発生します。
 
 > [!NOTE]
 > 参照されているコンポーネント **#using**予想外の結果をクライアント アプリケーションが発生したコンパイル時に、インポート ファイルの別のバージョンで実行することができます。

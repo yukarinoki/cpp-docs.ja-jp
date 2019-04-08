@@ -264,12 +264,12 @@ helpviewer_keywords:
 - CListCtrl [MFC], SubItemHitTest
 - CListCtrl [MFC], Update
 ms.assetid: fe08a1ca-4b05-4ff7-a12a-ee4c765a2197
-ms.openlocfilehash: fdfc0888e7d6213fb7c04a5257358da8f5dae138
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: eea37d03ca5a4fab450fbca0c4c3f6c76fefb407
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57425095"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780614"
 ---
 # <a name="clistctrl-class"></a>CListCtrl クラス
 
@@ -387,7 +387,7 @@ class CListCtrl : public CWnd
 |[CListCtrl::SetColumn](#setcolumn)|リスト ビューの列の属性を設定します。|
 |[CListCtrl::SetColumnOrderArray](#setcolumnorderarray)|リスト ビュー コントロールの列順序 (左右から) を設定します。|
 |[CListCtrl::SetColumnWidth](#setcolumnwidth)|レポート ビューまたはリスト ビュー内の列の幅を変更します。|
-|[CListCtrl::SetExtendedStyle](#setextendedstyle)|リスト ビュー コントロールの現在の拡張スタイルを設定します。|
+|[かざして](#setextendedstyle)|リスト ビュー コントロールの現在の拡張スタイルを設定します。|
 |[CListCtrl::SetGroupInfo](#setgroupinfo)|指定したリスト ビュー コントロールのグループの情報を設定します。|
 |[CListCtrl::SetGroupMetrics](#setgroupmetrics)|リスト ビュー コントロールのグループのメトリックを設定します。|
 |[CListCtrl::SetHotCursor](#sethotcursor)|リスト ビュー コントロールのホット トラッキングが有効になっているときに使用するカーソルを設定します。|
@@ -2018,7 +2018,7 @@ CString GetItemText(
 *nItem*<br/>
 テキストを取得するアイテムのインデックス。
 
-*nSubItem*<br/>
+*ラベル*<br/>
 テキストが取得するにはサブ項目を指定します。
 
 *lpszText*<br/>
@@ -2116,7 +2116,7 @@ int GetNextSelectedItem(POSITION& pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*pos*<br/>
+*発注書*<br/>
 以前の呼び出しによって返される位置の値への参照を`GetNextSelectedItem`または`GetFirstSelectedItemPosition`します。 値は、この呼び出しによって、次の位置に更新されます。
 
 ### <a name="return-value"></a>戻り値
@@ -2671,13 +2671,13 @@ int InsertColumn(
 *lpszColumnHeading*<br/>
 列の見出しを含む文字列のアドレス。
 
-*nFormat*<br/>
+*パラメーター*<br/>
 列の配置を指定する整数。 これらの値のいずれかを指定できます。どれをや LVCFMT_CENTER します。
 
 *nWidth*<br/>
 ピクセル単位で、列の幅。 このパラメーターが-1 の場合、列の幅は設定されていません。
 
-*nSubItem*<br/>
+*ラベル*<br/>
 列に関連付けられたサブ項目のインデックス。 このパラメーターが-1 の場合は、サブ項目の列に関連はありません。
 
 ### <a name="return-value"></a>戻り値
@@ -2702,7 +2702,7 @@ LRESULT InsertGroup(
 
 ### <a name="parameters"></a>パラメーター
 
-*index*<br/>
+*インデックス*<br/>
 グループの挿入項目のインデックス。
 
 *pgrp*<br/>
@@ -2774,7 +2774,7 @@ int InsertItem(
 *lpszItem*<br/>
 項目がコールバック項目である場合、項目のラベル、または保持するようにするを含む文字列のアドレス。 コールバック アイテムについては、次を参照してください。 [CListCtrl::GetCallbackMask](#getcallbackmask)します。
 
-*nImage*<br/>
+*あり*<br/>
 項目のイメージ、または番号の場合は、項目は、コールバック項目のインデックス。 コールバック アイテムについては、次を参照してください。 [CListCtrl::GetCallbackMask](#getcallbackmask)します。
 
 *いる*<br/>
@@ -2875,7 +2875,7 @@ BOOL IsItemVisible(int index) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*index*|[in]現在のリスト ビュー コントロール内の項目の 0 から始まるインデックス。|
+|*インデックス*|[in]現在のリスト ビュー コントロール内の項目の 0 から始まるインデックス。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -2923,7 +2923,7 @@ UINT MapIndexToID(UINT index) const;
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*index*|[in]項目の 0 から始まるインデックス。|
+|*インデックス*|[in]項目の 0 から始まるインデックス。|
 
 ### <a name="return-value"></a>戻り値
 
@@ -3040,10 +3040,10 @@ BOOL RedrawItems(
 
 ### <a name="parameters"></a>パラメーター
 
-*nFirst*<br/>
+*n 最初*<br/>
 再描画する最初の項目のインデックス。
 
-*nLast*<br/>
+*n 最後*<br/>
 再描画する最後の項目のインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -3409,7 +3409,7 @@ HCURSOR SetHotCursor(HCURSOR hc);
 
 ### <a name="parameters"></a>パラメーター
 
-*hc*<br/>
+*ハイブリッド接続*<br/>
 ホットのカーソルを表すために使用するカーソル リソースへのハンドル。
 
 ### <a name="return-value"></a>戻り値
@@ -3646,7 +3646,7 @@ BOOL SetItem(
 *nItem*<br/>
 属性を設定するアイテムのインデックス。
 
-*nSubItem*<br/>
+*ラベル*<br/>
 属性を持つを設定するのにはサブ項目のインデックス。
 
 *いる*<br/>
@@ -3655,7 +3655,7 @@ BOOL SetItem(
 *lpszItem*<br/>
 項目のラベルを指定する null で終わる文字列のアドレス。
 
-*nImage*<br/>
+*あり*<br/>
 イメージ リスト内の項目のイメージのインデックス。
 
 *nState*<br/>
@@ -3927,7 +3927,7 @@ BOOL SetItemText(
 *nItem*<br/>
 テキストを設定するアイテムのインデックス。
 
-*nSubItem*<br/>
+*ラベル*<br/>
 項目のラベルを設定するサブ項目、または 0 のインデックス。
 
 *lpszText*<br/>
@@ -4422,7 +4422,7 @@ BOOL Update(int nItem);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル rowlist で](../../visual-cpp-samples.md)<br/>
+[MFC サンプル rowlist で](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](cwnd-class.md)<br/>
 [階層図](../hierarchy-chart.md)<br/>
 [CImageList クラス](cimagelist-class.md)

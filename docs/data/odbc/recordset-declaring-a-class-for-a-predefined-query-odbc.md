@@ -1,5 +1,5 @@
 ---
-title: 'レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)'
+title: レコード セット:クラスの宣言、定義済みクエリ (ODBC)
 ms.date: 11/04/2016
 helpviewer_keywords:
 - ODBC recordsets, queries
@@ -8,21 +8,21 @@ helpviewer_keywords:
 - recordsets, predefined queries
 - recordsets, stored procedures
 ms.assetid: d27c4df9-dad2-4484-ba72-92ab0c8ff928
-ms.openlocfilehash: e83bf2ecb24a9abfd8dc9800a3a10d2d65025336
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: d4ae9f21c4bd53a8050d6f8c3765bb9823d077ba
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50611264"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59026528"
 ---
-# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>レコードセット: 定義済みクエリを利用したクラスの宣言 (ODBC)
+# <a name="recordset-declaring-a-class-for-a-predefined-query-odbc"></a>レコード セット:クラスの宣言、定義済みクエリ (ODBC)
 
 このトピックの内容は、MFC ODBC クラスに該当します。
 
 このトピックでは、定義済みクエリ (Microsoft SQL Server のように、ストアド プロシージャとも呼ばれます) のレコード セット クラスを作成する方法について説明します。
 
 > [!NOTE]
->  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装すると、プロセスはよく似ています。 バルク行フェッチを実装したレコード セットとそうでないものとの違いを理解するのを参照してください。[レコード セット: レコードのフェッチ (ODBC)](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
+>  このトピックの内容は、バルク行フェッチが実装されていない `CRecordset` の派生オブジェクトを対象にしています。 バルク行フェッチを実装すると、プロセスはよく似ています。 バルク行フェッチを実装したレコード セットとそうでないものとの違いを理解するのを参照してください。[レコード セット。(ODBC) バルク行フェッチ](../../data/odbc/recordset-fetching-records-in-bulk-odbc.md)します。
 
 一部のデータベース管理システム (Dbms) を使用すると、定義済みクエリを作成し、関数のように、プログラムから呼び出すことができます。 クエリは、名前、パラメーターを受け取る可能性があり、レコードを返す可能性があります。 このトピックの手順では、定義済みのクエリのレコードを返します (およびパラメーターを取得) を呼び出す方法について説明します。
 
@@ -63,7 +63,7 @@ ms.locfileid: "50611264"
 
 1. クエリがパラメーターを受け取る場合は、各パラメーター、RFX 関数呼び出しごとに、および各初期化パラメーターのデータ メンバーを追加します。
 
-1. 増やす必要があります`m_nParams`行ったようにパラメーターを追加各`m_nFields`のこの手順の手順 4. でフィールドを追加します。 詳細については、[レコード セット: レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)を参照してください。
+1. 増やす必要があります`m_nParams`行ったようにパラメーターを追加各`m_nFields`のこの手順の手順 4. でフィールドを追加します。 詳細については、次を参照してください。[レコード セット。レコード セット (ODBC) をパラメーター化](../../data/odbc/recordset-parameterizing-a-recordset-odbc.md)します。
 
 1. 次の形式の SQL ステートメントの文字列を手動で作成するには。
 
@@ -148,11 +148,11 @@ if( rsDel.Open( CRecordset::snapshot, strSQL ) )
 このコードは、スナップショットを構築、前に、ユーザーから収集したパラメーターを渡し、定義済みのクエリを呼び出します。 クエリを実行すると、指定した販売地域のレコードを返します。 各レコードには、アカウント番号、顧客の姓、名、および顧客の電話番号の列が含まれています。
 
 > [!TIP]
->  ストアド プロシージャからの戻り値 (出力パラメーター) を処理する可能性があります。 詳細と例では、[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)を参照してください。
+>  ストアド プロシージャからの戻り値 (出力パラメーター) を処理する可能性があります。 詳細と例では、次を参照してください。[つ](../../mfc/reference/cfieldexchange-class.md#setfieldtype)します。
 
 ## <a name="see-also"></a>関連項目
 
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[レコードセット: クエリの再実行 (ODBC)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
-[レコードセット: テーブルにアクセスするレコードセット クラスの宣言 (ODBC)](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
-[レコードセット: 結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)
+[レコード セット:クエリの再実行 (Odbc)](../../data/odbc/recordset-requerying-a-recordset-odbc.md)<br/>
+[レコード セット:テーブル (ODBC) クラスの宣言](../../data/odbc/recordset-declaring-a-class-for-a-table-odbc.md)<br/>
+[レコード セット:結合 (ODBC)](../../data/odbc/recordset-performing-a-join-odbc.md)

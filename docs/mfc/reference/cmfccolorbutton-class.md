@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCColorButton [MFC], UpdateColor
 - CMFCColorButton [MFC], m_bEnabledInCustomizeMode
 ms.assetid: 9fdf34ae-4cc5-4c5e-9d89-1c50e8a73699
-ms.openlocfilehash: 05a4ad17feea20c67069e65c5c5df43d543e2377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c0c9ad79342f2013aa071240c684fce168e55c9e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293486"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780003"
 ---
 # <a name="cmfccolorbutton-class"></a>CMFCColorButton クラス
 
@@ -126,7 +126,7 @@ class CMFCColorButton : public CMFCButton
 
 ## <a name="example"></a>例
 
-次の例は、さまざまなメソッドを使用してカラー ボタンを構成する方法を示します、`CMFCColorButton`クラス。 メソッドは、色のボタンと、列の数の色を設定し、自動およびその他のボタンを有効にします。 この例は、[ステータス バーのデモ サンプル](../../visual-cpp-samples.md)します。
+次の例は、さまざまなメソッドを使用してカラー ボタンを構成する方法を示します、`CMFCColorButton`クラス。 メソッドは、色のボタンと、列の数の色を設定し、自動およびその他のボタンを有効にします。 この例は、[ステータス バーのデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_StatusBarDemo#10](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_1.h)]
 [!code-cpp[NVC_MFC_StatusBarDemo#11](../../mfc/reference/codesnippet/cpp/cmfccolorbutton-class_2.cpp)]

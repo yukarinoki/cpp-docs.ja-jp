@@ -104,12 +104,12 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], SynchronizeScrollBar
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
-ms.openlocfilehash: 8dc8c51cc1847d29b76e2017db4c1368b35b9a9f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281682"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778456"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
 
@@ -137,7 +137,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 |[CMFCTabCtrl::ActivateMDITab](#activatemditab)|現在のタブ コントロールの指定したタブを表示し、そのタブにフォーカスを設定します。|
 |[CMFCTabCtrl::AllowDestroyEmptyTabbedPane](#allowdestroyemptytabbedpane)||
 |[CMFCTabCtrl::AutoSizeWindow](#autosizewindow)|フレームワークがタブ コントロールの変更のユーザー インターフェイス要素のときに、すべてのタブ コントロール ウィンドウのクライアント領域のサイズを変更するかどうかを指定します。|
-|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|指定したタブ領域のサイズを縮小します。 (`CMFCBaseTabCtrl::CalcRectEdit` をオーバーライドします)。|
+|[CMFCTabCtrl::CalcRectEdit](#calcrectedit)|指定したタブ領域のサイズを縮小します。 ( `CMFCBaseTabCtrl::CalcRectEdit`をオーバーライドします)。|
 |[CMFCTabCtrl::Create](#create)|タブ コントロールを作成しにアタッチします、`CMFCTabCtrl`オブジェクト。|
 |`CMFCTabCtrl::CreateObject`|このクラス型の動的インスタンスを作成するために、フレームワークで使用されます。|
 |[CMFCTabCtrl::EnableActiveTabCloseButton](#enableactivetabclosebutton)|表示と [閉じる] ボタンを非表示 ( **X**) アクティブなタブにします。|
@@ -243,7 +243,7 @@ class CMFCTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="example"></a>例
 
-次の例では、さまざまなメソッドを使用する方法、`CMFCTabCtrl`を構成するクラス、`CMFCTabCtrl`オブジェクト。 この例では、タブを追加、アクティブなタブに閉じるボタンの表示、編集可能なタブのラベルを有効にする、およびラベルのタブ付きウィンドウのポップアップ メニューを表示する方法について説明します。 この例は、[状態コレクション サンプル](../../visual-cpp-samples.md)します。
+次の例では、さまざまなメソッドを使用する方法、`CMFCTabCtrl`を構成するクラス、`CMFCTabCtrl`オブジェクト。 この例では、タブを追加、アクティブなタブに閉じるボタンの表示、編集可能なタブのラベルを有効にする、およびラベルのタブ付きウィンドウのポップアップ メニューを表示する方法について説明します。 この例は、[状態コレクション サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#3](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_2.cpp)]
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in]タブ コントロールの ID。
 
-*location*<br/>
+*位置*<br/>
 [in]タブの位置。 既定値は、LOCATION_BOTTOM です。 詳細については、「解説」を参照してください。
 
 *bCloseBtn*<br/>
@@ -355,7 +355,7 @@ BOOL Create(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`Create`メソッドで、`CMFCTabCtrl`クラス。 この例は、[状態コレクション サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`Create`メソッドで、`CMFCTabCtrl`クラス。 この例は、[状態コレクション サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_StateCollection#1](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_1.h)]
 [!code-cpp[NVC_MFC_StateCollection#2](../../mfc/reference/codesnippet/cpp/cmfctabctrl-class_3.cpp)]
@@ -873,7 +873,7 @@ virtual DROPEFFECT OnDragEnter(
 *pDataObject*<br/>
 [in]ユーザーがドラッグ データを含むデータ オブジェクトへのポインター。
 
-*dwKeyState*<br/>
+*ドロップ*<br/>
 [in]修飾子キーの状態が含まれています。 このパラメーターは、次の値のビットごとの組み合わせ (OR) です。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。 詳細については、次を参照してください。、**メッセージ パラメーター**の[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
 
 *ポイント*<br/>
@@ -905,7 +905,7 @@ virtual DROPEFFECT OnDragOver(
 *pDataObject*<br/>
 [in]ポインターを[COleDataObject](../../mfc/reference/coledataobject-class.md)ドロップ ターゲット上にドラッグされているオブジェクト。
 
-*dwKeyState*<br/>
+*ドロップ*<br/>
 [in]修飾子キーの状態は MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON のビットごとの組み合わせ (OR) です。 詳細については、「メッセージ パラメーター」を参照してください[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
 
 *ポイント*<br/>
@@ -1139,6 +1139,6 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)<br/>
-[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)<br/>
-[CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)

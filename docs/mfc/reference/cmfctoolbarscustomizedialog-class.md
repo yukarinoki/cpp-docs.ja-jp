@@ -24,12 +24,12 @@ helpviewer_keywords:
 - CMFCToolBarsCustomizeDialog [MFC], OnInitDialog
 - CMFCToolBarsCustomizeDialog [MFC], PostNcDestroy
 ms.assetid: 78e2cddd-4f13-4097-afc3-1ad646a113f1
-ms.openlocfilehash: e4aaede3eb2d5c922c196e2bdfbbe533c4e65e47
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: e1dd6fff9fa4f03dbf93510da26c78c73e86c6ab
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295033"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780965"
 ---
 # <a name="cmfctoolbarscustomizedialog-class"></a>CMFCToolBarsCustomizeDialog クラス
 
@@ -96,7 +96,7 @@ class CMFCToolBarsCustomizeDialog : public CPropertySheet
 
 ## <a name="example"></a>例
 
-`CMFCToolBarsCustomizeDialog` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、コマンドのリスト ボックスにツール バー ボタンを交換する方法を示しています、**コマンド** ページを使用して新しいツールバーの作成を有効にする、**カスタマイズ** ダイアログ ボックスで、表示、 **カスタマイズ** ダイアログ ボックス。 このコード スニペットの一部、 [IE デモ サンプル](../../visual-cpp-samples.md)します。
+`CMFCToolBarsCustomizeDialog` クラスのさまざまなメソッドの使用方法を次の例に示します。 例では、コマンドのリスト ボックスにツール バー ボタンを交換する方法を示しています、**コマンド** ページを使用して新しいツールバーの作成を有効にする、**カスタマイズ** ダイアログ ボックスで、表示、 **カスタマイズ** ダイアログ ボックス。 このコード スニペットの一部、 [IE デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_IEDemo#4](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_1.cpp)]
 
@@ -158,7 +158,7 @@ void AddButton(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`AddButton`のメソッド、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットの一部、[スライダー サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`AddButton`のメソッド、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットの一部、[スライダー サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_Slider#1](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_2.cpp)]
 
@@ -246,7 +246,7 @@ BOOL AddToolBar(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`AddToolBar`メソッドで、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットは、 [Word パッド サンプル](../../visual-cpp-samples.md)の一部です。
+次の例では、使用する方法、`AddToolBar`メソッドで、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットは、 [Word パッド サンプル](../../overview/visual-cpp-samples.md)の一部です。
 
 [!code-cpp[NVC_MFC_WordPad#11](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_3.cpp)]
 
@@ -327,7 +327,7 @@ CMFCToolBarsCustomizeDialog(
 
 ### <a name="example"></a>例
 
-次の例のオブジェクトを構築する方法、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットの一部、[カスタム ページ サンプル](../../visual-cpp-samples.md)します。
+次の例のオブジェクトを構築する方法、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットの一部、[カスタム ページ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_CustomPages#3](../../mfc/reference/codesnippet/cpp/cmfctoolbarscustomizedialog-class_4.cpp)]
 
@@ -586,7 +586,7 @@ virtual BOOL OnEditToolbarMenuImage(
 *pWndParent*<br/>
 [in]親ウィンドウへのポインター。
 
-*bitmap*<br/>
+*ビットマップ*<br/>
 [in]編集するビットマップ オブジェクトへの参照。
 
 *nBitsPerPixel*<br/>
@@ -725,7 +725,7 @@ void ReplaceButton(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`ReplaceButton`メソッドで、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`ReplaceButton`メソッドで、`CMFCToolBarsCustomizeDialog`クラス。 このコード スニペットの一部、 [Visual Studio のデモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_VisualStudioDemo#34](../../mfc/codesnippet/cpp/cmfctoolbarscustomizedialog-class_5.cpp)]
 

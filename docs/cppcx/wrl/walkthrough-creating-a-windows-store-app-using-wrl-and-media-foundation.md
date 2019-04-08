@@ -95,9 +95,9 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 
    1. **Windows メタデータ** 設定 **Windows メタデータの生成** に **[はい] (/WINMD)** します。
 
-### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>WRL c# アプリからカスタム メディア ファンデーション コンポーネントを使用するには
+### <a name="to-use-the-wrl-the-custom-media-foundation-component-from-a-c-app"></a>WRL C# アプリからカスタム メディア ファンデーション コンポーネントを使用するには
 
-1. 新しい追加**c# 空白アプリ (ユニバーサル Windows)** プロジェクトを`MediaCapture`ソリューション。 など、プロジェクトの名前*MediaCapture*します。
+1. 新しい追加**C# 空白アプリ (ユニバーサル Windows)** プロジェクトを`MediaCapture`ソリューション。 など、プロジェクトの名前*MediaCapture*します。
 
 1. **MediaCapture**プロジェクトへの参照を追加、`GrayscaleTransform`プロジェクト。 学習する方法についてを参照してください[方法。参照マネージャーを使用して参照を追加または削除する](/visualstudio/ide/how-to-add-or-remove-references-by-using-the-reference-manager)
 

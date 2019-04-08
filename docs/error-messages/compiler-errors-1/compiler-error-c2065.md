@@ -6,16 +6,16 @@ f1_keywords:
 helpviewer_keywords:
 - C2065
 ms.assetid: 78093376-acb7-45f5-9323-5ed7e0aab1dc
-ms.openlocfilehash: ae7f582de5d6c45df34c42164756356a9c794d31
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 3daf2cd532cd07225b822c80b46fc28274d4e2a8
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482519"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58778755"
 ---
 # <a name="compiler-error-c2065"></a>コンパイラ エラー C2065
 
-> '*識別子*': 宣言されていない識別子
+> '*identifier*' : undeclared identifier
 
 コンパイラは、識別子の宣言を見つけることができません。 このエラーの考えられる原因の多くがあります。 C2065 の最も一般的な原因は、識別子が宣言されていない、識別子のスペルが間違って、識別子が宣言されているヘッダーがファイルに含まれていないまたは識別子が、スコープ修飾子をなどにありません`cout`の代わりに`std::cout`. C++ の宣言の詳細については、次を参照してください。[宣言と定義 (C++)](../../cpp/declarations-and-definitions-cpp.md)します。
 
@@ -203,9 +203,9 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-type-deduction-failure"></a>例: C +/cli CLI 型推論が失敗
+## <a name="example-ccli-type-deduction-failure"></a>例:C +/cli CLI 型推論が失敗
 
-このエラーは、目的の型引数を使用するパラメーターから推測できない場合の汎用関数を呼び出すときに発生します。 詳細については、次を参照してください。[ジェネリック関数 (C +/cli CLI)](../../windows/generic-functions-cpp-cli.md)します。
+このエラーは、目的の型引数を使用するパラメーターから推測できない場合の汎用関数を呼び出すときに発生します。 詳細については、次を参照してください。[ジェネリック関数 (C +/cli CLI)](../../extensions/generic-functions-cpp-cli.md)します。
 
 ```cpp
 // C2065_b.cpp
@@ -220,7 +220,7 @@ int main() {
 }
 ```
 
-## <a name="example-ccli-attribute-parameters"></a>例: C +/cli CLI 属性のパラメーター
+## <a name="example-ccli-attribute-parameters"></a>例:C +/cli CLI 属性のパラメーター
 
 このエラーは、Visual C++ 属性のパラメーター チェックを行う Visual C++ 2005 で行ったコンパイラ準拠作業の結果として生成されることもあります。
 

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - resources [C++], about resource files
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
-ms.openlocfilehash: 0a13fb05f0e6e8582d5e476eb889e307458f528d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767302"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037738"
 ---
 # <a name="working-with-resource-files"></a>リソース ファイルの操作
 
@@ -32,13 +32,13 @@ ms.locfileid: "58767302"
 > [!NOTE]
 > **リソース エディター**と**リソース ビュー** Express エディションでは使用できません。
 
-マネージ プロジェクトにリソース ファイルを手動で追加するには、[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)を参照してください。 この記事には、リソースへのアクセス、静的なリソースを表示およびリソース文字列をプロパティに割り当てる方法が含まれています。
+マネージ プロジェクトにリソース ファイルを手動で追加するには、次を参照してください。[デスクトップ アプリのリソース ファイルの作成](/dotnet/framework/resources/creating-resource-files-for-desktop-apps)です。 この記事には、リソースへのアクセス、静的なリソースを表示およびリソース文字列をプロパティに割り当てる方法が含まれています。
 
-グローバル化を管理対象アプリでリソースをローカライズは、[Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)を参照してください。
+グローバル化を管理対象アプリでリソースをローカライズは、次を参照してください。 [Globalizing and Localizing .NET Framework Applications](/dotnet/standard/globalization-localization/index)します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
+[リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)<br/>
 リソース ファイルと Windows デスクトップ アプリケーションでの使用方法について説明します。 リソース ファイルを使用する方法について説明する記事へのリンクもあります。
 
 [リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>
@@ -52,7 +52,7 @@ Visual Studio と各エディターを使用して変更できるリソースの
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 Visual C++ のドキュメントへのリンクを示します。
 
-[ご意見](/visualstudio/ide/talk-to-us)<br/>
+[Talk to Us](/visualstudio/ide/talk-to-us)<br/>
 ドキュメント セットの使用方法、製品サポートへの連絡、アクセシビリティ機能の使用に関する情報へのリンクを示します。
 
 ## <a name="see-also"></a>関連項目

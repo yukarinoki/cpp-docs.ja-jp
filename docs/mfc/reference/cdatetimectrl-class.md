@@ -40,12 +40,12 @@ helpviewer_keywords:
 - CDateTimeCtrl [MFC], SetRange
 - CDateTimeCtrl [MFC], SetTime
 ms.assetid: 7113993b-5d37-4148-939f-500a190c5bdc
-ms.openlocfilehash: a68f3570f0e8c3315e8b0716cddcd37563894e76
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: 8c69473ab813c2fa692044fddc406a74a5aeb197
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422495"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779821"
 ---
 # <a name="cdatetimectrl-class"></a>CDateTimeCtrl クラス
 
@@ -314,7 +314,7 @@ DWORD GetRange(
 *pMinRange*<br/>
 ポインターを[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトで許可されている最も早い時刻を含む、`CDateTimeCtrl`オブジェクト。
 
-*pMaxRange*<br/>
+*整数*<br/>
 ポインターを`COleDateTime`オブジェクトまたは`CTime`オブジェクトで許可されている最新の時刻を含む、`CDateTimeCtrl`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -552,7 +552,7 @@ BOOL SetRange(
 *pMinRange*<br/>
 ポインターを[COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md)オブジェクトまたは[CTime](../../atl-mfc-shared/reference/ctime-class.md)オブジェクトで許可されている最も早い時刻を含む、`CDateTimeCtrl`オブジェクト。
 
-*pMaxRange*<br/>
+*整数*<br/>
 ポインターを`COleDateTime`オブジェクトまたは`CTime`オブジェクトで許可されている最新の時刻を含む、`CDateTimeCtrl`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
@@ -599,7 +599,7 @@ BOOL SetTime(LPSYSTEMTIME pTimeNew = NULL);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CMonthCalCtrl クラス](../../mfc/reference/cmonthcalctrl-class.md)

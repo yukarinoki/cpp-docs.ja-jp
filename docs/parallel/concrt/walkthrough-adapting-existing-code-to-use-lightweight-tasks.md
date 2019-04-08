@@ -48,13 +48,11 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#2](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_2.cpp)]
 
-1. 
-  `using` 名前空間の `concurrency` ディレクティブを追加します。
+1. `using` 名前空間の `concurrency` ディレクティブを追加します。
 
 [!code-cpp[concrt-migration-lwt#3](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_3.cpp)]
 
-1. 
-  `MyThreadFunction` の宣言を次のように変更して、`__cdecl` 呼び出し規約を使用すると共に、`void` を返します。
+1. `MyThreadFunction` の宣言を次のように変更して、`__cdecl` 呼び出し規約を使用すると共に、`void` を返します。
 
 [!code-cpp[concrt-migration-lwt#4](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_4.cpp)]
 
@@ -70,8 +68,7 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#7](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_7.cpp)]
 
-1. 
-  `CloseHandle` 呼び出しを削除します。
+1. `CloseHandle` 呼び出しを削除します。
 
 1. 手順 3. に合わせて、`MyThreadFunction` の定義のシグネチャを変更します。
 
@@ -81,8 +78,7 @@ Parameters = 50, 100
 
 [!code-cpp[concrt-migration-lwt#9](../../parallel/concrt/codesnippet/cpp/walkthrough-adapting-existing-code-to-use-lightweight-tasks_9.cpp)]
 
-10. 
-  `return` ステートメントを `MyThreadFunction` から削除します。
+10. `return` ステートメントを `MyThreadFunction` から削除します。
 
 ## <a name="example"></a>例
 
