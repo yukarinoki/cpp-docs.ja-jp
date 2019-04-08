@@ -18,14 +18,14 @@ ms.locfileid: "57826341"
 
 (Nmake の) は、個別の記述ブロックでそれぞれ指定した場合と、単一の依存関係の複数のターゲットを評価します。
 
-例えばこの。。。
+例えばこの...
 
 ```Output
 bounce.exe leap.exe : jump.obj
    echo Building...
 ```
 
-.. 評価結果。
+.. 評価結果:
 
 ```Output
 bounce.exe : jump.obj

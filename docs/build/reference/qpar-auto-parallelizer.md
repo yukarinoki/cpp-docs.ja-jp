@@ -39,8 +39,7 @@ ms.locfileid: "57809562"
 
 ### <a name="to-set-the-qpar-compiler-option-programmatically"></a>/Qpar コンパイラ オプションをプログラムで設定するには
 
-- 
-  <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> のコード例を使用してください。
+- <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> のコード例を使用してください。
 
 ## <a name="see-also"></a>関連項目
 
