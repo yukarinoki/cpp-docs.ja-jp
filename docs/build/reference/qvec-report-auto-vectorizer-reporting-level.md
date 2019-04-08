@@ -39,8 +39,7 @@ For ループがベクター化して、for ループがベクター化されて
 
 ### <a name="to-set-the-qvec-report-compiler-option-programmatically"></a>/Qvec-report コンパイラ オプションをプログラムで設定するには
 
-- 
-  <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> のコード例を使用してください。
+- <xref:Microsoft.VisualStudio.VCProjectEngine.VCCLCompilerTool.AdditionalOptions%2A> のコード例を使用してください。
 
 ## <a name="see-also"></a>関連項目
 
