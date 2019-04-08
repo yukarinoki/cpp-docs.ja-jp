@@ -90,12 +90,12 @@ helpviewer_keywords:
 - CMonthCalCtrl [MFC], SizeMinReq
 - CMonthCalCtrl [MFC], SizeRectToMin
 ms.assetid: a42f6bd6-ab5c-4335-82f8-839982fc64a2
-ms.openlocfilehash: 440d158774a716db9fba351200f2760783925cc6
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.openlocfilehash: bd062a4e0d4db364c9cb628608c6af165dc0edc2
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57413928"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58777169"
 ---
 # <a name="cmonthcalctrl-class"></a>CMonthCalCtrl クラス
 
@@ -147,7 +147,7 @@ class CMonthCalCtrl : public CWnd
 |[CMonthCalCtrl::SetCenturyView](#setcenturyview)|2 桁の年のビューを表示する現在の月のカレンダー コントロールを設定します。|
 |[CMonthCalCtrl::SetColor](#setcolor)|月間予定表コントロールの指定した領域の色を設定します。|
 |[CMonthCalCtrl::SetCurrentView](#setcurrentview)|指定されたビューを表示する現在の月のカレンダー コントロールを設定します。|
-|[CMonthCalCtrl::SetCurSel](#setcursel)|月間予定表コントロールの現在選択されている日付を設定します。|
+|[か](#setcursel)|月間予定表コントロールの現在選択されている日付を設定します。|
 |[CMonthCalCtrl::SetDayState](#setdaystate)|月間予定表コントロールでの日付の表示を設定します。|
 |[CMonthCalCtrl::SetDecadeView](#setdecadeview)|10 年のビューに現在の月のカレンダー コントロールを設定します。|
 |[CMonthCalCtrl::SetFirstDayOfWeek](#setfirstdayofweek)|予定表の左端の列に表示する曜日を設定します。|
@@ -581,7 +581,7 @@ int GetMonthRange(
 *pMinRange*<br/>
 ポインターを[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最下位の最後に日付を含む構造体。
 
-*pMaxRange*<br/>
+*整数*<br/>
 ポインター、`SYSTEMTIME`範囲の最上位の最後に日付を含む構造体。
 
 *dwFlags*<br/>
@@ -627,7 +627,7 @@ DWORD GetRange(
 *pMinRange*<br/>
 ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最下位の最後に日付を含む構造体。
 
-*pMaxRange*<br/>
+*整数*<br/>
 ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最上位の最後に日付を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -676,7 +676,7 @@ BOOL GetSelRange(
 *pMinRange*<br/>
 ポインターを[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最下位の最後に日付を含む構造体。
 
-*pMaxRange*<br/>
+*整数*<br/>
 ポインター、`SYSTEMTIME`範囲の最上位の最後に日付を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1166,7 +1166,7 @@ BOOL SetRange(
 *pMinRange*<br/>
 ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最下位の最後に日付を含む構造体。
 
-*pMaxRange*<br/>
+*整数*<br/>
 ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または`SYSTEMTIME`範囲の最上位の最後に日付を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1204,7 +1204,7 @@ BOOL SetSelRange(
 *pMinRange*<br/>
 ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または[SYSTEMTIME](/windows/desktop/api/minwinbase/ns-minwinbase-systemtime)範囲の最下位の最後に日付を含む構造体。
 
-*pMaxRange*<br/>
+*整数*<br/>
 ポインターを`COleDateTime`オブジェクト、`CTime`オブジェクト、または`SYSTEMTIME`範囲の最上位の最後に日付を含む構造体。
 
 ### <a name="return-value"></a>戻り値
@@ -1304,7 +1304,7 @@ LPRECT SizeRectToMin(LPRECT lpRect);
 
 ## <a name="see-also"></a>関連項目
 
-[MFC サンプル CMNCTRL1](../../visual-cpp-samples.md)<br/>
+[MFC サンプル CMNCTRL1](../../overview/visual-cpp-samples.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CDateTimeCtrl クラス](../../mfc/reference/cdatetimectrl-class.md)

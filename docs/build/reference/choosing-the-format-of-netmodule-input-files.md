@@ -13,7 +13,7 @@ ms.locfileid: "57807327"
 
 MSIL の .obj ファイル (でコンパイルされた[/clr](clr-common-language-runtime-compilation.md)) .netmodule ファイルとしても使用できます。  .obj ファイルには、メタデータとネイティブのシンボルが含まれます。  .netmodule には、メタデータにはのみが含まれます。
 
-できます/addmodule コンパイラ オプションを使用して、MSIL の .obj ファイルをその他の Visual Studio コンパイラに渡す (が .obj ファイルは、生成されたアセンブリの一部になるし、アセンブリに付属する必要がありますに注意してください)。  たとえば、Visual c# および Visual Basic には、/addmodule コンパイラ オプションがあります。
+できます/addmodule コンパイラ オプションを使用して、MSIL の .obj ファイルをその他の Visual Studio コンパイラに渡す (が .obj ファイルは、生成されたアセンブリの一部になるし、アセンブリに付属する必要がありますに注意してください)。  たとえば、Visual C# および Visual Basic には、/addmodule コンパイラ オプションがあります。
 
 > [!NOTE]
 >  ほとんどの場合は、.net モジュールを作成したコンパイルの .obj ファイルをリンカーに渡す必要があります。  .Dll または .netmodule の MSIL モジュールのファイルをリンカーに渡すと、LNK1107 可能性があります。

@@ -6,12 +6,12 @@ f1_keywords:
 helpviewer_keywords:
 - C3467
 ms.assetid: e2b844d0-4920-412f-99fd-cd8051c4aa41
-ms.openlocfilehash: 73e646c386d5c9b8b43d86ab743989b2525f76a4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 70375950543b9525fca10fff3084c923095fa35e
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50460932"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58780757"
 ---
 # <a name="compiler-error-c3467"></a>コンパイラ エラー C3467
 
@@ -19,7 +19,7 @@ ms.locfileid: "50460932"
 
 同じ型の事前宣言が複数検出されました。 宣言は、型ごとに 1 回しかできません。
 
-詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../windows/type-forwarding-cpp-cli.md)します。
+詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

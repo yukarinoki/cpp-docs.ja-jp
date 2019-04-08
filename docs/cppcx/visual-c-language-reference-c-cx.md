@@ -11,7 +11,7 @@ ms.locfileid: "58328416"
 ---
 # <a name="visual-c-language-reference-ccx"></a>Visual C++ の言語リファレンス (C++/CX)
 
-C + + CX は Windows アプリと C++ の最新にできるだけ近い表現での Windows ランタイム コンポーネントの作成を有効にする C++ 言語への拡張のセットです。 C++/cli/CX を簡単に Visual c#、Visual Basic、および JavaScript と対話するネイティブ コードと Windows ランタイムをサポートするその他の言語で Windows アプリやコンポーネントを記述します。 生の COM インターフェイスまたは非例外的なコードに直接アクセスを必要とするこれらのまれなケースで使用することができます、 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)します。
+C + + CX は Windows アプリと C++ の最新にできるだけ近い表現での Windows ランタイム コンポーネントの作成を有効にする C++ 言語への拡張のセットです。 C++/cli/CX を簡単に Visual C#、Visual Basic、および JavaScript と対話するネイティブ コードと Windows ランタイムをサポートするその他の言語で Windows アプリやコンポーネントを記述します。 生の COM インターフェイスまたは非例外的なコードに直接アクセスを必要とするこれらのまれなケースで使用することができます、 [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)します。
 
 > [!NOTE]
 > **[C +/cli WinRT](/windows/uwp/cpp-and-winrt-apis/index)は、推奨される代替 C + + CX**します。 新しい、標準的な c++ 17 の言語プロジェクションの Windows ランタイム Api をバージョン 1803 以降から最新の Windows 10 SDK で使用できるになります。 C +/cli WinRT がヘッダー ファイルで完全に実装し、最新の Windows API に最上級アクセスを提供するように設計します。

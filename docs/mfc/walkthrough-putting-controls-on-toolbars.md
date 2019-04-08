@@ -26,11 +26,9 @@ ms.locfileid: "57291389"
 
 1. 処理するメッセージ ハンドラーで、`AFX_WM_RESETTOOLBAR`メッセージで、次の手順を実行します。
 
-   1. 
-  `CMFCToolbarButton` 派生クラスを使用して、ボタン コントロールを作成します。
+   1. `CMFCToolbarButton` 派生クラスを使用して、ボタン コントロールを作成します。
 
-   1. 使用して、ダミー ボタンを新しいコントロールに置き換える[CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton)します。 
-  `ReplaceButton` はボタン オブジェクトをコピーしてそのコピーを保持するため、開発者はスタックでボタン オブジェクトを作成できます。
+   1. 使用して、ダミー ボタンを新しいコントロールに置き換える[CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton)します。 `ReplaceButton` はボタン オブジェクトをコピーしてそのコピーを保持するため、開発者はスタックでボタン オブジェクトを作成できます。
 
 > [!NOTE]
 >  使用して、ツールバーのリセットを必要に応じて、アプリケーションのカスタマイズを有効にした場合、**リセット**ボタンを**ツールバー**のタブ、**カスタマイズ**ダイアログ ボックスを参照してください、再コンパイルした後、アプリケーションでコントロールを更新します。 ツール バーの状態は Windows レジストリに保存され、アプリケーションの起動中に `ReplaceButton` メソッドが実行された後、レジストリ情報が読み込まれ適用されます。
@@ -58,28 +56,23 @@ ms.locfileid: "57291389"
    1. 新しい文字列 "Find the text\nFind" を文字列テーブルに追加し、`ID_EDIT_FIND_COMBO` コマンド ID を割り当てます。 この ID がのコマンド ID として使用される、**検索**コンボ ボックス ボタンをクリックします。
 
         > [!NOTE]
-        > 
-  `ID_EDIT_FIND` は `CEditView` によって処理される標準のコマンドであるため、このコマンド用の特別なハンドラーを実装する必要はありません。  ただし、新しいコマンド `ID_EDIT_FIND_COMBO` のハンドラーを実装する必要があります。
+        > `ID_EDIT_FIND` は `CEditView` によって処理される標準のコマンドであるため、このコマンド用の特別なハンドラーを実装する必要はありません。  ただし、新しいコマンド `ID_EDIT_FIND_COMBO` のハンドラーを実装する必要があります。
 
 1. 新しいクラスを作成`CFindComboBox`から派生した[CComboBox クラス](../mfc/reference/ccombobox-class.md)します。
 
-1. 
-  `CFindComboBox` クラスで、`PreTranslateMessage` 仮想メソッドをオーバーライドします。 このメソッドは、処理するコンボ ボックスを有効になります、 [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)メッセージ。 ユーザーが Esc キーを押す (`VK_ESCAPE`) と、フォーカスがメイン フレーム ウィンドウに戻ります。 ユーザーが Enter キーを押す (`VK_ENTER`) と、`WM_COMMAND` コマンド ID を含む `ID_EDIT_FIND_COMBO` メッセージがメイン フレーム ウィンドウにポストされます。
+1. `CFindComboBox` クラスで、`PreTranslateMessage` 仮想メソッドをオーバーライドします。 このメソッドは、処理するコンボ ボックスを有効になります、 [WM_KEYDOWN](/windows/desktop/inputdev/wm-keydown)メッセージ。 ユーザーが Esc キーを押す (`VK_ESCAPE`) と、フォーカスがメイン フレーム ウィンドウに戻ります。 ユーザーが Enter キーを押す (`VK_ENTER`) と、`WM_COMMAND` コマンド ID を含む `ID_EDIT_FIND_COMBO` メッセージがメイン フレーム ウィンドウにポストされます。
 
 1. クラスを作成、**検索**から派生した、コンボ ボックス ボタン[CMFCToolBarComboBoxButton クラス](../mfc/reference/cmfctoolbarcomboboxbutton-class.md)します。 この例では、名前付き`CFindComboButton`します。
 
-1. 
-  `CMFCToolbarComboBoxButton` のコンストラクターは、3 つのパラメーター (ボタンのコマンド ID、ボタン イメージのインデックス、およびコンボ ボックスのスタイル) を受け取ります。 これらのパラメーターを次のように設定します。
+1. `CMFCToolbarComboBoxButton` のコンストラクターは、3 つのパラメーター (ボタンのコマンド ID、ボタン イメージのインデックス、およびコンボ ボックスのスタイル) を受け取ります。 これらのパラメーターを次のように設定します。
 
-   1. 
-  `ID_EDIT_FIND_COMBO` をコマンド ID として渡します。
+   1. `ID_EDIT_FIND_COMBO` をコマンド ID として渡します。
 
    1. 使用[CCommandManager::GetCmdImage](reference/internal-classes.md)で`ID_EDIT_FIND`イメージ インデックスを取得します。
 
    1. 使用可能なコンボ ボックス スタイルの一覧は、[コンボ ボックス スタイル](../mfc/reference/styles-used-by-mfc.md#combo-box-styles)を参照してください。
 
-1. 
-  `CFindComboButton` クラスで、`CMFCToolbarComboBoxButton::CreateCombo` メソッドをオーバーライドします。 ここで、`CFindComboButton` オブジェクトを作成し、オブジェクトへのポインターを返す必要があります。
+1. `CFindComboButton` クラスで、`CMFCToolbarComboBoxButton::CreateCombo` メソッドをオーバーライドします。 ここで、`CFindComboButton` オブジェクトを作成し、オブジェクトへのポインターを返す必要があります。
 
 1. 使用して、 [IMPLEMENT_SERIAL](../mfc/reference/run-time-object-model-services.md#implement_serial)コンボ ボタンで持続されるようにするマクロ。 ワークスペース マネージャーは、ボタンの状態を自動的に読み込み、Windows レジストリに保存します。
 
@@ -99,8 +92,7 @@ ms.locfileid: "57291389"
 1. `AFX_WM_RESETTOOLBAR`ハンドラー、つまり、ツールバー ID を調べて、 *WPARAM* AFX_WM_RESETTOOLBAR メッセージの。 ツールバー ID が入っているツールバーの場合、**検索**コンボ ボックス ボタン、呼び出し[CMFCToolBar::ReplaceButton](../mfc/reference/cmfctoolbar-class.md#replacebutton)を置き換える、**検索**ボタン (これは、コマンド ID を持つボタン`ID_EDIT_FIND)`で、`CFindComboButton`オブジェクト。
 
     > [!NOTE]
-    > 
-  `CFindComboBox` はボタン オブジェクトをコピーしてそのコピーを保持するため、開発者はスタックで `ReplaceButton` オブジェクトを作成できます。
+    > `CFindComboBox` はボタン オブジェクトをコピーしてそのコピーを保持するため、開発者はスタックで `ReplaceButton` オブジェクトを作成できます。
 
 ### <a name="adding-the-find-control-to-the-customize-dialog-box"></a>[カスタマイズ] ダイアログ ボックスへの Find コントロールの追加
 

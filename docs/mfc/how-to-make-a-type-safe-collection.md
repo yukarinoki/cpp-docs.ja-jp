@@ -10,12 +10,12 @@ helpviewer_keywords:
 - serialization [MFC], collection classes
 - collection classes [MFC], deriving from nontemplate
 ms.assetid: 7230b2db-4283-4083-b098-eb231bf5b89e
-ms.openlocfilehash: d4241a77184458f5253b6d8987c310604310683c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c8be781bad699edb8cb0be844d79802269c3e0c5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57295189"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58781524"
 ---
 # <a name="how-to-make-a-type-safe-collection"></a>方法: タイプ セーフなコレクションを作成します。
 
@@ -27,7 +27,7 @@ ms.locfileid: "57295189"
 
 - [非テンプレート コレクション クラスを使用します。](#_core_using_nontemplate_collection_classes)
 
-Microsoft Foundation Class ライブラリでは、C++ テンプレートに基づく定義済みのタイプ セーフなコレクションを提供します。 テンプレートがいるため、これらのクラスはタイプ セーフと型キャストし、この目的の非テンプレート クラスの使用に関連するその他の追加作業なしの使いやすさを提供に役立ちます。 MFC サンプル[収集](../visual-cpp-samples.md)MFC アプリケーションのテンプレート ベースのコレクション クラスの使用方法を示します。 一般に、新しいコレクションのコードを作成するときのこれらのクラスを使用します。
+Microsoft Foundation Class ライブラリでは、C++ テンプレートに基づく定義済みのタイプ セーフなコレクションを提供します。 テンプレートがいるため、これらのクラスはタイプ セーフと型キャストし、この目的の非テンプレート クラスの使用に関連するその他の追加作業なしの使いやすさを提供に役立ちます。 MFC サンプル[収集](../overview/visual-cpp-samples.md)MFC アプリケーションのテンプレート ベースのコレクション クラスの使用方法を示します。 一般に、新しいコレクションのコードを作成するときのこれらのクラスを使用します。
 
 ##  <a name="_core_using_template.2d.based_classes_for_type_safety"></a> テンプレート ベースのクラスを使用して、タイプ セーフ
 

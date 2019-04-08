@@ -30,12 +30,12 @@ helpviewer_keywords:
 - CKeyboardManager [MFC], TranslateCharToUpper
 - CKeyboardManager [MFC], UpdateAccelTable
 ms.assetid: 4809ece6-89df-4479-8b53-9bf476ee107b
-ms.openlocfilehash: c953958b3e0112997423376d42b62953b936049a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: 3360a28d50f64546837cc5ef35dcfc761b4fb0f5
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303608"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779808"
 ---
 # <a name="ckeyboardmanager-class"></a>CKeyboardManager クラス
 
@@ -69,7 +69,7 @@ class CKeyboardManager : public CObject
 |[CKeyboardManager::LoadState](#loadstate)|Windows レジストリから、ショートカット キーのテーブルを読み込みます。|
 |[CKeyboardManager::ResetAll](#resetall)|アプリケーション リソースからのショートカット キーのテーブルを再読み込みします。|
 |[CKeyboardManager::SaveState](#savestate)|ショートカット キーのテーブルを Windows レジストリに保存します。|
-|[CKeyboardManager::ShowAllAccelerators](#showallaccelerators)|フレームワークは、すべてのコマンドのショートカット キーのすべてまたはコマンドごとに 1 つのショートカット キーを表示するかどうかを指定します。 このメソッドは、1 つだけの関連付けられているショートカット キーを持つコマンドには影響しません。|
+|[:Showallaccelerators](#showallaccelerators)|フレームワークは、すべてのコマンドのショートカット キーのすべてまたはコマンドごとに 1 つのショートカット キーを表示するかどうかを指定します。 このメソッドは、1 つだけの関連付けられているショートカット キーを持つコマンドには影響しません。|
 |[CKeyboardManager::TranslateCharToUpper](#translatechartoupper)|文字を大文字レジスタに変換します。|
 |[CKeyboardManager::UpdateAccelTable](#updateacceltable)|新しいショートカット キー テーブルのショートカット キーのテーブルを更新します。|
 
@@ -81,7 +81,7 @@ class CKeyboardManager : public CObject
 
 ## <a name="example"></a>例
 
-次の例へのポインターを取得する方法を示します、`CKeyboardManager`オブジェクトから、`CWinAppEx`クラス、およびメニュー コマンドに関連付けられているすべてのショートカット キーを表示する方法。 このコード スニペットの一部、[カスタム ページ サンプル](../../visual-cpp-samples.md)します。
+次の例へのポインターを取得する方法を示します、`CKeyboardManager`オブジェクトから、`CWinAppEx`クラス、およびメニュー コマンドに関連付けられているすべてのショートカット キーを表示する方法。 このコード スニペットの一部、[カスタム ページ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_CustomPages#5](../../mfc/reference/codesnippet/cpp/ckeyboardmanager-class_1.cpp)]
 

@@ -6,12 +6,12 @@ ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: 9f4dd43f-9909-43d6-91d2-05734643876e
-ms.openlocfilehash: 7452ad3db642e132f4e46c1688d429dbaf78419a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
-ms.translationtype: MT
+ms.openlocfilehash: fe78a4c5a1773cf621d6554969b1c41c333bc5aa
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532770"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58778586"
 ---
 # <a name="attributes-by-group"></a>グループ別の属性
 
@@ -24,7 +24,7 @@ C++ 属性は、次の機能グループに編成されます。
 |[OLE DB コンシューマー属性](ole-db-consumer-attributes.md)|コードを挿入、に基づいて、 [OLE DB コンシューマー テンプレート](../../data/oledb/ole-db-consumer-templates-reference.md)-コンシューマーを作成する作業 OLE DB テーブルを開くなどのタスクを実行するコマンドを実行して、データにアクセスします。|
 |[コンパイラ属性](compiler-attributes.md)|Microsoft C コンパイラによって提供されます。|
 
-.NET Framework アプリケーション用のカスタム属性を定義する方法については、次を参照してください。[ユーザー定義の属性](../user-defined-attributes-cpp-component-extensions.md)します。
+.NET Framework アプリケーション用のカスタム属性を定義する方法については、[ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

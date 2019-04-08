@@ -490,7 +490,7 @@ C++ AMP には、アクセラレータ機能を使用するグラフィックス
 
 - [Bing マップ トリップ オプティマイザーでは、JavaScript および C++ での Windows ストア アプリ](http://go.microsoft.com/fwlink/p/?linkid=249078)
 
-- [Windows ランタイムを使用して c# から C++ AMP を使用する方法](http://go.microsoft.com/fwlink/p/?linkid=249080)
+- [Windows ランタイムを使用して C# から C++ AMP を使用する方法](http://go.microsoft.com/fwlink/p/?linkid=249080)
 
 - [C# から C++ AMP を使用する方法](http://go.microsoft.com/fwlink/p/?linkid=249081)
 

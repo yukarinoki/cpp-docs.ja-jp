@@ -166,12 +166,12 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatLong
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
-ms.openlocfilehash: 550f238ae66bcaf7d5afc245b709c42c78769949
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305069"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58779028"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty クラス
 
@@ -235,7 +235,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|現在のプロパティの親を展開するかどうかを示します。|
 |[CMFCPropertyGridProperty::IsSelected](#isselected)|現在のプロパティが選択されているかどうかを示します。|
 |[CMFCPropertyGridProperty::IsVisible](#isvisible)|現在のプロパティが表示されているかどうかを示します。|
-|[CMFCPropertyGridProperty::OnClickButton](#onclickbutton)|プロパティに含まれているボタンをユーザーがクリックすると、フレームワークによって呼び出されます |
+|[Cmfcpropertygridproperty::onclickbutton](#onclickbutton)|プロパティに含まれているボタンをユーザーがクリックすると、フレームワークによって呼び出されます |
 |[CMFCPropertyGridProperty::OnClickName](#onclickname)|ユーザーがプロパティの名前 フィールドをクリックしたときに、親のプロパティ リスト コントロールによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|ユーザーがプロパティの値フィールドをクリックしたときに、親のプロパティ リスト コントロールによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|プロパティに含まれているコンボ ボックスが閉じられたときに、フレームワークによって呼び出されます。|
@@ -244,7 +244,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|プロパティの説明を表示するためにフレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|サブプロパティを含むプロパティの近くの展開ボックス コントロールを描画するためにフレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnDrawName](#ondrawname)|プロパティ名を表示するためにフレームワークによって呼び出されます。|
-|[CMFCPropertyGridProperty::OnDrawValue](#ondrawvalue)|プロパティ値を表示するためにフレームワークによって呼び出されます |
+|[Cmfcpropertygridproperty::ondrawvalue](#ondrawvalue)|プロパティ値を表示するためにフレームワークによって呼び出されます |
 |[Cmfcpropertygridproperty::onedit](#onedit)|ユーザーがプロパティ値を変更しようとすると、フレームワークによって呼び出されます |
 |[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|ユーザーが終了すると、フレームワークによって呼び出さプロパティ値を変更します。|
 |[CMFCPropertyGridProperty::OnKillSelection](#onkillselection)||
@@ -254,7 +254,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|ユーザーが編集可能なコンボ ボックスから項目を選択したときに、フレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|プロパティ項目にマウス ポインターが移動したときに、フレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnSetSelection](#onsetselection)||
-|[CMFCPropertyGridProperty::OnUpdateValue](#onupdatevalue)|編集可能なプロパティの値が変更されると、フレームワークによって呼び出されます |
+|[Cmfcpropertygridproperty::onupdatevalue](#onupdatevalue)|編集可能なプロパティの値が変更されると、フレームワークによって呼び出されます |
 |[CMFCPropertyGridProperty::PushChar](#pushchar)|プロパティが選択されているし、ユーザーが新しい文字を入力したときに、プロパティ リスト コントロールから呼び出されます。|
 |[CMFCPropertyGridProperty::Redraw](#redraw)|プロパティを再描画します。|
 |[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)|プロパティからすべてのオプション (アイテム) を削除します。|
@@ -297,7 +297,7 @@ class CMFCPropertyGridProperty : public CObject
 
 ## <a name="example"></a>例
 
-次の例は、構築する方法を示します、`CMFCPropertyGridProperty`オブジェクト。 例では、さまざまなメソッドを使用する方法も示しています、`CMFCPropertyGridProperty`クラスにオプションを追加、サブ項目を追加、プロパティを有効にするプロパティを表示します。 この例は、[新しいコントロール サンプル](../../visual-cpp-samples.md)します。
+次の例は、構築する方法を示します、`CMFCPropertyGridProperty`オブジェクト。 例では、さまざまなメソッドを使用する方法も示しています、`CMFCPropertyGridProperty`クラスにオプションを追加、サブ項目を追加、プロパティを有効にするプロパティを表示します。 この例は、[新しいコントロール サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_NewControls#27](../../mfc/reference/codesnippet/cpp/cmfcpropertygridproperty-class_1.cpp)]
 
@@ -1205,8 +1205,8 @@ virtual HBRUSH OnCtlColor(
 *pDC*<br/>
 [in]デバイス コンテキストへのポインター。
 
-*nCtlColor*<br/>
-[in]\(このパラメーターは使用されません)
+*ため*<br/>
+[in] (このパラメーターは使用されません)
 
 ### <a name="return-value"></a>戻り値
 
@@ -1360,7 +1360,7 @@ virtual BOOL OnEdit(LPPOINT lptClick);
 ### <a name="parameters"></a>パラメーター
 
 *lptClick*<br/>
-[in]\(このパラメーターは使用されません)クライアント座標の点へのポインター。
+[in] (このパラメーターは使用されません)クライアント座標の点へのポインター。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1398,7 +1398,7 @@ virtual BOOL OnKillFocus(CWnd*);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*CWnd*|[in]\(使用されていません。)ウィンドウへのポインター。|
+|*CWnd*|[in] (使用されていません。)ウィンドウへのポインター。|
 
 ### <a name="return-value"></a>戻り値
 
