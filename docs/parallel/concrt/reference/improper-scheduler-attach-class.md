@@ -31,8 +31,7 @@ class improper_scheduler_attach : public std::exception;
 
 |名前|説明|
 |----------|-----------------|
-|[improper_scheduler_attach](#ctor)|オーバーロードされます。 
-  `improper_scheduler_attach` オブジェクトを構築します。|
+|[improper_scheduler_attach](#ctor)|オーバーロードされます。 `improper_scheduler_attach` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -48,8 +47,7 @@ class improper_scheduler_attach : public std::exception;
 
 ##  <a name="ctor"></a> improper_scheduler_attach
 
-
-  `improper_scheduler_attach` オブジェクトを構築します。
+`improper_scheduler_attach` オブジェクトを構築します。
 
 ```
 explicit _CRTIMP improper_scheduler_attach(_In_z_ const char* _Message) throw();

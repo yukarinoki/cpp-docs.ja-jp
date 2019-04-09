@@ -31,8 +31,7 @@ class improper_scheduler_reference : public std::exception;
 
 |名前|説明|
 |----------|-----------------|
-|[improper_scheduler_reference](#ctor)|オーバーロードされます。 
-  `improper_scheduler_reference` オブジェクトを構築します。|
+|[improper_scheduler_reference](#ctor)|オーバーロードされます。 `improper_scheduler_reference` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -48,8 +47,7 @@ class improper_scheduler_reference : public std::exception;
 
 ##  <a name="ctor"></a> improper_scheduler_reference
 
-
-  `improper_scheduler_reference` オブジェクトを構築します。
+`improper_scheduler_reference` オブジェクトを構築します。
 
 ```
 explicit _CRTIMP improper_scheduler_reference(_In_z_ const char* _Message) throw();

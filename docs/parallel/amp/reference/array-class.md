@@ -55,8 +55,7 @@ friend class array;
 |名前|説明|
 |----------|-----------------|
 |[array コンス トラクター](#ctor)|`array` クラスの新しいインスタンスを初期化します。|
-|[~ array デストラクター](#dtor)|
-  `array` オブジェクトを破棄します。|
+|[~ array デストラクター](#dtor)|`array` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -68,8 +67,7 @@ friend class array;
 |[get_associated_accelerator_view](#get_associated_accelerator_view)|2 つ目の取得[accelerator_view](accelerator-view-class.md)オブジェクトをインスタンス化するステージング コンス トラクターが呼び出されたときに、パラメーターとして渡される、`array`オブジェクト。|
 |[get_cpu_access_type](#get_cpu_access_type)|返します、 [access_type](concurrency-namespace-enums-amp.md#access_type)の配列。 このメソッドは CPU 上でのみアクセスできます。|
 |[get_extent](#get_extent)|返します、[エクステント](extent-class.md)オブジェクトの配列。|
-|[reinterpret_as](#reinterpret_as)|
-  `array` オブジェクトのすべての要素を含む 1 次元配列を返します。|
+|[reinterpret_as](#reinterpret_as)|`array` オブジェクトのすべての要素を含む 1 次元配列を返します。|
 |[section](#section)|指定された原点にある `array` オブジェクトのサブセクションを返し、これは必要に応じて範囲が指定されます。|
 |[view_as](#view_as)|返します、 [array_view](array-view-class.md)から構築されたオブジェクトを`array`オブジェクト。|
 
@@ -107,8 +105,7 @@ friend class array;
 
 配列が別の配列にコピーされる場合は詳細コピーが実行されるため、配列は論理的に値型であると見なされます。 2 つの配列が同じデータを指すことはありません。
 
-
-  `array<T,N>` 型はいくつかのシナリオで使用されます。
+`array<T,N>` 型はいくつかのシナリオで使用されます。
 
 - アクセラレータの計算で使用できるデータ コンテナーとして。
 
@@ -128,8 +125,7 @@ friend class array;
 
 ##  <a name="dtor"></a> ~ 配列
 
-
-  `array` オブジェクトを破棄します。
+`array` オブジェクトを破棄します。
 
 ```
 ~array() restrict(cpu);
@@ -145,8 +141,7 @@ __declspec(property(get= get_accelerator_view)) Concurrency::accelerator_view ac
 
 ##  <a name="ctor"></a> 配列
 
-新しいインスタンスを初期化、 [array クラス](array-class.md)します。 
-  `array<T,N>` の既定のコンストラクターがありません。 すべてのコンストラクターは CPU でのみ実行されます。 これらは、Direct3D ターゲットで実行することはできません。
+新しいインスタンスを初期化、 [array クラス](array-class.md)します。 `array<T,N>` の既定のコンストラクターがありません。 すべてのコンストラクターは CPU でのみ実行されます。 これらは、Direct3D ターゲットで実行することはできません。
 
 ```
 explicit array(
@@ -482,8 +477,7 @@ __declspec(property(get= get_cpu_access_type)) access_type cpu_access_type;
 
 ##  <a name="data"></a> データ
 
-
-  `array` の生データへのポインターを返します。
+`array` の生データへのポインターを返します。
 
 ```
 value_type* data() restrict(amp, cpu);
@@ -810,8 +804,7 @@ array_view<const value_type,3> section(
 
 ### <a name="return-value"></a>戻り値
 
-指定された原点にある `array` オブジェクトのサブセクションを返し、これは必要に応じて範囲が指定されます。 
-  `index` オブジェクトのみを指定すると、サブセクションには `index` オブジェクトの要素のインデックスより大きなインデックスを持つ関連するグリッドのすべての要素が含まれます。
+指定された原点にある `array` オブジェクトのサブセクションを返し、これは必要に応じて範囲が指定されます。 `index` オブジェクトのみを指定すると、サブセクションには `index` オブジェクトの要素のインデックスより大きなインデックスを持つ関連するグリッドのすべての要素が含まれます。
 
 ##  <a name="view_as"></a> view_as
 

@@ -51,8 +51,7 @@ class ISource;
 
 |名前|説明|
 |----------|-----------------|
-|[~ ISource デストラクター](#dtor)|
-  `ISource` オブジェクトを破棄します。|
+|[~ ISource デストラクター](#dtor)|`ISource` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -153,8 +152,7 @@ virtual message<T>* consume(
 
 ##  <a name="dtor"></a> ~ISource
 
-
-  `ISource` オブジェクトを破棄します。
+`ISource` オブジェクトを破棄します。
 
 ```
 virtual ~ISource();

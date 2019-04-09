@@ -31,8 +31,7 @@ class operation_timed_out : public std::exception;
 
 |名前|説明|
 |----------|-----------------|
-|[operation_timed_out](#ctor)|オーバーロードされます。 
-  `operation_timed_out` オブジェクトを構築します。|
+|[operation_timed_out](#ctor)|オーバーロードされます。 `operation_timed_out` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -48,8 +47,7 @@ class operation_timed_out : public std::exception;
 
 ##  <a name="ctor"></a> operation_timed_out
 
-
-  `operation_timed_out` オブジェクトを構築します。
+`operation_timed_out` オブジェクトを構築します。
 
 ```
 explicit _CRTIMP operation_timed_out(_In_z_ const char* _Message) throw();

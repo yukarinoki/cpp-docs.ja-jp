@@ -44,8 +44,7 @@ class CCriticalSection : public CSyncObject
 |名前|説明|
 |----------|-----------------|
 |[CCriticalSection::Lock](#lock)|アクセスするために使用して、`CCriticalSection`オブジェクト。|
-|[CCriticalSection::Unlock](#unlock)|
-  `CCriticalSection` のオブジェクトを解放します。|
+|[CCriticalSection::Unlock](#unlock)|`CCriticalSection` のオブジェクトを解放します。|
 
 ### <a name="public-operators"></a>パブリック演算子
 

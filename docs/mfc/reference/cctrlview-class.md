@@ -46,8 +46,7 @@ class CCtrlView : public CView
 |名前|説明|
 |----------|-----------------|
 |[CCtrlView::OnDraw](#ondraw)|指定したデバイス コンテキストを使用して描画するためにフレームワークによって呼び出されます。|
-|[CCtrlView::PreCreateWindow](#precreatewindow)|
-  `CCtrlView` オブジェクトに関連付けられている Windows のウィンドウが作成される前に呼び出されます。|
+|[CCtrlView::PreCreateWindow](#precreatewindow)|`CCtrlView` オブジェクトに関連付けられている Windows のウィンドウが作成される前に呼び出されます。|
 
 ### <a name="protected-data-members"></a>プロテクト データ メンバー
 
@@ -137,8 +136,7 @@ virtual void OnDraw(CDC* pDC);
 
 ##  <a name="precreatewindow"></a>  CCtrlView::PreCreateWindow
 
-
-  `CWnd` オブジェクトに関連付けられている Windows のウィンドウが作成される前に呼び出されます。
+`CWnd` オブジェクトに関連付けられている Windows のウィンドウが作成される前に呼び出されます。
 
 ```
 virtual BOOL PreCreateWindow(CREATESTRUCT& cs);

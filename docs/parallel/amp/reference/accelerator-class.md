@@ -64,8 +64,7 @@ class accelerator;
 |名前|説明|
 |----------|-----------------|
 |[アクセラレータ コンス トラクター](#ctor)|`accelerator` クラスの新しいインスタンスを初期化します。|
-|[~ accelerator デストラクター](#ctor)|
-  `accelerator` オブジェクトを破棄します。|
+|[~ accelerator デストラクター](#ctor)|`accelerator` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -74,28 +73,18 @@ class accelerator;
 |[create_view](#create_view)|このアクセラレータの `accelerator_view` オブジェクトを作成して返します。|
 |[get_all](#get_all)|使用可能なすべてのアクセラレータを表す `accelerator` オブジェクトのベクターを返します。|
 |[get_auto_selection_view](#get_auto_selection_view)|自動選択 `accelerator_view` を返します。|
-|[get_dedicated_memory](#get_dedicated_memory)|
-  `accelerator` の専用のメモリ (KB 単位) を返します。|
+|[get_dedicated_memory](#get_dedicated_memory)|`accelerator` の専用のメモリ (KB 単位) を返します。|
 |[get_default_cpu_access_type](#get_default_cpu_access_type)|既定値を返します[access_type](concurrency-namespace-enums-amp.md#access_type)このアクセラレータで作成されるバッファーの。|
-|[get_default_view](#get_default_view)|
-  `accelerator_view` に関連付けられている既定の `accelerator` オブジェクトを返します。|
-|[get_description](#get_description)|
-  `accelerator` デバイスの短い説明を返します。|
+|[get_default_view](#get_default_view)|`accelerator_view` に関連付けられている既定の `accelerator` オブジェクトを返します。|
+|[get_description](#get_description)|`accelerator` デバイスの短い説明を返します。|
 |[get_device_path](#get_device_path)|デバイスのパスを返します。|
-|[get_has_display](#get_has_display)|
-  `accelerator` がディスプレイにアタッチされるかどうかを決定します。|
-|[get_is_debug](#get_is_debug)|
-  `accelerator` が広範なエラー レポートに有効なデバッグ レイヤーを持つかどうかを決定します。|
-|[get_is_emulated](#get_is_emulated)|
-  `accelerator` がエミュレートされるかどうかを決定します。|
-|[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|
-  `accelerator` が共有メモリをサポートするかどうかを決定します|
-|[get_supports_double_precision](#get_supports_double_precision)|
-  `accelerator` がディスプレイにアタッチされるかどうかを決定します。|
-|[get_supports_limited_double_precision](#get_supports_limited_double_precision)|
-  `accelerator` が倍精度サポートを制限するかどうかを決定します。|
-|[get_version](#get_version)|
-  `accelerator` のバージョンを返します。|
+|[get_has_display](#get_has_display)|`accelerator` がディスプレイにアタッチされるかどうかを決定します。|
+|[get_is_debug](#get_is_debug)|`accelerator` が広範なエラー レポートに有効なデバッグ レイヤーを持つかどうかを決定します。|
+|[get_is_emulated](#get_is_emulated)|`accelerator` がエミュレートされるかどうかを決定します。|
+|[get_supports_cpu_shared_memory](#get_supports_cpu_shared_memory)|`accelerator` が共有メモリをサポートするかどうかを決定します|
+|[get_supports_double_precision](#get_supports_double_precision)|`accelerator` がディスプレイにアタッチされるかどうかを決定します。|
+|[get_supports_limited_double_precision](#get_supports_limited_double_precision)|`accelerator` が倍精度サポートを制限するかどうかを決定します。|
+|[get_version](#get_version)|`accelerator` のバージョンを返します。|
 |[set_default](#set_default)|既定のアクセラレータのパスを返します。|
 |[set_default_cpu_access_type](#set_default_cpu_access_type)|既定の CPU 設定[access_type](concurrency-namespace-enums-amp.md#access_type)配列および暗黙的なメモリ割り当てがこれに加えられた`accelerator`します。|
 
@@ -112,29 +101,21 @@ class accelerator;
 |名前|説明|
 |----------|-----------------|
 |[cpu_accelerator](#cpu_accelerator)|CPU `accelerator` の文字列定数を取得します。|
-|[dedicated_memory](#dedicated_memory)|
-  `accelerator` の専用のメモリ (KB 単位) を取得します。|
+|[dedicated_memory](#dedicated_memory)|`accelerator` の専用のメモリ (KB 単位) を取得します。|
 |[default_accelerator](#default_accelerator)|既定の `accelerator` の文字列定数を取得します。|
 |[default_cpu_access_type](#default_cpu_access_type)|取得または設定の既定の CPU [access_type](concurrency-namespace-enums-amp.md#access_type)配列および暗黙的なメモリ割り当てがこれに加えられた`accelerator`します。|
-|[default_view](#default_view)|
-  `accelerator_view` に関連付けられている既定の `accelerator` オブジェクトを取得します。|
-|[description](#description)|
-  `accelerator` デバイスの短い説明を取得します。|
+|[default_view](#default_view)|`accelerator_view` に関連付けられている既定の `accelerator` オブジェクトを取得します。|
+|[description](#description)|`accelerator` デバイスの短い説明を取得します。|
 |[device_path](#device_path)|デバイスのパスを取得します。|
 |[direct3d_ref](#direct3d_ref)|Direct3D 参照 `accelerator` の文字列定数を取得します。|
 |[direct3d_warp](#direct3d_warp)|文字列の定数を取得、`accelerator`ストリーミング SIMD 拡張命令 (SSE) を使用するマルチコア Cpu で C++ AMP コードの実行に使用できるオブジェクトします。|
-|[has_display](#has_display)|
-  `accelerator` がディスプレイにアタッチされているかどうかを示すブール値を取得します。|
-|[is_debug](#is_debug)|
-  `accelerator` に、広範なエラー レポートに有効なデバッグ レイヤーがあるかどうかを示します。|
-|[is_emulated](#is_emulated)|
-  `accelerator` がエミュレートされるかどうかを示します。|
-|[supports_cpu_shared_memory](#supports_cpu_shared_memory)|
-  `accelerator` が共有メモリをサポートするかどうかを示します。|
+|[has_display](#has_display)|`accelerator` がディスプレイにアタッチされているかどうかを示すブール値を取得します。|
+|[is_debug](#is_debug)|`accelerator` に、広範なエラー レポートに有効なデバッグ レイヤーがあるかどうかを示します。|
+|[is_emulated](#is_emulated)|`accelerator` がエミュレートされるかどうかを示します。|
+|[supports_cpu_shared_memory](#supports_cpu_shared_memory)|`accelerator` が共有メモリをサポートするかどうかを示します。|
 |[supports_double_precision](#supports_double_precision)|アクセラレータが倍精度数値演算をサポートするかどうかを示します。|
 |[supports_limited_double_precision](#supports_limited_double_precision)|アクセラレータの倍精度数値演算のサポートが制限されているかどうかを示します。|
-|[version](#version)|
-  `accelerator` のバージョンを取得します。|
+|[version](#version)|`accelerator` のバージョンを取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -154,8 +135,7 @@ class accelerator;
 
 ##  <a name="dtor"></a> </a> ~ accelerator
 
-
-  `accelerator` オブジェクトを破棄します。
+`accelerator` オブジェクトを破棄します。
 
 ```
 ~accelerator();
@@ -210,8 +190,7 @@ accelerator_view create_view(queuing_mode qmode = queuing_mode_automatic);
 
 ##  <a name="dedicated_memory"></a> dedicated_memory
 
-
-  `accelerator` の専用のメモリ (KB 単位) を取得します。
+`accelerator` の専用のメモリ (KB 単位) を取得します。
 
 ```
 __declspec(property(get= get_dedicated_memory)) size_t dedicated_memory;
@@ -243,8 +222,7 @@ __declspec(property(get= get_default_view)) accelerator_view default_view;
 
 ##  <a name="description"></a> 説明
 
-
-  `accelerator` デバイスの短い説明を取得します。
+`accelerator` デバイスの短い説明を取得します。
 
 ```
 __declspec(property(get= get_description)) std::wstring description;
@@ -300,8 +278,7 @@ static accelerator_view __cdecl get_auto_selection_view();
 
 ##  <a name="get_dedicated_memory"></a> get_dedicated_memory
 
-
-  `accelerator` の専用のメモリ (KB 単位) を返します。
+`accelerator` の専用のメモリ (KB 単位) を返します。
 
 ```
 size_t get_dedicated_memory() const;
@@ -325,8 +302,7 @@ access_type get_default_cpu_access_type() const;
 
 ##  <a name="get_default_view"></a> get_default_view
 
-
-  `accelerator_view` に関連付けられている既定の `accelerator` オブジェクトを返します。
+`accelerator_view` に関連付けられている既定の `accelerator` オブジェクトを返します。
 
 ```
 accelerator_view get_default_view() const;
@@ -338,8 +314,7 @@ accelerator_view get_default_view() const;
 
 ##  <a name="get_description"></a> get_description
 
-
-  `accelerator` デバイスの短い説明を返します。
+`accelerator` デバイスの短い説明を返します。
 
 ```
 std::wstring get_description() const;
@@ -375,8 +350,7 @@ bool get_has_display() const;
 
 ##  <a name="get_is_debug"></a> get_is_debug
 
-
-  `accelerator` が広範なエラー レポートに有効なデバッグ レイヤーを持つかどうかを決定します。
+`accelerator` が広範なエラー レポートに有効なデバッグ レイヤーを持つかどうかを決定します。
 
 ```
 bool get_is_debug() const;
@@ -388,8 +362,7 @@ bool get_is_debug() const;
 
 ##  <a name="get_is_emulated"></a> get_is_emulated
 
-
-  `accelerator` がエミュレートされるかどうかを決定します。
+`accelerator` がエミュレートされるかどうかを決定します。
 
 ```
 bool get_is_emulated() const;
@@ -437,8 +410,7 @@ bool get_supports_limited_double_precision() const;
 
 ##  <a name="get_version"></a> get_version
 
-
-  `accelerator` のバージョンを返します。
+`accelerator` のバージョンを返します。
 
 ```
 unsigned int get_version() const;
@@ -559,8 +531,7 @@ bool set_default_cpu_access_type(access_type _Default_cpu_access_type);
 
 ##  <a name="supports_cpu_shared_memory"></a> supports_cpu_shared_memory
 
-
-  `accelerator` が共有メモリをサポートしているかどうか示すブール値を取得します。
+`accelerator` が共有メモリをサポートしているかどうか示すブール値を取得します。
 
 ```
 __declspec(property(get= get_supports_cpu_shared_memory)) bool supports_cpu_shared_memory;
@@ -584,8 +555,7 @@ __declspec(property(get= get_supports_limited_double_precision)) bool supports_l
 
 ##  <a name="version"></a> バージョン
 
-
-  `accelerator` のバージョンを取得します。
+`accelerator` のバージョンを取得します。
 
 ```
 __declspec(property(get= get_version)) unsigned int version;

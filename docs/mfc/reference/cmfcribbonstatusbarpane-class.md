@@ -55,8 +55,7 @@ class CMFCRibbonStatusBarPane : public CMFCRibbonButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|
-  `CMFCRibbonStatusBarPane` オブジェクトを構築して初期化します。|
+|[CMFCRibbonStatusBarPane::CMFCRibbonStatusBarPane](#cmfcribbonstatusbarpane)|`CMFCRibbonStatusBarPane` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 

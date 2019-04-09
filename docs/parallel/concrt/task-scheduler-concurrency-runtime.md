@@ -52,8 +52,7 @@ ms.locfileid: "57286810"
 |[スケジュール グループ](../../parallel/concrt/schedule-groups.md)|スケジュール グループの役割について説明します。 スケジュール グループは、タスク間で高いレベルの局所性が求められる場合 (たとえば、関連するタスクのグループが同一プロセッサ ノードでの実行によって恩恵を受ける場合) に使用します。|
 |[軽量タスク](../../parallel/concrt/lightweight-tasks.md)|軽量タスクの役割について説明します。 軽量タスクは、既存のコードを改変して同時実行ランタイムのスケジュール機能を使用する場合に有用です。|
 |[コンテキスト](../../parallel/concrt/contexts.md)|コンテキスト、`concurrency::wait` 関数、および `concurrency::Context` クラスの役割について説明します。 この機能は、コンテキストのブロック、ブロック解除、および譲渡のタイミングを制御する必要がある場合や、アプリケーションでオーバーサブスクリプションを有効にする場合に使用します。|
-|[メモリ管理関数](../../parallel/concrt/memory-management-functions.md)|
-  `concurrency::Alloc` 関数と `concurrency::Free` 関数について説明します。 これらの関数を使用すると、同時実行方式でメモリの割り当てと解放が行われるため、メモリ パフォーマンスが向上します。|
+|[メモリ管理関数](../../parallel/concrt/memory-management-functions.md)|`concurrency::Alloc` 関数と `concurrency::Free` 関数について説明します。 これらの関数を使用すると、同時実行方式でメモリの割り当てと解放が行われるため、メモリ パフォーマンスが向上します。|
 |[その他の同時実行モデルを比較します。](../../parallel/concrt/comparing-the-concurrency-runtime-to-other-concurrency-models.md)|プリエンプティブ スケジュール メカニズムと協調スケジュール メカニズムの違いについて説明します。|
 |[並列パターン ライブラリ (PPL)](../../parallel/concrt/parallel-patterns-library-ppl.md)|アプリケーションで各種の並列パターン (並列アルゴリズムなど) を使用する方法について説明します。|
 |[非同期エージェント ライブラリ](../../parallel/concrt/asynchronous-agents-library.md)|アプリケーションで非同期エージェントを使用する方法について説明します。|

@@ -46,8 +46,7 @@ class reader_writer_lock;
 |名前|説明|
 |----------|-----------------|
 |[reader_writer_lock](#ctor)|新しい `reader_writer_lock` オブジェクトを構築します。|
-|[~ reader_writer_lock デストラクター](#dtor)|
-  `reader_writer_lock` オブジェクトを破棄します。|
+|[~ reader_writer_lock デストラクター](#dtor)|`reader_writer_lock` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -115,8 +114,7 @@ reader_writer_lock();
 
 ##  <a name="dtor"></a> ~reader_writer_lock
 
-
-  `reader_writer_lock` オブジェクトを破棄します。
+`reader_writer_lock` オブジェクトを破棄します。
 
 ```
 ~reader_writer_lock();

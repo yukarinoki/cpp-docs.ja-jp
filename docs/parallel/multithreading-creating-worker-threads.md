@@ -27,14 +27,11 @@ ms.locfileid: "57293239"
 
 - [例](#_core_controlling_function_example)
 
-ワーカー スレッドの作成は比較的簡単なタスクです。 スレッドを実行するために必要な手順は、(1) 制御関数の作成、(2) スレッドの起動の 2 つだけです。 クラスを派生する必要はありません[CWinThread](../mfc/reference/cwinthread-class.md)します。 
-  `CWinThread` の専用の派生クラスが必要な場合は派生できますが、通常、単純なワーカー スレッドを実行する場合は必要ありません。 
-  `CWinThread` をそのまま使用できます。
+ワーカー スレッドの作成は比較的簡単なタスクです。 スレッドを実行するために必要な手順は、(1) 制御関数の作成、(2) スレッドの起動の 2 つだけです。 クラスを派生する必要はありません[CWinThread](../mfc/reference/cwinthread-class.md)します。 `CWinThread` の専用の派生クラスが必要な場合は派生できますが、通常、単純なワーカー スレッドを実行する場合は必要ありません。 `CWinThread` をそのまま使用できます。
 
 ##  <a name="_core_starting_the_thread"></a> スレッドの起動
 
-
-  `AfxBeginThread` には、2 つのオーバーロード バージョンがあります。1 つはワーカー スレッドのみを作成でき、もう 1 つは、ユーザー インターフェイス スレッドとワーカー スレッドの両方を作成できます。 最初のオーバー ロードを使用して、ワーカー スレッドの実行を開始するには、呼び出す[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)、次の情報を提供します。
+`AfxBeginThread` には、2 つのオーバーロード バージョンがあります。1 つはワーカー スレッドのみを作成でき、もう 1 つは、ユーザー インターフェイス スレッドとワーカー スレッドの両方を作成できます。 最初のオーバー ロードを使用して、ワーカー スレッドの実行を開始するには、呼び出す[AfxBeginThread](../mfc/reference/application-information-and-management.md#afxbeginthread)、次の情報を提供します。
 
 - 制御関数のアドレス。
 

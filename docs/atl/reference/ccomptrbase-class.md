@@ -69,8 +69,7 @@ class CComPtrBase
 |[CComPtrBase::operator T *](#operator_t_star)|キャスト演算子です。|
 |[CComPtrBase::operator!](#operator_not)|NOT 演算子。|
 |[CComPtrBase::operator (& a)](#operator_amp)|& 演算子。|
-|[CComPtrBase::operator *](#operator_star)|
-  \* 演算子。|
+|[CComPtrBase::operator *](#operator_star)|\* 演算子。|
 |[CComPtrBase::operator <](#ccomptrbase__operator lt)|小さいの演算子よりもします。|
 |[CComPtrBase::operator ==](#operator_eq_eq)|等値演算子。|
 |[CComPtrBase::operator ->](#operator_ptr)|メンバーへのポインター演算子。|
@@ -270,8 +269,7 @@ T** operator&() throw();
 
 ##  <a name="operator_star"></a>  CComPtrBase::operator \*
 
-
-  \* 演算子。
+\* 演算子。
 
 ```
 T& operator*() const throw();

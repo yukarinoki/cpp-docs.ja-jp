@@ -31,8 +31,7 @@ class invalid_scheduler_policy_key : public std::exception;
 
 |名前|説明|
 |----------|-----------------|
-|[invalid_scheduler_policy_key](#ctor)|オーバーロードされます。 
-  `invalid_scheduler_policy_key` オブジェクトを構築します。|
+|[invalid_scheduler_policy_key](#ctor)|オーバーロードされます。 `invalid_scheduler_policy_key` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -48,8 +47,7 @@ class invalid_scheduler_policy_key : public std::exception;
 
 ##  <a name="ctor"></a> invalid_scheduler_policy_key
 
-
-  `invalid_scheduler_policy_key` オブジェクトを構築します。
+`invalid_scheduler_policy_key` オブジェクトを構築します。
 
 ```
 explicit _CRTIMP invalid_scheduler_policy_key(_In_z_ const char* _Message) throw();

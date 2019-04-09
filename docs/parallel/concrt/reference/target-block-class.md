@@ -64,8 +64,7 @@ class target_block : public ITarget<typename _SourceLinkRegistry::type::source_t
 |名前|説明|
 |----------|-----------------|
 |[target_block](#ctor)|`target_block` オブジェクトを構築します。|
-|[~ target_block デストラクター](#dtor)|
-  `target_block` オブジェクトを破棄します。|
+|[~ target_block デストラクター](#dtor)|`target_block` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -208,8 +207,7 @@ virtual message_status propagate(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-
-  `message` オブジェクトを指すポインター。
+`message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -235,8 +233,7 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-
-  `message` オブジェクトを指すポインター。
+`message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -283,8 +280,7 @@ virtual message_status send(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-
-  `message` オブジェクトを指すポインター。
+`message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -342,8 +338,7 @@ target_block();
 
 ##  <a name="dtor"></a> ~target_block
 
-
-  `target_block` オブジェクトを破棄します。
+`target_block` オブジェクトを破棄します。
 
 ```
 virtual ~target_block();

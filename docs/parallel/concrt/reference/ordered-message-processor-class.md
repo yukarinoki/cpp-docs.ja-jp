@@ -49,10 +49,8 @@ class ordered_message_processor : public message_processor<T>;
 
 |名前|説明|
 |----------|-----------------|
-|[ordered_message_processor](#ctor)|
-  `ordered_message_processor` オブジェクトを構築します。|
-|[~ ordered_message_processor デストラクター](#dtor)|
-  `ordered_message_processor` オブジェクトを破棄します。|
+|[ordered_message_processor](#ctor)|`ordered_message_processor` オブジェクトを構築します。|
+|[~ ordered_message_processor デストラクター](#dtor)|`ordered_message_processor` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -137,8 +135,7 @@ virtual void initialize_batched_processing(
 
 ##  <a name="ctor"></a> ordered_message_processor
 
-
-  `ordered_message_processor` オブジェクトを構築します。
+`ordered_message_processor` オブジェクトを構築します。
 
 ```
 ordered_message_processor();
@@ -150,8 +147,7 @@ ordered_message_processor();
 
 ##  <a name="dtor"></a> ~ordered_message_processor
 
-
-  `ordered_message_processor` オブジェクトを破棄します。
+`ordered_message_processor` オブジェクトを破棄します。
 
 ```
 virtual ~ordered_message_processor();

@@ -31,8 +31,7 @@ class invalid_multiple_scheduling : public std::exception;
 
 |名前|説明|
 |----------|-----------------|
-|[invalid_multiple_scheduling](#ctor)|オーバーロードされます。 
-  `invalid_multiple_scheduling` オブジェクトを構築します。|
+|[invalid_multiple_scheduling](#ctor)|オーバーロードされます。 `invalid_multiple_scheduling` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -48,8 +47,7 @@ class invalid_multiple_scheduling : public std::exception;
 
 ##  <a name="ctor"></a> invalid_multiple_scheduling
 
-
-  `invalid_multiple_scheduling` オブジェクトを構築します。
+`invalid_multiple_scheduling` オブジェクトを構築します。
 
 ```
 explicit _CRTIMP invalid_multiple_scheduling(_In_z_ const char* _Message) throw();

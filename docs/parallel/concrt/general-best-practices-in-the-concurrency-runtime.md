@@ -68,8 +68,7 @@ ms.locfileid: "57285608"
 2: 1000000000
 ```
 
-
-  `Context::Yield` メソッドが譲渡するのは、現在のスレッドが属しているスケジューラ上の別のアクティブ スレッド、軽量タスク、または別のオペレーティング システム スレッドのみです。 このメソッドに譲渡しない作業をスケジュール設定で実行する、 [concurrency::task_group](reference/task-group-class.md)または[concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)オブジェクトしますが、まだ開始されていません。
+`Context::Yield` メソッドが譲渡するのは、現在のスレッドが属しているスケジューラ上の別のアクティブ スレッド、軽量タスク、または別のオペレーティング システム スレッドのみです。 このメソッドに譲渡しない作業をスケジュール設定で実行する、 [concurrency::task_group](reference/task-group-class.md)または[concurrency::structured_task_group](../../parallel/concrt/reference/structured-task-group-class.md)オブジェクトしますが、まだ開始されていません。
 
 他の方法を使用して、長時間実行されるタスク間の協調を有効にすることもできます。 大きなタスクを小さなサブタスクに分割できます。 また、時間のかかるタスクの中でオーバーサブスクリプションを有効にすることもできます。 オーバーサブスクリプションを使用すると、使用可能なハードウェア スレッドよりも多くのスレッドを作成できます。 オーバーサブスクリプションは、長時間実行されるタスクの中で非常に長い待機時間 (ディスクやネットワーク接続からのデータの読み取りなど) が発生するような場合に特に役立ちます。 軽量タスクおよびオーバー サブスクリプションの詳細については、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。
 
@@ -85,15 +84,13 @@ ms.locfileid: "57285608"
 
 [!code-cpp[concrt-download-oversubscription#4](../../parallel/concrt/codesnippet/cpp/general-best-practices-in-the-concurrency-runtime_3.cpp)]
 
-
-  `GetHttpFile` 関数は潜在的な操作を実行するため、オーバーサブスクリプションを使用することで、現在のタスクがデータを待っている間、他のタスクを実行できるようになります。 この例の完全なバージョンを参照してください。[方法。オーバー サブスクリプションを使用して、待機時間を短縮する](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)します。
+`GetHttpFile` 関数は潜在的な操作を実行するため、オーバーサブスクリプションを使用することで、現在のタスクがデータを待っている間、他のタスクを実行できるようになります。 この例の完全なバージョンを参照してください。[方法。オーバー サブスクリプションを使用して、待機時間を短縮する](../../parallel/concrt/how-to-use-oversubscription-to-offset-latency.md)します。
 
 [[トップ](#top)]
 
 ##  <a name="memory"></a> 使用可能な場合に、同時実行メモリ管理関数
 
-メモリ管理関数を使用して、 [concurrency::alloc](reference/concurrency-namespace-functions.md#alloc)と[concurrency::free](reference/concurrency-namespace-functions.md#free)、きめ細かいタスク有効期間が比較的短い小さなオブジェクトを頻繁に割り当てることがある場合。 コンカレンシー ランタイムでは、実行中のスレッドごとに別個のメモリ キャッシュが保持されます。 
-  `Alloc` 関数と `Free` 関数は、ロックやメモリ バリアを使用することなく、これらのキャッシュからメモリの割り当てと解放を行います。
+メモリ管理関数を使用して、 [concurrency::alloc](reference/concurrency-namespace-functions.md#alloc)と[concurrency::free](reference/concurrency-namespace-functions.md#free)、きめ細かいタスク有効期間が比較的短い小さなオブジェクトを頻繁に割り当てることがある場合。 コンカレンシー ランタイムでは、実行中のスレッドごとに別個のメモリ キャッシュが保持されます。 `Alloc` 関数と `Free` 関数は、ロックやメモリ バリアを使用することなく、これらのキャッシュからメモリの割り当てと解放を行います。
 
 これらのメモリ管理関数の詳細については、[タスク スケジューラ](../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。 これらの関数を使用する例を参照してください[方法。割り当てを使用して、およびメモリのパフォーマンスを向上させるためにテープを空き](../../parallel/concrt/how-to-use-alloc-and-free-to-improve-memory-performance.md)します。
 
@@ -103,8 +100,7 @@ ms.locfileid: "57285608"
 
 コンカレンシー ランタイムでは、例外処理を使用して、取り消し処理などの機能を実装します。 したがって、ランタイムを呼び出す場合や、ランタイムを呼び出す別のライブラリを呼び出す場合は、例外セーフなコードを記述してください。
 
-*Resource Acquisition Is Initialization* (RAII) パターンは、特定のスコープでの同時実行オブジェクトの有効期間を安全に管理する方法の 1 つ。 RAII パターンでは、データ構造はスタック上に割り当てられます。 データ構造は、作成されたときにリソースを初期化または取得し、破棄されたときにそのリソースを破棄または解放します。 RAII パターンでは、外側のスコープが終了する前に、常にデストラクターが呼び出されます。 このパターンは、関数に複数の `return` ステートメントが含まれる場合に便利です。 また、このパターンは、例外セーフなコードを記述するのにも役立ちます。 
-  `throw` ステートメントによってスタックがアンワインドされると、RAII オブジェクトのデストラクターが呼び出されます。そのため、リソースが常に正しく削除または解放されます。
+*Resource Acquisition Is Initialization* (RAII) パターンは、特定のスコープでの同時実行オブジェクトの有効期間を安全に管理する方法の 1 つ。 RAII パターンでは、データ構造はスタック上に割り当てられます。 データ構造は、作成されたときにリソースを初期化または取得し、破棄されたときにそのリソースを破棄または解放します。 RAII パターンでは、外側のスコープが終了する前に、常にデストラクターが呼び出されます。 このパターンは、関数に複数の `return` ステートメントが含まれる場合に便利です。 また、このパターンは、例外セーフなコードを記述するのにも役立ちます。 `throw` ステートメントによってスタックがアンワインドされると、RAII オブジェクトのデストラクターが呼び出されます。そのため、リソースが常に正しく削除または解放されます。
 
 ランタイムは、RAII パターンを使用して、たとえば、いくつかのクラスを定義します。 [concurrency::critical_section::scoped_lock](../../parallel/concrt/reference/critical-section-class.md#critical_section__scoped_lock_class)と[concurrency::reader_writer_lock::scoped_lock](reference/reader-writer-lock-class.md#scoped_lock_class)します。 これらのヘルパー クラスと呼ばれます*スコープ ロック*します。 使用する場合、これらのクラスがいくつかの利点を提供[concurrency::critical_section](../../parallel/concrt/reference/critical-section-class.md)または[:reader_writer_lock](../../parallel/concrt/reference/reader-writer-lock-class.md)オブジェクト。 これらのクラスのコンストラクターは、提供された `critical_section` オブジェクトまたは `reader_writer_lock` オブジェクトへのアクセスを取得し、デストラクターはそのオブジェクトへのアクセスを解放します。 相互排他オブジェクトが破棄されると、スコープ ロックはそのオブジェクトへのアクセスを自動的に解放するため、基になるオブジェクトのロックを手動で解除する必要はありません。
 

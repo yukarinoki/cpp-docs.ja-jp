@@ -31,8 +31,7 @@ class affinity_partitioner;
 
 |名前|説明|
 |----------|-----------------|
-|[affinity_partitioner](#ctor)|
-  `affinity_partitioner` オブジェクトを構築します。|
+|[affinity_partitioner](#ctor)|`affinity_partitioner` オブジェクトを構築します。|
 |[~ affinity_partitioner デストラクター](#dtor)|破棄、`affinity_partitioner`オブジェクト。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -55,8 +54,7 @@ class affinity_partitioner;
 
 ##  <a name="ctor"></a> affinity_partitioner
 
-
-  `affinity_partitioner` オブジェクトを構築します。
+`affinity_partitioner` オブジェクトを構築します。
 
 ```
 affinity_partitioner();

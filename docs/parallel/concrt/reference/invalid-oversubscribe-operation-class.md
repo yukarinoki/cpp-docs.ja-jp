@@ -31,8 +31,7 @@ class invalid_oversubscribe_operation : public std::exception;
 
 |名前|説明|
 |----------|-----------------|
-|[invalid_oversubscribe_operation](#ctor)|オーバーロードされます。 
-  `invalid_oversubscribe_operation` オブジェクトを構築します。|
+|[invalid_oversubscribe_operation](#ctor)|オーバーロードされます。 `invalid_oversubscribe_operation` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -48,8 +47,7 @@ class invalid_oversubscribe_operation : public std::exception;
 
 ##  <a name="ctor"></a> invalid_oversubscribe_operation
 
-
-  `invalid_oversubscribe_operation` オブジェクトを構築します。
+`invalid_oversubscribe_operation` オブジェクトを構築します。
 
 ```
 explicit _CRTIMP invalid_oversubscribe_operation(_In_z_ const char* _Message) throw();

@@ -151,8 +151,7 @@ C または C++ プログラムを作成するには、コマンドラインで�
 
 `cl /EHsc file1.cpp file2.cpp file3.cpp`
 
-
-  `/EHsc` は、コンパイラに対して C++ 例外処理を有効化するよう指示するコマンド ライン オプションです。 詳細については、「[/EH (例外処理モデル)](reference/eh-exception-handling-model.md)」を参照してください。
+`/EHsc` は、コンパイラに対して C++ 例外処理を有効化するよう指示するコマンド ライン オプションです。 詳細については、「[/EH (例外処理モデル)](reference/eh-exception-handling-model.md)」を参照してください。
 
 追加のソース ファイルを指定するときに、コンパイラは最初の入力ファイルを使用して、プログラム名を作成します。 この場合、file1.exe と呼ばれるプログラムを出力します。 Program1.exe に名前を変更するには、追加、 [/out](reference/out-output-file-name.md)リンカー オプション。
 

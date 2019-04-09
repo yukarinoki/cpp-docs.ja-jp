@@ -29,8 +29,7 @@ class invalid_scheduler_policy_value : public std::exception;
 
 |名前|説明|
 |----------|-----------------|
-|[invalid_scheduler_policy_value](invalid-scheduler-policy-thread-specification-class.md#ctor|オーバーロードされます。 
-  `invalid_scheduler_policy_value` オブジェクトを構築します。|
+|[invalid_scheduler_policy_value](invalid-scheduler-policy-thread-specification-class.md#ctor|オーバーロードされます。 `invalid_scheduler_policy_value` オブジェクトを構築します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -46,8 +45,7 @@ class invalid_scheduler_policy_value : public std::exception;
 
 ##  <a name="ctor"></a> invalid_scheduler_policy_value
 
-
-  `invalid_scheduler_policy_value` オブジェクトを構築します。
+`invalid_scheduler_policy_value` オブジェクトを構築します。
 
 ```
 explicit _CRTIMP invalid_scheduler_policy_value(_In_z_ const char* _Message) throw();
