@@ -1,6 +1,6 @@
 ---
 title: /Zp (構造体メンバーの配置)
-ms.date: 12/17/2018
+ms.date: 04/04/2019
 f1_keywords:
 - /zp
 - VC.Project.VCCLCompilerTool.StructMemberAlignment
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - /Zp compiler option [C++]
 - -Zp compiler option [C++]
 ms.assetid: 5242f656-ed9b-48a3-bc73-cfcf3ed2520f
-ms.openlocfilehash: d30e61137fc5ff8f6a5501ac7815edafc18f7680
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d76cd93c7af4228bff8f73fa3bcbf40fa149b0be
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807690"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237165"
 ---
 # <a name="zp-struct-member-alignment"></a>/Zp (構造体メンバーの配置)
 
@@ -28,7 +28,7 @@ ms.locfileid: "57807690"
 
 ## <a name="remarks"></a>Remarks
 
-指定した場合、 **/Zp**_n_オプションを 1 つ目がメンバーの種類のサイズのどちらかに格納されている各構造体メンバーまたは*n*-バイト境界 (場所*n*が 1、2、4、8、または 16)、小さい方です。
+**/Zp**_n_オプションは各構造体メンバーを格納する場所をコンパイラに指示します。 コンパイラはメンバーの種類のサイズのどちらか小さい方である境界を 1 つ目の後にメンバーを格納または*n*-バイト境界。
 
 パッキングの使用可能な値は、次の表で説明します。
 
@@ -37,13 +37,13 @@ ms.locfileid: "57807690"
 |1|構造体は、1 バイト境界でパックします。 同じ **/Zp**します。|
 |2|構造体を 2 バイト境界でパックします。|
 |4|構造体は、4 バイト境界でパックします。|
-|8|8 バイト境界 (既定値) の構造体にパックします。|
-|16| 構造体を 16 バイト境界でパックします。|
+|8|8 バイト境界 (x86、ARM、および ARM64 の既定値) の構造体にパックします。|
+|16| 16 バイト境界 (x64 用の既定値) の構造体にパックします。|
 
-特定のアラインメント要件がない限りは、このオプションを使用する必要があります。
+特定のアラインメント要件がない限り、このオプションを使用しないでください。
 
 > [!WARNING]
-> Windows SDK の C++ ヘッダーと **、/zp8 です**梱包です。 メモリの破損が生じる場合、 **/Zp** Windows SDK のヘッダーを使用する場合、設定を変更します。
+> Windows SDK の C++ ヘッダーが設定され、想定 **、/zp8 です**梱包を内部的にします。 メモリの破損が生じる場合、 **/Zp** Windows SDK のヘッダー内で設定を変更します。 ヘッダーは、いずれかが影響を受けません **/Zp**オプションをコマンドラインで設定します。
 
 使用することも[パック](../../preprocessor/pack.md)制御構造のパッキングにします。 アラインメントの詳細については、次のトピックを参照してください。
 
@@ -57,9 +57,9 @@ ms.locfileid: "57807690"
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
-1. 選択、 **C/C++** > **コード生成**プロパティ ページ。
+1. 選択、**構成プロパティ** > **C/C++** > **コード生成**プロパティ ページ。
 
 1. 変更、**構造体メンバーのアラインメント**プロパティ。
 
@@ -69,5 +69,5 @@ ms.locfileid: "57807690"
 
 ## <a name="see-also"></a>関連項目
 
-- [MSVC コンパイラ オプション](compiler-options.md)
-- [MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ オプション](compiler-options.md) \
+[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
