@@ -22,8 +22,7 @@ ms.locfileid: "57264325"
 ---
 # <a name="tiledextent-class"></a>tiled_extent クラス
 
-
-  `tiled_extent` オブジェクトは 3 つの次元のいずれかの `extent` オブジェクトであり、範囲空間を 1、2、または 3 次元のタイルに再分割します。
+`tiled_extent` オブジェクトは 3 つの次元のいずれかの `extent` オブジェクトであり、範囲空間を 1、2、または 3 次元のタイルに再分割します。
 
 ### <a name="syntax"></a>構文
 
@@ -70,8 +69,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 |名前|説明|
 |----------|-----------------|
-|[get_tile_extent](#get_tile_extent)|
-  `extent` テンプレート引数 `tiled_extent`、`_Dim0`、および `_Dim1` の値をキャプチャする `_Dim2` オブジェクトを返します。|
+|[get_tile_extent](#get_tile_extent)|`extent` テンプレート引数 `tiled_extent`、`_Dim0`、および `_Dim1` の値をキャプチャする `_Dim2` オブジェクトを返します。|
 |[pad](#pad)|タイルの次元によって均等に分割できる範囲を上方調整した新しい `tiled_extent` オブジェクトを返します。|
 |[truncate](#truncate)|タイルの次元によって均等に分割できるように範囲を下方調整した新しい `tiled_extent` オブジェクトを返します。|
 
@@ -93,8 +91,7 @@ class tiled_extent<_Dim0, 0, 0> : public Concurrency::extent<1>;
 
 |名前|説明|
 |----------|-----------------|
-|[tile_extent](#tile_extent)|
-  `tiled_extent` テンプレート引数 `_Dim0`、`_Dim1`、および `_Dim2` の値をキャプチャする `extent` オブジェクトを取得します。|
+|[tile_extent](#tile_extent)|`tiled_extent` テンプレート引数 `_Dim0`、`_Dim1`、および `_Dim2` の値をキャプチャする `extent` オブジェクトを取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
