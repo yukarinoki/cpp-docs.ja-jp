@@ -24,8 +24,7 @@ ms.locfileid: "57287571"
 |[AtlHresultFromLastError](debugging-and-error-reporting-global-functions.md#atlhresultfromlasterror)|返します、 `GetLastError` HRESULT の形式でのエラー コード。|
 |[AtlHresultFromWin32](debugging-and-error-reporting-global-functions.md#atlhresultfromwin32)|Win32 エラー コードを HRESULT に変換します。|
 |[AtlReportError](debugging-and-error-reporting-global-functions.md#atlreporterror)|設定`IErrorInfo`をクライアントにエラーの詳細を提供します。|
-|[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|
-  `CAtlException` をスローします。|
+|[AtlThrow](debugging-and-error-reporting-global-functions.md#atlthrow)|`CAtlException` をスローします。|
 |[AtlThrowLastWin32](debugging-and-error-reporting-global-functions.md#atlthrowlastwin32)|Windows の `GetLastError` 関数の結果に基づいてエラーを通知します。|
 
 ##  <a name="atlhresultfromlasterror"></a>  AtlHresultFromLastError

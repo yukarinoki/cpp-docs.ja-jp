@@ -42,8 +42,7 @@ class CMFCRibbonGalleryMenuButton : public CMFCToolBarMenuButton
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton](#cmfcribbongallerymenubutton)|
-  `CMFCRibbonGalleryMenuButton` オブジェクトを構築して初期化します。|
+|[CMFCRibbonGalleryMenuButton::CMFCRibbonGalleryMenuButton](#cmfcribbongallerymenubutton)|`CMFCRibbonGalleryMenuButton` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 

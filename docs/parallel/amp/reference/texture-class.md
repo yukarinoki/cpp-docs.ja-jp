@@ -57,8 +57,7 @@ class texture;
 |名前|説明|
 |----------|-----------------|
 |[テクスチャのコンス トラクター](#ctor)|`texture` クラスの新しいインスタンスを初期化します。|
-|[~ texture デストラクター](#ctor)|
-  `texture` オブジェクトを破棄します。|
+|[~ texture デストラクター](#ctor)|`texture` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -84,8 +83,7 @@ class texture;
 
 |名前|説明|
 |----------|-----------------|
-|[rank 定数](#rank)|
-  `texture` オブジェクトのランクを取得します。|
+|[rank 定数](#rank)|`texture` オブジェクトのランクを取得します。|
 
 ### <a name="public-data-members"></a>パブリック データ メンバー
 
@@ -109,8 +107,7 @@ class texture;
 
 ##  <a name="dtor"></a> ~ テクスチャ
 
-
-  `texture` オブジェクトを破棄します。
+`texture` オブジェクトを破棄します。
 
 ```
 ~texture() restrict(cpu);
@@ -306,8 +303,7 @@ texture& operator= (
 
 ##  <a name="rank"></a> ランク
 
-
-  `texture` オブジェクトのランクを取得します。
+`texture` オブジェクトのランクを取得します。
 
 ```
 static const int rank = _Rank;

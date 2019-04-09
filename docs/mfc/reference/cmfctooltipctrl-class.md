@@ -75,8 +75,7 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 |[CMFCToolTipCtrl::SetFixedWidth](#setfixedwidth)||
 |[CMFCToolTipCtrl::SetHotRibbonButton](#sethotribbonbutton)||
 |[CMFCToolTipCtrl::SetLocation](#setlocation)||
-|[CMFCToolTipCtrl::SetParams](#setparams)|
-  `CMFCToolTipInfo` オブジェクトを使用して、ツールヒントの外観を指定します。|
+|[CMFCToolTipCtrl::SetParams](#setparams)|`CMFCToolTipInfo` オブジェクトを使用して、ツールヒントの外観を指定します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -86,8 +85,7 @@ class CMFCToolTipCtrl : public CToolTipCtrl
 
 1. 使用して、 [CWinAppEx クラス](../../mfc/reference/cwinappex-class.md)アプリケーションでツールヒント マネージャーを初期化します。
 
-2. 
-  `CMFCToolTipInfo` 構造体を作成し、必要な表示スタイルを指定します。
+2. `CMFCToolTipInfo` 構造体を作成し、必要な表示スタイルを指定します。
 
 ```
 CMFCToolTipInfo params;
@@ -122,8 +120,7 @@ CMFCToolTipInfo params;
 theApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,
     RUNTIME_CLASS (CMFCToolTipCtrl), &params);
 ```
-
-  `CMFCToolTipCtrl` から新しいクラスを派生させて、ツールヒントの動作や描画を制御することもできます。 新しいツールヒント コントロール クラスを指定するには、`CTooltipManager::SetTooltipParams` メソッドを使用します。
+`CMFCToolTipCtrl` から新しいクラスを派生させて、ツールヒントの動作や描画を制御することもできます。 新しいツールヒント コントロール クラスを指定するには、`CTooltipManager::SetTooltipParams` メソッドを使用します。
 
 ```
 myApp.GetTooltipManager ()->SetTooltipParams (AFX_TOOLTIP_TYPE_ALL,

@@ -48,8 +48,7 @@ class message : public ::Concurrency::details::_Runtime_object;
 |名前|説明|
 |----------|-----------------|
 |[message](#ctor)|オーバーロードされます。 `message` オブジェクトを構築します。|
-|[~ message デストラクター](#dtor)|
-  `message` オブジェクトを破棄します。|
+|[~ message デストラクター](#dtor)|`message` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -127,8 +126,7 @@ message(
 
 ##  <a name="dtor"></a> ~ メッセージ
 
-
-  `message` オブジェクトを破棄します。
+`message` オブジェクトを破棄します。
 
 ```
 virtual ~message();

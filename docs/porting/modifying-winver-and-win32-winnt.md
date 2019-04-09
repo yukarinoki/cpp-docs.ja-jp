@@ -51,8 +51,7 @@ Visual C++ では、Windows 95、Windows 98、Windows ME、Windows NT、およ�
 > [!NOTE]
 > アプリケーションに内部 MFC ヘッダーを含めた場合には、値が動作する保証はありません。
 
-
-  `/D` コンパイラ オプションを使用して、このマクロを定義することもできます。 詳細については、「 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)」を参照してください。
+`/D` コンパイラ オプションを使用して、このマクロを定義することもできます。 詳細については、「 [/D (Preprocessor Definitions)](../build/reference/d-preprocessor-definitions.md)」を参照してください。
 
 これらのマクロの意味について詳しくは、「 [Windows ヘッダーの使用](/windows/desktop/WinProg/using-the-windows-headers)」をご覧ください。
 

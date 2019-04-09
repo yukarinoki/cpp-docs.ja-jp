@@ -56,8 +56,7 @@ class CMFCBaseVisualManager: public CObject
 |||
 |-|-|
 |名前|説明|
-|[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|
-  `CMFCBaseVisualManager` オブジェクトを構築して初期化します。|
+|[CMFCBaseVisualManager::CMFCBaseVisualManager](#cmfcbasevisualmanager)|`CMFCBaseVisualManager` オブジェクトを構築して初期化します。|
 |`CMFCBaseVisualManager::~CMFCBaseVisualManager`|デストラクターです。|
 
 ### <a name="public-methods"></a>パブリック メソッド
@@ -112,8 +111,7 @@ void CleanUpThemes();
 
 ##  <a name="cmfcbasevisualmanager"></a>  CMFCBaseVisualManager::CMFCBaseVisualManager
 
-
-  `CMFCBaseVisualManager` オブジェクトを構築して初期化します。
+`CMFCBaseVisualManager` オブジェクトを構築して初期化します。
 
 ```
 CMFCBaseVisualManager();

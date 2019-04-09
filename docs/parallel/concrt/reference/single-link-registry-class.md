@@ -43,8 +43,7 @@ class single_link_registry : public network_link_registry<_Block>;
 |名前|説明|
 |----------|-----------------|
 |[single_link_registry](#ctor)|`single_link_registry` オブジェクトを構築します。|
-|[~ single_link_registry デストラクター](#dtor)|
-  `single_link_registry` オブジェクトを破棄します。|
+|[~ single_link_registry デストラクター](#dtor)|`single_link_registry` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -157,8 +156,7 @@ single_link_registry();
 
 ##  <a name="dtor"></a> ~single_link_registry
 
-
-  `single_link_registry` オブジェクトを破棄します。
+`single_link_registry` オブジェクトを破棄します。
 
 ```
 virtual ~single_link_registry();

@@ -91,8 +91,7 @@ _Allocator_type,
 |[insert](#insert)|オーバーロードされます。 要素を `concurrent_unordered_set` オブジェクトに追加します。|
 |[key_eq](#key_eq)|格納された等価比較関数のオブジェクトを返します。|
 |[swap](#swap)|2 つの `concurrent_unordered_set` オブジェクトのコンテンツを交換します。 このメソッドはコンカレンシー セーフではありません。|
-|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 
-  `concurrent_unordered_set` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
+|[unsafe_erase](#unsafe_erase)|オーバーロードされます。 `concurrent_unordered_set` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
@@ -663,8 +662,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ##  <a name="unsafe_erase"></a> unsafe_erase
 
-
-  `concurrent_unordered_set` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
+`concurrent_unordered_set` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 iterator unsafe_erase(

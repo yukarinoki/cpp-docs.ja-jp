@@ -729,8 +729,7 @@ const_local_iterator unsafe_end(size_type _Bucket) const;
 
 ##  <a name="unsafe_erase"></a> unsafe_erase
 
-
-  `concurrent_unordered_map` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
+`concurrent_unordered_map` から指定した位置にある要素を削除します。 このメソッドはコンカレンシー セーフではありません。
 
 ```
 iterator unsafe_erase(

@@ -57,8 +57,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 |名前|説明|
 |----------|-----------------|
 |[writeonly_texture_view コンス トラクター](#ctor)|`writeonly_texture_view` クラスの新しいインスタンスを初期化します。|
-|[~ writeonly_texture_view デストラクター](#ctor)|
-  `writeonly_texture_view` オブジェクトを破棄します。|
+|[~ writeonly_texture_view デストラクター](#ctor)|`writeonly_texture_view` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -76,8 +75,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 
 |名前|説明|
 |----------|-----------------|
-|[rank 定数](#rank)|
-  `writeonly_texture_view` オブジェクトのランクを取得します。|
+|[rank 定数](#rank)|`writeonly_texture_view` オブジェクトのランクを取得します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -93,8 +91,7 @@ class writeonly_texture_view<value_type, _Rank> : public details::_Texture_base<
 
 ##  <a name="dtor"></a> ~writeonly_texture_view
 
-
-  `writeonly_texture_view` オブジェクトを破棄します。
+`writeonly_texture_view` オブジェクトを破棄します。
 
 ```
 ~writeonly_texture_view() restrict(amp,cpu);
@@ -120,8 +117,7 @@ writeonly_texture_view<value_type, _Rank>& operator= (
 
 ##  <a name="rank"></a> ランク
 
-
-  `writeonly_texture_view` オブジェクトのランクを取得します。
+`writeonly_texture_view` オブジェクトのランクを取得します。
 
 ```
 static const int rank = _Rank;

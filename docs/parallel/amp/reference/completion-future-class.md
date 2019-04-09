@@ -37,8 +37,7 @@ class completion_future;
 |名前|説明|
 |----------|-----------------|
 |[completion_future コンス トラクター](#ctor)|`completion_future` クラスの新しいインスタンスを初期化します。|
-|[~ completion_future デストラクター](#dtor)|
-  `completion_future` オブジェクトを破棄します。|
+|[~ completion_future デストラクター](#dtor)|`completion_future` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -56,8 +55,7 @@ class completion_future;
 
 |名前|説明|
 |----------|-----------------|
-|[operator std::shared_future\<void>](#operator_shared_future)|
-  `completion_future` オブジェクトを `std::shared_future` オブジェクトに暗黙的に変換します。|
+|[operator std::shared_future\<void>](#operator_shared_future)|`completion_future` オブジェクトを `std::shared_future` オブジェクトに暗黙的に変換します。|
 |[operator=](#operator_eq)|指定された `completion_future` オブジェクトの内容をこのオブジェクトにコピーします。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
@@ -111,8 +109,7 @@ void get() const;
 
 ## <a name="operator_shared_future"></a> 演算子 std::shared_future<void>
 
-
-  `completion_future` オブジェクトを `std::shared_future` オブジェクトに暗黙的に変換します。
+`completion_future` オブジェクトを `std::shared_future` オブジェクトに暗黙的に変換します。
 
 ### <a name="syntax"></a>構文
 
@@ -265,8 +262,7 @@ std::future_status::future_status wait_until(
 このタイム ポイントが測定されたクロック。
 
 *_Duration*<br/>
-
-  `_Clock` のエポックの開始からの期間、その後で関数がタイムアウトします。
+`_Clock` のエポックの開始からの期間、その後で関数がタイムアウトします。
 
 *_Abs_time*<br/>
 その後で関数がタイムアウトする時点。
@@ -283,8 +279,7 @@ std::future_status::future_status wait_until(
 
 ## <a name="dtor"></a> ~completion_future
 
-
-  `completion_future` オブジェクトを破棄します。
+`completion_future` オブジェクトを破棄します。
 
 ### <a name="syntax"></a>構文
 

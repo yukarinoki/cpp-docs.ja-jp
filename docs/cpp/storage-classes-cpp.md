@@ -186,8 +186,7 @@ int main() {
 
 ## <a name="thread_local"></a> thread_local (c++ 11)
 
-
-  `thread_local` 指定子で宣言された変数は、それが作成されたスレッドでのみアクセスできます。 変数は、スレッドが作成されるときに作成され、スレッドが破棄されるときに破棄されます。 各スレッドには、それ自体の変数のコピーがあります。 Windows で`thread_local`は機能的には、Microsoft 固有[_ _declspec (thread)](../cpp/thread.md)属性。
+`thread_local` 指定子で宣言された変数は、それが作成されたスレッドでのみアクセスできます。 変数は、スレッドが作成されるときに作成され、スレッドが破棄されるときに破棄されます。 各スレッドには、それ自体の変数のコピーがあります。 Windows で`thread_local`は機能的には、Microsoft 固有[_ _declspec (thread)](../cpp/thread.md)属性。
 
 ```cpp
 thread_local float f = 42.0; // Global namespace. Not implicitly static.
@@ -214,13 +213,11 @@ void DoSomething()
 
 - 適用できる`thread_local`のみにデータの宣言と定義されます。`thread_local`関数宣言または定義では使用できません。
 
-- 
-  `thread_local` は、静的ストレージ存続期間のあるデータ項目にのみ指定できます。 これには、グローバルなデータ オブジェクトが含まれます (どちらも**静的**と**extern**)、ローカルな静的オブジェクト、およびクラスの静的データ メンバー。 任意のローカル変数が宣言されている`thread_local`は他のストレージ クラスが提供されていない場合は、暗黙的に静的つまり、ブロック スコープで`thread_local`と等価`thread_local static`します。
+- `thread_local` は、静的ストレージ存続期間のあるデータ項目にのみ指定できます。 これには、グローバルなデータ オブジェクトが含まれます (どちらも**静的**と**extern**)、ローカルな静的オブジェクト、およびクラスの静的データ メンバー。 任意のローカル変数が宣言されている`thread_local`は他のストレージ クラスが提供されていない場合は、暗黙的に静的つまり、ブロック スコープで`thread_local`と等価`thread_local static`します。
 
 - 宣言と定義が同じファイルと別々のファイルのどちらで発生する場合でも、スレッド ローカル オブジェクトの宣言と定義には `thread_local` を使用する必要があります。
 
-Windows で`thread_local`は機能的に等価[_declspec](../cpp/thread.md)する点を除いて **_declspec**型定義に適用できるし、C コードでは無効です。 
-  `thread_local` は C++ 標準の一部であり、移植性がより高いため、できるだけ常にこれを使用してください。
+Windows で`thread_local`は機能的に等価[_declspec](../cpp/thread.md)する点を除いて **_declspec**型定義に適用できるし、C コードでは無効です。 `thread_local` は C++ 標準の一部であり、移植性がより高いため、できるだけ常にこれを使用してください。
 
 ##  <a name="register"></a>  register
 

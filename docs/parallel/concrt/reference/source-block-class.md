@@ -72,8 +72,7 @@ class source_block : public ISource<typename _TargetLinkRegistry::type::type>;
 |名前|説明|
 |----------|-----------------|
 |[source_block](#ctor)|`source_block` オブジェクトを構築します。|
-|[~ source_block デストラクター](#dtor)|
-  `source_block` オブジェクトを破棄します。|
+|[~ source_block デストラクター](#dtor)|`source_block` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -465,8 +464,7 @@ source_block();
 
 ##  <a name="dtor"></a> ~source_block
 
-
-  `source_block` オブジェクトを破棄します。
+`source_block` オブジェクトを破棄します。
 
 ```
 virtual ~source_block();

@@ -10,7 +10,7 @@ helpviewer_keywords:
 ms.assetid: cbe79b08-0ba7-474c-9828-f1a71da39eb3
 ms.openlocfilehash: 054db83e4d8e140af37dcff9a7664ffdf7902325
 ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/04/2019
 ms.locfileid: "57284646"
@@ -43,16 +43,12 @@ class index;
 
 |名前|説明|
 |----------|-----------------|
-|[operator--](#operator--)|
-  `index` オブジェクトの各要素をデクリメントします。|
+|[operator--](#operator--)|`index` オブジェクトの各要素をデクリメントします。|
 |[operator(mod)=](#operator_mod_eq)|その要素がある数で除算された場合、`index` オブジェクトの各要素の剰余を計算します。|
-|[operator*=](#operator_star_eq)|
-  `index` オブジェクトの各要素をある数で乗算します。|
-|[operator/=](#operator_div_eq)|
-  `index` オブジェクトの各要素をある数で除算します。|
+|[operator*=](#operator_star_eq)|`index` オブジェクトの各要素をある数で乗算します。|
+|[operator/=](#operator_div_eq)|`index` オブジェクトの各要素をある数で除算します。|
 |[index::operator\[\]](#operator_at)|指定したインデックス位置にある要素を返します。|
-|[operator++](#operator_add_add)|
-  `index` オブジェクトの各要素をインクリメントします。|
+|[operator++](#operator_add_add)|`index` オブジェクトの各要素をインクリメントします。|
 |[operator+=](#operator_add_eq)|指定した数を `index` オブジェクトの各要素に加算します。|
 |[operator=](#operator_eq)|指定された `index` オブジェクトの内容をこのオブジェクトにコピーします。|
 |[operator-=](#operator_-_eq)|指定した数を `index` オブジェクトの各要素から減算します。|
@@ -61,8 +57,7 @@ class index;
 
 |名前|説明|
 |----------|-----------------|
-|[rank 定数](#rank)|
-  `index` オブジェクトのランクを格納します。|
+|[rank 定数](#rank)|`index` オブジェクトのランクを格納します。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

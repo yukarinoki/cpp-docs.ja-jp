@@ -56,8 +56,7 @@ class source_link_manager;
 |名前|説明|
 |----------|-----------------|
 |[source_link_manager](#ctor)|`source_link_manager` オブジェクトを構築します。|
-|[~ source_link_manager デストラクター](#dtor)|
-  `source_link_manager` オブジェクトを破棄します。|
+|[~ source_link_manager デストラクター](#dtor)|`source_link_manager` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -214,8 +213,7 @@ source_link_manager();
 
 ##  <a name="dtor"></a> ~source_link_manager
 
-
-  `source_link_manager` オブジェクトを破棄します。
+`source_link_manager` オブジェクトを破棄します。
 
 ```
 ~source_link_manager();
