@@ -5,12 +5,12 @@ helpviewer_keywords:
 - C++ native multi-targeting
 - upgrading Visual C++ applications, retargeting
 ms.assetid: b115aabe-a9dc-4525-90d3-367d97ea20c9
-ms.openlocfilehash: 4afc34eb68281ea8f90ded0a647d714f70ba9d96
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 57e9556ccb7313c137c173e0f2143dc6e563d4c3
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58770942"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898818"
 ---
 # <a name="use-native-multi-targeting-in-visual-studio-to-build-old-projects"></a>Visual Studio でネイティブ マルチターゲットを利用し、古いプロジェクトを作成する
 
@@ -67,4 +67,4 @@ Visual Studio 2008 には、**VCBuild** という名前の C++ 専用のビル�
 ## <a name="see-also"></a>関連項目
 
 [旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
-[Visual Studio 2017 の C++ 準拠の強化](../overview/cpp-conformance-improvements-2017.md)
+[Visual Studio の C++ 準拠の強化](../overview/cpp-conformance-improvements.md)
