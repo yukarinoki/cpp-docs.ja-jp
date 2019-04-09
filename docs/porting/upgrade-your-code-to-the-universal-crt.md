@@ -2,12 +2,12 @@
 title: Universal CRT へのコードのアップグレード
 ms.date: 03/31/2017
 ms.assetid: eaf34c1b-da98-4058-a059-a10db693a5ce
-ms.openlocfilehash: 368b61820310135f14cbe4225b9315e62d3686a7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: bdf1615d47361654e9690977520d01c332098438
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769187"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898766"
 ---
 # <a name="upgrade-your-code-to-the-universal-crt"></a>Universal CRT へのコードのアップグレード
 
@@ -45,8 +45,8 @@ UCRT では、ISO C99 への準拠を改善し、コードの品質およびセ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual C++ 移植とアップグレードのガイド](visual-cpp-porting-and-upgrading-guide.md)<br/>
-[アップグレードに関する潜在的な問題 (Visual C++) の概要](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
+[Visual C++  移植とアップグレードのガイド](visual-cpp-porting-and-upgrading-guide.md)<br/>
+[アップグレード時の潜在的な問題の概要 (Visual C++)](overview-of-potential-upgrade-issues-visual-cpp.md)<br/>
 [旧バージョンの Visual C++ からのプロジェクトのアップグレード](upgrading-projects-from-earlier-versions-of-visual-cpp.md)<br/>
 [Visual C++ 2003 ～ 2015 の変更履歴](visual-cpp-change-history-2003-2015.md)<br/>
-[Visual Studio 2017 の C++ 準拠の強化](../overview/cpp-conformance-improvements-2017.md)
+[Visual Studio の C++ 準拠の強化](../overview/cpp-conformance-improvements.md)
