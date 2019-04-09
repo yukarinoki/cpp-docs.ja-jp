@@ -46,8 +46,7 @@ class texture_view<const value_type, _Rank>
 テクスチャ集合体の要素型です。
 
 *_Rank*<br/>
-
-  `texture_view` のランクです。
+`texture_view` のランクです。
 
 ## <a name="members"></a>メンバー
 
@@ -56,18 +55,15 @@ class texture_view<const value_type, _Rank>
 |名前|説明|
 |----------|-----------------|
 |`value_type`|テクスチャ集合体の要素型です。|
-|`coordinates_type`|
-  `texture_view` のテクセルを指定するために使用する座標の型。つまり、値型が `short_vector` である関連するテクスチャと同じランクの `float` です。|
+|`coordinates_type`|`texture_view` のテクセルを指定するために使用する座標の型。つまり、値型が `short_vector` である関連するテクスチャと同じランクの `float` です。|
 |`gather_return_type`|操作を収集するために使用される戻り値の型。つまり、サンプリングされた 4 つのテクセル値から収集された 4 つの同種の色要素を保持するランク 4 の `short_vector` です。|
 
 ### <a name="public-constructors"></a>パブリック コンストラクター
 
 |名前|説明|
 |----------|-----------------|
-|[texture_view コンス トラクター](#ctor)|オーバーロードされます。 
-  `texture_view` インスタンスを構築します。|
-|[~ texture_view デストラクター](#ctor)|
-  `texture_view` インスタンスを破棄します。|
+|[texture_view コンス トラクター](#ctor)|オーバーロードされます。 `texture_view` インスタンスを構築します。|
+|[~ texture_view デストラクター](#ctor)|`texture_view` インスタンスを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -93,8 +89,7 @@ class texture_view<const value_type, _Rank>
 
 |名前|説明|
 |----------|-----------------|
-|[value_type](#value_type)|
-  `texture_view` の要素の値型です。|
+|[value_type](#value_type)|`texture_view` の要素の値型です。|
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -110,8 +105,7 @@ class texture_view<const value_type, _Rank>
 
 ##  <a name="dtor"></a> ~texture_view
 
-
-  `texture_view` インスタンスを破棄します。
+`texture_view` インスタンスを破棄します。
 
 ```
 ~texture_view() restrict(amp, cpu);
@@ -119,8 +113,7 @@ class texture_view<const value_type, _Rank>
 
 ##  <a name="ctor"></a> texture_view
 
-
-  `texture_view` インスタンスを構築します。
+`texture_view` インスタンスを構築します。
 
 ```
 texture_view(// [1] constructor
@@ -169,8 +162,7 @@ texture_view(// [7] copy constructor
 指定された `texture_view` オブジェクトに関連する、ビューのトップ レベルの (最も詳細な) MIPMAP レベル。
 
 *_Mip_levels*<br/>
-
-  `texture_view` を使用してアクセスできる MIPMAP レベルの数。
+`texture_view` を使用してアクセスできる MIPMAP レベルの数。
 
 ##  <a name="gather_red"></a> gather_red
 
@@ -191,12 +183,10 @@ const gather_return_type gather_red(
 ### <a name="parameters"></a>パラメーター
 
 *_Address_mode*<br/>
-
-  `texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
 
 *_Sampler*<br/>
-
-  `texture_view` をサンプリングするために使用するサンプラー構成。
+`texture_view` をサンプリングするために使用するサンプラー構成。
 
 *_Coord*<br/>
 サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。
@@ -224,12 +214,10 @@ const gather_return_type gather_green(
 ### <a name="parameters"></a>パラメーター
 
 *_Address_mode*<br/>
-
-  `texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
 
 *_Sampler*<br/>
-
-  `texture_view` をサンプリングするために使用するサンプラー構成。
+`texture_view` をサンプリングするために使用するサンプラー構成。
 
 *_Coord*<br/>
 サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。
@@ -257,12 +245,10 @@ const gather_return_type gather_blue(
 ### <a name="parameters"></a>パラメーター
 
 *_Address_mode*<br/>
-
-  `texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
 
 *_Sampler*<br/>
-
-  `texture_view` をサンプリングするために使用するサンプラー構成。
+`texture_view` をサンプリングするために使用するサンプラー構成。
 
 *_Coord*<br/>
 サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。
@@ -290,12 +276,10 @@ const gather_return_type gather_alpha(
 ### <a name="parameters"></a>パラメーター
 
 *_Address_mode*<br/>
-
-  `texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
+`texture_view` をサンプリングするために使用するアドレス モード。 アドレス モードはすべての次元に対して同じです。
 
 *_Sampler*<br/>
-
-  `texture_view` をサンプリングするために使用するサンプラー構成。
+`texture_view` をサンプリングするために使用するサンプラー構成。
 
 *_Coord*<br/>
 サンプルが取得される座標です。 サンプルのテクセルを補間するには、小数の座標値が使用されます。
@@ -379,8 +363,7 @@ value_type operator[] (int _I0) const restrict(amp);
 
 ### <a name="return-value"></a>戻り値
 
-
-  `_Index` でインデックス付けされている要素の値。
+`_Index` でインデックス付けされている要素の値。
 
 ##  <a name="operator_call"></a> operator()
 
@@ -433,8 +416,7 @@ value_type operator() (
 
 ### <a name="return-value"></a>戻り値
 
-
-  `_Index` でインデックス付けされている要素の値。
+`_Index` でインデックス付けされている要素の値。
 
 ##  <a name="sample"></a> サンプル
 

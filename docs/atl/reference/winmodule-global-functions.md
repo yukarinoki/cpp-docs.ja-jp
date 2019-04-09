@@ -21,8 +21,7 @@ ms.locfileid: "57265088"
 
 |||
 |-|-|
-|[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|
-  `_AtlCreateWndData` 構造体を初期化して追加します。|
+|[AtlWinModuleAddCreateWndData](#atlwinmoduleaddcreatewnddata)|`_AtlCreateWndData` 構造体を初期化して追加します。|
 |[AtlWinModuleExtractCreateWndData](#atlwinmoduleextractcreatewnddata)|既存の `_AtlCreateWndData` 構造体を抽出します。|
 
 ## <a name="requirements"></a>必要条件
@@ -31,8 +30,7 @@ ms.locfileid: "57265088"
 
 ##  <a name="atlwinmoduleaddcreatewnddata"></a>  AtlWinModuleAddCreateWndData
 
-
-  `_AtlCreateWndData` 構造体を初期化して追加します。
+`_AtlCreateWndData` 構造体を初期化して追加します。
 
 ```
 ATLINLINE ATLAPI_(void) AtlWinModuleAddCreateWndData(

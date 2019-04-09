@@ -41,8 +41,7 @@ A*タスク*は追加より細かい計算に分解することができます�
 
 [!code-cpp[concrt-futures#5](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_4.cpp)]
 
-1. 
-  `public` クラスの `async_future` セクションで、`get` メソッドを実装します。 このメソッドを使用して、 [concurrency::receive](reference/concurrency-namespace-functions.md#receive)作業関数の結果を取得します。
+1. `public` クラスの `async_future` セクションで、`get` メソッドを実装します。 このメソッドを使用して、 [concurrency::receive](reference/concurrency-namespace-functions.md#receive)作業関数の結果を取得します。
 
 [!code-cpp[concrt-futures#6](../../parallel/concrt/codesnippet/cpp/walkthrough-implementing-futures_5.cpp)]
 
