@@ -154,8 +154,7 @@ T^* GetAddressOf() throw();
 
 ### <a name="return-value"></a>戻り値
 
-
-  `T` 型のオブジェクトへのハンドルのアドレス。
+ `T` 型のオブジェクトへのハンドルのアドレス。
 
 ### <a name="remarks"></a>Remarks
 
@@ -240,8 +239,7 @@ T^ operator=( IUnknown* lp ) throw();
 
 ### <a name="return-value"></a>戻り値
 
-
-  `T` 型のオブジェクトへのハンドル。
+ `T` 型のオブジェクトへのハンドル。
 
 ### <a name="remarks"></a>Remarks
 

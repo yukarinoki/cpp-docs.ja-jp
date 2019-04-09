@@ -4,12 +4,12 @@ ms.custom: how-to
 ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
-ms.openlocfilehash: 2dada25ea712b7bb6d48d80525c824a0457b18cf
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
+ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220553"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59237199"
 ---
 # <a name="how-to-design-for-exception-safety"></a>方法: 例外安全性のための設計
 
@@ -23,7 +23,7 @@ ms.locfileid: "54220553"
 
 ### <a name="keep-resource-classes-simple"></a>リソース クラスを単純にする
 
-クラスに手動のリソース管理をカプセル化するときは、各リソースの管理以外何も行わないクラスを使用します。そうしないと、リークが発生する可能性があります。 使用[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)可能な場合、次の例に示すようにします。 この例は、`shared_ptr` を使用した場合の相違点を強調するため、意図的に作成し簡略化されています。
+クラスでの手動によるリソース管理をカプセル化するときに、1 つのリソースの管理以外何も実行しないクラスを使用します。 クラスをシンプルに保つには、リソースのリークを導入するリスクを減らします。 使用[スマート ポインター](../cpp/smart-pointers-modern-cpp.md)可能な場合、次の例に示すようにします。 この例は、`shared_ptr` を使用した場合の相違点を強調するため、意図的に作成し簡略化されています。
 
 ```cpp
 // old-style new/delete version
