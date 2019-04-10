@@ -30,8 +30,7 @@ public value struct Guid
 
 |メンバー|説明|
 |------------|-----------------|
-|[Guid](#ctor)|
-  `Platform::Guid` の新しいインスタンスを初期化します。|
+|[Guid](#ctor)|`Platform::Guid` の新しいインスタンスを初期化します。|
 |[operator==](#operator-equality)|等値演算子。|
 |[operator!=](#operator-inequality)|非等値演算子。|
 |[operator&lt;](#operator-less)|小なり演算子。|
@@ -53,8 +52,7 @@ public value struct Guid
 
 ## <a name="ctor"></a> Guid::guid コンス トラクター
 
-
-  `Platform::Guid` の新しいインスタンスを初期化します。
+`Platform::Guid` の新しいインスタンスを初期化します。
 
 ### <a name="syntax"></a>構文
 

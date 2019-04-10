@@ -49,8 +49,7 @@ class ITarget;
 
 |名前|説明|
 |----------|-----------------|
-|[~ ITarget デストラクター](#dtor)|
-  `ITarget` オブジェクトを破棄します。|
+|[~ ITarget デストラクター](#dtor)|`ITarget` オブジェクトを破棄します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -84,8 +83,7 @@ class ITarget;
 
 ##  <a name="dtor"></a> ~ ITarget
 
-
-  `ITarget` オブジェクトを破棄します。
+`ITarget` オブジェクトを破棄します。
 
 ```
 virtual ~ITarget();
@@ -121,8 +119,7 @@ virtual message_status propagate(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-
-  `message` オブジェクトを指すポインター。
+`message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -148,8 +145,7 @@ virtual message_status send(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-
-  `message` オブジェクトを指すポインター。
+`message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。

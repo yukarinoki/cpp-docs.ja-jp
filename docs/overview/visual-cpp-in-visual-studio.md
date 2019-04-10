@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 7ef43491c35ec4f57f7a691851e584e6aad58ef3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58782275"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898714"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio での C++
 
@@ -26,19 +26,19 @@ Microsoft Visual C++ (通常は短縮形で Visual C++ または MSVC と表現�
 
 ## <a name="whats-new-and-conformance-history"></a>新機能と準拠の履歴
 
-[Visual Studio 2017 での C++ の新機能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-Visual C++ 2017 の新機能を紹介します。
+[Visual Studio での C++ の新機能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+Visual C++ の新機能を紹介します。
 
 [Visual Studio 2003 から 2015 の C++ の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 Visual Studio 2003 から 2015 の各バージョンの、C++ の新機能を紹介します。
 
-[Visual Studio 2017 の C++ 準拠の強化](cpp-conformance-improvements-2017.md)<br/>
-Visual Studio 2017 の C++ 準拠の強化について説明します。
+[Visual Studio の C++ 準拠の強化](cpp-conformance-improvements.md)<br/>
+Visual Studio の C++ 準拠の強化について説明します。
 
 [Visual C++ 言語への準拠](visual-cpp-language-conformance.md)<br/>
 MSVC C++ コンパイラの各機能の準拠状態を一覧にしています。
 
-[2003 から 2015 の Visual C++ の履歴の変更](../porting/visual-cpp-change-history-2003-2015.md)<br/>
+[Visual C++ 2003 ～ 2015 の変更履歴](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 前のバージョンの互換性に影響する変更点について説明します。
 
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Visual Studio をインストールして、以前のバージョンからアップグレードする
@@ -46,7 +46,7 @@ MSVC C++ コンパイラの各機能の準拠状態を一覧にしています�
 [Visual Studio での C++ サポートのインストール](../build/vscpp-step-0-installation.md)<br/>
 Visual Studio 2015 または Visual Studio 2017 をダウンロードして、Visual C++ ツールセットをインストールします。
 
-[Visual C++ 移植とアップグレードのガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
+[Visual C++  移植とアップグレードのガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
 Windows 10 とユニバーサル Windows プラットフォームに C++ コードを移植するなど、Visual Studio 2015 または Visual Studio 2017 へのコードの移植およびプロジェクトのアップグレードのガイダンス。
 
 [さまざまな Visual Studio エディションの Visual C++ ツールおよび機能](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
@@ -109,7 +109,7 @@ Win32、ATL、および MFC を使用して Windows のデスクトップ DLL �
 [並列プログラミング](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 並列パターン ライブラリ、C++ AMP、OpenMP、その他 Windows 上でのマルチスレッド化に関連する機能を使用する方法。
 
-[セキュリティ推奨事項](../security/security-best-practices-for-cpp.md)<br/>
+[セキュリティに推奨される手順](../security/security-best-practices-for-cpp.md)<br/>
 悪意のあるコードや不正使用からアプリケーションを保護する方法。
 
 [クラウドおよび Web プログラミング](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
@@ -138,7 +138,7 @@ ODBC およびその他のデータベース アクセス テクノロジを使�
 [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)<br/>
 セキュリティ上の問題が発生することがわかっている関数に対する、セキュリティを強化された代替品が含まれています。
 
-[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
+[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
 C++ 標準ライブラリ。
 
 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)<br/>
