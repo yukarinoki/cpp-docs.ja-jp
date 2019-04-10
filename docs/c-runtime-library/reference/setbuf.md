@@ -1,6 +1,6 @@
 ---
 title: setbuf
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 apiname:
 - setbuf
 apilocation:
@@ -22,12 +22,12 @@ helpviewer_keywords:
 - setbuf function
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
-ms.openlocfilehash: 3b5fbccd304d406131b0c4f7d16a289f80484642
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50440497"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424171"
 ---
 # <a name="setbuf"></a>setbuf
 
@@ -47,14 +47,14 @@ void setbuf(
 *ストリーム*<br/>
 **FILE** 構造体へのポインター。
 
-*バッファー*<br/>
+*buffer*<br/>
 ユーザー割り当てのバッファー。
 
 ## <a name="remarks"></a>Remarks
 
-**Setbuf**関数のバッファリングを制御*ストリーム*します。 *ストリーム*引数は、読み取りまたは書き込みがされてがいないを開いているファイルを指す必要があります。 場合、*バッファー*引数が**NULL**ストリームはバッファー処理されません。 場合は、バッファーが長さの文字配列 をポイントする必要があります、 **BUFSIZ**ここで、 **BUFSIZ** STDIO で定義されているバッファー サイズは、します。H. 所定のストリームに対してシステムによって割り当てられた既定のバッファーではなく、ユーザーが指定したバッファーが I/O バッファー処理に使用されます。 **Stderr**ストリームは既定では、バッファー処理ではありませんが、使用することができます**setbuf**にバッファーを割り当てる**stderr**します。
+**Setbuf**関数のバッファリングを制御*ストリーム*します。 *ストリーム*引数は、読み取りまたは書き込みされていないを開いているファイルを指す必要があります。 場合、*バッファー*引数が**NULL**ストリームがバッファー内ではありません。 場合は、バッファーが長さの文字配列 をポイントする必要があります、 **BUFSIZ**ここで、 **BUFSIZ** STDIO で定義されているバッファー サイズは、します。H. 所定のストリームに対してシステムによって割り当てられた既定のバッファーではなく、ユーザーが指定したバッファーが I/O バッファー処理に使用されます。 **Stderr**ストリームは既定では、バッファーなし、使用することが**setbuf**にバッファーを割り当てる**stderr**します。
 
-**setbuf**置き換わりました[setvbuf](setvbuf.md)、これは、新しいコード用の優先ルーチンです。 **setbuf**既存のコードとの互換性は保持されます。
+**setbuf**置き換わりました[setvbuf](setvbuf.md)、これは、新しいコード用の優先ルーチンです。 異なり**setvbuf**、 **setbuf**エラーの報告方法がありません。 **setvbuf**バッファリング モードとバッファー サイズの両方を制御することもできます。 **setbuf**既存のコードとの互換性のために存在します。
 
 ## <a name="requirements"></a>必要条件
 

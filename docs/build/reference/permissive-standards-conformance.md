@@ -1,6 +1,6 @@
 ---
 title: /permissive -(標準への準拠)
-ms.date: 06/21/2018
+ms.date: 03/08/2019
 f1_keywords:
 - /permissive
 - VC.Project.VCCLCompilerTool.ConformanceMode
@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Standards conformance compiler options
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
-ms.openlocfilehash: 5590996c7598016365bb122977084835830f95ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820794"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424132"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive -(標準への準拠)
 
@@ -23,7 +23,7 @@ ms.locfileid: "57820794"
 
 ## <a name="syntax"></a>構文
 
-> **/permissive-**
+> **/permissive -**
 
 ## <a name="remarks"></a>Remarks
 
@@ -35,15 +35,15 @@ Visual Studio 2017 以降、このオプションはサポートされていま�
 
 **/Permissive -** オプションは、ほぼすべてのソフトウェア開発キット (SDK) や Windows Driver Kit (WDK)、Windows Fall Creators SDK (10.0.16299.0) 以降など、最新の Windows キットからヘッダー ファイルとの互換性。 以前のバージョンの SDK をコンパイルできない可能性があります **/permissive -** 各種のソース コードへの準拠の理由。 コンパイラと別のリリースのタイムライン上の Sdk の出荷の残りの問題があるためです。 特定のヘッダー ファイルの問題を参照してください。 [Windows ヘッダー問題](#windows-header-issues)以下。
 
-**/Permissive -** オプション セット、 [/Zc:strictStrings](zc-conformance.md)と[/Zc:rvalueCast](zc-conformance.md)準拠した動作するためのオプション。 非準拠の動作を既定使用されます。 特定渡すことができます **/Zc**後オプション **/permissive -** でこの動作をオーバーライドするためのコマンドライン。
+**/Permissive -** オプション セット、 [/zc: referencebinding](zc-referencebinding-enforce-reference-binding-rules.md)、 [/Zc:strictStrings](zc-strictstrings-disable-string-literal-type-conversion.md)、および[/Zc:rvalueCast](zc-rvaluecast-enforce-type-conversion-rules.md)に準拠するためのオプション動作です。 これらのオプションでは、非準拠の動作の既定を値です。 特定渡すことができます **/Zc**後オプション **/permissive -** でこの動作をオーバーライドするためのコマンドライン。
 
-Visual Studio 2017 バージョン 15.3 では、コンパイラの最初のバージョンでは、 **/permissive -** オプション セット、 [/Zc:ternary](zc-ternary.md)オプション。 コンパイラでは、2 フェーズの名前検索の要件の詳細も実装します。 ときに、 **/permissive -** オプションが設定されている、コンパイラは、テンプレートで使用される依存と非依存の名前を識別する、関数とクラス テンプレート定義を解析します。 このリリースでは、名前の依存関係の分析だけが実行されます。
+Visual Studio 2017 バージョン 15.3 では、コンパイラの最初のバージョンでは、 **/permissive -** オプション セット、 [/Zc:ternary](zc-ternary.md)オプション。 コンパイラでは、2 フェーズの名前検索の要件の詳細も実装します。 ときに、 **/permissive -** オプションが設定されていると、コンパイラが関数とクラス テンプレートの定義を解析し、テンプレートで使用される依存と非依存の名前を識別します。 このリリースでは、名前の依存関係の分析だけが実行されます。
 
 環境固有の拡張機能と、標準の実装に依存しますまま言語領域は受けません **/permissive -** します。 たとえば、Microsoft 固有`__declspec`、呼び出し規約、および構造化例外処理キーワード、および特定のコンパイラのプラグマ ディレクティブまたは属性はフラグが設定されないでコンパイラ **/permissive -** モード。
 
 **/Permissive -** オプション サポートを使用して、準拠コンパイラの現在のバージョンでどの言語コンストラクトが非準拠を確認します。 オプションは、コードが特定のバージョンの C++ 標準に準拠しているかどうかを決定できません。 最新のドラフト標準のすべての実装済みのコンパイラ サポートを有効にするには使用、 [/std:latest](std-specify-language-standard-version.md)オプション。 コンパイラのサポートを現在実装されている c++ 17 標準に制限する、 [/std:c + + 17](std-specify-language-standard-version.md)オプション。 C++ 14 標準をより厳密に一致するように、コンパイラのサポートを制限するには、 [/std:c + + + 14](std-specify-language-standard-version.md)オプションは、既定値です。
 
-すべての c++ 11、c++ 14、または c++ 17 標準に準拠しないコードが Visual Studio 2017 での MSVC コンパイラによってサポートされています。 Visual Studio のバージョンに応じて、 **/permissive -** オプションは、2 フェーズの名前参照の一部の側面に関する、一時的に非定数の参照をバインド、直接の初期化としてコピー init を扱うこと、許可の問題を検出しない可能性があります複数ユーザー定義の変換では、初期化、または別のトークンの論理演算子は、およびその他の適合性のサポートされていない領域。 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。 取得を最大限に活用する **/permissive -**、Visual Studio の最新バージョンに更新します。
+すべての c++ 11、c++ 14、または c++ 17 標準に準拠しないコードが Visual Studio 2017 のすべてのバージョンの MSVC コンパイラによってサポートされています。 Visual Studio のバージョンに応じて、 **/permissive -** オプションは、2 フェーズの名前参照の一部の側面に関する、一時的に非定数の参照をバインド、直接の初期化としてコピー init を扱うこと、許可の問題を検出しない可能性があります複数ユーザー定義の変換では、初期化、または別のトークンの論理演算子は、およびその他の適合性のサポートされていない領域。 Visual C++ の準拠に関する問題について詳しくは、「 [Nonstandard Behavior](../../cpp/nonstandard-behavior.md)」をご覧ください。 取得を最大限に活用する **/permissive -**、Visual Studio の最新バージョンに更新します。
 
 ### <a name="how-to-fix-your-code"></a>コードを修正する方法
 
@@ -56,7 +56,7 @@ void func(int default); // Error C2321: 'default' is a keyword, and
                         // cannot be used in this context
 ```
 
-#### <a name="lookup-members-in-dependent-base"></a>依存ベース参照メンバー
+#### <a name="look-up-members-in-dependent-base"></a>依存ベース内のメンバーを検索します。
 
 ```cpp
 template <typename T>
@@ -247,7 +247,7 @@ Visual Studio 2017 バージョン 15.3 の前に、コンパイラのバージ�
 
 - エラー C2446: ':': 'a' から 'B' 変換なし
 
-この問題を引き起こす可能性のある一般的なコード パターンがいくつかのクラス C 型 T を別の型 T から非明示的コンス トラクターと非明示的変換演算子の両方を提供するときにします。この場合、2 番目の引数の 3 番目の型への変換と 3 番目の引数の 2 番目の型への変換の両方が有効な変換は、標準に従ってあいまいであります。
+この問題を引き起こす可能性のある一般的なコード パターンがいくつかのクラス C 型 T を別の型 T から非明示的コンス トラクターと非明示的変換演算子の両方を提供するときにします。この場合、2 番目の引数の 3 番目の引数の型への変換と 3 番目の引数の 2 番目の引数の型への変換の両方で有効な変換とは。 両方が有効であるために、標準に従ってがあいまいですが。
 
 ```cpp
 // Example 1: class that provides conversion to and initialization from some type T
@@ -311,9 +311,9 @@ decltype(auto) x = cond ? a : b; // char without, const char& with /Zc:ternary
 const char (&z)[2] = count > 3 ? "A" : "B"; // const char* without /Zc:ternary
 ```
 
-#### <a name="two-phase-name-look-up"></a>2 フェーズの名前を参照してください。
+#### <a name="two-phase-name-look-up"></a>2 フェーズの名前の検索
 
-ときに、 **/permissive -** オプションが設定されている、コンパイラは、2 フェーズの名前検索の必要に応じてテンプレートで使用される依存と非依存の名前を識別する、関数とクラス テンプレート定義を解析します。 Visual Studio 2017 バージョン 15.3 では、名前の依存関係の分析が実行されます。 具体的には、テンプレート定義のコンテキストで宣言されていない非依存名では、ISO C 標準で必要な診断メッセージが発生します。 Visual Studio 2017 バージョン 15.7 では、引数依存の検索の定義のコンテキストを必要とする非依存名のバインドも行われます。
+ときに、 **/permissive -** オプションが設定されている、コンパイラは、2 フェーズの名前検索の必要に応じてテンプレートで使用される依存と非依存の名前を識別する、関数とクラス テンプレート定義を解析します。 Visual Studio 2017 バージョン 15.3 では、名前の依存関係の分析が実行されます。 具体的には、テンプレート定義のコンテキストで宣言されていない非依存名では、ISO C 標準で必要な診断メッセージが発生します。 Visual Studio 2017 バージョン 15.7 では、定義のコンテキストでの引数依存の参照を必要とする非依存名のバインドも行われます。
 
 ```cpp
 // dependent base

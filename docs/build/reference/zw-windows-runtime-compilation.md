@@ -1,6 +1,6 @@
 ---
 title: /ZW (Windows ランタイムのコンパイル)
-ms.date: 11/04/2016
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.CompileAsWinRT
 - /zw
@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -ZW
 - Windows Runtime compiler option
 ms.assetid: 0fe362b0-9526-498b-96e0-00d7a965a248
-ms.openlocfilehash: a16482cf8d21651db9486ab19c347a4ccadf5279
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 73295866004fd506fd5f06ff25c048d14b821016
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57809432"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424041"
 ---
 # <a name="zw-windows-runtime-compilation"></a>/ZW (Windows ランタイムのコンパイル)
 
@@ -44,9 +44,9 @@ Platform.winmd、Windows.Foundation.winmd、および他の既定の Windows メ
 
 - 自動で Windows ランタイム オブジェクトの参照カウントと自動参照カウントがゼロになったときに、オブジェクトの破棄します。
 
-Incremental linker を使用して、.obj ファイルに含まれる Windows メタデータをサポートしていないため、 **/ZW**オプション、 [/Gm (簡易リビルドの有効)](gm-enable-minimal-rebuild.md)オプションと互換性がない **/ZW**.
+Incremental linker を使用して、.obj ファイルに含まれる Windows メタデータをサポートしていないため、 **/ZW**オプション、非推奨とされる[/Gm (簡易リビルドの有効)](gm-enable-minimal-rebuild.md)オプションはと互換性がない **/ZW**します。
 
-詳細については、[Visual c 言語リファレンス](../../cppcx/visual-c-language-reference-c-cx.md)を参照してください。
+詳細については、次を参照してください。 [Visual c 言語リファレンス](../../cppcx/visual-c-language-reference-c-cx.md)します。
 
 ## <a name="requirements"></a>必要条件
 
