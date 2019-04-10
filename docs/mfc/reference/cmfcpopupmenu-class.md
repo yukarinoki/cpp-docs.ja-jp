@@ -160,12 +160,12 @@ helpviewer_keywords:
 - CMFCPopupMenu [MFC], OnChangeHot
 - CMFCPopupMenu [MFC], OnChooseItem
 ms.assetid: 9555dca1-8c9c-44c9-af72-0659ddad128e
-ms.openlocfilehash: b45ac09ff87c191e55e403951fdff18cae33256d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: bd6629df4274af8a4f450024f0bad6da45ae3683
+ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57292277"
+ms.lasthandoff: 04/01/2019
+ms.locfileid: "58776012"
 ---
 # <a name="cmfcpopupmenu-class"></a>CMFCPopupMenu クラス
 
@@ -278,7 +278,7 @@ class CMFCPopupMenu : public CMiniFrameWnd
 
 ## <a name="example"></a>例
 
-次の例では、ポップアップ メニュー オブジェクトを構成する方法を示します。 例をロゴと、ポップアップ メニューのサウンド設定、アニメーションの速度と種類の設定、ポップアップ メニューがメイン フレーム以外の場所が表示されたら、メニューの影を描画、最大の幅を設定し、ポップアップ メニューの右側のメニューの配置を設定する方法を示します。 このコード スニペットの一部、[カスタム ページ サンプル](../../visual-cpp-samples.md)します。
+次の例では、ポップアップ メニュー オブジェクトを構成する方法を示します。 例をロゴと、ポップアップ メニューのサウンド設定、アニメーションの速度と種類の設定、ポップアップ メニューがメイン フレーム以外の場所が表示されたら、メニューの影を描画、最大の幅を設定し、ポップアップ メニューの右側のメニューの配置を設定する方法を示します。 このコード スニペットの一部、[カスタム ページ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_CustomPages#2](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_1.cpp)]
 
@@ -451,7 +451,7 @@ virtual BOOL Create(
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`Create`のメソッド、`CMFCPopuMenu`クラス。 このコード スニペットの一部、[カスタム ページ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`Create`のメソッド、`CMFCPopuMenu`クラス。 このコード スニペットの一部、[カスタム ページ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_CustomPages#1](../../mfc/reference/codesnippet/cpp/cmfcpopupmenu-class_2.cpp)]
 
@@ -497,7 +497,7 @@ void EnableMenuLogo(
 ### <a name="parameters"></a>パラメーター
 
 *iLogoSize*<br/>
-[in]\(ピクセル単位)、ロゴのサイズ。
+[in](ピクセル単位)、ロゴのサイズ。
 
 *nLogoLocation*<br/>
 [in]ロゴの位置を示す列挙型。
