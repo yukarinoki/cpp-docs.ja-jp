@@ -1,6 +1,6 @@
 ---
 title: /MP (複数のプロセスを使用したビルド)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.MultiProcessorCompilation
 helpviewer_keywords:
@@ -8,12 +8,12 @@ helpviewer_keywords:
 - /MP compiler option (C++)
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
-ms.openlocfilehash: 8a66f6f6f1f4ce77e33df992b915be9ca5dcce70
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808457"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424145"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (複数のプロセスを使用したビルド)
 
@@ -51,7 +51,7 @@ ms.locfileid: "57808457"
 |--------------------------------|-----------------|
 |[#import](../../preprocessor/hash-import-directive-cpp.md) プリプロセッサ ディレクティブ|タイプ ライブラリの型を C++ クラスに変換し、それらのクラスをヘッダー ファイルに書き込みます。|
 |[/E](e-preprocess-to-stdout.md)、 [/EP](ep-preprocess-to-stdout-without-hash-line-directives.md)|プリプロセッサ出力を標準出力 (**stdout**) にコピーします。|
-|[/Gm](gm-enable-minimal-rebuild.md)|インクリメンタル リビルドを有効にします。|
+|[/Gm](gm-enable-minimal-rebuild.md)|非推奨。 インクリメンタル リビルドを有効にします。|
 |[/showIncludes](showincludes-list-include-files.md)|インクルード ファイルのリストを標準エラー出力 (**stderr**) に書き込みます。|
 |[/Yc](yc-create-precompiled-header-file.md)|プリコンパイル済みヘッダー ファイルを書き込みます。|
 
@@ -125,12 +125,8 @@ MSBuild を使用するかどうかを決定するためのガイドラインま
 
 - プロジェクトとプロジェクトごとのファイルの数が分散された場合は、両方の MSBuild を使用して、 **/MP**します。 初期設定では、 **/maxcpucount** オプションをビルドするプロジェクトの数に設定し、 **/MP** オプションをコンピューター上のプロセッサの数に設定します。 パフォーマンスを測定し、最適な結果を得られるように、設定を調整します。 合計のビルド時間に満足できるまで、このサイクルを繰り返します。
 
-#### <a name="the-gm-compiler-option"></a>/Gm コンパイラ オプション
-
-既定では、プロジェクトのビルドで、デバッグ ビルドの場合は **/Gm** コンパイラ オプション (インクリメンタル ビルド) が有効になり、リリース ビルドでは無効になります。 したがって、デバッグ ビルドの場合、 **/MP** コンパイラ オプションは既定の **/Gm** コンパイラ オプションと競合するため、自動的に無効になります。
-
 ## <a name="see-also"></a>関連項目
 
 [#import ディレクティブ](../../preprocessor/hash-import-directive-cpp.md)<br/>
-[Command-Line Reference (コマンド ライン リファレンス)](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (PDB 生成の高速化)](zf.md)<br/>
+[コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
+[/Zf (高速の PDB の生成)](zf.md)<br/>

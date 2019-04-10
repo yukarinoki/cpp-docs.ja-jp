@@ -1,6 +1,6 @@
 ---
 title: /Z7、/Zi、/ZI (デバッグ情報の形式)
-ms.date: 02/22/2018
+ms.date: 04/08/2019
 f1_keywords:
 - VC.Project.VCCLCompilerTool.DebugInformationFormat
 - /ZI
@@ -23,12 +23,12 @@ helpviewer_keywords:
 - line numbers only compiler option [C++]
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
-ms.openlocfilehash: 1beab7cb1e8e654d25620eb59a9326f5628ce047
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57816322"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424080"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7、/Zi、/ZI (デバッグ情報の形式)
 
@@ -52,7 +52,7 @@ ms.locfileid: "57816322"
 
 サード パーティ製ライブラリのデバッグ バージョンのディストリビューターの場合、PDB ファイルを持たないことによる利点があります。 ただし、プリコンパイル済みヘッダーのオブジェクト ファイルは、ライブラリのリンク フェーズ中、およびデバッグに必要です。 使用する必要がある .pch オブジェクト ファイルの情報 (とコードなし) を入力のみが場合、 [/Yl (挿入 PCH 参照のライブラリのデバッグ)](yl-inject-pch-reference-for-debug-library.md)オプションは、ライブラリをビルドするときに、既定で有効にします。
 
-[/Gm (簡易リビルドの有効)](gm-enable-minimal-rebuild.md)場合オプションは使用できません **/Z7**を指定します。
+非推奨とされる[/Gm (簡易リビルドの有効)](gm-enable-minimal-rebuild.md)場合オプションは使用できません **/Z7**を指定します。
 
 ### <a name="zi"></a>/ZI
 
@@ -79,7 +79,7 @@ PDB ファイルの名前、コンパイラ*プロジェクト*.pdb。 プロジ
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 開く、**構成プロパティ** > **C/C++** > **全般**プロパティ ページ。
 

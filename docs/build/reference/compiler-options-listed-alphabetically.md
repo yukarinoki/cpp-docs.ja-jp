@@ -1,14 +1,14 @@
 ---
 title: アルファベット順のコンパイラ オプション
-ms.date: 08/20/2018
+ms.date: 04/08/2019
 helpviewer_keywords:
 - compiler options, C++
-ms.openlocfilehash: 6175d62938534e790fb60b300ff55ad031da5801
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: d8ab1cbac7ad8eb44f16c7829ccac20a6d3e73ff
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811941"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59424119"
 ---
 # <a name="compiler-options-listed-alphabetically"></a>アルファベット順のコンパイラ オプション
 
@@ -21,7 +21,7 @@ ms.locfileid: "57811941"
 |[/AI](ai-specify-metadata-directories.md)|[#using](../../preprocessor/hash-using-directive-cpp.md) ディレクティブに渡されたファイル参照を解決するために検索するディレクトリを指定します。|
 |[/analyze](analyze-code-analysis.md)|コード分析を有効にします。|
 |[/arch](arch-minimum-cpu-architecture.md)|コード生成のアーキテクチャを指定します。|
-|[/await](await-enable-coroutine-support.md)|コルーチン (再開可能な関数) の拡張機能を有効にします。|
+|[/await と一緒に使う](await-enable-coroutine-support.md)|コルーチン (再開可能な関数) の拡張機能を有効にします。|
 |[/bigobj](bigobj-increase-number-of-sections-in-dot-obj-file.md)|.obj ファイル内のアドレス指定可能なセクションの数を増やします。|
 |[/C](c-preserve-comments-during-preprocessing.md)|プリプロセス時にコメントを保持します。|
 |[/c](c-compile-without-linking.md)|リンクを行わないでコンパイルします。|
@@ -39,17 +39,17 @@ ms.locfileid: "57811941"
 |[/F](f-set-stack-size.md)|スタック サイズを設定します。|
 |[/favor](favor-optimize-for-architecture-specifics.md)|特定の x64 向けに最適化されたコードを生成のアーキテクチャ、または両方の AMD64 アーキテクチャおよび Extended Memory 64 Technology (EM64T) アーキテクチャでのマイクロ アーキテクチャの仕様。|
 |[/FA](fa-fa-listing-file.md)|リスティング ファイルを作成します。|
-|[/Fa](fa-fa-listing-file.md)|リスティング ファイル名を設定します。|
+|[/FA](fa-fa-listing-file.md)|リスティング ファイル名を設定します。|
 |[/FC](fc-full-path-of-source-code-file-in-diagnostics.md)|診断テキストで cl.exe に渡されるソース コード ファイルの完全パスを表示します。|
 |[/Fd](fd-program-database-file-name.md)|プログラム データベース ファイルの名前を変更します。|
 |[/Fe](fe-name-exe-file.md)|実行可能ファイルの名前を変更します。|
 |[/FI](fi-name-forced-include-file.md)|指定したインクルード ファイルをプリプロセスします。|
-|[/Fi](fi-preprocess-output-file-name.md)|プリプロセス済みの出力ファイル名を設定します。|
-|[/Fm](fm-name-mapfile.md)|マップファイルを作成します。|
+|[/FI](fi-preprocess-output-file-name.md)|プリプロセス済みの出力ファイル名を設定します。|
+|[/Fm](fm-name-mapfile.md)|マップ ファイルを作成します。|
 |[/Fo](fo-object-file-name.md)|オブジェクト ファイルを作成します。|
 |[/fp](fp-specify-floating-point-behavior.md)|浮動小数点の動作を指定します。|
-|[/Fp](fp-name-dot-pch-file.md)|プリコンパイル済みヘッダー ファイルの名前を指定します。|
-|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/Fr](fr-fr-create-dot-sbr-file.md)|ブラウザー ファイルを生成します。 **/Fr** は非推奨とされました。|
+|[/fp](fp-name-dot-pch-file.md)|プリコンパイル済みヘッダー ファイルの名前を指定します。|
+|[/FR](fr-fr-create-dot-sbr-file.md)<br /><br /> [/FR](fr-fr-create-dot-sbr-file.md)|ブラウザー ファイルを生成します。 **/Fr** は非推奨とされました。|
 |[/FS](fs-force-synchronous-pdb-writes.md)|プログラム データベース (PDB) ファイルへの書き込みを MSPDBSRV.EXE によりシリアル化します。|
 |[/FU](fu-name-forced-hash-using-file.md)|[#using](../../preprocessor/hash-using-directive-cpp.md) ディレクティブに渡された場合と同じ方法でファイル名の使用を強制します。|
 |[/Fx](fx-merge-injected-code.md)|挿入されたコードをソース ファイルとマージします。|
@@ -58,13 +58,13 @@ ms.locfileid: "57811941"
 |[/Ge](ge-enable-stack-probes.md)|非推奨。 スタック プローブをアクティブにします。|
 |[/GF](gf-eliminate-duplicate-strings.md)|文字列プールを有効にします。|
 |[/GH](gh-enable-pexit-hook-function.md)|フック関数 `_pexit`を呼び出します。|
-|[/Gh](gh-enable-penter-hook-function.md)|フック関数 `_penter`を呼び出します。|
+|[/GH](gh-enable-penter-hook-function.md)|フック関数 `_penter`を呼び出します。|
 |[/GL](gl-whole-program-optimization.md)|プログラム全体の最適化を有効にします。|
-|[/Gm](gm-enable-minimal-rebuild.md)|簡易リビルドを有効にします。|
+|[/Gm](gm-enable-minimal-rebuild.md)|非推奨。 簡易リビルドを有効にします。|
 |[/GR](gr-enable-run-time-type-information.md)|ランタイム型情報 (RTTI: Run-Time Type Information) を有効にします。|
-|[/Gr](gd-gr-gv-gz-calling-convention.md)|`__fastcall` 呼び出し規約を使用します (x86 のみ)。|
+|[/GR](gd-gr-gv-gz-calling-convention.md)|`__fastcall` 呼び出し規約を使用します (x86 のみ)。|
 |[/GS](gs-buffer-security-check.md)|バッファーのセキュリティをチェックします。|
-|[/Gs](gs-control-stack-checking-calls.md)|スタック プローブを制御します。|
+|[/GS](gs-control-stack-checking-calls.md)|スタック プローブを制御します。|
 |[/GT](gt-support-fiber-safe-thread-local-storage.md)|静的スレッド ローカル ストレージを使用して割り当てられたデータに対して、ファイバー保護をサポートします。|
 |[/guard:cf](guard-enable-control-flow-guard.md)|制御フロー ガードのセキュリティ チェックを追加します。|
 |[/Gv](gd-gr-gv-gz-calling-convention.md)|`__vectorcall` 呼び出し規約を使用します。 (x86 と x64 のみ)。|
@@ -72,11 +72,11 @@ ms.locfileid: "57811941"
 |[/GX](gx-enable-exception-handling.md)|非推奨。 同期例外処理を有効にします。 代わりに [/EH](eh-exception-handling-model.md) を使用してください。|
 |[/Gy](gy-enable-function-level-linking.md)|関数レベルのリンクを有効にします。|
 |[/GZ](gz-enable-stack-frame-run-time-error-checking.md)|非推奨。 [/RTC1](rtc-run-time-error-checks.md)と同じです。|
-|[/Gz](gd-gr-gv-gz-calling-convention.md)|`__stdcall` 呼び出し規約を使用します (x86 のみ)。|
+|[/GZ](gd-gr-gv-gz-calling-convention.md)|`__stdcall` 呼び出し規約を使用します (x86 のみ)。|
 |[/H](h-restrict-length-of-external-names.md)|非推奨。 外部名 (パブリック名) の長さを制限します。|
 |[/HELP](help-compiler-command-line-help.md)|コンパイラ オプションのリストを出力します。|
 |[/homeparams](homeparams-copy-register-parameters-to-stack.md)|関数の実行に入ったときに、レジスタで渡されたパラメーターを、強制的にスタック内のその場所に書き込みます。 このコンパイラ オプションは、x64 のみコンパイラ (ネイティブ コンパイルおよびクロス コンパイル)。|
-|[/hotpatch](hotpatch-create-hotpatchable-image.md)|ホットパッチ可能なイメージを作成します。|
+|[/hotpatch](hotpatch-create-hotpatchable-image.md)|ホット パッチ可能なイメージを作成します。|
 |[/I](i-additional-include-directories.md)|ディレクトリ内でインクルード ファイルを検索します。|
 |[/J](j-default-char-type-is-unsigned.md)|既定の `char` 型を変更します。|
 |[/JMC](jmc.md)|マイ コードのみを C++ のネイティブ デバッグをサポートしています。|
@@ -97,13 +97,13 @@ ms.locfileid: "57811941"
 |[/Od](od-disable-debug.md)|最適化を無効にします。|
 |[/Og](og-global-optimizations.md)|非推奨。 グローバル最適化を使用します。|
 |[/Oi](oi-generate-intrinsic-functions.md)|組み込み関数を生成します。|
-|[/openmp](openmp-enable-openmp-2-0-support.md)|ソース コードで [#pragma omp](../../preprocessor/omp.md) を有効にします。|
+|[/openmp](openmp-enable-openmp-2-0-support.md)|により、 [ `#pragma omp` ](../../preprocessor/omp.md)ディレクティブでは、ソース コード。|
 |[/Os](os-ot-favor-small-code-favor-fast-code.md)|実行可能ファイルで、サイズの小ささを優先させます。|
 |[/Ot](os-ot-favor-small-code-favor-fast-code.md)|実行可能ファイルで、実行速度を優先させます。|
 |[/Ox](ox-full-optimization.md)|最大限の最適化 (/Ob2 ～ /Gs) を行います。|
 |[/Oy](oy-frame-pointer-omission.md)|フレーム ポインターを省略します (x86 のみ)。|
 |[/P](p-preprocess-to-a-file.md)|プリプロセッサ出力をファイルに書き込みます。|
-|[/permissive-](permissive-standards-conformance.md)|標準準拠モードを設定します。|
+|[/permissive -](permissive-standards-conformance.md)|標準準拠モードを設定します。|
 |[/Qfast_transcendentals](qfast-transcendentals-force-fast-transcendentals.md)|高速超越関数を生成します。|
 |[/QIfist](qifist-suppress-ftol.md)|非推奨。 浮動小数点型から整数型への変換が必要なときに、 `_ftol` を呼び出しません (x86 のみ)。|
 |[/Qimprecise_fwaits](qimprecise-fwaits-remove-fwaits-inside-try-blocks.md)|`fwait` ブロックの中にある `try` コマンドを削除します。|
@@ -116,11 +116,11 @@ ms.locfileid: "57811941"
 |[/source-charset](source-charset-set-source-character-set.md)|ソース文字セットを設定します。|
 |[/std](std-specify-language-standard-version.md)|C++ 標準バージョンの互換性セレクター。|
 |[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|C ソース ファイルを指定します。|
-|[/TC](tc-tp-tc-tp-specify-source-file-type.md)|C. すべてのソース ファイルを指定します。|
+|[/Tc](tc-tp-tc-tp-specify-source-file-type.md)|C. すべてのソース ファイルを指定します。|
 |[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|C++ ソース ファイルを指定します。|
-|[/TP](tc-tp-tc-tp-specify-source-file-type.md)|すべてのソース ファイルは、C++ を指定します。|
+|[/Tp](tc-tp-tc-tp-specify-source-file-type.md)|すべてのソース ファイルは、C++ を指定します。|
 |[/U](u-u-undefine-symbols.md)|1 つの定義済みマクロを削除します。|
-|[/u](u-u-undefine-symbols.md)|すべての定義済みマクロを削除します。|
+|[/U](u-u-undefine-symbols.md)|すべての定義済みマクロを削除します。|
 |[/utf-8](utf-8-set-source-and-executable-character-sets-to-utf-8.md)|セットのソースと実行の文字は、utf-8 に設定します。|
 |[/V](v-version-number.md)|非推奨。 .obj ファイル バージョン文字列を設定します。|
 |[/validate-charset](validate-charset-validate-for-compatible-characters.md)|互換性のある文字のみの utf-8 ファイルを検証します。|
@@ -154,7 +154,7 @@ ms.locfileid: "57811941"
 |[/Ze](za-ze-disable-language-extensions.md)|非推奨。 言語拡張機能を有効にします。|
 |[/Zf](zf.md)|並行ビルドで生成時に PDB を向上します。|
 |[/Zg](zg-generate-function-prototypes.md)|Visual C++ 2015 では削除されています。 関数プロトタイプを生成します。|
-|[/ZI](z7-zi-zi-debug-information-format.md)|エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。|
+|[/Zi](z7-zi-zi-debug-information-format.md)|エディット コンティニュと互換性のあるプログラム データベースにデバッグ情報を含めます。|
 |[/Zi](z7-zi-zi-debug-information-format.md)|詳細なデバッグ情報を生成します。|
 |[/Zl](zl-omit-default-library-name.md)|.obj ファイルから既定のライブラリ名を削除します (x86 のみ)。|
 |[/Zm](zm-specify-precompiled-header-memory-allocation-limit.md)|プリコンパイル済みヘッダーのメモリ割り当て制限を指定します。|
