@@ -44,12 +44,12 @@ helpviewer_keywords:
 - CMFCOutlookBarTabCtrl [MFC], SetToolbarImageList
 - CMFCOutlookBarTabCtrl [MFC], SetVisiblePageButtons
 ms.assetid: b1f2b3f7-cc59-49a3-99d8-7ff9b37c044b
-ms.openlocfilehash: 01effb8cb1142db0bcae6f9c456e4a3b3abd69e8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.openlocfilehash: c791f3988c7257ed7d188917394e74a6dbeca98b
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269941"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "58776805"
 ---
 # <a name="cmfcoutlookbartabctrl-class"></a>CMFCOutlookBarTabCtrl Class
 
@@ -109,7 +109,7 @@ class CMFCOutlookBarTabCtrl : public CMFCBaseTabCtrl
 
 ## <a name="example"></a>例
 
-次の例では、初期化する方法、`CMFCOutlookBarTabCtrl`オブジェクトをさまざまなメソッドを使用して、`CMFCOutlookBarTabCtrl`クラス。 例では、Outlook バーのタブ ページのボタンのテキスト ラベルのインプレース編集を有効にする、アニメーションを有効にする、ユーザーが Outlook バー ペイン上のボタンをスクロールして、Outlook タブの続きの境界線のサイズの設定を有効にするスクロール ハンドルを有効にする方法を示しています。ロール、および Outlook バーのタブ ボタンのテキスト ラベルの配置を設定します。 このコード スニペットの一部、 [Outlook デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、初期化する方法、`CMFCOutlookBarTabCtrl`オブジェクトをさまざまなメソッドを使用して、`CMFCOutlookBarTabCtrl`クラス。 例では、Outlook バーのタブ ページのボタンのテキスト ラベルのインプレース編集を有効にする、アニメーションを有効にする、ユーザーが Outlook バー ペイン上のボタンをスクロールして、Outlook タブの続きの境界線のサイズの設定を有効にするスクロール ハンドルを有効にする方法を示しています。ロール、および Outlook バーのタブ ボタンのテキスト ラベルの配置を設定します。 このコード スニペットの一部、 [Outlook デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_OutlookDemo#1](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_1.cpp)]
 [!code-cpp[NVC_MFC_OutlookDemo#2](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_2.cpp)]
@@ -170,7 +170,7 @@ Outlook バーの新しいページにコントロールを追加するのにに
 
 ### <a name="example"></a>例
 
-次の例では、使用する方法、`AddControl`メソッドで、`CMFCOutlookBarTabCtrl`クラス。 このコード スニペットの一部、 [Outlook デモ サンプル](../../visual-cpp-samples.md)します。
+次の例では、使用する方法、`AddControl`メソッドで、`CMFCOutlookBarTabCtrl`クラス。 このコード スニペットの一部、 [Outlook デモ サンプル](../../overview/visual-cpp-samples.md)します。
 
 [!code-cpp[NVC_MFC_OutlookDemo#3](../../mfc/reference/codesnippet/cpp/cmfcoutlookbartabctrl-class_3.cpp)]
 
@@ -401,7 +401,7 @@ virtual BOOL SetActiveTab(int iTab);
 ### <a name="parameters"></a>パラメーター
 
 *iTab*<br/>
-[in]開く タブの 0 から始まるインデックス。
+[in]開く] タブの 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
 
@@ -508,6 +508,6 @@ void SetVisiblePageButtons(int nVisiblePageButtons);
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
+[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)<br/>
 [CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)<br/>
 [CMFCOutlookBarPane クラス](../../mfc/reference/cmfcoutlookbarpane-class.md)
