@@ -4,18 +4,18 @@ ms.date: 08/30/2017
 helpviewer_keywords:
 - breaking changes [C++]
 ms.assetid: b38385a9-a483-4de9-99a6-797488bc5110
-ms.openlocfilehash: 9be4db9e0f7c50054dc6e6ca498b1c9d49715a8d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.openlocfilehash: b381a2b7cc9a4ad4749f382838bdec5872a3decf
+ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58775414"
+ms.lasthandoff: 04/03/2019
+ms.locfileid: "58898883"
 ---
 # <a name="visual-c-change-history-2003---2015"></a>Visual C++ 2003 ～ 2015 の変更履歴
 
 この記事では、Visual Studio 2003 から Visual Studio 2015 の互換性に影響する変更についてすべて説明します。この記事の「新しい動作」や「現在」という語は、Visual Studio 2015 以降を指します。 「従来の動作」や「以前」という語は、Visual Studio 2013 以前のリリースを指します。
 
-Visual Studio 2017 の詳細については、「[What's new for Visual C++ in Visual Studio 2017](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)」(Visual Studio 2017 の Visual C++ の新機能)、「[Conformance Improvements in Visual C++ in Visual Studio 2017](../overview/cpp-conformance-improvements-2017.md)」(Visual Studio 2017 の C++ 準拠の強化) を参照してください。
+最新版の Visual Studio については、「[What's new for Visual C++ in Visual Studio](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)」 (Visual Studio における Visual C++ の新機能) と「[Conformance Improvements in Visual C++ in Visual Studio](../overview/cpp-conformance-improvements.md)」 (Visual Studio における Visual C++ の準拠の強化) を参照してください。
 
 > [!NOTE]
 > Visual Studio 2015 と Visual Studio 2017 では、バイナリに関して重大な変更はありません。
@@ -62,7 +62,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    エラーを解決するには、\<math.h> から削除された関数の宣言を取得する \<cmath> を組み込んでください。 次の関数は移動されました。
 
-  - `double abs(double)` および `float abs(float)`
+  - `double abs(double)` と、呼び出し `float abs(float)`
 
   - `double pow(double, int)`, `float pow(float, float)`, `float pow(float, int)`, `long double pow(long double, long double)`, `long double pow(long double, int)`
 
@@ -96,7 +96,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 #### <a name="processh"></a>\<process.h>
 
-- **_beginthread および _beginthreadex**
+- **_beginthread と _beginthreadex**
 
    現在、[_beginthread](../c-runtime-library/reference/beginthread-beginthreadex.md) 関数と [_beginthreadex](../c-runtime-library/reference/beginthread-beginthreadex.md) 関数には、モジュールへの参照が含まれています。そのモジュールで、スレッドの期間に関するスレッド プロシージャが定義されています。 これは、スレッドの実行が完了するまでモジュールが確実にアンロードされないようにするのに役立ちます。
 
@@ -125,11 +125,11 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
     dumpbin.exe /LINKERMEMBER somelibrary.lib
     ```
 
-- **gets および _getws**
+- **gets と _getws**
 
    [gets](../c-runtime-library/gets-getws.md) 関数と [_getws](../c-runtime-library/gets-getws.md) 関数が削除されました。 gets 関数は、安全に使用できないため、C11 の標準ライブラリから削除されました。 _getws 関数は、gets に相当する Microsoft 拡張です (ただしワイド文字列)。 これらの関数の代わりとして、[fgets](../c-runtime-library/reference/fgets-fgetws.md)、[fgetws](../c-runtime-library/reference/fgets-fgetws.md)、[gets_s](../c-runtime-library/reference/gets-s-getws-s.md)、および [_getws_s](../c-runtime-library/reference/gets-s-getws-s.md) の使用を検討してください。
 
-- **_cgets および _cgetws**
+- **_cgets と _cgetws**
 
    [_cgets](../c-runtime-library/cgets-cgetws.md) 関数と [_cgetws](../c-runtime-library/cgets-cgetws.md) 関数は削除されました。 これらの関数の代わりに、[_cgets_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) と [_cgetws_s](../c-runtime-library/reference/cgets-s-cgetws-s.md) の使用を検討してください。
 
@@ -219,11 +219,11 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 - **_O_U8TEXT モード**
 
-   現在、[_setmode](../c-runtime-library/reference/setmode.md) 関数は、_O_U8TEXT モードで開かれるストリームのモードを正しく報告します。 以前のバージョンのライブラリでは、そのようなストリームは _O_WTEXT で開かれるものとして報告されていました。
+   現在、 [_setmode](../c-runtime-library/reference/setmode.md) 関数は、_O_U8TEXT モードで開かれるストリームのモードを正しく報告します。 以前のバージョンのライブラリでは、そのようなストリームは _O_WTEXT で開かれるものとして報告されていました。
 
    エンコードが UTF-8 のストリームの _O_WTEXT モードをコードが解釈する場合、これは互換性に影響する変更です。 アプリケーションで UTF_8 がサポートされていない場合、増加するこの共通エンコードのサポートを追加することを検討してください。
 
-- **snprintf および vsnprintf**
+- **snprintf と vsnprintf**
 
    現在、[snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) 関数と [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) 関数が実装されています。 古いコードは CRT ライブラリによって実装されていなかったため、これらの関数の定義マクロ バージョンを提供していました。しかし、新しいバージョンではこれらが不要になりました。 \<stdio.h> を組み込む前に [snprintf](../c-runtime-library/reference/snprintf-snprintf-snprintf-l-snwprintf-snwprintf-l.md) または [vsnprintf](../c-runtime-library/reference/vsnprintf-vsnprintf-vsnprintf-l-vsnwprintf-vsnwprintf-l.md) がマクロとして定義されている場合、現在コンパイルは、マクロが定義された場所を示すエラーとともに失敗します。
 
@@ -237,13 +237,13 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    以前のバージョンでは、完全な FILE 型が\<stdio.h> でパブリックに定義されていたため、ユーザー コードが FILE に達して、その内部構造を変更することができました。 ライブラリが変更され、実装に関する詳細が隠されるようになりました。 この変更の一環として、現在、\<stdio.h> で定義される FILE は不透明な型であり、そのメンバーは、CRT 自体の外部からアクセスできません。
 
-- **_outp および _inp**
+- **_outp と _inp**
 
    関数 [_outp](../c-runtime-library/outp-outpw-outpd.md)、[_outpw](../c-runtime-library/outp-outpw-outpd.md)、[_outpd](../c-runtime-library/outp-outpw-outpd.md)、[_inp](../c-runtime-library/inp-inpw-inpd.md)、[_inpw](../c-runtime-library/inp-inpw-inpd.md)、および [_inpd](../c-runtime-library/inp-inpw-inpd.md) が削除されました。
 
 #### <a name="stdlibh-malloch-and-sysstath"></a>\<stdlib.h>、\<malloc.h>、および \<sys/stat.h>
 
-- **strtof および wcstof**
+- **strtof と wcstof**
 
    値を float として表せない場合に、`strtof` 関数および `wcstof` 関数で `errno` を ERANGE に設定できませんでした。 このエラーはこれら 2 つの関数に固有のものでした。`strtod` 関数、`wcstod` 関数、`strtold` 関数、および `wcstold` 関数は影響を受けませんでした。 この問題は修正されており、ランタイムの破壊的変更です。
 
@@ -279,7 +279,7 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    以前のバージョンでは、Windows API [GetSystemTimeAsFileTime](/windows/desktop/api/sysinfoapi/nf-sysinfoapi-getsystemtimeasfiletime) を使用して [clock](../c-runtime-library/reference/clock.md) 関数が実装されていました。 この実装により、clock 関数はシステム時刻の影響を受け、単調になることがありませんでした。 現在は、 [QueryPerformanceCounter](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) によって clock 関数が再実装されたため、単調になっています。
 
-- **fstat および _utime**
+- **fstat と _utime**
 
    以前のバージョンでは、[_stat](../c-runtime-library/reference/stat-functions.md) 関数、[fstat](../c-runtime-library/reference/fstat-fstat32-fstat64-fstati64-fstat32i64-fstat64i32.md)関数、および [_utime](../c-runtime-library/reference/utime-utime32-utime64-wutime-wutime32-wutime64.md) 関数での夏時間の処理が正しくありませんでした。 Visual Studio 2013 より前では、これらの関数はすべて、標準時刻をあたかも夏時間にあるかのようにに調整していましたが、これは正しい処理ではありませんでした。
 
@@ -289,13 +289,13 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    以前のバージョンでは、[asctime](../c-runtime-library/reference/asctime-wasctime.md) 関数は、1 桁の日の先頭をゼロで埋めていました (たとえば、`Fri Jun 06 08:00:00 2014`)。 この仕様では、そのような日の先頭を空白で埋める必要があります (たとえば、`Fri Jun  6 08:00:00 2014`)。 この問題は修正されました。
 
-- **strftime および wcsftime**
+- **strftime と wcsftime**
 
    `strftime` 関数と `wcsftime` 関数は、書式指定子として %C、%D、%e、%F、%g、%G、%h、%n、%r、%R、%t、%T、%u、および %V をサポートしています。 さらに、E 修飾子と O 修飾子は、解析はされますが、無視されます。
 
    %c 書式指定子は、現行ロケールの "適切な日時の表記" を生成するものとして指定されます。 C ロケールでは、`asctime` で生成されるのと同じ書式である `%a %b %e %T %Y` と同じになるよう、この表記が必要です。 以前のバージョンでは、%c 書式指定子は `MM/DD/YY HH:MM:SS` 表記を使用して時刻を書式設定していましたが、これは正しくありませんでした。 この問題は修正されました。
 
-- **timespec および TIME_UTC**
+- **timespec と TIME_UTC**
 
    \<time.h> ヘッダーは、C11 標準の `timespec` 型と `timespec_get` 関数を定義します。 さらに、現在、`timespec_get` 関数で使用する TIME_UTC マクロが定義されています。 この更新は、その識別子のいずれかの定義が競合しているコードに関して、破壊的変更です。
 
@@ -313,9 +313,9 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
 - **steady_clock**
 
-   [steady_clock](../standard-library/steady-clock-struct.md) の \<chrono> 実装が変更され、安定性と単調性のための C++ 標準の要件を満たすようになりました。 現在、`steady_clock` は [QueryPerformanceCounter()](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 結果として、Visual Studio では現在、`steady_clock::time_point` は `chrono::time_point<steady_clock>` の typedef です。ただし、他の実装では異なる場合があります。
+   [steady_clock](../standard-library/steady-clock-struct.md) の \<chrono> 実装が変更され、安定性と単調性のための C++ 標準の要件を満たすようになりました。 `steady_clock` は現在 [QueryPerformanceCounter()](https://msdn.microsoft.com/library/windows/desktop/ms644904.aspx) に基づき、`high_resolution_clock` は `steady_clock` の typedef です。 結果として、Visual Studio では現在、`steady_clock::time_point` は `chrono::time_point<steady_clock>` の typedef です。ただし、他の実装では異なる場合があります。
 
-- **アロケーターおよび const**
+- **アロケーターと const**
 
    現在、両サイドで const 引数を受け入れるには、アロケーターの等価/非等価の比較が必要です。 アロケーターがこれらの演算子をこのように定義する場合、
 
@@ -337,11 +337,11 @@ COM インターフェイスまたは POD オブジェクトではないオブ�
 
    Visual Studio 2013 以前では、`std::allocator::deallocate(p, n)` は、*n* に対して渡されていた引数を無視していました。  C++ 標準では常に、*p* を返した `allocate` の呼び出しに最初の引数として渡される値と *n* が同等である必要がありました。 しかし、現在のバージョンでは、*n* の値は検査されます。 標準で必要なものとは異なる引数を *n* に渡すコードは、ランタイムにクラッシュする可能性があります。
 
-- **hash_map および hash_set**
+- **hash_map と hash_set**
 
    非標準ヘッダー ファイルの \<hash_map> と \<hash_set> は Visual Studio 2015 では非推奨とされており、将来のリリースでは削除されます。 代わりに \<unordered_map> と \<unordered_set> を使用してください。
 
-- **比較子および operator()**
+- **比較子と operator()**
 
    現在、関連コンテナー (\<map> ファミリー) では、比較子に const を呼び出せる関数呼び出し演算子が必要です。 比較子クラス宣言の次のコードは現在、コンパイルに失敗します。
 
@@ -447,7 +447,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
 
    `/Zg` コンパイラ オプション (関数プロトタイプの生成) は使用できなくなりました。 前バージョンで、このコンパイラ オプションは非推奨とされました。
 
-- mstest.exe のコマンド ラインから C++/CLI で単体テストを実行できなくなりました。 代わりに、vstest.console.exe を使用します。 「[VSTest.Console.exe のコマンド ライン オプション](/visualstudio/test/vstest-console-options)」を参照してください。
+- mstest.exe のコマンド ラインから C++/CLI で単体テストを実行できなくなりました。 代わりに、vstest.console.exe を使用します。 「 [VSTest.Console.exe のコマンド ライン オプション](/visualstudio/test/vstest-console-options)」を参照してください。
 
 - **mutable キーワード**
 
@@ -1004,7 +1004,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     //other partial specializations here
     ```
 
-- **事前宣言に適用される規則(C にのみ適用)**
+- **事前宣言に適用される規則。 (C にのみ適用)**
 
    次のコードに対しては、C2065 が発生するようになりました。
 
@@ -1528,7 +1528,7 @@ Visual Studio 2015 では、コンパイラの準拠に関する継続的な強�
     };
     ```
 
-   この問題を解決するには、先頭の行を `#define A();` に変更します。
+   この問題を解決するには、先頭の行を次に変更します `#define A();`
 
    次のコードに対しては、エラー C2059: "構文エラー: ')'" が発生します。
 
@@ -3092,7 +3092,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - `CFileStatus` 構造体のサイズが変更されました。`m_attribute` のメンバーは、(`GetFileAttributes` から返される値に合わせて) BYTE から DWORD に変更されました。
 
-- Unicode ビルドの場合、`CRichEditCtrl` と `CRichEditView` は、RICHEDIT_CLASS (RichEdit 3.0 コントロール) ではなく MSFTEDIT_CLASS (RichEdit 4.1 コントロール) を使用します。
+- `CRichEditCtrl` と `CRichEditView` は、Unicode ビルドの場合、RICHEDIT_CLASS (RichEdit 3.0 コントロール) ではなく MSFTEDIT_CLASS (RichEdit 4.1 コントロール) を使用します。
 
 - Windows Vista、Windows 7、Windows 8 では、`AFX_GLOBAL_DATA::IsWindowsThemingDrawParentBackground` は常に TRUE なので、削除されました。
 
@@ -3404,7 +3404,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="mfc"></a>MFC
 
-- `CTime` クラス:`CTime` クラスは西暦 1900 年 1 月 1 日以降の日付を使用できるようになりました  (以前は西暦 1970 年 1 月 1 日以降でした)。
+- `CTime` クラス:`CTime` クラスは西暦 1900 年 1 月 1 日以降の日付を使用できるようになりました (以前は西暦 1970 年 1 月 1 日以降でした)。
 
 - MFC ダイアログのコントロールのタブ オーダー:タブ オーダーに MFC ActiveX コントロールが挿入されている場合、MFC ダイアログに含まれる複数のコントロールは正しいタブ オーダーになりません。 今回の変更で、この問題は解決します。
 
@@ -3438,7 +3438,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 - `sprintf` は、符号付きゼロの負の符号を出力するようになりました。
 
-- 標準への準拠のために `swprintf` は変更され、size パラメーターが必須になりました。 size パラメーターを指定しない `swprintf` の形式は非推奨になりました。
+- `swprintf` は標準への準拠のために変更され、size パラメーターが必須になりました。 size パラメーターを指定しない `swprintf` の形式は非推奨になりました。
 
 - `_set_security_error_handler` が削除されました。 その関数の呼び出しは削除してください。既定のハンドラーの方がはるかに安全にセキュリティ エラーを処理できます。
 
@@ -3466,7 +3466,7 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ### <a name="standard-library-2005"></a>標準ライブラリ (2005)
 
-- (\<exception> ヘッダーにある) 例外クラスは `std` 名前空間に移動されました。 以前のバージョンでは、このクラスはグローバル名前空間に含まれていました。 例外クラスが見つからないというエラーを解決するには、次の using ステートメントをコードに追加します。`using namespace std;`
+- (\<exception> ヘッダーにある) 例外クラスは `std` 名前空間に移動されました。 以前のバージョンでは、このクラスはグローバル名前空間に含まれていました。 例外クラスが見つからないというエラーを解決するには、次の using ステートメントをコードに追加します。 `using namespace std;`
 
 - `valarray::resize()` を呼び出すと、`valarray` の内容は失われ、既定値で置き換えられます。 `resize()` メソッドは、ベクターのように動的に増加するのではなく、`valarray` を再初期化するためのものです。
 
@@ -3524,4 +3524,4 @@ Visual Studio 2013 の C++ コンパイラは、Visual Studio 2010 で実装さ�
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio における Visual C++ の新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)
+[Visual Studio の Visual C++ の新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)
