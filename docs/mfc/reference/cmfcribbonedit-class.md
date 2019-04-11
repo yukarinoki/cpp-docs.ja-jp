@@ -74,10 +74,10 @@ helpviewer_keywords:
 - CMFCRibbonEdit [MFC], SetWidth
 ms.assetid: 9b85f1f2-446b-454e-9af9-104fdad8a897
 ms.openlocfilehash: 80ee43ae32416f9f62df419c4afbd46a0aa63cc8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/10/2019
 ms.locfileid: "58780484"
 ---
 # <a name="cmfcribbonedit-class"></a>CMFCRibbonEdit クラス
@@ -187,7 +187,7 @@ CMFCRibbonEdit();
 *lpszLabel*<br/>
 [in]ラベル、`CMFCRibbonEdit`コントロール。
 
-*nImage*<br/>
+*あり*<br/>
 [in]使用する小さいイメージのインデックス、`CMFCRibbonEdit`コントロール。 小さいイメージのコレクションは、親のリボン カテゴリによって管理されます。
 
 ### <a name="remarks"></a>Remarks
@@ -681,7 +681,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 親ウィンドウへのポインター、`CMFCRibbonEdit`オブジェクト。
 
-*data*<br/>
+*[データ]*<br/>
 アクセシビリティ データを`CMFCRibbonEdit`オブジェクト。
 
 ### <a name="return-value"></a>戻り値
