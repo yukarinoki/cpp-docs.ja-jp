@@ -51,8 +51,7 @@ class CMFCRibbonFontComboBox : public CMFCRibbonComboBox
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonFontComboBox::CMFCRibbonFontComboBox](#cmfcribbonfontcombobox)|
-  `CMFCRibbonFontComboBox` オブジェクトを構築して初期化します。|
+|[CMFCRibbonFontComboBox::CMFCRibbonFontComboBox](#cmfcribbonfontcombobox)|`CMFCRibbonFontComboBox` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 

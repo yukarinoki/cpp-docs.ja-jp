@@ -8,12 +8,12 @@ helpviewer_keywords:
 - cmpxchg16b instruction
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
-ms.openlocfilehash: 3cfe9d650b66dc08a96599652b52f0b153198afa
-ms.sourcegitcommit: ff3cbe4235b6c316edcc7677f79f70c3e784ad76
+ms.openlocfilehash: 9330b1405ca247364cd04d3ab399f66e4f332273
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53627399"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59037871"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
 
@@ -34,7 +34,7 @@ unsigned char _InterlockedCompareExchange128(
 
 #### <a name="parameters"></a>パラメーター
 
-*変換先*<br/>
+*保存先*<br/>
 [入力、出力]2 つの 64 ビット整数の配列は、変換先へのポインターは、128 ビット フィールドとしてと見なされます。 変換先のデータが一般保護違反を回避するために、配置、16 バイトである必要があります。
 
 *ExchangeHigh*<br/>
@@ -44,7 +44,7 @@ unsigned char _InterlockedCompareExchange128(
 [in]64 ビットの整数で、変換先の低い部分と交換される可能性があります。
 
 *ComparandResult*<br/>
-[入力、出力]\(128 ビット フィールドとしてと見なされます) 2 つの 64 ビット整数の配列へのポインターのコピー先と比較します。  出力では、これは、変換先の元の値で上書きされます。
+[入力、出力](128 ビット フィールドとしてと見なされます) 2 つの 64 ビット整数の配列へのポインターのコピー先と比較します。  出力では、これは、変換先の元の値で上書きされます。
 
 ## <a name="return-value"></a>戻り値
 
@@ -123,12 +123,12 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12
 ```
 
-**Microsoft 固有の仕様はここまで**
+**END Microsoft 固有の仕様**
 
 高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [_InterlockedCompareExchange の組み込み関数](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)
