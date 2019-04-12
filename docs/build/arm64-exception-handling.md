@@ -1,12 +1,12 @@
 ---
 title: ARM64 例外処理
 ms.date: 11/19/2018
-ms.openlocfilehash: ec81374f9a20cf5d23edda7d925705b6a4d5e2e6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.openlocfilehash: 55476119499a3216f6801877dba692b2a0d1d9ee
+ms.sourcegitcommit: 88631cecbe3e3fa752eae3ad05b7f9d9f9437b4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59031733"
+ms.lasthandoff: 04/12/2019
+ms.locfileid: "59534124"
 ---
 # <a name="arm64-exception-handling"></a>ARM64 例外処理
 
@@ -44,7 +44,7 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
 
 1. エピローグに条件付きのコードはありません。
 
-1. 専用のフレーム ポインター レジスタ。Sp が別のレジスタ (r29) を登録すると、プロローグ内に保存されている場合は、元の sp をいつでも回復可能性がありますように、関数全体で変更されません。
+1. 専用のフレーム ポインター レジスタ。れるため、元の sp をいつでも復旧可能性があります、sp が別のレジスタ (x29) を登録すると、プロローグ内で保存されている場合は、関数全体では変更されません。
 
 1. Sp が別のレジスタに保存しない限り、プロローグおよびエピローグ内でスタック ポインターのすべての操作が厳密に発生します。
 
@@ -54,90 +54,90 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
 
 ![スタック フレームのレイアウト](media/arm64-exception-handling-stack-frame.png "スタック フレームのレイアウト")
 
-フレーム チェーン関数では、最適化に関する考慮事項によって、ローカル変数領域内の任意の位置にある、fp と lr のペアを保存できます。 目標は、フレーム ポインター (r29) またはスタック ポインター (sp) に基づいて 1 つの単一の命令で到達可能なローカル変数の数を最大化します。 ただしの`alloca`関数チェーンを接続する必要があり、r29 はスタックの一番下を指す必要があります。 レジスタのペアのアドレス指定-モード カバレッジを向上できるように、不揮発性レジスタ保存領域は、ローカル領域のスタックの一番上に配置されます。 ここでは、最も効率的なプロローグ シーケンスのいくつかを示す例です。 わかりやすくするため、キャッシュの局所性の向上のためには、呼び出し先保存済みレジスタを格納するすべての標準のプロローグでの順序は、「を増大」順序では。 `#framesz` 以下は、(alloca の領域を除く) スタック全体のサイズを表します。 `#localsz` `#outsz`ローカル領域のサイズを表す (など、保存するための領域、 \<r29、lr > ペア) とそれぞれのパラメーターのサイズを送信します。
+フレーム チェーン関数では、最適化に関する考慮事項によって、ローカル変数領域内の任意の位置にある、fp と lr のペアを保存できます。 目標は、フレーム ポインター (x29) またはスタック ポインター (sp) に基づいて 1 つの単一の命令で到達可能なローカル変数の数を最大化します。 ただしの`alloca`関数チェーンを接続する必要があり、x29 はスタックの一番下を指す必要があります。 レジスタのペアのアドレス指定-モード カバレッジを向上できるように、不揮発性レジスタ保存領域は、ローカル領域のスタックの一番上に配置されます。 ここでは、最も効率的なプロローグ シーケンスのいくつかを示す例です。 わかりやすくするため、キャッシュの局所性の向上のためには、呼び出し先保存済みレジスタを格納するすべての標準のプロローグでの順序は、「を増大」順序では。 `#framesz` 以下は、(alloca の領域を除く) スタック全体のサイズを表します。 `#localsz` `#outsz`ローカル領域のサイズを表す (など、保存するための領域、 \<x29、lr > ペア) とそれぞれのパラメーターのサイズを送信します。
 
 1. Chained, #localsz \<= 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        stp    r29, lr, [sp, -#localsz]!    // save <r29,lr> at bottom of local area
-        mov    r29,sp                   // r29 points to bottom of local
-        sub    sp, #outsz               // (optional for #outsz != 0)
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        stp    x29,lr,[sp,#-localsz]!   // save <x29,lr> at bottom of local area
+        mov    x29,sp                   // x29 points to bottom of local
+        sub    sp,sp,#outsz             // (optional for #outsz != 0)
     ```
 
 1. Chained, #localsz > 512
 
     ```asm
-        stp    r19,r20,[sp,-96]!        // pre-indexed, save in 1st FP/INT pair
-        stp    d8,d9,[sp,16]            // save in FP regs (optional)
-        stp    r0,r1,[sp,32]            // home params (optional)
-        stp    r2,r3,[sp, 48]
-        stp    r4,r5,[sp,64]
-        stp    r6,r7,[sp,72]
-        sub    sp,#localsz+#outsz       // allocate remaining frame
-        stp    r29, lr, [sp, #outsz]    // save <r29,lr> at bottom of local area
-        add    r29,sp, #outsz           // setup r29 points to bottom of local area
+        stp    x19,x20,[sp,#-96]!        // pre-indexed, save in 1st FP/INT pair
+        stp    d8,d9,[sp,#16]            // save in FP regs (optional)
+        stp    x0,x1,[sp,#32]            // home params (optional)
+        stp    x2,x3,[sp,#48]
+        stp    x4,x5,[sp,#64]
+        stp    x6,x7,[sp,#72]
+        sub    sp,sp,#(localsz+outsz)   // allocate remaining frame
+        stp    x29,lr,[sp,#outsz]       // save <x29,lr> at bottom of local area
+        add    x29,sp,#outsz            // setup x29 points to bottom of local area
     ```
 
 1. (Lr が保存されていない)、チェーンのリーフ関数
 
     ```asm
-        stp    r19,r20,[sp, -72]!       // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp, 16]
-        str    r23 [sp,32]
-        stp    d8,d9,[sp,40]            // save FP regs (optional)
-        stp    d10,d11,[sp,56]
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]
+        str    x23,[sp,#32]
+        stp    d8,d9,[sp,#40]           // save FP regs (optional)
+        stp    d10,d11,[sp,#56]
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   すべてのローカル変数は、SP のベース \<r29、lr > 前のフレームを指します。 フレームのサイズの\<= 512、"sp、sub…"regs 保存領域がスタックの一番下に移動した場合は、すぐ最適化できます。 その欠点は、上、その他のレイアウトと一貫性がありませんし、保存 regs ペア regs とオフセット前と後にインデックス付きのアドレス指定モードの範囲の一部を取得することは。
+   すべてのローカル変数は、SP のベース \<x29、lr > 前のフレームを指します。 フレームのサイズの\<= 512、"sp、sub…"regs 保存領域がスタックの一番下に移動した場合は、すぐ最適化できます。 その欠点は、上、その他のレイアウトと一貫性がありませんし、保存 regs ペア regs とオフセット前と後にインデックス付きのアドレス指定モードの範囲の一部を取得することは。
 
 1. チェーンは、リーフ以外の機能が (Int 保存領域に lr が保存されます)
 
     ```asm
-        stp    r19,r20,[sp,-80]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        stp    r23, lr,[sp, 32]         // save last Int reg and lr
-        stp    d8,d9,[sp, 48]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,64]          // ...
-        sub    sp,#framesz-80           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        stp    x23,lr,[sp,#32]          // save last Int reg and lr
+        stp    d8,d9,[sp,#48]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#64]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
    または、偶数と Int レジスタを保存します
 
     ```asm
-        stp    r19,r20,[sp,-72]!        // pre-indexed, save in 1st FP/INT reg-pair
-        stp    r21,r22,[sp,16]          // ...
-        str    lr,[sp, 32]              // save lr
-        stp    d8,d9,[sp, 40]           // save FP reg-pair (optional)
-        stp    d10,d11,[sp,56]          // ...
-        sub    sp,#framesz-72           // allocate the remaining local area
+        stp    x19,x20,[sp,#-80]!       // pre-indexed, save in 1st FP/INT reg-pair
+        stp    x21,x22,[sp,#16]         // ...
+        str    lr,[sp,#32]              // save lr
+        stp    d8,d9,[sp,#40]           // save FP reg-pair (optional)
+        stp    d10,d11,[sp,#56]         // ...
+        sub    sp,sp,#(framesz-80)      // allocate the remaining local area
     ```
 
-   保存 r19 のみ:
+   保存 x19 のみ:
 
     ```asm
-        sub    sp, sp, #16              // reg save area allocation*
-        stp    r19,lr,[sp,0]            // save r19, lr
-        sub    sp,#framesz-16           // allocate the remaining local area
+        sub    sp,sp,#16                // reg save area allocation*
+        stp    x19,lr,[sp]              // save x19, lr
+        sub    sp,sp,#(framesz-16)      // allocate the remaining local area
     ```
 
    \* 領域の割り当てを保存 reg にアンワインド コードを事前にインデックス付きの reg lr stp を表すことができないため、stp に折りたたむされません。
 
-   すべてのローカル変数は、SP のベース \<r29 > 前のフレームを指します。
+   すべてのローカル変数は、SP のベース \<x29 > 前のフレームを指します。
 
 1. Chained, #framesz \<= 512, #outsz = 0
 
     ```asm
-        stp    r29, lr, [sp, -#framesz]!    // pre-indexed, save <r29,lr>
-        mov    r29,sp                       // r29 points to bottom of stack
-        stp    r19,r20,[sp, #framesz -32]   // save INT pair
-        stp    d8,d9,[sp, #framesz -16]     // save FP pair
+        stp    x29,lr,[sp,#-framesz]!       // pre-indexed, save <x29,lr>
+        mov    x29,sp                       // x29 points to bottom of stack
+        stp    x19,x20,[sp,#(framesz-32)]   // save INT pair
+        stp    d8,d9,[sp,#(framesz-16)]     // save FP pair
     ```
 
    上記の 1 プロローグを比較すると、利点は、すべてのレジスタ保存は、手順の命令を割り当て、1 つだけのスタックの直後に実行する準備が整いましたです。 したがってはありませんへの対策を命令レベルの並列処理を妨げる sp に。
@@ -145,38 +145,38 @@ ARM64 の Windows では、同じ構造化例外処理は非同期のハード�
 1. 連結するには、フレーム サイズ > 512 (alloca なしの関数は省略可能)
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        sub    sp,#framesz-80               // allocate the remaining local area
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        sub    sp,sp,#(framesz-80)          // allocate the remaining local area
     ```
 
-   最適化のために、「reg ペア」および前/後-indexed オフセットでアドレス指定モードより優れたカバレッジを提供するローカル エリア内の任意の位置にある r29 を配置することができます。 フレーム ポインターの下の [ローカル] のアクセスは、SP のベース
+   最適化のために、「reg ペア」および前/後-indexed オフセットでアドレス指定モードより優れたカバレッジを提供するローカル エリア内の任意の位置にある x29 を配置することができます。 フレーム ポインターの下の [ローカル] のアクセスは、SP のベース
 
 1. 連結するには、フレーム サイズ > 4 K、alloca() の有無
 
     ```asm
-        stp    r29, lr, [sp, -80]!          // pre-indexed, save <r29,lr>
-        stp    r19,r20,[sp,16]              // save in INT regs
-        stp    r21,r22,[sp,32]              // ...
-        stp    d8,d9,[sp,48]                // save in FP regs
-        stp    d10,d11,[sp,64]
-        mov    r29,sp                       // r29 points to top of local area
-        mov    r8, #framesz/16
-        bl     chkstk
-        sub    sp, r8*16                    // allocate remaining frame
+        stp    x29,lr,[sp,#-80]!            // pre-indexed, save <x29,lr>
+        stp    x19,x20,[sp,#16]             // save in INT regs
+        stp    x21,x22,[sp,#32]             // ...
+        stp    d8,d9,[sp,#48]               // save in FP regs
+        stp    d10,d11,[sp,#64]
+        mov    x29,sp                       // x29 points to top of local area
+        mov    x15,#(framesz/16)
+        bl     __chkstk
+        sub    sp,sp,x15,lsl#4              // allocate remaining frame
                                             // end of prolog
         ...
-        sp = alloca                         // more alloca() in body
+        sub    sp,sp,#alloca                // more alloca() in body
         ...
                                             // beginning of epilog
-        mov    sp,r29                       // sp points to top of local area
-        ldp    d10,d11, [sp,64],
+        mov    sp,x29                       // sp points to top of local area
+        ldp    d10,d11,[sp,#64]
         ...
-        ldp    r29, lr, [sp], -80           // post-indexed, reload <r29,lr>
+        ldp    x29,lr,[sp],#80              // post-indexed, reload <x29,lr>
     ```
 
 ## <a name="arm64-exception-handling-information"></a>ARM64 例外処理情報
@@ -235,7 +235,7 @@ ARM64 用には、各 .pdata レコードは、長さは 8 バイトです。 �
 
    c. **エピローグ開始インデックス**10 ビットは、(よりもより多くのビットを 2**拡張コード ワード**) フィールドの最初のバイトのインデックスを示すアンワインド コードをこのエピローグを記述します。
 
-1. エピローグ スコープの一覧では、アンワインド コードを含むバイトの配列に関しては後、は、後のセクションで詳しく説明します。 この配列は、最も近いフルワード境界の末尾に埋め込まれます。 バイトは、リトル エンディアン順で格納され、リトル エンディアン モードで直接フェッチ可能になっています。
+1. エピローグ スコープの一覧では、アンワインド コードを含むバイトの配列に関しては後、は、後のセクションで詳しく説明します。 この配列は、最も近いフルワード境界の末尾に埋め込まれます。 アンワインド コードは、関数の端に向かって、関数の本体に最も近い以降、この配列に書き込まれます。 それぞれのアンワインド コード バイトは、ビッグ エンディアン順フェッチできます直接、最初に、最上位バイトで始まるため、操作と、コードの残りの部分の長さを識別するに格納されます。
 
 1. アンワインド コード バイトの後に最後に場合、 **X**ヘッダー内のビットが 1 に設定された例外ハンドラーの情報を取得します。 これは、1 つの**例外ハンドラーの RVA**可変長の例外ハンドラーで必要なデータ量によって直後に自体には、例外ハンドラーのアドレスを指定します。
 
@@ -286,22 +286,22 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 |アンワインド コード|Bits と解釈|
 |-|-|
 |`alloc_s`|000xxxxx: サイズの小さいスタックを割り当てる\<512 (2 ^5 * 16)。|
-|`save_r19r20_x`|    001zzzzz: 保存\<r19、r20 > [sp #Z * 8] にあるペア!、事前にインデックス付きのオフセット >-248 を = |
-|`save_fplr`|        01zzzzzz: 保存\<r29、lr > ペアで [sp + #Z * 8]、オフセット\<504 を = です。 |
-|`save_fplr_x`|        10zzzzzz: 保存\<r29、lr > ペアで [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 を = |
+|`save_r19r20_x`|    001zzzzz: 保存\<x19、x20 > [sp #Z * 8] にあるペア!、事前にインデックス付きのオフセット >-248 を = |
+|`save_fplr`|        01zzzzzz: 保存\<x29、lr > ペアで [sp + #Z * 8]、オフセット\<504 を = です。 |
+|`save_fplr_x`|        10zzzzzz: 保存\<x29、lr > ペアで [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 を = |
 |`alloc_m`|        11000 xxx ' xxxxxxxx: サイズの大きなスタックを割り当てる\<16 k (2 ^11 * 16)。 |
-|`save_regp`|        110010xx'xxzzzzzz: ある r(19+#X) ペアを保存する [sp + #Z * 8]、オフセット\<504 を = |
-|`save_regp_x`|        110011xx'xxzzzzzz: ペア r(19+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 を = |
-|`save_reg`|        110100xx'xxzzzzzz: reg r(19+#X) での保存 [sp + #Z * 8]、オフセット\<504 を = |
-|`save_reg_x`|        1101010 x'xxxzzzzz: reg r(19+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット >-256 を = |
-|`save_lrpair`|         1101011 x'xxzzzzzz: ペアの保存\<r19 + 2 *#X, lr > で [sp + #Z*8]、オフセット\<504 を = |
+|`save_regp`|        110010xx'xxzzzzzz: ある x(19+#X) ペアを保存する [sp + #Z * 8]、オフセット\<504 を = |
+|`save_regp_x`|        110011xx'xxzzzzzz: ペア x(19+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 を = |
+|`save_reg`|        110100xx'xxzzzzzz: reg x(19+#X) での保存 [sp + #Z * 8]、オフセット\<504 を = |
+|`save_reg_x`|        1101010 x'xxxzzzzz: reg x(19+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット >-256 を = |
+|`save_lrpair`|         1101011 x'xxzzzzzz: ペアの保存\<x (19 + 2 *#X)、lr > にある [sp + #Z*8]、オフセット\<504 = |
 |`save_fregp`|        1101100 x'xxzzzzzz: 保存でペア d(8+#X) [sp + #Z * 8]、オフセット\<504 を = |
 |`save_fregp_x`|        1101101 x'xxzzzzzz: ペアの d(8+#X) 保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット > -512 = |
 |`save_freg`|        1101110 x'xxzzzzzz: reg d(8+#X) での保存 [sp + #Z * 8]、オフセット\<504 を = |
 |`save_freg_x`|        11011110' xxxzzzzz: reg d(8+#X) での保存 [sp-(#Z + 1) * 8]!、事前にインデックス付きのオフセット >-256 を = |
 |`alloc_l`|         11100000' xxxxxxxx 'xxxxxxxx' xxxxxxxx: サイズの大きなスタックを割り当てる\<256 M (2 ^24 * 16) |
-|`set_fp`|        11100001: r29 設定: と: mov r29、sp |
-|`add_fp`|        11100010' xxxxxxxx: r29 のセットアップ: r29、sp、#x 追加 * 8 |
+|`set_fp`|        11100001: x29 設定: と: mov x29、sp |
+|`add_fp`|        11100010' xxxxxxxx: x29 のセットアップ: sp、x29 を追加 #x * 8 |
 |`nop`|            11100011: なしのアンワインド操作が必要です。 |
 |`end`|            11100100: アンワインド コードの最後。 意味エピローグで廃止します。 |
 |`end_c`|        11100101: チェーンの現在のスコープ内でのアンワインド コードの最後。 |
@@ -347,12 +347,12 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 - **関数の長さ**11 ビット フィールドは 4 で除算してバイト単位で関数全体の長さを提供します。 関数が 8 k より大きい場合は、フル .xdata レコードを代わりに使用する必要があります。
 - **フレーム サイズを**はこの関数は、16 で割った値に割り当てられたスタックのバイト数を示す 9 ビット フィールドです。 スタックの (8 k から 16) バイトより大きいを割り当てることが関数には、フル .xdata レコードを使用する必要があります。 これには、ローカル変数領域、パラメーター領域、呼び出し先保存 Int と FP 領域、およびホーム パラメータ エリアで、送信は、動的な割り当て領域を除外が含まれます。
 - **CR**関数がフレーム チェーンと戻り値のリンクを設定する追加の命令を含めるかどうかを示す 2 ビット フラグです。
-  - 00 = チェーン関数は、 \<r29、lr > ペアのスタックには保存されません。
+  - 00 = チェーン関数は、 \<x29、lr > ペアのスタックには保存されません。
   - 01 = チェーン関数は、 \<lr > スタックに保存されます
   - 10 = 予約されています。
-  - 11 = 連鎖的に呼び出す関数は、プロローグとエピローグでストア/読み込みのペアの命令が使用される\<r29、lr >
-- **H**関数の先頭に格納することでは、関数の整数パラメーター ホームかどうかを示す 1 ビット フラグは、(r0 r7) を登録します。 (0 = レジスタに 1 をホームいない元のレジスタを =)。
-- **RegI**は正規のスタックの場所に保存された非 volatile INT レジスタ (r19 r28) の数を示す 4 ビット フィールドです。
+  - 11 = 連鎖的に呼び出す関数は、プロローグとエピローグでストア/読み込みのペアの命令が使用される\<x29、lr >
+- **H**は関数の整数パラメーター ホームかどうかを示す 1 ビット フラグは、関数の先頭に格納することによって (x0 x7) を登録します。 (0 = レジスタに 1 をホームいない元のレジスタを =)。
+- **RegI**は正規のスタックの場所に保存された非 volatile INT レジスタ (x19 x28) の数を示す 4 ビット フィールドです。
 - **RegF**は正規のスタックの場所に保存された非 volatile FP レジスタ (d8 d15) の数を示す 3 ビット フィールドです。 (RegF = 0: FP レジスタが保存されていません。RegF > 0。RegF + 1 の FP レジスタ保存されます)。 パックされたアンワインド データは FP の 1 つだけのレジスタを保存する関数を使用できません。
 
 上記のセクションでは 1、パラメーター領域の送信) (なし、2、3 および 4 のカテゴリに分類される標準プロローグは、パックされたアンワインド形式で表現できます。  エピローグとよく似ていますフォームでは、以下の正規関数を除く**H** 、影響を与えません、`set_fp`命令を省略すると、およびエピローグ内の手順として各ステップの手順の順序が逆になっています。 パックされた xdata のアルゴリズムでは、次の表に記載された手順に従います。
@@ -367,26 +367,26 @@ ULONG ComputeXdataSize(PULONG *Xdata)
 
 手順 4: ホームのパラメータ エリアには、入力引数を保存します。
 
-手順 5: ローカルの領域を含む、残りのスタックを割り当てる\<r29、lr > のペアとパラメーターの領域を送信します。 5a は、正規の種類を 1 に対応します。 5b と 5 c は正規の種類 2 です。 5 d 5 e 3 の両方の種類とは 4」と入力します。
+手順 5: ローカルの領域を含む、残りのスタックを割り当てる\<x29、lr > のペアとパラメーターの領域を送信します。 5a は、正規の種類を 1 に対応します。 5b と 5 c は正規の種類 2 です。 5 d 5 e 3 の両方の種類とは 4」と入力します。
 
 ステップ番号|フラグの値|手順の数|オペコード|アンワインド コード
 -|-|-|-|-
 0|||`#intsz = RegI * 8;`<br/>`if (CR==01) #intsz += 8; // lr`<br/>`#fpsz = RegF * 8;`<br/>`if(RegF) #fpsz += 8;`<br/>`#savsz=((#intsz+#fpsz+8*8*H)+0xf)&~0xf)`<br/>`#locsz = #famsz - #savsz`|
-1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp r19,r20,[sp,#savsz]!`<br/>`stp r21,r22,[sp,16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
-2|**CR**01 = = *|1|`str lr,[sp, #intsz-8]`\*|`save_reg`
-3|0 < **RegF** < = 7|(RegF + 1)/2 +<br/>(RegF + 1) %2)。|`stp d8,d9,[sp, #intsz]`\*\*<br/>`stp d10,d11,[sp, #intsz+16]`<br/>`...`<br/>`str d(8+RegF),[sp, #intsz+#fpsz-8]`|`save_fregp`<br/>`...`<br/>`save_freg`
-4|**H** 1 = =|4|`stp r0,r1,[sp, #intsz+#fpsz]`<br/>`stp r2,r3,[sp, #intsz+#fpsz+16]`<br/>`stp r4,r5,[sp, #intsz+#fpsz+32]`<br/>`stp r6,r7,[sp, #intsz+#fpsz+48]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
-5a|**CR** 11 を = = (& a) (& a) #locsz<br/> <= 512|2|`stp r29,lr,[sp,-#locsz]!`<br/>`mov r29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
-5b|**CR** 11 を = = (&AMP; A) (&AMP; A)<br/>512 < #locsz <= 4088|3|`sub sp,sp, #locsz`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-c.|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`<br/>`stp r29,lr,[sp,0]`<br/>`add r29, sp, 0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
-5 d|(**CR** 00 = = \| \| **CR**01 = =) (&AMP; A) (&AMP; A)<br/>#locsz <= 4088|1|`sub sp,sp, #locsz`|`alloc_s`/`alloc_m`
-5e|(**CR** 00 = = \| \| **CR**01 = =) (&AMP; A) (&AMP; A)<br/>#locsz > 4088|2|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
+1|0 < **regI** < = 10|RegI / 2 + **RegI** % 2|`stp x19,x20,[sp,#savsz]!`<br/>`stp x21,x22,[sp,#16]`<br/>`...`|`save_regp_x`<br/>`save_regp`<br/>`...`
+2|**CR**01 = = *|1|`str lr,[sp,#(intsz-8)]`\*|`save_reg`
+3|0 < **RegF** < = 7|(RegF + 1)/2 +<br/>(RegF + 1) %2)。|`stp d8,d9,[sp,#intsz]`\*\*<br/>`stp d10,d11,[sp,#(intsz+16)]`<br/>`...`<br/>`str d(8+RegF),[sp,#(intsz+fpsz-8)]`|`save_fregp`<br/>`...`<br/>`save_freg`
+4|**H** 1 = =|4|`stp x0,x1,[sp,#(intsz+fpsz)]`<br/>`stp x2,x3,[sp,#(intsz+fpsz+16)]`<br/>`stp x4,x5,[sp,#(intsz+fpsz+32)]`<br/>`stp x6,x7,[sp,#(intsz+fpsz+48)]`|`nop`<br/>`nop`<br/>`nop`<br/>`nop`
+5a|**CR** 11 を = = (& a) (& a) #locsz<br/> <= 512|2|`stp x29,lr,[sp,#-locsz]!`<br/>`mov x29,sp`\*\*\*|`save_fplr_x`<br/>`set_fp`
+5b|**CR** 11 を = = (&AMP; A) (&AMP; A)<br/>512 < #locsz <= 4080|3|`sub sp,sp,#locsz`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+c.|**CR** == 11 && #locsz > 4080|4|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`<br/>`stp x29,lr,[sp,0]`<br/>`add x29,sp,0`|`alloc_m`<br/>`alloc_s`/`alloc_m`<br/>`save_fplr`<br/>`set_fp`
+5 d|(**CR** 00 = = \| \| **CR**01 = =) (&AMP; A) (&AMP; A)<br/>#locsz <= 4080|1|`sub sp,sp,#locsz`|`alloc_s`/`alloc_m`
+5e|(**CR** 00 = = \| \| **CR**01 = =) (&AMP; A) (&AMP; A)<br/>#locsz > 4080|2|`sub sp,sp,4080`<br/>`sub sp,sp,#(locsz-4080)`|`alloc_m`<br/>`alloc_s`/`alloc_m`
 
 \* 場合**CR** 01 = = と**RegI**奇数、手順 2. と手順 1. で最後の save_rep が 1 つ save_regp にマージされます。
 
 \*\* 場合**RegI** == **CR** 0、= = と**RegF** ! = 0、最初の stp、浮動小数点数は、前置デクリメント。
 
-\*\*\* 対応する命令`mov r29, sp`はエピローグ内に存在します。 パックされたアンワインド データは、関数が r29 から sp の復元が必要な場合に使用できません。
+\*\*\* 対応する命令`mov x29,sp`はエピローグ内に存在します。 パックされたアンワインド データは、関数が x29 から sp の復元が必要な場合に使用できません。
 
 ### <a name="unwinding-partial-prologs-and-epilogs"></a>アンワインドの部分的なプロローグとエピローグ
 
@@ -397,16 +397,16 @@ c.|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088
 たとえば、このプロローグとエピローグ シーケンスを実行します。
 
 ```asm
-0000:    stp    r29, lr, [sp, -256]!        // save_fplr_x  256 (pre-indexed store)
-0004:    stp    d8,d9,[sp,224]              // save_fregp 0, 224
-0008:    stp    r19,r20,[sp,240]            // save_regp 0, 240
-000c:    mov    r29,sp                      // set_fp
+0000:    stp    x29,lr,[sp,#-256]!          // save_fplr_x  256 (pre-indexed store)
+0004:    stp    d8,d9,[sp,#224]             // save_fregp 0, 224
+0008:    stp    x19,x20,[sp,#240]           // save_regp 0, 240
+000c:    mov    x29,sp                      // set_fp
          ...
-0100:    mov    sp,r29                      // set_fp
-0104:    ldp    r19,r20,[sp,240]            // save_regp 0, 240
+0100:    mov    sp,x29                      // set_fp
+0104:    ldp    x19,x20,[sp,#240]           // save_regp 0, 240
 0108:    ldp    d8,d9,[sp,224]              // save_fregp 0, 224
-010c:    ldp    r29, lr, [sp, -256]!        // save_fplr_x  256 (post-indexed load)
-0110:    ret     lr                         // end
+010c:    ldp    x29,lr,[sp],#256            // save_fplr_x  256 (post-indexed load)
+0110:    ret    lr                          // end
 ```
 
 各オペコードは、この操作を記述する適切なアンワインド コードを示します。 一連のプロローグのアンワインド コードは、(エピローグの最後の命令は含みません) エピローグのアンワインド コードの正確なミラー イメージを最初に注目するには。 これは一般的な状況とこのため、アンワインドのプロローグ コードは常と見なされます、プロローグの実行順序とは逆の順序で格納します。
@@ -442,9 +442,9 @@ c.|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088
 - (リージョン 1: 開始)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
@@ -460,9 +460,9 @@ c.|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088
 
     ```asm
     ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
@@ -489,27 +489,27 @@ c.|**CR** == 11 && #locsz > 4088|4|`sub sp,sp,4088`<br/>`sub sp,sp, (#locsz-4088
 - (リージョン 1: 開始)
 
     ```asm
-        stp     r29, lr, [sp, -256]!    // save_fplr_x  256 (pre-indexed store)
-        stp     r19,r20,[sp,240]        // save_regp 0, 240
-        mov     r29,sp                  // set_fp
+        stp     x29,lr,[sp,#-256]!      // save_fplr_x  256 (pre-indexed store)
+        stp     x19,x20,[sp,#240]       // save_regp 0, 240
+        mov     x29,sp                  // set_fp
         ...
     ```
 
 - (リージョン 2: 開始)
 
     ```asm
-        stp     r21,r22,[sp,224]        // save_regp 2, 224
+        stp     x21,x22,[sp,#224]       // save_regp 2, 224
         ...
-        ldp     r21,r22,[sp,224]        // save_regp 2, 224
+        ldp     x21,x22,[sp,#224]       // save_regp 2, 224
     ```
 
 - (リージョン 2: 終了)
 
     ```asm
         ...
-        mov     sp,r29                  // set_fp
-        ldp     r19,r20,[sp,240]        // save_regp 0, 240
-        ldp     r29, lr, [sp, -256]!    // save_fplr_x  256 (post-indexed load)
+        mov     sp,x29                  // set_fp
+        ldp     x19,x20,[sp,#240]       // save_regp 0, 240
+        ldp     x29,lr,[sp],#256        // save_fplr_x  256 (post-indexed load)
         ret     lr                      // end
     ```
 
