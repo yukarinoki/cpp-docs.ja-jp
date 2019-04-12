@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Makefile projects, creating
 - project files [C++], Makefile projects
 ms.assetid: dd077af3-97a8-48fb-baaa-cf7e07ddef61
-ms.openlocfilehash: bb28d76b0ec459b5fd63f6a00dedff723274e90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.openlocfilehash: 9c2edfe35233672e8117d336ba40cfea497b1a22
+ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827588"
+ms.lasthandoff: 04/05/2019
+ms.locfileid: "59035599"
 ---
 # <a name="create-a-c-makefile-project"></a>C メイクファイル プロジェクトを作成します。
 
@@ -21,8 +21,8 @@ ms.locfileid: "57827588"
 既存のメイクファイル プロジェクトがある場合、Visual Studio IDE でそれをコード化またはデバッグするとき、次の選択肢が表示されます。
 
 - Visual Studio が IntelliSense を使用する .vcxproj ファイルを構成する、既存のメイクファイルを使用する Visual Studio でメイクファイル プロジェクトを作成します。 (ネイティブの MSBuild プロジェクトで与えられる IDE 機能は一部のみ与えられます。)下の「[メイクファイル プロジェクトを作成するには](#create_a_makefile_project)」を参照してください。
-- **[既存コード ファイルからの新しいプロジェクトの作成]** ウィザードを使用し、ソース コードからネイティブ MSBuild プロジェクトを作成します。 元のメイクファイルは、この後は使用されません。 詳細については、「[方法 :既存のコードから C++ プロジェクトを作成](../how-to-create-a-cpp-project-from-existing-code.md)です。
-- **Visual Studio 2017 以降**:使用して、**フォルダーを開く**を編集してとしてメイクファイル プロジェクトのビルドの機能-MSBuild システムを介さず、します。 詳細については、[C++ 用のフォルダーを開くプロジェクト](../open-folder-projects-cpp.md)を参照してください。
+- **[既存コード ファイルからの新しいプロジェクトの作成]** ウィザードを使用し、ソース コードからネイティブ MSBuild プロジェクトを作成します。 元のメイクファイルは、この後は使用されません。 詳細については、「[方法 :既存のコードから C++ プロジェクトを作成する](../how-to-create-a-cpp-project-from-existing-code.md)」を参照してください。
+- **Visual Studio 2017 以降**: 使用して、**フォルダーを開く**を編集してとしてメイクファイル プロジェクトのビルドの機能-MSBuild システムを介さず、します。 詳細については、「[Open Folder projects for C++](../open-folder-projects-cpp.md)」 (C++ の [フォルダーを開く] プロジェクト) をご覧ください。
 
 ## <a name="a-namecreateamakefileproject-to-create-a-makefile-project-with-the-makefile-project-template"></a><a name="create_a_makefile_project"> メイクファイル プロジェクトのテンプレートでメイクファイル プロジェクトを作成するには
 
@@ -54,11 +54,11 @@ Visual Studio 2017 以降では、メイクファイル プロジェクト テ�
 
 - **リビルド コマンドライン。**[ビルド] メニューからユーザーが再構築を選択するときに実行するコマンドラインを指定します。 プロジェクトのプロパティ ページの Nmake ページですべてのコマンド ライン フィールドを再構築表示されます。
 
-## <a name="how-to-enable-intellisense-for-makefile-projects"></a>方法: メイクファイル プロジェクトの IntelliSense を有効にします。
+## <a name="how-to-enable-intellisense-for-makefile-projects"></a>方法: メイクファイル プロジェクトで IntelliSense を使用可能にする
 
 IntelliSense は、ときに、特定のプロジェクトの設定またはコンパイラ オプションが正しく設定されていません、メイクファイル プロジェクトで失敗します。 メイクファイル プロジェクトの構成に IntelliSense が想定どおりに機能するようにこれらの手順に従います。
 
-1. **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[構成プロパティ]** ノードを展開します。
 
@@ -86,7 +86,7 @@ IntelliSense は、ときに、特定のプロジェクトの設定またはコ�
 
 ## <a name="see-also"></a>関連項目
 
-[IntelliSense の使用](/visualstudio/ide/using-intellisense)<br>
+[Using IntelliSense](/visualstudio/ide/using-intellisense)<br>
 [NMAKE リファレンス](nmake-reference.md)<br>
 [方法: 既存のコードから C++ プロジェクトを作成](../how-to-create-a-cpp-project-from-existing-code.md)
 [メイクファイルの特殊文字](special-characters-in-a-makefile.md)<br/>
