@@ -23,7 +23,7 @@ ms.locfileid: "57822601"
 
 ## <a name="syntax"></a>構文
 
-> **/CLRUNMANAGEDCODECHECK****[:NO]**
+> **/CLRUNMANAGEDCODECHECK** **[:NO]**
 
 ## <a name="remarks"></a>Remarks
 

@@ -22,7 +22,7 @@ ms.locfileid: "57819855"
 
 ## <a name="syntax"></a>構文
 
-> **/EXPORT:**<em>entryname</em>[**,\@**<em>ordinal</em>**[,NONAME]****[,DATA]**
+> **/EXPORT:**<em>entryname</em>[**,\@**<em>ordinal</em>[**,NONAME**]] [**,DATA**]
 
 ## <a name="remarks"></a>Remarks
 

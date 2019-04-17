@@ -20,7 +20,7 @@ ms.locfileid: "57813319"
 
 ## <a name="syntax"></a>構文
 
-> **/NXCOMPAT****[:NO]**
+> **/NXCOMPAT** **[:NO]**
 
 ## <a name="remarks"></a>Remarks
 

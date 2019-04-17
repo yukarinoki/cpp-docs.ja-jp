@@ -21,7 +21,7 @@ ms.locfileid: "57807755"
 
 ## <a name="syntax"></a>構文
 
-> **/DYNAMICBASE****[:NO]**
+> **/DYNAMICBASE** [**:NO**]
 
 ## <a name="remarks"></a>Remarks
 
