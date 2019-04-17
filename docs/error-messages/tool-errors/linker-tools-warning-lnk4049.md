@@ -1,23 +1,25 @@
 ---
 title: リンカー ツールの警告 LNK4049
-ms.date: 04/09/2019
+ms.date: 04/15/2019
 f1_keywords:
 - LNK4049
 helpviewer_keywords:
 - LNK4049
 ms.assetid: 5fd5fb24-c860-4149-a557-0ac26a65d97c
-ms.openlocfilehash: 357bf5a981dddadfd79d2d6981ccc9c478909097
-ms.sourcegitcommit: 0ad3f4517e64900a2702dd3d366586f9e2bce2c2
+ms.openlocfilehash: b527d15310dba70c1bae21e601db17db2900e219
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2019
-ms.locfileid: "59477354"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59674254"
 ---
 # <a name="linker-tools-warning-lnk4049"></a>リンカー ツールの警告 LNK4049
 
 > シンボル '*シンボル*'で定義されている'*<filename.obj>*' をインポート
 
-シンボルが両方からエクスポートし、プログラムにインポートします。
+[_declspec](../../cpp/dllexport-dllimport.md)が指定されました*シンボル*オブジェクト ファイルでシンボルが定義されている場合でも *<filename.obj>* で同じイメージ。 削除、`__declspec(dllimport)`修飾子をこの警告を解決します。
+
+## <a name="remarks"></a>Remarks
 
 1 つのオブジェクト ファイルにシンボルの定義を使用して参照するときに、この警告がリンカーによって生成された、`__declspec(dllimport)`別の修飾子を宣言します。
 
