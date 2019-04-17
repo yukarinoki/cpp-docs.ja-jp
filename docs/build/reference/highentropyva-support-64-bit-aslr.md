@@ -15,7 +15,7 @@ ms.locfileid: "57822003"
 
 ## <a name="syntax"></a>構文
 
-> **/HIGHENTROPYVA****[:NO]**
+> **/HIGHENTROPYVA** **[:NO]**
 
 ## <a name="remarks"></a>Remarks
 

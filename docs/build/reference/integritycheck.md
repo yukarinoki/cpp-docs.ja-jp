@@ -18,7 +18,7 @@ ms.locfileid: "57814243"
 
 読み込み時にバイナリ イメージのデジタル署名を確認する必要があることを指定します。
 
-> **/INTEGRITYCHECK****[:NO]**
+> **/INTEGRITYCHECK** **[:NO]**
 
 ## <a name="remarks"></a>Remarks
 
