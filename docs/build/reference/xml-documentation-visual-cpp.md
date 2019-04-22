@@ -8,10 +8,10 @@ helpviewer_keywords:
 - /// delimiter for C++ documentation
 ms.assetid: a1aec1c5-b2d1-4c74-83ae-1dbbbb76b506
 ms.openlocfilehash: c46cb77dd2efe41a41c7108115d6d22808782f01
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773529"
 ---
 # <a name="xml-documentation-visual-c"></a>XML に関するドキュメント (Visual C++)
@@ -31,7 +31,7 @@ Visual C++ コード ファイル内では、メソッドまたは型の定義�
 
 ドキュメント コメントを含む .xml ファイルの作成の詳細については、次のトピックを参照してください。
 
-|参照する内容|解決方法|
+|参照する内容|参照トピック|
 |---------------------------|---------|
 |使用するコンパイラ オプション|[/doc](doc-process-documentation-comments-c-cpp.md)|
 |ドキュメントで一般的に使用される機能を提供するために使用できるタグ|[ドキュメント コメントとして推奨されるタグ](recommended-tags-for-documentation-comments-visual-cpp.md)|

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __unhook keyword [C++]
 ms.assetid: 953a14f3-5199-459d-81e5-fcf015a19878
 ms.openlocfilehash: e8f42c35024995c026ae10fc7f0ab3db77d1e5dc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769525"
 ---
 # <a name="unhook"></a>__unhook
@@ -89,7 +89,7 @@ COM イベントを除き、 **_ _hook**と **_ _unhook**イベント レシー�
 
 使用する代わりに **_ _unhook** -= 演算子を使用することです。
 
-新しい構文でマネージ イベントのコーディングについては、[イベント](../extensions/event-cpp-component-extensions.md)を参照してください。
+新しい構文でマネージ イベントのコーディングについては、次を参照してください。[イベント](../extensions/event-cpp-component-extensions.md)します。
 
 > [!NOTE]
 >  テンプレート クラスまたは構造体にイベントを含めることはできません。

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MFC, about MFC
 ms.assetid: 7101cb18-a681-495c-8f2b-069ad20c72f7
 ms.openlocfilehash: 042412000ba59c8400c5a3a64edae5d60756116a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58766496"
 ---
 # <a name="mfc-desktop-applications"></a>MFC デスクトップ アプリケーション
@@ -31,7 +31,7 @@ Microsoft Foundation Class (MFC) ライブラリは、Win32 お呼びCOM API の
 > [!IMPORTANT]
 >  MFC クラスとそのメンバーは、Windows ランタイム環境で実行するアプリケーションでは使用できません。
 >
->  マルチバイト文字エンコード (MBCS) の MFC ライブラリ (DLL) は、Visual Studio に含まれなくなりましたが、Visual Studio アドオンとして使用できます。 詳細については、[MFC MBCS DLL アドオン](mfc-mbcs-dll-add-on.md)を参照してください。
+>  マルチバイト文字エンコード (MBCS) の MFC ライブラリ (DLL) は、Visual Studio に含まれなくなりましたが、Visual Studio アドオンとして使用できます。 詳細については、次を参照してください。 [MFC MBCS DLL アドオン](mfc-mbcs-dll-add-on.md)します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

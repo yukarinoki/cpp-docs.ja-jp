@@ -21,10 +21,10 @@ helpviewer_keywords:
 - LoadToolBar method [MFC]
 ms.assetid: cc00aaff-8a56-433b-b0c0-b857d76b4ffd
 ms.openlocfilehash: 9c784db2e1a482b313147e6837d6bbbd16d0ecb4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775492"
 ---
 # <a name="toolbar-fundamentals"></a>ツール バーに関する基本事項
@@ -74,7 +74,7 @@ ms.locfileid: "58775492"
 
 新しい[CToolBar](../mfc/reference/ctoolbar-class.md)メンバー関数は、 **RT_TOOLBAR**リソース。 [LoadToolBar](../mfc/reference/ctoolbar-class.md#loadtoolbar)の場所を受け取るようになりました[LoadBitmap](../mfc/reference/ctoolbar-class.md#loadbitmap)ツールバー ボタンのイメージのビットマップの読み込みと[SetButtons](../mfc/reference/ctoolbar-class.md#setbuttons)ボタンのスタイルを設定し、ビットマップ イメージにボタンを接続します。
 
-ツール バー エディターの使用に関する詳細については、[ツール バー エディター](../windows/toolbar-editor.md)を参照してください。
+ツール バー エディターの使用に関する詳細については、次を参照してください。[ツール バー エディター](../windows/toolbar-editor.md)します。
 
 ##  <a name="_core_multiple_toolbars"></a> 複数のツールバー
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - interface static constructor
 ms.assetid: 1f031cb2-e94f-43dc-819b-44cf2faaaa49
 ms.openlocfilehash: 326b315e1e6c4defbef3ab6e487c78635e0aa50f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772645"
 ---
 # <a name="how-to-define-an-interface-static-constructor-ccli"></a>方法: インターフェイス静的コンス トラクターの定義 (C +/cli CLI)
@@ -56,4 +56,4 @@ in MyInterface static constructor
 
 ## <a name="see-also"></a>関連項目
 
-[インターフェイス クラス](../extensions/interface-class-cpp-component-extensions.md)
+[interface クラス](../extensions/interface-class-cpp-component-extensions.md)

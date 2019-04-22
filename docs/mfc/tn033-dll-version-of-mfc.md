@@ -11,15 +11,15 @@ helpviewer_keywords:
 - TN033
 ms.assetid: b6f1080b-b66b-4b1e-8fb1-926c5816392c
 ms.openlocfilehash: 4bfc60e20a073dd34945b91dd48ba82cdf4ab9f3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767783"
 ---
 # <a name="tn033-dll-version-of-mfc"></a>TN033:テクニカル ノート 33: MFC の DLL バージョン
 
-ここでは、MFCxx.DLL を使用して MFCxxD.DLL (x は MFC のバージョン番号です) は、MFC アプリケーションや MFC 拡張 Dll とダイナミック リンク ライブラリを共有する方法について説明します。 レギュラー MFC Dll の詳細については、[MFC DLL の一部として](../mfc/tn011-using-mfc-as-part-of-a-dll.md)を参照してください。
+ここでは、MFCxx.DLL を使用して MFCxxD.DLL (x は MFC のバージョン番号です) は、MFC アプリケーションや MFC 拡張 Dll とダイナミック リンク ライブラリを共有する方法について説明します。 レギュラー MFC Dll の詳細については、次を参照してください。 [MFC DLL の一部として](../mfc/tn011-using-mfc-as-part-of-a-dll.md)します。
 
 このテクニカル ノートには、Dll の 3 つの側面がについて説明します。 最後の 2 つより高度なユーザーのことです。
 
@@ -476,7 +476,7 @@ MFCxx.DLL を使用して、アプリケーションでは、MSVCRTxx.DLL、共�
 
 ### <a name="ordinals-and-class-declspecdllexport-and-dll-naming"></a>序数とクラスの関数および DLL の名前を付ける
 
-使用していません、 `class` **方式**C コンパイラの機能です。 代わりに、エクスポートの一覧は、クラス ライブラリのソース (MFCxx.DEF および MFCxxD.DEF) に含まれています。 これら選択のエントリ ポイント (関数とデータ) のセットのみがエクスポートされます。 MFC のプライベートな実装の関数やクラスなどの他の記号はエクスポートされません常駐または非常駐型の名前テーブルでの文字列名を指定せずに序数ですべてのエクスポートが完了します。
+使用していません、 `class` **方式**の機能、C++コンパイラ。 代わりに、エクスポートの一覧は、クラス ライブラリのソース (MFCxx.DEF および MFCxxD.DEF) に含まれています。 これら選択のエントリ ポイント (関数とデータ) のセットのみがエクスポートされます。 MFC のプライベートな実装の関数やクラスなどの他の記号はエクスポートされません常駐または非常駐型の名前テーブルでの文字列名を指定せずに序数ですべてのエクスポートが完了します。
 
 使用して`class`**方式**小さい Dll を構築するため、MFC では、既定のメカニズムをエクスポートするような大きな DLL の場合、利用可能な方法が効率性と容量があります制限します。
 

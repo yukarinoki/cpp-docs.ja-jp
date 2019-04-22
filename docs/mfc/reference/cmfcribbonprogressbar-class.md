@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CMFCRibbonProgressBar [MFC], SetRange
 ms.assetid: de3d9f2e-ed59-480e-aa7d-08a33ab36c67
 ms.openlocfilehash: 7c16217378cb8825ca4605687770de177e720c1d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778170"
 ---
 # <a name="cmfcribbonprogressbar-class"></a>CMFCRibbonProgressBar クラス
@@ -49,8 +49,7 @@ class CMFCRibbonProgressBar : public CMFCRibbonBaseElement
 
 |名前|説明|
 |----------|-----------------|
-|[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|
-  `CMFCRibbonProgressBar` オブジェクトを構築して初期化します。|
+|[CMFCRibbonProgressBar::CMFCRibbonProgressBar](#cmfcribbonprogressbar)|`CMFCRibbonProgressBar` オブジェクトを構築して初期化します。|
 
 ### <a name="public-methods"></a>パブリック メソッド
 
@@ -109,7 +108,7 @@ CMFCRibbonProgressBar(
 *nWidth*<br/>
 [in]リボンの進行状況バーのピクセル単位の幅を指定します。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 [in]リボンの進行状況バーのピクセル、高さを指定します。
 
 ##  <a name="getpos"></a>  CMFCRibbonProgressBar::GetPos

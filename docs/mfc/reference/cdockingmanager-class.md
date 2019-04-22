@@ -161,10 +161,10 @@ helpviewer_keywords:
 - CDockingManager [MFC], m_nTimeOutBeforeToolBarDock
 ms.assetid: 98e69c43-55d8-4f43-b861-4fda80ec1e32
 ms.openlocfilehash: 6d3bbafa15ada97f53710f0faf6a18ea8e892f6c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771319"
 ---
 # <a name="cdockingmanager-class"></a>CDockingManager クラス
@@ -272,7 +272,7 @@ class CDockingManager : public CObject
 
 ドッキング マネージャー オブジェクトのすべてのリストとドッキングのレイアウトに含まれるすべてのペインのリストを保持する[CPaneFrameWnd](../../mfc/reference/cpaneframewnd-class.md)メイン フレーム ウィンドウに属している windows。
 
-`CDockingManager`クラスは、ウィンドウの検索に使用できる一部のサービスを実装または`CPaneFrameWnd`ウィンドウ。 通常は呼び出すことはありませんこれらのサービス直接メイン フレーム ウィンドウのオブジェクトにラップされるためです。 詳細については、[CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)を参照してください。
+`CDockingManager`クラスは、ウィンドウの検索に使用できる一部のサービスを実装または`CPaneFrameWnd`ウィンドウ。 通常は呼び出すことはありませんこれらのサービス直接メイン フレーム ウィンドウのオブジェクトにラップされるためです。 詳細については、次を参照してください。 [CPaneFrameWnd クラス](../../mfc/reference/cpaneframewnd-class.md)します。
 
 ## <a name="customization-tips"></a>カスタマイズのヒント
 
@@ -939,7 +939,7 @@ DWORD GetEnabledAutoHideAlignment() const;
 
 ### <a name="return-value"></a>戻り値
 
-Cbrs_align _ フラグ、または自動的に隠すウィンドウが有効になっていない場合は 0 のビットごとの組み合わせ。 詳細については、[CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking)を参照してください。
+Cbrs_align _ フラグ、または自動的に隠すウィンドウが有効になっていない場合は 0 のビットごとの組み合わせ。 詳細については、次を参照してください。 [CFrameWnd::EnableDocking](../../mfc/reference/cframewnd-class.md#enabledocking)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1035,7 +1035,7 @@ static CSmartDockingInfo& GetSmartDockingParams();
 
 ### <a name="return-value"></a>戻り値
 
-このクラスは、現在、ドッキング マネージャーのスマート ドッキングのパラメーターが含まれています。 詳細については、[CSmartDockingInfo クラス](../../mfc/reference/csmartdockinginfo-class.md)を参照してください。
+このクラスは、現在、ドッキング マネージャーのスマート ドッキングのパラメーターが含まれています。 詳細については、次を参照してください。 [CSmartDockingInfo クラス](../../mfc/reference/csmartdockinginfo-class.md)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1256,7 +1256,7 @@ AFX_IMPORT_DATA static AFX_DOCK_TYPE m_dockModeGlobal;
 
 ### <a name="remarks"></a>Remarks
 
-既定では、各ドッキング ペインは、このドッキングのモードを使用します。 このフィールドに設定できる値の詳細については、[cbasepane::getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)を参照してください。
+既定では、各ドッキング ペインは、このドッキングのモードを使用します。 このフィールドに設定できる値の詳細については、次を参照してください。 [cbasepane::getdockingmode](../../mfc/reference/cbasepane-class.md#getdockingmode)します。
 
 ##  <a name="m_ndocksensitivity"></a>  CDockingManager::m_nDockSensitivity
 

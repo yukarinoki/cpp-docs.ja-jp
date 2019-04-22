@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CEditView [MFC], dwStyleDefault
 ms.assetid: bf38255c-fcbe-450c-95b2-3c5e35f86c37
 ms.openlocfilehash: 3ab276e83e8642aa5de2fd96305cb6d7b648fc40
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781238"
 ---
 # <a name="ceditview-class"></a>CEditView クラス
@@ -77,7 +77,7 @@ class CEditView : public CCtrlView
 |[CEditView::LockBuffer](#lockbuffer)|バッファーをロックします。|
 |[CEditView::PrintInsideRect](#printinsiderect)|指定した四角形内のテキストをレンダリングします。|
 |[CEditView::SerializeRaw](#serializeraw)|シリアル化、`CEditView`未加工のテキストとしてディスクにオブジェクト。|
-|[なかったとき](#setprinterfont)|新しいプリンター フォントを設定します。|
+|[CEditView::SetPrinterFont](#setprinterfont)|新しいプリンター フォントを設定します。|
 |[CEditView::SetTabStops](#settabstops)|タブの画面表示と印刷の両方の位置を設定します。|
 |[CEditView::UnlockBuffer](#unlockbuffer)|バッファーのロックを解除します。|
 
@@ -183,7 +183,7 @@ BOOL FindText(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索するテキスト。
 
 *bNext*<br/>
@@ -293,7 +293,7 @@ virtual void OnFindNext(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索するテキスト。
 
 *bNext*<br/>
@@ -321,10 +321,10 @@ virtual void OnReplaceAll(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索するテキスト。
 
-*見つかる*<br/>
+*lpszReplace*<br/>
 検索テキストを置換するテキスト。
 
 *置き換えた*<br/>
@@ -352,7 +352,7 @@ virtual void OnReplaceSel(
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索するテキスト。
 
 *bNext*<br/>
@@ -361,7 +361,7 @@ virtual void OnReplaceSel(
 *置き換えた*<br/>
 検索は大文字小文字を区別するかどうかを指定します。 TRUE の場合、検索は大文字小文字が区別されます。 FALSE の場合は、検索は大文字小文字が区別されません。
 
-*見つかる*<br/>
+*lpszReplace*<br/>
 見つかったテキストを置換するテキスト。
 
 ### <a name="remarks"></a>Remarks
@@ -380,7 +380,7 @@ virtual void OnTextNotFound(LPCTSTR lpszFind);
 
 ### <a name="parameters"></a>パラメーター
 
-*中から*<br/>
+*lpszFind*<br/>
 検索するテキスト。
 
 ##  <a name="printinsiderect"></a>  CEditView::PrintInsideRect
@@ -495,7 +495,7 @@ void UnlockBuffer() const;
 [MFC サンプル SUPERPAD](../../overview/visual-cpp-samples.md)<br/>
 [CCtrlView クラス](../../mfc/reference/cctrlview-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CEdit クラス](../../mfc/reference/cedit-class.md)<br/>
 [CDocument クラス](../../mfc/reference/cdocument-class.md)<br/>
 [CDocTemplate クラス](../../mfc/reference/cdoctemplate-class.md)<br/>
 [CCtrlView クラス](../../mfc/reference/cctrlview-class.md)<br/>

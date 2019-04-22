@@ -8,10 +8,10 @@ f1_keywords:
 helpviewer_keywords:
 - AgileEventSource class
 ms.openlocfilehash: 095c61dcef208028bf1c0f4b3443ba10110da8ed
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025867"
 ---
 # <a name="agileeventsource-class"></a>AgileEventSource クラス
@@ -40,7 +40,7 @@ class AgileEventSource :
 
 ## <a name="remarks"></a>Remarks
 
-Windows ランタイム コンポーネントの大半は、アジャイル コンポーネントです。 詳細については、次を参照してください。[スレッドとマーシャ リング (C + + CX)](../../cppcx/threading-and-marshaling-c-cx.md)します。
+Windows ランタイム コンポーネントの大半は、アジャイル コンポーネントです。 詳細については、次を参照してください。[スレッドとマーシャ リング (C++/CX)](../../cppcx/threading-and-marshaling-c-cx.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

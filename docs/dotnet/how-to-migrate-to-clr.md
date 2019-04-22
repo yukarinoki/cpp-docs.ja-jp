@@ -11,10 +11,10 @@ helpviewer_keywords:
 - /clr compiler option [C++], porting to
 ms.assetid: c9290b8b-436a-4510-8b56-eae51f4a9afc
 ms.openlocfilehash: 6ac470b85a14bfe32c7f3fe47168180687669ec6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781316"
 ---
 # <a name="how-to-migrate-to-clr"></a>方法: /Clr:pure に移行します。
@@ -154,7 +154,7 @@ MSIL に対して生成されたネイティブの C++ メソッドが (仮想�
 
 アプリケーションのコンパイル、リンク、および実行をした後でコンパイルされたモジュールで .NET 機能の使用を開始できます **/clr**します。 詳細については、「[Component Extensions for Runtime Platforms](../extensions/component-extensions-for-runtime-platforms.md)」を参照してください。
 
-C++ のマネージド拡張を使用していた場合は、新しい構文を使用してコードを変換できます。 C++ マネージ拡張を変換する方法の詳細については、[C +/cli 移行ガイド](../dotnet/cpp-cli-migration-primer.md)を参照してください。
+C++ のマネージド拡張を使用していた場合は、新しい構文を使用してコードを変換できます。 C++ マネージ拡張を変換する方法の詳細については、次を参照してください。 [C +/cli 移行ガイド](../dotnet/cpp-cli-migration-primer.md)します。
 
 Visual C++ での .NET プログラミングの詳細については、以下の項目を参照してください。
 

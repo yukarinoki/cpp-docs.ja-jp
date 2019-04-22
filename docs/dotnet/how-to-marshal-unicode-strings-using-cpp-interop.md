@@ -10,15 +10,15 @@ helpviewer_keywords:
 - Unicode, marshaling strings
 ms.assetid: 96c2141d-6c5d-43ef-a1aa-5785afb9a9aa
 ms.openlocfilehash: 37b56834e000cff686557730252f3d425f642772
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777676"
 ---
 # <a name="how-to-marshal-unicode-strings-using-c-interop"></a>方法: C++ Interop を使用して Unicode 文字列をマーシャ リング
 
-このトピックでは、Visual C の相互運用性の 1 つのファセットを示します。 詳細については、[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)を参照してください。
+このトピックでは、Visual C の相互運用性の 1 つのファセットを示します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
 
 次のコード例、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)#pragma ディレクティブを実装するマネージ コードと同じファイル内の関数をアンマネージが個別のファイルに定義されている場合、これらの関数が同じ方法で相互運用。 アンマネージ関数のみを含むファイルを使用してコンパイルする必要はありません[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。
 
@@ -30,7 +30,7 @@ ms.locfileid: "58777676"
 
 ## <a name="example"></a>例
 
-Unicode 文字列をマネージからアンマネージ関数に渡す、(Vcclr.h で宣言) PtrToStringChars 関数を使用するマネージ文字列が格納されているメモリにアクセスします。 このアドレスはネイティブ関数に渡される、ために、メモリを固定することが重要です[pin_ptr (C +/cli CLI)](../extensions/pin-ptr-cpp-cli.md)を文字列データの再配置されることを防ぐためにガベージ コレクション サイクルを実行中に、アンマネージ関数を実行します。
+Unicode 文字列をマネージからアンマネージ関数に渡す、(Vcclr.h で宣言) PtrToStringChars 関数を使用するマネージ文字列が格納されているメモリにアクセスします。 このアドレスはネイティブ関数に渡される、ために、メモリを固定することが重要です[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)を文字列データの再配置されることを防ぐためにガベージ コレクション サイクルを実行中に、アンマネージ関数を実行します。
 
 ```
 // MarshalUnicode1.cpp

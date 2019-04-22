@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CAtlExeModuleT class
 ms.assetid: 82245f3d-91d4-44fa-aa86-7cc7fbd758d9
 ms.openlocfilehash: 87e526a10c9bcd6a52f4544c50344c5145cfa732
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769551"
 ---
 # <a name="catlexemodulet-class"></a>CAtlExeModuleT クラス
@@ -86,7 +86,7 @@ class ATL_NO_VTABLE CAtlExeModuleT : public CAtlModuleT<T>
 
 [CAtlExeModuleT::m_bDelayShutdown](#m_bdelayshutdown)データ メンバーは、フラグのかどうか、exe ファイルは、上記で定義したメカニズムを使用する必要がありますを決定するために使用します。 False に設定されている場合、モジュールは、直ちに終了します。
 
-ATL でモジュールの詳細については、[ATL モジュール クラス](../../atl/atl-module-classes.md)を参照してください。
+ATL でモジュールの詳細については、次を参照してください。 [ATL モジュール クラス](../../atl/atl-module-classes.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

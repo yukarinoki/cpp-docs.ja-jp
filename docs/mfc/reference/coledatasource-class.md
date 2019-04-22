@@ -37,10 +37,10 @@ helpviewer_keywords:
 - COleDataSource [MFC], SetClipboard
 ms.assetid: 02c8ee7d-8e10-4463-8613-bb2a0305ca69
 ms.openlocfilehash: 37de6fd74f1e9210dcd9b9a356719436814c0c7f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776831"
 ---
 # <a name="coledatasource-class"></a>COleDataSource クラス
@@ -65,17 +65,17 @@ class COleDataSource : public CCmdTarget
 
 |名前|説明|
 |----------|-----------------|
-|[取得](#cachedata)|使用して、指定された形式でデータを提供する`STGMEDIUM`構造体。|
+|[COleDataSource::CacheData](#cachedata)|使用して、指定された形式でデータを提供する`STGMEDIUM`構造体。|
 |[COleDataSource::CacheGlobalData](#cacheglobaldata)|渡すを使用して、指定された形式でデータを提供します。|
 |[COleDataSource::DelayRenderData](#delayrenderdata)|遅延レンダリングを使用して、指定された形式でデータを提供します。|
 |[COleDataSource::DelayRenderFileData](#delayrenderfiledata)|指定された形式でデータを提供する`CFile`ポインター。|
 |[COleDataSource::DelaySetData](#delaysetdata)|サポートされているすべての形式と呼ばれる`OnSetData`します。|
-|[された](#dodragdrop)|データ ソースとドラッグ アンド ドロップ操作を実行します。|
+|[COleDataSource::DoDragDrop](#dodragdrop)|データ ソースとドラッグ アンド ドロップ操作を実行します。|
 |[COleDataSource::Empty](#empty)|空に、`COleDataSource`データのオブジェクト。|
 |[COleDataSource::FlushClipboard](#flushclipboard)|すべてのデータをクリップボードにレンダリングします。|
 |[COleDataSource::GetClipboardOwner](#getclipboardowner)|クリップボードにデータがまだあることを確認します。|
-|[と](#onrenderdata)|遅延レンダリングの一部としてデータを取得します。|
-|[と](#onrenderfiledata)|データを取得、`CFile`遅延レンダリングの一部として。|
+|[COleDataSource::OnRenderData](#onrenderdata)|遅延レンダリングの一部としてデータを取得します。|
+|[COleDataSource::OnRenderFileData](#onrenderfiledata)|データを取得、`CFile`遅延レンダリングの一部として。|
 |[COleDataSource::OnRenderGlobalData](#onrenderglobaldata)|遅延レンダリングの一部として hglobal データを取得します。|
 |[COleDataSource::OnSetData](#onsetdata)|内のデータを交換できるという、`COleDataSource`オブジェクト。|
 |[COleDataSource::SetClipboard](#setclipboard)|場所、`COleDataSource`クリップボード上のオブジェクト。|

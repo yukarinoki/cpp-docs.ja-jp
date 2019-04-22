@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ribbon controls [MFC], adding
 ms.assetid: b31f25bc-ede7-49c3-9e3c-dffe4e174a69
 ms.openlocfilehash: c21e8b86962ebf37ca1a06bae056d09b9a9dbb2f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770124"
 ---
 # <a name="how-to-add-ribbon-controls-and-event-handlers"></a>方法: リボン コントロールとイベント ハンドラーを追加します。
@@ -30,7 +30,7 @@ ms.locfileid: "58770124"
 
 1. ボタンを右クリックし、をクリックして**イベント ハンドラーの追加**します。
 
-1. **イベント ハンドラー ウィザード**で既定の設定を確認し、をクリックして**の追加し、編集**します。 詳細については、[イベント ハンドラー ウィザード](../ide/event-handler-wizard.md)を参照してください。
+1. **イベント ハンドラー ウィザード**で既定の設定を確認し、をクリックして**の追加し、編集**します。 詳細については、次を参照してください。[イベント ハンドラー ウィザード](../ide/event-handler-wizard.md)します。
 
 1. コード エディターでは、ハンドラー関数に次のコードを追加します。
 

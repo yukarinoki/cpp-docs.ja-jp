@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CMFCColorDialog [MFC], SetPageTwo
 ms.assetid: 235bbbbc-a3b1-46e0-801b-fb55093ec579
 ms.openlocfilehash: 1b9f57e46d5ac74dd52f7ddb7ebd90f8888891e3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772752"
 ---
 # <a name="cmfccolordialog-class"></a>CMFCColorDialog クラス
@@ -54,7 +54,7 @@ class CMFCColorDialog : public CDialogEx
 |----------|-----------------|
 |[CMFCColorDialog::GetColor](#getcolor)|現在選択されている色を返します。|
 |[CMFCColorDialog::GetPalette](#getpalette)|色のパレットを返します。|
-|`CMFCColorDialog::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、[cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)を参照してください。 ( `CDialogEx::PreTranslateMessage`をオーバーライドします)。|
+|`CMFCColorDialog::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。 ( `CDialogEx::PreTranslateMessage`をオーバーライドします)。|
 |[CMFCColorDialog::RebuildPalette](#rebuildpalette)|パレットは、システム パレットから派生します。|
 |[CMFCColorDialog::SetCurrentColor](#setcurrentcolor)|現在の選択した色を設定します。|
 |[CMFCColorDialog::SetNewColor](#setnewcolor)|指定された RGB 値に最も近い色を設定します。|

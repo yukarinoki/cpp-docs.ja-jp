@@ -35,10 +35,10 @@ helpviewer_keywords:
 - CBitmap [MFC], SetBitmapDimension
 ms.assetid: 3980616a-c59d-495a-86e6-62bd3889c84c
 ms.openlocfilehash: 11e210680bdf68f1a1dcbfaed18ae56ce006c8ad
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769902"
 ---
 # <a name="cbitmap-class"></a>CBitmap クラス
@@ -487,7 +487,7 @@ DWORD SetBitmapBits(
 によって示されるバイト数を指定*lpBits*します。
 
 *lpBits*<br/>
-コピーされるピクセル値を格納するバイト配列を指す、`CBitmap`オブジェクト。 そのイメージを正常にレンダリングできるビットマップは、値を CBitmap インスタンスの作成時に指定された高さ、幅と色の深度値に準拠するための書式設定。 詳細については、[CBitmap::CreateBitmap](#createbitmap)を参照してください。
+コピーされるピクセル値を格納するバイト配列を指す、`CBitmap`オブジェクト。 そのイメージを正常にレンダリングできるビットマップは、値を CBitmap インスタンスの作成時に指定された高さ、幅と色の深度値に準拠するための書式設定。 詳細については、次を参照してください。 [CBitmap::CreateBitmap](#createbitmap)します。
 
 ### <a name="return-value"></a>戻り値
 

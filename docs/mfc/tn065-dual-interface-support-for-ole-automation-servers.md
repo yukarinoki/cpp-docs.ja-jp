@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Automation servers [MFC], dual-interface support
 ms.assetid: b5c8ed09-2f7f-483c-80fc-2a47ad896063
 ms.openlocfilehash: 33828f3979fb938ae6e88fa3cb0d6ee24daa958c
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776675"
 ---
 # <a name="tn065-dual-interface-support-for-ole-automation-servers"></a>TN065:OLE オートメーション サーバー用デュアル インターフェイス サポート
@@ -75,7 +75,7 @@ coclass Document
 
 ODL ファイルを更新すると、MFC のインターフェイス マップ機構を使用して、オブジェクト クラスにデュアル インターフェイスの実装クラスを定義し、MFC ので、対応するエントリが作成`QueryInterface`メカニズム。 1 つのエントリを作成する必要があります、 `INTERFACE_PART` ODL のインターフェイスのステートメント内の各エントリとディスパッチ インターフェイスのエントリをブロックします。 各 ODL エントリ、 *propput*属性には、という名前の関数が必要があります`put_propertyname`します。 各エントリを*propget*属性には、という名前の関数が必要があります`get_propertyname`します。
 
-デュアル インターフェイスの実装クラスを定義するには、追加、`DUAL_INTERFACE_PART`オブジェクト クラスの定義をブロックします。 例えば:
+デュアル インターフェイスの実装クラスを定義するには、追加、`DUAL_INTERFACE_PART`オブジェクト クラスの定義をブロックします。 例:
 
 ```cpp
 BEGIN_DUAL_INTERFACE_PART(DualAClick, IDualAClick)
@@ -102,7 +102,7 @@ BEGIN_INTERFACE_MAP(CAutoClickDoc, CDocument)
 END_INTERFACE_MAP()
 ```
 
-次に、インターフェイスの実装を入力する必要があります。 ほとんどの場合、ことができますに委任する既存の MFC`IDispatch`実装します。 例えば:
+次に、インターフェイスの実装を入力する必要があります。 ほとんどの場合、ことができますに委任する既存の MFC`IDispatch`実装します。 例:
 
 ```cpp
 STDMETHODIMP_(ULONG) CAutoClickDoc::XDualAClick::AddRef()
@@ -179,7 +179,7 @@ STDMETHODIMP CAutoClickDoc::XDualAClick::Invoke(
 }
 ```
 
-オブジェクトのメソッドおよびプロパティのアクセサー関数の実装を入力する必要があります。 メソッドとプロパティ関数は、ClassWizard を使って生成されたメソッドに一般的に委任できます。 ただし、変数に直接アクセスするプロパティを設定する場合は、変数に値を取得/格納するコードを記述する必要があります。 例えば:
+オブジェクトのメソッドおよびプロパティのアクセサー関数の実装を入力する必要があります。 メソッドとプロパティ関数は、ClassWizard を使って生成されたメソッドに一般的に委任できます。 ただし、変数に直接アクセスするプロパティを設定する場合は、変数に値を取得/格納するコードを記述する必要があります。 例:
 
 ```cpp
 STDMETHODIMP CAutoClickDoc::XDualAClick::put_text(BSTR newText)

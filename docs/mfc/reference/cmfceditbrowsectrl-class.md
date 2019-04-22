@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CMFCEditBrowseCtrl [MFC], SetBrowseButtonImage
 ms.assetid: 69cfd886-3d35-4bee-8901-7c88fcf9520f
 ms.openlocfilehash: 0c6fb39e17e22bcac60d50b87f7370c6a9f91db9
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770679"
 ---
 # <a name="cmfceditbrowsectrl-class"></a>CMFCEditBrowseCtrl クラス
@@ -65,7 +65,7 @@ class CMFCEditBrowseCtrl : public CEdit
 |[CMFCEditBrowseCtrl::OnChangeLayout](#onchangelayout)|現在の参照機能付きコントロールを再描画します。|
 |[CMFCEditBrowseCtrl::OnDrawBrowseButton](#ondrawbrowsebutton)|[参照] ボタンを描画するためにフレームワークによって呼び出されます。|
 |[CMFCEditBrowseCtrl::OnIllegalFileName](#onillegalfilename)|編集コントロールに、無効なファイル名が入力されたときに、フレームワークによって呼び出されます。|
-|`CMFCEditBrowseCtrl::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、[cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)を参照してください。|
+|`CMFCEditBrowseCtrl::PreTranslateMessage`|ディスパッチされる前に、ウィンドウ メッセージを変換する、 [TranslateMessage](/windows/desktop/api/winuser/nf-winuser-translatemessage)と[DispatchMessage](/windows/desktop/api/winuser/nf-winuser-dispatchmessage) Windows 関数。 構文と詳細については、次を参照してください。 [cwnd::pretranslatemessage](../../mfc/reference/cwnd-class.md#pretranslatemessage)します。|
 |[CMFCEditBrowseCtrl::SetBrowseButtonImage](#setbrowsebuttonimage)|[参照] ボタンのカスタム イメージを設定します。|
 
 ## <a name="remarks"></a>Remarks
@@ -179,7 +179,7 @@ void EnableFileBrowseButton(
 
 参照機能付きコントロールがファイル参照モードのときにユーザーが [参照] ボタンをクリックすると、コントロールに標準的なファイル選択のダイアログ ボックスが表示されます。
 
-使用可能なフラグの一覧については、[OPENFILENAME 構造体](/windows/desktop/api/commdlg/ns-commdlg-tagofna)を参照してください。
+使用可能なフラグの一覧については、次を参照してください。 [OPENFILENAME 構造体](/windows/desktop/api/commdlg/ns-commdlg-tagofna)します。
 
 ##  <a name="enablefolderbrowsebutton"></a>  CMFCEditBrowseCtrl::EnableFolderBrowseButton
 
@@ -252,7 +252,7 @@ virtual void OnChangeLayout();
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、ブラウズ モードの参照機能付きコントロール変更されるときに、このメソッドを呼び出します。 詳細については、[CMFCEditBrowseCtrl::GetMode](#getmode)を参照してください。
+フレームワークは、ブラウズ モードの参照機能付きコントロール変更されるときに、このメソッドを呼び出します。 詳細については、次を参照してください。 [CMFCEditBrowseCtrl::GetMode](#getmode)します。
 
 ##  <a name="ondrawbrowsebutton"></a>  CMFCEditBrowseCtrl::OnDrawBrowseButton
 

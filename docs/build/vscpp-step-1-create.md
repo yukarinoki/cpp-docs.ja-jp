@@ -7,10 +7,10 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 739da0b6e5400117c0b09a3d4c3335bd44529a25
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898779"
 ---
 # <a name="create-a-c-console-app-project"></a>C++ コンソール アプリ プロジェクトを作成する
@@ -55,7 +55,7 @@ Visual Studio では、"*プロジェクト*" を使用してアプリのコー�
 
 Visual Studioで新しい空のプロジェクトを作成し、作成するアプリの種類と、ソース コード ファイルの追加に特化する準備をします。 次にそれを行います。
 
-[問題が発生しました。](#create-your-app-project-issues)
+[問題が発生しました](#create-your-app-project-issues)
 
 ## <a name="make-your-project-a-console-app"></a>コンソール アプリ プロジェクトを作成します。
 
@@ -69,7 +69,7 @@ Visual Studio では、Windows およびその他のプラットフォーム用�
 
 Visual Studio は、プロジェクトをビルドして、コンソール ウィンドウで実行するように認識します。 次に、ソースコード ファイルを追加し、アプリのコードを入力します。
 
-[問題が発生しました。](#make-your-project-a-console-app-issues)
+[問題が発生しました](#make-your-project-a-console-app-issues)
 
 ## <a name="add-a-source-code-file"></a>ソース コード ファイルを追加します。
 
@@ -81,7 +81,7 @@ Visual Studio は、プロジェクトをビルドして、コンソール ウ�
 
 Visual studio が、新しい空のソース コード ファイルを作成します。そして、エディター ウィンドウ内でそのファイルが開かれます。ソースコードを入力する準備はできています。
 
-[問題が発生しました。](#add-a-source-code-file-issues)
+[問題が発生しました](#add-a-source-code-file-issues)
 
 ## <a name="add-code-to-the-source-file"></a>ソース ファイルにコードを追加します。
 
@@ -103,14 +103,14 @@ Visual studio が、新しい空のソース コード ファイルを作成し�
 
 コードが、エディター内で次のようになっていれば、準備はできているので次の手順に進んでください。アプリのビルドに取り掛かります。
 
-[問題が発生しました。](#add-a-source-code-file-issues)
+[問題が発生しました](#add-a-source-code-file-issues)
 
 ::: moniker-end
 
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [ビルドして C++ プロジェクトの実行](vscpp-step-2-build.md)
+> [C++ プロジェクトのビルドおよび実行](vscpp-step-2-build.md)
 
 ::: moniker range="<=vs-2017"
 
@@ -132,7 +132,7 @@ Visual studio が、新しい空のソース コード ファイルを作成し�
 
 ドロップダウン コントロールがない、**サブシステム**プロパティがプロパティを選択するまで、ボックスを編集します。 これを選択するには、ポインターを使用してまたは順番にダイアログのコントロールまで Tab キーを押すことができます**サブシステム**が強調表示されます。 ドロップダウン コントロールを選択するかを開くには、Alt + Down キーを押します。
 
-[戻ってください](#make-your-project-a-console-app)
+[戻る](#make-your-project-a-console-app)
 
 ### <a name="add-a-source-code-file-issues"></a>ソースコード ファイルの問題を追加
 

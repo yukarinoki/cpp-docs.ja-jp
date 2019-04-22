@@ -6,15 +6,15 @@ helpviewer_keywords:
 - ATL, about ATL
 ms.assetid: 291f38d1-d2de-4687-86a9-99b4fd35706c
 ms.openlocfilehash: e1ee9364cfcd382c8699014fd2ef4a807b63bb0f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780432"
 ---
 # <a name="atl-com-desktop-components"></a>ATL COM デスクトップ コンポーネント
 
-ATL リファレンスで、Active Template Library (ATL)、一連のコンポーネント オブジェクト モデル (COM) オブジェクトのプログラミングを簡略化するテンプレート ベースの C++ クラスについて説明します。 COM は、バイナリの仕様を作成および Windows 上のソフトウェア コンポーネントを使用するためです。 完全に活用するために ATL、COM に精通する作業は強くお勧めします。 COM の詳細については、[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/component-object-model--com--portal)を参照してください。
+ATL リファレンスで、Active Template Library (ATL)、一連のコンポーネント オブジェクト モデル (COM) オブジェクトのプログラミングを簡略化するテンプレート ベースの C++ クラスについて説明します。 COM は、バイナリの仕様を作成および Windows 上のソフトウェア コンポーネントを使用するためです。 完全に活用するために ATL、COM に精通する作業は強くお勧めします。 COM の詳細については、次を参照してください。[コンポーネント オブジェクト モデル (COM)](/windows/desktop/com/component-object-model--com--portal)します。
 
 ## <a name="in-this-section"></a>このセクションの内容
 

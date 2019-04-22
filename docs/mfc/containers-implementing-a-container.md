@@ -6,10 +6,10 @@ helpviewer_keywords:
 - OLE containers [MFC], implementing
 ms.assetid: af1e2079-619a-4eac-9327-985ad875823a
 ms.openlocfilehash: b0d737a2025ed0006db00425d42c02ebf0bdeda8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767887"
 ---
 # <a name="containers-implementing-a-container"></a>コンテナー:コンテナーの実装
@@ -20,7 +20,7 @@ ms.locfileid: "58767887"
 
 1. OLE ライブラリを呼び出すことによって初期化`AfxOleInit`で、`InitInstance`メンバー関数。
 
-1. 呼び出す`CDocTemplate::SetContainerInfo`で`InitInstance`埋め込み項目が使用されているリソースをメニューとアクセラレータを割り当てるには、インプレースをアクティブ化します。 このトピックの詳細については、[アクティベーション](../mfc/activation-cpp.md)を参照してください。
+1. 呼び出す`CDocTemplate::SetContainerInfo`で`InitInstance`埋め込み項目が使用されているリソースをメニューとアクセラレータを割り当てるには、インプレースをアクティブ化します。 このトピックの詳細については、次を参照してください。[アクティベーション](../mfc/activation-cpp.md)します。
 
 これらの機能は、MFC アプリケーション ウィザードを使用して、コンテナー アプリケーションを作成するときに自動的に提供します。 参照してください[MFC アプリケーション ウィザードを作成する](../mfc/reference/mfc-application-wizard.md)します。
 
@@ -52,11 +52,11 @@ ms.locfileid: "58767887"
 
 - 埋め込みアイテムを編集するときに、インプレース アクティブ化
 
-   詳細については、[アクティベーション](../mfc/activation-cpp.md)を参照してください。
+   詳細については、次を参照してください。[アクティベーション](../mfc/activation-cpp.md)します。
 
 - OLE アイテムの作成をドラッグ アンド サーバー アプリケーションから選択をドロップします。
 
-   詳細については、[ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)を参照してください。
+   詳細については、次を参照してください。[ドラッグ アンド ドロップ (OLE)](../mfc/drag-and-drop-ole.md)します。
 
 - 埋め込みオブジェクトやコンテナー/サーバー アプリケーションの組み合わせへのリンク。
 

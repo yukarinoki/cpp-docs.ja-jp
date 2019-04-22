@@ -9,10 +9,10 @@ helpviewer_keywords:
 - section pragma
 ms.assetid: c67215e9-2c4a-4b0f-b691-2414d2e2d96f
 ms.openlocfilehash: 41479d7d8767438d0e59fbe6beb7e435459dcb1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023244"
 ---
 # <a name="section"></a>section
@@ -37,9 +37,9 @@ ms.locfileid: "59023244"
 
 |属性|説明|
 |-|-|
-|**読み取り**|データの読み取り操作を有効にします。|
-|**書き込み**|データの書き込み操作を有効にします。|
-|**実行 (execute)**|コードを実行できるようにします。|
+|**read**|データの読み取り操作を有効にします。|
+|**write**|データの書き込み操作を有効にします。|
+|**execute**|コードを実行できるようにします。|
 |**shared**|イメージを読み込んだすべてのプロセス間でセクションを共有します。|
 |**nopage**|セクションをページング不可にします。Win32 デバイス ドライバー用です。|
 |**nocache**|セクションをキャッシュ不可にします。Win32 デバイス ドライバー用です。|

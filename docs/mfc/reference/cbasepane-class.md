@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CBasePane [MFC], DoPaint
 ms.assetid: 8163dd51-d7c7-4def-9c74-61f8ecdfad82
 ms.openlocfilehash: e0d6b844ba4a5c373dd69c0435bbb9972db3b49b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774478"
 ---
 # <a name="cbasepane-class"></a>CBasePane クラス
@@ -390,7 +390,7 @@ void AddPane(CBasePane* pBar);
 
 これは、ドッキング マネージャーにペインを追加する便利なメソッドです。 このメソッドを使用すると、親フレームの種類を分析するコードを記述する必要はありません。
 
-詳細については、[CDockingManager Class](../../mfc/reference/cdockingmanager-class.md)と[CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane)を参照してください。
+詳細については、次を参照してください。 [CDockingManager Class](../../mfc/reference/cdockingmanager-class.md)と[CMDIFrameWndEx::AddPane](../../mfc/reference/cmdiframewndex-class.md#addpane)します。
 
 ##  <a name="adjustdockinglayout"></a>  CBasePane::AdjustDockingLayout
 
@@ -1917,7 +1917,7 @@ virtual HDWP SetWindowPos(
 ### <a name="parameters"></a>パラメーター
 
 *pWndInsertAfter*<br/>
-[in]識別、`CWnd`オブジェクトよりも前にこの`CWnd`Z オーダー内のオブジェクト。 詳細については、[CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)を参照してください。
+[in]識別、`CWnd`オブジェクトよりも前にこの`CWnd`Z オーダー内のオブジェクト。 詳細については、次を参照してください。 [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)します。
 
 *x*<br/>
 [in]ウィンドウの左側の位置を指定します。
@@ -1932,7 +1932,7 @@ virtual HDWP SetWindowPos(
 [in]ウィンドウの高さを指定します。
 
 *nFlags*<br/>
-[in]サイズと位置のオプションを指定します。 詳細については、[CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)を参照してください。
+[in]サイズと位置のオプションを指定します。 詳細については、次を参照してください。 [CWnd::SetWindowPos](../../mfc/reference/cwnd-class.md#setwindowpos)します。
 
 *hdwp*<br/>
 [in]1 つまたは複数のウィンドウのサイズと位置情報を格納する構造体へのハンドルします。

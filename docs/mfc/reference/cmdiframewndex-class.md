@@ -157,10 +157,10 @@ helpviewer_keywords:
 - CMDIFrameWndEx [MFC], m_bDisableSetRedraw
 ms.assetid: dbcafcb3-9a7a-4f11-9dfe-ba57565c81d0
 ms.openlocfilehash: b24afd943f2168657c6b4437fed65b0a45689b52
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778560"
 ---
 # <a name="cmdiframewndex-class"></a>CMDIFrameWndEx クラス
@@ -197,7 +197,7 @@ class CMDIFrameWndEx : public CMDIFrameWnd
 |[CMDIFrameWndEx::EnableFullScreenMainMenu](#enablefullscreenmainmenu)|全画面表示モードでのメイン メニューの表示と非表示を切り替えます。|
 |[CMDIFrameWndEx::EnableFullScreenMode](#enablefullscreenmode)|フレーム ウィンドウの全画面表示モードを有効にします。|
 |[CMDIFrameWndEx::EnableLoadDockState](#enableloaddockstate)|有効またはドッキング状態の読み込みを無効にします。|
-|[Cmdiframewndex::enablemditabbedgroups](#enablemditabbedgroups)|有効または MDI タブ付きグループ機能を無効にします。|
+|[CMDIFrameWndEx::EnableMDITabbedGroups](#enablemditabbedgroups)|有効または MDI タブ付きグループ機能を無効にします。|
 |[CMDIFrameWndEx::EnableMDITabs](#enablemditabs)|有効または MDI タブの機能を無効にします。 有効な場合、フレーム ウィンドウには、各 MDI 子ウィンドウのタブが表示されます。|
 |[CMDIFrameWndEx::EnableMDITabsLastActiveActivation](#enablemditabslastactiveactivation)|ユーザーが現在のタブを閉じるときに、最後のアクティブなタブをアクティブにする必要があるかどうかを指定します。|
 |[CMDIFrameWndEx::EnablePaneMenu](#enablepanemenu)|有効または、アプリケーション ウィンドウの一覧を表示するポップアップ ウィンドウのメニューの自動作成と管理を無効にします。  .|
@@ -1757,7 +1757,7 @@ CBasePane* PaneFromPoint(
 *pRTCBarType*<br/>
 [in]NULL 以外の場合、メソッドが指定した型のウィンドウのみを反復処理します。
 
-*場合*<br/>
+*dwAlignment*<br/>
 [out]ウィンドウが見つかった場合、このパラメーターは、ウィンドウのどちら側が、指定したポイントに最も近いを指定します。
 
 ### <a name="return-value"></a>戻り値

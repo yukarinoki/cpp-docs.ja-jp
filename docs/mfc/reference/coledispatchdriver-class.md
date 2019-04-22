@@ -27,10 +27,10 @@ helpviewer_keywords:
 - COleDispatchDriver [MFC], m_lpDispatch
 ms.assetid: 3ed98daf-cdc7-4374-8a0c-cf695a8d3657
 ms.openlocfilehash: c0c1fd14105bae3b5413f92b547339ccabf3bb91
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774777"
 ---
 # <a name="coledispatchdriver-class"></a>COleDispatchDriver クラス
@@ -258,7 +258,7 @@ void AFX_CDECL InvokeHelper(
 呼び出されるメソッドまたはプロパティを識別します。
 
 *wflags が*<br/>
-呼び出しのコンテキストを記述するフラグ`IDispatch::Invoke`します。 . 使用可能な値の一覧は、、 *wFlags*パラメーター [idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK にを参照してください。
+呼び出しのコンテキストを記述するフラグ`IDispatch::Invoke`します。 . 使用可能な値の一覧は、次を参照してください。、 *wFlags*パラメーター [idispatch::invoke](/windows/desktop/api/oaidl/nf-oaidl-idispatch-invoke) Windows SDK にします。
 
 *vtRet*<br/>
 戻り値の型を指定します。 使用可能な値については、「解説」を参照してください。

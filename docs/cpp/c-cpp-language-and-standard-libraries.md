@@ -3,10 +3,10 @@ title: C と C++ 言語および標準ライブラリ
 ms.date: 11/04/2016
 ms.assetid: c26a6682-961a-43ef-ad33-2adc612f69ac
 ms.openlocfilehash: 8642371018a1fdbba46d5dee52e8e88cd2b09ace
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781511"
 ---
 # <a name="cc-language-and-standard-libraries"></a>C と C++ 言語および標準ライブラリ

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, component
 ms.assetid: 7b66355e-3201-4c14-8190-f4a2a81a604a
 ms.openlocfilehash: 4870860650a39d27639ad18100ba37ba14aa15c0
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424067"
 ---
 # <a name="component"></a>コンポーネント
@@ -31,7 +31,7 @@ ms.locfileid: "59424067"
 
 情報収集のオン/オフを切り替えます。また特定の名前を指定して情報収集の際に無視できます。
 
-on または off を使用して、このプラグマ以降のブラウザー情報の収集を制御します。 例:
+on または off を使用して、このプラグマ以降のブラウザー情報の収集を制御します。 例えば:
 
 ```cpp
 #pragma component(browser, off)
@@ -42,7 +42,7 @@ on または off を使用して、このプラグマ以降のブラウザー情
 > [!NOTE]
 > このプラグマを使用してブラウザー情報の収集を有効にする[ブラウズ情報を有効にする必要がありますまず](../build/reference/building-browse-information-files-overview.md)します。
 
-`references`またはなしでオプションを使用できる、*名前*引数。 使用して`references`せず*名前*を有効または無効の収集の (ただし、収集するその他の参照情報が続行されます)。 例えば:
+`references`またはなしでオプションを使用できる、*名前*引数。 使用して`references`せず*名前*を有効または無効の収集の (ただし、収集するその他の参照情報が続行されます)。 例:
 
 ```cpp
 #pragma component(browser, off, references)

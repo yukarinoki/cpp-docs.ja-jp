@@ -13,10 +13,10 @@ helpviewer_keywords:
 - containers [MFC], container applications
 ms.assetid: 221fd99c-b138-40fa-ad6a-974e3b3ad1f8
 ms.openlocfilehash: 350431975a4335fc06e436237b7e0d3388faab64
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769564"
 ---
 # <a name="containers-advanced-features"></a>コンテナー:高度な機能
@@ -69,7 +69,7 @@ ms.locfileid: "58769564"
 
          If the application is launched with the "/Embedded" switch, it should not show its main window, similar to a server application.
 
-MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)この機能を実装します。 これを行う方法の例は、、`InitInstance`で機能、 *OCLIENT を参照してください。CPP*このサンプル アプリケーションのファイル。
+MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)この機能を実装します。 これを行う方法の例は、次を参照してください。、`InitInstance`で機能、 *OCLIENT します。CPP*このサンプル アプリケーションのファイル。
 
 ## <a name="see-also"></a>関連項目
 

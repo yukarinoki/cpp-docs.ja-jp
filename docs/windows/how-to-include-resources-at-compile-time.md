@@ -24,10 +24,10 @@ helpviewer_keywords:
 - resources [C++], searching for symbols
 ms.assetid: 357e93c2-0a29-42f9-806f-882f688b8924
 ms.openlocfilehash: ca24a10f905e61feb2b090ba3966c752db3d4444
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041505"
 ---
 # <a name="how-to-include-resources-at-compile-time-c"></a>方法: リソースは、コンパイル時 (C++)
@@ -52,9 +52,9 @@ ms.locfileid: "59041505"
 
 | プロパティ | 説明 |
 |---|---|
-| **シンボル用のヘッダー ファイル** | リソース ファイルのシンボル定義が格納されているヘッダー ファイルの名前を変更することができます。<br/><br/>詳細については、次を参照してください。[シンボル ヘッダー ファイルの名前を変更する](../windows/changing-the-names-of-symbol-header-files.md)します。 |
-| **読み取り専用ヘッダー ファイル** | 変更しないでくださいシンボルが含まれているヘッダー ファイルをインクルードできます。<br/><br/>たとえば、シンボル ファイルを共有する他のプロジェクトとします。 MFC の .h ファイルを含めることもできます。 詳細については、次を参照してください。[共有 (読み取り専用) または計算型シンボル](../windows/including-shared-read-only-or-calculated-symbols.md)します。 |
-| **コンパイル時に追加するファイル** | 作成され、メイン リソース ファイル内のリソースから個別に編集されているリソース ファイルを含めることができます (など、それらのディレクティブを条件付きでリソースを含む)、コンパイル時ディレクティブを含めることがまたは、カスタム形式でリソースが含まれます。<br/><br/>使用することも、**コンパイル時ディレクティブ ボックス**標準 MFC リソース ファイルをインクルードします。 |
+| **シンボル ヘッダー ファイル** | リソース ファイルのシンボル定義が格納されているヘッダー ファイルの名前を変更することができます。<br/><br/>詳細については、次を参照してください。[シンボル ヘッダー ファイルの名前を変更する](../windows/changing-the-names-of-symbol-header-files.md)します。 |
+| **読み取り専用シンボル ディレクティブ** | 変更しないでくださいシンボルが含まれているヘッダー ファイルをインクルードできます。<br/><br/>たとえば、シンボル ファイルを共有する他のプロジェクトとします。 MFC の .h ファイルを含めることもできます。 詳細については、次を参照してください。[共有 (読み取り専用) または計算型シンボル](../windows/including-shared-read-only-or-calculated-symbols.md)します。 |
+| **コンパイル時ディレクティブ** | 作成され、メイン リソース ファイル内のリソースから個別に編集されているリソース ファイルを含めることができます (など、それらのディレクティブを条件付きでリソースを含む)、コンパイル時ディレクティブを含めることがまたは、カスタム形式でリソースが含まれます。<br/><br/>使用することも、**コンパイル時ディレクティブ ボックス**標準 MFC リソース ファイルをインクルードします。 |
 
 > [!NOTE]
 > マークされた .rc ファイルにこれらのテキスト ボックス内のエントリが表示される`TEXTINCLUDE 1`、 `TEXTINCLUDE 2`、および`TEXTINCLUDE 3`それぞれします。 詳細については、次を参照してください[TN035:。複数のリソース ファイルとヘッダー ファイルを使用して、Visual C を使った](../mfc/tn035-using-multiple-resource-files-and-header-files-with-visual-cpp.md)します。
@@ -97,6 +97,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)<br/>
-[方法: リソースを作成します。](../windows/how-to-create-a-resource-script-file.md)<br/>
-[方法: リソースを管理します。](../windows/how-to-copy-resources.md)<br/>
+[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
+[方法: リソースの作成](../windows/how-to-create-a-resource-script-file.md)<br/>
+[方法: リソースの管理](../windows/how-to-copy-resources.md)<br/>

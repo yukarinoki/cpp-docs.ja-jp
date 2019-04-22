@@ -10,21 +10,21 @@ helpviewer_keywords:
 - data marshaling [C++], arrays
 ms.assetid: c2b37ab1-8acf-4855-ad3c-7d2864826b14
 ms.openlocfilehash: 91fd86a547a0241f0cfcca7cfc36c204429d80ac
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776896"
 ---
 # <a name="how-to-marshal-arrays-using-c-interop"></a>方法: 配列をマーシャ リングを使用して C++ 相互運用
 
-このトピックでは、Visual C の相互運用性の 1 つのファセットを示します。 詳細については、[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)を参照してください。
+このトピックでは、Visual C の相互運用性の 1 つのファセットを示します。 詳細については、次を参照してください。[を使用して C++ Interop (暗黙の PInvoke)](../dotnet/using-cpp-interop-implicit-pinvoke.md)します。
 
 次のコード例、[マネージ、アンマネージ](../preprocessor/managed-unmanaged.md)#pragma ディレクティブを実装するマネージ コードと同じファイル内の関数をアンマネージが個別のファイルに定義されている場合、これらの関数が同じ方法で相互運用。 アンマネージ関数のみを含むファイルを使用してコンパイルする必要はありません[/clr (共通言語ランタイムのコンパイル)](../build/reference/clr-common-language-runtime-compilation.md)します。
 
 ## <a name="example"></a>例
 
-次の例では、マネージ配列をアンマネージ関数に渡す方法を示します。 管理対象の関数を使用して[pin_ptr (C +/cli CLI)](../extensions/pin-ptr-cpp-cli.md)アンマネージ関数を呼び出す前に、配列のガベージ コレクションを非表示にします。 GC ヒープにピン留めされたポインターを使用して、アンマネージ関数を提供する、配列のコピーを作成するオーバーヘッドを回避できます。 アンマネージ関数は GC ヒープ メモリへのアクセス、配列の内容を変更および変更ことを示すために、マネージ関数でコントロールを再開するときに反映されます。
+次の例では、マネージ配列をアンマネージ関数に渡す方法を示します。 管理対象の関数を使用して[pin_ptr (C++/CLI)](../extensions/pin-ptr-cpp-cli.md)アンマネージ関数を呼び出す前に、配列のガベージ コレクションを非表示にします。 GC ヒープにピン留めされたポインターを使用して、アンマネージ関数を提供する、配列のコピーを作成するオーバーヘッドを回避できます。 アンマネージ関数は GC ヒープ メモリへのアクセス、配列の内容を変更および変更ことを示すために、マネージ関数でコントロールを再開するときに反映されます。
 
 ```
 // PassArray1.cpp

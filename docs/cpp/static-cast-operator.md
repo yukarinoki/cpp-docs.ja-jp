@@ -7,10 +7,10 @@ helpviewer_keywords:
 - static_cast keyword [C++]
 ms.assetid: 1f7c0c1c-b288-476c-89d6-0e2ceda5c293
 ms.openlocfilehash: dca6d5297379e6ddc1c70dba80f35f2f55672e49
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776922"
 ---
 # <a name="staticcast-operator"></a>static_cast 演算子
@@ -29,7 +29,7 @@ static_cast <type-id> ( expression )
 
 **Static_cast**演算子は派生クラスへのポインターを基底クラスへのポインターに変換するなどの操作に使用できます。 このような変換は、必ずしも安全であるとは限りません。
 
-一般的に使用する**static_cast**列挙型などの数値データ型を整数または浮動小数点と整数に変換するときのデータ型の特定のものが、変換に関係します。 **static_cast**の変換はほど安全**dynamic_cast**変換では、ため**static_cast**中は実行時の型チェック、 **dynamic_cast**します。 A **dynamic_cast**あいまいなポインターは失敗し中、 **static_cast**何も問題があります。 これは、危険な場合に返されます。 **Dynamic_cast**変換は安全な**dynamic_cast**のみポインターまたは参照、および実行時の型チェックの動作がのオーバーヘッドが発生します。 詳細については、[dynamic_cast Operator](../cpp/dynamic-cast-operator.md)を参照してください。
+一般的に使用する**static_cast**列挙型などの数値データ型を整数または浮動小数点と整数に変換するときのデータ型の特定のものが、変換に関係します。 **static_cast**の変換はほど安全**dynamic_cast**変換では、ため**static_cast**中は実行時の型チェック、 **dynamic_cast**します。 A **dynamic_cast**あいまいなポインターは失敗し中、 **static_cast**何も問題があります。 これは、危険な場合に返されます。 **Dynamic_cast**変換は安全な**dynamic_cast**のみポインターまたは参照、および実行時の型チェックの動作がのオーバーヘッドが発生します。 詳細については、次を参照してください。 [dynamic_cast Operator](../cpp/dynamic-cast-operator.md)します。
 
 次の例では、`D* pd2 = static_cast<D*>(pb);` は `D` にないフィールドとメソッドがあるため、行 `B` は安全ではありません。 ただし、`B* pb2 = static_cast<B*>(pd);` には `D` のすべてが常に含まれているため、行 `B` は安全な変換です。
 

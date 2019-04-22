@@ -31,10 +31,10 @@ helpviewer_keywords:
 - CPageSetupDialog [MFC], m_psd
 ms.assetid: 049c0ac8-f254-4854-9414-7a8271d1447a
 ms.openlocfilehash: 01a320fbcd9760bab484f3c75553613852ca9aed
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778092"
 ---
 # <a name="cpagesetupdialog-class"></a>CPageSetupDialog クラス
@@ -82,7 +82,7 @@ class CPageSetupDialog : public CCommonDialog
 
 使用する、`CPageSetupDialog`オブジェクトは、まずを使用してオブジェクトを作成、`CPageSetupDialog`コンス トラクター。 ダイアログ ボックスが構築されると、設定または任意の値を変更、 `m_psd`  ダイアログ ボックスのコントロールの値を初期化するためにデータ メンバー。 [M_psd](#m_psd)型 PAGESETUPDLG 構造です。
 
-ダイアログ ボックスのコントロールを初期化した後に呼び出し、 `DoModal`  ダイアログ ボックスが表示され、ユーザーが印刷オプションを選択できるようにするメンバー関数。 `DoModal` ユーザーが [ok] (IDOK) またはキャンセル (IDCANCEL) ボタンを選択するかどうかを返します。
+ダイアログ ボックスのコントロールを初期化した後に呼び出し、 `DoModal`  ダイアログ ボックスが表示され、ユーザーが印刷オプションを選択できるようにするメンバー関数。 `DoModal` ユーザーが [ok] \(IDOK) またはキャンセル (IDCANCEL) ボタンを選択するかどうかを返します。
 
 場合`DoModal`IDOK を返しますのいくつかを使用することができます`CPageSetupDialog`のメンバー関数、またはアクセス、`m_psd`データ メンバーは、ユーザーが入力した情報を取得します。
 

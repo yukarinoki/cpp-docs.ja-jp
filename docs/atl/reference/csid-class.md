@@ -22,10 +22,10 @@ helpviewer_keywords:
 - CSid class
 ms.assetid: be58b7ca-5958-49c3-a833-ca341aaaf753
 ms.openlocfilehash: 87f889a079b1c55d82f547230a1917540de276af
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770502"
 ---
 # <a name="csid-class"></a>CSid クラス
@@ -117,7 +117,7 @@ LPCTSTR AccountName() const throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドが、指定した名前を検索しようとしています。 `SID` (セキュリティ識別子)。 完全な詳細については、[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)を参照してください。
+このメソッドが、指定した名前を検索しようとしています。 `SID` (セキュリティ識別子)。 完全な詳細については、次を参照してください。 [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)します。
 
 アカウント名がない場合、`SID`がある`AccountName`空の文字列を返します。 これは、ネットワークのタイムアウトが原因でこのメソッドが名前を見つける場合に発生します。 発生の対応するアカウント名のない、セキュリティ識別子など、`SID`サインイン セッションを識別します。
 
@@ -208,7 +208,7 @@ LPCTSTR Domain() const throw(...);
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドが、指定した名前を検索しようとしています。 `SID` (セキュリティ識別子)。 完全な詳細については、[LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)を参照してください。
+このメソッドが、指定した名前を検索しようとしています。 `SID` (セキュリティ識別子)。 完全な詳細については、次を参照してください。 [LookupAccountSid](/windows/desktop/api/winbase/nf-winbase-lookupaccountsida)します。
 
 アカウント名がない場合、`SID`がある`Domain`空の文字列としてドメインを返します。 これは、ネットワークのタイムアウトが原因でこのメソッドが名前を見つける場合に発生します。 発生の対応するアカウント名のない、セキュリティ識別子など、`SID`サインイン セッションを識別します。
 

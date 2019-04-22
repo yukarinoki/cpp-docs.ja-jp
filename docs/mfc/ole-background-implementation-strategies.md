@@ -7,10 +7,10 @@ helpviewer_keywords:
 - applications [OLE], implementing OLE
 ms.assetid: 0875ddae-99df-488c-82c6-164074a81058
 ms.openlocfilehash: 83a1089ecaaaa9bd0dd1d928cd3d1869e5017a4a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774387"
 ---
 # <a name="ole-background-implementation-strategies"></a>OLE の背景知識:Implementation Strategies
@@ -31,7 +31,7 @@ ms.locfileid: "58774387"
 
 - Microsoft Foundation クラスを使用して書き込んだではありませんし、可能性がありますまたは OLE サポート実装されていませんが、アプリケーションがあります。
 
-   このような状況では、最も多くの作業が必要です。 1 つの方法が、最初の方法では、ように、新しいアプリケーションを作成し、コピーして、既存のコードを貼り付けます。 既存のコードは C で記述され場合、は、C++ コードとしてコンパイルできるように変更する必要があります。 C のコードには、Windows API を呼び出す場合は、Microsoft Foundation classes を使用するように変更する必要はありません。 多くの場合は、バージョン 2.0 以降、Microsoft Foundation Classes のによって使用されるドキュメント/ビュー アーキテクチャをサポートするために、プログラムのいくつかの制限が必要です。 このアーキテクチャの詳細については、[テクニカル ノート 25](../mfc/tn025-document-view-and-frame-creation.md)を参照してください。
+   このような状況では、最も多くの作業が必要です。 1 つの方法が、最初の方法では、ように、新しいアプリケーションを作成し、コピーして、既存のコードを貼り付けます。 既存のコードは C で記述され場合、は、C++ コードとしてコンパイルできるように変更する必要があります。 C のコードには、Windows API を呼び出す場合は、Microsoft Foundation classes を使用するように変更する必要はありません。 多くの場合は、バージョン 2.0 以降、Microsoft Foundation Classes のによって使用されるドキュメント/ビュー アーキテクチャをサポートするために、プログラムのいくつかの制限が必要です。 このアーキテクチャの詳細については、次を参照してください。[テクニカル ノート 25](../mfc/tn025-document-view-and-frame-creation.md)します。
 
 読み取りが必要があります、戦略を決定した後、[コンテナー](../mfc/containers.md)または[サーバー](../mfc/servers.md) (作成中のアプリケーションの種類) に応じて記事やサンプル プログラム、またはその両方を確認します。 MFC OLE サンプル[OCLIENT](../overview/visual-cpp-samples.md)と[HIERSVR](../overview/visual-cpp-samples.md)コンテナーとサーバーのさまざまな側面をそれぞれ実装する方法について説明します。 これらの記事全体でさまざまな時点で説明している手法の例として、これらのサンプルで特定の関数に呼ばれます。
 

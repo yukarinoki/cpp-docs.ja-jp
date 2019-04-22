@@ -45,10 +45,10 @@ helpviewer_keywords:
 - CToolBar [MFC], SetSizes
 ms.assetid: e868da26-5e07-4607-9651-e2f863ad9059
 ms.openlocfilehash: aa49ebed2d48d9818c2d39ae4894d8caf1fbbf81
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773139"
 ---
 # <a name="ctoolbar-class"></a>CToolBar クラス
@@ -567,7 +567,7 @@ void SetButtonInfo(
 > [!NOTE]
 >  使用してボタンの状態を設定することも、 *nStyle*パラメーターですただし、ボタンの状態によって制御されるため、 [ON_UPDATE_COMMAND_UI](message-map-macros-mfc.md#on_update_command_ui)ハンドラーでは、すべての状態を使用して設定する`SetButtonInfo`は失われます。次の中にアイドル プロセス。 参照してください[ユーザー インターフェイス オブジェクトを更新する方法](../../mfc/how-to-update-user-interface-objects.md)と[TN031:コントロール バー](../../mfc/tn031-control-bars.md)詳細についてはします。
 
-ビットマップ イメージやボタンについては、、 [CToolBar](../../mfc/reference/ctoolbar-class.md)の概要と[CToolBar::LoadBitmap](#loadbitmap)を参照してください。
+ビットマップ イメージやボタンについては、次を参照してください。、 [CToolBar](../../mfc/reference/ctoolbar-class.md)の概要と[CToolBar::LoadBitmap](#loadbitmap)します。
 
 ##  <a name="setbuttons"></a>  CToolBar::SetButtons
 
