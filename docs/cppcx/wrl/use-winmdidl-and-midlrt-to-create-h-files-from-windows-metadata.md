@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 4be8ba11-c223-44ad-9256-7e1edae9a7bc
 ms.openlocfilehash: b9016f05b82e3eb04474d370bd069e8008de5278
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58785167"
 ---
 # <a name="how-to-use-winmdidlexe-and-midlrtexe-to-create-h-files-from-windows-metadata"></a>方法: Winmdidl.exe と midlrt.exe を使用して、windows メタデータから .h ファイルを作成するには
@@ -18,7 +18,7 @@ winmdidl.exe と midlrt.exe によって、ネイティブ C++ コードと Wind
 
 - Windows ランタイム テンプレート ライブラリ (WRL) を使用して作成された C ++ アプリケーションが、カスタム Windows ランタイム コンポーネントを使用できるようにする、カスタム IDL ファイルとヘッダー ファイルの作成。
 
-- Windows ランタイム コンポーネントでのユーザー定義のイベントの種類用のプロキシおよびスタブ ファイルの生成。 詳細については、[カスタム イベントおよび Windows ランタイム コンポーネントのイベント アクセサー](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)を参照してください。
+- Windows ランタイム コンポーネントでのユーザー定義のイベントの種類用のプロキシおよびスタブ ファイルの生成。 詳細については、次を参照してください。[カスタム イベントおよび Windows ランタイム コンポーネントのイベント アクセサー](/windows/uwp/winrt-components/custom-events-and-event-accessors-in-windows-runtime-components)します。
 
 これらのツールは、カスタム .winmd ファイルを解析する場合にのみ必要です。 Windows オペレーティング システムのコンポーネント用の .idl および .h ファイルは、既に生成されます。 既定では、Windows 8.1 で内にある \Program Files (x86) \Windows Kits\8.1\Include\winrt\\します。
 
@@ -75,4 +75,4 @@ winmdidl の著作権メッセージとバージョン番号のコンソール�
 
 winmdidl 操作からの出力ファイルは入力ファイルと同じ名前ですが、ファイル名拡張子が .idl です。
 
-WRL からアクセスされる Windows ランタイム コンポーネントを開発している場合は、.idl および .h ファイルが各ビルドで生成されるように、winmdidl.exe と midlrt.exe をビルド後のステップとして実行するように指定できます。 例については、[Windows ランタイム コンポーネントのイベントの発生](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components)を参照してください。
+WRL からアクセスされる Windows ランタイム コンポーネントを開発している場合は、.idl および .h ファイルが各ビルドで生成されるように、winmdidl.exe と midlrt.exe をビルド後のステップとして実行するように指定できます。 例については、次を参照してください。 [Windows ランタイム コンポーネントのイベントの発生](/windows/uwp/winrt-components/raising-events-in-windows-runtime-components)します。

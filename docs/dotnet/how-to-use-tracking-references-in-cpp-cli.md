@@ -5,15 +5,15 @@ helpviewer_keywords:
 - CLR types, passing by reference
 ms.assetid: d91e471c-34ff-4786-9e0d-c6db0494b946
 ms.openlocfilehash: 8be575bd39bc3b2e6512ba1bcb40d9206731f83a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777052"
 ---
 # <a name="how-to-use-tracking-references-in-ccli"></a>方法: C で追跡参照を使用して、/cli CLI
 
-この記事では、追跡参照 (%) を使用する方法を示しています。c++/cli 共通言語ランタイム (CLR) 型を参照によって渡す CLI。
+この記事では、追跡参照 (%) を使用する方法を示しています。C++共通言語ランタイム (CLR) 型を参照によって渡す/CLI です。
 
 ## <a name="to-pass-clr-types-by-reference"></a>CLR 型を参照渡しするには
 
@@ -70,7 +70,7 @@ int main() {
 zip == 20100
 ```
 
-そのアドレスの取得の追跡参照を返します。 次の例を示しています、 [interior_ptr (C +/cli CLI)](../extensions/interior-ptr-cpp-cli.md)、変更と追跡参照を使用してデータにアクセスする方法を説明します。
+そのアドレスの取得の追跡参照を返します。 次の例を示しています、 [interior_ptr (C++/CLI)](../extensions/interior-ptr-cpp-cli.md)、変更と追跡参照を使用してデータにアクセスする方法を説明します。
 
 ```cpp
 // tracking_reference_data.cpp

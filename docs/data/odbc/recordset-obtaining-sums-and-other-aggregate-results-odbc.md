@@ -11,10 +11,10 @@ helpviewer_keywords:
 - SQL aggregate values, retrieving from recordsets
 ms.assetid: 94500662-22a4-443e-82d7-acbe6eca447b
 ms.openlocfilehash: e10f2e1574dae234d98d210784d4a8ddef3bb57e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025323"
 ---
 # <a name="recordset-obtaining-sums-and-other-aggregate-results-odbc"></a>レコード セット:合計およびその他の集計の計算 (ODBC) を取得します。
@@ -36,7 +36,7 @@ ms.locfileid: "59025323"
 データ ソースからレコードを抽出するのではなく、データ ソース内のレコードについての統計情報を取得するは、これらの SQL 関数を使用します。 通常作成されるレコード セットは、1 つの値を含む (すべての列は、集計が) 場合に記録します。 (を使用した場合、1 つ以上のレコードにすることがあります、 **GROUP BY**句)。この値は計算または SQL 関数で実行される抽出の結果です。
 
 > [!TIP]
->  SQL を追加する**GROUP BY**句 (および場合によって、 **HAVING**句) するには、SQL ステートメントの末尾に追加`m_strFilter`します。 例えば:
+>  SQL を追加する**GROUP BY**句 (および場合によって、 **HAVING**句) するには、SQL ステートメントの末尾に追加`m_strFilter`します。 例:
 
 ```
 m_strFilter = "sales > 10 GROUP BY SALESPERSON_ID";

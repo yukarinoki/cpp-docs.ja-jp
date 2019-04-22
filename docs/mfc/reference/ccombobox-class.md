@@ -109,10 +109,10 @@ helpviewer_keywords:
 - CComboBox [MFC], ShowDropDown
 ms.assetid: 4e73b5df-0d2e-4658-9706-38133fb10513
 ms.openlocfilehash: a76be4be87471f26970a5b517d9993ae324b56c5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778521"
 ---
 # <a name="ccombobox-class"></a>CComboBox クラス
@@ -147,7 +147,7 @@ class CComboBox : public CWnd
 |[CComboBox::DeleteString](#deletestring)|コンボ ボックスのリスト ボックスから文字列を削除します。|
 |[CComboBox::Dir](#dir)|コンボ ボックスのリスト ボックスにファイル名の一覧を追加します。|
 |[CComboBox::DrawItem](#drawitem)|ビジュアルな部分のオーナー描画コンボ ボックスが変更されたときにフレームワークによって呼び出されます。|
-|[Ccombobox::findstring](#findstring)|コンボ ボックスの一覧ボックスで指定したプレフィックスを含む最初の文字列を検索します。|
+|[CComboBox::FindString](#findstring)|コンボ ボックスの一覧ボックスで指定したプレフィックスを含む最初の文字列を検索します。|
 |[CComboBox::FindStringExact](#findstringexact)|指定した文字列と一致する、(コンボ ボックス) でのボックスの一覧の最初文字列を検索します。|
 |[CComboBox::GetComboBoxInfo](#getcomboboxinfo)|に関する情報を取得、`CComboBox`オブジェクト。|
 |[CComboBox::GetCount](#getcount)|コンボ ボックスのリスト ボックス内の項目の数を取得します。|
@@ -599,7 +599,7 @@ int FindStringExact(
 *nIndexStart*<br/>
 最初の項目を検索する前にある項目の 0 から始まるインデックスを指定します。 指定された項目に、リスト ボックスの上部から続行、検索では、リスト ボックスの下部に達すると、 *nIndexStart*します。 場合*nIndexStart* -1 で、最初からリスト ボックス全体が検索されます。
 
-*中から*<br/>
+*lpszFind*<br/>
 検索する null で終わる文字列へのポインター。 この文字列は、拡張子を含む、完全なファイル名を含めることができます。 検索は大文字小文字が区別はないため、この文字列は、任意の大文字と小文字を含めることができます。
 
 ### <a name="return-value"></a>戻り値
@@ -1562,7 +1562,7 @@ void ShowDropDown(BOOL bShowIt = TRUE);
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CWnd クラス](../../mfc/reference/cwnd-class.md)<br/>
 [CButton クラス](../../mfc/reference/cbutton-class.md)<br/>
-[CEdit Class](../../mfc/reference/cedit-class.md)<br/>
+[CEdit クラス](../../mfc/reference/cedit-class.md)<br/>
 [CListBox クラス](../../mfc/reference/clistbox-class.md)<br/>
 [CScrollBar クラス](../../mfc/reference/cscrollbar-class.md)<br/>
 [CStatic クラス](../../mfc/reference/cstatic-class.md)<br/>

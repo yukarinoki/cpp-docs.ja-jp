@@ -7,10 +7,10 @@ helpviewer_keywords:
 - OLE DB providers, creating
 ms.assetid: bdfd5c9f-1c6f-4098-822c-dd650e70ab82
 ms.openlocfilehash: d3f8314e7cd57617e35e50a67a4562d4055cb93a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024740"
 ---
 # <a name="creating-an-updatable-provider"></a>更新可能なプロバイダーの作成
@@ -121,7 +121,7 @@ ms.locfileid: "59024740"
 
    実装する場合`IRowsetUpdateImpl`、する必要があります、次プロパティを設定して、プロバイダー、さらにすべてのプロパティを設定する`IRowsetChangeImpl`上記に示した。
 
-   - `DBPROP_IRowsetUpdate`.
+   - `DBPROP_IRowsetUpdate`。
 
    - `DBPROP_OWNINSERT`:READ_ONLY と VARIANT_TRUE にする必要があります。
 
@@ -133,7 +133,7 @@ ms.locfileid: "59024740"
 
    - `DBPROP_REMOVEDELETED`:READ_ONLY と VARIANT_TRUE にする必要があります。
 
-   - `DBPROP_MAXPENDINGROWS`.
+   - `DBPROP_MAXPENDINGROWS`。
 
    > [!NOTE]
    > 通知をサポートする場合は、その他のプロパティも; をもがあります。参照してください`IRowsetNotifyCP`このリスト。

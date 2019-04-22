@@ -11,10 +11,10 @@ helpviewer_keywords:
 - for each keyword [C++]
 ms.assetid: 0c3a364b-2747-43f3-bb8d-b7d3b7023f79
 ms.openlocfilehash: b1dfe3a32f88c0e9456e3d73c31c533911f8d3ac
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770692"
 ---
 # <a name="for-each-in"></a>for each、in
@@ -25,7 +25,7 @@ ms.locfileid: "58770692"
 
 ### <a name="syntax"></a>構文
 
-> **各 (** *型**識別子***で***式* **) {**<br/>
+> **各 (** *型* *識別子* **で** *式* **) {**<br/>
 > &nbsp;&nbsp;&nbsp;&nbsp;*ステートメント*<br/>
 > **}**
 
@@ -37,7 +37,7 @@ ms.locfileid: "58770692"
 *identifier*<br/>
 コレクション要素を表す繰り返し変数。  ときに`identifier`は、[参照演算子の追跡](../extensions/tracking-reference-operator-cpp-component-extensions.md)要素を変更することができます。
 
-*expression*<br/>
+*式 (expression)*<br/>
 配列式またはコレクション。 コレクション要素は、コンパイラが `identifier` 型に変換できるようにする必要があります。
 
 *ステートメント*<br/>
@@ -111,7 +111,7 @@ Testing
 
 CLR の構文は同じ、**すべてのランタイム**構文では、次の手順を除きます。
 
-*expression*<br/>
+*式 (expression)*<br/>
 マネージド配列式またはコレクション。 コンパイラはからに変換できるように、コレクションの要素がある必要があります<xref:System.Object>を*識別子*型。
 
 *式*を実装する型に評価される<xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、または型を定義する、`GetEnumerator`実装するメソッドの型を返すか<xref:System.Collections.IEnumerator>すべてで定義されているメソッドの宣言または`IEnumerator`.

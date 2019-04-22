@@ -7,10 +7,10 @@ helpviewer_keywords:
 - no_dual_interfaces attribute
 ms.assetid: 9acd5d9d-4a49-4cdc-9470-73a2c23cf512
 ms.openlocfilehash: ae75bc2e974f374768f1a9e5a0e1ced61e9904b0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023803"
 ---
 # <a name="nodualinterfaces"></a>no_dual_interfaces
@@ -28,7 +28,7 @@ no_dual_interfaces
 
 通常、ラッパーは、そのインターフェイスの仮想関数テーブルからメソッドを呼び出します。 **No_dual_interfaces**、ラッパーを呼び出す代わりに`IDispatch::Invoke`メソッドを呼び出します。
 
-**END C++ 固有の仕様**
+**END C 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

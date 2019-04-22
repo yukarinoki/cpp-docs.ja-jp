@@ -9,10 +9,10 @@ f1_keywords:
 - C5012
 ms.assetid: d8f4844a-f414-42ab-b9a5-925a5da9d365
 ms.openlocfilehash: 6f80bc9d2a2438a6003c93ce7e60de50fd639a16
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023907"
 ---
 # <a name="vectorizer-and-parallelizer-messages"></a>ベクター化と並列化のメッセージ 
@@ -23,7 +23,7 @@ Visual C のコンパイラ オプションを使用する[/Qpar-report](../../b
 
 - [5xx](#BKMK_ReasonCode50x)
 
-- [10xx](#BKMK_ReasonCode100x)
+- [10 xx 系](#BKMK_ReasonCode100x)
 
 - [11xx](#BKMK_ReasonCode110x)
 

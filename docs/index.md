@@ -5,10 +5,10 @@ description: C++ を使って、プラットフォームやデバイス用のア
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: f402087b101487a444996e7e27b186382c4874fd
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898675"
 ---
 <div id="main" class="v2">
@@ -74,10 +74,10 @@ ms.locfileid: "58898675"
         <h1>Visual C++ ドキュメント</h1>
         <ul class="pivots">
             <li>
-                <a href="#workloads">作業負荷</a>
+                <a href="#workloads">ワークロード</a>
                 <ul id="workloads">
                     <li>
-                        <a href="#workloads1">作業負荷</a>
+                        <a href="#workloads1">ワークロード</a>
                         <ul id="workloads1" class="cardsC">
                             <li>
                                 <a href="/cpp/cppcx/universal-windows-apps-cpp">
@@ -198,10 +198,10 @@ ms.locfileid: "58898675"
                 </ul>
             </li>
             <li>
-                <a href="#features">フィーチャー</a>
+                <a href="#features">機能</a>
                 <ul id="features">
                     <li>
-                        <a href="#features1">フィーチャー</a>
+                        <a href="#features1">機能</a>
                         <ul id="features1" class="cardsC">
                             <li>
                                 <a href="/cpp/ide/writing-and-refactoring-code-cpp">

@@ -21,10 +21,10 @@ helpviewer_keywords:
 - structured exception handling [C++], try-finally
 ms.assetid: 826e0347-ddfe-4f6e-a7bc-0398e0edc7c2
 ms.openlocfilehash: d2a1c63f686b46aad4e174c86895f6f9fc00d260
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778339"
 ---
 # <a name="try-finally-statement"></a>try-finally ステートメント
@@ -49,7 +49,7 @@ ms.locfileid: "58778339"
 
 **、Try-finally**ステートメントは C および C++ 言語への Microsoft 拡張コードのブロックの実行が中断されたときにクリーンアップ コードの実行を保証するためにターゲット アプリケーションの機能です。 クリーンアップは、メモリを解放する、ファイルを閉じる、ファイル ハンドルを解放するなどのタスクで構成されます。 **、Try-finally**ステートメントは、チェックが行われる場所を引き起こす可能性のあるエラーの途中の複数の場所のルーチンは、ルーチンから返すに特に便利です。
 
-関連する情報とコード サンプルでは、[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)を参照してください。 詳細については、構造化例外処理を一般には、[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)を参照してください。 C + を使用してマネージ アプリケーションでの例外処理の詳細については/cli CLI を参照してください[/clr での例外処理](../extensions/exception-handling-cpp-component-extensions.md)します。
+関連する情報とコード サンプルでは、次を参照してください。[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)します。 詳細については、構造化例外処理を一般には、次を参照してください。[構造化例外処理](../cpp/structured-exception-handling-c-cpp.md)します。 C + を使用してマネージ アプリケーションでの例外処理の詳細については/cli CLI を参照してください[/clr での例外処理](../extensions/exception-handling-cpp-component-extensions.md)します。
 
 > [!NOTE]
 > 構造化例外処理では、C と C++ のソース ファイルの両方で Win32 を使用します。 ただし、特に C++ 用にデザインされたものではありません。 C++ 例外処理を使用して、コードの移植性を高めることができます。 また、C++ 例外処理は、任意の型の例外を処理できるという点で、より柔軟です。 C++ プログラムは、お勧め、C++ 例外処理機構を使用すること ([try、catch、および throw](../cpp/try-throw-and-catch-statements-cpp.md)ステートメント)。
@@ -72,7 +72,7 @@ ms.locfileid: "58778339"
 終了順序 - ハンドラーの実行
 
 > [!NOTE]
-> Try-finally の動作の使用をサポートする他の言語とは異なります**最後に**、C# など。  1 つ **_ _try**の両方ではなくが、必要があります **_ _finally**と **_ _except**します。  両方を一緒に使用する場合は、外側の try-except ステートメントで内側の try-finally ステートメントを囲む必要があります。  各ブロックがいつ実行されるかを指定する規則も異なります。
+> Try-finally の動作の使用をサポートする他の言語とは異なります**最後に**、c# など。  1 つ **_ _try**の両方ではなくが、必要があります **_ _finally**と **_ _except**します。  両方を一緒に使用する場合は、外側の try-except ステートメントで内側の try-finally ステートメントを囲む必要があります。  各ブロックがいつ実行されるかを指定する規則も異なります。
 
 以前のバージョンとの互換性のため **_try**、 **_finally**、および **_leave**のシノニムで **_ _try**、 **_ _最後に**と **_ _leave**しない限り、コンパイラ オプション[/Za\(言語拡張機能を無効にする)](../build/reference/za-ze-disable-language-extensions.md)を指定します。
 

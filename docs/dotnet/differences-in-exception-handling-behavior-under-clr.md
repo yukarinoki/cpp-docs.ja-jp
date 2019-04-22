@@ -6,19 +6,19 @@ helpviewer_keywords:
 - set_se_translator function
 ms.assetid: 2e7e8daf-d019-44b0-a51c-62d7aaa89104
 ms.openlocfilehash: ae745cfb96f4efe1ede7e3fc762842f9e4d63323
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772739"
 ---
 # <a name="differences-in-exception-handling-behavior-under-clr"></a>/CLR における例外処理動作の相違点
 
-[マネージ例外の使用で基本的な概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)マネージ アプリケーションでの例外処理について説明します。 このトピックでは、例外処理、およびいくつかの制限の標準の動作の相違点は詳しく説明します。 詳細については、[_set_se_translator 関数](../c-runtime-library/reference/set-se-translator.md)を参照してください。
+[マネージ例外の使用で基本的な概念](../dotnet/basic-concepts-in-using-managed-exceptions.md)マネージ アプリケーションでの例外処理について説明します。 このトピックでは、例外処理、およびいくつかの制限の標準の動作の相違点は詳しく説明します。 詳細については、次を参照してください。 [_set_se_translator 関数](../c-runtime-library/reference/set-se-translator.md)します。
 
 ##  <a name="vcconjumpingoutofafinallyblock"></a> ジャンプ、Finally ブロック
 
-ネイティブ C/C++ コードで、_ _ からジャンプ**最後に**警告が生成されますが、構造化例外処理 (SEH) を使用してブロックが許可されています。  [/Clr](../build/reference/clr-common-language-runtime-compilation.md)の移動、**最後に**ブロックが発生したエラー。
+ネイティブ C で/C++ 、_ _ からジャンプ コード**最後に**警告が生成されますが、構造化例外処理 (SEH) を使用してブロックが許可されます。  [/Clr](../build/reference/clr-common-language-runtime-compilation.md)の移動、**最後に**ブロックが発生したエラー。
 
 ```cpp
 // clr_exception_handling_4.cpp
@@ -149,7 +149,7 @@ caught an SEH Exception
 
 ##  <a name="vcconexceptionfiltersandexception_continue_execution"></a> 例外フィルターと EXCEPTION_CONTINUE_EXECUTION
 
-フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`、マネージ アプリケーションでは扱われます、フィルターを返す場合、`EXCEPTION_CONTINUE_SEARCH`します。 これらの定数の詳細については、[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)を参照してください。
+フィルターを返す場合`EXCEPTION_CONTINUE_EXECUTION`、マネージ アプリケーションでは扱われます、フィルターを返す場合、`EXCEPTION_CONTINUE_SEARCH`します。 これらの定数の詳細については、次を参照してください。[を再試行してください-ステートメントを除く](../cpp/try-except-statement.md)します。
 
 次の例では、この違いを示しています。
 

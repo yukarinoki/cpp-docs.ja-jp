@@ -8,15 +8,15 @@ helpviewer_keywords:
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769486"
 ---
 # <a name="ribbon-designer-mfc"></a>リボン デザイナー (MFC)
 
-リボン デザイナーを使用すると、MFC アプリケーションでリボンを作成してカスタマイズできます。 リボンは、複数のコマンドを 1 つの論理グループにまとめたユーザー インターフェイス (UI) 要素です。 これらのグループは、ウィンドウの上部に水平に並んで表示されるタブに別々に表示されます。 リボンは、メニュー バーとツール バーの代わりに表示されます。 リボンは、アプリケーションの使用性を大幅に向上させます。 詳細については、[リボン](/windows/desktop/uxguide/cmd-ribbons)を参照してください。 リボンを次の図に示します。
+リボン デザイナーを使用すると、MFC アプリケーションでリボンを作成してカスタマイズできます。 リボンは、複数のコマンドを 1 つの論理グループにまとめたユーザー インターフェイス (UI) 要素です。 これらのグループは、ウィンドウの上部に水平に並んで表示されるタブに別々に表示されます。 リボンは、メニュー バーとツール バーの代わりに表示されます。 リボンは、アプリケーションの使用性を大幅に向上させます。 詳細については、次を参照してください。[リボン](/windows/desktop/uxguide/cmd-ribbons)します。 リボンを次の図に示します。
 
 ![MFC リボン リソース コントロール](../mfc/media/ribbon_no_callouts.png "MFC リボン リソース コントロール")
 
@@ -63,7 +63,7 @@ MFC アプリケーションでリボン リソースを使用するには、呼
 プロジェクトに手動でコード化されたリボンが既に存在する場合でも、MFC には既存のリボンをリボン リソースに変換するために使用できる機能が用意されています。 詳細については、「[方法 :既存の MFC リボンをリボン リソースに変換](../mfc/how-to-convert-an-existing-mfc-ribbon-to-a-ribbon-resource.md)します。
 
 > [!NOTE]
->  リボンはダイアログ ベースのアプリケーションには作成できません。 詳細については、[アプリケーションの種類、MFC アプリケーション ウィザード](../mfc/reference/application-type-mfc-application-wizard.md)を参照してください。
+>  リボンはダイアログ ベースのアプリケーションには作成できません。 詳細については、次を参照してください。[アプリケーションの種類、MFC アプリケーション ウィザード](../mfc/reference/application-type-mfc-application-wizard.md)します。
 
 ## <a name="customizing-ribbons"></a>リボンのカスタマイズ
 

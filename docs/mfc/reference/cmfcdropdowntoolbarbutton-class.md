@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMFCDropDownToolbarButton [MFC], m_uiShowBarDelay
 ms.assetid: bc9d69e6-bd3e-4c15-9368-e80a504a0ba7
 ms.openlocfilehash: 5027b43e1519d9f8cc2880cc4de005d5137bbb67
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769005"
 ---
 # <a name="cmfcdropdowntoolbarbutton-class"></a>CMFCDropDownToolbarButton クラス
@@ -102,7 +102,7 @@ class CMFCDropDownToolbarButton : public CMFCToolBarButton
 
 A`CMFCDropDownToolBarButton`ボタンの右下隅に小さな矢印がある点で通常のボタンは異なります。 ドロップダウン ツール バーにユーザーがボタンを選択すると、フレームワークには、最上位レベルのツール バー ボタン (右上隅にある小さな矢印の付いたボタン) 上のアイコンが表示されます。
 
-ドロップダウン ツール バーを実装する方法については、[CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)を参照してください。
+ドロップダウン ツール バーを実装する方法については、次を参照してください。 [CMFCDropDownToolBar クラス](../../mfc/reference/cmfcdropdowntoolbar-class.md)します。
 
 `CMFCDropDownToolBarButton`にオブジェクトをエクスポートできる、 [CMFCToolBarMenuButton クラス](../../mfc/reference/cmfctoolbarmenubutton-class.md)オブジェクトし、ポップアップ メニューがメニュー ボタンとして表示されます。
 
@@ -261,7 +261,7 @@ virtual BOOL IsExtraSize() const;
 
 ### <a name="remarks"></a>Remarks
 
-罫線の拡張の詳細については、[CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)を参照してください。
+罫線の拡張の詳細については、次を参照してください。 [CMFCToolBarButton::IsExtraSize](../../mfc/reference/cmfctoolbarbutton-class.md#isextrasize)します。
 
 ##  <a name="m_uishowbardelay"></a>  CMFCDropDownToolbarButton::m_uiShowBarDelay
 
@@ -368,7 +368,7 @@ virtual BOOL OnClickUp();
 
 このメソッドは、アクティブである場合、ドロップダウン ツールバー タイマーを停止します。 開いている場合は、ドロップダウン ツールバーを閉じます。
 
-ドロップダウン ツール バーとツールバーのドロップダウン リストのタイマーの詳細については、[CMFCDropDownToolbarButton::OnClick](#onclick)を参照してください。
+ドロップダウン ツール バーとツールバーのドロップダウン リストのタイマーの詳細については、次を参照してください。 [CMFCDropDownToolbarButton::OnClick](#onclick)します。
 
 ##  <a name="oncontexthelp"></a>  CMFCDropDownToolbarButton::OnContextHelp
 

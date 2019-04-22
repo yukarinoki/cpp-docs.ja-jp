@@ -13,10 +13,10 @@ helpviewer_keywords:
 - CMFCPropertyGridFontProperty [MFC], GetLogFont
 ms.assetid: 83693f33-bbd3-4fcb-a9ad-fa79fcf2ca24
 ms.openlocfilehash: b348dc2ac68ced89fb0702073f57a114befaf1cb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769356"
 ---
 # <a name="cmfcpropertygridfontproperty-class"></a>CMFCPropertyGridFontProperty クラス
@@ -85,7 +85,7 @@ CMFCPropertyGridFontProperty(
 [in]フォントの属性を指定するフォントの論理構造体。
 
 *dwFontDialogFlags*<br/>
-[in]プロパティ値のドロップダウン ボタンをクリックすると表示される [フォント] ダイアログ ボックスに適用されるスタイル。 既定値は、CF_EFFECTS と CF_SCREENFONTS のビットごとの組み合わせ (OR です)。 詳細については、、*フラグ*のパラメーター、 [CHOOSEFONT 構造](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)を参照してください。
+[in]プロパティ値のドロップダウン ボタンをクリックすると表示される [フォント] ダイアログ ボックスに適用されるスタイル。 既定値は、CF_EFFECTS と CF_SCREENFONTS のビットごとの組み合わせ (OR です)。 詳細については、次を参照してください。、*フラグ*のパラメーター、 [CHOOSEFONT 構造](/windows/desktop/api/commdlg/ns-commdlg-tagchoosefonta)します。
 
 *lpszDescr*<br/>
 [in]フォントのプロパティの説明。 既定値は、NULL です。

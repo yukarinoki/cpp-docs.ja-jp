@@ -10,10 +10,10 @@ helpviewer_keywords:
 - pragmas, conform
 ms.assetid: 71b3e174-c53c-4bfc-adf3-af39b1554191
 ms.openlocfilehash: 35c3b06106779a9056f682ff76c6ed4b4ab1ab41
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026579"
 ---
 # <a name="conform"></a>conform
@@ -30,7 +30,7 @@ ms.locfileid: "59026579"
 *name*<br/>
 変更されるコンパイラ オプションの名前を指定します。 唯一の有効な*名前*は`forScope`します。
 
-**表示します。**<br/>
+**show**<br/>
 (省略可能)現在の設定と、*名前*(true または false)、コンパイル時に警告メッセージとして表示されます。 たとえば、`#pragma conform(forScope, show)` のようにします。
 
 **で**、**オフ**<br/>

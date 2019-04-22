@@ -13,10 +13,10 @@ helpviewer_keywords:
 - event sinks
 ms.assetid: bf8fe770-3ea2-4128-b46b-166222ee4097
 ms.openlocfilehash: 81a3ec88c336ddeb550f133e657854b3b6f89d96
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023296"
 ---
 # <a name="eventreceiver"></a>event_receiver
@@ -32,12 +32,12 @@ ms.locfileid: "59023296"
 
 ### <a name="parameters"></a>パラメーター
 
-*種類*<br/>
+*type*<br/>
 次の値のいずれかの列挙です。
 
 - `native` アンマネージ C/C++ コード (ネイティブ クラスの既定値)。
 
-- `com` 。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。
+- COM コード用の`com` 。 この値の場合、ユーザーが次のヘッダー ファイルを含める必要があります。
 
     ```cpp
     #define _ATL_ATTRIBUTES
@@ -54,7 +54,7 @@ ms.locfileid: "59023296"
 
 ## <a name="remarks"></a>Remarks
 
-**Event_receiver** C++ 属性は、クラスまたは構造体を適用するによって Visual C の統一イベント モデルを使用して、イベント レシーバーがなることを指定します。
+**Event_receiver** C++属性は、クラスまたは構造体を適用するによって、ビジュアルを使用して、イベント レシーバーがなることを指定しますC++統一イベント モデル。
 
 **event_receiver**を併用、 [event_source](event-source.md)属性と[_ _hook](../../cpp/hook.md)と[_ _unhook](../../cpp/unhook.md)キーワード。 使用`event_source`イベント ソースを作成します。 使用 **_ _hook**にイベント ソースのイベントをイベント レシーバー メソッドを (「フック」) を関連付けるイベント レシーバーのメソッド内で。 使用 **_ _unhook**の関連付けを解除しています。
 

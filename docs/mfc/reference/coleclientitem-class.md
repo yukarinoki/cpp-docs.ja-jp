@@ -165,10 +165,10 @@ helpviewer_keywords:
 - COleClientItem [MFC], OnShowItem
 ms.assetid: 7f571b7c-2758-4839-847a-0cf1ef643128
 ms.openlocfilehash: 2687dfc9941a512523a7cb771cb872c78b97ce2d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773984"
 ---
 # <a name="coleclientitem-class"></a>COleClientItem クラス
@@ -198,7 +198,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::AttachDataObject](#attachdataobject)|OLE オブジェクトのデータにアクセスします。|
 |[COleClientItem::CanCreateFromData](#cancreatefromdata)|コンテナー アプリケーションが、埋め込みオブジェクトを作成できるかどうかを示します。|
 |[COleClientItem::CanCreateLinkFromData](#cancreatelinkfromdata)|コンテナー アプリケーションがリンクされたオブジェクトを作成できるかどうかを示します。|
-|[置き換えるには](#canpaste)|埋め込み可能なまたは静的 OLE アイテムがクリップボードに含まれるかどうかを示します。|
+|[COleClientItem::CanPaste](#canpaste)|埋め込み可能なまたは静的 OLE アイテムがクリップボードに含まれるかどうかを示します。|
 |[置き換えるには](#canpastelink)|OLE 項目をリンク可能がクリップボードに含まれるかどうかを示します。|
 |[COleClientItem::Close](#close)|サーバーへのリンクを閉じますが、OLE 項目を破棄しません。|
 |[COleClientItem::ConvertTo](#convertto)|項目を別の型に変換します。|
@@ -207,7 +207,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::CreateFromClipboard](#createfromclipboard)|クリップボードから埋め込みアイテムを作成します。|
 |[COleClientItem::CreateFromData](#createfromdata)|データ オブジェクトから埋め込みアイテムを作成します。|
 |[COleClientItem::CreateFromFile](#createfromfile)|ファイルから埋め込みアイテムを作成します。|
-|[リンク](#createlinkfromclipboard)|クリップボードからのリンクされた項目を作成します。|
+|[COleClientItem::CreateLinkFromClipboard](#createlinkfromclipboard)|クリップボードからのリンクされた項目を作成します。|
 |[COleClientItem::CreateLinkFromData](#createlinkfromdata)|データ オブジェクトからリンクされた項目を作成します。|
 |[COleClientItem::CreateLinkFromFile](#createlinkfromfile)|ファイルからのリンクされた項目を作成します。|
 |[COleClientItem::CreateNewItem](#createnewitem)|サーバー アプリケーションを起動して新しい埋め込みアイテムを作成します。|
@@ -216,7 +216,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::Deactivate](#deactivate)|アイテムを非アクティブ化します。|
 |[COleClientItem::DeactivateUI](#deactivateui)|コンテナー アプリケーションのユーザー インターフェイスは、元の状態に復元します。|
 |[COleClientItem::Delete](#delete)|削除するか、またはリンクされた項目があった場合、OLE 項目を閉じます。|
-|[クラス](#dodragdrop)|ドラッグ アンド ドロップ操作を実行します。|
+|[COleClientItem::DoDragDrop](#dodragdrop)|ドラッグ アンド ドロップ操作を実行します。|
 |[COleClientItem::DoVerb](#doverb)|指定した動詞を実行します。|
 |[値](#draw)|OLE 項目を描画します。|
 |[COleClientItem::GetActiveView](#getactiveview)|場所に項目がアクティブにビューを取得します。|
@@ -241,7 +241,7 @@ class COleClientItem : public CDocItem
 |[COleClientItem::IsRunning](#isrunning)|アイテムのサーバー アプリケーションが実行されている場合は、TRUE を返します。|
 |[COleClientItem::OnActivate](#onactivate)|アイテムがアクティブ化されることを通知するためにフレームワークによって呼び出されます。|
 |[COleClientItem::OnActivateUI](#onactivateui)|アクティブになるし、そのユーザー インターフェイスを表示する必要がありますが、アイテムを通知するためにフレームワークによって呼び出されます。|
-|[として](#onchange)|サーバーは OLE 項目を変更するときに呼び出されます。 必要な実装です。|
+|[COleClientItem::OnChange](#onchange)|サーバーは OLE 項目を変更するときに呼び出されます。 必要な実装です。|
 |[COleClientItem::OnDeactivate](#ondeactivate)|項目が非アクティブ化されたときに、フレームワークによって呼び出されます。|
 |[COleClientItem::OnDeactivateUI](#ondeactivateui)|サーバーがその場所でのユーザー インターフェイスを削除すると、フレームワークによって呼び出されます。|
 |[COleClientItem::OnGetClipboardData](#ongetclipboarddata)|クリップボードにコピーするデータを取得するためにフレームワークによって呼び出されます。|
@@ -996,7 +996,7 @@ DROPEFFECT DoDragDrop(
 
 ### <a name="parameters"></a>パラメーター
 
-*示す*<br/>
+*lpItemRect*<br/>
 クライアント座標 (ピクセル単位) 画面でアイテムの四角形。
 
 *ptOffset*<br/>
@@ -1741,13 +1741,13 @@ virtual BOOL OnGetWindowContext(
 
 ### <a name="parameters"></a>パラメーター
 
-*ときは*<br/>
+*ppMainFrame*<br/>
 メイン フレーム ウィンドウへのポインターへのポインター。
 
-*き*<br/>
+*ppDocFrame*<br/>
 ドキュメント フレーム ウィンドウへのポインターへのポインター。
 
-*は*<br/>
+*lpFrameInfo*<br/>
 ポインター、[受け取る](/windows/desktop/api/oleidl/ns-oleidl-tagoifi)フレーム ウィンドウの情報を受け取る構造体。
 
 ### <a name="return-value"></a>戻り値

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual C++, language reference
 ms.assetid: 4be9cacb-c862-4391-894a-3a118c9c93ce
 ms.openlocfilehash: 8da5a4f7113bbb4256e45e7ec3c91a9c6677643c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774036"
 ---
 # <a name="c-language-reference"></a>C++ 言語リファレンス
@@ -81,7 +81,7 @@ C++ 言語の演算子。
 Microsoft C++ 固有の修飾子。 メモリをアドレス指定、呼び出し規則、 **naked**関数、拡張ストレージ クラス属性 (**_ _declspec**)、 **_ _w64**します。
 
 [インライン アセンブラー](../assembler/inline/inline-assembler.md)<br/>
-アセンブリ言語および C++ で使用して **_ _asm**ブロックします。
+アセンブリ言語の使用とC++で **_ _asm**ブロックします。
 
 [コンパイラ COM サポート](../cpp/compiler-com-support.md)<br/>
 COM 型をサポートするために使用する Microsoft 固有のクラスとグローバル関数への参照。

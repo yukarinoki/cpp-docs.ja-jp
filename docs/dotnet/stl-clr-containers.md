@@ -7,10 +7,10 @@ helpviewer_keywords:
 - containers, STL/CLR
 ms.assetid: 34ca8031-2041-46b9-aed9-29082d1972ea
 ms.openlocfilehash: dc2e5ce3263c61839a1ba434ab0d2a39e6a9078f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774543"
 ---
 # <a name="stlclr-containers"></a>STL/CLR コンテナー
@@ -21,7 +21,7 @@ ms.locfileid: "58774543"
 
 ## <a name="requirements-for-container-elements"></a>コンテナー要素の要件
 
-STL/CLR コンテナーに挿入されたすべての要素は、特定のガイドラインに従う必要があります。 詳細については、[STL/CLR コンテナー要素の要件](../dotnet/requirements-for-stl-clr-container-elements.md)を参照してください。
+STL/CLR コンテナーに挿入されたすべての要素は、特定のガイドラインに従う必要があります。 詳細については、次を参照してください。 [STL/CLR コンテナー要素の要件](../dotnet/requirements-for-stl-clr-container-elements.md)します。
 
 ## <a name="valid-container-elements"></a>有効なコンテナー要素
 
@@ -37,7 +37,7 @@ STL/CLR コンテナーには、2 種類の要素のいずれかを保持でき�
 
 ### <a name="handles-to-reference-types"></a>参照型へのハンドル
 
-参照型を識別するハンドルを STL/CLR コンテナーに挿入できます。 CLR を対象とする C++ でのハンドルは、ネイティブ C++ でのポインターに似ています。 詳細については、[オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)を参照してください。
+参照型を識別するハンドルを STL/CLR コンテナーに挿入できます。 CLR を対象とする C++ でのハンドルは、ネイティブ C++ でのポインターに似ています。 詳細については、次を参照してください。[オブジェクト演算子 (^) へのハンドル](../extensions/handle-to-object-operator-hat-cpp-component-extensions.md)します。
 
 #### <a name="example"></a>例
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - call_as attribute
 ms.assetid: a09d7f1f-353b-4870-9b45-f0284161695d
 ms.openlocfilehash: a0051cdca6673800b37d5733c0b849da24010fcb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023920"
 ---
 # <a name="callas"></a>call_as
@@ -25,12 +25,12 @@ ms.locfileid: "59023920"
 
 ### <a name="parameters"></a>パラメーター
 
-*関数*<br/>
+*function*<br/>
 ローカル関数をリモート関数を呼び出すときに呼び出されます。
 
 ## <a name="remarks"></a>Remarks
 
-**Call_as** C++ 属性と同じ機能を持つ、 [call_as](/windows/desktop/Midl/call-as) MIDL 属性。
+**Call_as** C++属性と同じ機能を持つ、 [call_as](/windows/desktop/Midl/call-as) MIDL 属性。
 
 ## <a name="example"></a>例
 

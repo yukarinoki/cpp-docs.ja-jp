@@ -6,20 +6,20 @@ helpviewer_keywords:
 - interface attributes
 ms.assetid: 27fcdfee-abce-4585-8b53-ee31635356e8
 ms.openlocfilehash: 8218ccb66c6be9edef5d7de751a73bf4753d069f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027206"
 ---
 # <a name="interface-attributes"></a>インターフェイス属性
 
-次の属性を適用する、[インターフェイス (または _ _interface)](../../cpp/interface.md) C++ のキーワード。
+次の属性を適用する、[インターフェイス (または _ _interface)](../../cpp/interface.md) C++キーワード。
 
 |属性|説明|
 |---------------|-----------------|
 |[async_uuid](async-uuid.md)|同期および非同期の両方のバージョンの COM インターフェイスを定義する、MIDL コンパイラに指示する UUID を指定します。|
-|[カスタム](custom-cpp.md)|独自の属性を定義できます。|
+|[custom](custom-cpp.md)|独自の属性を定義できます。|
 |[dispinterface](dispinterface.md)|ディスパッチ インターフェイスとしてインターフェイスを .idl ファイルに配置します。|
 |[dual](dual.md)|.Idl ファイルにデュアル インターフェイスとしてインターフェイスを配置します。|
 |[export](export.md)|.Idl ファイルに配置するデータ構造をによりします。|
@@ -27,7 +27,7 @@ ms.locfileid: "59027206"
 |[helpfile](helpfile.md)|タイプ ライブラリのヘルプ ファイルの名前を設定します。|
 |[helpstring](helpstring.md)|適用先となる要素を記述するために使用される文字列を指定します。|
 |[helpstringcontext](helpstringcontext.md)|.Hlp または .chm ファイルをヘルプ トピックの ID を指定します。|
-|[typelib](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
+|[helpstringdll](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
 |[hidden](hidden.md)|項目が存在しますが、ユーザー指向ブラウザーで表示する必要がありますされませんを示します。|
 |[library_block](library-block.md)|.Idl ファイルのライブラリ ブロック内で構成要素を配置します。|
 |[local](local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして、MIDL コンパイラを使用することができます。 個々 の関数で使用する場合は、スタブが生成されたないローカル プロシージャを指定します。|

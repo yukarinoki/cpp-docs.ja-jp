@@ -7,10 +7,10 @@ helpviewer_keywords:
 - expressions [C++], postfix
 ms.assetid: 7ac62a57-06df-422f-b012-a75b37d7cb9b
 ms.openlocfilehash: eb6e6e8914cf260df09581232066caf3f873c04e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779262"
 ---
 # <a name="postfix-expressions"></a>後置式
@@ -151,7 +151,7 @@ double& func2( double& d, const char *c ) {
 
 CLR プログラミングの既定の引数については、次を参照してください[可変個引数リスト (...)。(C +/CLI CLI)](../extensions/variable-argument-lists-dot-dot-dot-cpp-cli.md).
 
-既定の引数では、関数呼び出しで引数を指定しない場合に、自動的に使用される引数の値を指定できます。 次のコード片では、既定の引数がどのように機能するかを示します。 既定の引数を指定する方法の制限の詳細については、[既定の引数](../cpp/default-arguments.md)を参照してください。
+既定の引数では、関数呼び出しで引数を指定しない場合に、自動的に使用される引数の値を指定できます。 次のコード片では、既定の引数がどのように機能するかを示します。 既定の引数を指定する方法の制限の詳細については、次を参照してください。[既定の引数](../cpp/default-arguments.md)します。
 
 ```cpp
 // expre_Ellipses_and_Default_Arguments.cpp

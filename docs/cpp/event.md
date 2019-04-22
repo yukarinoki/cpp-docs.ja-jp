@@ -9,10 +9,10 @@ helpviewer_keywords:
 - events [C++], __event
 ms.assetid: d3019b3e-722e-48df-8536-c05878461f9e
 ms.openlocfilehash: 3a837e30d3cd66f7caa9b44971f432e00b0917ae
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778261"
 ---
 # <a name="event"></a>__event
@@ -75,9 +75,9 @@ __event __interface IEvent1;
 
 ## <a name="managed-events"></a>マネージド イベント
 
-新しい構文でイベントのコーディングについては、[イベント](../extensions/event-cpp-component-extensions.md)を参照してください。
+新しい構文でイベントのコーディングについては、次を参照してください。[イベント](../extensions/event-cpp-component-extensions.md)します。
 
-マネージド イベントは、データ メンバーまたはメソッドです。 イベントと共に使用すると、デリゲートの戻り値の型が準拠する必要があります、[共通言語仕様](/dotnet/standard/language-independence-and-language-independent-components)します。 イベント ハンドラーの戻り値の型は、デリゲートの戻り値の型と一致する必要があります。 デリゲートの詳細については、[デリゲートとイベント](../dotnet/delegates-and-events.md)を参照してください。 マネージド イベントがメンバー関数である場合、その型はデリゲートへのポインターでなければなりません。
+マネージド イベントは、データ メンバーまたはメソッドです。 イベントと共に使用すると、デリゲートの戻り値の型が準拠する必要があります、[共通言語仕様](/dotnet/standard/language-independence-and-language-independent-components)します。 イベント ハンドラーの戻り値の型は、デリゲートの戻り値の型と一致する必要があります。 デリゲートの詳細については、次を参照してください。[デリゲートとイベント](../dotnet/delegates-and-events.md)します。 マネージド イベントがメンバー関数である場合、その型はデリゲートへのポインターでなければなりません。
 
 .NET Framework では、それ自身がメソッド (つまり、対応するデリゲートの `Invoke` メソッド) であるかのようにデータ メンバーを処理できます。 マネージド イベント データ メンバーを宣言するためのデリゲート型を事前に定義する必要があります。 これに対し、マネージド イベント メソッドは、まだ定義されていない場合、対応するマネージド デリゲートを暗黙的に定義します。 たとえば、次のように、`OnClick` などのイベント値をイベントとして宣言できます。
 

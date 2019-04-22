@@ -7,10 +7,10 @@ f1_keywords:
 - VC.Project.VCCLCompilerTool.CppLanguageStandard
 ms.assetid: 0acb74ba-1aa8-4c05-b96c-682988dc19bd
 ms.openlocfilehash: 32c63240f578b6170ae351cdf0cd1628167464b6
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779743"
 ---
 # <a name="std-specify-language-standard-version"></a>/std (言語標準バージョンの指定)
@@ -44,7 +44,7 @@ ms.locfileid: "58779743"
 **/Std:c + + 最新**オプションは、post を使用できます。-c++ 17 コンパイラとライブラリで現在実装されている言語とライブラリの機能です。 C++ 20 ワーキング ドラフトおよび不具合の更新から C++ 標準の c++ 17 とドラフト標準の実験用の提案に含まれていない機能が含まれます。 サポートされている言語とライブラリの機能の一覧は、[Visual c の新](../../overview/what-s-new-for-visual-cpp-in-visual-studio.md)を参照してください。 **/Std:c + + 最新**オプションが守られている機能を有効にしない、 **]、[実験用**スイッチしますが、有効にする必要があります。
 
 > [!IMPORTANT]
-> 有効になっているコンパイラとライブラリの機能 **/std:c + + 最新**として提供されます-をサポートしていないとします。 これらが重大な変更や削除の通知もなし適用されます。 として、標準の次のバージョンで表示される言語機能のプレビューのものが、標準は進行中の作業です。 使用して、 **/std:c + + 17**最新の ISO C 標準で機能を使用します。
+> 有効になっているコンパイラとライブラリの機能 **/std:c + + 最新**として提供されます-をサポートしていないとします。 これらが重大な変更や削除の通知もなし適用されます。 として、標準の次のバージョンで表示される言語機能のプレビューのものが、標準は進行中の作業です。 使用して、 **/std:c + + 17** ISO の最新の機能を使用するC++標準。
 
 C++ のコンパイル時に影響する **/Std** オプションは [\_MSVC\_LANG](../../preprocessor/predefined-macros.md)プリプロセッサ マクロを使用することで検出できます。 詳細については、[プリプロセッサ マクロ](../../preprocessor/predefined-macros.md)を参照してください。
 
@@ -55,7 +55,7 @@ C++ のコンパイル時に影響する **/Std** オプションは [\_MSVC\_LA
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択 **構成プロパティ**、 **C/C++**、 **言語** を選択します。
 

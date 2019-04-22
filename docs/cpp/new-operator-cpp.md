@@ -5,10 +5,10 @@ helpviewer_keywords:
 - new keyword [C++]
 ms.assetid: 69fee812-1c28-4882-8fda-d1ad17860004
 ms.openlocfilehash: bcb7784e59966510970bd9b3ae0157ae982e462d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768069"
 ---
 # <a name="new-operator-c"></a>new 演算子 (C++)
@@ -29,7 +29,7 @@ ms.locfileid: "58768069"
 
 失敗した場合、**新しい**は 0 を返しますまたは例外をスローします。 を参照してください[新しい演算子と delete 演算子](../cpp/new-and-delete-operators.md)詳細についてはします。 この既定の動作を変更するには、カスタム例外処理ルーチンを記述し、呼び出すことによって、 [_set_new_handler](../c-runtime-library/reference/set-new-handler.md)ランタイム ライブラリ関数を引数として関数名。
 
-マネージ ヒープのオブジェクトを作成する方法については、[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)を参照してください。
+マネージ ヒープのオブジェクトを作成する方法については、次を参照してください。 [gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)します。
 
 ときに**新しい**は C++ クラス オブジェクトのメモリを割り当てに使用されるに、メモリが割り当てられた後、オブジェクトのコンス トラクターは呼び出されます。
 
@@ -153,7 +153,7 @@ int main() {
 
 ## <a name="initializing-object-allocated-with-new"></a>new で割り当てたオブジェクトの初期化
 
-省略可能な*初期化子*の文法でフィールドが含まれる、**新しい**演算子。 これにより、新しいオブジェクトをユーザー定義コンストラクターで初期化できます。 初期化を行う方法の詳細については、[初期化子](../cpp/initializers.md)を参照してください。 次の例で、初期化式を使用する方法を示しています、**新しい**演算子。
+省略可能な*初期化子*の文法でフィールドが含まれる、**新しい**演算子。 これにより、新しいオブジェクトをユーザー定義コンストラクターで初期化できます。 初期化を行う方法の詳細については、次を参照してください。[初期化子](../cpp/initializers.md)します。 次の例で、初期化式を使用する方法を示しています、**新しい**演算子。
 
 ```cpp
 // expre_Initializing_Objects_Allocated_with_new.cpp

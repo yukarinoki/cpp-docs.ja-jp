@@ -133,7 +133,7 @@ MapView の要素の検索に使用するキー。 型`key`typename が*K*しま
 ### <a name="return-value"></a>戻り値
 
 
-  `key` とペアになる値。 戻り値の型は typename *V*します。
+  `key` とペアになる値。 戻り値の型は typename *V* します。
 
 ##  <a name="ctor"></a> Mapview::mapview コンス トラクター
 

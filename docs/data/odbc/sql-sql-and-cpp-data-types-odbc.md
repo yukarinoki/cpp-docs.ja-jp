@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
 ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024349"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL:SQL と C++ のデータ型 (ODBC)
@@ -27,21 +27,21 @@ ms.locfileid: "59024349"
 |**CHAR**|`CString`|
 |**DECIMAL**|`CString` 1|
 |**SMALLINT**|**int**|
-|**real**|**フローティング**|
+|**REAL**|**float**|
 |**INTEGER**|**long**|
-|**FLOAT**|**二重線**|
-|**DOUBLE**|**二重線**|
+|**FLOAT**|**double**|
+|**DOUBLE**|**double**|
 |**NUMERIC**|`CString` 1|
 |**VARCHAR**|`CString`|
 |**LONGVARCHAR**|`CLongBinary`, `CString` 2|
 |**BIT**|**BOOL**|
 |**TINYINT**|**BYTE**|
-|**bigint**|`CString` 1|
+|**BIGINT**|`CString` 1|
 |**バイナリ**|`CByteArray`|
 |**VARBINARY**|`CByteArray`|
 |**LONGVARBINARY**|`CLongBinary`, `CByteArray` 3|
 |**DATE**|`CTime`, `CString`|
-|**TIME**|`CTime`, `CString`|
+|**時間**|`CTime`, `CString`|
 |**TIMESTAMP**|`CTime`, `CString`|
 
 1. ANSI **DECIMAL**と**数値**にマップする`CString`ため**SQL_C_CHAR** ODBC の既定の転送種類は、します。

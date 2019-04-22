@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CMFCOutlookBarPane [MFC], RemoveAllButtons
 ms.assetid: 094e2ef3-a118-487e-a4cc-27626108fe08
 ms.openlocfilehash: b23aa9e30c130cea8c84290b62cc19794376d4c1
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773438"
 ---
 # <a name="cmfcoutlookbarpane-class"></a>CMFCOutlookBarPane クラス
@@ -105,7 +105,7 @@ class CMFCOutlookBarPane : public CMFCToolBar
 
 ## <a name="remarks"></a>Remarks
 
-Outlook バーを実装する方法については、[CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)を参照してください。
+Outlook バーを実装する方法については、次を参照してください。 [CMFCOutlookBar クラス](../../mfc/reference/cmfcoutlookbar-class.md)します。
 
 Outlook バーの例は、OutlookDemo サンプル プロジェクトを参照してください。
 
@@ -258,7 +258,7 @@ virtual BOOL Create(
 [in]Outlook バー ペインのコントロールの親ウィンドウを指定します。 NULL は指定できません。
 
 *dwStyle*<br/>
-[in]ウィンドウ スタイル。  ウィンドウ スタイルの一覧は、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。
+[in]ウィンドウ スタイル。  ウィンドウ スタイルの一覧は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
 
 *uiID*<br/>
 [in]コントロールの id。 有効にするのには一意である必要がありますのコントロールの状態を保存しています。

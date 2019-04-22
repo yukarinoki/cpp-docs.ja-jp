@@ -85,10 +85,10 @@ helpviewer_keywords:
 - CMenu [MFC], m_hMenu
 ms.assetid: 40cacfdc-d45c-4ec7-bf28-991c72812499
 ms.openlocfilehash: 464b59f7e598ea1901cf88c47c5887cbbf308607
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770851"
 ---
 # <a name="cmenu-class"></a>CMenu クラス
@@ -1458,7 +1458,7 @@ BOOL TrackPopupMenuEx(
 ### <a name="parameters"></a>パラメーター
 
 *fuFlags*<br/>
-拡張メニューのさまざまな関数を指定します。 すべての値の一覧とその意味では、[バインド](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)を参照してください。
+拡張メニューのさまざまな関数を指定します。 すべての値の一覧とその意味では、次を参照してください。[バインド](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)します。
 
 *x*<br/>
 ポップアップ メニューの画面座標の水平方向の位置を指定します。
@@ -1480,7 +1480,7 @@ TPM_RETURNCMD を指定しない場合、 *fuFlags*パラメーター、戻り�
 
 ### <a name="remarks"></a>Remarks
 
-浮動小数点のポップアップ メニューは、画面に任意の場所に表示できます。 ポップアップ メニューを作成するときのエラー処理の詳細については、[バインド](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)を参照してください。
+浮動小数点のポップアップ メニューは、画面に任意の場所に表示できます。 ポップアップ メニューを作成するときのエラー処理の詳細については、次を参照してください。[バインド](/windows/desktop/api/winuser/nf-winuser-trackpopupmenuex)します。
 
 ## <a name="see-also"></a>関連項目
 
