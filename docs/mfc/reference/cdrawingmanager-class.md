@@ -57,10 +57,10 @@ helpviewer_keywords:
 - CDrawingManager [MFC], SmartMixColors
 ms.assetid: 9e4775ca-101b-4aa9-a85a-4d047c701215
 ms.openlocfilehash: 506ab7a06653942ecff05043a7e7efabd535115f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781693"
 ---
 # <a name="cdrawingmanager-class"></a>CDrawingManager クラス
@@ -91,7 +91,7 @@ class CDrawingManager : public CObject
 |[CDrawingManager::DrawRotated](#drawrotated)|ソースで指定した四角形は、90 ° +/-内の DC のコンテンツを回転させます。|
 |[CDrawingManager::DrawEllipse](#drawellipse)|指定された塗りつぶしと境界線の色を使用して楕円を描画します。|
 |[CDrawingManager::DrawGradientRing](#drawgradientring)|リングを描画し、色のグラデーションで塗りつぶします。|
-|[CDrawingManager::DrawLine, CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|線を描画します。|
+|[CDrawingManager::DrawLine、CDrawingManager::DrawLineA](#drawline_cdrawingmanager__drawlinea)|線を描画します。|
 |[CDrawingManager::DrawRect](#drawrect)|指定された塗りつぶしと境界線の色の四角形を描画します。|
 |[CDrawingManager::DrawShadow](#drawshadow)|四角形の領域に影を描画します。|
 |[CDrawingManager::Fill4ColorsGradient](#fill4colorsgradient)|2 つの色グラデーションの四角形の領域を塗りつぶします。|
@@ -159,7 +159,7 @@ static HBITMAP __stdcall CreateBitmap_32(
 |パラメーター|説明|
 |*size*|[in]A [CSize](../../atl-mfc-shared/reference/csize-class.md)ビットマップのサイズを示すパラメーターです。|
 |*pBits*|[out]DIB の場所を受信するデータ ポインターへのポインターのビット値。|
-|*ビットマップ*|元のビットマップを識別するハンドル|
+|*bitmap*|元のビットマップを識別するハンドル|
 |*clrTransparent*|元のビットマップの透明色を指定する RGB 値。|
 
 ### <a name="return-value"></a>戻り値
@@ -781,7 +781,7 @@ static COLORREF __stdcall PixelAlpha(
 *srcPixel*<br/>
 [in]ピクセルの初期の色。
 
-*percent*<br/>
+*%*<br/>
 [in]透明度の割合を表す 0 ~ 100 の数値。 100 の値は、初期の色が完全に透明であることを示します。
 
 *percentR*<br/>
@@ -927,10 +927,10 @@ static void __stdcall SetAlphaPixel(
 *x*<br/>
 [in]色にピクセルの水平座標。
 
-*Y*<br/>
+*y*<br/>
 [in]色にピクセルの垂直座標。
 
-*percent*<br/>
+*%*<br/>
 [in]透明度の割合。
 
 *iShadowSize*<br/>
@@ -971,7 +971,7 @@ static void __stdcall SetPixel(
 |*cx*|[in]ビットマップの幅の合計。|
 |*cy*|[in]ビットマップの高さの合計。|
 |*x*|[in]変更するビットマップのピクセルの x 座標。|
-|*Y*|[in]変更するビットマップのピクセルの y 座標。|
+|*y*|[in]変更するビットマップのピクセルの y 座標。|
 |*色*|[in]指定された座標で識別されるピクセルの新しい色。|
 
 ##  <a name="smartmixcolors"></a>  CDrawingManager::SmartMixColors

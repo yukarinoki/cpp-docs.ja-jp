@@ -12,10 +12,10 @@ helpviewer_keywords:
 - collection classes
 ms.assetid: 4d619d46-5b4e-41dd-b9fd-e86b1fbc00b5
 ms.openlocfilehash: 70ca283468a51b4214273698a532ce2a85d52b44
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774986"
 ---
 # <a name="atl-collection-classes"></a>ATL コレクション クラス
@@ -106,7 +106,7 @@ CTraits クラスに似ていますが、柔軟性よりも、MFC コレクシ�
 
 ## <a name="comments"></a>コメント
 
-CTraits クラスの一覧は、[コレクション クラス](../atl/collection-classes.md)を参照してください。
+CTraits クラスの一覧は、次を参照してください。[コレクション クラス](../atl/collection-classes.md)します。
 
 次の図は、CTraits クラスのクラス階層を示します。
 

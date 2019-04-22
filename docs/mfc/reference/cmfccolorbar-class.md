@@ -75,10 +75,10 @@ helpviewer_keywords:
 - CMFCColorBar [MFC], ShowCommandMessageString
 ms.assetid: 4756ee40-25a5-4cee-af7f-acab7993d1c7
 ms.openlocfilehash: 4eee24eb93be446f6b4f2631b70736c13a02f45c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771408"
 ---
 # <a name="cmfccolorbar-class"></a>CMFCColorBar クラス
@@ -150,9 +150,9 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |`m_bIsEnabled`|コントロールが有効になっているかどうかを示すブール値。|
 |`m_bIsTearOff`|カラー バーのコントロールがドッキングをサポートしているかどうかを示すブール値。|
 |`m_BoxSize`|A [CSize](../../atl-mfc-shared/reference/csize-class.md)カラー バーのグリッドでセルのサイズを指定するオブジェクト。|
-|`m_bShowDocColorsWhenDocked`|カラー バーがドッキングされているときに、ドキュメントの色を表示するかどうかを示すブール値。 詳細については、[CMFCColorBar::SetDocumentColors](#setdocumentcolors)を参照してください。|
-|`m_bStdColorDlg`|標準のシステム カラーのダイアログ ボックスを表示するかどうかを示すブール値、または[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックス。 詳細については、[CMFCColorBar::EnableOtherButton](#enableotherbutton)を参照してください。|
-|`m_ColorAutomatic`|A [COLORREF](/windows/desktop/gdi/colorref)自動の現在の色を格納します。 詳細については、[CMFCColorBar::EnableOtherButton](#enableotherbutton)を参照してください。|
+|`m_bShowDocColorsWhenDocked`|カラー バーがドッキングされているときに、ドキュメントの色を表示するかどうかを示すブール値。 詳細については、次を参照してください。 [CMFCColorBar::SetDocumentColors](#setdocumentcolors)します。|
+|`m_bStdColorDlg`|標準のシステム カラーのダイアログ ボックスを表示するかどうかを示すブール値、または[CMFCColorDialog](../../mfc/reference/cmfccolordialog-class.md)  ダイアログ ボックス。 詳細については、次を参照してください。 [CMFCColorBar::EnableOtherButton](#enableotherbutton)します。|
+|`m_ColorAutomatic`|A [COLORREF](/windows/desktop/gdi/colorref)自動の現在の色を格納します。 詳細については、次を参照してください。 [CMFCColorBar::EnableOtherButton](#enableotherbutton)します。|
 |`m_ColorNames`|[CMap](../../mfc/reference/cmap-class.md)名で色の RGB のセットを関連付けるオブジェクト。|
 |`m_colors`|A [CArray](../../mfc/reference/carray-class.md)の[COLORREF](/windows/desktop/gdi/colorref)カラー バー コントロールに表示される色を含む値。|
 |`m_ColorSelected`|A [COLORREF](/windows/desktop/gdi/colorref)値が、ユーザーがカラー バー コントロールで選択された現在の色。|
@@ -170,9 +170,9 @@ class CMFCColorBar : public CMFCPopupMenuBar
 |`m_pParentBtn`|ポインターを[CMFCColorButton](../../mfc/reference/cmfccolorbutton-class.md)は現在のボタンの親となるオブジェクト。 色のボタンがツール バー コントロールの階層では、または、カラー プロパティ グリッド コントロールでは、この値は重要です。|
 |`m_pParentRibbonBtn`|ポインターを[CMFCRibbonColorButton](../../mfc/reference/cmfcribboncolorbutton-class.md)内の現在のボタンの親のボタンをリボンには、オブジェクト。 色のボタンがツール バー コントロールの階層では、または、カラー プロパティ グリッド コントロールでは、この値は重要です。|
 |`m_pWndPropList`|ポインターを[CMFCPropertyGridCtrl](../../mfc/reference/cmfcpropertygridctrl-class.md)オブジェクト。|
-|`m_strAutoColor`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)に表示されるテキストである、**自動**ボタンをクリックします。 詳細については、[CMFCColorBar::EnableAutomaticButton](#enableautomaticbutton)を参照してください。|
-|`m_strDocColors`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)ドキュメントの色のボタンに表示されるテキストであります。 詳細については、[CMFCColorBar::SetDocumentColors](#setdocumentcolors)を参照してください。|
-|`m_strOtherColor`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)に表示されるテキストである、*他*ボタンをクリックします。 詳細については、[CMFCColorBar::EnableOtherButton](#enableotherbutton)を参照してください。|
+|`m_strAutoColor`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)に表示されるテキストである、**自動**ボタンをクリックします。 詳細については、次を参照してください。 [CMFCColorBar::EnableAutomaticButton](#enableautomaticbutton)します。|
+|`m_strDocColors`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)ドキュメントの色のボタンに表示されるテキストであります。 詳細については、次を参照してください。 [CMFCColorBar::SetDocumentColors](#setdocumentcolors)します。|
+|`m_strOtherColor`|A [CString](../../atl-mfc-shared/reference/cstringt-class.md)に表示されるテキストである、*他*ボタンをクリックします。 詳細については、次を参照してください。 [CMFCColorBar::EnableOtherButton](#enableotherbutton)します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -422,7 +422,7 @@ virtual BOOL Create(
 [in]コマンド id。
 
 *pPalette*<br/>
-[in]色のパレットへのポインター。 既定では NULL です。
+[in]色のパレットへのポインター。 既定値は NULL です。
 
 *nColumns*<br/>
 [in]カラー バーのコントロール内の列の数。 既定値は 0 です。
@@ -469,7 +469,7 @@ virtual BOOL CreateControl(
 [in]カラー バーのコントロール内の列数に最適です。 このメソッドは、指定されたカラー パレットに合わせて列数を変更します。 既定値は、-1 で、このパラメーターが指定されていないことを意味します。
 
 *pPalette*<br/>
-[in]パレットの色、または NULL へのポインター。 このパラメーターが NULL の場合、このメソッドは、20 の色が指定した場合と、カラー バー コントロールのサイズを計算します。 既定では NULL です。
+[in]パレットの色、または NULL へのポインター。 このパラメーターが NULL の場合、このメソッドは、20 の色が指定した場合と、カラー バー コントロールのサイズを計算します。 既定値は NULL です。
 
 ### <a name="return-value"></a>戻り値
 
@@ -746,7 +746,7 @@ virtual void OnUpdateCmdUI(
 
 ### <a name="remarks"></a>Remarks
 
-項目がかどうか、表示するか有効になっているを知る必要があります、アプリケーションのユーザーには、ユーザー インターフェイスの項目がクリックすると、または無効にします。 コマンド メッセージのターゲットは、ON_UPDATE_COMMAND_UI コマンド ハンドラーを実装することでこの情報を提供します。 このメソッドを使用して、コマンドの処理を支援します。 詳細については、[CCmdUI クラス](../../mfc/reference/ccmdui-class.md)を参照してください。
+項目がかどうか、表示するか有効になっているを知る必要があります、アプリケーションのユーザーには、ユーザー インターフェイスの項目がクリックすると、または無効にします。 コマンド メッセージのターゲットは、ON_UPDATE_COMMAND_UI コマンド ハンドラーを実装することでこの情報を提供します。 このメソッドを使用して、コマンドの処理を支援します。 詳細については、次を参照してください。 [CCmdUI クラス](../../mfc/reference/ccmdui-class.md)します。
 
 ##  <a name="opencolordialog"></a>  CMFCColorBar::OpenColorDialog
 

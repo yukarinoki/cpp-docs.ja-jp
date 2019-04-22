@@ -5,10 +5,10 @@ helpviewer_keywords:
 - friend assemblies, Visual C++
 ms.assetid: 8d55fee0-b7c2-4fbe-a23b-dfe424dc71cd
 ms.openlocfilehash: e469556a773ffcdbf50e53d94022c0b6b7abf869
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781043"
 ---
 # <a name="friend-assemblies-c"></a>フレンド アセンブリ (C++)
@@ -94,7 +94,7 @@ Class1::Test_Public
 
 次のコード例では、コンポーネントを定義しますが、コンポーネントの型にアクセスできるクライアント アセンブリを指定しません。
 
-使用して、コンポーネントがリンクされていることに注意してください。 **/opt: noref**します。 これにより、コンポーネントのメタデータは、必要でない場合にプライベート型が出力されること、`InternalsVisibleTo`属性が存在します。 詳細については、[/OPT (最適化)](../build/reference/opt-optimizations.md)を参照してください。
+使用して、コンポーネントがリンクされていることに注意してください。 **/opt: noref**します。 これにより、コンポーネントのメタデータは、必要でない場合にプライベート型が出力されること、`InternalsVisibleTo`属性が存在します。 詳細については、次を参照してください。 [/OPT (最適化)](../build/reference/opt-optimizations.md)します。
 
 ```cpp
 // friend_assemblies_3.cpp

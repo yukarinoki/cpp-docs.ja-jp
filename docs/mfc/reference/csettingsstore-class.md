@@ -23,10 +23,10 @@ helpviewer_keywords:
 - CSettingsStore [MFC], Write
 ms.assetid: 0ea181de-a13e-4b29-b560-7c43838223ff
 ms.openlocfilehash: 1e1373da86c1c3fea3b1ddd6ff17f0fac4f76980
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770396"
 ---
 # <a name="csettingsstore-class"></a>CSettingsStore Class
@@ -134,7 +134,7 @@ CSettingsStore(
 
 場合*bAdmin*を TRUE に設定されている、`m_hKey`にメンバー変数が設定されている**HKEY_LOCAL_MACHINE**します。 設定した場合*bAdmin*を FALSE に`m_hKey`に設定されている**HKEY_CURRENT_USER**します。
 
-セキュリティのアクセス権は異なります、 *bReadOnly*パラメーター。 場合*bReadonly* false で、セキュリティのアクセスに設定する**KEY_ALL_ACCESS**します。 場合*bReadyOnly*が true の場合、アクセスのセキュリティの組み合わせに設定されます**KEY_QUERY_VALUE、KEY_NOTIFY**と**KEY_ENUMERATE_SUB_KEYS**します。 レジストリとセキュリティのアクセスの詳細については、[レジストリ キーのセキュリティとアクセス権](/windows/desktop/SysInfo/registry-key-security-and-access-rights)を参照してください。
+セキュリティのアクセス権は異なります、 *bReadOnly*パラメーター。 場合*bReadonly* false で、セキュリティのアクセスに設定する**KEY_ALL_ACCESS**します。 場合*bReadyOnly*が true の場合、アクセスのセキュリティの組み合わせに設定されます**KEY_QUERY_VALUE、KEY_NOTIFY**と**KEY_ENUMERATE_SUB_KEYS**します。 レジストリとセキュリティのアクセスの詳細については、次を参照してください。[レジストリ キーのセキュリティとアクセス権](/windows/desktop/SysInfo/registry-key-security-and-access-rights)します。
 
 デストラクター`CSettingsStore`解放`m_hKey`自動的にします。
 
@@ -444,7 +444,7 @@ virtual BOOL Write(
 
 ### <a name="remarks"></a>Remarks
 
-設定する必要があります、レジストリに書き込むには、 *bReadOnly* 0 以外の値を作成するときに、 [CSettingsStore](../../mfc/reference/csettingsstore-class.md)オブジェクト。 詳細については、[CSettingsStore::CSettingsStore](#csettingsstore)を参照してください。
+設定する必要があります、レジストリに書き込むには、 *bReadOnly* 0 以外の値を作成するときに、 [CSettingsStore](../../mfc/reference/csettingsstore-class.md)オブジェクト。 詳細については、次を参照してください。 [CSettingsStore::CSettingsStore](#csettingsstore)します。
 
 ## <a name="see-also"></a>関連項目
 

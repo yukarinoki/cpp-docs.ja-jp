@@ -7,15 +7,15 @@ helpviewer_keywords:
 - dialog classes [MFC], commonly added member functions
 ms.assetid: f6bd50e8-872a-4039-9996-a85bfccea18d
 ms.openlocfilehash: 080f5f162d1e0542e392c39995e1c5e5ae303298
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772711"
 ---
 # <a name="commonly-added-member-functions"></a>通常追加されるメンバー関数
 
-ダイアログ ボックスに [ok] または [キャンセル] 以外のプッシュ ボタンが含まれている場合は、ダイアログ クラスを生成するコントロールの通知メッセージに応答するメッセージ ハンドラー メンバー関数を記述する必要があります。 例については、、 [Scribble](../overview/visual-cpp-samples.md)サンプル プログラムを参照してください。 ダイアログ ボックスで他のコントロールからのコントロール通知メッセージを処理することもできます。
+ダイアログ ボックスに [ok] または [キャンセル] 以外のプッシュ ボタンが含まれている場合は、ダイアログ クラスを生成するコントロールの通知メッセージに応答するメッセージ ハンドラー メンバー関数を記述する必要があります。 例については、次を参照してください。、 [Scribble](../overview/visual-cpp-samples.md)サンプル プログラムです。 ダイアログ ボックスで他のコントロールからのコントロール通知メッセージを処理することもできます。
 
 ## <a name="see-also"></a>関連項目
 

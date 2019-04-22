@@ -8,10 +8,10 @@ helpviewer_keywords:
 - views [MFC], SDI applications
 ms.assetid: 86d0c134-01d5-429c-b672-36cfb956dc01
 ms.openlocfilehash: 593c59c73b58b4364c9d652ce8eb415c17af496c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767588"
 ---
 # <a name="adding-multiple-views-to-a-single-document"></a>シングル ドキュメントへのマルチ ビューの追加
@@ -61,7 +61,7 @@ Include セクションでは、次の行を挿入*MYWINAPP します。CPP*:
 
 ##  <a name="vcconnewviewclassa2"></a> 作成し、新しいビュー クラスを変更します。
 
-新しいビュー クラスは、簡単に作成を使用して、**クラスの新しい**クラス ビューで使用できるコマンド。 このクラスの唯一の要件がから派生して`CView`します。 この新しいクラスをアプリケーションに追加します。 新しいクラスをプロジェクトに追加する方法については、[クラスの追加](../ide/adding-a-class-visual-cpp.md)を参照してください。
+新しいビュー クラスは、簡単に作成を使用して、**クラスの新しい**クラス ビューで使用できるコマンド。 このクラスの唯一の要件がから派生して`CView`します。 この新しいクラスをアプリケーションに追加します。 新しいクラスをプロジェクトに追加する方法については、次を参照してください。[クラスの追加](../ide/adding-a-class-visual-cpp.md)します。
 
 クラスをプロジェクトに追加した後は、一部のビュー クラス メンバーのアクセシビリティを変更する必要があります。
 
@@ -95,7 +95,7 @@ Include セクションでは、次の行を挿入*MYWINAPP します。CPP*:
 
 最後の手順では、呼び出すコードを追加、`SwitchView`メソッド、アプリケーションは、ビューに切り替える必要がある場合。 これは、いくつかの方法で行うことができます。 によって、ユーザーを選択するための新しいメニュー項目を追加するか、特定の条件が満たされたときに、内部的には、ビューを切り替えます。
 
-新しいメニュー項目とコマンド ハンドラー関数を追加する方法の詳細については、[コマンドとコントロール通知のハンドラー](../mfc/handlers-for-commands-and-control-notifications.md)を参照してください。
+新しいメニュー項目とコマンド ハンドラー関数を追加する方法の詳細については、次を参照してください。[コマンドとコントロール通知のハンドラー](../mfc/handlers-for-commands-and-control-notifications.md)します。
 
 ## <a name="see-also"></a>関連項目
 

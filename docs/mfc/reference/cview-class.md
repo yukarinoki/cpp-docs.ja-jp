@@ -53,10 +53,10 @@ helpviewer_keywords:
 - CView [MFC], OnUpdate
 ms.assetid: 9cff3c56-7564-416b-b9a4-71a9254ed755
 ms.openlocfilehash: 06c6d4dff28399f3d8e6ac7f46d9ed751850036f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775310"
 ---
 # <a name="cview-class"></a>CView クラス
@@ -574,7 +574,7 @@ virtual DROPEFFECT OnDropEx(
 
 - DROPEFFECT_SCROLL を使用して、ドラッグのスクロール操作が実行されるときに、またはターゲットで発生していることを示します。
 
-既定のメニュー コマンドの設定の詳細については、[SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem) Windows sdk と[CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu)このボリュームにを参照してください。
+既定のメニュー コマンドの設定の詳細については、次を参照してください。 [SetMenuDefaultItem](/windows/desktop/api/winuser/nf-winuser-setmenudefaultitem) Windows sdk と[CMenu::GetSafeHmenu](../../mfc/reference/cmenu-class.md#getsafehmenu)このボリュームにします。
 
 ##  <a name="onendprinting"></a>  CView::OnEndPrinting
 
@@ -761,7 +761,7 @@ virtual void OnPrint(
 
 [!code-cpp[NVC_MFCDocView#186](../../mfc/codesnippet/cpp/cview-class_4.cpp)]
 
-別の例では、[CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect)を参照してください。
+別の例では、次を参照してください。 [CRichEditView::PrintInsideRect](../../mfc/reference/cricheditview-class.md#printinsiderect)します。
 
 ##  <a name="onscroll"></a>  CView::OnScroll
 

@@ -21,10 +21,10 @@ helpviewer_keywords:
 - .NET [C++], porting C++ native to
 ms.assetid: 5f710bf1-88ae-4c4e-8326-b3f0b7c4c68a
 ms.openlocfilehash: aaa07373b7dd22807290ceefa9197b4013c61fe5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778235"
 ---
 # <a name="using-c-interop-implicit-pinvoke"></a>C++ Interop (暗黙の PInvoke) の使用
@@ -143,7 +143,7 @@ Done
 
 - [方法: ネイティブ クラスを C# で使用できるようにラップする](../dotnet/how-to-wrap-native-class-for-use-by-csharp.md)
 
-相互運用機能のシナリオではデリゲートの使用方法の詳細については、[デリゲート (C++ コンポーネント拡張)](../extensions/delegate-cpp-component-extensions.md)を参照してください。
+相互運用機能のシナリオではデリゲートの使用方法の詳細については、次を参照してください。[デリゲート (C++ コンポーネント拡張)](../extensions/delegate-cpp-component-extensions.md)します。
 
 ## <a name="see-also"></a>関連項目
 

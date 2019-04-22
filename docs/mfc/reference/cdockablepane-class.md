@@ -133,10 +133,10 @@ helpviewer_keywords:
 - CDockablePane [MFC], m_nSlideSteps
 ms.assetid: e2495f4c-765f-48f9-a2e2-e45e47608d91
 ms.openlocfilehash: a9d7c4ea941884435c9ecfac54a1d42649c6dbd5
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769694"
 ---
 # <a name="cdockablepane-class"></a>CDockablePane Class
@@ -747,7 +747,7 @@ virtual CTabbedPane* CreateTabbedPane();
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、このペインを置換するタブ付きペインを作成するときに、このメソッドを呼び出します。 詳細については、[cdockablepane::attachtotabwnd](#attachtotabwnd)を参照してください。
+フレームワークは、このペインを置換するタブ付きペインを作成するときに、このメソッドを呼び出します。 詳細については、次を参照してください。 [cdockablepane::attachtotabwnd](#attachtotabwnd)します。
 
 タブ付きペインをカスタマイズする派生クラスでこのメソッドが作成され、初期化をオーバーライドします。
 
@@ -973,7 +973,7 @@ CPaneDivider* GetDefaultPaneDivider() const;
 
 ### <a name="remarks"></a>Remarks
 
-ウィンドウの分割の詳細については、[CPaneDivider クラス](../../mfc/reference/cpanedivider-class.md)を参照してください。
+ウィンドウの分割の詳細については、次を参照してください。 [CPaneDivider クラス](../../mfc/reference/cpanedivider-class.md)します。
 
 ##  <a name="getdockingstatus"></a>  CDockablePane::GetDockingStatus
 
@@ -1010,7 +1010,7 @@ virtual AFX_CS_STATUS GetDockingStatus(
 
 DT_IMMEDIATE ドッキング モードを使用するウィンドウをドッキングまたはフローティング ツールバーの場合は、フレームワークは、ドッキング コマンド ウィンドウをドッキングを実行する前に親フレームのクライアント領域外に移動するユーザーを有効にするを遅延します。 遅延の長さの単位はミリ秒とによって制御されます、 [CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)データ メンバー. 既定値[CDockingManager::m_nTimeOutBeforeToolBarDock](../../mfc/reference/cdockingmanager-class.md#m_ntimeoutbeforetoolbardock)は 200 です。 この動作は、Microsoft Word 2007 のドッキング動作をエミュレートします。
 
-遅延ドッキング州 (CS_DELAY_DOCK および CS_DELAY_DOCK_TO_TAB)、フレームワーク、ユーザーがマウス ボタンを解放するまでのドッキングを行いません。 ペイン DT_STANDARD ドッキング モードを使用する場合、フレームワークは、ドッキング場所にある四角形を表示します。 ペイン DT_SMART ドッキング モードを使用する場合、フレームワークはドッキング場所にあるスマート ドッキング マーカーおよび半透明にする四角形を表示します。 ウィンドウのドッキングのモードを指定するには、呼び出し、 [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode)メソッド。 スマート ドッキングの詳細については、[CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams)を参照してください。
+遅延ドッキング州 (CS_DELAY_DOCK および CS_DELAY_DOCK_TO_TAB)、フレームワーク、ユーザーがマウス ボタンを解放するまでのドッキングを行いません。 ペイン DT_STANDARD ドッキング モードを使用する場合、フレームワークは、ドッキング場所にある四角形を表示します。 ペイン DT_SMART ドッキング モードを使用する場合、フレームワークはドッキング場所にあるスマート ドッキング マーカーおよび半透明にする四角形を表示します。 ウィンドウのドッキングのモードを指定するには、呼び出し、 [CBasePane::SetDockingMode](../../mfc/reference/cbasepane-class.md#setdockingmode)メソッド。 スマート ドッキングの詳細については、次を参照してください。 [CDockingManager::GetSmartDockingParams](../../mfc/reference/cdockingmanager-class.md#getsmartdockingparams)します。
 
 ##  <a name="getdragsensitivity"></a>  CDockablePane::GetDragSensitivity
 
@@ -1060,7 +1060,7 @@ virtual void GetTabArea(
 
 ### <a name="remarks"></a>Remarks
 
-このメソッドはから派生したクラスでのみ使用`CDockablePane`タブがあるとします。 詳細については、[CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea)と[CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea)を参照してください。
+このメソッドはから派生したクラスでのみ使用`CDockablePane`タブがあるとします。 詳細については、次を参照してください。 [CTabbedPane::GetTabArea](../../mfc/reference/ctabbedpane-class.md#gettabarea)と[CMFCOutlookBar::GetTabArea](../../mfc/reference/cmfcoutlookbar-class.md#gettabarea)します。
 
 ##  <a name="gettabbedpanertc"></a>  CDockablePane::GetTabbedPaneRTC
 
@@ -1240,7 +1240,7 @@ virtual BOOL IsTabLocationBottom() const;
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom)を参照してください。
+詳細については、次を参照してください。 [CTabbedPane::IsTabLocationBottom](../../mfc/reference/ctabbedpane-class.md#istablocationbottom)します。
 
 ##  <a name="istracked"></a>  CDockablePane::IsTracked
 
@@ -1366,7 +1366,7 @@ virtual void OnBeforeChangeParent(
 [in]新しい親ウィンドウへのポインター。
 
 *bDelay*<br/>
-[in]ブール値をウィンドウがドッキングされていない場合は、ドッキング レイアウトの再計算を延期するかどうかを指定します。 詳細については、[CDockablePane::UndockPane](#undockpane)を参照してください。
+[in]ブール値をウィンドウがドッキングされていない場合は、ドッキング レイアウトの再計算を延期するかどうかを指定します。 詳細については、次を参照してください。 [CDockablePane::UndockPane](#undockpane)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1570,7 +1570,7 @@ void SetRestoredDefaultPaneDivider(HWND hRestoredSlider);
 
 ### <a name="remarks"></a>Remarks
 
-ペインを逆シリアル化、復元された既定のウィンドウの区分線が取得されます。 詳細については、[CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)を参照してください。
+ペインを逆シリアル化、復元された既定のウィンドウの区分線が取得されます。 詳細については、次を参照してください。 [CDockablePane::RestoreDefaultPaneDivider](#restoredefaultpanedivider)します。
 
 ##  <a name="settabbedpanertc"></a>  CDockablePane::SetTabbedPaneRTC
 

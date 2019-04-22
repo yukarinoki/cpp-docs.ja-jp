@@ -7,10 +7,10 @@ helpviewer_keywords:
 - struct constructors
 ms.assetid: 3c6ba273-e248-4ff1-8c69-d2abcf1263c6
 ms.openlocfilehash: e9ffd30dd0017e912fd7c196e2d3f0e987fb0810
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780861"
 ---
 # <a name="struct-c"></a>struct (C++ )
@@ -39,7 +39,7 @@ ms.locfileid: "58780861"
 ストレージ クラスの指定 (省略可能)。 詳細についてを参照してください、 [_ _declspec](../cpp/declspec.md)キーワード。
 
 *タグ*<br/>
-構造体に渡す型名。 タグは構造体のスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名構造体が定義されます。 詳細については、[匿名クラス型](../cpp/anonymous-class-types.md)を参照してください。
+構造体に渡す型名。 タグは構造体のスコープ内で予約語になります。 タグは省略できます。 省略した場合、匿名構造体が定義されます。 詳細については、次を参照してください。[匿名クラス型](../cpp/anonymous-class-types.md)します。
 
 *base-list*<br/>
 この構造体がメンバーを継承するクラスまたは構造体のリスト (省略可能)。 参照してください[基底クラスの](../cpp/base-classes.md)詳細についてはします。 各基本クラスまたは構造体名の前に、アクセス指定子 ([パブリック](../cpp/public-cpp.md)、[プライベート](../cpp/private-cpp.md)、[保護](../cpp/protected-cpp.md)) および[仮想](../cpp/virtual-cpp.md)キーワード。 メンバー アクセス テーブルを参照してください。[クラス メンバーへのアクセスの制御](member-access-control-cpp.md)詳細についてはします。
@@ -66,7 +66,7 @@ C では、明示的に使用する必要あります、**構造体**キーワ�
 
 構造体の変数は初期化できます。 各変数の初期化は中かっこで囲む必要があります。
 
-関連情報については、[クラス](../cpp/class-cpp.md)、[共用体](../cpp/unions.md)、および[enum](../cpp/enumerations-cpp.md)を参照してください。
+関連情報については、次を参照してください。[クラス](../cpp/class-cpp.md)、[共用体](../cpp/unions.md)、および[enum](../cpp/enumerations-cpp.md)します。
 
 ## <a name="example"></a>例
 

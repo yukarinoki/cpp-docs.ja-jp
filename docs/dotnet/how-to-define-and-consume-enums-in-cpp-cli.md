@@ -5,10 +5,10 @@ helpviewer_keywords:
 - enum class, specifying underlying types
 ms.assetid: df8f2b91-b9d2-4fab-9be4-b1d58b8bc570
 ms.openlocfilehash: 9787b7b96f83b2926c65209254c88eb56fe1a8ab
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774738"
 ---
 # <a name="how-to-define-and-consume-enums-in-ccli"></a>方法: 定義および c++ の列挙型を使用する/cli CLI
@@ -17,7 +17,7 @@ ms.locfileid: "58774738"
 
 ## <a name="specifying-the-underlying-type-of-an-enum"></a>Enum の基になる型を指定します。
 
-列挙体の基になる型は、既定では、`int`します。  ただし、ある符号付きまたは符号なしの形式の種類を指定できます`int`、 `short`、 `long`、 `__int32`、または`__int64`します。  使用することも`char`します。
+列挙体の基になる型は、既定では、`int`します。  ただし、ある符号付きまたは符号なしの形式の種類を指定できます`int`、 `short`、 `long`、 `__int32`、または`__int64`します。  `char` を使用することもできます。
 
 ```
 // mcppv2_enum_3.cpp
@@ -137,4 +137,4 @@ True
 
 ## <a name="see-also"></a>関連項目
 
-[列挙型クラス](../extensions/enum-class-cpp-component-extensions.md)
+[enum クラス](../extensions/enum-class-cpp-component-extensions.md)

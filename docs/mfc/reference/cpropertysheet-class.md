@@ -53,10 +53,10 @@ helpviewer_keywords:
 - CPropertySheet [MFC], m_psh
 ms.assetid: 8461ccff-d14f-46e0-a746-42ad642ef94e
 ms.openlocfilehash: 0e5194a356684f2ff86d74a0ed1f37f332bcffeb
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781654"
 ---
 # <a name="cpropertysheet-class"></a>CPropertySheet クラス
@@ -392,7 +392,7 @@ IDOK や IDCANCEL 関数が成功した場合それ以外の場合 0 または-1
 プロパティ ページが対応するダイアログ リソースから作成されると、初回例外を発生することができます。 これは、ページを作成する前に、必要なスタイルにダイアログ リソースのスタイルを変更するプロパティ ページからの結果します。 リソースは通常読み取り専用であるために、例外が発生します。 システムは、例外を処理し、更新されたリソースのコピーを作成します。 したがって、初回例外は無視できます。
 
 > [!NOTE]
->  この例外は、非同期の例外処理モデルを使ってコンパイルする場合、オペレーティング システムで処理する必要があります。 例外処理モデルの詳細については、[/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)を参照してください。 この場合への呼び出しをラップしないでください`CPropertySheet::DoModal`C++ try catch ブロックと catch が処理するすべての例外では、たとえば、 `catch (...)`。 このブロックには、オペレーティング システム、および予期しない動作の原因は、例外を処理とします。 ただし、C++ 例外、アクセス違反例外が、オペレーティング システムに渡される特定の例外の種類または構造化例外処理で処理を安全に使用できます。
+>  この例外は、非同期の例外処理モデルを使ってコンパイルする場合、オペレーティング システムで処理する必要があります。 例外処理モデルの詳細については、次を参照してください。 [/EH (例外処理モデル)](../../build/reference/eh-exception-handling-model.md)します。 この場合への呼び出しをラップしないでください`CPropertySheet::DoModal`C++ try catch ブロックと catch が処理するすべての例外では、たとえば、 `catch (...)`。 このブロックには、オペレーティング システム、および予期しない動作の原因は、例外を処理とします。 ただし、C++ 例外、アクセス違反例外が、オペレーティング システムに渡される特定の例外の種類または構造化例外処理で処理を安全に使用できます。
 
 この初回の例外の生成を避けるため、手動で保証できるプロパティ シートに正しい[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。 次のプロパティ シートのスタイルを設定する必要があります。
 

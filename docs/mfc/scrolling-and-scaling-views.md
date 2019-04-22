@@ -9,10 +9,10 @@ helpviewer_keywords:
 - scrolling views [MFC]
 ms.assetid: f98a3421-c336-407e-97ee-dbb2ffd76fbd
 ms.openlocfilehash: 7d26bc656dec3fdcbb8fc5ea4918ec7d59bc5afc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777582"
 ---
 # <a name="scrolling-and-scaling-views"></a>ビューのスクロールと拡大/縮小
@@ -35,7 +35,7 @@ MFC では、それらを表示するフレーム ウィンドウのサイズが
 
 任意のビューにスクロール バーのメッセージを処理できるその`OnHScroll`と`OnVScroll`メンバー関数。 自分ですべての作業を行って、これらの関数のいずれかの実装スクロール バー メッセージの処理ができるかを使用することができます、`CScrollView`スクロールを処理するクラス。
 
-`CScrollView` 次を行います。
+`CScrollView` では次の処理が行われます。
 
 - ウィンドウと、ビューポートのサイズとマップ モードを管理します。
 

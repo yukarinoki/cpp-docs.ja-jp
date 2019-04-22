@@ -115,10 +115,10 @@ helpviewer_keywords:
 - CMFCRibbonPanel [MFC], ShowPopup
 ms.assetid: 51d70749-1140-4386-b103-f14082049ba6
 ms.openlocfilehash: 1ba7057405da2ebd7fd1bf699a69f97a650fa47c
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773204"
 ---
 # <a name="cmfcribbonpanel-class"></a>CMFCRibbonPanel クラス
@@ -280,7 +280,7 @@ UINT uiDisabledResID = 0);
 
 ### <a name="remarks"></a>Remarks
 
-ツールバー、ホット イメージ、コールド イメージ、および無効なイメージの詳細については、[CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)を参照してください。
+ツールバー、ホット イメージ、コールド イメージ、および無効なイメージの詳細については、次を参照してください。 [CMFCToolBar クラス](../../mfc/reference/cmfctoolbar-class.md)します。
 
 ##  <a name="cmfcribbonpanel"></a>  CMFCRibbonPanel::CMFCRibbonPanel
 

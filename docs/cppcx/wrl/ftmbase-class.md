@@ -26,10 +26,10 @@ helpviewer_keywords:
 - Microsoft::WRL::FtmBase::UnmarshalInterface method
 ms.assetid: 275f3b71-2975-4f92-89e7-d351e96496df
 ms.openlocfilehash: fb7f103d8ea647f554d9bbf26c2e218d34f6b1ff
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58785619"
 ---
 # <a name="ftmbase-class"></a>FtmBase クラス
@@ -48,7 +48,7 @@ class FtmBase :
 
 ## <a name="remarks"></a>Remarks
 
-詳細については、[RuntimeClass クラス](runtimeclass-class.md)を参照してください。
+詳細については、次を参照してください。 [RuntimeClass クラス](runtimeclass-class.md)します。
 
 ## <a name="members"></a>メンバー
 
@@ -107,7 +107,7 @@ static HRESULT CreateGlobalInterfaceTable(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、、`IGlobalInterfaceTable`でトピック、`COM Interfaces`のサブトピック、 `COM Reference` MSDN ライブラリの「を参照してください。
+詳細については、次を参照してください。、`IGlobalInterfaceTable`でトピック、`COM Interfaces`のサブトピック、 `COM Reference` MSDN ライブラリの「します。
 
 ## <a name="disconnectobject"></a>Ftmbase::disconnectobject
 

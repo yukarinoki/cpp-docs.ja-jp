@@ -11,10 +11,10 @@ helpviewer_keywords:
 - LOCALIZE sample [MFC]
 ms.assetid: a44b839a-c652-4ec5-b824-04392708a5f9
 ms.openlocfilehash: 13c8ff545763017b01685e012ab2d497eaf7084a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767549"
 ---
 # <a name="mfc-activex-controls-localizing-an-activex-control"></a>MFC ActiveX コントロール:ActiveX コントロールのローカライズ
@@ -22,7 +22,7 @@ ms.locfileid: "58767549"
 この記事では、ActiveX コントロールのインターフェイスをローカライズするための手順について説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 国際市場に ActiveX コントロールを調整する場合は、コントロールをローカライズしたい場合があります。 Windows では、既定の英語、ドイツ語、フランス語、スウェーデン語を含むだけでなく多くの言語をサポートします。 これは、場合、そのインターフェイスは、英語でのみはコントロールの問題が生じる。
 
@@ -88,7 +88,7 @@ SAMPLEFR のプロパティ名を変更します。フランス語としを使�
 
 [!code-cpp[NVC_MFC_AxLoc#3](../mfc/codesnippet/cpp/mfc-activex-controls-localizing-an-activex-control_3.cpp)]
 
-専門的なローカライズを提供する、switch ステートメントの各ケースで、サブ言語 ID を確認することに注意してください。 この関数の例については、、`GetResourceHandle`関数では、MFC ActiveX コントロール サンプル[LOCALIZE](../overview/visual-cpp-samples.md)を参照してください。
+専門的なローカライズを提供する、switch ステートメントの各ケースで、サブ言語 ID を確認することに注意してください。 この関数の例については、次を参照してください。、`GetResourceHandle`関数では、MFC ActiveX コントロール サンプル[LOCALIZE](../overview/visual-cpp-samples.md)します。
 
 呼び出すことができます、コントロール最初の読み込み時にそれ自体をコンテナーに、 [COleControl::AmbientLocaleID](../mfc/reference/colecontrol-class.md#ambientlocaleid)ロケール ID を取得するには コントロールは、返されたロケール ID の値を渡すことができますし、`GetLocalizedResourceHandle`関数で、適切なリソースのライブラリを読み込みます。 コントロールが存在する場合、結果のハンドルを渡す必要がありますに[AfxSetResourceHandle](../mfc/reference/application-information-and-management.md#afxsetresourcehandle):
 

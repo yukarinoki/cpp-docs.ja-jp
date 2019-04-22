@@ -13,10 +13,10 @@ helpviewer_keywords:
 - x64 [C++], command-line compiler
 ms.assetid: 4da93a19-e20d-4778-902a-5eee9a6a90b5
 ms.openlocfilehash: 8436254a3d8c5c1dae018c2309ceaad7bd5b2408
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769278"
 ---
 # <a name="how-to-enable-a-64-bit-x64-hosted-msvc-toolset-on-the-command-line"></a>方法: 64 ビットを有効にする、コマンドラインで MSVC ツールセットが x64 にホストされています。
@@ -24,7 +24,7 @@ ms.locfileid: "58769278"
 Visual Studio には、C++ コンパイラ、リンカー、およびその他のプラットフォームに固有のバージョンの 32 ビット、64 ビット、または ARM ベースの Windows オペレーティング システムで実行できるアプリの作成に使用できるツールが含まれています。 省略可能なその他の Visual Studio ワークロードでは、iOS、Android、Linux などの他のプラットフォームを対象とする C++ ツールを使用できます。 既定ビルド アーキテクチャでは、32 ビット、x86 でホストされているツールを使用して、32 ビットの x86 ネイティブ Windows コードをビルドします。 ただし、64 ビットのコンピューターがある可能性があります。 プロセッサと 64 ビットのコードを使用可能なメモリ領域の利点は、x86、x64、または ARM プロセッサ用のコードをビルドするときに、64 ビット、x64 でホストされているツールセットを使用して実行できます。
 
 > [!NOTE]
-> 各 Visual Studio のエディションに含まれている特定のツールについては、[Visual c Tools と Visual Studio エディションで機能](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md)を参照してください。
+> 各 Visual Studio のエディションに含まれている特定のツールについては、次を参照してください。 [Visual c Tools と Visual Studio エディションで機能](../overview/visual-cpp-tools-and-features-in-visual-studio-editions.md)します。
 >
 > Visual Studio IDE を使用して、64 ビット アプリケーションを作成する方法については、次を参照してください。[方法。Configure Visual C++ Projects to Target 64-Bit, x64 Platforms](how-to-configure-visual-cpp-projects-to-target-64-bit-platforms.md)」(方法: Visual C++ プロジェクトを 64 ビット、x64 プラットフォーム用に設定する) を参照してください。
 
@@ -36,7 +36,7 @@ Visual Studio は、64 ビット Windows オペレーティング システム�
 
 ## <a name="use-vcvarsallbat-to-set-a-64-bit-hosted-build-architecture"></a>Vcvarsall.bat を使用して、ホステッド ビルドの 64 ビット アーキテクチャを設定するには
 
-ネイティブのまたはクロス、vcvarsall.bat を実行して、コマンドラインでビルド構成を使用できますコンパイラ ツールのいずれかのコマンド ファイルです。 このコマンド ファイルがパスを構成し、特定の環境変数は、既存のコマンド プロンプト ウィンドウでのアーキテクチャを構築します。 具体的な手順については、[開発者コマンド ファイルの場所](building-on-the-command-line.md#developer_command_file_locations)を参照してください。
+ネイティブのまたはクロス、vcvarsall.bat を実行して、コマンドラインでビルド構成を使用できますコンパイラ ツールのいずれかのコマンド ファイルです。 このコマンド ファイルがパスを構成し、特定の環境変数は、既存のコマンド プロンプト ウィンドウでのアーキテクチャを構築します。 具体的な手順については、次を参照してください。[開発者コマンド ファイルの場所](building-on-the-command-line.md#developer_command_file_locations)します。
 
 ## <a name="see-also"></a>関連項目
 

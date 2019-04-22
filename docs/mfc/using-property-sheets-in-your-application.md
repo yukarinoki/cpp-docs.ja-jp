@@ -12,10 +12,10 @@ helpviewer_keywords:
 - CPropertyPage class [MFC], styles
 ms.assetid: 240654d4-152b-4e3f-af7b-44234339206e
 ms.openlocfilehash: 4fd68f57db082ab0b0da0e8248e0be239c63c99a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773217"
 ---
 # <a name="using-property-sheets-in-your-application"></a>アプリケーションでのプロパティ シートの使用
@@ -40,7 +40,7 @@ ms.locfileid: "58773217"
 
 1. 作成、 [CPropertyPage](../mfc/reference/cpropertypage-class.md)-プロパティ ページ ダイアログの各テンプレートに対応するクラスを派生します。 参照してください[クラスの追加](../ide/adding-a-class-visual-cpp.md)します。 選択`CPropertyPage`基底クラスとして。
 
-1. このプロパティ ページの値を保持する変数のメンバーを作成します。 プロパティ ページにメンバー変数を追加するプロセスは、プロパティ ページが特別なダイアログ ボックスであるため正確に ダイアログ ボックスでは、メンバー変数を追加すると同じです。 詳細については、[ダイアログ コントロールのメンバー変数を定義する](../windows/defining-member-variables-for-dialog-controls.md)を参照してください。
+1. このプロパティ ページの値を保持する変数のメンバーを作成します。 プロパティ ページにメンバー変数を追加するプロセスは、プロパティ ページが特別なダイアログ ボックスであるため正確に ダイアログ ボックスでは、メンバー変数を追加すると同じです。 詳細については、次を参照してください。[ダイアログ コントロールのメンバー変数を定義する](../windows/defining-member-variables-for-dialog-controls.md)します。
 
 1. 構築、 [CPropertySheet](../mfc/reference/cpropertysheet-class.md)ソース コード内のオブジェクト。 通常、構築、`CPropertySheet`プロパティ シートを表示するコマンドのハンドラー内のオブジェクト。 このオブジェクトは、プロパティ シート全体を表します。 持つモーダル プロパティ シートを作成する場合、 [DoModal](../mfc/reference/cpropertysheet-class.md#domodal)関数、フレームワークは、既定で 3 つのコマンド ボタンを提供します。[Ok] をキャンセルし、適用します。 フレームワークにはコマンド ボタン作成なしで作成したモードレス プロパティ シートの[作成](../mfc/reference/cpropertysheet-class.md#create)関数。 クラスを派生する必要はありません`CPropertySheet`(プレビュー ウィンドウ) などの他のコントロールを追加するか、モードレス プロパティ シートを表示する場合を除き、します。 プロパティ シートを閉じてするために使用する既定のコントロールが含まれていないために、この手順はモードレス プロパティ シートの必要があります。
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - VMRESUME instruction
 ms.assetid: 233fe1b6-c727-493a-a484-1b2363732281
 ms.openlocfilehash: d2bfe9a8f98b8a03a82768177217d70674708c39
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040594"
 ---
 # <a name="vmxvmresume"></a>__vmx_vmresume
@@ -49,10 +49,10 @@ unsigned char __vmx_vmresume(
 
 **ヘッダー ファイル** \<intrin.h >
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [__vmx_vmlaunch](../intrinsics/vmx-vmlaunch.md)<br/>
 [__vmx_vmclear](../intrinsics/vmx-vmclear.md)

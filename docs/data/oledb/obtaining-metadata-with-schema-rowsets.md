@@ -7,10 +7,10 @@ helpviewer_keywords:
 - metadata, getting (OLE DB Templates)
 ms.assetid: 6b448461-82fb-4acf-816b-3cbb0ca1d186
 ms.openlocfilehash: 12c3de79626411b76a402a7f5407f40a7b054318
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026030"
 ---
 # <a name="obtaining-metadata-with-schema-rowsets"></a>スキーマ行セットを使用したメタデータの取得
@@ -42,7 +42,7 @@ ANSI SQL はデータ ストアのカタログ/スキーマ モデルを定義�
 SELECT * FROM authors WHERE l_name = 'pivo'
 ```
 
-`l_name` 制限です。 これは、1 つだけ制限; 簡単な例スキーマ行セット クラスでは、いくつかの制限をサポートします。
+このクエリでは、`l_name` が制約です。 これは、1 つだけ制限; 簡単な例スキーマ行セット クラスでは、いくつかの制限をサポートします。
 
 [スキーマ行セット typedef クラス](../../data/oledb/schema-rowset-classes-and-typedef-classes.md)他の行セットと同じようにスキーマ行セットをインスタンス化して開くことによってアクセスできるように、すべての OLE DB スキーマ行セットをカプセル化します。 たとえば、typedef クラス[CColumns](../../data/oledb/ccolumns-ccolumnsinfo.md)として定義されます。
 

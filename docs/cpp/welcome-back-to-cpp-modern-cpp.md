@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 1cb1b849-ed9c-4721-a972-fd8f3dab42e2
 ms.openlocfilehash: 5b2868d20c047eef7762256ff8c9bf43de7a0de0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771787"
 ---
 # <a name="welcome-back-to-c-modern-c"></a>C++ へようこそ (Modern C++)
@@ -36,7 +36,7 @@ C++ の最初の要件の 1 つは、C 言語との下位互換性でした。 �
 
 - インライン[ラムダ関数](../cpp/lambda-expressions-in-cpp.md)個別に実装される小さい関数ではなく。
 
-- 範囲ベースの for ループ、フォーム内のコレクションを配列、C++ 標準ライブラリ コンテナー、および Windows ランタイムで動作するより堅牢なループを記述して`for ( for-range-declaration : expression )`します。 これは、コア言語サポートの一部です。 詳細については、[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)を参照してください。
+- 範囲ベースの for ループ、フォーム内のコレクションを配列、C++ 標準ライブラリ コンテナー、および Windows ランタイムで動作するより堅牢なループを記述して`for ( for-range-declaration : expression )`します。 これは、コア言語サポートの一部です。 詳細については、次を参照してください。[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)します。
 
 C++ 言語自体も進化しました。 次の 2 つのコード スニペットを比較してみます。 このスニペットは以前の C++ を使ったものです。
 

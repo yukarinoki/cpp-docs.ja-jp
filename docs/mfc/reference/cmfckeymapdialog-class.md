@@ -27,10 +27,10 @@ helpviewer_keywords:
 - CMFCKeyMapDialog [MFC], SetColumnsWidth
 ms.assetid: 5feb4942-d636-462d-a162-0104dd320f4e
 ms.openlocfilehash: 65aa5ab0f24999ee23a97f383577b69584825502
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774790"
 ---
 # <a name="cmfckeymapdialog-class"></a>CMFCKeyMapDialog クラス
@@ -130,7 +130,7 @@ virtual INT_PTR DoModal();
 
 ### <a name="return-value"></a>戻り値
 
-IDOK、IDCANCEL に渡されるなどの符号付き整数の[CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog)メソッド。 メソッドは、さらに、ダイアログ ボックスを閉じます。 詳細については、[CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal)を参照してください。
+IDOK、IDCANCEL に渡されるなどの符号付き整数の[CDialog::EndDialog](../../mfc/reference/cdialog-class.md#enddialog)メソッド。 メソッドは、さらに、ダイアログ ボックスを閉じます。 詳細については、次を参照してください。 [CDialog::DoModal](../../mfc/reference/cdialog-class.md#domodal)します。
 
 ### <a name="remarks"></a>Remarks
 

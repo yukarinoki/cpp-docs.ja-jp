@@ -4,10 +4,10 @@ ms.date: 12/08/2018
 helpviewer_keywords:
 - MSBuild reference [C++]
 ms.openlocfilehash: b6ec6b5d276cb7104cf61c229476596d2a2a7684
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024700"
 ---
 # <a name="msbuild-reference-for-c-projects"></a>C++ プロジェクトの MSBuild のリファレンス
@@ -30,7 +30,7 @@ MSBuild は、Visual studio で C++ プロジェクトを含むすべてのプ�
 [Visual Studio の C++ プロジェクト テンプレート](visual-cpp-project-types.md)<br>
 C++ で利用可能な MSBuild ベースのプロジェクトの種類について説明します。
 
-[C++ の新しい項目テンプレート](using-visual-cpp-add-new-item-templates.md)<br>
+[C++ 新しい項目テンプレート](using-visual-cpp-add-new-item-templates.md)<br>
 ソース ファイルと Visual Studio プロジェクトに追加できるその他の項目について説明します。
 
 [プリコンパイル済みヘッダー ファイル](../creating-precompiled-header-files.md)プリコンパイル済みビルド時間を短縮するためのコードをプリコンパイル済みヘッダー ファイルと、独自のカスタムを作成する方法を使用する方法。

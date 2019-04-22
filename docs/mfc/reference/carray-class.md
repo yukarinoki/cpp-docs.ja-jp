@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CArray [MFC], SetSize
 ms.assetid: fead8b00-4cfd-4625-ad0e-251df62ba92f
 ms.openlocfilehash: f82dbf7dce2e14bf760bb76d23d23f667797ee0f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779847"
 ---
 # <a name="carray-class"></a>CArray クラス
@@ -88,7 +88,7 @@ class CArray : public CObject
 |[CArray::GetAt](#getat)|指定されたインデックス位置にある値を返します。|
 |[CArray::GetCount](#getcount)|この配列内の要素の数を取得します。|
 |[CArray::GetData](#getdata)|配列内の要素へのアクセスを許可します。 NULL にすることができます。|
-|[呼び出す](#getsize)|この配列内の要素の数を取得します。|
+|[CArray::GetSize](#getsize)|この配列内の要素の数を取得します。|
 |[CArray::GetUpperBound](#getupperbound)|有効な最大のインデックスを返します。|
 |[CArray::InsertAt](#insertat)|指定されたインデックス位置に要素 (または別の配列内のすべての要素) を挿入します。|
 |[CArray::IsEmpty](#isempty)|配列が空かどうかを判断します。|
@@ -102,7 +102,7 @@ class CArray : public CObject
 
 |名前|説明|
 |----------|-----------------|
-|[演算子&#91;&#93;](#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
+|[operator&#91;&#93;](#operator_at)|指定されたインデックス位置にある要素を設定または取得します。|
 
 ## <a name="remarks"></a>Remarks
 

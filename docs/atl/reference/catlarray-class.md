@@ -26,10 +26,10 @@ helpviewer_keywords:
 - CAtlArray class
 ms.assetid: 0b503aa8-2357-40af-a326-6654bf1da098
 ms.openlocfilehash: 6a0b83f722d1b616e9c10713646d337f9cb090a4
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775700"
 ---
 # <a name="catlarray-class"></a>CAtlArray クラス
@@ -97,7 +97,7 @@ ATL クラスの要素の数が少ない配列[CSimpleArray](../../atl/reference
 
 `CAtlArray` mfc の関連性が高い`CArray`クラスをシリアル化をサポートしていないものの、MFC プロジェクトで動作します。
 
-詳細については、[ATL コレクション クラス](../../atl/atl-collection-classes.md)を参照してください。
+詳細については、次を参照してください。 [ATL コレクション クラス](../../atl/atl-collection-classes.md)します。
 
 ## <a name="requirements"></a>必要条件
 

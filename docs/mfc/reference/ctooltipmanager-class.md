@@ -17,10 +17,10 @@ helpviewer_keywords:
 - CTooltipManager [MFC], UpdateTooltips
 ms.assetid: c71779d7-8b6e-47ef-8500-d4552731fe86
 ms.openlocfilehash: e8b88f2722f5a4379276f13c2ef159aa4d120533
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776506"
 ---
 # <a name="ctooltipmanager-class"></a>CTooltipManager クラス
@@ -41,7 +41,7 @@ class CTooltipManager : public CObject
 |----------|-----------------|
 |[CTooltipManager::CreateToolTip](#createtooltip)|指定された Windows コントロールの種類のツールヒント コントロールを作成します。|
 |[CTooltipManager::DeleteToolTip](#deletetooltip)|ツールヒント コントロールを削除します。|
-|[CTooltipManager::SetTooltipParams](#settooltipparams)|指定された Windows コントロールの種類のツールヒント コントロールの外観をカスタマイズします。|
+|[:Settooltipparams](#settooltipparams)|指定された Windows コントロールの種類のツールヒント コントロールの外観をカスタマイズします。|
 |[CTooltipManager::SetTooltipText](#settooltiptext)|ツールヒント コントロールのテキストと説明を設定します。|
 |[CTooltipManager::UpdateTooltips](#updatetooltips)||
 

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ICollectionOnSTLImpl interface
 ms.assetid: 6d49f819-1957-4813-b074-3f12c494d8ca
 ms.openlocfilehash: 609ec2547cf7a8ab93ef757f7a8e460542c9de28
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779249"
 ---
 # <a name="implementing-a-c-standard-library-based-collection"></a>C++ 標準ライブラリに基づくコレクションを実装します。
@@ -75,7 +75,7 @@ ATL には、`ICollectionOnSTLImpl`迅速に、オブジェクトのコレクシ
 
 [!code-cpp[NVC_ATL_COM#26](../atl/codesnippet/cpp/implementing-an-stl-based-collection_3.h)]
 
-この例では、カスタムを使用することができます`GenericCopy`VCUE_Copy.h とから VCUE_CopyString.h で定義されているクラス、 [ATLCollections](../overview/visual-cpp-samples.md)サンプル。 このクラスは、その他のコードで使用できますが、それ以上の特殊化を定義する必要があります`GenericCopy`独自のコレクションで使用されるデータ型をサポートするためにします。 詳細については、[ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)を参照してください。
+この例では、カスタムを使用することができます`GenericCopy`VCUE_Copy.h とから VCUE_CopyString.h で定義されているクラス、 [ATLCollections](../overview/visual-cpp-samples.md)サンプル。 このクラスは、その他のコードで使用できますが、それ以上の特殊化を定義する必要があります`GenericCopy`独自のコレクションで使用されるデータ型をサポートするためにします。 詳細については、次を参照してください。 [ATL コピー ポリシー クラス](../atl/atl-copy-policy-classes.md)します。
 
 ##  <a name="vcconenumeration_and_collection"></a> 列挙とコレクションの Typedef を作成します。
 
