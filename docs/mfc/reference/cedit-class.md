@@ -95,10 +95,10 @@ helpviewer_keywords:
 - CEdit [MFC], Undo
 ms.assetid: b1533c30-7f10-4663-88d3-8b7f2c9f7024
 ms.openlocfilehash: 45c03d142c34186660aa2715081ffb0f45e85ccc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773750"
 ---
 # <a name="cedit-class"></a>CEdit Class
@@ -124,7 +124,7 @@ class CEdit : public CWnd
 |名前|説明|
 |----------|-----------------|
 |[CEdit::CanUndo](#canundo)|エディット コントロールの操作が完了できるかどうかを判断します。|
-|[場合](#charfrompos)|指定した位置に最も近い文字の行や文字のインデックスを取得します。|
+|[CEdit::CharFromPos](#charfrompos)|指定した位置に最も近い文字の行や文字のインデックスを取得します。|
 |[CEdit::Clear](#clear)|編集の現在の選択 (存在する場合) を制御する (クリア) を削除します。|
 |[CEdit::Copy](#copy)|現在の選択 (あれば) エディット コントロールでクリップボードにコピーされているテキスト形式でします。|
 |[CEdit::Create](#create)|Windows のエディット コントロールを作成しにアタッチします、`CEdit`オブジェクト。|
@@ -608,7 +608,7 @@ int GetLine(
 *lpszBuffer*<br/>
 行のコピーを受け取るバッファーへのポインター。 バッファーの最初の単語は、バッファーにコピーする Tchar の最大数を指定する必要があります。
 
-*格納*<br/>
+*nMaxLength*<br/>
 バッファーにコピーする TCHAR 文字の最大数を指定します。 `GetLine` 最初の単語でこの値を配置*lpszBuffer* Windows への呼び出しを行う前にします。
 
 ### <a name="return-value"></a>戻り値
@@ -996,7 +996,7 @@ void ReplaceSel(LPCTSTR lpszNewText, BOOL bCanUndo = FALSE);
 
 ### <a name="parameters"></a>パラメーター
 
-*されています。*<br/>
+*lpszNewText*<br/>
 置換テキストを含む null で終わる文字列へのポインター。
 
 *bCanUndo*<br/>

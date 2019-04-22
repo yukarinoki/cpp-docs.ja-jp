@@ -7,10 +7,10 @@ helpviewer_keywords:
 - cpp_quote attribute
 ms.assetid: f75327ff-42bd-498b-9177-7ffa25427e1f
 ms.openlocfilehash: 378435ced5a541785b7b32bc9d2f408034d5a2d8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024684"
 ---
 # <a name="cppquote"></a>cpp_quote
@@ -30,7 +30,7 @@ C 命令。
 
 ## <a name="remarks"></a>Remarks
 
-**Cpp_quote** C++ 属性は、.idl ファイル内のプリプロセッサ ディレクティブを配置する場合に便利です。
+**Cpp_quote** C++属性は、.idl ファイル内のプリプロセッサ ディレクティブを配置する場合に便利です。
 
 使用することも**cpp_quote** MIDL コンパイルの一部として、.h ファイルを生成します。 たとえば、C の IDL 属性を使用していて、このファイルをいくつかのタスクを使用することはできません、C++ ヘッダー ファイルがある場合は、しをコンパイルできますを使用できる MIDL で生成された .h ファイルを作成すること。
 

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ms_union attribute
 ms.assetid: bb548689-6962-457e-af56-8ffdf68987eb
 ms.openlocfilehash: 3f83eeff4fd9b2177b862b101b7a2d4faeaaab87
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022309"
 ---
 # <a name="msunion"></a>ms_union
@@ -25,7 +25,7 @@ ms.locfileid: "59022309"
 
 ## <a name="remarks"></a>Remarks
 
-**Ms_union** C++ 属性と同じ機能を持つ、 [ms_union](/windows/desktop/Midl/ms-union-attrib) MIDL 属性。
+**Ms_union** C++属性と同じ機能を持つ、 [ms_union](/windows/desktop/Midl/ms-union-attrib) MIDL 属性。
 
 ## <a name="example"></a>例
 

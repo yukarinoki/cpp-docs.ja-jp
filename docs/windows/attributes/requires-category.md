@@ -7,10 +7,10 @@ helpviewer_keywords:
 - requires_category attribute
 ms.assetid: a645fdc6-1ef5-414d-8c56-5fe2686d4687
 ms.openlocfilehash: ec35a1958d9fbcf77fef7f498c6c0dba3ab17df9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022140"
 ---
 # <a name="requirescategory"></a>requires_category
@@ -31,7 +31,7 @@ ms.locfileid: "59022140"
 
 ## <a name="remarks"></a>Remarks
 
-**Requires_category** C++ 属性がターゲット クラスに必須コンポーネントのカテゴリを指定します。 詳細については、次を参照してください。[要求する](../../atl/reference/category-macros.md#required_category)します。
+**Requires_category** C++属性がターゲット クラスに必須コンポーネントのカテゴリを指定します。 詳細については、次を参照してください。[要求する](../../atl/reference/category-macros.md#required_category)します。
 
 この属性を使用するには、 [coclass](coclass.md)、 [progid](progid.md)、または [vi_progid](vi-progid.md) 属性 (または、これらのいずれかを意味する別の属性) も同じ要素に適用する必要があります。
 

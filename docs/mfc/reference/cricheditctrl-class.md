@@ -153,10 +153,10 @@ helpviewer_keywords:
 - CRichEditCtrl [MFC], Undo
 ms.assetid: 2be52788-822c-4c27-aafd-2471231e74eb
 ms.openlocfilehash: 5517efca66744c43eeccd3fb91b97a6fedc8180e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779275"
 ---
 # <a name="cricheditctrl-class"></a>CRichEditCtrl クラス
@@ -905,7 +905,7 @@ UINT GetOptions() const;
 
 ### <a name="return-value"></a>戻り値
 
-現在のオプション フラグの値の組み合わせ。 これらの値の一覧は、、*方法は限られて*パラメーター、 [EM_SETOPTIONS](/windows/desktop/Controls/em-setoptions)メッセージ、Windows SDK で説明されているとを参照してください。
+現在のオプション フラグの値の組み合わせ。 これらの値の一覧は、次を参照してください。、*方法は限られて*パラメーター、 [EM_SETOPTIONS](/windows/desktop/Controls/em-setoptions)メッセージ、Windows SDK で説明されているとします。
 
 ##  <a name="getparaformat"></a>  CRichEditCtrl::GetParaFormat
 
@@ -1548,7 +1548,7 @@ void RequestResize();
 
 この関数は[、ボトムレス](../../mfc/reference/cwnd-class.md#onsize)処理の制限のない`CRichEditCtrl`オブジェクト。
 
-詳細については、、 [EM_REQUESTRESIZE](/windows/desktop/Controls/em-requestresize)メッセージと**リッチ エディット コントロールの制限のない**のセクション[リッチのエディット コントロールについて](/windows/desktop/Controls/about-rich-edit-controls)Windows SDK にを参照してください。
+詳細については、次を参照してください。、 [EM_REQUESTRESIZE](/windows/desktop/Controls/em-requestresize)メッセージと**リッチ エディット コントロールの制限のない**のセクション[リッチのエディット コントロールについて](/windows/desktop/Controls/about-rich-edit-controls)Windows SDK にします。
 
 ##  <a name="setautourldetect"></a>  CRichEditCtrl::SetAutoURLDetect
 

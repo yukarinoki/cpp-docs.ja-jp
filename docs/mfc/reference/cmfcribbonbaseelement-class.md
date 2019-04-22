@@ -233,10 +233,10 @@ helpviewer_keywords:
 - CMFCRibbonBaseElement [MFC], OnSetFocus
 ms.assetid: 419ea91b-5062-44cc-b0a3-f87d29566f62
 ms.openlocfilehash: 6daa5b6249c7ff18a8bc01c2309ffb94d3fb88ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58773074"
 ---
 # <a name="cmfcribbonbaseelement-class"></a>CMFCRibbonBaseElement クラス
@@ -265,10 +265,10 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::AddToListBox](#addtolistbox)|指定されたリボン コマンドのリスト ボックスに、リボン要素を追加します。|
 |[CMFCRibbonBaseElement::CanBeAddedToQuickAccessToolBar](#canbeaddedtoquickaccesstoolbar)|クイック アクセス ツールバーにリボン要素を追加できるかどうかを示します。|
 |[CMFCRibbonBaseElement::CanBeCompacted](#canbecompacted)|リボン要素のサイズを縮小できるかどうかを示します。|
-|[Cmfcribbonbaseelement::canbestretched](#canbestretched)|リボン要素の高さが、リボンの行の高さを縦に拡大できるかどうかを示します。|
+|[CMFCRibbonBaseElement::CanBeStretched](#canbestretched)|リボン要素の高さが、リボンの行の高さを縦に拡大できるかどうかを示します。|
 |[CMFCRibbonBaseElement::CanBeStretchedHorizontally](#canbestretchedhorizontally)|リボン要素の幅を変更できるかどうかを示します。|
-|[Cmfcribbonbaseelement::cleanupsizes](#cleanupsizes)|リボン要素のディメンション設定をクリーンアップします。|
-|[Cmfcribbonbaseelement::closepopupmenu](#closepopupmenu)|リボン要素のポップアップ メニューを閉じます。|
+|[CMFCRibbonBaseElement::CleanUpSizes](#cleanupsizes)|リボン要素のディメンション設定をクリーンアップします。|
+|[CMFCRibbonBaseElement::ClosePopupMenu](#closepopupmenu)|リボン要素のポップアップ メニューを閉じます。|
 |[CMFCRibbonBaseElement::CopyFrom](#copyfrom)|指定した状態をコピー`CMFCRibbonBaseElement`を現在のオブジェクト。|
 |[CMFCRibbonBaseElement::DestroyCtrl](#destroyctrl)|リボン要素を破棄します。|
 |[Cmfcribbonbaseelement::drawimage](#drawimage)|リボン要素のイメージを描画します。|
@@ -276,7 +276,7 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::FindByData](#findbydata)|指定されたデータが含まれている場合は、リボン要素へのポインターを取得します。|
 |[CMFCRibbonBaseElement::FindByID](#findbyid)|その要素が指定したコマンド ID で識別される場合は、リボン要素へのポインターを取得します|
 |[CMFCRibbonBaseElement::FindByOriginal](#findbyoriginal)|元のリボン要素が指定されたリボン要素と一致する場合は、リボン要素へのポインターを取得します。|
-|[Cmfcribbonbaseelement::getcompactsize](#getcompactsize)|リボン要素のコンパクト サイズを返します。|
+|[CMFCRibbonBaseElement::GetCompactSize](#getcompactsize)|リボン要素のコンパクト サイズを返します。|
 |[CMFCRibbonBaseElement::GetData](#getdata)|リボン要素に関連付けられたユーザー定義データを取得します。|
 |[CMFCRibbonBaseElement::GetDescription](#getdescription)|リボン要素の説明を返します。|
 |[CMFCRibbonBaseElement::GetDroppedDown](#getdroppeddown)|のポップアップ メニューが削除された場合は、リボン要素へのポインターを取得します。|
@@ -284,8 +284,8 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::GetElementsByID](#getelementsbyid)|現在のリボン要素には、指定したコマンド ID が含まれている場合は、現在のリボン要素を指定した配列に追加します。|
 |[CMFCRibbonBaseElement::GetHighlighted](#gethighlighted)|強調表示されている場合は、リボン要素へのポインターを取得します。|
 |[CMFCRibbonBaseElement::GetID](#getid)|リボン要素のコマンド ID を返します。|
-|[Cmfcribbonbaseelement::getimagesize](#getimagesize)|リボン要素のイメージ サイズを返します。|
-|[Cmfcribbonbaseelement::getintermediatesize](#getintermediatesize)|サイズが中間状態になっているリボン要素のサイズを返します。|
+|[CMFCRibbonBaseElement::GetImageSize](#getimagesize)|リボン要素のイメージ サイズを返します。|
+|[CMFCRibbonBaseElement::GetIntermediateSize](#getintermediatesize)|サイズが中間状態になっているリボン要素のサイズを返します。|
 |[CMFCRibbonBaseElement::GetKeys](#getkeys)|リボン要素に関連付けられている keytip を返します。|
 |[CMFCRibbonBaseElement::GetKeyTipRect](#getkeytiprect)|リボン要素の keytip の境界の四角形を取得します。|
 |[CMFCRibbonBaseElement::GetKeyTipSize](#getkeytipsize)|Keytip のテキストのサイズを取得します。|
@@ -300,16 +300,16 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::GetPressed](#getpressed)|ユーザーが現在押した場合は、リボン要素へのポインターを取得します。|
 |[CMFCRibbonBaseElement::GetQuickAccessToolBarID](#getquickaccesstoolbarid)|クイック アクセス ツールバーにあるときは、リボン要素のコマンド ID を取得します。|
 |[CMFCRibbonBaseElement::GetRect](#getrect)|リボン要素の外接する四角形を返します。|
-|[Cmfcribbonbaseelement::getregularsize](#getregularsize)|リボン要素の標準サイズを返します。|
+|[CMFCRibbonBaseElement::GetRegularSize](#getregularsize)|リボン要素の標準サイズを返します。|
 |[CMFCRibbonBaseElement::GetSize](#getsize)|リボン要素の現在のサイズを返します。|
 |[CMFCRibbonBaseElement::GetText](#gettext)|リボン要素に関連付けられたテキストを返します。|
-|[Cmfcribbonbaseelement::gettooltiptext](#gettooltiptext)|リボン要素のツールヒント テキストを返します。|
+|[CMFCRibbonBaseElement::GetToolTipText](#gettooltiptext)|リボン要素のツールヒント テキストを返します。|
 |[CMFCRibbonBaseElement::GetTopLevelRibbonBar](#gettoplevelribbonbar)|リボン要素の最上位のリボン バーを取得します。|
-|[Cmfcribbonbaseelement::hascompactmode](#hascompactmode)|リボン要素に簡易モードがあるかどうかを指定します。|
+|[CMFCRibbonBaseElement::HasCompactMode](#hascompactmode)|リボン要素に簡易モードがあるかどうかを指定します。|
 |[CMFCRibbonBaseElement::HasFocus](#hasfocus)|親要素にキーボード フォーカスがあるかどうかを示します。|
-|[Cmfcribbonbaseelement::hasintermediatemode](#hasintermediatemode)|リボン要素に中間モードがあるかどうかを指定します。|
-|[Cmfcribbonbaseelement::haslargemode](#haslargemode)|リボン要素に大モードがあるかどうかを指定します。|
-|[Cmfcribbonbaseelement::hasmenu](#hasmenu)|リボン要素がメニューにあるかどうかを示します。|
+|[CMFCRibbonBaseElement::HasIntermediateMode](#hasintermediatemode)|リボン要素に中間モードがあるかどうかを指定します。|
+|[CMFCRibbonBaseElement::HasLargeMode](#haslargemode)|リボン要素に大モードがあるかどうかを指定します。|
+|[CMFCRibbonBaseElement::HasMenu](#hasmenu)|リボン要素がメニューにあるかどうかを示します。|
 |[CMFCRibbonBaseElement::HitTest](#hittest)|これで、指定した点がある場合は、リボン要素へのポインターを取得します。|
 |[CMFCRibbonBaseElement::IsAlignByColumn](#isalignbycolumn)|その他のリボン要素を持つリボン要素を垂直方向に揃えるかどうかを示します。|
 |[CMFCRibbonBaseElement::IsAlwaysLargeImage](#isalwayslargeimage)|リボン要素のイメージのサイズが常に大きいかどうかを示します。|
@@ -339,11 +339,11 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::OnAddToQAToolbar](#onaddtoqatoolbar)|指定のクイック アクセス ツールバーには、リボン要素を追加します。|
 |[CMFCRibbonBaseElement::OnAfterChangeRect](#onafterchangerect)|リボン要素のツールヒントが更新されます。|
 |[CMFCRibbonBaseElement::OnAutoRepeat](#onautorepeat)|持続的なユーザー入力への応答でリボン要素を更新します。|
-|[Cmfcribbonbaseelement::oncalctextsize](#oncalctextsize)|リボン要素のテキストのサイズを計算します。|
+|[CMFCRibbonBaseElement::OnCalcTextSize](#oncalctextsize)|リボン要素のテキストのサイズを計算します。|
 |[CMFCRibbonBaseElement::OnChangeMenuHighlight](#onchangemenuhighlight)|メニューに配置されているリボン要素の強調表示が変更されたときに、フレームワークによって呼び出されます。|
-|[Cmfcribbonbaseelement::ondraw](#ondraw)|リボン要素を描画するために、フレームワークによって呼び出されます。|
+|[CMFCRibbonBaseElement::OnDraw](#ondraw)|リボン要素を描画するために、フレームワークによって呼び出されます。|
 |[CMFCRibbonBaseElement::OnDrawKeyTip](#ondrawkeytip)|リボン要素の keytip を描画するためにフレームワークによって呼び出されます。|
-|[Cmfcribbonbaseelement::ondrawmenuimage](#ondrawmenuimage)|リボン要素のメニュー イメージが描画されるときに、フレームワークによって呼び出されます。|
+|[CMFCRibbonBaseElement::OnDrawMenuImage](#ondrawmenuimage)|リボン要素のメニュー イメージが描画されるときに、フレームワークによって呼び出されます。|
 |[CMFCRibbonBaseElement::OnDrawOnList](#ondrawonlist)|コマンドのリスト ボックスで、リボン要素を描画するためにフレームワークによって呼び出されます。|
 |[CMFCRibbonBaseElement::OnKey](#onkey)|Keytip を押すし、フォーカスを持つリボン要素に、フレームワークによって呼び出されます。|
 |[CMFCRibbonBaseElement::OnMenuKey](#onmenukey)||
@@ -352,20 +352,20 @@ class CMFCRibbonBaseElement : public CObject
 |[CMFCRibbonBaseElement::OnShowPopupMenu](#onshowpopupmenu)|リボン要素がポップアップ メニューを表示するときに、フレームワークによって呼び出されます。|
 |[CMFCRibbonBaseElement::PostMenuCommand](#postmenucommand)||
 |[CMFCRibbonBaseElement::Redraw](#redraw)|リボン要素の表示を更新します。|
-|[Cmfcribbonbaseelement::setaccdata](#setaccdata)|リボン要素のアクセシビリティ データを設定します。|
+|[CMFCRibbonBaseElement::SetACCData](#setaccdata)|リボン要素のアクセシビリティ データを設定します。|
 |[CMFCRibbonBaseElement::SetCompactMode](#setcompactmode)|リボン要素の表示サイズを設定します。|
 |[CMFCRibbonBaseElement::SetData](#setdata)|データ アイテムをリボン要素に関連付けます。|
 |[CMFCRibbonBaseElement::SetDefaultMenuLook](#setdefaultmenulook)||
-|[Cmfcribbonbaseelement::setdescription](#setdescription)|リボン要素の説明を設定します。|
+|[CMFCRibbonBaseElement::SetDescription](#setdescription)|リボン要素の説明を設定します。|
 |[CMFCRibbonBaseElement::SetID](#setid)|リボン要素のコマンド ID を設定します。|
 |[CMFCRibbonBaseElement::SetInitialMode](#setinitialmode)|リボン要素の初期表示サイズを設定します。|
 |[CMFCRibbonBaseElement::SetKeys](#setkeys)|リボン要素の keytip を設定します。|
 |[CMFCRibbonBaseElement::SetOriginal](#setoriginal)|リボン要素の元のリボン要素を設定します。|
-|[Cmfcribbonbaseelement::setparentcategory](#setparentcategory)|リボン要素の親カテゴリを設定します。|
+|[CMFCRibbonBaseElement::SetParentCategory](#setparentcategory)|リボン要素の親カテゴリを設定します。|
 |[CMFCRibbonBaseElement::SetParentMenu](#setparentmenu)|Menu コンテナー リボン要素の親を設定します。|
 |[CMFCRibbonBaseElement::SetParentRibbonBar](#setparentribbonbar)|リボン要素の親のリボン バーを設定します。|
 |[CMFCRibbonBaseElement::SetRect](#setrect)|表示するリボン要素の四角形の寸法を設定します。|
-|[Cmfcribbonbaseelement::settext](#settext)|リボン要素のテキストを設定します。|
+|[CMFCRibbonBaseElement::SetText](#settext)|リボン要素のテキストを設定します。|
 |[CMFCRibbonBaseElement::SetTextAlwaysOnRight](#settextalwaysonright)|右上に表示するリボン要素のテキストを設定します。|
 |[CMFCRibbonBaseElement::SetToolTipText](#settooltiptext)|リボン要素のツールヒントのテキストを設定します。|
 |[CMFCRibbonBaseElement::SetVisible](#setvisible)|リボン要素の可視性の状態を設定します。|
@@ -580,7 +580,7 @@ virtual void DrawImage(
 *pDC*<br/>
 [in]デバイス コンテキストへのポインター。
 
-*種類*<br/>
+*type*<br/>
 [in]イメージの種類の列挙値。 使用可能な値の一覧については、「解説」を参照してください。
 
 *rectImage*<br/>
@@ -1933,7 +1933,7 @@ virtual BOOL SetACCData(
 *pParent*<br/>
 リボン要素の親ウィンドウ。
 
-*[データ]*<br/>
+*data*<br/>
 リボン要素のアクセシビリティ データ。
 
 ### <a name="return-value"></a>戻り値
@@ -2238,7 +2238,7 @@ virtual BOOL StretchToWholeRow(
 *pDC*<br/>
 [in]このパラメーターは使用されません。
 
-*パラメーター nHeight*<br/>
+*nHeight*<br/>
 [in]行の高さ。
 
 ### <a name="return-value"></a>戻り値

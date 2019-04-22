@@ -345,10 +345,10 @@ helpviewer_keywords:
 - CMFCVisualManager [MFC], SetShadowHighlightedImage
 ms.assetid: beed80f7-36a2-4d64-9f09-e807cfefc3fe
 ms.openlocfilehash: 7b4d6a31e69e75af240e0e58cbfbb7d2d24291aa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775167"
 ---
 # <a name="cmfcvisualmanager-class"></a>CMFCVisualManager クラス
@@ -2905,7 +2905,7 @@ virtual void OnDrawRibbonCategory(
 
 ### <a name="remarks"></a>Remarks
 
-リボン カテゴリは、メニュー コマンドの論理グループです。 リボン カテゴリの詳細については、[CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)を参照してください。
+リボン カテゴリは、メニュー コマンドの論理グループです。 リボン カテゴリの詳細については、次を参照してください。 [CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)します。
 
 リボン カテゴリの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。
 
@@ -2933,7 +2933,7 @@ A [COLORREF](/windows/desktop/gdi/colorref)キャプション バーにテキス
 
 ### <a name="remarks"></a>Remarks
 
-リボン カテゴリのタイトル バーの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。 キャプション バーの詳細については、[CMFCRibbonContextCaption クラス](../../mfc/reference/cmfcribboncontextcaption-class.md)を参照してください。
+リボン カテゴリのタイトル バーの外観をカスタマイズする派生クラスでこのメソッドをオーバーライドします。 キャプション バーの詳細については、次を参照してください。 [CMFCRibbonContextCaption クラス](../../mfc/reference/cmfcribboncontextcaption-class.md)します。
 
 ##  <a name="ondrawribboncategoryscroll"></a>  CMFCVisualManager::OnDrawRibbonCategoryScroll
 
@@ -2978,7 +2978,7 @@ virtual COLORREF OnDrawRibbonCategoryTab(
 
 ### <a name="remarks"></a>Remarks
 
-リボンのカテゴリ タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。リボン カテゴリの詳細については、[CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)を参照してください。
+リボンのカテゴリ タブの外観をカスタマイズする場合は、派生ビジュアル マネージャーでは、このメソッドをオーバーライドします。リボン カテゴリの詳細については、次を参照してください。 [CMFCRibbonCategory クラス](../../mfc/reference/cmfcribboncategory-class.md)します。
 
 ##  <a name="ondrawribboncheckboxonlist"></a>  CMFCVisualManager::OnDrawRibbonCheckBoxOnList
 
@@ -4424,7 +4424,7 @@ virtual COLORREF OnFillCommandsListBackground(
 
 ### <a name="remarks"></a>Remarks
 
-カスタマイズの一覧に関する詳細については、[CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)を参照してください。 このメソッドの既定の実装では、現在選択されているスキンのカラー スキームに基づく背景を塗りつぶします。
+カスタマイズの一覧に関する詳細については、次を参照してください。 [CMFCToolBarButton::OnDrawOnCustomizeList](../../mfc/reference/cmfctoolbarbutton-class.md#ondrawoncustomizelist)します。 このメソッドの既定の実装では、現在選択されているスキンのカラー スキームに基づく背景を塗りつぶします。
 
 ##  <a name="onfillheaderctrlbackground"></a>  CMFCVisualManager::OnFillHeaderCtrlBackground
 
@@ -4952,7 +4952,7 @@ virtual BOOL OnSetWindowRegion(
 
 ### <a name="remarks"></a>Remarks
 
-フレームワークは、フレームとポップアップ メニューの領域が設定されているビジュアル マネージャーに通知するには、このメソッドを呼び出します。 詳細については、[CWindow::SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn)を参照してください。
+フレームワークは、フレームとポップアップ メニューの領域が設定されているビジュアル マネージャーに通知するには、このメソッドを呼び出します。 詳細については、次を参照してください。 [CWindow::SetWindowRgn](../../atl/reference/cwindow-class.md#setwindowrgn)します。
 
 ##  <a name="onupdatesystemcolors"></a>  CMFCVisualManager::OnUpdateSystemColors
 
@@ -5003,7 +5003,7 @@ static void SetDefaultManager(CRuntimeClass* pRTI);
 
 ### <a name="remarks"></a>Remarks
 
-使用して、`CMFCVisualManager`クラスと派生した、アプリケーションの外観をカスタマイズするビジュアル マネージャー。 既定のビジュアル マネージャーを設定すると、このメソッドでは、新しいビジュアル マネージャーを使用してのアプリケーションが再描画します。 ビジュアル マネージャーを使用する方法の詳細については、[ビジュアル マネージャー](../../mfc/visualization-manager.md)を参照してください。
+使用して、`CMFCVisualManager`クラスと派生した、アプリケーションの外観をカスタマイズするビジュアル マネージャー。 既定のビジュアル マネージャーを設定すると、このメソッドでは、新しいビジュアル マネージャーを使用してのアプリケーションが再描画します。 ビジュアル マネージャーを使用する方法の詳細については、次を参照してください。[ビジュアル マネージャー](../../mfc/visualization-manager.md)します。
 
 このメソッドを使用すると、アプリケーションで使用するビジュアル マネージャーを変更できます。
 

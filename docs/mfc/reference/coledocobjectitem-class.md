@@ -25,10 +25,10 @@ helpviewer_keywords:
 - COleDocObjectItem [MFC], Release
 ms.assetid: d150d306-8fd3-4831-b06d-afbe71d8fc9b
 ms.openlocfilehash: 382960b4dc4dcfa61c836a87044dd14585756174
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769648"
 ---
 # <a name="coledocobjectitem-class"></a>COleDocObjectItem クラス
@@ -270,7 +270,7 @@ HRESULT QueryCommand(
 照会するコマンドの識別子です。
 
 *pdwStatus*<br/>
-クエリの結果として返されるフラグへのポインター。 使用可能な値の一覧は、[OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)を参照してください。
+クエリの結果として返されるフラグへのポインター。 使用可能な値の一覧は、次を参照してください。 [OLECMDF](/windows/desktop/api/docobj/ne-docobj-olecmdf)します。
 
 *pCmdText*<br/>
 ポインター、 [OLECMDTEXT](/windows/desktop/api/docobj/ns-docobj-_tagolecmdtext)を 1 つのコマンドの名前と状態情報を返す対象の構造体。 呼び出し元がこの情報を必要としないことを示す NULL を指定できます。
@@ -297,7 +297,7 @@ virtual void Release(OLECLOSE dwCloseOption = OLECLOSE_NOSAVE);
 ### <a name="parameters"></a>パラメーター
 
 *dwCloseOption*<br/>
-読み込み済み状態に戻ったときにどのような状況で OLE 項目が保存されたを指定するフラグ。 使用可能な値の一覧は、[COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close)を参照してください。
+読み込み済み状態に戻ったときにどのような状況で OLE 項目が保存されたを指定するフラグ。 使用可能な値の一覧は、次を参照してください。 [COleClientItem::Close](../../mfc/reference/coleclientitem-class.md#close)します。
 
 ### <a name="remarks"></a>Remarks
 

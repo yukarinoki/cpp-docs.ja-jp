@@ -8,10 +8,10 @@ helpviewer_keywords:
 - STGI instruction
 ms.assetid: 96488da4-5587-4e99-8674-627a9e51be84
 ms.openlocfilehash: ea138f17a24af21afa937991f77bd1e2a689c3f7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024791"
 ---
 # <a name="svmstgi"></a>__svm_stgi
@@ -40,9 +40,9 @@ void __svm_stgi(void);
 
 **ヘッダー ファイル** \<intrin.h >
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [__svm_clgi](../intrinsics/svm-clgi.md)

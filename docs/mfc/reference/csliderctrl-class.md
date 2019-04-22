@@ -75,10 +75,10 @@ helpviewer_keywords:
 - CSliderCtrl [MFC], SetToolTips
 ms.assetid: dd12b084-4eda-4550-a810-8f3cfb06b871
 ms.openlocfilehash: 4db27112daf65b2c3f477527cd7b4351b91d7f18
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776636"
 ---
 # <a name="csliderctrl-class"></a>CSliderCtrl クラス
@@ -705,7 +705,7 @@ void SetThumbLength(int nLength);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*されて*|[in]ピクセル単位で、スライダーの長さ。|
+|*nLength*|[in]ピクセル単位で、スライダーの長さ。|
 
 ### <a name="remarks"></a>Remarks
 

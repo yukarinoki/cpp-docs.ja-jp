@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CProgressCtrl [MFC], StepIt
 ms.assetid: 222630f4-1598-4026-8198-51649b1192ab
 ms.openlocfilehash: 15241485278f09d16c86fc7274f2fc1d85a7a2f7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778950"
 ---
 # <a name="cprogressctrl-class"></a>CProgressCtrl クラス
@@ -271,10 +271,10 @@ void GetRange(
 
 ### <a name="parameters"></a>パラメーター
 
-*上限値*<br/>
+*nLower*<br/>
 進行状況バー コントロールの下限値を受け取る整数への参照。
 
-*下限*<br/>
+*nUpper*<br/>
 進行状況バー コントロールの上限値を受け取る整数への参照。
 
 ### <a name="remarks"></a>Remarks
@@ -507,10 +507,10 @@ void SetRange32(
 
 ### <a name="parameters"></a>パラメーター
 
-*上限値*<br/>
+*nLower*<br/>
 範囲の下限値を指定します (既定値は 0)。
 
-*下限*<br/>
+*nUpper*<br/>
 範囲の上限を指定します (既定値は 100)。
 
 ### <a name="remarks"></a>Remarks

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TN035
 ms.assetid: 1f08ce5e-a912-44cc-ac56-7dd93ad73fb6
 ms.openlocfilehash: 0493dd45caf5eb78da435987a4590442a908a5a3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772765"
 ---
 # <a name="tn035-using-multiple-resource-files-and-header-files-with-visual-c"></a>TN035:Visual C での複数のリソース ファイルとヘッダー ファイルの使用
@@ -259,7 +259,7 @@ ID_TOOLS_SPELL シンボルは、共有ヘッダー ファイル、MYSHARED.H �
 
 `_APS_NEXT_SYMED_VALUE` シンボル値を手動で割り当てるときに発行される次のシンボル値は、シンボル ブラウザーで新しいコマンドを使用しています。
 
-Visual C++ は、新しい .RC ファイルを作成するときに、最小の有効な値より少し大きい値を使用して割り当てを開始します。 AppWizard も、これらの値を、MFC アプリケーションに適切な値より少し大きい値に初期化します。 ID 値の範囲の詳細については、[テクニカル ノート 20](../mfc/tn020-id-naming-and-numbering-conventions.md)を参照してください。
+Visual C++ は、新しい .RC ファイルを作成するときに、最小の有効な値より少し大きい値を使用して割り当てを開始します。 AppWizard も、これらの値を、MFC アプリケーションに適切な値より少し大きい値に初期化します。 ID 値の範囲の詳細については、次を参照してください。[テクニカル ノート 20](../mfc/tn020-id-naming-and-numbering-conventions.md)します。
 
 同じプロジェクトであっても、新しいリソース ファイルを作成するたびに Visual C を定義、同じようになりました`_APS_NEXT_`値。 これは、たとえば 2 つの異なる .RC ファイルの中で複数のダイアログを追加する場合に、異なるダイアログに対して #define の同じ値が割り当てられる可能性が非常に高いことを意味します。 たとえば、最初の .RC ファイル内の IDD_MY_DLG1 は、2 番目の .RC ファイル内にあるIDD_MY_DLG2 と同じ番号 101 を割り当てられる可能性があります。
 

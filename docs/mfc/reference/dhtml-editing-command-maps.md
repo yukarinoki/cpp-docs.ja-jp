@@ -3,10 +3,10 @@ title: DHTML 編集コマンド マップ
 ms.date: 11/04/2016
 ms.assetid: c1b49876-039e-4a26-bb24-ea98ccf254a1
 ms.openlocfilehash: 7f420619983283c225ca8fca23c5ea349def1d1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776155"
 ---
 # <a name="dhtml-editing-command-maps"></a>DHTML 編集コマンド マップ
@@ -35,7 +35,7 @@ DECLARE_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
+*className*<br/>
 クラスの名前。
 
 ### <a name="remarks"></a>Remarks
@@ -62,7 +62,7 @@ BEGIN_DHTMLEDITING_CMDMAP(className)
 
 ### <a name="parameters"></a>パラメーター
 
-*クラス名*<br/>
+*className*<br/>
 DHTML 編集コマンド マップを含むクラスの名前。 このクラスから直接または間接的に派生する必要があります[CHtmlEditView](../../mfc/reference/chtmleditview-class.md)を含めると、 [DECLARE_DHTMLEDITING_CMDMAP](#declare_dhtmlediting_cmdmap)マクロをそのクラス定義内で。
 
 ### <a name="remarks"></a>Remarks

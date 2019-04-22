@@ -43,10 +43,10 @@ helpviewer_keywords:
 - CMFCShellListCtrl [MFC], SetItemTypes
 ms.assetid: ad472958-5586-4c50-aadf-1844c30bf6e7
 ms.openlocfilehash: a513a5e85ae5cf00f7ea874967a709245e016b34
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772112"
 ---
 # <a name="cmfcshelllistctrl-class"></a>CMFCShellListCtrl クラス
@@ -454,7 +454,7 @@ void SetItemTypes(SHCONTF nTypes);
 
 ### <a name="remarks"></a>Remarks
 
-項目の種類の一覧については、[SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)を参照してください。
+項目の種類の一覧については、次を参照してください。 [SHCONTF](/windows/desktop/api/shobjidl_core/ne-shobjidl_core-_shcontf)します。
 
 ## <a name="see-also"></a>関連項目
 

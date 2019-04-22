@@ -39,10 +39,10 @@ helpviewer_keywords:
 - CMFCOutlookBar [MFC], SetMode2003
 ms.assetid: 2b335f71-ce99-4efd-b103-e65ba43ffc36
 ms.openlocfilehash: fc1281db0271393ec0538e26c2a2d2af09c99f7a
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/10/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775258"
 ---
 # <a name="cmfcoutlookbar-class"></a>CMFCOutlookBar クラス
@@ -458,7 +458,7 @@ virtual void OnAfterAnimation(int nPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [in]アクティブになっているタブ ページの 0 から始まるインデックス。
 
 ### <a name="remarks"></a>Remarks
@@ -475,7 +475,7 @@ virtual BOOL OnBeforeAnimation(int nPage);
 
 ### <a name="parameters"></a>パラメーター
 
-*n ページ レイアウト*<br/>
+*nPage*<br/>
 [in]アクティブ設定しようとしているタブ ページの 0 から始まるインデックス。
 
 ### <a name="return-value"></a>戻り値
@@ -578,5 +578,5 @@ void SetMode2003(BOOL bMode2003=TRUE);
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
 [CBaseTabbedPane クラス](../../mfc/reference/cbasetabbedpane-class.md)<br/>
-[CMFCOutlookBarTabCtrl Class](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
+[CMFCOutlookBarTabCtrl クラス](../../mfc/reference/cmfcoutlookbartabctrl-class.md)<br/>
 [CMFCOutlookBarPane クラス](../../mfc/reference/cmfcoutlookbarpane-class.md)

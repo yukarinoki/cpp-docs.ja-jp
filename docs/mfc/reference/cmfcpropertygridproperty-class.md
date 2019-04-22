@@ -167,10 +167,10 @@ helpviewer_keywords:
 - CMFCPropertyGridProperty [MFC], m_strFormatShort
 ms.assetid: 36f3fabe-0efe-468b-8a0b-5a7956db38a2
 ms.openlocfilehash: aa88cc2d4ee915b970157ee6ed280512e2352bcc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779028"
 ---
 # <a name="cmfcpropertygridproperty-class"></a>CMFCPropertyGridProperty クラス
@@ -235,7 +235,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::IsParentExpanded](#isparentexpanded)|現在のプロパティの親を展開するかどうかを示します。|
 |[CMFCPropertyGridProperty::IsSelected](#isselected)|現在のプロパティが選択されているかどうかを示します。|
 |[CMFCPropertyGridProperty::IsVisible](#isvisible)|現在のプロパティが表示されているかどうかを示します。|
-|[Cmfcpropertygridproperty::onclickbutton](#onclickbutton)|プロパティに含まれているボタンをユーザーがクリックすると、フレームワークによって呼び出されます |
+|[CMFCPropertyGridProperty::OnClickButton](#onclickbutton)|プロパティに含まれているボタンをユーザーがクリックすると、フレームワークによって呼び出されます |
 |[CMFCPropertyGridProperty::OnClickName](#onclickname)|ユーザーがプロパティの名前 フィールドをクリックしたときに、親のプロパティ リスト コントロールによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnClickValue](#onclickvalue)|ユーザーがプロパティの値フィールドをクリックしたときに、親のプロパティ リスト コントロールによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnCloseCombo](#onclosecombo)|プロパティに含まれているコンボ ボックスが閉じられたときに、フレームワークによって呼び出されます。|
@@ -244,7 +244,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::OnDrawDescription](#ondrawdescription)|プロパティの説明を表示するためにフレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnDrawExpandBox](#ondrawexpandbox)|サブプロパティを含むプロパティの近くの展開ボックス コントロールを描画するためにフレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnDrawName](#ondrawname)|プロパティ名を表示するためにフレームワークによって呼び出されます。|
-|[Cmfcpropertygridproperty::ondrawvalue](#ondrawvalue)|プロパティ値を表示するためにフレームワークによって呼び出されます |
+|[CMFCPropertyGridProperty::OnDrawValue](#ondrawvalue)|プロパティ値を表示するためにフレームワークによって呼び出されます |
 |[Cmfcpropertygridproperty::onedit](#onedit)|ユーザーがプロパティ値を変更しようとすると、フレームワークによって呼び出されます |
 |[CMFCPropertyGridProperty::OnEndEdit](#onendedit)|ユーザーが終了すると、フレームワークによって呼び出さプロパティ値を変更します。|
 |[CMFCPropertyGridProperty::OnKillSelection](#onkillselection)||
@@ -254,7 +254,7 @@ class CMFCPropertyGridProperty : public CObject
 |[CMFCPropertyGridProperty::OnSelectCombo](#onselectcombo)|ユーザーが編集可能なコンボ ボックスから項目を選択したときに、フレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnSetCursor](#onsetcursor)|プロパティ項目にマウス ポインターが移動したときに、フレームワークによって呼び出されます。|
 |[CMFCPropertyGridProperty::OnSetSelection](#onsetselection)||
-|[Cmfcpropertygridproperty::onupdatevalue](#onupdatevalue)|編集可能なプロパティの値が変更されると、フレームワークによって呼び出されます |
+|[CMFCPropertyGridProperty::OnUpdateValue](#onupdatevalue)|編集可能なプロパティの値が変更されると、フレームワークによって呼び出されます |
 |[CMFCPropertyGridProperty::PushChar](#pushchar)|プロパティが選択されているし、ユーザーが新しい文字を入力したときに、プロパティ リスト コントロールから呼び出されます。|
 |[CMFCPropertyGridProperty::Redraw](#redraw)|プロパティを再描画します。|
 |[CMFCPropertyGridProperty::RemoveAllOptions](#removealloptions)|プロパティからすべてのオプション (アイテム) を削除します。|
@@ -1205,7 +1205,7 @@ virtual HBRUSH OnCtlColor(
 *pDC*<br/>
 [in]デバイス コンテキストへのポインター。
 
-*ため*<br/>
+*nCtlColor*<br/>
 [in] (このパラメーターは使用されません)
 
 ### <a name="return-value"></a>戻り値

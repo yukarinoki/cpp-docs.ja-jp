@@ -7,10 +7,10 @@ ms.topic: tutorial
 ms.devlang: cpp
 ms.assetid: 45138d70-719d-42dc-90d7-1d0ca31a2f54
 ms.openlocfilehash: 2c2bed4063194bdc3c0f3fbc405be6bf9a4031e7
-ms.sourcegitcommit: 5fc76f5b3c4c3ee49f38f05b37261a324591530b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58870781"
 ---
 # <a name="install-c-support-in-visual-studio"></a>Visual Studio での C++ のサポートをインストール
@@ -50,7 +50,7 @@ Visual Studio 2019 で以前のバージョンの Visual Studio のサイド バ
 次に、Visual Studio ブートストラップ ファイルをダウンロードします。 これを行うには、次のボタン クリックしてを選択して、必要な Visual Studio のエディションを選択**保存**を選び、**フォルダーを開く**します。
 
  > [!div class="button"]
- > [Visual Studio をダウンロードする](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
+ > [Visual Studio のダウンロード](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2019+rc)
 
 ### <a name="step-3---install-the-visual-studio-installer"></a>手順 3 - Visual Studio インストーラーをインストールする
 
@@ -142,12 +142,12 @@ Visual Studio 2017 では、簡単に選択し、必要な機能だけをイン�
 
 ディスク容量とオペレーティング システムの要件の詳細については、次を参照してください。 [Visual Studio 製品ファミリのシステム要件](/visualstudio/productinfo/vs2017-system-requirements-vs)します。 インストーラーにより、選択したオプションに必要なディスク領域の量が報告されます。
 
-### <a name="download-and-install"></a>ダウンロードとインストール
+### <a name="download-and-install"></a>ダウンロードしてインストールする
 
 1. Windows の最新の Visual Studio 2017 インストーラーをダウンロードします。
 
    > [!div class="nextstepaction"]
-   > [Visual Studio 2017 Community をインストールします。](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
+   > [Visual Studio 2017 のインストールに関するコミュニティ](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)
 
    >[!Tip]
    > このコミュニティ版は、個人の開発者、クラス学習、学術研究、オープン ソース開発向けです。 その他の用途には、[Visual Studio 2017 Professional](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) または [Visual Studio 2017 Enterprise](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) を使用してください。
@@ -198,6 +198,6 @@ Visual Studio が実行されている場合は、次の手順に進む準備が
 ## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
-> [C++ プロジェクトを作成します。](vscpp-step-1-create.md)
+> [C++ プロジェクトの作成](vscpp-step-1-create.md)
 
 <iframe src="" height="0" width="0" frameborder="0" name="frameTarget" />

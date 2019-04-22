@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CMFCReBar [MFC], SetPaneAlignment
 ms.assetid: 02a60e29-6224-49c1-9e74-e0a7d9f8d023
 ms.openlocfilehash: 7776bf504d502feee8ef51949b8adc8e44f94c8e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772294"
 ---
 # <a name="cmfcrebar-class"></a>CMFCReBar クラス
@@ -150,7 +150,7 @@ BOOL Create(
 [in]Rebar コントロールのスタイルを指定します。 既定のスタイルの値は**RBS_BANDBORDERS**これが表示されますが、rebar コントロールでの隣接するバンドの区切り線を絞り込みます。 有効なスタイルの一覧は、次を参照してください。 [Rebar コントロールのスタイル](/windows/desktop/Controls/rebar-control-styles)Windows SDK のドキュメント。
 
 *dwStyle*<br/>
-[in]Rebar コントロールのウィンドウ スタイル。 有効なスタイルの一覧は、[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)を参照してください。
+[in]Rebar コントロールのウィンドウ スタイル。 有効なスタイルの一覧は、次を参照してください。[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)します。
 
 *nID*<br/>
 [in]Rebar の子ウィンドウの id。

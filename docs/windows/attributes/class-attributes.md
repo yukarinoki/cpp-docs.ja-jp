@@ -5,10 +5,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], class attributes
 ms.assetid: fad04ea1-d8ff-46d4-bb42-2b4500a6ab60
 ms.openlocfilehash: d0913d09c51734f5255271c0d06e639810e0cb58
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025417"
 ---
 # <a name="class-attributes"></a>クラス属性
@@ -24,7 +24,7 @@ ms.locfileid: "59025417"
 |[coclass](coclass.md)|ActiveX コントロールを作成します。|
 |[com_interface_entry](com-interface-entry-cpp.md)|COM マップには、インターフェイスのエントリを追加します。|
 |[control](control.md)|コントロールに、ユーザー定義型を指定します。|
-|[カスタム](custom-cpp.md)|独自の属性を定義できます。|
+|[custom](custom-cpp.md)|独自の属性を定義できます。|
 |[db_command](db-command.md)|OLE DB コマンドを作成します。|
 |[db_param](db-param.md)|入力または出力パラメーターを使用して、指定したメンバー変数を関連付けるし、変数を区切ります。|
 |[db_source](db-source.md)|データ ソースへの接続を作成します。|
@@ -38,16 +38,16 @@ ms.locfileid: "59025417"
 |[helpstringcontext](helpstringcontext.md)|.Hlp または .chm ファイルをヘルプ トピックの ID を指定します。|
 |[helpstring](helpstring.md)|適用先となる要素を記述するために使用される文字列を指定します。|
 |[hidden](hidden.md)|項目が存在しますが、ユーザー指向ブラウザーで表示する必要がありますされませんを示します。|
-|[実装](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
+|[implements](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
 |[implements_category](implements-category.md)|クラスの実装されたコンポーネントのカテゴリを指定します。|
-|[name](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
+|[module](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
 |[noncreatable](noncreatable.md)|単独でインスタンス化できないオブジェクトを定義します。|
 |[progid](progid.md)|コントロールの ProgID を定義します。|
 |[registration_script](registration-script.md)|指定した登録スクリプトを実行します。|
 |[requestedit](requestedit.md)|`OnRequestEdit` 通知がプロパティでサポートされることを示します。|
-|[ソース](source-cpp.md)|コネクション ポイントのソース インターフェイスのコントロールのクラスを指定します。 プロパティまたはメソッドで、`source`属性は、メンバーがオブジェクトを返すことを示しますまたは`VARIANT`イベントのソースは。|
+|[source](source-cpp.md)|コネクション ポイントのソース インターフェイスのコントロールのクラスを指定します。 プロパティまたはメソッドで、`source`属性は、メンバーがオブジェクトを返すことを示しますまたは`VARIANT`イベントのソースは。|
 |[support_error_info](support-error-info.md)|ターゲット オブジェクトのエラー報告をサポートしています。|
-|[スレッド化](threading-cpp.md)|コントロールのスレッド モデルを指定します。|
+|[threading](threading-cpp.md)|コントロールのスレッド モデルを指定します。|
 |[uuid](uuid-cpp-attributes.md)|クラスまたはインターフェイスの一意の ID を指定します。|
 |[version](version-cpp.md)|クラスの複数のバージョン間で特定のバージョンを識別します。|
 |[vi_progid](vi-progid.md)|ProgID のバージョンに依存しない形式を指定します。|

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DLLs [C++], walkthroughs
 ms.assetid: 3ae94848-44e7-4955-bbad-7d40f493e941
 ms.openlocfilehash: 248b423659d026774d4945ee6330a39dc4c6e16e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58770149"
 ---
 # <a name="walkthrough-create-and-use-your-own-dynamic-link-library-c"></a>チュートリアル: 作成して、独自のダイナミック リンク ライブラリ (C++)
@@ -33,7 +33,7 @@ ms.locfileid: "58770149"
 
 このチュートリアルは、2 つの Visual Studio ソリューションを作成します。DLL をビルドして、クライアント アプリを構築します。 DLL は、プラットフォームとの呼び出しとリンク規則に一致する限り、その他の言語を使用してビルドされたアプリから呼び出せるように C 呼び出し規則を使用します。 クライアント アプリは_暗黙的リンク_Windows が DLL 読み込み時に、アプリをリンクします。 このリンクには、アプリの静的にリンクされたライブラリで、関数と同じように DLL が指定した関数を呼び出すことができます。
 
-このチュートリアルには、いくつかの一般的な状況がについて説明します。 他のプログラミング言語での C++ Dll の使用は表示されません。 リソース専用 DLL を作成する方法は表示されません。 負荷時ではなく、実行時に Dll を読み込む明示的リンクの使用も表示されません。 確実に、これらすべての作業を行う Visual C を使用することができます。 Dll に関する詳細情報へのリンクを参照してください。 [Visual c の Dll](dlls-in-visual-cpp.md)します。 暗黙的なリンクと明示的なリンクの詳細については、[をリンクする方法の決定使用](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)を参照してください。 C 言語のリンケージ規則を使用する言語のプログラミングを使用する C++ Dll を作成する方法の詳細については、[C 言語の実行可能ファイルで使用するための C++ 関数のエクスポート](exporting-cpp-functions-for-use-in-c-language-executables.md)を参照してください。 .NET 言語で使用するための Dll を作成する方法については、[Visual Basic アプリケーションから DLL 関数を呼び出す](calling-dll-functions-from-visual-basic-applications.md)を参照してください。
+このチュートリアルには、いくつかの一般的な状況がについて説明します。 他のプログラミング言語での C++ Dll の使用は表示されません。 リソース専用 DLL を作成する方法は表示されません。 負荷時ではなく、実行時に Dll を読み込む明示的リンクの使用も表示されません。 確実に、これらすべての作業を行う Visual C を使用することができます。 Dll に関する詳細情報へのリンクを参照してください。 [Visual c の Dll](dlls-in-visual-cpp.md)します。 暗黙的なリンクと明示的なリンクの詳細については、次を参照してください。[をリンクする方法の決定使用](linking-an-executable-to-a-dll.md#determining-which-linking-method-to-use)します。 C 言語のリンケージ規則を使用する言語のプログラミングを使用する C++ Dll を作成する方法の詳細については、次を参照してください。 [C 言語の実行可能ファイルで使用するための C++ 関数のエクスポート](exporting-cpp-functions-for-use-in-c-language-executables.md)します。 .NET 言語で使用するための Dll を作成する方法については、次を参照してください。 [Visual Basic アプリケーションから DLL 関数を呼び出す](calling-dll-functions-from-visual-basic-applications.md)します。
 
 このチュートリアルは、Visual Studio 2017 を使用しますが、コードおよび説明の大半は以前のバージョンに適用します。 新しいプロジェクトをビルドする手順は、Visual Studio 2017 バージョン 15.3 以降を変更します。 このチュートリアルでは、新しいと、古いバージョンのプロジェクトを作成する方法について説明します。 Visual Studio のバージョンに一致する手順を検索します。
 
@@ -41,11 +41,11 @@ ms.locfileid: "58770149"
 
 - Microsoft Windows 7 またはそれ以降のバージョンを実行するコンピューター。 開発のベスト エクスペリエンスを実現するには Windows 10 をお勧めします。
 
-- Visual Studio 2017 のコピー。 ダウンロードして Visual Studio をインストールする方法については、[Visual Studio 2017 のインストール](/visualstudio/install/install-visual-studio)を参照してください。 インストーラーを実行するときに、以下のことを確認、 **C++ によるデスクトップ開発**ワークロードがチェックされます。 Visual Studio をインストールしたときに、このワークロードをインストールしなかった場合、心配しないでください。 インストーラーをもう一度実行して、今すぐインストールします。
+- Visual Studio 2017 のコピー。 ダウンロードして Visual Studio をインストールする方法については、次を参照してください。 [Visual Studio 2017 のインストール](/visualstudio/install/install-visual-studio)します。 インストーラーを実行するときに、以下のことを確認、 **C++ によるデスクトップ開発**ワークロードがチェックされます。 Visual Studio をインストールしたときに、このワークロードをインストールしなかった場合、心配しないでください。 インストーラーをもう一度実行して、今すぐインストールします。
 
    ![C++ によるデスクトップ開発](media/desktop-development-with-cpp.png "C++ によるデスクトップ開発")
 
-- Visual Studio IDE の使用の基本を理解します。 前に、Windows デスクトップ アプリを使用した場合保持できます可能性があります。 概要については、[Visual Studio IDE 機能ツアー](/visualstudio/ide/visual-studio-ide)を参照してください。
+- Visual Studio IDE の使用の基本を理解します。 前に、Windows デスクトップ アプリを使用した場合保持できます可能性があります。 概要については、次を参照してください。 [Visual Studio IDE 機能ツアー](/visualstudio/ide/visual-studio-ide)します。
 
 - 十分な作業を進めるには C++ 言語の基礎について理解します。 ご心配なく、あまり複雑な何もしません。
 
@@ -165,7 +165,7 @@ ms.locfileid: "58770149"
 
 プリプロセッサ ステートメントは、ファイルの上部にあることを確認します。 既定では、dll の場合、新しいプロジェクト テンプレートを追加します **<em>PROJECTNAME</em>&#95;エクスポート**DLL プロジェクトの定義済みプリプロセッサ マクロにします。 この例では、Visual Studio 定義**MATHLIBRARY&#95;エクスポート**MathLibrary DLL プロジェクトのビルド時。 (Visual Studio 2017 バージョン 15.3 でウィザードはありません。 このシンボルの定義を大文字に変換します。 "MathLibrary"プロジェクトの名前を付けるかどうかは、定義されたシンボルは MathLibrary&#95;MATHLIBRARY ではなくエクスポート&#95;エクスポートします。 That's 理由はこのシンボルを追加するのには、上の余分な手順があります)。
 
-ときに、 **MATHLIBRARY&#95;エクスポート**マクロが定義されている、 **MATHLIBRARY&#95;API**マクロのセット、`__declspec(dllexport)`関数宣言に修飾子。 この修飾子は、コンパイラとリンカー関数または変数は、他のアプリケーションで使用できるように、DLL からエクスポートするように指示します。 ときに**MATHLIBRARY&#95;エクスポート**は、たとえば、クライアント アプリケーションで、ヘッダー ファイルが含まれている場合**MATHLIBRARY&#95;API**適用、`__declspec(dllimport)`修飾子を宣言。 この修飾子は、関数または変数で、アプリケーションのインポートを最適化します。 詳細については、[dllexport、dllimport](../cpp/dllexport-dllimport.md)を参照してください。
+ときに、 **MATHLIBRARY&#95;エクスポート**マクロが定義されている、 **MATHLIBRARY&#95;API**マクロのセット、`__declspec(dllexport)`関数宣言に修飾子。 この修飾子は、コンパイラとリンカー関数または変数は、他のアプリケーションで使用できるように、DLL からエクスポートするように指示します。 ときに**MATHLIBRARY&#95;エクスポート**は、たとえば、クライアント アプリケーションで、ヘッダー ファイルが含まれている場合**MATHLIBRARY&#95;API**適用、`__declspec(dllimport)`修飾子を宣言。 この修飾子は、関数または変数で、アプリケーションのインポートを最適化します。 詳細については、次を参照してください。 [dllexport、dllimport](../cpp/dllexport-dllimport.md)します。
 
 ### <a name="to-add-an-implementation-to-the-dll"></a>DLL に実装を追加するには
 

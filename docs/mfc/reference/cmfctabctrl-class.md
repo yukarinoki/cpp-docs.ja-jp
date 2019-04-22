@@ -105,10 +105,10 @@ helpviewer_keywords:
 - CMFCTabCtrl [MFC], m_bEnableActivate
 ms.assetid: d441385d-2c72-4203-96fa-deae2273da35
 ms.openlocfilehash: 43eb171ce9b3ea3454855dc1f92d9aa1b74645d4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778456"
 ---
 # <a name="cmfctabctrl-class"></a>CMFCTabCtrl Class
@@ -322,7 +322,7 @@ BOOL Create(
 *nID*<br/>
 [in]タブ コントロールの ID。
 
-*位置*<br/>
+*location*<br/>
 [in]タブの位置。 既定値は、LOCATION_BOTTOM です。 詳細については、「解説」を参照してください。
 
 *bCloseBtn*<br/>
@@ -873,7 +873,7 @@ virtual DROPEFFECT OnDragEnter(
 *pDataObject*<br/>
 [in]ユーザーがドラッグ データを含むデータ オブジェクトへのポインター。
 
-*ドロップ*<br/>
+*dwKeyState*<br/>
 [in]修飾子キーの状態が含まれています。 このパラメーターは、次の値のビットごとの組み合わせ (OR) です。MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON します。 詳細については、次を参照してください。、**メッセージ パラメーター**の[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
 
 *ポイント*<br/>
@@ -905,7 +905,7 @@ virtual DROPEFFECT OnDragOver(
 *pDataObject*<br/>
 [in]ポインターを[COleDataObject](../../mfc/reference/coledataobject-class.md)ドロップ ターゲット上にドラッグされているオブジェクト。
 
-*ドロップ*<br/>
+*dwKeyState*<br/>
 [in]修飾子キーの状態は MK_CONTROL、MK_SHIFT、MK_ALT、MK_LBUTTON、MK_MBUTTON、および MK_RBUTTON のビットごとの組み合わせ (OR) です。 詳細については、「メッセージ パラメーター」を参照してください[マウス入力に関する](/windows/desktop/inputdev/about-mouse-input)します。
 
 *ポイント*<br/>
@@ -1139,6 +1139,6 @@ BOOL SynchronizeScrollBar(SCROLLINFO* pScrollInfo = NULL);
 
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [クラス](../../mfc/reference/mfc-classes.md)<br/>
-[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
-[CDockablePane Class](../../mfc/reference/cdockablepane-class.md)<br/>
-[CMFCBaseTabCtrl Class](../../mfc/reference/cmfcbasetabctrl-class.md)
+[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)<br/>
+[CDockablePane クラス](../../mfc/reference/cdockablepane-class.md)<br/>
+[CMFCBaseTabCtrl クラス](../../mfc/reference/cmfcbasetabctrl-class.md)

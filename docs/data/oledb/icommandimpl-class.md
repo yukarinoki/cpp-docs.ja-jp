@@ -53,10 +53,10 @@ helpviewer_keywords:
 - m_bIsExecuting
 ms.assetid: ef285fef-0d66-45e6-a762-b03357098e3b
 ms.openlocfilehash: d890b62e4e4aabb9f8ca7ebb9d3051c53febd91f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026793"
 ---
 # <a name="icommandimpl-class"></a>ICommandImpl クラス
@@ -91,7 +91,7 @@ class ATL_NO_VTABLE ICommandImpl : public CommandBase
 |[キャンセル](#cancel)|現在のコマンドの実行をキャンセルします。|
 |[CancelExecution](#cancelexecution)|現在のコマンドの実行をキャンセルします。|
 |[CreateRowset](#createrowset)|行セット オブジェクトを作成します。|
-|[実行](#execute)|コマンドを実行します。|
+|[Execute](#execute)|コマンドを実行します。|
 |[GetDBSession](#getdbsession)|コマンドを作成したセッションにインターフェイス ポインターを返します。|
 |[ICommandImpl](#icommandimpl)|コンストラクターです。|
 
@@ -161,7 +161,7 @@ HRESULT CreateRowset(IUnknown* pUnkOuter,
 *pParams*<br/>
 [入力/出力]対応する*pParams*で`ICommand::Execute`します。
 
-*入力/出力*<br/>
+*pcRowsAffected*<br/>
 対応する*入力/出力*で`ICommand::Execute`します。
 
 *ppRowset*<br/>

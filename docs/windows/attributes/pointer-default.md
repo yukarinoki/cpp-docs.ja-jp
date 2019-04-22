@@ -7,10 +7,10 @@ helpviewer_keywords:
 - pointer_default attribute
 ms.assetid: 2d0c7bbc-a1e8-4337-9e54-e304523e2735
 ms.openlocfilehash: 37bd2b16fb7a7c1c186f59897898e08cc73fffae
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59022667"
 ---
 # <a name="pointerdefault"></a>pointer_default
@@ -25,12 +25,12 @@ ms.locfileid: "59022667"
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 ポインター型を記述する値: **ptr**、 **ref**、または**一意**します。
 
 ## <a name="remarks"></a>Remarks
 
-**Pointer_default** C++ 属性と同じ機能を持つ、 [pointer_default](/windows/desktop/Midl/pointer-default) MIDL 属性。
+**Pointer_default** C++属性と同じ機能を持つ、 [pointer_default](/windows/desktop/Midl/pointer-default) MIDL 属性。
 
 ## <a name="example"></a>例
 

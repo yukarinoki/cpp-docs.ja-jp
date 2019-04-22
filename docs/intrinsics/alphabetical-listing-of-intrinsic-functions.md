@@ -7,17 +7,17 @@ helpviewer_keywords:
 - intrinsics
 ms.assetid: 178f88a2-7e8e-43ac-b55e-ef3298bef895
 ms.openlocfilehash: 67206e63d163b489c5087e6bc6759cde30a3d6c4
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026202"
 ---
 # <a name="alphabetical-listing-of-intrinsic-functions"></a>組み込み関数のアルファベット順の一覧
 
 次のセクションでは、一部またはすべてのアーキテクチャで使用可能な Microsoft 固有の組み込み関数について説明します。 サポートされているその他の組み込みについては、プロセッサの製造元により、ヘッダー ファイルまたは各社の Web サイトで文書化されています。 参照してください、 [ARM 組み込み](../intrinsics/arm-intrinsics.md)、 [x86 組み込み](../intrinsics/x86-intrinsics-list.md)、および[x64 組み込み](../intrinsics/x64-amd64-intrinsics-list.md)製造元のドキュメントへのリンクについてのセクションでします。 組み込みに実装されている C ランタイム ライブラリ (CRT) 関数がここに記載されていません。これらの関数が記載されて、 [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)します。
 
-[_ _addfsbyte、 \__addfsword、 \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
+[__addfsbyte, \__addfsword, \__addfsdword](../intrinsics/addfsbyte-addfsword-addfsdword.md)
 
 [__addgsbyte, \__addgsword, \__addgsdword, \__addgsqword](../intrinsics/addgsbyte-addgsword-addgsdword-addgsqword.md)
 
@@ -111,7 +111,7 @@ ms.locfileid: "59026202"
 
 [__ll_rshift](../intrinsics/ll-rshift.md)
 
-[_ _lzcnt16、 \__lzcnt、 \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
+[__lzcnt16, \__lzcnt, \__lzcnt64](../intrinsics/lzcnt16-lzcnt-lzcnt64.md)
 
 [_mm_cvtsi64x_ss](../intrinsics/mm-cvtsi64x-ss.md)
 
@@ -137,7 +137,7 @@ ms.locfileid: "59026202"
 
 [__movsw](../intrinsics/movsw.md)
 
-[__mul128](../intrinsics/mul128.md)
+[mul128](../intrinsics/mul128.md)
 
 [__mulh](../intrinsics/mulh.md)
 
@@ -179,7 +179,7 @@ ms.locfileid: "59026202"
 
 [__readeflags](../intrinsics/readeflags.md)
 
-[_ _readfsbyte、 \__readfsdword、 \__readfsqword、 \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
+[__readfsbyte, \__readfsdword, \__readfsqword, \__readfsword](../intrinsics/readfsbyte-readfsdword-readfsqword-readfsword.md)
 
 [__readgsbyte, \__readgsdword, \__readgsqword, \__readgsword](../intrinsics/readgsbyte-readgsdword-readgsqword-readgsword.md)
 
@@ -267,7 +267,7 @@ ms.locfileid: "59026202"
 
 [__writeeflags](../intrinsics/writeeflags.md)
 
-[_ _writefsbyte、 \__writefsdword、 \__writefsqword、 \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
+[__writefsbyte, \__writefsdword, \__writefsqword, \__writefsword](../intrinsics/writefsbyte-writefsdword-writefsqword-writefsword.md)
 
 [__writegsbyte, \__writegsdword, \__writegsqword, \__writegsword](../intrinsics/writegsbyte-writegsdword-writegsqword-writegsword.md)
 
@@ -275,4 +275,4 @@ ms.locfileid: "59026202"
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

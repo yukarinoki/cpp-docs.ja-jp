@@ -9,10 +9,10 @@ helpviewer_keywords:
 - CSingleDocTemplate [MFC], CSingleDocTemplate
 ms.assetid: 4f3a8212-81ee-48a0-ad22-e0ed7c36a391
 ms.openlocfilehash: 4d1361734f38d903e2171839b95888863126974a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771698"
 ---
 # <a name="csingledoctemplate-class"></a>CSingleDocTemplate クラス
@@ -82,7 +82,7 @@ CSingleDocTemplate(
 *可能*<br/>
 ドキュメントの種類で使用するリソースの ID を指定します。 これには、メニューのアイコン、アクセラレータ テーブル、および文字列リソースを含めることができます。
 
-文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれていない場合、'\n' 文字は、プレース ホルダーとして必要ですただし、末尾の '\n' 文字は必要ありません);。これらの部分文字列には、ドキュメントの種類について説明します。 部分文字列の詳細については、[CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)を参照してください。 この文字列リソースには、アプリケーションのリソース ファイルが記載されています。 例:
+文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれていない場合、'\n' 文字は、プレース ホルダーとして必要ですただし、末尾の '\n' 文字は必要ありません);。これらの部分文字列には、ドキュメントの種類について説明します。 部分文字列の詳細については、次を参照してください。 [CDocTemplate::GetDocString](../../mfc/reference/cdoctemplate-class.md#getdocstring)します。 この文字列リソースには、アプリケーションのリソース ファイルが記載されています。 例:
 
 ```RC
 // MYCALC.RC
@@ -94,7 +94,7 @@ END
 
 ストリング エディターを使用してこの文字列を編集できます。文字列全体は、7 つの個別のエントリとしてではなく文字列エディターで、1 つのエントリとして表示されます。
 
-これらのリソースの種類の詳細については、、[文字列エディター](../../windows/string-editor.md)を参照してください。
+これらのリソースの種類の詳細については、次を参照してください。、[文字列エディター](../../windows/string-editor.md)します。
 
 *pDocClass*<br/>
 指す、`CRuntimeClass`ドキュメント クラスのオブジェクト。 このクラスは、 `CDocument`-ドキュメントを表すために定義するクラスを派生します。

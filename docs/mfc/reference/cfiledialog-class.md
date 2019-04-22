@@ -133,10 +133,10 @@ helpviewer_keywords:
 - CFileDialog [MFC], m_ofn
 ms.assetid: fda4fd3c-08b8-4ce0-8e9d-7bab23f8c6c0
 ms.openlocfilehash: f74d883fa0dcdce025345848caf49069736ee0fa
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779210"
 ---
 # <a name="cfiledialog-class"></a>CFileDialog クラス
@@ -204,7 +204,7 @@ class CFileDialog : public CCommonDialog
 |[CFileDialog::SetControlLabel](#setcontrollabel)|ボタンのテキスト ボックスのラベルの編集などのコントロールに関連付けられているテキストを設定します。|
 |[CFileDialog::SetControlState](#setcontrolstate)|現在の可視性を設定し、特定のコントロールの状態を有効にします。|
 |[CFileDialog::SetControlText](#setcontroltext)|エクスプ ローラー スタイルの指定したコントロールのテキストを設定**オープン**または**付けて**コモン ダイアログ ボックス。|
-|[ように cfiledialog::setdefext](#setdefext)|エクスプローラー スタイルの**ファイルオープン**もしくは、**名前を付けて保存**コモンダイアログボックスでの既定のファイル名拡張子を設定します。|
+|[CFileDialog::SetDefExt](#setdefext)|エクスプローラー スタイルの**ファイルオープン**もしくは、**名前を付けて保存**コモンダイアログボックスでの既定のファイル名拡張子を設定します。|
 |[CFileDialog::SetEditBoxText](#seteditboxtext)|編集ボックス コントロールで現在のテキストを設定します。|
 |[CFileDialog::SetProperties](#setproperties)|保存される項目に対して使用される既定値を定義するプロパティ ストアを提供します。|
 |[CFileDialog::SetSelectedControlItem](#setselectedcontrolitem)|オプション ボタン グループまたは ダイアログ ボックスで、特定のアイテムの選択状態を設定します。|
@@ -232,7 +232,7 @@ class CFileDialog : public CCommonDialog
 
 |名前|説明|
 |----------|-----------------|
-|[:M_ofn](#m_ofn)|Windows`OPENFILENAME`構造体。 基本的なファイル ダイアログ ボックスのパラメーターへのアクセスを提供します。|
+|[CFileDialog::m_ofn](#m_ofn)|Windows`OPENFILENAME`構造体。 基本的なファイル ダイアログ ボックスのパラメーターへのアクセスを提供します。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -255,7 +255,7 @@ Windows メッセージ、`CFileDialog`クラスは、使用しているどの�
 
 使用する、`CFileDialog`オブジェクトは、まずを使用して、オブジェクトを作成、`CFileDialog`コンス トラクター。 ダイアログ ボックスが構築した後は、設定または任意の値を変更、 [::m_ofn](#m_ofn)値やダイアログ ボックスのコントロールの状態を初期化するためにします。 `m_ofn`型の構造は、`OPENFILENAME`します。 詳細については、次を参照してください。、 [OPENFILENAME](/windows/desktop/api/commdlg/ns-commdlg-tagofna) Windows SDK の構造体。
 
-ダイアログ ボックスのコントロールを初期化した後に呼び出し、 [CFileDialog::DoModal](#domodal)ダイアログを表示する方法、ユーザーが、パスとファイル名を入力するためのボックスです。 `DoModal` ユーザーには、[ok] (IDOK) またはキャンセル (IDCANCEL) ボタンがクリックされたかどうかを返します。 場合`DoModal`IDOK を返しますのいずれかを使用することができます、`CFileDialog`情報を取得するパブリック メンバー関数は、ユーザーに配置します。
+ダイアログ ボックスのコントロールを初期化した後に呼び出し、 [CFileDialog::DoModal](#domodal)ダイアログを表示する方法、ユーザーが、パスとファイル名を入力するためのボックスです。 `DoModal` ユーザーには、[ok] \(IDOK) またはキャンセル (IDCANCEL) ボタンがクリックしたかどうかを返します。 場合`DoModal`IDOK を返しますのいずれかを使用することができます、`CFileDialog`情報を取得するパブリック メンバー関数は、ユーザーに配置します。
 
 > [!NOTE]
 > Windows vista またはそれ以降、複数回[IFileDialog::SetFileTypes](/windows/desktop/api/shobjidl_core/nf-shobjidl_core-ifiledialog-setfiletypes)エラーが発生します。 2 番目の呼び出し`SetFileTypes`のすべてのインスタンスを`CFileDialog`Windows Vista またはそれ以降の E_UNEXPECTED が返されます。 いくつか`CFileDialog`メソッドの関数呼び出し`SetFileTypes`します。 たとえば、2 回の呼び出しを`CFileDialog::DoModal`の同じインスタンスに対して、`CFileDialog`が生成されます[ASSERT](diagnostic-services.md#assert)します。
@@ -558,7 +558,7 @@ explicit CFileDialog(
 *pParentWnd*<br/>
 [in]ファイル ダイアログ ボックスの親またはオーナー ウィンドウへのポインター。
 
-*ない dwSize*<br/>
+*dwSize*<br/>
 [in]サイズ、`OPENFILENAME`構造体。 この値は、オペレーティング システムのバージョンによって異なります。 MFC では、作成するのに ダイアログ ボックスの適切な種類は、このパラメーターを使用します。 既定のサイズが 0 の場合、MFC コードが適切なダイアログ ボックスのサイズを決定するプログラムを実行するオペレーティング システムのバージョンに基づいています。
 
 *bVistaStyle*<br/>
@@ -893,7 +893,7 @@ CString GetNextPathName(POSITION& pos) const;
 
 ### <a name="parameters"></a>パラメーター
 
-*発注書*<br/>
+*pos*<br/>
 によって以前返される位置の値への参照を`GetNextPathName`または`GetStartPosition`関数呼び出し。 リストの末尾に達している場合は NULL です。
 
 ### <a name="return-value"></a>戻り値

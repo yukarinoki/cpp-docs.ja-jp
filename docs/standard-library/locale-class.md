@@ -296,7 +296,7 @@ locale combine(const locale& Loc) const;
 
 ### <a name="return-value"></a>戻り値
 
-メンバー関数で置き換えるかに追加するロケール オブジェクトを返します**\*この**ファセット`Facet`記載*Loc*します。
+メンバー関数で置き換えるかに追加するロケール オブジェクトを返します **\*この** ファセット`Facet`記載*Loc*します。
 
 ### <a name="example"></a>例
 

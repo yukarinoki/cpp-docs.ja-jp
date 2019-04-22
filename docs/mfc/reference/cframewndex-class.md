@@ -179,10 +179,10 @@ helpviewer_keywords:
 - CFrameWndEx [MFC], WinHelp
 ms.assetid: 5830aca8-4a21-4f31-91f1-dd5477ffcc8d
 ms.openlocfilehash: d336e85020d8d2e855afb0568058057594ec8829
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58769655"
 ---
 # <a name="cframewndex-class"></a>CFrameWndEx クラス
@@ -1416,7 +1416,7 @@ afx_msg LRESULT OnNcHitTest(CPoint point);
 
 ### <a name="return-value"></a>戻り値
 
-ポインターはヒット列挙値です。 使用可能な値の一覧については、[WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)を参照してください。
+ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -1433,7 +1433,7 @@ afx_msg void OnNcMouseMove(
 ### <a name="parameters"></a>パラメーター
 
 *nHitTest*<br/>
-[in]ポインターはヒット列挙値です。 使用可能な値の一覧については、[WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)を参照してください。
+[in]ポインターはヒット列挙値です。 使用可能な値の一覧については、次を参照してください。 [WM_NCHITTEST 通知](/windows/desktop/inputdev/wm-nchittest)します。
 
 *ポイント*<br/>
 [in]画面座標でポインターの位置。
@@ -1506,7 +1506,7 @@ afx_msg LRESULT OnPowerBroadcast(
 ### <a name="parameters"></a>パラメーター
 
 *wp*<br/>
-[in]電源管理イベントです。 使用可能な値の一覧については、[WM_POWERBROADCAST メッセージ](/windows/desktop/Power/wm-powerbroadcast)を参照してください。
+[in]電源管理イベントです。 使用可能な値の一覧については、次を参照してください。 [WM_POWERBROADCAST メッセージ](/windows/desktop/Power/wm-powerbroadcast)します。
 
 *lp*<br/>
 [in]このパラメーターは使用されません。
@@ -2106,10 +2106,10 @@ virtual void WinHelp(
 ### <a name="parameters"></a>パラメーター
 
 *dwData*<br/>
-依存するデータ、 *nCmd*パラメーター。 使用可能な値の一覧については、[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)を参照してください。
+依存するデータ、 *nCmd*パラメーター。 使用可能な値の一覧については、次を参照してください。 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)します。
 
 *nCmd*<br/>
-Help コマンド。 使用可能な値の一覧については、[WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)を参照してください。
+Help コマンド。 使用可能な値の一覧については、次を参照してください。 [WinHelp](/windows/desktop/api/winuser/nf-winuser-winhelpa)します。
 
 ### <a name="remarks"></a>Remarks
 

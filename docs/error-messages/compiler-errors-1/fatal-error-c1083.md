@@ -71,7 +71,7 @@ ms.locfileid: "57822198"
 
 この問題を解決するには、インクルード ファイルまたはインポートされたファイルを検索するときにコンパイラが使用するパスを修正します。 新しいプロジェクトは既定には、検索パスが含まれます。 プロジェクトのディレクトリを追加するインクルード検索パスを変更する必要があります。 コマンドラインでコンパイルする場合へのパスを追加、 **INCLUDE**環境変数または **/I**コンパイラ オプションをファイルへのパスを指定します。
 
-Visual Studio のインクルード ディレクトリのパスを設定するには、プロジェクトを開きます**プロパティ ページ** ダイアログ ボックス。 選択**vc++ ディレクトリ****構成プロパティ**し編集して、左側のウィンドウで、**のインクルード ディレクトリ**プロパティ。 Visual Studio で、コンパイラによって検索するユーザーごとと、プロジェクトごとのディレクトリの詳細については、[vc++ Directories Property Page](../../build/reference/vcpp-directories-property-page.md)を参照してください。 詳細については、 **/I**コンパイラ オプションを参照してください[/I (追加インクルード ディレクトリ)](../../build/reference/i-additional-include-directories.md)します。
+Visual Studio のインクルード ディレクトリのパスを設定するには、プロジェクトを開きます**プロパティ ページ** ダイアログ ボックス。 選択**vc++ ディレクトリ**  **構成プロパティ**し編集して、左側のウィンドウで、**のインクルード ディレクトリ**プロパティ。 Visual Studio で、コンパイラによって検索するユーザーごとと、プロジェクトごとのディレクトリの詳細については、[vc++ Directories Property Page](../../build/reference/vcpp-directories-property-page.md)を参照してください。 詳細については、 **/I**コンパイラ オプションを参照してください[/I (追加インクルード ディレクトリ)](../../build/reference/i-additional-include-directories.md)します。
 
 ## <a name="the-command-line-include-or-lib-environment-is-not-set"></a>コマンドラインを含めるか、LIB 環境が設定されていません。
 

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - ICollectionOnSTLImpl class
 ms.assetid: 683c88b0-0d97-4779-a762-e493334ba7f9
 ms.openlocfilehash: 6842f1c75ebbc9c3dfdd93f30d52fd2cb2936c03
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779223"
 ---
 # <a name="icollectiononstlimpl-class"></a>ICollectionOnSTLImpl クラス
@@ -79,7 +79,7 @@ A [CComEnumOnSTL](../../atl/reference/ccomenumonstl-class.md)-互換性のある
 
 - 項目の追加、 [m_coll](#m_coll)コレクションを設定するメンバー。
 
-詳細と例については、[ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)を参照してください。
+詳細と例については、次を参照してください。 [ATL のコレクションと列挙子](../../atl/atl-collections-and-enumerators.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

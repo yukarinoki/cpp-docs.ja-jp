@@ -19,10 +19,10 @@ helpviewer_keywords:
 - records [C++], editing
 ms.assetid: 760c8889-bec4-482b-a8f2-319792a6af98
 ms.openlocfilehash: 28c885119816c1df662cc0b941e02cb3cf747f3d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024609"
 ---
 # <a name="recordset-adding-updating-and-deleting-records-odbc"></a>レコード セット:追加、更新、および削除 (Odbc)
@@ -65,9 +65,9 @@ ms.locfileid: "59024609"
 
 1. レコード セット オブジェクトの[CanUpdate](../../mfc/reference/crecordset-class.md#canupdate)メンバー関数。
 
-   `CanUpdate` レコード セットは更新可能な場合は、0 以外の値を返します。
+   `CanUpdate` は、レコードセットが更新可能なときは 0 以外の値を返します。
 
-既定では、レコード セットは、完全に更新可能な (を実行できます`AddNew`、 `Edit`、および`Delete`操作)。 使用することもできますが、 [appendOnly](../../mfc/reference/crecordset-class.md#open)更新可能なレコード セットを開くにはオプションです。 この方法で開いたレコードセットでは、`AddNew` を使用して新しいレコードを追加することだけができます。 既存のレコードを編集または削除することはできません。 レコード セットが呼び出すことによって追加のためだけに開いているかどうかをテストすることができます、 [CanAppend](../../mfc/reference/crecordset-class.md#canappend)メンバー関数。 `CanAppend` レコード セットが更新可能な完全または追加のためだけに開いている場合は、0 以外の値を返します。
+既定では、レコード セットは、完全に更新可能な (を実行できます`AddNew`、 `Edit`、および`Delete`操作)。 使用することもできますが、 [appendOnly](../../mfc/reference/crecordset-class.md#open)更新可能なレコード セットを開くにはオプションです。 この方法で開いたレコードセットでは、`AddNew` を使用して新しいレコードを追加することだけができます。 既存のレコードを編集または削除することはできません。 レコード セットが呼び出すことによって追加のためだけに開いているかどうかをテストすることができます、 [CanAppend](../../mfc/reference/crecordset-class.md#canappend)メンバー関数。 レコードセットがすべて更新できる場合、または追加のためだけに開かれている場合は、`CanAppend` が 0 以外の値を返します。
 
 次の例では、レコードセット オブジェクト `CanUpdate` に対して `rsStudentSet` を使用しています。
 
@@ -94,7 +94,7 @@ if( !rsStudentSet.CanUpdate( ) )
 
 1. レコード セット オブジェクトの[AddNew](../../mfc/reference/crecordset-class.md#addnew)メンバー関数。
 
-   `AddNew` レコード セットをエディット バッファーとして機能する準備を行います。 すべてのフィールド データ メンバーが特殊な値が Null に設定し、未変更の印を呼び出すときに、値がデータ ソースに書き込まれます (ダーティ) に変更されただけ[Update](../../mfc/reference/crecordset-class.md#update)します。
+   `AddNew` は、レコードセットをエディット バッファーとして利用できるようにします。 すべてのフィールド データ メンバーが特殊な値が Null に設定し、未変更の印を呼び出すときに、値がデータ ソースに書き込まれます (ダーティ) に変更されただけ[Update](../../mfc/reference/crecordset-class.md#update)します。
 
 1. 新しいレコードのフィールド データ メンバーの値を設定します。
 
@@ -139,7 +139,7 @@ if( !rsStudent.Update( ) )
 
 1. レコード セット オブジェクトの[編集](../../mfc/reference/crecordset-class.md#edit)メンバー関数。
 
-   `Edit` レコード セットをエディット バッファーとして機能する準備を行います。 すべてのフィールド データ メンバーに未変更の印が付けられます。 呼び出すと、データ ソースに変更されたフィールド データ メンバーの新しい値が書き込まれる[Update](../../mfc/reference/crecordset-class.md#update)します。
+   `Edit` は、レコードセットをエディット バッファーとして利用できるようにします。 すべてのフィールド データ メンバーに未変更の印が付けられます。 呼び出すと、データ ソースに変更されたフィールド データ メンバーの新しい値が書き込まれる[Update](../../mfc/reference/crecordset-class.md#update)します。
 
 1. 新しいレコードのフィールド データ メンバーの値を設定します。
 

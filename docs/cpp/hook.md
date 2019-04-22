@@ -8,10 +8,10 @@ helpviewer_keywords:
 - event handlers [C++], connecting events to
 ms.assetid: f4cabb10-d293-4c0e-a1d2-4745ef9cc22c
 ms.openlocfilehash: c4887d85e01344c171fb0fdfe957f2d8a669ff6a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771670"
 ---
 # <a name="hook"></a>__hook
@@ -88,7 +88,7 @@ COM イベントを除き、 **_ _hook**と **_ _unhook**イベント レシー�
 
 使用する代わりに **_ _hook** + = 演算子を使用することです。
 
-新しい構文でマネージ イベントのコーディングについては、[イベント](../extensions/event-cpp-component-extensions.md)を参照してください。
+新しい構文でマネージ イベントのコーディングについては、次を参照してください。[イベント](../extensions/event-cpp-component-extensions.md)します。
 
 > [!NOTE]
 > テンプレート クラスまたは構造体にイベントを含めることはできません。

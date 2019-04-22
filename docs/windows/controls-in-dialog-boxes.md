@@ -14,10 +14,10 @@ helpviewer_keywords:
 - Dialog Editor [C++], custom controls
 ms.assetid: e216c4f9-2fd4-429d-889a-8ebce7bad177
 ms.openlocfilehash: 563cf73299c00413889ada2520b1bf4fcd86f2be
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023699"
 ---
 # <a name="dialog-box-controls-c"></a>ダイアログ ボックス コントロール (C++)
@@ -38,10 +38,10 @@ ms.locfileid: "59023699"
 
 |コントロール名|既定のイベント|
 |---|---|
-|[Button コントロール](../mfc/reference/cbutton-class.md)|BN_CLICKED|
+|[ボタン コントロール](../mfc/reference/cbutton-class.md)|BN_CLICKED|
 |[チェック ボックス コントロール](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
 |[コンボ ボックス コントロール](../mfc/reference/ccombobox-class.md)|CBN_SELCHANGE|
-|[編集コントロール](../mfc/reference/cedit-class.md)|EN_CHANGE|
+|[コントロールを編集します。](../mfc/reference/cedit-class.md)|EN_CHANGE|
 |グループ ボックス|(該当なし)|
 |[リスト ボックス コントロール](../mfc/reference/clistbox-class.md)|LBN_SELCHANGE|
 |[ラジオ ボタン コントロール](../mfc/reference/styles-used-by-mfc.md#button-styles)|BN_CLICKED|
@@ -57,7 +57,7 @@ ms.locfileid: "59023699"
 
 |コントロール名|既定のイベント|
 |---|---|
-|[Slider コントロール](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
+|[スライダー コントロール](../mfc/slider-control-styles.md)|NM_CUSTOMDRAW|
 |[スピン コントロール](../mfc/using-cspinbuttonctrl.md)|UDN_DELTAPOS|
 |[プログレス コントロール](../mfc/styles-for-the-progress-control.md)|NM_CUSTOMDRAW|
 |[ホット キー コントロール](../mfc/using-a-hot-key-control.md)|NM_OUTOFMEMORY|
@@ -66,7 +66,7 @@ ms.locfileid: "59023699"
 |[タブ コントロール](../mfc/tab-controls-and-property-sheets.md)|TCN_SELCHANGE|
 |[アニメーション コントロール](../mfc/using-an-animation-control.md)|ACN_START|
 |[日時指定コントロール](../mfc/creating-the-date-and-time-picker-control.md)|DTN_DATETIMECHANGE|
-|[月間予定表コントロール](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
+|[月間予定表コントロールします。](../mfc/month-calendar-control-examples.md)|MCN_SELCHANGE|
 |[IP アドレス コントロール](../mfc/reference/cipaddressctrl-class.md)|IPN_FIELDCHANGED|
 |[拡張コンボ ボックス コントロール](../mfc/creating-an-extended-combo-box-control.md)||
 |カスタム コントロール|TTN_GETDISPINFO|

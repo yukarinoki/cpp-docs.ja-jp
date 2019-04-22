@@ -9,10 +9,10 @@ helpviewer_keywords:
 - standard resources
 ms.assetid: 60af8415-c576-4c2f-a711-ca5da0b9a1f2
 ms.openlocfilehash: d29f0ab2254a52e01f2016f64a37ddfce47955bb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58780315"
 ---
 # <a name="tn023-standard-mfc-resources"></a>TN023:MFC の標準リソース
@@ -73,7 +73,7 @@ MFC には、アプリケーションで使用できる定義済みのリソー�
 
 ### <a name="customizing-standard-framework-resources"></a>標準的なフレームワーク リソースをカスタマイズします。
 
-標準的なフレームワーク リソースを使用してアプリケーションに組み込むは通常、#、アプリケーションのリソース ファイル内のコマンドを include。 AppWizard は、リソース ファイルが生成されます。 このファイルには、選択した AppWizard オプションに応じて、適切な標準フレームワーク リソースが含まれています。 確認、追加、または、コンパイル時ディレクティブを変更することでどのリソースが含まれているを削除することができます。 これを行うには、開く、**リソース**メニュー選択し、**設定が含まれています**します。 「コンパイル時ディレクティブ」アイテムの編集を確認します。 例:
+標準的なフレームワーク リソースを使用してアプリケーションに組み込むは通常、#、アプリケーションのリソース ファイル内のコマンドを include。 AppWizard は、リソース ファイルが生成されます。 このファイルには、選択した AppWizard オプションに応じて、適切な標準フレームワーク リソースが含まれています。 確認、追加、または、コンパイル時ディレクティブを変更することでどのリソースが含まれているを削除することができます。 これを行うには、開く、**リソース**メニュー選択し、**設定が含まれています**します。 「コンパイル時ディレクティブ」アイテムの編集を確認します。 例えば:
 
 ```
 #include "afxres.rc"

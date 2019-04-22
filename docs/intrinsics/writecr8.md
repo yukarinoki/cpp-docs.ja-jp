@@ -7,10 +7,10 @@ helpviewer_keywords:
 - _writecr8 intrinsic
 ms.assetid: 6f8bd632-dddb-4335-971e-1acee24aa2b9
 ms.openlocfilehash: 44b009e68f3dd7825bc064e5f9f4ee8d03d7fb4a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024765"
 ---
 # <a name="writecr8"></a>__writecr8
@@ -44,8 +44,8 @@ void writecr8(
 
 この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

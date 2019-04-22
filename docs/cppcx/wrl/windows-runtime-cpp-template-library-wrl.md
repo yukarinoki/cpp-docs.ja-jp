@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b915afce-553b-44a7-b8dc-0ab601758eb0
 ms.openlocfilehash: 5c1a4e7df424499f400dbd70d675956deef6bc5d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58784947"
 ---
 # <a name="windows-runtime-c-template-library-wrl"></a>Windows ランタイム C++ テンプレート ライブラリ (WRL)
@@ -17,7 +17,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) は、Windo
 > [!NOTE]
 > C + によって置き換えられた WRL/cli WinRT、標準 c++ 17 の言語プロジェクションの Windows ランタイム Api です。 C +/cli WinRT はバージョン 1803 以降から Windows 10 SDK で使用できます。 C +/cli WinRT がヘッダー ファイルで完全に実装し、最新の Windows API に最上級アクセスを提供するように設計します。
 >
-> C++/cli WinRT、両方を使用して標準に準拠した c++ 17 コンパイラを使用して Windows ランタイム Api を作成します。 C +/cli WinRT は通常、パフォーマンスが向上し、Windows ランタイムの他の言語オプションよりも小さいバイナリを生成します。 C + をサポートするために引き続き/cli CX および WRL、C + 新しいアプリケーションを使用するを強くお勧めしますが、/cli WinRT します。 詳細については、[C +/cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)を参照してください。
+> C++/cli WinRT、両方を使用して標準に準拠した c++ 17 コンパイラを使用して Windows ランタイム Api を作成します。 C +/cli WinRT は通常、パフォーマンスが向上し、Windows ランタイムの他の言語オプションよりも小さいバイナリを生成します。 C + をサポートするために引き続き/cli CX および WRL、C + 新しいアプリケーションを使用するを強くお勧めしますが、/cli WinRT します。 詳細については、次を参照してください。 [C +/cli WinRT](https://docs.microsoft.com/windows/uwp/cpp-and-winrt-apis/index)します。
 
 ## <a name="benefits"></a>利点
 
@@ -25,14 +25,14 @@ Windows ランタイム C++ テンプレート ライブラリを使用するよ
 
 C++/cli CX は Windows ランタイム コンポーネントを使用して、言語ベースの高度な方法です。 両方の Windows ランタイム C++ テンプレート ライブラリおよび C++/cli CX、あなたに代わってハウスキーピング タスクを自動的に実行することによって、Windows ランタイム用のコードの記述を簡略化します。
 
-Windows ランタイム C++ テンプレート ライブラリと C + + CX さまざまな利点があります。 ここではいくつかの理由ではなく C + Windows ランタイム C++ テンプレート ライブラリを使用する/cli CX:
+Windows ランタイムC++テンプレート ライブラリとC++/CX さまざまな利点があります。 ここではいくつかの理由ではなく C + Windows ランタイム C++ テンプレート ライブラリを使用する/cli CX:
 
 - Windows ランタイム C++ テンプレート ライブラリは経由で Windows ランタイム アプリケーション バイナリ インターフェイス (ABI) のほとんどの抽象化を追加します、向上を基になるコードを制御する機能を提供を作成または Windows ランタイム Api を使用しません。
 
-- C + + CX は例外としての COM HRESULT 値を表します。 COM、または例外を使用しないものを使用してコード ベースを継承する場合、Windows ランタイム C++ テンプレート ライブラリの例外を使用する必要がないため、Windows ランタイムを使用する方法がより自然であることがあります。
+- C++/CX では、例外として COM HRESULT 値を表します。 COM、または例外を使用しないものを使用してコード ベースを継承する場合、Windows ランタイム C++ テンプレート ライブラリの例外を使用する必要がないため、Windows ランタイムを使用する方法がより自然であることがあります。
 
    > [!NOTE]
-   > Windows ランタイム C++ テンプレート ライブラリでは、HRESULT 値を使用し、例外をスローしません。 さらに、Windows ランタイム C++ テンプレート ライブラリを使用してスマート ポインターと RAII パターン、アプリケーション コードが例外をスローするときにオブジェクトが正しく破棄ことを保証するためです。 スマート ポインターと RAII に関する詳細については、[スマート ポインター](../../cpp/smart-pointers-modern-cpp.md)と[オブジェクト独自のリソース (RAII)](../../cpp/objects-own-resources-raii.md)を参照してください。
+   > Windows ランタイム C++ テンプレート ライブラリでは、HRESULT 値を使用し、例外をスローしません。 さらに、Windows ランタイム C++ テンプレート ライブラリを使用してスマート ポインターと RAII パターン、アプリケーション コードが例外をスローするときにオブジェクトが正しく破棄ことを保証するためです。 スマート ポインターと RAII に関する詳細については、次を参照してください。[スマート ポインター](../../cpp/smart-pointers-modern-cpp.md)と[オブジェクト独自のリソース (RAII)](../../cpp/objects-own-resources-raii.md)します。
 
 - 目的と Windows ランタイム C++ テンプレート ライブラリの設計インスパイアされた Active Template Library (ATL) で COM オブジェクトのプログラミングを簡略化するテンプレート ベースの C++ クラスのセットです。 Windows ランタイム C++ テンプレート ライブラリでは、Windows ランタイムをラップする標準の C++ を使用するためより簡単にポートし、Windows ランタイムに ATL で記述された既存の多くの COM コンポーネントとの対話します。 ATL を既に知っている場合、Windows ランタイム C++ テンプレート ライブラリのプログラミングが容易でことがあります。
 

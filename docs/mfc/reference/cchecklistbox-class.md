@@ -29,10 +29,10 @@ helpviewer_keywords:
 - CCheckListBox [MFC], SetCheckStyle
 ms.assetid: 1dd78438-00e8-441c-b36f-9c4f9ac0d019
 ms.openlocfilehash: 9c649dd979b28e2b545a797c5453a2ec9aa6d0dc
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768043"
 ---
 # <a name="cchecklistbox-class"></a>CCheckListBox クラス
@@ -260,7 +260,7 @@ UINT GetCheckStyle();
 
 ### <a name="remarks"></a>Remarks
 
-利用可能な方法については、[有効なスタイル](#setcheckstyle)を参照してください。
+利用可能な方法については、次を参照してください。[有効なスタイル](#setcheckstyle)します。
 
 ##  <a name="isenabled"></a>  CCheckListBox::IsEnabled
 
@@ -348,7 +348,7 @@ void SetCheck(
 |-----------|-----------------|
 |BST_CHECKED|指定されたチェック ボックスを選択します。|
 |設定されています。|指定されたチェック ボックスをオフにします。|
-|BST_INDETERMINATE|不確定なを指定のチェック ボックスの状態を設定します。<br /><br /> この状態は、チェック ボックスのスタイルが BS_AUTO3STATE または BS_3STATE 場合にのみ使用します。 詳細については、[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)を参照してください。|
+|BST_INDETERMINATE|不確定なを指定のチェック ボックスの状態を設定します。<br /><br /> この状態は、チェック ボックスのスタイルが BS_AUTO3STATE または BS_3STATE 場合にのみ使用します。 詳細については、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。|
 
 ##  <a name="setcheckstyle"></a>  CCheckListBox::SetCheckStyle
 
@@ -375,7 +375,7 @@ void SetCheckStyle(UINT nStyle);
 
 - BS_3STATE
 
-これらのスタイルについては、[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)を参照してください。
+これらのスタイルについては、次を参照してください。[ボタンのスタイル](../../mfc/reference/styles-used-by-mfc.md#button-styles)します。
 
 ## <a name="see-also"></a>関連項目
 

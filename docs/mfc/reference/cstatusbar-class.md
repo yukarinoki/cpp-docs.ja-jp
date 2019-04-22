@@ -37,10 +37,10 @@ helpviewer_keywords:
 - CStatusBar [MFC], SetPaneText
 ms.assetid: a3bde3db-e71c-4881-a3ca-1d5481c345ba
 ms.openlocfilehash: d714159aa9fd52df682b1e5f3dbf3957bbef1b91
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777338"
 ---
 # <a name="cstatusbar-class"></a>CStatusBar クラス
@@ -200,7 +200,7 @@ virtual BOOL CreateEx(
 *pParentWnd*<br/>
 ポインター、 [CWnd](../../mfc/reference/cwnd-class.md)ステータス バーの親である Windows ウィンドウを持つオブジェクト。
 
-*ツール バー*<br/>
+*dwCtrlStyle*<br/>
 埋め込まれたを作成するための追加スタイル[CStatusBarCtrl](../../mfc/reference/cstatusbarctrl-class.md)オブジェクト。 既定値の指定、サイズ変更グリップとツールヒントなしのステータス バーをサポートします。 ステータス バーのスタイルがサポートされている次のとおりです。
 
 - SBARS_SIZEGRIP、ステータス バー コントロールには、ステータス バーの右端にあるサイズ変更グリップが含まれています。 サイズ変更グリップはサイズ変更境界線; に似ていますユーザーがクリックして親ウィンドウのサイズをドラッグ四角形の領域になります。
@@ -482,10 +482,10 @@ BOOL SetPaneText(
 *nIndex*<br/>
 テキストを設定するペインのインデックス。
 
-*されています。*<br/>
+*lpszNewText*<br/>
 新しいウィンドウのテキストへのポインター。
 
-*b 更新*<br/>
+*bUpdate*<br/>
 TRUE の場合、テキストを設定した後、ウィンドウが無効にします。
 
 ### <a name="return-value"></a>戻り値
@@ -508,7 +508,7 @@ TRUE の場合、テキストを設定した後、ウィンドウが無効にし
 
 [MFC サンプル CTRLBARS](../../overview/visual-cpp-samples.md)<br/>
 [MFC サンプル DLGCBR32](../../overview/visual-cpp-samples.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)<br/>
+[CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)<br/>
 [階層図](../../mfc/hierarchy-chart.md)<br/>
 [CStatusBarCtrl クラス](../../mfc/reference/cstatusbarctrl-class.md)<br/>
-[CControlBar Class](../../mfc/reference/ccontrolbar-class.md)
+[CControlBar クラス](../../mfc/reference/ccontrolbar-class.md)

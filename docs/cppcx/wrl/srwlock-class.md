@@ -22,10 +22,10 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::SRWLock::TryLockShared method
 ms.assetid: 4fa250e3-5f29-4b06-ac24-61b6c04ade93
 ms.openlocfilehash: 6d4a504d9465c858af59a88cf0ef611bf88c3fde
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58785651"
 ---
 # <a name="srwlock-class"></a>SRWLock クラス
@@ -40,7 +40,7 @@ class SRWLock;
 
 ## <a name="remarks"></a>Remarks
 
-スリム リーダー/ライター ロックは、オブジェクトやリソースをスレッド間でのアクセスを同期に使用されます。 詳細については、[同期関数](/windows/desktop/Sync/synchronization-functions)を参照してください。
+スリム リーダー/ライター ロックは、オブジェクトやリソースをスレッド間でのアクセスを同期に使用されます。 詳細については、次を参照してください。[同期関数](/windows/desktop/Sync/synchronization-functions)します。
 
 ## <a name="members"></a>メンバー
 

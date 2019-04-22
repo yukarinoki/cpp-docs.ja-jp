@@ -7,10 +7,10 @@ helpviewer_keywords:
 - __interface keyword [C++]
 ms.assetid: ca5d400b-d6d8-4ba2-89af-73f67e5ec056
 ms.openlocfilehash: 1ec3a1d2cddbf8dbbb248a7366d5d56dd95ad074
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58768316"
 ---
 # <a name="interface"></a>__interface
@@ -39,7 +39,7 @@ modifier __interface interface-name {interface-definition};
 
 ## <a name="remarks"></a>Remarks
 
-C++[クラス](../cpp/class-cpp.md)または[構造体](../cpp/struct-cpp.md)これらの規則を実装できますが、 **_ _interface**それらを適用します。
+A C++ [クラス](../cpp/class-cpp.md)または[構造体](../cpp/struct-cpp.md)これらの規則を実装できますが、 **_ _interface**それらを適用します。
 
 次にインターフェイスの定義例を示します。
 
@@ -50,7 +50,7 @@ __interface IMyInterface {
 };
 ```
 
-マネージ インターフェイスについては、[インターフェイス クラス](../extensions/interface-class-cpp-component-extensions.md)を参照してください。
+マネージ インターフェイスについては、次を参照してください。[インターフェイス クラス](../extensions/interface-class-cpp-component-extensions.md)します。
 
 `CommitX` 関数と `get_X` 関数が純粋仮想関数であることを明示的に示す必要がないことに注意してください。 最初の関数の同等の宣言は次のとおりです。
 

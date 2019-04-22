@@ -5,17 +5,17 @@ helpviewer_keywords:
 - /clr compiler option [C++], restrictions
 ms.assetid: 385f6462-2c68-46d6-810e-469553ead447
 ms.openlocfilehash: 21b7ead553871854c73021756eb2086f9e6e7393
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777819"
 ---
 # <a name="clr-restrictions"></a>/clr の制約
 
 使用には、次の制限に注意してください **/clr**:
 
-- 構造化例外ハンドラーでは、使用に関する制限事項`_alloca`でコンパイルするときに **/clr**します。 詳細については、[_alloca](../../c-runtime-library/reference/alloca.md)を参照してください。
+- 構造化例外ハンドラーでは、使用に関する制限事項`_alloca`でコンパイルするときに **/clr**します。 詳細については、次を参照してください。 [_alloca](../../c-runtime-library/reference/alloca.md)します。
 
 - 実行時エラー チェックの使用に無効な **/clr**します。 詳細については、「[方法 :ネイティブ ランタイム チェックを使用する](/visualstudio/debugger/how-to-use-native-run-time-checks)」を参照してください。
 
@@ -53,7 +53,7 @@ ms.locfileid: "58777819"
 
 - 組み合わせ、`_STATIC_CPPLIB`プリプロセッサの定義 (`/D_STATIC_CPPLIB`) および **/clr**コンパイラ オプションはサポートされていません。 これは、定義は、静的なマルチ スレッド C++ 標準ライブラリ、サポートされていないとリンクするアプリケーションになるためです。 詳細については、次を参照してください。、 [/MD、/MT、/LD (ランタイム ライブラリの使用)](md-mt-ld-use-run-time-library.md)トピック。
 
-- 使用する場合 **/Zi**で **/clr**パフォーマンスに影響があります。 詳細については、[/Zi](z7-zi-zi-debug-information-format.md)を参照してください。
+- 使用する場合 **/Zi**で **/clr**パフォーマンスに影響があります。 詳細については、次を参照してください。 [/Zi](z7-zi-zi-debug-information-format.md)します。
 
 - 指定しないルーチンを出力する .NET Framework にワイド文字を渡す[/Zc:wchar_t](zc-wchar-t-wchar-t-is-native-type.md)に文字をキャストしていない場合、または`__wchar_t`として表示される出力になります、`unsigned short int`します。 例:
 
@@ -70,7 +70,7 @@ ms.locfileid: "58777819"
 
 - ネイティブ関数としては、可変個の引数 (vararg) を受け取る関数が生成されます。 可変個引数の位置に任意のマネージ データ型は、ネイティブ型にマーシャ リングされます。 なお<xref:System.String?displayProperty=fullName>型は、実際にはワイド文字の文字列が、それらが 1 バイト文字の文字列をマーシャ リングします。 したがって、printf 関数指定子が %S (wchar_t *) の場合にマーシャ リング %s 文字列に代わりにします。
 
-- コンパイルするときに予期しない結果が取得 va_arg マクロを使用して、 **/clr: 純粋な**します。 詳細については、[va_arg、va_copy、va_end、va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)を参照してください。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。 「純粋」または「安全」にする必要があるコードを移植する必要があるC#します。
+- コンパイルするときに予期しない結果が取得 va_arg マクロを使用して、 **/clr: 純粋な**します。 詳細については、次を参照してください。 [va_arg、va_copy、va_end、va_start](../../c-runtime-library/reference/va-arg-va-copy-va-end-va-start.md)します。 **/Clr: 純粋な**と **/clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。 「純粋」または「安全」にする必要があるコードを移植する必要があるC#します。
 
 - 呼び出す必要はありません、マネージ コード、パラメーター情報 (関数の引数) を取得するスタック ウォークをすべての関数からP/invoke レイヤーには、スタックをさらにその情報が原因です。  たとえば、プロキシ/スタブをコンパイルできない **/clr**します。
 

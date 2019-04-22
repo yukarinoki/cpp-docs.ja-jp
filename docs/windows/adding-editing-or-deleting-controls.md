@@ -44,10 +44,10 @@ helpviewer_keywords:
 - rich edit controls [C++], RichEdit 1.0
 ms.assetid: 73cef03f-5c8c-456a-87d1-1458dff185cf
 ms.openlocfilehash: 2e3e671cd92313ad120d2cd6aae3f7e815e09e65
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59025365"
 ---
 # <a name="how-to-add-edit-or-delete-controls-c"></a>方法: 追加、編集、または削除コントロール (C++)
@@ -232,7 +232,7 @@ Win32
 
 [ダイアログ ボックスのコントロールを管理します。](controls-in-dialog-boxes.md)<br/>
 [方法: レイアウト コントロール](arrangement-of-controls-on-dialog-boxes.md)<br/>
-[方法: アクセス制御と値を定義します。](defining-mnemonics-access-keys.md)<br/>
+[方法: コントロールのアクセスおよび値を定義する](defining-mnemonics-access-keys.md)<br/>
 
 <!-- excluded links
 [Mapping Messages to Functions](../mfc/reference/mapping-messages-to-functions.md)<br/>

@@ -3,10 +3,10 @@ title: C++ でプログラミングする Windows の概要
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
 ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772905"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
@@ -43,7 +43,7 @@ C++ コンソール アプリケーションでは、コンソール ウィン�
 
 ユニバーサル Windows プラットフォーム (UWP) は、最新の Windows API です。 UWP アプリあらゆる Windows 10 デバイスで実行するには、XAML を使用して、ユーザー インターフェイスおよびが完全にタッチ対応します。 UWP の詳細については、次を参照してください。[ユニバーサル Windows プラットフォーム (UWP) アプリとは何ですか?](/windows/uwp/get-started/whats-a-uwp)と[Windows ユニバーサル アプリに関するガイド](/windows/uwp/get-started/universal-application-platform-guide)します。
 
-元の C++ UWP のサポートを行いました (1) C + + CX、言語の構文の拡張機能は、C++ または (2)、Windows ランタイム ライブラリ (WRL) 標準の C++ と COM に基づいています 両方 C + + CX および WRL はサポートされています。 新しいプロジェクトの勧め[C +/cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)と C++ の標準に基づいて完全高速なパフォーマンスを提供します。 
+元のC++UWP を行いました (1) のサポートC++/CX、言語にC++構文の拡張機能、または (2)、Windows ランタイム ライブラリ (WRL) 標準に基づいていますC++および COM 両方C++/CX と WRL はサポートされています。 新しいプロジェクトの勧め[C +/cli WinRT](/windows/uwp/cpp-and-winrt-apis/intro-to-using-cpp-with-winrt)と C++ の標準に基づいて完全高速なパフォーマンスを提供します。 
 
 ## <a name="desktop-bridge"></a>デスクトップ ブリッジ
 
@@ -96,8 +96,8 @@ Visual Studio には、ネイティブ コード用の強力なデバッガー�
 ## <a name="in-this-section"></a>このセクションの内容
 |Title|説明|
 |-----------|-----------------|
-|[チュートリアル: 標準の C++ プログラムを作成します。](walkthrough-creating-a-standard-cpp-program-cpp.md)| Windows コンソール アプリケーションを作成します。|
-|[チュートリアル: Windows デスクトップ アプリケーション (C++) を作成します。](walkthrough-creating-windows-desktop-applications-cpp.md)|シンプルな Windows デスクトップ アプリケーションを作成します。|
+|[チュートリアル: 標準 C++ プログラムの作成](walkthrough-creating-a-standard-cpp-program-cpp.md)| Windows コンソール アプリケーションを作成します。|
+|[チュートリアル: Windows デスクトップ アプリケーション (C++) の作成](walkthrough-creating-windows-desktop-applications-cpp.md)|シンプルな Windows デスクトップ アプリケーションを作成します。|
 |[Windows デスクトップ ウィザード](windows-desktop-wizard.md)|ウィザードを使用して、新しい Windows プロジェクトを作成します。|
 |[Active Template Library (ATL)](../atl/TOC.md)|C++ での COM コンポーネントを作成するのにには、ATL ライブラリを使用します。|
 |[Microsoft Foundation Classes (MFC)](../mfc/TOC.md)|MFC を使用して、ダイアログ、コントロール、大小の Windows アプリケーションを作成するには|
@@ -105,10 +105,10 @@ Visual Studio には、ネイティブ コード用の強力なデバッガー�
 |[データ アクセス](../data/data-access-in-cpp.md)| OLE DB および ODBC|
 |[テキストと文字列](../text/text-and-strings-in-visual-cpp.md)|Windows 上のさまざまな文字列型。|
 |[DirectX を使用するゲームを作成するためのリソース](resources-for-creating-a-game-using-directx.md)
-|[方法: Windows 10 を使用して、Windows デスクトップ アプリケーションで SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
+|[方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows SDK|
 |[リソース ファイルの操作](working-with-resource-files.md)|デスクトップ アプリケーションをイメージ、アイコン、文字列テーブル、およびその他のリソースを追加する方法。|
-|[DirectX を使用するゲームを作成するためのリソース (C++)](resources-for-creating-a-game-using-directx.md)|C++ でのゲームを作成するためのコンテンツへのリンク。|
-|[方法: Windows 10 を使用して、Windows デスクトップ アプリケーションで SDK](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows 10 SDK を使用してビルドするプロジェクトの設定手順が示されています。|
+|[DirectX (C++) を使用してゲームを作成するためのリソース](resources-for-creating-a-game-using-directx.md)|C++ でのゲームを作成するためのコンテンツへのリンク。|
+|[方法: Windows デスクトップ アプリケーションでの Windows 10 SDK の使用](how-to-use-the-windows-10-sdk-in-a-windows-desktop-application.md)|Windows 10 SDK を使用してビルドするプロジェクトの設定手順が示されています。|
 |[ネイティブ デスクトップ アプリケーションの配置](deploying-native-desktop-applications-visual-cpp.md)|Windows のネイティブ アプリケーションをデプロイします。|
 
 
@@ -117,8 +117,8 @@ Visual Studio には、ネイティブ コード用の強力なデバッガー�
 |Title|説明|
 |-----------|-----------------|
 |[Visual C++](../overview/visual-cpp-in-visual-studio.md)|Visual C 開発者向けコンテンツの親トピック。|
-[.NET 開発 c++/cli CLI](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|.NET アプリケーションおよびコンポーネントとの通信を有効にするネイティブの C++ ライブラリのラッパーを作成します。|
-|[Component Extensions for .NET と UWP](../extensions/component-extensions-for-runtime-platforms.md)|リファレンスの構文要素が共有によって C +/cli/CX および C++/cli CLI。|
+[C++/CLI による .NET の開発](../dotnet/dotnet-programming-with-cpp-cli-visual-cpp.md)|.NET アプリケーションおよびコンポーネントとの通信を有効にするネイティブの C++ ライブラリのラッパーを作成します。|
+|[.NET および UWP でのコンポーネント拡張](../extensions/component-extensions-for-runtime-platforms.md)|リファレンスの構文要素が共有によって C +/cli/CX および C++/cli CLI。|
 |[ユニバーサル Windows アプリ (C++)](universal-windows-apps-cpp.md)|C + を使用して、UWP アプリケーションを記述/cli/CX または Windows ランタイム テンプレート ライブラリ (WRL)。|
-|[COM および .NET C++ 属性](attributes/cpp-attributes-com-net.md)|.NET または COM を使用して Windows 専用のプログラミングの非標準の属性|
+|[COM および .NET の C++ の属性](attributes/cpp-attributes-com-net.md)|.NET または COM を使用して Windows 専用のプログラミングの非標準の属性|
 

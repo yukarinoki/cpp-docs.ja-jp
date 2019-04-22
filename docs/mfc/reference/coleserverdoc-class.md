@@ -83,10 +83,10 @@ helpviewer_keywords:
 - COleServerDoc [MFC], OnShowDocument
 ms.assetid: a9cdd96a-e0ac-43bb-9203-2c29237e965c
 ms.openlocfilehash: 4cada70723c7fadc9c91c40380b8a7e9fc46a07a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58777260"
 ---
 # <a name="coleserverdoc-class"></a>COleServerDoc クラス
@@ -335,7 +335,7 @@ virtual CDocObjectServer* GetDocObjectServer(LPOLEDOCUMENTSITE pDocSite);
 
 DocObject サーバーがアクティブになって、クライアントが DocObjects をサポートできる NULL 以外のポインターの戻り値が表示されます。 既定の実装では、NULL を返します。
 
-DocObjects をサポートするドキュメントの一般的な実装は、新しい単純に割り当てる`CDocObjectServer`オブジェクトし、呼び出し元に戻すこと。 例:
+DocObjects をサポートするドキュメントの一般的な実装は、新しい単純に割り当てる`CDocObjectServer`オブジェクトし、呼び出し元に戻すこと。 例えば:
 
 [!code-cpp[NVC_MFCOleServer#3](../../mfc/codesnippet/cpp/coleserverdoc-class_1.cpp)]
 

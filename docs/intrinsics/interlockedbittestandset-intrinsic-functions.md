@@ -19,10 +19,10 @@ helpviewer_keywords:
 - lock_bts instruction
 ms.assetid: b1b7e334-53ea-48cf-ba60-5fa3ef51a1fc
 ms.openlocfilehash: 3da533b3cf2ab8f396e4ba284cc0bf921a5c80b5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023205"
 ---
 # <a name="interlockedbittestandset-intrinsic-functions"></a>_interlockedbittestandset の組み込み関数
@@ -89,7 +89,7 @@ unsigned char _interlockedbittestandset64_HLERelease(
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
 |`_interlockedbittestandset`|x86、ARM、x64|\<intrin.h>|
-|`_interlockedbittestandset_acq`では、 `_interlockedbittestandset_nf`では、 `_interlockedbittestandset_rel`|ARM|\<intrin.h>|
+|`_interlockedbittestandset_acq`、 `_interlockedbittestandset_nf`、 `_interlockedbittestandset_rel`|ARM|\<intrin.h>|
 |`_interlockedbittestandset_HLEAcquire`, `_interlockedbittestandset_HLERelease`|x86、x64|\<immintrin.h>|
 |`_interlockedbittestandset64`|X64|\<intrin.h>|
 |`_interlockedbittestandset64_HLEAcquire`, `_interlockedbittestandset64_HLERelease`|X64|\<immintrin.h>|
@@ -98,16 +98,15 @@ unsigned char _interlockedbittestandset64_HLERelease(
 
 X86 および x64 プロセッサでは、これらの組み込みを使用して、`lock bts`命令を読み取り、指定したビットを 1 に設定します。 この操作はアトミックです。
 
-ARM プロセッサでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 
-  `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
+ARM プロセッサでは、クリティカル セクションの最初と最後などでの取得と解放のセマンティクスのために、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
 
 Hardware Lock Elision (HLE) 命令をサポートする Intel プロセッサでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 HLE をサポートしていないプロセッサ上でこれらの組み込みが呼び出された場合、ヒントは無視されます。
 
 これらのルーチンは、組み込みとしてのみ使用できます。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

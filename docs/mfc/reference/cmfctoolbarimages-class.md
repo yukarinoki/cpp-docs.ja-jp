@@ -141,10 +141,10 @@ helpviewer_keywords:
 - CMFCToolBarImages [MFC], m_bDisableTrueColorAlpha
 ms.assetid: d4e50518-9ffc-406f-9996-f79e5cd38155
 ms.openlocfilehash: 210432b8ec193efccc0bf2338089dbccca310726
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58776415"
 ---
 # <a name="cmfctoolbarimages-class"></a>CMFCToolBarImages クラス
@@ -326,7 +326,7 @@ int AddImage(
 *bSetBitPerPixel*<br/>
 [in]TRUE の場合、`CMFCToolBarImages`オブジェクトは、新しいイメージの色深度 (1 ピクセルあたりのビット) を使用FALSE の場合、`CMFCToolbarImages`オブジェクトが現在の色深度を保持します。
 
-*イメージ リスト*<br/>
+*imageList*<br/>
 [in]参照を`CMFCToolbarImages`を追加するイメージを含むオブジェクト。
 
 *nIndex*<br/>
@@ -402,7 +402,7 @@ BOOL CreateFromImageList(const CImageList& imageList);
 
 ### <a name="parameters"></a>パラメーター
 
-*イメージ リスト*<br/>
+*imageList*<br/>
 [in]ツール バー イメージのソースとして使用するイメージ リスト。
 
 ### <a name="return-value"></a>戻り値
@@ -473,7 +473,7 @@ BOOL Draw(
 *x*<br/>
 [in]イメージが描画される四角形の左辺の X 座標。
 
-*Y*<br/>
+*y*<br/>
 [in]イメージが描画される四角形の上辺の Y 座標。
 
 *iImageIndex*<br/>

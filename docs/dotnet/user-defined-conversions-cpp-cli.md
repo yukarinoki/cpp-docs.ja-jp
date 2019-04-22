@@ -5,10 +5,10 @@ helpviewer_keywords:
 - user-defined conversions [C++]
 ms.assetid: 8010fd59-2775-4e9a-a6ed-58055032d66f
 ms.openlocfilehash: 8f168582e56e77f1ec848928b7ffd36879ba341a
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58772424"
 ---
 # <a name="user-defined-conversions-ccli"></a>ユーザー定義変換 (C++/CLI)
@@ -21,7 +21,7 @@ ms.locfileid: "58772424"
 
 ネイティブ クラスに参照または値の型を変換するネイティブ クラスのコンス トラクターを使用できます。
 
-変換の詳細については、[ボックス化](../extensions/boxing-cpp-component-extensions.md)と[標準変換](../cpp/standard-conversions.md)を参照してください。
+変換の詳細については、次を参照してください。[ボックス化](../extensions/boxing-cpp-component-extensions.md)と[標準変換](../cpp/standard-conversions.md)します。
 
 ```
 // mcpp_User_Defined_Conversions.cpp

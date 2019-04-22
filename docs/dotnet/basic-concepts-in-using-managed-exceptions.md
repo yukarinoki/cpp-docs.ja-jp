@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Visual C++, handling managed exceptions
 ms.assetid: 40ce8931-1ecc-491a-815f-733b23fcba35
 ms.openlocfilehash: e2aed98d9131b3d7b96cdc3e3297823d69d0ad38
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58781537"
 ---
 # <a name="basic-concepts-in-using-managed-exceptions"></a>マネージド例外の使用についての基本概念
@@ -33,7 +33,7 @@ ms.locfileid: "58781537"
 
 インターフェイスから派生した例外の種類のキャッチはサポートされていません **/clr**します。 また、共通言語ランタイムは許可されていません。 スタック オーバーフローの例外をキャッチするにはスタック オーバーフロー例外は、プロセスを終了します。
 
-マネージ コードとアンマネージ アプリケーションでの例外処理の相違点の詳細については、[例外処理動作のマネージ拡張で C++ の相違](../dotnet/differences-in-exception-handling-behavior-under-clr.md)を参照してください。
+マネージ コードとアンマネージ アプリケーションでの例外処理の相違点の詳細については、次を参照してください。[例外処理動作のマネージ拡張で C++ の相違](../dotnet/differences-in-exception-handling-behavior-under-clr.md)します。
 
 ##  <a name="vcconbasicconceptsinusingmanagedexceptionsanchor1"></a> /Clr での例外をスローします。
 

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - strings [C++], converting
 ms.assetid: e7e4f741-3c82-45f0-b8c0-1e1e343b0e77
 ms.openlocfilehash: 21006f19f7c811f87f3f75e346983f7a8e7e0bf5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58778326"
 ---
 # <a name="how-to-convert-between-various-string-types"></a>方法: さまざまな文字列型間の変換します。
@@ -459,9 +459,9 @@ Hello, World! (System::String)
 
 ### <a name="description"></a>説明
 
-このサンプルでは、`CString` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `CString` かどうかに依存する TCHAR データ型に基づくが、シンボル`_UNICODE`が定義されています。 `_UNICODE` が定義されていない場合、`TCHAR` は char 型として定義され、`CString` にマルチバイト文字列が格納されます。`_UNICODE` が定義されている場合、`TCHAR` は `wchar_t` 型として定義され、`CString` にワイド文字列が格納されます。
+このサンプルでは、`CString` から、上に示したそれ以外の文字列型に変換する方法について説明します。 `CString` は、TCHAR データ型に基づいています。この TCHAR データ型は、シンボル `_UNICODE` が定義されているかどうかに依存します。 `_UNICODE` が定義されていない場合、`TCHAR` は char 型として定義され、`CString` にマルチバイト文字列が格納されます。`_UNICODE` が定義されている場合、`TCHAR` は `wchar_t` 型として定義され、`CString` にワイド文字列が格納されます。
 
-`CStringA` マルチバイト文字列バージョンの`CString`、`CStringW`ワイド文字列バージョンします。 `CStringA` および `CStringW` のどちらでも、コンパイル方法の決定に `_UNICODE` は使用されません。 `CStringA` `CStringW`バッファー サイズの割り当てに若干の違いを明確にして、出力の処理にこの例では使用できます。
+`CStringA` は、`CString` のマルチバイト文字列バージョンであり、`CStringW` はワイド文字列バージョンです。 `CStringA` および `CStringW` のどちらでも、コンパイル方法の決定に `_UNICODE` は使用されません。 このサンプルでは `CStringA` および `CStringW` を使用して、バッファー サイズ割り当てと出力処理のわずかな違いを明確化しています。
 
 ### <a name="code"></a>コード
 
@@ -804,8 +804,8 @@ Hello, World! (basic_string)
 
 [ATL と MFC 文字列変換マクロ](../atl/reference/string-conversion-macros.md)<br/>
 [C スタイルの文字列に関連する CString の操作方法](../atl-mfc-shared/cstring-operations-relating-to-c-style-strings.md)<br/>
-[方法: System::string を標準文字列に変換します。](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
-[方法: System::string を標準文字列に変換します。](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
+[方法: 標準文字列を System::String に変換する](../dotnet/how-to-convert-standard-string-to-system-string.md)<br/>
+[方法: System::String を標準文字列に変換する](../dotnet/how-to-convert-system-string-to-standard-string.md)<br/>
 [方法: System::string を wchar_t * または char に変換します。\*](../dotnet/how-to-convert-system-string-to-wchar-t-star-or-char-star.md)<br/>
 [CComBSTR を使用したプログラミング](../atl/programming-with-ccombstr-atl.md)<br/>
 [mbstowcs_s、_mbstowcs_s_l](../c-runtime-library/reference/mbstowcs-s-mbstowcs-s-l.md)<br/>

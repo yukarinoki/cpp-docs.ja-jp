@@ -12,10 +12,10 @@ helpviewer_keywords:
 - macros, error reporting
 ms.assetid: 4da9b87f-ec5c-4a32-ab93-637780909b9d
 ms.openlocfilehash: 0d5010f913521848675987b145a1277c7b00decf
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58775050"
 ---
 # <a name="debugging-and-error-reporting-macros"></a>デバッグとエラー報告のマクロ
@@ -176,7 +176,7 @@ ATLTRACE(
 ### <a name="parameters"></a>パラメーター
 
 *exp*<br/>
-[in]文字列と、Visual C に送信する変数の出力ウィンドウまたはこれらのメッセージをトラップするアプリケーション。
+[in]文字列と、ビジュアルを送信する変数C++出力ウィンドウまたはアプリケーションがこれらのメッセージをトラップします。
 
 *category*<br/>
 [in]イベントまたはレポートをメソッドの型。 カテゴリの一覧については、「解説」を参照してください。
@@ -207,7 +207,7 @@ ATLTRACE2(
 ### <a name="parameters"></a>パラメーター
 
 *exp*<br/>
-[in]Visual C の出力ウィンドウ、またはこれらのメッセージをトラップする任意のアプリケーションに送信する文字列。
+[in]ビジュアルに送信する文字列C++出力ウィンドウまたはアプリケーションがこれらのメッセージをトラップします。
 
 *category*<br/>
 [in]イベントまたはレポートをメソッドの型。 カテゴリの一覧については、「解説」を参照してください。

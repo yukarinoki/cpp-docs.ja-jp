@@ -111,7 +111,7 @@ VectorView オブジェクト内の特定の要素を指定する、0 から始�
 ### <a name="return-value"></a>戻り値
 
 
-  `index` パラメーターで指定された要素。 要素の型が、VectorView テンプレート パラメーターで指定された*T*します。
+  `index` パラメーターで指定された要素。 要素の型が、VectorView テンプレート パラメーターで指定された *T* します。
 
 ## <a name="getmany"></a>  Vectorview::getmany メソッド
 

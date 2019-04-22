@@ -10,10 +10,10 @@ helpviewer_keywords:
 - __identifer keyword [C++]
 ms.assetid: d7ca94a8-f785-41ce-9f73-d3c4fd508489
 ms.openlocfilehash: f87c2401bcc964229d3c0b3cf7119a09553cc2f2
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58774764"
 ---
 # <a name="keywords-c"></a>キーワード (C++)
@@ -42,13 +42,13 @@ ms.locfileid: "58774764"
 |[const_cast](const-cast-operator.md)|[constexpr](constexpr-cpp.md)|[continue](continue-statement-cpp.md)|[decltype](decltype-cpp.md)|
 |[default](switch-statement-cpp.md)|[委任](../extensions/delegate-cpp-component-extensions.md)(C +/cli CLI)|[delete](delete-operator-cpp.md)|[deprecated](deprecated-cpp.md) <sup>1</sup>|
 |[dllexport](dllexport-dllimport.md) <sup>1</sup>|[dllimport](dllexport-dllimport.md) <sup>1</sup>|[do](do-while-statement-cpp.md)|[double](fundamental-types-cpp.md)|
-|[dynamic_cast](dynamic-cast-operator.md)|[else](if-else-statement-cpp.md)|[enum](enumerations-cpp.md)|[列挙型クラス](../extensions/enum-class-cpp-component-extensions.md)|
+|[dynamic_cast](dynamic-cast-operator.md)|[else](if-else-statement-cpp.md)|[enum](enumerations-cpp.md)|[enum クラス](../extensions/enum-class-cpp-component-extensions.md)|
 |[列挙型の構造体](../extensions/enum-class-cpp-component-extensions.md)|[イベント](../extensions/event-cpp-component-extensions.md)(C +/cli CLI)|[explicit](user-defined-type-conversions-cpp.md)|[extern](using-extern-to-specify-linkage.md)|
 |[false](false-cpp.md)|[finally](../dotnet/finally.md)|[float](fundamental-types-cpp.md)|[for](for-statement-cpp.md)|
 |[は for each](../dotnet/for-each-in.md)|[friend](friend-cpp.md)|[friend_as](../preprocessor/hash-using-directive-cpp.md)|[gcnew](../extensions/ref-new-gcnew-cpp-component-extensions.md)(C +/cli CLI)|
 |[ジェネリック](../extensions/generics-cpp-component-extensions.md)(C +/cli CLI)|[goto](goto-statement-cpp.md)|[if](if-else-statement-cpp.md)|[initonly](../dotnet/initonly-cpp-cli.md)|
 |[インライン](inline-functions-cpp.md)|[int](fundamental-types-cpp.md)|[インターフェイス クラス](../extensions/interface-class-cpp-component-extensions.md)(C +/cli CLI)|[構造体をインターフェイス](../extensions/interface-class-cpp-component-extensions.md)(C +/cli CLI)|
-|[interior_ptr](../extensions/interior-ptr-cpp-cli.md)(C +/cli CLI)|[リテラル](../extensions/literal-cpp-component-extensions.md)(C +/cli CLI)|[long](fundamental-types-cpp.md)|[変更可能です](mutable-data-members-cpp.md)|
+|[interior_ptr](../extensions/interior-ptr-cpp-cli.md)(C++/CLI)|[リテラル](../extensions/literal-cpp-component-extensions.md)(C +/cli CLI)|[long](fundamental-types-cpp.md)|[変更可能です](mutable-data-members-cpp.md)|
 |[naked](naked-cpp.md) <sup>1</sup>|[namespace](namespaces-cpp.md)|[新しい](../extensions/new-new-slot-in-vtable-cpp-component-extensions.md)(C +/cli CLI)|[new](new-operator-cpp.md)|
 |[noexcept](noexcept-cpp.md)|[noinline](noinline.md) <sup>1</sup>|[noreturn](noreturn.md) <sup>1</sup>|[nothrow](nothrow-cpp.md) <sup>1</sup>|
 |[novtable](novtable.md) <sup>1</sup>|[nullptr](nullptr.md)|[operator](operator-overloading.md)|[private](private-cpp.md)|
@@ -80,7 +80,7 @@ Microsoft 拡張機能は既定で有効になっています。 完全に移植
 
 Microsoft 拡張機能を有効にすると、Microsoft 固有のキーワードをプログラム内で使用できます。 ANSI 準拠のために、これらのキーワードは 2 つのアンダースコアで始まります。 旧バージョンと互換性のためは、二重文字キーワードの多くのアンダー スコア 1 バージョンがサポートされます。 さらに、 **_ _cdecl**は先頭にアンダー スコアなしで使用できます。
 
-**_ _Asm**キーワードに置き換えられます C++`asm`構文。 `asm` は他の C++ 実装との互換性を維持するために予約されていますが、実装されていません。 使用 **_ _asm**します。
+**_ _Asm**キーワードに置き換えられますC++`asm`構文。 `asm` は他の C++ 実装との互換性を維持するために予約されていますが、実装されていません。 使用 **_ _asm**します。
 
 **__based** キーワードには、32 ビットおよび 64 ビット ターゲット コンパイルに関する使用制限があります。
 

@@ -21,10 +21,10 @@ helpviewer_keywords:
 - CMFCPropertyGridColorProperty [MFC], SetOriginalValue
 ms.assetid: af37be93-a91e-40a2-9a65-0f3412c6f0f8
 ms.openlocfilehash: 95dcbbc2b445e2ff67979b90816daed0fb0c0fba
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58767718"
 ---
 # <a name="cmfcpropertygridcolorproperty-class"></a>CMFCPropertyGridColorProperty クラス
@@ -65,7 +65,7 @@ class CMFCPropertyGridColorProperty : public CMFCPropertyGridProperty
 
 ## <a name="remarks"></a>Remarks
 
-`CMFCPropertyGridColorProperty` クラスは、プロパティ リスト コントロールに追加できるカラー プロパティをサポートします。 詳細については、、 [CMFCPropertyGridCtrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)を参照してください。
+`CMFCPropertyGridColorProperty` クラスは、プロパティ リスト コントロールに追加できるカラー プロパティをサポートします。 詳細については、次を参照してください。、 [CMFCPropertyGridCtrl クラス](../../mfc/reference/cmfcpropertygridctrl-class.md)します。
 
 ## <a name="example"></a>例
 

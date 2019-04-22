@@ -41,10 +41,10 @@ helpviewer_keywords:
 - CDialog [MFC], OnOK
 ms.assetid: ca64b77e-2cd2-47e3-8eff-c2645ad578f9
 ms.openlocfilehash: 9918b1ae38caacf2b2355ace6337e8e5e6260605
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58771353"
 ---
 # <a name="cdialog-class"></a>CDialog クラス
@@ -215,7 +215,7 @@ virtual BOOL Create(
 
 `Create`  ダイアログ ボックスが作成された後すぐに、メンバー関数が返されます。
 
-親ウィンドウが作成されると、ダイアログ ボックスを表示する必要がある場合は、ダイアログ ボックスのテンプレートで WS_VISIBLE スタイルを使用します。 それ以外の場合、呼び出す必要がある`ShowWindow`します。 さらにダイアログ ボックスのスタイルと、アプリケーションは、、 [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK の構造と[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)で、 *MFC リファレンス*を参照してください。
+親ウィンドウが作成されると、ダイアログ ボックスを表示する必要がある場合は、ダイアログ ボックスのテンプレートで WS_VISIBLE スタイルを使用します。 それ以外の場合、呼び出す必要がある`ShowWindow`します。 さらにダイアログ ボックスのスタイルと、アプリケーションは、次を参照してください。、 [DLGTEMPLATE](/windows/desktop/api/winuser/ns-winuser-dlgtemplate) Windows SDK の構造と[ウィンドウ スタイル](../../mfc/reference/styles-used-by-mfc.md#window-styles)で、 *MFC リファレンス*します。
 
 使用して、`CWnd::DestroyWindow`関数によって作成されたダイアログ ボックスを破棄する、`Create`関数。
 

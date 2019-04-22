@@ -35,10 +35,10 @@ helpviewer_keywords:
 - _InterlockedXor intrinsic
 ms.assetid: faef1796-cb5a-4430-b1e2-9d5eaf9b4a91
 ms.openlocfilehash: c86a743df84df37ffe3234d82d79abd987a4dcda
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59023138"
 ---
 # <a name="interlockedxor-intrinsic-functions"></a>_InterlockedXor の組み込み関数
@@ -165,7 +165,7 @@ __int64 _InterlockedXor64_rel(
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
 |`_InterlockedXor`, `_InterlockedXor8`, `_InterlockedXor16`, `_InterlockedXor64`|x86、ARM、x64|\<intrin.h>|
-|`_InterlockedXor_acq`, `_InterlockedXor_nf`, `_InterlockedXor_rel`, `_InterlockedXor8_acq`, `_InterlockedXor8_nf`, `_InterlockedXor8_rel`, `_InterlockedXor16_acq`, `_InterlockedXor16_nf`, `_InterlockedXor16_rel`, `_InterlockedXor64_acq`, `_InterlockedXor64_nf`, `_InterlockedXor64_rel`,|ARM|\<intrin.h>|
+|`_InterlockedXor_acq`、`_InterlockedXor_nf`、`_InterlockedXor_rel`、`_InterlockedXor8_acq`、`_InterlockedXor8_nf`、`_InterlockedXor8_rel`、`_InterlockedXor16_acq`、`_InterlockedXor16_nf`、`_InterlockedXor16_rel`、`_InterlockedXor64_acq`、`_InterlockedXor64_nf`、`_InterlockedXor64_rel`、|ARM|\<intrin.h>|
 |`_InterlockedXor_np`, `_InterlockedXor8_np`, `_InterlockedXor16_np`, `_InterlockedXor64_np`|X64|\<intrin.h>|
 |`_InterlockedXor_HLEAcquire`, `_InterlockedXor_HLERelease`, `_InterlockedXor64_HLEAcquire`, `_InterlockedXor64_HLERelease`|x86、x64|\<immintrin.h>|
 
@@ -173,8 +173,7 @@ __int64 _InterlockedXor64_rel(
 
 各関数の名前に含まれる数値は、引数のビット サイズを示しています。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 
-  `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた ARM 組み込みはメモリ バリアとしては機能しません。
 
 組み込みに `_np` ("プリフェッチなし") サフィックスが付いていると、コンパイラによってプリフェッチ操作が挿入される可能性がなくなります。
 
@@ -203,9 +202,9 @@ int main()
 0xffff0000 0xffff00 0xff00ff00
 ```
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __ll_lshift intrinsic
 ms.assetid: fe98f733-426d-44b3-8f24-5d0d6d44bd94
 ms.openlocfilehash: 5a91ce5db46b19be570f8d48a584a2caeabcc163
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59024466"
 ---
 # <a name="lllshift"></a>__ll_lshift
@@ -77,7 +77,7 @@ int main()
 }
 ```
 
-## <a name="output"></a>Output
+## <a name="output"></a>出力
 
 ```
 10000
@@ -85,10 +85,10 @@ int main()
 
 **注**左シフト演算の符号なしのバージョンはありません。 これは、ため`__ll_lshift`既に署名されていない入力パラメーターを使用します。 右 shift キーを押しとは異なりはありません左 shift キーを押しへのサインオンのため、結果の最下位ビットは常にシフトした値の符号に関係なく 0 に設定します。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
 [__ll_rshift](../intrinsics/ll-rshift.md)<br/>
 [__ull_rshift](../intrinsics/ull-rshift.md)<br/>
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

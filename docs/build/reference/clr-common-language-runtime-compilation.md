@@ -14,10 +14,10 @@ helpviewer_keywords:
 - common language runtime, /clr compiler option
 ms.assetid: fec5a8c0-40ec-484c-a213-8dec918c1d6c
 ms.openlocfilehash: 1946fdabe66934e64cf95d3c3f12e16bc98ba664
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58779353"
 ---
 # <a name="clr-common-language-runtime-compilation"></a>/clr (共通言語ランタイムのコンパイル)
@@ -35,7 +35,7 @@ ms.locfileid: "58779353"
 
 - none
 
-   オプションなしで **/clr**アプリケーションのメタデータを作成します。 このメタデータは、他の CLR アプリケーションで使用できます。また、このメタデータによって、他の CLR コンポーネントのメタデータの型とデータをアプリケーションで使用できるようになります。 詳細については、[混在 (ネイティブおよびマネージ) アセンブリ](../../dotnet/mixed-native-and-managed-assemblies.md)を参照してください。
+   オプションなしで **/clr**アプリケーションのメタデータを作成します。 このメタデータは、他の CLR アプリケーションで使用できます。また、このメタデータによって、他の CLR コンポーネントのメタデータの型とデータをアプリケーションで使用できるようになります。 詳細については、次を参照してください。[混在 (ネイティブおよびマネージ) アセンブリ](../../dotnet/mixed-native-and-managed-assemblies.md)します。
 
 - **純粋です**
 
@@ -73,7 +73,7 @@ ms.locfileid: "58779353"
 
 マネージ アプリケーションでのデバッグを有効にするのを参照してください。 [/ASSEMBLYDEBUG (DebuggableAttribute の追加)](assemblydebug-add-debuggableattribute.md)します。
 
-ガベージ コレクトされたヒープでインスタンス化されるのは CLR 型のみです。 詳細については、[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)を参照してください。 関数をネイティブ コードにコンパイルするには、 `unmanaged` プラグマを使用します。 詳細については、[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)を参照してください。
+ガベージ コレクトされたヒープでインスタンス化されるのは CLR 型のみです。 詳細については、次を参照してください。[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)します。 関数をネイティブ コードにコンパイルするには、 `unmanaged` プラグマを使用します。 詳細については、次を参照してください。[マネージ、アンマネージ](../../preprocessor/managed-unmanaged.md)します。
 
 既定では、 **/clr** は無効です。 **/clr** が有効な場合は **/MD** も有効です。 詳細については、「[/MD、/MT、/LD (ランタイム ライブラリの使用)](md-mt-ld-use-run-time-library.md)」を参照してください。 **/MD** を使用すると、動的にリンクされるマルチスレッド バージョンのランタイム ルーチンが標準ヘッダー (.h) ファイルから選択されるようになります。 マネージド プログラミングでマルチスレッドが必要なのは、CLR のガベージ コレクターが、補助スレッドでファイナライザーを実行するためです。
 

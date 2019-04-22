@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Microsoft::WRL::Wrappers::HandleTraits::CriticalSectionTraits::Unlock method
 ms.assetid: c515a1b5-4eb0-40bc-9035-c4d9352c9de7
 ms.openlocfilehash: ce904ecbd9a5855c63fd43f07f88c215cef544ae
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58785379"
 ---
 # <a name="criticalsectiontraits-structure"></a>CriticalSectionTraits 構造体
@@ -88,4 +88,4 @@ inline static void Unlock(
 
 `Type`として修飾子が定義されている`typedef CRITICAL_SECTION* Type;`します。
 
-詳細については、**により関数**で、**同期関数**Windows API のドキュメントの「を参照してください。
+詳細については、次を参照してください。**により関数**で、**同期関数**Windows API のドキュメントの「します。
