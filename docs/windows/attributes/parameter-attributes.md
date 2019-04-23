@@ -6,10 +6,10 @@ helpviewer_keywords:
 - parameter attributes
 ms.assetid: 024c2dd5-49d7-4ced-a17a-c56c1bc485b6
 ms.openlocfilehash: e89542027c2187a77c18637432a5b60f47377c10
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029552"
 ---
 # <a name="parameter-attributes"></a>パラメーター属性
@@ -18,12 +18,12 @@ ms.locfileid: "59029552"
 
 |属性|説明|
 |---------------|-----------------|
-|[カスタム](custom-cpp.md)|独自の属性を定義できます。|
+|[custom](custom-cpp.md)|独自の属性を定義できます。|
 |[defaultvalue](defaultvalue.md)|型指定された省略可能なパラメーターの既定値を指定をできます。|
 |[first_is](first-is.md)|転送する最初の配列要素のインデックスを指定します。|
 |[iid_is](iid-is.md)|転送する最初の配列要素のインデックスを指定します。|
 |[immediatebind](immediatebind.md)|データ バインド オブジェクトのプロパティに対するすべての変更のデータベースに直ちに通知されることを示します。|
-|[の](in-cpp.md)|呼び出し元のプロシージャから呼び出されたプロシージャに渡されるパラメーターがあることを示します。|
+|[in](in-cpp.md)|呼び出し元のプロシージャから呼び出されたプロシージャに渡されるパラメーターがあることを示します。|
 |[last_is](last-is.md)|転送する最後の配列要素のインデックスを指定します。|
 |[lcid](lcid.md)|ロケール識別子を関数に渡すことができます。|
 |[length_is](length-is.md)|転送する配列要素の数を指定します。|

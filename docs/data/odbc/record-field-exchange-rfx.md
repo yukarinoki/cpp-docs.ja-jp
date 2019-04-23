@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ODBC [C++], RFX
 ms.assetid: f5ddfbf0-2901-48d7-9848-4fb84de3c7ee
 ms.openlocfilehash: 8630fab11728b0c0cd16eee5035df028a8382706
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032220"
 ---
 # <a name="record-field-exchange-rfx"></a>レコード フィールド エクスチェンジ (RFX)
@@ -48,6 +48,6 @@ RFX の高度な知識が必要な場合は、次を参照してください。[
 
 [ODBC (Open Database Connectivity)](../../data/odbc/open-database-connectivity-odbc.md)<br/>
 [レコードセット (ODBC)](../../data/odbc/recordset-odbc.md)<br/>
-[MFC ODBC コンシューマー](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[MFC ODBC コンシューマーします。](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [[データベース サポート] (MFC アプリケーション ウィザード)](../../mfc/reference/database-support-mfc-application-wizard.md)<br/>
 [CRecordset クラス](../../mfc/reference/crecordset-class.md)

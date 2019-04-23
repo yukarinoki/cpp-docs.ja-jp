@@ -7,10 +7,10 @@ helpviewer_keywords:
 - auto_rename attribute
 ms.assetid: 1075f3ab-f6fc-4e04-8e22-ebe02695a567
 ms.openlocfilehash: ba07b8532ba64c99f835e59d7c71aac8e3f2b03d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035120"
 ---
 # <a name="autorename"></a>auto_rename
@@ -29,7 +29,7 @@ auto_rename
 
 この属性は、変数名として C++ の予約語 (キーワードまたはマクロ) を使用しているタイプ ライブラリをインポートするときに使用します。
 
-**END C++ 固有の仕様**
+**END C 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

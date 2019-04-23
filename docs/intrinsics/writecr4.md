@@ -7,10 +7,10 @@ helpviewer_keywords:
 - _writecr4 intrinsic
 ms.assetid: ab7651d7-b86b-4be7-a0a0-7263099c70fc
 ms.openlocfilehash: bbeb282e0e2c386d95009bef277546a260057334
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032467"
 ---
 # <a name="writecr4"></a>__writecr4
@@ -44,8 +44,8 @@ void writecr4(
 
 この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

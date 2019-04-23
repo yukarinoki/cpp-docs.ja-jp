@@ -5,10 +5,10 @@ helpviewer_keywords:
 - CMake in Visual C++
 ms.assetid: 444d50df-215e-4d31-933a-b41841f186f8
 ms.openlocfilehash: 22a8ecc34e6413c32628381241d45d3d76b39ecc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030434"
 ---
 # <a name="cmake-projects-in-visual-studio"></a>Visual Studio の CMake プロジェクト
@@ -164,7 +164,7 @@ Visual Studio インストーラーから CMake をインストールした場�
 [Linux CMake プロジェクトを構成する](../linux/cmake-linux-project.md)<br/>
 [リモートの Linux コンピューターに接続する](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [CMake のビルド設定をカスタマイズする](customize-cmake-settings.md)<br/>
-[CMakeSettings.json 参照](cmakesettings-reference.md)<br/>
+[CMakeSettings.json リファレンス](cmakesettings-reference.md)<br/>
 [CMake デバッグ セッションを構成する](configure-cmake-debugging-sessions.md)<br/>
-[Linux プロジェクトのデプロイ、実行、デバッグ](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[Linux プロジェクトの配置、実行、デバッグ](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [CMake 定義済み構成リファレンス](cmake-predefined-configuration-reference.md)<br/>

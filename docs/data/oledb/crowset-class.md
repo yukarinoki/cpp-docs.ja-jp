@@ -239,10 +239,10 @@ helpviewer_keywords:
 - UpdateAll method
 ms.assetid: b0228a90-b8dd-47cc-b397-8d4c15c1e7f4
 ms.openlocfilehash: dc4f619fb0dba924693682c927247e809fe2cfe9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032325"
 ---
 # <a name="crowset-class"></a>CRowset クラス
@@ -282,7 +282,7 @@ class CRowset
 |[GetDataHere](#getdatahere)|指定したバッファーからデータを取得します。|
 |[GetOriginalData](#getoriginaldata)|最近からフェッチまたは保留中の変更を無視して、データ ソースに送信されるデータを取得します。|
 |[GetRowStatus](#getrowstatus)|すべての行の状態を返します。|
-|[挿入](#insert)|作成を使用して新しい行を挿入します[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85))します。|
+|[[挿入]](#insert)|作成を使用して新しい行を挿入します[IRowsetChange:InsertRow](/previous-versions/windows/desktop/ms716921(v=vs.85))します。|
 |[IsSameRow](#issamerow)|現在の行に指定された行を比較します。|
 |[MoveFirst](#movefirst)|次のフェッチ位置を初期位置に移動します。|
 |[MoveLast](#movelast)|最後のレコードに移動します。|
@@ -291,7 +291,7 @@ class CRowset
 |[MoveToBookmark](#movetobookmark)|ブックマークからブックマークで行または指定したオフセットの行をフェッチします。|
 |[MoveToRatio](#movetoratio)|行セット内の小数部の位置から始まる行がフェッチされます。|
 |[ReleaseRows](#releaserows)|呼び出し[::releaserows](/previous-versions/windows/desktop/ms719771(v=vs.85))を現在の行ハンドルを解放します。|
-|[Setdata メソッド](#setdata)|使用して行の 1 つまたは複数の列のデータ値を設定[IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85))します。|
+|[SetData](#setdata)|使用して行の 1 つまたは複数の列のデータ値を設定[IRowsetChange:SetData](/previous-versions/windows/desktop/ms721232(v=vs.85))します。|
 |[元に戻す](#undo)|最後のフェッチを行に加えられた変更を元に戻しますか[Update](../../data/oledb/crowset-update.md)します。|
 |[更新](#update)|保留中の最後のフェッチまたは更新プログラム以降、現在の行に加えられた変更を送信します。|
 |[UpdateAll](#updateall)|保留中の最後のフェッチまたは更新プログラム以降のすべての行に加えられた変更を送信します。|
@@ -381,7 +381,7 @@ CRowset(IRowset* pRowset);
 
 #### <a name="parameters"></a>パラメーター
 
-*ため*<br/>
+*pRowset*<br/>
 [in]ポインター、`IRowset`このクラスに関連するインターフェイス。
 
 ## <a name="delete"></a> Crowset::delete
@@ -426,7 +426,7 @@ HRESULT FindNextRow(DBCOMPAREOP op,
 *wType*<br/>
 [in]バッファーの値の一部のデータ型を示します。 型インジケーターの詳細については、次を参照してください。[データ型](/previous-versions/windows/desktop/ms723969(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*Windows SDK に含まれています。
 
-*されて*<br/>
+*nLength*<br/>
 [in]データの値として割り当てられているコンシューマー データ構造体の長さ、(バイト単位)。 詳細については、説明を参照してください。`cbMaxLen`で[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))で、 *OLE DB プログラマーズ リファレンス。*
 
 *bPrecision*<br/>

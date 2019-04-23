@@ -8,10 +8,10 @@ helpviewer_keywords:
 - _mm_stream_ss intrinsic
 ms.assetid: c53dffe9-0dfe-4063-85d3-e8987b870fce
 ms.openlocfilehash: 76c6c848351df773b9857b2f83726b64db982d9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031199"
 ---
 # <a name="mmstreamss"></a>_mm_stream_ss
@@ -87,7 +87,7 @@ f[0] = -1, f[1] = -2
 f[2] = -3, f[3] = 3
 ```
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
 
@@ -97,4 +97,4 @@ f[2] = -3, f[3] = 3
 [_mm_stream_ps](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_stream_ps)<br/>
 [_mm_store_ss](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_store_ss)<br/>
 [_mm_sfence](https://software.intel.com/sites/landingpage/IntrinsicsGuide/#text=_mm_sfence)<br/>
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

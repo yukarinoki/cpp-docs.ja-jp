@@ -7,10 +7,10 @@ helpviewer_keywords:
 - first_is attribute
 ms.assetid: 89acbf56-3b38-4d44-83e8-1ce2f6f74ffd
 ms.openlocfilehash: 79ddcb3a3ca256af4c7c30536d65c820dcef2afe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033084"
 ---
 # <a name="firstis"></a>first_is
@@ -25,12 +25,12 @@ ms.locfileid: "59033084"
 
 ### <a name="parameters"></a>パラメーター
 
-*式*<br/>
+*式 (expression)*<br/>
 1 つ以上の C 言語の式。 空の引数スロットが許可されます。
 
 ## <a name="remarks"></a>Remarks
 
-**First_is** C++ 属性と同じ機能を持つ、 [first_is](/windows/desktop/Midl/first-is) MIDL 属性。
+**First_is** C++属性と同じ機能を持つ、 [first_is](/windows/desktop/Midl/first-is) MIDL 属性。
 
 ## <a name="example"></a>例
 

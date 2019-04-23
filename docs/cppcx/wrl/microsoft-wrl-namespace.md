@@ -15,10 +15,10 @@ helpviewer_keywords:
 - WRL namespace
 ms.assetid: 01118a8f-f564-4859-b87e-9444848585a1
 ms.openlocfilehash: 749469c7ae2acf3a0da92d24a51bbfca9b68971d
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033522"
 ---
 # <a name="microsoftwrl-namespace"></a>Microsoft::WRL 名前空間
@@ -48,7 +48,7 @@ namespace Microsoft::WRL;
 |[ClassFactory クラス](classfactory-class.md)|`IClassFactory` インターフェイスの基本機能を実装します。|
 |[ComPtr クラス](comptr-class.md)|テンプレート パラメーターで指定されたインターフェイスを表す *スマート ポインター* 型を作成します。 ComPtr は、基になるインターフェイス ポインターの参照カウントを自動的に維持し、参照カウントがゼロになるとそのインターフェイスを解放します。|
 |[DeferrableEventArgs クラス](deferrableeventargs-class.md)|遅延のイベント引数の型に使用されるテンプレート クラス。|
-|[EventSource クラス](eventsource-class.md)|イベントを表します。 `EventSource` メンバー関数は、追加、削除、およびイベント ハンドラーを呼び出します。|
+|[EventSource クラス](eventsource-class.md)|イベントを表します。 `EventSource` メンバー関数は、イベント ハンドラーの追加、削除、および呼び出しを実行します。|
 |[FtmBase クラス](ftmbase-class.md)|フリー スレッド マーシャラー オブジェクトを表します。|
 |[Module クラス](module-class.md)|関連するオブジェクトから成るコレクションを表します。|
 |[RuntimeClass クラス](runtimeclass-class.md)|指定した数のインターフェイスを継承し、指定した Windows ランタイム、クラシック COM、および弱い参照をサポートする、インスタンス化されたクラスを表します。|
@@ -79,7 +79,7 @@ namespace Microsoft::WRL;
 |名前|説明|
 |----------|-----------------|
 |[AsWeak 関数](asweak-function.md)|指定されたインスタンスへの弱い参照を取得します。|
-|[コールバック関数 (WRL)](callback-function-wrl.md)|メンバー関数がコールバック メソッドであるオブジェクトを作成します。|
+|[Callback 関数 (WRL)](callback-function-wrl.md)|メンバー関数がコールバック メソッドであるオブジェクトを作成します。|
 |[CreateActivationFactory 関数](createactivationfactory-function.md)|Windows ランタイムによるアクティブ化が可能な、指定されたクラスのインスタンスを生成するファクトリを作成します。|
 |[CreateClassFactory 関数](createclassfactory-function.md)|指定されたクラスのインスタンスを生成するファクトリを作成します。|
 |[Make 関数](make-function.md)|指定した Windows ランタイム クラスを初期化します。|

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_module attribute
 ms.assetid: 3578b337-e38a-4334-b747-15404c02dbc0
 ms.openlocfilehash: 80e4909a61b5b53ecde19471f2c838dd4c425874
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034979"
 ---
 # <a name="idlmodule"></a>idl_module
@@ -55,7 +55,7 @@ function declaration
 
 ## <a name="remarks"></a>Remarks
 
-**Idl_module** C++ 属性を使用して、.dll ファイルからインポートすることができる .dll ファイルにエントリ ポイントを指定できます。
+**Idl_module** C++属性を使用して、.dll ファイルからインポートすることができる .dll ファイルにエントリ ポイントを指定できます。
 
 **Idl_module**属性と同様の機能を持つ、[モジュール](/windows/desktop/Midl/module)MIDL 属性。
 

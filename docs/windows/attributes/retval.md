@@ -7,10 +7,10 @@ helpviewer_keywords:
 - retval attribute
 ms.assetid: bfa16f08-157d-4eea-afde-1232c54b8501
 ms.openlocfilehash: 9f5ad86a289f8904278a58636e66809ae0edd55b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035100"
 ---
 # <a name="retval"></a>retval
@@ -42,7 +42,7 @@ ms.locfileid: "59035100"
 |**対象**|インターフェイスのパラメーター、インターフェイス メソッド|
 |**反復可能**|いいえ|
 |**必要な属性**|**out**|
-|**無効な属性**|**の**|
+|**無効な属性**|**in**|
 
 属性コンテキストの詳細については、「 [属性コンテキスト](cpp-attributes-com-net.md#contexts)」を参照してください。
 

@@ -1932,10 +1932,10 @@ helpviewer_keywords:
 - intrinsics, ARM
 ms.assetid: d3d7dadd-7bd5-4508-8bff-371a66913e20
 ms.openlocfilehash: 47fd2f449568494bafde993e035d3ec37c44f6fe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027632"
 ---
 # <a name="arm-intrinsics"></a>ARM 組み込み
@@ -2225,7 +2225,7 @@ int _MoveFromCoprocessor2(
 
 この組み込みの 5 つのすべてのパラメーターの値は、コンパイル時に既知の定数式である必要があります。
 
-`_MoveFromCoprocessor` MRC 命令を使用します。`_MoveFromCoprocessor2`は MRC2 を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
+`_MoveFromCoprocessor` は MRC 命令を使用し、`_MoveFromCoprocessor2` は MRC2 を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
 ###  <a name="MoveFromCo64"></a> _MoveFromCoprocessor64
 
@@ -2250,7 +2250,7 @@ unsigned __int64 _MoveFromCoprocessor64(
 *crm*<br/>
 コプロセッサのレジスタ番号 (範囲は 0 ～ 15)。これは、追加のソースまたはターゲットのオペランドを指定します。
 
-**戻り値**
+**値を返します**
 
 コプロセッサから読み取られる値。
 
@@ -2258,7 +2258,7 @@ unsigned __int64 _MoveFromCoprocessor64(
 
 この組み込みの 3 つのすべてのパラメーターの値は、コンパイル時に既知の定数式である必要があります。
 
-`_MoveFromCoprocessor64` MRRC 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
+`_MoveFromCoprocessor64` は MRRC 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
 ###  <a name="MoveToCo"></a> _MoveToCoprocessor、_MoveToCoprocessor2
 
@@ -2312,7 +2312,7 @@ void _MoveToCoprocessor2(
 
 この組み込みの `coproc`、`opcode1`、`crn`、`crm`、および `opcode2` の各パラメーターの値は、コンパイル時に既知の定数式である必要があります。
 
-`_MoveToCoprocessor` MCR 命令を使用します。`_MoveToCoprocessor2`は MCR2 を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
+`_MoveToCoprocessor` は MCR 命令を使用し、`_MoveToCoprocessor2` は MCR2 を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
 ###  <a name="MoveToCo64"></a> _MoveToCoprocessor64
 
@@ -2346,7 +2346,7 @@ void _MoveFromCoprocessor64(
 
 この組み込みの `coproc`、`opcode1`、および `crm` の各パラメーターの値は、コンパイル時に既知の定数式である必要があります。
 
-`_MoveFromCoprocessor64` MCRR 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
+`_MoveFromCoprocessor64` は MCRR 命令を使用します。 パラメーターは、命令語に直接エンコードされたビットフィールドに対応します。 パラメーターの解釈は、コプロセッサに依存しています。 詳細については、対象のコプロセッサのマニュアルを参照してください。
 
 ##  <a name="I"></a> 他のアーキテクチャの組み込みの ARM サポート
 
@@ -2577,6 +2577,6 @@ void _MoveFromCoprocessor64(
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [ARM アセンブラー リファレンス](../assembler/arm/arm-assembler-reference.md)<br/>
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)

@@ -37,10 +37,10 @@ helpviewer_keywords:
 - .rct files [C++]
 ms.assetid: 82be732a-cdcd-4a58-8de7-976d1418f86b
 ms.openlocfilehash: c22df99240c0fa076124e33224a4f6f4ab9a957e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028523"
 ---
 # <a name="how-to-create-resources-c"></a>方法: リソース (C++) を作成します。
@@ -118,9 +118,9 @@ Windows を使用するための Microsoft Foundation Class (MFC) アプリケ�
 | プロパティ | 説明 |
 |---|---|
 | **リソースの種類** | 作成するリソースの種類を指定します。<br/><br/>あるその他のリソースを表示するカーソルおよびダイアログ ボックス リソース カテゴリを展開する *.\Microsoft visual Studio\<バージョン\>\VC\VCResourceTemplates\\< LCID\>\mfc.rct*します。 .Rct ファイルを追加する必要がある場合は、ここに配置するか指定別[インクルード パス](../windows/how-to-specify-include-directories-for-resources.md)します。 ツリー コントロールの最上部に表示されるリソースは、Visual Studio によって提供される既定のリソースです。 .Rct ファイル内のリソースは、2 番目のレベルを適切なカテゴリの下に表示されます。 追加できる .rct ファイルの数にあらかじめ設定された制限はありません。<br/><br/> |
-| **新規作成** | 選択した種類に基づくリソースの作成、**リソースの種類**ボックスし、適切なエディターで、リソースを開きます。<br/><br/>たとえば、ダイアログ リソースを作成する場合、リソースを開きますで、[ダイアログ エディター](../windows/dialog-editor.md)します。 |
-| **インポート** | 開く、**インポート** ダイアログ ボックスで、現在のプロジェクトにインポートするリソースに移動します。<br/><br/>ビットマップ、アイコン、カーソルをインポートする HTML、サウンド (します。WAV)、またはカスタム リソース ファイル。 |
-| **カスタム** | 開く、**新規カスタム リソース**カスタム リソースを作成する ダイアログ ボックス。<br/><br/>含まれています、**リソースの種類**カスタム リソースの種類の名前を入力するためのテキスト ボックスを提供するプロパティ。 Visual C では、終了すると、名前が自動的に大文字にします。 のみカスタム リソースを編集、[バイナリ エディター](../windows/binary-editor.md)します。 |
+| **新規** | 選択した種類に基づくリソースの作成、**リソースの種類**ボックスし、適切なエディターで、リソースを開きます。<br/><br/>たとえば、ダイアログ リソースを作成する場合、リソースを開きますで、[ダイアログ エディター](../windows/dialog-editor.md)します。 |
+| **Import** | 開く、**インポート** ダイアログ ボックスで、現在のプロジェクトにインポートするリソースに移動します。<br/><br/>ビットマップ、アイコン、カーソルをインポートする HTML、サウンド (します。WAV)、またはカスタム リソース ファイル。 |
+| **Custom** | 開く、**新規カスタム リソース**カスタム リソースを作成する ダイアログ ボックス。<br/><br/>含まれています、**リソースの種類**カスタム リソースの種類の名前を入力するためのテキスト ボックスを提供するプロパティ。 Visual C では、終了すると、名前が自動的に大文字にします。 のみカスタム リソースを編集、[バイナリ エディター](../windows/binary-editor.md)します。 |
 
 新しいリソースを作成するときに Visual C 一意の名前を割り当てる、たとえば、`IDD_Dialog1`します。 このリソース ID をカスタマイズするには、関連付けられているリソース エディターで、またはでリソース プロパティを編集して、[プロパティ ウィンドウ](/visualstudio/ide/reference/properties-window)します。
 
@@ -189,6 +189,6 @@ Win32
 
 ## <a name="see-also"></a>関連項目
 
-[リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)<br/>
-[方法: リソースを管理します。](../windows/how-to-copy-resources.md)<br/>
-[方法: コンパイル時にリソースを含める](../windows/how-to-include-resources-at-compile-time.md)<br/>
+[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
+[方法: リソースの管理](../windows/how-to-copy-resources.md)<br/>
+[方法: コンパイル時にリソースをインクルードする](../windows/how-to-include-resources-at-compile-time.md)<br/>

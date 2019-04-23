@@ -88,10 +88,10 @@ helpviewer_keywords:
 - images [C++], converting formats
 ms.assetid: 66db3fb2-cfc1-48a2-9bdd-53f61eb7ee30
 ms.openlocfilehash: d10593ffbae7aef55adc3334057402b6952d8ba7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027598"
 ---
 # <a name="how-to-create-an-icon-or-other-image"></a>方法: アイコンまたはその他のイメージを作成します。
@@ -155,8 +155,8 @@ ms.locfileid: "59027598"
 
 |プロパティ|説明|
 |---|---|
-|**幅**|カスタム イメージの幅をピクセル (1 ~ 512 の制限を 2048) で入力する場所を提供します。|
-|**高さ**|ピクセル (1 ~ 512 の制限を 2048) でカスタム イメージの高さを入力する場所を提供します。|
+|**Width**|カスタム イメージの幅をピクセル (1 ~ 512 の制限を 2048) で入力する場所を提供します。|
+|**Height**|ピクセル (1 ~ 512 の制限を 2048) でカスタム イメージの高さを入力する場所を提供します。|
 |**色**|カスタム イメージの色の数を選択する場所を提供します。2、16、または 256 です。|
 
 使用して、**開く&lt;デバイス&gt;イメージ**を C++ プロジェクトでデバイスのイメージを開く ダイアログ ボックス。 現在のリソース (現在のリソースの一部であるイメージ) の既存のデバイスのイメージが一覧表示します。 次のプロパティは次のとおりです。
@@ -320,9 +320,9 @@ Gif 形式や JPEG イメージを開くことができます、**イメージ �
 ## <a name="see-also"></a>関連項目
 
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)<br/>
-[方法: イメージを編集します。](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[方法: 描画ツールを使用して、](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
-[方法: 色の調整](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[方法: 画像を編集する](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[方法: 描画ツールを使用する](../windows/using-a-drawing-tool-image-editor-for-icons.md)<br/>
+[方法: 色を調整する](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>
 <!--
 [Converting Bitmaps to Toolbars](../windows/converting-bitmaps-to-toolbars.md)<br/>

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - const_seg pragma
 ms.assetid: 1eb58ee2-fb0e-4a39-9621-699c8f5ef957
 ms.openlocfilehash: c58f154f5e1ab6906b45d59f454a7dc2b5c0bfbe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029623"
 ---
 # <a name="constseg"></a>const_seg
@@ -51,7 +51,7 @@ OBJ ファイルを表示できる、 [dumpbin](../build/reference/dumpbin-comma
 
 `const_seg` 内に動的な初期化を必要とするオブジェクトを定義すると、未定義の動作が発生します。
 
-`#pragma const_seg` パラメーターなしのセグメントを .rdata にリセットします。
+パラメーターなしの `#pragma const_seg` は、セグメントを .rdata にリセットします。
 
 ## <a name="example"></a>例
 

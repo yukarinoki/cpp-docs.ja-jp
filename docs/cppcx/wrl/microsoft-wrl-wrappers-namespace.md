@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Wrappers namespace
 ms.assetid: 36ac38c7-1fc3-42da-a879-5c68661dc9e1
 ms.openlocfilehash: 4b88ad0da31321a696c1238f1c9838d3b3a1c927
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030116"
 ---
 # <a name="microsoftwrlwrappers-namespace"></a>Microsoft::WRL::Wrappers 名前空間
@@ -37,7 +37,7 @@ namespace Microsoft::WRL::Wrappers;
 |名前|説明|
 |----------|-----------------|
 |[CriticalSection クラス](criticalsection-class.md)|クリティカル セクション オブジェクトを表します。|
-|[イベント クラス (WRL)](event-class-wrl.md)|イベントを表します。|
+|[Event クラス (WRL)](event-class-wrl.md)|イベントを表します。|
 |[HandleT クラス](handlet-class.md)|オブジェクトへのハンドルを表します。|
 |[HString クラス](hstring-class.md)|HSTRING ハンドルの操作をサポートします。|
 |[HStringReference クラス](hstringreference-class.md)|既存の文字列から作成された HSTRING を表します。|

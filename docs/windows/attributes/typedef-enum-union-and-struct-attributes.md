@@ -6,10 +6,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: f8a4fe94-dc02-4aed-bc31-3e500d42f4c7
 ms.openlocfilehash: 2b56ada13a0c597866d538991ed1e83078924ac9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029584"
 ---
 # <a name="typedef-enum-union-and-struct-attributes"></a>Typedef、Enum、Union、および Struct 型の属性
@@ -21,7 +21,7 @@ ms.locfileid: "59029584"
 |属性|説明|
 |---------------|-----------------|
 |[case](case-cpp.md)|使用される、 [switch_type](switch-type.md)属性、**共用体**します。|
-|[カスタム](custom-cpp.md)|独自の属性を定義できます。|
+|[custom](custom-cpp.md)|独自の属性を定義できます。|
 |[export](export.md)|.Idl ファイルに配置するデータ構造をによりします。|
 |[first_is](first-is.md)|転送する最初の配列要素のインデックスを指定します。|
 |[helpcontext](helpcontext.md)|ユーザーがヘルプ ファイル内のこの要素についての情報を表示できるようにコンテキスト ID を指定します。|
@@ -40,7 +40,7 @@ ms.locfileid: "59029584"
 
 |属性|説明|
 |---------------|-----------------|
-|[カスタム](custom-cpp.md)|独自の属性を定義できます。|
+|[custom](custom-cpp.md)|独自の属性を定義できます。|
 |[export](export.md)|.Idl ファイルに配置するデータ構造をによりします。|
 |[uuid](uuid-cpp-attributes.md)|クラスまたはインターフェイスの一意の ID を指定します。|
 |[v1_enum](v1-enum.md)|指定した列挙型は、16 ビットの既定ではなく、32 ビットのエンティティとして送信するよう指示します。|
@@ -49,7 +49,7 @@ ms.locfileid: "59029584"
 
 |属性|説明|
 |---------------|-----------------|
-|[カスタム](custom-cpp.md)|独自の属性を定義できます。|
+|[custom](custom-cpp.md)|独自の属性を定義できます。|
 |[export](export.md)|.Idl ファイルに配置するデータ構造をによりします。|
 |[first_is](first-is.md)|転送する最初の配列要素のインデックスを指定します。|
 |[last_is](last-is.md)|転送する最後の配列要素のインデックスを指定します。|
@@ -76,7 +76,7 @@ ms.locfileid: "59029584"
 |[coclass](coclass.md)|ActiveX コントロールを作成します。|
 |[com_interface_entry](com-interface-entry-cpp.md)|COM マップには、インターフェイスのエントリを追加します。|
 |[control](control.md)|コントロールに、ユーザー定義型を指定します。|
-|[カスタム](custom-cpp.md)|独自の属性を定義できます。|
+|[custom](custom-cpp.md)|独自の属性を定義できます。|
 |[db_column](db-column.md)|行セットに指定された列をバインドします。|
 |[db_command](db-command.md)|OLE DB コマンドを作成します。|
 |[db_param](db-param.md)|入力または出力パラメーターを使用して、指定したメンバー変数を関連付けるし、変数を区切ります。|
@@ -95,8 +95,8 @@ ms.locfileid: "59029584"
 |[max_is](max-is.md)|有効な配列のインデックスの最大値を指定します。|
 |[requires_category](requires-category.md)|ターゲット クラスの必須コンポーネントのカテゴリを指定します。|
 |[size_is](size-is.md)|メモリのサイズがサイズのポインターに割り当てられた、サイズのポインター、および 1 次元または多次元配列へのポインターのサイズを指定します。|
-|[ソース](source-cpp.md)|クラスの場合、接続ポイント用の COM オブジェクトのソース インターフェイスを指定します。 プロパティまたはメソッドでは、オブジェクトまたはイベントのソースをバリアントにメンバーを返すことを示します。|
-|[スレッド化](threading-cpp.md)|COM オブジェクトのスレッド モデルを指定します。|
+|[source](source-cpp.md)|クラスの場合、接続ポイント用の COM オブジェクトのソース インターフェイスを指定します。 プロパティまたはメソッドでは、オブジェクトまたはイベントのソースをバリアントにメンバーを返すことを示します。|
+|[threading](threading-cpp.md)|COM オブジェクトのスレッド モデルを指定します。|
 |[unique](unique-cpp.md)|一意のポインターを指定します。|
 |[uuid](uuid-cpp-attributes.md)|クラスまたはインターフェイスの一意の ID を指定します。|
 |[version](version-cpp.md)|クラスの複数のバージョン間で特定のバージョンを識別します。|

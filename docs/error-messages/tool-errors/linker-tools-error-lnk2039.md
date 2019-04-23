@@ -7,10 +7,10 @@ helpviewer_keywords:
 - LNK2039
 ms.assetid: eaa296bd-4901-41f6-8410-6d03ee827144
 ms.openlocfilehash: 57d0c101358f84816c8d0cf96eb5137833df0b48
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027563"
 ---
 # <a name="linker-tools-error-lnk2039"></a>リンカ ツール エラー LNK2039
@@ -28,4 +28,4 @@ Ref クラス ' <`type`>' が指定された .obj ファイルにインポート
 ## <a name="see-also"></a>関連項目
 
 [リンカー ツール エラーと警告](../../error-messages/tool-errors/linker-tools-errors-and-warnings.md)<br/>
-[リンカ ツール エラー LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)
+[リンカー ツール エラー LNK1332](../../error-messages/tool-errors/linker-tools-error-lnk1332.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual C++, preprocessor macros
 ms.assetid: a7bfc5d4-2537-4fe0-bef0-70cec0b43388
 ms.openlocfilehash: 281aaf686c07894b5cb1fab187ba903179c51de8
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032181"
 ---
 # <a name="macros-cc"></a>マクロ (C/C++)
@@ -30,7 +30,7 @@ ms.locfileid: "59032181"
 
 - [マクロと C++](../preprocessor/macros-and-cpp.md)
 
-- [Variadic マクロ](../preprocessor/variadic-macros.md)
+- [可変個引数マクロ](../preprocessor/variadic-macros.md)
 
 - [定義済みマクロ](../preprocessor/predefined-macros.md)
 

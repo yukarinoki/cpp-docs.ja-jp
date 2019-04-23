@@ -12,10 +12,10 @@ helpviewer_keywords:
 - builds [C++], custom build steps
 ms.assetid: beb2f017-3e9f-4b2c-9b57-2572fd2628e4
 ms.openlocfilehash: fc12689148e3bf23c233e4656249625d1156f9a7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028507"
 ---
 # <a name="understanding-custom-build-steps-and-build-events"></a>カスタム ビルド ステップとビルド イベントについて
@@ -66,12 +66,12 @@ Visual C++ 開発環境では、ビルド処理をカスタマイズする基本
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[カスタム ビルド ツールを指定します。](specifying-custom-build-tools.md)<br/>
-[ビルド イベントを指定します。](specifying-build-events.md)<br/>
-[ビルドのカスタマイズをトラブルシューティングします。](troubleshooting-build-customizations.md)<br/>
-[カスタム ビルド ステップまたはビルド イベントの出力の形式](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
+[カスタム ビルド ツールを指定する](specifying-custom-build-tools.md)<br/>
+[ビルド イベントを指定する](specifying-build-events.md)<br/>
+[ビルドのカスタマイズをトラブルシューティングする](troubleshooting-build-customizations.md)<br/>
+[カスタム ビルド ステップまたはビルド イベントの出力を書式設定する](formatting-the-output-of-a-custom-build-step-or-build-event.md)<br/>
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio プロジェクトの C++](creating-and-managing-visual-cpp-projects.md)<br>
+[Visual Studio プロジェクト - C++](creating-and-managing-visual-cpp-projects.md)<br>
 [ビルドのコマンドとプロパティの共通マクロ](reference/common-macros-for-build-commands-and-properties.md)

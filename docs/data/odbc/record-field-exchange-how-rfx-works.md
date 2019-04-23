@@ -11,10 +11,10 @@ helpviewer_keywords:
 - RFX (ODBC) [C++], binding fields and parameters
 ms.assetid: e647cacd-62b0-4b80-9e20-b392deca5a88
 ms.openlocfilehash: 7da9d480f16dcb6bc5ded0a1dff559b1b1ac4b38
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032678"
 ---
 # <a name="record-field-exchange-how-rfx-works"></a>レコード フィールド エクス チェンジ:RFX のしくみ
@@ -90,7 +90,7 @@ ms.locfileid: "59032678"
 
 1. `AddNew` または`Edit`RFX が変更されたフィールド データ メンバーを検出できるように編集バッファー内のフィールドを準備します。
 
-   新しいレコードに使用すると、新しいものを比較する前の値があるないため`AddNew`PSEUDO_ 値に各フィールド データ メンバーの値を設定します。 後で、呼び出すときに`Update`、RFX PSEUDO_ 値を持つ各データ メンバーの値を比較します。 違いがある場合、データ メンバーが設定されています。 (PSEUDO_ はレコードの列に Null 値を true と同じも、これらのいずれかが C++ の NULL と同じです)。
+   新しいレコードに使用すると、新しいものを比較する前の値があるないため`AddNew`PSEUDO_ 値に各フィールド データ メンバーの値を設定します。 後で、呼び出すときに`Update`、RFX PSEUDO_ 値を持つ各データ メンバーの値を比較します。 違いがある場合、データ メンバーが設定されています。 (PSEUDO_ はレコードの列に Null 値を true と同じがこれらのいずれかと同じC++NULL です)。
 
    異なり、`Update`に対して呼び出す`AddNew`、`Update`に対して呼び出す`Edit`PSEUDO_ を使用するのではなく、以前に格納された値で更新された値を比較します。 その違いは`AddNew`比較の以前に格納された値がありません。
 
@@ -123,7 +123,7 @@ ms.locfileid: "59032678"
 ## <a name="see-also"></a>関連項目
 
 [レコード フィールド エクスチェンジ (RFX)](../../data/odbc/record-field-exchange-rfx.md)<br/>
-[MFC ODBC コンシューマー](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
+[MFC ODBC コンシューマーします。](../../mfc/reference/adding-an-mfc-odbc-consumer.md)<br/>
 [マクロ、グローバル関数、およびグローバル変数](../../mfc/reference/mfc-macros-and-globals.md)<br/>
 [CFieldExchange クラス](../../mfc/reference/cfieldexchange-class.md)<br/>
 [CRecordset::DoFieldExchange](../../mfc/reference/crecordset-class.md#dofieldexchange)

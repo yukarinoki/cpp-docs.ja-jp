@@ -18,10 +18,10 @@ helpviewer_keywords:
 - rowsets [C++], supported types
 ms.assetid: edc9c8b3-1a2d-4c2d-869f-7e058c631042
 ms.openlocfilehash: 21043e22b37084fa543bf6b8a0fc176c3b8be788
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030025"
 ---
 # <a name="accessors-and-rowsets"></a>アクセサーと行セット
@@ -51,11 +51,11 @@ ms.locfileid: "59030025"
 
 |アクセサーの種類|動的|パラメーターを処理します。|バッファー|複数のアクセサー|
 |-------------------|-------------|--------------------|------------|------------------------|
-|`CAccessor`|いいえ|はい|ユーザー|はい|
+|`CAccessor`|いいえ|はい|ユーザー|[はい]|
 |`CDynamicAccessor`|[はい]|いいえ|OLE DB テンプレート|いいえ|
 |`CDynamicParameterAccessor`|[はい]|はい|OLE DB テンプレート|いいえ|
 |`CDynamicStringAccessor[A,W]`|はい|いいえ|OLE DB テンプレート|いいえ|
-|`CManualAccessor`|[はい]|[はい]|ユーザー|はい|
+|`CManualAccessor`|[はい]|はい|ユーザー|はい|
 
 ## <a name="rowset-types"></a>行セットの種類
 

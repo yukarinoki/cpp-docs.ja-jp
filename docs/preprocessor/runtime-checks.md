@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, runtime_checks
 ms.assetid: ae50b43f-f88d-47ad-a2db-3389e9e7df5b
 ms.openlocfilehash: 44c26fb90a2d2f9ba78ec7dba7cceed65a4b4ed7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027084"
 ---
 # <a name="runtimechecks"></a>runtime_checks
@@ -40,7 +40,7 @@ ms.locfileid: "59027084"
 |*c*|より小さいデータ型に値が代入されてデータが失われる場合に報告します。|
 |*u*|定義する前に変数が使用された場合に報告します。|
 
-使用される同じ文字のうち、`/RTC`コンパイラ オプション。 例えば:
+使用される同じ文字のうち、`/RTC`コンパイラ オプション。 例:
 
 ```
 #pragma runtime_checks( "sc", restore )

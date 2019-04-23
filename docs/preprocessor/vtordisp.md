@@ -9,10 +9,10 @@ helpviewer_keywords:
 - vtordisp pragma
 ms.assetid: 05b7d73c-43fa-4b62-8c8a-170a9e427391
 ms.openlocfilehash: 67c6c329bcee75012f6075334760925eca945501
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034379"
 ---
 # <a name="vtordisp"></a>vtordisp
@@ -41,7 +41,7 @@ vtordisp 構築/破棄ディスプレイスメント隠しメンバーの追加�
 *n*<br/>
 vtordisp 設定の新しい値を指定します。 指定できる値は 0、1 または 2 に対応する、 `/vd0`、 `/vd1`、および`/vd2`コンパイラ オプション。 詳細については、次を参照してください。 [/vd (ディスプレイスメント)](../build/reference/vd-disable-construction-displacements.md)します。
 
-*日付*<br/>
+*on*<br/>
 これは、`#pragma vtordisp(1)` に相当します。
 
 *オフ*<br/>
@@ -57,7 +57,7 @@ vtordisp 設定の新しい値を指定します。 指定できる値は 0、1 
 
 2 では、非表示を指定する**vtordisp**仮想関数を持つすべての仮想基底クラスのメンバー。  `vtordisp(2)` 適切なパフォーマンスを確保する必要があります**dynamic_cast**部分的に構築されたオブジェクト。 詳細については、次を参照してください。[コンパイラの警告 (レベル 1) C4436](../error-messages/compiler-warnings/compiler-warning-level-1-c4436.md)します。
 
-`#pragma vtordisp()`を引数なしで初期設定に、vtordisp 設定を復元します。
+引数のない `#pragma vtordisp()` は、vtordisp 設定を初期設定に戻します。
 
 ```cpp
 #pragma vtordisp(push, 2)
@@ -65,7 +65,7 @@ class GetReal : virtual public VBase { ... };
 #pragma vtordisp(pop)
 ```
 
-**END C++ 固有の仕様**
+**END C 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - preprocessor
 ms.assetid: e120eda3-b413-49f1-a07c-e9fb128cf500
 ms.openlocfilehash: b1443d88fdba470cb8ed5058c9a9012bfbdc5bc7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028575"
 ---
 # <a name="preprocessor"></a>プリプロセッサ
@@ -28,7 +28,7 @@ ms.locfileid: "59028575"
 
 使用して前処理した後、ソース コードの一覧を取得することができます、 [/E](../build/reference/e-preprocess-to-stdout.md)または[/EP](../build/reference/ep-preprocess-to-stdout-without-hash-line-directives.md)コンパイラ オプション。 両オプション共に、プリプロセッサを呼び出し、生成されるテキストを標準出力デバイス (ほとんどの場合、コンソール) に出力します。 2 つのオプション間の違いは、/E では `#line` ディレクティブが含まれ、/EP ではこうしたディレクティブが削除されることです。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ##  <a name="_predir_special_terminology"></a> 特別な用語
 

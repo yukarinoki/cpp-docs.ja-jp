@@ -6,10 +6,10 @@ helpviewer_keywords:
 - preprocessor, conventions
 ms.assetid: 469ce448-dc6c-4d0e-ba2b-e2e7a10155e1
 ms.openlocfilehash: c84be60938752e7401e2178dbcbf98c6ed32b1cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034275"
 ---
 # <a name="conventions"></a>規約
@@ -17,7 +17,7 @@ ms.locfileid: "59034275"
 
 |属性|説明|
 |---------------|-----------------|
-|*非終端要素*|斜体は、非終端要素を示します。|
+|*nonterminal*|斜体は、非終端要素を示します。|
 |#include|太字で示される終端要素は、示されたとおりに入力する必要があるリテラル予約語およびシンボルです。 このコンテキストの文字は、常に大文字と小文字が区別されます。|
 |opt|後ろに <sub>opt</sub> が続く非終端要素は、常に省略可能です。|
 |既定のタイプフェイス|このタイプフェイスで記述されているか、示されているセット内の文字は、ステートメント内で終端要素として使用できます。|

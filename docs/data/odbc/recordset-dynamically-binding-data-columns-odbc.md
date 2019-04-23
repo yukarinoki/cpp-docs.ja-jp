@@ -9,10 +9,10 @@ helpviewer_keywords:
 - columns [C++], binding to recordsets
 ms.assetid: bff67254-d953-4ae4-9716-91c348cb840b
 ms.openlocfilehash: c2f2a6a6696f46fb5b8f2777c6c911269c9e7a80
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035132"
 ---
 # <a name="recordset-dynamically-binding-data-columns-odbc"></a>レコード セット:動的に結びつける方法 (ODBC) のデータ列
@@ -92,7 +92,7 @@ MFC アプリケーション ウィザード、デザイン時にまたは[MFC O
 |||
 |-|-|
 |**Current-Table-Columns**| (図にはリスト 1)現在のデータ ソースのテーブルの列の一覧。 この一覧は、レコード セットに現在バインドされている列の一覧に一致があります。|
-|**Bound-Recordset-Columns**| (図でリスト 2)列の一覧は、レコード セットにバインドします。 これらの列が既にある RFX ステートメント、`DoFieldExchange`関数。|
+|**レコード セット列のバインド**| (図でリスト 2)列の一覧は、レコード セットにバインドします。 これらの列が既にある RFX ステートメント、`DoFieldExchange`関数。|
 |**動的に列のバインド-**| (図でリスト 3)レコード セットではなく、テーブルで列の一覧。 これらは動的にバインドする列です。|
 |**動的な列の値**| (図でリスト 4)動的にバインドする列から値の記憶域を含む一覧を取得します。 この一覧の要素は、動的に列のバインドの一対一で対応します。|
 

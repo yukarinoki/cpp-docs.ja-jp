@@ -7,10 +7,10 @@ helpviewer_keywords:
 - __readeflags intrinsic
 ms.assetid: f9d2f4d8-c428-491f-b8de-04d0566b2b6b
 ms.openlocfilehash: 9913fb4287e673faf79b2c352bb42eda7f590fdd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026371"
 ---
 # <a name="readeflags"></a>__readeflags
@@ -40,9 +40,9 @@ unsigned __int64 __readeflags(void);
 
 **ヘッダー ファイル** \<intrin.h >
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [__writeeflags](../intrinsics/writeeflags.md)

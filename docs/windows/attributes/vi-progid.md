@@ -7,10 +7,10 @@ helpviewer_keywords:
 - vi_progid attribute
 ms.assetid: a52449be-b93e-4111-b883-44bb8da53261
 ms.openlocfilehash: 7050543c9acf3801a99d3e32e119325900bdb050
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033590"
 ---
 # <a name="viprogid"></a>vi_progid
@@ -32,7 +32,7 @@ Progid は、人間が判読できるバージョンの COM および ActiveX �
 
 ## <a name="remarks"></a>Remarks
 
-**Vi_progid** C++ 属性では、COM オブジェクトのバージョン依存 ProgID を指定することができます。 ProgID がフォーム*name1.name2.version*します。 バージョン依存 ProgID がない、*バージョン*します。 両方を指定することは、`progid`と**vi_progid**属性を`coclass`します。 指定しない場合**vi_progid**、バージョン依存 ProgID がで指定された値、 [progid](progid.md)属性。
+**Vi_progid** C++属性を使用して、COM オブジェクトのバージョン依存 ProgID を指定できます。 ProgID がフォーム*name1.name2.version*します。 バージョン依存 ProgID がない、*バージョン*します。 両方を指定することは、`progid`と**vi_progid**属性を`coclass`します。 指定しない場合**vi_progid**、バージョン依存 ProgID がで指定された値、 [progid](progid.md)属性。
 
 **vi_progid**意味、`coclass`を指定する場合は、属性**vi_progid**、指定した場合と同じことが、`coclass`と**vi_progid**属性。
 

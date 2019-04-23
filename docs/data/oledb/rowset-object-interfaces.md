@@ -9,10 +9,10 @@ helpviewer_keywords:
 - interfaces, list of
 ms.assetid: 0d7a5d48-2fe4-434f-a84b-157c1fdc3494
 ms.openlocfilehash: 1f3e6066af4b6870c5fa90f7bde373bb7be476ce
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032954"
 ---
 # <a name="rowset-object-interfaces"></a>行セット オブジェクト インターフェイス
@@ -21,10 +21,10 @@ ms.locfileid: "59032954"
 
 |Interface|必須?|OLE DB テンプレートによって実装されるでしょうか。|
 |---------------|---------------|--------------------------------------|
-|[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|必須|はい|
+|[IAccessor](/previous-versions/windows/desktop/ms719672(v=vs.85))|必須|[はい]|
 |[IColumnsInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|必須|はい|
 |[IConvertType](/previous-versions/windows/desktop/ms715926(v=vs.85))|必須|はい|
-|[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))|必須|[はい]|
+|[IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))|必須|はい|
 |[IRowsetInfo](/previous-versions/windows/desktop/ms724541(v=vs.85))|必須|はい|
 |[IChapteredRowset](/previous-versions/windows/desktop/ms718180(v=vs.85))|Optional|いいえ|
 |[IColumnsInfo2](/previous-versions/windows/desktop/ms712953(v=vs.85))|Optional|いいえ|
@@ -41,7 +41,7 @@ ms.locfileid: "59032954"
 |[IRowsetLocate](/previous-versions/windows/desktop/ms721190(v=vs.85))|Optional|はい|
 |[IRowsetRefresh](/previous-versions/windows/desktop/ms714892(v=vs.85))|Optional|いいえ|
 |[IRowsetScroll](/previous-versions/windows/desktop/ms712984(v=vs.85))|Optional|いいえ|
-|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85))|Optional|はい|
+|[IRowsetUpdate](/previous-versions/windows/desktop/ms714401(v=vs.85))|Optional|[はい]|
 |[IRowsetView](/previous-versions/windows/desktop/ms709755(v=vs.85))|Optional|いいえ|
 |[ISupportErrorInfo](/previous-versions/windows/desktop/ms715816(v=vs.85))|Optional|はい|
 |[IRowsetBookmark](/previous-versions/windows/desktop/ms714246(v=vs.85))|Optional|いいえ|

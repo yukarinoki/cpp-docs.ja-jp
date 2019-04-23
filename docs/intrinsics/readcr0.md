@@ -7,10 +7,10 @@ helpviewer_keywords:
 - __readcr0 intrinsic
 ms.assetid: 25bdb093-d83c-48d7-9c0f-224de8e2c61c
 ms.openlocfilehash: 09d44e438b4aa99f9be63927a4cf116f12c6e634
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027793"
 ---
 # <a name="readcr0"></a>__readcr0
@@ -42,8 +42,8 @@ CR0 レジスタの値。
 
 この組み込みはカーネル モードのみで使用でき、そのルーチンは組み込みとしてのみ使用できます。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

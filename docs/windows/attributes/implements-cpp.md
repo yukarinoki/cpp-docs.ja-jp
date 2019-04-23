@@ -7,10 +7,10 @@ helpviewer_keywords:
 - implements attribute
 ms.assetid: 9cf0858b-cb7d-4d3c-81a6-97d87ed00d25
 ms.openlocfilehash: 9425f998f0e8fbe5f16e6eb136e00ba3fb7bd5d9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033684"
 ---
 # <a name="implements-c"></a>implements (C++)
@@ -26,10 +26,10 @@ IDL コクラスのメンバーであるが強制されているディスパッ�
 
 ### <a name="parameters"></a>パラメーター
 
-*インターフェイス*<br/>
+*interfaces*<br/>
 コンマ区切りの IDL コクラスのメンバーとなるインターフェイスの一覧。 1 つのインターフェイスを指定するための簡略化された方法が**実装 (** *interface_name* **)** します。
 
-*ディスパッチ インターフェイス*<br/>
+*dispinterfaces*<br/>
 コンマ区切りの IDL コクラスのメンバーとなるディスパッチ インターフェイスの一覧。 1 つのディスパッチ インターフェイスを指定するための簡略化された方法が**実装 (dispinterface =** *場合* **)** します。
 
 ## <a name="remarks"></a>Remarks
@@ -43,7 +43,7 @@ IDL コクラスのメンバーであるが強制されているディスパッ�
 |||
 |-|-|
 |**対象**|**クラス**、**構造体**|
-|**反復可能**|[はい]|
+|**反復可能**|はい|
 |**必要な属性**|なし|
 |**無効な属性**|なし|
 
