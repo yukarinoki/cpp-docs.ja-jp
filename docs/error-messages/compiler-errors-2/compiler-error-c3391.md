@@ -7,21 +7,21 @@ helpviewer_keywords:
 - C3391
 ms.assetid: c32532b9-7db4-4ccd-84b9-479e5a1a19d1
 ms.openlocfilehash: 32ba1ca63a3a6fafa3290946a976e6845385126f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58772593"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778280"
 ---
 # <a name="compiler-error-c3391"></a>コンパイラ エラー C3391
 
 'type_arg': ジェネリック パラメーター 'param' のジェネリック 'generic_type' の無効な型引数は null 非許容値型である必要があります
 
-ジェネリック型のインスタンス化が正しく行われませんでした。 型定義を確認してください。 詳細については、<xref:System.Nullable>と[ジェネリック](../../extensions/generics-cpp-component-extensions.md)を参照してください。
+ジェネリック型のインスタンス化が正しく行われませんでした。 型定義を確認してください。 詳細については、次を参照してください。<xref:System.Nullable>と[ジェネリック](../../extensions/generics-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 
-次の例を使用して C# を c++ のジェネリック型を作成するときに、サポートされていない特定の制約を持つジェネリック型を含むコンポーネントを作成する/cli CLI。 詳細については、「[型パラメーターの制約](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)」を参照してください。
+次の例を使用して c# を c++ のジェネリック型を作成するときに、サポートされていない特定の制約を持つジェネリック型を含むコンポーネントを作成する/cli CLI。 詳細については、「[型パラメーターの制約](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)」を参照してください。
 
 ```cs
 // C3391.cs

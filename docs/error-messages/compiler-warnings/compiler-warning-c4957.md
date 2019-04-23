@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4957
 ms.assetid: a18c52d4-23e2-44f1-b4b5-f7fa5a7f3987
 ms.openlocfilehash: 79a1b516db1508c755693b67ca2e4070095839da
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769343"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778983"
 ---
 # <a name="compiler-warning-c4957"></a>コンパイラの警告 C4957
 
@@ -23,7 +23,7 @@ ms.locfileid: "58769343"
 
 安全なキャストもあります (ユーザー定義の変換をトリガーする `static_cast` 、 `const_cast`など)。 [safe_cast](../../extensions/safe-cast-cpp-component-extensions.md) は、検証可能なコードを生成することが保証されています。
 
-詳細については、[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)を参照してください。
+詳細については、次を参照してください。[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
 
 **/Clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 

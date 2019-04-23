@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3651
 ms.assetid: a03e692e-c219-4654-9827-8415cfa5a22d
 ms.openlocfilehash: 6e773201e3bc9a4edb1ee77f1ddcd555e0ae0c0e
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58767224"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779337"
 ---
 # <a name="compiler-error-c3651"></a>コンパイラ エラー C3651
 
@@ -19,7 +19,7 @@ ms.locfileid: "58767224"
 
 明示的なオーバーライドが指定されましたが、基本データ型ではない型がオーバーライドされる関数。
 
-詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
+詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
 
 次の例では、C3651 が生成されます。
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3461
 ms.assetid: bd66833a-545d-445a-bdfe-dee771a450a4
 ms.openlocfilehash: a674ce7819c88dd4e26355c0129a6c181da5c276
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781953"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779022"
 ---
 # <a name="compiler-error-c3461"></a>コンパイラ エラー C3461
 
@@ -19,7 +19,7 @@ ms.locfileid: "58781953"
 
 型の転送は、CLR 型でのみ実行できます。  参照してください[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)詳細についてはします。
 
-詳細については、[Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)を参照してください。
+詳細については、次を参照してください。 [Type Forwarding (C +/cli CLI)](../../extensions/type-forwarding-cpp-cli.md)します。
 
 ## <a name="example"></a>例
 

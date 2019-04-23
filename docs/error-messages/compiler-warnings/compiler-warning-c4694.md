@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4694
 ms.assetid: 5ca122bb-34f3-43ee-a21f-95802cd515f7
 ms.openlocfilehash: 6164fd2e19e35233ba67feb84d117f1e4e01f20d
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58770357"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778840"
 ---
 # <a name="compiler-warning-c4694"></a>コンパイラの警告 C4694
 
@@ -19,7 +19,7 @@ ms.locfileid: "58770357"
 
 シールされた抽象クラスは参照型を継承できません。シールされた抽象クラスは、基底クラスの関数を実装することも、それ自体を基底クラスとして使用しすることもできません。
 
-詳細については、[抽象](../../extensions/abstract-cpp-component-extensions.md)、[シール](../../extensions/sealed-cpp-component-extensions.md)、および[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)を参照してください。
+詳細については、次を参照してください。[抽象](../../extensions/abstract-cpp-component-extensions.md)、[シール](../../extensions/sealed-cpp-component-extensions.md)、および[クラスと構造体](../../extensions/classes-and-structs-cpp-component-extensions.md)します。
 
 この警告は、自動的にエラーになります。 この動作を変更する場合を使用して、 [#pragma warning](../../preprocessor/warning.md)します。
 

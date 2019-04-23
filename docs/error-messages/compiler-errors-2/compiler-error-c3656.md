@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3656
 ms.assetid: 88965d85-73b0-4b35-8020-0650c9c94cd8
 ms.openlocfilehash: 9709f3105e957012c05111ea818890b6d1df8259
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58774712"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778411"
 ---
 # <a name="compiler-error-c3656"></a>コンパイラ エラー C3656
 
 'override': オーバーライド指定子を繰り返すことはできません
 
-明示的なオーバーライド キーワードは、1 回のみ指定できます。 詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
+明示的なオーバーライド キーワードは、1 回のみ指定できます。 詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
 
 次の例では、C3656 が生成されます。
 

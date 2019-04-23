@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4489
 ms.assetid: 43b51c8c-27b5-44c9-b974-fe4b48f4896f
 ms.openlocfilehash: dd150621ad3474444861982c095ae8a6addb52fa
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58768238"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779207"
 ---
 # <a name="compiler-warning-level-1-c4489"></a>コンパイラの警告 (レベル 1) C4489
 
@@ -19,7 +19,7 @@ ms.locfileid: "58768238"
 
 指定子のキーワードが、インターフェイス メソッドで正しく使用されていません。
 
-詳細については、[オーバーライド指定子を](../../extensions/override-specifiers-cpp-component-extensions.md)を参照してください。
+詳細については、次を参照してください。[オーバーライド指定子を](../../extensions/override-specifiers-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 

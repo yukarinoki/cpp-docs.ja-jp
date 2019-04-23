@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C4958
 ms.assetid: e79b9e9c-d572-4a3a-a3b6-60962b70864a
 ms.openlocfilehash: 96b73975f391493340dd01d85ad30a8c888b44c0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769408"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779350"
 ---
 # <a name="compiler-warning-c4958"></a>コンパイラの警告 C4958
 
@@ -21,7 +21,7 @@ ms.locfileid: "58769408"
 
 ポインター演算を使用すると、検証不能なイメージが作成されます。
 
-詳細については、[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)を参照してください。
+詳細については、次を参照してください。[純粋で検証可能なコード (C +/cli CLI)](../../dotnet/pure-and-verifiable-code-cpp-cli.md)します。
 
 **/Clr:safe**コンパイラ オプションは Visual Studio 2015 で非推奨とされ、Visual Studio 2017 でサポートされていません。
 

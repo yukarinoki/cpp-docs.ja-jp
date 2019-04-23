@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3919
 ms.assetid: 5f8eddda-d751-478b-930d-e18f7191ddfb
 ms.openlocfilehash: 05ac2fc9258a078f352b6012e64e86fe4b70c3f0
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58771475"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777188"
 ---
 # <a name="compiler-error-c3919"></a>コンパイラ エラー C3919
 
@@ -19,7 +19,7 @@ ms.locfileid: "58771475"
 
 イベントのアクセサー メソッドを正しく宣言されませんでした。
 
-イベントの詳細については、[イベント](../../extensions/event-cpp-component-extensions.md)を参照してください。
+イベントの詳細については、次を参照してください。[イベント](../../extensions/event-cpp-component-extensions.md)します。
 
 次の例では、C3919 が生成されます。
 

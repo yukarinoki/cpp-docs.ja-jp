@@ -1,6 +1,6 @@
 ---
-title: OpenMP 環境変数
-ms.date: 10/23/2018
+title: OpenMP の環境変数
+ms.date: 03/20/2019
 f1_keywords:
 - OpenMP environment variables
 - OMP_DYNAMIC
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - OMP_NUM_THREADS OpenMP environment variable
 - OMP_SCHEDULE OpenMP environment variable
 ms.assetid: 2178ce2b-ffa1-45ec-a455-64437711d15d
-ms.openlocfilehash: 99868fec581d93f451d321af365f6c4546319077
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: 73fb11db14df22e5df95fdec556ccdfc16a935e5
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50449687"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124968"
 ---
-# <a name="openmp-environment-variables"></a>OpenMP 環境変数
+# <a name="openmp-environment-variables"></a>OpenMP の環境変数
 
 OpenMP API で使用される環境変数へのリンクを提供します。
 
@@ -29,10 +29,10 @@ OpenMP の標準の Visual C の実装には、次の環境変数が含まれて
 
 |環境変数|説明|
 |--------------------|-----------|
+|[OMP_SCHEDULE](#omp-schedule)|動作を変更、[スケジュール](openmp-clauses.md#schedule)句と`schedule(runtime)`で指定された、`for`または`parallel for`ディレクティブ。|
+|[OMP_NUM_THREADS](#omp-num-threads)|によってオーバーライドされない限り、並列の領域でスレッドの最大数を設定[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)または[num_threads](openmp-clauses.md#num-threads)します。|
 |[OMP_DYNAMIC](#omp-dynamic)|OpenMP の実行時に、並行領域内のスレッドの数を調整できるかどうかを指定します。|
 |[OMP_NESTED](#omp-nested)|入れ子になった並列処理が有効になってこと、入れ子になった並列処理を有効になっているかを無効になっている場合を除き、かどうかを指定します。`omp_set_nested`します。|
-|[OMP_NUM_THREADS](#omp-num-threads)|によってオーバーライドされない限り、並列の領域でスレッドの最大数を設定[omp_set_num_threads](openmp-functions.md#omp-set-num-threads)または[num_threads](openmp-clauses.md#num-threads)します。|
-|[OMP_SCHEDULE](#omp-schedule)|動作を変更、[スケジュール](openmp-clauses.md#schedule)句と`schedule(runtime)`で指定された、`for`または`parallel for`ディレクティブ。|
 
 ## <a name="omp-dynamic"></a>OMP_DYNAMIC
 
@@ -48,7 +48,7 @@ set OMP_DYNAMIC[=TRUE | =FALSE]
 
 OpenMP の標準の Visual C の実装の既定値は`OMP_DYNAMIC=FALSE`します。
 
-詳細については、[4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)を参照してください。
+詳細については、次を参照してください。 [4.3 OMP_DYNAMIC](../../../parallel/openmp/4-3-omp-dynamic.md)します。
 
 ### <a name="example"></a>例
 
@@ -78,7 +78,7 @@ set OMP_NESTED[=TRUE | =FALSE]
 
 OpenMP の標準の Visual C の実装の既定値は`OMP_DYNAMIC=FALSE`します。
 
-詳細については、[4.4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md)を参照してください。
+詳細については、次を参照してください。 [4.4 OMP_NESTED](../../../parallel/openmp/4-4-omp-nested.md)します。
 
 ### <a name="example"></a>例
 
@@ -113,11 +113,11 @@ Visual C の実装では 64 まで、並列領域で必要なスレッドの最�
 
 既定値`num`Visual C の OpenMP 標準の実装は、ハイパー スレッド Cpu などの仮想プロセッサの数。
 
-詳細については、[4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)を参照してください。
+詳細については、次を参照してください。 [4.2 OMP_NUM_THREADS](../../../parallel/openmp/4-2-omp-num-threads.md)します。
 
 ### <a name="example"></a>例
 
-次のコマンド セット、`OMP_NUM_THREADS`環境変数を 16。
+次のコマンド セット、`OMP_NUM_THREADS`環境変数を`16`:
 
 ```
 set OMP_NUM_THREADS=16
@@ -140,21 +140,16 @@ set OMP_SCHEDULE[=type[,size]]
 ### <a name="parameters"></a>パラメーター
 
 *size*<br/>
-(省略可能)イテレーションのサイズを指定します。 `size` 正の整数である必要があります。 既定値は 1 の場合を除き、`type`は静的です。 有効でない場合に`type`は`runtime`します。
+(省略可能)イテレーションのサイズを指定します。 *サイズ*正の整数を指定する必要があります。 既定値は`1`、する場合を除く*型*は静的です。 有効でない場合に*型*は`runtime`します。
 
 *type*<br/>
-スケジュールの種類。
-
-- `dynamic`
-- `guided`
-- `runtime`
-- `static`
+スケジュール設定のいずれかの種類`dynamic`、 `guided`、 `runtime`、または`static`します。
 
 ### <a name="remarks"></a>Remarks
 
 OpenMP の標準の Visual C の実装の既定値は`OMP_SCHEDULE=static,0`します。
 
-詳細については、[4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md)を参照してください。
+詳細については、次を参照してください。 [4.1 OMP_SCHEDULE](../../../parallel/openmp/4-1-omp-schedule.md)します。
 
 ### <a name="example"></a>例
 
