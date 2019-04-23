@@ -3,10 +3,10 @@ title: '方法: ユニバーサル Windows プラットフォーム アプリで
 ms.date: 04/08/2019
 ms.assetid: 87e5818c-3081-42f3-a30d-3dca2cf0645c
 ms.openlocfilehash: 3aeef205effe072a25fc0b3dabb9145245461d45
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424197"
 ---
 # <a name="how-to-use-existing-c-code-in-a-universal-windows-platform-app"></a>方法: ユニバーサル Windows プラットフォーム アプリで既存の C++ コードを使用する
@@ -48,7 +48,7 @@ UWP のプロジェクトで既存の C++ コードを使える方法は、い�
 
 - [UWP アプリでネイティブ C++ スタティック ライブラリを使用する](#BK_StaticLib)
 
-- [C++ ライブラリを Windows ランタイム コンポーネントに移植する](#BK_WinRTComponent)
+- [C++ ライブラリをWindows ランタイム コンポーネントに移植する](#BK_WinRTComponent)
 
 ##  <a name="BK_Win32DLL"></a> UWP アプリで Win32 の DLL を使用する
 
