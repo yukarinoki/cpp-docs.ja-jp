@@ -4,10 +4,10 @@ ms.date: 03/05/2019
 helpviewer_keywords:
 - CMake build settings
 ms.openlocfilehash: 1bdf4ef3e20b055b6fa3d5449a880ddb7aab44a0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
-ms.translationtype: MT
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037524"
 ---
 # <a name="customize-cmake-build-settings"></a>CMake のビルド設定をカスタマイズする
@@ -100,16 +100,16 @@ CMake Linux プロジェクトでは、追加の設定が使用できます。 �
 
 ## <a name="environment-variables"></a>環境変数
 
- `CMakeSettings.json` 上記で説明したプロパティのいずれかの使用の環境変数もサポートしています。 `${env.FOO}` という構文を使うと、環境変数 %FOO% が展開されます。
+ `CMakeSettings.json` では、上記のすべてのプロパティにおいて環境変数を使うこともできます。 `${env.FOO}` という構文を使うと、環境変数 %FOO% が展開されます。
 このファイルの内部で組み込みマクロにアクセスすることもできます。
 
-- `${workspaceRoot}` – ワークスペース フォルダーの完全なパスを提供します。
-- `${workspaceHash}` – ワークスペースの場所のハッシュ(たとえば、フォルダー パスで使用する場合)、現在のワークスペースの一意の識別子を作成するのに役立ちます
-- `${projectFile}` – ルート CMakeLists.txt ファイルの完全なパス
-- `${projectDir}` – ルート CMakeLists.txt ファイルのフォルダーの完全なパス
-- `${thisFile}` – の完全なパス、`CMakeSettings.json`ファイル
-- `${name}` – 構成の名前
-- `${generator}` – この構成で使用されている CMake ジェネレーターの名前
+- `${workspaceRoot}` – ワークスペース フォルダーの完全なパスを提供します
+- `${workspaceHash}` – ワークスペースの場所のハッシュです。現在のワークスペースの一意識別子を作成するのに便利です (たとえば、フォルダーのパスで使用する場合)
+- `${projectFile}` – ルート CMakeLists.txt ファイルの完全なパスです
+- `${projectDir}` – ルート CMakeLists.txt ファイルのフォルダーの完全なパスです
+- `${thisFile}` – `CMakeSettings.json` ファイルの完全なパスです
+- `${name}` – 構成の名前です
+- `${generator}` – この構成で使用される CMake ジェネレーターの名前です
 
 ## <a name="ninja-command-line-arguments"></a>Ninja のコマンド ライン引数
 
@@ -137,7 +137,7 @@ usage: ninja [options] [targets...]
 
 ## <a name="inherited-environments"></a>継承された環境
 
- `CMakeSettings.json` サポートは、環境を継承します。 この機能を使うと、(1) 既定の環境を継承することができ、(2) 実行時に CMake.exe に渡されるカスタム環境変数を作成できます。
+ `CMakeSettings.json` は継承された環境をサポートします。 この機能を使うと、(1) 既定の環境を継承することができ、(2) 実行時に CMake.exe に渡されるカスタム環境変数を作成できます。
 
 ```json
   "inheritEnvironments": [ "msvc_x64_x64" ]
@@ -236,9 +236,9 @@ usage: ninja [options] [targets...]
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio で CMake プロジェクト](cmake-projects-in-visual-studio.md)<br/>
+[Visual Studio の CMake プロジェクト](cmake-projects-in-visual-studio.md)<br/>
 [Linux CMake プロジェクトを構成する](../linux/cmake-linux-project.md)<br/>
 [リモートの Linux コンピューターに接続する](../linux/connect-to-your-remote-linux-computer.md)<br/>
 [CMake デバッグ セッションを構成する](configure-cmake-debugging-sessions.md)<br/>
-[Linux プロジェクトのデプロイ、実行、デバッグ](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
+[Linux プロジェクトの配置、実行、デバッグ](../linux/deploy-run-and-debug-your-linux-project.md)<br/>
 [CMake 定義済み構成リファレンス](cmake-predefined-configuration-reference.md)<br/>

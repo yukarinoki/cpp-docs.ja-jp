@@ -9,10 +9,10 @@ helpviewer_keywords:
 - forms [C++], data access tasks
 ms.assetid: 562122d9-01d8-4284-acf6-ea109ab0408d
 ms.openlocfilehash: 199f51f20dd42ee9105b4e09f579c1f48948745f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040200"
 ---
 # <a name="record-views--mfc-data-access"></a>レコード ビュー (MFC データ アクセス)
@@ -41,11 +41,11 @@ ms.locfileid: "59040200"
 
 - [レコード ビューのデータ交換](../data/data-exchange-for-record-views-mfc-data-access.md)
 
-- [レコード ビューを利用するために必要な作業](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
+- [レコード ビューの操作でのロール](../data/your-role-in-working-with-a-record-view-mfc-data-access.md)
 
-- [レコード ビューのデザインと作成](../data/designing-and-creating-a-record-view-mfc-data-access.md)
+- [設計と、レコード ビューを作成します。](../data/designing-and-creating-a-record-view-mfc-data-access.md)
 
-- [レコード ビューの使用法](../data/using-a-record-view-mfc-data-access.md)
+- [レコード ビューの使用](../data/using-a-record-view-mfc-data-access.md)
 
 ## <a name="see-also"></a>関連項目
 

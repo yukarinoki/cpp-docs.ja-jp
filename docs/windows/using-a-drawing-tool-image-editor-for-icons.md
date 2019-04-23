@@ -17,10 +17,10 @@ helpviewer_keywords:
 - custom brushes
 ms.assetid: 1f8c6eef-7760-45a9-a5cb-9e15c6f91245
 ms.openlocfilehash: 7b362749c9a5cb1c7ec77e5cac8625aa7eb260f0
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037790"
 ---
 # <a name="how-to-use-a-drawing-tool"></a>方法: 描画ツールを使用して、
@@ -141,7 +141,7 @@ ms.locfileid: "59037790"
 ## <a name="see-also"></a>関連項目
 
 [アイコン用イメージ エディター](../windows/image-editor-for-icons.md)<br/>
-[方法: アイコンまたはその他のイメージを作成します。](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
-[方法: イメージを編集します。](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
-[方法: 色の調整](../windows/working-with-color-image-editor-for-icons.md)<br/>
+[方法: アイコンまたはその他の画像を作成する](../windows/creating-an-icon-or-other-image-image-editor-for-icons.md)<br/>
+[方法: 画像を編集する](../windows/selecting-an-area-of-an-image-image-editor-for-icons.md)<br/>
+[方法: 色を調整する](../windows/working-with-color-image-editor-for-icons.md)<br/>
 [アクセラレータ キー](../windows/accelerator-keys-image-editor-for-icons.md)<br/>

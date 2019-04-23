@@ -23,10 +23,10 @@ helpviewer_keywords:
 - combo boxes [C++], testing values
 ms.assetid: 60a85435-aa30-4c5c-98b6-42fb045b9eb2
 ms.openlocfilehash: c49913597f51ef231073b89d60ad9718b1113f44
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041485"
 ---
 # <a name="how-to-define-control-access-and-values-c"></a>方法: 定義のアクセスを制御し、値 (C++)
@@ -156,5 +156,5 @@ Win32
 ## <a name="see-also"></a>関連項目
 
 [ダイアログ ボックスのコントロールを管理します。](controls-in-dialog-boxes.md)<br/>
-[方法: 追加、編集、またはコントロールを削除](adding-editing-or-deleting-controls.md)<br/>
+[方法: コントロールを追加、編集、または削除する](adding-editing-or-deleting-controls.md)<br/>
 [方法: レイアウト コントロール](arrangement-of-controls-on-dialog-boxes.md)<br/>

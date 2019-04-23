@@ -5,10 +5,10 @@ helpviewer_keywords:
 - record views [C++], customizing default code
 ms.assetid: 9992ed37-a6bf-45a5-a572-5c14e42b6628
 ms.openlocfilehash: fc448ae1e13025a83b33386c2845bdf7bb4d5eec
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038636"
 ---
 # <a name="changes-you-might-make-to-the-default-code--mfc-data-access"></a>既定の処理の変更 (MFC データ アクセス)
@@ -23,4 +23,4 @@ ms.locfileid: "59038636"
 
 ## <a name="see-also"></a>関連項目
 
-[レコード ビューの使用法](../data/using-a-record-view-mfc-data-access.md)
+[レコード ビューの使用](../data/using-a-record-view-mfc-data-access.md)

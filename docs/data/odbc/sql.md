@@ -8,10 +8,10 @@ helpviewer_keywords:
 - ODBC [C++], SQL implementation
 ms.assetid: e3923bc4-b317-4e0b-afd8-3cd403eb0faf
 ms.openlocfilehash: 8f93d97530068695359273b523e7d2ae46de01cb
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037858"
 ---
 # <a name="sql"></a>SQL
@@ -51,7 +51,7 @@ SQL の多くのバージョンが存在する、各開発で特定の DBMS に�
 |**WHERE**|選択範囲を限定するフィルターを適用します。|
 |**ORDER BY**|レコード セットを並べ替え順序を適用します。|
 |**INSERT**|レコード セットには、新しいレコードを追加します。|
-|**Del**|レコード セットからレコードを削除します。|
+|**DELETE**|レコード セットからレコードを削除します。|
 |**UPDATE**|レコードのフィールドを変更します。|
 
 データベース クラスがさらに、ODBC を認識**呼び出す**ステートメントで、一部のデータ ソースの定義済みクエリ (またはストアド プロシージャ) の呼び出しに使用できます。 ODBC データベース ドライバーでは、これらのステートメントを解釈し、各 DBMS 用の適切なコマンドに置換されます。

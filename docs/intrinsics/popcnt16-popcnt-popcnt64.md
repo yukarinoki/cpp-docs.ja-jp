@@ -12,10 +12,10 @@ helpviewer_keywords:
 - __popcnt
 ms.assetid: e525b236-adc8-42df-9b9b-8b7d8c245d3b
 ms.openlocfilehash: d6cc9a0ce784ab79f5e4225675a082fc55bd53e7
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037011"
 ---
 # <a name="popcnt16-popcnt-popcnt64"></a>__popcnt16、__popcnt、__popcnt64
@@ -40,7 +40,7 @@ unsigned __int64 __popcnt64(
 
 #### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 [in]16 ビット、32 ビットまたは 64 ビット符号なし整数のビットの数をいたします。
 
 ## <a name="return-value"></a>戻り値
@@ -99,10 +99,10 @@ __popcnt(0xffff) = 16
 __popcnt(0xffffffff) = 32
 ```
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

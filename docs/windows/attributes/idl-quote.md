@@ -7,10 +7,10 @@ helpviewer_keywords:
 - idl_quote attribute
 ms.assetid: a370e1b7-948b-4e67-9a25-58facf24e4c9
 ms.openlocfilehash: fd7455298c9a1b69926d85766b6cd7f96bd374cc
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037118"
 ---
 # <a name="idlquote"></a>idl_quote
@@ -30,7 +30,7 @@ Visual C の現在のバージョンでサポートされていない IDL コン
 
 ## <a name="remarks"></a>Remarks
 
-場合、 **idl_quote** C++ 属性は、(セミコロン、右かっこの後)、スタンドアロン属性として使用*テキスト*は、マージされた .idl ファイルに配置されます。 場合**idl_quote**シンボルで使用されて*テキスト*シンボルに対する属性ブロック内に配置されます。
+場合、 **idl_quote** C++属性は、(セミコロン、右かっこの後)、スタンドアロン属性として使用*テキスト*は、マージされた .idl ファイルに配置されます。 場合**idl_quote**シンボルで使用されて*テキスト*シンボルに対する属性ブロック内に配置されます。
 
 ## <a name="example"></a>例
 

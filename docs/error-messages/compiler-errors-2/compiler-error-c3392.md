@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3392
 ms.assetid: e4757596-e2aa-4314-b01e-5c4bfd2110e9
 ms.openlocfilehash: 72bdef1b3344b3d69ba0d014f92a85e9381de4b3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58779535"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776718"
 ---
 # <a name="compiler-error-c3392"></a>コンパイラ エラー C3392
 
@@ -21,7 +21,7 @@ ms.locfileid: "58779535"
 
 ## <a name="example"></a>例
 
-次の例を使用して C# を c++ のジェネリック型を作成するときに、サポートされていない特定の制約を持つジェネリック型を含むコンポーネントを作成する/cli CLI。 詳細については、「[型パラメーターの制約](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)」を参照してください。
+次の例を使用して c# を c++ のジェネリック型を作成するときに、サポートされていない特定の制約を持つジェネリック型を含むコンポーネントを作成する/cli CLI。 詳細については、「[型パラメーターの制約](/dotnet/csharp/programming-guide/generics/constraints-on-type-parameters)」を参照してください。
 
 ```cs
 // C3392.cs

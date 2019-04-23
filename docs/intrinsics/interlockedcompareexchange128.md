@@ -9,10 +9,10 @@ helpviewer_keywords:
 - _InterlockedCompareExchange128 intrinsic
 ms.assetid: f05918fc-716a-4f6d-b746-1456d6b96c56
 ms.openlocfilehash: 9330b1405ca247364cd04d3ab399f66e4f332273
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037871"
 ---
 # <a name="interlockedcompareexchange128"></a>_InterlockedCompareExchange128
@@ -34,7 +34,7 @@ unsigned char _InterlockedCompareExchange128(
 
 #### <a name="parameters"></a>パラメーター
 
-*保存先*<br/>
+*Destination (公開先)*<br/>
 [入力、出力]2 つの 64 ビット整数の配列は、変換先へのポインターは、128 ビット フィールドとしてと見なされます。 変換先のデータが一般保護違反を回避するために、配置、16 バイトである必要があります。
 
 *ExchangeHigh*<br/>
@@ -123,12 +123,12 @@ int main(void)
 BigInt.Int[1] = 34, BigInt.Int[0] = 12
 ```
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 高度なマイクロ デバイス, inc. copyright 2007All rights reserved. 高度なマイクロ デバイス, Inc. からのアクセス許可を持つ再現
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [_InterlockedCompareExchange の組み込み関数](../intrinsics/interlockedcompareexchange-intrinsic-functions.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

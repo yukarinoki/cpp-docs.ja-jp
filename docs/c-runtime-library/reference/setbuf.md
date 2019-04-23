@@ -23,10 +23,10 @@ helpviewer_keywords:
 - stream buffering
 ms.assetid: 13beda22-7b56-455d-8a6c-f2eb636885b9
 ms.openlocfilehash: 89f8a4d8eb853c774f4f7299ceaa9b9eb6177b42
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424171"
 ---
 # <a name="setbuf"></a>setbuf
@@ -44,10 +44,10 @@ void setbuf(
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*stream*<br/>
 **FILE** 構造体へのポインター。
 
-*buffer*<br/>
+*バッファー*<br/>
 ユーザー割り当てのバッファー。
 
 ## <a name="remarks"></a>Remarks

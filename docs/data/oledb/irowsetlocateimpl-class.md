@@ -33,10 +33,10 @@ helpviewer_keywords:
 - m_rgbookmarks
 ms.assetid: a8aa3149-7ce8-4976-a680-2da193fd3234
 ms.openlocfilehash: e3513084697a60a33b9fa2ab02222a9b332cce79
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039820"
 ---
 # <a name="irowsetlocateimpl-class"></a>IRowsetLocateImpl クラス
@@ -97,7 +97,7 @@ class ATL_NO_VTABLE IRowsetLocateImpl : public IRowsetImpl<
 |[Compare](#compare)|2 つのブックマークを比較します。|
 |[GetRowsAt](#getrowsat)|ブックマークからのオフセットで指定した行で始まる行をフェッチします。|
 |[GetRowsByBookmark](#getrowsbybookmark)|指定されたブックマークに一致する行をフェッチします。|
-|[Hash](#hash)|ハッシュの指定されたブックマークの値を返します。|
+|[ハッシュ](#hash)|ハッシュの指定されたブックマークの値を返します。|
 
 ### <a name="data-members"></a>データ メンバー
 

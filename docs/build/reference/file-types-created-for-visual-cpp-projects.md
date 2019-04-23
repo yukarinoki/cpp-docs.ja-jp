@@ -15,10 +15,10 @@ helpviewer_keywords:
 - licensing ActiveX controls
 ms.assetid: 2b0ee2e0-ae81-4185-9bb9-11da3c99a283
 ms.openlocfilehash: eee53acbb8b0b8432a7d5819fb773b616f0e8897
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424094"
 ---
 # <a name="file-types-created-for-visual-studio-c-projects"></a>Visual Studio の C++ プロジェクトに対して作成されるファイルの種類
@@ -35,7 +35,7 @@ ms.locfileid: "59424094"
 
 - [プリコンパイル済みヘッダー ファイル](../creating-precompiled-header-files.md)
 
-- [リソース ファイル (Visual Studio)](resource-files-cpp.md)
+- [リソース ファイル](resource-files-cpp.md)
 
 - [ヘルプ ファイル (WinHelp)](help-files-winhelp.md)
 
@@ -50,16 +50,16 @@ Visual Studio プロジェクトを作成する場合は、新しいソリュー
 |ファイル拡張子|型|目次|
 |--------------------|----------|--------------|
 |.asmx|ソース|配置ファイル。|
-|.asp|ソース|ASP (Active Server Page) ファイル。|
+|.asp|Source|ASP (Active Server Page) ファイル。|
 |.atp|プロジェクト|アプリケーション テンプレート プロジェクト ファイル。|
 |.bmp、.dib、.gif、.jpg、.jpe、.png|リソース|一般的なイメージ ファイル。|
 |.bsc|コンパイル|ブラウザー コード ファイル。|
-|.cpp、.c|ソース|アプリケーションの主要なソース コード ファイル。|
+|.cpp、.c|Source|アプリケーションの主要なソース コード ファイル。|
 |.cur|リソース|カーソルのビットマップ グラフィック ファイル。|
 |.dbp|プロジェクト|データベース プロジェクト ファイル。|
-|.disco|ソース|動的探索ドキュメント ファイル。 XML Web サービス探索を処理します。|
+|.disco|Source|動的探索ドキュメント ファイル。 XML Web サービス探索を処理します。|
 |.exe、.dll|プロジェクト|実行可能ファイルまたはダイナミック リンク ライブラリ ファイル。|
-|.h|ソース|ヘッダー ファイルまたはインクルード ファイル。|
+|.h|Source|ヘッダー ファイルまたはインクルード ファイル。|
 |.htm、.html、.xsp、.asp、.htc、.hta、.xml|リソース|共通 Web ファイル。|
 |.HxC|プロジェクト|ヘルプ プロジェクト ファイル。|
 |.ico|リソース|アイコンのビットマップ グラフィック ファイル。|

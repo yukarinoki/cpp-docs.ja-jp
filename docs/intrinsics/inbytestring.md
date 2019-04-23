@@ -9,10 +9,10 @@ helpviewer_keywords:
 - __inbytestring intrinsic
 ms.assetid: fe549556-e7a3-4af3-8ebf-8a7dc3cb233b
 ms.openlocfilehash: e515c6452d18ca022707fa2f9e36e2045523ccd5
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038584"
 ---
 # <a name="inbytestring"></a>__inbytestring
@@ -36,7 +36,7 @@ void __inbytestring(
 *ポート*<br/>
 [in]読み取るポート。
 
-*バッファー*<br/>
+*Buffer*<br/>
 [out]ここでは、ポートから読み取ったデータを書き込まれます。
 
 *カウント*<br/>
@@ -54,8 +54,8 @@ void __inbytestring(
 
 このルーチンは、組み込みとしてのみ使用できます。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

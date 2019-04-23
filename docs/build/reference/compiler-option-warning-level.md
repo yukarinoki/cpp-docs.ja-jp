@@ -58,10 +58,10 @@ helpviewer_keywords:
 - /W2 compiler option [C++]
 - /Wv compiler option [C++]
 ms.openlocfilehash: 7b5c19c95cff3058bb3dcc6640f8ab07cf01edd6
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040070"
 ---
 # <a name="w-w0-w1-w2-w3-w4-w1-w2-w3-w4-wall-wd-we-wo-wv-wx-warning-level"></a>/w、/W0、/W1、/W2、/W3、/W4、/w1、/w2、/w3、/w4、/Wall、/wd、//we、/wo、/Wv、/WX (警告レベル)
@@ -116,7 +116,7 @@ ms.locfileid: "59040070"
 
 1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
-1. 設定する、 **/W0**、 **/W1**、 **/W2**、 **/W3**、 **/W4**、 **/wall**、**/Wv**、 **/WX**または **/WX-** オプションの選択、**構成プロパティ** > **C/C++** > **全般**プロパティ ページ。
+1. 設定する、 **/W0**、 **/W1**、 **/W2**、 **/W3**、 **/W4**、 **/wall**、**/Wv**、 **/WX**または **/WX-** オプションの選択、**構成プロパティ** > **C/C++**   > **全般**プロパティ ページ。
 
    - 設定する、 **/W0**、 **/W1**、 **/W2**、 **/W3**、 **/W4**、または **/wall**オプションの変更、**警告レベル**プロパティ。
 
@@ -141,4 +141,4 @@ ms.locfileid: "59040070"
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

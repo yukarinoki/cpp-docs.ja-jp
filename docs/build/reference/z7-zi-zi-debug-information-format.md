@@ -24,10 +24,10 @@ helpviewer_keywords:
 - cl.exe compiler, debugging options
 - -Z7 compiler option [C++]
 ms.openlocfilehash: e809c7af7465cde98db11eac8628b76d04f7e8b5
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424080"
 ---
 # <a name="z7-zi-zi-debug-information-format"></a>/Z7、/Zi、/ZI (デバッグ情報の形式)
@@ -92,5 +92,5 @@ PDB ファイルの名前、コンパイラ*プロジェクト*.pdb。 プロジ
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)
 

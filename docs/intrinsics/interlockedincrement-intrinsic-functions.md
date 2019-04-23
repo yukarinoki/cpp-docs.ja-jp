@@ -45,10 +45,10 @@ helpviewer_keywords:
 - InterlockedIncrement intrinsic
 ms.assetid: 37700615-f372-438b-bcef-d76e11839482
 ms.openlocfilehash: b41ce5c744bde7cd89cabed6c829cfb06da75129
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039359"
 ---
 # <a name="interlockedincrement-intrinsic-functions"></a>_InterlockedIncrement の組み込み関数
@@ -111,7 +111,7 @@ __int64 _InterlockedIncrement64_nf(
 
 |組み込み|アーキテクチャ|Header|
 |---------------|------------------|------------|
-|`_InterlockedIncrement`では、 `_InterlockedIncrement16`では、 `_InterlockedIncrement64`|x86、ARM、x64|\<intrin.h>|
+|`_InterlockedIncrement`、 `_InterlockedIncrement16`、 `_InterlockedIncrement64`|x86、ARM、x64|\<intrin.h>|
 |`_InterlockedIncrement_acq`, `_InterlockedIncrement_rel`, `_InterlockedIncrement_nf`, `_InterlockedIncrement16_acq`, `_InterlockedIncrement16_rel`, `_InterlockedIncrement16_nf`, `_InterlockedIncrement64_acq`, `_InterlockedIncrement64_rel`, `_InterlockedIncrement64_nf`|ARM|\<intrin.h>|
 
 ## <a name="remarks"></a>Remarks
@@ -132,10 +132,10 @@ Win32 関数は `Wdm.h` または `Ntddk.h` で宣言されています。
 
 使用する方法の例については`_InterlockedIncrement`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

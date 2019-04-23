@@ -10,10 +10,10 @@ helpviewer_keywords:
 - distributed transactions [C++]
 ms.assetid: 3d72e583-ad38-42ff-8f11-e2166d60a5a7
 ms.openlocfilehash: 3c71200e39641a69443599e0445f89f469aceeda
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038749"
 ---
 # <a name="supporting-transactions-in-ole-db"></a>OLE DB でのトランザクションのサポート
@@ -24,9 +24,9 @@ OLE DB では、次の 3 つの方法でトランザクションをサポート�
 
 - [ITransactionLocal::StartTransaction](/previous-versions/windows/desktop/ms709786(v=vs.85))
 
-- [Itransaction::commit](/previous-versions/windows/desktop/ms713008(v=vs.85))
+- [ITransaction::Commit](/previous-versions/windows/desktop/ms713008(v=vs.85))
 
-- [Itransaction::abort](/previous-versions/windows/desktop/ms709833(v=vs.85))
+- [ITransaction::Abort](/previous-versions/windows/desktop/ms709833(v=vs.85))
 
 ## <a name="relationship-of-sessions-and-transactions"></a>セッションとトランザクションの関係
 

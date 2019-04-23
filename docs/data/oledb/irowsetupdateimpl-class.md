@@ -53,10 +53,10 @@ helpviewer_keywords:
 - m_mapCachedData
 ms.assetid: f85af76b-ab6f-4f8b-8f4a-337c9679d68f
 ms.openlocfilehash: 6c20698e2219cf7c3e1d840e23b5f8113947ae9f
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037719"
 ---
 # <a name="irowsetupdateimpl-class"></a>IRowsetUpdateImpl クラス
@@ -87,7 +87,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 *T*<br/>
 派生したクラス`IRowsetUpdateImpl`します。
 
-*記憶域*<br/>
+*ストレージ*<br/>
 ユーザー レコード。
 
 *UpdateArray*<br/>
@@ -109,7 +109,7 @@ class IRowsetUpdateImpl : public IRowsetChangeImpl<
 
 |||
 |-|-|
-|[Setdata メソッド](#setdata)|1 つまたは複数の列のデータ値を設定します。|
+|[SetData](#setdata)|1 つまたは複数の列のデータ値を設定します。|
 
 ### <a name="interface-methods-used-with-irowsetupdate"></a>インターフェイスのメソッド (IRowsetUpdate で使用)
 
@@ -297,7 +297,7 @@ HRESULT IsUpdateAllowed(DBPENDINGSTATUS /* [in] */ /* status */,
 
 #### <a name="parameters"></a>パラメーター
 
-*状態*<br/>
+*status*<br/>
 [in]保留中の行の操作の状態。
 
 *hRowUpdate*<br/>

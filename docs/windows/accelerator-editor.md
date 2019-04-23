@@ -34,10 +34,10 @@ helpviewer_keywords:
 - accelerator tables [C++], changing properties
 ms.assetid: 013c30b6-5d61-4f1c-acef-8bd15bed7060
 ms.openlocfilehash: f5ae9880719a3a8b799ea8deb751b6f0a85542bd
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041125"
 ---
 # <a name="accelerator-editor-c"></a>アクセラレータ エディター (C++)
@@ -71,10 +71,10 @@ ms.locfileid: "59041125"
 
    |[値]|説明|
    |-----------|-----------------|
-   |**なし**|ユーザーが押したのみ、**キー**値。<br/><br/>として解釈される ASCII]/[ANSI 値 001 026、経由でこの値は使用が最も効果的に ^ A ~ ^ Z (**Ctrl + A**を通じて**Ctrl + Z**)。|
+   |**None**|ユーザーが押したのみ、**キー**値。<br/><br/>として解釈される ASCII]/[ANSI 値 001 026、経由でこの値は使用が最も効果的に ^ A ~ ^ Z (**Ctrl + A**を通じて**Ctrl + Z**)。|
    |**Alt**|ユーザーが押す必要があります**Alt**する前に、**キー**値。|
    |**Ctrl**|ユーザーが押す必要があります**Ctrl**する前に、**キー**値、ASCII 型が無効です。|
-   |**シフト**|ユーザーが押す必要があります**Shift**する前に、**キー**値。|
+   |**Shift**|ユーザーが押す必要があります**Shift**する前に、**キー**値。|
    |**Ctrl + Alt**|ユーザーが押す必要があります**Ctrl**と**Alt**する前に、**キー**値、ASCII 型が無効です。|
    |**Ctrl + Shift**|ユーザーが押す必要があります**Ctrl**と**Shift**する前に、**キー**値、ASCII 型が無効です。|
    |**Alt + Shift**|ユーザーが押す必要があります**Alt**と**Shift**する前に、**キー**値、ASCII 型が無効です。|

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - files [C++], translation
 ms.assetid: a7f7a8c9-e8ba-4321-9e50-ebfbbdcce9db
 ms.openlocfilehash: 11e36e06adc4fa95cb9aa607704e72f64c812429
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036154"
 ---
 # <a name="phases-of-translation"></a>変換フェーズ
@@ -51,10 +51,10 @@ C および C++ プログラムは、それぞれがプログラムのテキス�
 *文字セットのマップ*<br/>
 すべてのソース文字セット メンバーとエスケープ シーケンスは、実行文字セットの同等のものに変換されます。 Microsoft C および C++ にとって、ソース文字セットと実行文字セットはいずれも ASCII 文字セットです。
 
-*文字列連結*<br/>
+*文字列の連結*<br/>
 すべての隣接する文字列とワイド文字列リテラルは連結されます。 たとえば、`"String " "concatenation"` が `"String concatenation"` になります。
 
-*変換*<br/>
+*翻訳*<br/>
 すべてのトークンは、構文的および意味的に分析され、オブジェクト コードに変換されます。
 
 *リンケージ*<br/>

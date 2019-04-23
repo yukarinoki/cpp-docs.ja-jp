@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MP compiler option (C++)
 - cl.exe compiler, multi-process build
 ms.openlocfilehash: e005b0314e87270e81dbb155dfdaa67be067cd3f
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424145"
 ---
 # <a name="mp-build-with-multiple-processes"></a>/MP (複数のプロセスを使用したビルド)
@@ -128,5 +128,5 @@ MSBuild を使用するかどうかを決定するためのガイドラインま
 ## <a name="see-also"></a>関連項目
 
 [#import ディレクティブ](../../preprocessor/hash-import-directive-cpp.md)<br/>
-[コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
-[/Zf (高速の PDB の生成)](zf.md)<br/>
+[Command-Line Reference (コマンド ライン リファレンス)](/visualstudio/msbuild/msbuild-command-line-reference)<br/>
+[/Zf (PDB 生成の高速化)](zf.md)<br/>

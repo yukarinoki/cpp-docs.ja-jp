@@ -7,10 +7,10 @@ helpviewer_keywords:
 - case attribute
 ms.assetid: 6fb883c3-0526-4932-a901-b4564dcaeb7d
 ms.openlocfilehash: b3058f2fe6f35e1b11d4790780cb0fcdcaada706
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038201"
 ---
 # <a name="case-c"></a>case (C++)
@@ -25,7 +25,7 @@ ms.locfileid: "59038201"
 
 #### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 入力の処理を提供する値。 型**値**次の種類のいずれかを指定できます。
 
 - `int`

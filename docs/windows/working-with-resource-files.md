@@ -7,10 +7,10 @@ helpviewer_keywords:
 - resource files [C++], about resource files
 ms.assetid: 2699a539-b369-4b78-80f0-df03eb7b6780
 ms.openlocfilehash: a08c7ecb153b790f06da386ac93d1f05f5981e61
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037738"
 ---
 # <a name="working-with-resource-files"></a>リソース ファイルの操作
@@ -38,7 +38,7 @@ ms.locfileid: "59037738"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)<br/>
+[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
 リソース ファイルと Windows デスクトップ アプリケーションでの使用方法について説明します。 リソース ファイルを使用する方法について説明する記事へのリンクもあります。
 
 [リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>
@@ -52,7 +52,7 @@ Visual Studio と各エディターを使用して変更できるリソースの
 [Visual C++](../overview/visual-cpp-in-visual-studio.md)<br/>
 Visual C++ のドキュメントへのリンクを示します。
 
-[Talk to Us](/visualstudio/ide/talk-to-us)<br/>
+[ご意見](/visualstudio/ide/talk-to-us)<br/>
 ドキュメント セットの使用方法、製品サポートへの連絡、アクセシビリティ機能の使用に関する情報へのリンクを示します。
 
 ## <a name="see-also"></a>関連項目

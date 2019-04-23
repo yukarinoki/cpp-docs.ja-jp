@@ -8,10 +8,10 @@ helpviewer_keywords:
 - .NET Framework (C++), Add References Dialog Box
 ms.assetid: 12b8f571-0f21-40b3-9404-5318a57e9cb5
 ms.openlocfilehash: dff057977e6b6ff0c36d3a888bc4d5c3aa778576
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038768"
 ---
 # <a name="consuming-libraries-and-components"></a>ライブラリとコンポーネントを利用します。
@@ -140,7 +140,7 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
    参照されたアセンブリのディレクトリ パスが表示されます。
 
-- **Identity**
+- **ID**
 
    .NET Framework アセンブリでは、完全なパスが表示されます。 COM コンポーネントでは、GUID が表示されます。
 
@@ -148,7 +148,7 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
    参照のラベルが表示されます。
 
-- **名前**
+- **Name**
 
    参照名が表示されます。
 
@@ -158,7 +158,7 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 
 - **厳密な名前**
 
-   `true` です。 厳密な名前を持つアセンブリは、一意にバージョン管理されます。
+   参照が厳密な名前を持つ場合は`true` です。 厳密な名前を持つアセンブリは、一意にバージョン管理されます。
 
 - **Version**
 
@@ -167,4 +167,4 @@ ActiveX 参照のプロパティは、COM コンポーネントへの参照に�
 ## <a name="see-also"></a>関連項目
 
 [C++ プロジェクト プロパティ ページの参照](reference/property-pages-visual-cpp.md)<br>
-[C++ コンパイラを設定し、Visual Studio でのプロパティのビルド](working-with-project-properties.md)
+[Visual Studio で C++ コンパイラとビルド プロパティを設定する](working-with-project-properties.md)

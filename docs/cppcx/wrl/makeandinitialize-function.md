@@ -6,10 +6,10 @@ f1_keywords:
 - implements/Microsoft::WRL::Details::MakeAndInitialize
 ms.assetid: 71ceeb12-d2a2-4317-b010-3dcde1b39467
 ms.openlocfilehash: 14ae5117194748748ceecf97ac83fc8813bba2d3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037485"
 ---
 # <a name="makeandinitialize-function"></a>MakeAndInitialize 関数
@@ -79,10 +79,10 @@ HRESULT MakeAndInitialize(
 *arg1*<br/>
 指定されたランタイム クラスに渡される引数 1 です。
 
-*Arg2*<br/>
+*arg2*<br/>
 指定されたランタイム クラスに渡される引数 2
 
-*arg3…*<br/>
+*arg3*<br/>
 指定されたランタイム クラスに渡される引数 3 です。
 
 *arg4*<br/>

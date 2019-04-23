@@ -5,10 +5,10 @@ ms.date: 11/04/2016
 ms.topic: conceptual
 ms.assetid: 19ecc5d4-297d-4c4e-b4f3-4fccab890b3d
 ms.openlocfilehash: 37ebcc646864774b15513c9e1891ba14e0705298
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237199"
 ---
 # <a name="how-to-design-for-exception-safety"></a>方法: 例外安全性のための設計
@@ -122,4 +122,4 @@ basic 保証は、3 つのうちで最も弱い保証です。 ただし、stron
 ## <a name="see-also"></a>関連項目
 
 [エラーと例外の処理 (Modern C++)](../cpp/errors-and-exception-handling-modern-cpp.md)<br/>
-[方法: 例外と非例外的なコードの間のインターフェイスします。](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)
+[方法: 例外的なコードと非例外的なコードをインターフェイスで連結する](../cpp/how-to-interface-between-exceptional-and-non-exceptional-code.md)

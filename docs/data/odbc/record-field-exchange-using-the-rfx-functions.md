@@ -11,10 +11,10 @@ helpviewer_keywords:
 - function calls, RFX functions
 ms.assetid: c594300b-5a29-4119-a68b-e7ca32def696
 ms.openlocfilehash: dc717336a5279e7eda1b7c39b19a7c76f9055cd3
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035985"
 ---
 # <a name="record-field-exchange-using-the-rfx-functions"></a>レコード フィールド エクス チェンジ:RFX 関数の使い方
@@ -51,8 +51,8 @@ RFX のグローバル関数では、レコード セットのデータ ソー�
 |`RFX_Bool`|**BOOL**|
 |`RFX_Byte`|**BYTE**|
 |`RFX_Binary`|`CByteArray`|
-|`RFX_Double`|**二重線**|
-|`RFX_Single`|**フローティング**|
+|`RFX_Double`|**double**|
+|`RFX_Single`|**float**|
 |`RFX_Int`|**int**|
 |`RFX_Long`|**long**|
 |`RFX_LongBinary`|`CLongBinary`|

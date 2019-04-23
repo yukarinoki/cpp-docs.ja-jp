@@ -56,10 +56,10 @@ helpviewer_keywords:
 - _InterlockedExchangeAdd64_rel intrinsic
 ms.assetid: 25809e1f-9c60-4492-9f7c-0fb59c8d13d2
 ms.openlocfilehash: 2cffd5a088c4b3c67441e79bc04bd709be6bf8ef
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039177"
 ---
 # <a name="interlockedexchangeadd-intrinsic-functions"></a>_InterlockedExchangeAdd の組み込み関数
@@ -175,13 +175,11 @@ __int64 _InterlockedExchangeAdd64_HLERelease(
 
 ## <a name="remarks"></a>Remarks
 
-
-  `_InterlockedExchangeAdd` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
+`_InterlockedExchangeAdd` には、格納するデータ型、およびプロセッサ固有の取得または解放のセマンティクスを使用するかどうかに基づき、異なるいくつかの種類があります。
 
 `_InterlockedExchangeAdd` 関数は 32 ビット整数値で動作しますが、`_InterlockedExchangeAdd8` は 8 ビット整数値、`_InterlockedExchangeAdd16` は 16 ビット整数値、および `_InterlockedExchangeAdd64` は 64 ビット整数値で動作します。
 
-ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 
-  `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
+ARM プラットフォームでは、クリティカル セクションの最初と最後などで取得と解放のセマンティクスを必要とする場合は、`_acq` および `_rel` サフィックスの付いた組み込みを使用します。 `_nf` ("フェンスなし") サフィックスの付いた組み込みはメモリ バリアとしては機能しません。
 
 Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォームでは、`_HLEAcquire` および `_HLERelease` サフィックスの付いた組み込みにプロセッサへのヒントが含まれています。このヒントによりハードウェアでのロック書き込み手順を省くことで、パフォーマンスを向上させることができます。 HLE をサポートしていないプラットフォームでこれらの組み込みが呼び出された場合、ヒントは無視されます。
 
@@ -191,10 +189,10 @@ Hardware Lock Elision (HLE) 命令をサポートする Intel プラットフォ
 
 使用する方法の例については`_InterlockedExchangeAdd`を参照してください[_InterlockedDecrement](../intrinsics/interlockeddecrement-intrinsic-functions.md)します。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [キーワード](../cpp/keywords-cpp.md)<br/>
 [x86 コンパイラとの競合](../build/x64-software-conventions.md#conflicts-with-the-x86-compiler)

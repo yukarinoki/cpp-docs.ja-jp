@@ -9,10 +9,10 @@ helpviewer_keywords:
 - optimize pragma
 ms.assetid: cb13c1cc-186a-45bc-bee7-95a8de7381cc
 ms.openlocfilehash: 9f5240fc59f59a71ddb3d18b67fadf3463a0d1ea
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035401"
 ---
 # <a name="optimize"></a>optimize
@@ -35,9 +35,9 @@ ms.locfileid: "59035401"
 
 |パラメーター|最適化の種類|
 |--------------------|--------------------------|
-|*G*|グローバル最適化を有効にします。|
+|*g*|グローバル最適化を有効にします。|
 |*s*または*t*|マシン語コードの省略シーケンスまたは高速シーケンスを指定します。|
-|*Y*|プログラム スタックにフレーム ポインターを生成します。|
+|*y*|プログラム スタックにフレーム ポインターを生成します。|
 
 使用される同じ文字のうち、 [/O](../build/reference/o-options-optimize-code.md)コンパイラ オプション。 たとえば、次のプラグマは `/Os` コンパイラ オプションと等価です。
 
