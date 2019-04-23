@@ -11,10 +11,10 @@ helpviewer_keywords:
 - resource editors [C++], resource symbols
 ms.assetid: 8fccc09a-0237-4a65-b9c4-57d60c59e324
 ms.openlocfilehash: 0b19ff0d1c709616868d47c172ff4cf8c6931b82
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036050"
 ---
 # <a name="resource-identifiers-symbols-c"></a>リソース識別子 (シンボル) (C++)
@@ -49,5 +49,5 @@ Win32
 ## <a name="see-also"></a>関連項目
 
 [リソース ファイルの操作](../windows/working-with-resource-files.md)<br/>
-[リソース ファイル (Visual Studio)](../windows/resource-files-visual-studio.md)<br/>
+[リソース ファイル](../windows/resource-files-visual-studio.md)<br/>
 [リソース エディター](../windows/resource-editors.md)<br/>

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - permissive compiler options [C++]
 ms.assetid: db1cc175-6e93-4a2e-9396-c3725d2d8f71
 ms.openlocfilehash: 05089ef4f0a516f932d82f13be979da572701ae2
-ms.sourcegitcommit: 39debf8c525c3951af6913ee5e514617658f8859
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59424132"
 ---
 # <a name="permissive--standards-conformance"></a>/permissive -(標準への準拠)
@@ -23,7 +23,7 @@ ms.locfileid: "59424132"
 
 ## <a name="syntax"></a>構文
 
-> **/permissive -**
+> **/permissive-**
 
 ## <a name="remarks"></a>Remarks
 
@@ -465,4 +465,4 @@ Visual Studio 2017 バージョン 15.5 より前に、のバージョンでは�
 ## <a name="see-also"></a>関連項目
 
 - [MSVC コンパイラ オプション](compiler-options.md)
-- [MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)
+- [MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)

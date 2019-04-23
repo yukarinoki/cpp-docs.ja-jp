@@ -8,10 +8,10 @@ helpviewer_keywords:
 - __sidt intrinsic
 ms.assetid: 01e83d14-6e63-4dea-8f64-5a0339d69641
 ms.openlocfilehash: 88dbb4713577fcf224e1c5646bf4c38b2a1dfafe
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036761"
 ---
 # <a name="sidt"></a>__sidt
@@ -30,7 +30,7 @@ void __sidt(void * Destination);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*保存先*|[in]IDTR が格納されているメモリ位置へのポインター。|
+|*Destination (公開先)*|[in]IDTR が格納されているメモリ位置へのポインター。|
 
 ## <a name="requirements"></a>必要条件
 
@@ -44,9 +44,9 @@ void __sidt(void * Destination);
 
 `__sidt` 関数は `SIDT` マシン語命令と同じです。 詳細については、ドキュメントの検索"Intel アーキテクチャ ソフトウェア デベロッパーズ マニュアル、ボリューム 2。命令の参照を設定、"で、 [Intel Corporation](https://software.intel.com/articles/intel-sdm)サイト。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)<br/>
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)<br/>
 [__lidt](../intrinsics/lidt.md)

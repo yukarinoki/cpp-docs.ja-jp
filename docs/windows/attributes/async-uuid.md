@@ -7,10 +7,10 @@ helpviewer_keywords:
 - async_uuid attribute
 ms.assetid: 235cb0d7-be58-4dd9-983c-e2a21bbc42c6
 ms.openlocfilehash: 4c2bca9165d8b23f8cfa4f0f5523c882fd2f52bf
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035797"
 ---
 # <a name="asyncuuid"></a>async_uuid
@@ -30,7 +30,7 @@ ms.locfileid: "59035797"
 
 ## <a name="remarks"></a>Remarks
 
-**Async_uuid** C++ 属性と同じ機能を持つ、 [async_uuid](/windows/desktop/Midl/async-uuid) MIDL 属性。
+**Async_uuid** C++属性と同じ機能を持つ、 [async_uuid](/windows/desktop/Midl/async-uuid) MIDL 属性。
 
 ## <a name="example"></a>例
 

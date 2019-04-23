@@ -5,10 +5,10 @@ helpviewer_keywords:
 - OLE DB, application design considerations
 ms.assetid: 8caa7d99-d2bb-42c9-8884-74f228bb6ecc
 ms.openlocfilehash: 2f0a7a114c671e17d8f95280ab00ed93570e8609
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037673"
 ---
 # <a name="ole-db-architectural-design-issues"></a>OLE DB アーキテクチャのデザインの問題
@@ -33,7 +33,7 @@ Microsoft には、このタスクを実行するいくつかのライブラリ�
 
 (コンポーネントの OLE DB と ADO のコンポーネントを使用して、OLE DB の ODBC コードを移行する) などのテクノロジの組み合わせについて、すべての状況を説明することは、Visual C ドキュメントの範囲外です。 ただし、さまざまなシナリオをカバーする多くの記事では、次の Microsoft web サイトで使用できます。
 
-- [Microsoft ヘルプとサポート](https://support.microsoft.com/)
+- [Microsoft ヘルプおよびサポート](https://support.microsoft.com/)
 
 - [Microsoft データ アクセス技術記事の概要](https://msdn.microsoft.com/library/ms810811.aspx)
 

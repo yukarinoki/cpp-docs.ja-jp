@@ -7,10 +7,10 @@ helpviewer_keywords:
 - iid_is attribute
 ms.assetid: 2f9b42a9-7130-4b08-9b1e-0d5d360e10ff
 ms.openlocfilehash: b91fb7937bb0e20f2500eace9695bc0ddba21b26
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038558"
 ---
 # <a name="iidis"></a>iid_is
@@ -25,12 +25,12 @@ ms.locfileid: "59038558"
 
 ### <a name="parameters"></a>パラメーター
 
-*式*<br/>
+*式 (expression)*<br/>
 インターフェイス ポインターが指す COM インターフェイスの IID を指定する C 言語の式。
 
 ## <a name="remarks"></a>Remarks
 
-**Iid_is** C++ 属性と同じ機能を持つ、 [iid_is](/windows/desktop/Midl/iid-is) MIDL 属性。
+**Iid_is** C++属性と同じ機能を持つ、 [iid_is](/windows/desktop/Midl/iid-is) MIDL 属性。
 
 ## <a name="example"></a>例
 

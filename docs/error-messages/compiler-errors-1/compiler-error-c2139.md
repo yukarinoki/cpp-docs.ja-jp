@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2139
 ms.assetid: 31e047c0-5bf9-46c2-b6de-b627ea6a5768
 ms.openlocfilehash: 15813216399c0f00fea036cd95443235e7acf4c3
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769083"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776796"
 ---
 # <a name="compiler-error-c2139"></a>コンパイラ エラー C2139
 
@@ -19,7 +19,7 @@ ms.locfileid: "58769083"
 
 型の特徴に無効な引数が渡されました。
 
-詳細については、[型の特徴のコンパイラ サポート](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)を参照してください。
+詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 

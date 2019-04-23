@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Open Folder Projects in Visual C++
 ms.assetid: abd1985e-3717-4338-9e80-869db5435175
 ms.openlocfilehash: 380a96bcb1a119b2b6d4104d60936217d1350fbb
-ms.sourcegitcommit: 35c4b3478f8cc310ebbd932a18963ad8ab846ed9
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59237134"
 ---
 # <a name="open-folder-projects-for-c"></a>C++ の [フォルダーを開く] プロジェクト
@@ -64,7 +64,7 @@ IDE でタスクとして直接実行することで、現在のワークスペ�
 
 !["フォルダーを開く" のタスクの構成](media/open-folder-config-tasks.png)
 
-これを作成します (または開きます)、 **tasks.vs.json**ファイルが .vs フォルダーに Visual Studio がルート プロジェクト フォルダーに作成されます。 このファイルで任意のタスクを定義し、**ソリューション エクスプローラー**のコンテキスト メニューから呼び出すことができます。 単一のタスクを定義する tasks.vs.json ファイルの例を次に示します。 `taskName` コンテキスト メニューに表示される名前を定義します。 `appliesTo` コマンドを実行できるファイルを定義します。 `command` プロパティは、コンソール (Windows では cmd.exe) のパスを示す COMSPEC 環境変数を参照します。 CppProperties.json または CMakeSettings.json で宣言されている環境変数を参照することもできます。 `args` プロパティでは、呼び出すコマンド ラインを指定します。 `${file}` マクロは、**ソリューション エクスプローラー**で選択したファイルを取得します。 次の例では、現在選択されている .cpp ファイルのファイル名が表示されます。
+これを作成します (または開きます)、 **tasks.vs.json**ファイルが .vs フォルダーに Visual Studio がルート プロジェクト フォルダーに作成されます。 このファイルで任意のタスクを定義し、**ソリューション エクスプローラー**のコンテキスト メニューから呼び出すことができます。 単一のタスクを定義する tasks.vs.json ファイルの例を次に示します。 `taskName` では、コンテキスト メニューに表示される名前を定義します。 `appliesTo` では、コマンドを実行できるファイルを定義します。 `command` プロパティは、コンソール (Windows では cmd.exe) のパスを示す COMSPEC 環境変数を参照します。 CppProperties.json または CMakeSettings.json で宣言されている環境変数を参照することもできます。 `args` プロパティでは、呼び出すコマンド ラインを指定します。 `${file}` マクロは、**ソリューション エクスプローラー**で選択したファイルを取得します。 次の例では、現在選択されている .cpp ファイルのファイル名が表示されます。
 
 ```json
 {

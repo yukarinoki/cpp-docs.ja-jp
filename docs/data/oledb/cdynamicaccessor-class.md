@@ -128,10 +128,10 @@ helpviewer_keywords:
 - SetValue method
 ms.assetid: 374b13b7-1f09-457d-9e6b-df260ff4d178
 ms.openlocfilehash: 19b8d0c86044e04cc60fd7aab89ec828c46f5fb9
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59040969"
 ---
 # <a name="cdynamicaccessor-class"></a>CDynamicAccessor クラス
@@ -195,7 +195,7 @@ HRESULT AddBindEntry(const DBCOLUMNINFO& info) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*info*<br/>
+*情報*<br/>
 [in]A`DBCOLUMNINFO`列情報を含む構造体。 「DBCOLUMNINFO 構造体」を参照してください[icolumnsinfo::getcolumninfo](/previous-versions/windows/desktop/ms722704\(v=vs.85\))で、 *OLE DB プログラマーズ リファレンス*します。
 
 ### <a name="return-value"></a>戻り値
@@ -348,7 +348,7 @@ HRESULT GetColumnInfo(IRowset* pRowset,
 
 #### <a name="parameters"></a>パラメーター
 
-*ため*<br/>
+*pRowset*<br/>
 [in]ポインター、 [IRowset](/previous-versions/windows/desktop/ms720986(v=vs.85))インターフェイス。
 
 *pColumns*<br/>
@@ -403,7 +403,7 @@ bool GetColumnType(DBORDINAL nColumn,
 *nColumn*<br/>
 [in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。
 
-*p 入力してください。*<br/>
+*pType*<br/>
 [out]指定された列のデータ型へのポインター。
 
 ### <a name="return-value"></a>戻り値
@@ -576,8 +576,7 @@ BLOB データの処理方法を指定します。 次の値がかかること�
 
 ### <a name="remarks"></a>Remarks
 
-
-  `SetBlobHandling` を呼び出してから `Open` を呼び出す必要があります。
+`SetBlobHandling` を呼び出してから `Open` を呼び出す必要があります。
 
 コンス トラクター メソッド[CDynamicAccessor](../../data/oledb/cdynamicaccessor-class.md) BLOB 処理 DBBLOBHANDLING_DEFAULT に値を設定します。
 
@@ -624,7 +623,7 @@ bool SetLength(const WCHAR* pColumnName,
 *nColumn*<br/>
 [in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。
 
-*されて*<br/>
+*nLength*<br/>
 [in]列のバイト単位の長さ。
 
 *pColumnName*<br/>
@@ -656,7 +655,7 @@ bool SetStatus(const WCHAR* pColumnName,
 *nColumn*<br/>
 [in]列の番号。 列番号 1 から始まります。 値 0 は、存在する場合、ブックマーク列を参照します。
 
-*状態*<br/>
+*status*<br/>
 [in]列の状態。 参照してください[DBSTATUS](/previous-versions/windows/desktop/ms722617(v=vs.85))で、 *OLE DB プログラマーズ リファレンス*詳細についてはします。
 
 *pColumnName*<br/>
@@ -697,7 +696,7 @@ bool SetValue(
 *pColumnName*<br/>
 [in]列名を含む文字列へのポインター。
 
-*[データ]*<br/>
+*data*<br/>
 [in]データを含むメモリへのポインター。
 
 *nColumn*<br/>

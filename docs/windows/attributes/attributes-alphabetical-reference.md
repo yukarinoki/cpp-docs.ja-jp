@@ -9,10 +9,10 @@ helpviewer_keywords:
 - attributes [C++/CLI]
 ms.assetid: fb2216ef-9fbd-44f4-afed-732aa99450e2
 ms.openlocfilehash: 386afe5362f876cd1489a35839f4f8cfc2381e91
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59038214"
 ---
 # <a name="attributes-alphabetical-reference"></a>属性リファレンス (アルファベット順)
@@ -25,7 +25,7 @@ ms.locfileid: "59038214"
 |[aggregates](aggregates.md)|コントロールがターゲット クラスを集約することを示します。|
 |[appobject](appobject.md)|EXE の完全なアプリケーションに関連付けられ、関数と、コクラスのプロパティがグローバルに使用できるこのタイプ ライブラリを示しますアプリケーション オブジェクトとしてコクラスを識別します。|
 |[async_uuid](async-uuid.md)|同期および非同期の両方のバージョンの COM インターフェイスを定義する、MIDL コンパイラに指示する UUID を指定します。|
-|[属性](attribute.md)|カスタム属性を作成することができます。|
+|[attribute](attribute.md)|カスタム属性を作成することができます。|
 |[bindable](bindable.md)|プロパティがデータ バインディングをサポートすることを示します。|
 |[call_as](call-as.md)|リモート関数にマップするリモート処理不可能関数を使用できます。|
 |[case](case-cpp.md)|使用される、 [switch_type](switch-type.md)共用体の属性。|
@@ -33,7 +33,7 @@ ms.locfileid: "59038214"
 |[com_interface_entry](com-interface-entry-cpp.md)|COM マップには、インターフェイスのエントリを追加します。|
 |[control](control.md)|コントロールに、ユーザー定義型を指定します。|
 |[cpp_quote](cpp-quote.md)|生成されたヘッダー ファイルに、引用符なしの指定した文字列を出力します。|
-|[カスタム](custom-cpp.md)|独自の属性を定義できます。|
+|[custom](custom-cpp.md)|独自の属性を定義できます。|
 |[db_accessor](db-accessor.md)|行セットの列をバインドし、対応するアクセサー マップにバインドします。|
 |[db_column](db-column.md)|行セットに指定された列をバインドします。|
 |[db_command](db-command.md)|OLE DB コマンドを実行します。|
@@ -57,19 +57,19 @@ ms.locfileid: "59038214"
 |[helpcontext](helpcontext.md)|ユーザーがヘルプ ファイル内のこの要素についての情報を表示できるようにコンテキスト ID を指定します。|
 |[helpfile](helpfile.md)|タイプ ライブラリのヘルプ ファイルの名前を設定します。|
 |[helpstring](helpstring.md)|.Hlp または .chm ファイルをヘルプ トピックの ID を指定します。|
-|[typelib](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
+|[helpstringdll](helpstringdll.md)|使用してドキュメントの文字列の検索 (ローカライズ) を実行する DLL の名前を指定します。|
 |[hidden](hidden.md)|項目が存在しますが、ユーザー指向ブラウザーで表示する必要がありますされませんを示します。|
 |[ID](id.md)|メンバー関数 (プロパティまたはメソッド、インターフェイスまたは dispinterface) のように DISPID を指定します。|
 |[idl_module](idl-module.md)|DLL エントリ ポイントを指定します。|
 |[idl_quote](idl-quote.md)|IDL 構造を現在のバージョンの Visual C でサポートされていないまたは属性を使用することができます。|
 |[iid_is](iid-is.md)|インターフェイス ポインターによって示される COM インターフェイスの IID を指定します。|
 |[immediatebind](immediatebind.md)|データ バインド オブジェクトのプロパティに対するすべての変更のデータベースに直ちに通知されることを示します。|
-|[実装](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
+|[implements](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
 |[implements_category](implements-category.md)|クラスの実装されたコンポーネントのカテゴリを指定します。|
 |[import](import.md)|メイン .idl ファイルから参照する定義を含む .idl、.odl ファイル、またはヘッダーの別のファイルを指定します。|
 |[importidl](importidl.md)|生成された .idl ファイルには、指定された .idl ファイルを挿入します。|
 |[importlib](importlib.md)|既に他のタイプ ライブラリでコンパイル済みの型を、作成中のタイプ ライブラリで使用できるようにします。|
-|[の](in-cpp.md)|呼び出し元のプロシージャから呼び出されたプロシージャに渡されるパラメーターがあることを示します。|
+|[in](in-cpp.md)|呼び出し元のプロシージャから呼び出されたプロシージャに渡されるパラメーターがあることを示します。|
 |[include](include-cpp.md)|生成された .idl ファイルに含まれる 1 つまたは複数のヘッダー ファイルを指定します。|
 |[includelib](includelib-cpp.md)|生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル。|
 |[last_is](last-is.md)|転送する最後の配列要素のインデックスを指定します。|
@@ -79,7 +79,7 @@ ms.locfileid: "59038214"
 |[licensed](licensed.md)|適用するコクラスはライセンスされていることを示しますを使用してインスタンス化する必要があります`IClassFactory2`します。|
 |[local](local-cpp.md)|インターフェイスのヘッダーで使用する場合は、ヘッダー ジェネレーターとして、MIDL コンパイラを使用することができます。 個々 の関数で使用する場合は、スタブが生成されたないローカル プロシージャを指定します。|
 |[max_is](max-is.md)|有効な配列のインデックスの最大値を指定します。|
-|[name](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
+|[module](module-cpp.md)|.idl ファイルのライブラリ ブロックを定義します。|
 |[ms_union](ms-union.md)|カプセル化されていない共用体のネットワーク データ表現の整列を制御します。|
 |[no_injected_text](no-injected-text.md)|コンパイラがコードの属性を使用した結果として挿入するを防ぎます。|
 |[nonbrowsable](nonbrowsable.md)|インターフェイス メンバーをプロパティ ブラウザーに表示されないことを示します。|
@@ -109,13 +109,13 @@ ms.locfileid: "59038214"
 |[retval](retval.md)|メンバーの戻り値を受け取るパラメーターを指定します。|
 |[satype](satype.md)|データ型を指定します、`SAFEARRAY`します。|
 |[size_is](size-is.md)|メモリのサイズがサイズのポインターに割り当てられた、サイズのポインター、および 1 次元または多次元配列へのポインターのサイズを指定します。|
-|[ソース](source-cpp.md)|クラス、プロパティ、またはメソッドのメンバーがイベントの発生元であることを示します。|
+|[source](source-cpp.md)|クラス、プロパティ、またはメソッドのメンバーがイベントの発生元であることを示します。|
 |[string](string-cpp.md)|示します、1 次元**char**、 **wchar_t**、 `byte`、または同等の配列またはそのような配列へのポインターは、文字列として扱う必要があります。|
 |[support_error_info](support-error-info.md)|ターゲット オブジェクトのエラー報告をサポートしています。|
 |[switch_is](switch-is.md)|式または共用体の判別共用体のメンバーを選択するとして機能する識別子を指定します。|
 |[switch_type](switch-type.md)|共用体の判別式として使用される変数の型を識別します。|
 |[synchronize](synchronize.md)|メソッドへのアクセスを同期します。|
-|[スレッド化](threading-cpp.md)|COM オブジェクトのスレッド モデルを指定します。|
+|[threading](threading-cpp.md)|COM オブジェクトのスレッド モデルを指定します。|
 |[transmit_as](transmit-as.md)|提示された種類、クライアントとサーバー アプリケーションは、次の操作、転送の型との関連付けをコンパイラに指示します。|
 |[uidefault](uidefault.md)|型情報メンバーは、ユーザー インターフェイスに表示する既定のメンバーであることを示します。|
 |[unique](unique-cpp.md)|一意のポインターを指定します。|
@@ -129,6 +129,6 @@ ms.locfileid: "59038214"
 
 ## <a name="see-also"></a>関連項目
 
-[COM および .NET C++ 属性](cpp-attributes-com-net.md)<br/>
+[COM および .NET の C++ の属性](cpp-attributes-com-net.md)<br/>
 [グループ別の属性](attributes-by-group.md)<br/>
 [使用法別の属性](attributes-by-usage.md)

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - cl.exe compiler, setting options
 ms.assetid: 69809cfb-a38a-4035-b154-283a61938df8
 ms.openlocfilehash: ee2b6097a62a8f1030dc631354f96ec7a33d2f11
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59039398"
 ---
 # <a name="compiler-warnings-that-are-off-by-default"></a>既定で無効になっているコンパイラの警告
@@ -30,7 +30,7 @@ ms.locfileid: "59039398"
 
 - [/Wall](../build/reference/compiler-option-warning-level.md)
 
-   `/Wall` 既定で無効になっているすべての警告を有効にします。 使用して個々 の警告をオフにすることができます、このオプションを使用する場合、 [/wd](../build/reference/compiler-option-warning-level.md)オプション。
+   `/Wall` は既定では無効のすべての警告を有効にします。 使用して個々 の警告をオフにすることができます、このオプションを使用する場合、 [/wd](../build/reference/compiler-option-warning-level.md)オプション。
 
 - [/w*Lnnnn*](../build/reference/compiler-option-warning-level.md)
 
@@ -90,7 +90,7 @@ ms.locfileid: "59039398"
 |C4588 (レベル 1)|'*anonymous_structure*': 動作変更: デストラクターは呼び出されなく|
 |C4596 (レベル 4)|'*識別子*': メンバー宣言での無効な修飾名<sup>14.3</sup> <sup>Perm</sup>|
 |C4598 (レベル 1 およびレベル 3)|' #include"*ヘッダー*"' ヘッダー番号*数*、プリコンパイル済みヘッダーと一致しませんその位置にある現在のコンパイル<sup>14.3。</sup>|
-|C4599 (レベル 3)|'*オプション**パス*': コマンドライン引数の数*数*プリコンパイル済みヘッダーと一致しません<sup>14.3</sup>|
+|C4599 (レベル 3)|'*オプション* *パス*': コマンドライン引数の数*数*プリコンパイル済みヘッダーと一致しません<sup>14.3</sup>|
 |C4605 (レベル 1)|'/D*マクロ*' 現在のコマンドラインで指定しますが、プリコンパイル済みヘッダーを構築したときに指定されませんでした|
 |[C4608](../error-messages/compiler-warnings/compiler-warning-level-3-c4608.md) (レベル 3)|'*union_member*'は既に初期化されて、初期化子リストで、もう 1 つの共用体メンバーにより'*union_member*' <sup>Perm</sup>|
 |[C4619](../error-messages/compiler-warnings/compiler-warning-level-3-c4619.md) (レベル 3)|#pragma warning: 警告番号がありません '*数*'|
@@ -180,4 +180,4 @@ ms.locfileid: "59039398"
 
 ## <a name="see-also"></a>関連項目
 
-[警告](../preprocessor/warning.md)
+[warning](../preprocessor/warning.md)

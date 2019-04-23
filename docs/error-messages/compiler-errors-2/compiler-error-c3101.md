@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3101
 ms.assetid: 4f673766-d4f7-4632-94a5-d36a83f7f4b5
 ms.openlocfilehash: d39afc548010df95bdf31b2c7708bc4fa0310bcd
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58779236"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59776133"
 ---
 # <a name="compiler-error-c3101"></a>コンパイラ エラー C3101
 
@@ -19,7 +19,7 @@ ms.locfileid: "58779236"
 
 名前付き属性引数を初期化するときに、値は、コンパイル時間定数である必要があります。
 
-属性の詳細については、[ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)を参照してください。
+属性の詳細については、次を参照してください。[ユーザー定義の属性](../../extensions/user-defined-attributes-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 

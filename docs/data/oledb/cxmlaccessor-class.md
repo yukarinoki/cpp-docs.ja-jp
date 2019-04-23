@@ -21,10 +21,10 @@ helpviewer_keywords:
 - GetXMLRowData method
 ms.assetid: c88c082c-ec2f-4351-8947-a330b15e448a
 ms.openlocfilehash: 85fddb9b77cfc089b2236f2ff82944fec6ef9632
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59036102"
 ---
 # <a name="cxmlaccessor-class"></a>CXMLAccessor クラス
@@ -74,7 +74,7 @@ HRESULT GetXMLColumnData(CSimpleStringW& strOutput) throw();
 
 #### <a name="parameters"></a>パラメーター
 
-*キャンセルします。*<br/>
+*strOutput*<br/>
 [out]取得する列の型情報を含む文字列バッファーへの参照。 文字列には、データ ストアの列名に一致する XML タグ名が表示されます。
 
 ### <a name="return-value"></a>戻り値
@@ -104,7 +104,7 @@ HRESULT GetXMLRowData(CSimpleStringW& strOutput,
 
 #### <a name="parameters"></a>パラメーター
 
-*キャンセルします。*<br/>
+*strOutput*<br/>
 [out]取得するテーブルのデータを格納するバッファーへの参照。 データは、データ ストアの列名に一致する XML タグ名でデータを文字列として書式設定します。
 
 *bAppend*<br/>

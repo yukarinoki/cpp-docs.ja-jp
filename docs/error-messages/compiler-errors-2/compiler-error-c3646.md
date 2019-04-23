@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3646
 ms.assetid: 4391ead2-9637-4ca3-aeda-5a991b18d66d
 ms.openlocfilehash: 04ff1d026c97c56611f8b786d8a7254db711e4a8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58769037"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59775559"
 ---
 # <a name="compiler-error-c3646"></a>コンパイラ エラー C3646
 
@@ -23,7 +23,7 @@ ms.locfileid: "58769037"
 
 たとえば場合、認識されない*指定子*は **_NOEXCEPT**、キーワードに置き換えます**noexcept**します。
 
-詳細については、[オーバーライド指定子を](../../extensions/override-specifiers-cpp-component-extensions.md)を参照してください。
+詳細については、次を参照してください。[オーバーライド指定子を](../../extensions/override-specifiers-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 

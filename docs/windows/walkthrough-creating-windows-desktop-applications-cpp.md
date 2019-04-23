@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Desktop applications [C++]
 - Windows API [C++]
 ms.openlocfilehash: cb6d09acc00f2e38ee41180c81c1877bc53027c2
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59037962"
 ---
 # <a name="walkthrough-create-a-traditional-windows-desktop-application-c"></a>チュートリアル: 従来の Windows デスクトップ アプリケーション (C++) の作成します。
@@ -96,7 +96,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
 
 ### <a name="to-start-a-windows-desktop-application"></a>Windows デスクトップ アプリケーションを開始するには
 
-1. すべての c と C++ アプリケーションする必要がありますが、`main`関数のすべての Windows デスクトップ アプリケーションする必要がありますが、その開始点として、`WinMain`関数。 `WinMain` 次の構文があります。
+1. すべての c と C++ アプリケーションする必要がありますが、`main`関数のすべての Windows デスクトップ アプリケーションする必要がありますが、その開始点として、`WinMain`関数。 `WinMain` の構文は、次のとおりです。
 
    ```cpp
    int CALLBACK WinMain(
@@ -119,7 +119,7 @@ Windows API (とも呼ばれる、Win32 API、Windows デスクトップ API、�
    #include <tchar.h>
    ```
 
-1. `WinMain` 関数のほかに、すべての Windows デスクトップ アプリケーションにはウィンドウ プロシージャ関数が必要です。 この関数の名前は通常`WndProc`がすることができます、どのような名前します。 `WndProc` 次の構文があります。
+1. `WinMain` 関数のほかに、すべての Windows デスクトップ アプリケーションにはウィンドウ プロシージャ関数が必要です。 この関数の名前は通常`WndProc`がすることができます、どのような名前します。 `WndProc` の構文は、次のとおりです。
 
    ```cpp
    LRESULT CALLBACK WndProc(

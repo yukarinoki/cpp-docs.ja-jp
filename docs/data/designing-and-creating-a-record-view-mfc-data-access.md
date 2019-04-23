@@ -10,10 +10,10 @@ helpviewer_keywords:
 - designing record views
 ms.assetid: 1d6f5439-754f-4b8b-a19d-841a4657827b
 ms.openlocfilehash: 15a8afde8c86d3dae8198e8f42b2b7c3b49f0dfa
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035544"
 ---
 # <a name="designing-and-creating-a-record-view--mfc-data-access"></a>レコード ビューのデザインと作成 (MFC データ アクセス)
@@ -34,11 +34,11 @@ ms.locfileid: "59035544"
 
 次のトピックでは、レコード ビューの使用に関するいくつかの事項について詳しく説明しています。
 
-- [レコード ビュー:レコード ビュー内の移動](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
+- [レコード ビュー:レコード ビュー内のナビゲーションのサポート](../data/supporting-navigation-in-a-record-view-mfc-data-access.md)
 
-- [レコード ビュー:レコード ビューの使用法](../data/using-a-record-view-mfc-data-access.md)
+- [レコード ビュー:レコード ビューの使用](../data/using-a-record-view-mfc-data-access.md)
 
-- [レコード ビュー:セカンド レコードセットを利用してリスト ボックスを表示する方法](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
+- [レコード ビュー:2 つ目のレコード セットからリスト ボックスの入力](../data/filling-a-list-box-from-a-second-recordset-mfc-data-access.md)
 
 ## <a name="see-also"></a>関連項目
 

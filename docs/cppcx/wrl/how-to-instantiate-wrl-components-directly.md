@@ -4,10 +4,10 @@ ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 1a9fa011-0cee-4abf-bf83-49adf53ff906
 ms.openlocfilehash: 3f622a79aed6a1e42feccb92e1a01b3bc1277151
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59035745"
 ---
 # <a name="how-to-instantiate-wrl-components-directly"></a>方法: WRL コンポーネントを直接インスタンス化します。
@@ -18,7 +18,7 @@ Windows ランタイム C++ テンプレート ライブラリ (WRL) を使用�
 
 Windows ランタイム C++ テンプレート ライブラリを使用して、従来の COM コンポーネントを作成し、外部のデスクトップ アプリからインスタンスを作成する方法については、次を参照してください。[方法。従来の COM コンポーネントを作成する](how-to-create-a-classic-com-component-using-wrl.md)します。
 
-このドキュメントでは、2 つの例を示します。 最初の例では、`Make` 関数を使用してコンポーネントをインスタンス化します。 2 番目の例では、`MakeAndInitialize` 関数を使用して構築中に失敗する場合があるコンポーネントをインスタンス化します  (通常、COM は、例外の代わりに、HRESULT 値を使用するため、エラーを示す COM 型通常はスローされません、コンス トラクター。 `MakeAndInitialize` コンポーネントを使用して、構築引数を検証できるように、`RuntimeClassInitialize`メソッドです)。どちらの例も、基本的なロガー インターフェイスを定義し、コンソールにメッセージを記述するクラスを定義することでそのインターフェイスを実装します。
+このドキュメントでは、2 つの例を示します。 最初の例では、`Make` 関数を使用してコンポーネントをインスタンス化します。 2 番目の例では、`MakeAndInitialize` 関数を使用して構築中に失敗する場合があるコンポーネントをインスタンス化します  (通常、COM は、例外の代わりに、HRESULT 値を使用するため、エラーを示す COM 型通常はスローされません、コンス トラクター。 `MakeAndInitialize` を使用すると、コンポーネントで `RuntimeClassInitialize` メソッドを使用して構築引数を検証できます)。どちらの例も、基本的なロガー インターフェイスを定義し、コンソールにメッセージを記述するクラスを定義することでそのインターフェイスを実装します。
 
 > [!IMPORTANT]
 > 使用することはできません、 `new` Windows ランタイム C++ テンプレート ライブラリのコンポーネントをインスタンス化する演算子。 そのため、コンポーネントを直接インスタンス化するには、常に `Make` または `MakeAndInitialize` を使用することをお勧めします。
@@ -37,7 +37,7 @@ Windows ランタイム C++ テンプレート ライブラリを使用して、
 
 ### <a name="to-handle-construction-failure-for-the-basic-logger-component"></a>基本的なロガー コンポーネントの構造エラーを処理するには
 
-1. 次のコードを使用して `CConsoleWriter` クラスの定義を置き換えます。 このバージョンは、プライベート文字列のメンバー変数を保持し、`RuntimeClass::RuntimeClassInitialize` メソッドをオーバーライドします。 `RuntimeClassInitialize` 場合、失敗への呼び出し`SHStrDup`は失敗します。
+1. 次のコードを使用して `CConsoleWriter` クラスの定義を置き換えます。 このバージョンは、プライベート文字列のメンバー変数を保持し、`RuntimeClass::RuntimeClassInitialize` メソッドをオーバーライドします。 `RuntimeClassInitialize` は `SHStrDup` の呼び出しに失敗すると失敗します。
 
    [!code-cpp[wrl-logger-makeandinitialize#1](../codesnippet/CPP/how-to-instantiate-wrl-components-directly_3.cpp)]
 

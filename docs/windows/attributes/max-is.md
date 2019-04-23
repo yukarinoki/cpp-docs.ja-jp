@@ -7,10 +7,10 @@ helpviewer_keywords:
 - max_is attribute
 ms.assetid: 7c851f5c-6649-4d77-a792-247c37d8f560
 ms.openlocfilehash: dca2a3dc18aa3c3e75bbb682ed0b1b90adcd9236
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59041310"
 ---
 # <a name="maxis"></a>max_is
@@ -25,12 +25,12 @@ ms.locfileid: "59041310"
 
 ### <a name="parameters"></a>パラメーター
 
-*式*<br/>
+*式 (expression)*<br/>
 1 つ以上の C 言語の式。 空の引数スロットが許可されます。
 
 ## <a name="remarks"></a>Remarks
 
-**Max_is** C++ 属性と同じ機能を持つ、 [max_is](/windows/desktop/Midl/max-is) MIDL 属性。
+**Max_is** C++属性と同じ機能を持つ、 [max_is](/windows/desktop/Midl/max-is) MIDL 属性。
 
 ## <a name="requirements"></a>必要条件
 
