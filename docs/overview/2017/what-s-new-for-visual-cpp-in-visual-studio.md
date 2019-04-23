@@ -6,11 +6,11 @@ ms.assetid: 8801dbdb-ca0b-491f-9e33-01618bff5ae9
 author: mikeblome
 ms.author: mblome
 ms.openlocfilehash: e74f8270d241b9725a24ee257fb846a7cc4e079e
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58899458"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779494"
 ---
 # <a name="whats-new-for-c-in-visual-studio-2017"></a>Visual Studio 2017 での C++ の新機能
 
@@ -80,7 +80,7 @@ Microsoft C++ コンパイラは Intel の AVX-512 に対応しています。�
 - パフォーマンスの向上: `basic_string::operator==` は、文字列の内容を比較する前に文字列のサイズをチェックするようになりました。
 - パフォーマンスの向上: コンパイラ オプティマイザーによる分析が困難であった `basic_string` でのコントロールの結合が削除されました。 短い文字列では、`reserve` を呼び出すと、処理は何も行われませんがコストは 0 ではないことに注意してください。
 - \<any\>、\<string_view\>、`apply()`、`make_from_tuple()` が追加されました。
-- `std::vector` が正確性とパフォーマンスについて徹底的に見直されました。挿入および配置操作中のエイリアシングが標準に従って適切に処理されるようになりました。強固な例外保証が、標準で求められるときに `move_if_noexcept()` およびその他のロジックを介して提供されるようになりました。挿入/配置に伴う要素の操作が少なくなりました。
+- 正確性とパフォーマンスについて `std::vector` が徹底的に見直されました。挿入および配置操作中のエイリアシングが標準に従って適切に処理されるようになりました。強固な例外保証が、標準で求められるときに `move_if_noexcept()` およびその他のロジックを介して提供されるようになりました。挿入/配置に伴う要素の操作が少なくなりました。
 - C++ 標準ライブラリでは、手の込んだ null ポインターの逆参照が回避されるようになりました。
 - \<optional\>、\<variant\>、`shared_ptr::weak_type`、および \<cstdalign\> が追加されました。
 - `min(initializer_list)`、`max(initializer_list)`、および `minmax(initializer_list)` で、さらに `min_element()`、`max_element()`、および `minmax_element()` で C++14 `constexpr` が有効になりました。
@@ -117,7 +117,7 @@ C++17 の追加機能がいくつか実装されました。 詳細について�
 - `normal_distribution<float>` では、double から float への縮小について、標準ライブラリ内で警告を出力しないようになりました。
 - 最大サイズのオーバーフローをチェックするときに、`max_size()` ではなく `npos` と比較していた一部の `basic_string` 操作を修正しました。
 - `condition_variable::wait_for(lock, relative_time, predicate)` は、疑似ウェイクが発生した場合、相対時間全体にわたって待機していました。 現在は、相対時間の単一間隔の間のみ待機します。
-- `future::get()` は標準での必要性に応じて、`future` を無効化するようになりました。
+- 標準での必要性に応じて、`future::get()` は `future` を無効化するようになりました。
 - `iterator_traits<void *>` は `void&` を形成しようとするため、ハード エラーとして使用されていましたが、これが明確に空の構造体となり、"is iterator" SFINAE 条件で `iterator_traits` が使用できるようになりました。
 - Clang **-Wsystem-headers** によって報告される警告の一部を修正しました。
 - Clang -**Wmicrosoft-exception-spec** によって報告された "宣言での例外指定が以前の宣言と一致しない" 問題も修正しました。
@@ -156,7 +156,7 @@ C++17 の追加機能がいくつか実装されました。 詳細について�
 - 関数ベースの SFINAE 式から `struct` および `void_t` ベースへの変更が完了しました。
 - 標準ライブラリのアルゴリズムで、ポスト インクリメントの反復子を使用しないようになりました。
 - 64 ビット システムで 32 ビットのアロケーターを使用した場合の切り捨ての警告を修正しました。
-- `std::vector` 移動割り当てが、non-POCMA non-equal-allocator の場合に、バッファーが使用可能な場合は再利用することによって、より効率的になるようになりました。
+- non-POCMA non-equal-allocator の場合に、バッファーが使用可能な場合は再利用することによって、`std::vector` 移動割り当てがより効率的になるようになりました。
 
 #### <a name="readability-and-other-improvements"></a>読みやすさとその他の改善
 
@@ -217,7 +217,7 @@ C++17 の追加機能がいくつか実装されました。 詳細について�
 - 対数時間をとるヒープ アルゴリズムは、反復子デバッグが有効なとき、入力は実際、ヒープであるとする線形時間アサーションを行わなくなりました。
 - `__declspec(allocator)` は今後、C1XX の場合のみ、この declspec を理解しない Clang からの警告を防ぐ目的で保護されます。
 - `basic_string::npos` は今後、コンパイル時間定数として利用できます。
-- `std::allocator` は C++17 モードで、アラインメントが `max_align_t` を超える、オーバーアラインされている型の割り当てを適切に処理するようになりました (**/Zc:alignedNew-** によって無効にされていない限り)。  たとえば、SSE および AVX 命令で、アラインメントが 16 バイトまたは 32 バイトのオブジェクトのベクトルが正しく調整されるようになりました。
+- C++17 モードの `std::allocator` は、アラインメントが `max_align_t` を超える、オーバーアラインされている型の割り当てを適切に処理するようになりました (**/Zc:alignedNew-** によって無効にされていない限り)。  たとえば、SSE および AVX 命令で、アラインメントが 16 バイトまたは 32 バイトのオブジェクトのベクトルが正しく調整されるようになりました。
 
 ### <a name="visual-studio-2017-version-156"></a>Visual Studio 2017 バージョン 15.6
 
