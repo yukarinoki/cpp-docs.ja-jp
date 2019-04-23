@@ -6,10 +6,10 @@ helpviewer_keywords:
 - upgrading Visual C++ applications, 32-bit code
 ms.assetid: 18cdacaa-4742-43db-9e4c-2d9e73d8cc84
 ms.openlocfilehash: 41cac1b23d5ab16825891ef654341016958ab826
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59034914"
 ---
 # <a name="upgrading-projects-from-earlier-versions-of-visual-c"></a>旧バージョンの Visual C++ からのプロジェクトのアップグレード
@@ -39,12 +39,12 @@ ms.locfileid: "59034914"
 [WINVER および _WIN32_WINNT の変更](modifying-winver-and-win32-winnt.md)<br/>
 [ライブラリ内部の依存関係を修正する](fix-your-dependencies-on-library-internals.md)<br/>
 [浮動小数点の移行に関する問題](floating-point-migration-issues.md)<br/>
-[Visual Studio でネイティブ マルチターゲットを利用し、古いプロジェクトを作成する](use-native-multi-targeting.md)<br/>
+[Visual Studio でネイティブ マルチ ターゲットを利用し、古いプロジェクトを作成する](use-native-multi-targeting.md)<br/>
 [Visual Studio 2019 プレビューでの非推奨の Visual C++ 機能](features-deprecated-in-visual-studio.md)<br/>
 [ビルド システムの変更点](build-system-changes.md)<br/>
 
 ## <a name="see-also"></a>関連項目
 
-[Visual Studio 2017 における Visual C++ の新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-[Visual C++ 2003 ～ 2015 の変更履歴](../porting/visual-cpp-change-history-2003-2015.md)<br/>
+[Visual Studio 2017 の Visual C++ の新機能](../overview/what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[2003 から 2015 の Visual C++ の履歴の変更](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 [非標準動作](../cpp/nonstandard-behavior.md)

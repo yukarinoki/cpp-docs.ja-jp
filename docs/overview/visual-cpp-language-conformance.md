@@ -6,10 +6,10 @@ ms.assetid: 475da6e9-0d78-4b4e-bd23-f41c406c4efe
 author: corob-msft
 ms.author: corob
 ms.openlocfilehash: 69591186550a915edb49889617740e454817f154
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58898805"
 ---
 # <a name="visual-c-language-conformance"></a>Visual C++ 言語の準拠
@@ -25,13 +25,13 @@ Visual Studio 2017 で加えられた準拠の強化とその他の変更点の�
 
 |機能分野| |
 |----|---|
-|__C++03/11 Core 言語機能__|__サポート状況__|
+|__C++03/11 コア言語機能__|__サポート状況__|
 |&nbsp;&nbsp;その他すべて|VS 2015 <sup>[A](#note_A)</sup>|
 |&nbsp;&nbsp;名前の 2 段階参照|VS 2017 15.7 <sup>[B](#note_B)</sup>|
 |&nbsp;&nbsp;[N2634 式 SFINAE](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2008/n2634.html)|VS 2017 15.7|
 |&nbsp;&nbsp;[N1653 C99 プリプロセッサ](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2004/n1653.htm)|部分的 <sup>[D](#note_D)</sup>|
 |&nbsp;&nbsp;[N1988 長整数型](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2006/n1988.pdf)|N/A <sup>[E](#note_E)</sup>|
-|__C++14 Core 言語機能__|__サポート状況__|
+|__C++14 コア言語機能__|__サポート状況__|
 |&nbsp;&nbsp;[N3323 コンテキスト変換での不自然な言い回し](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3323.pdf)|VS 2013|
 |&nbsp;&nbsp;[N3472 バイナリ リテラル](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3472.pdf)|VS 2015|
 |&nbsp;&nbsp;[N3638 auto と decltype(auto) 戻り値型](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3638.html)|VS 2015|
@@ -44,7 +44,7 @@ Visual Studio 2017 で加えられた準拠の強化とその他の変更点の�
 |&nbsp;&nbsp;[N3652 拡張された constexpr](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3652.html)|VS 2017|
 |&nbsp;&nbsp;[N3653 集計のための NSDMI](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3653.html)|VS 2017|
 |&nbsp;&nbsp;[N3664 割り当ての回避/融合](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2013/n3664.html)|N/A <sup>[F](#note_F)</sup>|
-|__C++17 Core 言語機能__|__サポート状況__|
+|__C++17 コア言語機能__|__サポート状況__|
 |&nbsp;&nbsp;[N4086 トライグラフの削除](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4086.html)|VS 2010 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N3922 かっこ付き初期化リストを持つ auto の新しい規則](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n3922.html)|VS 2015 <sup>[14](#note_14)</sup>|
 |&nbsp;&nbsp;[N4051 テンプレートのテンプレート パラメーターの typename](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2014/n4051.html)|VS 2015 <sup>[14](#note_14)</sup>|
@@ -88,7 +88,7 @@ Visual Studio 2017 で加えられた準拠の強化とその他の変更点の�
 
 |機能分野| |
 |----|---|
-|__C++17 Core 言語機能 (不具合報告)__|__サポート状況__|
+|__C++17 コア言語機能 (不具合報告)__|__サポート状況__|
 |&nbsp;&nbsp;[P0702R1 初期化子リスト ctors のクラス テンプレート引数の推論の修正](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0702r1.html)|VS 2017 15.7 <sup>[17](#note_17)</sup>|
 |&nbsp;&nbsp;[P0588R1 暗黙の lambda キャプチャの簡略化](http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2017/p0588r1.html)|いいえ|
 |&nbsp;&nbsp;[CWG 1581: constexpr メンバー関数を定義するタイミング](https://wg21.cmeerw.net/cwg/issue1581)|いいえ|
@@ -314,9 +314,9 @@ __VS 2017 15.7__ は、Visual Studio 2017 バージョン 15.7 でサポート�
 ## <a name="see-also"></a>関連項目
 
 [C++ 言語リファレンス](../cpp/cpp-language-reference.md)<br/>
-[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
+[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
 [Visual Studio の C++ 準拠の強化](cpp-conformance-improvements.md)<br/>
-[Visual Studio の Visual C++ の新機能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
-[Visual C++ 2003 から 2015 の変更履歴](../porting/visual-cpp-change-history-2003-2015.md)<br/>
-[Visual Studio 2003 から 2015 の Visual C++ の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
+[Visual Studio における Visual C++ の新機能](what-s-new-for-visual-cpp-in-visual-studio.md)<br/>
+[Visual C++ 2003 ～ 2015 の変更履歴](../porting/visual-cpp-change-history-2003-2015.md)<br/>
+[2003 ～ 2015 年の Visual C++ の新機能](../porting/visual-cpp-what-s-new-2003-through-2015.md)<br/>
 [Visual C++ チーム ブログ](https://blogs.msdn.microsoft.com/vcblog/)
