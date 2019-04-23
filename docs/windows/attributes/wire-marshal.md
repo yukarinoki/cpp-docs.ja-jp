@@ -7,10 +7,10 @@ helpviewer_keywords:
 - wire_marshal attribute
 ms.assetid: 244f9d72-776d-4ebd-b60a-cee600a126b5
 ms.openlocfilehash: d1d18336a20644338a50ab66c7fcb06959e5760a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029863"
 ---
 # <a name="wiremarshal"></a>wire_marshal
@@ -25,7 +25,7 @@ ms.locfileid: "59029863"
 
 ## <a name="remarks"></a>Remarks
 
-**Wire_marshal** C++ 属性と同じ機能を持つ、 [wire_marshal](/windows/desktop/Midl/wire-marshal) MIDL 属性。
+**Wire_marshal** C++属性と同じ機能を持つ、 [wire_marshal](/windows/desktop/Midl/wire-marshal) MIDL 属性。
 
 ## <a name="example"></a>例
 
@@ -53,7 +53,7 @@ ms.locfileid: "59029863"
 
 |||
 |-|-|
-|**対象**|**Typedef**|
+|**対象**|**typedef**|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

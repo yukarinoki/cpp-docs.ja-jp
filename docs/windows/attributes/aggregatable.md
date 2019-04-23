@@ -7,10 +7,10 @@ helpviewer_keywords:
 - aggregatable attribute
 ms.assetid: 9253a46a-cd76-41f2-b3b6-86f709bb069c
 ms.openlocfilehash: 8d5ceb46a124db8c0082495d48e6ee0e21655422
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59029292"
 ---
 # <a name="aggregatable"></a>aggregatable
@@ -25,7 +25,7 @@ ms.locfileid: "59029292"
 
 ### <a name="parameters"></a>パラメーター
 
-*値*<br/>
+*value*<br/>
 (省略可能)COM オブジェクトを集計できるかを示すパラメーター:
 
 - `never` COM オブジェクトを集約することはできません。
@@ -84,4 +84,4 @@ class CMyClass {};
 [IDL 属性](idl-attributes.md)<br/>
 [クラス属性](class-attributes.md)<br/>
 [Typedef、Enum、Union、および Struct 型の属性](typedef-enum-union-and-struct-attributes.md)<br/>
-[集約](/windows/desktop/com/aggregation)
+[集計](/windows/desktop/com/aggregation)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - switch_type attribute
 ms.assetid: e24544dc-b3bc-48ae-b249-f967db49271e
 ms.openlocfilehash: b461769d3d988efae0be7380e1e0112e3f3cf801
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027858"
 ---
 # <a name="switchtype"></a>switch_type
@@ -27,12 +27,12 @@ type
 
 ### <a name="parameters"></a>パラメーター
 
-*種類*<br/>
+*type*<br/>
 スイッチの種類は、整数、文字、ブール値、または列挙型を指定できます。
 
 ## <a name="remarks"></a>Remarks
 
-**Switch_type** C++ 属性と同じ機能を持つ、 [switch_type](/windows/desktop/Midl/switch-type) MIDL 属性。
+**Switch_type** C++属性と同じ機能を持つ、 [switch_type](/windows/desktop/Midl/switch-type) MIDL 属性。
 
 C++ 属性をサポートしていない[共用体をカプセル化された](/windows/desktop/Midl/encapsulated-unions)します。 [カプセル化されていない共用体](/windows/desktop/Midl/nonencapsulated-unions)次の形式でのみサポートされます。
 
@@ -63,7 +63,7 @@ struct SizedValue2 {
 
 |||
 |-|-|
-|**対象**|**Typedef**|
+|**対象**|**typedef**|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

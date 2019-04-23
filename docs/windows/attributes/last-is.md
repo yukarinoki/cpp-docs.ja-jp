@@ -7,10 +7,10 @@ helpviewer_keywords:
 - last_is attribute
 ms.assetid: 9e045ac0-fa38-4249-af55-67bde5d0a58c
 ms.openlocfilehash: 39b35b218f3402839d956c4da0a00f290fe5d595
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033288"
 ---
 # <a name="lastis"></a>last_is
@@ -25,12 +25,12 @@ ms.locfileid: "59033288"
 
 ### <a name="parameters"></a>パラメーター
 
-*式*<br/>
+*式 (expression)*<br/>
 1 つ以上の C 言語の式。 空の引数スロットが許可されます。
 
 ## <a name="remarks"></a>Remarks
 
-**Last_is** C++ 属性と同じ機能を持つ、 [last_is](/windows/desktop/Midl/last-is) MIDL 属性。
+**Last_is** C++属性と同じ機能を持つ、 [last_is](/windows/desktop/Midl/last-is) MIDL 属性。
 
 ## <a name="example"></a>例
 

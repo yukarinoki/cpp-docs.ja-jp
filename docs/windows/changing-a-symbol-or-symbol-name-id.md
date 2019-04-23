@@ -36,10 +36,10 @@ helpviewer_keywords:
 - shared symbols
 ms.assetid: 26541832-8dba-4177-b642-e08f94502ea7
 ms.openlocfilehash: ebf10ade734d321c5a83644110d3511e4b6c827a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033996"
 ---
 # <a name="how-to-manage-symbols"></a>方法: シンボルを管理します。
@@ -165,7 +165,7 @@ ms.locfileid: "59033996"
 
 読み取り専用のシンボル定義を使用する状況の 1 つに、複数のプロジェクト間でシンボル ファイルを共有する場合があります。
 
-インクルードされるシンボル ファイルは、単純な整数の代わりに式を使用してシンボル値を定義するシンボル定義を含む既存のリソースがあるときに使用することもできます。 例えば:
+インクルードされるシンボル ファイルは、単純な整数の代わりに式を使用してシンボル値を定義するシンボル定義を含む既存のリソースがあるときに使用することもできます。 例:
 
 ```cpp
 #define   IDC_CONTROL1 2100
@@ -215,5 +215,5 @@ Win32
 ## <a name="see-also"></a>関連項目
 
 [リソース識別子 (シンボル)](../windows/symbols-resource-identifiers.md)<br/>
-[方法: シンボルを作成します。](../windows/creating-new-symbols.md)<br/>
-[定義済みのシンボル ID](../windows/predefined-symbol-ids.md)<br/>
+[方法: シンボルの作成](../windows/creating-new-symbols.md)<br/>
+[定義済みシンボル ID](../windows/predefined-symbol-ids.md)<br/>

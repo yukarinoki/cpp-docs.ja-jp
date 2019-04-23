@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transmit_as attribute
 ms.assetid: 53d0b8ab-5b06-423e-83eb-3d01a10424b2
 ms.openlocfilehash: e432d1a8f39cbc5e12f192ed7b07c29421bc403e
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59032103"
 ---
 # <a name="transmitas"></a>transmit_as
@@ -25,12 +25,12 @@ ms.locfileid: "59032103"
 
 ### <a name="parameters"></a>パラメーター
 
-*種類*<br/>
+*type*<br/>
 クライアントとサーバー間で送信されるデータ型を指定します。
 
 ## <a name="remarks"></a>Remarks
 
-**Transmit_as** C++ 属性と同じ機能を持つ、 [transmit_as](/windows/desktop/Midl/transmit-as) MIDL 属性。
+**Transmit_as** C++属性と同じ機能を持つ、 [transmit_as](/windows/desktop/Midl/transmit-as) MIDL 属性。
 
 ## <a name="example"></a>例
 
@@ -70,7 +70,7 @@ struct _TREE_NODE_TYPE * right;
 
 |||
 |-|-|
-|**対象**|**Typedef**|
+|**対象**|**typedef**|
 |**反復可能**|いいえ|
 |**必要な属性**|なし|
 |**無効な属性**|なし|

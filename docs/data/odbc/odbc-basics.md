@@ -9,21 +9,21 @@ helpviewer_keywords:
 - ODBC, components
 ms.assetid: ec529702-0fb2-4754-b8de-d1efa8eca18f
 ms.openlocfilehash: e14f5d051b9684cd79a34f5fb50feeb785d2f927
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033243"
 ---
 # <a name="odbc-basics"></a>ODBC の基礎
 
 このトピックでは、ODBC (Open Database Connectivity) の基礎について説明します。
 
-- [ODBC とデータベース クラス](../../data/odbc/odbc-and-the-database-classes.md)
+- [ODBC のしくみとデータベース クラス](../../data/odbc/odbc-and-the-database-classes.md)
 
-- [ダイナセットを使う場合の ODBC ドライバーの必要条件](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
+- [ダイナセットを使う場合の ODBC ドライバーのしくみ](../../data/odbc/odbc-driver-requirements-for-dynasets.md)
 
-- [ODBC の構成要素の配布](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
+- [どのような ODBC コンポーネントをアプリケーションで再配布する必要があります。](../../data/odbc/redistributing-odbc-components-to-your-customers.md)
 
 関連トピックを参照することも[ODBC:ODBC カーソル ライブラリ](../../data/odbc/odbc-the-odbc-cursor-library.md)します。
 

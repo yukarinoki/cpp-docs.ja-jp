@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rep insd instruction
 ms.assetid: 96a1cf33-f691-4916-99e4-fa849b61e3a9
 ms.openlocfilehash: 6f50aed8e6efe3b0b0a6e7eaebef5719475463ea
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59027871"
 ---
 # <a name="indwordstring"></a>__indwordstring
@@ -36,7 +36,7 @@ void __indwordstring(
 *ポート*<br/>
 [in]読み取るポート。
 
-*バッファー*<br/>
+*Buffer*<br/>
 [out]ここでは、ポートから読み取ったデータを書き込まれます。
 
 *カウント*<br/>
@@ -54,8 +54,8 @@ void __indwordstring(
 
 このルーチンは、組み込みとしてのみ使用できます。
 
-**END Microsoft 固有の仕様**
+**Microsoft 固有の仕様はここまで**
 
 ## <a name="see-also"></a>関連項目
 
-[コンパイラ組み込み](../intrinsics/compiler-intrinsics.md)
+[コンパイラの組み込み](../intrinsics/compiler-intrinsics.md)

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - COM, type library header file
 ms.assetid: 787d1112-e543-40d7-ab15-a63d43f4030a
 ms.openlocfilehash: 98a0f9f66fb209bb41215fc1e86a9682a4fed023
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031986"
 ---
 # <a name="import-directive-c"></a>#import ディレクティブ (C++)
@@ -148,7 +148,7 @@ Byref パラメーターを使用するディスパッチ インターフェイ�
 
 - 旧式の GUID の定義 (オプション):名前付き GUID 定数の初期化が含まれています。 これらは、フォーム名`CLSID_CoClass`と`IID_Interface`、MIDL コンパイラによって生成されたものと似ています。
 
-- `#include` セカンダリ タイプ ライブラリ ヘッダーのステートメント。
+- セカンダリ タイプ ライブラリ ヘッダーの `#include` ステートメント。
 
 - フッターの定型:現在は`#pragma pack(pop)`します。
 
@@ -189,9 +189,9 @@ using namespace MyLib;
 
 詳細については、次を参照してください。 [#import 属性](../preprocessor/hash-import-attributes-cpp.md)します。
 
-**END C++ 固有の仕様**
+**END C 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
 [プリプロセッサ ディレクティブ](../preprocessor/preprocessor-directives.md)<br/>
-[コンパイラの COM サポート](../cpp/compiler-com-support.md)
+[コンパイラ COM サポート](../cpp/compiler-com-support.md)

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - pragmas, alloc_text
 ms.assetid: 1fd7be18-e4f7-4f70-b079-6326f72b871a
 ms.openlocfilehash: 399e8956a511f289b480e66db7f03cac0a6c7c20
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59031366"
 ---
 # <a name="alloctext"></a>alloc_text
@@ -28,7 +28,7 @@ textsection
 
 ## <a name="remarks"></a>Remarks
 
-**Alloc_text**プラグマでは、C++ メンバー関数またはオーバー ロードされた関数は処理しません。 C リンケージで宣言された関数のみに適用することで宣言された関数、 **extern"C"** リンケージ指定します。 C++ リンケージを持つ関数でこのプラグマを使用しようとすると、コンパイラ エラーが生成されます。
+**Alloc_text**プラグマが処理しないC++メンバー関数またはオーバー ロードされた関数。 C リンケージで宣言された関数のみに適用することで宣言された関数、 **extern"C"** リンケージ指定します。 C++ リンケージを持つ関数でこのプラグマを使用しようとすると、コンパイラ エラーが生成されます。
 
 関数のアドレス指定を使用して以降`__based`はサポートされていません、セクションの場所を使用する必要を指定する、 **alloc_text**プラグマ。 指定された名前*textsection*二重引用符で囲む必要があります。
 

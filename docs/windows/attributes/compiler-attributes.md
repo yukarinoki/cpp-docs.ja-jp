@@ -6,10 +6,10 @@ helpviewer_keywords:
 - attributes [C++/CLI], compiler
 ms.assetid: 53cd9bee-1521-48ec-b171-80feac2096cc
 ms.openlocfilehash: ea4d3119a640c0642664210384c297e011104411
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59030819"
 ---
 # <a name="compiler-attributes"></a>コンパイラ属性
@@ -22,7 +22,7 @@ ms.locfileid: "59030819"
 |[event_receiver](event-receiver.md)|イベント レシーバーを作成します。|
 |[event_source](event-source.md)|イベント ソースを作成します。|
 |[export](export.md)|.Idl ファイルに配置するデータ構造をによりします。|
-|[実装](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
+|[implements](implements-cpp.md)|IDL コクラスのメンバーであるが強制されているディスパッチ インターフェイスを指定します。|
 |[importidl](importidl.md)|生成された .idl ファイルには、指定された .idl ファイルを挿入します。|
 |[importlib](importlib.md)|既に他のタイプ ライブラリでコンパイル済みの型を、作成中のタイプ ライブラリで使用できるようにします。|
 |[includelib](includelib-cpp.md)|生成された .idl ファイルに含まれる、.idl ファイルまたは .h ファイル。|

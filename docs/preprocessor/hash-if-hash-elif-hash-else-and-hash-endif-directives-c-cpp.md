@@ -22,10 +22,10 @@ helpviewer_keywords:
 - defined directive
 ms.assetid: c77a175f-6ca8-47d4-8df9-7bac5943d01b
 ms.openlocfilehash: 90fbab45c6408c30198c2a52a42545718002cc11
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59028092"
 ---
 # <a name="if-elif-else-and-endif-directives-cc"></a>#if、#elif、#else、および #endif ディレクティブ (C/C++)
@@ -97,7 +97,7 @@ ms.locfileid: "59028092"
 
 defined( `identifier` )
 
-定義 `identifier`
+defined `identifier`
 
 この定数式が場合は true (0 以外) と見なされる、*識別子*現在定義されているか。 それ以外の場合、条件が false (0)。 空のテキストとして定義された識別子は、定義されていると見なされます。 **定義**にディレクティブを使用することができます、 **#if**と **#elif**ディレクティブが、これ以外の場所。
 

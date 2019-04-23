@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ATL symbols
 ms.assetid: 60d8f4e6-6ed9-47f3-9051-e4bf34384456
 ms.openlocfilehash: 6e876fe27bd57194513f637fda90845ca68c59ee
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033931"
 ---
 # <a name="atl-predefined-symbols"></a>ATL の定義済みシンボル
@@ -37,6 +37,6 @@ ms.locfileid: "59033931"
 
 ## <a name="see-also"></a>関連項目
 
-[定義済みのシンボル ID](../windows/predefined-symbol-ids.md)<br/>
+[定義済みシンボル ID](../windows/predefined-symbol-ids.md)<br/>
 [MFC の定義済みシンボル](../windows/mfc-predefined-symbols.md)<br/>
 [Win32 の定義済みシンボル](../windows/win32-predefined-symbols.md)<br/>

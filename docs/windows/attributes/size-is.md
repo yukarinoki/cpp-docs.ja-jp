@@ -7,10 +7,10 @@ helpviewer_keywords:
 - size_is attribute
 ms.assetid: 70192d09-f6c5-4d52-b3fe-303f8cb10aa5
 ms.openlocfilehash: a7b990a708bafba78c9dc4153315f8b7b20351ba
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59033231"
 ---
 # <a name="sizeis"></a>size_is
@@ -25,12 +25,12 @@ ms.locfileid: "59033231"
 
 ### <a name="parameters"></a>パラメーター
 
-*式*<br/>
+*式 (expression)*<br/>
 サイズのポインターに割り当てられたメモリのサイズ。
 
 ## <a name="remarks"></a>Remarks
 
-**Size_is** C++ 属性と同じ機能を持つ、 [size_is](/windows/desktop/Midl/size-is) MIDL 属性。
+**Size_is** C++属性と同じ機能を持つ、 [size_is](/windows/desktop/Midl/size-is) MIDL 属性。
 
 ## <a name="example"></a>例
 

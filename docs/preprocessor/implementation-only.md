@@ -7,10 +7,10 @@ helpviewer_keywords:
 - implementation_only attribute
 ms.assetid: d8cabc86-4425-45a0-9587-d57536980088
 ms.openlocfilehash: c1435ca74ac2b5a73c308592b1affe6fca097d1b
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59026657"
 ---
 # <a name="implementationonly"></a>implementation_only
@@ -35,7 +35,7 @@ implementation_only
 > [!NOTE]
 > **Implementation_only**いずれかで属性`#import`ステートメントは別と組み合わせて使用する必要があります`#import`ステートメントは、同じ型、ライブラリ、`no_implementation`属性。 それ以外の場合は、コンパイラ エラーが生成されます。 これは、ラッパー クラスの定義がによって生成されるため、`#import`ステートメントを`no_implementation`属性は、コンパイルによって生成された実装に必要な**implementation_only**属性。
 
-**END C++ 固有の仕様**
+**END C 固有の仕様**
 
 ## <a name="see-also"></a>関連項目
 
