@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2140
 ms.assetid: d44a0500-002c-4632-9e5e-c71c3a473ec4
 ms.openlocfilehash: 35b6e38290acddb41bdf53d9663a058259300ee8
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58771891"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59779247"
 ---
 # <a name="compiler-error-c2140"></a>コンパイラ エラー C2140
 
@@ -19,7 +19,7 @@ ms.locfileid: "58771891"
 
 無効な型の指定子は、型の特徴に渡されました。
 
-詳細については、[型の特徴のコンパイラ サポート](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)を参照してください。
+詳細については、次を参照してください。[型の特徴のコンパイラ サポート](../../extensions/compiler-support-for-type-traits-cpp-component-extensions.md)します。
 
 ## <a name="example"></a>例
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 - builds [C++], options
 - Visual C++, build options
 ms.assetid: fa6ed4ff-334a-4d99-b5e2-a1f83d2b3008
-ms.openlocfilehash: 6a4048d741cf291d8d6173c1444b6933523c6851
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 73797f3817338c48e8ff11eaaadff71263374fd0
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58775427"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124760"
 ---
 # <a name="cc-projects-and-build-systems-in-visual-studio"></a>C と C++ プロジェクトおよび Visual Studio でのビルド システム
 
@@ -35,7 +35,7 @@ Visual Studio 2017 を使用して、編集、コンパイル、Visual Studio �
 
 ## <a name="the-msvc-toolset"></a>MSVC ツールセット
 
-Microsoft C コンパイラ、リンカー、標準ライブラリ、および関連のユーティリティは、(、ツール チェーン、または「ビルド ツール」とも呼ばれます) MSCV コンパイラ ツールセットを構成します。 Visual Studio では、これらが含まれます。 ダウンロードしてから無料のスタンドアロン パッケージとして、ツールセットを使用することができますも、 [Build Tools for Visual Studio 2017 のダウンロード場所](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)します。
+MicrosoftC++コンパイラ、リンカー、標準ライブラリ、および関連のユーティリティは、MSVC コンパイラ ツールセット (、ツール チェーン、または「ビルド ツール」とも呼ばれます) を構成します。 Visual Studio では、これらが含まれます。 ダウンロードしてから無料のスタンドアロン パッケージとして、ツールセットを使用することができますも、 [Build Tools for Visual Studio 2017 のダウンロード場所](https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2017)します。
 
 MSVC コンパイラ (cl.exe) 直接コマンドラインから呼び出すことによって、単純なプログラムを構築できます。 次のコマンドを呼び出すと呼ばれる実行可能ファイルをビルドする cl.exe 受け取り 1 つのソース コード ファイルでは、 *hello.exe*: 
 

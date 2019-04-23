@@ -7,17 +7,17 @@ helpviewer_keywords:
 - C3655
 ms.assetid: 724919ab-2915-4b61-8794-44648e162d62
 ms.openlocfilehash: 7a13d4d7c08f6510e5ab71c07c31baa9359b47b7
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58781849"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778996"
 ---
 # <a name="compiler-error-c3655"></a>コンパイラ エラー C3655
 
 'function': 関数は明示的にオーバーライドされて既に
 
-関数のみに明示的にオーバーライドできます 1 回です。 詳細については、[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)を参照してください。
+関数のみに明示的にオーバーライドできます 1 回です。 詳細については、次を参照してください。[明示的なオーバーライド](../../extensions/explicit-overrides-cpp-component-extensions.md)します。
 
 次の例では、C3655 が生成されます。
 

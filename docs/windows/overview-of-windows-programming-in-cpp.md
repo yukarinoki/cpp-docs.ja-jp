@@ -2,12 +2,12 @@
 title: C++ でプログラミングする Windows の概要
 ms.date: 03/28/2019
 ms.assetid: efc691d7-21f3-47ae-ae56-cab999ccf59d
-ms.openlocfilehash: 35842ae73e59685946afe31e88729a36a6431768
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.openlocfilehash: 48c7f419b6c69955ab25db528c8d3d86a7249391
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58772905"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124942"
 ---
 # <a name="overview-of-windows-programming-in-c"></a>C++ でプログラミングする Windows の概要
 
@@ -49,7 +49,7 @@ C++ コンソール アプリケーションでは、コンソール ウィン�
 
 Windows 10 で、既存のデスクトップ アプリケーションまたは COM オブジェクトを UWP アプリとしてパッケージ化し、タッチなどの UWP 機能を追加したり、最新の Windows API のセットから Api を呼び出します。 Visual Studio、およびパッケージをパッケージ化し、間の通信に Windows Api を使用して、1 つにまとめることでデスクトップ ソリューションに UWP アプリを追加することもできます。
 
-Visual Studio 2017 バージョン 15.4 以降では、既存のデスクトップ アプリケーションをパッケージ化の作業を大幅に簡略化するには、Windows アプリケーション パッケージ プロジェクトを作成することができます。 に関してどのようなレジストリ呼び出しは、いくつかの制限が適用されます。 または、デスクトップ アプリケーションの Api を使用して、、多くの場合、アプリ パッケージの実行中に同様の機能を実現するために代替のコード パスを作成することができます。 詳細については、[デスクトップ ブリッジ](/windows-uwp/porting/desktop-to-uwp-root)に関するページをご覧ください。
+Visual Studio 2017 バージョン 15.4 以降では、既存のデスクトップ アプリケーションをパッケージ化の作業を大幅に簡略化するには、Windows アプリケーション パッケージ プロジェクトを作成することができます。 に関してどのようなレジストリ呼び出しは、いくつかの制限が適用されます。 または、デスクトップ アプリケーションの Api を使用して、、多くの場合、アプリ パッケージの実行中に同様の機能を実現するために代替のコード パスを作成することができます。 詳細については、[デスクトップ ブリッジ](/windows/uwp/porting/desktop-to-uwp-root)に関するページをご覧ください。
 
 ## <a name="games"></a>ゲーム
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3225
 ms.assetid: f5f66973-256e-4298-ac46-c87819cbde34
 ms.openlocfilehash: cae0572002c849fb5aed771993d3a89ed82c726a
-ms.sourcegitcommit: c7f90df497e6261764893f9cc04b5d1f1bf0b64b
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "58778313"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778290"
 ---
 # <a name="compiler-error-c3225"></a>コンパイラ エラー C3225
 
@@ -43,7 +43,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-次の例では、C# を使用してコンポーネントを作成します。 制約は、ジェネリック型が値型でインスタンス化できますのみ指定に注意してください。
+次の例では、c# を使用してコンポーネントを作成します。 制約は、ジェネリック型が値型でインスタンス化できますのみ指定に注意してください。
 
 ```
 // C3225_b.cs
@@ -54,7 +54,7 @@ public class MyList<T> where T: struct {}
 
 ## <a name="example"></a>例
 
-この例は、次の使用、C# のコンポーネントを作成し、MyList のみが有効な制約に違反する以外の値の型でインスタンス化された<xref:System.Nullable>します。 次の例では、C3225 が生成されます。
+この例は、次の使用、c# のコンポーネントを作成し、MyList のみが有効な制約に違反する以外の値の型でインスタンス化された<xref:System.Nullable>します。 次の例では、C3225 が生成されます。
 
 ```
 // C3225_c.cpp

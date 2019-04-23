@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3908
 ms.assetid: 3c322482-c79e-4197-a578-2ad9bc379d1a
 ms.openlocfilehash: e11d830c3d662ea424caadeb50df669700f8c78f
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58766756"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59778476"
 ---
 # <a name="compiler-error-c3908"></a>コンパイラ エラー C3908
 
@@ -19,7 +19,7 @@ ms.locfileid: "58766756"
 
 プロパティ アクセサー メソッド (get または set) は、プロパティ自体に指定されたアクセスより緩いアクセスを持つことはできません。  同様に、イベント アクセサー メソッドの。
 
-詳細については、[プロパティ](../../extensions/property-cpp-component-extensions.md)と[イベント](../../extensions/event-cpp-component-extensions.md)を参照してください。
+詳細については、次を参照してください。[プロパティ](../../extensions/property-cpp-component-extensions.md)と[イベント](../../extensions/event-cpp-component-extensions.md)します。
 
 次の例では、C3908 が生成されます。
 

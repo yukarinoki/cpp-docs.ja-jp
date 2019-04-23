@@ -2,11 +2,11 @@
 title: C++ の UWP 開発
 ms.date: 03/13/2019
 ms.openlocfilehash: c6b92a3b85c08bc2d43ad297c410445ea974822b
-ms.sourcegitcommit: 5cecccba0a96c1b4ccea1f7a1cfd91f259cc5bde
+ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58785598"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59777394"
 ---
 # <a name="uwp-development-with-c"></a>C++ の UWP 開発
 
@@ -18,7 +18,7 @@ UWP ドキュメントのほとんどは、Windows のコンテンツ ツリー�
 
 この場所にコンテンツでは、C++ の 2 つの古い UWP テクノロジについて説明します。
 
-- [C + + CX 言語拡張機能](visual-c-language-reference-c-cx.md)
+- [ C++/CX 言語拡張機能](visual-c-language-reference-c-cx.md)
 - [Windows ランタイム C++ テンプレート ライブラリ (WRL)](../windows/windows-runtime-cpp-template-library-wrl.md)します。
 
 これらのテクノロジは引き続きに、サポートしますが、一般に、新規の開発お勧めしません。
