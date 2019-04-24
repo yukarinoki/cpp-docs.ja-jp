@@ -3,11 +3,11 @@ layout: LandingPage
 title: C++ ドキュメントによる Linux 開発
 description: Linux で実行されているアプリケーションを作成し、デバッグする。
 ms.openlocfilehash: 516b57ca976ddd89081581978c6ac5f86c64876e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58779769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62393143"
 ---
 # <a name="linux-development-with-c-documentation"></a>C++ ドキュメントによる Linux 開発
 

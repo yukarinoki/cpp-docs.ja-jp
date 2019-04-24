@@ -62,7 +62,7 @@
 ### [conform](conform.md)
 ### [const_seg](const-seg.md)
 ### [data_seg](data-seg.md)
-### [deprecated (C/C++)](deprecated-c-cpp.md)
+### [非推奨 (C/C++)](deprecated-c-cpp.md)
 ### [detect_mismatch](detect-mismatch.md)
 ### [execution_character_set](execution-character-set.md)
 ### [fenv_access](fenv-access.md)
