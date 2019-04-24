@@ -4,7 +4,7 @@ ms.date: 11/04/2016
 ms.assetid: 18f0dc66-8236-4420-9f46-1a14f2c3fba1
 ms.openlocfilehash: 05ca53d075867fefa43f7471bb795040d075274e
 ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/04/2019
 ms.locfileid: "57272901"
@@ -134,7 +134,7 @@ int main()
 ## <a name="changing-the-default-accelerator"></a>既定のアクセラレータを変更する
 
 
-  `accelerator::set_default` メソッドを呼び出して、既定のアクセラレータを変更できます。 アプリの実行ごとに既定のアクセラレータを 1 度だけ変更することができますが、コードが GPU で実行される前に変更する必要があります。 アクセラレータを変更する後続の関数呼び出しを返す**false**します。 
+  `accelerator::set_default` メソッドを呼び出して、既定のアクセラレータを変更できます。 アプリの実行ごとに既定のアクセラレータを 1 度だけ変更することができますが、コードが GPU で実行される前に変更する必要があります。 アクセラレータを変更する後続の関数呼び出しを返す **false** します。 
   `parallel_for_each` の呼び出しに別のアクセラレータを使用する場合は、この記事の「複数のアクセラレータを使用する」のセクションを参照してください。 次のコード例では、既定のアクセラレータをエミュレートおよびディスプレイへの接続が行われておらず、倍精度をサポートしているアクセラレータに設定します。
 
 ```cpp

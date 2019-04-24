@@ -33,7 +33,7 @@ helpviewer_keywords:
 ms.assetid: 2ba9467b-f172-41dc-8f10-b86f68fa813c
 ms.openlocfilehash: 7c17c973b98638195e2e2d2a5f793578437d11ae
 ms.sourcegitcommit: e06648107065f3dea35f40c1ae5999391087b80b
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 03/01/2019
 ms.locfileid: "57210225"
@@ -69,7 +69,7 @@ long double sqrtl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sqrt**を受け取る**float**または**長い****二重**型。 C プログラムで**sqrt**は**二重**します。
+オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **sqrt**を受け取る**float**または**長い** **二重**型。 C プログラムで**sqrt**は**二重**します。
 
 ## <a name="return-value"></a>戻り値
 
