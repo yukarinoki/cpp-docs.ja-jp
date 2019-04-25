@@ -46,7 +46,7 @@
 ## [ATL COM プロパティ ページ](atl-com-property-pages.md)
 ### [プロパティ ページの指定](specifying-property-pages.md)
 ### [プロパティ ページの実装](implementing-property-pages.md)
-#### [例: プロパティ ページの実装](example-implementing-a-property-page.md)
+#### [例:プロパティ ページの実装](example-implementing-a-property-page.md)
 ## [DHTML コントロールの ATL サポート](atl-support-for-dhtml-controls.md)
 ### [DHTML コントロール プロジェクトの要素の特定](identifying-the-elements-of-the-dhtml-control-project.md)
 ### [DHTML から C++ コードを呼び出す](calling-cpp-code-from-dhtml.md)
