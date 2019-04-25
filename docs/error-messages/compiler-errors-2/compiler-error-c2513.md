@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2513
 ms.assetid: ab5b21d3-61e2-4df7-8eea-6f14d6ba8620
 ms.openlocfilehash: 13840246a5dc6a1c1bdbcb55dc47f212ee353d81
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50561202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62165217"
 ---
 # <a name="compiler-error-c2513"></a>コンパイラ エラー C2513
 
-'type': '=' の前に変数が宣言されていません。
+'type' : no variable declared before '='
 
 識別子のない変数宣言で型指定子が表示されます。
 

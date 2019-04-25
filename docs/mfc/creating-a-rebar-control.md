@@ -6,11 +6,11 @@ helpviewer_keywords:
 - CReBarCtrl class [MFC], creating
 ms.assetid: 0a012e08-772b-4f6a-af86-7cb651d11d3e
 ms.openlocfilehash: 0fb651aef599b64b787d96a668e2e1496c1dff8e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57274456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153346"
 ---
 # <a name="creating-a-rebar-control"></a>Rebar コントロールの作成
 
@@ -32,7 +32,7 @@ ms.locfileid: "57274456"
 
 1. 初期化を**REBARBANDINFO**構造体に挿入するバンドのために必要な情報。
 
-1. 呼び出す[InsertBand](../mfc/reference/crebarctrl-class.md#insertband)既存の子ウィンドウを挿入する (など`m_wndReToolBar`) 新しい rebar コントロールにします。 既存の rebar コントロール バンドを挿入の詳細については、[Rebar コントロールとバンド](../mfc/rebar-controls-and-bands.md)を参照してください。
+1. 呼び出す[InsertBand](../mfc/reference/crebarctrl-class.md#insertband)既存の子ウィンドウを挿入する (など`m_wndReToolBar`) 新しい rebar コントロールにします。 既存の rebar コントロール バンドを挿入の詳細については、次を参照してください。 [Rebar コントロールとバンド](../mfc/rebar-controls-and-bands.md)します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Internet applications [MFC], first steps
 ms.assetid: 6377e9b8-07c4-4380-b63b-05f5a9061313
 ms.openlocfilehash: 1b0a8696e25054099cdbf208dd5a1f713bfbe6d3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164957"
 ---
 # <a name="mfc-internet-programming-tasks"></a>MFC インターネット プログラミングのタスク
 
 このセクションには、アプリケーションへのインターネットのサポートを追加する詳細な手順が含まれています。 トピックには、既存の COM コンポーネントをアクティブなドキュメントのサポートを追加する方法と、既存のアプリケーションにインターネット対応に MFC クラスを使用する方法が含まれます。 最新の株価情報、ジョージア州ピッツバーグ市のフットボールのスコアを持つドキュメントを作成して、南極 Microsoft の最新の温度をインターネット経由で行うのに役立つテクノロジのいくつか提供されます。
 
-Active テクノロジには、ActiveX コントロールが含まれます (以前の OLE コントロール) とアクティブなドキュメントです。WinInet を簡単に取得およびインターネットの間でファイルを保存します。効率的なデータをダウンロードするための非同期のモニカー。 Visual C を提供するためのウィザードは、初期アプリケーションをすばやく開始します。 これらのテクノロジの概要については、[MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)と[MFC COM](../mfc/mfc-com.md)を参照してください。
+Active テクノロジには、ActiveX コントロールが含まれます (以前の OLE コントロール) とアクティブなドキュメントです。WinInet を簡単に取得およびインターネットの間でファイルを保存します。効率的なデータをダウンロードするための非同期のモニカー。 Visual C を提供するためのウィザードは、初期アプリケーションをすばやく開始します。 これらのテクノロジの概要については、次を参照してください。 [MFC インターネット プログラミングの基礎](../mfc/mfc-internet-programming-basics.md)と[MFC COM](../mfc/mfc-com.md)します。
 
 ファイルを FTP たいと思ってをしていない WinSock とネットワーク プロトコル WinInet クラスをプログラミングをカプセル化するこれらのプロトコルでは、ファイルをダウンロードするインターネット上のクライアント アプリケーションの作成に使用できる関数の単純なセットを提供します。HTTP、FTP、および gopher を使用します。 WinInet を使用すると、ハード ドライブに、世界中のディレクトリを検索します。 透過的にいくつかのさまざまな種類のデータを収集し、統合されたインターフェイスでユーザーに表示できます。
 

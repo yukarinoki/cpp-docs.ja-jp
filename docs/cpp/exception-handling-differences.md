@@ -9,11 +9,11 @@ helpviewer_keywords:
 - wrapper classes [C++], C exception
 ms.assetid: f21d1944-4810-468e-b02a-9f77da4138c9
 ms.openlocfilehash: 2c4f1a8c3729e2b4d49a0152425e57717f7e9997
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154413"
 ---
 # <a name="handle-structured-exceptions-in-c"></a>C++ で構造化例外を処理します。
 
@@ -21,7 +21,7 @@ C の主な違いに構造化例外処理 (SEH) と C++ 例外処理は、C++ �
 
 2 つ目の違いは、C 構造化例外処理モデルが呼んでいる*非同期*にセカンダリを通常の制御フローに例外が発生するため、します。 C++ 例外処理メカニズムが完全に*同期*例外がスローされたときにのみ発生することを意味します。
 
-使用すると、 [/EHs または/EHsc](../build/reference/eh-exception-handling-model.md)コンパイラ オプション、なしの C++ 例外の処理の構造化例外ハンドラー。 これらの例外の処理でのみ **__catch**例外ハンドラーを構造化または **_ _finally**終了ハンドラーを構成します。 詳しくは、[構造化例外処理 (c/c++)](structured-exception-handling-c-cpp.md)を参照してください。
+使用すると、 [/EHs または/EHsc](../build/reference/eh-exception-handling-model.md)コンパイラ オプション、なしの C++ 例外の処理の構造化例外ハンドラー。 これらの例外の処理でのみ **__catch**例外ハンドラーを構造化または **_ _finally**終了ハンドラーを構成します。 詳しくは、次を参照してください。[構造化例外処理 (c/c++)](structured-exception-handling-c-cpp.md)します。
 
 下、 [/EHa](../build/reference/eh-exception-handling-model.md)コンパイラ オプションは、C++ プログラムでは、C 例外が発生する場合に処理できる、関連付けられているフィルターを使用して構造化例外ハンドラーまたは C**キャッチ**方ハンドラー例外コンテキスト動的に近い。 たとえば、次の C++ プログラムは内部、C++ で C 例外を発生させます。**お試しください**コンテキスト。
 

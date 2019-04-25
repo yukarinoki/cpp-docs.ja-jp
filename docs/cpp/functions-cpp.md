@@ -9,11 +9,11 @@ helpviewer_keywords:
 - declarators, functions
 ms.assetid: 33ba01d5-75b5-48d2-8eab-5483ac7d2274
 ms.openlocfilehash: aafd3be3b27fbe134b380a29083b4ca36177e702
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154145"
 ---
 # <a name="functions-c"></a>関数 (C++)
 
@@ -41,7 +41,7 @@ int main()
 
 クラス スコープで定義されている関数はメンバー関数と呼ばれます。 C++ では、他の言語とは異なり、名前空間スコープ (暗黙的なグローバル名前空間を含む) でも関数を定義できます。 このような関数が呼び出される*の free 関数*または*非メンバー関数*。 標準ライブラリで広く使用されています。
 
-関数があります*オーバー ロードされた*数や仮パラメーターの型が異なる場合、同じ名前を共有関数の異なるバージョンのことを意味する可能性があります。 詳細については、[関数のオーバー ロード](../cpp/function-overloading.md)を参照してください。
+関数があります*オーバー ロードされた*数や仮パラメーターの型が異なる場合、同じ名前を共有関数の異なるバージョンのことを意味する可能性があります。 詳細については、次を参照してください。[関数のオーバー ロード](../cpp/function-overloading.md)します。
 
 ## <a name="parts-of-a-function-declaration"></a>関数宣言部分
 
@@ -91,7 +91,7 @@ int sum(int a, int b)
 
     ```
 
-   詳細については、[プログラムとリンケージ](../cpp/program-and-linkage-cpp.md)を参照してください。
+   詳細については、次を参照してください。[プログラムとリンケージ](../cpp/program-and-linkage-cpp.md)します。
 
 1. **インライン**に関数を呼び出すたびに関数コード自体を置き換えるコンパイラに指示します。 パフォーマンスが重要なコード セクションで関数が迅速に実行され、繰り返し呼び出されるシナリオでは、インライン展開を使用すると、パフォーマンスが向上します。
 
@@ -102,7 +102,7 @@ int sum(int a, int b)
     }
     ```
 
-   詳細については、[インライン関数](../cpp/inline-functions-cpp.md)を参照してください。
+   詳細については、次を参照してください。[インライン関数](../cpp/inline-functions-cpp.md)します。
 
 1. A`noexcept`式で、関数が例外をスローできるかどうかを指定します。 次の例では、関数は例外をスローしない場合、`is_pod`式に評価される**true**します。
 
@@ -113,15 +113,15 @@ int sum(int a, int b)
     T copy_object(T& obj) noexcept(std::is_pod<T>) {...}
     ```
 
-   詳細については、[noexcept](../cpp/noexcept-cpp.md)を参照してください。
+   詳細については、次を参照してください。 [noexcept](../cpp/noexcept-cpp.md)します。
 
 1. (メンバー関数のみ)Cv 修飾子、関数は、かどうかを指定する**const**または**揮発性**します。
 
-1. (メンバー関数のみ)**仮想**、 `override`、または`final`します。 **仮想**関数を派生クラスでオーバーライドできることを示します。 `override` は、派生クラス内の関数が仮想関数をオーバーライドすることを意味します。 `final` は、いかなる派生クラス内でも関数がオーバーライドされないことを意味します。 詳細については、[仮想関数](../cpp/virtual-functions.md)を参照してください。
+1. (メンバー関数のみ)**仮想**、 `override`、または`final`します。 **仮想**関数を派生クラスでオーバーライドできることを示します。 `override` は、派生クラス内の関数が仮想関数をオーバーライドすることを意味します。 `final` は、いかなる派生クラス内でも関数がオーバーライドされないことを意味します。 詳細については、次を参照してください。[仮想関数](../cpp/virtual-functions.md)します。
 
 1. (メンバー関数のみ)**静的**適用関数が、関数がクラスのすべてのオブジェクト インスタンスに関連付けられていないことを意味するメンバー。
 
-1. (非静的メンバー関数のみ)Ref 修飾子、ときに選択する関数のオーバー ロードをコンパイラに指定する暗黙的オブジェクト パラメーター (\*この) が左辺値参照と右辺値参照。 詳細については、[関数のオーバー ロード](function-overloading.md#ref-qualifiers)を参照してください。
+1. (非静的メンバー関数のみ)Ref 修飾子、ときに選択する関数のオーバー ロードをコンパイラに指定する暗黙的オブジェクト パラメーター (\*この) が左辺値参照と右辺値参照。 詳細については、次を参照してください。[関数のオーバー ロード](function-overloading.md#ref-qualifiers)します。
 
 次の図では、関数定義の一部を示しています。 網かけされた部分は関数本体です。
 
@@ -159,9 +159,9 @@ A*関数の定義*宣言と関数本体の中かっこで囲まれた変数の�
 
 ## <a name="const-and-constexpr-functions"></a>const 変数と constexpr 関数
 
-メンバー関数として宣言できます**const**クラスのデータ メンバーの値を変更する関数が許可されないことを指定します。 メンバー関数として宣言することで**const**、役立つようにコンパイラで強制*const の正確*します。 だれかが誤って、として宣言された関数を使用して、オブジェクトを変更するにはかどうか**const**、コンパイラ エラーが発生します。 詳細については、[const](const-cpp.md)を参照してください。
+メンバー関数として宣言できます**const**クラスのデータ メンバーの値を変更する関数が許可されないことを指定します。 メンバー関数として宣言することで**const**、役立つようにコンパイラで強制*const の正確*します。 だれかが誤って、として宣言された関数を使用して、オブジェクトを変更するにはかどうか**const**、コンパイラ エラーが発生します。 詳細については、次を参照してください。 [const](const-cpp.md)します。
 
-関数として宣言`constexpr`コンパイル時に決定される値を生成できますが可能性があります。 Constexpr 関数は一般に通常の関数よりも高速実行します。 詳細については、[constexpr](constexpr-cpp.md)を参照してください。
+関数として宣言`constexpr`コンパイル時に決定される値を生成できますが可能性があります。 Constexpr 関数は一般に通常の関数よりも高速実行します。 詳細については、次を参照してください。 [constexpr](constexpr-cpp.md)します。
 
 ## <a name="function-templates"></a>関数テンプレート
 
@@ -196,7 +196,7 @@ void DoSomething(std::string& input){...}
 void DoSomething(const std::string& input){...}
 ```
 
-**C++ 11:** 右辺値参照または左辺値参照によって渡される引数を明示的に処理するには、ユニバーサルの参照を示すために、パラメーターで二重アンパサンドを使用します。
+**C++11:** 右辺値参照または左辺値参照によって渡される引数を明示的に処理するには、パラメーターに二重アンパサンドを使用して、ユニバーサル参照を表します。
 
 ```cpp
 void DoSomething(const std::string&& input){...}
@@ -235,7 +235,7 @@ int DoMore(int num = 5, // Not a trailing parameter!
 {...}
 ```
 
-詳細については、[既定の引数](../cpp/default-arguments.md)を参照してください。
+詳細については、次を参照してください。[既定の引数](../cpp/default-arguments.md)します。
 
 ## <a name="function-return-types"></a>関数の戻り値の型
 
@@ -363,7 +363,7 @@ template<typename F, typename Tuple = tuple<T...>,
     }
     ```
 
-1. **Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md)): 構造化バインドを使用します。 構造化バインドの利点は、戻り値を格納する変数が初期化される、宣言されると同時に大幅に効率も指定できます。 次のステートメントで`auto[x, y, z] = f();`--角かっこを紹介し、関数全体のブロックのスコープ内の名前を初期化します。
+1. **Visual Studio 2017 バージョン 15.3 以降**(で使用可能な[/std:c + + 17](../build/reference/std-specify-language-standard-version.md))。構造化バインドを使用します。 構造化バインドの利点は、戻り値を格納する変数が初期化される、宣言されると同時に大幅に効率も指定できます。 次のステートメントで`auto[x, y, z] = f();`--角かっこを紹介し、関数全体のブロックのスコープ内の名前を初期化します。
 
     ```cpp
     #include <tuple>
@@ -403,7 +403,7 @@ template<typename F, typename Tuple = tuple<T...>,
     }
     ```
 
-1. 戻り値自体だけでなく、「値を返すできます」関数を変更したり、呼び出し元が提供するオブジェクトの値を初期化するために、参照渡しを使用するパラメーターの任意の数を定義することで。 詳細については、[参照型関数の引数](reference-type-function-arguments.md)を参照してください。
+1. 戻り値自体だけでなく、「値を返すできます」関数を変更したり、呼び出し元が提供するオブジェクトの値を初期化するために、参照渡しを使用するパラメーターの任意の数を定義することで。 詳細については、次を参照してください。[参照型関数の引数](reference-type-function-arguments.md)します。
 
 ## <a name="function-pointers"></a>関数ポインター
 
