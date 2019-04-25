@@ -34,11 +34,11 @@ f1_keywords:
 - ppltasks/concurrency::when_any
 ms.assetid: 520a6dff-9324-4df2-990d-302e3050af6a
 ms.openlocfilehash: 9cb726ccc475d6d08e036229d0d06089e3fac31c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163742"
 ---
 # <a name="concurrency-namespace-functions"></a>concurrency 名前空間関数
 
@@ -114,7 +114,7 @@ bool asend(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)を参照してください。
+詳細については、次を参照してください。[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)します。
 
 ##  <a name="cancel_current_task"></a>  cancel_current_task
 
@@ -173,8 +173,7 @@ IAsyncAction によって表される非同期構造 ^、IAsyncActionWithProgres
 
 ラムダでは、引数を使用しない場合、または 1 つか 2 つの引数を使用する場合があります。 有効な引数は `progress_reporter<TProgress>` と `cancellation_token` です。これらを両方とも使用する場合は、この順序で指定してください。 ラムダで引数を使用しないと、進行状況の報告機能を持たない非同期構造が作成されます。 ラムダで progress_reporter\<TProgress > により`create_async`を毎回型 TProgress の進行状況を報告する非同期構造を返す、 `report` progress_reporter オブジェクトのメソッドが呼び出されます。 cancellation_token を使用するラムダでは、そのトークンを利用して取り消しを確認する場合があります。また、作成されるタスクにこのトークンを渡す場合もあります。これにより、非同期構造を取り消すと、それらのタスクも取り消されます。
 
-ラムダまたは関数オブジェクトの本体が結果を返す場合 (task\<TResult >)、タスク、ランタイムのコンテキスト内の MTA が暗黙的に作成するプロセス内で、ラムダを非同期的に実行されます。 
-  `IAsyncInfo::Cancel` のメソッドにより、暗黙のタスクが取り消されます。
+ラムダまたは関数オブジェクトの本体が結果を返す場合 (task\<TResult >)、タスク、ランタイムのコンテキスト内の MTA が暗黙的に作成するプロセス内で、ラムダを非同期的に実行されます。 `IAsyncInfo::Cancel` のメソッドにより、暗黙のタスクが取り消されます。
 
 ラムダの本体がタスクを返す場合、ラムダはインラインで実行されます。また、ラムダが型 `cancellation_token` の引数を使用するように宣言すると、タスクの作成時にこのトークンを渡すことによって、ラムダ内で作成されるタスクの取り消しをトリガーできます。 また、トークンに対して `register_callback` メソッドを使用すると、生成される非同期操作や非同期アクションで `IAsyncInfo::Cancel` を呼び出すときに、ランタイムでコールバックを呼び出すこともできます。
 
@@ -238,8 +237,7 @@ __declspec( noinline) task<_ReturnType> create_task(const task<_ReturnType>& _Ta
 
 2 番目のオーバーロードは、新しく作成されたタスクで指定されたキャンセル トークンを関連付けます。 このオーバーロードを使用すると、最初のパラメーターとして別の `task` オブジェクトを渡すことができません。
 
-返されたタスクの種類は、関数の最初のパラメーターから推測されます。 
-  `_Param` が `task_completion_event<T>`、`task<T>`、または型 `T` か型 `task<T>` を返すファンクタの場合、作成されたタスクの型は `task<T>` です。
+返されたタスクの種類は、関数の最初のパラメーターから推測されます。 `_Param` が `task_completion_event<T>`、`task<T>`、または型 `T` か型 `task<T>` を返すファンクタの場合、作成されたタスクの型は `task<T>` です。
 
 UWP アプリで場合`_Param`型:iasyncoperation\<T > ^ または Windows::Foundation::IAsyncOperationWithProgress\<T, P > ^、またはそれらの型のいずれかを返すファンクタの場合、作成されたタスクになります型`task<T>`します。 場合`_Param`型:iasyncaction ^ または Windows::Foundation::IAsyncActionWithProgress\<P > ^、またはそれらの型のいずれかを返すファンクタの場合、作成されたタスクは入力が`task<void>`します。
 
@@ -278,8 +276,7 @@ void __cdecl Free(_Pre_maybenull_ _Post_invalid_ void* _PAllocation);
 ### <a name="parameters"></a>パラメーター
 
 *_PAllocation*<br/>
-以前に `Alloc` メソッドによって割り当てられた解放するメモリへのポインター。 
-  `_PAllocation` パラメーターの値が `NULL` に設定されている場合、このメソッドはそれを無視してすぐに制御を戻します。
+以前に `Alloc` メソッドによって割り当てられた解放するメモリへのポインター。 `_PAllocation` パラメーターの値が `NULL` に設定されている場合、このメソッドはそれを無視してすぐに制御を戻します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -423,7 +420,7 @@ bool __cdecl is_current_task_group_canceling();
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)を参照してください。
+詳細については、次を参照してください。[キャンセル](../../../parallel/concrt/exception-handling-in-the-concurrency-runtime.md#cancellation)します。
 
 ##  <a name="make_choice"></a>  make_choice
 
@@ -774,7 +771,7 @@ void parallel_for(
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)を参照してください。
+詳細については、次を参照してください。[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)します。
 
 ##  <a name="parallel_for_each"></a>  parallel_for_each
 
@@ -822,7 +819,7 @@ void parallel_for_each(
 
 ランダムをサポートしない反復子アクセスのみ[auto_partitioner](auto-partitioner-class.md)はサポートされています。
 
-詳細については、[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)を参照してください。
+詳細については、次を参照してください。[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)します。
 
 ##  <a name="parallel_invoke"></a>  parallel_invoke
 
@@ -1021,7 +1018,7 @@ void parallel_invoke(
 
 1 つまたは複数のパラメーターとしてこの関数に渡される関数オブジェクトは、例外をスローする場合、ランタイムは、選択した場合のような例外が 1 つを選択し、呼び出しから伝達されること`parallel_invoke`します。
 
-詳細については、[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)を参照してください。
+詳細については、次を参照してください。[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)します。
 
 ##  <a name="parallel_radixsort"></a>  parallel_radixsort
 
@@ -1350,7 +1347,7 @@ first2,
 
 引数を受け取るオーバー ロード`_Binary_op`最初の入力の範囲と 2 番目の入力の範囲から 1 つの要素から 1 つの要素のバイナリ ファンクタを適用することで、2 つの入力範囲を出力範囲に変換します。 `_Binary_op` シグネチャを持つ関数呼び出し演算子をサポートする必要があります`operator()(T, U)`場所`T`、`U`は 2 つの入力反復子の値の型。
 
-詳細については、[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)を参照してください。
+詳細については、次を参照してください。[並列アルゴリズム](../../../parallel/concrt/parallel-algorithms.md)します。
 
 ##  <a name="receive"></a>  receive
 
@@ -1402,7 +1399,7 @@ T receive(
 
 場合、パラメーター`_Timeout`定数以外の値を持つ`COOPERATIVE_TIMEOUT_INFINITE`、例外[operation_timed_out](operation-timed-out-class.md)が、一定の時間には、メッセージを受信する前に有効期限が切れる場合にスローされます。 使用する必要があります長さ 0 のタイムアウトを設定する場合、 [try_receive](concurrency-namespace-functions.md)関数を呼び出すのではなく`receive`のタイムアウトで`0`(ゼロ) より効率的でありのタイムアウト例外をスローしません。
 
-詳細については、[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)を参照してください。
+詳細については、次を参照してください。[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)します。
 
 ##  <a name="run_with_cancellation_token"></a>  run_with_cancellation_token
 
@@ -1459,7 +1456,7 @@ bool send(ITarget<T>& _Trg, const T& _Data);
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)を参照してください。
+詳細については、次を参照してください。[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)します。
 
 ##  <a name="set_ambient_scheduler"></a>  set_ambient_scheduler
 
@@ -1650,7 +1647,7 @@ A`bool`にペイロードが格納されたかどうかを示すを値`_value`�
 
 ### <a name="remarks"></a>Remarks
 
-詳細については、[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)を参照してください。
+詳細については、次を参照してください。[メッセージを渡す関数](../../../parallel/concrt/message-passing-functions.md)します。
 
 ##  <a name="wait"></a>  wait
 
@@ -1707,7 +1704,7 @@ auto when_all(
 
 取り消されたタスクのいずれか、または例外をスローは早い段階で取り消された状態で、返されたタスクは完了し、例外が発生しました、1 つは場合がスローされますを呼び出す場合、 [task::get](task-class.md#get)または`task::wait`タスクにします。
 
-詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
+詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 
 ##  <a name="when_any"></a>  when_any
 
@@ -1758,7 +1755,7 @@ auto when_any(
 
 `when_any` は、その結果、`task` を生成する、非ブロッキング関数です。 異なり[task::wait](task-class.md#wait)ASTA (アプリケーション STA) スレッドでの UWP アプリでこの関数を呼び出しても安全になります。
 
-詳細については、[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)を参照してください。
+詳細については、次を参照してください。[タスクの並列化](../../../parallel/concrt/task-parallelism-concurrency-runtime.md)します。
 
 ## <a name="see-also"></a>関連項目
 

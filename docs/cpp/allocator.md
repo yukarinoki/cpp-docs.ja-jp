@@ -7,11 +7,11 @@ helpviewer_keywords:
 - __declspec keyword [C++], allocator
 - allocator __declspec keyword
 ms.openlocfilehash: f9c8de7c8686b89a2ab9570a2558e3f649e545b5
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58419086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155239"
 ---
 # <a name="allocator"></a>allocator
 
@@ -33,4 +33,4 @@ Visual Studio でのネイティブ メモリ プロファイラーは、割り�
 __declspec(allocator) void* myMalloc(size_t size)
 ```
 
-詳細については、[Visual Studio でのメモリ使用量の測定](/visualstudio/profiling/memory-usage)と[カスタム ネイティブ ETW ヒープ イベント](/visualstudio/profiling/custom-native-etw-heap-events)を参照してください。
+詳細については、次を参照してください。 [Visual Studio でのメモリ使用量の測定](/visualstudio/profiling/memory-usage)と[カスタム ネイティブ ETW ヒープ イベント](/visualstudio/profiling/custom-native-etw-heap-events)します。
