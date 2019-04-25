@@ -7,11 +7,11 @@ helpviewer_keywords:
 - typename template specifier
 ms.assetid: 52e1d901-220d-4f0d-ab43-dae7e05fb491
 ms.openlocfilehash: 7dbe4381465036bdd102b3be753a18451886a3d8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50665856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62166257"
 ---
 # <a name="typename"></a>typename
 
@@ -25,7 +25,7 @@ typename identifier;
 
 ## <a name="remarks"></a>Remarks
 
-テンプレート定義内の名前がテンプレート引数に依存する修飾名である場合、このキーワードを使用する必要があります。修飾名に依存しない場合は省略可能です。 詳細については、[テンプレートと名前解決](../cpp/templates-and-name-resolution.md)を参照してください。
+テンプレート定義内の名前がテンプレート引数に依存する修飾名である場合、このキーワードを使用する必要があります。修飾名に依存しない場合は省略可能です。 詳細については、次を参照してください。[テンプレートと名前解決](../cpp/templates-and-name-resolution.md)します。
 
 **typename**任意の型定義またはテンプレート宣言の任意の場所で使用できます。 テンプレート基底クラスへのテンプレート引数として使用する場合を除いて、このキーワードを基底クラス リストで使用することはできません。
 

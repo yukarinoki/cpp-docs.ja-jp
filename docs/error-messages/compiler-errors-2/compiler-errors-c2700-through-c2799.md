@@ -1,6 +1,6 @@
 ---
-title: コンパイラ エラー C2700 C2799 から
-ms.date: 11/17/2017
+title: コンパイラ エラー C2700 から C2799
+ms.date: 04/21/2019
 f1_keywords:
 - C2716
 - C2717
@@ -40,14 +40,14 @@ helpviewer_keywords:
 - C2796
 - C2799
 ms.assetid: 6ee257bb-94bc-42b9-af2c-3c73926afba4
-ms.openlocfilehash: e29f344e0e45374f85715552f9ecc19ab90a9e7b
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.openlocfilehash: a6f4391008bf9b0a066ba65f27a41697c6097c2e
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153222"
 ---
-# <a name="compiler-errors-c2700-through-c2799"></a>コンパイラ エラー C2700 C2799 から
+# <a name="compiler-errors-c2700-through-c2799"></a>コンパイラ エラー C2700 から C2799
 
 ドキュメントのこのセクションの記事では、コンパイラによって生成されるエラー メッセージのサブセットについて説明します。
 
@@ -157,3 +157,8 @@ ms.locfileid: "50677852"
 |[コンパイラ エラー C2797](compiler-error-c2797.md)|(廃止)'*識別子*': メンバー初期化子リストまたは非静的データ メンバー初期化子の内部リストの初期化は実装されていません|
 |[コンパイラ エラー C2798](compiler-error-c2798.md)|'super::*識別子*' があいまいです|
 |コンパイラ エラー C2799|'*識別子*': ユーザーが提供する既定のコンス トラクターのない const で修飾されたクラス型のオブジェクトを初期化する必要があります|
+
+## <a name="see-also"></a>関連項目
+
+[C/C++コンパイラとビルド ツールのエラーと警告](../compiler-errors-1/c-cpp-build-errors.md) \
+[コンパイラ エラー C2000 - C3999](../compiler-errors-1/compiler-errors-c2000-c3999.md)

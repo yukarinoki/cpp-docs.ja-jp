@@ -32,11 +32,11 @@ helpviewer_keywords:
 - time structure conversion
 ms.assetid: 315501f3-477e-475d-a414-ef100ee0db27
 ms.openlocfilehash: 4f32da5920a0cb892619195207d6501a4b1fd874
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50480003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157618"
 ---
 # <a name="gmtime-gmtime32-gmtime64"></a>gmtime、_gmtime32、_gmtime64
 
@@ -62,7 +62,7 @@ struct tm *_gmtime64( const __time64_t *sourceTime );
 |フィールド|説明|
 |-|-|
 |**tm_sec**|秒 (0 - 59)。|
-|**未満**|分 (0 - 59)。|
+|**tm_min**|分 (0 - 59)。|
 |**tm_hour**|午前 0 時からの経過時間 (0 - 23)。|
 |**tm_mday**|(1 ~ 31) の月の日。|
 |**tm_mon**|月 (0 - 11年 1 月 = 0 です)。|

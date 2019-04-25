@@ -1,17 +1,17 @@
 ---
-title: サポートされなくなった ANSI API
+title: 非推奨の ANSI API
 ms.date: 11/04/2016
 helpviewer_keywords:
 - MFC, ANSI deprecated methods
 ms.assetid: c7c5a6fd-95e4-4bee-b3d5-d3826c30947d
 ms.openlocfilehash: 88fb249e053a88a93510cb8f6f9b3092d41a0113
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298374"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153555"
 ---
-# <a name="deprecated-ansi-apis"></a>サポートされなくなった ANSI API
+# <a name="deprecated-ansi-apis"></a>非推奨の ANSI API
 
 Microsoft Foundation Class (MFC) ライブラリは、クラスと、Unicode 文字セットに基づくメソッドに向けた移行中です。 その結果、一部の MFC メソッドの ANSI バージョンの使用は推奨されていません。 今後のアプリケーションでこれらのメソッドの Unicode バージョンを使用します。
 

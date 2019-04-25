@@ -47,11 +47,11 @@ helpviewer_keywords:
 - CDocTemplate [MFC], SetServerInfo
 ms.assetid: 14b41a1f-bf9d-4eac-b6a8-4c54ffcc77f6
 ms.openlocfilehash: 3b2d84af9be8e5c606cde8794b51e12207dcdec9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163988"
 ---
 # <a name="cdoctemplate-class"></a>CDocTemplate クラス
 
@@ -165,7 +165,7 @@ CDocTemplate (
 *可能*<br/>
 ドキュメントの種類で使用するリソースの ID を指定します。 これには、メニューのアイコン、アクセラレータ テーブル、および文字列リソースを含めることができます。
 
-文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれない場合 '\n' 文字はプレース ホルダーとして必要です。 ただし、末尾の '\n' 文字は必要ありません)。これらの部分文字列には、ドキュメントの種類について説明します。 これらの部分文字列については、[GetDocString](#getdocstring)を参照してください。 この文字列リソースには、アプリケーションのリソース ファイルが記載されています。 例:
+文字列リソースは、'\n' 文字で区切られた最大 7 つの部分文字列で構成されます (部分文字列が含まれない場合 '\n' 文字はプレース ホルダーとして必要です。 ただし、末尾の '\n' 文字は必要ありません)。これらの部分文字列には、ドキュメントの種類について説明します。 これらの部分文字列については、次を参照してください。 [GetDocString](#getdocstring)します。 この文字列リソースには、アプリケーションのリソース ファイルが記載されています。 例:
 
 ```RC
 // MYCALC.RC

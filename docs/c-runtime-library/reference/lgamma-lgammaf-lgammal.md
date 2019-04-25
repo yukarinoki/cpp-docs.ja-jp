@@ -31,11 +31,11 @@ helpviewer_keywords:
 - lgammaf function
 ms.assetid: 6e326c58-7077-481a-a329-c82ae56ae9e6
 ms.openlocfilehash: 43ce1599ab9161b9fadf5643ddd2ec739ab2d8b8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157305"
 ---
 # <a name="lgamma-lgammaf-lgammal"></a>lgamma、lgammaf、lgammal
 
@@ -66,7 +66,7 @@ long double lgamma( long double x ); //C++ only
 |懸案事項|Return|
 |-----------|------------|
 |*x* = NaN|NaN|
-|*x* ±0 を =|+INFINITY|
+|*x* = ±0|+INFINITY|
 |*x*負の整数を =|+INFINITY|
 |±INFINITY|+INFINITY|
 |極エラー|+HUGE_VAL、+HUGE_VALF、または +HUGE_VALL|

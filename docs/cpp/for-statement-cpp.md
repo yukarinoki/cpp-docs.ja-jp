@@ -5,15 +5,15 @@ helpviewer_keywords:
 - for keyword [C++]
 ms.assetid: 6c7d01b3-c4c1-4c6a-aa58-e2d198f33d4a
 ms.openlocfilehash: a6b1823fe93c45abd8dabbd22116924e0a64f19a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50660331"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154218"
 ---
 # <a name="for-statement-c"></a>for ステートメント (C++)
 
-条件が偽 (false) になるまでステートメントを繰り返し実行します。 範囲ベースの for ステートメントについては、[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)を参照してください。
+条件が偽 (false) になるまでステートメントを繰り返し実行します。 範囲ベースの for ステートメントについては、次を参照してください。[ステートメント (C++) の範囲に基づく](../cpp/range-based-for-statement-cpp.md)します。
 
 ## <a name="syntax"></a>構文
 

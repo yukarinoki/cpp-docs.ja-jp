@@ -39,11 +39,11 @@ helpviewer_keywords:
 - _iswctype function
 ms.assetid: cf7509b7-12fc-4d95-8140-ad2eb98173d3
 ms.openlocfilehash: c5eb0b51cf0371100ed884221ee04885dfbe9ad9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50563163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157319"
 ---
 # <a name="isctype-iswctype-isctypel-iswctypel"></a>_isctype、iswctype、_isctype_l、_iswctype_l
 
@@ -93,8 +93,8 @@ int _iswctype_l(
 
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
-|N/A|**_isctype**|N/A|**_iswctype**|
-|N/A|**_isctype_l**|N/A|**_iswctype_l**|
+|適用なし|**_isctype**|適用なし|**_iswctype**|
+|適用なし|**_isctype_l**|適用なし|**_iswctype_l**|
 
 ## <a name="requirements"></a>必要条件
 

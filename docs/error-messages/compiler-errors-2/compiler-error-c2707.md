@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2707
 ms.assetid: 3deaf45c-74da-4c9d-acc6-b82412720b74
 ms.openlocfilehash: ce86f69b36b915b3e757b5d18430c99cb288e4e7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50648176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161005"
 ---
 # <a name="compiler-error-c2707"></a>コンパイラ エラー C2707
 
-'identifier': 組み込み関数のコンテキストが正しくありません
+'identifier' : bad context for intrinsic function
 
 構造化例外処理の組み込み関数は、特定のコンテキストで有効でないです。
 

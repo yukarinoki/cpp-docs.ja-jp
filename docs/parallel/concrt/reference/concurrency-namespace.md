@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Concurrency namespace
 ms.assetid: f1d33ca2-679b-4442-b140-22a9d9df61d1
 ms.openlocfilehash: aa2fe7dedd1c7e1a8b5a72e01508b4201bd72a7d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160075"
 ---
 # <a name="concurrency-namespace"></a>concurrency 名前空間
 
@@ -161,15 +161,15 @@ namespace concurrency;
 |[ConcRT_EventType](concurrency-namespace-enums.md#concrt_eventtype)|同時実行ランタイムによって提供されるトレース機能を使用してトレースできるイベントの種類。|
 |[Concrt_TraceFlags](concurrency-namespace-enums.md#concrt_traceflags)|イベントの種類のトレース フラグ。|
 |[CriticalRegionType](concurrency-namespace-enums.md#criticalregiontype)|コンテキストが存在するクリティカル領域の種類。|
-|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` ポリシーによって使用され、スケジューラのリソースのバランスを再調整する際の判断基準として、スケジューラから収集された統計情報に従うか、または `Activate` インターフェイスの `Deactivate` メソッドおよび `IVirtualProcessorRoot` メソッドの呼び出しによってアイドル状態との間で状態が変化する仮想プロセッサのみに基づくかを示します。 使用できるスケジューラ ポリシーの詳細については、[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)を参照してください。|
+|[DynamicProgressFeedbackType](concurrency-namespace-enums.md#dynamicprogressfeedbacktype)|`DynamicProgressFeedback` ポリシーによって使用され、スケジューラのリソースのバランスを再調整する際の判断基準として、スケジューラから収集された統計情報に従うか、または `Activate` インターフェイスの `Deactivate` メソッドおよび `IVirtualProcessorRoot` メソッドの呼び出しによってアイドル状態との間で状態が変化する仮想プロセッサのみに基づくかを示します。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)します。|
 |[join_type](concurrency-namespace-enums.md#join_type)|`join` メッセージング ブロックの種類。|
 |[message_status](concurrency-namespace-enums.md#message_status)|ブロックへの `message` オブジェクトの提供に対する有効な応答。|
-|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|ポリシー キーは、スケジューラの動作をさまざまな側面から表します。 各ポリシー要素は、キーと値の組み合わせで表現されます。 スケジューラのスケジューラ ポリシーとその影響に関する詳細については、[タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)を参照してください。|
-|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|基になる実行コンテキスト用にスケジューラが利用するスレッドの種類を示すために、`SchedulerKind` ポリシーにより使用されます。 使用できるスケジューラ ポリシーの詳細については、[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)を参照してください。|
-|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|スケジューラに使用されるスケジューリング アルゴリズムを記述するために、`SchedulingProtocol` ポリシーによって使用されます。 使用できるスケジューラ ポリシーの詳細については、[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)を参照してください。|
+|[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)|ポリシー キーは、スケジューラの動作をさまざまな側面から表します。 各ポリシー要素は、キーと値の組み合わせで表現されます。 スケジューラのスケジューラ ポリシーとその影響に関する詳細については、次を参照してください。[タスク スケジューラ](../../../parallel/concrt/task-scheduler-concurrency-runtime.md)します。|
+|[SchedulerType](concurrency-namespace-enums.md#schedulertype)|基になる実行コンテキスト用にスケジューラが利用するスレッドの種類を示すために、`SchedulerKind` ポリシーにより使用されます。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)します。|
+|[SchedulingProtocolType](concurrency-namespace-enums.md#schedulingprotocoltype)|スケジューラに使用されるスケジューリング アルゴリズムを記述するために、`SchedulingProtocol` ポリシーによって使用されます。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)します。|
 |[SwitchingProxyState](concurrency-namespace-enums.md#switchingproxystate)|あるスレッド プロキシから別のスレッド プロキシへの協調的なコンテキスト切り替えを実行するときに、スレッド プロキシの状態を示すために使用します。|
 |[task_group_status](concurrency-namespace-enums.md#task_group_status)|`task_group` オブジェクトまたは `structured_task_group` オブジェクトの実行状態を示します。 この型の値は、タスク グループに対してスケジュールされたタスクが完了するのを待機している多数のメソッドによって返されます。|
-|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|`WinRTInitialization` ポリシーによって使用され、Windows 8 以上のオペレーティング システムで実行されるアプリケーション用のスケジューラ スレッドで、Windows ランタイムを初期化するかどうか、またどのように初期化するかを表します。 使用できるスケジューラ ポリシーの詳細については、[PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)を参照してください。|
+|[WinRTInitializationType](concurrency-namespace-enums.md#winrtinitializationtype)|`WinRTInitialization` ポリシーによって使用され、Windows 8 以上のオペレーティング システムで実行されるアプリケーション用のスケジューラ スレッドで、Windows ランタイムを初期化するかどうか、またどのように初期化するかを表します。 使用できるスケジューラ ポリシーの詳細については、次を参照してください。 [PolicyElementKey](concurrency-namespace-enums.md#policyelementkey)します。|
 
 ### <a name="functions"></a>関数
 

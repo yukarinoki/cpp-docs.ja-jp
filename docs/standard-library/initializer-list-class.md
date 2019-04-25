@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::initializer_list::end
 - std::initializer_list::size
 ms.openlocfilehash: de925f73ac206113aafb8661a8d5b347503150c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50466912"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159302"
 ---
 # <a name="initializerlist-class"></a>initializer_list クラス
 
@@ -116,8 +116,8 @@ initializer_list(const InputIterator First, const InputIterator Last);
 
 |パラメーター|説明|
 |---------------|-----------------|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 
 ### <a name="remarks"></a>Remarks
 

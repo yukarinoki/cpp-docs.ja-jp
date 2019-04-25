@@ -13,11 +13,11 @@ helpviewer_keywords:
 - std::experimental::filesystem::file_status::type
 - std::experimental::filesystem::file_status::permissions
 ms.openlocfilehash: 81ce4ecc1673087db8e985f94e297798dd712a6e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50630621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160018"
 ---
 # <a name="filestatus-class"></a>file_status クラス
 

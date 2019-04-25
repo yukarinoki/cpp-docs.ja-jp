@@ -13,11 +13,11 @@ helpviewer_keywords:
 - VectorView Class
 ms.assetid: 05cd461d-dce7-49d3-b0e7-2e5c78ed8192
 ms.openlocfilehash: 02b5e15a816ec057bfb0a8201b7591e628c3ea2c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57745288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161382"
 ---
 # <a name="platformcollectionsvectorview-class"></a>Platform::Collections::VectorView クラス
 
@@ -110,8 +110,7 @@ VectorView オブジェクト内の特定の要素を指定する、0 から始�
 
 ### <a name="return-value"></a>戻り値
 
-
-  `index` パラメーターで指定された要素。 要素の型が、VectorView テンプレート パラメーターで指定された *T* します。
+`index` パラメーターで指定された要素。 要素の型が、VectorView テンプレート パラメーターで指定された *T* します。
 
 ## <a name="getmany"></a>  Vectorview::getmany メソッド
 
@@ -159,8 +158,7 @@ virtual bool IndexOf(
 検索する項目。
 
 *index*<br/>
-
-  `value` パラメーターが見つかった場合は、項目の 0 から始まるインデックス。それ以外の場合は 0。
+`value` パラメーターが見つかった場合は、項目の 0 から始まるインデックス。それ以外の場合は 0。
 
 *インデックス*、いずれかの項目が最初の要素の場合は、パラメーターが 0、`VectorView`または項目が見つかりませんでした。 場合、戻り値は**true**項目が見つかったと最初の要素を;、それ以外の場合、項目が見つかりません。
 

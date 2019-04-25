@@ -52,11 +52,11 @@ helpviewer_keywords:
 - SCHEMA_ENTRY macro
 ms.assetid: 909482c5-64ab-4e52-84a9-1c07091db183
 ms.openlocfilehash: f5cf5e8ebadcc48dbd040225496f0a437b92555c
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57415189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152710"
 ---
 # <a name="macros-for-ole-db-provider-templates"></a>OLE DB プロバイダー テンプレート用マクロ
 
@@ -427,7 +427,7 @@ PROVIDER_COLUMN_ENTRY_GN (name, ordinal, flags, colSize, dbtype, precision, scal
 *precision*<br/>
 [in]場合は、データを取得するときに使用する桁数を示します*dbType* DBTYPE_NUMERIC または DBTYPE_DECIMAL です。 参照してください、`bPrecision`説明[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))します。
 
-*スケール*<br/>
+*scale*<br/>
 [in]DbType が DBTYPE_NUMERIC または DBTYPE_DECIMAL の場合は、データを取得するときに使用する小数点以下桁数を示します。 参照してください、`bScale`説明[DBBINDING 構造体](/previous-versions/windows/desktop/ms716845(v=vs.85))します。
 
 *guid*<br/>
@@ -585,7 +585,7 @@ END_SCHEMA_MAP()
 
 #### <a name="remarks"></a>Remarks
 
-詳細については、[IDBSchemaRowsetImpl クラス](../../data/oledb/idbschemarowsetimpl-class.md)を参照してください。
+詳細については、次を参照してください。 [IDBSchemaRowsetImpl クラス](../../data/oledb/idbschemarowsetimpl-class.md)します。
 
 ### <a name="schema_entry"></a> SCHEMA_ENTRY
 

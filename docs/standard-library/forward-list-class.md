@@ -81,11 +81,11 @@ helpviewer_keywords:
 - std::forward_list::unique
 ms.assetid: 89a3b805-ab60-4858-b772-5855130c11b1
 ms.openlocfilehash: 5eaa8eba1904dc0a729fb66b280b8d3fa4bb78f1
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159783"
 ---
 # <a name="forwardlist-class"></a>forward_list クラス
 
@@ -513,8 +513,8 @@ forward_list(InputIterator First, InputIterator Last, const Allocator& Al);
 |*カウント*|構築されたリスト内の要素の数。|
 |*val*|構築されたリストの要素の値。|
 |*右*|構築されたリストがコピーになる元のリスト。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 |*IList*|コピーする initializer_list。|
 
 ### <a name="remarks"></a>Remarks
@@ -577,8 +577,8 @@ void insert_after(const_iterator Where, InputIterator First, InputIterator Last)
 |---------------|-----------------|
 |*Where*|最初の要素が挿入される、ターゲット前方リスト内の位置。|
 |*カウント*|挿入する要素の数。|
-|*まずは*|挿入範囲の先頭。|
-|*前の*|挿入範囲の末尾。|
+|*First*|挿入範囲の先頭。|
+|*Last*|挿入範囲の末尾。|
 |*val*|前方リストに追加する要素。|
 |*IList*|挿入する initializer_list。|
 
@@ -880,10 +880,10 @@ void splice_after(
 *Iter*<br/>
 ソースの forward_list リストから挿入される要素。
 
-*まずは*<br/>
+*First*<br/>
 ソースの forward_list リストから挿入される範囲内の最初の要素。
 
-*前の*<br/>
+*Last*<br/>
 ソースの forward_list リストから挿入される範囲を超える最初の位置。
 
 ### <a name="remarks"></a>Remarks

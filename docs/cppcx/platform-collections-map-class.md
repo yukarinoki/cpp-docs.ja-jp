@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Map Class (C++/Cx)
 ms.assetid: 2b8cf968-1167-4898-a149-1195b32c1785
 ms.openlocfilehash: ce50290217c7c06e26f26fc50564d3e37c873157
-ms.sourcegitcommit: 309dc532f13242854b47759cef846de59bb807f1
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58565283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161759"
 ---
 # <a name="platformcollectionsmap-class"></a>Platform::Collections::Map クラス
 
@@ -65,7 +65,7 @@ ref class Map sealed;
 
 マップは、基本的に [std::map](../standard-library/map-class.md)のラッパーです。 C++ の具象実装では、 [Windows::Foundation::Collections::IMap < Windows::Foundation::Collections::IKeyValuePair\<K, V >>](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_)Windows ランタイム インターフェイスのパブリックの間で渡される型。 パブリックの戻り値またはパラメーターで `Platform::Collections::Map` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 パラメーターまたは戻り値の型を変更することで、エラーを修正する[Windows::Foundation::Collections::IMap\<K, V >](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)します。
 
-詳細については、[コレクション](../cppcx/collections-c-cx.md)を参照してください。
+詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)します。
 
 ### <a name="members"></a>メンバー
 
@@ -206,7 +206,7 @@ V Lookup(K key);
 
 ### <a name="return-value"></a>戻り値
 
-値とペアになっている、*キー*します。 戻り値の型は typename *V*します。
+値とペアになっている、*キー*します。 戻り値の型は typename *V* します。
 
 ### <a name="remarks"></a>Remarks
 

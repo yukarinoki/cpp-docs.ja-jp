@@ -7,11 +7,11 @@ helpviewer_keywords:
 - final Identifier
 ms.assetid: 649866d0-79d4-449f-ab74-f84b911b79a3
 ms.openlocfilehash: c6400c8060664713fdd004a5aa9536e0617bc0c8
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154777"
 ---
 # <a name="final-specifier"></a>final 指定子
 
@@ -47,7 +47,7 @@ class DerivedClass: public BaseClass
 };
 ```
 
-メンバー関数をオーバーライドできることを指定する方法については、[オーバーライド指定子](../cpp/override-specifier.md)を参照してください。
+メンバー関数をオーバーライドできることを指定する方法については、次を参照してください。[オーバーライド指定子](../cpp/override-specifier.md)します。
 
 次の例では、**最終**クラスを継承できないことを指定するキーワード。
 

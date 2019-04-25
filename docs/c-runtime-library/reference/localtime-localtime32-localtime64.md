@@ -33,11 +33,11 @@ helpviewer_keywords:
 - time, converting values
 ms.assetid: 4260ec3d-43ee-4538-b998-402a282bb9b8
 ms.openlocfilehash: d34a45ff20cb74d61a8eb189282bfdce4d8954ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157514"
 ---
 # <a name="localtime-localtime32-localtime64"></a>localtime、_localtime32、_localtime64
 
@@ -75,7 +75,7 @@ struct tm *_localtime64( const __time64_t *sourceTime );
 |フィールド|説明|
 |-|-|
 |**tm_sec**|秒 (0 - 59)。|
-|**未満**|分 (0 - 59)。|
+|**tm_min**|分 (0 - 59)。|
 |**tm_hour**|午前 0 時からの経過時間 (0 - 23)。|
 |**tm_mday**|(1 ~ 31) の月の日。|
 |**tm_mon**|月 (0 - 11年 1 月 = 0 です)。|

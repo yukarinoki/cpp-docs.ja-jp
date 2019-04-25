@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [MFC], managing
 ms.assetid: b72f4154-24db-4e75-bca3-6873e2459c15
 ms.openlocfilehash: 78b9ae467d3504f3922c540a3e4cd100322d8f4e
-ms.sourcegitcommit: faa42c8a051e746d99dcebe70fd4bbaf3b023ace
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "57808392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151282"
 ---
 # <a name="application-information-and-management"></a>アプリケーションの情報と管理
 
@@ -95,8 +95,7 @@ CWinThread* AfxBeginThread(
 *dwCreateFlags*<br/>
 スレッドの作成を制御する追加のフラグを指定します。 このフラグは、2 つの値の 1 つを含めることができます。
 
-- CREATE_SUSPENDED 中断カウントが 1 つのスレッドを開始します。 メンバー データの初期化に使用する場合は、CREATE_SUSPENDED を使用して、`CWinThread`などオブジェクト[m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete)またはスレッドが実行を開始する前に、派生クラスのメンバー。 初期化が完了すると使用[cwinthread::resumethread](../../mfc/reference/cwinthread-class.md#resumethread)を実行しているスレッドを開始します。 
-  `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
+- CREATE_SUSPENDED 中断カウントが 1 つのスレッドを開始します。 メンバー データの初期化に使用する場合は、CREATE_SUSPENDED を使用して、`CWinThread`などオブジェクト[m_bAutoDelete](../../mfc/reference/cwinthread-class.md#m_bautodelete)またはスレッドが実行を開始する前に、派生クラスのメンバー。 初期化が完了すると使用[cwinthread::resumethread](../../mfc/reference/cwinthread-class.md#resumethread)を実行しているスレッドを開始します。 `CWinThread::ResumeThread` が呼び出されるまでは、スレッドは実行されません。
 
 - **0**作成後すぐにスレッドを開始します。
 
@@ -109,8 +108,7 @@ CWinThread* AfxBeginThread(
 
 ### <a name="remarks"></a>Remarks
 
-
-  `AfxBeginThread` の最初のフォームはワーカー スレッドを作成します。 2 番目のフォームは、ユーザー インターフェイス スレッドまたはワーカー スレッドとして機能可能なスレッドを作成します。
+`AfxBeginThread` の最初のフォームはワーカー スレッドを作成します。 2 番目のフォームは、ユーザー インターフェイス スレッドまたはワーカー スレッドとして機能可能なスレッドを作成します。
 
 `AfxBeginThread` 新たに作成`CWinThread`オブジェクトを呼び出し、 [CreateThread](../../mfc/reference/cwinthread-class.md#createthread)関数のスレッドの実行を開始して、スレッドへのポインターを返します。 なんらかの原因でスレッド生成に失敗すると、スレッド生成処理全体をチェックし、すべてのオブジェクトを確実に解放します。 スレッドを終了するには、呼び出す[AfxEndThread](#afxendthread)からスレッドまたはワーカー スレッドの制御関数からの戻り値内で。
 
@@ -325,8 +323,7 @@ CWnd* AFXAPI AfxGetMainWnd();
 
 この関数は単に返します、コンテナー内の場所で有効になっているオブジェクトが存在しないか、アプリケーションが OLE サーバーではない、 *m_pMainWnd*アプリケーション オブジェクト。
 
-
-  `AfxGetMainWnd` をアプリケーションのプライマリ スレッドから呼び出した場合は、上記の規則に従ってアプリケーションのメイン ウィンドウを返します。 アプリケーションのセカンダリ スレッドからこの関数を呼び出した場合は、関数は呼び出しを行ったスレッドに関連付けられているメイン ウィンドウを返します。
+`AfxGetMainWnd` をアプリケーションのプライマリ スレッドから呼び出した場合は、上記の規則に従ってアプリケーションのメイン ウィンドウを返します。 アプリケーションのセカンダリ スレッドからこの関数を呼び出した場合は、関数は呼び出しを行ったスレッドに関連付けられているメイン ウィンドウを返します。
 
 ### <a name="remarks"></a>Remarks
 
@@ -685,7 +682,7 @@ Microsoft Foundation Class ライブラリでは、いくつかの標準のウ�
 
 クラスの名前が登録されている`AfxRegisterWndClass`パラメーターにのみ依存します。 呼び出す場合`AfxRegisterWndClass`複数回と同じパラメーターを持つことのみクラスを登録する最初の呼び出しで。 後続の呼び出し`AfxRegisterWndClass`と同じパラメーターを持つ登録済みのクラス名を返すだけです。
 
-呼び出す場合`AfxRegisterWndClass`クラスごとに別のウィンドウ クラスを取得する代わりに、同じパラメーターを持つ複数の CWnd から派生したクラスの各クラスは、同じウィンドウ クラスを共有します。 これは CS_CLASSDC クラスのスタイルを使用する場合、問題が発生することができます。 複数の CS_CLASSDC ウィンドウ クラスではなく最終的に CS_CLASSDC ウィンドウ クラスの 1 つ、さらにそのクラスの共有と同じドメイン コント ローラーを使用して、すべての C++ windows。 この問題を回避するには、呼び出す[AfxRegisterClass](#afxregisterclass)クラスを登録します。
+呼び出す場合`AfxRegisterWndClass`クラスごとに別のウィンドウ クラスを取得する代わりに、同じパラメーターを持つ複数の CWnd から派生したクラスの各クラスは、同じウィンドウ クラスを共有します。 これは CS_CLASSDC クラスのスタイルを使用する場合、問題が発生することができます。 複数の CS_CLASSDC ウィンドウ クラスではなく最終的に 1 つの CS_CLASSDC ウィンドウ クラス、およびすべてC++クラスを使用する windows は、同じ DC を共有します。 この問題を回避するには、呼び出す[AfxRegisterClass](#afxregisterclass)クラスを登録します。
 
 テクニカル ノートを参照してください[TN001:ウィンドウ クラスの登録](../../mfc/tn001-window-class-registration.md)ウィンドウ クラスの登録の詳細については、`AfxRegisterWndClass`関数。
 
@@ -831,7 +828,7 @@ GUI アプリケーションのメイン ウィンドウの表示方法を指定
 呼び出す場合`AfxWinInit`のインスタンスを宣言、自分で、`CWinApp`クラス。 コンソール アプリケーションの場合からクラスを派生が選択した可能性があります`CWinApp`のインスタンスを使用して、代わりに、`CWinApp`直接します。 この手法は、アプリケーションのすべての機能の実装のままにする場合に適切な**メイン**します。
 
 > [!NOTE]
->  アセンブリのアクティベーション コンテキストを作成するとき、MFC はユーザー モジュールによって得られるマニフェスト リソースを使用します。 アクティブ化コンテキストが作成された`AfxWinInit`します。 詳細については、[の MFC モジュール状態でアクティブ化コンテキストのサポート](../../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)を参照してください。
+>  アセンブリのアクティベーション コンテキストを作成するとき、MFC はユーザー モジュールによって得られるマニフェスト リソースを使用します。 アクティブ化コンテキストが作成された`AfxWinInit`します。 詳細については、次を参照してください。[の MFC モジュール状態でアクティブ化コンテキストのサポート](../../mfc/support-for-activation-contexts-in-the-mfc-module-state.md)します。
 
 ### <a name="example"></a>例
 
