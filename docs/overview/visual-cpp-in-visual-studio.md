@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual C++, home page
 author: mikeblome
 ms.author: mblome
-ms.openlocfilehash: 6430d57ddc8718c419076d2da1008e21efdb9b13
-ms.sourcegitcommit: b72a10a7b12e722fd91a17406b91b270026f763a
+ms.openlocfilehash: d8826c92077ac374b67a7294fe040d6fe8dea927
+ms.sourcegitcommit: 14b292596bc9b9b883a9c58cd3e366b282a1f7b3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58898714"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "60124747"
 ---
 # <a name="c-in-visual-studio"></a>Visual Studio での C++
 
@@ -38,7 +38,7 @@ Visual Studio の C++ 準拠の強化について説明します。
 [Visual C++ 言語への準拠](visual-cpp-language-conformance.md)<br/>
 MSVC C++ コンパイラの各機能の準拠状態を一覧にしています。
 
-[Visual C++ 2003 ～ 2015 の変更履歴](../porting/visual-cpp-change-history-2003-2015.md)<br/>
+[2003 から 2015 の Visual C++ の履歴の変更](../porting/visual-cpp-change-history-2003-2015.md)<br/>
 前のバージョンの互換性に影響する変更点について説明します。
 
 ## <a name="install-visual-studio-and-upgrade-from-earlier-versions"></a>Visual Studio をインストールして、以前のバージョンからアップグレードする
@@ -46,7 +46,7 @@ MSVC C++ コンパイラの各機能の準拠状態を一覧にしています�
 [Visual Studio での C++ サポートのインストール](../build/vscpp-step-0-installation.md)<br/>
 Visual Studio 2015 または Visual Studio 2017 をダウンロードして、Visual C++ ツールセットをインストールします。
 
-[Visual C++  移植とアップグレードのガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
+[Visual C++ 移植とアップグレードのガイド](../porting/visual-cpp-porting-and-upgrading-guide.md)<br/>
 Windows 10 とユニバーサル Windows プラットフォームに C++ コードを移植するなど、Visual Studio 2015 または Visual Studio 2017 へのコードの移植およびプロジェクトのアップグレードのガイダンス。
 
 [さまざまな Visual Studio エディションの Visual C++ ツールおよび機能](visual-cpp-tools-and-features-in-visual-studio-editions.md)<br/>
@@ -109,7 +109,7 @@ Win32、ATL、および MFC を使用して Windows のデスクトップ DLL �
 [並列プログラミング](../parallel/parallel-programming-in-visual-cpp.md)<br/>
 並列パターン ライブラリ、C++ AMP、OpenMP、その他 Windows 上でのマルチスレッド化に関連する機能を使用する方法。
 
-[セキュリティに推奨される手順](../security/security-best-practices-for-cpp.md)<br/>
+[セキュリティ推奨事項](../security/security-best-practices-for-cpp.md)<br/>
 悪意のあるコードや不正使用からアプリケーションを保護する方法。
 
 [クラウドおよび Web プログラミング](../cloud/cloud-and-web-programming-in-visual-cpp.md)<br/>
@@ -138,7 +138,7 @@ ODBC およびその他のデータベース アクセス テクノロジを使�
 [C ランタイム ライブラリ リファレンス](../c-runtime-library/c-run-time-library-reference.md)<br/>
 セキュリティ上の問題が発生することがわかっている関数に対する、セキュリティを強化された代替品が含まれています。
 
-[C++ 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
+[.NET 標準ライブラリ](../standard-library/cpp-standard-library-reference.md)<br/>
 C++ 標準ライブラリ。
 
 [Active Template Library (ATL)](../atl/atl-com-desktop-components.md)<br/>
@@ -168,8 +168,8 @@ GPU で実行する膨大な並列アルゴリズム。
 [Visual C++ ツールセットで問題を報告する方法](how-to-report-a-problem-with-the-visual-cpp-toolset.md)<br/>
 Visual C++ ツールセット (コンパイラ、リンカー、その他のツール) に対して効果的なエラー レポートを作成する方法とレポートの提出方法に関す情報。
 
-[Visual C++ チーム ブログ](http://blogs.msdn.com/b/vcblog/)<br/>
-[!INCLUDE[vcprvc](../build/includes/vcprvc_md.md)]の開発者による新機能と最新の情報に関する詳細。
+Microsoft [C++ チーム ブログ](https://devblogs.microsoft.com/cppblog/)<br/>
+Visual Studio の C++ ツールの開発者による新機能と最新の情報に関する詳細。
 
 [Visual Studio 開発者コミュニティ](https://developercommunity.visualstudio.com/)<br/>
 Visual Studio のサポート、バグの報告、提案に関する情報。
