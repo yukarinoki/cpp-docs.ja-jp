@@ -24,11 +24,11 @@ helpviewer_keywords:
 - msize_dbg function
 ms.assetid: a333f4b6-f8a2-4e61-bb69-cb34063b8cef
 ms.openlocfilehash: 3b6d08d44162d8263ca88147fe86166924d7d162
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50629126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156305"
 ---
 # <a name="msizedbg"></a>_msize_dbg
 
@@ -57,7 +57,7 @@ size_t _msize_dbg(
 
 ## <a name="remarks"></a>Remarks
 
-**_msize_dbg** _ のデバッグ バージョンです[msize](msize.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_msize_dbg**への呼び出しに減少 **_msize**します。 両方 **_msize**と **_msize_dbg**ベースのヒープにメモリ ブロックのサイズを計算が **_msize_dbg** 2 つのデバッグ機能を追加します両側のバッファーが含まれています。ユーザーのサイズが返されると、メモリ ブロックの部分には、特定のブロックの型のサイズの計算が使用できます。
+**_msize_dbg** _ のデバッグ バージョンです[msize](msize.md)関数。 ときに[_DEBUG](../../c-runtime-library/debug.md)が定義されていない呼び出しごとに **_msize_dbg**への呼び出しに減少 **_msize**します。 両方 **_msize**と **_msize_dbg**ベースのヒープにメモリ ブロックのサイズを計算が **_msize_dbg** 2 つのデバッグ機能を追加します。返されるサイズのメモリ ブロックのユーザー部分の両側のバッファーが含まれ、特定のブロックの型のサイズを計算できます。
 
 デバッグ バージョンのベース ヒープに対するメモリ ブロックの割り当て、初期化、管理方法については、「 [CRT Debug Heap Details](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 割り当てブロック型と、それらがどのように使用されるかについては、「[デバッグ ヒープ上のメモリ ブロックの型](/visualstudio/debugger/crt-debug-heap-details)」をご覧ください。 標準で呼び出すヒープ関数と、アプリケーションのデバッグ ビルドで呼び出すデバッグ バージョンのヒープ関数との違いの詳細については、「[デバッグ バージョンのヒープ割り当て関数](/visualstudio/debugger/debug-versions-of-heap-allocation-functions)」をご覧ください。
 

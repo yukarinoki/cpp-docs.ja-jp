@@ -24,11 +24,11 @@ helpviewer_keywords:
 - wide characters, strings
 ms.assetid: a8d21fec-0d36-4085-9d81-9b1c61c7259d
 ms.openlocfilehash: 46ef195ec4685c327c4b5951ec44e5c363214b59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50494420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155330"
 ---
 # <a name="wcsrtombs"></a>wcsrtombs
 
@@ -63,7 +63,7 @@ size_t wcsrtombs(
 *count*<br/>
 変換される文字数。
 
-*呼び出すため*<br/>
+*mbstate*<br/>
 ポインター、 **mbstate_t**変換状態オブジェクト。
 
 ## <a name="return-value"></a>戻り値

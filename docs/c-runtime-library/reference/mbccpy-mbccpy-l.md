@@ -35,11 +35,11 @@ helpviewer_keywords:
 - mbccpy_l function
 ms.assetid: 13f4de6e-7792-41ac-b319-dd9b135433aa
 ms.openlocfilehash: 852097ebea41ef99b1a53f7bc344eb0c08911a4d
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50533745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156838"
 ---
 # <a name="mbccpy-mbccpyl"></a>_mbccpy、_mbccpy_l
 
@@ -88,7 +88,7 @@ void _mbccpy_l(
 |Tchar.h のルーチン|_UNICODE および _MBCS が未定義の場合|_MBCS が定義されている場合|_UNICODE が定義されている場合|
 |---------------------|--------------------------------------|--------------------|-----------------------|
 |**_tccpy**|マクロまたはインライン関数にマップされます|**_mbccpy**|マクロまたはインライン関数にマップされます|
-|**_tccpy_l**|N/A|**_mbccpy_l**|N/A|
+|**_tccpy_l**|適用なし|**_mbccpy_l**|適用なし|
 
 ## <a name="requirements"></a>必要条件
 

@@ -5,11 +5,11 @@ f1_keywords:
 - <future>
 ms.assetid: 2f5830fc-455d-44f9-9e3d-94ea051596a2
 ms.openlocfilehash: 189a9f16b65ae74fc2a86bee62bf8bd548c486aa
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50555764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159861"
 ---
 # <a name="ltfuturegt"></a>&lt;future&gt;
 
@@ -40,7 +40,7 @@ ms.locfileid: "50555764"
 
 テンプレート クラスの各`promise`、 `future`、および`shared_future`型に特殊化が**void**と格納すると、参照渡しで値を取得する部分的な特殊化します。 これらの特殊化がプライマリ テンプレートと異なる点は、戻り値を格納および取得する関数のシグネチャとセマンティクスだけです。
 
-テンプレート クラス `future` と `shared_future` では、それらのデストラクターでブロックは実行されません。ただし、下位互換性のために次のような例外が 1 つだけあります。`future` で開始されたタスクにアタッチされている `shared_future` (または最後の `std::async`) では、他のすべての future とは異なり、タスクが完了していない場合にデストラクターでブロックが実行されます。つまり、デストラクターがブロックするのは、スレッドがまだ `.get()` や `.wait()` を呼び出しておらず、タスクが実行中の場合です。 標準の草案では、`std::async` の説明に使用上の注意事項が追加されています。その注意事項とは、「メモ: std::async から取得された future をローカル スコープ外に移動する場合、future を使用する他のコードでは、future のデストラクターは共有状態が準備完了になるのをブロックする可能性があることを考慮する必要があります。」といったものです。ただし、それ以外の場合は、`future` と `shared_future` のデストラクターでは、ブロックが確実に実行されないようにする必要があります。
+テンプレート クラス`future`と`shared_future`ブロックことはありませんでそれぞれのデストラクターを除くの旧バージョンと互換性が維持される 1 つのケース。他のすべての future とは異なりの`future`— または最後に、 `shared_future`-で開始されたタスクに接続される`std::async`、デストラクターのブロック、タスクが完了していない; 場合は、このスレッドがまだ呼び出されませんだった場合ブロック`.get()`または`.wait()`タスクがまだ実行されているとします。 説明に追加された次の操作性に注意してください`std::async`ドラフト標準で:"[注。Std::async から取得した後はローカル スコープ外に移動する場合、共有状態になる準備完了将来のデストラクターがブロックすることに注意してください、未来を使用するその他のコードをある必要があります: 最後に注意してください]"その他のすべてのケースで`future`と`shared_future`。デストラクターは、必要なし、をブロックしないことが保証されます。
 
 ## <a name="members"></a>メンバー
 

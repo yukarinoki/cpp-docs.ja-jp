@@ -3,11 +3,11 @@ title: ARM アセンブラーのコマンド ライン リファレンス
 ms.date: 08/30/2018
 ms.assetid: f7b89478-1ab5-4995-8cde-a805f0462c45
 ms.openlocfilehash: f49b59a81fbe5f11c0f219d1e1fe83a4ee811c7a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50579239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162136"
 ---
 # <a name="arm-assembler-command-line-reference"></a>ARM アセンブラーのコマンド ライン リファレンス
 
@@ -15,15 +15,15 @@ ms.locfileid: "50579239"
 
 ## <a name="syntax"></a>構文
 
-> **armasm** [*オプション*] *sourcefile* *objectfile*
-> **armasm** [*オプション*] **-o** *objectfile* *sourcefile*
+> **armasm** [*options*] *sourcefile* *objectfile*
+> **armasm** [*options*] **-o** *objectfile* *sourcefile*
 
 ### <a name="parameters"></a>パラメーター
 
 *options*<br/>
-次の 0 個以上の組み合わせです。
+次の値を 0 個以上指定できます。
 
-- **-エラー** *ファイル名*<br/>
+- **-errors** *filename*<br/>
    エラーと警告メッセージをリダイレクト*filename*します。
 
 - **-i** *dir*[**;**<em>dir</em>]<br/>
@@ -32,7 +32,7 @@ ms.locfileid: "50579239"
 - **-を事前に定義***ディレクティブ*<br/>
    シンボルを事前に備える、SETL、セット、またはディレクティブを指定します。<br/>
    例: **armasm.exe-source.asm の「備える 150 数」事前に定義**<br/>
-   詳細については、、 [ARM コンパイラ armasm リファレンス ガイド](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)を参照してください。
+   詳細については、次を参照してください。、 [ARM コンパイラ armasm リファレンス ガイド](http://infocenter.arm.com/help/topic/com.arm.doc.dui0802b/index.html)します。
 
 - **-nowarn**<br/>
    すべての警告メッセージを無効にします。
@@ -43,7 +43,7 @@ ms.locfileid: "50579239"
 - **-help**<br/>
    コマンド ライン ヘルプ メッセージを印刷します。
 
-- **-マシン***マシン*<br/>
+- **-machine** *machine*<br/>
    PE ヘッダーに設定するコンピューターの種類を指定します。  指定できる値*マシン*は。<br/>
    **ARM**— IMAGE_FILE_MACHINE_ARMNT にコンピューターの種類を設定します。 既定値です。<br/>
    **THUMB**— IMAGE_FILE_MACHINE_THUMB にコンピューターの種類を設定します。
@@ -51,7 +51,7 @@ ms.locfileid: "50579239"
 - **-oldit**<br/>
    ARMv7 スタイル生成 IT ブロックします。  既定では ARMv8 と互換性のある IT ブロックが生成されます。
 
-- **-を使用して***ファイル名*<br/>
+- **-via** *filename*<br/>
    追加のコマンドライン引数からの読み取り*filename*します。
 
 - **-16**<br/>
@@ -63,7 +63,7 @@ ms.locfileid: "50579239"
 - **-g**<br/>
    デバッグ情報を生成します。
 
-- **-errorreport:** *オプション*<br/>
+- **-errorReport:** *option*<br/>
    エラーを Microsoft に報告する方法の内部アセンブラーを指定します。  指定できる値*オプション*は。<br/>
    **none**-レポートを送信しません。<br/>
    **プロンプト**— 今すぐレポートを送信するように求めます。<br/>

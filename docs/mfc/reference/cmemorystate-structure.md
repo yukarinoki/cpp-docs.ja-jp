@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting memory leaks [MFC]
 ms.assetid: 229d9de7-a6f3-4cc6-805b-5a9d9b1bfe1d
 ms.openlocfilehash: a110e1345cb970c117de125bd8105e1bc86eaf94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288130"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62163755"
 ---
 # <a name="cmemorystate-structure"></a>CMemoryState 構造体
 
@@ -177,7 +177,7 @@ void DumpStatistics() const;
 
 - 現在 (バイト) をプログラムによって使用される合計メモリ
 
-無料のブロックは、ブロックが割り当て解除が遅延場合数`afxMemDF`に設定された`delayFreeMemDF`します。 詳細については、[afxMemDF](diagnostic-services.md#afxmemdf)、"MFC マクロとグローバル"セクションでを参照してください。
+無料のブロックは、ブロックが割り当て解除が遅延場合数`afxMemDF`に設定された`delayFreeMemDF`します。 詳細については、次を参照してください。 [afxMemDF](diagnostic-services.md#afxmemdf)、"MFC マクロとグローバル"セクションでします。
 
 ### <a name="example"></a>例
 

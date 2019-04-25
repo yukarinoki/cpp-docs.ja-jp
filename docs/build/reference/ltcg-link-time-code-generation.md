@@ -14,11 +14,11 @@ helpviewer_keywords:
 - LTCG linker option
 ms.assetid: 788c6f52-fdb8-40c2-90af-4026ea2cf2e2
 ms.openlocfilehash: 40fb591952180735de3a2c226a3953a303c7d90f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62162358"
 ---
 # <a name="ltcg-link-time-code-generation"></a>/LTCG (リンク時のコード生成)
 
@@ -44,17 +44,17 @@ ms.locfileid: "57810316"
 (省略可能)リンク時コード生成を無効にします。 この動作は場合と同じ **/LTCG**がコマンドラインで指定されていません。
 
 **:PGINSTRUMENT**<br/>
-(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と[/GENPROFILE または/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)プロファイル ガイド付き最適化のためにインストルメントされたビルドを生成します。 インストルメント化された実行から収集されるデータは、最適化されたイメージの作成に使用されます。 詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)を参照してください。 このオプションの短い形式は **/LTCG:PGI**します。
+(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と[/GENPROFILE または/FASTGENPROFILE](genprofile-fastgenprofile-generate-profiling-instrumented-build.md)プロファイル ガイド付き最適化のためにインストルメントされたビルドを生成します。 インストルメント化された実行から収集されるデータは、最適化されたイメージの作成に使用されます。 詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。 このオプションの短い形式は **/LTCG:PGI**します。
 
 **:PGOPTIMIZE**<br/>
-(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と[/USEPROFILE](useprofile.md)最適化されたイメージを作成します。 詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)を参照してください。 このオプションの短い形式は **/LTCG:PGO**します。
+(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と[/USEPROFILE](useprofile.md)最適化されたイメージを作成します。 詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。 このオプションの短い形式は **/LTCG:PGO**します。
 
 **:PGUPDATE**<br/>
-(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と **/USEPROFILE**最適化されたイメージを再構築します。 詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)を参照してください。 このオプションの短い形式は **/LTCG:PGU**します。
+(省略可能)このオプションは、Visual Studio 2015 以降では非推奨です。 代わりに、 **/LTCG**と **/USEPROFILE**最適化されたイメージを再構築します。 詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。 このオプションの短い形式は **/LTCG:PGU**します。
 
 ## <a name="remarks"></a>Remarks
 
-**/LTCG**オプション、コンパイラを呼び出すし、プログラム全体の最適化を実行するようにリンカーに指示します。 または、ガイド付きプロファイルの最適化を実行することもできます。 詳細については、[ガイド付き最適化の](../profile-guided-optimizations.md)を参照してください。
+**/LTCG**オプション、コンパイラを呼び出すし、プログラム全体の最適化を実行するようにリンカーに指示します。 または、ガイド付きプロファイルの最適化を実行することもできます。 詳細については、次を参照してください。[ガイド付き最適化の](../profile-guided-optimizations.md)します。
 
 次の例外の PGO の組み合わせにリンカー オプションを追加することはできません **/LTCG**と **/USEPROFILE**の以前の PGO の初期化の組み合わせで指定されたいない **/LTCG**と **/GENPROFILE**オプション。
 
@@ -152,5 +152,5 @@ ms.locfileid: "57810316"
 
 ## <a name="see-also"></a>関連項目
 
-- [MSVC リンカーの参照](linking.md)
+- [MSVC リンカーのリファレンス](linking.md)
 - [MSVC リンカー オプション](linker-options.md)

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - access modes for files [MFC]
 ms.assetid: 8b83cb3e-76c8-4bbe-ba16-737092b36f49
 ms.openlocfilehash: 8ae701af3dbf45a1b48ef223f421d17f6abee213
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152619"
 ---
 # <a name="containers-compound-files"></a>コンテナー:複合ファイル
 
@@ -64,7 +64,7 @@ OLE 複合ファイルで実装される 3 種類のオブジェクトを使用�
 
 - 直接モードには、後でそれらを元に戻すことはできません、実行時のドキュメントへの変更が組み込まれています。
 
-アクセス モードの詳細については、、 *OLE プログラマーズ リファレンス*を参照してください。
+アクセス モードの詳細については、次を参照してください。、 *OLE プログラマーズ リファレンス*します。
 
 ###  <a name="_core_standardization"></a> 標準化
 

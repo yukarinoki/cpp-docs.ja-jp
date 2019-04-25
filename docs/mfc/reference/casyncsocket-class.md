@@ -75,11 +75,11 @@ helpviewer_keywords:
 - CAsyncSocket [MFC], m_hSocket
 ms.assetid: cca4d5a1-aa0f-48bd-843e-ef0e2d7fc00b
 ms.openlocfilehash: ef486e653eaf78914ea25663e0c1ab744ab30cd4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57260011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164911"
 ---
 # <a name="casyncsocket-class"></a>CAsyncSocket クラス
 
@@ -582,7 +582,7 @@ static int PASCAL GetLastError();
 
 特定のメンバー関数は、エラーが発生したことを示すとき`GetLastError`適切なエラー コードの取得を呼び出す必要があります。 該当するエラー コードの一覧については、個々 のメンバー関数の説明を参照してください。
 
-エラー コードの詳細については、[Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)を参照してください。
+エラー コードの詳細については、次を参照してください。 [Windows Sockets 2 API](/windows/desktop/WinSock/windows-sockets-start-page-2)します。
 
 ##  <a name="getpeername"></a>  CAsyncSocket::GetPeerName
 

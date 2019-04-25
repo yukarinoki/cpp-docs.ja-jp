@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Scheduler class
 ms.assetid: 34cf7961-048d-4852-8a5c-a32f823e3506
 ms.openlocfilehash: f27dace61b0764962a78695c2a4c6b180b09d7a3
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57287903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160134"
 ---
 # <a name="scheduler-class"></a>Scheduler クラス
 
@@ -52,7 +52,7 @@ class Scheduler;
 |名前|説明|
 |----------|-----------------|
 |[Attach](#attach)|呼び出し元のコンテキストにスケジューラをアタッチします。 このメソッドから制御が戻た後は、呼び出し元のコンテキストは、スケジューラによって管理され、スケジューラは、現在のスケジューラになります。|
-|[作成します。](#create)|動作が説明されている新しいスケジューラを作成、`_Policy`パラメーターは、スケジューラに最初の参照を配置し、ポインターを返します。|
+|[作成](#create)|動作が説明されている新しいスケジューラを作成、`_Policy`パラメーターは、スケジューラに最初の参照を配置し、ポインターを返します。|
 |[CreateScheduleGroup](#createschedulegroup)|オーバーロードされます。 スケジューラ内で新しいスケジュール グループを作成します。 パラメーターを受け取るバージョン`_Placement`にそのパラメーターで指定された場所で実行に偏っていますが、新しく作成したスケジュール グループ内のタスクが原因です。|
 |[GetNumberOfVirtualProcessors](#getnumberofvirtualprocessors)|スケジューラの仮想プロセッサの現在の数を返します。|
 |[GetPolicy](#getpolicy)|スケジューラが作成されたポリシーのコピーを返します。|

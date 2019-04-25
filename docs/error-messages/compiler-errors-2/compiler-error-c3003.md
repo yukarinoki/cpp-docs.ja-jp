@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C3003
 ms.assetid: 22e74f99-bb7f-4518-ab0d-934d5d49bcc7
 ms.openlocfilehash: 6d15d8bde8855b8dcc4857492acdeb950731b503
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50537554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152502"
 ---
 # <a name="compiler-error-c3003"></a>コンパイラ エラー C3003
 
-'directive': OpenMP ディレクティブ名は、ディレクティブ句の後には使用できません
+' directive':OpenMP ディレクティブ名は、ディレクティブ句の後に許可されていません
 
 OpenMP ディレクティブの名前は、OpenMP ディレクティブの句の後に続けることはできません。
 

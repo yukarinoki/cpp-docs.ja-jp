@@ -27,11 +27,11 @@ helpviewer_keywords:
 - files [C++], permission settings for
 ms.assetid: 5e9a13ba-5321-4536-8721-6afb6f4c8483
 ms.openlocfilehash: 113bf97b0fe93204cd41de20bc36a8be080a88b6
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51327669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155421"
 ---
 # <a name="umask"></a>_umask
 
@@ -62,7 +62,7 @@ int _umask( int pmode );
 |-|-|
 | **_S_IWRITE** | 書き込みが許可されます。 |
 | **_S_IREAD** | 読み取りが許可されます。 |
-| **_S_IREAD** &AMP;#124; **_S_IWRITE** | 読み取りと書き込みが許可されます。 |
+| **_S_IREAD** &#124; **_S_IWRITE** | 読み取りと書き込みが許可されます。 |
 
 ビットごとの OR 演算子で参加している両方の定数を指定する場合 ( **&#124;** )。 場合、 *pmode*引数が **_S_IREAD**読み取りが許可されていません (ファイルは書き込み専用)。 場合、 *pmode*引数が **_S_IWRITE**書き込みが許可されていません (ファイルは読み取り専用)。 たとえば、マスクに書き込みビットが設定されている場合、新しいファイルはいずれも読み取り専用となります。 MS-DOS および Windows オペレーティング システムでは、すべてのファイルは読み取り可能です。書き込み専用のアクセス許可を与えることはできません。 そのため、読み取りのビットを設定 **_umask**ファイルのモードに影響を与えません。
 

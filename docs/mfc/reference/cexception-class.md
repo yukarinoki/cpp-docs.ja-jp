@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CException [MFC], ReportError
 ms.assetid: cfacf14d-bfe4-4666-a5c7-38b800512920
 ms.openlocfilehash: 689afa2ffbc27feec6f9e1704a6b295d5eabfaee
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164001"
 ---
 # <a name="cexception-class"></a>CException クラス
 
@@ -66,7 +66,7 @@ class AFX_NOVTABLE CException : public CObject
 |[CDaoException](../../mfc/reference/cdaoexception-class.md)|データ アクセス オブジェクトの例外 (つまり、DAO クラスの例外条件)|
 |[CInternetException](../../mfc/reference/cinternetexception-class.md)|インターネットの例外 (つまり、インターネット クラスの発生した例外条件)。|
 
-これらの例外を使用するものでは、[スロー](exception-processing.md#throw)、 [THROW_LAST](exception-processing.md#throw_last)、[お試しください](exception-processing.md#try)、[キャッチ](exception-processing.md#catch)、 [and_catch](exception-processing.md#and_catch)、および[end_catch](exception-processing.md#end_catch)マクロ。 例外の詳細については、[例外の処理](exception-processing.md)、」または「[例外処理 (MFC)](../exception-handling-in-mfc.md)を参照してください。
+これらの例外を使用するものでは、[スロー](exception-processing.md#throw)、 [THROW_LAST](exception-processing.md#throw_last)、[お試しください](exception-processing.md#try)、[キャッチ](exception-processing.md#catch)、 [and_catch](exception-processing.md#and_catch)、および[end_catch](exception-processing.md#end_catch)マクロ。 例外の詳細については、次を参照してください。[例外の処理](exception-processing.md)、」または「[例外処理 (MFC)](../exception-handling-in-mfc.md)します。
 
 特定の例外をキャッチするには、適切な派生クラスを使用します。 すべての種類の例外を使用して`CException`、しを使用して[使うため](cobject-class.md#iskindof)を区別する`CException`-クラスを派生します。 なお`CObject::IsKindOf`で宣言されたクラスに対してのみ機能、 [IMPLEMENT_DYNAMIC](run-time-object-model-services.md#implement_dynamic)マクロは、動的な型チェックを活用するためにします。 すべて`CException`-作成する派生クラスを使用する必要があります、`IMPLEMENT_DYNAMIC`マクロ、すぎます。
 
@@ -113,7 +113,7 @@ void Delete();
 
 削除するときに、`CException`オブジェクトを使用して、`Delete`例外を削除するメンバー関数。 使用しないでください、**削除**演算子を直接ため、`CException`オブジェクトのグローバル オブジェクトがありますまたはスタック上に作成されています。
 
-オブジェクトが作成されるときに、オブジェクトを削除するかどうかを指定することができます。 詳細については、[CException::CException](#cexception)を参照してください。
+オブジェクトが作成されるときに、オブジェクトを削除するかどうかを指定することができます。 詳細については、次を参照してください。 [CException::CException](#cexception)します。
 
 のみを呼び出す必要があります`Delete`、C++ を使用している場合**お試しください**- **キャッチ**メカニズム。 MFC マクロを使用している場合**お試しください**と**キャッチ**、これらのマクロはこの関数を自動的に呼び出します。
 

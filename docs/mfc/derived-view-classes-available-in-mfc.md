@@ -8,11 +8,11 @@ helpviewer_keywords:
 - view classes [MFC], derived
 ms.assetid: dba42178-7459-4ccc-b025-f3d9b8a4b737
 ms.openlocfilehash: 61b38f6147a8bde4f6eb42cd144f9f64dac8dbd8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57269293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62152905"
 ---
 # <a name="derived-view-classes-available-in-mfc"></a>MFC で使用できる派生ビュー クラス
 
@@ -38,7 +38,7 @@ ms.locfileid: "57269293"
 > [!NOTE]
 >  MFC バージョン 4.0 の時点で`CEditView`から派生`CCtrlView`します。
 
-これらのクラスを使用して、アプリケーションには、そこから、アプリケーションのビュー クラスを派生します。 関連情報については、[スケール ビューのスクロールと](../mfc/scrolling-and-scaling-views.md)を参照してください。 データベース クラスの詳細については、次を参照してください。[概要。データベース プログラミング](../data/data-access-programming-mfc-atl.md)します。
+これらのクラスを使用して、アプリケーションには、そこから、アプリケーションのビュー クラスを派生します。 関連情報については、次を参照してください。[スケール ビューのスクロールと](../mfc/scrolling-and-scaling-views.md)します。 データベース クラスの詳細については、次を参照してください。[概要。データベース プログラミング](../data/data-access-programming-mfc-atl.md)します。
 
 ## <a name="see-also"></a>関連項目
 
