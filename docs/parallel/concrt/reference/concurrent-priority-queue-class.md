@@ -16,11 +16,11 @@ helpviewer_keywords:
 - concurrent_priority_queue class
 ms.assetid: 3e740381-0f4e-41fc-8b66-ad0bb55f17a3
 ms.openlocfilehash: 5804675ffdaf6de2e73327103398316566b41627
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160040"
 ---
 # <a name="concurrentpriorityqueue-class"></a>concurrent_priority_queue クラス
 
@@ -69,19 +69,19 @@ template <typename T,
 
 |名前|説明|
 |----------|-----------------|
-|[clear](#clear)|同時実行の優先度のすべての要素を消去します。 このメソッドはコンカレンシー セーフではありません。|
-|[empty](#empty)|テスト時に、同時実行の優先順位キューが空の場合、このメソッドが呼び出されます。 このメソッドはコンカレンシー セーフです。|
-|[get_allocator](#get_allocator)|同時実行の優先順位キューの構築に使用するアロケーターのコピーを返します。 このメソッドはコンカレンシー セーフです。|
-|[push](#push)|オーバーロードされます。 同時実行の優先順位キューに要素を追加します。 このメソッドはコンカレンシー セーフです。|
-|[size](#size)|同時実行の優先順位キュー内の要素の数を返します。 このメソッドはコンカレンシー セーフです。|
-|[swap](#swap)|2 つの同時実行の優先順位キューの内容を交換します。 このメソッドはコンカレンシー セーフではありません。|
-|[try_pop](#try_pop)|削除し、キューが空でない場合は、キューから最高の優先順位の要素を返します。 このメソッドはコンカレンシー セーフです。|
+|[clear](#clear)|同時実行の優先度のすべての要素を消去します。 このメソッドは同時実行セーフではありません。|
+|[empty](#empty)|テスト時に、同時実行の優先順位キューが空の場合、このメソッドが呼び出されます。 このメソッドは同時実行セーフです。|
+|[get_allocator](#get_allocator)|同時実行の優先順位キューの構築に使用するアロケーターのコピーを返します。 このメソッドは同時実行セーフです。|
+|[push](#push)|オーバーロードされます。 同時実行の優先順位キューに要素を追加します。 このメソッドは同時実行セーフです。|
+|[size](#size)|同時実行の優先順位キュー内の要素の数を返します。 このメソッドは同時実行セーフです。|
+|[swap](#swap)|2 つの同時実行の優先順位キューの内容を交換します。 このメソッドは同時実行セーフではありません。|
+|[try_pop](#try_pop)|削除し、キューが空でない場合は、キューから最高の優先順位の要素を返します。 このメソッドは同時実行セーフです。|
 
 ### <a name="public-operators"></a>パブリック演算子
 
 |名前|説明|
 |----------|-----------------|
-|[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_priority_queue` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。|
+|[operator=](#operator_eq)|オーバーロードされます。 別の `concurrent_priority_queue` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドは同時実行セーフではありません。|
 
 ## <a name="remarks"></a>Remarks
 
@@ -99,7 +99,7 @@ template <typename T,
 
 ##  <a name="clear"></a> オフ
 
-同時実行の優先度のすべての要素を消去します。 このメソッドはコンカレンシー セーフではありません。
+同時実行の優先度のすべての要素を消去します。 このメソッドは同時実行セーフではありません。
 
 ```
 void clear();
@@ -150,8 +150,7 @@ concurrent_priority_queue(
 このオブジェクトに対して使用するアロケーター クラス。
 
 *_Init_capacity*<br/>
-
-  `concurrent_priority_queue` オブジェクトの初期容量。
+`concurrent_priority_queue` オブジェクトの初期容量。
 
 *開始 (_b)*<br/>
 コピーする要素範囲内の最初の要素の位置。
@@ -178,7 +177,7 @@ concurrent_priority_queue(
 
 ##  <a name="empty"></a> 空
 
-テスト時に、同時実行の優先順位キューが空の場合、このメソッドが呼び出されます。 このメソッドはコンカレンシー セーフです。
+テスト時に、同時実行の優先順位キューが空の場合、このメソッドが呼び出されます。 このメソッドは同時実行セーフです。
 
 ```
 bool empty() const;
@@ -190,7 +189,7 @@ bool empty() const;
 
 ##  <a name="get_allocator"></a> get_allocator
 
-同時実行の優先順位キューの構築に使用するアロケーターのコピーを返します。 このメソッドはコンカレンシー セーフです。
+同時実行の優先順位キューの構築に使用するアロケーターのコピーを返します。 このメソッドは同時実行セーフです。
 
 ```
 allocator_type get_allocator() const;
@@ -202,7 +201,7 @@ allocator_type get_allocator() const;
 
 ##  <a name="operator_eq"></a> 演算子 =
 
-別の `concurrent_priority_queue` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドはコンカレンシー セーフではありません。
+別の `concurrent_priority_queue` オブジェクトの内容をこのオブジェクトに割り当てます。 このメソッドは同時実行セーフではありません。
 
 ```
 concurrent_priority_queue& operator= (const concurrent_priority_queue& _Src);
@@ -221,7 +220,7 @@ concurrent_priority_queue& operator= (concurrent_priority_queue&& _Src);
 
 ##  <a name="push"></a> プッシュ
 
-同時実行の優先順位キューに要素を追加します。 このメソッドはコンカレンシー セーフです。
+同時実行の優先順位キューに要素を追加します。 このメソッドは同時実行セーフです。
 
 ```
 void push(const value_type& _Elem);
@@ -236,7 +235,7 @@ void push(value_type&& _Elem);
 
 ##  <a name="size"></a> サイズ
 
-同時実行の優先順位キュー内の要素の数を返します。 このメソッドはコンカレンシー セーフです。
+同時実行の優先順位キュー内の要素の数を返します。 このメソッドは同時実行セーフです。
 
 ```
 size_type size() const;
@@ -252,7 +251,7 @@ size_type size() const;
 
 ##  <a name="swap"></a> スワップ
 
-2 つの同時実行の優先順位キューの内容を交換します。 このメソッドはコンカレンシー セーフではありません。
+2 つの同時実行の優先順位キューの内容を交換します。 このメソッドは同時実行セーフではありません。
 
 ```
 void swap(concurrent_priority_queue& _Queue);
@@ -265,7 +264,7 @@ void swap(concurrent_priority_queue& _Queue);
 
 ##  <a name="try_pop"></a> try_pop
 
-削除し、キューが空でない場合は、キューから最高の優先順位の要素を返します。 このメソッドはコンカレンシー セーフです。
+削除し、キューが空でない場合は、キューから最高の優先順位の要素を返します。 このメソッドは同時実行セーフです。
 
 ```
 bool try_pop(reference _Elem);

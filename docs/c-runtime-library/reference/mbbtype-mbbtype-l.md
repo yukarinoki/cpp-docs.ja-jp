@@ -29,11 +29,11 @@ helpviewer_keywords:
 - mbbtype_l function
 ms.assetid: b8e34b40-842a-4298-aa39-0bd2d8e51c2a
 ms.openlocfilehash: a6d17b99e4314c2ab836a16129ab8a0e6ac7720e
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50467172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156890"
 ---
 # <a name="mbbtype-mbbtypel"></a>_mbbtype、_mbbtype_l
 
@@ -75,9 +75,9 @@ int _mbbtype_l(
 |---------------------|--------------------------|------------------|---------|
 |1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_SINGLE** (0)|1 バイト (0x20 - 0x7E、0xA1 - 0 xdf)|
 |1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_LEAD** (1)|マルチバイト文字の先行バイト (0x81 - 0x9F、0xE0 - 0 xfc)|
-|1 以外の値|有効な 1 バイトまたは先頭バイト|**継続**<br /><br /> ( -1)|無効な文字 (すべて以外の値 0x20 - 0x7E、0xA1 - 0 xdf、0x81 - 0x9F、0xE0 - 0 xfc|
+|1 以外の値|有効な 1 バイトまたは先頭バイト|**_MBC_ILLEGAL**<br /><br /> ( -1)|無効な文字 (すべて以外の値 0x20 - 0x7E、0xA1 - 0 xdf、0x81 - 0x9F、0xE0 - 0 xfc|
 |1|有効な末尾バイト|**_MBC_TRAIL** (2)|マルチバイト文字の後続バイト (0x40 ~ 0x7E、0x80 ~ 0 xfc)|
-|1|有効な末尾バイト|**継続**<br /><br /> ( -1)|無効な文字 (すべて以外の値 0x20 - 0x7E、0xA1 - 0 xdf、0x81 - 0x9F、0xE0 - 0 xfc|
+|1|有効な末尾バイト|**_MBC_ILLEGAL**<br /><br /> ( -1)|無効な文字 (すべて以外の値 0x20 - 0x7E、0xA1 - 0 xdf、0x81 - 0x9F、0xE0 - 0 xfc|
 
 ## <a name="remarks"></a>Remarks
 

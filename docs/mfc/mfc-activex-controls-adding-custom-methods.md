@@ -6,18 +6,18 @@ helpviewer_keywords:
 - PtInCircle custom method [MFC]
 ms.assetid: 8f8dc344-44a0-4021-8db5-4cdd3d700e18
 ms.openlocfilehash: 4f5a7dc844d80ae94df8af7c0b2eea141376f9e9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62160147"
 ---
 # <a name="mfc-activex-controls-adding-custom-methods"></a>MFC ActiveX コントロール:カスタム メソッドの追加
 
 実装されていないことで、ストック メソッドのカスタム メソッドとは異なる`COleControl`します。 コントロールに追加する各カスタム メソッドの実装を指定する必要があります。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 ActiveX コントロールのユーザーは、コントロールに固有の操作を実行するには、いつでもカスタム メソッドを呼び出すことができます。 カスタム メソッドのディスパッチ マップ エントリは、フォーム DISP_FUNCTION のです。
 

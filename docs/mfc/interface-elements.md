@@ -6,11 +6,11 @@ helpviewer_keywords:
 - MFC Feature Pack, architecture
 ms.assetid: eead6827-9602-40a3-8038-8986e8207385
 ms.openlocfilehash: fa6dc78c95717f9201e18346f1cbe573fa3c48d2
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57262884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153586"
 ---
 # <a name="interface-elements"></a>インターフェイス要素
 
@@ -64,7 +64,7 @@ ms.locfileid: "57262884"
 
 [CMFCBaseTabCtrl クラス](../mfc/reference/cmfcbasetabctrl-class.md)切り離し可能なタブをタブ付きウィンドウの基本機能を実装します。 使用する、`CMFCBaseTabCtrl`オブジェクト、初期化、 [CBaseTabbedPane クラス](../mfc/reference/cbasetabbedpane-class.md)アプリケーションでします。 `CBaseTabbedPane` 派生`CDockablePane`へのポインターを保持し、`CMFCBaseTabCtrl`オブジェクト。 `CBaseTabbedPane`ドッキングしてタブ付きコントロール バーのサイズを変更することができます。 使用[cdockablepane::attachtotabwnd](../mfc/reference/cdockablepane-class.md#attachtotabwnd)ドッキングされ、タブ付きされるコントロール バーを動的に作成します。
 
-Outlook バー コントロールがタブ バーにも基づいています。 [CMFCOutlookBar クラス](../mfc/reference/cmfcoutlookbar-class.md)から派生`CBaseTabbedPane`します。 Outlook バーを使用する方法の詳細については、[CMFCOutlookBar クラス](../mfc/reference/cmfcoutlookbar-class.md)を参照してください。
+Outlook バー コントロールがタブ バーにも基づいています。 [CMFCOutlookBar クラス](../mfc/reference/cmfcoutlookbar-class.md)から派生`CBaseTabbedPane`します。 Outlook バーを使用する方法の詳細については、次を参照してください。 [CMFCOutlookBar クラス](../mfc/reference/cmfcoutlookbar-class.md)します。
 
 ## <a name="see-also"></a>関連項目
 

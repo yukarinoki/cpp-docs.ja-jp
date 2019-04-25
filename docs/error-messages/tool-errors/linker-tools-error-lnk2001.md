@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LNK2001
 ms.assetid: dc1cf267-c984-486c-abd2-fd07c799f7ef
 ms.openlocfilehash: 824fa9108e6322b1bcf77d6c28c7fb843b743833
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57808106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161018"
 ---
 # <a name="linker-tools-error-lnk2001"></a>リンカ ツール エラー LNK2001
 
@@ -53,7 +53,7 @@ ATL プロジェクトのリリース バージョンをビルドすると、CRT
 
 ### <a name="compilation-and-link-issues"></a>コンパイルとリンクの問題
 
-プロジェクトで、ライブラリへの参照が不足しているときに、このエラーが発生することができます (します。LIB) またはオブジェクト (します。OBJ) ファイルです。 この問題を解決するには、プロジェクトに必要なライブラリまたはオブジェクト ファイルへの参照を追加します。 詳細については、[リンカー入力としての .lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)を参照してください。
+プロジェクトで、ライブラリへの参照が不足しているときに、このエラーが発生することができます (します。LIB) またはオブジェクト (します。OBJ) ファイルです。 この問題を解決するには、プロジェクトに必要なライブラリまたはオブジェクト ファイルへの参照を追加します。 詳細については、次を参照してください。[リンカー入力としての .lib ファイル](../../build/reference/dot-lib-files-as-linker-input.md)します。
 
 このエラーは、使用する場合に発生することができます、 [/NODEFAULTLIB](../../build/reference/nodefaultlib-ignore-libraries.md)または[/Zl](../../build/reference/zl-omit-default-library-name.md)オプション。 これらのオプションを指定すると 明示的に含めていた場合を除き、プロジェクトに必要なコードが含まれているライブラリはリンクされません。 この問題を解決するには、リンクのコマンドラインを使用するすべてのライブラリを明示的に含めます。 これらのオプションを使用すると、多くの不足している CRT または標準ライブラリ関数名が表示された場合、リンクに、CRT と標準ライブラリの Dll またはライブラリ ファイルを明示的に含めます。
 

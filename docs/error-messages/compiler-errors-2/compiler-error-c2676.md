@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2676
 ms.assetid: 838a5e34-c92f-4f65-a597-e150bf8cf737
 ms.openlocfilehash: 1a3eab8d1df7534f2bfbed42db5c1a660942eacc
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50608070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164997"
 ---
 # <a name="compiler-error-c2676"></a>コンパイラ エラー C2676
 
@@ -55,7 +55,7 @@ int main() {
 
 C2676 は、参照型の `this` ポインターでポインター演算を試行した場合にも発生することがあります。
 
-`this` ポインターは、参照型の型ハンドルのポインターです。 詳細については、[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)を参照してください。
+`this` ポインターは、参照型の型ハンドルのポインターです。 詳細については、次を参照してください。[セマンティクスは、このポインター](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Semantics_of_the_this_pointer)します。
 
 次の例では、C2676 が生成されます。
 

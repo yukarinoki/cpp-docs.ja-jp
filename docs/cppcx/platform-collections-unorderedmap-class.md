@@ -6,11 +6,11 @@ f1_keywords:
 - collection/Platform::Collections::UnorderedMap
 ms.assetid: dc84f261-b13c-4c0a-9b57-30dcb9e3065e
 ms.openlocfilehash: 7790b363ef3f30b0ad0602568190ab443a2c1401
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57423613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161733"
 ---
 # <a name="platformcollectionsunorderedmap-class"></a>Platform::Collections::UnorderedMap クラス
 
@@ -54,7 +54,7 @@ ref class Map sealed;
 
 **UnorderedMap**のラッパーでは基本的に[std::unordered_map](../standard-library/unordered-map-class.md) Windows ランタイム型の格納をサポートします。 具象実装、 [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)と[IObservableMap](/uwp/api/Windows.Foundation.Collections.IObservableMap_K_V_) Windows ランタイム インターフェイスのパブリックの間で渡される型。 パブリックの戻り値またはパラメーターで `Platform::Collections::UnorderedMap` 型を使用しようとすると、コンパイラ エラー C3986 が発生します。 エラーを修正するには、パラメーターや戻り値の型を [Windows::Foundation::Collections::IMap](/uwp/api/Windows.Foundation.Collections.IMap_K_V_)に変更します。
 
-詳細については、[コレクション](../cppcx/collections-c-cx.md)を参照してください。
+詳細については、次を参照してください。[コレクション](../cppcx/collections-c-cx.md)します。
 
 ### <a name="members"></a>メンバー
 
@@ -203,7 +203,7 @@ UnorderedMap の要素の検索に使用するキー。 型*キー* typename が
 
 ### <a name="return-value"></a>戻り値
 
-値とペアになっている、*キー*します。 戻り値の型は typename *V*します。
+値とペアになっている、*キー*します。 戻り値の型は typename *V* します。
 
 ## <a name="mapchanged"></a>  UnorderedMap::MapChanged
 

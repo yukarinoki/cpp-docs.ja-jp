@@ -6,11 +6,11 @@ helpviewer_keywords:
 - using oversubscription [Concurrency Runtime]
 ms.assetid: a1011329-2f0a-4afb-b599-dd4043009a10
 ms.openlocfilehash: d74a081f71f044cab90a8e6fdc64530eaaf87ed8
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57257944"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159939"
 ---
 # <a name="how-to-use-oversubscription-to-offset-latency"></a>方法: オーバー サブスクリプションを使用して、待機時間を短縮するには
 
@@ -70,8 +70,7 @@ Downloaded 1801040 bytes in 3276 ms.
 
 使用することができます、 *Resource Acquisition Is Initialization*オーバー サブスクリプションを特定のスコープを制限する (RAII) パターンです。 RAII パターンでは、データ構造はスタック上に割り当てられます。 データ構造は、作成されたときにリソースを初期化または取得し、破棄されたときにそのリソースを破棄または解放します。 RAII パターンでは、外側のスコープが終了する前に、常にデストラクターが呼び出されます。 したがって、例外がスローされた場合や、関数に複数の `return` ステートメントが含まれている場合でも、リソースは適切に管理されます。
 
-次の例では、`scoped_blocking_signal` という名前の構造を定義します。 
-  `scoped_blocking_signal` 構造のコンストラクターによってオーバーサブスクリプションが有効になり、デストラクターによってオーバーサブスクリプションが無効になります。
+次の例では、`scoped_blocking_signal` という名前の構造を定義します。 `scoped_blocking_signal` 構造のコンストラクターによってオーバーサブスクリプションが有効になり、デストラクターによってオーバーサブスクリプションが無効になります。
 
 [!code-cpp[concrt-download-oversubscription#2](../../parallel/concrt/codesnippet/cpp/how-to-use-oversubscription-to-offset-latency_2.cpp)]
 

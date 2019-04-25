@@ -5,11 +5,11 @@ helpviewer_keywords:
 - contexts [Concurrency Runtime]
 ms.assetid: 10c1d861-8fbb-4ba0-b2ec-61876b11176e
 ms.openlocfilehash: d511f8fa751d61c3c490a184dae660096dd9f76f
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57285907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148342"
 ---
 # <a name="contexts"></a>コンテキスト
 
@@ -34,8 +34,7 @@ ms.locfileid: "57285907"
 
 ### <a name="cooperative-blocking"></a>協調ブロッキング
 
-
-  `Context` クラスを使用すると、現在の実行コンテキストをブロックまたは生成できます。 リソースが利用できないため、現在のコンテキストを続行できない場合、ブロックまたは生成する機能は便利です。
+`Context` クラスを使用すると、現在の実行コンテキストをブロックまたは生成できます。 リソースが利用できないため、現在のコンテキストを続行できない場合、ブロックまたは生成する機能は便利です。
 
 [Concurrency::Context::Block](reference/context-class.md#block)メソッドは、現在のコンテキストをブロックします。 ブロックされているコンテキストでは、ランタイムは、その他のタスクを実行できるように、処理リソースが生成されます。 [Concurrency::Context::Unblock](reference/context-class.md#unblock)メソッド ブロックされているコンテキストのブロックを解除します。 `Context::Unblock`と呼ばれるものとは異なるコンテキストからメソッドを呼び出す必要があります`Context::Block`します。 ランタイムによってスロー [concurrency::context_self_unblock](../../parallel/concrt/reference/context-self-unblock-class.md)コンテキスト自体のブロックを解除しようとするとします。
 

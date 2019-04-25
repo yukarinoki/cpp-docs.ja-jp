@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2506
 ms.assetid: cfed21cd-2404-46f2-985e-d0c2c3820830
 ms.openlocfilehash: 02f0a81204c4bc1c41111d32bae1c6946dee09ac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50575553"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62164866"
 ---
 # <a name="compiler-error-c2506"></a>コンパイラ エラー C2506
 
-'member': '__declspec(modifier)' はこのシンボルに適用することはできません
+'member' : '__declspec(modifier)' cannot be applied to this symbol
 
 プロセスごとまたは appdomain ごとには、マネージ クラスの静的メンバーの宣言できません。
 

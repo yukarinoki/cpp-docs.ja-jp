@@ -7,11 +7,11 @@ helpviewer_keywords:
 - attributes [C++/CLI], reference topics
 ms.assetid: 613a3611-b3eb-4347-aa38-99b654600e1c
 ms.openlocfilehash: f9d339860e9d2bdb8d66f6b7f8f49d3993b2d5cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148334"
 ---
 # <a name="c-attributes-for-com-and-net"></a>COM および .NET C++ 属性
 
@@ -20,7 +20,7 @@ Microsoft では、COM プログラミングと .NET Framework 共通言語ラ�
 属性は、COM オブジェクトを記述するために必要な詳細なコーディングの一部をなくすため中に、バック グラウンド必要があります。 [COM fundamentals](/windows/desktop/com/the-component-object-model)に最大限に活用します。
 
 > [!NOTE]
-> C++ の標準的な属性を探している場合は、[属性](../../cpp/attributes.md)を参照してください。
+> C++ の標準的な属性を探している場合は、次を参照してください。[属性](../../cpp/attributes.md)します。
 
 ## <a name="purpose-of-attributes"></a>属性の目的
 
@@ -58,9 +58,9 @@ class CMyReceiver
 ![コンポーネント属性コミュニケーション](../media/vccompattrcomm.gif "コンポーネント属性コミュニケーション")
 
 > [!NOTE]
-> 属性の使用方法には、ソース ファイルの内容は変更されません。 属性が生成されたコードが表示される唯一の時間は、デバッグ セッション中には。 さらに、プロジェクト内の各ソース ファイルの属性を置換した結果を表示するテキスト ファイルを生成できます。 この手順の詳細については、[/Fx (挿入されたコードのマージ)](../../build/reference/fx-merge-injected-code.md)と[挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)を参照してください。
+> 属性の使用方法には、ソース ファイルの内容は変更されません。 属性が生成されたコードが表示される唯一の時間は、デバッグ セッション中には。 さらに、プロジェクト内の各ソース ファイルの属性を置換した結果を表示するテキスト ファイルを生成できます。 この手順の詳細については、次を参照してください。 [/Fx (挿入されたコードのマージ)](../../build/reference/fx-merge-injected-code.md)と[挿入されたコードのデバッグ](/visualstudio/debugger/how-to-debug-injected-code)します。
 
-ほとんどの C++ 構造体のような属性は、適切な使用方法を定義する一連の特性があります。 これは、操作を行うと、属性のコンテキストと呼ばは、属性コンテキストの表の各属性のリファレンス トピックで対処されます。 たとえば、[コクラス](coclass.md)属性のみ適用できますを既存のクラスまたは構造体ではなく、 [cpp_quote](cpp-quote.md)属性には、C++ ソース ファイル内のどこにでも挿入できます。
+ほとんどの C++ 構造体のような属性は、適切な使用方法を定義する一連の特性があります。 これは、操作を行うと、属性のコンテキストと呼ばは、属性コンテキストの表の各属性のリファレンス トピックで対処されます。 たとえば、[コクラス](coclass.md)ではなく既存のクラスまたは構造体に属性が適用のみことができます、 [cpp_quote](cpp-quote.md)属性には、内のどこにでも挿入できます、C++ソース ファイル。
 
 ## <a name="building-an-attributed-program"></a>属性付きプログラムの作成
 
@@ -86,7 +86,7 @@ C++ 属性は、次の 4 つの基本的なフィールドを使用して記述�
 
 このフィールドには、指定した属性の有効な対象となっているさまざまな C++ 言語要素について説明します。 たとえば、属性で"class"を指定する場合、**適用先**フィールド、属性は、有効な C++ クラスにのみ適用できますこれを示します。 属性はクラスのメンバー関数に適用する場合、構文エラーが発生します。
 
-詳細については、[属性を使用して](attributes-by-usage.md)を参照してください。
+詳細については、次を参照してください。[属性を使用して](attributes-by-usage.md)します。
 
 ### <a name="repeatable"></a>反復可能
 

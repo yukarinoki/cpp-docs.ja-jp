@@ -20,11 +20,11 @@ helpviewer_keywords:
 - single_assignment class
 ms.assetid: ccc34728-8de9-4e07-b83d-a36a58d9d2b9
 ms.openlocfilehash: 436d0d4cc16ee18449178782b775a25bb1d8592a
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159913"
 ---
 # <a name="singleassignment-class"></a>single_assignment クラス
 
@@ -76,7 +76,7 @@ class single_assignment : public propagator_block<multi_link_registry<ITarget<T>
 
 A`single_assignment`メッセージング ブロックがターゲットごとにそのメッセージのコピーを伝達します。
 
-詳細については、[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
+詳細については、次を参照してください。[非同期メッセージ ブロック](../../../parallel/concrt/asynchronous-message-blocks.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 
@@ -176,8 +176,7 @@ virtual message_status propagate_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-
-  `message` オブジェクトを指すポインター。
+`message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。
@@ -254,8 +253,7 @@ virtual message_status send_message(
 ### <a name="parameters"></a>パラメーター
 
 *_PMessage*<br/>
-
-  `message` オブジェクトを指すポインター。
+`message` オブジェクトを指すポインター。
 
 *_PSource*<br/>
 メッセージを提供するソース ブロックへのポインター。

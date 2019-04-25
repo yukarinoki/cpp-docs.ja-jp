@@ -29,11 +29,11 @@ helpviewer_keywords:
 - lsearch_s function
 ms.assetid: d2db0635-be7a-4799-8660-255f14450882
 ms.openlocfilehash: f57a96622419e3f72fc2df5b260cbbbdd59666ae
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50677007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156957"
 ---
 # <a name="lsearchs"></a>_lsearch_s
 
@@ -60,7 +60,7 @@ void *_lsearch_s(
 *base*<br/>
 検索する配列のベースへのポインター。
 
-*数*<br/>
+*number*<br/>
 要素の数。
 
 *size*<br/>
@@ -80,7 +80,7 @@ void *_lsearch_s(
 
 ### <a name="error-conditions"></a>エラー条件
 
-|*key*|*base*|*compare*|*数*|*size*|**errno**|
+|*key*|*base*|*compare*|*number*|*size*|**errno**|
 |-----------|------------|---------------|-----------|------------|-------------|
 |**NULL**|任意|任意|任意|任意|**EINVAL**|
 |任意|**NULL**|任意|!= 0|任意|**EINVAL**|

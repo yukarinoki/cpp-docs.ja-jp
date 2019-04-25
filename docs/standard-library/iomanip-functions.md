@@ -27,11 +27,11 @@ helpviewer_keywords:
 - std::setprecision [C++]
 - std::setw [C++]
 ms.openlocfilehash: b5ead8b1000fd6c2708b2450f71da3dc612dc51d
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51524587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62158561"
 ---
 # <a name="ltiomanipgt-functions"></a>&lt;iomanip&gt; 関数
 
@@ -53,7 +53,7 @@ T7 get_money(Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>パラメーター
 
-*(_A)*<br/>
+*_Amount*<br/>
 抽出した通貨値。
 
 *_Intl*<br/>
@@ -97,7 +97,7 @@ T8 put_money(const Money& _Amount, bool _Intl);
 
 ### <a name="parameters"></a>パラメーター
 
-*(_A)*<br/>
+*_Amount*<br/>
 ストリームに挿入する金額。
 
 *_Intl*<br/>
@@ -150,10 +150,10 @@ quoted(const char* str, char delimiter, char escape) // or wide versions
 *str*<br/>
 Std::string、char\*、文字列リテラルまたは未加工の文字列リテラル、またはこれらのさまざまなバージョン (例: std::wstring, wchar_t\*)。
 
-*区切り記号*<br/>
+*delimiter*<br/>
 文字列の先頭と末尾の区切り記号として使用するユーザー指定の文字またはワイド文字。
 
-*エスケープ*<br/>
+*escape*<br/>
 文字列内のエスケープ シーケンスのエスケープ文字として使用する、ユーザー指定の文字またはワイド文字。
 
 ### <a name="remarks"></a>Remarks
@@ -332,7 +332,7 @@ T3 setbase(int _Base);
 
 ### <a name="parameters"></a>パラメーター
 
-*(_B)*<br/>
+*_Base*<br/>
 基数。
 
 ### <a name="return-value"></a>戻り値
