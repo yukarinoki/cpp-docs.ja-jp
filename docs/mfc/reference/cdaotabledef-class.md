@@ -73,11 +73,11 @@ helpviewer_keywords:
 - CDaoTableDef [MFC], m_pDatabase
 ms.assetid: 7c5d2254-8475-43c4-8a6c-2d32ead194c9
 ms.openlocfilehash: 485fe3533916e5e59bc87084f58acfb37368ac32
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270229"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62151221"
 ---
 # <a name="cdaotabledef-class"></a>CDaoTableDef クラス
 
@@ -324,10 +324,10 @@ void CreateField(CDaoFieldInfo& fieldinfo);
 |`dbByte`|BYTE|
 |`dbInteger`|2|int|
 |`dbLong`|4|long|
-|`dbCurrency`|9|通貨 ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
+|`dbCurrency`|8|通貨 ( [COleCurrency](../../mfc/reference/colecurrency-class.md))|
 |`dbSingle`|4|フローティング|
-|`dbDouble`|9|二重線|
-|`dbDate`|9|日付/時刻 ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
+|`dbDouble`|8|二重線|
+|`dbDate`|8|日付/時刻 ( [COleDateTime](../../atl-mfc-shared/reference/coledatetime-class.md))|
 |`dbText`|1 - 255|テキスト ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
 |`dbLongBinary`|0|長いバイナリ (OLE オブジェクト)、 [CLongBinary](../../mfc/reference/clongbinary-class.md)または[CByteArray](../../mfc/reference/cbytearray-class.md)|
 |`dbMemo`|0|メモ ( [CString](../../atl-mfc-shared/reference/cstringt-class.md))|
@@ -646,7 +646,7 @@ void GetIndexInfo(
 
 - `AFX_DAO_SECONDARY_INFO` プライマリの情報と。クラスター化すると、null 値、必須で、外部を無視する、一意のプライマリ
 
-- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と。個別のカウント
+- `AFX_DAO_ALL_INFO` プライマリとセカンダリの情報と。Distinct Count
 
 *lpszName*<br/>
 名前で検索する場合、インデックス オブジェクトの名前へのポインター。

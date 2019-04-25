@@ -7,11 +7,11 @@ helpviewer_keywords:
 - exit function
 ms.assetid: 26ce439f-81e2-431c-9ff8-a09a96f32127
 ms.openlocfilehash: 82c9d00a49c8a080d893a51052739a0265ad0860
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154439"
 ---
 # <a name="exit-function"></a>exit 関数
 
@@ -24,7 +24,7 @@ ms.locfileid: "50532562"
 
 発行、**返す**ステートメントから、`main`関数の呼び出しと同じですが、**終了**関数の引数として戻り値。
 
-詳細については、[終了](../c-runtime-library/reference/exit-exit-exit.md)で、*ランタイム ライブラリ リファレンス*を参照してください。
+詳細については、次を参照してください。[終了](../c-runtime-library/reference/exit-exit-exit.md)で、*ランタイム ライブラリ リファレンス*します。
 
 ## <a name="see-also"></a>関連項目
 

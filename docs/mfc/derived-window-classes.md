@@ -10,11 +10,11 @@ helpviewer_keywords:
 - window classes [MFC], derived
 ms.assetid: 6f7e437e-fbde-4a06-bfab-72d9dbf05292
 ms.openlocfilehash: e86ca139b8470dce614564f0c0134a611adeda2c
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153379"
 ---
 # <a name="derived-window-classes"></a>ウィンドウ クラスの派生
 
@@ -31,7 +31,7 @@ MDI アプリケーションのメイン フレーム ウィンドウとして�
 [CMDIChildWnd](../mfc/reference/cmdichildwnd-class.md)<br/>
 MDI メイン フレーム ウィンドウで開かれる個々のドキュメントに使用されます。 各ドキュメントとそのビューは、MDI メイン フレーム ウィンドウに含まれている MDI 子フレーム ウィンドウの中に収まります。 MDI 子ウィンドウの外観は一般的なフレーム ウィンドウと非常に似ていますが、デスクトップ上に表示されるのではなく、MDI フレーム ウィンドウの内部に格納されます。 ただし、MDI 子ウィンドウには独自のメニュー バーがなく、それを含む MDI フレーム ウィンドウのメニュー バーを共有する必要があります。
 
-詳細については、[フレーム Windows](../mfc/frame-windows.md)を参照してください。
+詳細については、次を参照してください。[フレーム Windows](../mfc/frame-windows.md)します。
 
 ## <a name="other-window-classes-derived-from-cwnd"></a>CWnd から派生するその他のウィンドウ クラス
 

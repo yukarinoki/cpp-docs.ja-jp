@@ -23,11 +23,11 @@ helpviewer_keywords:
 - matherr function
 ms.assetid: b600d66e-165a-4608-a856-8fb418d46760
 ms.openlocfilehash: b830dc940fa2abb131f70130033d27b057412137
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51329632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156916"
 ---
 # <a name="matherr"></a>_matherr
 
@@ -73,7 +73,7 @@ struct _exception
 
 |マクロ|説明|
 |-|-|
-| **(_D)** | 引数のドメイン エラー |
+| **_DOMAIN** | 引数のドメイン エラー |
 | **_SING** | 引数の特異点 |
 | **_OVERFLOW** | オーバーフロー範囲エラー |
 | **_PLOSS** | 有効桁の部分的な損失 |

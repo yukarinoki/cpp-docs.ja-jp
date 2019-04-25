@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Platform::Array Class
 ms.assetid: 7815ab40-88c5-42b0-83b8-081cef0cda31
 ms.openlocfilehash: 597f8e32e2da95370169cdbfe2ccd209296322cc
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57751662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161669"
 ---
 # <a name="platformarray-class"></a>Platform::Array クラス
 
@@ -55,7 +55,7 @@ Platform::array からすべてのメソッドを継承する[platform::writeonl
 
 Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> を戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
 
-Platform::array を使用するタイミングと方法の詳細については、[Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)を参照してください。
+Platform::array を使用するタイミングと方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
 
 Windows ランタイムの型システムは、ジャグ配列の概念をサポートしていませんし、そのため、IVector を渡すことはできません < platform::array\<T >> を戻り値またはメソッド パラメーターとして。 ABI を通じてジャグ配列またはシーケンスのシーケンスを渡すには、 `IVector<IVector<T>^>`を使用します。
 
@@ -89,7 +89,7 @@ Array(T* data, unsigned int size);
 
 ### <a name="remarks"></a>Remarks
 
-Platform::array のインスタンスを作成する方法の詳細については、[Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)を参照してください。
+Platform::array のインスタンスを作成する方法の詳細については、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
 
 ## <a name="get"></a>  Array::get メソッド
 
@@ -108,8 +108,7 @@ T& get(unsigned int index)  const;
 
 ### <a name="return-value"></a>戻り値
 
-
-  `index` パラメーターで指定された配列要素。
+`index` パラメーターで指定された配列要素。
 
 ## <a name="value"></a>  Array::value プロパティ
 
@@ -127,5 +126,5 @@ property Array^ Value;
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)<br/>
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)<br/>
 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)

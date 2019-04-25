@@ -8,11 +8,11 @@ f1_keywords:
 helpviewer_keywords:
 - __declspec keyword [C++]
 ms.openlocfilehash: e924f3e4a038f900e084dbf84d85430d815c8e8f
-ms.sourcegitcommit: 0064d37467f958dd6a5111f20d7660eaccd53ee9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58416950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154504"
 ---
 # <a name="declspec"></a>__declspec
 
@@ -64,13 +64,13 @@ ms.locfileid: "58416950"
 
 **_ _Declspec**キーワードは、単純な宣言の先頭に配置する必要があります。 警告、なし、コンパイラは無視 **_ _declspec**キーワードの後に配置 * または (& a) と宣言で変数の識別子の前にします。
 
-A **_ _declspec**その型の変数にユーザー定義型の宣言の先頭で指定された属性が適用されます。 例:
+A **_ _declspec**その型の変数にユーザー定義型の宣言の先頭で指定された属性が適用されます。 例えば:
 
 ```cpp
 __declspec(dllimport) class X {} varX;
 ```
 
-この場合、属性は `varX` に適用されます。 A **_ _declspec**属性に配置した後、**クラス**または**構造体**キーワードは、ユーザー定義型に適用されます。 例:
+この場合、属性は `varX` に適用されます。 A **_ _declspec**属性に配置した後、**クラス**または**構造体**キーワードは、ユーザー定義型に適用されます。 例えば:
 
 ```cpp
 class __declspec(dllimport) X {};
