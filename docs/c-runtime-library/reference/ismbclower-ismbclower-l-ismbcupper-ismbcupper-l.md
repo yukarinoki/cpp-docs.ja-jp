@@ -33,11 +33,11 @@ helpviewer_keywords:
 - _ismbcupper_l function
 ms.assetid: 17d89587-65bc-477c-ba8f-a84e63cf59e7
 ms.openlocfilehash: 29a1e97f4583808931e5228a6905aed7c0a62702
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50431864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157288"
 ---
 # <a name="ismbclower-ismbclowerl-ismbcupper-ismbcupperl"></a>_ismbclower、_ismbclower_l、_ismbcupper、_ismbcupper_l
 
@@ -85,10 +85,10 @@ int _ismbcupper_l(
 
 |ルーチンによって返される値|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbclower**|小文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 小文字英字の 1 バイト表現である: 0x61 < =*c*< = 0x7A します。|
-|**_ismbclower_l**|小文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 小文字英字の 1 バイト表現である: 0x61 < =*c*< = 0x7A します。|
-|**_ismbcupper**|大文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 大文字英字の 1 バイト表現である: 0x41 < =*c*< = 0x5A します。|
-|**_ismbcupper_l**|大文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 大文字英字の 1 バイト表現である: 0x41 < =*c*< = 0x5A します。|
+|**_ismbclower**|小文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 小文字英字の 1 バイト表現です。0x61<=*c*<=0x7A.|
+|**_ismbclower_l**|小文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 小文字英字の 1 バイト表現です。0x61<=*c*<=0x7A.|
+|**_ismbcupper**|大文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 大文字英字の 1 バイト表現です。0x41 < =*c*< = 0x5A します。|
+|**_ismbcupper_l**|大文字の英字|場合にのみ、0 以外の値を返します*c* ASCII 大文字英字の 1 バイト表現です。0x41 < =*c*< = 0x5A します。|
 
 ## <a name="requirements"></a>必要条件
 

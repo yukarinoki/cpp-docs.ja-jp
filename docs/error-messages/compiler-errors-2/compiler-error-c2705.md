@@ -7,15 +7,15 @@ helpviewer_keywords:
 - C2705
 ms.assetid: 29249ea3-4ea7-4105-944b-bdb83e8d6852
 ms.openlocfilehash: 872471158d3f8c301a271dd68b2ef36839e2b9c5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50616272"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161168"
 ---
 # <a name="compiler-error-c2705"></a>コンパイラ エラー C2705
 
-'label': '例外ハンドラー ブロック' スコープへのジャンプが正しくありません
+'label' : illegal jump into 'exception handler block' scope
 
 実行が内のラベルにジャンプ、 `try` / `catch`、 `__try` / `__except`、 `__try` / `__finally`ブロックします。 詳細については、「[例外処理](../../cpp/exception-handling-in-visual-cpp.md)」を参照してください。
 

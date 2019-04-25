@@ -7,11 +7,11 @@ helpviewer_keywords:
 - _com_error class
 ms.assetid: 70dafa69-b1fb-4a5c-9249-e857e0793d42
 ms.openlocfilehash: 8ed1521cbf768e5b473281e5f9b7c6597cdc4692
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519556"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155203"
 ---
 # <a name="comerror-class"></a>_com_error クラス
 
@@ -29,13 +29,13 @@ A **_com_error**オブジェクトは、タイプ ライブラリから生成さ
 
 |||
 |-|-|
-|[演算子 =](../cpp/com-error-operator-equal.md)|既存 **_com_error**を別のオブジェクト。|
+|[operator=](../cpp/com-error-operator-equal.md)|既存 **_com_error**を別のオブジェクト。|
 
 ### <a name="extractor-functions"></a>抽出関数
 
 |||
 |-|-|
-|[エラー](../cpp/com-error-error.md)|コンス トラクターに渡された HRESULT を取得します。|
+|[Error](../cpp/com-error-error.md)|コンス トラクターに渡された HRESULT を取得します。|
 |[ErrorInfo](../cpp/com-error-errorinfo.md)|コンストラクターに渡された `IErrorInfo` オブジェクトを取得します。|
 |[WCode](../cpp/com-error-wcode.md)|カプセル化された HRESULT にマップされた 16 ビット エラー コードを取得します。|
 

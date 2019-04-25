@@ -43,11 +43,11 @@ helpviewer_keywords:
 - mbctoupper function
 ms.assetid: 787fab71-3224-4ed7-bc93-4dcd8023fc54
 ms.openlocfilehash: e620af526e5f0af02868bba4ba635e9ed6e34ff6
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539687"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156799"
 ---
 # <a name="mbctolower-mbctolowerl-mbctoupper-mbctoupperl"></a>_mbctolower、_mbctolower_l、_mbctoupper、_mbctoupper_l
 
@@ -107,7 +107,7 @@ unsigned int _mbctoupper_l(
 |**_totlower**|**tolower**|**_mbctolower**|**towlower**|
 |**_totlower_l**|**_tolower_l**|**_mbctolower_l**|**_towlower_t**|
 |**_totupper**|**toupper**|**_mbctoupper**|**towupper**|
-|**変数**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
+|**_totupper_l**|**toupper_l**|**_mbctoupper_l**|**_towupper_l**|
 
 ## <a name="requirements"></a>必要条件
 

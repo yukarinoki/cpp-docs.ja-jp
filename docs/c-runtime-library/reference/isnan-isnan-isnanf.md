@@ -33,11 +33,11 @@ helpviewer_keywords:
 - isnan function
 ms.assetid: 391fbc5b-89a4-4fba-997e-68f1131caf82
 ms.openlocfilehash: 8a907dd33803cebd7bc5d71789834d115333b6a0
-ms.sourcegitcommit: e98671a4f741b69d6277da02e6b4c9b1fd3c0ae5
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55703091"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157349"
 ---
 # <a name="isnan-isnan-isnanf"></a>isnan、_isnan、_isnanf
 
@@ -77,7 +77,7 @@ C++ では、 **isnan**テンプレート関数を返します**true**場合、�
 
 ## <a name="remarks"></a>Remarks
 
-NaN 値をその他の NaN 値と同じ比較しません、ため、いずれかを検出するためにこれらの関数またはマクロのいずれかを使用する必要があります。 浮動小数点演算の結果を指定した型の IEEE 754 浮動小数点形式で表すことはできません、NaN が発生します。 出力の NaN が表現される方法の詳細については、[printf](printf-printf-l-wprintf-wprintf-l.md)を参照してください。
+NaN 値をその他の NaN 値と同じ比較しません、ため、いずれかを検出するためにこれらの関数またはマクロのいずれかを使用する必要があります。 浮動小数点演算の結果を指定した型の IEEE 754 浮動小数点形式で表すことはできません、NaN が発生します。 出力の NaN が表現される方法の詳細については、次を参照してください。 [printf](printf-printf-l-wprintf-wprintf-l.md)します。
 
 C++ としてコンパイルされるときに、 **isnan**マクロが定義されていないと**isnan**テンプレート関数は、代わりに定義されます。 型の値を返しますが、マクロと同様に動作**bool**整数ではなく。
 
@@ -97,6 +97,6 @@ C++ としてコンパイルされるときに、 **isnan**マクロが定義さ
 [浮動小数点サポート](../../c-runtime-library/floating-point-support.md)<br/>
 [fpclassify](fpclassify.md)<br/>
 [_fpclass、_fpclassf](fpclass-fpclassf.md)<br/>
-[isfinite _finite、_finitef](finite-finitef.md)<br/>
+[isfinite、_finite、_finitef](finite-finitef.md)<br/>
 [isinf](isinf.md)<br/>
 [isnormal](isnormal.md)<br/>

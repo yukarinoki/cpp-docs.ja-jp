@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Platform::ArrayReference Class
 ms.assetid: 9ab3b15e-8a60-4600-8fcb-7d6c86284f4b
 ms.openlocfilehash: 923f60e90517e377b99d5e29f38c48b2633c3c46
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57742983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62161572"
 ---
 # <a name="platformarrayreference-class"></a>Platform::ArrayReference クラス
 
@@ -43,7 +43,7 @@ class ArrayReference
 
 ### <a name="remarks"></a>Remarks
 
-`ArrayReference` を使用して C スタイル配列にデータを格納する方法であれば、一度 `Platform::Array` 変数にコピーしたうえで改めて C スタイル配列にコピーするような余分な操作が不要になります。 `ArrayReference`を使用した場合には、コピー操作が 1 回のみとなります。 コード例では、[Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)を参照してください。
+`ArrayReference` を使用して C スタイル配列にデータを格納する方法であれば、一度 `Platform::Array` 変数にコピーしたうえで改めて C スタイル配列にコピーするような余分な操作が不要になります。 `ArrayReference`を使用した場合には、コピー操作が 1 回のみとなります。 コード例では、次を参照してください。 [Array と WriteOnlyArray](../cppcx/array-and-writeonlyarray-c-cx.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -96,8 +96,7 @@ ArrayReference& operator=(ArrayReference&& otherArg);
 
 ### <a name="return-value"></a>戻り値
 
-
-  `ArrayReference` 型のオブジェクトへの参照。
+`ArrayReference` 型のオブジェクトへの参照。
 
 ### <a name="remarks"></a>Remarks
 
@@ -123,4 +122,4 @@ Array<TArg>^ operator ();
 
 ## <a name="see-also"></a>関連項目
 
-[Platform 名前空間](../cppcx/platform-namespace-c-cx.md)
+[プラットフォーム名前空間](../cppcx/platform-namespace-c-cx.md)

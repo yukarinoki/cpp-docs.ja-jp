@@ -139,11 +139,11 @@ helpviewer_keywords:
 - std::unordered_map::swap
 ms.assetid: 7cf7cfa1-16e7-461c-a9b2-3b8d8ec24e0d
 ms.openlocfilehash: 51b84b8a48365189abf1efa111ae2186af0cab11
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51519823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159146"
 ---
 # <a name="unorderedmap-class"></a>unordered_map クラス
 
@@ -1243,10 +1243,10 @@ size_type erase(const key_type& Key);
 *Where*<br/>
 削除される要素の位置。
 
-*まずは*<br/>
+*First*<br/>
 削除される最初の要素の位置。
 
-*前の*<br/>
+*Last*<br/>
 削除される最後の要素の次の位置。
 
 *Key*<br/>
@@ -1475,8 +1475,8 @@ IList);
 |*val*|キーが同じ順序付けになる要素が unordered_map にまだ含まれていない場合に、unordered_map に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所 |
 |*ValTy*|Unordered_map の要素の構築に使用できる引数の型を指定するテンプレート パラメーター [value_type](../standard-library/map-class.md#value_type)、および完全転送*Val*を引数として。|
-|*まずは*|コピーされる最初の要素の位置。|
-|*前の*|コピーされる最後の要素の次の位置。|
+|*First*|コピーされる最初の要素の位置。|
+|*Last*|コピーされる最後の要素の次の位置。|
 |*InputIterator*|[入力反復子](../standard-library/input-iterator-tag-struct.md)の要件を満たすテンプレート関数の引数。この反復子は、[value_type](../standard-library/map-class.md#value_type) オブジェクトの構築に使用できる型の要素を指し示します。|
 |*IList*|要素のコピー元の [initializer_list](../standard-library/initializer-list.md)。|
 
@@ -2632,8 +2632,8 @@ unordered_map(
 |*ハッシュ*|格納するハッシュ関数オブジェクト。|
 |*Bucket_count*|最小バケット数。|
 |*右*|コピーするコンテナー。|
-|*まずは*||
-|*前の*||
+|*First*||
+|*Last*||
 |*IList*|コピーされる要素を含む initializer_list。|
 
 ### <a name="remarks"></a>Remarks

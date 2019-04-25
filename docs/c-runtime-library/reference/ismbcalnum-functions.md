@@ -47,11 +47,11 @@ helpviewer_keywords:
 - ismbcalpha_l function
 ms.assetid: 12d57925-aebe-46e0-80b0-82b84c4c31ec
 ms.openlocfilehash: 1a2f928d826b70b788220130f69c53cc351b4910
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50532224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157306"
 ---
 # <a name="ismbcalnum-ismbcalnuml-ismbcalpha-ismbcalphal-ismbcdigit-ismbcdigitl"></a>_ismbcalnum、_ismbcalnum_l、_ismbcalpha、_ismbcalpha_l、_ismbcdigit、_ismbcdigit_l
 
@@ -112,9 +112,9 @@ int _ismbcdigit_l
 
 |ルーチンによって返される値|テスト条件|コード ページ 932 の例|
 |-------------|--------------------|---------------------------|
-|**_ismbcalnum**、 **_ismbcalnum_l**|英数字|場合にのみ、0 以外の値を返します*c* ASCII の英字の 1 バイト表現である: の例を参照してください。 **_ismbcdigit**と **_ismbcalpha**します。|
-|**_ismbcalpha**、 **_ismbcalpha_l**|alphabetic|場合にのみ、0 以外の値を返します*c* ASCII の英字の 1 バイト表現である: 0x41 < =*c*< = 0x5A または 0x61 < =*c*< = 0x7A; またはカタカナの文字。0xA6 < =*c*< = 0 xdf します。|
-|**_ismbcdigit**、 **_ismbcdigit**|数字|場合にのみ、0 以外の値を返します*c* ASCII 数字の 1 バイト表現である: 0x30 < =*c*< = 0x39 します。|
+|**_ismbcalnum**、 **_ismbcalnum_l**|英数字|場合にのみ、0 以外の値を返します*c* ASCII の英字の 1 バイト表現です。例を参照してください。 **_ismbcdigit**と **_ismbcalpha**します。|
+|**_ismbcalpha**、 **_ismbcalpha_l**|alphabetic|場合にのみ、0 以外の値を返します*c* ASCII の英字の 1 バイト表現です。0x41 < =*c*< = 0x5A または 0x61 < =*c*< = 0x7A; またはカタカナの文字。0xA6<=*c*<=0xDF.|
+|**_ismbcdigit**, **_ismbcdigit**|数字|場合にのみ、0 以外の値を返します*c* ASCII 数字の 1 バイト表現です。0x30<=*c*<=0x39.|
 
 ## <a name="requirements"></a>必要条件
 

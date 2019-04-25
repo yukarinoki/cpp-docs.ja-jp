@@ -5,15 +5,15 @@ ms.date: 11/19/2018
 ms.topic: conceptual
 ms.assetid: 9a373030-e587-452f-b9a5-c5f9d58b7673
 ms.openlocfilehash: 48e459b69592bf4c231407c2a378a7b7e01ff4ae
-ms.sourcegitcommit: a1fad0a266b20b313364a74b16c9ac45d089b1e9
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54220583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62153664"
 ---
 # <a name="how-to-create-and-use-uniqueptr-instances"></a>方法: 作成し、unique_ptr インスタンスを使用
 
-A [unique_ptr](../standard-library/unique-ptr-class.md)そのポインターを共有しません。 これは、別にコピーできません`unique_ptr`値によって、関数に渡す、または、作成するコピーを必要とする任意の C++ 標準ライブラリ アルゴリズムで使用します。 `unique_ptr` ができるのは移動だけです。 この場合、メモリ リソースの所有権は別の `unique_ptr` に移動し、元の `unique_ptr` はそれ以降、所有権を失います。 複数の所有者がオブジェクトを所有するとプログラム ロジックが複雑になるため、所有者を 1 人に制限することをお勧めします。 したがって、プレーンな C++ オブジェクト用にスマート ポインターを確認する場合は、使用`unique_ptr`、および構築する際に、`unique_ptr`を使用して、 [make_unique](../standard-library/memory-functions.md#make_unique)ヘルパー関数。
+A [unique_ptr](../standard-library/unique-ptr-class.md)そのポインターを共有しません。 これは、別にコピーできません`unique_ptr`値によって、関数に渡す、または、作成するコピーを必要とする任意の C++ 標準ライブラリ アルゴリズムで使用します。 `unique_ptr` ができるのは移動だけです。 この場合、メモリ リソースの所有権は別の `unique_ptr` に移動し、元の `unique_ptr` はそれ以降、所有権を失います。 複数の所有者がオブジェクトを所有するとプログラム ロジックが複雑になるため、所有者を 1 人に制限することをお勧めします。 そのため、必要がある場合、スマート ポインターのプレーンなC++オブジェクトを使用して`unique_ptr`、および構築する際に、`unique_ptr`を使用して、 [make_unique](../standard-library/memory-functions.md#make_unique)ヘルパー関数。
 
 次の図では、2 つの `unique_ptr` のインスタンス間での所有権の移転を示します。
 
@@ -49,7 +49,7 @@ A [unique_ptr](../standard-library/unique-ptr-class.md)そのポインターを�
 
 [!code-cpp[stl_smart_pointers#213](../cpp/codesnippet/CPP/how-to-create-and-use-unique-ptr-instances_4.cpp)]
 
-例については、[make_unique](../standard-library/memory-functions.md#make_unique)を参照してください。
+例については、次を参照してください。 [make_unique](../standard-library/memory-functions.md#make_unique)します。
 
 ## <a name="see-also"></a>関連項目
 

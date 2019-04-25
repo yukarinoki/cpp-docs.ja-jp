@@ -87,11 +87,11 @@ helpviewer_keywords:
 - stdext::hash_multiset::value_comp
 ms.assetid: 0580397a-a76e-40ad-aea2-5c6f3a9d0a21
 ms.openlocfilehash: 6b271adbaf3fe4d2d5c3b41e974bf3036e7b1947
-ms.sourcegitcommit: d441305fb19131afbd7fc259d8cda63ea26f2343
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51678517"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62159341"
 ---
 # <a name="hashmultiset-class"></a>hash_multiset クラス
 
@@ -1416,8 +1416,8 @@ hash_multiset(
 |*Al*|この `hash_multiset` オブジェクトに使用するストレージ アロケーター クラス。既定では、`Allocator` です。|
 |*コンポジション*|`const Traits` 内の要素の並べ替えに使用される、`hash_multiset` 型の比較関数。既定では `hash_compare` です。|
 |*右*|構築された `hash_multiset` のコピー元となる `hash_multiset`。|
-|*まずは*|コピーする要素範囲内の最初の要素の位置。|
-|*前の*|コピーする要素範囲を超える最初の要素の位置。|
+|*First*|コピーする要素範囲内の最初の要素の位置。|
+|*Last*|コピーする要素範囲を超える最初の要素の位置。|
 |*IList*|コピーされる要素を含む initializer_list。|
 
 ### <a name="remarks"></a>Remarks
@@ -1430,7 +1430,7 @@ hash_multiset(
 
 最初の 3 つのコンス トラクターは、指定、空の初期`hash_multiset`、比較関数の型を指定する 2 つ目 (*Comp*) 要素を第 3 に明示的に指定の順序を確立するため、アロケーターの型 (*Al*) を使用します。 キーワード **explicit** は、特定の種類の自動型変換が実行されないようにします。
 
-4 番目のコンストラクターは、`hash_multiset` `Right` を移動します。
+4 番目のコンス トラクターは、移動、 `hash_multiset` `Right`します。
 
 5 番目、6 番目、7 番目のコンストラクターは initializer_list を使用します。
 
@@ -1484,8 +1484,8 @@ iterator insert(
 |-|-|
 |*val*|挿入される要素が hash_multiset にまだ含まれていない場合、一般的には、キーが同じ順序付けになる要素が hash_multiset にまだ含まれていない場合に、hash_multiset に挿入される要素の値。|
 |*Where*|正しい挿入ポイントの検索を開始する場所  (挿入ポイントが `_Where` の直後にある場合、挿入処理は対数時間ではなく償却定数時間で実行できます)。|
-|*まずは*|hash_multiset からコピーされる最初の要素の位置。|
-|*前の*|hash_multiset からコピーされる最後の要素の次の位置。|
+|*First*|hash_multiset からコピーされる最初の要素の位置。|
+|*Last*|hash_multiset からコピーされる最後の要素の次の位置。|
 |*IList*|コピーする要素を含む initializer_list。|
 
 ### <a name="return-value"></a>戻り値

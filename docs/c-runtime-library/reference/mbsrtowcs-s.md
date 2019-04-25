@@ -22,11 +22,11 @@ helpviewer_keywords:
 - mbsrtowcs_s function
 ms.assetid: 4ee084ec-b15d-4e5a-921d-6584ec3b5a60
 ms.openlocfilehash: a935b5181078f3b08ba5f2f89c581ed8cce8ded5
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50588827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62156669"
 ---
 # <a name="mbsrtowcss"></a>mbsrtowcs_s
 
@@ -70,7 +70,7 @@ errno_t mbsrtowcs_s(
 *count*<br/>
 格納するワイド文字の最大数、 *wcstr*バッファー、終端の null は含まないまたは[_TRUNCATE](../../c-runtime-library/truncate.md)します。
 
-*呼び出すため*<br/>
+*mbstate*<br/>
 ポインター、 **mbstate_t**変換状態オブジェクト。 この値が null ポインターの場合、静的な内部変換状態オブジェクトが使用されます。 内部**mbstate_t**オブジェクトはスレッド セーフではありませんを常に渡す独自ことをお勧めします。*呼び出すため*パラメーター。
 
 ## <a name="return-value"></a>戻り値

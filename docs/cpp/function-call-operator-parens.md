@@ -11,11 +11,11 @@ helpviewer_keywords:
 - function call operator ()
 ms.assetid: 50c92e59-a4bf-415a-a6ab-d66c679ee80a
 ms.openlocfilehash: 79c43ed11bfc73ec4bfaedad0a20b45fb6ca1ffb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50676253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62154153"
 ---
 # <a name="function-call-operator-"></a>関数呼び出し演算子: ()
 
@@ -174,7 +174,7 @@ int main() {
 }
 ```
 
-関数は再帰的に呼び出すことができます。 関数の宣言に関する詳細については、[関数](functions-cpp.md)を参照してください。 関連資料は[プログラムとリンケージ](../cpp/program-and-linkage-cpp.md)します。
+関数は再帰的に呼び出すことができます。 関数の宣言に関する詳細については、次を参照してください。[関数](functions-cpp.md)します。 関連資料は[プログラムとリンケージ](../cpp/program-and-linkage-cpp.md)します。
 
 ## <a name="see-also"></a>関連項目
 

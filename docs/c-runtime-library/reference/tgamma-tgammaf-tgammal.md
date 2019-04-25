@@ -31,11 +31,11 @@ helpviewer_keywords:
 - tgammal function
 ms.assetid: f1bd2681-8af2-48a9-919d-5358fd068acd
 ms.openlocfilehash: c9ff92658163fc20ce21496aba34b22b3661748b
-ms.sourcegitcommit: afd6fac7c519dbc47a4befaece14a919d4e0a8a2
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51518946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62155616"
 ---
 # <a name="tgamma-tgammaf-tgammal"></a>tgamma、tgammaf、tgammal
 
@@ -80,7 +80,7 @@ long double tgammal(
 |-----------|------------|
 |x = ±0|±INFINITY|
 |x = 負の整数|NaN|
-|x-= INFINITY|NaN|
+|x = -INFINITY|NaN|
 |x = +INFINITY|+INFINITY|
 |x = NaN|NaN|
 |ドメイン エラー|NaN|

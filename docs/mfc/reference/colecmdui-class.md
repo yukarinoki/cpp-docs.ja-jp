@@ -15,11 +15,11 @@ helpviewer_keywords:
 - COleCmdUI [MFC], SetText
 ms.assetid: a2d5ce08-6657-45d3-8673-2a9f32d50eec
 ms.openlocfilehash: 5dc4e9504805146a9eff0f5ab937868226e4516e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57270861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62148511"
 ---
 # <a name="colecmdui-class"></a>COleCmdUI クラス
 
@@ -53,7 +53,7 @@ class COleCmdUI : public CCmdUI
 
 `COleCmdUI` コマンド (という名前、開く、印刷、具合) などのコンテナーのユーザー インターフェイスを受信する DocObject でき DocObject のユーザー インターフェイスで発生するコマンドを受信するためのコンテナーを使用します。 `IDispatch`同じコマンドをディスパッチするされる可能性があります`IOleCommandTarget`クエリし、引数を指定せず、通常は、コマンドの標準セットに依存し、型情報は必要ありませんので、実行する簡単な方法を提供します。 `COleCmdUI` 有効にする、更新、および DocObject ユーザー インターフェイスのコマンドの他のプロパティを設定するために使用します。 コマンドを実行するときに呼び出す[COleServerDoc::OnExecOleCmd](../../mfc/reference/coleserverdoc-class.md#onexecolecmd)します。
 
-DocObjects については、[CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)と[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)を参照してください。
+DocObjects については、次を参照してください。 [CDocObjectServer](../../mfc/reference/cdocobjectserver-class.md)と[CDocObjectServerItem](../../mfc/reference/cdocobjectserveritem-class.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

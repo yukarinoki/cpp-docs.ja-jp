@@ -33,11 +33,11 @@ helpviewer_keywords:
 - localtime_s function
 ms.assetid: 842d1dc7-d6f8-41d3-b340-108d4b90df54
 ms.openlocfilehash: 44b2eb2515035d56143a2aab251437a92515e652
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62157290"
 ---
 # <a name="localtimes-localtime32s-localtime64s"></a>localtime_s、_localtime32_s、_localtime64_s
 
@@ -77,7 +77,7 @@ errno_t _localtime64_s(
 |*tmDest*|*sourceTime*|戻り値|値*tmDest*|無効なパラメーター ハンドラーを呼び出す|
 |-----------|------------|------------------|--------------------|---------------------------------------|
 |**NULL**|任意|**EINVAL**|変更されない|はい|
-|いない**NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが -1 に設定される|はい|
+|いない**NULL** (有効なメモリを指す)|**NULL**|**EINVAL**|すべてのフィールドが -1 に設定される|[はい]|
 |いない**NULL** (有効なメモリを指す)|0 より小さいかより大きい **_MAX__TIME64_T**|**EINVAL**|すべてのフィールドが -1 に設定される|いいえ|
 
 最初の 2 つのエラーの場合は、「[Parameter Validation](../../c-runtime-library/parameter-validation.md)」 (パラメーターの検証) に説明されているとおり、無効なパラメーター ハンドラーが呼び出されます。 実行の継続が許可された場合に、これらの関数が設定**errno**に**EINVAL**戻って**EINVAL**します。
@@ -100,7 +100,7 @@ errno_t _localtime64_s(
 |フィールド|説明|
 |-|-|
 |**tm_sec**|秒 (0 - 59)。|
-|**未満**|分 (0 - 59)。|
+|**tm_min**|分 (0 - 59)。|
 |**tm_hour**|午前 0 時からの経過時間 (0 - 23)。|
 |**tm_mday**|(1 ~ 31) の月の日。|
 |**tm_mon**|月 (0 - 11年 1 月 = 0 です)。|
