@@ -46,7 +46,6 @@
 #### [pgomgr](pgomgr.md)
 #### [pgosweep](pgosweep.md)
 #### [方法: 複数の PGO プロファイルを単一のプロファイルにマージする](how-to-merge-multiple-pgo-profiles-into-a-single-profile.md)
-#### [パフォーマンスと診断ハブでの Visual Studio 2013 PGO アドイン](profile-guided-optimization-in-the-performance-and-diagnostics-hub.md)
 # [コマンド ラインから MSVC ツールセットを使用する](building-on-the-command-line.md)
 ## [チュートリアル: コマンド ラインでネイティブ C++ プログラムをコンパイルする](walkthrough-compiling-a-native-cpp-program-on-the-command-line.md)
 ## [チュートリアル: コマンド ラインでの C プログラムのコンパイル](walkthrough-compile-a-c-program-on-the-command-line.md)
