@@ -29,11 +29,11 @@ helpviewer_keywords:
 - mbsbtype_l function
 ms.assetid: 0d5dd91a-d32d-4f98-ac57-98dfc9e98eac
 ms.openlocfilehash: 5c2927b4e4b68b1284341fe7e767ec50feb21a44
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50566804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331507"
 ---
 # <a name="mbsbtype-mbsbtypel"></a>_mbsbtype、_mbsbtype_l
 
@@ -76,7 +76,7 @@ int _mbsbtype_l(
 |**_MBC_SINGLE** (0)|1 バイト文字。 たとえば、コード ページ 932 で **_mbsbtype** 0 xdf の範囲 0x20-0x7E または 0xA1 - 指定したバイトがある場合は 0 を返します。|
 |**_MBC_LEAD** (1)|マルチバイト文字の先行バイト。 たとえば、コード ページ 932 で **_mbsbtype**指定したバイトが 0x81-0x81-0x9f または 0xe0-0xfc の範囲内で 0 xfc 場合 1 を返します。|
 |**_MBC_TRAIL** (2)|マルチバイト文字の後続バイト。 たとえば、コード ページ 932 で **_mbsbtype**指定したバイトが範囲 0x40 ~ 0x7E または 0x80 ~ 0 xfc 2 を返します。|
-|**継続**(-1)|**NULL**文字列、無効な文字、または null のバイト オフセット位置にバイトの前に見つかった*カウント*で*mbstr*します。|
+|**_MBC_ILLEGAL** (-1)|**NULL**文字列、無効な文字、または null のバイト オフセット位置にバイトの前に見つかった*カウント*で*mbstr*します。|
 
 ## <a name="remarks"></a>Remarks
 

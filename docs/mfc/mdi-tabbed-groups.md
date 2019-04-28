@@ -6,11 +6,11 @@ helpviewer_keywords:
 - tabbed grous [MFC]
 ms.assetid: 0a464f36-39b7-4e68-8b67-ec175de28377
 ms.openlocfilehash: 6b68d1bc06a6827ca94b05fa2760206f424d40fe
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310842"
 ---
 # <a name="mdi-tabbed-groups"></a>MDI タブ付きグループ
 
@@ -58,7 +58,7 @@ MDI タブ付きグループの機能は、次のとおりです。
 
 - ユーザーがタブをクリックしてまたは別の MDI タブ付きグループにドラッグしたときにショートカット メニューを表示するには、オーバーライド`CMDIFrameWndEx::OnShowMDITabContextMenu`で、 `CMDIFrameWndEx`-クラスを派生します。 このメソッドを実装していない場合でも、アプリケーションでは、ショートカット メニューは表示されません。
 
-- アプリケーションで MDI タブ付きグループのレイアウトを保存する`CMDIFrameWndEx::SaveMDIState`します。 タブ付きグループのプロファイルを以前に保存した MDI を読み込むには、`CMDIFrameWndEx::LoadMDIState`します。 読み込みまたは MDI アプリケーションで開かれたドキュメントの一覧を保存するこれらのメソッドを呼び出すこともできます。 保存と読み込みの状態の MDI の詳細については、[CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate)を参照してください。
+- アプリケーションで MDI タブ付きグループのレイアウトを保存する`CMDIFrameWndEx::SaveMDIState`します。 タブ付きグループのプロファイルを以前に保存した MDI を読み込むには、`CMDIFrameWndEx::LoadMDIState`します。 読み込みまたは MDI アプリケーションで開かれたドキュメントの一覧を保存するこれらのメソッドを呼び出すこともできます。 保存と読み込みの状態の MDI の詳細については、次を参照してください。 [CMDIFrameWndEx::LoadMDIState](../mfc/reference/cmdiframewndex-class.md#loadmdistate)します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - printing views [MFC]
 ms.assetid: 8d4a3c8e-1fce-4edc-b608-94cb5f3e487e
 ms.openlocfilehash: 835ea44ef82e59543bab835cd4bf5029dde0b453
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57279316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308876"
 ---
 # <a name="role-of-the-view-in-printing"></a>印刷でのビューの役割
 
@@ -26,7 +26,7 @@ ms.locfileid: "57279316"
 
 - ドキュメントを印刷用のページに分割することを管理します。
 
-印刷および印刷では、ビューの役割についての詳細については、[印刷および印刷プレビュー](../mfc/printing-and-print-preview.md)を参照してください。
+印刷および印刷では、ビューの役割についての詳細については、次を参照してください。[印刷および印刷プレビュー](../mfc/printing-and-print-preview.md)します。
 
 ## <a name="see-also"></a>関連項目
 

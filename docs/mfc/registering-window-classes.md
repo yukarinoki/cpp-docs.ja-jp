@@ -15,11 +15,11 @@ helpviewer_keywords:
 - registering window classes [MFC]
 ms.assetid: 30994bc4-a362-43da-bcc5-1bf67a3fc929
 ms.openlocfilehash: 7c459b909a60fff2b7aeded9ea8d79a39ced24e4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309084"
 ---
 # <a name="registering-window-classes"></a>ウィンドウ クラスの登録
 
@@ -33,7 +33,7 @@ MFC では、なし、Windows の従来のプログラムでの「ウィンド�
 
 これに対し、ほとんどのウィンドウ クラスの登録アクティビティは、MFC フレームワーク プログラムで自動的に行われます。 MFC を使用している場合は、通常クラス継承の標準の C++ 構文を使用して、既存のライブラリのクラスから C++ ウィンドウ クラスを派生します。 フレームワークは引き続き従来使用「登録クラス」とは、必要なときに登録されているいくつかの標準的なものを提供します。 追加登録クラスを登録するには、呼び出すことによって、 [AfxRegisterWndClass](../mfc/reference/application-information-and-management.md#afxregisterwndclass)に登録されているクラスを渡す、グローバル関数、`Create`のメンバー関数`CWnd`します。 ここでは、従来の説明に従って Windows の「登録クラス」は、C++ のクラスと混同しないようにします。
 
-詳細については、[テクニカル ノート 1:](../mfc/tn001-window-class-registration.md)を参照してください。
+詳細については、次を参照してください。[テクニカル ノート 1:](../mfc/tn001-window-class-registration.md)します。
 
 ## <a name="see-also"></a>関連項目
 

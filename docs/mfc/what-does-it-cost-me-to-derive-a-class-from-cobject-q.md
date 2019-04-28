@@ -7,11 +7,11 @@ helpviewer_keywords:
 - CObject class [MFC], overhead of derived classes [MFC]
 ms.assetid: 9b92c98b-b3dd-48a7-9d24-c3b8554edf90
 ms.openlocfilehash: de760a2fd2908595314dc09cf5a317da3581e3bb
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186050"
 ---
 # <a name="what-does-it-cost-me-to-derive-a-class-from-cobject"></a>CObject からクラスを派生するときのオーバーヘッド
 
@@ -19,4 +19,4 @@ ms.locfileid: "57326388"
 
 ## <a name="see-also"></a>関連項目
 
-[CObject クラス:よく寄せられる質問](../mfc/cobject-class-frequently-asked-questions.md)
+[CObject クラス: よく寄せられる質問](../mfc/cobject-class-frequently-asked-questions.md)

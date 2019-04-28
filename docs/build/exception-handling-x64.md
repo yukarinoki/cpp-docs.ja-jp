@@ -6,15 +6,15 @@ helpviewer_keywords:
 - exception handling, x64
 ms.assetid: 41fecd2d-3717-4643-b21c-65dcd2f18c93
 ms.openlocfilehash: 7dab7f3b6593bf4eaed1b8c804deb915677ccf5b
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57422976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195206"
 ---
 # <a name="x64-exception-handling"></a>x64 例外処理
 
-構造化例外処理と C++ 例外処理のコーディング規則と、x64 での動作の概要。 例外処理の概要については、[Visual c での例外処理](../cpp/exception-handling-in-visual-cpp.md)を参照してください。
+構造化例外処理と C++ 例外処理のコーディング規則と、x64 での動作の概要。 例外処理の概要については、次を参照してください。 [Visual c での例外処理](../cpp/exception-handling-in-visual-cpp.md)します。
 
 ## <a name="unwind-data-for-exception-handling-debugger-support"></a>アンワインドの例外処理、デバッガーのサポート データ
 
@@ -76,7 +76,7 @@ UNWIND_INFO 構造体は、メモリに配置するか DWORD である必要が�
    |-|-|
    |`UNW_FLAG_EHANDLER`| 関数は、例外ハンドラーが例外を確認する必要がある関数を検索するときに呼び出す必要があります。|
    |`UNW_FLAG_UHANDLER`| 関数には、例外のアンワインド時に呼び出される必要があります終了ハンドラーを指定します。|
-   |`UNW_FLAG_CHAININFO`| これはアンワインド情報の構造は、プロシージャの主なものではありません。 代わりに、チェーン アンワインド情報エントリは、前の RUNTIME_FUNCTION エントリの内容とします。 については、[アンワインド情報の構造の連結された](#chained-unwind-info-structures)を参照してください。 このフラグを設定するが存在する UNW_FLAG_EHANDLER と UNW_FLAG_UHANDLER フラグをクリアする必要があります。 また、フレームの登録と固定スタック割り当てフィールドには、プライマリ アンワインド情報と同じ値が必要です。|
+   |`UNW_FLAG_CHAININFO`| これはアンワインド情報の構造は、プロシージャの主なものではありません。 代わりに、チェーン アンワインド情報エントリは、前の RUNTIME_FUNCTION エントリの内容とします。 については、次を参照してください。[アンワインド情報の構造の連結された](#chained-unwind-info-structures)します。 このフラグを設定するが存在する UNW_FLAG_EHANDLER と UNW_FLAG_UHANDLER フラグをクリアする必要があります。 また、フレームの登録と固定スタック割り当てフィールドには、プライマリ アンワインド情報と同じ値が必要です。|
 
 - **プロローグのサイズ**
 

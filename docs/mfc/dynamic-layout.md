@@ -3,11 +3,11 @@ title: 動的レイアウト
 ms.date: 11/19/2018
 ms.assetid: 8598cfb2-c8d4-4f5a-bf2b-59dc4653e042
 ms.openlocfilehash: 396aad5b33a00021ddb5c1143c1d15c130e97eaa
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52175691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62175317"
 ---
 # <a name="dynamic-layout"></a>動的レイアウト
 
@@ -61,7 +61,7 @@ IDE では、リソース エディターで各コントロールの詳細を指
     CMFCDynamicLayout* dynamicLayout = pDialog->GetDynamicLayout();
     ```
 
-1. 動的な動作を追加する最初のコントロールを静的メソッドを使用して、動的レイアウト クラスを作成する、 [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure)コントロールを調整する方法をエンコードする構造体。 最初に、適切な静的メソッドを選択してこれを行う: [CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)、 [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)、 [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)、または[CMFCDynamicLayout::MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical)します。 移動の水平/垂直方向のアスペクト比率を渡します。 これらすべての静的メソッドは、コントロールの移動の動作を指定する時に使用できる、新しく作成された MoveSettings オブジェクトを返します。
+1. 動的な動作を追加する最初のコントロールを静的メソッドを使用して、動的レイアウト クラスを作成する、 [MoveSettings](../mfc/reference/cmfcdynamiclayout-class.md#movesettings_structure)コントロールを調整する方法をエンコードする構造体。 そのためには、最初に、適切な静的メソッドを選択します。[CMFCDynamicLayout::MoveHorizontal](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontal)、 [CMFCDynamicLayout::MoveVertical](../mfc/reference/cmfcdynamiclayout-class.md#movevertical)、 [CMFCDynamicLayout::MoveNone](../mfc/reference/cmfcdynamiclayout-class.md#movenone)、または[CMFCDynamicLayout:。MoveHorizontalAndVertical](../mfc/reference/cmfcdynamiclayout-class.md#movehorizontalandvertical)します。 移動の水平/垂直方向のアスペクト比率を渡します。 これらすべての静的メソッドは、コントロールの移動の動作を指定する時に使用できる、新しく作成された MoveSettings オブジェクトを返します。
 
    100 にするとダイアログのサイズ変更とまったく同じサイズの移動を行い、これによりコントロールのエッジが新しい境界からの固定距離を維持します。
 

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - mbrtowc function
 ms.assetid: a1e87fcc-6de0-4ca1-bf26-508d28490286
 ms.openlocfilehash: bd719e7b336333f6e06a1db9b1e34784575a1602
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50581832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62331533"
 ---
 # <a name="mbrtowc"></a>mbrtowc
 
@@ -54,7 +54,7 @@ size_t mbrtowc(
 *count*<br/>
 チェックするバイト数。
 
-*呼び出すため*<br/>
+*mbstate*<br/>
 変換状態のオブジェクトへのポインター。 この値が null ポインターの場合、関数は静的な内部変換状態オブジェクトを使用します。 内部**mbstate_t**オブジェクトはスレッド セーフではありませんを常に渡す独自ことをお勧めします。*呼び出すため*引数。
 
 ## <a name="return-value"></a>戻り値

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - SUBSYSTEM editbin option
 ms.assetid: 515e4cdf-3cc4-4659-8764-1f2757b49215
 ms.openlocfilehash: b13313d57226719086cb73584543488f842057c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57820495"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62317719"
 ---
 # <a name="subsystem"></a>/SUBSYSTEM
 
@@ -32,7 +32,7 @@ ms.locfileid: "57820495"
 以下のいずれかのサブシステムを指定できます。
 
 **BOOT_APPLICATION**<br/>
-Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、[BCD WMI プロバイダーについて](/previous-versions/windows/desktop/bcd/about-bcd)を参照してください。
+Windows のブート環境で実行するアプリケーションです。 ブート アプリケーションの詳細については、次を参照してください。 [BCD WMI プロバイダーについて](/previous-versions/windows/desktop/bcd/about-bcd)します。
 
 **コンソール**<br/>
 Windows キャラクター モード アプリケーション。 オペレーティング システムには、コンソール アプリケーションのコンソールが用意されています。
@@ -57,15 +57,13 @@ Windows のグラフィカル環境で実行するアプリケーション。 �
 **WINDOWS CE**<br/>
 WINDOWSCE サブシステムは、アプリケーションが Windows CE カーネルのバージョンがあるデバイスで実行するように設計されたことを示します。 カーネルのバージョンには、PocketPC、Windows Mobile、Windows Phone 7、Windows CE V1.0-6.0R3、および Windows Embedded Compact 7 があります。
 
-
-  `major` および `minor` 値 (省略可能) で、指定したサブシステムの必要最低バージョンを指定します。
+`major` および `minor` 値 (省略可能) で、指定したサブシステムの必要最低バージョンを指定します。
 
 - バージョン番号の整数部 (小数点の左側) は、`major` で指定します。
 
 - バージョン番号の小数部 (小数点の右側) は、`minor` で指定します。
 
-- 
-  `major` と `minor` で指定できる値は、0 ～ 65,535 の範囲です。
+- `major` と `minor` で指定できる値は、0 ～ 65,535 の範囲です。
 
 選択したサブシステムに応じて、プログラムの既定の開始アドレスも変わります。 詳細については、次を参照してください。 [/ENTRY (エントリ ポイント シンボル)](entry-entry-point-symbol.md)、リンカーの/ENTRY:*関数*オプション。
 

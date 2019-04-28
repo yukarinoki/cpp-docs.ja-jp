@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcloseall function
 ms.assetid: c3c6ea72-92c6-450a-a33e-3e568d2784a4
 ms.openlocfilehash: 4713ffb7ecdf8da73e5f949bbef7be124dfaf28a
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334880"
 ---
 # <a name="fclose-fcloseall"></a>fclose、_fcloseall
 
@@ -47,7 +47,7 @@ int _fcloseall( void );
 
 ### <a name="parameters"></a>パラメーター
 
-*ストリーム*<br/>
+*stream*<br/>
 **FILE** 構造体へのポインター。
 
 ## <a name="return-value"></a>戻り値
@@ -62,7 +62,7 @@ int _fcloseall( void );
 
 **_Fcloseall**関数を除くすべての開いているストリームを閉じます**stdin**、 **stdout**、 **stderr** (および、MS-DOS、 **_stdaux**と **_stdprn**)。 また終了し、によって作成された一時ファイルを削除します。 **tmpfile**します。 両方の関数では、終了する前に、ストリームに関連付けられているすべてのバッファーがフラッシュされます。 システムによって割り当てられたバッファーについては、ストリームを閉じる際に解放します。 持つユーザーによって割り当てられたバッファー **setbuf**と**setvbuf**は自動的に解放されません。
 
-**注:** これらの関数を使用してストリームを閉じる場合は、ストリームだけでなく基になるファイル記述子と OS ファイル ハンドル (またはソケット) も閉じられます。 そのため、ファイルが最初に開かれている場合、ファイルとして処理ファイル記述子やを閉じるには**fclose**、呼び出し **_close**にファイル記述子を閉じます Win32 関数を呼び出さないでください **。CloseHandle**ファイル ハンドルを閉じます。
+**注:** ストリームを閉じるようにこれらの関数を使用している場合、基になるファイル記述子と OS ファイル ハンドル (またはソケット) は閉じられます、およびストリーム。 そのため、ファイルが最初に開かれている場合、ファイルとして処理ファイル記述子やを閉じるには**fclose**、呼び出し **_close**にファイル記述子を閉じます Win32 関数を呼び出さないでください **。CloseHandle**ファイル ハンドルを閉じます。
 
 **fclose**と **_fcloseall**他のスレッドによる干渉から保護するためのコードが含まれます。 ロックしないバージョンの**fclose**を参照してください **_fclose_nolock**します。
 

@@ -1,5 +1,5 @@
 ---
-title: Wm _ で始まるメッセージ ハンドラー:F-K
+title: Wm _ で始まるメッセージ ハンドラー:F - K
 ms.date: 11/27/2018
 f1_keywords:
 - ON_WM_FONTCHANGE
@@ -30,22 +30,22 @@ helpviewer_keywords:
 - ON_WM_KEYDOWN [MFC]
 ms.assetid: 0e7de191-1499-499f-859c-62742797808e
 ms.openlocfilehash: fcb343994498f65fb58be3a499ac3e0fdc2166aa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57282085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309279"
 ---
-# <a name="wm-message-handlers-f---k"></a>Wm _ で始まるメッセージ ハンドラー:F-K
+# <a name="wm-message-handlers-f---k"></a>Wm _ で始まるメッセージ ハンドラー:F - K
 
 左側で、次のマップ エントリは、右側の関数プロトタイプに対応します。
 
 |マップ エントリ|関数プロトタイプ|
 |---------------|------------------------|
 |ON_WM_FONTCHANGE()|afx_msg void [OnFontChange](../../mfc/reference/cwnd-class.md#onfontchange)();|
-|ON_WM_GETDLGCODE()|afx_msg UINT[組み込み](../../mfc/reference/cwnd-class.md#ongetdlgcode)();|
-|ON_WM_GETMINMAXINFO()|afx_msg void [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(MINMAXINFO *)。|
-|ON_WM_HELPINFO()|afx_msg BOOL [OnHelpInfo](../../mfc/reference/cwnd-class.md#onhelpinfo)(HELPINFO *)。|
+|ON_WM_GETDLGCODE()|afx_msg UINT [OnGetDlgCode](../../mfc/reference/cwnd-class.md#ongetdlgcode)();|
+|ON_WM_GETMINMAXINFO()|afx_msg void [OnGetMinMaxInfo](../../mfc/reference/cwnd-class.md#ongetminmaxinfo)(MINMAXINFO*);|
+|ON_WM_HELPINFO()|afx_msg BOOL [OnHelpInfo](../../mfc/reference/cwnd-class.md#onhelpinfo)(HELPINFO*);|
 |ON_WM_HOTKEY()|afx_msg void [OnHotKey](../../mfc/reference/cwnd-class.md#onhotkey)(UINT, UINT, UINT)|
 |ON_WM_HSCROLL()|afx_msg void [OnHScroll](../../mfc/reference/cwnd-class.md#onhscroll)(UINT, UINT, CWnd *)。|
 |ON_WM_HSCROLLCLIPBOARD()|afx_msg void [OnHScrollClipboard](../../mfc/reference/cwnd-class.md#onhscrollclipboard)(CWnd *, UINT, UINT)。|
@@ -58,7 +58,7 @@ ms.locfileid: "57282085"
 |ON_WM_INPUTLANGCHANGEREQUEST()|afx_msg void [OnInputLangChangeRequest](../../mfc/reference/cwnd-class.md#oninputlangchangerequest)(UINT, HKL)。|
 |ON_WM_KEYDOWN()|afx_msg void [OnKeyDown](../../mfc/reference/cwnd-class.md#onkeydown)(UINT, UINT, UINT)|
 |ON_WM_KEYUP()|afx_msg void [OnKeyUp](../../mfc/reference/cwnd-class.md#onkeyup)(UINT, UINT, UINT)|
-|ON_WM_KILLFOCUS()|afx_msg void [OnKillFocus](../../mfc/reference/cwnd-class.md#onkillfocus)(CWnd *)。|
+|ON_WM_KILLFOCUS()|afx_msg void [OnKillFocus](../../mfc/reference/cwnd-class.md#onkillfocus)(CWnd*);|
 
 ## <a name="see-also"></a>関連項目
 

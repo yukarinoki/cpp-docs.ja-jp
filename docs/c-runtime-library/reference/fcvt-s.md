@@ -26,11 +26,11 @@ helpviewer_keywords:
 - _fcvt_s function
 ms.assetid: 48671197-1d29-4c2b-a5d8-d2368f5f68a1
 ms.openlocfilehash: 51ff3c675f1f53aee9beab629b17193164a2e7eb
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50536852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62334867"
 ---
 # <a name="fcvts"></a>_fcvt_s
 
@@ -65,7 +65,7 @@ errno_t _fcvt_s(
 *sizeInBytes*<br/>
 バッファーのサイズ (バイト単位)。
 
-*値*<br/>
+*value*<br/>
 変換される数値。
 
 *count*<br/>
@@ -118,7 +118,7 @@ C++ では、テンプレートのオーバーロードによってこの関数�
 
 互換性の詳細については、「 [互換性](../../c-runtime-library/compatibility.md)」を参照してください。
 
-**ライブラリ:** [CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)のすべてのバージョンです。
+**ライブラリ:** すべてのバージョン、 [CRT ライブラリの機能](../../c-runtime-library/crt-library-features.md)します。
 
 ## <a name="example"></a>例
 

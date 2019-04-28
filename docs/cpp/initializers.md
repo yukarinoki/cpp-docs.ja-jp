@@ -9,11 +9,11 @@ helpviewer_keywords:
 - initializers, array element
 ms.assetid: ce301ed8-aa1c-47b2-bb39-9f0541b4af85
 ms.openlocfilehash: 1890899fb2ad63bff06d514ae8b18f9dc3ff9e21
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62183537"
 ---
 # <a name="initializers"></a>初期化子
 
@@ -175,7 +175,7 @@ int main() {
 }
 ```
 
-グローバルな静的オブジェクトの初期化の詳細については、[追加の起動に関する考慮事項](../cpp/additional-startup-considerations.md)を参照してください。
+グローバルな静的オブジェクトの初期化の詳細については、次を参照してください。[追加の起動に関する考慮事項](../cpp/additional-startup-considerations.md)します。
 
 ### <a name="value-initialization"></a>値の初期化
 

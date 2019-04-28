@@ -13,11 +13,11 @@ helpviewer_keywords:
 - DLLs [C++], creating
 ms.assetid: 0214dd41-35ad-43ab-b892-e636e038621a
 ms.openlocfilehash: c750fd94e21eec39a25acf216a452faaa277bf7c
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57811453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62320410"
 ---
 # <a name="noentry-no-entry-point"></a>/NOENTRY (エントリ ポイントなし)
 
@@ -27,13 +27,13 @@ ms.locfileid: "57811453"
 
 ## <a name="remarks"></a>Remarks
 
-/NOENTRY オプションは、実行可能コードが含まれていない、リソースだけの DLL を作成するために必要です。 詳細については、[Resource-Only DLL を作成する](../creating-a-resource-only-dll.md)を参照してください。
+/NOENTRY オプションは、実行可能コードが含まれていない、リソースだけの DLL を作成するために必要です。 詳細については、次を参照してください。 [Resource-Only DLL を作成する](../creating-a-resource-only-dll.md)します。
 
 このオプションを使用すると、`_main` 関数への参照が DLL ファイルにリンクされなくなります。
 
 ### <a name="to-set-this-linker-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのリンカー オプションを設定するには
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. 選択、**リンカー**フォルダー。
 
@@ -48,5 +48,5 @@ ms.locfileid: "57811453"
 ## <a name="see-also"></a>関連項目
 
 [リソースのみの DLL の作成](../creating-a-resource-only-dll.md)<br/>
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

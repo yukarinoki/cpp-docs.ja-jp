@@ -12,15 +12,15 @@ helpviewer_keywords:
 - hour values representation
 ms.assetid: 695853ed-b614-4575-b793-b8c287372038
 ms.openlocfilehash: bd63b400cad6efc3b3899c17a3bf835596b4008c
-ms.sourcegitcommit: dedd4c3cb28adec3793329018b9163ffddf890a4
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57750391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62235623"
 ---
 # <a name="date-type"></a>日付型
 
-日付型は、8 バイトの浮動小数点数を使用して実装されます。 日付は 1899 年 12 月 30 日 0 時として午前 0 時から始まる整数値の増分で表されます。 時間の値は、数値の小数部の絶対値として表現されます。 次の表は、それらの日付型の数値とと共にいくつかの日付を示しています。
+日付型は、8 バイトの浮動小数点数を使用して実装されます。 日付は 1899 年 12 月 30 日 0 時として午前 0 時から始まる整数値の増分で表されます。 時間の値は、数値の小数部分の絶対値で表されます。 次の表は、それらの日付型の数値とと共にいくつかの日付を示しています。
 
 |日付と時刻|表現|
 |-------------------|--------------------|

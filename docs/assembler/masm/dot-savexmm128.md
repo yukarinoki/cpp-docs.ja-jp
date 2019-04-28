@@ -7,11 +7,11 @@ helpviewer_keywords:
 - .SAVEXMM128 directive
 ms.assetid: 551eb472-b8d0-47b1-8d82-995d1f485723
 ms.openlocfilehash: c29ec47170c5e0f46f02d53f23ab477a79bbdc32
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50507902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62205226"
 ---
 # <a name="savexmm128"></a>.SAVEXMM128
 
@@ -27,7 +27,7 @@ ms.locfileid: "50507902"
 
 *オフセット*16 の倍数である必要があります。
 
-詳細については、[x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)を参照してください。
+詳細については、次を参照してください。 [x64 用 MASM (ml64.exe)](../../assembler/masm/masm-for-x64-ml64-exe.md)します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -2,15 +2,15 @@
 title: ARM64 ABI 規則の概要
 ms.date: 03/27/2019
 ms.openlocfilehash: 4c0f89f97529d4cd70e1449c90b131d25d30f9ee
-ms.sourcegitcommit: ac5c04b347e817eeece6e2c98e60236fc0e307a4
-ms.translationtype: MT
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58639447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195509"
 ---
 # <a name="overview-of-arm64-abi-conventions"></a>ARM64 ABI 規則の概要
 
-コンパイル時に Windows の基本的なアプリケーション バイナリ インターフェイス (ABI) と、ほとんどの 64 ビット モード (ARMv8 またはそれ以降のアーキテクチャ) の ARM プロセッサで実行は、ARM の標準 AArch64 EABI に従います。 この記事には、いくつかの主な前提条件と、EABI で記載するものとからの変更が強調表示されます。 32 ビットの ABI の詳細については、[概要の ARM ABI 規則](overview-of-arm-abi-conventions.md)を参照してください。 標準の ARM EABI の詳細については、次を参照してください。[アプリケーション バイナリ インターフェイス (ABI)、ARM アーキテクチャ用](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)(外部リンク)。
+コンパイル時に Windows の基本的なアプリケーション バイナリ インターフェイス (ABI) と、ほとんどの 64 ビット モード (ARMv8 またはそれ以降のアーキテクチャ) の ARM プロセッサで実行は、ARM の標準 AArch64 EABI に従います。 この記事には、いくつかの主な前提条件と、EABI で記載するものとからの変更が強調表示されます。 32 ビットの ABI の詳細については、次を参照してください。[概要の ARM ABI 規則](overview-of-arm-abi-conventions.md)します。 標準の ARM EABI の詳細については、次を参照してください。[アプリケーション バイナリ インターフェイス (ABI)、ARM アーキテクチャ用](http://infocenter.arm.com/help/index.jsp?topic=/com.arm.doc.subset.swdev.abi/index.html)(外部リンク)。
 
 ## <a name="definitions"></a>定義
 
@@ -223,7 +223,7 @@ Windows での既定のカーネル モード スタックは、6 つのペー�
 
 ## <a name="exception-unwinding"></a>例外アンワインド
 
-アンワインド コードを使用して、例外処理中にアンワインドが支援します。 アンワインド コードは、実行可能ファイルの .xdata セクションに格納されるバイトのシーケンスです。 呼び出し元のスタック フレームへのバックアップの準備として、関数のプロローグの効果に戻せるように抽象では、プロローグおよびエピローグの操作を記述します。 アンワインド コードの詳細については、[ARM64 例外処理](arm64-exception-handling.md)を参照してください。
+アンワインド コードを使用して、例外処理中にアンワインドが支援します。 アンワインド コードは、実行可能ファイルの .xdata セクションに格納されるバイトのシーケンスです。 呼び出し元のスタック フレームへのバックアップの準備として、関数のプロローグの効果に戻せるように抽象では、プロローグおよびエピローグの操作を記述します。 アンワインド コードの詳細については、次を参照してください。 [ARM64 例外処理](arm64-exception-handling.md)します。
 
 ARM EABI では、アンワインド コードを使用する例外アンワインド モデルも指定します。 ただし、表示された仕様はアンワインドが関数のプロローグまたはエピローグの途中で、PC である場合を処理する必要があります Windows では十分ではありません。
 
@@ -231,7 +231,7 @@ ARM EABI では、アンワインド コードを使用する例外アンワイ�
 
 ## <a name="cycle-counter"></a>サイクル カウンター
 
-すべて ARMv8 Cpu サイクル カウンターをサポートするために必要なユーザー モードなど、任意の例外レベルで読めるように Windows を構成する 64 ビット レジスタを登録します。 特別な PMCCNTR_EL0 経由でアクセスできるアセンブリのコードで MSR オペコードを使用して登録します。 または`_ReadStatusReg`C と C++ コードで組み込み。
+すべて ARMv8 Cpu サイクル カウンターをサポートするために必要なユーザー モードなど、任意の例外レベルで読めるように Windows を構成する 64 ビット レジスタを登録します。 特別な PMCCNTR_EL0 経由でアクセスできるアセンブリのコードで MSR オペコードを使用して登録します。 または、 `_ReadStatusReg` C で組み込み/C++コード。
 
 サイクル カウンターをここでは、実時間ではない、真のサイクル カウンターです。 カウント周波数はプロセッサの頻度によって異なります。 サイクル カウンターの頻度を把握する必要がありますと思われる場合は、サイクル カウンターを使用していることはできません。 使用する必要があります、ウォール クロック時間を測定する代わりに、`QueryPerformanceCounter`します。
 

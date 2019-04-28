@@ -34,11 +34,11 @@ helpviewer_keywords:
 - concurrent_vector class
 ms.assetid: a217b4ac-af2b-4d41-94eb-09a75ee28622
 ms.openlocfilehash: 7c2ca35239dfb3ce4c0f710259f54005ff9f3c94
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62224208"
 ---
 # <a name="concurrentvector-class"></a>concurrent_vector クラス
 
@@ -200,7 +200,7 @@ const_reference at(size_type _Index) const;
 
 関数のバージョン`at`以外を返す`const`の参照を使用して同時に別のスレッドから要素を書き込むことはできません。 さまざまな同期オブジェクトは、同時読み取りを同期し、同じデータ要素への書き込み操作を使用してください。
 
-メソッドはスロー`out_of_range`場合`_Index`が同時実行のベクターのサイズ以上と`range_error`ベクターの破損部分のインデックスが含まれる場合。 ベクターが維持される方法について詳しくは、[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)を参照してください。
+メソッドはスロー`out_of_range`場合`_Index`が同時実行のベクターのサイズ以上と`range_error`ベクターの破損部分のインデックスが含まれる場合。 ベクターが維持される方法について詳しくは、次を参照してください。[並列コンテナーとオブジェクト](../../../parallel/concrt/parallel-containers-and-objects.md)します。
 
 ##  <a name="back"></a> 戻る
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C3287
 ms.assetid: c1fa73d2-2c82-4136-a7da-0e75e3b420ad
 ms.openlocfilehash: ab0b93aa1a74ea79515e24ef2b1e289cf0227dac
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50538681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62222678"
 ---
 # <a name="compiler-error-c3287"></a>コンパイラ エラー C3287
 
@@ -19,7 +19,7 @@ ms.locfileid: "50538681"
 
 ユーザー定義のコレクション クラスには、 `MoveNext` と `Current`の定義を含める必要があります。
 
-詳細については、「 [方法: for each を使用してユーサー定義のコレクションを反復処理する](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md) 」を参照してください。
+「[方法:それぞれの反復 Over a User-Defined コレクション](../../dotnet/how-to-iterate-over-a-user-defined-collection-with-for-each.md)詳細についてはします。
 
 ## <a name="example"></a>例
 

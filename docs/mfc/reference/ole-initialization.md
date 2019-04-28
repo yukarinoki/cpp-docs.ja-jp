@@ -8,11 +8,11 @@ helpviewer_keywords:
 - OLE initialization
 ms.assetid: aa8a54a7-24c3-4344-b2c6-dbcf6084fa31
 ms.openlocfilehash: 3d49b37ffc2561fa9a51463a893ec2ba4f4fb725
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57304029"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62310276"
 ---
 # <a name="ole-initialization"></a>OLE の初期化
 
@@ -37,7 +37,7 @@ void AfxEnableControlContainer( );
 
 ### <a name="remarks"></a>Remarks
 
-(ActiveX コントロールと呼ばれるようになりました) OLE コントロールの詳細については、[ActiveX コントロールのトピック](../mfc-activex-controls.md)を参照してください。
+(ActiveX コントロールと呼ばれるようになりました) OLE コントロールの詳細については、次を参照してください。 [ActiveX コントロールのトピック](../mfc-activex-controls.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -59,7 +59,7 @@ BOOL AFXAPI AfxOleInit();
 
 MFC アプリケーションに対する OLE サポートを初期化するには、この関数を呼び出します。 この関数を呼び出すと、次のアクションが発生します。
 
-- 呼び出し元のアプリケーションの現在のアパートメントで COM ライブラリを初期化します。 詳細については、[OleInitialize](/windows/desktop/api/ole2/nf-ole2-oleinitialize)を参照してください。
+- 呼び出し元のアプリケーションの現在のアパートメントで COM ライブラリを初期化します。 詳細については、次を参照してください。 [OleInitialize](/windows/desktop/api/ole2/nf-ole2-oleinitialize)します。
 
 - メッセージ フィルター オブジェクトを作成を実装する、 [IMessageFilter](/windows/desktop/api/objidl/nn-objidl-imessagefilter)インターフェイス。 このメッセージ フィルターへの呼び出しでアクセスできる[AfxOleGetMessageFilter](application-control.md#afxolegetmessagefilter)します。
 

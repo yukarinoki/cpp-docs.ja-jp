@@ -7,11 +7,11 @@ helpviewer_keywords:
 - properties [MFC]
 ms.assetid: b678a53c-0d9e-476f-8aa0-23b80baaba46
 ms.openlocfilehash: 5e01854e7ae7acdc33275351d0d26a76dfeabc9b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57326414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62324325"
 ---
 # <a name="mfc-activex-controls-properties"></a>MFC ActiveX コントロール:プロパティ
 
@@ -27,13 +27,13 @@ ActiveX コントロールには、在庫とカスタム メソッドとプロ�
 
 次の記事では、さらに詳しく ActiveX コントロールのプロパティについて説明します。
 
-- [MFC ActiveX コントロール:ストック プロパティの追加](../mfc/mfc-activex-controls-adding-stock-properties.md)
+- [MFC ActiveX コントロール: ストック プロパティの追加](../mfc/mfc-activex-controls-adding-stock-properties.md)
 
-- [MFC ActiveX コントロール:カスタム プロパティの追加](../mfc/mfc-activex-controls-adding-custom-properties.md)
+- [MFC ActiveX コントロール: カスタム プロパティの追加](../mfc/mfc-activex-controls-adding-custom-properties.md)
 
-- [MFC ActiveX コントロール:高度なプロパティの実装](../mfc/mfc-activex-controls-advanced-property-implementation.md)
+- [MFC ActiveX コントロール: 高度なプロパティの実装](../mfc/mfc-activex-controls-advanced-property-implementation.md)
 
-- [MFC ActiveX コントロール:アンビエント プロパティへのアクセス](../mfc/mfc-activex-controls-accessing-ambient-properties.md)
+- [MFC ActiveX コントロール: アンビエント プロパティへのアクセス](../mfc/mfc-activex-controls-accessing-ambient-properties.md)
 
 ## <a name="see-also"></a>関連項目
 

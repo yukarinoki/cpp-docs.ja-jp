@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Visual C++ projects, types
 ms.assetid: 7337987e-1e7b-4120-9a4b-94f0401f15e7
 ms.openlocfilehash: cac194ed2c830541711161dc139a42ed0529340f
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62316757"
 ---
 # <a name="c-project-templates"></a>C++ プロジェクト テンプレート
 
@@ -46,7 +46,7 @@ Visual Studio に含まれるプロジェクト テンプレートは、製品�
 |[メイクファイル プロジェクト](creating-a-makefile-project.md)|Visual Studio プロジェクトに Windows のメイクファイルをラップするためのプロジェクトです。 (メイクファイルとしてを開くが Visual Studio を使用して[フォルダーを開く](../open-folder-projects-cpp.md)します。|
 |共有アイテム プロジェクト|コード ファイルまたは複数のプロジェクト間でリソース ファイルを共有するためのプロジェクトです。 このプロジェクトの種類では、実行可能ファイルは生成されません。|
 
-### <a name="atl"></a>ATL
+### <a name="atl"></a>[ATL]
 
 |プロジェクト テンプレート|説明|
 |----------------------|-----------------------------|

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - ATL Simple Object Wizard, options
 ms.assetid: 125fe179-942d-4181-8b82-33e92e1fd779
 ms.openlocfilehash: 327c78b00cbe69fcce4f055b0ae63c4dc2e5a7d9
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57273395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62197304"
 ---
 # <a name="options-atl-simple-object-wizard"></a>オプション、ATL シンプル オブジェクト ウィザード
 
 効率の向上およびオブジェクトのエラーのサポートを設計するには、ATL シンプル オブジェクト ウィザードのこのページを使用します。
 
-ATL プロジェクトや ATL COM クラスの詳細については、[ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)を参照してください。
+ATL プロジェクトや ATL COM クラスの詳細については、次を参照してください。 [ATL COM デスクトップ コンポーネント](../../atl/atl-com-desktop-components.md)します。
 
 - **スレッド モデル**
 

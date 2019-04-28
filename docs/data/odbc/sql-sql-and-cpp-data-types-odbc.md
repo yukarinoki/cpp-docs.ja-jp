@@ -7,11 +7,11 @@ helpviewer_keywords:
 - SQL [C++], vs. C++ data types
 ms.assetid: 066e0070-d4da-435c-9c4b-f7cab3352c86
 ms.openlocfilehash: 3efa36342b7d16968113acd818a7a1386e4cefcc
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59024349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329888"
 ---
 # <a name="sql-sql-and-c-data-types-odbc"></a>SQL:SQL と C++ のデータ型 (ODBC)
 
@@ -57,4 +57,4 @@ MFC ODBC データベース クラスと、Microsoft SQL Server ODBC ドライ�
 ## <a name="see-also"></a>関連項目
 
 [SQL](../../data/odbc/sql.md)<br/>
-[SQL:SQL の直接呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)
+[SQL: SQL の直接呼び出し (ODBC)](../../data/odbc/sql-making-direct-sql-calls-odbc.md)

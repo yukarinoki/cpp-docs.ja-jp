@@ -31,11 +31,11 @@ helpviewer_keywords:
 - clog10l function
 ms.assetid: 2ddae00d-ef93-4441-add3-f4d58358401b
 ms.openlocfilehash: 195f4be80f0320e83cc9455a598185ce281bbf59
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50506913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335455"
 ---
 # <a name="clog10-clog10f-clog10l"></a>clog10、clog10f、clog10l
 
@@ -73,7 +73,7 @@ _Lcomplex clog10( _Lcomplex z );  // C++ only
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **clog10**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**clog10**は、 **_Dcomplex**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**clog10**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**clog10**は、 **_Dcomplex**値。
 
 ## <a name="requirements"></a>必要条件
 

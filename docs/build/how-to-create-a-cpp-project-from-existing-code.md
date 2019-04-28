@@ -11,17 +11,17 @@ f1_keywords:
 - vc.appwiz.importwiz.releasesettings
 ms.assetid: e328a938-395c-48ea-9e35-dd433de12b31
 ms.openlocfilehash: 1658e19595d8cfc7966ca881abfdd2aa8acf76ab
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57827351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62189043"
 ---
 # <a name="how-to-create-a-c-project-from-existing-code"></a>方法: 既存のコードから C++ プロジェクトを作成する
 
 Visual Studio で、**既存コード ファイルからの新しいプロジェクトの作成**ウィザードを使用すると、既存のコード ファイルを C++ プロジェクトに移植できます。 このウィザードによって、MSBuild システムを利用してソース ファイルとビルド構成を管理するプロジェクト ソリューションが作成されます。 これは複雑なフォルダー階層がない、比較的単純なプロジェクトに最適です。 このウィザードは、Visual Studio の以前の Express Edition では使用できません。 
 
-既存のコード ファイルを C++ プロジェクトに移植することで、IDE に組み込まれているネイティブ MSBuild プロジェクト管理機能を利用できます。 nmake メイクファイル、CMake、代替など、既存のビルド システムを使用する場合、代わりに [フォルダーを開く] または CMake のオプションを利用できます。 詳細については、[C++ 用のフォルダーを開くプロジェクト](open-folder-projects-cpp.md)または[Visual Studio で CMake プロジェクト](cmake-projects-in-visual-studio.md)を参照してください。 いずれのオプションでも、[IntelliSense](/visualstudio/ide/using-intellisense) や[プロジェクト プロパティ](working-with-project-properties.md)など、IDE 機能を利用できます。
+既存のコード ファイルを C++ プロジェクトに移植することで、IDE に組み込まれているネイティブ MSBuild プロジェクト管理機能を利用できます。 nmake メイクファイル、CMake、代替など、既存のビルド システムを使用する場合、代わりに [フォルダーを開く] または CMake のオプションを利用できます。 詳細については、次を参照してください。 [C++ 用のフォルダーを開くプロジェクト](open-folder-projects-cpp.md)または[Visual Studio で CMake プロジェクト](cmake-projects-in-visual-studio.md)します。 いずれのオプションでも、[IntelliSense](/visualstudio/ide/using-intellisense) や[プロジェクト プロパティ](working-with-project-properties.md)など、IDE 機能を利用できます。
 
 ### <a name="to-create-a-c-project-from-existing-code"></a>既存のコードから C++ プロジェクトを作成するには
 

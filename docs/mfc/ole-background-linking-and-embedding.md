@@ -11,11 +11,11 @@ helpviewer_keywords:
 - OLE items [MFC], types
 ms.assetid: 11107711-eb96-4099-8f5c-7910bb3ecb75
 ms.openlocfilehash: 02607df2a8fa086c5751f2b446e349a3efdbcd20
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57280967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186803"
 ---
 # <a name="ole-background-linking-and-embedding"></a>OLE の背景知識:リンクと埋め込み
 
@@ -30,6 +30,6 @@ ms.locfileid: "57280967"
 ## <a name="see-also"></a>関連項目
 
 [OLE の背景知識](../mfc/ole-background.md)<br/>
-[OLE の背景知識:コンテナーとサーバー](../mfc/ole-background-containers-and-servers.md)<br/>
-[コンテナー:クライアント アイテム](../mfc/containers-client-items.md)<br/>
-[サーバー:サーバー項目](../mfc/servers-server-items.md)
+[OLE の背景知識: コンテナーとサーバー](../mfc/ole-background-containers-and-servers.md)<br/>
+[コンテナー: クライアント アイテム](../mfc/containers-client-items.md)<br/>
+[サーバー: サーバー アイテム](../mfc/servers-server-items.md)

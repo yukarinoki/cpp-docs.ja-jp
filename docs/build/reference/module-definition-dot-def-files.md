@@ -7,11 +7,11 @@ helpviewer_keywords:
 - .def files
 ms.assetid: 08c0bc28-c5d2-47aa-9624-7fc68bcaa4d8
 ms.openlocfilehash: 0047f24722644cd9a68bbbf827ced26ad085d4c1
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321229"
 ---
 # <a name="module-definition-def-files"></a>モジュール定義 (.def) ファイル
 
@@ -21,7 +21,7 @@ ms.locfileid: "57812240"
 
 エクスポートを持たない .exe ファイルを作成する場合、.def ファイルを使用すると、出力ファイルの大規模かつ低速の読み込みが作成されます。
 
-例については、[DEF ファイルを使用する DLL からエクスポート](../exporting-from-a-dll-using-def-files.md)を参照してください。
+例については、次を参照してください。 [DEF ファイルを使用する DLL からエクスポート](../exporting-from-a-dll-using-def-files.md)します。
 
 詳細については、次のセクションを参照してください。
 

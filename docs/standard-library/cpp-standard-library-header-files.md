@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Visual C++, header files
 ms.assetid: e7bf497a-0f63-48d0-9b54-cb0eef4073c4
 ms.openlocfilehash: a94e419e07194ffb8903cd474f878b0e8553356c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50496357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210737"
 ---
 # <a name="c-standard-library-header-files"></a>C++ 標準ライブラリのヘッダー ファイル
 
@@ -33,7 +33,7 @@ C++ の標準ライブラリと拡張機能のヘッダー ファイル (カテ�
 |アダプターのコンテナー|[\<queue>](../standard-library/queue.md)、[\<stack>](../standard-library/stack.md)|
 |[エラーと例外処理](../cpp/errors-and-exception-handling-modern-cpp.md)|[\<exception>](../standard-library/exception.md)、[\<stdexcept>](../standard-library/stdexcept.md)、[<system_error>](../standard-library/system-error.md)|
 |[I/O と書式設定](../cpp/string-and-i-o-formatting-modern-cpp.md)|[\<filesystem>](../standard-library/filesystem.md)、[\<fstream>](../standard-library/fstream.md)、[\<iomanip>](../standard-library/iomanip.md)、[\<ios>](../standard-library/ios.md)、[\<iosfwd>](../standard-library/iosfwd.md)、[\<iostream>](../standard-library/iostream.md)、[\<istream>](../standard-library/istream.md)、[\<ostream>](../standard-library/ostream.md)、[\<sstream>](../standard-library/sstream.md)、[\<streambuf>](../standard-library/streambuf.md)、[\<strstream>](../standard-library/strstream.md)|
-|Iterators|[\<iterator>](../standard-library/iterator.md)|
+|反復子|[\<iterator>](../standard-library/iterator.md)|
 |ローカリゼーション|[\<codecvt>](../standard-library/codecvt.md)、[\<cvt/wbuffer>](../standard-library/cvt-wbuffer.md)、[\<cvt/wstring>](../standard-library/cvt-wstring.md)、[\<locale>](../standard-library/locale.md)|
 |数値演算と numerics|[\<complex>](../standard-library/complex.md)、[\<limits>](../standard-library/limits.md)、[\<numeric>](../standard-library/numeric.md)、[\<random>](../standard-library/random.md)、[\<ratio>](../standard-library/ratio.md)、[\<valarray>](../standard-library/valarray.md)|
 |[メモリ管理](../cpp/smart-pointers-modern-cpp.md)|[\<allocators>](../standard-library/allocators-header.md)、[\<memory>](../standard-library/memory.md)、[\<new>](../standard-library/new.md)、[<scoped_allocator>](../standard-library/scoped-allocator.md)|

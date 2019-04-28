@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WM_LBUTTONDOWN [MFC]
 ms.assetid: 0d0fa64c-6418-4baf-ab7f-2d16ca039230
 ms.openlocfilehash: a6a9c9848e21129d4e6a8ce300e8750b4a0c6126
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57281045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62308850"
 ---
 # <a name="rubber-banding-and-trackers"></a>ラバー バンド処理とトラッカー
 
@@ -27,9 +27,9 @@ ms.locfileid: "57281045"
 
 ラバー バンド処理中にトラッカーの元に戻すことの向きを許可する場合を呼び出す必要があります[CRectTracker::TrackRubberBand](../mfc/reference/crecttracker-class.md#trackrubberband) 3 番目のパラメーターを設定して**TRUE**します。 向きを元に戻すことを許可することが原因場合がありますに注意してください。[裏返し](../mfc/reference/crecttracker-class.md#m_rect)反転になります。 これへの呼び出しによって修正できる[CRect::NormalizeRect](../atl-mfc-shared/reference/crect-class.md#normalizerect)します。
 
-詳細については、[コンテナー クライアント アイテム](../mfc/containers-client-items.md)と[をカスタマイズするドラッグ アンド ドロップ](../mfc/drag-and-drop-customizing.md)を参照してください。
+詳細については、次を参照してください。[コンテナー クライアント アイテム](../mfc/containers-client-items.md)と[をカスタマイズするドラッグ アンド ドロップ](../mfc/drag-and-drop-customizing.md)します。
 
 ## <a name="see-also"></a>関連項目
 
-[トラッカー:OLE アプリケーションでのトラッカーの実装](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
+[トラッカー: OLE アプリケーションでのトラッカーの実装](../mfc/trackers-implementing-trackers-in-your-ole-application.md)<br/>
 [CRectTracker クラス](../mfc/reference/crecttracker-class.md)

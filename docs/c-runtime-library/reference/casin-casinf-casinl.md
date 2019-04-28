@@ -31,11 +31,11 @@ helpviewer_keywords:
 - casinl function
 ms.assetid: b75d1455-7b1e-43b0-bd46-c530be190be9
 ms.openlocfilehash: 209c3da6d6ed03cb5a5b129003c999b002a1a6b7
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50539621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62335595"
 ---
 # <a name="casin-casinf-casinl"></a>casin、casinf、casinl
 
@@ -72,7 +72,7 @@ _Lcomplex casinl(
 
 ## <a name="remarks"></a>Remarks
 
-オーバー ロードを呼び出すことができますので、C++ ではオーバー ロード、 **casin**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**casin**は、 **_Dcomplex**値。
+C++では、オーバー ロードのオーバー ロードを呼び出すことができます**casin**を受け取って返す **_Fcomplex**と **_Lcomplex**値。 C プログラムで**casin**は、 **_Dcomplex**値。
 
 ## <a name="requirements"></a>必要条件
 

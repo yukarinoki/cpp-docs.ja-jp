@@ -20,11 +20,11 @@ helpviewer_keywords:
 - tree controls [MFC], styles
 ms.assetid: f43faebd-a355-479e-888a-bf0673d5e1b4
 ms.openlocfilehash: d03961c1c905689af5894897a59262c8f00e73fa
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290766"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62181524"
 ---
 # <a name="tree-control-styles"></a>ツリー コントロールのスタイル
 
@@ -36,7 +36,7 @@ ms.locfileid: "57290766"
 
 ツリー コントロールを持つ、**切り替え**スタイルは、各親項目の左側にボタンを追加します。 ユーザーを展開または親項目をダブルクリックする代わりに子項目を折りたたむボタンをクリックできます。 **切り替え**ボタンは、階層のルートにある項目を追加しません。 これを行うには、結合する必要があります**線でつなぐ**、**ルート項目**、および**切り替え**します。
 
-**TVS_EDITLABELS**スタイルでは、ユーザーは、ツリー コントロール項目のラベルを編集します。 ラベルの編集に関する詳細については、[ツリー コントロールのラベルの編集](../mfc/tree-control-label-editing.md)このトピックで後述を参照してください。
+**TVS_EDITLABELS**スタイルでは、ユーザーは、ツリー コントロール項目のラベルを編集します。 ラベルの編集に関する詳細については、次を参照してください。[ツリー コントロールのラベルの編集](../mfc/tree-control-label-editing.md)このトピックで後述します。
 
 **TVS_NOTOOLTIPS**スタイルは、ツリー ビュー コントロールの自動ツール ヒント機能を無効にします。 この機能は、全体のタイトルに現在表示されていない場合は、マウスのカーソルの下の項目のタイトルを含む、ツール ヒントを自動的に表示されます。
 

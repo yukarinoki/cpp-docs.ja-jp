@@ -5,11 +5,11 @@ helpviewer_keywords:
 - synchronization data structures
 ms.assetid: d612757d-e4b7-4019-a627-f853af085b8b
 ms.openlocfilehash: f9b949e7782c4b9ca302e9e623ce5f09061c39ef
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57301884"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62185959"
 ---
 # <a name="synchronization-data-structures"></a>同期データ構造
 
@@ -114,4 +114,4 @@ ms.locfileid: "57301884"
 Windows API が提供する同期データ構造の動作を比較します。
 
 [コンカレンシー ランタイム](../../parallel/concrt/concurrency-runtime.md)<br/>
-並列プログラミングを容易にするコンカレンシー ランタイムについて説明します。また、関連トピックへのリンクを示します。
+並列プログラミングを容易にする同時実行ランタイムについて説明します。また、関連トピックへのリンクを示します。

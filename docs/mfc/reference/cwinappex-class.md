@@ -119,11 +119,11 @@ helpviewer_keywords:
 - CWinAppEx [MFC], m_bForceImageReset
 ms.assetid: a3d3e053-3e22-463f-9444-c73abb1bb9d7
 ms.openlocfilehash: c222567703d0e57480c00f6f2bf9e78f16979150
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62323261"
 ---
 # <a name="cwinappex-class"></a>CWinAppEx クラス
 
@@ -369,7 +369,7 @@ BOOL EnableUserTools(
 
 ユーザーは、新しい項目を追加するたびに、フレームワークは、新しいオブジェクトを作成します。 新しいオブジェクトのクラス型によって定義されます*pToolRTC*します。 *PToolRTC*クラス型から派生する必要があります、 [CUserTool クラス](../../mfc/reference/cusertool-class.md)します。
 
-ユーザー ツールとアプリケーションに組み込む方法の詳細については、[ユーザー定義のツール](../../mfc/user-defined-tools.md)を参照してください。
+ユーザー ツールとアプリケーションに組み込む方法の詳細については、次を参照してください。[ユーザー定義のツール](../../mfc/user-defined-tools.md)します。
 
 ##  <a name="exitinstance"></a>  CWinAppEx::ExitInstance
 
@@ -992,7 +992,7 @@ virtual BOOL LoadWindowPlacement(
 [out]最小化されたウィンドウと最小化されたウィンドウと、復元されたウィンドウの間のオペレーティング システムのスイッチの位置を制御するフラグ。
 
 *nShowCmd*<br/>
-[out]ウィンドウの表示状態を指定する整数。 使用可能な値の詳細については、[また](../../mfc/reference/cwnd-class.md#showwindow)を参照してください。
+[out]ウィンドウの表示状態を指定する整数。 使用可能な値の詳細については、次を参照してください。[また](../../mfc/reference/cwnd-class.md#showwindow)します。
 
 ### <a name="return-value"></a>戻り値
 
@@ -1000,7 +1000,7 @@ virtual BOOL LoadWindowPlacement(
 
 ### <a name="remarks"></a>Remarks
 
-既定では、MFC 自動的に読み込まれます直前の位置と、メイン フレーム ウィンドウの状態、アプリケーションの起動時にします。 この情報をレジストリに格納する方法の詳細については、[CWinAppEx::StoreWindowPlacement](#storewindowplacement)を参照してください。
+既定では、MFC 自動的に読み込まれます直前の位置と、メイン フレーム ウィンドウの状態、アプリケーションの起動時にします。 この情報をレジストリに格納する方法の詳細については、次を参照してください。 [CWinAppEx::StoreWindowPlacement](#storewindowplacement)します。
 
 メイン フレーム ウィンドウに関する追加情報をロードする場合は、このメソッドをオーバーライドします。
 
@@ -1079,7 +1079,7 @@ TRUE の場合、フレームワークは、コマンドを検索します。そ
 
 ### <a name="remarks"></a>Remarks
 
-カスタムのマウスの動作をサポートするためにしたメッセージを処理すると、この関数を呼び出す必要があります。 このメソッドでは、によって提供されるビューの ID に関連付けられているコマンドを実行します。 *iViewId*します。 カスタムのマウスの動作の詳細については、[キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)を参照してください。
+カスタムのマウスの動作をサポートするためにしたメッセージを処理すると、この関数を呼び出す必要があります。 このメソッドでは、によって提供されるビューの ID に関連付けられているコマンドを実行します。 *iViewId*します。 カスタムのマウスの動作の詳細については、次を参照してください。[キーボードとマウスのカスタマイズ](../../mfc/keyboard-and-mouse-customization.md)します。
 
 ##  <a name="onworkspaceidle"></a>  CWinAppEx::OnWorkspaceIdle
 
@@ -1265,7 +1265,7 @@ virtual BOOL StoreWindowPlacement(
 [in]最小化されたウィンドウと最小化されたウィンドウと、復元されたウィンドウの間のオペレーティング システムのスイッチの位置を制御するフラグ。
 
 *nShowCmd*<br/>
-[in]ウィンドウの表示状態を指定する整数。 使用可能な値の詳細については、[また](../../mfc/reference/cwnd-class.md#showwindow)を参照してください。
+[in]ウィンドウの表示状態を指定する整数。 使用可能な値の詳細については、次を参照してください。[また](../../mfc/reference/cwnd-class.md#showwindow)します。
 
 *rectNormalPosition*<br/>
 [in]復元された状態にあるときに、メイン フレーム ウィンドウの座標を格納する四角形。
@@ -1276,7 +1276,7 @@ virtual BOOL StoreWindowPlacement(
 
 ### <a name="remarks"></a>Remarks
 
-MFC では、既定では、位置と、アプリケーションが終了する前に、メイン フレーム ウィンドウの状態が自動的に保存します。 この情報は、アプリケーションの既定のレジストリの場所に WindowPlacement キーの下の Windows レジストリに格納されます。 アプリケーションの既定のレジストリの場所の詳細については、[CWinAppEx::GetRegistryBase](#getregistrybase)を参照してください。
+MFC では、既定では、位置と、アプリケーションが終了する前に、メイン フレーム ウィンドウの状態が自動的に保存します。 この情報は、アプリケーションの既定のレジストリの場所に WindowPlacement キーの下の Windows レジストリに格納されます。 アプリケーションの既定のレジストリの場所の詳細については、次を参照してください。 [CWinAppEx::GetRegistryBase](#getregistrybase)します。
 
 メイン フレーム ウィンドウに関する追加情報を格納する場合は、このメソッドをオーバーライドします。
 

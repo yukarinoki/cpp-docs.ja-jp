@@ -7,11 +7,11 @@ helpviewer_keywords:
 - event maps [MFC]
 ms.assetid: 1ed53aee-bc53-43cd-834a-6fb935c0d29b
 ms.openlocfilehash: 512170d7eaa891b3616ca1ea56c29a8bb5cccda9
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50492240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322242"
 ---
 # <a name="event-maps"></a>イベント マップ
 
@@ -21,7 +21,7 @@ Microsoft Foundation Class ライブラリには、イベントを発生させ�
 
 [!code-cpp[NVC_MFCAxCtl#16](../../mfc/reference/codesnippet/cpp/event-maps_1.cpp)]
 
-`EVENT_STOCK_CLICK`マクロでは、コントロールが在庫マウスが検出されるたびにイベントをクリックを起動することを示します。 その他のストック イベントのより詳細な一覧は、記事を参照してください。 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)します。 マクロは、カスタム イベントを示すために使用できます。
+`EVENT_STOCK_CLICK`マクロでは、コントロールが在庫マウスが検出されるたびにイベントをクリックを起動することを示します。 その他のストック イベントのより詳細な一覧は、記事を参照してください。 [ActiveX コントロール。イベント](../../mfc/mfc-activex-controls-events.md)します。 マクロは、カスタム イベントを示すために使用できます。
 
 イベント マップ マクロは重要ですが、一般に挿入しないに直接します。 これは、ため、[プロパティ] ウィンドウがイベント発生関数を関連付けるイベントを使用すると、ソース ファイルでイベント マップ エントリが自動的に作成されます。 編集したり、イベント マップ エントリを追加するとき、[プロパティ] ウィンドウを使用することができます。
 
@@ -63,7 +63,7 @@ DECLARE_EVENT_MAP()
 
 クラスの宣言の最後に DECLARE_EVENT_MAP マクロを使用します。 次に、クラスのメンバー関数を定義する .cpp ファイルでを使用して、BEGIN_EVENT_MAP マクロ、マクロのエントリの各コントロールのイベント、および END_EVENT_MAP マクロのイベント リストの末尾を宣言します。
 
-イベント マップの詳細については、記事を参照してください。 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)します。
+イベント マップの詳細については、記事を参照してください。 [ActiveX コントロール。イベント](../../mfc/mfc-activex-controls-events.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -89,7 +89,7 @@ BEGIN_EVENT_MAP(theClass,  baseClass)
 
 クラスのメンバー関数を定義する実装 (.cpp) ファイル、BEGIN_EVENT_MAP マクロでは、イベントのマップを開始し、イベントの各マクロのエントリを追加 END_EVENT_MAP マクロを持つイベントのマップを完了します。
 
-イベント マップと BEGIN_EVENT_MAP マクロの詳細については、この記事を参照してください。 [ActiveX コントロール: イベント](../../mfc/mfc-activex-controls-events.md)します。
+イベント マップと BEGIN_EVENT_MAP マクロの詳細については、この記事を参照してください。 [ActiveX コントロール。イベント](../../mfc/mfc-activex-controls-events.md)します。
 
 ### <a name="requirements"></a>必要条件
 
@@ -128,7 +128,7 @@ EVENT_CUSTOM(pszName, pfnFire,  vtsParams)
 
 ### <a name="remarks"></a>Remarks
 
-*VtsParams*パラメーターが空白で区切られた一覧から値の`VTS_`定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例えば:
+*VtsParams*パラメーターが空白で区切られた一覧から値の`VTS_`定数。 1 つ以上のスペース (コンマではない) で区切られたこれらの値は、関数のパラメーター リストを指定します。 例:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 
@@ -201,7 +201,7 @@ EVENT_CUSTOM_ID(
 
 ### <a name="remarks"></a>Remarks
 
-*VtsParams*引数は、スペースで区切られたリストから値の`VTS_`定数。 スペース、いないのコンマで区切られたこれらの値の 1 つ以上の関数のパラメーター リストを指定します。 例えば:
+*VtsParams*引数は、スペースで区切られたリストから値の`VTS_`定数。 スペース、いないのコンマで区切られたこれらの値の 1 つ以上の関数のパラメーター リストを指定します。 例:
 
 [!code-cpp[NVC_MFCActiveXControl#13](../../mfc/codesnippet/cpp/event-maps_2.cpp)]
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - operators [MASM]
 ms.assetid: c069cab7-d6b0-4f82-a6ce-0ca3fc7e6428
 ms.openlocfilehash: cb97c5dcb640b8d8592d842afd7dbb8cf9d0852c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50430460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210815"
 ---
 # <a name="masm-operators-reference"></a>MASM 演算子リファレンス
 
@@ -19,7 +19,7 @@ ms.locfileid: "50430460"
 ||||
 |-|-|-|
 |[* (乗算)](operator-multiply.md)|[+ (加算)](operator-add.md)|[-(減算または否定)](operator-subtract-2.md)|
-|[.(フィールド)](operator-dot.md)|[/(除算)](operator-subtract-1.md)|[&#91;&#93;(インデックス)](operator-brackets.md)|
+|[.(フィールド)](operator-dot.md)|[/ (divide)](operator-subtract-1.md)|[&#91;&#93;(インデックス)](operator-brackets.md)|
 |[MOD (剰余)](operator-mod.md)|||
 
 ## <a name="control-flow"></a>制御フロー
@@ -68,7 +68,7 @@ ms.locfileid: "50430460"
 |[EQ (等しい)](operator-eq.md)|[GE (以上)](operator-ge.md)|[GT (より大きい)](operator-gt.md)|
 |[LE (以下)](operator-le.md)|[LT (より小さい)](operator-lt.md)|[NE (等しくない)](operator-ne.md)|
 
-## <a name="segment"></a>セグメント
+## <a name="segment"></a>Segment
 
 |||
 |-|-|

@@ -1,5 +1,5 @@
 ---
-title: MIDL プロパティ ページ:全般
+title: '[MIDL] プロパティ ページ: 全般'
 ms.date: 11/04/2016
 f1_keywords:
 - VC.Project.VCMidlTool.PreprocessorDefinitions
@@ -16,13 +16,13 @@ helpviewer_keywords:
 - MIDL, property pages
 ms.assetid: 0692484c-a7e6-4270-8df7-981589368399
 ms.openlocfilehash: 2ce9e9a713a3d62bf64e5eb4e596c38148eef81e
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57826268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62321164"
 ---
-# <a name="midl-property-pages-general"></a>MIDL プロパティ ページ:全般
+# <a name="midl-property-pages-general"></a>[MIDL] プロパティ ページ: 全般
 
 **MIDL** フォルダーの **[全般]** プロパティ ページでは、次の MIDL コンパイラ オプションを指定します。
 

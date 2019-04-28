@@ -5,17 +5,17 @@ helpviewer_keywords:
 - message passing functions
 ms.assetid: 42477c9e-a8a6-4dc4-a98e-93c6dc8c4dd0
 ms.openlocfilehash: 1a1790a08403bcc1d016a39e27c7a121c288af4d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57303951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62185999"
 ---
 # <a name="message-passing-functions"></a>メッセージ パッシング関数
 
 Asynchronous Agents Library では、コンポーネント間でメッセージを渡すことができます関数がいくつか提供します。
 
-これらのメッセージ パッシング関数は、さまざまなメッセージ ブロックの型で使用されます。 同時実行ランタイムによって定義されているメッセージ ブロックの型の詳細については、[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)を参照してください。
+これらのメッセージ パッシング関数は、さまざまなメッセージ ブロックの型で使用されます。 同時実行ランタイムによって定義されているメッセージ ブロックの型の詳細については、次を参照してください。[非同期メッセージ ブロック](../../parallel/concrt/asynchronous-message-blocks.md)します。
 
 ##  <a name="top"></a> セクション
 

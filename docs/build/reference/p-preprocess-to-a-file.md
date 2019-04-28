@@ -13,11 +13,11 @@ helpviewer_keywords:
 - preprocessing output files
 ms.assetid: 123ee54f-8219-4a6f-9876-4227023d83fc
 ms.openlocfilehash: 5e6302d90647bce7e37c47a619e814cab300aaee
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57813761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62319981"
 ---
 # <a name="p-preprocess-to-a-file"></a>/P (プリプロセス出力のファイルへの書き込み)
 
@@ -35,11 +35,11 @@ C および C++ ソース ファイルを前処理し、ファイルを前処理
 
 **/P**追加`#line`ディレクティブを先頭と末尾各インクルード ファイルの条件付きコンパイルのプリプロセッサ ディレクティブによって削除された行に出力します。 これらのディレクティブは、前処理済みファイルの行を再設定します。 その結果、処理の後のステージ中に生成されたエラーは、前処理済みファイル内の行ではなく、元のソース ファイルの行番号を参照してください。 生成を抑制する`#line`ディレクティブを使用して、 [/EP (#line ディレクティブなしの stdout に前処理する)](ep-preprocess-to-stdout-without-hash-line-directives.md)だけでなく **/P**します。
 
-**/P**オプションはコンパイルを中止します。 使用する場合でも、.obj ファイルは生成されません[/Fo (オブジェクト ファイル名)](fo-object-file-name.md)します。 Compilation の前処理済みファイルを再送信する必要があります。 **/P**から出力ファイルも生成されません、 **/FA**、 **/Fa**、および **/Fm**オプション。 詳細については、[/FA、/Fa (リスティング ファイル)](fa-fa-listing-file.md)と[/Fm (マップ ファイルの名前)](fm-name-mapfile.md)を参照してください。
+**/P**オプションはコンパイルを中止します。 使用する場合でも、.obj ファイルは生成されません[/Fo (オブジェクト ファイル名)](fo-object-file-name.md)します。 Compilation の前処理済みファイルを再送信する必要があります。 **/P**から出力ファイルも生成されません、 **/FA**、 **/Fa**、および **/Fm**オプション。 詳細については、次を参照してください。 [/FA、/Fa (リスティング ファイル)](fa-fa-listing-file.md)と[/Fm (マップ ファイルの名前)](fm-name-mapfile.md)します。
 
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境において、このコンパイラ オプションを設定する方法
 
-1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、[Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)を参照してください。
+1. プロジェクトの **[プロパティ ページ]** ダイアログ ボックスを開きます。 詳細については、次を参照してください。 [Visual Studio での設定の C++ コンパイラとビルド プロパティ](../working-with-project-properties.md)します。
 
 1. **[C/C++]** フォルダーをクリックします。
 
@@ -62,5 +62,5 @@ CL /P /C ADD.C
 ## <a name="see-also"></a>関連項目
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
 [/Fi (出力ファイル名の前処理)](fi-preprocess-output-file-name.md)

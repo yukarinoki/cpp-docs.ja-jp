@@ -5,11 +5,11 @@ helpviewer_keywords:
 - OLE, about OLE
 ms.assetid: 5f654eb5-66b1-40c9-9215-bb85356a67f8
 ms.openlocfilehash: 2501373c2ff5904343a6522e4fb18663f5de3843
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57294422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186590"
 ---
 # <a name="ole-background"></a>OLE の背景知識
 
@@ -58,13 +58,13 @@ OLE には、アプリケーション間でシームレスな相互作用の目�
 
 次の記事では、さらに重要な OLE トピックの一部がについて説明します。
 
-- [OLE の背景知識:リンクと埋め込み](../mfc/ole-background-linking-and-embedding.md)
+- [OLE の背景知識: リンクと埋め込み](../mfc/ole-background-linking-and-embedding.md)
 
-- [OLE の背景知識:コンテナーとサーバー](../mfc/ole-background-containers-and-servers.md)
+- [OLE の背景知識: コンテナーとサーバー](../mfc/ole-background-containers-and-servers.md)
 
-- [OLE の背景知識:実装戦略](../mfc/ole-background-implementation-strategies.md)
+- [OLE の背景知識: 実装戦略](../mfc/ole-background-implementation-strategies.md)
 
-- [OLE の背景知識:MFC における実装](../mfc/ole-background-mfc-implementation.md)
+- [OLE の背景知識: MFC の実装](../mfc/ole-background-mfc-implementation.md)
 
 全般 OLE については、上記の記事に見つかりませんでした、MSDN で OLE を検索してください。
 

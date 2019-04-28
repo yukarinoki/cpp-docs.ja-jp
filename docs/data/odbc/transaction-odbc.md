@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ODBC recordsets [C++], transactions
 ms.assetid: a2ec0995-2029-45f2-8092-6efd6f2a77f4
 ms.openlocfilehash: a151ec5ca2b4bdc19bfa7dc626aebda0740a2c9e
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59023671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62329921"
 ---
 # <a name="transaction-odbc"></a>トランザクション (ODBC)
 
@@ -43,9 +43,9 @@ ms.locfileid: "59023671"
 
 トランザクションの実行方法の詳細については、以下のトピックです。
 
-- [トランザクション:レコード セット (ODBC) でトランザクションを実行します。](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
+- [トランザクション: レコードセットでのトランザクションの実行 (ODBC)](../../data/odbc/transaction-performing-a-transaction-in-a-recordset-odbc.md)
 
-- [トランザクション:トランザクション (ODBC) の更新プログラムに与える影響](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
+- [トランザクション: トランザクションが更新処理に与える影響 (ODBC)](../../data/odbc/transaction-how-transactions-affect-updates-odbc.md)
 
 ## <a name="see-also"></a>関連項目
 

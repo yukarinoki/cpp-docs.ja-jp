@@ -8,11 +8,11 @@ helpviewer_keywords:
 - MFC Ribbon Designer
 ms.assetid: 0806dfd6-7d11-471a-99e1-4072852231f9
 ms.openlocfilehash: 5740b2f93f451a74407483c98ce5bf547b79bf35
-ms.sourcegitcommit: 72583d30170d6ef29ea5c6848dc00169f2c909aa
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58769486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62309214"
 ---
 # <a name="ribbon-designer-mfc"></a>リボン デザイナー (MFC)
 
@@ -85,11 +85,11 @@ MFC アプリケーションでリボン リソースを使用するには、呼
 
 次のトピックでは、リボン デザイナーの機能の使用方法について説明します。
 
-- [方法: アプリケーション ボタンをカスタマイズします。](../mfc/how-to-customize-the-application-button.md)
+- [方法: アプリケーション ボタンをカスタマイズする](../mfc/how-to-customize-the-application-button.md)
 
-- [方法: クイック アクセス ツールバーをカスタマイズします。](../mfc/how-to-customize-the-quick-access-toolbar.md)
+- [方法: クイック アクセス ツール バーをカスタマイズする](../mfc/how-to-customize-the-quick-access-toolbar.md)
 
-- [方法: リボン コントロールとイベント ハンドラーを追加します。](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
+- [方法: リボン コントロールとイベント ハンドラーを追加する](../mfc/how-to-add-ribbon-controls-and-event-handlers.md)
 
 - [方法: MFC アプリケーションからリボン リソースを読み込む](../mfc/how-to-load-a-ribbon-resource-from-an-mfc-application.md)
 
