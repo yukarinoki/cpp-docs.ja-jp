@@ -1,5 +1,5 @@
 ---
-title: 'テクニカル ノート 71: MFC IOleCommandTarget の実装'
+title: TN071:MFC IOleCommandTarget の実装
 ms.date: 06/28/2018
 f1_keywords:
 - IOleCommandTarget
@@ -8,13 +8,13 @@ helpviewer_keywords:
 - IOleCommandTarget interface [MFC]
 ms.assetid: 3eef571e-6357-444d-adbb-6f734a0c3161
 ms.openlocfilehash: dca1183a17fe8f3022f517d1ad0c3932ea272417
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50522227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167999"
 ---
-# <a name="tn071-mfc-iolecommandtarget-implementation"></a>テクニカル ノート 71: MFC IOleCommandTarget の実装
+# <a name="tn071-mfc-iolecommandtarget-implementation"></a>TN071:MFC IOleCommandTarget の実装
 
 > [!NOTE]
 > 次のテクニカル ノートは、最初にオンライン ドキュメントの一部とされてから更新されていません。 結果として、一部のプロシージャおよびトピックが最新でないか、不正になります。 最新の情報について、オンライン ドキュメントのキーワードで関係のあるトピックを検索することをお勧めします。
@@ -23,7 +23,7 @@ ms.locfileid: "50522227"
 
 `IOleCommandTarget` 自動化のようなインターフェイスをサーバー上のメソッドを呼び出すクライアントによって使用されるということです。 ただしを使用して`IOleCommandTarget`の通常高価なを使用するプログラマが必要ないため、オートメーション インターフェイスを使用して呼び出しを行うオーバーヘッド`Invoke`メソッドの`IDispatch`します。
 
-Mfc では、`IOleCommandTarget`インターフェイスは、コマンド、サーバーをディスパッチする Active ドキュメント コンテナーを許可する Active ドキュメント サーバーで使用されます。 Active ドキュメント サーバー クラス、 `CDocObjectServerItem`、MFC インターフェイス マップを使用して (を参照してください[TN038: MFC/OLE IUnknown の実装](../mfc/tn038-mfc-ole-iunknown-implementation.md)) を実装する、`IOleCommandTarget`インターフェイス。
+Mfc では、`IOleCommandTarget`インターフェイスは、コマンド、サーバーをディスパッチする Active ドキュメント コンテナーを許可する Active ドキュメント サーバーで使用されます。 Active ドキュメント サーバー クラス、 `CDocObjectServerItem`、MFC インターフェイス マップを使用して (を参照してください[TN038:MFC/OLE IUnknown の実装](../mfc/tn038-mfc-ole-iunknown-implementation.md)) を実装する、`IOleCommandTarget`インターフェイス。
 
 `IOleCommandTarget` 実装されて、`COleFrameHook`クラス。 `COleFrameHook` インプレース編集コンテナーのフレーム ウィンドウの機能を実装するドキュメントに未記載の MFC クラスです。 `COleFrameHook` MFC インターフェイス マップを使用して実装することも、`IOleCommandTarget`インターフェイス。 `COleFrameHook`実装の`IOleCommandTarget`転送するための OLE コマンド`COleDocObjectItem`-Active ドキュメント コンテナーを派生します。 これにより、任意の MFC Active ドキュメント コンテナー Active ドキュメント サーバーからメッセージを受信できます。
 

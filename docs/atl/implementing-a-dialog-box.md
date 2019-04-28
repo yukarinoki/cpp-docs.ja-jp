@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ATL, dialog boxes
 ms.assetid: 478525f2-aa6a-435a-b162-68fc8aa98a8e
 ms.openlocfilehash: 1a3084d4655e173234d3bb6e8d411b28e8968377
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57263696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62198054"
 ---
 # <a name="implementing-a-dialog-box"></a>ダイアログ ボックスを実装します。
 
@@ -25,7 +25,7 @@ ATL プロジェクト ダイアログ ボックスに追加する 2 つの方�
 > [!NOTE]
 >  ダイアログ ボックスがから派生している場合`CAxDialogImpl`ActiveX の両方をホストできる、Windows を制御します。 ダイアログ ボックス クラスで ActiveX コントロール サポートのオーバーヘッドをしたくない場合は、使用[CSimpleDialog](../atl/reference/csimpledialog-class.md)または[CDialogImpl](../atl/reference/cdialogimpl-class.md)代わりにします。
 
-メッセージおよびイベント ハンドラーは、クラス ビューから、ダイアログ クラスに追加できます。 詳細については、[ATL メッセージ ハンドラーの追加](../atl/adding-an-atl-message-handler.md)を参照してください。
+メッセージおよびイベント ハンドラーは、クラス ビューから、ダイアログ クラスに追加できます。 詳細については、次を参照してください。 [ATL メッセージ ハンドラーの追加](../atl/adding-an-atl-message-handler.md)します。
 
 ## <a name="adding-a-dialog-box-manually"></a>ダイアログ ボックスを手動で追加します。
 

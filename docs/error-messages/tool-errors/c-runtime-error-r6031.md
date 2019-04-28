@@ -7,11 +7,11 @@ helpviewer_keywords:
 - R6031
 ms.assetid: 805d4cd1-cb2f-43fe-87e6-e7bd5b7329c5
 ms.openlocfilehash: 6ef3f5fa7d063fdc300e6ac28ca519992525851c
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50564230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62242683"
 ---
 # <a name="c-runtime-error-r6031"></a>C ランタイム エラー R6031
 
@@ -29,4 +29,4 @@ CRT を複数回初期化しようとしてください。 これは、アプリ
 
 **プログラマのための情報**
 
-この診断は、ローダー ロック中に MSIL 命令が実行されたことを示します。 詳細については、[混在アセンブリの初期化](../../dotnet/initialization-of-mixed-assemblies.md)を参照してください。
+この診断は、ローダー ロック中に MSIL 命令が実行されたことを示します。 詳細については、次を参照してください。[混在アセンブリの初期化](../../dotnet/initialization-of-mixed-assemblies.md)します。

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - tool tips [MFC], notifications
 ms.assetid: ddb93b5f-2e4f-4537-8053-3453c86e2bbb
 ms.openlocfilehash: 079dc26fdd355c5b5e3f89f28219902e5fd74a79
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57268825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62240238"
 ---
 # <a name="handling-tool-tip-notifications"></a>ツール ヒントの通知の処理
 
@@ -41,7 +41,7 @@ ms.locfileid: "57268825"
 |**TBN_DROPDOWN**|ユーザーが使用しているボタンをクリックしたことを示します、 **TBSTYLE_DROPDOWN**スタイル。|
 |**TBN_GETOBJECT**|ユーザーがポインターを使用しているボタンの上に移動することを示します、 **TBSTYLE_DROPPABLE**スタイル。|
 
-ハンドラー関数の例とツール ヒントを有効にする方法の詳細については、[ツール ヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)を参照してください。
+ハンドラー関数の例とツール ヒントを有効にする方法の詳細については、次を参照してください。[ツール ヒント](../mfc/tool-tips-in-windows-not-derived-from-cframewnd.md)します。
 
 ## <a name="see-also"></a>関連項目
 

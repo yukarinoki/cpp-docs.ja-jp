@@ -7,11 +7,11 @@ helpviewer_keywords:
 - nonstandard behavior, compliance and compatibility
 ms.assetid: a57dea27-dc79-4f64-8a83-017e84841773
 ms.openlocfilehash: b7546914f4cd417f127af56fb7342903989d8330
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50638205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245376"
 ---
 # <a name="nonstandard-behavior"></a>非標準動作
 
@@ -71,11 +71,11 @@ void f() throw(int); // parsed but not used
 void g() throw();    // parsed and used
 ```
 
-例外の仕様の詳細については、[例外仕様](../cpp/exception-specifications-throw-cpp.md)を参照してください。
+例外の仕様の詳細については、次を参照してください。[例外仕様](../cpp/exception-specifications-throw-cpp.md)します。
 
 ## <a name="chartraitseof"></a>char_traits::eof()
 
-C++ 標準では、ことを示す[char_traits::eof](../standard-library/char-traits-struct.md#eof)を有効にする必要があります対応していない`char_type`値。 Visual C コンパイラの種類には、この制約を適用する**char**、型ではなく**wchar_t**します。 このことは、C++ ISO 規格の 12.1.1 節の表 62 に示された要件に準拠していません。 次に示しているのはその例です。
+C++規格に[char_traits::eof](../standard-library/char-traits-struct.md#eof)を有効にする必要があります対応していない`char_type`値。 ビジュアルC++コンパイラでは、この制約の種類の**char**、型ではなく**wchar_t**します。 このことは、C++ ISO 規格の 12.1.1 節の表 62 に示された要件に準拠していません。 次に示しているのはその例です。
 
 ```cpp
 #include <iostream>

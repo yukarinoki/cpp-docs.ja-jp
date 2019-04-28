@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MASM (Microsoft Macro Assembler), symbols reference
 ms.assetid: 96ed59cc-dafa-4299-bb2e-9c7c3f496491
 ms.openlocfilehash: e57583ce2b4184120569be3a44d87ffc3f51586c
-ms.sourcegitcommit: 1819bd2ff79fba7ec172504b9a34455c70c73f10
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51326616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62210217"
 ---
 # <a name="symbols-reference"></a>シンボル リファレンス
 
@@ -30,7 +30,7 @@ ms.locfileid: "51326616"
 
 |||
 |-|-|
-|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@ファイル名](../../assembler/masm/at-filename.md)|
+|[\@FileCur](../../assembler/masm/at-filecur.md)|[\@FileName](../../assembler/masm/at-filename.md)|
 |[\@行](../../assembler/masm/at-line.md)||
 
 ## <a name="macro-functions"></a>マクロ関数
@@ -52,7 +52,7 @@ ms.locfileid: "51326616"
 ||||
 |-|-|-|
 |[\@コード](../../assembler/masm/at-code.md)|[\@CodeSize](../../assembler/masm/at-codesize.md)|[\@CurSeg](../../assembler/masm/at-curseg.md)|
-|[\@データ](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
+|[\@data](../../assembler/masm/at-data.md)|[\@DataSize](../../assembler/masm/at-datasize.md)|[\@fardata](../../assembler/masm/at-fardata.md)|
 |[\@fardata でしょうか。](../../assembler/masm/at-fardata-q.md)|[\@モデル](../../assembler/masm/at-model.md)|[\@スタック](../../assembler/masm/at-stack.md)|
 |[\@WordSize](../../assembler/masm/at-wordsize.md)|||
 

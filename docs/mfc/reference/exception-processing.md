@@ -14,11 +14,11 @@ helpviewer_keywords:
 - exceptions [MFC], MFC throwing functions
 ms.assetid: 26d4457c-8350-48f5-916e-78f919787c30
 ms.openlocfilehash: 3db919f40caf4e5dbf42b4e10c549b165c0a9fe4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57293746"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62322216"
 ---
 # <a name="exception-processing"></a>例外処理
 
@@ -161,7 +161,7 @@ CATCH_ALL(exception_object_pointer_name)
 例外処理コードは、必要に応じて、例外の原因を特定に関する詳細を取得する場合、例外オブジェクトを問い合わせることができます。 呼び出す、`THROW_LAST`マクロは次のフレームの外側の例外処理をシフトします。 使用する場合**CATCH_ALL**、終了、**お試しください**END_CATCH_ALL マクロを使用してブロックします。
 
 > [!NOTE]
->  **CATCH_ALL**ブロックは中かっこで囲んで示して C++ スコープとして定義されます。 このスコープで変数を宣言する場合はそのスコープ内でのみアクセスできます。
+>  **CATCH_ALL**としてブロックが定義されている、C++スコープの中かっこで区切られています。 このスコープで変数を宣言する場合はそのスコープ内でのみアクセスできます。
 
 例外の詳細については、記事を参照してください。[例外](../../mfc/exception-handling-in-mfc.md)します。
 
@@ -196,7 +196,7 @@ CATCH マクロの 1 つの例外タイプをキャッチする AND_CATCH マク
 例外処理コードは、必要に応じて、例外の原因を特定に関する詳細を取得する場合、例外オブジェクトを問い合わせることができます。 内で THROW_LAST マクロを呼び出し、 **AND_CATCH** shift キーを押し、次のフレームの外側の例外を処理するブロックします。 **AND_CATCH** 、上記の終了をマーク**キャッチ**または**AND_CATCH**ブロックします。
 
 > [!NOTE]
->  **AND_CATCH**ブロックは (中かっこで区切られています)、C++ のスコープとして定義されます。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセスされることに注意してください。 これにも当てはまります、*ことは*変数。
+>  **AND_CATCH**としてブロックが定義されている、C++スコープ (中かっこで区切られています)。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセスされることに注意してください。 これにも当てはまります、*ことは*変数。
 
 ### <a name="example"></a>例
 
@@ -225,7 +225,7 @@ AND_CATCH_ALL(exception_object_pointer_name)
 例外処理コードは、必要に応じて、例外の原因を特定に関する詳細を取得する場合、例外オブジェクトを問い合わせることができます。 内で THROW_LAST マクロを呼び出し、 **AND_CATCH_ALL** shift キーを押し、次のフレームの外側の例外を処理するブロックします。 **AND_CATCH_ALL** 、上記の終了をマーク**キャッチ**または**AND_CATCH_ALL**ブロックします。
 
 > [!NOTE]
->  **AND_CATCH_ALL**ブロックは (中かっこで区切られています)、C++ のスコープとして定義されます。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセスされることに注意してください。
+>  **AND_CATCH_ALL**としてブロックが定義されている、C++スコープ (中かっこで区切られています)。 このスコープで変数を宣言する場合は、そのスコープ内でのみアクセスされることに注意してください。
 
 ### <a name="requirements"></a>必要条件
 
@@ -315,7 +315,7 @@ void  AfxThrowArchiveException(int cause, LPCTSTR lpszArchiveName);
 ### <a name="parameters"></a>パラメーター
 
 *cause*<br/>
-例外の原因を示す整数を指定します。 使用可能な値については、[CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)を参照してください。
+例外の原因を示す整数を指定します。 使用可能な値については、次を参照してください。 [CArchiveException::m_cause](../../mfc/reference/carchiveexception-class.md#m_cause)します。
 
 *lpszArchiveName*<br/>
 名前を含む文字列の指す、 `CArchive` (該当する場合)、例外の原因となったオブジェクト。
@@ -338,7 +338,7 @@ void AfxThrowFileException(
 ### <a name="parameters"></a>パラメーター
 
 *cause*<br/>
-例外の原因を示す整数を指定します。 使用可能な値については、[については、「](../../mfc/reference/cfileexception-class.md#m_cause)を参照してください。
+例外の原因を示す整数を指定します。 使用可能な値については、次を参照してください。[については、「](../../mfc/reference/cfileexception-class.md#m_cause)します。
 
 *lOsError*<br/>
 オペレーティング システムのエラー番号が含まれています (ある場合)、例外の原因を示します。 エラー コードの一覧については、オペレーティング システムのマニュアルを参照してください。
@@ -515,7 +515,7 @@ void AFXAPI AfxThrowDaoException(
 DAO の拡張エラー コードを表す整数値、することができます、値の 1 つ下に表示されます[CDaoException::m_nAfxDaoError](../../mfc/reference/cdaoexception-class.md#m_nafxdaoerror)します。
 
 *scode*<br/>
-DAO、SCODE 型から OLE エラー コード。 詳しくは、[CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode)を参照してください。
+DAO、SCODE 型から OLE エラー コード。 詳しくは、次を参照してください。 [CDaoException::m_scode](../../mfc/reference/cdaoexception-class.md#m_scode)します。
 
 ### <a name="remarks"></a>Remarks
 

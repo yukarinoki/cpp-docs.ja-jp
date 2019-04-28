@@ -7,11 +7,11 @@ helpviewer_keywords:
 - C2039
 ms.assetid: f9dfd521-9b36-4454-a69c-d63f45b606bb
 ms.openlocfilehash: ff795a551c091deb73c5fae1e3b67a61d9966ff0
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50482811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62266856"
 ---
 # <a name="compiler-error-c2039"></a>コンパイラ エラー C2039
 
@@ -131,7 +131,7 @@ int main() {
 
 ## <a name="example"></a>例
 
-C2039 は、マネージド リソースまたはアンマネージド リソースを解放しようとしたときに発生する場合があります。 詳細については、[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)を参照してください。
+C2039 は、マネージド リソースまたはアンマネージド リソースを解放しようとしたときに発生する場合があります。 詳細については、次を参照してください。[デストラクターおよびファイナライザー](../../dotnet/how-to-define-and-consume-classes-and-structs-cpp-cli.md#BKMK_Destructors_and_finalizers)します。
 
 次の例では、C2039 を生成します。
 

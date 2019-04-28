@@ -3,17 +3,17 @@ title: .netmodule 入力ファイルの形式の選択
 ms.date: 11/04/2016
 ms.assetid: 4653d1bd-300f-4083-86f5-d1a06f44e61c
 ms.openlocfilehash: d48bfe84210143db333d1e6b081acf1aa66980cf
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294578"
 ---
 # <a name="choosing-the-format-of-netmodule-input-files"></a>.netmodule 入力ファイルの形式の選択
 
 MSIL の .obj ファイル (でコンパイルされた[/clr](clr-common-language-runtime-compilation.md)) .netmodule ファイルとしても使用できます。  .obj ファイルには、メタデータとネイティブのシンボルが含まれます。  .netmodule には、メタデータにはのみが含まれます。
 
-できます/addmodule コンパイラ オプションを使用して、MSIL の .obj ファイルをその他の Visual Studio コンパイラに渡す (が .obj ファイルは、生成されたアセンブリの一部になるし、アセンブリに付属する必要がありますに注意してください)。  たとえば、Visual C# および Visual Basic には、/addmodule コンパイラ オプションがあります。
+できます/addmodule コンパイラ オプションを使用して、MSIL の .obj ファイルをその他の Visual Studio コンパイラに渡す (が .obj ファイルは、生成されたアセンブリの一部になるし、アセンブリに付属する必要がありますに注意してください)。  たとえば、Visual c# および Visual Basic には、/addmodule コンパイラ オプションがあります。
 
 > [!NOTE]
 >  ほとんどの場合は、.net モジュールを作成したコンパイルの .obj ファイルをリンカーに渡す必要があります。  .Dll または .netmodule の MSIL モジュールのファイルをリンカーに渡すと、LNK1107 可能性があります。

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - composite controls, global functions
 ms.assetid: 536884cd-e863-4c7a-ab0a-604dc60a0bbe
 ms.openlocfilehash: fb41134de21cc030ae4e96360cad67222026ce4d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278411"
 ---
 # <a name="composite-control-global-functions"></a>複合コントロールに関するグローバル関数
 
@@ -77,7 +77,7 @@ ATLAPI_(int) AtlAxDialogBox(
 [in]ダイアログ ボックスを所有するウィンドウを識別します。
 
 *lpDialogProc*<br/>
-[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、[DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)を参照してください。
+[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)します。
 
 *dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。
@@ -124,7 +124,7 @@ ATLAPI_(HWND) AtlAxCreateDialog(
 [in]ダイアログ ボックスを所有するウィンドウを識別します。
 
 *lpDialogProc*<br/>
-[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、[DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)を参照してください。
+[in]ダイアログ ボックス プロシージャへのポインター。 ダイアログ ボックス プロシージャの詳細については、次を参照してください。 [DialogProc](/windows/desktop/api/winuser/nc-winuser-dlgproc)します。
 
 *dwInitParam*<br/>
 [in]ダイアログ ボックスに渡す値を指定します、 *lParam* WM_INITDIALOG メッセージのパラメーター。

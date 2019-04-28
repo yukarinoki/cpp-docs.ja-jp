@@ -9,11 +9,11 @@ helpviewer_keywords:
 - builds [C++], additional information
 ms.assetid: 100b4ccf-572c-4d1f-970c-fa0bc0cc0d2d
 ms.openlocfilehash: 4c3f7aa598a9c43af04c148ed0d4b3f555566ec7
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57812487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62294760"
 ---
 # <a name="cc-building-reference"></a>C/C++ ビルドのリファレンス
 
@@ -21,12 +21,12 @@ Visual C には、C/C++ プログラムのビルドの 2 つの方法が用意�
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-[C++ プロジェクトの MSBuild のリファレンス](msbuild-visual-cpp-overview.md)
+[C++ プロジェクトの MSBuild リファレンス](msbuild-visual-cpp-overview.md)
 
 [MSVC コンパイラ リファレンス](compiling-a-c-cpp-program.md)<br/>
 マシン語コード、リンカー ディレクティブ、セクションでは、外部参照、および関数/データの名前を格納しているオブジェクト ファイルを作成、MSVC コンパイラをについて説明します。
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 リンカーは、コンパイラによって作成されたオブジェクト ファイルと静的にリンクされたライブラリからコードを組み合わせると、について説明しますと、名前の参照を解決し、実行可能ファイルを作成します。
 
 [コンパイラおよびリンカーでの Unicode のサポート](unicode-support-in-the-compiler-and-linker.md)
@@ -48,13 +48,13 @@ C++ 用のコマンド ライン ツールを追加します。
 [C/C++ プログラムのビルド](../projects-and-build-systems-cpp.md)<br/>
 コマンド ラインまたは Visual Studio の統合開発環境からプログラムをビルドする方法について説明するトピックへのリンクがあります。
 
-[MSVC コンパイラ コマンドラインの構文](compiler-command-line-syntax.md)<br/>
+[MSVC コンパイラ コマンド ラインの構文](compiler-command-line-syntax.md)<br/>
 開発環境またはコマンドラインでコンパイラ オプションの設定について説明します。
 
 [MSVC コンパイラ オプション](compiler-options.md)<br/>
 コンパイラ オプションの使用について説明するトピックへのリンクを提供します。
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 統合開発環境内外のリンカー オプションの設定について説明します。
 
 [MSVC リンカー オプション](linker-options.md)<br/>

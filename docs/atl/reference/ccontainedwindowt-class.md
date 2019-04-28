@@ -23,11 +23,11 @@ helpviewer_keywords:
 - CContainedWindowT class
 ms.assetid: cde0ca36-9347-4068-995a-d294dae57ca9
 ms.openlocfilehash: 660c6c047bb700e531fd941ac8ed19d638866070
-ms.sourcegitcommit: bff17488ac5538b8eaac57156a4d6f06b37d6b7f
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57421572"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62246050"
 ---
 # <a name="ccontainedwindowt-class"></a>CContainedWindowT クラス
 
@@ -90,9 +90,7 @@ class CContainedWindowT : public TBase
 
 `CContainedWindowT` 既存のウィンドウ クラスをスーパークラス化して、新しいウィンドウを作成することができます。 `Create`メソッドは、まず既存のクラスに基づきますが、使用するウィンドウ クラスを登録`CContainedWindowT::WindowProc`します。 `Create` この新しいウィンドウ クラスに基づくウィンドウが作成されます。 各インスタンス`CContainedWindowT`スーパークラス別のウィンドウ クラスのことができます。
 
-`CContainedWindowT` は、ウィンドウのサブクラス化もサポートします。 
-  `SubclassWindow` メソッドは、既存のウィンドウを `CContainedWindowT` オブジェクトにアタッチし、ウィンドウ プロシージャを `CContainedWindowT::WindowProc` に変更します。 
-  `CContainedWindowT` の各インスタンスは、別のウィンドウをサブクラス化できます。
+`CContainedWindowT` は、ウィンドウのサブクラス化もサポートします。 `SubclassWindow` メソッドは、既存のウィンドウを `CContainedWindowT` オブジェクトにアタッチし、ウィンドウ プロシージャを `CContainedWindowT::WindowProc` に変更します。 `CContainedWindowT` の各インスタンスは、別のウィンドウをサブクラス化できます。
 
 > [!NOTE]
 >  指定されたいずれかの`CContainedWindowT`オブジェクト、いずれかを呼び出す`Create`または`SubclassWindow`します。 同じオブジェクトで両方のメソッドを呼び出しませんする必要があります。
@@ -304,7 +302,7 @@ DWORD m_dwMsgMapID;
 
 宣言された既定のメッセージ マップ[送るに](message-map-macros-atl.md#begin_msg_map)、常に 0 で識別されます。 宣言された、代替メッセージ マップ[ALT_MSG_MAP(msgMapID)](message-map-macros-atl.md#alt_msg_map)、によって識別される`msgMapID`します。
 
-`m_dwMsgMapID` コンス トラクターで初期化が、呼び出すことによって変更できます[SwitchMessageMap](#switchmessagemap)します。 例については、、 [CContainedWindowT 概要](../../atl/reference/ccontainedwindowt-class.md)を参照してください。
+`m_dwMsgMapID` コンス トラクターで初期化が、呼び出すことによって変更できます[SwitchMessageMap](#switchmessagemap)します。 例については、次を参照してください。、 [CContainedWindowT 概要](../../atl/reference/ccontainedwindowt-class.md)します。
 
 ##  <a name="m_lpszclassname"></a>  CContainedWindowT::m_lpszClassName
 

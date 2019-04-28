@@ -18,11 +18,11 @@ helpviewer_keywords:
 - LINK tool [C++], mapfile
 ms.assetid: a98b557c-1947-447a-be1f-616fb45a9580
 ms.openlocfilehash: 183f83501d930188032ec4209623ef7cf1a30efa
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57807625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62269177"
 ---
 # <a name="link-output"></a>LINK からの出力
 
@@ -32,7 +32,7 @@ Link からの出力には、.exe ファイル、Dll、マップ ファイル、
 
 既定の出力ファイルのリンクからは、.exe ファイルです。 場合、 [/DLL](dll-build-a-dll.md)オプションを指定すると、リンクは、.dll ファイルをビルドします。 出力ファイル名を指定できます、[出力ファイル名 (/out)](out-output-file-name.md)オプション。
 
-増分モードでは、リンクは、プログラムの以降のインクリメンタル ビルドの状態情報を保持するために、.ilk ファイルを作成します。 .Ilk ファイルに関する詳細については、[.ilk ファイル](dot-ilk-files-as-linker-input.md)を参照してください。 インクリメンタル リンクの詳細については、次を参照してください。、[インクリメンタル リンクを行う (/incremental)](incremental-link-incrementally.md)オプション。
+増分モードでは、リンクは、プログラムの以降のインクリメンタル ビルドの状態情報を保持するために、.ilk ファイルを作成します。 .Ilk ファイルに関する詳細については、次を参照してください。 [.ilk ファイル](dot-ilk-files-as-linker-input.md)します。 インクリメンタル リンクの詳細については、次を参照してください。、[インクリメンタル リンクを行う (/incremental)](incremental-link-incrementally.md)オプション。
 
 リンクを作成するときが含まれたプログラム (通常は DLL) をエクスポートします、ビルドで .exp ファイルが使用された場合を除きも .lib ファイルを構築。 インポート ライブラリのファイル名を指定できます、 [/IMPLIB](implib-name-import-library.md)オプション。
 
@@ -52,5 +52,5 @@ Link からの出力には、.exe ファイル、Dll、マップ ファイル、
 
 ## <a name="see-also"></a>関連項目
 
-[MSVC リンカーの参照](linking.md)<br/>
+[MSVC リンカーのリファレンス](linking.md)<br/>
 [MSVC リンカー オプション](linker-options.md)

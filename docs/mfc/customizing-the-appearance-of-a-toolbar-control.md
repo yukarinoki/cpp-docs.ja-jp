@@ -12,11 +12,11 @@ helpviewer_keywords:
 - toolbar controls [MFC], style
 ms.assetid: fd0a73db-7ad1-4fe4-889b-02c3980f49e8
 ms.openlocfilehash: 8a0db3299ebb54d226edc1434dedbc6a04eb9b00
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57302339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62241814"
 ---
 # <a name="customizing-the-appearance-of-a-toolbar-control"></a>ツール バー コントロールの外観のカスタマイズ
 
@@ -50,7 +50,7 @@ ms.locfileid: "57302339"
 
 - **TBSTYLE_TOOLTIPS**ツールバーにボタンの説明テキストを表示するアプリケーションが使用できるツール ヒント コントロールを作成します。
 
-Toolbar のスタイルと拡張スタイルの完全な一覧については、[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)と[ツールバー拡張スタイル](/windows/desktop/Controls/toolbar-extended-styles)Windows SDK にを参照してください。
+Toolbar のスタイルと拡張スタイルの完全な一覧については、次を参照してください。[ツール バー コントロールとボタンのスタイル](/windows/desktop/Controls/toolbar-control-and-button-styles)と[ツールバー拡張スタイル](/windows/desktop/Controls/toolbar-extended-styles)Windows SDK にします。
 
 ## <a name="see-also"></a>関連項目
 

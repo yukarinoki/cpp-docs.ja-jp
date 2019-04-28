@@ -10,11 +10,11 @@ helpviewer_keywords:
 - standard controls
 ms.assetid: a6f84315-7007-4e0e-8576-78be81254802
 ms.openlocfilehash: 5abdcc87dba937938ffa3643d19ff69431f62af4
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57300376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62206945"
 ---
 # <a name="deriving-controls-from-a-standard-control"></a>標準コントロールからのコントロールの派生
 
@@ -36,7 +36,7 @@ ms.locfileid: "57300376"
 
 1. 上書き、`OnInitDialog`メンバー関数を呼び出すダイアログ クラスで、`SubclassDlgItem`派生コントロールのメンバー関数。
 
-`SubclassDlgItem` 「動的なサブクラス」コントロールは、ダイアログ テンプレートから作成されます。 コントロールが動的にサブクラス化されたときに、独自のアプリケーション内でいくつかのメッセージを処理、残りのメッセージを Windows に渡す Windows にフックします。 詳細については、、 [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem)クラスのメンバー関数`CWnd`で、 *MFC リファレンス*を参照してください。 次の例は、のオーバーライドを作成する方法を示しています`OnInitDialog`を呼び出す`SubclassDlgItem`:。
+`SubclassDlgItem` 「動的なサブクラス」コントロールは、ダイアログ テンプレートから作成されます。 コントロールが動的にサブクラス化されたときに、独自のアプリケーション内でいくつかのメッセージを処理、残りのメッセージを Windows に渡す Windows にフックします。 詳細については、次を参照してください。、 [SubclassDlgItem](../mfc/reference/cwnd-class.md#subclassdlgitem)クラスのメンバー関数`CWnd`で、 *MFC リファレンス*します。 次の例は、のオーバーライドを作成する方法を示しています`OnInitDialog`を呼び出す`SubclassDlgItem`:。
 
 [!code-cpp[NVC_MFCControlLadenDialog#3](../mfc/codesnippet/cpp/deriving-controls-from-a-standard-control_1.cpp)]
 

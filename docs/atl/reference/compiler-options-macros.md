@@ -17,11 +17,11 @@ helpviewer_keywords:
 - compiler options, macros
 ms.assetid: a869adc6-b3de-4299-b040-9ae20b45f82c
 ms.openlocfilehash: 79b1cabc0304e905012db5f6dd73ed71073c0c1e
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57258477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62278424"
 ---
 # <a name="compiler-options-macros"></a>コンパイラ オプションに関するマクロ
 
@@ -115,7 +115,7 @@ _T マクロでは、すべてのコンス トラクター文字列引数を使�
 
 Visual C コンパイラの標準的な C++ 準拠の強化を一致するように、ATL と MFC ライブラリが変更されました。 クラスのメンバー関数へのポインターの構文は、ANSI C 標準に従って`&CMyClass::MyFunc`します。
 
-ときに[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)が定義されていません (既定では、)、ATL と MFC を無効にします (特にメッセージ マップ) マクロ maps C4867 エラー以前のバージョンで作成されたコードが以前と同様にビルドを続行できるようにします。 定義する場合 **_ATL_ENABLE_PTM_WARNING**コードは C++ 標準に準拠する必要があります。
+ときに[_ATL_ENABLE_PTM_WARNING](#_atl_enable_ptm_warning)が定義されていません (既定では、)、ATL と MFC を無効にします (特にメッセージ マップ) マクロ maps C4867 エラー以前のバージョンで作成されたコードが以前と同様にビルドを続行できるようにします。 定義する場合 **_ATL_ENABLE_PTM_WARNING**、コードにする必要がありますC++標準に準拠します。
 
 ただし、非標準のフォームが非推奨とされました、C++ 標準準拠の構文に既存のコードを移動する必要があります。 次: たとえば、
 

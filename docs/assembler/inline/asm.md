@@ -10,11 +10,11 @@ helpviewer_keywords:
 - __asm keyword [C++]
 ms.assetid: 77ff3bc9-a492-4b5e-85e1-fa4e414e79cd
 ms.openlocfilehash: 6b94bf73e66550d0245ef1f55c17d6676e3b4356
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50591284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62167557"
 ---
 # <a name="asm"></a>__asm
 
@@ -28,12 +28,12 @@ ms.locfileid: "50591284"
 ## <a name="grammar"></a>文法
 
 *asm ブロック*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ _asm** *アセンブリ命令* **;**<sub>選択</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;**_ _asm {** *アセンブリの命令リスト* **}** **;**<sub>選択</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm** *assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;**__asm {** *assembly-instruction-list* **}** **;**<sub>opt</sub>
 
 *アセンブリの命令リスト*:<br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*アセンブリ命令* **;**<sub>選択</sub><br/>
-&nbsp;&nbsp;&nbsp;&nbsp;*アセンブリ命令* **;***アセンブリの命令リスト* **;**<sub>選択</sub>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;**<sub>opt</sub><br/>
+&nbsp;&nbsp;&nbsp;&nbsp;*assembly-instruction* **;** *assembly-instruction-list* **;**<sub>opt</sub>
 
 ## <a name="remarks"></a>Remarks
 

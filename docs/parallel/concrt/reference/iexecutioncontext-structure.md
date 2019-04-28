@@ -13,11 +13,11 @@ helpviewer_keywords:
 - IExecutionContext structure
 ms.assetid: f3108089-ecda-4b07-86db-3efae60c31e0
 ms.openlocfilehash: 8c49df5a8c7f214b574b4f6118d182b63fec5dca
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57264964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62262464"
 ---
 # <a name="iexecutioncontext-structure"></a>IExecutionContext 構造体
 
@@ -66,7 +66,7 @@ virtual void Dispatch(_Inout_ DispatchState* pDispatchState) = 0;
 ### <a name="parameters"></a>パラメーター
 
 *pDispatchState*<br/>
-この実行コンテキストがディスパッチされる状態へのポインター。 ディスパッチの状態の詳細については、[DispatchState](dispatchstate-structure.md)を参照してください。
+この実行コンテキストがディスパッチされる状態へのポインター。 ディスパッチの状態の詳細については、次を参照してください。 [DispatchState](dispatchstate-structure.md)します。
 
 ##  <a name="getid"></a>  Iexecutioncontext::getid メソッド
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - simple data type classes [MFC]
 ms.assetid: 0d591d68-0a33-49e9-8a6d-90c90de5c16a
 ms.openlocfilehash: 4e415805301d7d12bd418a3b55509a7732851492
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57298478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62307419"
 ---
 # <a name="simple-data-type-classes"></a>単純データ型クラス
 
@@ -55,7 +55,7 @@ OLE オートメーションの型のラッパー**バリアント**します。
 OLE オートメーションの型のラッパー**通貨**小数点の前に、15 桁、4 桁の数字の後に、固定小数点の数値型。
 
 > [!NOTE]
->  `CRect`、 `CSize`、および`CPoint`は ATL または MFC のいずれかのアプリケーションで使用できます。 さらに、`CStringT`提供、MFC に依存しない`CString`-などのクラス。 共有ユーティリティ クラスの詳細については、[共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)を参照してください。
+>  `CRect`、 `CSize`、および`CPoint`は ATL または MFC のいずれかのアプリケーションで使用できます。 さらに、`CStringT`提供、MFC に依存しない`CString`-などのクラス。 共有ユーティリティ クラスの詳細については、次を参照してください。[共有クラス](../atl-mfc-shared/atl-mfc-shared-classes.md)します。
 
 ## <a name="see-also"></a>関連項目
 

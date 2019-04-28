@@ -7,11 +7,11 @@ helpviewer_keywords:
 - arrays [C++]
 ms.assetid: 3f5986aa-485c-4ba4-9502-67e2ef924238
 ms.openlocfilehash: 176e358bd0217ac914eb4ee6079126d3f429b6dd
-ms.sourcegitcommit: 9e891eb17b73d98f9086d9d4bfe9ca50415d9a37
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52176880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62184521"
 ---
 # <a name="arrays-c"></a>配列 (C++)
 
@@ -38,7 +38,7 @@ ms.locfileid: "52176880"
 
    - 定数式を囲む追加の山かっこ (省略可能)。
 
-1. 初期化子 (省略可能)。 詳細については、[初期化子](../cpp/initializers.md)を参照してください。
+1. 初期化子 (省略可能)。 詳細については、次を参照してください。[初期化子](../cpp/initializers.md)します。
 
 配列内の要素の数がで指定された、*定数式*します。 配列の最初の要素は 0 番目の要素と、最後の要素は、(*n*-1) 要素を*n*配列が含む要素の数です。 *定数式*整数型である必要があるあり、0 より大きくなければなりません。 サイズが 0 の配列は、配列の最後のフィールドが場合にのみ、**構造体**または**共用体**Microsoft 拡張機能 (/Ze) が有効になっているとします。
 

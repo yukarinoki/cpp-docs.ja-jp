@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TN024
 ms.assetid: c65353ce-8096-454b-ad22-1a7a1dd9a788
 ms.openlocfilehash: 029177821d37d5d26abe0b39ea1581e8a5ad602b
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57278133"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62306026"
 ---
 # <a name="tn024-mfc-defined-messages-and-resources"></a>TN024:MFC で定義されているメッセージおよびリソース
 
@@ -172,7 +172,7 @@ AppWizard によって提供される既定のツールバーは、MFC 4.0 で�
 
 MFC のプライベートなリソースの 1 つの形式を使用して、追加のダイアログの初期化情報を格納します。 これには、コンボ ボックスに格納されている最初の文字列が含まれています。 このリソースの形式は、手動で編集するものはありませんが、Visual C によって処理されます。
 
-Visual C とこのリソース形リソースは、リソースの情報を使用する代わりに API があるので、MFC の関連機能を使用する必要はありません。 Visual C を使用すると、記述、保守、および長期的にアプリケーションを変換するはるかに簡単になります。
+VisualC++とこのリソース形リソースがリソースの情報を使用する代わりに API があるので、MFC の関連機能を使用する必要はありません。 Visual C を使用すると、記述、保守、および長期的にアプリケーションを変換するはるかに簡単になります。
 
 リソース形リソースの基本的な構造は次のとおりです。
 

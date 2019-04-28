@@ -11,15 +11,15 @@ helpviewer_keywords:
 - exporting DLLs [C++], __declspec(dllexport) keyword
 ms.assetid: a35e25e8-7263-4a04-bad4-00b284458679
 ms.openlocfilehash: 3b6b9733776f30fc8dcbfeee709b7d24e0f0187b
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57810238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62195317"
 ---
 # <a name="exporting-from-a-dll-using-declspecdllexport"></a>__declspec(dllexport) を使った DLL からのエクスポート
 
-導入された Microsoft **_ _export** 16 ビットのコンパイラ バージョンの Visual C コンパイラは、エクスポート名を自動的に生成し、.lib ファイルに配置します。 この .lib ファイルは、DLL とリンクするスタティック ライブラリと同じように使用できます。
+導入された Microsoft **_ _export**ビジュアルの 16 ビットのコンパイラのバージョンでC++コンパイラは、エクスポート名を自動的に生成し、.lib ファイルに配置します。 この .lib ファイルは、DLL とリンクするスタティック ライブラリと同じように使用できます。
 
 新しいバージョンのコンパイラからエクスポートできますデータ、関数、クラス、またはクラス メンバー関数を使用して、DLL、**方式**キーワード。 **方式**.def ファイルを使用する必要はありませんので、オブジェクト ファイルにエクスポート ディレクティブを追加します。
 
@@ -27,7 +27,7 @@ ms.locfileid: "57810238"
 
 序数、NONAME、PRIVATE など、多くのエクスポート ディレクティブは、.def ファイル内にしか作成されないので、これらの属性を .def ファイルを使用せずに指定することはできません。 ただしを使用して**方式**に加えて、.def ファイルはしないビルド エラーが発生します。
 
-関数をエクスポートする、**方式**キーワードはキーワードが指定されている場合、呼び出し規約キーワードの左側に表示する必要があります。 例えば:
+関数をエクスポートする、**方式**キーワードはキーワードが指定されている場合、呼び出し規約キーワードの左側に表示する必要があります。 例:
 
 ```
 __declspec(dllexport) void __cdecl Function1(void);
@@ -41,7 +41,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 ```
 
 > [!NOTE]
->  `__declspec(dllexport)` は、`__clrcall` 呼び出し規約を伴う関数には適用できません。
+>  `__declspec(dllexport)` は、`__clrcall` 呼び出し規則を伴う関数には適用できません。
 
 通常、関数のプロトタイプやエクスポートし、追加するクラスを含むヘッダー ファイルを作成する DLL を作成するときに**方式**ヘッダー ファイル内の宣言にします。 コードを読みやすくするためのマクロを定義**方式**をエクスポートする各シンボルでマクロを使用。
 
@@ -68,7 +68,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 
 - [エクスポート方式の使用](determining-which-exporting-method-to-use.md)
 
-- [使用してアプリケーションをインポートします。](importing-into-an-application-using-declspec-dllimport.md)
+- [__declspec(dllimport) を使用してアプリケーションにインポートする](importing-into-an-application-using-declspec-dllimport.md)
 
 - [DLL を初期化します。](run-time-library-behavior.md#initializing-a-dll)
 
@@ -76,7 +76,7 @@ class __declspec(dllexport) CExampleExport : public CObject
 
 - [_ _Declspec キーワード](../cpp/declspec.md)
 
-- [インポートとエクスポートのインライン関数](importing-and-exporting-inline-functions.md)
+- [インライン関数のインポートとエクスポート](importing-and-exporting-inline-functions.md)
 
 - [相互インポート](mutual-imports.md)
 

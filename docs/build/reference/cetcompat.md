@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /CETCOMPAT linker option
 - /CETCOMPAT
 ms.openlocfilehash: 0ed5d9d4f9f4f4dc5cd4fc19df4179e86e430187
-ms.sourcegitcommit: 42e65c171aaa17a15c20b155d22e3378e27b4642
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62273249"
 ---
 # <a name="cetcompat-cet-shadow-stack-compatible"></a>/CETCOMPAT (CET シャドウ スタック互換)
 
@@ -28,7 +28,7 @@ ms.locfileid: "58356016"
 
 ## <a name="remarks"></a>Remarks
 
-制御フローの適用テクノロジ (CET) シャドウ スタックは、戻り指向プログラミング (ROP) に対する防御機能ベースのマルウェアの攻撃を提供するコンピューターのプロセッサ機能です。 詳細については、[Intel 制御フローの適用テクノロジ プレビュー](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)を参照してください。
+制御フローの適用テクノロジ (CET) シャドウ スタックは、戻り指向プログラミング (ROP) に対する防御機能ベースのマルウェアの攻撃を提供するコンピューターのプロセッサ機能です。 詳細については、次を参照してください。 [Intel 制御フローの適用テクノロジ プレビュー](https://software.intel.com/sites/default/files/managed/4d/2a/control-flow-enforcement-technology-preview.pdf)します。
 
 **/CETCOMPAT**リンカー オプションとして CET シャドウ スタックと互換性のあるバイナリをマークするリンカーに指示します。 **/CETCOMPAT:NO**として CET シャドウ スタックと互換性のないバイナリをマークします。 両方のオプションをコマンドラインで指定する場合は、指定された最後の 1 つが使用されます。 このスイッチは、現在 x86 および x64 アーキテクチャに適用できるのみです。
 

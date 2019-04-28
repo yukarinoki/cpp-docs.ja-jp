@@ -7,15 +7,15 @@ helpviewer_keywords:
 - literals [C++]
 ms.assetid: 17c09fc3-3ad7-47e2-8b48-ba8ae994edc8
 ms.openlocfilehash: f263e9a2ed357cdc80ec29fc5d1b6d58c9e093e4
-ms.sourcegitcommit: 6052185696adca270bc9bdbec45a626dd89cdcdd
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/31/2018
-ms.locfileid: "50545796"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245103"
 ---
 # <a name="numeric-boolean-and-pointer-literals--c"></a>数値、ブール値、およびポインターのリテラル (C++)
 
-リテラルとは、値を直接に表すプログラム要素です。 ここでは、整数型、浮動小数点型、ブール値型、およびポインター型のリテラルについて説明します。 文字列と文字リテラルについては、[文字列と文字リテラル (C++)](../cpp/string-and-character-literals-cpp.md)を参照してください。 これらのカテゴリのいずれかに基づく独自のリテラルを定義することもできます。詳細については、次を参照してください[ユーザー定義リテラル (C++)。](../cpp/user-defined-literals-cpp.md)
+リテラルとは、値を直接に表すプログラム要素です。 ここでは、整数型、浮動小数点型、ブール値型、およびポインター型のリテラルについて説明します。 文字列と文字リテラルについては、次を参照してください。[文字列と文字リテラル (C++)](../cpp/string-and-character-literals-cpp.md)します。 これらのカテゴリのいずれかに基づく独自のリテラルを定義することもできます。詳細については、次を参照してください[ユーザー定義リテラル (C++)。](../cpp/user-defined-literals-cpp.md)
 
 . リテラルは多様なコンテキストで使用できますが、最も一般的な用途は、名前付きの変数を初期化することと、関数に引数を渡すことです。
 
@@ -71,7 +71,7 @@ auto val_4 = 108LL;                           // signed long long
 auto val_4 = 0x8000000000000000ULL << 16;     // unsigned long long
 ```
 
-**桁区切り記号**: に多数の人間が読みやすくための場所の値を区切る単一引用符 (アポストロフィ) を使用することができます。 区切り記号はコンパイルに影響しません。
+**桁区切り記号**:単一引用符 (アポストロフィ) を使用して、多数の人間が読みやすくための場所の値を区切ることができます。 区切り記号はコンパイルに影響しません。
 
 ```cpp
 long long i = 24'847'458'121

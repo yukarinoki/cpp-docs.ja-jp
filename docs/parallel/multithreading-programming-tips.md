@@ -17,11 +17,11 @@ helpviewer_keywords:
 - Windows handle maps [C++]
 ms.assetid: ad14cc70-c91c-4c24-942f-13a75e58bf8a
 ms.openlocfilehash: e89d0d534638f7216f142bc3f86633a59b8b0ff7
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57290802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62212432"
 ---
 # <a name="multithreading-mfc-programming-tips"></a>マルチ スレッド。MFC プログラミングのヒント
 
@@ -53,7 +53,7 @@ MFC オブジェクトは、単独でスレッド セーフではできません
 
 ワーカー スレッドを実行して、アプリケーションのメイン ウィンドウにこれらのメッセージを投稿は、さまざまなタスクに対応する新しいユーザー定義のメッセージを作成する方法のもう 1 つを使用して`::PostMessage`します。 この通信方法は、2 つの異なるアプリケーション間の対話動作に似ています。ただし、2 つのスレッドが同じアドレス空間を共有する点が異なります。
 
-ハンドル マップの詳細については、[テクニカル ノート 3:](../mfc/tn003-mapping-of-windows-handles-to-objects.md)を参照してください。 スレッド ローカル ストレージの詳細については、次を参照してください。[スレッド ローカル ストレージ](/windows/desktop/ProcThread/thread-local-storage)と[スレッド ローカル ストレージを使用して](/windows/desktop/ProcThread/using-thread-local-storage)Windows SDK に含まれています。
+ハンドル マップの詳細については、次を参照してください。[テクニカル ノート 3:](../mfc/tn003-mapping-of-windows-handles-to-objects.md)します。 スレッド ローカル ストレージの詳細については、次を参照してください。[スレッド ローカル ストレージ](/windows/desktop/ProcThread/thread-local-storage)と[スレッド ローカル ストレージを使用して](/windows/desktop/ProcThread/using-thread-local-storage)Windows SDK に含まれています。
 
 ##  <a name="_core_communicating_between_threads"></a> スレッド間通信
 

@@ -15,18 +15,18 @@ helpviewer_keywords:
 - optimizing performance, ActiveX controls
 ms.assetid: 8b11f26a-190d-469b-b594-5336094a0109
 ms.openlocfilehash: 08cbb5ab0ff9b8c165e549bc2b250daebc1ce177
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57288624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62186893"
 ---
 # <a name="mfc-activex-controls-optimization"></a>MFC ActiveX コントロール:最適化
 
 この記事では、パフォーマンス向上のため、ActiveX コントロールを最適化するために使用できる手法について説明します。
 
 >[!IMPORTANT]
-> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、[ActiveX コントロール](activex-controls.md)を参照してください。
+> ActiveX は、新規の開発が使用できないレガシ テクノロジです。 ActiveX の置き換えの最新のテクノロジの詳細については、次を参照してください。 [ActiveX コントロール](activex-controls.md)します。
 
 トピックでは、[にすることから、アクティブ化表示時にオプション](../mfc/turning-off-the-activate-when-visible-option.md)と[を提供するマウス操作中に非アクティブな](../mfc/providing-mouse-interaction-while-inactive.md)をアクティブ化されるまでウィンドウを作成しないコントロールについて説明します。 トピック[ウィンドウなしのアクティベーション](../mfc/providing-windowless-activation.md)アクティブにしている場合でも、ウィンドウを作成しないコントロールについて説明します。
 
@@ -47,7 +47,7 @@ Windows OLE オブジェクトの 2 つの主な欠点がある: 透明または
 |**マウス ポインターの通知時に非アクティブな** チェック ボックス|選択|[コントロールがアクティブでないときのマウスとの対話](../mfc/providing-mouse-interaction-while-inactive.md)|
 |**最適化された描画コード** チェック ボックス|選択|[コントロールの描画の最適化](../mfc/optimizing-control-drawing.md)|
 
-これらの最適化を実装するメンバー関数の詳細については、[COleControl](../mfc/reference/colecontrol-class.md)を参照してください。
+これらの最適化を実装するメンバー関数の詳細については、次を参照してください。 [COleControl](../mfc/reference/colecontrol-class.md)します。
 
 詳細については次を参照してください:
 

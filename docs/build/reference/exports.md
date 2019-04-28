@@ -7,11 +7,11 @@ helpviewer_keywords:
 - EXPORTS .def file statement
 ms.assetid: dbcd7579-b855-44c4-bd27-931e157657f7
 ms.openlocfilehash: 33b70c680bfc3db24f5326a2027fa9ec4740e3f2
-ms.sourcegitcommit: 8105b7003b89b73b4359644ff4281e1595352dda
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57814138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62271347"
 ---
 # <a name="exports"></a>EXPORTS
 
@@ -51,7 +51,7 @@ EXPORTS
    func2=other_module.#42
 ```
 
-装飾名を使用する必要がありますか、MSVC コンパイラは、C++ の関数の名前の装飾を使用するため*internal_name*を使用して、エクスポートされた関数を定義または`extern "C"`ソース コードにします。 コンパイラを使用する C 関数を装飾も、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約をアンダー スコア (\_) のプレフィックスとサフィックスで構成される、アット マーク (\@) (10 進数) のバイト数の後に、引数リスト。
+MSVC コンパイラの名前の装飾が使用するためC++関数、装飾名を使用する必要がありますか*internal_name*を使用して、エクスポートされた関数を定義または`extern "C"`ソース コードにします。 コンパイラを使用する C 関数を装飾も、 [_ _stdcall](../../cpp/stdcall.md)呼び出し規約をアンダー スコア (\_) のプレフィックスとサフィックスで構成される、アット マーク (\@) (10 進数) のバイト数の後に、引数リスト。
 
 コンパイラによって生成された装飾名を検索するには、使用、 [DUMPBIN](dumpbin-reference.md)ツールまたはリンカー [/map](map-generate-mapfile.md)オプション。 装飾名はコンパイラ固有です。 装飾名を .DEF ファイルにエクスポートする場合、DLL にリンクする実行可能ファイルも同じバージョンのコンパイラを使用してビルドする必要があります。 これにより、呼び出し元の装飾名は .DEF ファイルのエクスポート名と一致します。
 

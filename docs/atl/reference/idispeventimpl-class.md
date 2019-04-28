@@ -14,11 +14,11 @@ helpviewer_keywords:
 - IDispEventImpl class
 ms.assetid: a64b5288-35cb-4638-aad6-2d15b1c7cf7b
 ms.openlocfilehash: 8de620cd6e2433375284f6493b5117c40a356603
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57283203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62275322"
 ---
 # <a name="idispeventimpl-class"></a>IDispEventImpl クラス
 
@@ -103,7 +103,7 @@ class ATL_NO_VTABLE IDispEventImpl : public IDispEventSimpleImpl<nID, T, pdiid>
 
 ActiveX イベント シンクのみサポートの戻り値の HRESULT 型または void、イベント ハンドラー メソッドからの CE ATL の実装その他の戻り値はサポートされていませんし、その動作は未定義です。
 
-詳細については、[IDispEventImpl のサポート](../../atl/supporting-idispeventimpl.md)を参照してください。
+詳細については、次を参照してください。 [IDispEventImpl のサポート](../../atl/supporting-idispeventimpl.md)します。
 
 ## <a name="inheritance-hierarchy"></a>継承階層
 

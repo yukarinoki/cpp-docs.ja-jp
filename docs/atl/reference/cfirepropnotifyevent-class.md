@@ -12,11 +12,11 @@ helpviewer_keywords:
 - connection points [C++], notifying of events
 ms.assetid: eb7a563e-6bce-4cdf-8d20-8c6a5307781b
 ms.openlocfilehash: 493bc00708d031f1bf7a4eb74d56e927a9c3f1dd
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57277158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62245492"
 ---
 # <a name="cfirepropnotifyevent-class"></a>CFirePropNotifyEvent クラス
 
@@ -46,7 +46,7 @@ class CFirePropNotifyEvent
 
 場合は、制御を実装するクラスから派生`IPropertyNotifySink`、`CFirePropNotifyEvent`メソッドを呼び出すときに呼び出す`FireOnRequestEdit`または`FireOnChanged`します。 コントロール クラスを派生していない場合`IPropertyNotifySink`、これらの関数の呼び出しが S_OK を返します。
 
-コントロールの作成の詳細については、、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)を参照してください。
+コントロールの作成の詳細については、次を参照してください。、 [ATL チュートリアル](../../atl/active-template-library-atl-tutorial.md)します。
 
 ## <a name="requirements"></a>必要条件
 

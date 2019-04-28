@@ -10,11 +10,11 @@ helpviewer_keywords:
 - initializing MFC applications
 ms.assetid: 4ef09267-ff7f-4c39-91a0-57454a264f83
 ms.openlocfilehash: c96d009cf19981a475209233ee397af1cdcb352d
-ms.sourcegitcommit: c3093251193944840e3d0a068ecc30e6449624ba
+ms.sourcegitcommit: 0ab61bc3d2b6cfbd52a16c6ab2b97a8ea1864f12
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57289391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62219521"
 ---
 # <a name="initinstance-member-function"></a>InitInstance メンバー関数
 
@@ -22,7 +22,7 @@ Windows オペレーティング システムは、複数のコピー、また�
 
 標準`InitInstance`MFC アプリケーション ウィザードによって作成された実装は、次のタスクを実行します。
 
-- 中央のアクションとしては、ドキュメント、ビュー、およびフレーム ウィンドウを作成するドキュメント テンプレートを作成します。 このプロセスの説明は、[ドキュメント テンプレートの作成](../mfc/document-template-creation.md)を参照してください。
+- 中央のアクションとしては、ドキュメント、ビュー、およびフレーム ウィンドウを作成するドキュメント テンプレートを作成します。 このプロセスの説明は、次を参照してください。[ドキュメント テンプレートの作成](../mfc/document-template-creation.md)です。
 
 - .Ini ファイルまたは最近使用したファイルの名前を含む、Windows レジストリから標準のファイル オプションを読み込みます。
 
@@ -39,4 +39,4 @@ Windows オペレーティング システムは、複数のコピー、また�
 
 ## <a name="see-also"></a>関連項目
 
-[CWinApp:アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
+[CWinApp: アプリケーション クラス](../mfc/cwinapp-the-application-class.md)
